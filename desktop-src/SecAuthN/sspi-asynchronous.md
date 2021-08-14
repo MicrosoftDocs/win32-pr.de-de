@@ -4,61 +4,61 @@ description: Übersicht über den asynchronen SSPI-Header.
 ms.topic: article
 ms.keywords: SSPI, Async SSPI, SSPI Async, Asynchronous SSPI, sspi,SspiAcceptSecurityContextAsync, SspiAcquireCredentialsHandleAsync, SspiAsyncContextRequiresNotify, SspiAsyncNotifyCallback, SspiCreateAsyncContext,SspiDeleteSecurityContextAsync, SspiFreeAsyncContext, SspiFreeCredentialsHandleAsync, SspiGetAsyncCallStatus, SspiInitializeSecurityContextAsync, SspiReinitAsyncContext, SspiSetAsyncNotifyCallback
 ms.date: 06/23/2020
-ms.openlocfilehash: acd1fedff605706dc5b20c3c2604a51d5cead27f
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: e2fe4e6cc8358ec39c402bccdf8562d613ac952547687142cb3553d04c8f0ce6
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106352243"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118917165"
 ---
 # <a name="asynchronous-sspi"></a>Asynchrone SSPI
 
-Der asynchrone SSPI-Header enthält Funktionen, die Async-Kontext Objekte unterstützen, sodass Aufrufer über einen asynchronen SSPI-Aufruf Lebenszyklus gleichzeitig Sicherheits Kontexte zwischen Server-und Remote Clients einrichten können.
+Der asynchrone SSPI-Header enthält Funktionen, die asynchrone Kontextobjekte unterstützen, sodass Aufrufer über einen asynchronen SSPI-Aufruflebenszyklus gleichzeitig Sicherheitskontexte zwischen Server- und Remoteclients einrichten können.
 
-## <a name="async-context-management-types"></a>Asynchrone Kontext Verwaltungs Typen
+## <a name="async-context-management-types"></a>Asynchrone Kontextverwaltungstypen
 
 | Objektname | BESCHREIBUNG |
 |-------------|--------------|
-| [Sspiasyncnotifycallback](/windows/win32/api/sspi/nc-sspi-sspiasyncnotifycallback) | Rückruf, der zum Benachrichtigen des Abschlusses eines Async-SSPI-Aufrufs verwendet wird. |
+| [SspiAsyncNotifyCallback](/windows/win32/api/sspi/nc-sspi-sspiasyncnotifycallback) | Rückruf, der zum Benachrichtigen des Abschlusses eines asynchronen SSPI-Aufrufs verwendet wird. |
 
 
-## <a name="async-context-management-functions"></a>Asynchrone Kontext Verwaltungsfunktionen
-
-| API-Name | BESCHREIBUNG |
-|-------------|--------------|
-| [Sspikreateasynccontext](/windows/win32/api/sspi/nf-sspi-sspicreateasynccontext) | Erstellt eine Instanz von sspiasynccontext, die zum Nachverfolgen des asynchronen Aufrufes verwendet wird. |
-| [Sspireinitasynccontext](/windows/win32/api/sspi/nf-sspi-sspireinitasynccontext) | Markiert einen Async-Kontext für die Wiederverwendung. |
-| [Sspisetasyncnotifycallback](/windows/win32/api/sspi/nf-sspi-sspisetasyncnotifycallback) | Registriert einen Rückruf, der beim Abschluss des asynchronen Aufrufs benachrichtigt wird. |
-| [Sspiasynccontextrequiresnotify](/windows/win32/api/sspi/nf-sspi-sspiasynccontextrequiresnotify) | Bestimmt, ob ein angegebener asynchroner Kontext eine Benachrichtigung über den Abschluss des Aufrufes erfordert. |
-| [Sspigetasynccallstatus](/windows/win32/api/sspi/nf-sspi-sspigetasynccallstatus) | Ruft den aktuellen Status eines Async-Aufrufes ab, der dem bereitgestellten Kontext zugeordnet ist.  |
-| [Sspifreasynccontext](/windows/win32/api/sspi/nf-sspi-sspifreeasynccontext) | Gibt einen kontextfrei, der im Aufrufen der sspikreateasynccontext-Funktion erstellt wurde. |
-
-## <a name="async-sspi-functions"></a>Async-SSPI-Funktionen
-
-Die folgenden Funktionen akzeptieren einen asynchronen Kontext zusätzlich zu denselben Parametern wie Ihre synchrone Entsprechung.
+## <a name="async-context-management-functions"></a>Asynchrone Kontextverwaltungsfunktionen
 
 | API-Name | BESCHREIBUNG |
 |-------------|--------------|
-| [Sspiacquirecredentialshandleasync](/windows/win32/api/sspi/nf-sspi-sspiacquirecredentialshandleasynca) | Ruft asynchron ein Handle für bereits vorhandene Anmelde Informationen eines Sicherheits Prinzipals ab. |
-| [Sspiaccept tsecuritycontextasync](/windows/win32/api/sspi/nf-sspi-sspiacceptsecuritycontextasync) | Ermöglicht der Serverkomponente einer Transport Anwendung das asynchrone Einrichten eines Sicherheits Kontexts zwischen dem Server und einem Remote Client. |
-| [Sspiinitializesecuritycontextasync](/windows/win32/api/sspi/nf-sspi-sspiinitializesecuritycontextasynca) | Initialisiert einen Async-Sicherheitskontext. |
-| [Sspidelta etesecuritycontextasync](/windows/win32/api/sspi/nf-sspi-sspideletesecuritycontextasync) | Löscht die lokalen Datenstrukturen, die dem angegebenen Sicherheitskontext zugeordnet sind, der durch einen vorherigen Aufrufen der sspiinitializesecuritycontextasync-Funktion oder der sspiaccept-securitycontextasync-Funktion initiiert wurde. |
-| [Sspifreecredentialshandleasync](/windows/win32/api/sspi/nf-sspi-sspifreecredentialshandleasync) | Gibt ein Anmelde Informationen-Handle frei. |
+| [SspiCreateAsyncContext](/windows/win32/api/sspi/nf-sspi-sspicreateasynccontext) | Erstellt eine Instanz von SspiAsyncContext, die zum Nachverfolgen des asynchronen Aufrufs verwendet wird. |
+| [SspiReinitAsyncContext](/windows/win32/api/sspi/nf-sspi-sspireinitasynccontext) | Markiert einen asynchronen Kontext für die Wiederverwendung. |
+| [SspiSetAsyncNotifyCallback](/windows/win32/api/sspi/nf-sspi-sspisetasyncnotifycallback) | Registriert einen Rückruf, der bei abschluss des asynchronen Aufrufs benachrichtigt wird. |
+| [SspiAsyncContextRequiresNotify](/windows/win32/api/sspi/nf-sspi-sspiasynccontextrequiresnotify) | Bestimmt, ob für einen bestimmten asynchronen Kontext eine Benachrichtigung beim Abschluss des Aufrufs erforderlich ist. |
+| [SspiGetAsyncCallStatus](/windows/win32/api/sspi/nf-sspi-sspigetasynccallstatus) | Ruft den aktuellen Status eines asynchronen Aufrufs ab, der dem bereitgestellten Kontext zugeordnet ist.  |
+| [SspiFreeAsyncContext](/windows/win32/api/sspi/nf-sspi-sspifreeasynccontext) | Gibt einen Kontext frei, der im Aufruf der SspiCreateAsyncContext-Funktion erstellt wurde. |
+
+## <a name="async-sspi-functions"></a>Asynchrone SSPI-Funktionen
+
+Die folgenden Funktionen akzeptieren einen asynchronen Kontext zusätzlich zu den gleichen Parametern wie ihre synchrone Entsprechung.
+
+| API-Name | BESCHREIBUNG |
+|-------------|--------------|
+| [SspiAcquireCredentialsHandleAsync](/windows/win32/api/sspi/nf-sspi-sspiacquirecredentialshandleasynca) | Übernimmt asynchron ein Handle für bereits vorhandene Anmeldeinformationen eines Sicherheitsprinzipals. |
+| [SspiAcceptSecurityContextAsync](/windows/win32/api/sspi/nf-sspi-sspiacceptsecuritycontextasync) | Ermöglicht der Serverkomponente einer Transportanwendung das asynchrone Einrichten eines Sicherheitskontexts zwischen dem Server und einem Remoteclient. |
+| [SspiInitializeSecurityContextAsync](/windows/win32/api/sspi/nf-sspi-sspiinitializesecuritycontextasynca) | Initialisiert einen asynchronen Sicherheitskontext. |
+| [SspiDeleteSecurityContextAsync](/windows/win32/api/sspi/nf-sspi-sspideletesecuritycontextasync) | Löscht die lokalen Datenstrukturen, die dem angegebenen Sicherheitskontext zugeordnet sind, der durch einen vorherigen Aufruf der SspiInitializeSecurityContextAsync-Funktion oder der SspiAcceptSecurityContextAsync-Funktion initiiert wurde. |
+| [SspiFreeCredentialsHandleAsync](/windows/win32/api/sspi/nf-sspi-sspifreecredentialshandleasync) | Gibt ein Anmeldeinformationshand handle frei. |
 
 ## <a name="api-sample"></a>API-Beispiel
 
-Ein typischer callflow funktioniert wie folgt:
-1) Sspiasynccontext-Kontext zum Nachverfolgen des Aufrufes mithilfe von [sspikreateasynccontext](/windows/win32/api/sspi/nf-sspi-sspicreateasynccontext) erstellen
-2) Registrieren eines [sspiasyncnotifycallback](/windows/win32/api/sspi/nf-sspi-sspisetasyncnotifycallback) für den Kontext
-3) Asynchronen Aufrufen mithilfe von [sspiaccept tsecuritycontextasync](/windows/win32/api/sspi/nf-sspi-sspiacceptsecuritycontextasync)
-4) Bei Rückruf das Ergebnis mithilfe von [sspigetasynccallstatus](/windows/win32/api/sspi/nf-sspi-sspigetasynccallstatus) abrufen
-5) Löschen Sie sspiasynccontext mithilfe von [sspidelta etesecuritycontextasync](/windows/win32/api/sspi/nf-sspi-sspideletesecuritycontextasync). Wenn Sie den Kontext mit [sspireinitasynccontext](/windows/win32/api/sspi/nf-sspi-sspireinitasynccontext)wieder verwenden, gehen Sie zurück zu Schritt 2.
+Ein typischer Aufruffluss funktioniert wie folgt:
+1) Erstellen eines SspiAsyncContext-Kontexts zum Nachverfolgen eines [Aufrufs mithilfe von SspiCreateAsyncContext](/windows/win32/api/sspi/nf-sspi-sspicreateasynccontext)
+2) Registrieren eines [SspiAsyncNotifyCallback](/windows/win32/api/sspi/nf-sspi-sspisetasyncnotifycallback) für den Kontext
+3) Führen Sie den asynchronen Aufruf [mithilfe von SspiAcceptSecurityContextAsync aus.](/windows/win32/api/sspi/nf-sspi-sspiacceptsecuritycontextasync)
+4) Rufen Sie beim Rückruf das Ergebnis mithilfe von [SspiGetAsyncCallStatus ab.](/windows/win32/api/sspi/nf-sspi-sspigetasynccallstatus)
+5) Löschen Sie SspiAsyncContext [mithilfe von SspiDeleteSecurityContextAsync.](/windows/win32/api/sspi/nf-sspi-sspideletesecuritycontextasync) Wenn Sie den Kontext mit [SspiReinitAsyncContext wiederverwenden,](/windows/win32/api/sspi/nf-sspi-sspireinitasynccontext)fahren Sie mit Schritt 2 fort.
 
-Das folgende Beispiel veranschaulicht den Aufruf von sspiaccept tsecuritycontextasync. Das Beispiel wartet auf den Abschluss des Aufrufes und ruft das Ergebnis ab.
+Das folgende Beispiel veranschaulicht einen Aufruf von SspiAcceptSecurityContextAsync. Das Beispiel wartet auf den Abschluss des Aufrufs und ruft das Ergebnis ab.
 
-Bei einem vollständigen SSPI-Handshake werden "sspiaccept tsecuritycontextasync" und "sspiinitializesecuritycontextasync" mehrmals aufgerufen, bis SEC_E_OK zurückgegeben wird. Sspireinitasynccontext wurde bereitgestellt, um die Benutzerfreundlichkeit zu vereinfachen und die Leistung in diesem Fall zu vereinfachen.
+In einem vollständigen SSPI-Handshake werden SspiAcceptSecurityContextAsync und SspiInitializeSecurityContextAsync mehrmals aufgerufen, bis SEC_E_OK zurückgegeben wird. SspiReinitAsyncContext wurde bereitgestellt, um die Benutzerfreundlichkeit zu erleichtern und die Leistung in diesem Fall zu erleichtern.
 
-Assertionen werden verwendet, um hervorzuheben, was wir bei Erfolg erwarten.
+Asserts werden verwendet, um hervorzuheben, was wir bei einem Erfolg erwarten würden.
 
 ```cpp
 #include <sspi.h>
@@ -130,7 +130,7 @@ void DoASCCall(
 
 ## <a name="see-also"></a>Weitere Informationen
 
-[SSPI. h-Header](/windows/win32/api/sspi/)
+[sspi.h-Header](/windows/win32/api/sspi/)
 
 [SSPI-Funktionen](/windows/win32/api/sspi/#functions)
 

@@ -1,7 +1,7 @@
 ---
-description: Warten Sie, bis alle Arbeitselemente in der Thread Pumpe abgeschlossen sind.
+description: Warten Sie, bis alle Arbeitselemente in der Threadpumpe abgeschlossen sind.
 ms.assetid: d81c57d6-475c-444b-82c0-87b29ce0cbb4
-title: 'ID3DX10ThreadPump:: waitforallitems-Methode (d3dx10. h)'
+title: ID3DX10ThreadPump::WaitForAllItems-Methode (D3DX10.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -14,16 +14,16 @@ api_type:
 api_location:
 - D3DX10.lib
 - D3DX10.dll
-ms.openlocfilehash: ca312d86e20c53b2069a92570e2065206b69ccda
-ms.sourcegitcommit: 14010c34b35fa268046c7683f021f86de08ddd0a
+ms.openlocfilehash: 6b5b2e8291d47c3ee36f6474810ddbb0e75849363069e81dd777e6b3ca4a8640
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "106360242"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119046888"
 ---
-# <a name="id3dx10threadpumpwaitforallitems-method"></a>ID3DX10ThreadPump:: waitforallitems-Methode
+# <a name="id3dx10threadpumpwaitforallitems-method"></a>ID3DX10ThreadPump::WaitForAllItems-Methode
 
-Warten Sie, bis alle Arbeitselemente in der Thread Pumpe abgeschlossen sind.
+Warten Sie, bis alle Arbeitselemente in der Threadpumpe abgeschlossen sind.
 
 ## <a name="syntax"></a>Syntax
 
@@ -42,7 +42,7 @@ Diese Methode hat keine Parameter.
 
 Typ: **[ **HRESULT**](https://msdn.microsoft.com/library/Bb401631(v=MSDN.10).aspx)**
 
-Der Rückgabewert ist einer der Werte, die in [Direct3D 10-Rückgabe Codes](d3d10-graphics-reference-returnvalues.md)aufgelistet sind.
+Der Rückgabewert ist einer der In [Direct3D 10-Rückgabecodes aufgeführten](d3d10-graphics-reference-returnvalues.md)Werte.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -50,12 +50,12 @@ Der Rückgabewert ist einer der Werte, die in [Direct3D 10-Rückgabe Codes](d3d1
 
 | Anforderung | Wert |
 |--------------------|---------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>D3dx10. h</dt> </dl>   |
-| Bibliothek<br/> | <dl> <dt>D3dx10. lib</dt> </dl> |
+| Header<br/>  | <dl> <dt>D3DX10.h</dt> </dl>   |
+| Bibliothek<br/> | <dl> <dt>D3DX10.lib</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 

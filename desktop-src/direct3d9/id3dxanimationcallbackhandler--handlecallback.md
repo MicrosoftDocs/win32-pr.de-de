@@ -1,7 +1,7 @@
 ---
-description: 'Die Anwendung implementiert diese Methode. Diese Methode wird aufgerufen, wenn ein Rückruf für einen Animations Satz in einer der-Spuren während eines Aufrufs von ID3DXAnimationController:: AdvanceTime auftritt.'
+description: Die Anwendung implementiert diese Methode. Diese Methode wird aufgerufen, wenn während eines Aufrufs von ID3DXAnimationController::AdvanceTime ein Rückruf für eine Animation erfolgt, die in einer der Spuren festgelegt wurde.
 ms.assetid: eb606fb0-d6b9-456d-97e1-b595306e6463
-title: 'ID3DXAnimationCallbackHandler:: Lenker Callback-Methode (D3dx9anim. h)'
+title: ID3DXAnimationCallbackHandler::HandleCallback-Methode (D3dx9anim.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -14,16 +14,16 @@ api_type:
 api_location:
 - d3dx9.lib
 - d3dx9.dll
-ms.openlocfilehash: 49de0adef71435dbcf35afae8cfa555999826a34
-ms.sourcegitcommit: 14010c34b35fa268046c7683f021f86de08ddd0a
+ms.openlocfilehash: 12fcfa0feba1d239cf72c37e78fec63140dda4f954e7c48dffd643dcca4400c9
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "106360235"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119279210"
 ---
-# <a name="id3dxanimationcallbackhandlerhandlecallback-method"></a>ID3DXAnimationCallbackHandler:: Lenker Callback-Methode
+# <a name="id3dxanimationcallbackhandlerhandlecallback-method"></a>ID3DXAnimationCallbackHandler::HandleCallback-Methode
 
-Die Anwendung implementiert diese Methode. Diese Methode wird aufgerufen, wenn ein Rückruf für einen Animations Satz in einer der-Spuren während eines Aufrufs von [**ID3DXAnimationController:: AdvanceTime**](id3dxanimationcontroller--advancetime.md)auftritt.
+Die Anwendung implementiert diese Methode. Diese Methode wird aufgerufen, wenn während eines Aufrufs von [**ID3DXAnimationController::AdvanceTime**](id3dxanimationcontroller--advancetime.md)ein Rückruf für eine Animation auftritt, die in einer der Spuren festgelegt wurde.
 
 ## <a name="syntax"></a>Syntax
 
@@ -41,21 +41,21 @@ HRESULT HandleCallback(
 
 <dl> <dt>
 
-Nach *verfolgen* \[ in\]
+*Nachverfolgen* \[ In\]
 </dt> <dd>
 
-Typ: **[ **uint**](../winprog/windows-data-types.md)**
+Typ: **[ **UINT**](../winprog/windows-data-types.md)**
 
-Der Bezeichner der Spur, auf der der Rückruf auftritt.
+Bezeichner der Spur, auf der der Rückruf erfolgt.
 
 </dd> <dt>
 
-*pcallbackdata* \[ in\]
+*pCallbackData* \[ In\]
 </dt> <dd>
 
 Typ: **[ **LPVOID**](../winprog/windows-data-types.md)**
 
-Zeiger auf Benutzer eigene Rückruf Daten.
+Zeiger auf Rückrufdaten im Besitz des Benutzers.
 
 </dd> </dl>
 
@@ -63,7 +63,7 @@ Zeiger auf Benutzer eigene Rückruf Daten.
 
 Typ: **[ **HRESULT**](https://msdn.microsoft.com/library/Bb401631(v=MSDN.10).aspx)**
 
-Die Rückgabewerte dieser Methode werden von einem Anwendungsprogrammierer implementiert. Wenn kein Fehler auftritt, programmieren Sie im Allgemeinen die-Methode, um D3D OK zurückzugeben \_ . Andernfalls programmieren Sie die-Methode, um eine entsprechende Fehlermeldung von [D3DERR](d3derr.md) oder [**D3DXERR**](./d3dxerr.md)zurückzugeben.
+Die Rückgabewerte dieser Methode werden von einem Anwendungsprogrammierer implementiert. Wenn kein Fehler auftritt, programmieren Sie im Allgemeinen die -Methode so, dass D3D \_ OK zurückgegeben wird. Programmieren Sie andernfalls die -Methode so, dass eine entsprechende Fehlermeldung von [D3DERR](d3derr.md) oder [**D3DXERR zurückgegeben wird.**](./d3dxerr.md)
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -71,12 +71,12 @@ Die Rückgabewerte dieser Methode werden von einem Anwendungsprogrammierer imple
 
 | Anforderung | Wert |
 |--------------------|----------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>D3dx9anim. h</dt> </dl> |
-| Bibliothek<br/> | <dl> <dt>D3dx9. lib</dt> </dl>   |
+| Header<br/>  | <dl> <dt>D3dx9anim.h</dt> </dl> |
+| Bibliothek<br/> | <dl> <dt>D3dx9.lib</dt> </dl>   |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 

@@ -1,24 +1,24 @@
 ---
-description: Video Streaming-Beispiel Code
+description: Beispielcode für Videostreaming
 ms.assetid: 735af042-9800-4f75-a5c9-e1cf17b4a472
-title: Video Streaming-Beispiel Code
+title: Beispielcode für Videostreaming
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 90e9a738503174e7bcc6c0d0e7c1250e39348b4c
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: a325512d18d3e7156de017c969906e02ed8834ba9522c969b5deb2166f741860
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106354565"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119755620"
 ---
-# <a name="video-streaming-sample-code"></a>Video Streaming-Beispiel Code
+# <a name="video-streaming-sample-code"></a>Beispielcode für Videostreaming
 
 > [!Note]  
-> Diese APIs sind veraltet. Anwendungen sollten den [**Beispiel-Grabber**](sample-grabber-filter.md) Filter verwenden oder einen benutzerdefinierten Filter implementieren, um Daten aus einem DirectShow-Filter Diagramm zu erhalten.
+> Diese APIs sind veraltet. Anwendungen sollten den [**Beispielgrabberfilter**](sample-grabber-filter.md) verwenden oder einen benutzerdefinierten Filter implementieren, um Daten aus einem DirectShow-Filterdiagramm abzurufen.
 
  
 
-Dieser Beispielcode liest eine Datei und rendert Sie in einer primären DirectDraw-Oberfläche. Aus Gründen der Übersichtlichkeit führt dieses Beispiel zu einer minimalen Fehlerüberprüfung.
+Dieser Beispielcode liest eine Datei und rendert sie auf einer primären DirectDraw-Oberfläche. Aus Gründen der Kürze führt dieses Beispiel eine minimale Fehlerüberprüfung durch.
 
 
 ```C++

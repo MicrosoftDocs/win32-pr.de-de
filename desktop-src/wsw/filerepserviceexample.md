@@ -1,121 +1,121 @@
 ---
-title: Filerepserviceexample
-description: Filerep ruft Dateien von einem Server ab und kopiert Sie auf einen Client.
+title: FileRepServiceExample
+description: FileRep ruft Dateien von einem Server ab und kopiert sie auf einen Client.
 ms.assetid: 9f446999-8f10-4ce4-86eb-e9289e131733
 keywords:
-- Filerepserviceexample-Webdienste für Windows
-- Wwsapi
+- FileRepServiceExample-Webdienste für Windows
+- WWSAPI
 - WWS
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: bfc230de8716566574dbe95b914d8ff22cbc2f75
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: 5a995dbb885631575aceedfeeb371440034558ecd40af9a1323a6edbc51e300c
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "104037140"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118963429"
 ---
-# <a name="filerepserviceexample"></a>Filerepserviceexample
+# <a name="filerepserviceexample"></a>FileRepServiceExample
 
-Filerep ruft Dateien von einem Server ab und kopiert Sie auf einen Client. Hierfür werden drei Komponenten verwendet: der Server Dienst, der auf dem Computer mit der Quelldatei ausgeführt wird, der Client Dienst, der auf dem Computer ausgeführt wird, auf dem die Zieldatei gespeichert wird, und ein Befehlszeilen Tool zum Steuern des Kopierens. Die Client-und Server Dienste führen ständig Webdienste aus, während das Befehlszeilen Tool vom Benutzer gestartet wird und nach einer Anforderung beendet wird.
+FileRep ruft Dateien von einem Server ab und kopiert sie auf einen Client. Hierzu werden drei Komponenten verwendet: der Serverdienst, der auf dem Computer mit der Quelldatei ausgeführt wird, der Clientdienst, der auf dem Computer ausgeführt wird, auf dem die Zieldatei gespeichert wird, und ein Befehlszeilentool zum Steuern des Kopierens. Die Client- und Serverdienste führen ständig Webdienste aus, während das Befehlszeilentool vom Benutzer gestartet und nach einer Anforderung beendet wird.
 
-Dieses Beispiel veranschaulicht die Verwendung der Kanal-und der serialisierungsschicht.
+Dieses Beispiel veranschaulicht die Verwendung des Kanals und der Serialisierungsebene.
 
-Dabei handelt es sich um den Dienst. Das Befehlszeilen Tool finden Sie [hier](filereptoolexample.md). Der Dienst verfügt über einen Client-und einen Server Modus, in dem der Server Dateien sendet und der Client Dateien empfängt.
+Dies ist der Dienst. Das Befehlszeilentool finden Sie [hier.](filereptoolexample.md) Der Dienst verfügt über einen Client und einen Servermodus, in dem der Server Dateien sendet und der Client Dateien empfängt.
 
-Die Befehlszeilenparameter für den Client Modus lauten wie folgt:
+Die Befehlszeilenparameter für den Clientmodus sind wie folgt:
 
-**WsFileRepService.exe-Client** *<Service Url>* **\[ /Reporting: <Error/Info/Verbose>\] \[ /Encoding: <Text/Binary/MTOM>\] \[ /Connections: ***<number of connections>*** \]**
+**WsFileRepService.exe Client** *<Service Url>* **\[ /reporting:<error/info/verbose>\] \[ /encoding:<text/binary/MTOM>\] \[ /connections:**_<number of connections>_*_\]_*
 
 <dl> <dt>
 
-<span id="Client"></span><span id="client"></span><span id="CLIENT"></span>Ent
+<span id="Client"></span><span id="client"></span><span id="CLIENT"></span>Kunde
 </dt> <dd>
 
-Erforderlich. Gibt an, dass der Dienst als-Client ausgeführt wird.
+Erforderlich. Gibt an, dass der Dienst als Client ausgeführt wird.
 
 </dd> <dt>
 
 <span id="Service_Url"></span><span id="service_url"></span><span id="SERVICE_URL"></span>Dienst-URL
 </dt> <dd>
 
-Erforderlich. Gibt die URL an, die der Dienst überwacht.
+Erforderlich. Gibt die URL an, an der der Dienst lauscht.
 
 </dd> <dt>
 
-<span id="Encoding"></span><span id="encoding"></span><span id="ENCODING"></span>Kodierung
+<span id="Encoding"></span><span id="encoding"></span><span id="ENCODING"></span>Codierung
 </dt> <dd>
 
-Dies ist optional. Gibt die Codierung an, die bei der Kommunikation mit dem Befehlszeilen Tool verwendet wird. Beachten Sie, dass das aktuelle Tool das Angeben einer Codierung für diese Übertragung nicht unterstützt, sodass das Ändern dieser Einstellung wahrscheinlich zu einem Fehler führt. Die Einstellung ist vorhanden, sodass das Tool unabhängig vom Server geändert und erweitert werden kann.
+Optional. Gibt die Codierung an, die bei der Kommunikation mit dem Befehlszeilentool verwendet wird. Beachten Sie, dass das aktuelle Tool die Angabe einer Codierung für diese Übertragung nicht unterstützt, sodass das Ändern dieser Einstellung wahrscheinlich zu einem Fehler führt. Die Einstellung ist vorhanden, sodass das Tool unabhängig vom Server geändert und erweitert werden kann.
 
 </dd> <dt>
 
-<span id="Reporting"></span><span id="reporting"></span><span id="REPORTING"></span>Erstatten
+<span id="Reporting"></span><span id="reporting"></span><span id="REPORTING"></span>Reporting
 </dt> <dd>
 
-Dies ist optional. Ermöglicht die Berichterstellung für Fehler, Informationen oder ausführlich. Der Standardwert ist "Error". Nachrichten werden in der Konsole gedruckt.
+Optional. Aktiviert fehler-, informations- oder ausführliche Berichterstellungsebenen. Der Standardwert ist error. Nachrichten werden in der Konsole ausgegeben.
 
 </dd> <dt>
 
-<span id="Connections"></span><span id="connections"></span><span id="CONNECTIONS"></span>Herstellen
+<span id="Connections"></span><span id="connections"></span><span id="CONNECTIONS"></span>Verbindungen
 </dt> <dd>
 
-Dies ist optional. Gibt die maximale Anzahl gleichzeitiger Anforderungen an, die verarbeitet werden. Wenn der Wert weggelassen wird, ist der Standardwert 100.
+Optional. Gibt die maximale Anzahl gleichzeitiger Anforderungen an, die verarbeitet werden. Wenn dieser Wert nicht angegeben wird, ist der Standardwert 100.
 
 </dd> </dl>
 
-Die Befehlszeilenparameter für den Server Modus lauten wie folgt:
+Die Befehlszeilenparameter für den Servermodus sind wie folgt:
 
-**WsFileRepService.exe Server** *<Service Url>* **\[ /Reporting: <Error/Info/Verbose>\] \[ /Encoding: <Text/Binary/MTOM>\] \[ /Connections: ***<number of connections>*** \] \[ /Chunk: ***<size of the payload per message in bytes>*** \]**
+**WsFileRepService.exe Server** *<Service Url>* **\[ /reporting:<error/info/verbose>\] \[ /encoding:<text/binary/MTOM>\] \[ /connections:** _<number of connections>_ *_\] \[ /chunk:_*_<size of the payload per message in bytes>_*_\]_*
 
 <dl> <dt>
 
-<span id="Server"></span><span id="server"></span><span id="SERVER"></span>Servers
+<span id="Server"></span><span id="server"></span><span id="SERVER"></span>Server
 </dt> <dd>
 
 Erforderlich. Gibt an, dass der Dienst als Dateiserver ausgeführt wird.
 
 </dd> <dt>
 
-<span id="Chunk"></span><span id="chunk"></span><span id="CHUNK"></span>Block
+<span id="Chunk"></span><span id="chunk"></span><span id="CHUNK"></span>Stück
 </dt> <dd>
 
-Dies ist optional. Die übertragenen Dateien werden in Blöcke mit der angegebenen Größe unterteilt. Jede Nachricht enthält einen Block. Der Standardwert ist 32768 bytes.
+Optional. Die übertragenen Dateien werden in Blöcke der angegebenen Größe unterteilt. Jede Nachricht enthält einen Block. Der Standardwert ist 32768 Bytes.
 
 </dd> </dl>
 
-Implementierungsdetails. Da dieses Beispiel für die Kanal Ebene geschrieben wird, müssen bestimmte Aufgaben manuell ausgeführt werden, die von der Dienstmodell Ebene automatisch ausgeführt werden können. Eine dieser Aufgaben ist die Kanal Verwaltung. Um eine schnelle Antwort auf Anforderungen bereitzustellen, gibt es immer (bis zu einem Limit) mehrere Kanäle, die für die Annahme von Anforderungen bereit sind. Die Verwendung mehrerer Kanäle ist leistungsfähiger bei mehreren Anforderungen, als wenn nur ein Kanal vorhanden ist, da die Erstellung eines Kanals eine Weile dauert. Außerdem wird durch die Wiederverwendung des Zustands die Leistung verbessert. Saphir stellt APIs bereit, mit denen der größte Status zurückgesetzt werden kann. Dieses Beispiel nutzt dies, indem Sie den Kanal und den Anforderungs Status nach Möglichkeit wieder verwendet und nur den Status erstellt oder zerstört, wenn bestimmte Schwellenwerte überschritten werden. Der Code, der sich auf die Kanal Verwaltung bezieht, finden Sie unter cchannelmanager.
+Implementierungsdetails. Da dieses Beispiel für die Kanalebene geschrieben wird, muss es bestimmte Aufgaben manuell ausführen, die die Dienstmodellebene automatisch ausführen kann. Eine solche Aufgabe ist die Kanalverwaltung. Um eine schnelle Antwort auf Anforderungen bereitzustellen, gibt es immer (bis zu einem Grenzwert) mehrere Kanäle, die für die Annahme von Anforderungen bereit sind. Mehrere Kanäle bereit zu haben, ist bei mehreren Anforderungen leistungsfähiger als nur ein Kanal, da die Erstellung eines Kanals Zeit in Anspruch nimmt. Darüber hinaus verbessert die Wiederverwendung des Zustands auch die Leistung. Sapphire bietet APIs zum Zurücksetzen des meisten Zustands, um zu vermeiden, dass es freigegeben und neu erstellt werden muss. In diesem Beispiel wird dies genutzt, indem kanal- und anforderungszustand nach Möglichkeit wiederverwendet und nur dann ein Zustand erstellt oder zerstört wird, wenn bestimmte Schwellenwerte überschritten werden. Den Code im Zusammenhang mit der Kanalverwaltung finden Sie in CChannelManager.
 
-Die Haupt-Nachrichten Verarbeitungs Schleife befindet sich in "". Diese Klasse enthält den Anwendungs unabhängigen Zustand und die Methoden, die für eine asynchrone Verarbeitung von sapplizierungsnachrichten verarbeitet werden müssen. Der anwendungsspezifische Code befindet sich in cfilerepclient (Client Service) und cfilerepserver (Server Dienst). Beide Klassen erben von cfilerep, das generischen Dienst bezogenen Code enthält.
+Die Hauptschleife für die Nachrichtenverarbeitung befindet sich in CRequest. Diese Klasse enthält den anwendungsunabhängigen Zustand und die Methoden, die für eine asynchrone Sapphire-Messagingverarbeitungsschleife erforderlich sind. Der anwendungsspezifische Code befindet sich in CFileRepClient (Clientdienst) und CFileRepServer (Serverdienst). Beide Klassen erben von CFileRep, das generischen dienstbezogenen Code enthält.
 
-Das Beispiel verwendet das Serialisierungsprogramm und führt eine benutzerdefinierte Serialisierung durch. Die benutzerdefinierte Serialisierung wird beim Umgang mit großen Datensegmenten verwendet, um den Speicherverbrauch zu minimieren, indem die Speicher Belegung für den jeweiligen Zweck manuell optimiert wird. Dies führt zu komplexen, auf niedriger Ebene basierenden Codes, die eine manuelle Serialisierung durchführen, sollten nur bei Bedarf ausgeführt werden.
+Im Beispiel wird sowohl das Serialisierungsprogramm verwendet als auch eine benutzerdefinierte Serialisierung ausgeführt. Die benutzerdefinierte Serialisierung wird beim Umgang mit großen Datenblöcken verwendet, um den Arbeitsspeicherverbrauch zu minimieren, indem die Speicherbelegung für den jeweiligen Zweck manuell optimiert wird. Da dies zu komplexem Code auf niedriger Ebene führt, sollte die manuelle Serialisierung nur durchgeführt werden, wenn dies unbedingt erforderlich ist.
 
-Nachrichtenaustausch Muster:
+Nachrichtenaustauschmuster:
 
--   Der Client Dienst erhält eine Anforderungs Nachricht vom Befehlszeilen Tool.
--   Wenn die Anforderung asynchron ist, wird sofort eine Bestätigung zurückgesendet.
--   Der-Client Dienst sendet eine Anforderung für Dateiinformationen an den Server Dienst. Eine Ermittlungs Anforderung wird durch eine Block Position von-1 angegeben.
--   Der Server Dienst gibt die Dateiinformationen zurück.
--   Der Client Dienst fordert die einzelnen Blöcke nacheinander nacheinander vom Server an. Blöcke werden anhand ihrer Position innerhalb der Datei identifiziert.
--   Wiederholen Sie den Vorgang, bis die Dateiübertragung abgeschlossen ist oder ein Fehler aufgetreten ist.
--   Wenn die Anforderung synchron ist, senden Sie eine Erfolgs-oder Fehlermeldung an das Befehlszeilen Tool.
+-   Der Clientdienst ruft eine Anforderungsnachricht vom Befehlszeilentool ab.
+-   Wenn die Anforderung asynchron ist, senden Sie sofort eine Bestätigung zurück.
+-   Der Clientdienst sendet eine Anforderung für Dateiinformationen an den Serverdienst. Eine Ermittlungsanforderung wird durch eine Blockposition von -1 gekennzeichnet.
+-   Der Serverdienst gibt die Dateiinformationen zurück.
+-   Der Clientdienst fordert die einzelnen Blöcke sequenziell nacheinander vom Server an. Blöcke werden durch ihre Position in der Datei identifiziert.
+-   Wiederholen Sie dies, bis die Dateiübertragung abgeschlossen ist oder ein Fehler aufgetreten ist.
+-   Wenn die Anforderung synchron ist, senden Sie eine Erfolgs- oder Fehlermeldung an das Befehlszeilentool.
 
-Informationen zu den einzelnen Datenstrukturen, die den einzelnen Nachrichten zugeordnet sind, finden Sie unter Common. h.
+Informationen zu den einzelnen Datenstrukturen, die den einzelnen Nachrichten zugeordnet sind, finden Sie unter common.h.
 
--   [Service. cpp](#servicecpp)
--   [Service. h](#serviceh)
--   [Cchannelmanager. cpp](#cchannelmanagercpp)
--   [Cfilerep. cpp](#cfilerepcpp)
--   ["Krequest. cpp"](#crequestcpp)
--   [Cfilerepclient. cpp](#cfilerepclientcpp)
--   [Cfilerepserver. cpp](#cfilerepservercpp)
--   [Common. h](#commonh)
+-   [Service.cpp](#servicecpp)
+-   [Service.h](#serviceh)
+-   [CChannelManager.cpp](#cchannelmanagercpp)
+-   [CFileRep.cpp](#cfilerepcpp)
+-   [CRequest.cpp](#crequestcpp)
+-   [CFileRepClient.cpp](#cfilerepclientcpp)
+-   [CFileRepServer.cpp](#cfilerepservercpp)
+-   [common.h](#commonh)
 -   [FileRep.mc](#filerepmc)
--   [Filerep. RC](#filereprc)
+-   [FileRep.rc](#filereprc)
 -   [Makefile](#makefile)
 -   [Zugehörige Themen](#related-topics)
 
-## <a name="servicecpp"></a>Service. cpp
+## <a name="servicecpp"></a>Service.cpp
 
 
 ```C++
@@ -345,7 +345,7 @@ int __cdecl wmain(int argc, __in_ecount(argc) wchar_t **argv)
 
 
 
-## <a name="serviceh"></a>Service. h
+## <a name="serviceh"></a>Service.h
 
 
 ```C++
@@ -695,7 +695,7 @@ void CleanupChannel(WS_CHANNEL* channel);
 
 
 
-## <a name="cchannelmanagercpp"></a>Cchannelmanager. cpp
+## <a name="cchannelmanagercpp"></a>CChannelManager.cpp
 
 
 ```C++
@@ -971,7 +971,7 @@ void CChannelManager::WaitForCleanup()
 
 
 
-## <a name="cfilerepcpp"></a>Cfilerep. cpp
+## <a name="cfilerepcpp"></a>CFileRep.cpp
 
 
 ```C++
@@ -1340,7 +1340,7 @@ HRESULT CFileRep::InitializeListener()
 
 
 
-## <a name="crequestcpp"></a>"Krequest. cpp"
+## <a name="crequestcpp"></a>CRequest.cpp
 
 
 ```C++
@@ -1906,7 +1906,7 @@ CRequest::~CRequest()
 
 
 
-## <a name="cfilerepclientcpp"></a>Cfilerepclient. cpp
+## <a name="cfilerepclientcpp"></a>CFileRepClient.cpp
 
 
 ```C++
@@ -2574,7 +2574,7 @@ HRESULT CFileRepClient::SendUserResponse(CRequest* request, TRANSFER_RESULTS res
 
 
 
-## <a name="cfilerepservercpp"></a>Cfilerepserver. cpp
+## <a name="cfilerepservercpp"></a>CFileRepServer.cpp
 
 
 ```C++
@@ -3602,7 +3602,7 @@ Failed to create file.
 .
 ```
 
-## <a name="filereprc"></a>Filerep. RC
+## <a name="filereprc"></a>FileRep.rc
 
 ``` syntax
 LANGUAGE 0x9,0x1
@@ -3646,12 +3646,12 @@ WsFileRepService.exe: Service.obj CFileRep.obj CFileRepServer.obj CFileRepClient
 
 <dl> <dt>
 
-[Filereptoolexample](filereptoolexample.md)
+[FileRepToolExample](filereptoolexample.md)
 </dt> </dl>
 
- 
+ 
 
- 
+ 
 
 
 

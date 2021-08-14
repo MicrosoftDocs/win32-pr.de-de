@@ -1,9 +1,9 @@
 ---
-title: 'Texture3D:: Operator-Funktion'
-description: 'Gibt eine schreibgeschützte Ressourcen Variable zurück. | Texture3D:: Operator-Funktion'
+title: Texture3D::Operator-Funktion
+description: Gibt eine schreibgeschützte Ressourcenvariable zurück. | Texture3D::Operator-Funktion
 ms.assetid: d7e27778-6a96-47f8-a58a-1966452adf04
 keywords:
-- Operator Function HLSL
+- Operatorfunktion HLSL
 topic_type:
 - apiref
 api_name:
@@ -13,16 +13,16 @@ api_type:
 ms.topic: reference
 ms.date: 05/31/2018
 api_location: ''
-ms.openlocfilehash: 5c3bb3718094ee859d1e33a046fde7016973a0aa
-ms.sourcegitcommit: 92e74c99f8f4d097676959d0c317f533c2400a80
+ms.openlocfilehash: d701e5f9ba46d17c305fda0a936700e10a1348440e55c913537f2a2d00a5c57c
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/09/2021
-ms.locfileid: "103761724"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118985700"
 ---
-# <a name="texture3doperator--function"></a>Texture3D:: Operator-Funktion
+# <a name="texture3doperator--function"></a>Texture3D::Operator-Funktion
 
-Gibt eine schreibgeschützte Ressourcen Variable zurück.
+Gibt eine schreibgeschützte Ressourcenvariable zurück.
 
 ## <a name="syntax"></a>Syntax
 
@@ -36,7 +36,7 @@ R Operator[](
 
 <dl> <dt>
 
-*POS* \[ in\]
+*pos* \[ In\]
 </dt> <dd>
 
 Typ: **uint3**
@@ -49,17 +49,17 @@ Die Indexposition. Enthält die Koordinaten (x, y, z).
 
 Typ: **R**
 
-Eine schreibgeschützte Ressourcen Variable.
+Eine schreibgeschützte Ressourcenvariable.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Diese Methode greift immer auf die erste MIP-Ebene zu. Um andere MIP-Ebenen anzugeben, verwenden Sie stattdessen den [**\[ \] \[ \] MIP.-Operator**](sm5-object-texture3d-mipsoperatorindex.md) .
+Diese Methode greifen immer auf die erste MIP-Ebene zu. Verwenden Sie stattdessen den [**mip.operator, \[ \] \[ \]**](sm5-object-texture3d-mipsoperatorindex.md) um andere MIP-Ebenen anzugeben.
 
-Diese Funktion wird für die folgenden Typen von Shadern unterstützt:
+Diese Funktion wird für die folgenden Shadertypen unterstützt:
 
 
 
-| Scheitelpunkt | Hülle | Domain | Geometrie | Pixel | Compute |
+| Scheitelpunkt | Rumpf | Domain | Geometrie | Pixel | Compute |
 |--------|------|--------|----------|-------|---------|
 | x      | x    | x      | x        | x     | x       |
 
@@ -74,7 +74,7 @@ Diese Funktion wird für die folgenden Typen von Shadern unterstützt:
 [Texture3D](sm5-object-texture3d.md)
 </dt> <dt>
 
-[Shader-Modell 5](d3d11-graphics-reference-sm5.md)
+[Shadermodell 5](d3d11-graphics-reference-sm5.md)
 </dt> </dl>
 
  

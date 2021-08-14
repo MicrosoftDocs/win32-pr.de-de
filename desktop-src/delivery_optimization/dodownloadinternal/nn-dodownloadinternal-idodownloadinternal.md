@@ -1,8 +1,8 @@
 ---
-title: Idodownloadinternal-Schnittstelle
-description: Wird verwendet, um Erweiterte Download Eigenschaften zu erhalten oder festzulegen.
+title: IDODownloadInternal-Schnittstelle
+description: Wird verwendet, um erweiterte Downloadeigenschaften abzurufen oder festzulegen.
 keywords:
-- Idodownloadinternal-Schnittstelle
+- IDODownloadInternal-Schnittstelle
 topic_type:
 - apiref
 api_name:
@@ -14,33 +14,33 @@ api_type:
 ms.localizationpriority: low
 ms.topic: reference
 ms.date: 07/29/2019
-ms.openlocfilehash: 89dcf0e397e9761c1b156a4ad4b245209cf50020
-ms.sourcegitcommit: 592c9bbd22ba69802dc353bcb5eb30699f9e9403
+ms.openlocfilehash: de9079f7b87822ce950bc4e6c3ece6457e62775c32f7c0d51e76959332298bb0
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "104102015"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119755780"
 ---
-# <a name="idodownloadinternal-interface"></a>Idodownloadinternal-Schnittstelle
+# <a name="idodownloadinternal-interface"></a>IDODownloadInternal-Schnittstelle
 
 > [!IMPORTANT]
-> Die **idodownloadinternal** -Schnittstelle ist veraltet. Verwenden Sie stattdessen die [idodownload](../do/nn-do-idodownload.md) -Schnittstelle.
+> Die **IDODownloadInternal-Schnittstelle** ist veraltet. Verwenden Sie stattdessen die [IDODownload-Schnittstelle.](../do/nn-do-idodownload.md)
 
-Die **idodownloadinternal** -Schnittstelle wird verwendet, um Erweiterte Download Eigenschaften zu erhalten oder festzulegen.
+Die **IDODownloadInternal-Schnittstelle** wird verwendet, um erweiterte Downloadeigenschaften abzurufen oder festzulegen.
 
 ## <a name="methods"></a>Methoden
 
-Die **idodownloadinternal** -Schnittstelle verfügt über diese Methoden.
+Die **IDODownloadInternal-Schnittstelle** verfügt über diese Methoden.
 
 | Methode | BESCHREIBUNG |
 | ---- |:---- |
-| [Idodownloadinternal:: getpropertyex](./nf-dodownloadinternal-idodownloadinternal-getpropertyex.md) | Ruft einen Zeiger auf einen **Variant** -Wert ab, der einen bestimmten erweiterten Download-Eigenschafts Wert enthält. |
-| [Idodownloadinternal:: setpropertyex](./nf-dodownloadinternal-idodownloadinternal-setpropertyex.md) | Legt eine erweiterte Download Eigenschaft fest. Die-Methode akzeptiert einen Zeiger auf eine **Variante** , die einen bestimmten Eigenschafts Wert enthält, der auf den Download angewendet werden soll. |
+| [IDODownloadInternal::GetPropertyEx](./nf-dodownloadinternal-idodownloadinternal-getpropertyex.md) | Ruft einen Zeiger auf eine **VARIANT-Datei** ab, die einen bestimmten erweiterten Downloadeigenschaftswert enthält. |
+| [IDODownloadInternal::SetPropertyEx](./nf-dodownloadinternal-idodownloadinternal-setpropertyex.md) | Legt eine erweiterte Downloadeigenschaft fest. Die -Methode akzeptiert  einen Zeiger auf eine VARIANT-Datei, die einen bestimmten Eigenschaftswert enthält, der auf den Download angewendet werden soll. |
 
 ## <a name="requirements"></a>Anforderungen
 
 | &nbsp; | &nbsp; |
 | ---- |:---- |
-| **Unterstützte Mindestversion (Client)** | Nur Windows 10, Version 1809, \[ Win32-Anwendungen\] |
-| **Unterstützte Mindestversion (Server)** | Nur Windows Server, Version 1809, \[ Win32-Anwendungen\] |
-| **Header** | Dodownloadinternal. h |
+| **Unterstützte Mindestversion (Client)** | \[Windows 10, Version 1809 Nur Win32-Anwendungen\] |
+| **Unterstützte Mindestversion (Server)** | Windows Server, nur Win32-Anwendungen der Version 1809 \[\] |
+| **Header** | DODownloadInternal.h |

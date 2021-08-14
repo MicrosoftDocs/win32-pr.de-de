@@ -1,31 +1,31 @@
 ---
-description: Die Installations Aktion ist eine Aktion der obersten Ebene, die zum Installieren oder Entfernen von Komponenten aufgerufen wird.
+description: Die INSTALL-Aktion ist eine Aktion der obersten Ebene, die aufgerufen wird, um Komponenten zu installieren oder zu entfernen.
 ms.assetid: bf290b59-1ecb-410f-b1f6-fdbeebebe3d3
-title: Installations Aktion
+title: INSTALL-Aktion
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 04279ba66f189ff83146fc2010e6843c20b404d7
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 9b5f648084b7386465f6bb59dd6b523cb51489e4cb83677c0b5cb47fe845be42
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104042096"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119811000"
 ---
-# <a name="install-action"></a>Installations Aktion
+# <a name="install-action"></a>INSTALL-Aktion
 
-Die Installations Aktion ist eine Aktion der obersten Ebene, die zum Installieren oder Entfernen von Komponenten aufgerufen wird. Mit dieser Aktion werden die Tabelle " [InstallUISequence](installuisequence-table.md) " und die [Tabelle "InstallExecuteSequence](installexecutesequence-table.md) " für die auszuführende Aktion, die Bedingung für die Ausführung der Aktion und die Position der Aktion in der Sequenz abgefragt:
+Die INSTALL-Aktion ist eine Aktion der obersten Ebene, die aufgerufen wird, um Komponenten zu installieren oder zu entfernen. Diese Aktion fragt die [Tabelle InstallUISequence](installuisequence-table.md) und die [InstallExecuteSequence-Tabelle](installexecutesequence-table.md) nach der auszuführenden Aktion, der Bedingung für die Aktionsausführung und der Position der Aktion in der Sequenz ab:
 
-## <a name="sequence-restrictions"></a>Sequenz Einschränkungen
+## <a name="sequence-restrictions"></a>Sequenzeinschränkungen
 
-Es gibt keine Sequenz Einschränkungen.
+Es gibt keine Sequenzeinschränkungen.
 
-## <a name="actiondata-messages"></a>Aktions Daten Meldungen
+## <a name="actiondata-messages"></a>ActionData-Nachrichten
 
-Es sind keine Aktions Daten Meldungen vorhanden.
+Es sind keine ActionData-Meldungen vorhanden.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Die Installations Aktion wird nicht innerhalb der Aktions Tabellen Sequenz aufgerufen, Sie wird an Windows Installer weitergegeben, wenn [**msiinstallproduct**](/windows/desktop/api/Msi/nf-msi-msiinstallproducta) aufgerufen wird, oder die ausführbare Befehlszeilen Datei Msiexec.exe mit dem Befehls Zeilenschalter '**/i**' aufgerufen wird, oder wenn eine beliebige Installer-Funktion aufgerufen wird, die möglicherweise eine Installationsaufgabe ausführt, z. b. [**msikonfigurirefeature**](/windows/desktop/api/Msi/nf-msi-msiconfigurefeaturea), [**MsiProvideComponent**](/windows/desktop/api/Msi/nf-msi-msiprovidecomponenta)oder [**msiinstallmissingfile**](/windows/desktop/api/Msi/nf-msi-msiinstallmissingfilea).
+Die INSTALL-Aktion wird nicht innerhalb der Aktionstabellensequenz aufgerufen, sie wird an Windows Installer übergeben, wenn [**MsiInstallProduct**](/windows/desktop/api/Msi/nf-msi-msiinstallproducta) aufgerufen wird, oder die ausführbare Befehlszeilendatei Msiexec.exe mit dem Befehlszeilenschalter **"/i"** aufgerufen wird, oder wenn eine Installationsprogrammfunktion aufgerufen wird, die eine Installationsaufgabe ausführen kann, z. B. [**MsiConfigureFeature,**](/windows/desktop/api/Msi/nf-msi-msiconfigurefeaturea) [**MsiProvideComponent**](/windows/desktop/api/Msi/nf-msi-msiprovidecomponenta)oder [**MsiInstallMissingFile**](/windows/desktop/api/Msi/nf-msi-msiinstallmissingfilea).
 
  
 

@@ -1,45 +1,45 @@
 ---
-description: Gibt an, ob ein Video Beispiel ein einzelnes Feld oder zwei verschachtelte Felder enthält. Dieses Attribut gilt für Medien Beispiele.
+description: Gibt an, ob ein Videobeispiel ein einzelnes Feld oder zwei überlappende Felder enthält. Dieses Attribut gilt für Medienbeispiele.
 ms.assetid: 550619be-2042-4a2c-9ad2-728474835255
-title: MFSampleExtension_SingleField-Attribut (mfapi. h)
+title: MFSampleExtension_SingleField Attribut (Mfapi.h)
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 217d7c43a9777982485ba350d259a59a518e26c1
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 747dbeebb9bcc8e773b59467f460b12645ed50ebfbddf5bbf6845119c2bba81d
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104527926"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119462900"
 ---
-# <a name="mfsampleextension_singlefield-attribute"></a>MF Sample Extension- \_ Singlefield-Attribut
+# <a name="mfsampleextension_singlefield-attribute"></a>MFSampleExtension \_ SingleField-Attribut
 
-Gibt an, ob ein Video Beispiel ein einzelnes Feld oder zwei verschachtelte Felder enthält. Dieses Attribut gilt für Medien Beispiele.
+Gibt an, ob ein Videobeispiel ein einzelnes Feld oder zwei überlappende Felder enthält. Dieses Attribut gilt für Medienbeispiele.
 
 ## <a name="data-type"></a>Datentyp
 
-**Bool** gespeichert als **UInt32**
+**BOOL** als **UINT32** gespeichert
 
 ## <a name="getset"></a>Abrufen/Festlegen
 
-Um dieses Attribut abzurufen, nennen Sie [**imfattributes:: GetUINT32**](/windows/desktop/api/mfobjects/nf-mfobjects-imfattributes-getuint32).
+Rufen Sie ZUM Abrufen dieses [**Attributs DIE ATTRIBUTEAttributes::GetUINT32 auf.**](/windows/desktop/api/mfobjects/nf-mfobjects-imfattributes-getuint32)
 
-Um dieses Attribut festzulegen, nennen Sie [**imfattributes:: SetUINT32**](/windows/desktop/api/mfobjects/nf-mfobjects-imfattributes-setuint32).
+Rufen Sie ZUM Festlegen dieses [**Attributs DIE ATTRIBUTEAttributes::SetUINT32 auf.**](/windows/desktop/api/mfobjects/nf-mfobjects-imfattributes-setuint32)
 
 ## <a name="applies-to"></a>Gilt für:
 
-[**IMF Sample**](/windows/desktop/api/mfobjects/nn-mfobjects-imfsample)
+[**DIESSAMPLE**](/windows/desktop/api/mfobjects/nn-mfobjects-imfsample)
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Wenn der Wert **true** ist, enthält das Beispiel ein Feld. Wenn der Wert **false** ist oder das-Attribut nicht festgelegt ist, enthält das Beispiel einen kompletten Frame. (Zwei Felder, wenn Zeilen Sprung oder ein progressiver Rahmen).
+Wenn der Wert **TRUE** ist, enthält das Beispiel ein Feld. Wenn der Wert **FALSE** ist oder das Attribut nicht festgelegt ist, enthält das Beispiel einen vollständigen Frame. (Zwei Felder mit Zeilensprung oder ein progressiver Frame.)
 
-Wenn es sich bei dem Medientyp um progressive Frames oder verschachtelte Felder handelt, muss dieses Attribut auf " **false** " oder "unset" festgelegt sein.
+Wenn es sich bei dem Medientyp um progressive Frames oder verschachtelte Felder handelt, muss dieses Attribut **FALSE** sein oder nicht festgelegt sein.
 
-Wenn der Medientyp ein einzelnes Feld ist, muss dieses Attribut " **true**" lauten. Legen Sie das Attribut " [**mfsampleextension \_ bottomfieldfirst**](mfsampleextension-bottomfieldfirst-attribute.md) " für das Beispiel fest, um anzugeben, ob es sich um das obere Feld oder das untere Feld handelt.
+Wenn der Medientyp ein einzelnes Feld ist, muss dieses Attribut **TRUE** sein. Legen Sie das [**Attribut MFSampleExtension \_ BottomFieldFirst**](mfsampleextension-bottomfieldfirst-attribute.md) für das Beispiel fest, um anzugeben, ob es sich um das obere oder das untere Feld handelt.
 
-Zurzeit unterstützt der erweiterte Videorenderer (EVR) keine Inhalte, die zwischen Zeilen Sprung Frames und einzelnen Feldern wechseln.
+Derzeit unterstützt der erweiterte Videorenderer (EVR) keine Inhalte, die zwischen geschachtelten Frames und einzelnen Feldern wechseln.
 
-Die GUID-Konstante für dieses Attribut wird aus "mfuuid. lib" exportiert.
+Die GUID-Konstante für dieses Attribut wird aus mfuuid.lib exportiert.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -47,26 +47,26 @@ Die GUID-Konstante für dieses Attribut wird aus "mfuuid. lib" exportiert.
 
 | Anforderung | Wert |
 |-------------------------------------|------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Windows Vista \[ -Desktop-Apps \| UWP-apps\]<br/>                              |
-| Unterstützte Mindestversion (Server)<br/> | Windows Server 2008 \[ -Desktop-Apps \| UWP-apps\]<br/>                        |
-| Header<br/>                   | <dl> <dt>Mfapi. h</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows \[Vista-Desktop-Apps \| UWP-Apps\]<br/>                              |
+| Unterstützte Mindestversion (Server)<br/> | Windows UWP-Apps für Server \[ 2008-Desktop-Apps \|\]<br/>                        |
+| Header<br/>                   | <dl> <dt>Mfapi.h</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
 [Alphabetische Liste der Media Foundation Attribute](alphabetical-list-of-media-foundation-attributes.md)
 </dt> <dt>
 
-[Beispiel Attribute](sample-attributes.md)
+[Beispielattribute](sample-attributes.md)
 </dt> <dt>
 
-[Medien Beispiele](media-samples.md)
+[Medienbeispiele](media-samples.md)
 </dt> <dt>
 
-[Video-Interlacing](video-interlacing.md)
+[Videointerlacing](video-interlacing.md)
 </dt> </dl>
 
  

@@ -1,9 +1,9 @@
 ---
-title: TTM_SETTIPBKCOLOR Meldung (kommstrg. h)
+title: TTM_SETTIPBKCOLOR (Commctrl.h)
 description: Legt die Hintergrundfarbe in einem QuickInfo-Fenster fest.
 ms.assetid: ed7860db-a221-4855-85d6-1b3b356279ed
 keywords:
-- Windows-Steuerelemente für TTM_SETTIPBKCOLOR Meldung
+- TTM_SETTIPBKCOLOR meldungssteuerelemente Windows
 topic_type:
 - apiref
 api_name:
@@ -14,14 +14,14 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 5cbd830f9a9fbdad428766bd12d82c059e37418e
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: bb56f62e7ebc8cab8b7773048767cecbe188abf698aaae15db6f7fb73d10bd95
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "106343882"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119433750"
 ---
-# <a name="ttm_settipbkcolor-message"></a>TTM-Nachricht für " \_ abkcolor"
+# <a name="ttm_settipbkcolor-message"></a>TTM \_ SETTIPBKCOLOR-Nachricht
 
 Legt die Hintergrundfarbe in einem QuickInfo-Fenster fest.
 
@@ -41,11 +41,11 @@ Neue Hintergrundfarbe.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Der Rückgabewert für diese Nachricht wird nicht verwendet.
+Der Rückgabewert für diese Meldung wird nicht verwendet.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Wenn visuelle Stile aktiviert sind, hat diese Nachricht keine Auswirkung.
+Wenn visuelle Stile aktiviert sind, hat diese Meldung keine Auswirkungen.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -53,17 +53,17 @@ Wenn visuelle Stile aktiviert sind, hat diese Nachricht keine Auswirkung.
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>                                        |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2003 \[ -Desktop-Apps\]<br/>                                  |
-| Header<br/>                   | <dl> <dt>Kommstrg. h</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur \[ Vista-Desktop-Apps\]<br/>                                        |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2003-Desktop-Apps\]<br/>                                  |
+| Header<br/>                   | <dl> <dt>Commctrl.h</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen:
 
 <dl> <dt>
 
-[**TTM \_ gettipbkcolor**](ttm-gettipbkcolor.md)
+[**TTM \_ GETTIPBKCOLOR**](ttm-gettipbkcolor.md)
 </dt> </dl>
 
  

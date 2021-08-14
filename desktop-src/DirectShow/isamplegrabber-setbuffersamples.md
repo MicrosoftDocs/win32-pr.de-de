@@ -1,7 +1,7 @@
 ---
-description: Die setbuffersamples-Methode gibt an, ob Beispiel Daten beim Durchlaufen des Filters in einen Puffer kopiert werden sollen.
+description: Die SetBufferSamples-Methode gibt an, ob Beispieldaten beim Durchlaufen des Filters in einen Puffer kopiert werden sollen.
 ms.assetid: 1ef4508e-441f-45e0-afb4-239dd947284b
-title: 'Isamplegrabber:: setbuffersamples-Methode (qedit. h)'
+title: ISampleGrabber::SetBufferSamples-Methode (Qedit.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -14,21 +14,21 @@ api_type:
 api_location:
 - strmiids.lib
 - strmiids.dll
-ms.openlocfilehash: 9fab426b7bcad1a12895f632a719a40b4aaa8da4
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: c768a21d4e08e6900f3a46f3e398f5040aaf6b6b0bc45c9187ac07821500a372
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106371432"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117817995"
 ---
-# <a name="isamplegrabbersetbuffersamples-method"></a>Isamplegrabber:: setbuffersamples-Methode
+# <a name="isamplegrabbersetbuffersamples-method"></a>ISampleGrabber::SetBufferSamples-Methode
 
 > [!Note]  
-> \[Veraltet. Diese API kann aus zukünftigen Versionen von Windows entfernt werden.\]
+> \[Veraltet. Diese API kann aus zukünftigen Releases von Windows entfernt werden.\]
 
  
 
-Die **setbuffersamples** -Methode gibt an, ob Beispiel Daten beim Durchlaufen des Filters in einen Puffer kopiert werden sollen.
+Die **SetBufferSamples-Methode** gibt an, ob Beispieldaten beim Durchlaufen des Filters in einen Puffer kopiert werden sollen.
 
 ## <a name="syntax"></a>Syntax
 
@@ -45,10 +45,10 @@ void SetBufferSamples(
 
 <dl> <dt>
 
-*Puffer* 
+*BufferThem* 
 </dt> <dd>
 
-Boolescher Wert, der angibt, ob Beispiel Daten gepuffert werden. **True** gibt an, dass der Filter Beispiel Daten in einen internen Puffer kopiert.
+Boolescher Wert, der angibt, ob Beispieldaten gepuffert werden sollen. True gibt an, dass der Filter Beispieldaten in einen internen Puffer kopiert.
 
 </dd> </dl>
 
@@ -56,17 +56,17 @@ Boolescher Wert, der angibt, ob Beispiel Daten gepuffert werden. **True** gibt a
 
 Diese Methode gibt keinen Wert zurück.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Um den kopierten Puffer abzurufen, nennen Sie [**isamplegrabber:: getcurrentbuffer**](isamplegrabber-getcurrentbuffer.md).
+Rufen Sie [**ISampleGrabber::GetCurrentBuffer**](isamplegrabber-getcurrentbuffer.md)auf, um den kopierten Puffer abzurufen.
 
 > [!Note]  
-> Die Header Datei "qedit. h" ist nicht mit Direct3D-Headern nach Version 7 kompatibel.
+> Die Headerdatei Qedit.h ist nicht mit Direct3D-Headern kompatibel, die höher als Version 7 sind.
 
  
 
 > [!Note]  
-> Zum Abrufen von "qedit. h" Laden Sie das [Microsoft Windows SDK Update für Windows Vista und .NET Framework 3,0](https://msdn.microsoft.com/windowsvista/bb980924.aspx)herunter. "Qedit. h" ist im Microsoft Windows SDK für Windows 7 und .NET Framework 3,5 Service Pack 1 nicht verfügbar.
+> Laden Sie zum Abrufen von Qedit.h das [Microsoft Windows SDK-Update für Windows Vista und .NET Framework 3.0](https://msdn.microsoft.com/windowsvista/bb980924.aspx)herunter. Qedit.h ist im Microsoft Windows SDK für Windows 7 und .NET Framework 3.5 Service Pack 1 nicht verfügbar.
 
  
 
@@ -76,19 +76,19 @@ Um den kopierten Puffer abzurufen, nennen Sie [**isamplegrabber:: getcurrentbuff
 
 | Anforderung | Wert |
 |--------------------|-----------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>"Qedit. h"</dt> </dl>      |
-| Bibliothek<br/> | <dl> <dt>"" "" ". Lib"</dt> </dl> |
+| Header<br/>  | <dl> <dt>Qedit.h</dt> </dl>      |
+| Bibliothek<br/> | <dl> <dt>Strmiids.lib</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[Verwenden der Beispiel-Grabber](using-the-sample-grabber.md)
+[Verwenden des Beispielgrabbers](using-the-sample-grabber.md)
 </dt> <dt>
 
-[**Isamplegrabber-Schnittstelle**](isamplegrabber.md)
+[**ISampleGrabber-Schnittstelle**](isamplegrabber.md)
 </dt> </dl>
 
  

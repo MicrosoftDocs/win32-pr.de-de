@@ -1,6 +1,6 @@
 ---
-description: 'Weitere Informationen finden Sie unter: esentesomanycolumnsexception-Konstruktor'
-title: Esentesomanycolumnsexception-Konstruktor
+description: 'Weitere Informationen finden Sie unter: EsentTooManyColumnsException-Konstruktor'
+title: EsentTooManyColumnsException-Konstruktor
 TOCTitle: 'EsentTooManyColumnsException constructor '
 ms:assetid: M:Microsoft.Isam.Esent.Interop.EsentTooManyColumnsException.#ctor
 ms:mtpsurl: https://msdn.microsoft.com/library/microsoft.isam.esent.interop.esenttoomanycolumnsexception.esenttoomanycolumnsexception(v=EXCHG.10)
@@ -24,19 +24,19 @@ api_type:
 api_location:
 - Microsoft.Isam.Esent.Interop.dll
 ROBOTS: INDEX,FOLLOW
-ms.openlocfilehash: bc61d0be4f2082a5ae13f03b562408966a32653e
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 392b9e14392287005ecad937d657bc7da791e21439f2437bce9ae536422be312
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106366153"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117707154"
 ---
-# <a name="esenttoomanycolumnsexception-constructor"></a>Esentesomanycolumnsexception-Konstruktor
+# <a name="esenttoomanycolumnsexception-constructor"></a>EsentTooManyColumnsException-Konstruktor
 
-Initialisiert eine neue Instanz der esentesomanycolumnsexception-Klasse.
+Initialisiert eine neue Instanz der EsentTooManyColumnsException-Klasse.
 
-**Namespace:**  [Microsoft. ISAM. ESENT. Interop](./microsoft.isam.esent.interop-namespace.md)  
-**Assembly:**  Microsoft. ISAM. ESENT. Interop (in Microsoft.Isam.Esent.Interop.dll)
+**Namespace:**  [Microsoft.Isam.Esent.Interop](./microsoft.isam.esent.interop-namespace.md)  
+**Assembly:**  Microsoft.Isam.Esent.Interop (in Microsoft.Isam.Esent.Interop.dll)
 
 ## <a name="syntax"></a>Syntax
 
@@ -52,12 +52,12 @@ Dim instance As New EsentTooManyColumnsException()
 public EsentTooManyColumnsException()
 ```
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
-#### <a name="reference"></a>Referenz
+#### <a name="reference"></a>Verweis
 
-[Esentyomanycolumnsexception-Klasse](./esenttoomanycolumnsexception-class.md)
+[EsentTooManyColumnsException-Klasse](./esenttoomanycolumnsexception-class.md)
 
-[Esentesomanycolumnsexception-Elemente](./esenttoomanycolumnsexception-members.md)
+[EsentTooManyColumnsException-Member](./esenttoomanycolumnsexception-members.md)
 
-[Microsoft. ISAM. ESENT. Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)
+[Microsoft.Isam.Esent.Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)

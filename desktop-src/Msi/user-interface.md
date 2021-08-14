@@ -1,23 +1,23 @@
 ---
-description: Windows Installer bietet eine umfassende Benutzeroberfläche zum Installieren einer Anwendung oder eines Produkts.
+description: Windows Das Installationsprogramm stellt eine vollständige Benutzeroberfläche (UI) zum Installieren einer Anwendung oder eines Produkts bereit.
 ms.assetid: 43f4445e-7bfa-4242-b3ef-4a4fe113f8a4
 title: Benutzeroberfläche (Windows Installer)
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: de66e6c1d1058350f94d68c0d4c99c55ba9aa6c3
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 9c6cec4351fdbd4d2eb79364ebcf65b5c3259b4f37a06e6d86375cadc9b06abb
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104128365"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119809350"
 ---
 # <a name="user-interface-windows-installer"></a>Benutzeroberfläche (Windows Installer)
 
-Windows Installer bietet eine umfassende Benutzeroberfläche zum Installieren einer Anwendung oder eines Produkts. Die Benutzeroberfläche stellt dem Benutzer die Optionen zur Verfügung, die zum Konfigurieren der Installation und zum Abrufen von Informationen vom Benutzer über den ausstehenden Installationsvorgang verfügbar sind.
+Windows Das Installationsprogramm stellt eine vollständige Benutzeroberfläche (UI) zum Installieren einer Anwendung oder eines Produkts bereit. Die Benutzeroberfläche stellt dem Benutzer die verfügbaren Optionen zum Konfigurieren der Installation zur Verfügung und erhält vom Benutzer Informationen über den ausstehenden Installationsvorgang.
 
-[Über die Benutzeroberfläche](about-the-user-interface.md) wird die Funktionalität der Benutzeroberfläche des Installers beschrieben. Die Verwendung der [Benutzeroberfläche](using-the-user-interface.md) beschreibt die Verwendung der internen Benutzeroberfläche des Installers.
+[Informationen zum Benutzeroberfläche](about-the-user-interface.md) beschreibt die Funktionalität der Benutzeroberfläche des Installationsprogramms. [Unter Verwendung Benutzeroberfläche](using-the-user-interface.md) wird die Verwendung der internen Benutzeroberfläche des Installationsprogramms beschrieben.
 
-Referenzinformationen über das interne Dialogfeld "Installer" und Steuerelement Stile und-Optionen finden Sie unter [Benutzeroberflächen Referenz](user-interface-reference.md).
+Referenzinformationen zum internen Dialogfeld des Installationsprogramms sowie zu Steuerelementstilen und -optionen finden Sie in [Benutzeroberfläche Referenz.](user-interface-reference.md)
 
  
 

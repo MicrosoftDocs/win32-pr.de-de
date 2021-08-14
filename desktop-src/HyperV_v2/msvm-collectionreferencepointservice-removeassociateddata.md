@@ -1,5 +1,5 @@
 ---
-description: RemoveAssociatedData-Methode der Msvm_CollectionReferencePointService - Entfernt das dem Verweispunkt zugeordnete Datenprotokoll.
+description: 'RemoveAssociatedData-Methode der Msvm_CollectionReferencePointService Klasse: Entfernt das dem Verweispunkt zugeordnete Datenprotokoll.'
 ms.assetid: 42242b76-9123-41a7-b8b1-82d2e827ea53
 title: RemoveAssociatedData-Methode der Msvm_CollectionReferencePointService Klasse
 ms.topic: reference
@@ -13,12 +13,12 @@ api_type:
 - COM
 api_location:
 - vmms.exe
-ms.openlocfilehash: 66a5cf068545f31f9919a9da60a1b09b32f78e4d
-ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
+ms.openlocfilehash: 7352c00ead9647c887bf9901f8c159dae2883f77d6d263fcea39de0063b34a27
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2021
-ms.locfileid: "108119228"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119431510"
 ---
 # <a name="removeassociateddata-method-of-the-msvm_collectionreferencepointservice-class"></a>RemoveAssociatedData-Methode der Msvm \_ CollectionReferencePointService-Klasse
 
@@ -43,7 +43,7 @@ uint32 RemoveAssociatedData(
 *AffectedReferencePointCollection* \[ In\]
 </dt> <dd>
 
-Verweis auf die betroffene Auflistung des Referenzpunkts des virtuellen Systems.
+Verweis auf die betroffene Referenzpunktsammlung des virtuellen Systems.
 
 </dd> <dt>
 
@@ -97,17 +97,17 @@ Bei Erfolg wird entweder 0 (kein Fehler) oder 4096 (Auftrag gestartet) zurückge
 
 
 
-| Anforderungen | Wert |
+| Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | nur Windows 10 \[ Desktop-Apps\]<br/>                                                             |
+| Unterstützte Mindestversion (Client)<br/> | \[Windows 10 Nur Desktop-Apps\]<br/>                                                             |
 | Unterstützte Mindestversion (Server)<br/> | Windows Server 2016<br/>                                                                          |
-| Namespace<br/>                | \\Root-Virtualisierung \\ v2<br/>                                                                     |
+| Namespace<br/>                | \\Stammvirtualisierung \\ v2<br/>                                                                     |
 | MOF<br/>                      | <dl> <dt>WindowsVirtualization.V2.mof</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>Vmms.exe</dt> </dl>                     |
 
 
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Weitere Informationen:
 
 <dl> <dt>
 

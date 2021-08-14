@@ -1,7 +1,7 @@
 ---
-description: Die CAPICOM \_ Key \_ spec-Enumeration definiert Schlüssel Spezifikationen.
+description: Die CAPICOM \_ KEY \_ SPEC-Enumeration definiert Schlüsselspezifikationen.
 ms.assetid: e4aaaf69-ab28-4e8c-8a8a-6dc662299865
-title: CAPICOM_KEY_SPEC-Enumeration (CAPICOM. h)
+title: CAPICOM_KEY_SPEC -Enumeration (Capicom.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,16 +13,16 @@ api_type:
 - HeaderDef
 api_location:
 - Capicom.h
-ms.openlocfilehash: 153f0431d78ff595b4d568fd7a677abea0d28be7
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 211830b57d37240edf0df97524ef3865ebe600b33e814353f3a0d021b1b0d88c
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106364685"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117772445"
 ---
-# <a name="capicom_key_spec-enumeration"></a>CAPICOM- \_ schlüsselspezifikations \_ Enumeration
+# <a name="capicom_key_spec-enumeration"></a>CAPICOM \_ KEY \_ SPEC-Enumeration
 
-Die **CAPICOM \_ Key \_ spec** -Enumeration definiert Schlüssel Spezifikationen.
+Die **CAPICOM \_ KEY \_ SPEC-Enumeration** definiert Schlüsselspezifikationen.
 
 ## <a name="members"></a>Member
 
@@ -30,17 +30,17 @@ Die **CAPICOM \_ Key \_ spec** -Enumeration definiert Schlüssel Spezifikationen
 
 | Member                              | BESCHREIBUNG                                                | Wert |
 |-------------------------------------|------------------------------------------------------------|-------|
-| **CAPICOM- \_ Schlüssel \_ Spezifikation \_ keyexchange** | Der Schlüssel kann für die Verschlüsselung und Signierung verwendet werden.<br/> | 1     |
-| **CAPICOM \_ Key \_ spec- \_ Signatur**   | Der Schlüssel kann nur für die Signierung verwendet werden.<br/>           | 2     |
+| **CAPICOM \_ KEY \_ SPEC \_ KEYEXCHANGE** | Der Schlüssel kann zum Verschlüsseln und Signieren verwendet werden.<br/> | 1     |
+| **\_ \_ CAPICOM-SCHLÜSSELSPEZIFIKATIONSSIGNATUR \_**   | Der Schlüssel kann nur zum Signieren verwendet werden.<br/>           | 2     |
 
 
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Die **CAPICOM \_ - \_ schlüsselspezifikations** Enumeration wird von den folgenden Methoden und Eigenschaften verwendet:
+Die **CAPICOM \_ KEY \_ SPEC-Enumeration** wird von den folgenden Methoden und Eigenschaften verwendet:
 
--   [**PrivateKey. KeySpec**](privatekey-keyspec.md) -Eigenschaft.
--   [**PrivateKey. Open**](privatekey-open.md) -Methode.
+-   [**PrivateKey.KeySpec-Eigenschaft.**](privatekey-keyspec.md)
+-   [**PrivateKey.Open-Methode.**](privatekey-open.md)
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -48,8 +48,8 @@ Die **CAPICOM \_ - \_ schlüsselspezifikations** Enumeration wird von den folgen
 
 | Anforderung | Wert |
 |----------------------------|--------------------------------------------------------------------------------------|
-| Verteilbare Komponente<br/> | CAPICOM 2,0 oder höher unter Windows Server 2003 und Windows XP<br/>                |
-| Header<br/>          | <dl> <dt>CAPICOM. h</dt> </dl> |
+| Verteilbare Komponente<br/> | CAPICOM 2.0 oder höher auf Windows Server 2003 und Windows XP<br/>                |
+| Header<br/>          | <dl> <dt>Capicom.h</dt> </dl> |
 
 
 

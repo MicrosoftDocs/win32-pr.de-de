@@ -3,24 +3,24 @@ title: So rufen Sie alle Metadaten in einer Datei ab
 description: So rufen Sie alle Metadaten in einer Datei ab
 ms.assetid: c1de58d7-25a8-4416-9ee9-6ebe641ed640
 keywords:
-- Windows Media-Format-SDK, Abrufen von Metadaten
+- Windows Medienformat-SDK, Abrufen von Metadaten
 - Advanced Systems Format (ASF), Abrufen von Metadaten
 - ASF (Advanced Systems Format), Abrufen von Metadaten
-- Metadaten, Abrufen aller
+- Metadaten, alle abrufen
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: dc5d63a27cd4455d8d39cebee894dfbfc8d5bf2c
-ms.sourcegitcommit: 48d1c892045445bcbd0f22bafa2fd3861ffaa6e7
+ms.openlocfilehash: fab81f151cbb661cc7769128e2d4371dd0b24869317d1888769ed66a60de86f3
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/19/2020
-ms.locfileid: "106341913"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119807470"
 ---
 # <a name="to-retrieve-all-metadata-in-a-file"></a>So rufen Sie alle Metadaten in einer Datei ab
 
-Das folgende Codebeispiel ist eine Funktion, mit der alle Metadaten in einer Datei angezeigt werden. Um die-Funktion zu verwenden, müssen Sie Ihr einen Zeiger auf die [**IWMHeaderInfo3**](/previous-versions/windows/desktop/api/wmsdkidl/nn-wmsdkidl-iwmheaderinfo3) -Schnittstelle eines Metadaten-Editor-Objekts, eines Reader-Objekts, eines synchronen Reader-Objekts oder eines Writer-Objekts übergeben. Sie müssen auch die Header Datei "stdio. h" an einer beliebigen Stelle in Ihrem Projekt einschließen. Weitere Informationen zur Verwendung dieses Beispiels finden [Sie unter Verwenden der Code Beispiele](using-the-code-examples.md).
+Das folgende Codebeispiel ist eine Funktion, die alle Metadaten in einer Datei anzeigt. Um die Funktion verwenden zu können, müssen Sie ihr einen Zeiger auf die [**IWMHeaderInfo3-Schnittstelle**](/previous-versions/windows/desktop/api/wmsdkidl/nn-wmsdkidl-iwmheaderinfo3) eines Metadaten-Editorobjekts, Readerobjekts, synchronen Readerobjekts oder Writer-Objekts übergeben. Sie müssen auch die Stdio.h-Headerdatei an einer stelle stelle in Ihr Projekt einfügen. Weitere Informationen zur Verwendung dieses Beispiels finden Sie unter [Verwenden der Codebeispiele.](using-the-code-examples.md)
 
-Aus Gründen der Übersichtlichkeit werden in diesem Beispiel die Werte von Binary-und GUID-Attributen nicht angezeigt. Für binäre Attribute sollten Sie überprüfen, ob der Attribut Name mit einem der bekannten komplexen Metadatenattribute übereinstimmt. Wenn dies der Fall ist, sollten Sie die Ausgabe entsprechend der für dieses Attribut verwendeten Struktur formatieren. Ebenso können GUID-Attributwerte auf verschiedene Weise angezeigt werden. Sie können jeden Member der Struktur einzeln anzeigen oder die Struktur in eine Zeichenfolge konvertieren und als einen Wert anzeigen.
+Aus Gründen der Übersichtlichkeit werden in diesem Beispiel die Werte der Binär- und GUID-Attribute nicht angezeigt. Bei binären Attributen sollten Sie überprüfen, ob der Attributname mit einem der bekannten komplexen Metadatenattribute übereinstimmt. In diesem Falle sollten Sie die Ausgabe entsprechend der für dieses Attribut verwendeten Struktur formatieren. Auf ähnliche Weise können GUID-Attributwerte auf verschiedene Weise angezeigt werden. Sie können die einzelnen Member der Struktur einzeln anzeigen oder die Struktur in eine Zeichenfolge konvertieren und als einen Wert anzeigen.
 
 
 ```C++
@@ -139,9 +139,9 @@ Exit:
 [**Abrufen von Metadatenattributen**](retrieving-metadata-attributes.md)
 </dt> </dl>
 
- 
+ 
 
- 
+ 
 
 
 

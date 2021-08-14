@@ -1,40 +1,40 @@
 ---
-description: Sie können die Unterstützung von Lauf Zeitparametern zu einem xapo hinzufügen, indem Sie die ixapoparameters-Schnittstelle implementieren. Durch die Unterstützung von Lauf Zeitparametern kann ein xapo sein Verhalten basierend auf den Parametern ändern, die ihm zur Laufzeit übergeben werden.
+description: Sie können einer XAPO Laufzeitparameterunterstützung hinzufügen, indem Sie die IXAPOParameters-Schnittstelle implementieren. Die Unterstützung von Laufzeitparametern ermöglicht es einem XAPO, sein Verhalten basierend auf den Parametern zu ändern, die zur Laufzeit an ihn übergeben werden.
 ms.assetid: 13f974ec-fcf5-1749-e69d-88de79b7d82b
 title: "So wird's gemacht: Hinzufügen der Laufzeitparameterunterstützung zu einem XAPO"
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 582f51b3dfbdc6d31422494906d5f945f77ccb03
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: dbf69fcc2570e26f188766a7f908a76d0dfcf3ec190d9fd0d7a1c434b242fdf1
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104485179"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119805540"
 ---
 # <a name="how-to-add-run-time-parameter-support-to-an-xapo"></a>So wird's gemacht: Hinzufügen der Laufzeitparameterunterstützung zu einem XAPO
 
-Sie können die Unterstützung von Lauf Zeitparametern zu einem xapo hinzufügen, indem Sie die [**ixapoparameters**](/windows/desktop/api/XAPO/nn-xapo-ixapoparameters) -Schnittstelle implementieren. Durch die Unterstützung von Lauf Zeitparametern kann ein xapo sein Verhalten basierend auf den Parametern ändern, die ihm zur Laufzeit übergeben werden.
+Sie können einer XAPO Laufzeitparameterunterstützung hinzufügen, indem Sie die [**IXAPOParameters-Schnittstelle**](/windows/desktop/api/XAPO/nn-xapo-ixapoparameters) implementieren. Die Unterstützung von Laufzeitparametern ermöglicht es einem XAPO, sein Verhalten basierend auf den Parametern zu ändern, die zur Laufzeit an ihn übergeben werden.
 
-1.  Führen Sie die Schritte unter Gewusst [wie: Erstellen eines xapo](how-to--create-an-xapo.md)aus.
-2.  Ändern Sie den xapo-Wert, um von [**cxapoparametersbase**](/windows/desktop/api/XAPOBase/nl-xapobase-cxapoparametersbase) und [**cxapobase**](/windows/desktop/api/XAPOBase/nl-xapobase-cxapobase)abgeleitet zu werden.
-3.  Fügen Sie den-Methoden [**cxapoparametersbase:: beginprocess**](/windows/win32/api/xapobase/nf-xapobase-cxapoparametersbase-beginprocess) und [**cxapoparametersbase:: endprocess**](/windows/win32/api/xapobase/nf-xapobase-cxapoparametersbase-endprocess) Aufrufe der-Implementierung von [**ixapo::P rocess**](/windows/win32/api/xapo/nf-xapo-ixapo-process)hinzu.
+1.  Führen Sie die Schritte unter [Vorgehensweise: Erstellen einer XAPO](how-to--create-an-xapo.md)aus.
+2.  Ändern Sie die XAPO so, dass sie von [**CXAPOParametersBase**](/windows/desktop/api/XAPOBase/nl-xapobase-cxapoparametersbase) und [**CXAPOBase**](/windows/desktop/api/XAPOBase/nl-xapobase-cxapobase)abgeleitet wird.
+3.  Fügen Sie der Implementierung von [**IXAPO::P rocess**](/windows/win32/api/xapo/nf-xapo-ixapo-process)Aufrufe der Methoden [**CXAPOParametersBase::BeginProcess**](/windows/win32/api/xapobase/nf-xapobase-cxapoparametersbase-beginprocess) und [**CXAPOParametersBase::EndProcess**](/windows/win32/api/xapobase/nf-xapobase-cxapoparametersbase-endprocess) hinzu.
 
     > [!Note]  
-    > Das Hinzufügen dieser Methoden zu [ixapo::P rocess](how-to--build-a-basic-audio-processing-graph.md) ermöglicht [**cxapoparametersbase**](/windows/desktop/api/XAPOBase/nl-xapobase-cxapoparametersbase) , seine Kopien der Effektparameter in einem Thread sicheren Zustand zu belassen. Aufrufen von [**cxapoparametersbase:: beginprocess**](/windows/win32/api/xapobase/nf-xapobase-cxapoparametersbase-beginprocess) am Anfang von [**ixapo::P rocess**](/windows/win32/api/xapo/nf-xapo-ixapo-process)und [**cxapoparametersbase:: endprocess**](/windows/win32/api/xapobase/nf-xapobase-cxapoparametersbase-endprocess) am Ende von **ixapo::P rocess**.
+    > Durch Hinzufügen dieser Methoden zu [IXAPO::P rocess](how-to--build-a-basic-audio-processing-graph.md) kann [**CXAPOParametersBase**](/windows/desktop/api/XAPOBase/nl-xapobase-cxapoparametersbase) die Kopien der Effektparameter in einem threadsicheren Zustand speichern. Rufen Sie [**CXAPOParametersBase::BeginProcess**](/windows/win32/api/xapobase/nf-xapobase-cxapoparametersbase-beginprocess) am Anfang von [**IXAPO::P rocess**](/windows/win32/api/xapo/nf-xapo-ixapo-process)und [**CXAPOParametersBase::EndProcess**](/windows/win32/api/xapobase/nf-xapobase-cxapoparametersbase-endprocess) am Ende von **IXAPO::P rocess** auf.
 
      
 
-4.  Fügen Sie der [**ixapo::P rocess**](/windows/win32/api/xapo/nf-xapo-ixapo-process) -Implementierung weiteren Code hinzu, um das Verhalten entsprechend den Werten zu ändern, die von der [**SetParameters**](/windows/win32/api/xapo/nf-xapo-ixapoparameters-setparameters) -Methode gespeichert werden.
+4.  Fügen Sie der [**IXAPO::P rocess-Implementierung**](/windows/win32/api/xapo/nf-xapo-ixapo-process) weiteren Code hinzu, um das Verhalten entsprechend den von der [**SetParameters-Methode gespeicherten**](/windows/win32/api/xapo/nf-xapo-ixapoparameters-setparameters) Werten zu ändern.
 
     > [!Note]  
-    > Wenn Sie der [**ixapo::P rocess**](/windows/win32/api/xapo/nf-xapo-ixapo-process) -Methode Code hinzufügen, um die von [**SetParameters**](/windows/win32/api/xapo/nf-xapo-ixapoparameters-setparameters) angegebenen Parameter zu verwenden, kann das xapo-Verhalten während des gesamten Lebenszyklus geändert werden.
+    > Das Hinzufügen von Code zur [**IXAPO::P rocess-Methode**](/windows/win32/api/xapo/nf-xapo-ixapo-process) zur Verwendung der von [**SetParameters angegebenen**](/windows/win32/api/xapo/nf-xapo-ixapoparameters-setparameters) Parameter ermöglicht es, das Verhalten des XAPO während seiner gesamten Lebensdauer zu ändern.
 
      
 
-5.  Wenn Sie eine Instanz des Effekts erstellen, weisen Sie einen Puffer mit drei der Strukturen zu, die die Parameter des Effekts darstellen, und übergeben Sie ihn an den [**cxapoparametersbase**](/windows/desktop/api/XAPOBase/nl-xapobase-cxapoparametersbase) -Konstruktor.
+5.  Wenn Sie eine Instanz des Effekts erstellen, ordnen Sie einen Puffer von drei der Strukturen zu, die die Parameter des Effekts darstellen, und übergeben Sie ihn an den [**CXAPOParametersBase-Konstruktor.**](/windows/desktop/api/XAPOBase/nl-xapobase-cxapoparametersbase)
 
     > [!Note]  
-    > Die [**cxapoparametersbase**](/windows/desktop/api/XAPOBase/nl-xapobase-cxapoparametersbase) -Instanz verwendet diesen Puffer intern zum Verwalten von Effekt Parametern, die an Sie übergeben werden, wenn [**SetParameters**](/windows/win32/api/xapo/nf-xapo-ixapoparameters-setparameters)aufgerufen wird. Sie müssen alle Prozessparameter Blöcke in *pparameterblocks* auf denselben Standardwert initialisieren, bevor Sie eine der Methoden [**ixapo::P rocess**](/windows/win32/api/xapo/nf-xapo-ixapo-process), [**ixapoparameters:: GetParameters**](/windows/win32/api/xapo/nf-xapo-ixapoparameters-getparameters)und **ixapoparameters:: SetParameters** aufrufen. Normalerweise wird diese Initialisierung in [**ixapo:: Initialize**](/windows/win32/api/xapo/nf-xapo-ixapo-initialize) oder [**ixapo:: lockforprocess**](/windows/win32/api/xapo/nf-xapo-ixapo-lockforprocess)behandelt.
+    > Die [**CXAPOParametersBase-Instanz**](/windows/desktop/api/XAPOBase/nl-xapobase-cxapoparametersbase) verwendet diesen Puffer intern zum Verwalten von Effektparametern, die beim Aufrufen von [**SetParameters**](/windows/win32/api/xapo/nf-xapo-ixapoparameters-setparameters)übergeben werden. Sie müssen alle Prozessparameterblöcke in *pParameterBlocks* mit demselben Standardwert initialisieren, bevor Sie eine der [**Methoden IXAPO::P rocess,**](/windows/win32/api/xapo/nf-xapo-ixapo-process) [**IXAPOParameters::GetParameters**](/windows/win32/api/xapo/nf-xapo-ixapoparameters-getparameters)und **IXAPOParameters::SetParameters** aufrufen. Normalerweise wird diese Initialisierung in [**IXAPO::Initialize**](/windows/win32/api/xapo/nf-xapo-ixapo-initialize) oder in [**IXAPO::LockForProcess**](/windows/win32/api/xapo/nf-xapo-ixapo-lockforprocess)verarbeitet.
 
      
 
@@ -45,7 +45,7 @@ Sie können die Unterstützung von Lauf Zeitparametern zu einem xapo hinzufügen
 [Audioeffekte](audio-effects.md)
 </dt> <dt>
 
-[Übersicht über xapo](xapo-overview.md)
+[Übersicht über XAPO](xapo-overview.md)
 </dt> </dl>
 
  

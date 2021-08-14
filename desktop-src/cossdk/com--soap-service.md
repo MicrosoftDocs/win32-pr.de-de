@@ -1,28 +1,28 @@
 ---
-description: Com+-SOAP-Dienst
+description: COM+-SOAP-Dienst
 ms.assetid: b6287cbe-9870-464e-82de-090cd16c108e
-title: Com+-SOAP-Dienst
+title: COM+-SOAP-Dienst
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: eb6aac4cfb125a2ead955a8ab755606f81d100ef
-ms.sourcegitcommit: c7add10d695482e1ceb72d62b8a4ebd84ea050f7
+ms.openlocfilehash: 46fcf3ce10e98623a06072d8f86caef8de47e4e7de7b7420729e1fd5432f859a
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106343600"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117917021"
 ---
-# <a name="com-soap-service"></a>Com+-SOAP-Dienst
+# <a name="com-soap-service"></a>COM+-SOAP-Dienst
 
-Durch das Aktivieren des Kontrollkästchens " **SOAP** " im Verwaltungs Programm "Komponenten Dienste" können Sie eine COM+-Anwendung als XML-Webdienst verfügbar machen. Sie können einen XML-Webdienst, unabhängig davon, ob er mit com+ bereitgestellt wurde, auch transparent als COM-Komponente verwenden. Dies bedeutet, dass Sie auf einfache Weise neue XML-Webdienste aus vorhandenen COM+-Anwendungen erstellen und XML-Webdienste problemlos in neue COM+-Anwendungen integrieren können.
+Sie können eine  COM+-Anwendung einfach als XML-Webdienst verfügbar machen, indem Sie im Verwaltungstool komponentendienste das Kontrollkästchen Soap verwenden aktivieren. Sie können auch transparent einen XML-Webdienst als COM-Komponente verwenden, unabhängig davon, ob er mit COM+ bereitgestellt wird oder nicht. Dies bedeutet, dass Sie ganz einfach neue XML-Webdienste aus vorhandenen COM+-Anwendungen erstellen und XML-Webdienste problemlos in neue COM+-Anwendungen integrieren können.
 
-Die in der folgenden Tabelle beschriebenen Themen enthalten Hintergrundinformationen und Aufgabeninformationen zur Verwendung von com+, um ihre konfigurierten COM-Komponenten als XML-Webdienste verfügbar zu machen.
+Die in der folgenden Tabelle beschriebenen Themen enthalten Hintergrund- und Aufgabeninformationen zur Verwendung von COM+, um Ihre konfigurierten COM-Komponenten als XML-Webdienste verfügbar zu machen.
 
 
 
 | Thema                                                                   | BESCHREIBUNG                                                                            |
 |-------------------------------------------------------------------------|----------------------------------------------------------------------------------------|
-| [Com+-SOAP-Dienst Konzepte](com--soap-service-concepts.md)<br/> | Bietet eine Übersicht über XML-Webdienste und SOAP.<br/>                          |
-| [Com+-SOAP-Dienst Tasks](com--soap-service-tasks.md)<br/>       | Enthält Anweisungen zum Verwenden von com+ zum Erstellen und Bereitstellen von XML-Webdiensten.<br/> |
+| [COM+-SOAP-Dienstkonzepte](com--soap-service-concepts.md)<br/> | Bietet eine Übersicht über XML-Webdienste und SOAP.<br/>                          |
+| [COM+-SOAP-Dienstaufgaben](com--soap-service-tasks.md)<br/>       | Enthält Anweisungen zur Verwendung von COM+ zum Erstellen und Bereitstellen von XML-Webdiensten.<br/> |
 
 
 

@@ -1,61 +1,61 @@
 ---
-description: Das TLS-Handshake-Protokoll (Transport Layer Security) ist für die Authentifizierung und den Schlüsselaustausch zuständig, die erforderlich sind, um sichere Sitzungen einzurichten oder fortzusetzen.
+description: Das TLS-Handshakeprotokoll (Transport Layer Security) ist für die Authentifizierung und den Schlüsselaustausch verantwortlich, die zum Einrichten oder Fortsetzen sicherer Sitzungen erforderlich sind.
 ms.assetid: 65fb4db3-e505-457a-9159-dba0b506ea0b
-title: TLS-Handshake-Protokoll
+title: TLS Handshake-Protokoll
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: e0c7cfa9e9db54a6035abe147ce00bbde59bcc86
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 3fe32e11127bf46088aa04e58dd6444620cea327c08d2609e01749efcb1e00df
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106350022"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118915818"
 ---
-# <a name="tls-handshake-protocol"></a>TLS-Handshake-Protokoll
+# <a name="tls-handshake-protocol"></a>TLS Handshake-Protokoll
 
-Das TLS-Handshake-Protokoll ( [*Transport Layer Security*](../secgloss/t-gly.md) ) ist für die Authentifizierung und den Schlüsselaustausch zuständig, die erforderlich sind, um sichere Sitzungen einzurichten oder fortzusetzen. Beim Einrichten einer sicheren [*Sitzung*](../secgloss/s-gly.md)verwaltet das Handshake-Protokoll Folgendes:
+Das TLS-Handshakeprotokoll [*(Transport Layer Security)*](../secgloss/t-gly.md) ist für die Authentifizierung und den Schlüsselaustausch verantwortlich, die zum Einrichten oder Fortsetzen sicherer Sitzungen erforderlich sind. Beim Einrichten einer sicheren [*Sitzung*](../secgloss/s-gly.md)verwaltet das Handshake-Protokoll Folgendes:
 
--   Cipher Suite-Aushandlung
+-   Verschlüsselungssammlungsaushandlung
 -   Authentifizierung des Servers und optional des Clients
--   Informationsaustausch für Sitzungsschlüssel.
+-   Austausch von Sitzungsschlüsselinformationen.
 
 ## <a name="cipher-suite-negotiation"></a>Cipher Suite-Aushandlung
 
-Der Client und der Server stellen eine Verbindung her und wählen die Verschlüsselungs Sammlung aus, die im gesamten Nachrichtenaustausch verwendet werden soll.
+Der Client und der Server nehmen Kontakt auf und wählen die Verschlüsselungssammlung aus, die während des gesamten Nachrichtenaustauschs verwendet wird.
 
 ## <a name="authentication"></a>Authentifizierung
 
-In TLS weist ein Server seine Identität dem Client zu. Außerdem muss der Client seine Identität möglicherweise dem Server nachweisen. PKI, die Verwendung von [*öffentlichen/privaten Schlüsselpaaren*](../secgloss/p-gly.md), ist die Grundlage für diese Authentifizierung. Die genaue Methode, die für die Authentifizierung verwendet wird, wird von der ausgehandelten Chiffre Sammlung bestimmt.
+In TLS bestätigt ein Server seine Identität gegenüber dem Client. Der Client muss möglicherweise auch seine Identität gegenüber dem Server nachweisen. PKI, die Verwendung von [*Paaren aus öffentlichem und privatem Schlüssel,*](../secgloss/p-gly.md)ist die Grundlage dieser Authentifizierung. Die genaue Methode, die für die Authentifizierung verwendet wird, wird durch die ausgehandelte Verschlüsselungssammlung bestimmt.
 
-## <a name="key-exchange"></a>Schlüsselaustausch
+## <a name="key-exchange"></a>Key Exchange
 
-Der Client und der Server tauschen Zufallszahlen und eine besondere Zahl aus, die als geheimer Hauptschlüssel bezeichnet wird. Diese Zahlen werden mit zusätzlichen Daten kombiniert, sodass Client und Server ihren gemeinsamen geheimen Schlüssel erstellen können, der als geheimer Hauptschlüssel bezeichnet wird. Der geheime Hauptschlüssel wird von Client und Server verwendet, um den geheimen Lese Schlüssel zu generieren. Dies ist der für das [*Hashwert*](../secgloss/h-gly.md)verwendete Sitzungsschlüssel und der Schlüssel zum Schreiben, bei dem es sich um den [*Sitzungsschlüssel*](../secgloss/s-gly.md) handelt, der für die Verschlüsselung verwendet wird.
+Client und Server tauschen Zufallszahlen und eine spezielle Zahl namens Pre-Master Secret aus. Diese Zahlen werden mit zusätzlichen Daten kombiniert, mit denen Client und Server ihr gemeinsames Geheimnis erstellen können, das als Geheimer Hauptschlüssel bezeichnet wird. Der geheime Hauptschlüssel wird von Client und Server verwendet, um den Mac-Schreibschlüssel zu generieren. Dabei handelt es sich um den Sitzungsschlüssel, der für das [*Hashing*](../secgloss/h-gly.md)verwendet wird, und den Schreibschlüssel, bei dem es sich um den für die Verschlüsselung verwendeten [*Sitzungsschlüssel*](../secgloss/s-gly.md) handelt.
 
-## <a name="establishing-a-secure-session-by-using-tls"></a>Einrichten einer sicheren Sitzung mithilfe von TLS
+## <a name="establishing-a-secure-session-by-using-tls"></a>Einrichten einer sicheren Sitzung mit TLS
 
-Das TLS-Handshake-Protokoll umfasst die folgenden Schritte:
+Das TLS Handshake-Protokoll umfasst die folgenden Schritte:
 
-1.  Der Client sendet eine "Client Hello"-Meldung sowie den Zufallswert und die unterstützten Verschlüsselungs Sammlungen des Clients an den Server.
-2.  Der Server antwortet, indem er eine "Server Hello"-Meldung zusammen mit dem zufälligen Wert des Servers an den Client sendet.
-3.  Der Server sendet sein Zertifikat zur Authentifizierung an den Client und fordert möglicherweise ein Zertifikat vom Client an. Der Server sendet die Meldung "Server Hello Done".
+1.  Der Client sendet eine "Client hello"-Nachricht zusammen mit dem Zufallswert des Clients und unterstützten Verschlüsselungssammlungen an den Server.
+2.  Der Server antwortet, indem er eine "Server hello"-Nachricht zusammen mit dem zufälligen Wert des Servers an den Client sendet.
+3.  Der Server sendet sein Zertifikat zur Authentifizierung an den Client und kann ein Zertifikat vom Client anfordern. Der Server sendet die Meldung "Server hello done".
 4.  Wenn der Server ein Zertifikat vom Client angefordert hat, sendet der Client es.
-5.  Der Client erstellt einen zufälligen geheimen Hauptschlüssel und verschlüsselt ihn mit dem [*öffentlichen Schlüssel*](../secgloss/p-gly.md) aus dem Zertifikat des Servers, wobei der verschlüsselte geheime Hauptschlüssel an den Server gesendet wird.
-6.  Der Server empfängt den geheimen Hauptschlüssel. Der Server und der Client generieren jeweils den geheimen Haupt [*Schlüssel und die Sitzungsschlüssel*](../secgloss/s-gly.md) basierend auf dem geheimen Hauptschlüssel.
-7.  Der Client sendet eine Benachrichtigung vom Typ "Verschlüsselungs Spezifikation ändern" an den Server, um anzugeben, dass der Client die neuen [*Sitzungsschlüssel*](../secgloss/s-gly.md) für das [*hashten*](../secgloss/h-gly.md) und Verschlüsseln von Nachrichten verwendet. Der Client sendet außerdem die Meldung "der Client wurde beendet".
-8.  Der Server empfängt "Verschlüsselungs Spezifikation ändern" und schaltet seinen Sicherheitsstatus auf Datensatzebene mithilfe der [*Sitzungsschlüssel*](../secgloss/s-gly.md)in die [*symmetrische Verschlüsselung*](../secgloss/s-gly.md) ein. Der Server sendet die Meldung "der Server wurde beendet" an den Client.
-9.  Client und Server können nun Anwendungsdaten über den gesicherten Kanal austauschen, den Sie eingerichtet haben. Alle vom Client an den Server und vom Server an den Client gesendeten Nachrichten werden mit dem Sitzungsschlüssel verschlüsselt.
+5.  Der Client erstellt ein zufälliges Pre-Master Secret und verschlüsselt es mit dem [*öffentlichen Schlüssel*](../secgloss/p-gly.md) aus dem Serverzertifikat und sendet den verschlüsselten Pre-Master Secret an den Server.
+6.  Der Server empfängt den Geheimen Pre-Master-Schlüssel. Server und Client generieren jeweils den geheimen Hauptschlüssel und [*die Sitzungsschlüssel*](../secgloss/s-gly.md) basierend auf dem Geheimen Prähauptschlüssel.
+7.  Der Client sendet die Benachrichtigung "Verschlüsselungsspezifikation ändern" an den Server, um anzugeben, dass der Client die neuen [*Sitzungsschlüssel*](../secgloss/s-gly.md) zum [*Hashen*](../secgloss/h-gly.md) und Verschlüsseln von Nachrichten verwendet. Der Client sendet auch die Meldung "Client abgeschlossen".
+8.  Der Server empfängt "Verschlüsselungsspezifikation ändern" und schaltet den Sicherheitsstatus der Datensatzebene mithilfe der [*Sitzungsschlüssel*](../secgloss/s-gly.md)in [*symmetrische Verschlüsselung*](../secgloss/s-gly.md) um. Der Server sendet die Meldung "Server finished" an den Client.
+9.  Client und Server können jetzt Anwendungsdaten über den gesicherten Kanal austauschen, den sie eingerichtet haben. Alle Nachrichten, die von Client zu Server und von Server zu Client gesendet werden, werden mithilfe des Sitzungsschlüssels verschlüsselt.
 
-## <a name="resuming-a-secure-session-by-using-tls"></a>Fortsetzen einer sicheren Sitzung mithilfe von TLS
+## <a name="resuming-a-secure-session-by-using-tls"></a>Fortsetzen einer sicheren Sitzung mit TLS
 
-1.  Der Client sendet eine "Client Hello"-Meldung mithilfe der Sitzungs-ID der Sitzung, die fortgesetzt werden soll.
-2.  Der Server überprüft seinen Sitzungs Cache auf eine passende Sitzungs-ID. Wenn eine Entsprechung gefunden wird und der Server die Sitzung fortsetzen kann, sendet er eine "Server Hello"-Meldung mit der Sitzungs-ID.
+1.  Der Client sendet eine "Client hello"-Nachricht mithilfe der Sitzungs-ID der Sitzung, die fortgesetzt werden soll.
+2.  Der Server überprüft seinen Sitzungscache auf eine übereinstimmende Sitzungs-ID. Wenn eine Übereinstimmung gefunden wird und der Server die Sitzung fortsetzen kann, sendet er eine "Server hello"-Nachricht mit der Sitzungs-ID.
     > [!Note]  
-    > Wenn keine Sitzungs-ID gefunden wird, generiert der Server eine neue Sitzungs-ID, und der TLS-Client und-Server führen einen vollständigen Handshake aus.
+    > Wenn keine Übereinstimmung mit der Sitzungs-ID gefunden wird, generiert der Server eine neue Sitzungs-ID, und der TLS-Client und der Server führen einen vollständigen Handshake aus.
 
      
 
-3.  Client und Server müssen die Nachrichten "Änderung der Verschlüsselungs Spezifikation" austauschen und "Client wurde beendet" und "Server beendet" senden.
-4.  Client und Server können nun den Anwendungsdaten Austausch über den sicheren Kanal fortsetzen.
+3.  Client und Server müssen Nachrichten vom Typ "Verschlüsselungsspezifikation ändern" austauschen und Nachrichten vom Typ "Client abgeschlossen" und "Server fertig" senden.
+4.  Client und Server können nun den Austausch von Anwendungsdaten über den sicheren Kanal fortsetzen.
 
  
 

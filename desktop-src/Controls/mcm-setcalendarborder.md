@@ -1,9 +1,9 @@
 ---
-title: MCM_SETCALENDARBORDER Meldung (kommstrg. h)
-description: Legt die Größe des Rahmens in Pixel fest. Sie können diese Nachricht explizit oder mit dem monthcal- \_ setcalendarborder-Makro senden.
+title: MCM_SETCALENDARBORDER (Commctrl.h)
+description: Legt die Größe des Rahmens in Pixel fest. Sie können diese Nachricht explizit oder mithilfe des MonthCal \_ SetCalendarBorder-Makros senden.
 ms.assetid: 2a64a08f-a1fb-47a8-8f09-725807e87a03
 keywords:
-- Windows-Steuerelemente für MCM_SETCALENDARBORDER Meldung
+- MCM_SETCALENDARBORDER von Windows Steuerelementen
 topic_type:
 - apiref
 api_name:
@@ -14,16 +14,16 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 09b870346e8d8b475833657dd83141ba1fe11715
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 08e020ad282ce21555e6c3a74198a0034013ac1d7cfac8f4eb68e52137e5f684
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104476626"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119697200"
 ---
-# <a name="mcm_setcalendarborder-message"></a>MCM \_ setcalendarborder-Meldung
+# <a name="mcm_setcalendarborder-message"></a>MCM \_ SETCALENDARBORDER-Meldung
 
-Legt die Größe des Rahmens in Pixel fest. Sie können diese Nachricht explizit oder mit dem [**monthcal- \_ setcalendarborder**](/windows/desktop/api/Commctrl/nf-commctrl-monthcal_setcalendarborder) -Makro senden.
+Legt die Größe des Rahmens in Pixel fest. Sie können diese Nachricht explizit oder mithilfe des [**\_ MonthCal-Makros SetCalendarBorder**](/windows/desktop/api/Commctrl/nf-commctrl-monthcal_setcalendarborder) senden.
 
 ## <a name="parameters"></a>Parameter
 
@@ -32,7 +32,7 @@ Legt die Größe des Rahmens in Pixel fest. Sie können diese Nachricht explizit
 *wParam* 
 </dt> <dd>
 
-**True** gibt an, dass die Rahmengröße auf die Anzahl der Pixel festgelegt wird, die *LPARAM* angibt. Wenn der Wert **false** ist, wird die Rahmengröße auf den Standardwert zurückgesetzt, der durch das Design angegeben wird, oder 0 (null), wenn keine Designs verwendet werden.
+True **gibt** an, dass die Rahmengröße auf die Anzahl von Pixeln festgelegt wird, die *lParam* angibt. False **gibt** an, dass die Rahmengröße auf den vom Design angegebenen Standardwert zurückgesetzt wird, oder null, wenn keine Designs verwendet werden.
 
 </dd> <dt>
 
@@ -45,7 +45,7 @@ Anzahl der Pixel der Rahmengröße.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Nicht verwendet.
+Wird nicht verwendet.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -53,9 +53,9 @@ Nicht verwendet.
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>                                        |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2008 \[ -Desktop-Apps\]<br/>                                  |
-| Header<br/>                   | <dl> <dt>Kommstrg. h</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur \[ Vista-Desktop-Apps\]<br/>                                        |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2008-Desktop-Apps\]<br/>                                  |
+| Header<br/>                   | <dl> <dt>Commctrl.h</dt> </dl> |
 
 
 

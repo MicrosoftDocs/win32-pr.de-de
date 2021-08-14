@@ -1,33 +1,33 @@
 ---
-description: Transaktionale NTFS (TxF) ermöglicht die Ausführung von Datei Vorgängen auf einem NTFS-Dateisystem Volume in einer Transaktion.
+description: Transaktionales NTFS (TxF) ermöglicht das Durchführen von Dateivorgängen auf einem NTFS-Dateisystemvolume in einer Transaktion.
 ms.assetid: e8c3ceed-d391-4934-b3f7-12c2123c8c23
-title: Transaktionale NTFS (TxF)
+title: Transaktionales NTFS (TxF)
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: b7553bfc7cae0b5389762527f0ac726c674a6a03
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 8a5b44a35e4f83c1389d1fc2e6bc3de4f97f5ad203bbdee4750c2fcd26d87f47
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104524926"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119431910"
 ---
-# <a name="transactional-ntfs-txf"></a>Transaktionale NTFS (TxF)
+# <a name="transactional-ntfs-txf"></a>Transaktionales NTFS (TxF)
 
-\[Microsoft empfiehlt Entwicklern dringend, Alternative Möglichkeiten zum Erreichen der Anforderungen Ihrer Anwendung zu nutzen. Viele Szenarios, für die TxF entwickelt wurde, können mithilfe einfacherer und leichter verfügbarer Techniken erreicht werden. Außerdem ist TxF in zukünftigen Versionen von Microsoft Windows möglicherweise nicht verfügbar. Weitere Informationen und Alternativen zu TxF finden Sie unter [Alternativen zur Verwendung von transaktionalen NTFS](deprecation-of-txf.md).\]
+\[Microsoft empfiehlt Entwicklern dringend, alternative Mittel zu verwenden, um die Anforderungen Ihrer Anwendung zu erfüllen. Viele Szenarien, für die TxF entwickelt wurde, können durch einfachere und leichter verfügbare Techniken erreicht werden. Darüber hinaus ist TxF in zukünftigen Versionen von Microsoft Windows möglicherweise nicht verfügbar. Weitere Informationen und Alternativen zu TxF finden Sie unter [Alternativen zur Verwendung von Transaktional NTFS](deprecation-of-txf.md).\]
 
 ## <a name="purpose"></a>Zweck
 
-Transaktionale NTFS (TxF) ermöglicht die Ausführung von Datei Vorgängen auf einem NTFS-Dateisystem Volume in einer Transaktion. TxF-Transaktionen erhöhen die Anwendungs Zuverlässigkeit, indem Sie die Datenintegrität über Fehler hinweg schützen und die Anwendungsentwicklung vereinfachen, indem Sie den Code für die Fehlerbehandlung erheblich verringern.
+Transaktionales NTFS (TxF) ermöglicht das Durchführen von Dateivorgängen auf einem NTFS-Dateisystemvolume in einer Transaktion. TxF-Transaktionen erhöhen die Anwendungszuverlässigkeit, indem sie die Datenintegrität über Fehler hinweg schützen und die Anwendungsentwicklung vereinfachen, indem die Menge an Fehlerbehandlungscode erheblich reduziert wird.
 
-TxF verwendet das Transaktions Framework, das vom [Kerneltransaktions-Manager](/windows/desktop/Ktm/kernel-transaction-manager-portal) (KTM) bereitgestellt wird. Dies ermöglicht die Ausführung von TxF-Datei Vorgängen in eine Transaktion mit anderen Datenquellen, z. b. SQL Server und Transaktions Registrierung (TxR).
+TxF verwendet das Transaktionsframework, das vom [Kerneltransaktions-Manager (KERNEL Transaction Manager,](/windows/desktop/Ktm/kernel-transaction-manager-portal) WAD) bereitgestellt wird. Dadurch können TxF-Dateivorgänge Teil einer Transaktion sein, die andere Datenquellen wie SQL Server und Transacted Registry (TxR) umfasst.
 
 ## <a name="where-applicable"></a>Anwendungsbereich
 
-Eine Anwendung kann TxF verwenden, um die Integrität der Daten auf dem Datenträger beizubehalten, die durch unerwartete Fehlerbedingungen verursacht werden, und unterstützt die Auflösung paralleler Dateisystem-Benutzer Szenarien, indem Ihre Änderungen von anderen isoliert werden, während die Änderungen vorgenommen werden.
+Eine Anwendung kann TxF verwenden, um die Integrität von Daten auf dem Datenträger beizubehalten, die durch unerwartete Fehlerbedingungen verursacht werden, und gleichzeitige Dateisystembenutzerszenarios zu lösen, indem Sie Ihre Änderungen von anderen isolieren, während die Änderungen vorgenommen werden.
 
 ## <a name="developer-audience"></a>Entwicklergruppe
 
-Vor der Verwendung von TxF sollten Sie über ein funktionierendes wissen über Transaktionen verfügen, indem Sie entweder KTM oder [Distributed Transaction Coordinator (DTC)](/previous-versions/windows/desktop/ms684146(v=vs.85))verwenden.
+Vor der Verwendung von TxF sollten Sie über fundierte Kenntnisse zu Transaktionen mithilfe von ENTWEDER MIT oder [Distributed Transaction Coordinator (DTC)](/previous-versions/windows/desktop/ms684146(v=vs.85))verfügen.
 
 ## <a name="run-time-requirements"></a>Laufzeitanforderungen
 
@@ -37,10 +37,10 @@ TxF ist ab Windows Vista verfügbar.
 
 
 
-| Thema                                                    | BESCHREIBUNG                                                                                                |
+| Thema                                                    | Beschreibung                                                                                                |
 |----------------------------------------------------------|------------------------------------------------------------------------------------------------------------|
 | [Info](about-transactional-ntfs.md)<br/>         | Allgemeine Informationen zu Transaktions-NTFS.<br/>                                                   |
-| [Verweis](transactional-ntfs-reference.md)<br/> | Dokumentation für die Funktionen, Datenstrukturen, Enumerationen und andere Programmier Elemente.<br/> |
+| [Referenz](transactional-ntfs-reference.md)<br/> | Dokumentation zu den Funktionen, Datenstrukturen, Enumerationen und anderen Programmierelementen.<br/> |
 
 
 

@@ -1,30 +1,30 @@
 ---
-description: Dieser Abschnitt enthält ein einzelnes Beispiel, das veranschaulicht, wie Sie mithilfe von Regionen festlegen können, wie ein Teil der Client Bereichs Ausgabe angezeigt werden kann. Zu diesem Zweck verwendete Bereiche werden als Clippingbereiche bezeichnet.
+description: Dieser Abschnitt enthält ein einzelnes Beispiel, das veranschaulicht, wie Sie Regionen verwenden können, damit der Benutzer definieren kann, wie ein Teil der Clientbereichsausgabe angezeigt werden kann. Zu diesem Zweck verwendete Regionen werden als Beschneidungsregionen bezeichnet.
 ms.assetid: 78371180-e0b6-4d01-8c3b-751cfaa3ff03
-title: Verwenden von Bereichen zum Ausschneiden der Ausgabe
+title: Verwenden von Regionen zum Ausschneiden der Ausgabe
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 86948e35972a0de61106ff77958b65adb0b5ef70
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 1240251e1f2bcc65a7c082a021b34418a183b97bfd359231d17a09b5af485b5d
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104979393"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119360150"
 ---
-# <a name="using-regions-to-clip-output"></a>Verwenden von Bereichen zum Ausschneiden der Ausgabe
+# <a name="using-regions-to-clip-output"></a>Verwenden von Regionen zum Ausschneiden der Ausgabe
 
-Dieser Abschnitt enthält ein einzelnes Beispiel, das veranschaulicht, wie Sie mithilfe von Regionen festlegen können, wie ein Teil der Client Bereichs Ausgabe angezeigt werden kann. Zu diesem Zweck verwendete Bereiche werden als Clippingbereiche bezeichnet.
+Dieser Abschnitt enthält ein einzelnes Beispiel, das veranschaulicht, wie Sie Regionen verwenden können, damit der Benutzer definieren kann, wie ein Teil der Clientbereichsausgabe angezeigt werden kann. Zu diesem Zweck verwendete Regionen werden als Beschneidungsregionen bezeichnet.
 
-Das Beispiel für diesen Abschnitt stammt aus einer Anwendung, die es einem Benutzer ermöglicht, den gesamten Desktop als Bitmap zu erfassen und dann einen Teil dieses Bilds als zu isolieren und zu speichern. BMP-Datei.
+Das Beispiel für diesen Abschnitt stammt aus einer Anwendung, mit der ein Benutzer den gesamten Desktop als Bitmap erfassen und dann einen Teil dieses Bilds als .BMP Datei isolieren und speichern kann.
 
-Wenn Sie im Menü der Anwendung auf **Clip Bereich definieren** klicken, kann der Benutzer einen Clippingbereich auswählen, indem er auf die linke Maustaste klickt und die Maus zieht. Wenn der Benutzer die Maus zieht, zeichnet die Anwendung ein Rechteck, das dem neuen Clippingbereich entspricht.
+Durch Klicken auf **Clipbereich definieren** im Menü der Anwendung kann der Benutzer einen Ausschneidebereich auswählen, indem er auf die linke Maustaste klickt und die Maus zieht. Wenn der Benutzer die Maus zieht, zeichnet die Anwendung ein Rechteck, das dem neuen Ausschneidebereich entspricht.
 
-Wenn Sie im Menü der Anwendung auf " **Clip** " klicken, kann der Benutzer den isolierten Teil des Bilds innerhalb der Grenzen des angegebenen Rechtecks neu zeichnen.
+Durch Klicken auf **Clip** im Menü der Anwendung kann der Benutzer den isolierten Teil des Bilds innerhalb der Grenzen des angegebenen Rechtecks neu zeichnen.
 
 Dieser Abschnitt enthält Informationen zu den folgenden Themen.
 
--   [Definieren des Clippingbereichs](defining-the-clipping-region.md)
--   [Clipping-Ausgabe](clipping-output.md)
+-   [Definieren des Ausschneidebereichs](defining-the-clipping-region.md)
+-   [Ausschneiden der Ausgabe](clipping-output.md)
 
  
 

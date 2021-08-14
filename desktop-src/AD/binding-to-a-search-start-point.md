@@ -1,22 +1,22 @@
 ---
-title: Binden an den Such Start Punkt
-description: Der Startpunkt für eine Suche ist ein Container, der direkt oder indirekt die gesuchten Objekte enthält.
+title: Binden an den Suchstartpunkt
+description: Der Ausgangspunkt für eine Suche ist ein Container, der direkt oder indirekt die gesuchten Objekte enthält.
 ms.assetid: f93c1310-7c8b-4d28-bd4d-6fab969d3353
 ms.tgt_platform: multiple
 keywords:
-- Active Directory Beispiele Active Directory, binden an einen Such Startpunkt
+- 'Active Directory-Beispiele: Active Directory, Bindung an einen Suchstartpunkt'
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 741986e651848c1d2a88ab016b63365db91b26b1
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: 268b6b419c88911aaebf4bf4cae0ed2e2108baffe54a4f019f354b7f0aa3d7ca
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "104470765"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118023887"
 ---
-# <a name="binding-to-the-search-start-point"></a>Binden an den Such Start Punkt
+# <a name="binding-to-the-search-start-point"></a>Binden an den Suchstartpunkt
 
-Der Startpunkt für eine Suche ist ein Container, der direkt oder indirekt die gesuchten Objekte enthält. Die Suche wird in Containern über dem Such Startpunkt nicht durchgeführt. Nehmen Sie z. b. die folgende hypothetische Verzeichnisstruktur:
+Der Ausgangspunkt für eine Suche ist ein Container, der direkt oder indirekt die gesuchten Objekte enthält. Die Suche wird nicht in Containern oberhalb des Suchstartpunkts ausgeführt. Nehmen Sie beispielsweise die folgende hypothetische Verzeichnisstruktur:
 
 ``` syntax
 Domain A
@@ -28,13 +28,13 @@ Domain A
         Object 4
 ```
 
-Wenn für alle Objekte eine Suche durchgeführt wird und der Such Startpunkt "Container 2" ist, werden nur "Object 3" und "Object 4" abgerufen. Wenn dieselbe Suche mit dem Such Startpunkt bei "Container 1" durchgeführt wurde, werden "Objekt 1" und "Objekt 2" abgerufen.
+Wenn eine Suche für alle Objekte ausgeführt wird und der Suchstartpunkt "Container 2" lautet, werden nur "Objekt 3" und "Objekt 4" abgerufen. Wenn dieselbe Suche mit dem Suchstartpunkt bei "Container 1" durchgeführt wurde, werden "Objekt 1" und "Objekt 2" abgerufen.
 
-Binden Sie zum Binden an den Such Startpunkt an den ADsPath des Containers, der als Such Startpunkt verwendet werden soll.
+Um eine Bindung an den Suchstartpunkt zu erhalten, binden Sie an den ADsPath des Containers, der der Suchstartpunkt sein wird.
 
- 
+ 
 
- 
+ 
 
 
 

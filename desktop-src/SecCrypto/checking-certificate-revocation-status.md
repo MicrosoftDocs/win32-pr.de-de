@@ -1,23 +1,23 @@
 ---
-description: CAPICOM ermöglicht nicht standardmäßig die Überprüfung der Zertifikat Sperrung.
+description: CAPICOM aktiviert standardmäßig keine Überprüfung der Zertifikatsperrung.
 ms.assetid: c6e2724c-1802-4bc4-a0e4-3cb85427a445
-title: Überprüfen des Zertifikats Sperr Status
+title: Überprüfen des Zertifikatsperrstatus
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: ada134bbca88b1a875ff27add7566116cf7334bb
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: fbf1ce98e392da94fd800316fe63c5b79c8572a319c6db4246e7907eb80966d7
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "104217291"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117769539"
 ---
-# <a name="checking-certificate-revocation-status"></a>Überprüfen des Zertifikats Sperr Status
+# <a name="checking-certificate-revocation-status"></a>Überprüfen des Zertifikatsperrstatus
 
-\[CAPICOM ist eine nur-32-Bit-Komponente, die für die Verwendung in den folgenden Betriebssystemen verfügbar ist: Windows Server 2008, Windows Vista und Windows XP. Verwenden Sie stattdessen die .NET Framework, um Sicherheitsfunktionen zu implementieren. Weitere Informationen finden Sie unter [Alternativen zur Verwendung von CAPICOM](alternatives-to-using-capicom.md).\]
+\[CAPICOM ist eine 32-Bit-Komponente, die für die Verwendung in den folgenden Betriebssystemen verfügbar ist: Windows Server 2008, Windows Vista und Windows XP. Verwenden Sie stattdessen die .NET Framework, um Sicherheitsfeatures zu implementieren. Weitere Informationen finden Sie unter [Alternativen zur Verwendung von CAPICOM](alternatives-to-using-capicom.md).\]
 
-CAPICOM ermöglicht nicht standardmäßig die Überprüfung der Zertifikat Sperrung. Die Zertifikat Sperr Überprüfung kann jedoch Programm gesteuert für ein bestimmtes Zertifikat über die **IsValid. checkflag** -Eigenschaft eines Zertifikat Objekts aktiviert werden. Nachdem der entsprechende Wert von **checkflag** festgelegt wurde, erzwingt der Zugriff auf die Eigenschaft " **IsValid. Result** " des Zertifikats Objekts oder das Erstellen des Zertifikats über den Überprüfungs Pfad mithilfe der Erstellungs Methode eines Ketten Objekts eine Sperr Überprüfung.
+CAPICOM aktiviert standardmäßig keine Überprüfung der Zertifikatsperrung. Die Zertifikatsperrüberprüfung kann jedoch programmgesteuert für ein bestimmtes Zertifikat über die **IsValid.CheckFlag-Eigenschaft** eines Certificate-Objekts aktiviert werden. Nachdem der entsprechende Wert von **CheckFlag** festgelegt wurde, erzwingt der Zugriff auf die **IsValid.Result-Eigenschaft** des Zertifikatobjekts oder das Erstellen des Überprüfungspfads des Zertifikats mithilfe der Build-Methode eines Chain-Objekts die Sperrüberprüfung.
 
-Im folgenden Beispiel wurde CERT als gültiges CAPICOM-Zertifikat instanziiert.
+Im folgenden Beispiel wurde das Zertifikat als gültiges CAPICOM-Zertifikat instanziiert.
 
 
 ```VB
@@ -52,9 +52,9 @@ End If
 
 
 
-Das vorherige gilt für ein einzelnes Zertifikat, unabhängig davon, wie es abgerufen wurde. Das Ausführen der Sperr Überprüfung für die Zertifikate in einem [**SignedData**](signeddata.md) -Objekt unterscheidet sich nicht, da die [**Verify**](signeddata-verify.md) -Methode des **SignedData** -Objekts nicht für diesen Zweck verwendet werden kann, da die Aktivierung von CAPICOM- \_ \_ \_ Überprüfungs Signatur und \_ Zertifikat keine CRL-Überprüfung auslöst.
+Das vorangehende Gilt für ein einzelnes Zertifikat, unabhängig davon, wie es erhalten wurde. Die Durchführung der Sperrüberprüfung für die Zertifikate in einem [**SignedData-Objekt**](signeddata.md) ist nicht anders, da die Verify-Methode des **SignedData-Objekts** für diesen Zweck nicht verwendet werden kann, da die Aktivierung von CAPICOM VERIFY SIGNATURE AND CERTIFICATE keine Überprüfung der Zertifikatsperrliste [](signeddata-verify.md) \_ \_ \_ \_ verursacht.
 
-Stattdessen muss das **checkflag** für die einzelnen Signatur Geber Zertifikate festgelegt werden. Sehen Sie sich das folgende Beispiel an, in dem sdata als gültiges CAPICOM [**SignedData**](signeddata.md) -Objekt instanziiert wurde.
+Stattdessen muss **das CheckFlag** für das Zertifikat jedes Signers festgelegt werden. Betrachten Sie das folgende Beispiel, in dem sData als gültiges CAPICOM [**SignedData-Objekt instanziiert**](signeddata.md) wurde.
 
 
 ```VB
@@ -86,7 +86,7 @@ Next I
 
 
 
-Das weitere Beispiel ist die Schleife über alle Zertifikate im [**SignedData**](signeddata.md) -Objekt.
+Das zusätzliche Beispiel ist die Schleife über alle Zertifikate im [**SignedData-Objekt.**](signeddata.md)
 
  
 

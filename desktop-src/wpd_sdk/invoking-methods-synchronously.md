@@ -4,34 +4,34 @@ ms.assetid: 3a2796c8-1a39-49eb-98e1-c9e06c61f397
 title: Aufrufen von Dienstmethoden
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 15b9540cf7378e13d56af2611d6216897c6750f6
-ms.sourcegitcommit: 0f7a8198bacd5493ab1e78a9583c7a3578794765
+ms.openlocfilehash: 0553e1490a6f8d0903756767397c30c2e1137a16a80609ed3a22da69188f799e
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/25/2021
-ms.locfileid: "110424200"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117843107"
 ---
 # <a name="invoking-service-methods"></a>Aufrufen von Dienstmethoden
 
-Die WpdServicesApiSample-Anwendung enthält Code, der veranschaulicht, wie eine Anwendung die von einem bestimmten Contacts-Dienst unterstützten Methoden synchron aufrufen kann. In diesem Beispiel werden die folgenden Schnittstellen verwendet:
+Die WpdServicesApiSample-Anwendung enthält Code, der veranschaulicht, wie eine Anwendung die von einem angegebenen Contacts-Dienst unterstützten Methoden synchron aufrufen kann. In diesem Beispiel werden die folgenden Schnittstellen verwendet:
 
 
 
 | Schnittstelle    | BESCHREIBUNG    |
 |------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| [**IPortableDeviceService**](/windows/desktop/api/PortableDeviceAPI/nn-portabledeviceapi-iportabledeviceservice)               | Wird verwendet, um die **IPortableDeviceServiceMethods-Schnittstelle** abzurufen, um Methoden für einen bestimmten Dienst aufzurufen.                                                                  |
+| [**IPortableDeviceService**](/windows/desktop/api/PortableDeviceAPI/nn-portabledeviceapi-iportabledeviceservice)               | Wird zum Abrufen der **IPortableDeviceServiceMethods-Schnittstelle** zum Aufrufen von Methoden für einen bestimmten Dienst verwendet.                                                                  |
 | [**IPortableDeviceServiceMethods**](/windows/desktop/api/PortableDeviceAPI/nn-portabledeviceapi-iportabledeviceservicemethods) | Wird zum Aufrufen einer Dienstmethode verwendet.                                                                                                                                        |
-| [**IPortableDeviceValues**](iportabledevicevalues.md)                 | Wird verwendet, um die ausgehenden Methodenparameter und die eingehenden Methodenergebnisse zu speichern. Dies kann **NULL** sein, wenn die Methode keine Parameter erfordert oder Ergebnisse zurückgibt. |
+| [**IPortableDeviceValues**](iportabledevicevalues.md)                 | Wird verwendet, um die ausgehenden Methodenparameter und die Ergebnisse der eingehenden Methode zu enthalten. Dies kann **NULL sein,** wenn die Methode keine Parameter erfordert oder Ergebnisse zurückgibt. |
 
 
 
  
 
-Wenn der Benutzer die Option "9" in der Befehlszeile auswählt, ruft die Anwendung die **InvokeMethods-Methode** auf, die sich im ServiceMethods.cpp-Modul befindet. Beachten Sie, dass die Beispielanwendung vor dem Aufrufen der Methoden einen Contacts-Dienst auf einem verbundenen Gerät öffnet.
+Wenn der Benutzer die Option "9" in der Befehlszeile auswählt, ruft die Anwendung die **InvokeMethods-Methode** auf, die sich im Modul ServiceMethods.cpp befindet. Beachten Sie, dass die Beispielanwendung vor dem Aufrufen der Methoden einen Kontaktdienst auf einem verbundenen Gerät öffnet.
 
-Dienstmethoden kapseln Funktionen, die jeder Dienst definiert und implementiert. Sie sind für jeden Diensttyp eindeutig und werden durch eine GUID dargestellt. Beispielsweise definiert der Contacts-Dienst eine **BeginSync-Methode,** die Anwendungen aufrufen, um das Gerät für die Synchronisierung von Contact-Objekten vorzubereiten, und eine **EndSync-Methode,** um das Gerät über den Abschluss der Synchronisierung zu informieren. Anwendungen führen eine Methode aus, indem [**sie IPortableDeviceServiceMethods::Invoke aufrufen.**](/windows/desktop/api/PortableDeviceAPI/nf-portabledeviceapi-iportabledeviceservicemethods-invoke)
+Dienstmethoden kapseln Funktionen, die von jedem Dienst definiert und implementiert werden. Sie sind für jeden Diensttyp eindeutig und werden durch eine GUID dargestellt. Der Contacts-Dienst definiert beispielsweise eine **BeginSync-Methode,** die Anwendungen aufrufen, um das Gerät für die Synchronisierung von Contact-Objekten vorzubereiten, und eine **EndSync-Methode,** um das Gerät über den Abschluss der Synchronisierung zu benachrichtigen. Anwendungen führen eine Methode aus, indem [**sie IPortableDeviceServiceMethods::Invoke aufrufen.**](/windows/desktop/api/PortableDeviceAPI/nf-portabledeviceapi-iportabledeviceservicemethods-invoke)
 
-Dienstmethoden dürfen nicht mit WPD-Befehlen verwechselt werden. WPD-Befehle sind Teil der standardmäßigen WPD-Gerätetreiberschnittstelle (DDI) und der Mechanismus für die Kommunikation zwischen einer WPD-Anwendung und dem Treiber. Befehle sind vordefiniert, nach Kategorien gruppiert, z. B. **WPD \_ CATEGORY \_ COMMON**, und werden durch eine **PROPERTYKEY-Struktur** dargestellt. Eine Anwendung sendet Befehle an den Gerätetreiber, indem [**sie IPortableDeviceService::SendCommand aufruft.**](/windows/desktop/api/PortableDeviceApi/nf-portabledeviceapi-iportabledevice-sendcommand) Weitere Informationen finden Sie im Thema Befehle.
+Dienstmethoden sollten nicht mit WPD-Befehlen verwechselt werden. WPD-Befehle sind Teil der standardmäßigen WPD Device Driver Interface (DDI) und stellen den Mechanismus für die Kommunikation zwischen einer WPD-Anwendung und dem Treiber dar. Befehle sind vordefinierte, nach Kategorien geordnet, z. B. **WPD \_ CATEGORY \_ COMMON,** und werden durch eine **PROPERTYKEY-Struktur** dargestellt. Eine Anwendung sendet Befehle an den Gerätetreiber, indem sie [**IPortableDeviceService::SendCommand aufruft.**](/windows/desktop/api/PortableDeviceApi/nf-portabledeviceapi-iportabledevice-sendcommand) Weitere Informationen finden Sie im Thema Befehle.
 
 Die **InvokeMethods-Methode** ruft die [**IPortableDeviceService::Methods-Methode**](/windows/desktop/api/PortableDeviceAPI/nf-portabledeviceapi-iportabledeviceservice-capabilities) auf, um eine [**IPortableDeviceServiceMethods-Schnittstelle**](/windows/desktop/api/PortableDeviceAPI/nn-portabledeviceapi-iportabledeviceservicecapabilities) abzurufen. Über diese Schnittstelle werden die **Methoden BeginSync** und **EndSync** aufgerufen, indem die [**IPortableDeviceServiceMethods::Invoke-Methode aufgerufen**](/windows/desktop/api/PortableDeviceAPI/nf-portabledeviceapi-iportabledeviceservicecapabilities-getsupportedmethods) wird. Bei jedem Aufruf **von Invoke** stellt die Anwendung die REFGUID für die aufgerufene Methode zur Anwendung.
 

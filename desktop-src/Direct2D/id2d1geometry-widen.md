@@ -1,9 +1,9 @@
 ---
-title: ID2D1Geometry-Methode erweitern
-description: Erweitert die Geometrie um den angegebenen Strich und schreibt das Ergebnis in eine ID2D1SimplifiedGeometrySink.
+title: ID2D1Geometry Widen-Methoden
+description: Breitet die Geometrie um den angegebenen Strich und schreibt das Ergebnis in eine ID2D1SimplifiedGeometrySink.
 ms.assetid: c951ab85-7980-41e3-95c4-291d2fb046c8
 keywords:
-- Erweitern von Methoden Direct2D
+- Widen-Methoden Direct2D
 topic_type:
 - apiref
 api_location:
@@ -13,16 +13,16 @@ api_type:
 ms.topic: reference
 ms.date: 05/31/2018
 api_name: ''
-ms.openlocfilehash: 73a1ce3f90192f49a719a92d80f448694ce43235
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: ebdae7ba4fd9eca96e422ae62274b4b9934040d4c4249bc9e1c78b81b62589dd
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106359657"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119342810"
 ---
-# <a name="id2d1geometrywiden-methods"></a>ID2D1Geometry:: weitet-Methoden
+# <a name="id2d1geometrywiden-methods"></a>ID2D1Geometry::Widen-Methoden
 
-Erweitert die Geometrie um den angegebenen Strich und schreibt das Ergebnis in eine [**ID2D1SimplifiedGeometrySink**](/windows/win32/api/d2d1/nn-d2d1-id2d1simplifiedgeometrysink).
+Breitet die Geometrie um den angegebenen Strich und schreibt das Ergebnis in eine [**ID2D1SimplifiedGeometrySink**](/windows/win32/api/d2d1/nn-d2d1-id2d1simplifiedgeometrysink).
 
 ### <a name="overload-list"></a>Überladeliste
 
@@ -30,16 +30,16 @@ Erweitert die Geometrie um den angegebenen Strich und schreibt das Ergebnis in e
 
 | Methode                                                                                                                                                                                                          | BESCHREIBUNG                                                                                                                                                                                                                                              |
 |:----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|:---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| [**Erweitert (float, ID2D1StrokeStyle \* , D2D1 \_ Matrix \_ 3x2 \_ F \* , ID2D1SimplifiedGeometrySink \* )**](/windows/win32/api/d2d1/nf-d2d1-id2d1geometry-widen(float_id2d1strokestyle_constd2d1_matrix_3x2_f__id2d1simplifiedgeometrysink))             | Erweitert die Geometrie um den angegebenen Strich und schreibt das Ergebnis in ein [**ID2D1SimplifiedGeometrySink**](/windows/win32/api/d2d1/nn-d2d1-id2d1simplifiedgeometrysink) , nachdem es durch die angegebene Matrix transformiert und mit der Standardtoleranz vereinfacht wurde.<br/>   |
-| [**Ausweiten (float, ID2D1StrokeStyle \* , D2D1 \_ Matrix \_ 3x2 \_ F&, ID2D1SimplifiedGeometrySink \* )**](/windows/win32/api/d2d1/nf-d2d1-id2d1geometry-widen(float_id2d1strokestyle_constd2d1_matrix_3x2_f_id2d1simplifiedgeometrysink))              | Erweitert die Geometrie um den angegebenen Strich und schreibt das Ergebnis in ein [**ID2D1SimplifiedGeometrySink**](/windows/win32/api/d2d1/nn-d2d1-id2d1simplifiedgeometrysink) , nachdem es durch die angegebene Matrix transformiert und mit der Standardtoleranz vereinfacht wurde.<br/>   |
-| [**Erweitert (float, ID2D1StrokeStyle \* , D2D1 \_ Matrix \_ 3x2 \_ F \* , float, ID2D1SimplifiedGeometrySink \* )**](/windows/win32/api/d2d1/nf-d2d1-id2d1geometry-widen(float_id2d1strokestyle_constd2d1_matrix_3x2_f_float_id2d1simplifiedgeometrysink)) | Erweitert die Geometrie um den angegebenen Strich und schreibt das Ergebnis in ein [**ID2D1SimplifiedGeometrySink**](/windows/win32/api/d2d1/nn-d2d1-id2d1simplifiedgeometrysink) , nachdem es durch die angegebene Matrix transformiert und mithilfe der angegebenen Toleranz vereinfacht wurde.<br/> |
-| [**Ausweiten (float, ID2D1StrokeStyle \* , D2D1 \_ Matrix \_ 3x2 \_ F&, float, ID2D1SimplifiedGeometrySink \* )**](/windows/win32/api/d2d1/nf-d2d1-id2d1geometry-widen(float_id2d1strokestyle_constd2d1_matrix_3x2_f__id2d1simplifiedgeometrysink))  | Erweitert die Geometrie um den angegebenen Strich und schreibt das Ergebnis in ein [**ID2D1SimplifiedGeometrySink**](/windows/win32/api/d2d1/nn-d2d1-id2d1simplifiedgeometrysink) , nachdem es durch die angegebene Matrix transformiert und mithilfe der angegebenen Toleranz vereinfacht wurde.<br/> |
+| [**Widen(FLOAT,ID2D1StrokeStyle \* ,D2D1 \_ MATRIX \_ 3X2 \_ F \* ,ID2D1SimplifiedGeometrySink \* )**](/windows/win32/api/d2d1/nf-d2d1-id2d1geometry-widen(float_id2d1strokestyle_constd2d1_matrix_3x2_f__id2d1simplifiedgeometrysink))             | Breitet die Geometrie um den angegebenen Strich und schreibt das Ergebnis in eine [**ID2D1SimplifiedGeometrySink,**](/windows/win32/api/d2d1/nn-d2d1-id2d1simplifiedgeometrysink) nachdem sie von der angegebenen Matrix transformiert und mithilfe der Standardtoleranz vereinfacht wurde.<br/>   |
+| [**Widen(FLOAT,ID2D1StrokeStyle \* ,D2D1 \_ MATRIX \_ 3X2 \_ F&,ID2D1SimplifiedGeometrySink \* )**](/windows/win32/api/d2d1/nf-d2d1-id2d1geometry-widen(float_id2d1strokestyle_constd2d1_matrix_3x2_f_id2d1simplifiedgeometrysink))              | Breitet die Geometrie um den angegebenen Strich und schreibt das Ergebnis in eine [**ID2D1SimplifiedGeometrySink,**](/windows/win32/api/d2d1/nn-d2d1-id2d1simplifiedgeometrysink) nachdem sie von der angegebenen Matrix transformiert und mithilfe der Standardtoleranz vereinfacht wurde.<br/>   |
+| [**Widen(FLOAT,ID2D1StrokeStyle \* ,D2D1 \_ MATRIX \_ 3X2 \_ F \* ,FLOAT,ID2D1SimplifiedGeometrySink \* )**](/windows/win32/api/d2d1/nf-d2d1-id2d1geometry-widen(float_id2d1strokestyle_constd2d1_matrix_3x2_f_float_id2d1simplifiedgeometrysink)) | Breitet die Geometrie um den angegebenen Strich aus und schreibt das Ergebnis in eine [**ID2D1SimplifiedGeometrySink,**](/windows/win32/api/d2d1/nn-d2d1-id2d1simplifiedgeometrysink) nachdem sie von der angegebenen Matrix transformiert und mithilfe der angegebenen Toleranz vereinfacht wurde.<br/> |
+| [**Widen(FLOAT,ID2D1StrokeStyle \* ,D2D1 \_ MATRIX \_ 3X2 \_ F&,FLOAT,ID2D1SimplifiedGeometrySink \* )**](/windows/win32/api/d2d1/nf-d2d1-id2d1geometry-widen(float_id2d1strokestyle_constd2d1_matrix_3x2_f__id2d1simplifiedgeometrysink))  | Breitet die Geometrie um den angegebenen Strich aus und schreibt das Ergebnis in eine [**ID2D1SimplifiedGeometrySink,**](/windows/win32/api/d2d1/nn-d2d1-id2d1simplifiedgeometrysink) nachdem sie von der angegebenen Matrix transformiert und mithilfe der angegebenen Toleranz vereinfacht wurde.<br/> |
 
 
 
 ## <a name="examples"></a>Beispiele
 
-Im folgenden Codebeispiel wird gezeigt, wie mit der **Erweiterung** die Geometrie mit dem angegebenen Strich erweitert und das Ergebnis dann in ein [**ID2D1SimplifiedGeometrySink**](/windows/win32/api/d2d1/nn-d2d1-id2d1simplifiedgeometrysink) -Objekt geschrieben wird.
+Das folgende Codebeispiel zeigt, wie **Widen** verwendet wird, um die Geometrie um den angegebenen Strich zu verbreitern und das Ergebnis dann in ein [**ID2D1SimplifiedGeometrySink-Objekt zu**](/windows/win32/api/d2d1/nn-d2d1-id2d1simplifiedgeometrysink) schreiben.
 
 
 ```C++
@@ -98,12 +98,12 @@ Im folgenden Codebeispiel wird gezeigt, wie mit der **Erweiterung** die Geometri
 
 | Anforderung | Wert |
 |--------------------|-------------------------------------------------------------------------------------|
-| Bibliothek<br/> | <dl> <dt>D2d1. lib</dt> </dl> |
+| Bibliothek<br/> | <dl> <dt>D2d1.lib</dt> </dl> |
 | DLL<br/>     | <dl> <dt>D2d1.dll</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 

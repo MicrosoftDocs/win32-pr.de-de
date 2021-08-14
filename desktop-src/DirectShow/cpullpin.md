@@ -1,7 +1,7 @@
 ---
-description: Die cpullpin-Klasse bietet Unterstützung für Eingabe Pins, die Daten über die iasynkreader-Schnittstelle abrufen.
+description: Die CPullPin-Klasse bietet Unterstützung für Eingabepins, die Daten über die IAsyncReader-Schnittstelle pullen.
 ms.assetid: 33a6c342-3896-41f8-b32d-01db3eed003e
-title: Cpullpin-Klasse (pullpin. h)
+title: CPullPin-Klasse (Pullpin.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -16,55 +16,55 @@ api_location:
 - Strmbase.dll
 - Strmbasd.lib
 - Strmbasd.dll
-ms.openlocfilehash: 3039f97ca7fda43e4ecc6bd4eae05fff2ce90e55
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: d70217fa60afdae3f588f98ecbe61a728ace6ec0b0d78859f55cd241cbc00e1f
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106371264"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119330845"
 ---
-# <a name="cpullpin-class"></a>Cpullpin-Klasse
+# <a name="cpullpin-class"></a>CPullPin-Klasse
 
 ![cpullpin-Klassenhierarchie](images/pulpin01.png)
 
-Die- `CPullPin` Klasse bietet Unterstützung für Eingabe Pins, die Daten über die [**iasynkreader**](/windows/desktop/api/Strmif/nn-strmif-iasyncreader) -Schnittstelle abrufen. Verwenden Sie diese Klasse, wenn Sie einen Filter implementieren, der das Pull-Modell verwendet, um Daten aus dem upstreamfilter anzufordern. Weitere Informationen finden Sie unter Datenfluss im Filter Diagramm und Pull-Modell.
+Die `CPullPin` -Klasse bietet Unterstützung für Eingabepins, die Daten über die [**IAsyncReader-Schnittstelle**](/windows/desktop/api/Strmif/nn-strmif-iasyncreader) pullen. Verwenden Sie diese Klasse, wenn Sie einen Filter implementieren, der das Pullmodell verwendet, um Daten vom Upstreamfilter anzufordern. Weitere Informationen finden Sie unter Daten Flow im Filter Graph und Pullmodell.
 
-Diese Klasse wird nicht von **cbasepin** abgeleitet oder implementiert die [**IPin**](/windows/desktop/api/Strmif/nn-strmif-ipin) -Schnittstelle, und einige Methodennamen kollidieren mit **IPin**, sodass Sie am besten als Hilfsobjekt in der PIN verwendet wird. Gehen Sie folgendermaßen vor, um diese Klasse zu verwenden:
+Diese Klasse wird nicht von **CBasePin** abgeleitet oder implementiert die [**IPin-Schnittstelle,**](/windows/desktop/api/Strmif/nn-strmif-ipin) und einige der Methodennamen treten mit **IPin** in Konflikt, daher wird sie am besten als Hilfsobjekt innerhalb ihrer Stecknadel verwendet. Gehen Sie wie folgt vor, um diese Klasse zu verwenden:
 
-1.  Leiten Sie eine Hilfsklasse von ab `CPullPin` , und leiten Sie eine Eingabe-PIN-Klasse von **cbasepin** ab. Deklarieren Sie eine Instanz des- `CPullPin` Objekts als Member-Variable der PIN-Klasse.
-2.  Überschreiben Sie die [**cbasepin:: checkConnect**](cbasepin-checkconnect.md) -Methode, um [**cpullpin:: Connect**](cpullpin-connect.md)aufzurufen. Diese Methode fragt die andere PIN für **iasynkreader** ab.
-3.  Überschreiben Sie die [**cbasepin:: breakconnect**](cbasepin-breakconnect.md) -Methode, um [**cpullpin::D isconnect**](cpullpin-disconnect.md)aufzurufen.
-4.  Überschreiben Sie die [**cbasepin:: Active**](cbasepin-active.md) -Methode, um [**cpullpin:: Active**](cpullpin-active.md)aufzurufen. Diese Methode startet einen Arbeits Thread, der Beispiele aus dem upstreamfilter abruft. Wenn die Pins eine Verbindung herstellen, können Sie angeben, ob der Arbeits Thread asynchrone oder synchrone Lese Anforderungen erstellen soll.
-5.  Überschreiben Sie die [**cbasepin:: inaktive**](cbasepin-inactive.md) -Methode, um [**cpullpin:: inaktiv**](cpullpin-inactive.md)aufzurufen. Diese Methode fährt den Arbeits Thread herunter.
-6.  Implementieren Sie die reine virtuelle [**cpullpin:: Receive**](cpullpin-receive.md) -Methode, um eingehende Beispiele zu verarbeiten und Sie nachgelagert zu übermitteln.
-7.  Um die Start-und Startpositionen festzulegen, oder, um den Stream zu suchen, nennen Sie die [**cpullpin:: Seek**](cpullpin-seek.md) -Methode. Diese Methode hält den Arbeits Thread an und leert das Filter Diagramm.
-8.  Implementieren Sie die reinen Virtual [**cpullpin:: endolstream**](cpullpin-endofstream.md), [**cpullpin:: beginflush**](cpullpin-beginflush.md)und [**cpullpin:: endflush**](cpullpin-endflush.md) -Methoden, wie in den Hinweisen für diese Methoden beschrieben.
-9.  Implementieren Sie die reine virtuelle [**cpullpin:: OnError**](cpullpin-onerror.md) -Methode, um Streamingfehler zu behandeln.
+1.  Leiten Sie eine Hilfsklasse von `CPullPin` ab, und leiten Sie eine Eingabe-PIN-Klasse von **CBasePin** ab. Deklarieren Sie eine Instanz des `CPullPin` -Objekts als Membervariable der pin-Klasse.
+2.  Überschreiben Sie die [**CBasePin::CheckConnect-Methode,**](cbasepin-checkconnect.md) um [**CPullPin::Verbinden**](cpullpin-connect.md)aufzurufen. Diese Methode fragt den anderen Pin für **IAsyncReader** ab.
+3.  Überschreiben Sie die [**CBasePin::BreakConnect-Methode,**](cbasepin-breakconnect.md) um [**CPullPin::D isconnect**](cpullpin-disconnect.md)aufzurufen.
+4.  Überschreiben Sie die [**CBasePin::Active-Methode,**](cbasepin-active.md) um [**CPullPin::Active**](cpullpin-active.md)aufzurufen. Diese Methode startet einen Arbeitsthread, der Stichproben aus dem Upstreamfilter abruft. Wenn die Pins verbunden sind, können Sie angeben, ob der Arbeitsthread asynchrone oder synchrone Leseanforderungen stellen soll.
+5.  Überschreiben Sie die [**CBasePin::Inactive-Methode,**](cbasepin-inactive.md) um [**CPullPin::Inactive**](cpullpin-inactive.md)aufzurufen. Diese Methode fährt den Arbeitsthread herunter.
+6.  Implementieren Sie die reine virtuelle [**CPullPin::Receive-Methode,**](cpullpin-receive.md) um eingehende Stichproben zu verarbeiten und nachgeschaltet zu übermitteln.
+7.  Um die Stopp- und Startpositionen festzulegen oder den Stream zu suchen, rufen Sie die [**CPullPin::Seek-Methode**](cpullpin-seek.md) auf. Diese Methode hält den Arbeitsthread an und leert das Filterdiagramm.
+8.  Implementieren Sie die rein virtuellen [**Methoden CPullPin::EndOfStream,**](cpullpin-endofstream.md) [**CPullPin::BeginFlush**](cpullpin-beginflush.md)und [**CPullPin::EndFlush,**](cpullpin-endflush.md) wie in den Hinweisen für diese Methoden beschrieben.
+9.  Implementieren Sie die reine virtuelle [**CPullPin::OnError-Methode,**](cpullpin-onerror.md) um Streamingfehler zu behandeln.
 
 
 
-| Öffentliche Element Variablen                             | BESCHREIBUNG                                                                           |
+| Öffentliche Membervariablen                             | BESCHREIBUNG                                                                           |
 |-----------------------------------------------------|---------------------------------------------------------------------------------------|
-| [**m \_ palloc**](cpullpin-m-palloc.md)              | Ein Zeiger auf die **imemzuordcator** -Schnittstelle der Speicherzuweisung.                   |
+| [**m \_ pAlloc**](cpullpin-m-palloc.md)              | Zeiger auf die **IMemAllocator-Schnittstelle** der Speicherzuweisung.                   |
 | Öffentliche Methoden                                      | BESCHREIBUNG                                                                           |
-| [**Aktiv**](cpullpin-active.md)                   | Erstellt einen Arbeits Thread, der Daten aus der Ausgabe-PIN abruft.                          |
-| [**Aligndown**](cpullpin-aligndown.md)             | Verkürzt einen Wert auf eine angegebene Ausrichtungs Grenze.                                  |
-| [**Ausrichtungen**](cpullpin-alignup.md)                 | Rundet einen Wert auf eine angegebene Ausrichtungs Grenze.                                  |
-| [**Verbinden**](cpullpin-connect.md)                 | Schließt eine Verbindung mit der Ausgabepin ab.                                             |
-| [**Cpullpin**](cpullpin-cpullpin.md)               | Konstruktormethode.                                                                   |
-| [**~ Cpullpin**](cpullpin--cpullpin.md)             | Dekonstruktormethode. Virtu.                                                           |
-| [**Decidezuordcator**](cpullpin-decideallocator.md) | Aushandiert eine Zuweisung mit der Ausgabepin. Virtu.                                 |
-| [**Trennen**](cpullpin-disconnect.md)           | Gibt die Verbindung mit der Ausgabepin an.                                             |
+| [**Aktiv**](cpullpin-active.md)                   | Erstellt einen Arbeitsthread, der Daten vom Ausgabepin abruft.                          |
+| [**AlignDown**](cpullpin-aligndown.md)             | Schneidet einen Wert auf eine angegebene Ausrichtungsgrenze ab.                                  |
+| [**AlignUp**](cpullpin-alignup.md)                 | Rundet einen Wert auf eine angegebene Ausrichtungsgrenze.                                  |
+| [**Verbinden**](cpullpin-connect.md)                 | Schließt eine Verbindung mit dem Ausgabepin ab.                                             |
+| [**CPullPin**](cpullpin-cpullpin.md)               | Konstruktormethode.                                                                   |
+| [**~CPullPin**](cpullpin--cpullpin.md)             | Destruktormethode. Virtuellen.                                                           |
+| [**DecideAllocator**](cpullpin-decideallocator.md) | Handelt eine Zuweisung mit dem Ausgabepin aus. Virtuellen.                                 |
+| [**Trennen**](cpullpin-disconnect.md)           | Bekennt die Verbindung mit dem Ausgabepin.                                             |
 | [**Duration**](cpullpin-duration.md)               | Ruft die Dauer des Streams ab.                                                 |
-| [**GetReader**](cpullpin-getreader.md)             | Gibt einen Zeiger auf die [**iasynkreader**](/windows/desktop/api/Strmif/nn-strmif-iasyncreader) -Schnittstelle der Ausgabe-PIN zurück. |
-| [**Inaktiv**](cpullpin-inactive.md)               | Beendet den Arbeits Thread, der Daten aus der Ausgabe-PIN abruft.                     |
-| [**Seek**](cpullpin-seek.md)                       | Legt die Anfangs-und Endposition des Streams fest.                                      |
+| [**GetReader**](cpullpin-getreader.md)             | Gibt einen Zeiger auf die [**IAsyncReader-Schnittstelle**](/windows/desktop/api/Strmif/nn-strmif-iasyncreader) des Ausgabepins zurück. |
+| [**Inaktiv**](cpullpin-inactive.md)               | Fährt den Arbeitsthread herunter, der Daten vom Ausgabepin abruft.                     |
+| [**Seek**](cpullpin-seek.md)                       | Legt die Start- und Stopppositionen des Streams fest.                                      |
 | Reine virtuelle Methoden                                | BESCHREIBUNG                                                                           |
-| [**Beginflush**](cpullpin-beginflush.md)           | Informiert den besitzenden Filter, die downstreamfilter zu leeren.                            |
-| [**Endflush**](cpullpin-endflush.md)               | Informiert den besitzenden Filter, einen Leerungs Vorgang zu beenden.                                   |
-| [**EndOfStream**](cpullpin-endofstream.md)         | Wird aufgerufen, nachdem das-Objekt das letzte Beispiel übermittelt hat.                                     |
-| [**OnError**](cpullpin-onerror.md)                 | Wird aufgerufen, wenn beim Streaming ein Fehler auftritt.                                           |
-| [**Medizinisch**](cpullpin-receive.md)                 | Wird aufgerufen, wenn das-Objekt ein Medien Beispiel aus der Ausgabe-PIN empfängt.                   |
+| [**BeginFlush**](cpullpin-beginflush.md)           | Informiert den besitzenden Filter, um die Downstreamfilter zu leeren.                            |
+| [**EndFlush**](cpullpin-endflush.md)               | Informiert den besitzenden Filter, um einen Leerungsvorgang zu beenden.                                   |
+| [**EndOfStream**](cpullpin-endofstream.md)         | Wird aufgerufen, nachdem das -Objekt das letzte Beispiel übermittelt hat.                                     |
+| [**OnError**](cpullpin-onerror.md)                 | Wird aufgerufen, wenn während des Streamings ein Fehler auftritt.                                           |
+| [**Erhalten**](cpullpin-receive.md)                 | Wird aufgerufen, wenn das Objekt ein Medienbeispiel vom Ausgabepin empfängt.                   |
 
 
 
@@ -76,8 +76,8 @@ Diese Klasse wird nicht von **cbasepin** abgeleitet oder implementiert die [**IP
 
 | Anforderung | Wert |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>Pullpin. h (Include Streams. h)</dt> </dl>                                                                                   |
-| Bibliothek<br/> | <dl> " <dt>Straumbase. lib" (Einzelhandels Builds);</dt> " <dt>Straumbasd. lib" (Debugbuilds)</dt> </dl> |
+| Header<br/>  | <dl> <dt>Pullpin.h (include Streams.h)</dt> </dl>                                                                                   |
+| Bibliothek<br/> | <dl> <dt>Strmbase.lib (Verkaufsbuilds); </dt> <dt>Strmbasd.lib (Debugbuilds)</dt> </dl> |
 
 
 

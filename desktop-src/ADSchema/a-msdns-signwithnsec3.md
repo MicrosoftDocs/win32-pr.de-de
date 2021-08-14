@@ -1,11 +1,11 @@
 ---
-title: MS-DNS-Sign-with-NSEC3-Attribut
+title: ms-DNS-Sign-With-NSEC3-Attribut
 description: Ein Attribut, mit dem definiert wird, ob die DNS-Zone mit NSEC3 signiert ist.
 ms.assetid: 5c208bad-3de7-4fb3-ac76-9b4afaf5addf
 ms.tgt_platform: multiple
 keywords:
-- "\"MS-DNS-Sign-with-NSEC3\"-Attribut AD-Schema"
-- MSDNs-SignWithNSEC3-Attribut AD-Schema
+- AD-Schema des ms-DNS-Sign-With-NSEC3-Attributs
+- AD-Schema des msDNS-SignWithNSEC3-Attributs
 topic_type:
 - apiref
 api_name:
@@ -14,14 +14,14 @@ api_type:
 - Schema
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 59c0a23927be5be9084ed00551414abd48d08c00
-ms.sourcegitcommit: b77ace27b0432e7cd3863191b11926be032fbe2f
+ms.openlocfilehash: f0348ad8f6572ccb1a3e78b7553dc7fb56b7a31fd743b8ff8088831c91bd53c8
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "106344749"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119297270"
 ---
-# <a name="ms-dns-sign-with-nsec3-attribute"></a>MS-DNS-Sign-with-NSEC3-Attribut
+# <a name="ms-dns-sign-with-nsec3-attribute"></a>ms-DNS-Sign-With-NSEC3-Attribut
 
 Ein Attribut, mit dem definiert wird, ob die DNS-Zone mit NSEC3 signiert ist.
 
@@ -29,14 +29,14 @@ Ein Attribut, mit dem definiert wird, ob die DNS-Zone mit NSEC3 signiert ist.
 
 | Eingabe | Wert |
 |-------------------|--------------------------------------|
-| CN                | MS-DNS-Sign-with-NSEC3               |
-| LDAP-Display-Name | MSDNs-SignWithNSEC3                  |
+| CN                | ms-DNS-Sign-With-NSEC3               |
+| Ldap-Anzeigename | msDNS-SignWithNSEC3                  |
 | Size              | \-                                   |
-| Berechtigung aktualisieren  | \-                                   |
-| Aktualisierungshäufigkeit  | \-                                   |
+| Aktualisieren von Berechtigungen  | \-                                   |
+| Updatehäufigkeit  | \-                                   |
 | Attribute-Id      | 1.2.840.113556.1.4.2131              |
-| System-ID-GUID    | c79f2199-6da1-46ff-923c-1f3f800c721e |
-| Syntax            | [**Booleschen**](s-boolean.md)         |
+| System-Id-Guid    | c79f2199-6da1-46ff-923c-1f3f800c721e |
+| Syntax            | [**Boolean**](s-boolean.md)         |
 
 
 
@@ -53,10 +53,10 @@ Ein Attribut, mit dem definiert wird, ob die DNS-Zone mit NSEC3 signiert ist.
 | Link-ID                | \-                                       |
 | MAPI-Id                | \-                                       |
 | System-Only            | False                                    |
-| Ist-einwertig       | Richtig                                     |
+| Is-Single-Valued       | True                                     |
 | Ist indiziert             | False                                    |
 | Im globalen Katalog      | False                                    |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                             |
+| NT-Security-Descriptor | O:BAG:BAD:S:                             |
 | Range-Lower            | \-                                       |
 | Range-Upper            | \-                                       |
 | Search-Flags           | 0x00000008                               |

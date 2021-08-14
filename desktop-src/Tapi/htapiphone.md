@@ -1,19 +1,19 @@
 ---
-description: Der htapiphone-Datentyp stellt ein undurchsichtiges Tapis-Handle für eine Telefondaten Struktur dar.
+description: Der HTAPIPHONE-Datentyp stellt ein nicht transparentes TAPIs-Handle für eine Telefondatenstruktur dar.
 ms.assetid: e869cb3e-0eeb-4edf-a272-a655a236a3a2
-title: Htapiphone
+title: HTAPIPHONE
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 94706270b1148166181eda0d8df9b940c269f62a
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: f7cdc7d2c8f69d3a24bf830e00588a8e8721592d3d7c3c708ca12bfecb6b1f2f
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106345177"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119003598"
 ---
-# <a name="htapiphone"></a>Htapiphone
+# <a name="htapiphone"></a>HTAPIPHONE
 
-Der **htapiphone** -Datentyp stellt den nicht transparenten Handle für eine Telefondaten Struktur dar. TAPI muss einen Wert dieses Typs in einen Verweis auf die entsprechende Datenstruktur Instanz auflösen. Der Dienstanbieter darf nicht versuchen, darauf zu verweisen, als ob es sich um einen Zeiger handelt, nehmen Annahmen über seine Werte vor oder interpretieren seine Darstellung in irgendeiner Weise, als er den Wert zu den entsprechenden Zeitpunkten an TAPI übergibt.
+Der **HTAPIPHONE-Datentyp** stellt das nicht transparente Handle von TAPI für eine Telefondatenstruktur dar. TAPI muss einen Wert dieses Typs in einen Verweis auf die entsprechende Datenstrukturinstanz auflösen. Der Dienstanbieter darf nicht versuchen, über diesen Verweis zu verweisen, als ob es sich um einen Zeiger handelte, Annahmen über seine Werte zu treffen oder seine Darstellung auf eine andere Weise zu interpretieren, als seinen Wert zu geeigneten Zeiten an TAPI zu übergeben.
 
  
 

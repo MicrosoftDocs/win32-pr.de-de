@@ -1,10 +1,10 @@
 ---
-title: Streamselectoperation-Klasse
-description: Registriert einen Ereignishandler, der aufgerufen wird, wenn der von getmuteasync gestartete asynchrone Vorgang abgeschlossen ist, und stellt eine Methode bereit, die die Ergebnisse des Vorgangs zurückgibt. | Streamselectoperation-Klasse
+title: StreamSelectOperation-Klasse
+description: Registriert einen Ereignishandler, der aufgerufen wird, wenn der von GetMuteAsync gestartete asynchrone Vorgang abgeschlossen wird, und stellt eine Methode zur Rückgabe der Ergebnisse des Vorgangs zur Anwendung. | StreamSelectOperation-Klasse
 ms.assetid: 681142B4-AECD-42D0-A2D4-494E69A29025
 keywords:
-- Streamselectoperation-Klasse Medien Streaming-API
-- Streamselectoperation-Klasse Medien Streaming-API, beschrieben
+- 'StreamSelectOperation-Klasse : Media Streaming-API'
+- StreamSelectOperation-Klasse, Media Streaming-API, beschrieben
 topic_type:
 - apiref
 api_name:
@@ -14,31 +14,31 @@ api_type:
 ms.topic: reference
 ms.date: 05/31/2018
 api_location: ''
-ms.openlocfilehash: a4a19ff2826f0f2ea3e5ef01841ce482d2f293a3
-ms.sourcegitcommit: 92e74c99f8f4d097676959d0c317f533c2400a80
+ms.openlocfilehash: 161434aad9c4eb20960950ba2dd1979c9caaa2ccc5bbe3c2683ee3e4f839a0b8
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/09/2021
-ms.locfileid: "104219287"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119461560"
 ---
-# <a name="streamselectoperation-class"></a>Streamselectoperation-Klasse
+# <a name="streamselectoperation-class"></a>StreamSelectOperation-Klasse
 
-Registriert einen Ereignishandler, der aufgerufen wird, wenn der von [**getmuteasync**](/previous-versions/windows/desktop/api/windows.media.streaming/nf-windows-media-streaming-imediarenderer-getmuteasync) gestartete asynchrone Vorgang abgeschlossen ist, und stellt eine Methode bereit, die die Ergebnisse des Vorgangs zurückgibt.
+Registriert einen Ereignishandler, der aufgerufen wird, wenn der von [**GetMuteAsync gestartete asynchrone**](/previous-versions/windows/desktop/api/windows.media.streaming/nf-windows-media-streaming-imediarenderer-getmuteasync) Vorgang abgeschlossen wird, und stellt eine Methode zur Rückgabe der Ergebnisse des Vorgangs zur Anwendung.
 
-**Streamselectoperation** verfügt über folgende Typen von Membern:
+**StreamSelectOperation** verfügt über die folgenden Membertypen:
 
 -   [Methoden](#methods)
 -   [Eigenschaften](#properties)
 
 ### <a name="methods"></a>Methoden
 
-Die **streamselectoperation** -Klasse verfügt über diese Methoden.
+Die **StreamSelectOperation-Klasse** verfügt über diese Methoden.
 
 
 
 | Methode                                                 | BESCHREIBUNG                                                                                                                                       |
 |:-------------------------------------------------------|:--------------------------------------------------------------------------------------------------------------------------------------------------|
-| [**GetResults**](streamselectoperation-getresults.md) | Gibt die Ergebnisse des asynchronen Vorgangs zurück, der von [**selectbeststreamasync**](/previous-versions/windows/desktop/legacy/hh829001(v=vs.85))gestartet wurde.<br/> |
+| [**GetResults**](streamselectoperation-getresults.md) | Gibt die Ergebnisse des asynchronen Vorgangs zurück, der von [**SelectBestStreamAsync gestartet wurde.**](/previous-versions/windows/desktop/legacy/hh829001(v=vs.85))<br/> |
 
 
 
@@ -46,13 +46,13 @@ Die **streamselectoperation** -Klasse verfügt über diese Methoden.
 
 ### <a name="properties"></a>Eigenschaften
 
-Die **streamselectoperation** -Klasse verfügt über diese Eigenschaften.
+Die **StreamSelectOperation-Klasse** verfügt über diese Eigenschaften.
 
 
 
 | Eigenschaft                                                        | Zugriffstyp           | BESCHREIBUNG                                                                                                                                                                             |
 |:----------------------------------------------------------------|:----------------------|:----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| [**Abgeschlossen**](streamselectoperation-completed.md)<br/> | Lesen/Schreiben<br/> | Ruft einen Ereignishandler ab, der aufgerufen wird, wenn der von [**selectbeststreamasync**](/previous-versions/windows/desktop/legacy/hh829002(v=vs.85)) gestartete asynchrone Vorgang abgeschlossen ist, oder legt diesen fest.<br/> |
+| [**Abgeschlossen**](streamselectoperation-completed.md)<br/> | Lesen/Schreiben<br/> | Ruft einen Ereignishandler ab, der aufgerufen wird, wenn der von [**SelectBestStreamAsync**](/previous-versions/windows/desktop/legacy/hh829002(v=vs.85)) gestartete asynchrone Vorgang abgeschlossen ist, oder legt diesen fest.<br/> |
 
 
 

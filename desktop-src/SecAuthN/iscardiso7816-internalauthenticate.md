@@ -1,7 +1,7 @@
 ---
-description: Erstellt einen APDU-Befehl (Application Protocol Data Unit), der die Berechnung der Authentifizierungsdaten durch die Karte mit den vom Schnittstellen Gerät gesendeten Abfrage Daten und einem relevanten geheimen Schlüssel (z. b. einem Schlüssel) initiiert, der in der Karte gespeichert ist.
+description: Erstellt einen APDU-Befehl (Application Protocol Data Unit), der die Berechnung der Authentifizierungsdaten durch die Karte initiiert, indem die vom Schnittstellengerät gesendeten Abfragedaten und ein relevantes Geheimnis (z. B. ein Schlüssel) auf der Karte verwendet werden.
 ms.assetid: cb0b2535-6e5b-4fb2-b540-cd037259baab
-title: 'ISCardISO7816:: internalauthenticate-Methode (scardssp. h)'
+title: ISCardISO7816::InternalAuthenticate-Methode (Scardssp.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,22 +13,22 @@ api_type:
 - COM
 api_location:
 - Scardssp.dll
-ms.openlocfilehash: 1e30dbb06373907c5cea07e45d4f7a390b773349
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: d4c3385313fb5b9c9c7ba72957244bd81757b0cd1e79bcec906e740c69b66292
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104042067"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118922990"
 ---
-# <a name="iscardiso7816internalauthenticate-method"></a>ISCardISO7816:: internalauthenticate-Methode
+# <a name="iscardiso7816internalauthenticate-method"></a>ISCardISO7816::InternalAuthenticate-Methode
 
-\[Die **internalauthenticate** -Methode ist für die Verwendung in den Betriebssystemen verfügbar, die im Abschnitt "Anforderungen" angegeben sind. Es ist nicht für die Verwendung in Windows Server 2003 mit Service Pack 1 (SP1) und höher, Windows Vista, Windows Server 2008 und nachfolgenden Versionen des Betriebssystems verfügbar. Die [Smartcard-Module](/previous-versions/windows/desktop/secsmart/smart-card-modules) bieten eine ähnliche Funktionalität.\]
+\[Die **InternalAuthenticate-Methode** ist für die Verwendung in den Betriebssystemen verfügbar, die im Abschnitt Anforderungen angegeben sind. Es ist nicht für die Verwendung in Windows Server 2003 mit Service Pack 1 (SP1) und höher, Windows Vista, Windows Server 2008 und nachfolgenden Versionen des Betriebssystems verfügbar. Die [Smartcardmodule](/previous-versions/windows/desktop/secsmart/smart-card-modules) bieten ähnliche Funktionen.\]
 
-Die **internalauthenticate** -Methode erstellt einen APDU-Befehl ( [*Application Protocol Data Unit*](../secgloss/a-gly.md) ), der die Berechnung der Authentifizierungsdaten durch die Karte initiiert, indem die vom Schnittstellen Gerät gesendeten Anforderungs Daten und ein relevanter geheimer Schlüssel (z. b. ein Schlüssel) auf der Karte gespeichert werden.
+Die **InternalAuthenticate-Methode** erstellt einen APDU-Befehl [*(Application Protocol Data Unit),*](../secgloss/a-gly.md) der die Berechnung der Authentifizierungsdaten durch die Karte mithilfe der vom Schnittstellengerät gesendeten Abfragedaten und eines relevanten Geheimnisses (z. B. eines Schlüssels) initiiert, der auf der Karte gespeichert ist.
 
-Wenn das relevante Geheimnis an das MF angehängt ist, kann der Befehl verwendet werden, um die Karte als Ganzes zu authentifizieren.
+Wenn das relevante Geheimnis an den MF angefügt ist, kann der Befehl verwendet werden, um die Karte als Ganzes zu authentifizieren.
 
-Wenn das relevante Geheimnis an eine andere DF angefügt ist, kann der Befehl zum Authentifizieren der DF verwendet werden.
+Wenn das relevante Geheimnis an einen anderen DF angefügt ist, kann der Befehl verwendet werden, um diesen DF zu authentifizieren.
 
 ## <a name="syntax"></a>Syntax
 
@@ -49,29 +49,29 @@ HRESULT InternalAuthenticate(
 
 <dl> <dt>
 
-*byalgorithmref* \[ in\]
+*byAlgorithmRef* \[ In\]
 </dt> <dd>
 
-Verweis auf den Algorithmus in der Karte.
+Verweis auf den Algorithmus auf der Karte.
 
 Wenn dieser Wert 0 (null) ist, bedeutet dies, dass keine Informationen angegeben werden. Der Verweis auf den Algorithmus ist entweder vor dem Ausgeben des Befehls bekannt oder wird im Datenfeld bereitgestellt.
 
 </dd> <dt>
 
-*bysecretref* \[ in\]
+*bySecretRef* \[ In\]
 </dt> <dd>
 
-Verweis auf den geheimen Schlüssel.
+Verweis auf das Geheimnis.
 
 
 
 | Wert                                                                                                                                                                                    | Bedeutung                                                                                                                                                                         |
 |------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| <span id="No_Info"></span><span id="no_info"></span><span id="NO_INFO"></span><dl> <dt>**Keine Informationen**</dt> </dl>                     | Bitposition: 00000000 <br/> Es werden keine Informationen angegeben. Der Verweis auf das Geheimnis ist entweder vor dem Ausgeben des Befehls bekannt oder wird im Datenfeld bereitgestellt.<br/> |
-| <span id="Global_ref"></span><span id="global_ref"></span><span id="GLOBAL_REF"></span><dl> <dt>**Globaler Verweis**</dt> </dl>         | Bitposition: 0------- <br/> Globale Verweis Daten (ein für die MF spezifischer Schlüssel).<br/>                                                                                       |
-| <span id="Specific_ref"></span><span id="specific_ref"></span><span id="SPECIFIC_REF"></span><dl> <dt>**Spezifischer Verweis**</dt> </dl> | Bitposition: 1-------<br/> Bestimmte Verweis Daten (ein DF-spezifischer Schlüssel).<br/>                                                                                       |
-| <span id="RFU"></span><span id="rfu"></span><dl> <dt>**RFU**</dt> </dl>                                                           | Bitposition:-XX-----<br/> 00 (andere Werte sind RFU).<br/>                                                                                                         |
-| <span id="Secret"></span><span id="secret"></span><span id="SECRET"></span><dl> <dt>**Geheimen**</dt> </dl>                         | Bitposition:---XXXXX<br/> Die Nummer des Geheimnisses.<br/>                                                                                                              |
+| <span id="No_Info"></span><span id="no_info"></span><span id="NO_INFO"></span><dl> <dt>**Keine Informationen**</dt> </dl>                     | Bitposition: 00000000 <br/> Es werden keine Informationen angegeben. Der Verweis auf das Geheimnis ist entweder vor dem Ausführen des Befehls bekannt oder wird im Datenfeld bereitgestellt.<br/> |
+| <span id="Global_ref"></span><span id="global_ref"></span><span id="GLOBAL_REF"></span><dl> <dt>**Globaler Verweis**</dt> </dl>         | Bitposition: 0------- <br/> Globale Verweisdaten (ein MF-spezifischer Schlüssel).<br/>                                                                                       |
+| <span id="Specific_ref"></span><span id="specific_ref"></span><span id="SPECIFIC_REF"></span><dl> <dt>**Spezifische Referenz**</dt> </dl> | Bitposition: 1-------<br/> Spezifische Verweisdaten (ein DF-spezifischer Schlüssel).<br/>                                                                                       |
+| <span id="RFU"></span><span id="rfu"></span><dl> <dt>**Rfu**</dt> </dl>                                                           | Bitposition: -xx-----<br/> 00 (andere Werte sind RFU).<br/>                                                                                                         |
+| <span id="Secret"></span><span id="secret"></span><span id="SECRET"></span><dl> <dt>**`Secret`**</dt> </dl>                         | Bitposition: ---xxxxx<br/> Die Nummer des Geheimnisses.<br/>                                                                                                              |
 
 
 
@@ -79,57 +79,57 @@ Verweis auf den geheimen Schlüssel.
 
 </dd> <dt>
 
-*pchallenge* \[ in\]
+*pChallenge* \[ In\]
 </dt> <dd>
 
-Zeiger auf die Authentifizierungs bezogenen Daten (z. b. "Challenge").
+Zeiger auf die authentifizierungsbezogenen Daten (z. B. Abfrage).
 
 </dd> <dt>
 
-*lreplybytes* \[ in\]
+*lReplyBytes* \[ In\]
 </dt> <dd>
 
 Maximale Anzahl von Bytes, die als Antwort erwartet werden.
 
 </dd> <dt>
 
-*ppcmd* \[ in, out\]
+*ppCmd* \[ in, out\]
 </dt> <dd>
 
-Bei der Eingabe ein Zeiger auf ein [**iscardcmd**](iscardcmd.md) -Schnittstellen Objekt oder **null**.
+Bei der Eingabe ein Zeiger auf ein [**ISCardCmd-Schnittstellenobjekt**](iscardcmd.md) oder **NULL.**
 
-Bei der Rückgabe wird der Befehl mit dem von diesem Vorgang erstellten APDU-Befehl ausgefüllt. Wenn *ppcmd* auf **null** festgelegt wurde, wird ein [*Smartcard*](../secgloss/s-gly.md) - [**iscardcmd**](iscardcmd.md) -Objekt intern erstellt und mit dem *ppcmd* -Zeiger zurückgegeben.
+Bei der Rückgabe wird er mit dem APDU-Befehl gefüllt, der von diesem Vorgang erstellt wurde. Wenn *ppCmd* auf **NULL** festgelegt wurde, wird intern ein [**ISCardCmd-Smartcardobjekt**](iscardcmd.md) erstellt und mit dem *ppCmd-Zeiger* zurückgegeben. [](../secgloss/s-gly.md)
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Die-Methode gibt einen der folgenden möglichen Werte zurück.
+Die -Methode gibt einen der folgenden möglichen Werte zurück.
 
 
 
 | Rückgabecode                                                                                   | Beschreibung                                  |
 |-----------------------------------------------------------------------------------------------|----------------------------------------------|
 | <dl> <dt>**S \_ OK**</dt> </dl>          | Operation erfolgreich abgeschlossen.<br/> |
-| <dl> <dt>**E \_ invalidArg**</dt> </dl>  | Ungültiger Parameter.<br/>                |
-| <dl> <dt>**E- \_ Zeiger**</dt> </dl>     | Es wurde ein fehlerhafter Zeiger übermittelt.<br/>      |
-| <dl> <dt>**E \_ outo-Memory**</dt> </dl> | Nicht genügend Arbeitsspeicher.<br/>                    |
+| <dl> <dt>**E \_ INVALIDARG**</dt> </dl>  | Ungültiger Parameter.<br/>                |
+| <dl> <dt>**E \_ POINTER**</dt> </dl>     | Ein ungültiger Zeiger wurde übergeben.<br/>      |
+| <dl> <dt>**E \_ OUTOFMEMORY**</dt> </dl> | Nicht genügend Arbeitsspeicher.<br/>                    |
 
 
 
  
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Die erfolgreiche Ausführung des Befehls kann dem erfolgreichen Abschluss vorheriger Befehle (z. b. überprüfen oder auswählen der Datei) oder der Auswahl (z. b. des relevanten Geheimnisses) unterliegen.
+Die erfolgreiche Ausführung des Befehls kann davon abhängig sein, dass vorherige Befehle (z. B. VERIFY oder SELECT FILE) oder Auswahlmöglichkeiten (z. B. das relevante Geheimnis) erfolgreich abgeschlossen wurden.
 
-Wenn beim Ausgeben des Befehls eine Taste und ein Algorithmus ausgewählt sind, verwendet der Befehl möglicherweise implizit den Schlüssel und den Algorithmus.
+Wenn beim Ausgeben des Befehls derzeit ein Schlüssel und ein Algorithmus ausgewählt sind, kann der Befehl implizit den Schlüssel und den Algorithmus verwenden.
 
-Die Häufigkeit, mit der der Befehl ausgegeben wird, kann in der Karte aufgezeichnet werden, um die Anzahl der weiteren Versuche der Verwendung des relevanten Geheimnisses oder des Algorithmus einzuschränken.
+Wie oft der Befehl ausgegeben wird, kann auf der Karte aufgezeichnet werden, um die Anzahl weiterer Versuche, das entsprechende Geheimnis oder den Algorithmus zu verwenden, einzuschränken.
 
-Eine Liste aller Methoden, die von dieser Schnittstelle bereitgestellt werden, finden Sie unter [**ISCardISO7816**](iscardiso7816.md).
+Eine Liste aller von dieser Schnittstelle bereitgestellten Methoden finden Sie unter [**ISCardISO7816**](iscardiso7816.md).
 
-Zusätzlich zu den oben aufgeführten com-Fehlercodes gibt diese Schnittstelle möglicherweise einen Fehlercode für die Smartcard zurück, wenn eine smartcardfunktion aufgerufen wurde, um die Anforderung abzuschließen. Weitere Informationen finden Sie unter [Smartcard-Rückgabewerte](authentication-return-values.md).
+Zusätzlich zu den oben aufgeführten COM-Fehlercodes kann diese Schnittstelle einen Smartcardfehlercode zurückgeben, wenn eine Smartcardfunktion aufgerufen wurde, um die Anforderung abzuschließen. Weitere Informationen finden Sie unter [Smartcard-Rückgabewerte.](authentication-return-values.md)
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -137,22 +137,22 @@ Zusätzlich zu den oben aufgeführten com-Fehlercodes gibt diese Schnittstelle m
 
 | Anforderung | Wert |
 |-------------------------------------|-----------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows XP \[ -Desktop-Apps\]<br/>                                             |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2003 \[ -Desktop-Apps\]<br/>                                    |
+| Unterstützte Mindestversion (Client)<br/> | Windows \[Nur XP-Desktop-Apps\]<br/>                                             |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2003-Desktop-Apps\]<br/>                                    |
 | Ende des Supports (Client)<br/>    | Windows XP<br/>                                                                   |
-| Ende des Supports (Server)<br/>    | Windows Server 2003<br/>                                                          |
-| Header<br/>                   | <dl> <dt>"Scardssp. h"</dt> </dl>   |
-| Typbibliothek<br/>             | <dl> <dt>Scardsrv. tlb</dt> </dl> |
+| Ende des Supports (Server)<br/>    | Windows Server 2003<br/>                                                          |
+| Header<br/>                   | <dl> <dt>Scardssp.h</dt> </dl>   |
+| Typbibliothek<br/>             | <dl> <dt>Scardsrv.tlb</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>Scardssp.dll</dt> </dl> |
-| IID<br/>                      | IID \_ ISCardISO7816 ist als 53b6aa68-3F 56-11D0-916b-00aa00c18068 definiert<br/>        |
+| IID<br/>                      | IID \_ ISCardISO7816 ist als 53B6AA68-3F56-11D0-916B-00AA00C18068 definiert.<br/>        |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Externalauthenticate**](iscardiso7816-externalauthenticate.md)
+[**ExternalAuthenticate**](iscardiso7816-externalauthenticate.md)
 </dt> <dt>
 
 [**ISCardISO7816**](iscardiso7816.md)

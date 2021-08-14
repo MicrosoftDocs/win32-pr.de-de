@@ -1,5 +1,5 @@
 ---
-description: 'Weitere Informationen finden Sie hier: JET_SNP-Enumeration'
+description: 'Weitere Informationen zu: JET_SNP-Enumeration'
 title: JET_SNP-Enumeration
 TOCTitle: JET_SNP enumeration
 ms:assetid: T:Microsoft.Isam.Esent.Interop.JET_SNP
@@ -36,19 +36,19 @@ api_type:
 api_location:
 - Microsoft.Isam.Esent.Interop.dll
 ROBOTS: INDEX,FOLLOW
-ms.openlocfilehash: 10061d0c00d90aa5ca4e0778cba046d2e6f62f4d
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: a18858b7dba79c8e8d0d2a6ab51783ab0a602d595214895f1798b2ef0e084731
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106344247"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118979261"
 ---
 # <a name="jet_snp-enumeration"></a>JET_SNP-Enumeration
 
-Der Typ des Vorgangs, für den der Status gemeldet wird.
+Der Typ des Vorgangs, für den der Fortschritt gemeldet wird.
 
-**Namespace:**  [Microsoft. ISAM. ESENT. Interop](./microsoft.isam.esent.interop-namespace.md)  
-**Assembly:**  Microsoft. ISAM. ESENT. Interop (in Microsoft.Isam.Esent.Interop.dll)
+**Namespace:**  [Microsoft.Isam.Esent.Interop](./microsoft.isam.esent.interop-namespace.md)  
+**Assembly:**  Microsoft.Isam.Esent.Interop (in Microsoft.Isam.Esent.Interop.dll)
 
 ## <a name="syntax"></a>Syntax
 
@@ -77,39 +77,39 @@ public enum JET_SNP
 <tr class="odd">
 <td></td>
 <td>Reparieren</td>
-<td>Der Rückruf ist für eine Reparaturoption vorgesehen.</td>
+<td>Rückruf ist für eine Reparaturoption vorgesehen.</td>
 </tr>
 <tr class="even">
 <td></td>
 <td>Kompakt</td>
-<td>Der Rückruf ist für die Daten Bank Defragmentierung vorgesehen.</td>
+<td>Der Rückruf ist für die Datenbankdefragmentierung vorgesehen.</td>
 </tr>
 <tr class="odd">
 <td></td>
 <td>Restore</td>
-<td>Rückruf ist für Wiederherstellungsoptionen.</td>
+<td>Der Rückruf ist für Wiederherstellungsoptionen vorgesehen.</td>
 </tr>
 <tr class="even">
 <td></td>
 <td>Backup</td>
-<td>Rückruf ist für Sicherungs Optionen.</td>
+<td>Der Rückruf ist für Sicherungsoptionen vorgesehen.</td>
 </tr>
 <tr class="odd">
 <td></td>
-<td>Volumebereinigung</td>
-<td>Der Rückruf ist für die Daten Bank nulgung vorgesehen.</td>
+<td>schrubben</td>
+<td>Der Rückruf dient zum Nullen der Datenbank.</td>
 </tr>
 <tr class="even">
 <td></td>
-<td>Upgraderecordformat</td>
-<td>Der Rückruf dient zum Aktualisieren des Daten Satz Formats aller Datenbankseiten.</td>
+<td>UpgradeRecordFormat</td>
+<td>Der Rückruf dient zum Aktualisieren des Datensatzformats aller Datenbankseiten.</td>
 </tr>
 </tbody>
 </table>
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
-#### <a name="reference"></a>Referenz
+#### <a name="reference"></a>Verweis
 
-[Microsoft. ISAM. ESENT. Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)
+[Microsoft.Isam.Esent.Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)

@@ -1,27 +1,27 @@
 ---
-description: Fordert an, wie der Netzwerk Stapel bestimmte Verhalten verarbeiten soll, bei denen die Standardmethode für die Handhabung des Verhaltens in Windows-Versionen unterschiedlich sein kann.
+description: Fordert an, wie der Netzwerkstapel bestimmte Verhaltensweisen verarbeiten soll, für die sich die Standardbehandlung des Verhaltens in Windows Versionen unterscheiden kann.
 ms.assetid: 9574e21f-5ac4-4210-8031-2f3b07416813
-title: SIO_SET_COMPATIBILITY_MODE Steuerungs Codes
+title: SIO_SET_COMPATIBILITY_MODE-Steuerelementcode
 ms.topic: reference
 ms.date: 05/20/2019
 req.target-min-winverclnt: Windows Vista [desktop apps only]
 req.target-min-winversvr: Windows Server 2008 [desktop apps only]
 api_location:
 - mstcpip.h
-ms.openlocfilehash: 58972595adb71a30728cb4817a80814cd987a6de
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: ee0cb99f4ad55d4b6df60c71845c40fdfa3c2a3c1dff167f8009c0d1711ad997
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106345103"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119384050"
 ---
-# <a name="sio_set_compatibility_mode-control-code"></a>SIO_SET_COMPATIBILITY_MODE Steuerungs Codes
+# <a name="sio_set_compatibility_mode-control-code"></a>SIO_SET_COMPATIBILITY_MODE-Steuerelementcode
 
 ## <a name="description"></a>BESCHREIBUNG
 
-Der **\_ \_ Kompatibilitätsmodus für den Kompatibilitäts \_ Modus von SIO** fordert an, wie der Netzwerk Stapel bestimmte Verhalten verarbeiten soll, bei denen die Standardmethode zum Verarbeiten des Verhaltens in Windows-Versionen unterschiedlich sein kann.
+Der **SIO \_ SET COMPATIBILITY \_ \_ MODE-Steuerungscode** fordert an, wie der Netzwerkstapel bestimmte Verhaltensweisen verarbeiten soll, bei denen sich die Standardbehandlungsart des Verhaltens in Windows Versionen unterscheiden kann.
 
-Um diesen Vorgang auszuführen, wenden Sie die [**WSAIoctl**](/windows/desktop/api/winsock2/nf-winsock2-wsaioctl) -oder **wspioctl** -Funktion mit den folgenden Parametern an.
+Rufen Sie zum Ausführen dieses Vorgangs die [**Funktion WSAIoctl**](/windows/desktop/api/winsock2/nf-winsock2-wsaioctl) oder **WSPIoctl** mit den folgenden Parametern auf.
 
 ```cpp
 int WSAIoctl(
@@ -61,91 +61,91 @@ Ein Deskriptor, der einen Socket identifiziert.
 
 ### <a name="dwiocontrolcode"></a>dwIoControlCode
 
-Der Steuerelement Code für den Vorgang.
-Verwenden Sie für diesen Vorgang den **\_ \_ Kompatibilitäts \_ Modus "sio festlegen** ".
+Der Steuerelementcode für den Vorgang.
+Verwenden Sie für diesen Vorgang **SIO \_ SET COMPATIBILITY \_ \_ MODE.**
 
-### <a name="lpvinbuffer"></a>lpvinbuffer
+### <a name="lpvinbuffer"></a>lpvInBuffer
 
 Ein Zeiger auf den Eingabepuffer.
-Dieser Parameter sollte auf eine **WSA- \_ Kompatibilitäts \_ Modus** -Struktur zeigen.
+Dieser Parameter sollte auf eine **WSA \_ COMPATIBILITY \_ MODE-Struktur** verweisen.
 
-### <a name="cbinbuffer"></a>cbinbuffer
+### <a name="cbinbuffer"></a>cbInBuffer
 
-Die Größe des Eingabe Puffers in Bytes.
-Dieser Parameter muss größer oder gleich der Größe der **WSA- \_ Kompatibilitäts \_ Modus** -Struktur sein, auf die vom *lpvinbuffer* -Parameter verwiesen wird.
+Die Größe des Eingabepuffers in Bytes.
+Dieser Parameter sollte gleich oder größer als die Größe der **WSA \_ COMPATIBILITY \_ MODE-Struktur** sein, auf die der *lpvInBuffer-Parameter* zeigt.
 
-### <a name="lpvoutbuffer"></a>lpvoutbuffer
+### <a name="lpvoutbuffer"></a>lpvOutBuffer
 
 Ein Zeiger auf den Ausgabepuffer.
 Dieser Parameter wird für diesen Vorgang nicht verwendet.
 
-### <a name="cboutbuffer"></a>cboutbuffer
+### <a name="cboutbuffer"></a>cbOutBuffer
 
 Die Größe des Ausgabepuffers in Bytes.
 Dieser Parameter muss auf 0 (null) festgelegt werden.
 
-### <a name="lpcbbytesreturned"></a>lpcbbyteszurück gegeben
+### <a name="lpcbbytesreturned"></a>lpcbBytesReturned
 
-Ein Zeiger auf eine Variable, die die Größe der im Ausgabepuffer gespeicherten Daten (in Bytes) empfängt.
-Dieser zurückgegebene Parameter verweist auf einen **DWORD** -Wert von 0 (null) für diesen Vorgang, da keine Ausgabe vorhanden ist.
+Ein Zeiger auf eine Variable, die die Größe der im Ausgabepuffer gespeicherten Daten in Bytes empfängt.
+Dieser zurückgegebene Parameter zeigt auf den **DWORD-Wert** 0 (null) für diesen Vorgang, da keine Ausgabe vorhanden ist.
 
-### <a name="lpvoverlapped"></a>lpvoverlgetauscht
+### <a name="lpvoverlapped"></a>lpvOverlapped
 
-Ein Zeiger auf eine [**wsaoverllapp**](/windows/desktop/api/winsock2/ns-winsock2-wsaoverlapped) -Struktur.
+Ein Zeiger auf eine [**WSAOVERLAPPED-Struktur.**](/windows/desktop/api/winsock2/ns-winsock2-wsaoverlapped)
 
-Wenn Socket *s* ohne das überlappende Attribut erstellt wurde, wird der *lpoverllapp* -Parameter ignoriert.
+Wenn *Sockets* ohne das überlappende Attribut erstellt wurden, wird der *lpOverlapped-Parameter* ignoriert.
 
-Wenn *s* mit dem überlappenden Attribut geöffnet wurde und der *lpoverlgetauscht* -Parameter nicht **null** ist, wird der Vorgang als überlappende (asynchrone) Operation ausgeführt.
-In diesem Fall muss der *lpoverllapp* -Parameter auf eine gültige [**wsaoverllapp**](/windows/desktop/api/winsock2/ns-winsock2-wsaoverlapped) -Struktur zeigen.
+Wenn *s* mit dem überlappende Attribut geöffnet wurde und der *lpOverlapped-Parameter* nicht **NULL** ist, wird der Vorgang als überlappender (asynchroner) Vorgang ausgeführt.
+In diesem Fall muss der *lpOverlapped-Parameter* auf eine gültige [**WSAOVERLAPPED-Struktur**](/windows/desktop/api/winsock2/ns-winsock2-wsaoverlapped) verweisen.
 
-Bei überlappenden Vorgängen gibt die Funktion [**WSAIoctl**](/windows/desktop/api/winsock2/nf-winsock2-wsaioctl) oder **wspioctl** sofort zurück, und die entsprechende Vervollständigungs Methode wird signalisiert, wenn der Vorgang abgeschlossen wurde.
-Andernfalls gibt die Funktion nicht zurück, bis der Vorgang abgeschlossen ist oder ein Fehler auftritt.
+Für überlappende Vorgänge gibt die [**WSAIoctl-**](/windows/desktop/api/winsock2/nf-winsock2-wsaioctl) oder **WSPIoctl-Funktion** sofort zurück, und die entsprechende Vervollständigungsmethode wird signalisiert, wenn der Vorgang abgeschlossen wurde.
+Andernfalls gibt die Funktion erst dann zurück, wenn der Vorgang abgeschlossen wurde oder ein Fehler auftritt.
 
 ### <a name="lpcompletionroutine"></a>lpCompletionRoutine
 
 Typ: \_ In_opt \_ [ **LPWSAOVERLAPPED_COMPLETION_ROUTINE**](/windows/win32/api/winsock2/nc-winsock2-lpwsaoverlapped_completion_routine)
 
-Ein Zeiger auf die Vervollständigungs Routine, die aufgerufen wird, wenn der Vorgang abgeschlossen wurde (bei nicht überlappenden Sockets ignoriert).
+Ein Zeiger auf die Abschlussroutine, die aufgerufen wird, wenn der Vorgang abgeschlossen wurde (wird für nicht überlappende Sockets ignoriert).
 
-### <a name="lpthreadid"></a>lpthreadid
+### <a name="lpthreadid"></a>lpThreadId
 
-Ein Zeiger auf eine [**wsathreadid**](/windows/desktop/api/ws2spi/ns-ws2spi-wsathreadid) -Struktur, die vom Anbieter in einem nachfolgenden [**wpuqueueapc**](/windows/desktop/api/Ws2spi/nf-ws2spi-wpuqueueapc)-Rückruf verwendet werden soll.
-Der Anbieter sollte die referenzierte [**wsathreadid**](/windows/desktop/api/ws2spi/ns-ws2spi-wsathreadid) -Struktur (nicht den Zeiger auf dieselbe) speichern, bis die [**wpuqueueapc**](/windows/desktop/api/Ws2spi/nf-ws2spi-wpuqueueapc) -Funktion zurückgibt.
+Ein Zeiger auf eine [**WSATHREADID-Struktur,**](/windows/desktop/api/ws2spi/ns-ws2spi-wsathreadid) die vom Anbieter in einem nachfolgenden Aufruf von [**WPUQueueApc**](/windows/desktop/api/Ws2spi/nf-ws2spi-wpuqueueapc)verwendet werden soll.
+Der Anbieter sollte die [**referenzierte WSATHREADID-Struktur**](/windows/desktop/api/ws2spi/ns-ws2spi-wsathreadid) (nicht den Zeiger auf denselben) speichern, bis die [**WPUQueueApc-Funktion**](/windows/desktop/api/Ws2spi/nf-ws2spi-wpuqueueapc) zurückgegeben wurde.
 
-**Hinweis**  Dieser Parameter gilt nur für die **wspioctl** -Funktion.
+**Hinweis**  Dieser Parameter gilt nur für die **WSPIoctl-Funktion.**
 
-### <a name="lperrno"></a>lperrno
+### <a name="lperrno"></a>lpErrno
 
 Ein Zeiger auf den Fehlercode.
 
-**Hinweis**  Dieser Parameter gilt nur für die **wspioctl** -Funktion.
+**Hinweis**  Dieser Parameter gilt nur für die **WSPIoctl-Funktion.**
 
 ## <a name="return-value"></a>Rückgabewert
 
-Wenn der Vorgang erfolgreich abgeschlossen wird, gibt die [**WSAIoctl**](/windows/desktop/api/winsock2/nf-winsock2-wsaioctl) -oder **wspioctl** -Funktion NULL zurück.
+Wenn der Vorgang erfolgreich abgeschlossen wurde, gibt die [**WSAIoctl-**](/windows/desktop/api/winsock2/nf-winsock2-wsaioctl) oder **WSPIoctl-Funktion** 0 (null) zurück.
 
-Wenn der Vorgang fehlschlägt oder aussteht, gibt die Funktion [**WSAIoctl**](/windows/desktop/api/winsock2/nf-winsock2-wsaioctl) oder **wspioctl** einen **\_ Socketfehler** zurück.
-Um erweiterte Fehlerinformationen abzurufen, nennen Sie [**WSAGetLastError**](/windows/desktop/api/winsock/nf-winsock-wsagetlasterror).
+Wenn der Vorgang fehlschlägt oder aussteht, gibt die [**WSAIoctl-**](/windows/desktop/api/winsock2/nf-winsock2-wsaioctl) oder **WSPIoctl-Funktion** **SOCKET \_ ERROR** zurück.
+Um erweiterte Fehlerinformationen abzurufen, rufen [**Sie WSAGetLastError auf.**](/windows/desktop/api/winsock/nf-winsock-wsagetlasterror)
 
 | Fehlercode | Bedeutung |
 |------------|---------|
-| **ausstehende WSA-e/a \_ \_** | Ein übergebener Vorgang wurde erfolgreich initiiert, und der Abschluss wird zu einem späteren Zeitpunkt angegeben. |
-| **WSA- \_ Vorgang \_ abgebrochen** | Ein über Lapp ender Vorgang wurde aufgrund der Schließung des Sockets oder der Ausführung des Befehls " **SIO \_ Flush** ioctl" abgebrochen. |
-| **WSAEFAULT** | Der *lpoverllapp* -oder *lpCompletionRoutine* -Parameter ist nicht vollständig in einem gültigen Teil des Benutzer Adressraums enthalten. |
-| **Wsaeingabe Progress** | Die-Funktion wird aufgerufen, wenn ein Rückruf ausgeführt wird. |
-| **Wsaeingabe** | Ein Blockierungs Vorgang wurde unterbrochen. |
-| **Wsaabval** | Der *dwIoControlCode* -Parameter ist kein gültiger Befehl, oder ein angegebener Eingabeparameter ist nicht zulässig, oder der Befehl ist nicht auf den angegebenen Sockettyp anwendbar. Dieser Fehler wird zurückgegeben, wenn der *cbinbuffer* -Parameter kleiner als der sizeof der **WSA- \_ Kompatibilitäts \_ Modus** -Struktur ist.
-| **WSAENETDOWN** | Das Netzwerk Subsystem ist fehlgeschlagen. |
-| **Wsaumoproumopt** | Die Socketoption wird für das angegebene Protokoll nicht unterstützt. |
-| **WSAENOTCONN** | Die Socket s ist nicht verbunden. |
-| **Wsaumotsock** | Der Deskriptor *s* ist kein Socket. |
-| **WSAEOPNOTSUPP** | Der angegebene ioctl-Befehl wird nicht unterstützt. Dieser Fehler wird zurückgegeben, wenn der IOCTL- **\_ \_ Kompatibilitäts \_ Modus** für den-Transport nicht vom Transportanbieter unterstützt wird. Dieser Fehler wird auch zurückgegeben, wenn für einen Datagrammsocket versucht wird, den **\_ \_ Kompatibilitäts \_ Modus** für den SIO-Satz zu verwenden. |
+| **WSA \_ IO \_ PENDING** | Ein überlappender Vorgang wurde erfolgreich initiiert, und der Abschluss wird zu einem späteren Zeitpunkt angezeigt. |
+| **\_WSA-VORGANG \_ ABGEBROCHEN** | Ein überlappender Vorgang wurde aufgrund des Schließens des Sockets oder der Ausführung des **SIO \_ FLUSH** IOCTL-Befehls abgebrochen. |
+| **WSAEFAULT** | Der *lpOverlapped-* oder *lpCompletionRoutine-Parameter* ist nicht vollständig in einem gültigen Teil des Benutzeradressraums enthalten. |
+| **WSAEINPROGRESS** | Die Funktion wird aufgerufen, wenn ein Rückruf ausgeführt wird. |
+| **WSAEINTR** | Ein Blockierungsvorgang wurde unterbrochen. |
+| **WSAEINVAL** | Der *dwIoControlCode-Parameter* ist kein gültiger Befehl, oder ein angegebener Eingabeparameter ist nicht akzeptabel, oder der Befehl gilt nicht für den angegebenen Sockettyp. Dieser Fehler wird zurückgegeben, wenn der *cbInBuffer-Parameter* kleiner als die Größe der **WSA \_ COMPATIBILITY \_ MODE-Struktur** ist.
+| **WSAENETDOWN** | Fehler beim Netzwerksubsystem. |
+| **WSAENOPROTOOPT** | Die Socketoption wird für das angegebene Protokoll nicht unterstützt. |
+| **WSAENOTCONN** | Die Sockets sind nicht verbunden. |
+| **WSAENOTSOCK** | Der Deskriptor *s* ist kein Socket. |
+| **WSAEOPNOTSUPP** | Der angegebene IOCTL-Befehl wird nicht unterstützt. Dieser Fehler wird zurückgegeben, wenn die **SIO \_ SET COMPATIBILITY \_ \_ MODE** IOCTL vom Transportanbieter nicht unterstützt wird. Dieser Fehler wird auch zurückgegeben, wenn versucht wird, **SIO \_ SET COMPATIBILITY \_ \_ MODE** IOCTL für einen Datagrammsocket zu verwenden. |
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-die IOCTL- **\_ \_ Kompatibilitätsmodus-Kompatibilitäts \_ Modus** fordert an, wie der Netzwerk Stapel bestimmte Verhalten verarbeiten soll, bei denen die Standardmethode zur Handhabung des Verhaltens in Windows-Versionen unterschiedlich sein kann.
-Die Eingabe Argument Struktur für **den \_ \_ Kompatibilitäts \_ Modus für den-Kompatibilitätsmodus** wird in der **WSA- \_ Kompatibilitäts \_ Modus** -Struktur angegeben, die in der Header Datei " *mswap*
-Ein Zeiger auf die Struktur des **WSA- \_ Kompatibilitäts \_ Modus** wird im *cbinbuffer* -Parameter übergeben.
+Der **SIO \_ SET COMPATIBILITY \_ \_ MODE** IOCTL fordert an, wie der Netzwerkstapel bestimmte Verhaltensweisen behandeln soll, bei denen sich die Standardbehandlung des Verhaltens in Windows Versionen unterscheiden kann.
+Die Eingabeargumentstruktur für **SIO \_ SET COMPATIBILITY \_ \_ MODE** wird in der **WSA COMPATIBILITY \_ \_ MODE-Struktur** angegeben, die in der *Headerdatei Mswsockdef.h* definiert ist.
+Ein Zeiger auf die **WSA \_ COMPATIBILITY \_ MODE-Struktur** wird im *cbInBuffer-Parameter* übergeben.
 Diese Struktur ist wie folgt definiert:
 
 ```cpp
@@ -158,135 +158,135 @@ typedef struct _WSA_COMPATIBILITY_MODE {
 } WSA_COMPATIBILITY_MODE, *PWSA_COMPATIBILITY_MODE;
 ```
 
-Der im **Verhaltensweise-** Member angegebene Wert gibt das angeforderte Verhalten an.
-Der im **targetosversion** -Member angegebene Wert gibt die Windows-Version an, die für das Verhalten angefordert wird.
+Der im **BehaviorId-Member** angegebene Wert gibt das angeforderte Verhalten an.
+Der im **TargetOsVersion-Member** angegebene Wert gibt die Windows Version an, die für das Verhalten angefordert wird.
 
-Der Behavior **orid-** Member kann einer der Werte aus dem Enumerationstyp der **WSA- \_ Kompatibilitäts \_ Verhaltens- \_ ID** sein, der in der Header Datei " *mslisockdef. h* " definiert ist.
-Die möglichen Werte für den Member " **verhalarid** " lauten wie folgt:
-
-| Begriff | BESCHREIBUNG |
-|------|-------------|
-| Wsaverhalorall | Dies entspricht der Anforderung aller möglichen kompatiblen Verhalten, die für die **WSA- \_ Kompatibilitäts \_ Verhaltens- \_ ID** definiert sind. |
-| Wsaverhaltereceivepufferung | Wenn das **targetosversion** -Element auf einen Wert für Windows Vista oder höher festgelegt ist, sind die TCP-Empfangs Puffergröße auf diesem Socket mithilfe der Option " **so \_ rcvbuf** " auch nach der Einrichtung einer TCP-Verbindung zulässig. Wenn das **targetosversion** -Element auf einen früheren Wert als Windows Vista festgelegt ist, sind nach dem **herstellen der Verbindung \_** keine Reduzierungen der TCP-Empfangs Puffergröße auf diesem Socket zulässig. |
-| Wsaverhalorautotuning | Wenn das **targetosversion** -Element auf einen Wert für Windows Vista oder höher festgelegt ist, ist die automatische Optimierung des Empfangs Fensters aktiviert, und der TCP-Fenster Skalierungsfaktor wird vom Standardwert 8 auf 2 reduziert. Wenn **targetosversion** auf einen früheren Wert als Windows Vista festgelegt ist, ist die automatische Optimierung des Empfangs Fensters deaktiviert. Die Option zum Skalieren von TCP-Fenstern ist ebenfalls deaktiviert, und die maximale tatsächliche Empfangs Fenstergröße ist auf 65.535 Bytes begrenzt. Die Option für die TCP-Fenster Skalierung kann für die Verbindung nicht ausgehandelt werden, auch wenn die Option " **\_ rcvbuf** " für diesen Socket aufgerufen wurde und einen Wert größer als 65.535 Bytes angibt, bevor die Verbindung hergestellt wurde. |
-
-Der **targetosversion** -Member kann eine der ntddi-Versions Konstanten sein, die in der Header Datei " *sdkddkver. h* " definiert sind.
-Einige der möglichen Werte für den **targetosversion** -Member lauten wie folgt:
+Der **BehaviorId-Member** kann einer der Werte aus dem **WSA \_ COMPATIBILITY BEHAVIOR \_ ID-Enumerationstyp \_** sein, der in der *Headerdatei "Mswsockdef.h"* definiert ist.
+Die möglichen Werte für den **BehaviorId-Member** sind:
 
 | Begriff | BESCHREIBUNG |
 |------|-------------|
-| ntddi \_ Longhorn | Das zielverhalten ist die Standardeinstellung für Windows Vista. |
-| Ntddi \_ WS03 | Das zielverhalten ist die Standardeinstellung für Windows Server 2003. |
-| ntddi- \_ WinXP | Das zielverhalten ist die Standardeinstellung für Windows XP. |
-| Ntddi \_ WIN2K | Das zielverhalten ist die Standardeinstellung für Windows 2000. |
+| WsaBehaviorAll | Dies entspricht dem Anfordern aller möglichen kompatiblen Verhaltensweisen, die für die **WSA \_ COMPATIBILITY BEHAVIOR \_ \_ ID** definiert sind. |
+| WsaBehaviorReceiveBuffering | Wenn das **TargetOsVersion-Element** auf einen Wert für Windows Vista oder höher festgelegt ist, sind Reduzierungen der TCP-Empfangspuffergröße für diesen Socket mithilfe der **SO \_ RCVBUF-Socketoption** auch nach dem Herstellen einer TCP-Verbindung zulässig. Wenn das **TargetOsVersion-Element** auf einen Wert vor Windows Vista festgelegt ist, sind Reduzierungen der TCP-Empfangspuffergröße für diesen Socket mithilfe der **SO \_ RCVBUF-Socketoption** nach dem Herstellen der Verbindung nicht zulässig. |
+| WsaBehaviorAutoTuning | Wenn das **TargetOsVersion-Element** auf einen Wert für Windows Vista oder höher festgelegt ist, wird die automatische Optimierung des Empfangsfensters aktiviert, und der TCP-Fensterskalierungsfaktor wird vom Standardwert 8 auf 2 reduziert. Wenn **TargetOsVersion** auf einen Wert vor Windows Vista festgelegt ist, ist die automatische Optimierung des Empfangsfensters deaktiviert. Die TCP-Fensterskalierungsoption ist ebenfalls deaktiviert, und die maximale True-Empfangsfenstergröße ist auf 65.535 Bytes beschränkt. Die TCP-Fensterskalierungsoption kann für die Verbindung nicht ausgehandelt werden, auch wenn die **SO \_ RCVBUF-Socketoption** für diesen Socket aufgerufen wurde und einen Wert von mehr als 65.535 Bytes angibt, bevor die Verbindung hergestellt wurde. |
 
-Die Haupt Auswirkung des Members **targetosversion** ist, ob dieser Member auf einen Wert gleich oder größer als **ntddi \_ Longhorn** festgelegt ist.
+Der **TargetOsVersion-Member** kann eine der NTDDI-Versionskonstanten sein, die in der *Headerdatei Sdkddkver.h* definiert sind.
+Einige der möglichen Werte für das **TargetOsVersion-Element** sind wie folgt:
 
-Die TCP-Leistung hängt nicht nur von der Übertragungsrate selbst, sondern auch vom Produkt der Übertragungsrate und der Roundtrip-Verzögerungszeit ab.
-Mit diesem Produkt zur Bandbreiten Verzögerung wird die Menge der Daten gemessen, die "die Pipe füllen".
-Dieses Produkt mit Bandbreiten Verzögerung ist der für Absender und Empfänger erforderliche Pufferspeicher, um den maximalen Durchsatz der TCP-Verbindung über den Pfad zu erhalten.
-Dieser Pufferspeicher stellt die Menge der nicht bestätigten Daten dar, die von TCP verarbeitet werden müssen, damit die Pipeline voll ist.
-TCP-Leistungsprobleme treten auf, wenn das Produkt für die Bandbreiten Verzögerung groß ist.
-Ein Netzwerkpfad, der unter diesen Bedingungen betrieben wird, wird häufig als "Long, FAT Pipe" bezeichnet.
-Beispiele hierfür sind hochleistungsfähige Paket Satelliten Verknüpfungen, drahtlose Hochgeschwindigkeitsverbindungen und über lange Entfernungen unterirdische Fiber-optische Links.
+| Begriff | BESCHREIBUNG |
+|------|-------------|
+| NTDDI \_ LONGHORN | Das Zielverhalten ist die Standardeinstellung für Windows Vista. |
+| NTDDI \_ WS03 | Das Zielverhalten ist die Standardeinstellung für Windows Server 2003. |
+| NTDDI \_ WINXP | Das Zielverhalten ist die Standardeinstellung für Windows XP. |
+| NTDDI \_ WIN2K | Das Zielverhalten ist die Standardeinstellung für Windows 2000. |
 
-Der TCP-Header verwendet ein 16-Bit-Datenfeld (das Fenster Feld im TCP-Paket Header), um die Größe des Empfangs Fensters an den Absender zu melden.
-Daher ist das größte Fenster, das verwendet werden kann, 65.535 bytes.
-Um diese Einschränkung zu umgehen, wurde eine TCP-Erweiterungsoption (TCP-Fenster Skala) für Hochleistungs-TCP hinzugefügt, um Windows mit mehr als 65.535 Bytes zuzulassen.
-Die TCP-Fenster Skalierungs Option (wsopt) ist in RFC 1323 definiert, die auf der [IETF-Website](https://www.ietf.org/rfc/rfc1122.txt)verfügbar ist.
-Die wsopt-Erweiterung erweitert die Definition des TCP-Fensters auf 32 Bits mithilfe eines logarithmischen 1-Byte-Skalierungsfaktors, um das 16-Bit-Fenster Feld im TCP-Header zu erweitern.
-Die wsopt-Erweiterung definiert einen impliziten Skalierungsfaktor (2 zu einer Potenz), der verwendet wird, um den Wert der Fenstergröße zu multiplizieren, der in einem TCP-Header gefunden wird, um die tatsächliche Fenstergröße zu erhalten.
-Ein Fenster Skalierungsfaktor von 8 ergibt also eine echte Fenstergröße, die dem Wert im Fenster Feld im TCP-Header entspricht, multipliziert mit 2 ^ 8 oder 256.
-Wenn das Fenster Feld im TCP-Header auf den maximalen Wert von 65.535 Bytes festgelegt ist und der wsopt-Skalierungsfaktor mit dem Wert 8 ausgehandelt wurde, wäre die echte Fenstergröße 16.776.960 bytes.
+Der hauptteilliche Einfluss des **TargetOsVersion-Members** ist, ob dieser Member auf einen Wert festgelegt ist, der gleich oder größer als **NTDDI \_ LONGHORN** ist.
 
-Die tatsächliche Empfangs Fenstergröße und somit der Skalierungsfaktor werden durch den maximalen Empfangs Pufferbereich bestimmt.
-Der maximale Pufferspeicher ist die Datenmenge, die ein TCP-Empfänger senden kann, bevor auf eine Bestätigung gewartet werden muss.
-Nachdem die Verbindung hergestellt wurde, wird die Empfangs Fenstergröße in jedem TCP-Segment (das Fenster Feld im TCP-Header) angekündigt.
-Die Ankündigung der maximalen Datenmenge, die der Absender senden kann, ist ein Empfänger seitiger Fluss Steuerungsmechanismus, der verhindert, dass der Absenderdaten sendet, die der Empfänger nicht speichern kann.
-Ein sendender Host kann nur die maximale Datenmenge senden, die vom Empfänger angekündigt wird, bevor er auf eine Bestätigung und eine Aktualisierung der Empfangs Fenstergröße wartet.
+Die TCP-Leistung hängt nicht nur von der Übertragungsrate selbst ab, sondern auch vom Produkt der Übertragungsrate und der Roundtripverzögerungszeit.
+Dieses Produkt mit Bandbreitenverzögerung misst die Datenmenge, die "die Pipe füllen" würde.
+Dieses Produkt mit Bandbreitenverzögerung ist der Pufferspeicherplatz, der beim Absender und Empfänger erforderlich ist, um den maximalen Durchsatz für die TCP-Verbindung über den Pfad zu erhalten.
+Dieser Pufferspeicher stellt die Menge der nicht bestätigten Daten dar, die TCP verarbeiten muss, um die Pipeline voll zu halten.
+TCP-Leistungsprobleme treten auf, wenn das Produkt mit Bandbreitenverzögerung groß ist.
+Ein Netzwerkpfad, der unter diesen Bedingungen betrieben wird, wird häufig als "long, fat pipe" bezeichnet.
+Beispiele hierfür sind Paketsatellitenverbindungen mit hoher Kapazität, Hochgeschwindigkeits-Drahtlosverbindungen und glasfaseroptische Verbindungen über lange Entfernungen.
 
-Unter Windows Server 2003 und Windows XP hat der maximale Empfangs Pufferspeicher, der die Größe des Empfangs Fensters für den TCP/IP-Stapel darstellt, einen Standardwert, der auf der Verbindungsgeschwindigkeit der Sende Schnittstelle basiert.
-Der tatsächliche Wert passt sich automatisch an sogar Inkremente der maximalen Segmentgröße (MSS) an, die während der TCP-Verbindungs Herstellung ausgehandelt werden.
-Bei einem Link mit einer Länge von 10 MBit/Sek. ist die Standardgröße des Empfangs Fensters normalerweise auf 16K Bytes festgelegt, während bei einem Link von 100 MBit/Sek die Standardgröße des Empfangs Fensters auf 65.535 Bytes festgelegt ist.
+Der TCP-Header verwendet ein 16-Bit-Datenfeld (das Feld Window im TCP-Paketheader), um die Größe des Empfangsfensters an den Absender zu melden.
+Daher ist das größte Fenster, das verwendet werden kann, 65.535 Bytes.
+Um diese Einschränkung zu umgehen, wurde die TCP-Erweiterungsoption TCP-Fensterskalierung für Hochleistungs-TCP hinzugefügt, um Fenster zuzulassen, die größer als 65.535 Bytes sind.
+Die TCP-Fensterskalierungsoption (WSopt) ist in RFC 1323 definiert, die auf der [IETF-Website](https://www.ietf.org/rfc/rfc1122.txt)verfügbar ist.
+Die WSopt-Erweiterung erweitert die Definition des TCP-Fensters mithilfe eines logarithmischen 1-Byte-Skalierungsfaktors auf 32 Bit, um das 16-Bit-Fensterfeld im TCP-Header zu erweitern.
+Die WSopt-Erweiterung definiert einen impliziten Skalierungsfaktor (2 bis eine gewisse Leistung), der verwendet wird, um den Wert der Fenstergröße in einem TCP-Header zu multiplizieren, um die tatsächliche Fenstergröße zu erhalten.
+Ein Fensterskalationsfaktor von 8 würde also zu einer echten Fenstergröße führen, die dem Wert im Feld Fenster im TCP-Header multipliziert mit 2^8 oder 256 entspricht.
+Wenn das Feld Fenster im TCP-Header auf den maximalen Wert von 65.535 Bytes festgelegt und der WSopt-Skalierungsfaktor auf den Wert 8 ausgehandelt wurde, beträgt die tatsächliche Fenstergröße 16.776.960 Bytes.
 
-Unter Windows Server 2003 und Windows XP kann die tatsächliche maximale Empfangs Fenstergröße für den TCP/IP-Stapel mithilfe der folgenden Registrierungs Werte für eine bestimmte Schnittstelle oder für das gesamte System manuell konfiguriert werden:
+Die Tatsächliche Größe des Empfangsfensters und somit der Skalierungsfaktor wird durch den maximalen Empfangspufferspeicher bestimmt.
+Dieser maximale Pufferspeicherplatz ist die Datenmenge, die ein TCP-Empfänger einem TCP-Absender ermöglicht, bevor er auf eine Bestätigung warten muss.
+Nachdem die Verbindung hergestellt wurde, wird die Größe des Empfangsfensters in jedem TCP-Segment angekündigt (das Feld Fenster im TCP-Header).
+Die Ankündigung der maximalen Datenmenge, die der Absender senden kann, ist ein empfängerseitiger Ablaufsteuerungsmechanismus, der verhindert, dass der Absender Daten sendet, die der Empfänger nicht speichern kann.
+Ein sendende Host kann nur die maximale Datenmenge senden, die vom Empfänger angekündigt wird, bevor er auf eine Bestätigung und eine Aktualisierung der Größe des Empfangsfensters wartet.
+
+Auf Windows Server 2003 und Windows XP verfügt der maximale Empfangspufferspeicherplatz, der die Größe des Empfangsfensters für den TCP/IP-Stapel darstellt, über einen Standardwert, der auf der Linkgeschwindigkeit der sendenden Schnittstelle basiert.
+Der tatsächliche Wert wird automatisch an gerade Inkremente der maximalen Segmentgröße (MSS) angepasst, die beim Herstellen der TCP-Verbindung ausgehandelt wurde.
+Bei einem Link mit 10 MBit/s wird die Standardgröße des Empfangsfensters normalerweise auf 16.000 Bytes festgelegt, während bei einem Link von 100 MBit/s die Standardgröße des Empfangsfensters auf 65.535 Bytes festgelegt wird.
+
+Auf Windows Server 2003 und Windows XP kann die tatsächliche maximale Empfangsfenstergröße für den TCP/IP-Stapel manuell mithilfe der folgenden Registrierungswerte auf einer bestimmten Schnittstelle oder für das gesamte System konfiguriert werden:
 
 `HKEY_LOCAL_MACHINE\SYSTEM\Current Control Set\Services\Tcpip\Parameters\TCPWindowSize`
 
 `HKEY_LOCAL_MACHINE\SYSTEM\Current Control Set\Services\Tcpip\Parameters\Interface\TCPWindowSize`
 
-Der Registrierungs Wert für **TcpWindowSize** kann auf maximal 65.535 Bytes festgelegt werden, wenn die wsopt-Erweiterung nicht verwendet wird, oder maximal 1.073.741.823 Byte, wenn die wsopt-Erweiterung verwendet wird (ein maximaler Skalierungsfaktor von 4 wird unterstützt).
-Ohne Fenster Skalierung kann eine Anwendung unabhängig von der Pfad Bandbreite nur einen Durchsatz von ungefähr 5 meits pro Sekunde (Mbit/s) für einen Pfad mit einer Roundtrip-Zeit von 100 Millisekunden (RTT) erzielen.
-Dieser Durchsatz kann auf ein Gigabit pro Sekunde (Gbit/s) mit Fenster Skalierung skaliert werden, wodurch TCP den Skalierungsfaktor für die Fenstergröße während der Verbindungs Herstellung aushandeln kann.
+Der Registrierungswert für **TCPWindowSize** kann auf maximal 65.535 Bytes festgelegt werden, wenn die WSopt-Erweiterung nicht verwendet wird, oder auf maximal 1.073.741.823 Bytes, wenn die WSopt-Erweiterung verwendet wird (ein maximaler Skalierungsfaktor von 4 wird unterstützt).
+Ohne Fensterskalierung kann eine Anwendung auf einem Pfad mit einer Roundtripzeit von 100 Millisekunden (RTT) unabhängig von der Pfadbandbreite nur einen Durchsatz von etwa 5 Megabits pro Sekunde (MBit/s) erzielen.
+Dieser Durchsatz kann mit der Fensterskalierung auf über ein Gigabit pro Sekunde (GBit/s) skaliert werden, wodurch TCP den Skalierungsfaktor für die Fenstergröße während der Verbindungseinrichtung aushandeln kann.
 
-Unter Windows Server 2003 und Windows XP kann die wsopt-Erweiterung aktiviert werden, indem der folgende Registrierungs Wert festgelegt wird.
+Auf Windows Server 2003 und Windows XP kann die WSopt-Erweiterung durch Festlegen des folgenden Registrierungswerts aktiviert werden.
 
 `HKEY_LOCAL_MACHINE\SYSTEM\Current Control Set\Services\Tcpip\Parameters\Tcp1323Opts`
 
-Der Registrierungs Wert " **Tcp1323Opts** " ist ein **DWORD** -codiertes, sodass beim Festlegen von Bit 0 die TCP-wsopt-Erweiterung aktiviert ist.
-Wenn Bit 1 festgelegt ist, wird die in RFC 1323 definierte TCP-Zeitstempel Option (tsopt) aktiviert.
-Mit einem Wert von 1 oder 3 wird die wsopt-Erweiterung aktiviert.
+Der **Tcp1323Opts-Registrierungswert** ist ein **DWORD-codierter** Wert, sodass die TCP-WSopt-Erweiterung aktiviert ist, wenn Bit 0 festgelegt ist.
+Wenn Bit 1 festgelegt ist, ist die in RFC 1323 definierte TCP-Zeitstempeloption (TSopt) aktiviert.
+Der Wert 1 oder 3 aktiviert also die WSopt-Erweiterung.
 
-Unter Windows Server 2003 und Windows XP ist die Standardeinstellung, dass die Registrierungs Werte TcpWindowSize und Tcp1323Opts nicht erstellt werden.
-Der Standardwert ist, dass die wsopt-Erweiterung deaktiviert ist und die Größe des TCP-Empfangs Fensters vom System auf den maximalen Wert von bis zu 65.535 Bytes basierend auf der Verbindungsgeschwindigkeit festgelegt wird.
-Wenn die Fenster Skalierung unter Windows Server 2003 und Windows XP aktiviert ist, indem der Registrierungs Wert Tcp1323Opts festgelegt wird, wird die Fenster Skalierung für eine TCP-Verbindung immer noch verwendet, wenn sowohl der Absender als auch der Empfänger eine TCP-Fenster Skalierungs Option im zu gegenseitig gesendeten Bereich synchronisieren (SYN) zum Aushandeln eines Fenster Skalierungsfaktors enthalten.
-Wenn für eine Verbindung die Fenster Skalierung verwendet wird, wird das Fenster Feld im TCP-Header auf 65.535 Bytes festgelegt, und der Fenster Skalierungsfaktor wird verwendet, um die tatsächliche Empfangs Fenstergröße nach oben um den Fenster Skalierungsfaktor zu ändern, der beim Herstellen der Verbindung ausgehandelt wird.
+Auf Windows Server 2003 und Windows XP werden standardmäßig die Registrierungswerte TCPWindowSize und Tcp1323Opts nicht erstellt.
+Die Standardeinstellung ist also, dass die WSopt-Erweiterung deaktiviert ist und die TCP-Empfangsfenstergröße vom System auf einen maximalen Wert von bis zu 65.535 Bytes basierend auf der Linkgeschwindigkeit festgelegt wird.
+Wenn die Fensterskalierung auf Windows Server 2003 und Windows XP durch Festlegen des Tcp1323Opts-Registrierungswerts aktiviert ist, wird die Fensterskalierung für eine TCP-Verbindung immer noch nur verwendet, wenn absender und empfänger eine TCP-Fensterskalierungsoption in das Synchronisierungssegment (SYN) einschließen, das zum Aushandeln eines Fensterskalierungsfaktors aneinander gesendet wird.
+Wenn die Fensterskalierung für eine Verbindung verwendet wird, wird das Feld Fenster im TCP-Header auf 65.535 Bytes festgelegt, und der Fensterskalierungsfaktor wird verwendet, um die tatsächliche Empfangsfenstergröße um den Fensterskalierungsfaktor nach oben anzupassen, der beim Herstellen der Verbindung ausgehandelt wird.
 
-Eine Anwendung kann die TCP-Empfangs Fenstergröße für eine Verbindung mit der Option " **so \_ rcvbuf** " angeben.
-Die Größe des TCP-Empfangs Fensters für einen Socket kann jederzeit mithilfe von **\_ rcvbuf** gesteigert werden. Sie kann jedoch nur vor dem Herstellen einer Verbindung reduziert werden.
-Um die Fenster Skalierung zu verwenden, muss eine Anwendung eine Fenstergröße von mehr als 65.535 Bytes angeben, wenn die Option " **so \_ rcvbuf** Socket" verwendet wird, bevor die Verbindung hergestellt wird.
+Eine Anwendung kann die TCP-Empfangsfenstergröße für eine Verbindung mithilfe der **SO \_ RCVBUF-Socketoption** angeben.
+Die TCP-Empfangsfenstergröße für einen Socket kann jederzeit mit **SO \_ RCVBUF** erhöht werden, kann jedoch nur vor dem Herstellen einer Verbindung verringert werden.
+Um die Fensterskalierung zu verwenden, muss eine Anwendung eine Fenstergröße von mehr als 65.535 Bytes angeben, wenn die **SO \_ RCVBUF-Socketoption** verwendet wird, bevor die Verbindung hergestellt wird.
 
-Der ideale Wert für die TCP-Empfangs Fenstergröße ist oft schwierig zu bestimmen.
-Zum Auffüllen der Netzwerkkapazität zwischen dem Absender und dem Empfänger sollte die Empfangs Fenstergröße auf das Produkt für die Bandbreiten Verzögerung für die Verbindung festgelegt werden. dabei handelt es sich um die Bandbreite, multipliziert mit der Roundtrip-Zeit.
-Auch wenn eine Anwendung das Produkt für die Bandbreiten Verzögerung ordnungsgemäß bestimmen kann, ist es immer noch nicht bekannt, wie schnell die empfangende Anwendung Daten aus dem eingehenden Datenpuffer (der Abruf Rate der Anwendung) abruft.
-Trotz der Unterstützung für die TCP-Fenster Skalierung kann die maximale Empfangs Fenstergröße in Windows Server 2003 und Windows XP weiterhin den Durchsatz begrenzen, da es sich um eine maximale maximale Größe für alle TCP-Verbindungen handelt (es sei denn, Sie werden pro Anwendung mithilfe von **\_ rcvbuf** angegeben), wodurch der Durchsatz für einige Verbindungen verbessert und der Durchsatz für andere verringert wird
-Darüber hinaus unterscheidet sich die maximale Größe des Empfangs Fensters für eine TCP-Verbindung nicht von der Änderung der Netzwerkbedingungen.
+Der ideale Wert für die GRÖßE des TCP-Empfangsfensters ist häufig schwierig zu bestimmen.
+Um die Kapazität des Netzwerks zwischen Sender und Empfänger zu füllen, sollte die Größe des Empfangsfensters auf das Produkt bandbreitenverzögerung für die Verbindung festgelegt werden. Dabei handelt es sich um die Bandbreite multipliziert mit der Roundtripzeit.
+Auch wenn eine Anwendung das Produkt mit Bandbreitenverzögerung richtig bestimmen kann, ist immer noch nicht bekannt, wie schnell die empfangende Anwendung Daten aus dem eingehenden Datenpuffer abruft (die Abrufrate der Anwendung).
+Trotz der Unterstützung der TCP-Fensterskalierung kann die maximale Größe des Empfangsfensters in Windows Server 2003 und Windows XP den Durchsatz weiterhin einschränken, da es sich um eine feste maximale Größe für alle TCP-Verbindungen handelt (sofern nicht pro Anwendung mit **SO \_ RCVBUF** angegeben), was den Durchsatz für einige Verbindungen erhöhen und den Durchsatz für andere verringern kann.
+Darüber hinaus variiert die feste maximale Größe des Empfangsfensters für eine TCP-Verbindung nicht mit sich ändernden Netzwerkbedingungen.
 
-Der TCP/IP-Stapel in Windows Vista unterstützt die Funktion zum automatischen Optimieren von Empfangs Fenstern, um das Problem zu beheben, mit dem der Wert der maximalen Empfangs Fenstergröße für eine TCP-Verbindung basierend auf den aktuellen Netzwerkbedingungen korrekt festgelegt werden kann.
-Wenn dieses Feature aktiviert ist, bestimmt die automatische Optimierung des Empfangs Fensters kontinuierlich die optimale echte Empfangs Fenstergröße, indem das Produkt für die Bandbreiten Verzögerung und die Anwendungs Abruf Rate gemessen wird, und passt die tatsächliche maximale Empfangs Fenstergröße basierend auf den veränderten Netzwerkbedingungen an.
-Die automatische Optimierung des Empfangs Fensters ermöglicht die TCP-wsopt-Erweiterung standardmäßig, sodass bis zu 16.776.960 bytes für die echte Fenstergröße zugelassen werden.
-Wenn die Daten über die Verbindung übertragen werden, überwacht der TCP/IP-Stapel die Verbindung, misst das aktuelle Bandbreiten Verzögerungs Produkt für die Verbindung und die Empfangs Rate der Anwendung und passt die tatsächliche Empfangs Fenstergröße an, um den Durchsatz zu optimieren.
-Der TCP/IP-Stapel ändert den Wert des Fenster Felds im TCP-Header basierend auf den Netzwerkbedingungen, da der wsopt-Skalierungsfaktor beim ersten Herstellen der Verbindung korrigiert wird.
+Um das Problem der korrekten Bestimmung des Werts der maximalen Empfangsfenstergröße für eine TCP-Verbindung basierend auf den aktuellen Bedingungen des Netzwerks zu beheben, unterstützt der TCP/IP-Stapel in Windows Vista ein Feature zur automatischen Optimierung des Empfangsfensters.
+Wenn dieses Feature aktiviert ist, bestimmt die automatische Optimierung des Empfangsfensters kontinuierlich die optimale Tatsächliche Empfangsfenstergröße, indem das Produkt mit Bandbreitenverzögerung und die Abrufrate der Anwendung gemessen werden, und die tatsächliche maximale Empfangsfenstergröße wird basierend auf sich ändernden Netzwerkbedingungen angepasst.
+Die automatische Optimierung des Empfangsfensters aktiviert standardmäßig die TCP-WSopt-Erweiterung und ermöglicht bis zu 16.776.960 Bytes für die tatsächliche Fenstergröße.
+Während die Daten über die Verbindung übertragen werden, überwacht der TCP/IP-Stapel die Verbindung, misst das aktuelle Produkt mit Bandbreitenverzögerung für die Verbindung und die Empfangsrate der Anwendung und passt die tatsächliche Größe des Empfangsfensters an, um den Durchsatz zu optimieren.
+Der TCP/IP-Stapel ändert den Wert des Felds Fenster im TCP-Header basierend auf den Netzwerkbedingungen, da der WSopt-Skalierungsfaktor beim erstmaligen Herstellen der Verbindung festgelegt wird.
 
-Der TCP/IP-Stapel in Windows Vista verwendet nicht mehr die Registrierungs Werte " **TcpWindowSize** ".
-Bei einem besseren Durchsatz zwischen TCP-Peers erhöht sich die Auslastung der Netzwerkbandbreite während der Datenübertragung.
-Wenn alle Anwendungen für den Empfang von TCP-Daten optimiert sind, kann sich die Gesamtauslastung des Netzwerks erheblich erhöhen. Dadurch wird die Verwendung von Quality of Service (QoS) in Netzwerken, die mit der Kapazität oder nahezu der Kapazität arbeiten, wichtiger.
+Der TCP/IP-Stapel in Windows Vista verwendet nicht mehr die **TCPWindowSize-Registrierungswerte.**
+Bei besserem Durchsatz zwischen TCP-Peers steigt die Auslastung der Netzwerkbandbreite während der Datenübertragung.
+Wenn alle Anwendungen für den Empfang von TCP-Daten optimiert sind, kann die Gesamtauslastung des Netzwerks erheblich zunehmen, wodurch die Verwendung von Quality of Service (QoS) für Netzwerke, die mit oder in der Nähe der Kapazität betrieben werden, wichtiger wird.
 
-Das Standardverhalten von Windows Vista für die Empfangs Pufferung, wenn der **markerset- \_ \_ Kompatibilitäts \_ Modus** nicht mithilfe von **wsaverhalorreceivebuffereing** angegeben wird, ist, dass nach dem Herstellen einer Verbindung keine Größe der Empfangs Fenster **Größe verwendet werden \_** kann.
+Das Standardverhalten auf Windows Vista für die Empfangspufferung, wenn **der SIO \_ SET COMPATIBILITY \_ \_ MODE** nicht mit **WsaBehaviorReceiveBuffering** angegeben wird, ist, dass keine Größenreduzierungen des Empfangsfensters mit der **SO \_ RCVBUF-Socketoption** zulässig sind, nachdem eine Verbindung hergestellt wurde.
 
-Das Standardverhalten von Windows Vista für die automatische Optimierung, wenn der **\_ \_ Kompatibilitäts \_ Modus** für die Verwendung von " **wsaverhalorautotuning** " nicht angegeben ist, besteht darin, dass der Stapel eine automatische Optimierung des Fensters mit einem Fenster Skalierungsfaktor von 8 empfängt.
-Beachten Sie Folgendes: Wenn eine Anwendung eine gültige Empfangs Fenstergröße mit der " **so \_ rcvbuf** "-Socketoption festlegt, verwendet der Stapel die angegebene Größe, und die automatische Optimierung des Fenster Empfangs wird deaktiviert.
-Die automatische Optimierung von Windows kann auch vollständig deaktiviert werden, indem der folgende Befehl verwendet wird `netsh interface tcp set global autotuninglevel=disabled` . in diesem Fall hat die Angabe von " **wsaverhalorautotuning** " keine Auswirkung.
-Die automatische Optimierung des Fenster Empfangs kann auch basierend auf der Gruppenrichtlinie deaktiviert werden, die unter Windows Server 2008 festgelegt ist.
+Das Standardverhalten für Windows Vista für die automatische Optimierung, wenn **der SIO \_ SET COMPATIBILITY \_ \_ MODE** nicht mit **WsaBehaviorAutoTuning** angegeben wird, besteht darin, dass der Stapel die automatische Fensteroptimierung mit einem Fensterskalierungsfaktor von 8 empfängt.
+Beachten Sie Folgendes: Wenn eine Anwendung eine gültige Empfangsfenstergröße mit der **SO \_ RCVBUF-Socketoption** festlegt, verwendet der Stapel die angegebene Größe, und die automatische Optimierung der Fensterebugging wird deaktiviert.
+Windows automatische Optimierung kann auch mit dem folgenden Befehl vollständig deaktiviert werden. `netsh interface tcp set global autotuninglevel=disabled` In diesem Fall hat die Angabe von **WsaBehaviorAutoTuning** keine Auswirkungen.
+Die automatische Optimierung von Fensterent empfängt auch basierend auf Gruppenrichtlinien, die auf Windows Server 2008 festgelegt sind, deaktiviert werden.
 
-Die Option **wsaverhalorautotuning** ist unter Windows Vista für einige Internet Gateway-Geräte und Firewalls erforderlich, die Datenflüsse für TCP-Verbindungen, die die wsopt-Erweiterung und einen Windows-Skalierungsfaktor verwenden, nicht ordnungsgemäß unterstützen.
-Unter Windows Vista aushandiert ein Empfänger standardmäßig einen Fenster Skalierungsfaktor von 8 für eine maximale echte Fenstergröße von 16.776.960 bytes.
-Wenn Daten über einen schnellen Link fließen, beginnt Windows zunächst mit einer 64 Kilobyte echten Fenstergröße, indem das Fenster Feld des TCP-Headers auf 256 festgelegt und der Fenster Skalierungsfaktor in den TCP-Optionen auf 8 festgelegt wird (256 * 2 ^ 8 = 64 KB).
-Einige Internet Gateway-Geräte und Firewalls ignorieren den Fenster Skalierungsfaktor und betrachten nur das Feld "angekündigtes Fenster" im als 256 angegebenen TCP-Header und legen eingehende Pakete für die Verbindung ab, die mehr als 256 Bytes an TCP-Daten enthalten.
-Zur Unterstützung der Skalierung von TCP-Empfangs Fenstern muss ein Gatewaygerät oder eine Firewall den TCP-Handshake überwachen und den ausgehandelten Fenster Skalierungsfaktor als Teil der TCP-Verbindungsdaten verfolgen.
-Außerdem ignorieren einige Anwendungen und TCP-Stapel Implementierungen auf anderen Plattformen die TCP-wsopt-Erweiterung und den Fenster Skalierungsfaktor.
-Daher kann der Remote Host, der die Daten sendet, Daten mit der im Feld "Fenster" des TCP-Headers (256 Bytes) angekündigten Rate senden.
-Dies kann dazu führen, dass Daten vom Empfänger sehr langsam empfangen werden.
+Die **WsaBehaviorAutoTuning-Option** ist auf Windows Vista für einige Internetgatewaygeräte und Firewalls erforderlich, die Datenflüsse für TCP-Verbindungen, die die WSopt-Erweiterung und einen Windows-Skalierungsfaktor verwenden, nicht ordnungsgemäß unterstützen.
+Auf Windows Vista handelt ein Empfänger standardmäßig einen Fensterskalfaktor von 8 für eine maximale true-Fenstergröße von 16.776.960 Bytes aus.
+Wenn der Datenfluss über einen schnellen Link beginnt, beginnt Windows zunächst mit einer 64 Kilobyte wahren Fenstergröße, indem das Feld Fenster des TCP-Headers auf 256 und der Fensterskalierungsfaktor in den TCP-Optionen auf 8 festgelegt wird (256*2^8=64 KB).
+Einige Internetgatewaygeräte und Firewalls ignorieren den Fensterskalfaktor und sehen sich nur das angekündigte Fensterfeld im TCP-Header an, der als 256 angegeben ist, und löschen eingehende Pakete für die Verbindung, die mehr als 256 Bytes TCP-Daten enthalten.
+Zur Unterstützung der TCP-Empfangsfensterskalierung muss ein Gatewaygerät oder eine Firewall den TCP-Handshake überwachen und den ausgehandelten Fensterskalierungsfaktor als Teil der TCP-Verbindungsdaten nachverfolgen.
+Außerdem ignorieren einige Anwendungen und TCP-Stapelimplementierungen auf anderen Plattformen die TCP-WSopt-Erweiterung und den Faktor für die Fensterskalierung.
+Daher kann der Remotehost, der die Daten sendet, Daten mit der rate senden, die im Feld Fenster des TCP-Headers angekündigt wird (256 Bytes).
+Dies kann dazu führen, dass Daten sehr langsam vom Empfänger empfangen werden.
 
-Wenn Sie das Element **verhalted** auf **wsaverhalorautotuning** und die **targetosversion** auf Windows Vista festlegen, wird der Fenster Skalierungsfaktor auf 2 reduziert, sodass das Fenster Feld im TCP-Header anfänglich auf 16.384 Bytes und der Fenster Skalierungsfaktor auf 2 festgelegt ist, sodass eine anfängliche echte Fenster Empfangs Größe von 64 KB beträgt.
-Die Funktion zur automatischen Optimierung von Fenstern kann dann die Größe des echten Fenster Empfangs auf bis zu 262.140 bytes erhöhen, indem das Fenster Feld im TCP-Header auf 65.535 Bytes festgelegt wird.
-Eine Anwendung sollte den **\_ Kompatibilitätsmodus für den- \_ Kompatibilitäts \_ Modus von SIO** festlegen, sobald ein Socket erstellt wird, da diese Option nicht sinnvoll ist oder nach dem Senden eines SYN-Vorgangs angewendet wird.
-Das Festlegen dieser Option hat dieselbe Auswirkung wie der folgende Befehl: `netsh interface tcp set global autotuninglevel=highlyrestricted`
+Wenn Sie den **BehaviorId-Member** auf **WsaBehaviorAutoTuning** und **TargetOsVersion** auf Windows Vista festlegen, wird der Fensterskalierungsfaktor auf 2 reduziert, sodass das Feld Fenster im TCP-Header anfänglich auf 16.384 Bytes und der Fensterskalierungsfaktor auf 2 für ein anfängliches true-Fenster mit einer Empfangsgröße von 64.000 Bytes festgelegt wird.
+Die Funktion für die automatische Fensteroptimierung kann dann die Empfangsgröße des echten Fensters auf bis zu 262.140 Bytes erhöhen, indem das Feld Fenster im TCP-Header auf 65.535 Bytes festgelegt wird.
+Eine Anwendung sollte **SIO \_ SET COMPATIBILITY \_ \_ MODE** IOCTL festlegen, sobald ein Socket erstellt wird, da diese Option nach dem Senden einer SYN nicht sinnvoll ist oder angewendet wird.
+Das Festlegen dieser Option hat die gleichen Auswirkungen wie der folgende Befehl: `netsh interface tcp set global autotuninglevel=highlyrestricted`
 
-Beachten Sie, dass die Header Datei " *mtausockdef. h* " automatisch in " *mswap. h* " oder " *nettiodef. h*" enthalten ist und nicht direkt verwendet werden sollte.
+Beachten Sie, dass die *Headerdatei Mswsockdef.h* automatisch in *Mswsock.h* oder *Netiodef.h* enthalten ist und nicht direkt verwendet werden sollte.
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
-[**Glühbirne**](/windows/desktop/api/winsock2/nf-winsock2-socket)
+[**Socket**](/windows/desktop/api/winsock2/nf-winsock2-socket)
 
 [**WSAGetLastError**](/windows/desktop/api/winsock/nf-winsock-wsagetlasterror)
 
-[**Wsagein verlappedresult**](/windows/desktop/api/winsock2/nf-winsock2-wsagetoverlappedresult)
+[**WSAGetOverlappedResult**](/windows/desktop/api/winsock2/nf-winsock2-wsagetoverlappedresult)
 
 [**WSAIoctl**](/windows/desktop/api/winsock2/nf-winsock2-wsaioctl)
 
-[**Wsaoverlgetauscht**](/windows/desktop/api/winsock2/ns-winsock2-wsaoverlapped)
+[**WSAOVERLAPPED**](/windows/desktop/api/winsock2/ns-winsock2-wsaoverlapped)
 
-[**Wsasocketa**](/windows/desktop/api/winsock2/nf-winsock2-wsasocketa)
+[**WSASocketA**](/windows/desktop/api/winsock2/nf-winsock2-wsasocketa)
 
-[**Wsasocketw**](/windows/desktop/api/winsock2/nf-winsock2-wsasocketw)
+[**WSASocketW**](/windows/desktop/api/winsock2/nf-winsock2-wsasocketw)

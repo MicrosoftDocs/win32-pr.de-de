@@ -1,9 +1,9 @@
 ---
-title: EM_SETLANGOPTIONS Meldung (RichEdit. h)
-description: Legt Optionen für den Eingabemethoden-Editor (IME) und die Unterstützung für asiatische Sprachen in einem Rich Edit-Steuerelement fest.
+title: EM_SETLANGOPTIONS-Nachricht (Richedit.h)
+description: Legt Optionen für die Unterstützung des Eingabemethoden-Editors (Input Method Editor, IME) und der Unterstützung für asienisch in einem umfangreichen Bearbeitungssteuerelement fest.
 ms.assetid: d42d0512-3339-471d-a91a-114151554799
 keywords:
-- Windows-Steuerelemente für EM_SETLANGOPTIONS Meldung
+- EM_SETLANGOPTIONS Windows-Steuerelemente für Nachrichten
 topic_type:
 - apiref
 api_name:
@@ -14,16 +14,16 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 2e5095c599dfa78740ce4cb081e4d52c33b2debd
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 5984c20273d2daa0a2e39fc6caf6dde88c8b274502a50e1a5e5eb3cca2b6f94c
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "103949776"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117831201"
 ---
-# <a name="em_setlangoptions-message"></a>EM \_ setlangoptions-Meldung
+# <a name="em_setlangoptions-message"></a>EM \_ SETLANGOPTIONS-Meldung
 
-Legt Optionen für den Eingabemethoden-Editor (IME) und die Unterstützung für asiatische Sprachen in einem Rich Edit-Steuerelement fest.
+Legt Optionen für die Unterstützung des Eingabemethoden-Editors (Input Method Editor, IME) und der Unterstützung für asienisch in einem umfangreichen Bearbeitungssteuerelement fest.
 
 ## <a name="parameters"></a>Parameter
 
@@ -32,14 +32,14 @@ Legt Optionen für den Eingabemethoden-Editor (IME) und die Unterstützung für 
 *wParam* 
 </dt> <dd>
 
-Dieser Parameter wird nicht verwendet. Er muss NULL sein.
+Dieser Parameter wird nicht verwendet. muss 0 (null) sein.
 
 </dd> <dt>
 
 *lParam* 
 </dt> <dd>
 
-Gibt die Sprachoptionen an. Eine Liste möglicher Werte finden Sie unter [**EM \_ getlangoptions**](em-getlangoptions.md).
+Gibt die Sprachoptionen an. Eine Liste der möglichen Werte finden Sie unter [**EM \_ GETLANGOPTIONS**](em-getlangoptions.md).
 
 </dd> </dl>
 
@@ -47,19 +47,19 @@ Gibt die Sprachoptionen an. Eine Liste möglicher Werte finden Sie unter [**EM \
 
 Diese Meldung gibt den Wert 1 zurück.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Die **\_ gesetlangoptions** -Nachricht steuert Folgendes:
+Die **EM \_ SETLANGOPTIONS-Meldung** steuert Folgendes:
 
--   Automatische Schriftart Bindung.
--   Automatischer Tastatur Wechsel.
--   Automatische Anpassung der Schriftart Größe.
--   Verwendung von Standard Schriftarten von Benutzeroberflächen anstelle von Dokument Standard Schriftarten.
+-   Automatische Schriftartbindung.
+-   Automatischer Tastaturwechsel.
+-   Automatische Anpassung des Schriftgrads.
+-   Verwendung von Standardschriftarten der Benutzeroberfläche anstelle von Dokumentstandardschriftarten.
 -   Benachrichtigungen an den Client während der IME-Komposition.
--   Gibt an, wie IME den Kompositions Modus abbricht.
--   Rechtschreibprüfungs-, AutoCorrect-und Berührungs Tastatur Vorhersage.
+-   Wie ime den Kompositionsmodus abbricht.
+-   Rechtschreibprüfung, automatische Korrektur und Vorhersage der Touchtastatur.
 
-Diese Meldung legt die Werte aller sprachflags fest. Um eine Teilmenge der Flags zu ändern, senden Sie die [**EM \_ getlangoptions**](em-getlangoptions.md) -Nachricht, um die aktuellen Options-Flags zu erhalten, ändern Sie die Flags, die Sie ändern müssen, und senden Sie dann die **EM \_ setlangoptions** -Nachricht mit dem Ergebnis.
+Diese Meldung legt die Werte aller Sprachoptionsflags fest. Um eine Teilmenge der Flags zu ändern, senden Sie die [**EM \_ GETLANGOPTIONS-Nachricht,**](em-getlangoptions.md) um die aktuellen Optionsflags abzurufen, ändern Sie die zu ändernden Flags, und senden Sie dann die **EM \_ SETLANGOPTIONS-Nachricht** mit dem Ergebnis.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -67,17 +67,17 @@ Diese Meldung legt die Werte aller sprachflags fest. Um eine Teilmenge der Flags
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>                                        |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2003 \[ -Desktop-Apps\]<br/>                                  |
-| Header<br/>                   | <dl> <dt>RichEdit. h</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows \[Nur Vista-Desktop-Apps\]<br/>                                        |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2003-Desktop-Apps\]<br/>                                  |
+| Header<br/>                   | <dl> <dt>Richedit.h</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**EM \_ getlangoptions**](em-getlangoptions.md)
+[**EM \_ GETLANGOPTIONS**](em-getlangoptions.md)
 </dt> </dl>
 
  

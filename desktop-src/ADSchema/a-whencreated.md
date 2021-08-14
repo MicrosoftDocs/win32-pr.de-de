@@ -4,8 +4,8 @@ description: Das Datum, an dem dieses Objekt erstellt wurde. Dieser Wert wird re
 ms.assetid: d66084f0-5a82-4a8c-86ee-7e41887d9b90
 ms.tgt_platform: multiple
 keywords:
-- AD-Schema für When-Created-Attribut
-- Schema des AD-Attributs wurde erstellt
+- When-Created AD-Attributschema
+- whenCreated-Attribut-AD-Schema
 topic_type:
 - apiref
 api_name:
@@ -14,12 +14,12 @@ api_type:
 - Schema
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 634918e29a4c8ef9c62d2b8949d253c80fe17d67
-ms.sourcegitcommit: b77ace27b0432e7cd3863191b11926be032fbe2f
+ms.openlocfilehash: 385756544d398fa8720b95695a77e6d4b26869f484e3f653d9fd846a938b14a8
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "104122624"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119702420"
 ---
 # <a name="when-created-attribute"></a>When-Created-Attribut
 
@@ -30,10 +30,10 @@ Das Datum, an dem dieses Objekt erstellt wurde. Dieser Wert wird repliziert und 
 | Eingabe | Wert |
 |-------------------|---------------------------------------------------------------|
 | CN                | When-Created                                                  |
-| LDAP-Display-Name | whenCreated                                                   |
+| Ldap-Anzeigename | whenCreated                                                   |
 | Size              | 8 Bytes                                                       |
-| Berechtigung aktualisieren  | Dieser Wert wird vom System festgelegt.                              |
-| Aktualisierungshäufigkeit  | Wenn das Objekt erstellt wird.                                   |
+| Aktualisieren von Berechtigungen  | Dieser Wert wird vom System festgelegt.                              |
+| Updatehäufigkeit  | Wenn das Objekt erstellt wird.                                   |
 | Attribute-Id      | 1.2.840.113556.1.2.2                                          |
 | System-ID-GUID    | bf967a78-0de6-11d0-a285-00aa003049e2                          |
 | Syntax            | [**String(Generalized-Time)**](s-string-generalized-time.md) |
@@ -43,7 +43,7 @@ Das Datum, an dem dieses Objekt erstellt wurde. Dieser Wert wird repliziert und 
 ## <a name="implementations"></a>Implementierungen
 
 -   [**Windows 2000 Server**](#windows-2000-server)
--   [**Windows Server 2003**](#windows-server-2003)
+-   [**Windows Server 2003**](#windows-server-2003)
 -   [**Adam**](#adam)
 -   [**Windows Server 2003 R2**](#windows-server-2003-r2)
 -   [**Windows Server 2008**](#windows-server-2008)
@@ -58,11 +58,11 @@ Das Datum, an dem dieses Objekt erstellt wurde. Dieser Wert wird repliziert und 
 |------------------------|---------------------------------|
 | Link-ID                | \-                              |
 | MAPI-Id                | 0x3007                          |
-| System-Only            | Richtig                            |
-| Ist-einwertig       | Richtig                            |
+| System-Only            | True                            |
+| Ist einwertig       | True                            |
 | Ist indiziert             | False                           |
-| Im globalen Katalog      | Richtig                            |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                    |
+| Im globalen Katalog      | True                            |
+| NT-Security-Descriptor | O:BAG:BAD:S:                    |
 | Range-Lower            | \-                              |
 | Range-Upper            | \-                              |
 | Search-Flags           | 0x00000000                      |
@@ -71,7 +71,7 @@ Das Datum, an dem dieses Objekt erstellt wurde. Dieser Wert wird repliziert und 
 
 
 
-## <a name="windows-server-2003"></a>Windows Server 2003
+## <a name="windows-server-2003"></a>Windows Server 2003
 
 
 
@@ -79,11 +79,11 @@ Das Datum, an dem dieses Objekt erstellt wurde. Dieser Wert wird repliziert und 
 |------------------------|---------------------------------|
 | Link-ID                | \-                              |
 | MAPI-Id                | 0x3007                          |
-| System-Only            | Richtig                            |
-| Ist-einwertig       | Richtig                            |
+| System-Only            | True                            |
+| Ist einwertig       | True                            |
 | Ist indiziert             | False                           |
-| Im globalen Katalog      | Richtig                            |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                    |
+| Im globalen Katalog      | True                            |
+| NT-Security-Descriptor | O:BAG:BAD:S:                    |
 | Range-Lower            | \-                              |
 | Range-Upper            | \-                              |
 | Search-Flags           | 0x00000000                      |
@@ -100,11 +100,11 @@ Das Datum, an dem dieses Objekt erstellt wurde. Dieser Wert wird repliziert und 
 |------------------------|---------------------------------|
 | Link-ID                | \-                              |
 | MAPI-Id                | 0x3007                          |
-| System-Only            | Richtig                            |
-| Ist-einwertig       | Richtig                            |
+| System-Only            | True                            |
+| Ist einwertig       | True                            |
 | Ist indiziert             | False                           |
-| Im globalen Katalog      | Richtig                            |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                    |
+| Im globalen Katalog      | True                            |
+| NT-Security-Descriptor | O:BAG:BAD:S:                    |
 | Range-Lower            | \-                              |
 | Range-Upper            | \-                              |
 | Search-Flags           | 0x00000000                      |
@@ -121,11 +121,11 @@ Das Datum, an dem dieses Objekt erstellt wurde. Dieser Wert wird repliziert und 
 |------------------------|---------------------------------|
 | Link-ID                | \-                              |
 | MAPI-Id                | 0x3007                          |
-| System-Only            | Richtig                            |
-| Ist-einwertig       | Richtig                            |
+| System-Only            | True                            |
+| Ist einwertig       | True                            |
 | Ist indiziert             | False                           |
-| Im globalen Katalog      | Richtig                            |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                    |
+| Im globalen Katalog      | True                            |
+| NT-Security-Descriptor | O:BAG:BAD:S:                    |
 | Range-Lower            | \-                              |
 | Range-Upper            | \-                              |
 | Search-Flags           | 0x00000000                      |
@@ -142,11 +142,11 @@ Das Datum, an dem dieses Objekt erstellt wurde. Dieser Wert wird repliziert und 
 |------------------------|---------------------------------|
 | Link-ID                | \-                              |
 | MAPI-Id                | 0x3007                          |
-| System-Only            | Richtig                            |
-| Ist-einwertig       | Richtig                            |
+| System-Only            | True                            |
+| Ist einwertig       | True                            |
 | Ist indiziert             | False                           |
-| Im globalen Katalog      | Richtig                            |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                    |
+| Im globalen Katalog      | True                            |
+| NT-Security-Descriptor | O:BAG:BAD:S:                    |
 | Range-Lower            | \-                              |
 | Range-Upper            | \-                              |
 | Search-Flags           | 0x00000000                      |
@@ -163,11 +163,11 @@ Das Datum, an dem dieses Objekt erstellt wurde. Dieser Wert wird repliziert und 
 |------------------------|---------------------------------|
 | Link-ID                | \-                              |
 | MAPI-Id                | 0x3007                          |
-| System-Only            | Richtig                            |
-| Ist-einwertig       | Richtig                            |
+| System-Only            | True                            |
+| Ist einwertig       | True                            |
 | Ist indiziert             | False                           |
-| Im globalen Katalog      | Richtig                            |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                    |
+| Im globalen Katalog      | True                            |
+| NT-Security-Descriptor | O:BAG:BAD:S:                    |
 | Range-Lower            | \-                              |
 | Range-Upper            | \-                              |
 | Search-Flags           | 0x00000000                      |
@@ -184,11 +184,11 @@ Das Datum, an dem dieses Objekt erstellt wurde. Dieser Wert wird repliziert und 
 |------------------------|---------------------------------|
 | Link-ID                | \-                              |
 | MAPI-Id                | 0x3007                          |
-| System-Only            | Richtig                            |
-| Ist-einwertig       | Richtig                            |
+| System-Only            | True                            |
+| Ist einwertig       | True                            |
 | Ist indiziert             | False                           |
-| Im globalen Katalog      | Richtig                            |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                    |
+| Im globalen Katalog      | True                            |
+| NT-Security-Descriptor | O:BAG:BAD:S:                    |
 | Range-Lower            | \-                              |
 | Range-Upper            | \-                              |
 | Search-Flags           | 0x00000000                      |

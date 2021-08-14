@@ -1,19 +1,19 @@
 ---
-description: In diesem Thema werden die DrawLines-Methoden der Grafikklasse aufgelistet. Eine umfassende Liste der Methoden für die Grafikklasse finden Sie unter Grafiken.
+description: In diesem Thema werden die DrawLines-Methoden der Graphics-Klasse aufgelistet. Eine vollständige Liste der Methoden für die Graphics-Klasse finden Sie unter Grafiken.
 ms.assetid: dc82feef-7d03-45dd-a949-42589511b177
-title: Graphics. DrawLines-Methode (gdiplinggraphics. h)
+title: Graphics.DrawLines-Methoden (Gdiplusgraphics.h)
 ms.date: 07/02/2019
 ms.topic: reference
-ms.openlocfilehash: c08692837d977b15af6240e5ee5d54860d6ffff9
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 2f738cc82c20fb08bb5f9962935fd38a3b8fe37a65aa5be473763d9fa0ff9bb0
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "104983052"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119037418"
 ---
-# <a name="graphicsdrawlines-methods"></a>Graphics. DrawLines-Methoden
+# <a name="graphicsdrawlines-methods"></a>Graphics.DrawLines-Methoden
 
-In diesem Thema werden die DrawLines-Methoden der [**Grafik**](/windows/win32/api/gdiplusgraphics/nl-gdiplusgraphics-graphics) Klasse aufgelistet. Eine umfassende Liste der Methoden für die **Grafik** Klasse finden Sie unter [**Grafiken**](/windows/win32/api/gdiplusgraphics/nl-gdiplusgraphics-graphics).
+In diesem Thema werden die DrawLines-Methoden der [**Graphics-Klasse**](/windows/win32/api/gdiplusgraphics/nl-gdiplusgraphics-graphics) aufgelistet. Eine vollständige Liste der Methoden für die **Graphics-Klasse** finden Sie unter [**Grafik**](/windows/win32/api/gdiplusgraphics/nl-gdiplusgraphics-graphics).
 
 ### <a name="overload-list"></a>Überladeliste
 
@@ -21,18 +21,18 @@ In diesem Thema werden die DrawLines-Methoden der [**Grafik**](/windows/win32/ap
 
 | Methode                                                                                                      | BESCHREIBUNG                                                                                                                                                  |
 |:------------------------------------------------------------------------------------------------------------|:-------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| [**DrawLines (Stift \* , Punkt \* , int)**](/windows/win32/api/gdiplusgraphics/nf-gdiplusgraphics-graphics-drawlines(inconstpen_inconstpoint_inint))   | Die [**Grafik::D rawlines**](/windows/win32/api/gdiplusgraphics/nf-gdiplusgraphics-graphics-drawlines(inconstpen_inconstpoint_inint)) -Methode zeichnet eine Sequenz von verbundenen Linien.<br/>  |
-| [**DrawLines (Stift \* , PointF \* , int)**](/previous-versions//ms536019(v=vs.85)) | Die [**Grafik::D rawlines**](/previous-versions//ms536019(v=vs.85)) -Methode zeichnet eine Sequenz von verbundenen Linien.<br/> |
+| [**DrawLines(Pen \* , Point , \* INT)**](/windows/win32/api/gdiplusgraphics/nf-gdiplusgraphics-graphics-drawlines(inconstpen_inconstpoint_inint))   | Die [**Graphics::D rawLines-Methode**](/windows/win32/api/gdiplusgraphics/nf-gdiplusgraphics-graphics-drawlines(inconstpen_inconstpoint_inint)) zeichnet eine Sequenz verbundener Linien.<br/>  |
+| [**DrawLines(Pen \* , PointF \* , INT)**](/previous-versions//ms536019(v=vs.85)) | Die [**Graphics::D rawLines-Methode**](/previous-versions//ms536019(v=vs.85)) zeichnet eine Sequenz verbundener Linien.<br/> |
 
 
 
-## <a name="requirements"></a>Requirements (Anforderungen)
+## <a name="requirements"></a>Anforderungen
 
 
 
 | Anforderung | Wert |
 |-------------------|----------------------------------------------------------------------------------------------|
-| Header<br/> | <dl> <dt>Gdipl-Grafik. h</dt> </dl> |
+| Header<br/> | <dl> <dt>Gdiplusgraphics.h</dt> </dl> |
 
 
 

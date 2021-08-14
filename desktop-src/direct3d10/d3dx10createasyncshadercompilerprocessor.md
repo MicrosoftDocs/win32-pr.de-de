@@ -1,5 +1,5 @@
 ---
-description: Kompilieren Sie einen Shader, und erstellen Sie asynchron einen Datenprozessor.
+description: Kompilieren Sie einen Shader, und erstellen Sie einen Datenprozessor asynchron.
 ms.assetid: 842db48b-51a7-4f32-8ea6-44247f2619b0
 title: D3DX10CreateAsyncShaderCompilerProcessor-Funktion (D3DX10Async.h)
 ms.topic: reference
@@ -13,16 +13,16 @@ api_type:
 - HeaderDef
 api_location:
 - D3DX10Async.h
-ms.openlocfilehash: 2a1cd663827cc32b868c9c6c9b74fbc3c21b8ee6
-ms.sourcegitcommit: 14010c34b35fa268046c7683f021f86de08ddd0a
+ms.openlocfilehash: d11142b1e180f7194c569fc55d11fba023e53c2a9d9f5ae5db2a39e809cbc13c
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "104394094"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119281570"
 ---
 # <a name="d3dx10createasyncshadercompilerprocessor-function"></a>D3DX10CreateAsyncShaderCompilerProcessor-Funktion
 
-Kompilieren Sie einen Shader, und erstellen Sie asynchron einen Datenprozessor.
+Kompilieren Sie einen Shader, und erstellen Sie einen Datenprozessor asynchron.
 
 ## <a name="syntax"></a>Syntax
 
@@ -47,61 +47,61 @@ HRESULT D3DX10CreateAsyncShaderCompilerProcessor(
 
 <dl> <dt>
 
-*pfilename* \[ in\]
+*pFileName* \[ In\]
 </dt> <dd>
 
 Typ: **[ **LPCSTR**](../winprog/windows-data-types.md)**
 
-Eine Zeichenfolge, die den Shader-Dateinamen enthält.
+Eine Zeichenfolge, die den Shaderdateinamen enthält.
 
 </dd> <dt>
 
-*pdefinitionen* \[ in\]
+*pDefdefine* \[ In\]
 </dt> <dd>
 
-Type: **Konstanten [**D3D \_ Shader- \_ Makro**](/windows/win32/api/d3dcommon/ns-d3dcommon-d3d_shader_macro) \***
+Typ: **const [**D3D \_ SHADER \_ MACRO**](/windows/win32/api/d3dcommon/ns-d3dcommon-d3d_shader_macro) \***
 
-Ein mit Null endendes Array von Shader-Makros (siehe [**D3D \_ Shader \_ Macro**](/windows/win32/api/d3dcommon/ns-d3dcommon-d3d_shader_macro)); legen Sie diese Einstellung auf **null** fest, um keine Makros anzugeben.
+Ein auf NULL terminiertes Array von Shadermakros (siehe [**D3D-SHADER-MAKRO). \_ \_**](/windows/win32/api/d3dcommon/ns-d3dcommon-d3d_shader_macro)Legen Sie diesen Wert auf **NULL** fest, um keine Makros anzugeben.
 
 </dd> <dt>
 
-*pinclude* \[ in\]
+*pInclude* \[ In\]
 </dt> <dd>
 
 Typ: **[ **LPD3D10INCLUDE**](/previous-versions/windows/desktop/legacy/bb173775(v=vs.85))**
 
-Ein Zeiger auf eine include-Schnittstelle (siehe [**ID3D10Include Interface**](/previous-versions/windows/desktop/legacy/bb173775(v=vs.85))); Legen Sie dies auf **null** fest, um anzugeben, dass keine Includedatei vorhanden ist.
+Ein Zeiger auf eine Includeschnittstelle (siehe [**ID3D10Include Interface**](/previous-versions/windows/desktop/legacy/bb173775(v=vs.85))); Legen Sie diesen Wert **auf NULL** fest, um anzugeben, dass keine Includedatei enthalten ist.
 
 </dd> <dt>
 
-*pfunctionname* \[ in\]
+*pFunctionName* \[ In\]
 </dt> <dd>
 
 Typ: **[ **LPCSTR**](../winprog/windows-data-types.md)**
 
-Der Name der Einstiegspunkt Funktion für den Shader.
+Name der Einstiegspunktfunktion für den Shader.
 
 </dd> <dt>
 
-*pprofile* \[ in\]
+*pProfile* \[ In\]
 </dt> <dd>
 
 Typ: **[ **LPCSTR**](../winprog/windows-data-types.md)**
 
-Eine Zeichenfolge, die das [Shader-Profil](../direct3dhlsl/dx-graphics-hlsl-models.md) oder Shader-Modell angibt.
+Eine Zeichenfolge, die das [Shaderprofil oder](../direct3dhlsl/dx-graphics-hlsl-models.md) Shadermodell angibt.
 
 </dd> <dt>
 
-*Flags* \[in\]
+*Flags* \[ In\]
 </dt> <dd>
 
-Typ: **[ **uint**](../winprog/windows-data-types.md)**
+Typ: **[ **UINT**](../winprog/windows-data-types.md)**
 
-HLSL-Kompilierungsoptionen (siehe [Shader-Flags](d3d10-graphics-reference-effect-constants.md)).
+HLSL-Kompilierungsoptionen (siehe [Shaderflags](d3d10-graphics-reference-effect-constants.md)).
 
 </dd> <dt>
 
-*ppcompiledshader* \[ vorgenommen\]
+*ppCompiledShader* \[ out\]
 </dt> <dd>
 
 Typ: **[ **ID3D10Blob**](/windows/win32/api/D3DCommon/nn-d3dcommon-id3d10blob)\*\***
@@ -110,16 +110,16 @@ Adresse eines Zeigers auf den kompilierten Shader. Siehe [**ID3D10Blob-Schnittst
 
 </dd> <dt>
 
-*pperrorbuffer* \[ vorgenommen\]
+*ppErrorBuffer* \[ out\]
 </dt> <dd>
 
 Typ: **[ **ID3D10Blob**](/windows/win32/api/D3DCommon/nn-d3dcommon-id3d10blob)\*\***
 
-Adresse eines Zeigers auf einen Puffer, der Kompilierungsfehler enthält (siehe [**ID3D10Blob Interface**](/windows/win32/api/D3DCommon/nn-d3dcommon-id3d10blob)).
+Adresse eines Zeigers auf einen Puffer, der Kompilierungsfehler enthält (siehe [**ID3D10Blob-Schnittstelle**](/windows/win32/api/D3DCommon/nn-d3dcommon-id3d10blob)).
 
 </dd> <dt>
 
-*ppdataprocessor* \[ vorgenommen\]
+*ppDataProcessor* \[ out\]
 </dt> <dd>
 
 Typ: **[ **ID3DX10DataProcessor**](id3dx10dataprocessor.md)\*\***
@@ -132,7 +132,7 @@ Adresse eines Zeigers auf einen Puffer, der den erstellten Datenprozessor enthä
 
 Typ: **[ **HRESULT**](https://msdn.microsoft.com/library/Bb401631(v=MSDN.10).aspx)**
 
-Der Rückgabewert ist einer der Werte, die in [Direct3D 10-Rückgabe Codes](d3d10-graphics-reference-returnvalues.md)aufgelistet sind.
+Der Rückgabewert ist einer der Unter [Direct3D 10-Rückgabecodes aufgeführten Werte.](d3d10-graphics-reference-returnvalues.md)
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -140,15 +140,15 @@ Der Rückgabewert ist einer der Werte, die in [Direct3D 10-Rückgabe Codes](d3d1
 
 | Anforderung | Wert |
 |-------------------|------------------------------------------------------------------------------------------|
-| Header<br/> | <dl> <dt>D3DX10Async. h</dt> </dl> |
+| Header<br/> | <dl> <dt>D3DX10Async.h</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[Universell Funktionen](d3d10-graphics-reference-d3dx10-functions-general-purpose.md)
+[Universell Functions](d3d10-graphics-reference-d3dx10-functions-general-purpose.md)
 </dt> </dl>
 
  

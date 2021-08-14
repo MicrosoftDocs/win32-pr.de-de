@@ -1,5 +1,5 @@
 ---
-description: 'Weitere Informationen finden Sie hier: JET_PCWSTR'
+description: 'Weitere Informationen finden Sie unter: JET_PCWSTR'
 title: JET_PCWSTR
 TOCTitle: JET_PCWSTR
 ms:assetid: fef64bb9-c2e0-4cfb-8138-c98ae6f50952
@@ -15,12 +15,12 @@ api_type:
 - COM
 api_location: ''
 ROBOTS: INDEX,FOLLOW
-ms.openlocfilehash: 51cd0dab17096fb8f7371a01ebabfca3abc595be
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 3958baa23228bdf32807cc4fdc07a471e625d553f57672e318a062038923b5af
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106362993"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119473890"
 ---
 # <a name="jet_pcwstr"></a>JET_PCWSTR
 
@@ -29,7 +29,7 @@ _**Gilt für:** Windows | Windows Server_
 
 ## <a name="jet_pcwstr"></a>JET_PCWSTR
 
-Der **JET_PCWSTR** -Datentyp enthält eine NULL-terminierte, Konstante **Unicode** -Zeichenfolge (Char \* ).
+Der **JET_PCWSTR** Datentyp enthält eine mit NULL beendete, konstante **Unicode-Zeichenfolge** (char). \*
 
 **Windows Vista: JET_PCWSTR** wird in Windows Vista eingeführt.
 
@@ -41,7 +41,7 @@ Der **JET_PCWSTR** -Datentyp enthält eine NULL-terminierte, Konstante **Unicode
 
 JET_PCWSTR
 
-NULL-terminierte, Konstante Unicode-Zeichenfolge (Char \* ).
+Mit NULL beendete, konstante Unicode-Zeichenfolge (char \* ).
 
 ### <a name="requirements"></a>Anforderungen
 
@@ -61,7 +61,7 @@ NULL-terminierte, Konstante Unicode-Zeichenfolge (Char \* ).
 </tr>
 <tr class="odd">
 <td><p><strong>Header</strong></p></td>
-<td><p>In "ESENT. h" deklariert.</p></td>
+<td><p>In Esent.h deklariert.</p></td>
 </tr>
 </tbody>
 </table>

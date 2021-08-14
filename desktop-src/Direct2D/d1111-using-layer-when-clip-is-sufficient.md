@@ -3,7 +3,7 @@ title: D1111 unter Verwendung der Ebene, wenn clip ausreichend ist
 ms.assetid: 07fe3c66-15be-408b-a30b-a7f52919c058
 description: Eine Ebene wird mit einer NULL-Deckkraftmaske, einer Deckkraft von 1,0 und einer achsenbündig ausgerichteten rechteckigen geometrischen Maske verwendet. Die Push/Pop Clip-API sollte die gleichen Ergebnisse mit höherer Leistung erzielen.
 keywords:
-- D1111 unter Verwendung der Ebene, wenn clip ausreichend direct2d ist
+- D1111 mit Ebene, wenn Clip ausreichend direct2d ist
 topic_type:
 - apiref
 api_name:
@@ -13,12 +13,12 @@ api_type:
 ms.topic: reference
 ms.date: 05/31/2018
 ms.custom: seodec18
-ms.openlocfilehash: e8463cc3940b69e326f13df6be9602dd6073fec0
-ms.sourcegitcommit: f848119a8faa29b27585f4df53f6e50ee9666684
+ms.openlocfilehash: b03a6c2a4806724cd7cfdc97354e29e86dc60e0f1729ee9efeca89d971ca0a64
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/27/2021
-ms.locfileid: "110549905"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119758100"
 ---
 # <a name="d1111-using-layer-when-clip-is-sufficient"></a>D1111: Verwenden der Ebene, wenn clip ausreichend ist
 
@@ -45,7 +45,7 @@ Die Adresse der Schnittstelle.
 
 ## <a name="examples"></a>Beispiele
 
-Im folgenden Code werden [**PushLayer**](/windows/win32/api/d2d1/nf-d2d1-id2d1rendertarget-pushlayer(constd2d1_layer_parameters__id2d1layer)) und [**PopLayer**](/windows/win32/api/d2d1/nf-d2d1-id2d1rendertarget-poplayer) verwendet, wenn die Ebene nur ein Primitiv (ein Rechteck) enthält und die Felder der [**D2D1 \_ LAYER \_ PARAMETERS-Struktur**](/windows/desktop/api/d2d1/ns-d2d1-d2d1_layer_parameters) auf Standardwerte festgelegt sind. Die Standardwerte der **D2D1 \_ LAYER \_ PARAMETERS-Struktur** finden Sie unter [**LayerParameter**](/windows/desktop/api/d2d1helper/nf-d2d1helper-layerparameters).
+Im folgenden Code werden [**PushLayer**](/windows/win32/api/d2d1/nf-d2d1-id2d1rendertarget-pushlayer(constd2d1_layer_parameters__id2d1layer)) und [**PopLayer**](/windows/win32/api/d2d1/nf-d2d1-id2d1rendertarget-poplayer) verwendet, wenn die Ebene nur ein Primitiv (ein Rechteck) enthält und die Felder der [**Struktur D2D1 \_ LAYER \_ PARAMETERS**](/windows/desktop/api/d2d1/ns-d2d1-d2d1_layer_parameters) auf Standardwerte festgelegt sind. Die Standardwerte der **D2D1 \_ LAYER \_ PARAMETERS-Struktur** finden Sie unter [**LayerParameter**](/windows/desktop/api/d2d1helper/nf-d2d1helper-layerparameters).
 
 
 ```C++

@@ -4,17 +4,17 @@ description: Mit einer Dropdownliste oder einem Kombinationsfeld treffen Benutze
 ms.assetid: dbe88cf1-7946-4343-bc16-ce12be7ce205
 ms.topic: article
 ms.date: 10/20/2020
-ms.openlocfilehash: ce9cbcac3495022edbb398bcbd78b35ac5265150
-ms.sourcegitcommit: 8ebcf6cd36f67f8bcf78e76ae8923d65b8995c8a
+ms.openlocfilehash: e74589da084a9f4c9f950336b3093452988052b57aba42e6a7a8f449f24a254f
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/05/2021
-ms.locfileid: "111524574"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118966274"
 ---
 # <a name="drop-down-lists--combo-boxes"></a>Dropdownlisten & Kombinationsfelder
 
 > [!NOTE]
-> Dieser Entwurfsleitfaden wurde für Windows 7 erstellt und für neuere Versionen von Windows nicht aktualisiert. Ein Großteil der Anleitungen gilt immer noch im Prinzip, aber die Präsentation und die Beispiele spiegeln nicht unsere [aktuellen Entwurfsleitfäden](/windows/uwp/design/)wider.
+> Dieser Entwurfsleitfaden wurde für Windows 7 erstellt und für neuere Versionen von Windows nicht aktualisiert. Ein Großteil der Anleitungen gilt weiterhin im Prinzip, aber die Präsentation und die Beispiele spiegeln nicht unsere [aktuellen Entwurfsleitfäden](/windows/uwp/design/)wider.
 
 Mit einer Dropdownliste oder einem Kombinationsfeld treffen Benutzer eine Auswahl zwischen einer Liste von sich gegenseitig ausschließenden Werten. Benutzer können nur eine Option auswählen. Bei einer Standard-Dropdownliste sind Benutzer auf Die Auswahlmöglichkeiten in der Liste beschränkt, aber mit einem Kombinationsfeld können sie eine Auswahl eingeben, die nicht in der Liste enthalten ist.
 
@@ -45,14 +45,14 @@ Orientieren Sie sich an folgenden Fragen:
 
 **Dropdownlisten**
 
--   **Gibt es eine Standardoption, die für die meisten Benutzer in den meisten Situationen empfohlen wird?** Ist es viel wichtiger, die ausgewählte Option zu sehen, als die Alternativen zu sehen? Erwägen Sie die Verwendung einer Dropdownliste, wenn Sie die Benutzer nicht dazu ermutigen möchten, Änderungen vorzunehmen, indem Sie die Alternativen ausblenden. Andernfalls sollten Sie Optionsfelder, eine Einzelauswahlliste oder ein bearbeitbares Listenfeld in Betracht ziehen, die den alternativen Optionen mehr Aufmerksamkeit verleihen.
+-   **Gibt es eine Standardoption, die für die meisten Benutzer in den meisten Situationen empfohlen wird?** Ist es viel wichtiger, die ausgewählte Option zu sehen, als die Alternativen zu sehen? Erwägen Sie die Verwendung einer Dropdownliste, wenn Sie Benutzer nicht dazu ermutigen möchten, Änderungen vorzunehmen, indem Sie die Alternativen ausblenden. Andernfalls sollten Sie Optionsfelder, eine Einzelauswahlliste oder ein bearbeitbares Listenfeld in Betracht ziehen, die den alternativen Optionen mehr Aufmerksamkeit verleihen.
 
     ![Screenshot der höchsten Qualität als Standardschaltfläche ](images/ctrl-drop-image2.png)
 
     In diesem Beispiel ist die höchste Farbqualität für die meisten Benutzer die beste Wahl, sodass eine Dropdownliste eine gute Wahl ist, um die Alternativen herunterzuspielen.
 
 -   **Möchten Sie die Aufmerksamkeit auf die Option lenken?** In diesem Falle sollten Sie Optionsfelder, eine Liste mit nur einer Auswahl oder ein bearbeitbares Listenfeld in Betracht ziehen, die in der Regel mehr Aufmerksamkeit auf sich ziehen, indem Sie mehr Bildschirmfläche nutzen. Da Dropdownlisten kompakt sind, sind sie eine gute Wahl für Optionen, die Sie unterdimensionieren möchten.
--   **Ist der Bildschirmspeicherplatz premium?** Wenn dies der Fall ist, verwenden Sie eine Dropdownliste, da der verwendete Bildschirmbereich fest und unabhängig von der Anzahl der Auswahlmöglichkeiten ist.
+-   **Ist der Bildschirmspeicherplatz premium?** Wenn dies der Fall ist, verwenden Sie eine Dropdownliste, da der verwendete Bildschirmbereich festgelegt ist und unabhängig von der Anzahl der Auswahlmöglichkeiten ist.
 -   **Gibt es weitere Dropdownlisten im Fenster?** Wenn dies der Fall ist, sollten Sie eine Dropdownliste für Konsistenz verwenden.
 
 **Bearbeitbare Dropdownlisten**
@@ -78,7 +78,7 @@ Zusätzlich zu den Prinzipien, die soeben für Dropdownlisten bereitgestellt wur
     In diesem Beispiel können Benutzer auf "An" klicken, um gültige Werte auszuwählen.
 
 -   **Ist es wichtig, Benutzer dazu zu ermutigen, die alternativen Optionen zu überprüfen oder Änderungen einzuladen?** Falls ja, sollten Sie stattdessen ein bearbeitbares Listenfeld verwenden. Mit einer bearbeitbaren Dropdownliste werden Benutzer die Alternativen erst kennen, wenn die Liste gelöscht wird.
--   **Müssen Benutzer ein Element schnell in einer großen Liste finden?** (nur Win32) Verwenden Sie in diesem Falle ein Kombinationsfeld, da Benutzer ein Element auswählen können, indem sie seinen vollständigen Namen eingeben. Im Gegensatz dazu wählt die Win32-Dropdownliste Elemente aus, die nur auf dem letzten eingegebenen Zeichen basieren (daher würde die Eingabe von "Jun" in eine Liste von Monaten mit November und nicht mit Juni übereinstimmen). Verwenden Sie in diesem Fall auch dann ein Kombinationsfeld, wenn die möglichen Optionen eingeschränkt sind.
+-   **Müssen Benutzer schnell nach einem Element in einer großen Liste suchen?** (nur Win32) Verwenden Sie in diesem Falle ein Kombinationsfeld, da Benutzer ein Element auswählen können, indem sie seinen vollständigen Namen eingeben. Im Gegensatz dazu wählt die Win32-Dropdownliste Elemente aus, die nur auf dem letzten eingegebenen Zeichen basieren (daher würde die Eingabe von "Jun" in eine Liste von Monaten mit November und nicht mit Juni übereinstimmen). Verwenden Sie in diesem Fall auch dann ein Kombinationsfeld, wenn die möglichen Optionen eingeschränkt sind.
 
 **Bearbeitbare Listenfelder**
 
@@ -99,7 +99,7 @@ Dropdownlisten und Kombinationsfelder weisen mehrere Verwendungsmuster auf:
 |   Verwendung     |    Beispiel   |
 |-------------------------------------------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | **Dropdownliste** eine Standard-Dropdownliste mit einem festen Satz vordefinierter Werte. <br/>                                 | wenn es geschlossen ist, ist nur das ausgewählte Element sichtbar. Wenn Benutzer auf die Dropdownschaltfläche klicken, werden alle Optionen angezeigt. Um den Wert zu ändern, öffnen Benutzer die Liste und klicken auf einen anderen Wert.<br/> ![Screenshot der Dropdownliste, ausgeblendete Optionen ](images/ctrl-drop-image6.png)<br/> In diesem Beispiel befindet sich die Liste im normalen Zustand.<br/> ![Screenshot der Dropdownliste, angezeigte Optionen ](images/ctrl-drop-image7.png)<br/> In diesem Beispiel wurde die Liste gelöscht.<br/> |
-| **Dropdownliste "Vorschau"** eine Dropdownliste, in der die Ergebnisse der Auswahl als Vorschau angezeigt werden, um Benutzer bei der Auswahl zu unterstützen.<br/>             | ![Screenshot der Farb- und Textoptionen ](images/ctrl-drop-image8.png)<br/> In diesen Beispielen zeigen die Dropdownlisten eine Vorschau der Ergebnisse der Auswahl an.<br/>                                                                                                                                                                                                                                                                                                                                           |
+| **Dropdownliste "Vorschau"** eine Dropdownliste, in der die Ergebnisse der Auswahl als Vorschau angezeigt werden, damit Benutzer diese auswählen können.<br/>             | ![Screenshot der Farb- und Textoptionen ](images/ctrl-drop-image8.png)<br/> In diesen Beispielen zeigen die Dropdownlisten eine Vorschau der Ergebnisse der Auswahl an.<br/>                                                                                                                                                                                                                                                                                                                                           |
 | **Bearbeitbare Dropdownliste:** Ein Dropdown-Kombinationsfeld, mit dem Benutzer einen Wert eingeben können, der nicht in der Dropdownliste enthalten ist.<br/> | ![aa511458.dropdownlists27(en-us,msdn.10).png](images/ctrl-drop-image9.png)![Screenshot des bearbeitbaren Kombinationsfelds für den Schriftgrad ](images/ctrl-drop-image10.png)<br/> Beispiele für eine bearbeitbare Dropdownliste im Bearbeitungs- und Dropdownmodus.<br/> Verwenden Sie dieses Steuerelement, wenn Sie die Flexibilität eines Textfelds bereitstellen möchten, aber Benutzer unterstützen möchten, indem Sie eine praktische Liste der wahrscheinlichen Optionen bereitstellen.<br/>                                                                                                   |
 | **Bearbeitbare Listenfelder** sind ein reguläres Kombinationsfeld, mit dem Benutzer einen Wert eingeben können, der nicht in der immer sichtbaren Liste enthalten ist. <br/> | ![Screenshot der Dropdownliste der Schriftartoptionen ](images/ctrl-drop-image11.png)<br/> In diesen Beispielen werden die bearbeitbaren Listenfelder immer angezeigt.<br/> Dieses Steuerelement ist eine bessere Wahl als die bearbeitbare Dropdownliste, wenn es wichtig ist, Benutzer dazu zu ermutigen, die alternativen Optionen zu überprüfen oder Änderungen einzuladen.<br/>                                                                                                                                                                      |
 
@@ -178,7 +178,7 @@ Dropdownlisten und Kombinationsfelder weisen mehrere Verwendungsmuster auf:
 ### <a name="default-values"></a>Standardwerte
 
 -   **Wählen Sie standardmäßig die sicherste Option (um daten- oder systemzugriffsverlust zu verhindern) und die sicherste Option aus.** Wenn Sicherheit und Sicherheit keine Faktoren sind, wählen Sie die wahrscheinlichste oder bequemste Option aus.
-    -   **Ausnahme:** Zeigt einen leeren Standardwert an, wenn das Steuerelement eine Eigenschaft in einem [gemischten Zustand](glossary.md)darstellt. Dies geschieht, wenn eine Eigenschaft für mehrere Objekte angezeigt wird, die nicht über die gleiche Einstellung verfügen.
+    -   **Ausnahme:** Zeigt einen leeren Standardwert an, wenn das Steuerelement eine Eigenschaft in einem [gemischten Zustand](glossary.md)darstellt. Dies geschieht, wenn eine Eigenschaft für mehrere Objekte angezeigt wird, die nicht die gleiche Einstellung aufweisen.
 
 ## <a name="prompts"></a>Eingabeaufforderungen
 
@@ -217,7 +217,7 @@ Empfohlene Größen- und Abstände für Dropdownlisten und Kombinationsfelder.
 
 -   **Wählen Sie eine Breite aus, die für die längsten gültigen Daten geeignet ist.** Dropdownlisten können nicht horizontal gescrollt werden, sodass Benutzer nur sehen können, was im Steuerelement sichtbar ist. (Beachten Sie jedoch, dass für Kombinationsfelder die AutoScroll-Funktionalität aktiviert sein kann.)
 -   **Fügen Sie zusätzliche 30 Prozent** (bis zu 200 Prozent für kürzeren Text) für jeden Text (aber keine Zahlen) ein, der lokalisiert wird.
--   **Wählen Sie eine Listenlänge aus, die unnötiges vertikales Scrollen überflüssig macht.** Da Dropdownlisten bei Bedarf angezeigt werden, sollten ihre Listen bis zu 30 Elemente enthalten. Bearbeitbare Listenfelder (die über keine Dropdownschaltfläche verfügen) sollten zwischen 3 und 12 Elemente anzeigen.
+-   **Wählen Sie eine Listenlänge aus, die unnötiges vertikales Scrollen überflüssig macht.** Da Dropdownlisten bei Bedarf angezeigt werden, sollten ihre Listen bis zu 30 Elemente anzeigen. Bearbeitbare Listenfelder (die nicht über eine Dropdownschaltfläche verfügen) sollten zwischen 3 und 12 Elemente anzeigen.
 
 ## <a name="labels"></a>Bezeichnungen
 
@@ -262,18 +262,18 @@ Empfohlene Größen- und Abstände für Dropdownlisten und Kombinationsfelder.
 
 Beim Verweisen auf Dropdownlisten:
 
--   Verwenden Sie den genauen Bezeichnungstext, einschließlich der Groß-/Unterstriche, aber schließen Sie nicht den Unterstrich oder Doppelpunkt des Zugriffsschlüssels ein. fügen Sie entweder list oder box ein, unabhängig davon, ob die Liste oder das Feld eindeutiger ist.
+-   Verwenden Sie den genauen Bezeichnungstext, einschließlich der Groß-/Groß-/Unterstriche, aber schließen Sie nicht den Unterstrich oder Doppelpunkt der Zugriffsschlüssel ein. fügen Sie entweder list oder box ein, unabhängig davon, was übersichtlicher ist.
 -   Verwenden Sie für Listenoptionen den genauen Optionstext, einschließlich der Groß-/Groß-/Groß-/Unterform.
 -   In der Programmierung und anderen technischen Dokumentationen finden Sie Dropdownlisten als Dropdownlisten. Verwenden Sie überall sonst entweder list oder box, unabhängig davon, was übersichtlicher ist.
--   Verwenden Sie click, um die Benutzerinteraktion zu beschreiben.
+-   Um die Benutzerinteraktion zu beschreiben, klicken Sie auf .
 -   Formatieren Sie die Bezeichnungs- und Listenoptionen nach Möglichkeit mit fett formatiertem Text. Andernfalls setzen Sie die Bezeichnung und die Optionen nur dann in Anführungszeichen, wenn dies erforderlich ist, um Verwirrung zu vermeiden.
 
 Beispiel: Klicken Sie in **der Liste Schriftgrad** auf **Große Schriftarten.**
 
 Beim Verweisen auf Kombinationsfelder:
 
--   Verwenden Sie den genauen Bezeichnungstext, einschließlich der Groß-/Unterstriche, aber schließen Sie nicht den Unterstrich oder Doppelpunkt des Zugriffsschlüssels ein. Fügen Sie das Wortfeld ein.
--   Verwenden Sie für Listenoptionen den genauen Optionstext, einschließlich der Groß-/Groß-/A-Groß-/A-
+-   Verwenden Sie den genauen Bezeichnungstext, einschließlich der Groß-/Groß-/Unterstriche, aber schließen Sie den Unterstrich oder Doppelpunkt des Zugriffsschlüssels nicht ein. Fügen Sie das Wortfeld ein.
+-   Verwenden Sie für Listenoptionen den genauen Optionstext, einschließlich der Groß-/Groß-/Groß-/Unterform.
 -   In der Programmierung und anderen technischen Dokumentationen werden Kombinationsfelder als Kombinationsfelder bezeichnet. Verwenden Sie überall das Feld .
 -   Verwenden Sie die EINGABETASTE, um die Benutzerinteraktion zu beschreiben.
 -   Formatieren Sie die Bezeichnungs- und Listenoptionen nach Möglichkeit mit fett formatiertem Text. Andernfalls setzen Sie die Bezeichnung und die Optionen nur dann in Anführungszeichen, wenn dies erforderlich ist, um Verwirrung zu vermeiden.

@@ -1,9 +1,9 @@
 ---
-title: ID2D1Factory-Methode für die Methode "Methode" (D2d1. h)
-description: Erstellt ein ID2D1EllipseGeometry-.
+title: ID2D1Factory CreateEllipseGeometry-Methoden (D2d1.h)
+description: Erstellt eine ID2D1EllipseGeometry.
 ms.assetid: 4c03bb0b-74fe-456a-aa26-5449d758c0ea
 keywords:
-- Methoden der Methode "Direct2D"
+- CreateEllipseGeometry-Methoden Direct2D
 topic_type:
 - apiref
 api_location:
@@ -12,16 +12,16 @@ api_type:
 - DllExport
 ms.date: 07/02/2019
 ms.topic: reference
-ms.openlocfilehash: ca991732b9a80fd93e3df3c2b72493f5195ea0a0
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 85026ad8459fdb2e7ef89c1d1a6b339d8e252188e27957e8848aaf02247d2694
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106367681"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119259115"
 ---
-# <a name="id2d1factorycreateellipsegeometry-methods"></a>ID2D1Factory:: kreateellipcgeometry-Methoden
+# <a name="id2d1factorycreateellipsegeometry-methods"></a>ID2D1Factory::CreateEllipseGeometry-Methoden
 
-Erstellt ein [**ID2D1EllipseGeometry**](/windows/win32/api/d2d1/nn-d2d1-id2d1ellipsegeometry)-.
+Erstellt eine [**ID2D1EllipseGeometry**](/windows/win32/api/d2d1/nn-d2d1-id2d1ellipsegeometry).
 
 ### <a name="overload-list"></a>Überladeliste
 
@@ -29,14 +29,14 @@ Erstellt ein [**ID2D1EllipseGeometry**](/windows/win32/api/d2d1/nn-d2d1-id2d1ell
 
 | Methode                                                                                                                                                      | BESCHREIBUNG                                                                  |
 |:------------------------------------------------------------------------------------------------------------------------------------------------------------|:-----------------------------------------------------------------------------|
-| [**"Kreateellipsegeometry" (D2D1 \_ Ellipse&, ID2D1EllipseGeometry \* \* )**](/windows/win32/api/d2d1/nf-d2d1-id2d1factory-createellipsegeometry(constd2d1_ellipse__id2d1ellipsegeometry))  | Erstellt ein [**ID2D1EllipseGeometry**](/windows/win32/api/d2d1/nn-d2d1-id2d1ellipsegeometry)-. <br/> |
-| [**"Kreateellipsegeometry" (D2D1 \_ Ellipse \* , ID2D1EllipseGeometry \* \* )**](/previous-versions/windows/desktop/legacy/dd371265(v=vs.85)) | Erstellt ein [**ID2D1EllipseGeometry**](/windows/win32/api/d2d1/nn-d2d1-id2d1ellipsegeometry)-. <br/> |
+| [**CreateEllipseGeometry(D2D1 \_ ELLIPSE&,ID2D1EllipseGeometry \* \* )**](/windows/win32/api/d2d1/nf-d2d1-id2d1factory-createellipsegeometry(constd2d1_ellipse__id2d1ellipsegeometry))  | Erstellt eine [**ID2D1EllipseGeometry**](/windows/win32/api/d2d1/nn-d2d1-id2d1ellipsegeometry). <br/> |
+| [**CreateEllipseGeometry(D2D1 \_ ELLIPSE \* ,ID2D1EllipseGeometry \* \* )**](/previous-versions/windows/desktop/legacy/dd371265(v=vs.85)) | Erstellt eine [**ID2D1EllipseGeometry**](/windows/win32/api/d2d1/nn-d2d1-id2d1ellipsegeometry). <br/> |
 
 
 
 ## <a name="examples"></a>Beispiele
 
-Im folgenden werden zwei [**ID2D1EllipseGeometry**](/windows/win32/api/d2d1/nn-d2d1-id2d1ellipsegeometry) -Objekte erstellt und mit den verschiedenen Modi zum Kombinieren von Geometrie kombiniert.
+Im Folgenden werden zwei [**ID2D1EllipseGeometry-Objekte**](/windows/win32/api/d2d1/nn-d2d1-id2d1ellipsegeometry) erstellt und mithilfe der verschiedenen Geometrie-Kombinationsmodi kombiniert.
 
 
 ```C++
@@ -200,9 +200,9 @@ HRESULT DemoApp::CreateGeometryResources()
 
 
 
-Mit diesem Code wird die in der folgenden Abbildung gezeigte Ausgabe erzeugt.
+Dieser Code erzeugt die in der folgenden Abbildung gezeigte Ausgabe.
 
-![Abbildung von zwei Ellipsen kombiniert mithilfe von vier Geometry-Kombi Modi (Union, Intersect, XOR und Exclude)](images/combine-modes.png)
+![Abbildung von zwei Ellipsen, kombiniert mit vier Geometrie-Kombinationsmodi (Union, Intersect, xor und exclude)](images/combine-modes.png)
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -210,13 +210,13 @@ Mit diesem Code wird die in der folgenden Abbildung gezeigte Ausgabe erzeugt.
 
 | Anforderung | Wert |
 |--------------------|-------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>D2d1. h</dt> </dl>   |
-| Bibliothek<br/> | <dl> <dt>D2d1. lib</dt> </dl> |
+| Header<br/>  | <dl> <dt>D2d1.h</dt> </dl>   |
+| Bibliothek<br/> | <dl> <dt>D2d1.lib</dt> </dl> |
 | DLL<br/>     | <dl> <dt>D2d1.dll</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 

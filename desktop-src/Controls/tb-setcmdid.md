@@ -1,9 +1,9 @@
 ---
-title: TB_SETCMDID Meldung (kommstrg. h)
-description: Legt den Befehls Bezeichner einer Symbolleisten Schaltfläche fest.
+title: TB_SETCMDID Meldung (Commctrl.h)
+description: Legt den Befehlsbezeichner einer Symbolleistenschaltfläche fest.
 ms.assetid: 0674c905-2d9d-45d3-b565-2f3bcd7d6383
 keywords:
-- Windows-Steuerelemente für TB_SETCMDID Meldung
+- TB_SETCMDID Windows-Steuerelemente für Nachrichten
 topic_type:
 - apiref
 api_name:
@@ -14,16 +14,16 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 7f91cc4fd4d70e912bed3163cdf783e8e17ab463
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 539fb03899a6a763a94a7cd2fd1b7e8be071f04e26e21f19e9ff53640b87be1d
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "106338733"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118167605"
 ---
-# <a name="tb_setcmdid-message"></a>TB \_ setcmdid-Meldung
+# <a name="tb_setcmdid-message"></a>TB \_ SETCMDID-Nachricht
 
-Legt den Befehls Bezeichner einer Symbolleisten Schaltfläche fest.
+Legt den Befehlsbezeichner einer Symbolleistenschaltfläche fest.
 
 ## <a name="parameters"></a>Parameter
 
@@ -32,20 +32,20 @@ Legt den Befehls Bezeichner einer Symbolleisten Schaltfläche fest.
 *wParam* 
 </dt> <dd>
 
-NULL basierter Index der Schaltfläche, deren Befehls Bezeichner festgelegt werden soll.
+Nullbasierter Index der Schaltfläche, deren Befehlsbezeichner festgelegt werden soll.
 
 </dd> <dt>
 
 *lParam* 
 </dt> <dd>
 
-Befehls Bezeichner.
+Befehlsbezeichner.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt **true** zurück, wenn erfolgreich, andernfalls **false** .
+Gibt **TRUE** zurück, wenn erfolgreich, **andernfalls FALSE.**
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -53,9 +53,9 @@ Gibt **true** zurück, wenn erfolgreich, andernfalls **false** .
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>                                        |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2003 \[ -Desktop-Apps\]<br/>                                  |
-| Header<br/>                   | <dl> <dt>Kommstrg. h</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows \[Nur Vista-Desktop-Apps\]<br/>                                        |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2003-Desktop-Apps\]<br/>                                  |
+| Header<br/>                   | <dl> <dt>Commctrl.h</dt> </dl> |
 
 
 

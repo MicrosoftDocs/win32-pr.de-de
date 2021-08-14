@@ -1,6 +1,6 @@
 ---
-description: 'Weitere Informationen zu: jetgettablecolumninfo-Funktion'
-title: Jetgettablecolumninfo-Funktion
+description: Weitere Informationen finden Sie unter JetGetTableColumnInfo-Funktion.
+title: JetGetTableColumnInfo-Funktion
 TOCTitle: JetGetTableColumnInfo Function
 ms:assetid: b1c1df22-ad33-4320-9f08-baf2a3e7bd7d
 ms:mtpsurl: https://msdn.microsoft.com/library/Gg294061(v=EXCHG.10)
@@ -20,21 +20,21 @@ api_type:
 api_location:
 - ESENT.DLL
 ROBOTS: INDEX,FOLLOW
-ms.openlocfilehash: f8c7b073ca9be90e89a1c6b99c010707e6405323
-ms.sourcegitcommit: 168d11879cb9fd89d26f826482725c0a626be00f
+ms.openlocfilehash: 63e913e68a3aea8f220c713b07becdeecb785a619b73a833bb6a0e9c3c1d37a4
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/16/2021
-ms.locfileid: "104219739"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118979020"
 ---
-# <a name="jetgettablecolumninfo-function"></a>Jetgettablecolumninfo-Funktion
+# <a name="jetgettablecolumninfo-function"></a>JetGetTableColumnInfo-Funktion
 
 
 _**Gilt für:** Windows | Windows Server_
 
-## <a name="jetgettablecolumninfo-function"></a>Jetgettablecolumninfo-Funktion
+## <a name="jetgettablecolumninfo-function"></a>JetGetTableColumnInfo-Funktion
 
-Die **jetgettablecolumninfo** -Funktion Ruft Informationen über eine Tabellenspalte ab.
+Die **JetGetTableColumnInfo-Funktion** ruft Informationen zu einer Tabellenspalte ab.
 
 ```cpp
 JET_ERR JET_API JetGetTableColumnInfo(
@@ -49,35 +49,35 @@ JET_ERR JET_API JetGetTableColumnInfo(
 
 ### <a name="parameters"></a>Parameter
 
-*-sid*
+*sesid*
 
-Der für den API-Befehl zu verwendende Daten Bank Sitzungs Kontext.
+Der Datenbanksitzungskontext, der für den API-Aufruf verwendet werden soll.
 
-*TableID*
+*tableid*
 
-Die Tabelle, die die Spalte enthält, für die Informationen abgerufen werden sollen.
+Die Tabelle, die die Spalte enthält, für die Informationen abgerufen werden.
 
-*szcolumnname*
+*szColumnName*
 
-Der Name der Spalte, für die Informationen abgerufen werden sollen.
+Der Name der Spalte, für die Informationen abgerufen werden.
 
-*pvresult*
+*pvResult*
 
-Zeiger auf einen Puffer, der die Informationen empfängt. Der Typ des Puffers ist von *infolevel* abhängig. Der Aufrufer muss so konfiguriert werden, dass der Puffer entsprechend ausgerichtet wird.
+Zeiger auf einen Puffer, der die Informationen erhält. Der Typ des Puffers ist von *InfoLevel abhängig.* Der Aufrufer muss so konfiguriert werden, dass der Puffer entsprechend ausgerichtet wird.
 
-*cbmax*
+*cbMax*
 
-Die Größe (in Bytes) des Puffers, der in *pvresult* übergeben wurde.
+Die Größe des Puffers in Bytes, der in *pvResult übergeben wurde.*
 
-*Infolevel*
+*InfoLevel*
 
-Der Typ der Informationen, die für die durch *szcolumnname* angegebene Spalte abgerufen werden. Das Format der Daten, die in *pvresult* gespeichert sind, ist von *infolevel* abhängig. Das Schema der temporären Tabelle finden Sie unter [JET_COLUMNLIST](./jet-columnlist-structure.md).
+Der Typ der Informationen, die für die Spalte abgerufen werden, die durch *szColumnName angegeben wird.* Das Format der in *pvResult* gespeicherten Daten hängt von *InfoLevel ab.* Das Schema der temporären Tabelle finden Sie unter [JET_COLUMNLIST](./jet-columnlist-structure.md).
 
-  - JET_ColInfoListSortColumnid sortiert die temporäre Tabelle nach *ColumnID*.
+  - JET_ColInfoListSortColumnid sortiert die temporäre Tabelle nach *columnid*.
 
-  - Mit JET_ColInfoListCompact wird die Ausgabe komprimiert. Weitere Informationen zur Compact-Ausgabe finden Sie unter [JET_COLUMNLIST](./jet-columnlist-structure.md).
+  - JET_ColInfoListCompact komprimiert die Ausgabe. Weitere Informationen zur kompakten Ausgabe finden Sie unter [JET_COLUMNLIST](./jet-columnlist-structure.md).
 
-Die folgenden Optionen können für diesen Parameter festgelegt werden:
+Für diesen Parameter können die folgenden Optionen festgelegt werden:
 
 <table>
 <colgroup>
@@ -93,54 +93,54 @@ Die folgenden Optionen können für diesen Parameter festgelegt werden:
 <tbody>
 <tr class="odd">
 <td><p>JET_ColInfo</p></td>
-<td><p><em>pvresult</em> wird als <a href="gg294130(v=exchg.10).md">JET_COLUMNDEF</a>interpretiert, und die Felder der <a href="gg294130(v=exchg.10).md">JET_COLUMNDEF</a> Struktur werden entsprechend ausgefüllt. JET_ColInfo und JET_ColInfoByColid beide die gleichen Informationen abrufen.</p></td>
+<td><p><em>pvResult</em> wird als <a href="gg294130(v=exchg.10).md">JET_COLUMNDEF</a>interpretiert, und die Felder der <a href="gg294130(v=exchg.10).md">JET_COLUMNDEF-Struktur</a> werden entsprechend ausgefüllt. JET_ColInfo und JET_ColInfoByColid rufen beide dieselben Informationen ab.</p></td>
 </tr>
 <tr class="even">
 <td><p>JET_ColInfoBase</p></td>
-<td><p><em>pvresult</em> wird als <a href="gg269194(v=exchg.10).md">JET_COLUMNBASE</a> Struktur interpretiert. Dies ähnelt einer <a href="gg294130(v=exchg.10).md">JET_COLUMNDEF</a> -Struktur. Wenn diese Funktion erfolgreich ausgeführt wird, wird die Struktur mit entsprechenden Werten aufgefüllt. Wenn diese Funktion fehlschlägt, enthält die Struktur nicht definierte Daten.</p></td>
+<td><p><em>pvResult</em> wird als <a href="gg269194(v=exchg.10).md">eine</a> JET_COLUMNBASE interpretiert. Dies ähnelt einer <a href="gg294130(v=exchg.10).md">JET_COLUMNDEF</a> Struktur. Wenn diese Funktion erfolgreich ist, wird die -Struktur mit entsprechenden Werten aufgefüllt. Wenn diese Funktion fehlschlägt, enthält die Struktur nicht definierte Daten.</p></td>
 </tr>
 <tr class="odd">
 <td><p>JET_ColInfoByColid</p></td>
-<td><p><em>pvresult</em> wird als <a href="gg294130(v=exchg.10).md">JET_COLUMNDEF</a>interpretiert, mit dem Unterschied, dass die angeforderte Spalte (<em>szcolumname</em>) nicht der Zeichen <em>folgen</em> Spaltenname, sondern ein Zeiger auf einen <a href="gg294104(v=exchg.10).md">JET_COLUMNID</a>ist. JET_ColInfo und JET_ColInfoByColid beide die gleichen Informationen abrufen.</p></td>
+<td><p><em>pvResult</em> wird als JET_COLUMNDEF <a href="gg294130(v=exchg.10).md">interpretiert,</a>mit der Ausnahme, dass <em>infoLevel</em> angibt, dass die angeforderte Spalte (<em>szColumName</em>) nicht der Name der Zeichenfolgenspalte, sondern ein Zeiger auf eine <a href="gg294104(v=exchg.10).md">JET_COLUMNID.</a> JET_ColInfo und JET_ColInfoByColid rufen beide dieselben Informationen ab.</p></td>
 </tr>
 <tr class="even">
 <td><p>JET_ColInfoList</p></td>
-<td><p><em>pvresult</em> wird als <a href="gg269228(v=exchg.10).md">JET_COLUMNLIST</a> Struktur interpretiert. Wenn diese Funktion erfolgreich ausgeführt wird, wird die Struktur mit entsprechenden Werten aufgefüllt. Eine temporäre Tabelle wird geöffnet und wird durch das <em>TableID</em> -Element von <a href="gg269228(v=exchg.10).md">JET_COLUMNLIST</a>identifiziert. Die Tabelle muss mit <a href="gg294087(v=exchg.10).md">jetclosetable</a>geschlossen werden. Wenn diese Funktion fehlschlägt, enthält die Struktur nicht definierte Daten.</p></td>
+<td><p><em>pvResult</em> wird als <a href="gg269228(v=exchg.10).md">eine</a> JET_COLUMNLIST interpretiert. Wenn diese Funktion erfolgreich ist, wird die -Struktur mit entsprechenden Werten aufgefüllt. Eine temporäre Tabelle wird geöffnet und durch den <em>tableid-Member</em> <a href="gg269228(v=exchg.10).md">von</a>JET_COLUMNLIST. Die Tabelle muss mit <a href="gg294087(v=exchg.10).md">JetCloseTable geschlossen werden.</a> Wenn diese Funktion fehlschlägt, enthält die Struktur nicht definierte Daten.</p></td>
 </tr>
 <tr class="odd">
 <td><p>JET_ColInfoListCompact</p></td>
-<td><p><em>pvresult</em> wird als <a href="gg269228(v=exchg.10).md">JET_COLUMNLIST</a> Struktur interpretiert. Wenn diese Funktion erfolgreich ausgeführt wird, wird die Struktur mit entsprechenden Werten aufgefüllt. Eine temporäre Tabelle wird geöffnet und wird durch das <em>TableID</em> -Element von <a href="gg269228(v=exchg.10).md">JET_COLUMNLIST</a>identifiziert. Die Tabelle muss mit <a href="gg294087(v=exchg.10).md">jetclosetable</a>geschlossen werden. Wenn diese Funktion fehlschlägt, enthält die Struktur nicht definierte Daten.</p></td>
+<td><p><em>pvResult</em> wird als <a href="gg269228(v=exchg.10).md">eine</a> JET_COLUMNLIST interpretiert. Wenn diese Funktion erfolgreich ist, wird die -Struktur mit entsprechenden Werten aufgefüllt. Eine temporäre Tabelle wird geöffnet und durch den <em>tableid-Member</em> <a href="gg269228(v=exchg.10).md">von</a>JET_COLUMNLIST. Die Tabelle muss mit <a href="gg294087(v=exchg.10).md">JetCloseTable geschlossen werden.</a> Wenn diese Funktion fehlschlägt, enthält die Struktur nicht definierte Daten.</p></td>
 </tr>
 <tr class="even">
 <td><p>JET_ColInfoListSortColumnid</p></td>
-<td><p>Identisch mit JET_ColInfoList, die sich ergebende Tabelle wird jedoch nach <em>ColumnID</em>sortiert, anstelle des Spaltennamens.</p></td>
+<td><p>Wie JET_ColInfoList, wird die resultierende Tabelle jedoch nach <em>columnid</em>statt nach spaltenname sortiert.</p></td>
 </tr>
 <tr class="odd">
 <td><p>JET_ColInfoSysTabCursor</p></td>
-<td><p>JET_ColInfoSysTabCursor ist veraltet, und die Verwendung von wird JET_errFeatureNotAvailable zurückgegeben.</p></td>
+<td><p>JET_ColInfoSysTabCursor ist veraltet, und ihre Verwendung gibt JET_errFeatureNotAvailable.</p></td>
 </tr>
 <tr class="even">
 <td><p>JET_ColInfoBaseByColId</p></td>
-<td><p>Wie JET_ColInfoBase wird <em>pvresult</em> als <a href="gg269194(v=exchg.10).md">JET_COLUMNBASE</a>interpretiert, mit dem Unterschied, dass die angeforderte Spalte (<em>szcolumname</em>) nicht der Name der Zeichen <em>folgen</em> Spalte, sondern ein Zeiger auf eine <a href="gg294104(v=exchg.10).md">JET_COLUMNID</a>ist.</p>
-<p><strong>Windows Vista:  </strong> Diese ist in Windows Vista und höher verfügbar.</p></td>
+<td><p>Wie JET_ColInfoBase wird <em>pvResult</em> als JET_COLUMNBASE <a href="gg269194(v=exchg.10).md">interpretiert,</a>außer dass <em>infoLevel</em> angibt, dass die angeforderte Spalte (<em>szColumName</em>) nicht der Name der Zeichenfolgenspalte, sondern ein Zeiger auf eine <a href="gg294104(v=exchg.10).md">JET_COLUMNID.</a></p>
+<p><strong>Windows Vista:</strong> Dies ist in Windows Vista und höher verfügbar.</p></td>
 </tr>
 <tr class="odd">
 <td><p>JET_ColInfoGrbitNonDerivedColumnsOnly</p></td>
-<td><p>Gibt nur nicht abgeleitete Spalten zurück (wenn die Tabelle von einer Vorlage abgeleitet ist).</p>
-<p>Dieser Wert kann logisch oder in <em>infolevel</em>sein, wenn die Basis- <em>infolevel</em> JET_ColInfoList ist.</p>
-<p><strong>Windows Vista:  </strong> Dieser Wert wird in Windows Vista eingeführt.</p></td>
+<td><p>Geben Sie nur nicht abgeleitete Spalten zurück (wenn die Tabelle von einer Vorlage abgeleitet ist).</p>
+<p>Dieser Wert kann logisch oder in <em>InfoLevel sein,</em>wenn die <em>Basisinformationsebene</em> JET_ColInfoList.</p>
+<p><strong>Windows Vista:</strong> Dieser Wert wird in Windows Vista eingeführt.</p></td>
 </tr>
 <tr class="even">
 <td><p>JET_ColInfoGrbitMinimalInfo</p></td>
-<td><p>Gibt nur den Spaltennamen und den Spaltennamen für jede Spalte zurück.</p>
-<p>Dieser Wert kann logisch oder in <em>infolevel</em>sein, wenn die Basis- <em>infolevel</em> JET_ColInfoList ist.</p>
-<p><strong>Windows Vista:  </strong> Dieser Wert wird in Windows Vista eingeführt.</p></td>
+<td><p>Geben Sie nur den Spaltennamen und die Spalten-ID der einzelnen Spalten zurück.</p>
+<p>Dieser Wert kann logisch oder in <em>InfoLevel sein,</em>wenn die <em>Basisinformationsebene</em> JET_ColInfoList.</p>
+<p><strong>Windows Vista:</strong> Dieser Wert wird in Windows Vista eingeführt.</p></td>
 </tr>
 <tr class="odd">
 <td><p>JET_ColInfoGrbitSortByColumnid</p></td>
-<td><p>Dient zum Sortieren der zurückgegebenen Spaltenliste nach ColumnID (Standardmäßig wird die Liste nach Spaltennamen sortiert).</p>
-<p>Dieser Wert kann logisch oder in <em>infolevel</em>sein, wenn die Basis- <em>infolevel</em> JET_ColInfoList ist.</p>
-<p><strong>Windows Vista:  </strong> Dieser Wert wird in Windows Vista eingeführt.</p></td>
+<td><p>Sortiert die zurückgegebene Spaltenliste nach columnid (standardmäßig wird die Liste nach Spaltenname sortiert).</p>
+<p>Dieser Wert kann logisch oder in <em>InfoLevel sein,</em>wenn die <em>Basisinformationsebene</em> JET_ColInfoList.</p>
+<p><strong>Windows Vista:</strong> Dieser Wert wird in Windows Vista eingeführt.</p></td>
 </tr>
 </tbody>
 </table>
@@ -148,7 +148,7 @@ Die folgenden Optionen können für diesen Parameter festgelegt werden:
 
 ### <a name="return-value"></a>Rückgabewert
 
-Diese Funktion gibt den [JET_ERR](./jet-err.md) Datentyp mit einem der folgenden Rückgabecodes zurück. Weitere Informationen zu den möglichen ESE-Fehlern finden Sie unter [Extensible Storage Engine Errors](./extensible-storage-engine-errors.md) und [Error Handling Parameters](./error-handling-parameters.md).
+Diese Funktion gibt den [JET_ERR](./jet-err.md) Datentyp mit einem der folgenden Rückgabecodes zurück. Weitere Informationen zu den möglichen ESE-Fehlern finden Sie unter [Extensible Storage Engine Errors](./extensible-storage-engine-errors.md) and [Error Handling Parameters](./error-handling-parameters.md).
 
 <table>
 <colgroup>
@@ -168,26 +168,26 @@ Diese Funktion gibt den [JET_ERR](./jet-err.md) Datentyp mit einem der folgenden
 </tr>
 <tr class="even">
 <td><p>JET_errColumnNotFound</p></td>
-<td><p>Die Spalte mit dem Namen <em>szcolumnname</em> wurde in der Tabelle nicht gefunden.</p></td>
+<td><p>Die Spalte <em>szColumnName</em> wurde in der Tabelle nicht gefunden.</p></td>
 </tr>
 <tr class="odd">
 <td><p>JET_errFeatureNotAvailable</p></td>
-<td><p>Es wurde eine ungültige <em>infolevel</em> angegeben.</p></td>
+<td><p>Ein <em>fehlerhafter InfoLevel</em> wurde angegeben.</p></td>
 </tr>
 <tr class="even">
 <td><p>JET_errInvalidName</p></td>
-<td><p>Dieser Fehler kann zurückgegeben werden, wenn Folgendes gilt:</p>
+<td><p>Dieser Fehler kann zurückgegeben werden, wenn:</p>
 <ul>
-<li><p>Es wurde ein ungültiger Name für <em>sztablename</em> angegeben.</p></li>
-<li><p>Ein ungültiger Name für <em>szcolumnname</em> wurde angegeben.</p></li>
+<li><p>Es wurde ein fehlerhafter Name <em>für szTableName</em> angegeben.</p></li>
+<li><p>Es wurde ein fehlerhafter <em>Name für szColumnName</em> angegeben.</p></li>
 </ul></td>
 </tr>
 <tr class="odd">
 <td><p>JET_errInvalidParameter</p></td>
-<td><p>Dieser Fehler kann zurückgegeben werden, wenn Folgendes gilt:</p>
+<td><p>Dieser Fehler kann zurückgegeben werden, wenn:</p>
 <ul>
-<li><p>Es wurde eine ungültige <em>infolevel</em> angegeben.</p></li>
-<li><p>Ein NULL- <em>sztablename</em> -Wert wurde übermittelt.</p></li>
+<li><p>Ein <em>fehlerhafter InfoLevel</em> wurde angegeben.</p></li>
+<li><p>Ein NULL <em>szTableName</em> wurde übergeben.</p></li>
 <li><p>Der Puffer ist zu klein.</p></li>
 </ul></td>
 </tr>
@@ -195,15 +195,15 @@ Diese Funktion gibt den [JET_ERR](./jet-err.md) Datentyp mit einem der folgenden
 </table>
 
 
-#### <a name="remarks"></a>Bemerkungen
+#### <a name="remarks"></a>Hinweise
 
-**Jetgettablecolumninfo** und [jetgetcolumninfo](./jetgetcolumninfo-function.md) rufen Informationen zu einer Spalte ab. Der Unterschied besteht darin, wie die Tabelle identifiziert wird:
+**JetGetTableColumnInfo und** [JetGetColumnInfo](./jetgetcolumninfo-function.md) rufen informationen zu einer Spalte ab. Der Unterschied zwischen ihnen besteht in der Art und Weise, wie die Tabelle identifiziert wird:
 
-  - **Jetgettablecolumninfo** identifiziert eine Tabelle nach *TableID*.
+  - **JetGetTableColumnInfo** identifiziert eine Tabelle mit *tableid*.
 
-  - [Jetgetcolumninfo](./jetgetcolumninfo-function.md) identifiziert eine Tabelle mit der Kombination aus *DBID* und *sztablename* .
+  - [JetGetColumnInfo](./jetgetcolumninfo-function.md) identifiziert eine Tabelle durch *eine Kombination aus dbid* und *szTableName.*
 
-Beim Abrufen von Daten mit JET_ColInfoList, JET_ColInfoListSortColumnid oder JET_ColInfoListCompact wird eine temporäre Tabelle geöffnet. Die temporäre Tabelle enthält Daten, und die [JET_COLUMNLIST](./jet-columnlist-structure.md) Struktur enthält ausreichende Informationen, um die temporäre Tabelle zu durchlaufen. Die temporäre Tabelle muss mit [jetclosetable](./jetclosetable-function.md)geschlossen werden.
+Beim Abrufen von Daten mit JET_ColInfoList, JET_ColInfoListSortColumnid oder JET_ColInfoListCompact wird eine temporäre Tabelle geöffnet. Die temporäre Tabelle enthält Daten, und [JET_COLUMNLIST](./jet-columnlist-structure.md) Struktur enthält genügend Informationen, um die temporäre Tabelle zu durchlaufen. Die temporäre Tabelle muss mit [JetCloseTable geschlossen werden.](./jetclosetable-function.md)
 
 #### <a name="requirements"></a>Anforderungen
 
@@ -223,19 +223,19 @@ Beim Abrufen von Daten mit JET_ColInfoList, JET_ColInfoListSortColumnid oder JET
 </tr>
 <tr class="odd">
 <td><p><strong>Header</strong></p></td>
-<td><p>In "ESENT. h" deklariert.</p></td>
+<td><p>In Esent.h deklariert.</p></td>
 </tr>
 <tr class="even">
 <td><p><strong>Bibliothek</strong></p></td>
-<td><p>Verwenden Sie ESENT. lib.</p></td>
+<td><p>Verwenden Sie ESENT.lib.</p></td>
 </tr>
 <tr class="odd">
-<td><p><strong>DLL</strong></p></td>
+<td><p><strong>Dll</strong></p></td>
 <td><p>Erfordert ESENT.dll.</p></td>
 </tr>
 <tr class="even">
 <td><p><strong>Unicode</strong></p></td>
-<td><p>Implementiert als <strong>jetgettablecolumninfow</strong> (Unicode) und <strong>jetgettablecolumninfoa</strong> (ANSI).</p></td>
+<td><p>Implementiert als <strong>JetGetTableColumnInfoW</strong> (Unicode) und <strong>JetGetTableColumnInfoA</strong> (ANSI).</p></td>
 </tr>
 </tbody>
 </table>
@@ -243,8 +243,8 @@ Beim Abrufen von Daten mit JET_ColInfoList, JET_ColInfoListSortColumnid oder JET
 
 #### <a name="see-also"></a>Weitere Informationen
 
-[Erweiterbare Speicher-Engine-Fehler](./extensible-storage-engine-errors.md)  
-[Fehler Behandlungsparameter](./error-handling-parameters.md)  
+[Erweiterbare Storage Engine-Fehler](./extensible-storage-engine-errors.md)  
+[Fehlerbehandlungsparameter](./error-handling-parameters.md)  
 [JET_COLUMNBASE](./jet-columnbase-structure.md)  
 [JET_COLUMNDEF](./jet-columndef-structure.md)  
 [JET_COLUMNID](./jet-columnid.md)  
@@ -253,6 +253,6 @@ Beim Abrufen von Daten mit JET_ColInfoList, JET_ColInfoListSortColumnid oder JET
 [JET_GRBIT](./jet-grbit.md)  
 [JET_SESID](./jet-sesid.md)  
 [JET_TABLEID](./jet-tableid.md)  
-[Jetclosetable](./jetclosetable-function.md)  
-[Jetgetcolumninfo](./jetgetcolumninfo-function.md)  
-[Jetgettablecolumninfo]()
+[JetCloseTable](./jetclosetable-function.md)  
+[JetGetColumnInfo](./jetgetcolumninfo-function.md)  
+[JetGetTableColumnInfo]()

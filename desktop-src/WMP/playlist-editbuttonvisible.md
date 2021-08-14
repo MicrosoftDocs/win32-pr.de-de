@@ -1,9 +1,9 @@
 ---
-title: Wiedergabeliste. editbuttonvisible
-description: Mit dem editbuttonvisible-Attribut wird ein Wert angegeben oder abgerufen, der angibt, ob die Schaltfläche "Wiedergabeliste" angezeigt wird.
+title: PLAYLIST.editButtonVisible
+description: Das editButtonVisible-Attribut gibt einen Wert an, der angibt, ob die Wiedergabelisten-Bearbeitungsschaltfläche sichtbar ist, oder ruft einen Wert ab.
 ms.assetid: 716e5484-b4b0-49a6-a778-ead1479fda54
 keywords:
-- Wiedergabeliste. editbuttonvisible Windows Media Player
+- PLAYLIST.editButtonVisible Windows Media Player
 topic_type:
 - apiref
 api_name:
@@ -12,16 +12,16 @@ api_type:
 - NA
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 48534d9e933f5c0e304fe0bb743c048c765cc772
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: c8e22712e37f3fcd800677af0659673d9ca85d818b86b1efdf8f039f731b0306
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106373672"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119467740"
 ---
-# <a name="playlisteditbuttonvisible"></a>Wiedergabeliste. editbuttonvisible
+# <a name="playlisteditbuttonvisible"></a>PLAYLIST.editButtonVisible
 
-Mit dem **editbuttonvisible** -Attribut wird ein Wert angegeben oder abgerufen, der angibt, ob die Schaltfläche "Wiedergabeliste" angezeigt wird.
+Das **editButtonVisible-Attribut** gibt einen Wert an, der angibt, ob die Wiedergabelisten-Bearbeitungsschaltfläche sichtbar ist, oder ruft einen Wert ab.
 
 ``` syntax
         elementID.editButtonVisible
@@ -29,7 +29,7 @@ Mit dem **editbuttonvisible** -Attribut wird ein Wert angegeben oder abgerufen, 
 
 ## <a name="possible-values"></a>Mögliche Werte
 
-Dieses Attribut ist ein **boolescher** Wert mit Lese-/Schreibzugriff.
+Dieses Attribut ist ein boolescher Wert mit **Lese-/Schreibzugriff.**
 
 
 
@@ -42,9 +42,9 @@ Dieses Attribut ist ein **boolescher** Wert mit Lese-/Schreibzugriff.
 
  
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Wenn Sie dieses Attribut auf true festlegen, wird die Schaltfläche zum Bearbeiten der Wiedergabeliste in der unteren linken Ecke des **Wiedergabe** Listen Elements angezeigt. Wenn Sie auf diese Schaltfläche klicken, wird ein Menü mit Optionen angezeigt, mit dem Benutzer eine Wiedergabeliste bearbeiten, löschen, sortieren, öffnen, speichern oder kopieren können.
+Wenn Sie dieses Attribut auf TRUE festlegen, wird die Wiedergabelisten-Bearbeitungsschaltfläche in der unteren linken Ecke des **PLAYLIST-Elements** angezeigt. Wenn Sie auf diese Schaltfläche klicken, wird ein Menü mit Optionen angezeigt, mit denen der Benutzer eine Wiedergabeliste bearbeiten, löschen, sortieren, öffnen, speichern oder kopieren kann.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -52,15 +52,15 @@ Wenn Sie dieses Attribut auf true festlegen, wird die Schaltfläche zum Bearbeit
 
 | Anforderung | Wert |
 |--------------------|---------------------------------------------------|
-| Version<br/> | Windows Media Player 9-Serie oder höher<br/> |
+| Version<br/> | Windows Media Player 9er Serie oder höher<br/> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Wiedergabelisten Element**](playlist-element.md)
+[**PLAYLIST-Element**](playlist-element.md)
 </dt> </dl>
 
  

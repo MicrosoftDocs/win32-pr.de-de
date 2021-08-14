@@ -1,9 +1,9 @@
 ---
-title: EM_POSFROMCHAR Meldung (Winuser. h)
-description: Ruft die Client Bereichs Koordinaten eines angegebenen Zeichens in einem Bearbeitungs Steuerelement ab. Sie können diese Nachricht entweder an ein Bearbeitungs Steuerelement oder ein Rich Edit-Steuerelement senden.
+title: EM_POSFROMCHAR (Winuser.h)
+description: Ruft die Clientbereichkoordinaten eines angegebenen Zeichens in einem Bearbeitungssteuerzeichen ab. Sie können diese Nachricht entweder an ein Bearbeitungssteuer steuerelement oder an ein Rich Edit-Steuerelement senden.
 ms.assetid: a32532fa-976f-4c19-ac6e-29e5614fc410
 keywords:
-- Windows-Steuerelemente für EM_POSFROMCHAR Meldung
+- EM_POSFROMCHAR meldungssteuerelemente Windows
 topic_type:
 - apiref
 api_name:
@@ -14,16 +14,16 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: d98968873ad006b2e91cf3add2429bf7630fae1c
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: b0e1d9d2dccb6ccf1bd80b44b2221f8628f13e595ee514074956e7869447d513
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104517981"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119437880"
 ---
-# <a name="em_posfromchar-message"></a>EM \_ posfromchar-Nachricht
+# <a name="em_posfromchar-message"></a>EM \_ POSFROMCHAR-Nachricht
 
-Ruft die Client Bereichs Koordinaten eines angegebenen Zeichens in einem Bearbeitungs Steuerelement ab. Sie können diese Nachricht entweder an ein Bearbeitungs Steuerelement oder ein Rich Edit-Steuerelement senden.
+Ruft die Clientbereichkoordinaten eines angegebenen Zeichens in einem Bearbeitungssteuerzeichen ab. Sie können diese Nachricht entweder an ein Bearbeitungssteuer steuerelement oder an ein Rich Edit-Steuerelement senden.
 
 ## <a name="parameters"></a>Parameter
 
@@ -32,36 +32,36 @@ Ruft die Client Bereichs Koordinaten eines angegebenen Zeichens in einem Bearbei
 *wParam* 
 </dt> <dd>
 
-Umfassende **Bearbeitung 1,0 und 3,0:** Ein Zeiger auf eine [**pointl**](/previous-versions//dd162807(v=vs.85)) -Struktur, die die Client Bereichs Koordinaten des Zeichens empfängt. Die Koordinaten befinden sich in Bildschirm Einheiten und sind relativ zur oberen linken Ecke des Client Bereichs des Steuer Elements.
+**Rich Edit 1.0 und 3.0:** Ein Zeiger auf eine [**POINTL-Struktur,**](/previous-versions//dd162807(v=vs.85)) die die Clientbereichkoordinaten des Zeichens empfängt. Die Koordinaten befinden sich in Bildschirmeinheiten und sind relativ zur oberen linken Ecke des Clientbereichs des Steuerelements.
 
-**Bearbeitungs Steuerelemente und umfangreiche Bearbeitung 2,0:** Der null basierte Index des Zeichens.
+**Steuerelemente bearbeiten und Rich Edit 2.0:** Der nullbasierte Index des Zeichens.
 
 </dd> <dt>
 
 *lParam* 
 </dt> <dd>
 
-Umfassende **Bearbeitung 1,0 und 3,0:** Der null basierte Index des Zeichens.
+**Rich Edit 1.0 und 3.0:** Der nullbasierte Index des Zeichens.
 
-**Bearbeitungs Steuerelemente und umfangreiche Bearbeitung 2,0:** Dieser Parameter wird nicht verwendet.
+**Steuerelemente bearbeiten und Rich Edit 2.0:** Dieser Parameter wird nicht verwendet.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Umfassende **Bearbeitung 1,0 und 3,0:** Der Rückgabewert wird nicht verwendet.
+**Rich Edit 1.0 und 3.0:** Der Rückgabewert wird nicht verwendet.
 
-**Bearbeitungs Steuerelemente und umfangreiche Bearbeitung 2,0:** Der Rückgabewert enthält die Client Bereichs Koordinaten des Zeichens. Das [**LoWord**](/previous-versions/windows/desktop/legacy/ms632659(v=vs.85)) enthält die horizontale Koordinate, und das [**HIWORD**](/previous-versions/windows/desktop/legacy/ms632657(v=vs.85)) enthält die vertikale Koordinate.
+**Steuerelemente bearbeiten und Rich Edit 2.0:** Der Rückgabewert enthält die Clientbereichkoordinaten des Zeichens. Das [**LOWORD enthält**](/previous-versions/windows/desktop/legacy/ms632659(v=vs.85)) die horizontale Koordinate und [**das HIWORD**](/previous-versions/windows/desktop/legacy/ms632657(v=vs.85)) die vertikale Koordinate.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Eine zurückgegebene Koordinate kann ein negativer Wert sein, wenn das angegebene Zeichen nicht im Client Bereich des Bearbeitungs Steuer Elements angezeigt wird. Die Koordinaten werden auf ganzzahlige Werte gekürzt.
+Eine zurückgegebene Koordinate kann ein negativer Wert sein, wenn das angegebene Zeichen nicht im Clientbereich des Bearbeitungssteuerzeichens angezeigt wird. Die Koordinaten werden auf ganzzahlige Werte gekürzt.
 
-Wenn das Zeichen ein Zeilen Trennzeichen ist, geben die zurückgegebenen Koordinaten einen Punkt direkt hinter dem letzten sichtbaren Zeichen in der Zeile an. Wenn der angegebene Index größer als der Index des letzten Zeichens im-Steuerelement ist, gibt das Steuerelement-1 zurück.
+Wenn das Zeichen ein Zeilentrennzeichen ist, geben die zurückgegebenen Koordinaten einen Punkt direkt hinter dem letzten sichtbaren Zeichen in der Zeile an. Wenn der angegebene Index größer als der Index des letzten Zeichens im -Steuerelement ist, gibt das Steuerelement -1 zurück.
 
-**Rich Edit 3,0 und höher:** Aus Gründen der Abwärtskompatibilität unterstützt Microsoft Rich Edit 3,0 die Syntax, die von Microsoft Rich Edit 2,0 verwendet wird. Wenn Microsoft Rich Edit 3,0 erkennt, dass *wParam* kein gültiger [**pointl**](/previous-versions//dd162807(v=vs.85)) -Zeiger ist, wird davon ausgegangen, dass die Nachricht mit der Microsoft Rich Edit 2,0-Syntax gesendet wurde. In diesem Fall wird der Rückgabewert verwendet, um die Koordinaten zurückzugeben.
+**Rich Edit 3.0 und höher:** Aus Gründen der Abwärtskompatibilität unterstützt Microsoft Rich Edit 3.0 die von Microsoft Rich Edit 2.0 verwendete Syntax. Wenn Microsoft Rich Edit 3.0 erkennt, dass *wParam* kein gültiger [**POINTL-Zeiger**](/previous-versions//dd162807(v=vs.85)) ist, wird davon ausgegangen, dass die Nachricht mit der Microsoft Rich Edit 2.0-Syntax gesendet wurde. In diesem Fall wird der Rückgabewert verwendet, um die Koordinaten zurück zu geben.
 
-Umfassende **Bearbeitung:** Wird in Microsoft Rich Edit 1,0 und höher unterstützt. Informationen zur Kompatibilität von Rich-Edit-Versionen mit den verschiedenen Systemversionen finden Sie unter Informationen [zu Rich Edit](about-rich-edit-controls.md)-Steuerelementen.
+**Umfangreiche Bearbeitung:** Wird in Microsoft Rich Edit 1.0 und höher unterstützt. Informationen zur Kompatibilität von Rich Edit-Versionen mit den verschiedenen Systemversionen finden Sie unter [Informationen zu Rich Edit-Steuerelementen.](about-rich-edit-controls.md)
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -69,26 +69,26 @@ Umfassende **Bearbeitung:** Wird in Microsoft Rich Edit 1,0 und höher unterstü
 
 | Anforderung | Wert |
 |-------------------------------------|----------------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>                                                           |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2003 \[ -Desktop-Apps\]<br/>                                                     |
-| Header<br/>                   | <dl> <dt>Winuser. h (Windows. h einschließen)</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur \[ Vista-Desktop-Apps\]<br/>                                                           |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2003-Desktop-Apps\]<br/>                                                     |
+| Header<br/>                   | <dl> <dt>Winuser.h (include Windows.h)</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen:
 
 <dl> <dt>
 
-**Verweis**
+**Referenz**
 </dt> <dt>
 
-[**EM \_ charfrompos**](em-charfrompos.md)
+[**EM \_ CHARFROMPOS**](em-charfrompos.md)
 </dt> <dt>
 
 **Andere Ressourcen**
 </dt> <dt>
 
-[**Pointl**](/previous-versions//dd162807(v=vs.85))
+[**POINTL**](/previous-versions//dd162807(v=vs.85))
 </dt> </dl>
 
  

@@ -1,7 +1,7 @@
 ---
-description: Die getownerwindow-Methode ruft das besitzende Fenster Handle "m \_ hwndOwner" ab.
+description: Die GetOwnerWindow-Methode ruft das besitzende Fensterhand handle m \_ hwndOwner ab.
 ms.assetid: fa576b42-b4a7-4374-8ba4-7d21e86d9d61
-title: Cbasecontrolwindow. getownerwindow-Methode (ctlutil. h)
+title: CBaseControlWindow.GetOwnerWindow-Methode (Ctlutil.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -16,16 +16,16 @@ api_location:
 - Strmbase.dll
 - Strmbasd.lib
 - Strmbasd.dll
-ms.openlocfilehash: 4e4d3811f85abd68bcd7d625dce0e9e8963be39a
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 0cdb3073d1dd8055986b905d6e8f50967a304e5f294b0ffcaeddcd50d8c0ee33
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106369702"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119432510"
 ---
-# <a name="cbasecontrolwindowgetownerwindow-method"></a>Cbasecontrolwindow. getownerwindow-Methode
+# <a name="cbasecontrolwindowgetownerwindow-method"></a>CBaseControlWindow.GetOwnerWindow-Methode
 
-Die- `GetOwnerWindow` Methode ruft das besitzende Fenster Handle " **m \_ hwndOwner**" ab.
+Die `GetOwnerWindow` -Methode ruft den besitzenden Fensterhandpunkt **m \_ hwndOwner ab.**
 
 ## <a name="syntax"></a>Syntax
 
@@ -42,11 +42,11 @@ Diese Methode hat keine Parameter.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt das Besitzer Fenster zurück.
+Gibt das Besitzerfenster zurück.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Ruft das besitzende Fenster ohne Aufrufen der Schnittstellen Methode ab. Verwenden Sie diese Member-Funktion anstelle von " [**cbasecontrolwindow:: get \_ Owner**](cbasecontrolwindow-get-owner.md)", es sei denn, Sie rufen dies extern über die [**IVideoWindow:: get- \_ Besitzer**](/windows/desktop/api/Control/nf-control-ivideowindow-get_owner) Methode auf.
+Ruft das besitzende Fenster ab, ohne die Schnittstellenmethode auf aufruft. Verwenden Sie diese Memberfunktion anstelle [**von CBaseControlWindow::get \_ Owner,**](cbasecontrolwindow-get-owner.md)es sei denn, Sie rufen diese extern über die [**IVideoWindow::get \_ Owner-Methode**](/windows/desktop/api/Control/nf-control-ivideowindow-get_owner) auf.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -54,16 +54,16 @@ Ruft das besitzende Fenster ohne Aufrufen der Schnittstellen Methode ab. Verwend
 
 | Anforderung | Wert |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>Ctlutil. h (Include Streams. h)</dt> </dl>                                                                                   |
-| Bibliothek<br/> | <dl> " <dt>Straumbase. lib" (Einzelhandels Builds);</dt> " <dt>Straumbasd. lib" (Debugbuilds)</dt> </dl> |
+| Header<br/>  | <dl> <dt>Ctlutil.h (include Streams.h)</dt> </dl>                                                                                   |
+| Bibliothek<br/> | <dl> <dt>Strmbase.lib (Einzelhandels-Builds); </dt> <dt>Strmbasd.lib (Debugbuilds)</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen:
 
 <dl> <dt>
 
-[**Cbasecontrolwindow-Klasse**](cbasecontrolwindow.md)
+[**CBaseControlWindow-Klasse**](cbasecontrolwindow.md)
 </dt> </dl>
 
  

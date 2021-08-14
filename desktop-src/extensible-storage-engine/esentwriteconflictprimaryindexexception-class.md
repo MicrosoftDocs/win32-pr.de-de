@@ -1,6 +1,6 @@
 ---
-description: 'Weitere Informationen finden Sie unter: esentschreiteconflictprimaryindexexception-Klasse'
-title: Esentwrite teconflictprimaryindexexception-Klasse
+description: 'Weitere Informationen zu: EsentWriteConflictPrimaryIndexException-Klasse'
+title: EsentWriteConflictPrimaryIndexException-Klasse
 TOCTitle: EsentWriteConflictPrimaryIndexException class
 ms:assetid: T:Microsoft.Isam.Esent.Interop.EsentWriteConflictPrimaryIndexException
 ms:mtpsurl: https://msdn.microsoft.com/library/microsoft.isam.esent.interop.esentwriteconflictprimaryindexexception(v=EXCHG.10)
@@ -24,29 +24,29 @@ api_type:
 api_location:
 - Microsoft.Isam.Esent.Interop.dll
 ROBOTS: INDEX,FOLLOW
-ms.openlocfilehash: df38255376ddf4f17562f26eced109d417558852
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: de1cbe1c5cadcc0a19354d6eec9f19f78c996cd333763029f5ce6f911d0a9263
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106364084"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119233990"
 ---
-# <a name="esentwriteconflictprimaryindexexception-class"></a>Esentwrite teconflictprimaryindexexception-Klasse
+# <a name="esentwriteconflictprimaryindexexception-class"></a>EsentWriteConflictPrimaryIndexException-Klasse
 
-Basisklasse für JET_err. "Write-conflictprimaryindex"-Ausnahmen.
+Basisklasse für JET_err. WriteConflictPrimaryIndex-Ausnahmen.
 
 ## <a name="inheritance-hierarchy"></a>Vererbungshierarchie
 
 [System.Object](/dotnet/api/system.object)  
   [System.Exception](/dotnet/api/system.exception)  
-    [Microsoft. ISAM. ESENT. esentexception](./esentexception-class.md)  
-      [Microsoft. ISAM. ESENT. Interop. esenterrorexception](./esenterrorexception-class.md)  
-        [Microsoft. ISAM. ESENT. Interop. esentapiexception](./esentapiexception-class.md)  
-          [Microsoft. ISAM. ESENT. Interop. esentstateexception](./esentstateexception-class.md)  
-            Microsoft. ISAM. ESENT. Interop. esentschreiteconflictprimaryindexexception  
+    [Microsoft.Isam.Esent.EsentException](./esentexception-class.md)  
+      [Microsoft.Isam.Esent.Interop.EsentErrorException](./esenterrorexception-class.md)  
+        [Microsoft.Isam.Esent.Interop.EsentApiException](./esentapiexception-class.md)  
+          [Microsoft.Isam.Esent.Interop.EsentStateException](./esentstateexception-class.md)  
+            Microsoft.Isam.Esent.Interop.EsentWriteConflictPrimaryIndexException  
 
-**Namespace:**  [Microsoft. ISAM. ESENT. Interop](./microsoft.isam.esent.interop-namespace.md)  
-**Assembly:**  Microsoft. ISAM. ESENT. Interop (in Microsoft.Isam.Esent.Interop.dll)
+**Namespace:**  [Microsoft.Isam.Esent.Interop](./microsoft.isam.esent.interop-namespace.md)  
+**Assembly:**  Microsoft.Isam.Esent.Interop (in Microsoft.Isam.Esent.Interop.dll)
 
 ## <a name="syntax"></a>Syntax
 
@@ -68,10 +68,10 @@ public sealed class EsentWriteConflictPrimaryIndexException : EsentStateExceptio
 
 Alle öffentlichen statischen Elemente dieses Typs (Shared in Microsoft Visual Basic) sind threadsicher. Bei Instanzmembern ist die Threadsicherheit nicht gewährleistet.
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
-#### <a name="reference"></a>Referenz
+#### <a name="reference"></a>Verweis
 
-[Esentschreiteconflictprimaryindexexception-Member](./esentwriteconflictprimaryindexexception-members.md)
+[EsentWriteConflictPrimaryIndexException-Member](./esentwriteconflictprimaryindexexception-members.md)
 
-[Microsoft. ISAM. ESENT. Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)
+[Microsoft.Isam.Esent.Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)

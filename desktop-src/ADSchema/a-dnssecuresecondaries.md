@@ -1,11 +1,11 @@
 ---
-title: DNS-Secure-Secon-Replikat-Attribut
-description: Das DNS-Secure-Secon-Replikat-Attribut wird derzeit nicht verwendet.
+title: Dns-Secure-Secondaries-Attribut
+description: Das Dns-Secure-Secondaries-Attribut wird derzeit nicht verwendet.
 ms.assetid: ba5110f1-e451-4f85-897e-e4223649dc10
 ms.tgt_platform: multiple
 keywords:
-- DNS-Secure-seconreplikat-Attribut AD-Schema
-- dnssecureseconreplikat-Attribut AD-Schema
+- AD-Schema des Dns-Secure-Secondaries-Attributs
+- AD-Schema des dnsSecureSecondaries-Attributs
 topic_type:
 - apiref
 api_name:
@@ -14,28 +14,28 @@ api_type:
 - Schema
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: b4d6d45c642ec9045d5eb8593492e385245bc635
-ms.sourcegitcommit: b77ace27b0432e7cd3863191b11926be032fbe2f
+ms.openlocfilehash: f72ca21992256df6b2fbe92b34400b9e2b6e368101fc158ea513381ed0445acf
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "104107108"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119804890"
 ---
-# <a name="dns-secure-secondaries-attribute"></a>DNS-Secure-Secon-Replikat-Attribut
+# <a name="dns-secure-secondaries-attribute"></a>Dns-Secure-Secondaries-Attribut
 
-Das **DNS-Secure-Secon-** Replikat-Attribut wird derzeit nicht verwendet.
+Das **Dns-Secure-Secondaries-Attribut** wird derzeit nicht verwendet.
 
 
 
 | Eingabe | Wert |
 |-------------------|--------------------------------------|
-| CN                | DNS-Secure-Secon-Replikate               |
-| LDAP-Display-Name | dnssecuresecon-Replikate                 |
+| CN                | Dns-Secure-Secondaries               |
+| Ldap-Anzeigename | dnsSecureSecondaries                 |
 | Size              | \-                                   |
-| Berechtigung aktualisieren  | \-                                   |
-| Aktualisierungshäufigkeit  | \-                                   |
+| Aktualisieren von Berechtigungen  | \-                                   |
+| Updatehäufigkeit  | \-                                   |
 | Attribute-Id      | 1.2.840.113556.1.4.380               |
-| System-ID-GUID    | e0fa1e67-9b45-11d0-afdd-00c04fd930c9 |
+| System-Id-Guid    | e0fa1e67-9b45-11d0-afdd-00c04fd930c9 |
 | Syntax            | [**Enumeration**](s-enumeration.md) |
 
 
@@ -43,7 +43,7 @@ Das **DNS-Secure-Secon-** Replikat-Attribut wird derzeit nicht verwendet.
 ## <a name="implementations"></a>Implementierungen
 
 -   [**Windows 2000 Server**](#windows-2000-server)
--   [**Windows Server 2003**](#windows-server-2003)
+-   [**Windows Server 2003**](#windows-server-2003)
 -   [**Windows Server 2003 R2**](#windows-server-2003-r2)
 -   [**Windows Server 2008**](#windows-server-2008)
 -   [**Windows Server 2008 R2**](#windows-server-2008-r2)
@@ -58,10 +58,10 @@ Das **DNS-Secure-Secon-** Replikat-Attribut wird derzeit nicht verwendet.
 | Link-ID                | \-                                       |
 | MAPI-Id                | \-                                       |
 | System-Only            | False                                    |
-| Ist-einwertig       | False                                    |
+| Is-Single-Valued       | False                                    |
 | Ist indiziert             | False                                    |
 | Im globalen Katalog      | False                                    |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                             |
+| NT-Security-Descriptor | O:BAG:BAD:S:                             |
 | Range-Lower            | \-                                       |
 | Range-Upper            | \-                                       |
 | Search-Flags           | 0x00000000                               |
@@ -70,7 +70,7 @@ Das **DNS-Secure-Secon-** Replikat-Attribut wird derzeit nicht verwendet.
 
 
 
-## <a name="windows-server-2003"></a>Windows Server 2003
+## <a name="windows-server-2003"></a>Windows Server 2003
 
 
 
@@ -79,10 +79,10 @@ Das **DNS-Secure-Secon-** Replikat-Attribut wird derzeit nicht verwendet.
 | Link-ID                | \-                                       |
 | MAPI-Id                | \-                                       |
 | System-Only            | False                                    |
-| Ist-einwertig       | False                                    |
+| Is-Single-Valued       | False                                    |
 | Ist indiziert             | False                                    |
 | Im globalen Katalog      | False                                    |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                             |
+| NT-Security-Descriptor | O:BAG:BAD:S:                             |
 | Range-Lower            | \-                                       |
 | Range-Upper            | \-                                       |
 | Search-Flags           | 0x00000000                               |
@@ -100,10 +100,10 @@ Das **DNS-Secure-Secon-** Replikat-Attribut wird derzeit nicht verwendet.
 | Link-ID                | \-                                       |
 | MAPI-Id                | \-                                       |
 | System-Only            | False                                    |
-| Ist-einwertig       | False                                    |
+| Is-Single-Valued       | False                                    |
 | Ist indiziert             | False                                    |
 | Im globalen Katalog      | False                                    |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                             |
+| NT-Security-Descriptor | O:BAG:BAD:S:                             |
 | Range-Lower            | \-                                       |
 | Range-Upper            | \-                                       |
 | Search-Flags           | 0x00000000                               |
@@ -121,15 +121,15 @@ Das **DNS-Secure-Secon-** Replikat-Attribut wird derzeit nicht verwendet.
 | Link-ID                | \-                                       |
 | MAPI-Id                | \-                                       |
 | System-Only            | False                                    |
-| Ist-einwertig       | False                                    |
+| Ist einwertig       | False                                    |
 | Ist indiziert             | False                                    |
 | Im globalen Katalog      | False                                    |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                             |
+| NT-Security-Descriptor | O:BAG:BAD:S:                             |
 | Range-Lower            | \-                                       |
 | Range-Upper            | \-                                       |
 | Search-Flags           | 0x00000000                               |
 | System-Flags           | 0x00000010                               |
-| In verwendete Klassen        | [**DNS-Zone**](c-dnszone.md)<br/> |
+| In verwendete Klassen        | [**Dns-Zone**](c-dnszone.md)<br/> |
 
 
 
@@ -142,15 +142,15 @@ Das **DNS-Secure-Secon-** Replikat-Attribut wird derzeit nicht verwendet.
 | Link-ID                | \-                                       |
 | MAPI-Id                | \-                                       |
 | System-Only            | False                                    |
-| Ist-einwertig       | False                                    |
+| Ist einwertig       | False                                    |
 | Ist indiziert             | False                                    |
 | Im globalen Katalog      | False                                    |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                             |
+| NT-Security-Descriptor | O:BAG:BAD:S:                             |
 | Range-Lower            | \-                                       |
 | Range-Upper            | \-                                       |
 | Search-Flags           | 0x00000000                               |
 | System-Flags           | 0x00000010                               |
-| In verwendete Klassen        | [**DNS-Zone**](c-dnszone.md)<br/> |
+| In verwendete Klassen        | [**Dns-Zone**](c-dnszone.md)<br/> |
 
 
 
@@ -163,15 +163,15 @@ Das **DNS-Secure-Secon-** Replikat-Attribut wird derzeit nicht verwendet.
 | Link-ID                | \-                                       |
 | MAPI-Id                | \-                                       |
 | System-Only            | False                                    |
-| Ist-einwertig       | False                                    |
+| Ist einwertig       | False                                    |
 | Ist indiziert             | False                                    |
 | Im globalen Katalog      | False                                    |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                             |
+| NT-Security-Descriptor | O:BAG:BAD:S:                             |
 | Range-Lower            | \-                                       |
 | Range-Upper            | \-                                       |
 | Search-Flags           | 0x00000000                               |
 | System-Flags           | 0x00000010                               |
-| In verwendete Klassen        | [**DNS-Zone**](c-dnszone.md)<br/> |
+| In verwendete Klassen        | [**Dns-Zone**](c-dnszone.md)<br/> |
 
 
 

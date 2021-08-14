@@ -4,12 +4,12 @@ ms.assetid: ef676f02-56a7-4b3a-9ca3-e7fa3c494ec7
 title: ServiceID-Element
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: c4c8b02fa8ecfa936aa658a1f18242e4f14eb0dd
-ms.sourcegitcommit: b6fe9acffad983c14864b8fe0296f6025cb1f961
+ms.openlocfilehash: 0dc6ac1da57109f4f5671caf16a49b3a6174e7bfb63335d5ba15a548d7135990
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2021
-ms.locfileid: "107995107"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119756740"
 ---
 # <a name="serviceid-element"></a>ServiceID-Element
 
@@ -35,8 +35,8 @@ Es gibt keine untergeordneten Elemente.
 
 | Element                             | BESCHREIBUNG                                                                                                                                                                                                                                                                                                                          |
 |-------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| [**Host**](host.md)<br/>     | Definiert die **Elemente ServiceID** und [**Types**](types.md) für den Diensthost. Wenn sie nicht explizit angegeben wird, stellt WSDAPI als Reaktion auf Metadatenanforderungen keine Standarddaten bereit.<br/> <br/>                                                                                                                     |
-| [**Gehostet**](hosted.md)<br/> | Definiert die **Elemente ServiceID** und [**Types**](types.md) für die von diesem Diensthost bereitgestellten Dienste. Jeder von diesem Diensthost bereitgestellte Dienst sollte über eigene Informationen zu [**gehosteten**](hosted.md) Elementen verfügen, um sicherzustellen, dass der Dienst ordnungsgemäß als Antwort auf Metadatenanforderungen veröffentlicht wird.<br/> <br/> |
+| [**Host**](host.md)<br/>     | Definiert die **ServiceID-** und [**Types-Elemente**](types.md) für den Diensthost. Wenn dies nicht explizit erfolgt, stellt WSDAPI keine Standarddaten als Reaktion auf Metadatenanforderungen bereit.<br/> <br/>                                                                                                                     |
+| [**Gehostet**](hosted.md)<br/> | Definiert die **ServiceID-** und [**Types-Elemente**](types.md) für die dienste, die von diesem Diensthost bereitgestellt werden. Jeder von diesem Diensthost bereitgestellte [](hosted.md) Dienst sollte über eigene gehostete Elementinformationen verfügen, um sicherzustellen, dass der Dienst ordnungsgemäß in Antworten auf Metadatenanforderungen veröffentlicht wird.<br/> <br/> |
 
 
 

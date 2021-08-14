@@ -1,9 +1,9 @@
 ---
-title: TVM_GETITEMSTATE Meldung (kommstrg. h)
-description: Ruft einige oder alle Zustands Attribute eines Struktur Ansichts Elements ab. Sie können diese Nachricht explizit oder mithilfe des TreeView \_ GetItemState-Makros senden.
+title: TVM_GETITEMSTATE (Commctrl.h)
+description: Ruft einige oder alle Zustandsattribute eines Strukturansichtselements ab. Sie können diese Nachricht explizit oder mithilfe des TreeView \_ GetItemState-Makros senden.
 ms.assetid: 89aaaa82-2809-4e4e-a325-5666a57c5cbb
 keywords:
-- Windows-Steuerelemente für TVM_GETITEMSTATE Meldung
+- TVM_GETITEMSTATE message Windows Controls
 topic_type:
 - apiref
 api_name:
@@ -14,16 +14,16 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: b851ff3845743c802a2a914a0f40d5d9eb65c6a8
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: ff562af5a97684caa3e5b17ab47d0f67f82a6789e2510cf1598a3189073fda81
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104040788"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119261260"
 ---
-# <a name="tvm_getitemstate-message"></a>TVM- \_ GetItemState-Meldung
+# <a name="tvm_getitemstate-message"></a>TVM \_ GETITEMSTATE-Nachricht
 
-Ruft einige oder alle Zustands Attribute eines Struktur Ansichts Elements ab. Sie können diese Nachricht explizit oder mithilfe des [**TreeView \_ GetItemState**](/windows/desktop/api/Commctrl/nf-commctrl-treeview_getitemstate) -Makros senden.
+Ruft einige oder alle Zustandsattribute eines Strukturansichtselements ab. Sie können diese Nachricht explizit oder mithilfe des [**TreeView \_ GetItemState-Makros**](/windows/desktop/api/Commctrl/nf-commctrl-treeview_getitemstate) senden.
 
 ## <a name="parameters"></a>Parameter
 
@@ -39,13 +39,13 @@ Handle für das Element.
 *lParam* 
 </dt> <dd>
 
-Maske, die verwendet wird, um die abzufragende Zustände anzugeben. Dies entspricht dem **Status Ask** -Member von [**tvitemex**](/windows/win32/api/commctrl/ns-commctrl-tvitemexa).
+Maske, die verwendet wird, um die zu abfragenden Zustände anzugeben. Sie entspricht dem **stateMask-Member** von [**TVITEMEX.**](/windows/win32/api/commctrl/ns-commctrl-tvitemexa)
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt einen **uint** -Wert zurück, bei dem die entsprechenden Zustands Bits auf **true** festgelegt sind. Nur die Bits, die von *LPARAM* angegeben werden und **true** sind, werden festgelegt. Dieser Wert entspricht dem **State** -Member von [**tvitemex**](/windows/win32/api/commctrl/ns-commctrl-tvitemexa).
+Gibt einen **UINT-Wert** zurück, bei dem die entsprechenden Zustandsbits auf **TRUE festgelegt sind.** Es werden nur die Bits festgelegt, die *von lParam angegeben* werden und **TRUE** sind. Dieser Wert entspricht dem **Zustandsmitglied** [**von TVITEMEX**](/windows/win32/api/commctrl/ns-commctrl-tvitemexa).
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -53,9 +53,9 @@ Gibt einen **uint** -Wert zurück, bei dem die entsprechenden Zustands Bits auf 
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>                                        |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2003 \[ -Desktop-Apps\]<br/>                                  |
-| Header<br/>                   | <dl> <dt>Kommstrg. h</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur \[ Vista-Desktop-Apps\]<br/>                                        |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2003-Desktop-Apps\]<br/>                                  |
+| Header<br/>                   | <dl> <dt>Commctrl.h</dt> </dl> |
 
 
 

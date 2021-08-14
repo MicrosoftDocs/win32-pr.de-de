@@ -1,23 +1,23 @@
 ---
-description: Eine gültige funktionale Sicherheits Beschreibung enthält Sicherheitsinformationen im Binärformat.
+description: Ein gültiger funktionaler Sicherheitsdeskriptor enthält Sicherheitsinformationen im Binärformat.
 ms.assetid: 8f802652-b2bf-45cf-8186-1ac31eef1fe1
-title: Sicherheitsbeschreibungerzeichenfolgen
+title: Sicherheitsbeschreibungszeichenfolgen
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 8bb875bee4d35267b578193ca7cd08420722400a
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: edbefeb87a7fca30f0c33d6f180315df5e5d576dc018e69dc680391050a840d1
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104129901"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119413790"
 ---
-# <a name="security-descriptor-strings"></a>Sicherheitsbeschreibungerzeichenfolgen
+# <a name="security-descriptor-strings"></a>Sicherheitsbeschreibungszeichenfolgen
 
-Eine gültige funktionale [*Sicherheits Beschreibung*](/windows/desktop/SecGloss/s-gly) enthält Sicherheitsinformationen im Binärformat. Die Windows-API bietet Funktionen zum Umrechnen von binären Sicherheits Deskriptoren in und aus Text Zeichenfolgen. Sicherheits Deskriptoren im Zeichen folgen Format sind nicht funktionsfähig, aber Sie können zum Speichern oder Transportieren von Sicherheits Deskriptorinformationen hilfreich sein.
+Ein gültiger funktionaler [*Sicherheitsdeskriptor*](/windows/desktop/SecGloss/s-gly) enthält Sicherheitsinformationen im Binärformat. Die Windows-API stellt Funktionen zum Konvertieren binärer Sicherheitsbeschreibungen in und aus Textzeichenfolgen bereit. Sicherheitsbeschreibungen im Zeichenfolgenformat sind nicht funktionsfähig, können aber nützlich sein, um Sicherheitsbeschreibungsinformationen zu speichern oder zu übertragen.
 
-Um eine Sicherheits Beschreibung in ein Zeichen folgen Format zu konvertieren, wird die [**convertsecuritydescriptortostringsecuritydescriptor**](/windows/desktop/api/Sddl/nf-sddl-convertsecuritydescriptortostringsecuritydescriptora) -Funktion aufgerufen. Um eine Sicherheits Beschreibung für das Zeichen folgen Format zurück in eine gültige funktionale Sicherheits Beschreibung zu konvertieren, wird die [**convertstringsecuritydescriptortosecuritydescriptor**](/windows/desktop/api/Sddl/nf-sddl-convertstringsecuritydescriptortosecuritydescriptora) -Funktion aufgerufen.
+Um einen Sicherheitsdeskriptor in ein Zeichenfolgenformat zu konvertieren, rufen Sie die [**ConvertSecurityDescriptorToStringSecurityDescriptor-Funktion**](/windows/desktop/api/Sddl/nf-sddl-convertsecuritydescriptortostringsecuritydescriptora) auf. Um einen Sicherheitsdeskriptor im Zeichenfolgenformat zurück in einen gültigen funktionalen Sicherheitsdeskriptor zu konvertieren, rufen Sie die [**ConvertStringSecurityDescriptorToSecurityDescriptor-Funktion**](/windows/desktop/api/Sddl/nf-sddl-convertstringsecuritydescriptortosecuritydescriptora) auf.
 
-Weitere Informationen finden Sie unter [Security Descriptor Definition Language](security-descriptor-definition-language.md).
+Weitere Informationen finden Sie unter [Sicherheitsbeschreibungsdefinitionssprache](security-descriptor-definition-language.md).
 
  
 

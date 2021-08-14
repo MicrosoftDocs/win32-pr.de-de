@@ -1,49 +1,49 @@
 ---
-title: Animations Design
-description: Animations Design
+title: Animationsentwurf
+description: Animationsentwurf
 ms.assetid: 8812e4cc-9062-4c65-81ef-229bd29534cd
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: c7d6cf86cfe115ec209fb305f0ae017951bd7f41
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: 225a500d94b4de6f9133650a6aed415a49329585bc9bc9f83dec028668e51215
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "103947597"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118752291"
 ---
-# <a name="animation-design"></a>Animations Design
+# <a name="animation-design"></a>Animationsentwurf
 
-\[Der Microsoft-Agent ist ab Windows 7 veraltet und in nachfolgenden Versionen von Windows möglicherweise nicht verfügbar.\]
+\[Der Microsoft-Agent ist ab Windows 7 veraltet und in nachfolgenden Versionen von Windows möglicherweise nicht mehr verfügbar.\]
 
-### <a name="image-design"></a>Bild Entwurf
+### <a name="image-design"></a>Bildentwurf
 
-Verwenden Sie die Microsoft Office Palette beim Entwerfen der Zeichen, um potenzielle Probleme bei der palettenrealisierung zu minimieren. Wählen Sie eine Transparenz Farbe aus, die den Farben ähnelt, die Sie in Ihrem Dokument verwenden.
+Verwenden Sie die Microsoft Office Palette, wenn Sie Ihre Zeichen entwerfen, um potenzielle Probleme bei der Umsetzung der Palette zu minimieren. Vermeiden Sie es, eine Transparenzfarbe auszuwählen, die den Farben ähnelt, die Sie in Ihrem Dokument verwenden.
 
 ### <a name="sounds"></a>Sounds
 
-Mit dem Microsoft-Agent können Sie Sounds in ihren Animationen abspielen. Es wird empfohlen, keine Sounds für Ihre nicht im **Leerlauf** befindlichen Animationen einzuschließen. Dies ist also keine Verzögerung in der Mitte der Animation, wenn der Agent die System-Multimedia-DLL laden muss.
+Mit dem Microsoft-Agent können Sie Sounds in Ihren Animationen wiedergeben. Es wird empfohlen, keine  Sounds für Ihre Leerlaufanimationen einzufügen. Dies ist der Grund dafür, dass es in der Mitte der Animation keine Verzögerung gibt, wenn der -Agent die Multimedia-DLL des Systems laden muss.
 
-### <a name="frame-size"></a>Frame Größe
+### <a name="frame-size"></a>Framegröße
 
-Typische Office-Assistenten sind 123 x 93 Pixel. Obwohl Sie Zeichen anderer Größen erstellen können, werden Sie im Assistant Gallery auf 123 x 93 skaliert.
+Typische Office-Assistenten sind 123 x 93 Pixel. Obwohl Sie Zeichen anderer Größen erstellen können, werden sie im Assistentenkatalog auf 123 x 93 skaliert.
 
-### <a name="frame-transition"></a>Frame Übergang
+### <a name="frame-transition"></a>Frameübergang
 
-Alle Animationen außer " **Goodbye**", " **Gruß**", " **anzeigen** " und " **Ausblenden** " sollten mit der restpose-Animation beginnen und enden. Microsoft Office keine expliziten **Rückgabe Animationen wieder** gibt, sollten Sie Sie nicht definieren. Alle Animationen sollten auch Exit-Verzweigungen aufweisen. Durch das Beenden der Verzweigung können wir die aktuelle Animation vor der nächsten Animation "beeilen und Fertigstellen". Wenn Sie keine Beendigungs Verzweigung angeben, ist der Übergang zwischen Animationen möglicherweise ruckartig.
+Alle Animationen außer **"Goodbye",** **"Greeting",** **"Show"** und **"Hide"** sollten mit der RestPose-Animation beginnen und enden. Microsoft Office keine expliziten **Return-Animationen** wiedergibt, sollten Sie sie daher nicht definieren. Alle Animationen sollten auch Exit Branching aufweisen. Die Exitverzweigung ermöglicht es uns, die aktuelle Animation zu "überholen und abzuschließen", bevor wir die nächste Animation aufrufen. Wenn Sie Exit Branching nicht bereitstellen, kann der Übergang zwischen Animationen ruckartig sein.
 
-### <a name="character-properties"></a>Zeichen Eigenschaften
+### <a name="character-properties"></a>Zeicheneigenschaften
 
-Mit dem Microsoft-Agent können Sie den [**Namen**](name-property.md), die [**Beschreibung**](description-property.md) und die [**ExtraData**](extradata-property.md) -Eigenschaften für den Zeichensatz festlegen. Microsoft Office verwendet das **ExtraData** -Feld, um einen oder mehrere Einführungs Ausdrücke und Erinnerungs Ausdrücke zu speichern. Microsoft Office wählt die anderen Einführungs Ausdrücke aus, die in die Sprechblase im Assistant Gallery eingefügt werden sollen. Wir verwenden die Erinnerungs Ausdrücke, wenn Sie eine Erinnerung aus Outlook erhalten.
+Mit dem Microsoft-Agent können Sie die Eigenschaften [**Name**](name-property.md), [**Description**](description-property.md) und [**ExtraData**](extradata-property.md) des Zeichens festlegen. Microsoft Office verwendet das Feld **ExtraData,** um ein oder mehrere Einführungsphrasen und Erinnerungsphrasen zu speichern. Microsoft Office wählt aus den anderen Einführungsphrasen aus, die in den Sprachsprechblasen im Assistentenkatalog eingefügt werden sollen. Wir verwenden die Erinnerungsausdrücke, wenn Sie eine Erinnerung von Outlook erhalten.
 
-Das Feld " [**ExtraData**](extradata-property.md) " ist wie folgt formatiert:
+Das Feld [**ExtraData**](extradata-property.md) ist wie folgt formatiert:
 
-IntroPhrase1~~IntroPhrase2~~IntroPhrase3 ^ ^ ReminderPhrase1~~ReminderPhrase2~~ReminderPhrase3
+IntroPhrase1~~IntroPhrase2~~IntroPhrase3^^ReminderPhrase1~~ReminderPhrase2~~ReminderPhrase3
 
-Intro-Ausdrücke werden durch ein paar aus Tildezeichen (~) getrennt, gefolgt von Erinnerungs Ausdrücken. Diese Erinnerungs Ausdrücke sind auch durch ein paar Tilde Zeichen getrennt. Die zwei Sätze von Ausdrücken sind durch zwei Caretzeichen (^^) getrennt. Es gibt keine Beschränkung für die Anzahl der einzelnen Ausdrücke, es sei denn, es muss mindestens eine vorhanden sein.
+Einführungsphrasen werden durch ein Paar von Tildezeichen (~) getrennt, gefolgt von Erinnerungsausdrücken. Diese Erinnerungsausdrücke werden auch durch ein Paar von Tildezeichen getrennt. Die beiden Sätze von Ausdrücken werden durch zwei Caretzeichen (^^) getrennt. Es gibt keine Beschränkung für die Anzahl der einzelnen Arten von Ausdrücken, außer dass mindestens einer vorhanden sein muss.
 
- 
+ 
 
- 
+ 
 
 
 

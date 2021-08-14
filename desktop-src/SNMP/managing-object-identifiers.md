@@ -1,33 +1,33 @@
 ---
-title: Verwalten von Objekt bezeichlern
-description: Die WinSNMP-API bietet mehrere WinSNMP-Hilfsprogrammfunktionen, die die Bearbeitung von Objekt Bezeichners für WinSNMP-Anwendungen vereinfachen.
+title: Verwalten von Objektbezeichnern
+description: Die WinSNMP-API bietet mehrere WinSNMP-Hilfsfunktionen, die die Bearbeitung von Objektbezeichnern für WinSNMP-Anwendungen vereinfachen.
 ms.assetid: 6ca5f5bc-aa49-4826-97a7-2ea4a882dc2d
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: f9745cb8018b6833a1ef0569e69f201c621aa38e
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: 362adbf445901f25307452d67c313ef2a8d0ac5aea038ebfcf61863a72370cd4
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "104471644"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119009418"
 ---
-# <a name="managing-object-identifiers"></a>Verwalten von Objekt bezeichlern
+# <a name="managing-object-identifiers"></a>Verwalten von Objektbezeichnern
 
-Die WinSNMP-API bietet mehrere [WinSNMP-Hilfsprogrammfunktionen](winsnmp-functions.md) , die die Bearbeitung von Objekt Bezeichners für WinSNMP-Anwendungen vereinfachen.
+Die WinSNMP-API bietet mehrere [WinSNMP-Hilfsfunktionen,](winsnmp-functions.md) die die Bearbeitung von Objektbezeichnern für WinSNMP-Anwendungen vereinfachen.
 
-Die [**snmpoidtostr**](/windows/desktop/api/Winsnmp/nf-winsnmp-snmpoidtostr) -Funktion konvertiert die interne binäre Darstellung eines Objekt Bezeichners in das gepunktete numerische Zeichen folgen Format. Wenn Sie [**snmpoidtostr**](/windows/desktop/api/Winsnmp/nf-winsnmp-snmpoidtostr)aufzurufen, geben Sie einen Zeichen folgen Puffer mit der Länge maxobjidgersize (1408 Bytes) an, um sicherzustellen, dass der Ausgabepuffer groß genug für die konvertierte Zeichenfolge ist. Um einen Objekt Bezeichner aus dem Format der punktierten numerischen Zeichenfolge in seine interne binäre Darstellung zu konvertieren, müssen Sie die Funktion [**snmpstrautooid**](/windows/desktop/api/Winsnmp/nf-winsnmp-snmpstrtooid) abrufen.
+Die [**SnmpOidToStr-Funktion**](/windows/desktop/api/Winsnmp/nf-winsnmp-snmpoidtostr) konvertiert die interne binäre Darstellung eines Objektbezeichners in das gepunktete numerische Zeichenfolgenformat. Wenn Sie [**SnmpOidToStr**](/windows/desktop/api/Winsnmp/nf-winsnmp-snmpoidtostr)aufrufen, geben Sie einen Zeichenfolgenpuffer der Länge MAXOBJIDSTRSIZE (1408 Bytes) an, um sicherzustellen, dass der Ausgabepuffer groß genug ist, um die konvertierte Zeichenfolge zu speichern. Um einen Objektbezeichner aus dem gepunkteten numerischen Zeichenfolgenformat in seine interne binäre Darstellung zu konvertieren, rufen Sie die [**SnmpStrToOid-Funktion**](/windows/desktop/api/Winsnmp/nf-winsnmp-snmpstrtooid) auf.
 
-Zum Kopieren eines SNMP-Objekt Bezeichners wird die [**snmpoidcopy**](/windows/desktop/api/Winsnmp/nf-winsnmp-snmpoidcopy) -Funktion aufgerufen. Diese Funktion ordnet den erforderlichen Speicherplatz für den neuen Objekt Bezeichner zu.
+Um einen SNMP-Objektbezeichner zu kopieren, rufen Sie die [**SnmpOidCopy-Funktion**](/windows/desktop/api/Winsnmp/nf-winsnmp-snmpoidcopy) auf. Diese Funktion ordnet den erforderlichen Arbeitsspeicher für den neuen Objektbezeichner zu.
 
-Eine WinSNMP-Anwendung muss die [**snmpfreedescriptor**](/windows/desktop/api/Winsnmp/nf-winsnmp-snmpfreedescriptor) -Funktion aufruft, um Ressourcen freizugeben, die für den **ptr** -Member der [**smioid**](/windows/desktop/api/Winsnmp/ns-winsnmp-smioid) -Struktur reserviert sind, die sowohl durch die [**snmpstrautooid**](/windows/desktop/api/Winsnmp/nf-winsnmp-snmpstrtooid) -als auch die [**snmpoidcopy**](/windows/desktop/api/Winsnmp/nf-winsnmp-snmpoidcopy) -Funktion angegeben wird
+Eine WinSNMP-Anwendung muss die [**SnmpFreeDescriptor-Funktion**](/windows/desktop/api/Winsnmp/nf-winsnmp-snmpfreedescriptor) aufrufen, um Ressourcen frei zu machen, die dem **ptr-Member** der [**smiOID-Struktur**](/windows/desktop/api/Winsnmp/ns-winsnmp-smioid) zugeordnet sind, die sowohl von den [**Funktionen SnmpStrToOid**](/windows/desktop/api/Winsnmp/nf-winsnmp-snmpstrtooid) als [**auch SnmpOidCopy**](/windows/desktop/api/Winsnmp/nf-winsnmp-snmpoidcopy) angegeben wird.
 
-Die [**snmpoidcompare**](/windows/desktop/api/Winsnmp/nf-winsnmp-snmpoidcompare) -Funktion vergleicht zwei SNMP-Objekt Bezeichner. Die WinSNMP-Anwendung kann die Anzahl der zu vergleichenden untergeordneten Elemente angeben. Rufen Sie **snmpoidcompare** auf, um zu bestimmen, ob zwei Objekt Bezeichner über allgemeine Präfixe verfügen.
+Die [**SnmpOidCompare-Funktion**](/windows/desktop/api/Winsnmp/nf-winsnmp-snmpoidcompare) vergleicht zwei SNMP-Objektbezeichner. Die WinSNMP-Anwendung kann die Anzahl der zu vergleichenden Unteridentitäten angeben. Rufen Sie **SnmpOidCompare** auf, um zu bestimmen, ob zwei Objektbezeichner gemeinsame Präfixe aufweisen.
 
-Weitere Informationen zum Verwalten des Arbeitsspeichers, der den Objekt Bezeichners zugeordnet ist, finden Sie unter [Zuordnen von WinSNMP-Speicher Objekten](allocating-winsnmp-memory-objects.md).
+Weitere Informationen zum Verwalten des Speichers, der für Objektbezeichner zugeordnet ist, finden Sie unter [Zuordnen von WinSNMP-Speicherobjekten.](allocating-winsnmp-memory-objects.md)
 
- 
+ 
 
- 
+ 
 
 
 

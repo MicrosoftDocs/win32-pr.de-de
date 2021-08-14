@@ -1,21 +1,21 @@
 ---
-title: RPC_NS_HANDLE (rpcnsi. h)
-description: Der RPC \_ -NS-Datentyp \_ definiert ein Name-Service-handle.
+title: RPC_NS_HANDLE (Rpcnsi.h)
+description: Der Datentyp RPC \_ NS \_ HANDLE definiert ein Name-Dienst-Handle.
 ms.assetid: d9c2a376-4972-4f16-aa8d-f0e43d5ddb8d
 keywords:
 - RPC_NS_HANDLE
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 3e72ee694e08be1b30a75dc1f5b986619043d592
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: e7612671b03f507bc2e722520fa775e0e999d0f1456ebfcefa971bba27b65dbd
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104518719"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118926284"
 ---
-# <a name="rpc_ns_handle"></a>RPC- \_ NS- \_ handle
+# <a name="rpc_ns_handle"></a>\_RPC-NS-HANDLE \_
 
-Der RPC- **\_ NS \_** -Datentyp definiert ein Name-Service-handle.
+Der Datentyp **RPC \_ NS \_ HANDLE** definiert ein Name-Dienst-Handle.
 
 
 ```C++
@@ -24,17 +24,17 @@ typedef void* RPC_NS_HANDLE;
 
 
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Ein Name-Dienst-Handle ist eine nicht transparente Variable mit Informationen, die von der RPC-Lauf Zeit Bibliothek verwendet werden, um die folgenden RPC-Daten aus der Name-Service-Datenbank zurückzugeben:
+Ein Name-Service-Handle ist eine nicht transparente Variable, die Informationen enthält, die von der RPC-Laufzeitbibliothek verwendet werden, um die folgenden RPC-Daten aus der name-service-Datenbank zurückzugeben:
 
--   Server Bindungs Handles
--   UUIDs von Ressourcen, die von Serverprofil Mitgliedern angeboten werden
+-   Serverbindungshandles
+-   UUIDs von Ressourcen, die von Mitgliedern des Serverprofils angeboten werden
 -   Gruppenmitglieder
 
-Der Gültigkeitsbereich eines Namensdienst Handles erfolgt über die entsprechende "Done"-Routine.
+Der Bereich eines Namensdiensthandle stammt von einer "Begin"-Routine über die entsprechende "Done"-Routine.
 
-Anwendungen sind verantwortlich für die Parallelitäts Steuerung von Name-Service-Handles über Threads hinweg.
+Anwendungen sind für die parallele Steuerung von Name-Dienst-Handles über Threads hinweg verantwortlich.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -44,30 +44,30 @@ Anwendungen sind verantwortlich für die Parallelitäts Steuerung von Name-Servi
 |-------------------------------------|-----------------------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional \[nur Desktop-Apps\]<br/>                                          |
 | Unterstützte Mindestversion (Server)<br/> | Windows 2000 Server \[nur Desktop-Apps\]<br/>                                                |
-| Header<br/>                   | <dl> <dt>Rpcnsi. h (Include RPC. h)</dt> </dl> |
+| Header<br/>                   | <dl> <dt>Rpcnsi.h (include Rpc.h)</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Rpcnsbindingimportbegin**](/windows/desktop/api/Rpcnsi/nf-rpcnsi-rpcnsbindingimportbegina)
+[**RpcNsBindingImportBegin**](/windows/desktop/api/Rpcnsi/nf-rpcnsi-rpcnsbindingimportbegina)
 </dt> <dt>
 
-[**Rpcnsbindingimportdone**](/windows/desktop/api/Rpcnsi/nf-rpcnsi-rpcnsbindingimportdone)
+[**RpcNsBindingImportDone**](/windows/desktop/api/Rpcnsi/nf-rpcnsi-rpcnsbindingimportdone)
 </dt> <dt>
 
-[**Rpcnsbindingimportnext**](/windows/desktop/api/Rpcnsi/nf-rpcnsi-rpcnsbindingimportnext)
+[**RpcNsBindingImportNext**](/windows/desktop/api/Rpcnsi/nf-rpcnsi-rpcnsbindingimportnext)
 </dt> <dt>
 
-[**Rpcnsbindinglookupbegin**](/windows/desktop/api/Rpcnsi/nf-rpcnsi-rpcnsbindinglookupbegina)
+[**RpcNsBindingLookupBegin**](/windows/desktop/api/Rpcnsi/nf-rpcnsi-rpcnsbindinglookupbegina)
 </dt> <dt>
 
-[**Rpcnsbindinglookupdone**](/windows/desktop/api/Rpcnsi/nf-rpcnsi-rpcnsbindinglookupdone)
+[**RpcNsBindingLookupDone**](/windows/desktop/api/Rpcnsi/nf-rpcnsi-rpcnsbindinglookupdone)
 </dt> <dt>
 
-[**Rpcnsbindinglookupnext**](/windows/desktop/api/Rpcnsi/nf-rpcnsi-rpcnsbindinglookupnext)
+[**RpcNsBindingLookupNext**](/windows/desktop/api/Rpcnsi/nf-rpcnsi-rpcnsbindinglookupnext)
 </dt> </dl>
 
  

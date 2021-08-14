@@ -1,9 +1,9 @@
 ---
-title: LIBRARYID-Attribut
-description: Das LIBRARYID-Attribut ist der Bezeichner der Bibliothek, zu der das Element gehört.
+title: LibraryID-Attribut
+description: Das LibraryID-Attribut ist der Bezeichner der Bibliothek, zu der das Element gehört.
 ms.assetid: 680d9374-8729-4258-8672-b4b93b65e20a
 keywords:
-- LIBRARYID-Attribut, Windows Media Player
+- Windows Media Player des LibraryID-Attributs
 topic_type:
 - apiref
 api_name:
@@ -12,29 +12,29 @@ api_type:
 - NA
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 47ae9e5ad097bc188b8de1e76a09448c57aa9b83
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: a011db4e18509761c232bcf5439e33445128ef77c50945f84662a7b7956f607f
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106368418"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119468220"
 ---
-# <a name="libraryid-attribute"></a>LIBRARYID-Attribut
+# <a name="libraryid-attribute"></a>LibraryID-Attribut
 
-Das **LIBRARYID** -Attribut ist der Bezeichner der Bibliothek, zu der das Element gehört.
+Das **LibraryID-Attribut** ist der Bezeichner der Bibliothek, zu der das Element gehört.
 
 ## <a name="applies-to"></a>Gilt für
 
 -   [**Audioelemente**](audio-item-attributes.md)
--   [**Foto Elemente**](photo-item-attributes.md)
--   [**Wiedergabelisten Elemente**](playlist-attributes-ref.md)
--   [**Video Elemente**](video-item-attributes.md)
+-   [**Fotoelemente**](photo-item-attributes.md)
+-   [**Wiedergabelistenelemente**](playlist-attributes-ref.md)
+-   [**Videoelemente**](video-item-attributes.md)
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Ein Medien Element kann der lokalen Bibliothek des aktuellen Benutzers angehören, oder es kann einer Bibliothek angehören, die von einem anderen Benutzer im Heimnetzwerk oder im Internet zur Verfügung gestellt wurde.
+Ein Medienelement kann zur lokalen Bibliothek des aktuellen Benutzers gehören oder zu einer Bibliothek gehören, die von einem anderen Benutzer im Heimnetzwerk oder im Internet zur Verfügung gestellt wurde.
 
-Der Wert dieses Attributs entspricht dem Wert, der von der [**IWMPLibrary2:: getiteminfo**](/previous-versions/windows/desktop/api/wmp/nf-wmp-iwmplibrary-get_name) -Methode zurückgegeben wird.
+Der Wert dieses Attributs entspricht dem Wert, der von der [**IWMPLibrary2::getItemInfo-Methode**](/previous-versions/windows/desktop/api/wmp/nf-wmp-iwmplibrary-get_name) zurückgegeben wird.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -46,11 +46,11 @@ Der Wert dieses Attributs entspricht dem Wert, der von der [**IWMPLibrary2:: get
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Attribut Verweis**](attribute-reference.md)
+[**Attributverweis**](attribute-reference.md)
 </dt> </dl>
 
  
