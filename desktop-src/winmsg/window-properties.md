@@ -1,19 +1,19 @@
 ---
-description: In diesem Abschnitt werden Fenster Eigenschaften erläutert. Eine Fenster Eigenschaft sind alle Daten, die einem Fenster zugewiesen sind.
+description: In diesem Abschnitt werden Fenstereigenschaften erläutert. Bei einer Fenstereigenschaft handelt es sich um alle Daten, die einem Fenster zugewiesen sind.
 ms.assetid: vs|winui|~\winui\windowsuserinterface\windowing\windowproperties.htm
 title: Fenstereigenschaften
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 87a06be9fca67dedeb98afd7a56638622dabc858
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: e82aba0544e1763d36c0378e5d06dc25d48f3297ba8bc8b3bd8687dbba4b0afe
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106349872"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118200591"
 ---
 # <a name="window-properties"></a>Fenstereigenschaften
 
-Eine Fenster Eigenschaft sind alle Daten, die einem Fenster zugewiesen sind. Eine Fenster Eigenschaft ist in der Regel ein Handle der Fenster spezifischen Daten, kann jedoch ein beliebiger Wert sein. Jede Fenster Eigenschaft wird durch einen Zeichen folgen Namen identifiziert.
+Bei einer Fenstereigenschaft handelt es sich um alle Daten, die einem Fenster zugewiesen sind. Eine Fenstereigenschaft ist normalerweise ein Handle der fensterspezifischen Daten, kann aber ein beliebiger Wert sein. Jede Fenstereigenschaft wird durch einen Zeichenfolgennamen identifiziert.
 
 ### <a name="in-this-section"></a>In diesem Abschnitt
 
@@ -21,27 +21,27 @@ Eine Fenster Eigenschaft sind alle Daten, die einem Fenster zugewiesen sind. Ein
 
 | Name                                                       | BESCHREIBUNG                                                                               |
 |------------------------------------------------------------|-------------------------------------------------------------------------------------------|
-| [Informationen zu Fenster Eigenschaften](about-window-properties.md)     | Erläutert Fenster Eigenschaften.<br/>                                                   |
-| [Verwenden von Fenster Eigenschaften](using-window-properties.md)     | Erläutert, wie die folgenden Aufgaben durchgeführt werden, die mit Fenster Eigenschaften verknüpft sind.<br/> |
-| [Fenster Eigenschafts Verweis](window-property-reference.md) | Enthält die API-Referenz.<br/>                                                    |
+| [Informationen zu Fenstereigenschaften](about-window-properties.md)     | Erläutert Fenstereigenschaften.<br/>                                                   |
+| [Verwenden von Fenstereigenschaften](using-window-properties.md)     | Erläutert das Ausführen der folgenden Aufgaben, die Fenstereigenschaften zugeordnet sind.<br/> |
+| [Window-Eigenschaftenverweis](window-property-reference.md) | Enthält die API-Referenz.<br/>                                                    |
 
 
 
  
 
-### <a name="window-property-functions"></a>Fenster Eigenschaften Funktionen
+### <a name="window-property-functions"></a>Window-Eigenschaftenfunktionen
 
 
 
 | Name                                   | BESCHREIBUNG                                                                                                                                                                                                                                                                                                                                                       |
 |----------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| [**Enum-Eigenschaften**](/windows/win32/api/winuser/nf-winuser-enumpropsa)         | Listet alle Einträge in der Eigenschaften Liste eines Fensters auf, indem Sie nacheinander an die angegebene Rückruffunktion übergeben werden. [**Enum-**](/windows/win32/api/winuser/nf-winuser-enumpropsa) Eigenschaften werden fortgesetzt, bis der letzte Eintrag aufgezählt wird, oder die Rückruffunktion gibt **false** zurück.<br/>                                                                                                        |
-| [**Enumpropsex**](/windows/win32/api/winuser/nf-winuser-enumpropsexa)     | Listet alle Einträge in der Eigenschaften Liste eines Fensters auf, indem Sie nacheinander an die angegebene Rückruffunktion übergeben werden. [**Enumpropsex**](/windows/win32/api/winuser/nf-winuser-enumpropsexa) wird fortgesetzt, bis der letzte Eintrag aufgelistet ist, oder die Rückruffunktion gibt **false** zurück. <br/>                                                                                                  |
-| [**Getprop**](/windows/win32/api/winuser/nf-winuser-getpropa)             | Ruft ein Daten Handle aus der Eigenschaften Liste des angegebenen Fensters ab. Die Zeichenfolge gibt das abzurufende Handle an. Die Zeichenfolge und das Handle müssen durch einen vorherigen Aufrufen der [**setprop**](/windows/win32/api/winuser/nf-winuser-setpropa) -Funktion der Eigenschaften Liste hinzugefügt worden sein. <br/>                                                                                    |
-| [*Neigung*](/windows/win32/api/winuser/nc-winuser-propenumproca)     | Eine Anwendungs definierte Rückruffunktion, die mit der [**enumrequisfunktion**](/windows/win32/api/winuser/nf-winuser-enumpropsa) verwendet wird. Die-Funktion empfängt Eigenschafts Einträge aus der Eigenschaften Liste eines Fensters. Der **neigumproc** -Typ definiert einen Zeiger auf diese Rückruffunktion. [*Neigungsproc*](/windows/win32/api/winuser/nc-winuser-propenumproca) ist ein Platzhalter für den Namen der Anwendungs definierten Funktion. <br/>           |
-| [*Neigung*](/windows/win32/api/winuser/nc-winuser-propenumprocexa) | Eine von der Anwendung definierte Rückruffunktion, die mit der [**enumpropsex**](/windows/win32/api/winuser/nf-winuser-enumpropsexa) -Funktion verwendet wird. Die-Funktion empfängt Eigenschafts Einträge aus der Eigenschaften Liste eines Fensters. Der Typ " **neigumprocex** " definiert einen Zeiger auf diese Rückruffunktion. " [*Neigungsprocex*](/windows/win32/api/winuser/nc-winuser-propenumprocexa) " ist ein Platzhalter für den Namen der Anwendungs definierten Funktion. <br/> |
-| [**Removeprop**](/windows/win32/api/winuser/nf-winuser-removepropa)       | Entfernt einen Eintrag aus der Eigenschaften Liste des angegebenen Fensters. Die angegebene Zeichenfolge identifiziert den zu entfernenden Eintrag.<br/>                                                                                                                                                                                                                    |
-| [**SetProp**](/windows/win32/api/winuser/nf-winuser-setpropa)             | Fügt einen neuen Eintrag hinzu oder ändert einen vorhandenen Eintrag in der Eigenschaften Liste des angegebenen Fensters. Die-Funktion fügt der Liste einen neuen Eintrag hinzu, wenn die angegebene Zeichenfolge nicht bereits in der Liste vorhanden ist. Der neue Eintrag enthält die Zeichenfolge und das handle. Andernfalls ersetzt die Funktion das aktuelle Handle der Zeichenfolge durch das angegebene Handle. <br/> |
+| [**EnumProps**](/windows/win32/api/winuser/nf-winuser-enumpropsa)         | Listet alle Einträge in der Eigenschaftenliste eines Fensters auf, indem sie nach und nach an die angegebene Rückruffunktion übergeben werden. [**EnumProps wird**](/windows/win32/api/winuser/nf-winuser-enumpropsa) fortgesetzt, bis der letzte Eintrag aufzählt oder die Rückruffunktion **FALSE zurückgibt.**<br/>                                                                                                        |
+| [**EnumPropsEx**](/windows/win32/api/winuser/nf-winuser-enumpropsexa)     | Listet alle Einträge in der Eigenschaftenliste eines Fensters auf, indem sie nach und nach an die angegebene Rückruffunktion übergeben werden. [**EnumPropsEx wird**](/windows/win32/api/winuser/nf-winuser-enumpropsexa) fortgesetzt, bis der letzte Eintrag aufzählt oder die Rückruffunktion **FALSE zurückgibt.** <br/>                                                                                                  |
+| [**GetProp**](/windows/win32/api/winuser/nf-winuser-getpropa)             | Ruft ein Datenhand handle aus der Eigenschaftenliste des angegebenen Fensters ab. Die Zeichenfolge identifiziert das abzurufende Handle. Die Zeichenfolge und das Handle müssen der Eigenschaftenliste durch einen vorherigen Aufruf der [**SetProp-Funktion hinzugefügt**](/windows/win32/api/winuser/nf-winuser-setpropa) worden sein. <br/>                                                                                    |
+| [*PropEnumProc*](/windows/win32/api/winuser/nc-winuser-propenumproca)     | Eine anwendungsdefinierte Rückruffunktion, die mit der [**EnumProps-Funktion verwendet**](/windows/win32/api/winuser/nf-winuser-enumpropsa) wird. Die Funktion empfängt Eigenschaftseinträge aus der Eigenschaftenliste eines Fensters. Der **PROPENUMPROC-Typ** definiert einen Zeiger auf diese Rückruffunktion. [*PropEnumProc ist*](/windows/win32/api/winuser/nc-winuser-propenumproca) ein Platzhalter für den anwendungsdefinierten Funktionsnamen. <br/>           |
+| [*PropEnumProcEx*](/windows/win32/api/winuser/nc-winuser-propenumprocexa) | Eine anwendungsdefinierte Rückruffunktion, die mit der [**EnumPropsEx-Funktion verwendet**](/windows/win32/api/winuser/nf-winuser-enumpropsexa) wird. Die Funktion empfängt Eigenschaftseinträge aus der Eigenschaftenliste eines Fensters. Der **PROPENUMPROCEX-Typ** definiert einen Zeiger auf diese Rückruffunktion. [*PropEnumProcEx*](/windows/win32/api/winuser/nc-winuser-propenumprocexa) ist ein Platzhalter für den anwendungsdefinierten Funktionsnamen. <br/> |
+| [**RemoveProp**](/windows/win32/api/winuser/nf-winuser-removepropa)       | Entfernt einen Eintrag aus der Eigenschaftenliste des angegebenen Fensters. Die angegebene Zeichenfolge identifiziert den zu entfernenden Eintrag.<br/>                                                                                                                                                                                                                    |
+| [**SetProp**](/windows/win32/api/winuser/nf-winuser-setpropa)             | Fügt einen neuen Eintrag hinzu oder ändert einen vorhandenen Eintrag in der Eigenschaftenliste des angegebenen Fensters. Die Funktion fügt der Liste einen neuen Eintrag hinzu, wenn die angegebene Zeichenfolge nicht bereits in der Liste vorhanden ist. Der neue Eintrag enthält die Zeichenfolge und das Handle. Andernfalls ersetzt die Funktion das aktuelle Handle der Zeichenfolge durch das angegebene Handle. <br/> |
 
 
 

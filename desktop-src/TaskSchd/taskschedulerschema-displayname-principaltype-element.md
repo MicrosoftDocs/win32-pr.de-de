@@ -1,9 +1,9 @@
 ---
-title: Display Name (principaltype)-Element
-description: Gibt den Namen des Prinzipals an, der in der Taskplaner-Benutzeroberfläche angezeigt wird.
+title: DisplayName-Element (principalType)
+description: Gibt den Namen des Prinzipals an, der auf der Taskplaner Ui angezeigt wird.
 ms.assetid: a8640cc9-fc16-4e73-9f0c-1ebff338fb84
 keywords:
-- Display Name-Element Taskplaner
+- DisplayName-Element Taskplaner
 topic_type:
 - apiref
 api_name:
@@ -13,16 +13,16 @@ api_type:
 ms.topic: reference
 ms.date: 05/31/2018
 api_location: ''
-ms.openlocfilehash: e8ef310869ea8558bca231e866ddeefc0dc35944
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 0ff653a2b2991622b2446bcc0fc74d7063319c2bb6b45556313034a3afb42480
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104519135"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118356913"
 ---
-# <a name="displayname-principaltype-element"></a>Display Name (principaltype)-Element
+# <a name="displayname-principaltype-element"></a>DisplayName-Element (principalType)
 
-Gibt den Namen des Prinzipals an, der in der Taskplaner-Benutzeroberfläche angezeigt wird.
+Gibt den Namen des Prinzipals an, der auf der Taskplaner Ui angezeigt wird.
 
 ``` syntax
 <xs:element name="DisplayName"
@@ -30,7 +30,7 @@ Gibt den Namen des Prinzipals an, der in der Taskplaner-Benutzeroberfläche ange
  />
 ```
 
-Das **Display Name** -Element wird durch den komplexen [**principaltype**](taskschedulerschema-principaltype-complextype.md) -Typ definiert.
+Das **DisplayName-Element** wird durch den komplexen [**principalType-Typ**](taskschedulerschema-principaltype-complextype.md) definiert.
 
 ## <a name="parent-element"></a>Übergeordnetes Element
 
@@ -38,19 +38,19 @@ Das **Display Name** -Element wird durch den komplexen [**principaltype**](tasks
 
 | Element                                                                  | Abgeleitet von                                                           | BESCHREIBUNG                                                    |
 |--------------------------------------------------------------------------|------------------------------------------------------------------------|----------------------------------------------------------------|
-| [**Prinzipal**](taskschedulerschema-principal-principaltype-element.md) | [**principalType**](taskschedulerschema-principaltype-complextype.md) | Gibt die Sicherheits Anmelde Informationen für einen Prinzipal an.<br/> |
+| [**Prinzipal**](taskschedulerschema-principal-principaltype-element.md) | [**principalType**](taskschedulerschema-principaltype-complextype.md) | Gibt die Sicherheitsanmeldeinformationen für einen Prinzipal an.<br/> |
 
 
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Bei der Skripterstellung wird der Anzeige Name des Prinzipals mit der [**Principal. Display Name**](principal-displayname.md) -Eigenschaft angegeben.
+Für die Skriptentwicklung wird der Anzeigename des Prinzipals mithilfe der [**Principal.DisplayName-Eigenschaft**](principal-displayname.md) angegeben.
 
-Bei der C++-Entwicklung wird der Anzeige Name des Prinzipals mithilfe der [**IPrincipal::D isplayname**](/windows/desktop/api/taskschd/nf-taskschd-iprincipal-get_displayname) -Eigenschaft angegeben.
+Für die C++-Entwicklung wird der Anzeigename des Prinzipals mithilfe der [**IPrincipal::D isplayName-Eigenschaft**](/windows/desktop/api/taskschd/nf-taskschd-iprincipal-get_displayname) angegeben.
 
 ## <a name="examples"></a>Beispiele
 
-Der folgende XML-Code definiert eine mithilfe eines Gruppen Bezeichners und eines anzeigen Amens.
+Im folgenden XML-Code wird ein mithilfe eines Gruppenbezeichners und eines Anzeigenamens definiert.
 
 
 ```XML
@@ -62,7 +62,7 @@ Der folgende XML-Code definiert eine mithilfe eines Gruppen Bezeichners und eine
 
 
 
-Der folgende XML-Code definiert einen Prinzipal mithilfe eines Benutzer Bezeichners und eines anzeigen Amens.
+Der folgende XML-Code definiert einen Prinzipal mit einem Benutzerbezeichner und einem Anzeigenamen.
 
 
 ```XML
@@ -81,12 +81,12 @@ Der folgende XML-Code definiert einen Prinzipal mithilfe eines Benutzer Bezeichn
 
 | Anforderung | Wert |
 |-------------------------------------|------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>       |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2008 \[ -Desktop-Apps\]<br/> |
+| Unterstützte Mindestversion (Client)<br/> | Windows \[Nur Vista-Desktop-Apps\]<br/>       |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2008-Desktop-Apps\]<br/> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 

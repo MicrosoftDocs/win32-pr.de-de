@@ -1,11 +1,11 @@
 ---
-title: Downloader. Cancel-Methode
-description: In diesem Abschnitt werden die Funktionen beschrieben, die für die Verwendung durch Online Stores entwickelt wurden. Die Verwendung dieser Funktion außerhalb des Kontexts eines Online Stores wird nicht unterstützt. Mit der Cancel-Methode wird der Download abgebrochen.
+title: DownloadItem.cancel-Methode
+description: Hinweis In diesem Abschnitt werden Funktionen beschrieben, die für die Verwendung durch Onlineshops entwickelt wurden. Die Verwendung dieser Funktionalität außerhalb des Kontexts eines Onlineshops wird nicht unterstützt. Die cancel-Methode bricht den Download ab.
 ms.assetid: b3715fde-6a83-45fa-92ea-1cbffbee7274
 keywords:
-- Cancel-Methode, Windows-Media Player
-- Cancel-Methode, Windows Media Player, Downloader-Klasse
-- Download Item-Klasse, Windows Media Player, Cancel-Methode
+- cancel-Windows Media Player
+- cancel-Windows Media Player , DownloadItem-Klasse
+- DownloadItem-Klasse Windows Media Player , cancel-Methode
 topic_type:
 - apiref
 api_name:
@@ -16,21 +16,21 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: c14d538e85d0930a43db883e226c007bea70de24
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 6208719b5ac2e81fb9175db9de67bcf1f00ad7c34787ed1ab45251abd517bd65
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106361641"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117749731"
 ---
-# <a name="downloaditemcancel-method"></a>Downloader. Cancel-Methode
+# <a name="downloaditemcancel-method"></a>DownloadItem.cancel-Methode
 
 > [!Note]  
-> In diesem Abschnitt werden die-Funktionen beschrieben, die für die Verwendung durch Online Stores Die Verwendung dieser Funktion außerhalb des Kontexts eines Online Stores wird nicht unterstützt.
+> In diesem Abschnitt werden Funktionen beschrieben, die für die Verwendung durch Onlineshops entwickelt wurden. Die Verwendung dieser Funktionalität außerhalb des Kontexts eines Onlineshops wird nicht unterstützt.
 
  
 
-Mit der Cancel-Methode wird der Download abgeb **Rochen** .
+Die **cancel-Methode** bricht den Download ab.
 
 ## <a name="syntax"></a>Syntax
 
@@ -49,9 +49,9 @@ Diese Methode hat keine Parameter.
 
 Diese Methode gibt keinen Wert zurück.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Abgebrochene Elemente werden nicht aus der Download Sammlung entfernt. Abgebrochene Elemente geben einen **DownloadState** -Wert von 4 (abgebrochen) zurück.
+Abgebrochene Elemente werden nicht aus der Downloadsammlung entfernt. Abgebrochene Elemente geben den **downloadState-Wert** 4 (abgebrochen) zurück.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -59,19 +59,19 @@ Abgebrochene Elemente werden nicht aus der Download Sammlung entfernt. Abgebroch
 
 | Anforderung | Wert |
 |--------------------|------------------------------------------------------------------------------------|
-| Version<br/> | Windows Media Player 9 oder höher.<br/>                                 |
+| Version<br/> | Windows Media Player 9-Serie oder höher.<br/>                                 |
 | DLL<br/>     | <dl> <dt>Wmp.dll</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Download Item-Objekt**](downloaditem-object.md)
+[**DownloadItem-Objekt**](downloaditem-object.md)
 </dt> <dt>
 
-[**Downloadaditem. DownloadState**](downloaditem-downloadstate.md)
+[**DownloadItem.downloadState**](downloaditem-downloadstate.md)
 </dt> </dl>
 
  

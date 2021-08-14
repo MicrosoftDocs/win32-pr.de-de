@@ -1,11 +1,11 @@
 ---
-title: Inapenforcementclientconnection setsohrequest-Methode (napforcementclient. h)
+title: INapEnforcementClientConnection SetSoHRequest-Methode (NapEnforcementClient.h)
 description: Legt die SoH-Anforderung fest.
 ms.assetid: 87dbb982-a337-4644-a2fe-970bfdd6c140
 keywords:
-- Setsohrequest-Methode NAP
-- Setsohrequest-Methode NAP, inapenforcementclientconnection-Schnittstelle
-- Inapenforcementclientconnection-Schnittstelle NAP, setsohrequest-Methode
+- SetSoHRequest-Methode NAP
+- SetSoHRequest-Methode NAP, INapEnforcementClientConnection-Schnittstelle
+- INapEnforcementClientConnection-Schnittstelle NAP, SetSoHRequest-Methode
 topic_type:
 - apiref
 api_name:
@@ -16,21 +16,21 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 92559d532e99bfa29d7f62fd29b279db20f2c0a3
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: be2d2d3a4574b086d49cba7d9c0afda72cf62621dbed37add8550a7ae2f93cd4
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "103740912"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117799634"
 ---
-# <a name="inapenforcementclientconnectionsetsohrequest-method"></a>Inapenforcementclientconnection:: setsohrequest-Methode
+# <a name="inapenforcementclientconnectionsetsohrequest-method"></a>INapEnforcementClientConnection::SetSoHRequest-Methode
 
 > [!Note]  
-> Die Netzwerk Zugriffsschutz-Plattform ist ab Windows 10 nicht verfügbar.
+> Die Netzwerkzugriffsschutz-Plattform ist ab Windows 10 nicht verfügbar.
 
  
 
-Die **inapenforcementclientconnection:: setsohrequest** -Methode legt die SoH-Anforderung fest.
+Die **INapEnforcementClientConnection::SetSoHRequest-Methode** legt die SoH-Request fest.
 
 ## <a name="syntax"></a>Syntax
 
@@ -47,34 +47,34 @@ HRESULT SetSoHRequest(
 
 <dl> <dt>
 
-*sohrequest* \[ in\]
+*sohRequest* \[ In\]
 </dt> <dd>
 
-Ein Zeiger auf eine eindeutige [**networksohrequest**](/windows/win32/api/naptypes/ns-naptypes-networksoh) -Struktur, bei der es sich um ein undurchsichtiges Daten-BLOB für den-Enforcer handelt.
+Ein Zeiger auf eine eindeutige [**NetworkSoHRequest-Struktur,**](/windows/win32/api/naptypes/ns-naptypes-networksoh) bei der es sich um ein nicht transparentes Datenblob für den Erzwingenden handelt.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Es können auch andere com-spezifische Fehlercodes zurückgegeben werden.
+Andere COM-spezifische Fehlercodes können ebenfalls zurückgegeben werden.
 
 
 
 | Rückgabecode                                                                                     | Beschreibung                                                        |
 |-------------------------------------------------------------------------------------------------|--------------------------------------------------------------------|
 | <dl> <dt>**S \_ OK**</dt> </dl>           | Das SoH-Paket ist gültig.<br/>                                |
-| <dl> <dt>**E \_ Access verweigert**</dt> </dl> | Berechtigungs Fehler, Zugriff verweigert.<br/>                       |
-| <dl> <dt>**E \_ Outo-Memory**</dt> </dl>  | System Ressourcen Limit, der Vorgang konnte nicht durchgeführt werden.<br/> |
+| <dl> <dt>**E \_ ACCESSDENIED**</dt> </dl> | Berechtigungsfehler, Zugriff verweigert.<br/>                       |
+| <dl> <dt>**E \_ OUTOFMEMORY**</dt> </dl>  | Systemressourcenlimit, konnte den Vorgang nicht ausführen.<br/> |
 
 
 
  
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Dies wird von NAPAgent festgelegt und von enforcern abgefragt, um die Übertragung zu senden.
+Dies wird vom NapAgent festgelegt und von Erzwingenden abgefragt, die über die Leitung gesendet werden sollen.
 
-Ein SoH-Paket mit einer Länge von 0 Bytes ist ungültig.
+Ein SoH-Paket mit einer Länge von 0 Byte ist ungültig.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -82,19 +82,19 @@ Ein SoH-Paket mit einer Länge von 0 Bytes ist ungültig.
 
 | Anforderung | Wert |
 |-------------------------------------|-----------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>                                                      |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2008 \[ -Desktop-Apps\]<br/>                                                |
-| Header<br/>                   | <dl> <dt>Napforcementclient. h</dt> </dl>   |
-| IDL<br/>                      | <dl> <dt>Napforcementclient. idl</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows \[Nur Vista-Desktop-Apps\]<br/>                                                      |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2008-Desktop-Apps\]<br/>                                                |
+| Header<br/>                   | <dl> <dt>NapEnforcementClient.h</dt> </dl>   |
+| Idl<br/>                      | <dl> <dt>NapEnforcementClient.idl</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>Qagent.dll</dt> </dl>               |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Inapenforcementclientconnection**](inapenforcementclientconnection.md)
+[**INapEnforcementClientConnection**](inapenforcementclientconnection.md)
 </dt> </dl>
 
  

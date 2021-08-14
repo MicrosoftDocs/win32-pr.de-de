@@ -1,30 +1,30 @@
 ---
-description: Die folgende Abbildung zeigt die Beziehung zwischen Experten-und parseranwendungen und anderen Komponenten der Netzwerkmonitor Architektur.
+description: Die folgende Abbildung zeigt die Beziehung zwischen Experten- und Parseranwendungen und anderen Komponenten der Netzwerkmonitor Architektur.
 ms.assetid: f943f0e6-5fdc-48f9-ba5d-5effdf8229f3
-title: Architektur von Experten und Parsers
+title: Experten- und Parserarchitektur
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: caa8477d97604acfb04686170ca6cb5cff8116a7
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 261343005f0cb9fc7de5b7025f9ffe59f11515614ab43609c1b8da9f396e9f5e
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104128361"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117795841"
 ---
-# <a name="expert-and-parser-architecture"></a>Architektur von Experten und Parsers
+# <a name="expert-and-parser-architecture"></a>Experten- und Parserarchitektur
 
-Die folgende Abbildung zeigt die Beziehung zwischen [Experten](experts.md) -und [parseranwendungen](parsers.md) und anderen Komponenten der Netzwerkmonitor Architektur.
+Die folgende Abbildung zeigt die Beziehung zwischen [Experten-](experts.md) und [Parseranwendungen](parsers.md) und anderen Komponenten der Netzwerkmonitor Architektur.
 
-![die Beziehung zwischen Experten-und parseranwendungen](images/nm-arch1.png)
+![Beziehung zwischen Experten- und Parseranwendungen](images/nm-arch1.png)
 
-Der Netzwerk Datenverkehr wird als einzelne Frames vom NDIS-Treiber gesammelt. Der Netzwerkmonitor Treiber (Nmnt.sys) leitet die Frames dann an einen Netzwerk Paketanbieter (NPP) weiter, der die Daten erfasst und in einer oder mehreren Erfassungs Dateien platziert. Der npp ist eine Sammlung von COM-Schnittstellen, die zum Erfassen von Daten verwendet werden. In diesem Fall wird die [**idelta-DC**](idelaydc.md) -Schnittstelle verwendet, um eine verzögerte Erfassung auszuführen.
+Der Netzwerkdatenverkehr wird als einzelne Frames vom NDIS-Treiber erfasst. Der Netzwerkmonitor-Treiber (Nmnt.sys) leitet die Frames dann an einen Netzwerkpaketanbieter (Network Packet Provider, NPP) weiter, der die Daten erfasst und in mindestens einer Erfassungsdateien platziert. Der NPP ist eine Sammlung von COM-Schnittstellen, die zum Erfassen von Daten verwendet werden. In diesem Fall wird die [**IDelaydC-Schnittstelle**](idelaydc.md) verwendet, um eine verzögerte Erfassung durchzuführen.
 
 > [!Note]  
-> Der NPP wird für verzögerte und Echt Zeit Erfassungen verwendet. Für echt Zeit Erfassungen [**wird die-**](irtc.md) Schnittstelle verwendet.
+> Der NPP wird für verzögerte und Echtzeiterfassungen verwendet. Für Echtzeiterfassungen wird die [**IRTC-Schnittstelle**](irtc.md) verwendet.
 
  
 
-Wenn die Netzwerk Frames in der Erfassungs Datei gespeichert werden und auf die Datei zugegriffen werden kann, können Experten und Parser die Netzwerkmonitor-Benutzeroberfläche und die Netzwerkmonitor Funktionen verwenden, die in Nmapi.dll zur Analyse der Daten bereitgestellt werden. Auf Erfassungs Dateien kann erst dann zugegriffen werden, wenn die Erfassung beendet ist.
+Wenn die Netzwerkframes in der Erfassungsdatei gespeichert sind und auf die Datei zugegriffen werden kann, können Experten und Parser die Netzwerkmonitor-Benutzeroberfläche und die Netzwerkmonitor-Funktionen verwenden, die in Nmapi.dll bereitgestellt werden, um die Daten zu analysieren. Auf Erfassungsdateien kann erst zugegriffen werden, wenn die Erfassung abgeschlossen ist.
 
  
 

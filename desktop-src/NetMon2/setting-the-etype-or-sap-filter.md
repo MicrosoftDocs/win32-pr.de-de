@@ -1,21 +1,21 @@
 ---
-description: Das Festlegen des ETYPE-oder SAP-Teils des Erfassungs Filters ist der erste Schritt bei der Erfassungs Filter Erstellung.
+description: Das Festlegen des Etype- oder SAP-Teils des Erfassungsfilters ist der erste Schritt beim Erstellen des Erfassungsfilters.
 ms.assetid: 0a22f74b-5bb1-43df-a70a-9f30195177ea
-title: Festlegen von ETYPE oder SAP-Filter
+title: Festlegen des Etype- oder SAP-Filters
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: aee117e992968265be5a973f3f4017832ee6ca0c
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: abac637594debf03ca9f82c79382ababc4c696d79d5351b2d0be0a3e5b4ffa8f
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "103959012"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118363165"
 ---
-# <a name="setting-the-etype-or-sap-filter"></a>Festlegen von ETYPE oder SAP-Filter
+# <a name="setting-the-etype-or-sap-filter"></a>Festlegen des Etype- oder SAP-Filters
 
-Das Festlegen des ETYPE-oder SAP-Teils des Erfassungs Filters ist der erste Schritt bei der Erfassungs Filter Erstellung.
+Das Festlegen des Etype- oder SAP-Teils des Erfassungsfilters ist der erste Schritt beim Erstellen des Erfassungsfilters.
 
-Im folgenden Beispiel ist der Erfassungs Filter so festgelegt, dass nur IPX-Datenverkehr abgerufen wird:
+Im folgenden Beispiel wird der Erfassungsfilter so festgelegt, dass nur IPX-Datenverkehr abgerufen wird:
 
 
 ```C++
@@ -34,7 +34,7 @@ rc = SetNPPEtypeSapFilter(m_hBlob,
 
 
 
-SAP-und ETYPE-Werte sind normalerweise in RFCs verfügbar. Sowohl die SAP-als auch die ETYPE-Werte können sich in einem Array befinden.
+SAP- und Etype-Werte sind in der Regel in RFCs verfügbar. Sowohl SAP- als auch Etype-Werte können in einem Array enthalten sein.
 
  
 

@@ -1,92 +1,92 @@
 ---
-title: Benutzer Funktionen
-description: Die Benutzer Funktionen der Netzwerkverwaltung steuern das Konto eines Benutzers in der Sicherheitsdatenbank, bei der es sich um die SAM-Datenbank (Security Accounts Manager) handelt, oder, im Fall von Domänen Controllern, die Active Directory. Die Benutzer Funktionen sind nachfolgend aufgeführt.
+title: Benutzerfunktionen
+description: Die Benutzerfunktionen für die Netzwerkverwaltung steuern das Konto eines Benutzers in der Sicherheitsdatenbank, bei der es sich um die SAM-Datenbank (Security Accounts Manager) oder bei Domänencontrollern um Active Directory handelt. Die Benutzerfunktionen sind im Folgenden aufgeführt.
 ms.assetid: cf0e5102-3924-46c0-8124-0aa04e95f48d
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: b6a3349673d09e42fbfe7a5dc949d1bcff53b828
-ms.sourcegitcommit: 592c9bbd22ba69802dc353bcb5eb30699f9e9403
+ms.openlocfilehash: 34c8d7b59ff121c0225f166888b42ef1a731336ed80799cd0593ba38b4fb04ea
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "106339510"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117796816"
 ---
-# <a name="user-functions"></a>Benutzer Funktionen
+# <a name="user-functions"></a>Benutzerfunktionen
 
-Die Benutzer Funktionen der Netzwerkverwaltung steuern das Konto eines Benutzers in der Sicherheitsdatenbank, bei der es sich um die SAM-Datenbank (Security Accounts Manager) handelt, oder, im Fall von Domänen Controllern, die Active Directory. Die Benutzer Funktionen sind nachfolgend aufgeführt.
+Die Benutzerfunktionen für die Netzwerkverwaltung steuern das Konto eines Benutzers in der Sicherheitsdatenbank, bei der es sich um die SAM-Datenbank (Security Accounts Manager) oder bei Domänencontrollern um Active Directory handelt. Die Benutzerfunktionen sind im Folgenden aufgeführt.
 
 
 
 | Funktion                                               | BESCHREIBUNG                                                         |
 |--------------------------------------------------------|---------------------------------------------------------------------|
-| [**"Nettuseradd"**](/windows/desktop/api/Lmaccess/nf-lmaccess-netuseradd)                       | Fügt ein Benutzerkonto hinzu und weist ein Kennwort und eine Berechtigungsebene zu.     |
-| [**"Nettuserchangepassword"**](/windows/desktop/api/Lmaccess/nf-lmaccess-netuserchangepassword) | Ändert das Kennwort eines Benutzers für einen angegebenen Netzwerkserver oder eine angegebene Domäne. |
-| [**"Nettuserdel"**](/windows/desktop/api/Lmaccess/nf-lmaccess-netuserdel)                       | Löscht ein Benutzerkonto auf dem Server.                             |
-| [**"Nettuserenum"**](/windows/desktop/api/Lmaccess/nf-lmaccess-netuserenum)                     | Listet alle Benutzerkonten auf einem Server auf.                                |
-| [**"Nettusergetgroups"**](/windows/desktop/api/Lmaccess/nf-lmaccess-netusergetgroups)           | Gibt eine Liste der globalen Gruppennamen zurück, zu denen ein Benutzer gehört.       |
-| [**"Nettusergetinfo"**](/windows/desktop/api/Lmaccess/nf-lmaccess-netusergetinfo)               | Gibt Informationen zu einem bestimmten Benutzerkonto auf einem Server zurück.    |
-| [**"Nettusergetlocalgroups"**](/windows/desktop/api/Lmaccess/nf-lmaccess-netusergetlocalgroups) | Gibt eine Liste der lokalen Gruppennamen zurück, zu denen ein Benutzer gehört.        |
-| [**"Nettusersetgroups"**](/windows/desktop/api/Lmaccess/nf-lmaccess-netusersetgroups)           | Legt globale Gruppenmitgliedschaften für ein angegebenes Benutzerkonto fest.         |
-| [**"Nettusersetinfo"**](/windows/desktop/api/Lmaccess/nf-lmaccess-netusersetinfo)               | Legt das Kennwort und andere Elemente eines Benutzerkontos fest.             |
+| [**NetUserAdd**](/windows/desktop/api/Lmaccess/nf-lmaccess-netuseradd)                       | Fügt ein Benutzerkonto hinzu und weist ein Kennwort und eine Berechtigungsstufe zu.     |
+| [**NetUserChangePassword**](/windows/desktop/api/Lmaccess/nf-lmaccess-netuserchangepassword) | Ändert das Kennwort eines Benutzers für einen angegebenen Netzwerkserver oder eine bestimmte Domäne. |
+| [**NetUserDel**](/windows/desktop/api/Lmaccess/nf-lmaccess-netuserdel)                       | Löscht ein Benutzerkonto vom Server.                             |
+| [**NetUserEnum**](/windows/desktop/api/Lmaccess/nf-lmaccess-netuserenum)                     | Listet alle Benutzerkonten auf einem Server auf.                                |
+| [**NetUserGetGroups**](/windows/desktop/api/Lmaccess/nf-lmaccess-netusergetgroups)           | Gibt eine Liste der globalen Gruppennamen zurück, zu denen ein Benutzer gehört.       |
+| [**NetUserGetInfo**](/windows/desktop/api/Lmaccess/nf-lmaccess-netusergetinfo)               | Gibt Informationen zu einem bestimmten Benutzerkonto auf einem Server zurück.    |
+| [**NetUserGetLocalGroups**](/windows/desktop/api/Lmaccess/nf-lmaccess-netusergetlocalgroups) | Gibt eine Liste lokaler Gruppennamen zurück, zu denen ein Benutzer gehört.        |
+| [**NetUserSetGroups**](/windows/desktop/api/Lmaccess/nf-lmaccess-netusersetgroups)           | Legt globale Gruppenmitgliedschaften für ein angegebenes Benutzerkonto fest.         |
+| [**NetUserSetInfo**](/windows/desktop/api/Lmaccess/nf-lmaccess-netusersetinfo)               | Legt das Kennwort und andere Elemente eines Benutzerkontos fest.             |
 
 
 
- 
+ 
 
-Jeder Benutzer oder jede Anwendung, der auf Netzwerkressourcen zugreift, muss über ein Konto in der Sicherheitsdatenbank verfügen. Die Verzeichnisdienste verwenden dieses Konto, um sicherzustellen, dass der Benutzer oder die Anwendung über die Berechtigung zum Herstellen einer Verbindung mit einer Ressource verfügt. Wenn ein Benutzer oder eine Anwendung den Zugriff auf eine Ressource anfordert, wird vom Windows-Sicherheitssystem nach einem entsprechenden Benutzerkonto oder Gruppenkonto gesucht, um den Zugriff zuzulassen.
+Jeder Benutzer oder jede Anwendung, der bzw. die auf Netzwerkressourcen zugreift, muss über ein Konto in der Sicherheitsdatenbank verfügen. Die Verzeichnisdienste verwenden dieses Konto, um zu überprüfen, ob der Benutzer oder die Anwendung über die Berechtigung zum Herstellen einer Verbindung mit einer Ressource verfügt. Wenn ein Benutzer oder eine Anwendung Zugriff auf eine Ressource anfordert, sucht das Windows Sicherheitssystem nach einem entsprechenden Benutzerkonto oder Gruppenkonto, um den Zugriff zuzulassen.
 
-Wenn Sie ein Benutzerkonto durch Aufrufen der Funktion " [**nettuserdel**](/windows/desktop/api/Lmaccess/nf-lmaccess-netuserdel) " entfernen, kann der Benutzer nicht mehr auf den Server zugreifen, es sei denn, Sie verwenden das Gastkonto.
+Nachdem Sie ein Benutzerkonto durch Aufrufen der [**NetUserDel-Funktion**](/windows/desktop/api/Lmaccess/nf-lmaccess-netuserdel) entfernt haben, kann der Benutzer nur mithilfe des Gastkontos auf den Server zugreifen.
 
-Da das Kennwort eines Benutzers vertraulich ist, wird es nicht von der Funktion " [**nettuserenum**](/windows/desktop/api/Lmaccess/nf-lmaccess-netuserenum) " oder der Funktion " [**nettusergetinfo**](/windows/desktop/api/Lmaccess/nf-lmaccess-netusergetinfo) " zurückgegeben. Das Kennwort wird anfänglich zugewiesen, wenn Sie " [**nettuseradd**](/windows/desktop/api/Lmaccess/nf-lmaccess-netuseradd)" aufrufen.
+Da das Kennwort eines Benutzers vertraulich ist, wird es nicht von der [**NetUserEnum-Funktion**](/windows/desktop/api/Lmaccess/nf-lmaccess-netuserenum) oder der [**NetUserGetInfo-Funktion**](/windows/desktop/api/Lmaccess/nf-lmaccess-netusergetinfo) zurückgegeben. Das Kennwort wird anfänglich zugewiesen, wenn Sie [**NetUserAdd**](/windows/desktop/api/Lmaccess/nf-lmaccess-netuseradd)aufrufen.
 
-Die Benutzerkontoinformationen sind auf folgenden Ebenen verfügbar:
+Benutzerkontoinformationen sind auf den folgenden Ebenen verfügbar:
 
--   [**Benutzer \_ Informationen \_ 0**](/windows/desktop/api/Lmaccess/ns-lmaccess-user_info_0)
--   [**Benutzer \_ Informationen \_ 1**](/windows/desktop/api/Lmaccess/ns-lmaccess-user_info_1)
--   [**Benutzer \_ Informationen \_ 2**](/windows/desktop/api/Lmaccess/ns-lmaccess-user_info_2)
--   [**Benutzer \_ Informationen \_ 3**](/windows/desktop/api/Lmaccess/ns-lmaccess-user_info_3)
--   [**Benutzer \_ Informationen \_ 4**](/windows/desktop/api/Lmaccess/ns-lmaccess-user_info_4)
--   [**Benutzer \_ Informationen \_ 10**](/windows/desktop/api/Lmaccess/ns-lmaccess-user_info_10)
--   [**Benutzer \_ Informationen \_ 11**](/windows/desktop/api/Lmaccess/ns-lmaccess-user_info_11)
--   [**Benutzer \_ Informationen \_ 20**](/windows/desktop/api/Lmaccess/ns-lmaccess-user_info_20)
--   [**Benutzer \_ Informationen \_ 21**](/windows/desktop/api/Lmaccess/ns-lmaccess-user_info_21)
--   [**Benutzer \_ Informationen \_ 22**](/windows/desktop/api/Lmaccess/ns-lmaccess-user_info_22)
--   [**Benutzer \_ Informationen \_ 23**](/windows/desktop/api/Lmaccess/ns-lmaccess-user_info_23)
+-   [**BENUTZERINFORMATIONEN \_ \_ 0**](/windows/desktop/api/Lmaccess/ns-lmaccess-user_info_0)
+-   [**BENUTZERINFORMATIONEN \_ \_ 1**](/windows/desktop/api/Lmaccess/ns-lmaccess-user_info_1)
+-   [**BENUTZERINFORMATIONEN \_ \_ 2**](/windows/desktop/api/Lmaccess/ns-lmaccess-user_info_2)
+-   [**BENUTZERINFORMATIONEN \_ \_ 3**](/windows/desktop/api/Lmaccess/ns-lmaccess-user_info_3)
+-   [**BENUTZERINFORMATIONEN \_ \_ 4**](/windows/desktop/api/Lmaccess/ns-lmaccess-user_info_4)
+-   [**BENUTZERINFORMATIONEN \_ \_ 10**](/windows/desktop/api/Lmaccess/ns-lmaccess-user_info_10)
+-   [**BENUTZERINFORMATIONEN \_ \_ 11**](/windows/desktop/api/Lmaccess/ns-lmaccess-user_info_11)
+-   [**BENUTZERINFORMATIONEN \_ \_ 20**](/windows/desktop/api/Lmaccess/ns-lmaccess-user_info_20)
+-   [**BENUTZERINFORMATIONEN \_ \_ 21**](/windows/desktop/api/Lmaccess/ns-lmaccess-user_info_21)
+-   [**BENUTZERINFORMATIONEN \_ \_ 22**](/windows/desktop/api/Lmaccess/ns-lmaccess-user_info_22)
+-   [**BENUTZERINFORMATIONEN \_ \_ 23**](/windows/desktop/api/Lmaccess/ns-lmaccess-user_info_23)
 
-Außerdem sind die folgenden Informationsebenen gültig, wenn Sie die Funktion " [**nettusersetinfo**](/windows/desktop/api/Lmaccess/nf-lmaccess-netusersetinfo) " aufrufen:
+Darüber hinaus sind die folgenden Informationsebenen gültig, wenn Sie die [**NetUserSetInfo-Funktion**](/windows/desktop/api/Lmaccess/nf-lmaccess-netusersetinfo) aufrufen:
 
--   [**Benutzer \_ Informationen \_ 1003**](/windows/desktop/api/Lmaccess/ns-lmaccess-user_info_1003)
--   [**Benutzer \_ Informationen \_ 1005**](/windows/desktop/api/Lmaccess/ns-lmaccess-user_info_1005)
--   [**Benutzer \_ Informationen \_ 1006**](/windows/desktop/api/Lmaccess/ns-lmaccess-user_info_1006)
--   [**Benutzer \_ Informationen \_ 1007**](/windows/desktop/api/Lmaccess/ns-lmaccess-user_info_1007)
--   [**Benutzer \_ Informationen \_ 1008**](/windows/desktop/api/Lmaccess/ns-lmaccess-user_info_1008)
--   [**Benutzer \_ Informationen \_ 1009**](/windows/desktop/api/Lmaccess/ns-lmaccess-user_info_1009)
--   [**Benutzer \_ Informationen \_ 1010**](/windows/desktop/api/Lmaccess/ns-lmaccess-user_info_1010)
--   [**Benutzer \_ Informationen \_ 1011**](/windows/desktop/api/Lmaccess/ns-lmaccess-user_info_1011)
--   [**Benutzer \_ Informationen \_ 1012**](/windows/desktop/api/Lmaccess/ns-lmaccess-user_info_1012)
--   [**Benutzer \_ Informationen \_ 1014**](/windows/desktop/api/Lmaccess/ns-lmaccess-user_info_1014)
--   [**Benutzer \_ Informationen \_ 1017**](/windows/desktop/api/Lmaccess/ns-lmaccess-user_info_1017)
--   [**Benutzer \_ Informationen \_ 1020**](/windows/desktop/api/Lmaccess/ns-lmaccess-user_info_1020)
--   [**Benutzer \_ Informationen \_ 1024**](/windows/desktop/api/Lmaccess/ns-lmaccess-user_info_1024)
--   [**Benutzer \_ Informationen \_ 1051**](/windows/desktop/api/Lmaccess/ns-lmaccess-user_info_1051)
--   [**Benutzer \_ Informationen \_ 1052**](/windows/desktop/api/Lmaccess/ns-lmaccess-user_info_1052)
--   [**Benutzer \_ Informationen \_ 1053**](/windows/desktop/api/Lmaccess/ns-lmaccess-user_info_1053)
+-   [**BENUTZERINFORMATIONEN \_ \_ 1003**](/windows/desktop/api/Lmaccess/ns-lmaccess-user_info_1003)
+-   [**BENUTZERINFORMATIONEN \_ \_ 1005**](/windows/desktop/api/Lmaccess/ns-lmaccess-user_info_1005)
+-   [**BENUTZERINFORMATIONEN \_ \_ 1006**](/windows/desktop/api/Lmaccess/ns-lmaccess-user_info_1006)
+-   [**BENUTZERINFORMATIONEN \_ \_ 1007**](/windows/desktop/api/Lmaccess/ns-lmaccess-user_info_1007)
+-   [**BENUTZERINFORMATIONEN \_ \_ 1008**](/windows/desktop/api/Lmaccess/ns-lmaccess-user_info_1008)
+-   [**BENUTZERINFORMATIONEN \_ \_ 1009**](/windows/desktop/api/Lmaccess/ns-lmaccess-user_info_1009)
+-   [**BENUTZERINFORMATIONEN \_ \_ 1010**](/windows/desktop/api/Lmaccess/ns-lmaccess-user_info_1010)
+-   [**BENUTZERINFORMATIONEN \_ \_ 1011**](/windows/desktop/api/Lmaccess/ns-lmaccess-user_info_1011)
+-   [**BENUTZERINFORMATIONEN \_ \_ 1012**](/windows/desktop/api/Lmaccess/ns-lmaccess-user_info_1012)
+-   [**BENUTZERINFORMATIONEN \_ \_ 1014**](/windows/desktop/api/Lmaccess/ns-lmaccess-user_info_1014)
+-   [**BENUTZERINFORMATIONEN \_ \_ 1017**](/windows/desktop/api/Lmaccess/ns-lmaccess-user_info_1017)
+-   [**BENUTZERINFORMATIONEN \_ \_ 1020**](/windows/desktop/api/Lmaccess/ns-lmaccess-user_info_1020)
+-   [**BENUTZERINFORMATIONEN \_ \_ 1024**](/windows/desktop/api/Lmaccess/ns-lmaccess-user_info_1024)
+-   [**BENUTZERINFORMATIONEN \_ \_ 1051**](/windows/desktop/api/Lmaccess/ns-lmaccess-user_info_1051)
+-   [**BENUTZERINFORMATIONEN \_ \_ 1052**](/windows/desktop/api/Lmaccess/ns-lmaccess-user_info_1052)
+-   [**BENUTZERINFORMATIONEN \_ \_ 1053**](/windows/desktop/api/Lmaccess/ns-lmaccess-user_info_1053)
 
-Mit den folgenden Funktionen können Anwendungen die Kenn Wort Konformität überprüfen.
+Mit den folgenden Funktionen können Anwendungen die Kennwortkonformität überprüfen.
 
 
 
 | Funktion                                                               | BESCHREIBUNG                                                                                                |
 |------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------|
-| [**Netvalidatepasswordpolicyfree**](/windows/desktop/api/Lmaccess/nf-lmaccess-netvalidatepasswordpolicyfree) | Gibt den von der [**NetValidatePasswordPolicy**](/windows/desktop/api/Lmaccess/nf-lmaccess-netvalidatepasswordpolicy) -Funktion belegten Arbeitsspeicher frei. |
-| [**NetValidatePasswordPolicy**](/windows/desktop/api/Lmaccess/nf-lmaccess-netvalidatepasswordpolicy)         | Mit dieser Option wird überprüft, ob Kenn Wörter die Anforderungen für Komplexität, Alterung, minimale Länge und Versions Wiederverwendung erfüllen.            |
+| [**NetValidatePasswordPolicyFree**](/windows/desktop/api/Lmaccess/nf-lmaccess-netvalidatepasswordpolicyfree) | Gibt den von der [**NetValidatePasswordPolicy-Funktion**](/windows/desktop/api/Lmaccess/nf-lmaccess-netvalidatepasswordpolicy) belegten Arbeitsspeicher frei. |
+| [**NetValidatePasswordPolicy**](/windows/desktop/api/Lmaccess/nf-lmaccess-netvalidatepasswordpolicy)         | Überprüft, ob Kennwörter anforderungen an Komplexität, Fälligkeit, Mindestlänge und Verlaufswiederverwendung erfüllen.            |
 
 
 
- 
+ 
 
-Wenn Sie für Active Directory programmieren, können Sie möglicherweise bestimmte Active Directory Service Interface (ADSI)-Methoden aufrufen, um die gleiche Funktionalität zu erreichen, die Sie durch Aufrufen der Netzwerk Verwaltungs Benutzer Funktionen erreichen können. Weitere Informationen finden Sie unter [**IADsUser**](/windows/desktop/api/iads/nn-iads-iadsuser) und [**iadscomputer**](/windows/desktop/api/iads/nn-iads-iadscomputer).
+Wenn Sie für Active Directory programmieren, können Sie möglicherweise bestimmte ADSI-Methoden (Active Directory Service Interface) aufrufen, um die gleiche Funktionalität zu erreichen, die Sie durch Aufrufen der Benutzerfunktionen der Netzwerkverwaltung erreichen können. Weitere Informationen finden Sie unter [**IADsUser**](/windows/desktop/api/iads/nn-iads-iadsuser) und [**IADsComputer**](/windows/desktop/api/iads/nn-iads-iadscomputer).
 
- 
+ 
 
- 
+ 

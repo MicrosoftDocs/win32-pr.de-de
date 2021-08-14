@@ -1,23 +1,23 @@
 ---
-description: Gibt die durchschnittliche Frame Rate von Videoinhalten in Frames pro Sekunde an.
+description: Gibt die durchschnittliche Bildfrequenz von Videoinhalten in Frames pro Sekunde an.
 ms.assetid: 59a7cb76-77f2-4698-831a-8777aa982d3f
-title: MFPKEY_AVGFRAMERATE-Eigenschaft (wmcodecdsp. h)
+title: MFPKEY_AVGFRAMERATE-Eigenschaft (Wmcodecdsp.h)
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 64fd9ca79e3b9acf8872c7032d6943c3084628d1
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: acfb50dcfb0eb08953b2569d529919df26fcd63e23fd7b6b428f4b59f1c7c530
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106350923"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117874054"
 ---
-# <a name="mfpkey_avgframerate-property"></a>Mfpkey \_ avgframerate (Eigenschaft)
+# <a name="mfpkey_avgframerate-property"></a>\_MFPKEY-AVGFRAMERATE-Eigenschaft
 
-Gibt die durchschnittliche Frame Rate von Videoinhalten in Frames pro Sekunde an.
+Gibt die durchschnittliche Bildfrequenz von Videoinhalten in Frames pro Sekunde an.
 
 ## <a name="constant-for-ipropertybag"></a>Konstante für IPropertyBag
 
-g \_ wszwmvcavgframerate
+g \_ wszWMVCAvgFrameRate
 
 ## <a name="data-type"></a>Datentyp
 
@@ -29,17 +29,17 @@ VT \_ R8
 
 | Anforderung | Wert |
 |-------------------------------------|-----------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows XP \[ -Desktop-Apps\]<br/>                                             |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2003 \[ -Desktop-Apps\]<br/>                                    |
-| Header<br/>                   | <dl> <dt>Wmcodecdsp. h</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows \[Nur XP-Desktop-Apps\]<br/>                                             |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2003-Desktop-Apps\]<br/>                                    |
+| Header<br/>                   | <dl> <dt>Wmcodecdsp.h</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[Eigenschaften von Media Foundation](media-foundation-properties.md)
+[Media Foundation-Eigenschaften](media-foundation-properties.md)
 </dt> </dl>
 
  

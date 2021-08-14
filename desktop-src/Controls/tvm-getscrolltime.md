@@ -1,9 +1,9 @@
 ---
-title: TVM_GETSCROLLTIME Meldung (kommstrg. h)
-description: Ruft die maximale Scrollzeit für das Strukturansicht-Steuerelement ab. Sie können diese Nachricht explizit oder mithilfe des TreeView- \_ getscrolltime-Makros senden.
+title: TVM_GETSCROLLTIME Meldung (Commctrl.h)
+description: Ruft die maximale Bildlaufzeit für das Strukturansichtssteuerelement ab. Sie können diese Nachricht explizit oder mithilfe des TreeView \_ GetScrollTime-Makros senden.
 ms.assetid: 992d1906-cda3-4ac7-ba90-c681c551ac2e
 keywords:
-- Windows-Steuerelemente für TVM_GETSCROLLTIME Meldung
+- TVM_GETSCROLLTIME Windows-Steuerelemente für Nachrichten
 topic_type:
 - apiref
 api_name:
@@ -14,16 +14,16 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: e6f0bacc6c12dd7f54f20d882faf738c11848d59
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: e026a463476d5625f7632d7b6679ce94ca2c8ab6d8c6a050d8938bd46d9858b6
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104103210"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118408497"
 ---
-# <a name="tvm_getscrolltime-message"></a>TVM \_ getscrolltime-Meldung
+# <a name="tvm_getscrolltime-message"></a>TVM \_ GETSCROLLTIME-Nachricht
 
-Ruft die maximale Scrollzeit für das Strukturansicht-Steuerelement ab. Sie können diese Nachricht explizit oder mithilfe des [**TreeView- \_ getscrolltime**](/windows/desktop/api/Commctrl/nf-commctrl-treeview_getscrolltime) -Makros senden.
+Ruft die maximale Bildlaufzeit für das Strukturansichtssteuerelement ab. Sie können diese Nachricht explizit oder mithilfe des [**TreeView \_ GetScrollTime-Makros**](/windows/desktop/api/Commctrl/nf-commctrl-treeview_getscrolltime) senden.
 
 ## <a name="parameters"></a>Parameter
 
@@ -37,11 +37,11 @@ Ruft die maximale Scrollzeit für das Strukturansicht-Steuerelement ab. Sie kön
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt die maximale Scrollzeit in Millisekunden zurück.
+Gibt die maximale Bildlaufzeit in Millisekunden zurück.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Die maximale Scrollzeit ist die längste Zeitspanne, die ein scrollvorgang ausführen kann. Der Bildlauf wird so angepasst, dass der Bildlauf innerhalb der maximalen Scrollzeit stattfindet. Ein scrollvorgang kann weniger Zeit in Anspruch nehmen als das Maximum.
+Die maximale Bildlaufzeit ist die längste Zeit, die ein Bildlaufvorgang dauern kann. Das Scrollen wird so angepasst, dass der Bildlauf innerhalb der maximalen Bildlaufzeit erfolgt. Ein Bildlaufvorgang kann weniger Zeit in Anspruch nehmen als das Maximum.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -49,17 +49,17 @@ Die maximale Scrollzeit ist die längste Zeitspanne, die ein scrollvorgang ausf�
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>                                        |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2003 \[ -Desktop-Apps\]<br/>                                  |
-| Header<br/>                   | <dl> <dt>Kommstrg. h</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows \[Nur Vista-Desktop-Apps\]<br/>                                        |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2003-Desktop-Apps\]<br/>                                  |
+| Header<br/>                   | <dl> <dt>Commctrl.h</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**TVM \_ setscrolltime**](tvm-setscrolltime.md)
+[**TVM \_ SETSCROLLTIME**](tvm-setscrolltime.md)
 </dt> </dl>
 
  

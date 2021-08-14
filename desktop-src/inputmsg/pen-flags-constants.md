@@ -1,6 +1,6 @@
 ---
-title: Pen-Flags
-description: Werte, die im Feld "kflags" der POINTER_PEN_INFO Struktur angezeigt werden können.
+title: Stiftflags
+description: Werte, die im PenFlags-Feld der -Struktur POINTER_PEN_INFO werden können.
 ms.assetid: BC3CE568-4090-4451-B780-18530C988305
 topic_type:
 - apiref
@@ -15,16 +15,16 @@ api_type:
 - HeaderDef
 ms.topic: article
 ms.date: 02/03/2020
-ms.openlocfilehash: d7c28beaf58b6fa96bb8dd82b2dd650b2a7d6950
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: acc1afb1d490a1831fdb1ecd5a090e457bae77ae2f08a1b94cabc81d12dbde9f
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104477949"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118482405"
 ---
-# <a name="pen-flags"></a>Pen-Flags
+# <a name="pen-flags"></a>Stiftflags
 
-Werte, die im Feld " **kflags** " der [**POINTER_PEN_INFO**](/previous-versions/windows/desktop/api) Struktur angezeigt werden können.
+Werte, die im **PenFlags-Feld** der -Struktur POINTER_PEN_INFO [**werden**](/previous-versions/windows/desktop/api) können.
 
 <dl> <dt>
 
@@ -36,7 +36,7 @@ Werte, die im Feld " **kflags** " der [**POINTER_PEN_INFO**](/previous-versions/
 
 
 
-Es ist kein Pen-Flag vorhanden. Dies ist die Standardoption.
+Es gibt kein Stiftflag. Dies ist die Standardoption.
 
 
 </dt> </dl> </dd> <dt>
@@ -49,7 +49,7 @@ Es ist kein Pen-Flag vorhanden. Dies ist die Standardoption.
 
 
 
-Die Schaltfläche "Barrel" wird gedrückt.
+Die Schaltfläche "Knopf" wird gedrückt.
 
 
 </dt> </dl> </dd> <dt>
@@ -75,7 +75,7 @@ Der Stift ist invertiert.
 
 
 
-Die radiererschaltfläche wird gedrückt.
+Die Radiererschaltfläche wird gedrückt.
 
 
 </dt> </dl> </dd> </dl>
@@ -86,13 +86,13 @@ Die radiererschaltfläche wird gedrückt.
 
 | Anforderung | Wert |
 |-------------------------------------|--------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows 8 \[ -Desktop-Apps\]<br/>                                           |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2012 \[ -Desktop-Apps\]<br/>                                 |
-| Header<br/>                   | <dl> <dt>Winuser. h</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | \[Windows 8 Nur Desktop-Apps\]<br/>                                           |
+| Unterstützte Mindestversion (Server)<br/> | \[Windows Server 2012 Nur Desktop-Apps\]<br/>                                 |
+| Header<br/>                   | <dl> <dt>Winuser.h</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 

@@ -1,47 +1,47 @@
 ---
-description: Ein Ereignisconsumeranbieter ist eine Komponente der permanenten consumerarchitektur, die bestimmt, welcher permanente Ereignisconsumer ein bestimmtes Ereignis behandelt.
+description: Ein Ereignisverbraucheranbieter ist eine Komponente der permanenten Consumerarchitektur, die bestimmt, welcher Permanentereignis-Consumer ein bestimmtes Ereignis behandelt.
 ms.assetid: c5a0d0ec-99af-4815-9ad2-e59db70e04ce
 ms.tgt_platform: multiple
-title: Schreiben eines Ereignisconsumeranbieters
+title: Schreiben eines Ereignisverbraucheranbieters
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: a0c7aeeb9b44b37d887df49cf5049d5a9e59ad72
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 312e0c2ecbf02d8bb0a8f491339d191aadde41a66cd3e3228c3187d5dcf689e3
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106347435"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118553097"
 ---
-# <a name="writing-an-event-consumer-provider"></a>Schreiben eines Ereignisconsumeranbieters
+# <a name="writing-an-event-consumer-provider"></a>Schreiben eines Ereignisverbraucheranbieters
 
-Ein Ereignisconsumeranbieter ist eine Komponente der permanenten consumerarchitektur, die bestimmt, welcher permanente Ereignisconsumer ein bestimmtes Ereignis behandelt. Sie sollten einen Ereignisconsumeranbieter zusammen mit ihren permanenten Ereignisconsumer erstellen, um Ereignisse ordnungsgemäß aus WMI zu leiten.
+Ein Ereignisverbraucheranbieter ist eine Komponente der permanenten Consumerarchitektur, die bestimmt, welcher Permanentereignis-Consumer ein bestimmtes Ereignis behandelt. Sie sollten einen Ereignisverbraucheranbieter zusammen mit Ihren permanenten Ereignisverbrauchern erstellen, um Ereignisse ordnungsgemäß von WMI weiter zu routen.
 
-Ein Ereignisconsumeranbieter verknüpft einen Ereignis Anbieter mit einer Liste von Consumerklassen. Instanzen dieser Consumerklassen empfangen dann Ereignisse von diesem Anbieter. WMI identifiziert den Consumeranbieter, an den die Ereignisse übermittelt werden, basierend auf der [**\_ \_ eventconsumerproviderregistration**](--eventconsumerproviderregistration.md) -Instanz, die die [**\_ \_ Win32Provider**](--win32provider.md) -Instanz des consumeranbieters einer logischen Consumerklasse zuordnet. Benutzer erstellen Instanzen der Consumer-Klasse als Teil eines permanenten Abonnements. Wenn der Ereignis Anbieter nicht ausgeführt wird, wenn ein Ereignis auftritt, startet WMI den Anbieter, wenn er Ereignisse übermitteln muss.
+Ein Ereignisverbraucheranbieter verknüpft einen Ereignisanbieter mit einer Liste von Consumerklassen. Instanzen dieser Consumerklassen empfangen dann Ereignisse von diesem Anbieter. WMI identifiziert basierend auf der [**\_ \_ EventConsumerProviderRegistration-Instanz,**](--eventconsumerproviderregistration.md) die die [**\_ \_ Win32Provider-Instanz**](--win32provider.md) des Consumeranbieters einer logischen Consumerklasse zu ordnet, an welchen Consumeranbieter die Ereignisse übermittelt werden. Benutzer erstellen Instanzen der Consumerklasse als Teil eines permanenten Abonnements. Wenn der Ereignisanbieter nicht ausgeführt wird, wenn ein Ereignis auftritt, startet WMI den Anbieter, wenn Ereignisse übermittelt werden müssen.
 
-Im folgenden Verfahren wird beschrieben, wie ein Ereignisconsumeranbieter implementiert wird.
+Im folgenden Verfahren wird beschrieben, wie ein Ereignisverbraucheranbieter implementiert wird.
 
-**So implementieren Sie einen Ereignisconsumeranbieter**
+**So implementieren Sie einen Ereignisverbraucheranbieter**
 
-1.  Entwerfen Sie Consumerklassen in Managed Object Format (MOF), und registrieren Sie Sie bei WMI. Weitere Informationen finden Sie unter [Entwerfen von Managed Object Format-Klassen (MOF)](designing-managed-object-format--mof--classes.md).
+1.  Entwerfen Sie Consumerklassen in Managed Object Format (MOF), und registrieren Sie sie bei WMI. Weitere Informationen finden Sie unter [Entwerfen Managed Object Format -Klassen (MOF).](designing-managed-object-format--mof--classes.md)
 
-    Klassen Anbieter registrieren sich bei WMI durch Erstellen einer [**\_ \_ Win32Provider**](--win32provider.md) -Instanz und einer [**\_ \_ eventconsumerproviderregistration**](--eventconsumerproviderregistration.md) -Klasse. Weitere Informationen finden Sie unter [Registrieren eines Ereignisconsumeranbieters](registering-an-event-consumer-provider.md).
+    Klassenanbieter registrieren sich bei WMI, indem sie eine [**\_ \_ Win32Provider-Instanz**](--win32provider.md) und eine [**\_ \_ EventConsumerProviderRegistration-Klasse**](--eventconsumerproviderregistration.md) erstellen. Weitere Informationen finden Sie unter [Registrieren eines Ereignisverbraucheranbieters.](registering-an-event-consumer-provider.md)
 
-2.  Implementieren Sie die [**iwbemproviderinit**](/windows/desktop/api/Wbemprov/nn-wbemprov-iwbemproviderinit) -Schnittstelle für Ihren Anbieter.
+2.  Implementieren Sie [**die IWbemProviderInit-Schnittstelle**](/windows/desktop/api/Wbemprov/nn-wbemprov-iwbemproviderinit) für Ihren Anbieter.
 
-    WMI verwendet [**iwbemproviderinit**](/windows/desktop/api/Wbemprov/nn-wbemprov-iwbemproviderinit) , um einen Anbieter zu laden und zu initialisieren. Weitere Informationen finden Sie unter [Initialisieren eines Anbieters](initializing-a-provider.md).
+    WMI verwendet [**IWbemProviderInit zum**](/windows/desktop/api/Wbemprov/nn-wbemprov-iwbemproviderinit) Laden und Initialisieren eines Anbieters. Weitere Informationen finden Sie unter [Initialisieren eines Anbieters.](initializing-a-provider.md)
 
     > [!Note]  
-    > Ereignisconsumeranbietern wird dringend empfohlen, das Multithreading Modell "both" zu verwenden.
+    > Ereignisverbraucheranbietern wird dringend empfohlen, das Multithreadingmodell "Both" zu verwenden.
 
      
 
-3.  Implementieren Sie die [**IWbemEventConsumerProvider**](/windows/desktop/api/Wbemprov/nn-wbemprov-iwbemeventconsumerprovider) -Schnittstelle für Ihren Anbieter.
+3.  Implementieren Sie [**die IWbemEventConsumerProvider-Schnittstelle**](/windows/desktop/api/Wbemprov/nn-wbemprov-iwbemeventconsumerprovider) für Ihren Anbieter.
 
-    Die [**IWbemEventConsumerProvider**](/windows/desktop/api/Wbemprov/nn-wbemprov-iwbemeventconsumerprovider) -Schnittstelle ist die primäre Schnittstelle für einen Ereignisconsumeranbieter.
+    Die [**IWbemEventConsumerProvider-Schnittstelle**](/windows/desktop/api/Wbemprov/nn-wbemprov-iwbemeventconsumerprovider) ist die primäre Schnittstelle für einen Ereignisconsumeranbieter.
 
-4.  Stellen Sie einen oder mehrere physische Consumer bereit, um die Ereignis Nachrichten von WMI zu empfangen.
+4.  Geben Sie mindestens einen physischen Consumers an, um die Ereignismeldungen von WMI zu empfangen.
 
-    Ein physischer Consumer ist ein COM-Objekt, das einen permanenten Ereignisconsumer darstellt. Alle physischen Consumer müssen die [**iwbemunboundobjectsink**](/windows/desktop/api/Wbemprov/nn-wbemprov-iwbemunboundobjectsink) -Schnittstelle implementieren. Weitere Informationen finden Sie unter [Implementieren eines physischen](implementing-a-physical-consumer.md)Consumers.
+    Ein physischer Consumer ist ein COM-Objekt, das einen permanenten Ereignis consumer darstellt. Alle physischen Consumers müssen die [**IWbemUnboundObjectSink-Schnittstelle**](/windows/desktop/api/Wbemprov/nn-wbemprov-iwbemunboundobjectsink) implementieren. Weitere Informationen finden Sie unter [Implementieren eines physischen Consumers.](implementing-a-physical-consumer.md)
 
  
 

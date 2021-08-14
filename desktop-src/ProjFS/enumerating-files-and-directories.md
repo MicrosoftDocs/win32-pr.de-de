@@ -1,57 +1,57 @@
 ---
 title: Auflisten von Dateien und Verzeichnissen
-description: Beschreibt, wie ein projfs-Anbieter an der verzeichnisenumeration teilnimmt.
+description: Beschreibt, wie ein ProjFS-Anbieter an der Verzeichnisenumeration teilnimmt.
 ms.assetid: <GUID-GOES-HERE>
 ms.date: 09/25/2018
 ms.topic: article
-ms.openlocfilehash: e0712ceb927388b090a84a89f80f0e2d3a1befbb
-ms.sourcegitcommit: 80d74c0bf4fc402865a1ad223480abe1ce4d1115
+ms.openlocfilehash: 606b379e206cdbc64726e0ea97aed34e00f5253ecbffb7f8b7d42469b0cbb5fa
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "103723992"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117792813"
 ---
 # <a name="enumerating-files-and-directories"></a>Auflisten von Dateien und Verzeichnissen
 
-Wenn ein Anbieter erstmalig einen virtualisierungsstamm erstellt, ist er auf dem lokalen System leer.  Das heißt, keines der Elemente im Sicherungsdaten Speicher wurde noch auf dem Datenträger zwischengespeichert.  Beim Öffnen eines Elements wird es zwischengespeichert, aber bis ein Element geöffnet ist, ist es nur im Sicherungsdaten Speicher vorhanden.
+Wenn ein Anbieter zum ersten Mal einen Virtualisierungsstamm erstellt, ist er auf dem lokalen System leer.  Das heißt, dass noch keines der Elemente im Sicherungsdatenspeicher auf dem Datenträger zwischengespeichert wurde.  Während jedes Element geöffnet wird, wird es zwischengespeichert, aber bis es geöffnet wird, ist es nur im sicherungsenden Datenspeicher vorhanden.
 
-Da nicht geöffnete Elemente nicht lokal vorhanden sind, gibt die normale Verzeichnis Enumeration dem Benutzer nicht offen.  Daher muss der Anbieter an der verzeichnisenumeration teilnehmen, indem er Informationen über Elemente in seinem Sicherungsdaten Speicher an projfs zurückgibt.  Projfs führt die Informationen vom Anbieter mit dem Inhalt des lokalen Dateisystems zusammen, mit dem der Benutzer eine einheitliche Liste der Inhalte eines Verzeichnisses enthält.
+Da nicht geöffnete Elemente nicht lokal vorhanden sind, würde die normale Verzeichnisenumeration ihre Existenz für den Benutzer nicht preisgeben.  Daher muss der Anbieter an der Verzeichnisenumeration teilnehmen, indem er Informationen zu Elementen in seinem Sicherungsdatenspeicher an ProjFS zurückgibt.  ProjFS führt die Informationen des Anbieters mit dem Inhalt des lokalen Dateisystems zusammen, um dem Benutzer eine einheitliche Liste der Inhalte eines Verzeichnisses zu präsentieren.
 
-## <a name="directory-enumeration-callbacks"></a>Verzeichnisenumerationsrückrufe
+## <a name="directory-enumeration-callbacks"></a>Rückrufe von Verzeichnisenumerationen
 
-Um an der verzeichnisenumeration teilnehmen zu können, muss der Anbieter die **[PRJ_START_DIRECTORY_ENUMERATION_CB](/windows/win32/api/projectedfslib/nc-projectedfslib-prj_start_directory_enumeration_cb)**, **[PRJ_GET_DIRECTORY_ENUMERATION_CB](/windows/win32/api/projectedfslib/nc-projectedfslib-prj_get_directory_enumeration_cb)** und **[PRJ_END_DIRECTORY_ENUMERATION_CB](/windows/win32/api/projectedfslib/nc-projectedfslib-prj_end_directory_enumeration_cb)** Rückrufe implementieren.  Wenn ein Verzeichnis unter dem virtualisierungsstamm des Anbieters aufgezählt wird, führt projfs die folgenden Aktionen aus:
+Um an der Verzeichnisenumeration teilzunehmen, muss der Anbieter die **[Rückrufe PRJ_START_DIRECTORY_ENUMERATION_CB](/windows/win32/api/projectedfslib/nc-projectedfslib-prj_start_directory_enumeration_cb)**, **[PRJ_GET_DIRECTORY_ENUMERATION_CB](/windows/win32/api/projectedfslib/nc-projectedfslib-prj_get_directory_enumeration_cb)** und **[PRJ_END_DIRECTORY_ENUMERATION_CB](/windows/win32/api/projectedfslib/nc-projectedfslib-prj_end_directory_enumeration_cb)** implementieren.  Wenn ein Verzeichnis im Virtualisierungsstamm des Anbieters aufzählt wird, führt ProjFS die folgenden Aktionen aus:
 
-1. Projfs Ruft den **PRJ_START_DIRECTORY_ENUMERATION_CB** Rückruf des Anbieters auf, um eine enumerationssitzung zu starten.
+1. ProjFS ruft den **PRJ_START_DIRECTORY_ENUMERATION_CB-Rückruf** des Anbieters auf, um eine Enumerationssitzung zu starten.
 
-    Im Rahmen der Verarbeitung dieses Rückrufs sollte der Anbieter die Ausführung der-Enumeration vorbereiten.  Beispielsweise muss der Arbeitsspeicher belegt werden, der möglicherweise erforderlich ist, um den Fortschritt der Enumeration im Sicherungsdaten Speicher zu verfolgen.
+    Im Rahmen der Verarbeitung dieses Rückrufs sollte der Anbieter die Ausführung der Enumeration vorbereiten.  Beispielsweise sollte der Speicher belegt werden, den er möglicherweise benötigt, um den Fortschritt der Enumeration im sicherungsenden Datenspeicher nachzuverfolgen.
 
-    Projfs identifiziert das Verzeichnis, das im **FilePathName** -Member des _callBackData_ -Parameters des Rückrufs aufgeführt wird.  Dies wird als Pfad relativ zum virtualisierungsstamm angegeben.  Wenn sich beispielsweise der virtualisierungsstamm unter befindet `C:\virtRoot` und das aufgelistete Verzeichnis ist `C:\virtRoot\dir1\dir2` , enthält das Member **FilePathName** `dir1\dir2` .  Der Anbieter bereitet sich darauf vor, diesen Pfad im Sicherungsdaten Speicher aufzuzählen.  Abhängig von den Funktionen des Sicherungs Speicher eines Anbieters ist es möglicherweise sinnvoll, die Sicherungs Speicher-Enumeration im **PRJ_START_DIRECTORY_ENUMERATION_CB** Rückruf auszuführen.
+    ProjFS identifiziert das Verzeichnis, das im **FilePathName-Member** des _callbackData-Parameters_ des Rückrufs aufzählt wird.  Dies wird als Pfad relativ zum Virtualisierungsstamm angegeben.  Wenn sich beispielsweise der Virtualisierungsstamm unter befindet `C:\virtRoot` und das Verzeichnis, das aufzählt `C:\virtRoot\dir1\dir2` wird, ist, enthält der **FilePathName-Member** `dir1\dir2` .  Der Anbieter bereitet die Aufzählung dieses Pfads im Sicherungsdatenspeicher vor.  Abhängig von den Funktionen des Sicherungsspeichers eines Anbieters kann es sinnvoll sein, die Sicherungsspeicherenumeration im **PRJ_START_DIRECTORY_ENUMERATION_CB** Rückruf auszuführen.
 
-    Da mehrere Enumerationen parallel im gleichen Verzeichnis auftreten können, weist jeder enumerationsrückruf ein _enumerationid_ -Argument auf, damit der Anbieter die Rückruf Aufrufe einer einzelnen enumerationssitzung zuordnen kann.
+    Da mehrere Enumerationen parallel im gleichen Verzeichnis auftreten können, verfügt jeder Enumerationsrückruf über ein _enumerationId-Argument,_ damit der Anbieter die Rückrufaufrufe einer einzelnen Enumerationssitzung zuordnen kann.
 
-    Wenn der Anbieter S_OK vom **PRJ_START_DIRECTORY_ENUMERATION_CB** Rückruf zurückgibt, muss er alle aufgelisteten enumerationssitzungsinformationen aufbewahren, bis der **PRJ_END_DIRECTORY_ENUMERATION_CB** -Rückruf mit dem gleichen Wert für _enumerationid_ von projfs aufgerufen wird.  Wenn der Anbieter einen Fehler von **PRJ_START_DIRECTORY_ENUMERATION_CB** zurückgibt, ruft projfs den **PRJ_END_DIRECTORY_ENUMERATION_CB** -Rückruf für diese _enumerationid_ nicht auf.
+    Wenn der Anbieter S_OK aus dem **PRJ_START_DIRECTORY_ENUMERATION_CB** Rückruf zurückgibt, muss er alle Enumerationssitzungsinformationen beibehalten, die er besitzt, bis ProjFS den **PRJ_END_DIRECTORY_ENUMERATION_CB** Rückruf mit dem gleichen Wert für _enumerationId_ aufruft.  Wenn der Anbieter einen Fehler von **PRJ_START_DIRECTORY_ENUMERATION_CB** zurückgibt, ruft ProjFS den **PRJ_END_DIRECTORY_ENUMERATION_CB** Rückruf für diese _enumerationId_ nicht auf.
 
-1. Der **PRJ_GET_DIRECTORY_ENUMERATION_CB** Rückruf des Anbieters wird von projfs einmal oder mehrmals aufgerufen, um den Verzeichnis Inhalt des Anbieters zu erhalten.
+1. ProjFS ruft den **PRJ_GET_DIRECTORY_ENUMERATION_CB-Rückruf** des Anbieters ein oder mehrere Male auf, um den Verzeichnisinhalt vom Anbieter abzurufen.
 
-    Als Reaktion auf diesen Rückruf gibt der Anbieter eine sortierte Liste von Elementen aus dem Sicherungsdaten Speicher zurück.
+    Als Reaktion auf diesen Rückruf gibt der Anbieter eine sortierte Liste von Elementen aus seinem Sicherungsdatenspeicher zurück.
 
-    Der Rückruf kann einen Such Ausdruck in seinem _SearchExpression_ -Parameter bereitstellen, den der Anbieter für den Bereich der Ergebnisse der-Enumeration verwendet.  Wenn _SearchExpression_ NULL ist, gibt der Anbieter alle Einträge in dem aufgelisteten Verzeichnis zurück.  Wenn er nicht NULL ist, kann der Anbieter **[prjdoesnamecontainwildcards](/windows/win32/api/projectedfslib/nf-projectedfslib-prjdoesnamecontainwildcards)** verwenden, um zu bestimmen, ob der Ausdruck Platzhalter enthält.  Wenn dies der Fall ist, verwendet der Anbieter **[prjdatamematch](/windows/win32/api/projectedfslib/nf-projectedfslib-prjfilenamematch)** , um zu bestimmen, ob ein Eintrag im Verzeichnis mit dem Such Ausdruck übereinstimmt.
+    Der Rückruf stellt möglicherweise einen Suchausdruck in seinem _searchExpression-Parameter_ bereit, den der Anbieter verwendet, um die Ergebnisse der Enumeration zu beschneiden.  Wenn _searchExpression_ NULL ist, gibt der Anbieter alle Einträge im Verzeichnis zurück, das aufgeführt wird.  Wenn es sich nicht um NULL handelt, kann der Anbieter **[prjDoesNameContainWildCards](/windows/win32/api/projectedfslib/nf-projectedfslib-prjdoesnamecontainwildcards)** verwenden, um zu bestimmen, ob im Ausdruck Platzhalter vorhanden sind.  Falls vorhanden, verwendet der Anbieter **[PrjFileNameMatch,](/windows/win32/api/projectedfslib/nf-projectedfslib-prjfilenamematch)** um zu bestimmen, ob ein Eintrag im Verzeichnis mit dem Suchausdruck übereinstimmt.
 
-    Der Anbieter sollte beim ersten Aufruf dieses Rückrufs den Wert von _SearchExpression_ erfassen.  Der erfasste Wert wird bei jedem nachfolgenden Aufruf des Rückrufs in derselben enumerationssitzung verwendet, es sei denn, PRJ_CB_DATA_FLAG_ENUM_RESTART_SCAN im **Flags** -Feld des _callBackData_ -Parameters des Rückrufs festgelegt.  In diesem Fall sollte der Wert von _SearchExpression_ erneut erfasst werden.
+    Der Anbieter sollte den Wert von _searchExpression_ beim ersten Aufruf dieses Rückrufs erfassen.  Er verwendet den erfassten Wert bei jedem nachfolgenden Aufruf des Rückrufs in derselben Enumerationssitzung, es sei denn, PRJ_CB_DATA_FLAG_ENUM_RESTART_SCAN wird im Feld **Flags** des _callbackData-Parameters_ des Rückrufs festgelegt.  In diesem Fall sollte der Wert von _searchExpression_ erneut gekapselt werden.
 
-    Wenn der Sicherungs Speicher keine übereinstimmenden Einträge enthält, gibt der Anbieter einfach S_OK aus dem Rückruf zurück.  Andernfalls formatiert der Anbieter jeden übereinstimmenden Eintrag aus dem Sicherungs Speicher in eine **[PRJ_FILE_BASIC_INFO](/windows/win32/api/projectedfslib/ns-projectedfslib-prj_file_basic_info)** Struktur und verwendet dann **[prjfilldirentrybuffer](/windows/win32/api/projectedfslib/nf-projectedfslib-prjfilldirentrybuffer)** , um den Puffer auszufüllen, der vom _direntrybufferhandle_ -Parameter des Rückrufs bereitgestellt wird.  Der Anbieter fügt weiterhin Einträge hinzu, bis Sie alle hinzugefügt haben oder bis **prjfilldirentrybuffer** HRESULT_FROM_WIN32 (ERROR_INSUFFICIENT_BUFFER) zurückgibt.  Anschließend gibt der Anbieter S_OK aus dem Rückruf zurück.  Beachten Sie, dass der Anbieter die Einträge dem _direntrybufferhandle_ -Puffer in der richtigen Sortierreihenfolge hinzufügen muss.  Der Anbieter sollte **[prjdatamecompare](/windows/win32/api/projectedfslib/nf-projectedfslib-prjfilenamecompare)** verwenden, um die richtige Sortierreihenfolge zu bestimmen.
+    Wenn im Sicherungsspeicher keine übereinstimmenden Einträge vorhanden sind, gibt der Anbieter einfach S_OK aus dem Rückruf zurück.  Andernfalls formatiert der Anbieter jeden übereinstimmenden Eintrag aus seinem Sicherungsspeicher in eine **[PRJ_FILE_BASIC_INFO-Struktur](/windows/win32/api/projectedfslib/ns-projectedfslib-prj_file_basic_info)** und verwendet dann **[PrjFillDirEntryBuffer,](/windows/win32/api/projectedfslib/nf-projectedfslib-prjfilldirentrybuffer)** um den Puffer auszufüllen, der vom _dirEntryBufferHandle-Parameter_ des Rückrufs bereitgestellt wird.  Der Anbieter fügt einträge so lange hinzu, bis alle hinzugefügt wurden, oder bis **PrjFillDirEntryBuffer** HRESULT_FROM_WIN32(ERROR_INSUFFICIENT_BUFFER) zurückgibt.  Anschließend gibt der Anbieter S_OK aus dem Rückruf zurück.  Beachten Sie, dass der Anbieter die Einträge dem _dirEntryBufferHandle-Puffer_ in der richtigen Sortierreihenfolge hinzufügen muss.  Der Anbieter sollte **[PrjFileNameCompare](/windows/win32/api/projectedfslib/nf-projectedfslib-prjfilenamecompare)** verwenden, um die richtige Sortierreihenfolge zu bestimmen.
 
-    > Der Anbieter muss einen Wert für das **IsDirectory** -Mitglied von **PRJ_FILE_BASIC_INFO** bereitstellen.  Wenn **IsDirectory** den Wert false hat, muss der Anbieter auch einen Wert für das **FileSize** -Element angeben.
+    > Der Anbieter muss einen Wert für den **IsDirectory-Member** von **PRJ_FILE_BASIC_INFO** bereitstellen.  Wenn **IsDirectory** FALSE ist, muss der Anbieter auch einen Wert für den **FileSize-Member** bereitstellen.
     >
-    > Wenn der Anbieter keine Werte für die Member " **comationtime**", " **LastAccessTime**", " **lastschreitetime**" und " **changetime** " bereitstellt, verwendet projfs die aktuelle Systemzeit.
+    > Wenn der Anbieter keine Werte für die Member **CreationTime,** **LastAccessTime,** **LastWriteTime** und **ChangeTime** anpasst, verwendet ProjFS die aktuelle Systemzeit.
     >
-    > Projfs verwendet alle FILE_ATTRIBUTE Flags, die der Anbieter im **FileAttribute** -Member festlegt, außer FILE_ATTRIBUTE_DIRECTORY; Er legt den korrekten Wert für FILE_ATTRIBUTE_DIRECTORY im **fileattributmember** gemäß dem angegebenen Wert des **IsDirectory** -Members fest.
+    > ProjFS verwendet alle FILE_ATTRIBUTE, die der Anbieter im **FileAttributes-Member** festlegt, mit Ausnahme von FILE_ATTRIBUTE_DIRECTORY; der richtige Wert für FILE_ATTRIBUTE_DIRECTORY im **FileAttributes-Member** entsprechend dem angegebenen Wert des **IsDirectory-Members** festgelegt wird.
 
-    Wenn **prjfilldirentrybuffer** HRESULT_FROM_WIN32 (ERROR_INSUFFICIENT_BUFFER) zurückgibt, bevor der Anbieter keine Einträge mehr hinzufügt, um ihn hinzuzufügen, muss der Anbieter den Eintrag nachverfolgen, den er beim Empfangen des Fehlers hinzufügen wollte.  Beim nächsten Aufrufen des **PRJ_GET_DIRECTORY_ENUMERATION_CB** Rückrufs für die gleiche enumerationssitzung durch projfs muss der Anbieter das Hinzufügen von Einträgen zum _direntrybufferhandle_ -Puffer mit dem hinzu zufügenden Eintrag fortsetzen.
+    Wenn **PrjFillDirEntryBuffer** HRESULT_FROM_WIN32(ERROR_INSUFFICIENT_BUFFER) zurückgibt, bevor dem Anbieter die Einträge zum Hinzufügen ausgehen, muss der Anbieter den Eintrag nachverfolgen, den er beim Empfang des Fehlers hinzugefügt hat.  Wenn ProjFS das nächste Mal den **PRJ_GET_DIRECTORY_ENUMERATION_CB** Rückruf für dieselbe Enumerationssitzung aufruft, muss der Anbieter das Hinzufügen von Einträgen zum _dirEntryBufferHandle-Puffer_ mit dem Eintrag fortsetzen, den er hinzufügen wollte.
 
-    > Wenn der Sicherungs Speicher symbolische Verknüpfungen unterstützt, muss der Anbieter **[PrjFillDirEntryBuffer2](/windows/win32/api/projectedfslib/nf-projectedfslib-prjfilldirentrybuffer2)** verwenden, um den Puffer auszufüllen, der vom _direntrybufferhandle_ -Parameter des Rückrufs bereitgestellt wird.  **PrjFillDirEntryBuffer2** unterstützt eine zusätzliche Puffer Eingabe, die es dem Anbieter ermöglicht, anzugeben, dass es sich bei dem Enumerationseintrag um einen symbolischen Link handelt und was sein Ziel ist.  Andernfalls verhält sie sich wie oben für **prjfilldirentrybuffer** beschrieben.  Im folgenden Beispiel wird **PrjFillDirEntryBuffer2** verwendet, um die Unterstützung für symbolische Verknüpfungen zu veranschaulichen.
+    > Wenn der Sicherungsspeicher symbolische Verknüpfungen unterstützt, muss der Anbieter **[PrjFillDirEntryBuffer2](/windows/win32/api/projectedfslib/nf-projectedfslib-prjfilldirentrybuffer2)** verwenden, um den Puffer auszufüllen, der vom _dirEntryBufferHandle-Parameter_ des Rückrufs bereitgestellt wird.  **PrjFillDirEntryBuffer2** unterstützt eine zusätzliche Puffereingabe, mit der der Anbieter angeben kann, dass der Enumerationseintrag ein symbolischer Link und sein Ziel ist.  Andernfalls verhält er sich wie oben für **PrjFillDirEntryBuffer** beschrieben.  Im folgenden Beispiel wird **PrjFillDirEntryBuffer2** verwendet, um die Unterstützung symbolischer Verknüpfungen zu veranschaulichen.
     >
-    > Beachten Sie, dass **PrjFillDirEntryBuffer2** ab Windows 10, Version 2004, unterstützt wird.  Ein Anbieter sollte überprüfen, ob PrjFillDirEntryBuffer2 vorhanden ist, z. . mithilfe von **[GetProcAddress](/windows/win32/api/libloaderapi/nf-libloaderapi-getprocaddress)**.
+    > Beachten Sie, dass **PrjFillDirEntryBuffer2** ab Windows 10 Version 2004 unterstützt wird.  Ein Anbieter sollte das Vorhandensein von **PrjFillDirEntryBuffer2** prüfen, z. B. mit **[getProcAddress.](/windows/win32/api/libloaderapi/nf-libloaderapi-getprocaddress)**
 
     ```C++
     typedef struct MY_ENUM_ENTRY MY_ENUM_ENTRY;
@@ -213,6 +213,6 @@ Um an der verzeichnisenumeration teilnehmen zu können, muss der Anbieter die **
     }
     ```
 
-1. Projfs Ruft den **PRJ_END_DIRECTORY_ENUMERATION_CB** Rückruf des Anbieters auf, um die enumerationssitzung zu beenden.
+1. ProjFS ruft den **PRJ_END_DIRECTORY_ENUMERATION_CB-Rückruf** des Anbieters auf, um die Enumerationssitzung zu beenden.
 
-    Der Anbieter sollte sämtliche Bereinigungs Schritte ausführen, um die enumerationssitzung zu beenden, wie z. b. das Aufheben der Zuordnung von Arbeitsspeicher, der im Rahmen der Verarbeitung **PRJ_START_DIRECTORY_ENUMERATION_CB** zugeordnet ist
+    Der Anbieter sollte alle Bereinigungen durchführen, die er ausführen muss, um die Enumerationssitzung zu beenden, z. B. die Zuordnung des Speichers, der im Rahmen der Verarbeitung **PRJ_START_DIRECTORY_ENUMERATION_CB** zugeordnet ist.

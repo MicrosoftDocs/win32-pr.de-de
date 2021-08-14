@@ -1,58 +1,58 @@
 ---
-description: Das Vertex Shader 3,0-Modell unterstützt die Textur Suche im Vertex-Shader mithilfe der texldl-vs-Textur Lade Anweisung.
+description: Das Vertex-Shader 3.0-Modell unterstützt die Textursuche im Vertex-Shader mithilfe der texldl - vs texture load-Anweisung.
 ms.assetid: 595cb5c0-da12-4fe9-944c-a61d8ed990b4
-title: Scheitelpunkt Texturen in vs_3_0 (DirectX HLSL)
+title: Vertextexturen in vs_3_0 (DirectX HLSL)
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 1a4e8e7bbf7e1ae9764fe5b30647f318dfaeb3ba
-ms.sourcegitcommit: a47bd86f517de76374e4fff33cfeb613eb259a7e
+ms.openlocfilehash: a4cbd4aa1e1830d29656fea2bc7b028191bee158eede119c9a47ae2457d10e99
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/06/2021
-ms.locfileid: "103747160"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118519447"
 ---
-# <a name="vertex-textures-in-vs_3_0-directx-hlsl"></a>Scheitelpunkt Texturen in vs \_ 3 \_ 0 (DirectX HLSL)
+# <a name="vertex-textures-in-vs_3_0-directx-hlsl"></a>Vertextexturen in \_ vs. \_ 3 0 (DirectX HLSL)
 
-Das Vertex Shader 3,0-Modell unterstützt die Textur Suche im Vertex-Shader mithilfe der [texldl-vs-](../direct3dhlsl/texldl---vs.md) Textur Lade Anweisung. Die Vertex-Engine enthält vier textursampler-Phasen mit den Namen [D3DVERTEXTEXTURESAMPLER0](d3dvertextexturesampler.md), D3DVERTEXTEXTURESAMPLER1, D3DVERTEXTEXTURESAMPLER2 und D3DVERTEXTEXTURESAMPLER3. Diese unterscheiden sich von der Verschiebung des Verschiebungs Karten Samplern und der Textur Samplern in der Pixel-Engine.
+Das Vertex-Shader 3.0-Modell unterstützt die Textursuche im Vertex-Shader mithilfe der [texldl - vs](../direct3dhlsl/texldl---vs.md) texture load-Anweisung. Die Vertex-Engine enthält vier Textursamplerstufen mit den Namen [D3DVERTEXTEXTURESAMPLER0,](d3dvertextexturesampler.md)D3DVERTEXTEXTURESAMPLER1, D3DVERTEXTEXTURESAMPLER2 und D3DVERTEXTEXTURESAMPLER3. Diese unterscheiden sich von den Verschiebungszuordnungs-Samplern und Texturs samplern in der Pixel-Engine.
 
-Zum Beispiel für Texturen, die in diesen vier Phasen festgelegt werden, können Sie die Vertex-Engine verwenden und die Phasen mit der [**CheckDeviceFormat**](/windows/desktop/api) -Methode programmieren. Legen Sie mithilfe von [**SetTexture**](/windows/win32/api/d3d9helper/nf-d3d9helper-idirect3ddevice9-settexture)Texturen in diesen Phasen fest, wobei Sie den Phasen Index [D3DVERTEXTEXTURESAMPLER0](d3dvertextexturesampler.md) bis D3DVERTEXTEXTURESAMPLER3 verwenden. Ein neues Register wurde im Vertex-Shader eingeführt, das Samplerregister (wie in PS \_ 2 \_ 0), das den Scheitelpunkt Textur Sampler darstellt. Dieses Register muss im Shader definiert werden, bevor es verwendet werden kann.
+Zum Beispiel für Texturen, die in diesen vier Phasen festgelegt sind, können Sie die Scheitelpunkt-Engine verwenden und die Phasen mit der [**CheckDeviceFormat-Methode**](/windows/desktop/api) programmieren. Legen Sie Texturen in diesen Phasen mithilfe von [**SetTexture**](/windows/win32/api/d3d9helper/nf-d3d9helper-idirect3ddevice9-settexture)mit dem Stufenindex [D3DVERTEXTEXTURESAMPLER0](d3dvertextexturesampler.md) bis D3DVERTEXTEXTURESAMPLER3 fest. Im Vertex-Shader, dem Samplerregister (wie in PS 2 0), wurde ein neues Register eingeführt, das den \_ \_ Vertextextur-Sampler darstellt. Dieses Register muss im Shader definiert werden, bevor es verwendet wird.
 
-Eine Anwendung kann Abfragen, wenn ein Format als vertextextur unterstützt wird, indem [**CheckDeviceFormat**](/windows/desktop/api) mit [D3DUSAGE \_ Query \_ vertextexture](d3dusage-query.md)aufgerufen wird.
+Eine Anwendung kann abfragen, ob ein Format als Scheitelpunkttextur unterstützt wird, indem [**sie CheckDeviceFormat**](/windows/desktop/api) mit [D3DUSAGE \_ QUERY \_ VERTEXTEXTURE aufruft.](d3dusage-query.md)
 
 > [!Note]  
-> Dabei handelt es sich um ein abfrageflag, sodass es in keiner der Funktionen von "-Funktion" akzeptiert wird. Eine im Standard Pool erstellte Scheitelpunkt Textur kann als Pixel Textur festgelegt werden und umgekehrt. Um jedoch die Verarbeitung der Software Scheitel Punkte zu verwenden, muss die Vertex-Textur im Scratch-Pool erstellt werden (unabhängig davon, ob es sich um ein Gerät mit gemischtem Modus oder ein Software-Vertex-Verarbeitungs Gerät handelt).
+> Dies ist ein Abfrageflag, sodass es in einer Createxxx-Funktion nicht akzeptiert wird. Eine im Standardpool erstellte Scheitelpunkttextur kann als Pixeltextur festgelegt werden und umgekehrt. Um die Softwarevertexverarbeitung zu verwenden, muss die Scheitelpunkttextur jedoch im Scratchpool erstellt werden (unabhängig davon, ob es sich um ein Gerät im gemischten Modus oder ein Software-Scheitelpunktverarbeitungsgerät handelt).
 
  
 
-Die Funktionalität ist mit den Pixel Texturen identisch, mit Ausnahme der folgenden:
+Die Funktionalität ist mit den Pixeltexturen identisch, mit Ausnahme der folgenden:
 
--   Die anisotrope Textur Filterung wird nicht unterstützt. daher \_ wird D3DSAMP MaxAnisotropy ignoriert, und D3DTEXF \_ anisotrope kann nicht für die Vergrößerung festgelegt werden, oder es kann für diese Phasen nicht minimal festgelegt werden.
--   Die Rate der Änderungs Informationen ist nicht verfügbar. Daher muss die Anwendung die Detailebene berechnen und diese Informationen als Parameter für [texldl-vs](../direct3dhlsl/texldl---vs.md)bereitstellen.
+-   Die anisotrope Texturfilterung wird nicht unterstützt, daher wird \_ D3DSAMP MAXANISOTROPY ignoriert, und D3DTEXF ANISOTROPIC kann nicht für die Vergrößerung oder Vergrößerung für diese Phasen festgelegt \_ werden.
+-   Die Rate der Änderungsinformationen ist nicht verfügbar, daher muss die Anwendung die Detailebene berechnen und diese Informationen als Parameter für [texldl - im](../direct3dhlsl/texldl---vs.md)Vergleich zu bereitstellen.
 
 Es gelten folgende Beschränkungen:
 
--   Wie bei Pixel-Shadern \_ wird D3DSAMP Elementindex verwendet, um herauszufinden, aus welchem Element ein Beispiel entnommen werden soll, wenn multielementtexturen unterstützt werden.
--   Der Status "D3DSAMP \_ dmapoffset" wird für diese Phasen ignoriert.
--   Verwenden Sie [**CheckDeviceFormat**](/windows/desktop/api) mit [D3DUSAGE \_ Query \_ vertextexture "](d3dusage-query.md) , um eine Textur abzufragen, um festzustellen, ob Sie als vertextextur verwendet werden kann.
--   Vertextexturefiltercaps gibt an, welche Art von Filtern bei den Scheitelpunkt Textur-Samplern zulässig sind. [D3DPTFILTERCAPS \_ Minsanisotropic](d3dptfiltercaps.md) und D3DPTFILTERCAPS \_ magsanisotrope sind nicht zulässig.
+-   Wie bei Pixel-Shadern wird D3DSAMP ELEMENTINDEX verwendet, um herauszufinden, aus welchem Element Stichproben erstellt werden sollen, wenn \_ Mehrelementtexturen unterstützt werden.
+-   Der D3DSAMP \_ DMAPOFFSET-Zustand wird für diese Phasen ignoriert.
+-   Verwenden [**Sie CheckDeviceFormat**](/windows/desktop/api) mit [D3DUSAGE \_ QUERY \_ VERTEXTEXTURE"](d3dusage-query.md) zum Abfragen einer Textur, um zu überprüfen, ob sie als Scheitelpunkttextur verwendet werden kann.
+-   VertexTextureFilterCaps gibt an, welche Arten von Filtern an den Scheitelpunkttextur-Samplern zulässig sind. [D3DPTFILTERCAPS \_ MINFANISOTROPIC und](d3dptfiltercaps.md) D3DPTFILTERCAPS \_ MAGFANISOTROPIC sind nichtig.
 
-## <a name="sampling-stage-registers"></a>Abtast Phasen Register
+## <a name="sampling-stage-registers"></a>Register der Samplingphase
 
-Ein Sampling-Phasen Register identifiziert eine samplingeinheit, die in Textur Ladeanweisungen verwendet werden kann. Eine samplingeinheit entspricht der Phase Textur Sampling und kapselt den in [**setsamplerstate angegebenen samplingspezifischen**](/windows/win32/api/d3d9helper/nf-d3d9helper-idirect3ddevice9-setsamplerstate)Zustand.
+Ein Samplingstufenregister identifiziert eine Samplingeinheit, die in Texturlade-Anweisungen verwendet werden kann. Eine Samplingeinheit entspricht der Textursamplerphase und kapselt den in [**SetSamplerState**](/windows/win32/api/d3d9helper/nf-d3d9helper-idirect3ddevice9-setsamplerstate)bereitgestellten samplingspezifischen Zustand.
 
-Jeder Sampler identifiziert eindeutig eine einzelne Textur Oberfläche, die auf den entsprechenden Sampler mithilfe von [**SetTexture**](/windows/win32/api/d3d9helper/nf-d3d9helper-idirect3ddevice9-settexture)festgelegt wird. Allerdings kann die gleiche Textur Oberfläche bei mehreren Samplers festgelegt werden.
+Jeder Sampler identifiziert eindeutig eine einzelne Texturoberfläche, die mithilfe von SetTexture auf den entsprechenden [**Sampler festgelegt wird.**](/windows/win32/api/d3d9helper/nf-d3d9helper-idirect3ddevice9-settexture) Die gleiche Texturoberfläche kann jedoch bei mehreren Samplern festgelegt werden.
 
-Bei der zeichnungszeit kann eine Textur nicht gleichzeitig als Renderziel und Textur in einer Phase festgelegt werden.
+Zur Zeichnen-Zeit kann eine Textur nicht gleichzeitig als Renderziel und textur in einer Phase festgelegt werden.
 
-Da vs \_ 3 \_ 0 vier Samplers unterstützt, können bis zu vier Textur Oberflächen in einem einzelnen shaderdurchlauf aus gelesen werden. Ein Samplerregister kann nur als Argument in der Textur Lade Anweisung angezeigt werden: [texldl-vs](../direct3dhlsl/texldl---vs.md).
+Da im Vergleich zu 3 0 vier Sampler unterstützt werden, können bis zu vier Texturoberflächen in einem einzelnen \_ \_ Shaderpass gelesen werden. Ein Samplerregister wird möglicherweise nur als Argument in der Texturlade-Anweisung angezeigt: [texldl - vs](../direct3dhlsl/texldl---vs.md).
 
-\_Wenn Sie in vs 3 \_ 0 einen Sampler verwenden, muss er am Anfang des Shader-Programms mit dem [DCL- \_ samplertype (SM3-vs ASM)](../direct3dhlsl/dcl-samplertype---vs.md) deklariert werden (wie in PS \_ 2 \_ 0).
+Im Vergleich zu 3 0 muss ein Sampler am Anfang des Shaderprogramms mit dem \_ \_ [dcl \_ samplerType (sm3 – vs asm)](../direct3dhlsl/dcl-samplertype---vs.md) deklariert werden (wie in ps \_ 2 \_ 0).
 
-## <a name="software-processing"></a>Software Verarbeitung
+## <a name="software-processing"></a>Softwareverarbeitung
 
-Diese Funktion wird bei der Verarbeitung von Software Scheitel Punkten unterstützt. Die unterstützten Filtertypen können überprüft werden, indem [**GetDeviceCaps**](/windows/win32/api/d3d9helper/nf-d3d9helper-idirect3ddevice9-getdevicecaps) aufgerufen und vertextexturefiltercaps überprüft wird. Alle veröffentlichten Textur Formate werden als Scheitelpunkt Texturen bei der Verarbeitung von Software Scheitel Punkten unterstützt.
+Dieses Feature wird bei der Softwarevertexverarbeitung unterstützt. Die unterstützten Filtertypen können durch Aufrufen von [**GetDeviceCaps**](/windows/win32/api/d3d9helper/nf-d3d9helper-idirect3ddevice9-getdevicecaps) und Überprüfen von VertexTextureFilterCaps überprüft werden. Alle veröffentlichten Texturformate werden als Scheitelpunkttexturen in der Softwarevertexverarbeitung unterstützt.
 
-Mithilfe von [**CheckDeviceFormat**](/windows/desktop/api) und Bereitstellen von (D3DVERTEXTEXTURESAMPLER \| [**D3DUSAGE \_ softwareprocessing**](d3dusage.md)) als Verwendung können Anwendungen überprüfen, ob ein bestimmtes Textur Format im Software Scheitelpunkt Verarbeitungsmodus unterstützt wird. Alle Formate werden für die Verarbeitung von Software Scheitel Punkten unterstützt. Der Scratch-Pool ist für die Verarbeitung von Software Scheitel Punkten erforderlich.
+Anwendungen können überprüfen, ob ein bestimmtes Texturformat im Softwarevertexverarbeitungsmodus unterstützt wird, indem [**sie CheckDeviceFormat**](/windows/desktop/api) aufrufen und (D3DVERTEXTEXTURESAMPLER \| [**D3DUSAGE \_ SOFTWAREPROCESSING)**](d3dusage.md)als Verwendung bereitstellen. Alle Formate werden für die Softwarevertexverarbeitung unterstützt. Der Scratchpool ist für die Softwarevertexverarbeitung erforderlich.
 
 ## <a name="api-changes"></a>API-Änderungen
 
@@ -78,7 +78,7 @@ DWORD VertexTextureFilterCaps;
 
 <dl> <dt>
 
-[Scheitelpunkt Pipeline](vertex-pipeline.md)
+[Vertexpipeline](vertex-pipeline.md)
 </dt> </dl>
 
  

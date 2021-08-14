@@ -1,11 +1,11 @@
 ---
-title: Controls. stoppt-Methode
-description: Die Methode "beenden" beendet die Wiedergabe des Medien Elements. | Controls. stoppt-Methode
+title: Controls.stop-Methode
+description: Die Stop-Methode beendet die Wiedergabe des Medienelements. | Controls.stop-Methode
 ms.assetid: ace95fde-9c94-4737-88f2-94321cbc687c
 keywords:
-- Windows-Media Player "Methode"
-- Methode "Methode Media Player", Steuerelement Klasse
-- Steuerelement-Klasse, Windows Media Player, Methode "Ende"
+- Stop-Windows Media Player
+- Stop-Methode Windows Media Player , Controls-Klasse
+- Steuert die klasse Windows Media Player , stop-Methode
 topic_type:
 - apiref
 api_name:
@@ -16,16 +16,16 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 0e1ffc581fffbce0a341559e82c6bd196f712149
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: b882f462903c2c5f75a3655cd26b927e7439043828dad41fcce7d0e64e4ce812
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106369667"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118580159"
 ---
-# <a name="controlsstop-method"></a>Controls. stoppt-Methode
+# <a name="controlsstop-method"></a>Controls.stop-Methode
 
-Die Methode " **Beenden** " beendet die Wiedergabe des Medien Elements.
+Die **Stop-Methode** beendet die Wiedergabe des Medienelements.
 
 ## <a name="syntax"></a>Syntax
 
@@ -44,15 +44,15 @@ Diese Methode hat keine Parameter.
 
 Diese Methode gibt keinen Wert zurück.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Diese Methode bewirkt, dass Windows Media Player alle verwendeten Systemressourcen, z. b. das Audiogerät, freigibt. Das aktuelle Medien Element wird jedoch nicht freigegeben.
+Diese Methode bewirkt Windows Media Player, dass alle systemressourcen, die sie verwendet, wie z. B. das Audiogerät, frei geben. Das aktuelle Medienelement wird jedoch nicht freigegeben.
 
-Wenn der Spieler angehalten wird, wird die Nachverfolgung an den Anfang zurückgesetzt. Der Aufruf von **Play** beginnt dann, den Clip von Anfang an wiederzugeben. Verwenden Sie die **Pause** -Methode, um einen Wiedergabe Vorgang anzuhalten, ohne die aktuelle Position zu ändern.
+Wenn der Player beendet wird, wird die Spur an den Anfang zurücklädt. Der **Aufruf** von play beginnt dann von Anfang an mit der Wiedergabe des Clips. Um einen Wiedergabevorgang anzuhalten, ohne die aktuelle Position zu ändern, verwenden Sie die **pause-Methode.**
 
 ## <a name="examples"></a>Beispiele
 
-Im folgenden Beispiel wird ein HTML-Schaltflächen Element erstellt, das **Beenden** zum Beenden der Wiedergabe verwendet. Das **Player** -Objekt wurde mit ID = "Player" erstellt.
+Im folgenden Beispiel wird ein HTML BUTTON-Element erstellt, das **stop verwendet,** um die Wiedergabe zu beenden. Das **Player-Objekt** wurde mit der ID = "Player" erstellt.
 
 
 ```JScript
@@ -76,7 +76,7 @@ Im folgenden Beispiel wird ein HTML-Schaltflächen Element erstellt, das **Beend
 
 | Anforderung | Wert |
 |--------------------|------------------------------------------------------------------------------------|
-| Version<br/> | Windows Media Player Version 7,0 oder höher.<br/>                              |
+| Version<br/> | Windows Media Player Version 7.0 oder höher.<br/>                              |
 | DLL<br/>     | <dl> <dt>Wmp.dll</dt> </dl> |
 
 
@@ -88,13 +88,13 @@ Im folgenden Beispiel wird ein HTML-Schaltflächen Element erstellt, das **Beend
 [**Controls-Objekt**](controls-object.md)
 </dt> <dt>
 
-[**Steuerelemente. Next**](controls-next.md)
+[**Controls.next**](controls-next.md)
 </dt> <dt>
 
-[**Controls. Pause**](controls-pause.md)
+[**Controls.pause**](controls-pause.md)
 </dt> <dt>
 
-[**Controls. Previous**](controls-previous.md)
+[**Controls.previous**](controls-previous.md)
 </dt> </dl>
 
  

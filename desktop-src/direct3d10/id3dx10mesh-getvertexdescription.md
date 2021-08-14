@@ -1,7 +1,7 @@
 ---
-description: Zugreifen auf die vertexbeschreibung, die an D3DX10CreateMesh übermittelt wurde. In der Scheitelpunkt Beschreibung wird das Layout der Vertex-Puffer des Netzes beschrieben.
+description: Greifen Sie auf die Scheitelpunktbeschreibung zu, die an D3DX10CreateMesh übergeben wird. Die Scheitelpunktbeschreibung beschreibt das Layout der Scheitelpunktpuffer des Gitters.
 ms.assetid: e4a4a98a-e131-414c-ad98-21288ff0c61b
-title: 'ID3DX10Mesh:: getvertexdescription-Methode (d3dx10. h)'
+title: ID3DX10Mesh::GetVertexDescription-Methode (D3DX10.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -14,16 +14,16 @@ api_type:
 api_location:
 - D3DX10.lib
 - D3DX10.dll
-ms.openlocfilehash: 01888ea83f43e37951b48e03916f18af1ec6ddb6
-ms.sourcegitcommit: 14010c34b35fa268046c7683f021f86de08ddd0a
+ms.openlocfilehash: 5857b5162cf351a235d9cbecd2e457030820485d37e9aa49062a63b196f95900
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "103961613"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118540226"
 ---
-# <a name="id3dx10meshgetvertexdescription-method"></a>ID3DX10Mesh:: getvertexdescription-Methode
+# <a name="id3dx10meshgetvertexdescription-method"></a>ID3DX10Mesh::GetVertexDescription-Methode
 
-Zugreifen auf die vertexbeschreibung, die an [**D3DX10CreateMesh**](d3d10-d3dx10createmesh.md)übermittelt wurde. In der Scheitelpunkt Beschreibung wird das Layout der Vertex-Puffer des Netzes beschrieben.
+Greifen Sie auf die Scheitelpunktbeschreibung zu, die [**an D3DX10CreateMesh übergeben wird.**](d3d10-d3dx10createmesh.md) Die Scheitelpunktbeschreibung beschreibt das Layout der Scheitelpunktpuffer des Gitters.
 
 ## <a name="syntax"></a>Syntax
 
@@ -41,21 +41,21 @@ HRESULT GetVertexDescription(
 
 <dl> <dt>
 
-*PPDE SC* \[ vorgenommen\]
+*ppDesc* \[ out\]
 </dt> <dd>
 
-Type: **Konstanten [**d3d10 input \_ - \_ Element \_ DESC**](/windows/desktop/api/D3D10/ns-d3d10-d3d10_input_element_desc) \* \***
+Typ: **const [**D3D10 \_ INPUT ELEMENT \_ \_ DESC**](/windows/desktop/api/D3D10/ns-d3d10-d3d10_input_element_desc) \* \***
 
-Array von Eingabe Elementen, das das Layout der Vertex-Puffer des Netzes beschreibt. Weitere Informationen finden Sie unter [**d3d10 \_ input \_ Element \_ ensc**](/windows/desktop/api/D3D10/ns-d3d10-d3d10_input_element_desc).
+Ein Array von Eingabeelementen, die das Layout der Scheitelpunktpuffer des Gitters beschreiben. Siehe [**D3D10 \_ INPUT ELEMENT \_ \_ DESC**](/windows/desktop/api/D3D10/ns-d3d10-d3d10_input_element_desc).
 
 </dd> <dt>
 
-*pdeclcount* \[ in\]
+*pDeclCount* \[ In\]
 </dt> <dd>
 
-Typ: **[ **uint**](../winprog/windows-data-types.md)\***
+Typ: **[ **UINT**](../winprog/windows-data-types.md)\***
 
-Die Anzahl der Eingabeelemente in PPDE SC.
+Die Anzahl der Eingabeelemente in ppDesc.
 
 </dd> </dl>
 
@@ -63,7 +63,7 @@ Die Anzahl der Eingabeelemente in PPDE SC.
 
 Typ: **[ **HRESULT**](https://msdn.microsoft.com/library/Bb401631(v=MSDN.10).aspx)**
 
-Der Rückgabewert ist einer der Werte, die in [Direct3D 10-Rückgabe Codes](d3d10-graphics-reference-returnvalues.md)aufgelistet sind.
+Der Rückgabewert ist einer der Unter [Direct3D 10-Rückgabecodes aufgeführten Werte.](d3d10-graphics-reference-returnvalues.md)
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -71,12 +71,12 @@ Der Rückgabewert ist einer der Werte, die in [Direct3D 10-Rückgabe Codes](d3d1
 
 | Anforderung | Wert |
 |--------------------|---------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>D3dx10. h</dt> </dl>   |
-| Bibliothek<br/> | <dl> <dt>D3dx10. lib</dt> </dl> |
+| Header<br/>  | <dl> <dt>D3DX10.h</dt> </dl>   |
+| Bibliothek<br/> | <dl> <dt>D3DX10.lib</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen:
 
 <dl> <dt>
 

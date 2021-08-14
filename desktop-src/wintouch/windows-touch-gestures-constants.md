@@ -1,6 +1,6 @@
 ---
-title: Windows-Touchgesten Konstanten (Winuser. h)
-description: In diesem Abschnitt werden die Konstanten aufgelistet, die für Windows-Touchbewegungen verwendet werden
+title: Windows Touchgestenkonst constants (Winuser.h)
+description: In diesem Abschnitt werden die Konstanten aufgeführt, die für Windows Touchgesten verwendet werden.
 ms.assetid: C5C3C533-A781-47EF-8209-2D94A94C9097
 topic_type:
 - apiref
@@ -12,26 +12,26 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 02/18/2020
-ms.openlocfilehash: be1d8fe9354c7160643dcefb2d35938453ad5b07
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 3e980619a4f0f2a0df83ebfbe2fb8e8a767ef5f988e2bb3b769bde64e714eb80
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "103956513"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118435226"
 ---
-# <a name="windows-touch-gestures-constants"></a>Windows-Touchgesten-Konstanten
+# <a name="windows-touch-gestures-constants"></a>Windows Berührungsgestenkonstten
 
-In diesem Abschnitt werden die Konstanten aufgelistet, die für Windows-Touchbewegungen verwendet werden
+In diesem Abschnitt werden die Konstanten aufgeführt, die für Windows Touchgesten verwendet werden.
 
 <dl> <dt>
 
-**Gestureconfigmaxcount**
+**GESTURECONFIGMAXCOUNT**
 </dt> <dd> <dl> <dt>
 
 256
 </dt> <dt>
 
-Definiert die maximale Anzahl von Gesten Konfigurationen, die in einem einzelnen Befehl von [**setgestureconfig**](/windows/desktop/api/winuser/nf-winuser-setgestureconfig) oder [**getgestureconfig**](/windows/desktop/api/winuser/nf-winuser-getgestureconfig)enthalten sein können.
+Definiert die maximale Anzahl von Gestenkonfigurationen, die in einem einzelnen Aufruf von [**SetGestureConfig**](/windows/desktop/api/winuser/nf-winuser-setgestureconfig) oder [**GetGestureConfig enthalten sein können.**](/windows/desktop/api/winuser/nf-winuser-getgestureconfig)
 
 </dt> </dl> </dd> </dl>
 
@@ -39,10 +39,10 @@ Definiert die maximale Anzahl von Gesten Konfigurationen, die in einem einzelnen
 
 | Anforderung | Wert |
 |-------------------------------------|----------------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows 7 \[ -Desktop-Apps\]<br/>                                                               |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2008 R2 \[ -Desktop-Apps\]<br/>                                                  |
-| Header<br/>                   | <dl> <dt>Winuser. h (Windows. h einschließen)</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows 7 \[ Desktop-Apps\]<br/>                                                               |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server 2008 \[ R2-Desktop-Apps\]<br/>                                                  |
+| Header<br/>                   | <dl> <dt>Winuser.h (include Windows.h)</dt> </dl> |
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
-[**Getgestureconfig**](/windows/desktop/api/winuser/nf-winuser-getgestureconfig), [**setgestureconfig**](/windows/desktop/api/winuser/nf-winuser-setgestureconfig), [Windows-Touchgesten](multi-touch-gestures.md)
+[**GetGestureConfig**](/windows/desktop/api/winuser/nf-winuser-getgestureconfig), [**SetGestureConfig**](/windows/desktop/api/winuser/nf-winuser-setgestureconfig), [Windows Touchgesten](multi-touch-gestures.md)

@@ -1,33 +1,33 @@
 ---
-title: So suchen Sie nach Zeit mithilfe des asynchronen Readers
-description: So suchen Sie nach Zeit mithilfe des asynchronen Readers
+title: So suchen Sie nach Zeit mit dem asynchronen Reader
+description: So suchen Sie nach Zeit mit dem asynchronen Reader
 ms.assetid: 731b0a6e-1472-45a7-998c-e395be86036f
 keywords:
-- Advanced Systems Format (ASF), Suche nach Zeit
-- ASF (Advanced Systems Format), Suche nach Zeit
-- Advanced Systems Format (ASF), asynchrone Leser
-- ASF (Advanced Systems Format), asynchrone Leser
+- Advanced Systems Format (ASF), suchen nach Zeit
+- ASF (Advanced Systems Format), suchen nach Zeit
+- Advanced Systems Format (ASF), asynchrone Reader
+- ASF (Advanced Systems Format), asynchrone Reader
 - asynchrone Leser, suchen nach Zeit
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 06f3e24c04d75d762aef6bac498d4b4c8dfa9552
-ms.sourcegitcommit: 48d1c892045445bcbd0f22bafa2fd3861ffaa6e7
+ms.openlocfilehash: 070d480cade395cdbead99b1aedde8928c6fb18b4af15bf6b72c1bcc0dcd6dc3
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/19/2020
-ms.locfileid: "103723565"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118196459"
 ---
-# <a name="to-seek-by-time-using-the-asynchronous-reader"></a>So suchen Sie nach Zeit mithilfe des asynchronen Readers
+# <a name="to-seek-by-time-using-the-asynchronous-reader"></a>So suchen Sie nach Zeit mit dem asynchronen Reader
 
-Wenn Sie eine bestimmte Präsentationszeit in einer ASF-Datei suchen möchten, muss die Datei ordnungsgemäß konfiguriert sein. Standardmäßig können Sie in Audiodateien suchen, Videodateien müssen jedoch vor der Suche indiziert werden. Wenn Sie sich nicht sicher sind, wie eine Datei erstellt wurde, können Sie das Attribut "g \_ wszwmseekable" im Header der Datei durch Aufrufen von " [**iwmheaderinfo:: getattributebyname**](/previous-versions/windows/desktop/api/Wmsdkidl/nf-wmsdkidl-iwmheaderinfo-getattributebyname)" überprüfen.
+Wenn Sie eine bestimmte Präsentationszeit in einer ASF-Datei suchen möchten, muss die Datei ordnungsgemäß konfiguriert sein. Sie können standardmäßig nur Audiodateien suchen, aber Videodateien müssen vor der Suche indiziert werden. Wenn Sie nicht sicher sind, wie eine Datei erstellt wurde, können Sie das \_ g wszWMSeekable-Attribut im Header der Datei überprüfen, indem [**Sie IWMHeaderInfo::GetAttributeByName**](/previous-versions/windows/desktop/api/Wmsdkidl/nf-wmsdkidl-iwmheaderinfo-getattributebyname)aufrufen.
 
-Um mithilfe des asynchronen Readers mithilfe des asynchronen Readers mithilfe des asynchronen Readers nach Daten in einer ASF-Datei zu suchen, nennen Sie [**iwmreader:: Start**](/previous-versions/windows/desktop/api/Wmsdkidl/nf-wmsdkidl-iwmreader-start), und übergeben Sie die gewünschte Zeit und Dauer des Teils der Datei, die Sie als *cnsstart* bzw. *cnsduration* lesen möchten.
+Rufen Sie [**IWMReader::Start**](/previous-versions/windows/desktop/api/Wmsdkidl/nf-wmsdkidl-iwmreader-start)auf, und übergeben Sie die gewünschte Zeit und Dauer des Dateiteils, den Sie als *cnsStart* bzw. *cnsDuration* lesen möchten, um daten in einer ASF-Datei anhand der Präsentationszeit mithilfe des asynchronen Readers zu suchen.
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
 <dl> <dt>
 
-[**Iwmreader-Schnittstelle**](/previous-versions/windows/desktop/api/wmsdkidl/nn-wmsdkidl-iwmreader)
+[**IWMReader-Schnittstelle**](/previous-versions/windows/desktop/api/wmsdkidl/nn-wmsdkidl-iwmreader)
 </dt> <dt>
 
 [**Lesen von Dateien mit dem asynchronen Reader**](reading-files-with-the-asynchronous-reader.md)
@@ -39,9 +39,9 @@ Um mithilfe des asynchronen Readers mithilfe des asynchronen Readers mithilfe de
 [**Arbeiten mit Indizes**](working-with-indexes.md)
 </dt> </dl>
 
- 
+ 
 
- 
+ 
 
 
 

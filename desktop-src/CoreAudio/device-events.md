@@ -1,41 +1,41 @@
 ---
-description: Geräte Ereignisse
+description: Geräteereignisse
 ms.assetid: b31500d6-a79d-4e6e-878e-6bd77055f1ad
-title: Geräte Ereignisse (Core-audioapis)
+title: Geräteereignisse (Core Audio APIs)
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 0513fc49ee5f3cb2bfe95ca2330cb79b74720923
-ms.sourcegitcommit: c7add10d695482e1ceb72d62b8a4ebd84ea050f7
+ms.openlocfilehash: b61538bd7d8d297b52a321f446bb11c3e1365e549a3c2947b55538730c1660c7
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106344936"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118407028"
 ---
-# <a name="device-events-core-audio-apis"></a>Geräte Ereignisse (Core-audioapis)
+# <a name="device-events-core-audio-apis"></a>Geräteereignisse (Core Audio APIs)
 
-Ein Geräte Ereignis benachrichtigt Clients über eine Änderung des Status eines [audioendpunktgeräts](audio-endpoint-devices.md) im System. Im folgenden finden Sie Beispiele für Geräte Ereignisse:
+Ein Geräteereignis benachrichtigt Clients über eine Änderung [](audio-endpoint-devices.md) des Status eines Audioendpunktgeräts im System. Im Folgenden finden Sie Beispiele für Geräteereignisse:
 
--   Der Benutzer aktiviert oder deaktiviert ein audioendpunktgerät von Device Manager oder von der Windows-Multimedia-Systemsteuerung Mmsys.cpl.
+-   Der Benutzer aktiviert oder deaktiviert ein Audioendpunktgerät über Geräte-Manager oder über Windows Multimedia-Systemsteuerung, Mmsys.cpl.
 -   Der Benutzer fügt dem System einen Audioadapter hinzu oder entfernt einen Audioadapter aus dem System.
--   Der Benutzer bindet ein audioendpunktgerät mit der Erkennung von Jack-Presence in einen audiowagen ein oder entfernt ein audioendpunktgerät von einem solchen Jack.
--   Der Benutzer ändert die [Geräte Rolle](device-roles.md) , die einem Gerät zugewiesen ist.
--   Der Wert einer [Eigenschaft eines Geräts](device-properties.md) ändert sich.
+-   Der Benutzer kann ein Audioendpunktgerät mit jack-presence-Erkennung an eine Audiobuchse anschließen oder ein Audioendpunktgerät aus einer solchen Buchse entfernen.
+-   Der Benutzer ändert die [Geräterolle,](device-roles.md) die einem Gerät zugewiesen ist.
+-   Der Wert einer Eigenschaft [eines Geräts ändert](device-properties.md) sich.
 
-Das Hinzufügen oder Entfernen eines audioadapters generiert Geräte Ereignisse für alle audioendpunktgeräte, die eine Verbindung mit dem Adapter herstellen. Die ersten vier Elemente in der vorangehenden Liste sind Beispiele für Gerätestatus Änderungen. Weitere Informationen zu den Geräte Zuständen von audioendpunktgeräten finden Sie unter [Geräte \_ Status xxx- \_ Konstanten](device-state-xxx-constants.md). Weitere Informationen zur Erkennung von Jack-Presence finden Sie unter [audioendpunktgeräte](audio-endpoint-devices.md).
+Durch das Hinzu- oder Entfernen eines Audioadapters werden Geräteereignisse für alle Audioendpunktgeräte generiert, die eine Verbindung mit dem Adapter herstellen. Die ersten vier Elemente in der vorherigen Liste sind Beispiele für Änderungen des Gerätestatus. Weitere Informationen zu den Gerätezuständen von Audioendpunktgeräten finden Sie unter [DEVICE \_ STATE \_ XXX Constants](device-state-xxx-constants.md). Weitere Informationen zur Jackenerkennung finden Sie unter [AudioEndpunktgeräte](audio-endpoint-devices.md).
 
-Ein Client kann sich registrieren, um beim Auftreten von Geräte Ereignissen benachrichtigt zu werden. Als Reaktion auf diese Benachrichtigungen kann der Client die Art und Weise, in der ein bestimmtes Gerät verwendet wird, dynamisch ändern oder ein anderes Gerät auswählen, das für einen bestimmten Zweck verwendet werden soll.
+Ein Client kann sich registrieren, um benachrichtigt zu werden, wenn Geräteereignisse auftreten. Als Reaktion auf diese Benachrichtigungen kann der Client dynamisch ändern, wie er ein bestimmtes Gerät verwendet, oder ein anderes Gerät auswählen, das für einen bestimmten Zweck verwendet werden soll.
 
-Wenn eine Anwendung z. b. eine Audiospur über einen Satz von USB-sprechenden spielen und der Benutzer die Lautsprecher mit dem USB-Connector trennt, empfängt die Anwendung eine Benachrichtigung über das Geräte Ereignis. Wenn die Anwendung in Reaktion auf das Ereignis erkennt, dass eine Gruppe von Desktop Referenten mit dem integrierten Audioadapter auf der System-Hauptplatine verbunden ist, kann die Anwendung die Audiospur über die Desktop Referenten fortsetzen. In diesem Beispiel erfolgt der Übergang von USB-sprechenden zu Desktop Referenten automatisch, ohne dass der Benutzer eingreifen muss, indem er die Anwendung explizit umleitet.
+Wenn eine Anwendung beispielsweise eine Audiospur über eine Reihe von USB-Lautsprechern abspielt und der Benutzer die Lautsprecher vom USB-Connector trennt, erhält die Anwendung eine Geräteereignisbenachrichtigung. Wenn die Anwendung als Reaktion auf das Ereignis erkennt, dass eine Reihe von Desktoplautlern mit dem integrierten Audioadapter auf der Systemplatine verbunden ist, kann die Anwendung die Wiedergabe der Audiospur über die Desktoplauter fortsetzen. In diesem Beispiel erfolgt der Übergang von USB-Lautsprechern zu Desktoplautern automatisch, ohne dass der Benutzer eingreifen muss, indem er die Anwendung explizit umleiten muss.
 
-Um sich für den Empfang von Geräte Benachrichtigungen zu registrieren, Ruft ein Client die [**immdeviceenumerator:: registerendpointnotificationcallback**](/windows/desktop/api/Mmdeviceapi/nf-mmdeviceapi-immdeviceenumerator-registerendpointnotificationcallback) -Methode auf. Wenn der Client keine Benachrichtigungen mehr erfordert, wird er durch Aufrufen der [**immdeviceenumerator:: unregisterendpointnotificationcallback**](/windows/desktop/api/Mmdeviceapi/nf-mmdeviceapi-immdeviceenumerator-unregisterendpointnotificationcallback) -Methode abgebrochen. Beide Methoden akzeptieren einen Eingabeparameter mit dem Namen " *pnotify*", bei dem es sich um einen Zeiger auf eine [**immnotificationclient**](/windows/desktop/api/Mmdeviceapi/nn-mmdeviceapi-immnotificationclient) -Schnittstellen Instanz handelt.
+Um sich für den Empfang von Gerätebenachrichtigungen zu registrieren, ruft ein Client die [**IMMDeviceEnumerator::RegisterEndpointNotificationCallback-Methode**](/windows/desktop/api/Mmdeviceapi/nf-mmdeviceapi-immdeviceenumerator-registerendpointnotificationcallback) auf. Wenn der Client keine Benachrichtigungen mehr benötigt, bricht er diese ab, indem er die [**IMMDeviceEnumerator::UnregisterEndpointNotificationCallback-Methode**](/windows/desktop/api/Mmdeviceapi/nf-mmdeviceapi-immdeviceenumerator-unregisterendpointnotificationcallback) aufruft. Beide Methoden verwenden einen Eingabeparameter mit dem Namen *pNotify,* der ein Zeiger auf eine [**IMMNotificationClient-Schnittstelleninstanz**](/windows/desktop/api/Mmdeviceapi/nn-mmdeviceapi-immnotificationclient) ist.
 
-Die **immnotificationclient** -Schnittstelle wird von einem Client implementiert. Die-Schnittstelle enthält mehrere Methoden, von denen jede als Rückruf Routine für eine bestimmte Art von Geräte Ereignis fungiert. Wenn ein Geräte Ereignis in einem audioendpunktgerät auftritt, ruft das mmdevice-Modul die entsprechende Methode in der **immnotificationclient** -Schnittstelle jedes Clients auf, der zurzeit für den Empfang von Benachrichtigungen über Geräte Ereignisse registriert ist. Diese Aufrufe übergeben eine Beschreibung des Ereignisses an die Clients. Weitere Informationen finden Sie unter [**immnotificationclient-Schnittstelle**](/windows/desktop/api/Mmdeviceapi/nn-mmdeviceapi-immnotificationclient).
+Die **IMMNotificationClient-Schnittstelle** wird von einem Client implementiert. Die -Schnittstelle enthält mehrere Methoden, von denen jede als Rückrufroutine für einen bestimmten Geräteereignistyp dient. Wenn ein Geräteereignis auf einem Audioendpunktgerät auftritt, ruft das MMDevice-Modul die entsprechende Methode in der **IMMNotificationClient-Schnittstelle** jedes Clients auf, der derzeit für den Empfang von Geräteereignisbenachrichtigungen registriert ist. Diese Aufrufe übergeben eine Beschreibung des Ereignisses an die Clients. Weitere Informationen finden Sie unter [**IMMNotificationClient-Schnittstelle**](/windows/desktop/api/Mmdeviceapi/nn-mmdeviceapi-immnotificationclient).
 
-Ein Client, der für den Empfang von Benachrichtigungen über Geräte Ereignisse registriert ist, erhält Benachrichtigungen zu allen Arten von Geräte Ereignissen, die auf allen audioendpunktgeräten im System auftreten. Wenn ein Client nur an bestimmten Ereignis Typen oder auf bestimmten Geräten interessiert ist, sollten die Methoden in der **immnotificationclient** -Implementierung die Ereignisse entsprechend filtern.
+Ein Client, der für den Empfang von Geräteereignisbenachrichtigungen registriert ist, erhält Benachrichtigungen über alle Arten von Geräteereignissen, die auf allen Audioendpunktgeräten im System auftreten. Wenn ein Client nur an bestimmten Ereignistypen oder an bestimmten Geräten interessiert ist, sollten die Methoden in seiner **IMMNotificationClient-Implementierung** die Ereignisse entsprechend filtern.
 
-Die Windows SDK enthält Beispiele, die mehrere Implementierungen für die [**immnotificationclient-Schnittstelle**](/windows/desktop/api/Mmdeviceapi/nn-mmdeviceapi-immnotificationclient)enthalten. Weitere Informationen finden Sie unter [SDK-Beispiele, die die Kerndatei-APIs verwenden](sdk-samples-that-use-the-core-audio-apis.md).
+Das Windows SDK enthält Beispiele, die mehrere Implementierungen für die [**IMMNotificationClient-Schnittstelle enthalten.**](/windows/desktop/api/Mmdeviceapi/nn-mmdeviceapi-immnotificationclient) Weitere Informationen finden Sie unter [SDK-Beispiele, die die Kernaudio-APIs verwenden.](sdk-samples-that-use-the-core-audio-apis.md)
 
-Im folgenden Codebeispiel wird eine mögliche Implementierung der **immnotificationclient** -Schnittstelle veranschaulicht:
+Das folgende Codebeispiel zeigt eine mögliche Implementierung der **IMMNotificationClient-Schnittstelle:**
 
 
 ```C++
@@ -258,19 +258,19 @@ HRESULT CMMNotificationClient::_PrintDeviceName(LPCWSTR pwstrId)
 
 
 
-Die cmmnotificationclient-Klasse im vorangehenden Codebeispiel ist eine Implementierung der **immnotificationclient** -Schnittstelle. Da **immnotificationclient** von **IUnknown** erbt, enthält die Klassendefinition Implementierungen der **IUnknown** -Methoden **adressf**, **Release** und **QueryInterface**. Die übrigen öffentlichen Methoden in der Klassendefinition sind spezifisch für die **immnotificationclient** -Schnittstelle. Diese Methoden werden im Anschluss beschrieben:
+Die CMMNotificationClient-Klasse im vorherigen Codebeispiel ist eine Implementierung der **IMMNotificationClient-Schnittstelle.** Da **IMMNotificationClient** von **IUnknown** erbt, enthält die Klassendefinition Implementierungen der **IUnknown-Methoden** **AddRef,** **Release** und **QueryInterface.** Die verbleibenden öffentlichen Methoden in der Klassendefinition sind spezifisch für die **IMMNotificationClient-Schnittstelle.** Diese Methoden werden im Anschluss beschrieben:
 
--   **Ondefaultdevicechanged**, das aufgerufen wird, wenn der Benutzer die Geräte Rolle eines audioendpunktgeräts ändert.
--   **Ondeviceadded**, das aufgerufen wird, wenn der Benutzer dem System ein audioendpunktgerät hinzufügt.
--   **Ondeviceremoved**, das aufgerufen wird, wenn der Benutzer ein audioendpunktgerät aus dem System entfernt.
--   **Ondevicestatechanged**, das aufgerufen wird, wenn sich der Gerätestatus eines audioendpunktgeräts ändert. (Weitere Informationen zu Geräte Zuständen finden Sie unter [Geräte \_ Status \_ xxx-Konstanten](device-state-xxx-constants.md).)
--   **OnPropertyValueChanged**, das aufgerufen wird, wenn sich der Wert einer Eigenschaft eines audioendpunkt-Geräts ändert.
+-   **OnDefaultDeviceChanged** wird aufgerufen, wenn der Benutzer die Geräterolle eines Audioendpunktgeräts ändert.
+-   **OnDeviceAdded** wird aufgerufen, wenn der Benutzer dem System ein Audioendpunktgerät hinzufügt.
+-   **OnDeviceRemoved** wird aufgerufen, wenn der Benutzer ein Audioendpunktgerät aus dem System entfernt.
+-   **OnDeviceStateChanged**, das aufgerufen wird, wenn sich der Gerätestatus eines Audioendpunktgeräts ändert. (Weitere Informationen zu Gerätezuständen finden Sie unter [DEVICE \_ STATE \_ XXX-Konstanten](device-state-xxx-constants.md).)
+-   **OnPropertyValueChanged**, das aufgerufen wird, wenn sich der Wert einer Eigenschaft eines Audioendpunktgeräts ändert.
 
-Jede dieser Methoden nimmt einen Eingabeparameter ( *pwstraudeviceid*) an, der ein Zeiger auf eine Endpunkt-ID-Zeichenfolge ist. Die Zeichenfolge identifiziert das audioendpunktgerät, in dem das Geräte Ereignis aufgetreten ist.
+Jede dieser Methoden akzeptiert den Eingabeparameter *pwstrDeviceId,* der ein Zeiger auf eine Endpunkt-ID-Zeichenfolge ist. Die Zeichenfolge identifiziert das Audioendpunktgerät, in dem das Geräteereignis aufgetreten ist.
 
-Im vorangehenden Codebeispiel \_ ist printdevicename eine private Methode in der cmmnotificationclient-Klasse, die den anzeigen amen des Geräts ausgibt. \_Printdevicename nimmt die Endpunkt-ID-Zeichenfolge als Eingabeparameter an. Sie übergibt die Zeichenfolge an die [**immdeviceenumerator:: getdevice**](/windows/desktop/api/Mmdeviceapi/nf-mmdeviceapi-immdeviceenumerator-getdevice) -Methode. **Getdevice** erstellt ein Endpunkt-Geräte Objekt zur Darstellung des Geräts und stellt die [**immdevice**](/windows/desktop/api/Mmdeviceapi/nn-mmdeviceapi-immdevice) -Schnittstelle für dieses Objekt bereit. Als nächstes \_ Ruft printdevicename die Methode " [**immdevice:: openpropertystore**](/windows/desktop/api/Mmdeviceapi/nf-mmdeviceapi-immdevice-openpropertystore) " auf, um die **IPropertyStore** -Schnittstelle in den Eigenschaften Speicher des Geräts abzurufen. Zum Schluss \_ Ruft printdevicename die **IPropertyStore:: GetItem** -Methode auf, um die Eigenschaft "Anzeige Name" des Geräts zu erhalten. Weitere Informationen zu **IPropertyStore** finden Sie in der Windows SDK-Dokumentation.
+Im vorherigen Codebeispiel ist PrintDeviceName eine private Methode in der CMMNotificationClient-Klasse, die den Angezeigten Namen \_ des Geräts aus druckt. \_PrintDeviceName verwendet die Endpunkt-ID-Zeichenfolge als Eingabeparameter. Die Zeichenfolge wird an die [**IMMDeviceEnumerator::GetDevice-Methode**](/windows/desktop/api/Mmdeviceapi/nf-mmdeviceapi-immdeviceenumerator-getdevice) übergeben. **GetDevice erstellt** ein Endpunktgeräteobjekt zur Darstellung des Geräts und stellt die [**IMMDevice-Schnittstelle**](/windows/desktop/api/Mmdeviceapi/nn-mmdeviceapi-immdevice) für dieses Objekt bereit. Als Nächstes \_ ruft PrintDeviceName die [**IMMDevice::OpenPropertyStore-Methode**](/windows/desktop/api/Mmdeviceapi/nf-mmdeviceapi-immdevice-openpropertystore) auf, um die **IPropertyStore-Schnittstelle** im Eigenschaftenspeicher des Geräts abzurufen. Schließlich ruft \_ PrintDeviceName die **IPropertyStore::GetItem-Methode** auf, um die Friendly Name-Eigenschaft des Geräts zu erhalten. Weitere Informationen zu **IPropertyStore finden** Sie in der Windows SDK-Dokumentation.
 
-Zusätzlich zu den Geräte Ereignissen können Clients sich registrieren, um Benachrichtigungen über audiositzungsereignisse und Ereignisse von Endpunkt Ereignissen zu empfangen. Weitere Informationen finden Sie unter [**iaudiosessionevents-Schnittstelle**](/windows/desktop/api/Audiopolicy/nn-audiopolicy-iaudiosessionevents) und [**iaudioendpointvolumecallback-Schnittstelle**](/windows/desktop/api/Endpointvolume/nn-endpointvolume-iaudioendpointvolumecallback).
+Zusätzlich zu Geräteereignissen können sich Clients registrieren, um Benachrichtigungen über Audiositzungsereignisse und Endpunkt-Volumeereignisse zu empfangen. Weitere Informationen finden Sie unter [**IAudioSessionEvents-Schnittstelle**](/windows/desktop/api/Audiopolicy/nn-audiopolicy-iaudiosessionevents) und [**IAudioEndpointVolumeCallback-Schnittstelle.**](/windows/desktop/api/Endpointvolume/nn-endpointvolume-iaudioendpointvolumecallback)
 
 ## <a name="related-topics"></a>Zugehörige Themen
 

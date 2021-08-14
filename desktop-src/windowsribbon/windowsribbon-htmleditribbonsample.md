@@ -4,29 +4,29 @@ description: Dieses Codebeispiel zeigt Markup und Code, der zum Migrieren einer 
 ms.assetid: 1505aaea-76d2-47bc-bdc9-12e761da93f9
 ms.topic: article
 ms.date: 07/13/2021
-ms.openlocfilehash: cfe75d13a69e0122766e51a00bcb1b15d52eab4e
-ms.sourcegitcommit: 63c93e0ad0b48d60b11008767196718feb475cb0
+ms.openlocfilehash: 0f1299bdc20b1b94a5113d3cfcdda205b6ad8e513a59706d708362fbc8383bd8
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/13/2021
-ms.locfileid: "113691709"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118202118"
 ---
 # <a name="htmleditribbon-sample"></a>HTMLEditRibbon-Beispiel
 
-Dieses Codebeispiel zeigt Markup und Code, der zum Migrieren einer vorhandenen MFC-Anwendung (Microsoft Foundation Classes) zur Verwendung des Windows-Menübands erforderlich ist. Sie wurde erstellt, indem die vorhandene MFC HTMLEdit-Beispielanwendung verwendet und deren Code und Ressourcen geändert wurden, um das Windows-Menüband zu verwenden.
+Dieses Codebeispiel zeigt Markup und Code, der zum Migrieren einer vorhandenen MFC-Anwendung (Microsoft Foundation Classes) zur Verwendung des Windows-Menübands erforderlich ist. Sie wurde erstellt, indem die vorhandene MFC HTMLEdit-Beispielanwendung verwendet und ihr Code und ihre Ressourcen geändert wurden, um das Windows-Menüband zu verwenden.
 
 - [Anmerkungen](#remarks)
 - [Verwendung](#usage)
   - [Erstellen des Beispiels](#building-the-sample)
   - [Ausführen des Beispiels](#running-the-sample)
-- [Support](#support)
+- [Unterstützung](#support)
 - [Mindestanforderungen](#minimum-requirements)
 
 ## <a name="remarks"></a>Hinweise
 
 Das MFC-Beispiel finden Sie unter [HTMLEdit Sample: Wraps the Internet Explorer MSHTML Editing Control](https://msdn.microsoft.com/library/ea8hhwb6(VS.80).aspx).
 
-## <a name="usage"></a>Usage
+## <a name="usage"></a>Verbrauch
 
 Die Windows Menüband-Frameworkbeispiele können als eigenständige Microsoft Visual Studio Projekte aus dem [Microsoft Download Center](https://www.microsoft.com/download/details.aspx?id=9620) heruntergeladen oder als Teil des Windows Software Development Kit [(SDK)](https://developer.microsoft.com/windows/downloads/sdk-archive/)installiert werden.
 
@@ -48,7 +48,7 @@ Um das Beispiel im Befehlsfenster der Buildumgebung auszuführen, führen Sie di
 
 Um das kompilierte Beispiel in Visual Studio mit Debuggen auszuführen, drücken Sie F5.
 
-## <a name="support"></a>Unterstützung
+## <a name="support"></a>Support
 
 Das [Windows Menübandentwicklungsforum](https://social.msdn.microsoft.com/Forums/windowsdesktop/home?forum=windowsribbondevelopment) ist verfügbar, um Themen zu besprechen und Fragen im Zusammenhang mit der Entwicklung Windows Menübandanwendungen zu stellen.
 

@@ -1,29 +1,29 @@
 ---
-title: RPC-Rückruf-und Benachrichtigungsfunktionen
-description: Remote Prozedur Aufruf (RPC)-Navigationsseite für Rückruf-und Benachrichtigungsfunktionen.
+title: RPC-Rückruf- und Benachrichtigungsfunktionen
+description: RPC-Navigationsseite (Remote Procedure Call) für Rückruf- und Benachrichtigungsfunktionen.
 ms.assetid: 63695358-5a34-4446-a896-4f0a25615cff
 keywords:
-- RPC-, Referenz-, Rückruf-und Benachrichtigungsfunktionen für Remote Prozedur Aufrufe
+- RPC-, Verweis-, Rückruf- und Benachrichtigungsfunktionen für Remoteprozeduraufrufe
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 2a8d614c079d762cf740ff7eb449e3c05c932243
-ms.sourcegitcommit: 592c9bbd22ba69802dc353bcb5eb30699f9e9403
+ms.openlocfilehash: a1e05fab4300724f43972098753806b0d56ba59023fe884d05ab83d054e02a44
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "103729632"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118926557"
 ---
-# <a name="rpc-callback-and-notification-functions"></a>RPC-Rückruf-und Benachrichtigungsfunktionen
+# <a name="rpc-callback-and-notification-functions"></a>RPC-Rückruf- und Benachrichtigungsfunktionen
 
-Die folgende Liste enthält Informationen zu Rückruf Funktionen, die Anwendungen verwenden können, um das Verhalten der RPC-Laufzeitumgebung anzupassen:
+Die folgende Liste enthält Informationen zu Rückruffunktionen, mit denen Anwendungen das Verhalten der RPC-Laufzeitumgebung anpassen können:
 
--   [**RPC-Authentifizierungs \_ \_ Schlüssel \_ Abruf- \_ FN**](/windows/desktop/api/Rpcdce/nc-rpcdce-rpc_auth_key_retrieval_fn)
--   [**RPC \_ if- \_ Rückruf ( \_ FN)**](/windows/desktop/api/Rpcdce/nc-rpcdce-rpc_if_callback_fn)
--   [**RPC- \_ Schnittstellen \_ Gruppe im Leerlauf- \_ \_ Rückruf \_ FN**](/windows/desktop/api/Rpcdce/nc-rpcdce-rpc_interface_group_idle_callback_fn)
--   [**RPC- \_ Mgmt- \_ Autorisierung \_ FN**](/windows/desktop/api/Rpcdce/nc-rpcdce-rpc_mgmt_authorization_fn)
--   [**RPC- \_ Objekt \_ INQ \_ FN**](/windows/desktop/api/Rpcdce/nc-rpcdce-rpc_object_inq_fn)
--   [**rpcnotification- \_ Routine**](/previous-versions/aa375808(v=vs.80))
+-   [**\_ \_ \_ \_ RPC-AUTHENTIFIZIERUNGSSCHLÜSSELABRUF-FN**](/windows/desktop/api/Rpcdce/nc-rpcdce-rpc_auth_key_retrieval_fn)
+-   [**RPC \_ IF \_ CALLBACK \_ FN**](/windows/desktop/api/Rpcdce/nc-rpcdce-rpc_if_callback_fn)
+-   [**RPC \_ INTERFACE \_ GROUP \_ IDLE \_ CALLBACK \_ FN**](/windows/desktop/api/Rpcdce/nc-rpcdce-rpc_interface_group_idle_callback_fn)
+-   [**RPC \_ MGMT \_ AUTHORIZATION \_ FN**](/windows/desktop/api/Rpcdce/nc-rpcdce-rpc_mgmt_authorization_fn)
+-   [**\_RPC-OBJEKT \_ \_ IMQ-FN**](/windows/desktop/api/Rpcdce/nc-rpcdce-rpc_object_inq_fn)
+-   [**RPCNOTIFICATION-ROUTINE \_**](/previous-versions/aa375808(v=vs.80))
 
- 
+ 
 
- 
+ 

@@ -1,11 +1,11 @@
 ---
 title: NetworkSettings.Name-Eigenschaft
-description: Ruft bei der Skripterstellung den Namen eines Netzwerk Profils ab oder legt ihn fest.
+description: Ruft für die Skripterstellung den Namen eines Netzwerkprofils ab oder legt den Namen fest.
 ms.assetid: 1b326236-c42f-4611-8c5e-296bf7b8c95b
 keywords:
 - Name-Eigenschaft Taskplaner
-- Name-Eigenschaft Taskplaner, Network Settings-Objekt
-- Network Settings-Objekt Taskplaner, Name-Eigenschaft
+- Name-Eigenschaft Taskplaner , NetworkSettings-Objekt
+- NetworkSettings-Objekt Taskplaner , Name-Eigenschaft
 topic_type:
 - apiref
 api_name:
@@ -16,16 +16,16 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: efa09bf0777dcf64158c9c7715e527c250e9372e
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: a4990796d0c1767cfac0c0ad5f8143c261c575df01475d3c5c166b752d05a9a5
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "103741880"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117759759"
 ---
 # <a name="networksettingsname-property"></a>NetworkSettings.Name-Eigenschaft
 
-Ruft bei der Skripterstellung den Namen eines Netzwerk Profils ab oder legt ihn fest. Der Name wird zu Anzeige Zwecken verwendet.
+Ruft für die Skripterstellung den Namen eines Netzwerkprofils ab oder legt den Namen fest. Der Name wird zu Anzeigezwecken verwendet.
 
 Dies ist eine Eigenschaft mit Lese- und Schreibzugriff.
 
@@ -40,7 +40,7 @@ NetworkSettings.Name As String
 
 ## <a name="property-value"></a>Eigenschaftswert
 
-Der Name eines Netzwerk Profils.
+Der Name eines Netzwerkprofils.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -48,14 +48,14 @@ Der Name eines Netzwerk Profils.
 
 | Anforderung | Wert |
 |-------------------------------------|-----------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>                                          |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2008 \[ -Desktop-Apps\]<br/>                                    |
-| Typbibliothek<br/>             | <dl> <dt>Taskschd. tlb</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows \[Nur Vista-Desktop-Apps\]<br/>                                          |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2008-Desktop-Apps\]<br/>                                    |
+| Typbibliothek<br/>             | <dl> <dt>Taskschd.tlb</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>Taskschd.dll</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 

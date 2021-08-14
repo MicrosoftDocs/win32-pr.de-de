@@ -1,7 +1,7 @@
 ---
-description: Die Bezeichnung \_ DWORD-Struktur definiert eine Bezeichnung, die angezeigt wird, wenn ein bestimmter DWORD-Eigenschafts Wert erkannt wird.
+description: Die LABELED \_ DWORD-Struktur definiert eine Bezeichnung, die angezeigt wird, wenn ein bestimmter DWORD-Eigenschaftswert erkannt wird.
 ms.assetid: 1aed3226-6d69-41b0-860b-4ffb5b905f1a
-title: LABELED_DWORD Struktur (Netmon. h)
+title: LABELED_DWORD -Struktur (Netmon.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,16 +13,16 @@ api_type:
 - HeaderDef
 api_location:
 - Netmon.h
-ms.openlocfilehash: 0bec068622683172116bf8c4f6e88450d5752920
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 10f3e0dd09b37821a00f2c10f99c0ea6d509ff388e9d7394a8b2c4958438f979
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "104217171"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118364845"
 ---
-# <a name="labeled_dword-structure"></a>Bezeichnete \_ DWORD-Struktur
+# <a name="labeled_dword-structure"></a>LABELED \_ DWORD-Struktur
 
-Die **Bezeichnung \_ DWORD** -Struktur definiert eine Bezeichnung, die angezeigt wird, wenn ein bestimmter DWORD-Eigenschafts Wert erkannt wird.
+Die **LABELED \_ DWORD-Struktur** definiert eine Bezeichnung, die angezeigt wird, wenn ein bestimmter DWORD-Eigenschaftswert erkannt wird.
 
 ## <a name="syntax"></a>Syntax
 
@@ -43,20 +43,20 @@ typedef struct _LABELED_DWORD {
 **Wert**
 </dt> <dd>
 
-Der DWORD-Wert der Eigenschaft, die Sie erkennen möchten.
+DWORD-Wert der Eigenschaft, die Sie erkennen möchten.
 
 </dd> <dt>
 
 **Label**
 </dt> <dd>
 
-Die Textbeschreibung oder Bezeichnung, die angezeigt wird, wenn der im **Wertmember** angegebene DWORD-Wert erkannt wird.
+Textbeschreibung oder Bezeichnung, die angezeigt wird, wenn der im **Value-Member** angegebene DWORD-Wert erkannt wird.
 
 </dd> </dl>
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Der **lplabeleddwordtable** -Member der [set](set.md) -Struktur verweist auf ein Array von **set** -Strukturen, die ein **oder mehrere** Bezeichnungs Member der DWORD-Wertpaare definieren. Die Paare werden verwendet, wenn Sie eine Bezeichnung anstelle eines bestimmten DWORD-Werts anzeigen möchten, der im Protokoll Paket enthalten ist.
+Der **lpLabeledDwordTable-Member** der [SET-Struktur](set.md) verweist auf ein Array von **SET-Strukturen,** die einen oder mehrere **Label-Member** der DWORD-Wertpaare definieren. Die Paare werden verwendet, wenn Sie eine Bezeichnung statt eines bestimmten DWORD-Werts anzeigen möchten, der im Protokollpaket gefunden wird.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -66,11 +66,11 @@ Der **lplabeleddwordtable** -Member der [set](set.md) -Struktur verweist auf ein
 |-------------------------------------|-------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional \[nur Desktop-Apps\]<br/>                          |
 | Unterstützte Mindestversion (Server)<br/> | Windows 2000 Server \[nur Desktop-Apps\]<br/>                                |
-| Header<br/>                   | <dl> <dt>Netmon. h</dt> </dl> |
+| Header<br/>                   | <dl> <dt>Netmon.h</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 

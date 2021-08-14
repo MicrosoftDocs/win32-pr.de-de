@@ -1,12 +1,12 @@
 ---
-title: Disableclipboard-Methode der Win32_TSGatewayConnectionAuthorizationPolicy-Klasse
-description: Legt die clipboarddeaktiviert-Eigenschaft fest. Wenn die deviceredirectiontype-Eigenschaft den Wert \ 0034; 2 \ 0034; hat, steuert die clipboarddeaktiviert-Eigenschaft die Umleitung der Zwischenablage für Sitzungen, die über den Remotedesktop Gateway-Server (RD-Gateway) eingerichtet werden.
+title: DisableClipboard-Methode der Win32_TSGatewayConnectionAuthorizationPolicy Klasse
+description: Legt die ClipboardDisabled-Eigenschaft fest. Wenn die DeviceRedirectionType-Eigenschaft den Wert \0034;2 \ 0034; auf hat, steuert die ClipboardDisabled-Eigenschaft die Umleitung der Zwischenablage für Sitzungen, die über den Remotedesktop-Gatewayserver (RD-Gateway) eingerichtet werden.
 ms.assetid: c53fc802-958b-452d-9af9-0ce89ed46079
 ms.tgt_platform: multiple
 keywords:
-- Disableclipboard-Methode Remotedesktopdienste
-- Disableclipboard-Methode Remotedesktopdienste, Win32_TSGatewayConnectionAuthorizationPolicy-Klasse
-- Win32_TSGatewayConnectionAuthorizationPolicy Klasse Remotedesktopdienste, disableclipboard-Methode
+- DisableClipboard-Remotedesktopdienste
+- DisableClipboard-Methode Remotedesktopdienste , Win32_TSGatewayConnectionAuthorizationPolicy-Klasse
+- Win32_TSGatewayConnectionAuthorizationPolicy klasse Remotedesktopdienste , DisableClipboard-Methode
 topic_type:
 - apiref
 api_name:
@@ -17,16 +17,16 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 23ae2070a35fa31f1c9d9ad31e9e632e31c0193f
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 01b5e8d2449bae2ee7f344c78b54850eb9ae300f4233c36b6eb2d84ad0b6132f
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "106337495"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118609615"
 ---
-# <a name="disableclipboard-method-of-the-win32_tsgatewayconnectionauthorizationpolicy-class"></a>Disableclipboard-Methode der Win32-Klasse "t- \_ gatewayconnectionauthorizationpolicy"
+# <a name="disableclipboard-method-of-the-win32_tsgatewayconnectionauthorizationpolicy-class"></a>DisableClipboard-Methode der Win32 \_ TSGatewayConnectionAuthorizationPolicy-Klasse
 
-Legt die **clipboarddeaktiviert** -Eigenschaft fest. Wenn die **deviceredirectiontype** -Eigenschaft den Wert "2" hat, steuert die **clipboarddeaktiviert** -Eigenschaft die Umleitung der Zwischenablage für Sitzungen, die über den Remotedesktop Gateway-Server (RD-Gateway) eingerichtet werden.
+Legt die **ClipboardDisabled-Eigenschaft** fest. Wenn die **DeviceRedirectionType-Eigenschaft** den Wert "2" hat, steuert die **ClipboardDisabled-Eigenschaft** die Umleitung der Zwischenablage für Sitzungen, die über den Remotedesktop-Gatewayserver (RD-Gateway) eingerichtet werden.
 
 ## <a name="syntax"></a>Syntax
 
@@ -43,22 +43,22 @@ uint32 DisableClipboard(
 
 <dl> <dt>
 
-*Deaktiviert* \[ in\]
+*Deaktiviert* \[ In\]
 </dt> <dd>
 
-Neuer Wert für die **clipboarddeaktiviert** -Eigenschaft.
+Neuer Wert für die **ClipboardDisabled-Eigenschaft.**
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Wenn die Methode erfolgreich ist, gibt Sie 0 (null) zurück. Wenn die Methode nicht erfolgreich ist, wird ein Wert ungleich 0 (null) zurückgegeben. Eine Liste der Fehlercodes finden Sie unter [Remotedesktopdienste Fehlercodes des WMI-Anbieters](terminal-services-wmi-provider-error-codes.md).
+Wenn die Methode erfolgreich ist, gibt sie 0 (null) zurück. Wenn die Methode nicht erfolgreich ist, wird ein Wert ungleich 0 (null) zurückgegeben. Eine Liste der Fehlercodes finden Sie unter Remotedesktopdienste [WMI-Anbieterfehlercodes](terminal-services-wmi-provider-error-codes.md).
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Sie müssen Mitglied der Gruppe "Administratoren" sein, um diese Methode aufzurufen.
+Sie müssen Mitglied der Gruppe Administratoren sein, um diese Methode aufrufen zu können.
 
-Managed Object Format-Dateien (MOF) enthalten die Definitionen für Windows-Verwaltungsinstrumentation (WMI)-Klassen. MOF-Dateien werden nicht als Teil des Microsoft Windows Software Development Kit (SDK) installiert. Sie werden auf dem Server installiert, wenn Sie die zugehörige Rolle mithilfe der Server-Manager hinzufügen. Weitere Informationen zu MOF-Dateien finden Sie unter [Managed Object Format (MOF)](/windows/desktop/WmiSdk/managed-object-format--mof-).
+Managed Object Format -Dateien (MOF) enthalten die Definitionen für Windows WMI-Klassen (Management Instrumentation). MOF-Dateien werden nicht als Teil des Microsoft Windows Software Development Kit (SDK) installiert. Sie werden auf dem Server installiert, wenn Sie die zugeordnete Rolle mithilfe der Server-Manager. Weitere Informationen zu MOF-Dateien finden Sie unter [Managed Object Format (MOF).](/windows/desktop/WmiSdk/managed-object-format--mof-)
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -68,17 +68,17 @@ Managed Object Format-Dateien (MOF) enthalten die Definitionen für Windows-Verw
 |-------------------------------------|------------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Nicht unterstützt<br/>                                                                |
 | Unterstützte Mindestversion (Server)<br/> | Windows Server 2008<br/>                                                           |
-| Namespace<br/>                | Root \\ CIMv2 \\ TerminalServices<br/>                                                 |
-| MOF<br/>                      | <dl> <dt>"T-Gateway. mof"</dt> </dl> |
+| Namespace<br/>                | \\ \\ CiMv2-Stammterminaldienste<br/>                                                 |
+| MOF<br/>                      | <dl> <dt>TSGateway.mof</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>AagWmi.dll</dt> </dl>    |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Win32- \_ faigatewayconnectionauthorizationpolicy**](win32-tsgatewayconnectionauthorizationpolicy.md)
+[**Win32 \_ TSGatewayConnectionAuthorizationPolicy**](win32-tsgatewayconnectionauthorizationpolicy.md)
 </dt> </dl>
 
  

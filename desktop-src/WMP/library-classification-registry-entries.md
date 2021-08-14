@@ -1,81 +1,81 @@
 ---
-title: Registrierungseinträge für die Bibliotheks Klassifizierung
-description: Registrierungseinträge für die Bibliotheks Klassifizierung
+title: Registrierungseinträge für die Bibliothekklassifizierung
+description: Registrierungseinträge für die Bibliothekklassifizierung
 ms.assetid: 3ef7d384-503f-4b8f-9f4b-e0ef3c56616b
 keywords:
-- Windows-Media Player, Bibliothek
-- Windows Media Player, Klassifizierungs Registrierungseinträge
-- Windows Media Player, Dateinamen Erweiterungen
-- Windows Media Player, Registrierung
-- Registrierung, Dateinamen Erweiterungen
-- Registrierung, Bibliotheks Klassifizierungs Einträge
-- Registrierung, Einstellungen für Windows-Media Player
-- Registrierungs Einstellungen für die Dateinamenerweiterung
-- Bibliothek, Klassifizierungs Registrierungseinträge
+- Windows Media Player,Bibliothek
+- Windows Media Player,Klassifizierungsregistrierungseinträge
+- Windows Media Player,Dateierweiterungen
+- Windows Media Player,Registrierung
+- Registrierung, Dateinamenerweiterungen
+- Registrierung, Bibliotheksklassifizierungseinträge
+- registry,settings for Windows Media Player
+- Registrierungseinstellungen der Dateinamenerweiterung
+- Library,Klassifizierungsregistrierungseinträge
 - Bibliothek, Registrierung
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: e48ea1aacdd1e4c553a7e83bfdd711ff331c0878
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: 51cb263732dc8071d603c5acd62db25fc8ee887c35b28d109d961a63aba80d6e
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "106342070"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118575130"
 ---
-# <a name="library-classification-registry-entries"></a>Registrierungseinträge für die Bibliotheks Klassifizierung
+# <a name="library-classification-registry-entries"></a>Registrierungseinträge für die Bibliothekklassifizierung
 
-Wenn Windows Media Player auf eine Mediendatei mit einer benutzerdefinierten Dateierweiterung stößt, ist nicht bekannt, ob die Datei als Audiodatei, Video oder ein anderer Typ klassifiziert werden soll. Standardmäßig platziert Windows Media Player diese Dateien in den anderen Medienbereich der Bibliothek.
+Wenn Windows Media Player eine Mediendatei mit einer benutzerdefinierten Dateierweiterung findet, weiß sie nicht, ob die Datei als Audio, Video oder einen anderen Typ klassifiziert werden soll. Standardmäßig werden Windows Media Player Dateien im Abschnitt Andere Medien der Bibliothek platziert.
 
-Wenn Ihre digitalen Mediendateien ein benutzerdefiniertes Format aufweisen, können Sie Windows Media Player Informationen darüber bereitstellen, wo Ihre Dateien in der Bibliothek des Players angezeigt werden sollen, indem Sie zwei Einträge in der Registrierung auf dem Computer des Benutzers platzieren.
+Wenn Ihre digitalen Mediendateien ein benutzerdefiniertes Format haben, können Sie Windows Media Player Informationen dazu bereitstellen, wo Ihre Dateien in der Bibliothek des Players angezeigt werden sollen, indem Sie zwei Einträge in der Registrierung auf dem Computer des Benutzers platzieren.
 
-Ein Eintrag wird in den folgenden Unterschlüssel geleitet.
+Ein Eintrag wird im folgenden Unterschlüssel verwendet.
 
-**HKEY \_ local \_ Machine \\ Software \\ Microsoft \\ Media Player \\ MLS \\ Extensions**
+**HKEY \_ LOCAL \_ MACHINE \\ Software \\ Microsoft \\ MediaPlayer \\ MLS \\ Extensions**
 
-Der Registrierungs Eintrag weist das folgende Format auf.
+Der Registrierungseintrag hat das folgende Format.
 
 
 
 | Name                                                  | Datentyp   | Wert                                      |
 |-------------------------------------------------------|-------------|--------------------------------------------|
-| Die Dateinamenerweiterung ohne das Punkt Trennzeichen (.) | **REG- \_ SZ** | Eine Zeichenfolge, die einen Bibliotheks Speicherort angibt. |
+| Die Dateierweiterung ohne Punkttrennzeichen (.) | **REG \_ SZ** | Eine Zeichenfolge, die einen Bibliotheksspeicherort angibt. |
 
 
 
- 
+ 
 
-Der andere Registrierungs Eintrag ist der folgende Unterschlüssel, den Sie erstellen.
+Der andere Registrierungseintrag wird im folgenden Unterschlüssel gespeichert, den Sie erstellen.
 
-**HKEY \_ Klassen Stamm-CustomExtension \_ \\** 
+**HKEY \_ CLASSES \_ \\ ROOT** *customExtension*
 
-Dabei ist *CustomExtension* die Dateinamenerweiterung, einschließlich des Punkt Trennzeichens (.).
+dabei *ist customExtension* die Dateierweiterung, einschließlich des Punkttrennzeichens (.).
 
-Der Registrierungs Eintrag weist das folgende Format auf.
+Der Registrierungseintrag hat das folgende Format.
 
 
 
 | Name          | Datentyp   | Wert                                      |
 |---------------|-------------|--------------------------------------------|
-| Wahrnehmungstyp | **REG- \_ SZ** | Eine Zeichenfolge, die einen Bibliotheks Speicherort angibt. |
+| PerceivedType | **REG \_ SZ** | Eine Zeichenfolge, die einen Bibliotheksspeicherort angibt. |
 
 
 
- 
+ 
 
-Beide Registrierungseinträge müssen denselben Wert aufweisen. Mögliche Werte sind in der folgenden Tabelle angegeben.
+Beide Registrierungseinträge müssen denselben Wert haben. Mögliche Werte sind in der folgenden Tabelle angegeben.
 
 
 
-| Wert | BESCHREIBUNG                                                                      |
+| Wert | Beschreibung                                                                      |
 |-------|----------------------------------------------------------------------------------|
-| Audio | Dateien, die über die benutzerdefinierte Erweiterung verfügen, werden im Musik Teil der Bibliothek angezeigt. |
-| video | Dateien, die über die benutzerdefinierte Erweiterung verfügen, werden im Video Teil der Bibliothek angezeigt. |
+| Audio | Dateien mit der benutzerdefinierten Erweiterung werden im Musikteil der Bibliothek angezeigt. |
+| video | Dateien mit der benutzerdefinierten Erweiterung werden im Videoteil der Bibliothek angezeigt. |
 
 
 
- 
+ 
 
-Die folgenden Registrierungseinträge geben z. b. an, dass Dateien mit der Dateinamenerweiterung ". xyz" im Musik Teil der Bibliothek angezeigt werden:
+Die folgenden Registrierungseinträge geben beispielsweise an, dass Dateien mit der Dateinamenerweiterung .xyz im Musikteil der Bibliothek angezeigt werden:
 
 
 ```C++
@@ -90,9 +90,9 @@ HKEY_CLASSES_ROOT\.xyz
 
 
 
-Beachten Sie, dass jeder Code, der versucht, in die Registrierung auf dem Computer des Benutzers zu schreiben, in die HKEY-Unterstruktur des lokalen Computers schreiben kann, \_ \_ Wenn der aktuelle Benutzer über Administratorrechte verfügt.
+Beachten Sie, dass jeder Code, der versucht, in die Registrierung auf dem Computer des Benutzers zu schreiben, nur dann in die HKEY LOCAL MACHINE-Unterstruktur schreiben kann, wenn der aktuelle Benutzer über \_ \_ Administratorrechte verfügt.
 
-Registrierungseinträge für die Bibliotheks Klassifizierung werden von den folgenden Versionen von Windows Media Player unterstützt.
+Registrierungseinträge für die Bibliothekklassifizierung werden von den folgenden Versionen von Windows Media Player.
 
 -   Windows Media Player 9-Serie mit Hotfix 823275
 -   Windows Media Player 10 und höher
@@ -101,12 +101,12 @@ Registrierungseinträge für die Bibliotheks Klassifizierung werden von den folg
 
 <dl> <dt>
 
-[**Registrierungs Einstellungen für die Dateinamenerweiterung**](file-name-extension-registry-settings.md)
+[**Registrierung der Dateinamenerweiterung Einstellungen**](file-name-extension-registry-settings.md)
 </dt> </dl>
 
- 
+ 
 
- 
+ 
 
 
 

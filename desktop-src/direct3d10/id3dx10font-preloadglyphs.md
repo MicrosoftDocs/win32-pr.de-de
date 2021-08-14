@@ -1,7 +1,7 @@
 ---
-description: Laden Sie eine Reihe von Symbolen in den Videospeicher, um die Effizienz des Renderings auf dem Gerät zu verbessern.
+description: Laden Sie eine Reihe von Glyphen in den Videospeicher, um die Effizienz des Renderings auf dem Gerät zu verbessern.
 ms.assetid: 7d063d52-af2c-44a6-9019-3d546acfbd4a
-title: ID3DX10Font::P reloadglyphs-Methode (d3dx10. h)
+title: ID3DX10Font::P reloadGlyphs-Methode (D3DX10.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -14,16 +14,16 @@ api_type:
 api_location:
 - D3DX10.lib
 - D3DX10.dll
-ms.openlocfilehash: fdb67b8a25912c6efc49ef27082d3b6b4e843b33
-ms.sourcegitcommit: 14010c34b35fa268046c7683f021f86de08ddd0a
+ms.openlocfilehash: 358523135db83f2ec7f973fce403a44d2f0ece82ab60cf9527cb612ccde61e49
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "106355192"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118540336"
 ---
-# <a name="id3dx10fontpreloadglyphs-method"></a>ID3DX10Font::P reloadglyphs-Methode
+# <a name="id3dx10fontpreloadglyphs-method"></a>ID3DX10Font::P reloadGlyphs-Methode
 
-Laden Sie eine Reihe von Symbolen in den Videospeicher, um die Effizienz des Renderings auf dem Gerät zu verbessern.
+Laden Sie eine Reihe von Glyphen in den Videospeicher, um die Effizienz des Renderings auf dem Gerät zu verbessern.
 
 ## <a name="syntax"></a>Syntax
 
@@ -41,21 +41,21 @@ HRESULT PreloadGlyphs(
 
 <dl> <dt>
 
-*Zuerst* \[ in\]
+*Erste* \[ In\]
 </dt> <dd>
 
-Typ: **[ **uint**](../winprog/windows-data-types.md)**
+Typ: **[ **UINT**](../winprog/windows-data-types.md)**
 
-ID des ersten Symbols, das in den Videospeicher geladen werden soll.
+ID des ersten Glyphen, das in den Videospeicher geladen werden soll.
 
 </dd> <dt>
 
-*Letzter* \[ in\]
+*Letzte* \[ In\]
 </dt> <dd>
 
-Typ: **[ **uint**](../winprog/windows-data-types.md)**
+Typ: **[ **UINT**](../winprog/windows-data-types.md)**
 
-ID des letzten Symbols, das in den Videospeicher geladen werden soll.
+ID des letzten Glyphen, das in den Videospeicher geladen werden soll.
 
 </dd> </dl>
 
@@ -63,13 +63,13 @@ ID des letzten Symbols, das in den Videospeicher geladen werden soll.
 
 Typ: **[ **HRESULT**](https://msdn.microsoft.com/library/Bb401631(v=MSDN.10).aspx)**
 
-Wenn die Methode erfolgreich ausgeführt wird, ist der Rückgabewert S \_ OK. Wenn die Methode fehlschlägt, kann der Rückgabewert einer der folgenden sein: D3DERR \_ invalidcall, D3DXERR \_ InvalidData.
+Wenn die Methode erfolgreich ist, ist der Rückgabewert S \_ OK. Wenn bei der Methode ein Fehler auftritt, kann der Rückgabewert einer der folgenden Sein: D3DERR \_ INVALIDCALL, D3DXERR \_ INVALIDDATA.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Diese Methode generiert Texturen, die die Eingabe Symbole enthalten. Die Symbole werden als eine Reihe von Dreiecken gezeichnet.
+Diese Methode generiert Texturen, die die Eingabe-Glyphen enthalten. Die Glyphen werden als eine Reihe von Dreiecken gezeichnet.
 
-Symbole werden nicht auf dem Gerät gerendert. ID3DX10Font::D rawtext muss nach wie vor aufgerufen werden, um die Symbole zu erzeugen. Durch das vorab Laden von Symbolen in den Videospeicher verwendet ID3DX10Font::D rawtext erheblich weniger CPU-Ressourcen.
+Glyphen werden nicht auf dem Gerät gerendert. ID3DX10Font::D rawText muss weiterhin aufgerufen werden, um die Glyphen zu rendern. Durch das Vorabladen von Glyphen in den Videospeicher verwendet ID3DX10Font::D rawText jedoch deutlich weniger CPU-Ressourcen.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -77,12 +77,12 @@ Symbole werden nicht auf dem Gerät gerendert. ID3DX10Font::D rawtext muss nach 
 
 | Anforderung | Wert |
 |--------------------|---------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>D3dx10. h</dt> </dl>   |
-| Bibliothek<br/> | <dl> <dt>D3dx10. lib</dt> </dl> |
+| Header<br/>  | <dl> <dt>D3DX10.h</dt> </dl>   |
+| Bibliothek<br/> | <dl> <dt>D3DX10.lib</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen:
 
 <dl> <dt>
 

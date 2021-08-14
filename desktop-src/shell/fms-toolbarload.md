@@ -1,6 +1,6 @@
 ---
-description: Enthält Informationen zu benutzerdefinierten Schaltflächen, die der Symbolleiste des Datei-Managers hinzugefügt werden sollen. Die Schaltflächen werden von einer Dateierweiterungs-DLL bereitgestellt.
-title: FMS_TOOLBARLOAD-Struktur (Wfext.h)
+description: Enthält Informationen zu benutzerdefinierten Schaltflächen, die der Symbolleiste des Datei-Managers hinzugefügt werden sollen. Die Schaltflächen werden von einer Datei-Manager-Erweiterungs-DLL bereitgestellt.
+title: FMS_TOOLBARLOAD -Struktur (Wfext.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,16 +13,16 @@ api_type:
 api_location:
 - Wfext.h
 ms.assetid: 7185f9e5-10c6-43cc-b85b-cd077378338f
-ms.openlocfilehash: 3a993312b9e365561018459c43dab87afbd3c2b2
-ms.sourcegitcommit: 3caaa3c92dcb1ef12f84464d14ce6262e65e988e
+ms.openlocfilehash: 719e13e824778ec133ad761d09ccd3bd8f5846ae8cdb36c83ba4f85eca1c2408
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/12/2021
-ms.locfileid: "109842161"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118224109"
 ---
-# <a name="fms_toolbarload-structure"></a>FMS \_ TOOLBARLOAD-Struktur
+# <a name="fms_toolbarload-structure"></a>\_FMS-SYMBOLLEISTELOAD-Struktur
 
-Enthält Informationen zu benutzerdefinierten Schaltflächen, die der Symbolleiste des Datei-Managers hinzugefügt werden sollen. Die Schaltflächen werden von einer Dateierweiterungs-DLL bereitgestellt.
+Enthält Informationen zu benutzerdefinierten Schaltflächen, die der Symbolleiste des Datei-Managers hinzugefügt werden sollen. Die Schaltflächen werden von einer Datei-Manager-Erweiterungs-DLL bereitgestellt.
 
 ## <a name="syntax"></a>Syntax
 
@@ -51,7 +51,7 @@ Typ: **DWORD**
 
 </dd> <dd>
 
-Die Größe der -Struktur in Bytes. Der Datei-Manager legt die Größe fest, bevor die Erweiterung aufgerufen wird, und überprüft die Größe, nachdem die Erweiterungsprozedur zurückgegeben wurde.
+Die Größe der -Struktur in Bytes. Der Datei-Manager legt die Größe vor dem Aufruf der Erweiterung fest und überprüft die Größe, nachdem die Erweiterungsprozedur zurückgegeben wurde.
 
 </dd> <dt>
 
@@ -73,7 +73,7 @@ Typ: **WORD**
 
 </dd> <dd>
 
-Die Anzahl der [**EXT \_ BUTTON-Strukturen**](ext-button.md) im Array, auf die der **lpButtons-Member** zeigt. Diese Zahl entspricht der Anzahl der Schaltflächen und Trennzeichen, die der Symbolleiste hinzugefügt werden sollen.
+Die Anzahl der [**EXT \_ BUTTON-Strukturen**](ext-button.md) im Array, auf die das **lpButtons-Member zeigt.** Diese Zahl entspricht der Anzahl von Schaltflächen und Trennzeichen, die der Symbolleiste hinzugefügt werden.
 
 </dd> <dt>
 
@@ -84,7 +84,7 @@ Typ: **WORD**
 
 </dd> <dd>
 
-Die Anzahl von Schaltflächen, die durch die angegebene Bitmap dargestellt werden.
+Die Anzahl der Schaltflächen, die von der angegebenen Bitmap dargestellt werden.
 
 </dd> <dt>
 
@@ -106,7 +106,7 @@ Typ: **HBITMAP**
 
 </dd> <dd>
 
-Ein Handle für eine Bitmap, die der Datei-Manager verwendet, um Schaltflächenbilder zu erhalten und anzuzeigen, wenn **idBitmap** 0 ist.
+Ein Handle für eine Bitmap, die der Datei-Manager zum Abrufen und Anzeigen von Schaltflächenbildern verwendet, wenn **idBitmap** 0 ist.
 
 </dd> </dl>
 
@@ -122,7 +122,7 @@ Ein Handle für eine Bitmap, die der Datei-Manager verwendet, um Schaltflächenb
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 

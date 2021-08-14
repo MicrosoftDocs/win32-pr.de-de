@@ -1,9 +1,9 @@
 ---
-title: Timetrigger-Element (triggergroup)
-description: Gibt einen-Auslösers an, der einen Task startet, wenn der--ausgelöst wird
+title: TimeTrigger -Element (triggerGroup)
+description: Gibt einen Trigger an, der eine Aufgabe startet, wenn der Trigger aktiviert wird.
 ms.assetid: bb467f36-47cd-4db4-97c4-60c09937caac
 keywords:
-- Time-Auslöserelement Taskplaner
+- TimeTrigger-Element Taskplaner
 topic_type:
 - apiref
 api_name:
@@ -13,16 +13,16 @@ api_type:
 ms.topic: reference
 ms.date: 05/31/2018
 api_location: ''
-ms.openlocfilehash: 83d3b0a63a8be70af7eba4edb90e49db71892f5d
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: d6b766a64f87b43feb23200176c5d23e254638a0022ea4d77b64264ca1d507d8
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104478162"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118355847"
 ---
-# <a name="timetrigger-triggergroup-element"></a>Timetrigger-Element (triggergroup)
+# <a name="timetrigger-triggergroup-element"></a>TimeTrigger -Element (triggerGroup)
 
-Gibt einen-Auslösers an, der einen Task startet, wenn der--ausgelöst wird
+Gibt einen Trigger an, der eine Aufgabe startet, wenn der Trigger aktiviert wird.
 
 ``` syntax
 <xs:element name="TimeTrigger"
@@ -30,7 +30,7 @@ Gibt einen-Auslösers an, der einen Task startet, wenn der--ausgelöst wird
  />
 ```
 
-Das **timetrigger** -Element wird von [**triggergroup**](taskschedulerschema-triggergroup-group.md) definiert.
+Das **TimeTrigger-Element** wird durch die [**triggerGroup definiert.**](taskschedulerschema-triggergroup-group.md)
 
 ## <a name="parent-element"></a>Übergeordnetes Element
 
@@ -38,7 +38,7 @@ Das **timetrigger** -Element wird von [**triggergroup**](taskschedulerschema-tri
 
 | Element                                                           | Abgeleitet von                                                         | BESCHREIBUNG                                            |
 |-------------------------------------------------------------------|----------------------------------------------------------------------|--------------------------------------------------------|
-| [**Trigger**](taskschedulerschema-triggers-tasktype-element.md) | [**triggerstype**](taskschedulerschema-triggerstype-complextype.md) | Gibt die Trigger an, die den Task starten.<br/> |
+| [**Trigger**](taskschedulerschema-triggers-tasktype-element.md) | [**triggersType**](taskschedulerschema-triggerstype-complextype.md) | Gibt die Trigger an, die die Aufgabe starten.<br/> |
 
 
 
@@ -48,11 +48,11 @@ Das **timetrigger** -Element wird von [**triggergroup**](taskschedulerschema-tri
 
 | Element                                                                                                        | type                                                                     | BESCHREIBUNG                                                                                                                        |
 |----------------------------------------------------------------------------------------------------------------|--------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------|
-| [**Aktiviert (triggerbasetype)**](taskschedulerschema-enabled-triggerbasetype-element.md)                       | boolean                                                                  | Gibt an, dass der-Wert aktiviert ist.<br/>                                                                                  |
-| [**Endboundary (triggerbasetype)**](taskschedulerschema-endboundary-triggerbasetype-element.md)               | dateTime                                                                 | Gibt das Datum und die Uhrzeit der Deaktivierung des Auslösers an. Der-Vorgang kann die Aufgabe nicht starten, nachdem Sie deaktiviert wurde.<br/> |
-| [**Executiontimelimit (triggerbasetype)**](taskschedulerschema-executiontimelimit-triggerbasetype-element.md) | duration                                                                 | Gibt die maximale Zeitspanne an, in der der Task vom-Vorgang gestartet werden kann.<br/>                                   |
-| [**Wiederholung (triggerbasetype)**](taskschedulerschema-repetition-triggerbasetype-element.md)                 | [**Wiederholungstyp**](taskschedulerschema-repetitiontype-complextype.md) | Gibt an, wie oft die Aufgabe ausgeführt wird und wie lange das Wiederholungsmuster nach dem Start der Aufgabe wiederholt wird.<br/>          |
-| [**StartBoundary (triggerbasetype)**](taskschedulerschema-startboundary-triggerbasetype-element.md)           | dateTime                                                                 | Gibt das Datum und die Uhrzeit der Aktivierung des Auslösers an. Dieses Element ist erforderlich.<br/>                                    |
+| [**Aktiviert (triggerBaseType)**](taskschedulerschema-enabled-triggerbasetype-element.md)                       | boolean                                                                  | Gibt an, dass der Trigger aktiviert ist.<br/>                                                                                  |
+| [**EndBoundary (triggerBaseType)**](taskschedulerschema-endboundary-triggerbasetype-element.md)               | dateTime                                                                 | Gibt das Datum und die Uhrzeit der Deaktivierung des Triggers an. Der Trigger kann die Aufgabe nicht starten, nachdem sie deaktiviert wurde.<br/> |
+| [**ExecutionTimeLimit (triggerBaseType)**](taskschedulerschema-executiontimelimit-triggerbasetype-element.md) | duration                                                                 | Gibt die maximale Zeitdauer an, in der der Task vom Trigger gestartet werden kann.<br/>                                   |
+| [**Wiederholung (triggerBaseType)**](taskschedulerschema-repetition-triggerbasetype-element.md)                 | [**wiederholungstyp**](taskschedulerschema-repetitiontype-complextype.md) | Gibt an, wie oft der Task ausgeführt wird und wie lange das Wiederholungsmuster wiederholt wird, nachdem der Task gestartet wurde.<br/>          |
+| [**StartBoundary (triggerBaseType)**](taskschedulerschema-startboundary-triggerbasetype-element.md)           | dateTime                                                                 | Gibt das Datum und die Uhrzeit der Aktivierung des Triggers an. Dieses Element ist erforderlich.<br/>                                    |
 
 
 
@@ -62,29 +62,29 @@ Das **timetrigger** -Element wird von [**triggergroup**](taskschedulerschema-tri
 
 | Name | type       | BESCHREIBUNG                               |
 |------|------------|-------------------------------------------|
-| Id   | **string** | Der Bezeichner des Auslösers.<br/> |
+| Id   | **string** | Der Bezeichner des Triggers.<br/> |
 
 
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Das [**StartBoundary**](taskschedulerschema-startboundary-triggerbasetype-element.md) -Element ist ein erforderliches Element für Zeit-und Kalender Trigger (**timetrigger** und [**calendartrigger**](taskschedulerschema-calendartrigger-triggergroup-element.md)).
+Das [**StartBoundary-Element**](taskschedulerschema-startboundary-triggerbasetype-element.md) ist ein erforderliches Element für Zeit- und Kalendertrigger (**TimeTrigger** und [**CalendarTrigger**](taskschedulerschema-calendartrigger-triggergroup-element.md)).
 
-Bei der Skripterstellung wird ein Zeit-und Zeit Auslöserwert mit dem [**time-Auslöserobjekt**](timetrigger.md)
+Für die Skriptentwicklung wird ein Zeittrigger mithilfe des [**TimeTrigger-Objekts**](timetrigger.md) angegeben.
 
-Bei der C++-Entwicklung wird mithilfe der [**Itime-auslöserschnittstelle**](/windows/desktop/api/taskschd/nn-taskschd-itimetrigger) ein Zeit-und ein Zeit--
+Für die C++-Entwicklung wird ein Zeittrigger mithilfe der [**ITimeTrigger-Schnittstelle**](/windows/desktop/api/taskschd/nn-taskschd-itimetrigger) angegeben.
 
-Die oben aufgeführten untergeordneten Elemente werden von den komplexen [**triggerbasetype**](taskschedulerschema-triggerbasetype-complextype.md) -Elementtypen definiert. Diese Elemente müssen in der unten gezeigten Sequenz hinzugefügt werden.
+Die oben aufgeführten untergeordneten Elemente werden durch die [**komplexen TriggerBaseType-Elementtypen**](taskschedulerschema-triggerbasetype-complextype.md) definiert. Diese Elemente müssen in der unten gezeigten Reihenfolge hinzugefügt werden.
 
--   [**StartBoundary (triggerbasetype)**](taskschedulerschema-startboundary-triggerbasetype-element.md)
--   [**Endboundary (triggerbasetype)**](taskschedulerschema-endboundary-triggerbasetype-element.md)
--   [**Aktiviert (triggerbasetype)**](taskschedulerschema-enabled-triggerbasetype-element.md)
--   [**Wiederholung (triggerbasetype)**](taskschedulerschema-repetition-triggerbasetype-element.md)
--   [**Executiontimelimit (triggerbasetype)**](taskschedulerschema-executiontimelimit-triggerbasetype-element.md)
+-   [**StartBoundary (triggerBaseType)**](taskschedulerschema-startboundary-triggerbasetype-element.md)
+-   [**EndBoundary (triggerBaseType)**](taskschedulerschema-endboundary-triggerbasetype-element.md)
+-   [**Aktiviert (triggerBaseType)**](taskschedulerschema-enabled-triggerbasetype-element.md)
+-   [**Wiederholung (triggerBaseType)**](taskschedulerschema-repetition-triggerbasetype-element.md)
+-   [**ExecutionTimeLimit (triggerBaseType)**](taskschedulerschema-executiontimelimit-triggerbasetype-element.md)
 
 ## <a name="examples"></a>Beispiele
 
-Ein umfassendes Beispiel für den XML-Code für eine Aufgabe, die einen Zeit--Timeout angibt, finden Sie unter [time-auslöserbeispiel (XML)](time-trigger-example--xml-.md).
+Ein vollständiges Beispiel für den XML-Code für eine Aufgabe, die einen Zeittrigger angibt, finden Sie unter [Time Trigger Example (XML) (Beispiel für Zeittrigger (XML)).](time-trigger-example--xml-.md)
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -92,12 +92,12 @@ Ein umfassendes Beispiel für den XML-Code für eine Aufgabe, die einen Zeit--Ti
 
 | Anforderung | Wert |
 |-------------------------------------|------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>       |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2008 \[ -Desktop-Apps\]<br/> |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur \[ Vista-Desktop-Apps\]<br/>       |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2008-Desktop-Apps\]<br/> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 

@@ -1,50 +1,50 @@
 ---
-title: VML-textpathok-Attribut
-description: VML-textpathok-Attribut
+title: VML-TextPathOK-Attribut
+description: VML-TextPathOK-Attribut
 ms.assetid: 5d061258-1c4d-4391-81ce-13af90a4231c
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 06046a4f29c147ef109f0e4670d9965bab77a9fa
-ms.sourcegitcommit: 592c9bbd22ba69802dc353bcb5eb30699f9e9403
+ms.openlocfilehash: dd2c14d613df36c314dea75275a4d60fe8792d6dea644ef2595422e74a73dc98
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "103858278"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118597454"
 ---
-# <a name="vml-textpathok-attribute"></a>VML-textpathok-Attribut
+# <a name="vml-textpathok-attribute"></a>VML-TextPathOK-Attribut
 
-In diesem Thema wird VML beschrieben, eine Funktion, die ab Windows Internet Explorer 9 veraltet ist. Webseiten und Anwendungen, die auf VML basieren, sollten zu SVG oder anderen allgemein unterstützten Standards migriert werden.
+In diesem Thema wird VML beschrieben, ein Feature, das ab Version 9 Windows Internet Explorer ist. Webseiten und Anwendungen, die auf VML basieren, sollten zu SVG oder anderen weit verbreiteten Standards migriert werden.
 
 > [!Note]  
-> Ab Dezember 2011 wurde dieses Thema archiviert. Daher wird er nicht mehr aktiv verwaltet. Weitere Informationen finden Sie unter [archivierte Inhalte](/previous-versions/windows/internet-explorer/ie-developer/). Informationen, Empfehlungen und Anleitungen zur aktuellen Version von Windows Internet Explorer finden Sie im [Internet Explorer Developer Center](https://msdn.microsoft.com/ie/).
+> Seit Dezember 2011 wurde dieses Thema archiviert. Daher wird sie nicht mehr aktiv verwaltet. Weitere Informationen finden Sie unter [Archivierter Inhalt.](/previous-versions/windows/internet-explorer/ie-developer/) Informationen, Empfehlungen und Anleitungen zur aktuellen Version von Windows Internet Explorer finden Sie im [Internet Explorer Developer Center.](https://msdn.microsoft.com/ie/)
 
- 
+ 
 
-Bestimmt, ob ein Textpfad angezeigt wird. Lese-/Schreibzugriff. **Vgder State**.
+Bestimmt, ob ein Textpfad angezeigt wird. Lese-/Schreibzugriff. **VgTriState**.
 
 **Gilt für**
 
-[Pfad](msdn-online-vml-path-element.md)
+[Path](msdn-online-vml-path-element.md)
 
 **Tagsyntax**
 
-<v: *Element* textpathok = " *Ausdruck* " >
+<v: textpathok="-Ausdruck  "> 
 
-**Skript Syntax**
+**Skriptsyntax**
 
-- *Element* . textpathok = "*Ausdruck*"
+*-Element* . textpathok= "*expression*"
 
-*Ausdruck* = - *Element*. textpathok
+*expression* = *-Element*. textpathok
 
 **Anmerkungen**
 
-Wenn der Wert **false** ist, kann der Pfad keinen Textpfad enthalten. Der Standardwert ist **False**. Dieses Attribut muss auf " **true** " festgelegt sein, um Text in einem Pfad anzuzeigen.
+False **gibt an,** dass der Pfad keinen Textpfad haben darf. Der Standardwert ist **False**. Sie müssen dieses Attribut auf True **festlegen,** um Text in einem Pfad anzuzeigen.
 
-*VML-Standard Attribut*
+*VML-Standardattribut*
 
 **Beispiel**
 
-Die Form weist einen Textpfad auf. Der Text "Hello VML" wird in einer Lächeln förmigen Kurve angezeigt.
+Die Form verfügt über einen Textpfad. Der Text "Hello VML" wird entlang einer lächelnförmigen Kurve angezeigt.
 
 
 ```HTML
@@ -63,6 +63,6 @@ Die Form weist einen Textpfad auf. Der Text "Hello VML" wird in einer Lächeln f
 
 
 
- 
+ 
 
- 
+ 

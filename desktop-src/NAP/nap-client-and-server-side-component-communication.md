@@ -1,65 +1,65 @@
 ---
-title: Kommunikation zwischen NAP-Client und Server seitiger Komponente
-description: Kommunikation zwischen NAP-Client und Server seitiger Komponente
+title: Client- und serverseitige Kommunikation zwischen NAP-Komponenten
+description: Client- und serverseitige Kommunikation zwischen NAP-Komponenten
 ms.assetid: 7658cf0c-607b-44ba-b579-72082d0d1f51
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 07597ac80a1e02c4f8528b3c99050aefb5963988
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: f2d3c390aa8bdc8cc80eec8834dd1c250d523737d63963b4b9370877ffa46329
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "104388657"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117799075"
 ---
-# <a name="nap-client-and-server-side-component-communication"></a>Kommunikation zwischen NAP-Client und Server seitiger Komponente
+# <a name="nap-client-and-server-side-component-communication"></a>Client- und serverseitige Kommunikation zwischen NAP-Komponenten
 
 > [!Note]  
-> Die Netzwerk Zugriffsschutz-Plattform ist ab Windows 10 nicht verfügbar.
+> Die Netzwerkzugriffsschutz-Plattform ist ab Windows 10 nicht verfügbar.
 
- 
+ 
 
-Die NAP-Agent-Komponente kann über den folgenden Prozess mit der NAP-Verwaltungs Server Komponente kommunizieren:
+Die NAP-Agent-Komponente kann mit der NAP-Verwaltungsserverkomponente über den folgenden Prozess kommunizieren:
 
-1.  Der NAP-Agent übergibt die SSOH an die NAP ec.
-2.  Der NAP EC übergibt die SSOH an die NAP es.
-3.  Der NAP es übergibt die SSOH an den Netzwerk Richtlinien Server (NPS)-Dienst.
-4.  Der NPS-Dienst übergibt die SSOH an den NAP-Verwaltungs Server.
+1.  Der NAP-Agent übergibt SSoH an den NAP EC.
+2.  Der NAP EC übergibt SSoH an den NAP ES.
+3.  Der NAP ES übergibt SSoH an den Netzwerkrichtlinienserver-Dienst (NETWORK Policy Server, NPS).
+4.  Der NPS-Dienst übergibt SSoH an den NAP-Verwaltungsserver.
 
-Ein SHA kann über den folgenden Prozess mit dem entsprechenden SHV kommunizieren:
+Ein SHA kann mit dem entsprechenden SHV über den folgenden Prozess kommunizieren:
 
-1.  Der SHA übergibt seine SoH an den NAP-Agent.
-2.  Der NAP-Agent übergibt das SoH, das in SSOH enthalten ist, an die NAP ec.
-3.  Der NAP EC übergibt das SoH an die NAP es.
-4.  Der NAP es übergibt das SoH an den NAP-Verwaltungs Server.
-5.  Der NAP-Verwaltungs Server übergibt das SoH an den SHV.
+1.  Der SHA übergibt seine SoH-Datei an den NAP-Agent.
+2.  Der NAP-Agent übergibt den in SSoH enthaltenen SoH an den NAP EC.
+3.  Der NAP EC übergibt den SoH an den NAP ES.
+4.  Der NAP ES übergibt die SoH an den NAP-Verwaltungsserver.
+5.  Der NAP-Verwaltungsserver übergibt die SoH an die SHV.
 
-Die folgende Abbildung zeigt den Kommunikationsprozess von NAP-Client Komponenten mit NAP-serverseitigen Komponenten.
+Die folgende Abbildung zeigt den Kommunikationsprozess von NAP-Clientkomponenten zu serverseitigen NAP-Komponenten.
 
-![Architektur der Kommunikation zwischen Client und Server auf der NAP-Plattform](images/nap-client-to-server-comm.png)
+![Architektur der Kommunikation zwischen Client und Server auf der Nap-Plattform](images/nap-client-to-server-comm.png)
 
-Der NAP-Verwaltungs Server kann über den folgenden Prozess mit dem NAP-Agent kommunizieren:
+Der NAP-Verwaltungsserver kann mit dem NAP-Agent über den folgenden Prozess kommunizieren:
 
-1.  Der NAP-Verwaltungs Server übergibt die sostd an den NPS-Dienst.
-2.  Der NPS-Dienst übergibt die SSoHR an den NAP es.
-3.  Der NAP es übergibt die SSoHR an die NAP ec.
-4.  Der NAP EC übergibt die SSoHR an den NAP-Agent.
+1.  Der NAP-Verwaltungsserver übergibt die SoHRs an den NPS-Dienst.
+2.  Der NPS-Dienst übergibt SSoHR an den NAP ES.
+3.  Der NAP ES übergibt SSoHR an den NAP EC.
+4.  Der NAP EC übergibt SSoHR an den NAP-Agent.
 
 Der SHV kann mit dem entsprechenden SHA über den folgenden Prozess kommunizieren:
 
-1.  Der SHV übergibt seine Sohr an den NAP-Verwaltungs Server.
-2.  Der NAP-Verwaltungs Server übergibt die Sohr an den NPS-Dienst.
-3.  Der NPS-Dienst übergibt die im SSoHR enthaltene Sohr an die NAP es.
-4.  Der NAP es übergibt die Sohr an die NAP ec.
-5.  Der NAP EC übergibt die Sohr an den NAP-Agent.
-6.  Der NAP-Agent übergibt die Sohr an den SHA.
+1.  Der SHV übergibt seine SoHR an den NAP-Verwaltungsserver.
+2.  Der NAP-Verwaltungsserver übergibt das SoHR an den NPS-Dienst.
+3.  Der NPS-Dienst übergibt das in SSoHR enthaltene SoHR an den NAP ES.
+4.  Der NAP ES übergibt den SoHR an den NAP EC.
+5.  Der NAP EC übergibt den SoHR an den NAP-Agent.
+6.  Der NAP-Agent übergibt das SoHR an den SHA.
 
-Die folgende Abbildung zeigt den Kommunikationsprozess von NAP-serverseitigen Komponenten mit NAP-Client Komponenten.
+Die folgende Abbildung zeigt den Kommunikationsprozess zwischen serverseitigen NAP-Komponenten und NAP-Clientkomponenten.
 
-![Architektur der Server-zu-Client-Kommunikation auf der NAP-Plattform](images/nap-server-to-client-comm.png)
+![Architektur der Kommunikation zwischen Server und Client auf der Nap-Plattform](images/nap-server-to-client-comm.png)
 
- 
+ 
 
- 
+ 
 
 
 

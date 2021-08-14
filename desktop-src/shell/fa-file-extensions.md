@@ -1,62 +1,62 @@
 ---
-description: Das Registrieren eines Dateityps ist der erste Schritt beim Erstellen einer Datei Zuordnung, bei der der Dateityp \# 0034&&\# . Ohne Dateityp Handler kann die Shell dem Benutzer jedoch keine Informationen aus der Datei und der Datei verfügbar machen.
+description: Das Registrieren eines Dateityps ist der erste Schritt beim Erstellen einer Dateiassoz, wodurch dieser Dateityp &\# 0034;&\# 0034; zur Shell wird. Ohne Dateityphandler kann die Shell dem Benutzer jedoch keine Informationen aus und über die Datei verfügbar machen.
 ms.assetid: c0c5c3ef-35ff-4ab6-bb8a-1f0640109d50
-title: Dateityp Handler
+title: Dateityphandler
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: cba365b6eb704def7644002b8a87c3842b62aa77
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 404cfd3be4c3e8a600b2f943bda1243ca243b70af411e104000245edd13d94c1
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "103862367"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118459725"
 ---
-# <a name="file-type-handlers"></a>Dateityp Handler
+# <a name="file-type-handlers"></a>Dateityphandler
 
-Das [Registrieren eines Dateityps](fa-how-work.md) ist der erste Schritt beim Erstellen einer Datei Zuordnung, die den Dateityp "bekannt" für die Shell macht. Ohne Dateityp Handler kann die Shell dem Benutzer jedoch keine Informationen aus der Datei und der Datei verfügbar machen.
+[Das Registrieren eines Dateityps](fa-how-work.md) ist der erste Schritt beim Erstellen einer Dateiassoz, die diesen Dateityp der Shell "bekannt" macht. Ohne Dateityphandler kann die Shell dem Benutzer jedoch keine Informationen aus und über die Datei verfügbar machen.
 
 Dieses Thema ist wie folgt organisiert:
 
--   [Erstellen eines Dateityps, der Shell bekannt ist](#make-a-file-type-known-to-shell)
--   [Dateityp Handler-Beschreibungen](#file-type-handler-descriptions)
+-   [Shell einen Dateityp bekannt machen](#make-a-file-type-known-to-shell)
+-   [Beschreibungen des Dateityphandlers](#file-type-handler-descriptions)
 -   [Zugehörige Themen](#related-topics)
 
-## <a name="make-a-file-type-known-to-shell"></a>Erstellen eines Dateityps, der Shell bekannt ist
+## <a name="make-a-file-type-known-to-shell"></a>Shell einen Dateityp bekannt machen
 
-Im folgenden Screenshot von Windows-Explorer wird die Bilddatei "Desert. Known" in der **shellbilder** -Bibliothek angezeigt und nur mit der Paint-Anwendung verknüpft.
+Im folgenden Screenshot des Windows-Explorers wird die Bilddatei "Dateityp.known" in der **Shellbildbibliothek** angezeigt und nur der Paint zugeordnet.
 
 ![Screenshot, der zeigt, wie der Explorer ein Bild ohne Dateityp öffnet](images/file-assoc/fileassoc-filetypehandler.png)
 
-In der Datei "Desert. Known" im vorherigen Screenshot fehlen die folgenden Funktionen, die von einem Dateityp Handler aktiviert werden:
+In der Datei "Soll.known&quot; im vorherigen Screenshot fehlt die folgende Funktionalität, die von einem Dateityphandler aktiviert wird:
 
 -   Miniaturansicht oder Vorschau
--   Bild spezifische Verben im Kontextmenü, z. b.:
-    -   Vorschau drehen
-    -   Als Desktop Hintergrund festlegen
+-   Bildspezifische Verben im Kontextmenü, z. B.:
+    -   Vorschau rotieren
+    -   Als Desktophintergrund festlegen
     -   Drucken
--   Bild spezifische Eigenschaften im **Detail** Bereich, z. b.:
+-   Bildspezifische Eigenschaften im **Detailbereich,** z. B.:
     -   Datum der Erstellung
     -   `Tags`
     -   Rating
--   Indizierung von Datei Text
+-   Indizierung von Dateitext
 
-Im folgenden Screenshot weist die gleiche Datei (Wüsten. Known) die Erweiterung. jpg auf, bei der es sich um einen registrierten Dateityp mit zugeordneten Dateityp Handlern handelt, sodass ein Miniaturbild und weitere Eigenschaften angezeigt werden.
+Im folgenden Screenshot hat dieselbe Datei (Datei &quot;Bekannter") die Erweiterung .jpg. Dabei handelt es sich um einen registrierten Dateityp, dem Dateityphandler zugeordnet sind, sodass ein Miniaturbild und weitere Eigenschaften angezeigt werden.
 
-![Bild mit einem registrierten Dateityp und zugeordneten Dateityp Handlern](images/file-assoc/fileassoc-filetypehandler-2ndex.png)
+![Image mit einem registrierten Dateityp und zugeordneten Dateityphandlern](images/file-assoc/fileassoc-filetypehandler-2ndex.png)
 
-## <a name="file-type-handler-descriptions"></a>Dateityp Handler-Beschreibungen
+## <a name="file-type-handler-descriptions"></a>Beschreibungen des Dateityphandlers
 
-Die Funktionen, die von jedem Dateityp Handler bereitgestellt werden, sind in der folgenden Tabelle aufgeführt:
+Die von den einzelnen Dateityphandlern bereitgestellten Funktionen sind in der folgenden Tabelle aufgeführt:
 
 
 
 | Handler                                                      | BESCHREIBUNG                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             |
 |--------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| [Kontextmenü](context-menu-handlers.md)                   | Ein Kontextmenü Handler, der manchmal auch als Kontextmenü Handler bezeichnet wird, ist ein Dateityp Handler, der einem vorhandenen Kontextmenü Befehle hinzufügt. Diese Handler sind einem bestimmten Dateityp zugeordnet und werden jedes Mal aufgerufen, wenn ein Kontextmenü für einen Member des Dateityps angezeigt wird.                                                                                                                                                                                                                                                                           |
-| [Miniaturansicht](thumbnail-providers.md)                         | Ein Handler, der ein Bild bereitstellt, das ein shellelement darstellen soll.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             |
-| [Eigenschaft](../properties/building-property-handlers-properties.md) | Ein Eigenschaften Handler, der den Zugriff auf Element Eigenschaften für Windows Search, den Windows-Explorer und andere Anwendungen ermöglicht, die auf Eigenschaften zugreifen müssen.                                                                                                                                                                                                                                                                                                                                                                                                              |
-| [Vorschau](preview-handlers.md)                              | Ein Handler, der schnell eine schreibgeschützte, vereinfachte Ansicht des Elements erstellt, das im Vorschaubereich von Windows-Explorer angezeigt werden soll.                                                                                                                                                                                                                                                                                                                                                                                                                                          |
-| [Filter](../search/-search-3x-wds-extidx-filters.md)              | Ein Filter, eine Implementierung der [**IFilter**](/windows/win32/api/filter/nn-filter-ifilter) -Schnittstelle, die Dokumente für Text und Eigenschaften (auch als Attribute bezeichnet) scannt. Es extrahiert Textabschnitte aus diesen Dokumenten, filtert eingebettete Formatierungen heraus und behält Informationen über die Position des Texts bei. Außerdem werden Werte Blöcke extrahiert, bei denen es sich um Eigenschaften eines gesamten Dokuments oder um klar definierte Teile eines Dokuments handelt. **IFilter** ist die Grundlage für das Entwickeln von Anwendungen höherer Ebene, z. b. dokumentindexer und Anwendungs unabhängige Viewer. |
+| [Kontextmenü](context-menu-handlers.md)                   | Ein Kontextmenühandler, der manchmal auch als Kontextmenühandler bezeichnet wird, ist ein Dateityphandler, der einem vorhandenen Kontextmenü Befehle hinzufügt. Diese Handler sind einem bestimmten Dateityp zugeordnet und werden jedes Mal aufgerufen, wenn ein Kontextmenü für einen Member des Dateityps angezeigt wird.                                                                                                                                                                                                                                                                           |
+| [Miniaturansicht](thumbnail-providers.md)                         | Ein Handler, der ein Bild zur Darstellung eines Shellelements bietet.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             |
+| [Eigenschaft](../properties/building-property-handlers-properties.md) | Ein Eigenschaftenhandler, der Zugriff auf Elementeigenschaften für Windows Search, den Windows-Explorer und andere Anwendungen bietet, die auf Eigenschaften zugreifen müssen.                                                                                                                                                                                                                                                                                                                                                                                                              |
+| [Vorschau](preview-handlers.md)                              | Ein Handler, der schnell eine schreibgeschützte, vereinfachte Ansicht des Elements erzeugt, das im Vorschaubereich Windows Explorer angezeigt werden soll.                                                                                                                                                                                                                                                                                                                                                                                                                                          |
+| [Filter](../search/-search-3x-wds-extidx-filters.md)              | Ein Filter, eine Implementierung der [**IFilter-Schnittstelle,**](/windows/win32/api/filter/nn-filter-ifilter) der Dokumente nach Text und Eigenschaften (auch als Attribute bezeichnet) durchsucht. Es extrahiert Textbrocken aus diesen Dokumenten, filtert eingebettete Formatierungen heraus und behält Informationen zur Position des Texts bei. Außerdem werden Werteteile extrahiert, bei denen es sich um Eigenschaften eines gesamten Dokuments oder klar definierter Teile eines Dokuments handelt. **IFilter** bildet die Grundlage für die Entwicklung von Anwendungen auf höherer Ebene, z. B. Dokumentindexer und anwendungsunabhängige Viewer. |
 
 
 
@@ -66,7 +66,7 @@ Die Funktionen, die von jedem Dateityp Handler bereitgestellt werden, sind in de
 
 <dl> <dt>
 
-[Anwendungs Registrierung](app-registration.md)
+[Anwendungsregistrierung](app-registration.md)
 </dt> <dt>
 
 [Dateitypen](fa-file-types.md)
@@ -75,10 +75,10 @@ Die Funktionen, die von jedem Dateityp Handler bereitgestellt werden, sind in de
 [Funktionsweise von Dateizuordnungen](fa-how-work.md)
 </dt> <dt>
 
-[Inhaltsansicht nach Dateityp oder-Art](prophand-content-view.md)
+[Inhaltsansicht nach Dateityp oder Art](prophand-content-view.md)
 </dt> <dt>
 
-[Dateityp Überprüfung](file-type-verifier.md)
+[Dateitypverifizierer](file-type-verifier.md)
 </dt> <dt>
 
 [Programmgesteuerte Bezeichner](fa-progids.md)
@@ -87,7 +87,7 @@ Die Funktionen, die von jedem Dateityp Handler bereitgestellt werden, sind in de
 [Wahrgenommene Typen](fa-perceivedtypes.md)
 </dt> <dt>
 
-[Zuordnungs Arrays](fa-associationarray.md)
+[Zuordnungsarrays](fa-associationarray.md)
 </dt> </dl>
 
  

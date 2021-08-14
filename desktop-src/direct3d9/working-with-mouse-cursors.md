@@ -1,33 +1,33 @@
 ---
-description: Mit den Maus Cursor Methoden kann die Anwendung einen Farb Cursor angeben, indem eine Oberfläche bereitgestellt wird, die ein Bild enthält.
+description: Mit den Mauszeigermethoden kann die Anwendung einen Farbcursor angeben, indem eine Oberfläche mit einem Bild angegeben wird.
 ms.assetid: 300a8a6f-abcd-49c9-889b-14b12ff5c821
-title: Arbeiten mit Maus Cursorn (Direct3D 9)
+title: Arbeiten mit Mauscursorn (Direct3D 9)
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 14855e2d17c9d23f078297840d951b8db338d613
-ms.sourcegitcommit: a47bd86f517de76374e4fff33cfeb613eb259a7e
+ms.openlocfilehash: 999bd324c8c3a1a2c743b5417f5d316a9d0f9493ccb4b749545e53e23e58917f
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/06/2021
-ms.locfileid: "104482414"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118518918"
 ---
-# <a name="working-with-mouse-cursors-direct3d-9"></a>Arbeiten mit Maus Cursorn (Direct3D 9)
+# <a name="working-with-mouse-cursors-direct3d-9"></a>Arbeiten mit Mauscursorn (Direct3D 9)
 
-Mit den Maus Cursor Methoden kann die Anwendung einen Farb Cursor angeben, indem eine Oberfläche bereitgestellt wird, die ein Bild enthält. Das System stellt sicher, dass dieser Cursor zur Hälfte der Anzeige Rate oder mehr aktualisiert wird, wenn die Frame Rate der Anwendung langsam ist. Der Cursor wird jedoch nie häufiger aktualisiert als die Aktualisierungsrate der Anzeige.
+Mit den Mauszeigermethoden kann die Anwendung einen Farbcursor angeben, indem eine Oberfläche mit einem Bild angegeben wird. Das System stellt sicher, dass dieser Cursor mit der Hälfte der Anzeigerate oder mehr aktualisiert wird, wenn die Bildfrequenz der Anwendung langsam ist. Der Cursor wird jedoch nie häufiger aktualisiert als die Anzeigeaktualisierungsrate.
 
-Die Position des Mauszeigers ist an den System Cursor gebunden und entsprechend der aktuellen räumlichen Auflösung des Anzeigemodus skaliert, kann aber explizit von der Anwendung verschoben werden. Dies entspricht dem Verhalten des mit der Win32-API unterstützten System Maus Cursors. Weitere Informationen zur Verwendung eines Mauszeigers in ihrer Direct3D-Anwendung finden Sie in den folgenden Referenz Themen.
+Die Position des Mauszeigers ist an den Systemcursor gebunden und entsprechend für die aktuelle räumliche Auflösung des Anzeigemodus skaliert, kann jedoch explizit von der Anwendung verschoben werden. Dies entspricht dem Verhalten der Win32-API – unterstützter Systemmauscursor. Weitere Informationen zur Verwendung eines Mauszeigers in Ihrer Direct3D-Anwendung finden Sie in den folgenden Referenzthemen.
 
--   [**IDirect3DDevice9:: ShowCursor**](/windows/win32/api/d3d9helper/nf-d3d9helper-idirect3ddevice9-showcursor)
--   [**IDirect3DDevice9:: setcurrsorposition**](/windows/win32/api/d3d9helper/nf-d3d9helper-idirect3ddevice9-setcursorposition)
--   [**IDirect3DDevice9:: setcurrsorproperties**](/windows/win32/api/d3d9helper/nf-d3d9helper-idirect3ddevice9-setcursorproperties)
+-   [**IDirect3DDevice9::ShowCursor**](/windows/win32/api/d3d9helper/nf-d3d9helper-idirect3ddevice9-showcursor)
+-   [**IDirect3DDevice9::SetCursorPosition**](/windows/win32/api/d3d9helper/nf-d3d9helper-idirect3ddevice9-setcursorposition)
+-   [**IDirect3DDevice9::SetCursorProperties**](/windows/win32/api/d3d9helper/nf-d3d9helper-idirect3ddevice9-setcursorproperties)
 
-Direct3D stellt sicher, dass die Maus entweder von Hardware Implementierungen oder von der Direct3D-Laufzeit unterstützt wird, die beim Aufrufen von IDirect3DDevice9 die hardwarebeschleunigte Blitvorgänge ausführt, wenn [**::P erneut gesendet**](/windows/win32/api/d3d9helper/nf-d3d9helper-idirect3ddevice9-present)wird.
+Direct3D stellt sicher, dass die Maus entweder von Hardwareimplementierungen oder von der Direct3D-Laufzeit unterstützt wird, die hardwarebeschleunigte Blittingvorgänge ausführt, wenn [**IDirect3DDevice9::P resent aufruft.**](/windows/win32/api/d3d9helper/nf-d3d9helper-idirect3ddevice9-present)
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
 <dl> <dt>
 
-[Programmiertipps](programming-tips.md)
+[Programmieren Tipps](programming-tips.md)
 </dt> </dl>
 
  

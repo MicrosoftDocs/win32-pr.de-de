@@ -1,9 +1,9 @@
 ---
-title: MM_MIM_ERROR Meldung (MMSYSTEM. h)
-description: Die mm \_ MIM- \_ Fehlermeldung wird an ein Fenster gesendet, wenn eine ungültige MIDI-Nachricht empfangen wird.
+title: MM_MIM_ERROR (Mmsystem.h)
+description: Die MM \_ MIM \_ ERROR-Meldung wird an ein Fenster gesendet, wenn eine ungültige FEHLERMELDUNG empfangen wird.
 ms.assetid: 03760bfc-a4ef-48cd-97a9-1b93b56fc641
 keywords:
-- MM_MIM_ERROR-Nachricht (Multimedia)
+- MM_MIM_ERROR von Windows Multimedia
 topic_type:
 - apiref
 api_name:
@@ -14,16 +14,16 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 76b45988259601b40a804f9eb8acfbb085bddcda
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 15b2f615434d47a60297991e170a27acd2c6fabefcb5fed0b71624d373a35ed5
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104103034"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117802418"
 ---
-# <a name="mm_mim_error-message"></a>MM \_ MIM- \_ Fehlermeldung
+# <a name="mm_mim_error-message"></a>MM \_ MIM \_ FEHLERMELDUNG
 
-Die **mm \_ MIM- \_ Fehler** Meldung wird an ein Fenster gesendet, wenn eine ungültige MIDI-Nachricht empfangen wird.
+Die **MM \_ MIM \_ ERROR-Meldung** wird an ein Fenster gesendet, wenn eine ungültige FEHLERMELDUNG empfangen wird.
 
 
 ```C++
@@ -38,17 +38,17 @@ lParam = (LPARAM) (DWORD) lMidiMessage
 
 <dl> <dt>
 
-<span id="hInput"></span><span id="hinput"></span><span id="HINPUT"></span>*hinput*
+<span id="hInput"></span><span id="hinput"></span><span id="HINPUT"></span>*hInput*
 </dt> <dd>
 
-Handle für das MIDI-Eingabegerät, das die ungültige Nachricht empfangen hat.
+Handle für das EINGABE-Eingabegerät, das die ungültige Nachricht empfangen hat.
 
 </dd> <dt>
 
-<span id="lMidiMessage"></span><span id="lmidimessage"></span><span id="LMIDIMESSAGE"></span>*lmidimessage*
+<span id="lMidiMessage"></span><span id="lmidimessage"></span><span id="LMIDIMESSAGE"></span>*lMidiMessage*
 </dt> <dd>
 
-Ungültige MIDI-Nachricht. Die Nachricht wird in einem **DWORD** -Wert mit dem ersten Byte der Nachricht im nieder wertigen Byte verpackt.
+Ungültige FEHLERMELDUNG. Die Nachricht wird in einen **DWORD-Wert** mit dem ersten Byte der Nachricht im niedrigen Byte gepackt.
 
 </dd> </dl>
 
@@ -64,18 +64,18 @@ Diese Meldung gibt keinen Wert zurück.
 |-------------------------------------|-----------------------------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional \[nur Desktop-Apps\]<br/>                                                |
 | Unterstützte Mindestversion (Server)<br/> | Windows 2000 Server \[nur Desktop-Apps\]<br/>                                                      |
-| Header<br/>                   | <dl> <dt>MMSYSTEM. h (Include Windows. h)</dt> </dl> |
+| Header<br/>                   | <dl> <dt>Mmsystem.h (include Windows.h)</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[Digital Instrumentation Digital Interface (MIDI)](musical-instrument-digital-interface--midi.md)
+[Instrument Digital Interface (KEYBOARD)](musical-instrument-digital-interface--midi.md)
 </dt> <dt>
 
-[MIDI-Nachrichten](midi-messages.md)
+[MESSAGES-Meldungen](midi-messages.md)
 </dt> </dl>
 
  

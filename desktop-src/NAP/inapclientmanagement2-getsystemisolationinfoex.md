@@ -1,11 +1,11 @@
 ---
-title: INapClientManagement2 getsystemisolationinfoex-Methode (napmanagement. h)
-description: Ruft Informationen zum Isolations Status und zum erweiterten Isolations Status des napclient ab.
+title: INapClientManagement2 GetSystemIsolationInfoEx-Methode (NapManagement.h)
+description: Ruft Informationen über den Isolationsstatus und den erweiterten Isolationsstatus von NapClient ab.
 ms.assetid: 614bcf19-873e-4043-98b2-dcb152bae3e2
 keywords:
-- Getsystemisolationinfoex-Methode NAP
-- Getsystemisolationinfoex-Methode NAP, INapClientManagement2-Schnittstelle
-- INapClientManagement2 Interface NAP, getsystemisolationinfoex-Methode
+- GetSystemIsolationInfoEx-Methode NAP
+- GetSystemIsolationInfoEx-Methode NAP, INapClientManagement2-Schnittstelle
+- INapClientManagement2-Schnittstelle NAP, GetSystemIsolationInfoEx-Methode
 topic_type:
 - apiref
 api_name:
@@ -16,21 +16,21 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 3e75a6554ea7e55c3bebe35b797f888494a55627
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: d03630cbd0647dc177460f92abc28e6aa66cbb663465ba7e9e93eefbc283ac00
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104040406"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118621927"
 ---
-# <a name="inapclientmanagement2getsystemisolationinfoex-method"></a>INapClientManagement2:: getsystemisolationinfoex-Methode
+# <a name="inapclientmanagement2getsystemisolationinfoex-method"></a>INapClientManagement2::GetSystemIsolationInfoEx-Methode
 
 > [!Note]  
-> Die Netzwerk Zugriffsschutz-Plattform ist ab Windows 10 nicht verfügbar.
+> Die Netzwerkzugriffsschutz-Plattform ist ab dem Windows 10
 
  
 
-Die **getsystemisolationinfoex** -Methode ruft Informationen über den Isolations Status und den erweiterten Isolations Status des napclient ab.
+Die **GetSystemIsolationInfoEx-Methode** ruft Informationen über den Isolationszustand und den erweiterten Isolationsstatus des NapClient ab.
 
 ## <a name="syntax"></a>Syntax
 
@@ -48,42 +48,42 @@ HRESULT GetSystemIsolationInfoEx(
 
 <dl> <dt>
 
-*IsolationInfo* \[ vorgenommen\]
+*isolationInfo* \[ out\]
 </dt> <dd>
 
-Ein Zeiger auf einen Zeiger auf eine [**isolationinfoex**](/windows/win32/api/naptypes/ns-naptypes-isolationinfoex) -Struktur, die Isolations Zustandsinformationen enthält.
+Ein Zeiger auf einen Zeiger auf eine [**IsolationInfoEx-Struktur,**](/windows/win32/api/naptypes/ns-naptypes-isolationinfoex) die Informationen zum Isolationszustand enthält.
 
 </dd> <dt>
 
-*unknownconnections* \[ vorgenommen\]
+*unknownConnections* \[ out\]
 </dt> <dd>
 
-Ein Zeiger auf einen booleschen Wert, der **true** ist, wenn sich eine der Verbindungen in einem unbekannten Zustand befindet, andernfalls **false** .
+Ein Zeiger auf eine BOOL, die **TRUE ist,** wenn sich eine der Verbindungen in einem unbekannten Zustand befindet, andernfalls **FALSE.**
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Die-Methode gibt einen HRESULT-Statuscode zurück, einschließlich, aber nicht beschränkt auf einen der folgenden.
+Die -Methode gibt einen HRESULT-Statuscode zurück, einschließlich, aber nicht beschränkt auf einen der folgenden.
 
 
 
 | Rückgabecode                                                                                         | Beschreibung                                                        |
 |-----------------------------------------------------------------------------------------------------|--------------------------------------------------------------------|
 | <dl> <dt>**S \_ OK**</dt> </dl>                | Vorgang erfolgreich.<br/>                                   |
-| <dl> <dt>**E \_ AccessDenied**</dt> </dl>      | Berechtigungs Fehler, Zugriff verweigert.<br/>                       |
-| <dl> <dt>**E \_ outo-Memory**</dt> </dl>       | System Ressourcen Limit, der Vorgang konnte nicht durchgeführt werden.<br/> |
-| <dl> <dt>**RPC- \_ E \_ getrennt**</dt> </dl> | Der NAPAgent wird nicht ausgeführt.<br/>                            |
+| <dl> <dt>**E \_ ACCESSDENIED**</dt> </dl>      | Berechtigungsfehler, Zugriff verweigert.<br/>                       |
+| <dl> <dt>**E \_ OUTOFMEMORY**</dt> </dl>       | Systemressourcenlimit, konnte den Vorgang nicht ausführen.<br/> |
+| <dl> <dt>**RPC \_ E \_ DISCONNECTED**</dt> </dl> | Der NapAgent wird nicht ausgeführt.<br/>                            |
 
 
 
  
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Die abgerufenen Isolations Informationen spiegeln keine unbekannten Zustände wider.
+Die abgerufenen Isolationsinformationen spiegeln keine unbekannten Zustände wider.
 
-Der SHA muss die [**isolationinfoex**](/windows/win32/api/naptypes/ns-naptypes-isolationinfoex) -Struktur durch Aufrufen von [**freeisolationinfoex**](freeisolationinfoex.md)freigeben.
+Die SHA muss die [**IsolationInfoEx-Struktur durch**](/windows/win32/api/naptypes/ns-naptypes-isolationinfoex) Aufrufen [**von FreeIsolationInfoEx frei geben.**](freeisolationinfoex.md)
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -91,15 +91,15 @@ Der SHA muss die [**isolationinfoex**](/windows/win32/api/naptypes/ns-naptypes-i
 
 | Anforderung | Wert |
 |-------------------------------------|----------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>                                               |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2008 \[ -Desktop-Apps\]<br/>                                         |
-| Header<br/>                   | <dl> <dt>Napmanagement. h</dt> </dl>   |
-| IDL<br/>                      | <dl> <dt>Napmanagement. idl</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur \[ Vista-Desktop-Apps\]<br/>                                               |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2008-Desktop-Apps\]<br/>                                         |
+| Header<br/>                   | <dl> <dt>NapManagement.h</dt> </dl>   |
+| Idl<br/>                      | <dl> <dt>NapManagement.idl</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>Qagent.dll</dt> </dl>        |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 

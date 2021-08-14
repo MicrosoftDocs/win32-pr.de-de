@@ -1,21 +1,21 @@
 ---
-description: Verwenden von Protokollierungs-APIs für Eltern Steuerelemente
+description: Verwenden von Protokollierungs-APIs für Jugendschutz
 ms.assetid: 6c38a634-53ba-4e76-83bf-1a3f36efb0bc
-title: Verwenden von Protokollierungs-APIs für Eltern Steuerelemente
+title: Verwenden von Protokollierungs-APIs für Jugendschutz
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 37d1cedb9ff02856be6ea1ae2069d8635b980681
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 571a24f8bdbf687f8c1975cfc29057035ac56747edc0459682512531194c55a4
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "103865568"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117869062"
 ---
-# <a name="using-logging-apis-for-parental-controls"></a>Verwenden von Protokollierungs-APIs für Eltern Steuerelemente
+# <a name="using-logging-apis-for-parental-controls"></a>Verwenden von Protokollierungs-APIs für Jugendschutz
 
-### <a name="activity-reporting-logging"></a>Aktivitäts Berichterstattung (Protokollierung)
+### <a name="activity-reporting-logging"></a>Aktivitätsberichterstattung (Protokollierung)
 
-Die Header Datei "wpcevent. h" enthält Definitionen der Felder für jeden vordefinierten Aktivitäts Ereignistyp und den benutzerdefinierten Typ. Dieser Beispielcode zeigt die Schritte zum Protokollieren eines Einladungs Ereignisses für die Instant Messaging-Konversation mithilfe der etw-Veröffentlichungs-API:
+Die WpcEvent.h-Headerdatei enthält Definitionen der Felder für jeden vordefinierten Aktivitätsereignistyp und den benutzerdefinierten Typ. Dieser Beispielcode zeigt die Schritte zum Protokollieren eines Chat-Konversationseinladungsereignis mithilfe der ETW-Veröffentlichungs-API:
 
 
 ```C++
@@ -88,36 +88,36 @@ void main()
 
 ### <a name="custom-logging"></a>Benutzerdefinierte Protokollierung
 
-Damit eine Anwendung die Ereignisse erweitert, die außerhalb des Satzes von vordefinierten Ereignissen oder eines benutzerdefinierten Typs protokolliert wurden, müssen Sie im Anwendungs Manifest einen Anbieter dafür definieren. Anschließend kann der WPC-Standard Kanal importiert und Anwendungs definierte Ereignisse protokolliert werden.
+Damit eine Anwendung die Ereignisse erweitert, die außerhalb der vordefinierten Ereignisse oder des benutzerdefinierten Typs protokolliert werden, müssen Sie einen Anbieter für diesen im Anwendungsmanifest definieren. Der WPC-Standardkanal kann dann importiert werden, und anwendungsdefinierte Ereignisse können dann protokolliert werden.
 
-### <a name="logging-rights"></a>Protokollierungs Rechte
+### <a name="logging-rights"></a>Protokollierungsrechte
 
-Der WPC-Protokollierungs Kanal wird von der [*Zugriffs Steuerungs Liste (Access Control List*](/windows/desktop/SecGloss/a-gly) , ACL) gesteuert, um nur Administratoren vollständigen Zugriff zu gewähren. Nicht-Administrator Konten können auf den Kanal schreiben, haben aber keinen Lese-oder Lösch Zugriff. Der Zugriff auf den Kanal erfolgt mithilfe der ETW-API.
+Der WPC-Protokollierungskanal wird über die [*Zugriffssteuerungsliste*](/windows/desktop/SecGloss/a-gly) (Access Control List, ACL) gesteuert, um nur Administratoren Vollzugriff zu bieten. Konten ohne Administratorrechte schreiben möglicherweise in den Kanal, haben aber keinen Lese- oder Löschzugriff. Der Zugriff auf den Kanal wird über die ETW-API ermöglicht.
 
-### <a name="parental-controls-logging-provider-details"></a>Details zur Protokollierung des Eltern Steuer Elements
+### <a name="parental-controls-logging-provider-details"></a>Details des Protokollierungsanbieters für Die Jugendschutzkontrollen
 
-Der WPC-Anbieter hat den Namen "Microsoft.com/Windows/parentalcontrols" mit der GUID {01090065-B467-4503-9b28-533766761087}. Der standardmäßige lokale Protokollierungs Kanal ist Microsoft.com/Windows/parentalcontrols/LocalEvents.
+Der WPC-Anbieter heißt Microsoft.com/Windows/ParentalControls mit GUID {01090065-B467-4503-9B28-533766761087}. Der lokale Standardprotokollierungskanal ist Microsoft.com/Windows/ParentalControls/LocalEvents.
 
-Protokolldateien werden im Ordner "Windows \\ system32 \\ WPC \\ Logs" gespeichert.
+Protokolldateien werden im Windows \\ System32 \\ \\ Wpc-Protokollordner gespeichert.
 
-### <a name="notification-of-impending-time-limits-logout"></a>Benachrichtigung über bevorstehende Zeit Limits bei der Abmeldung
+### <a name="notification-of-impending-time-limits-logout"></a>Benachrichtigung über bevorstehende Abmeldung von Zeitlimits
 
-Das Jugend Steuerungssystem gibt ein Warn Ereignis innerhalb von 15 Minuten und erneut in 1 Minute vor der Abmeldung eines kontrollierten Benutzers auf der Grundlage von Zeitbeschränkungen aus. Anwendungen können diese Ereignisse abonnieren, insbesondere dann, wenn Sie im Vollbildmodus von DirectX ausgeführt werden, in dem keine standardmäßigen Windows-Benachrichtigungen angezeigt werden. Der Beispielcode zeigt, wie Sie die-Ereignisse abonnieren, eine Rückruffunktion registrieren und die-Ereignisse empfangen.
+Das System für die Jugendkontrolle gibt ein Warnereignis nach 15 Minuten und erneut um 1 Minute vor der Abmelde eines kontrollierten Benutzers basierend auf Zeitbeschränkungen aus. Anwendungen können diese Ereignisse abonnieren, insbesondere wenn sie im DirectX-Vollbildmodus ausgeführt werden, in dem Windows Standardbenachrichtigungen nicht angezeigt werden. Beispielcode wird bereitgestellt, der zeigt, wie die Ereignisse abonniert, eine Rückruffunktion registriert und die Ereignisse empfangen werden.
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
 <dl> <dt>
 
-[Übersicht über die Erweiterbarkeits Features für Eltern Steuerelemente](parental-controls-extensibility-features-overview.md)
+[Übersicht über Erweiterbarkeitsfunktionen für Jugendschutz](parental-controls-extensibility-features-overview.md)
 </dt> <dt>
 
-[**Ereignis \_ Daten \_ Deskriptor**](/windows/desktop/api/evntprov/ns-evntprov-event_data_descriptor)
+[**\_ \_ EREIGNISDATENDESKRIPTOR**](/windows/desktop/api/evntprov/ns-evntprov-event_data_descriptor)
 </dt> <dt>
 
 [**EventDataDescCreate**](/windows/desktop/api/evntprov/nf-evntprov-eventdatadesccreate)
 </dt> <dt>
 
-[**WPC \_ args \_ Conversation ationinitevent**](/windows/win32/api/wpcevent/ne-wpcevent-wpc_args_conversationinitevent)
+[**WPC \_ ARGS \_ CONVERSATIONINITEVENT**](/windows/win32/api/wpcevent/ne-wpcevent-wpc_args_conversationinitevent)
 </dt> </dl>
 
  

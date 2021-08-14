@@ -1,9 +1,9 @@
 ---
-title: ID3D12CommandQueueDownlevel::P Resent-Methode
-description: Kopiert Inhalt aus einer Direct3D 12 Texture2D-Ressource in ein-Fenster. | ID3D12CommandQueueDownlevel::P Resent-Methode
+title: ID3D12CommandQueueDownlevel::P resent-Methode
+description: Kopiert Inhalte aus einer Direct3D 12 Texture2D-Ressource in ein Fenster. | ID3D12CommandQueueDownlevel::P resent-Methode
 keywords:
 - Present-Methode
-- Present-Methode, ID3D12CommandQueueDownlevel-Schnittstelle
+- Aktuelle Methode, ID3D12CommandQueueDownlevel-Schnittstelle
 - ID3D12CommandQueueDownlevel-Schnittstelle, Present-Methode
 topic_type:
 - apiref
@@ -16,16 +16,16 @@ api_type:
 ms.localizationpriority: low
 ms.topic: reference
 ms.date: 08/29/2019
-ms.openlocfilehash: a6c74685911e52a671eaeb02645754a45b8d647e
-ms.sourcegitcommit: 14010c34b35fa268046c7683f021f86de08ddd0a
+ms.openlocfilehash: b21a97d15d2666dcfe0a304f2393d6d14c5dbcc4142d8b42f43f295d8751614b
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "106350706"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118529130"
 ---
-# <a name="id3d12commandqueuedownlevelpresent-method"></a>ID3D12CommandQueueDownlevel::P Resent-Methode
+# <a name="id3d12commandqueuedownlevelpresent-method"></a>ID3D12CommandQueueDownlevel::P resent-Methode
 
-Kopiert Inhalt aus einer Direct3D 12 Texture2D-Ressource in ein-Fenster.
+Kopiert Inhalte aus einer Direct3D 12 Texture2D-Ressource in ein Fenster.
 
 ## <a name="syntax"></a>Syntax
 
@@ -44,13 +44,13 @@ HRESULT Present
 
 Typ: **[ID3D12GraphicsCommandList](/windows/win32/api/d3d12/nn-d3d12-id3d12graphicscommandlist)\***
 
-Eine geöffnete Befehlsliste, in der Direct3D 12 einen aktuellen Befehl in die Warteschlange einreiht und dann geschlossen und für Sie übermittelt wird.
+Eine geöffnete Befehlsliste, in die Direct3D 12 einen Present-Befehl einträgt und dann schließt und für Sie übermittelt.
 
 `pSourceTex2D`
 
 Typ: **[ID3D12Resource](/windows/win32/api/d3d12/nn-d3d12-id3d12resource)\***
 
-Eine Ressource mit den gewünschten Inhalten, die angezeigt werden sollen, mit Dimensions [**D3D12 \_ Resource \_ Dimension \_ TEXTURE2D**](/windows/win32/api/d3d12/ne-d3d12-d3d12_resource_dimension)und einem Format, das einer der folgenden ist.
+Eine Ressource, die den gewünschten Anzuzeigenden Inhalt mit der Dimension [**D3D12 \_ RESOURCE \_ DIMENSION \_ TEXTURE2D**](/windows/win32/api/d3d12/ne-d3d12-d3d12_resource_dimension)und einem der folgenden Formate enthält.
 
 * DXGI_FORMAT_R16G16B16A16_FLOAT
 * DXGI_FORMAT_R10G10B10A2_UNORM
@@ -69,23 +69,23 @@ Das Handle für das Fenster, in dem der Inhalt angezeigt werden soll.
 
 `Flags`
 
-Type: **[D3D12 \_ Downlevel \_ Present \_ Flags](d3d12_downlevel_present_flags.md)**
+Typ: **[D3D12 \_ DOWNLEVEL \_ PRESENT \_ FLAGS](d3d12_downlevel_present_flags.md)**
 
-Flags zum Ändern des **aktuellen** Vorgangs.
+Flags zum Ändern des **Present-Vorgangs.**
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt bei Erfolg **S_OK** oder andernfalls ein fehlerhaftes HRESULT zurück.
+Gibt **S_OK** bei Erfolg oder einem fehlerhaften HRESULT zurück.
 
 ## <a name="requirements"></a>Anforderungen
 
 | Anforderung | Wert |
 |--------|------------------|
-| Header | d3d12downlevel. h |
+| Header | d3d12downlevel.h |
 | DLL    | D3D12.dll (nur Windows 7) |
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen:
 * [ID3D12CommandQueueDownlevel](id3d12commandqueuedownlevel.md)
 * [Direct3D 12 auf Windows 7-Schnittstellen](direct3d-12on7-interfaces.md)
-* [Referenz zu Direct3D 12 auf Windows 7 (d3d12downlevel. h)](direct3d-12on7-reference.md)
+* [Referenz zu Direct3D 12 Windows 7 (d3d12downlevel.h)](direct3d-12on7-reference.md)
 * [Direct3D 12 unter Windows 7](https://devblogs.microsoft.com/directx/porting-directx-12-games-to-windows-7/)

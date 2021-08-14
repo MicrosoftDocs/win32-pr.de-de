@@ -1,10 +1,10 @@
 ---
-title: MPCALLBACK_TYPE-Enumeration (mpclient. h)
-description: Mögliche Rückruf Typen.
+title: MPCALLBACK_TYPE -Enumeration (MpClient.h)
+description: Mögliche Rückruftypen.
 ms.assetid: 8E4F50B7-0F02-434D-B91E-C9966C92CDC0
 keywords:
-- MPCALLBACK_TYPE-Enumerationsfunktionen der Legacy-Windows-Umgebung
-- PMPCALLBACK_TYPE enumerationszeiger Legacy-Windows-Umgebungs Features
+- MPCALLBACK_TYPE enumeration Legacy Windows Environment Features
+- PMPCALLBACK_TYPE-Enumerationszeiger Legacy Windows Umgebungsfeatures
 topic_type:
 - apiref
 api_name:
@@ -15,16 +15,16 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 1a3fd310f3733d36dd92ace1c7a5286bcf73a75f
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 35c1d6e92acc7c789b5f6d85184ba74970e12bedcc5cd412fc378b8c8dfeb066
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104476122"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117883554"
 ---
-# <a name="mpcallback_type-enumeration"></a>Mpcallback- \_ Typenumeration
+# <a name="mpcallback_type-enumeration"></a>MPCALLBACK \_ TYPE-Enumeration
 
-Mögliche Rückruf Typen.
+Mögliche Rückruftypen.
 
 ## <a name="syntax"></a>Syntax
 
@@ -57,55 +57,55 @@ typedef enum tagMPCALLBACK_TYPE {
 
 <dl> <dt>
 
-<span id="MPCALLBACK_UNKNOWN"></span><span id="mpcallback_unknown"></span>**mpcallback \_ unbekannt**
+<span id="MPCALLBACK_UNKNOWN"></span><span id="mpcallback_unknown"></span>**MPCALLBACK \_ UNKNOWN**
 </dt> <dd></dd> <dt>
 
-<span id="MPCALLBACK_STATUS"></span><span id="mpcallback_status"></span>**mpcallback- \_ Status**
+<span id="MPCALLBACK_STATUS"></span><span id="mpcallback_status"></span>**MPCALLBACK-STATUS \_**
 </dt> <dd></dd> <dt>
 
-<span id="MPCALLBACK_THREAT"></span><span id="mpcallback_threat"></span>**mpcallback- \_ Bedrohung**
+<span id="MPCALLBACK_THREAT"></span><span id="mpcallback_threat"></span>**MPCALLBACK-BEDROHUNG \_**
 </dt> <dd></dd> <dt>
 
-<span id="MPCALLBACK_SCAN"></span><span id="mpcallback_scan"></span>**mpcallback- \_ Scan**
+<span id="MPCALLBACK_SCAN"></span><span id="mpcallback_scan"></span>**MPCALLBACK-SCAN \_**
 </dt> <dd></dd> <dt>
 
-<span id="MPCALLBACK_CLEAN"></span><span id="mpcallback_clean"></span>**mpcallback \_ Bereinigen**
+<span id="MPCALLBACK_CLEAN"></span><span id="mpcallback_clean"></span>**MPCALLBACK \_ CLEAN**
 </dt> <dd></dd> <dt>
 
-<span id="MPCALLBACK_PRECHECK"></span><span id="mpcallback_precheck"></span>**mpcallback- \_ vorab Überprüfung**
+<span id="MPCALLBACK_PRECHECK"></span><span id="mpcallback_precheck"></span>**\_MPCALLBACK-VORABPRÜFUNG**
 </dt> <dd></dd> <dt>
 
-<span id="MPCALLBACK_SIGUPDATE"></span><span id="mpcallback_sigupdate"></span>**mpcallback- \_ sigupdate**
+<span id="MPCALLBACK_SIGUPDATE"></span><span id="mpcallback_sigupdate"></span>**MPCALLBACK \_ SIGUPDATE**
 </dt> <dd></dd> <dt>
 
-<span id="MPCALLBACK_SAMPLE"></span><span id="mpcallback_sample"></span>**mpcallback- \_ Beispiel**
+<span id="MPCALLBACK_SAMPLE"></span><span id="mpcallback_sample"></span>**MPCALLBACK-BEISPIEL \_**
 </dt> <dd></dd> <dt>
 
-<span id="MPCALLBACK_RESERVED"></span><span id="mpcallback_reserved"></span>**mpcallback \_ reserviert**
+<span id="MPCALLBACK_RESERVED"></span><span id="mpcallback_reserved"></span>**MPCALLBACK \_ RESERVIERT**
 </dt> <dd></dd> <dt>
 
-<span id="MPCALLBACK_CONFIGURATION_NOTIFICATION"></span><span id="mpcallback_configuration_notification"></span>**mpcallback- \_ Konfigurations \_ Benachrichtigung**
+<span id="MPCALLBACK_CONFIGURATION_NOTIFICATION"></span><span id="mpcallback_configuration_notification"></span>**\_MPCALLBACK-KONFIGURATIONSBENACHRICHTIGUNG \_**
 </dt> <dd></dd> <dt>
 
-<span id="MPCALLBACK_FASTPATH"></span><span id="mpcallback_fastpath"></span>**mpcallback- \_ FastPath**
+<span id="MPCALLBACK_FASTPATH"></span><span id="mpcallback_fastpath"></span>**MPCALLBACK \_ FASTPATH**
 </dt> <dd></dd> <dt>
 
-<span id="MPCALLBACK_PRODUCT_EXPIRATION"></span><span id="mpcallback_product_expiration"></span>**mpcallback- \_ Produkt \_ Ablauf**
+<span id="MPCALLBACK_PRODUCT_EXPIRATION"></span><span id="mpcallback_product_expiration"></span>**\_MPCALLBACK-PRODUKTABLAUF \_**
 </dt> <dd></dd> <dt>
 
-<span id="MPCALLBACK_NIS_PRIVATE"></span><span id="mpcallback_nis_private"></span>**mpcallback \_ NIS \_ private**
+<span id="MPCALLBACK_NIS_PRIVATE"></span><span id="mpcallback_nis_private"></span>**MPCALLBACK \_ NIS \_ PRIVAT**
 </dt> <dd></dd> <dt>
 
-<span id="MPCALLBACK_HEALTH"></span><span id="mpcallback_health"></span>**mpcallback \_ -Integrität**
+<span id="MPCALLBACK_HEALTH"></span><span id="mpcallback_health"></span>**MPCALLBACK-INTEGRITÄT \_**
 </dt> <dd></dd> <dt>
 
-<span id="MPCALLBACK_ENDOFLIFE"></span><span id="mpcallback_endoflife"></span>**mpcallback- \_ EndOf**
+<span id="MPCALLBACK_ENDOFLIFE"></span><span id="mpcallback_endoflife"></span>**MPCALLBACK \_ ENDOFLIFE**
 </dt> <dd></dd> <dt>
 
-<span id="MPCALLBACK_MALWARETOAST"></span><span id="mpcallback_malwaretoast"></span>**mpcallback- \_ Malware Toast**
+<span id="MPCALLBACK_MALWARETOAST"></span><span id="mpcallback_malwaretoast"></span>**\_MPCALLBACK-SCHADSOFTWARETOAST**
 </dt> <dd></dd> <dt>
 
-<span id="MPCALLBACK_MAXVALUE"></span><span id="mpcallback_maxvalue"></span>**mpcallback- \_ MaxValue**
+<span id="MPCALLBACK_MAXVALUE"></span><span id="mpcallback_maxvalue"></span>**MPCALLBACK \_ MAXVALUE**
 </dt> <dd></dd> </dl>
 
 ## <a name="requirements"></a>Anforderungen
@@ -114,9 +114,9 @@ typedef enum tagMPCALLBACK_TYPE {
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows 8 \[ -Desktop-Apps\]<br/>                                            |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2012 \[ -Desktop-Apps\]<br/>                                  |
-| Header<br/>                   | <dl> <dt>Mpclient. h</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | \[Windows 8 Nur Desktop-Apps\]<br/>                                            |
+| Unterstützte Mindestversion (Server)<br/> | \[Windows Server 2012 Nur Desktop-Apps\]<br/>                                  |
+| Header<br/>                   | <dl> <dt>MpClient.h</dt> </dl> |
 
 
 

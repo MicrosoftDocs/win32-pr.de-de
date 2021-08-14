@@ -1,7 +1,7 @@
 ---
-description: Die findmediafile-Methode sucht nach einer Datei und ruft, wenn erfolgreich, den Pfad zur Datei ab.
+description: Die FindMediaFile-Methode sucht nach einer Datei und ruft bei Erfolg den Pfad zur Datei ab.
 ms.assetid: ddfa2c75-e51f-4aad-afe6-8a60c46e8d35
-title: 'Imedialocator:: findmediafile-Methode (qedit. h)'
+title: IMediaLocator::FindMediaFile-Methode (Qedit.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -14,21 +14,21 @@ api_type:
 api_location:
 - strmiids.lib
 - strmiids.dll
-ms.openlocfilehash: 3561b77873c90b2d4bd0202bed8e2da822a0362f
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: cc1acda4a3bc6e2d93ae8b7024ef34f759c11c5c4d487a09d3be3a3542e0c445
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106369414"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117818937"
 ---
-# <a name="imedialocatorfindmediafile-method"></a>Imedialocator:: findmediafile-Methode
+# <a name="imedialocatorfindmediafile-method"></a>IMediaLocator::FindMediaFile-Methode
 
 > [!Note]  
-> \[Veraltet. Diese API kann aus zukünftigen Versionen von Windows entfernt werden.\]
+> \[Veraltet. Diese API wird möglicherweise aus zukünftigen Releases von Windows.\]
 
  
 
-Die `FindMediaFile` -Methode sucht nach einer Datei und ruft, wenn erfolgreich, den Pfad zur Datei ab.
+Die -Methode sucht nach einer Datei und ruft bei Erfolg `FindMediaFile` den Pfad zur Datei ab.
 
 ## <a name="syntax"></a>Syntax
 
@@ -51,38 +51,38 @@ HRESULT FindMediaFile(
 *Input* (Eingabe) 
 </dt> <dd>
 
-Dateiname, einschließlich des Pfads, in dem die Datei zuletzt bekannt war. Verwenden Sie für Quell Objekte in der Zeitachse den Namen des aktuellen Mediums.
+Dateiname, einschließlich Pfad, in dem sich die Datei zuletzt befindet. Verwenden Sie für Quellobjekte auf der Zeitachse den aktuellen Mediennamen.
 
 </dd> <dt>
 
-*Filter Zeichenfolge* 
+*FilterString* 
 </dt> <dd>
 
-Ein **BSTR** , das Paare von Filter Zeichenfolgen enthält, die entsprechend dem **lpstrfilter** -Member der [**OpenFileName**](/windows/win32/api/commdlg/ns-commdlg-openfilenamea) -Struktur formatiert sind. Der medienlocator verwendet diesen Filter, wenn ein Dialogfeld zum Öffnen von Dateien angezeigt wird. Der Wert kann **null** sein, wenn der *Flags* -Parameter das SFN \_ validatef-Popup Kennzeichen nicht enthält \_ .
+Ein **BSTR mit** Paaren von Filterzeichenfolgen, formatiert nach Bedarf für den **lpstrFilter-Member** der [**OPENFILENAME-Struktur.**](/windows/win32/api/commdlg/ns-commdlg-openfilenamea) Der Medienlocator verwendet diesen Filter, wenn ein Dialogfeld Datei öffnen angezeigt wird. Der Wert kann NULL **sein,** wenn *der Flags-Parameter* das SFN \_ VALIDATEF \_ POPUP-Flag nicht enthält.
 
 </dd> <dt>
 
-*poutput* 
+*pOutput* 
 </dt> <dd>
 
-Ein Zeiger auf eine Variable, die den eigentlichen Pfad zur Datei empfängt, wenn Sie sich von dem in der *Eingabe* enthaltenen Wert unterscheidet und die Methode die Datei erfolgreich findet.
+Zeiger auf eine Variable, die den tatsächlichen Pfad zur Datei empfängt, wenn sie sich vom Wert in *Input* unterscheidet und die Methode die Datei erfolgreich findet.
 
 </dd> <dt>
 
 *Flags* 
 </dt> <dd>
 
-Bitweise Kombination von 0 (null) oder mehr Flags. Eine Liste möglicher Flags finden Sie unter [**Validierungsflags für Dateinamen**](file-name-validation-flags.md).
+Bitweise Kombination von null oder mehr Flags. Eine Liste der möglichen Flags finden Sie unter [**Dateinamenvalidierungsflags**](file-name-validation-flags.md).
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Wenn diese Methode erfolgreich ausgeführt wird, gibt Sie **S \_ OK** zurück. Andernfalls wird ein **HRESULT** -Fehlercode zurückgegeben.
+Wenn diese Methode erfolgreich ist, wird **S \_ OK zurückgegeben.** Andernfalls wird ein **HRESULT-Fehlercode** zurückgegeben.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Die Filter Zeichenfolge für das Dialogfeld zum Öffnen von Dateien, das durch den *filterstring* -Parameter angegeben wird, enthält interne NULL-Zeichen. Video \\ 0 \* . avi \\ 0 \\ 0 ist beispielsweise eine gültige Filter Zeichenfolge. Sie können den BSTR nicht mithilfe der **sysallocstr** -Funktion zuordnen, da diese Funktion eine NULL-terminierte Zeichenfolge erwartet und die Zeichenfolge beim ersten NULL-Zeichen abschneidet. Verwenden Sie daher eine Funktion wie z. b. " **SysAllocStringLen**", die einen expliziten Parameter für die Länge enthält:
+Die Filterzeichenfolge für das Dialogfeld Datei öffnen, das durch den *FilterString-Parameter* angegeben wird, enthält interne NULL-Zeichen. Beispielsweise ist Video \\ 0 \*.avi\\ 0 \\ 0 eine gültige Filterzeichenfolge. Sie können die **SysAllocStr-Funktion** nicht zum Zuordnen des BSTR verwenden, da diese Funktion eine auf NULL terminierte Zeichenfolge erwartet und die Zeichenfolge beim ersten NULL-Zeichen abschneiden wird. Verwenden Sie daher eine Funktion wie **SysAllocStringLen,** die einen expliziten Parameter für die Länge enthält:
 
 
 ```C++
@@ -92,17 +92,17 @@ BSTR filter = SysAllocStringLen(L"Video\0*.avi\0", 12);
 
 
 
-Wenn der Benutzer das Dialogfeld zum Öffnen von Dateien abbricht, gibt die Methode E \_ Fail zurück.
+Wenn der Benutzer das Dialogfeld Datei öffnen abbricht, gibt die Methode E \_ FAIL zurück.
 
-Die-Methode ordnet Speicher für **BSTR** in *poutput* zu. Die Anwendung muss **SysFreeString** aufzurufen, um den Arbeitsspeicher freizugeben.
+Die -Methode weist Speicher für den **BSTR** in *pOutput zu.* Die Anwendung muss **SysFreeString aufrufen,** um den Arbeitsspeicher frei zu machen.
 
 > [!Note]  
-> Die Header Datei "qedit. h" ist nicht mit Direct3D-Headern nach Version 7 kompatibel.
+> Die Headerdatei Qedit.h ist nicht mit Direct3D-Headern nach Version 7 kompatibel.
 
  
 
 > [!Note]  
-> Zum Abrufen von "qedit. h" Laden Sie das [Microsoft Windows SDK Update für Windows Vista und .NET Framework 3,0](https://msdn.microsoft.com/windowsvista/bb980924.aspx)herunter. "Qedit. h" ist im Microsoft Windows SDK für Windows 7 und .NET Framework 3,5 Service Pack 1 nicht verfügbar.
+> Um Qedit.h zu erhalten, laden Sie das [Microsoft Windows SDK-Update für Windows Vista und .NET Framework 3.0 herunter.](https://msdn.microsoft.com/windowsvista/bb980924.aspx) Qedit.h ist im Microsoft Windows SDK für Windows 7 und .NET Framework 3.5 Service Pack 1 nicht verfügbar.
 
  
 
@@ -112,19 +112,19 @@ Die-Methode ordnet Speicher für **BSTR** in *poutput* zu. Die Anwendung muss **
 
 | Anforderung | Wert |
 |--------------------|-----------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>"Qedit. h"</dt> </dl>      |
-| Bibliothek<br/> | <dl> <dt>"" "" ". Lib"</dt> </dl> |
+| Header<br/>  | <dl> <dt>Qedit.h</dt> </dl>      |
+| Bibliothek<br/> | <dl> <dt>Strmiids.lib</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Imedialocator-Schnittstelle**](imedialocator.md)
+[**IMediaLocator-Schnittstelle**](imedialocator.md)
 </dt> <dt>
 
-[Fehler-und Erfolgs Codes](error-and-success-codes.md)
+[Fehler- und Erfolgscodes](error-and-success-codes.md)
 </dt> </dl>
 
  

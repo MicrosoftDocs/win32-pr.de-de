@@ -1,34 +1,34 @@
 ---
-description: Dieses Ereignis benachrichtigt das Installationsprogramm, ein modales Dialogfeld zu entfernen. In jedem Fall entfernt das Installationsprogramm das vorhandene Dialogfeld.
+description: Dieses Ereignis benachrichtigt das Installationsprogramm, ein modales Dialogfeld zu entfernen. In allen Fällen entfernt das Installationsprogramm das aktuelle Dialogfeld.
 ms.assetid: 74a28696-6387-4d62-8955-4708ba5872bb
-title: EndDialog-ControlEvent
+title: EndDialog ControlEvent
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: f08449bffe29093e32066e92e1b8fc739efa02d7
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: f0f6e61ab12f072e31d6e4efc5f3d2b27ef8629c933baad65fb101b1078ca1f0
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "104216374"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118378252"
 ---
-# <a name="enddialog-controlevent"></a>EndDialog-ControlEvent
+# <a name="enddialog-controlevent"></a>EndDialog ControlEvent
 
-Dieses Ereignis benachrichtigt das Installationsprogramm, ein modales Dialogfeld zu entfernen. In jedem Fall entfernt das Installationsprogramm das vorhandene Dialogfeld.
+Dieses Ereignis benachrichtigt das Installationsprogramm, ein modales Dialogfeld zu entfernen. In allen Fällen entfernt das Installationsprogramm das aktuelle Dialogfeld.
 
-Dieses Ereignis kann von einem [PUSHBUTTON-Steuer](pushbutton-control.md)Element oder einem [SelectionTree-Steuer](selectiontree-control.md)Element veröffentlicht werden. Dieses Ereignis sollte in der [Tabelle ControlEvent](controlevent-table.md)erstellt werden.
+Dieses Ereignis kann von einem [PushButton-Steuerelement](pushbutton-control.md)oder einem [SelectionTree-Steuerelement veröffentlicht werden.](selectiontree-control.md) Dieses Ereignis sollte in der [ControlEvent-Tabelle verfasst werden.](controlevent-table.md)
 
-Diese ControlEvent erfordert, dass die Benutzeroberfläche auf der [*vollständigen*](f-gly.md) Benutzeroberfläche ausgeführt wird. Dieses Ereignis funktioniert nicht mit einer [*reduzierten Benutzer*](r-gly.md) Oberfläche oder [*grundlegender Benutzeroberfläche*](b-gly.md). Weitere Informationen finden Sie unter [Benutzeroberflächen Ebenen](user-interface-levels.md).
+Für dieses ControlEvent muss die Benutzeroberfläche auf der vollständigen [*Benutzeroberflächenebene ausgeführt*](f-gly.md) werden. Dieses Ereignis funktioniert nicht mit einer reduzierten [*Benutzeroberfläche oder*](r-gly.md) einer [*einfachen Benutzeroberfläche.*](b-gly.md) Weitere Informationen finden Sie unter [Benutzeroberfläche Levels](user-interface-levels.md).
 
-In der folgenden Tabelle wird die Aktion des-Ereignisses aufgelistet, das sich aus verschiedenen in der [ControlEvent-Tabelle](controlevent-table.md)eingegebenen Argumenten ergibt.
+In der folgenden Tabelle ist die Aktion des Ereignisses aufgeführt, das sich aus verschiedenen Argumenten ergibt, die in die [ControlEvent-Tabelle eingegeben wurden.](controlevent-table.md)
 
 
 
 | Argument | Aktion durch das Installationsprogramm                                                                                                                                                             |
 |----------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Beenden     | Die Assistenten Sequenz ist geschlossen, und das Steuerelement wird mit dem Userexit-Wert an das Installationsprogramm zurückgegeben. Dieses Argument kann nicht in einem Dialogfeld verwendet werden, das einem anderen Dialogfeld untergeordnet ist. |
-| Erneut versuchen    | Die Assistenten Sequenz ist geschlossen, und das Steuerelement wird mit dem Suspend-Wert an das Installationsprogramm zurückgegeben. Dieses Argument kann nicht in einem Dialogfeld verwendet werden, das einem anderen Dialogfeld untergeordnet ist.  |
-| Ignorieren   | Die Assistenten Sequenz ist geschlossen, und das Steuerelement wird mit dem fertigen Wert an das Installationsprogramm zurückgegeben. Dieses Argument kann nicht in einem Dialogfeld verwendet werden, das einem anderen Dialogfeld untergeordnet ist. |
-| Rückgabewert   | Das Steuerelement wird an das übergeordnete Element des aktuellen Dialog Felds zurückgegeben, oder, wenn kein übergeordnetes Element vorhanden ist, wird das Steuerelement mit dem Wert Erfolg an das Installationsprogramm zurückgegeben                                 |
+| Beenden     | Die Assistentensequenz wird geschlossen, und das Steuerelement kehrt mit dem Wert UserExit zum Installationsprogramm zurück. Dieses Argument kann nicht in einem Dialogfeld verwendet werden, das ein untergeordnetes Dialogfeld eines anderen Dialogfelds ist. |
+| Erneut versuchen    | Die Assistentensequenz wird geschlossen, und das Steuerelement kehrt mit dem Suspend-Wert zum Installationsprogramm zurück. Dieses Argument kann nicht in einem Dialogfeld verwendet werden, das ein untergeordnetes Dialogfeld eines anderen Dialogfelds ist.  |
+| Ignorieren   | Die Assistentensequenz wird geschlossen, und das Steuerelement kehrt mit dem Wert Finished zum Installationsprogramm zurück. Dieses Argument kann nicht in einem Dialogfeld verwendet werden, das ein untergeordnetes Dialogfeld eines anderen Dialogfelds ist. |
+| Rückgabewert   | Das Steuerelement kehrt zum übergeordneten Element des aktuellen Dialogfelds zurück, oder wenn kein übergeordnetes Element vorhanden ist, kehrt das Steuerelement mit dem Wert Success zum Installationsprogramm zurück.                                 |
 
 
 
@@ -36,13 +36,13 @@ In der folgenden Tabelle wird die Aktion des-Ereignisses aufgelistet, das sich a
 
 ## <a name="published-by"></a>Veröffentlicht von
 
-Diese ControlEvent wird vom Installationsprogramm veröffentlicht.
+Dieses ControlEvent wird vom Installationsprogramm veröffentlicht.
 
 ## <a name="argument"></a>Argument
 
-In regulären Dialogfeldern kann die Argument-Spalte der [ControlEvent-Tabelle](controlevent-table.md) "Return", "Exit", "Retry" oder "Ignore" lauten.
+In regulären Dialogfeldern kann die Argument -Spalte der [ControlEvent-Tabelle](controlevent-table.md) "Return", "Exit", "Retry" oder "Ignore" sein.
 
-Im Dialogfeld Fehler kann die Argument-Spalte der [ControlEvent-Tabelle](controlevent-table.md) "errorok", "errorcancel", "errorabort", "errorretry", "errorignore", "erroryes" oder "errorno" lauten.
+In Fehlerdialogfeldern kann die Argument -Spalte der [ControlEvent-Tabelle](controlevent-table.md) "ErrorOk", "ErrorCancel", "ErrorAbort", "ErrorRetry", "ErrorIgnore", "ErrorYes" oder "ErrorNo" sein.
 
 ## <a name="action-on-subscribers"></a>Aktion auf Abonnenten
 
@@ -50,7 +50,7 @@ Keine.
 
 ## <a name="typical-use"></a>Typische Verwendung
 
-Ein [PUSHBUTTON](pushbutton-control.md) -Steuerelement in einem modalen Dialogfeld ist an dieses Ereignis in der Tabelle [ControlEvent](controlevent-table.md) gebunden, um ein Dialogfeld zu schließen.
+Ein [PushButton-Steuerelement](pushbutton-control.md) in einem modalen Dialogfeld ist an dieses Ereignis in der [ControlEvent-Tabelle](controlevent-table.md) gebunden, um ein Dialogfeld zu schließen.
 
  
 

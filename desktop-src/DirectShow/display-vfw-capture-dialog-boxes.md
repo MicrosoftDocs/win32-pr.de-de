@@ -1,17 +1,17 @@
 ---
-description: Dialog Felder zur VFW-Erfassung anzeigen
+description: Anzeigen von VFW-Erfassungsdialogfeldern
 ms.assetid: 708212ca-d148-4079-8052-3bf6696a33ab
-title: Dialog Felder zur VFW-Erfassung anzeigen
+title: Anzeigen von VFW-Erfassungsdialogfeldern
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 45b8b51b164630a8fa6e91b2e68ca8a9a3a875b6
-ms.sourcegitcommit: a47bd86f517de76374e4fff33cfeb613eb259a7e
+ms.openlocfilehash: 2713cc4d2eba52626c66974eed23f2c1752a1268fea78a30ca2bc9d7babc3a27
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/06/2021
-ms.locfileid: "103745649"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117821138"
 ---
-# <a name="display-vfw-capture-dialog-boxes"></a>Dialog Felder zur VFW-Erfassung anzeigen
+# <a name="display-vfw-capture-dialog-boxes"></a>Anzeigen von VFW-Erfassungsdialogfeldern
 
 Ein Erfassungsgerät, das weiterhin einen VFW-Treiber (Video for Windows) verwendet, kann eines der folgenden drei Dialogfelder unterstützen, die zum Konfigurieren des Geräts verwendet werden.
 
@@ -19,23 +19,23 @@ Ein Erfassungsgerät, das weiterhin einen VFW-Treiber (Video for Windows) verwen
 
 | Dialogfeld    | BESCHREIBUNG                                                                                           |
 |---------------|-------------------------------------------------------------------------------------------------------|
-| Video Quelle  | Wird verwendet, um die Videoeingabe auszuwählen und Geräteeinstellungen wie Bildhelligkeit oder Kontrast anzupassen. |
-| Video Format  | Wird verwendet, um die Bild Dimensionen und die Bittiefe auszuwählen.                                                    |
-| Video Anzeige | Wird verwendet, um die Darstellung des gerenderten Videos zu steuern.                                                 |
+| Videoquelle  | Wird verwendet, um die Videoeingabe auszuwählen und Geräteeinstellungen wie Helligkeit oder Kontrast des Bilds anzupassen. |
+| Videoformat  | Wird verwendet, um die Bilddimensionen und die Bittiefe auszuwählen.                                                    |
+| Videoanzeige | Wird verwendet, um die Darstellung des gerenderten Videos zu steuern.                                                 |
 
 
 
  
 
-Gehen Sie folgendermaßen vor, um eines dieser Dialogfelder anzuzeigen:
+Gehen Sie wie folgt vor, um eines dieser Dialogfelder anzuzeigen:
 
-1.  Stoppt das Filter Diagramm.
-2.  Fragen Sie den Erfassungs Filter nach der [**iamvfwcapturedialogs**](/windows/desktop/api/Strmif/nn-strmif-iamvfwcapturedialogs) -Schnittstelle ab. Wenn **QueryInterface** erfolgreich ist, bedeutet dies, dass das Erfassungsgerät ein VFW-Gerät ist.
-3.  Aufrufen von [**iamvfwcapturedialoge:: hasdialog**](/windows/desktop/api/Strmif/nf-strmif-iamvfwcapturedialogs-hasdialog) zum Überprüfen, ob der Treiber das Dialogfeld unterstützt, das Sie anzeigen möchten. Die [**vfwcapturedialogs**](/windows/desktop/api/strmif/ne-strmif-vfwcapturedialogs) -Enumeration definiert Flags für jedes der Vfw-Dialogfelder. **Hasdialog** gibt S \_ OK zurück, wenn das Dialogfeld unterstützt wird. Andernfalls wird ' false ' zurückgegeben \_ . Überprüfen Sie, ob der Wert ' ' \_ OK ist, anstatt das Makro ' **erfolgreich** ' zu verwenden.
-4.  Wenn das Dialogfeld unterstützt wird, müssen Sie [**iamvfwcapturedialoge:: ShowDialog**](/windows/desktop/api/Strmif/nf-strmif-iamvfwcapturedialogs-showdialog) aufrufen, um das Dialogfeld anzuzeigen.
+1.  Beenden Sie das Filterdiagramm.
+2.  Fragen Sie den Erfassungsfilter für die [**IAMVfwCaptureDialogs-Schnittstelle**](/windows/desktop/api/Strmif/nn-strmif-iamvfwcapturedialogs) ab. Wenn **QueryInterface erfolgreich** ausgeführt wird, bedeutet dies, dass das Erfassungsgerät ein VFW-Gerät ist.
+3.  Rufen [**Sie IAMVfwCaptureDialogs::HasDialog**](/windows/desktop/api/Strmif/nf-strmif-iamvfwcapturedialogs-hasdialog) auf, um zu überprüfen, ob der Treiber das Dialogfeld unterstützt, das Sie anzeigen möchten. Die [**VfwCaptureDialogs-Enumeration**](/windows/desktop/api/strmif/ne-strmif-vfwcapturedialogs) definiert Flags für jedes der VFW-Dialogfelder. **HasDialog gibt** S \_ OK zurück, wenn das Dialogfeld unterstützt wird. Andernfalls wird S FALSE zurückgegeben. Überprüfen Sie daher direkt auf den Wert \_ S \_ OK, anstatt das **SUCCEEDED-Makro zu** verwenden.
+4.  Wenn das Dialogfeld unterstützt wird, rufen Sie [**IAMVfwCaptureDialogs::ShowDialog**](/windows/desktop/api/Strmif/nf-strmif-iamvfwcapturedialogs-showdialog) auf, um das Dialogfeld anzuzeigen.
 5.  Starten Sie das Diagramm neu.
 
-Der folgende Code zeigt die folgenden Schritte für das Dialogfeld Video Quelle:
+Der folgende Code zeigt diese Schritte für das Dialogfeld Videoquelle:
 
 
 ```C++
@@ -62,7 +62,7 @@ pControl->Run();
 
 <dl> <dt>
 
-[Konfigurieren eines Video Erfassungs Geräts](configuring-a-video-capture-device.md)
+[Konfigurieren eines Videoaufnahmegeräts](configuring-a-video-capture-device.md)
 </dt> </dl>
 
  

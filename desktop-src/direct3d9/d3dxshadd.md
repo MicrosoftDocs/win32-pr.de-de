@@ -1,5 +1,5 @@
 ---
-description: 'D3DXSHAdd-Funktion (D3dx9math.h) – Fügt zwei SH-Vektoren (PhericalIcalIcal, Pherical- Enzyprischen) hinzu; anders ausgedrückt: pOut \[ i \] = pA i + \[ \] pB i \[ \] .'
+description: 'D3DXSHAdd-Funktion (D3dx9math.h) – Fügt zwei SH-Vektoren (Spherical Vector) hinzu. mit anderen Worten: pOut \[ i \] = pA i + \[ \] pB i \[ \] .'
 ms.assetid: 12775c90-ed9d-4931-a449-2571816dd079
 title: D3DXSHAdd-Funktion (D3dx9math.h)
 ms.topic: reference
@@ -14,16 +14,16 @@ api_type:
 api_location:
 - d3dx9.lib
 - d3dx9.dll
-ms.openlocfilehash: 7333d1803b9f7ea7b056ff78ffd053bd6086184b
-ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
+ms.openlocfilehash: bc61777ecd44fa1d48bb2b105f856ab13f62efdf8dd33c7e64c84afa12c6e88e
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2021
-ms.locfileid: "108117958"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118524223"
 ---
 # <a name="d3dxshadd-function-d3dx9mathh"></a>D3DXSHAdd-Funktion (D3dx9math.h)
 
-Fügt zwei SH-Vektoren (PhericalIcal) hinzu. anders ausgedrückt: pOut \[ i \] = pA i + \[ \] pB i \[ \] .
+Fügt zwei SH-Vektoren (Spherical Vector) hinzu. mit anderen Worten: pOut \[ i \] = pA i + \[ \] pB i \[ \] .
 
 ## <a name="syntax"></a>Syntax
 
@@ -48,7 +48,7 @@ FLOAT* D3DXSHAdd(
 
 Typ: **[ **FLOAT**](../winprog/windows-data-types.md)\***
 
-Zeiger auf SH-Ausgabekoeffizienten. Die Auswertung generiert Order Koeffizienten. Siehe Hinweise.
+Zeiger auf SH-Ausgabekoeffizienten. Die Auswertung generiert Order²-Koeffizienten. Siehe Hinweise.
 
 </dd> <dt>
 
@@ -57,7 +57,7 @@ Zeiger auf SH-Ausgabekoeffizienten. Die Auswertung generiert Order Koeffizienten
 
 Typ: **[ **UINT**](../winprog/windows-data-types.md)**
 
-Reihenfolge der SH-Auswertung. Muss im Bereich von [D3DXSH \_ MINORDER](other-d3dx-constants.md) bis D3DXSH \_ MAXORDER (einschließlich) liegen. Die Auswertung generiert Order Koeffizienten. Der Grad der Auswertung ist Order - 1.
+Reihenfolge der SH-Auswertung. Muss im Bereich von [D3DXSH \_ MINORDER](other-d3dx-constants.md) bis D3DXSH \_ MAXORDER (einschließlich) liegen. Die Auswertung generiert Order²-Koeffizienten. Der Grad der Auswertung ist "Order - 1".
 
 </dd> <dt>
 
@@ -85,7 +85,7 @@ Typ: **[ **FLOAT**](../winprog/windows-data-types.md)\***
 
 Zeiger auf SH-Ausgabekoeffizienten.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
 Jeder Koeffizient der Basisfunktion "Ylm" wird an der Speicherposition ljs + m + l gespeichert, wobei Folgendes gilt:
 
@@ -96,7 +96,7 @@ Jeder Koeffizient der Basisfunktion "Ylm" wird an der Speicherposition ljs + m +
 
 
 
-| Anforderungen | Wert |
+| Anforderung | Wert |
 |--------------------|----------------------------------------------------------------------------------------|
 | Header<br/>  | <dl> <dt>D3dx9math.h</dt> </dl> |
 | Bibliothek<br/> | <dl> <dt>D3dx9.lib</dt> </dl>   |

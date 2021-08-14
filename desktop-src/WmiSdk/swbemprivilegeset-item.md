@@ -1,8 +1,8 @@
 ---
-description: Die Item-Methode des-Objekts von "taubemprivilegeset" gibt ein-Objekt aus der-Auflistung zurück. Die Item-Methode ist die Standardmethode eines "taubemprivilegeset"-Objekts.
+description: Die Item-Methode des SWbemPrivilegeSet-Objekts gibt ein SWbemPrivilege-Objekt aus der Auflistung zurück. Die Item-Methode ist die Standardmethode eines SWbemPrivilegeSet-Objekts.
 ms.assetid: 93a35e65-99ee-40da-9415-4151ac635091
 ms.tgt_platform: multiple
-title: Taubemprivilegeset. Item-Methode (wbemdisp. h)
+title: SWbemPrivilegeSet.Item-Methode (Wbemdisp.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -16,18 +16,18 @@ api_type:
 - COM
 api_location:
 - Wbemdisp.dll
-ms.openlocfilehash: 7ea37ae758ec599198fc35a1fd2a4b89ff25a087
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 93180f168820acce2bf2564ef108c509713a22e68cfa16fbb8f2abeff17b5bc5
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "103863767"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118313522"
 ---
-# <a name="swbemprivilegesetitem-method"></a>Taubemprivilegeset. Item-Methode
+# <a name="swbemprivilegesetitem-method"></a>SWbemPrivilegeSet.Item-Methode
 
-Die **Item** -Methode des-Objekts von " [**taubemprivilegeset**](swbemprivilegeset.md) " [**gibt ein-**](swbemprivilege.md) Objekt aus der-Auflistung zurück. Die **Item** -Methode ist die Standardmethode eines " **taubemprivilegeset** "-Objekts.
+Die **Item-Methode** des [**SWbemPrivilegeSet-Objekts**](swbemprivilegeset.md) gibt ein [**SWbemPrivilege-Objekt**](swbemprivilege.md) aus der Auflistung zurück. Die **Item-Methode** ist die Standardmethode eines **SWbemPrivilegeSet-Objekts.**
 
-Eine Erläuterung dieser Syntax finden Sie unter [Dokument Konventionen für die Skript-API](document-conventions-for-the-scripting-api.md).
+Eine Erläuterung dieser Syntax finden Sie unter [Dokumentkonventionen für die Skripterstellungs-API.](document-conventions-for-the-scripting-api.md)
 
 ## <a name="syntax"></a>Syntax
 
@@ -44,31 +44,31 @@ objPrivilege = .Item( _
 
 <dl> <dt>
 
-*iprivilege* 
+*iPrivilege* 
 </dt> <dd>
 
-Erforderlich. Eine der WMI-Konstanten aus der [**wbemprivilegeenum**](/windows/desktop/api/Wbemdisp/ne-wbemdisp-wbemprivilegeenum) -Gruppe. Diese Konstanten sind im wesentlichen ganze Zahlen, die bestimmte Berechtigungen darstellen. Um z. b. die Berechtigung zu erhalten, mit der Sie ein Windows-System Herunterfahren können, verwenden Sie die Konstante **wbemprivilegeshutdown** oder die numerische Entsprechung 23 (0x17).
+Erforderlich. Eine der WMI-Konstanten aus der [**WbemPrivilegeEnum-Gruppe.**](/windows/desktop/api/Wbemdisp/ne-wbemdisp-wbemprivilegeenum) Diese Konstanten sind im Wesentlichen ganze Zahlen, die bestimmte Berechtigungen darstellen. Verwenden Sie beispielsweise die **Konstante wbemPrivilegeShutdown** oder die numerische Entsprechung 23 (0x17), um die Berechtigung abzurufen, mit der Sie ein Windows System herunterfahren können.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Bei erfolgreicher Ausführung wird das angeforderte " [**taubemprivilege**](swbemprivilege.md) "-Objekt zurückgegeben.
+Bei Erfolg wird das [**angeforderte SWbemPrivilege-Objekt**](swbemprivilege.md) zurückgegeben.
 
 ## <a name="error-codes"></a>Fehlercodes
 
-Nach dem Abschluss der **Item** -Methode kann das **Err** -Objekt einen der Fehlercodes in der folgenden Liste enthalten.
+Nach Abschluss der **Item-Methode** kann das **Err-Objekt** einen der Fehlercodes in der folgenden Liste enthalten.
 
 <dl> <dt>
 
-**wbemErrFailed** -2147749889 (0x80041001)
+**wbemErrFailed** – 2147749889 (0x80041001)
 </dt> <dd>
 
 Unbekannter Fehler.
 
 </dd> <dt>
 
-**wbemErrNotFound** -2147749890 (0x80041002 angezeigt)
+**wbemErrNotFound** – 2147749890 (0x80041002)
 </dt> <dd>
 
 Die angegebene Berechtigung ist nicht vorhanden.
@@ -77,7 +77,7 @@ Die angegebene Berechtigung ist nicht vorhanden.
 
 ## <a name="examples"></a>Beispiele
 
-Im folgenden VBScript-Codebeispiel wird die **Item** -Methode verwendet.
+Im folgenden VBScript-Codebeispiel wird die **Item-Methode** verwendet.
 
 
 ```VB
@@ -102,25 +102,25 @@ Next
 |-------------------------------------|-----------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows Vista<br/>                                                                |
 | Unterstützte Mindestversion (Server)<br/> | Windows Server 2008<br/>                                                          |
-| Header<br/>                   | <dl> <dt>Wbemdisp. h</dt> </dl>   |
-| Typbibliothek<br/>             | <dl> <dt>Wbemdisp. tlb</dt> </dl> |
+| Header<br/>                   | <dl> <dt>Wbemdisp.h</dt> </dl>   |
+| Typbibliothek<br/>             | <dl> <dt>Wbemdisp.tlb</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>Wbemdisp.dll</dt> </dl> |
-| CLSID<br/>                    | CLSID- \_ Swap-taubemprivilegeset<br/>                                                     |
-| IID<br/>                      | IID \_ iswbemprivilegeset<br/>                                                      |
+| CLSID<br/>                    | CLSID \_ SWbemPrivilegeSet<br/>                                                     |
+| IID<br/>                      | IID \_ ISWbemPrivilegeSet<br/>                                                      |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Swap-Privileg**](swbemprivilegeset.md)
+[**SWbemPrivilegeSet**](swbemprivilegeset.md)
 </dt> <dt>
 
 [Ausführen privilegierter Vorgänge](executing-privileged-operations.md)
 </dt> <dt>
 
-[**Austausch Berechtigung**](swbemprivilege.md)
+[**SWbemPrivilege**](swbemprivilege.md)
 </dt> </dl>
 
  

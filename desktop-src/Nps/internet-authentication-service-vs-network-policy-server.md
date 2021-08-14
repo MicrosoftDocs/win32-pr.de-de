@@ -5,12 +5,12 @@ ms.assetid: c7c6d1a3-d0c8-469e-ae1e-a848ef7fee2b
 ms.tgt_platform: multiple
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 6dd62a50021c485c7bf51cdc9caff4360e4cc863
-ms.sourcegitcommit: 6fc8a7419bd01787cf6a1c52c355a4a2d1aec471
+ms.openlocfilehash: f46e4052b2c7277f49f898a290d689928b5838c0562042c0ba8937c5daf00210
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/10/2021
-ms.locfileid: "111989425"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118362316"
 ---
 # <a name="internet-authentication-service--network-policy-server"></a>Internetauthentifizierungsdienst & Netzwerkrichtlinienserver
 
@@ -26,7 +26,7 @@ Weitere Informationen zu IAS finden Sie unter [TechNet: Internet Authentication 
 
 ## <a name="network-policy-server"></a>Netzwerkrichtlinienserver
 
-Der Netzwerkrichtlinienserver ist die Microsoft-Implementierung eines RADIUS-Servers und -Proxys und ab Windows Server 2008 auf Windows-Servern verfügbar.
+Der Netzwerkrichtlinienserver ist die Microsoft-Implementierung eines RADIUS-Servers und -Proxys und ist auf Windows-Servern ab Windows Server 2008 verfügbar.
 
 NPS unterstützt dieselben beiden API-Sätze wie IAS: API für [Netzwerkrichtlinienservererweiterungen](ias-extensions.md) und [Serverdatenobjekt-API.](server-data-objects.md)
 
@@ -41,7 +41,7 @@ Darüber hinaus enthält NPS eine Reihe neuer Features, die die IAS-Funktionen e
 </colgroup>
 <thead>
 <tr class="header">
-<th>Feature</th>
+<th>Komponente</th>
 <th>Neues für NPS</th>
 </tr>
 </thead>
@@ -86,7 +86,7 @@ NPS über NAP interoperiert mit CISCO NAC.<br/> IAS unterstützt NAP nicht.<br/>
 <td>Die NPS-Erweiterungs-DLLs werden in einem separaten Prozess als der NPS-Dienst ausgeführt. Sollte eine Erweiterungs-DLL abstürzen, wird NPS weiterhin ausgeführt, und zukünftige Anforderungen werden abgelehnt.<br/> Die DLLs der IAS-Erweiterung werden im gleichen Prozess wie der IAS-Dienst ausgeführt und können sich negativ auf den Dienst auswirken.<br/></td>
 </tr>
 <tr class="odd">
-<td>Verwaltungs Benutzeroberfläche<br/></td>
+<td>Verwaltung Benutzeroberfläche<br/></td>
 <td>Die NPS-Verwaltungskonsole (nps.msc) hat ein neues Aussehen, verbesserte Benutzerfreundlichkeit und deckt alle neuen Funktionen ab, die NPS hinzugefügt wurden.<br/> IAS verwendet die verwaltungskonsole "ias.msc".<br/></td>
 </tr>
 <tr class="even">

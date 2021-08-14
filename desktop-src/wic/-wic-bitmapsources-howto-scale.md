@@ -1,23 +1,23 @@
 ---
 description: In diesem Thema wird veranschaulicht, wie eine IWICBitmapSource mithilfe der IWICBitmapScaler-Komponente skaliert wird.
 ms.assetid: d2c65c9b-6f52-46f7-935d-0c582ca83867
-title: Skalieren einer Bitmap-Quelle
+title: Skalieren einer Bitmapquelle
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 737f72014929065bc63ec9c6021b05e38799d06e
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: d2771ed13c23fdb3d74cf9c24899bea7a355efefcb5e541ac21aff53f372ded0
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104128976"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118439690"
 ---
-# <a name="how-to-scale-a-bitmap-source"></a>Skalieren einer Bitmap-Quelle
+# <a name="how-to-scale-a-bitmap-source"></a>Skalieren einer Bitmapquelle
 
-In diesem Thema wird veranschaulicht, wie eine [**IWICBitmapSource**](/windows/desktop/api/Wincodec/nn-wincodec-iwicbitmapsource) mithilfe der [**IWICBitmapScaler**](/windows/desktop/api/Wincodec/nn-wincodec-iwicbitmapscaler) -Komponente skaliert wird.
+In diesem Thema wird veranschaulicht, wie eine [**IWICBitmapSource**](/windows/desktop/api/Wincodec/nn-wincodec-iwicbitmapsource) mithilfe der [**IWICBitmapScaler-Komponente skaliert**](/windows/desktop/api/Wincodec/nn-wincodec-iwicbitmapscaler) wird.
 
-So skalieren Sie eine Bitmap-Quelle
+So skalieren Sie eine Bitmapquelle
 
-1.  Erstellen Sie ein [**IWICImagingFactory**](/windows/desktop/api/Wincodec/nn-wincodec-iwicimagingfactory) -Objekt, um WIC-Objekte (Windows Imaging Component) zu erstellen.
+1.  Erstellen Sie ein [**IWICImagingFactory-Objekt,**](/windows/desktop/api/Wincodec/nn-wincodec-iwicimagingfactory) um Windows WIC-Objekte (Imaging Component) zu erstellen.
 
     ```C++
     // Create WIC factory
@@ -31,7 +31,7 @@ So skalieren Sie eine Bitmap-Quelle
 
     
 
-2.  Verwenden Sie die Methode "Methode" von "| [**atedecoderfromfilename**](/windows/desktop/api/Wincodec/nf-wincodec-iwicimagingfactory-createdecoderfromfilename) ", um einen [**IWICBitmapDecoder**](/windows/desktop/api/Wincodec/nn-wincodec-iwicbitmapdecoder) aus einer Bilddatei zu erstellen.
+2.  Verwenden Sie [**die CreateDecoderFromFilename-Methode,**](/windows/desktop/api/Wincodec/nf-wincodec-iwicimagingfactory-createdecoderfromfilename) um [**einen IWICBitmapDecoder**](/windows/desktop/api/Wincodec/nn-wincodec-iwicbitmapdecoder) aus einer Bilddatei zu erstellen.
 
     ```C++
     HRESULT hr = S_OK;
@@ -52,7 +52,7 @@ So skalieren Sie eine Bitmap-Quelle
 
     
 
-3.  Holen Sie sich den ersten [**IWICBitmapFrameDecode**](/windows/desktop/api/Wincodec/nn-wincodec-iwicbitmapframedecode) des Bilds.
+3.  Sie erhalten den [**ersten IWICBitmapFrameDecode**](/windows/desktop/api/Wincodec/nn-wincodec-iwicbitmapframedecode) des Bilds.
 
     ```C++
     // Retrieve the first bitmap frame.
@@ -64,9 +64,9 @@ So skalieren Sie eine Bitmap-Quelle
 
     
 
-    Das JPEG-Dateiformat unterstützt nur einen einzelnen Frame. Da es sich bei der Datei in diesem Beispiel um eine JPEG-Datei handelt, wird der erste Frame ( `0` ) verwendet. Informationen zu Bildformaten mit mehreren Frames finden [Sie unter Abrufen der Frames eines Bilds](-wic-bitmapsources-howto-retrieveimageframes.md) für den Zugriff auf die einzelnen Frames des Bilds.
+    Das JPEG-Dateiformat unterstützt nur einen einzelnen Frame. Da die Datei in diesem Beispiel eine JPEG-Datei ist, wird der erste Frame ( `0` ) verwendet. Informationen zu Bildformaten mit mehreren Frames finden Sie unter Abrufen der [Frames](-wic-bitmapsources-howto-retrieveimageframes.md) eines Bilds für den Zugriff auf die einzelnen Frames des Bilds.
 
-4.  Erstellen Sie das [**IWICBitmapScaler**](/windows/desktop/api/Wincodec/nn-wincodec-iwicbitmapscaler) -Element, das für die Bildskalierung verwendet werden soll.
+4.  Erstellen Sie [**den IWICBitmapScaler,**](/windows/desktop/api/Wincodec/nn-wincodec-iwicbitmapscaler) der für die Imageskalierung verwendet werden soll.
 
     ```C++
     // Create the scaler.
@@ -78,7 +78,7 @@ So skalieren Sie eine Bitmap-Quelle
 
     
 
-5.  Initialisieren Sie das Scaler-Objekt mit den Bilddaten des bitmapframes in der Hälfte der Größe.
+5.  Initialisieren Sie das Scaler-Objekt mit den Bilddaten des Bitmapframes auf halber Größe.
 
     ```C++
     // Initialize the scaler to half the size of the original source.
@@ -94,18 +94,18 @@ So skalieren Sie eine Bitmap-Quelle
 
     
 
-6.  Zeichnen Sie die skalierte Bitmapquelle, oder verarbeiten Sie Sie.
+6.  Zeichnen oder verarbeiten Sie die skalierte Bitmapquelle.
 
-    Die folgende Abbildung veranschaulicht die Skalierung von Skalierungen. Das ursprüngliche Bild auf der linken Seite ist 200 x 130 Pixel. Das Bild auf der rechten Seite ist das ursprüngliche Bild, das auf die Hälfte der Größe skaliert wird.
+    Die folgende Abbildung veranschaulicht die Bildverarbeitungsskalierung. Das ursprüngliche Bild auf der linken Seite ist 200 x 130 Pixel. Das Bild auf der rechten Seite ist das ursprüngliche Bild, das auf die Hälfte der Größe skaliert wird.
 
-    ![Abbildung der Skalierung eines Bilds auf eine geringere Größe](graphics/scaledregion.png)
+    ![Abbildung: Skalieren eines Bilds auf eine kleinere Größe](graphics/scaledregion.png)
 
 ## <a name="see-also"></a>Weitere Informationen
 
 [Programmierhandbuch](-wic-programming-guide.md)
 
 
-[Verweis](-wic-codec-reference.md)
+[Referenz](-wic-codec-reference.md)
 
 
 [Beispiele](-wic-samples.md)

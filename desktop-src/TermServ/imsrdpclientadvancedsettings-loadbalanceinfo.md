@@ -1,26 +1,26 @@
 ---
-title: Imsrdpclientadvancedsettings loadbalanceinfo-Eigenschaft
-description: Gibt das Lasten Ausgleichs Cookie an, das in der Verbindungs Sequenz des Remotedesktop-Sitzungshost (RD-Sitzungshost)-Server Protokolls in das X. 224-Verbindungs Anforderungspaket eingefügt wird.
+title: IMsRdpClientAdvancedSettings LoadBalanceInfo (Eigenschaft)
+description: Gibt das Lastenausgleichscookie an, das im X.224-Verbindungsanforderungspaket in der Verbindungssequenz des Remotedesktop-Sitzungshost-Servers (RD-Sitzungshost) platziert wird.
 ms.assetid: 25f12a2e-00a2-42a8-afd3-81efcd94da94
 ms.tgt_platform: multiple
 keywords:
-- Loadbalanceingefo-Eigenschaft Remotedesktopdienste
-- Loadbalanceinfo-Eigenschaft Remotedesktopdienste, imsrdpclientadvancedsettings-Schnittstelle
-- Imsrdpclientadvancedsettings-Schnittstelle Remotedesktopdienste, loadbalanceinfo-Eigenschaft
-- Loadbalanceingefo-Eigenschaft Remotedesktopdienste, IMsRdpClientAdvancedSettings2-Schnittstelle
-- IMsRdpClientAdvancedSettings2-Schnittstelle Remotedesktopdienste, loadbalanceingefo-Eigenschaft
-- Loadbalanceingefo-Eigenschaft Remotedesktopdienste, IMsRdpClientAdvancedSettings3-Schnittstelle
-- IMsRdpClientAdvancedSettings3-Schnittstelle Remotedesktopdienste, loadbalanceingefo-Eigenschaft
-- Loadbalanceingefo-Eigenschaft Remotedesktopdienste, IMsRdpClientAdvancedSettings4-Schnittstelle
-- IMsRdpClientAdvancedSettings4-Schnittstelle Remotedesktopdienste, loadbalanceingefo-Eigenschaft
-- Loadbalanceingefo-Eigenschaft Remotedesktopdienste, IMsRdpClientAdvancedSettings5-Schnittstelle
-- IMsRdpClientAdvancedSettings5-Schnittstelle Remotedesktopdienste, loadbalanceingefo-Eigenschaft
-- Loadbalanceingefo-Eigenschaft Remotedesktopdienste, IMsRdpClientAdvancedSettings6-Schnittstelle
-- IMsRdpClientAdvancedSettings6-Schnittstelle Remotedesktopdienste, loadbalanceingefo-Eigenschaft
-- Loadbalanceingefo-Eigenschaft Remotedesktopdienste, IMsRdpClientAdvancedSettings7-Schnittstelle
-- IMsRdpClientAdvancedSettings7-Schnittstelle Remotedesktopdienste, loadbalanceingefo-Eigenschaft
-- Loadbalanceingefo-Eigenschaft Remotedesktopdienste, IMsRdpClientAdvancedSettings8-Schnittstelle
-- IMsRdpClientAdvancedSettings8-Schnittstelle Remotedesktopdienste, loadbalanceingefo-Eigenschaft
+- LoadBalanceInfo-Remotedesktopdienste
+- LoadBalanceInfo-Eigenschaft Remotedesktopdienste , IMsRdpClientAdvancedSettings-Schnittstelle
+- IMsRdpClientAdvancedSettings-Schnittstelle Remotedesktopdienste , LoadBalanceInfo-Eigenschaft
+- LoadBalanceInfo-Eigenschaft Remotedesktopdienste , IMsRdpClientAdvancedSettings2-Schnittstelle
+- IMsRdpClientAdvancedSettings2-Schnittstelle Remotedesktopdienste , LoadBalanceInfo-Eigenschaft
+- LoadBalanceInfo-Eigenschaft Remotedesktopdienste , IMsRdpClientAdvancedSettings3-Schnittstelle
+- IMsRdpClientAdvancedSettings3-Schnittstelle Remotedesktopdienste , LoadBalanceInfo-Eigenschaft
+- LoadBalanceInfo-Eigenschaft Remotedesktopdienste , IMsRdpClientAdvancedSettings4-Schnittstelle
+- IMsRdpClientAdvancedSettings4-Schnittstelle Remotedesktopdienste , LoadBalanceInfo-Eigenschaft
+- LoadBalanceInfo-Remotedesktopdienste , IMsRdpClientAdvancedSettings5-Schnittstelle
+- IMsRdpClientAdvancedSettings5-Schnittstelle Remotedesktopdienste , LoadBalanceInfo-Eigenschaft
+- LoadBalanceInfo-Eigenschaft Remotedesktopdienste , IMsRdpClientAdvancedSettings6-Schnittstelle
+- IMsRdpClientAdvancedSettings6-Schnittstelle Remotedesktopdienste , LoadBalanceInfo-Eigenschaft
+- LoadBalanceInfo-Eigenschaft Remotedesktopdienste , IMsRdpClientAdvancedSettings7-Schnittstelle
+- IMsRdpClientAdvancedSettings7-Schnittstelle Remotedesktopdienste , LoadBalanceInfo-Eigenschaft
+- LoadBalanceInfo-Eigenschaft Remotedesktopdienste , IMsRdpClientAdvancedSettings8-Schnittstelle
+- IMsRdpClientAdvancedSettings8-Schnittstelle Remotedesktopdienste , LoadBalanceInfo-Eigenschaft
 topic_type:
 - apiref
 api_name:
@@ -54,16 +54,16 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: a12112eb2a18d38993e905f8d36175f1ab15f58a
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: efe7ca9b9ed68f3327779177e706ee5a943c9e6580e2b789e2b96e74ee9f0b4d
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104391737"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118353039"
 ---
-# <a name="imsrdpclientadvancedsettingsloadbalanceinfo-property"></a>Imsrdpclientadvancedsettings:: loadbalanceinfo-Eigenschaft
+# <a name="imsrdpclientadvancedsettingsloadbalanceinfo-property"></a>IMsRdpClientAdvancedSettings::LoadBalanceInfo (Eigenschaft)
 
-Gibt das Lasten Ausgleichs Cookie an, das in der Verbindungs Sequenz des Remotedesktop-Sitzungshost (RD-Sitzungshost)-Server Protokolls in das X. 224-Verbindungs Anforderungspaket eingefügt wird.
+Gibt das Lastenausgleichscookie an, das im X.224-Verbindungsanforderungspaket in der Verbindungssequenz des Remotedesktop-Sitzungshost-Servers (RD-Sitzungshost) platziert wird.
 
 Dies ist eine Eigenschaft mit Lese- und Schreibzugriff.
 
@@ -88,27 +88,27 @@ Zeiger auf das neue Cookie. Weitere Informationen finden Sie im Abschnitt "Hinwe
 
 ## <a name="error-codes"></a>Fehlercodes
 
-Gibt bei Erfolg **S \_ OK** zurück.
+Gibt **S \_ OK zurück,** wenn erfolgreich.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Die Informationen zum Lastenausgleich werden von Lasten Ausgleichs Routern verwendet, um den besten Server für den Client auszuwählen, wenn RD-Sitzungshost Serverfarmen verwendet werden. Der RD-Sitzungshost Server selbst verwendet diese Informationen nicht und verwirft ihn.
+Die Lastenausgleichsinformationen werden von Lastenausgleichsroutern verwendet, um den besten Server für den Client zu wählen, wenn Farmen von RD-Sitzungshost werden. Der RD-Sitzungshost server selbst verwendet diese Informationen nicht und verwirft sie.
 
-Das Cookie verwendet die folgende Syntax, wobei die Groß-/Kleinschreibung beachtet wird:
+Das Cookie verwendet die folgende Syntax, bei der die Zwischenschreibung beachtet wird:
 
-**Cookie: MSTS =**_ipaddressandportnumber_*_\\ r \\ n_*
+**Cookie: msts=**_IpAddressAndPortNumber_*_\\ r \\ n_*
 
-Dabei ist " *ipaddressandportnumber* " die IP-Adresse und die Portnummer in der Netzwerk-Byte-Reihenfolge.
+Dabei *ist IpAddressAndPortNumber* die IP-Adresse und Portnummer in Netzwerk-Byte-Reihenfolge.
 
-Beispielsweise ist das Cookie, das für den Zugriff auf die IP-Adresse von 172.31.249.216 verwendet wird, Portnummer 3389 wie folgt:
+Beispielsweise lautet das Cookie für den Zugriff auf die IP-Adresse 172.31.249.216, Portnummer 3389, wie folgt:
 
-**Cookie: MSTS = 3640205228.15629.0000 \\ r \\ n**
+**Cookie: msts=3640205228.15629.0000 \\ r \\ n**
 
-Die letzten vier Nullen sind optional und reserviert. Der abschließende Dezimaltrennzeichen ist erforderlich, ebenso wie der nachfolgende Wagen Rücklauf und Zeilenvorschub. Die Länge der Zeichenfolge in Zeichen muss ein gleich Vielfaches von 2 sein. Fügen Sie daher ggf. ein Leerzeichen hinzu.
+Die letzten vier Nullen sind optional und reserviert. Das letzte Dezimaltrennzeichen ist erforderlich, ebenso wie der nachstellende Wagenrücklauf und der Zeilenumlauf. Die Länge der Zeichenfolge in Zeichen muss ein gleichmäßiges Vielfaches von 2 sein. Fügen Sie daher bei Bedarf ein Leerzeichen hinzu.
 
-Wenn kein Cookie angegeben ist, lautet der Standardwert **Cookie: mstshash =**_username_*_\\ r \\ n_*.
+Wenn kein Cookie angegeben wird, ist der Standardwert **Cookie: mstshash=**_UserName_*_\\ r \\ n_*.
 
-Weitere Informationen zu Remotedesktop-Webverbindung finden Sie unter [Anforderungen für Remotedesktop-Webverbindung](requirements-for-remote-desktop-web-connection.md).
+Weitere Informationen zu Remotedesktop-Webverbindung finden Sie unter [Requirements for Remotedesktop-Webverbindung](requirements-for-remote-desktop-web-connection.md).
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -120,11 +120,11 @@ Weitere Informationen zu Remotedesktop-Webverbindung finden Sie unter [Anforderu
 | Unterstützte Mindestversion (Server)<br/> | Windows Server 2008<br/>                                                                  |
 | Typbibliothek<br/>             | <dl> <dt>MsTscAx.dll</dt> </dl>          |
 | DLL<br/>                      | <dl> <dt>MsTscAx.dll</dt> </dl>          |
-| IID<br/>                      | IID \_ imsrdpclientadvancedsettings ist als 3c65b4ab-12b3-465b-acd4-b8dad3bff9e2 definiert.<br/> |
+| IID<br/>                      | IID \_ IMsRdpClientAdvancedSettings ist als 3c65b4ab-12b3-465b-acd4-b8dad3bff9e2 definiert.<br/> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
@@ -149,7 +149,7 @@ Weitere Informationen zu Remotedesktop-Webverbindung finden Sie unter [Anforderu
 [**IMsRdpClientAdvancedSettings8**](imsrdpclientadvancedsettings8.md)
 </dt> <dt>
 
-[**Imsrdpclientadvancedsettings**](imsrdpclientadvancedsettings-interface.md)
+[**IMsRdpClientAdvancedSettings**](imsrdpclientadvancedsettings-interface.md)
 </dt> </dl>
 
  

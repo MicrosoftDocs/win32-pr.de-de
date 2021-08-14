@@ -1,35 +1,35 @@
 ---
-title: Hinzufügen des "Play"-ButtonElement
-description: Hinzufügen des "Play"-ButtonElement
+title: Hinzufügen von Play BUTTONELEMENT
+description: Hinzufügen von Play BUTTONELEMENT
 ms.assetid: 895850a7-7538-4581-8348-41cbb3bc9717
 keywords:
-- Erstellen von Skins, ButtonElement-Element
-- Windows Media Player Skins, ButtonElement-Element
-- Skins, ButtonElement-Element
-- Skin-Definitions Dateien, ButtonElement-Element
-- ButtonElement-Element
-- Elemente, ButtonElement
-- Erstellen von Skins, Wiedergabe Schaltflächen
-- Windows Media Player Skins, Wiedergabe Schaltflächen
-- Skins, Wiedergabe Schaltflächen
-- Skin-Definitions Dateien, Wiedergabe Schaltflächen
-- Wiedergabe Schaltflächen
+- Erstellen von Skins, BUTTONELEMENT-Element
+- Windows Media Player,BUTTONELEMENT-Element
+- skins,BUTTONELEMENT-Element
+- Skindefinitionsdateien, BUTTONELEMENT-Element
+- BUTTONELEMENT-Element
+- elements,BUTTONELEMENT
+- Erstellen von Skins, Wiedergabeschaltflächen
+- Windows Media Player,Wiedergabeschaltflächen
+- Skins, Wiedergabeschaltflächen
+- Skindefinitionsdateien,Wiedergabeschaltflächen
+- Wiedergabeschaltflächen
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: a92b5416adf2e323043eb563ec08e1e4d2525733
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: 7cab52691b48876327f45fbaf30a98de78c8c0c46a2eafd0a2c342e51c5a8683
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "104515788"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118583544"
 ---
-# <a name="adding-the-play-buttonelement"></a>Hinzufügen des "Play"-ButtonElement
+# <a name="adding-the-play-buttonelement"></a>Hinzufügen von Play BUTTONELEMENT
 
-Schließlich können Sie die **ButtonElement** -Elemente, die die visuellen Schaltflächen auf dem Bildschirm verbinden, mit Windows-Media Player Aktionen hinzufügen. Dabei handelt es sich um den Kern ihrer Skin, den Sie als Verkabelung der Oberfläche der Skin an die inneren Maschinen von Windows Media Player vorstellen können.
+Abschließend können Sie die **BUTTONELEMENT-Elemente** hinzufügen, die die visuellen Schaltflächen auf dem Bildschirm verbinden, um Windows Media Player anzuzeigen. Dies ist der Kern Ihrer Skin, und Sie können sich dies als Verkabelung der Oberfläche der Skin mit der inneren Maschine des Windows Media Player.
 
-**ButtonElement** s sind in einer **Button Group** enthalten. In jeder **ButtonGroup** muss immer mindestens ein **ButtonElement** vorhanden sein.
+**BUTTONELEMENT-Objekte** sind in einer **BUTTONGROUP enthalten.** Sie müssen immer mindestens ein **BUTTONELEMENT in** jeder **BUTTONGROUP haben.**
 
-Fügen Sie den Code für die Wiedergabe **ButtonElement** nach der schließenden Spitze Klammer der **ButtonGroup** ein.
+Legen Sie den Play **BUTTONELEMENT-Code** nach der schließenden eckigen Klammer von **BUTTONGROUP ab.**
 
 
 ```C++
@@ -42,21 +42,21 @@ Fügen Sie den Code für die Wiedergabe **ButtonElement** nach der schließenden
 
 
 
-Die folgenden Attribute werden verwendet, um das **ButtonElement** für die Wiedergabe Schaltfläche zu definieren:
+Die folgenden Attribute werden verwendet, um **buttonelement für** die Wiedergabeschaltfläche zu definieren:
 
 **mappingColor**
 
-Dies ist der Farbwert eines Bereichs in der Mapping-Grafikdatei, den Sie zuvor erstellt haben. In diesem Fall handelt es sich um eine solide grüne Farbe. Dieses Attribut ist für ein beliebiges **ButtonElement** erforderlich. Wenn Sie diese Farbe definieren, sagen Sie Windows Media Player, diesen Farbbereich dem XML-Code dieser Schaltfläche zuzuordnen.
+Dies ist der Farbwert eines Bereich in der Zuordnungsartdatei, die Sie zuvor erstellt haben. In diesem Fall ist dies die vollgrüne Farbe. Dieses Attribut ist für alle **BUTTONELEMENT-Objekte erforderlich.** Wenn Sie diese Farbe definieren, geben Sie Windows Media Player an, diesen Farbbereich dem XML-Code dieser Schaltfläche zu zuordnen.
 
-**uptooltip**
+**upToolTip**
 
-Definiert den Text, der angezeigt wird, wenn der Benutzer mit dem Mauszeiger auf die Schaltfläche zeigt. Verwechseln Sie dies nicht mit der Maus, die angezeigt wird. Eine QuickInfo ist eine kleine Sprechblase, die eine Weile dauert. Das Hover-Kunst Bild wird jedoch sofort in der von Ihnen gewählten Farbe und Form angezeigt.
+Dadurch wird der Text definiert, der angezeigt wird, wenn der Benutzer mit der Maus auf die Schaltfläche zeigt. Verwechseln Sie dies nicht mit der Hoverart, die angezeigt wird. Eine QuickInfo ist eine kleine Sprechblasenbeschriftung, die einen Moment dauert. Das Bild mit der Hoverart wird jedoch sofort in der farbe und form angezeigt, die Sie auswählen.
 
-**OnClick**
+**Onclick**
 
-Definiert das Ereignis, das auftritt, wenn mit der Maus auf die Schaltfläche geklickt wird. Der Wert dieses Ereignis Attributs wird als Ereignishandler bezeichnet und ist entweder eine Zeile von Microsoft JScript-Code oder eine JScript-Funktion in einer externen Textdatei, die vom **loadscript** -Attribut einer **Ansicht** geladen wird. In diesem Fall ruft der JScript-Code die **URL** -Methode von Windows Media Player auf, die eine Datei mit dem Namen "Laure. wma" lädt und damit beginnt. Beachten Sie, dass die Zeile mit einem Semikolon innerhalb der Anführungszeichen endet, was eine gute JScript-Codierungs Praxis ist. Beachten Sie auch, dass einfache Anführungszeichen innerhalb der doppelten Anführungszeichen verwendet werden, um den Dateinamen festzulegen. Weitere Informationen zu JScript finden Sie im Abschnitt über die [Verwendung von JScript](using-jscript.md) im Abschnitt about Skins dieses SDK.
+Dadurch wird das Ereignis definiert, das auftritt, wenn der Mauszeiger auf die Schaltfläche klickt. Der Wert dieses Ereignisattributs wird als Ereignishandler bezeichnet und ist entweder eine Zeile mit Microsoft JScript-Code oder eine JScript-Funktion in einer externen Textdatei, die vom **loadScript-Attribut** einer VIEW geladen **wird.** In diesem Fall ruft JScript Code die **URL-Methode** von Windows Media Player auf, die eine Datei namens "laure.wma" lädt und abspielt. Beachten Sie, dass die Zeile mit einem Semikolon innerhalb der Anführungszeichen endet, was für JScript ist. Beachten Sie auch die Verwendung von einfachen Anführungszeichen innerhalb der doppelten Anführungszeichen, um den Dateinamen zu deaktivieren. Weitere Informationen zu JScript finden Sie unter [Using JScript](using-jscript.md) im Abschnitt About Skins (Informationen zu Skins) dieses SDK.
 
-Beachten Sie, dass kein **endbuttonelement** -Tag vorhanden ist. Wenn ein Element kein anderes Element einschließt, können Sie es mit dem Schrägstrich direkt vor der schließenden Spitze Klammer schließen. Dies teilt XML mit, dass Sie mit diesem Element fertig sind. Beispiel:
+Beachten Sie, dass es kein endendes **BUTTONELEMENT-Tag** gibt. Wenn ein Element kein anderes Element umschließt, können Sie es mit dem Schrägstrich direkt vor der schließenden eckigen Klammer schließen. Dadurch wird XML informiert, dass Sie mit diesem Element fertig sind. Beispiel:
 
 
 ```C++
@@ -74,20 +74,20 @@ und
 
 
 
-vermitteln Sie dieselben Informationen in XML.
+übermitteln die gleichen Informationen in XML.
 
-Die Leistungsfähigkeit von Skins ergibt sich aus der Verwendung von Ereignis Handlern. Wenn der Benutzer mit einer Maus etwas bewirkt, kann dieses Ereignis mit JScript behandelt werden. Ihr Code kann eine einzelne Zeile sein, die es Windows Media Player ermöglicht, etwas einfaches Spiel auszuführen, oder es kann sich um eine in JScript geschriebene komplette Anwendung handeln.
+Die Leistung von Skins entsteht durch die Verwendung von Ereignishandlern. Wenn der Benutzer mit der Maus etwas tut, können Sie dieses Ereignis mit JScript. Bei Ihrem Code kann es sich um eine einzelne Zeile Windows Media Player, die eine einfache Wiedergabe ermöglicht, oder es kann sich um eine vollständige Anwendung in JScript.
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
 <dl> <dt>
 
-[**Erstellen der Skin-Definitionsdatei**](creating-the-skin-definition-file.md)
+[**Erstellen der Skindefinitionsdatei**](creating-the-skin-definition-file.md)
 </dt> </dl>
 
- 
+ 
 
- 
+ 
 
 
 

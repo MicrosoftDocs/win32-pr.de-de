@@ -1,9 +1,9 @@
 ---
-title: Ereignis. clientY
-description: Das clientY-Attribut ruft die y-Koordinate des Mauszeigers in Bezug auf den Client Bereich des Anwendungsfensters ab.
+title: event.clientY
+description: Das clientY-Attribut ruft die y-Koordinate des Mauszeigers in Bezug auf den Clientbereich des Anwendungsfensters ab.
 ms.assetid: 2510f140-8d46-4fb2-80f5-98064c2b838c
 keywords:
-- Ereignis. clientY Windows Media Player
+- event.clientY Windows Media Player
 topic_type:
 - apiref
 api_name:
@@ -12,16 +12,16 @@ api_type:
 - NA
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: b7dde8ecbd0da40cdbfb1bc9cd72fa190bbd2463
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 8b412d376794e94c0e8969600a85faaf5e4ecab039703cd35c73a0f7d5896e0b
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106354657"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118577406"
 ---
-# <a name="eventclienty"></a>Ereignis. clientY
+# <a name="eventclienty"></a>event.clientY
 
-Das **clientY** -Attribut ruft die y-Koordinate des Mauszeigers in Bezug auf den Client Bereich des Anwendungsfensters ab.
+Das **clientY-Attribut** ruft die y-Koordinate des Mauszeigers in Bezug auf den Clientbereich des Anwendungsfensters ab.
 
 ``` syntax
 event.clientY
@@ -29,7 +29,7 @@ event.clientY
 
 ## <a name="possible-values"></a>Mögliche Werte
 
-Bei diesem Attribut handelt es sich um eine schreibgeschützte **Zahl** (**Long**).
+Dieses Attribut ist eine schreibgeschützte **Zahl** (**long**).
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -37,7 +37,7 @@ Bei diesem Attribut handelt es sich um eine schreibgeschützte **Zahl** (**Long*
 
 | Anforderung | Wert |
 |--------------------|------------------------------------------------------|
-| Version<br/> | Windows Media Player, Version 7,0 oder höher<br/> |
+| Version<br/> | Windows Media Player Version 7.0 oder höher<br/> |
 
 
 
@@ -45,10 +45,10 @@ Bei diesem Attribut handelt es sich um eine schreibgeschützte **Zahl** (**Long*
 
 <dl> <dt>
 
-[**Ambient-Ereignis Attribute**](ambient-event-attributes.md)
+[**Ambient-Ereignisattribute**](ambient-event-attributes.md)
 </dt> <dt>
 
-[**Event. clientX**](event-clientx.md)
+[**event.clientX**](event-clientx.md)
 </dt> </dl>
 
  

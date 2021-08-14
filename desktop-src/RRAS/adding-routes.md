@@ -1,27 +1,27 @@
 ---
 title: Hinzufügen von Routen
-description: Nachdem ein Client eine Route ermittelt hat, kann der Client diese Route der Routing Tabelle hinzufügen, indem er die rtmaddnexthop-Funktion aufruft.
+description: Nachdem ein Client eine Route gefunden hat, kann er diese Route der Routingtabelle hinzufügen, indem er die RtmAddNextHop-Funktion aufruft.
 ms.assetid: d72c8a84-3eac-4c5d-84af-8edc7b41f0b6
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 276e523f78de99efb981c5ecaf2f33bd2df3d154
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: ade168982d4951e056b7e244143ed2f11ccdc80dcac4872b9c5f9cd72cba440e
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "104310356"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117791925"
 ---
 # <a name="adding-routes"></a>Hinzufügen von Routen
 
-Nachdem ein Client eine Route ermittelt hat, kann der Client diese Route der Routing Tabelle hinzufügen, indem er die [**rtmaddnexthop**](/windows/desktop/api/Rtmv2/nf-rtmv2-rtmaddnexthop) -Funktion aufruft.
+Nachdem ein Client eine Route gefunden hat, kann er diese Route der Routingtabelle hinzufügen, indem er die [**RtmAddNextHop-Funktion**](/windows/desktop/api/Rtmv2/nf-rtmv2-rtmaddnexthop) aufruft.
 
-Ein Client kann Routen aus der Routing Tabelle entfernen, indem er die [**rtmdeleteroutetodest**](/windows/desktop/api/Rtmv2/nf-rtmv2-rtmdeleteroutetodest) -Funktion aufruft.
+Ein Client kann Routen aus der Routingtabelle entfernen, indem er die [**RtmDeleteRouteToDest-Funktion**](/windows/desktop/api/Rtmv2/nf-rtmv2-rtmdeleteroutetodest) aufruft.
 
-Beispielcode, der die Verwendung dieser Funktionen veranschaulicht, finden [Sie unter Hinzufügen und Aktualisieren von Routen mithilfe von rtmaddroutededest](add-and-update-routes-using-rtmaddroutetodest.md).
+Beispielcode, der die Verwendung dieser Funktionen veranschaulicht, finden Sie unter Hinzufügen und Aktualisieren von Routen [mit rtmAddRouteToDest](add-and-update-routes-using-rtmaddroutetodest.md).
 
- 
+ 
 
- 
+ 
 
 
 

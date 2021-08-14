@@ -4,92 +4,92 @@ ms.assetid: ea22bd6d-4a7a-4674-82e9-08460914ff8e
 title: LUN-Objekt
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: ad74fa65802adb1439360fb2fcdb423c642ef736
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: d315e33b8d253e346b42b01f86a85379aadace73e517a169cc653214a9c674d3
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106355428"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118347491"
 ---
 # <a name="lun-object"></a>LUN-Objekt
 
-\[Ab Windows 8 und Windows Server 2012 wird die COM-Schnittstelle des [virtuellen Festplatten Dienstanbieter](virtual-disk-service-portal.md) durch die [Windows-Speicherverwaltungs-API](/previous-versions/windows/desktop/stormgmt/windows-storage-management-api-portal)ersetzt.\]
+\[Ab Windows 8 und Windows Server 2012 wird die COM-Schnittstelle des [Virtual Disk Service](virtual-disk-service-portal.md) durch die Windows Storage Verwaltungs-API. [](/previous-versions/windows/desktop/stormgmt/windows-storage-management-api-portal)\]
 
-Ein LUN-Objekt (Logical Unit Number) modelliert eine logische Einheit von adressier barem Speicherplatz, die von einem Hardware Anbieter erstellt und von einem Subsystem bereitgestellt wird. Jede LUN umfasst mindestens einen LUN-Plex, der wiederum aus Blöcken von einem oder mehreren Laufwerken besteht.
+Ein LUN-Objekt (logische Einheitennummer) modelliert eine logische Einheit von adressierbarem Speicherplatz, die von einem Hardwareanbieter erstellt und von einem Subsystem verfügbar ist. Jede LUN besteht aus mindestens einem LUN-Plex, der wiederum aus Ausdrungen von einem oder mehreren Laufwerken besteht.
 
 ## <a name="lun-types"></a>LUN-Typen
 
-VDS unterstützt fünf LUN-Typen: einfach, überspannt, Stripeset, gespiegelt und Stripeset mit Parität. Einfache, übergreifende und stripesetluns sind nicht fehlertolerant. gespiegelte und Paritäts-LUNs sind fehlertolerant. Im restlichen Teil dieses Abschnitts werden die einzelnen VDS-LUN-Typen beschrieben.
+VDS unterstützt fünf LUN-Typen: einfach, spanned, striped, mirrored und striped mit Parität. Einfache LUNs, Übergreifende LUNs und Striping-LUNs sind nicht fehlertolerant. Gespiegelte und Paritäts-LUNs sind fehlertolerant. Im weiteren Verlauf dieses Abschnitts werden die einzelnen VDS-LUN-Typen beschrieben.
 
--   Eine einfache LUN ist eine nicht fehlertolerante LUN, die sich aus einem einzelnen zusammenhängenden Laufwerks Block von einem einzelnen Laufwerk zusammensetzt. Der zusammenhängende Block kann aus einem einzelnen Bereich von Blöcken oder mehreren Blöcken von Blöcken bestehen, die miteinander verknüpft sind.
--   Eine übergreifende LUN ist eine nicht fehlertolerante LUN, die aus mehreren nicht zusammenhängenden Blöcken von mehreren Laufwerken besteht. Die Daten werden linear in jeden der Blöcke auf dem ersten Laufwerk geschrieben, bis alle ersten Laufwerks Blöcke gefüllt sind, und dann zu jedem der Blöcke auf dem zweiten Laufwerk usw. Übergreifende LUNs bieten eine effiziente Verwendung des Laufwerks Platzes in Subsystemen, die aus verschiedenen Größen bestehen.
--   Eine stripesetlun ist eine nicht fehlertolerante LUN, die aus mehreren, verschachtelten und zusammenhängenden Blöcken von mehreren Laufwerken besteht. Für stripesetluns wird eine RAID-0-Konfiguration verwendet, sodass die Daten zyklisch auf die Blöcke auf den beteiligten Laufwerken verteilt werden. Stripesetluns funktionieren am besten mit Laufwerken derselben Größe, desselben Modells und Ihres Herstellers.
--   Gespiegelte LUNs sind fehlertolerante LUNs, die für die Notfall Wiederherstellung sorgen, indem Sie die Daten in mehreren LUN-plexes duplizieren. Jeder Plex in einer gespiegelten LUN enthält eine Kopie der Daten, die auf dem ursprünglichen Plex gespeichert werden. Alle plexes befinden sich auf einem separaten Laufwerk. Alle Daten, die in eine gespiegelte LUN geschrieben werden, werden gleichzeitig in alle zugehörigen plexes geschrieben. Wenn eines der Mitwirkenden Laufwerke ausfällt, ist der Plex auf diesem Laufwerk nicht mehr verfügbar, aber das System wird weiterhin mit dem nicht betroffenen Plex oder plexes betrieben. Eine gespiegelte LUN kann eine beliebige Anzahl von plexes aufweisen.
--   Ein Stripeset mit Paritäts-LUNs sind fehlertolerante LUNs, die eine Notfall Wiederherstellung ermöglichen, indem Paritäts Daten zeitweise auf drei oder mehr Laufwerke verteilt werden. Wenn eines der Mitwirkenden Laufwerke fehlschlägt, können die verlorenen Daten aus den verbleibenden Daten und der Parität neu erstellt werden.
+-   Bei einer einfachen LUN handelt es sich um eine nicht fehlertolerante LUN, die aus einem einzelnen zusammenhängenden Laufwerksdeut von einem einzelnen Laufwerk besteht. Der zusammenhängende Block kann aus einem einzelnen Bereich von Blöcken oder mehreren Blöcken bestehen, die miteinander verknüpft sind.
+-   Eine übergreifende LUN ist eine nicht fehlertolerante LUN, die aus mehreren unzusammenhängenden Ausdrungen von mehreren Laufwerken besteht. Die Daten werden linear in jeden Derdungseinheiten auf dem ersten Laufwerk geschrieben, bis alle ersten Laufwerkseinheiten gefüllt sind, und dann in jeden der Aufdungseinheiten auf dem zweiten Laufwerk und so weiter. Übergreifende LUNs ermöglichen eine effiziente Nutzung des Laufwerkspeicherplatzes in Subsystemen, die Laufwerke verschiedener Größen umfassen.
+-   Eine Striping-LUN ist eine nicht fehlertolerante LUN, die aus mehreren, überlappten, zusammenhängenden Ausdrundungen von mehreren Laufwerken besteht. Striping-LUNs verwenden eine RAID-0-Konfiguration, damit Daten zyklisch über die Dweiten auf den beitragenden Laufwerken "gestreift" werden. Striping-LUNs funktionieren am besten mit Laufwerken der gleichen Größe, desselben Modells und desselben Herstellers.
+-   Gespiegelte LUNs sind fehlertolerante LUNs, die eine Notfallwiederherstellung ermöglichen, indem die Daten auf mehrere LUN-Plexe dupliziert werden. Jeder Plex in einer gespiegelten LUN enthält eine Kopie der Daten, die auf dem ursprünglichen Plex gespeichert sind. Jede der Plexes befindet sich auf einem separaten Laufwerk. Alle Daten, die in eine gespiegelte LUN geschrieben werden, werden gleichzeitig auf die einzelnen Plexes geschrieben. Wenn eines der beitragenden Laufwerke ausfällt, ist der Plex auf diesem Laufwerk nicht mehr verfügbar, aber das System arbeitet weiterhin mit den nicht betroffenen Plexen oder Plexes. Eine gespiegelte LUN kann eine beliebige Anzahl von Plexes haben.
+-   Striping mit Paritäts-LUNs sind fehlertolerante LUNs, die für die Notfallwiederherstellung sorgen, indem Paritätsdaten zeitweilig auf drei oder mehr Laufwerken entfernt werden. Wenn eines der beitragenden Laufwerke ausfällt, können die verloren gegangenen Daten aus den verbleibenden Daten und der Parität neu erstellt werden.
 
 ## <a name="lun-creation"></a>LUN-Erstellung
 
-VDS unterstützt vier Modelle, mit denen Anwendungen LUNs erstellen können: explizit gerichtet, teilweise gesteuert, automatisiert und Hersteller spezifisch. Alle Hardware Anbieter müssen explizit und teilweise gesteuerte LUN-Erstellung unterstützen, und es wird dringend empfohlen, die automatisierte LUN-Erstellung zu unterstützen. (Die herstellerspezifische LUN-Erstellung erfolgt außerhalb des Umfangs dieses Handbuchs.)
+VDS unterstützt vier Modelle, mit denen Anwendungen LUNs erstellen können: explizit gerichtet, teilweise gerichtet, automagisch und herstellerspezifisch. Alle Hardwareanbieter müssen die explizite und teilweise gerichtete LUN-Erstellung unterstützen. Es wird dringend empfohlen, die automatische LUN-Erstellung zu unterstützen. (Die herstellerspezifische LUN-Erstellung wird in diesem Handbuch nicht bereitgestellt.)
 
-Mithilfe der explizit gerichteten LUN-Erstellung kann der Aufrufer alle Attribute der LUN angeben. Die teilweise gesteuerte LUN-Erstellung ermöglicht dem Aufrufer, nur die Attribute anzugeben, die von besonderem Interesse sind, und dem Anbieter dann die Auswahl der restlichen Attribute zu ermöglichen. Die Automatisierung der automatischen LUN umfasst das Aktivieren des Aufrufers, um einfach den LUN-Typ und die Größe zusammen mit einem Satz von "automagalen hinweisen" (vordefinierte Einstellungen für LUN-Attribute) anzugeben, und ermöglicht dem Anbieter dann die automatische Erstellung der LUN.
+Durch die explizite LuN-Erstellung kann der Aufrufer alle Attribute der LUN angeben. Die teilweise gerichtete LUN-Erstellung ermöglicht es dem Aufrufer, nur die Attribute anzugeben, die von besonderem Interesse sind, und dem Anbieter dann die Auswahl des Rests zu ermöglichen. Bei der automatischen LUN-Erstellung kann der Aufrufer einfach den LUN-Typ und die Größe zusammen mit einer Reihe von "automatischen Hinweisen" (vordefinierte Einstellungen für LUN-Attribute) angeben und dem Anbieter dann ermöglichen, die LUN automatisch zu erstellen.
 
 ## <a name="lun-masking"></a>LUN-Masking
 
-VDS unterstützt die LUN-Maskierung für Subsysteme, die diese Funktion anbieten. Alle LUNs werden auf dem Computer angezeigt, auf dem der Anbieter ausgeführt wird. Die LUN-Maskierung ermöglicht einem Aufrufer das Aufheben der Maskierung ausgewählter LUNs auf anderen Computern im Netzwerk. Wenn Sie eine LUN auf einem Computer aufheben, hat der Computer Zugriff auf die LUN. Computer, für die eine LUN maskiert ist, nicht.
+VDS unterstützt die LUN-Entmaskung für Subsysteme, die diese Funktion bieten. Alle LUNs werden auf dem Computer, auf dem der Anbieter ausgeführt wird, zur Oberfläche. Durch die Entmaskung der LUN kann ein Aufrufer ausgewählte LUNs für andere Computer im Netzwerk "entmasken". Wenn Sie eine LUN für einen Computer entmasken, hat der Computer Zugriff auf die LUN. Computer, für die eine LUN maskiert ist, tun dies nicht.
 
-Eine nicht maskierte LUN macht sowohl [**ivdslun**](/windows/desktop/api/Vds/nn-vds-ivdslun) -als auch [**ivdsdisk**](/windows/desktop/api/Vds/nn-vds-ivdsdisk) -Schnittstellen für den lokalen Host verfügbar. Sie können **ivdsdisk** zum Hinzufügen einer LUN zu einem Softwareanbieter Paket, zum Erstellen und Entfernen von Volumes, zum Zuweisen von Laufwerk Buchstaben usw. verwenden. Weitere Informationen zu den auf einem Datenträger ausgeführten Vorgängen finden Sie unter Datenträger [Objekt](disk-object.md).
+Eine nicht maskierte LUN macht sowohl die [**IVdsLun-**](/windows/desktop/api/Vds/nn-vds-ivdslun) als auch [**die IVdsDisk-Schnittstelle**](/windows/desktop/api/Vds/nn-vds-ivdsdisk) für den lokalen Host verfügbar. Mit **IVdsDisk** können Sie einem Softwareanbieterpaket eine LUN hinzufügen, Volumes erstellen und entfernen, Laufwerkbuchstaben zuweisen und so weiter. Weitere Informationen zu den Vorgängen, die auf einem Datenträger ausgeführt werden, finden Sie unter [Disk Object](disk-object.md).
 
-Nachdem eine LUN für einen Zielcomputer nicht maskiert oder von einem Zielcomputer maskiert wurde, ändert sich die Sichtbarkeit der LUN auf dem Computer möglicherweise erst, wenn eine busüberprüfung durchgeführt wird. Die VDS-Anwendung auf dem Zielcomputer initiiert die erneute busüberprüfung durch Aufrufen von [**ivdsservice:: REENUMERATE**](/windows/desktop/api/Vds/nf-vds-ivdsservice-reenumerate). Die Initiierung des busneuscans ist die Verantwortung der VDS-Anwendung, nicht des Hardware Anbieters.
+Nachdem eine LUN einem Zielcomputer entmaskiert oder von einem Zielcomputer maskiert wurde, ändert sich die Sichtbarkeit der LUN auf diesem Computer möglicherweise erst, wenn ein Bus erneut einscannt. Die VDS-Anwendung auf dem Zielcomputer initiiert den erneuten Scan des Bus durch Aufrufen von [**IVdsService::Reenumerate**](/windows/desktop/api/Vds/nf-vds-ivdsservice-reenumerate). Das Initiieren des erneuten Einscannens des Bus liegt in der Verantwortung der VDS-Anwendung, nicht des Hardwareanbieters.
 
-## <a name="lun-multipathing"></a>LUN Multipfad
+## <a name="lun-multipathing"></a>LUN-Multipfad
 
-Hardware Anbieter, die Multipfad-e/a (MPIO) unterstützen, können Richtlinien für den Lastenausgleich für Pfade zwischen einer LUN und dem lokalen Host festlegen. LUNs, die diese Funktion unterstützen, machen die [**ivdslunmpio**](/windows/desktop/api/Vds/nn-vds-ivdslunmpio) -Schnittstelle für den lokalen Host verfügbar.
+Hardwareanbieter, die Multipfad-E/A (MPIO) unterstützen, können Lastenausgleichsrichtlinien für Pfade zwischen einer LUN und dem lokalen Host festlegen. LUNs, die diese Funktion unterstützen, machen die [**IVdsLunMpio-Schnittstelle**](/windows/desktop/api/Vds/nn-vds-ivdslunmpio) für den lokalen Host verfügbar.
 
 ## <a name="working-with-luns"></a>Arbeiten mit LUNs
 
-Verwenden Sie die [**ivdssubsystem:: deatelun-**](/windows/desktop/api/Vds/nf-vds-ivdssubsystem-createlun) Methode, um ein neues LUN-Objekt zu erstellen. Sie können die LUNs Abfragen, die von einem bestimmten Subsystem angezeigt werden, indem Sie die [**queryluns**](/windows/desktop/api/Vds/nf-vds-ivdssubsystem-queryluns) -Methode aufrufen, die auch von [**ivdssubsystem**](/windows/desktop/api/Vds/nn-vds-ivdssubsystem)verfügbar gemacht wird. Ein Aufrufer kann einen Zeiger auf eine bestimmte LUN abrufen, indem er das gewünschte LUN-Objekt aus der von **queryluns** zurückgegebenen Enumeration auswählt. Mit einem LUN-Objekt können Sie den LUN-Status festlegen. Abfragen für alle aktiven Controller, plexes und automagandeutungen Erweitern und Verkleinern der LUN Hinzufügen und Entfernen von plexes Masken festlegen; Anwenden von hinweisen und löschen Sie die LUN.
+Verwenden Sie [**die IVdsSubSystem::CreateLun-Methode,**](/windows/desktop/api/Vds/nf-vds-ivdssubsystem-createlun) um ein neues LUN-Objekt zu erstellen. Sie können die LUNs abfragen, die von einem bestimmten Subsystem angezeigt werden, indem Sie die [**QueryLuns-Methode**](/windows/desktop/api/Vds/nf-vds-ivdssubsystem-queryluns) aufrufen, die auch von [**IVdsSubSystem verfügbar gemacht wird.**](/windows/desktop/api/Vds/nn-vds-ivdssubsystem) Ein Aufrufer kann einen Zeiger auf eine bestimmte LUN erhalten, indem er das gewünschte LUN-Objekt aus der -Enumeration auswählt, die von **QueryLuns zurückgegeben wird.** Mit einem LUN-Objekt können Sie den LUN-Status festlegen. Abfrage für alle aktiven Controller, Plexes und automagic-Hinweise; Erweitern und Verkleinern der LUN; Plexes hinzufügen und entfernen; Masken festlegen; Hinweise anwenden; und löschen Sie die LUN.
 
-Neben einem Objekt Bezeichner, einem Namen und einer Seriennummer enthalten die LUN-Objekteigenschaften den LUN-Typ, die Größe, den Status, die Integrität, den Übergangsstatus und die Flags. eine Liste der Maskierungen; und eine Einstellung für die Neuerstellungs Priorität.
+Neben einem Objektbezeichner, einem Namen und einer Seriennummer enthalten lun-Objekteigenschaften den LUN-Typ, die Größe, den Status, die Integrität, den Übergangszustand und flags. eine Liste zum Entmaskungsvorgang; und eine Neustellungsprioritätseinstellung.
 
-In der folgenden Tabelle werden verwandte Schnittstellen, Enumerationen und Strukturen aufgelistet.
+In der folgenden Tabelle sind verwandte Schnittstellen, Enumerationen und Strukturen aufgeführt.
 
 
 
 | type                                                                                              | Element                                                                                                                                                                                                                                                                                                             |
 |---------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Schnittstellen, die von diesem Objekt immer verfügbar gemacht werden                                                 | [**Ivdslun**](/windows/desktop/api/Vds/nn-vds-ivdslun)                                                                                                                                                                                                                                                                                          |
-| Schnittstellen, die von diesem Objekt immer in VDS 1,1 und 2,0 Fibre Channel Anbietern verfügbar gemacht werden | [**Ivdsluncontrollerports**](/windows/desktop/api/Vds/nn-vds-ivdsluncontrollerports)                                                                                                                                                                                                                                                            |
-| Schnittstellen, die von diesem Objekt immer nur in VDS 1,1-und 2,0-iSCSI-Anbietern verfügbar gemacht werden         | [**Ivdsluniscsi**](/windows/desktop/api/Vds/nn-vds-ivdsluniscsi)                                                                                                                                                                                                                                                                                |
-| Schnittstellen, die von diesem Objekt verfügbar gemacht werden können\*                                                   | [**Ivdsmaintenance**](/windows/desktop/api/Vds/nn-vds-ivdsmaintenance), [**ivdslunmpio**](/windows/desktop/api/Vds/nn-vds-ivdslunmpio), [**ivdslunnaming**](/windows/desktop/api/Vds/nn-vds-ivdslunnaming)und [**ivdslunnumber**](/windows/desktop/api/Vds/nn-vds-ivdslunnumber)**Windows Server 2008, Windows Vista und Windows Server 2003:** die [**ivdslunnumber**](/windows/desktop/api/Vds/nn-vds-ivdslunnumber) -Schnittstelle wird nicht unterstützt.<br/> |
-| Zugehörige Enumerationen                                                                           | [**VDS \_ LUN- \_ Flag**](/windows/desktop/api/Vds/ne-vds-vds_lun_flag) und [**VDS- \_ LUN- \_ Status**](/windows/desktop/api/Vds/ne-vds-vds_lun_status)und [**VDS- \_ LUN- \_ Typ**](/windows/desktop/api/Vds/ne-vds-vds_lun_type)                                                                                                                                                                                   |
-| Zugeordnete Strukturen                                                                             | [**VDS \_ LUN- \_ Informationen**](/windows/desktop/api/VdsLun/ns-vdslun-vds_lun_information), [**VDS- \_ LUN-unter \_ Stützung**](/windows/desktop/api/Vds/ns-vds-vds_lun_prop)und [**VDS- \_ LUN- \_ Benachrichtigung**](/windows/desktop/api/Vds/ns-vds-vds_lun_notification)                                                                                                                                                            |
+| Schnittstellen, die von diesem Objekt immer verfügbar gemacht werden                                                 | [**IVdsLun**](/windows/desktop/api/Vds/nn-vds-ivdslun)                                                                                                                                                                                                                                                                                          |
+| Schnittstellen, die von diesem Objekt immer in VDS 1.1 und 2.0 verfügbar gemacht werden, Fibre Channel anbieter | [**IVdsLunControllerPorts**](/windows/desktop/api/Vds/nn-vds-ivdsluncontrollerports)                                                                                                                                                                                                                                                            |
+| Schnittstellen, die von diesem Objekt immer nur in ISCSI-Anbietern der Version 1.1 und 2.0 verfügbar gemacht werden         | [**IVdsLunIscsi**](/windows/desktop/api/Vds/nn-vds-ivdsluniscsi)                                                                                                                                                                                                                                                                                |
+| Schnittstellen, die von diesem Objekt verfügbar gemacht werden können\*                                                   | [**IVdsMaintenance,**](/windows/desktop/api/Vds/nn-vds-ivdsmaintenance) [**IVdsLunMpio,**](/windows/desktop/api/Vds/nn-vds-ivdslunmpio) [**IVdsLunNaming**](/windows/desktop/api/Vds/nn-vds-ivdslunnaming)und IVdsLunNumber **Windows Server 2008, Windows Vista und Windows Server 2003:** Die [**IVdsLunNumber-Schnittstelle**](/windows/desktop/api/Vds/nn-vds-ivdslunnumber)wird nicht unterstützt. [](/windows/desktop/api/Vds/nn-vds-ivdslunnumber)<br/> |
+| Zugeordnete Enumerationen                                                                           | [**VDS \_ \_LUN-FLAG**](/windows/desktop/api/Vds/ne-vds-vds_lun_flag) und [**\_ VDS-LUN-STATUS \_**](/windows/desktop/api/Vds/ne-vds-vds_lun_status)und [**VDS-LUN-TYP \_ \_**](/windows/desktop/api/Vds/ne-vds-vds_lun_type)                                                                                                                                                                                   |
+| Zugeordnete Strukturen                                                                             | [**VDS \_ \_LUN-INFORMATIONEN,**](/windows/desktop/api/VdsLun/ns-vdslun-vds_lun_information) [**VDS \_ LUN \_ PROP**](/windows/desktop/api/Vds/ns-vds-vds_lun_prop)UND [**\_ VDS-LUN-BENACHRICHTIGUNG \_**](/windows/desktop/api/Vds/ns-vds-vds_lun_notification)                                                                                                                                                            |
 
 
 
  
 
-\* Weitere Informationen finden Sie unter [Disk Object](disk-object.md) for additional Interface ([**ivdsdisk**](/windows/desktop/api/Vds/nn-vds-ivdsdisk)), das verfügbar gemacht wird, wenn die LUN als ein Datenträger auf dem lokalen Host Computer nicht maskiert ist.
+\*Weitere Schnittstellen [**(IVdsDisk),**](/windows/desktop/api/Vds/nn-vds-ivdsdisk)die verfügbar gemacht werden, wenn die LUN als Datenträger auf dem lokalen Hostcomputer entmaskiert wird, finden Sie unter [Datenträgerobjekt.](disk-object.md)
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
 <dl> <dt>
 
-[Hardware Anbieter Objekte](hardware-provider-objects.md)
+[Hardwareanbieterobjekte](hardware-provider-objects.md)
 </dt> <dt>
 
 [Pack-Objekt](pack-object.md)
 </dt> <dt>
 
-[Disk-Objekt](disk-object.md)
+[Datenträgerobjekt](disk-object.md)
 </dt> <dt>
 
-[**Ivdslun**](/windows/desktop/api/Vds/nn-vds-ivdslun)
+[**IVdsLun**](/windows/desktop/api/Vds/nn-vds-ivdslun)
 </dt> <dt>
 
-[**Ivdsdisk**](/windows/desktop/api/Vds/nn-vds-ivdsdisk)
+[**IVdsDisk**](/windows/desktop/api/Vds/nn-vds-ivdsdisk)
 </dt> <dt>
 
-[Hinzufügen eines Laufwerk Buchstabens zu einer LUN](adding-a-drive-letter-to-a-lun.md)
+[Hinzufügen eines Laufwerkbuchstabens zu einer LUN](adding-a-drive-letter-to-a-lun.md)
 </dt> </dl>
 
  

@@ -1,11 +1,11 @@
 ---
-title: Iwmplibraryservices getlibrarybytype-Methode
-description: Die getlibrarybytype-Methode gibt eine iwmplibrary-Schnittstelle zurück, die die Bibliothek mit dem angegebenen Typ und Index darstellt.
+title: IWMPLibraryServices getLibraryByType-Methode
+description: Die getLibraryByType-Methode gibt eine IWMPLibrary-Schnittstelle zurück, die die Bibliothek mit dem angegebenen Typ und Index darstellt.
 ms.assetid: 2507c764-a2cf-42f9-ad44-eaf040b78891
 keywords:
-- getlibrarybytype-Methode, Windows Media Player
-- getlibrarybytype-Methode, Windows Media Player, iwmplibraryservices-Schnittstelle
-- Iwmplibraryservices Interface, Windows Media Player, getlibrarybytype-Methode
+- getLibraryByType-Windows Media Player
+- getLibraryByType-Methode Windows Media Player , IWMPLibraryServices-Schnittstelle
+- IWMPLibraryServices-Schnittstelle Windows Media Player , getLibraryByType-Methode
 topic_type:
 - apiref
 api_name:
@@ -16,16 +16,16 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 4d57fcc71f912fe1ee896ec893ea8f556eeb2277
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: f83d74c8c03f8b08936c3693c77e211cd87a8b42c2d020c26ee5133406a2a042
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106361019"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117746208"
 ---
-# <a name="iwmplibraryservicesgetlibrarybytype-method"></a>Iwmplibraryservices:: getlibrarybytype-Methode
+# <a name="iwmplibraryservicesgetlibrarybytype-method"></a>IWMPLibraryServices::getLibraryByType-Methode
 
-Die **getlibrarybytype** -Methode gibt eine **iwmplibrary** -Schnittstelle zurück, die die Bibliothek mit dem angegebenen Typ und Index darstellt.
+Die **getLibraryByType-Methode** gibt eine **IWMPLibrary-Schnittstelle zurück,** die die Bibliothek mit dem angegebenen Typ und Index darstellt.
 
 ## <a name="syntax"></a>Syntax
 
@@ -55,27 +55,27 @@ Implements IWMPLibraryServices.getLibraryByType
 
 <dl> <dt>
 
-*wmplt* \[ in\]
+*wmplt* \[ In\]
 </dt> <dd>
 
-Ein Wert aus der **WMPLib. wmplibrarytype** -Enumeration, der den Typ der abzurufenden Bibliothek angibt.
+Ein Wert aus der **WMPLib.WMPLibraryType-Enumeration,** der den Typ der abzurufenden Bibliothek angibt.
 
 </dd> <dt>
 
-*Lindex* \[ in\]
+*lIndex* \[ In\]
 </dt> <dd>
 
-Ein **System. Int32** -Wert, der den Index der abzurufenden Bibliothek ist.
+Ein **System.Int32,** das der Index der abzurufenden Bibliothek ist.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Eine **WMPLib. iwmplibrary** -Schnittstelle für die Bibliothek, die zurückgegeben wird.
+Eine **WMPLib.IWMPLibrary-Schnittstelle** für die zurückgegebene Bibliothek.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Es gibt nur eine lokale Bibliothek, und die Disk-Bibliotheken sind nur auf Daten-CDs und DVDs verfügbar, die Medieninhalte enthalten.
+Es gibt nur eine lokale Bibliothek, und Datenträgerbibliotheken sind nur auf Daten-CDs und DVDs verfügbar, die Medieninhalte enthalten.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -89,17 +89,17 @@ Es gibt nur eine lokale Bibliothek, und die Disk-Bibliotheken sind nur auf Daten
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Iwmplibrary-Schnittstelle (VB und c#)**](iwmplibrary--vb-and-c.md)
+[**IWMPLibrary-Schnittstelle (VB und C#)**](iwmplibrary--vb-and-c.md)
 </dt> <dt>
 
-[**Iwmplibraryservices-Schnittstelle (VB und c#)**](iwmplibraryservices--vb-and-c.md)
+[**IWMPLibraryServices-Schnittstelle (VB und C#)**](iwmplibraryservices--vb-and-c.md)
 </dt> <dt>
 
-[**Wmplibrarytype**](/previous-versions/windows/desktop/api/wmp/ne-wmp-wmplibrarytype)
+[**WMPLibraryType**](/previous-versions/windows/desktop/api/wmp/ne-wmp-wmplibrarytype)
 </dt> </dl>
 
  

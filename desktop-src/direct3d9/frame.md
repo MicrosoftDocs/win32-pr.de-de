@@ -1,19 +1,19 @@
 ---
-description: Definiert einen Koordinaten Rahmen oder &\# 0034; Frame des Verweises. &\# 0034; Die Frame Vorlage ist geöffnet und kann ein beliebiges-Objekt enthalten. Die D3DX Mesh-Ladefunktionen erkennen Mesh-, frametransformmatrix-und Frame-Vorlagen Instanzen als untergeordnete Objekte beim Laden einer Frame Instanz.
+description: Definiert einen Koordinatenrahmen oder &\# 0034;Referenzrahmen.&\# 0034; Die Frame-Vorlage ist geöffnet und kann ein beliebiges Objekt enthalten. Die D3DX-Funktionen zum Laden von Gitternetzen erkennen Mesh-, FrameTransformMatrix- und Frame-Vorlageninstanzen als untergeordnete Objekte beim Laden einer Frame-Instanz.
 ms.assetid: vs|directx_sdk|~\frame.htm
 title: Frame (Direct3D 9-Grafiken)
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 81cc9d02b1bcbc21cc299739d93272afcf110c92
-ms.sourcegitcommit: a47bd86f517de76374e4fff33cfeb613eb259a7e
+ms.openlocfilehash: ff77cc6f4618b3ded3afc9453c12a96b115ec4bfe0f90cb83a92826378212c83
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/06/2021
-ms.locfileid: "103860092"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118523033"
 ---
 # <a name="frame-direct3d-9-graphics"></a>Frame (Direct3D 9-Grafiken)
 
-Definiert einen Koordinaten Rahmen oder "Frame of Reference". Die Frame Vorlage ist geöffnet und kann ein beliebiges-Objekt enthalten. Die D3DX Mesh-Ladefunktionen erkennen [**Mesh**](mesh.md)-, [**frametransformmatrix**](frametransformmatrix.md)-und **Frame** -Vorlagen Instanzen als untergeordnete Objekte beim Laden einer **Frame** Instanz.
+Definiert einen Koordinatenrahmen oder "Referenzrahmen". Die Frame-Vorlage ist geöffnet und kann ein beliebiges Objekt enthalten. Die D3DX-Mesh-Loading-Funktionen erkennen [**Mesh-,**](mesh.md) [**FrameTransformMatrix-**](frametransformmatrix.md)und Frame-Vorlageninstanzen als untergeordnete Objekte beim Laden einer  **Frame-Instanz.**
 
 ``` syntax
 template Frame
@@ -23,9 +23,9 @@ template Frame
 } 
 ```
 
-Die Frame-Vorlage erkennt untergeordnete **Frame** -und [**Gitter**](mesh.md) Knoten innerhalb eines Frames und kann benutzerdefinierte Vorlagen über eine Rückruffunktion erkennen.
+Die Framevorlage erkennt untergeordnete **Frame-** und [**Mesh-Knoten**](mesh.md) innerhalb eines Frames und kann benutzerdefinierte Vorlagen über eine Rückruffunktion erkennen.
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 

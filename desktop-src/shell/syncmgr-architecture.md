@@ -1,6 +1,6 @@
 ---
-description: Der Synchronisierungs-Manager umfasst Komponenten der Benutzeroberfläche, z. b. die Dialogfelder im Registerkarten Format im syncmgr-Dienst, Fehler Dialogfelder und Fortschritts Dialogfelder.
-title: Architektur der Synchronisierungs Verwaltung
+description: Der Synchronisierungs-Manager enthält Benutzeroberflächenkomponenten, z. B. die Dialogfelder im Registerkartenfenster im SyncMgr-Dienst, Fehlerdialoge und Statusdialogfelder.
+title: Synchronization Manager-Architektur
 ms.topic: article
 ms.date: 05/31/2018
 ms.assetid: db338835-ca8d-4e9f-973a-8eb081feda2b
@@ -9,20 +9,20 @@ api_type: ''
 api_location: ''
 topic_type:
 - kbArticle
-ms.openlocfilehash: f178b407c1f7d568c9de2ce7c81d937e7d1cdef4
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 584329a06ee9df80558d9961b734b62a57d5ebccd83f200690812fa99132b06d
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "103760507"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118451866"
 ---
-# <a name="synchronization-manager-architecture"></a>Architektur der Synchronisierungs Verwaltung
+# <a name="synchronization-manager-architecture"></a>Synchronization Manager-Architektur
 
-Der Synchronisierungs-Manager umfasst Komponenten der Benutzeroberfläche, z. b. die Dialogfelder im Registerkarten Format im syncmgr-Dienst, Fehler Dialogfelder und Fortschritts Dialogfelder. Mit den Benutzeroberflächen Komponenten kann der Endbenutzer die Synchronisierung von Anwendungen planen und die automatische Synchronisierung so einrichten, dass Sie in Verbindung mit den angegebenen System Ereignissen auftritt. Beispielsweise kann syncmgr bei der Benutzeranmeldung oder beim Herunterfahren des Systems aufgerufen werden. Der Benutzer kann auch eine manuelle Synchronisierung aufrufen.
+Der Synchronisierungs-Manager enthält Benutzeroberflächenkomponenten, z. B. die Dialogfelder im Registerkartenfenster im SyncMgr-Dienst, Fehlerdialoge und Statusdialogfelder. Mit den Benutzeroberflächenkomponenten kann der Endbenutzer Anwendungen für die Synchronisierung planen und die automatische Synchronisierung in Verbindung mit angegebenen Systemereignissen einrichten. Beispielsweise kann SyncMgr bei der Benutzeranmeldung oder beim Herunterfahren des Systems aufgerufen werden. Der Benutzer kann auch eine manuelle Synchronisierung aufrufen.
 
-Der Benutzer wählt eine Anwendung aus und gibt die Elemente in der Anwendung an, die synchronisiert werden sollen, und legt ein Auslöserereignis fest. In einer e-Mail-Anwendung kann z. b. die Eingangsbox, die Postausgang oder ein anderer Ordner, der Nachrichten enthält, ein separates Element für die Anwendung sein.
+Der Benutzer wählt eine Anwendung aus und gibt die Elemente in der Anwendung an, die synchronisiert werden sollen, und legt ein Triggerereignis fest. Beispielsweise kann der Posteingang, der Posteingang oder ein anderer Ordner, der Nachrichten enthält, in einer E-Mail-Anwendung ein separates Element für die Anwendung sein.
 
-Syncmgr umfasst auch eine Programmierschnittstelle, sodass sich Anwendungen registrieren können, um Synchronisierungs Funktionen zu verwenden, Fehler verarbeiten und während des Synchronisierungs Vorgangs Statusinformationen und Benachrichtigungen empfangen können.
+SyncMgr enthält auch eine Programmierschnittstelle, sodass Anwendungen sich registrieren können, um Synchronisierungsfunktionen zu verwenden, Fehler verarbeiten und während des Synchronisierungsprozesses Statusinformationen und Benachrichtigungen empfangen können.
 
  
 

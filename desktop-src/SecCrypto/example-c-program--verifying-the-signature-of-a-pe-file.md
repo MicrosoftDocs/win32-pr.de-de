@@ -1,21 +1,21 @@
 ---
-description: Die WinVerifyTrust-API kann verwendet werden, um die Signatur einer portablen ausführbaren Datei zu überprüfen.
+description: Die WinVerifyTrust-API kann verwendet werden, um die Signatur einer portierbaren ausführbaren Datei zu überprüfen.
 ms.assetid: dd53bd44-5dbf-44e9-9945-093995508f44
-title: 'Beispiel-C-Programm: Überprüfen der Signatur einer PE-Datei'
+title: 'Beispiel C-Programm: Überprüfen der Signatur einer PE-Datei'
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 90bdea6dbb2b14e9f153cebc7948166da18f9208
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: ec2f2aa5261924fcb9744848f4d9455b2aad69c28ad03360370f621886a9339d
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106350174"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117765502"
 ---
-# <a name="example-c-program-verifying-the-signature-of-a-pe-file"></a>Beispiel-C-Programm: Überprüfen der Signatur einer PE-Datei
+# <a name="example-c-program-verifying-the-signature-of-a-pe-file"></a>Beispiel C-Programm: Überprüfen der Signatur einer PE-Datei
 
-Die [**WinVerifyTrust**](/windows/desktop/api/Wintrust/nf-wintrust-winverifytrust) -API kann verwendet werden, um die Signatur einer portablen ausführbaren Datei zu überprüfen.
+Die [**WinVerifyTrust-API**](/windows/desktop/api/Wintrust/nf-wintrust-winverifytrust) kann verwendet werden, um die Signatur einer portierbaren ausführbaren Datei zu überprüfen.
 
-Im folgenden Beispiel wird gezeigt, wie die [**WinVerifyTrust**](/windows/desktop/api/Wintrust/nf-wintrust-winverifytrust) -API verwendet wird, um die Signatur einer signierten portablen ausführbaren Datei zu überprüfen.
+Das folgende Beispiel zeigt, wie Sie die [**WinVerifyTrust-API**](/windows/desktop/api/Wintrust/nf-wintrust-winverifytrust) verwenden, um die Signatur einer signierten portablen ausführbaren Datei zu überprüfen.
 
 
 ```C++

@@ -1,29 +1,29 @@
 ---
-description: Anwendungen müssen Daten aus der Zeichenbreite abrufen, wenn Sie Aufgaben wie das Anpassen von Text Zeichenfolgen an die Seiten-oder Spaltenbreite ausführen.
+description: Anwendungen müssen Daten mit Zeichenbreite abrufen, wenn sie Aufgaben wie das Anpassen von Textzeichenfolgen an Seiten- oder Spaltenbreiten ausführen.
 ms.assetid: 0c84f5f9-71cd-4077-bc99-f23a393c1c4d
-title: Zeichenbreite
+title: Zeichenbreiten
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 950fbb7e6ad1e5f4ef12f2abd9e528ce3158a869
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 822ae01ea1ccd5a2a7ec118cb1b93211b1c2e5c0a215737a600d9450b8996117
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "103863687"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117888099"
 ---
-# <a name="character-widths"></a>Zeichenbreite
+# <a name="character-widths"></a>Zeichenbreiten
 
-Anwendungen müssen Daten aus der Zeichenbreite abrufen, wenn Sie Aufgaben wie das Anpassen von Text Zeichenfolgen an die Seiten-oder Spaltenbreite ausführen. Es gibt vier Funktionen, die eine Anwendung verwenden kann, um Daten mit Zeichenbreite abzurufen. Zwei dieser Funktionen rufen die Zeichen Vorlauf Breite ab, und zwei dieser Funktionen rufen tatsächliche Daten der Zeichenbreite ab.
+Anwendungen müssen Daten mit Zeichenbreite abrufen, wenn sie Aufgaben wie das Anpassen von Textzeichenfolgen an Seiten- oder Spaltenbreiten ausführen. Es gibt vier Funktionen, mit denen eine Anwendung Daten mit Zeichenbreite abrufen kann. Zwei dieser Funktionen rufen die zeichenverbreitete Breite ab, und zwei dieser Funktionen rufen daten mit der tatsächlichen Zeichenbreite ab.
 
-Eine Anwendung kann die [GetCharWidth32](/windows/desktop/api/Wingdi/nf-wingdi-getcharwidth32a) -Funktion und die [getcharwidthfloat](/windows/desktop/api/Wingdi/nf-wingdi-getcharwidthfloata) -Funktion verwenden, um die voraus Breite für einzelne Zeichen oder Symbole in einer Text Zeichenfolge abzurufen. Die erweiterte Breite ist die Distanz, die der Cursor auf einer Videoanzeige oder der Druck Kopf auf einem Drucker vor dem Drucken des nächsten Zeichens in einer Text Zeichenfolge vor dem Drucken des nächsten Zeichens fortsetzen muss. Die [**GetCharWidth32**](/windows/win32/api/wingdi/nf-wingdi-getcharwidth32a) -Funktion gibt die erweiterte Breite als ganzzahligen Wert zurück. Wenn eine höhere Genauigkeit erforderlich ist, kann eine Anwendung die [**getcharwidthfloat**](/windows/win32/api/wingdi/nf-wingdi-getcharwidthfloata) -Funktion verwenden, um Werte für die Sekundenbruchteile abzurufen.
+Eine Anwendung kann die [Funktionen GetCharWidth32](/windows/desktop/api/Wingdi/nf-wingdi-getcharwidth32a) und [GetCharWidthFloat](/windows/desktop/api/Wingdi/nf-wingdi-getcharwidthfloata) verwenden, um die Vorbreite für einzelne Zeichen oder Symbole in einer Textzeichenfolge abzurufen. Die vorverbreitete Breite ist der Abstand, den der Cursor auf einer Videoanzeige oder der Druckkopf auf einem Drucker vor dem Drucken des nächsten Zeichens in einer Textzeichenfolge vorausbewegen muss. Die [**GetCharWidth32-Funktion**](/windows/win32/api/wingdi/nf-wingdi-getcharwidth32a) gibt die Breite als ganzzahligen Wert zurück. Wenn eine höhere Genauigkeit erforderlich ist, kann eine Anwendung die [**GetCharWidthFloat-Funktion**](/windows/win32/api/wingdi/nf-wingdi-getcharwidthfloata) verwenden, um Werte für die Bruchbreite nach vorn abzurufen.
 
-Eine Anwendung kann tatsächliche Daten der Zeichenbreite mithilfe der Funktionen [getcharabcwidth](/windows/desktop/api/Wingdi/nf-wingdi-getcharabcwidthsa) und [**getcharabcwidthsfloat**](/windows/desktop/api/Wingdi/nf-wingdi-getcharabcwidthsfloata) abrufen. Die **getcharabcwidthsfloat** -Funktion funktioniert mit allen Schriftarten. Die [**getcharabcbreiten**](/windows/win32/api/wingdi/nf-wingdi-getcharabcwidthsa) -Funktion funktioniert nur mit TrueType-und OpenType-Schriftarten. Weitere Informationen zu TrueType-und OpenType-Schriftarten finden Sie unter [Raster-, Vektor-, TrueType-und OpenType-Schriftarten](raster--vector--truetype--and-opentype-fonts.md).
+Eine Anwendung kann Daten mit tatsächlicher Zeichenbreite mithilfe der [Funktionen GetCharABCWidths](/windows/desktop/api/Wingdi/nf-wingdi-getcharabcwidthsa) und [**GetCharABCWidthsFloat**](/windows/desktop/api/Wingdi/nf-wingdi-getcharabcwidthsfloata) abrufen. Die **GetCharABCWidthsFloat-Funktion** funktioniert mit allen Schriftarten. Die [**GetCharABCWidths-Funktion**](/windows/win32/api/wingdi/nf-wingdi-getcharabcwidthsa) funktioniert nur mit TrueType- und OpenType-Schriftarten. Weitere Informationen zu TrueType- und OpenType-Schriftarten finden Sie unter [Raster, Vector, TrueType und OpenType Fonts](raster--vector--truetype--and-opentype-fonts.md).
 
 Die folgende Abbildung zeigt die drei Komponenten einer Zeichenbreite:
 
-![Darstellung der Abstände, b-Abstände und c-Abstände von zwei angrenzenden Zeichen](images/csftx-02.png)
+![Abbildung: Abstand, B-Abstand und C-Abstand von zwei angrenzenden Zeichen](images/csftx-02.png)
 
-Der Abstand ist die Breite, die der aktuellen Position vor dem Platzieren des Zeichens hinzugefügt wird. Der B-Abstand ist die Breite des Zeichens selbst. Der C-Abstand ist der Leerraum rechts vom Zeichen. Die gesamte Fortschritt Breite wird durch Berechnen der Summe von A + B + C festgelegt. Die Zeichen Zelle ist ein imaginäres Rechteck, das die einzelnen Zeichen oder Symbole in einer Schriftart umgibt. Da Zeichen die Zeichen Zelle überschreiten oder unterschreiten können, kann es sich bei den Schritten a und C um eine negative Zahl handeln.
+Der Abstand A ist die Breite, die der aktuellen Position hinzugefügt werden soll, bevor das Zeichen platziert wird. Der B-Abstand ist die Breite des Zeichens selbst. Der C-Abstand ist der Leerraum rechts vom Zeichen. Die gesamter Fortschrittsbreite wird durch Berechnen der Summe von A+B+C bestimmt. Die Zeichenzelle ist ein imaginäres Rechteck, das jedes Zeichen oder Symbol in einer Schriftart umschließt. Da Zeichen die Zeichenzelle über- oder unterhängen können, kann eines oder beide der Inkrementen A und C eine negative Zahl sein.
 
  
 

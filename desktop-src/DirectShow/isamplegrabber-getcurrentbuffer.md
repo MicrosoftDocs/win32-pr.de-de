@@ -1,7 +1,7 @@
 ---
-description: Die getcurrentbuffer-Methode ruft eine Kopie des Puffers ab, der mit dem letzten Beispiel verknüpft ist.
+description: Die GetCurrentBuffer-Methode ruft eine Kopie des Puffers ab, der dem letzten Beispiel zugeordnet ist.
 ms.assetid: 08550c82-4711-4725-9cd0-19b43cf4c92e
-title: 'Isamplegrabber:: getcurrentbuffer-Methode (qedit. h)'
+title: ISampleGrabber::GetCurrentBuffer-Methode (Qedit.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -14,21 +14,21 @@ api_type:
 api_location:
 - strmiids.lib
 - strmiids.dll
-ms.openlocfilehash: d4df4c825761b42533590f10432bf62e5e4e0298
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 88af9469a1470a02be62b7684a66990c5622820e370518ed53267bd87d981879
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106369162"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117818049"
 ---
-# <a name="isamplegrabbergetcurrentbuffer-method"></a>Isamplegrabber:: getcurrentbuffer-Methode
+# <a name="isamplegrabbergetcurrentbuffer-method"></a>ISampleGrabber::GetCurrentBuffer-Methode
 
 > [!Note]  
-> \[Veraltet. Diese API kann aus zukünftigen Versionen von Windows entfernt werden.\]
+> \[Veraltet. Diese API kann aus zukünftigen Releases von Windows entfernt werden.\]
 
  
 
-Die **getcurrentbuffer** -Methode ruft eine Kopie des Puffers ab, der mit dem letzten Beispiel verknüpft ist.
+Die **GetCurrentBuffer-Methode** ruft eine Kopie des Puffers ab, der dem letzten Beispiel zugeordnet ist.
 
 ## <a name="syntax"></a>Syntax
 
@@ -46,17 +46,17 @@ HRESULT GetCurrentBuffer(
 
 <dl> <dt>
 
-*pbuffersize* \[ in, out\]
+*pBufferSize* \[ in, out\]
 </dt> <dd>
 
-Ein Zeiger auf die Größe des Puffers. Wenn *pbuffer* den Wert **null** hat, erhält dieser Parameter die erforderliche Puffergröße in Bytes. Wenn *pbuffer* nicht **null** ist, legen Sie diesen Parameter auf die Größe des Puffers (in Bytes) fest. Bei der Ausgabe empfängt der-Parameter die Anzahl der Bytes, die in den Puffer kopiert wurden. Dieser Wert kann kleiner sein als die Größe des Puffers.
+Zeiger auf die Größe des Puffers. Wenn *pBuffer* **NULL** ist, empfängt dieser Parameter die erforderliche Puffergröße in Bytes. Wenn *pBuffer* nicht **NULL** ist, legen Sie diesen Parameter auf die Größe des Puffers in Bytes fest. Bei der Ausgabe empfängt der Parameter die Anzahl der Bytes, die in den Puffer kopiert wurden. Dieser Wert kann kleiner als die Größe des Puffers sein.
 
 </dd> <dt>
 
-*pbuffer* \[ vorgenommen\]
+*pBuffer* \[ out\]
 </dt> <dd>
 
-Zeiger auf ein Bytearray mit der Größe *pbuffersize* oder **null**. Wenn dieser Parameter nicht **null** ist, wird der aktuelle Puffer in das Array kopiert. Wenn dieser Parameter **null** ist, erhält der *pbuffersize* -Parameter die erforderliche Puffergröße.
+Zeiger auf ein Bytearray der Größe *pBufferSize* oder **NULL**. Wenn dieser Parameter nicht **NULL** ist, wird der aktuelle Puffer in das Array kopiert. Wenn dieser Parameter **NULL** ist, empfängt der *pBufferSize-Parameter* die erforderliche Puffergröße.
 
 </dd> </dl>
 
@@ -68,36 +68,36 @@ Gibt einen der folgenden Werte zurück.
 
 | Rückgabecode                                                                                           | Beschreibung                                                                                                                  |
 |-------------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------|
-| <dl> <dt>**E \_ invalidArg**</dt> </dl>          | Die Stichproben werden nicht gepuffert. Aufrufen von [**isamplegrabber:: setbuffersamples**](isamplegrabber-setbuffersamples.md).<br/> |
-| <dl> <dt>**E \_ outo-Memory**</dt> </dl>         | Der angegebene Puffer ist nicht groß genug.<br/>                                                                         |
-| <dl> <dt>**E- \_ Zeiger**</dt> </dl>             | **Null** -Zeigerargument.<br/>                                                                                        |
+| <dl> <dt>**E \_ INVALIDARG**</dt> </dl>          | Beispiele werden nicht gepuffert. Rufen Sie [**ISampleGrabber::SetBufferSamples auf.**](isamplegrabber-setbuffersamples.md)<br/> |
+| <dl> <dt>**E \_ OUTOFMEMORY**</dt> </dl>         | Der angegebene Puffer ist nicht groß genug.<br/>                                                                         |
+| <dl> <dt>**E \_ POINTER**</dt> </dl>             | **NULL-Zeigerargument.**<br/>                                                                                        |
 | <dl> <dt>**S \_ OK**</dt> </dl>                  | Erfolg.<br/>                                                                                                          |
-| <dl> <dt>**VFW \_ E \_ nicht \_ verbunden**</dt> </dl> | Der Filter ist nicht verbunden.<br/>                                                                                      |
-| <dl> <dt>**VFW \_ E \_ falscher \_ Zustand**</dt> </dl>   | Der Filter hat noch keine Stichproben empfangen. Um ein Beispiel zu liefern, führen Sie das Diagramm aus oder halten es an.<br/>                         |
+| <dl> <dt>**VFW \_ E \_ NICHT \_ VERBUNDEN**</dt> </dl> | Der Filter ist nicht verbunden.<br/>                                                                                      |
+| <dl> <dt>**VFW \_ E \_ WRONG \_ STATE**</dt> </dl>   | Der Filter hat noch keine Beispiele erhalten. Führen Sie das Diagramm aus, oder halten Sie es an, um ein Beispiel zu übermitteln.<br/>                         |
 
 
 
  
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Um die Pufferung zu aktivieren, wenden Sie [**isamplegrabber:: setbuffersamples**](isamplegrabber-setbuffersamples.md) mit dem Wert **true** an.
+Um die Pufferung zu aktivieren, rufen [**Sie ISampleGrabber::SetBufferSamples**](isamplegrabber-setbuffersamples.md) mit dem Wert **TRUE** auf.
 
-Ruft diese Methode zweimal auf. Legen Sie für den ersten-Befehl *pbuffer* auf **null** fest. Die Größe des Puffers wird in " *pbuffersize*" zurückgegeben. Weisen Sie dann ein Array zu, und nennen Sie die Methode erneut. Übergeben Sie im zweiten-Befehl die Größe des Arrays in *pbuffersize*, und übergeben Sie die Adresse des Arrays in *pbuffer*. Wenn das Array nicht groß genug ist, gibt die Methode "E \_ outo fmemory" zurück.
+Rufen Sie diese Methode zweimal auf. Legen Sie *pBuffer* beim ersten Aufruf auf **NULL** fest. Die Größe des Puffers wird in *pBufferSize* zurückgegeben. Ordnen Sie dann ein Array zu, und rufen Sie die Methode erneut auf. Übergeben Sie beim zweiten Aufruf die Größe des Arrays in *pBufferSize* und die Adresse des Arrays in *pBuffer*. Wenn das Array nicht groß genug ist, gibt die Methode E \_ OUTOFMEMORY zurück.
 
-Der *pbuffer* -Parameter wird als **Long** -Zeiger eingegeben, aber der Inhalt des Puffers hängt vom Format der Daten ab. Wenden Sie [**isamplegrabber:: getconnectedmediatype**](isamplegrabber-getconnectedmediatype.md) an, um den Medientyp des Formats zu erhalten.
+Der *pBuffer-Parameter* wird als **long-Zeiger** eingegeben, aber der Inhalt des Puffers hängt vom Format der Daten ab. Rufen Sie [**ISampleGrabber::GetConnectedMediaType**](isamplegrabber-getconnectedmediatype.md) auf, um den Medientyp des Formats abzurufen.
 
-Diese Methode wird nicht aufgerufen, während das Filter Diagramm ausgeführt wird. Während der Ausführung des Filter Diagramms wird der Inhalt des Puffers beim Empfang eines neuen Beispiels überschrieben. Die beste Möglichkeit, diese Methode zu verwenden, ist die Verwendung des "One-Shot"-Modus, der das Diagramm nach dem Empfang des ersten Beispiels stoppt. Um den One-Shot-Modus festzulegen, wenden Sie [**isamplegrabber:: setoneshot**](isamplegrabber-setoneshot.md)an.
+Rufen Sie diese Methode nicht auf, während das Filterdiagramm ausgeführt wird. Während das Filterdiagramm ausgeführt wird, überschreibt der Sample Grabber-Filter den Inhalt des Puffers, sobald er ein neues Beispiel empfängt. Die beste Möglichkeit, diese Methode zu verwenden, ist die Verwendung des "einmaligen Modus", der das Diagramm nach dem Empfang des ersten Beispiels beendet. Um den einmaligen Modus festzulegen, rufen [**Sie ISampleGrabber::SetOneShot**](isamplegrabber-setoneshot.md)auf.
 
-Der Filter puffert keine vorab Beispiele oder Beispiele, in denen das **dwstreamid** -Element der " [**am \_ SAMPLE2 \_ Properties**](/windows/win32/api/strmif/ns-strmif-am_sample2_properties) "-Struktur etwas anderes als "am-Stream-Medien" ist \_ \_ .
+Der Filter puffert keine Prärollbeispiele oder Beispiele, in denen der **dwStreamId-Member** der [**AM \_ SAMPLE2 \_ PROPERTIES-Struktur**](/windows/win32/api/strmif/ns-strmif-am_sample2_properties) etwas anderes als AM \_ STREAM MEDIA \_ ist.
 
 > [!Note]  
-> Die Header Datei "qedit. h" ist nicht mit Direct3D-Headern nach Version 7 kompatibel.
+> Die Headerdatei Qedit.h ist nicht mit Direct3D-Headern kompatibel, die höher als Version 7 sind.
 
  
 
 > [!Note]  
-> Zum Abrufen von "qedit. h" Laden Sie das [Microsoft Windows SDK Update für Windows Vista und .NET Framework 3,0](https://msdn.microsoft.com/windowsvista/bb980924.aspx)herunter. "Qedit. h" ist im Microsoft Windows SDK für Windows 7 und .NET Framework 3,5 Service Pack 1 nicht verfügbar.
+> Laden Sie zum Abrufen von Qedit.h das [Microsoft Windows SDK-Update für Windows Vista und .NET Framework 3.0](https://msdn.microsoft.com/windowsvista/bb980924.aspx)herunter. Qedit.h ist im Microsoft Windows SDK für Windows 7 und .NET Framework 3.5 Service Pack 1 nicht verfügbar.
 
  
 
@@ -107,19 +107,19 @@ Der Filter puffert keine vorab Beispiele oder Beispiele, in denen das **dwstream
 
 | Anforderung | Wert |
 |--------------------|-----------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>"Qedit. h"</dt> </dl>      |
-| Bibliothek<br/> | <dl> <dt>"" "" ". Lib"</dt> </dl> |
+| Header<br/>  | <dl> <dt>Qedit.h</dt> </dl>      |
+| Bibliothek<br/> | <dl> <dt>Strmiids.lib</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[Verwenden der Beispiel-Grabber](using-the-sample-grabber.md)
+[Verwenden des Beispielgrabbers](using-the-sample-grabber.md)
 </dt> <dt>
 
-[**Isamplegrabber-Schnittstelle**](isamplegrabber.md)
+[**ISampleGrabber-Schnittstelle**](isamplegrabber.md)
 </dt> </dl>
 
  

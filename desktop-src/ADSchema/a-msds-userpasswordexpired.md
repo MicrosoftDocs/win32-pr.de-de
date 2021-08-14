@@ -1,11 +1,11 @@
 ---
-title: ms-DS-User-Password-abgelaufenes Attribut
+title: ms-DS-User-Password-Expired-Attribut
 description: Gibt an, ob das Kennwort für das Konto, auf das dieses Attribut verweist, abgelaufen ist.
 ms.assetid: cab4a2e8-b440-45d2-8da8-9f020ffee08c
 ms.tgt_platform: multiple
 keywords:
-- AD-Schema für ms-DS-User-Password-abgelaufenes Attribut
-- adschema des msDS-userpasswordexpired-Attributs
+- ms-DS-User-Password-Expired attribute AD Schema
+- msDS-UserPasswordExpired-Attribut AD-Schema
 topic_type:
 - apiref
 api_name:
@@ -14,29 +14,29 @@ api_type:
 - Schema
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 73d99143c470e58d1b1cb5e0cbd7e5302618ff0a
-ms.sourcegitcommit: b77ace27b0432e7cd3863191b11926be032fbe2f
+ms.openlocfilehash: a187f9d0b2be2feeca076d7c7eef82a34ca5827a9d07c76b2d711a5196f84ba8
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "104213787"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118425356"
 ---
-# <a name="ms-ds-user-password-expired-attribute"></a>ms-DS-User-Password-abgelaufenes Attribut
+# <a name="ms-ds-user-password-expired-attribute"></a>ms-DS-User-Password-Expired-Attribut
 
-Gibt an, ob das Kennwort für das Konto, auf das dieses Attribut verweist, abgelaufen ist. True, wenn das Kennwort abgelaufen ist. andernfalls false.
+Gibt an, ob das Kennwort für das Konto, auf das dieses Attribut verweist, abgelaufen ist. TRUE, wenn das Kennwort abgelaufen ist; Andernfalls False.
 
 
 
 | Eingabe | Wert |
 |-------------------|--------------------------------------|
-| CN                | ms-DS-User-Password-abgelaufen          |
-| LDAP-Display-Name | MSDS-userpasswordexpired             |
+| CN                | ms-DS-User-Password-Expired          |
+| Ldap-Anzeigename | msDS-UserPasswordExpired             |
 | Size              | \-                                   |
-| Berechtigung aktualisieren  | \-                                   |
-| Aktualisierungshäufigkeit  | \-                                   |
+| Aktualisieren von Berechtigungen  | \-                                   |
+| Updatehäufigkeit  | \-                                   |
 | Attribute-Id      | 1.2.840.113556.1.4.1858              |
-| System-ID-GUID    | 565c7ab5-e13e-47l6-ABB5-de741806f 125 |
-| Syntax            | [**Booleschen**](s-boolean.md)         |
+| System-ID-GUID    | 565c7ab5-e13e-47f6-abb5-de741806f125 |
+| Syntax            | [**Boolean**](s-boolean.md)         |
 
 
 
@@ -53,21 +53,21 @@ Gibt an, ob das Kennwort für das Konto, auf das dieses Attribut verweist, abgel
 | Link-ID                | \-                                                                |
 | MAPI-Id                | \-                                                                |
 | System-Only            | False                                                             |
-| Ist-einwertig       | Richtig                                                              |
+| Ist einwertig       | True                                                              |
 | Ist indiziert             | False                                                             |
 | Im globalen Katalog      | False                                                             |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                                      |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                                      |
 | Range-Lower            | \-                                                                |
 | Range-Upper            | \-                                                                |
 | Search-Flags           | 0x00000000                                                        |
 | System-Flags           | 0x00000014                                                        |
-| In verwendete Klassen        | [**ms-DS-Bindable-Objekt**](c-msds-bindableobject.md)<br/> |
+| In verwendete Klassen        | [**ms-DS-Bindable-Object**](c-msds-bindableobject.md)<br/> |
 
 
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-In Adam ersetzt dieses Attribut das Flag " [**ADS- \_ \_ Kennwort \_ abgelaufen**](/windows/desktop/api/iads/ne-iads-ads_user_flag_enum) " des Attributs " [**userAccountControl**](a-useraccountcontrol.md) ".
+In ADAM ersetzt dieses Attribut das [**ADS \_ UF \_ PASSWORD \_ EXPIRED-Flag**](/windows/desktop/api/iads/ne-iads-ads_user_flag_enum) des [**userAccountControl-Attributs.**](a-useraccountcontrol.md)
 
  
 

@@ -1,63 +1,63 @@
 ---
-description: Die Bit-Flag-Konstanten von linecallcomplmode \_ beschreiben verschiedene Methoden, mit denen ein-Vorgang abgeschlossen werden kann.
+description: Die \_ LINECALLCOMPLMODE-Bitflagkonst constants beschreiben verschiedene Möglichkeiten, wie ein Aufruf abgeschlossen werden kann.
 ms.assetid: 68f755a1-586b-4c5b-b8e8-c8b40eb71685
-title: LINECALLCOMPLMODE_ Konstanten (TAPI. h)
+title: LINECALLCOMPLMODE_ Konstanten (Tapi.h)
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 373a66b6ce13b7bfba00303bea824f542bf0016a
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: d43f76c9b8012f9ecb60c6b0ffd787d5a0bad87794eb833cc4095c276ba983f9
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106372346"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117761754"
 ---
-# <a name="linecallcomplmode_-constants"></a>Linecallcomplmode- \_ Konstanten
+# <a name="linecallcomplmode_-constants"></a>LINECALLCOMPLMODE-Konstanten \_
 
-Die Bit-Flag-Konstanten von **linecallcomplmode \_** beschreiben verschiedene Methoden, mit denen ein-Vorgang abgeschlossen werden kann.
+Die **\_ LINECALLCOMPLMODE-Bitflags-Konstanten** beschreiben verschiedene Möglichkeiten, wie ein Aufruf abgeschlossen werden kann.
 
 <dl> <dt>
 
-<span id="LINECALLCOMPLMODE_CALLBACK"></span><span id="linecallcomplmode_callback"></span>**linecallcomplmode- \_ Rückruf**
+<span id="LINECALLCOMPLMODE_CALLBACK"></span><span id="linecallcomplmode_callback"></span>**LINECALLCOMPLMODE-RÜCKRUF \_**
 </dt> <dd> <dl> <dt>
 
 
 
-Fordert an, dass die aufgerufene Station den Aufruf zurückgibt, wenn Sie in den Leerlauf kehrt.
+Fordert die aufgerufene Station auf, den Aufruf zurückgibt, wenn sie in den Leerlauf zurückkehrt.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="LINECALLCOMPLMODE_CAMPON"></span><span id="linecallcomplmode_campon"></span>**linecallcomplmode- \_ Campon**
+<span id="LINECALLCOMPLMODE_CAMPON"></span><span id="linecallcomplmode_campon"></span>**LINECALLCOMPLMODEZEILEN \_**
 </dt> <dd> <dl> <dt>
 
 
 
-Fügt den-aufruder in die Warteschlange ein, bis der-
+Reiht den Aufruf in die Warteschlange ein, bis der Aufruf abgeschlossen werden kann.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="LINECALLCOMPLMODE_INTRUDE"></span><span id="linecallcomplmode_intrude"></span>**Eingriff in linecallcomplmode \_**
+<span id="LINECALLCOMPLMODE_INTRUDE"></span><span id="linecallcomplmode_intrude"></span>**LINECALLCOMPLMODE \_ INTRUDE**
 </dt> <dd> <dl> <dt>
 
 
 
-Fügt die Anwendung dem vorhandenen Aufruf an der aufgerufenen Station hinzu (Barge in).
+Fügt die Anwendung dem vorhandenen Aufruf an der aufgerufenen Station (Barge in) hinzu.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="LINECALLCOMPLMODE_MESSAGE"></span><span id="linecallcomplmode_message"></span>**linecallcomplmode- \_ Meldung**
+<span id="LINECALLCOMPLMODE_MESSAGE"></span><span id="linecallcomplmode_message"></span>**LINECALLCOMPLMODE-NACHRICHT \_**
 </dt> <dd> <dl> <dt>
 
 
 
-Hinterlässt eine kurze vordefinierte Meldung für die aufgerufene Station (Wort Aufruf durchlassen). Die zu sendende Nachricht wird separat angegeben.
+Hinterlässt eine kurze vordefinierte Nachricht für die aufgerufene Station (Word Calling verlassen). Die zu sendende Nachricht wird separat angegeben.
 
 
 </dt> </dl> </dd> </dl>
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
 Keine Erweiterbarkeit. Alle 32 Bits sind reserviert.
 
@@ -67,8 +67,8 @@ Keine Erweiterbarkeit. Alle 32 Bits sind reserviert.
 
 | Anforderung | Wert |
 |-------------------------|-----------------------------------------------------------------------------------|
-| TAPI-Version<br/> | Erfordert TAPI 2,0 oder höher<br/>                                             |
-| Header<br/>       | <dl> <dt>TAPI. h</dt> </dl> |
+| TAPI-Version<br/> | Erfordert TAPI 2.0 oder höher<br/>                                             |
+| Header<br/>       | <dl> <dt>Tapi.h</dt> </dl> |
 
 
 

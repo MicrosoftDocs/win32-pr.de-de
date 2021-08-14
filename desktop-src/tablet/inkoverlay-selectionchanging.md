@@ -1,19 +1,19 @@
 ---
-description: Tritt auf, wenn die Auswahl von frei Hand Eingaben innerhalb des-Steuer Elements geändert wird, z. b. durch Änderungen an der Benutzeroberfläche, von Ausschneide-und Einfüge Prozeduren oder von der Selection-Eigenschaft.
+description: Tritt ein, wenn sich die Auswahl der Freifläche im Steuerelement ändert, z. B. durch Änderungen an der Benutzeroberfläche, durch Ausschneide- und Einfügevorgänge oder durch die Selection-Eigenschaft.
 ms.assetid: dffdb183-d363-40d3-81a2-d496433f7075
-title: InkOverlay. SelectionChanging-Ereignis (msink AUT. h)
+title: InkOverlay.SelectionChanging-Ereignis (Msinkaut.h)
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: e830a9ea97f6722dd8ab9bdb782e4ae4ac5f44fb
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: fb9b7fa52c4897c7e1152deff7636259e07e2768929223327243c2da0b59e362
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106364173"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118218953"
 ---
-# <a name="inkoverlayselectionchanging-event"></a>InkOverlay. SelectionChanging-Ereignis
+# <a name="inkoverlayselectionchanging-event"></a>InkOverlay.SelectionChanging-Ereignis
 
-Tritt auf, wenn die Auswahl von frei Hand Eingaben innerhalb des-Steuer Elements geändert wird, z. b. durch Änderungen an der Benutzeroberfläche, von Ausschneide-und Einfüge Prozeduren oder von der [**Selection**](/windows/desktop/api/msinkaut/nf-msinkaut-iinkoverlay-get_selection) -Eigenschaft.
+Tritt ein, wenn sich die Auswahl der Freifläche im Steuerelement ändert, z. B. durch Änderungen [](/windows/desktop/api/msinkaut/nf-msinkaut-iinkoverlay-get_selection) an der Benutzeroberfläche, Durchschneide- und Einfügevorgänge oder die Selection-Eigenschaft.
 
 ## <a name="syntax"></a>Syntax
 
@@ -30,10 +30,10 @@ void SelectionChanging(
 
 <dl> <dt>
 
-*Neuauswahl* \[ in\]
+*NewSelection* \[ In\]
 </dt> <dd>
 
-Die neue Sammlung von [inkstrokes](/previous-versions/windows/desktop/legacy/ms703293(v=vs.85)) , die ausgewählt wird.
+Die neue Sammlung von [InkStrokes,](/previous-versions/windows/desktop/legacy/ms703293(v=vs.85)) die ausgewählt wird.
 
 </dd> </dl>
 
@@ -41,9 +41,9 @@ Die neue Sammlung von [inkstrokes](/previous-versions/windows/desktop/legacy/ms7
 
 Dieses Ereignis gibt keinen Wert zurück.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Diese Ereignismethode wird in den \_ Dispatch-only-Schnittstellen iinkoverlayevents und \_ iinkpictureevents (Dispinterfaces) mit der ID "DISPID \_ ioeselectionchanging" definiert.
+Diese Ereignismethode wird in den \_ \_ dispatch-only-Schnittstellen (dispinterfaces) von IInkOverlayEvents und IInkPictureEvents mit der ID DISPID \_ IOESelectionChanging definiert.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -51,21 +51,21 @@ Diese Ereignismethode wird in den \_ Dispatch-only-Schnittstellen iinkoverlayeve
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows XP Tablet PC Edition \[ Desktop-Apps\]<br/>                                                       |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur Desktop-Apps der XP Tablet PC Edition \[\]<br/>                                                       |
 | Unterstützte Mindestversion (Server)<br/> | Nicht unterstützt<br/>                                                                                           |
-| Header<br/>                   | <dl> <dt>Msink AUT. h (erfordert auch msink AUT \_ i. c)</dt> </dl> |
+| Header<br/>                   | <dl> <dt>Msinkaut.h (erfordert auch Msinkaut \_ i.c)</dt> </dl> |
 | Bibliothek<br/>                  | <dl> <dt>InkObj.dll</dt> </dl>                               |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
 [**InkOverlay-Klasse**](inkoverlay-class.md)
 </dt> <dt>
 
-[**Auswahl Eigenschaft**](/windows/desktop/api/msinkaut/nf-msinkaut-iinkoverlay-get_selection)
+[**Selection-Eigenschaft**](/windows/desktop/api/msinkaut/nf-msinkaut-iinkoverlay-get_selection)
 </dt> </dl>
 
  

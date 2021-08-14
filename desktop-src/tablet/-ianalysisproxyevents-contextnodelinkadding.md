@@ -1,7 +1,7 @@
 ---
-description: Tritt auf, bevor der Ink Analyzer ein icontextlink-Objekt zwischen zwei icontextnode-Objekten hinzufügt.
+description: Tritt ein, bevor das Ink-Analyseprogramm ein IContextLink-Objekt zwischen zwei IContextNode-Objekten hinzufügt.
 ms.assetid: ec56cb8e-5154-45ee-911d-e2a240d19dc3
-title: '_IAnalysisProxyEvents:: contextnodelta inkadditions-Ereignis (iacom. h)'
+title: _IAnalysisProxyEvents::ContextNodeLinkAdding-Ereignis (IACom.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,16 +13,16 @@ api_type:
 - COM
 api_location:
 - IACom.dll
-ms.openlocfilehash: 341c551064869532e8b51ddecdbe1d5a78878abd
-ms.sourcegitcommit: de72a1294df274b0a71dc0fdc42d757e5f6df0f3
+ms.openlocfilehash: 1d100d4ecb4caa6fb7230afd3d4ae6572466ae86855ac9bd28155b6b181cdd5a
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/05/2021
-ms.locfileid: "106366380"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118452155"
 ---
-# <a name="_ianalysisproxyeventscontextnodelinkadding-event"></a>\_Ianalysisproxyevents:: contextnodelta inkadditions-Ereignis
+# <a name="_ianalysisproxyeventscontextnodelinkadding-event"></a>\_IAnalysisProxyEvents::ContextNodeLinkAdding-Ereignis
 
-Tritt auf, bevor der Ink Analyzer ein [**icontextlink**](icontextlink.md) -Objekt zwischen zwei [**icontextnode**](icontextnode.md) -Objekten hinzufügt.
+Tritt ein, bevor das Ink-Analyseprogramm ein [**IContextLink-Objekt**](icontextlink.md) zwischen zwei [**IContextNode-Objekten**](icontextnode.md) hinzufügt.
 
 ## <a name="syntax"></a>Syntax
 
@@ -40,29 +40,29 @@ HRESULT ContextNodeLinkAdding(
 
 <dl> <dt>
 
-*pinkanalyzer* \[ in\]
+*pInkAnalyzer* \[ In\]
 </dt> <dd>
 
-Das [**iinkanalyzer**](iinkanalyzer.md) -Element, das den Link hinzufügt.
+Der [**IInkAnalyzer,**](iinkanalyzer.md) der den Link hinzufügt.
 
 </dd> <dt>
 
-*pcontextlinkumbeadded* \[ in\]
+*pContextLinkToBeAdded* \[ In\]
 </dt> <dd>
 
-Das [**icontextlink**](icontextlink.md) -Objekt, das hinzugefügt werden soll.
+Das [**hinzuzufügende IContextLink-Objekt.**](icontextlink.md)
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Eine Beschreibung der Rückgabewerte finden Sie unter [Klassen und Schnittstellen-Ink-Analyse](classes-and-interfaces---ink-analysis.md).
+Eine Beschreibung der Rückgabewerte finden Sie unter Klassen und Schnittstellen – [Ink-Analyse.](classes-and-interfaces---ink-analysis.md)
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Verwenden Sie dieses Ereignis, wenn Ihre Anwendung ihre eigene Datenstruktur verwaltet, die mit der von [**iinkanalyzer**](iinkanalyzer.md)synchronisiert wird. Dieses Ereignis tritt während der ababstimmungs Phase der frei Hand Analyse oder als Reaktion auf eine Ink Analyzer-Methode auf, die einem [**icontextnode**](icontextnode.md)einen neuen [**icontextlink**](icontextlink.md) hinzufügt.
+Verwenden Sie dieses Ereignis, wenn Ihre Anwendung ihre eigene Datenstruktur verwaltet, die mit der des [**IInkAnalyzer**](iinkanalyzer.md)synchronisiert wird. Dieses Ereignis tritt während der Abstimmungsphase der Ink-Analyse oder als Reaktion auf eine Ink-Analysemethode auf, die einem [**IContextNode**](icontextnode.md)einen neuen [**IContextLink**](icontextlink.md) hinzufügt.
 
-Weitere Informationen zum Synchronisieren von Anwendungsdaten mit [**iinkanalyzer**](iinkanalyzer.md)finden Sie unter [Daten Proxy mit Ink-Analyse](data-proxy-with-ink-analysis.md).
+Weitere Informationen zum Synchronisieren Ihrer Anwendungsdaten mit [**IInkAnalyzer**](iinkanalyzer.md)finden Sie unter [Datenproxy mit Freihandanalyse.](data-proxy-with-ink-analysis.md)
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -70,36 +70,36 @@ Weitere Informationen zum Synchronisieren von Anwendungsdaten mit [**iinkanalyze
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows XP Tablet PC Edition \[ Desktop-Apps\]<br/>                                                 |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur Desktop-Apps der XP Tablet PC Edition \[\]<br/>                                                 |
 | Unterstützte Mindestversion (Server)<br/> | Nicht unterstützt<br/>                                                                                     |
-| Header<br/>                   | <dl> <dt>Iacom. h (erfordert auch iacom \_ i. c)</dt> </dl> |
+| Header<br/>                   | <dl> <dt>IACom.h (erfordert auch IACom \_ i.c)</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>IACom.dll</dt> </dl>                          |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen:
 
 <dl> <dt>
 
-[**\_Ianalysisproxyevents**](-ianalysisproxyevents.md)
+[**\_IAnalysisProxyEvents**](-ianalysisproxyevents.md)
 </dt> <dt>
 
-[**Iinkanalyzer**](iinkanalyzer.md)
+[**IInkAnalyzer**](iinkanalyzer.md)
 </dt> <dt>
 
-[**Icontextnode**](icontextnode.md)
+[**IContextNode**](icontextnode.md)
 </dt> <dt>
 
-[**Icontextlink**](icontextlink.md)
+[**IContextLink**](icontextlink.md)
 </dt> <dt>
 
-[**Iinkanalyzer:: analysierungsmethode**](iinkanalyzer-analyze.md)
+[**IInkAnalyzer::Analyze-Methode**](iinkanalyzer-analyze.md)
 </dt> <dt>
 
-[**Iinkanalyzer:: BackgroundAnalyze-Methode**](iinkanalyzer-backgroundanalyze.md)
+[**IInkAnalyzer::BackgroundAnalyze-Methode**](iinkanalyzer-backgroundanalyze.md)
 </dt> <dt>
 
-[Ink-Analyse Referenz](ink-analysis-reference.md)
+[Referenz zur Ink-Analyse](ink-analysis-reference.md)
 </dt> </dl>
 
  

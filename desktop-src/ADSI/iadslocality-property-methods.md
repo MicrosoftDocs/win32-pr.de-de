@@ -1,10 +1,10 @@
 ---
-title: Iadslolichkeit-Eigenschaften Methoden (IADs. h)
-description: Mit den Methoden der iadsloalität-Schnittstelle werden die in diesem Thema beschriebenen Eigenschaften gelesen und geschrieben. Weitere Informationen finden Sie unter Interface Property Methods.
+title: IADsLocality-Eigenschaftsmethoden (Iads.h)
+description: Die Methoden der IADsLocality-Schnittstelle lesen und schreiben die in diesem Thema beschriebenen Eigenschaften. Weitere Informationen finden Sie unter Schnittstelleneigenschaftenmethoden.
 ms.assetid: 5d1cea40-62fb-49d4-857f-4563e9db7f51
 ms.tgt_platform: multiple
 keywords:
-- Iadslolichkeit-Eigenschaften Methoden ADSI
+- IADsLocality-Eigenschaftsmethoden ADSI
 topic_type:
 - apiref
 api_name:
@@ -27,16 +27,16 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 34023f0af5365deb4f023d53a843dcf688c40afd
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 03954f95446dc898c5992c0ac6a16cc9679e363e9574adc2e780d29c90cb26f9
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "103956909"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118428037"
 ---
-# <a name="iadslocality-property-methods"></a>Iadslolichkeit-Eigenschaften Methoden
+# <a name="iadslocality-property-methods"></a>IADsLocality-Eigenschaftsmethoden
 
-Mit den Methoden der [**iadsloalität**](/windows/desktop/api/Iads/nn-iads-iadslocality) -Schnittstelle werden die in diesem Thema beschriebenen Eigenschaften gelesen und geschrieben. Weitere Informationen finden Sie unter [Interface Property Methods](interface-property-methods.md).
+Die Methoden der [**IADsLocality-Schnittstelle**](/windows/desktop/api/Iads/nn-iads-iadslocality) lesen und schreiben die in diesem Thema beschriebenen Eigenschaften. Weitere Informationen finden Sie unter [Schnittstelleneigenschaftsmethoden.](interface-property-methods.md)
 
 ## <a name="properties"></a>Eigenschaften
 
@@ -45,14 +45,14 @@ Mit den Methoden der [**iadsloalität**](/windows/desktop/api/Iads/nn-iads-iadsl
 **Beschreibung**
 </dt> <dd> <dl>
 
-Gibt den Text an, der den Ort beschreibt.
+Gibt den Text an, der die Lokalität beschreibt.
 
 <dt>
 
 Zugriffstyp: Lesen/Schreiben
 </dt> <dt>
 
-Skript Datentyp: **BSTR**
+Skriptdatentyp: **BSTR**
 </dt> <dt>
 
 
@@ -70,17 +70,17 @@ HRESULT put_Description(
 
 </dt> </dl> </dd> <dt>
 
-**Localityname**
+**LocalityName**
 </dt> <dd> <dl>
 
-Gibt den Namen der geografischen Region an, wie durch dieses lokalisiererobjekt dargestellt.
+Gibt den Namen der geografischen Region an, die durch dieses Gebietsschemaobjekt dargestellt wird.
 
 <dt>
 
 Zugriffstyp: Lesen/Schreiben
 </dt> <dt>
 
-Skript Datentyp: **BSTR**
+Skriptdatentyp: **BSTR**
 </dt> <dt>
 
 
@@ -101,14 +101,14 @@ HRESULT put_LocalityName(
 **PostalAddress**
 </dt> <dd> <dl>
 
-Gibt die Haupt Postadresse der Lokalität an.
+Gibt die Hauptpostadresse des Orts an.
 
 <dt>
 
 Zugriffstyp: Lesen/Schreiben
 </dt> <dt>
 
-Skript Datentyp: **BSTR**
+Skriptdatentyp: **BSTR**
 </dt> <dt>
 
 
@@ -126,17 +126,17 @@ HRESULT put_PostalAddress(
 
 </dt> </dl> </dd> <dt>
 
-**SeeAlso**
+**SieheAlso**
 </dt> <dd> <dl>
 
-Gibt ein Array von ADsPath-Namen der Verzeichnisobjekte an, die für dieses-Objekt relevant sind.
+Gibt ein Array von ADsPath-Namen von Verzeichnisobjekten an, die für dieses Objekt relevant sind.
 
 <dt>
 
 Zugriffstyp: Lesen/Schreiben
 </dt> <dt>
 
-Skript Datentyp: **Variant**
+Skriptdatentyp: **VARIANT**
 </dt> <dt>
 
 
@@ -158,7 +158,7 @@ HRESULT put_SeeAlso(
 
 ## <a name="examples"></a>Beispiele
 
-Im folgenden Codebeispiel werden die Lokalisierungsdaten eines Container Objekts angezeigt. Dabei wird davon ausgegangen, dass ein Lokalisier Objekt mit dem Namen "mylokalität" für das Container Objekt erstellt und die Eigenschaften festgelegt wurden.
+Im folgenden Codebeispiel werden die Lokalitätsdaten eines Containerobjekts angezeigt. Es wird davon ausgegangen, dass ein Lokalitätsobjekt namens "myLocality" für das Containerobjekt erstellt und die Eigenschaften festgelegt wurden.
 
 
 ```VB
@@ -192,23 +192,23 @@ Cleanup:
 |-------------------------------------|-----------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows Vista<br/>                                                                |
 | Unterstützte Mindestversion (Server)<br/> | Windows Server 2008<br/>                                                          |
-| Header<br/>                   | <dl> <dt>IADs. h</dt> </dl>       |
+| Header<br/>                   | <dl> <dt>Iads.h</dt> </dl>       |
 | DLL<br/>                      | <dl> <dt>Activeds.dll</dt> </dl> |
-| IID<br/>                      | IID \_ iadslolichkeit ist als A05E03A2-Effe-11CF-8ABC-00C04FD8D503 definiert.<br/>         |
+| IID<br/>                      | IID \_ IADsLocality ist als A05E03A2-WADE-11CF-8ABC-00C04FD8D503 definiert.<br/>         |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**IADs**](/windows/desktop/api/Iads/nn-iads-iads)
+[**Iads**](/windows/desktop/api/Iads/nn-iads-iads)
 </dt> <dt>
 
-[**Iadsloalität**](/windows/desktop/api/Iads/nn-iads-iadslocality)
+[**IADsLocality**](/windows/desktop/api/Iads/nn-iads-iadslocality)
 </dt> <dt>
 
-[Schnittstelleneigenschaften Methoden](interface-property-methods.md)
+[Schnittstelleneigenschaftsmethoden](interface-property-methods.md)
 </dt> </dl>
 
  

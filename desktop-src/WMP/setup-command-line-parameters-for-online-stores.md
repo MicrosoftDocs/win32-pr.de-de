@@ -1,39 +1,39 @@
 ---
-title: Einrichten von Befehlszeilen Parametern für Online Stores
-description: Einrichten von Befehlszeilen Parametern für Online Stores
+title: Einrichten von Befehlszeilenparametern für Onlineshops
+description: Einrichten von Befehlszeilenparametern für Onlineshops
 ms.assetid: 26224d7c-ca12-43b9-9150-3d39bccb85d3
 keywords:
-- Windows Media Player Online Stores, Setup-Befehlszeilenparameter
-- Online Stores, Setup-Befehlszeilenparameter
-- Typ 1 Online Stores, Setup Befehlszeilenparameter
-- Typ 2 Online Stores, Setup Befehlszeilenparameter
-- Setup-Befehlszeilenparameter
-- Windows Media Player Online Stores, Befehlszeilenparameter
-- Online Stores, Befehlszeilenparameter
-- Typ 1 Online Stores, Befehlszeilenparameter
-- Typ 2 Online Stores, Befehlszeilenparameter
+- Windows Media Player Onlineshops, Einrichten von Befehlszeilenparametern
+- Onlineshops, Befehlszeilenparameter einrichten
+- Geben Sie 1 Onlineshops ein, und richten Sie Befehlszeilenparameter ein.
+- Geben Sie 2 Onlineshops ein, und richten Sie Befehlszeilenparameter ein.
+- Einrichten von Befehlszeilenparametern
+- Windows Media Player Onlineshops, Befehlszeilenparameter
+- Onlineshops, Befehlszeilenparameter
+- Geben Sie 1 Onlineshops ein, Befehlszeilenparameter
+- Geben Sie 2 Onlineshops ein, Befehlszeilenparameter.
 - Befehlszeilenparameter
-- Windows Media Player Online Stores, Parameter
-- Online Stores, Parameter
-- Typ 1 Online Stores, Parameter
-- Typ 2 Online Stores, Parameter
+- Windows Media Player Onlineshops, Parameter
+- Onlineshops, Parameter
+- Geben Sie 1 Onlineshops, Parameter ein.
+- Geben Sie 2 Onlineshops, Parameter ein.
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 0605814d3f8ce5e3015cf67d38f213a6b6f07500
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: ff77df581b2be4b2539772065e1aabef281a4c6c931ca115a4f6331063cf2414
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "104036895"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118569301"
 ---
-# <a name="setup-command-line-parameters-for-online-stores"></a>Einrichten von Befehlszeilen Parametern für Online Stores
+# <a name="setup-command-line-parameters-for-online-stores"></a>Einrichten von Befehlszeilenparametern für Onlineshops
 
 > [!Note]  
-> In diesem Abschnitt werden die-Funktionen beschrieben, die für die Verwendung durch Online Stores Die Verwendung dieser Funktion außerhalb des Kontexts eines Online Stores wird nicht unterstützt.
+> In diesem Abschnitt werden funktionen beschrieben, die für die Verwendung durch Onlineshops entwickelt wurden. Die Verwendung dieser Funktionalität außerhalb des Kontexts eines Onlineshops wird nicht unterstützt.
 
- 
+ 
 
-Bei der Installation von Windows Media Player 10 oder Windows Media Player 11 unter Windows XP können Sie Befehlszeilenparameter anfügen, um den ersten Onlinespeicher anzugeben, der dem Benutzer angezeigt wird.
+Wenn Sie Windows Media Player 10 oder Windows Media Player 11 auf Windows XP installieren, können Sie Befehlszeilenparameter anfügen, um den ersten Onlineshop anzugeben, der dem Benutzer angezeigt wird.
 
 Syntax
 
@@ -46,45 +46,45 @@ MP10Setup.exe /q:A /c:"setup_wm.exe /Q /R:N /DefaultService:serviceKey /ServiceI
 
 Parameter
 
-Defaultservice (erforderlich)
+DefaultService (erforderlich)
 
-Der Schlüssel Name für den Online Shop. Dieser Wert muss mit dem Schlüsselnamen im **Key** -Attribut des **serviceInfo** -Elements des serviceInfo-Dokuments übereinstimmen.
+Der Schlüsselname für den Onlineshop. Dieser Wert muss mit dem Schlüsselnamen im **Key-Attribut** des **ServiceInfo-Elements** des ServiceInfo-Dokuments übereinstimmen.
 
-Serviceingefo (erforderlich)
+ServiceInfo (erforderlich)
 
-Der voll qualifizierte Pfad zu einem serviceInfo-Dokument, das auf dem Computer des Benutzers installiert ist.
+Der vollqualifizierte Pfad zu einem ServiceInfo-Dokument, das auf dem Computer des Benutzers installiert ist.
 
-Serviceextra (optional)
+ServiceExtra (optional)
 
-Eine Abfrage Zeichenfolge, die von Windows Media Player 10 an die URL des serviceingefo-Dokuments angehängt wird, wenn das Dokument online abgerufen wird.
+Eine Abfragezeichenfolge Windows Media Player 10 wird an die URL für das ServiceInfo-Dokument angefügt, wenn das Dokument online abgerufen wird.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Ausführliche Informationen zur Neuverteilung von Windows Media Player-Software mit Ihrer Anwendung finden Sie unter [Verteilen von Windows Media Player Software](redistributing-windows-media-player-software.md).
+Ausführliche Informationen zum Verteilen Windows Media Player Software mit Ihrer Anwendung finden Sie unter [Redistributing Windows Media Player Software](redistributing-windows-media-player-software.md).
 
-Wenn der Computer des Benutzers nicht mit dem Internet verbunden ist, werden die im lokalen serviceInfo-Dokument enthaltenen Informationen verwendet, um Windows-Media Player für den ersten aktiven Dienst zu konfigurieren.
+Wenn der Computer des Benutzers nicht mit dem Internet verbunden ist, werden die im lokalen ServiceInfo-Dokument enthaltenen Informationen verwendet, um Windows Media Player für den ersten aktiven Dienst zu konfigurieren.
 
-Bei Befehlszeilen Parametern wird Groß-/Kleinschreibung beachtet.
+Bei Befehlszeilenparametern wird die Groß-/Kleinschreibung beachtet.
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
 <dl> <dt>
 
-[**Co-Branding von Online Stores**](co-branding-online-stores.md)
+[**Co-Branding von Onlineshops**](co-branding-online-stores.md)
 </dt> <dt>
 
-[**Informationen, die von Typ 1 und Typ 2 Online Stores gemeinsam sind**](information-common-to-type-1-and-type-2-online-stores.md)
+[**Allgemeine Informationen zu Onlineshops vom Typ 1 und Typ 2**](information-common-to-type-1-and-type-2-online-stores.md)
 </dt> <dt>
 
 [**Install-Element**](install-element.md)
 </dt> <dt>
 
-[**Festlegen des ersten Online Stores**](setting-the-initial-online-store.md)
+[**Festlegen des Store "Initial Online"**](setting-the-initial-online-store.md)
 </dt> </dl>
 
- 
+ 
 
- 
+ 
 
 
 

@@ -1,19 +1,19 @@
 ---
-description: Die icspalgorithmen-Schnittstelle stellt die folgenden Methoden zur Verfügung.
+description: Die ICspAlgorithms-Schnittstelle macht die folgenden Methoden verfügbar.
 ms.assetid: 425BB4BC-30EF-4E75-AF29-06BCCBAB8192
-title: Icspalgorithmen-Methoden
+title: ICspAlgorithms-Methoden
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: cd0ed925bb4ead58d8c4669ef5f7a26cc51d79dc
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: fea72c9e478a4f517b8e6b90a5fa32c4d74cd3e75d4f9b0cf6650fdf7c371e4d
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "104347728"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117778439"
 ---
-# <a name="icspalgorithms-methods"></a>Icspalgorithmen-Methoden
+# <a name="icspalgorithms-methods"></a>ICspAlgorithms-Methoden
 
-Die [**icspalgorithmen**](/windows/desktop/api/CertEnroll/nn-certenroll-icspalgorithms) -Schnittstelle stellt die folgenden Methoden zur Verfügung.
+Die [**ICspAlgorithms-Schnittstelle**](/windows/desktop/api/CertEnroll/nn-certenroll-icspalgorithms) macht die folgenden Methoden verfügbar.
 
 ## <a name="in-this-section"></a>In diesem Abschnitt
 

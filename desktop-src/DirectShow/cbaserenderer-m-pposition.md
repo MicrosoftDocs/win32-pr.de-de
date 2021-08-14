@@ -16,16 +16,16 @@ api_location:
 - Strmbase.dll
 - Strmbasd.lib
 - Strmbasd.dll
-ms.openlocfilehash: d7ceeac91266a2799d7ef248857de9b7d4d38ee2
-ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
+ms.openlocfilehash: e892114e8ce0c0d61f0b6ade915ef3c24cb13ace8add95e90749140aa9985f3b
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2021
-ms.locfileid: "108119858"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118402858"
 ---
 # <a name="cbaserendererm_pposition-member"></a>CBaseRenderer::m \_ pPosition-Member
 
-Hilfsobjekt zum Übergeben von Seek-Befehlen upstream.
+Hilfsobjekt zum Übergeben von Suchbefehlen upstream.
 
 ## <a name="syntax"></a>Syntax
 
@@ -40,7 +40,7 @@ CRendererPosPassThru *m_pPosition;
 
 
 
-| Anforderungen | Wert |
+| Anforderung | Wert |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | Header<br/>  | <dl> <dt>Renbase.h (include Streams.h)</dt> </dl>                                                                                   |
 | Bibliothek<br/> | <dl> <dt>Strmbase.lib (Verkaufsbuilds); </dt> <dt>Strmbasd.lib (Debugbuilds)</dt> </dl> |

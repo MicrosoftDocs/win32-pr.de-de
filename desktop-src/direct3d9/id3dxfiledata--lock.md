@@ -1,7 +1,7 @@
 ---
-description: Greift auf die x-Datei Daten zu.
+description: Greifen Sie auf die X-Dateidaten zu.
 ms.assetid: 0e92914b-47b3-4a88-87ba-ce3c14282dbb
-title: 'ID3DXFileData:: Lock-Methode (D3DX9Xof. h)'
+title: ID3DXFileData::Lock-Methode (D3DX9Xof.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -14,16 +14,16 @@ api_type:
 api_location:
 - D3dx9.lib
 - D3dx9.dll
-ms.openlocfilehash: 27ef18fcb12b00f0b778ee15d582610ffe52fe54
-ms.sourcegitcommit: 14010c34b35fa268046c7683f021f86de08ddd0a
+ms.openlocfilehash: c052f570b3206c5a0661a4cf4ab38b259fb476f4eda1322df80e709608d09bf5
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "106371925"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118520707"
 ---
-# <a name="id3dxfiledatalock-method"></a>ID3DXFileData:: Lock-Methode
+# <a name="id3dxfiledatalock-method"></a>ID3DXFileData::Lock-Methode
 
-Greift auf die x-Datei Daten zu.
+Greifen Sie auf die X-Dateidaten zu.
 
 ## <a name="syntax"></a>Syntax
 
@@ -41,21 +41,21 @@ HRESULT Lock(
 
 <dl> <dt>
 
-*Psize* \[ in\]
+*pSize* \[ In\]
 </dt> <dd>
 
-Typ: **[ **Größe \_ T**](../winprog/windows-data-types.md)\***
+Typ: **[ **SIZE \_ T**](../winprog/windows-data-types.md)\***
 
-Ein Zeiger auf die Größe der x-Datei Daten.
+Zeiger auf die Größe der X-Dateidaten.
 
 </dd> <dt>
 
-*ppData* \[ in\]
+*ppData* \[ In\]
 </dt> <dd>
 
-Typ: Konstante **void \* \***
+Typ: **const \* \* VOID**
 
-Adresse eines Zeigers, mit dem der Schnittstellen Zeiger des [**ID3DXFileData**](id3dxfiledata.md) -Datei Datenobjekts empfangen werden soll. Siehe Hinweise.
+Adresse eines Zeigers zum Empfangen des Schnittstellenzeigers des [**Id3DXFileData-Dateidatenobjekts.**](id3dxfiledata.md) Siehe Hinweise.
 
 </dd> </dl>
 
@@ -63,15 +63,15 @@ Adresse eines Zeigers, mit dem der Schnittstellen Zeiger des [**ID3DXFileData**]
 
 Typ: **[ **HRESULT**](https://msdn.microsoft.com/library/Bb401631(v=MSDN.10).aspx)**
 
-Wenn die Methode erfolgreich ausgeführt wird, ist der Rückgabewert S \_ OK. Wenn die Methode fehlschlägt, wird der folgende Wert zurückgegeben: D3DXFERR \_ badvalue.
+Wenn die Methode erfolgreich ist, ist der Rückgabewert S \_ OK. Wenn bei der Methode ein Fehler auftritt, wird der folgende Wert zurückgegeben: D3DXFERR \_ BADVALUE.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Der *ppData* -Zeiger ist nur während der **ID3DXFileData:: Lock** ... [**ID3DXFileData:: Unlock**](id3dxfiledata--unlock.md) -Sequenz. Sie können mehrere Sperr Aufrufe durchführen. Sie müssen jedoch sicherstellen, dass die Anzahl der Sperr Aufrufe mit der Anzahl der entsperrungs Aufrufe übereinstimmt.
+Der *ppData-Zeiger* ist nur während einer **ID3DXFileData::Lock ...** [**ID3DXFileData::Unlock-Sequenz.**](id3dxfiledata--unlock.md) Sie können mehrere Sperraufrufe tätigen. Sie müssen jedoch sicherstellen, dass die Anzahl der Sperraufrufe der Anzahl der Entsperraufrufe entspricht.
 
-Da es nicht garantiert wird, dass Datei Daten ordnungsgemäß mit Byte-Begrenzungen ausgerichtet werden, sollten Sie mit nicht ausgerichteten Zeigern auf *ppData* zugreifen.
+Da dateidaten nicht garantiert ordnungsgemäß an Bytegrenzen ausgerichtet sind, sollten Sie mit UNALIGNED-Zeigern auf *ppData* zugreifen.
 
-Die Rückgabe von Parameterwerten ist aufgrund einer möglichen Datei Beschädigung nicht garantiert. Daher sollte der Code die zurückgegebenen Parameterwerte überprüfen.
+Es wird nicht garantiert, dass zurückgegebene Parameterwerte aufgrund einer möglichen Dateibeschädigung gültig sind. Daher sollte Ihr Code die zurückgegebenen Parameterwerte überprüfen.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -79,12 +79,12 @@ Die Rückgabe von Parameterwerten ist aufgrund einer möglichen Datei Beschädig
 
 | Anforderung | Wert |
 |--------------------|---------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>D3DX9Xof. h</dt> </dl> |
-| Bibliothek<br/> | <dl> <dt>D3dx9. lib</dt> </dl>  |
+| Header<br/>  | <dl> <dt>D3DX9Xof.h</dt> </dl> |
+| Bibliothek<br/> | <dl> <dt>D3dx9.lib</dt> </dl>  |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 

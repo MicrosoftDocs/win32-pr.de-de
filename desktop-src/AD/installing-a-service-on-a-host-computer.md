@@ -1,32 +1,32 @@
 ---
-title: Installieren eines Diensts auf einem Host Computer
-description: Im folgenden Codebeispiel werden die grundlegenden Schritte zum Installieren eines Verzeichnis fähigen Diensts auf einem Host Computer veranschaulicht.
+title: Installieren eines Diensts auf einem Hostcomputer
+description: Das folgende Codebeispiel zeigt die grundlegenden Schritte zum Installieren eines verzeichnisfähigen Diensts auf einem Hostcomputer.
 ms.assetid: 35a3b261-d499-4154-a022-1e33a9ef7ba8
 ms.tgt_platform: multiple
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: d687bbbfadb4d1ccb789e9d5f1051ebfbb4484d7
-ms.sourcegitcommit: 803f3ccd65bdefe36bd851b9c6e7280be9489016
+ms.openlocfilehash: 5d0d22098b0a6b823aa5b7db50c20b5a5e2c80c7e540ffdb95e4e2f73c2550fa
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "104472525"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118187388"
 ---
-# <a name="installing-a-service-on-a-host-computer"></a>Installieren eines Diensts auf einem Host Computer
+# <a name="installing-a-service-on-a-host-computer"></a>Installieren eines Diensts auf einem Hostcomputer
 
-Im folgenden Codebeispiel werden die grundlegenden Schritte zum Installieren eines Verzeichnis fähigen Diensts auf einem Host Computer veranschaulicht. Sie führt die folgenden Vorgänge aus:
+Das folgende Codebeispiel zeigt die grundlegenden Schritte zum Installieren eines verzeichnisfähigen Diensts auf einem Hostcomputer. Er führt die folgenden Vorgänge aus:
 
-1.  Ruft die [**OpenSCManager**](/windows/desktop/api/winsvc/nf-winsvc-openscmanagera) -Funktion auf, um ein Handle für den Dienststeuerungs-Manager (Service Control Manager, SCM) auf dem lokalen Computer zu öffnen.
-2.  Ruft die [**Funktion "**](/windows/desktop/api/winsvc/nf-winsvc-createservicea) " in der SCM-Datenbank auf, um den Dienst zu installieren. Dieser Befehl gibt das Anmelde Konto und das Kennwort des Diensts sowie die ausführbare Datei des Diensts sowie andere Informationen über den Dienst an. Bei "up **Service Service** " tritt ein Fehler auf, wenn das angegebene Anmelde Konto ungültig ist. Allerdings überprüft die Gültigkeit des Kennworts **nicht.** Außerdem wird nicht überprüft, ob das Konto über das Recht "Anmelden als Dienst" auf dem lokalen Computer verfügt. Weitere Informationen finden Sie unter [erteilen der Berechtigung "Anmelden als Dienst" auf dem Host Computer](granting-logon-as-service-right-on-the-host-computer.md).
-3.  Ruft die **scpcreate** -Unterroutine des dienstanders auf, die ein Dienst Verbindungspunkt-Objekt (SCP) im Verzeichnis erstellt, um den Speicherort dieser Instanz des Dienstanbieter zu veröffentlichen. Weitere Informationen finden Sie unter Gewusst wie: Suchen [und Verwenden eines Dienst Verbindungs Punkts durch Clients](how-clients-find-and-use-a-service-connection-point.md). Diese Routine speichert außerdem die Bindungs Informationen des Dienstanbieter im SCP, legt einen ACE auf dem SCP fest, sodass der Dienst zur Laufzeit darauf zugreifen kann, den Distinguished Name des SCP in der lokalen Registrierung zwischenspeichert und den Distinguished Name des neuen Dienst Verbindungs Punkts zurückgibt.
-4.  Ruft die **spncompose** -Unterroutine des Dieners auf, die die Klassen Zeichenfolge des dienstanders und den Distinguished Name des SCP verwendet, um einen Dienst Prinzipal Namen (SPN) zu verfassen. Weitere Informationen finden Sie unter Erstellen [der SPNs für einen Dienst mit einem SCP](composing-the-spns-for-a-service-with-an-scp.md). Der SPN identifiziert diese Instanz des Dienstanbieter eindeutig.
-5.  Ruft die **spnregister** -Unterroutine des Diensts auf, die den SPN für das Konto Objekt registriert, das dem Anmelde Konto des Diensts zugeordnet ist. Weitere Informationen finden Sie unter [Registrieren der SPNs für einen Dienst](registering-the-spns-for-a-service.md). Durch die Registrierung des SPN können Client Anwendungen den Dienst authentifizieren.
+1.  Ruft die [**OpenSCManager-Funktion**](/windows/desktop/api/winsvc/nf-winsvc-openscmanagera) auf, um ein Handle für den Dienststeuerungs-Manager (Service Control Manager, SCM) auf dem lokalen Computer zu öffnen.
+2.  Ruft die [**CreateService-Funktion**](/windows/desktop/api/winsvc/nf-winsvc-createservicea) auf, um den Dienst in der SCM-Datenbank zu installieren. Dieser Aufruf gibt das Anmeldekonto und das Kennwort des Diensts sowie die ausführbare Datei des Diensts und andere Informationen zum Dienst an. **CreateService** schlägt fehl, wenn das angegebene Anmeldekonto ungültig ist. CreateService **überprüft** jedoch nicht die Gültigkeit des Kennworts. Außerdem wird nicht überprüft, ob das Konto über die Anmeldung als Dienst auf dem lokalen Computer verfügt. Weitere Informationen finden Sie unter [Granting Logon as Service Right on the Host Computer](granting-logon-as-service-right-on-the-host-computer.md).
+3.  Ruft die **ScpCreate-Unterroutine** des Diensts auf, die ein Dienstverbindungspunktobjekt (Service Connection Point Object, SCP) im Verzeichnis erstellt, um den Speicherort dieser Instanz des Diensts zu veröffentlichen. Weitere Informationen finden Sie unter Suchen und Verwenden [eines Dienstverbindungspunkts durch Clients.](how-clients-find-and-use-a-service-connection-point.md) Diese Routine speichert auch die Bindungsinformationen des Diensts im SCP, legt einen ACE auf dem SCP fest, damit der Dienst zur Laufzeit darauf zugreifen kann, speichert den Distinguished Name des SCP in der lokalen Registrierung zwischen und gibt den Distinguished Name des neuen SCP zurück.
+4.  Ruft die **SpnCompose-Unterroutine** des Diensts auf, die die Klassenzeichenfolge des Diensts und den Distinguished Name des SCP verwendet, um einen Dienstprinzipalnamen (Service Principal Name, SPN) zu erstellen. Weitere Informationen finden Sie unter [Zusammenstellen der SPNs für einen Dienst mit einem SCP.](composing-the-spns-for-a-service-with-an-scp.md) Der SPN identifiziert diese Instanz des Diensts eindeutig.
+5.  Ruft die **SpnRegister-Unterroutine** des Diensts auf, die den SPN für das Kontoobjekt registriert, das dem Anmeldekonto des Diensts zugeordnet ist. Weitere Informationen finden Sie unter [Registrieren der SPNs für einen Dienst.](registering-the-spns-for-a-service.md) Durch die Registrierung des SPN können Clientanwendungen den Dienst authentifizieren.
 
-Dieses Codebeispiel funktioniert unabhängig davon, ob es sich bei dem Anmelde Konto um ein lokales oder ein Domänen Benutzerkonto oder um das LocalSystem-Konto handelt. Bei einem Domänen Benutzerkonto enthält der Parameter " *szserviceaccountsam* " den Namen des *Domänen ***\\*** Benutzer* namens des Kontos, und der Parameter " *szserviceaccountdn* " enthält den Distinguished Name des Benutzerkonto Objekts im Verzeichnis. Für das Konto "LocalSystem" sind " *szserviceaccountsam* " und " *szPassword* " **null**, und " *szserviceaccountn* " ist der Distinguished Name des Konto Objekts des lokalen Computers im Verzeichnis. Wenn *szserviceaccountsam* ein lokales Benutzerkonto angibt (Namensformat). \\ *Benutzername*"), das Codebeispiel überspringt die SPN-Registrierung, weil die gegenseitige Authentifizierung für lokale Benutzerkonten nicht unterstützt wird.
+Dieses Codebeispiel funktioniert ordnungsgemäß, unabhängig davon, ob es sich bei dem Anmeldekonto um ein lokales Benutzerkonto oder ein Domänenbenutzerkonto oder um das LocalSystem-Konto handelt. Für ein Domänenbenutzerkonto enthält der *szServiceAccountSAM-Parameter* den Domain* UserName-Namen des Kontos, und ***\\**  *der szServiceAccountDN-Parameter* enthält den Distinguished Name des Benutzerkontoobjekts im Verzeichnis. Für das LocalSystem-Konto sind *szServiceAccountSAM* und *szPassword* **NULL,** *und szServiceAccountSN* ist der Distinguished Name des Kontoobjekts des lokalen Computers im Verzeichnis. Wenn *szServiceAccountSAM ein* lokales Benutzerkonto angibt \\ (das Namensformat ist ".* UserName*"), wird im Codebeispiel die SPN-Registrierung übersprungen, da die gegenseitige Authentifizierung für lokale Benutzerkonten nicht unterstützt wird.
 
-Beachten Sie, dass die Standard Sicherheitskonfiguration nur Domänen Administratoren das Ausführen dieses Codes ermöglicht.
+Beachten Sie, dass die Standardsicherheitskonfiguration nur Domänenadministratoren die Ausführung dieses Codes erlaubt.
 
-Beachten Sie außerdem, dass dieses Codebeispiel wie geschrieben auf dem Computer ausgeführt werden muss, auf dem der Dienst installiert wird. Folglich befindet er sich in der Regel in einer separaten ausführbaren Installationsdatei des Dienst Installationscodes, der das Schema erweitert, die Benutzeroberfläche erweitert oder die Gruppenrichtlinie festlegt. Mit diesen Vorgängen werden Dienst Komponenten für eine gesamte Gesamtstruktur installiert, während dieser Code den Dienst auf einem einzelnen Computer installiert.
+Beachten Sie außerdem, dass dieses Codebeispiel wie geschrieben auf dem Computer ausgeführt werden muss, auf dem der Dienst installiert wird. Folglich befindet sie sich in der Regel in einer separaten ausführbaren Installationsdatei von Ihrem Dienstinstallationscode, die das Schema erweitert, die Benutzeroberfläche erweitert oder Gruppenrichtlinien ein richtet. Diese Vorgänge installieren Dienstkomponenten für eine gesamte Gesamtstruktur, während dieser Code den Dienst auf einem einzelnen Computer installiert.
 
 
 ```C++
@@ -148,8 +148,8 @@ return;
 
 
 
-Weitere Informationen zum vorherigen Codebeispiel finden Sie unter Erstellen [der SPNs für einen Dienst mit einem SCP](composing-the-spns-for-a-service-with-an-scp.md) und [Registrieren der SPNs für einen Dienst](registering-the-spns-for-a-service.md).
+Weitere Informationen zum vorherigen Codebeispiel finden Sie unter Zusammenstellen der [SPNs](composing-the-spns-for-a-service-with-an-scp.md) für einen Dienst mit einem SCP und Registrieren der [SPNs für einen Dienst.](registering-the-spns-for-a-service.md)
 
- 
+ 
 
- 
+ 

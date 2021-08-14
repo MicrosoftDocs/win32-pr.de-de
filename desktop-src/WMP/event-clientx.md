@@ -1,9 +1,9 @@
 ---
-title: Event. clientX
-description: Das clientX-Attribut ruft die x-Koordinate des Mauszeigers in Bezug auf den Client Bereich des Anwendungsfensters ab.
+title: event.clientX
+description: Das clientX-Attribut ruft die x-Koordinate des Mauszeigers in Bezug auf den Clientbereich des Anwendungsfensters ab.
 ms.assetid: d4be2620-17c3-429b-a80b-b8aec2aaa8b7
 keywords:
-- Event. clientX-Windows-Media Player
+- event.clientX-Windows Media Player
 topic_type:
 - apiref
 api_name:
@@ -12,16 +12,16 @@ api_type:
 - NA
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: cb817647c810be281f515bd81a053d17f73c049d
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: a690ef450e509cce97df74c24cfacc3c5de19d011186593874f7ab5e31cdb2e0
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106361331"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118577629"
 ---
-# <a name="eventclientx"></a>Event. clientX
+# <a name="eventclientx"></a>event.clientX
 
-Das **clientX** -Attribut ruft die x-Koordinate des Mauszeigers in Bezug auf den Client Bereich des Anwendungsfensters ab.
+Das **clientX-Attribut** ruft die x-Koordinate des Mauszeigers in Bezug auf den Clientbereich des Anwendungsfensters ab.
 
 ``` syntax
 event.clientX
@@ -29,7 +29,7 @@ event.clientX
 
 ## <a name="possible-values"></a>Mögliche Werte
 
-Bei diesem Attribut handelt es sich um eine schreibgeschützte **Zahl** (**Long**).
+Dieses Attribut ist eine schreibgeschützte **Zahl** (**long**).
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -37,7 +37,7 @@ Bei diesem Attribut handelt es sich um eine schreibgeschützte **Zahl** (**Long*
 
 | Anforderung | Wert |
 |--------------------|------------------------------------------------------|
-| Version<br/> | Windows Media Player, Version 7,0 oder höher<br/> |
+| Version<br/> | Windows Media Player Version 7.0 oder höher<br/> |
 
 
 
@@ -45,10 +45,10 @@ Bei diesem Attribut handelt es sich um eine schreibgeschützte **Zahl** (**Long*
 
 <dl> <dt>
 
-[**Ambient-Ereignis Attribute**](ambient-event-attributes.md)
+[**Ambient-Ereignisattribute**](ambient-event-attributes.md)
 </dt> <dt>
 
-[**Ereignis. clientY**](event-clienty.md)
+[**event.clientY**](event-clienty.md)
 </dt> </dl>
 
  

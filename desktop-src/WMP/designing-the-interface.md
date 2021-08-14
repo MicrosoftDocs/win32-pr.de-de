@@ -8,33 +8,33 @@ keywords:
 - Erstellen von Skins, Benutzeroberflächen
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 8070ef6fd4589f762624d7a0b5ee1d380a264066
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: b6b11dee2a6236f2a279756644a88d69e267c5da93240b5e12c19c32d86e30a8
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "104100774"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117749861"
 ---
 # <a name="designing-the-interface"></a>Entwerfen der Schnittstelle
 
-Nachdem die Funktionen ausgewählt wurden, kann die Schnittstelle entworfen werden. Eine einfache Schnittstelle wurde ausgewählt, um die Funktionalität zu erfüllen. Symbole für die Steuerelemente wurden aus VCR-Standard Steuerelementen ausgewählt.
+Nachdem die Funktionen ausgewählt wurden, kann die Schnittstelle entworfen werden. Es wurde eine einfache Schnittstelle ausgewählt, die mit der Funktionalität übereinstimmen soll. Symbole für die Steuerelemente wurden aus VCR-Standardsteuerelementen ausgewählt.
 
-In der folgenden Abbildung wird gezeigt, wie die Schnittstelle aussieht.
+Die folgende Abbildung zeigt, wie die Schnittstelle aussehen wird.
 
-![Beispiel Schnittstelle](images/ceswmful.png)
+![Beispielschnittstelle](images/ceswmful.png)
 
--   **PLAYPAUSE oder playpausestopschaltfläche.** Der Benutzer greift auf die meisten zu, daher können Sie eine größere Schaltfläche in Erwägung gezogen. Die obere rechte Ecke stellt einen guten Speicherort dar, den der Benutzer schnell finden kann. Ein voll Bild Pfeil wird verwendet, um die Wiedergabe anzugeben, und zwei vertikale Balken (hier nicht dargestellt) werden verwendet, um die Pause anzuzeigen.
+-   **PlayPause oder PlayPauseStop-Schaltfläche.** Der Benutzer tippt am meisten darauf, daher können Sie eine größere Schaltfläche in Betracht ziehen. Die obere rechte Ecke ist ein guter Ort, den der Benutzer schnell finden kann. Ein durchkn solider Pfeil wird verwendet, um die Wiedergabe anzugeben, und zwei vertikale Balken (hier nicht dargestellt) werden verwendet, um die Pause anzugeben.
     > [!Note]  
-    > Die Schaltfläche playpauenbeenden kann nur beim Erstellen eines Skin für Windows Media Player 10 Mobile oder höher verwendet werden.
+    > Die Schaltfläche PlayPauseStop kann nur verwendet werden, wenn Sie eine Skin für Windows Media Player 10 Mobile oder höher erstellen.
 
-     
+     
 
--   **Schaltfläche "Abbrechen"** Um das Auffinden zu erleichtern, wird es in der linken oberen Ecke platziert. Ein Quadrat wird verwendet, um den Vorgang zu kennzeichnen. Wenn Sie ein Skin für Windows Media Player 10 Mobile oder höher erstellen, stellt die playpauenstop-Schalt Fläche diese Funktionalität bereits bereit.
--   **Die Schaltflächen Next und Prev.** Da diese nicht so häufig verwendet werden, werden Sie auf der linken Seite platziert. Das nächste befindet sich über der Schaltfläche "Prev", da Benutzer wahrscheinlich in einer Wiedergabeliste fortfahren möchten. Die Symbole mit Doppelpfeil werden verwendet, da Sie in der-Funktion mit einem Fast-Forward-Steuerelement vergleichbar sind.
--   **Volume TrackBar.** Diese wird unten auf dem Bildschirm platziert und ist eine einfache Zeile mit einer Zieh Punkt Schaltfläche.
--   **Marquee-Textfeld.** Diese wird unter der Schaltfläche PLAYPAUSE oder playpauseend platziert, sodass Sie leicht zu erkennen ist.
+-   **Schaltfläche "Beenden".** Damit dies leicht zu finden ist, wird es in der oberen linken Ecke platziert. Ein Quadrat wird verwendet, um den Stopp anzugeben. Wenn Sie eine Skin für Windows Media Player 10 Mobile oder höher erstellen, bietet die Schaltfläche PlayPauseStop diese Funktionalität bereits.
+-   **Schaltflächen "Weiter" und "Prev".** Da diese nicht so häufig verwendet werden, werden sie auf der linken Seite platziert. Die Schaltfläche Weiter befindet sich über der Schaltfläche "Prev", da Personen wahrscheinlich in einer Wiedergabeliste nach vorn wechseln möchten. Die Doppelpfeilsymbole werden verwendet, da sie in der Funktion einem Steuerelement mit schneller Vorwärtssteuerung ähneln.
+-   **Volume-Trackleiste.** Dies wird am unteren Rand des Bildschirms platziert und ist eine einfache Linie mit einer Daumenschaltfläche darüber.
+-   **Textfeld "Marquee".** Diese wird unter der Schaltfläche PlayPause oder PlayPauseStop platziert, damit sie leicht zu sehen ist.
 
-Möglicherweise möchten Sie dies zuerst skizzieren und mit der Platzierung der einzelnen Benutzeroberflächen Elemente experimentieren. Der hier gezeigte Entwurf wurde aus Gründen der Einfachheit und Benutzerfreundlichkeit ausgewählt.
+Sie können dies zuerst skizzieren und mit der Platzierung der einzelnen Benutzeroberflächenelemente experimentieren. Der hier gezeigte Entwurf wurde aus Einfachheit und Benutzerfreundlichkeit ausgewählt.
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
@@ -43,9 +43,9 @@ Möglicherweise möchten Sie dies zuerst skizzieren und mit der Platzierung der 
 [**Skin Guide**](skin-guide.md)
 </dt> </dl>
 
- 
+ 
 
- 
+ 
 
 
 

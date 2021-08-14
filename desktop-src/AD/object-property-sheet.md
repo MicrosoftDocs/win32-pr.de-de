@@ -1,43 +1,43 @@
 ---
-title: Objekt (Eigenschaften Blatt)
-description: In diesem Thema wird das Objekteigenschaften Blatt erläutert, das allen Objektklassen im Snap-in "Active Directory-Benutzer und-Computer" gemeinsam ist.
+title: Objekteigenschaftsblatt
+description: In diesem Thema wird das Eigenschaftenblatt Object erläutert, das allen Objektklassen im Active Directory-Benutzer und -Computer-Snap-In gemeinsam ist.
 ms.assetid: da3440cc-22ef-4201-8f17-4e5afea9ef3b
 ms.tgt_platform: multiple
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 3bbd6945da23007ec9bc2bef434de2eb8f43929c
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: c7abcb846bc1ab520c9ae58655d112ae71709e64b8c38ad3867baecf0d286847
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "104309275"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118185521"
 ---
-# <a name="object-property-sheet"></a>Objekt (Eigenschaften Blatt)
+# <a name="object-property-sheet"></a>Objekteigenschaftsblatt
 
-In diesem Thema wird das Objekteigenschaften Blatt erläutert, das allen Objektklassen im Snap-in "Active Directory-Benutzer und-Computer" gemeinsam ist.
+In diesem Thema wird das Eigenschaftenblatt Object erläutert, das allen Objektklassen im Active Directory-Benutzer und -Computer-Snap-In gemeinsam ist.
 
-## <a name="object-property-sheet"></a>Objekt (Eigenschaften Blatt)
+## <a name="object-property-sheet"></a>Objekteigenschaftsblatt
 
-In der folgenden Tabelle werden die Benutzeroberflächen Bezeichnungen der **Objekt** Eigenschaften Seite angezeigt.
+Die folgende Tabelle zeigt die Benutzeroberflächenbezeichnungen des **Eigenschaftenblatts Objekt.**
 
 
 
-| UI-Bezeichnung                              | Attribut in Active Directory Domain Services | Kommentare                                                   |
+| Benutzeroberflächenbezeichnung                              | Attribut in Active Directory Domain Services | Kommentare                                                   |
 |---------------------------------------|-----------------------------------------------|------------------------------------------------------------|
-| Voll qualifizierter Domänen Name des Objekts |                                               | Dies ist der Distinguished Name des Objekts in kanonischer Form. |
+| Vollqualifizierter Domänenname des Objekts |                                               | Dies ist der Distinguished Name des Objekts in kanonischer Form. |
 | Objektklasse                          | objectClass                                   |                                                            |
 | Erstellt                               | whenCreated                                   |                                                            |
 | Geändert                              | whenChanged                                   |                                                            |
-| Aktualisierungs Sequenznummern: aktuell      | uSNChanged                                    |                                                            |
-| Aktualisierungs Sequenznummern: Original     | uSNCreated                                    |                                                            |
+| Sequenznummern aktualisieren: Aktuell      | uSNChanged                                    |                                                            |
+| Sequenznummern aktualisieren: Original     | uSNCreated                                    |                                                            |
 
 
 
- 
+ 
 
- 
+ 
 
- 
+ 
 
 
 

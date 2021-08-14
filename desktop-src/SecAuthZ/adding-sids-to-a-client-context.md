@@ -1,27 +1,27 @@
 ---
-description: Eine Anwendung kann einem vorhandenen Client Kontext Sicherheits-IDs (SIDs) hinzufügen, indem Sie die AuthzAddSidsToContext-Funktion aufrufen.
+description: Eine Anwendung kann einem vorhandenen Clientkontext Sicherheits-IDs (SIDs) hinzufügen, indem sie die Funktion "HzAddSidsToContext" aufruft.
 ms.assetid: d49ce47b-e91a-452b-b423-07e8d282d28a
-title: Hinzufügen von SIDs zu einem Client Kontext
+title: Hinzufügen von SIDs zu einem Clientkontext
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: a601f485110ddacea0fdb54cb7dcef587a25cb9a
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: f07805031d299efc400c491c7fff1c43653e90b53f6c753c81a8676d4b0941b8
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "104529729"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117784922"
 ---
-# <a name="adding-sids-to-a-client-context"></a>Hinzufügen von SIDs zu einem Client Kontext
+# <a name="adding-sids-to-a-client-context"></a>Hinzufügen von SIDs zu einem Clientkontext
 
-Eine Anwendung kann einem vorhandenen Client Kontext [*Sicherheits*](/windows/desktop/SecGloss/s-gly) -IDs (SIDs) hinzufügen, indem Sie die [**AuthzAddSidsToContext**](/windows/desktop/api/Authz/nf-authz-authzaddsidstocontext) -Funktion aufrufen. Die [**AuthzAddSidsToContext**](/windows/desktop/api/Authz/nf-authz-authzaddsidstocontext) -Funktion ermöglicht es einer Anwendung, sowohl eine Liste von SIDs als auch eine Liste mit einschränkenden SIDs auf den angegebenen Client Kontext anzugeben.
+Eine Anwendung kann [*einem*](/windows/desktop/SecGloss/s-gly) vorhandenen Clientkontext Sicherheits-IDs (SIDs) hinzufügen, indem sie die Funktion [**"HzAddSidsToContext"**](/windows/desktop/api/Authz/nf-authz-authzaddsidstocontext) aufruft. Mit [**der Funktion "PerlhzAddSidsToContext"**](/windows/desktop/api/Authz/nf-authz-authzaddsidstocontext) kann eine Anwendung sowohl eine Liste von SIDs als auch eine Liste der SiDs auf den angegebenen Clientkontext beschränken.
 
-Das System verwendet die Liste der einschränkenden SIDs, wenn der Zugriff des Tokens auf ein Sicherungs fähiges Objekt überprüft wird. Wenn ein eingeschränkter Prozess oder Thread versucht, auf ein Sicherungs fähiges Objekt zuzugreifen, führt das System zwei Zugriffs Überprüfungen durch: einen, der die aktivierten SIDs des Tokens verwendet, und einen anderen, der die Liste der einschränkenden SIDs verwendet. Der Zugriff wird nur gewährt, wenn beide Zugriffs Überprüfungen die angeforderten Zugriffsrechte zulassen.
+Das System verwendet die Liste der einschränkenden SIDs, wenn es den Zugriff des Tokens auf ein sicherungsfähiges Objekt überprüft. Wenn ein eingeschränkter Prozess oder Thread versucht, auf ein sicherungsfähiges Objekt zu zugreifen, führt das System zwei Zugriffsüberprüfungen durch: eine mit aktivierten SIDs des Tokens und eine andere mithilfe der Liste der einschränkenden SIDs. Der Zugriff wird nur gewährt, wenn beide Zugriffsüberprüfungen die angeforderten Zugriffsrechte zulassen.
 
-Attribut Variablen müssen in Form eines Ausdrucks vorliegen, wenn Sie mit logischen Operatoren verwendet werden. Andernfalls werden Sie als UNKNOWN ausgewertet.
+Attributvariablen müssen in Form eines Ausdrucks sein, wenn sie mit logischen Operatoren verwendet werden. Andernfalls werden sie als unbekannt ausgewertet.
 
 ## <a name="example"></a>Beispiel
 
-Im folgenden Beispiel werden eine SID und eine einschränkende sid dem Client Kontext hinzugefügt, der im Beispiel unter [Initialisieren eines Client Kontexts](initializing-a-client-context.md)erstellt wurde.
+Im folgenden Beispiel werden dem Clientkontext, der im Beispiel unter Initialisieren eines Clientkontexts erstellt wurde, eine SID und eine [einschränkende SID hinzufügt.](initializing-a-client-context.md)
 
 
 ```C++
@@ -103,16 +103,16 @@ BOOL AddSidsToContext(AUTHZ_CLIENT_CONTEXT_HANDLE *phClientContext)
 
 <dl> <dt>
 
-[Caching-Zugriffs Überprüfungen](caching-access-checks.md)
+[Zwischenspeichern von Zugriffsüberprüfungen](caching-access-checks.md)
 </dt> <dt>
 
-[Überprüfen des Zugriffs mit der Authz-API](checking-access-with-authz-api.md)
+[Überprüfen des Zugriffs mit Authz API](checking-access-with-authz-api.md)
 </dt> <dt>
 
-[Initialisieren eines Client Kontexts](initializing-a-client-context.md)
+[Initialisieren eines Clientkontexts](initializing-a-client-context.md)
 </dt> <dt>
 
-[Abfragen eines Client Kontexts](querying-a-client-context.md)
+[Abfragen eines Clientkontexts](querying-a-client-context.md)
 </dt> </dl>
 
  
