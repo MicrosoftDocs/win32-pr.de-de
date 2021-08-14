@@ -1,9 +1,9 @@
 ---
-title: Idcompositionvisual setTransform-Methoden (Dcomp. h)
-description: Legt die Transform-Eigenschaft dieses visuellen Elements fest. Die Transform-Eigenschaft gibt eine 2D-Transformation an, mit der das Koordinatensystem dieses visuellen Elements geändert wird. Die-Eigenschaft kann entweder eine 3-bis-2-Transformationsmatrix oder ein Transform-Objekt angeben.
+title: IDCompositionVisual SetTransform-Methoden (Dcomp.h)
+description: Legt die Transform-Eigenschaft dieses Visuals fest. Die Transform-Eigenschaft gibt eine 2D-Transformation an, die verwendet wird, um das Koordinatensystem dieses Visuals zu ändern. Die -Eigenschaft kann entweder eine 3:2-Transformationsmatrix oder ein Transformationsobjekt angeben.
 ms.assetid: DA3CBBB6-DB0A-4FCE-9DAC-7A767783A18D
 keywords:
-- SetTransform-Methoden directcomposition
+- SetTransform-Methoden DirectComposition
 topic_type:
 - apiref
 api_location:
@@ -12,25 +12,25 @@ api_type:
 - DllExport
 ms.date: 07/02/2019
 ms.topic: reference
-ms.openlocfilehash: 00f5da890cd22c5c827a36062a0b0c3f9bc19cc3
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: b38c2e8fce2f0687b78b65574858a38bba681c6bc1174cab13dfa254e3b186c8
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104341167"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118281247"
 ---
-# <a name="idcompositionvisualsettransform-methods"></a>Idcompositionvisual:: setTransform-Methoden
+# <a name="idcompositionvisualsettransform-methods"></a>IDCompositionVisual::SetTransform-Methoden
 
-Legt die Transform-Eigenschaft dieses visuellen Elements fest. Die Transform-Eigenschaft gibt eine 2D-Transformation an, mit der das Koordinatensystem dieses visuellen Elements geändert wird. Die-Eigenschaft kann entweder eine 3-bis-2-Transformationsmatrix oder ein Transform-Objekt angeben.
+Legt die Transform-Eigenschaft dieses Visuals fest. Die Transform-Eigenschaft gibt eine 2D-Transformation an, die verwendet wird, um das Koordinatensystem dieses Visuals zu ändern. Die -Eigenschaft kann entweder eine 3:2-Transformationsmatrix oder ein Transformationsobjekt angeben.
 
 ### <a name="overload-list"></a>Überladeliste
 
 
 
-| Methode                                                                                                    | BESCHREIBUNG                                                                    |
+| Methode                                                                                                    | Beschreibung                                                                    |
 |:----------------------------------------------------------------------------------------------------------|:-------------------------------------------------------------------------------|
-| [**SetTransform (D2D \_ Matrix \_ 3x2 \_ F&)**](/windows/win32/api/dcomp/nf-dcomp-idcompositionvisual-settransform(constd2d_matrix_3x2_f_))          | Legt die Transform-Eigenschaft auf die angegebene Transformationsmatrix fest.<br/>      |
-| [**SetTransform (idcompositiontransform \* )**](/windows/win32/api/dcomp/nf-dcomp-idcompositionvisual-settransform(idcompositiontransform)) | Legt die Transform-Eigenschaft auf das angegebene Transformations Objekt fest.<br/> |
+| [**SetTransform(D2D \_ MATRIX \_ 3X2 \_ F&)**](/windows/win32/api/dcomp/nf-dcomp-idcompositionvisual-settransform(constd2d_matrix_3x2_f_))          | Legt die Transform-Eigenschaft auf die angegebene Transformationsmatrix fest.<br/>      |
+| [**SetTransform(IDCompositionTransform \* )**](/windows/win32/api/dcomp/nf-dcomp-idcompositionvisual-settransform(idcompositiontransform)) | Legt die Transform-Eigenschaft auf das angegebene Transformationsobjekt fest.<br/> |
 
 
 
@@ -40,10 +40,10 @@ Legt die Transform-Eigenschaft dieses visuellen Elements fest. Die Transform-Eig
 
 | Anforderung | Wert |
 |-------------------------------------|--------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows 8 \[ -Desktop-Apps\]<br/>                                           |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2012 \[ -Desktop-Apps\]<br/>                                 |
-| Header<br/>                   | <dl> <dt>Dcomp. h</dt> </dl>   |
-| Bibliothek<br/>                  | <dl> <dt>Dcomp. lib</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows 8 \[ Desktop-Apps\]<br/>                                           |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2012-Desktop-Apps\]<br/>                                 |
+| Header<br/>                   | <dl> <dt>Dcomp.h</dt> </dl>   |
+| Bibliothek<br/>                  | <dl> <dt>Dcomp.lib</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>Dcomp.dll</dt> </dl> |
 
 
@@ -52,31 +52,31 @@ Legt die Transform-Eigenschaft dieses visuellen Elements fest. Die Transform-Eig
 
 <dl> <dt>
 
-[**Idcompositionmatrixtransform**](/windows/win32/api/dcomp/nn-dcomp-idcompositionmatrixtransform)
+[**IDCompositionMatrixTransform**](/windows/win32/api/dcomp/nn-dcomp-idcompositionmatrixtransform)
 </dt> <dt>
 
-[**Idcompositionrotatetransform**](/windows/win32/api/dcomp/nn-dcomp-idcompositionrotatetransform)
+[**IDCompositionRotateTransform**](/windows/win32/api/dcomp/nn-dcomp-idcompositionrotatetransform)
 </dt> <dt>
 
-[**Idcompositionscaletransform**](/windows/win32/api/dcomp/nn-dcomp-idcompositionscaletransform)
+[**IDCompositionScaleTransform**](/windows/win32/api/dcomp/nn-dcomp-idcompositionscaletransform)
 </dt> <dt>
 
-[**Idcompositionschräwtransform**](/windows/win32/api/dcomp/nn-dcomp-idcompositionskewtransform)
+[**IDCompositionSkewTransform**](/windows/win32/api/dcomp/nn-dcomp-idcompositionskewtransform)
 </dt> <dt>
 
-[**Idcompositiontransform**](/windows/win32/api/dcomp/nn-dcomp-idcompositiontransform)
+[**IDCompositionTransform**](/windows/win32/api/dcomp/nn-dcomp-idcompositiontransform)
 </dt> <dt>
 
-[**Idcompositiontranslatetransform**](/windows/win32/api/dcomp/nn-dcomp-idcompositiontranslatetransform)
+[**IDCompositionTranslateTransform**](/windows/win32/api/dcomp/nn-dcomp-idcompositiontranslatetransform)
 </dt> <dt>
 
-[**Idcompositionvisual**](/windows/win32/api/dcomp/nn-dcomp-idcompositionvisual)
+[**IDCompositionVisual**](/windows/win32/api/dcomp/nn-dcomp-idcompositionvisual)
 </dt> <dt>
 
-[**Idcompositionvisual:: Seto ffsetx**](idcompositionvisual-setoffsetx-overloaded.md)
+[**IDCompositionVisual::SetOffsetX**](idcompositionvisual-setoffsetx-overloaded.md)
 </dt> <dt>
 
-[**Idcompositionvisual:: Seto ffsety**](idcompositionvisual-setoffsety-overloaded.md)
+[**IDCompositionVisual::SetOffsetY**](idcompositionvisual-setoffsety-overloaded.md)
 </dt> </dl>
 
 �

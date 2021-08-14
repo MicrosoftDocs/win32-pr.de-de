@@ -16,18 +16,18 @@ api_name:
 api_type:
 - NA
 api_location: ''
-ms.openlocfilehash: b69ca7cf4ee4e16a5fbcb6a5f10c659f713ab458
-ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
+ms.openlocfilehash: 5cfe3bfd4509a02eeafcb014f9265f810e4cb942e87b67390dbd1cbf841f7295
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2021
-ms.locfileid: "108105928"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118393789"
 ---
 # <a name="systemconfig_v0_services-class"></a>SystemConfig \_ V0 \_ Services-Klasse
 
 Diese Klasse ist die Ereignistypklasse für Dienstkonfigurationsereignisse.
 
-Die folgende Syntax wird aus MOF-Code vereinfacht.
+Die folgende Syntax wird durch einen MOF-Code vereinfacht.
 
 ## <a name="syntax"></a>Syntax
 
@@ -114,7 +114,7 @@ Zugriffstyp: Schreibgeschützt
 Qualifizierer: **WmiDataId** (1), **Max** (34)
 </dt> </dl>
 
-Eindeutiger Bezeichner des Diensts. Der Bezeichner gibt einen Hinweis auf die Funktionalität an, die der Dienst bietet.
+Eindeutiger Bezeichner des Diensts. Der Bezeichner gibt einen Hinweis auf die Funktionalität, die der Dienst bereitstellt.
 
 </dd> </dl>
 
@@ -122,10 +122,10 @@ Eindeutiger Bezeichner des Diensts. Der Bezeichner gibt einen Hinweis auf die Fu
 
 
 
-| Anforderungen | Wert |
+| Anforderung | Wert |
 |-------------------------------------|------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Nicht unterstützt<br/>                            |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server \[ 2003-Desktop-Apps\]<br/> |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2003-Desktop-Apps\]<br/> |
 
 
 

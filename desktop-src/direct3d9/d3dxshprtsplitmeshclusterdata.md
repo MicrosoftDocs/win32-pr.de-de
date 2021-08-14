@@ -1,7 +1,7 @@
 ---
 description: D3DXSHPRTSPLITMESHCLUSTERDATA-Struktur
 ms.assetid: 6a53420c-06bc-4f52-ac2e-5adda5e34cb2
-title: D3DXSHPRTSPLITMESHCLUSTERDATA-Struktur (D3dx9mesh. h)
+title: D3DXSHPRTSPLITMESHCLUSTERDATA-Struktur (D3dx9mesh.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,12 +13,12 @@ api_type:
 - HeaderDef
 api_location:
 - d3dx9mesh.h
-ms.openlocfilehash: e7b1bc23606dbf08f5a924860e12c9c09d719287
-ms.sourcegitcommit: 14010c34b35fa268046c7683f021f86de08ddd0a
+ms.openlocfilehash: c4405b383e0403326c3cb84f43c97f4c7da826872b62cb21c94b3edb9ef0e475
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "106365080"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118298289"
 ---
 # <a name="d3dxshprtsplitmeshclusterdata-structure"></a>D3DXSHPRTSPLITMESHCLUSTERDATA-Struktur
 
@@ -42,43 +42,43 @@ typedef struct D3DXSHPRTSPLITMESHCLUSTERDATA {
 
 <dl> <dt>
 
-**uvertstart**
+**uVertStart**
 </dt> <dd>
 
-Typ: **[ **uint**](../winprog/windows-data-types.md)**
+Typ: **[ **UINT**](../winprog/windows-data-types.md)**
 
 </dd> <dd>
 
-Ursprünglicher Scheitelpunkt in neu zugeordnete Scheitelpunkt Arrays.
+Erster Scheitelpunkt in neu zugeordnetes Vertexarray.
 
 </dd> <dt>
 
-**uvertlength**
+**uVertLength**
 </dt> <dd>
 
-Typ: **[ **uint**](../winprog/windows-data-types.md)**
+Typ: **[ **UINT**](../winprog/windows-data-types.md)**
 
 </dd> <dd>
 
-Anzahl der Scheitel Punkte in diesem Supercluster.
+Anzahl der Scheitelzeichen in diesem Supercluster.
 
 </dd> <dt>
 
-**ufakestart**
+**uFaceStart**
 </dt> <dd>
 
-Typ: **[ **uint**](../winprog/windows-data-types.md)**
+Typ: **[ **UINT**](../winprog/windows-data-types.md)**
 
 </dd> <dd>
 
-Ursprünglicher Index in Flächen Array.
+Anfänglicher Index im Gesichtsarray.
 
 </dd> <dt>
 
-**ufakelength**
+**uFaceLength**
 </dt> <dd>
 
-Typ: **[ **uint**](../winprog/windows-data-types.md)**
+Typ: **[ **UINT**](../winprog/windows-data-types.md)**
 
 </dd> <dd>
 
@@ -86,25 +86,25 @@ Anzahl der Gesichter in diesem Supercluster.
 
 </dd> <dt>
 
-**uclusterstart**
+**uClusterStart**
 </dt> <dd>
 
-Typ: **[ **uint**](../winprog/windows-data-types.md)**
+Typ: **[ **UINT**](../winprog/windows-data-types.md)**
 
 </dd> <dd>
 
-Ursprünglicher Index in Cluster Array.
+Erster Index im Clusterarray.
 
 </dd> <dt>
 
-**uclusterlength**
+**uClusterLength**
 </dt> <dd>
 
-Typ: **[ **uint**](../winprog/windows-data-types.md)**
+Typ: **[ **UINT**](../winprog/windows-data-types.md)**
 
 </dd> <dd>
 
-Anzahl der Cluster in diesem Supercluster-Array.
+Anzahl der Cluster in diesem Superclusterarray.
 
 </dd> </dl>
 
@@ -114,7 +114,7 @@ Anzahl der Cluster in diesem Supercluster-Array.
 
 | Anforderung | Wert |
 |-------------------|----------------------------------------------------------------------------------------|
-| Header<br/> | <dl> <dt>D3dx9mesh. h</dt> </dl> |
+| Header<br/> | <dl> <dt>D3dx9mesh.h</dt> </dl> |
 
 
 

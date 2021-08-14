@@ -1,29 +1,29 @@
 ---
-title: Beispiel Code für die Suche nach Benutzern
-description: Die folgenden Codebeispiele suchen nach Benutzern in der Domäne des Benutzerkontos, unter dem der aufrufende Prozess ausgeführt wird. C++ examplevisual Basic-Beispiel
+title: Beispielcode für die Suche nach Benutzern
+description: In den folgenden Codebeispielen wird nach Benutzern in der Domäne des Benutzerkontos gesucht, unter dem der aufrufende Prozess ausgeführt wird. C++-BeispielVisual Basic-Beispiel
 ms.assetid: 53bbd57b-0bd2-4acb-a69f-89764b85e257
 ms.tgt_platform: multiple
 keywords:
-- Active Directory Beispiele Active Directory, suchen nach Benutzern
+- 'Active Directory-Beispiele: Active Directory, Suchen nach Benutzern'
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 34d587cf6264017fccb35fc7a82ac1e2c68c1785
-ms.sourcegitcommit: 803f3ccd65bdefe36bd851b9c6e7280be9489016
+ms.openlocfilehash: b974299416a508546fd8bc6108890579726c9dba6b01bb485f2160f04491923e
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "104390126"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118190162"
 ---
-# <a name="example-code-for-searching-for-users"></a>Beispiel Code für die Suche nach Benutzern
+# <a name="example-code-for-searching-for-users"></a>Beispielcode für die Suche nach Benutzern
 
-Die folgenden Codebeispiele suchen nach Benutzern in der Domäne des Benutzerkontos, unter dem der aufrufende Prozess ausgeführt wird.
+In den folgenden Codebeispielen wird nach Benutzern in der Domäne des Benutzerkontos gesucht, unter dem der aufrufende Prozess ausgeführt wird.
 
 -   [C++-Beispiel](#c-example)
 -   [Visual Basic Beispiel](#visual-basic-example)
 
 ## <a name="c-example"></a>C++-Beispiel
 
-Im folgenden C++-Codebeispiel wird die aktuelle Domäne nach allen Benutzern oder einem bestimmten Benutzer basierend auf einem angegebenen Filter durchsucht.
+Im folgenden C++-Codebeispiel wird die aktuelle Domäne anhand eines angegebenen Filters nach allen Benutzern oder einem bestimmten Benutzer durchsucht.
 
 
 ```C++
@@ -486,7 +486,7 @@ HRESULT FindUsers(IDirectorySearch *pContainerToSearch,  //  IDirectorySearch po
 
 ## <a name="visual-basic-example"></a>Visual Basic Beispiel
 
-Im folgenden Visual Basic Codebeispiel wird die aktuelle Domäne nach Benutzern mit dem angegebenen Nachnamen durchsucht, und die Attribute "Name" und "- [**shedname**](/windows/desktop/ADSchema/a-distinguishedname) " werden für die gefundenen Objekte zurückgegeben. Im folgenden Codebeispiel wird ADO verwendet, um die Suche auszuführen.
+Das folgende Visual Basic Codebeispiel durchsucht die aktuelle Domäne nach Benutzern mit dem angegebenen Nachnamen und gibt die Attribute name und [**distinguishedName**](/windows/desktop/ADSchema/a-distinguishedname) für die gefundenen Objekte zurück. Im folgenden Codebeispiel wird ADO verwendet, um die Suche durchzuführen.
 
 
 ```VB
@@ -619,6 +619,6 @@ End Sub
 
 
 
- 
+ 
 
- 
+ 

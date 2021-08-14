@@ -1,5 +1,5 @@
 ---
-description: Die CIM \_ productsupport-Klasse stellt eine Zuordnung Zwischenprodukt und Support Zugriff dar, die die Art der Unterstützung für das Produkt übermittelt.
+description: Die CIM ProductSupport-Klasse stellt eine Zuordnung zwischen Produkt- und Supportzugriff dar, die vermittelt, \_ wie Support für das Produkt erhalten wird.
 ms.assetid: 61c62556-0cf3-438c-b9c7-152505bf7ed6
 ms.tgt_platform: multiple
 title: CIM_ProductSupport-Klasse
@@ -16,23 +16,23 @@ api_type:
 - DllExport
 api_location:
 - CIMWin32.dll
-ms.openlocfilehash: 8d1b39e1eef8f9686eee66c629120feaea51c778
-ms.sourcegitcommit: c7add10d695482e1ceb72d62b8a4ebd84ea050f7
+ms.openlocfilehash: a33efc39481ebe94b6aa8802d469e218d026aba34ab8da6cddf3f136b45a6d3e
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106342979"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118421447"
 ---
-# <a name="cim_productsupport-class"></a>CIM \_ productsupport-Klasse
+# <a name="cim_productsupport-class"></a>CIM \_ ProductSupport-Klasse
 
-Die **CIM \_ productsupport** -Klasse stellt eine Zuordnung Zwischenprodukt und Support Zugriff dar, die die Art der Unterstützung für das Produkt übermittelt. Für ein Produkt sind verschiedene Support Typen verfügbar. das gleiche Support Objekt bietet Unterstützung für mehrere Produkte.
+Die **CIM \_ ProductSupport-Klasse** stellt eine Zuordnung zwischen Produkt- und Supportzugriff dar, die vermittelt, wie Support für das Produkt erhalten wird. Für ein Produkt stehen verschiedene Supporttypen zur Verfügung. das gleiche Supportobjekt kann Unterstützung für mehrere Produkte bereitstellen.
 
 > [!IMPORTANT]
-> Die Klassen der DMTF-CIM (Common Information Model) sind die übergeordneten Klassen, auf denen WMI-Klassen erstellt werden. WMI unterstützt zurzeit nur die [CIM 2. x-Versions Schemas](https://dmtf.org/standards/cim/schemas).
+> Die CIM-Klassen (Distributed Management Task Force) (DMTF) (Common Information Model) sind die übergeordneten Klassen, auf denen WMI-Klassen erstellt werden. WMI unterstützt derzeit nur die [CIM 2.x-Versionsschemas.](https://dmtf.org/standards/cim/schemas)
 
  
 
-Die folgende Syntax wird aus dem MOF-Code (Managed Object Format) vereinfacht und enthält alle geerbten Eigenschaften. Eigenschaften werden in alphabetischer Reihenfolge und nicht in der MOF-Reihenfolge aufgelistet.
+Die folgende Syntax wird durch Managed Object Format (MOF)-Code vereinfacht und enthält alle geerbten Eigenschaften. Eigenschaften werden in alphabetischer Reihenfolge und nicht in MOF-Reihenfolge aufgelistet.
 
 ## <a name="syntax"></a>Syntax
 
@@ -47,20 +47,20 @@ class CIM_ProductSupport
 
 ## <a name="members"></a>Member
 
-Die **CIM \_ productsupport** -Klasse verfügt über diese Typen von Membern:
+Die **CIM \_ ProductSupport-Klasse** verfügt über die folgenden Membertypen:
 
 -   [Eigenschaften](#properties)
 
 ### <a name="properties"></a>Eigenschaften
 
-Die **CIM \_ productsupport** -Klasse verfügt über diese Eigenschaften.
+Die **CIM \_ ProductSupport-Klasse** verfügt über diese Eigenschaften.
 
 <dl> <dt>
 
 **Produkt**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **CIM- \_ Produkt**
+Datentyp: **\_ CIM-Produkt**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
@@ -73,7 +73,7 @@ Verweis auf das Produkt.
 **Unterstützung**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **CIM \_ supportaccess**
+Datentyp: **CIM \_ SupportAccess**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
@@ -83,11 +83,11 @@ Verweis auf den Produktsupport.
 
 </dd> </dl>
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Diese Klasse wird von WMI nicht implementiert.
+WMI implementiert diese Klasse nicht.
 
-Diese Dokumentation wird von den von der DMTF veröffentlichten CIM-Klassen Beschreibungen abgeleitet. Microsoft hat möglicherweise Änderungen an den korrekten geringfügigen Fehlern vorgenommen, den Microsoft SDK-Dokumentations Standards entsprechen oder weitere Informationen bereitstellen.
+Diese Dokumentation wird von den CIM-Klassenbeschreibungen abgeleitet, die von DMTF veröffentlicht wurden. Microsoft hat möglicherweise Änderungen vorgenommen, um kleinere Fehler zu beheben, die Dokumentationsstandards des Microsoft SDK zu erfüllen oder weitere Informationen zur Verfügung zu stellen.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -97,8 +97,8 @@ Diese Dokumentation wird von den von der DMTF veröffentlichten CIM-Klassen Besc
 |-------------------------------------|-----------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows Vista<br/>                                                                |
 | Unterstützte Mindestversion (Server)<br/> | Windows Server 2008<br/>                                                          |
-| Namespace<br/>                | Root \\ CIMV2<br/>                                                                  |
-| MOF<br/>                      | <dl> <dt>Cimwin32. MOF</dt> </dl> |
+| Namespace<br/>                | \\Stamm-CIMV2<br/>                                                                  |
+| MOF<br/>                      | <dl> <dt>CIMWin32.mof</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>CIMWin32.dll</dt> </dl> |
 
 

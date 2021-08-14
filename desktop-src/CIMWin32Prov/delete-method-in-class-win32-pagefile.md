@@ -1,8 +1,8 @@
 ---
-description: 'Delete-Methode der Win32_PageFile Klasse: Löscht die logische Auslagerungsdatei (oder das Verzeichnis), die im Objektpfad angegeben ist.'
+description: 'Delete-Methode der Win32_PageFile-Klasse: Löscht die logische Auslagerungsdatei (oder das Verzeichnis), die im Objektpfad angegeben ist.'
 ms.assetid: cc36d621-597e-4343-8bf6-bfca7fa29276
 ms.tgt_platform: multiple
-title: Delete-Methode der Win32_PageFile Klasse
+title: Delete-Methode der Win32_PageFile-Klasse
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -14,18 +14,18 @@ api_type:
 - COM
 api_location:
 - CIMWin32.dll
-ms.openlocfilehash: 8b35751633387f3db1d7dccbf13694f56717a1d3
-ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
+ms.openlocfilehash: 76101812d3c74dd9d4769706d6b6e1bde9470d530c6d88f2a60331a8666bb3d5
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2021
-ms.locfileid: "108089588"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118419450"
 ---
 # <a name="delete-method-of-the-win32_pagefile-class"></a>Delete-Methode der Win32 \_ PageFile-Klasse
 
-Die **Delete** [WMI-Klassenmethode](/windows/desktop/WmiSdk/retrieving-a-class) löscht die logische Auslagerungsdatei (oder das Verzeichnis), die im Objektpfad angegeben ist.
+Die  [Delete WMI-Klassenmethode](/windows/desktop/WmiSdk/retrieving-a-class) löscht die logische Auslagerungsdatei (oder das Verzeichnis), die im Objektpfad angegeben ist.
 
-In diesem Thema wird Managed Object Format -Syntax (MOF) verwendet. Weitere Informationen zur Verwendung dieser Methode finden Sie unter [Aufrufen einer Methode.](/windows/desktop/WmiSdk/calling-a-method)
+In diesem Thema wird die MOF-Syntax (Managed Object Format) verwendet. Weitere Informationen zur Verwendung dieser Methode finden Sie unter [Aufrufen einer Methode.](/windows/desktop/WmiSdk/calling-a-method)
 
 ## <a name="syntax"></a>Syntax
 
@@ -112,7 +112,7 @@ Das Verzeichnis ist nicht leer.
 **15**
 </dt> <dd>
 
-Es ist ein Freigabeverstoß vor worden.
+Es ist ein Freigabeverstoß aufgetreten.
 
 </dd> <dt>
 
@@ -141,7 +141,7 @@ Ein angegebener Parameter ist ungültig.
 
 
 
-| Anforderungen | Wert |
+| Anforderung | Wert |
 |-------------------------------------|-----------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows Vista<br/>                                                                |
 | Unterstützte Mindestversion (Server)<br/> | Windows Server 2008<br/>                                                          |

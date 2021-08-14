@@ -1,31 +1,31 @@
 ---
-description: Hardware Anbieter Objekte
+description: Hardwareanbieterobjekte
 ms.assetid: d1724219-1487-485b-9c52-5003069fe9e2
-title: Hardware Anbieter Objekte
+title: Hardwareanbieterobjekte
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: b1aaebf61e97487b48a6b8bf0dbd91cc6aa3e0bd
-ms.sourcegitcommit: 37f276b5d887a3aad04b1ba86e390dea9d87e591
+ms.openlocfilehash: d0c0050b6a9754b25b6a5027d9470cb2fc46911bf4ab3ef852454d1f0698a1d2
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/04/2021
-ms.locfileid: "106353239"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118125964"
 ---
-# <a name="hardware-provider-objects"></a>Hardware Anbieter Objekte
+# <a name="hardware-provider-objects"></a>Hardwareanbieterobjekte
 
-\[Ab Windows 8 und Windows Server 2012 wird die COM-Schnittstelle des [virtuellen Festplatten Dienstanbieter](virtual-disk-service-portal.md) durch die [Windows-Speicherverwaltungs-API](/previous-versions/windows/desktop/stormgmt/windows-storage-management-api-portal)ersetzt.\]
+\[Ab Windows 8 und Windows Server 2012 wird die COM-Schnittstelle des [Virtual Disk Service](virtual-disk-service-portal.md) durch die [Windows Storage Verwaltungs-API](/previous-versions/windows/desktop/stormgmt/windows-storage-management-api-portal)ersetzt.\]
 
-Das VDS-Objektmodell enthält eine Reihe von Objekten, mit denen Hardware Anbieter Entitäten abgefragt und konfiguriert werden können. (Beachten Sie, dass VDS zwar einen Softwareanbieter enthält, aber einen Hardware Anbieter und die zugeordnete Hardware separat kaufen müssen, um die Hardware Anbieter Objekte nutzen zu können.) Diese Hardware Anbieter Objekte stellen physische Geräte (z. b. Subsysteme, Laufwerke und Controller) und virtuelle Geräte (z. b. LUNs und LUN-plexes) dar.
+Das VDS-Objektmodell enthält eine Reihe von Objekten zum Abfragen und Konfigurieren von Hardwareanbieterentitäten. (Beachten Sie, dass VDS zwar einen Softwareanbieter enthält, sie aber separat einen Hardwareanbieter und die zugehörige Hardware erwerben müssen, um die Hardwareanbieterobjekte nutzen zu können.) Diese Hardwareanbieterobjekte stellen physische Geräte (z. B. Subsysteme, Laufwerke und Controller) und virtuelle Geräte (z. B. LUNs und LUN-Plexes) dar.
 
-Ein Hardware Anbieter sollte ein COM-Objekt für jedes physische oder virtuelle Gerät erstellen.
+Ein Hardwareanbieter sollte ein COM-Objekt für jedes physische oder virtuelle Gerät erstellen.
 
-Die folgende Abbildung zeigt die Beziehung zwischen dem Anbieter Objekt und dem Satz von Hardware Anbieter Objekten sowie die Beziehung zwischen den verschiedenen Hardware Anbieter Objekten selbst.
+Die folgende Abbildung zeigt die Beziehung zwischen dem Anbieterobjekt und dem Satz von Hardwareanbieterobjekten sowie die Beziehung zwischen den verschiedenen Hardwareanbieterobjekten selbst.
 
-![Diagramm, das die Beziehung zwischen "Provider" und "Subsystem", "controller", "LUN", "LUN Plex", "Drive" und "Spindel" anzeigt. ](images/vdshwobjects.png)
+![Diagramm, das die Beziehung zwischen "Provider" und "Subsystem", "Controller", "LUN", "LUN plex", "Drive" und "Spindel" zeigt. ](images/vdshwobjects.png)
 
-Ein Anbieter Objekt kann eine beliebige Anzahl von Subsystemen enthalten. Alle Hardware Anbieter können mehrere Instanzen desselben subsystemmodells verwalten. Viele Hardware Anbieter können auch mehrere Instanzen von unterschiedlichen subsystemmodellen verwalten. Ein einzelner Computer kann eine beliebige Anzahl von Hardwareanbietern hosten.
+Ein Anbieterobjekt kann eine beliebige Anzahl von Subsystemen enthalten. Alle Hardwareanbieter können mehrere Instanzen desselben Subsystemmodells verwalten. Viele Hardwareanbieter können auch mehrere Instanzen verschiedener Subsystemmodelle verwalten. Ein einzelner Computer kann eine beliebige Anzahl von Hardwareanbietern hosten.
 
-Ein Subsystem-Objekt kann eine beliebige Anzahl von Controllern und Laufwerken enthalten und kann beliebig viele LUNs enthalten. Ein LUN-Objekt besteht aus mindestens einem LUN-Plex, und jeder LUN-Plex ist abhängig vom Plex-Typ einem oder mehreren Laufwerken zugeordnet. Controller Objekte können Dateneingaben/-Ausgaben für eine beliebige Anzahl von LUN-Objekten verwalten.
+Ein Subsystemobjekt kann eine beliebige Anzahl von Controllern und Laufwerken enthalten und eine beliebige Anzahl von LUNs aufweisen. Ein LUN-Objekt besteht aus mindestens einem LUN-Plex, und jedes LUN-Plex wird je nach Plextyp einem oder mehreren Laufwerken zugeordnet. Controllerobjekte können die Dateneingabe/-ausgabe für eine beliebige Anzahl von LUN-Objekten verwalten.
 
 ## <a name="related-topics"></a>Zugehörige Themen
 

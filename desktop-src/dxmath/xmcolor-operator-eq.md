@@ -1,7 +1,7 @@
 ---
-description: Weist der aktuellen Instanz von xmcolor Vektor Komponenten Daten zu.
+description: Weist der aktuellen Instanz von XMCOLOR Vektorkomponentendaten zu.
 ms.assetid: 'overload:microsoft.directx_sdk.reference.xmcolor.operator = '
-title: Xmcolor Operator =-Operatoren
+title: XMCOLOR-Operator = Operatoren
 ms.topic: reference
 ms.date: 12/06/2018
 topic_type:
@@ -11,16 +11,16 @@ api_name: ''
 api_type:
 - NA
 api_location: ''
-ms.openlocfilehash: 737076e4988edd08eb1e313cc604999f07e5e08f
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 7f7b158c0f059e6bc3efda9d7a45cf62a8d524271fea98c18ebd02ed503a9777
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "103754065"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118276524"
 ---
-# <a name="xmcolor-operator--operators"></a>Xmcolor Operator =-Operatoren
+# <a name="xmcolor-operator--operators"></a>XMCOLOR-Operator = Operatoren
 
-Weist der aktuellen Instanz von [**xmcolor**](/windows/desktop/api/DirectXPackedVector/ns-directxpackedvector-xmcolor)Vektor Komponenten Daten zu.
+Weist der aktuellen Instanz von [**XMCOLOR**](/windows/desktop/api/DirectXPackedVector/ns-directxpackedvector-xmcolor)Vektorkomponentendaten zu.
 
 ### <a name="overload-list"></a>Überladeliste
 
@@ -34,13 +34,13 @@ Weist der aktuellen Instanz von [**xmcolor**](/windows/desktop/api/DirectXPacked
 <thead>
 <tr class="header">
 <th style="text-align: left;">Operator</th>
-<th style="text-align: left;">BESCHREIBUNG</th>
+<th style="text-align: left;">Beschreibung</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<td style="text-align: left;"><a href="/windows/desktop/api/directxpackedvector/nf-directxpackedvector-xmcolor-operator-assign(constuint32_t)">Xmcolor:: Operator = (Konstante xmcolor-&)</a></td>
-<td style="text-align: left;">Dieser Operator weist die Vektor Komponenten Daten aus einer Instanz von <a href="/windows/desktop/api/DirectXPackedVector/ns-directxpackedvector-xmcolor"><strong>xmcolor</strong></a> der aktuellen Instanz von <strong>xmcolor</strong>zu.<br/>
+<td style="text-align: left;"><a href="/windows/desktop/api/directxpackedvector/nf-directxpackedvector-xmcolor-operator-assign(constuint32_t)">XMCOLOR::operator = (const XMCOLOR&)</a></td>
+<td style="text-align: left;">Dieser Operator weist die Vektorkomponentendaten aus einer Instanz von <a href="/windows/desktop/api/DirectXPackedVector/ns-directxpackedvector-xmcolor"><strong>XMCOLOR</strong></a> der aktuellen Instanz von <strong>XMCOLOR</strong>zu.<br/>
 <blockquote>
 [!Note]<br />
 Dieser Operator ist nur unter C++ verfügbar.
@@ -48,8 +48,8 @@ Dieser Operator ist nur unter C++ verfügbar.
 <br/></td>
 </tr>
 <tr class="even">
-<td style="text-align: left;"><a href="/windows/desktop/api/directxpackedvector/nf-directxpackedvector-xmcolor-operator-assign(constuint32_t)">Xmcolor:: Operator = (Konstante uint32_t)</a></td>
-<td style="text-align: left;">Dieser Operator weist die Vektor Komponenten Daten, die in einer Instanz von verpackt sind <code>uint32_t</code> , der aktuellen Instanz von <a href="/windows/desktop/api/DirectXPackedVector/ns-directxpackedvector-xmcolor"><strong>xmcolor</strong></a>zu.<br/>
+<td style="text-align: left;"><a href="/windows/desktop/api/directxpackedvector/nf-directxpackedvector-xmcolor-operator-assign(constuint32_t)">XMCOLOR::operator = (const uint32_t)</a></td>
+<td style="text-align: left;">Dieser Operator weist die in einer Instanz von gepackten Vektorkomponentendaten <code>uint32_t</code> der aktuellen Instanz von <a href="/windows/desktop/api/DirectXPackedVector/ns-directxpackedvector-xmcolor"><strong>XMCOLOR</strong></a>zu.<br/>
 <blockquote>
 [!Note]<br />
 Dieser Operator ist nur unter C++ verfügbar.
@@ -65,13 +65,13 @@ Dieser Operator ist nur unter C++ verfügbar.
 
 <dl> <dt>
 
-[Xmcolor-Operatoren](ovw-xmcolor-operators.md)
+[XMCOLOR-Operatoren](ovw-xmcolor-operators.md)
 </dt> <dt>
 
-**Verweis**
+**Referenz**
 </dt> <dt>
 
-[**Xmcolor**](/windows/desktop/api/DirectXPackedVector/ns-directxpackedvector-xmcolor)
+[**XMCOLOR**](/windows/desktop/api/DirectXPackedVector/ns-directxpackedvector-xmcolor)
 </dt> </dl>
 
  

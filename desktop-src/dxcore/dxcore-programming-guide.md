@@ -4,23 +4,23 @@ description: Leitfaden für die Programmierung mit DXCore.
 ms.localizationpriority: high
 ms.topic: article
 ms.date: 06/20/2019
-ms.openlocfilehash: 475469f027d3db2e4a29673c5a674990192a2fe3
-ms.sourcegitcommit: 592c9bbd22ba69802dc353bcb5eb30699f9e9403
+ms.openlocfilehash: 2e7efb5fcad08b2640d0a2ed4de58544df9430f3e49b6f6e804726dd6e76c51e
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "106341962"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118279670"
 ---
 # <a name="dxcore-programming-guide"></a>DXCore-Programmieranleitung
 
-DXCore ist eine adapterenumerationsapi für DirectX-Geräte, sodass sich einige ihrer Funktionen mit denen von [DXGI](../direct3ddxgi/dx-graphics-dxgi.md)überschneiden.
+DXCore ist eine Adapterenumerations-API für DirectX-Geräte, sodass sich einige seiner Funktionen mit denen von [DXGI überschneiden.](../direct3ddxgi/dx-graphics-dxgi.md)
 
 ## <a name="in-this-section"></a>In diesem Abschnitt
 
-| Thema | BESCHREIBUNG |
+| Thema | Beschreibung |
 |-|-|
-| [Verwenden von DXCore zum Auflisten von Adaptern](dxcore-enum-adapters.md) | Sehen Sie sich die Haupt Features von DXCore mit einigen Codebeispielen sowie eine vollständige Quell Code Auflistung einer minimalen DXCore-Anwendung an. |
-| [Minimale DXCore-Anwendung](dxcore-source-code.md) | Die vollständige Quell Code Auflistung für eine minimale DXCore-Anwendung. |
+| [Verwenden von DXCore zum Auflisten von Adaptern](dxcore-enum-adapters.md) | Ein Blick auf die Hauptfunktionen von DXCore mit einigen Codebeispielen sowie eine vollständige Quellcodeauflistung einer minimalen DXCore-Anwendung. |
+| [Minimale DXCore-Anwendung](dxcore-source-code.md) | Die vollständige Quellcodeauflistung für eine minimale DXCore-Anwendung. |
 
 ## <a name="related-topics"></a>Zugehörige Themen
 

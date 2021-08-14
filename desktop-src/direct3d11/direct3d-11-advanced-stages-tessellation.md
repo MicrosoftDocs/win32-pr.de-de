@@ -1,77 +1,77 @@
 ---
-title: Mosaik Phasen
-description: Die Direct3D 11-Laufzeit unterstützt drei neue Phasen, die das Mosaik implementieren, das untergeordnete Oberflächen auf niedriger Detailebene in die GPU konvertiert.
+title: Mosaikstufen
+description: Die Direct3D 11-Runtime unterstützt drei neue Phasen, die das Mosaik implementieren, das Unterteilungsoberflächen mit geringem Detail in primitivere Detailtypen auf der GPU konvertiert.
 ms.assetid: 4ad2fd3e-6e1a-4326-8469-3198acf931dc
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 3aacb48ccc2c95ab93ba4f34212e654880d9a369
-ms.sourcegitcommit: 4e4f9e7c90d25af0774deec1d44bd49fa9b6daa9
+ms.openlocfilehash: 52d272ad1db53c6e70a856255c1826f4867f069897b42da0219cd334d48226d5
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2020
-ms.locfileid: "104316664"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118099232"
 ---
-# <a name="tessellation-stages"></a>Mosaik Phasen
+# <a name="tessellation-stages"></a>Mosaikstufen
 
-Die Direct3D 11-Laufzeit unterstützt drei neue Phasen, die das Mosaik implementieren, das untergeordnete Oberflächen auf niedriger Detailebene in die GPU konvertiert. Mosaik Kacheln (oder unterbrechen) hoch geordnete Oberflächen in geeignete Strukturen zum Rendern.
+Die Direct3D 11-Runtime unterstützt drei neue Phasen, die das Mosaik implementieren, das Unterteilungsoberflächen mit geringem Detail in primitivere Detailtypen auf der GPU konvertiert. Mosaikkacheln (oder unterbricht) hochwertige Oberflächen in geeignete Strukturen für das Rendering.
 
-Durch die Implementierung von Mosaik in Hardware kann eine Grafik Pipeline niedrigere Detailmodelle auswerten (niedrigere Polygon Anzahl) und die Darstellung ausführlicher darstellen. Obwohl das Software Mosaik durchgeführt werden kann, kann durch Hardware implementiertes Mosaik eine unglaubliche Menge an visuellen Details generieren (einschließlich der Unterstützung für die Verschiebungs Zuordnung), ohne die visuellen Details zu den Modellgrößen hinzuzufügen und die Aktualisierungs Raten zu erhöhen.
+Durch die Implementierung des Mosaiks in der Hardware kann eine Grafikpipeline Modelle mit niedrigeren Details (niedrigere Polygonanzahl) auswerten und detaillierter rendern. Während das Mosaik von Software durchgeführt werden kann, kann das von der Hardware implementierte Mosaik eine enorme Menge visueller Details generieren (einschließlich unterstützung der Verschiebungszuordnung), ohne die visuellen Details zu den Modellgrößen und Lähmungsaktualisierungsraten hinzufügen zu müssen.
 
--   [Vorteile der Mosaik Funktionen](#tessellation-benefits)
--   [Neue Pipeline Stufen](#new-pipeline-stages)
-    -   [Hülle-Shader-Phase](#hull-shader-stage)
-    -   [Mosaik Phase](#tessellator-stage)
-    -   [Domäne-Shader-Phase](#domain-shader-stage)
--   [APIs für die Initialisierung von Mosaik Phasen](#apis-for-initializing-tessellation-stages)
--   [Vorgehensweise:](#how-tos)
+-   [Mosaikvorteile](#tessellation-benefits)
+-   [Neue Pipelinestufen](#new-pipeline-stages)
+    -   [Hüllen-Shader-Stufe](#hull-shader-stage)
+    -   [Mosaikphase](#tessellator-stage)
+    -   [Domänen-Shader-Phase](#domain-shader-stage)
+-   [APIs zum Initialisieren von Mosaikstufen](#apis-for-initializing-tessellation-stages)
+-   [So geht's:](#how-tos)
 -   [Zugehörige Themen](#related-topics)
 
-## <a name="tessellation-benefits"></a>Vorteile der Mosaik Funktionen
+## <a name="tessellation-benefits"></a>Mosaikvorteile
 
-Mosaik
+Tessellation:
 
--   Spart Menge Arbeitsspeicher und Bandbreite, sodass eine Anwendung detailliertere Oberflächen aus Modellen mit niedriger Auflösung Rendering kann. Das Mosaik Verfahren, das in der Pipeline Direct3D 11 implementiert ist, unterstützt auch die Verschiebungs Zuordnung, die beeindruckende Mengen von Oberflächendetails liefern kann.
--   Unterstützt skalierbare Renderingverfahren, z. b. fortlaufende oder Ansichts abhängige Detailebenen, die im Handumdrehen berechnet werden können.
--   Verbessert die Leistung, indem teure Berechnungen mit niedrigerer Häufigkeit ausgeführt werden (Berechnungen in einem Modell mit niedrigerer Detail Ausführung). Dies kann das Kombinieren von Berechnungen mithilfe von Blend-Formen oder Morph-Zielen für realistische Animationen oder Physik Berechnungen für die Konflikterkennung oder die Dynamik des Soft Texts einschließen.
+-   Spart viel Arbeitsspeicher und Bandbreite, wodurch eine Anwendung detailliertere Oberflächen aus Modellen mit niedriger Auflösung rendern kann. Die in der Direct3D 11-Pipeline implementierte Mosaiktechnik unterstützt auch die Verschiebungszuordnung, die beeindruckende Mengen an Oberflächendetails erzeugen kann.
+-   Unterstützt skalierbare Renderingtechniken, z. B. fortlaufende oder Ansichtsabhängige Detailebenen, die direkt berechnet werden können.
+-   Verbessert die Leistung, indem teure Berechnungen mit geringerer Häufigkeit durchgeführt werden (Berechnungen für ein Modell mit niedrigeren Details). Dies kann z. B. Überblendungsberechnungen mithilfe von Mischungsformen oder Morphzielen für realistische Animationen oder physikalische Berechnungen zur Kollisionserkennung oder soft body dynamics umfassen.
 
-Die Pipeline Direct3D 11 implementiert das Mosaik in Hardware, das die Arbeit von der CPU auf die GPU auslädt. Dies kann zu sehr großen Leistungsverbesserungen führen, wenn eine Anwendung eine große Anzahl von Morph-Zielen und/oder komplexeren Modelle für das Skinning/-debuggingmodell implementiert. Um auf die neuen Mosaik Features zuzugreifen, müssen Sie sich über einige neue Pipeline Phasen informieren.
+Die Direct3D 11-Pipeline implementiert Mosaik in Hardware, die die Arbeit von der CPU auf die GPU auslädt. Dies kann zu sehr großen Leistungsverbesserungen führen, wenn eine Anwendung eine große Anzahl von Morph-Zielen und/oder anspruchsvollere Skinning-/Modellmodelle implementiert. Um auf die neuen Mosaikfeatures zugreifen zu können, müssen Sie sich über einige neue Pipelinephasen informieren.
 
-## <a name="new-pipeline-stages"></a>Neue Pipeline Stufen
+## <a name="new-pipeline-stages"></a>Neue Pipelinestufen
 
-Das Mosaik verwendet die GPU, um eine ausführlichere Oberfläche aus einer Oberfläche zu berechnen, die aus Quad-Patches, Dreiecks Patches oder Isolationen erstellt wird. Um der hoch geordneten Oberfläche zu nähern, wird jeder Patch mithilfe von Mosaik Faktoren in Dreiecke, Punkte oder Zeilen unterteilt. Die Pipeline Direct3D 11 implementiert Mosaik mithilfe von drei neuen Pipeline Stufen:
+Das Mosaik verwendet die GPU, um eine detailliertere Oberfläche aus einer Oberfläche zu berechnen, die aus Quad-Patches, Dreieckspatches oder Isolinien erstellt wurde. Zur Ungefährung der hoch geordneten Oberfläche wird jeder Patch unter Verwendung von Mosaikfaktoren in Dreiecke, Punkte oder Linien unterteilt. Die Direct3D 11-Pipeline implementiert das Mosaik mithilfe von drei neuen Pipelinestufen:
 
--   [Hull-Shader-Phase](#hull-shader-stage) : eine programmierbare Shader-Stufe, die einen Geometry-Patch (und Patch-Konstanten) erzeugt, die den einzelnen Eingabe Patches (Quad, Dreieck oder Line) entsprechen.
--   Mosaik [Phase](#tessellator-stage) : eine Funktion für eine Fixed-Funktions Pipeline, mit der ein Samplings-Muster der Domäne erstellt wird, das den Geometry-Patch darstellt und einen Satz kleinerer Objekte (Dreiecke, Punkte oder Linien) generiert, die diese Beispiele verbinden.
--   [Domäne-Shader-Phase](#domain-shader-stage) : eine programmierbare Shader-Stufe, die die Vertex-Position berechnet, die den einzelnen Domänen Beispielen entspricht.
+-   [Hülle-Shader-Stufe:](#hull-shader-stage) Eine programmierbare Shaderstufe, die einen Geometriepatch (und Patchkonst constants) erzeugt, die jedem Eingabepatch (Quad, Dreieck oder Linie) entsprechen.
+-   [Mosaikphase:](#tessellator-stage) Eine feste Funktionspipelinephase, die ein Samplingmuster der Domäne erstellt, das den Geometriepatch darstellt und eine Reihe kleinerer Objekte (Dreiecke, Punkte oder Linien) generiert, die diese Beispiele verbinden.
+-   [Domänen-Shader-Stufe:](#domain-shader-stage) Eine programmierbare Shaderphase, die die Scheitelpunktposition berechnet, die den einzelnen Domänenbeispielen entspricht.
 
-Im folgenden Diagramm werden die neuen Phasen der Pipeline Direct3D 11 hervorgehoben.
+Das folgende Diagramm zeigt die neuen Phasen der Direct3D 11-Pipeline.
 
-![Diagramm der Direct3D 11-Pipeline, mit der die Stufen "Hull-Shader", "Mosaik Bereich" und "Domänen-Shader" hervorgehoben werden](images/d3d11-pipeline-stages-tessellation.png)
+![Diagramm der Direct3d 11-Pipeline, die die Phasen "Hülle-Shader", "Tessellator" und "Domänen-Shader" hervor hebt](images/d3d11-pipeline-stages-tessellation.png)
 
-Das folgende Diagramm zeigt den Fortschritt durch die Mosaik Phasen. Der Fortschritt beginnt mit der Oberfläche für die Unterteilung mit niedriger Detailgenauigkeit. Im nächsten Schritt wird der Eingabe Patch mit dem entsprechenden Geometry-Patch, den Domänen Beispielen und den Dreiecken hervorgehoben, mit denen diese Beispiele verbunden werden. Der Fortschritt verdeutlicht schließlich die Scheitel Punkte, die diesen Beispielen entsprechen.
+Das folgende Diagramm zeigt den Fortschritt durch die Mosaikphasen. Der Fortschritt beginnt mit der Unterteilungsoberfläche mit niedrigen Details. Der Fortschritt hebt als Nächstes den Eingabepatch mit dem entsprechenden Geometriepatch, Domänenbeispielen und Dreiecken hervor, die diese Beispiele verbinden. Der Fortschritt hebt schließlich die Scheitelpunkte hervor, die diesen Beispielen entsprechen.
 
-![Diagramm der Mosaik Entwicklung](images/tess-prog.png)
+![Diagramm des Mosaikfortschritts](images/tess-prog.png)
 
-### <a name="hull-shader-stage"></a>Hull-Shader Phase
+### <a name="hull-shader-stage"></a>Hull-Shader Stage
 
-Ein Hull-Shader, der einmal pro Patch aufgerufen wird, wandelt Eingabe Steuerungs Punkte um, die eine niedrige Reihenfolge in Steuerungs Punkte definieren, aus denen ein Patch besteht. Außerdem werden einige pro-Patch-Berechnungen durchführt, um Daten für die Mosaik Phase und die Domänen Phase bereitzustellen. Auf der einfachsten Blackbox-Ebene würde die Hülle-Shader-Stufe in etwa wie das folgende Diagramm aussehen.
+Ein Hüllen-Shader, der einmal pro Patch aufgerufen wird, transformiert Eingabekontrollpunkte, die eine oberfläche niedriger Ordnung definieren, in Kontrollpunkte, aus denen ein Patch besteht. Außerdem werden einige Berechnungen pro Patch zur Bereitstellung von Daten für die Mosaikphase und die Domänenphase erstellt. Auf der einfachsten Blackbox-Ebene würde die Phase des Hüllen-Shaders in etwa wie im folgenden Diagramm aussehen.
 
-![Diagramm der Hülle-Shader-Phase](images/d3d11-hull-shader.png)
+![Diagramm der Hüllen-Shader-Stufe](images/d3d11-hull-shader.png)
 
-Ein Hull-Shader wird mit einer HLSL-Funktion implementiert und verfügt über die folgenden Eigenschaften:
+Ein Hüllen-Shader wird mit einer HLSL-Funktion implementiert und verfügt über die folgenden Eigenschaften:
 
--   Die Shader-Eingabe liegt zwischen 1 und 32 Kontrollpunkten.
--   Die Shader-Ausgabe liegt zwischen 1 und 32 Kontrollpunkten, unabhängig von der Anzahl der Mosaik Faktoren. Die Kontrollpunkte, die von einem Hull-Shader ausgegeben werden, können von der Domänen-Shader-Stufe verwendet werden. Patch-konstantendaten können von einem Domänen-Shader verwendet werden. Mosaik Faktoren können vom Domänen-Shader und der Mosaik Phase genutzt werden.
--   Die Mosaik Faktoren legen fest, wie viel zwischen den einzelnen Patches unterteilt werden soll.
--   Der Shader deklariert den Zustand, der für die Mosaik Phase erforderlich ist. Hierzu gehören Informationen wie z. b. die Anzahl der Kontrollpunkte, der Typ der Patchfläche und der Partitionierungstyp, der beim Mosaik Vorgang verwendet werden soll. Diese Informationen werden in der Regel am Anfang des Shader-Codes als Deklarationen angezeigt.
--   Wenn in der Hull-Shader-Stufe ein beliebiger Edge-Mosaik Faktor auf = 0 oder NaN festgelegt wird, wird der Patch als "culled" festgelegt. Folglich kann die Mosaik Phase nicht ausgeführt werden, und der Domänen-Shader wird nicht ausgeführt, und für diesen Patch wird keine sichtbare Ausgabe erzeugt.
+-   Die Shadereingabe liegt zwischen 1 und 32 Kontrollpunkten.
+-   Die Shaderausgabe liegt unabhängig von der Anzahl der Mosaikfaktoren zwischen 1 und 32 Kontrollpunkten. Die Steuerpunkteausgabe eines Hüllen-Shaders kann von der Domänen-Shader-Stufe verwendet werden. Patchkonst constant data can be consumed by a domain shader; (Patchkonst constant data can be consumed by a domain shader; Patchkonst constant data can be consumed by Mosaikfaktoren können vom Domänen-Shader und der Mosaikphase verwendet werden.
+-   Mosaikfaktoren bestimmen, wie viel die einzelnen Patches subdiviert werden.
+-   Der Shader deklariert den für die Mosaikphase erforderlichen Zustand. Dies schließt Informationen wie die Anzahl der Kontrollpunkte, den Typ der Patchgesicht und den Typ der Partitionierung ein, die beim Mosaik verwendet werden soll. Diese Informationen werden in der Regel als Deklarationen am Anfang des Shadercodes angezeigt.
+-   Wenn die Phase des Hüllen-Shaders einen Edge-Mosaikfaktor auf = 0 oder NaN setzt, wird der Patch gecullt. Daher kann die Mosaikphase ausgeführt werden, der Domänen-Shader wird nicht ausgeführt, und für diesen Patch wird keine sichtbare Ausgabe erzeugt.
 
-Auf einer tieferen Ebene arbeitet ein Hull-Shader tatsächlich in zwei Phasen: eine Steuerungspunkt Phase und eine patchkonstantenphase, die parallel von der Hardware ausgeführt werden. Der HLSL-Compiler extrahiert die Parallelität in einem Hull-Shader und codiert Sie in Bytecode, der die Hardware steuert.
+Auf einer tieferen Ebene arbeitet ein Hüllen-Shader tatsächlich in zwei Phasen: einer Kontrollpunktphase und einer Patchkonst konstanten Phase, die parallel von der Hardware ausgeführt werden. Der HLSL-Compiler extrahiert die Parallelität in einem Hüllen-Shader und codiert sie in Bytecode, der die Hardware steuert.
 
--   Die Steuerungspunkt Phase wird für jeden Steuerungspunkt einmal betrieben, die Kontrollpunkte für einen Patch gelesen und ein Ausgabe Steuerungspunkt (durch eine controlpointid identifiziert) erzeugt.
--   Die Patch-Konstante-Phase arbeitet einmal pro Patch, um Edge-Mosaik Faktoren und andere pro-Patch-Konstanten zu generieren. Intern können viele patchkonstantenphasen gleichzeitig ausgeführt werden. Die patchkonstantenphase hat schreibgeschützten Zugriff auf alle Eingabe-und Ausgabe Steuerungs Punkte.
+-   Die Kontrollpunktphase wird einmal für jeden Kontrollpunkt ausgeführt, liest die Kontrollpunkte für einen Patch und generiert einen Ausgabekontrollpunkt (identifiziert durch eine ControlPointID).
+-   Die Patchkonst constant-Phase wird einmal pro Patch betrieben, um Edge-Mosaikfaktoren und andere Pro-Patch-Konstanten zu generieren. Intern können viele Patchkonst constant-Phasen gleichzeitig ausgeführt werden. Die Patchkonst constant-Phase verfügt über schreibgeschützten Zugriff auf alle Eingabe- und Ausgabekontrollpunkte.
 
-Hier ist ein Beispiel für einen Hull-Shader:
+Hier ist ein Beispiel für einen Hüllen-Shader:
 
 
 ```
@@ -92,48 +92,48 @@ MyOutPoint main(uint Id : SV_ControlPointID,
 
 
 
-Ein Beispiel, das einen Hull-Shader erstellt, finden Sie unter Gewusst [wie: Erstellen eines Hull-Shaders](direct3d-11-advanced-stages-hull-shader-create.md).
+Ein Beispiel zum Erstellen eines Hüllen-Shaders finden Sie unter [How To: Create a Hull Shader](direct3d-11-advanced-stages-hull-shader-create.md).
 
-### <a name="tessellator-stage"></a>Mosaik Phase
+### <a name="tessellator-stage"></a>Mosaikphase
 
-Der Mosaik Prozess ist eine Stufe mit fester Funktionsweise, die durch das Binden eines Hull-Shaders an die Pipeline initialisiert wird (siehe Gewusst [wie: Initialisieren der Mosaik Stufe](direct3d-11-advanced-stages-tessellator-initialize.md)). Der Zweck der Mosaik Stufe besteht darin, eine Domäne (Quad, Tri oder Line) in viele kleinere Objekte (Dreiecke, Punkte oder Linien) zu unterteilen. Der Mosaik-Mosaik Kachel eine kanonische Domäne in einem normalisierten (null-zu-eins-) Koordinatensystem. Beispielsweise wird eine Quad-Domäne zu einem Einheits Quadrat.
+Der Mosaikator ist eine Phase mit fester Funktion, die durch Binden eines Hüllen-Shaders an die Pipeline initialisiert wird (siehe [How To: Initialize the Tessellator Stage](direct3d-11-advanced-stages-tessellator-initialize.md)). Der Zweck der Mosaikphase besteht im Unterstufen einer Domäne (quad, tri oder line) in viele kleinere Objekte (Dreiecke, Punkte oder Linien). Der Mosaikator kachelt eine kanonische Domäne in einem normalisierten Koordinatensystem (0:1). Beispielsweise wird eine Quad-Domäne in ein Einheitenquadreck geesselt.
 
-Der Mosaik Prozess arbeitet einmal pro Patch mit den Mosaik Faktoren (die angeben, wie fein die Domäne verarbeitet werden soll) und dem Partitionierungstyp (der den Algorithmus angibt, der zum Aufteilen eines Patches verwendet wird), der aus der Hülle-Shader-Stufe übergangen wird. Der Mosaik Prozess gibt UV-Koordinaten (und optional w) und die Oberflächen Topologie für die Domäne-Shader-Phase aus.
+Der Mosaikator arbeitet einmal pro Patch unter Verwendung der Mosaikfaktoren (die angeben, wie fein die Domäne mosaikiert wird) und dem Partitionierungstyp (der den Algorithmus angibt, der zum Aufteilen eines Patches verwendet wird), die aus der Hülle-Shader-Phase übergeben werden. Der Mosaikator gibt uv-Koordinaten (und optional w) und die Oberflächentopologie an die Domänen-Shader-Stufe aus.
 
-Intern arbeitet der Mosaik Prozess in zwei Phasen:
+Intern arbeitet der Mosaikator in zwei Phasen:
 
--   In der ersten Phase werden die Mosaik Faktoren verarbeitet, Rundungs Probleme behoben, die Verarbeitung sehr kleiner Faktoren, das reduzieren und Kombinieren von Faktoren mithilfe der 32-Bit-Gleit Komma Arithmetik durchgesetzt.
--   In der zweiten Phase werden Punkt-oder topologielisten basierend auf dem ausgewählten Partitionierungstyp generiert. Dabei handelt es sich um die Hauptaufgabe der Mosaik Phase, die 16-Bit-Bruchzahlen mit fest Komma-Arithmetik verwendet. Mit fester Punkt Arithmetik wird die Hardwarebeschleunigung unter Beibehaltung zulässiger Genauigkeit ermöglicht. Bei einem 64-Meter weiten Patch kann diese Genauigkeit z. b. Punkte bei einer Auflösung von 2 mm platzieren.
+-   In der ersten Phase werden die Mosaikfaktoren verarbeitet, Rundungsprobleme behoben, sehr kleine Faktoren werden verarbeitet, Faktoren werden reduziert und kombiniert, und es wird eine 32-Bit-Gleitkommaarithmetik verwendet.
+-   In der zweiten Phase werden Punkt- oder Topologielisten basierend auf dem ausgewählten Partitionierungstyp generiert. Dies ist die Kernaufgabe der Mosaikphase und verwendet 16-Bit-Brüche mit Festpunktarithmetik. Die arithmetische Festpunktarithmetik ermöglicht die Hardwarebeschleunigung bei gleichzeitiger Aufrechterhaltung akzeptabler Genauigkeit. Bei einem 64 Meter breiten Patch kann diese Genauigkeit beispielsweise Punkte mit einer Auflösung von 2 mm platzieren.
 
 
 
 | Partitionierungstyp | Range                       |
 |----------------------|-----------------------------|
-| \_ungerade Bruchzahlen      | \[1... 63\]                  |
-| sogar Bruchteile \_     | Mosaik Faktor Bereich: \[ 2.. 64\] |
-| integer              | Mosaik Faktor Bereich: \[ 1.. 64\] |
-| pow2                 | Mosaik Faktor Bereich: \[ 1.. 64\] |
+| Bruchteil \_ ungerade      | \[1...63\]                  |
+| fractional \_ even     | TessFactor-Bereich: \[ 2..64\] |
+| integer              | TessFactor-Bereich: \[ 1..64\] |
+| pow2                 | TessFactor-Bereich: \[ 1..64\] |
 
 
 
  
 
-### <a name="domain-shader-stage"></a>Domain-Shader Phase
+### <a name="domain-shader-stage"></a>Domain-Shader Stage
 
-Ein Domänen-Shader berechnet die Scheitelpunkt Position eines unterteilten Punkts im Ausgabe Patch. Ein Domänen-Shader wird einmal pro Tess-Phasen-Ausgabepunkt ausgeführt und hat schreibgeschützten Zugriff auf die in der Mosaik Phase ausgegebene UV-Koordinaten, den Hull-Shader-Ausgabe Patch und die Hull-Shader-Ausgabe Patch-Konstanten, wie im folgenden Diagramm gezeigt.
+Ein Domänen-Shader berechnet die Scheitelpunktposition eines unterteilten Punkts im Ausgabepatch. Ein Domänen-Shader wird einmal pro Mosaikstufenausgabepunkt ausgeführt und hat schreibgeschützten Zugriff auf die UV-Koordinaten der Mosaikphase, den Hüllen-Shader-Ausgabepatch und die Patchkonstatoren für die Hüllen-Shaderausgabe, wie im folgenden Diagramm dargestellt.
 
-![Diagramm der Domäne-Shader-Phase](images/d3d11-domain-shader.png)
+![Diagramm der Domänen-Shader-Phase](images/d3d11-domain-shader.png)
 
-Zu den Eigenschaften des Domänen-Shader gehören:
+Zu den Eigenschaften des Domänen-Shaders gehören:
 
--   Ein Domänen-Shader wird einmal pro Ausgabe Koordinate aus der Mosaik Phase aufgerufen.
--   Ein Domänen-Shader nutzt Ausgabe Steuerungs Punkte aus der Hull-Shader-Stufe.
--   Ein Domänen-Shader gibt die Position eines Scheitel Punkts aus.
--   Eingaben sind die Hull-shaderausgaben, einschließlich der Steuerungs Punkte, der patchkonstanten Daten und der Mosaik Faktoren. Die Mosaik Faktoren können die Werte enthalten, die vom Mosaik der fixierten Funktion und die unformatierten Werte verwendet werden (z. b. vor dem Runden des ganzzahligen Mosaik Beispiels), was beispielsweise die geomsche Verbrechung vereinfacht.
+-   Ein Domänen-Shader wird einmal pro Ausgabekoordinate aus der Mosaikphase aufgerufen.
+-   Ein Domänen-Shader verwendet Ausgabekontrollpunkte aus der Hülle-Shader-Phase.
+-   Ein Domänen-Shader gibt die Position eines Scheitelpunkts aus.
+-   Eingaben sind die Ausgaben des Hüllen-Shaders, einschließlich Kontrollpunkten, Patchkonsttendaten und Mosaikfaktoren. Zu den Mosaikfaktoren können die werte gehören, die vom Festfunktions-Mosaik verwendet werden, sowie die Rohwerte (z. B. vor dem Runden nach ganzzahligem Mosaik), die z. B. Geomorphing ermöglichen.
 
-Nachdem der Domänen-Shader abgeschlossen ist, ist das Mosaik abgeschlossen, und die Pipeline Daten werden mit der nächsten Pipeline Phase (Geometry-Shader, Pixelshader usw.) fortgesetzt. Ein Geometry-Shader, der primitive mit der Verwendung erwartet (z. b. 6 Scheitel Punkte pro Dreieck), ist nicht gültig, wenn das Mosaik aktiv ist (Dies führt zu einem nicht definierten Verhalten, das von der debugschicht beklagt wird).
+Nach Abschluss des Domänen-Shaders ist das Mosaik abgeschlossen, und die Pipelinedaten werden mit der nächsten Pipelinephase (Geometrie-Shader, Pixel-Shader usw.) fortgesetzt. Ein Geometrie-Shader, der Primitive mit Adjakenz erwartet (z. B. 6 Scheitelpunkt pro Dreieck), ist ungültig, wenn das Mosaik aktiv ist (dies führt zu einem nicht definierten Verhalten, über das sich die Debugebene beschwert).
 
-Im folgenden finden Sie ein Beispiel für einen Domänen-Shader:
+Hier ist ein Beispiel für einen Domänen-Shader:
 
 
 ```
@@ -151,15 +151,15 @@ void main( out    MyDSOutput result,
 
 
 
-## <a name="apis-for-initializing-tessellation-stages"></a>APIs für die Initialisierung von Mosaik Phasen
+## <a name="apis-for-initializing-tessellation-stages"></a>APIs zum Initialisieren von Mosaikstufen
 
-Das Mosaik ist mit zwei neuen programmierbaren shaderphasen implementiert: einem Hull-Shader und einem Domänen-Shader. Diese neuen shaderphasen werden mit HLSL-Code programmiert, der in Shader Model 5 definiert ist. Die neuen shaderziele lauten: HS \_ 5 \_ 0 und DS \_ 5 \_ 0. Wie alle programmierbaren shaderphasen wird Code für die Hardware aus kompilierten Shadern extrahiert, die an die Laufzeit geleitet werden, wenn Shader mithilfe von APIs wie [**dssetshader**](/windows/desktop/api/D3D11/nf-d3d11-id3d11devicecontext-dssetshader) und [**hssetshader**](/windows/desktop/api/D3D11/nf-d3d11-id3d11devicecontext-hssetshader)an die Pipeline gebunden werden. Zuerst muss der Shader jedoch mit APIs wie z. b. " [**kreatehullshader**](/windows/desktop/api/D3D11/nf-d3d11-id3d11device-createhullshader) " und " [**kreatedomainshader**](/windows/desktop/api/D3D11/nf-d3d11-id3d11device-createdomainshader)" erstellt werden.
+Das Mosaik wird mit zwei neuen programmierbaren Shaderstufen implementiert: einem Hüllen-Shader und einem Domänen-Shader. Diese neuen Shaderstufen werden mit HLSL-Code programmiert, der in Shadermodell 5 definiert ist. Die neuen Shaderziele sind: hs \_ 5 \_ 0 und ds \_ 5 \_ 0. Wie alle programmierbaren Shaderstufen wird Code für die Hardware aus kompilierten Shadern extrahiert, die an die Runtime übergeben werden, wenn Shader mithilfe von APIs wie [**DSSetShader**](/windows/desktop/api/D3D11/nf-d3d11-id3d11devicecontext-dssetshader) und [**HSSetShader**](/windows/desktop/api/D3D11/nf-d3d11-id3d11devicecontext-hssetshader)an die Pipeline gebunden werden. Zunächst muss der Shader jedoch mitHILFE von APIs wie [**CreateHullShader**](/windows/desktop/api/D3D11/nf-d3d11-id3d11device-createhullshader) und [**CreateDomainShader erstellt werden.**](/windows/desktop/api/D3D11/nf-d3d11-id3d11device-createdomainshader)
 
-Aktivieren Sie das Mosaik, indem Sie einen Hull-Shader erstellen und ihn an die Hülle-Shader-Stufe binden (Dadurch wird die Mosaik Phase automatisch eingerichtet). Um die abschließenden Vertex-Positionen aus den Mosaik Patches zu generieren, müssen Sie auch einen Domänen-Shader erstellen und an die Domäne-Shader-Stufe binden. Sobald das Mosaik aktiviert ist, muss die Dateneingabe für die Eingabe Assembler-Stufe Patchdaten sein. Das heißt, die Topologie des Eingabe Assemblers muss eine patchkonstante-Topologie aus [**D3D11 \_ primitiver \_ topologiesatz**](/previous-versions/windows/desktop/legacy/ff476189(v=vs.85)) mit [**iasetprimitivetopology**](/windows/desktop/api/D3D11/nf-d3d11-id3d11devicecontext-iasetprimitivetopology)sein.
+Aktivieren Sie das Mosaik, indem Sie einen Hüllen-Shader erstellen und an die Hüllen-Shader-Stufe binden (dadurch wird automatisch die Mosaikstufe eingerichtet). Um die endgültigen Scheitelpunktpositionen aus den mosaikierten Patches zu generieren, müssen Sie auch einen Domänen-Shader erstellen und an die Domänen-Shader-Stufe binden. Sobald das Mosaik aktiviert ist, muss die Dateneingabe in die Eingabe-Assembler-Phase Patchdaten sein. Das heißt, die Eingabe-Assemblertopologie muss eine patchkonstierte Topologie von [**D3D11 \_ PRIMITIVE \_ TOPOLOGY**](/previous-versions/windows/desktop/legacy/ff476189(v=vs.85)) sein, die mit [**IASetPrimitiveTopology festgelegt wurde.**](/windows/desktop/api/D3D11/nf-d3d11-id3d11devicecontext-iasetprimitivetopology)
 
-Um das Mosaik zu deaktivieren, legen Sie den Hull-Shader und den Domänen-Shader auf **null** fest. Weder die Geometry-Shader-Phase noch die Stream-Output-Phase kann die Ausgabe von Hull-Shader-Ausgabe Steuer Punkten oder Patchdaten lesen.
+Legen Sie zum Deaktivieren des Mosaiks den Hüllen-Shader und den Domänen-Shader auf **NULL fest.** Weder die Geometry-Shader-Stufe noch die Streamausgabephase können ausgabekontrollpunkte oder Patchdaten des Hülle-Shaders lesen.
 
--   Neue Topologien für die Eingabe-Assembler-Phase, bei denen es sich um Erweiterungen für diese Enumeration handelt.
+-   Neue Topologien für die Eingabe-Assembler-Phase, die Erweiterungen dieser Enumeration sind.
 
     ```
     enum D3D11_PRIMITIVE_TOPOLOGY
@@ -167,39 +167,39 @@ Um das Mosaik zu deaktivieren, legen Sie den Hull-Shader und den Domänen-Shader
 
     
 
-    Die Topologie wird mithilfe von [ **iasetprimitivetopology** auf die Eingabe-Assembler-Phase festgelegt.](/windows/desktop/api/D3D11/nf-d3d11-id3d11devicecontext-iasetprimitivetopology)
+    Die Topologie wird mithilfe von [ **IASetPrimitiveTopology auf die Eingabe-Assembler-Phase festgelegt.**](/windows/desktop/api/D3D11/nf-d3d11-id3d11devicecontext-iasetprimitivetopology)
 
--   Die neuen programmierbaren shaderphasen erfordern natürlich, dass ein anderer Zustand festgelegt wird, um konstante Puffer, Beispiele und Shaderressourcen an die entsprechenden Pipeline Stufen zu binden. Diese neuen ID3D11Device-Methoden werden zum Festlegen dieses Zustands implementiert.
-    -   [**Dsgetconstantbuffers**](/windows/desktop/api/D3D11/nf-d3d11-id3d11devicecontext-dsgetconstantbuffers)
-    -   [**Dsgetsamplers**](/windows/desktop/api/D3D11/nf-d3d11-id3d11devicecontext-dsgetsamplers)
-    -   [**Dsgetshader**](/windows/desktop/api/D3D11/nf-d3d11-id3d11devicecontext-dsgetshader)
-    -   [**Dsgetshaderresources**](/windows/desktop/api/D3D11/nf-d3d11-id3d11devicecontext-dsgetshaderresources)
-    -   [**Dssetconstantbuffers**](/windows/desktop/api/D3D11/nf-d3d11-id3d11devicecontext-dssetconstantbuffers)
-    -   [**Dssetsamplers**](/windows/desktop/api/D3D11/nf-d3d11-id3d11devicecontext-dssetsamplers)
-    -   [**Dssetshader**](/windows/desktop/api/D3D11/nf-d3d11-id3d11devicecontext-dssetshader)
-    -   [**Dssetshaderresources**](/windows/desktop/api/D3D11/nf-d3d11-id3d11devicecontext-dssetshaderresources)
-    -   [**Hsgetconstantbuffers**](/windows/desktop/api/D3D11/nf-d3d11-id3d11devicecontext-hsgetconstantbuffers)
-    -   [**Hsgetshaderresources**](/windows/desktop/api/D3D11/nf-d3d11-id3d11devicecontext-hsgetshaderresources)
-    -   [**Hsgetsamplers**](/windows/desktop/api/D3D11/nf-d3d11-id3d11devicecontext-hsgetsamplers)
-    -   [**Hsgetshader**](/windows/desktop/api/D3D11/nf-d3d11-id3d11devicecontext-hsgetshader)
-    -   [**Hssetconstantbuffers**](/windows/desktop/api/D3D11/nf-d3d11-id3d11devicecontext-hssetconstantbuffers)
-    -   [**Hssetsamplers**](/windows/desktop/api/D3D11/nf-d3d11-id3d11devicecontext-hssetsamplers)
-    -   [**Hssetshader**](/windows/desktop/api/D3D11/nf-d3d11-id3d11devicecontext-hssetshader)
-    -   [**Hssetshaderresources**](/windows/desktop/api/D3D11/nf-d3d11-id3d11devicecontext-hssetshaderresources)
+-   Für die neuen programmierbaren Shaderstufen muss natürlich ein anderer Zustand festgelegt werden, um konstante Puffer, Beispiele und Shaderressourcen an die entsprechenden Pipelinestufen zu binden. Diese neuen ID3D11Device-Methoden werden zum Festlegen dieses Zustands implementiert.
+    -   [**DSGetConstantBuffers**](/windows/desktop/api/D3D11/nf-d3d11-id3d11devicecontext-dsgetconstantbuffers)
+    -   [**DSGetSamplers**](/windows/desktop/api/D3D11/nf-d3d11-id3d11devicecontext-dsgetsamplers)
+    -   [**DSGetShader**](/windows/desktop/api/D3D11/nf-d3d11-id3d11devicecontext-dsgetshader)
+    -   [**DSGetShaderResources**](/windows/desktop/api/D3D11/nf-d3d11-id3d11devicecontext-dsgetshaderresources)
+    -   [**DSSetConstantBuffers**](/windows/desktop/api/D3D11/nf-d3d11-id3d11devicecontext-dssetconstantbuffers)
+    -   [**DSSetSamplers**](/windows/desktop/api/D3D11/nf-d3d11-id3d11devicecontext-dssetsamplers)
+    -   [**DSSetShader**](/windows/desktop/api/D3D11/nf-d3d11-id3d11devicecontext-dssetshader)
+    -   [**DSSetShaderResources**](/windows/desktop/api/D3D11/nf-d3d11-id3d11devicecontext-dssetshaderresources)
+    -   [**HSGetConstantBuffers**](/windows/desktop/api/D3D11/nf-d3d11-id3d11devicecontext-hsgetconstantbuffers)
+    -   [**HSGetShaderResources**](/windows/desktop/api/D3D11/nf-d3d11-id3d11devicecontext-hsgetshaderresources)
+    -   [**HSGetSamplers**](/windows/desktop/api/D3D11/nf-d3d11-id3d11devicecontext-hsgetsamplers)
+    -   [**HSGetShader**](/windows/desktop/api/D3D11/nf-d3d11-id3d11devicecontext-hsgetshader)
+    -   [**HSSetConstantBuffers**](/windows/desktop/api/D3D11/nf-d3d11-id3d11devicecontext-hssetconstantbuffers)
+    -   [**HSSetSamplers**](/windows/desktop/api/D3D11/nf-d3d11-id3d11devicecontext-hssetsamplers)
+    -   [**HSSetShader**](/windows/desktop/api/D3D11/nf-d3d11-id3d11devicecontext-hssetshader)
+    -   [**HSSetShaderResources**](/windows/desktop/api/D3D11/nf-d3d11-id3d11devicecontext-hssetshaderresources)
 
-## <a name="how-tos"></a>Vorgehensweise:
+## <a name="how-tos"></a>So geht's:
 
-Die Dokumentation enthält auch Beispiele für die Initialisierung der Mosaik Stufen.
+Die Dokumentation enthält auch Beispiele für die Initialisierung der Mosaikstufen.
 
 
 
 | Element                                                                                                                                                                                                                                                                                           | BESCHREIBUNG                                   |
 |------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-----------------------------------------------|
-| <span id="How_To__Create_a_Hull_Shader"></span><span id="how_to__create_a_hull_shader"></span><span id="HOW_TO__CREATE_A_HULL_SHADER"></span>[Gewusst wie: Erstellen eines Hull-Shaders](direct3d-11-advanced-stages-hull-shader-create.md)<br/>                                                     | Erstellen Sie einen Hull-Shader.<br/>              |
-| <span id="How_To__Design_a_Hull_Shader"></span><span id="how_to__design_a_hull_shader"></span><span id="HOW_TO__DESIGN_A_HULL_SHADER"></span>[Gewusst wie: Entwerfen eines Hull-Shaders](direct3d-11-advanced-stages-hull-shader-design.md)<br/>                                                     | Entwerfen Sie einen Hull-Shader.<br/>              |
-| <span id="How_To__Initialize_the_Tessellator_Stage"></span><span id="how_to__initialize_the_tessellator_stage"></span><span id="HOW_TO__INITIALIZE_THE_TESSELLATOR_STAGE"></span>[Gewusst wie: Initialisieren der Mosaik Phase](direct3d-11-advanced-stages-tessellator-initialize.md)<br/> | Initialisieren Sie die Mosaik Phase.<br/> |
-| <span id="How_To__Create_a_Domain_Shader"></span><span id="how_to__create_a_domain_shader"></span><span id="HOW_TO__CREATE_A_DOMAIN_SHADER"></span>[Vorgehensweise: Erstellen eines Domänen-Shader](direct3d-11-advanced-stages-domain-shader-create.md)<br/>                                           | Erstellen Sie einen Domänen-Shader.<br/>            |
-| <span id="How_To__Design_a_Domain_Shader"></span><span id="how_to__design_a_domain_shader"></span><span id="HOW_TO__DESIGN_A_DOMAIN_SHADER"></span>[Vorgehensweise: Entwerfen eines Domänen-Shader](direct3d-11-advanced-stages-domain-shader-design.md)<br/>                                           | Erstellen Sie einen Domänen-Shader.<br/>            |
+| <span id="How_To__Create_a_Hull_Shader"></span><span id="how_to__create_a_hull_shader"></span><span id="HOW_TO__CREATE_A_HULL_SHADER"></span>[How To: Erstellen eines Hüllen-Shaders](direct3d-11-advanced-stages-hull-shader-create.md)<br/>                                                     | Erstellen Sie einen Hüllen-Shader.<br/>              |
+| <span id="How_To__Design_a_Hull_Shader"></span><span id="how_to__design_a_hull_shader"></span><span id="HOW_TO__DESIGN_A_HULL_SHADER"></span>[How To: Entwerfen eines Hüllen-Shaders](direct3d-11-advanced-stages-hull-shader-design.md)<br/>                                                     | Entwerfen Sie einen Hüllen-Shader.<br/>              |
+| <span id="How_To__Initialize_the_Tessellator_Stage"></span><span id="how_to__initialize_the_tessellator_stage"></span><span id="HOW_TO__INITIALIZE_THE_TESSELLATOR_STAGE"></span>[How To: Initialize the Tessellator Stage](direct3d-11-advanced-stages-tessellator-initialize.md)<br/> | Initialisieren Sie die Mosaikphase.<br/> |
+| <span id="How_To__Create_a_Domain_Shader"></span><span id="how_to__create_a_domain_shader"></span><span id="HOW_TO__CREATE_A_DOMAIN_SHADER"></span>[How To: Erstellen eines Domänen-Shaders](direct3d-11-advanced-stages-domain-shader-create.md)<br/>                                           | Erstellen Sie einen Domänen-Shader.<br/>            |
+| <span id="How_To__Design_a_Domain_Shader"></span><span id="how_to__design_a_domain_shader"></span><span id="HOW_TO__DESIGN_A_DOMAIN_SHADER"></span>[How To: Entwerfen eines Domänen-Shaders](direct3d-11-advanced-stages-domain-shader-design.md)<br/>                                           | Erstellen Sie einen Domänen-Shader.<br/>            |
 
 
 
@@ -209,7 +209,7 @@ Die Dokumentation enthält auch Beispiele für die Initialisierung der Mosaik St
 
 <dl> <dt>
 
-[Grafik Pipeline](overviews-direct3d-11-graphics-pipeline.md)
+[Grafikpipeline](overviews-direct3d-11-graphics-pipeline.md)
 </dt> </dl>
 
  

@@ -1,32 +1,32 @@
 ---
-title: Table-Steuerelement Muster
-description: Beschreibt Richtlinien und Konventionen für das Implementieren von ITableProvider, einschließlich Informationen zu Eigenschaften und Methoden. Das Table-Steuerelement Muster wird zur Unterstützung von Steuerelementen verwendet, die als Container für eine Auflistung von untergeordneten Elementen fungieren.
+title: Tabellensteuermuster
+description: Beschreibt Richtlinien und Konventionen für die Implementierung von ITableProvider, einschließlich Informationen zu Eigenschaften und Methoden. Das Tabellensteuermuster wird verwendet, um Steuerelemente zu unterstützen, die als Container für eine Auflistung untergeordneter Elemente fungieren.
 ms.assetid: 81a1a316-cdd6-4490-8de2-1b6db52d84e6
 keywords:
-- Benutzeroberflächen Automatisierung, Implementieren eines Tabellen Steuerungs Musters
-- UI-Automatisierung, Table-Steuerelement Muster
-- UI-Automatisierung, ITableProvider
+- Benutzeroberflächenautomatisierung,Implementieren des Tabellensteuermusters
+- Benutzeroberflächenautomatisierung,Tabellensteuermuster
+- Benutzeroberflächenautomatisierung,ITableProvider
 - ITableProvider
-- Implementieren von Tabellen Steuerungs Mustern für Benutzeroberflächen Automatisierung
-- Tabellen Steuerelement-Muster
-- Steuerelement Muster, ITableProvider
-- Steuerelement Muster, Implementieren der Benutzeroberflächenautomatisierungs-Tabelle
-- Steuerelement Muster, Tabelle
-- Schnittstellen, ITableProvider
+- Implementieren Benutzeroberflächenautomatisierung Tabellensteuermustern
+- Tabellensteuermuster
+- Steuerelementmuster, ITableProvider
+- Steuerelementmuster,Implementieren Benutzeroberflächenautomatisierung Tabelle
+- Steuerelementmuster, Tabelle
+- interfaces,ITableProvider
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 9879d1589985df0257a1dd7805f474c013b93732
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: fb484245ee7c2f982ca6c5624ad108a0c75a4721ba7f6cbdf7a8af8ee2d91881
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "104562573"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118324133"
 ---
-# <a name="table-control-pattern"></a>Table-Steuerelement Muster
+# <a name="table-control-pattern"></a>Tabellensteuermuster
 
-Beschreibt Richtlinien und Konventionen für das Implementieren von [**ITableProvider**](/windows/desktop/api/UIAutomationCore/nn-uiautomationcore-itableprovider), einschließlich Informationen zu Eigenschaften und Methoden. Das **Table** -Steuerelement Muster wird zur Unterstützung von Steuerelementen verwendet, die als Container für eine Auflistung von untergeordneten Elementen fungieren.
+Beschreibt Richtlinien und Konventionen für die Implementierung [**von ITableProvider,**](/windows/desktop/api/UIAutomationCore/nn-uiautomationcore-itableprovider)einschließlich Informationen zu Eigenschaften und Methoden. Das **Tabellensteuermuster** wird verwendet, um Steuerelemente zu unterstützen, die als Container für eine Auflistung untergeordneter Elemente fungieren.
 
-Die untergeordneten Elemente des Container-Elements müssen [**ITableItemProvider**](/windows/desktop/api/UIAutomationCore/nn-uiautomationcore-itableitemprovider) implementieren und in einem zweidimensionalen logischen Koordinatensystem angeordnet sein, das nach Zeilen und Spalten durchlaufen werden kann. Dieses Steuerelement Muster entspricht [**IGridProvider**](/windows/desktop/api/UIAutomationCore/nn-uiautomationcore-igridprovider) , wobei jedes Steuerelement, das [**ITableProvider**](/windows/desktop/api/UIAutomationCore/nn-uiautomationcore-itableprovider) implementiert, auch für jedes untergeordnete Element eine Spalten-und/oder Zeilen Header Beziehung verfügbar machen muss. Beispiele für Steuerelemente, die dieses Steuerelement Muster implementieren, finden Sie [unter Steuerelement Typen und ihre unterstützten Steuerelement Muster](uiauto-controlpatternmapping.md).
+Die unteren Elemente des Containerelements müssen [**ITableItemProvider**](/windows/desktop/api/UIAutomationCore/nn-uiautomationcore-itableitemprovider) implementieren und in einem zweidimensionalen logischen Koordinatensystem organisiert sein, das nach Zeile und Spalte durchlaufen werden kann. Dieses Steuerelementmuster entspricht [**IGridProvider**](/windows/desktop/api/UIAutomationCore/nn-uiautomationcore-igridprovider) mit dem Unterschied, dass jedes Steuerelement, das [**ITableProvider**](/windows/desktop/api/UIAutomationCore/nn-uiautomationcore-itableprovider) implementiert, auch eine Spalten- und/oder Zeilenheaderbeziehung für jedes untergeordnete Element verfügbar machen muss. Beispiele für Steuerelemente, die dieses Steuerelementmuster implementieren, finden Sie unter [Steuerelementtypen und ihre unterstützten Steuerelementmuster](uiauto-controlpatternmapping.md).
 
 Dieses Thema enthält folgende Abschnitte:
 
@@ -36,29 +36,29 @@ Dieses Thema enthält folgende Abschnitte:
 
 ## <a name="implementation-guidelines-and-conventions"></a>Implementierungsrichtlinien und -konventionen
 
-Beachten Sie beim Implementieren des **Table** -Steuerelement Musters die folgenden Richtlinien und Konventionen:
+Beachten Sie beim **Implementieren des Tabellensteuermusters** die folgenden Richtlinien und Konventionen:
 
--   Der Zugriff auf den Inhalt einzelner Zellen erfolgt über ein zweidimensionales logisches Koordinatensystem oder ein Array, das von der erforderlichen, gleichzeitigen Implementierung von [**IGridProvider**](/windows/desktop/api/UIAutomationCore/nn-uiautomationcore-igridprovider)bereitgestellt wird.
+-   Der Zugriff auf den Inhalt einzelner Zellen erfolgt über ein zweidimensionales logisches Koordinatensystem oder Array, das durch die erforderliche, gleichzeitige Implementierung von [**IGridProvider bereitgestellt wird.**](/windows/desktop/api/UIAutomationCore/nn-uiautomationcore-igridprovider)
 -   Eine Spalten- oder Zeilenüberschrift kann in einem Tabellenobjekt enthalten sein oder ein separates Headerobjekt darstellen, das einem Tabellenobjekt zugeordnet ist.
 -   Spalten- und Zeilenüberschriften können sowohl eine primäre als auch beliebige unterstützende Überschriften enthalten.
     > [!Note]  
-    > Dieses Konzept wird in einem Microsoft Excel-Arbeitsblatt ersichtlich, in dem ein Benutzer eine **Vorname** -Spalte definiert hat. Diese Spalte verfügt jetzt über zwei Header, einschließlich des vom benutzerdefinierten **Vornamen** Headers und der alphanumerischen Bezeichnung für diese Spalte, die von der Anwendung zugewiesen wird.
+    > Dieses Konzept wird in einem Tabellenblatt Microsoft Excel, in dem ein Benutzer eine **Vornamenspalte definiert** hat. Diese Spalte verfügt jetzt über  zwei Header, einschließlich des vom Benutzer definierten Vornamenheaders und der alphanumerischen Bezeichnung für diese Spalte, die von der Anwendung zugewiesen wird.
 
-     
+     
 
--   Weitere Informationen finden Sie unter [Raster Steuerelement Muster](uiauto-implementinggrid.md) für Verwandte Raster Funktionen.
+-   Verwandte [Rasterfunktionen finden Sie](uiauto-implementinggrid.md) unter Rastersteuermuster.
 
-    Die folgende Abbildung zeigt eine Tabelle mit komplexen Spalten Headern.
+    Die folgende Abbildung zeigt eine Tabelle mit komplexen Spaltenüberschriften.
 
     ![Tabelle mit komplexen Spaltenüberschriften](images/uia-valuepattern-colorpicker.jpg)
 
-    Die folgende Abbildung zeigt eine Tabelle mit einer mehrdeutigen [**ITableProvider:: RowOrColumnMajor**](/windows/desktop/api/UIAutomationCore/nf-uiautomationcore-itableprovider-get_roworcolumnmajor) -Eigenschaft.
+    Die folgende Abbildung zeigt eine Tabelle mit einer mehrdeutigen [**ITableProvider::RowOrColumnMajor-Eigenschaft.**](/windows/desktop/api/UIAutomationCore/nf-uiautomationcore-itableprovider-get_roworcolumnmajor)
 
-    ![Tabelle mit mehrdeutiger RowOrColumnMajor-Eigenschaft](images/uia-tablepattern-roworcolumnmajorproperty.jpg)
+    ![Tabelle mit einer mehrdeutigen roworcolumnmajor-Eigenschaft](images/uia-tablepattern-roworcolumnmajorproperty.jpg)
 
 ## <a name="required-members-for-itableprovider"></a>Erforderliche Member für **ITableProvider**
 
-Die folgenden Eigenschaften und Methoden sind für die Implementierung der [**ITableProvider**](/windows/desktop/api/UIAutomationCore/nn-uiautomationcore-itableprovider) -Schnittstelle erforderlich.
+Die folgenden Eigenschaften und Methoden sind für die Implementierung der [**ITableProvider-Schnittstelle**](/windows/desktop/api/UIAutomationCore/nn-uiautomationcore-itableprovider) erforderlich.
 
 
 
@@ -70,7 +70,7 @@ Die folgenden Eigenschaften und Methoden sind für die Implementierung der [**IT
 
 
 
- 
+ 
 
 Diesem Steuerelementmuster sind keine Ereignisse zugeordnet.
 
@@ -78,13 +78,13 @@ Diesem Steuerelementmuster sind keine Ereignisse zugeordnet.
 
 <dl> <dt>
 
-**Licher**
+**Konzeptionellen**
 </dt> <dt>
 
-[Steuerelement Typen und ihre unterstützten Steuerelement Muster](uiauto-controlpatternmapping.md)
+[Steuerelementtypen und ihre unterstützten Steuerelementmuster](uiauto-controlpatternmapping.md)
 </dt> <dt>
 
-[TableItem-Steuerelement Muster](uiauto-implementingtableitem.md)
+[TableItem-Steuerelementmuster](uiauto-implementingtableitem.md)
 </dt> <dt>
 
 [Übersicht über Steuerelementmuster für Benutzeroberflächenautomatisierung](uiauto-controlpatternsoverview.md)
@@ -93,9 +93,9 @@ Diesem Steuerelementmuster sind keine Ereignisse zugeordnet.
 [Übersicht über die Benutzeroberflächenautomatisierungs-Struktur](uiauto-treeoverview.md)
 </dt> </dl>
 
- 
+ 
 
- 
+ 
 
 
 

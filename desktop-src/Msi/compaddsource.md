@@ -1,42 +1,42 @@
 ---
-description: Der Wert der compaddsource-Eigenschaft ist eine Liste von Komponenten-GUIDs aus der Spalte "ComponentId" der Komponenten Tabelle, die durch Kommas getrennt sind, die zur Installation vom Quell Medium installiert werden sollen.
+description: Der Wert der COMPADDSOURCE-Eigenschaft ist eine Liste der Komponenten-GUIDs aus der ComponentId -Spalte der Component-Tabelle, getrennt durch Kommas, die für die Ausführung über das Quellmedium installiert werden sollen.
 ms.assetid: ee1e0650-674d-4189-8ef7-3d2ece89cc28
-title: Compaddsource (Eigenschaft)
+title: COMPADDSOURCE-Eigenschaft
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 3f59526196a75599dbd2a535db6dcda4fb733936
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 6f68e795a9092892212f41a073a8e5a80945f57be14224e576262c30bba92707
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106356419"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118380052"
 ---
-# <a name="compaddsource-property"></a>Compaddsource (Eigenschaft)
+# <a name="compaddsource-property"></a>COMPADDSOURCE-Eigenschaft
 
-Der Wert der **compaddsource** -Eigenschaft ist eine Liste von Komponenten-GUIDs aus der Spalte "ComponentId" der [Komponenten](component-table.md) Tabelle, die durch Kommas getrennt sind, die zur Installation vom Quell Medium installiert werden sollen. Das Installationsprogramm verwendet diesen Wert, um zu bestimmen, welche Funktionen auf der Grundlage der angegebenen Komponenten zum Ausführen aus der Quelle installiert werden. Für jede aufgelistete Komponenten-ID überprüft das Installationsprogramm alle Features, die (über die Tabelle " [FeatureComponents](featurecomponents-table.md) ") mit dieser Komponente verknüpft sind, und installiert die Funktion, die den geringsten Speicherplatz für die Installation erfordert. Die aufgeführten Komponenten müssen in der Component-Spalte der [Component](component-table.md) -Tabelle vorhanden sein.
+Der Wert der **COMPADDSOURCE-Eigenschaft** ist eine Liste der Komponenten-GUIDs aus der ComponentId -Spalte der Component-Tabelle, getrennt durch Kommas, die für die Ausführung über das Quellmedium installiert werden sollen. [](component-table.md) Das Installationsprogramm verwendet diesen Wert, um basierend auf den angegebenen Komponenten zu bestimmen, welche Funktionen für die Ausführung aus der Quelle installiert werden sollen. Für jede aufgeführte Komponenten-ID überprüft das Installationsprogramm alle Funktionen, die (über die [Tabelle FeatureComponents)](featurecomponents-table.md) mit dieser Komponente verknüpft sind, und installiert das Feature, das die geringste Menge an Speicherplatz für die Installation benötigt. Die aufgelisteten Komponenten müssen in der Spalte Komponente der Tabelle [Komponente vorhanden](component-table.md) sein.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Beachten Sie, dass bei den Komponentennamen die Groß-/Kleinschreibung beachtet Beachten Sie auch Folgendes: Wenn das LocalOnly-Bitflag in der Attribute-Spalte der [Komponenten](component-table.md) Tabelle für eine Komponente festgelegt ist, wird die Komponente zur lokalen Installation installiert.
+Beachten Sie, dass bei den Komponentennamen die Schreibung beachtet wird. Beachten Sie außerdem Folgendes: Wenn das LocalOnly-Bitflag in der Spalte Attribute der Component-Tabelle für eine Komponente festgelegt ist, wird die Komponente für die lokale Ausführung installiert. [](component-table.md)
 
 Das Installationsprogramm wertet die folgenden Eigenschaften immer in der folgenden Reihenfolge aus:
 
 1.  [**ADDLOCAL**](addlocal.md)
-2.  [**Aufgeh**](remove.md)
-3.  [**Addsource**](addsource.md)
-4.  [**Adddefault**](adddefault.md)
-5.  [**Installieren Sie**](reinstall.md)
-6.  [**Benen**](advertise.md)
-7.  [**Compaddlocal**](compaddlocal.md)
-8.  **Compaddsource**
-9.  [**Compadddefault**](compadddefault.md)
-10. [**Fileaddlocal**](fileaddlocal.md)
-11. [**Fileaddsource**](fileaddsource.md)
-12. [**Fileadddefault**](fileadddefault.md)
+2.  [**Entfernen**](remove.md)
+3.  [**ADDSOURCE**](addsource.md)
+4.  [**ADDDEFAULT**](adddefault.md)
+5.  [**Installieren**](reinstall.md)
+6.  [**Werben**](advertise.md)
+7.  [**COMPADDLOCAL**](compaddlocal.md)
+8.  **COMPADDSOURCE**
+9.  [**COMPADDDEFAULT**](compadddefault.md)
+10. [**FILEADDLOCAL**](fileaddlocal.md)
+11. [**FILEADDSOURCE**](fileaddsource.md)
+12. [**FILEADDDEFAULT**](fileadddefault.md)
 
-Wenn die Befehlszeile z. b. Folgendes angibt: ADDLOCAL = ALL, addsource = myfeature, werden alle Features zuerst auf Run-Local festgelegt, und myfeature wird auf Run-From-Source festgelegt. Wenn die Befehlszeile "ADDSOURCE = ALL", "ADDLOCAL = myfeature" lautet, ist "First myfeature" auf "Run-local" festgelegt, und wenn "ADDSOURCE = ALL" ausgewertet wird, werden alle Funktionen (einschließlich "myfeature") auf "Run-From-Source" zurückgesetzt.
+Wenn die Befehlszeile z. B. FOLGENDEs angibt: ADDLOCAL=ALL, ADDSOURCE = MyFeature, werden alle Features zuerst auf run-local und dann myFeature auf run-from-source festgelegt. Wenn die Befehlszeile ist: ADDSOURCE=ALL, ADDLOCAL=MyFeature, wird zuerst MyFeature auf run-local festgelegt, und wenn ADDSOURCE=ALL ausgewertet wird, werden alle Features (einschließlich MyFeature) auf die Ausführung aus der Quelle zurückgesetzt.
 
-Der Installer legt die [**vorab ausgewählte**](preselected.md) Eigenschaft während der Wiederaufnahme einer angehaltenen Installation auf den Wert "1" fest, oder wenn eine der oben aufgeführten Eigenschaften in der Befehlszeile angegeben wird.
+Das Installationsprogramm legt die [**Eigenschaft Vorab**](preselected.md) ausgewählt während der Wiederaufnahme einer angehaltenen Installation oder bei Angabe einer der oben genannten Eigenschaften in der Befehlszeile auf den Wert "1" fest.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -44,7 +44,7 @@ Der Installer legt die [**vorab ausgewählte**](preselected.md) Eigenschaft wäh
 
 | Anforderung | Wert |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Version<br/> | Windows Installer 5,0 unter Windows Server 2012, Windows 8, Windows Server 2008 R2 oder Windows 7. Windows Installer 4,0 oder Windows Installer 4,5 unter Windows Server 2008 oder Windows Vista. Windows Installer unter Windows Server 2003 oder Windows XP. Informationen zu den minimalen Windows-Service Pack, die für eine Windows Installer Version erforderlich sind, finden Sie in den [Windows Installer Run-Time Anforderungen](windows-installer-portal.md) .<br/> |
+| Version<br/> | Windows Installer 5.0 auf Windows Server 2012, Windows 8, Windows Server 2008 R2 oder Windows 7. Windows Installer 4.0 oder Windows Installer 4.5 auf Windows Server 2008 oder Windows Vista. Windows Installationsprogramm auf Windows Server 2003 oder Windows XP. Informationen zum [Windows Service](windows-installer-portal.md) Pack, das für eine Windows Windows Installer-Version erforderlich ist, finden Sie unter Windows Installer Run-Time Anforderungen.<br/> |
 
 
 

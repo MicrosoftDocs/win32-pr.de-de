@@ -1,9 +1,9 @@
 ---
-title: Aktiviertes (settingstype)-Element
-description: Gibt an, dass der Task aktiviert ist. Der Task kann nur ausgeführt werden, wenn diese Einstellung auf "true" festgelegt ist.
+title: Enabled(settingsType)-Element
+description: Gibt an, dass der Task aktiviert ist. Die Aufgabe kann nur ausgeführt werden, wenn diese Einstellung auf True festgelegt ist.
 ms.assetid: d28f0d54-1205-4b70-a178-72d809da9ce1
 keywords:
-- Aktiviertes Element Taskplaner
+- Enabled-Element Taskplaner
 topic_type:
 - apiref
 api_name:
@@ -13,16 +13,16 @@ api_type:
 ms.topic: reference
 ms.date: 05/31/2018
 api_location: ''
-ms.openlocfilehash: dc86b25fa29345fe120ac5e59d55d847b01c352e
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: ff198520e354147ff092b2374bb5a766e1ce1c6db6a4b8fc6302b92670bddcda
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "106340372"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118131869"
 ---
-# <a name="enabled-settingstype-element"></a>Aktiviertes (settingstype)-Element
+# <a name="enabled-settingstype-element"></a>Enabled(settingsType)-Element
 
-Gibt an, dass der Task aktiviert ist. Der Task kann nur ausgeführt werden, wenn diese Einstellung auf "true" festgelegt ist.
+Gibt an, dass der Task aktiviert ist. Die Aufgabe kann nur ausgeführt werden, wenn diese Einstellung auf True festgelegt ist.
 
 ``` syntax
 <xs:element name="Enabled"
@@ -32,7 +32,7 @@ Gibt an, dass der Task aktiviert ist. Der Task kann nur ausgeführt werden, wenn
  />
 ```
 
-Das **aktivierte** Element wird durch den komplexen [**settingstype**](taskschedulerschema-settingstype-complextype.md) -Typ definiert.
+Das **Enabled-Element** wird durch den komplexen [**SettingsType-Typ**](taskschedulerschema-settingstype-complextype.md) definiert.
 
 ## <a name="parent-element"></a>Übergeordnetes Element
 
@@ -40,19 +40,19 @@ Das **aktivierte** Element wird durch den komplexen [**settingstype**](tasksched
 
 | Element                                                           | Abgeleitet von                                                         | BESCHREIBUNG                                                                        |
 |-------------------------------------------------------------------|----------------------------------------------------------------------|------------------------------------------------------------------------------------|
-| [**Einstellungen**](taskschedulerschema-settings-tasktype-element.md) | [**settingstype**](taskschedulerschema-settingstype-complextype.md) | Enthält die Einstellungen, die der Taskplaner verwendet, um die Aufgabe auszuführen.<br/> |
+| [**Einstellungen**](taskschedulerschema-settings-tasktype-element.md) | [**settingsType**](taskschedulerschema-settingstype-complextype.md) | Enthält die Einstellungen, die der Taskplaner zum Ausführen der Aufgabe verwendet.<br/> |
 
 
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Informationen zur C++-Entwicklung finden Sie unter [**aktivierte Eigenschaft von itasksettings**](/windows/desktop/api/taskschd/nf-taskschd-itasksettings-get_enabled).
+Informationen zur C++-Entwicklung finden Sie unter [**Enabled-Eigenschaft von ITaskSettings.**](/windows/desktop/api/taskschd/nf-taskschd-itasksettings-get_enabled)
 
-Informationen zur Skript Entwicklung finden Sie unter [**tasksettings. aktiviert**](tasksettings-enabled.md).
+Informationen zur Skriptentwicklung finden Sie unter [**TaskSettings.Enabled.**](tasksettings-enabled.md)
 
 ## <a name="examples"></a>Beispiele
 
-Ein umfassendes Beispiel für den XML-Code für eine aktivierte Aufgabe finden Sie unter [time-auslöserbeispiel (XML)](time-trigger-example--xml-.md).
+Ein vollständiges Beispiel für den XML-Code für eine Aufgabe, die aktiviert ist, finden Sie unter [Time Trigger Example (XML) (Beispiel für Zeittrigger (XML)).](time-trigger-example--xml-.md)
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -60,8 +60,8 @@ Ein umfassendes Beispiel für den XML-Code für eine aktivierte Aufgabe finden S
 
 | Anforderung | Wert |
 |-------------------------------------|------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>       |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2008 \[ -Desktop-Apps\]<br/> |
+| Unterstützte Mindestversion (Client)<br/> | Windows \[Nur Vista-Desktop-Apps\]<br/>       |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2008-Desktop-Apps\]<br/> |
 
 
 

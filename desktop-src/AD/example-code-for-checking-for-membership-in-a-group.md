@@ -1,22 +1,22 @@
 ---
-title: Beispiel Code zum Überprüfen der Mitgliedschaft in einer Gruppe
-description: Im folgenden Codebeispiel wird die absolute Mitgliedschaft eines Objekts überprüft, indem rekursiv überprüft wird, ob ein Objekt Mitglied einer Gruppe oder einer Gruppe ist, die in dieser Gruppe enthalten ist.
+title: Beispielcode für die Überprüfung der Mitgliedschaft in einer Gruppe
+description: Im folgenden Codebeispiel wird die absolute Mitgliedschaft eines Objekts überprüft, indem rekursiv überprüft wird, ob ein Objekt Mitglied einer Gruppe oder einer gruppe ist, die in dieser Gruppe geschachtelt ist.
 ms.assetid: 4b6ef607-8d2e-4209-be61-498302749f7c
 ms.tgt_platform: multiple
 keywords:
-- Active Directory Beispiele Active Directory, Überprüfen der Mitgliedschaft in einer Gruppe
+- Active Directory-Beispiele Active Directory , Überprüfen der Mitgliedschaft in einer Gruppe
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 2043808dc31fb3c154a050fb77a7e4f44f44632d
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: c929580bec3717f0dd1bd82520af7755061112eca7a28226275f796f4d41af22
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "103707679"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118191151"
 ---
-# <a name="example-code-for-checking-for-membership-in-a-group"></a>Beispiel Code zum Überprüfen der Mitgliedschaft in einer Gruppe
+# <a name="example-code-for-checking-for-membership-in-a-group"></a>Beispielcode für die Überprüfung der Mitgliedschaft in einer Gruppe
 
-Im folgenden Codebeispiel wird die absolute Mitgliedschaft eines Objekts überprüft, indem rekursiv überprüft wird, ob ein Objekt Mitglied einer Gruppe oder einer Gruppe ist, die in dieser Gruppe enthalten ist.
+Im folgenden Codebeispiel wird die absolute Mitgliedschaft eines Objekts überprüft, indem rekursiv überprüft wird, ob ein Objekt Mitglied einer Gruppe oder einer gruppe ist, die in dieser Gruppe geschachtelt ist.
 
 
 ```C++
@@ -356,9 +356,9 @@ void PrintBanner(LPOLESTR pwszBanner)
 
 
 
- 
+ 
 
- 
+ 
 
 
 

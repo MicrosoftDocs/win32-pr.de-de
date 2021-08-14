@@ -1,22 +1,22 @@
 ---
 title: Steuerelemente (Entwurfsgrundelemente)
-description: Steuerelemente sind Benutzeroberflächenelemente, mit denen Ihre Benutzer im Hauptfensterbereich Ihrer App interagieren. Sehen Sie sich visuelle Beispiele für Steuerelemente in Windows-basierten Desktop-Apps an, und erhalten Sie Links zu Richtlinien für jedes Steuerelement.
+description: Steuerelemente sind Benutzeroberflächenelemente, mit denen Ihre Benutzer im Hauptfensterbereich Ihrer App interagieren. Sehen Sie sich visuelle Beispiele für Steuerelemente in Windows desktopbasierten Apps an, und erhalten Sie Links zu Richtlinien für jedes Steuerelement.
 ms.assetid: 5c48728b-6d86-4827-9757-f06c23ca54d8
 ms.topic: article
 ms.date: 10/20/2020
-ms.openlocfilehash: c44e7b5f3772984b1dc24b166b9fe8c03a395f8a
-ms.sourcegitcommit: 8ebcf6cd36f67f8bcf78e76ae8923d65b8995c8a
+ms.openlocfilehash: 7254608502145c0e64098941f923ac2051008aa2db2936fe8baf439455c0cfaf
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/05/2021
-ms.locfileid: "111524314"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118040346"
 ---
 # <a name="controls-design-basics"></a>Steuerelemente (Entwurfsgrundelemente)
 
 > [!NOTE]
-> Dieses Entwurfshandbuch wurde für Windows 7 erstellt und für neuere Versionen von Windows nicht aktualisiert. Ein Teil der Anleitungen gilt weiterhin im Prinzip, aber die Darstellung und die Beispiele spiegeln nicht unsere aktuelle [Entwurfsanleitung wider.](/windows/uwp/design/)
+> Dieses Entwurfshandbuch wurde für Windows 7 erstellt und für neuere Versionen von Windows. Ein Teil der Anleitungen gilt weiterhin im Prinzip, aber die Darstellung und die Beispiele spiegeln nicht unsere [aktuelle Entwurfsanleitung wider.](/windows/uwp/design/)
 
-Steuerelemente sind Benutzeroberflächenelemente, mit denen Ihre Benutzer im Hauptfensterbereich Ihrer App interagieren. Sehen Sie sich visuelle Beispiele für Steuerelemente in Windows-basierten Desktop-Apps an, und erhalten Sie Links zu Richtlinien für jedes Steuerelement.
+Steuerelemente sind Benutzeroberflächenelemente, mit denen Ihre Benutzer im Hauptfensterbereich Ihrer App interagieren. Sehen Sie sich visuelle Beispiele für Steuerelemente in Windows desktopbasierten Apps an, und erhalten Sie Links zu Richtlinien für jedes Steuerelement.
 
 
 

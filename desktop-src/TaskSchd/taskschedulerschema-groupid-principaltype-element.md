@@ -1,6 +1,6 @@
 ---
-title: GroupId-Element (principaltype)
-description: Gibt den Bezeichner der Benutzergruppe an, die zum Ausführen dieser Aufgaben erforderlich ist, die dem Prinzipal zugeordnet sind.
+title: GroupId (principalType)-Element
+description: Gibt den Bezeichner der Benutzergruppe an, die zum Ausführen der aufgaben erforderlich ist, die dem Prinzipal zugeordnet sind.
 ms.assetid: 1e576c31-79a9-42d4-b497-74412e464d60
 keywords:
 - GroupId-Element Taskplaner
@@ -13,16 +13,16 @@ api_type:
 ms.topic: reference
 ms.date: 05/31/2018
 api_location: ''
-ms.openlocfilehash: 080a408f65ac7a36ada1751bbd5cb95395cf0b35
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 4376e7037c228ebf2d2ffdc193cc34e7f92647220251cd82f09b0b65c7f9a81c
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104040871"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118131839"
 ---
-# <a name="groupid-principaltype-element"></a>GroupId-Element (principaltype)
+# <a name="groupid-principaltype-element"></a>GroupId (principalType)-Element
 
-Gibt den Bezeichner der Benutzergruppe an, die zum Ausführen dieser Aufgaben erforderlich ist, die dem Prinzipal zugeordnet sind.
+Gibt den Bezeichner der Benutzergruppe an, die zum Ausführen der aufgaben erforderlich ist, die dem Prinzipal zugeordnet sind.
 
 ``` syntax
 <xs:element name="GroupId"
@@ -30,7 +30,7 @@ Gibt den Bezeichner der Benutzergruppe an, die zum Ausführen dieser Aufgaben er
  />
 ```
 
-Das **GroupID** -Element wird durch den komplexen [**principaltype**](taskschedulerschema-principaltype-complextype.md) -Typ definiert.
+Das **GroupId-Element** wird durch den komplexen [**principalType-Typ**](taskschedulerschema-principaltype-complextype.md) definiert.
 
 ## <a name="parent-element"></a>Übergeordnetes Element
 
@@ -38,21 +38,21 @@ Das **GroupID** -Element wird durch den komplexen [**principaltype**](taskschedu
 
 | Element                                                                  | Abgeleitet von                                                           | BESCHREIBUNG                                                    |
 |--------------------------------------------------------------------------|------------------------------------------------------------------------|----------------------------------------------------------------|
-| [**Prinzipal**](taskschedulerschema-principal-principaltype-element.md) | [**principalType**](taskschedulerschema-principaltype-complextype.md) | Gibt die Sicherheits Anmelde Informationen für einen Prinzipal an.<br/> |
+| [**Prinzipal**](taskschedulerschema-principal-principaltype-element.md) | [**principalType**](taskschedulerschema-principaltype-complextype.md) | Gibt die Sicherheitsanmeldeinformationen für einen Prinzipal an.<br/> |
 
 
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Sie können nicht gleichzeitig einen Gruppen Bezeichner und eine Benutzer-ID angeben. Geben Sie entweder die Elemente [**UserID**](taskschedulerschema-userid-principaltype-element.md) oder **GroupID** an, aber nicht beides.
+Sie können keinen Gruppenbezeichner und einen Benutzerbezeichner gleichzeitig angeben. Geben Sie entweder das [**UserId-**](taskschedulerschema-userid-principaltype-element.md) oder **groupId-Element** an, aber nicht beides.
 
-Bei der Skript Entwicklung wird der Gruppen Bezeichner des Prinzipals mit der [**Principal. GroupID**](principal-groupid.md) -Eigenschaft angegeben.
+Für die Skriptentwicklung wird der Gruppenbezeichner des Prinzipals mithilfe der [**Principal.GroupId-Eigenschaft**](principal-groupid.md) angegeben.
 
-Bei der C++-Entwicklung wird der Gruppen Bezeichner des Prinzipals mithilfe der [**IPrincipal:: GroupID**](/windows/desktop/api/taskschd/nf-taskschd-iprincipal-get_groupid) -Eigenschaft angegeben.
+Für die C++-Entwicklung wird der Gruppenbezeichner des Prinzipals mithilfe der [**IPrincipal::GroupId-Eigenschaft**](/windows/desktop/api/taskschd/nf-taskschd-iprincipal-get_groupid) angegeben.
 
 ## <a name="examples"></a>Beispiele
 
-Ein umfassendes Beispiel für den XML-Code für eine Aufgabe, die dieses Element verwendet, finden Sie unter [Logon-auslöserbeispiel (XML)](logon-trigger-example--xml-.md).
+Ein vollständiges Beispiel für den XML-Code für eine Aufgabe, die dieses Element verwendet, finden Sie unter [Logon Trigger Example (XML) (Beispiel für logon-Trigger (XML)).](logon-trigger-example--xml-.md)
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -60,12 +60,12 @@ Ein umfassendes Beispiel für den XML-Code für eine Aufgabe, die dieses Element
 
 | Anforderung | Wert |
 |-------------------------------------|------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>       |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2008 \[ -Desktop-Apps\]<br/> |
+| Unterstützte Mindestversion (Client)<br/> | Windows \[Nur Vista-Desktop-Apps\]<br/>       |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2008-Desktop-Apps\]<br/> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 

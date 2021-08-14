@@ -1,6 +1,6 @@
 ---
-description: 'Weitere Informationen finden Sie unter: esentouesflongvalueidsexception-Konstruktor'
-title: Esentoudeflongvalueidsexception-Konstruktor
+description: 'Weitere Informationen finden Sie unter: EsentOutOfLongValueIDsException-Konstruktor'
+title: EsentOutOfLongValueIDsException-Konstruktor
 TOCTitle: 'EsentOutOfLongValueIDsException constructor '
 ms:assetid: M:Microsoft.Isam.Esent.Interop.EsentOutOfLongValueIDsException.#ctor
 ms:mtpsurl: https://msdn.microsoft.com/library/microsoft.isam.esent.interop.esentoutoflongvalueidsexception.esentoutoflongvalueidsexception(v=EXCHG.10)
@@ -24,19 +24,19 @@ api_type:
 api_location:
 - Microsoft.Isam.Esent.Interop.dll
 ROBOTS: INDEX,FOLLOW
-ms.openlocfilehash: fb9ef6cabfc906542ff5e124ca52668d32ddbec8
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 15c9939f68e08be418f742edd474f8b406f371710c4e6666ce5a8751bce3209c
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "103862984"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118262197"
 ---
-# <a name="esentoutoflongvalueidsexception-constructor"></a>Esentoudeflongvalueidsexception-Konstruktor
+# <a name="esentoutoflongvalueidsexception-constructor"></a>EsentOutOfLongValueIDsException-Konstruktor
 
-Initialisiert eine neue Instanz der esentouesflongvalueidsexception-Klasse.
+Initialisiert eine neue Instanz der EsentOutOfLongValueIDsException-Klasse.
 
-**Namespace:**  [Microsoft. ISAM. ESENT. Interop](./microsoft.isam.esent.interop-namespace.md)  
-**Assembly:**  Microsoft. ISAM. ESENT. Interop (in Microsoft.Isam.Esent.Interop.dll)
+**Namespace:**  [Microsoft.Isam.Esent.Interop](./microsoft.isam.esent.interop-namespace.md)  
+**Assembly:**  Microsoft.Isam.Esent.Interop (in Microsoft.Isam.Esent.Interop.dll)
 
 ## <a name="syntax"></a>Syntax
 
@@ -56,8 +56,8 @@ public EsentOutOfLongValueIDsException()
 
 #### <a name="reference"></a>Referenz
 
-[Esentouesflongvalueidsexception-Klasse](./esentoutoflongvalueidsexception-class.md)
+[EsentOutOfLongValueIDsException-Klasse](./esentoutoflongvalueidsexception-class.md)
 
-[Esentouesflongvalueidsexception-Elemente](./esentoutoflongvalueidsexception-members.md)
+[EsentOutOfLongValueIDsException-Member](./esentoutoflongvalueidsexception-members.md)
 
-[Microsoft. ISAM. ESENT. Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)
+[Microsoft.Isam.Esent.Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)

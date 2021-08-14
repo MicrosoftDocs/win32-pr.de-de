@@ -1,19 +1,19 @@
 ---
-description: Dreht den Vektor um eine angegebene Anzahl von 32-Bit-Elementen nach links.
+description: Rotiert den Vektor um eine bestimmte Anzahl von 32-Bit-Elementen nach links.
 ms.assetid: ba3698ed-212d-4ef0-846a-4099d0e1abec
-title: Xmvector rotateleft-Vorlage (directxmath. h)
+title: XMVectorRotateLeft-Vorlage (DirectXMath.h)
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 4e5b52fccebeb93803fdc33346fa4ee5e873c1d5
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: cbb3d2a06f775e99b275d7333816307f494c5b2a4a7cc0183eaddc4ee4cd8950
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106368577"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118499403"
 ---
-# <a name="xmvectorrotateleft-template"></a>Xmvector rotateleft-Vorlage
+# <a name="xmvectorrotateleft-template"></a>XMVectorRotateLeft-Vorlage
 
-Dreht den Vektor um eine angegebene Anzahl von 32-Bit-Elementen nach links.
+Rotiert den Vektor um eine bestimmte Anzahl von 32-Bit-Elementen nach links.
 
 ## <a name="syntax"></a>Syntax
 
@@ -27,27 +27,27 @@ template<uint32_t Elements> XMVECTOR XMVectorRotateLeft(
 
 <dl> <dt>
 
-<span id="V"></span><span id="v"></span>*Ramelow*
+<span id="V"></span><span id="v"></span>*V*
 </dt> <dd>
 
-\[im \] Vektor zum Drehen nach links.
+\[in \] Vektor, der nach links gedreht werden soll.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt den gedrehten [**xmvector**](xmvector-data-type.md)zurück.
+Gibt den gedrehten [**XMVECTOR**](xmvector-data-type.md)zurück.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Bei dieser Funktion handelt es sich um eine Vorlagen Version von [**xmvectorrotateleft**](/windows/win32/api/directxmath/nf-directxmath-xmvectorrotateleft) , bei der das *Elements* -Argument ein Vorlagen Wert ist.
+Diese Funktion ist eine Vorlagenversion von [**XMVectorRotateLeft,**](/windows/win32/api/directxmath/nf-directxmath-xmvectorrotateleft) wobei das *Elements-Argument* ein Vorlagenwert ist.
 
 > [!Note]  
-> Die `XMVectorRotateLeft` Vorlage ist neu für directxmath und für xnamath 2. x nicht verfügbar.
+> Die `XMVectorRotateLeft` Vorlage ist neu für DirectXMath und nicht für XNAMath 2.x verfügbar.
 
  
 
-**Namespace**: Verwenden von DirectX
+**Namespace:** Verwenden von DirectX
 
 ### <a name="platform-requirements"></a>Plattformanforderungen
 
@@ -59,24 +59,24 @@ Microsoft Visual Studio 2010 oder Microsoft Visual Studio 2012 mit dem Windows S
 
 | Anforderung | Wert |
 |-------------------|------------------------------------------------------------------------------------------|
-| Header<br/> | <dl> <dt>Directxmath. h</dt> </dl> |
+| Header<br/> | <dl> <dt>DirectXMath.h</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[Directxmath-Bibliotheks Vorlagen Funktionen](ovw-xnamath-templates.md)
+[Vorlagenfunktionen der DirectXMath-Bibliothek](ovw-xnamath-templates.md)
 </dt> <dt>
 
-[**Xmvector perstumm Zeichen**](xmvectorpermute-template.md)
+[**XMVectorPermute**](xmvectorpermute-template.md)
 </dt> <dt>
 
-[**Xmvector rotateright**](xmvectorrotateright-template.md)
+[**XMVectorRotateRight**](xmvectorrotateright-template.md)
 </dt> <dt>
 
-[**Xmvector shiftleft**](xmvectorshiftleft-template.md)
+[**XMVectorShiftLeft**](xmvectorshiftleft-template.md)
 </dt> </dl>
 
  

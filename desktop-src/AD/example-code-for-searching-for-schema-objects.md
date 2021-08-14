@@ -1,24 +1,24 @@
 ---
-title: Beispiel Code für die Suche nach Schema Objekten
-description: Dieses Thema enthält ein Codebeispiel, das für die Suche nach Schema Objekten verwendet wird.
+title: Beispielcode für die Suche nach Schemaobjekten
+description: Dieses Thema enthält ein Codebeispiel für die Suche nach Schemaobjekten.
 ms.assetid: 539e0127-1355-4606-97bd-49dfafb25f8d
 ms.tgt_platform: multiple
 keywords:
-- Beispiel Code für die Suche nach Schema Objekten AD
+- Beispielcode für die Suche nach Schemaobjekten (AD)
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 1f58fda74e637430cc2d773c00cb020a848dbf9e
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: d28bb0a873f3a867934521607239a96611bbdc4cd4738edcd766cc0bad852311
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "103947387"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118190260"
 ---
-# <a name="example-code-for-searching-for-schema-objects"></a>Beispiel Code für die Suche nach Schema Objekten
+# <a name="example-code-for-searching-for-schema-objects"></a>Beispielcode für die Suche nach Schemaobjekten
 
-Dieses Thema enthält ein Codebeispiel, das für die Suche nach Schema Objekten verwendet wird.
+Dieses Thema enthält ein Codebeispiel für die Suche nach Schemaobjekten.
 
-Im folgenden C++-Codebeispiel wird gezeigt, wie nach Schema Objekten gesucht werden kann, deren Bits im **systemFlags** -Attribut festgelegt ist.
+Das folgende C++-Codebeispiel zeigt, wie nach Schemaobjekten gesucht wird, für die Bits im **systemFlags-Attribut** festgelegt sind.
 
 
 ```C++
@@ -152,7 +152,7 @@ HRESULT PrintAttributesByType(IDirectorySearch *pSchemaNC,
 
 
 
-Im folgenden C-und C++-Codebeispiel wird gezeigt, wie nach Schema Objekten gesucht wird, die im globalen Katalog repliziert werden.
+Das folgende C- und C++-Codebeispiel zeigt, wie nach Schemaobjekten gesucht wird, die im globalen Katalog repliziert werden.
 
 
 ```C++
@@ -260,7 +260,7 @@ HRESULT PrintGCAttributes(IDirectorySearch *pSchemaNC)
 
 
 
-Im folgenden C-und C++-Codebeispiel wird gezeigt, wie nach indizierten Schema Objekten gesucht wird.
+Das folgende C- und C++-Codebeispiel zeigt, wie nach indizierten Schemaobjekten gesucht wird.
 
 
 ```C++
@@ -373,9 +373,9 @@ HRESULT PrintIndexedAttributes(IDirectorySearch *pSchemaNC)
 
 
 
- 
+ 
 
- 
+ 
 
 
 

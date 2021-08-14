@@ -1,6 +1,6 @@
 ---
-description: 'Erfahren Sie mehr über: esentcannotdelta etesystemtableexception-Konstruktor'
-title: Esentcannotdelta etesystemtableexception-Konstruktor
+description: 'Weitere Informationen finden Sie unter: EsentCannotDeleteSystemTableException-Konstruktor'
+title: EsentCannotDeleteSystemTableException-Konstruktor
 TOCTitle: 'EsentCannotDeleteSystemTableException constructor '
 ms:assetid: M:Microsoft.Isam.Esent.Interop.EsentCannotDeleteSystemTableException.#ctor
 ms:mtpsurl: https://msdn.microsoft.com/library/microsoft.isam.esent.interop.esentcannotdeletesystemtableexception.esentcannotdeletesystemtableexception(v=EXCHG.10)
@@ -24,19 +24,19 @@ api_type:
 api_location:
 - Microsoft.Isam.Esent.Interop.dll
 ROBOTS: INDEX,FOLLOW
-ms.openlocfilehash: 3da42667b822b8aa18d5879f6c1707997327cce8
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 92cb26925a4ca99c8265de023fdea1874bc70fca9a5ef87acd595b3911b6f04b
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "103960528"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118497641"
 ---
-# <a name="esentcannotdeletesystemtableexception-constructor"></a>Esentcannotdelta etesystemtableexception-Konstruktor
+# <a name="esentcannotdeletesystemtableexception-constructor"></a>EsentCannotDeleteSystemTableException-Konstruktor
 
-Initialisiert eine neue Instanz der esentcannotdelta-Klasse.
+Initialisiert eine neue Instanz der EsentCannotDeleteSystemTableException-Klasse.
 
-**Namespace:**  [Microsoft. ISAM. ESENT. Interop](./microsoft.isam.esent.interop-namespace.md)  
-**Assembly:**  Microsoft. ISAM. ESENT. Interop (in Microsoft.Isam.Esent.Interop.dll)
+**Namespace:**  [Microsoft.Isam.Esent.Interop](./microsoft.isam.esent.interop-namespace.md)  
+**Assembly:**  Microsoft.Isam.Esent.Interop (in Microsoft.Isam.Esent.Interop.dll)
 
 ## <a name="syntax"></a>Syntax
 
@@ -52,12 +52,12 @@ Dim instance As New EsentCannotDeleteSystemTableException()
 public EsentCannotDeleteSystemTableException()
 ```
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
-#### <a name="reference"></a>Referenz
+#### <a name="reference"></a>Verweis
 
-[Esentcannotdelta etesystemtableexception-Klasse](./esentcannotdeletesystemtableexception-class.md)
+[EsentCannotDeleteSystemTableException-Klasse](./esentcannotdeletesystemtableexception-class.md)
 
-[Esentcannotdelta-esystemtableexception-Member](./esentcannotdeletesystemtableexception-members.md)
+[EsentCannotDeleteSystemTableException-Member](./esentcannotdeletesystemtableexception-members.md)
 
-[Microsoft. ISAM. ESENT. Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)
+[Microsoft.Isam.Esent.Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)

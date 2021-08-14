@@ -1,9 +1,9 @@
 ---
-title: Anhänge (sendemailtype)-Element
-description: Enthält eine Liste der Anlagen in der e-Mail-Nachricht.
+title: Attachments-Element (sendEmailType)
+description: Enthält eine Liste der Anlagen in der E-Mail-Nachricht.
 ms.assetid: 5ae22481-af70-42eb-a964-e63d800be17d
 keywords:
-- Anhänge-Element Taskplaner
+- Attachments-Element Taskplaner
 topic_type:
 - apiref
 api_name:
@@ -13,16 +13,16 @@ api_type:
 ms.topic: reference
 ms.date: 05/31/2018
 api_location: ''
-ms.openlocfilehash: 67eed8f82f0caa27f44070bd109d4fa4560472eb
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 8aa87679c6d6db725c26deee817fe04acacca85e39d3a8f75c04cba9680ea846
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "103742769"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118132065"
 ---
-# <a name="attachments-sendemailtype-element"></a>Anhänge (sendemailtype)-Element
+# <a name="attachments-sendemailtype-element"></a>Attachments-Element (sendEmailType)
 
-Enthält eine Liste der Anlagen in der e-Mail-Nachricht.
+Enthält eine Liste der Anlagen in der E-Mail-Nachricht.
 
 ``` syntax
 <xs:element name="Attachments"
@@ -30,7 +30,7 @@ Enthält eine Liste der Anlagen in der e-Mail-Nachricht.
  />
 ```
 
-Das **Anhänge** -Element wird durch den komplexen [**sendemailtype**](taskschedulerschema-sendemailtype-complextype.md) -Typ definiert.
+Das **Attachments-Element** wird vom komplexen [**SendEmailType-Typ**](taskschedulerschema-sendemailtype-complextype.md) definiert.
 
 ## <a name="parent-element"></a>Übergeordnetes Element
 
@@ -38,7 +38,7 @@ Das **Anhänge** -Element wird durch den komplexen [**sendemailtype**](tasksched
 
 | Element                                                                              | Abgeleitet von                                                           | BESCHREIBUNG                                                  |
 |--------------------------------------------------------------------------------------|------------------------------------------------------------------------|--------------------------------------------------------------|
-| [**SendEmail (Aktionsgruppe)**](taskschedulerschema-sendemail-actiongroup-element.md) | [**sendemailtype**](taskschedulerschema-sendemailtype-complextype.md) | Stellt eine Aktion dar, die eine e-Mail-Nachricht sendet.<br/> |
+| [**SendEmail (actionGroup)**](taskschedulerschema-sendemail-actiongroup-element.md) | [**sendEMailType**](taskschedulerschema-sendemailtype-complextype.md) | Stellt eine Aktion dar, die eine E-Mail sendet.<br/> |
 
 
 
@@ -48,15 +48,15 @@ Das **Anhänge** -Element wird durch den komplexen [**sendemailtype**](tasksched
 
 | Element                                                          | type                                                                    | BESCHREIBUNG                                                                                |
 |------------------------------------------------------------------|-------------------------------------------------------------------------|--------------------------------------------------------------------------------------------|
-| [**Datei**](taskschedulerschema-file-attachmentstype-element.md) | [**nonEmptyString**](taskschedulerschema-nonemptystring-simpletype.md) | Gibt den Pfad zu einer Datei an, die als Anlage in einer e-Mail-Nachricht gesendet wird.<br/> |
+| [**Datei**](taskschedulerschema-file-attachmentstype-element.md) | [**nonEmptyString**](taskschedulerschema-nonemptystring-simpletype.md) | Gibt den Pfad zu einer Datei an, die als Anlage in einer E-Mail gesendet wird.<br/> |
 
 
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Informationen zur C++-Entwicklung finden Sie unter [**der Eigenschaft "Anhänge" von iemailaction**](/windows/desktop/api/taskschd/nf-taskschd-iemailaction-get_attachments).
+Informationen zur C++-Entwicklung finden Sie unter [**Attachments-Eigenschaft von IEmailAction**](/windows/desktop/api/taskschd/nf-taskschd-iemailaction-get_attachments).
 
-Informationen zur Skript Entwicklung finden Sie unter [**emailaction. Anhänge**](emailaction-attachments.md).
+Informationen zur Skriptentwicklung finden Sie unter [**EmailAction.Attachments.**](emailaction-attachments.md)
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -64,8 +64,8 @@ Informationen zur Skript Entwicklung finden Sie unter [**emailaction. Anhänge**
 
 | Anforderung | Wert |
 |-------------------------------------|------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>       |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2008 \[ -Desktop-Apps\]<br/> |
+| Unterstützte Mindestversion (Client)<br/> | Windows \[Nur Vista-Desktop-Apps\]<br/>       |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2008-Desktop-Apps\]<br/> |
 
 
 

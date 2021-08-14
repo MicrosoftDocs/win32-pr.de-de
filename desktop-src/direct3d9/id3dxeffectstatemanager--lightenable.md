@@ -1,7 +1,7 @@
 ---
-description: Eine Rückruffunktion, die von einem Benutzer implementiert werden muss, um ein Licht zu aktivieren bzw. zu deaktivieren.
+description: Eine Rückruffunktion, die von einem Benutzer implementiert werden muss, um ein Licht zu aktivieren/zu deaktivieren.
 ms.assetid: 11522ca3-8a2f-4767-a6e6-4186cb4f3115
-title: 'ID3DXEffectStateManager:: lightenable-Methode (D3DX9Effect. h)'
+title: ID3DXEffectStateManager::LightEnable-Methode (D3DX9Effect.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -14,16 +14,16 @@ api_type:
 api_location:
 - D3dx9.lib
 - D3dx9.dll
-ms.openlocfilehash: d065540eb036b26cdd19791dc393d32c5b45e3ee
-ms.sourcegitcommit: 14010c34b35fa268046c7683f021f86de08ddd0a
+ms.openlocfilehash: 0a7ce5a4fe90e911faaf8927fe584004eec7a68eae7b5c75f1c3a92f017fd4bd
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "104219598"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118295785"
 ---
-# <a name="id3dxeffectstatemanagerlightenable-method"></a>ID3DXEffectStateManager:: lightenable-Methode
+# <a name="id3dxeffectstatemanagerlightenable-method"></a>ID3DXEffectStateManager::LightEnable-Methode
 
-Eine Rückruffunktion, die von einem Benutzer implementiert werden muss, um ein Licht zu aktivieren bzw. zu deaktivieren.
+Eine Rückruffunktion, die von einem Benutzer implementiert werden muss, um ein Licht zu aktivieren/zu deaktivieren.
 
 ## <a name="syntax"></a>Syntax
 
@@ -41,21 +41,21 @@ HRESULT LightEnable(
 
 <dl> <dt>
 
-*Index* \[ in\]
+*Index* \[ In\]
 </dt> <dd>
 
 Typ: **[ **DWORD**](../winprog/windows-data-types.md)**
 
-Der null basierte Index des Lichts. Dies ist derselbe Index in [**IDirect3DDevice9:: setlight**](/windows/win32/api/d3d9helper/nf-d3d9helper-idirect3ddevice9-setlight).
+Der nullbasierte Index des Lichts. Dies ist derselbe Index in [**IDirect3DDevice9::SetLight**](/windows/win32/api/d3d9helper/nf-d3d9helper-idirect3ddevice9-setlight).
 
 </dd> <dt>
 
-*Aktivieren* \[ von in\]
+*Aktivieren* \[ In\]
 </dt> <dd>
 
-Typ: **[ **bool**](../winprog/windows-data-types.md)**
+Typ: **[ **BOOL**](../winprog/windows-data-types.md)**
 
-True, wenn das Licht aktiviert werden soll, andernfalls false.
+True, um das Licht zu aktivieren, andernfalls FALSE.
 
 </dd> </dl>
 
@@ -63,10 +63,10 @@ True, wenn das Licht aktiviert werden soll, andernfalls false.
 
 Typ: **[ **HRESULT**](https://msdn.microsoft.com/library/Bb401631(v=MSDN.10).aspx)**
 
-Die vom Benutzer implementierte Methode sollte S \_ OK zurückgeben. Wenn der Rückruf beim Festlegen des Geräte Zustands fehlschlägt, wird eine der folgenden Aktionen ausgeführt:
+Die vom Benutzer implementierte Methode sollte S \_ OK zurückgeben. Wenn der Rückruf beim Festlegen des Gerätezustands fehlschlägt, tritt eine der folgenden Schritte auf:
 
--   Der Effekt schlägt während [**ID3DXEffect:: beginpass**](id3dxeffect--beginpass.md)fehl.
--   Der Aufruf des dynamischen Effekts-Zustands (z. [**b. IDirect3DDevice9:: lightenable**](/windows/win32/api/d3d9helper/nf-d3d9helper-idirect3ddevice9-lightenable)) schlägt fehl.
+-   Die Auswirkung schlägt während [**id3DXEffect::BeginPass**](id3dxeffect--beginpass.md)fehl.
+-   Der Dynamische Effektzustandsaufruf (z.B. [**IDirect3DDevice9::LightEnable)**](/windows/win32/api/d3d9helper/nf-d3d9helper-idirect3ddevice9-lightenable)schlägt fehl.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -74,8 +74,8 @@ Die vom Benutzer implementierte Methode sollte S \_ OK zurückgeben. Wenn der R�
 
 | Anforderung | Wert |
 |--------------------|------------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>D3DX9Effect. h</dt> </dl> |
-| Bibliothek<br/> | <dl> <dt>D3dx9. lib</dt> </dl>     |
+| Header<br/>  | <dl> <dt>D3DX9Effect.h</dt> </dl> |
+| Bibliothek<br/> | <dl> <dt>D3dx9.lib</dt> </dl>     |
 
 
 

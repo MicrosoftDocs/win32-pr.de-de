@@ -1,22 +1,22 @@
 ---
-title: Beispiel Code für das Festlegen eines Steuerungs Zugriffsrechts ACE
-description: Im folgenden C/C++-Codebeispiel wird ein ACE für ein Steuerelement Zugriffsrecht zur ACL eines Objekts hinzugefügt.
+title: Beispielcode zum Festlegen eines Zugriffsberechtigungs-ACE für die Steuerung
+description: Im folgenden C/C++-Codebeispiel wird der Zugriffssteuerungsliste eines Objekts ein ACE für ein Steuerelementzugriffsrecht hinzugefügt.
 ms.assetid: 8fb5eb47-27ca-4e60-ad39-ca4392da4e7d
 ms.tgt_platform: multiple
 keywords:
-- Beispiel Code für das Festlegen einer Steuerungs Zugriffsrechten ACE AD
+- Beispielcode zum Festlegen eines Zugriffssteuerungs-ACE AD
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 626185b3e842429d648a3ff6363e868b543812b0
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: 67012aa852e8ff3fec6780e9d1457b49cc98dd76bc6e5fac3734c0acc8668709
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "104206264"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118190250"
 ---
-# <a name="example-code-for-setting-a-control-access-right-ace"></a>Beispiel Code für das Festlegen eines Steuerungs Zugriffsrechts ACE
+# <a name="example-code-for-setting-a-control-access-right-ace"></a>Beispielcode zum Festlegen eines Zugriffsberechtigungs-ACE für die Steuerung
 
-Im folgenden C/C++-Codebeispiel wird ein ACE für ein Steuerelement Zugriffsrecht zur ACL eines Objekts hinzugefügt.
+Im folgenden C/C++-Codebeispiel wird der Zugriffssteuerungsliste eines Objekts ein ACE für ein Steuerelementzugriffsrecht hinzugefügt.
 
 
 ```C++
@@ -221,9 +221,9 @@ HRESULT SetExtendedRight(IADs *pObject,
 
 
 
- 
+ 
 
- 
+ 
 
 
 

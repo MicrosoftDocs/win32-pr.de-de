@@ -1,10 +1,10 @@
 ---
-title: Dsbackupprepare-Funktion (ntdsbcli. h)
-description: Bereitet das Verzeichnis auf dem angegebenen Server für die Online Sicherung vor und gibt ein Sicherungs Kontext Handle zurück, das bei nachfolgenden Aufrufen anderer Sicherungsfunktionen verwendet wird.
+title: DsBackupPrepare-Funktion (Ntdsbcli.h)
+description: Bereitet das Verzeichnis auf dem angegebenen Server für die Onlinesicherung vor und gibt ein Sicherungskontexthandle zurück, das in nachfolgenden Aufrufen anderer Sicherungsfunktionen verwendet wird.
 ms.assetid: 18c6dbcf-b707-4674-9af5-40f2178e6d2b
 ms.tgt_platform: multiple
 keywords:
-- Dsbackupprepare-Funktions Active Directory
+- Active Directory-Funktion "DsBackupPrepare"
 topic_type:
 - apiref
 api_name:
@@ -17,18 +17,18 @@ api_type:
 - DllExport
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: fa561a7e41164ece68fb18fd882a8b05d6357cec
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: ea1f24c6cbf3f05ce69d8a71900bfe4d1b08899b98590dc75410b9d5ed92d90a
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104477133"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118191836"
 ---
-# <a name="dsbackupprepare-function"></a>Dsbackupprepare-Funktion
+# <a name="dsbackupprepare-function"></a>DsBackupPrepare-Funktion
 
-\[Diese Funktion ist für die Verwendung in den Betriebssystemen verfügbar, die im Abschnitt "Anforderungen" angegeben sind. Es kann in nachfolgenden Versionen geändert oder entfernt werden. Verwenden Sie ab Windows Vista [Volumeschattenkopie-Dienst (VSS)](../vss/volume-shadow-copy-service-overview.md) .\]
+\[Diese Funktion ist für die Verwendung in den Betriebssystemen verfügbar, die im Abschnitt Anforderungen angegeben sind. Es kann in nachfolgenden Versionen geändert oder entfernt werden. Verwenden Sie ab Windows Vista stattdessen [Volumeschattenkopie-Dienst (VSS).](../vss/volume-shadow-copy-service-overview.md)\]
 
-Die **dsbackupprepare** -Funktion bereitet das Verzeichnis auf dem angegebenen Server für die Online Sicherung vor und gibt ein Sicherungs Kontext Handle zurück, das bei nachfolgenden Aufrufen anderer Sicherungsfunktionen verwendet wird.
+Die **DsBackupPrepare-Funktion** bereitet das Verzeichnis auf dem angegebenen Server für die Onlinesicherung vor und gibt ein Sicherungskontexthandle zurück, das in nachfolgenden Aufrufen anderer Sicherungsfunktionen verwendet wird.
 
 ## <a name="syntax"></a>Syntax
 
@@ -50,132 +50,132 @@ HRESULT DsBackupPrepare(
 
 <dl> <dt>
 
-*szbackupserver* \[ in\]
+*szBackupServer* \[ In\]
 </dt> <dd>
 
-Zeiger auf eine mit NULL endenden Zeichenfolge, die den Namen des zu sichernden Servers enthält. Vorangehende umgekehrte Schrägstriche sind optional. Der Server muss derselbe Computer sein, von dem diese Funktion aufgerufen wird. Der Servername darf keinen Unterstrich ( \_ ) enthalten. Ein Beispiel für einen Servernamen ist " \\ \\ Server1".
+Zeiger auf eine auf NULL endende Zeichenfolge, die den Namen des zu sichernden Servers enthält. Die vorangehenden umgekehrten Schrägstriche sind optional. Der Server muss derselbe Computer sein, von dem diese Funktion aufgerufen wird. Der Servername darf keinen Unterstrich \_ () enthalten. Ein Beispiel für einen Servernamen ist \\ \\ "server1".
 
 </dd> <dt>
 
-*grbit* \[ in\]
+*grbit* \[ In\]
 </dt> <dd>
 
 Bestimmt, ob die Protokolldateien gesichert werden. Dieser Wert sollte immer 0 sein, da inkrementelle Sicherungen nicht unterstützt werden.
 
 </dd> <dt>
 
-*btbackuptype* \[ in\]
+*btBackupType* \[ In\]
 </dt> <dd>
 
-Gibt den Sicherungstyp an. Dies kann einer der folgenden Werte sein:
+Gibt den Sicherungstyp an. Dies kann einer der folgenden Werte sein.
 
 <dt>
 
 <span id="BACKUP_TYPE_FULL"></span><span id="backup_type_full"></span>
 
-<span id="BACKUP_TYPE_FULL"></span><span id="backup_type_full"></span>**\_Sicherungstyp \_ voll**
+<span id="BACKUP_TYPE_FULL"></span><span id="backup_type_full"></span>**BACKUP \_ TYPE \_ FULL**
 
 
 </dt> <dd>
 
-Gibt eine vollständige Sicherung an. Das komplette Verzeichnis (DIT, Protokolldateien und Update Dateien) wird gesichert. Alle Daten werden gesichert, und die Transaktionsprotokoll Dateien werden abgeschnitten. Es werden nur vollständige Sicherungen unterstützt.
+Gibt eine vollständige Sicherung an. Das vollständige Verzeichnis (DIT, Protokolldateien und Updatedateien) wird gesichert. Alle Daten werden gesichert, und Transaktionsprotokolldateien werden abgeschnitten. Es werden nur vollständige Sicherungen unterstützt.
 
 </dd> <dt>
 
 <span id="BACKUP_TYPE_LOGS_ONLY"></span><span id="backup_type_logs_only"></span>
 
-<span id="BACKUP_TYPE_LOGS_ONLY"></span><span id="backup_type_logs_only"></span>**\_nur Sicherungs Typen \_ Protokolle \_**
+<span id="BACKUP_TYPE_LOGS_ONLY"></span><span id="backup_type_logs_only"></span>**\_NUR \_ SICHERUNGSTYPPROTOKOLLE \_**
 
 
 </dt> <dd>
 
-Dieser Wert wird nicht unterstützt. Gibt an, dass nur die Daten Bank Protokolle und nicht die Datenbank selbst gesichert werden. Dies wird normalerweise beim Ausführen einer differenziellen oder inkrementellen Sicherung verwendet.
+Dieser Wert wird nicht unterstützt. Gibt an, dass nur die Datenbankprotokolle und nicht die Datenbank selbst gesichert werden. Dies wird normalerweise beim Ausführen einer differenziellen oder inkrementellen Sicherung verwendet.
 
 </dd> <dt>
 
 <span id="BACKUP_TYPE_INCREMENTAL"></span><span id="backup_type_incremental"></span>
 
-<span id="BACKUP_TYPE_INCREMENTAL"></span><span id="backup_type_incremental"></span>**\_Sicherungstyp \_**
+<span id="BACKUP_TYPE_INCREMENTAL"></span><span id="backup_type_incremental"></span>**SICHERUNGSTYP \_ \_ INKREMENTELL**
 
 
 </dt> <dd>
 
-Dieser Wert wird nicht unterstützt. **Dsbackupprepare** gibt **einen \_ ungültigen \_ Parameter** zurück.
+Dieser Wert wird nicht unterstützt. **DsBackupPrepare** gibt **ERROR \_ INVALID \_ PARAMETER** zurück.
 
 </dd> </dl> </dd> <dt>
 
-*ppvexpiriytoken* \[ vorgenommen\]
+*ppvExpiryToken* \[ out\]
 </dt> <dd>
 
-Ein Zeiger auf einen **pVoid** -Wert, der einen Zeiger auf ein Ablauf Token empfängt, das dieser Sicherung zugeordnet ist. *pcbexpirytekensize* erhält die Größe dieser Daten in Bytes. Der Aufrufer muss den Inhalt dieses Tokens mit der Sicherung speichern, da das Token an [**dsrestoreprepare**](dsrestoreprepare.md) übergeben werden muss, wenn versucht wird, Daten wiederherzustellen. Nachdem das Token gespeichert wurde und nicht mehr benötigt wird, muss der Aufrufer den zugeordneten Arbeitsspeicher mithilfe von [**dsbackupfree**](dsbackupfree.md)freigeben.
+Zeiger auf einen **PVOID-Wert,** der einen Zeiger auf ein Ablauftoken empfängt, das dieser Sicherung zugeordnet ist. *"pwExpiryTokenSize"* empfängt die Größe dieser Daten in Bytes. Der Aufrufer muss den Inhalt dieses Tokens mit der Sicherung speichern, da das Token beim Wiederherstellen von Daten an [**DsRestorePrepare**](dsrestoreprepare.md) übergeben werden muss. Nachdem das Token gespeichert wurde und nicht mehr benötigt wird, sollte der Aufrufer den zugeordneten Arbeitsspeicher mithilfe von [**DsBackupFree**](dsbackupfree.md)freigeben.
 
 </dd> <dt>
 
-*pcbexpirytekensize* \[ vorgenommen\]
+*pwExpiryTokenSize* \[ out\]
 </dt> <dd>
 
-Ein Zeiger auf einen **DWORD** -Wert, der die Größe des Tokens in *ppvexpiriytoken* in Bytes empfängt.
+Zeiger auf einen **DWORD-Wert,** der die Größe des Tokens in *ppvExpiryToken* in Bytes empfängt.
 
 </dd> <dt>
 
-*phbC* \[ vorgenommen\]
+*phbc* \[ out\]
 </dt> <dd>
 
-Ein Zeiger auf einen **HBC** -Wert, der das Handle für die Sicherung empfängt. Dieses Handle wird verwendet, wenn andere Verzeichnisdienst-Sicherungsfunktionen aufgerufen werden, wie z. b. [**dsbackupopenfile**](dsbackupopenfile.md) und [**dsbackupend**](dsbackupend.md).
+Zeiger auf einen **HBC-Wert,** der das Handle für die Sicherung empfängt. Dieses Handle wird verwendet, wenn andere Verzeichnisdienst-Sicherungsfunktionen wie [**DsBackupOpenFile**](dsbackupopenfile.md) und [**DsBackupEnd**](dsbackupend.md)aufgerufen werden.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt **S \_ OK** zurück, wenn die Funktion erfolgreich ist, andernfalls einen Fehlercode. In der folgenden Liste sind andere mögliche Fehlercodes aufgeführt.
+Gibt **S \_ OK** zurück, wenn die Funktion erfolgreich ist, oder andernfalls ein Fehlercode. In der folgenden Liste sind weitere mögliche Fehlercodes aufgeführt.
 
 <dl> <dt>
 
-**Fehler \_ Zugriff \_ verweigert**
+**FEHLERZUGRIFF \_ \_ VERWEIGERT**
 </dt> <dd>
 
-Der Aufrufer verfügt nicht über die erforderlichen Zugriffsberechtigungen, um diese Funktion aufzurufen. Die [**dssetauthidentity**](dssetauthidentity.md) -Funktion kann verwendet werden, um die Anmelde Informationen festzulegen, die für die Sicherungs-und Wiederherstellungs Funktionen verwendet werden sollen.
+Der Aufrufer verfügt nicht über die richtigen Zugriffsberechtigungen zum Aufrufen dieser Funktion. Die [**DsSetAuthIdentity-Funktion**](dssetauthidentity.md) kann verwendet werden, um die Anmeldeinformationen festzulegen, die für die Sicherungs- und Wiederherstellungsfunktionen verwendet werden sollen.
 
 </dd> <dt>
 
-**Fehler bei \_ ungültigem \_ Parameter**
+**FEHLER: \_ UNGÜLTIGER \_ PARAMETER**
 </dt> <dd>
 
-" *szbackupserver* " oder " *phbcbackupcontext* " sind ungültig.
+*szBackupServer* oder *phbcBackupContext* sind ungültig.
 
 </dd> <dt>
 
-**Fehler \_ nicht \_ genügend Arbeits \_ Speicher**
+**FEHLER \_ NICHT \_ GENÜGEND \_ ARBEITSSPEICHER**
 </dt> <dd>
 
-Es ist ein Fehler bei der Speicher Belegung aufgetreten.
+Fehler bei der Speicherbelegung.
 
 </dd> <dt>
 
-**hrcouldnotconnect**
+**hrConnectNotConnect**
 </dt> <dd>
 
-Der Server in " *szbackupserver* " wurde nicht gefunden, ist kein Domänen Controller, oder " *szbackupserver* " ist nicht ordnungsgemäß formatiert. Dieser Wert wird in "ntdsbmsg. h" definiert.
+Der Server in *szBackupServer* wurde nicht gefunden, ist kein Domänencontroller, oder *szBackupServer* ist nicht ordnungsgemäß formatiert. Dieser Wert wird in ntdsbmsg.h definiert.
 
 </dd> <dt>
 
-**hrinvalidparam**
+**hrInvalidParam**
 </dt> <dd>
 
-*ppvexpiriytoken* und/oder *pcbexpirytokensize* sind ungültig. Dieser Wert wird in "ntdsbmsg. h" definiert.
+*ppvExpiryToken* und/oder *pwExpiryTokenSize* sind ungültig. Dieser Wert ist in Ntdsbmsg.h definiert.
 
 </dd> <dt>
 
-**\_ungültige RPC S- \_ \_ Bindung**
+**\_RPC S \_ UNGÜLTIGE \_ BINDUNG**
 </dt> <dd>
 
-Die Funktion wird Remote aufgerufen, oder der Server in " *szservername* " ist kein Domänen Controller.
+Die Funktion wird remote aufgerufen, oder der Server in *szServerName* ist kein Domänencontroller.
 
 </dd> </dl>
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Diese Funktion erfordert, dass der Aufrufer über die Berechtigung " **SE \_ Backup \_ Name** " verfügt. Die [**dssetauthidentity**](dssetauthidentity.md) -Funktion kann verwendet werden, um den Sicherheitskontext zu ändern, in dem diese Funktion aufgerufen wird.
+Diese Funktion erfordert, dass der Aufrufer über die **berechtigung SE \_ BACKUP \_ NAME** verfügt. Die [**DsSetAuthIdentity-Funktion**](dssetauthidentity.md) kann verwendet werden, um den Sicherheitskontext zu ändern, unter dem diese Funktion aufgerufen wird.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -185,36 +185,36 @@ Diese Funktion erfordert, dass der Aufrufer über die Berechtigung " **SE \_ Bac
 |-------------------------------------|-----------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows Vista<br/>                                                                |
 | Unterstützte Mindestversion (Server)<br/> | Windows Server 2008<br/>                                                          |
-| Header<br/>                   | <dl> <dt>Ntdsbcli. h</dt> </dl>   |
-| Bibliothek<br/>                  | <dl> <dt>Ntdsbcli. lib</dt> </dl> |
+| Header<br/>                   | <dl> <dt>Ntdsbcli.h</dt> </dl>   |
+| Bibliothek<br/>                  | <dl> <dt>Ntdsbcli.lib</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>Ntdsbcli.dll</dt> </dl> |
-| Unicode- und ANSI-Name<br/>   | **Dsbackuppreparew** (Unicode) und **dsbackuppreparea** (ANSI)<br/>               |
+| Unicode- und ANSI-Name<br/>   | **DsBackupPrepareW** (Unicode) und **DsBackupPrepareA** (ANSI)<br/>               |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Dsrestoreprepare**](dsrestoreprepare.md)
+[**DsRestorePrepare**](dsrestoreprepare.md)
 </dt> <dt>
 
-[**Dsbackupfree**](dsbackupfree.md)
+[**DsBackupFree**](dsbackupfree.md)
 </dt> <dt>
 
-[**Dsbackupopenfile**](dsbackupopenfile.md)
+[**DsBackupOpenFile**](dsbackupopenfile.md)
 </dt> <dt>
 
-[**Dsbackupend**](dsbackupend.md)
+[**DsBackupEnd**](dsbackupend.md)
 </dt> <dt>
 
-[**Dssetauthidentity**](dssetauthidentity.md)
+[**DsSetAuthIdentity**](dssetauthidentity.md)
 </dt> <dt>
 
-[Sichern eines Active Directory Servers](backing-up-an-active-directory-server.md)
+[Sichern eines Active Directory-Servers](backing-up-an-active-directory-server.md)
 </dt> <dt>
 
-[Verzeichnis Sicherungsfunktionen](directory-backup-functions.md)
+[Verzeichnissicherungsfunktionen](directory-backup-functions.md)
 </dt> </dl>
 
  

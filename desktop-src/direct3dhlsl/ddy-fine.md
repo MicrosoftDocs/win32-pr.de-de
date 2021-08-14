@@ -1,6 +1,6 @@
 ---
 title: ddy_fine-Funktion
-description: Berechnet eine partielle Ableitung mit hoher Genauigkeit in Bezug auf die x-Koordinate des Bildschirm Raums. | ddy_fine-Funktion
+description: Berechnet eine partielle Ableitung mit hoher Genauigkeit in Bezug auf die x-Koordinate des Bildschirmbereichs. | ddy_fine-Funktion
 ms.assetid: 29fcdbc9-470b-4b5b-b18c-f75dd2c87920
 keywords:
 - ddy_fine-Funktion HLSL
@@ -13,16 +13,16 @@ api_type:
 ms.topic: reference
 ms.date: 05/31/2018
 api_location: ''
-ms.openlocfilehash: 2a4cb297180a4988cb049ccebfa4f82571c4655c
-ms.sourcegitcommit: 92e74c99f8f4d097676959d0c317f533c2400a80
+ms.openlocfilehash: 9b59f7ac500658570b19bf932e3abb042f9ecd8e27b63458c25032704c9ba4e8
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/09/2021
-ms.locfileid: "104995775"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118285883"
 ---
-# <a name="ddy_fine-function"></a>ddY \_ fein-Funktion
+# <a name="ddy_fine-function"></a>ddy \_ fine-Funktion
 
-Berechnet eine partielle Ableitung mit hoher Genauigkeit in Bezug auf die x-Koordinate des Bildschirm Raums.
+Berechnet eine partielle Ableitung mit hoher Genauigkeit in Bezug auf die x-Koordinate des Bildschirmbereichs.
 
 ## <a name="syntax"></a>Syntax
 
@@ -36,7 +36,7 @@ float ddy_fine(
 
 <dl> <dt>
 
-*Wert* \[ in\]
+*wert* \[ In\]
 </dt> <dd>
 
 Typ: **float**
@@ -49,11 +49,11 @@ Der Eingabewert.
 
 Typ: **float**
 
-Die partielle Ableitung mit hoher Genauigkeit des- *Werts*.
+Die partielle Ableitung des *Werts* mit hoher Genauigkeit.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Außerdem sind die folgenden überladenen Versionen verfügbar:
+Die folgenden überladenen Versionen sind ebenfalls verfügbar:
 
 ``` syntax
 float2 ddy_fine(float2 value);
@@ -61,40 +61,40 @@ float3 ddy_fine(float3 value);
 float4 ddy_fine(float4 value);  
 ```
 
-### <a name="minimum-shader-model"></a>Minimaler Shader-Modell
+### <a name="minimum-shader-model"></a>Shader-Mindestmodell
 
-Diese Funktion wird in den folgenden shadermodellen unterstützt.
+Diese Funktion wird in den folgenden Shadermodellen unterstützt.
 
 
 
 | Shadermodell                                                                | Unterstützt |
 |-----------------------------------------------------------------------------|-----------|
-| [Shader Model 5](d3d11-graphics-reference-sm5.md) und höhere shadermodelle | ja       |
+| [Shadermodell 5](d3d11-graphics-reference-sm5.md) und höhere Shadermodelle | ja       |
 
 
 
  
 
-Diese Funktion wird in den folgenden Typen von Shadern unterstützt:
+Diese Funktion wird in den folgenden Shadertypen unterstützt:
 
 
 
-| Scheitelpunkt | Hülle | Domain | Geometrie | Pixel | Compute |
+| Scheitelpunkt | Rumpf | Domain | Geometrie | Pixel | Compute |
 |--------|------|--------|----------|-------|---------|
-|        |      |        |          | x     |         |
+|        |      |        |          | w     |         |
 
 
 
  
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 
-[Intrinsische Funktionen](dx-graphics-hlsl-intrinsic-functions.md)
+[Systeminterne Funktionen](dx-graphics-hlsl-intrinsic-functions.md)
 </dt> <dt>
 
-[Shader-Modell 5](d3d11-graphics-reference-sm5.md)
+[Shadermodell 5](d3d11-graphics-reference-sm5.md)
 </dt> </dl>
 
  

@@ -1,9 +1,9 @@
 ---
-title: Eaptype-Element (V1-Schema Verbindungs Eigenschaft)
-description: Erfahren Sie mehr über das eaptype-Element. Dieses Element erfasst eine Methoden spezifische Konfiguration innerhalb des EAP-Elements. | Eaptype-Element (V1-Schema Verbindungs Eigenschaft)
+title: EapType-Element (v1-Schemaverbindungseigenschaft)
+description: Erfahren Sie mehr über das EapType-Element. Dieses Element erfasst die methodenspezifische Konfiguration innerhalb des Eap-Elements. | EapType-Element (v1-Schemaverbindungseigenschaft)
 ms.assetid: f953e150-64cf-41b2-937f-410799be4602
 keywords:
-- Eaptype-Element EAPHost
+- EapType-Element EAPHost
 topic_type:
 - apiref
 api_name:
@@ -14,16 +14,16 @@ ms.topic: reference
 ms.date: 05/31/2018
 api_location: ''
 ROBOTS: INDEX,FOLLOW
-ms.openlocfilehash: 88361931946f8a209c5b1c41bd17fcbd0e44096d
-ms.sourcegitcommit: 92e74c99f8f4d097676959d0c317f533c2400a80
+ms.openlocfilehash: 3f2681e5682ad98ab5f4185174996920315d8c3b81dde8ba69d13ca178904ded
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/09/2021
-ms.locfileid: "103761661"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118498786"
 ---
-# <a name="eaptype-element-v1-schema-connection-property"></a>Eaptype-Element (V1-Schema Verbindungs Eigenschaft)
+# <a name="eaptype-element-v1-schema-connection-property"></a>EapType-Element (v1-Schemaverbindungseigenschaft)
 
-Das **eaptype** -Element erfasst eine Methoden spezifische Konfiguration innerhalb des EAP-Elements.
+Das **EapType-Element** erfasst eine methodenspezifische Konfiguration innerhalb des Eap-Elements.
 
 ``` syntax
 <xs:element name="EapType"
@@ -31,26 +31,26 @@ Das **eaptype** -Element erfasst eine Methoden spezifische Konfiguration innerha
  />
 ```
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Das **eaptype** -Element ist abstrakt. Jede Methode muss ein abgeleitetes Element in den Instanzdokumenten definieren und verwenden.
+Das **EapType-Element** ist abstrakt. Jede Methode muss ein abgeleitetes Element in den Instanzdokumenten definieren und verwenden.
 
 ## <a name="requirements"></a>Anforderungen
 
 
 
-| Role | Mindestens unterstützte Betriebssystemversion |
+| Role | Unterstützte Mindestversion des Betriebssystems |
 |------|------------------------------|
-| Client<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>       |
-| Server<br/> | Nur Windows Server 2008 \[ -Desktop-Apps\]<br/> |
+| Client<br/> | Windows Nur \[ Vista-Desktop-Apps\]<br/>       |
+| Server<br/> | Windows Nur Server \[ 2008-Desktop-Apps\]<br/> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[EAPHost und Legacy Schema](eaphost-schemas.md)
+[EAPHost und Legacyschema](eaphost-schemas.md)
 </dt> <dt>
 
 [baseeapconnectionpropertiesv1-Schema](baseeapconnectionpropertiesv1schema-schema.md)

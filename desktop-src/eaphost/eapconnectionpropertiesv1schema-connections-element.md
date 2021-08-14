@@ -1,6 +1,6 @@
 ---
 title: Connections-Element
-description: Erfahren Sie mehr über das Connections-Element. Dieses Element sammelt und enthält keine oder mehrere Verbindungselemente.
+description: Erfahren Sie mehr über das Connections-Element. Dieses Element sammelt und enthält 0 (null) oder mehr Connection-Elemente.
 ms.assetid: 2c199338-892f-4d8c-bf33-4a19f362de3e
 keywords:
 - Connections-Element EAPHost
@@ -14,16 +14,16 @@ ms.topic: reference
 ms.date: 05/31/2018
 api_location: ''
 ROBOTS: INDEX,FOLLOW
-ms.openlocfilehash: 6cdb23c9f1a6130e2fe77061286e8a0657c3e2f5
-ms.sourcegitcommit: b0ebdefc3dcd5c04bede94091833aa1015a2f95c
+ms.openlocfilehash: 62635d09030875a4f17deefa1aec05432df5662369eb483894f1a8cef4bbaf5c
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/21/2020
-ms.locfileid: "106340534"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118498218"
 ---
 # <a name="connections-element"></a>Connections-Element
 
-Das **Connections** -Element sammelt und enthält keine oder mehrere [**Connection**](eapconnectionpropertiesv1schema-connection-connections-element.md) -Elemente.
+Das **Connections-Element** sammelt und enthält 0 (null) oder [**mehr Connection-Elemente.**](eapconnectionpropertiesv1schema-connection-connections-element.md)
 
 ``` syntax
 <xs:element name="Connections">
@@ -56,32 +56,32 @@ Das **Connections** -Element sammelt und enthält keine oder mehrere [**Connecti
 
 | Element                                                                              | type   | BESCHREIBUNG                                                                                                                                                                                |
 |--------------------------------------------------------------------------------------|--------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| [**EAP**](baseeapconnectionpropertiesv1schema-eap-element.md)                       |        | Identifiziert das EAP-Konfigurationselement.<br/>                                                                                                                                       |
-| [**Verbindung**](eapconnectionpropertiesv1schema-connection-connections-element.md) |        | Definiert jede Konfigurationseinstellung und verknüpft Sie mit einem Namen. Das [**Connection**](eapconnectionpropertiesv1schema-connection-connections-element.md) -Element ist optional.<br/> |
-| [**Name**](eapconnectionpropertiesv1schema-name-connection-element.md)              | Zeichenfolge | Hiermit wird der Name der zu definierenden Verbindung erfasst und die Identifizierung mehrerer Verbindungen unterstützt.<br/>                                                                     |
+| [**Eap**](baseeapconnectionpropertiesv1schema-eap-element.md)                       |        | Identifiziert das EAP-Konfigurationselement.<br/>                                                                                                                                       |
+| [**Verbindung**](eapconnectionpropertiesv1schema-connection-connections-element.md) |        | Definiert jede Konfigurationseinstellung und ordnet sie einem Namen zu. Das [**Connection-Element**](eapconnectionpropertiesv1schema-connection-connections-element.md) ist optional.<br/> |
+| [**Name**](eapconnectionpropertiesv1schema-name-connection-element.md)              | Zeichenfolge | Erfasst den Namen der verbindung, die definiert wird, und unterstützt sie bei der Identifizierung mehrerer Verbindungen.<br/>                                                                     |
 
 
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Das **Connections** -Element wird nicht mit Legacy Methoden über die EAPHost-APIs verwendet.
+Das **Connections-Element** wird nicht mit Legacymethoden über die EAPHost-APIs verwendet.
 
 ## <a name="requirements"></a>Anforderungen
 
 
 
-| Role | Mindestens unterstützte Betriebssystemversion |
+| Role | Unterstützte Mindestversion des Betriebssystems |
 |------|------------------------------|
-| Client<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>       |
-| Server<br/> | Nur Windows Server 2008 \[ -Desktop-Apps\]<br/> |
+| Client<br/> | Windows Nur \[ Vista-Desktop-Apps\]<br/>       |
+| Server<br/> | Windows Nur Server \[ 2008-Desktop-Apps\]<br/> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[EAPHost und Legacy Schema](eaphost-schemas.md)
+[EAPHost und Legacyschema](eaphost-schemas.md)
 </dt> <dt>
 
 [eapconnectionpropertiesv1-Schema](eapconnectionpropertiesv1schema-schema.md)

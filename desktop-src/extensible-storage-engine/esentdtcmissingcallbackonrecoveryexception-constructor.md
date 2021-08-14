@@ -1,6 +1,6 @@
 ---
-description: 'Weitere Informationen finden Sie unter: esentdtcmissingcallbackonherstellyexception-Konstruktor'
-title: Esentdtcmissingcallbackonherstellyexception-Konstruktor
+description: 'Weitere Informationen zu: EsentDTCMissingCallbackOnRecoveryException-Konstruktor'
+title: EsentDTCMissingCallbackOnRecoveryException-Konstruktor
 TOCTitle: 'EsentDTCMissingCallbackOnRecoveryException constructor '
 ms:assetid: M:Microsoft.Isam.Esent.Interop.EsentDTCMissingCallbackOnRecoveryException.#ctor
 ms:mtpsurl: https://msdn.microsoft.com/library/microsoft.isam.esent.interop.esentdtcmissingcallbackonrecoveryexception.esentdtcmissingcallbackonrecoveryexception(v=EXCHG.10)
@@ -24,19 +24,19 @@ api_type:
 api_location:
 - Microsoft.Isam.Esent.Interop.dll
 ROBOTS: INDEX,FOLLOW
-ms.openlocfilehash: 6e71c6a47dc708a4ba4404c67a53dcbfe1c59e1b
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 7d88cdf5126c97ba09724e3d5a3cc70ed78e40a31871c8a2ccb3017a2e93cd86
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106352596"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118496866"
 ---
-# <a name="esentdtcmissingcallbackonrecoveryexception-constructor"></a>Esentdtcmissingcallbackonherstellyexception-Konstruktor
+# <a name="esentdtcmissingcallbackonrecoveryexception-constructor"></a>EsentDTCMissingCallbackOnRecoveryException-Konstruktor
 
-Initialisiert eine neue Instanz der esentdtcmissingcallbackonherstellyexception-Klasse.
+Initialisiert eine neue Instanz der EsentDTCMissingCallbackOnRecoveryException-Klasse.
 
-**Namespace:**  [Microsoft. ISAM. ESENT. Interop](./microsoft.isam.esent.interop-namespace.md)  
-**Assembly:**  Microsoft. ISAM. ESENT. Interop (in Microsoft.Isam.Esent.Interop.dll)
+**Namespace:**  [Microsoft.Isam.Esent.Interop](./microsoft.isam.esent.interop-namespace.md)  
+**Assembly:**  Microsoft.Isam.Esent.Interop (in Microsoft.Isam.Esent.Interop.dll)
 
 ## <a name="syntax"></a>Syntax
 
@@ -52,12 +52,12 @@ Dim instance As New EsentDTCMissingCallbackOnRecoveryException()
 public EsentDTCMissingCallbackOnRecoveryException()
 ```
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
-#### <a name="reference"></a>Referenz
+#### <a name="reference"></a>Verweis
 
-[Esentdtcmissingcallbackonherstellyexception-Klasse](./esentdtcmissingcallbackonrecoveryexception-class.md)
+[EsentDTCMissingCallbackOnRecoveryException-Klasse](./esentdtcmissingcallbackonrecoveryexception-class.md)
 
-[Esentdtcmissingcallbackonwiederherstellungsexception-Member](./esentdtcmissingcallbackonrecoveryexception-members.md)
+[EsentDTCMissingCallbackOnRecoveryException-Member](./esentdtcmissingcallbackonrecoveryexception-members.md)
 
-[Microsoft. ISAM. ESENT. Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)
+[Microsoft.Isam.Esent.Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)

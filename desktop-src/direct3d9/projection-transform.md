@@ -1,63 +1,63 @@
 ---
-description: Sie können sich die Projektions Transformation als Steuerung der Interna der Kamera vorstellen. Es ist analog zur Auswahl eines Lens für die Kamera.
+description: Sie können sich die Projektionstransformation als Steuerung der Internen der Kamera einbilden. sie entspricht der Auswahl einer Brille für die Kamera.
 ms.assetid: 09e6e887-7657-4654-be19-2e83dcbc91cf
-title: Projektions Transformation (Direct3D 9)
+title: Projektionstransformation (Direct3D 9)
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 37b518583dd534bec9784590150233847274ca71
-ms.sourcegitcommit: a47bd86f517de76374e4fff33cfeb613eb259a7e
+ms.openlocfilehash: ad15ee0f4d23401563a9a51b8767be3da6e47dfee9dc76d580154ef1d524d02a
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/06/2021
-ms.locfileid: "104213927"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118092690"
 ---
-# <a name="projection-transform-direct3d-9"></a>Projektions Transformation (Direct3D 9)
+# <a name="projection-transform-direct3d-9"></a>Projektionstransformation (Direct3D 9)
 
-Sie können sich die Projektions Transformation als Steuerung der Interna der Kamera vorstellen. Es ist analog zur Auswahl eines Lens für die Kamera. Dies ist die komplizierteste der drei Transformations Typen. Diese Erörterung der Projektions Transformation ist in die folgenden Themen gegliedert.
+Sie können sich die Projektionstransformation als Steuerung der Internen der Kamera einbilden. sie entspricht der Auswahl einer Brille für die Kamera. Dies ist der komplizierteste der drei Transformationstypen. Diese Erörterung der Projektionstransformation ist in die folgenden Themen organisiert.
 
-Die Projektions Matrix ist in der Regel eine Skalierungs-und Perspektiven Projektion. Die Projektions Transformation konvertiert die Anzeige Frustration in eine Cuboid-Form. Da das Near-Ende der Anzeige von Frustum kleiner als das Ende ist, wirkt sich dies auf das Erweitern von Objekten aus, die sich in der Nähe der Kamera befinden. auf diese Weise wird die Perspektive auf die Szene angewendet.
+Die Projektionsmatrix ist in der Regel eine Skalierungs- und Perspektivprojektion. Die Projektionstransformation konvertiert das Anzeigefrustum in eine Cuboidform. Da das nahe Ende des Frustums kleiner als das ferne Ende ist, hat dies den Effekt, objekte zu erweitern, die sich in der Nähe der Kamera befinden. auf diese Weise wird die Perspektive auf die Szene angewendet.
 
-Beim [Anzeigen von "Frustum](viewports-and-clipping.md)" wird der Abstand zwischen der Kamera und dem Ursprung des Anzeige Transformations Bereichs willkürlich als D definiert, sodass die Projektions Matrix wie in der folgenden Abbildung aussieht.
+Im Frustum wird der Abstand zwischen der Kamera und dem Ursprung des [Ansichtstransformationsraums](viewports-and-clipping.md)willkürlich als D definiert, sodass die Projektionsmatrix wie in der folgenden Abbildung aussieht.
 
-![Abbildung der Projektions Matrix](images/projmat1.png)
+![Abbildung der Projektionsmatrix](images/projmat1.png)
 
-Die Anzeige Matrix übersetzt die Kamera in den Ursprung, indem Sie in die z-Richtung nach-D übersetzt. Die Übersetzungs Matrix ähnelt der folgenden Abbildung.
+Die Anzeigematrix übersetzt die Kamera in den Ursprung, indem sie in z-Richtung um – D übersetzt wird. Die Übersetzungsmatrix ist wie in der folgenden Abbildung dargestellt.
 
-![Darstellung der Übersetzungs Matrix](images/projmat2.png)
+![Abbildung der Übersetzungsmatrix](images/projmat2.png)
 
-Das Multiplizieren der Übersetzungs Matrix durch die Projektions Matrix (T \* P) liefert die zusammengesetzte Projektions Matrix, wie in der folgenden Abbildung dargestellt.
+Das Multiplizieren der Übersetzungsmatrix mit der Projektionsmatrix (T P) ergibt die zusammengesetzte Projektionsmatrix, wie \* in der folgenden Abbildung dargestellt.
 
-![Abbildung der zusammengesetzten Projektions Matrix](images/projmat3.png)
+![Abbildung der zusammengesetzten Projektionsmatrix](images/projmat3.png)
 
-Die Transformation für Perspektiven konvertiert ein Anzeige-Frustum in einen neuen Koordinaten Bereich. Beachten Sie, dass die Frustration zu Cuboid wird und dass der Ursprung von der oberen rechten Ecke der Szene in den Mittelpunkt wechselt, wie im folgenden Diagramm dargestellt.
+Die Perspektivtransformation konvertiert ein Frustum für die Anzeige in einen neuen Koordinatenraum. Beachten Sie, dass das Frustum zu einem Cuboid wird und dass der Ursprung von der oberen rechten Ecke der Szene in die Mitte wechselt, wie im folgenden Diagramm dargestellt.
 
-![Diagramm der Art und Weise, in der die perspektivische Transformation die Anzeige Frustration in einen neuen Koordinaten Bereich ändert](images/cuboid.png)
+![Diagramm, das zeigt, wie die Perspektivtransformation das Frustum der Anzeige in einen neuen Koordinatenraum ändert](images/cuboid.png)
 
-In der Transformation für Perspektiven sind die Begrenzungen der x-und y-Richtungen-1 und 1. Die Grenzwerte für die z-Richtung sind 0 für die Vorderseite und 1 für die Backplane.
+In der Perspektiventransformation sind die Grenzwerte der x- und y-Richtungen -1 und 1. Die Grenzwerte der Z-Richtung sind 0 für die front-Ebene und 1 für die Rückebene.
 
-Diese Matrix übersetzt und skaliert Objekte auf der Grundlage einer angegebenen Entfernung von der Kamera auf die Near Clipping-Ebene, berücksichtigt jedoch nicht das Sichtfeld (Field of View, FOV), und die z-Werte, die für Objekte in der Entfernung erzeugt werden, können nahezu identisch sein, sodass Tiefe Vergleiche schwierig werden. Die folgende Matrix behandelt diese Probleme und passt die Scheitel Punkte an, um das Seitenverhältnis des Viewports zu berücksichtigen, sodass es eine gute Wahl für die perspektivische Projektion ist.
+Diese Matrix übersetzt und skaliert Objekte basierend auf einem angegebenen Abstand von der Kamera zur nahe Clippingebene, aber sie betrachtet das Sichtfeld (fov) nicht, und die Z-Werte, die sie für Objekte in der Entfernung erzeugt, können nahezu identisch sein, was Tiefenvergleiche erschwert. Die folgende Matrix behandelt diese Probleme und passt Scheitelpunkte an das Seitenverhältnis des Viewports an und ist damit eine gute Wahl für die Perspektivprojektion.
 
-![Abbildung einer Matrix für die perspektivische Projektion](images/prjmatx1.png)
+![Abbildung einer Matrix für die Perspektivprojektion](images/prjmatx1.png)
 
-In dieser Matrix ist "Zn" der z-Wert der Near Clipping-Ebene. Die Variablen "w", "h" und "Q" haben folgende Bedeutungen. Beachten Sie, dass FOV<sub>w</sub> und fovk die horizontalen und vertikalen Ansichts Felder des Viewports im Bogenmaße darstellen.
+In dieser Matrix ist Zn der Z-Wert der nah beschneidenden Ebene. Die Variablen w, h und Q haben die folgenden Bedeutungen. Beachten Sie, dass fov<sub>w</sub> und fovk die horizontalen und vertikalen Sichtfelder des Viewports im Bogenmaß darstellen.
 
-![Gleichungen der Variablen Bedeutungen](images/prjmatx2.png)
+![Gleichungen der variablen Bedeutungen](images/prjmatx2.png)
 
-Für Ihre Anwendung ist die Verwendung von Feld-of-View-Winkeln zum Definieren der Koeffizienten für die x-und y-Skalierung möglicherweise nicht so praktisch wie die horizontale und vertikale Abmessungen des Viewports (im Kamerabereich). Wenn die mathematische Funktion funktioniert, verwenden die beiden folgenden Gleichungen für w und h die Abmessungen des Viewports und entsprechen den vorangehenden Gleichungen.
+Für Ihre Anwendung ist die Verwendung von Sichtfeldwinkeln zum Definieren der X- und y-Skalierungskoeffizienten möglicherweise nicht so praktisch wie die Verwendung der horizontalen und vertikalen Abmessungen des Viewports (im Kameraraum). Während die Mathematik funktioniert, verwenden die folgenden beiden Gleichungen für w und h die Dimensionen des Viewports und entsprechen den vorherigen Gleichungen.
 
-![Gleichungen der w-und h-Variablen Bedeutungen](images/prjmatx3.png)
+![Gleichungen der Bedeutungen der Variablen "w" und "h"](images/prjmatx3.png)
 
-In diesen Formeln stellt "Zn" die Position der Near Clipping-Ebene dar, und die V<sub>w</sub> -und die VH-Variablen stellen die Breite und Höhe des Viewports im Kamerabereich dar.
+In diesen Formeln stellt Zn die Position der nah beschneidenden Ebene dar, und die Variablen V<sub>w</sub> und Vh stellen die Breite und Höhe des Viewports im Kameraraum dar.
 
-Bei einer C++-Anwendung entsprechen diese beiden Dimensionen direkt den Elementen Width und Height der [**D3DVIEWPORT9**](d3dviewport9.md) -Struktur.
+Bei einer C++-Anwendung entsprechen diese beiden Dimensionen direkt den Width- und Height-Membern der [**D3DVIEWPORT9-Struktur.**](d3dviewport9.md)
 
-Egal, welche Formel Sie verwenden möchten, achten Sie darauf, dass Sie den Wert für "Zn" so groß wie möglich festlegen, da z-Werte, die sich extrem nahe an der Kamera befinden, nicht um viel variieren. Dies macht Tiefe Vergleiche mit 16-Bit-z-Puffern etwas kompliziert.
+Unabhängig davon, welche Formel Sie verwenden möchten, stellen Sie sicher, dass Zn so groß wie möglich ist, da Z-Werte, die sich extrem nah an der Kamera liegen, nicht stark variieren. Dadurch werden Tiefenvergleiche mit 16-Bit-Z-Puffern etwas kompliziert.
 
-Wie bei den Transformationen der Welt und Sicht wird die [**IDirect3DDevice9:: setTransform**](/windows/win32/api/d3d9helper/nf-d3d9helper-idirect3ddevice9-settransform) -Methode aufgerufen, um die Projektions Transformation festzulegen.
+Wie bei den Welt- und Ansichtstransformationen rufen Sie die [**IDirect3DDevice9::SetTransform-Methode**](/windows/win32/api/d3d9helper/nf-d3d9helper-idirect3ddevice9-settransform) auf, um die Projektionstransformation festlegen.
 
-## <a name="setting-up-a-projection-matrix"></a>Einrichten einer Projektions Matrix
+## <a name="setting-up-a-projection-matrix"></a>Einrichten einer Projektionsmatrix
 
-Mit der folgenden ProjectionMatrix-Beispiel Funktion werden die Front-und Back-clippingflächen sowie das horizontale und vertikale Feld von Sicht Winkeln festgelegt. Die Felder der Ansicht sollten kleiner als PI-Bogenmaße sein.
+Die folgende ProjectionMatrix-Beispielfunktion legt die Vorder- und Rückschneideebenen sowie das horizontale und vertikale Feld der Ansichtswinkel fest. Die Sichtfelder sollten kleiner als pi radians sein.
 
 
 ```
@@ -91,9 +91,9 @@ ProjectionMatrix(const float near_plane, // Distance to near clipping
 
 
 
-Legen Sie nach dem Erstellen der Matrix mit [**IDirect3DDevice9:: setTransform**](/windows/win32/api/d3d9helper/nf-d3d9helper-idirect3ddevice9-settransform) eine D3DTS- \_ Projektion fest.
+Legen Sie die Matrix nach dem Erstellen mit [**IDirect3DDevice9::SetTransform fest,**](/windows/win32/api/d3d9helper/nf-d3d9helper-idirect3ddevice9-settransform) und geben Sie dabei D3DTS \_ PROJECTION an.
 
-Die D3DX Utility Library bietet die folgenden Funktionen, die Ihnen beim Einrichten der Projektions Matrix helfen.
+Die D3DX-Hilfsprogrammbibliothek bietet die folgenden Funktionen, die Sie beim Einrichten Ihrer Projektionsmatrix unterstützen.
 
 -   [**D3DXMatrixPerspectiveLH**](d3dxmatrixperspectivelh.md)
 -   [**D3DXMatrixPerspectiveRH**](d3dxmatrixperspectiverh.md)
@@ -102,17 +102,17 @@ Die D3DX Utility Library bietet die folgenden Funktionen, die Ihnen beim Einrich
 -   [**D3DXMatrixPerspectiveOffCenterLH**](d3dxmatrixperspectiveoffcenterlh.md)
 -   [**D3DXMatrixPerspectiveOffCenterRH**](d3dxmatrixperspectiveoffcenterrh.md)
 
-## <a name="a-w-friendly-projection-matrix"></a>Eine W-freundliche Projektions Matrix
+## <a name="a-w-friendly-projection-matrix"></a>Eine W-freundliche Projektionsmatrix
 
-Direct3D kann die w-Komponente eines Scheitel Punkts verwenden, der von der Welt-, Sicht-und Projektions Matrizen transformiert wurde, um Tiefe basierte Berechnungen in tiefen Puffern oder Nebeleffekten auszuführen. Für Berechnungen wie diese ist es erforderlich, dass die Projektions Matrix w normalisiert, damit Sie dem Raum z entspricht. Kurz gesagt, wenn die Projektions Matrix einen (3, 4) Koeffizienten enthält, der nicht 1 ist, müssen Sie alle Koeffizienten mit der Umkehrung des (3, 4) Koeffizienten skalieren, um eine korrekte Matrix zu erstellen. Wenn Sie keine konforme Matrix bereitstellen, werden die Nebeleffekte und die tiefen Pufferung nicht ordnungsgemäß angewendet.
+Direct3D kann die w-Komponente eines Scheitelpunkts verwenden, der von den Welt-, Ansichts- und Projektionsmatrizen transformiert wurde, um tiefenbasierte Berechnungen in Tiefenpuffer- oder Effekteffekten durchzuführen. Berechnungen wie diese erfordern, dass ihre Projektionsmatrix w normalisiert, damit sie mit world-space z äquivalent ist. Kurz gesagt: Wenn Ihre Projektionsmatrix einen (3,4) Koeffizienten enthält, der nicht 1 ist, müssen Sie alle Koeffizienten um die Umkehrung des (3,4)-Koeffizienten skalieren, um eine ordnungsgemäße Matrix zu erstellen. Wenn Sie keine konforme Matrix bereitstellen, werden Die Effekten und die Tiefenpufferung nicht ordnungsgemäß angewendet.
 
-In der folgenden Abbildung ist eine nicht kompatible Projektions Matrix dargestellt, und die gleiche Matrix wird so skaliert, dass der Augen relative Nebel aktiviert wird.
+Die folgende Abbildung zeigt eine nicht konforme Projektionsmatrix und die gleiche Matrix, die so skaliert wird, dass die augen relative Brille aktiviert wird.
 
-![Abbildungen einer nicht kompatiblen Projektions Matrix und einer Matrix mit augenblickativem Nebel](images/eyerlmx.png)
+![Abbildungen einer nicht konformen Projektionsmatrix und einer Matrix mit augen relativem Brillen](images/eyerlmx.png)
 
-In den vorangehenden Matrizen werden alle Variablen als ungleich Null angenommen. Weitere Informationen über Eye-relative Nebel finden Sie unter [Eye-relative im Vergleich zu Z-basierter Tiefe](pixel-fog.md). Weitere Informationen zur w-basierten tiefen Pufferung finden Sie unter [tiefen Puffer (Direct3D 9)](depth-buffers.md).
+In den obigen Matrizen wird davon ausgegangen, dass alle Variablen ungleich 0 (null) sind. Weitere Informationen zu augen relativen Brillen finden Sie unter [Eye-Relative vs. Z-Based Depth](pixel-fog.md). Informationen zur w-basierten Tiefenpufferung finden Sie unter [Tiefenpuffer (Direct3D 9).](depth-buffers.md)
 
-Direct3D verwendet die aktuell festgelegte Projektions Matrix in den w-basierten tiefen Berechnungen. Daher müssen Anwendungen eine konforme Projektions Matrix festlegen, um die gewünschten w-basierten Funktionen zu erhalten, auch wenn Sie keine Direct3D für Transformationen verwenden.
+Direct3D verwendet die derzeit festgelegte Projektionsmatrix in seinen w-basierten Tiefenberechnungen. Daher müssen Anwendungen eine konforme Projektionsmatrix festlegen, um die gewünschten w-basierten Features zu erhalten, auch wenn sie Direct3D nicht für Transformationen verwenden.
 
 ## <a name="related-topics"></a>Zugehörige Themen
 

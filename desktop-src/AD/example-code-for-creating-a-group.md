@@ -1,22 +1,22 @@
 ---
-title: Beispiel Code für das Erstellen einer Gruppe
-description: Dieses Thema enthält einen Codebeispiel Code, der eine Gruppe erstellt.
+title: Beispielcode zum Erstellen einer Gruppe
+description: Dieses Thema enthält einen Codebeispielcode, mit dem eine Gruppe erstellt wird.
 ms.assetid: f6bba6fc-fec2-4dd9-b7f2-da7782a6caa5
 ms.tgt_platform: multiple
 keywords:
-- Active Directory Beispiele Active Directory, Erstellen einer Gruppe
+- 'Active Directory-Beispiele: Active Directory, Erstellen einer Gruppe'
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 817ea5ddd9201addccd4df4ed7a1f268d7f5e2c4
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: 1d7f0740150990efdd333f25e69210a85452653ca99163f2793e2aca8495f4e7
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "104470893"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118190813"
 ---
-# <a name="example-code-for-creating-a-group"></a>Beispiel Code für das Erstellen einer Gruppe
+# <a name="example-code-for-creating-a-group"></a>Beispielcode zum Erstellen einer Gruppe
 
-Das folgende C++-Codebeispiel enthält eine Funktion, die eine Gruppe erstellt, die nur die wesentlichen Eigenschaften explizit festgelegt hat (**CN**, **samAccountType**, **GroupType**) und keine Member enthält.
+Das folgende C++-Codebeispiel enthält eine Funktion, die eine Gruppe mit nur den wesentlichen Eigenschaften erstellt, die explizit festgelegt sind (**cn**, **sAMAccountType**, **groupType**) und keine Member enthalten.
 
 
 ```C++
@@ -304,7 +304,7 @@ WCHAR * GetDirectoryObjectAttrib(IDirectoryObject *pDirObject,
 
 
 
-Im folgenden Visual Basic Codebeispiel wird eine Gruppe erstellt, die nur die wesentlichen Eigenschaften explizit festgelegt hat (**CN**, **samAccountType**, **GroupType**) und keine Member enthält.
+Im folgenden Visual Basic Codebeispiel wird eine Gruppe erstellt, für die nur die wesentlichen Eigenschaften explizit festgelegt sind (**cn**, **sAMAccountType**, **groupType**) und die keine Elemente enthalten.
 
 
 ```VB
@@ -379,9 +379,9 @@ End Sub
 
 
 
- 
+ 
 
- 
+ 
 
 
 

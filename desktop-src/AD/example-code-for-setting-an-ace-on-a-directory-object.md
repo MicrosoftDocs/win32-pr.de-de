@@ -1,32 +1,32 @@
 ---
-title: Beispiel Code für das Festlegen eines ACE für ein Verzeichnis Objekt
-description: Dieses Thema enthält mehrere Codebeispiele, in denen der DACL (diskreAccess Control List) der Sicherheits Beschreibung eines Verzeichnis Objekts ein Access Control Eintrag (ACE) hinzugefügt wird.
+title: Beispielcode zum Festlegen eines ACE für ein Verzeichnisobjekt
+description: Dieses Thema enthält mehrere Codebeispiele, die der DACL (Discretionary Access Control List) des Sicherheitsdeskriptors eines Verzeichnisobjekts einen ace (Access Control Entry) hinzufügen.
 ms.assetid: fb1ad9f5-af2f-4ad1-a58b-6439cca6fd23
 ms.tgt_platform: multiple
 keywords:
-- Active Directory Beispiele Active Directory, Festlegen eines ACE für ein Verzeichnis Objekt
+- 'Active Directory-Beispiele: Active Directory, Festlegen eines ACE für ein Verzeichnisobjekt'
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: e16180a2e1216c749c35d68ff607e81320a1482c
-ms.sourcegitcommit: 803f3ccd65bdefe36bd851b9c6e7280be9489016
+ms.openlocfilehash: 86bf938e113a9293bf13e2bbb5a910617e41cba0ee411a15598966ea7a54628a
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "106337837"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118190172"
 ---
-# <a name="example-code-for-setting-an-ace-on-a-directory-object"></a>Beispiel Code für das Festlegen eines ACE für ein Verzeichnis Objekt
+# <a name="example-code-for-setting-an-ace-on-a-directory-object"></a>Beispielcode zum Festlegen eines ACE für ein Verzeichnisobjekt
 
-## <a name="define-the-setright-function"></a>Definieren der Funktion "settright"
+## <a name="define-the-setright-function"></a>Definieren der SetRight-Funktion
 
-Im folgenden Codebeispiel wird eine Funktion definiert, die einen Access Control Eintrag (ACE) zur freigegebenen Access Control Liste (DACL) der Sicherheits Beschreibung eines angegebenen Objekts in Active Directory Domain Services hinzufügt. Die Unterroutine ermöglicht Ihnen Folgendes:
+Im folgenden Codebeispiel wird eine Funktion definiert, die der DACL (Discretionary Access Control List) des Sicherheitsdeskriptors eines angegebenen Objekts in Active Directory Domain Services einen ace (Access Control Entry) hinzufügt. Die Unterroutine ermöglicht Folgendes:
 
--   Gewähren oder Verweigern des Zugriffs auf das gesamte Objekt.
--   Gewähren oder verweigern Sie den Zugriff auf eine bestimmte Eigenschaft für das Objekt.
--   Gewähren oder Verweigern des Zugriffs auf einen Satz von Eigenschaften für das Objekt.
--   Erteilen oder verweigern Sie das Recht, einen bestimmten Typ eines untergeordneten Objekts zu erstellen.
+-   Gewähren oder verweigern Sie den Zugriff auf das gesamte Objekt.
+-   Gewähren oder verweigern Sie den Zugriff auf eine bestimmte Eigenschaft für das -Objekt.
+-   Gewähren oder verweigern Sie den Zugriff auf einen Satz von Eigenschaften für das -Objekt.
+-   Erteilen oder verweigern Sie das Recht, einen bestimmten Typ von untergeordnetem Objekt zu erstellen.
 -   Legen Sie einen ACE fest, der von allen untergeordneten Objekten oder von untergeordneten Objekten einer angegebenen Objektklasse geerbt werden kann.
 
-Im Anschluss an dieses Visual Basic Codebeispiel handelt es sich um mehrere Codebeispiele, die zeigen, wie die **SetRight** -Funktion verwendet wird, um verschiedene Arten von ACEs festzulegen
+Im Anschluss an dieses Visual Basic Codebeispiel sind mehrere Codebeispiele aufgeführt, die zeigen, wie die **SetRight-Funktion** verwendet wird, um verschiedene Typen von ACEs festzulegen.
 
 
 ```VB
@@ -249,7 +249,7 @@ return hr;
 
 ## <a name="grant-or-deny-access-to-the-entire-object"></a>Gewähren oder Verweigern des Zugriffs auf das gesamte Objekt
 
-Im folgenden Visual Basic Codebeispiel wird eine Bindungs Zeichenfolge für den Benutzer Container erstellt und dann die **SetRight** -Funktion aufgerufen, um einen ACE für den Benutzer Container festzulegen. In diesem Beispiel wird ein ACE festgelegt, der dem Vertrauens nehmer das Recht gewährt, eine beliebige Eigenschaft für das Objekt zu lesen oder zu schreiben.
+Das folgende Visual Basic Codebeispiel erstellt eine Bindungszeichenfolge für den Container Users und ruft dann die **SetRight-Funktion** auf, um einen ACE für den Container Users festzulegen. In diesem Beispiel wird ein ACE festgelegt, der dem Vertrauensnehmer das Recht erteilt, eine beliebige Eigenschaft für das Objekt zu lesen oder zu schreiben.
 
 
 ```VB
@@ -281,7 +281,7 @@ End If
 
 
 
-Im folgenden C++-Codebeispiel wird ein ACE festgelegt, der dem Treuhänder die Berechtigung erteilt, eine beliebige Eigenschaft für das Objekt zu lesen oder zu schreiben. Im Codebeispiel wird davon ausgegangen, dass *pObject* und *sztreuhänder* auf gültige Werte festgelegt sind. Weitere Informationen finden Sie unter [Festlegen von Zugriffsrechten für ein Objekt](setting-access-rights-on-an-object.md).
+Im folgenden C++-Codebeispiel wird ein ACE festgelegt, der dem Vertrauensnehmer die Berechtigung zum Lesen oder Schreiben von Eigenschaften für das Objekt erteilt. Im Codebeispiel wird davon ausgegangen, dass *pObject* und *szTrustee* auf gültige Werte festgelegt sind. Weitere Informationen finden Sie unter [Festlegen von Zugriffsrechten für ein Objekt.](setting-access-rights-on-an-object.md)
 
 
 ```C++
@@ -304,7 +304,7 @@ hr = SetRight(
 
 ## <a name="grant-or-deny-access-to-a-specific-property-on-the-object"></a>Gewähren oder Verweigern des Zugriffs auf eine bestimmte Eigenschaft für das Objekt
 
-In diesem Codebeispiel wird die **SetRight** -Funktion aufgerufen, um dem Vertrauens nehmer das Recht zu erteilen, eine bestimmte Eigenschaft für das Objekt zu lesen oder zu schreiben. Beachten Sie, dass Sie die " **schemaIdGUID** " der Eigenschaft angeben müssen, und Sie müssen das **Objekt "ADS \_ AceType \_ Access \_ Allowed \_** " angeben, um anzugeben, dass es sich hierbei um einen Objekt spezifischen ACE handelt. In diesem Codebeispiel wird auch das Flag " **\_ aceflag \_ erben- \_ ACE** " angegeben, das angibt, dass der ACE von untergeordneten Objekten geerbt werden kann.
+Dieses Codebeispiel ruft die **SetRight-Funktion** auf, um dem Vertrauensnehmer das Recht zu gewähren, eine bestimmte Eigenschaft für das Objekt zu lesen oder zu schreiben. Beachten Sie, dass Sie die **schemaIDGUID** der Eigenschaft und **ADS \_ ACETYPE \_ ACCESS ALLOWED \_ \_ OBJECT** angeben müssen, um anzugeben, dass es sich um einen objektspezifischen ACE handelt. Dieses Codebeispiel gibt auch das **ADS \_ ACEFLAG \_ INHERIT \_ ACE-Flag** an, das angibt, dass der ACE von untergeordneten Objekten geerbt werden kann.
 
 
 ```VB
@@ -351,11 +351,11 @@ hr = SetRight(
 
 ## <a name="grant-or-deny-access-to-a-set-of-properties-on-the-object"></a>Gewähren oder Verweigern des Zugriffs auf einen Satz von Eigenschaften für das Objekt
 
-In diesem Codebeispiel wird die **SetRight** -Funktion aufgerufen, um dem Vertrauens nehmer das Recht zu erteilen, einen bestimmten Satz von Eigenschaften für das Objekt zu lesen oder zu schreiben. Legen Sie den Zugriff auf das **Objekt "AD \_ AceType \_ Access \_ Allowed \_** " fest, um anzugeben, dass dies ein Objekt spezifischer ACE
+Dieses Codebeispiel ruft die **SetRight-Funktion** auf, um dem Vertrauensnehmer das Recht zu gewähren, einen bestimmten Satz von Eigenschaften für das Objekt zu lesen oder zu schreiben. Geben Sie **ADS \_ ACETYPE \_ ACCESS ALLOWED \_ \_ OBJECT** an, um anzugeben, dass es sich um einen objektspezifischen ACE handelt.
 
-Ein Eigenschaften Satz wird von einem **controlAccessRight** -Objekt im Container für erweiterte Rechte der Konfigurations Partition definiert. Um die im ACE festgelegte Eigenschaft zu identifizieren, geben Sie die **rightguid** -Eigenschaft eines **controlAccessRight** -Objekts an. Beachten Sie, dass diese Eigenschaften Satz-GUID auch in der **attributeSecurityGuid** -Eigenschaft jedes **attributeSchema** -Objekts festgelegt wird, das im Eigenschaften Satz enthalten ist. Weitere Informationen finden Sie unter [Steuern von Zugriffsrechten](control-access-rights.md).
+Ein Eigenschaftensatz wird von einem **controlAccessRight-Objekt** im Container Erweiterte Rechte der Konfigurationspartition definiert. Um die im ACE festgelegte Eigenschaft zu identifizieren, geben Sie die **rightsGUID-Eigenschaft** eines **controlAccessRight-Objekts** an. Beachten Sie, dass diese Eigenschaftensatz-GUID auch in der **attributeSecurityGUID-Eigenschaft** jedes **attributeSchema-Objekts** festgelegt ist, das im Eigenschaftensatz enthalten ist. Weitere Informationen finden Sie unter [Steuern von Zugriffsrechten.](control-access-rights.md)
 
-Dieses Codebeispiel gibt auch Vererbungsflags an, die den ACE von untergeordneten Objekten als vererbbar festlegen, aber nicht für das unmittelbare Objekt. Außerdem gibt das Beispiel die GUID der User-Klasse an, die angibt, dass der ACE nur von Objekten dieser Klasse geerbt werden kann.
+Dieses Codebeispiel gibt auch Vererbungsflags an, die den ACE als vererbbar von untergeordneten Objekten festlegen, jedoch ineffektiv für das direkte Objekt. Darüber hinaus gibt das Beispiel die GUID der User-Klasse an, die angibt, dass der ACE nur von Objekten dieser Klasse geerbt werden kann.
 
 
 ```VB
@@ -402,9 +402,9 @@ hr = SetRight(
 
 
 
-## <a name="grant-or-deny-permission-to-create-a-specific-type-of-child-object"></a>Erteilen oder Verweigern der Berechtigung zum Erstellen eines bestimmten Typs von untergeordneten Objekten
+## <a name="grant-or-deny-permission-to-create-a-specific-type-of-child-object"></a>Erteilen oder Verweigern der Berechtigung zum Erstellen eines bestimmten Untergeordneten Objekttyps
 
-Im folgenden Codebeispiel wird die **SetRight** -Funktion aufgerufen, um einem angegebenen Vertrauens nehmer das Recht zum Erstellen und Löschen von Benutzer Objekten in der Teilstruktur unter dem angegebenen-Objekt zu gewähren. Beachten Sie, dass im Beispiel die GUID der User-Klasse angegeben wird, was bedeutet, dass der ACE nur dem Vertrauens nehmer ermöglicht, Benutzer Objekte zu erstellen, und keine Objekte anderer Klassen. Legen Sie den Zugriff auf das **Objekt "AD \_ AceType \_ Access \_ Allowed \_** " fest, um anzugeben, dass dies ein Objekt spezifischer ACE
+Das folgende Codebeispiel ruft die **SetRight-Funktion** auf, um einem angegebenen Vertrauensnehmer das Recht zum Erstellen und Löschen von User-Objekten in der Unterstruktur unter dem angegebenen Objekt zu gewähren. Beachten Sie, dass das Beispiel die GUID der User-Klasse angibt. Das bedeutet, dass der ACE nur dem Vertrauensnehmer erlaubt, Benutzerobjekte zu erstellen, nicht Objekte anderer Klassen. Geben Sie **ADS \_ ACETYPE \_ ACCESS ALLOWED \_ \_ OBJECT** an, um anzugeben, dass es sich um einen objektspezifischen ACE handelt.
 
 
 ```VB
@@ -449,8 +449,8 @@ hr = SetRight(
 
 
 
-Weitere Informationen und die Schema- **GUID** eines vordefinierten Attributs oder einer vordefinierten Klasse finden Sie auf der Referenzseite des-Attributs oder der-Klasse in der [Active Directory-Schema](/windows/desktop/ADSchema/active-directory-schema) Referenz. Weitere Informationen und ein Codebeispiel, das zum programmgesteuerten Abrufen einer **schemaIdGUID** verwendet werden kann, finden Sie unter [Lesen von attributeSchema-und classSchema-Objekten](reading-attributeschema-and-classschema-objects.md).
+Weitere Informationen und die **schemaIDGUID** eines vordefinierten Attributs oder einer vordefinierten Klasse finden Sie auf der Attribut- oder Klassenverweisseite in der [Active Directory-Schemareferenz.](/windows/desktop/ADSchema/active-directory-schema) Weitere Informationen und ein Codebeispiel, das verwendet werden kann, um **schemaIDGUID** programmgesteuert abzurufen, finden Sie unter [Lesen von attributeSchema und classSchema Objects.](reading-attributeschema-and-classschema-objects.md)
 
- 
+ 
 
- 
+ 

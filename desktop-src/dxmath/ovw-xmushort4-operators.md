@@ -4,16 +4,16 @@ ms.assetid: 428448bc-4bbf-420d-a41c-c38112bd26cc
 title: XMUSHORT4-Operatoren
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: e55dfee6b926b67a097145e992ae255b2aef2ad2
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 7bcd580c2e01c369d6351f5dd493d10b3d271adc8eea259dd9f2403f49ed8d1c
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104215080"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118500704"
 ---
 # <a name="xmushort4-operators"></a>XMUSHORT4-Operatoren
 
-Die [**XMUSHORT4**](/windows/desktop/api/DirectXPackedVector/ns-directxpackedvector-xmushort4) -Struktur macht die folgenden Operatoren verfügbar.
+Die [**XMUSHORT4-Struktur**](/windows/desktop/api/DirectXPackedVector/ns-directxpackedvector-xmushort4) macht die folgenden Operatoren verfügbar.
 
 > [!Note]  
 > Die hier aufgeführten Operatoren sind nur unter C++ verfügbar.
@@ -26,7 +26,7 @@ Die [**XMUSHORT4**](/windows/desktop/api/DirectXPackedVector/ns-directxpackedvec
 
 | Methoden                                                | BESCHREIBUNG                                                                                                            |
 |--------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------|
-| [**Operator =**](/previous-versions/windows/desktop/legacy/ee420711(v=vs.85))<br/> | Weist die Vektor Komponenten Daten einer Instanz von `XMUSHORT4` der aktuellen Instanz von zu `XMUSHORT4` . <br/> |
+| [**operator =**](/previous-versions/windows/desktop/legacy/ee420711(v=vs.85))<br/> | Weist die Vektorkomponentendaten aus einer Instanz von `XMUSHORT4` der aktuellen Instanz von `XMUSHORT4` zu. <br/> |
 
 
 
@@ -39,7 +39,7 @@ Die [**XMUSHORT4**](/windows/desktop/api/DirectXPackedVector/ns-directxpackedvec
 [XMUSHORT4-Erweiterungen](ovw-xmushort4-extensions.md)
 </dt> <dt>
 
-**Verweis**
+**Referenz**
 </dt> <dt>
 
 [**XMUSHORT4**](/windows/desktop/api/DirectXPackedVector/ns-directxpackedvector-xmushort4)

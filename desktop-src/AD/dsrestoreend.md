@@ -1,10 +1,10 @@
 ---
-title: Dsrestoreend-Funktion (ntdsbcli. h)
-description: Wird aufgerufen, um einen Wiederherstellungs Vorgang zu beenden.
+title: DsRestoreEnd-Funktion (Ntdsbcli.h)
+description: Wird aufgerufen, um einen Wiederherstellungsvorgang zu beenden.
 ms.assetid: 2c3b9aba-3e92-4e5b-afff-3ed9bf64832b
 ms.tgt_platform: multiple
 keywords:
-- Dsrestoreend-Funktions Active Directory
+- DsRestoreEnd-Funktion Active Directory
 topic_type:
 - apiref
 api_name:
@@ -15,18 +15,18 @@ api_type:
 - DllExport
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: caabbe216875c2fe934f3c87e32688cd17bc8992
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 06fbea2559517f6cc541d89817ab32c9d1992da4907f399b94830b41b1b0c1c1
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104040515"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118191816"
 ---
-# <a name="dsrestoreend-function"></a>Dsrestoreend-Funktion
+# <a name="dsrestoreend-function"></a>DsRestoreEnd-Funktion
 
-\[Diese Funktion ist für die Verwendung in den Betriebssystemen verfügbar, die im Abschnitt "Anforderungen" angegeben sind. Es kann in nachfolgenden Versionen geändert oder entfernt werden. Verwenden Sie stattdessen [Volumeschattenkopie-Dienst (VSS)](../vss/volume-shadow-copy-service-overview.md) .\]
+\[Diese Funktion ist für die Verwendung in den Im Abschnitt Anforderungen angegebenen Betriebssystemen verfügbar. Es kann in nachfolgenden Versionen geändert oder entfernt werden. Verwenden [Volumeschattenkopie-Dienst (VSS).](../vss/volume-shadow-copy-service-overview.md)\]
 
-Die **dsrestoreend** -Funktion wird aufgerufen, um einen Wiederherstellungs Vorgang zu beenden.
+Die **DsRestoreEnd-Funktion** wird aufgerufen, um einen Wiederherstellungsvorgang zu beenden.
 
 ## <a name="syntax"></a>Syntax
 
@@ -43,29 +43,29 @@ HRESULT DsRestoreEnd(
 
 <dl> <dt>
 
-*HBC* \[ in\]
+*hbc* \[ In\]
 </dt> <dd>
 
-Enthält das Wiederherstellungs Kontext Handle, das mit der [**dsrestoreprepare**](dsrestoreprepare.md) -Funktion abgerufen wurde.
+Enthält das Mit der [**DsRestorePrepare-Funktion erhaltene Wiederherstellungskontexthand**](dsrestoreprepare.md) handle.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt **S \_ OK** zurück, wenn die Funktion erfolgreich ist, andernfalls ein Win32-oder RPC-Fehlercode. In der folgenden Liste sind die möglichen Fehlercodes aufgeführt.
+Gibt **S \_ OK zurück,** wenn die Funktion erfolgreich ist, andernfalls ein Win32- oder RPC-Fehlercode. In der folgenden Liste sind mögliche Fehlercodes aufgeführt.
 
 <dl> <dt>
 
-**Fehler bei \_ ungültigem \_ Parameter**
+**FEHLER \_ UNGÜLTIGER \_ PARAMETER**
 </dt> <dd>
 
-*HBC* ist ungültig.
+*hbc* ist ungültig.
 
 </dd> </dl>
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Die **dsrestoreend** -Funktion schließt ausstehende Bindungs Handles und führt einen Bereinigungs Vorgang nach einem Wiederherstellungs Versuch aus.
+Die **DsRestoreEnd-Funktion** schließt ausstehende Bindungshandles und führt nach einem Wiederherstellungsversuch einen Bereinigungsvorgang aus.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -77,23 +77,23 @@ Die **dsrestoreend** -Funktion schließt ausstehende Bindungs Handles und führt
 | Unterstützte Mindestversion (Server)<br/> | Nicht unterstützt<br/>                                                               |
 | Ende des Supports (Client)<br/>    | Nicht unterstützt<br/>                                                               |
 | Ende des Supports (Server)<br/>    | Nicht unterstützt<br/>                                                               |
-| Header<br/>                   | <dl> <dt>Ntdsbcli. h</dt> </dl>   |
-| Bibliothek<br/>                  | <dl> <dt>Ntdsbcli. lib</dt> </dl> |
+| Header<br/>                   | <dl> <dt>Ntdsbcli.h</dt> </dl>   |
+| Bibliothek<br/>                  | <dl> <dt>Ntdsbcli.lib</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>Ntdsbcli.dll</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Dsrestoreprepare**](dsrestoreprepare.md)
+[**DsRestorePrepare**](dsrestoreprepare.md)
 </dt> <dt>
 
-[Wiederherstellen eines Active Directory Servers](restoring-an-active-directory-server.md)
+[Wiederherstellen eines Active Directory-Servers](restoring-an-active-directory-server.md)
 </dt> <dt>
 
-[Verzeichnis Sicherungsfunktionen](directory-backup-functions.md)
+[Verzeichnissicherungsfunktionen](directory-backup-functions.md)
 </dt> </dl>
 
  

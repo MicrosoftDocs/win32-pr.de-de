@@ -1,5 +1,5 @@
 ---
-description: Die \_ WMI-Klasse "Win32 systembootconfiguration Association" bezieht sich auf ein Computersystem und dessen Startkonfiguration.
+description: Die \_ WMI-Klasse der Win32-SystemBootConfiguration-Zuordnung bezieht sich auf ein Computersystem und dessen Startkonfiguration.
 ms.assetid: 1c6bce81-84d9-4949-92da-6111b4ecc939
 ms.tgt_platform: multiple
 title: Win32_SystemBootConfiguration-Klasse
@@ -16,18 +16,18 @@ api_type:
 - DllExport
 api_location:
 - CIMWin32.dll
-ms.openlocfilehash: 863e4103f7e87681e25ccf53679bfe006ed3ff75
-ms.sourcegitcommit: c7add10d695482e1ceb72d62b8a4ebd84ea050f7
+ms.openlocfilehash: ad5b30d42e94391163a4a54836877f90415225d0ae697e719e6c088f432430cc
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "103861167"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118416753"
 ---
-# <a name="win32_systembootconfiguration-class"></a>Win32 \_ systembootconfiguration-Klasse
+# <a name="win32_systembootconfiguration-class"></a>Win32 \_ SystemBootConfiguration-Klasse
 
-Die [WMI-Klasse](../wmisdk/retrieving-a-class.md) " **Win32 \_ systembootconfiguration** Association" bezieht sich auf ein Computersystem und dessen Startkonfiguration.
+Die [WMI-Klasse](../wmisdk/retrieving-a-class.md) der **Win32-SystemBootConfiguration-Zuordnung \_** bezieht sich auf ein Computersystem und dessen Startkonfiguration.
 
-Die folgende Syntax wurde aus MOF-Code (Managed Object Format, verwaltetes Objektformat) vereinfacht und enthält alle geerbten Eigenschaften. Eigenschaften und Methoden sind in alphabetischer Reihenfolge, nicht in der MOF-Reihenfolge.
+Die folgende Syntax wurde aus MOF-Code (Managed Object Format, verwaltetes Objektformat) vereinfacht und enthält alle geerbten Eigenschaften. Eigenschaften und Methoden werden in alphabetischer Reihenfolge und nicht in MOF-Reihenfolge sortiert.
 
 ## <a name="syntax"></a>Syntax
 
@@ -42,51 +42,51 @@ class Win32_SystemBootConfiguration : Win32_SystemSetting
 
 ## <a name="members"></a>Member
 
-Die **Win32 \_ systembootconfiguration** -Klasse verfügt über diese Typen von Membern:
+Die **Win32 \_ SystemBootConfiguration-Klasse** verfügt über folgende Typen von Membern:
 
 -   [Eigenschaften](#properties)
 
 ### <a name="properties"></a>Eigenschaften
 
-Die **Win32 \_ systembootconfiguration** -Klasse verfügt über diese Eigenschaften.
+Die **Win32 \_ SystemBootConfiguration-Klasse** verfügt über diese Eigenschaften.
 
 <dl> <dt>
 
 **Element**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Win32 \_ Computersystem**
+Datentyp: **Win32 \_ ComputerSystem**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**override**](../wmisdk/standard-qualifiers.md) ("Element"), [**mappingstrings**](../wmisdk/standard-qualifiers.md) ("WMI \| Win32 \_ Computersystem")
+Qualifizierer: [**Überschreiben**](../wmisdk/standard-qualifiers.md) ("Element"), [**MappingStrings**](../wmisdk/standard-qualifiers.md) ("WMI \| Win32 \_ ComputerSystem")
 </dt> </dl>
 
-Verweis auf die Instanz, die das Computersystem mithilfe der Startkonfiguration darstellt.
+Verweis auf die -Instanz, die das Computersystem mithilfe der Startkonfiguration darstellt.
 
 </dd> <dt>
 
 **Einstellung**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Win32- \_ bootconfiguration**
+Datentyp: **Win32 \_ BootConfiguration**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: über [**Schreiben**](../wmisdk/standard-qualifiers.md) ("Setting"), [**mappingstrings**](../wmisdk/standard-qualifiers.md) ("WMI \| Win32 \_ bootconfiguration")
+Qualifizierer: [**Außerkraftsetzung**](../wmisdk/standard-qualifiers.md) ("Einstellung"), [**MappingStrings**](../wmisdk/standard-qualifiers.md) ("WMI \| Win32 \_ BootConfiguration")
 </dt> </dl>
 
-Verweis auf die-Instanz, die die Startkonfiguration für das Computersystem darstellt.
+Verweis auf die -Instanz, die die Startkonfiguration für das Computersystem darstellt.
 
 </dd> </dl>
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Die **Win32 \_ systembootconfiguration** -Klasse wird von [**Win32 \_ systemsetting**](win32-systemsetting.md)abgeleitet.
+Die **Win32 \_ SystemBootConfiguration-Klasse** wird von [**Win32 \_ SystemSetting**](win32-systemsetting.md)abgeleitet.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -96,17 +96,17 @@ Die **Win32 \_ systembootconfiguration** -Klasse wird von [**Win32 \_ systemsett
 |-------------------------------------|-----------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows Vista<br/>                                                                |
 | Unterstützte Mindestversion (Server)<br/> | Windows Server 2008<br/>                                                          |
-| Namespace<br/>                | Root \\ CIMV2<br/>                                                                  |
-| MOF<br/>                      | <dl> <dt>Cimwin32. MOF</dt> </dl> |
+| Namespace<br/>                | \\Stamm-CIMV2<br/>                                                                  |
+| MOF<br/>                      | <dl> <dt>CIMWin32.mof</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>CIMWin32.dll</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Win32- \_ systemsetting**](win32-systemsetting.md)
+[**Win32 \_ SystemSetting**](win32-systemsetting.md)
 </dt> <dt>
 
 [Betriebssystemklassen](./operating-system-classes.md)

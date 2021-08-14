@@ -1,92 +1,92 @@
 ---
-description: In diesem Thema wird beschrieben, was Bibliotheken sind und wie Sie von Benutzern und Entwicklern profitieren können.
+description: In diesem Thema wird beschrieben, was Bibliotheken sind und wie sie Benutzern und Entwicklern von Vorteil sein können.
 ms.assetid: D5F5FE96-11D2-4fc5-A68B-6E594C09BE20
 title: Informationen zu Bibliotheken
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 5e577e7b5df0a1e072a07a096434af84ff8e2c26
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 14e63aef55513fb36f9a3cbfa71c1b7a79040fd7848468bd1216779cd034132d
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "104557755"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118049323"
 ---
 # <a name="about-libraries"></a>Informationen zu Bibliotheken
 
-In diesem Thema wird beschrieben, was Bibliotheken sind und wie Sie von Benutzern und Entwicklern profitieren können.
+In diesem Thema wird beschrieben, was Bibliotheken sind und wie sie Benutzern und Entwicklern von Vorteil sein können.
 
-Bibliotheken sind benutzerdefinierte Auflistungen von Ordnern. In einer Bibliothek wird der physische Speicherort jedes Ordners nachverfolgt, wodurch der Benutzer und die Software dieser Aufgabe entlastet werden. Benutzer können verwandte Ordner in einer Bibliothek gruppieren, auch wenn diese Ordner auf unterschiedlichen Festplatten oder auf unterschiedlichen Computern gespeichert sind.
+Bibliotheken sind benutzerdefinierte Sammlungen von Ordnern. Eine Bibliothek verfolgt den physischen Speicherort jedes Ordners, wodurch der Benutzer und die Software dieser Aufgabe entlastet werden. Benutzer können verwandte Ordner in einer Bibliothek gruppieren, auch wenn diese Ordner auf verschiedenen Festplatten oder computern gespeichert sind.
 
-In einer Bibliothek werden die Ordner und Dateien für den Benutzer als einzelne Sammlung angezeigt. mithilfe der shellbibliotheks-API kann der Inhalt der Bibliothek auch an einem einzigen Speicherort zu einem Programm stehen.
+In einer Bibliothek werden die Ordner und Dateien dem Benutzer als einzelne Sammlung angezeigt, und mithilfe der Shellbibliotheks-API kann der Inhalt der Bibliothek auch an einem einzigen Speicherort eines Programms angezeigt werden.
 
-In einer Bibliothek können die Inhalte, wie z. b. Dokumente, Fotos, Videos oder Musik eines Benutzers, sortiert und angezeigt werden, wenn der Benutzer das gewünschte Dateisystem benötigt. Beispielsweise können Benutzer den Inhalt einer Bibliothek mithilfe der Eigenschaften der Elemente in der Bibliothek organisieren, sodass Verwandte Elemente auch dann zusammen sortiert werden, wenn Sie in unterschiedlichen Ordnern gespeichert sind.
+In einer Bibliothek können die Inhalte, z. B. Dokumente, Fotos, Videos oder Musik eines Benutzers, sortiert und angezeigt werden, wie es der Benutzer möchte, und nicht einfach so, wie es das Dateisystem erfordert. Beispielsweise können Benutzer den Inhalt einer Bibliothek mithilfe der Eigenschaften der Elemente in der Bibliothek organisieren, sodass verknüpfte Elemente auch dann zusammen sortiert werden, wenn sie in verschiedenen Ordnern gespeichert sind.
 
-![Screenshot der Benutzeroberfläche "Bibliotheken"](images/libraries-whatare.png)
+![Screenshot der Benutzeroberfläche der Bibliotheken](images/libraries-whatare.png)
 
 In diesem Thema:
 
--   [Bibliotheks Vorteile](#library-benefits)
-    -   [Benutzer Vorteile](#user-benefits)
+-   [Bibliotheksvorteile](#library-benefits)
+    -   [Vorteile für Benutzer](#user-benefits)
     -   [Vorteile für Entwickler](#developer-benefits)
 -   [Verwalten von Ordnern in Bibliotheken](#managing-folders-in-libraries)
 -   [Zugehörige Themen](#related-topics)
 
-## <a name="library-benefits"></a>Bibliotheks Vorteile
+## <a name="library-benefits"></a>Bibliotheksvorteile
 
-In diesem Abschnitt werden einige der Vorteile von Bibliotheken aus der Perspektive des Endbenutzers und der Perspektive des Programm Entwicklers beschrieben.
+In diesem Abschnitt werden einige der Vorteile von Bibliotheken aus Sicht des Endbenutzers und der Perspektive des Programmentwicklers beschrieben.
 
-### <a name="user-benefits"></a>Benutzer Vorteile
+### <a name="user-benefits"></a>Vorteile für Benutzer
 
-Das Hinzufügen von Bibliotheks Unterstützung zu Ihrem Programm bietet dem Benutzer die folgenden Vorteile:
+Das Hinzufügen von Bibliotheksunterstützung zu Ihrem Programm bietet dem Benutzer die folgenden Vorteile:
 
--   **Bibliotheken stellen eine konsistente Benutzeroberfläche in Windows 7 bereit.**
+-   **Bibliotheken bieten eine konsistente Benutzeroberfläche in Windows 7**
 
-    Die Dialogfelder allgemeine Dateien unterstützen Bibliotheken und bieten dieselbe Benutzer Darstellung wie Windows-Explorer in Windows 7. Unterstützende Bibliotheken in Ihrem Programm helfen bei der Verwendung des Programms in Windows 7 dabei, eine nahtlose Interaktion für den Benutzer bereitzustellen.
+    Die allgemeinen Dateidialogfelder unterstützen Bibliotheken und bieten die gleiche Benutzeroberfläche wie der Windows Explorer in Windows 7. Die Unterstützung von Bibliotheken in Ihrem Programm hilft, eine nahtlose Interaktion für den Benutzer zu ermöglichen, wenn Sie Ihr Programm in Windows 7 verwenden.
 
--   **Benutzer entscheiden, wo Inhalte gespeichert werden sollen.**
+-   **Benutzer entscheiden, wo Inhalte gespeichert werden**
 
-    Bibliotheken ermöglichen es Benutzern, den Speicherort Ihrer Inhalte zu steuern. Gleichzeitig bieten Bibliotheken angemessene Standardeinstellungen für Benutzer, die diese Detailebene nicht auf Ihrem Computer verwalten möchten. Benutzer entscheiden, wie viel oder wie wenig Sie steuern möchten, wo und wie Ihre Inhalte gespeichert werden und wie die Bibliothek in jedem Fall ordnungsgemäß funktioniert.
+    Bibliotheken ermöglichen es Benutzern, zu steuern, wo ihre Inhalte gespeichert werden. Gleichzeitig bieten Bibliotheken angemessene Standardwerte für Benutzer, die diese Detailebene auf ihrem Computer nicht verwalten möchten. Benutzer entscheiden, wie viel oder wie wenig sie steuern möchten, wo und wie ihre Inhalte gespeichert werden, und die Bibliothek funktioniert in beiden Richtungen einwandfrei.
 
 ### <a name="developer-benefits"></a>Vorteile für Entwickler
 
-Sie können Bibliotheken in Ihrem Programm verwenden, um eine flexiblere und bequeme Benutzeroberfläche bereitzustellen, ohne viel komplexen Programmcode hinzufügen zu müssen. Zu den Vorteilen beim Hinzufügen von Bibliotheks Unterstützung gehören:
+Sie können Bibliotheken in Ihrem Programm verwenden, um eine flexiblere und komfortablere Benutzeroberfläche zu bieten, ohne viel komplexen Programmcode hinzufügen zu müssen. Zu den Vorteilen des Hinzufügens von Bibliotheksunterstützung gehören:
 
--   **Bibliotheken unterstützen Bibliothek-und Dateisystem Zugriff**
+-   **Bibliotheken unterstützen Bibliotheks- und Dateisystemzugriff.**
 
-    Mithilfe der [**shellbibliotheks-API**](/windows/desktop/api/shobjidl_core/nn-shobjidl_core-ishelllibrary)können Programme für den Benutzer Bibliotheks Unterstützung bereitstellen und gleichzeitig die Komplexität des Datei-und Ordner Verwaltungs Codes verringern. Wenn das Programm die Dateisystem-API bereits verwendet, können Sie den vorhandenen Code beliebig beibehalten und dem Benutzer dennoch Bibliotheks Unterstützung bereitstellen, indem Sie die erforderlichen Dateisystem Informationen aus der **shellbibliotheks-API** erhalten.
+    Mithilfe [**der Shellbibliotheks-API**](/windows/desktop/api/shobjidl_core/nn-shobjidl_core-ishelllibrary)können Programme Bibliotheksunterstützung für den Benutzer bereitstellen und gleichzeitig die Komplexität des Datei- und Ordnerverwaltungscodes reduzieren. Wenn Ihr Programm bereits die Dateisystem-API verwendet, können Sie so viel von diesem vorhandenen Code beibehalten, wie Sie möchten, und dennoch Bibliotheksunterstützung für den Benutzer bereitstellen, indem Sie die erforderlichen Dateisysteminformationen von der **Shellbibliothek-API abrufen.**
 
--   **Einfachere Änderungs Benachrichtigung**
+-   **Einfachere Änderungsbenachrichtigung**
 
-    Sowohl das Dateisystem als auch die Shell-API können das Programm Benachrichtigen, wenn sich der Inhalt eines überwachten Ordners oder einer Bibliothek ändert. Mithilfe der Shell-API können Sie jedoch alle Ordner in der Bibliothek mit einer einzelnen Benachrichtigung überwachen, auch wenn der Ordner in der Bibliothek möglicherweise auf unterschiedlichen Laufwerken oder sogar auf unterschiedlichen Computern gespeichert ist.
+    Sowohl das Dateisystem als auch die Shell-API können Ihr Programm benachrichtigen, wenn sich der Inhalt eines überwachten Ordners oder einer Bibliothek ändert. Mithilfe der Shell-API können Sie jedoch alle Ordner in der Bibliothek mit einer einzigen Benachrichtigung überwachen, auch wenn der Ordner in der Bibliothek auf verschiedenen Laufwerken oder sogar auf unterschiedlichen Computern gespeichert werden kann.
 
--   **Bibliotheken verwenden von Dateieigenschaften**
+-   **Bibliotheken verwenden Dateieigenschaften.**
 
-    Programme können die Dateieigenschaften verwenden, um zu steuern, welche Dateien während der Öffnungs-und Speichervorgänge angezeigt werden, die die allgemeinen Datei Dialogfelder verwenden. Programme können auch über die [**IPropertyStore**](/windows/win32/api/propsys/nn-propsys-ipropertystore) -Schnittstellen auf Dateieigenschaften zugreifen. Die Dialogfelder für die gemeinsame Datei können auch so konfiguriert werden, dass Benutzer die dem Inhalt zugeordneten Eigenschaften aktualisieren können.
+    Programme können die Dateieigenschaften verwenden, um zu steuern, welche Dateien während des Öffnens angezeigt werden, und Vorgänge speichern, die die allgemeinen Dateidialogfelder verwenden. Programme können auch über die [**IPropertyStore-Schnittstellen**](/windows/win32/api/propsys/nn-propsys-ipropertystore) Zugriff auf Dateieigenschaften haben. Die allgemeinen Dateidialogfelder können auch konfiguriert werden, damit Benutzer die Eigenschaften aktualisieren können, die ihrem Inhalt zugeordnet sind.
 
--   **Programme können dedizierte Bibliotheken erstellen**
+-   **Programme können dedizierte Bibliotheken erstellen.**
 
-    Eine neue Bibliothek kann erstellt werden, wenn vorhandene Benutzer Bibliotheken die Programmanforderungen nicht erfüllen – beispielsweise, wenn ein Programm einen neuen Typ von Benutzer Inhalt erstellt. Die neue Bibliothek kann mit einem eindeutigen Symbol konfiguriert werden, das ihren Inhalt darstellt und die Identifizierung der Bibliothek im Windows-Explorer erleichtert.
+    Eine neue Bibliothek kann erstellt werden, wenn vorhandene Benutzerbibliotheken die Anforderungen des Programms nicht erfüllen, z. B. wenn ein Programm einen neuen Benutzerinhaltstyp erstellt. Die neue Bibliothek kann mit einem eindeutigen Symbol konfiguriert werden, das ihren Inhalt darstellt und die Identifizierung der Bibliothek im Windows erleichtert.
 
 ## <a name="managing-folders-in-libraries"></a>Verwalten von Ordnern in Bibliotheken
 
-Benutzer können Ihre Bibliotheken organisieren, indem Sie Ordner in der Bibliothek hinzufügen, verschieben oder entfernen. Nicht alle Ordner unterstützen jedoch die gesamte Funktionalität, die eine Bibliothek bereitstellen kann. Viele Bibliotheks Features erfordern einen schnellen Zugriff auf die verschiedenen Eigenschaften des Ordners und dessen Inhalte, die nur über Windows Search verfügbar sind. Um vollständige Bibliotheksfunktionen bereitzustellen, muss ein Ordner von Windows Search indiziert werden können.
+Benutzer können ihre Bibliotheken organisieren, indem sie Ordner in der Bibliothek hinzufügen, verschieben oder entfernen. Nicht alle Ordner unterstützen jedoch alle Funktionen, die eine Bibliothek bereitstellen kann. Viele Bibliotheksfeatures erfordern schnellen Zugriff auf die verschiedenen Eigenschaften des Ordners und dessen Inhalte, die nur über die Windows sind. Um vollständige Bibliotheksfunktionen bereitstellen zu können, muss ein Ordner durch die Suche Windows werden können.
 
-In einer Bibliothek kann ein Benutzer keine Ordner hinzufügen, die keine vollständige Bibliotheks Funktionalität bereitstellen. Die [**shellbibliotheks-API**](/windows/desktop/api/shobjidl_core/nn-shobjidl_core-ishelllibrary) kann jedoch solche Ordner hinzufügen. Wenn eine Bibliothek einen Ordner enthält, der die Funktionalität der vollständigen Bibliothek nicht unterstützt, wird die Bibliothek in einem abgesicherten Modus betrieben und bietet eine eingeschränkte Funktionalität. In der folgenden Tabelle werden die Ordner beschrieben, die vollständige Bibliotheksfunktionen unterstützen.
+Eine Bibliothek lässt nicht zu, dass ein Benutzer Ordner hinzufüge, die keine vollständige Bibliotheksfunktionalität bieten. Die [**Shellbibliotheks-API**](/windows/desktop/api/shobjidl_core/nn-shobjidl_core-ishelllibrary) kann jedoch solche Ordner hinzufügen. Wenn eine Bibliothek einen Ordner enthält, der keine vollständige Bibliotheksfunktionalität unterstützt, wird die Bibliothek in einem sicheren Modus ausgeführt und bietet eine eingeschränkte Funktionalität. In der folgenden Tabelle werden die Ordner beschrieben, die vollständige Bibliotheksfunktionen unterstützen, und ordner, die nicht unterstützt werden.
 
 
 
-| Ordner Typen, die vollständige Bibliotheksfunktionen unterstützen                                                               | Ordner Typen, die keine vollständige Bibliotheks Funktionalität unterstützen                                  |
+| Ordnertypen, die vollständige Bibliotheksfunktionen unterstützen                                                               | Ordnertypen, die keine vollständige Bibliotheksfunktionalität unterstützen                                  |
 |--------------------------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------|
-| Feste und externe NTFS-und FAT32-Festplatten.                                                                     | Wechsel Datenträger, z. b. USB-Flash Laufwerke oder sichere digitale (SD) Speicherkarten.               |
-| Dateifreigaben, die von Windows Search indiziert werden, z. b. Abteilungs Server, Windows 7 oder Windows Vista Home PCs. | Wechselmedien, z. b. CD-ROM oder DVD-Medien.                                                 |
-| Offline verfügbare Dateifreigaben, z. b. ein umgeleiteter Ordner " **Eigene Dokumente** " oder ein Client-Side Cache.        | Netzwerkfreigaben, die weder Offline noch Remote indiziert sind, z. b. NAS-Laufwerke.   |
-|                                                                                                                    | Andere Datenquellen, z. b. Microsoft SharePoint, Microsoft Exchange und Microsoft onedrive. |
+| Feste und externe NTFS- und FAT32-Festplatten.                                                                     | Wechseldatenträger, z. B. USB-Flashlaufwerke oder SD-Speicherkarten (Secure Digital).               |
+| Dateifreigaben, die von der Windows Search indiziert werden, z. B. Abteilungsserver, Windows 7 oder Windows Vista-Heim-PCs. | Wechselmedien wie CD-ROM oder DVD-Medien.                                                 |
+| Dateifreigaben, die offline verfügbar  sind, z. B. ein umgeleiteter Eigene Dokumente oder ein Client-Side Cache.        | Netzwerkfreigaben, die weder offline verfügbar noch remote indiziert sind, z. B. NAS-Laufwerke.   |
+|                                                                                                                    | Andere Datenquellen wie Microsoft SharePoint, Microsoft Exchange und Microsoft OneDrive. |
 
 
 
  
 
-In der folgenden Abbildung wird die eingeschränkte Anzeige der Bibliotheksinhalte im abgesicherten Modus gezeigt.
+Die folgende Abbildung zeigt die eingeschränkte Anzeige von Bibliotheksinhalten im abgesicherten Modus.
 
 ![Dialogfeld öffnen, wenn sich Bibliotheken im abgesicherten Modus befinden](images/libraries-supportedfolders.png)
 
@@ -97,7 +97,7 @@ In der folgenden Abbildung wird die eingeschränkte Anzeige der Bibliotheksinhal
 [Informationen zu Bibliotheken](library-leverage-to-manage-folders.md)
 </dt> <dt>
 
-[**Ishelllibrary**](/windows/desktop/api/shobjidl_core/nn-shobjidl_core-ishelllibrary)
+[**IShellLibrary**](/windows/desktop/api/shobjidl_core/nn-shobjidl_core-ishelllibrary)
 </dt> <dt>
 
 [Shelllinks](./links.md)
@@ -106,7 +106,7 @@ In der folgenden Abbildung wird die eingeschränkte Anzeige der Bibliotheksinhal
 [Bekannte Ordner](known-folders.md)
 </dt> <dt>
 
-[Bibliotheks Beschreibungs Schema](library-schema-entry.md)
+[Schema der Bibliotheksbeschreibung](library-schema-entry.md)
 </dt> </dl>
 
  

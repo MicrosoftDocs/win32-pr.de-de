@@ -1,12 +1,12 @@
 ---
-title: Executekcc-Methode der MSAD_DomainController-Klasse
-description: Ruft die DsReplicaConsistencyCheck-Funktion auf, die die Konsistenzprüfung (KCC) zum Überprüfen der Replikations Topologie aufruft.
+title: ExecuteKCC-Methode der MSAD_DomainController-Klasse
+description: Ruft die DsReplicaConsistencyCheck-Funktion auf, die die Wissenskonsistenzprüfung (Knowledge Consistency Checker, KCC) aufruft, um die Replikationstopologie zu überprüfen.
 ms.assetid: 958c9a15-cde2-4c74-bd4c-c2d53551cfb0
 ms.tgt_platform: multiple
 keywords:
-- Executekcc-Methode Active Directory
-- Executekcc-Methode Active Directory, MSAD_DomainController-Klasse
-- MSAD_DomainController-Klasse Active Directory, executekcc-Methode
+- ExecuteKCC-Methode Active Directory
+- ExecuteKCC-Methode Active Directory , MSAD_DomainController Klasse
+- MSAD_DomainController Active Directory- und ExecuteKCC-Methode
 topic_type:
 - apiref
 api_name:
@@ -17,16 +17,16 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: fcce017f86042181d2e80ae3614e3fc1cbccc676
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 48295638f105b79ea24a55965ca3ec75ee0ad6b9982c74664f8bfecdd0681cfe
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "106342841"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118189618"
 ---
-# <a name="executekcc-method-of-the-msad_domaincontroller-class"></a>Executekcc-Methode der MSAD \_ Domain Controller-Klasse
+# <a name="executekcc-method-of-the-msad_domaincontroller-class"></a>ExecuteKCC-Methode der MSAD \_ DomainController-Klasse
 
-Ruft die [**DsReplicaConsistencyCheck**](/windows/desktop/api/Ntdsapi/nf-ntdsapi-dsreplicaconsistencycheck) -Funktion auf, die die Konsistenzprüfung (KCC) zum Überprüfen der Replikations Topologie aufruft.
+Ruft die [**DsReplicaConsistencyCheck-Funktion**](/windows/desktop/api/Ntdsapi/nf-ntdsapi-dsreplicaconsistencycheck) auf, die die Wissenskonsistenzprüfung (Knowledge Consistency Checker, KCC) aufruft, um die Replikationstopologie zu überprüfen.
 
 ## <a name="syntax"></a>Syntax
 
@@ -44,39 +44,39 @@ void ExecuteKCC(
 
 <dl> <dt>
 
-*TaskID* \[ in\]
+*TaskID* \[ In\]
 </dt> <dd>
 
-Der Task, der von der KCC ausgeführt werden soll. **DS \_ Die KCC \_ TaskID- \_ Update \_ Topologie** ist der einzige Wert, der derzeit unterstützt wird.
+Die Aufgabe, die der KCC ausführen soll. **DS \_ KCC \_ TASKID \_ UPDATE \_ TOPOLOGY** ist der einzige Wert, der derzeit unterstützt wird.
 
 </dd> <dt>
 
-*dwFlags* \[ in\]
+*dwFlags* \[ In\]
 </dt> <dd>
 
-Ein Satz von Flags, die das Verhalten der **executekcc** -Methode ändern. Dieser Parameter kann NULL sein oder eine Kombination aus einem oder mehreren der folgenden Werte aufweisen.
+Ein Satz von Flags, die das Verhalten der **ExecuteKCC-Methode** ändern. Dieser Parameter kann 0 (null) oder eine Kombination aus mindestens einem der folgenden Werte sein.
 
 <dt>
 
 <span id="DS_KCC_FLAG_ASYNC_OP"></span><span id="ds_kcc_flag_async_op"></span>
 
-<span id="DS_KCC_FLAG_ASYNC_OP"></span><span id="ds_kcc_flag_async_op"></span>**DS- \_ KCC- \_ Flag \_ Async \_ op**
+<span id="DS_KCC_FLAG_ASYNC_OP"></span><span id="ds_kcc_flag_async_op"></span>**DS \_ KCC \_ FLAG \_ ASYNC \_ OP**
 
 
 </dt> <dd>
 
-Der Task wird in die Warteschlange eingereiht, und die Funktion wird zurückgegeben, ohne auf den Abschluss der Aufgabe zu warten
+Die Aufgabe wird in die Warteschlange gestellt, und die Funktion kehrt dann zurück, ohne auf den Abschluss der Aufgabe zu warten.
 
 </dd> <dt>
 
 <span id="DS_KCC_FLAG_DAMPED"></span><span id="ds_kcc_flag_damped"></span>
 
-<span id="DS_KCC_FLAG_DAMPED"></span><span id="ds_kcc_flag_damped"></span>**DS- \_ KCC- \_ Flag \_ gedämpft**
+<span id="DS_KCC_FLAG_DAMPED"></span><span id="ds_kcc_flag_damped"></span>**\_DS-KCC-FLAG \_ \_ GEERBT**
 
 
 </dt> <dd>
 
-Der Task wird der Warteschlange nicht hinzugefügt, wenn ein anderer Task in der Warteschlange bald ausgeführt wird.
+Die Aufgabe wird der Warteschlange nicht hinzugefügt, wenn bald eine andere Aufgabe in der Warteschlange ausgeführt wird.
 
 </dd> </dl> </dd> </dl>
 
@@ -92,17 +92,17 @@ Diese Methode gibt keinen Wert zurück.
 |-------------------------------------|-----------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Nicht unterstützt<br/>                                                               |
 | Unterstützte Mindestversion (Server)<br/> | Windows Server 2008<br/>                                                          |
-| Namespace<br/>                | \\Microsoftactivedirectory-Stammverzeichnis<br/>                                               |
-| MOF<br/>                      | <dl> <dt>ReplProv. MOF</dt> </dl> |
+| Namespace<br/>                | Root \\ MicrosoftActiveDirectory<br/>                                               |
+| MOF<br/>                      | <dl> <dt>Replprov.mof</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>Replprov.dll</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**MSAD \_ Domain Controller**](msad-domaincontroller.md)
+[**MSAD \_ DomainController**](msad-domaincontroller.md)
 </dt> </dl>
 
  

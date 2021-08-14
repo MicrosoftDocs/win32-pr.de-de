@@ -1,7 +1,7 @@
 ---
-description: Initialisiert eine Farbe mit den Werten (a, y, u, v).
+description: Initialisiert eine Farbe mithilfe der (a,y,u,v)-Werte.
 ms.assetid: 47b65aab-511a-44c1-ab94-973bc2da7e04
-title: D3DCOLOR_AYUV-Makro (D3d9types. h)
+title: D3DCOLOR_AYUV Makro (D3d9types.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,16 +13,16 @@ api_type:
 - HeaderDef
 api_location:
 - D3d9types.h
-ms.openlocfilehash: 62a34e94fbdc6c47ed034a46bdae6e9b32a7c95d
-ms.sourcegitcommit: 14010c34b35fa268046c7683f021f86de08ddd0a
+ms.openlocfilehash: 5e1900bf0d400971786eb37dd5138154913562982e1a1e3221c8002ac51fbf2a
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "106355168"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118300314"
 ---
-# <a name="d3dcolor_ayuv-macro"></a>D3DCOLOR \_ ayuv-Makro
+# <a name="d3dcolor_ayuv-macro"></a>\_D3DCOLOR-AYUV-Makro
 
-Initialisiert eine Farbe mit den Werten (a, y, u, v).
+Initialisiert eine Farbe mithilfe der (a,y,u,v)-Werte.
 
 ## <a name="syntax"></a>Syntax
 
@@ -42,17 +42,17 @@ D3DCOLOR D3DCOLOR_AYUV(
 
 <dl> <dt>
 
-*ein* 
+*Eine* 
 </dt> <dd>
 
-Alpha Komponente der Farbe. Dieser Wert muss zwischen 0 und 255 liegen.
+Alphakomponente der Farbe. Dieser Wert muss zwischen 0 und 255 liegen.
 
 </dd> <dt>
 
 *y* 
 </dt> <dd>
 
-Die Leuchtkraft Komponente der Farbe. Dieser Wert muss zwischen 0 und 255 liegen.
+Leuchtdichtekomponente der Farbe. Dieser Wert muss zwischen 0 und 255 liegen.
 
 </dd> <dt>
 
@@ -63,7 +63,7 @@ Blaue Helligkeit der Farbe. Dieser Wert muss zwischen 0 und 255 liegen.
 
 </dd> <dt>
 
-*Ramelow* 
+*V* 
 </dt> <dd>
 
 Rote Helligkeit der Farbe. Dieser Wert muss zwischen 0 und 255 liegen.
@@ -72,11 +72,11 @@ Rote Helligkeit der Farbe. Dieser Wert muss zwischen 0 und 255 liegen.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt den [D3DCOLOR](d3dcolor.md) -Wert zurück, der den angegebenen ARGB-Werten entspricht.
+Gibt den [D3DCOLOR-Wert](d3dcolor.md) zurück, der den angegebenen ARGB-Werten entspricht.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Eine RGB-Farbe kann auf 16 Bits pro Pixel reduziert werden, indem Sie in Leuchtkraft-und Farbunterschiede mit den folgenden Gleichungen konvertiert wird:
+Eine RGB-Farbe kann durch Konvertierung in Leuchtdichte und Farbunterschiede mit den folgenden Gleichungen auf 16 Bits pro Pixel reduziert werden:
 
 
 ```C++
@@ -93,7 +93,7 @@ v = red - luminance
 
 | Anforderung | Wert |
 |-------------------|----------------------------------------------------------------------------------------|
-| Header<br/> | <dl> <dt>D3d9types. h</dt> </dl> |
+| Header<br/> | <dl> <dt>D3d9types.h</dt> </dl> |
 
 
 

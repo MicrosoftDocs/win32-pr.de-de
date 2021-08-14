@@ -1,22 +1,22 @@
 ---
-title: Beispiel Code für das Löschen einer lokalen Gruppe
-description: Code Beispiele zum Löschen einer lokalen Gruppe auf einem Mitglieds Server oder einem Computer, auf dem Windows NT Workstation oder Windows 2000 Professional ausgeführt wird.
+title: Beispielcode zum Löschen einer lokalen Gruppe
+description: Codebeispiele zum Löschen einer lokalen Gruppe auf einem Mitgliedsserver oder computer mit Windows NT-Arbeitsstation oder Windows 2000 Professional.
 ms.assetid: ff4fd148-2fa2-4355-bfaa-1f093d61aa00
 ms.tgt_platform: multiple
 keywords:
-- Active Directory Beispiele Active Directory, Löschen einer lokalen Gruppe
+- Active Directory-Beispiele Active Directory, Löschen einer lokalen Gruppe
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: b91588bf59ae7b276aecbaa1740b2510f652f5c8
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: c02f58958888f7540559cdf196f8f44f54c6c3d2ddd8039b05f82688be2e7f9b
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "103707656"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118190763"
 ---
-# <a name="example-code-for-deleting-a-local-group"></a>Beispiel Code für das Löschen einer lokalen Gruppe
+# <a name="example-code-for-deleting-a-local-group"></a>Beispielcode zum Löschen einer lokalen Gruppe
 
-Im folgenden C++-Codebeispiel wird eine lokale Gruppe auf einem Mitglieds Server oder einem Computer, auf dem Windows 2000 Professional oder Windows NT Workstation ausgeführt wird, gelöscht.
+Im folgenden C++-Codebeispiel wird eine lokale Gruppe auf einem Mitgliedsserver oder einem Computer mit Windows 2000 Professional oder Windows NT-Arbeitsstation gelöscht.
 
 
 ```C++
@@ -145,7 +145,7 @@ HRESULT DeleteADObject(LPOLESTR pwszAdsPath,
 
 
 
-Im folgenden Visual Basic Scripting Edition Codebeispiel wird eine lokale Gruppe auf einem Mitglieds Server oder einem Computer, auf dem Windows 2000 Professional oder Windows NT Workstation ausgeführt wird, gelöscht.
+Im folgenden Visual Basic Scripting Edition-Codebeispiel wird eine lokale Gruppe auf einem Mitgliedsserver oder einem Computer mit Windows 2000 Professional oder Windows NT-Arbeitsstation gelöscht.
 
 
 ```VB
@@ -210,9 +210,9 @@ End Sub
 
 
 
- 
+ 
 
- 
+ 
 
 
 

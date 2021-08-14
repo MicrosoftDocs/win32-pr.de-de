@@ -1,9 +1,9 @@
 ---
-title: komplexer headerfieldtype-Typ
-description: Definiert die Elemente, die zum Erstellen eines Header Felds in einer e-Mail-Nachricht verwendet werden.
+title: headerFieldType Complex Type
+description: Definiert die Elemente, die zum Erstellen eines Headerfelds in einer E-Mail verwendet werden.
 ms.assetid: 66036875-1116-46eb-b2f5-8c8ad8373ab1
 keywords:
-- komplexer headerfieldtype-Typ Taskplaner
+- komplexer HeaderFieldType-Taskplaner
 topic_type:
 - apiref
 api_name:
@@ -13,16 +13,16 @@ api_type:
 ms.topic: reference
 ms.date: 05/31/2018
 api_location: ''
-ms.openlocfilehash: 7ddbc0ae22c6baf3fd288cbe2ead19dac506afee
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 78c4fb3a8ca85cea5b765fc1fc4521f968efd76e9169613dc4a1565a43ee1b36
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "106342198"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118131829"
 ---
-# <a name="headerfieldtype-complex-type"></a>komplexer headerfieldtype-Typ
+# <a name="headerfieldtype-complex-type"></a>headerFieldType Complex Type
 
-Definiert die Elemente, die zum Erstellen eines Header Felds in einer e-Mail-Nachricht verwendet werden.
+Definiert die Elemente, die zum Erstellen eines Headerfelds in einer E-Mail verwendet werden.
 
 ``` syntax
 <xs:complexType name="headerFieldType">
@@ -43,8 +43,8 @@ Definiert die Elemente, die zum Erstellen eines Header Felds in einer e-Mail-Nac
 
 | Element                                                            | type                                                                    | BESCHREIBUNG                                                            |
 |--------------------------------------------------------------------|-------------------------------------------------------------------------|------------------------------------------------------------------------|
-| [**Name**](taskschedulerschema-name-headerfieldtype-element.md)   | [**nonEmptyString**](taskschedulerschema-nonemptystring-simpletype.md) | Gibt den Namen des Header Felds in einer e-Mail-Nachricht an.<br/> |
-| [**Wert**](taskschedulerschema-value-headerfieldtype-element.md) | **string**                                                              | Gibt den Wert eines Header Felds in einer e-Mail-Nachricht an.<br/>  |
+| [**Name**](taskschedulerschema-name-headerfieldtype-element.md)   | [**nonEmptyString**](taskschedulerschema-nonemptystring-simpletype.md) | Gibt den Namen des Headerfelds in einer E-Mail an.<br/> |
+| [**Wert**](taskschedulerschema-value-headerfieldtype-element.md) | **string**                                                              | Gibt den Wert eines Headerfelds in einer E-Mail an.<br/>  |
 
 
 
@@ -54,8 +54,8 @@ Definiert die Elemente, die zum Erstellen eines Header Felds in einer e-Mail-Nac
 
 | Anforderung | Wert |
 |-------------------------------------|------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>       |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2008 \[ -Desktop-Apps\]<br/> |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur \[ Vista-Desktop-Apps\]<br/>       |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2008-Desktop-Apps\]<br/> |
 
 
 

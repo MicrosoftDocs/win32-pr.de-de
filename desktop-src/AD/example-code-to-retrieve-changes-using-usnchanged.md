@@ -1,32 +1,32 @@
 ---
-title: Beispiel Code zum Abrufen von Änderungen mithilfe von "".
-description: Im folgenden Codebeispiel wird das uSNChanged-Attribut eines Objekts in Active Directory Domain Services verwendet, um seit einer vorherigen Abfrage Änderungen abzurufen.
+title: Beispielcode zum Abrufen von Änderungen mitHILFE von USNChanged
+description: Im folgenden Codebeispiel wird das uSNChanged-Attribut eines Objekts in Active Directory Domain Services verwendet, um Änderungen seit einer vorherigen Abfrage abzurufen.
 ms.assetid: 519fd20f-9eb4-4702-9338-8cda899604bd
 ms.tgt_platform: multiple
 keywords:
-- Active Directory Beispiele Active Directory, Abrufen von Änderungen mithilfe von "".
+- Active Directory-Beispiele für Active Directory, Abrufen von Änderungen mit USNChanged
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 175092699d6f0e99c20dcc4af136cfea792c3754
-ms.sourcegitcommit: 803f3ccd65bdefe36bd851b9c6e7280be9489016
+ms.openlocfilehash: 244bb2ad1133925cf44e0183c66955f523d1e55db617fd964e43f5b9e8aa6800
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "104314631"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118189693"
 ---
-# <a name="example-code-to-retrieve-changes-using-usnchanged"></a>Beispiel Code zum Abrufen von Änderungen mithilfe von "".
+# <a name="example-code-to-retrieve-changes-using-usnchanged"></a>Beispielcode zum Abrufen von Änderungen mitHILFE von USNChanged
 
-Im folgenden Codebeispiel wird das **uSNChanged** -Attribut eines Objekts in Active Directory Domain Services verwendet, um seit einer vorherigen Abfrage Änderungen abzurufen. Das Codebeispiel kann entweder eine vollständige Synchronisierung oder ein inkrementelles Update durchführen. Bei einer vollständigen Synchronisierung stellt die Beispielanwendung eine Verbindung mit der RootDSE eines Domänen Controllers her und liest die folgenden Parameter, die Sie speichert, damit Sie bei der nächsten inkrementellen Synchronisierung verwendet werden:
+Im folgenden Codebeispiel wird das **uSNChanged-Attribut** eines Objekts in Active Directory Domain Services verwendet, um Änderungen seit einer vorherigen Abfrage abzurufen. Im Codebeispiel kann entweder eine vollständige Synchronisierung oder ein inkrementelles Update ausgeführt werden. Für eine vollständige Synchronisierung stellt die Beispielanwendung eine Verbindung mit dem rootDSE eines Domänencontrollers her und liest die folgenden Parameter, die sie speichert, um sie bei der nächsten inkrementellen Synchronisierung zu verwenden:
 
--   Der DNS-Name des DC. Inkrementelle Synchronisierungen müssen auf demselben DC wie die vorherige Synchronisierung ausgeführt werden.
--   Die **invocationID** -GUID des DC. Das Codebeispiel verwendet diesen Wert, um zu erkennen, dass der Domänen Controller aus einer Sicherung wieder hergestellt wurde. in diesem Fall muss im Beispiel eine vollständige Synchronisierung durchgeführt werden.
--   Der **highestCommittedUSN**. Dieser Wert wird bei der nächsten inkrementellen Synchronisierung zur Untergrenze für den für den **UPN** -Filter.
+-   Der DNS-Name des Domänencontrollers. Inkrementelle Synchronisierungen müssen auf dem gleichen DC wie bei der vorherigen Synchronisierung ausgeführt werden.
+-   Die **Aufruf-ID-GUID** des Domänencontrollers. Im Codebeispiel wird dieser Wert verwendet, um zu erkennen, dass der Domänencontroller aus einer Sicherung wiederhergestellt wurde. In diesem Fall muss das Beispiel eine vollständige Synchronisierung durchführen.
+-   Der **höchsteCommittedUSN-Wert.** Dieser Wert wird zur unteren Grenze für den **uSNChanged-Filter** bei der nächsten inkrementellen Synchronisierung.
 
-Im Codebeispiel wird die [**idirector ysearch**](/windows/desktop/api/iads/nn-iads-idirectorysearch) -Schnittstelle verwendet, wobei der Distinguished Name der Basis der Suche, ein Suchbereich und ein Filter angegeben werden. Es gibt keine Einschränkungen hinsichtlich der Suchbasis oder des Gültigkeits Bereichs. Zusätzlich zur Angabe der Objekte, die von Interesse sind, muss der Filter auch einen " **uchanged** "-Vergleich angeben, z. b. "", >= <lower bound USN> ". Bei einer vollständigen Synchronisierung ist der Wert für die &lt; untere Grenze " &gt; null". Bei einer inkrementellen Synchronisierung ist es der 1 plus der **highestCommittedUSN** -Wert aus der vorherigen Suche.
+Im Codebeispiel wird die [**IDirectorySearch-Schnittstelle**](/windows/desktop/api/iads/nn-iads-idirectorysearch) verwendet, die den Distinguished Name der Basis der Suche, einen Suchbereich und einen Filter angibt. Es gibt keine Einschränkungen für die Suchbasis oder den Suchbereich. Zusätzlich zur Angabe der gewünschten Objekte muss der Filter auch einen **uSNChanged-Vergleich** angeben, z. B. "uSNChanged >= <lower bound USN> ". Bei einer vollständigen Synchronisierung &lt; ist "lower bound USN" &gt; 0 (null). Bei einer inkrementellen Synchronisierung ist dies 1 plus der **höchsteCommittedUSN-Wert** aus der vorherigen Suche.
 
-Beachten Sie, dass diese Beispielanwendung nur dafür gedacht ist, zu veranschaulichen, **wie Sie mit der Verwendung von** "" die Änderungen vom Active Directory Server abrufen können. Die Änderungen werden gedruckt, und die Daten werden nicht tatsächlich in einem sekundären Speicher synchronisiert. Folglich wird nicht gezeigt, wie Probleme wie verschoderte Objekte oder "keine übergeordneten" Bedingungen behandelt werden. Es zeigt, wie gelöschte Objekte abgerufen werden. es wird jedoch nicht gezeigt, wie eine Anwendung die **objectGUID** der gelöschten Objekte verwendet, um das entsprechende Objekt zu ermitteln, das im Speicher gelöscht werden soll.
+Beachten Sie, dass diese Beispielanwendung nur zeigen soll, wie **uSNChanged** verwendet wird, um Änderungen vom Active Directory-Server abzurufen. Die Änderungen werden gedruckt, und die Daten in einem sekundären Speicher werden nicht synchronisiert. Folglich wird nicht gezeigt, wie Probleme wie verschobene Objekte oder "keine übergeordneten" Bedingungen behandelt werden. Es wird zwar gezeigt, wie gelöschte Objekte abgerufen werden, aber es wird nicht gezeigt, wie eine Anwendung die **objectGUID** der gelöschten Objekte verwendet, um das entsprechende Objekt zu bestimmen, das im Speicher gelöscht werden soll.
 
-Außerdem werden im Beispiel der DC-Name, **invocationID** und **highestCommittedUSN** in der Registrierung zwischengespeichert. In einer echten Synchronisierungs Anwendung müssen die Parameter im gleichen Speicher gespeichert werden, die mit dem Active Directory Server konsistent gehalten werden. Dadurch wird sichergestellt, dass die Parameter und Objektdaten synchronisiert bleiben, wenn die Datenbank jemals aus einer Sicherung wieder hergestellt wird.
+Außerdem werden im Beispiel dc name, **invocationID** und **highestCommittedUSN** in der Registrierung zwischengespeichert. In einer echten Synchronisierungsanwendung müssen Sie die Parameter in demselben Speicher speichern, der mit dem Active Directory-Server konsistent bleibt. Dadurch wird sichergestellt, dass die Parameter und Objektdaten synchronisiert bleiben, wenn Ihre Datenbank jemals aus einer Sicherung wiederhergestellt wird.
 
 
 ```C++
@@ -817,6 +817,6 @@ cleanup:
 
 
 
- 
+ 
 
- 
+ 

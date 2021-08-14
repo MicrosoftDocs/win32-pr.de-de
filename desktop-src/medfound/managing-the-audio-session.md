@@ -1,66 +1,66 @@
 ---
-description: In diesem Thema wird beschrieben, wie das audiovolume bei Verwendung von mfplay für die Audiowiedergabe und Videowiedergabe gesteuert wird.
+description: In diesem Thema wird beschrieben, wie Die Audiolautstärke bei Verwendung von MFPlay für die Audio-/Videowiedergabe gesteuert wird.
 ms.assetid: 4cf3dd0f-4c8a-4720-9eb3-d23352f3a85e
 title: Verwalten der Audiositzung
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 4e5231ca02603279675fabaaac4b96a1cd001906
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 8573bd7145cc792d3178d51cead18c3a8694dde9281644b37439a377f18bec96
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104342658"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118062825"
 ---
 # <a name="managing-the-audio-session"></a>Verwalten der Audiositzung
 
-\[MF Play ist für die Verwendung in den Betriebssystemen verfügbar, die im Abschnitt "Anforderungen" angegeben sind. Es kann in nachfolgenden Versionen geändert oder entfernt werden. \]
+\[MFPlay ist für die Verwendung in den Betriebssystemen verfügbar, die im Abschnitt Anforderungen angegeben sind. Es kann in nachfolgenden Versionen geändert oder entfernt werden. \]
 
-In diesem Thema wird beschrieben, wie das audiovolume bei Verwendung von mfplay für die Audiowiedergabe und Videowiedergabe gesteuert wird.
+In diesem Thema wird beschrieben, wie Die Audiolautstärke bei Verwendung von MFPlay für die Audio-/Videowiedergabe gesteuert wird.
 
-Mfplay bietet die folgenden Methoden, um das audiovolume während der Wiedergabe zu steuern.
+MFPlay stellt die folgenden Methoden bereit, um die Audiolautstärke während der Wiedergabe zu steuern.
 
 
 
 | Methode                                                            | BESCHREIBUNG                                           |
 |-------------------------------------------------------------------|-------------------------------------------------------|
-| [**Imfpmediaplayer:: setbalance**](/windows/desktop/api/mfplay/nf-mfplay-imfpmediaplayer-setbalance) | Legt das Gleichgewicht zwischen dem linken und dem rechten Kanal fest. |
-| [**Imfpmediaplayer:: setstumm**](/windows/desktop/api/mfplay/nf-mfplay-imfpmediaplayer-setmute)       | Die Audiodatei wird von der Audiodatei abgleichen.                           |
-| [**Imfpmediaplayer:: SetVolume**](/windows/desktop/api/mfplay/nf-mfplay-imfpmediaplayer-setvolume)   | Legt die Volumeebene fest.                                |
+| [**IMFPMediaPlayer::SetBalance**](/windows/desktop/api/mfplay/nf-mfplay-imfpmediaplayer-setbalance) | Legt das Gleichgewicht zwischen dem linken und dem rechten Kanal fest. |
+| [**IMFPMediaPlayer::SetMute**](/windows/desktop/api/mfplay/nf-mfplay-imfpmediaplayer-setmute)       | Stummschalten oder Aufheben der Audioumschaltung.                           |
+| [**IMFPMediaPlayer::SetVolume**](/windows/desktop/api/mfplay/nf-mfplay-imfpmediaplayer-setvolume)   | Legt die Volumeebene fest.                                |
 
 
 
  
 
-Um das Verhalten dieser Methoden zu verstehen, müssen Sie einige Begriffe der Windows-audiositzungs-API (WASAPI) kennen, die die von mfplay verwendete Audiofunktionalität auf niedriger Ebene implementiert.
+Um das Verhalten dieser Methoden zu verstehen, müssen Sie einige Terminologie aus der Windows Audio Session API (WASAPI) kennen, die die von MFPlay verwendete Low-Level-Audiofunktionalität implementiert.
 
-In WASAPI gehört jeder Audiostream genau einer *Audiositzung* an, bei der es sich um eine Gruppe verwandter Audiodatenströme handelt. In der Regel behält eine Anwendung eine einzelne Audiositzung bei, obwohl Anwendungen mehr als eine Sitzung erstellen können. Das System Volume-Control-Programm (sndvol) zeigt für jede Audiositzung ein Volume-Steuerelement an. Mithilfe von sndvol kann ein Benutzer das Volume einer Audiositzung von außerhalb der Anwendung anpassen. Dieses Verfahren wird in der folgenden Abbildung veranschaulicht.
+In WASAPI gehört jeder Audiostream zu genau einer *Audiositzung,* bei der es sich um eine Gruppe verwandter Audiostreams handelt. In der Regel verwaltet eine Anwendung eine einzelne Audiositzung, obwohl Anwendungen mehrere Sitzungen erstellen können. Das Systemvolume-Steuerungsprogramm (Sndvol) zeigt eine Lautstärkeregler für jede Audiositzung an. Über Sndvol kann ein Benutzer die Lautstärke einer Audiositzung von außerhalb der Anwendung anpassen. Die folgende Abbildung veranschaulicht diesen Prozess.
 
-![Diagramm, das Audiostreams anzeigt, die die volumesteuerung auf dem Weg zu den Referenten durchlaufen Anwendung und sndvol zeigen auf volumesteuerung](images/audio-session.gif)
+![Diagramm, das Audiostreams zeigt, die die Lautstärkeregler auf dem Weg zu den Lautsprechern durchlaufen; Anwendung und Sndvolume zeigen auf Volumesteuerung](images/audio-session.gif)
 
-In MF Play kann ein Medien Element mindestens einen aktiven Audiodatenstrom (in der Regel nur einen) enthalten. Intern verwendet mfplay den [streamingaudiorenderer](streaming-audio-renderer.md) (SAR), um die Audiostreams zu Rendering. Wenn Sie Sie nicht anderweitig konfigurieren, wird die SAR-Datei der standardmäßigen Audiositzung der Anwendung beitreten.
+In MFPlay kann ein Medienelement über einen oder mehrere aktive Audiostreams verfügen (in der Regel nur einen). Intern verwendet MFPlay den [Streaming Audio Renderer](streaming-audio-renderer.md) (SAR), um die Audiostreams zu rendern. Sofern Sie dies nicht anders konfigurieren, wird die Standardaudiositzung der Anwendung vom SAR-Join verwendet.
 
-Die mfplay-Audiomethoden Steuern nur die Streams, die zum aktuellen Medien Element gehören. Sie wirken sich nicht auf das Volume für andere Streams aus, die zur gleichen Audiositzung gehören. Im Hinblick auf die WASAPI steuern die MF Play-Methoden die volumeebenen *pro Kanal* und nicht die Master Volume-Ebene. Dieses Verfahren wird in der folgenden Abbildung veranschaulicht.
+Die MFPlay-Audiomethoden steuern nur die Streams, die zum aktuellen Medienelement gehören. Sie wirken sich nicht auf das Volume für andere Streams aus, die zur gleichen Audiositzung gehören. Im Hinblick auf WASAPI steuern die MFPlay-Methoden die *Pro-Kanal-Volumeebenen,* nicht die Mastervolumeebene. Die folgende Abbildung veranschaulicht diesen Prozess.
 
-![das Diagramm ähnelt dem vorherigen, aber der zweite Stream beginnt bei einem Medien Element, und die Anwendung zeigt auf den zweiten Stream und die volumesteuerung.](images/audio-session02.gif)
+![Diagramm ähnlich dem vorherigen, aber der zweite Stream beginnt beim Medienelement, und die Anwendung verweist auf den zweiten Stream und auf die Volumesteuerung.](images/audio-session02.gif)
 
-Es ist wichtig, dass Sie einige Auswirkungen dieses Features von mfplay verstehen. Zuerst kann eine Anwendung das Wiedergabe Volume anpassen, ohne dass sich dies auf andere Audiostreams auswirkt. Sie können diese Funktion verwenden, wenn mfplay das Kreuz Ausblenden von Audiodaten implementiert, indem zwei Instanzen des mfplay-Objekts erstellt und das Volume separat angepasst wird.
+Es ist wichtig, einige Auswirkungen dieses Features von MFPlay zu verstehen. Zunächst kann eine Anwendung die Wiedergabelautstärke anpassen, ohne dass andere Audiostreams beeinträchtigt werden. Sie können dieses Feature verwenden, wenn MFPlay die Audioüberblendung implementiert, indem Sie zwei Instanzen des MFPlay-Objekts erstellen und die Lautstärke separat anpassen.
 
-Wenn Sie die mfplay-Methode verwenden, um das Volume oder den Zustand stumm zu ändern, werden die Änderungen nicht in sndvol angezeigt. Beispielsweise können Sie [**setstumm**](/windows/desktop/api/mfplay/nf-mfplay-imfpmediaplayer-setmute) zum stumm schalten der Audiodatei aufrufen, aber sndvol zeigt die Sitzung nicht als stumm. Wenn hingegen sndvol verwendet wird, um das Sitzungs Volume anzupassen, werden die Änderungen nicht in den von [**imfpmediaplayer:: getvolume**](/windows/desktop/api/mfplay/nf-mfplay-imfpmediaplayer-getvolume) oder [**imfpmediaplayer:: getstumm**](/windows/desktop/api/mfplay/nf-mfplay-imfpmediaplayer-getmute)zurückgegebenen Werten widergespiegelt.
+Wenn Sie MFPlay-Methoden verwenden, um das Volume oder den Stummschaltungszustand zu ändern, werden die Änderungen nicht in Sndvol angezeigt. Beispielsweise können Sie [**SetMute**](/windows/desktop/api/mfplay/nf-mfplay-imfpmediaplayer-setmute) aufrufen, um die Audiodaten zu stummschalten, aber Sndvol zeigt die Sitzung nicht als stummgeschaltet an. Wenn dagegen SndVol zum Anpassen des Sitzungsvolumes verwendet wird, spiegeln sich die Änderungen nicht in den Werten wider, die von [**IMFPMediaPlayer::GetVolume**](/windows/desktop/api/mfplay/nf-mfplay-imfpmediaplayer-getvolume) oder [**IMFPMediaPlayer::GetMute**](/windows/desktop/api/mfplay/nf-mfplay-imfpmediaplayer-getmute)zurückgegeben werden.
 
-Für jede Instanz des mfplay Player-Objekts entspricht die effektive Volumeebene dem *fplayervolume* × *fsessionvolume*, wobei *fplayervolume* der von [**getvolume**](/windows/desktop/api/mfplay/nf-mfplay-imfpmediaplayer-getvolume)zurückgegebene Wert und *fsessionvolume* das Master Volume für die Sitzung ist.
+Für jede Instanz des MFPlay-Playerobjekts entspricht die effektive Volumeebene *fPlayerVolume* × *fSessionVolume,* wobei *fPlayerVolume* der von [**GetVolume zurückgegebene**](/windows/desktop/api/mfplay/nf-mfplay-imfpmediaplayer-getvolume)Wert und *fSessionVolume* das Mastervolume für die Sitzung ist.
 
-Für einfache Wiedergabe Szenarios ist es möglicherweise besser, die WASAPI zu verwenden, um das audiovolume für die gesamte Sitzung zu steuern, anstatt die mfplay-Methoden zu verwenden.
+Bei einfachen Wiedergabeszenarien ist es möglicherweise besser, die WASAPI zum Steuern der Audiolautstärke für die gesamte Sitzung zu verwenden, anstatt die MFPlay-Methoden zu verwenden.
 
 ## <a name="example-code"></a>Beispielcode
 
-Im folgenden finden Sie eine C++-Klasse, die die grundlegenden Aufgaben in WASAPI behandelt:
+Im Folgenden wird eine C++-Klasse beschrieben, die die grundlegenden Aufgaben in WASAPI verarbeitet:
 
--   Steuern des Volumes und des stumm Zustands der Sitzung.
--   Benachrichtigungen erhalten, wenn sich das Volume oder der stumm Zustand ändert.
+-   Steuern des Volumes und des Stummschaltungszustands für die Sitzung.
+-   Abrufen von Benachrichtigungen, wenn sich das Volume oder der Stummschaltungszustand ändert.
 
 ### <a name="class-declaration"></a>Klassendeklaration
 
-Die `CAudioSessionVolume` Klassen Deklaration implementiert die [**iaudiosessionevents**](/windows/win32/api/audiopolicy/nn-audiopolicy-iaudiosessionevents) -Schnittstelle, die die Rückruf Schnittstelle für audiositzungsereignisse ist.
+Die `CAudioSessionVolume` Klassendeklaration implementiert die [**IAudioSessionEvents-Schnittstelle,**](/windows/win32/api/audiopolicy/nn-audiopolicy-iaudiosessionevents) die die Rückrufschnittstelle für Audiositzungsereignisse ist.
 
 
 ```C++
@@ -145,18 +145,18 @@ protected:
 
 
 
-Wenn das `CAudioSessionVolume` Objekt ein audiositzungsereignis empfängt, sendet es eine private Fenster Meldung an die Anwendung. Das Fenster Handle und die Fenster Meldung werden der statischen Methode als Parameter übergeben `CAudioSessionVolume::CreateInstance` .
+Wenn das `CAudioSessionVolume` Objekt ein Audiositzungsereignis empfängt, sendet es eine Private Window-Nachricht an die Anwendung. Das Fensterhandle und die Fenstermeldung werden der statischen Methode als Parameter `CAudioSessionVolume::CreateInstance` übergeben.
 
-### <a name="getting-the-wasapi-interface-pointers"></a>Die WASAPI-Schnittstellen Zeiger werden erhalten.
+### <a name="getting-the-wasapi-interface-pointers"></a>Abrufen der WASAPI-Schnittstellenzeiger
 
-`CAudioSessionVolume` verwendet zwei Haupt-WASAPI-Schnittstellen:
+`CAudioSessionVolume` verwendet zwei WASAPI-Hauptschnittstellen:
 
--   [**Iaudiosessioncontrol**](/windows/win32/api/audiopolicy/nn-audiopolicy-iaudiosessioncontrol) verwaltet die Audiositzung.
--   [**Isimpleaudiovolume**](/windows/win32/api/audioclient/nn-audioclient-isimpleaudiovolume) steuert die Volumeebene und den stumm Zustand der Sitzung.
+-   [**IAudioSessionControl**](/windows/win32/api/audiopolicy/nn-audiopolicy-iaudiosessioncontrol) verwaltet die Audiositzung.
+-   [**ISimpleAudioVolume**](/windows/win32/api/audioclient/nn-audioclient-isimpleaudiovolume) steuert die Volumeebene und den Stummschaltungszustand der Sitzung.
 
-Um diese Schnittstellen zu erhalten, müssen Sie den audioendpunkt auflisten, der von der SAR-Datei verwendet wird. Ein *audioendpunkt* ist ein Hardware Gerät, das Audiodaten erfasst oder verarbeitet. Bei der Audiowiedergabe ist ein Endpunkt einfach ein Redner oder eine andere Audioausgabe. Standardmäßig verwendet der SAR den Standard Endpunkt für die **econsole** -Geräte Rolle. Eine *Geräte Rolle* ist eine zugewiesene Rolle für einen Endpunkt. Geräte Rollen werden von der [**erole**](/windows/win32/api/mmdeviceapi/ne-mmdeviceapi-erole) -Enumeration angegeben, die in [Core-audioapis](../coreaudio/core-audio-apis-in-windows-vista.md)dokumentiert ist.
+Um diese Schnittstellen abzurufen, müssen Sie den Audioendpunkt aufzählen, der vom SAR verwendet wird. Ein *Audioendpunkt* ist ein Hardwaregerät, das Audiodaten erfasst oder nutzt. Bei der Audiowiedergabe ist ein Endpunkt einfach ein Lautsprecher oder eine andere Audioausgabe. Standardmäßig verwendet die SAR den Standardendpunkt für die **eConsole-Geräterolle.** Eine *Geräterolle* ist eine zugewiesene Rolle für einen Endpunkt. Geräterollen werden durch die [**ERole-Enumeration**](/windows/win32/api/mmdeviceapi/ne-mmdeviceapi-erole) angegeben, die in [Core Audio-APIs](../coreaudio/core-audio-apis-in-windows-vista.md)dokumentiert ist.
 
-Der folgende Code zeigt, wie Sie den Endpunkt auflisten und die WASAPI-Schnittstellen erhalten.
+Der folgende Code zeigt, wie sie den Endpunkt aufzählen und die WASAPI-Schnittstellen abrufen.
 
 
 ```C++
@@ -235,7 +235,7 @@ done:
 
 ### <a name="controlling-the-volume"></a>Steuern des Volumes
 
-Die `CAudioSessionVolume` Methoden, die das audiovolume steuern, werden mit den entsprechenden [**isimpleaudiovolume**](/windows/win32/api/audioclient/nn-audioclient-isimpleaudiovolume) -Methoden aufgerufen. Beispielsweise wird `CAudioSessionVolume::SetVolume` [**isimpleaudiovolume:: setmastervolume**](/windows/win32/api/audioclient/nf-audioclient-isimpleaudiovolume-setmastervolume)aufgerufen, wie im folgenden Code gezeigt.
+Die `CAudioSessionVolume` Methoden, die die Audiolautstärke steuern, rufen die entsprechenden [**ISimpleAudioVolume-Methoden**](/windows/win32/api/audioclient/nn-audioclient-isimpleaudiovolume) auf. Ruft beispielsweise `CAudioSessionVolume::SetVolume` [**ISimpleAudioVolume::SetMasterVolume**](/windows/win32/api/audioclient/nf-audioclient-isimpleaudiovolume-setmastervolume)auf, wie im folgenden Code gezeigt.
 
 
 ```C++
@@ -257,9 +257,9 @@ HRESULT CAudioSessionVolume::SetVolume(float flVolume)
 
 
 
-## <a name="complete-caudiosessionvolume-code"></a>Vervollständigen des caudiosessionvolume-Codes
+## <a name="complete-caudiosessionvolume-code"></a>Vollständigen CAudioSessionVolume-Code
 
-Im folgenden finden Sie die komplette Liste der Methoden der- `CAudioSessionVolume` Klasse.
+Hier ist die vollständige Auflistung der Methoden der `CAudioSessionVolume` -Klasse.
 
 
 ```C++
@@ -572,13 +572,13 @@ HRESULT CAudioSessionVolume::OnSimpleVolumeChanged(
 
 ## <a name="requirements"></a>Anforderungen
 
-MF Play erfordert Windows 7.
+MFPlay erfordert Windows 7.
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
 <dl> <dt>
 
-[Verwenden von MF Play für die Audiowiedergabe und Video Wiedergabe](using-mfplay-for-audio-video-playback.md)
+[Verwenden von MFPlay für die Audio-/Videowiedergabe](using-mfplay-for-audio-video-playback.md)
 </dt> </dl>
 
  

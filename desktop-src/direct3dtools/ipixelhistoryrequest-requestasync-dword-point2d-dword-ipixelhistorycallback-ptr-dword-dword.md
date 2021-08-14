@@ -1,10 +1,10 @@
 ---
-description: Fordert eine Liste der Pixel Verlaufs Ergebnisse im angegebenen Pixel, Rendern von Ziel-/UAV und Frame an.
+description: Fordert eine Liste der Pixelverlaufsergebnisse im angegebenen Pixel an, rendert tartget /UAV und frame.
 MS-HAID: vspixengine.IPixelHistoryRequest\_RequestAsync\_DWORD\_Point2D\_DWORD\_IPixelHistoryCallback\_ptr\_DWORD\_DWORD
 MSHAttr:
 - PreferredSiteName:MSDN
 - PreferredLib:/library/windows/desktop
-title: 'Ipixelhistoryrequest:: requestasync-Methode'
+title: IPixelHistoryRequest::RequestAsync-Methode
 ms.topic: reference
 ms.date: 05/31/2018
 ms.assetid: 00A90033-FC57-4BEE-B950-82E678437F2A
@@ -17,16 +17,16 @@ api_location:
 topic_type:
 - APIRef
 - kbSyntax
-ms.openlocfilehash: f0209730e0e388b67281451a0337928257c1bae7
-ms.sourcegitcommit: a47bd86f517de76374e4fff33cfeb613eb259a7e
+ms.openlocfilehash: 6aaeda3ae71880c3789d7fc0833b82403b8c6798fca5fef2ab475b57a29b0f71
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/06/2021
-ms.locfileid: "104522728"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118283074"
 ---
-# <a name="span-idvspixengineipixelhistoryrequest_requestasync_dword_point2d_dword_ipixelhistorycallback_ptr_dword_dwordspanipixelhistoryrequestrequestasync-method"></a><span id="vspixengine.ipixelhistoryrequest_requestasync_dword_point2d_dword_ipixelhistorycallback_ptr_dword_dword"></span>Ipixelhistoryrequest:: requestasync-Methode
+# <a name="span-idvspixengineipixelhistoryrequest_requestasync_dword_point2d_dword_ipixelhistorycallback_ptr_dword_dwordspanipixelhistoryrequestrequestasync-method"></a><span id="vspixengine.ipixelhistoryrequest_requestasync_dword_point2d_dword_ipixelhistorycallback_ptr_dword_dword"></span>IPixelHistoryRequest::RequestAsync-Methode
 
-Fordert eine Liste der Pixel Verlaufs Ergebnisse im angegebenen Pixel, Rendern von Ziel-/UAV und Frame an.
+Fordert eine Liste der Pixelverlaufsergebnisse im angegebenen Pixel an, rendert tartget /UAV und frame.
 
 ## <a name="syntax"></a>Syntax
 
@@ -44,35 +44,35 @@ HRESULT RequestAsync(
 
 ## <a name="parameters"></a>Parameter
 
-*Framezahl*   
+*frameNumber*   
 Der angegebene Frame.
 
-*Megapixel*   
+*Pixel*   
 Das angegebene Pixel.
 
-*rendertargetptr*   
+*renderTargetPtr*   
 Das angegebene Renderziel.
 
 *requestCallback*   
-Die Adresse eines Rückrufs, der zum Benachrichtigen des Host der Ergebnisse verwendet wird.
+Die Adresse eines Rückrufs, mit dem der Host der Ergebnisse benachrichtigt wird.
 
-*requestcookie*   
-Ein Cookie, das die Anforderung eindeutig identifiziert, und kann verwendet werden, um zu signalisieren, dass es abgebrochen werden soll.
+*requestCookie*   
+Ein Cookie, das die Anforderung eindeutig identifiziert und verwendet werden kann, um zu signalisieren, dass sie abgebrochen wird.
 
-*progressintervalmsekunden*   
-Nicht verwendet.
+*progressIntervalMsecs*   
+Wird nicht verwendet.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Wenn diese Methode erfolgreich ausgeführt wird, gibt Sie **S \_ OK** zurück. Andernfalls wird ein **HRESULT** -Fehlercode zurückgegeben.
+Wenn diese Methode erfolgreich ist, wird **S \_ OK** zurückgegeben. Andernfalls wird ein **HRESULT-Fehlercode** zurückgegeben.
 
 ## <a name="requirements"></a>Anforderungen
 
-<table><colgroup><col style="width: 50%" /><col style="width: 50%" /></colgroup><tbody><tr class="odd"><td><p>Header</p></td><td>Vspixengine. h</td></tr></tbody></table>
+<table><colgroup><col style="width: 50%" /><col style="width: 50%" /></colgroup><tbody><tr class="odd"><td><p>Header</p></td><td>Vspixengine.h</td></tr></tbody></table>
 
 ## <a name="span-idsee_alsospansee-also"></a><span id="see_also"></span>Siehe auch
 
-[**Ipixelhistoryrequest**](/windows/desktop/direct3dtools/ipixelhistoryrequest)
+[**IPixelHistoryRequest**](/windows/desktop/direct3dtools/ipixelhistoryrequest)
 
  
 

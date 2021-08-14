@@ -1,38 +1,38 @@
 ---
-title: Auswirkungen der Sicherheit bei der Suche
-description: Sicherheit ist ein impliziter Filter beim Durchführen von Such Vorgängen, beim Auflisten von Containern oder beim Lesen von Eigenschaften.
+title: Auswirkungen der Sicherheit auf die Suche
+description: Sicherheit ist ein impliziter Filter beim Ausführen von Suchvorgängen, beim Aufzählen von Containern oder beim Lesen von Eigenschaften.
 ms.assetid: 4a027069-8c3d-4a95-a04b-c9c59200a9ed
 ms.tgt_platform: multiple
 keywords:
-- Auswirkungen der Sicherheit beim Suchen Active Directory
+- Auswirkungen der Sicherheit auf die Suche in Active Directory
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 26feee840c0668b2ea9412932a27927bb1c00012
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: 429150489f2ab4d00015744beff72ee2b90b0399afd3d43f9263d39cadbaecd7
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "103707698"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118191620"
 ---
-# <a name="effects-of-security-on-searching"></a>Auswirkungen der Sicherheit bei der Suche
+# <a name="effects-of-security-on-searching"></a>Auswirkungen der Sicherheit auf die Suche
 
-Sicherheit ist ein impliziter Filter beim Durchführen von Such Vorgängen, beim Auflisten von Containern oder beim Lesen von Eigenschaften.
+Sicherheit ist ein impliziter Filter beim Ausführen von Suchvorgängen, beim Aufzählen von Containern oder beim Lesen von Eigenschaften.
 
-ADSI kann keine \_ solche \_ Eigenschaft oder keine \_ derartigen \_ Objekt Fehler zurückgeben, auch wenn das Objekt vorhanden ist, wenn Sie keinen Zugriff auf die Lese Attribute für das Objekt haben.
+ADSI kann NO SUCH PROPERTY- oder NO SUCH OBJECT-Fehler zurückgeben, auch wenn das Objekt vorhanden ist, wenn Sie keinen Zugriff auf \_ \_ \_ \_ Leseattribute für das Objekt haben.
 
-Beispielsweise kann ein Aufrufer in der Lage sein, die untergeordneten Objekte in einem Container aufzulisten, da der Aufrufer \_ überlisten Inhalts Rechte für den Container verfügt. Der gleiche Aufrufer ist jedoch möglicherweise nicht in der Lage, auf die aufgelisteten Objekte zuzugreifen, wenn der Aufrufer keinen Lesezugriff auf die untergeordneten Objekte hat. In diesem Fall gibt eine Abfrage für ein untergeordnetes Objekt möglicherweise kein \_ solches Objekt zurück, \_ auch wenn der Aufrufer das Objekt erfolgreich aufzählt.
+Beispielsweise kann ein Aufrufer die untergeordneten Objekte in einem Container auflisten, da der Aufrufer über LIST \_ CONTENTS-Rechte für den Container verfügt. Derselbe Aufrufer kann jedoch möglicherweise nicht auf die aufzählten Objekte zugreifen, wenn der Aufrufer keinen Lesezugriff auf die untergeordneten Objekte hat. In diesem Fall gibt eine Abfrage für ein untergeordnetes Objekt möglicherweise NO SUCH OBJECT zurück, obwohl der Aufrufer das \_ \_ Objekt erfolgreich aufzählt.
 
-Wenn der Aufrufer nicht über ausreichende Rechte verfügt, können die folgenden Rückgabecodes zurückgegeben werden:
+Wenn der Aufrufer nicht über ausreichende Rechte verfügt, werden möglicherweise die folgenden Rückgabecodes zurückgegeben:
 
-E \_ ADS \_ ungültiges \_ Domänen \_ Objekt
+E \_ ADS \_ INVALID \_ DOMAIN \_ OBJECT
 
-E \_ ADS- \_ Eigenschaft \_ nicht \_ unterstützt
+E \_ \_ ADS-EIGENSCHAFT \_ WIRD NICHT \_ UNTERSTÜTZT
 
-E \_ ADS- \_ Eigenschaft \_ nicht \_ gefunden
+E \_ \_ ADS-EIGENSCHAFT \_ NICHT \_ GEFUNDEN
 
- 
+ 
 
- 
+ 
 
 
 

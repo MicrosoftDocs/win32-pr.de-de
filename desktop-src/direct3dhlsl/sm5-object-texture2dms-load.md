@@ -1,9 +1,9 @@
 ---
-title: 'Texture2DMS:: Load (int, int)-Funktion'
-description: 'Ruft einen Wert ab. | Texture2DMS:: Load (int, int)-Funktion'
+title: Texture2DMS::Load(int,int)-Funktion
+description: Ruft einen Wert ab. | Texture2DMS::Load(int,int)-Funktion
 ms.assetid: b49b94e0-5c49-4901-b49d-3e652d4fd2d1
 keywords:
-- Load-Funktion DXGI
+- DXGI der Load-Funktion
 topic_type:
 - apiref
 api_name:
@@ -13,14 +13,14 @@ api_type:
 ms.topic: reference
 ms.date: 05/31/2018
 api_location: ''
-ms.openlocfilehash: 7d9c86bea7d914dd5975105a00a64789864a1fbd
-ms.sourcegitcommit: 92e74c99f8f4d097676959d0c317f533c2400a80
+ms.openlocfilehash: 0997a1bd30b4912864674015057fcafec227d90ad05b16b88fd3f05b671f155c
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/09/2021
-ms.locfileid: "104981592"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118285728"
 ---
-# <a name="texture2dmsloadintint-function"></a>Texture2DMS:: Load (int, int)-Funktion
+# <a name="texture2dmsloadintint-function"></a>Texture2DMS::Load(int,int)-Funktion
 
 Ruft einen Wert ab.
 
@@ -37,21 +37,21 @@ T Load(
 
 <dl> <dt>
 
-*Koord* \[ in\]
+*coord* \[ In\]
 </dt> <dd>
 
 Typ: **int2**
 
-Der Eingabe Speicherort.
+Die Eingabeposition.
 
 </dd> <dt>
 
-*sampleingedex* \[ in\]
+*sampleindex* \[ In\]
 </dt> <dd>
 
 Typ: **[ **int**](/windows/desktop/WinProg/windows-data-types)**
 
-Der Beispiel Index.
+Der Beispielindex.
 
 </dd> </dl>
 
@@ -59,9 +59,9 @@ Der Beispiel Index.
 
 Typ: **T**
 
-Ein-Wert, dessen Typ mit dem Typ der Textur Vorlage übereinstimmt.
+Ein -Wert, dessen Typ mit dem Texturvorlagentyp übereinstimmt.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
 Dies ist eine Liste der überladenen Versionen dieser Methode.
 
@@ -74,11 +74,11 @@ void Load(in int2 coord,
 
 
 
-Diese Funktion wird für die folgenden Typen von Shadern unterstützt:
+Diese Funktion wird für die folgenden Shadertypen unterstützt:
 
 
 
-| Scheitelpunkt | Hülle | Domain | Geometrie | Pixel | Compute |
+| Scheitelpunkt | Rumpf | Domain | Geometrie | Pixel | Compute |
 |--------|------|--------|----------|-------|---------|
 |        |      |        |          | x     | x       |
 
@@ -86,14 +86,14 @@ Diese Funktion wird für die folgenden Typen von Shadern unterstützt:
 
  
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 
-[Lade Methoden](texture2dms-load.md)
+[Laden von Methoden](texture2dms-load.md)
 </dt> <dt>
 
-[Shader-Modell 5](d3d11-graphics-reference-sm5.md)
+[Shadermodell 5](d3d11-graphics-reference-sm5.md)
 </dt> </dl>
 
  

@@ -1,44 +1,44 @@
 ---
-title: Implementieren des Kontextmenü-com-Objekts
-description: Eine Kontextmenüerweiterung ist ein COM-Objekt, das als in-proc-Server implementiert wird.
+title: Implementieren des COM-Objekts im Kontextmenü
+description: Eine Kontextmenüerweiterung ist ein COM-Objekt, das als Prozessserver implementiert wird.
 ms.assetid: 362dd8e5-1518-4bf4-ac53-115263cd6c62
 ms.tgt_platform: multiple
 keywords:
-- Kontextmenü-com-Objekt AD
-- Kontextmenü-com-Objekt AD, implementieren
+- Kontextmenü COM-Objekt AD
+- 'Kontextmenü: COM-Objekt AD, Implementieren'
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: a34d6b487d130327b379ed845f2d0157f2b28056
-ms.sourcegitcommit: 803f3ccd65bdefe36bd851b9c6e7280be9489016
+ms.openlocfilehash: 53ac371ea64239c18de2a8f30c969eb6d920221f0a802f18ceeebfef2c3991e8
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "106339471"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118187648"
 ---
-# <a name="implementing-the-context-menu-com-object"></a>Implementieren des Kontextmenü-com-Objekts
+# <a name="implementing-the-context-menu-com-object"></a>Implementieren des COM-Objekts im Kontextmenü
 
-Eine Kontextmenüerweiterung ist ein COM-Objekt, das als in-proc-Server implementiert wird. Die Kontextmenüerweiterung muss die [**ishellextinit**](/windows/win32/api/shobjidl_core/nn-shobjidl_core-ishellextinit) -und [**IContextMenu**](/windows/win32/api/shobjidl_core/nn-shobjidl_core-icontextmenu) -Schnittstellen implementieren. Eine Kontextmenüerweiterung wird instanziiert, wenn der Benutzer das Kontextmenü für ein Objekt einer Klasse anzeigt, für die die Kontextmenüerweiterung registriert wurde.
+Eine Kontextmenüerweiterung ist ein COM-Objekt, das als Prozessserver implementiert wird. Die Kontextmenüerweiterung muss die Schnittstellen [**IShellExtInit**](/windows/win32/api/shobjidl_core/nn-shobjidl_core-ishellextinit) und [**IContextMenu**](/windows/win32/api/shobjidl_core/nn-shobjidl_core-icontextmenu) implementieren. Eine Kontextmenüerweiterung wird instanziiert, wenn der Benutzer das Kontextmenü für ein Objekt einer Klasse anzeigt, für das die Kontextmenüerweiterung registriert wurde.
 
-## <a name="implementing-ishellextinit"></a>Implementieren von ishellextinit
+## <a name="implementing-ishellextinit"></a>Implementieren von IShellExtInit
 
-Nachdem das COM-Objekt der Kontextmenüerweiterung instanziiert wurde, wird die [**ishellextinit:: Initialize**](/windows/win32/api/shobjidl_core/nf-shobjidl_core-ishellextinit-initialize) -Methode aufgerufen. **Ishellextinit:: Initialize** liefert die Kontextmenüerweiterung mit einem [**IDataObject**](/windows/win32/api/objidl/nn-objidl-idataobject) -Objekt, das Daten enthält, die für das Verzeichnis Objekt relevant sind, für das das Kontextmenü gilt.
+Nachdem das COM-Objekt der Kontextmenüerweiterung instanziiert wurde, wird die [**IShellExtInit::Initialize-Methode**](/windows/win32/api/shobjidl_core/nf-shobjidl_core-ishellextinit-initialize) aufgerufen. **IShellExtInit::Initialize** stellt die Kontextmenüerweiterung mit einem [**IDataObject-Objekt**](/windows/win32/api/objidl/nn-objidl-idataobject) bereit, das Daten enthält, die für das Verzeichnisobjekt relevant sind, für das das Kontextmenü gilt.
 
-Das [**IDataObject-Objekt**](/windows/win32/api/objidl/nn-objidl-idataobject) enthält Daten im [**cfstr \_ dsobjectnames**](/previous-versions/windows/desktop/mmc/cfstr-dsobjectnames-clipboard-format) -Format. Das Datenformat **cfstr \_ dsobjectnames** ist ein **HGLOBAL** , das eine [**dsobjectnames**](/windows/desktop/api/Dsclient/ns-dsclient-dsobjectnames) -Struktur enthält. Die **dsobjectnames** -Struktur enthält Daten über das Verzeichnis Objekt, auf das die Eigenschaften Blatt Erweiterung angewendet wird.
+Das [**IDataObject**](/windows/win32/api/objidl/nn-objidl-idataobject) enthält Daten im [**CFSTR \_ DSOBJECTNAMES-Format.**](/previous-versions/windows/desktop/mmc/cfstr-dsobjectnames-clipboard-format) Das **CFSTR \_ DSOBJECTNAMES-Datenformat** ist ein **HGLOBAL-Objekt,** das eine [**DSOBJECTNAMES-Struktur**](/windows/desktop/api/Dsclient/ns-dsclient-dsobjectnames) enthält. Die **DSOBJECTNAMES-Struktur** enthält Daten über das Verzeichnisobjekt, für das die Eigenschaftenblatterweiterung gilt.
 
-Das [**IDataObject-Objekt**](/windows/win32/api/objidl/nn-objidl-idataobject) enthält auch Daten im Format der Optionen für die [**cfstr \_ DS- \_ Anzeige \_ Spezifikation \_**](cfstr-ds-display-spec-options.md) . Das Datenformat der **cfstr \_ DS- \_ Anzeige \_ \_ Spezifikation** ist ein **HGLOBAL** , das eine [**dsdisplayspecoptions**](/windows/desktop/api/Dsclient/ns-dsclient-dsdisplayspecoptions) -Struktur enthält. **Dsdisplayspecoptions** enthält Konfigurationsdaten, die von der Erweiterung verwendet werden können.
+Das [**IDataObject**](/windows/win32/api/objidl/nn-objidl-idataobject) enthält auch Daten im [**FORMAT CFSTR \_ DS DISPLAY SPEC \_ \_ \_ OPTIONS.**](cfstr-ds-display-spec-options.md) Das **CFSTR \_ DS \_ DISPLAY SPEC \_ \_ OPTIONS-Datenformat** ist ein **HGLOBAL-Format,** das eine [**DSDISPLAYSPECOPTIONS-Struktur**](/windows/desktop/api/Dsclient/ns-dsclient-dsdisplayspecoptions) enthält. **DSDISPLAYSPECOPTIONS** enthält Konfigurationsdaten für die Verwendung durch die Erweiterung.
 
-Wenn ein anderer Wert als **S \_ OK** von [**ishellextinit:: Initialize**](/windows/win32/api/shobjidl_core/nf-shobjidl_core-ishellextinit-initialize)zurückgegeben wird, wird die Kontextmenüerweiterung nicht verwendet.
+Wenn von [**IShellExtInit::Initialize**](/windows/win32/api/shobjidl_core/nf-shobjidl_core-ishellextinit-initialize)ein anderer Wert als **S \_ OK** zurückgegeben wird, wird die Kontextmenüerweiterung nicht verwendet.
 
-Die Parameter " *pidlfolder* " und " *hkeyprogid* " der [**ishellextinit:: Initialize**](/windows/win32/api/shobjidl_core/nf-shobjidl_core-ishellextinit-initialize) -Methode werden nicht verwendet.
+Die Parameter *pidlFolder* und *hkeyProgID* der [**IShellExtInit::Initialize-Methode**](/windows/win32/api/shobjidl_core/nf-shobjidl_core-ishellextinit-initialize) werden nicht verwendet.
 
 ## <a name="implementing-icontextmenu"></a>Implementieren von IContextMenu
 
-Nachdem [**ishellextinit:: Initialize**](/windows/win32/api/shobjidl_core/nf-shobjidl_core-ishellextinit-initialize) zurückgegeben wurde, wird die [**IContextMenu:: querycontextmenu**](/windows/win32/api/shobjidl_core/nf-shobjidl_core-icontextmenu-querycontextmenu) -Methode aufgerufen, um die Menü Elemente zu erhalten, die von der Kontextmenüerweiterung hinzugefügt werden. Die **querycontextmenu** -Implementierung ist recht unkompliziert. Die Kontextmenüerweiterung fügt die Menü Elemente mithilfe der [**InsertMenuItem**](/windows/win32/api/winuser/nf-winuser-insertmenuitema) -Funktion oder einer ähnlichen Funktion hinzu. Die Menübefehls Bezeichner müssen größer oder gleich *idcmdfirst* sein und müssen kleiner als *idcmdlast* sein. **Querycontextmenu** muss den größten numerischen Bezeichner zurückgeben, der dem Menü plus 1 hinzugefügt wurde. Die beste Möglichkeit, Menübefehls Bezeichner zuzuweisen, besteht darin, bei Null zu beginnen und nacheinander zu arbeiten. Wenn die Kontextmenüerweiterung keine Menü Elemente benötigt, sollten Sie dem Menü einfach keine Elemente hinzufügen und NULL aus **querycontextmenu** zurückgeben.
+Nachdem [**IShellExtInit::Initialize**](/windows/win32/api/shobjidl_core/nf-shobjidl_core-ishellextinit-initialize) zurückgegeben wurde, wird die [**IContextMenu::QueryContextMenu-Methode**](/windows/win32/api/shobjidl_core/nf-shobjidl_core-icontextmenu-querycontextmenu) aufgerufen, um die Menüelemente abzurufen, die von der Kontextmenüerweiterung hinzugefügt werden. Die **QueryContextMenu-Implementierung** ist recht einfach. Die Kontextmenüerweiterung fügt ihre Menüelemente mithilfe der [**InsertMenuItem-Funktion**](/windows/win32/api/winuser/nf-winuser-insertmenuitema) oder einer ähnlichen Funktion hinzu. Die Menübefehlsbezeichner müssen größer oder gleich *idCmdFirst* und kleiner als *idCmdLast* sein. **QueryContextMenu** muss den größten numerischen Bezeichner zurückgeben, der dem Menü plus 1 hinzugefügt wurde. Die beste Möglichkeit zum Zuweisen von Menübefehlsbezeichnern besteht darin, bei null zu beginnen und nacheinander zu arbeiten. Wenn die Kontextmenüerweiterung keine Menüelemente benötigen, sollte sie dem Menü einfach keine Elemente hinzufügen und 0 (null) von **QueryContextMenu** zurückgeben.
 
-[**IContextMenu:: getcommandstring**](/windows/win32/api/shobjidl_core/nf-shobjidl_core-icontextmenu-getcommandstring) wird aufgerufen, um Textdaten für das Menü Element abzurufen, z. b. den Hilfetext, der für das Menü Element angezeigt werden soll. Es ist möglich, dass der Kontextmenü Host Unicode-Zeichen folgen verwendet, während die Erweiterung ANSI-Zeichen folgen verwendet. Aus diesem Grund müssen die Fälle " **GCS \_ helptexta**", " **GCS \_ helptextw**", " **GCS \_ Verba** " und " **GCS \_ verbw** " einzeln behandelt werden. Die Implementierung dieser Methode ist optional.
+[**IContextMenu::GetCommandString**](/windows/win32/api/shobjidl_core/nf-shobjidl_core-icontextmenu-getcommandstring) wird aufgerufen, um Textdaten für das Menüelement abzurufen, z. B. Hilfetext, der für das Menüelement angezeigt werden soll. Es ist möglich, dass der Kontextmenühost Unicode-Zeichenfolgen verwendet, während die Erweiterung ANSI-Zeichenfolgen verwendet. Aus diesem Grund müssen die **GCS \_ HELPTEXTA-,** **GCS \_ HELPTEXTW-,** **GCS \_ VERBA-** und **GCS \_ VERBW-Fälle** einzeln behandelt werden. Die Implementierung dieser Methode ist optional.
 
-[**IContextMenu:: InvokeCommand**](/windows/win32/api/shobjidl_core/nf-shobjidl_core-icontextmenu-invokecommand) wird aufgerufen, wenn eines der von der Kontextmenüerweiterung installierten Menü Elemente ausgewählt wird. Das Kontextmenü führt die gewünschten Aktionen als Reaktion auf diese Methode aus oder initiiert Sie.
+[**IContextMenu::InvokeCommand**](/windows/win32/api/shobjidl_core/nf-shobjidl_core-icontextmenu-invokecommand) wird aufgerufen, wenn eines der von der Kontextmenüerweiterung installierten Menüelemente ausgewählt ist. Das Kontextmenü führt die gewünschten Aktionen als Reaktion auf diese Methode aus oder initiiert sie.
 
- 
+ 
 
- 
+ 

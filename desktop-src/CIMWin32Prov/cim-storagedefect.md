@@ -1,5 +1,5 @@
 ---
-description: Die CIM \_ storagemängel-Aggregation sammelt die Speicherfehler für einen Speicherblock.
+description: Die AGGREGATION CIM \_ StorageDefect erfasst die Speicherfehler für einen Speicherspeicher.
 ms.assetid: 7acd3d25-4691-43cb-badc-662684989345
 ms.tgt_platform: multiple
 title: CIM_StorageDefect-Klasse
@@ -16,23 +16,23 @@ api_type:
 - DllExport
 api_location:
 - CIMWin32.dll
-ms.openlocfilehash: 8e6c2be45fe2f44afa407dc72e3ae90c486593ec
-ms.sourcegitcommit: c7add10d695482e1ceb72d62b8a4ebd84ea050f7
+ms.openlocfilehash: 157714f9af979b34d647b1b02b1055b1cdac2ca0d84d3328c2c4740f9992024e
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "103958560"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118420968"
 ---
-# <a name="cim_storagedefect-class"></a>CIM \_ storagemängel-Klasse
+# <a name="cim_storagedefect-class"></a>CIM \_ StorageDefect-Klasse
 
-Die **CIM \_ storagemängel** -Aggregation sammelt die Speicherfehler für einen Speicherblock.
+Die **AGGREGATION CIM \_ StorageDefect** erfasst die Speicherfehler für einen Speicherspeicher.
 
 > [!IMPORTANT]
-> Die Klassen der DMTF-CIM (Common Information Model) sind die übergeordneten Klassen, auf denen WMI-Klassen erstellt werden. WMI unterstützt zurzeit nur die [CIM 2. x-Versions Schemas](https://dmtf.org/standards/cim/schemas).
+> Die CIM-Klassen (Distributed Management Task Force) (DMTF) (Common Information Model) sind die übergeordneten Klassen, auf denen WMI-Klassen erstellt werden. WMI unterstützt derzeit nur die [CIM 2.x-Versionsschemas.](https://dmtf.org/standards/cim/schemas)
 
  
 
-Die folgende Syntax wird aus dem MOF-Code (Managed Object Format) vereinfacht und enthält alle geerbten Eigenschaften. Eigenschaften werden in alphabetischer Reihenfolge und nicht in der MOF-Reihenfolge aufgelistet.
+Die folgende Syntax wird durch Managed Object Format (MOF)-Code vereinfacht und enthält alle geerbten Eigenschaften. Eigenschaften werden in alphabetischer Reihenfolge und nicht in MOF-Reihenfolge aufgelistet.
 
 ## <a name="syntax"></a>Syntax
 
@@ -47,36 +47,36 @@ class CIM_StorageDefect
 
 ## <a name="members"></a>Member
 
-Die **CIM \_ storagemängel** -Klasse verfügt über diese Typen von Membern:
+Die **CIM \_ StorageDefect-Klasse** verfügt über die folgenden Membertypen:
 
 -   [Eigenschaften](#properties)
 
 ### <a name="properties"></a>Eigenschaften
 
-Die **CIM \_ storagemängel** -Klasse verfügt über diese Eigenschaften.
+Die **CIM \_ StorageDefect-Klasse** verfügt über diese Eigenschaften.
 
 <dl> <dt>
 
 **Fehler**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **CIM \_ storageerror**
+Datentyp: **CIM \_ StorageError**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [ **schwach**](/windows/desktop/WmiSdk/standard-qualifiers)
+Qualifizierer: [ **Schwach**](/windows/desktop/WmiSdk/standard-qualifiers)
 </dt> </dl>
 
-Verweis auf das Error-Objekt, das die Anfangs-und Endadressen definiert, die aus dem Speicherblock zugeordnet sind.
+Verweis auf das Fehlerobjekt, das die Start- und Endadressen definiert, die dem Speicher extent zugeordnet sind.
 
 </dd> <dt>
 
 **Extent**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **CIM \_ storageblock**
+Datentyp: **CIM \_ StorageExtent**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
@@ -85,15 +85,15 @@ Zugriffstyp: Schreibgeschützt
 Qualifizierer: [**Aggregate**](/windows/desktop/WmiSdk/standard-qualifiers), [**Max**](/windows/desktop/WmiSdk/standard-qualifiers) (1), [**Min**](/windows/desktop/WmiSdk/standard-qualifiers) (1)
 </dt> </dl>
 
-Verweis auf den Speicherblock, in dem die Fehler aufgetreten sind.
+Verweis auf den Speicher extent, in dem die Fehler aufgetreten sind.
 
 </dd> </dl>
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Diese Klasse wird von WMI nicht implementiert.
+WMI implementiert diese Klasse nicht.
 
-Diese Dokumentation wird von den von der DMTF veröffentlichten CIM-Klassen Beschreibungen abgeleitet. Microsoft hat möglicherweise Änderungen an den korrekten geringfügigen Fehlern vorgenommen, den Microsoft SDK-Dokumentations Standards entsprechen oder weitere Informationen bereitstellen.
+Diese Dokumentation wird von den CIM-Klassenbeschreibungen abgeleitet, die von DMTF veröffentlicht wurden. Microsoft hat möglicherweise Änderungen vorgenommen, um kleinere Fehler zu beheben, die Dokumentationsstandards des Microsoft SDK zu erfüllen oder weitere Informationen zur Verfügung zu stellen.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -103,8 +103,8 @@ Diese Dokumentation wird von den von der DMTF veröffentlichten CIM-Klassen Besc
 |-------------------------------------|-----------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows Vista<br/>                                                                |
 | Unterstützte Mindestversion (Server)<br/> | Windows Server 2008<br/>                                                          |
-| Namespace<br/>                | Root \\ CIMV2<br/>                                                                  |
-| MOF<br/>                      | <dl> <dt>Cimwin32. MOF</dt> </dl> |
+| Namespace<br/>                | \\Stamm-CIMV2<br/>                                                                  |
+| MOF<br/>                      | <dl> <dt>CIMWin32.mof</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>CIMWin32.dll</dt> </dl> |
 
 

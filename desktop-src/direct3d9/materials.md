@@ -1,51 +1,51 @@
 ---
-description: Material beschreibt die Darstellung von Polygonen in einer 3D-Szene und die Anzeige von Licht.
+description: Materialien beschreiben, wie Polygone Licht reflektieren oder in einer 3D-Szene Licht ausgeben.
 ms.assetid: vs|directx_sdk|~\materials.htm
-title: Material (Direct3D 9)
+title: Materialien (Direct3D 9)
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 64e75953fd5839e1b3e7b9cc89b7331147cdb585
-ms.sourcegitcommit: a47bd86f517de76374e4fff33cfeb613eb259a7e
+ms.openlocfilehash: 5e8140de30243c7a0f7290715da3d0720cd15cea769bd78cbf66893c0082062d
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/06/2021
-ms.locfileid: "104566661"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118092952"
 ---
-# <a name="materials-direct3d-9"></a>Material (Direct3D 9)
+# <a name="materials-direct3d-9"></a>Materialien (Direct3D 9)
 
-Material beschreibt die Darstellung von Polygonen in einer 3D-Szene und die Anzeige von Licht. Material Properties (Material Properties) erläutert die diffuser-Reflektion eines Materials, Ambient Reflection, Light-und Glanz Merkmale. Direct3D verwendet die [**D3DMATERIAL9**](d3dmaterial9.md) -Struktur, um alle Material Eigenschafts Informationen zu übertragen. Mit Ausnahme der Glanz Eigenschaft wird jede Eigenschaft als RGBA-Farbe beschrieben, die angibt, wie viel der roten, grünen und blauen Teile eines bestimmten Typs von Licht reflektiert wird, und ein Alpha Mischungs Faktor.
+Materialien beschreiben, wie Polygone Licht reflektieren oder in einer 3D-Szene Licht ausgeben. Materialeigenschaften beschreiben die diffuse Reflektion, Umgebungsreflektion, Lichtemission und Glanzlichtmerkmale eines Materials. Direct3D verwendet die [**D3DMATERIAL9-Struktur,**](d3dmaterial9.md) um alle Materialeigenschaftsinformationen zu enthalten. Mit Ausnahme der Glanzeigenschaft wird jede Eigenschaft als RGBA-Farbe beschrieben, die den Anteil der roten, grünen und blauen Teile eines angegebenen Lichttyps darstellt, den sie reflektiert, und als Alphablendfaktor.
 
-## <a name="diffuse-and-ambient-reflection"></a>Diffuses und Ambient-Reflektion
+## <a name="diffuse-and-ambient-reflection"></a>Diffus und Umgebungsreflektion
 
-Die diffusen und Ambient-Member der [**D3DMATERIAL9**](d3dmaterial9.md) -Struktur beschreiben, wie ein Material die Umgebungs-und diffuse Beleuchtung in einer Szene widerspiegelt. Da die meisten Szenen viel mehr diffuses Licht als Ambient-Light enthalten, spielt die diffuse Reflektion den größten Teil bei der Bestimmung der Farbe. Da diffuses Licht direktional ist, wirkt sich der Winkel der Vorkommen für diffuses Licht außerdem auf die Gesamtintensität der Reflektion aus. Die diffuses Reflektion ist am größten, wenn das Licht einen Scheitelpunkt parallel zum Scheitelpunkt des Scheitel Punkts Wenn sich der Winkel vergrößert, verringert sich die Auswirkung der diffusen Reflektion. Der dargestellte Licht Wert ist der Kosinus des Winkels zwischen dem eingehenden Licht und dem Scheitelpunkt normal, wie in der folgenden Abbildung dargestellt.
+Die Diffuse- und Ambient-Member der [**D3DMATERIAL9-Struktur**](d3dmaterial9.md) beschreiben, wie ein Material das Umgebungslicht und das diffuse Licht in einer Szene widerspiegelt. Da die meisten Szenen viel mehr diffuses Licht als Umgebungslicht enthalten, spielt die diffuse Reflektion die größte Rolle bei der Bestimmung der Farbe. Da diffuses Licht richtungsrichtungsbedingt ist, wirkt sich der Neigungswinkel für diffuses Licht auf die Gesamtdichte der Reflexion aus. Diffuse Reflektion ist am größten, wenn das Licht einen Scheitelpunkt parallel zur Scheitelpunktnorm normal aufstst. Wenn der Winkel zunimmt, verringert sich die Auswirkung der diffusen Reflektion. Die reflektierte Lichtmenge ist der Kosinus des Winkels zwischen dem eingehenden Licht und der Scheitelpunktnorm normal, wie in der folgenden Abbildung dargestellt.
 
-![Darstellung der Menge der reflektierten Beleuchtung](images/incident.png)
+![Abbildung der Menge des reflektierten Lichts](images/incident.png)
 
-Ambient-Reflektion, wie Ambient Light, ist nicht direktional. Ambient-Reflektion wirkt sich weniger auf die sichtbare Farbe eines gerenderten Objekts aus, wirkt sich aber auf die Gesamtfarbe aus und ist besonders bemerkbar, wenn wenig oder kein diffuses Licht das Material widerspiegelt. Die Ambient-Reflektion eines Materials wird durch das Aufrufen der [**IDirect3DDevice9:: setrenderstate**](/windows/win32/api/d3d9helper/nf-d3d9helper-idirect3ddevice9-setrenderstate) -Methode mit dem D3DRS Ambient-Flag von der Ambient-Lichtmenge beeinflusst \_ .
+Umgebungsreflektion ist, wie Umgebungslicht, nicht direkt. Die Umgebungsreflektion wirkt sich weniger auf die sichtbare Farbe eines gerenderten Objekts aus, wirkt sich jedoch auf die Gesamtfarbe aus und ist am deutlichsten, wenn wenig oder kein diffuses Licht das Material reflektiert. Die Umgebungsreflektion eines Materials wird durch den Umgebungslichtsatz für eine Szene beeinflusst, indem die [**IDirect3DDevice9::SetRenderState-Methode**](/windows/win32/api/d3d9helper/nf-d3d9helper-idirect3ddevice9-setrenderstate) mit dem D3DRS \_ AMBIENT-Flag aufgerufen wird.
 
-Diffuses und Ambient Reflection arbeiten zusammen, um die wahrgenommene Farbe eines Objekts zu ermitteln, und sind in der Regel identische Werte. Zum Rendering eines blauen kristallinen Objekts erstellen Sie z. b. ein Material, das nur die blaue Komponente der diffuses und Ambient-hell darstellt. Wenn Sie in einem Raum mit einem weißen Licht platziert werden, scheint der Kristall blau zu sein. In einem Raum, der nur über ein rotes Licht verfügt, wäre der gleiche Kristall aber schwarz, da sein Material kein rotes Licht widerspiegelt.
+Diffuse und Umgebungsreflektion arbeiten zusammen, um die wahrgenommene Farbe eines Objekts zu bestimmen, und sind in der Regel identische Werte. Um z. B. ein blaues, helles Objekt zu rendern, erstellen Sie ein Material, das nur die blaue Komponente von diffusem und Umgebungslicht widerspiegelt. Wenn es in einem Raum mit einem weißen Licht platziert wird, scheint das Gitterblau zu sein. In einem Raum, der nur rotes Licht aufwies, scheint dasselbe Gitterschwarz zu sein, da das Material kein rotes Licht widerspiegelt.
 
-## <a name="emission"></a>Umwelt
+## <a name="emission"></a>Emission
 
-Material kann verwendet werden, um ein gerendertes Objekt scheinbar selbst zu gestalten. Der emissive-Member der [**D3DMATERIAL9**](d3dmaterial9.md) -Struktur wird verwendet, um die Farbe und Transparenz des ausgegebenen Lichts zu beschreiben. Die Berechnung wirkt sich auf die Farbe eines Objekts aus und kann z. b. ein dunkles Material heller machen und einen Teil der ausgegebenen Farbe annehmen.
+Materialien können verwendet werden, damit ein gerenderte Objekt selbsterkannt zu sein scheint. Der Emissive-Member der [**D3DMATERIAL9-Struktur**](d3dmaterial9.md) wird verwendet, um die Farbe und Transparenz des ausgegebenen Lichts zu beschreiben. Ausgabe wirkt sich auf die Farbe eines Objekts aus und kann z. B. ein dunkles Material hell machen und einen Teil der ausgegebenen Farbe übernehmen.
 
-Sie können die Eigenschaft "selbst leuchtendes" eines Materials verwenden, um die Illusion hinzuzufügen, dass ein Objekt Licht ausgibt, ohne dass der Berechnungs Aufwand für das Hinzufügen eines Lichts zur Szene entsteht. Im Fall des blauen Kristalls ist die selbst leuchtendes-Eigenschaft nützlich, wenn Sie den Kristall anhellen, aber nicht für andere Objekte in der Szene umwandeln möchten. Beachten Sie, dass Materialien mit selbst leuchtendes-Eigenschaften kein Licht ausgeben, das von anderen Objekten in einer Szene reflektiert werden kann. Um diese reflektierte Beleuchtung zu erzielen, müssen Sie in der Szene ein zusätzliches Licht platzieren.
+Sie können die freizügige Eigenschaft eines Materials verwenden, um die Vorstellung hinzuzufügen, dass ein Objekt Licht aussendet, ohne den Rechenaufwand zu verursachen, der durch das Hinzufügen eines Lichts zur Szene entsteht. Im Fall des blauen Steines ist die freizügige Eigenschaft nützlich, wenn Sie möchten, dass das Steine aufleuchten, aber kein Licht auf andere Objekte in der Szene werfen soll. Denken Sie daran, dass Materialien mit freizügigen Eigenschaften kein Licht ausgeben, das von anderen Objekten in einer Szene reflektiert werden kann. Um dieses reflektierte Licht zu erreichen, müssen Sie ein zusätzliches Licht innerhalb der Szene platzieren.
 
-## <a name="specular-reflection"></a>Glanz Reflektion
+## <a name="specular-reflection"></a>Spiegelung
 
-Die Glanz Reflektion erstellt Hervorhebungen für Objekte, sodass Sie glänzend erscheinen. Die [**D3DMATERIAL9**](d3dmaterial9.md) -Struktur enthält zwei Member, die die Glanz Hervorhebungs Farbe und die Gesamtstruktur des Materials beschreiben. Sie legen die Farbe der Glanzlichter fest, indem Sie das Glanz Element auf die gewünschte RGBA-Farbe festlegen. die gebräuchlichsten Farben sind weiß oder hellgrau. Die Werte, die Sie im Power Member festlegen, Steuern, wie scharf die Glanzeffekte sind.
+Die Glanzreflektion erstellt Hervorhebungen für Objekte, sodass sie liglig erscheinen. Die [**D3DMATERIAL9-Struktur**](d3dmaterial9.md) enthält zwei Member, die die Glanzlichtfarbe sowie die Allgemeine Färbung des Materials beschreiben. Sie legen die Farbe der Glanzlichter fest, indem Sie das Specular-Element auf die gewünschte RGBA-Farbe festlegen. Die gängigsten Farben sind Weiß oder Hellgrau. Die Werte, die Sie im Power-Member festlegen, steuern, wie stark die Glanzeffekte sind.
 
-Glanzlichter können zu drastischen Auswirkungen führen. Das erneute zeichnen auf der blauen Crystal-Analogie: mit einem größeren Leistungswert werden schärfere Glanzlichter erzeugt, sodass der Kristall scheinbar ziemlich glänzend erscheint. Kleinere Werte vergrößern den Bereich des Effekts, wodurch eine langweilige Reflektion erstellt wird, die den Kristall Sinn macht. Wenn Sie ein Objekt wirklich Matt machen möchten, legen Sie den-Wert für das-Element auf NULL und die Farbe in Glanz auf Schwarz fest. Experimentieren Sie mit verschiedenen Reflexions Stufen, um eine realistische Darstellung Ihrer Bedürfnisse zu schaffen. Die folgende Abbildung zeigt zwei identische Modelle. Auf der linken Seite wird eine Glanz Fähigkeit von 10 verwendet. das Modell auf der rechten Seite hat keine Glanz Reflektion.
+Glanzlichter können zu drastischen Effekten führen. Erneutes Zeichnen auf der analogen Blauen Steine: Ein größerer Power-Wert erzeugt schärferen Glanzlichter, sodass das Steine recht blendig zu sein scheint. Kleinere Werte vergrößern den Bereich des Effekts und erzeugen eine dumpfe Reflektion, die das Aussehen des Gitters glättet. Um ein Objekt wirklich matt zu machen, legen Sie den Power-Member auf 0 (null) und die Farbe in Specular auf black (Schwarz) fest. Experimentieren Sie mit verschiedenen Reflektionsebenen, um eine realistische Darstellung für Ihre Anforderungen zu erzielen. Die folgende Abbildung zeigt zwei identische Modelle. Der linke verwendet eine Glanzreflektionsleistung von 10. das Modell auf der rechten Seite hat keine Glanzreflektion.
 
-![Abbildung von Glanz reflektionstypen](images/spechigh.png)
+![Abbildung von Spiegelungsreflektionsmodellen](images/spechigh.png)
 
-## <a name="setting-material-properties"></a>Festlegen von Material Eigenschaften
+## <a name="setting-material-properties"></a>Festlegen von Materialeigenschaften
 
-Direct3D-renderinggeräte können jeweils mit einem Satz von Materialeigenschaften gerendert werden.
+Direct3D-Renderinggeräte können jeweils mit einer Reihe von Materialeigenschaften gerendert werden.
 
-In einer C++-Anwendung legen Sie die Materialeigenschaften fest, die das System verwendet, indem Sie eine [**D3DMATERIAL9**](d3dmaterial9.md) -Struktur vorbereiten und dann die [**IDirect3DDevice9:: setmaterial**](/windows/win32/api/d3d9helper/nf-d3d9helper-idirect3ddevice9-setmaterial) -Methode aufrufen.
+In einer C++-Anwendung legen Sie die material-Eigenschaften fest, die das System verwendet, indem Sie eine [**D3DMATERIAL9-Struktur**](d3dmaterial9.md) vorbereiten und dann die [**IDirect3DDevice9::SetMaterial-Methode**](/windows/win32/api/d3d9helper/nf-d3d9helper-idirect3ddevice9-setmaterial) aufrufen.
 
-Um die [**D3DMATERIAL9**](d3dmaterial9.md) -Struktur für die Verwendung vorzubereiten, legen Sie die Eigenschafts Informationen in der-Struktur fest, um den gewünschten Effekt beim Rendern zu erzielen. Im folgenden Codebeispiel wird die **D3DMATERIAL9** -Struktur für ein Violettes Material mit scharfen weißen Glanzlichtern eingerichtet.
+Um die [**D3DMATERIAL9-Struktur**](d3dmaterial9.md) für die Verwendung vorzubereiten, legen Sie die Eigenschafteninformationen in der -Struktur fest, um den gewünschten Effekt während des Renderings zu erstellen. Im folgenden Codebeispiel wird die **D3DMATERIAL9-Struktur** für ein violettes Material mit spitzen weißen Glanzlichter eingerichtet.
 
 
 ```
@@ -79,7 +79,7 @@ mat.Emissive.a = 0.0f;
 
 
 
-Nachdem Sie die [**D3DMATERIAL9**](d3dmaterial9.md) -Struktur vorbereitet haben, wenden Sie die Eigenschaften an, indem Sie die [**IDirect3DDevice9:: setmaterial**](/windows/win32/api/d3d9helper/nf-d3d9helper-idirect3ddevice9-setmaterial) -Methode des renderinggeräts aufrufen. Diese Methode akzeptiert die Adresse einer vorbereiteten **D3DMATERIAL9** -Struktur als einzigen Parameter. **IDirect3DDevice9:: setmaterial** kann nach Bedarf mit neuen Informationen aufgerufen werden, um die Materialeigenschaften für das Gerät zu aktualisieren. Das folgende Codebeispiel zeigt, wie dies im Code aussehen könnte.
+Nachdem Sie die [**D3DMATERIAL9-Struktur**](d3dmaterial9.md) vorbereitet haben, wenden Sie die Eigenschaften an, indem Sie die [**IDirect3DDevice9::SetMaterial-Methode**](/windows/win32/api/d3d9helper/nf-d3d9helper-idirect3ddevice9-setmaterial) des Renderinggeräts aufrufen. Diese Methode akzeptiert die Adresse einer vorbereiteten **D3DMATERIAL9-Struktur** als einzigen Parameter. Sie können **IDirect3DDevice9::SetMaterial** nach Bedarf mit neuen Informationen aufrufen, um die Materialeigenschaften für das Gerät zu aktualisieren. Das folgende Codebeispiel zeigt, wie dies im Code aussehen könnte.
 
 
 ```
@@ -96,25 +96,25 @@ if(FAILED(hr))
 
 
 
-Wenn Sie ein Direct3D-Gerät erstellen, wird das aktuelle Material automatisch auf den in der folgenden Tabelle angezeigten Standardwert festgelegt.
+Wenn Sie ein Direct3D-Gerät erstellen, wird das aktuelle Material automatisch auf die in der folgenden Tabelle gezeigte Standardeinstellung festgelegt.
 
 
 
 | Member   | Wert                |
 |----------|----------------------|
-| Diffus  | (R:0, g:0, b:0, a:0) |
-| Glänzend | (R:0, g:0, b:0, a:0) |
-| Umgebend  | (R:0, g:0, b:0, a:0) |
-| Selbstleuchtend | (R:0, g:0, b:0, a:0) |
-| Leistung    | (0,0)                |
+| Diffus  | (R:0, G:0, B:0, A:0) |
+| Glänzend | (R:0, G:0, B:0, A:0) |
+| Umgebend  | (R:0, G:0, B:0, A:0) |
+| Selbstleuchtend | (R:0, G:0, B:0, A:0) |
+| Power    | (0.0)                |
 
 
 
  
 
-## <a name="retrieving-material-properties"></a>Abrufen von Material Eigenschaften
+## <a name="retrieving-material-properties"></a>Abrufen von Materialeigenschaften
 
-Sie rufen die Materialeigenschaften ab, die das renderinggerät zurzeit durch Aufrufen der [**IDirect3DDevice9:: getmaterial**](/windows/desktop/api) -Methode für das Gerät verwendet. Anders als bei der [**IDirect3DDevice9:: setmaterial**](/windows/win32/api/d3d9helper/nf-d3d9helper-idirect3ddevice9-setmaterial) -Methode erfordert **IDirect3DDevice9:: getmaterial** keine Vorbereitung. Die **IDirect3DDevice9:: getmaterial** -Methode akzeptiert die Adresse einer [**D3DMATERIAL9**](d3dmaterial9.md) -Struktur und füllt die bereitgestellte-Struktur mit Informationen auf, die die aktuellen Materialeigenschaften vor der Rückgabe beschreiben.
+Sie rufen die Materialeigenschaften ab, die das Renderinggerät derzeit verwendet, indem Sie die [**IDirect3DDevice9::GetMaterial-Methode**](/windows/desktop/api) für das Gerät aufrufen. Im Gegensatz zur [**IDirect3DDevice9::SetMaterial-Methode**](/windows/win32/api/d3d9helper/nf-d3d9helper-idirect3ddevice9-setmaterial) ist für **IDirect3DDevice9::GetMaterial** keine Vorbereitung erforderlich. Die **IDirect3DDevice9::GetMaterial-Methode** akzeptiert die Adresse einer [**D3DMATERIAL9-Struktur**](d3dmaterial9.md) und füllt die bereitgestellte Struktur mit Informationen, die die aktuellen Materialeigenschaften beschreiben, bevor zurückgegeben wird.
 
 
 ```
@@ -133,7 +133,7 @@ if(FAILED(hr))
 
 
 > [!Note]  
-> Wenn die Anwendung keine Materialeigenschaften für das Rendering angibt, verwendet das System ein Standardmaterial. Das Standardmaterial reflektiert alle diffusen Licht weißen, z. b. ohne Ambient-oder Glanz Reflektion und ohne selbst leuchtendes Farbe.
+> Wenn ihre Anwendung keine Materialeigenschaften für das Rendering angibt, verwendet das System ein Standardmaterial. Das Standardmaterial spiegelt das gesamte diffuse Licht (z. B. weiß) ohne Umgebungs- oder Glanzreflektion und ohne freizügige Farbe wider.
 
  
 

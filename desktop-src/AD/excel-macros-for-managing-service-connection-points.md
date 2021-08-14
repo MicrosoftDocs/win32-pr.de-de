@@ -1,6 +1,6 @@
 ---
-title: Excel-Makros zum Verwalten von Dienst Verbindungs Punkten
-description: Dienst Verbindungspunkte können mithilfe von einfachen Excel-Makros verwaltet werden.
+title: Excel Makros zum Verwalten von Dienstverbindungspunkten
+description: Dienstverbindungspunkte können mithilfe einfacher Excel verwaltet werden.
 ms.assetid: da8a7363-6814-4c26-b259-53e6f6ba98cd
 ms.tgt_platform: multiple
 ms.topic: article
@@ -10,18 +10,18 @@ topic_type:
 api_name: ''
 api_type: ''
 api_location: ''
-ms.openlocfilehash: 69bc3561962b063c9128d46934d3cb87b84e0a24
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: f0f6d0897e7579fab45e5b952c3f03456f73a38183f07e87235f671f795763d8
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "106337755"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118189615"
 ---
-# <a name="excel-macros-for-managing-service-connection-points"></a>Excel-Makros zum Verwalten von Dienst Verbindungs Punkten
+# <a name="excel-macros-for-managing-service-connection-points"></a>Excel Makros zum Verwalten von Dienstverbindungspunkten
 
-Dienst Verbindungspunkte können mithilfe von einfachen Excel-Makros verwaltet werden.
+Dienstverbindungspunkte können mithilfe einfacher Excel verwaltet werden.
 
-Das folgende Excel-Makro zeigt die Mindestanforderungen für die Erstellung eines neuen Dienst Verbindungs Punkts.
+Im folgenden Excel-Makro werden die Mindestanforderungen zum Erstellen eines neuen Dienstverbindungspunkts veranschaulicht.
 
 
 ```VB
@@ -57,7 +57,7 @@ End Sub
 
 
 
-Das folgende Excel-Makro zeigt, wie der Beispiel Dienst-Verbindungspunkt gelöscht wird.
+Das folgende Excel-Makro zeigt, wie sie den Beispieldienstverbindungspunkt löschen.
 
 
 ```VB
@@ -78,9 +78,9 @@ End Sub
 
 
 
- 
+ 
 
- 
+ 
 
 
 

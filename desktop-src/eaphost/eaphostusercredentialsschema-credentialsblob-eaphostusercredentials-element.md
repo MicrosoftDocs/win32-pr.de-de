@@ -1,9 +1,9 @@
 ---
-title: Das Element "kredentialsblob" (eaphustuseranmeldeinformationen)
-description: Wird verwendet, wenn die Methoden Konfiguration ein binäres Blob anstelle von im XML-Textformat ist.
+title: CredentialsBlob(EapHostUserCredentials)-Element
+description: Wird verwendet, wenn die Methodenkonfiguration ein binäres BLOB und nicht im XML-Textformat ist.
 ms.assetid: 9d03374b-74f6-428e-8d3e-f8dccf51884e
 keywords:
-- Kredentialsblob-Element EAPHost
+- CredentialsBlob-Element EAPHost
 topic_type:
 - apiref
 api_name:
@@ -14,16 +14,16 @@ ms.topic: reference
 ms.date: 05/31/2018
 api_location: ''
 ROBOTS: INDEX,FOLLOW
-ms.openlocfilehash: 1fe7514c3aff50a7ecddadb3d8073a37b6c770eb
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: e56fe90677d0988420a97510da75ea24bf9d50610f9b0b06555a127ef5f731c8
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104103238"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118274474"
 ---
-# <a name="credentialsblob-eaphostusercredentials-element"></a>Das Element "kredentialsblob" (eaphustuseranmeldeinformationen)
+# <a name="credentialsblob-eaphostusercredentials-element"></a>CredentialsBlob(EapHostUserCredentials)-Element
 
-Das Element " **kredentialsblob" (eaptustuseranmeldeinformationen)** wird verwendet, wenn die Methoden Konfiguration ein binäres Blob anstelle von XML-Textformat ist.
+Das **CredentialsBlob-Element (EapHostUserCredentials)** wird verwendet, wenn die Methodenkonfiguration ein binäres BLOB und nicht im XML-Textformat ist.
 
 ``` syntax
 <xs:element name="CredentialsBlob"
@@ -31,11 +31,11 @@ Das Element " **kredentialsblob" (eaptustuseranmeldeinformationen)** wird verwen
  />
 ```
 
-Das Element " **kredentialsblob** " wird durch das [**eaphustuseranmelde**](eaphostusercredentialsschema-eaphostusercredentials-element.md) -Element definiert.
+Das **CredentialsBlob-Element** wird durch das [**EapHostUserCredentials-Element**](eaphostusercredentialsschema-eaphostusercredentials-element.md) definiert.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Die Elemente "- [**Anmelde**](eaphostusercredentialsschema-credentials-eaphostusercredentials-element.md) Informationen" und " **kredentialsblob** " können nicht gleichzeitig verwendet werden.
+Die [**Elemente Credentials**](eaphostusercredentialsschema-credentials-eaphostusercredentials-element.md) und **CredentialsBlob** können nicht gleichzeitig verwendet werden.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -43,8 +43,8 @@ Die Elemente "- [**Anmelde**](eaphostusercredentialsschema-credentials-eaphostus
 
 | Anforderung | Wert |
 |-------------------------------------|------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>       |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2008 \[ -Desktop-Apps\]<br/> |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur \[ Vista-Desktop-Apps\]<br/>       |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2008-Desktop-Apps\]<br/> |
 
 
 
@@ -52,22 +52,22 @@ Die Elemente "- [**Anmelde**](eaphostusercredentialsschema-credentials-eaphostus
 
 <dl> <dt>
 
-**Definitions Kontext des Elements im Schema**
+**Definitionskontext des Elements im Schema**
 </dt> <dt>
 
-[**Eaphustuseranmeldeinformationen**](eaphostusercredentialsschema-eaphostusercredentials-element.md)
+[**EapHostUserCredentials**](eaphostusercredentialsschema-eaphostusercredentials-element.md)
 </dt> <dt>
 
-**Mögliches unmittelbar übergeordnetes Element in der Schema Instanz**
+**Mögliches unmittelbar übergeordnetes Element in der Schemainstanz**
 </dt> <dt>
 
-[**Eaphustuseranmeldeinformationen**](eaphostusercredentialsschema-eaphostusercredentials-element.md)
+[**EapHostUserCredentials**](eaphostusercredentialsschema-eaphostusercredentials-element.md)
 </dt> <dt>
 
-[EAPHost und Legacy Schema](eaphost-schemas.md)
+[EAPHost und Legacyschema](eaphost-schemas.md)
 </dt> <dt>
 
-[eaphustuseranmelde-Schema](eaphostusercredentialsschema-schema.md)
+[eaphostusercredentials-Schema](eaphostusercredentialsschema-schema.md)
 </dt> </dl>
 
  

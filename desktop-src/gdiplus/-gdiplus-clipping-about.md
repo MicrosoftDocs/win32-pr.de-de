@@ -1,27 +1,27 @@
 ---
-description: Beim Clipping wird das Zeichnen auf eine bestimmte Region eingeschränkt. Die folgende Abbildung zeigt die Zeichenfolge &\# 0034; Hello&\# 0034; abgeschnitten auf einen herzförmigen Bereich.
+description: Das Clipping umfasst das Einschränken des Zeichnens auf einen bestimmten Bereich. Die folgende Abbildung zeigt die Zeichenfolge &\# 0034; Hello&\# 0034; auf einen heart-förmigen Bereich abgeschnitten.
 ms.assetid: 58cc052d-31af-4410-81b9-defbad08a1dc
 title: Clipping (GDI+)
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 156ae2209a3b7135cde2804103531eaf7b519d73
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: a57534c5934270374af356956285ad13838630666795d9f06a2623cbd3b453ad
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104042111"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118067634"
 ---
 # <a name="clipping-gdi"></a>Clipping (GDI+)
 
-Beim Clipping wird das Zeichnen auf eine bestimmte Region eingeschränkt. Die folgende Abbildung zeigt die Zeichenfolge "Hello", die auf einen herzförmigen Bereich zugeschnitten ist.
+Das Clipping umfasst das Einschränken des Zeichnens auf einen bestimmten Bereich. Die folgende Abbildung zeigt die Zeichenfolge "Hello", die in einen heartförmigen Bereich abgeschnitten ist.
 
-![Abbildung, die Teile der Zeichenfolge "Hello" innerhalb eines roten Herzens anzeigt](images/aboutgdip02-art30.png)
+![Abbildung, die Teile der Zeichenfolge "hello" in einem roten Heart zeigt](images/aboutgdip02-art30.png)
 
-Bereiche können aus Pfaden erstellt werden, und Pfade können die Gliederungen von Zeichen folgen enthalten, sodass Sie den Text für das Clipping verwenden können. Die folgende Abbildung zeigt einen Satz konzentrischer Ellipsen, die auf das Innere einer Text Zeichenfolge zugeschnitten sind.
+Bereiche können aus Pfaden erstellt werden, und Pfade können die Konturen von Zeichenfolgen enthalten, sodass Sie umrissenen Text zum Ausschneiden verwenden können. Die folgende Abbildung zeigt eine Reihe konzentrierter Ellipsen, die am Inneren einer Textzeichenfolge abgeschnitten sind.
 
-![Abbildung zur Darstellung der Zeichenfolge "Hello", die durch ein Muster von konzentrischen Kreisen gefüllt ist](images/aboutgdip02-art31.png)
+![Abbildung, die die Zeichenfolge "hello" zeigt, die durch ein Muster konzentrierter Kreise gefüllt ist](images/aboutgdip02-art31.png)
 
-Um mit Clipping zu zeichnen, erstellen Sie ein [**Grafik**](/windows/win32/api/gdiplusgraphics/nl-gdiplusgraphics-graphics) Objekt, rufen Sie seine [SetClip](/windows/win32/api/gdiplusgraphics/nf-gdiplusgraphics-graphics-setclip(inconstregion_incombinemode)) -Methode auf, und rufen Sie dann die Zeichnungs Methoden desselben **Grafik** Objekts auf. Im folgenden Beispiel wird eine Linie gezeichnet, die auf einen rechteckigen Bereich zugeschnitten ist.
+Erstellen Sie zum Zeichnen [](/windows/win32/api/gdiplusgraphics/nl-gdiplusgraphics-graphics) mit Clipping ein Graphics-Objekt, rufen Sie dessen [SetClip-Methode](/windows/win32/api/gdiplusgraphics/nf-gdiplusgraphics-graphics-setclip(inconstregion_incombinemode)) auf, und rufen Sie dann die Zeichnungsmethoden desselben **Graphics-Objekts** auf. Im folgenden Beispiel wird eine Linie ge zeichnet, die in einen rechteckigen Bereich abgeschnitten wird.
 
 
 ```
@@ -33,9 +33,9 @@ myGraphics.DrawLine(&myPen, 0, 0, 200, 200);
 
 
 
-In der folgenden Abbildung wird der rechteckige Bereich zusammen mit der ausgeschnittenen Linie dargestellt.
+Die folgende Abbildung zeigt den rechteckigen Bereich zusammen mit der abgeschnittenen Linie.
 
-![Abbildung mit einem Rechteck, das eine diagonal Linie von oben nach unten anzeigt](images/aboutgdip02-art31a.png)
+![Abbildung eines Rechtecks mit einer diagonalen Linie von oben nach unten](images/aboutgdip02-art31a.png)
 
  
 

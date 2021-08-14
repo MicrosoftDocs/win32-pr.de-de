@@ -1,23 +1,23 @@
 ---
-title: dcl_input vthread (SM5-ASM)
-description: Deklarieren Sie Compute-Shadereingabe-IDs.
+title: dcl_input vThread (sm5 – asm)
+description: Deklarieren Sie Eingabe-IDs des Compute-Shaders.
 ms.assetid: C041863A-32B0-4588-A1A9-E416AF9B723C
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: fbf6a7bb19feef95eae9cc153911407b206fde16
-ms.sourcegitcommit: fe03c5d92ca6a0d66a114b2303e99c0a19241ffb
+ms.openlocfilehash: 07c7eef8fe85ae39fb61d9e34b600805d38f7b92d5dbceb7dc2218b1515b6d36
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/20/2019
-ms.locfileid: "103719482"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118286198"
 ---
-# <a name="dcl_input-vthread-sm5---asm"></a>DCL \_ -Eingabe-vthread (SM5-ASM)
+# <a name="dcl_input-vthread-sm5---asm"></a>dcl \_ input vThread (sm5 – asm)
 
-Deklarieren Sie Compute-Shadereingabe-IDs.
+Deklarieren Sie Eingabe-IDs des Compute-Shaders.
 
 
 
-| DCL- \_ Eingabe {vThreadID.XYZ \|vThreadGroupID.XYZ \| vThreadIDInGroup.XYZ \|vthreadidingroupflatchten} |
+| dcl \_ input {vThreadID.xyz\|vThreadGroupID.xyz\| vThreadIDInGroup.xyz\|vThreadIDInGroupFlattened} |
 |--------------------------------------------------------------------------------------------------|
 
 
@@ -26,26 +26,26 @@ Deklarieren Sie Compute-Shadereingabe-IDs.
 
 
 
-| Element                                                                                                                                                                                                                                                                                                                                                                          | BESCHREIBUNG                                                         |
+| Element                                                                                                                                                                                                                                                                                                                                                                          | Beschreibung                                                         |
 |-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|---------------------------------------------------------------------|
-| <span id="vThreadID___vThreadGroupID___vThreadIDInGroup___vThreadIDInGroupFlattened"></span><span id="vthreadid___vthreadgroupid___vthreadidingroup___vthreadidingroupflattened"></span><span id="VTHREADID___VTHREADGROUPID___VTHREADIDINGROUP___VTHREADIDINGROUPFLATTENED"></span>*vthreadid \| vthreadgroupid \| vthreadidingroup \| vthreadidingroupflatchten*<br/> | \[im \] 32-Bit-Ganzzahl-ID-Wert ohne Vorzeichen.<br/> |
+| <span id="vThreadID___vThreadGroupID___vThreadIDInGroup___vThreadIDInGroupFlattened"></span><span id="vthreadid___vthreadgroupid___vthreadidingroup___vthreadidingroupflattened"></span><span id="VTHREADID___VTHREADGROUPID___VTHREADIDINGROUP___VTHREADIDINGROUPFLATTENED"></span>*vThreadID \| vThreadGroupID \| vThreadIDInGroup \| vThreadIDInGroupFlattened*<br/> | \[in \] Der 3-Komponenten-ID-Wert der 32-Bit-Ganzzahl ohne Vorzeichen.<br/> |
 
 
 
  
 
-die **DCL- \_ Eingabe** ist eine vorhandene Deklaration in anderen Shader-Stufen. Es wird im COMPUTE-Shader verwendet, um die verschiedenen ganzzahligen, ganzzahligen 32-Bit-ID-Werte mit drei Komponenten für den Compute-Shader zu deklarieren. Sie lauten wie folgt:
+**dcl \_ input** ist eine vorhandene Deklaration in anderen Shaderstufen. Sie wird im Compute-Shader verwendet, um die verschiedenen 3-Komponenten-GANZZAHL-ID-Werte ohne Vorzeichen zu deklarieren, die für den Compute-Shader eindeutig sind. Sie lauten wie folgt:
 
 -   vThreadID.xyz
 -   vGroupID.xyz
 -   vThreadIDInGroup.xyz
--   vthreadidingroupflatchten (einzelne Komponente)
+-   vThreadIDInGroupFlattened (einzelne Komponente)
 
-Diese Anweisung gilt für die folgenden Shader-Phasen:
+Diese Anweisung gilt für die folgenden Shaderstufen:
 
 
 
-| Scheitelpunkt | Hülle | Domain | Geometrie | Pixel | Compute |
+| Scheitelpunkt | Rumpf | Domain | Geometrie | Pixel | Compute |
 |--------|------|--------|----------|-------|---------|
 |        |      |        |          |       | X       |
 
@@ -53,20 +53,20 @@ Diese Anweisung gilt für die folgenden Shader-Phasen:
 
  
 
-## <a name="minimum-shader-model"></a>Minimaler Shader-Modell
+## <a name="minimum-shader-model"></a>Shader-Mindestmodell
 
-Diese Anweisung wird in den folgenden shadermodellen unterstützt:
+Diese Anweisung wird in den folgenden Shadermodellen unterstützt:
 
 
 
 | Shadermodell                                              | Unterstützt |
 |-----------------------------------------------------------|-----------|
-| [Shader-Modell 5](d3d11-graphics-reference-sm5.md)        | ja       |
-| [Shadermodell 4,1](dx-graphics-hlsl-sm4.md)              | nein        |
+| [Shadermodell 5](d3d11-graphics-reference-sm5.md)        | ja       |
+| [Shadermodell 4.1](dx-graphics-hlsl-sm4.md)              | nein        |
 | [Shadermodell 4](dx-graphics-hlsl-sm4.md)                | nein        |
-| [Shader-Modell 3 (DirectX HLSL)](dx-graphics-hlsl-sm3.md) | nein        |
-| [Shader-Modell 2 (DirectX HLSL)](dx-graphics-hlsl-sm2.md) | nein        |
-| [Shader-Modell 1 (DirectX HLSL)](dx-graphics-hlsl-sm1.md) | nein        |
+| [Shadermodell 3 (DirectX HLSL)](dx-graphics-hlsl-sm3.md) | nein        |
+| [Shadermodell 2 (DirectX HLSL)](dx-graphics-hlsl-sm2.md) | nein        |
+| [Shadermodell 1 (DirectX HLSL)](dx-graphics-hlsl-sm1.md) | nein        |
 
 
 
@@ -76,7 +76,7 @@ Diese Anweisung wird in den folgenden shadermodellen unterstützt:
 
 <dl> <dt>
 
-[Shader Model 5-Assembly (DirectX HLSL)](shader-model-5-assembly--directx-hlsl-.md)
+[Shadermodell 5-Assembly (DirectX HLSL)](shader-model-5-assembly--directx-hlsl-.md)
 </dt> </dl>
 
  

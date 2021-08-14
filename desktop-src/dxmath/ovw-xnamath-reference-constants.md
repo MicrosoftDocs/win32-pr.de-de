@@ -1,19 +1,19 @@
 ---
-description: Die folgenden Konstanten werden von der directxmath-Bibliothek bereitgestellt.
+description: Die folgenden Konstanten werden von der DirectXMath-Bibliothek bereitgestellt.
 ms.assetid: a206fe22-12c8-ac2b-ee37-20cfff35841a
-title: Directxmath-Bibliotheks Konstanten
+title: DirectXMath Library-Konstanten
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 4809c72fbd5cec27b549be29ebced81839c89723
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: fb63bc687dd6bf3cc1dcc5e1801b500761480c7b8443b7a786a05211b9fb729d
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106350534"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118500387"
 ---
-# <a name="directxmath-library-constants"></a>Directxmath-Bibliotheks Konstanten
+# <a name="directxmath-library-constants"></a>DirectXMath Library-Konstanten
 
-Die folgenden Konstanten werden von der directxmath-Bibliothek bereitgestellt.
+Die folgenden Konstanten werden von der DirectXMath-Bibliothek bereitgestellt.
 
 
 
@@ -31,675 +31,675 @@ Die folgenden Konstanten werden von der directxmath-Bibliothek bereitgestellt.
 <tbody>
 <tr class="odd">
 <td>DIRECTXMATH_VERSION<br/></td>
-<td>Die Version der directxmath-Bibliothek. Das erste Vorschau Release war 300, die endgültige Version von Windows 8 ist 303, die Windows 8.1 Version ist 305. Die Versionen von XNA Math waren 200, 201, 202, 203, 204 usw. Dies wird als Präprozessorsymbol definiert.<br/></td>
+<td>Die Version der DirectXMath-Bibliothek. Die erste Vorschauversion war 300, die Windows 8 endgültige Version ist 303, die Windows 8.1 Version 305. Die Versionen von XNA Math waren 200, 201, 202, 203, 204 und so weiter. Dies wird als Präprozessorsymbol definiert.<br/></td>
 </tr>
 <tr class="even">
 <td>XM_PI<br/></td>
-<td>Eine optimale Darstellung von "-".<br/></td>
+<td>Eine optimale Darstellung π.<br/></td>
 </tr>
 <tr class="odd">
 <td>XM_2PI<br/></td>
-<td>Eine optimale Darstellung von 2 *.<br/></td>
+<td>Eine optimale Darstellung von 2*π.<br/></td>
 </tr>
 <tr class="even">
 <td>XM_1DIVPI<br/></td>
-<td>Eine optimale Darstellung von 1/.<br/></td>
+<td>Eine optimale Darstellung von 1/π.<br/></td>
 </tr>
 <tr class="odd">
 <td>XM_1DIV2PI<br/></td>
-<td>Eine optimale Darstellung von 2/oder.<br/></td>
+<td>Eine optimale Darstellung von 2/π.<br/></td>
 </tr>
 <tr class="even">
 <td>XM_PIDIV2<br/></td>
-<td>Eine optimale Darstellung von "μ/2".<br/></td>
+<td>Eine optimale Darstellung von π/2.<br/></td>
 </tr>
 <tr class="odd">
 <td>XM_PIDIV4<br/></td>
-<td>Eine optimale Darstellung von "μ/4".<br/></td>
+<td>Eine optimale Darstellung von π/4.<br/></td>
 </tr>
 <tr class="even">
 <td>XM_PERMUTE_0X<br/></td>
-<td>Eine Konstante, die mit <a href="/windows/desktop/api/directxmath/nf-directxmath-xmvectorpermute"><strong>xmvector perstumm</strong></a>als Element Index verwendet wird. Dies gibt an, dass die X-Komponente des ersten der Vektor Argumente für <strong>xmvectorperstumm</strong> an die Indexposition in einem Ergebnis Vektor kopiert werden soll, der dem angegebenen Element entspricht. <br/></td>
+<td>Eine Konstante, die als Elementindex mit <a href="/windows/desktop/api/directxmath/nf-directxmath-xmvectorpermute"><strong>XMVectorPermute verwendet wird.</strong></a> Dies gibt an, dass die X-Komponente des ersten Vektorarguments für <strong>XMVectorPermute</strong> an die Indexposition in einem Ergebnisvektor kopiert werden soll, der dem angegebenen Element entspricht. <br/></td>
 </tr>
 <tr class="odd">
 <td>XM_PERMUTE_0Y<br/></td>
-<td>Eine Konstante, die mit <a href="/windows/desktop/api/directxmath/nf-directxmath-xmvectorpermute"><strong>xmvector perstumm</strong></a>als Element Index verwendet wird. Dies gibt an, dass die Y-Komponente des ersten der Vektor Argumente für <strong>xmvectorperstumm</strong> an die Indexposition in einem Ergebnis Vektor kopiert werden soll, der dem angegebenen Element entspricht. <br/></td>
+<td>Eine Konstante, die als Elementindex mit <a href="/windows/desktop/api/directxmath/nf-directxmath-xmvectorpermute"><strong>XMVectorPermute verwendet wird.</strong></a> Dies gibt an, dass die Y-Komponente des ersten Vektorarguments für <strong>XMVectorPermute</strong> an die Indexposition in einem Ergebnisvektor kopiert werden soll, der dem angegebenen Element entspricht. <br/></td>
 </tr>
 <tr class="even">
 <td>XM_PERMUTE_0Z<br/></td>
-<td>Eine Konstante, die mit <a href="/windows/desktop/api/directxmath/nf-directxmath-xmvectorpermute"><strong>xmvector perstumm</strong></a>als Element Index verwendet wird. Dies gibt an, dass die Z-Komponente des ersten der Vektor Argumente für <strong>xmvectorperstumm</strong> an die Indexposition in einem Ergebnis Vektor kopiert werden soll, der dem angegebenen Element entspricht. <br/></td>
+<td>Eine Konstante, die als Elementindex mit <a href="/windows/desktop/api/directxmath/nf-directxmath-xmvectorpermute"><strong>XMVectorPermute verwendet wird.</strong></a> Dies gibt an, dass die Z-Komponente des ersten Vektorarguments für <strong>XMVectorPermute</strong> an die Indexposition in einem Ergebnisvektor kopiert werden soll, der dem angegebenen Element entspricht. <br/></td>
 </tr>
 <tr class="odd">
 <td>XM_PERMUTE_0W<br/></td>
-<td>Eine Konstante, die mit <a href="/windows/desktop/api/directxmath/nf-directxmath-xmvectorpermute"><strong>xmvector perstumm</strong></a>als Element Index verwendet wird. Dies gibt an, dass die W-Komponente des ersten der Vektor Argumente für <strong>xmvectorperstumm</strong> an die Indexposition in einem Ergebnis Vektor kopiert werden soll, der dem angegebenen Element entspricht. <br/></td>
+<td>Eine Konstante, die als Elementindex mit <a href="/windows/desktop/api/directxmath/nf-directxmath-xmvectorpermute"><strong>XMVectorPermute verwendet wird.</strong></a> Dies gibt an, dass die W-Komponente des ersten Vektorarguments für <strong>XMVectorPermute</strong> an die Indexposition in einem Ergebnisvektor kopiert werden soll, der dem angegebenen Element entspricht. <br/></td>
 </tr>
 <tr class="even">
 <td>XM_PERMUTE_1X<br/></td>
-<td>Eine Konstante, die mit <a href="/windows/desktop/api/directxmath/nf-directxmath-xmvectorpermute"><strong>xmvector perstumm</strong></a>als Element Index verwendet wird. Dies gibt an, dass die X-Komponente des zweiten der Vektor Argumente für <strong>xmvectorperstumm</strong> an die Indexposition in einem Ergebnis Vektor kopiert werden soll, der dem angegebenen Element entspricht. <br/></td>
+<td>Eine Konstante, die als Elementindex mit <a href="/windows/desktop/api/directxmath/nf-directxmath-xmvectorpermute"><strong>XMVectorPermute verwendet wird.</strong></a> Dies gibt an, dass die X-Komponente des zweiten Vektorarguments für <strong>XMVectorPermute</strong> an die Indexposition in einem Ergebnisvektor kopiert werden soll, der dem angegebenen Element entspricht. <br/></td>
 </tr>
 <tr class="odd">
 <td>XM_PERMUTE_1Y<br/></td>
-<td>Eine Konstante, die mit <a href="/windows/desktop/api/directxmath/nf-directxmath-xmvectorpermute"><strong>xmvector perstumm</strong></a>als Element Index verwendet wird. Dies gibt an, dass die Y-Komponente des zweiten der Vektor Argumente für <strong>xmvectorperstumm</strong> an die Indexposition in einem Ergebnis Vektor kopiert werden soll, der dem angegebenen Element entspricht. <br/></td>
+<td>Eine Konstante, die als Elementindex mit <a href="/windows/desktop/api/directxmath/nf-directxmath-xmvectorpermute"><strong>XMVectorPermute verwendet wird.</strong></a> Dies gibt an, dass die Y-Komponente des zweiten Vektorarguments für <strong>XMVectorPermute</strong> an die Indexposition in einem Ergebnisvektor kopiert werden soll, der dem angegebenen Element entspricht. <br/></td>
 </tr>
 <tr class="even">
 <td>XM_PERMUTE_1Z<br/></td>
-<td>Eine Konstante, die mit <a href="/windows/desktop/api/directxmath/nf-directxmath-xmvectorpermute"><strong>xmvector perstumm</strong></a>als Element Index verwendet wird. Dies gibt an, dass die Z-Komponente des zweiten der Vektor Argumente für <strong>xmvectorperstumm</strong> an die Indexposition in einem Ergebnis Vektor kopiert werden soll, der dem angegebenen Element entspricht. <br/></td>
+<td>Eine Konstante, die als Elementindex mit <a href="/windows/desktop/api/directxmath/nf-directxmath-xmvectorpermute"><strong>XMVectorPermute verwendet wird.</strong></a> Dies gibt an, dass die Z-Komponente des zweiten Vektorarguments für <strong>XMVectorPermute</strong> an die Indexposition in einem Ergebnisvektor kopiert werden soll, der dem angegebenen Element entspricht. <br/></td>
 </tr>
 <tr class="odd">
 <td>XM_PERMUTE_1W<br/></td>
-<td>Eine Konstante, die mit <a href="/windows/desktop/api/directxmath/nf-directxmath-xmvectorpermute"><strong>xmvector perstumm</strong></a>als Element Index verwendet wird. Dies gibt an, dass die W-Komponente des zweiten der Vektor Argumente für <strong>xmvectorperstumm</strong> an die Indexposition in einem Ergebnis Vektor kopiert werden soll, der dem angegebenen Element entspricht. <br/></td>
+<td>Eine Konstante, die als Elementindex mit <a href="/windows/desktop/api/directxmath/nf-directxmath-xmvectorpermute"><strong>XMVectorPermute verwendet wird.</strong></a> Dies gibt an, dass die W-Komponente des zweiten Vektorarguments für <strong>XMVectorPermute</strong> an die Indexposition in einem Ergebnisvektor kopiert werden soll, der dem angegebenen Element entspricht. <br/></td>
 </tr>
 <tr class="even">
 <td>XM_SELECT_0<br/></td>
-<td>Eine Konstante, die verwendet wird, um einen mit <a href="/windows/desktop/api/directxmath/nf-directxmath-xmvectorselect"><strong>xmvector Select</strong></a>verwendeten Steuerelement Vektor zu erstellen. Gibt an, dass die Komponente des ersten der Vektor Argumente für <strong>xmvectorselect</strong> an die Indexposition in einem Ergebnis Vektor kopiert werden soll, der dem Index im Steuerelement Vektor entspricht.<br/> Beispielsweise kopiert ein Steuer Vektor mit XM_SELECT_0 als zweite Komponente die zweite Komponente des ersten Vektors in die zweite Komponente des Ergebnis Vektors. <br/></td>
+<td>Eine Konstante, die zum Erstellen eines Steuerelementvektors verwendet wird, der mit <a href="/windows/desktop/api/directxmath/nf-directxmath-xmvectorselect"><strong>XMVectorSelect verwendet wird.</strong></a> Gibt an, dass die Komponente des ersten Vektorarguments für <strong>XMVectorSelect</strong> an die Indexposition in einem Ergebnisvektor kopiert werden soll, der seinem Index im Steuerelementvektor entspricht.<br/> Beispielsweise kopiert ein Steuervektor mit XM_SELECT_0 als zweite Komponente die zweite Komponente des ersten Vektors in die zweite Komponente des Ergebnisvektors. <br/></td>
 </tr>
 <tr class="odd">
 <td>XM_SELECT_1<br/></td>
-<td>Eine Konstante, die verwendet wird, um einen mit <a href="/windows/desktop/api/directxmath/nf-directxmath-xmvectorselect"><strong>xmvector Select</strong></a>verwendeten Steuerelement Vektor zu erstellen. Gibt an, dass die Komponente des zweiten der Vektor Argumente für <strong>xmvectorselect</strong> an die Indexposition in einem Ergebnis Vektor kopiert werden soll, der dem Index im Steuerelement Vektor entspricht. <br/> Beispielsweise kopiert ein Steuer Vektor mit XM_SELECT_1 als zweite Komponente die zweite Komponente des zweiten Vektors in die zweite Komponente des Ergebnis Vektors. <br/></td>
+<td>Eine Konstante, die zum Erstellen eines Steuerelementvektors verwendet wird, der mit <a href="/windows/desktop/api/directxmath/nf-directxmath-xmvectorselect"><strong>XMVectorSelect verwendet wird.</strong></a> Gibt an, dass die Komponente des zweiten Vektorarguments für <strong>XMVectorSelect</strong> an die Indexposition in einem Ergebnisvektor kopiert werden soll, der seinem Index im Steuerelementvektor entspricht. <br/> Beispielsweise kopiert ein Steuervektor mit XM_SELECT_1 als zweite Komponente die zweite Komponente des zweiten Vektors in die zweite Komponente des Ergebnisvektors. <br/></td>
 </tr>
 <tr class="even">
 <td>XM_SWIZZLE_X<br/></td>
-<td>Eine Konstante, die mit <a href="/windows/desktop/api/directxmath/nf-directxmath-xmvectorswizzle"><strong>xmvector Swizzle</strong></a>als Element Index verwendet wird. Dies gibt an, dass die X-Komponente des Vektor Arguments für <strong>xmvectorswizzle</strong> an die Indexposition in einem Ergebnis Vektor kopiert werden soll, der dem angegebenen Element entspricht.<br/></td>
+<td>Eine Konstante, die als Elementindex mit <a href="/windows/desktop/api/directxmath/nf-directxmath-xmvectorswizzle"><strong>XMVectorSwizzle verwendet wird.</strong></a> Dies gibt an, dass die X-Komponente des Vektorarguments für <strong>XMVectorSwizzle</strong> an die Indexposition in einem Ergebnisvektor kopiert werden soll, der dem angegebenen Element entspricht.<br/></td>
 </tr>
 <tr class="odd">
 <td>XM_SWIZZLE_Y<br/></td>
-<td>Eine Konstante, die mit <a href="/windows/desktop/api/directxmath/nf-directxmath-xmvectorswizzle"><strong>xmvector Swizzle</strong></a>als Element Index verwendet wird. Dies gibt an, dass die Y-Komponente des Vektor Arguments für <strong>xmvectorswizzle</strong> an die Indexposition in einem Ergebnis Vektor kopiert werden soll, der dem angegebenen Element entspricht. <br/></td>
+<td>Eine Konstante, die als Elementindex mit <a href="/windows/desktop/api/directxmath/nf-directxmath-xmvectorswizzle"><strong>XMVectorSwizzle verwendet wird.</strong></a> Dies gibt an, dass die Y-Komponente des Vektorarguments für <strong>XMVectorSwizzle</strong> an die Indexposition in einem Ergebnisvektor kopiert werden soll, der dem angegebenen Element entspricht. <br/></td>
 </tr>
 <tr class="even">
 <td>XM_SWIZZLE_Z<br/></td>
-<td>Eine Konstante, die mit <a href="/windows/desktop/api/directxmath/nf-directxmath-xmvectorswizzle"><strong>xmvector Swizzle</strong></a>als Element Index verwendet wird. Dies gibt an, dass die Z-Komponente des Vektor Arguments für <strong>xmvectorswizzle</strong> an die Indexposition in einem Ergebnis Vektor kopiert werden soll, der dem angegebenen Element entspricht. <br/></td>
+<td>Eine Konstante, die als Elementindex mit <a href="/windows/desktop/api/directxmath/nf-directxmath-xmvectorswizzle"><strong>XMVectorSwizzle verwendet wird.</strong></a> Dies gibt an, dass die Z-Komponente des Vektorarguments für <strong>XMVectorSwizzle</strong> an die Indexposition in einem Ergebnisvektor kopiert werden soll, der dem angegebenen Element entspricht. <br/></td>
 </tr>
 <tr class="odd">
 <td>XM_SWIZZLE_W<br/></td>
-<td>Eine Konstante, die mit <a href="/windows/desktop/api/directxmath/nf-directxmath-xmvectorswizzle"><strong>xmvector Swizzle</strong></a>als Element Index verwendet wird. Dies gibt an, dass die W-Komponente des Vektor Arguments für <strong>xmvectorswizzle</strong> an die Indexposition in einem Ergebnis Vektor kopiert werden soll, der dem angegebenen Element entspricht. <br/></td>
+<td>Eine Konstante, die als Elementindex mit <a href="/windows/desktop/api/directxmath/nf-directxmath-xmvectorswizzle"><strong>XMVectorSwizzle verwendet wird.</strong></a> Dies gibt an, dass die W-Komponente des Vektorarguments für <strong>XMVectorSwizzle</strong> an die Indexposition in einem Ergebnisvektor kopiert werden soll, der dem angegebenen Element entspricht. <br/></td>
 </tr>
 <tr class="even">
 <td>XM_CRMASK_CR6<br/></td>
-<td>Mask zum Abrufen eines Vergleichs Ergebnisses, das in der Regel mit einer Aufzeichnungs Version einer directxmath-Funktion wie <a href="/windows/desktop/api/directxmath/nf-directxmath-xmvector4equalr"><strong>XMVector4EqualR</strong></a>abgerufen wird. Im folgenden Beispiel wird das Vergleichs Ergebnis der Variablen CR abgerufen:
+<td>Maskieren Sie , um ein Vergleichsergebnis zu erhalten, das in der Regel mithilfe einer Aufzeichnungsversion einer DirectXMath-Funktion wie <a href="/windows/desktop/api/directxmath/nf-directxmath-xmvector4equalr"><strong>XMVector4EqualR abgerufen wird.</strong></a> Das folgende Beispiel ruft das Vergleichsergebnis aus der Variablen CR ab:
 <pre class="syntax" data-space="preserve"><code>uint32_t val = ((CR) & XM_CRMASK_CR6);</code></pre>
 <br/></td>
 </tr>
 <tr class="odd">
 <td>XM_CRMASK_CR6TRUE<br/></td>
-<td>Maske, um ein Vergleichs Ergebnis zu erhalten, und überprüfen Sie, ob es sich um ein logisches true handelt. Der Wert wird in der Regel mit einer Aufzeichnungs Version einer directxmath-Funktion wie <a href="/windows/desktop/api/directxmath/nf-directxmath-xmvector4equalr"><strong>XMVector4EqualR</strong></a>abgerufen. Im Beispiel wird überprüft, ob der variableq CR den Wert "true" hat:
+<td>Maskieren Sie , um ein Vergleichsergebnis zu erhalten, und überprüfen Sie, ob es sich um einen logischen TRUE-Operator handelt. Der Wert wird in der Regel mithilfe einer Aufzeichnungsversion einer DirectXMath-Funktion wie <a href="/windows/desktop/api/directxmath/nf-directxmath-xmvector4equalr"><strong>XMVector4EqualR abgerufen.</strong></a> Im Beispiel wird überprüft, ob variableq CR true ist:
 <pre class="syntax" data-space="preserve"><code>bool val = (((CR) & XM_CRMASK_CR6FALSE) == XM_CRMASK_CR6FALSE);</code></pre>
-Siehe auch <a href="/windows/desktop/api/DirectXMath/nf-directxmath-xmcomparisonanytrue"><strong>xmcomparisonanytrue</strong></a>, <a href="/windows/desktop/api/DirectXMath/nf-directxmath-xmcomparisonalltrue"><strong>xmcomparisonalltrue</strong></a>und <a href="/windows/desktop/api/DirectXMath/nf-directxmath-xmcomparisonmixed"><strong>xmcomparisonmixed</strong></a><br/></td>
+Siehe auch <a href="/windows/desktop/api/DirectXMath/nf-directxmath-xmcomparisonanytrue"><strong>XMComparisonAnyTrue,</strong></a> <a href="/windows/desktop/api/DirectXMath/nf-directxmath-xmcomparisonalltrue"><strong>XMComparisonAllTrue</strong></a>und <a href="/windows/desktop/api/DirectXMath/nf-directxmath-xmcomparisonmixed"><strong>XMComparisonMixed.</strong></a><br/></td>
 </tr>
 <tr class="even">
 <td>XM_CRMASK_CR6FALSE<br/></td>
-<td>Maske, um ein Vergleichs Ergebnis zu erhalten und zu überprüfen, ob es sich um ein logisches false handelt. Der Wert wird in der Regel mit einer Aufzeichnungs Version einer mathematischen Funktion von directxmath abgerufen, z. b. <a href="/windows/desktop/api/directxmath/nf-directxmath-xmvector4equalr"><strong>XMVector4EqualR</strong></a>. Im Beispiel wird überprüft, ob die Variable CR den Wert false hat:
+<td>Maskieren Sie , um ein Vergleichsergebnis zu erhalten, und überprüfen Sie, ob es sich um einen logischen FALSE-Wert handelt. Der Wert wird in der Regel mithilfe einer Aufzeichnungsversion einer mathematischen DirectXMath-Funktion wie <a href="/windows/desktop/api/directxmath/nf-directxmath-xmvector4equalr"><strong>XMVector4EqualR abgerufen.</strong></a> Im Beispiel wird überprüft, ob die Variable CR false ist:
 <pre class="syntax" data-space="preserve"><code>bool val = (((CR) & XM_CRMASK_CR6FALSE) == XM_CRMASK_CR6FALSE);</code></pre>
-Siehe auch <a href="/windows/desktop/api/DirectXMath/nf-directxmath-xmcomparisonanyfalse"><strong>xmcomparisonanyfalse</strong></a>, <a href="/windows/desktop/api/DirectXMath/nf-directxmath-xmcomparisonallfalse"><strong>xmcomparisonallfalse</strong></a> und <a href="/windows/desktop/api/DirectXMath/nf-directxmath-xmcomparisonmixed"><strong>xmcomparisonmixed</strong></a><br/></td>
+Siehe auch <a href="/windows/desktop/api/DirectXMath/nf-directxmath-xmcomparisonanyfalse"><strong>XMComparisonAnyFalse,</strong></a> <a href="/windows/desktop/api/DirectXMath/nf-directxmath-xmcomparisonallfalse"><strong>XMComparisonAllFalse</strong></a> und <a href="/windows/desktop/api/DirectXMath/nf-directxmath-xmcomparisonmixed"><strong>XMComparisonMixed.</strong></a><br/></td>
 </tr>
 <tr class="odd">
 <td>XM_CRMASK_CR6BOUNDS<br/></td>
-<td>Maske, um ein Vergleichs Ergebnis zu erhalten, und überprüfen Sie, ob das Ergebnis angibt, dass einige der Eingaben außerhalb des gültigen Bereichs liegen. Der Wert wird in der Regel mit einer Aufzeichnungs Version einer directxmath-Funktion wie <a href="/windows/desktop/api/directxmath/nf-directxmath-xmvector4equalr"><strong>XMVector4EqualR</strong></a>abgerufen. Im Beispiel wird überprüft, ob die CR-Variable den Zustand "CR" angibt.
+<td>Maskieren Sie , um ein Vergleichsergebnis zu erhalten, und überprüfen Sie, ob das Ergebnis angibt, dass einige der Eingaben nicht über die Grenzen hinaus waren. Der Wert wird in der Regel mithilfe einer Aufzeichnungsversion einer DirectXMath-Funktion wie <a href="/windows/desktop/api/directxmath/nf-directxmath-xmvector4equalr"><strong>XMVector4EqualR abgerufen.</strong></a> Im Beispiel wird überprüft, ob die Variable CR den Zustand und den Zustand "Out of bounds" angibt.
 <pre class="syntax" data-space="preserve"><code>bool val = (((CR) & XM_CRMASK_CR6BOUNDS) == XM_CRMASK_CR6BOUNDS);</code></pre>
-Siehe auch <a href="/windows/desktop/api/DirectXMath/nf-directxmath-xmcomparisonallinbounds"><strong>xmcomparisonallinbounds</strong></a> und <a href="/windows/desktop/api/DirectXMath/nf-directxmath-xmcomparisonanyoutofbounds"><strong>xmcomparisonanyouumf Bounds</strong></a><br/></td>
+Siehe auch <a href="/windows/desktop/api/DirectXMath/nf-directxmath-xmcomparisonallinbounds"><strong>XMComparisonAllInBounds</strong></a> und <a href="/windows/desktop/api/DirectXMath/nf-directxmath-xmcomparisonanyoutofbounds"><strong>XMComparisonAnyOutOfBounds.</strong></a><br/></td>
 </tr>
 <tr class="even">
-<td>Farben:: AliceBlue</td>
-<td>Konstanten für die standardmäßigen .net-Farb Definitionen. Diese Werte sind R-, G-, B-Daten, die als xmvector verwendet oder direkt an die Clear-Methode der Direct3D 10. x/Direct3D 11-API übermittelt werden können.</td>
+<td>Colors::AliceBlue</td>
+<td>Konstanten für die standardmäßigen .NET-Farbdefinitionen. Bei diesen Werten handelt es sich um R-, G- und B-Daten, die als XMVECTOR-Daten verwendet oder direkt an die Clear-Methode der Direct3D 10.x/Direct3D 11-API übergeben werden können.</td>
 </tr>
 <tr class="odd">
-<td>Colors:: AntiqueWhite</td>
-<td>Konstanten für die standardmäßigen .net-Farb Definitionen. Diese Werte sind R-, G-, B-Daten, die als xmvector verwendet oder direkt an die Clear-Methode der Direct3D 10. x/Direct3D 11-API übermittelt werden können.</td>
+<td>Colors::White</td>
+<td>Konstanten für die standardmäßigen .NET-Farbdefinitionen. Bei diesen Werten handelt es sich um R-, G- und B-Daten, die als XMVECTOR-Daten verwendet oder direkt an die Clear-Methode der Direct3D 10.x/Direct3D 11-API übergeben werden können.</td>
 </tr>
 <tr class="even">
-<td>Farben:: Aqua</td>
-<td>Konstanten für die standardmäßigen .net-Farb Definitionen. Diese Werte sind R-, G-, B-Daten, die als xmvector verwendet oder direkt an die Clear-Methode der Direct3D 10. x/Direct3D 11-API übermittelt werden können.</td>
+<td>Colors::Aqua</td>
+<td>Konstanten für die standardmäßigen .NET-Farbdefinitionen. Bei diesen Werten handelt es sich um R-, G- und B-Daten, die als XMVECTOR-Daten verwendet oder direkt an die Clear-Methode der Direct3D 10.x/Direct3D 11-API übergeben werden können.</td>
 </tr>
 <tr class="odd">
-<td>Colors:: Aquamarine</td>
-<td>Konstanten für die standardmäßigen .net-Farb Definitionen. Diese Werte sind R-, G-, B-Daten, die als xmvector verwendet oder direkt an die Clear-Methode der Direct3D 10. x/Direct3D 11-API übermittelt werden können.</td>
+<td>Colors::Aquamarine</td>
+<td>Konstanten für die standardmäßigen .NET-Farbdefinitionen. Bei diesen Werten handelt es sich um R-, G- und B-Daten, die als XMVECTOR-Daten verwendet oder direkt an die Clear-Methode der Direct3D 10.x/Direct3D 11-API übergeben werden können.</td>
 </tr>
 <tr class="even">
-<td>Farben:: Azure</td>
-<td>Konstanten für die standardmäßigen .net-Farb Definitionen. Diese Werte sind R-, G-, B-Daten, die als xmvector verwendet oder direkt an die Clear-Methode der Direct3D 10. x/Direct3D 11-API übermittelt werden können.</td>
+<td>Colors::Azure</td>
+<td>Konstanten für die standardmäßigen .NET-Farbdefinitionen. Bei diesen Werten handelt es sich um R-, G- und B-Daten, die als XMVECTOR-Daten verwendet oder direkt an die Clear-Methode der Direct3D 10.x/Direct3D 11-API übergeben werden können.</td>
 </tr>
 <tr class="odd">
-<td>Farben:: beige</td>
-<td>Konstanten für die standardmäßigen .net-Farb Definitionen. Diese Werte sind R-, G-, B-Daten, die als xmvector verwendet oder direkt an die Clear-Methode der Direct3D 10. x/Direct3D 11-API übermittelt werden können.</td>
+<td>Farben::Beige</td>
+<td>Konstanten für die standardmäßigen .NET-Farbdefinitionen. Bei diesen Werten handelt es sich um R-, G- und B-Daten, die als XMVECTOR-Daten verwendet oder direkt an die Clear-Methode der Direct3D 10.x/Direct3D 11-API übergeben werden können.</td>
 </tr>
 <tr class="even">
-<td>Colors:: Bisque</td>
-<td>Konstanten für die standardmäßigen .net-Farb Definitionen. Diese Werte sind R-, G-, B-Daten, die als xmvector verwendet oder direkt an die Clear-Methode der Direct3D 10. x/Direct3D 11-API übermittelt werden können.</td>
+<td>Farben::Bisque</td>
+<td>Konstanten für die standardmäßigen .NET-Farbdefinitionen. Bei diesen Werten handelt es sich um R-, G- und B-Daten, die als XMVECTOR-Daten verwendet oder direkt an die Clear-Methode der Direct3D 10.x/Direct3D 11-API übergeben werden können.</td>
 </tr>
 <tr class="odd">
-<td>Farben:: schwarz</td>
-<td>Konstanten für die standardmäßigen .net-Farb Definitionen. Diese Werte sind R-, G-, B-Daten, die als xmvector verwendet oder direkt an die Clear-Methode der Direct3D 10. x/Direct3D 11-API übermittelt werden können.</td>
+<td>Farben::Schwarz</td>
+<td>Konstanten für die standardmäßigen .NET-Farbdefinitionen. Bei diesen Werten handelt es sich um R-, G- und B-Daten, die als XMVECTOR-Daten verwendet oder direkt an die Clear-Methode der Direct3D 10.x/Direct3D 11-API übergeben werden können.</td>
 </tr>
 <tr class="even">
-<td>Farben:: BlanchedAlmond</td>
-<td>Konstanten für die standardmäßigen .net-Farb Definitionen. Diese Werte sind R-, G-, B-Daten, die als xmvector verwendet oder direkt an die Clear-Methode der Direct3D 10. x/Direct3D 11-API übermittelt werden können.</td>
+<td>Colors::DiamonddAlmond</td>
+<td>Konstanten für die standardmäßigen .NET-Farbdefinitionen. Bei diesen Werten handelt es sich um R-, G- und B-Daten, die als XMVECTOR-Daten verwendet oder direkt an die Clear-Methode der Direct3D 10.x/Direct3D 11-API übergeben werden können.</td>
 </tr>
 <tr class="odd">
-<td>Farben:: Blue</td>
-<td>Konstanten für die standardmäßigen .net-Farb Definitionen. Diese Werte sind R-, G-, B-Daten, die als xmvector verwendet oder direkt an die Clear-Methode der Direct3D 10. x/Direct3D 11-API übermittelt werden können.</td>
+<td>Farben::Blau</td>
+<td>Konstanten für die standardmäßigen .NET-Farbdefinitionen. Bei diesen Werten handelt es sich um R-, G- und B-Daten, die als XMVECTOR-Daten verwendet oder direkt an die Clear-Methode der Direct3D 10.x/Direct3D 11-API übergeben werden können.</td>
 </tr>
 <tr class="even">
-<td>Farben:: blueviolett</td>
-<td>Konstanten für die standardmäßigen .net-Farb Definitionen. Diese Werte sind R-, G-, B-Daten, die als xmvector verwendet oder direkt an die Clear-Methode der Direct3D 10. x/Direct3D 11-API übermittelt werden können.</td>
+<td>Colors::BlueViolet</td>
+<td>Konstanten für die standardmäßigen .NET-Farbdefinitionen. Bei diesen Werten handelt es sich um R-, G- und B-Daten, die als XMVECTOR-Daten verwendet oder direkt an die Clear-Methode der Direct3D 10.x/Direct3D 11-API übergeben werden können.</td>
 </tr>
 <tr class="odd">
-<td>Farben:: braun</td>
-<td>Konstanten für die standardmäßigen .net-Farb Definitionen. Diese Werte sind R-, G-, B-Daten, die als xmvector verwendet oder direkt an die Clear-Methode der Direct3D 10. x/Direct3D 11-API übermittelt werden können.</td>
+<td>Colors::Brown</td>
+<td>Konstanten für die standardmäßigen .NET-Farbdefinitionen. Bei diesen Werten handelt es sich um R-, G- und B-Daten, die als XMVECTOR-Daten verwendet oder direkt an die Clear-Methode der Direct3D 10.x/Direct3D 11-API übergeben werden können.</td>
 </tr>
 <tr class="even">
-<td>Colors:: BurlyWood</td>
-<td>Konstanten für die standardmäßigen .net-Farb Definitionen. Diese Werte sind R-, G-, B-Daten, die als xmvector verwendet oder direkt an die Clear-Methode der Direct3D 10. x/Direct3D 11-API übermittelt werden können.</td>
+<td>Colors::BurlyWood</td>
+<td>Konstanten für die standardmäßigen .NET-Farbdefinitionen. Bei diesen Werten handelt es sich um R-, G- und B-Daten, die als XMVECTOR-Daten verwendet oder direkt an die Clear-Methode der Direct3D 10.x/Direct3D 11-API übergeben werden können.</td>
 </tr>
 <tr class="odd">
-<td>Farben:: CadetBlue</td>
-<td>Konstanten für die standardmäßigen .net-Farb Definitionen. Diese Werte sind R-, G-, B-Daten, die als xmvector verwendet oder direkt an die Clear-Methode der Direct3D 10. x/Direct3D 11-API übermittelt werden können.</td>
+<td>Colors::CadetBlue</td>
+<td>Konstanten für die standardmäßigen .NET-Farbdefinitionen. Bei diesen Werten handelt es sich um R-, G- und B-Daten, die als XMVECTOR-Daten verwendet oder direkt an die Clear-Methode der Direct3D 10.x/Direct3D 11-API übergeben werden können.</td>
 </tr>
 <tr class="even">
-<td>Colors:: Chartreuse</td>
-<td>Konstanten für die standardmäßigen .net-Farb Definitionen. Diese Werte sind R-, G-, B-Daten, die als xmvector verwendet oder direkt an die Clear-Methode der Direct3D 10. x/Direct3D 11-API übermittelt werden können.</td>
+<td>Colors::Chartreuse</td>
+<td>Konstanten für die standardmäßigen .NET-Farbdefinitionen. Bei diesen Werten handelt es sich um R-, G- und B-Daten, die als XMVECTOR-Daten verwendet oder direkt an die Clear-Methode der Direct3D 10.x/Direct3D 11-API übergeben werden können.</td>
 </tr>
 <tr class="odd">
-<td>Farben:: Chocolate</td>
-<td>Konstanten für die standardmäßigen .net-Farb Definitionen. Diese Werte sind R-, G-, B-Daten, die als xmvector verwendet oder direkt an die Clear-Methode der Direct3D 10. x/Direct3D 11-API übermittelt werden können.</td>
+<td>Farben::Chocolate</td>
+<td>Konstanten für die standardmäßigen .NET-Farbdefinitionen. Bei diesen Werten handelt es sich um R-, G- und B-Daten, die als XMVECTOR-Daten verwendet oder direkt an die Clear-Methode der Direct3D 10.x/Direct3D 11-API übergeben werden können.</td>
 </tr>
 <tr class="even">
-<td>Farben:: Coral</td>
-<td>Konstanten für die standardmäßigen .net-Farb Definitionen. Diese Werte sind R-, G-, B-Daten, die als xmvector verwendet oder direkt an die Clear-Methode der Direct3D 10. x/Direct3D 11-API übermittelt werden können.</td>
+<td>Farben::Coral</td>
+<td>Konstanten für die standardmäßigen .NET-Farbdefinitionen. Bei diesen Werten handelt es sich um R-, G- und B-Daten, die als XMVECTOR-Daten verwendet oder direkt an die Clear-Methode der Direct3D 10.x/Direct3D 11-API übergeben werden können.</td>
 </tr>
 <tr class="odd">
-<td>Farben:: CornflowerBlue</td>
-<td>Konstanten für die standardmäßigen .net-Farb Definitionen. Diese Werte sind R-, G-, B-Daten, die als xmvector verwendet oder direkt an die Clear-Methode der Direct3D 10. x/Direct3D 11-API übermittelt werden können.</td>
+<td>Colors::CornflowerBlue</td>
+<td>Konstanten für die standardmäßigen .NET-Farbdefinitionen. Bei diesen Werten handelt es sich um R-, G- und B-Daten, die als XMVECTOR-Daten verwendet oder direkt an die Clear-Methode der Direct3D 10.x/Direct3D 11-API übergeben werden können.</td>
 </tr>
 <tr class="even">
-<td>Colors:: Cornsilk</td>
-<td>Konstanten für die standardmäßigen .net-Farb Definitionen. Diese Werte sind R-, G-, B-Daten, die als xmvector verwendet oder direkt an die Clear-Methode der Direct3D 10. x/Direct3D 11-API übermittelt werden können.</td>
+<td>Farben::Kornsilk</td>
+<td>Konstanten für die standardmäßigen .NET-Farbdefinitionen. Bei diesen Werten handelt es sich um R-, G- und B-Daten, die als XMVECTOR-Daten verwendet oder direkt an die Clear-Methode der Direct3D 10.x/Direct3D 11-API übergeben werden können.</td>
 </tr>
 <tr class="odd">
-<td>Farben:: Crimson</td>
-<td>Konstanten für die standardmäßigen .net-Farb Definitionen. Diese Werte sind R-, G-, B-Daten, die als xmvector verwendet oder direkt an die Clear-Methode der Direct3D 10. x/Direct3D 11-API übermittelt werden können.</td>
+<td>Colors::Crimson</td>
+<td>Konstanten für die standardmäßigen .NET-Farbdefinitionen. Bei diesen Werten handelt es sich um R-, G- und B-Daten, die als XMVECTOR-Daten verwendet oder direkt an die Clear-Methode der Direct3D 10.x/Direct3D 11-API übergeben werden können.</td>
 </tr>
 <tr class="even">
-<td>Farben:: Cyan</td>
-<td>Konstanten für die standardmäßigen .net-Farb Definitionen. Diese Werte sind R-, G-, B-Daten, die als xmvector verwendet oder direkt an die Clear-Methode der Direct3D 10. x/Direct3D 11-API übermittelt werden können.</td>
+<td>Colors::Cyan</td>
+<td>Konstanten für die standardmäßigen .NET-Farbdefinitionen. Bei diesen Werten handelt es sich um R-, G- und B-Daten, die als XMVECTOR-Daten verwendet oder direkt an die Clear-Methode der Direct3D 10.x/Direct3D 11-API übergeben werden können.</td>
 </tr>
 <tr class="odd">
-<td>Farben::D arkblue</td>
-<td>Konstanten für die standardmäßigen .net-Farb Definitionen. Diese Werte sind R-, G-, B-Daten, die als xmvector verwendet oder direkt an die Clear-Methode der Direct3D 10. x/Direct3D 11-API übermittelt werden können.</td>
+<td>Farben::D arkBlue</td>
+<td>Konstanten für die standardmäßigen .NET-Farbdefinitionen. Bei diesen Werten handelt es sich um R-, G- und B-Daten, die als XMVECTOR-Daten verwendet oder direkt an die Clear-Methode der Direct3D 10.x/Direct3D 11-API übergeben werden können.</td>
 </tr>
 <tr class="even">
-<td>Farben::D arkcyan</td>
-<td>Konstanten für die standardmäßigen .net-Farb Definitionen. Diese Werte sind R-, G-, B-Daten, die als xmvector verwendet oder direkt an die Clear-Methode der Direct3D 10. x/Direct3D 11-API übermittelt werden können.</td>
+<td>Colors::D arkCyan</td>
+<td>Konstanten für die standardmäßigen .NET-Farbdefinitionen. Bei diesen Werten handelt es sich um R-, G- und B-Daten, die als XMVECTOR-Daten verwendet oder direkt an die Clear-Methode der Direct3D 10.x/Direct3D 11-API übergeben werden können.</td>
 </tr>
 <tr class="odd">
-<td>Farben::D arkgoldenrod</td>
-<td>Konstanten für die standardmäßigen .net-Farb Definitionen. Diese Werte sind R-, G-, B-Daten, die als xmvector verwendet oder direkt an die Clear-Methode der Direct3D 10. x/Direct3D 11-API übermittelt werden können.</td>
+<td>Colors::D arkKapselenrod</td>
+<td>Konstanten für die standardmäßigen .NET-Farbdefinitionen. Bei diesen Werten handelt es sich um R-, G- und B-Daten, die als XMVECTOR-Daten verwendet oder direkt an die Clear-Methode der Direct3D 10.x/Direct3D 11-API übergeben werden können.</td>
 </tr>
 <tr class="even">
-<td>Farben::D arkgray</td>
-<td>Konstanten für die standardmäßigen .net-Farb Definitionen. Diese Werte sind R-, G-, B-Daten, die als xmvector verwendet oder direkt an die Clear-Methode der Direct3D 10. x/Direct3D 11-API übermittelt werden können.</td>
+<td>Colors::D arkGray</td>
+<td>Konstanten für die standardmäßigen .NET-Farbdefinitionen. Bei diesen Werten handelt es sich um R-, G- und B-Daten, die als XMVECTOR-Daten verwendet oder direkt an die Clear-Methode der Direct3D 10.x/Direct3D 11-API übergeben werden können.</td>
 </tr>
 <tr class="odd">
-<td>Farben::D arkgreen</td>
-<td>Konstanten für die standardmäßigen .net-Farb Definitionen. Diese Werte sind R-, G-, B-Daten, die als xmvector verwendet oder direkt an die Clear-Methode der Direct3D 10. x/Direct3D 11-API übermittelt werden können.</td>
+<td>Colors::D arkGreen</td>
+<td>Konstanten für die standardmäßigen .NET-Farbdefinitionen. Bei diesen Werten handelt es sich um R-, G- und B-Daten, die als XMVECTOR-Daten verwendet oder direkt an die Clear-Methode der Direct3D 10.x/Direct3D 11-API übergeben werden können.</td>
 </tr>
 <tr class="even">
-<td>Farben::D arkkhaki</td>
-<td>Konstanten für die standardmäßigen .net-Farb Definitionen. Diese Werte sind R-, G-, B-Daten, die als xmvector verwendet oder direkt an die Clear-Methode der Direct3D 10. x/Direct3D 11-API übermittelt werden können.</td>
+<td>Colors::D arkQiki</td>
+<td>Konstanten für die standardmäßigen .NET-Farbdefinitionen. Bei diesen Werten handelt es sich um R-, G- und B-Daten, die als XMVECTOR-Daten verwendet oder direkt an die Clear-Methode der Direct3D 10.x/Direct3D 11-API übergeben werden können.</td>
 </tr>
 <tr class="odd">
-<td>Farben::D arkmagenta</td>
-<td>Konstanten für die standardmäßigen .net-Farb Definitionen. Diese Werte sind R-, G-, B-Daten, die als xmvector verwendet oder direkt an die Clear-Methode der Direct3D 10. x/Direct3D 11-API übermittelt werden können.</td>
+<td>Colors::D arkMagenta</td>
+<td>Konstanten für die standardmäßigen .NET-Farbdefinitionen. Bei diesen Werten handelt es sich um R-, G- und B-Daten, die als XMVECTOR-Daten verwendet oder direkt an die Clear-Methode der Direct3D 10.x/Direct3D 11-API übergeben werden können.</td>
 </tr>
 <tr class="even">
-<td>Farben::D arkolivegreen</td>
-<td>Konstanten für die standardmäßigen .net-Farb Definitionen. Diese Werte sind R-, G-, B-Daten, die als xmvector verwendet oder direkt an die Clear-Methode der Direct3D 10. x/Direct3D 11-API übermittelt werden können.</td>
+<td>Colors::D arkOliveGreen</td>
+<td>Konstanten für die standardmäßigen .NET-Farbdefinitionen. Bei diesen Werten handelt es sich um R-, G- und B-Daten, die als XMVECTOR-Daten verwendet oder direkt an die Clear-Methode der Direct3D 10.x/Direct3D 11-API übergeben werden können.</td>
 </tr>
 <tr class="odd">
-<td>Farben::D arkorange</td>
-<td>Konstanten für die standardmäßigen .net-Farb Definitionen. Diese Werte sind R-, G-, B-Daten, die als xmvector verwendet oder direkt an die Clear-Methode der Direct3D 10. x/Direct3D 11-API übermittelt werden können.</td>
+<td>Colors::D arkOrange</td>
+<td>Konstanten für die standardmäßigen .NET-Farbdefinitionen. Bei diesen Werten handelt es sich um R-, G- und B-Daten, die als XMVECTOR-Daten verwendet oder direkt an die Clear-Methode der Direct3D 10.x/Direct3D 11-API übergeben werden können.</td>
 </tr>
 <tr class="even">
-<td>Farben::D arkorchid</td>
-<td>Konstanten für die standardmäßigen .net-Farb Definitionen. Diese Werte sind R-, G-, B-Daten, die als xmvector verwendet oder direkt an die Clear-Methode der Direct3D 10. x/Direct3D 11-API übermittelt werden können.</td>
+<td>Farben::D arkOrchid</td>
+<td>Konstanten für die standardmäßigen .NET-Farbdefinitionen. Bei diesen Werten handelt es sich um R-, G- und B-Daten, die als XMVECTOR-Daten verwendet oder direkt an die Clear-Methode der Direct3D 10.x/Direct3D 11-API übergeben werden können.</td>
 </tr>
 <tr class="odd">
-<td>Farben::D arkred</td>
-<td>Konstanten für die standardmäßigen .net-Farb Definitionen. Diese Werte sind R-, G-, B-Daten, die als xmvector verwendet oder direkt an die Clear-Methode der Direct3D 10. x/Direct3D 11-API übermittelt werden können.</td>
+<td>Colors::D arkRed</td>
+<td>Konstanten für die standardmäßigen .NET-Farbdefinitionen. Bei diesen Werten handelt es sich um R-, G- und B-Daten, die als XMVECTOR-Daten verwendet oder direkt an die Clear-Methode der Direct3D 10.x/Direct3D 11-API übergeben werden können.</td>
 </tr>
 <tr class="even">
-<td>Farben::D arklachs</td>
-<td>Konstanten für die standardmäßigen .net-Farb Definitionen. Diese Werte sind R-, G-, B-Daten, die als xmvector verwendet oder direkt an die Clear-Methode der Direct3D 10. x/Direct3D 11-API übermittelt werden können.</td>
+<td>Colors::D arkSalmon</td>
+<td>Konstanten für die standardmäßigen .NET-Farbdefinitionen. Bei diesen Werten handelt es sich um R-, G- und B-Daten, die als XMVECTOR-Daten verwendet oder direkt an die Clear-Methode der Direct3D 10.x/Direct3D 11-API übergeben werden können.</td>
 </tr>
 <tr class="odd">
-<td>Farben::D arkeinagreen</td>
-<td>Konstanten für die standardmäßigen .net-Farb Definitionen. Diese Werte sind R-, G-, B-Daten, die als xmvector verwendet oder direkt an die Clear-Methode der Direct3D 10. x/Direct3D 11-API übermittelt werden können.</td>
+<td>Farben::D arkSeaGreen</td>
+<td>Konstanten für die standardmäßigen .NET-Farbdefinitionen. Bei diesen Werten handelt es sich um R-, G- und B-Daten, die als XMVECTOR-Daten verwendet oder direkt an die Clear-Methode der Direct3D 10.x/Direct3D 11-API übergeben werden können.</td>
 </tr>
 <tr class="even">
-<td>Farben::D arkslateblue</td>
-<td>Konstanten für die standardmäßigen .net-Farb Definitionen. Diese Werte sind R-, G-, B-Daten, die als xmvector verwendet oder direkt an die Clear-Methode der Direct3D 10. x/Direct3D 11-API übermittelt werden können.</td>
+<td>Colors::D arkSlateBlue</td>
+<td>Konstanten für die standardmäßigen .NET-Farbdefinitionen. Bei diesen Werten handelt es sich um R-, G- und B-Daten, die als XMVECTOR-Daten verwendet oder direkt an die Clear-Methode der Direct3D 10.x/Direct3D 11-API übergeben werden können.</td>
 </tr>
 <tr class="odd">
-<td>Farben::D arkslategray</td>
-<td>Konstanten für die standardmäßigen .net-Farb Definitionen. Diese Werte sind R-, G-, B-Daten, die als xmvector verwendet oder direkt an die Clear-Methode der Direct3D 10. x/Direct3D 11-API übermittelt werden können.</td>
+<td>Colors::D arkSlateGray</td>
+<td>Konstanten für die standardmäßigen .NET-Farbdefinitionen. Bei diesen Werten handelt es sich um R-, G- und B-Daten, die als XMVECTOR-Daten verwendet oder direkt an die Clear-Methode der Direct3D 10.x/Direct3D 11-API übergeben werden können.</td>
 </tr>
 <tr class="even">
-<td>Farben::D arktürkis</td>
-<td>Konstanten für die standardmäßigen .net-Farb Definitionen. Diese Werte sind R-, G-, B-Daten, die als xmvector verwendet oder direkt an die Clear-Methode der Direct3D 10. x/Direct3D 11-API übermittelt werden können.</td>
+<td>Colors::D arkTurquoise</td>
+<td>Konstanten für die standardmäßigen .NET-Farbdefinitionen. Bei diesen Werten handelt es sich um R-, G- und B-Daten, die als XMVECTOR-Daten verwendet oder direkt an die Clear-Methode der Direct3D 10.x/Direct3D 11-API übergeben werden können.</td>
 </tr>
 <tr class="odd">
-<td>Farben::D arkviolett</td>
-<td>Konstanten für die standardmäßigen .net-Farb Definitionen. Diese Werte sind R-, G-, B-Daten, die als xmvector verwendet oder direkt an die Clear-Methode der Direct3D 10. x/Direct3D 11-API übermittelt werden können.</td>
+<td>Colors::D arkViolet</td>
+<td>Konstanten für die standardmäßigen .NET-Farbdefinitionen. Bei diesen Werten handelt es sich um R-, G- und B-Daten, die als XMVECTOR-Daten verwendet oder direkt an die Clear-Methode der Direct3D 10.x/Direct3D 11-API übergeben werden können.</td>
 </tr>
 <tr class="even">
-<td>Farben::D eeppink</td>
-<td>Konstanten für die standardmäßigen .net-Farb Definitionen. Diese Werte sind R-, G-, B-Daten, die als xmvector verwendet oder direkt an die Clear-Methode der Direct3D 10. x/Direct3D 11-API übermittelt werden können.</td>
+<td>Colors::D eepPink</td>
+<td>Konstanten für die standardmäßigen .NET-Farbdefinitionen. Bei diesen Werten handelt es sich um R-, G- und B-Daten, die als XMVECTOR-Daten verwendet oder direkt an die Clear-Methode der Direct3D 10.x/Direct3D 11-API übergeben werden können.</td>
 </tr>
 <tr class="odd">
-<td>Farben::D eepskyblue</td>
-<td>Konstanten für die standardmäßigen .net-Farb Definitionen. Diese Werte sind R-, G-, B-Daten, die als xmvector verwendet oder direkt an die Clear-Methode der Direct3D 10. x/Direct3D 11-API übermittelt werden können.</td>
+<td>Colors::D eepSkyBlue</td>
+<td>Konstanten für die standardmäßigen .NET-Farbdefinitionen. Bei diesen Werten handelt es sich um R-, G- und B-Daten, die als XMVECTOR-Daten verwendet oder direkt an die Clear-Methode der Direct3D 10.x/Direct3D 11-API übergeben werden können.</td>
 </tr>
 <tr class="even">
-<td>Farben::D imgray</td>
-<td>Konstanten für die standardmäßigen .net-Farb Definitionen. Diese Werte sind R-, G-, B-Daten, die als xmvector verwendet oder direkt an die Clear-Methode der Direct3D 10. x/Direct3D 11-API übermittelt werden können.</td>
+<td>Colors::D imGray</td>
+<td>Konstanten für die standardmäßigen .NET-Farbdefinitionen. Bei diesen Werten handelt es sich um R-, G- und B-Daten, die als XMVECTOR-Daten verwendet oder direkt an die Clear-Methode der Direct3D 10.x/Direct3D 11-API übergeben werden können.</td>
 </tr>
 <tr class="odd">
-<td>Farben::D odgerblue</td>
-<td>Konstanten für die standardmäßigen .net-Farb Definitionen. Diese Werte sind R-, G-, B-Daten, die als xmvector verwendet oder direkt an die Clear-Methode der Direct3D 10. x/Direct3D 11-API übermittelt werden können.</td>
+<td>Colors::D odgerBlue</td>
+<td>Konstanten für die standardmäßigen .NET-Farbdefinitionen. Bei diesen Werten handelt es sich um R-, G- und B-Daten, die als XMVECTOR-Daten verwendet oder direkt an die Clear-Methode der Direct3D 10.x/Direct3D 11-API übergeben werden können.</td>
 </tr>
 <tr class="even">
-<td>Colors:: Firebrick</td>
-<td>Konstanten für die standardmäßigen .net-Farb Definitionen. Diese Werte sind R-, G-, B-Daten, die als xmvector verwendet oder direkt an die Clear-Methode der Direct3D 10. x/Direct3D 11-API übermittelt werden können.</td>
+<td>Farben::Firebrick</td>
+<td>Konstanten für die standardmäßigen .NET-Farbdefinitionen. Bei diesen Werten handelt es sich um R-, G- und B-Daten, die als XMVECTOR-Daten verwendet oder direkt an die Clear-Methode der Direct3D 10.x/Direct3D 11-API übergeben werden können.</td>
 </tr>
 <tr class="odd">
-<td>Farben:: FloralWhite</td>
-<td>Konstanten für die standardmäßigen .net-Farb Definitionen. Diese Werte sind R-, G-, B-Daten, die als xmvector verwendet oder direkt an die Clear-Methode der Direct3D 10. x/Direct3D 11-API übermittelt werden können.</td>
+<td>Colors::White</td>
+<td>Konstanten für die standardmäßigen .NET-Farbdefinitionen. Bei diesen Werten handelt es sich um R-, G- und B-Daten, die als XMVECTOR-Daten verwendet oder direkt an die Clear-Methode der Direct3D 10.x/Direct3D 11-API übergeben werden können.</td>
 </tr>
 <tr class="even">
-<td>Farben:: ForestGreen</td>
-<td>Konstanten für die standardmäßigen .net-Farb Definitionen. Diese Werte sind R-, G-, B-Daten, die als xmvector verwendet oder direkt an die Clear-Methode der Direct3D 10. x/Direct3D 11-API übermittelt werden können.</td>
+<td>Colors::ForestGreen</td>
+<td>Konstanten für die standardmäßigen .NET-Farbdefinitionen. Bei diesen Werten handelt es sich um R-, G- und B-Daten, die als XMVECTOR-Daten verwendet oder direkt an die Clear-Methode der Direct3D 10.x/Direct3D 11-API übergeben werden können.</td>
 </tr>
 <tr class="odd">
-<td>Farben:: Fuchsia</td>
-<td>Konstanten für die standardmäßigen .net-Farb Definitionen. Diese Werte sind R-, G-, B-Daten, die als xmvector verwendet oder direkt an die Clear-Methode der Direct3D 10. x/Direct3D 11-API übermittelt werden können.</td>
+<td>Colors::Sollia</td>
+<td>Konstanten für die standardmäßigen .NET-Farbdefinitionen. Bei diesen Werten handelt es sich um R-, G- und B-Daten, die als XMVECTOR-Daten verwendet oder direkt an die Clear-Methode der Direct3D 10.x/Direct3D 11-API übergeben werden können.</td>
 </tr>
 <tr class="even">
-<td>Farben:: Gainsboro</td>
-<td>Konstanten für die standardmäßigen .net-Farb Definitionen. Diese Werte sind R-, G-, B-Daten, die als xmvector verwendet oder direkt an die Clear-Methode der Direct3D 10. x/Direct3D 11-API übermittelt werden können.</td>
+<td>Colors::Gainsboro</td>
+<td>Konstanten für die standardmäßigen .NET-Farbdefinitionen. Bei diesen Werten handelt es sich um R-, G- und B-Daten, die als XMVECTOR-Daten verwendet oder direkt an die Clear-Methode der Direct3D 10.x/Direct3D 11-API übergeben werden können.</td>
 </tr>
 <tr class="odd">
-<td>Farben:: GhostWhite</td>
-<td>Konstanten für die standardmäßigen .net-Farb Definitionen. Diese Werte sind R-, G-, B-Daten, die als xmvector verwendet oder direkt an die Clear-Methode der Direct3D 10. x/Direct3D 11-API übermittelt werden können.</td>
+<td>Colors::GhostWhite</td>
+<td>Konstanten für die standardmäßigen .NET-Farbdefinitionen. Bei diesen Werten handelt es sich um R-, G- und B-Daten, die als XMVECTOR-Daten verwendet oder direkt an die Clear-Methode der Direct3D 10.x/Direct3D 11-API übergeben werden können.</td>
 </tr>
 <tr class="even">
-<td>Farben:: Gold</td>
-<td>Konstanten für die standardmäßigen .net-Farb Definitionen. Diese Werte sind R-, G-, B-Daten, die als xmvector verwendet oder direkt an die Clear-Methode der Direct3D 10. x/Direct3D 11-API übermittelt werden können.</td>
+<td>Farben::Gold</td>
+<td>Konstanten für die standardmäßigen .NET-Farbdefinitionen. Bei diesen Werten handelt es sich um R-, G- und B-Daten, die als XMVECTOR-Daten verwendet oder direkt an die Clear-Methode der Direct3D 10.x/Direct3D 11-API übergeben werden können.</td>
 </tr>
 <tr class="odd">
-<td>Farben:: Goldenrod</td>
-<td>Konstanten für die standardmäßigen .net-Farb Definitionen. Diese Werte sind R-, G-, B-Daten, die als xmvector verwendet oder direkt an die Clear-Methode der Direct3D 10. x/Direct3D 11-API übermittelt werden können.</td>
+<td>Colors::Goldenrod</td>
+<td>Konstanten für die standardmäßigen .NET-Farbdefinitionen. Bei diesen Werten handelt es sich um R-, G- und B-Daten, die als XMVECTOR-Daten verwendet oder direkt an die Clear-Methode der Direct3D 10.x/Direct3D 11-API übergeben werden können.</td>
 </tr>
 <tr class="even">
-<td>Farben:: grau</td>
-<td>Konstanten für die standardmäßigen .net-Farb Definitionen. Diese Werte sind R-, G-, B-Daten, die als xmvector verwendet oder direkt an die Clear-Methode der Direct3D 10. x/Direct3D 11-API übermittelt werden können.</td>
+<td>Farben::Grau</td>
+<td>Konstanten für die standardmäßigen .NET-Farbdefinitionen. Bei diesen Werten handelt es sich um R-, G- und B-Daten, die als XMVECTOR-Daten verwendet oder direkt an die Clear-Methode der Direct3D 10.x/Direct3D 11-API übergeben werden können.</td>
 </tr>
 <tr class="odd">
-<td>Farben:: grün</td>
-<td>Konstanten für die standardmäßigen .net-Farb Definitionen. Diese Werte sind R-, G-, B-Daten, die als xmvector verwendet oder direkt an die Clear-Methode der Direct3D 10. x/Direct3D 11-API übermittelt werden können.</td>
+<td>Farben::Grün</td>
+<td>Konstanten für die standardmäßigen .NET-Farbdefinitionen. Bei diesen Werten handelt es sich um R-, G- und B-Daten, die als XMVECTOR-Daten verwendet oder direkt an die Clear-Methode der Direct3D 10.x/Direct3D 11-API übergeben werden können.</td>
 </tr>
 <tr class="even">
-<td>Farben:: greenyellow</td>
-<td>Konstanten für die standardmäßigen .net-Farb Definitionen. Diese Werte sind R-, G-, B-Daten, die als xmvector verwendet oder direkt an die Clear-Methode der Direct3D 10. x/Direct3D 11-API übermittelt werden können.</td>
+<td>Farben::GreenYellow</td>
+<td>Konstanten für die standardmäßigen .NET-Farbdefinitionen. Bei diesen Werten handelt es sich um R-, G- und B-Daten, die als XMVECTOR-Daten verwendet oder direkt an die Clear-Methode der Direct3D 10.x/Direct3D 11-API übergeben werden können.</td>
 </tr>
 <tr class="odd">
-<td>Colors:: honeydew</td>
-<td>Konstanten für die standardmäßigen .net-Farb Definitionen. Diese Werte sind R-, G-, B-Daten, die als xmvector verwendet oder direkt an die Clear-Methode der Direct3D 10. x/Direct3D 11-API übermittelt werden können.</td>
+<td>Farben::Honeydew</td>
+<td>Konstanten für die standardmäßigen .NET-Farbdefinitionen. Bei diesen Werten handelt es sich um R-, G- und B-Daten, die als XMVECTOR-Daten verwendet oder direkt an die Clear-Methode der Direct3D 10.x/Direct3D 11-API übergeben werden können.</td>
 </tr>
 <tr class="even">
-<td>Farben:: hotrosa</td>
-<td>Konstanten für die standardmäßigen .net-Farb Definitionen. Diese Werte sind R-, G-, B-Daten, die als xmvector verwendet oder direkt an die Clear-Methode der Direct3D 10. x/Direct3D 11-API übermittelt werden können.</td>
+<td>Farben::HotPink</td>
+<td>Konstanten für die standardmäßigen .NET-Farbdefinitionen. Bei diesen Werten handelt es sich um R-, G- und B-Daten, die als XMVECTOR-Daten verwendet oder direkt an die Clear-Methode der Direct3D 10.x/Direct3D 11-API übergeben werden können.</td>
 </tr>
 <tr class="odd">
-<td>Farben:: nicht-rot</td>
-<td>Konstanten für die standardmäßigen .net-Farb Definitionen. Diese Werte sind R-, G-, B-Daten, die als xmvector verwendet oder direkt an die Clear-Methode der Direct3D 10. x/Direct3D 11-API übermittelt werden können.</td>
+<td>Colors::IndischRed</td>
+<td>Konstanten für die standardmäßigen .NET-Farbdefinitionen. Bei diesen Werten handelt es sich um R-, G- und B-Daten, die als XMVECTOR-Daten verwendet oder direkt an die Clear-Methode der Direct3D 10.x/Direct3D 11-API übergeben werden können.</td>
 </tr>
 <tr class="even">
-<td>Farben:: Indigo</td>
-<td>Konstanten für die standardmäßigen .net-Farb Definitionen. Diese Werte sind R-, G-, B-Daten, die als xmvector verwendet oder direkt an die Clear-Methode der Direct3D 10. x/Direct3D 11-API übermittelt werden können.</td>
+<td>Colors::Rome</td>
+<td>Konstanten für die standardmäßigen .NET-Farbdefinitionen. Bei diesen Werten handelt es sich um R-, G- und B-Daten, die als XMVECTOR-Daten verwendet oder direkt an die Clear-Methode der Direct3D 10.x/Direct3D 11-API übergeben werden können.</td>
 </tr>
 <tr class="odd">
-<td>Farben:: Elfenbein</td>
-<td>Konstanten für die standardmäßigen .net-Farb Definitionen. Diese Werte sind R-, G-, B-Daten, die als xmvector verwendet oder direkt an die Clear-Methode der Direct3D 10. x/Direct3D 11-API übermittelt werden können.</td>
+<td>Farben::Umgestaltung</td>
+<td>Konstanten für die standardmäßigen .NET-Farbdefinitionen. Bei diesen Werten handelt es sich um R-, G- und B-Daten, die als XMVECTOR-Daten verwendet oder direkt an die Clear-Methode der Direct3D 10.x/Direct3D 11-API übergeben werden können.</td>
 </tr>
 <tr class="even">
-<td>Farben:: khaki</td>
-<td>Konstanten für die standardmäßigen .net-Farb Definitionen. Diese Werte sind R-, G-, B-Daten, die als xmvector verwendet oder direkt an die Clear-Methode der Direct3D 10. x/Direct3D 11-API übermittelt werden können.</td>
+<td>Farben::Sollki</td>
+<td>Konstanten für die standardmäßigen .NET-Farbdefinitionen. Bei diesen Werten handelt es sich um R-, G- und B-Daten, die als XMVECTOR-Daten verwendet oder direkt an die Clear-Methode der Direct3D 10.x/Direct3D 11-API übergeben werden können.</td>
 </tr>
 <tr class="odd">
-<td>Farben:: Lavendel</td>
-<td>Konstanten für die standardmäßigen .net-Farb Definitionen. Diese Werte sind R-, G-, B-Daten, die als xmvector verwendet oder direkt an die Clear-Methode der Direct3D 10. x/Direct3D 11-API übermittelt werden können.</td>
+<td>Colors::Wiesender</td>
+<td>Konstanten für die standardmäßigen .NET-Farbdefinitionen. Bei diesen Werten handelt es sich um R-, G- und B-Daten, die als XMVECTOR-Daten verwendet oder direkt an die Clear-Methode der Direct3D 10.x/Direct3D 11-API übergeben werden können.</td>
 </tr>
 <tr class="even">
-<td>Farben:: lavenderblush</td>
-<td>Konstanten für die standardmäßigen .net-Farb Definitionen. Diese Werte sind R-, G-, B-Daten, die als xmvector verwendet oder direkt an die Clear-Methode der Direct3D 10. x/Direct3D 11-API übermittelt werden können.</td>
+<td>Colors::EnderBlush</td>
+<td>Konstanten für die standardmäßigen .NET-Farbdefinitionen. Bei diesen Werten handelt es sich um R-, G- und B-Daten, die als XMVECTOR-Daten verwendet oder direkt an die Clear-Methode der Direct3D 10.x/Direct3D 11-API übergeben werden können.</td>
 </tr>
 <tr class="odd">
-<td>Farben:: lawngreen</td>
-<td>Konstanten für die standardmäßigen .net-Farb Definitionen. Diese Werte sind R-, G-, B-Daten, die als xmvector verwendet oder direkt an die Clear-Methode der Direct3D 10. x/Direct3D 11-API übermittelt werden können.</td>
+<td>Farben::LawnGreen</td>
+<td>Konstanten für die standardmäßigen .NET-Farbdefinitionen. Bei diesen Werten handelt es sich um R-, G- und B-Daten, die als XMVECTOR-Daten verwendet oder direkt an die Clear-Methode der Direct3D 10.x/Direct3D 11-API übergeben werden können.</td>
 </tr>
 <tr class="even">
-<td>Colors:: LemonChiffon</td>
-<td>Konstanten für die standardmäßigen .net-Farb Definitionen. Diese Werte sind R-, G-, B-Daten, die als xmvector verwendet oder direkt an die Clear-Methode der Direct3D 10. x/Direct3D 11-API übermittelt werden können.</td>
+<td>Colors::ColorsChiffon</td>
+<td>Konstanten für die standardmäßigen .NET-Farbdefinitionen. Bei diesen Werten handelt es sich um R-, G- und B-Daten, die als XMVECTOR-Daten verwendet oder direkt an die Clear-Methode der Direct3D 10.x/Direct3D 11-API übergeben werden können.</td>
 </tr>
 <tr class="odd">
-<td>Farben:: LightBlue</td>
-<td>Konstanten für die standardmäßigen .net-Farb Definitionen. Diese Werte sind R-, G-, B-Daten, die als xmvector verwendet oder direkt an die Clear-Methode der Direct3D 10. x/Direct3D 11-API übermittelt werden können.</td>
+<td>Farben::LightBlue</td>
+<td>Konstanten für die standardmäßigen .NET-Farbdefinitionen. Bei diesen Werten handelt es sich um R-, G- und B-Daten, die als XMVECTOR-Daten verwendet oder direkt an die Clear-Methode der Direct3D 10.x/Direct3D 11-API übergeben werden können.</td>
 </tr>
 <tr class="even">
-<td>Farben:: LightCoral</td>
-<td>Konstanten für die standardmäßigen .net-Farb Definitionen. Diese Werte sind R-, G-, B-Daten, die als xmvector verwendet oder direkt an die Clear-Methode der Direct3D 10. x/Direct3D 11-API übermittelt werden können.</td>
+<td>Colors::LightCoral</td>
+<td>Konstanten für die standardmäßigen .NET-Farbdefinitionen. Bei diesen Werten handelt es sich um R-, G- und B-Daten, die als XMVECTOR-Daten verwendet oder direkt an die Clear-Methode der Direct3D 10.x/Direct3D 11-API übergeben werden können.</td>
 </tr>
 <tr class="odd">
-<td>Colors:: LightCyan</td>
-<td>Konstanten für die standardmäßigen .net-Farb Definitionen. Diese Werte sind R-, G-, B-Daten, die als xmvector verwendet oder direkt an die Clear-Methode der Direct3D 10. x/Direct3D 11-API übermittelt werden können.</td>
+<td>Colors::LightCyan</td>
+<td>Konstanten für die standardmäßigen .NET-Farbdefinitionen. Bei diesen Werten handelt es sich um R-, G- und B-Daten, die als XMVECTOR-Daten verwendet oder direkt an die Clear-Methode der Direct3D 10.x/Direct3D 11-API übergeben werden können.</td>
 </tr>
 <tr class="even">
-<td>Farben:: LightGoldenrodYellow</td>
-<td>Konstanten für die standardmäßigen .net-Farb Definitionen. Diese Werte sind R-, G-, B-Daten, die als xmvector verwendet oder direkt an die Clear-Methode der Direct3D 10. x/Direct3D 11-API übermittelt werden können.</td>
+<td>Colors::LightKapselenrodYellow</td>
+<td>Konstanten für die standardmäßigen .NET-Farbdefinitionen. Bei diesen Werten handelt es sich um R-, G- und B-Daten, die als XMVECTOR-Daten verwendet oder direkt an die Clear-Methode der Direct3D 10.x/Direct3D 11-API übergeben werden können.</td>
 </tr>
 <tr class="odd">
-<td>Farben:: LightGreen</td>
-<td>Konstanten für die standardmäßigen .net-Farb Definitionen. Diese Werte sind R-, G-, B-Daten, die als xmvector verwendet oder direkt an die Clear-Methode der Direct3D 10. x/Direct3D 11-API übermittelt werden können.</td>
+<td>Colors::LightGreen</td>
+<td>Konstanten für die standardmäßigen .NET-Farbdefinitionen. Bei diesen Werten handelt es sich um R-, G- und B-Daten, die als XMVECTOR-Daten verwendet oder direkt an die Clear-Methode der Direct3D 10.x/Direct3D 11-API übergeben werden können.</td>
 </tr>
 <tr class="even">
-<td>Farben:: LightGray</td>
-<td>Konstanten für die standardmäßigen .net-Farb Definitionen. Diese Werte sind R-, G-, B-Daten, die als xmvector verwendet oder direkt an die Clear-Methode der Direct3D 10. x/Direct3D 11-API übermittelt werden können.</td>
+<td>Colors::LightGray</td>
+<td>Konstanten für die standardmäßigen .NET-Farbdefinitionen. Bei diesen Werten handelt es sich um R-, G- und B-Daten, die als XMVECTOR-Daten verwendet oder direkt an die Clear-Methode der Direct3D 10.x/Direct3D 11-API übergeben werden können.</td>
 </tr>
 <tr class="odd">
-<td>Farben:: LightPink</td>
-<td>Konstanten für die standardmäßigen .net-Farb Definitionen. Diese Werte sind R-, G-, B-Daten, die als xmvector verwendet oder direkt an die Clear-Methode der Direct3D 10. x/Direct3D 11-API übermittelt werden können.</td>
+<td>Farben::LightPink</td>
+<td>Konstanten für die standardmäßigen .NET-Farbdefinitionen. Bei diesen Werten handelt es sich um R-, G- und B-Daten, die als XMVECTOR-Daten verwendet oder direkt an die Clear-Methode der Direct3D 10.x/Direct3D 11-API übergeben werden können.</td>
 </tr>
 <tr class="even">
-<td>Farben:: LightSalmon</td>
-<td>Konstanten für die standardmäßigen .net-Farb Definitionen. Diese Werte sind R-, G-, B-Daten, die als xmvector verwendet oder direkt an die Clear-Methode der Direct3D 10. x/Direct3D 11-API übermittelt werden können.</td>
+<td>Colors::LightSalmon</td>
+<td>Konstanten für die standardmäßigen .NET-Farbdefinitionen. Bei diesen Werten handelt es sich um R-, G- und B-Daten, die als XMVECTOR-Daten verwendet oder direkt an die Clear-Methode der Direct3D 10.x/Direct3D 11-API übergeben werden können.</td>
 </tr>
 <tr class="odd">
-<td>Farben:: Light-agreen</td>
-<td>Konstanten für die standardmäßigen .net-Farb Definitionen. Diese Werte sind R-, G-, B-Daten, die als xmvector verwendet oder direkt an die Clear-Methode der Direct3D 10. x/Direct3D 11-API übermittelt werden können.</td>
+<td>Farben::LightSeaGreen</td>
+<td>Konstanten für die standardmäßigen .NET-Farbdefinitionen. Bei diesen Werten handelt es sich um R-, G- und B-Daten, die als XMVECTOR-Daten verwendet oder direkt an die Clear-Methode der Direct3D 10.x/Direct3D 11-API übergeben werden können.</td>
 </tr>
 <tr class="even">
-<td>Farben:: LightSkyBlue</td>
-<td>Konstanten für die standardmäßigen .net-Farb Definitionen. Diese Werte sind R-, G-, B-Daten, die als xmvector verwendet oder direkt an die Clear-Methode der Direct3D 10. x/Direct3D 11-API übermittelt werden können.</td>
+<td>Colors::LightSkyBlue</td>
+<td>Konstanten für die standardmäßigen .NET-Farbdefinitionen. Bei diesen Werten handelt es sich um R-, G- und B-Daten, die als XMVECTOR-Daten verwendet oder direkt an die Clear-Methode der Direct3D 10.x/Direct3D 11-API übergeben werden können.</td>
 </tr>
 <tr class="odd">
-<td>Farben:: lightürlategray</td>
-<td>Konstanten für die standardmäßigen .net-Farb Definitionen. Diese Werte sind R-, G-, B-Daten, die als xmvector verwendet oder direkt an die Clear-Methode der Direct3D 10. x/Direct3D 11-API übermittelt werden können.</td>
+<td>Colors::LightSlateGray</td>
+<td>Konstanten für die standardmäßigen .NET-Farbdefinitionen. Bei diesen Werten handelt es sich um R-, G- und B-Daten, die als XMVECTOR-Daten verwendet oder direkt an die Clear-Methode der Direct3D 10.x/Direct3D 11-API übergeben werden können.</td>
 </tr>
 <tr class="even">
-<td>Farben:: LightSteelBlue</td>
-<td>Konstanten für die standardmäßigen .net-Farb Definitionen. Diese Werte sind R-, G-, B-Daten, die als xmvector verwendet oder direkt an die Clear-Methode der Direct3D 10. x/Direct3D 11-API übermittelt werden können.</td>
+<td>Colors::LightSteelBlue</td>
+<td>Konstanten für die standardmäßigen .NET-Farbdefinitionen. Bei diesen Werten handelt es sich um R-, G- und B-Daten, die als XMVECTOR-Daten verwendet oder direkt an die Clear-Methode der Direct3D 10.x/Direct3D 11-API übergeben werden können.</td>
 </tr>
 <tr class="odd">
-<td>Farben:: LightYellow</td>
-<td>Konstanten für die standardmäßigen .net-Farb Definitionen. Diese Werte sind R-, G-, B-Daten, die als xmvector verwendet oder direkt an die Clear-Methode der Direct3D 10. x/Direct3D 11-API übermittelt werden können.</td>
+<td>Farben::LightYellow</td>
+<td>Konstanten für die standardmäßigen .NET-Farbdefinitionen. Bei diesen Werten handelt es sich um R-, G- und B-Daten, die als XMVECTOR-Daten verwendet oder direkt an die Clear-Methode der Direct3D 10.x/Direct3D 11-API übergeben werden können.</td>
 </tr>
 <tr class="even">
-<td>Farben:: Kalk</td>
-<td>Konstanten für die standardmäßigen .net-Farb Definitionen. Diese Werte sind R-, G-, B-Daten, die als xmvector verwendet oder direkt an die Clear-Methode der Direct3D 10. x/Direct3D 11-API übermittelt werden können.</td>
+<td>Farben::Limon</td>
+<td>Konstanten für die standardmäßigen .NET-Farbdefinitionen. Bei diesen Werten handelt es sich um R-, G- und B-Daten, die als XMVECTOR-Daten verwendet oder direkt an die Clear-Methode der Direct3D 10.x/Direct3D 11-API übergeben werden können.</td>
 </tr>
 <tr class="odd">
-<td>Farben:: limegrün</td>
-<td>Konstanten für die standardmäßigen .net-Farb Definitionen. Diese Werte sind R-, G-, B-Daten, die als xmvector verwendet oder direkt an die Clear-Methode der Direct3D 10. x/Direct3D 11-API übermittelt werden können.</td>
+<td>Colors::LimeGreen</td>
+<td>Konstanten für die standardmäßigen .NET-Farbdefinitionen. Bei diesen Werten handelt es sich um R-, G- und B-Daten, die als XMVECTOR-Daten verwendet oder direkt an die Clear-Methode der Direct3D 10.x/Direct3D 11-API übergeben werden können.</td>
 </tr>
 <tr class="even">
-<td>Farben:: Leinen</td>
-<td>Konstanten für die standardmäßigen .net-Farb Definitionen. Diese Werte sind R-, G-, B-Daten, die als xmvector verwendet oder direkt an die Clear-Methode der Direct3D 10. x/Direct3D 11-API übermittelt werden können.</td>
+<td>Colors::Linen</td>
+<td>Konstanten für die standardmäßigen .NET-Farbdefinitionen. Bei diesen Werten handelt es sich um R-, G- und B-Daten, die als XMVECTOR-Daten verwendet oder direkt an die Clear-Methode der Direct3D 10.x/Direct3D 11-API übergeben werden können.</td>
 </tr>
 <tr class="odd">
-<td>Farben:: Magenta</td>
-<td>Konstanten für die standardmäßigen .net-Farb Definitionen. Diese Werte sind R-, G-, B-Daten, die als xmvector verwendet oder direkt an die Clear-Methode der Direct3D 10. x/Direct3D 11-API übermittelt werden können.</td>
+<td>Colors::Magenta</td>
+<td>Konstanten für die standardmäßigen .NET-Farbdefinitionen. Bei diesen Werten handelt es sich um R-, G- und B-Daten, die als XMVECTOR-Daten verwendet oder direkt an die Clear-Methode der Direct3D 10.x/Direct3D 11-API übergeben werden können.</td>
 </tr>
 <tr class="even">
-<td>Farben:: Maroon</td>
-<td>Konstanten für die standardmäßigen .net-Farb Definitionen. Diese Werte sind R-, G-, B-Daten, die als xmvector verwendet oder direkt an die Clear-Methode der Direct3D 10. x/Direct3D 11-API übermittelt werden können.</td>
+<td>Colors::Maroon</td>
+<td>Konstanten für die standardmäßigen .NET-Farbdefinitionen. Bei diesen Werten handelt es sich um R-, G- und B-Daten, die als XMVECTOR-Daten verwendet oder direkt an die Clear-Methode der Direct3D 10.x/Direct3D 11-API übergeben werden können.</td>
 </tr>
 <tr class="odd">
-<td>Colors:: MediumAquamarine</td>
-<td>Konstanten für die standardmäßigen .net-Farb Definitionen. Diese Werte sind R-, G-, B-Daten, die als xmvector verwendet oder direkt an die Clear-Methode der Direct3D 10. x/Direct3D 11-API übermittelt werden können.</td>
+<td>Farben::MediumAquamarine</td>
+<td>Konstanten für die standardmäßigen .NET-Farbdefinitionen. Bei diesen Werten handelt es sich um R-, G- und B-Daten, die als XMVECTOR-Daten verwendet oder direkt an die Clear-Methode der Direct3D 10.x/Direct3D 11-API übergeben werden können.</td>
 </tr>
 <tr class="even">
-<td>Farben:: MediumBlue</td>
-<td>Konstanten für die standardmäßigen .net-Farb Definitionen. Diese Werte sind R-, G-, B-Daten, die als xmvector verwendet oder direkt an die Clear-Methode der Direct3D 10. x/Direct3D 11-API übermittelt werden können.</td>
+<td>Colors::MediumBlue</td>
+<td>Konstanten für die standardmäßigen .NET-Farbdefinitionen. Bei diesen Werten handelt es sich um R-, G- und B-Daten, die als XMVECTOR-Daten verwendet oder direkt an die Clear-Methode der Direct3D 10.x/Direct3D 11-API übergeben werden können.</td>
 </tr>
 <tr class="odd">
-<td>Colors:: medienorchid</td>
-<td>Konstanten für die standardmäßigen .net-Farb Definitionen. Diese Werte sind R-, G-, B-Daten, die als xmvector verwendet oder direkt an die Clear-Methode der Direct3D 10. x/Direct3D 11-API übermittelt werden können.</td>
+<td>Colors::MediumOrchid</td>
+<td>Konstanten für die standardmäßigen .NET-Farbdefinitionen. Bei diesen Werten handelt es sich um R-, G- und B-Daten, die als XMVECTOR-Daten verwendet oder direkt an die Clear-Methode der Direct3D 10.x/Direct3D 11-API übergeben werden können.</td>
 </tr>
 <tr class="even">
-<td>Farben:: mediumschlag</td>
-<td>Konstanten für die standardmäßigen .net-Farb Definitionen. Diese Werte sind R-, G-, B-Daten, die als xmvector verwendet oder direkt an die Clear-Methode der Direct3D 10. x/Direct3D 11-API übermittelt werden können.</td>
+<td>Colors::MediumPurple</td>
+<td>Konstanten für die standardmäßigen .NET-Farbdefinitionen. Bei diesen Werten handelt es sich um R-, G- und B-Daten, die als XMVECTOR-Daten verwendet oder direkt an die Clear-Methode der Direct3D 10.x/Direct3D 11-API übergeben werden können.</td>
 </tr>
 <tr class="odd">
-<td>Farben:: mediin-agreen</td>
-<td>Konstanten für die standardmäßigen .net-Farb Definitionen. Diese Werte sind R-, G-, B-Daten, die als xmvector verwendet oder direkt an die Clear-Methode der Direct3D 10. x/Direct3D 11-API übermittelt werden können.</td>
+<td>Farben::MediumSeaGreen</td>
+<td>Konstanten für die standardmäßigen .NET-Farbdefinitionen. Bei diesen Werten handelt es sich um R-, G- und B-Daten, die als XMVECTOR-Daten verwendet oder direkt an die Clear-Methode der Direct3D 10.x/Direct3D 11-API übergeben werden können.</td>
 </tr>
 <tr class="even">
-<td>Farben:: MediumSlateBlue</td>
-<td>Konstanten für die standardmäßigen .net-Farb Definitionen. Diese Werte sind R-, G-, B-Daten, die als xmvector verwendet oder direkt an die Clear-Methode der Direct3D 10. x/Direct3D 11-API übermittelt werden können.</td>
+<td>Colors::MediumSlateBlue</td>
+<td>Konstanten für die standardmäßigen .NET-Farbdefinitionen. Bei diesen Werten handelt es sich um R-, G- und B-Daten, die als XMVECTOR-Daten verwendet oder direkt an die Clear-Methode der Direct3D 10.x/Direct3D 11-API übergeben werden können.</td>
 </tr>
 <tr class="odd">
-<td>Farben:: mediumspringgrün</td>
-<td>Konstanten für die standardmäßigen .net-Farb Definitionen. Diese Werte sind R-, G-, B-Daten, die als xmvector verwendet oder direkt an die Clear-Methode der Direct3D 10. x/Direct3D 11-API übermittelt werden können.</td>
+<td>Colors::MediumSpringGreen</td>
+<td>Konstanten für die standardmäßigen .NET-Farbdefinitionen. Bei diesen Werten handelt es sich um R-, G- und B-Daten, die als XMVECTOR-Daten verwendet oder direkt an die Clear-Methode der Direct3D 10.x/Direct3D 11-API übergeben werden können.</td>
 </tr>
 <tr class="even">
-<td>Farben:: mediin Türkis</td>
-<td>Konstanten für die standardmäßigen .net-Farb Definitionen. Diese Werte sind R-, G-, B-Daten, die als xmvector verwendet oder direkt an die Clear-Methode der Direct3D 10. x/Direct3D 11-API übermittelt werden können.</td>
+<td>Colors::MediumTurquoise</td>
+<td>Konstanten für die standardmäßigen .NET-Farbdefinitionen. Bei diesen Werten handelt es sich um R-, G- und B-Daten, die als XMVECTOR-Daten verwendet oder direkt an die Clear-Methode der Direct3D 10.x/Direct3D 11-API übergeben werden können.</td>
 </tr>
 <tr class="odd">
-<td>Colors:: mediin violetred</td>
-<td>Konstanten für die standardmäßigen .net-Farb Definitionen. Diese Werte sind R-, G-, B-Daten, die als xmvector verwendet oder direkt an die Clear-Methode der Direct3D 10. x/Direct3D 11-API übermittelt werden können.</td>
+<td>Colors::MediumVioletRed</td>
+<td>Konstanten für die standardmäßigen .NET-Farbdefinitionen. Bei diesen Werten handelt es sich um R-, G- und B-Daten, die als XMVECTOR-Daten verwendet oder direkt an die Clear-Methode der Direct3D 10.x/Direct3D 11-API übergeben werden können.</td>
 </tr>
 <tr class="even">
-<td>Farben:: Mittel Nacht blau</td>
-<td>Konstanten für die standardmäßigen .net-Farb Definitionen. Diese Werte sind R-, G-, B-Daten, die als xmvector verwendet oder direkt an die Clear-Methode der Direct3D 10. x/Direct3D 11-API übermittelt werden können.</td>
+<td>Colors::MidnightBlue</td>
+<td>Konstanten für die standardmäßigen .NET-Farbdefinitionen. Bei diesen Werten handelt es sich um R-, G- und B-Daten, die als XMVECTOR-Daten verwendet oder direkt an die Clear-Methode der Direct3D 10.x/Direct3D 11-API übergeben werden können.</td>
 </tr>
 <tr class="odd">
-<td>Farben:: MintCream</td>
-<td>Konstanten für die standardmäßigen .net-Farb Definitionen. Diese Werte sind R-, G-, B-Daten, die als xmvector verwendet oder direkt an die Clear-Methode der Direct3D 10. x/Direct3D 11-API übermittelt werden können.</td>
+<td>Colors::MintCream</td>
+<td>Konstanten für die standardmäßigen .NET-Farbdefinitionen. Bei diesen Werten handelt es sich um R-, G- und B-Daten, die als XMVECTOR-Daten verwendet oder direkt an die Clear-Methode der Direct3D 10.x/Direct3D 11-API übergeben werden können.</td>
 </tr>
 <tr class="even">
-<td>Farben:: MistyRose</td>
-<td>Konstanten für die standardmäßigen .net-Farb Definitionen. Diese Werte sind R-, G-, B-Daten, die als xmvector verwendet oder direkt an die Clear-Methode der Direct3D 10. x/Direct3D 11-API übermittelt werden können.</td>
+<td>Colors::SollyRose</td>
+<td>Konstanten für die standardmäßigen .NET-Farbdefinitionen. Bei diesen Werten handelt es sich um R-, G- und B-Daten, die als XMVECTOR-Daten verwendet oder direkt an die Clear-Methode der Direct3D 10.x/Direct3D 11-API übergeben werden können.</td>
 </tr>
 <tr class="odd">
-<td>Farben:: Moccasin</td>
-<td>Konstanten für die standardmäßigen .net-Farb Definitionen. Diese Werte sind R-, G-, B-Daten, die als xmvector verwendet oder direkt an die Clear-Methode der Direct3D 10. x/Direct3D 11-API übermittelt werden können.</td>
+<td>Farben::Moccasin</td>
+<td>Konstanten für die standardmäßigen .NET-Farbdefinitionen. Bei diesen Werten handelt es sich um R-, G- und B-Daten, die als XMVECTOR-Daten verwendet oder direkt an die Clear-Methode der Direct3D 10.x/Direct3D 11-API übergeben werden können.</td>
 </tr>
 <tr class="even">
-<td>Farben:: NavajoWhite</td>
-<td>Konstanten für die standardmäßigen .net-Farb Definitionen. Diese Werte sind R-, G-, B-Daten, die als xmvector verwendet oder direkt an die Clear-Methode der Direct3D 10. x/Direct3D 11-API übermittelt werden können.</td>
+<td>Colors::NavajoWhite</td>
+<td>Konstanten für die standardmäßigen .NET-Farbdefinitionen. Bei diesen Werten handelt es sich um R-, G- und B-Daten, die als XMVECTOR-Daten verwendet oder direkt an die Clear-Methode der Direct3D 10.x/Direct3D 11-API übergeben werden können.</td>
 </tr>
 <tr class="odd">
-<td>Farben:: Navy</td>
-<td>Konstanten für die standardmäßigen .net-Farb Definitionen. Diese Werte sind R-, G-, B-Daten, die als xmvector verwendet oder direkt an die Clear-Methode der Direct3D 10. x/Direct3D 11-API übermittelt werden können.</td>
+<td>Farben::Während</td>
+<td>Konstanten für die standardmäßigen .NET-Farbdefinitionen. Bei diesen Werten handelt es sich um R-, G- und B-Daten, die als XMVECTOR-Daten verwendet oder direkt an die Clear-Methode der Direct3D 10.x/Direct3D 11-API übergeben werden können.</td>
 </tr>
 <tr class="even">
-<td>Colors:: OldLace</td>
-<td>Konstanten für die standardmäßigen .net-Farb Definitionen. Diese Werte sind R-, G-, B-Daten, die als xmvector verwendet oder direkt an die Clear-Methode der Direct3D 10. x/Direct3D 11-API übermittelt werden können.</td>
+<td>Colors::OldLace</td>
+<td>Konstanten für die standardmäßigen .NET-Farbdefinitionen. Bei diesen Werten handelt es sich um R-, G- und B-Daten, die als XMVECTOR-Daten verwendet oder direkt an die Clear-Methode der Direct3D 10.x/Direct3D 11-API übergeben werden können.</td>
 </tr>
 <tr class="odd">
-<td>Farben:: Olive</td>
-<td>Konstanten für die standardmäßigen .net-Farb Definitionen. Diese Werte sind R-, G-, B-Daten, die als xmvector verwendet oder direkt an die Clear-Methode der Direct3D 10. x/Direct3D 11-API übermittelt werden können.</td>
+<td>Farben::Oliv</td>
+<td>Konstanten für die standardmäßigen .NET-Farbdefinitionen. Bei diesen Werten handelt es sich um R-, G- und B-Daten, die als XMVECTOR-Daten verwendet oder direkt an die Clear-Methode der Direct3D 10.x/Direct3D 11-API übergeben werden können.</td>
 </tr>
 <tr class="even">
-<td>Farben:: OliveDrab</td>
-<td>Konstanten für die standardmäßigen .net-Farb Definitionen. Diese Werte sind R-, G-, B-Daten, die als xmvector verwendet oder direkt an die Clear-Methode der Direct3D 10. x/Direct3D 11-API übermittelt werden können.</td>
+<td>Colors::OlivDrab</td>
+<td>Konstanten für die standardmäßigen .NET-Farbdefinitionen. Bei diesen Werten handelt es sich um R-, G- und B-Daten, die als XMVECTOR-Daten verwendet oder direkt an die Clear-Methode der Direct3D 10.x/Direct3D 11-API übergeben werden können.</td>
 </tr>
 <tr class="odd">
-<td>Farben:: Orange</td>
-<td>Konstanten für die standardmäßigen .net-Farb Definitionen. Diese Werte sind R-, G-, B-Daten, die als xmvector verwendet oder direkt an die Clear-Methode der Direct3D 10. x/Direct3D 11-API übermittelt werden können.</td>
+<td>Farben::Orange</td>
+<td>Konstanten für die standardmäßigen .NET-Farbdefinitionen. Bei diesen Werten handelt es sich um R-, G- und B-Daten, die als XMVECTOR-Daten verwendet oder direkt an die Clear-Methode der Direct3D 10.x/Direct3D 11-API übergeben werden können.</td>
 </tr>
 <tr class="even">
-<td>Farben:: OrangeRed</td>
-<td>Konstanten für die standardmäßigen .net-Farb Definitionen. Diese Werte sind R-, G-, B-Daten, die als xmvector verwendet oder direkt an die Clear-Methode der Direct3D 10. x/Direct3D 11-API übermittelt werden können.</td>
+<td>Colors::OrangeRed</td>
+<td>Konstanten für die standardmäßigen .NET-Farbdefinitionen. Bei diesen Werten handelt es sich um R-, G- und B-Daten, die als XMVECTOR-Daten verwendet oder direkt an die Clear-Methode der Direct3D 10.x/Direct3D 11-API übergeben werden können.</td>
 </tr>
 <tr class="odd">
-<td>Colors:: Orchidee</td>
-<td>Konstanten für die standardmäßigen .net-Farb Definitionen. Diese Werte sind R-, G-, B-Daten, die als xmvector verwendet oder direkt an die Clear-Methode der Direct3D 10. x/Direct3D 11-API übermittelt werden können.</td>
+<td>Colors::Soll</td>
+<td>Konstanten für die standardmäßigen .NET-Farbdefinitionen. Bei diesen Werten handelt es sich um R-, G- und B-Daten, die als XMVECTOR-Daten verwendet oder direkt an die Clear-Methode der Direct3D 10.x/Direct3D 11-API übergeben werden können.</td>
 </tr>
 <tr class="even">
-<td>Farben::P alegoldenrod</td>
-<td>Konstanten für die standardmäßigen .net-Farb Definitionen. Diese Werte sind R-, G-, B-Daten, die als xmvector verwendet oder direkt an die Clear-Methode der Direct3D 10. x/Direct3D 11-API übermittelt werden können.</td>
+<td>Colors::P aleVertriebenrod</td>
+<td>Konstanten für die standardmäßigen .NET-Farbdefinitionen. Bei diesen Werten handelt es sich um R-, G- und B-Daten, die als XMVECTOR-Daten verwendet oder direkt an die Clear-Methode der Direct3D 10.x/Direct3D 11-API übergeben werden können.</td>
 </tr>
 <tr class="odd">
-<td>Farben::P alegrün</td>
-<td>Konstanten für die standardmäßigen .net-Farb Definitionen. Diese Werte sind R-, G-, B-Daten, die als xmvector verwendet oder direkt an die Clear-Methode der Direct3D 10. x/Direct3D 11-API übermittelt werden können.</td>
+<td>Colors::P aleGreen</td>
+<td>Konstanten für die standardmäßigen .NET-Farbdefinitionen. Bei diesen Werten handelt es sich um R-, G- und B-Daten, die als XMVECTOR-Daten verwendet oder direkt an die Clear-Methode der Direct3D 10.x/Direct3D 11-API übergeben werden können.</td>
 </tr>
 <tr class="even">
-<td>Farben::P aletürkis</td>
-<td>Konstanten für die standardmäßigen .net-Farb Definitionen. Diese Werte sind R-, G-, B-Daten, die als xmvector verwendet oder direkt an die Clear-Methode der Direct3D 10. x/Direct3D 11-API übermittelt werden können.</td>
+<td>Colors::P aleTurquoise</td>
+<td>Konstanten für die standardmäßigen .NET-Farbdefinitionen. Bei diesen Werten handelt es sich um R-, G- und B-Daten, die als XMVECTOR-Daten verwendet oder direkt an die Clear-Methode der Direct3D 10.x/Direct3D 11-API übergeben werden können.</td>
 </tr>
 <tr class="odd">
-<td>Farben::P alevioletred</td>
-<td>Konstanten für die standardmäßigen .net-Farb Definitionen. Diese Werte sind R-, G-, B-Daten, die als xmvector verwendet oder direkt an die Clear-Methode der Direct3D 10. x/Direct3D 11-API übermittelt werden können.</td>
+<td>Colors::P aleVioletRed</td>
+<td>Konstanten für die standardmäßigen .NET-Farbdefinitionen. Bei diesen Werten handelt es sich um R-, G- und B-Daten, die als XMVECTOR-Daten verwendet oder direkt an die Clear-Methode der Direct3D 10.x/Direct3D 11-API übergeben werden können.</td>
 </tr>
 <tr class="even">
-<td>Farben::P apayawhip</td>
-<td>Konstanten für die standardmäßigen .net-Farb Definitionen. Diese Werte sind R-, G-, B-Daten, die als xmvector verwendet oder direkt an die Clear-Methode der Direct3D 10. x/Direct3D 11-API übermittelt werden können.</td>
+<td>Colors::P apwhip</td>
+<td>Konstanten für die standardmäßigen .NET-Farbdefinitionen. Bei diesen Werten handelt es sich um R-, G- und B-Daten, die als XMVECTOR-Daten verwendet oder direkt an die Clear-Methode der Direct3D 10.x/Direct3D 11-API übergeben werden können.</td>
 </tr>
 <tr class="odd">
-<td>Farben::P eachpuff</td>
-<td>Konstanten für die standardmäßigen .net-Farb Definitionen. Diese Werte sind R-, G-, B-Daten, die als xmvector verwendet oder direkt an die Clear-Methode der Direct3D 10. x/Direct3D 11-API übermittelt werden können.</td>
+<td>Colors::P eachPuff</td>
+<td>Konstanten für die standardmäßigen .NET-Farbdefinitionen. Bei diesen Werten handelt es sich um R-, G- und B-Daten, die als XMVECTOR-Daten verwendet oder direkt an die Clear-Methode der Direct3D 10.x/Direct3D 11-API übergeben werden können.</td>
 </tr>
 <tr class="even">
-<td>Farben::P ERU</td>
-<td>Konstanten für die standardmäßigen .net-Farb Definitionen. Diese Werte sind R-, G-, B-Daten, die als xmvector verwendet oder direkt an die Clear-Methode der Direct3D 10. x/Direct3D 11-API übermittelt werden können.</td>
+<td>Colors::P eru</td>
+<td>Konstanten für die standardmäßigen .NET-Farbdefinitionen. Bei diesen Werten handelt es sich um R-, G- und B-Daten, die als XMVECTOR-Daten verwendet oder direkt an die Clear-Methode der Direct3D 10.x/Direct3D 11-API übergeben werden können.</td>
 </tr>
 <tr class="odd">
-<td>Farben::P Ink</td>
-<td>Konstanten für die standardmäßigen .net-Farb Definitionen. Diese Werte sind R-, G-, B-Daten, die als xmvector verwendet oder direkt an die Clear-Methode der Direct3D 10. x/Direct3D 11-API übermittelt werden können.</td>
+<td>Colors::P ink</td>
+<td>Konstanten für die standardmäßigen .NET-Farbdefinitionen. Bei diesen Werten handelt es sich um R-, G- und B-Daten, die als XMVECTOR-Daten verwendet oder direkt an die Clear-Methode der Direct3D 10.x/Direct3D 11-API übergeben werden können.</td>
 </tr>
 <tr class="even">
-<td>Farben::P Lum</td>
-<td>Konstanten für die standardmäßigen .net-Farb Definitionen. Diese Werte sind R-, G-, B-Daten, die als xmvector verwendet oder direkt an die Clear-Methode der Direct3D 10. x/Direct3D 11-API übermittelt werden können.</td>
+<td>Colors::P lum</td>
+<td>Konstanten für die standardmäßigen .NET-Farbdefinitionen. Bei diesen Werten handelt es sich um R-, G- und B-Daten, die als XMVECTOR-Daten verwendet oder direkt an die Clear-Methode der Direct3D 10.x/Direct3D 11-API übergeben werden können.</td>
 </tr>
 <tr class="odd">
-<td>Farben::P owderblue</td>
-<td>Konstanten für die standardmäßigen .net-Farb Definitionen. Diese Werte sind R-, G-, B-Daten, die als xmvector verwendet oder direkt an die Clear-Methode der Direct3D 10. x/Direct3D 11-API übermittelt werden können.</td>
+<td>Colors::P owderBlue</td>
+<td>Konstanten für die standardmäßigen .NET-Farbdefinitionen. Bei diesen Werten handelt es sich um R-, G- und B-Daten, die als XMVECTOR-Daten verwendet oder direkt an die Clear-Methode der Direct3D 10.x/Direct3D 11-API übergeben werden können.</td>
 </tr>
 <tr class="even">
-<td>Farben::P urple</td>
-<td>Konstanten für die standardmäßigen .net-Farb Definitionen. Diese Werte sind R-, G-, B-Daten, die als xmvector verwendet oder direkt an die Clear-Methode der Direct3D 10. x/Direct3D 11-API übermittelt werden können.</td>
+<td>Colors::P urple</td>
+<td>Konstanten für die standardmäßigen .NET-Farbdefinitionen. Bei diesen Werten handelt es sich um R-, G- und B-Daten, die als XMVECTOR-Daten verwendet oder direkt an die Clear-Methode der Direct3D 10.x/Direct3D 11-API übergeben werden können.</td>
 </tr>
 <tr class="odd">
-<td>Farben:: rot</td>
-<td>Konstanten für die standardmäßigen .net-Farb Definitionen. Diese Werte sind R-, G-, B-Daten, die als xmvector verwendet oder direkt an die Clear-Methode der Direct3D 10. x/Direct3D 11-API übermittelt werden können.</td>
+<td>Colors::Red</td>
+<td>Konstanten für die standardmäßigen .NET-Farbdefinitionen. Bei diesen Werten handelt es sich um R-, G- und B-Daten, die als XMVECTOR-Daten verwendet oder direkt an die Clear-Methode der Direct3D 10.x/Direct3D 11-API übergeben werden können.</td>
 </tr>
 <tr class="even">
-<td>Farben:: RosyBrown</td>
-<td>Konstanten für die standardmäßigen .net-Farb Definitionen. Diese Werte sind R-, G-, B-Daten, die als xmvector verwendet oder direkt an die Clear-Methode der Direct3D 10. x/Direct3D 11-API übermittelt werden können.</td>
+<td>Colors::RosyBrown</td>
+<td>Konstanten für die standardmäßigen .NET-Farbdefinitionen. Bei diesen Werten handelt es sich um R-, G- und B-Daten, die als XMVECTOR-Daten verwendet oder direkt an die Clear-Methode der Direct3D 10.x/Direct3D 11-API übergeben werden können.</td>
 </tr>
 <tr class="odd">
-<td>Farben:: RoyalBlue</td>
-<td>Konstanten für die standardmäßigen .net-Farb Definitionen. Diese Werte sind R-, G-, B-Daten, die als xmvector verwendet oder direkt an die Clear-Methode der Direct3D 10. x/Direct3D 11-API übermittelt werden können.</td>
+<td>Colors::RoyalBlue</td>
+<td>Konstanten für die standardmäßigen .NET-Farbdefinitionen. Bei diesen Werten handelt es sich um R-, G- und B-Daten, die als XMVECTOR-Daten verwendet oder direkt an die Clear-Methode der Direct3D 10.x/Direct3D 11-API übergeben werden können.</td>
 </tr>
 <tr class="even">
-<td>Farben:: SaddleBrown</td>
-<td>Konstanten für die standardmäßigen .net-Farb Definitionen. Diese Werte sind R-, G-, B-Daten, die als xmvector verwendet oder direkt an die Clear-Methode der Direct3D 10. x/Direct3D 11-API übermittelt werden können.</td>
+<td>Colors::ColorsBrown</td>
+<td>Konstanten für die standardmäßigen .NET-Farbdefinitionen. Bei diesen Werten handelt es sich um R-, G- und B-Daten, die als XMVECTOR-Daten verwendet oder direkt an die Clear-Methode der Direct3D 10.x/Direct3D 11-API übergeben werden können.</td>
 </tr>
 <tr class="odd">
-<td>Farben:: Lachs</td>
-<td>Konstanten für die standardmäßigen .net-Farb Definitionen. Diese Werte sind R-, G-, B-Daten, die als xmvector verwendet oder direkt an die Clear-Methode der Direct3D 10. x/Direct3D 11-API übermittelt werden können.</td>
+<td>Colors::Schrift</td>
+<td>Konstanten für die standardmäßigen .NET-Farbdefinitionen. Bei diesen Werten handelt es sich um R-, G- und B-Daten, die als XMVECTOR-Daten verwendet oder direkt an die Clear-Methode der Direct3D 10.x/Direct3D 11-API übergeben werden können.</td>
 </tr>
 <tr class="even">
-<td>Colors:: SandyBrown</td>
-<td>Konstanten für die standardmäßigen .net-Farb Definitionen. Diese Werte sind R-, G-, B-Daten, die als xmvector verwendet oder direkt an die Clear-Methode der Direct3D 10. x/Direct3D 11-API übermittelt werden können.</td>
+<td>Colors::ColorsBrown</td>
+<td>Konstanten für die standardmäßigen .NET-Farbdefinitionen. Bei diesen Werten handelt es sich um R-, G- und B-Daten, die als XMVECTOR-Daten verwendet oder direkt an die Clear-Methode der Direct3D 10.x/Direct3D 11-API übergeben werden können.</td>
 </tr>
 <tr class="odd">
-<td>Farben::</td>
-<td>Konstanten für die standardmäßigen .net-Farb Definitionen. Diese Werte sind R-, G-, B-Daten, die als xmvector verwendet oder direkt an die Clear-Methode der Direct3D 10. x/Direct3D 11-API übermittelt werden können.</td>
+<td>Colors::SeaGreen</td>
+<td>Konstanten für die standardmäßigen .NET-Farbdefinitionen. Bei diesen Werten handelt es sich um R-, G- und B-Daten, die als XMVECTOR-Daten verwendet oder direkt an die Clear-Methode der Direct3D 10.x/Direct3D 11-API übergeben werden können.</td>
 </tr>
 <tr class="even">
-<td>Farben:: Seashell</td>
-<td>Konstanten für die standardmäßigen .net-Farb Definitionen. Diese Werte sind R-, G-, B-Daten, die als xmvector verwendet oder direkt an die Clear-Methode der Direct3D 10. x/Direct3D 11-API übermittelt werden können.</td>
+<td>Colors::SeaShell</td>
+<td>Konstanten für die standardmäßigen .NET-Farbdefinitionen. Bei diesen Werten handelt es sich um R-, G- und B-Daten, die als XMVECTOR-Daten verwendet oder direkt an die Clear-Methode der Direct3D 10.x/Direct3D 11-API übergeben werden können.</td>
 </tr>
 <tr class="odd">
-<td>Farben:: Sienna</td>
-<td>Konstanten für die standardmäßigen .net-Farb Definitionen. Diese Werte sind R-, G-, B-Daten, die als xmvector verwendet oder direkt an die Clear-Methode der Direct3D 10. x/Direct3D 11-API übermittelt werden können.</td>
+<td>Colors::Sienna</td>
+<td>Konstanten für die standardmäßigen .NET-Farbdefinitionen. Bei diesen Werten handelt es sich um R-, G- und B-Daten, die als XMVECTOR-Daten verwendet oder direkt an die Clear-Methode der Direct3D 10.x/Direct3D 11-API übergeben werden können.</td>
 </tr>
 <tr class="even">
-<td>Farben:: Silver</td>
-<td>Konstanten für die standardmäßigen .net-Farb Definitionen. Diese Werte sind R-, G-, B-Daten, die als xmvector verwendet oder direkt an die Clear-Methode der Direct3D 10. x/Direct3D 11-API übermittelt werden können.</td>
+<td>Colors::Silver</td>
+<td>Konstanten für die standardmäßigen .NET-Farbdefinitionen. Bei diesen Werten handelt es sich um R-, G- und B-Daten, die als XMVECTOR-Daten verwendet oder direkt an die Clear-Methode der Direct3D 10.x/Direct3D 11-API übergeben werden können.</td>
 </tr>
 <tr class="odd">
-<td>Farben:: skyblue</td>
-<td>Konstanten für die standardmäßigen .net-Farb Definitionen. Diese Werte sind R-, G-, B-Daten, die als xmvector verwendet oder direkt an die Clear-Methode der Direct3D 10. x/Direct3D 11-API übermittelt werden können.</td>
+<td>Colors::SkyBlue</td>
+<td>Konstanten für die standardmäßigen .NET-Farbdefinitionen. Bei diesen Werten handelt es sich um R-, G- und B-Daten, die als XMVECTOR-Daten verwendet oder direkt an die Clear-Methode der Direct3D 10.x/Direct3D 11-API übergeben werden können.</td>
 </tr>
 <tr class="even">
-<td>Farben:: SlateBlue</td>
-<td>Konstanten für die standardmäßigen .net-Farb Definitionen. Diese Werte sind R-, G-, B-Daten, die als xmvector verwendet oder direkt an die Clear-Methode der Direct3D 10. x/Direct3D 11-API übermittelt werden können.</td>
+<td>Colors::SlateBlue</td>
+<td>Konstanten für die standardmäßigen .NET-Farbdefinitionen. Bei diesen Werten handelt es sich um R-, G- und B-Daten, die als XMVECTOR-Daten verwendet oder direkt an die Clear-Methode der Direct3D 10.x/Direct3D 11-API übergeben werden können.</td>
 </tr>
 <tr class="odd">
-<td>Farben:: SlateGray</td>
-<td>Konstanten für die standardmäßigen .net-Farb Definitionen. Diese Werte sind R-, G-, B-Daten, die als xmvector verwendet oder direkt an die Clear-Methode der Direct3D 10. x/Direct3D 11-API übermittelt werden können.</td>
+<td>Colors::SlateGray</td>
+<td>Konstanten für die standardmäßigen .NET-Farbdefinitionen. Bei diesen Werten handelt es sich um R-, G- und B-Daten, die als XMVECTOR-Daten verwendet oder direkt an die Clear-Methode der Direct3D 10.x/Direct3D 11-API übergeben werden können.</td>
 </tr>
 <tr class="even">
-<td>Farben:: Schnee</td>
-<td>Konstanten für die standardmäßigen .net-Farb Definitionen. Diese Werte sind R-, G-, B-Daten, die als xmvector verwendet oder direkt an die Clear-Methode der Direct3D 10. x/Direct3D 11-API übermittelt werden können.</td>
+<td>Colors::Snow</td>
+<td>Konstanten für die standardmäßigen .NET-Farbdefinitionen. Bei diesen Werten handelt es sich um R-, G- und B-Daten, die als XMVECTOR-Daten verwendet oder direkt an die Clear-Methode der Direct3D 10.x/Direct3D 11-API übergeben werden können.</td>
 </tr>
 <tr class="odd">
-<td>Farben:: springgrün</td>
-<td>Konstanten für die standardmäßigen .net-Farb Definitionen. Diese Werte sind R-, G-, B-Daten, die als xmvector verwendet oder direkt an die Clear-Methode der Direct3D 10. x/Direct3D 11-API übermittelt werden können.</td>
+<td>Colors::SpringGreen</td>
+<td>Konstanten für die standardmäßigen .NET-Farbdefinitionen. Bei diesen Werten handelt es sich um R-, G- und B-Daten, die als XMVECTOR-Daten verwendet oder direkt an die Clear-Methode der Direct3D 10.x/Direct3D 11-API übergeben werden können.</td>
 </tr>
 <tr class="even">
-<td>Farben:: SteelBlue</td>
-<td>Konstanten für die standardmäßigen .net-Farb Definitionen. Diese Werte sind R-, G-, B-Daten, die als xmvector verwendet oder direkt an die Clear-Methode der Direct3D 10. x/Direct3D 11-API übermittelt werden können.</td>
+<td>Colors::SteelBlue</td>
+<td>Konstanten für die standardmäßigen .NET-Farbdefinitionen. Bei diesen Werten handelt es sich um R-, G- und B-Daten, die als XMVECTOR-Daten verwendet oder direkt an die Clear-Methode der Direct3D 10.x/Direct3D 11-API übergeben werden können.</td>
 </tr>
 <tr class="odd">
-<td>Farben:: Tan</td>
-<td>Konstanten für die standardmäßigen .net-Farb Definitionen. Diese Werte sind R-, G-, B-Daten, die als xmvector verwendet oder direkt an die Clear-Methode der Direct3D 10. x/Direct3D 11-API übermittelt werden können.</td>
+<td>Colors::Tan</td>
+<td>Konstanten für die standardmäßigen .NET-Farbdefinitionen. Bei diesen Werten handelt es sich um R-, G- und B-Daten, die als XMVECTOR-Daten verwendet oder direkt an die Clear-Methode der Direct3D 10.x/Direct3D 11-API übergeben werden können.</td>
 </tr>
 <tr class="even">
-<td>Farben:: Teal</td>
-<td>Konstanten für die standardmäßigen .net-Farb Definitionen. Diese Werte sind R-, G-, B-Daten, die als xmvector verwendet oder direkt an die Clear-Methode der Direct3D 10. x/Direct3D 11-API übermittelt werden können.</td>
+<td>Colors::Teal</td>
+<td>Konstanten für die standardmäßigen .NET-Farbdefinitionen. Bei diesen Werten handelt es sich um R-, G- und B-Daten, die als XMVECTOR-Daten verwendet oder direkt an die Clear-Methode der Direct3D 10.x/Direct3D 11-API übergeben werden können.</td>
 </tr>
 <tr class="odd">
-<td>Colors:: Thistle</td>
-<td>Konstanten für die standardmäßigen .net-Farb Definitionen. Diese Werte sind R-, G-, B-Daten, die als xmvector verwendet oder direkt an die Clear-Methode der Direct3D 10. x/Direct3D 11-API übermittelt werden können.</td>
+<td>Colors::Thistle</td>
+<td>Konstanten für die standardmäßigen .NET-Farbdefinitionen. Bei diesen Werten handelt es sich um R-, G- und B-Daten, die als XMVECTOR-Daten verwendet oder direkt an die Clear-Methode der Direct3D 10.x/Direct3D 11-API übergeben werden können.</td>
 </tr>
 <tr class="even">
-<td>Colors:: Tomato</td>
-<td>Konstanten für die standardmäßigen .net-Farb Definitionen. Diese Werte sind R-, G-, B-Daten, die als xmvector verwendet oder direkt an die Clear-Methode der Direct3D 10. x/Direct3D 11-API übermittelt werden können.</td>
+<td>Colors::Colors</td>
+<td>Konstanten für die standardmäßigen .NET-Farbdefinitionen. Bei diesen Werten handelt es sich um R-, G- und B-Daten, die als XMVECTOR-Daten verwendet oder direkt an die Clear-Methode der Direct3D 10.x/Direct3D 11-API übergeben werden können.</td>
 </tr>
 <tr class="odd">
-<td>Farben:: transparent</td>
-<td>Konstanten für die standardmäßigen .net-Farb Definitionen. Diese Werte sind R-, G-, B-Daten, die als xmvector verwendet oder direkt an die Clear-Methode der Direct3D 10. x/Direct3D 11-API übermittelt werden können.</td>
+<td>Colors::Transparent</td>
+<td>Konstanten für die standardmäßigen .NET-Farbdefinitionen. Bei diesen Werten handelt es sich um R-, G- und B-Daten, die als XMVECTOR-Daten verwendet oder direkt an die Clear-Methode der Direct3D 10.x/Direct3D 11-API übergeben werden können.</td>
 </tr>
 <tr class="even">
-<td>Farben:: Türkis</td>
-<td>Konstanten für die standardmäßigen .net-Farb Definitionen. Diese Werte sind R-, G-, B-Daten, die als xmvector verwendet oder direkt an die Clear-Methode der Direct3D 10. x/Direct3D 11-API übermittelt werden können.</td>
+<td>Colors::Aberkärt</td>
+<td>Konstanten für die standardmäßigen .NET-Farbdefinitionen. Bei diesen Werten handelt es sich um R-, G- und B-Daten, die als XMVECTOR-Daten verwendet oder direkt an die Clear-Methode der Direct3D 10.x/Direct3D 11-API übergeben werden können.</td>
 </tr>
 <tr class="odd">
-<td>Farben:: violett</td>
-<td>Konstanten für die standardmäßigen .net-Farb Definitionen. Diese Werte sind R-, G-, B-Daten, die als xmvector verwendet oder direkt an die Clear-Methode der Direct3D 10. x/Direct3D 11-API übermittelt werden können.</td>
+<td>Colors::Violet</td>
+<td>Konstanten für die standardmäßigen .NET-Farbdefinitionen. Bei diesen Werten handelt es sich um R-, G- und B-Daten, die als XMVECTOR-Daten verwendet oder direkt an die Clear-Methode der Direct3D 10.x/Direct3D 11-API übergeben werden können.</td>
 </tr>
 <tr class="even">
-<td>Farben:: Weizen</td>
-<td>Konstanten für die standardmäßigen .net-Farb Definitionen. Diese Werte sind R-, G-, B-Daten, die als xmvector verwendet oder direkt an die Clear-Methode der Direct3D 10. x/Direct3D 11-API übermittelt werden können.</td>
+<td>Colors::Colors</td>
+<td>Konstanten für die standardmäßigen .NET-Farbdefinitionen. Bei diesen Werten handelt es sich um R-, G- und B-Daten, die als XMVECTOR-Daten verwendet oder direkt an die Clear-Methode der Direct3D 10.x/Direct3D 11-API übergeben werden können.</td>
 </tr>
 <tr class="odd">
-<td>Farben:: weiß</td>
-<td>Konstanten für die standardmäßigen .net-Farb Definitionen. Diese Werte sind R-, G-, B-Daten, die als xmvector verwendet oder direkt an die Clear-Methode der Direct3D 10. x/Direct3D 11-API übermittelt werden können.</td>
+<td>Colors::White</td>
+<td>Konstanten für die standardmäßigen .NET-Farbdefinitionen. Bei diesen Werten handelt es sich um R-, G- und B-Daten, die als XMVECTOR-Daten verwendet oder direkt an die Clear-Methode der Direct3D 10.x/Direct3D 11-API übergeben werden können.</td>
 </tr>
 <tr class="even">
-<td>Farben:: whitesmuke</td>
-<td>Konstanten für die standardmäßigen .net-Farb Definitionen. Diese Werte sind R-, G-, B-Daten, die als xmvector verwendet oder direkt an die Clear-Methode der Direct3D 10. x/Direct3D 11-API übermittelt werden können.</td>
+<td>Colors::WhiteSmoke</td>
+<td>Konstanten für die standardmäßigen .NET-Farbdefinitionen. Bei diesen Werten handelt es sich um R-, G- und B-Daten, die als XMVECTOR-Daten verwendet oder direkt an die Clear-Methode der Direct3D 10.x/Direct3D 11-API übergeben werden können.</td>
 </tr>
 <tr class="odd">
-<td>Farben:: gelb</td>
-<td>Konstanten für die standardmäßigen .net-Farb Definitionen. Diese Werte sind R-, G-, B-Daten, die als xmvector verwendet oder direkt an die Clear-Methode der Direct3D 10. x/Direct3D 11-API übermittelt werden können.</td>
+<td>Farben::Gelb</td>
+<td>Konstanten für die standardmäßigen .NET-Farbdefinitionen. Bei diesen Werten handelt es sich um R-, G- und B-Daten, die als XMVECTOR-Daten verwendet oder direkt an die Clear-Methode der Direct3D 10.x/Direct3D 11-API übergeben werden können.</td>
 </tr>
 <tr class="even">
-<td>Farben:: gelbgrün</td>
-<td>Konstanten für die standardmäßigen .net-Farb Definitionen. Diese Werte sind R-, G-, B-Daten, die als xmvector verwendet oder direkt an die Clear-Methode der Direct3D 10. x/Direct3D 11-API übermittelt werden können.</td>
+<td>Colors::YellowGreen</td>
+<td>Konstanten für die standardmäßigen .NET-Farbdefinitionen. Bei diesen Werten handelt es sich um R-, G- und B-Daten, die als XMVECTOR-Daten verwendet oder direkt an die Clear-Methode der Direct3D 10.x/Direct3D 11-API übergeben werden können.</td>
 </tr>
 </tbody>
 </table>
@@ -710,7 +710,7 @@ Siehe auch <a href="/windows/desktop/api/DirectXMath/nf-directxmath-xmcomparison
 
 > [!Note]
 >
-> Alle Farben Konstanten werden im Standard- [sRGB](https://en.wikipedia.org/wiki/SRGB) -Farbraum definiert (wie .net-Farben und HTML-Websichere Farben). Für ein gamma korrektes Rendering mithilfe von linearem Farbraum müssen die Werte leicht angepasst werden.
+> Alle Farbenkonstanten werden im standardmäßigen [sRGB-Farbraum](https://en.wikipedia.org/wiki/SRGB) definiert (ebenso wie .NET-Farben und websichere HTML-Farben). Für gamma-korrektes Rendering mit linearen Farbräumen müssen die Werte leicht angepasst werden.
 
  
 
@@ -718,14 +718,14 @@ Siehe auch <a href="/windows/desktop/api/DirectXMath/nf-directxmath-xmcomparison
 
 <dl> <dt>
 
-<span id="DirectXMath_Programming_Reference"></span><span id="directxmath_programming_reference"></span><span id="DIRECTXMATH_PROGRAMMING_REFERENCE"></span>[Directxmath-Programmier Referenz](ovw-xnamath-reference.md)
+<span id="DirectXMath_Programming_Reference"></span><span id="directxmath_programming_reference"></span><span id="DIRECTXMATH_PROGRAMMING_REFERENCE"></span>[DirectXMath-Programmierreferenz](ovw-xnamath-reference.md)
 </dt> <dd></dd> </dl>
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
 <dl> <dt>
 
-[Directxmath-Programmier Referenz](ovw-xnamath-reference.md)
+[DirectXMath-Programmierreferenz](ovw-xnamath-reference.md)
 </dt> </dl>
 
  

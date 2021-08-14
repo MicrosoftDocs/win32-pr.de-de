@@ -1,34 +1,34 @@
 ---
-title: Richtlinien für das Auswählen eines Dienst Anmelde Kontos
-description: Ein Win32-basierter Dienst kann im Sicherheitskontext eines lokalen Benutzerkontos, eines Domänen Benutzerkontos oder des Kontos "LocalSystem" ausgeführt werden.
+title: Richtlinien für die Auswahl eines Dienstanmeldungskontos
+description: Ein Win32-basierter Dienst kann im Sicherheitskontext eines lokalen Benutzerkontos, eines Domänenbenutzerkontos oder des LocalSystem-Kontos ausgeführt werden.
 ms.assetid: aa2b93c7-335f-4e03-9198-fe2b396e296e
 ms.tgt_platform: multiple
 keywords:
-- Richtlinien für das Auswählen eines Dienst Anmelde Konto-AD
+- Richtlinien für die Auswahl eines Dienstanmeldungskontos AD
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: b5bb8f5b4fe6a57863c09c9563454fc3ec09e75c
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: 1a976927130a3585be2e6130dbb71b37fa0c69660b6ae953e28909fad3db570f
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "104036358"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118188674"
 ---
-# <a name="guidelines-for-selecting-a-service-logon-account"></a>Richtlinien für das Auswählen eines Dienst Anmelde Kontos
+# <a name="guidelines-for-selecting-a-service-logon-account"></a>Richtlinien für die Auswahl eines Dienstanmeldungskontos
 
-Ein Win32-basierter Dienst kann im Sicherheitskontext eines lokalen Benutzerkontos, eines Domänen Benutzerkontos oder des Kontos "LocalSystem" ausgeführt werden. Um zu entscheiden, welches Konto verwendet werden soll, sollte ein Administrator den Dienst mit dem minimalen Satz an Berechtigungen installieren, der zum Durchführen der Dienst Vorgänge erforderlich ist. In einem typischen, Verzeichnis aktivierten Dienst bedeutet dies, dass das Dienst Installationsprogramm ein Domänen Benutzerkonto für den Dienst erstellen und diesem Konto die für den Dienst zur Laufzeit erforderlichen Zugriffsrechte und Berechtigungen erteilen soll. Ein Dienst sollte nur unter dem Konto "LocalSystem" ausgeführt werden, wenn der Dienst Administratorrechte erfordert oder als Teil des Betriebssystems auf dem lokalen Computer fungieren muss.
+Ein Win32-basierter Dienst kann im Sicherheitskontext eines lokalen Benutzerkontos, eines Domänenbenutzerkontos oder des LocalSystem-Kontos ausgeführt werden. Um zu entscheiden, welches Konto verwendet werden soll, sollte ein Administrator den Dienst mit dem mindesten Berechtigungssatz installieren, der zum Ausführen der Dienstvorgänge erforderlich ist. In einem typischen verzeichnisfähigen Dienst bedeutet dies, dass das Dienstinstallationsprogramm ein Domänenbenutzerkonto für den Dienst erstellen und diesem Konto die spezifischen Zugriffsrechte und Berechtigungen erteilen sollte, die der Dienst zur Laufzeit benötigt. Ein Dienst sollte nur unter dem LocalSystem-Konto ausgeführt werden, wenn der Dienst Administratorrechte erfordert oder als Teil des Betriebssystems auf dem lokalen Computer fungieren muss.
 
-Beachten Sie, dass der Dienst Installer standardmäßig den Dienst so einrichten muss, dass er unter einem Domänen Benutzerkonto ausgeführt wird. Um den Dienst unter dem Konto "LocalSystem" auszuführen, sollte das Dienst Installationsprogramm den Administrator über die entsprechende Berechtigung Abfragen.
+Beachten Sie, dass das Dienstinstallationsprogramm den Dienst standardmäßig für die Ausführung unter einem Domänenbenutzerkonto einrichten sollte. Um den Dienst unter dem LocalSystem-Konto auszuführen, sollte das Dienstinstallationsprogramm den Administrator um die Berechtigung dazu bitten.
 
-Weitere Informationen zu Beschreibungen, Vorteilen und Nachteilen der einzelnen Kontotypen finden Sie unter:
+Weitere Informationen zu Beschreibungen, Vor- und Nachteilen der einzelnen Kontotypen finden Sie unter:
 
 -   [Lokale Benutzerkonten](local-user-accounts.md).
--   [Domänen Benutzerkonten](domain-user-accounts.md).
+-   [Domänenbenutzerkonten](domain-user-accounts.md).
 -   [Das LocalSystem-Konto](the-localsystem-account.md).
 
- 
+ 
 
- 
+ 
 
 
 

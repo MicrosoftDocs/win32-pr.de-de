@@ -1,21 +1,21 @@
 ---
-title: Aufgaben Dialogfelder
-description: Aufgaben Dialogfelder
+title: Aufgabendialogstrukturen
+description: Aufgabendialogstrukturen
 ms.assetid: 997d843a-9c4d-45bf-a876-761e3c69156d
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 5da477d594e130ca6b200598a714d29870fe434e
-ms.sourcegitcommit: 92e74c99f8f4d097676959d0c317f533c2400a80
+ms.openlocfilehash: 86dd820b29f04987433748fdd5173c09f58af6efc417df98366f4f165a6a1371
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/09/2021
-ms.locfileid: "106353686"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118415854"
 ---
-# <a name="task-dialog-structures"></a>Aufgaben Dialogfelder
+# <a name="task-dialog-structures"></a>Aufgabendialogstrukturen
 
 ## <a name="in-this-section"></a>In diesem Abschnitt
 
--   [**taskdialog- \_ Schaltfläche**](/windows/desktop/api/Commctrl/ns-commctrl-taskdialog_button)
+-   [**\_TASKDIALOG-SCHALTFLÄCHE**](/windows/desktop/api/Commctrl/ns-commctrl-taskdialog_button)
 -   [**TASKDIALOGCONFIG**](/windows/desktop/api/Commctrl/ns-commctrl-taskdialogconfig)
 
  

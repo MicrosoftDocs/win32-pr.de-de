@@ -1,25 +1,25 @@
 ---
-description: 'Weitere Informationen: bytescolumnvalue-Eigenschaften'
-title: Bytescolumnvalue-Eigenschaften
+description: Weitere Informationen finden Sie unter BytesColumnValue-Eigenschaften.
+title: BytesColumnValue-Eigenschaften
 TOCTitle: BytesColumnValue properties
 ms:assetid: Properties.T:Microsoft.Isam.Esent.Interop.BytesColumnValue
 ms:mtpsurl: https://msdn.microsoft.com/library/microsoft.isam.esent.interop.bytescolumnvalue_properties(v=EXCHG.10)
 ms:contentKeyID: 55100964
 ms.date: 07/30/2014
 ms.topic: article
-ms.openlocfilehash: bafae34a3fa6dac29cc504ebe9a34c0abd7b870a
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: d7973f35a59af3cda2e8bb3bd400d2ef10e43e4f18fe9431f61ed50b62b343f0
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "104350079"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117902106"
 ---
-# <a name="bytescolumnvalue-properties"></a>Bytescolumnvalue-Eigenschaften
+# <a name="bytescolumnvalue-properties"></a>BytesColumnValue-Eigenschaften
 
-Geschützte Member einschließen  
-Geerbte Member einschließen  
+Geschützte Member enthalten  
+Geerbte Member enthalten  
 
-Der [bytescolumnvalue](./bytescolumnvalue-class.md) -Typ macht die folgenden Member verfügbar.
+Der [BytesColumnValue-Typ](./bytescolumnvalue-class.md) macht die folgenden Member verfügbar.
 
 ## <a name="properties"></a>Eigenschaften
 
@@ -34,8 +34,8 @@ Der [bytescolumnvalue](./bytescolumnvalue-class.md) -Typ macht die folgenden Mem
 <tbody>
 <tr class="odd">
 <td><img src="../images/dn292128.pubproperty(exchg.10).gif" title="Öffentliche Eigenschaft" alt="Public property" /></td>
-<td><a href="dn334166(v=exchg.10).md">ColumnID</a></td>
-<td>Ruft das festzulegende oder abzurufende ColumnID ab oder legt es fest. (Geerbt von <a href="dn334206(v=exchg.10).md">ColumnValue</a>.)</td>
+<td><a href="dn334166(v=exchg.10).md">Columnid</a></td>
+<td>Ruft die columnid ab, die festgelegt oder abgerufen werden soll, oder legt sie fest. (Geerbt von <a href="dn334206(v=exchg.10).md">ColumnValue</a>.)</td>
 </tr>
 <tr class="even">
 <td><img src="../images/dn292128.pubproperty(exchg.10).gif" title="Öffentliche Eigenschaft" alt="Public property" /></td>
@@ -44,38 +44,38 @@ Der [bytescolumnvalue](./bytescolumnvalue-class.md) -Typ macht die folgenden Mem
 </tr>
 <tr class="odd">
 <td><img src="../images/dn292128.pubproperty(exchg.10).gif" title="Öffentliche Eigenschaft" alt="Public property" /></td>
-<td><a href="dn334165(v=exchg.10).md">Itagsequence</a></td>
-<td>Ruft die ITAG-Spalte der Spalte ab oder legt Sie fest. (Geerbt von <a href="dn334206(v=exchg.10).md">ColumnValue</a>.)</td>
+<td><a href="dn334165(v=exchg.10).md">ItagSequence</a></td>
+<td>Ruft die Spalten itag-Sequenz ab oder legt sie fest. (Geerbt von <a href="dn334206(v=exchg.10).md">ColumnValue</a>.)</td>
 </tr>
 <tr class="even">
 <td><img src="../images/dn292128.pubproperty(exchg.10).gif" title="Öffentliche Eigenschaft" alt="Public property" /></td>
 <td><a href="dn334126(v=exchg.10).md">Länge</a></td>
-<td>Ruft die Byte Länge eines Spaltenwerts ab, der 0 (null) ist, wenn die Spalte NULL ist, andernfalls entspricht der tatsächlichen Länge des Byte Arrays. (Überschreibt <a href="dn334213(v=exchg.10).md">ColumnValue. length</a>.)</td>
+<td>Ruft die Bytelänge eines Spaltenwerts ab, der null ist, wenn die Spalte NULL ist, andernfalls entspricht sie der tatsächlichen Länge des Bytearrays. (Überschreibt <a href="dn334213(v=exchg.10).md">ColumnValue.Length</a>.)</td>
 </tr>
 <tr class="odd">
 <td><img src="../images/dn292128.pubproperty(exchg.10).gif" title="Öffentliche Eigenschaft" alt="Public property" /></td>
-<td><a href="dn334169(v=exchg.10).md">Retrievegrbit</a></td>
-<td>Ruft die Spalten Abruf Optionen ab oder legt Sie fest. (Geerbt von <a href="dn334206(v=exchg.10).md">ColumnValue</a>.)</td>
+<td><a href="dn334169(v=exchg.10).md">RetrieveGrbit</a></td>
+<td>Ruft Spaltenabrufoptionen ab oder legt sie fest. (Geerbt von <a href="dn334206(v=exchg.10).md">ColumnValue</a>.)</td>
 </tr>
 <tr class="even">
 <td><img src="../images/dn292128.pubproperty(exchg.10).gif" title="Öffentliche Eigenschaft" alt="Public property" /></td>
-<td><a href="dn334215(v=exchg.10).md">Setgrbit</a></td>
-<td>Ruft Spalten Aktualisierungs Optionen ab oder legt Sie fest. (Geerbt von <a href="dn334206(v=exchg.10).md">ColumnValue</a>.)</td>
+<td><a href="dn334215(v=exchg.10).md">SetGrbit</a></td>
+<td>Ruft Spaltenaktualisierungsoptionen ab oder legt sie fest. (Geerbt von <a href="dn334206(v=exchg.10).md">ColumnValue</a>.)</td>
 </tr>
 <tr class="odd">
 <td><img src="../images/dn292128.protproperty(exchg.10).gif" title="Geschützte Eigenschaft" alt="Protected property" /></td>
 <td><a href="dn334176(v=exchg.10).md">Größe</a></td>
-<td>Ruft die Größe des Werts in der Spalte ab. Dadurch wird 0 für Spalten variabler Größen (z. b. Binär und Zeichenfolge) zurückgegeben. (Überschreibt <a href="dn334172(v=exchg.10).md">ColumnValue. Size</a>.)</td>
+<td>Ruft die Größe des Werts in der Spalte ab. Dies gibt 0 für Spalten variabler Größe (d. h. binär und Zeichenfolge) zurück. (Überschreibt <a href="dn334172(v=exchg.10).md">ColumnValue.Size</a>.)</td>
 </tr>
 <tr class="even">
 <td><img src="../images/dn292128.pubproperty(exchg.10).gif" title="Öffentliche Eigenschaft" alt="Public property" /></td>
 <td><a href="dn334129(v=exchg.10).md">Wert</a></td>
-<td>Ruft den Wert der Spalte ab oder legt ihn fest. Verwenden Sie <a href="dn334138(v=exchg.10).md">SetColumns (JET_SESID, JET_TABLEID, [])</a> , um einen Datensatz mit dem Spaltenwert zu aktualisieren.</td>
+<td>Ruft den Wert der Spalte ab oder legt den Wert fest. Verwenden <a href="dn334138(v=exchg.10).md">Sie SetColumns(JET_SESID, JET_TABLEID, []),</a> um einen Datensatz mit dem Spaltenwert zu aktualisieren.</td>
 </tr>
 <tr class="odd">
 <td><img src="../images/dn292128.pubproperty(exchg.10).gif" title="Öffentliche Eigenschaft" alt="Public property" /></td>
-<td><a href="dn334177(v=exchg.10).md">Valueasobject</a></td>
-<td>Ruft den letzten Satz oder abgerufenen Wert der Spalte ab. Der Wert wird als generisches-Objekt zurückgegeben. (Überschreibt <a href="dn334214(v=exchg.10).md">ColumnValue. valueasobject</a>.)</td>
+<td><a href="dn334177(v=exchg.10).md">ValueAsObject</a></td>
+<td>Ruft den letzten festgelegten oder abgerufenen Wert der Spalte ab. Der Wert wird als generisches Objekt zurückgegeben. (Überschreibt <a href="dn334214(v=exchg.10).md">ColumnValue.ValueAsObject</a>.)</td>
 </tr>
 </tbody>
 </table>
@@ -83,10 +83,10 @@ Der [bytescolumnvalue](./bytescolumnvalue-class.md) -Typ macht die folgenden Mem
 
 Oben
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
-#### <a name="reference"></a>Referenz
+#### <a name="reference"></a>Verweis
 
-[Bytescolumnvalue-Klasse](./bytescolumnvalue-class.md)
+[BytesColumnValue-Klasse](./bytescolumnvalue-class.md)
 
-[Microsoft. ISAM. ESENT. Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)
+[Microsoft.Isam.Esent.Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)

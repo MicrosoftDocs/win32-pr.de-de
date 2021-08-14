@@ -1,50 +1,50 @@
 ---
 title: UI_PKEY_FontProperties_Family
-description: Bezeichnet die Eigenschaft der Eigenschaft "UI \_ pkey \_ fontproperties" \_ .
+description: Identifiziert die \_ PKEY \_ FontProperties \_ Family-Eigenschaft der Benutzeroberfläche.
 ms.assetid: 95064588-9c14-401f-a86e-7b11e86faaf9
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 7a7183e51105a397f14154639512ca11f7c03d44
-ms.sourcegitcommit: 592c9bbd22ba69802dc353bcb5eb30699f9e9403
+ms.openlocfilehash: 0e0574ea4fb104cff29b58c8b1f649bd9287672acef677e3ea4cdc6ad5f91367
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "106338667"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118438659"
 ---
-# <a name="ui_pkey_fontproperties_family"></a>UI \_ pkey \_ fontproperties- \_ Familie
+# <a name="ui_pkey_fontproperties_family"></a>\_ \_ PKEY-Schriftarteigenschaftenfamilie der \_ Benutzeroberfläche
 
-Bezeichnet die Eigenschaft der Eigenschaft "UI \_ pkey \_ fontproperties" \_ .
+Identifiziert die \_ PKEY \_ FontProperties \_ Family-Eigenschaft der Benutzeroberfläche.
 
 ```
 propertyDescription
-   name = UI_PKEY_FontProperties_Family
-   shellPKey = UI_PKEY_FontProperties_Family
-   formatID = 00000301-7363-696e-8441798acf5aebb7
-   propID = 301
-   typeInfo
-      type = VT_LPWSTR
+   name = UI_PKEY_FontProperties_Family
+   shellPKey = UI_PKEY_FontProperties_Family
+   formatID = 00000301-7363-696e-8441798acf5aebb7
+   propID = 301
+   typeInfo
+      type = VT_LPWSTR
 ```
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-\_Die UI pkey \_ fontproperties \_ -Familie wird von einer Anwendung verwendet, um den Wert des Dropdown Katalogs der **Schriftart Familie** abzufragen.
+Die \_ PKEY FontProperties-Familie der Benutzeroberfläche wird von einer Anwendung verwendet, um den Wert des Dropdownkatalogs der \_ \_ Schriftfamilie abfragt. 
 
-Der Wert der UI \_ pkey \_ fontproperties- \_ Familie stimmt mit dem Namen einer [Windows GDI-Schriftart](../gdi/font-families.md) Familie überein, die mit der [Funktion EnumFontFamilies](/windows/win32/api/wingdi/nf-wingdi-enumfontfamiliesa) oder der [Funktion enumfontfamiliesex](/windows/win32/api/wingdi/nf-wingdi-enumfontfamiliesexa)abgerufen wurde.
+Der Wert der PKEY FontProperties-Familie der Benutzeroberfläche entspricht einem Windows GDI-Schriftartfamiliennamen, der mit der \_ \_ \_ [EnumFontFamilies-Funktion](/windows/win32/api/wingdi/nf-wingdi-enumfontfamiliesa) oder der [EnumFontFamiliesEx-Funktion](/windows/win32/api/wingdi/nf-wingdi-enumfontfamiliesexa) [](../gdi/font-families.md) abgerufen wird.
 
 Der Standardwert ist eine leere Zeichenfolge.
 
-Wenn für den Wert der UI pkey fontproperties-Familie eine leere Zeichenfolge angegeben wird \_ \_ \_ , wird die Schriftart Auswahl gelöscht.
+Wenn für den Wert für die \_ PKEY FontProperties-Familie der Benutzeroberfläche eine leere Zeichenfolge angegeben wird, wird die \_ \_ Schriftartauswahl nicht mehr angezeigt.
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
 <dl> <dt>
 
-[Schriftart Steuerelement-Eigenschaften](windowsribbon-reference-properties-fontcontrol.md)
+[Eigenschaften des Schriftart-Steuerelements](windowsribbon-reference-properties-fontcontrol.md)
 </dt> <dt>
 
 [Schriftart-Steuerelement](windowsribbon-controls-fontcontrol.md)
 </dt> </dl>
 
- 
+ 
 
- 
+ 
