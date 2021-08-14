@@ -1,36 +1,36 @@
 ---
-description: Anwendungen ordnen jeder Textur im Satz der aktuellen Texturen eine Mischungs Stufe zu. Direct3D wertet jede Mischungs Phase in der Reihenfolge aus, beginnend mit der ersten Textur in der Menge und endet mit der achten.
+description: Anwendungen ordnen jeder Textur in der Gruppe der aktuellen Texturen eine Mischungsphase zu. Direct3D wertet jede Mischungsphase in der Reihenfolge aus, beginnend mit der ersten Textur in der Menge und endet mit der achten.
 ms.assetid: 3b7faefd-30be-4f74-b0f7-621d65130286
-title: Textur Mischungs Vorgänge und Argumente (Direct3D 9)
+title: Texturmischungsvorgänge und -argumente (Direct3D 9)
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: ae65386e01bfff7d4bfc2ebc0cafd242e25c4265
-ms.sourcegitcommit: a47bd86f517de76374e4fff33cfeb613eb259a7e
+ms.openlocfilehash: 7d242092de5919267d30a9b8ff4e7bd2324f0bc3120649d3bb1a423b3462be77
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/06/2021
-ms.locfileid: "106344178"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118797772"
 ---
-# <a name="texture-blending-operations-and-arguments-direct3d-9"></a>Textur Mischungs Vorgänge und Argumente (Direct3D 9)
+# <a name="texture-blending-operations-and-arguments-direct3d-9"></a>Texturmischungsvorgänge und -argumente (Direct3D 9)
 
-Anwendungen ordnen jeder Textur im Satz der aktuellen Texturen eine Mischungs Stufe zu. Direct3D wertet jede Mischungs Phase in der Reihenfolge aus, beginnend mit der ersten Textur in der Menge und endet mit der achten.
+Anwendungen ordnen jeder Textur in der Gruppe der aktuellen Texturen eine Mischungsphase zu. Direct3D wertet jede Mischungsphase in der Reihenfolge aus, beginnend mit der ersten Textur in der Menge und endet mit der achten.
 
-Direct3D wendet die Informationen aus jeder Textur im Satz aktueller Texturen auf die zugeordnete Mischungs Phase an. Anwendungen steuern, welche Informationen aus einer Textur Phase durch Aufrufen von [**IDirect3DDevice9:: settexturestagestate**](/windows/desktop/api)verwendet werden. Sie können separate Vorgänge für die Farb-und Alphakanäle festlegen, und jeder Vorgang verwendet zwei Argumente. Angeben von farbchannelvorgängen mithilfe des D3DTSS \_ colorop-Phasen Zustands; angeben von Alpha-Vorgängen mithilfe von D3DTSS \_ alphaop. Beide Stufen Zustände verwenden Werte aus dem [**D3DTEXTUREOP**](./d3dtextureop.md) -Enumerationstyp.
+Direct3D wendet die Informationen aus jeder Textur in der Gruppe der aktuellen Texturen auf die zugehörige Mischungsphase an. Anwendungen steuern, welche Informationen aus einer Texturphase verwendet werden, indem [**sie IDirect3DDevice9::SetTextureStageState aufrufen.**](/windows/desktop/api) Sie können separate Vorgänge für die Farb- und Alphakanäle festlegen, und jeder Vorgang verwendet zwei Argumente. Geben Sie Farbkanalvorgänge mithilfe des D3DTSS COLOROP-Phasenstatus an, und geben Sie \_ Alphavorgänge mithilfe von D3DTSS \_ ALPHAOP an. In beiden Phasenzuständen werden Werte des [**aufzählten D3DTEXTUREOP-Typs**](./d3dtextureop.md) verwendet.
 
-Textur Mischungs Argumente verwenden die Member D3DTSS \_ COLORARG1, D3DTSS \_ COLORARG2, D3DTSS \_ ALPHARG1 und D3DTSS ALPHARG2 \_ des [**D3DTEXTURESTAGESTATETYPE**](./d3dtexturestagestatetype.md) enumerierten Typs. Die entsprechenden Argument Werte werden mithilfe von [D3DTA](d3dta.md)identifiziert.
+Texturmischungsargumente verwenden die D3DTSS-Member \_ COLORARG1, D3DTSS \_ COLORARG2, D3DTSS \_ ALPHARG1 und D3DTSS \_ ALPHARG2 des aufzählten [**D3DTEXTURESTAGESTATETYPE-Typs.**](./d3dtexturestagestatetype.md) Die entsprechenden Argumentwerte werden mithilfe von [D3DTA identifiziert.](d3dta.md)
 
 > [!Note]  
-> Sie können eine Textur Phase und alle nachfolgenden Textur Mischungs Stufen in der Cascade-Einstellung deaktivieren, indem Sie den Farb Vorgang für diese Phase auf D3DTOP \_ deaktivieren festlegen. Wenn Sie den Farb Vorgang deaktivieren, wird auch der Alpha-Vorgang deaktiviert. Alpha Vorgänge können nicht deaktiviert werden, wenn Farb Vorgänge aktiviert sind. Das Festlegen des Alpha-Vorgangs auf D3DTOP \_ deaktivieren, wenn die Farbmischung aktiviert ist, verursacht ein nicht definiertes Verhalten
+> Sie können eine Texturphase und alle nachfolgenden Texturmischungsphasen in der Kaskadierung deaktivieren, indem Sie den Farbvorgang für diese Phase auf D3DTOP \_ DISABLE festlegen. Wenn Sie den Farbvorgang deaktivieren, wird auch der Alphavorgang deaktiviert. Alphavorgänge können nicht deaktiviert werden, wenn Farbvorgänge aktiviert sind. Das Festlegen des Alpha-Vorgangs auf D3DTOP DISABLE, wenn Farbblending aktiviert ist, führt zu \_ nicht definiertem Verhalten.
 
  
 
-Um die unterstützten Textur Mischungs Vorgänge eines Geräts zu bestimmen, Fragen Sie den TextureCaps-Member der [**D3DCAPS9**](/windows/desktop/api/D3D9Caps/ns-d3d9caps-d3dcaps9) -Struktur ab.
+Um die unterstützten Texturmischungsvorgänge eines Geräts zu bestimmen, fragen Sie den TextureCaps-Member der [**D3DCAPS9-Struktur**](/windows/desktop/api/D3D9Caps/ns-d3d9caps-d3dcaps9) ab.
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
 <dl> <dt>
 
-[Textur Mischung](texture-blending.md)
+[Texturmischung](texture-blending.md)
 </dt> </dl>
 
  

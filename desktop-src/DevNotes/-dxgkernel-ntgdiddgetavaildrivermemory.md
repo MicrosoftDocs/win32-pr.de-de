@@ -1,7 +1,7 @@
 ---
-description: Fragt die Menge des freien Speicherplatzes in allen Videospeicher Heaps ab.
+description: Fragt die Menge des freien Arbeitsspeichers in allen Videospeicherheaps ab.
 ms.assetid: 6718e8da-0da0-42e3-a02b-6884b141fe24
-title: Ntgdiddgetavaildrivermemory-Funktion (ntgdi. h)
+title: NtGdiDdGetAvailDriverMemory-Funktion (Ntgdi.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -16,18 +16,18 @@ api_location:
 - Ext-MS-Win-GDI-Internal-Desktop-L1-1-0.dll
 - GDI32.dll
 - GDI32Full.dll
-ms.openlocfilehash: c6ec322665b84b3ddad14b7032b8e49245377d40
-ms.sourcegitcommit: c7add10d695482e1ceb72d62b8a4ebd84ea050f7
+ms.openlocfilehash: 4c2a66c174538c128185b2e8d4939a76d50a4ba6d3aff4347e7a6e0af9b4f549
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104041424"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118956379"
 ---
-# <a name="ntgdiddgetavaildrivermemory-function"></a>Ntgdiddgetavaildrivermemory-Funktion
+# <a name="ntgdiddgetavaildrivermemory-function"></a>NtGdiDdGetAvailDriverMemory-Funktion
 
-\[Diese Funktion kann bei jeder Betriebssystem Revision geändert werden. Verwenden Sie stattdessen Microsoft DirectDraw und Microsoft Direct3DAPIs; Diese APIs isolieren Anwendungen vor solchen Betriebssystem Änderungen und verbergen viele andere Schwierigkeiten bei der direkten Interaktion mit Anzeige Treibern.\]
+\[Diese Funktion kann bei jeder Betriebssystemrevision geändert werden. Verwenden Sie stattdessen Microsoft DirectDraw und Microsoft Direct3DAPIs. diese APIs isolieren Anwendungen vor solchen Betriebssystemänderungen und verbergen viele andere Schwierigkeiten bei der direkten Interaktion mit Anzeigetreibern.\]
 
-Fragt die Menge des freien Speicherplatzes in allen Videospeicher Heaps ab.
+Fragt die Menge des freien Arbeitsspeichers in allen Videospeicherheaps ab.
 
 ## <a name="syntax"></a>Syntax
 
@@ -45,30 +45,30 @@ DWORD APIENTRY NtGdiDdGetAvailDriverMemory(
 
 <dl> <dt>
 
-*hdirectdraw* \[ in\]
+*hDirectDraw* \[ In\]
 </dt> <dd>
 
-Handle für das zuvor erstellte Kernel Modus-DirectDraw-Objekt.
+Handle für zuvor erstelltes DirectDraw-Objekt im Kernelmodus.
 
 </dd> <dt>
 
-*pugetavaildrivermemorydata* \[ in, out\]
+*puGetAvailDriverMemoryData* \[ in, out\]
 </dt> <dd>
 
-Zeiger auf eine [DD \_ getavaildrivermemorydata](https://msdn.microsoft.com/library/ms794088.aspx) -Struktur, die die zum Ausführen der Abfrage erforderlichen Informationen enthält.
+Zeiger auf eine [DD \_ GETAVAILDRIVERMEMORYDATA-Struktur,](https://msdn.microsoft.com/library/ms794088.aspx) die die zum Ausführen der Abfrage erforderlichen Informationen enthält.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-**Ntgdiddgetavaildrivermemory** gibt einen der folgenden Rückruf Codes zurück.
+**NtGdiDdGetAvailDriverMemory** gibt einen der folgenden Rückrufcodes zurück.
 
 
 
 | Rückgabecode                                                                                              | Beschreibung                                                                                                                                                                                                                                                                                                                                                                |
 |----------------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| <dl> <dt>**ddhal- \_ Treiber \_ behandelt**</dt> </dl>    | Der Treiber hat den Vorgang durchgeführt und einen gültigen Rückgabecode für diesen Vorgang zurückgegeben. Wenn dieser Code DD \_ OK ist, fährt DirectDraw oder Direct3D mit der-Funktion fort. Andernfalls gibt DirectDraw oder Direct3D den vom Treiber bereitgestellten Fehlercode zurück und bricht die Funktion ab.<br/>                                                                                 |
-| <dl> <dt>**ddhal- \_ Treiber \_ nothandled**</dt> </dl> | Der Treiber hat keinen Kommentar zum angeforderten Vorgang. Wenn der Treiber einen bestimmten Rückruf implementieren muss, meldet DirectDraw oder Direct3D eine Fehlerbedingung. Andernfalls behandelt DirectDraw oder Direct3D den Vorgang so, als ob der Treiber Rückruf nicht durch Ausführen der geräteunabhängigen DirectDraw-oder Direct3D-Implementierung definiert wurde.<br/> |
+| <dl> <dt>**BEHANDELTER \_ DDHAL-TREIBER \_**</dt> </dl>    | Der Treiber hat den Vorgang ausgeführt und einen gültigen Rückgabecode für diesen Vorgang zurückgegeben. Wenn dieser Code DD \_ OK ist, wird DirectDraw oder Direct3D mit der Funktion fortgesetzt. Andernfalls gibt DirectDraw oder Direct3D den vom Treiber bereitgestellten Fehlercode zurück und bricht die Funktion ab.<br/>                                                                                 |
+| <dl> <dt>**\_DDHAL-TREIBER \_ NICHT BEHANDELT**</dt> </dl> | Der Treiber hat keinen Kommentar zum angeforderten Vorgang. Wenn der Treiber einen bestimmten Rückruf implementiert haben muss, meldet DirectDraw oder Direct3D eine Fehlerbedingung. Andernfalls verarbeitet DirectDraw oder Direct3D den Vorgang so, als ob der Treiberrückruf nicht durch Ausführen der geräteunabhängigen DirectDraw- oder Direct3D-Implementierung definiert worden wäre.<br/> |
 
 
 
@@ -82,15 +82,15 @@ Zeiger auf eine [DD \_ getavaildrivermemorydata](https://msdn.microsoft.com/libr
 |-------------------------------------|------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional \[nur Desktop-Apps\]<br/>                         |
 | Unterstützte Mindestversion (Server)<br/> | Windows 2000 Server \[nur Desktop-Apps\]<br/>                               |
-| Header<br/>                   | <dl> <dt>Ntgdi. h</dt> </dl> |
+| Header<br/>                   | <dl> <dt>Ntgdi.h</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[Unterstützung der untergeordneten Grafik Ebene](-dxgkernel-low-level-client-support.md)
+[Grafik– Clientunterstützung auf niedriger Ebene](-dxgkernel-low-level-client-support.md)
 </dt> </dl>
 
  

@@ -1,7 +1,7 @@
 ---
-description: 'Erstellt die anwendungsspezifischen und internen Eigenschaften Daten für ein Bytearray, das zuvor mit icontextnode:: savepropertiesdata erstellt wurde.'
+description: Erstellt die anwendungsspezifischen und internen Eigenschaftsdaten für ein Bytearray neu, das zuvor mit IContextNode::SavePropertiesData erstellt wurde.
 ms.assetid: 2d24d0da-16f1-4ddc-8e2e-93c312ecfa42
-title: 'Icontextnode:: loadpropertiesdata-Methode (iacom. h)'
+title: IContextNode::LoadPropertiesData-Methode (IACom.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,16 +13,16 @@ api_type:
 - COM
 api_location:
 - IACom.dll
-ms.openlocfilehash: bc495aaa52ebfbca088f954b34f22f9d6e1e53d0
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 8d58c37dc91fac9704221fae13505f5e32c6e48d097133e3aad9154f5f2ec3e8
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106354501"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118719674"
 ---
-# <a name="icontextnodeloadpropertiesdata-method"></a>Icontextnode:: loadpropertiesdata-Methode
+# <a name="icontextnodeloadpropertiesdata-method"></a>IContextNode::LoadPropertiesData-Methode
 
-Erstellt die anwendungsspezifischen und internen Eigenschaften Daten für ein Bytearray, das zuvor mit [**icontextnode:: savepropertiesdata**](icontextnode-savepropertiesdata.md)erstellt wurde.
+Erstellt die anwendungsspezifischen und internen Eigenschaftsdaten für ein Bytearray neu, das zuvor mit [**IContextNode::SavePropertiesData erstellt wurde.**](icontextnode-savepropertiesdata.md)
 
 ## <a name="syntax"></a>Syntax
 
@@ -41,30 +41,30 @@ HRESULT LoadPropertiesData(
 
 <dl> <dt>
 
-*cbpropertiesdatasize* \[ in\]
+*cbPropertiesDataSize* \[ In\]
 </dt> <dd>
 
-Die Größe des Properties-Daten Arrays.
+Die Größe des Eigenschaftendatenarrays.
 
 </dd> <dt>
 
-*pbpropertiesdata* \[ in\]
+*pbPropertiesData* \[ In\]
 </dt> <dd>
 
-Das Array von 8-Bit-Ganzzahlen ohne Vorzeichen, das zu ladende Eigenschaften Informationen enthält.
+Das 8-Bit-Ganzzahlarray ohne Vorzeichen, das zu ladende Eigenschaftsinformationen enthält.
 
 </dd> <dt>
 
-*pferfolgreich* \[ vorgenommen\]
+*pfSuccessful* \[ out\]
 </dt> <dd>
 
-**Variant \_ TRUE** , wenn die Eigenschaften Daten erfolgreich geladen wurden. Andernfalls ist der Wert **\_ false**.
+**VARIANT \_ TRUE,** wenn die Eigenschaftsdaten erfolgreich geladen wurden; andernfalls **VARIANT \_ FALSE**.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Eine Beschreibung der Rückgabewerte finden Sie unter [Klassen und Schnittstellen-Ink-Analyse](classes-and-interfaces---ink-analysis.md).
+Eine Beschreibung der Rückgabewerte finden Sie unter [Klassen und Schnittstellen – Ink-Analyse](classes-and-interfaces---ink-analysis.md).
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -72,39 +72,39 @@ Eine Beschreibung der Rückgabewerte finden Sie unter [Klassen und Schnittstelle
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows XP Tablet PC Edition \[ Desktop-Apps\]<br/>                                                 |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur Desktop-Apps der XP Tablet PC Edition \[\]<br/>                                                 |
 | Unterstützte Mindestversion (Server)<br/> | Nicht unterstützt<br/>                                                                                     |
-| Header<br/>                   | <dl> <dt>Iacom. h (erfordert auch iacom \_ i. c)</dt> </dl> |
+| Header<br/>                   | <dl> <dt>IACom.h (erfordert auch IACom \_ i.c)</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>IACom.dll</dt> </dl>                          |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Icontextnode**](icontextnode.md)
+[**IContextNode**](icontextnode.md)
 </dt> <dt>
 
-[**Icontextnode:: AddPropertyData**](icontextnode-addpropertydata.md)
+[**IContextNode::AddPropertyData**](icontextnode-addpropertydata.md)
 </dt> <dt>
 
-[**Icontextnode:: ContainsPropertyData**](icontextnode-containspropertydata.md)
+[**IContextNode::ContainsPropertyData**](icontextnode-containspropertydata.md)
 </dt> <dt>
 
-[**Icontextnode:: GetPropertyData**](icontextnode-getpropertydata.md)
+[**IContextNode::GetPropertyData**](icontextnode-getpropertydata.md)
 </dt> <dt>
 
-[**Icontextnode:: GetPropertyDataIds**](icontextnode-getpropertydataids.md)
+[**IContextNode::GetPropertyDataIds**](icontextnode-getpropertydataids.md)
 </dt> <dt>
 
-[**Icontextnode:: RemovePropertyData**](icontextnode-removepropertydata.md)
+[**IContextNode::RemovePropertyData**](icontextnode-removepropertydata.md)
 </dt> <dt>
 
-[**Icontextnode:: savepropertiesdata**](icontextnode-savepropertiesdata.md)
+[**IContextNode::SavePropertiesData**](icontextnode-savepropertiesdata.md)
 </dt> <dt>
 
-[Ink-Analyse Referenz](ink-analysis-reference.md)
+[Referenz zur Ink-Analyse](ink-analysis-reference.md)
 </dt> </dl>
 
  

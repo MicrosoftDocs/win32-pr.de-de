@@ -1,23 +1,23 @@
 ---
-title: Explizite Bindungs Handles
-description: Um die maximale Kontrolle über den Bindungsprozess zu erhalten, verwenden Client/Server-Anwendungen möglicherweise explizite Bindungs Handles.
+title: Explizite Bindungshandles
+description: Für maximale Kontrolle über den Bindungsprozess können Client-/Serveranwendungen explizite Bindungshandles verwenden.
 ms.assetid: e711ce37-92f0-4e60-a126-148c27662c26
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 1b391c339ac3747928e3394152e9c0de7c1c7aa0
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: 59a6e723d8559dc5e72783412eb6250f69431f31d08a92c4984fb2e2a19b761d
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "106341862"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118930019"
 ---
-# <a name="explicit-binding-handles"></a>Explizite Bindungs Handles
+# <a name="explicit-binding-handles"></a>Explizite Bindungshandles
 
-Um die maximale Kontrolle über den Bindungsprozess zu erhalten, verwenden Client/Server-Anwendungen möglicherweise explizite Bindungs Handles. Wie implizite Handles ermöglichen explizite Bindungs Handles Ihrer Client Anwendung, einen Server für die Ausführung ihrer Aufrufe auszuwählen. Außerdem ermöglichen explizite Bindungs Handles Ihrer Client/Server-Anwendung das Erstellen einer authentifizierten RPC-Kommunikationssitzung. Mit expliziten Handles kann der Client eine Verbindung mit mehr als einem Server herstellen und Remote Prozeduren auf mehreren Servern ausführen. Multithread-und asynchrone Client Anwendungen können sogar eine Verbindung mit mehreren Servern herstellen und gleichzeitig mehrere Remote Prozeduren ausführen.
+Für maximale Kontrolle über den Bindungsprozess können Client-/Serveranwendungen explizite Bindungshandles verwenden. Wie implizite Handles ermöglichen explizite Bindungshandles Ihrer Clientanwendung die Auswahl eines Servers zum Ausführen der Aufrufe. Darüber hinaus ermöglichen explizite Bindungshandles Ihrer Client-/Serveranwendung das Erstellen einer authentifizierten RPC-Kommunikationssitzung. Mit expliziten Handles kann Ihr Client eine Verbindung mit mehreren Servern herstellen und Remoteverfahren auf mehreren Servern ausführen. Multithread- und asynchrone Clientanwendungen können sogar eine Verbindung mit mehreren Servern herstellen und mehrere Remoteverfahren gleichzeitig ausführen.
 
-Die Client Anwendung muss das explizite Handle als Parameter an jeden Remote Prozedur aufzurufen übergeben. Um dem OSF-Standard zu entsprechen, sollte das Handle für jede Remote Prozedur als erster Parameter angegeben werden. Die Microsoft-Erweiterungen für RPC ermöglichen es Ihnen jedoch, das Bindungs Handle an anderen Positionen anzugeben. Weitere Informationen finden Sie unter [Microsoft RPC Binding-Handle Extensions](microsoft-rpc-binding-handle-extensions.md).
+Ihre Clientanwendung muss das explizite Handle als Parameter an jeden Remoteprozeduraufruf übergeben. Um dem OSF-Standard zu entsprechen, sollte das Handle als erster Parameter für jede Remoteprozedur angegeben werden. Mit den Rpc-Erweiterungen von Microsoft können Sie jedoch das Bindungshand handle an anderen Positionen angeben. Weitere Informationen finden Sie unter [Microsoft RPC Binding-Handle Extensions](microsoft-rpc-binding-handle-extensions.md).
 
-Zum Erstellen eines expliziten Handles deklarieren Sie das Handle als Parameter für die Remote Vorgänge in der IDL-Datei. Das [Hello, World-Beispiel](tutorial.md) kann so neu definiert werden, dass ein explizites handle wie gezeigt verwendet wird:
+Um ein explizites Handle zu erstellen, deklarieren Sie das Handle als Parameter für die Remotevorgänge in der IDL-Datei. Das [Hello, World-Beispiel](tutorial.md) kann neu definiert werden, um ein explizites Handle wie gezeigt zu verwenden:
 
 ``` syntax
 /* IDL file for explicit handles */
@@ -33,11 +33,11 @@ interface hello
 }
 ```
 
-Sie können explizite und implizite Handles in einer einzelnen Schnittstelle kombinieren. Wenn eine Funktion einen expliziten Handle in der Parameterliste aufweist, wird dieses Handle verwendet. Wenn eine Funktion in einer Schnittstelle, die implizite Handles verwendet, kein explizites Handle angibt, wird das implizite Standard Handle verwendet.
+Sie können explizite und implizite Handles in einer einzelnen Schnittstelle kombinieren. Wenn eine Funktion über ein explizites Handle in der Parameterliste verfügt, wird dieses Handle verwendet. Wenn eine Funktion in einer Schnittstelle, die implizite Handles verwendet, kein explizites Handle an gibt, wird das implizite Standardhandles verwendet.
 
- 
+ 
 
- 
+ 
 
 
 

@@ -1,21 +1,21 @@
 ---
-title: Bytecode-Änderungen in SM 5.1
-description: Mit SM 5.1 wird die Deklaration von Ressourcen Registern und die referenzierte Verwendung in Anweisungen geändert.
+title: Bytecodeänderungen in SM5.1
+description: SM5.1 ändert, wie Ressourcenregister deklariert und in anweisungen referenziert werden.
 ms.assetid: ABECF705-67B8-4419-8D18-74B43B9DC3AF
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: c6d66db788b0012a1c3221e37d4c2dd4e41566c6
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: e93d7d8533bac3750e743166a9d64b687fc06f0fbf21931d44e7d83d462cf15a
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "104311621"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118794558"
 ---
-# <a name="bytecode-changes-in-sm51"></a>Bytecode-Änderungen in SM 5.1
+# <a name="bytecode-changes-in-sm51"></a>Bytecodeänderungen in SM5.1
 
-Mit SM 5.1 wird die Deklaration von Ressourcen Registern und die referenzierte Verwendung in Anweisungen geändert.
+SM5.1 ändert, wie Ressourcenregister deklariert und in anweisungen referenziert werden.
 
-SM 5.1 wechselt zum Deklarieren einer Register-"Variablen", ähnlich wie bei Gruppen Shared-Speicher Registern, wie im folgenden Beispiel veranschaulicht:
+SM5.1 geht auf die Deklaration einer Registervariablen zu, ähnlich wie bei Gruppen-Shared Memory-Registern, wie im folgenden Beispiel veranschaulicht:
 
 ``` syntax
 Texture2D<float4> tex0          : register(t5,  space0);
@@ -33,7 +33,7 @@ float4 main(float4 coord : COORD) : SV_TARGET
 }
 ```
 
-Die Disassembly dieses Beispiels folgt:
+Die Disassemblierung dieses Beispiels folgt:
 
 ``` syntax
 // Resource Bindings:
@@ -84,36 +84,36 @@ ret
 // Approximately 12 instruction slots used
 ```
 
-Jeder Shader-Ressourcenbereich verfügt jetzt über eine ID (Name) im Shader-Bytecode. Beispielsweise wird tex1 Texture Array nicht zu "'t 1" im Shader-Bytecode. Das Erteilen von eindeutigen IDs für jeden Ressourcenbereich ermöglicht zwei Dinge:
+Jeder Shaderressourcenbereich verfügt jetzt über eine ID (einen Namen) im Shader-Bytecode. Beispielsweise wird das Texturarray "tex1" im Shader-Bytecode zu "t1". Die Angabe eindeutiger IDs für jeden Ressourcenbereich ermöglicht zwei Dinge:
 
--   Identifizieren Sie eindeutig den Ressourcenbereich (siehe DCL \_ Resource \_ Texture2D), der in einer Anweisung indiziert wird (siehe Beispiel Anweisung).
--   Fügen Sie eine Gruppe von Attributen an die Deklaration an, z. b. Elementtyp, Stride-Größe, Raster Betriebsmodus usw..
+-   Identifizieren Sie eindeutig, welcher Ressourcenbereich (siehe dcl resource texture2d) in einer Anweisung indiziert wird \_ \_ (siehe Beispielanweisung).
+-   Fügen Sie eine Reihe von Attributen an die Deklaration an, z. B. Elementtyp, Stridegröße, Rasterbetriebsmodus usw.
 
-Beachten Sie, dass die ID des Bereichs nicht mit der HLSL-Deklaration in der unteren Grenze verknüpft ist.
+Beachten Sie, dass die ID des Bereichs nicht mit der HLSL-Untergrenze-Deklaration verknüpft ist.
 
-Die Reihenfolge der reflektionsressourcenbindungen und der Shader-Deklarations Anweisungen sind identisch, um die Übereinstimmung zwischen HLSL-Variablen und Bytecode-IDs zu ermitteln.
+Die Reihenfolge der Reflektionsressourcenbindungen und Shaderdeklarationsanweisungen ist identisch, um die Übereinstimmung zwischen HLSL-Variablen und Bytecode-IDs zu identifizieren.
 
-Jede Deklarations Anweisung in SM 5.1 verwendet einen 3D-Operanden, um Folgendes zu definieren: Range ID, Lower und Upper Bounds. Ein zusätzliches Token wird ausgegeben, um den Register Bereich anzugeben. Andere Token können ebenfalls ausgegeben werden, um zusätzliche Eigenschaften des Bereichs zu übermitteln, z. b. die cBuffer-Anweisung oder die strukturierte Puffer Deklarations Anweisung, die die Größe des cBuffer oder der Struktur ausgibt. Die genauen Codierungs Details finden Sie in d3d12TokenizedProgramFormat. h und D3D10ShaderBinary:: cshadercodeparser.
+Jede Deklarationsanweisung in SM5.1 verwendet einen 3D-Operanden, um die Bereichs-ID, die untere und die obere Grenze zu definieren. Ein zusätzliches Token wird ausgegeben, um den Registerbereich anzugeben. Andere Token können auch ausgegeben werden, um zusätzliche Eigenschaften des Bereichs zu vermitteln, z. B. gibt die Cbuffer- oder strukturierte Pufferdeklarationsanweisung die Größe des Cbuffers oder der Struktur aus. Die genauen Details der Codierung finden Sie in d3d12TokenizedProgramFormat.h und D3D10ShaderBinary::CShaderCodeParser.
 
-In den Anweisungen von SM 5.1 werden im Rahmen der Anweisung (wie in SM 5.0) keine zusätzlichen Ressourcen Operanden Informationen ausgegeben. Diese Informationen werden jetzt in die Deklarations Anweisungen verschoben. In SM 5.0 erforderte das Indizieren von Ressourcen, dass Ressourcen Attribute in erweiterten Opcode-Token beschrieben werden müssen, da die Indizierung die Zuordnung zur Deklaration verdeckt hat. In SM 5.1 ist jede ID (z. b. 't 1 ') eindeutig einer einzelnen Deklaration zugeordnet, die die erforderlichen Ressourcen Informationen beschreibt. Daher werden die erweiterten Opcode-Token, die für Anweisungen zum Beschreiben von Ressourcen Informationen verwendet werden, nicht mehr ausgegeben.
+SM5.1-Anweisungen geben keine zusätzlichen Ressourcenoperndeninformationen als Teil der Anweisung aus (wie in SM5.0). Diese Informationen werden nun in die Deklarationsanweisungen verschoben. In SM5.0 erforderten Anweisungen zum Indizieren von Ressourcen Ressourcenattribute, die in erweiterten Opcodetoken beschrieben werden mussten, da die Indizierung die Zuordnung zur Deklaration verschleierte. In SM5.1 wird jede ID (z. B. "t1") eindeutig einer einzelnen Deklaration zugeordnet, die die erforderlichen Ressourceninformationen beschreibt. Daher werden die erweiterten Opcodetoken, die in Anweisungen zum Beschreiben von Ressourceninformationen verwendet werden, nicht mehr ausgegeben.
 
-In nicht Deklarations Anweisungen ist ein Ressourcen Operand für Samplers, Srvs und UAVs ein 2D-Operand. Der erste Index ist eine Literalkonstante, die die Bereichs-ID angibt. Der zweite Index stellt den linearisierten Wert des Indexes dar. Der Wert wird relativ zum Anfang des entsprechenden Register Bereichs (nicht relativ zum Anfang des logischen Bereichs) berechnet, um die Korrelation mit der Stamm Signatur zu verbessern und die Treiber-compilerlast für die Anpassung des Indexes zu verringern.
+In Anweisungen ohne Deklaration ist ein Ressourcenopernd für Sampler, SRVs und UAVs ein 2D-Operand. Der erste Index ist eine Literalkonst constant, die die Bereichs-ID angibt. Der zweite Index stellt den linearisierten Wert des Indexes dar. Der Wert wird relativ zum Anfang des entsprechenden Registerbereichs berechnet (nicht relativ zum Anfang des logischen Bereichs), um besser mit der Stammsignatur zu korrelieren und den Treibercompileraufwand für die Anpassung des Indexes zu reduzieren.
 
-Ein Ressourcen Operand für cbvs ist ein 3D-Operand: die literalkennung des Bereichs, Index des cBuffer, Offset in die bestimmte Instanz von cBuffer.
+Ein Ressourcenopernd für CBVs ist ein 3D-Operand: Literal-ID des Bereichs, Index des Cbuffers, Offset in die bestimmte Instanz von cbuffer.
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
 <dl> <dt>
 
-[HLSL-Shader-Modell 5,1 Features für Direct3D 12](hlsl-shader-model-5-1-features-for-direct3d-12.md)
+[HLSL-Shadermodell 5.1-Features für Direct3D 12](hlsl-shader-model-5-1-features-for-direct3d-12.md)
 </dt> <dt>
 
-[Shadermodell 5,1](shader-model-5-1.md)
+[Shadermodell 5.1](shader-model-5-1.md)
 </dt> </dl>
 
- 
+ 
 
- 
+ 
 
 
 

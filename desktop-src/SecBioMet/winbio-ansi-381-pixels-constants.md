@@ -1,6 +1,6 @@
 ---
-title: WINBIO_ANSI_381_PIXELS Konstanten (winbio \_ types. h)
-description: Geben Sie Skalierungs Einheiten an.
+title: WINBIO_ANSI_381_PIXELS Konstanten (Winbio \_ types.h)
+description: Geben Sie Skalierungseinheiten an.
 ms.assetid: D349081E-FF29-40D1-BC42-870F595AC338
 topic_type:
 - apiref
@@ -13,18 +13,18 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: e0d18c06b30eb70f197f107ff1a0e6c4014ce445
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: e9aedfa0e45e7e8b2e55fab5dd5e6fc6df82e0d2bacd3a5bf41e753280b00284
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104391921"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118911407"
 ---
-# <a name="winbio_ansi_381_pixels-constants"></a>Winbio \_ ANSI \_ 381 \_ Pixel-Konstanten
+# <a name="winbio_ansi_381_pixels-constants"></a>WINBIO \_ \_ ANSI-Konstanten mit 381 \_ PIXEL
 
-Die folgenden Konstanten können zum Angeben von Skalierungs Einheiten verwendet werden:
+Die folgenden Konstanten können verwendet werden, um Skalierungseinheiten anzugeben:
 
-<dl> <span id="WINBIO_ANSI_381_PIXELS_PER_INCH"></span><span id="winbio_ansi_381_pixels_per_inch"></span>**Winbio \_ ANSI \_ 381 \_ Pixel \_ pro \_ Zoll** <span id="WINBIO_ANSI_381_PIXELS_PER_CM"></span> <span id="winbio_ansi_381_pixels_per_cm"></span> **winbio \_ ANSI \_ 381 \_ Pixel \_ pro \_ cm**  
+<dl> <span id="WINBIO_ANSI_381_PIXELS_PER_INCH"></span><span id="winbio_ansi_381_pixels_per_inch"></span>**WINBIO \_ ANSI \_ 381 \_ PIXEL PRO \_ \_ ZOLL** <span id="WINBIO_ANSI_381_PIXELS_PER_CM"></span> <span id="winbio_ansi_381_pixels_per_cm"></span> **WINBIO \_ ANSI \_ 381 \_ PIXEL PRO \_ \_ CM**  
 </dl>
 
 ## <a name="requirements"></a>Anforderungen
@@ -33,17 +33,17 @@ Die folgenden Konstanten können zum Angeben von Skalierungs Einheiten verwendet
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows 7 \[ -Desktop-Apps\]<br/>                                                                    |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2008 R2 \[ -Desktop-Apps\]<br/>                                                       |
-| Header<br/>                   | <dl> <dt>Winbio \_ types. h (Include winbio. h)</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows 7 \[ Desktop-Apps\]<br/>                                                                    |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server 2008 \[ R2-Desktop-Apps\]<br/>                                                       |
+| Header<br/>                   | <dl> <dt>Winbio \_ types.h (einschließlich Winbio.h)</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[Client Anwendungs Konstanten](client-application-constants.md)
+[Clientanwendungskonstant](client-application-constants.md)
 </dt> </dl>
 
  

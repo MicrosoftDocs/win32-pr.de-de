@@ -1,9 +1,9 @@
 ---
-title: Asfleakybucketpair
-description: Das asfleakybucketpair-Attribut ist ein optionales Attribut, das die Puffer Anforderungen für eine Variable-Bitrate-Datei beschreibt.
+title: ASFLeakyBucketPairs
+description: Das ASFLeakyBucketPairs-Attribut ist ein optionales Attribut, das die Pufferanforderungen für eine Variable Bitratendatei beschreibt.
 ms.assetid: d1b3e8cc-c082-4283-88bc-172f58adf2d9
 keywords:
-- Asfleakybucketpairs Windows Media-Format
+- ASFLeakyBucketPairs-Windows-Medienformat
 topic_type:
 - apiref
 api_name:
@@ -12,28 +12,28 @@ api_type:
 - NA
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: e6e94bfa6084c67428fb89e57b9152283cc3d4a3
-ms.sourcegitcommit: 57758ecb246c84d65e6e0e4bd5570d9176fa39cd
+ms.openlocfilehash: 76de649a069b0cfec74fabe1a41d6cfa659b39448257a4bc966065e1bce98ea9
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "106342097"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118434619"
 ---
-# <a name="asfleakybucketpairs"></a>Asfleakybucketpair
+# <a name="asfleakybucketpairs"></a>ASFLeakyBucketPairs
 
-Das **asfleakybucketpair** -Attribut ist ein optionales Attribut, das die Puffer Anforderungen für eine Variable-Bitrate-Datei beschreibt.
+Das **ASFLeakyBucketPairs-Attribut** ist ein optionales Attribut, das die Pufferanforderungen für eine Variable Bitratendatei beschreibt.
 
 ## <a name="global-constant"></a>Globale Konstante
 
-g \_ wszasfleakybucketpairs
+g \_ wszASFLeakyBucketPairs
 
 ## <a name="data-type"></a>Datentyp
 
-**WMT \_ - \_ typbinär Datei**
+**BINÄRER \_ \_ WMT-TYP**
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Dieses Attribut weist das folgende Format auf:
+Dieses Attribut hat das folgende Format:
 
 ``` syntax
 struct
@@ -43,18 +43,18 @@ struct
 };
 ```
 
-Dabei muss *wReserved* gleich NULL sein, und *Bucket* ist ein Array von WM-Lecks mit einem [**Bucket- \_ \_ \_ paar**](/previous-versions/windows/desktop/api/wmsdkidl/ns-wmsdkidl-wm_leaky_bucket_pair) . Das Array muss mindestens zwei Einträge enthalten, kann jedoch größer sein. Das Reader-Objekt verwendet dieses Attribut, um zu bestimmen, wie viel Inhalt vor der Wiedergabe puffert werden soll.
+Dabei *muss wReserved* gleich 0 (null) sein, und *bucket* ist ein Array von [**WM \_ LEAKY BUCKET \_ \_ PAIR-Strukturen.**](/previous-versions/windows/desktop/api/wmsdkidl/ns-wmsdkidl-wm_leaky_bucket_pair) Das Array muss mindestens zwei Einträge enthalten, kann jedoch größer sein. Das Readerobjekt verwendet dieses Attribut, um die Menge an Inhalt zu bestimmen, der vor der Wiedergabe gepuffert werden soll.
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
 [**Attributliste**](attribute-list.md)
 </dt> </dl>
 
- 
+ 
 
- 
+ 
 
 
 

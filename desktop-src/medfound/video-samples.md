@@ -1,58 +1,58 @@
 ---
-description: Video Beispiele
+description: Videobeispiele
 ms.assetid: 1ee2ad6f-5e84-45ba-9849-cd3bd8e7eb29
-title: Video Beispiele
+title: Videobeispiele
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 239fecd0947271627abc7fc50ed16f6a7c682b84
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: c3883b3a62cd907c89dd46d14681e28ad9a4d4d94653a9f04a9097707d22cff9
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "103863924"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118972599"
 ---
-# <a name="video-samples"></a>Video Beispiele
+# <a name="video-samples"></a>Videobeispiele
 
-Das Video Sample-Objekt ist eine spezialisierte Implementierung der [**IMF Sample**](/windows/desktop/api/mfobjects/nn-mfobjects-imfsample) -Schnittstelle für die Verwendung mit dem [erweiterten Videorenderer](enhanced-video-renderer.md) (EVR). Rufen Sie die [**mfcreatevideosamplefromsurface**](/windows/desktop/api/evr/nc-evr-mfcreatevideosamplefromsurface) -Funktion auf, um eine Instanz dieses Objekts zu erstellen. Die Funktion nimmt einen Zeiger auf eine Direct3D-Oberfläche und gibt einen Zeiger auf die **imfsample** -Schnittstelle zurück. Die folgenden Objekttypen sollten mithilfe dieser Funktion Beispiele zuordnen:
+Das Videobeispielobjekt ist eine spezielle Implementierung der [**INTERFACESSample-Schnittstelle**](/windows/desktop/api/mfobjects/nn-mfobjects-imfsample) für die Verwendung mit dem [Enhanced Video Renderer](enhanced-video-renderer.md) (EVR). Um eine Instanz dieses Objekts zu erstellen, rufen Sie die [**MFCreateVideoSampleFromSurface-Funktion**](/windows/desktop/api/evr/nc-evr-mfcreatevideosamplefromsurface) auf. Die Funktion verwendet einen Zeiger auf eine Direct3D-Oberfläche und gibt einen Zeiger auf die **SCHNITTSTELLE "POINTERSample"** zurück. Die folgenden Objekttypen sollten Mithilfe dieser Funktion Beispiele zuordnen:
 
--   Benutzerdefinierte EVR-Moderatoren. Ein Presenter ordnet Videobeispiele zu und sendet Sie an die [**imftransform::P rocess Output**](/windows/desktop/api/mftransform/nf-mftransform-imftransform-processoutput) -Methode des Mischers. Weitere Informationen finden Sie unter [How to Write a EVR Presenter](how-to-write-an-evr-presenter.md).
+-   Benutzerdefinierte EVR-Moderatoren. Eine Moderatorin ordnet Videobeispiele zu und sendet sie an die [**MIXERTransform::P rocessOutput-Methode**](/windows/desktop/api/mftransform/nf-mftransform-imftransform-processoutput) des Mixers. Weitere Informationen finden Sie unter [Schreiben eines EVR-Presenters.](how-to-write-an-evr-presenter.md)
 
--   Video-Decoder, die Videobeschleunigung unterstützen. Weitere Informationen finden Sie [unter unterstützen von DXVA 2,0 in Media Foundation](supporting-dxva-2-0-in-media-foundation.md).
+-   Videodecoder, die die Videobeschleunigung unterstützen. Weitere Informationen finden Sie unter [Unterstützen von DXVA 2.0 in Media Foundation](supporting-dxva-2-0-in-media-foundation.md).
 
-Das Video Sample-Objekt implementiert die folgenden Schnittstellen:
+Das Videobeispielobjekt implementiert die folgenden Schnittstellen:
 
--   [**IMF Sample**](/windows/desktop/api/mfobjects/nn-mfobjects-imfsample)
+-   [**DIESSAMPLE**](/windows/desktop/api/mfobjects/nn-mfobjects-imfsample)
 
--   [**IMF-redsample**](/windows/desktop/api/evr/nn-evr-imfdesiredsample)
+-   [**ÜBER DASIREDSAMPLE**](/windows/desktop/api/evr/nn-evr-imfdesiredsample)
 
--   [**IMF trackedsample**](/windows/win32/api/mfidl/nn-mfidl-imftrackedsample)
+-   [**VERURSACHERNachverfolgungSample**](/windows/win32/api/mfidl/nn-mfidl-imftrackedsample)
 
-Wenn der *punksurface* -Parameter von [**MF createvideosamplefromsurface**](/windows/desktop/api/evr/nc-evr-mfcreatevideosamplefromsurface) nicht **null** ist, enthält das resultierende Video Beispiel einen einzelnen Medien Puffer, der die Direct3D-Oberfläche kapselt. Dieses Puffer Objekt verfügt über eingeschränkte Funktionalität:
+Wenn der *pUnkSurface-Parameter* von [**MFCreateVideoSampleFromSurface**](/windows/desktop/api/evr/nc-evr-mfcreatevideosamplefromsurface) ungleich **NULL** ist, enthält das resultierende Videobeispiel einen einzelnen Medienpuffer, der die Direct3D-Oberfläche kapselt. Dieses Pufferobjekt verfügt über eingeschränkte Funktionalität:
 
--   Die [**imfmediabuffer:: Lock**](/windows/desktop/api/mfobjects/nf-mfobjects-imfmediabuffer-lock) -Methode des Puffers gibt E \_ notimpl zurück.
+-   Die [**BUFFERMediaBuffer::Lock-Methode**](/windows/desktop/api/mfobjects/nf-mfobjects-imfmediabuffer-lock) des Puffers gibt E \_ NOTIMPL zurück.
 
--   Die [**IMF2DBuffer**](/windows/desktop/api/mfobjects/nn-mfobjects-imf2dbuffer) -Schnittstelle wird vom Puffer nicht implementiert.
+-   Der Puffer implementiert nicht die [**INTERFACES2DBuffer-Schnittstelle.**](/windows/desktop/api/mfobjects/nn-mfobjects-imf2dbuffer)
 
-Die einzige Möglichkeit für den Zugriff auf die-Oberfläche aus dem Puffer besteht darin, [**imfgetservice:: GetService**](/windows/desktop/api/mfidl/nf-mfidl-imfgetservice-getservice)mit dem Dienst Bezeichner Mr- \_ Puffer Dienst aufzurufen \_ .
+Die einzige Möglichkeit, über den Puffer auf die Oberfläche zuzugreifen, besteht darin, [**DEN DIENSTBEzeichner**](/windows/desktop/api/mfidl/nf-mfidl-imfgetservice-getservice)MR BUFFER SERVICE \_ aufzurufen. \_
 
-Wenn der Parameter " *punksurface* " **null** ist, wird das Video Beispiel mit NULL Medien Puffern erstellt. Um dem Beispiel einen Puffer hinzuzufügen, führen Sie die folgenden Schritte aus:
+Wenn der *pUnkSurface-Parameter* **NULL** ist, wird das Videobeispiel mit 0 Medienpuffern erstellt. Gehen Sie wie folgt vor, um dem Beispiel einen Puffer hinzuzufügen:
 
 1.  Erstellen Sie eine Direct3D-Oberfläche.
 
-2.  Erstellen Sie einen Oberflächen Puffer, indem Sie [**mfcreatedxsurfacebuffer**](/windows/desktop/api/mfapi/nf-mfapi-mfcreatedxsurfacebuffer)aufrufen. Weitere Informationen finden Sie unter [DirectX-Oberflächen Puffer](directx-surface-buffer.md).
+2.  Erstellen Sie einen Oberflächenpuffer, indem Sie [**MFCreateDXSurfaceBuffer**](/windows/desktop/api/mfapi/nf-mfapi-mfcreatedxsurfacebuffer)aufrufen. Weitere Informationen finden Sie unter [DirectX Surface Buffer](directx-surface-buffer.md).
 
-3.  Fügen Sie den Puffer dem Beispiel hinzu, indem Sie [**imfsample:: addbuffer**](/windows/desktop/api/mfobjects/nf-mfobjects-imfsample-addbuffer)aufrufen.
+3.  Fügen Sie den Puffer zum Beispiel hinzu, indem Sie [**DENSAMPLE::AddBuffer**](/windows/desktop/api/mfobjects/nf-mfobjects-imfsample-addbuffer)aufrufen.
 
-Verwenden Sie diesen Ansatz, wenn Sie den Surface-Speicher über die [**IMF2DBuffer**](/windows/desktop/api/mfobjects/nn-mfobjects-imf2dbuffer) -Schnittstelle zugänglich sein müssen.
+Verwenden Sie diesen Ansatz, wenn sie benötigen, dass der Oberflächenspeicher über die [**INTERFACES2DBuffer-Schnittstelle**](/windows/desktop/api/mfobjects/nn-mfobjects-imf2dbuffer) zugänglich ist.
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
 <dl> <dt>
 
-[Medien Puffer](media-buffers.md)
+[Medienpuffer](media-buffers.md)
 </dt> <dt>
 
-[Medien Beispiele](media-samples.md)
+[Medienbeispiele](media-samples.md)
 </dt> </dl>
 
  

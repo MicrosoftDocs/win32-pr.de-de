@@ -1,5 +1,5 @@
 ---
-description: Erweitert die iTablet-Schnittstelle.
+description: Erweitert die ITablet-Schnittstelle.
 ms.assetid: dd4f3b2e-7f63-4d5b-b50e-64458719c17a
 title: ITablet2-Schnittstelle
 ms.topic: reference
@@ -14,44 +14,44 @@ api_type:
 api_location:
 - wisptis.exe
 - wisptis.exe.dll
-ms.openlocfilehash: b402695aa278105ad57209f3ff33e66ccaf8c746
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 0df1114f5808e5fd08a1a2dbe00ccfb451eaa7096c978d3f4d454e508c0a2fcd
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106363326"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118717349"
 ---
 # <a name="itablet2-interface"></a>ITablet2-Schnittstelle
 
-Erweitert die [**iTablet-Schnittstelle**](itablet.md).
+Erweitert die [**ITablet-Schnittstelle**](itablet.md).
 
 ## <a name="members"></a>Member
 
-Die **ITablet2** -Schnittstelle erbt von der [**IUnknown**](/windows/desktop/api/unknwn/nn-unknwn-iunknown) -Schnittstelle. **ITablet2** verfügt auch über die folgenden Typen von Membern:
+Die **ITablet2-Schnittstelle erbt** von der [**IUnknown-Schnittstelle.**](/windows/desktop/api/unknwn/nn-unknwn-iunknown) **ITablet2** verfügt auch über diese Typen von Membern:
 
 -   [Methoden](#methods)
 
 ### <a name="methods"></a>Methoden
 
-Die **ITablet2** -Schnittstelle verfügt über diese Methoden.
+Die **ITablet2-Schnittstelle** verfügt über diese Methoden.
 
 
 
-| Methode                                          | BESCHREIBUNG                                                                                              |
+| Methode                                          | Beschreibung                                                                                              |
 |:------------------------------------------------|:---------------------------------------------------------------------------------------------------------|
-| [**Getdevicekind**](itablet2-getdevicekind.md) | Gibt den Typ des Hardware Geräts zurück, das das Tablet-Objekt darstellt, z. b. Maus, Stift oder Fingereingabe<br/> |
+| [**GetDeviceKind**](itablet2-getdevicekind.md) | Gibt den Typ des Hardwaregeräts zurück, das das Tablettobjekt darstellt, z. B. Maus, Stift oder Fingereingabe.<br/> |
 
 
 
  
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
 Diese Schnittstelle wurde in Windows Vista eingeführt.
 
 Entwickler sollten diese Schnittstelle nicht verwenden.
 
-Im folgenden Code wird beschrieben, wie die **ITablet2** -Schnittstelle definiert wird.
+Der folgende Code beschreibt, wie die **ITablet2-Schnittstelle** definiert wird.
 
 ``` syntax
 [
@@ -73,7 +73,7 @@ interface ITablet2 : IUnknown
 
 | Anforderung | Wert |
 |-------------------------------------|----------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>                                         |
+| Unterstützte Mindestversion (Client)<br/> | Windows \[Nur Vista-Desktop-Apps\]<br/>                                         |
 | Unterstützte Mindestversion (Server)<br/> | Nicht unterstützt<br/>                                                              |
 | Bibliothek<br/>                  | <dl> <dt>Wisptis.exe</dt> </dl> |
 

@@ -1,7 +1,7 @@
 ---
-description: Gibt die Strich Bezeichner zurück, die diesem ianalysisalternate-Element zugeordnet sind.
+description: Gibt die Strichbezeichner zurück, die diesem IAnalysisAlternate zugeordnet sind.
 ms.assetid: 495d485f-0d16-4085-9213-cc55f3f259f0
-title: 'Ianalysisalternate:: GetStrokeIds-Methode (iacom. h)'
+title: IAnalysisAlternate::GetStrokeIds-Methode (IACom.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,16 +13,16 @@ api_type:
 - COM
 api_location:
 - IACom.dll
-ms.openlocfilehash: 80882a83e9a0fa9bf973990a689e2abf1a52a870
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 2682107a58f126011c4d80a02a119219ccea0976408937e19eb7b511eb82cff9
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "103862731"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118967499"
 ---
-# <a name="ianalysisalternategetstrokeids-method"></a>Ianalysisalternate:: GetStrokeIds-Methode
+# <a name="ianalysisalternategetstrokeids-method"></a>IAnalysisAlternate::GetStrokeIds-Methode
 
-Gibt die Strich Bezeichner zurück, die diesem [**ianalysisalternate**](ianalysisalternate.md)-Element zugeordnet sind.
+Gibt die Strichbezeichner zurück, die diesem [**IAnalysisAlternate**](ianalysisalternate.md)zugeordnet sind.
 
 ## <a name="syntax"></a>Syntax
 
@@ -40,30 +40,30 @@ HRESULT GetStrokeIds(
 
 <dl> <dt>
 
-*pulstrokeidscount* \[ in, out\]
+*pulStrokeIdsCount* \[ in, out\]
 </dt> <dd>
 
-Ein Zeiger auf einen **ulong** -Wert, der auf die Anzahl von Strich Bezeichners festgelegt ist, die diesem [**ianalysisalternate**](ianalysisalternate.md)-Element zugeordnet sind.
+Ein Zeiger auf ein **ULONG,** das auf die Anzahl der Strichbezeichner festgelegt ist, die diesem [**IAnalysisAlternate**](ianalysisalternate.md)zugeordnet sind.
 
 </dd> <dt>
 
-*pplstrokeids* \[ vorgenommen\]
+*pplStrokeIds* \[ out\]
 </dt> <dd>
 
-\[Out, size \_ ist ( \* *pulstrokeidscount* \* sizeof (Long))\]
+\[out, size \_ is( \* *pulStrokeIdsCount* \* sizeof(LONG))\]
 
-Ein Array von **Long** der Länge *pulstrokeidscount* , das auf die Strich Bezeichner festgelegt wird, die mit diesem [**ianalysisalternate**](ianalysisalternate.md)verknüpft sind.
+Ein Array von **LONG** der Länge *pulStrokeIdsCount,* das auf die Strichbezeichner festgelegt ist, die diesem [**IAnalysisAlternate**](ianalysisalternate.md)zugeordnet sind.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Eine Beschreibung der Rückgabewerte finden Sie unter [Klassen und Schnittstellen-Ink-Analyse](classes-and-interfaces---ink-analysis.md).
+Eine Beschreibung der Rückgabewerte finden Sie unter Klassen und Schnittstellen – [Ink-Analyse.](classes-and-interfaces---ink-analysis.md)
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
 > [!Caution]  
-> Um einen Speicherplatz zu vermeiden, verwenden Sie " [CoTaskMemFree](/windows/desktop/api/combaseapi/nf-combaseapi-cotaskmemfree) ", um den Arbeitsspeicher aus \* *pplstrokeids* freizugeben, wenn Sie die Informationen nicht mehr benötigen.
+> Um einen Speicherverlust zu vermeiden, verwenden Sie [CoTaskMemFree,](/windows/desktop/api/combaseapi/nf-combaseapi-cotaskmemfree) um den Arbeitsspeicher von \* *pplStrokeIds* freizugeben, wenn Sie die Informationen nicht mehr benötigen.
 
  
 
@@ -73,21 +73,21 @@ Eine Beschreibung der Rückgabewerte finden Sie unter [Klassen und Schnittstelle
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows XP Tablet PC Edition \[ Desktop-Apps\]<br/>                                                 |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur Desktop-Apps der XP Tablet PC Edition \[\]<br/>                                                 |
 | Unterstützte Mindestversion (Server)<br/> | Nicht unterstützt<br/>                                                                                     |
-| Header<br/>                   | <dl> <dt>Iacom. h (erfordert auch iacom \_ i. c)</dt> </dl> |
+| Header<br/>                   | <dl> <dt>IACom.h (erfordert auch IACom \_ i.c)</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>IACom.dll</dt> </dl>                          |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Ianalysisalternate**](ianalysisalternate.md)
+[**IAnalysisAlternate**](ianalysisalternate.md)
 </dt> <dt>
 
-[Ink-Analyse Referenz](ink-analysis-reference.md)
+[Referenz zur Ink-Analyse](ink-analysis-reference.md)
 </dt> </dl>
 
  

@@ -1,7 +1,7 @@
 ---
-description: Stellt eine Beziehung zwischen zwei icontextnode-Objekten dar.
+description: Stellt eine Beziehung zwischen zwei IContextNode-Objekten dar.
 ms.assetid: ee81d9d7-eba9-4b11-84d0-5a6ca0df7d92
-title: Icontextlink-Schnittstelle (iacom. h)
+title: IContextLink-Schnittstelle (IACom.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,44 +13,44 @@ api_type:
 - COM
 api_location:
 - IACom.dll
-ms.openlocfilehash: df1e0d8717ba29532486277aced19f17adb1d79c
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 7dc9244fed59604a56817f15801de94b64c476762e186cc6f7c36186e8d0b26d
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106357353"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118719914"
 ---
-# <a name="icontextlink-interface"></a>Icontextlink-Schnittstelle
+# <a name="icontextlink-interface"></a>IContextLink-Schnittstelle
 
-Stellt eine Beziehung zwischen zwei [**icontextnode**](icontextnode.md) -Objekten dar.
+Stellt eine Beziehung zwischen zwei [**IContextNode-Objekten**](icontextnode.md) dar.
 
 ## <a name="members"></a>Member
 
-Die **icontextlink** -Schnittstelle erbt von der [**IUnknown**](/windows/desktop/api/unknwn/nn-unknwn-iunknown) -Schnittstelle. **Icontextlink** enthält auch die folgenden Typen von Membern:
+Die **IContextLink-Schnittstelle** erbt von der [**IUnknown-Schnittstelle.**](/windows/desktop/api/unknwn/nn-unknwn-iunknown) **IContextLink** verfügt auch über diese Typen von Membern:
 
 -   [Methoden](#methods)
 
 ### <a name="methods"></a>Methoden
 
-Die **icontextlink** -Schnittstelle verfügt über diese Methoden.
+Die **IContextLink-Schnittstelle** verfügt über diese Methoden.
 
 
 
-| Methode                                                                  | BESCHREIBUNG                                                                                                             |
+| Methode                                                                  | Beschreibung                                                                                                             |
 |:------------------------------------------------------------------------|:------------------------------------------------------------------------------------------------------------------------|
-| [**Getcontextlinkdirection**](icontextlink-getcontextlinkdirection.md) | Ruft den Beziehungstyp ab, den dieser **icontextlink** darstellt.<br/>                                         |
-| [**Getdestinationnode**](icontextlink-getdestinationnode.md)           | Ruft das [**icontextnode**](icontextnode.md) -Objekt ab, das das Ziel für diesen **icontextlink** ist.<br/> |
-| [**Getsourcenode**](icontextlink-getsourcenode.md)                     | Ruft das [**icontextnode**](icontextnode.md) -Objekt ab, das die Quelle für diesen **icontextlink** ist.<br/>      |
+| [**GetContextLinkDirection**](icontextlink-getcontextlinkdirection.md) | Ruft den Typ der Beziehung ab, die **dieser IContextLink** darstellt.<br/>                                         |
+| [**GetDestinationNode**](icontextlink-getdestinationnode.md)           | Ruft das [**IContextNode-Objekt**](icontextnode.md) ab, das das Ziel für dieses **IContextLink-Objekt ist.**<br/> |
+| [**GetSourceNode**](icontextlink-getsourcenode.md)                     | Ruft das [**IContextNode-Objekt**](icontextnode.md) ab, das die Quelle für dieses **IContextLink-Objekt ist.**<br/>      |
 
 
 
  
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Im folgenden finden Sie ein Beispiel für eine Beziehung, die durch ein **icontextlink** -Objekt dargestellt wird:
+Im Folgenden finden Sie ein Beispiel für eine Beziehung, die durch ein **IContextLink-Objekt dargestellt** wird:
 
--   Wenn ein AnalysisHint-Knoten in der Handschrift Analyse verwendet wird, erstellt der Ink-Analyse Vorgang ein **icontextlink** -Objekt vom Typ AnalysisHint zwischen dem Knoten des Analyse Hinweises und dem Knoten, der das Schreiben innerhalb des Bereichs des Hinweises enthält. Der Quellknoten ist der Analyse Hinweis Knoten, und der Zielknoten ist der Knoten, der Schreibvorgänge enthält.
+-   Wenn ein AnalysisHint-Knoten in der Ink-Analyse verwendet wird, erstellt der Ink-Analysevorgang ein **IContextLink-Objekt** vom Typ AnalysisHint zwischen dem Analysehinweisknoten und dem Knoten, der Schreibvorgang innerhalb des Bereichs des Hinweises enthält. Der Quellknoten ist der Analysehinweisknoten, und der Zielknoten ist der Knoten, der Schreibdaten enthält.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -58,27 +58,27 @@ Im folgenden finden Sie ein Beispiel für eine Beziehung, die durch ein **iconte
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows XP Tablet PC Edition \[ Desktop-Apps\]<br/>                                                 |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur Desktop-Apps der XP Tablet PC Edition \[\]<br/>                                                 |
 | Unterstützte Mindestversion (Server)<br/> | Nicht unterstützt<br/>                                                                                     |
-| Header<br/>                   | <dl> <dt>Iacom. h (erfordert auch iacom \_ i. c)</dt> </dl> |
+| Header<br/>                   | <dl> <dt>IACom.h (erfordert auch IACom \_ i.c)</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>IACom.dll</dt> </dl>                          |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Icontextnode:: getcontextlinks**](icontextnode-getcontextlinks.md)
+[**IContextNode::GetContextLinks**](icontextnode-getcontextlinks.md)
 </dt> <dt>
 
-[**Icontextlinks**](icontextlinks.md)
+[**IContextLinks**](icontextlinks.md)
 </dt> <dt>
 
-[**ContextLinkDirection**](contextlinkdirection.md)
+[**Contextlinkdirection**](contextlinkdirection.md)
 </dt> <dt>
 
-[Kontext Knoten Typen](context-node-types.md)
+[Kontextknotentypen](context-node-types.md)
 </dt> </dl>
 
  

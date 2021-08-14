@@ -1,33 +1,33 @@
 ---
-description: Mehrere Sprachmodule können Komponenten mit verschiedenen Sprachen als einzelne Verbund Datei bereitstellen.
+description: Mehrere Sprachmodule können Komponenten mit mehreren verschiedenen Sprachen als einzelne Verbunddatei bereitstellen.
 ms.assetid: b3a0b635-49c7-4f95-b31f-6c8688466dd2
-title: Mehrere Language Merge-Module
+title: Mehrere Sprachzusammenführungsmodule
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 7d414cce484022bf81647110ac032d0db270d383
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 17f32d219e1071cd431117919d3eb3f3361d30213f59a26f9ec2cdf2e81e591b
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "103959388"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118943421"
 ---
-# <a name="multiple-language-merge-modules"></a>Mehrere Language Merge-Module
+# <a name="multiple-language-merge-modules"></a>Mehrere Sprachzusammenführungsmodule
 
-Mehrere Sprachmodule können Komponenten mit verschiedenen Sprachen als einzelne Verbund Datei bereitstellen. Der Entwurf und die Funktionalität mehrerer sprachmergemodule ähneln einzelnen Sprachmodulen. Ein Mergemodul für mehrere Sprachen verfügt über mehr als eine Sprache, die in der [**Vorlagen Zusammenfassungs**](template-summary.md) Eigenschaft aufgeführt ist. Die Datenbank eines Mergemoduls mit mehreren Sprachen enthält alle Setup Informationen für mehrere Sprachen. Der MergeModule.CABinet-CAB innerhalb eines Mergemoduls mit mehreren Sprachen enthält alle Dateien für alle unterstützten Sprachen.
+Mehrere Sprachmodule können Komponenten mit mehreren verschiedenen Sprachen als einzelne Verbunddatei bereitstellen. Der Entwurf und die Funktionalität mehrerer Sprachzusammenführungsmodule ähneln Den einzelnen Sprachmodulen. Ein Mergemodul mit mehreren Sprachen verfügt über mehrere Sprachen, die in der [**Vorlagenzusammenfassungseigenschaft**](template-summary.md) aufgeführt sind. Die Datenbank eines Mergemoduls mit mehreren Sprachen enthält alle Setupinformationen für mehrere Sprachen. Das MergeModule.CABInet-Schränk in einem Modul zum Zusammenführen mehrerer Sprachen enthält alle Dateien für alle unterstützten Sprachen.
 
-Wenn Sie eine MSM-Datei mit mehreren Sprachen auf eine MSI-Datei anwenden, müssen Sie nach dem Merge die endgültige Sprache des Installationspakets angeben. Im Fall eines Moduls mit einer einzelnen Sprache führt die [Dateitabelle](file-table.md) des Merge-Moduls alle Dateien auf, die in der MergeModule.CABinet-CAB-Datei vorhanden sind. Bei einem Mergemodul mit mehreren Sprachen enthält MergeModule.CABinet alle Dateien für jede Sprache, die vom Modul unterstützt wird, aber nur die Teilmenge der Dateien für die endgültige Sprache wird in die Dateitabelle des Moduls geleitet. Das Merge-Tool muss sicherstellen, dass das Modul die Teilmenge der für die angeforderte endgültige Sprache erforderlichen Informationen und Dateien bereitstellt.
+Wenn Sie eine MSM-Datei mit mehreren Sprachen auf eine .msi Datei anwenden, müssen Sie nach der Zusammenführung die endgültige Sprache des Installationspakets angeben. Im Fall eines Mergemoduls in einer einzelnen Sprache listet die [Dateitabelle](file-table.md) des Mergemoduls jede Datei auf, die im MergeModule.CABinet-Schränke vorhanden ist. Bei einem Mergemodul mit mehreren Sprachen enthält MergeModule.CABinet alle Dateien für jede vom Modul unterstützte Sprache, aber nur die Teilmenge der Dateien für die endgültige Sprache wird in die Dateitabelle des Moduls aufgenommen. Das Mergetool muss sicherstellen, dass das Modul die Teilmenge der Informationen und Dateien bereitstellt, die für die angeforderte endgültige Sprache erforderlich sind.
 
-Jedes Mergemodul verfügt über eine Standardsprache, die in der Language-Spalte der [ModuleSignature-Tabelle](modulesignature-table.md)angegeben ist. Die Standardsprache eines Mergemoduls wird auch als erste oder einzige Sprache in der [**Template Summary**](template-summary.md) -Eigenschaft angezeigt. Abhängig von der angeforderten endgültigen Sprache und der Standardsprache des Moduls kann das Mergetool sprach Transformationen auf ein Modul mit mehreren Sprachen anwenden, sodass es in der angeforderten Sprache oder in einer Näherung der angeforderten Sprache geöffnet werden kann. Die sprach Transformationen sind innerhalb des Mergemoduls eingebettet. In den Merge-Tools müssen sprach Transformationen gemäß den folgenden allgemeinen Regeln angewendet werden:
+Jedes Mergemodul verfügt über eine Standardsprache, die in der Spalte Sprache der [Tabelle ModuleSignature](modulesignature-table.md)angegeben ist. Die Standardsprache eines Mergemoduls wird auch als erste oder einzige Sprache in der [**Vorlagenzusammenfassungseigenschaft**](template-summary.md) angezeigt. Abhängig von der angeforderten endgültigen Sprache und der Standardsprache des Moduls kann das Mergetool Sprachtransformationen auf ein Modul mit mehreren Sprachzusammenführungen anwenden, sodass es in der angeforderten Sprache oder einer Näherung der angeforderten Sprache geöffnet werden kann. Die Sprachtransformationen werden in das Mergemodul eingebettet. Mergetools müssen Sprachtransformationen unter Einhaltung der folgenden allgemeinen Regeln anwenden:
 
--   Wenn die Standard-und die endgültige Sprache identisch sind, kann das Modul ohne sprach Transformationen zusammengeführt werden.
--   Wenn die Standardsprache 0 (ein sprach neutrales Modul) ist, kann das Modul ohne sprach Transformationen zusammengeführt werden.
--   Wenn die endgültige Sprache nicht die Standardsprache ist, muss das Merge-Tool eine der in das Modul eingebetteten sprach Transformationen anwenden, um das Modul in die endgültige Sprache oder eine Näherung der endgültigen Sprache zu ändern.
+-   Wenn die Standard- und endgültigen Sprachen identisch sind, kann das Modul ohne Sprachtransformationen zusammengeführt werden.
+-   Wenn die Standardsprache 0 (ein sprachneutrales Modul) ist, kann das Modul ohne Sprachtransformationen zusammengeführt werden.
+-   Wenn die endgültige Sprache nicht die Standardsprache ist, muss das Mergetool eine der im Modul eingebetteten Sprachtransformationen anwenden, um das Modul in die endgültige Sprache oder eine Näherung der endgültigen Sprache zu ändern.
 
-Beispielsweise sind keine sprach Transformationen erforderlich, wenn die endgültige Sprache 1033 (US-Englisch) ist und die Standardsprache des Moduls 1033 (US-Englisch), 0 (Sprachneutral) oder 9 (generisches Englisch) ist.
+Beispielsweise sind keine Sprachtransformationen erforderlich, wenn die endgültige Sprache 1033 (US-Englisch) und die Standardsprache des Moduls 1033 (US-Englisch), 0 (sprachneutral) oder 9 (generisches Englisch) ist.
 
-Sprach Transformationen sind erforderlich, wenn die endgültige Sprache 1033 (US-Englisch) und die Standardsprache 1031 (Deutsch) ist. In diesem Fall kann das Mergetool zuerst das Modul Multiple Language für eine eingebettete sprach Transformation in 1033 (US-Englisch) durchsuchen. Wenn dies fehlschlägt, wird möglicherweise eine Transformation in eine Sprache mit einer entsprechenden primären langid durchsucht, auch wenn die sekundäre langid nicht übereinstimmt. Wenn das Tool z. b. eine Transformation in 1033 (US-Englisch) nicht finden kann, sucht es nach einer Transformation in 9 (generisches Englisch). Wenn dies nicht gelingt, sucht das Merge-Tool nach einer Transformation in 0 (Sprachneutral). Wenn alle diese Suchvorgänge nach einer passenden Transformation fehlschlagen, kann das Modul nicht geöffnet werden.
+Sprachtransformationen sind erforderlich, wenn die endgültige Sprache 1033 (US-Englisch) und die Standardsprache 1031 (Deutsch) ist. In diesem Fall kann das Mergetool zunächst das Modul für mehrere Sprachen nach einer eingebetteten Sprachtransformation in 1033 (US-Englisch) durchsuchen. Wenn dies nicht erfolgreich ist, kann nach einer Transformation in eine Sprache mit einer übereinstimmenden primären LANGID gesucht werden, auch wenn die sekundäre LANGID nicht übereinstimmt. Wenn das Tool z. B. keine Transformation in 1033 (Englisch in den USA) finden kann, sucht es nach einer Transformation in 9 (generisches Englisch). Wenn dies fehlschlägt, sucht das Mergetool nach einer Transformation in 0 (sprachneutral). Wenn all diese Suchvorgänge nach einer geeigneten Transformation fehlschlagen, kann das Modul nicht geöffnet werden.
 
-Weitere Informationen finden Sie unter [Erstellen mehrerer sprachmergemodule](authoring-multiple-language-merge-modules.md).
+Weitere Informationen finden Sie unter [Erstellen mehrerer Sprachzusammenführungsmodule.](authoring-multiple-language-merge-modules.md)
 
  
 

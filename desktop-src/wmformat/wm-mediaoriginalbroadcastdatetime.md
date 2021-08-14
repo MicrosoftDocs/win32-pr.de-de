@@ -1,9 +1,9 @@
 ---
-title: WM/mediaoriginalbroadcastdatetime
-description: Das WM/mediaoriginalbroadcastdatetime-Attribut enthält das Datum und die Uhrzeit, zu denen der Inhalt übertragen wurde.
+title: WM/MediaOriginalBroadcastDateTime
+description: Das WM/MediaOriginalBroadcastDateTime-Attribut enthält das Datum und die Uhrzeit der Übertragung des Inhalts.
 ms.assetid: facfdbc0-a0b9-4ec0-a285-932820b70e1c
 keywords:
-- WM/mediaoriginalbroadcastdatetime-Windows Media-Format
+- WM/MediaOriginalBroadcastDateTime windows Media Format
 topic_type:
 - apiref
 api_name:
@@ -12,39 +12,39 @@ api_type:
 - NA
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: e39c4e0843b22c3ce1845d0395d49f08c9c76d18
-ms.sourcegitcommit: 57758ecb246c84d65e6e0e4bd5570d9176fa39cd
+ms.openlocfilehash: 1aa02359ffc919d4ae582543c8d2fc2c3c517df84d1133e1863ff96c4a96c76e
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "104389149"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118431664"
 ---
-# <a name="wmmediaoriginalbroadcastdatetime"></a>WM/mediaoriginalbroadcastdatetime
+# <a name="wmmediaoriginalbroadcastdatetime"></a>WM/MediaOriginalBroadcastDateTime
 
-Das **WM/mediaoriginalbroadcastdatetime-** Attribut enthält das Datum und die Uhrzeit, zu denen der Inhalt übertragen wurde.
+Das **WM/MediaOriginalBroadcastDateTime-Attribut** enthält das Datum und die Uhrzeit der Übertragung des Inhalts.
 
 ## <a name="global-constant"></a>Globale Konstante
 
-g \_ wszwmmediaoriginalbroadcastdatetime
+g \_ wszWMMediaOriginalBroadcastDateTime
 
 ## <a name="data-type"></a>Datentyp
 
-**WMT \_ - \_ Typzeichenfolge**
+**\_ \_ WMT-TYPZEICHENFOLGE**
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Dieses Attribut wird für Broadcast-TV oder Radio verwendet.
+Dieses Attribut wird für Fernsehsendungen oder Radiosendungen verwendet.
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
 [**Attributliste**](attribute-list.md)
 </dt> </dl>
 
- 
+ 
 
- 
+ 
 
 
 

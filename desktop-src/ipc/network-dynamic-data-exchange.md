@@ -1,23 +1,23 @@
 ---
-description: Die Netzwerk-DDE-Funktionen (Dynamic Data Exchange) ermöglichen es einem Prozess, Konversationen mit Prozessen einzurichten, die auf unterschiedlichen Computern in einem Netzwerk ausgeführt werden.
+description: Die Netzwerkfunktionen für dynamischen Datenaustausch (Network Dynamic Data Exchange, DDE) ermöglichen es einem Prozess, Konversationen mit Prozessen zu erstellen, die auf verschiedenen Computern in einem Netzwerk ausgeführt werden.
 ms.assetid: e8bbf6b0-1e84-4047-b2ae-d83153bf0b5a
-title: Netzwerk dynamischer Datenaustausch
+title: Netzwerk dynamische Daten Exchange
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: f1c9704030126fa53d3057e2f06399e73006c45f
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: af1aab259b42c0c1865cc6a4bdd9f35de411b481de4f34d6217daab660ec746e
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104484235"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118756062"
 ---
-# <a name="network-dynamic-data-exchange"></a>Netzwerk dynamischer Datenaustausch
+# <a name="network-dynamic-data-exchange"></a>Netzwerk dynamische Daten Exchange
 
-\[Network DDE wird nicht mehr unterstützt. Nddeapi.dll ist unter Windows Vista vorhanden, aber alle Funktionsaufrufe geben "ndde" \_ nicht \_ implementiert zurück.\]
+\[Netzwerk-DDE wird nicht mehr unterstützt. Nddeapi.dll ist auf Windows Vista vorhanden, aber alle Funktionsaufrufe geben NDDE \_ NOT \_ IMPLEMENTED zurück.\]
 
-Die Netzwerk-DDE-Funktionen (Dynamic Data Exchange) ermöglichen es einem Prozess, Konversationen mit Prozessen einzurichten, die auf unterschiedlichen Computern in einem Netzwerk ausgeführt werden.
+Die Netzwerkfunktionen für dynamischen Datenaustausch (Network Dynamic Data Exchange, DDE) ermöglichen es einem Prozess, Konversationen mit Prozessen zu erstellen, die auf verschiedenen Computern in einem Netzwerk ausgeführt werden.
 
--   [Informationen zu Network DDE](about-network-dde.md)
+-   [Informationen zu Netzwerk-DDE](about-network-dde.md)
 -   [Netzwerk-DDE-Referenz](network-dde-reference.md)
 
  

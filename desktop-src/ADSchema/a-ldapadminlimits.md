@@ -1,11 +1,11 @@
 ---
-title: LDAP-admin-Limits-Attribut
-description: Enthält einen Satz von Attribut-Wert-Paaren, die die Verwaltungsgrenzen des LDAP-Servers definieren.
+title: LDAP-Admin-Limits-Attribut
+description: Enthält eine Reihe von Attribut-Wert-Paaren, die verwaltungsbezogene Grenzwerte für LDAP-Server definieren.
 ms.assetid: 335d666e-3f96-4df8-9555-e913efb8da2d
 ms.tgt_platform: multiple
 keywords:
-- AD-Schema des LDAP-admin-Limits-Attributs
-- LDAPAdminLimits-Attribut, AD-Schema
+- AD-Schema des LDAP-Admin-Limits-Attributs
+- AD-Schema des lDAPAdminLimits-Attributs
 topic_type:
 - apiref
 api_name:
@@ -14,28 +14,28 @@ api_type:
 - Schema
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 99d3dc16bdc16b04fe0dbfe295fbece83d57ebda
-ms.sourcegitcommit: b77ace27b0432e7cd3863191b11926be032fbe2f
+ms.openlocfilehash: f66509cc1ea616f6e4caabba877648b90fa3ec8fed5298d3eb58a62fbf2ed1ef
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "103859724"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118961289"
 ---
-# <a name="ldap-admin-limits-attribute"></a>LDAP-admin-Limits-Attribut
+# <a name="ldap-admin-limits-attribute"></a>LDAP-Admin-Limits-Attribut
 
-Enthält einen Satz von Attribut-Wert-Paaren, die die Verwaltungsgrenzen des LDAP-Servers definieren.
+Enthält eine Reihe von Attribut-Wert-Paaren, die verwaltungsbezogene Grenzwerte für LDAP-Server definieren.
 
 
 
 | Eingabe | Wert |
 |-------------------|---------------------------------------------|
-| CN                | LDAP-admin-Limits                           |
-| LDAP-Display-Name | LDAPAdminLimits                             |
+| CN                | LDAP-Admin-Limits                           |
+| Ldap-Anzeigename | lDAPAdminLimits                             |
 | Size              | \-                                          |
-| Berechtigung aktualisieren  | \-                                          |
-| Aktualisierungshäufigkeit  | \-                                          |
+| Aktualisieren von Berechtigungen  | \-                                          |
+| Updatehäufigkeit  | \-                                          |
 | Attribute-Id      | 1.2.840.113556.1.4.843                      |
-| System-ID-GUID    | 7359a352-90F 7-11d1-AEbc-0000        |
+| System-ID-GUID    | 7359a352-90f7-11d1-aebc-0000f80367c1        |
 | Syntax            | [**String(Unicode)**](s-string-unicode.md) |
 
 
@@ -43,7 +43,7 @@ Enthält einen Satz von Attribut-Wert-Paaren, die die Verwaltungsgrenzen des LDA
 ## <a name="implementations"></a>Implementierungen
 
 -   [**Windows 2000 Server**](#windows-2000-server)
--   [**Windows Server 2003**](#windows-server-2003)
+-   [**Windows Server 2003**](#windows-server-2003)
 -   [**Adam**](#adam)
 -   [**Windows Server 2003 R2**](#windows-server-2003-r2)
 -   [**Windows Server 2008**](#windows-server-2008)
@@ -59,19 +59,19 @@ Enthält einen Satz von Attribut-Wert-Paaren, die die Verwaltungsgrenzen des LDA
 | Link-ID                | \-                                               |
 | MAPI-Id                | \-                                               |
 | System-Only            | False                                            |
-| Ist-einwertig       | False                                            |
+| Ist einwertig       | False                                            |
 | Ist indiziert             | False                                            |
 | Im globalen Katalog      | False                                            |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                     |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                     |
 | Range-Lower            | \-                                               |
 | Range-Upper            | \-                                               |
 | Search-Flags           | 0x00000000                                       |
 | System-Flags           | 0x00000010                                       |
-| In verwendete Klassen        | [**Abfrage-Richtlinie**](c-querypolicy.md)<br/> |
+| In verwendete Klassen        | [**Abfragerichtlinie**](c-querypolicy.md)<br/> |
 
 
 
-## <a name="windows-server-2003"></a>Windows Server 2003
+## <a name="windows-server-2003"></a>Windows Server 2003
 
 
 
@@ -80,15 +80,15 @@ Enthält einen Satz von Attribut-Wert-Paaren, die die Verwaltungsgrenzen des LDA
 | Link-ID                | \-                                               |
 | MAPI-Id                | \-                                               |
 | System-Only            | False                                            |
-| Ist-einwertig       | False                                            |
+| Ist einwertig       | False                                            |
 | Ist indiziert             | False                                            |
 | Im globalen Katalog      | False                                            |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                     |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                     |
 | Range-Lower            | \-                                               |
 | Range-Upper            | \-                                               |
 | Search-Flags           | 0x00000000                                       |
 | System-Flags           | 0x00000010                                       |
-| In verwendete Klassen        | [**Abfrage-Richtlinie**](c-querypolicy.md)<br/> |
+| In verwendete Klassen        | [**Abfragerichtlinie**](c-querypolicy.md)<br/> |
 
 
 
@@ -101,15 +101,15 @@ Enthält einen Satz von Attribut-Wert-Paaren, die die Verwaltungsgrenzen des LDA
 | Link-ID                | \-                                               |
 | MAPI-Id                | \-                                               |
 | System-Only            | False                                            |
-| Ist-einwertig       | False                                            |
+| Ist einwertig       | False                                            |
 | Ist indiziert             | False                                            |
 | Im globalen Katalog      | False                                            |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                     |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                     |
 | Range-Lower            | \-                                               |
 | Range-Upper            | \-                                               |
 | Search-Flags           | 0x00000000                                       |
 | System-Flags           | 0x00000010                                       |
-| In verwendete Klassen        | [**Abfrage-Richtlinie**](c-querypolicy.md)<br/> |
+| In verwendete Klassen        | [**Abfragerichtlinie**](c-querypolicy.md)<br/> |
 
 
 
@@ -122,15 +122,15 @@ Enthält einen Satz von Attribut-Wert-Paaren, die die Verwaltungsgrenzen des LDA
 | Link-ID                | \-                                               |
 | MAPI-Id                | \-                                               |
 | System-Only            | False                                            |
-| Ist-einwertig       | False                                            |
+| Ist einwertig       | False                                            |
 | Ist indiziert             | False                                            |
 | Im globalen Katalog      | False                                            |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                     |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                     |
 | Range-Lower            | \-                                               |
 | Range-Upper            | \-                                               |
 | Search-Flags           | 0x00000000                                       |
 | System-Flags           | 0x00000010                                       |
-| In verwendete Klassen        | [**Abfrage-Richtlinie**](c-querypolicy.md)<br/> |
+| In verwendete Klassen        | [**Abfragerichtlinie**](c-querypolicy.md)<br/> |
 
 
 
@@ -143,15 +143,15 @@ Enthält einen Satz von Attribut-Wert-Paaren, die die Verwaltungsgrenzen des LDA
 | Link-ID                | \-                                               |
 | MAPI-Id                | \-                                               |
 | System-Only            | False                                            |
-| Ist-einwertig       | False                                            |
+| Ist einwertig       | False                                            |
 | Ist indiziert             | False                                            |
 | Im globalen Katalog      | False                                            |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                     |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                     |
 | Range-Lower            | \-                                               |
 | Range-Upper            | \-                                               |
 | Search-Flags           | 0x00000000                                       |
 | System-Flags           | 0x00000010                                       |
-| In verwendete Klassen        | [**Abfrage-Richtlinie**](c-querypolicy.md)<br/> |
+| In verwendete Klassen        | [**Abfragerichtlinie**](c-querypolicy.md)<br/> |
 
 
 
@@ -164,15 +164,15 @@ Enthält einen Satz von Attribut-Wert-Paaren, die die Verwaltungsgrenzen des LDA
 | Link-ID                | \-                                               |
 | MAPI-Id                | \-                                               |
 | System-Only            | False                                            |
-| Ist-einwertig       | False                                            |
+| Ist einwertig       | False                                            |
 | Ist indiziert             | False                                            |
 | Im globalen Katalog      | False                                            |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                     |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                     |
 | Range-Lower            | \-                                               |
 | Range-Upper            | \-                                               |
 | Search-Flags           | 0x00000000                                       |
 | System-Flags           | 0x00000010                                       |
-| In verwendete Klassen        | [**Abfrage-Richtlinie**](c-querypolicy.md)<br/> |
+| In verwendete Klassen        | [**Abfragerichtlinie**](c-querypolicy.md)<br/> |
 
 
 
@@ -185,15 +185,15 @@ Enthält einen Satz von Attribut-Wert-Paaren, die die Verwaltungsgrenzen des LDA
 | Link-ID                | \-                                               |
 | MAPI-Id                | \-                                               |
 | System-Only            | False                                            |
-| Ist-einwertig       | False                                            |
+| Ist einwertig       | False                                            |
 | Ist indiziert             | False                                            |
 | Im globalen Katalog      | False                                            |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                     |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                     |
 | Range-Lower            | \-                                               |
 | Range-Upper            | \-                                               |
 | Search-Flags           | 0x00000000                                       |
 | System-Flags           | 0x00000010                                       |
-| In verwendete Klassen        | [**Abfrage-Richtlinie**](c-querypolicy.md)<br/> |
+| In verwendete Klassen        | [**Abfragerichtlinie**](c-querypolicy.md)<br/> |
 
 
 

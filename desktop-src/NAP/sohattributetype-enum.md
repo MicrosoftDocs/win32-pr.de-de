@@ -1,9 +1,9 @@
 ---
-title: Sohattributetype-Enumeration (napprotocol. h)
-description: Gibt den Typ des Attributs an, das im TLV-Objekt (Attribute Type-Length-Value) gespeichert ist.
+title: SoHAttributeType-Enumeration (NapProtocol.h)
+description: Gibt den Typ des Attributs an, das im TLV-Objekt (Type Length Value) des Attributs gespeichert ist.
 ms.assetid: ba725bf1-1d0a-4489-b912-3e761557d772
 keywords:
-- Sohattributetype-Enumeration NAP
+- SoHAttributeType-Enumerations-NAP
 topic_type:
 - apiref
 api_name:
@@ -14,21 +14,21 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: db164bbedf2267aaa5941a21a56ccfd53e1e1646
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 1c3fabf3a8911274b912f3762dd07d0c64fc4111d22e372d1962a92221f1d068
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104340988"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118939057"
 ---
-# <a name="sohattributetype-enumeration"></a>Sohattributetype-Enumeration
+# <a name="sohattributetype-enumeration"></a>SoHAttributeType-Enumeration
 
 > [!Note]  
-> Die Netzwerk Zugriffsschutz-Plattform ist ab Windows 10 nicht verfügbar.
+> Die Netzwerkzugriffsschutz-Plattform ist ab dem Windows 10
 
  
 
-Die **sohattributetype** -Enumeration gibt den Typ des Attributs an, das im TLV-Objekt (Attribut Type-Length-Value) gespeichert ist.
+Die **SoHAttributeType-Enumeration** gibt den Typ des Attributs an, das im TLV-Objekt (Type-Length-Value) des Attributs gespeichert ist.
 
 ## <a name="syntax"></a>Syntax
 
@@ -59,124 +59,124 @@ typedef enum tagSoHAttributeType {
 
 <dl> <dt>
 
-<span id="sohAttributeTypeSystemHealthId"></span><span id="sohattributetypesystemhealthid"></span><span id="SOHATTRIBUTETYPESYSTEMHEALTHID"></span>**sohattributetypesystemhealthid**
+<span id="sohAttributeTypeSystemHealthId"></span><span id="sohattributetypesystemhealthid"></span><span id="SOHATTRIBUTETYPESYSTEMHEALTHID"></span>**sohAttributeTypeSystemHealthId**
 </dt> <dd>
 
-Gibt den Typ der Systemintegritäts-ID an.
+Gibt den Attributtyp der Systemzustands-ID an.
 
 </dd> <dt>
 
 <span id="sohAttributeTypeIpv4FixupServers"></span><span id="sohattributetypeipv4fixupservers"></span><span id="SOHATTRIBUTETYPEIPV4FIXUPSERVERS"></span>**sohAttributeTypeIpv4FixupServers**
 </dt> <dd>
 
-Gibt den Typ des IPv4-fixupserverattributs an.
+Gibt den IPv4-Fix up-Serverattributtyp an.
 
 </dd> <dt>
 
-<span id="sohAttributeTypeComplianceResultCodes"></span><span id="sohattributetypecomplianceresultcodes"></span><span id="SOHATTRIBUTETYPECOMPLIANCERESULTCODES"></span>**sohattributetypecomplianceresultcodes**
+<span id="sohAttributeTypeComplianceResultCodes"></span><span id="sohattributetypecomplianceresultcodes"></span><span id="SOHATTRIBUTETYPECOMPLIANCERESULTCODES"></span>**sohAttributeTypeComplianceResultCodes**
 </dt> <dd>
 
-Gibt den Attributtyp des Konformitäts Ergebnis Codes an.
+Gibt den Attributtyp des Konformitätsergebniscodes an.
 
 </dd> <dt>
 
-<span id="sohAttributeTypeTimeOfLastUpdate"></span><span id="sohattributetypetimeoflastupdate"></span><span id="SOHATTRIBUTETYPETIMEOFLASTUPDATE"></span>**sohattributetypetimeoflatstupdate**
+<span id="sohAttributeTypeTimeOfLastUpdate"></span><span id="sohattributetypetimeoflastupdate"></span><span id="SOHATTRIBUTETYPETIMEOFLASTUPDATE"></span>**sohAttributeTypeTimeOfLastUpdate**
 </dt> <dd>
 
-Gibt die Uhrzeit des letzten Update Attribut Typs an.
+Gibt den Zeitpunkt des letzten Aktualisierungsattributtyps an.
 
 </dd> <dt>
 
-<span id="sohAttributeTypeClientId"></span><span id="sohattributetypeclientid"></span><span id="SOHATTRIBUTETYPECLIENTID"></span>**sohattributetypeclientid**
+<span id="sohAttributeTypeClientId"></span><span id="sohattributetypeclientid"></span><span id="SOHATTRIBUTETYPECLIENTID"></span>**sohAttributeTypeClientId**
 </dt> <dd>
 
-Gibt den Typ der Client-ID-Attribute an.
+Gibt den Client-ID-Attributtyp an.
 
 </dd> <dt>
 
-<span id="sohAttributeTypeVendorSpecific"></span><span id="sohattributetypevendorspecific"></span><span id="SOHATTRIBUTETYPEVENDORSPECIFIC"></span>**sohattributetypevendorspecific**
+<span id="sohAttributeTypeVendorSpecific"></span><span id="sohattributetypevendorspecific"></span><span id="SOHATTRIBUTETYPEVENDORSPECIFIC"></span>**sohAttributeTypeVendorSpecific**
 </dt> <dd>
 
 Gibt den herstellerspezifischen Attributtyp an.
 
 </dd> <dt>
 
-<span id="sohAttributeTypeHealthClass"></span><span id="sohattributetypehealthclass"></span><span id="SOHATTRIBUTETYPEHEALTHCLASS"></span>**sohattributetypehealthclass**
+<span id="sohAttributeTypeHealthClass"></span><span id="sohattributetypehealthclass"></span><span id="SOHATTRIBUTETYPEHEALTHCLASS"></span>**sohAttributeTypeHealthClass**
 </dt> <dd>
 
-Gibt den Typ der Integritäts Klassenattribute an.
+Gibt den Attributtyp der Integritätsklasse an.
 
 </dd> <dt>
 
-<span id="sohAttributeTypeSoftwareVersion"></span><span id="sohattributetypesoftwareversion"></span><span id="SOHATTRIBUTETYPESOFTWAREVERSION"></span>**sohattributetypesoftwareversion**
+<span id="sohAttributeTypeSoftwareVersion"></span><span id="sohattributetypesoftwareversion"></span><span id="SOHATTRIBUTETYPESOFTWAREVERSION"></span>**sohAttributeTypeSoftwareVersion**
 </dt> <dd>
 
-Gibt den Typ der Software Versions Attribute an.
+Gibt den Attributtyp der Softwareversion an.
 
 </dd> <dt>
 
-<span id="sohAttributeTypeProductName"></span><span id="sohattributetypeproductname"></span><span id="SOHATTRIBUTETYPEPRODUCTNAME"></span>**sohattributetypeproductname**
+<span id="sohAttributeTypeProductName"></span><span id="sohattributetypeproductname"></span><span id="SOHATTRIBUTETYPEPRODUCTNAME"></span>**sohAttributeTypeProductName**
 </dt> <dd>
 
-Gibt den Attributtyp des Produkt namens an.
+Gibt den Attributtyp des Produktnamens an.
 
 </dd> <dt>
 
-<span id="sohAttributeTypeHealthClassStatus"></span><span id="sohattributetypehealthclassstatus"></span><span id="SOHATTRIBUTETYPEHEALTHCLASSSTATUS"></span>**sohattributetypehealthclassstatus**
+<span id="sohAttributeTypeHealthClassStatus"></span><span id="sohattributetypehealthclassstatus"></span><span id="SOHATTRIBUTETYPEHEALTHCLASSSTATUS"></span>**sohAttributeTypeHealthClassStatus**
 </dt> <dd>
 
-Gibt den Attributtyp der Integritäts Klassen Status an.
+Gibt den Statusattributtyp der Integritätsklasse an.
 
 </dd> <dt>
 
-<span id="sohAttributeTypeSoHGenerationTime"></span><span id="sohattributetypesohgenerationtime"></span><span id="SOHATTRIBUTETYPESOHGENERATIONTIME"></span>**sohattributetypesohgenerationtime**
+<span id="sohAttributeTypeSoHGenerationTime"></span><span id="sohattributetypesohgenerationtime"></span><span id="SOHATTRIBUTETYPESOHGENERATIONTIME"></span>**sohAttributeTypeSoHGenerationTime**
 </dt> <dd>
 
-Gibt die Generierungs Zeit des Statement of Health-Attribut Typs an.
+Gibt die Generierungszeit des Attributtyps Statement of Health an.
 
 </dd> <dt>
 
-<span id="sohAttributeTypeErrorCodes"></span><span id="sohattributetypeerrorcodes"></span><span id="SOHATTRIBUTETYPEERRORCODES"></span>**sohattributetypeerrorcodes**
+<span id="sohAttributeTypeErrorCodes"></span><span id="sohattributetypeerrorcodes"></span><span id="SOHATTRIBUTETYPEERRORCODES"></span>**sohAttributeTypeErrorCodes**
 </dt> <dd>
 
-Gibt den Typ des Fehlercode Attributs an.
+Gibt den Fehlercodeattributtyp an.
 
 </dd> <dt>
 
-<span id="sohAttributeTypeFailureCategory"></span><span id="sohattributetypefailurecategory"></span><span id="SOHATTRIBUTETYPEFAILURECATEGORY"></span>**sohattributetypefailurecategory**
+<span id="sohAttributeTypeFailureCategory"></span><span id="sohattributetypefailurecategory"></span><span id="SOHATTRIBUTETYPEFAILURECATEGORY"></span>**sohAttributeTypeFailureCategory**
 </dt> <dd>
 
-Gibt den Attributtyp der Fehler Kategorie an.
+Gibt den Attributtyp der Fehlerkategorie an.
 
 </dd> <dt>
 
 <span id="sohAttributeTypeIpv6FixupServers"></span><span id="sohattributetypeipv6fixupservers"></span><span id="SOHATTRIBUTETYPEIPV6FIXUPSERVERS"></span>**sohAttributeTypeIpv6FixupServers**
 </dt> <dd>
 
-Gibt den Typ des IPv6-fixupserverattributs an.
+Gibt den IPv6-Fix up-Serverattributtyp an.
 
 </dd> <dt>
 
-<span id="sohAttributeTypeExtendedIsolationState"></span><span id="sohattributetypeextendedisolationstate"></span><span id="SOHATTRIBUTETYPEEXTENDEDISOLATIONSTATE"></span>**sohattributetypeextendedisolationstate**
+<span id="sohAttributeTypeExtendedIsolationState"></span><span id="sohattributetypeextendedisolationstate"></span><span id="SOHATTRIBUTETYPEEXTENDEDISOLATIONSTATE"></span>**sohAttributeTypeExtendedIsolationState**
 </dt> <dd>
 
-Gibt den Typ des erweiterten Isolations Zustands Attributs an.
+Gibt den Attributtyp des erweiterten Isolationszustands an.
 
 </dd> </dl>
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Die [**sohattributevalue**](sohattributevalue-union.md) -Struktur definiert die Attributwerte, die den einzelnen Attributtypen entsprechen.
+Die [**SoHAttributeValue-Struktur**](sohattributevalue-union.md) definiert die Attributwerte, die den einzelnen Attributtypen entsprechen.
 
 Diese Attributtypen werden vom NAP-System verwendet:
 
--   sohattributetypesystemhealthid
+-   sohAttributeTypeSystemHealthId
 -   sohAttributeTypeIpv4FixupServers
 -   sohAttributeTypeIpv6FixupServers
--   sohattributetypecomplianceresultcodes
--   sohattributetypefailurecategory
+-   sohAttributeTypeComplianceResultCodes
+-   sohAttributeTypeFailureCategory
 
-Die übrigen Typen sind nur für die Verwendung durch SHAs und SHVs vorgesehen.
+Die restlichen Typen dienen nur dazu, die Verwendung durch SHAs und SHVs zu leiten.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -184,30 +184,30 @@ Die übrigen Typen sind nur für die Verwendung durch SHAs und SHVs vorgesehen.
 
 | Anforderung | Wert |
 |-------------------------------------|--------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>                                             |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2008 \[ -Desktop-Apps\]<br/>                                       |
-| Header<br/>                   | <dl> <dt>Napprotocol. h</dt> </dl>   |
-| IDL<br/>                      | <dl> <dt>Napprotocol. idl</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur \[ Vista-Desktop-Apps\]<br/>                                             |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2008-Desktop-Apps\]<br/>                                       |
+| Header<br/>                   | <dl> <dt>NapProtocol.h</dt> </dl>   |
+| Idl<br/>                      | <dl> <dt>NapProtocol.idl</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Sohattributevalue**](sohattributevalue-union.md)
+[**SoHAttributeValue**](sohattributevalue-union.md)
 </dt> <dt>
 
-[**Sohattribute**](/windows/win32/api/naptypes/ns-naptypes-sohattribute)
+[**SoHAttribute**](/windows/win32/api/naptypes/ns-naptypes-sohattribute)
 </dt> <dt>
 
-[**SoH**](/windows/win32/api/naptypes/ns-naptypes-soh)
+[**Soh**](/windows/win32/api/naptypes/ns-naptypes-soh)
 </dt> <dt>
 
-[**Inapsohconstructor**](inapsohconstructor.md)
+[**INapSoHConstructor**](inapsohconstructor.md)
 </dt> <dt>
 
-[**Inapsohprocessor**](inapsohprocessor.md)
+[**INapSoHProcessor**](inapsohprocessor.md)
 </dt> </dl>
 
  

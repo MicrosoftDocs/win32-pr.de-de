@@ -1,6 +1,6 @@
 ---
-title: 'RWTexture1D:: GetDimensions-Funktion'
-description: 'Gibt die Dimensionen der Ressource zurück. | RWTexture1D:: GetDimensions-Funktion'
+title: RWTexture1D::GetDimensions-Funktion
+description: Gibt die Dimensionen der Ressource zurück. | RWTexture1D::GetDimensions-Funktion
 ms.assetid: 1bbd53ed-9396-4e8e-b2f3-3bd85f6e1a90
 keywords:
 - GetDimensions-Funktion HLSL
@@ -13,14 +13,14 @@ api_type:
 ms.topic: reference
 ms.date: 05/31/2018
 api_location: ''
-ms.openlocfilehash: b65f0113ecf2c91786e45c35f5e8e832744bc952
-ms.sourcegitcommit: 92e74c99f8f4d097676959d0c317f533c2400a80
+ms.openlocfilehash: eb779d071f471abe92b18ef456a2a016536a5231ccf327f8ebd175be8e5ff224
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/09/2021
-ms.locfileid: "104981080"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118509292"
 ---
-# <a name="rwtexture1dgetdimensions-function"></a>RWTexture1D:: GetDimensions-Funktion
+# <a name="rwtexture1dgetdimensions-function"></a>RWTexture1D::GetDimensions-Funktion
 
 Gibt die Dimensionen der Ressource zurück.
 
@@ -36,12 +36,12 @@ void GetDimensions(
 
 <dl> <dt>
 
-*Breite* \[ vorgenommen\]
+*Breite* \[ out\]
 </dt> <dd>
 
-Typ: **[ **uint**](/windows/desktop/WinProg/windows-data-types)**
+Typ: **[ **UINT**](/windows/desktop/WinProg/windows-data-types)**
 
-Die Ressourcen Breite in Texels.
+Die Ressourcenbreite in Texel.
 
 </dd> </dl>
 
@@ -49,7 +49,7 @@ Die Ressourcen Breite in Texels.
 
 Nichts
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
 Dies ist eine Liste der überladenen Versionen dieser Methode.
 
@@ -62,11 +62,11 @@ void GetDimensions(out float Width);
 
 
 
-Diese Funktion wird für die folgenden Typen von Shadern unterstützt:
+Diese Funktion wird für die folgenden Shadertypen unterstützt:
 
 
 
-| Scheitelpunkt | Hülle | Domain | Geometrie | Pixel | Compute |
+| Scheitelpunkt | Rumpf | Domain | Geometrie | Pixel | Compute |
 |--------|------|--------|----------|-------|---------|
 |        |      |        |          | x     | x       |
 
@@ -81,7 +81,7 @@ Diese Funktion wird für die folgenden Typen von Shadern unterstützt:
 [RWTexture1D](sm5-object-rwtexture1d.md)
 </dt> <dt>
 
-[Shader-Modell 5](d3d11-graphics-reference-sm5.md)
+[Shadermodell 5](d3d11-graphics-reference-sm5.md)
 </dt> </dl>
 
  

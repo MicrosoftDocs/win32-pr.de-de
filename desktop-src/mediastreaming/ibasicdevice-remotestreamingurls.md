@@ -1,11 +1,11 @@
 ---
-title: Ibasicdevice remotestreamingurls-Methode
+title: IBasicDevice RemoteStreamingUrls-Methode
 description: Gibt einen Vektor von Remotestreaming-URLs zurück.
 ms.assetid: 19B4475F-A7E4-4DC4-9C88-68D91D023AF4
 keywords:
-- Remotestreamingurls-Methode Medien Streaming-API
-- Remotestreamingurls-Methode Medien Streaming-API, ibasicdevice-Schnittstelle
-- Ibasicdevice-Schnittstelle Medien Streaming-API, remotestreamingurls-Methode
+- RemoteStreamingUrls-Methode Media Streaming-API
+- 'RemoteStreamingUrls-Methode: Media Streaming-API, IBasicDevice-Schnittstelle'
+- IBasicDevice-Schnittstelle Medienstreaming-API, RemoteStreamingUrls-Methode
 topic_type:
 - apiref
 api_name:
@@ -15,14 +15,14 @@ api_type:
 ms.topic: reference
 ms.date: 05/31/2018
 api_location: ''
-ms.openlocfilehash: fdc4bd363096e7b808a51cfbddb764daabe03a55
-ms.sourcegitcommit: 57758ecb246c84d65e6e0e4bd5570d9176fa39cd
+ms.openlocfilehash: 90d98d908cb582c0c2885a9b24a0a525f1e719c82bdffe20e74597ca5fc262a2
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "104389120"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118972329"
 ---
-# <a name="ibasicdeviceremotestreamingurls-method"></a>Ibasicdevice:: remotestreamingurls-Methode
+# <a name="ibasicdeviceremotestreamingurls-method"></a>IBasicDevice::RemoteStreamingUrls-Methode
 
 Gibt einen Vektor von Remotestreaming-URLs zurück.
 
@@ -41,16 +41,16 @@ HRESULT RemoteStreamingUrls(
 
 <dl> <dt>
 
-*Wert* \[ vorgenommen\]
+*value* \[ out\]
 </dt> <dd>
 
-Empfängt eine Aufzähl Bare Auflistung von Zeigern auf Remotestreaming-URLs.
+Empfängt eine aufzählbare Auflistung von Zeigern auf Remotestreaming-URLs.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Die-Methode gibt ein **HRESULT** zurück. Mögliches Werte (aber nicht die Einzigen) sind die in der folgenden Tabelle.
+Die Methode gibt ein **HRESULT** zurück. Mögliches Werte (aber nicht die Einzigen) sind die in der folgenden Tabelle.
 
 
 
@@ -62,11 +62,11 @@ Die-Methode gibt ein **HRESULT** zurück. Mögliches Werte (aber nicht die Einzi
 
  
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Ibasicdevice**](ibasicdevice.md)
+[**IBasicDevice**](ibasicdevice.md)
 </dt> </dl>
 
  

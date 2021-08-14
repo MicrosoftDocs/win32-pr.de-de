@@ -1,50 +1,50 @@
 ---
-description: 'Die Xenroll.dll-Bibliothek enthält die folgenden Methoden und Eigenschaften, die Sie zum Verwalten von Zertifikat speichern verwenden können. Functionsdescriptioncastoreflagsgibt Flags an, die den Zugriff auf den Zertifizierungsstellen Speicher steuern, oder gibt diese zurück. Castorenamewstrauch gibt den Namen des ca-Stores an oder gibt diesen zurück. Castoretyetwstrauch gibt den Typ des durch die Eigenschaft "castorename" identifizierten Stores an oder gibt diesen zurück. Mystoreflagsgibt ein Flag an, das den Pfad des persönlichen Stores bestimmt, oder gibt es zurück. Mystorenamewstrauch gibt den Namen des persönlichen Stores an oder gibt diesen zurück. Mystoretypeer wstrauch gibt den Typ des persönlichen Stores an oder gibt diesen zurück. Requeststoreflagsgibt ein Flag an, das den Pfad des Anforderungs Speichers bestimmt, oder gibt es zurück. Requeststorenamewstrauch gibt den Namen des Anforderungs Speichers an oder gibt diesen zurück. Requeststoretypeer wstrauch gibt den Typ des Anforderungs Speichers an oder gibt diesen zurück. Rootstoreflagsgibt ein Flag an, das den Pfad des Stamm Speicher bestimmt, oder gibt es zurück. Rootstorenamewstrauch gibt den Namen des Stamm Speicher an oder gibt diesen zurück. Rootstoretypeer wstrauch gibt den Typ des Stamm Speicher an oder gibt diesen zurück. Das Handle des ca-Stores wird von "" von "". Das Handle des persönlichen Stores wird von "" durch "" festgelegt. Sethstorerequestgibt das Handle des Anforderungs Speichers an. "Tthstoreroot" gibt das Handle des Stamm Speicher an. '
+description: 'Die Xenroll.dll-Bibliothek enthält die folgenden Methoden und Eigenschaften, die Sie zum Verwalten von Zertifikatspeichern verwenden können. FunctionsDescriptionCAStoreFlags Gibt Flags an, die den Zugriff auf den Zertifizierungsstellenspeicher steuern, oder gibt diese zurück. CAStoreNameWStrS gibt den Namen des Zertifizierungsstellenspeichers an oder gibt den Namen zurück. CAStoreTypeWStrS gibt den Typ des Speichers an, der durch die CAStoreName-Eigenschaft identifiziert wird, oder gibt diesen zurück. MyStoreFlagsSpecifis or returns a flag that determines the path of the personal store. MyStoreNameWStrS gibt den Namen des persönlichen Speichers an oder gibt den Namen zurück. MyStoreTypeWStrS gibt den Typ des persönlichen Speichers an oder gibt diesen zurück. RequestStoreFlags Gibt ein Flag an, das den Pfad des Anforderungsspeichers bestimmt, oder gibt dieses zurück. RequestStoreNameWStrS gibt den Namen des Anforderungsspeichers an oder gibt den Namen zurück. RequestStoreTypeWStrS gibt den Typ des Anforderungsspeichers an oder gibt diesen zurück. RootStoreFlagsSpecifis or returns a flag that determines the path of the root store. RootStoreNameWStrS gibt den Namen des Stammspeichers an oder gibt den Namen zurück. RootStoreTypeWStrS gibt den Typ des Stammspeichers an oder gibt diesen zurück. SetHStoreCA Gibt das Handle des ZS-Speichers an. SetHStoreMySpecs gibt das Handle des persönlichen Speichers an. SetHStoreRequestSpecifis das Handle des Anforderungsspeichers. SetHStoreROOT Gibt das Handle des Stammspeichers an. '
 ms.assetid: 15e4368b-4199-415a-9c2c-2c1351b717e6
-title: Zertifikat Speicherfunktionen
+title: Certificate Store Functions
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: d00ab4b7245f999e1131f41172b3c77af8b9c2aa
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 53a90a6fd2146517d4d70f653da42961274301a3058f8dbad9e72b8b90228bc1
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106350360"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118902174"
 ---
-# <a name="certificate-store-functions"></a>Zertifikat Speicherfunktionen
+# <a name="certificate-store-functions"></a>Certificate Store Functions
 
-Die Xenroll.dll-Bibliothek enthält die folgenden Methoden und Eigenschaften, die Sie zum Verwalten von Zertifikat speichern verwenden können.
+Die Xenroll.dll bibliothek enthält die folgenden Methoden und Eigenschaften, die Sie zum Verwalten von Zertifikatspeichern verwenden können.
 
 | Functions                                                          | BESCHREIBUNG                                                                                                                                                                                          |
 |--------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| [**Castoreflags**](/windows/desktop/api/xenroll/nf-xenroll-ienroll-get_castoreflags)                 | Gibt Flags an, die den Zugriff auf den [*Zertifizierungs*](/windows/desktop/SecGloss/c-gly) stellen Speicher steuern, oder gibt diese zurück.<br/> |
-| [**Castorenamewstr**](/windows/desktop/api/xenroll/nf-xenroll-ienroll-get_castorenamewstr)           | Gibt den Namen des ca-Stores an oder gibt diesen zurück.<br/>                                                                                                                                            |
-| [**Castoretypeer WSTR**](/windows/desktop/api/xenroll/nf-xenroll-ienroll-get_castoretypewstr)           | Gibt den Typ des durch die Eigenschaft " **castorename** " identifizierten Stores an oder gibt diesen zurück.<br/>                                                                                                    |
-| [**MyStoreFlags**](/windows/desktop/api/xenroll/nf-xenroll-ienroll-get_mystoreflags)                 | Gibt ein Flag an, das den Pfad des persönlichen Stores bestimmt, oder gibt es zurück.<br/>                                                                                                               |
-| [**Mystorenamewstr**](/windows/desktop/api/xenroll/nf-xenroll-ienroll-get_mystorenamewstr)           | Gibt den Namen des persönlichen Stores an oder gibt diesen zurück.<br/>                                                                                                                                      |
-| [**Mystoretypeer WSTR**](/windows/desktop/api/xenroll/nf-xenroll-ienroll-get_mystoretypewstr)           | Gibt den Typ des persönlichen Stores an oder gibt diesen zurück.<br/>                                                                                                                                      |
-| [**RequestStoreFlags**](/windows/desktop/api/xenroll/nf-xenroll-ienroll-get_requeststoreflags)       | Gibt ein Flag an, das den Pfad des Anforderungs Speicher bestimmt, oder gibt es zurück.<br/>                                                                                                                |
-| [**Requeststorenamewstr**](/windows/desktop/api/xenroll/nf-xenroll-ienroll-get_requeststorenamewstr) | Gibt den Namen des Anforderungs Speicher an oder gibt diesen zurück.<br/>                                                                                                                                       |
-| [**Requeststoretypeer WSTR**](/windows/desktop/api/xenroll/nf-xenroll-ienroll-get_requeststoretypewstr) | Gibt den Typ des Anforderungs Speicher an oder gibt diesen zurück.<br/>                                                                                                                                       |
-| [**Rootstoreflags**](/windows/desktop/api/xenroll/nf-xenroll-ienroll-get_rootstoreflags)             | Gibt ein Flag an, das den Pfad des Stamm Speicher bestimmt, oder gibt es zurück.<br/>                                                                                                                   |
-| [**Rootstorenamewstr**](/windows/desktop/api/xenroll/nf-xenroll-ienroll-get_rootstorenamewstr)       | Gibt den Namen des Stamm Speicher an oder gibt diesen zurück.<br/>                                                                                                                                          |
-| [**Rootstoretypeer WSTR**](/windows/desktop/api/xenroll/nf-xenroll-ienroll-get_rootstoretypewstr)       | Gibt den Typ des Stamm Speicher an oder gibt diesen zurück.<br/>                                                                                                                                          |
-| [**"Ziel"**](/windows/desktop/api/xenroll/nf-xenroll-ienroll2-sethstoreca)                   | Gibt das Handle des Zertifizierungsstellen Speicher an.<br/>                                                                                                                                                     |
-| [**"Ab-storemy"**](/windows/desktop/api/xenroll/nf-xenroll-ienroll2-sethstoremy)                   | Gibt das Handle für den persönlichen Speicher an.<br/>                                                                                                                                               |
-| [**"Tthstorerequest"**](/windows/desktop/api/xenroll/nf-xenroll-ienroll2-sethstorerequest)         | Gibt das Handle des Anforderungs Speicher an.<br/>                                                                                                                                                |
-| [**"Ziel"**](/windows/desktop/api/xenroll/nf-xenroll-ienroll2-sethstoreroot)               | Gibt das Handle des Stamm Speicher an.<br/>                                                                                                                                                   |
+| [**CAStoreFlags**](/windows/desktop/api/xenroll/nf-xenroll-ienroll-get_castoreflags)                 | Gibt Flags an oder gibt flags zurück, die den Zugriff auf [*den*](/windows/desktop/SecGloss/c-gly) Speicher der Zertifizierungsstelle steuern.<br/> |
+| [**CAStoreNameWStr**](/windows/desktop/api/xenroll/nf-xenroll-ienroll-get_castorenamewstr)           | Gibt den Namen des Zertifizierungsstellenspeichers an oder gibt den Namen zurück.<br/>                                                                                                                                            |
+| [**CAStoreTypeWStr**](/windows/desktop/api/xenroll/nf-xenroll-ienroll-get_castoretypewstr)           | Gibt den Typ des Speichers an, der durch die **CAStoreName-Eigenschaft identifiziert** wird, oder gibt diesen zurück.<br/>                                                                                                    |
+| [**MyStoreFlags**](/windows/desktop/api/xenroll/nf-xenroll-ienroll-get_mystoreflags)                 | Gibt ein Flag an oder gibt es zurück, das den Pfad des persönlichen Speichers bestimmt.<br/>                                                                                                               |
+| [**MyStoreNameWStr**](/windows/desktop/api/xenroll/nf-xenroll-ienroll-get_mystorenamewstr)           | Gibt den Namen des persönlichen Speichers an oder gibt den Namen zurück.<br/>                                                                                                                                      |
+| [**MyStoreTypeWStr**](/windows/desktop/api/xenroll/nf-xenroll-ienroll-get_mystoretypewstr)           | Gibt den Typ des persönlichen Speichers an oder gibt diesen zurück.<br/>                                                                                                                                      |
+| [**RequestStoreFlags**](/windows/desktop/api/xenroll/nf-xenroll-ienroll-get_requeststoreflags)       | Gibt ein Flag an, das den Pfad des Anforderungsspeichers bestimmt, oder gibt dieses zurück.<br/>                                                                                                                |
+| [**RequestStoreNameWStr**](/windows/desktop/api/xenroll/nf-xenroll-ienroll-get_requeststorenamewstr) | Gibt den Namen des Anforderungsspeichers an oder gibt den Namen zurück.<br/>                                                                                                                                       |
+| [**RequestStoreTypeWStr**](/windows/desktop/api/xenroll/nf-xenroll-ienroll-get_requeststoretypewstr) | Gibt den Typ des Anforderungsspeichers an oder gibt diesen zurück.<br/>                                                                                                                                       |
+| [**RootStoreFlags**](/windows/desktop/api/xenroll/nf-xenroll-ienroll-get_rootstoreflags)             | Gibt ein Flag an, das den Pfad des Stammspeichers bestimmt, oder gibt dieses zurück.<br/>                                                                                                                   |
+| [**RootStoreNameWStr**](/windows/desktop/api/xenroll/nf-xenroll-ienroll-get_rootstorenamewstr)       | Gibt den Namen des Stammspeichers an oder gibt den Namen zurück.<br/>                                                                                                                                          |
+| [**RootStoreTypeWStr**](/windows/desktop/api/xenroll/nf-xenroll-ienroll-get_rootstoretypewstr)       | Gibt den Typ des Stammspeichers an oder gibt diesen zurück.<br/>                                                                                                                                          |
+| [**SetHStoreCA**](/windows/desktop/api/xenroll/nf-xenroll-ienroll2-sethstoreca)                   | Gibt das Handle des ZS-Speichers an.<br/>                                                                                                                                                     |
+| [**SetHStoreMy**](/windows/desktop/api/xenroll/nf-xenroll-ienroll2-sethstoremy)                   | Gibt das Handle des persönlichen Speichers an.<br/>                                                                                                                                               |
+| [**SetHStoreRequest**](/windows/desktop/api/xenroll/nf-xenroll-ienroll2-sethstorerequest)         | Gibt das Handle des Anforderungsspeichers an.<br/>                                                                                                                                                |
+| [**SetHStoreROOT**](/windows/desktop/api/xenroll/nf-xenroll-ienroll2-sethstoreroot)               | Gibt das Handle des Stammspeichers an.<br/>                                                                                                                                                   |
 
 
 
  
 
-CertEnroll.dll exportiert keine Funktionen, mit denen Sie Speicher Eigenschaftswerte angeben oder Abrufen oder Zertifikate in bestimmte Speicher kopieren können.
+CertEnroll.dll exportiert keine Funktionen, mit denen Sie Speichereigenschaftswerte angeben oder abrufen oder Zertifikate in bestimmte Speicher kopieren können.
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
 <dl> <dt>
 
-[Zuordnung von Xenroll.dll zu CertEnroll.dll](mapping-xenroll-dll-to-certenroll-dll.md)
+[Zuordnen Xenroll.dll zu CertEnroll.dll](mapping-xenroll-dll-to-certenroll-dll.md)
 </dt> </dl>
 
  

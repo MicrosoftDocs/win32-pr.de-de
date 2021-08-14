@@ -1,6 +1,6 @@
 ---
-description: 'Weitere Informationen finden Sie unter: esentdbtimedeooldexception-Konstruktor'
-title: Esentdbtimedeooldexception-Konstruktor
+description: 'Weitere Informationen finden Sie unter: EsentDbTimeTooOldException-Konstruktor'
+title: EsentDbTimeTooOldException-Konstruktor
 TOCTitle: 'EsentDbTimeTooOldException constructor '
 ms:assetid: M:Microsoft.Isam.Esent.Interop.EsentDbTimeTooOldException.#ctor
 ms:mtpsurl: https://msdn.microsoft.com/library/microsoft.isam.esent.interop.esentdbtimetoooldexception.esentdbtimetoooldexception(v=EXCHG.10)
@@ -24,19 +24,19 @@ api_type:
 api_location:
 - Microsoft.Isam.Esent.Interop.dll
 ROBOTS: INDEX,FOLLOW
-ms.openlocfilehash: 5dcc9d4e769379bd9b534120db8a1b9e29fade25
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 88d6e597d597a63456a1827862bb1d905d8b537b44277a01853629e8d4e1e2d5
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104528439"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118779864"
 ---
-# <a name="esentdbtimetoooldexception-constructor"></a>Esentdbtimedeooldexception-Konstruktor
+# <a name="esentdbtimetoooldexception-constructor"></a>EsentDbTimeTooOldException-Konstruktor
 
-Initialisiert eine neue Instanz der esentdbtimedeooldexception-Klasse.
+Initialisiert eine neue Instanz der EsentDbTimeTooOldException-Klasse.
 
-**Namespace:**  [Microsoft. ISAM. ESENT. Interop](./microsoft.isam.esent.interop-namespace.md)  
-**Assembly:**  Microsoft. ISAM. ESENT. Interop (in Microsoft.Isam.Esent.Interop.dll)
+**Namespace:**  [Microsoft.Isam.Esent.Interop](./microsoft.isam.esent.interop-namespace.md)  
+**Assembly:**  Microsoft.Isam.Esent.Interop (in Microsoft.Isam.Esent.Interop.dll)
 
 ## <a name="syntax"></a>Syntax
 
@@ -52,12 +52,12 @@ Dim instance As New EsentDbTimeTooOldException()
 public EsentDbTimeTooOldException()
 ```
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
-#### <a name="reference"></a>Referenz
+#### <a name="reference"></a>Verweis
 
-[Esentdbtimedeooldexception-Klasse](./esentdbtimetoooldexception-class.md)
+[EsentDbTimeTooOldException-Klasse](./esentdbtimetoooldexception-class.md)
 
-[Esentdbtimedeooldexception-Elemente](./esentdbtimetoooldexception-members.md)
+[EsentDbTimeTooOldException-Member](./esentdbtimetoooldexception-members.md)
 
-[Microsoft. ISAM. ESENT. Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)
+[Microsoft.Isam.Esent.Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)

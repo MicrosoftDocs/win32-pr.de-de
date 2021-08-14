@@ -1,9 +1,9 @@
 ---
-title: Freeuiinfo-Funktion (ndattributils. h)
-description: Hebt die Zuordnung des intern zugeordneten Arbeitsspeichers zu einer uiinfo-Struktur auf.
+title: FreeUiInfo-Funktion (Ndattributils.h)
+description: Gibt die interne Speicherbelegung für eine UiInfo-Struktur auf.
 ms.assetid: 41d923fd-2fb3-406e-a5cf-f3ba475685f6
 keywords:
-- Freeuiinfo-Funktion NDF
+- FreeUiInfo-Funktion NDF
 topic_type:
 - apiref
 api_name:
@@ -14,16 +14,16 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 6a96d859faa80e3e2269981d206c96e780d05c37
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 3e2008ddabdb412c117a3cfac5f2eb5ebf1e722f5f3729fb7c8b2ee0c394c454
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104103286"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118939047"
 ---
-# <a name="freeuiinfo-function"></a>Freeuiinfo-Funktion
+# <a name="freeuiinfo-function"></a>FreeUiInfo-Funktion
 
-Die **freeuiinfo** -Funktion hebt die Zuordnung des intern zugeordneten Arbeitsspeichers zu einer [**uiinfo**](/windows/win32/api/ndattrib/ns-ndattrib-uiinfo) -Struktur auf. Diese Funktion ruft [**CoTaskMemFree**](/windows/desktop/api/combaseapi/nf-combaseapi-cotaskmemfree) auf, um den Speicherplatz freizugeben.
+Die **FreeUiInfo-Funktion** gibt den internen Speicher frei, der einer [**UiInfo-Struktur zugeordnet**](/windows/win32/api/ndattrib/ns-ndattrib-uiinfo) ist. Diese Funktion ruft [**CoTaskMemFree auf,**](/windows/desktop/api/combaseapi/nf-combaseapi-cotaskmemfree) um die Speicherverteilung frei zu machen.
 
 ## <a name="syntax"></a>Syntax
 
@@ -40,12 +40,12 @@ VOID FreeUiInfo(
 
 <dl> <dt>
 
-*pinfo* \[ in\]
+*pInfo* \[ In\]
 </dt> <dd>
 
-Typ: **[**uiinfo**](/windows/win32/api/ndattrib/ns-ndattrib-uiinfo) \** _
+Typ: **[ **UiInfo**](/windows/win32/api/ndattrib/ns-ndattrib-uiinfo)\***
 
-Die-Struktur. Der zugewiesene Speicher, auf den von dieser-Struktur verwiesen wird, wird freigegeben.
+Die -Struktur. Der zugeordnete Arbeitsspeicher, auf den diese Struktur zeigt, wird frei.
 
 </dd> </dl>
 
@@ -59,17 +59,17 @@ Diese Funktion gibt keinen Wert zurück.
 
 | Anforderung | Wert |
 |-------------------------------------|--------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows 8 \[ -Desktop-Apps\]<br/>                                                 |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2012 \[ -Desktop-Apps\]<br/>                                       |
-| Header<br/>                   | <dl> <dt>Ndattributils. h</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | \[Windows 8 Nur Desktop-Apps\]<br/>                                                 |
+| Unterstützte Mindestversion (Server)<br/> | \[Windows Server 2012 Nur Desktop-Apps\]<br/>                                       |
+| Header<br/>                   | <dl> <dt>Ndattributils.h</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[_ *Uiinfo**](/windows/win32/api/ndattrib/ns-ndattrib-uiinfo)
+[**UiInfo**](/windows/win32/api/ndattrib/ns-ndattrib-uiinfo)
 </dt> <dt>
 
 [**CoTaskMemFree**](/windows/desktop/api/combaseapi/nf-combaseapi-cotaskmemfree)

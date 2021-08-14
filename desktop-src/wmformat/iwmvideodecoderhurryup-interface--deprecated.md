@@ -1,9 +1,9 @@
 ---
-title: Iwmvideodecoderhurryup-Schnittstelle (wmcodecdsp. h)
-description: Aktuelle Dokumentation zu Windows Media Codecs und digitalen Signalprozessoren finden Sie unter Windows Media Audio-und Videocodec-und DSP-APIs. | Iwmvideodecoderhurryup-Schnittstelle (wmcodecdsp. h)
+title: IWMVideoDecoderHurryup-Schnittstelle (Wmcodecdsp.h)
+description: Die aktuelle Dokumentation zu Windows Mediencodecs und digitalen Signalprozessoren finden Sie unter Windows Medienaudio- und Videocodec und DSP-APIs. | IWMVideoDecoderHurryup-Schnittstelle (Wmcodecdsp.h)
 ms.assetid: 15206194-f49c-444c-858c-20c0a82ead37
 keywords:
-- Iwmvideodecoderhurryup-Schnittstelle Windows Media-Format
+- IWMVideoDecoderHurryup-Schnittstelle windows Medienformat
 topic_type:
 - apiref
 api_name:
@@ -14,16 +14,16 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: acf5d5e64813834f336a563d405d01d69f962da8
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 2a745bd0ddbfb44ceedf5e059740e015f0cc572c07e730752e84f1de22b028d7
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106367147"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118700796"
 ---
-# <a name="iwmvideodecoderhurryup-interface"></a>Iwmvideodecoderhurryup-Schnittstelle
+# <a name="iwmvideodecoderhurryup-interface"></a>IWMVideoDecoderHurryup-Schnittstelle
 
-Aktuelle Dokumentation zu Windows Media Codecs und digitalen Signalprozessoren finden Sie unter [Windows Media Audio-und Videocodec-und DSP-APIs.](/previous-versions//dd464626(v=vs.85))
+Die aktuelle Dokumentation zu Windows Mediencodecs und digitalen Signalprozessoren finden Sie unter [Windows Medienaudio- und Videocodec und DSP-APIs.](/previous-versions//dd464626(v=vs.85))
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -31,7 +31,7 @@ Aktuelle Dokumentation zu Windows Media Codecs und digitalen Signalprozessoren f
 
 | Anforderung | Wert |
 |-------------------|-----------------------------------------------------------------------------------------|
-| Header<br/> | <dl> <dt>Wmcodecdsp. h</dt> </dl> |
+| Header<br/> | <dl> <dt>Wmcodecdsp.h</dt> </dl> |
 
 
 

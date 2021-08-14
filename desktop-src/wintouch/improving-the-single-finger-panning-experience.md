@@ -1,54 +1,54 @@
 ---
-title: Verbessern der Single-Finger schwenken
-description: Wenn Sie eine Anwendung erstellen, die sich auf Windows-Finger Eingaben bezieht, bietet Sie automatisch grundlegende Unterstützung für das Schwenken Allerdings können Sie die WM- \_ Gesten Nachricht verwenden, um erweiterte Unterstützung für Single-Finger-Panning bereitzustellen.
+title: Verbessern des Single-Finger-Schwenkens
+description: Wenn Sie eine Anwendung erstellen, die auf Windows Touch Windows, bietet sie automatisch grundlegende Unterstützung für Schwenken. Sie können jedoch die WM GESTURE-Nachricht verwenden, um verbesserte Unterstützung für das Schwenken mit nur einem \_ Finger zu bieten.
 ms.assetid: eb01a6df-9969-44d1-a657-4f83fb0b67cb
 keywords:
-- Windows Touch, Einfinger schwenken
-- Windows-Fingereingabe, Schwenken
-- Windows-Fingereingabe, Scrollleisten
-- Windows-Fingereingabe, Flicks
-- Windows-Toucheingabe, Gesten schwenken Nachrichten
-- Windows-Toucheingabe, Begrenzungs Feedback
+- Windows Touch, Schwenken mit einem Finger
+- Windows Touch,Schwenken
+- Windows Touch,Scrollleisten
+- Windows Touch,Flicks
+- Windows Touch-, Gesten-Schwenknachrichten
+- Windows Touch,Begrenzungsfeedback
 - Schwenken mit einem Finger
-- Schwenken, mit einem Finger
-- Schwenken, Grenzen von Feedback
-- Bild Lauf leisten, Einfinger schwenken
-- Flicks, Einfinger schwenken
-- Bild Lauf leisten, deaktivieren
-- Flicks, deaktivieren
-- Gesten, Gesten Schwenk Meldungen
-- Schwenken, Gesten schwenken Nachrichten
-- Begrenzungs Feedback, Einfinger schwenken
+- Schwenken mit nur einem Finger
+- Schwenken, Begrenzungsfeedback
+- Scrollleisten, Schwenken mit einem Finger
+- Flicks, Schwenken mit einem Finger
+- Scrollleisten, deaktivieren
+- Flicks,deaktivieren
+- Gesten,Gesten-Schwenknachrichten
+- Schwenken, Gesten schwenken
+- Begrenzungsfeedback, Schwenken mit einem Finger
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: b9081903600918485f1e3241a02c01b5438c1aae
-ms.sourcegitcommit: 592c9bbd22ba69802dc353bcb5eb30699f9e9403
+ms.openlocfilehash: cf740d673e8bd2d2711238902d3de6c89d21a01fe330524b910db050011872f0
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "103728017"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118435443"
 ---
-# <a name="improving-the-single-finger-panning-experience"></a>Verbessern der Single-Finger schwenken
+# <a name="improving-the-single-finger-panning-experience"></a>Verbessern des Single-Finger-Schwenkens
 
-Wenn Sie eine Anwendung erstellen, die sich auf Windows-Finger Eingaben bezieht, bietet Sie automatisch grundlegende Unterstützung für das Schwenken Allerdings können Sie die [**WM- \_ Gesten**](wm-gesture.md) Nachricht verwenden, um erweiterte Unterstützung für Single-Finger-Panning bereitzustellen.
+Wenn Sie eine Anwendung erstellen, die auf Windows Touch Windows, bietet sie automatisch grundlegende Unterstützung für Schwenken. Sie können jedoch die [**WM \_ GESTURE-Nachricht**](wm-gesture.md) verwenden, um verbesserte Unterstützung für das Schwenken mit nur einem Finger zu bieten.
 
 ## <a name="overview"></a>Übersicht
 
-Gehen Sie wie in den nachfolgenden Abschnitten in diesem Thema beschrieben vor, um die Einzel Fingerbewegung zu verbessern:
+Um das Schwenken mit nur einem Finger zu verbessern, führen Sie die folgenden Schritte aus, wie in den nachfolgenden Abschnitten dieses Themas erläutert:
 
--   Erstellen Sie eine Anwendung mit Bild Lauf leisten und deaktivierten schnelle Stift Bewegungen.
--   Unterstützung für Gesten Schwenk Nachrichten hinzufügen.
--   Aktivieren von Bounce.
+-   Erstellen Sie eine Anwendung mit Bildlaufleisten und deaktivierten Blättern.
+-   Unterstützung für Gesten-Schwenknachrichten hinzugefügt.
+-   Aktivieren Sie Bounce.
 
-## <a name="create-an-application-with-scroll-bars-and-with-flicks-disabled"></a>Erstellen einer Anwendung mit Bild Lauf leisten und deaktivierten Flicks
+## <a name="create-an-application-with-scroll-bars-and-with-flicks-disabled"></a>Erstellen einer Anwendung mit Scrollleisten und deaktivierten Flicks
 
-Bevor Sie beginnen, müssen Sie eine Anwendung mit Bild Lauf leisten erstellen. Dieser Prozess wird im Abschnitt [Legacy Unterstützung für das Schwenken mit Scrollleisten](legacy-support-for-panning-with-scrollbars.md) erläutert. Wenn Sie mit dem Beispiel Inhalt beginnen möchten, wechseln Sie zu diesem Abschnitt, und erstellen Sie eine Anwendung mit Bild Lauf leisten, und deaktivieren Sie dann die Flicks. Wenn Sie bereits über eine Anwendung mit funktionierenden Bild Lauf leisten verfügen, deaktivieren Sie schnelle Stift Bewegungen wie in diesem Abschnitt beschrieben.
+Bevor Sie beginnen, müssen Sie eine Anwendung mit Scrollleisten erstellen. Dieser Vorgang wird im Abschnitt [Legacyunterstützung für Schwenken](legacy-support-for-panning-with-scrollbars.md) mit Scrollleisten erläutert. Wenn Sie mit dem Beispielinhalt beginnen möchten, wechseln Sie zu diesem Abschnitt, erstellen Sie eine Anwendung mit Bildlaufleisten, und deaktivieren Sie dann die Blättern. Wenn Sie bereits über eine Anwendung mit funktionierenden Scrollleisten verfügen, deaktivieren Sie die Blättern wie in diesem Abschnitt beschrieben.
 
-## <a name="add-custom-panning-support-for-gesture-pan-messages"></a>Benutzerdefinierte Unterstützung für Gesten schwenken hinzufügen
+## <a name="add-custom-panning-support-for-gesture-pan-messages"></a>Hinzufügen von benutzerdefinierter Schwenkunterstützung für Gesten-Schwenknachrichten
 
-Um Gesten Schwenk Nachrichten zu unterstützen, müssen Sie Sie in der **WndProc** -Methode behandeln. Die Gesten Meldungen werden verwendet, um horizontale und vertikale Delta für Schwenken-Nachrichten zu bestimmen. Die Delta Steuer Objekte werden verwendet, um das ScrollBar-Objekt zu aktualisieren, das die Benutzeroberfläche aktualisiert.
+Um Gesten-Schwenknachrichten zu unterstützen, müssen Sie sie in der **WndProc-Methode** behandeln. Die Gestenmeldungen werden verwendet, um horizontale und vertikale Deltas für Schwenknachrichten zu bestimmen. Die Deltas werden verwendet, um das Scrollleistenobjekt zu aktualisieren, das die Benutzeroberfläche aktualisiert.
 
-Aktualisieren Sie zunächst die Windows-Versions Einstellungen in der Datei "targetver. h", um Windows-Fingereingabe zu aktivieren. Der folgende Code zeigt die verschiedenen Einstellungen der Windows-Version, die diese in "targetver. h" ersetzen sollen.
+Aktualisieren Sie zunächst die Windows version-Einstellungen in der Datei targetver.h, um touch Windows aktivieren. Der folgende Code zeigt die verschiedenen Windows, die diese in targetver.h ersetzen sollen.
 
 
 ```C++
@@ -63,7 +63,7 @@ Aktualisieren Sie zunächst die Windows-Versions Einstellungen in der Datei "tar
 
 
 
-Fügen Sie dem Projekt anschließend die Datei "uxtheme. h" hinzu, und fügen Sie die Bibliothek "uxtheme. lib" den zusätzlichen Abhängigkeiten Ihres Projekts hinzu.
+Fügen Sie als Nächstes ihrem Projekt die Datei UXTheme.h hinzu, und fügen Sie die Bibliothek uxtheme.lib den zusätzlichen Abhängigkeiten Ihres Projekts hinzu.
 
 
 ```C++
@@ -72,7 +72,7 @@ Fügen Sie dem Projekt anschließend die Datei "uxtheme. h" hinzu, und fügen Si
 
 
 
-Fügen Sie als nächstes die folgenden Variablen am Anfang der **WndProc** -Funktion hinzu. Diese werden in Berechnungen zum Schwenken verwendet.
+Fügen Sie als Nächstes am Anfang der **WndProc-Funktion die folgenden Variablen** hinzu. Diese werden in Berechnungen zum Schwenken verwendet.
 
 
 ```C++
@@ -87,9 +87,9 @@ GESTUREINFO gi;
 
 
 
-Fügen Sie als nächstes den Handler für [**die \_ WM**](wm-gesture.md) -Gesten Nachricht hinzu, damit die Bild Lauf leisten mit Delta-Gesten aktualisiert werden. Dadurch erhalten Sie eine wesentlich präzisere Steuerung des schwenken.
+Fügen Sie als Nächstes den Handler für die [**WM \_ GESTURE-Nachricht**](wm-gesture.md) hinzu, damit die Scrollleisten basierend auf Schwenkgesten mit Deltas aktualisiert werden. Dadurch erhalten Sie eine wesentlich feiner abgrenzende Steuerung des Schwenkens.
 
-Der folgende Code Ruft die [**GESTUREINFO**](/windows/win32/api/winuser/ns-winuser-gestureinfo) -Struktur aus dem *LPARAM* ab, speichert die letzte y-Koordinate aus der-Struktur und bestimmt die Änderung an der Position, an der das Bild Lauf leisten Objekt aktualisiert wird. Der folgende Code sollte in der **WndProc** Switch-Anweisung abgelegt werden.
+Der folgende Code ruft die [**GESTUREINFO-Struktur**](/windows/win32/api/winuser/ns-winuser-gestureinfo) aus *lParam* ab, speichert die letzte y-Koordinate aus der -Struktur und bestimmt die Änderung an der Position, um das Scrollleistenobjekt zu aktualisieren. Der folgende Code sollte in Ihrer **WndProc switch-Anweisung** platziert werden.
 
 
 ```C++
@@ -160,11 +160,11 @@ Der folgende Code Ruft die [**GESTUREINFO**](/windows/win32/api/winuser/ns-winus
 
 
 
-Wenn Sie nun die Schwenkbewegung im Fenster ausführen, wird der Text mit Trägheit angezeigt. An diesem Punkt können Sie den Text so ändern, dass er mehr Zeilen hat, damit Sie das Schwenken von großen Textabschnitten durchsuchen können.
+Wenn Sie nun die Schwenkbewegung in Ihrem Fenster ausführen, wird der Text mit Trägheit gescrollt. An diesem Punkt können Sie den Text so ändern, dass er mehr Zeilen enthält, damit Sie das Schwenken großer Textabschnitte untersuchen können.
 
-## <a name="boundary-feedback-in-wndproc"></a>Begrenzungs Feedback in WndProc
+## <a name="boundary-feedback-in-wndproc"></a>Boundary Feedback in WndProc
 
-Das Feedback von Grenzen ist eine Art visuelles Feedback, das Benutzern bereitgestellt wird, wenn Sie das Ende eines Platz alisier baren Bereichs erreichen. Sie wird von der Anwendung ausgelöst, wenn eine Grenze erreicht wird. In der vorherigen Beispiel Implementierung der [**WM- \_ Gesten**](wm-gesture.md) Nachricht wird die Endbedingung `(si.nPos == si.yPos)` aus dem Fall der **WM- \_ Geste** verwendet, um zu testen, ob Sie das Ende eines Bare-Bereichs erreicht haben. Die folgenden Variablen werden verwendet, um Werte und Test Fehler zu verfolgen.
+Grenzfeedback ist eine Art visuelles Feedback, das Benutzern gegeben wird, wenn sie das Ende eines schwenkbaren Bereichs erreichen. Sie wird von der Anwendung ausgelöst, wenn eine Grenze erreicht wird. In der vorherigen Beispielimplementierung der [**WM \_ GESTURE-Nachricht**](wm-gesture.md) wird die Endbedingung aus dem WM GESTURE-Fall verwendet, um zu testen, ob Sie das Ende eines schwenkbaren `(si.nPos == si.yPos)` -Bereich erreicht haben. **\_** Die folgenden Variablen werden zum Nachverfolgen von Werten und Testen von Fehlern verwendet.
 
 
 ```C++
@@ -179,7 +179,7 @@ static long yOverpan   = 0;
 
 
 
-Die Groß-/Kleinschreibung wird aktualisiert, um das Feedback zu Grenzen zu initiieren Der folgende Code veranschaulicht die Groß-/Kleinschreibung der **gid \_** aus dem [**WM- \_ Gesten**](wm-gesture.md) Nachrichten Handler.
+Der Schwenkgestenfall wird aktualisiert, um Feedback zu Begrenzungen auszulösen. Der folgende Code veranschaulicht die **GID \_ PAN-Case** aus dem [**WM \_ GESTURE-Meldungshandler.**](wm-gesture.md)
 
 
 ```C++
@@ -218,24 +218,24 @@ Die Groß-/Kleinschreibung wird aktualisiert, um das Feedback zu Grenzen zu init
 
 
 
-Das Fenster der Anwendung sollte nun über ein Begrenzungs Feedback verfügen, wenn sich ein Benutzer hinter dem unteren Rand des Bild Lauf leisten Bereichs befindet.
+Nun sollte das Fenster Ihrer Anwendung Übergrenzungsfeedback erhalten, wenn ein Benutzer am unteren Rand des Scrollleistenbereichs schwenkt.
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
 <dl> <dt>
 
-[Windows-Touchgesten](guide-multi-touch-gestures.md)
+[Windows Touchgesten](guide-multi-touch-gestures.md)
 </dt> <dt>
 
-[**Beginpanningfeedback**](/windows/win32/api/uxtheme/nf-uxtheme-beginpanningfeedback)
+[**BeginPanningFeedback**](/windows/win32/api/uxtheme/nf-uxtheme-beginpanningfeedback)
 </dt> <dt>
 
-[**Endpanningfeedback**](/windows/win32/api/uxtheme/nf-uxtheme-endpanningfeedback)
+[**EndPanningFeedback**](/windows/win32/api/uxtheme/nf-uxtheme-endpanningfeedback)
 </dt> <dt>
 
-[**Updatepanningfeedback**](/windows/win32/api/uxtheme/nf-uxtheme-updatepanningfeedback)
+[**UpdatePanningFeedback**](/windows/win32/api/uxtheme/nf-uxtheme-updatepanningfeedback)
 </dt> </dl>
 
- 
+ 
 
- 
+ 

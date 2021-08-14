@@ -3,7 +3,7 @@ title: Registrieren
 description: Registrieren
 ms.assetid: 45149f8c-8b76-4247-98d7-d141d7268da3
 keywords:
-- HLSL registrieren
+- Registrieren von HLSL
 topic_type:
 - apiref
 api_name:
@@ -13,79 +13,79 @@ api_type:
 ms.topic: reference
 ms.date: 05/31/2018
 api_location: ''
-ms.openlocfilehash: 2b378cd97bc9779951d62873d393009c98d32823
-ms.sourcegitcommit: 592c9bbd22ba69802dc353bcb5eb30699f9e9403
+ms.openlocfilehash: 0102716529471b3e867e17b0e9b635274cdfc28ec603f239d66c76ffb0fdaa19
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "104390347"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119983210"
 ---
 # <a name="register"></a>Registrieren
 
-Optionales Schlüsselwort zum Zuweisen einer shadervariablen zu einem bestimmten Register, das folgende Syntax verwendet:
+Optionales Schlüsselwort zum Zuweisen einer Shadervariable zu einem bestimmten Register, das die folgende Syntax verwendet:
 
 
 
-| : Register ( *\[ Shader \_ - \] Profil*, *Typ \# \[ unter \] Komponente* ) |
+| : register ( *\[ shader \_ profile \]*, *Type \# \[ subcomponent \]* ) |
 |----------------------------------------------------------------|
 
 
 
- 
+ 
 
 ## <a name="parameters"></a>Parameter
 
 <dl> <dt>
 
-<span id="register"></span><span id="REGISTER"></span>sich
+<span id="register"></span><span id="REGISTER"></span>Registrieren
 </dt> <dd>
 
 Erforderliches Schlüsselwort.
 
 </dd> <dt>
 
-<span id="_shader_profile_"></span><span id="_SHADER_PROFILE_"></span>*\[Shader- \_ Profil\]*
+<span id="_shader_profile_"></span><span id="_SHADER_PROFILE_"></span>*\[\_Shaderprofil\]*
 </dt> <dd>
 
-Optionales [Shader-Profil](/windows/desktop/direct3dtools/dx-graphics-tools-fxc-syntax), das ein Shader-Ziel oder einfach **PS** oder **vs** sein kann
+Optionales [Shaderprofil,](/windows/desktop/direct3dtools/dx-graphics-tools-fxc-syntax)bei dem es sich um ein Shaderziel oder einfach **ps oder** **vs.**
 
 </dd> <dt>
 
-<span id="Type__subcomponent_"></span><span id="type__subcomponent_"></span><span id="TYPE__SUBCOMPONENT_"></span>*\# \[ Typsubcomponent\]*
+<span id="Type__subcomponent_"></span><span id="type__subcomponent_"></span><span id="TYPE__SUBCOMPONENT_"></span>*\# \[ Typunterkomponenten\]*
 </dt> <dd>
 
-Registrieren Sie den Typ, die Zahl und die unter Komponenten Deklaration.
+Registrieren Der Typ, die Zahl und die Unterkomponentendeklaration.
 
 -   Der Typ ist einer der folgenden:
 
     
 
-    | type | Register Beschreibung       |
+    | type | Beschreibung registrieren       |
     |------|----------------------------|
     | b    | Konstanter Puffer            |
-    | t    | Textur-und Textur Puffer |
-    | c    | Puffer Offset              |
+    | t    | Textur- und Texturpuffer |
+    | c    | Pufferoffset              |
     | s    | Sampler                    |
-    | u    | Ansicht für ungeordnete Zugriffe      |
+    | u    | Ungeordnete Zugriffsansicht      |
 
     
 
-     
+     
 
--   *\#* die Registernummer, bei der es sich um eine ganzzahlige Zahl handelt.
--   Die *Unterkomponente* ist eine optionale ganzzahlige Zahl.
+-   *\#* ist die Registernummer, die eine ganzzahlige Zahl ist.
+-   Die *Unterkomponenten ist eine* optionale ganzzahlige Zahl.
 
 </dd> </dl>
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Sie können einer Variablen Deklaration eine oder mehrere Registrierungs Zuweisungen hinzufügen, die durch Leerzeichen getrennt sind.
+Sie können der gleichen Variablendeklaration eine oder mehrere Registerzuweisungen hinzufügen, die durch Leerzeichen getrennt sind.
 
-Bei Direct3D 10-Variablen im globalen Gültigkeitsbereich verhält sich das **Register** -Schlüsselwort genauso wie das Schlüsselwort " [packoffset (DirectX HLSL)](dx-graphics-hlsl-variable-packoffset.md) ".
+Für Direct3D 10-Variablen im globalen Gültigkeitsbereich verhält sich das **Register-Schlüsselwort** genauso wie das [Schlüsselwort packoffset (DirectX HLSL).](dx-graphics-hlsl-variable-packoffset.md)
 
 ## <a name="examples"></a>Beispiele
 
-Hier einige Beispiele:
+Hier sind einige Beispiele:
 
 
 ```
@@ -120,6 +120,6 @@ sampler myVar : register( ps, s[2] )
 [Variablen (DirectX HLSL)](dx-graphics-hlsl-variables.md)
 </dt> </dl>
 
- 
+ 
 
- 
+ 

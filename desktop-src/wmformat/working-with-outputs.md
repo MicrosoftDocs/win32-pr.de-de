@@ -3,50 +3,50 @@ title: Arbeiten mit Ausgaben
 description: Arbeiten mit Ausgaben
 ms.assetid: e2e14e88-dddc-496d-8087-1455da0821e3
 keywords:
-- Windows Media-Format-SDK, arbeiten mit Ausgaben
-- Advanced Systems Format (ASF), arbeiten mit Ausgaben
-- ASF (Advanced Systems Format), arbeiten mit Ausgaben
-- Advanced Systems Format (ASF), Ausgabe Nummern und Formate
-- ASF (Advanced Systems Format), Ausgabe Nummern und Formate
-- ausgabezahlen und Formate, Informationen zu
+- Windows Medienformat-SDK, Arbeiten mit Ausgaben
+- Advanced Systems Format (ASF), Arbeiten mit Ausgaben
+- ASF (Advanced Systems Format), Arbeiten mit Ausgaben
+- Advanced Systems Format (ASF), Ausgabenummern und Formate
+- ASF (Advanced Systems Format), Ausgabenummern und Formate
+- Ausgabenummern und Formate, Informationen
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 2d089a645838a295e07eb740927d75238473cc4f
-ms.sourcegitcommit: 48d1c892045445bcbd0f22bafa2fd3861ffaa6e7
+ms.openlocfilehash: 274e5b4980ef14126006d3f19fe0717aa9eb6fd5c1a8f7baaf91e35084faeacb
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/19/2020
-ms.locfileid: "103723456"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118697724"
 ---
 # <a name="working-with-outputs"></a>Arbeiten mit Ausgaben
 
-Standardmäßig wird jedes Beispiel, das Sie von einem Leser Objekt erhalten, einer Ausgabe Nummer zugeordnet. Jede Ausgabe Nummer entspricht einem Stream in der ASF-Datei. Der Reader weist den Streams in der Dateiausgabe Nummern zu, wenn die Datei geöffnet wird. Normalerweise gibt es eine Ausgabe für jeden Stream in einer Datei. Wenn die Datei jedoch den gegenseitigen Ausschluss verwendet, wird jeder Gruppe von sich gegenseitig ausschließenden Streams eine einzelne Ausgabe Nummer zugewiesen. Der Stream, der der Ausgabe Nummer der sich gegenseitig exklusiven Datenströme entspricht, wird entweder vom Reader, bei MBR-Dateien (Multiple Bitrate) oder von der Anwendung bestimmt, wenn Sie die manuelle Datenstrom Auswahl verwenden.
+Standardmäßig wird jedes Beispiel, das Sie von einem reader-Objekt erhalten, einer Ausgabenummer zugeordnet. Jede Ausgabenummer entspricht einem Stream in der ASF-Datei. Der Reader weist den Datenströmen in der Datei Ausgabenummern zu, wenn die Datei geöffnet wird. Normalerweise gibt es eine Ausgabe für jeden Stream in einer Datei. Wenn die Datei jedoch gegenseitigen Ausschluss verwendet, wird jeder Gruppe von sich gegenseitig ausschließenden Streams eine einzelne Ausgabenummer zugewiesen. Der Stream, der der Ausgabenummer der sich gegenseitig ausschließenden Streams entspricht, wird entweder vom Reader, bei MBR-Dateien (Multiple Bit Rate) oder von Ihrer Anwendung bestimmt, wenn Sie die manuelle Streamauswahl verwenden.
 
-Da der im Profil festgelegte Verbindungs Name nicht in der Datei persistent gespeichert wird, erstellt der Reader einen Standard Verbindungs Namen für jede Ausgabe, bei der es sich einfach um eine Zeichen folgen Darstellung der Ausgabe Nummer handelt, z. b. "1", "2", "3" usw. Mit den Verbindungs Namen können Anwendungen und der Reader selbst Ausgaben mit Streams korrelieren. In einer Datei mit mehreren Bitraten haben mehrere Streams einen Verbindungs Namen gemeinsam. Dies ist für den Reader nicht von Bedeutung, da die Ausgabe Eigenschaften für jeden MBR-Datenstrom identisch sind.
+Da der im Profil festgelegte Verbindungsname nicht in der Datei beibehalten wird, erstellt der Reader für jede Ausgabe einen Standardverbindungsnamen, der einfach eine Zeichenfolgendarstellung der Ausgabenummer ist, z.B. "1", "2", "3" usw. Die Verbindungsnamen ermöglichen es Anwendungen und dem Reader selbst, Ausgaben mit Streams zu korrelieren. In einer Datei mit mehreren Bitraten teilen sich mehrere Streams einen Verbindungsnamen. Dies spielt für den Reader keine Rolle, da die Ausgabeeigenschaften für jeden MBR-Stream identisch sind.
 
-Jede Ausgabe verfügt über ein oder mehrere unterstützte Ausgabeformate. Ein Ausgabeformat ist das Format, das von den vom Reader bereitgestellten nicht komprimierten Beispielen verwendet wird. Wenn der Reader eine Datei öffnet, wird das Format der einzelnen Ausgaben auf den Standardwert für den Medien Untertyp festgelegt. Die Anzahl und der Typ der unterstützten Ausgabeformate werden vom Codec bestimmt, der die Mediendaten dekomprimiert.
+Jede Ausgabe verfügt über mindestens ein unterstütztes Ausgabeformat. Ein Ausgabeformat ist das Format, das von den vom Reader bereitgestellten unkomprimierten Beispielen verwendet wird. Wenn der Reader eine Datei öffnet, legt er das Format jeder Ausgabe auf den Standardwert für den Medienuntertyp fest. Die Anzahl und art der unterstützten Ausgabeformate wird durch den Codec bestimmt, der die Mediendaten dekomprimiert.
 
 In den folgenden Themen wird erläutert, wie Sie mit Ausgaben arbeiten:
 
--   [So identifizieren Sie Ausgabe Nummern](to-identify-output-numbers.md)
+-   [So identifizieren Sie Ausgabenummern](to-identify-output-numbers.md)
 -   [Zuweisen von Ausgabeformaten](assigning-output-formats.md)
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
 <dl> <dt>
 
-[**Iwmreader-Schnittstelle**](/previous-versions/windows/desktop/api/wmsdkidl/nn-wmsdkidl-iwmreader)
+[**IWMReader-Schnittstelle**](/previous-versions/windows/desktop/api/wmsdkidl/nn-wmsdkidl-iwmreader)
 </dt> <dt>
 
-[**Iwmsynkreader-Schnittstelle**](/previous-versions/windows/desktop/api/wmsdkidl/nn-wmsdkidl-iwmsyncreader)
+[**IWMSyncReader-Schnittstelle**](/previous-versions/windows/desktop/api/wmsdkidl/nn-wmsdkidl-iwmsyncreader)
 </dt> <dt>
 
 [**Lesen von ASF-Dateien**](reading-asf-files.md)
 </dt> </dl>
 
- 
+ 
 
- 
+ 
 
 
 

@@ -1,26 +1,26 @@
 ---
-title: So zählen Sie alle installierten Windows Media-Codecs auf
-description: So zählen Sie alle installierten Windows Media-Codecs auf
+title: So aufzählen Sie alle installierten Windows Mediencodecs
+description: So aufzählen Sie alle installierten Windows Mediencodecs
 ms.assetid: 651c8624-0b66-4d0e-a25f-6c4b1a94e849
 keywords:
-- Streams, auflisten installierter Windows Media-Codecs
+- Streams,Aufzählen installierter Windows Mediencodecs
 - Codecs, Enumerationen
-- Streams, Codec-Indizes
+- Streams, Codecindizes
 - Codecs, Indizes
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 6db9a35913dde13f563ee57d54ee5e7de87d82cc
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: b63f58f94cf36e18fcbaa31bb9cff0dd8b5ab4717cc88e6f05657c7a2c72b429
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "106338016"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118699812"
 ---
-# <a name="to-enumerate-all-installed-windows-media-codecs"></a>So zählen Sie alle installierten Windows Media-Codecs auf
+# <a name="to-enumerate-all-installed-windows-media-codecs"></a>So aufzählen Sie alle installierten Windows Mediencodecs
 
-Die Codec-Informations Schnittstellen verwenden zum Identifizieren einzelner Codecs Codec-Indizes. Codecs werden unabhängig für Audiodaten und Videos indiziert. In einem Typ von Codec reichen Indizes von 0 bis zu einem Wert, der kleiner als die Anzahl der Codecs dieses Typs ist.
+Die Codecinformationsschnittstellen verwenden alle Codecindizes, um einzelne Codecs zu identifizieren. Codecs werden unabhängig für Audio und Video indiziert. Innerhalb eines Codectyps reichen Indizes von 0 bis zu einem, der kleiner als die Anzahl der Codecs dieses Typs ist.
 
-Der folgende Beispielcode zeigt, wie Sie den jedem Codec zugeordneten Index erhalten. Um diesen Code in der Anwendung zu kompilieren, fügen Sie stdio. h ein.
+Der folgende Beispielcode zeigt, wie sie den Index abrufen, der jedem Codec zugeordnet ist. Um diesen Code in Ihrer Anwendung zu kompilieren, schließen Sie stdio.h ein.
 
 
 ```C++
@@ -148,12 +148,12 @@ HRESULT GetCodecNames(IWMCodecInfo3* pCodecInfo)
 
 <dl> <dt>
 
-[**Informationen zu streamkonfigurations Informationen von Codecs**](getting-stream-configuration-information-from-codecs.md)
+[**Abrufen von Streamkonfigurationsinformationen von Codecs**](getting-stream-configuration-information-from-codecs.md)
 </dt> </dl>
 
- 
+ 
 
- 
+ 
 
 
 

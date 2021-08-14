@@ -1,49 +1,49 @@
 ---
-description: In diesem Thema wird beschrieben, wie Sie in Microsoft Media Foundation als ASF-Profil erstellen.
+description: In diesem Thema wird beschrieben, wie Sie ein ASF-Profil in Microsoft Media Foundation.
 ms.assetid: 9633bc88-12bd-404a-b779-878eb1ee5699
 title: Erstellen eines ASF-Profils
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 08ed9553811645b8589de7fb1805f1a307c4bdef
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 80a0225a6ff17f68c5443fce15f9bdc196901313ccaaebdde2f7f34c49860538
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106344018"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118743247"
 ---
 # <a name="creating-an-asf-profile"></a>Erstellen eines ASF-Profils
 
-In diesem Thema wird beschrieben, wie Sie in Microsoft Media Foundation als ASF-Profil erstellen.
+In diesem Thema wird beschrieben, wie Sie ein ASF-Profil in Microsoft Media Foundation.
 
 -   [Erstellen eines neuen Profils](#create-a-new-profile)
--   [Profil aus dem Objekt "ASF ContentInfo" erhalten](#get-the-profile-from-the-asf-contentinfo-object)
--   [Profil aus einem Präsentations Deskriptor abgerufen](#get-the-profile-from-a-presentation-descriptor)
+-   [Das Profil aus dem ASF ContentInfo-Objekt](#get-the-profile-from-the-asf-contentinfo-object)
+-   [Get the Profile from a Presentation Descriptor](#get-the-profile-from-a-presentation-descriptor)
 -   [Zugehörige Themen](#related-topics)
 
 ## <a name="create-a-new-profile"></a>Erstellen eines neuen Profils
 
-Um ein leeres ASF-Profil zu erstellen, rufen Sie die Funktion [**mfkreateasfprofile**](/windows/desktop/api/wmcontainer/nf-wmcontainer-mfcreateasfprofile) auf. Diese Funktion gibt einen Zeiger auf die [**imfasfprofile**](/windows/desktop/api/wmcontainer/nn-wmcontainer-imfasfprofile) -Schnittstelle zurück. Die Anwendung kann diese Schnittstelle verwenden, um Datenströme zum Profil hinzuzufügen und die einzelnen Streams zu konfigurieren. Weitere Informationen finden Sie unter [Erstellen und Konfigurieren von ASF-Streams](creating-and-configuring-asf-streams.md).
+Um ein leeres ASF-Profil zu erstellen, rufen Sie die [**MFCreateASFProfile-Funktion**](/windows/desktop/api/wmcontainer/nf-wmcontainer-mfcreateasfprofile) auf. Diese Funktion gibt einen Zeiger auf die [**IMFASFProfile-Schnittstelle**](/windows/desktop/api/wmcontainer/nn-wmcontainer-imfasfprofile) zurück. Die Anwendung kann diese Schnittstelle verwenden, um dem Profil Streams hinzuzufügen und die einzelnen Streams zu konfigurieren. Weitere Informationen finden Sie unter [Erstellen und Konfigurieren von ASF-Streams](creating-and-configuring-asf-streams.md).
 
-Optional kann die Anwendung zwei oder mehr Streams Objekte mit gegenseitigem Ausschluss hinzufügen. Siehe [Verwenden des gegenseitigen Ausschlusses für ASF-Streams](using-mutual-exclusion-for-asf-streams.md).
+Optional kann die Anwendung zwei oder mehr Streams Objekte für gegenseitigen Ausschluss hinzufügen. Weitere Informationen [finden Sie unter Using Mutual Exclusion for ASF Streams](using-mutual-exclusion-for-asf-streams.md).
 
-## <a name="get-the-profile-from-the-asf-contentinfo-object"></a>Profil aus dem Objekt "ASF ContentInfo" erhalten
+## <a name="get-the-profile-from-the-asf-contentinfo-object"></a>Das Profil aus dem ASF ContentInfo-Objekt
 
-Eine Anwendung kann das ASF-Profil einer vorhandenen ASF-Datei aus dem [Objekt "ASF ContentInfo](asf-contentinfo-object.md)" erhalten. Das Profil ist bereits konfiguriert und enthält Einstellungen für alle Streams in der Datei.
+Eine Anwendung kann das ASF-Profil einer vorhandenen ASF-Datei aus dem [ASF ContentInfo-Objekt erhalten.](asf-contentinfo-object.md) Das Profil ist bereits konfiguriert und enthält Einstellungen für alle Streams in der Datei.
 
-Initialisieren Sie das ContentInfo-Objekt, indem Sie das ASF-Header Objekt der Datei übernehmen. Dies erfolgt über die [**imfasf ContentInfo::P arsheader**](/windows/desktop/api/wmcontainer/nf-wmcontainer-imfasfcontentinfo-parseheader) -Methode. Nachdem alle Header Objekte gelesen und die ASF-Bibliothek aufgefüllt wurde, wird das Profil für diese Datei generiert. Die Anwendung kann einen Zeiger auf dieses initialisierte Profil abrufen, indem [**imfasfcontentinfo:: GetProfile**](/windows/desktop/api/wmcontainer/nf-wmcontainer-imfasfcontentinfo-getprofile)aufgerufen wird.
+Initialisieren Sie das ContentInfo-Objekt durch Analyse des ASF-Headerobjekts der Datei. Dies erfolgt über die [**IMFASFContentInfo::P arseHeader-Methode.**](/windows/desktop/api/wmcontainer/nf-wmcontainer-imfasfcontentinfo-parseheader) Nachdem alle Headerobjekte gelesen und die ASF-Bibliothek aufgefüllt wurde, wird das Profil für diese Datei generiert. Die Anwendung kann einen Zeiger auf dieses initialisierte Profil erhalten, indem [**sie IMFASFContentInfo::GetProfile aufruft.**](/windows/desktop/api/wmcontainer/nf-wmcontainer-imfasfcontentinfo-getprofile)
 
-## <a name="get-the-profile-from-a-presentation-descriptor"></a>Profil aus einem Präsentations Deskriptor abgerufen
+## <a name="get-the-profile-from-a-presentation-descriptor"></a>Get the Profile from a Presentation Descriptor
 
-Sie können das Profil Objekt einer vorhandenen ASF-Datei aus dem [Präsentations Deskriptor](presentation-descriptors.md) für die Datei oder aus dem Objekt " [ASF ContentInfo](asf-contentinfo-object.md) " erhalten. In diesem Fall ist das Profil bereits konfiguriert und enthält Einstellungen für alle Streams in der Datei. Dies kann hilfreich sein, wenn Sie ein vorhandenes ASF-Profil ändern möchten. Beispielsweise möchten Sie möglicherweise eine Windows Media Video Datei mit einer niedrigeren Bitrate erneut codieren.
+Sie können das Profilobjekt einer vorhandenen ASF-Datei aus dem [Präsentationsdeskriptor](presentation-descriptors.md) für die Datei oder aus dem [ASF ContentInfo-Objekt](asf-contentinfo-object.md) erhalten. In diesem Fall ist das Profil bereits konfiguriert und enthält Einstellungen für alle Streams in der Datei. Dies kann nützlich sein, wenn Sie ein vorhandenes ASF-Profil ändern möchten. Beispielsweise können Sie eine Medienvideodatei mit einer niedrigeren Bitrate Windows codieren.
 
-Um das Profil aus dem Präsentations Deskriptor abzurufen, müssen Sie [**mfkreateasfprofilefrompresentationdescriptor**](/windows/desktop/api/wmcontainer/nf-wmcontainer-mfcreateasfprofilefrompresentationdescriptor)aufrufen. Diese Funktion analysiert den Präsentations Deskriptor und füllt ein ASF-Profil mit Informationen über die Mediendatei. Die-Funktion gibt einen Zeiger auf die imfasfprofile-Schnittstelle zurück. Anschließend können Sie diese Schnittstelle verwenden, um das Profil zu ändern.
+Rufen Sie [**MFCreateASFProfileFromPresentationDescriptor**](/windows/desktop/api/wmcontainer/nf-wmcontainer-mfcreateasfprofilefrompresentationdescriptor)auf, um das Profil aus dem Präsentationsdeskriptor zu erhalten. Diese Funktion analysiert den Präsentationsdeskriptor und füllt ein ASF-Profil mit Informationen zur Mediendatei auf. Die Funktion gibt einen Zeiger auf die IMFASFProfile-Schnittstelle zurück. Sie können diese Schnittstelle dann verwenden, um das Profil zu ändern.
 
-Um den Präsentations Deskriptor abzurufen, wenden Sie eine der folgenden Methoden an:
+Rufen Sie eine der folgenden Methoden auf, um den Präsentationsdeskriptor zu erhalten:
 
--   Nennen Sie aus der ASF-Medienquelle [**imfmediasource:: foratepresentationdescriptor**](/windows/desktop/api/mfidl/nf-mfidl-imfmediasource-createpresentationdescriptor).
--   Nennen Sie aus dem Objekt " [ASF ContentInfo](asf-contentinfo-object.md) " [**imfasfcontentinfo:: generatepresentationdescriptor**](/windows/desktop/api/wmcontainer/nf-wmcontainer-imfasfcontentinfo-generatepresentationdescriptor). Stellen Sie vor dem Aufrufen dieser Methode sicher, dass das ContentInfo-Objekt zum Lesen initialisiert wird. Weitere Informationen finden Sie unter "Initialisieren des ContentInfo-Objekts aus einer vorhandenen ASF-Datei" beim [Lesen des ASF-Header Objekts einer vorhandenen Datei](reading-the-asf-header-object-of-an-existing-file.md). Wenn Sie jedoch bereits über ein initialisiertes ContentInfo-Objekt verfügen, können Sie das Profil direkt aus dem Objekt erhalten. Dies wird weiter unten in diesem Thema unter "erhalten des Profils aus dem ContentInfo-Objekt" beschrieben.
+-   Rufen Sie in der ASF-Medienquelle [**DEN AUFRUF VON DER MEDIENQUELLE::CreatePresentationDescriptor auf.**](/windows/desktop/api/mfidl/nf-mfidl-imfmediasource-createpresentationdescriptor)
+-   Rufen Sie [im ASF ContentInfo-Objekt](asf-contentinfo-object.md) [**IMFASFContentInfo::GeneratePresentationDescriptor auf.**](/windows/desktop/api/wmcontainer/nf-wmcontainer-imfasfcontentinfo-generatepresentationdescriptor) Stellen Sie vor dem Aufrufen dieser Methode sicher, dass das ContentInfo-Objekt zum Lesen initialisiert ist. Weitere Informationen finden Sie unter "Initialisieren des ContentInfo-Objekts aus einer vorhandenen ASF-Datei" unter Lesen des [ASF-Headerobjekts einer vorhandenen Datei.](reading-the-asf-header-object-of-an-existing-file.md) Wenn Sie jedoch bereits über ein initialisiertes ContentInfo-Objekt verfügen, können Sie das Profil direkt daraus erhalten. Dies wird weiter unten in diesem Thema unter "Abrufen des Profils aus dem ContentInfo-Objekt" beschrieben.
 
-Im folgenden Beispiel wird gezeigt, wie ein Profil aus einem Präsentations Deskriptor erstellt wird. Die-Funktion erstellt eine Medienquelle für die Datei, Ruft den Präsentations Deskriptor aus der Medienquelle ab und erstellt ein Profil. In diesem Beispiel wird davon ausgegangen, dass *pszFileName* die URL einer ASF-Datei angibt.
+Das folgende Beispiel zeigt, wie Sie ein Profil aus einem Präsentationsdeskriptor erstellen. Die Funktion erstellt eine Medienquelle für die Datei, ruft den Präsentationsdeskriptor aus der Medienquelle ab und erstellt ein Profil. In diesem Beispiel wird davon ausgegangen, *dass pszFileName* die URL einer ASF-Datei angibt.
 
 
 ```C++
@@ -101,7 +101,7 @@ HRESULT GetASFProfile(PCWSTR pszFileName, IMFASFProfile** ppProfile)
 
 
 
-In diesem Beispiel wird [saferelease](saferelease.md) verwendet, um Schnittstellen Zeiger freizugeben.
+In diesem Beispiel wird [SafeRelease verwendet,](saferelease.md) um Schnittstellenzeigende frei zu geben.
 
 ## <a name="related-topics"></a>Zugehörige Themen
 

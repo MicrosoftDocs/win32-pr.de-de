@@ -1,28 +1,28 @@
 ---
-description: Dieser Abschnitt enthält Referenzinformationen für die API-Elemente, die für die Arbeit mit DirectX. x-Dateien verwendet werden. Diese Themen sind neu beim DirectX SDK-Update (Sommer 2004).
+description: Dieser Abschnitt enthält Referenzinformationen zu den API-Elementen, die zum Arbeiten mit DirectX-X-Dateien verwendet werden. Diese Themen sind neu mit dem DirectX SDK Update (Sommer 2004).
 ms.assetid: 726dffe9-682f-445b-92a7-2246ad4e3848
-title: Verweis auf X-Datei
+title: X-Dateiverweis
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: a757c8d6a656fb161929983fed18706a7a172c5f
-ms.sourcegitcommit: a47bd86f517de76374e4fff33cfeb613eb259a7e
+ms.openlocfilehash: a6c760b402e77d0b521fb22eb845de5fc0650d7325a093b97e8f48b30b2ee6fc
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/06/2021
-ms.locfileid: "104123368"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119986100"
 ---
-# <a name="x-file-reference"></a>Verweis auf X-Datei
+# <a name="x-file-reference"></a>X-Dateiverweis
 
-Dieser Abschnitt enthält Referenzinformationen für die API-Elemente, die für die Arbeit mit DirectX. x-Dateien verwendet werden. Diese Themen sind neu beim DirectX SDK-Update (Sommer 2004).
+Dieser Abschnitt enthält Referenzinformationen zu den API-Elementen, die zum Arbeiten mit DirectX-X-Dateien verwendet werden. Diese Themen sind neu mit dem DirectX SDK Update (Sommer 2004).
 
--   [D3DX X-Datei Schnittstellen](dx9-graphics-reference-d3dx-x-file-interfaces.md)
+-   [D3DX X-Dateischnittstellen](dx9-graphics-reference-d3dx-x-file-interfaces.md)
 -   [D3DX X-Dateifunktionen](dx9-graphics-reference-d3dx-x-file-functions.md)
 -   [D3DX X-Dateistrukturen](dx9-graphics-reference-d3dx-x-file-structures.md)
--   [D3DX X-Datei Konstanten](dx9-graphics-reference-d3dx-x-file-constants.md)
+-   [D3DX X-Dateikonstanten](dx9-graphics-reference-d3dx-x-file-constants.md)
 
 Vorlagen werden unter [**Vorlagen**](dx9-graphics-reference-x-file-format-templates.md)beschrieben.
 
-Schnittstellen und Funktionen im dxfile. h-Header sind verfügbar, um ältere Anwendungen zu unterstützen. Siehe [Referenz zu X-Dateien (Legacy)](dx9-graphics-reference-x-file.md).
+Schnittstellen und Funktionen im Dxfile.h-Header sind zur Unterstützung von Legacyanwendungen verfügbar. Siehe [X-Dateireferenz (Legacy)](dx9-graphics-reference-x-file.md).
 
 ## <a name="related-topics"></a>Zugehörige Themen
 

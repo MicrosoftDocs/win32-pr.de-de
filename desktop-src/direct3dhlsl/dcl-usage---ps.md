@@ -9,12 +9,12 @@ topic_type:
 api_name: ''
 api_type: ''
 api_location: ''
-ms.openlocfilehash: 2c506d2ad23003f93bbaea409cacc60b18c86534
-ms.sourcegitcommit: 7e4322a6ec1f964d5ad26e2e5e06cc8ce840030e
+ms.openlocfilehash: 91a57ec2eabbef2cd62fec8fa95fbf9d2da47a5bfcdb339bf30ed8da5b11c9ae
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/01/2021
-ms.locfileid: "113129707"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118792929"
 ---
 # <a name="dcl_semantics-sm3---ps-asm"></a>\_dcl-Semantik (sm3 – ps asm)
 
@@ -33,9 +33,9 @@ Hierbei gilt:
 -   \_semantics: Identifiziert die beabsichtigte Datenverwendung und kann einer der Werte in [**D3DDECLUSAGE**](/windows/desktop/direct3d9/d3ddeclusage) sein (ohne das Präfix D3DDECLUSAGE). \_ Darüber hinaus kann ein ganzzahliger Index an die Semantik angefügt werden, um Parameter zu unterscheiden, die eine ähnliche Semantik verwenden.
 -   \[\_[Schwerpunkt](dx9-graphics-reference-asm-ps-instructions-modifiers-ps-2-0.md) \] ist ein optionaler Anweisungsmodifizierer. Sie wird in \_ dcl-Verwendungsanweisungen unterstützt, die die Eingaberegister deklarieren, und in Anweisungen zur Textursuche. Der Schwerpunkt wird ohne Leerzeichen angefügt.
 -   dst: Zielregister. Siehe [ps \_ 3 \_ 0 Registers](dx9-graphics-reference-asm-ps-registers-ps-3-0.md).
--   \_Schreibmaske: Das gleiche Ausgaberegister kann jedes Mal mit einer eindeutigen Schreibmaske deklariert werden (sodass verschiedene Semantik auf einzelne Komponenten angewendet werden kann). Dieselbe Semantik kann jedoch nicht mehrmals in einer Deklaration verwendet werden. Dies bedeutet, dass Vektoren mindestens vier Komponenten sein müssen und nicht über Vier-Komponenten-Registergrenzen (einzelne Ausgaberegister) hinausgehen können. Wenn die \_ Psize-Semantik verwendet wird, sollte sie über eine vollständige Schreibmaske verfügen, da sie als Skalar gilt. Wenn die \_ Positionssemantik verwendet wird, sollte sie über eine vollständige Schreibmaske verfügen, da alle vier Komponenten geschrieben werden müssen.
+-   \_Schreibmaske: Das gleiche Ausgaberegister kann mehrmals deklariert werden, jedes Mal mit einer eindeutigen Schreibmaske (sodass verschiedene Semantik auf einzelne Komponenten angewendet werden kann). Dieselbe Semantik kann jedoch nicht mehrmals in einer Deklaration verwendet werden. Dies bedeutet, dass Vektoren mindestens vier Komponenten sein müssen und nicht über Vier-Komponenten-Registergrenzen (einzelne Ausgaberegister) hinausgehen können. Wenn die \_ Psize-Semantik verwendet wird, sollte sie über eine vollständige Schreibmaske verfügen, da sie als Skalar gilt. Wenn die \_ Positionssemantik verwendet wird, sollte sie über eine vollständige Schreibmaske verfügen, da alle vier Komponenten geschrieben werden müssen.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
 
 

@@ -1,49 +1,49 @@
 ---
-title: Requestcomplete-Ereignis
-description: Requestcomplete-Ereignis
+title: RequestComplete-Ereignis
+description: RequestComplete-Ereignis
 ms.assetid: 543b79d1-f09d-4061-a1a8-8c8ab496bceb
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 551aecdcfbeab76ab45e6211affef794ff37d876
-ms.sourcegitcommit: ebd3ce6908ff865f1ef66f2fc96769be0aad82e1
+ms.openlocfilehash: bcf5202cc6aee6e8727651279fd216d5f0e5676025584c9cb66c4c6ad958da54
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/19/2020
-ms.locfileid: "104473108"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118746557"
 ---
-# <a name="requestcomplete-event"></a>Requestcomplete-Ereignis
+# <a name="requestcomplete-event"></a>RequestComplete-Ereignis
 
-\[Der Microsoft-Agent ist ab Windows 7 veraltet und in nachfolgenden Versionen von Windows möglicherweise nicht verfügbar.\]
+\[Microsoft Agent ist ab Version Windows 7 veraltet und möglicherweise in nachfolgenden Versionen von Windows.\]
 
 <dl> <dt>
 
 <span id="Description"></span><span id="description"></span><span id="DESCRIPTION"></span>**Beschreibung**
 </dt> <dd>
 
-Tritt auf, wenn der Server eine Anforderung in der Warteschlange abschließt.
+Tritt ein, wenn der Server eine Anforderung in der Warteschlange abgeschlossen hat.
 
 </dd> <dt>
 
 <span id="Syntax"></span><span id="syntax"></span><span id="SYNTAX"></span>**Syntax**
 </dt> <dd>
 
-**Sub** - *Agent * * * \_ requestcomplete* *  **(ByVal** - *Anforderung * * *)**
+ *Sub-Agent: \_ RequestComplete* *  **(ByVal-Anforderung))** *
 
 
 
-| Teil      | BESCHREIBUNG                                            |
+| Teil      | Beschreibung                                            |
 |-----------|--------------------------------------------------------|
-| *Anforderung* | Gibt das [**Anforderungs**](/windows/desktop/lwef/the-request-object) Objekt zurück. |
+| *Anforderung* | Gibt das [**Request-Objekt**](/windows/desktop/lwef/the-request-object) zurück. |
 
 
 
- 
+ 
 
 </dd> </dl>
 
-### <a name="remarks"></a>Bemerkungen
+### <a name="remarks"></a>Hinweise
 
-Dieses Ereignis gibt ein [**Anforderungs**](/windows/desktop/lwef/the-request-object) Objekt zurück. Da Anforderungen asynchron verarbeitet werden, können Sie dieses Ereignis verwenden, um zu bestimmen, wann der Server die Verarbeitung einer Anforderung abschließt (z. b. eine [**Get**](get-method.md)-, [**Play**](play-method.md)-oder [**Sprech**](speak-method.md) Methode), um dieses Ereignis mit anderen Aktionen zu synchronisieren, die von Ihrer Anwendung generiert werden. Der Server sendet das Ereignis nur an den Client, der den Verweis auf das **Anforderungs** Objekt erstellt hat, und nur, wenn Sie eine globale Variable für den Anforderungs Verweis definiert haben:
+Dieses Ereignis gibt ein [**Request-Objekt**](/windows/desktop/lwef/the-request-object) zurück. Da Anforderungen asynchron verarbeitet werden, können Sie dieses Ereignis verwenden, um zu bestimmen, wann der Server die Verarbeitung einer Anforderung abgeschlossen hat (z. B. eine [**Get-,**](get-method.md) [**Play-**](play-method.md)oder Speak-Methode), um dieses Ereignis mit anderen Aktionen zu synchronisieren, die von Ihrer Anwendung [**generiert**](speak-method.md) werden. Der Server sendet das Ereignis nur an den Client, der den Verweis auf das **Request-Objekt** erstellt hat, und nur, wenn Sie eine globale Variable für den Anforderungsverweis definiert haben:
 
 
 ```
@@ -73,7 +73,7 @@ Dieses Ereignis gibt ein [**Anforderungs**](/windows/desktop/lwef/the-request-ob
 
 
 
-Da Animations [**Anforderungs**](/windows/desktop/lwef/the-request-object) Objekte erst zugewiesen werden, wenn der Server die Anforderung verarbeitet hat, stellen Sie sicher, dass das **Anforderungs** Objekt vorhanden ist, bevor Sie es auswerten. Wenn Sie z. b. in Visual Basic eine bedingte Anforderung verwenden, um zu testen, ob eine bestimmte Anforderung abgeschlossen wurde, können Sie das **Nothing** -Schlüsselwort verwenden:
+Da [**Animationsanforderungsobjekte**](/windows/desktop/lwef/the-request-object) erst zugewiesen werden, wenn der Server die Anforderung verarbeitet, stellen Sie sicher, dass das **Request-Objekt** vorhanden ist, bevor Sie versuchen, es zu bewerten. Wenn Sie beispielsweise in Visual Basic eine Bedingung verwenden, um zu testen, ob eine bestimmte Anforderung abgeschlossen wurde, können Sie das **Nothing-Schlüsselwort** verwenden:
 
 
 ```
@@ -91,15 +91,15 @@ Da Animations [**Anforderungs**](/windows/desktop/lwef/the-request-object) Objek
 
 
 > [!Note]  
-> In VBScript 1,0 wird dieses Ereignis auch dann ausgelöst, wenn Sie keine Verweise auf ein [**Anforderungs**](/windows/desktop/lwef/the-request-object) Objekt definieren. Dies wurde in VBScript 2,0 behoben, das von heruntergeladen werden kann <https://microsoft.com/msdownload/vbscript/scripting.asp> .
+> In VBScript 1.0 wird dieses Ereignis auch dann aus, wenn Sie keine Verweise auf ein [**Request-Objekt**](/windows/desktop/lwef/the-request-object) definieren. Dies wurde in VBScript 2.0 behoben, das unter heruntergeladen werden <https://microsoft.com/msdownload/vbscript/scripting.asp> kann.
 
- 
+ 
 
 ### <a name="see-also"></a>Weitere Informationen
 
-[**Requeststart-Ereignis**](requeststart-event.md)
+[**RequestStart-Ereignis**](requeststart-event.md)
 
 
- 
+ 
 
- 
+ 

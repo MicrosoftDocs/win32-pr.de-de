@@ -1,11 +1,11 @@
 ---
-title: MS-PKI-RA-Application-Policies-Attribut
-description: Die erforderliche Registrierungsrichtlinien-OID der Registrierungsstelle in den gegen Signaturen der Zertifikat Anforderung.
+title: ms-PKI-RA-Application-Policies-Attribut
+description: Die erforderliche RA-Anwendungsrichtlinien-OID in den Gegensignaturen der Zertifikatanforderung.
 ms.assetid: 1ce61107-01aa-4a03-8a00-21890fb610d7
 ms.tgt_platform: multiple
 keywords:
 - MS-PKI-RA-Application-Policies-Attribut AD-Schema
-- mspki-RA-Application-Policies-Attribut AD-Schema
+- MSPKI-RA-Application-Policies-Attribut AD-Schema
 topic_type:
 - apiref
 api_name:
@@ -14,26 +14,26 @@ api_type:
 - Schema
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 01aab7c8da5c6267efe954cac71dc8c9c98c18f4
-ms.sourcegitcommit: b77ace27b0432e7cd3863191b11926be032fbe2f
+ms.openlocfilehash: cd982f4568d8d148c64930a9a7099dc5a48da2b542e8cf08c53905ad86ee6733
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "104213765"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118960349"
 ---
-# <a name="ms-pki-ra-application-policies-attribute"></a>MS-PKI-RA-Application-Policies-Attribut
+# <a name="ms-pki-ra-application-policies-attribute"></a>ms-PKI-RA-Application-Policies-Attribut
 
-Die erforderliche Registrierungsrichtlinien-OID der Registrierungsstelle in den gegen Signaturen der Zertifikat Anforderung.
+Die erforderliche RA-Anwendungsrichtlinien-OID in den Gegensignaturen der Zertifikatanforderung.
 
 
 
 | Eingabe | Wert |
 |-------------------|--------------------------------------------------------------------------------------------|
-| CN                | MS-PKI-RA-Application-Policies                                                             |
-| LDAP-Display-Name | mspki-RA-Application-Policies                                                              |
+| CN                | ms-PKI-RA-Application-Policies                                                             |
+| Ldap-Anzeigename | msPKI-RA-Application-Policies                                                              |
 | Size              | \-                                                                                         |
-| Berechtigung aktualisieren  | Unternehmensadministrator                                                                   |
-| Aktualisierungshäufigkeit  | Wenn eine neue Vorlage erstellt wird oder die Attribute vorhandener Vorlagen bearbeitet werden. |
+| Aktualisieren von Berechtigungen  | Unternehmensadministrator                                                                   |
+| Updatehäufigkeit  | Wenn eine neue Vorlage erstellt wird oder die Attribute einer vorhandenen Vorlage bearbeitet werden. |
 | Attribute-Id      | 1.2.840.113556.1.4.1675                                                                    |
 | System-ID-GUID    | 3c91fbbf-4773-4ccd-a87b-85d53e7bcf6a                                                       |
 | Syntax            | [**String(Unicode)**](s-string-unicode.md)                                                |
@@ -42,13 +42,13 @@ Die erforderliche Registrierungsrichtlinien-OID der Registrierungsstelle in den 
 
 ## <a name="implementations"></a>Implementierungen
 
--   [**Windows Server 2003**](#windows-server-2003)
+-   [**Windows Server 2003**](#windows-server-2003)
 -   [**Windows Server 2003 R2**](#windows-server-2003-r2)
 -   [**Windows Server 2008**](#windows-server-2008)
 -   [**Windows Server 2008 R2**](#windows-server-2008-r2)
 -   [**Windows Server 2012**](#windows-server-2012)
 
-## <a name="windows-server-2003"></a>Windows Server 2003
+## <a name="windows-server-2003"></a>Windows Server 2003
 
 
 
@@ -57,15 +57,15 @@ Die erforderliche Registrierungsrichtlinien-OID der Registrierungsstelle in den 
 | Link-ID                | \-                                                                      |
 | MAPI-Id                | \-                                                                      |
 | System-Only            | False                                                                   |
-| Ist-einwertig       | False                                                                   |
+| Ist einwertig       | False                                                                   |
 | Ist indiziert             | False                                                                   |
 | Im globalen Katalog      | False                                                                   |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                                            |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                                            |
 | Range-Lower            | \-                                                                      |
 | Range-Upper            | \-                                                                      |
 | Search-Flags           | 0x00000000                                                              |
 | System-Flags           | 0x00000010                                                              |
-| In verwendete Klassen        | [**PKI-Zertifikat-Vorlage**](c-pkicertificatetemplate.md)<br/> |
+| In verwendete Klassen        | [**PKI-Certificate-Template**](c-pkicertificatetemplate.md)<br/> |
 
 
 
@@ -78,15 +78,15 @@ Die erforderliche Registrierungsrichtlinien-OID der Registrierungsstelle in den 
 | Link-ID                | \-                                                                      |
 | MAPI-Id                | \-                                                                      |
 | System-Only            | False                                                                   |
-| Ist-einwertig       | False                                                                   |
+| Ist einwertig       | False                                                                   |
 | Ist indiziert             | False                                                                   |
 | Im globalen Katalog      | False                                                                   |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                                            |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                                            |
 | Range-Lower            | \-                                                                      |
 | Range-Upper            | \-                                                                      |
 | Search-Flags           | 0x00000000                                                              |
 | System-Flags           | 0x00000010                                                              |
-| In verwendete Klassen        | [**PKI-Zertifikat-Vorlage**](c-pkicertificatetemplate.md)<br/> |
+| In verwendete Klassen        | [**PKI-Certificate-Template**](c-pkicertificatetemplate.md)<br/> |
 
 
 
@@ -99,15 +99,15 @@ Die erforderliche Registrierungsrichtlinien-OID der Registrierungsstelle in den 
 | Link-ID                | \-                                                                      |
 | MAPI-Id                | \-                                                                      |
 | System-Only            | False                                                                   |
-| Ist-einwertig       | False                                                                   |
+| Ist einwertig       | False                                                                   |
 | Ist indiziert             | False                                                                   |
 | Im globalen Katalog      | False                                                                   |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                                            |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                                            |
 | Range-Lower            | \-                                                                      |
 | Range-Upper            | \-                                                                      |
 | Search-Flags           | 0x00000000                                                              |
 | System-Flags           | 0x00000010                                                              |
-| In verwendete Klassen        | [**PKI-Zertifikat-Vorlage**](c-pkicertificatetemplate.md)<br/> |
+| In verwendete Klassen        | [**PKI-Certificate-Template**](c-pkicertificatetemplate.md)<br/> |
 
 
 
@@ -120,15 +120,15 @@ Die erforderliche Registrierungsrichtlinien-OID der Registrierungsstelle in den 
 | Link-ID                | \-                                                                      |
 | MAPI-Id                | \-                                                                      |
 | System-Only            | False                                                                   |
-| Ist-einwertig       | False                                                                   |
+| Is-Single-Valued       | False                                                                   |
 | Ist indiziert             | False                                                                   |
 | Im globalen Katalog      | False                                                                   |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                                            |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                                            |
 | Range-Lower            | \-                                                                      |
 | Range-Upper            | \-                                                                      |
 | Search-Flags           | 0x00000000                                                              |
 | System-Flags           | 0x00000010                                                              |
-| In verwendete Klassen        | [**PKI-Zertifikat-Vorlage**](c-pkicertificatetemplate.md)<br/> |
+| In verwendete Klassen        | [**PKI-Certificate-Template**](c-pkicertificatetemplate.md)<br/> |
 
 
 
@@ -141,15 +141,15 @@ Die erforderliche Registrierungsrichtlinien-OID der Registrierungsstelle in den 
 | Link-ID                | \-                                                                      |
 | MAPI-Id                | \-                                                                      |
 | System-Only            | False                                                                   |
-| Ist-einwertig       | False                                                                   |
+| Is-Single-Valued       | False                                                                   |
 | Ist indiziert             | False                                                                   |
 | Im globalen Katalog      | False                                                                   |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                                            |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                                            |
 | Range-Lower            | \-                                                                      |
 | Range-Upper            | \-                                                                      |
 | Search-Flags           | 0x00000000                                                              |
 | System-Flags           | 0x00000010                                                              |
-| In verwendete Klassen        | [**PKI-Zertifikat-Vorlage**](c-pkicertificatetemplate.md)<br/> |
+| In verwendete Klassen        | [**PKI-Certificate-Template**](c-pkicertificatetemplate.md)<br/> |
 
 
 

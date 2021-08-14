@@ -1,33 +1,33 @@
 ---
-description: Die Zertifikatregistrierungs-API unterstützt die folgenden grundlegenden ASN. 1-Typen.
+description: Die Zertifikatregistrierungs-API unterstützt die folgenden grundlegenden ASN.1-Typen.
 ms.assetid: ca247945-ebcf-492e-9cc8-a67a9454fa95
 title: Grundlegende Typen
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 8e9f3ae64c058fce3466ca06e7bf205c4c4165fc
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 16e2cc1b8825872789d095616e868fe39e306736583f8ea1784543808b7ec4d3
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106359031"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118905045"
 ---
 # <a name="basic-types"></a>Grundlegende Typen
 
-Die Zertifikatregistrierungs-API unterstützt die folgenden grundlegenden ASN. 1-Typen.
+Die Zertifikatregistrierungs-API unterstützt die folgenden grundlegenden ASN.1-Typen.
 
-## <a name="bit-string"></a>Bitzeichenfolge
+## <a name="bit-string"></a>BIT STRING
 
 Codierungstag: 0x03
 
-Certreq.exe Name: \_ Bitzeichenfolge
+Certreq.exe Name: BIT \_ STRING
 
-Ein Bit oder eine binäre Zeichenfolge ist ein beliebig langes Array von Bits. Bestimmte Bits können durch ganze Zahlen und zugewiesene Namen in Klammern identifiziert werden, wie im folgenden Beispiel gezeigt.
+Ein Bit oder eine binäre Zeichenfolge ist ein beliebig langes Array von Bits. Bestimmte Bits können durch ganze Zahlen in Klammern und zugewiesene Namen identifiziert werden, wie im folgenden Beispiel zu sehen.
 
 ``` syntax
 Versions ::= BIT STRING{ version-1(0), version-2(1) } 
 ```
 
-Zertifikat Schlüssel und Signaturen werden oft als Bitzeichenfolgen dargestellt.
+Zertifikatschlüssel und Signaturen werden häufig als Bitzeichenfolgen dargestellt.
 
 ``` syntax
 ---------------------------------------------------------------------
@@ -45,9 +45,9 @@ SubjectPublicKeyInfo ::= SEQUENCE
 
 Codierungstag: 0x01
 
-Certreq.exe Name: Boolescher Wert
+Certreq.exe Name: BOOLEAN
 
-Ein boolescher Typ kann einen von zwei Werten enthalten: **true** oder **false**. Im folgenden Beispiel wird die ASN. 1-Struktur für eine grundlegende Einschränkungs Zertifikats Erweiterung veranschaulicht. Das **Feld** ZS gibt an, ob ein Zertifikat Antragsteller eine Zertifizierungsstelle (Certification Authority, ca) ist. Die Standard Kritizität ist **false**.
+Ein boolescher Typ kann einen von zwei Werten enthalten: **TRUE** oder **FALSE.** Das folgende Beispiel zeigt die ASN.1-Struktur für eine Basic Constraints-Zertifikaterweiterung. Das **Feld cA** gibt an, ob ein Zertifikatsubjekt eine Zertifizierungsstelle ist. Die Standardkritischität ist **FALSE.**
 
 ``` syntax
 ---------------------------------------------------------------------
@@ -65,9 +65,9 @@ BasicConstraints ::= SEQUENCE
 
 Codierungstag: 0x02
 
-Certreq.exe Name: Integer
+Certreq.exe Name: INTEGER
 
-Eine ganze Zahl kann normalerweise ein beliebiger positiver oder negativer ganzzahliger Wert sein. Das folgende Beispiel zeigt die ASN. 1-Struktur für einen öffentlichen RSA-Schlüssel. Beachten Sie, dass das Feld **publicexponent** auf eine positive ganze Zahl kleiner als 4.294.967.296 beschränkt ist.
+Eine ganze Zahl kann in der Regel ein beliebiger positiver oder negativer Ganzzahlwert sein. Das folgende Beispiel zeigt die ASN.1-Struktur für einen öffentlichen RSA-Schlüssel. Beachten Sie, dass das Feld **publicExponent** auf eine positive ganze Zahl kleiner als 4.294.967.296 beschränkt ist.
 
 ``` syntax
 ---------------------------------------------------------------------
@@ -87,9 +87,9 @@ RSAPublicKey ::= SEQUENCE
 
 Codierungstag: 0x05
 
-Certreq.exe Name: **null**
+Certreq.exe Name: **NULL**
 
-Ein **null** -Typ enthält ein einzelnes Byte 0x00. Sie kann überall dort verwendet werden, wo die Zertifikat Anforderung einen leeren Wert angeben muss. Ein **AlgorithmIdentifier** ist z. b. eine Sequenz, die einen Objekt Bezeichner (OID) und optionale Parameter enthält.
+Ein **NULL-Typ** enthält ein einzelnes Byte 0x00. Sie kann überall dort verwendet werden, wo die Zertifikatanforderung einen leeren Wert angeben muss. Beispielsweise ist ein **AlgorithmIdentifier** eine Sequenz, die einen Objektbezeichner (OID) und optionale Parameter enthält.
 
 ``` syntax
 ---------------------------------------------------------------------
@@ -103,7 +103,7 @@ AlgorithmIdentifier ::= SEQUENCE
 }
 ```
 
-Wenn beim Codieren der Struktur keine Parameter vorhanden sind, wird **null** verwendet, um einen leeren Wert anzugeben.
+Wenn beim Codieren der Struktur keine Parameter vorhanden sind, wird **NULL** verwendet, um einen leeren Wert anzugeben.
 
 ``` syntax
 30 0d            ; SEQUENCE (d Bytes)
@@ -113,13 +113,13 @@ Wenn beim Codieren der Struktur keine Parameter vorhanden sind, wird **null** ve
 |  |  |  05 00          ; NULL (0 Bytes)
 ```
 
-## <a name="object-identifier"></a>Objekt Bezeichner
+## <a name="object-identifier"></a>OBJEKTBEZEICHNER
 
 Codierungstag: 0x06
 
-Certreq.exe Name: Objekt- \_ ID
+Certreq.exe Name: \_ OBJEKT-ID
 
-Die Zertifikatregistrierungs-API verwendet Objekt Bezeichner (OIDs) als Typ eines universellen Zeigers auf Algorithmusbezeichner, Attribute und andere PKI-Elemente. OIDs werden in der Regel in einer punktierten Dezimal Zeichenfolge wie "2.16.840.1.101.3.4.1.42" dargestellt. Die einzelnen Elemente in der Zeichenfolge, die durch Punkte voneinander getrennt sind, stellen die Bögen und Blätter in einer Registrierungsstelle dar, die das Objekt und die Organisation, die es registriert hat, eindeutig identifizieren. Beispiel: die vorangehende OID kann auf Joint-ISO-ITU-t (2) Country (16) US (840) Organization (1) gov (101) CSOR (3) nistalgorithms (4) aesalgs (1) mit angefügtem 42-Bit angehängt werden, um den Algorithmus für die Verschlüsselung des 256-Bit-AES-Verschlüsselungs Blocks (CBC
+Die Zertifikatregistrierungs-API verwendet Objektbezeichner (OIDs) als Typ universeller Zeiger auf Algorithmusbezeichner, Attribute und andere PKI-Elemente. OIDs werden in der Regel in einer gepunkteten Dezimalzeichenfolge wie "2.16.840.1.101.3.4.1.42" dargestellt. Die einzelnen Elemente in der Zeichenfolge, die durch Punkte getrennt sind, stellen die Bogen und Blätter in einer Registrierungsautoritätsstruktur dar, die das Objekt und die Organisation, die es registriert hat, eindeutig identifiziert. Beispielsweise kann die vorherige OID auf joint-iso-itu-t(2) country(16) us(840) organization(1) gov(101) csor(3) nistAlgorithms(4) aesAlgs(1) mit .42 erweitert werden, um den Algorithmus der 256-Bit-AES-Verschlüsselungsblockverkettung (CBC) eindeutig zu identifizieren.
 
 ``` syntax
 ---------------------------------------------------------------------
@@ -133,13 +133,13 @@ AlgorithmIdentifier ::= SEQUENCE
 }
 ```
 
-## <a name="octet-string"></a>Oktett-Zeichenfolge
+## <a name="octet-string"></a>OKTETTZEICHENFOLGE
 
 Codierungstag: 0x04
 
-Certreq.exe Name: Oktett- \_ Zeichenfolge
+Certreq.exe Name: OCTET \_ STRING
 
-Eine Oktett-Zeichenfolge ist ein beliebig großes Bytearray. Im Gegensatz zum **bitstring** -Typ können bestimmten Bits und Bytes in der Zeichenfolge jedoch keine Namen zugewiesen werden. Das Wort Oktett ist eine plattformunabhängige Methode zum Verweisen auf ein Arbeitsspeicher Wort. Im Kontext der Zertifikatregistrierungs-API sind Oktett und Byte austauschbar.
+Eine Oktettzeichenfolge ist ein beliebig großes Bytearray. Im Gegensatz zum **BIT STRING-Typ** können bestimmten Bits und Bytes in der Zeichenfolge jedoch keine Namen zugewiesen werden. Das Wort Oktett ist eine plattformunabhängige Möglichkeit, auf ein Speicherwort zu verweisen. Im Kontext der Zertifikatregistrierungs-API sind Oktett und Byte austauschbar.
 
 ``` syntax
 ---------------------------------------------------------------------
@@ -158,13 +158,13 @@ AuthorityKeyId ::= SEQUENCE
 
 <dl> <dt>
 
-[ASN. 1-Typsystem](about-asn-1-type-system.md)
+[ASN.1-Typsystem](about-asn-1-type-system.md)
 </dt> <dt>
 
 [Distinguished Encoding Rules](distinguished-encoding-rules.md)
 </dt> <dt>
 
-[Der-Codierung von ASN. 1-Typen](about-der-encoding-of-asn-1-types.md)
+[DER-Codierung von ASN.1-Typen](about-der-encoding-of-asn-1-types.md)
 </dt> </dl>
 
  

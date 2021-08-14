@@ -1,7 +1,7 @@
 ---
 description: Schreibt die Zugriffsregeln für den angegebenen Typ.
 ms.assetid: d5cfd782-8d87-45ae-a574-0a294a30ca71
-title: 'Ipstore:: schreiteaccessruleset-Methode (pstore. h)'
+title: IPStore::WriteAccessRuleset-Methode (Pstore.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,16 +13,16 @@ api_type:
 - COM
 api_location:
 - Pstorec.dll
-ms.openlocfilehash: 7399ff800087720d65cb45e80ccab080a7df9baf
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: a21fac6df5ab4d87e55d71e45f5698251ca4f82b6c93de1072c2ae5bcd7236aa
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106372455"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118955899"
 ---
-# <a name="ipstorewriteaccessruleset-method"></a>Ipstore:: schreiteaccessruleset-Methode
+# <a name="ipstorewriteaccessruleset-method"></a>IPStore::WriteAccessRuleset-Methode
 
-\[Geschützter Speicher (pstore) ist für die Verwendung in Windows Server 2003 und Windows XP verfügbar. Sie steht nur für schreibgeschützte Vorgänge in Windows Server 2008 und Windows Vista zur Verfügung, ist aber möglicherweise in nachfolgenden Versionen nicht verfügbar. Pstore verwendet eine ältere Implementierung des Schutzes von Daten. Entwicklern wird dringend empfohlen, den stärkeren Datenschutz zu nutzen, der von den Funktionen [**CryptProtectData**](/windows/win32/api/dpapi/nf-dpapi-cryptprotectdata) und [**CryptUnprotectData**](/windows/win32/api/dpapi/nf-dpapi-cryptunprotectdata) bereitgestellt wird.\]
+\[Protected Storage (Pstore) ist für die Verwendung in Windows Server 2003 und Windows XP verfügbar. Sie ist nur für schreibgeschützte Vorgänge in Windows Server 2008 und Windows Vista verfügbar, ist in nachfolgenden Versionen jedoch möglicherweise nicht verfügbar. Pstore verwendet eine ältere Implementierung des Datenschutzes. Entwicklern wird dringend empfohlen, den verstärkten Datenschutz zu nutzen, der von den Funktionen [**CryptProtectData**](/windows/win32/api/dpapi/nf-dpapi-cryptprotectdata) und [**CryptUnprotectData**](/windows/win32/api/dpapi/nf-dpapi-cryptunprotectdata) bereitgestellt wird.\]
 
 \[Diese Methode ist nicht implementiert.\]
 
@@ -48,42 +48,42 @@ HRESULT WriteAccessRuleset(
 
 <dl> <dt>
 
-*Schlüssel* \[ in\]
+*Schlüssel* \[ In\]
 </dt> <dd>
 
 Reserviert.
 
 </dd> <dt>
 
-*pType* \[ in\]
+*pType* \[ In\]
 </dt> <dd>
 
 Reserviert.
 
 </dd> <dt>
 
-*psubtype* \[ in\]
+*pSubtype* \[ In\]
 </dt> <dd>
 
 Reserviert.
 
 </dd> <dt>
 
-*pinfo* \[ in\]
+*pInfo* \[ In\]
 </dt> <dd>
 
 Reserviert.
 
 </dd> <dt>
 
-*prules* \[ in\]
+*pRules* \[ In\]
 </dt> <dd>
 
 Reserviert.
 
 </dd> <dt>
 
-*dwFlags* \[ in\]
+*dwFlags* \[ In\]
 </dt> <dd>
 
 Reserviert.
@@ -92,7 +92,7 @@ Reserviert.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Bei Aufrufen dieser Methode tritt immer ein Fehler auf.
+Aufrufe dieser Methode schlagen immer fehl.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -100,16 +100,16 @@ Bei Aufrufen dieser Methode tritt immer ein Fehler auf.
 
 | Anforderung | Wert |
 |-------------------|----------------------------------------------------------------------------------------|
-| Header<br/> | <dl> <dt>Pstore. h</dt> </dl>    |
+| Header<br/> | <dl> <dt>Pstore.h</dt> </dl>    |
 | DLL<br/>    | <dl> <dt>Pstorec.dll</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Ipstore**](ipstore.md)
+[**IPStore**](ipstore.md)
 </dt> </dl>
 
  

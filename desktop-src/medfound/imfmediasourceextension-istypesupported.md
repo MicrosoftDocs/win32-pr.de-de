@@ -1,7 +1,7 @@
 ---
 description: Ruft einen Wert ab, der angibt, ob der angegebene MIME-Typ von der Medienquelle unterstützt wird.
 ms.assetid: 894ef7d2-d008-42e1-8a61-26f35a8877be
-title: 'Imfmediasourceextension:: istypesupportiert-Methode'
+title: ANDROMediaSourceExtension::IsTypeSupported-Methode
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,14 +13,14 @@ api_type:
 - COM
 api_location:
 - mfmediaengine.h
-ms.openlocfilehash: 4c2784dc4e97f96ae28ba56544a7f425de8ce742
-ms.sourcegitcommit: c16214e53680dc71d1c07111b51f72b82a4512d8
+ms.openlocfilehash: e2292ab717914e29a7741fed997b0f8b8b16e152e2fa889dd7ecb04bbb98aaea
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/03/2021
-ms.locfileid: "106366553"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118974339"
 ---
-# <a name="imfmediasourceextensionistypesupported-method"></a>Imfmediasourceextension:: istypesupportiert-Methode
+# <a name="imfmediasourceextensionistypesupported-method"></a>ANDROMediaSourceExtension::IsTypeSupported-Methode
 
 Ruft einen Wert ab, der angibt, ob der angegebene MIME-Typ von der Medienquelle unterstützt wird.
 
@@ -39,16 +39,16 @@ BOOL IsTypeSupported(
 
 <dl> <dt>
 
-*Typ* \[ in\]
+*Type (Typ)* \[ In\]
 </dt> <dd>
 
-Der Medientyp, für den Unterstützung überprüft werden soll.
+Der Medientyp, auf den die Unterstützung überprüft werden soll.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-**true** , wenn der Medientyp unterstützt wird. andernfalls **false**.
+**TRUE,** wenn der Medientyp unterstützt wird. andernfalls **FALSE.**
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -56,17 +56,17 @@ Der Medientyp, für den Unterstützung überprüft werden soll.
 
 | Anforderung | Wert |
 |-------------------------------------|----------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | \[Nur Desktop-Apps Windows 8.1\]<br/>                                                 |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2012 R2 \[ -Desktop-Apps\]<br/>                                      |
-| IDL<br/>                      | <dl> <dt>MF mediaengine. idl</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | \[Windows 8.1 Nur Desktop-Apps\]<br/>                                                 |
+| Unterstützte Mindestversion (Server)<br/> | Windows Server 2012 Nur \[ R2-Desktop-Apps\]<br/>                                      |
+| Idl<br/>                      | <dl> <dt>Mfmediaengine.idl</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Imfmediasourceextension**](/windows/desktop/api/mfmediaengine/nn-mfmediaengine-imfmediasourceextension)
+[**ANDROMediaSourceExtension**](/windows/desktop/api/mfmediaengine/nn-mfmediaengine-imfmediasourceextension)
 </dt> </dl>
 
  

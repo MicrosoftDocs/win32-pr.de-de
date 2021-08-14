@@ -9,20 +9,20 @@ topic_type:
 api_name: ''
 api_type: ''
 api_location: ''
-ms.openlocfilehash: 73853250c581e460360f5490defc0c94e76e5be3
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: cb2efe504e2d09b3fae2b6d6293772bf67a3f038a5f9c43330707f541e2ba8f9
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106362927"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118900966"
 ---
 # <a name="receiving-the-returned-certificate"></a>Empfangen des zurückgegebenen Zertifikats
 
-Wenn die Zertifizierungsstelle (Certification Authority, ca) die Identitätsinformationen des Anforderers überprüft hat und erfüllt ist, dass die anfordernde Person der Besitzer des privaten Schlüssels ist und dass die Daten zu diesem Anforderer korrekt sind, die Zertifizierungsstelle erstellt ein X. 509-Zertifikat, signiert Sie, verpackt Sie mit allen anderen benötigten Zertifikaten (z. b. dem Zertifikat der Zertifizierungsstelle) in einer Nachricht und sendet die Nachricht an den Anforderer. Bei der Nachricht kann es sich um eine PKCS \# 7-Nachricht oder eine CMC-Antwort handeln (v2-Vorlagen führen zu einer CMC-Antwort).
+Wenn die Zertifizierungsstelle die Identitätsinformationen des Anfordernden überprüft hat und sich davon überzeugt hat, dass der Anfordernde der Besitzer des privaten Schlüssels ist und die Daten über diesen Anfordernden korrekt sind, erstellt die Zertifizierungsstelle ein X.509-Zertifikat, signiert es und verpackt es mit allen anderen erforderlichen Zertifikaten (z. B. dem eigenen Zertifikat der Zertifizierungsstelle) in einer Nachricht.  und sendet die Nachricht an den Anfordernden. Die Nachricht kann eine PKCS \# 7-Nachricht oder eine CMC-Antwort sein (V2-Vorlagen führen zu einer CMC-Antwort).
 
-Die empfangende Anwendung übergibt die Nachricht an die Zertifikat Registrierungs Steuerung. Die Zertifikat Registrierungs Steuerung öffnet dann die Nachricht und extrahiert die Zertifikate. Der Benutzer wird in einem Dialogfeld gefragt, ob der Benutzer selbst signierte Zertifikate im Speicher "root" annimmt. Wenn der Benutzer das Stamm Zertifikat annimmt, werden die restlichen Zertifikate (mit Ausnahme des Zertifikats der anfordernden Person) im Speicher der Zertifizierungsstelle abgelegt. Das Zertifikat der Anforderer wird in den Zertifikat Speicher eingefügt, der von der anfordernden Person in der [**mystorename**](/windows/win32/api/xenroll/nf-xenroll-icenroll-get_mystorename) -Eigenschaft angegeben wird.
+Die empfangende Anwendung übergibt die Nachricht an die Zertifikatregistrierungssteuerung. Die Zertifikatregistrierungssteuerung öffnet dann die Meldung und extrahiert die Zertifikate. Der Benutzer wird in einem Dialogfeld gefragt, ob der Benutzer selbstsignierte Zertifikate im Stammspeicher akzeptiert. Wenn der Benutzer das Stammzertifikat akzeptiert, werden die restlichen Zertifikate (mit Ausnahme des Zertifikats des Anfordernden) im Speicher der Zertifizierungsstelle platziert. Das Zertifikat des Anfordernden wird in dem zertifikatspeicher platziert, der vom Anfordernden in der [**MyStoreName-Eigenschaft angegeben**](/windows/win32/api/xenroll/nf-xenroll-icenroll-get_mystorename) wird.
 
-Im folgenden Beispiel wird gezeigt, wie die Visual Basic Scripting Edition (VBScript) und HTML auf einer Webseite zum empfangen und Speichern der zurückgegebenen Zertifikate verwendet werden.
+Das folgende Beispiel zeigt, wie sie die Visual Basic Scripting Edition (VBScript) und HTML auf einer Webseite verwenden, um die zurückgegebenen Zertifikate zu empfangen und zu speichern.
 
 
 ```VB

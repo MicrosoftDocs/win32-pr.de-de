@@ -1,11 +1,11 @@
 ---
-title: MS-DS-Konsistenz-Child-count-Attribut
-description: Dieses Attribut wird verwendet, um die Konsistenz zwischen dem Verzeichnis und einem anderen Objekt, einer Datenbank oder einer Anwendung zu überprüfen, indem die Anzahl der untergeordneten Objekte verglichen wird.
+title: MS-DS-Consistency-Child-Count-Attribut
+description: Dieses Attribut wird verwendet, um die Konsistenz zwischen dem Verzeichnis und einem anderen Objekt, einer anderen Datenbank oder Anwendung zu überprüfen, indem die Anzahl der untergeordneten Objekte verglichen wird.
 ms.assetid: f7d6e8f0-963b-45a9-86af-8e51d6de32bb
 ms.tgt_platform: multiple
 keywords:
-- AD-Schema für das Attribut "ms-DS-Konsistenz-Child-count"
-- AD-Schema für ms-DS-ConsistencyChildCount-Attribut
+- AD-Schema des MS-DS-Consistency-Child-Count-Attributs
+- mS-DS-ConsistencyChildCount-Attribut AD-Schema
 topic_type:
 - apiref
 api_name:
@@ -14,28 +14,28 @@ api_type:
 - Schema
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 8b9c46d1c4519550a91d92d0a82f726a20572490
-ms.sourcegitcommit: b77ace27b0432e7cd3863191b11926be032fbe2f
+ms.openlocfilehash: c637ae6aabae543f31cf14292150d51e3dfe5c39f05a1533fb73f6afff9d51a0
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "104107192"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118961179"
 ---
-# <a name="ms-ds-consistency-child-count-attribute"></a>MS-DS-Konsistenz-Child-count-Attribut
+# <a name="ms-ds-consistency-child-count-attribute"></a>MS-DS-Consistency-Child-Count-Attribut
 
-Dieses Attribut wird verwendet, um die Konsistenz zwischen dem Verzeichnis und einem anderen Objekt, einer Datenbank oder einer Anwendung zu überprüfen, indem die Anzahl der untergeordneten Objekte verglichen wird.
+Dieses Attribut wird verwendet, um die Konsistenz zwischen dem Verzeichnis und einem anderen Objekt, einer anderen Datenbank oder Anwendung zu überprüfen, indem die Anzahl der untergeordneten Objekte verglichen wird.
 
 
 
 | Eingabe | Wert |
 |-------------------|--------------------------------------|
-| CN                | MS-DS-Konsistenz-untergeordnet-Anzahl        |
-| LDAP-Display-Name | mS-DS-ConsistencyChildCount          |
+| CN                | MS-DS-Consistency-Child-Count        |
+| Ldap-Anzeigename | mS-DS-ConsistencyChildCount          |
 | Size              | \-                                   |
-| Berechtigung aktualisieren  | \-                                   |
-| Aktualisierungshäufigkeit  | \-                                   |
+| Aktualisieren von Berechtigungen  | \-                                   |
+| Updatehäufigkeit  | \-                                   |
 | Attribute-Id      | 1.2.840.113556.1.4.1361              |
-| System-ID-GUID    | 178b7bc2-b63a-11d2-90e1-00c04f d91ab1 |
+| System-ID-GUID    | 178b7bc2-b63a-11d2-90e1-00c04fd91ab1 |
 | Syntax            | [**Enumeration**](s-enumeration.md) |
 
 
@@ -43,7 +43,7 @@ Dieses Attribut wird verwendet, um die Konsistenz zwischen dem Verzeichnis und e
 ## <a name="implementations"></a>Implementierungen
 
 -   [**Windows 2000 Server**](#windows-2000-server)
--   [**Windows Server 2003**](#windows-server-2003)
+-   [**Windows Server 2003**](#windows-server-2003)
 -   [**Adam**](#adam)
 -   [**Windows Server 2003 R2**](#windows-server-2003-r2)
 -   [**Windows Server 2008**](#windows-server-2008)
@@ -59,10 +59,10 @@ Dieses Attribut wird verwendet, um die Konsistenz zwischen dem Verzeichnis und e
 | Link-ID                | \-                              |
 | MAPI-Id                | \-                              |
 | System-Only            | False                           |
-| Ist-einwertig       | Richtig                            |
+| Ist einwertig       | True                            |
 | Ist indiziert             | False                           |
 | Im globalen Katalog      | False                           |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                    |
+| NT-Security-Descriptor | O:BAG:BAD:S:                    |
 | Range-Lower            | \-                              |
 | Range-Upper            | \-                              |
 | Search-Flags           | 0x00000000                      |
@@ -71,7 +71,7 @@ Dieses Attribut wird verwendet, um die Konsistenz zwischen dem Verzeichnis und e
 
 
 
-## <a name="windows-server-2003"></a>Windows Server 2003
+## <a name="windows-server-2003"></a>Windows Server 2003
 
 
 
@@ -80,10 +80,10 @@ Dieses Attribut wird verwendet, um die Konsistenz zwischen dem Verzeichnis und e
 | Link-ID                | \-                              |
 | MAPI-Id                | \-                              |
 | System-Only            | False                           |
-| Ist-einwertig       | Richtig                            |
+| Ist einwertig       | True                            |
 | Ist indiziert             | False                           |
 | Im globalen Katalog      | False                           |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                    |
+| NT-Security-Descriptor | O:BAG:BAD:S:                    |
 | Range-Lower            | \-                              |
 | Range-Upper            | \-                              |
 | Search-Flags           | 0x00000000                      |
@@ -101,10 +101,10 @@ Dieses Attribut wird verwendet, um die Konsistenz zwischen dem Verzeichnis und e
 | Link-ID                | \-                              |
 | MAPI-Id                | \-                              |
 | System-Only            | False                           |
-| Ist-einwertig       | Richtig                            |
+| Ist einwertig       | True                            |
 | Ist indiziert             | False                           |
 | Im globalen Katalog      | False                           |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                    |
+| NT-Security-Descriptor | O:BAG:BAD:S:                    |
 | Range-Lower            | \-                              |
 | Range-Upper            | \-                              |
 | Search-Flags           | 0x00000000                      |
@@ -122,10 +122,10 @@ Dieses Attribut wird verwendet, um die Konsistenz zwischen dem Verzeichnis und e
 | Link-ID                | \-                              |
 | MAPI-Id                | \-                              |
 | System-Only            | False                           |
-| Ist-einwertig       | Richtig                            |
+| Ist einwertig       | True                            |
 | Ist indiziert             | False                           |
 | Im globalen Katalog      | False                           |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                    |
+| NT-Security-Descriptor | O:BAG:BAD:S:                    |
 | Range-Lower            | \-                              |
 | Range-Upper            | \-                              |
 | Search-Flags           | 0x00000000                      |
@@ -143,10 +143,10 @@ Dieses Attribut wird verwendet, um die Konsistenz zwischen dem Verzeichnis und e
 | Link-ID                | \-                              |
 | MAPI-Id                | \-                              |
 | System-Only            | False                           |
-| Ist-einwertig       | Richtig                            |
+| Ist einwertig       | True                            |
 | Ist indiziert             | False                           |
 | Im globalen Katalog      | False                           |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                    |
+| NT-Security-Descriptor | O:BAG:BAD:S:                    |
 | Range-Lower            | \-                              |
 | Range-Upper            | \-                              |
 | Search-Flags           | 0x00000000                      |
@@ -164,10 +164,10 @@ Dieses Attribut wird verwendet, um die Konsistenz zwischen dem Verzeichnis und e
 | Link-ID                | \-                              |
 | MAPI-Id                | \-                              |
 | System-Only            | False                           |
-| Ist-einwertig       | Richtig                            |
+| Ist einwertig       | True                            |
 | Ist indiziert             | False                           |
 | Im globalen Katalog      | False                           |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                    |
+| NT-Security-Descriptor | O:BAG:BAD:S:                    |
 | Range-Lower            | \-                              |
 | Range-Upper            | \-                              |
 | Search-Flags           | 0x00000000                      |
@@ -185,10 +185,10 @@ Dieses Attribut wird verwendet, um die Konsistenz zwischen dem Verzeichnis und e
 | Link-ID                | \-                              |
 | MAPI-Id                | \-                              |
 | System-Only            | False                           |
-| Ist-einwertig       | Richtig                            |
+| Ist einwertig       | True                            |
 | Ist indiziert             | False                           |
 | Im globalen Katalog      | False                           |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                    |
+| NT-Security-Descriptor | O:BAG:BAD:S:                    |
 | Range-Lower            | \-                              |
 | Range-Upper            | \-                              |
 | Search-Flags           | 0x00000000                      |

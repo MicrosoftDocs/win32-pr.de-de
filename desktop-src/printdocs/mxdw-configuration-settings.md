@@ -1,28 +1,28 @@
 ---
-description: Mit dem Microsoft XPS Document Writer (MXDW) können Benutzer XPS-Dokument Dateien erstellen, indem Sie Sie aus jeder Windows-Anwendung drucken.
+description: Mit dem Microsoft XPS Document Writer (MXDW) können Benutzer XPS-Dokumentdateien erstellen, indem sie aus einer beliebigen Windows drucken.
 ms.assetid: 1fa50337-2df7-48d3-a179-0ca5ae3dfda3
-title: MXDW-Konfigurationseinstellungen
+title: MXDW-Einstellungen
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: a4026a99baa33ec50bc3ad129ef6610a428f83ab
-ms.sourcegitcommit: de72a1294df274b0a71dc0fdc42d757e5f6df0f3
+ms.openlocfilehash: 7a75d45ea3ad9c8c74280d1e70e418ee0bf4823d1f0332e3d5c772d29976cf2c
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/05/2021
-ms.locfileid: "106366382"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118971189"
 ---
-# <a name="mxdw-configuration-settings"></a>MXDW-Konfigurationseinstellungen
+# <a name="mxdw-configuration-settings"></a>MXDW-Einstellungen
 
-Mit dem Microsoft XPS Document Writer (MXDW) können Benutzer XPS-Dokument Dateien erstellen, indem Sie Sie aus jeder Windows-Anwendung drucken. Anwendungsentwickler können die folgenden Ausgabeeinstellungen von MXDW mithilfe der PrintTicket-und Print-Funktionen des [Druck Schemas](./printschema.md)steuern.
+Mit dem Microsoft XPS Document Writer (MXDW) können Benutzer XPS-Dokumentdateien erstellen, indem sie aus einer beliebigen Windows drucken. Anwendungsentwickler können die folgenden Ausgabeeinstellungen des MXDW mithilfe der PrintTicket- und PrintCapabilities-Teile des [Druckschemas steuern.](./printschema.md)
 
-## <a name="jobinterleaving"></a>Jobinterleaving
+## <a name="jobinterleaving"></a>JobInterleaving
 
-Die jobinterleaving-Einstellung steuert die Inhalts Austausch Reihenfolge für die XPS-Dokumente. Weitere Informationen zum Überschreiben von Aufträgen finden Sie in der [XML Paper Specification](https://www.ecma-international.org/activities/XML%20Paper%20Specification/XPS%20Standard%20WD%201.6.pdf). MXDW unterstützt die folgenden beiden Optionen für diese Einstellung:
+Die JobInterleaving-Einstellung steuert die Reihenfolge der zwischengespeicherten Inhalte für die XPS-Dokumente. Informationen zur Auftragsverfleierung finden Sie im [XML Paper Specification](https://www.ecma-international.org/activities/XML%20Paper%20Specification/XPS%20Standard%20WD%201.6.pdf). MXDW unterstützt die folgenden beiden Optionen für diese Einstellung:
 
--   **Off** : bei dieser Option wird die Überlappungen deaktiviert, sodass alle Daten für jedes Inhalts Element im Dokument zusammenhängend sind, wodurch die Effizienz des zufälligen Zugriffs verbessert wird. Diese Option eignet sich am besten zum Anzeigen eines XPS-Dokuments.
--   **On** : diese Option ermöglicht das überlappen, sodass Daten für jedes Inhalts Element untergliedert und neu angeordnet werden, um eine effizientere sequenzielle Verarbeitung zu ermöglichen. Diese Option eignet sich am besten für das herunterladen und Drucken von Web.
+-   **Off:** Diese Option deaktiviert die Überlappung, sodass alle Daten für jedes Inhaltselement im Dokument zusammenhängend sind, wodurch die Effizienz des zufälligen Zugriffs verbessert wird. Diese Option ist am besten zum Anzeigen eines XPS-Dokuments.
+-   **Ein:** Diese Option ermöglicht die Überlappung, sodass die Daten für jedes Inhaltselement aufgebrochen und neu angeordnet werden, um eine effizientere sequenzielle Verarbeitung zu ermöglichen. Diese Option ist am besten für Webdownloads und -drucke.
 
-Das folgende Beispiel ist ein Beispiel für die printfunktionen-XML-Datei, die die jobinterleaving-Einstellung enthält.
+Das folgende Beispiel ist ein Beispiel für die PrintCapabilities-XML, die die JobInterleaving-Einstellung enthält.
 
 
 ```XML
@@ -48,9 +48,9 @@ Das folgende Beispiel ist ein Beispiel für die printfunktionen-XML-Datei, die d
 
 
 
-Die PrintTicket-XML-Datei ist ähnlich, mit der Ausnahme, dass Sie eine bestimmte Option angibt. Weitere Informationen finden Sie im [Druck Schema](./printschema.md) .
+Die PrintTicket XML-Datei ist ähnlich, mit der Ausnahme, dass sie eine bestimmte Option angibt. Weitere Informationen finden [Sie unter Druckschema.](./printschema.md)
 
-Da jobinterleaving nicht zu den [öffentlichen Schlüsselwörtern des Print-Schemas](./print-schema-public-keywords.md)gehört, müssen Sie eine Deklaration des Namespace (in diesem Fall "ns0000" im **Print-Funktionen** -Tag (oder **PrintTicket**) am Anfang des Printworks-Dokuments (oder PrintTicket) einschließen, wie im folgenden Beispiel gezeigt:
+Da JobInterleaving nicht zu den öffentlichen Schlüsselwörtern des Druckschemas [gehört,](./print-schema-public-keywords.md)müssen Sie eine Deklaration des Namespace (in diesem Fall "ns0000" im **PrintCapabilities-Tag** (oder **PrintTicket)** am Anfang des PrintCapabilities-Dokuments (oder PrintTicket) hinzufügen, wie im folgenden Beispiel gezeigt:
 
 
 ```XML
@@ -63,16 +63,16 @@ xmlns:ns0000=http://schemas.microsoft.com/windows/2006/06/printing/printschemake
 
 
 
-## <a name="jobimagetype"></a>Jobimagetype
+## <a name="jobimagetype"></a>JobImageType
 
-Jobimagetype steuert das Ausgabeformat von eingebetteten Bitmapformaten. MXDW unterstützt die folgenden vier Optionen für diese Einstellung:
+JobImageType steuert das Ausgabeformat eingebetteter Bitmapformate. MXDW unterstützt die folgenden vier Optionen für diese Einstellung:
 
--   **Jpeghigh** : diese Option gibt das JPEG-Bild mit einer hohen Komprimierungs Ebene an. Diese Option erzeugt die kleinste Dateigröße, jedoch die niedrigste Bildqualität.
--   **Jpegmed** : diese Option gibt das JPEG-Bild mit mittlerer Komprimierungs Ebene an. Diese Option bietet ein optimales Gleichgewicht zwischen Dateigröße und Bildqualität.
--   **Jpeglow** : diese Option gibt das JPEG-Bild mit einer geringen Komprimierungs Ebene an. Mit dieser Option wird die Dateigröße und hohe Bildqualität am geringsten reduziert.
--   **PNG** : diese Option gibt das PNG-Bildformat mit Verlust loser Komprimierung an. Diese Option erzeugt die größte Dateigröße und die höchste Bildqualität.
+-   **JPEGHigh:** Diese Option gibt das JPEG-Bild mit einem hohen Komprimierungsgrad an. Diese Option erzeugt die kleinste Dateigröße, aber die niedrigste Bildqualität.
+-   **JPEGMed:** Diese Option gibt das JPEG-Bild mit einer mittleren Komprimierungsebene an. Diese Option bietet die beste Balance zwischen Dateigröße und Imagequalität.
+-   **JPEGLow:** Diese Option gibt das JPEG-Bild mit geringer Komprimierung an. Diese Option führt zu einer geringsten Verringerung der Dateigröße und hoher Qualität.
+-   **PNG:** Diese Option gibt das PNG-Bildformat mit verlustfreier Komprimierung an. Diese Option erzeugt die größte Dateigröße und die höchste Imagequalität.
 
-Die printfunktionen-XML-Datei der Einstellung "jobimagetype" wird unten angezeigt:
+Die PrintCapabilities-XML der JobImageType-Einstellung wird unten angezeigt:
 
 
 ```XML
@@ -108,9 +108,9 @@ Die printfunktionen-XML-Datei der Einstellung "jobimagetype" wird unten angezeig
 
 
 
-Die PrintTicket-XML-Datei ist ähnlich, mit der Ausnahme, dass Sie eine bestimmte Option angibt. Weitere Informationen finden Sie im [Druck Schema](./printschema.md) .
+Die PrintTicket XML-Datei ist ähnlich, mit der Ausnahme, dass sie eine bestimmte Option angibt. Weitere Informationen finden [Sie unter Druckschema.](./printschema.md)
 
-Da jobimagetype kein öffentliches Schlüsselwort für den [Druck Schema](./print-schema-public-keywords.md)ist, müssen Sie eine Deklaration des Namespaces (in diesem Fall "ns0000" in das **Print-Funktionen** -Tag (oder **PrintTicket**) am Anfang des Printworks-Dokuments (oder PrintTicket) einschließen, wie im folgenden Beispiel gezeigt:
+Da JobImageType nicht zu den öffentlichen Schlüsselwörtern des Druckschemas [gehört,](./print-schema-public-keywords.md)müssen Sie eine Deklaration des Namespace (in diesem Fall "ns0000" im **PrintCapabilities-Tag** (oder **PrintTicket)** am Anfang des PrintCapabilities-Dokuments (oder PrintTicket) hinzufügen, wie im folgenden Beispiel gezeigt:
 
 
 ```XML
@@ -130,13 +130,13 @@ xmlns:ns0000=http://schemas.microsoft.com/windows/2006/06/printing/printschemake
 [XML Paper Specification](https://www.ecma-international.org/activities/XML%20Paper%20Specification/XPS%20Standard%20WD%201.6.pdf)
 </dt> <dt>
 
-[Druck Schema Spezifikation](https://download.microsoft.com/download/D/E/C/DECA6E6B-3E81-48E7-B7EF-6D92A547D03C/print-schema-spec-2-0.zip)
+[Spezifikation des Druckschemas](https://download.microsoft.com/download/D/E/C/DECA6E6B-3E81-48E7-B7EF-6D92A547D03C/print-schema-spec-2-0.zip)
 </dt> <dt>
 
-[Druck Schema](./printschema.md)
+[Druckschema](./printschema.md)
 </dt> <dt>
 
-[XPS-Spezifikation und Lizenz Downloads](https://www.ecma-international.org/activities/XML%20Paper%20Specification/XPS%20Standard%20WD%201.6.pdf)
+[XPS-Spezifikation und Lizenzdownloads](https://www.ecma-international.org/activities/XML%20Paper%20Specification/XPS%20Standard%20WD%201.6.pdf)
 </dt> </dl>
 
  

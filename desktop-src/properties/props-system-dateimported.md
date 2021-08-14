@@ -1,19 +1,19 @@
 ---
 description: Das Datum und die Uhrzeit, zu der die Datei in eine private Anwendungsdatenbank importiert wurde.
 ms.assetid: b859c2c9-0985-451c-be05-e17101bc2f3c
-title: System. dateimportiert
+title: System.DateImported
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 19b33e8a4a915eca0673913b5e6ab766067d1689
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 3078bd3be9784ad0f170afae0901a3db058da77894a27ba21438b32b3da82c18
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106368727"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118728988"
 ---
-# <a name="systemdateimported"></a>System. dateimportiert
+# <a name="systemdateimported"></a>System.DateImported
 
-Das Datum und die Uhrzeit, zu der die Datei in eine private Anwendungsdatenbank importiert wurde. Diese Eigenschaft kann z. b. verwendet werden, wenn ein Foto in eine Fotodatenbank importiert wird. Diese Eigenschaft ist nicht mit [System. dateerworbener](./props-system-dateacquired.md)identisch.
+Das Datum und die Uhrzeit, zu der die Datei in eine private Anwendungsdatenbank importiert wurde. Diese Eigenschaft kann beispielsweise verwendet werden, wenn ein Foto in eine Fotodatenbank importiert wird. Diese Eigenschaft ist nicht identisch mit [System.DateAcquired](./props-system-dateacquired.md).
 
 ## <a name="windows-10-version-1703-windows-10-version-1607-windows-10-version-1511-windows-10-version-1507-windows-81-windows-8-windows-7"></a>Windows 10, Version 1703, Windows 10, Version 1607, Windows 10, Version 1511, Windows 10, Version 1507, Windows 8.1, Windows 8, Windows 7
 
@@ -44,54 +44,54 @@ propertyDescription
       type = DateTime
 ```
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Pkey-Werte werden in "propkey. h" definiert.
+PKEY-Werte werden in Propkey.h definiert.
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
 <dl> <dt>
 
-[propertydescription](./propdesc-schema-propertydescription.md)
+[propertyDescription](./propdesc-schema-propertydescription.md)
 </dt> <dt>
 
-[SearchInfo](./propdesc-schema-searchinfo.md)
+[searchInfo](./propdesc-schema-searchinfo.md)
 </dt> <dt>
 
-[Labelinfo](./propdesc-schema-labelinfo.md)
+[labelInfo](./propdesc-schema-labelinfo.md)
 </dt> <dt>
 
-[TypeInfo](./propdesc-schema-typeinfo.md)
+[Typeinfo](./propdesc-schema-typeinfo.md)
 </dt> <dt>
 
-[Display Info](./propdesc-schema-displayinfo.md)
+[displayInfo](./propdesc-schema-displayinfo.md)
 </dt> <dt>
 
-[StringFormat](./propdesc-schema-stringformat.md)
+[Stringformat](./propdesc-schema-stringformat.md)
 </dt> <dt>
 
-[BooleanFormat](./propdesc-schema-booleanformat.md)
+[booleanFormat](./propdesc-schema-booleanformat.md)
 </dt> <dt>
 
-[NumberFormat](./propdesc-schema-numberformat.md)
+[Numberformat](./propdesc-schema-numberformat.md)
 </dt> <dt>
 
 [dateTimeFormat](./propdesc-schema-datetimeformat.md)
 </dt> <dt>
 
-[enumeratedlist](./propdesc-schema-enumeratedlist.md)
+[enumeratedList](./propdesc-schema-enumeratedlist.md)
 </dt> <dt>
 
-[DrawControl](./propdesc-schema-drawcontrol.md)
+[drawControl](./propdesc-schema-drawcontrol.md)
 </dt> <dt>
 
-[editcontrol](./propdesc-schema-editcontrol.md)
+[editControl](./propdesc-schema-editcontrol.md)
 </dt> <dt>
 
-[FilterControl](./propdesc-schema-filtercontrol.md)
+[Filtercontrol](./propdesc-schema-filtercontrol.md)
 </dt> <dt>
 
-[querycontrol](./propdesc-schema-querycontrol.md)
+[queryControl](./propdesc-schema-querycontrol.md)
 </dt> </dl>
 
  

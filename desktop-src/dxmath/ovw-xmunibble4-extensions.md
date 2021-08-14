@@ -1,19 +1,19 @@
 ---
-description: XMUNIBBLE4 beschreibt einen 4D-Vektor mit vier nicht signierten 4-Bit-ganzzahligen Komponenten.
+description: XMUNIBBLE4 beschreibt einen 4D-Vektor mit vier 4-Bit-Ganzzahlkomponenten ohne Vorzeichen.
 ms.assetid: c9581948-f80f-4467-94a2-d6da2ddedb26
 title: XMUNIBBLE4-Erweiterungen
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 1d6d257e388ff75c3970020dc5689dcc9d2dd8ba
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 2b50b0faf0b9ad8d0f217e62cd6d526668c8a315c672c8258353f2bc2d60e213
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "103754097"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118500887"
 ---
 # <a name="xmunibble4-extensions"></a>XMUNIBBLE4-Erweiterungen
 
-[**XMUNIBBLE4**](/windows/win32/api/directxpackedvector/ns-directxpackedvector-xmunibble4) beschreibt einen 4D-Vektor mit vier nicht signierten 4-Bit-ganzzahligen Komponenten.
+[**XMUNIBBLE4**](/windows/win32/api/directxpackedvector/ns-directxpackedvector-xmunibble4) beschreibt einen 4D-Vektor mit vier 4-Bit-Ganzzahlkomponenten ohne Vorzeichen.
 
 > [!Note]  
 > Die hier aufgeführten Features sind nur bei der Entwicklung mit C++ verfügbar.
@@ -26,8 +26,8 @@ ms.locfileid: "103754097"
 
 | Thema                                                           | BESCHREIBUNG                                      |
 |-----------------------------------------------------------------|--------------------------------------------------|
-| [**XMUNIBBLE4-Konstruktoren**](xmunibble4-ctor.md)<br/>   | Von verfügbar gemachte Konstruktoren `XMUNIBBLE4` .<br/> |
-| [XMUNIBBLE4-Operatoren](ovw-xmunibble4-operators.md)<br/> | Von verfügbar gemachte Operatoren `XMUNIBBLE4` .<br/>    |
+| [**XMUNIBBLE4-Konstruktoren**](xmunibble4-ctor.md)<br/>   | Konstruktoren, die von verfügbar gemacht `XMUNIBBLE4` werden.<br/> |
+| [XMUNIBBLE4-Operatoren](ovw-xmunibble4-operators.md)<br/> | Operatoren, die von verfügbar gemacht `XMUNIBBLE4` werden.<br/>    |
 
 
 

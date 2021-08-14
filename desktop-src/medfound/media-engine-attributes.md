@@ -1,35 +1,35 @@
 ---
-description: Die Medien-Engine unterstützt die folgenden Konfigurations Attribute.
+description: Die Medien-Engine unterstützt die folgenden Konfigurationsattribute.
 ms.assetid: 08282D80-53F5-463F-B87F-522F72823E99
-title: Medien-Engine-Attribute
+title: Media Engine-Attribute
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: ff2c6961a9fd9851a39466d22569b62fe3de1683
-ms.sourcegitcommit: c16214e53680dc71d1c07111b51f72b82a4512d8
+ms.openlocfilehash: 4413932ff345c2b95f780bcbaecc81d3ddc5e39071986a5270778223b0f752a1
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/03/2021
-ms.locfileid: "106366374"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118974229"
 ---
-# <a name="media-engine-attributes"></a>Medien-Engine-Attribute
+# <a name="media-engine-attributes"></a>Media Engine-Attribute
 
-Die Medien-Engine unterstützt die folgenden Konfigurations Attribute.
+Die Medien-Engine unterstützt die folgenden Konfigurationsattribute.
 
--   [\_ \_ audiokategorie der MF-Medien \_ -Engine \_](mf-media-engine-audio-category.md)
--   [\_ \_ \_ audioendpunktrolle der MF-Medien-Engine \_ \_](mf-media-engine-audio-endpoint-role.md)
--   [\_Browser- \_ \_ \_ Kompatibilitäts \_ Modus des MF-medienmoduls](mf-media-engine-browser-compatibility-mode.md)
--   [MF- \_ Medienmodul \_ \_ Rückruf](mf-media-engine-callback.md)
--   [Informationen \_ zur \_ \_ Inhalts \_ Schutz- \_ Flags für MF-Medien](mf-media-engine-content-protection-flags.md)
--   [MF- \_ Media- \_ Engine \_ Content \_ Protection \_ Manager](mf-media-engine-content-protection-manager.md)
--   [\_corewindow der MF-Medien- \_ Engine \_](mf-media-engine-corewindow.md)
--   [MF- \_ Medien- \_ Engine \_ DXGI- \_ Manager](mf-media-engine-dxgi-manager.md)
--   [Erweiterung der MF- \_ Medien- \_ Engine \_](mf-media-engine-extension.md)
--   [MF- \_ Medien- \_ Engine \_ OPM- \_ HWND](mf-media-engine-opm-hwnd.md)
--   [MF- \_ Medien-Engine-Wiedergabe- \_ \_ \_ HWND](mf-media-engine-playback-hwnd.md)
--   [\_ \_ \_ Wiedergabe \_ Visualisierung für das MF-Medienmodul](mf-media-engine-playback-visual.md)
--   [Konfigurations Speicher der MF- \_ Medien- \_ Engine- \_ \_ quellresolver \_ \_](mf-media-engine-source-resolver-config-store.md)
--   [MF- \_ Medien- \_ Engine- \_ Stream \_ enthält \_ alpha \_ Kanal](mf-media-engine-stream-contains-alpha-channel.md)
--   [\_ \_ \_ Video \_ Ausgabe \_ Format der MF-Medien-Engine](mf-media-engine-video-output-format.md)
+-   [MF \_ MEDIA \_ ENGINE \_ AUDIO \_ CATEGORY](mf-media-engine-audio-category.md)
+-   [\_AUDIOENDPUNKTROLLE DER MF-MEDIEN-ENGINE \_ \_ \_ \_](mf-media-engine-audio-endpoint-role.md)
+-   [MF \_ MEDIA \_ \_ ENGINE- \_ BROWSERKOMPATIBILITÄTSMODUS \_](mf-media-engine-browser-compatibility-mode.md)
+-   [MF \_ MEDIA \_ ENGINE \_ CALLBACK](mf-media-engine-callback.md)
+-   [MF \_ MEDIA \_ ENGINE \_ CONTENT \_ PROTECTION \_ FLAGS](mf-media-engine-content-protection-flags.md)
+-   [MF \_ MEDIA \_ ENGINE \_ CONTENT \_ PROTECTION \_ MANAGER](mf-media-engine-content-protection-manager.md)
+-   [MF \_ MEDIA \_ ENGINE \_ COREWINDOW](mf-media-engine-corewindow.md)
+-   [MF \_ MEDIA \_ ENGINE \_ DXGI \_ MANAGER](mf-media-engine-dxgi-manager.md)
+-   [MF \_ MEDIA \_ \_ ENGINE-ERWEITERUNG](mf-media-engine-extension.md)
+-   [MF \_ MEDIA \_ ENGINE \_ OPM \_ HWND](mf-media-engine-opm-hwnd.md)
+-   [MF \_ MEDIA \_ ENGINE \_ PLAYBACK \_ HWND](mf-media-engine-playback-hwnd.md)
+-   [MF \_ MEDIA ENGINE – \_ \_ \_ WIEDERGABEVISUAL](mf-media-engine-playback-visual.md)
+-   [MF \_ MEDIA \_ ENGINE \_ SOURCE \_ RESOLVER \_ CONFIG \_ STORE](mf-media-engine-source-resolver-config-store.md)
+-   [MF \_ MEDIA ENGINE STREAM CONTAINS ALPHA CHANNEL (MF-MEDIEN-ENGINE-STREAM \_ ENTHÄLT \_ \_ \_ \_ ALPHAKANAL)](mf-media-engine-stream-contains-alpha-channel.md)
+-   [MF \_ MEDIA \_ ENGINE \_ VIDEO \_ OUTPUT \_ FORMAT](mf-media-engine-video-output-format.md)
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
@@ -38,7 +38,7 @@ Die Medien-Engine unterstützt die folgenden Konfigurations Attribute.
 [Media Foundation Attribute](media-foundation-attributes.md)
 </dt> <dt>
 
-[**IMF mediaengineclassfactory:: "forateinstance"**](/windows/desktop/api/mfmediaengine/nf-mfmediaengine-imfmediaengineclassfactory-createinstance)
+[**ADRMediaEngineClassFactory::CreateInstance**](/windows/desktop/api/mfmediaengine/nf-mfmediaengine-imfmediaengineclassfactory-createinstance)
 </dt> </dl>
 
  

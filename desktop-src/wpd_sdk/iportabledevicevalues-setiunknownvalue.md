@@ -1,7 +1,7 @@
 ---
-description: Die Methode "enumervalue" fügt einen neuen IUnknown-Wert (Typ "VT \_ unknown") hinzu oder überschreibt eine vorhandene.
+description: Die SetIUnknownValue-Methode fügt einen neuen IUnknown-Wert (Typ VT \_ UNKNOWN) hinzu oder überschreibt einen vorhandenen Wert.
 ms.assetid: 292adf45-439c-4aae-9b17-e4d9ed701eda
-title: 'Iportabledevicevalues:: tunknownvalue-Methode (portabledevicetypes. h)'
+title: IPortableDeviceValues::SetIUnknownValue-Methode (PortableDeviceTypes.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -14,16 +14,16 @@ api_type:
 api_location:
 - PortableDeviceGUIDs.lib
 - PortableDeviceGUIDs.dll
-ms.openlocfilehash: 2c3a27fe5ea89359884d70162000b5164b7c1aec
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: c4a7c8a77cfef505b2a507b6281b931eea7f09c4ea1fbc79e651e7f517593799
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106354112"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118697051"
 ---
-# <a name="iportabledevicevaluessetiunknownvalue-method"></a>Iportabledevicevalues:: endunknownvalue-Methode
+# <a name="iportabledevicevaluessetiunknownvalue-method"></a>IPortableDeviceValues::SetIUnknownValue-Methode
 
-Die Methode " **enumervalue** " fügt einen neuen **IUnknown** -Wert (Typ "VT \_ unknown") hinzu oder überschreibt eine vorhandene.
+Die **SetIUnknownValue-Methode** fügt einen neuen **IUnknown-Wert** (Typ VT \_ UNKNOWN) hinzu oder überschreibt einen vorhandenen Wert.
 
 ## <a name="syntax"></a>Syntax
 
@@ -41,23 +41,23 @@ HRESULT SetIUnknownValue(
 
 <dl> <dt>
 
-*Schlüssel* \[ in\]
+*key* \[ In\]
 </dt> <dd>
 
-Ein **refpropertykey** , der das Element angibt, das erstellt oder überschrieben werden soll.
+Ein **REFPROPERTYKEY,** der das zu erstellende oder zu überschreibende Element angibt.
 
 </dd> <dt>
 
-*pValue* \[ in\]
+*pValue* \[ In\]
 </dt> <dd>
 
-Ein Zeiger auf eine **IUnknown** -Schnittstelle, die den neuen Wert angibt. Das SDK kopiert einen Verweis auf die übermittelte Schnittstelle und ruft die **adressf** auf.
+Ein Zeiger auf eine **IUnknown-Schnittstelle,** die den neuen Wert angibt. Das SDK kopiert einen Verweis auf die übermittelte Schnittstelle und ruft **AddRef** darauf auf.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Die-Methode gibt ein **HRESULT** zurück. Mögliches Werte (aber nicht die Einzigen) sind die in der folgenden Tabelle.
+Die Methode gibt ein **HRESULT** zurück. Mögliches Werte (aber nicht die Einzigen) sind die in der folgenden Tabelle.
 
 
 
@@ -69,9 +69,9 @@ Die-Methode gibt ein **HRESULT** zurück. Mögliches Werte (aber nicht die Einzi
 
  
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Wenn ein vorhandener Wert über denselben Schlüssel verfügt, der durch den *Schlüssel* Parameter angegeben wird, wird der vorhandene Wert ohne Warnung überschrieben. Der vorhandene Schlüsselspeicher wird entsprechend freigegeben.
+Wenn ein vorhandener Wert über denselben Schlüssel verfügt, der vom *Schlüsselparameter* angegeben wird, wird der vorhandene Wert ohne Warnung überschrieben. Der vorhandene Schlüsselspeicher wird entsprechend freigegeben.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -79,19 +79,19 @@ Wenn ein vorhandener Wert über denselben Schlüssel verfügt, der durch den *Sc
 
 | Anforderung | Wert |
 |--------------------|----------------------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>Portablede vicetypes. h</dt> </dl>   |
-| Bibliothek<br/> | <dl> <dt>Portabledeviceguids. lib</dt> </dl> |
+| Header<br/>  | <dl> <dt>PortableDeviceTypes.h</dt> </dl>   |
+| Bibliothek<br/> | <dl> <dt>PortableDeviceGUIDs.lib</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Iportabledebug-Schnittstelle**](iportabledevicevalues.md)
+[**IPortableDeviceValues-Schnittstelle**](iportabledevicevalues.md)
 </dt> <dt>
 
-[**Iportablede vicevalues:: getiunknownvalue**](iportabledevicevalues-getiunknownvalue.md)
+[**IPortableDeviceValues::GetIUnknownValue**](iportabledevicevalues-getiunknownvalue.md)
 </dt> </dl>
 
  

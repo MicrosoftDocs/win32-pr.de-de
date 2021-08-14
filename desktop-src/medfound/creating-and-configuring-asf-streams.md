@@ -1,84 +1,84 @@
 ---
-description: Jede ASF-Datei enthält mindestens einen Stream. Das ASF-Profil Objekt stellt eine Auflistung von ASF-Streams dar. Bei der ASF-Codierung müssen Sie die Datenströme erstellen und konfigurieren, die Sie codieren möchten.
+description: Jede ASF-Datei enthält mindestens einen Datenstrom. Das ASF-Profilobjekt stellt eine Auflistung von ASF-Streams dar. Für die ASF-Codierung müssen Sie die Datenströme erstellen und konfigurieren, die Sie codieren möchten.
 ms.assetid: cc89e8bc-58ff-48e2-9668-0dcd6cfd25e1
 title: Erstellen und Konfigurieren von ASF-Streams
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: d8eabce588022dd66947f34e4dcd9db61f26448b
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 58c780de3fa0abb5db29e3e5e5ed049b78aca7898966e8f7e8595b504804da91
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106344640"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118743238"
 ---
 # <a name="creating-and-configuring-asf-streams"></a>Erstellen und Konfigurieren von ASF-Streams
 
-Jede ASF-Datei enthält mindestens einen Stream. Das [ASF-Profil](asf-profile.md) Objekt stellt eine Auflistung von ASF-Streams dar. Bei der ASF-Codierung müssen Sie die Datenströme erstellen und konfigurieren, die Sie codieren möchten.
+Jede ASF-Datei enthält mindestens einen Datenstrom. Das [ASF-Profilobjekt](asf-profile.md) stellt eine Auflistung von ASF-Streams dar. Für die ASF-Codierung müssen Sie die Datenströme erstellen und konfigurieren, die Sie codieren möchten.
 
-Eine Anwendung kann die folgenden Aufgaben mit dem Objekt "ASF-Profil" ausführen:
+Eine Anwendung kann die folgenden Aufgaben mit dem ASF-Profilobjekt ausführen:
 
 -   Hinzufügen oder Entfernen eines Streams.
--   Abrufen der Konfigurationseinstellungen eines Streams.
--   Konfigurieren Sie Nutz Last Erweiterungen.
--   Fügen Sie ein gegenseitiges ASF-Ausschluss Objekt hinzu, entfernen oder ändern Sie es.
+-   Rufen Sie die Konfigurationseinstellungen eines Streams ab.
+-   Konfigurieren sie Nutzlasterweiterungen.
+-   Fügen Sie ein ASF-Objekt für gegenseitigen Ausschluss hinzu, entfernen oder ändern Sie es.
 
 Dieses Thema enthält folgende Abschnitte:
 
 -   [Erstellen eines neuen Streams](#creating-a-new-stream)
--   [Zuweisen von streamnummern](#assigning-stream-numbers)
--   [Festlegen von Leaky-Bucket-Werten](#setting-leaky-bucket-values)
--   [Nutz Last Erweiterungen](#payload-extensions)
--   [Hinzufügen eines Datenstroms zum Profil](#adding-a-stream-to-the-profile)
+-   [Zuweisen von Streamnummern](#assigning-stream-numbers)
+-   [Festlegen von "Leaky Bucket"-Werten](#setting-leaky-bucket-values)
+-   [Nutzlasterweiterungen](#payload-extensions)
+-   [Hinzufügen eines Streams zum Profil](#adding-a-stream-to-the-profile)
 -   [Zugehörige Themen](#related-topics)
 
 ## <a name="creating-a-new-stream"></a>Erstellen eines neuen Streams
 
-Ein ASF-Profil Objekt muss Konfigurationseinstellungen für mindestens einen ASF-Stream enthalten. Jeder Stream wird durch ein Daten *Strom-Konfigurations* Objekt dargestellt, das die [**imfasf streamconfig**](/windows/desktop/api/wmcontainer/nn-wmcontainer-imfasfstreamconfig) -Schnittstelle verfügbar macht. Die Informationen im Datenstrom-Konfigurationsobjekt entsprechen dem Stream Properties-Objekt und den erweiterten Stream Properties-Objekten im ASF-Dateiheader. (Siehe [Struktur der ASF-Datei](asf-file-structure.md).)
+Ein ASF-Profilobjekt muss Konfigurationseinstellungen für mindestens einen ASF-Datenstrom enthalten. Jeder Stream wird durch ein *Streamkonfigurationsobjekt* dargestellt, das die [**IMFASFStreamConfig-Schnittstelle**](/windows/desktop/api/wmcontainer/nn-wmcontainer-imfasfstreamconfig) verfügbar macht. Die Informationen im Streamkonfigurationsobjekt entsprechen dem Streameigenschaftenobjekt und den Objekten für erweiterte Streameigenschaften im ASF-Dateiheader. (Siehe [ASF-Dateistruktur](asf-file-structure.md).)
 
-Um einem ASF-Profil einen Stream hinzuzufügen, führen Sie die folgenden Schritte aus:
+Führen Sie die folgenden Schritte aus, um einem ASF-Profil einen Stream hinzuzufügen:
 
-1.  Erstellen Sie ein leeres Stream-Datenstrom-Konfigurationsobjekt.
+1.  Erstellen Sie ein leeres Streamstreamkonfigurationsobjekt.
 2.  Konfigurieren Sie den Stream gemäß den Anforderungen der Anwendung.
-3.  Fügen Sie den Stream zum Profil hinzu.
+3.  Fügen Sie den Datenstrom dem Profil hinzu.
 
-Um einen Stream für das Profil zu erstellen, rufen Sie [**imfasfprofile:: kreatestream**](/windows/desktop/api/wmcontainer/nf-wmcontainer-imfasfprofile-createstream) auf, um ein leeres Datenstrom-Konfigurationsobjekt zu erstellen und den Zeiger im *ppIStream* -Parameter zu empfangen. " **Foratestream** " muss den Typ des zu erstellenden Streams kennen. Die gängigsten Typen von Streams, die in ASF-Dateien verwendet werden, sind Audiodaten und Videodaten Ströme. In Media Foundation werden die Streamtypen durch das Medientyp Objekt gekennzeichnet, das die [**IMF MediaType**](/windows/desktop/api/mfobjects/nn-mfobjects-imfmediatype) -Schnittstelle verfügbar macht. Der Haupttyp des Medientyps definiert die Kategorie des Datenstroms für digitale Medien, z. b. Audiodaten oder Videos. Der Untertyp definiert das Format des Haupt Typs. Der von " **kreatestream** " festgelegte erste Medientyp kann mit dem "Stream Configuration"-Objekt geändert werden. Um den Medientyp für den Stream abzurufen, rufen Sie [**imfasfstreamconfig:: getmediatype**](/windows/desktop/api/wmcontainer/nf-wmcontainer-imfasfstreamconfig-getmediatype) auf, oder rufen Sie den Haupttyp " [**imfasfstreamconfig:: getstreamtype**](/windows/desktop/api/wmcontainer/nf-wmcontainer-imfasfstreamconfig-getstreamtype)" ab. Der erste Medientyp für einen Datenstrom kann durch einen neuen konfigurierten Medientyp ersetzt werden, indem [**imfasfstreamconfig:: setmediatype**](/windows/desktop/api/wmcontainer/nf-wmcontainer-imfasfstreamconfig-setmediatype)aufgerufen wird.
+Um einen Stream für das Profil zu erstellen, rufen [**Sie IMFASFProfile::CreateStream**](/windows/desktop/api/wmcontainer/nf-wmcontainer-imfasfprofile-createstream) auf, um ein leeres Streamkonfigurationsobjekt zu erstellen und den Zeiger im *ppIStream-Parameter* zu empfangen. **CreateStream** muss den Typ des zu erstellende Streams kennen. Die gängigsten Arten von Streams, die in ASF-Dateien verwendet werden, sind Audio- und Videostreams. In Media Foundation werden die Streamtypen durch das Medientypobjekt gekennzeichnet, das die [**INTERFACESMediaType-Schnittstelle**](/windows/desktop/api/mfobjects/nn-mfobjects-imfmediatype) verfügbar macht. Der Haupttyp des Medientyps definiert die Kategorie des digitalen Mediendatenstroms, z. B. Audio oder Video. Der Untertyp definiert das Format des Haupttyps. Der von **CreateStream** festgelegte anfängliche Medientyp kann mithilfe des Streamkonfigurationsobjekts geändert werden. Um den Medientyp für den Stream abzurufen, rufen Sie [**IMFASFStreamConfig::GetMediaType**](/windows/desktop/api/wmcontainer/nf-wmcontainer-imfasfstreamconfig-getmediatype) auf, oder rufen Sie den Haupttyp [**IMFASFStreamConfig::GetStreamType**](/windows/desktop/api/wmcontainer/nf-wmcontainer-imfasfstreamconfig-getstreamtype)auf. Der anfängliche Medientyp für einen Stream kann durch einen neuen konfigurierten Medientyp ersetzt werden, indem [**IMFASFStreamConfig::SetMediaType**](/windows/desktop/api/wmcontainer/nf-wmcontainer-imfasfstreamconfig-setmediatype)aufgerufen wird.
 
-Wenn eine Anwendung ein Profil aus einem gültigen Präsentations Deskriptor erstellt, indem Sie [**mfcreateasfprofilefrompresentationdescriptor**](/windows/desktop/api/wmcontainer/nf-wmcontainer-mfcreateasfprofilefrompresentationdescriptor)aufrufen. Die Funktion legt automatisch die Datenstrom-Konfigurationsobjekte für jeden der Streams fest und legt Sie für das Profil fest. Die Datenstrom-Medientypen werden basierend auf den Datenstrom Deskriptoren festgelegt, die dem Präsentations Deskriptor zugeordnet sind.
+Wenn eine Anwendung ein Profil aus einem gültigen Präsentationsdeskriptor erstellt, indem [**MFCreateASFProfileFromPresentationDescriptor**](/windows/desktop/api/wmcontainer/nf-wmcontainer-mfcreateasfprofilefrompresentationdescriptor)aufgerufen wird. Die Funktion legt automatisch die Streamkonfigurationsobjekte für jeden Datenstrom fest und legt sie im Profil fest. Die Streammedientypen werden basierend auf den Streamdeskriptoren festgelegt, die dem Präsentationsdeskriptor zugeordnet sind.
 
-## <a name="assigning-stream-numbers"></a>Zuweisen von streamnummern
+## <a name="assigning-stream-numbers"></a>Zuweisen von Streamnummern
 
-Streams aller Typen müssen eine streamnummer zugewiesen werden. Streamnummern müssen nicht sequenziell sein, müssen jedoch zwischen 1 und 127 liegen. Um streamnummern zuzuweisen, nennen Sie [**imfasfstreamconfig:: setstreamnumber**](/windows/desktop/api/wmcontainer/nf-wmcontainer-imfasfstreamconfig-setstreamnumber). Zum Abrufen des Datenstrom Nummern Aufrufes [**imfasfstreamconfig:: getstreamnumber**](/windows/desktop/api/wmcontainer/nf-wmcontainer-imfasfstreamconfig-getstreamnumber).
+Streams aller Typen muss eine Streamnummer zugewiesen werden. Streamnummern müssen nicht sequenziell sein, sondern im Bereich von 1 bis 127 liegen. Um Streamnummern zuzuweisen, rufen Sie [**IMFASFStreamConfig::SetStreamNumber auf.**](/windows/desktop/api/wmcontainer/nf-wmcontainer-imfasfstreamconfig-setstreamnumber) Um den Aufruf der Streamnummer abzurufen, [**imfasfStreamConfig::GetStreamNumber**](/windows/desktop/api/wmcontainer/nf-wmcontainer-imfasfstreamconfig-getstreamnumber).
 
 > [!Note]  
-> Eine streamnummer unterscheidet sich von einem streamindex, den Sie verwenden, wenn Sie Datenströme in einem Profil mithilfe von [**imfasf profile:: GetStream**](/windows/desktop/api/wmcontainer/nf-wmcontainer-imfasfprofile-getstream)erhalten. Der streamindex ist eine Zahl, die dem Stream vom Profil Objekt zugewiesen wird. Streamindexe liegen zwischen 0 und eins kleiner als die Anzahl von Datenströmen, die von [**imfasfprofile:: getstreamcount**](/windows/desktop/api/wmcontainer/nf-wmcontainer-imfasfprofile-getstreamcount)abgerufen wurden. Sie können auch einen Stream aus dem Profil anhand der streamnummer abrufen, indem Sie [**imfasfprofile:: getstreambynumber**](/windows/desktop/api/wmcontainer/nf-wmcontainer-imfasfprofile-getstreambynumber)aufrufen.
+> Eine Streamnummer unterscheidet sich von einem Streamindex, den Sie beim Abrufen von Datenströmen in einem Profil mit [**IMFASFProfile::GetStream**](/windows/desktop/api/wmcontainer/nf-wmcontainer-imfasfprofile-getstream)verwenden. Der Streamindex ist eine Zahl, die dem Stream vom Profilobjekt zugewiesen wird. Streamindizes liegen zwischen 0 und 1 kleiner als die Anzahl von Streams, die von [**IMFASFProfile::GetStreamCount**](/windows/desktop/api/wmcontainer/nf-wmcontainer-imfasfprofile-getstreamcount)abgerufen werden. Sie können auch einen Stream aus dem Profil nach Streamnummer abrufen, indem [**Sie IMFASFProfile::GetStreamByNumber**](/windows/desktop/api/wmcontainer/nf-wmcontainer-imfasfprofile-getstreambynumber)aufrufen.
 
  
 
-## <a name="setting-leaky-bucket-values"></a>Festlegen von Leaky-Bucket-Werten
+## <a name="setting-leaky-bucket-values"></a>Festlegen von "Leaky Bucket"-Werten
 
-Jedem Datenstrom-Konfigurationsobjekt, das einen Stream darstellt, müssen die Werte für die Parameter "Leaky Bucket", "Bitrate" und "Puffer Fenster
+Jedem Datenstromkonfigurationsobjekt, das einen Stream darstellt, müssen parameter, bit rate und buffer window -Werte zugeordnet sein.
 
-Diese Werte sind für die Anwendung über das [**MF \_ asfstreamconfig \_ LEAKYBUCKET1**](mf-asfstreamconfig-leakybucket1-attribute.md) -Attribut und das [**MF \_ asfstreamconfig \_ LEAKYBUCKET2**](mf-asfstreamconfig-leakybucket2-attribute.md) -Attribut verfügbar. Bei der Datei Codierung sind die tatsächlichen Werte vom Codierungstyp abhängig und werden vom Encoder festgelegt. Wenn Sie bereits über einen konfigurierten Encoder verfügen und der Ausgabetyp für den Encoder festgelegt ist, muss die Anwendung den Encoder nach den Parametern für den Leaky-Bucket Abfragen und die Werte in diesen Attributen festlegen.
+Diese Werte sind für die Anwendung über das [**MF \_ ASFSTREAMCONFIG \_ LEAKYBUCKET1-Attribut**](mf-asfstreamconfig-leakybucket1-attribute.md) und das [**MF \_ ASFSTREAMCONFIG \_ LEAKYBUCKET2-Attribut**](mf-asfstreamconfig-leakybucket2-attribute.md) verfügbar. Bei der Dateicodierung hängen die tatsächlichen Werte vom Typ der Codierung ab und werden vom Encoder festgelegt. Wenn Sie bereits über einen konfigurierten Encoder verfügen und der Ausgabetyp für den Encoder festgelegt ist, muss die Anwendung den Encoder nach den Parametern für den verlustbewerten Bucket abfragen und die Werte in diesen Attributen festlegen.
 
-Wenn Sie die Komponenten der Pipeline Schicht verwenden und die Datenströme für die ASF-Medien Senke konfigurieren, haben Sie wahrscheinlich keinen konfigurierten Encoder. In diesem Fall müssen Sie den Encoder nach dem Medientyp Aushandlungen Abfragen und den aktualisierten Wert in der Eigenschaft [**mfpkey \_ asfstreamsink \_ korrigiert \_ leakybucket**](mfpkey-asfstreamsink-corrected-leakybucket-property.md) des Eigenschaften Speichers der ASF-Medien Senke festlegen. Der Encoding-Eigenschaften Speicher wird durch die des ContentInfo-Objekts abgerufen, das dem Profil zugeordnet ist. Die aktualisierten Werte werden automatisch in den Attributwerten für den Leaky-Bucket des Streams widergespiegelt. Allgemeine Informationen zu Lecks und zum Ermitteln des Lecks-bucketwerts aus dem Encoder finden Sie unter The [Leaky Bucket Buffer Model](the-leaky-bucket-buffer-model.md).
+Wenn Sie die Komponenten der Pipelineebene verwenden und die Streams für die ASF-Mediensenke konfigurieren, verfügen Sie wahrscheinlich nicht über einen konfigurierten Encoder. In diesem Fall müssen Sie den Nachmedientyp des Encoders abfragen und den aktualisierten Wert in der [**MFPKEY \_ ASFSTREAMSINK \_ CORRECTED \_ LEAKYBUCKET-Eigenschaft**](mfpkey-asfstreamsink-corrected-leakybucket-property.md) des Eigenschaftenspeichers der ASF-Mediensenke festlegen. Der Codierungseigenschaftenspeicher wird über den des ContentInfo-Objekts abgerufen, das dem Profil zugeordnet ist. Die aktualisierten Werte werden automatisch in den Attributwerten des datenverlustbesendigen Buckets des Streams widergespiegelt. Allgemeine Informationen zu leaky-Buckets und zum Abrufen des Werts für den verlustbeleckten Bucket aus dem Encoder finden Sie unter The Leaky Bucket Buffer Model ( [The Leaky Bucket Buffer Model).](the-leaky-bucket-buffer-model.md)
 
-## <a name="payload-extensions"></a>Nutz Last Erweiterungen
+## <a name="payload-extensions"></a>Nutzlasterweiterungen
 
-Mediendaten für die Streams werden dem ASF-Datenobjekt vom [ASF Multiplexer](asf-multiplexer.md)als [Medien Beispiele](media-samples.md) hinzugefügt. Diese Medien Beispiele können Nutz Last Erweiterungs Daten enthalten: SMPTE Time Code Data, Non-Square Pixel Page Ratio, Sample Duration, und wenn das Beispiel dieses enthält, ein Video Keyframe. Eine Liste der unterstützten Nutz Last Erweiterungs Typen finden Sie unter die [GUIDs der ASF-Nutz Last Erweiterung](asf-payload-extension-guids.md).
+Mediendaten für die Streams werden dem ASF-Datenobjekt als [Medienbeispiele](media-samples.md) vom [ASF Multiplexer](asf-multiplexer.md)hinzugefügt. Diese Medienbeispiele können Nutzlasterweiterungsdaten enthalten: SMPTE-Zeitcodedaten, seitenfremdes Pixelverhältnis, Samplingdauer und, wenn das Beispiel sie enthält, einen Videoschlüsselrahmen. Eine Liste der unterstützten Nutzlasterweiterungstypen finden Sie unter [ASF-Nutzlasterweiterungs-GUIDs.](asf-payload-extension-guids.md)
 
-Ein Datenstrom muss so konfiguriert werden, dass er die Nutz Last Erweiterung annimmt, damit der Multiplexer während der Stichproben Generierung die ergänzenden Daten den einzelnen Beispielen für diesen Stream hinzufügen kann.
+Ein Stream muss so konfiguriert werden, dass die Nutzlasterweiterung akzeptiert wird, damit der Multiplexer während der Generierung der Stichproben die ergänzenden Daten jedem Beispiel für diesen Stream hinzufügen kann.
 
-Rufen Sie zum Abrufen der Gesamtanzahl der für den Stream festgelegten Nutz Last Erweiterungen [**imfasfstreamconfig:: getpayloadextensioncount**](/windows/desktop/api/wmcontainer/nf-wmcontainer-imfasfstreamconfig-getpayloadextensioncount) auf, und Listen Sie die Liste dann durch Aufrufen von [**imfasfstreamconfig:: getpayloadextension**](/windows/desktop/api/wmcontainer/nf-wmcontainer-imfasfstreamconfig-getpayloadextension)auf. Um die Nutz Last Erweiterung für den Stream hinzuzufügen, nennen Sie [**imfasfstreamconfig:: addpayloadextension**](/windows/desktop/api/wmcontainer/nf-wmcontainer-imfasfstreamconfig-addpayloadextension). Dadurch werden den einzelnen Medien Beispielen, die für den Stream generiert werden, zusätzliche Daten hinzugefügt.
+Um die Gesamtzahl der im Stream festgelegten Nutzlasterweiterungen abzurufen, rufen [**Sie IMFASFStreamConfig::GetPayloadExtensionCount**](/windows/desktop/api/wmcontainer/nf-wmcontainer-imfasfstreamconfig-getpayloadextensioncount) auf, und listen Sie dann die Liste auf, indem Sie [**IMFASFStreamConfig::GetPayloadExtension**](/windows/desktop/api/wmcontainer/nf-wmcontainer-imfasfstreamconfig-getpayloadextension)aufrufen. Um eine Nutzlasterweiterung für den Stream hinzuzufügen, rufen Sie [**IMFASFStreamConfig::AddPayloadExtension**](/windows/desktop/api/wmcontainer/nf-wmcontainer-imfasfstreamconfig-addpayloadextension)auf. Dadurch werden zusätzliche Daten zu einzelnen Medienbeispielen hinzugefügt, die für den Stream generiert werden.
 
-Um vorhandene Nutz Last Erweiterungen zu entfernen, die dem Stream zugeordnet sind, müssen Sie [**imfasfstreamconfig:: removeallpayloadextensions**](/windows/desktop/api/wmcontainer/nf-wmcontainer-imfasfstreamconfig-removeallpayloadextensions)aufrufen.
+Um vorhandene Nutzlasterweiterungen zu entfernen, die dem Stream zugeordnet sind, rufen Sie [**IMFASFStreamConfig::RemoveAllPayloadExtensions**](/windows/desktop/api/wmcontainer/nf-wmcontainer-imfasfstreamconfig-removeallpayloadextensions)auf.
 
-## <a name="adding-a-stream-to-the-profile"></a>Hinzufügen eines Datenstroms zum Profil
+## <a name="adding-a-stream-to-the-profile"></a>Hinzufügen eines Streams zum Profil
 
-Nachdem ein Stream konfiguriert wurde, müssen Sie [**imfasfprofile:: setStream**](/windows/desktop/api/wmcontainer/nf-wmcontainer-imfasfprofile-setstream) aufrufen, um den Stream zum Profil hinzuzufügen.
+Nachdem ein Stream konfiguriert wurde, rufen Sie [**IMFASFProfile::SetStream**](/windows/desktop/api/wmcontainer/nf-wmcontainer-imfasfprofile-setstream) auf, um den Stream dem Profil hinzuzufügen.
 
-Um einen vorhandenen Stream im Profil zu entfernen, nennen Sie [**imfasfprofile:: removestream**](/windows/desktop/api/wmcontainer/nf-wmcontainer-imfasfprofile-removestream).
+Um einen vorhandenen Stream im Profil zu entfernen, rufen Sie [**IMFASFProfile::RemoveStream auf.**](/windows/desktop/api/wmcontainer/nf-wmcontainer-imfasfprofile-removestream)
 
-Das konfigurierte Profil muss für das ContentInfo-Objekt festgelegt werden, indem [**imfasfcontentinfo:: setprofile**](/windows/desktop/api/wmcontainer/nf-wmcontainer-imfasfcontentinfo-setprofile)aufgerufen wird. Wenn Sie Änderungen an einem vorhandenen Stream vornehmen, müssen Sie ihn erneut zum Profil hinzufügen und das Profil für das ContentInfo-Objekt festlegen.
+Das konfigurierte Profil muss für das ContentInfo-Objekt durch Aufrufen von [**IMFASFContentInfo::SetProfile**](/windows/desktop/api/wmcontainer/nf-wmcontainer-imfasfcontentinfo-setprofile)festgelegt werden. Wenn Sie Änderungen an einem vorhandenen Stream vornehmen, müssen Sie ihn erneut dem Profil hinzufügen und das Profil für das ContentInfo-Objekt festlegen.
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
@@ -87,10 +87,10 @@ Das konfigurierte Profil muss für das ContentInfo-Objekt festgelegt werden, ind
 [ASF-Profil](asf-profile.md)
 </dt> <dt>
 
-[Unterstützung von ASF in Media Foundation](asf-support-in-media-foundation.md)
+[ASF-Unterstützung in Media Foundation](asf-support-in-media-foundation.md)
 </dt> <dt>
 
-[Wmcontainer-ASF-Komponenten](wmcontainer-asf-components.md)
+[WMContainer ASF-Komponenten](wmcontainer-asf-components.md)
 </dt> </dl>
 
  

@@ -1,9 +1,9 @@
 ---
-title: MENUEX_TEMPLATE_ITEM Struktur
-description: Definiert ein Menü Element in einer erweiterten Menüvorlage. Diese Struktur Definition dient lediglich der Erläuterung. Es ist in keiner Standard Header Datei vorhanden.
+title: MENUEX_TEMPLATE_ITEM-Struktur
+description: Definiert ein Menüelement in einer erweiterten Menüvorlage. Diese Strukturdefinition wird nur zur Erklärung verwendet. sie ist in einer Standardheaderdatei nicht vorhanden.
 ms.assetid: f6e2fd0a-16b8-48e3-8597-341085a7adbd
 keywords:
-- MENUEX_TEMPLATE_ITEM Struktur Menüs und andere Ressourcen
+- MENUEX_TEMPLATE_ITEM Strukturmenüs und andere Ressourcen
 topic_type:
 - apiref
 api_name:
@@ -13,16 +13,16 @@ api_type:
 ms.topic: reference
 ms.date: 05/31/2018
 api_location: ''
-ms.openlocfilehash: ca1f73d1174590db5948f54f5c51c91a8c65a8c5
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 6352c7ce596a59d69b21f1ba424ac50b471e13cd97320f0df184bce2e1abd295
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104518698"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118733905"
 ---
-# <a name="menuex_template_item-structure"></a>Menuex- \_ Vorlagen \_ Elementstruktur
+# <a name="menuex_template_item-structure"></a>MENUEX \_ TEMPLATE \_ ITEM-Struktur
 
-Definiert ein Menü Element in einer erweiterten Menüvorlage. Diese Struktur Definition dient lediglich der Erläuterung. Es ist in keiner Standard Header Datei vorhanden.
+Definiert ein Menüelement in einer erweiterten Menüvorlage. Diese Strukturdefinition wird nur zur Erklärung verwendet. sie ist in einer Standardheaderdatei nicht vorhanden.
 
 ## <a name="syntax"></a>Syntax
 
@@ -47,54 +47,54 @@ Typ: **DWORD**
 
 </dd> <dd>
 
-Der Typ des Menü Elements. Dieser Member kann eine Kombination der Werte vom Typ (beginnend mit MFT) sein, die mit der [**menuiteminfo**](/windows/win32/api/winuser/ns-winuser-menuiteminfoa) -Struktur aufgelistet sind.
+Der Menüelementtyp. Dieser Member kann eine Kombination der Typwerte (beginnend mit MFT) sein, die mit der [**MENUITEMINFO-Struktur aufgelistet**](/windows/win32/api/winuser/ns-winuser-menuiteminfoa) sind.
 
 </dd> <dt>
 
-**dwstate**
+**dwState**
 </dt> <dd>
 
 Typ: **DWORD**
 
 </dd> <dd>
 
-Der Zustand des Menü Elements. Dieser Member kann eine Kombination aus den in der [**menuiteminfo**](/windows/win32/api/winuser/ns-winuser-menuiteminfoa) -Struktur aufgelisteten Status Werten (beginnend mit MFS) sein.
+Der Menüelementzustand. Dieser Member kann eine Kombination der Statuswerte (beginnend mit MFS) sein, die mit der [**MENUITEMINFO-Struktur aufgelistet**](/windows/win32/api/winuser/ns-winuser-menuiteminfoa) sind.
 
 </dd> <dt>
 
-**uId**
+**Uid**
 </dt> <dd>
 
-Typ: **uint**
+Typ: **UINT**
 
 </dd> <dd>
 
-Der Bezeichner des Menü Elements. Dies ist ein von der Anwendung definierter Wert, der das Menü Element bezeichnet. In einer erweiterten Menü Ressource können Elemente, die Dropdown Menüs oder Untermenüs sowie Befehls Elemente öffnen, über Bezeichner verfügen.
+Der Menüelementbezeichner. Dies ist ein anwendungsdefinierter Wert, der das Menüelement identifiziert. In einer erweiterten Menüressource können Elemente, die Dropdownmenüs oder Untermenüs öffnen, sowie Befehlselemente Bezeichner enthalten.
 
 </dd> <dt>
 
 **wFlags**
 </dt> <dd>
 
-Typ: **Word**
+Typ: **WORD**
 
 </dd> <dd>
 
-Gibt an, ob es sich beim Menü Element um das letzte Element in der Menüleiste, im Dropdown Menü, im Untermenü oder im Kontextmenü handelt und ob es sich um ein Element handelt, das ein Dropdown Menü oder ein Untermenü öffnet. Dieser Member kann NULL oder mehr dieser Werte sein. Bei 32-Bit-Anwendungen ist dieser Member ein Wort. bei 16-Bit-Anwendungen ist es ein Byte.
+Gibt an, ob das Menüelement das letzte Element in der Menüleiste, im Dropdownmenü, im Untermenü oder im Kontextmenü ist und ob es sich um ein Element handelt, das ein Dropdownmenü oder Untermenü öffnet. Dieser Member kann null oder mehr dieser Werte sein. Bei 32-Bit-Anwendungen ist dieser Member ein Wort. Für 16-Bit-Anwendungen ist es ein Byte.
 
 <dt>
 
 0x80
 </dt> <dd>
 
-Die Struktur definiert das letzte Menü Element in der Menüleiste, dem Dropdown Menü, dem Untermenü oder dem Kontextmenü.
+Die -Struktur definiert das letzte Menüelement in der Menüleiste, im Dropdownmenü, im Untermenü oder im Kontextmenü.
 
 </dd> <dt>
 
 0x01
 </dt> <dd>
 
-Die-Struktur definiert ein Element, das ein Dropdown Menü oder ein Untermenü öffnet. Nachfolgende Strukturen definieren Menü Elemente im entsprechenden Dropdown Menü oder Untermenü.
+Die -Struktur definiert ein Element, das ein Dropdownmenü oder Untermenü öffnet. Nachfolgende Strukturen definieren Menüelemente im entsprechenden Dropdownmenü oder Untermenü.
 
 </dd> </dl> </dd> <dt>
 
@@ -105,13 +105,13 @@ Typ: **WCHAR**
 
 </dd> <dd>
 
-Der Text des Menü Elements. Dieser Member ist eine auf NULL endenden Unicode-Zeichenfolge, die an einer Wort Grenze ausgerichtet ist. Die Größe der Menü Element Definition variiert abhängig von der Länge dieser Zeichenfolge.
+Der Text des Menüelements. Dieser Member ist eine auf NULL terminte Unicode-Zeichenfolge, die an einer Wortgrenze ausgerichtet ist. Die Größe der Menüelementdefinition variiert je nach Länge dieser Zeichenfolge.
 
 </dd> </dl>
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Eine erweiterte Menüvorlage besteht aus einer [**menuex- \_ Vorlagen \_ Header**](menuex-template-header.md) Struktur, gefolgt von einer oder mehreren zusammenhängenden **menuex- \_ Vorlagen \_ Element** Strukturen. Die **menuex- \_ Vorlagen \_ Element** Strukturen, die eine Variable Länge haben, werden an den **DWORD** -Grenzen ausgerichtet. Verwenden Sie die [**loadmenuindirekte**](/windows/desktop/api/Winuser/nf-winuser-loadmenuindirecta) -Funktion, um ein Menü aus einer erweiterten Menüvorlage im Arbeitsspeicher zu erstellen.
+Eine erweiterte Menüvorlage besteht aus einer [**MENUEX \_ TEMPLATE \_ HEADER-Struktur,**](menuex-template-header.md) gefolgt von einer oder mehreren zusammenhängenden **MENUEX TEMPLATE \_ \_ ITEM-Strukturen.** Die **MENUEX \_ TEMPLATE \_ ITEM-Strukturen,** die eine variable Länge haben, werden an **DWORD-Grenzen** ausgerichtet. Um ein Menü aus einer erweiterten Menüvorlage im Arbeitsspeicher zu erstellen, verwenden Sie die [**LoadMenuIndirect-Funktion.**](/windows/desktop/api/Winuser/nf-winuser-loadmenuindirecta)
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -124,23 +124,23 @@ Eine erweiterte Menüvorlage besteht aus einer [**menuex- \_ Vorlagen \_ Header*
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-**Verweis**
+**Referenz**
 </dt> <dt>
 
-[**Loadmenuindirekte**](/windows/desktop/api/Winuser/nf-winuser-loadmenuindirecta)
+[**LoadMenuIndirect**](/windows/desktop/api/Winuser/nf-winuser-loadmenuindirecta)
 </dt> <dt>
 
-[**menuex- \_ Vorlagen \_ Header**](menuex-template-header.md)
+[**MENUEX \_ TEMPLATE \_ HEADER**](menuex-template-header.md)
 </dt> <dt>
 
-[**Menuiteminfo zuordnet**](/windows/win32/api/winuser/ns-winuser-menuiteminfoa)
+[**MENUITEMINFO**](/windows/win32/api/winuser/ns-winuser-menuiteminfoa)
 </dt> <dt>
 
-**Licher**
+**Konzeptionellen**
 </dt> <dt>
 
 [Menüs](menus.md)

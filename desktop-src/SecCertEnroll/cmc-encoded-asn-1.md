@@ -1,19 +1,19 @@
 ---
-description: Das folgende Beispiel enthält eine im ASN. 1-Format angezeigte CMC-Anforderung. Das Beispiel wurde mithilfe der Tools Certreq.exe und Certutil.exe generiert. Die INF-Datei, die als Eingabe für Certreq.exe verwendet wird, enthält die folgende Konfiguration.
+description: Das folgende Beispiel enthält eine CMC-Anforderung im ASN.1-Format. Das Beispiel wurde mithilfe der tools Certreq.exe und Certutil.exe generiert. Die INF-Datei, die als Eingabe für Certreq.exe verwendet wird, enthält die folgende Konfiguration.
 ms.assetid: 57e99f2c-76c3-4b4c-8e78-9b45bfa55d9a
-title: Von CMC codierte ASN. 1
+title: CMC-codierte ASN.1
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 59d2ec300708f457d1e7c6c1608c1c519dfd9744
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: b7a22ddd91b3c5d1a5a874cdc51527248dae5e10fcddbc52376d9518b639839e
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106352212"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118902026"
 ---
-# <a name="cmc-encoded-asn1"></a>Von CMC codierte ASN. 1
+# <a name="cmc-encoded-asn1"></a>CMC-codierte ASN.1
 
-Das folgende Beispiel enthält eine im ASN. 1-Format angezeigte CMC-Anforderung. Das Beispiel wurde mithilfe der Tools Certreq.exe und Certutil.exe generiert. Die INF-Datei, die als Eingabe für Certreq.exe verwendet wird, enthält die folgende Konfiguration.
+Das folgende Beispiel enthält eine CMC-Anforderung im ASN.1-Format. Das Beispiel wurde mithilfe der tools Certreq.exe und Certutil.exe generiert. Die INF-Datei, die als Eingabe für Certreq.exe verwendet wird, enthält die folgende Konfiguration.
 
 ``` syntax
 [NewRequest]
@@ -24,11 +24,11 @@ RequestType=cmc
 CertificateTemplate=User
 ```
 
-Mit dieser Konfiguration wird die folgende Beispielausgabe generiert. Die Konfiguration gibt den Betreff, den Typ der Anforderung (CMC) und die Zertifikat Vorlage (Benutzer) an. Die Benutzer Vorlage gibt Folgendes an:
+Diese Konfiguration generiert die folgende Beispielausgabe. Die Konfiguration gibt den Antragsteller, den Anforderungstyp (CMC) und die Zertifikatvorlage (Benutzer) an. Die Benutzervorlage gibt Folgendes an:
 
--   Die Anforderung muss entweder den Kryptografieanbieter von Microsoft Base 1,0 oder den Microsoft Enhanced Cryptographic Provider 1,0 verwenden.
--   Der Antragsteller Name muss aus Active Directory erstellt werden.
--   Die Anforderung enthält den Namen der Zertifikat Vorlage, die erweiterte Schlüssel Verwendung (Enhanced Key Usage, EKU) und Schlüssel Verwendungs Erweiterungen. Die EKU-Erweiterung gibt an, dass das ausgestellte Zertifikat für Verschlüsselndes Dateisystem (EFS), sichere e-Mail und Client Authentifizierung verwendet werden kann.
+-   Die Anforderung muss entweder den Microsoft Base Cryptographic Provider 1.0 oder den Microsoft Enhanced Cryptographic Provider 1.0 verwenden.
+-   Der Antragstellername muss aus Active Directory erstellt werden.
+-   Die Anforderung umfasst den Namen der Zertifikatvorlage, die erweiterte Schlüsselverwendung (Enhanced Key Usage, EKU) und die Schlüsselverwendungserweiterungen. Die EKU-Erweiterung gibt an, dass das ausgestellte Zertifikat für verschlüsselndes Dateisystem (EFS), sichere E-Mails und Clientauthentifizierung verwendet werden kann.
 
 ``` syntax
 0000: 30 82 04 df               ; SEQUENCE (4df Bytes)
@@ -306,7 +306,7 @@ CertUtil: -asn command completed successfully.
 
 <dl> <dt>
 
-[Beispiel Anforderungen](sample-requests.md)
+[Beispielanforderungen](sample-requests.md)
 </dt> </dl>
 
  

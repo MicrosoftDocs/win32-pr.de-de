@@ -1,11 +1,11 @@
 ---
-title: Imediarendereraktioninformation isvolumeavailable-Methode
-description: Ruft einen Wert ab, der angibt, ob der DMR die audiovolumeebene anpassen kann.
+title: IMediaRendererActionInformation IsVolumeAvailable-Methode
+description: Ruft einen Wert ab, der angibt, ob die DMR die Audiovolumenebene anpassen kann.
 ms.assetid: 6DFDC37A-3304-4CDB-9928-C113D2F64ED0
 keywords:
-- Isvolumeavailable-Methode Medien Streaming-API
-- Isvolumeavailable-Methode Medien Streaming-API, imediarendereraktioninformation-Schnittstelle
-- Imediarendereraktioninformation-Schnittstelle Medien Streaming-API, isvolumeavailable-Methode
+- IsVolumeAvailable-Methode Medienstreaming-API
+- 'IsVolumeAvailable-Methode: Media Streaming-API, IMediaRendererActionInformation-Schnittstelle'
+- IMediaRendererActionInformation-Schnittstelle Media Streaming-API, IsVolumeAvailable-Methode
 topic_type:
 - apiref
 api_name:
@@ -15,16 +15,16 @@ api_type:
 ms.topic: reference
 ms.date: 05/31/2018
 api_location: ''
-ms.openlocfilehash: bb8dc60c25cf3ec12e0ebeaa863e239c287d7c46
-ms.sourcegitcommit: ebd3ce6908ff865f1ef66f2fc96769be0aad82e1
+ms.openlocfilehash: ce36a9151998a5f7b0a7785aebc1795bd29d31ff47cfdd2368978ad040f3597c
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/19/2020
-ms.locfileid: "104101510"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118972209"
 ---
-# <a name="imediarendereractioninformationisvolumeavailable-method"></a>Imediarendereraktioninformation:: isvolumeavailable-Methode
+# <a name="imediarendereractioninformationisvolumeavailable-method"></a>IMediaRendererActionInformation::IsVolumeAvailable-Methode
 
-Ruft einen Wert ab, der angibt, ob der DMR die audiovolumeebene anpassen kann.
+Ruft einen Wert ab, der angibt, ob die DMR die Audiovolumenebene anpassen kann.
 
 ## <a name="syntax"></a>Syntax
 
@@ -41,16 +41,16 @@ HRESULT IsVolumeAvailable(
 
 <dl> <dt>
 
-*Wert* \[ vorgenommen\]
+*value* \[ out\]
 </dt> <dd>
 
-Ein boolescher Wert, der **true** ist, wenn der DMR die audiovolumeebene anpassen kann, andernfalls **false** .
+Ein boolescher Wert, der **True** ist, wenn die DMR  die Audiovolumenebene anpassen kann, ander denn, false.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Die-Methode gibt ein **HRESULT** zurück. Mögliches Werte (aber nicht die Einzigen) sind die in der folgenden Tabelle.
+Die Methode gibt ein **HRESULT** zurück. Mögliches Werte (aber nicht die Einzigen) sind die in der folgenden Tabelle.
 
 
 
@@ -62,11 +62,11 @@ Die-Methode gibt ein **HRESULT** zurück. Mögliches Werte (aber nicht die Einzi
 
  
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Imediarendereraktioninformation**](/previous-versions/windows/desktop/api/windows.media.streaming/nn-windows-media-streaming-imediarendereractioninformation)
+[**IMediaRendererActionInformation**](/previous-versions/windows/desktop/api/windows.media.streaming/nn-windows-media-streaming-imediarendereractioninformation)
 </dt> </dl>
 
  

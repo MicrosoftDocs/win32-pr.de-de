@@ -1,88 +1,88 @@
 ---
-title: Konfigurieren des Lasten Ausgleichs
-description: Konfigurieren des Lasten Ausgleichs
+title: Konfigurieren des Lastenausgleichs
+description: Konfigurieren des Lastenausgleichs
 ms.assetid: c78ffde1-1811-4065-941f-c24692eb144c
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: b82dbfc23e491d53a6687b50aa77b23878ce52ec
-ms.sourcegitcommit: 592c9bbd22ba69802dc353bcb5eb30699f9e9403
+ms.openlocfilehash: 3560359bd5ad064dc270e0840845674b97b093af66796dc92f31f7a15170f467
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "104316239"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118931693"
 ---
-# <a name="configuring-load-balancing"></a>Konfigurieren des Lasten Ausgleichs
+# <a name="configuring-load-balancing"></a>Konfigurieren des Lastenausgleichs
 
-Jeder RPC-Proxy Computer, der als Load Balancing Server (lbs)-Dienst fungieren soll, muss als lbs-Dienst konfiguriert werden, der über Kenntnisse der Server in der Server Farm verfügt. Optional kann die Standardressource festgelegt werden, und die Sicherheit von Proxy-zu-lbs-und lbs-RPC-Aufrufen kann festgelegt werden. Diese Einstellungen werden durch einen Satz **erforderlicher Registrierungsschlüssel** und **optionale Registrierungsschlüssel** konfiguriert, wie unten beschrieben.
+Jeder RPC-Proxycomputer, der als Lastenausgleichsserverdienst (Load Balancing Server, LBS) fungieren soll, muss als LBS-Dienst mit Kenntnissen der Server in der Serverfarm konfiguriert werden. Optional kann die Standardressource festgelegt werden, und die Sicherheit von Proxy-zu-LBS- und LBS-zu-LBS-RPC-Aufrufen kann festgelegt werden. Diese Einstellungen werden wie unten beschrieben durch einen Satz **erforderlicher Registrierungsschlüssel** und **optionaler Registrierungsschlüssel** konfiguriert.
 
 ## <a name="required-registry-keys"></a>Erforderliche Registrierungsschlüssel
 
-Zum Konfigurieren eines LBS-Servers sind mehrere Registrierungsschlüssel und-Werte erforderlich. Wenn Schlüssel fehlen oder bei einem Fehler eingegeben werden, wird ein Windows-Ereignis protokolliert. Informationen zu dem protokollierten Ereignis finden Sie in der Beschreibung der einzelnen Schlüssel und Werte.
+Zum Konfigurieren eines LBS-Servers sind mehrere Registrierungsschlüssel und -werte erforderlich. Wenn Schlüssel fehlen oder fehlerhaft eingegeben werden, wird ein Windows Ereignis protokolliert. Informationen zum protokollierten Ereignis finden Sie in der Beschreibung der einzelnen Schlüssel und Werte.
 
-Zum Konfigurieren der Serverfarm muss ein Registrierungsschlüssel erstellt werden. **HKLM \\ Software \\ Microsoft \\ RPC \\ RpcProxy** heißt **lbsconfiguration**. Unter dem Schlüssel **lbsconfiguration** wird ein Schlüssel für jede Ressource in der Serverfarm erstellt. Der Schlüssel Name ist die Zeichen folgen Darstellung der GUID für die Ressource. Mindestens ein Ressourcen Schlüssel muss vorhanden sein, und diese Ressource ist identisch mit der [**UUID**](./rpcdce/ns-rpcdce-uuid.md) , die von Clients auf dem Bindungs handle, dem [**RPC- \_ Bindungs \_ handle**](rpc-binding-handle.md), festgelegt wird, wenn Sie die RPC/HTTP-Bindung erstellen (Weitere Informationen finden Sie unter [**rpcbindingsetobject**](/windows/desktop/api/Rpcdce/nf-rpcdce-rpcbindingsetobject)). Unter jedem Ressourcen-UUID-Schlüssel muss ein DWORD-Wert mit dem Namen **ConfigurationType** vorhanden sein, der die verwendete Konfiguration beschreibt. Es muss auch eine **reg \_ SZ** mit durch Semikolon getrennten Server Bezeichnernamen vorhanden sein, die als **Serverfarm** bezeichnet werden. Die Server, die im Server **Farm** Schlüssel identifiziert werden, sind die Server, die Mitglieder der Serverfarm für den Lastenausgleich sind.
+Zum Konfigurieren der Serverfarm muss ein Registrierungsschlüssel erstellt werden **HKLM \\ SOFTWARE Microsoft \\ Rpc \\ \\ RpcProxy** namens **LBSConfiguration**. Unter dem **LBSConfiguration-Schlüssel** wird ein Schlüssel für jede Ressource in der Serverfarm erstellt. Der Schlüsselname ist die Zeichenfolgendarstellung der GUID für die Ressource. Es muss mindestens ein Ressourcenschlüssel vorhanden sein, und diese Ressource ist identisch mit der [**UUID,**](./rpcdce/ns-rpcdce-uuid.md) die von Clients im Bindungshandle festgelegt wird, [**RPC BINDING \_ \_ HANDLE**](rpc-binding-handle.md), wenn sie die RPC/HTTP-Bindung erstellen (weitere Informationen finden Sie unter [**RpcBindingSetObject**](/windows/desktop/api/Rpcdce/nf-rpcdce-rpcbindingsetobject)). Unter jedem Ressourcen-UUID-Schlüssel muss ein **DWORD-Wert** namens ConfigurationType vorhanden sein, der die verwendete Konfiguration beschreibt. Es muss auch eine **REG \_ SZ** mit durch Semikolons getrennten Serverbezeichnern namens **ServerFarm** vorhanden sein. Die im **ServerFarm-Schlüssel** identifizierten Server sind die Server, die Mitglieder der Lastenausgleichsserverfarm sind.
 
-Im folgenden finden Sie eine detaillierte Aufschlüsselung der erforderlichen Registrierungsschlüssel und-Werte:
+Im Folgenden finden Sie eine ausführliche Aufschlüsselung der erforderlichen Registrierungsschlüssel und -werte:
 
-**HKLM \\ Software \\ Microsoft \\ RPC \\ RpcProxy \\ lbsconfiguration**
+**HKLM \\ SOFTWARE \\ Microsoft \\ Rpc \\ RpcProxy \\ LBSConfiguration**
 
-Registrierungsschlüssel. Der **lbsconfiguration** -Schlüssel ist der Registrierungsschlüssel, der die lbs-Konfiguration enthält. Dies umfasst die Ressourcen- [**UUIDs**](./rpcdce/ns-rpcdce-uuid.md) , für die ein Lastenausgleich ausgeführt werden soll, der Konfigurationstyp für jede Ressource und die Server in den Serverfarmen, die am Lastenausgleich beteiligt sind. Wenn dieser Schlüssel fehlt oder ungültig ist, wird lbs nicht als konfiguriert betrachtet, und der lbs-Dienst wird nicht ausgeführt.
-
-\-
-
-**HKLM \\ Software \\ Microsoft \\ RPC \\ RpcProxy \\ lbsconfiguration \\ xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx**
-
-Registrierungsschlüssel. Der **Ressourcen-UUID** -Schlüssel identifiziert die Ressourcen-UUID für den Lastenausgleich. Diese Ressourcen-UUID ist identisch mit der [**UUID**](./rpcdce/ns-rpcdce-uuid.md) , die von Clients auf dem Bindungs handle, dem [**RPC- \_ Bindungs \_ handle**](rpc-binding-handle.md), festgelegt wurde. Mindestens eine Ressourcen-UUID muss vorhanden sein, um einen Lastenausgleich ausführen zu können. möglicherweise sind mehrere Ressourcen-UUIDs vorhanden. Es kann nur eine Serverfarm vorhanden sein, und alle Endpunkte müssen sich auf allen Servern innerhalb der Serverfarm befinden. Wenn dieser Schlüssel nicht zu einer gültigen UUID analysiert werden kann, wird der Ereignis- **RpcProxy-Ereignis \_ Protokoll-lb- \_ \_ \_ Schlüssel (0xc0000006)** im Windows-Ereignisprotokoll protokolliert.
+Registrierungsschlüssel. Der **LBSConfiguration-Schlüssel** ist der Registrierungsschlüssel, der die LBS-Konfiguration enthält. Dazu gehören die [**Ressourcen-UUIDs,**](./rpcdce/ns-rpcdce-uuid.md) für die ein Lastenausgleich erfolgen soll, der Konfigurationstyp für jede Ressource und die Server in den Serverfarmen, die am Lastenausgleich beteiligt sind. Wenn dieser Schlüssel fehlt oder ungültig ist, wird LBS nicht als konfiguriert betrachtet, und der LBS-Dienst wird nicht ausgeführt.
 
 \-
 
-**HKLM \\ Software \\ Microsoft \\ RPC \\ RpcProxy \\ lbsconfiguration \\ xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx \\ ConfigurationType**
+**HKLM \\ SOFTWARE \\ Microsoft \\ Rpc \\ RpcProxy \\ LBSConfiguration \\ XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX**
 
-DWORD. Der **ConfigurationType** DWORD wird unter dem **Ressourcen-UUID** -Schlüssel gespeichert. Der einzige zulässige Wert ist 1. Wenn dieser Wert etwas anderes als 1 ist, wird das Ereignis **RpcProxy \_ EventLog \_ lb \_ Unknown \_ cfg \_ Type (0xc0000007)** im Windows-Ereignisprotokoll protokolliert.
+Registrierungsschlüssel. Der **Ressourcen-UUID-Schlüssel** identifiziert die Ressourcen-UUID, für die ein Lastenausgleich erfolgen soll. Diese Ressourcen-UUID entspricht der [**UUID,**](./rpcdce/ns-rpcdce-uuid.md) die Clients für das Bindungshandle [**, RPC BINDING \_ \_ HANDLE,**](rpc-binding-handle.md)festlegen. Es muss mindestens eine Ressourcen-UUID vorhanden sein, um einen Lastenausgleich zu erhalten. Es können mehrere Ressourcen-UUIDs vorhanden sein. Es kann nur eine Serverfarm vorhanden sein, und alle Endpunkte müssen sich auf allen Servern innerhalb der Serverfarm befinden. Wenn dieser Schlüssel nicht in eine gültige UUID analysiert werden kann, wird das **Ereignis RPCPROXY \_ EVENTLOG \_ LB INVALID \_ \_ KEY (0xC0000006)** im Windows-Ereignisprotokoll protokolliert.
 
 \-
 
-**HKLM \\ Software \\ Microsoft \\ RPC \\ RpcProxy \\ lbsconfiguration \\ xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx \\ Serverfarm**
+**HKLM \\ SOFTWARE \\ Microsoft \\ Rpc \\ RpcProxy \\ LBSConfiguration \\ XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX \\ ConfigurationType**
 
-REG \_ SZ. Der **Serverfarm** -Registrierungs Wert enthält eine durch Semikolons getrennte Liste von Server bezeichgern. Der Server Bezeichner weist das folgende Format auf:
+DWORD. Das **ConfigurationType-DWORD** wird unter dem **Ressourcen-UUID-Schlüssel** gespeichert. Der einzige zulässige Wert ist 1. Wenn dieser Wert nicht 1 ist, wird das **Ereignis RPCPROXY \_ EVENTLOG \_ LB UNKNOWN \_ \_ CFG TYPE \_ (0xC0000007)** im Windows-Ereignisprotokoll protokolliert.
 
-"ServerID1, ServerPort1, LBSPort1, \[ LBSPort2,... Lbsportn \] ; "
+\-
 
-Im Registrierungsschlüssel " **Serverfarm** " sollten mehrere Server Bezeichner aufgelistet werden. Sie müssen durch ein Semikolon begrenzt werden. Die Felder, die Teil des Server Bezeichners sind, werden in der folgenden Tabelle beschrieben. Wenn dieses Feld nicht ordnungsgemäß analysiert werden kann, wird das Ereignis **RpcProxy \_ EventLog lb fehlerhafter \_ \_ \_ Konfigurations \_ Eintrag (0xc0000008)** im Windows-Ereignisprotokoll protokolliert.
+**HKLM \\ SOFTWARE \\ Microsoft \\ Rpc \\ RpcProxy \\ LBSConfiguration \\ XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX \\ ServerFarm**
+
+REG \_ SZ. Der **ServerFarm-Registrierungswert** enthält eine durch Semikolons getrennte Liste von Serverbezeichnern. Das Format für die Serverbezeichner lautet:
+
+"ServerID1,ServerPort1,LBSPort1, \[ LBSPort2, ... LBSPortN \] ;"
+
+Mehrere Serverbezeichner sollten im **Registrierungsschlüssel ServerFarm** aufgeführt werden. Sie müssen durch ein Semikolon getrennt werden. Die Felder, die Teil des Serverbezeichners sind, werden in der folgenden Tabelle beschrieben. Wenn dieses Feld nicht ordnungsgemäß analysiert werden kann, wird das **Ereignis RPCPROXY \_ EVENTLOG \_ LB BAD \_ \_ CONFIG ENTRY \_ (0xC0000008)** im Windows-Ereignisprotokoll protokolliert.
 
 
 
 | Bezeichnerfeld | Anforderung | BESCHREIBUNG                                                                                                                                                                                                                                                                        |
 |------------------|-------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| ServerID         | Erforderlich    | Ein auflösbarer Netzwerkname für den Server. Dabei kann es sich um einen DNS-Namen, einen NetBIOS--Namen oder eine IP-Adresse handeln.                                                                                                                                                                                |
-| ServerPort       | Optional    | Wenn angegeben, der Port, auf dem der Server auf RPC/HTTP-Verbindungen lauscht. Wenn kein Wert angegeben ist, wird die Endpunkt Zuordnung auf dem Server Computer verwendet, um den Serverport zu ermitteln.                                                                                                         |
-| Lbsport          | Optional    | Wenn angegeben, der Port, auf dem der Server auf lbs lauscht. Um diesen Schlüssel verwenden zu können, müssen die lbs-Schnittstellen mithilfe des Befehls netsh RPC Firewall auf einen statischen Endpunkt festgelegt werden. Beispiele für den Netsh-Befehl finden Sie unter [bewährte Methoden für den Lastenausgleich](load-balancing-best-practices.md) . |
+| ServerID         | Erforderlich    | Ein auflösbarer Netzwerkname für den Server. Dies kann ein DNS-Name, ein Netbios-Name oder eine IP-Adresse sein.                                                                                                                                                                                |
+| ServerPort       | Optional    | Wenn angegeben, der Port, an dem der Server auf RPC-/HTTP-Verbindungen lauscht. Wenn keine Angabe erfolgt, wird die Endpunktzuordnung auf dem Servercomputer verwendet, um den Serverport zu finden.                                                                                                         |
+| LBSPort          | Optional    | Wenn angegeben, portiert den , auf dem der Server auf LBS lauscht. Um diesen Schlüssel verwenden zu können, müssen die LBS-Schnittstellen mithilfe eines netsh RPC-Firewallbefehls auf einen statischen Endpunkt festgelegt werden. Beispiele für den Netsh-Befehl finden Sie unter Bewährte Methoden für den [Lastenausgleich.](load-balancing-best-practices.md) |
 
 
 
- 
+ 
 
 ## <a name="optional-registry-keys"></a>Optionale Registrierungsschlüssel
 
-Es gibt drei optionale Registrierungs Werte, um einen lbs-Server zu konfigurieren. Die Schlüssel Steuern hauptsächlich die Sicherheitsstufe für Aufrufe von und vom lbs-Dienst und Steuern außerdem die zu verwendende standardmäßige Ressourcen-UUID. Im folgenden sind optionale Werte aufgeführt:
+Es gibt drei optionale Registrierungswerte zum Konfigurieren eines LBS-Servers. Die Schlüssel steuern in erster Linie die Sicherheitsstufe für Aufrufe an den und vom LBS-Dienst sowie die zu verwendende Standardressourcen-UUID. Im Folgenden sind optionale Werte angegeben:
 
-Im folgenden finden Sie eine detaillierte Aufschlüsselung der erforderlichen Registrierungsschlüssel und-Werte:
+Im Folgenden finden Sie eine ausführliche Aufschlüsselung der erforderlichen Registrierungsschlüssel und -werte:
 
-**HKLM \\ Software \\ Microsoft \\ RPC \\ RpcProxy \\ lbsconfiguration \\ NoSecurity**
+**HKLM \\ SOFTWARE \\ Microsoft \\ Rpc \\ RpcProxy \\ LBSConfiguration \\ NoSecurity**
 
-DWORD. Wenn **NoSecurity** DWORD nicht vorhanden ist oder auf 0 festgelegt ist, werden eingehende nicht sichere Aufrufe des lbs-Diensts abgelehnt. Wenn vorhanden und nicht 0, werden eingehende nicht sichere Aufrufe an den lbs-Dienst nicht zurückgewiesen. Dieser Schlüssel wird beim Start des lbs-Dienstanbieter einmal eingelesen.
-
-\-
-
-**HKLM \\ Software \\ Microsoft \\ RPC \\ RpcProxy \\ lbsconfiguration \\ assumeresourceuuid**
-
-DWORD. Wenn das " **assumeresourceuuid** DWORD" nicht vorhanden ist, erfolgt keine Änderung im lbs-Dienst. Wenn Sie vorhanden ist, muss Sie mit einer gültigen [**UUID**](./rpcdce/ns-rpcdce-uuid.md)festgelegt werden. Diese **UUID** wird als Ressourcen-UUID für alle Verbindungen verwendet, die keine Ressourcen-UUID angeben. Dies wird häufig in Fällen verwendet, in denen Clients bei der Erstellung der RPC/HTTP-Bindung keine Ressourcen-UUID angeben, aber ein Administrator möchte einen Lastenausgleich für den RPC/HTTP-Datenverkehr zu einer Serverfarm durchführen. Wenn dieser Schlüssel nicht in eine UUID analysiert werden kann, wird ein interner RPC-Fehler ausgegeben, der die [**erweiterten RPC- \_ \_ Fehler \_ Informationen**](/windows/win32/api/rpcasync/ns-rpcasync-rpc_extended_error_info) erzeugt, wenn er aktiviert ist.
+DWORD. Wenn das **NoSecurity-DWORD** nicht vorhanden oder auf 0 festgelegt ist, werden eingehende nicht sichere Aufrufe an den LBS-Dienst abgelehnt. Wenn vorhanden und nicht 0, werden eingehende nicht sichere Aufrufe an den LBS-Dienst nicht abgelehnt. Dieser Schlüssel wird beim Start des LBS-Diensts einmal gelesen.
 
 \-
 
-**HKLM \\ Software \\ Microsoft \\ RPC \\ rpchttplbsserver \\ NoSecurity**
+**HKLM \\ SOFTWARE \\ Microsoft \\ Rpc \\ RpcProxy \\ LBSConfiguration \\ AssumeResourceUUID**
 
-DWORD. Wenn **NoSecurity** DWORD nicht angezeigt oder auf 0 festgelegt wird, haben alle ausgehenden Aufrufe an die lbs-Dienste Sicherheit. Wenn Sie vorhanden und nicht auf 0 festgelegt ist, haben alle ausgehenden Aufrufe an die lbs-Dienste keine Sicherheit. Stellen Sie sicher, dass diese Einstellung mit der Einstellung " **HKLM \\ Software \\ Microsoft \\ RPC \\ RpcProxy \\ lbsconfiguration \\ NoSecurity** " übereinstimmt.
+DWORD. Wenn **assumeResourceUUID** DWORD nicht vorhanden ist, erfolgt keine Änderung im LBS-Dienst. Wenn vorhanden, muss es mit einer gültigen [**UUID**](./rpcdce/ns-rpcdce-uuid.md)festgelegt werden. Diese **UUID** wird als Ressourcen-UUID für alle Verbindungen verwendet, die keine Ressourcen-UUID angeben. Dies wird häufig in Fällen verwendet, in denen Clients beim Erstellen der RPC/HTTP-Bindung keine Ressourcen-UUID angeben, aber ein Administrator einen Lastenausgleich für den RPC/HTTP-Datenverkehr zu einer Serverfarm durchführen möchte. Wenn dieser Schlüssel nicht in eine UUID analysiert werden kann, wird ein interner RPC-Fehler behoben, wodurch [**RPC \_ EXTENDED ERROR \_ \_ INFO**](/windows/win32/api/rpcasync/ns-rpcasync-rpc_extended_error_info) generiert wird, wenn er aktiviert ist.
 
- 
+\-
 
- 
+**HKLM \\ Software \\ Microsoft \\ Rpc \\ RPCHTTPLBSServer \\ NoSecurity**
+
+DWORD. Wenn das **NoSecurity-DWORD** nicht angezeigt oder auf 0 festgelegt ist, verfügen alle ausgehenden Aufrufe an LBS-Dienste über Sicherheit. Wenn vorhanden und nicht auf 0 festgelegt, haben alle ausgehenden Aufrufe an LBS-Dienste keine Sicherheit. Stellen Sie sicher, dass diese Einstellung mit der **Einstellung HKLM \\ SOFTWARE Microsoft \\ Rpc \\ \\ RpcProxy \\ LBSConfiguration \\ NoSecurity** übereinstimmt.
+
+ 
+
+ 

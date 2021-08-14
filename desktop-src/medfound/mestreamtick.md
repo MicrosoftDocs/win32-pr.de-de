@@ -1,53 +1,53 @@
 ---
-description: Signalisiert, dass für einen Mediendaten Strom keine Daten zu einem angegebenen Zeitpunkt verfügbar sind.
+description: Signalisiert, dass in einem Medienstream zu einem bestimmten Zeitpunkt keine Daten verfügbar sind.
 ms.assetid: 1a00fff1-c3ab-4965-a663-3c15bb48ea98
-title: Mestreamtick-Ereignis (mfobjects. h)
+title: MEStreamTick-Ereignis (Mfobjects.h)
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 27123569e991043a534883964ba94e4955d60a40
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 42b72a61964e296ac5f7aa69eb2be6773b622f7b44df8300affa0150af2f8a77
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106372870"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118974059"
 ---
-# <a name="mestreamtick-event"></a>Mestreamtick-Ereignis
+# <a name="mestreamtick-event"></a>MEStreamTick-Ereignis
 
-Signalisiert, dass für einen Mediendaten Strom keine Daten zu einem angegebenen Zeitpunkt verfügbar sind.
+Signalisiert, dass in einem Medienstream zu einem bestimmten Zeitpunkt keine Daten verfügbar sind.
 
 ## <a name="event-values"></a>Ereigniswerte
 
-Mögliche Werte, die von [**imfmediaevent:: GetValue**](/windows/desktop/api/mfobjects/nf-mfobjects-imfmediaevent-getvalue) abgerufen werden, sind folgende.
+Mögliche Werte, die von [**DERMEDIAEVENT::GetValue abgerufen werden,**](/windows/desktop/api/mfobjects/nf-mfobjects-imfmediaevent-getvalue) sind:
 
 
 
 | VARTYPE           | BESCHREIBUNG                                                                   |
 |-------------------|-------------------------------------------------------------------------------|
-| VT \_ I8<br/> | Der Zeitpunkt, zu dem die Lücke auftritt, in 100-Nanosecond-Einheiten.<br/> <br/> |
+| VT \_ I8<br/> | Die Zeit, zu der die Lücke auftritt , in Einheiten von 100 Nanosekunden.<br/> <br/> |
 
 
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Dieses Ereignis signalisiert eine Lücke in den Daten. Das Ereignis benachrichtigt Downstreamkomponenten, dass zum angegebenen Zeitpunkt keine Daten erwartet werden.
+Dieses Ereignis signalisiert eine Lücke in den Daten. Das Ereignis benachrichtigt downstream-Komponenten, dass zum angegebenen Zeitpunkt keine Daten erwartet werden.
 
-Das Ereignis sollte von dem Objekt gesendet werden, das die Zeitstempel für die Medien Beispiele im Stream generiert. Abhängig vom Format der Daten ist dies entweder:
+Das Ereignis sollte von dem Objekt gesendet werden, das die Zeitstempel für die Medienbeispiele im Stream generiert. Je nach Format der Daten ist dies entweder:
 
--   Der Mediendaten Strom in der Medienquelle ([**IMF Mediastream**](/windows/desktop/api/mfidl/nn-mfidl-imfmediastream) -Schnittstelle) oder
--   Die decodertransformation ([**IMF Transform**](/windows/desktop/api/mftransform/nn-mftransform-imftransform) -Schnittstelle).
+-   Der Medienstream auf der Medienquelle [**(BENUTZEROBERFLÄCHEMediaStream-Schnittstelle)**](/windows/desktop/api/mfidl/nn-mfidl-imfmediastream) oder
+-   Die Decodertransformation ([**DIETRANSFORM-Schnittstelle).**](/windows/desktop/api/mftransform/nn-mftransform-imftransform)
 
-Während der Lücke sollte das Objekt das Ereignis so oft senden, wie es normalerweise Beispiele erzeugt. Senden Sie für ein Video ein Ereignis für jeden fehlenden Frame. Senden Sie das Ereignis für Audiodaten mindestens einmal pro Sekunde während der Lücke. Der Wert des Ereignisses ist der Zeitstempel der fehlenden Stichprobe. Senden Sie beliebig viele mestreamtick-Ereignisse, um die Lücke in den Daten zu füllen.
+Während der Lücke sollte das Objekt das Ereignis ungefähr so oft senden, wie es normalerweise Stichproben erzeugen würde. Senden Sie für Videos ein Ereignis für jeden fehlenden Frame. Senden Sie für Audiodaten das Ereignis mindestens einmal pro Sekunde während der Lücke. Der Wert des Ereignisses ist der Zeitstempel der fehlenden Stichprobe. Senden Sie so viele MEStreamTick-Ereignisse wie erforderlich, um die Lücke in den Daten zu füllen.
 
-Wenn eine Medienquelle über mehrere Datenströme verfügt und eine Lücke in mehr als einem Stream besteht, sollte jeder Stream mestreamtick-Ereignisse senden. Wenn beispielsweise eine Lücke in den Audio-und Videodaten vorliegt, senden beide Streams das Ereignis.
+Wenn eine Medienquelle über mehrere Datenströme verfügt und in mehr als einem Stream eine Lücke besteht, sollte jeder Stream MEStreamTick-Ereignisse senden. Wenn beispielsweise eine Lücke in Audio- und Videodaten besteht, senden beide Datenströme das Ereignis.
 
-Das mestreamtick-Ereignis schließt eine [**IMF Mediastream:: requestsample**](/windows/desktop/api/mfidl/nf-mfidl-imfmediastream-requestsample) -Anforderung nicht ab. Die Medienquelle muss weiterhin ein [memediasample](memediasample.md) -Ereignis für jeden **requestsample**-Anforderer senden.
+Das MEStreamTick-Ereignis schließt keine [**NSBMediaStream::RequestSample-Anforderung**](/windows/desktop/api/mfidl/nf-mfidl-imfmediastream-requestsample) ab. Die Medienquelle muss weiterhin ein [MEMediaSample-Ereignis](memediasample.md) für jeden Aufruf von **RequestSample senden.**
 
-Medien senken können dieses Ereignis nicht direkt verarbeiten. Um eine Lücke im Stream an eine Medien Senke zu signalisieren, nennen Sie [**imfstreamsink::P lacemarker**](/windows/desktop/api/mfidl/nf-mfidl-imfstreamsink-placemarker) mit einem **mfstreamsink- \_ markermarker \_** . Bei Bedarf werden von der Media Foundation Pipeline mestreamtick-Ereignisse in **mfstreamsink- \_ \_ markermarker** konvertiert.
+Mediensenken können dieses Ereignis nicht direkt nutzen. Um eine Lücke im Stream zu einer Mediensenke zu signalisieren, rufen [**Sie DENTSTREAMSink::P laceMarker**](/windows/desktop/api/mfidl/nf-mfidl-imfstreamsink-placemarker) mit einem **MFSTREAMSINK \_ MARKER \_ TICK-Marker** auf. Die Media Foundation-Pipeline konvertiert MEStreamTick-Ereignisse bei Bedarf in **MFSTREAMSINK \_ MARKER \_ TICK-Marker.**
 
-Legen Sie das Attribut " [**\_ discontinuity" der MF SampleExtension**](mfsampleextension-discontinuity-attribute.md) -Eigenschaft nicht auf das nächste Medien Beispiel nach einem mestreamtick-Ereignis fest. Das Attribut " **mfsampleextension \_ discontinuity** " impliziert, dass der Zeitstempel mit vorherigen Zeitstempeln diskontinuierlich ist, wohingegen "mestreamtick" impliziert, dass Zeitstempel kontinuierlich sind, aber einige Daten fehlen.
+Legen Sie das [**MFSampleExtension \_ Discontinuity-Attribut**](mfsampleextension-discontinuity-attribute.md) nicht für das nächste Medienbeispiel nach einem MEStreamTick-Ereignis fest. Das **MFSampleExtension \_ Discontinuity-Attribut** impliziert, dass der Zeitstempel gegenüber vorherigen Zeitstempeln diskontinuierlich ist, während MEStreamTick impliziert, dass Zeitstempel fortlaufend sind, aber einige Daten fehlen.
 
 > [!Note]  
-> In einer früheren Version der Dokumentation wurde fälschlicherweise angegeben, dass das Beispiel nach einem mestreamtick-Ereignis das Attribut " [**MF SampleExtension \_ discontinuity**](mfsampleextension-discontinuity-attribute.md) " aufweisen sollte.
+> In einer früheren Version der Dokumentation wurde fälschlicherweise angegeben, dass das Beispiel nach einem MEStreamTick-Ereignis das [**Attribut MFSampleExtension \_ Discontinuity enthalten**](mfsampleextension-discontinuity-attribute.md) sollte.
 
  
 
@@ -57,17 +57,17 @@ Legen Sie das Attribut " [**\_ discontinuity" der MF SampleExtension**](mfsample
 
 | Anforderung | Wert |
 |-------------------------------------|----------------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>                                                           |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2008 \[ -Desktop-Apps\]<br/>                                                     |
-| Header<br/>                   | <dl> <dt>Mfobjects. h (Include mfdl. h)</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur \[ Vista-Desktop-Apps\]<br/>                                                           |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2008-Desktop-Apps\]<br/>                                                     |
+| Header<br/>                   | <dl> <dt>Mfobjects.h (einschließlich Mfidl.h)</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[Ereignisse Media Foundation](media-foundation-events.md)
+[Media Foundation Ereignisse](media-foundation-events.md)
 </dt> </dl>
 
  

@@ -4,16 +4,16 @@ ms.assetid: b8891bae-31da-48f6-b4e6-18799a199c9a
 title: System.Media.AuthorUrl
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 1c7e94e13db057a9b71c5a1735f896d71c32cf5b
-ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
+ms.openlocfilehash: b2e7e6be1c3a93dc44b3ada4d4d4ac3e4388de521941900fd13822dba8aee3e2
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2021
-ms.locfileid: "108092328"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118970379"
 ---
 # <a name="systemmediaauthorurl"></a>System.Media.AuthorUrl
 
-## <a name="windows-10-version-1703-windows-10-version-1607-windows-10-version-1511-windows-10-version-1507-windows-81-windows-8-windows-7-windows-vista"></a>Windows 10, version 1703, Windows 10, version 1607, Windows 10, version 1511, Windows 10, version 1507, Windows 8.1, Windows 8, Windows 7, Windows Vista
+## <a name="windows-10-version-1703-windows-10-version-1607-windows-10-version-1511-windows-10-version-1507-windows-81-windows-8-windows-7-windows-vista"></a>Windows 10, Version 1703, Windows 10, Version 1607, Windows 10, Version 1511, Windows 10, Version 1507, Windows 8.1, Windows 8, Windows 7, Windows Vista
 
 ```
 propertyDescription
@@ -28,7 +28,7 @@ propertyDescription
       type = String
 ```
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
 PKEY-Werte werden in Propkey.h definiert.
 

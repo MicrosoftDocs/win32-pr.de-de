@@ -1,12 +1,12 @@
 ---
-title: Setcurrentredirectableadressen-Methode der Win32_TSSessionDirectory-Klasse
-description: Legt die konfigurierte Liste der für die Umleitung zu verwendenden DNS-Adressen fest.
+title: SetCurrentRedirectableAddresses-Methode der Win32_TSSessionDirectory-Klasse
+description: Legt die konfigurierte Liste der dns-berechtigten Adressen fest, die für die Umleitung verwendet werden können.
 ms.assetid: cad6a8a8-fdf1-406e-abeb-37acb396ac16
 ms.tgt_platform: multiple
 keywords:
-- Setcurrentredirectableadressen-Methode Remotedesktopdienste
-- Setcurrentredirectableadressen-Methode Remotedesktopdienste, Win32_TSSessionDirectory-Klasse
-- Win32_TSSessionDirectory-Klasse Remotedesktopdienste, setcurrentredirectableadressen-Methode
+- SetCurrentRedirectableAddresses-Methode Remotedesktopdienste
+- SetCurrentRedirectableAddresses-Methode Remotedesktopdienste , Win32_TSSessionDirectory-Klasse
+- Win32_TSSessionDirectory-Klasse Remotedesktopdienste , SetCurrentRedirectableAddresses-Methode
 topic_type:
 - apiref
 api_name:
@@ -17,16 +17,16 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: f43e70f8d108e908155b5db3e6800f4be26811c5
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 1cf1e9ab7b385111ccf91af9b4e3d6ed8bed0191f2d044c02a41705dbbc4f781
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104392067"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117756100"
 ---
-# <a name="setcurrentredirectableaddresses-method-of-the-win32_tssessiondirectory-class"></a>Setcurrentredirectableadressen-Methode der Win32- \_ Klasse "tssessiondirectory"
+# <a name="setcurrentredirectableaddresses-method-of-the-win32_tssessiondirectory-class"></a>SetCurrentRedirectableAddresses-Methode der Win32 \_ TSSessionDirectory-Klasse
 
-Mit der **setcurrentredirectableadressen** -Methode wird die konfigurierte Liste der für die Umleitung zu verwendenden DNS-Adressen festgelegt.
+Die **SetCurrentRedirectableAddresses-Methode** legt die konfigurierte Liste der dns-berechtigten Adressen fest, die für die Umleitung verwendet werden können.
 
 ## <a name="syntax"></a>Syntax
 
@@ -44,33 +44,33 @@ uint32 SetCurrentRedirectableAddresses(
 
 <dl> <dt>
 
-Kennzeichen *Umleitung* \[ in\]
+*fTokenRedirection* \[ In\]
 </dt> <dd>
 
-Typ: **UInt32**
+Typ: **uint32**
 
 Ein Flag, das angibt, ob die Tokenumleitung verwendet werden soll.
 
 </dd> <dt>
 
-*IP-Adressen* \[ in\]
+*IPAddresses* \[ In\]
 </dt> <dd>
 
-Typ: **Zeichen \[ \] Folge**
+Typ: **\[ \] Zeichenfolge**
 
-Ein Array von Zeichen folgen, das die Liste der für die Umleitung geeigneten IP-Adressen darstellt, die für die Umleitung verwendet werden können.
+Ein Array von Zeichenfolgen, das die Liste der FÜR DNS geeigneten IP-Adressen darstellt, die für die Umleitung verwendet werden können.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Typ: **UInt32**
+Typ: **uint32**
 
-Gibt bei Erfolg 0 zurück. Andernfalls wird ein WMI-Fehlercode zurückgegeben. Eine Liste dieser Werte finden Sie unter [Remotedesktopdienste Fehler Codes des WMI-Anbieters](terminal-services-wmi-provider-error-codes.md) .
+Gibt bei Erfolg 0 zurück. andernfalls wird ein WMI-Fehlercode zurückgegeben. Eine Liste dieser Werte finden Sie unter [Remotedesktopdienste WMI-Anbieterfehlercodes.](terminal-services-wmi-provider-error-codes.md)
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Managed Object Format-Dateien (MOF) enthalten die Definitionen für Windows-Verwaltungsinstrumentation (WMI)-Klassen. MOF-Dateien werden nicht als Teil des Microsoft Windows Software Development Kit (SDK) installiert. Sie werden auf dem Server installiert, wenn Sie die zugehörige Rolle mithilfe der Server-Manager hinzufügen. Weitere Informationen zu MOF-Dateien finden Sie unter [Managed Object Format (MOF)](/windows/desktop/WmiSdk/managed-object-format--mof-).
+Managed Object Format -Dateien (MOF) enthalten die Definitionen für Windows Management Instrumentation (WMI)-Klassen. MOF-Dateien werden nicht als Teil des Microsoft Windows Software Development Kit (SDK) installiert. Sie werden auf dem Server installiert, wenn Sie die zugeordnete Rolle mithilfe der Server-Manager hinzufügen. Weitere Informationen zu MOF-Dateien finden Sie unter [Managed Object Format (MOF).](/windows/desktop/WmiSdk/managed-object-format--mof-)
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -81,16 +81,16 @@ Managed Object Format-Dateien (MOF) enthalten die Definitionen für Windows-Verw
 | Unterstützte Mindestversion (Client)<br/> | Nicht unterstützt<br/>                                                               |
 | Unterstützte Mindestversion (Server)<br/> | Windows Server 2008<br/>                                                          |
 | Namespace<br/>                | Root \\ CIMv2 \\ TerminalServices<br/>                                                |
-| MOF<br/>                      | <dl> <dt>Tscsgwmi. MOF</dt> </dl> |
+| MOF<br/>                      | <dl> <dt>TSCfgWmi.mof</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>TSCfgWmi.dll</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Win32- \_ tssessiondirectory**](win32-tssessiondirectory.md)
+[**Win32 \_ TSSessionDirectory**](win32-tssessiondirectory.md)
 </dt> </dl>
 
  

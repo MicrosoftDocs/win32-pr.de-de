@@ -1,32 +1,32 @@
 ---
 title: Einführung in die RPC-Speicherverwaltung
-description: Einführung in die Speicherverwaltung für Remote Prozedur Aufrufe (RPC).
+description: Einführung in die RPC-Speicherverwaltung (Remote Procedure Call).
 ms.assetid: 3474d79c-93ef-4221-b9ea-9173978e2929
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 94ac4b6aecb2fd78448ebe31c72587fafb8f6fde
-ms.sourcegitcommit: 592c9bbd22ba69802dc353bcb5eb30699f9e9403
+ms.openlocfilehash: 0a169f87bbd8a9747dd7a4983a26f1122cf575e95434ed0dd3be346bae12b9a9
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "104316064"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118928930"
 ---
 # <a name="introduction-to-rpc-memory-management"></a>Einführung in die RPC-Speicherverwaltung
 
-Im Zusammenhang mit RPC umfasst die Speicherverwaltung Folgendes:
+Im Kontext von RPC umfasst die Speicherverwaltung Folgendes:
 
--   Zuweisen und Aufheben der Zuordnung des Speichers, der zum Simulieren eines einzelnen konzeptionellen Adressraums zwischen dem Client und dem Server in den unterschiedlichen Adressräumen der Client-und Serverthreads benötigt wird.
--   Ermitteln der Softwarekomponente, die für die Verwaltung des Arbeitsspeichers zuständig ist – der Anwendung oder dem von der Mitte generierten Stub.
--   Auswählen von "Mittel l"-Attributen, die sich auf die Speicherverwaltung auswirken: Direktionale Attribute, Zeiger Attribute, Array Attribute und die ACF-Attribute \[ [Byte \_ Anzahl](/windows/desktop/Midl/byte-count) \] , \[ [zuordnen](/windows/desktop/Midl/allocate) \] und \[ [Aktivierung \_ ](/windows/desktop/Midl/enable-allocate) \] von Zuordnungen.
+-   Zuordnung und Zuordnung des Arbeitsspeichers, der zum Simulieren eines einzelnen konzeptionellen Adressraums zwischen client und server in den verschiedenen Adressräumen der Threads des Clients und Servers erforderlich ist.
+-   Bestimmen, welche Softwarekomponente für die Verwaltung des Arbeitsspeichers verantwortlich ist – die Anwendung oder der MIDL-generierte Stub.
+-   Auswählen von MIDL-Attributen, die sich auf die Speicherverwaltung auswirken: Richtungsattribute, Zeigerattribute, Arrayattribute und die \[ [ \_ Byteanzahl](/windows/desktop/Midl/byte-count)der ACF-Attribute, \] \[ [Zuordnen](/windows/desktop/Midl/allocate)und Aktivieren von \] \[ [ \_ Zuordnen.](/windows/desktop/Midl/enable-allocate) \]
 
-Wenn ein Programm eine Funktion oder Prozedur im Adressraum aufruft, ist die Speicherverwaltung einfacher als in einer verteilten Anwendung. Um dies zu veranschaulichen, stellt das folgende Diagramm eine binäre Struktur dar. Um diese Datenstruktur an eine Prozedur im Adressraum zu übergeben, übergibt ein Programm einfach einen Zeiger an den Stamm der Struktur.
+Wenn ein Programm eine Funktion oder Prozedur im Adressraum aufruft, ist die Speicherverwaltung einfacher als in einer verteilten Anwendung. Zur Veranschaulichung wird im folgenden Diagramm eine binäre Struktur dargestellt. Um diese Datenstruktur an eine Prozedur im Adressraum zu übergeben, übergibt ein Programm einfach einen Zeiger auf den Stamm der Struktur.
 
-![eine binäre Struktur mit Zeigern auf Strukturdaten, die im Stamm der Struktur abgelegt sind.](images/bintree.png)
+![eine binäre Struktur mit Zeigern auf Strukturdaten, die im Stamm der Struktur enthalten sind](images/bintree.png)
 
-Client-/Server-RPC-Anwendungen nutzen Daten über zwei verschiedene Speicherplätze hinweg gemeinsam. Diese Speicherplätze können sich auf demselben Computer befinden oder nicht. Der Client und der Server haben in beiden Fällen keinen direkten Zugriff auf den Arbeitsspeicher Bereich der anderen. RPC hängt von der Fähigkeit ab, den Adressraum des Client Programms im Adressraum des Server Programms zu simulieren. Außerdem müssen Daten, einschließlich neuer und geänderter Daten, vom Server in den Client Speicher zurückgegeben werden.
+Client-/Server-RPC-Anwendungen nutzen Daten über zwei verschiedene Speicherplätze hinweg gemeinsam. Diese Speicherplätze können sich auf demselben Computer befinden oder nicht. In beiden Fällen haben Client und Server keinen direkten Zugriff auf den Arbeitsspeicher des jeweils anderen. RPC hängt von der Fähigkeit ab, den Adressraum des Clientprogramms im Adressraum des Serverprogramms zu simulieren. Außerdem müssen Daten, einschließlich neuer und geänderter Daten, vom Server an den Clientspeicher zurückgegeben werden.
 
-In Fällen wie der binär Struktur, die im vorangehenden Diagramm dargestellt ist, reicht es nicht aus, einen Zeiger auf den Stamm Knoten an eine Remote Prozedur zu übergeben. Entweder das Programm oder die Stub muss die gesamte Struktur an den Adressbereich des Servers übergeben, damit das Remote Verfahren darauf angewendet werden kann.
+In Fällen wie der im vorherigen Diagramm dargestellten binären Struktur reicht es nicht aus, einen Zeiger auf den Stammknoten an eine Remoteprozedur zu übergeben. Das Programm oder die Stubs müssen die gesamte Struktur an den Adressraum des Servers übergeben, damit die Remoteprozedur darauf zugreifen kann.
 
- 
+ 
 
- 
+ 

@@ -1,9 +1,9 @@
 ---
-title: Normalmenuitem-Struktur
-description: Enthält Informationen zu jedem Element in einer Menü Ressource, die kein Menü oder Untermenü öffnet. Die hier bereitgestellte Struktur Definition dient nur der Erläuterung. Es ist in keiner Standard Header Datei vorhanden.
+title: NORMALMENUITEM-Struktur
+description: Enthält Informationen zu jedem Element in einer Menüressource, die kein Menü oder Untermenü öffnet. Die hier bereitgestellte Strukturdefinition dient nur zur Erklärung. sie ist in keiner Standardheaderdatei vorhanden.
 ms.assetid: c1b84264-2d7f-4bc3-8e74-7b921a0bfe30
 keywords:
-- Normmenuitem-Struktur Menüs und andere Ressourcen
+- NORMALMENUITEM-StrukturMenüs und andere Ressourcen
 topic_type:
 - apiref
 api_name:
@@ -13,16 +13,16 @@ api_type:
 ms.topic: reference
 ms.date: 05/31/2018
 api_location: ''
-ms.openlocfilehash: c90efe624346e30483c42f6f8ff51cd6d3550922
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: f47fef5e1481d56671cd525061f1a5fcf88481213671bac45c923cfbae0ebbd0
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104340517"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118733690"
 ---
-# <a name="normalmenuitem-structure"></a>Normalmenuitem-Struktur
+# <a name="normalmenuitem-structure"></a>NORMALMENUITEM-Struktur
 
-Enthält Informationen zu jedem Element in einer Menü Ressource, die kein Menü oder Untermenü öffnet. Die hier bereitgestellte Struktur Definition dient nur der Erläuterung. Es ist in keiner Standard Header Datei vorhanden.
+Enthält Informationen zu jedem Element in einer Menüressource, die kein Menü oder Untermenü öffnet. Die hier bereitgestellte Strukturdefinition dient nur zur Erklärung. sie ist in keiner Standardheaderdatei vorhanden.
 
 ## <a name="syntax"></a>Syntax
 
@@ -40,21 +40,21 @@ typedef struct {
 
 <dl> <dt>
 
-**resInfo**
+**Resinfo**
 </dt> <dd>
 
-Typ: **Word**
+Typ: **WORD**
 
 </dd> <dd>
 
-Der Typ des Menü Elements. Dieser Member kann einen der folgenden Werte aufweisen.
+Der Typ des Menüelements. Dieser Member kann einer der folgenden Werte sein.
 
 
 
 | Wert                                                                                                                                                                                                       | Bedeutung                                                                                                            |
 |-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------|
-| <span id="MFR_END"></span><span id="mfr_end"></span><dl> <dt>**MFR \_ Ende**</dt> <dt>0x80</dt> </dl>       | Das Menü Element ist das letzte in diesem Untermenü oder in der Menü Ressource. Dieses Flag wird intern vom System verwendet.<br/> |
-| <span id="MFR_POPUP"></span><span id="mfr_popup"></span><dl> <dt>**MFR \_ Popup**</dt> - <dt>0x01</dt> </dl> | Das Menü Element öffnet ein Menü oder ein Untermenü. das-Flag wird intern vom System verwendet. <br/>                    |
+| <span id="MFR_END"></span><span id="mfr_end"></span><dl> <dt>**WIEDERERZ \_ END**</dt> <dt>0x80</dt> </dl>       | Das Menüelement ist das letzte in dieser Untermenü- oder Menüressource. Dieses Flag wird intern vom System verwendet.<br/> |
+| <span id="MFR_POPUP"></span><span id="mfr_popup"></span><dl> <dt>**WIEDERERZ \_ POPUP-0x01**</dt> <dt></dt> </dl> | Das Menüelement öffnet ein Menü oder ein Untermenü. Das Flag wird intern vom System verwendet. <br/>                    |
 
 
 
@@ -62,22 +62,22 @@ Der Typ des Menü Elements. Dieser Member kann einen der folgenden Werte aufweis
 
 </dd> <dt>
 
-**MenuText**
+**menuText**
 </dt> <dd>
 
-Typ: **szorord**
+Typ: **szOrOrd**
 
 </dd> <dd>
 
-Eine NULL-terminierte Unicode-Zeichenfolge, die den Text für dieses Menü Element enthält. Es gibt keine Beschränkung für die Größe dieser Zeichenfolge.
+Eine auf NULL endende Unicode-Zeichenfolge, die den Text für dieses Menüelement enthält. Es gibt keinen festen Grenzwert für die Größe dieser Zeichenfolge.
 
 </dd> </dl>
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Es gibt eine **Normal MenuItem** -Struktur für jedes Menü Element, das kein Menü oder Untermenü öffnet. Geben Sie das letzte Menü Element in einem Menü an, indem Sie das **ResInfo** -Element auf **MFR- \_ Ende** festlegen.
+Es gibt eine **NORMALMENUITEM-Struktur** für jedes Menüelement, das kein Menü oder Untermenü öffnet. Geben Sie das letzte Menüelement in einem Menü an, indem Sie den **resInfo-Member** auf **DIE END-End-Einstellung \_** festlegen.
 
-Ein Menü Trennzeichen ist ein spezieller Typ von Menü Element, das inaktiv ist, aber als Trennleiste zwischen zwei aktiven Menü Elementen angezeigt wird. Geben Sie ein Menü Trennzeichen an, indem Sie den **MenuText** -Member leer gelassen.
+Ein Menütrennzeichen ist ein spezieller Typ von Menüelement, das inaktiv ist, aber als Trennleiste zwischen zwei aktiven Menüelementen angezeigt wird. Geben Sie ein Menütrennzeichen an, indem Sie das **menuText-Element** leer lassen.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -90,23 +90,23 @@ Ein Menü Trennzeichen ist ein spezieller Typ von Menü Element, das inaktiv ist
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-**Verweis**
+**Referenz**
 </dt> <dt>
 
-[**Menuheader**](menuheader.md)
+[**MENUHEADER**](menuheader.md)
 </dt> <dt>
 
-[**Menuiteminfo zuordnet**](/windows/win32/api/winuser/ns-winuser-menuiteminfoa)
+[**MENUITEMINFO**](/windows/win32/api/winuser/ns-winuser-menuiteminfoa)
 </dt> <dt>
 
-[**Popupmenuitem**](popupmenuitem.md)
+[**POPUPMENUITEM**](popupmenuitem.md)
 </dt> <dt>
 
-**Licher**
+**Konzeptionellen**
 </dt> <dt>
 
 [Ressourcen](resources.md)

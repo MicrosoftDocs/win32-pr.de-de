@@ -1,9 +1,9 @@
 ---
-title: WM/streamtypeingangs Info
-description: Das WM/streamtypeinfo-Attribut enthält die Konfigurationsinformationen für den angegebenen Datenstrom in der ASF-Datei.
+title: WM/StreamTypeInfo
+description: Das WM/StreamTypeInfo-Attribut enthält die Konfigurationsinformationen für den angegebenen Stream in der ASF-Datei.
 ms.assetid: 4d7f18d4-d76d-4e2e-b8a9-eb96844a2fa1
 keywords:
-- WM/streamtypeingangs Info Windows Media-Format
+- WM/StreamTypeInfo windows Media Format
 topic_type:
 - apiref
 api_name:
@@ -12,43 +12,43 @@ api_type:
 - NA
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 2c410b470e9ddb4ec874325d9c1cca2839c00b1d
-ms.sourcegitcommit: 57758ecb246c84d65e6e0e4bd5570d9176fa39cd
+ms.openlocfilehash: 6fb40926d5ecba3aea2c7f2db64850152c66a25861d4422fddf04670c76d8148
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "104389061"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118698272"
 ---
-# <a name="wmstreamtypeinfo"></a>WM/streamtypeingangs Info
+# <a name="wmstreamtypeinfo"></a>WM/StreamTypeInfo
 
-Das **WM/streamtypeinfo-** Attribut enthält die Konfigurationsinformationen für den angegebenen Datenstrom in der ASF-Datei.
+Das **WM/StreamTypeInfo-Attribut** enthält die Konfigurationsinformationen für den angegebenen Stream in der ASF-Datei.
 
 ## <a name="global-constant"></a>Globale Konstante
 
-g \_ wszwmstreamtypeingangs Info
+g \_ wszWMStreamTypeInfo
 
 ## <a name="data-type"></a>Datentyp
 
-[**WM \_ \_Streamtyp \_ Info**](/previous-versions/windows/desktop/api/wmsdkidl/ns-wmsdkidl-wm_stream_type_info) (**WMT \_ - \_ typbinär Datei**)
+[**WM \_ STREAM \_ TYPE \_ INFO**](/previous-versions/windows/desktop/api/wmsdkidl/ns-wmsdkidl-wm_stream_type_info) (**WMT TYPE \_ \_ BINARY**)
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Dieses Attribut gilt für bestimmte Datenströme. Dieses Attribut kann für Stream 0 nicht abgerufen werden.
+Dieses Attribut gilt für bestimmte Streams. Sie können dieses Attribut für Stream 0 nicht abrufen.
 
 Dieses Attribut ist schreibgeschützt.
 
-Das Metadateneditor-Objekt kann auf **WM/streamtypeinfo** zugreifen. Dies ist die einzige Möglichkeit, auf Informationen zur Datenstrom Konfiguration zuzugreifen, ohne die Datei mit dem Reader-Objekt (oder dem synchronen Reader-Objekt) zu öffnen.
+**Auf WM/StreamTypeInfo kann** über das Metadaten-Editor-Objekt zugegriffen werden. Dies ist die einzige Möglichkeit, auf Datenstromkonfigurationsinformationen zu zugreifen, ohne die Datei mit dem Readerobjekt (oder dem synchronen Readerobjekt) zu öffnen.
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
 [**Attributliste**](attribute-list.md)
 </dt> </dl>
 
- 
+ 
 
- 
+ 
 
 
 

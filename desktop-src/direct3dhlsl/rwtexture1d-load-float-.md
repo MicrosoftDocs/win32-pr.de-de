@@ -1,9 +1,9 @@
 ---
-title: 'RWTexture1D:: Load (int)-Funktion'
-description: 'Liest Textur Daten. | RWTexture1D:: Load (int)-Funktion'
+title: RWTexture1D::Load(int)-Funktion
+description: Liest Texturdaten. | RWTexture1D::Load(int)-Funktion
 ms.assetid: AA5E324E-A2C0-45C5-92A8-E4DBC4EB684C
 keywords:
-- Ladefunktion HLSL
+- Load-Funktion HLSL
 topic_type:
 - apiref
 api_name:
@@ -13,16 +13,16 @@ api_type:
 ms.topic: reference
 ms.date: 05/31/2018
 api_location: ''
-ms.openlocfilehash: e78cd12502ada91e48df1ce88be6a19fb714327f
-ms.sourcegitcommit: 92e74c99f8f4d097676959d0c317f533c2400a80
+ms.openlocfilehash: f8d502d6e4fd1f13355c17fbd1ef9c42b3c6de2ec5aa20176aec562af807dd3e
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/09/2021
-ms.locfileid: "104353118"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119981620"
 ---
-# <a name="rwtexture1dloadint-function"></a>RWTexture1D:: Load (int)-Funktion
+# <a name="rwtexture1dloadint-function"></a>RWTexture1D::Load(int)-Funktion
 
-Liest Textur Daten.
+Liest Texturdaten.
 
 ## <a name="syntax"></a>Syntax
 
@@ -39,12 +39,12 @@ Liest Textur Daten.
 
 <dl> <dt>
 
-*Speicherort* \[ in\]
+*Standort* \[ In\]
 </dt> <dd>
 
 Typ: **int**
 
-Der Speicherort der Textur.
+Die Position der Textur.
 
 </dd> </dl>
 
@@ -52,15 +52,15 @@ Der Speicherort der Textur.
 
 Typ:
 
-Der Rückgabetyp entspricht dem Typ in der Deklaration für das [**RWTexture1D**](sm5-object-rwtexture1d.md) -Objekt.
+Der Rückgabetyp entspricht dem Typ in der Deklaration für das [**RWTexture1D-Objekt.**](sm5-object-rwtexture1d.md)
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Diese Funktion wird für die folgenden Typen von Shadern unterstützt:
+Diese Funktion wird für die folgenden Shadertypen unterstützt:
 
 
 
-| Scheitelpunkt | Hülle | Domain | Geometrie | Pixel | Compute |
+| Scheitelpunkt | Rumpf | Domain | Geometrie | Pixel | Compute |
 |--------|------|--------|----------|-------|---------|
 |        |      |        |          | x     | x       |
 
@@ -72,7 +72,7 @@ Diese Funktion wird für die folgenden Typen von Shadern unterstützt:
 
 <dl> <dt>
 
-[Lade Methoden](rwtexture1d-load.md)
+[Laden von Methoden](rwtexture1d-load.md)
 </dt> </dl>
 
  

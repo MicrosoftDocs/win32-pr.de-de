@@ -1,28 +1,28 @@
 ---
-description: Die Themen in diesem Abschnitt enthalten die Referenz Spezifikationen für den Zeiger Geräte-Eingabe Stapel in Windows 8.
+description: Die Themen in diesem Abschnitt enthalten die Referenzspezifikationen für den Zeigergeräteeingabestapel in Windows 8.
 ms.assetid: 1B620557-0C1F-4334-975E-C9F0D1A61253
-title: Verweis auf Zeiger Geräte-Eingabe Stapel Referenz
+title: Referenz zum Eingabestapel des Zeigergeräts
 ms.topic: article
 ms.date: 02/05/2020
-ms.openlocfilehash: a065bdeb896a6770bf2045558fe5babdfac435cf
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: c614f604e1fda23a672ddf4c8aa6a76cc2915524420ca57528b032aca157e745
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106352405"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118758273"
 ---
-# <a name="pointer-device-input-stack-reference"></a>Verweis auf Zeiger Geräte-Eingabe Stapel Referenz
+# <a name="pointer-device-input-stack-reference"></a>Referenz zum Eingabestapel des Zeigergeräts
 
-Die Themen in diesem Abschnitt enthalten die Referenz Spezifikationen für den [Zeiger Geräte-Eingabe Stapel](pointer-device-stack-portal.md) in Windows 8.
+Die Themen in diesem Abschnitt enthalten die Referenzspezifikationen für den [Zeigergeräteeingabestapel](pointer-device-stack-portal.md) in Windows 8.
 
 ## <a name="in-this-section"></a>In diesem Abschnitt
 
 | Thema | BESCHREIBUNG |
 |---|---|
-| [Enumerationen](enumerations.md)<br/> | Die Themen in diesem Abschnitt enthalten die Referenz Spezifikationen für Enumerationen von [Zeiger Geräte-Eingabe Stapeln](pointer-device-stack-portal.md) .<br/> |
-| [Funktionen](functions.md)<br/>       | Die Themen in diesem Abschnitt enthalten die Referenz Spezifikationen für [Zeiger Geräte-Eingabe Stapel](pointer-device-stack-portal.md) Funktionen.<br/>    |
-| [Strukturen](structures.md)<br/>     | Die Themen in diesem Abschnitt enthalten die Referenz Spezifikationen für [Zeiger Geräte-Eingabe Stapel](pointer-device-stack-portal.md) Strukturen.<br/>   |
+| [Enumerationen](enumerations.md)<br/> | Die Themen in diesem Abschnitt enthalten die Referenzspezifikationen für [Zeigergeräteeingabestapel-Enumerationen.](pointer-device-stack-portal.md)<br/> |
+| [Funktionen](functions.md)<br/>       | Die Themen in diesem Abschnitt enthalten die Referenzspezifikationen für [Zeigergeräte-Eingabestapelfunktionen.](pointer-device-stack-portal.md)<br/>    |
+| [Strukturen](structures.md)<br/>     | Die Themen in diesem Abschnitt enthalten die Referenzspezifikationen für [Zeigergeräte-Eingabestapelstrukturen.](pointer-device-stack-portal.md)<br/>   |
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
-[Eingabe Stapel für Zeiger Geräte](pointer-device-stack-portal.md)
+[Zeigergeräteeingabestapel](pointer-device-stack-portal.md)

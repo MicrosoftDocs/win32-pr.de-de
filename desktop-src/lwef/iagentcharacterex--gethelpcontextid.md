@@ -1,19 +1,19 @@
 ---
-title: Iagentcharakteriex gethelpcontextid
-description: Iagentcharakteriex gethelpcontextid
+title: IAgentCharacterEx GetHelpContextID
+description: IAgentCharacterEx GetHelpContextID
 ms.assetid: 9dec5b0c-4758-4859-9aa6-6db3ef0d6b56
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: bfec03a217745838b88a592433defae01529ed50
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: 3a3a64de0f4373bcaa890156ec88595d066aae9ae84b5b242fe62ffae10479d6
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "103713181"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118750795"
 ---
-# <a name="iagentcharacterexgethelpcontextid"></a>Iagentcharakteriex:: gethelpcontextid
+# <a name="iagentcharacterexgethelpcontextid"></a>IAgentCharacterEx::GetHelpContextID
 
-\[Der Microsoft-Agent ist ab Windows 7 veraltet und in nachfolgenden Versionen von Windows möglicherweise nicht verfügbar.\]
+\[Microsoft Agent ist ab Version Windows 7 veraltet und möglicherweise in nachfolgenden Versionen von Windows.\]
 
 ``` syntax
 HRESULT GetHelpContextID(
@@ -21,36 +21,36 @@ HRESULT GetHelpContextID(
 );
 ```
 
-Ruft [**HelpContextID**](helpcontextid-property.md) für das Zeichen ab.
+Ruft die [**HelpContextID für**](helpcontextid-property.md) das Zeichen ab.
 
 -   Gibt S \_ OK zurück, um anzugeben, dass der Vorgang erfolgreich war.
 
 <dl> <dt>
 
-<span id="pulHelpID"></span><span id="pulhelpid"></span><span id="PULHELPID"></span>*pulhelpid*
+<span id="pulHelpID"></span><span id="pulhelpid"></span><span id="PULHELPID"></span>*pulHelpID*
 </dt> <dd>
 
-Adresse einer Variablen, die die Kontext Nummer des Hilfe Themas für das Zeichen empfängt.
+Adresse einer Variablen, die die Kontextnummer des Hilfethemas für das Zeichen empfängt.
 
 </dd> </dl>
 
-Wenn Sie eine Windows-Hilfedatei für Ihre Anwendung erstellt und die [**HelpFile**](helpfile-property.md) -Eigenschaft des Zeichens festgelegt haben, ruft der Microsoft-Agent automatisch die Hilfe auf, wenn [**helpmudeon**](helpmodeon-property.md) auf **true** festgelegt ist und der Benutzer das Zeichen auswählt. Wenn in [**HelpContextID**](helpcontextid-property.md)eine Kontext Nummer vorhanden ist, ruft der-Agent Hilfe auf und sucht nach dem Thema, das durch die aktuelle Kontext Nummer identifiziert wird. Die aktuelle Kontext Nummer ist der Wert von **HelpContextID** für das Zeichen.
+Wenn Sie eine Windows-Hilfedatei für Ihre Anwendung erstellt und die [**HelpFile-Eigenschaft**](helpfile-property.md) des Zeichens festgelegt haben, ruft Microsoft Agent automatisch Help auf, wenn [**HelpModeOn**](helpmodeon-property.md) auf True festgelegt ist und der Benutzer das Zeichen auswählt.  Wenn die [**HelpContextID**](helpcontextid-property.md)eine Kontextnummer enthält, ruft der -Agent die Hilfe auf und sucht nach dem Thema, das durch die aktuelle Kontextnummer identifiziert wird. Die aktuelle Kontextnummer ist der Wert von **HelpContextID** für das Zeichen.
 
-**Iagentcharakteriex:: gethelpcontextid** gibt die [**HelpContextID**](helpcontextid-property.md) zurück, die Sie für das Zeichen festgelegt haben. Die von anderen Clients festgelegte **HelpContextID** wird nicht zurückgegeben.
+**IAgentCharacterEx::GetHelpContextID gibt** die [**HelpContextID**](helpcontextid-property.md) zurück, die Sie für das Zeichen festgelegt haben. Die von anderen Clients **festgelegte HelpContextID** wird nicht zurückgeben.
 
 > [!Note]  
-> Das Entwickeln einer Hilfedatei erfordert den Microsoft Windows Help Compiler.
+> Zum Erstellen einer Hilfedatei ist der Microsoft Windows Help Compiler erforderlich.
 
- 
+ 
 
 ## <a name="see-also"></a>Weitere Informationen
 
-[**Iagentcharakteriex::**](iagentcharacterex--sethelpcontextid.md)Setup Element-ID, [**iagentcharakteriex::**](iagentcharacterex--sethelpmodeon.md)Setup Elementname, iagentcharakteriex: [**:**](iagentcharacterex--sethelpfilename.md) Setup Name
+[**IAgentCharacterEx::SetHelpContextID**](iagentcharacterex--sethelpcontextid.md), [**IAgentCharacterEx::SetHelpModeOn**](iagentcharacterex--sethelpmodeon.md), [**IAgentCharacterEx::SetHelpFileName**](iagentcharacterex--sethelpfilename.md)
 
 
- 
+ 
 
- 
+ 
 
 
 

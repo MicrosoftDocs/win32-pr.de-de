@@ -1,26 +1,26 @@
 ---
-title: Pixel Besitz Test
-description: Der Pixel Besitz Test bestimmt, ob der aktuelle OpenGL-Kontext das Pixel im Frame Puffer besitzt, das einem bestimmten Fragment entspricht.
+title: Testen des Pixelbesitzes
+description: Der Pixelbesitztest bestimmt, ob der aktuelle OpenGL-Kontext das Pixel im Framepuffer besitzt, das einem bestimmten Fragment entspricht.
 ms.assetid: aa9428a6-cc05-4df4-ba31-444f999006a8
 keywords:
-- OpenGL-Verarbeitungs Pipeline, Pixel Besitz Test
-- Pixel Besitz Test OpenGL
+- OpenGL-Verarbeitungspipeline, Pixelbesitztest
+- Pixelbesitztest OpenGL
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 85ad5ae57dbbff9f3551ecc222cd0a628193c97f
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: 12cfefe133b3951fa70d51736f664ec5a7cb9942c4c05f892115dd222013f294
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "104310336"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118936249"
 ---
-# <a name="pixel-ownership-test"></a>Pixel Besitz Test
+# <a name="pixel-ownership-test"></a>Testen des Pixelbesitzes
 
-Der Pixel Besitz Test bestimmt, ob der aktuelle OpenGL-Kontext das Pixel im Frame Puffer besitzt, das einem bestimmten Fragment entspricht. Wenn dies der Fall ist, geht das Fragment mit dem nächsten Test fort. Wenn dies nicht der Fall ist, bestimmt das Fenstersystem, ob das Fragment verworfen wird, oder ob weitere fragmentvorgänge mit diesem Fragment ausgeführt werden. Mit diesem Test steuert das Fenstersystem das Verhalten, wenn z. b. ein OpenGL-Fenster verdeckt ist.
+Der Pixelbesitztest bestimmt, ob der aktuelle OpenGL-Kontext das Pixel im Framepuffer besitzt, das einem bestimmten Fragment entspricht. Wenn dies der Schritt ist, wird das Fragment mit dem nächsten Test fortgesetzt. Wenn dies nicht der Fall ist, bestimmt das Fenstersystem, ob das Fragment verworfen wird oder ob weitere Fragmentvorgänge mit diesem Fragment ausgeführt werden. Bei diesem Test steuert das Fenstersystem das Verhalten, wenn z. B. ein OpenGL-Fenster verdeckt wird.
 
- 
+ 
 
- 
+ 
 
 
 

@@ -1,29 +1,29 @@
 ---
-description: Dieser Abschnitt enthält konzeptionelle und Vorgehensweisen, in denen Windows Imaging Component (WIC) Bitmap-Decoder beschrieben werden, die beim Decodieren digitaler Images verwendet werden.
+description: Dieser Abschnitt enthält konzeptionelle und how-to-Themen, in denen Windows Imaging Component (WIC)-Bitmapdecoder beschrieben werden, die zum Decodieren digitaler Bilder verwendet werden.
 ms.assetid: a5d166f1-341b-496e-b63f-ecfae89032ff
-title: Decodieren digitaler Images
+title: Decodieren digitaler Bilder
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 9c1a5e83712d2163ce77f9f3b74ec3afedc46f85
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 7a48614218d1d32c4fe2795d3115e01aa7859d8938270eaa0c11dd3d3b481e87
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106361698"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118711325"
 ---
-# <a name="decoding-digital-images"></a>Decodieren digitaler Images
+# <a name="decoding-digital-images"></a>Decodieren digitaler Bilder
 
-Dieser Abschnitt enthält konzeptionelle und Vorgehensweisen, in denen Windows Imaging Component (WIC) Bitmap-Decoder beschrieben werden, die beim Decodieren digitaler Images verwendet werden.
+Dieser Abschnitt enthält konzeptionelle und how-to-Themen, in denen Windows Imaging Component (WIC)-Bitmapdecoder beschrieben werden, die zum Decodieren digitaler Bilder verwendet werden.
 
 ## <a name="in-this-section"></a>In diesem Abschnitt
 
 
 
-| Thema                                                                     | BESCHREIBUNG                                                                                                              |
+| Thema                                                                     | Beschreibung                                                                                                              |
 |---------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------|
-| [Decodierung: Übersicht](-wic-creating-decoder.md)<br/>                 | Das Thema enthält eine Einführung in den Bitmap-Decoder, eine zentrale WIC-Codec-Komponente, mit der Bilddateien aus einem Stream decodiert werden.<br/> |
-| [Übersicht über Progressive Decodierung](-wic-progressive-decoding.md)<br/> | In diesem Thema wird die Progressive Decodierung und die Verwendung progressiver Decodierung in-Anwendungen vorgestellt.<br/>               |
-| [Themen zur Vorgehensweise für Decoder](-wic-decoder-howto-portal.md)<br/>         | Die Themen in diesem Abschnitt enthalten Beispiele für das Ausführen von Aufgaben im Zusammenhang mit bitmapdecodern.<br/>     |
+| [Übersicht über die Decodierung](-wic-creating-decoder.md)<br/>                 | In diesem Thema wird der Bitmapdecoder beschrieben, eine WIC-Codec-Kernkomponente, die zum Decodieren von Bilddateien aus einem Stream verwendet wird.<br/> |
+| [Übersicht über die progressive Decodierung](-wic-progressive-decoding.md)<br/> | In diesem Thema wird die progressive Decodierung und die Verwendung der progressiven Decodierung in Anwendungen beschrieben.<br/>               |
+| [Themen zur Decoder-How-to-](-wic-decoder-howto-portal.md)<br/>         | Die Themen in diesem Abschnitt enthalten Beispiele, die zeigen, wie Aufgaben im Zusammenhang mit Bitmapdecodern erfüllt werden.<br/>     |
 
 
 
@@ -34,7 +34,7 @@ Dieser Abschnitt enthält konzeptionelle und Vorgehensweisen, in denen Windows I
 [Programmierhandbuch](-wic-programming-guide.md)
 
 
-[Verweis](-wic-codec-reference.md)
+[Referenz](-wic-codec-reference.md)
 
 
 [Beispiele](-wic-samples.md)

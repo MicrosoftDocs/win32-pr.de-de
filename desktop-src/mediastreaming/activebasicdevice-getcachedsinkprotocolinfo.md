@@ -1,11 +1,11 @@
 ---
-title: Activebasicdevice getcachedsinkprotocolinfo-Methode (playtodevice. h)
-description: Ruft die zwischengespeicherten senkenprotokollinformationen für das Gerät ab. | Activebasicdevice getcachedsinkprotocolinfo-Methode (playtodevice. h)
+title: ActiveBasicDevice GetCachedSinkProtocolInfo-Methode (PlayToDevice.h)
+description: Ruft die zwischengespeicherten Senkenprotokollinformationen für das Gerät ab. | ActiveBasicDevice GetCachedSinkProtocolInfo-Methode (PlayToDevice.h)
 ms.assetid: C6A3C4B5-1883-4E71-83D2-11E378A4FBCA
 keywords:
-- Getcachedsinkprotocolinfo-Methode Medien Streaming-API
-- Getcachedsinkprotocolinfo-Methode Medien Streaming-API, activebasicdevice-Schnittstelle
-- Activebasicdevice-Schnittstelle Medien Streaming-API, getcachedsinkprotocolinfo-Methode
+- GetCachedSinkProtocolInfo-Methode Medienstreaming-API
+- GetCachedSinkProtocolInfo-Methode Media Streaming-API, ActiveBasicDevice-Schnittstelle
+- ActiveBasicDevice-Schnittstelle Medienstreaming-API, GetCachedSinkProtocolInfo-Methode
 topic_type:
 - apiref
 api_name:
@@ -16,16 +16,16 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 056cc351a1ecd1c8eef07d4e994da8e895aa85f8
-ms.sourcegitcommit: 92e74c99f8f4d097676959d0c317f533c2400a80
+ms.openlocfilehash: b1a9ebda71f59dc4bd887479b5ff9e763844b32985736f8cf224ed4981f04b34
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/09/2021
-ms.locfileid: "106373458"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118736396"
 ---
-# <a name="activebasicdevicegetcachedsinkprotocolinfo-method"></a>Activebasicdevice:: getcachedsink protocolinfo-Methode
+# <a name="activebasicdevicegetcachedsinkprotocolinfo-method"></a>ActiveBasicDevice::GetCachedSinkProtocolInfo-Methode
 
-Ruft die zwischengespeicherten senkenprotokollinformationen für das Gerät ab.
+Ruft die zwischengespeicherten Senkenprotokollinformationen für das Gerät ab.
 
 ## <a name="syntax"></a>Syntax
 
@@ -42,16 +42,16 @@ HRESULT GetCachedSinkProtocolInfo(
 
 <dl> <dt>
 
-*Wert* \[ Out, retval\]
+*value* \[ out, retval\]
 </dt> <dd>
 
-Die zwischengespeicherten senkenprotokollinformationen für das Gerät.
+Die zwischengespeicherten Senkenprotokollinformationen für das Gerät.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Wenn diese Methode erfolgreich ausgeführt wird, gibt Sie **S \_ OK** zurück. Andernfalls wird ein **HRESULT** -Fehlercode zurückgegeben.
+Wenn diese Methode erfolgreich ist, wird **S \_ OK zurückgegeben.** Andernfalls wird ein **HRESULT-Fehlercode** zurückgegeben.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -59,19 +59,19 @@ Wenn diese Methode erfolgreich ausgeführt wird, gibt Sie **S \_ OK** zurück. A
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | \[Nur Desktop-Apps Windows 8.1\]<br/>                                                |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2012 R2 \[ -Desktop-Apps\]<br/>                                     |
-| Header<br/>                   | <dl> <dt>Playondevice. h</dt> </dl>   |
-| IDL<br/>                      | <dl> <dt>Playto Device. idl</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | \[Windows 8.1 Nur Desktop-Apps\]<br/>                                                |
+| Unterstützte Mindestversion (Server)<br/> | Windows Server 2012 Nur \[ R2-Desktop-Apps\]<br/>                                     |
+| Header<br/>                   | <dl> <dt>PlayToDevice.h</dt> </dl>   |
+| Idl<br/>                      | <dl> <dt>PlayToDevice.idl</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>Playtodevice.dll</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Activebasicdevice**](/previous-versions/windows/desktop/legacy/dn385755(v=vs.85))
+[**ActiveBasicDevice**](/previous-versions/windows/desktop/legacy/dn385755(v=vs.85))
 </dt> </dl>
 
  

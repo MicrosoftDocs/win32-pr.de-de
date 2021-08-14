@@ -1,128 +1,128 @@
 ---
-description: Jedes Dokument in einer MDI-Anwendung (Multiple Document Interface) wird in einem separaten untergeordneten Fenster im Client Bereich des Hauptfensters der Anwendung angezeigt.
+description: Jedes Dokument in einer MDI-Anwendung (Multiple Document Interface) wird in einem separaten untergeordneten Fenster im Clientbereich des Hauptfensters der Anwendung angezeigt.
 ms.assetid: 35dff281-3b11-4954-85cf-a0f1c9ed346a
 title: Informationen zur Schnittstelle für mehrere Dokumente
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: a0397127d7ec343ebdb7696c2dd7d57204a5d5ae
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 071d3bebad8e6aba48b69b66fd41f9f7933c1d9785ae38512003aaf1bd9a19e4
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106352771"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118706000"
 ---
 # <a name="about-the-multiple-document-interface"></a>Informationen zur Schnittstelle für mehrere Dokumente
 
-Jedes Dokument in einer MDI-Anwendung (Multiple Document Interface) wird in einem separaten untergeordneten Fenster im Client Bereich des Hauptfensters der Anwendung angezeigt. Typische MDI-Anwendungen enthalten Textverarbeitungsanwendungen, die es dem Benutzer ermöglichen, mit mehreren Textdokumenten zu arbeiten und Arbeitsblatt Anwendungen, mit denen der Benutzer mit mehreren Diagrammen und Kalkulations Tabellen arbeiten kann. Weitere Informationen finden Sie in den nachfolgenden Themen.
+Jedes Dokument in einer MDI-Anwendung (Multiple Document Interface) wird in einem separaten untergeordneten Fenster im Clientbereich des Hauptfensters der Anwendung angezeigt. Typische MDI-Anwendungen sind Anwendungen zur Textverarbeitung, die es dem Benutzer ermöglichen, mit mehreren Textdokumenten zu arbeiten, und Tabellenkalkulationsanwendungen, die es dem Benutzer ermöglichen, mit mehreren Diagrammen und Kalkulationstabellen zu arbeiten. Weitere Informationen finden Sie in den folgenden Themen.
 
--   [Frame, Client und untergeordnete Fenster](#frame-client-and-child-windows)
--   [Erstellung des untergeordneten Fensters](#child-window-creation)
+-   [Frame-, Client- und untergeordnete Windows](#frame-client-and-child-windows)
+-   [Erstellung eines untergeordneten Fensters](#child-window-creation)
 -   [Aktivierung des untergeordneten Fensters](#child-window-activation)
--   [Mehrere Dokument Menüs](#multiple-document-menus)
--   [Mehrere Dokument Beschleuniger](#multiple-document-accelerators)
+-   [Mehrere Dokumentmenüs](#multiple-document-menus)
+-   [Mehrere Dokumentbeschleuniger](#multiple-document-accelerators)
 -   [Größe und Anordnung des untergeordneten Fensters](#child-window-size-and-arrangement)
--   [Symbol Titel Fenster](#icon-title-windows)
+-   [Symboltitel Windows](#icon-title-windows)
 -   [Daten des untergeordneten Fensters](#child-window-data)
-    -   [Fenster Struktur](#window-structure)
+    -   [Fensterstruktur](#window-structure)
     -   [Fenstereigenschaften](#window-properties)
 
-## <a name="frame-client-and-child-windows"></a>Frame, Client und untergeordnete Fenster
+## <a name="frame-client-and-child-windows"></a>Frame-, Client- und untergeordnete Windows
 
-Eine MDI-Anwendung verfügt über drei Arten von Fenstern: ein Rahmen Fenster, ein MDI-Client Fenster sowie eine Reihe von untergeordneten Fenstern. Das *Rahmen Fenster* ist wie das Hauptfenster der Anwendung: Es verfügt über einen Größen Anpassungsrahmen, eine Titelleiste, ein Fenstermenü, eine Minimieren-Schaltfläche und eine Schaltfläche zum maximieren. Die Anwendung muss eine Fenster Klasse für das Rahmen Fenster registrieren und eine Fenster Prozedur zur Unterstützung bereitstellen.
+Eine MDI-Anwendung verfügt über drei Arten von Fenstern: ein Rahmenfenster, ein MDI-Clientfenster sowie eine Reihe untergeordneter Fenster. Das *Rahmenfenster* ist wie das Hauptfenster der Anwendung: Es verfügt über einen Größenrahmen, eine Titelleiste, ein Fenstermenü, eine Schaltfläche zum Minimieren und eine Schaltfläche zum Maximieren. Die Anwendung muss eine Fensterklasse für das Rahmenfenster registrieren und eine Fensterprozedur zur Unterstützung bereitstellen.
 
-In einer MDI-Anwendung wird die Ausgabe im Client Bereich des Rahmen Fensters nicht angezeigt. Stattdessen wird das MDI-Client Fenster angezeigt. Ein *MDI-Client Fenster* ist ein spezieller Typ von untergeordnetem Fenster, der zur vorregistrierten Fenster Klasse **MdiClient** gehört. Das Client Fenster ist ein untergeordnetes Element des Rahmen Fensters. Er dient als Hintergrund für untergeordnete Fenster. Es bietet auch Unterstützung für das Erstellen und Bearbeiten von untergeordneten Fenstern. Eine MDI-Anwendung kann z. b. untergeordnete Fenster erstellen, aktivieren oder maximieren, indem Sie Nachrichten an das MDI-Client Fenster sendet.
+Eine MDI-Anwendung zeigt keine Ausgabe im Clientbereich des Rahmenfensters an. Stattdessen wird das MDI-Clientfenster angezeigt. Ein *MDI-Clientfenster* ist ein spezieller Typ von untergeordnetem Fenster, das zur vorab registrierten Fensterklasse **MDICLIENT gehört.** Das Clientfenster ist ein untergeordnetes Fenster des Rahmenfensters. sie dient als Hintergrund für untergeordnete Fenster. Sie bietet auch Unterstützung für das Erstellen und Bearbeiten von untergeordneten Fenstern. Beispielsweise kann eine MDI-Anwendung untergeordnete Fenster erstellen, aktivieren oder maximieren, indem Nachrichten an das MDI-Clientfenster gesendet werden.
 
-Wenn der Benutzer ein Dokument öffnet oder erstellt, erstellt das Client Fenster ein untergeordnetes Fenster für das Dokument. Das Client Fenster ist das übergeordnete Fenster aller untergeordneten MDI-Fenster in der Anwendung. Jedes untergeordnete Fenster hat einen Größen Anpassungsrahmen, eine Titelleiste, ein Fenstermenü, eine Minimieren-Schaltfläche und eine Schaltfläche zum maximieren. Da ein untergeordnetes Fenster abgeschnitten wird, ist es auf das Client Fenster beschränkt und kann nicht außerhalb des Fensters angezeigt werden.
+Wenn der Benutzer ein Dokument öffnet oder erstellt, erstellt das Clientfenster ein untergeordnetes Fenster für das Dokument. Das Clientfenster ist das übergeordnete Fenster aller untergeordneten MDI-Fenster in der Anwendung. Jedes untergeordnete Fenster verfügt über einen Größenrahmen, eine Titelleiste, ein Fenstermenü, eine Schaltfläche zum Minimieren und eine Schaltfläche zum Maximieren. Da ein untergeordnetes Fenster abgeschnitten wird, ist es auf das Clientfenster beschränkt und kann nicht außerhalb des Fensters angezeigt werden.
 
-Eine MDI-Anwendung kann mehr als eine Art von Dokument unterstützen. Eine typische Tabellenkalkulationsanwendung ermöglicht dem Benutzer beispielsweise das Arbeiten mit Diagrammen und Kalkulations Tabellen. Für jeden Dokumenttyp, der von ihm unterstützt wird, muss eine MDI-Anwendung eine untergeordnete Fenster Klasse registrieren und eine Fenster Prozedur zur Unterstützung der Fenster bereitstellen, die zu dieser Klasse gehören. Weitere Informationen zu Fenster Klassen finden Sie unter [window classes](window-classes.md). Weitere Informationen zu Fenster Prozeduren finden Sie unter [Fenster Prozeduren](window-procedures.md).
+Eine MDI-Anwendung kann mehrere Arten von Dokumenten unterstützen. Eine typische Tabellenkalkulationsanwendung ermöglicht es dem Benutzer beispielsweise, sowohl mit Diagrammen als auch mit Tabellen zu arbeiten. Für jeden unterstützten Dokumenttyp muss eine MDI-Anwendung eine untergeordnete Fensterklasse registrieren und eine Fensterprozedur bereitstellen, um die Fenster zu unterstützen, die zu dieser Klasse gehören. Weitere Informationen zu Fensterklassen finden Sie unter [Fensterklassen.](window-classes.md) Weitere Informationen zu Fenster-Prozeduren finden Sie unter [Fenster prozeduren](window-procedures.md).
 
-Im folgenden finden Sie eine typische MDI-Anwendung. Der Name ist "MULTIPAD".
+Es folgt eine typische MDI-Anwendung. Er heißt Multipad.
 
-![MULTIPAD-MDI-Anwendungsrahmen Fenster und-Client Fenster](images/csmdi-01.png)
+![Multipad-mdi-Anwendungsframefenster und Clientfenster](images/csmdi-01.png)
 
-## <a name="child-window-creation"></a>Erstellung des untergeordneten Fensters
+## <a name="child-window-creation"></a>Erstellung eines untergeordneten Fensters
 
-Zum Erstellen eines untergeordneten Fensters Ruft eine MDI-Anwendung entweder die Funktion " [**anatemdiwindow**](/windows/win32/api/winuser/nf-winuser-createmdiwindowa) " auf oder sendet die [**WM- \_ mdicreate**](wm-mdicreate.md) -Meldung an das MDI-Client Fenster. Ein effizienteres Verfahren zum Erstellen eines untergeordneten MDI-Fensters ist das Aufrufen [**der Funktion "**](/windows/win32/api/winuser/nf-winuser-createwindowexa) -Funktion", wobei der erweiterte **WS Ex- \_ \_ MDIChild** -Stil angegeben wird.
+Zum Erstellen eines untergeordneten Fensters ruft eine MDI-Anwendung entweder die [**CreateMDIWindow-Funktion**](/windows/win32/api/winuser/nf-winuser-createmdiwindowa) auf oder sendet die [**WM \_ MDICREATE-Nachricht**](wm-mdicreate.md) an das MDI-Clientfenster. Eine effizientere Möglichkeit zum Erstellen eines untergeordneten MDI-Fensters ist das Aufrufen der [**CreateWindowEx-Funktion**](/windows/win32/api/winuser/nf-winuser-createwindowexa) unter Angabe des erweiterten **WS \_ EX \_ MDICHILD-Stils.**
 
-Um ein untergeordnetes Fenster zu zerstören, sendet eine MDI-Anwendung eine [**WM- \_ mdidestroy**](wm-mdidestroy.md) -Nachricht an das MDI-Client Fenster.
+Um ein untergeordnetes Fenster zu zerstören, sendet eine MDI-Anwendung eine [**WM \_ MDIDESTROY-Nachricht**](wm-mdidestroy.md) an das MDI-Clientfenster.
 
 ## <a name="child-window-activation"></a>Aktivierung des untergeordneten Fensters
 
-Eine beliebige Anzahl von untergeordneten Fenstern kann jeweils im Client Fenster angezeigt werden, aber nur eine kann aktiv sein. Das aktive untergeordnete Fenster wird vor allen anderen untergeordneten Fenstern positioniert, und der Rahmen wird hervorgehoben.
+Eine beliebige Anzahl von untergeordneten Fenstern kann gleichzeitig im Clientfenster angezeigt werden, aber nur eines kann aktiv sein. Das aktive untergeordnete Fenster wird vor allen anderen untergeordneten Fenstern positioniert, und sein Rahmen ist hervorgehoben.
 
-Der Benutzer kann ein inaktives untergeordnetes Fenster aktivieren, indem er darauf klickt. Eine MDI-Anwendung aktiviert ein untergeordnetes Fenster, indem eine [**WM- \_ mdiaktivierungs**](wm-mdiactivate.md) -Meldung an das MDI-Client Fenster gesendet wird. Wenn das Client Fenster diese Nachricht verarbeitet, sendet Sie eine **WM- \_ mdiaktivierungs** -Meldung an die Fenster Prozedur des untergeordneten Fensters, das aktiviert werden soll, und an die Fenster Prozedur des untergeordneten Fensters, das deaktiviert wird.
+Der Benutzer kann ein inaktives untergeordnetes Fenster aktivieren, indem er darauf klickt. Eine MDI-Anwendung aktiviert ein untergeordnetes Fenster, indem eine [**WM \_ MDIACTIVATE-Nachricht**](wm-mdiactivate.md) an das MDI-Clientfenster gesendet wird. Während das Clientfenster diese Nachricht verarbeitet, sendet es eine **WM \_ MDIACTIVATE-Nachricht** an die Fensterprozedur des zu aktivierenden untergeordneten Fensters und an die Fensterprozedur des untergeordneten Fensters, das deaktiviert wird.
 
-Um zu verhindern, dass ein untergeordnetes Fenster aktiviert wird, müssen Sie die [**WM \_ ncaktivierungs**](wm-ncactivate.md) -Meldung an das untergeordnete Fenster durch Zurückgeben von **false**
+Um zu verhindern, dass ein untergeordnetes Fenster aktiviert wird, behandeln Sie die [**WM \_ NCACTIVATE-Nachricht**](wm-ncactivate.md) an das untergeordnete Fenster, indem Sie **FALSE zurückgeben.**
 
-Das System verfolgt die Position jedes untergeordneten Fensters im Stapel überlappenden Fenster nach. Diese Stapel wird als [Z-Reihenfolge](window-features.md)bezeichnet. Der Benutzer kann das nächste untergeordnete Fenster in der Z-Reihenfolge aktivieren, indem er im Menü "Fenster" im aktiven Fenster auf " **weiter** " klickt. Eine Anwendung aktiviert das nächste (oder vorherige) untergeordnete Fenster in der Z-Reihenfolge, indem eine [**WM- \_ mdinext**](wm-mdinext.md) -Nachricht an das Client Fenster gesendet wird.
+Das System verfolgt die Position jedes untergeordneten Fensters im Stapel überlappender Fenster nach. Diese Stapelung wird als [Z-Order bezeichnet.](window-features.md) Der Benutzer kann das nächste untergeordnete Fenster in  der Z-Reihenfolge aktivieren, indem er im aktiven Fenster im Fenstermenü auf Weiter klickt. Eine Anwendung aktiviert das nächste (oder vorherige) untergeordnete Fenster in der Z-Reihenfolge, indem eine [**WM \_ MDINEXT-Nachricht**](wm-mdinext.md) an das Clientfenster gesendet wird.
 
-Um das Handle für das aktive untergeordnete Fenster abzurufen, sendet die MDI-Anwendung eine [**WM- \_ mdigetactive**](wm-mdigetactive.md) -Nachricht an das Client Fenster.
+Um das Handle für das aktive untergeordnete Fenster abzurufen, sendet die MDI-Anwendung eine [**WM \_ MDIGETACTIVE-Nachricht**](wm-mdigetactive.md) an das Clientfenster.
 
-## <a name="multiple-document-menus"></a>Mehrere Dokument Menüs
+## <a name="multiple-document-menus"></a>Mehrere Dokumentmenüs
 
-Das Rahmen Fenster einer MDI-Anwendung sollte eine Menüleiste mit einem Fenstermenü enthalten. Das Fenstermenü muss Elemente enthalten, die die untergeordneten Fenster im Client Fenster anordnen oder alle untergeordneten Fenster schließen. Das Fenstermenü einer typischen MDI-Anwendung kann die Elemente in der folgenden Tabelle enthalten.
+Das Rahmenfenster einer MDI-Anwendung sollte eine Menüleiste mit einem Fenstermenü enthalten. Das Fenstermenü sollte Elemente enthalten, die die untergeordneten Fenster im Clientfenster anordnen oder alle untergeordneten Fenster schließen. Das Fenstermenü einer typischen MDI-Anwendung kann die Elemente in der folgenden Tabelle enthalten.
 
 
 
 | Menüelement         | Zweck                                                                                                                  |
 |-------------------|--------------------------------------------------------------------------------------------------------------------------|
-| **Kachel**          | Ordnet untergeordnete Fenster in einem Kachel Format an, sodass jede im Client Fenster vollständig angezeigt wird.                       |
-| **Cascade**       | Ordnet untergeordnete Fenster in einem kaskadierenden Format an. Die untergeordneten Fenster überlappen einander, aber die Titelleiste jedes ist sichtbar. |
-| **Symbole anordnen** | Ordnet die Symbole der minimierten untergeordneten Fenster am unteren Rand des Client Fensters an.                                     |
+| **Kachel**          | Ordnet untergeordnete Fenster in einem Kachelformat an, sodass jedes fenster vollständig im Clientfenster angezeigt wird.                       |
+| **Cascade**       | Ordnet untergeordnete Fenster in einem kaskadierten Format an. Die untergeordneten Fenster überlappen sich, aber die Titelleiste der einzelnen Fenster ist sichtbar. |
+| **Symbole anordnen** | Ordnet die Symbole minimierter untergeordneter Fenster am unteren Rand des Clientfensters an.                                     |
 | **Alle schließen**     | Schließt alle untergeordneten Fenster.                                                                                                |
 
 
 
  
 
-Wenn ein untergeordnetes Fenster erstellt wird, fügt das System automatisch ein neues Menü Element an das Fenstermenü an. Der Text des Menü Elements ist mit dem Text in der Menüleiste des neuen untergeordneten Fensters identisch. Durch Klicken auf das Menü Element kann der Benutzer das zugehörige untergeordnete Fenster aktivieren. Wenn ein untergeordnetes Fenster zerstört wird, entfernt das System automatisch das entsprechende Menü Element aus dem Fenstermenü.
+Jedes Mal, wenn ein untergeordnetes Fenster erstellt wird, fügt das System automatisch ein neues Menüelement an das Fenstermenü an. Der Text des Menüelements ist mit dem Text auf der Menüleiste des neuen untergeordneten Fensters identisch. Durch Klicken auf das Menüelement kann der Benutzer das entsprechende untergeordnete Fenster aktivieren. Wenn ein untergeordnetes Fenster zerstört wird, entfernt das System automatisch das entsprechende Menüelement aus dem Fenstermenü.
 
-Das System kann dem Menü "Fenster" bis zu zehn Menü Elemente hinzufügen. Wenn das zehnte untergeordnete Fenster erstellt wird, fügt das System dem Menü Fenster das **Weitere Windows** -Element hinzu. Wenn Sie auf dieses Element klicken, wird das Dialogfeld **Fenster auswählen** angezeigt. Das Dialogfeld enthält ein Listenfeld mit den Titeln aller untergeordneten MDI-Fenster, die derzeit verfügbar sind. Der Benutzer kann ein untergeordnetes Fenster aktivieren, indem er auf seinen Titel im Listenfeld klickt.
+Das System kann dem Fenstermenü bis zu zehn Menüelemente hinzufügen. Wenn das zehnte untergeordnete Fenster erstellt wird, fügt das System das Element **Weitere Windows** dem Fenstermenü hinzu. Wenn Sie auf dieses Element klicken, wird **das Dialogfeld Fenster** auswählen angezeigt. Das Dialogfeld enthält ein Listenfeld mit den Titeln aller derzeit verfügbaren untergeordneten MDI-Fenster. Der Benutzer kann ein untergeordnetes Fenster aktivieren, indem er auf seinen Titel im Listenfeld klickt.
 
-Wenn die MDI-Anwendung verschiedene Typen von untergeordneten Fenstern unterstützt, passen Sie die Menüleiste an, um die dem aktiven Fenster zugeordneten Vorgänge widerzuspiegeln. Stellen Sie hierzu separate Menü Ressourcen für jeden Typ von untergeordnetem Fenster bereit, der von der Anwendung unterstützt wird. Wenn ein neuer Typ von untergeordnetem Fenster aktiviert wird, sollte die Anwendung eine [**WM- \_ mdisetmenu**](wm-mdisetmenu.md) -Meldung an das Client Fenster senden und ihr das Handle für das entsprechende Menü übergeben.
+Wenn Ihre MDI-Anwendung mehrere Arten von untergeordneten Fenstern unterstützt, passen Sie die Menüleiste an die Vorgänge an, die dem aktiven Fenster zugeordnet sind. Stellen Sie hierzu separate Menüressourcen für jeden untergeordneten Fenstertyp zur Verfügung, den die Anwendung unterstützt. Wenn ein neuer Typ von untergeordnetem Fenster aktiviert wird, sollte die Anwendung eine [**WM \_ MDISETMENU-Nachricht**](wm-mdisetmenu.md) an das Clientfenster senden und das Handle an das entsprechende Menü übergeben.
 
 Wenn kein untergeordnetes Fenster vorhanden ist, sollte die Menüleiste nur Elemente enthalten, die zum Erstellen oder Öffnen eines Dokuments verwendet werden.
 
-Wenn der Benutzer durch die Verwendung von Cursor Schlüsseln durch die Menüs einer MDI-Anwendung navigiert, Verhalten sich die Schlüssel anders, als wenn der Benutzer durch ein typisches Anwendungsmenü navigiert. In einer MDI-Anwendung übergibt die Steuerung vom Fenstermenü der Anwendung an das Fenstermenü des aktiven untergeordneten Fensters und dann an das erste Element in der Menüleiste.
+Wenn der Benutzer mithilfe von Cursortasten durch die Menüs einer MDI-Anwendung navigiert, verhalten sich die Schlüssel anders als wenn der Benutzer durch die Menüs einer typischen Anwendung navigiert. In einer MDI-Anwendung übergibt das Steuerelement vom Fenstermenü der Anwendung an das Fenstermenü des aktiven untergeordneten Fensters und dann an das erste Element in der Menüleiste.
 
-## <a name="multiple-document-accelerators"></a>Mehrere Dokument Beschleuniger
+## <a name="multiple-document-accelerators"></a>Mehrere Dokumentbeschleuniger
 
-Zum empfangen und Verarbeiten von Zugriffstasten für die untergeordneten Fenster muss eine MDI-Anwendung die [**translatemdisysaccel**](/windows/win32/api/winuser/nf-winuser-translatemdisysaccel) -Funktion in der Nachrichten Schleife enthalten. Die-Schleife muss **translatemdisysaccel** aufrufen, bevor die [**TranslateAccelerator**](/windows/desktop/api/winuser/nf-winuser-translateacceleratora) -oder [**DispatchMessage**](/windows/win32/api/winuser/nf-winuser-dispatchmessage) -Funktion aufgerufen wird.
+Um Zugriffstasten für die untergeordneten Fenster zu empfangen und zu verarbeiten, muss eine MDI-Anwendung die [**TranslateMDISysAccel-Funktion**](/windows/win32/api/winuser/nf-winuser-translatemdisysaccel) in die Meldungsschleife enthalten. Die Schleife muss **TranslateMDISysAccel aufrufen,** bevor die [**TranslateAccelerator-**](/windows/desktop/api/winuser/nf-winuser-translateacceleratora) oder [**DispatchMessage-Funktion aufruft.**](/windows/win32/api/winuser/nf-winuser-dispatchmessage)
 
-Zugriffstasten im Menü Fenster für ein untergeordnetes MDI-Fenster unterscheiden sich von denen für ein untergeordnetes MDI-Fenster. In einem untergeordneten MDI-Fenster öffnet die Tastenkombination Alt + – (minus) das Fenstermenü, die Tastenkombination STRG + F4 schließt das aktive untergeordnete Fenster, und die Tastenkombination STRG + F6 aktiviert das nächste untergeordnete Fenster.
+Zugriffstasten im Fenstermenü für ein untergeordnetes MDI-Fenster unterscheiden sich von denen für ein untergeordnetes Fenster ohne MDI. In einem untergeordneten MDI-Fenster öffnet die Tastenkombination ALT+ – (Minus) das Fenstermenü, die Tastenkombination STRG+F4 schließt das aktive untergeordnete Fenster, und die Tastenkombination STRG+F6 aktiviert das nächste untergeordnete Fenster.
 
 ## <a name="child-window-size-and-arrangement"></a>Größe und Anordnung des untergeordneten Fensters
 
-Eine MDI-Anwendung steuert die Größe und Position der untergeordneten Fenster durch das Senden von Nachrichten an das MDI-Client Fenster. Zum Maximieren des aktiven untergeordneten Fensters sendet die Anwendung die [**WM- \_ mdimaximiernachricht**](wm-mdimaximize.md) an das Client Fenster. Wenn ein untergeordnetes Fenster maximiert ist, füllt der Client Bereich das MDI-Client Fenster vollständig aus. Außerdem verbirgt das System automatisch die Titelleiste des untergeordneten Fensters und fügt der Menüleiste der MDI-Anwendung das Fenstermenü Symbol und die Schaltfläche Wiederherstellen des untergeordneten Fensters hinzu. Die Anwendung kann das Client Fenster mit der ursprünglichen (vormaximierten) Größe und Position wiederherstellen, indem das Client Fenster eine [**WM- \_ mversstore**](wm-mdirestore.md) -Nachricht sendet.
+Eine MDI-Anwendung steuert die Größe und Position der untergeordneten Fenster, indem sie Nachrichten an das MDI-Clientfenster sendet. Um das aktive untergeordnete Fenster zu maximieren, sendet die Anwendung die [**WM \_ MDIMAXIMIZE-Nachricht**](wm-mdimaximize.md) an das Clientfenster. Wenn ein untergeordnetes Fenster maximiert ist, füllt sein Clientbereich das MDI-Clientfenster vollständig aus. Darüber hinaus blendet das System automatisch die Titelleiste des untergeordneten Fensters aus und fügt der Menüleiste der MDI-Anwendung das Fenstermenüsymbol und die Schaltfläche Wiederherstellen des untergeordneten Fensters hinzu. Die Anwendung kann das Clientfenster auf seine ursprüngliche (vorabmaximierte) Größe und Position wiederherstellen, indem sie dem Clientfenster eine [**WM \_ MDUNGSTORE-Nachricht**](wm-mdirestore.md) sendet.
 
-Eine MDI-Anwendung kann die untergeordneten Fenster in einem Cascade-oder Tile-Format anordnen. Wenn die untergeordneten Fenster kaskadiert werden, werden die Fenster in einem Stapel angezeigt. Das Fenster am unteren Rand des Stapels befindet sich in der oberen linken Ecke des Bildschirms, und die verbleibenden Fenster werden vertikal und horizontal versetzt, sodass der linke Rahmen und die Titelleiste jedes untergeordneten Fensters sichtbar sind. Zum Anordnen von untergeordneten Fenstern im Cascade-Format wird von einer MDI-Anwendung die [**WM- \_ mdicascade**](wm-mdicascade.md) -Nachricht gesendet. In der Regel sendet die Anwendung diese Nachricht, wenn der Benutzer im Menü Fenster auf " **Cascade** " klickt.
+Eine MDI-Anwendung kann ihre untergeordneten Fenster entweder in einem Kaskadierungs- oder Kachelformat anordnen. Wenn die untergeordneten Fenster kaskadiert werden, werden die Fenster in einem Stapel angezeigt. Das Fenster am unteren Rand des Stapels nimmt die obere linke Ecke des Bildschirms ein, und die verbleibenden Fenster werden vertikal und horizontal versetzt, sodass der linke Rahmen und die Titelleiste jedes untergeordneten Fensters sichtbar sind. Um untergeordnete Fenster im kaskadierten Format zu anordnen, sendet eine MDI-Anwendung die [**WM \_ MDICASCADE-Nachricht.**](wm-mdicascade.md) In der Regel sendet die Anwendung diese Meldung, wenn der Benutzer im Fenstermenü auf **Cascade** klickt.
 
-Wenn die untergeordneten Fenster nebeneinander angeordnet sind, zeigt das System jedes untergeordnete Fenster in seiner Gesamtheit an – überlappen keines der Fenster. Alle Fenster verfügen ggf. Übergrößen, damit Sie in das Client Fenster passen. Um untergeordnete Fenster im Kachel Format anzuordnen, sendet eine MDI-Anwendung eine [**WM- \_ mditile**](wm-mditile.md) -Nachricht an das Client Fenster. In der Regel sendet die Anwendung diese Nachricht, wenn der Benutzer im Menü Fenster auf die **Kachel** klickt.
+Wenn die untergeordneten Fenster gekachelt werden, zeigt das System jedes untergeordnete Fenster in seiner Gesamtheit an– überlappend keines der Fenster. Alle Fenster sind nach Bedarf so dimensionieren, dass sie in das Clientfenster passen. Um untergeordnete Fenster im Kachelformat anzuordnen, sendet eine MDI-Anwendung eine [**WM \_ MDITILE-Nachricht**](wm-mditile.md) an das Clientfenster. In der Regel sendet die Anwendung diese Meldung, wenn der Benutzer im Fenstermenü auf **Kachel** klickt.
 
-Eine MDI-Anwendung sollte ein anderes Symbol für jeden unterstützten Typ von untergeordnetem Fenster bereitstellen. Die Anwendung gibt ein Symbol an, wenn die untergeordnete Fenster Klasse registriert wird. Das System zeigt automatisch das Symbol eines untergeordneten Fensters im unteren Teil des Client Fensters an, wenn das untergeordnete Fenster minimiert wird. Eine MDI-Anwendung leitet das System zum Anordnen von Symbolen für untergeordnete Fenster, indem eine [**WM- \_ mdiiconarrange**](wm-mdiiconarrange.md) -Meldung an das Client Fenster gesendet wird. Normalerweise sendet die Anwendung diese Nachricht, wenn der Benutzer im Menü Fenster auf **Symbole anordnen** klickt.
+Eine MDI-Anwendung sollte ein anderes Symbol für jeden Typ des unterstützten untergeordneten Fensters bereitstellen. Die Anwendung gibt beim Registrieren der untergeordneten Fensterklasse ein Symbol an. Das System zeigt automatisch das Symbol eines untergeordneten Fensters im unteren Teil des Clientfensters an, wenn das untergeordnete Fenster minimiert wird. Eine MDI-Anwendung weist das System an, untergeordnete Fenstersymbole anzuordnen, indem eine [**WM \_ MDIICONARRANGE-Nachricht**](wm-mdiiconarrange.md) an das Clientfenster gesendet wird. In der Regel sendet die Anwendung diese Meldung, wenn der Benutzer im Fenstermenü auf **Symbole anordnen** klickt.
 
-## <a name="icon-title-windows"></a>Symbol Titel Fenster
+## <a name="icon-title-windows"></a>Symboltitel Windows
 
-Da untergeordnete MDI-Fenster möglicherweise minimiert werden, muss eine MDI-Anwendung die Bearbeitung von Symbol Titel Fenstern so vermeiden, als wären Sie normale untergeordnete MDI-Fenster. Symbol Titel Fenster werden angezeigt, wenn die Anwendung untergeordnete Fenster des MDI-Client Fensters aufzählt. Symbol Titel Fenster unterscheiden sich jedoch insofern von anderen untergeordneten Fenstern, als im Besitz eines untergeordneten MDI-Fensters.
+Da untergeordnete MDI-Fenster minimiert werden können, muss eine MDI-Anwendung das Bearbeiten von Symboltitelfenstern vermeiden, als wären sie normale untergeordnete MDI-Fenster. Symboltitelfenster werden angezeigt, wenn die Anwendung untergeordnete Fenster des MDI-Clientfensters aufzählt. Symboltitelfenster unterscheiden sich jedoch von anderen untergeordneten Fenstern, da sie sich im Besitz eines untergeordneten MDI-Fensters befinden.
 
-Um zu ermitteln, ob ein untergeordnetes Fenster ein Symbol Titel Fenster ist, verwenden Sie die [**GetWindow**](/windows/win32/api/winuser/nf-winuser-getwindow) -Funktion mit dem GW- \_ Besitzer Index. Nicht-Titel Fenster geben **null** zurück. Beachten Sie, dass dieser Test für Fenster der obersten Ebene unzureichend ist, da Menüs und Dialogfelder im Besitz von Fenstern sind.
+Um zu bestimmen, ob ein untergeordnetes Fenster ein Symboltitelfenster ist, verwenden Sie die [**GetWindow-Funktion**](/windows/win32/api/winuser/nf-winuser-getwindow) mit dem GW \_ OWNER-Index. Fenster ohne Titel geben **NULL** zurück. Beachten Sie, dass dieser Test für Fenster der obersten Ebene nicht ausreicht, da Menüs und Dialogfelder sich im Besitz von Fenstern befinden.
 
 ## <a name="child-window-data"></a>Daten des untergeordneten Fensters
 
-Da die Anzahl der untergeordneten Fenster in Abhängigkeit davon variiert, wie viele Dokumente der Benutzer öffnet, muss eine MDI-Anwendung in der Lage sein, Daten (z. b. den Namen der aktuellen Datei) jedem untergeordneten Fenster zuzuordnen. Hierfür gibt es zwei Möglichkeiten:
+Da die Anzahl der untergeordneten Fenster abhängig davon variiert, wie viele Dokumente der Benutzer öffnet, muss eine MDI-Anwendung daten (z. B. den Namen der aktuellen Datei) jedem untergeordneten Fenster zuordnen können. Hierfür gibt es zwei Möglichkeiten:
 
--   Speichert die Daten des untergeordneten Fensters in der Fenster Struktur.
--   Verwenden Sie die Fenster Eigenschaften.
+-   Store untergeordnete Fensterdaten in der Fensterstruktur.
+-   Verwenden Sie Fenstereigenschaften.
 
-### <a name="window-structure"></a>Fenster Struktur
+### <a name="window-structure"></a>Fensterstruktur
 
-Wenn eine MDI-Anwendung eine Fenster Klasse registriert, reserviert Sie möglicherweise zusätzlichen Platz in der Fenster Struktur für Anwendungsdaten, die für diese bestimmte Klasse von Windows spezifisch sind. Zum Speichern und Abrufen von Daten in diesem zusätzlichen Bereich verwendet die Anwendung die Funktionen " [**GetWindowLong**](/windows/win32/api/winuser/nf-winuser-getwindowlonga) " und " [**SetWindowLong**](/windows/win32/api/winuser/nf-winuser-setwindowlonga) ".
+Wenn eine MDI-Anwendung eine Fensterklasse registriert, reserviert sie möglicherweise zusätzlichen Platz in der Fensterstruktur für Anwendungsdaten, die für diese bestimmte Windows-Klasse spezifisch sind. Um Daten in diesem zusätzlichen Bereich zu speichern und abzurufen, verwendet die Anwendung die Funktionen [**GetWindowLong**](/windows/win32/api/winuser/nf-winuser-getwindowlonga) und [**SetWindowLong.**](/windows/win32/api/winuser/nf-winuser-setwindowlonga)
 
-Um eine große Datenmenge für ein untergeordnetes Fenster beizubehalten, kann eine Anwendung Arbeitsspeicher für eine Datenstruktur zuweisen und dann das Handle in dem Arbeitsspeicher speichern, der die Struktur im zusätzlichen, dem untergeordneten Fenster zugeordneten Bereich enthält.
+Um eine große Datenmenge für ein untergeordnetes Fenster zu verwalten, kann eine Anwendung Speicher für eine Datenstruktur zuordnen und dann das Handle im Speicher speichern, der die Struktur enthält, in dem zusätzlichen Speicherplatz, der dem untergeordneten Fenster zugeordnet ist.
 
 ### <a name="window-properties"></a>Fenstereigenschaften
 
-In einer MDI-Anwendung können auch Dokument spezifische Daten mithilfe von Fenster Eigenschaften gespeichert werden. *Pro-Dokument-Daten* sind Daten, die für den Dokumenttyp spezifisch sind, der in einem bestimmten untergeordneten Fenster enthalten ist. Eigenschaften unterscheiden sich von zusätzlichem Platz in der Fenster Struktur in, dass Sie beim Registrieren der Fenster Klasse keinen zusätzlichen Platz zuweisen müssen. Ein Fenster kann über eine beliebige Anzahl von Eigenschaften verfügen. Auch wenn Offsets verwendet werden, um auf den zusätzlichen Platz in Fenster Strukturen zuzugreifen, werden Eigenschaften durch Zeichen folgen Namen bezeichnet. Weitere Informationen zu Fenster Eigenschaften finden Sie unter [Fenster Eigenschaften](window-properties.md).
+Eine MDI-Anwendung kann auch Dokumentdaten mithilfe von Fenstereigenschaften speichern. *Daten pro Dokument* sind Daten, die für den Typ des Dokuments in einem bestimmten untergeordneten Fenster spezifisch sind. Eigenschaften unterscheiden sich von zusätzlichem Speicherplatz in der Fensterstruktur in , da Sie beim Registrieren der Fensterklasse keinen zusätzlichen Speicherplatz zuweisen müssen. Ein Fenster kann eine beliebige Anzahl von Eigenschaften aufweisen. Wenn Offsets verwendet werden, um auf den zusätzlichen Platz in Fensterstrukturen zuzugreifen, werden Eigenschaften durch Zeichenfolgennamen bezeichnet. Weitere Informationen zu Fenstereigenschaften finden Sie unter [Fenstereigenschaften.](window-properties.md)
 
  
 

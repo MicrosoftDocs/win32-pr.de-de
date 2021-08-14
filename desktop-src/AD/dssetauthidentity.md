@@ -1,10 +1,10 @@
 ---
-title: Dssetauthidentity-Funktion (ntdsbcli. h)
-description: Legt den Sicherheitskontext fest, unter dem die APIs für die Verzeichnis Sicherung aufgerufen werden.
+title: DsSetAuthIdentity-Funktion (Ntdsbcli.h)
+description: Legt den Sicherheitskontext fest, unter dem die Verzeichnissicherungs-APIs aufgerufen werden.
 ms.assetid: bfa2f847-6fe3-4f9b-bafa-acf6a7c861d9
 ms.tgt_platform: multiple
 keywords:
-- Dssetauthidentity-Funktion Active Directory
+- DsSetAuthIdentity-Funktion Active Directory
 topic_type:
 - apiref
 api_name:
@@ -17,18 +17,18 @@ api_type:
 - DllExport
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 40d973d5f818b4bd81278a1466487ae89ebf888f
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: a8e4f990d1fa0c6a6a22b0068ea207be61b4aece441977b976f32f82b7b75c8b
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104477343"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118695505"
 ---
-# <a name="dssetauthidentity-function"></a>Dssetauthidentity-Funktion
+# <a name="dssetauthidentity-function"></a>DsSetAuthIdentity-Funktion
 
-\[Diese Funktion ist für die Verwendung in den Betriebssystemen verfügbar, die im Abschnitt "Anforderungen" angegeben sind. Es kann in nachfolgenden Versionen geändert oder entfernt werden. Verwenden Sie ab Windows Vista [Volumeschattenkopie-Dienst (VSS)](../vss/volume-shadow-copy-service-overview.md) .\]
+\[Diese Funktion ist für die Verwendung in den Betriebssystemen verfügbar, die im Abschnitt Anforderungen angegeben sind. Es kann in nachfolgenden Versionen geändert oder entfernt werden. Verwenden Sie ab Windows Vista stattdessen [Volumeschattenkopie-Dienst (VSS).](../vss/volume-shadow-copy-service-overview.md)\]
 
-Die **dssetauthidentity** -Funktion legt den Sicherheitskontext fest, unter dem die Verzeichnis Sicherungs-APIs aufgerufen werden.
+Die **DsSetAuthIdentity-Funktion** legt den Sicherheitskontext fest, unter dem die Verzeichnissicherungs-APIs aufgerufen werden.
 
 ## <a name="syntax"></a>Syntax
 
@@ -47,34 +47,34 @@ HRESULT DsSetAuthIdentity(
 
 <dl> <dt>
 
-*szusername* \[ in\]
+*szUserName* \[ In\]
 </dt> <dd>
 
-Die NULL-terminierte Zeichenfolge, die den Benutzernamen angibt.
+Die auf NULL endende Zeichenfolge, die den Benutzernamen angibt.
 
 </dd> <dt>
 
-*szdomainname* \[ in\]
+*szDomainName* \[ In\]
 </dt> <dd>
 
-Die NULL-terminierte Zeichenfolge, die den Namen der Domäne angibt, zu der der Benutzer gehört.
+Die auf NULL endende Zeichenfolge, die den Namen der Domäne angibt, zu der der Benutzer gehört.
 
 </dd> <dt>
 
-*szPassword* \[ in\]
+*szPassword* \[ In\]
 </dt> <dd>
 
-Die NULL-terminierte Zeichenfolge, die das Kennwort des Benutzers in der angegebenen Domäne angibt.
+Die auf NULL endende Zeichenfolge, die das Kennwort des Benutzers in der angegebenen Domäne angibt.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Wenn erfolgreich, wird ein Standard- **HRESULT** -Erfolgs Code zurückgegeben. Andernfalls wird ein Fehlercode zurückgegeben.
+Wenn erfolgreich, wird ein standardmäßiger **HRESULT-Erfolgscode** zurückgegeben. Andernfalls wird ein Fehlercode zurückgegeben.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Wenn **dssetauthidentity** nicht aufgerufen wird, wird der Sicherheitskontext des aktuellen Prozesses angenommen.
+Wenn **DsSetAuthIdentity** nicht aufgerufen wird, wird der Sicherheitskontext des aktuellen Prozesses angenommen.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -84,21 +84,21 @@ Wenn **dssetauthidentity** nicht aufgerufen wird, wird der Sicherheitskontext de
 |-------------------------------------|-----------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows Vista<br/>                                                                |
 | Unterstützte Mindestversion (Server)<br/> | Windows Server 2008<br/>                                                          |
-| Header<br/>                   | <dl> <dt>Ntdsbcli. h</dt> </dl>   |
-| Bibliothek<br/>                  | <dl> <dt>Ntdsbcli. lib</dt> </dl> |
+| Header<br/>                   | <dl> <dt>Ntdsbcli.h</dt> </dl>   |
+| Bibliothek<br/>                  | <dl> <dt>Ntdsbcli.lib</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>Ntdsbcli.dll</dt> </dl> |
-| Unicode- und ANSI-Name<br/>   | **Dssetauthidentityw** (Unicode) und **dssetauthidentitya** (ANSI)<br/>           |
+| Unicode- und ANSI-Name<br/>   | **DsSetAuthIdentityW** (Unicode) und **DsSetAuthIdentityA** (ANSI)<br/>           |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[Sichern und Wiederherstellen eines Active Directory Servers](backing-up-and-restoring-an-active-directory-server.md)
+[Sichern und Wiederherstellen eines Active Directory-Servers](backing-up-and-restoring-an-active-directory-server.md)
 </dt> <dt>
 
-[Verzeichnis Sicherungsfunktionen](directory-backup-functions.md)
+[Verzeichnissicherungsfunktionen](directory-backup-functions.md)
 </dt> </dl>
 
  
