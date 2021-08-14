@@ -1,7 +1,7 @@
 ---
-description: Die Struktur von "expertframedescriptor" enthält Informationen zu einem Frame. Wenn der Experte die Funktion "expertgetframe" erfolgreich aufruft, übergibt Netzwerkmonitor die "expertframedescriptor"-Struktur an den Experten zurück.
+description: Die EXPERTFRAMEDESCRIPTOR-Struktur enthält Informationen zu einem Frame. Wenn der Experte die ExpertGetFrame-Funktion erfolgreich aufruft, übergibt Netzwerkmonitor die EXPERTFRAMEDESCRIPTOR-Struktur an den Experten zurück.
 ms.assetid: 6cf99498-3cf9-46da-b6a0-3012229f6908
-title: Struktur von "expertframedescriptor" (Netmon. h)
+title: EXPERTFRAMEDESCRIPTOR-Struktur (Netmon.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,16 +13,16 @@ api_type:
 - HeaderDef
 api_location:
 - Netmon.h
-ms.openlocfilehash: 98bafae39819b16b479df22fe6560888ef15d8e2
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 4a11c131188cdd5230d309a6ff2e39a77ac7886333dafd9860d565fdcb10efc5
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104484339"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118939027"
 ---
-# <a name="expertframedescriptor-structure"></a>Struktur von "expertframedescriptor"
+# <a name="expertframedescriptor-structure"></a>EXPERTFRAMEDESCRIPTOR-Struktur
 
-Die Struktur von " **expertframedescriptor** " enthält Informationen zu einem Frame. Wenn der Experte die Funktion " [**expertgetframe**](expertgetframe.md) " erfolgreich aufruft, übergibt Netzwerkmonitor die " **expertframedescriptor** "-Struktur an den Experten zurück.
+Die **EXPERTFRAMEDESCRIPTOR-Struktur** enthält Informationen zu einem Frame. Wenn der Experte die [**ExpertGetFrame-Funktion**](expertgetframe.md) erfolgreich aufruft, übergibt Netzwerkmonitor die **EXPERTFRAMEDESCRIPTOR-Struktur** an den Experten zurück.
 
 ## <a name="syntax"></a>Syntax
 
@@ -43,14 +43,14 @@ typedef struct {
 
 <dl> <dt>
 
-**Framezahl**
+**FrameNumber**
 </dt> <dd>
 
-Die Nummer eines angegebenen Frames.
+Nummer eines angegebenen Frames.
 
 </dd> <dt>
 
-**hframe**
+**hFrame**
 </dt> <dd>
 
 Handle für einen Frame.
@@ -60,29 +60,29 @@ Handle für einen Frame.
 **pFrame**
 </dt> <dd>
 
-Zeiger auf einen rohframe.
+Zeiger auf einen rohen Frame.
 
 </dd> <dt>
 
-**lprecognizedatabel**
+**lpRecognizeDataTable**
 </dt> <dd>
 
 Tabelle, die angibt, wo jeder Parser den Anfang der Daten identifiziert.
 
 </dd> <dt>
 
-**lppropertytable**
+**lpPropertyTable**
 </dt> <dd>
 
-Tabelle mit Frame Eigenschaften, die vom Parser identifiziert werden.
+Tabelle der Frameeigenschaften, die der Parser identifiziert.
 
 </dd> </dl>
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Wenn der Experte \_ beim Aufrufen von " \_ [**expertgetframe**](expertgetframe.md)" Flags anfügen-Eigenschaften angibt, ist das **szpropertytext** -Element in jeder [**propertyinst**](propertyinst.md) -Struktur **null**.
+Wenn der Experte beim Aufrufen von ExpertGetFrame FLAGS \_ ATTACH PROPERTIES angibt, ist der \_ **szPropertyText-Member** in jeder [**PROPERTYINST-Struktur**](propertyinst.md) **NULL.** [](expertgetframe.md)
 
-Wenn der Experte \_ beim Aufrufen der Funktion "-Funktion" keine Flags anfügen- \_ Eigenschaften angibt, ist das **lppropertytable** -Element bei Rückgabe **null** . [](expertgetframe.md)
+Wenn der Experte beim \_ Aufrufen der ExpertGetFrame-Funktion keine FLAGS ATTACH PROPERTIES angibt, \_ ist der **lpPropertyTable-Member** bei der Rückgabe **NULL.** [](expertgetframe.md)
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -92,7 +92,7 @@ Wenn der Experte \_ beim Aufrufen der Funktion "-Funktion" keine Flags anfügen-
 |-------------------------------------|-------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional \[nur Desktop-Apps\]<br/>                          |
 | Unterstützte Mindestversion (Server)<br/> | Windows 2000 Server \[nur Desktop-Apps\]<br/>                                |
-| Header<br/>                   | <dl> <dt>Netmon. h</dt> </dl> |
+| Header<br/>                   | <dl> <dt>Netmon.h</dt> </dl> |
 
 
 

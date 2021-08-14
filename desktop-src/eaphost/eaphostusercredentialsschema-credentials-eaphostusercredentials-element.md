@@ -1,9 +1,9 @@
 ---
-title: Anmelde Informationen (eaphustuseranmeldeinformationen)-Element
-description: Wird verwendet, wenn die Methoden Konfiguration anstelle eines binären BLOBs im XML-Textformat vorliegt.
+title: Credentials (EapHostUserCredentials)-Element
+description: Wird verwendet, wenn die Methodenkonfiguration im XML-Textformat und nicht in einem binären BLOB vorliegt.
 ms.assetid: 9c350891-bf40-430d-837a-f2e58bde41fc
 keywords:
-- Anmelde Informationen-Element EAPHost
+- Credentials-Element EAPHost
 topic_type:
 - apiref
 api_name:
@@ -14,16 +14,16 @@ ms.topic: reference
 ms.date: 05/31/2018
 api_location: ''
 ROBOTS: INDEX,FOLLOW
-ms.openlocfilehash: 043b82d5fb1ebc89f454ff6680672bda19e1c01e
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 1e47e63dd6c29d4fbd85111cc5821688610d72c3f2858a371c392e16bee75207
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104391516"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118984210"
 ---
-# <a name="credentials-eaphostusercredentials-element"></a>Anmelde Informationen (eaphustuseranmeldeinformationen)-Element
+# <a name="credentials-eaphostusercredentials-element"></a>Credentials (EapHostUserCredentials)-Element
 
-Das Element "Anmelde Informationen" **(eaptustuseranmelde Informationen)** wird verwendet, wenn die Methoden Konfiguration anstelle eines binären BLOBs im XML-Textformat vorliegt.
+Das **Credentials -Element (EapHostUserCredentials)** wird verwendet, wenn die Methodenkonfiguration im XML-Textformat und nicht in einem binären BLOB vorliegt.
 
 ``` syntax
 <xs:element name="Credentials"
@@ -31,7 +31,7 @@ Das Element "Anmelde Informationen" **(eaptustuseranmelde Informationen)** wird 
  />
 ```
 
-Das Element " **Anmelde** Informationen" wird durch das [**eaphustuseranmelde**](eaphostusercredentialsschema-eaphostusercredentials-element.md) -Element definiert.
+Das **Credentials-Element** wird durch das [**EapHostUserCredentials-Element**](eaphostusercredentialsschema-eaphostusercredentials-element.md) definiert.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -39,31 +39,31 @@ Das Element " **Anmelde** Informationen" wird durch das [**eaphustuseranmelde**]
 
 | Anforderung | Wert |
 |-------------------------------------|------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>       |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2008 \[ -Desktop-Apps\]<br/> |
+| Unterstützte Mindestversion (Client)<br/> | Windows \[Nur Vista-Desktop-Apps\]<br/>       |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2008-Desktop-Apps\]<br/> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-**Definitions Kontext des Elements im Schema**
+**Definitionskontext des Elements im Schema**
 </dt> <dt>
 
-[**Eaphustuseranmeldeinformationen**](eaphostusercredentialsschema-eaphostusercredentials-element.md)
+[**EapHostUserCredentials**](eaphostusercredentialsschema-eaphostusercredentials-element.md)
 </dt> <dt>
 
-**Mögliches unmittelbar übergeordnetes Element in der Schema Instanz**
+**Mögliches unmittelbar übergeordnetes Element in der Schemainstanz**
 </dt> <dt>
 
-[**Eaphustuseranmeldeinformationen**](eaphostusercredentialsschema-eaphostusercredentials-element.md)
+[**EapHostUserCredentials**](eaphostusercredentialsschema-eaphostusercredentials-element.md)
 </dt> <dt>
 
-[EAPHost und Legacy Schema](eaphost-schemas.md)
+[EAPHost und Legacyschema](eaphost-schemas.md)
 </dt> <dt>
 
-[eaphustuseranmelde-Schema](eaphostusercredentialsschema-schema.md)
+[eaphostusercredentials-Schema](eaphostusercredentialsschema-schema.md)
 </dt> </dl>
 
  

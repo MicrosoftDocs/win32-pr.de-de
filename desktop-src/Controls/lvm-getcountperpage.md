@@ -1,9 +1,9 @@
 ---
-title: LVM_GETCOUNTPERPAGE Meldung (kommstrg. h)
-description: Berechnet die Anzahl der Elemente, die vertikal in den sichtbaren Bereich eines Listenansicht-Steuer Elements passen, wenn Sie in der Listen-oder Berichtsansicht enthalten sind. Nur vollständig sichtbare Elemente werden gezählt. Sie können diese Nachricht explizit oder mithilfe des ListView \_ getzähltperpage-Makros senden.
+title: LVM_GETCOUNTPERPAGE Nachricht (Commctrl.h)
+description: Berechnet die Anzahl der Elemente, die vertikal in den sichtbaren Bereich eines Listenansichtssteuerelements passen können, wenn sie sich in der Listen- oder Berichtsansicht befinden. Es werden nur vollständig sichtbare Elemente gezählt. Sie können diese Nachricht explizit oder mithilfe des ListView \_ GetCountPerPage-Makros senden.
 ms.assetid: 2ffd2bb1-cddf-4a4a-a4a8-087c9dc3fec0
 keywords:
-- Windows-Steuerelemente für LVM_GETCOUNTPERPAGE Meldung
+- LVM_GETCOUNTPERPAGE Windows-Steuerelemente für Nachrichten
 topic_type:
 - apiref
 api_name:
@@ -14,16 +14,16 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 734d460754f9ae8a11c3a42d8eacebf31d0b6fc0
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: deb5e7acf0c3db4add2d986a1821b9a76ae30fc1aec0af369e48e35e2a424f77
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104040106"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119968340"
 ---
-# <a name="lvm_getcountperpage-message"></a>LVM \_ getgräfin-Nachricht
+# <a name="lvm_getcountperpage-message"></a>LVM \_ GETCOUNTPERPAGE-Nachricht
 
-Berechnet die Anzahl der Elemente, die vertikal in den sichtbaren Bereich eines Listenansicht-Steuer Elements passen, wenn Sie in der Listen-oder Berichtsansicht enthalten sind. Nur vollständig sichtbare Elemente werden gezählt. Sie können diese Nachricht explizit oder mithilfe des [**ListView \_ getzähltperpage**](/windows/desktop/api/Commctrl/nf-commctrl-listview_getcountperpage) -Makros senden.
+Berechnet die Anzahl der Elemente, die vertikal in den sichtbaren Bereich eines Listenansichtssteuerelements passen können, wenn sie sich in der Listen- oder Berichtsansicht befinden. Es werden nur vollständig sichtbare Elemente gezählt. Sie können diese Nachricht explizit oder mithilfe des [**ListView \_ GetCountPerPage-Makros**](/windows/desktop/api/Commctrl/nf-commctrl-listview_getcountperpage) senden.
 
 ## <a name="parameters"></a>Parameter
 
@@ -37,7 +37,7 @@ Berechnet die Anzahl der Elemente, die vertikal in den sichtbaren Bereich eines 
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt die Anzahl der vollständig sichtbaren Elemente zurück, wenn erfolgreich. Wenn die aktuelle Ansicht eine Symbol-oder kleine Symbol Ansicht ist, ist der Rückgabewert die Gesamtzahl der Elemente im Listenansicht-Steuerelement.
+Gibt bei Erfolg die Anzahl der vollständig sichtbaren Elemente zurück. Wenn es sich bei der aktuellen Ansicht um ein Symbol oder eine kleine Symbolansicht handelt, ist der Rückgabewert die Gesamtzahl der Elemente im Listenansicht-Steuerelement.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -45,9 +45,9 @@ Gibt die Anzahl der vollständig sichtbaren Elemente zurück, wenn erfolgreich. 
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>                                        |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2003 \[ -Desktop-Apps\]<br/>                                  |
-| Header<br/>                   | <dl> <dt>Kommstrg. h</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows \[Nur Vista-Desktop-Apps\]<br/>                                        |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2003-Desktop-Apps\]<br/>                                  |
+| Header<br/>                   | <dl> <dt>Commctrl.h</dt> </dl> |
 
 
 

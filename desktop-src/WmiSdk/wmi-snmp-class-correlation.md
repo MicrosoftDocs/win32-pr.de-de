@@ -1,31 +1,31 @@
 ---
-description: Korrelation wirkt sich auf den Satz von Klassen aus, die von SMIR zurückgegeben werden.
+description: Die Korrelation wirkt sich auf den Satz von Klassen aus, die vom SMIR zurückgegeben werden.
 ms.assetid: 799a0866-e7a0-492f-956e-b13bf591babe
 ms.tgt_platform: multiple
-title: WMI-SNMP-Klassen Korrelation
+title: WMI-SNMP-Klassenkorrelation
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: cdc0ca4740c90563fce05e1b6352ef33b0e3ce32
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 755d795b7e998e3b7392baa45c23d688f1a2cef6a4069f6671d4c209788e7c1b
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104215442"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118815703"
 ---
-# <a name="wmi-snmp-class-correlation"></a>WMI-SNMP-Klassen Korrelation
+# <a name="wmi-snmp-class-correlation"></a>WMI-SNMP-Klassenkorrelation
 
-Korrelation wirkt sich auf den Satz von Klassen aus, die von SMIR zurückgegeben werden. Korrelierte Klassen sind solche, die ein bestimmtes SNMP-Gerät unterstützt, wenn die Enumeration auftritt. Nicht korrelierte Enumeration gibt alle innerhalb des SMIR vorhandenen Klassen zurück, unabhängig davon, ob Sie vom Gerät unterstützt werden. Die Korrelation ist eine Funktion des WMI-SNMP-Anbieters und kann deaktiviert oder aktiviert werden (Standard).
+Die Korrelation wirkt sich auf den Satz von Klassen aus, die vom SMIR zurückgegeben werden. Korrelierte Klassen sind klassen, die von einem bestimmten SNMP-Gerät zum Zeitpunkt der Enumeration unterstützt werden. Nicht korrelierte Enumeration gibt alle Klassen zurück, die in SMIR vorhanden sind, unabhängig davon, ob das Gerät sie unterstützt. Die Korrelation ist ein Feature des WMI-SNMP-Anbieters und kann deaktiviert oder aktiviert werden (Standardeinstellung).
 
 > [!Note]  
-> Weitere Informationen zum Installieren des Anbieters finden Sie unter [Einrichten der WMI-SNMP-Umgebung](setting-up-the-wmi-snmp-environment.md).
+> Weitere Informationen zum Installieren des Anbieters finden Sie unter [Einrichten der WMI-SNMP-Umgebung.](setting-up-the-wmi-snmp-environment.md)
 
  
 
-Mithilfe der Korrelation können alle Klassen angezeigt werden, die tatsächlich von einem Gerät unterstützt werden. Wenn Sie wissen, dass eine bestimmte Klasse unterstützt wird, aber nicht im SMIR angezeigt wird, kann dies auf verschiedene Gründe zurückzuführen sein, von denen eine Korrelation ist. Sie sollten die Korrelation deaktivieren, bevor Sie auf das betreffende Gerät schreiben. Das Deaktivieren der Korrelation führt jedoch zu der Wahrscheinlichkeit, dass viele vom Gerät nicht unterstützte Klassen in SMIR angezeigt werden. Außerdem entstehen bei der Verwendung der Korrelation Kosten für die Leistung, da das Gerät abgefragt wird, um zu sehen, welche Klassen es unterstützt. Wenn die Korrelation aktiviert ist, verursacht der SNMP-Anbieter eine Enumeration von Geräten unterstützten Klassen, die dem Ergebnis der Ausführung eines *MIB Walk* -Tools ähneln.
+Die Korrelation verhindert möglicherweise, dass alle Klassen angezeigt werden, die tatsächlich von einem Gerät unterstützt werden. Wenn Sie wissen, dass eine bestimmte Klasse unterstützt wird, sie aber nicht im SMIR angezeigt wird, kann dies mehrere Gründe haben, von denen einer die Korrelation ist. Erwägen Sie, die Korrelation zu deaktivieren, bevor Sie auf das gerät schreiben. Das Deaktivieren der Korrelation führt jedoch zur Wahrscheinlichkeit, dass viele Klassen, die vom Gerät nicht unterstützt werden, im SMIR angezeigt werden. Außerdem gibt es Leistungskosten bei der Verwendung der Korrelation, da das Gerät abgefragt wird, um zu sehen, welche Klassen es unterstützt. Wenn die Korrelation aktiviert ist, verursacht der SNMP-Anbieter eine Enumeration von vom Gerät unterstützten Klassen, die dem Ergebnis der Ausführung eines *mib-Walk-Tools* ähnelt.
 
-Ein Netzwerk-Manager möchte beispielsweise verschiedene wichtige Daten zu allen verwalteten Hubs in einem bestimmten Netzwerk kennen. Eine Datenbank der aktuellen Geräte und ihrer unterstützten MISB ist bereits vorhanden, daher besteht keine Notwendigkeit, sich auf die Korrelations Funktion des Geräts zu verlassen, um die unterstützten Datenelemente bereitzustellen. In diesem Fall könnte die Korrelation deaktiviert werden.
+Ein Netzwerk-Manager möchte beispielsweise mehrere wichtige Daten zu allen verwalteten Hubs in einem bestimmten Netzwerk kennen. Eine Datenbank mit den aktuellen Geräten und den unterstützten MIBs ist bereits vorhanden, daher ist es nicht notwendig, sich auf die Korrelationsfunktion des Geräts zu verlassen, um die unterstützten Datenelemente bereitstellen zu können. In diesem Fall kann die Korrelation deaktiviert werden.
 
-Im folgenden Beispiel wird gezeigt, wie die Korrelation deaktiviert wird.
+Das folgende Beispiel zeigt, wie die Korrelation deaktiviert wird.
 
 
 ```VB
@@ -36,7 +36,7 @@ objNamedValueSet.Add "Correlate", FALSE, 0
 
 
 
-Andererseits kann ein anderer Netzwerk-Manager alle UNIX-Computer Laufwerke im Netzwerk überwachen, aber nicht mit den MIB-Daten auf diesen Computern vertraut sein. In diesem Fall würde die Korrelation aktiviert werden.
+Auf der anderen Seite möchte ein anderer Netzwerk-Manager möglicherweise alle Laufwerke der UNIX-Computer im Netzwerk überwachen, ist aber mit den MIB-Daten auf diesen Computern nicht vertraut. In diesem Fall wird die Korrelation aktiviert.
 
  
 

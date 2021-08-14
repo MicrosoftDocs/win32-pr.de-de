@@ -1,6 +1,6 @@
 ---
-description: 'Weitere Informationen finden Sie unter: esentkeyesobigexception-Klasse'
-title: Esentkeyesobigexception-Klasse
+description: 'Weitere Informationen finden Sie unter: EsentKeyTooBigException-Klasse'
+title: EsentKeyTooBigException-Klasse
 TOCTitle: EsentKeyTooBigException class
 ms:assetid: T:Microsoft.Isam.Esent.Interop.EsentKeyTooBigException
 ms:mtpsurl: https://msdn.microsoft.com/library/microsoft.isam.esent.interop.esentkeytoobigexception(v=EXCHG.10)
@@ -24,29 +24,29 @@ api_type:
 api_location:
 - Microsoft.Isam.Esent.Interop.dll
 ROBOTS: INDEX,FOLLOW
-ms.openlocfilehash: 0aafd4a5c5460d74b3f7e3c000b47508de2f1ca0
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: ce49c33b980886ca5c1776b0042044fc741861f21dfec18b39363756baf8be90
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "104218769"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118777185"
 ---
-# <a name="esentkeytoobigexception-class"></a>Esentkeyesobigexception-Klasse
+# <a name="esentkeytoobigexception-class"></a>EsentKeyTooBigException-Klasse
 
-Basisklasse für JET_err. Keyobig-Ausnahmen.
+Basisklasse für JET_err. KeyTooBig-Ausnahmen.
 
 ## <a name="inheritance-hierarchy"></a>Vererbungshierarchie
 
 [System.Object](/dotnet/api/system.object)  
   [System.Exception](/dotnet/api/system.exception)  
-    [Microsoft. ISAM. ESENT. esentexception](./esentexception-class.md)  
-      [Microsoft. ISAM. ESENT. Interop. esenterrorexception](./esenterrorexception-class.md)  
-        [Microsoft. ISAM. ESENT. Interop. esentapiexception](./esentapiexception-class.md)  
-          [Microsoft. ISAM. ESENT. Interop. esentobsoleteexception](./esentobsoleteexception-class.md)  
-            Microsoft. ISAM. ESENT. Interop. esentkeyesobigexception  
+    [Microsoft.Isam.Esent.EsentException](./esentexception-class.md)  
+      [Microsoft.Isam.Esent.Interop.EsentErrorException](./esenterrorexception-class.md)  
+        [Microsoft.Isam.Esent.Interop.EsentApiException](./esentapiexception-class.md)  
+          [Microsoft.Isam.Esent.Interop.EsentObsoleteException](./esentobsoleteexception-class.md)  
+            Microsoft.Isam.Esent.Interop.EsentKeyTooBigException  
 
-**Namespace:**  [Microsoft. ISAM. ESENT. Interop](./microsoft.isam.esent.interop-namespace.md)  
-**Assembly:**  Microsoft. ISAM. ESENT. Interop (in Microsoft.Isam.Esent.Interop.dll)
+**Namespace:**  [Microsoft.Isam.Esent.Interop](./microsoft.isam.esent.interop-namespace.md)  
+**Assembly:**  Microsoft.Isam.Esent.Interop (in Microsoft.Isam.Esent.Interop.dll)
 
 ## <a name="syntax"></a>Syntax
 
@@ -68,10 +68,10 @@ public sealed class EsentKeyTooBigException : EsentObsoleteException
 
 Alle öffentlichen statischen Elemente dieses Typs (Shared in Microsoft Visual Basic) sind threadsicher. Bei Instanzmembern ist die Threadsicherheit nicht gewährleistet.
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
-#### <a name="reference"></a>Referenz
+#### <a name="reference"></a>Verweis
 
-[Esentkeyesobigexception-Elemente](./esentkeytoobigexception-members.md)
+[EsentKeyTooBigException-Member](./esentkeytoobigexception-members.md)
 
-[Microsoft. ISAM. ESENT. Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)
+[Microsoft.Isam.Esent.Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)

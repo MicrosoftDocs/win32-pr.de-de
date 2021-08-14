@@ -1,7 +1,7 @@
 ---
-description: Signalisiert, dass sich die Anzahl der DVD-Menü Schaltflächen geändert hat oder dass sich die Schaltflächen Auswahl geändert hat.
+description: Signalisiert, dass sich die Anzahl der DVD-Menüschaltflächen geändert hat oder dass sich die Schaltflächenauswahl geändert hat.
 ms.assetid: af6c841d-ca06-4535-b418-14409fa78c81
-title: EC_DVD_BUTTON_CHANGE (dvdevcode. h)
+title: EC_DVD_BUTTON_CHANGE (Dvdevcode.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,16 +13,16 @@ api_type:
 - HeaderDef
 api_location:
 - dvdevcode.h
-ms.openlocfilehash: 8647c1100e5cca6897e2068b2a20119a8f047396
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 61e74a967df18d5ba105eda1609a72c0db9770868bbd967c7a90f5e920dc954d
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106370259"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118652746"
 ---
-# <a name="ec_dvd_button_change"></a>EC- \_ DVD- \_ Schaltflächen \_ Änderung
+# <a name="ec_dvd_button_change"></a>\_ÄNDERUNG DER EC-DVD-SCHALTFLÄCHE \_ \_
 
-Signalisiert, dass sich die Anzahl der DVD-Menü Schaltflächen geändert hat oder dass sich die Schaltflächen Auswahl geändert hat.
+Signalisiert, dass sich die Anzahl der DVD-Menüschaltflächen geändert hat oder dass sich die Schaltflächenauswahl geändert hat.
 
 ## <a name="parameters"></a>Parameter
 
@@ -31,24 +31,24 @@ Signalisiert, dass sich die Anzahl der DVD-Menü Schaltflächen geändert hat od
 <span id="lParam1"></span><span id="lparam1"></span><span id="LPARAM1"></span>*lParam1*
 </dt> <dd>
 
-**DWORD** -Wert, der die Anzahl der verfügbaren Schaltflächen angibt.
+**DWORD-Wert,** der die Anzahl der verfügbaren Schaltflächen angibt.
 
 </dd> <dt>
 
 <span id="lParam2"></span><span id="lparam2"></span><span id="LPARAM2"></span>*lParam2*
 </dt> <dd>
 
-**DWORD** -Wert, der die aktuell ausgewählte Schaltflächen Nummer angibt. Die ausgewählte Schaltflächen Nummer 0 bedeutet, dass keine Schaltfläche ausgewählt ist.
+**DWORD-Wert,** der die aktuell ausgewählte Schaltflächennummer angibt. Die ausgewählte Schaltflächennummer 0 bedeutet, dass keine Schaltfläche ausgewählt ist.
 
 </dd> </dl>
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Die Schaltflächen Nummern liegen zwischen 1 und 36.
+Schaltflächennummern liegen zwischen 1 und 36.
 
-Die aktuell ausgewählte Schaltfläche kann sich automatisch ändern, wenn ein Navigations Befehl auf der Festplatte und mithilfe der [**IDvdControl2**](/windows/desktop/api/Strmif/nn-strmif-idvdcontrol2) -Schnittstelle auf der Festplatte erstellt wurde.
+Die aktuell ausgewählte Schaltfläche kann mit einem navigationsbefehl, der auf dem Datenträger erstellt wurde, sowie über die Anwendungssteuerung mithilfe der [**IDvdControl2-Schnittstelle**](/windows/desktop/api/Strmif/nn-strmif-idvdcontrol2) automatisch geändert werden.
 
-Dieses Ereignis kann allen verfügbaren Schaltflächen Nummern signalisieren. Diese Zahlen entsprechen nicht immer den für [**IDvdControl2:: selectandactivatebutton**](/windows/desktop/api/Strmif/nf-strmif-idvdcontrol2-selectandactivatebutton) verwendeten Schaltflächen Nummern, da von dieser Methode nur eine Teilmenge der Schaltflächen aktiviert werden kann.
+Dieses Ereignis kann alle verfügbaren Schaltflächennummern signalisieren. Diese Zahlen entsprechen nicht immer schaltflächennummern, die für [**IDvdControl2::SelectAndActivateButton**](/windows/desktop/api/Strmif/nf-strmif-idvdcontrol2-selectandactivatebutton) verwendet werden, da diese Methode nur eine Teilmenge der Schaltflächen aktivieren kann.
 
 Dieses Ereignis wird in allen Domänen ausgelöst.
 
@@ -58,21 +58,21 @@ Dieses Ereignis wird in allen Domänen ausgelöst.
 
 | Anforderung | Wert |
 |-------------------|----------------------------------------------------------------------------------------------------------|
-| Header<br/> | <dl> <dt>Dvdevcode. h (Include DShow. h)</dt> </dl> |
+| Header<br/> | <dl> <dt>Dvdevcode.h (include Dshow.h)</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
 [DVD-Anwendungen](dvd-applications.md)
 </dt> <dt>
 
-[DVD-Ereignis Benachrichtigungs Codes](dvd-notification-codes.md)
+[DVD-Ereignisbenachrichtigungscodes](dvd-notification-codes.md)
 </dt> <dt>
 
-[Ereignis Benachrichtigung in DirectShow](event-notification-in-directshow.md)
+[Ereignisbenachrichtigung in DirectShow](event-notification-in-directshow.md)
 </dt> </dl>
 
  

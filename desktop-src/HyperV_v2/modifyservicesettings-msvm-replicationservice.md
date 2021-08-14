@@ -1,7 +1,7 @@
 ---
-description: Ändert die Einstellungen für den Hyper-V-Replikat Dienst.
+description: Ändert die Einstellungen für den Hyper-V-Replikatdienst.
 ms.assetid: e203f9f5-da4b-4ba7-8637-add7169990d3
-title: Modifyservicesettings-Methode der Msvm_ReplicationService-Klasse
+title: ModifyServiceSettings-Methode der Msvm_ReplicationService-Klasse
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,16 +13,16 @@ api_type:
 - COM
 api_location:
 - vmms.exe
-ms.openlocfilehash: fe20f8e6f113dce05961eb11fbafdc7841f39e38
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: fb185f42e2094b562c2509da0e7184a135561f77c9f86ca21058922ff078c36a
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "103752216"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118644807"
 ---
-# <a name="modifyservicesettings-method-of-the-msvm_replicationservice-class"></a>Modifyservicesettings-Methode der MSVM- \_ replicationservice-Klasse
+# <a name="modifyservicesettings-method-of-the-msvm_replicationservice-class"></a>ModifyServiceSettings-Methode der Msvm \_ ReplicationService-Klasse
 
-Ändert die Einstellungen für den Hyper-V-Replikat Dienst.
+Ändert die Einstellungen für den Hyper-V-Replikatdienst.
 
 ## <a name="syntax"></a>Syntax
 
@@ -40,17 +40,17 @@ uint32 ModifyServiceSettings(
 
 <dl> <dt>
 
-*SettingData* \[ in\]
+*SettingData* \[ In\]
 </dt> <dd>
 
-Eine Zeichen folgen Darstellung der [**MSVM \_ replicationservicesettingdata**](msvm-replicationservicesettingdata.md) -Klasse, die die geänderten Einstellungsdaten für den Dienst enthält.
+Eine Zeichenfolgendarstellung der [**Msvm \_ ReplicationServiceSettingData-Klasse,**](msvm-replicationservicesettingdata.md) die die geänderten Einstellungsdaten für den Dienst enthält.
 
 </dd> <dt>
 
-*Auftrag* \[ vorgenommen\]
+*Auftrag* \[ out\]
 </dt> <dd>
 
-Wenn der Vorgang asynchron ausgeführt wird, gibt diese Methode 4096 zurück, und dieser Parameter enthält einen Verweis auf ein Objekt, das von [**CIM \_ concretejob**](/previous-versions//cc136808(v=vs.85))abgeleitet wird.
+Wenn der Vorgang asynchron ausgeführt wird, gibt diese Methode 4096 zurück, und dieser Parameter enthält einen Verweis auf ein objekt, das von [**CIM \_ ConcreteJob**](/previous-versions//cc136808(v=vs.85))abgeleitet wurde.
 
 </dd> </dl>
 
@@ -63,10 +63,10 @@ Diese Methode gibt einen der folgenden Werte zurück.
 **Abgeschlossen ohne Fehler** (0)
 </dt> <dt>
 
-Über **prüfte Methoden Parameter-Auftrag gestartet** (4096)
+**Überprüfte Methodenparameter – Auftragsstart** (4096)
 </dt> <dt>
 
-Fehler **(32768** )
+**Fehler** (32768)
 </dt> <dt>
 
 **Zugriff verweigert** (32769)
@@ -75,7 +75,7 @@ Fehler **(32768** )
 **Nicht unterstützt** (32770)
 </dt> <dt>
 
-Der **Status ist "Unknown** " (32771).
+**Status ist unbekannt** (32771)
 </dt> <dt>
 
 **Timeout** (32772)
@@ -87,16 +87,16 @@ Der **Status ist "Unknown** " (32771).
 **System wird verwendet** (32774)
 </dt> <dt>
 
-**Ungültiger Status für diesen Vorgang** (32775).
+**Ungültiger Zustand für diesen Vorgang** (32775)
 </dt> <dt>
 
-**Falscher Datentyp** (32776).
+**Falscher Datentyp** (32776)
 </dt> <dt>
 
-Das **System ist nicht verfügbar** (32777).
+**System ist nicht verfügbar** (32777)
 </dt> <dt>
 
-**Nicht** genügend Arbeitsspeicher (32778)
+**Nicht genügend Arbeitsspeicher** (32778)
 </dt> </dl>
 
 ## <a name="requirements"></a>Anforderungen
@@ -105,19 +105,19 @@ Das **System ist nicht verfügbar** (32777).
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows 8 \[ -Desktop-Apps\]<br/>                                                              |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2012 \[ -Desktop-Apps\]<br/>                                                    |
-| Namespace<br/>                | \\Stammvirtualisierung \\ v2<br/>                                                                     |
-| MOF<br/>                      | <dl> <dt>Windowsvirtualization. v2. MOF</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | \[Windows 8 Nur Desktop-Apps\]<br/>                                                              |
+| Unterstützte Mindestversion (Server)<br/> | \[Windows Server 2012 Nur Desktop-Apps\]<br/>                                                    |
+| Namespace<br/>                | Root \\ Virtualization \\ V2<br/>                                                                     |
+| MOF<br/>                      | <dl> <dt>WindowsVirtualization.V2.mof</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>Vmms.exe</dt> </dl>                     |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen:
 
 <dl> <dt>
 
-[**MSVM \_ replicationservice**](msvm-replicationservice.md)
+[**Msvm \_ ReplicationService**](msvm-replicationservice.md)
 </dt> </dl>
 
  

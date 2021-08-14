@@ -9,12 +9,12 @@ topic_type:
 api_name: ''
 api_type: ''
 api_location: ''
-ms.openlocfilehash: ae4b024bbce0636127b0ed0fc5f42bc466e1b7fd
-ms.sourcegitcommit: 7e4322a6ec1f964d5ad26e2e5e06cc8ce840030e
+ms.openlocfilehash: f94a9fb8e46da811652b334824779d59153c87616f7f9815dbebd8224870ddec
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/01/2021
-ms.locfileid: "113129687"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118792822"
 ---
 # <a name="dcl_usage-input-sm1-sm2-sm3---vs-asm"></a>dcl \_ usage input (sm1, sm2, sm3 – vs asm)
 
@@ -31,10 +31,10 @@ dcl \_ usage usage index \[ \_ \] v\#
 Hierbei gilt:
 
 -   dcl \_ usage gibt an, wie die Registerdaten verwendet werden. Dies ist der gleiche Wert wie die Elemente von [**D3DDECLUSAGE**](/windows/desktop/direct3d9/d3ddeclusage) ohne das Präfix D3DDECLUSAGE.
--   der \_ Nutzungsindex ist ein optionaler ganzzahliger Index zwischen 0 und 15. Sie ändert die Nutzungsdaten. Der Index entspricht dem Verwendungsindex in einer Scheitelpunktdeklaration. Weitere Informationen [finden Sie unter Vertexdeklaration (Direct3D 9).](/windows/desktop/direct3d9/vertex-declaration) Der Index wird ohne Speicherplatz an den Nutzungswert (dcl \_ usage) angefügt. Wenn sie nicht angegeben wird, wird davon ausgegangen, dass sie 0 ist.
+-   der \_ Nutzungsindex ist ein optionaler ganzzahliger Index zwischen 0 und 15. Sie ändert die Nutzungsdaten. Der Index entspricht dem Verwendungsindex in einer Scheitelpunktdeklaration. Weitere Informationen [finden Sie unter Vertexdeklaration (Direct3D 9).](/windows/desktop/direct3d9/vertex-declaration) Der Index wird ohne Leerzeichen an den Verwendungswert (dcl \_ usage) angefügt. Wenn sie nicht angegeben wird, wird davon ausgegangen, dass sie 0 ist.
 -   v \# ist ein [Eingaberegister.](dx9-graphics-reference-asm-vs-registers-input.md)
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
 
 

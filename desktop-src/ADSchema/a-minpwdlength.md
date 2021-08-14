@@ -1,11 +1,11 @@
 ---
-title: Min-pwd-length-Attribut
+title: Min-Pwd-Length-Attribut
 description: Die Mindestanzahl von Zeichen, die ein Kennwort enthalten muss.
 ms.assetid: f1bd7b0c-cb78-4b03-88fe-dbdf472dab06
 ms.tgt_platform: multiple
 keywords:
-- "\"Min-pwd-length\"-Attribut, AD-Schema"
-- Attribut "minpwdlength" AD Schema
+- AD-Schema des Attributs "Min-Pwd-Length"
+- minPwdLength-Attribut AD-Schema
 topic_type:
 - apiref
 api_name:
@@ -14,14 +14,14 @@ api_type:
 - Schema
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 9b0d9a50ed05a651d7dd2d029d1c0b21c247c0ed
-ms.sourcegitcommit: b77ace27b0432e7cd3863191b11926be032fbe2f
+ms.openlocfilehash: a6b217beb1f55d37157d09f54819859af105a42d7959da511209d5e540ef238e
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "103859714"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118687542"
 ---
-# <a name="min-pwd-length-attribute"></a>Min-pwd-length-Attribut
+# <a name="min-pwd-length-attribute"></a>Min-Pwd-Length-Attribut
 
 Die Mindestanzahl von Zeichen, die ein Kennwort enthalten muss.
 
@@ -29,13 +29,13 @@ Die Mindestanzahl von Zeichen, die ein Kennwort enthalten muss.
 
 | Eingabe | Wert |
 |-------------------|--------------------------------------|
-| CN                | Min-pwd-Länge                       |
-| LDAP-Display-Name | minpwdlength                         |
+| CN                | Min-Pwd-Length                       |
+| Ldap-Anzeigename | minPwdLength                         |
 | Size              | \-                                   |
-| Berechtigung aktualisieren  | Domänen Administrator                 |
-| Aktualisierungshäufigkeit  | \-                                   |
+| Aktualisieren von Berechtigungen  | Domänenadministrator                 |
+| Updatehäufigkeit  | \-                                   |
 | Attribute-Id      | 1.2.840.113556.1.4.79                |
-| System-ID-GUID    | bf9679c3-0de6-11d0-a285-00aa003049e2 |
+| System-Id-Guid    | bf9679c3-0de6-11d0-a285-00aa003049e2 |
 | Syntax            | [**Enumeration**](s-enumeration.md) |
 
 
@@ -43,7 +43,7 @@ Die Mindestanzahl von Zeichen, die ein Kennwort enthalten muss.
 ## <a name="implementations"></a>Implementierungen
 
 -   [**Windows 2000 Server**](#windows-2000-server)
--   [**Windows Server 2003**](#windows-server-2003)
+-   [**Windows Server 2003**](#windows-server-2003)
 -   [**Windows Server 2003 R2**](#windows-server-2003-r2)
 -   [**Windows Server 2008**](#windows-server-2008)
 -   [**Windows Server 2008 R2**](#windows-server-2008-r2)
@@ -57,20 +57,20 @@ Die Mindestanzahl von Zeichen, die ein Kennwort enthalten muss.
 |------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------|
 | Link-ID                | \-                                                                                                                                                    |
 | MAPI-Id                | \-                                                                                                                                                    |
-| System-Only            | False                                                                                                                                                 |
-| Ist-einwertig       | Richtig                                                                                                                                                  |
-| Ist indiziert             | False                                                                                                                                                 |
-| Im globalen Katalog      | False                                                                                                                                                 |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                                                                                                                          |
+| System-Only            | Falsch                                                                                                                                                 |
+| Is-Single-Valued       | Richtig                                                                                                                                                  |
+| Ist indiziert             | Falsch                                                                                                                                                 |
+| Im globalen Katalog      | Falsch                                                                                                                                                 |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                                                                                                                          |
 | Range-Lower            | \-                                                                                                                                                    |
 | Range-Upper            | \-                                                                                                                                                    |
 | Search-Flags           | 0x00000000                                                                                                                                            |
 | System-Flags           | 0x00000010                                                                                                                                            |
-| In verwendete Klassen        | [**Domänen Richtlinie**](c-domainpolicy.md)<br/> [**Sam-Domäne**](c-samdomain.md)<br/> [**SAM-Domain-Base**](c-samdomainbase.md)<br/> |
+| In verwendete Klassen        | [**Domänenrichtlinie**](c-domainpolicy.md)<br/> [**Sam-Domain**](c-samdomain.md)<br/> [**Sam-Domain-Base**](c-samdomainbase.md)<br/> |
 
 
 
-## <a name="windows-server-2003"></a>Windows Server 2003
+## <a name="windows-server-2003"></a>Windows Server 2003
 
 
 
@@ -78,16 +78,16 @@ Die Mindestanzahl von Zeichen, die ein Kennwort enthalten muss.
 |------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------|
 | Link-ID                | \-                                                                                                                                                    |
 | MAPI-Id                | \-                                                                                                                                                    |
-| System-Only            | False                                                                                                                                                 |
-| Ist-einwertig       | Richtig                                                                                                                                                  |
-| Ist indiziert             | False                                                                                                                                                 |
-| Im globalen Katalog      | False                                                                                                                                                 |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                                                                                                                          |
+| System-Only            | Falsch                                                                                                                                                 |
+| Is-Single-Valued       | Richtig                                                                                                                                                  |
+| Ist indiziert             | Falsch                                                                                                                                                 |
+| Im globalen Katalog      | Falsch                                                                                                                                                 |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                                                                                                                          |
 | Range-Lower            | \-                                                                                                                                                    |
 | Range-Upper            | \-                                                                                                                                                    |
 | Search-Flags           | 0x00000000                                                                                                                                            |
 | System-Flags           | 0x00000010                                                                                                                                            |
-| In verwendete Klassen        | [**Domänen Richtlinie**](c-domainpolicy.md)<br/> [**Sam-Domäne**](c-samdomain.md)<br/> [**SAM-Domain-Base**](c-samdomainbase.md)<br/> |
+| In verwendete Klassen        | [**Domänenrichtlinie**](c-domainpolicy.md)<br/> [**Sam-Domain**](c-samdomain.md)<br/> [**Sam-Domain-Base**](c-samdomainbase.md)<br/> |
 
 
 
@@ -99,16 +99,16 @@ Die Mindestanzahl von Zeichen, die ein Kennwort enthalten muss.
 |------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------|
 | Link-ID                | \-                                                                                                                                                    |
 | MAPI-Id                | \-                                                                                                                                                    |
-| System-Only            | False                                                                                                                                                 |
-| Ist-einwertig       | Richtig                                                                                                                                                  |
-| Ist indiziert             | False                                                                                                                                                 |
-| Im globalen Katalog      | False                                                                                                                                                 |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                                                                                                                          |
+| System-Only            | Falsch                                                                                                                                                 |
+| Is-Single-Valued       | Richtig                                                                                                                                                  |
+| Ist indiziert             | Falsch                                                                                                                                                 |
+| Im globalen Katalog      | Falsch                                                                                                                                                 |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                                                                                                                          |
 | Range-Lower            | \-                                                                                                                                                    |
 | Range-Upper            | \-                                                                                                                                                    |
 | Search-Flags           | 0x00000000                                                                                                                                            |
 | System-Flags           | 0x00000010                                                                                                                                            |
-| In verwendete Klassen        | [**Domänen Richtlinie**](c-domainpolicy.md)<br/> [**Sam-Domäne**](c-samdomain.md)<br/> [**SAM-Domain-Base**](c-samdomainbase.md)<br/> |
+| In verwendete Klassen        | [**Domänenrichtlinie**](c-domainpolicy.md)<br/> [**Sam-Domain**](c-samdomain.md)<br/> [**Sam-Domain-Base**](c-samdomainbase.md)<br/> |
 
 
 
@@ -120,16 +120,16 @@ Die Mindestanzahl von Zeichen, die ein Kennwort enthalten muss.
 |------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------|
 | Link-ID                | \-                                                                                                                                                    |
 | MAPI-Id                | \-                                                                                                                                                    |
-| System-Only            | False                                                                                                                                                 |
-| Ist-einwertig       | Richtig                                                                                                                                                  |
-| Ist indiziert             | False                                                                                                                                                 |
-| Im globalen Katalog      | False                                                                                                                                                 |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                                                                                                                          |
+| System-Only            | Falsch                                                                                                                                                 |
+| Ist einwertig       | Richtig                                                                                                                                                  |
+| Ist indiziert             | Falsch                                                                                                                                                 |
+| Im globalen Katalog      | Falsch                                                                                                                                                 |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                                                                                                                          |
 | Range-Lower            | \-                                                                                                                                                    |
 | Range-Upper            | \-                                                                                                                                                    |
 | Search-Flags           | 0x00000000                                                                                                                                            |
 | System-Flags           | 0x00000010                                                                                                                                            |
-| In verwendete Klassen        | [**Domänen Richtlinie**](c-domainpolicy.md)<br/> [**Sam-Domäne**](c-samdomain.md)<br/> [**SAM-Domain-Base**](c-samdomainbase.md)<br/> |
+| In verwendete Klassen        | [**Domänenrichtlinie**](c-domainpolicy.md)<br/> [**Sam-Domain**](c-samdomain.md)<br/> [**Sam-Domain-Base**](c-samdomainbase.md)<br/> |
 
 
 
@@ -141,16 +141,16 @@ Die Mindestanzahl von Zeichen, die ein Kennwort enthalten muss.
 |------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------|
 | Link-ID                | \-                                                                                                                                                    |
 | MAPI-Id                | \-                                                                                                                                                    |
-| System-Only            | False                                                                                                                                                 |
-| Ist-einwertig       | Richtig                                                                                                                                                  |
-| Ist indiziert             | False                                                                                                                                                 |
-| Im globalen Katalog      | False                                                                                                                                                 |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                                                                                                                          |
+| System-Only            | Falsch                                                                                                                                                 |
+| Ist einwertig       | Richtig                                                                                                                                                  |
+| Ist indiziert             | Falsch                                                                                                                                                 |
+| Im globalen Katalog      | Falsch                                                                                                                                                 |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                                                                                                                          |
 | Range-Lower            | \-                                                                                                                                                    |
 | Range-Upper            | \-                                                                                                                                                    |
 | Search-Flags           | 0x00000000                                                                                                                                            |
 | System-Flags           | 0x00000010                                                                                                                                            |
-| In verwendete Klassen        | [**Domänen Richtlinie**](c-domainpolicy.md)<br/> [**Sam-Domäne**](c-samdomain.md)<br/> [**SAM-Domain-Base**](c-samdomainbase.md)<br/> |
+| In verwendete Klassen        | [**Domänenrichtlinie**](c-domainpolicy.md)<br/> [**Sam-Domain**](c-samdomain.md)<br/> [**Sam-Domain-Base**](c-samdomainbase.md)<br/> |
 
 
 
@@ -162,16 +162,16 @@ Die Mindestanzahl von Zeichen, die ein Kennwort enthalten muss.
 |------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------|
 | Link-ID                | \-                                                                                                                                                    |
 | MAPI-Id                | \-                                                                                                                                                    |
-| System-Only            | False                                                                                                                                                 |
-| Ist-einwertig       | Richtig                                                                                                                                                  |
-| Ist indiziert             | False                                                                                                                                                 |
-| Im globalen Katalog      | False                                                                                                                                                 |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                                                                                                                          |
+| System-Only            | Falsch                                                                                                                                                 |
+| Ist einwertig       | Richtig                                                                                                                                                  |
+| Ist indiziert             | Falsch                                                                                                                                                 |
+| Im globalen Katalog      | Falsch                                                                                                                                                 |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                                                                                                                          |
 | Range-Lower            | \-                                                                                                                                                    |
 | Range-Upper            | \-                                                                                                                                                    |
 | Search-Flags           | 0x00000000                                                                                                                                            |
 | System-Flags           | 0x00000010                                                                                                                                            |
-| In verwendete Klassen        | [**Domänen Richtlinie**](c-domainpolicy.md)<br/> [**Sam-Domäne**](c-samdomain.md)<br/> [**SAM-Domain-Base**](c-samdomainbase.md)<br/> |
+| In verwendete Klassen        | [**Domänenrichtlinie**](c-domainpolicy.md)<br/> [**Sam-Domain**](c-samdomain.md)<br/> [**Sam-Domain-Base**](c-samdomainbase.md)<br/> |
 
 
 

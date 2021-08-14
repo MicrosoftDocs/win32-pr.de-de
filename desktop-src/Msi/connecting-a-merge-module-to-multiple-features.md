@@ -1,23 +1,23 @@
 ---
-description: Die Connect-Methode des Merge-Objekts kann verwendet werden, um ein Modul mit einer zusätzlichen Funktion zu verbinden, die in der Datenbank zusammengeführt oder in der Datenbank zusammengeführt wird. Die Funktion muss vorhanden sein, bevor diese Methode aufgerufen wird.
+description: Die Verbinden-Methode des Mergeobjekts kann verwendet werden, um ein Modul mit einem zusätzlichen Feature zu verbinden, das mit der Datenbank zusammengeführt wurde oder mit der Datenbank zusammengeführt wird. Das Feature muss vorhanden sein, bevor diese Methode aufruft.
 ms.assetid: 8b59de42-bc3f-468b-a410-8f935ff73345
-title: Verbinden eines Mergemoduls mit mehreren Features
+title: Verbinden eines Mergemoduls mit mehreren Funktionen
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: d57b49f1ee27b4c8d3aa5d0b3ac1b0d7b8b8e11c
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 12044ff293d825c160533907d625a2d12bb9ea217233c54dd9d5a0099990ee3b
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "103867044"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118948421"
 ---
-# <a name="connecting-a-merge-module-to-multiple-features"></a>Verbinden eines Mergemoduls mit mehreren Features
+# <a name="connecting-a-merge-module-to-multiple-features"></a>Verbinden eines Mergemoduls mit mehreren Funktionen
 
-Die [**Connect**](merge-connect.md) -Methode des [Merge-Objekts](merge-object.md) kann verwendet werden, um ein Modul mit einer zusätzlichen Funktion zu verbinden, die in der Datenbank zusammengeführt oder in der Datenbank zusammengeführt wird. Die Funktion muss vorhanden sein, bevor diese Methode aufgerufen wird.
+Die [**Verbinden-Methode**](merge-connect.md) des [Mergeobjekts](merge-object.md) kann verwendet werden, um ein Modul mit einem zusätzlichen Feature zu verbinden, das mit der Datenbank zusammengeführt wurde oder mit der Datenbank zusammengeführt wird. Das Feature muss vorhanden sein, bevor diese Methode aufruft.
 
-Ein Mergemodul sollte nie eine Komponente, die Systemdateien enthält, an das Haupt Feature einer Anwendung übermitteln, da dies dazu führen kann, dass das Installationsprogramm die Anwendung bei jeder Verwendung der Systemdatei überprüft und repariert. Eine MSI-Datei, die Komponenten eines Mergemoduls akzeptieren soll, sollte so erstellt werden, dass alle Komponenten, die Systemdateien enthalten, nur zu Features gehören, die von der Hauptfunktion der Anwendung getrennt sind.
+Ein Mergemodul sollte niemals eine Komponente mit Systemdateien an das Hauptfeature einer Anwendung liefern, da dies dazu führen kann, dass der Installer die Anwendung bei jeder Verwendung der Systemdatei überprüft und repariert. Eine .msi-Datei, die Komponenten aus einem Mergemodul akzeptieren soll, sollte so verfasst werden, dass alle Komponenten, die Systemdateien enthalten, nur zu Features gehören, die vom Hauptfeature der Anwendung getrennt sind.
 
-Wenn das Paket ein Mergemodul verwendet, das Systemdateien enthält, die alle Komponenten aus dem Mergemodul mit dem Haupt Feature der Anwendung verknüpfen, kann der Versuch, die Systemdatei zu verwenden, das Installationsprogramm veranlassen, das Haupt Feature der Anwendung zu reparieren. Wenn die Hauptfunktion nicht repariert werden kann, tritt bei der Installation möglicherweise ein Fehler auf.
+Wenn Ihr Paket ein Mergemodul mit Systemdateien verwendet, die alle Komponenten aus dem Mergemodul mit dem Hauptfeature der Anwendung verknüpfen, kann der Versuch, die Systemdatei zu verwenden, den Installer auslösen, um zu versuchen, das Hauptfeature der Anwendung zu reparieren. Wenn das Hauptfeature nicht repariert werden kann, kann die Installation fehlschlagen.
 
  
 

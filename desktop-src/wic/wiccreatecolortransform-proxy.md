@@ -1,5 +1,5 @@
 ---
-description: Erstellt ein Farb Transformations Objekt, das iwiccolortransform implementiert. Dieses com-Objekt unterstützt das frei Hand Thread-Objektmodell.
+description: Erstellt ein Farbtransformationsobjekt, das IWICColorTransform implementiert. Dieses COM-Objekt unterstützt das Freethread-Objektmodell.
 ms.assetid: 43DCC3FB-B687-45F0-AAC6-DED76214716C
 title: WICCreateColorTransform_Proxy-Funktion
 ms.topic: reference
@@ -13,16 +13,16 @@ api_type:
 - DllExport
 api_location:
 - WindowsCodecsExt.dll
-ms.openlocfilehash: 451b549aa44e785e406f50ccf4eb7a8317edf6b6
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 89c7476bc32546f0a9fe77a8731f239702c6a2a874dbfb830b9d4bbafbd872b7
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106366921"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118709217"
 ---
-# <a name="wiccreatecolortransform_proxy-function"></a>Wickreatecolortransform- \_ Proxy Funktion
+# <a name="wiccreatecolortransform_proxy-function"></a>WICCreateColorTransform-Proxyfunktion \_
 
-Erstellt ein Farb Transformations Objekt, das [**iwiccolortransform**](/windows/win32/api/wincodec/nn-wincodec-iwiccolortransform)implementiert. Dieses com-Objekt unterstützt das frei Hand Thread-Objektmodell.
+Erstellt ein Farbtransformationsobjekt, das [**IWICColorTransform**](/windows/win32/api/wincodec/nn-wincodec-iwiccolortransform)implementiert. Dieses COM-Objekt unterstützt das Freethread-Objektmodell.
 
 ## <a name="syntax"></a>Syntax
 
@@ -39,16 +39,16 @@ HRESULT WINAPI WICCreateColorTransform_Proxy(
 
 <dl> <dt>
 
-*ppicolortransform* \[ vorgenommen\]
+*ppIColorTransform* \[ out\]
 </dt> <dd>
 
-Die erstellte Farb Transformation.
+Die erstellte Farbtransformation.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Wenn diese Funktion erfolgreich ausgeführt wird, gibt Sie **S \_ OK** zurück. Andernfalls wird ein **HRESULT** -Fehlercode zurückgegeben.
+Wenn diese Funktion erfolgreich ausgeführt wird, wird **S \_ OK** zurückgegeben. Andernfalls wird ein **HRESULT-Fehlercode** zurückgegeben.
 
 ## <a name="requirements"></a>Anforderungen
 

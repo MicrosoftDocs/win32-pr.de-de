@@ -1,9 +1,9 @@
 ---
-title: Version (systempropertiestype)-Element
-description: Enthält die Versionsnummer der Ereignis Definition.
+title: Version(SystemPropertiesType)-Element
+description: Enthält die Versionsnummer der Ereignisdefinition.
 ms.assetid: c257cf21-296d-4dae-bfc8-e7899da40526
 keywords:
-- Versions Element-Ereignisprotokoll
+- Versionselement EventLog
 topic_type:
 - apiref
 api_name:
@@ -13,16 +13,16 @@ api_type:
 ms.topic: reference
 ms.date: 05/31/2018
 api_location: ''
-ms.openlocfilehash: 4e1ae5273054c1c3c06926d3b4d5a9bd9ced1aeb
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: e5ca784def3389ed29b913358f97eddc631e0659aa60846be748ea3b5738759a
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104213704"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118587277"
 ---
-# <a name="version-systempropertiestype-element"></a>Version (systempropertiestype)-Element
+# <a name="version-systempropertiestype-element"></a>Version(SystemPropertiesType)-Element
 
-Enthält die Versionsnummer der Ereignis Definition.
+Enthält die Versionsnummer der Ereignisdefinition.
 
 ``` syntax
 <xs:element name="Version"
@@ -30,7 +30,7 @@ Enthält die Versionsnummer der Ereignis Definition.
  />
 ```
 
-Das **Versions** Element wird durch den komplexen [**systempropertiestype**](eventschema-systempropertiestype-complextype.md) -Typ definiert.
+Das **Version-Element** wird durch den komplexen [**SystemPropertiesType-Typ**](eventschema-systempropertiestype-complextype.md) definiert.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -38,8 +38,8 @@ Das **Versions** Element wird durch den komplexen [**systempropertiestype**](eve
 
 | Anforderung | Wert |
 |-------------------------------------|------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>       |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2008 \[ -Desktop-Apps\]<br/> |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur \[ Vista-Desktop-Apps\]<br/>       |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2008-Desktop-Apps\]<br/> |
 
 
 

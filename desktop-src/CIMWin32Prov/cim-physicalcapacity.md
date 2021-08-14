@@ -1,5 +1,5 @@
 ---
-description: Die CIM \_ physicalcapacity-Klasse ist eine abstrakte Klasse, die die minimalen und maximalen Anforderungen eines physischen Elements und die Fähigkeit zur Unterstützung verschiedener Hardwaretypen darstellt.
+description: Die CIM PhysicalCapacity-Klasse ist eine abstrakte Klasse, die die Mindest- und Höchstanforderungen eines physischen Elements sowie seine Fähigkeit zur Unterstützung verschiedener \_ Hardwaretypen darstellt.
 ms.assetid: e422aec0-1830-464e-ac52-2911652165a2
 ms.tgt_platform: multiple
 title: CIM_PhysicalCapacity-Klasse
@@ -17,23 +17,23 @@ api_type:
 - DllExport
 api_location:
 - CIMWin32.dll
-ms.openlocfilehash: 50f928f69d34600c0f90865a4df44a5d7697fc89
-ms.sourcegitcommit: c7add10d695482e1ceb72d62b8a4ebd84ea050f7
+ms.openlocfilehash: 78574fc7acc8e4b96be745d5eb2d00d2715d1ba3a570dd514be1ba0a3a706581
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "103958446"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118678362"
 ---
-# <a name="cim_physicalcapacity-class"></a>CIM \_ physicalcapacity-Klasse
+# <a name="cim_physicalcapacity-class"></a>CIM \_ PhysicalCapacity-Klasse
 
-Die **CIM \_ physicalcapacity** -Klasse ist eine abstrakte Klasse, die die minimalen und maximalen Anforderungen eines physischen Elements und die Fähigkeit zur Unterstützung verschiedener Hardwaretypen darstellt. So können z. b. die minimalen und maximalen Arbeitsspeicher Anforderungen als eine Unterklasse von **CIM \_ physicalcapacity** modelliert werden.
+Die **CIM \_ PhysicalCapacity-Klasse** ist eine abstrakte Klasse, die die Mindest- und Höchstanforderungen eines physischen Elements sowie seine Fähigkeit zur Unterstützung verschiedener Hardwaretypen darstellt. Beispielsweise können minimale und maximale Arbeitsspeicheranforderungen als Unterklasse von **CIM \_ PhysicalCapacity modelliert werden.**
 
 > [!IMPORTANT]
-> Die Klassen der DMTF-CIM (Common Information Model) sind die übergeordneten Klassen, auf denen WMI-Klassen erstellt werden. WMI unterstützt zurzeit nur die [CIM 2. x-Versions Schemas](https://dmtf.org/standards/cim/schemas).
+> Die CIM-Klassen (Distributed Management Task Force) (DMTF) (Common Information Model) sind die übergeordneten Klassen, auf denen WMI-Klassen erstellt werden. WMI unterstützt derzeit nur die [CIM 2.x-Versionsschemas.](https://dmtf.org/standards/cim/schemas)
 
  
 
-Die folgende Syntax wird aus dem MOF-Code (Managed Object Format) vereinfacht und enthält alle geerbten Eigenschaften. Eigenschaften werden in alphabetischer Reihenfolge und nicht in der MOF-Reihenfolge aufgelistet.
+Die folgende Syntax wird durch Managed Object Format (MOF)-Code vereinfacht und enthält alle geerbten Eigenschaften. Eigenschaften werden in alphabetischer Reihenfolge und nicht in MOF-Reihenfolge aufgelistet.
 
 ## <a name="syntax"></a>Syntax
 
@@ -49,13 +49,13 @@ class CIM_PhysicalCapacity
 
 ## <a name="members"></a>Member
 
-Die **CIM \_ physicalcapacity** -Klasse verfügt über diese Typen von Membern:
+Die **CIM \_ PhysicalCapacity-Klasse** verfügt über die folgenden Membertypen:
 
 -   [Eigenschaften](#properties)
 
 ### <a name="properties"></a>Eigenschaften
 
-Die **CIM \_ physicalcapacity** -Klasse verfügt über diese Eigenschaften.
+Die **CIM \_ PhysicalCapacity-Klasse** verfügt über diese Eigenschaften.
 
 <dl> <dt>
 
@@ -68,10 +68,10 @@ Datentyp: **Zeichenfolge**
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**maxlen**](/windows/desktop/WmiSdk/standard-qualifiers) (64)
+Qualifizierer: [**MaxLen**](/windows/desktop/WmiSdk/standard-qualifiers) (64)
 </dt> </dl>
 
-Kurze Textbeschreibung des-Objekts.
+Kurze Textbeschreibung des Objekts.
 
 </dd> <dt>
 
@@ -84,7 +84,7 @@ Datentyp: **Zeichenfolge**
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Die Textbeschreibung des Objekts.
+Textbeschreibung des Objekts.
 
 </dd> <dt>
 
@@ -97,18 +97,18 @@ Datentyp: **Zeichenfolge**
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**maxlen**](/windows/desktop/WmiSdk/standard-qualifiers) (256)
+Qualifizierer: [**MaxLen**](/windows/desktop/WmiSdk/standard-qualifiers) (256)
 </dt> </dl>
 
-Die Bezeichnung, nach der das-Objekt bekannt ist. Bei einer Unterklasse kann diese Eigenschaft als Schlüsseleigenschaft überschrieben werden.
+Bezeichnung, unter der das Objekt bekannt ist. Bei Unterklassen kann diese Eigenschaft überschrieben werden, um eine Schlüsseleigenschaft zu sein.
 
 </dd> </dl>
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Diese Klasse wird von WMI nicht implementiert.
+WMI implementiert diese Klasse nicht.
 
-Diese Dokumentation wird von den von der DMTF veröffentlichten CIM-Klassen Beschreibungen abgeleitet. Microsoft hat möglicherweise Änderungen an den korrekten geringfügigen Fehlern vorgenommen, den Microsoft SDK-Dokumentations Standards entsprechen oder weitere Informationen bereitstellen.
+Diese Dokumentation wird von den CIM-Klassenbeschreibungen abgeleitet, die von DMTF veröffentlicht wurden. Microsoft hat möglicherweise Änderungen vorgenommen, um kleinere Fehler zu beheben, die Dokumentationsstandards des Microsoft SDK zu erfüllen oder weitere Informationen zur Verfügung zu stellen.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -118,8 +118,8 @@ Diese Dokumentation wird von den von der DMTF veröffentlichten CIM-Klassen Besc
 |-------------------------------------|-----------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows Vista<br/>                                                                |
 | Unterstützte Mindestversion (Server)<br/> | Windows Server 2008<br/>                                                          |
-| Namespace<br/>                | Root \\ CIMV2<br/>                                                                  |
-| MOF<br/>                      | <dl> <dt>Cimwin32. MOF</dt> </dl> |
+| Namespace<br/>                | \\Stamm-CIMV2<br/>                                                                  |
+| MOF<br/>                      | <dl> <dt>CIMWin32.mof</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>CIMWin32.dll</dt> </dl> |
 
 

@@ -1,30 +1,30 @@
 ---
 title: Katalogbeispiel
-description: Dieses Codebeispiel veranschaulicht das Markup und den Code, die erforderlich sind, um die verschiedenen Typen von Katalogsteuerelementen zu verwenden, die im Menübandframework Windows sind.
+description: Dieses Codebeispiel veranschaulicht das Markup und den Code, die erforderlich sind, um die verschiedenen Typen von Katalogsteuerelementen zu verwenden, die im Windows Menüband-Framework enthalten sind.
 ms.assetid: 1a462f4e-e75a-40cf-9c52-0bad0a645d57
 ms.topic: article
 ms.date: 07/13/2021
-ms.openlocfilehash: ef776a8a1a8eadf9ee41cf9964066cc612a9f9a1
-ms.sourcegitcommit: 63c93e0ad0b48d60b11008767196718feb475cb0
+ms.openlocfilehash: 8c62e8955e737ac78ee5543c0a12febc5436bacd7f9d739bc9af02bacd555d2d
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/13/2021
-ms.locfileid: "113691749"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118706706"
 ---
 # <a name="gallery-sample"></a>Katalogbeispiel
 
-Dieses Codebeispiel veranschaulicht das Markup und den Code, die erforderlich sind, um die verschiedenen Typen von Katalogsteuerelementen zu verwenden, die im Menübandframework Windows sind. Das Beispiel enthält Code, der verwendet werden kann, um Elemente dynamisch in die Kataloge zu füllen und spezielle Katalogvorschauereignisse zu behandeln, die eine ergebnisorientierte Benutzeroberfläche unterstützen.
+Dieses Codebeispiel veranschaulicht das Markup und den Code, die erforderlich sind, um die verschiedenen Typen von Katalogsteuerelementen zu verwenden, die im Windows Menüband-Framework enthalten sind. Das Beispiel enthält Code, der verwendet werden kann, um Elemente dynamisch in den Katalogen aufzufüllen und spezielle Katalogvorschauereignisse zu verarbeiten, die ergebnisorientierte Benutzeroberflächen unterstützen.
 
 - [Verwendung](#usage)
   - [Erstellen des Beispiels](#building-the-sample)
   - [Ausführen des Beispiels](#running-the-sample)
-- [Support](#support)
+- [Unterstützung](#support)
 - [Mindestanforderungen](#minimum-requirements)
 - [Zugehörige Themen](#related-topics)
 
-## <a name="usage"></a>Usage
+## <a name="usage"></a>Verbrauch
 
-Die Windows Ribbon Framework-Beispiele können als eigenständige Microsoft Visual Studio-Projekte aus dem [Microsoft Download Center](https://www.microsoft.com/download/details.aspx?id=9620) heruntergeladen oder als Teil des Windows Software Development Kit [(SDK) installiert werden.](https://developer.microsoft.com/windows/downloads/sdk-archive/)
+Die Windows Menüband-Frameworkbeispiele können als eigenständige Microsoft Visual Studio Projekte aus dem [Microsoft Download Center](https://www.microsoft.com/download/details.aspx?id=9620) heruntergeladen oder als Teil des Windows Software Development Kit [(SDK)](https://developer.microsoft.com/windows/downloads/sdk-archive/)installiert werden.
 
 - Windows Software Development Kit (SDK) (Standardinstallationspfad): %ProgramFiles% \\ Microsoft SDKs \\ Windows \\ \[ Versionsnummer \] \\ Beispiele \\ winui \\ WindowsRibbon \\ Gallery
 
@@ -32,7 +32,7 @@ Die Windows Ribbon Framework-Beispiele können als eigenständige Microsoft Visu
 
 Laden Sie das Beispiel herunter.
 
-Installieren Sie Windows SDK für Windows 7, und öffnen Sie das Befehlsfenster der Buildumgebung. Zeigen Sie im Startmenü auf Alle Programme und Microsoft Windows SDK, und klicken Sie dann auf CMD Shell.
+Installieren Sie das Windows SDK für Windows 7, und öffnen Sie das Befehlsfenster der Buildumgebung. Zeigen Sie im Startmenü auf Alle Programme und Microsoft Windows SDK, und klicken Sie dann auf CMD Shell.
 
 Um das Beispiel über das Buildumgebungs-Befehlsfenster zu erstellen, wechseln Sie zum Quellverzeichnis des Beispiels. Geben Sie an der Eingabeaufforderung MSBUILD ein.
 
@@ -40,13 +40,13 @@ Um das Beispiel mit in Microsoft Visual Studio zu erstellen, laden Sie die Proje
 
 ### <a name="running-the-sample"></a>Ausführen des Beispiels
 
-Um das Beispiel über das Befehlsfenster der Buildumgebung auszuführen, führen Sie die .exe-Dateien im Ordner Bin Debug oder Bin Release aus, der \\ im Beispielquellenordner \\ enthalten ist.
+Um das Beispiel im Befehlsfenster der Buildumgebung auszuführen, führen Sie die .exe Dateien im Ordner Bin \\ Debug oder Bin Release \\ aus, der im Beispielquellordner enthalten ist.
 
 Um das kompilierte Beispiel in Visual Studio mit Debuggen auszuführen, drücken Sie F5.
 
 ## <a name="support"></a>Unterstützung
 
-Das [Windows Ribbon Development Forum](https://social.msdn.microsoft.com/Forums/windowsdesktop/home?forum=windowsribbondevelopment) steht zur Verfügung, um Themen zu besprechen und Fragen im Zusammenhang mit der Entwicklung Windows Menübandanwendungen zu stellen.
+Das [Windows Menübandentwicklungsforum](https://social.msdn.microsoft.com/Forums/windowsdesktop/home?forum=windowsribbondevelopment) ist verfügbar, um Themen zu besprechen und Fragen im Zusammenhang mit der Entwicklung Windows Menübandanwendungen zu stellen.
 
 ## <a name="minimum-requirements"></a>Mindestanforderungen
 
@@ -65,7 +65,7 @@ Das [Windows Ribbon Development Forum](https://social.msdn.microsoft.com/Forums/
  
 
 > [!Note]  
-> Das [Plattformupdate](https://msdn.microsoft.com/library/dd378748.aspx) für Windows Vista und das Plattformupdate für [Windows Server 2008](https://msdn.microsoft.com/library/dd378748.aspx) sind Sätze von Laufzeitbibliotheken, mit denen Entwickler Windows-Menübandanwendungen sowohl auf Windows Vista als auch auf Windows Server 2008 als Ziel verwenden können. Die Plattformupdates sind für alle Windows Vista- und Windows Server 2008-Kunden über Windows verfügbar. Bei Anwendungen von Drittanbietern, für die ein Plattformupdate für [Windows Vista](https://msdn.microsoft.com/library/dd378748.aspx) oder ein Plattformupdate für Windows [Server 2008](https://msdn.microsoft.com/library/dd378748.aspx) erforderlich ist, kann Windows Update erkennen, ob das erforderliche Update installiert ist. Ist dies nicht der Windows Update wird es heruntergeladen und im Hintergrund installiert.
+> Das [Plattformupdate für Windows Vista](https://msdn.microsoft.com/library/dd378748.aspx) und das [Plattformupdate für Windows Server 2008](https://msdn.microsoft.com/library/dd378748.aspx) sind Sätze von Laufzeitbibliotheken, mit denen Entwickler Windows Menübandanwendungen sowohl auf Windows Vista als auch auf Windows Server 2008 ausrichten können. Die Plattformupdates sind über Windows Update für alle Kunden Windows Vista und Windows Server 2008 verfügbar. Drittanbieteranwendungen, die [Plattformupdates für Windows Vista](https://msdn.microsoft.com/library/dd378748.aspx) oder [Plattformupdate für Windows Server 2008](https://msdn.microsoft.com/library/dd378748.aspx) erfordern, können Windows Update erkennen, ob das erforderliche Update installiert ist. Andernfalls wird Windows Update heruntergeladen und im Hintergrund installiert.
 
  
 

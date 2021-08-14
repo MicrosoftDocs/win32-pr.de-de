@@ -1,6 +1,6 @@
 ---
-description: 'Weitere Informationen finden Sie unter: esentstateexception-Konstruktor (SerializationInfo, StreamingContext)'
-title: Esentstateexception-Konstruktor (SerializationInfo, StreamingContext)
+description: 'Weitere Informationen finden Sie unter: EsentStateException-Konstruktor (SerializationInfo, StreamingContext)'
+title: EsentStateException-Konstruktor (SerializationInfo, StreamingContext)
 TOCTitle: EsentStateException constructor (SerializationInfo, StreamingContext)
 ms:assetid: M:Microsoft.Isam.Esent.Interop.EsentStateException.#ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)
 ms:mtpsurl: https://msdn.microsoft.com/library/microsoft.isam.esent.interop.esentstateexception.esentstateexception(v=EXCHG.10)
@@ -20,19 +20,19 @@ api_type:
 api_location:
 - Microsoft.Isam.Esent.Interop.dll
 ROBOTS: INDEX,FOLLOW
-ms.openlocfilehash: 458efcde030559122085824a99660c3d5d7fc4c6
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 935cf9cbe6120e305de3ed9578e607fb366d36b66d10ccbb33e17a3a2ce71153
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "104347198"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118769663"
 ---
-# <a name="esentstateexception-constructor-serializationinfo-streamingcontext"></a>Esentstateexception-Konstruktor (SerializationInfo, StreamingContext)
+# <a name="esentstateexception-constructor-serializationinfo-streamingcontext"></a>EsentStateException-Konstruktor (SerializationInfo, StreamingContext)
 
-Initialisiert eine neue Instanz der esentstateexception-Klasse. Dieser Konstruktor wird verwendet, um eine serialisierte Ausnahme zu deserialisieren.
+Initialisiert eine neue Instanz der EsentStateException-Klasse. Dieser Konstruktor wird verwendet, um eine serialisierte Ausnahme zu deserialisieren.
 
-**Namespace:**  [Microsoft. ISAM. ESENT. Interop](./microsoft.isam.esent.interop-namespace.md)  
-**Assembly:**  Microsoft. ISAM. ESENT. Interop (in Microsoft.Isam.Esent.Interop.dll)
+**Namespace:**  [Microsoft.Isam.Esent.Interop](./microsoft.isam.esent.interop-namespace.md)  
+**Assembly:**  Microsoft.Isam.Esent.Interop (in Microsoft.Isam.Esent.Interop.dll)
 
 ## <a name="syntax"></a>Syntax
 
@@ -59,25 +59,25 @@ protected EsentStateException(
 #### <a name="parameters"></a>Parameter
 
   - info  
-    Typ: [System. Runtime. Serialization. SerializationInfo](/dotnet/api/system.runtime.serialization.serializationinfo)  
+    Typ: [System.Runtime.Serialization.SerializationInfo](/dotnet/api/system.runtime.serialization.serializationinfo)  
     
-    Die Daten, die zum Deserialisieren des-Objekts benötigt werden.
+    Die Daten, die zum Deserialisieren des Objekts erforderlich sind.
 
 <!-- end list -->
 
   - context  
-    Typ: [System. Runtime. Serialization. StreamingContext](/dotnet/api/system.runtime.serialization.streamingcontext)  
+    Typ: [System.Runtime.Serialization.StreamingContext](/dotnet/api/system.runtime.serialization.streamingcontext)  
     
     Der Deserialisierungskontext.
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
-#### <a name="reference"></a>Referenz
+#### <a name="reference"></a>Verweis
 
 [EsentStateException-Klasse](./esentstateexception-class.md)
 
-[Esentstateexception-Member](./esentstateexception-members.md)
+[EsentStateException-Member](./esentstateexception-members.md)
 
-[Esentstateexception-Überladung](./esentstateexception-constructor.md)
+[EsentStateException-Überladung](./esentstateexception-constructor.md)
 
-[Microsoft. ISAM. ESENT. Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)
+[Microsoft.Isam.Esent.Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)

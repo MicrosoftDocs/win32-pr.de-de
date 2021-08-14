@@ -1,9 +1,9 @@
 ---
-title: ID2D1DeviceContext3 drawspritebatch-Methoden (D2d1 \_ 3. h)
-description: Rendert einen Teil oder alle der angegebenen Sprite-Batches mithilfe der angegebenen Zeichnungsoptionen in den Gerätekontext.
+title: ID2D1DeviceContext3 DrawSpriteBatch-Methoden (D2d1 \_ 3.h)
+description: Rendert einen Teil oder den ganzen angegebenen Spritebatch mithilfe der angegebenen Zeichnungsoptionen im Gerätekontext.
 ms.assetid: 66d049ca-5d4b-1570-3fa3-8991f9fc97a0
 keywords:
-- Drawspritebatch-Methoden Direct2D
+- DrawSpriteBatch-Methoden Direct2D
 topic_type:
 - apiref
 api_location:
@@ -12,16 +12,16 @@ api_type:
 - HeaderDef
 ms.date: 07/02/2019
 ms.topic: reference
-ms.openlocfilehash: 3735fba14d90cc538c62e804e8b86562a463c4b0
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 40e92a07a44650b6dbef37d3d355e32c5be1ec0b8b77d370f537d3adaf3d8ce6
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106367823"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119966980"
 ---
-# <a name="id2d1devicecontext3drawspritebatch-methods"></a>ID2D1DeviceContext3::D rawspritebatch-Methoden
+# <a name="id2d1devicecontext3drawspritebatch-methods"></a>ID2D1DeviceContext3::D rawSpriteBatch-Methoden
 
-Rendert einen Teil oder alle der angegebenen Sprite-Batches mithilfe der angegebenen Zeichnungsoptionen in den Gerätekontext.
+Rendert einen Teil oder den ganzen angegebenen Spritebatch mithilfe der angegebenen Zeichnungsoptionen im Gerätekontext.
 
 ### <a name="overload-list"></a>Überladeliste
 
@@ -29,8 +29,8 @@ Rendert einen Teil oder alle der angegebenen Sprite-Batches mithilfe der angegeb
 
 | Methode                                                                                                                                                                      | BESCHREIBUNG                                                                                                         |
 |:----------------------------------------------------------------------------------------------------------------------------------------------------------------------------|:--------------------------------------------------------------------------------------------------------------------|
-| [**Drawspritebatch (ID2D1SpriteBatch \* , ID2D1Bitmap \* , D2D1 \_ Bitmap \_ Interpolations \_ Mode, D2D1 \_ Sprite \_ Options)**](/windows/win32/api/d2d1_3/nf-d2d1_3-id2d1devicecontext3-drawspritebatch(id2d1spritebatch_id2d1bitmap_d2d1_bitmap_interpolation_mode_d2d1_sprite_options))               | Rendert einen Teil oder alle der angegebenen Sprite-Batches mithilfe der angegebenen Zeichnungsoptionen in den Gerätekontext.<br/> |
-| [**Drawspritebatch (ID2D1SpriteBatch \* , UInt32, UInt32, ID2D1Bitmap \* , D2D1 \_ Bitmap \_ Interpolations \_ Modus, D2D1 \_ Sprite- \_ Optionen)**](/windows/win32/api/d2d1_3/nf-d2d1_3-id2d1devicecontext3-drawspritebatch(id2d1spritebatch_uint32_uint32_id2d1bitmap_d2d1_bitmap_interpolation_mode_d2d1_sprite_options)) | Rendert einen Teil oder alle der angegebenen Sprite-Batches mithilfe der angegebenen Zeichnungsoptionen in den Gerätekontext.<br/> |
+| [**DrawSpriteBatch(ID2D1SpriteBatch, \* ID2D1Bitmap, \* D2D1 \_ BITMAP \_ INTERPOLATION \_ MODE, D2D1 \_ SPRITE \_ OPTIONS)**](/windows/win32/api/d2d1_3/nf-d2d1_3-id2d1devicecontext3-drawspritebatch(id2d1spritebatch_id2d1bitmap_d2d1_bitmap_interpolation_mode_d2d1_sprite_options))               | Rendert einen Teil oder den ganzen angegebenen Spritebatch mithilfe der angegebenen Zeichnungsoptionen im Gerätekontext.<br/> |
+| [**DrawSpriteBatch(ID2D1SpriteBatch, \* UINT32, UINT32, ID2D1Bitmap, \* D2D1 \_ BITMAP \_ INTERPOLATION \_ MODE, D2D1 \_ SPRITE \_ OPTIONS)**](/windows/win32/api/d2d1_3/nf-d2d1_3-id2d1devicecontext3-drawspritebatch(id2d1spritebatch_uint32_uint32_id2d1bitmap_d2d1_bitmap_interpolation_mode_d2d1_sprite_options)) | Rendert einen Teil oder den ganzen angegebenen Spritebatch mithilfe der angegebenen Zeichnungsoptionen im Gerätekontext.<br/> |
 
 
 
@@ -40,11 +40,11 @@ Rendert einen Teil oder alle der angegebenen Sprite-Batches mithilfe der angegeb
 
 | Anforderung | Wert |
 |-------------------|--------------------------------------------------------------------------------------|
-| Header<br/> | <dl> <dt>D2d1 \_ 3. h</dt> </dl> |
+| Header<br/> | <dl> <dt>D2d1 \_ 3.h</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 

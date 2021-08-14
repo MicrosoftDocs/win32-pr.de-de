@@ -1,11 +1,11 @@
 ---
-title: Ipropertyfiltercollection AddItem-Eigenschaft (wdssharedidl. h)
+title: IPropertyFilterCollection-AddItem-Eigenschaft (WdsSharedIDL.h)
 description: Fügt der Auflistung einen neuen Filter hinzu.
 ms.assetid: 01078e7a-811a-4dfb-b122-4801f39413d8
 keywords:
-- AddItem Property Legacy Windows-Umgebungs Features
-- AddItem Property Legacy Windows-Umgebungs Funktionen, ipropertyfiltercollection-Schnittstelle
-- Ipropertyfiltercollection-Schnittstelle Legacy Windows-Umgebungs Features, AddItem-Eigenschaft
+- AddItem-Eigenschaft Legacy Windows-Umgebungsfeatures
+- AddItem-Eigenschaft Legacy Windows Umgebungsfeatures , IPropertyFilterCollection-Schnittstelle
+- IPropertyFilterCollection-Schnittstelle Legacy Windows Umgebungsfeatures, AddItem-Eigenschaft
 topic_type:
 - apiref
 api_name:
@@ -17,17 +17,17 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: b199f0e696f75fb5549b274ac888989f7a723b48
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: aeafec95549fefa244dff6ff44ad9110150ae1b410e38b423a0a31f09cf54194
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104040464"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118755447"
 ---
-# <a name="ipropertyfiltercollectionadditem-property"></a>Ipropertyfiltercollection:: AddItem-Eigenschaft
+# <a name="ipropertyfiltercollectionadditem-property"></a>IPropertyFilterCollection::AddItem-Eigenschaft
 
 > [!NOTE]
-> Windows-Desktop Suche 2. x ist eine veraltete Technologie, die ursprünglich als Add-in für Windows XP und Windows Server 2003 verfügbar war. Verwenden Sie in späteren Versionen stattdessen die [Windows Search-API](../search/-search-reference-entry-page.md) . 
+> Windows Desktop Search 2.x ist eine veraltete Technologie, die ursprünglich als Add-In für Windows XP und Windows Server 2003 verfügbar war. Verwenden Sie in späteren Versionen stattdessen die [Windows Search-API.](../search/-search-reference-entry-page.md) 
 
 Fügt der Auflistung einen neuen Filter hinzu.
 
@@ -46,7 +46,7 @@ HRESULT get_AddItem(
 
 ## <a name="property-value"></a>Eigenschaftswert
 
-Gibt einen Zeiger auf die Adresse für den neuen Filter zurück.
+gibt einen Zeiger auf die Adresse für den neuen Filter zurück.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -54,10 +54,10 @@ Gibt einen Zeiger auf die Adresse für den neuen Filter zurück.
 
 | Anforderung | Wert |
 |-------------------------------------|-------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows XP mit SP2 \[ Desktop-Apps\]<br/>                                      |
-| Unterstützte Mindestversion (Server)<br/> | Windows Server 2003 mit SP1 \[ Desktop-Apps\]<br/>                             |
-| Verteilbare Komponente<br/>          | Windows-Desktop Suche (WDS) 2.6.5<br/>                                             |
-| Header<br/>                   | <dl> <dt>Wdssharedidl. h</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur XP mit \[ SP2-Desktop-Apps\]<br/>                                      |
+| Unterstützte Mindestversion (Server)<br/> | Windows Server 2003 nur mit \[ SP1-Desktop-Apps\]<br/>                             |
+| Verteilbare Komponente<br/>          | Windows Desktopsuche (WDS) 2.6.5<br/>                                             |
+| Header<br/>                   | <dl> <dt>WdsSharedIDL.h</dt> </dl> |
 
 
 

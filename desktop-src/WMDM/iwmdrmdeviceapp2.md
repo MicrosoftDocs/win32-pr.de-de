@@ -1,10 +1,10 @@
 ---
 title: IWMDRMDeviceApp2-Schnittstelle
-description: Die IWMDRMDeviceApp2-Schnittstelle erweitert iwmdrmdeviceapp durch Bereitstellen einer neuen Version der querydevicestatus-Methode.
+description: Die IWMDRMDeviceApp2-Schnittstelle erweitert IWMDRMDeviceApp um eine neue Version der QueryDeviceStatus-Methode.
 ms.assetid: a7e28d5a-041f-4102-97db-0c77ca146e26
 keywords:
-- IWMDRMDeviceApp2 Interface Windows Media Device Manager
-- IWMDRMDeviceApp2 Interface Windows Media Device Manager, beschrieben
+- IWMDRMDeviceApp2-Schnittstelle windows Media Geräte-Manager
+- IWMDRMDeviceApp2-Schnittstelle Windows Media Geräte-Manager , beschrieben
 topic_type:
 - apiref
 api_name:
@@ -14,33 +14,33 @@ api_type:
 ms.topic: reference
 ms.date: 05/31/2018
 api_location: ''
-ms.openlocfilehash: df4bfdb023198631b16ffa0e511488fa52423c5e
-ms.sourcegitcommit: 57758ecb246c84d65e6e0e4bd5570d9176fa39cd
+ms.openlocfilehash: 17bd0d7aa729103a81fca6732ed178ac5ced583566dd353a28716d4933e602ae
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "104313134"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118584494"
 ---
 # <a name="iwmdrmdeviceapp2-interface"></a>IWMDRMDeviceApp2-Schnittstelle
 
-Die **IWMDRMDeviceApp2** -Schnittstelle erweitert [**iwmdrmdeviceapp**](iwmdrmdeviceapp.md) durch Bereitstellen einer neuen Version der [**querydevicestatus**](iwmdrmdeviceapp-querydevicestatus.md) -Methode. **QueryDeviceStatus2** ermöglicht dem Aufrufer, eine bestimmte DRM-Anforderung abzufragen.
+Die **IWMDRMDeviceApp2-Schnittstelle** erweitert [**IWMDRMDeviceApp**](iwmdrmdeviceapp.md) um eine neue Version der [**QueryDeviceStatus-Methode.**](iwmdrmdeviceapp-querydevicestatus.md) **Mit QueryDeviceStatus2** kann der Aufrufer eine bestimmte DRM-Anforderung abfragen.
 
-Um diese Schnittstelle zu erhalten, müssen Sie **cokreateinstance** aufrufen und CLSID \_ wmdrmdeviceapp übergeben.
+Um diese Schnittstelle zu erhalten, rufen **Sie CoCreateInstance** auf, und übergeben Sie CLSID \_ WMDRMDeviceApp.
 
 > [!Note]  
-> Diese Schnittstelle ist in der Header Datei definiert, die aus wmdrmdeviceapp. idl erstellt wurde. Dieser Header **\# enthält** "WMDM. h". Möglicherweise müssen Sie diesen Dateinamen ändern, damit er mit dem aus WMDM. idl erstellten Header identisch ist.
+> Diese Schnittstelle wird in der Headerdatei definiert, die aus WMDRMDeviceApp.idl erstellt wurde. Dieser Header **\# enthält** "wmdm.h". Möglicherweise müssen Sie diesen Dateinamen ändern, damit er mit dem Header aus WMDM.idl übereinstimmen kann.
 
  
 
 ## <a name="members"></a>Member
 
-Die **IWMDRMDeviceApp2** -Schnittstelle erbt von [**iwmdrmdeviceapp**](iwmdrmdeviceapp.md). **IWMDRMDeviceApp2** verfügt auch über die folgenden Typen von Membern:
+Die **IWMDRMDeviceApp2-Schnittstelle** erbt von [**IWMDRMDeviceApp**](iwmdrmdeviceapp.md). **IWMDRMDeviceApp2** verfügt auch über diese Membertypen:
 
 -   [Methoden](#methods)
 
 ### <a name="methods"></a>Methoden
 
-Die **IWMDRMDeviceApp2** -Schnittstelle verfügt über diese Methoden.
+Die **IWMDRMDeviceApp2-Schnittstelle** verfügt über diese Methoden.
 
 
 
@@ -56,7 +56,7 @@ Die **IWMDRMDeviceApp2** -Schnittstelle verfügt über diese Methoden.
 
 <dl> <dt>
 
-[**Iwmdrmdeviceapp**](iwmdrmdeviceapp.md)
+[**IWMDRMDeviceApp**](iwmdrmdeviceapp.md)
 </dt> <dt>
 
 [**Behandeln geschützter Inhalte in der Anwendung**](handling-protected-content-in-the-application.md)
@@ -65,7 +65,7 @@ Die **IWMDRMDeviceApp2** -Schnittstelle verfügt über diese Methoden.
 [**Schnittstellen für Anwendungen**](interfaces-for-applications.md)
 </dt> <dt>
 
-[**Verwendung von Messungs Inhalten**](metering-content-usage.md)
+[**Nutzung von Messungsinhalten**](metering-content-usage.md)
 </dt> </dl>
 
  

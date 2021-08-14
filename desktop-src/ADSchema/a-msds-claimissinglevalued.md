@@ -1,11 +1,11 @@
 ---
-title: ms-DS-Claim-is-Single-Wert-Attribut
-description: Bei einem Anspruchstyp Objekt identifiziert dieses Attribut, ob der Anspruchstyp oder die Ressourcen Eigenschaft nur einen einzelnen Wert enthalten darf.
+title: ms-DS-Claim-Is-Single-Valued-Attribut
+description: Bei einem Anspruchstypobjekt identifiziert dieses Attribut, ob der Anspruchstyp oder die Ressourceneigenschaft nur einen einzelnen Wert enthalten kann.
 ms.assetid: e4b42a41-6275-4575-88a4-77c3bbcfc161
 ms.tgt_platform: multiple
 keywords:
-- das AD-Schema "ms-DS-Claim-is-Single-Wert-Attribut"
-- AD-Schema für das msDS-claimissinglewert-Attribut
+- AD-Schema des ms-DS-Claim-Is-Single-Valued-Attributs
+- AD-Schema des msDS-ClaimIsSingleValued-Attributs
 topic_type:
 - apiref
 api_name:
@@ -14,29 +14,29 @@ api_type:
 - Schema
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 0739c8e1984ab6740bbc332e204762ed32674bc4
-ms.sourcegitcommit: b77ace27b0432e7cd3863191b11926be032fbe2f
+ms.openlocfilehash: 8f4e954af1b1800270a35b26c434fb7bced23de9f45ad2f81d97ee032e2d101b
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "103957642"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118685137"
 ---
-# <a name="ms-ds-claim-is-single-valued-attribute"></a>ms-DS-Claim-is-Single-Wert-Attribut
+# <a name="ms-ds-claim-is-single-valued-attribute"></a>ms-DS-Claim-Is-Single-Valued-Attribut
 
-Bei einem Anspruchstyp Objekt identifiziert dieses Attribut, ob der Anspruchstyp oder die Ressourcen Eigenschaft nur einen einzelnen Wert enthalten darf.
+Bei einem Anspruchstypobjekt identifiziert dieses Attribut, ob der Anspruchstyp oder die Ressourceneigenschaft nur einen einzelnen Wert enthalten kann.
 
 
 
 | Eingabe | Wert |
 |-------------------|--------------------------------------|
-| CN                | ms-DS-Claim-ist-einwertig         |
-| LDAP-Display-Name | MSDS-claimissinglewerttyp             |
+| CN                | ms-DS-Claim-Is-Single-Valued         |
+| Ldap-Anzeigename | msDS-ClaimIsSingleValued             |
 | Size              | \-                                   |
-| Berechtigung aktualisieren  | \-                                   |
-| Aktualisierungshäufigkeit  | \-                                   |
+| Aktualisieren von Berechtigungen  | \-                                   |
+| Updatehäufigkeit  | \-                                   |
 | Attribute-Id      | 1.2.840.113556.1.4.2160              |
-| System-ID-GUID    | cd789fb9-96b4-4648-8219-ca378161af38 |
-| Syntax            | [**Booleschen**](s-boolean.md)         |
+| System-Id-Guid    | cd789fb9-96b4-4648-8219-ca378161af38 |
+| Syntax            | [**Boolean**](s-boolean.md)         |
 
 
 
@@ -53,15 +53,15 @@ Bei einem Anspruchstyp Objekt identifiziert dieses Attribut, ob der Anspruchstyp
 | Link-ID                | \-                                                                                                              |
 | MAPI-Id                | \-                                                                                                              |
 | System-Only            | Richtig                                                                                                            |
-| Ist-einwertig       | Richtig                                                                                                            |
-| Ist indiziert             | False                                                                                                           |
-| Im globalen Katalog      | False                                                                                                           |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                                                                                    |
+| Is-Single-Valued       | Richtig                                                                                                            |
+| Ist indiziert             | Falsch                                                                                                           |
+| Im globalen Katalog      | Falsch                                                                                                           |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                                                                                    |
 | Range-Lower            | \-                                                                                                              |
 | Range-Upper            | \-                                                                                                              |
 | Search-Flags           | 0x00000000                                                                                                      |
 | System-Flags           | 0x00000010                                                                                                      |
-| In verwendete Klassen        | [**ms-DS-Anspruchstyp**](c-msds-claimtype.md)<br/> [**ms-DS-Werttyp**](c-msds-valuetype.md)<br/> |
+| In verwendete Klassen        | [**ms-DS-Claim-Type**](c-msds-claimtype.md)<br/> [**ms-DS-Value-Type**](c-msds-valuetype.md)<br/> |
 
 
 

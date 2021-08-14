@@ -1,11 +1,11 @@
 ---
-title: Inapsystemhealthagentbinding getsystemsolationinfo-Methode (napsystemhealthagent. h)
-description: Wird von SHAs aufgerufen, um den systemisolations Status zu bestimmen.
+title: INapSystemHealthAgentBinding GetSystemIsolationInfo-Methode (NapSystemHealthAgent.h)
+description: Wird von SHAs aufgerufen, um den Systemisolationsstatus zu bestimmen.
 ms.assetid: 0401a846-0da2-4975-87bc-3e9fe8b5b67d
 keywords:
-- Getsystemisolationinfo-Methode NAP
-- Getsystemsolationinfo-Methode NAP, inapsystemhealthagentbinding-Schnittstelle
-- Inapsystemhealthagentbinding-Schnittstelle NAP, getsystemsolationinfo-Methode
+- Nap-Methode "GetSystemIsolationInfo"
+- GetSystemIsolationInfo-Methode NAP, INapSystemHealthAgentBinding-Schnittstelle
+- INapSystemHealthAgentBinding-Schnittstelle NAP , GetSystemIsolationInfo-Methode
 topic_type:
 - apiref
 api_name:
@@ -16,24 +16,24 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: d0323149be50cd8896a191ca57584cea0c015487
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 9058b78bcff60b27bb27f25f11b785a8cd341f9addafe1829c1e8a7f3fb02a15
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104479047"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118939557"
 ---
-# <a name="inapsystemhealthagentbindinggetsystemisolationinfo-method"></a>Inapsystemhealthagentbinding:: getsystemsolationinfo-Methode
+# <a name="inapsystemhealthagentbindinggetsystemisolationinfo-method"></a>INapSystemHealthAgentBinding::GetSystemIsolationInfo-Methode
 
 > [!Note]  
-> Die Netzwerk Zugriffsschutz-Plattform ist ab Windows 10 nicht verfügbar.
+> Die Netzwerkzugriffsschutz-Plattform ist ab Windows 10 nicht verfügbar.
 
  
 
-Die **inapsystemhealthagentbinding:: getsystemsolationinfo** -Methode wird von SHAs aufgerufen, um den systemisolations Status zu bestimmen.
+Die **INapSystemHealthAgentBinding::GetSystemIsolationInfo-Methode** wird von SHAs aufgerufen, um den Systemisolationsstatus zu bestimmen.
 
 > [!Note]  
-> Verwenden Sie [**INapSystemHealthAgentBinding2:: getsystemsolationinfoex**](inapsystemhealthagentbinding2-getsystemisolationinfoex.md) , um den erweiterten Isolations Status des Systems zu ermitteln.
+> Verwenden Sie [**INapSystemHealthAgentBinding2::GetSystemIsolationInfoEx,**](inapsystemhealthagentbinding2-getsystemisolationinfoex.md) um den erweiterten Isolationsstatus des Systems zu bestimmen.
 
  
 
@@ -53,41 +53,41 @@ HRESULT GetSystemIsolationInfo(
 
 <dl> <dt>
 
-*IsolationInfo* \[ vorgenommen\]
+*isolationInfo* \[ out\]
 </dt> <dd>
 
-Ein Zeiger auf einen Zeiger auf eine [**IsolationInfo**](/windows/win32/api/naptypes/ns-naptypes-isolationinfo) -Struktur, die den Isolations Zustand des Systems für bekannte Verbindungen enthält. *isolationinfoweist darauf hin* , dass sich das System im Zustand eingeschränkten Zugriffs, Bewährung oder uneingeschränkten Zugriffs befindet.
+Ein Zeiger auf einen Zeiger auf eine [**IsolationInfo-Struktur,**](/windows/win32/api/naptypes/ns-naptypes-isolationinfo) die den Isolationsstatus des Systems für bekannte Verbindungen enthält. *isolationInfoindicates,* wenn sich das System im Zustand "Eingeschränkter Zugriff", "Test" oder "Uneingeschränkter Zugriff" befindet.
 
 </dd> <dt>
 
-*unknownconnections* \[ vorgenommen\]
+*unknownConnections* \[ out\]
 </dt> <dd>
 
-Ein Zeiger auf einen **booleschen** Wert, der **true** ist, wenn sich Verbindungen in einem unbekannten Zustand befinden, andernfalls **false** .
+Ein Zeiger auf eine **BOOL,** die **TRUE** ist, wenn sich Verbindungen in einem unbekannten Zustand befinden, andernfalls **FALSE.**
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Es können auch andere com-spezifische Fehlercodes zurückgegeben werden.
+Andere COM-spezifische Fehlercodes können ebenfalls zurückgegeben werden.
 
 
 
 | Rückgabecode                                                                                             | Beschreibung                                                                                                                    |
 |---------------------------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------|
 | <dl> <dt>**S \_ OK**</dt> </dl>                   | Vorgang erfolgreich.<br/>                                                                                                |
-| <dl> <dt>**E \_ Access verweigert**</dt> </dl>         | Berechtigungs Fehler, Zugriff verweigert.<br/>                                                                                   |
-| <dl> <dt>**E \_ Outo-Memory**</dt> </dl>          | System Ressourcen Limit, der Vorgang konnte nicht durchgeführt werden.<br/>                                                             |
-| <dl> <dt>**NAP \_ E \_ nicht \_ Initialisiert**</dt> </dl> | Das SHA wurde nicht bereits initialisiert.<br/>                                                                        |
-| <dl> <dt>**RPC- \_ E \_ getrennt**</dt> </dl>     | Der NAPAgent wurde beendet. Dieses Objekt wird nach dem Neustart automatisch wieder hergestellt und an den NAPAgent gebunden.<br/> |
+| <dl> <dt>**E \_ ACCESSDENIED**</dt> </dl>         | Berechtigungsfehler, Zugriff verweigert.<br/>                                                                                   |
+| <dl> <dt>**E \_ OUTOFMEMORY**</dt> </dl>          | Systemressourcenlimit, konnte den Vorgang nicht ausführen.<br/>                                                             |
+| <dl> <dt>**NAP \_ E \_ NICHT \_ INITIALISIERT**</dt> </dl> | Der SHA wurde zuvor nicht initialisiert.<br/>                                                                        |
+| <dl> <dt>**RPC \_ E \_ DISCONNECTED**</dt> </dl>     | Der NapAgent wurde beendet. Dieses Objekt wird nach dem Neustart automatisch wiederhergestellt und wieder an den NapAgent-Agent bindungiert.<br/> |
 
 
 
  
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Das SHA muss [**Initialize**](inapsystemhealthagentbinding-initialize-method.md) aufrufen, bevor diese Methode oder eine andere Methode der [**INapSystemHealthAgentBinding2**](inapsystemhealthagentbinding2.md) -Schnittstelle aufgerufen wird.
+Der SHA muss [**Initialize aufrufen,**](inapsystemhealthagentbinding-initialize-method.md) bevor diese Methode oder eine andere Methode der [**INapSystemHealthAgentBinding2-Schnittstelle**](inapsystemhealthagentbinding2.md) aufgerufen wird.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -95,19 +95,19 @@ Das SHA muss [**Initialize**](inapsystemhealthagentbinding-initialize-method.md)
 
 | Anforderung | Wert |
 |-------------------------------------|-----------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>                                                      |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2008 \[ -Desktop-Apps\]<br/>                                                |
-| Header<br/>                   | <dl> <dt>Napsystemhealthagent. h</dt> </dl>   |
-| IDL<br/>                      | <dl> <dt>Napsystemhealthagent. idl</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows \[Nur Vista-Desktop-Apps\]<br/>                                                      |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2008-Desktop-Apps\]<br/>                                                |
+| Header<br/>                   | <dl> <dt>NapSystemHealthAgent.h</dt> </dl>   |
+| Idl<br/>                      | <dl> <dt>NapSystemHealthAgent.idl</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>Qagent.dll</dt> </dl>               |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Inapsystemhealthagentbinding**](inapsystemhealthagentbinding.md)
+[**INapSystemHealthAgentBinding**](inapsystemhealthagentbinding.md)
 </dt> </dl>
 
  

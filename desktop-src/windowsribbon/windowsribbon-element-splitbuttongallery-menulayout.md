@@ -1,9 +1,9 @@
 ---
-title: Splitbuttongallery. menulayout (Eigenschaft)
-description: Stellt einen Container für Dropdown-Menü Layouts für unterteilte Schaltflächen Katalog dar.
+title: SplitButtonGallery.MenuLayout-Eigenschaft
+description: Stellt einen Container für Dropdownmenülayouts für den Katalog mit geteilten Schaltflächen dar.
 ms.assetid: 4bebdff6-16ea-4cf3-adc7-9b86ea200e81
 keywords:
-- Splitbuttongallery. menulayout-Eigenschaften Fenster (Menüband)
+- SplitButtonGallery.MenuLayout-Eigenschaft Windows Menüband
 topic_type:
 - apiref
 api_name:
@@ -12,16 +12,16 @@ api_type:
 - NA
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 04428c14b5e47795da47e5c03970610cd08a6e8f
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: f40cf184d6122fc40041cfb77953bba2b7950d9d1a957d99aae659633ee5c194
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "106341998"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118706898"
 ---
-# <a name="splitbuttongallerymenulayout-property"></a>Splitbuttongallery. menulayout (Eigenschaft)
+# <a name="splitbuttongallerymenulayout-property"></a>SplitButtonGallery.MenuLayout-Eigenschaft
 
-Stellt einen Container für Dropdown-Menü Layouts für unter [teilte Schalt](windowsribbon-controls-splitbuttongallery.md) Flächen Katalog dar.
+Stellt einen Container für Dropdownmenülayouts für den Katalog mit [geteilten Schaltflächen](windowsribbon-controls-splitbuttongallery.md) dar.
 
 ## <a name="usage"></a>Verbrauch
 
@@ -39,10 +39,10 @@ Es gibt keine Attribute.
 
 
 
-| Element                                                                           | BESCHREIBUNG                                    |
+| Element                                                                           | Beschreibung                                    |
 |-----------------------------------------------------------------------------------|------------------------------------------------|
-| [**Flowmenulayout**](windowsribbon-element-flowmenulayout.md)<br/>         | Muss genau einmal auftreten<br/> <br/> |
-| [**Verticalmenulayout**](windowsribbon-element-verticalmenulayout.md)<br/> | Muss genau einmal auftreten<br/> <br/> |
+| [**FlowMenuLayout**](windowsribbon-element-flowmenulayout.md)<br/>         | Muss genau einmal auftreten<br/> <br/> |
+| [**VerticalMenuLayout**](windowsribbon-element-verticalmenulayout.md)<br/> | Muss genau einmal auftreten<br/> <br/> |
 
 
 
@@ -52,26 +52,26 @@ Es gibt keine Attribute.
 
 | Element                                                                           |
 |-----------------------------------------------------------------------------------|
-| [**Splitbuttongallery**](windowsribbon-element-splitbuttongallery.md)<br/> |
+| [**SplitButtonGallery**](windowsribbon-element-splitbuttongallery.md)<br/> |
 
 
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Dies ist optional.
+Optional.
 
-Kann höchstens einmal für jedes [**splitbuttongallery**](windowsribbon-element-splitbuttongallery.md) -Element auftreten.
+Kann höchstens einmal für jedes [**SplitButtonGallery-Element**](windowsribbon-element-splitbuttongallery.md) auftreten.
 
 > [!Note]  
-> Maximal ein untergeordnetes Element ([**verticalmenulayout**](windowsribbon-element-verticalmenulayout.md) oder [**flowmenulayout**](windowsribbon-element-flowmenulayout.md)) ist zulässig.
+> Maximal ein untergeordnetes Element ([**VerticalMenuLayout**](windowsribbon-element-verticalmenulayout.md) oder [**FlowMenuLayout**](windowsribbon-element-flowmenulayout.md)) ist zulässig.
 
  
 
 ## <a name="examples"></a>Beispiele
 
-Im folgenden Beispiel wird das grundlegende Markup für den Katalog mit unter [teilten Schalt](windowsribbon-controls-splitbuttongallery.md)Flächen veranschaulicht.
+Im folgenden Beispiel wird das grundlegende Markup für den Katalog mit geteilten [Schaltflächen](windowsribbon-controls-splitbuttongallery.md)veranschaulicht.
 
-In diesem Code Abschnitt wird die Deklaration **splitbuttongallery. menulayout** -Steuerelement gezeigt.
+Dieser Codeabschnitt zeigt die **SplitButtonGallery.MenuLayout-Steuerelementdeklaration.**
 
 
 ```XML
@@ -104,19 +104,19 @@ In diesem Code Abschnitt wird die Deklaration **splitbuttongallery. menulayout**
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows 7 \[ -Desktop-Apps\]<br/>              |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2008 R2 \[ -Desktop-Apps\]<br/> |
+| Unterstützte Mindestversion (Client)<br/> | nur Windows 7 \[ Desktop-Apps\]<br/>              |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server 2008 \[ R2-Desktop-Apps\]<br/> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[Steuerelement "Split Button Gallery"](windowsribbon-controls-splitbuttongallery.md)
+[Steuerelement "Katalog mit geteilten Schaltflächen"](windowsribbon-controls-splitbuttongallery.md)
 </dt> <dt>
 
-[Arbeiten mit Galerien](ribbon-controls-galleries.md)
+[Arbeiten mit Katalogen](ribbon-controls-galleries.md)
 </dt> </dl>
 
  

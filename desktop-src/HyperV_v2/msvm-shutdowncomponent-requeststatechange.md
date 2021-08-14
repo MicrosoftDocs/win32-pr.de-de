@@ -1,5 +1,5 @@
 ---
-description: RequestStateChange-Methode der Msvm_ShutdownComponent - Fordert eine Zustandsänderung an.
+description: 'RequestStateChange-Methode der Msvm_ShutdownComponent-Klasse: Fordert eine Zustandsänderung an.'
 ms.assetid: bb1dea51-f9d6-4edc-8044-53380cc4d32e
 title: RequestStateChange-Methode der Msvm_ShutdownComponent-Klasse
 ms.topic: reference
@@ -13,12 +13,12 @@ api_type:
 - COM
 api_location:
 - vmms.exe
-ms.openlocfilehash: 71237715f08e3775ff4c61660a789e000e4f5a5d
-ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
+ms.openlocfilehash: 88c567a0035db7bcf4788d013c7e123e4e58cb05eefb231c96c425e92e4701a2
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2021
-ms.locfileid: "108109608"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118950409"
 ---
 # <a name="requeststatechange-method-of-the-msvm_shutdowncomponent-class"></a>RequestStateChange-Methode der Msvm \_ ShutdownComponent-Klasse
 
@@ -44,7 +44,7 @@ uint32 RequestStateChange(
 *RequestedState* \[ In\]
 </dt> <dd>
 
-Der neue Zustand. Die Informationen werden in der **RequestedState-Eigenschaft** der -Instanz platziert, wenn der Rückgabecode der **RequestStateChange-Methode** 0 oder 4096 ist. Weitere Informationen finden Sie in der Beschreibung der **Eigenschaften EnabledState** und **RequestedState** für das Element. Dies muss einer der folgenden Werte sein.
+Der neue Zustand. Die Informationen werden in die **RequestedState-Eigenschaft** der -Instanz platziert, wenn der Rückgabecode der **RequestStateChange-Methode** 0 oder 4096 ist. Weitere Informationen finden Sie in der Beschreibung der **Eigenschaften EnabledState** und **RequestedState** für das -Element. Dies muss einer der folgenden Werte sein.
 
 <dt>
 
@@ -85,14 +85,14 @@ Der neue Zustand. Die Informationen werden in der **RequestedState-Eigenschaft**
 
 <span id="Defer"></span><span id="defer"></span><span id="DEFER"></span>
 
-**Zurückern** (8)
+**Zurückstellen** (8)
 
 
 </dt> <dd></dd> <dt>
 
 <span id="Quiesce"></span><span id="quiesce"></span><span id="QUIESCE"></span>
 
-**Ruhe** (9)
+**Stille** (9)
 
 
 </dt> <dd></dd> <dt>
@@ -157,7 +157,7 @@ Diese Methode gibt einen der folgenden Werte zurück:
 
 
 
-| Anforderungen | Wert |
+| Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows 8.1<br/>                                                                                  |
 | Unterstützte Mindestversion (Server)<br/> | Windows Server 2012 R2<br/>                                                                       |

@@ -1,23 +1,23 @@
 ---
-description: Gibt an, ob der Kern Encoder den &\# 0034; Plus&\# 0034; Feature.
+description: Gibt an, ob der Kernencoder die &\# 0034; verwendet. Plus&\# 0034;-Feature.
 ms.assetid: 1ace09da-7dee-469e-a533-63b40ac747ab
-title: MFPKEY_ENHANCED_WMA-Eigenschaft (wmcodecdsp. h)
+title: MFPKEY_ENHANCED_WMA-Eigenschaft (Wmcodecdsp.h)
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: df1c7ddc0e7bfb6d62d51e535f10b257eac6f2ef
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 1ab3fdcd3087773ea760615224b148bd497c1f89114c0f761a7d2f90fb0b5a8c
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106369290"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118738017"
 ---
-# <a name="mfpkey_enhanced_wma-property"></a>Mfpkey \_ Enhanced \_ WMA-Eigenschaft
+# <a name="mfpkey_enhanced_wma-property"></a>MFPKEY \_ ENHANCED \_ WMA-Eigenschaft
 
-Gibt an, ob der Kern Encoder die Funktion "Plus" verwendet.
+Gibt an, ob der Kernencoder das Plusfeature verwendet.
 
 ## <a name="constant-for-ipropertybag"></a>Konstante für IPropertyBag
 
-Nur mit [**IPropertyStore**](/windows/win32/api/propsys/nn-propsys-ipropertystore)verfügbar.
+Nur mithilfe von [**IPropertyStore verfügbar.**](/windows/win32/api/propsys/nn-propsys-ipropertystore)
 
 ## <a name="data-type"></a>Datentyp
 
@@ -27,13 +27,13 @@ Nur mit [**IPropertyStore**](/windows/win32/api/propsys/nn-propsys-ipropertystor
 
 0
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Diese Eigenschaft ist nur für Windows Media Audio Verlust lose verfügbar.
+Diese Eigenschaft ist nur für Medienmedien Windows Verlustlos verfügbar.
 
-Wenn Sie für diese Eigenschaft den Standardwert 0 (null) belassen, oder wenn Sie den Wert auf 1 festlegen, entscheidet der Kern Encoder, ob der "Plus"-Teil verwendet werden soll. Wenn Sie diese Eigenschaft auf 2 festlegen, wird das Feature "Plus" vom Kern Encoder nicht verwendet.
+Wenn Sie diese Eigenschaft beim Standardwert 0 be lassen oder auf 1 festlegen, entscheidet der Kernencoder, ob der "Plus"-Teil verwendet werden soll. Wenn Sie diese Eigenschaft auf 2 festlegen, verwendet der Kernencoder nicht das Feature "Plus".
 
-Diese Eigenschaft ändert die aufgelisteten Medientypen. Wenn Sie Sie also festlegen, müssen Sie dies tun, bevor Sie den Ausgabetyp festlegen.
+Diese Eigenschaft ändert die aufzählten Medientypen. Wenn Sie sie also festlegen, müssen Sie dies tun, bevor Sie den Ausgabetyp festlegen.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -42,15 +42,15 @@ Diese Eigenschaft ändert die aufgelisteten Medientypen. Wenn Sie Sie also festl
 | Anforderung | Wert |
 |-------------------|-----------------------------------------------------------------------------------------|
 | Client<br/> | Windows Vista oder Windows 7<br/>                                                   |
-| Header<br/> | <dl> <dt>Wmcodecdsp. h</dt> </dl> |
+| Header<br/> | <dl> <dt>Wmcodecdsp.h</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[Eigenschaften von Media Foundation](media-foundation-properties.md)
+[Media Foundation Eigenschaften](media-foundation-properties.md)
 </dt> </dl>
 
  

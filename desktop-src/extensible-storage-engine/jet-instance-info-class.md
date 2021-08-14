@@ -1,5 +1,5 @@
 ---
-description: 'Weitere Informationen finden Sie unter: JET_INSTANCE_INFO-Klasse'
+description: 'Weitere Informationen zu: JET_INSTANCE_INFO-Klasse'
 title: JET_INSTANCE_INFO-Klasse
 TOCTitle: JET_INSTANCE_INFO class
 ms:assetid: T:Microsoft.Isam.Esent.Interop.JET_INSTANCE_INFO
@@ -24,24 +24,24 @@ api_type:
 api_location:
 - Microsoft.Isam.Esent.Interop.dll
 ROBOTS: INDEX,FOLLOW
-ms.openlocfilehash: b06758bef18ed80b26e245afc5cfeb4dfda637a3
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 1c88252b824c1cba0e432ebae356619a9c6f79bf10d2b4b3989b096fe2daeb3c
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "104042669"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118980030"
 ---
 # <a name="jet_instance_info-class"></a>JET_INSTANCE_INFO-Klasse
 
-Empfängt Informationen über die Ausführung von Datenbankinstanzen, wenn Sie mit den Funktionen jetgetinstanceinfo und jedessnapshotfreeze verwendet werden.
+Empfängt Informationen zum Ausführen von Datenbankinstanzen, wenn sie mit den Funktionen JetGetInstanceInfo und JetOSSnapshotFreeze verwendet werden.
 
 ## <a name="inheritance-hierarchy"></a>Vererbungshierarchie
 
 [System.Object](/dotnet/api/system.object)  
   Microsoft.Isam.Esent.Interop.JET_INSTANCE_INFO  
 
-**Namespace:**  [Microsoft. ISAM. ESENT. Interop](./microsoft.isam.esent.interop-namespace.md)  
-**Assembly:**  Microsoft. ISAM. ESENT. Interop (in Microsoft.Isam.Esent.Interop.dll)
+**Namespace:**  [Microsoft.Isam.Esent.Interop](./microsoft.isam.esent.interop-namespace.md)  
+**Assembly:**  Microsoft.Isam.Esent.Interop (in Microsoft.Isam.Esent.Interop.dll)
 
 ## <a name="syntax"></a>Syntax
 
@@ -61,10 +61,10 @@ public class JET_INSTANCE_INFO : IEquatable<JET_INSTANCE_INFO>
 
 Alle öffentlichen statischen Elemente dieses Typs (Shared in Microsoft Visual Basic) sind threadsicher. Bei Instanzmembern ist die Threadsicherheit nicht gewährleistet.
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
-#### <a name="reference"></a>Referenz
+#### <a name="reference"></a>Verweis
 
-[Mitglieder JET_INSTANCE_INFO](./jet-instance-info-members.md)
+[JET_INSTANCE_INFO-Member](./jet-instance-info-members.md)
 
-[Microsoft. ISAM. ESENT. Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)
+[Microsoft.Isam.Esent.Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)

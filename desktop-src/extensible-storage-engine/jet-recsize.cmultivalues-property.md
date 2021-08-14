@@ -1,6 +1,6 @@
 ---
-description: 'Weitere Informationen finden Sie unter: JET_RECSIZE. cmultivalues-Eigenschaft'
-title: JET_RECSIZE. cmultivalues-Eigenschaft (Microsoft. ISAM. ESENT. Interop. Vista)
+description: 'Weitere Informationen zu: JET_RECSIZE.cMultiValues-Eigenschaft'
+title: JET_RECSIZE.cMultiValues-Eigenschaft (Microsoft.Isam.Esent.Interop.Vista)
 TOCTitle: 'cMultiValues property '
 ms:assetid: P:Microsoft.Isam.Esent.Interop.Vista.JET_RECSIZE.cMultiValues
 ms:mtpsurl: https://msdn.microsoft.com/library/microsoft.isam.esent.interop.vista.jet_recsize.cmultivalues(v=EXCHG.10)
@@ -26,19 +26,19 @@ api_type:
 api_location:
 - Microsoft.Isam.Esent.Interop.dll
 ROBOTS: INDEX,FOLLOW
-ms.openlocfilehash: 761da642bc627ff940707b47793617074d0cad58
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 55b309a3a9c0308dd9622271ffd515d698f2f070b4ef72103596e9b284623215
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104128201"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118763683"
 ---
-# <a name="jet_recsizecmultivalues-property"></a>JET_RECSIZE. cmultivalues-Eigenschaft
+# <a name="jet_recsizecmultivalues-property"></a>JET_RECSIZE.cMultiValues-Eigenschaft
 
-Ruft die Ansammlung der Gesamtzahl der Werte über den ersten für alle Spalten im Datensatz ab.
+Ruft die Akkumulation der Gesamtzahl der Werte nach der ersten für alle Spalten im Datensatz ab.
 
-**Namespace:**  [Microsoft. ISAM. ESENT. Interop. Vista](./microsoft.isam.esent.interop.vista-namespace.md)  
-**Assembly:**  Microsoft. ISAM. ESENT. Interop (in Microsoft.Isam.Esent.Interop.dll)
+**Namespace:**  [Microsoft.Isam.Esent.Interop.Vista](./microsoft.isam.esent.interop.vista-namespace.md)  
+**Assembly:**  Microsoft.Isam.Esent.Interop (in Microsoft.Isam.Esent.Interop.dll)
 
 ## <a name="syntax"></a>Syntax
 
@@ -60,14 +60,14 @@ public long cMultiValues { get; internal set; }
 
 #### <a name="property-value"></a>Eigenschaftswert
 
-Typ: [System. Int64](/dotnet/api/system.int64)  
+Typ: [System.Int64](/dotnet/api/system.int64)  
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
-#### <a name="reference"></a>Referenz
+#### <a name="reference"></a>Verweis
 
-[JET_RECSIZE Struktur](./jet-recsize-structure2.md)
+[JET_RECSIZE-Struktur](./jet-recsize-structure2.md)
 
-[Mitglieder JET_RECSIZE](./jet-recsize-members.md)
+[JET_RECSIZE-Member](./jet-recsize-members.md)
 
-[Microsoft. ISAM. ESENT. Interop. Vista-Namespace](./microsoft.isam.esent.interop.vista-namespace.md)
+[Microsoft.Isam.Esent.Interop.Vista-Namespace](./microsoft.isam.esent.interop.vista-namespace.md)

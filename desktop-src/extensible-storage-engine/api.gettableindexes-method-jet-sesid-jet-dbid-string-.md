@@ -1,6 +1,6 @@
 ---
-description: 'Weitere Informationen finden Sie unter: API. gettableindexes-Methode (JET_SESID, JET_DBID, Zeichenfolge)'
-title: API. gettableindexes-Methode (JET_SESID, JET_DBID, Zeichenfolge)
+description: Weitere Informationen finden Sie unter Api.GetTableIndexes-Methode (JET_SESID, JET_DBID, String).
+title: Api.GetTableIndexes-Methode (JET_SESID, JET_DBID, String)
 TOCTitle: GetTableIndexes method (JET_SESID, JET_DBID, String)
 ms:assetid: M:Microsoft.Isam.Esent.Interop.Api.GetTableIndexes(Microsoft.Isam.Esent.Interop.JET_SESID,Microsoft.Isam.Esent.Interop.JET_DBID,System.String)
 ms:mtpsurl: https://msdn.microsoft.com/library/microsoft.isam.esent.interop.api.gettableindexes(v=EXCHG.10)
@@ -20,19 +20,19 @@ api_type:
 api_location:
 - Microsoft.Isam.Esent.Interop.dll
 ROBOTS: INDEX,FOLLOW
-ms.openlocfilehash: 90ac8dd014e0594fbffbb12b3ea4f3698f850de6
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 22390c3c38638d62060671475b60dbaf48495803de21b941a17eb2a275ccda17
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "103861843"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118983830"
 ---
-# <a name="apigettableindexes-method-jet_sesid-jet_dbid-string"></a>API. gettableindexes-Methode (JET_SESID, JET_DBID, Zeichenfolge)
+# <a name="apigettableindexes-method-jet_sesid-jet_dbid-string"></a>Api.GetTableIndexes-Methode (JET_SESID, JET_DBID, String)
 
-Durchläuft alle Index in der Tabelle, wobei Informationen zu den einzelnen Indizes zurückgegeben werden.
+Durchläuft alle Indizes in der Tabelle und gibt Informationen zu jedem Index zurück.
 
-**Namespace:**  [Microsoft. ISAM. ESENT. Interop](./microsoft.isam.esent.interop-namespace.md)  
-**Assembly:**  Microsoft. ISAM. ESENT. Interop (in Microsoft.Isam.Esent.Interop.dll)
+**Namespace:**  [Microsoft.Isam.Esent.Interop](./microsoft.isam.esent.interop-namespace.md)  
+**Assembly:**  Microsoft.Isam.Esent.Interop (in Microsoft.Isam.Esent.Interop.dll)
 
 ## <a name="syntax"></a>Syntax
 
@@ -63,38 +63,38 @@ public static IEnumerable<IndexInfo> GetTableIndexes(
 
 #### <a name="parameters"></a>Parameter
 
-  - -sid  
-    Typ: [Microsoft.ISAM.ESENT.Interop.JET_SESID](./jet-sesid-structure.md)  
+  - sesid  
+    Typ: [Microsoft.Isam.Esent.Interop.JET_SESID](./jet-sesid-structure.md)  
     
     Die zu verwendende Sitzung.
 
 <!-- end list -->
 
   - dbid  
-    Typ: [Microsoft.ISAM.ESENT.Interop.JET_DBID](./jet-dbid-structure.md)  
+    Typ: [Microsoft.Isam.Esent.Interop.JET_DBID](./jet-dbid-structure.md)  
     
     Die Datenbank, die die Tabelle enthält.
 
 <!-- end list -->
 
   - Tabellenname  
-    Typ: [System. String](/dotnet/api/system.string)  
+    Typ: [System.String](/dotnet/api/system.string)  
     
     Der Name der Tabelle.
 
 #### <a name="return-value"></a>Rückgabewert
 
-Typ: [System. Collections. Generic. IEnumerable](/dotnet/api/system.collections.generic.ienumerable-1)\<[IndexInfo](./indexinfo-class.md)\>  
-Ein Iterator für einen indexInfo für jeden Index in der Tabelle.  
+Typ: [System.Collections.Generic.IEnumerable](/dotnet/api/system.collections.generic.ienumerable-1)\<[IndexInfo](./indexinfo-class.md)\>  
+Ein Iterator über einer IndexInfo für jeden Index in der Tabelle.  
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
-#### <a name="reference"></a>Referenz
+#### <a name="reference"></a>Verweis
 
 [API-Klasse](./api-class.md)
 
-[API-Mitglieder](./api-members.md)
+[API-Member](./api-members.md)
 
-[Gettableindexes-Überladung](./api.gettableindexes-method.md)
+[GetTableIndexes-Überladung](./api.gettableindexes-method.md)
 
-[Microsoft. ISAM. ESENT. Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)
+[Microsoft.Isam.Esent.Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)

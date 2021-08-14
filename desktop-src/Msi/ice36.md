@@ -1,27 +1,27 @@
 ---
-description: ICE36 überprüft, ob jedes Symbol in der Symboltabelle mindestens ein Mal in der arpproducticon-Eigenschaft oder in der Klassen-, ProgID-oder Verknüpfungs Tabelle aufgeführt ist.
+description: ICE36 überprüft, ob jedes Symbol in der Symboltabelle mindestens einmal in der Eigenschaft ARPPRODUCTICON oder in den Tabellen Class, ProgId oder Shortcut aufgeführt ist.
 ms.assetid: d502c0a9-17e5-467a-8b02-8b254e77b96b
 title: ICE36
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: a7f24eebc1b591edde418c59b6765d7ee91a00dc
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 97c3d951e90ac9f3dc46a564757c1a1d5a1737bf054740e3109a26c8c7b91055
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "104042536"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118635303"
 ---
 # <a name="ice36"></a>ICE36
 
-ICE36 überprüft, ob jedes Symbol in der Symboltabelle mindestens ein Mal in der [**arpproducticon**](arpproducticon.md) -Eigenschaft oder in der [Klassen](class-table.md)-, [ProgID](progid-table.md)- [oder Verknüpfungs Tabelle aufgeführt](shortcut-table.md) ist.
+ICE36 überprüft, ob jedes Symbol in der Symboltabelle mindestens einmal in der [**Eigenschaft ARPPRODUCTICON**](arpproducticon.md) oder in den Tabellen [Class,](class-table.md) [ProgId](progid-table.md)oder [Shortcut](shortcut-table.md) aufgeführt ist.
 
-Während der Ankündigung werden alle in der [Symboltabelle](icon-table.md) aufgeführten Symbole auf dem Computer des Benutzers installiert. Wenn nicht verwendete Symbole in der Symboltabelle vorhanden sind, kann die Installation nicht ausgeführt werden. es wird jedoch die Größe der MSI-Datei und die Zeit und den Speicherplatz, die für die Ankündigung einer Funktion erforderlich sind, unnötig vergrößert.
+Während der Ankündigung installiert das Installationsprogramm alle Symbole, die in der [Tabelle Symbol](icon-table.md) auf dem Computer des Benutzers aufgeführt sind. Nicht verwendete Symbole in der Symboltabelle verhindern nicht, dass die Installation ausgeführt wird, erhöht jedoch unnötigerweise die Größe der .msi-Datei sowie die Zeit und den Speicherplatz, die zum Ankündigen eines Features erforderlich sind.
 
 Wenn in der Eigenschaft oder Tabelle nicht auf ein Symbol verwiesen wird und keine Benutzeroberfläche zum Erstellen eines Verweises zur Laufzeit bereitgestellt wird, sollten Sie das Symbol entfernen, um eine bessere Leistung zu erzielen.
 
 ## <a name="result"></a>Ergebnis
 
-ICE36 sendet eine Meldung, wenn ein Symbol in der Symboltabelle vorhanden ist, auf das in der [Klasse](class-table.md), der [ProgID](progid-table.md)oder [der Verknüpfungs Tabelle nicht](shortcut-table.md) verwiesen wird, und wenn keine Benutzeroberfläche bereitgestellt wird, um einen solchen Verweis zur Laufzeit zu erstellen.
+ICE36 sendet eine Meldung, wenn ein Symbol in der Symboltabelle vorhanden ist, auf das in den Tabellen [Class](class-table.md), [ProgId](progid-table.md)oder [Shortcut](shortcut-table.md) nicht verwiesen wird und wenn keine Benutzeroberfläche zum Erstellen eines solchen Verweises zur Laufzeit bereitgestellt wird.
 
 ## <a name="example"></a>Beispiel
 
@@ -37,10 +37,10 @@ Icon Bloat. Icon Icon4 is not used in the Class, Shortcut, or ProgID table. This
 
 | Name  | Daten     |
 |-------|----------|
-| Icon1 | Control1 |
-| Icon2 | Control2 |
-| Icon3 | Control3 |
-| Icon4 | Control4 |
+| Symbol1 | Control1 |
+| Symbol2 | Control2 |
+| Symbol3 | Control3 |
+| Symbol4 | Control4 |
 
 
 
@@ -58,25 +58,25 @@ Icon Bloat. Icon Icon4 is not used in the Class, Shortcut, or ProgID table. This
 
  
 
-[Klassen Tabelle](class-table.md) (partiell)
+[Klassentabelle](class-table.md) (partiell)
 
 
 
 | CLSID                                  |
 |----------------------------------------|
-| {3e469aba-3644-11d2-8892-00a0c981b015} |
+| {3E469ABA-3644-11d2-8892-00A0C981B015} |
 
 
 
  
 
-Verknüpfungs [Tabelle](shortcut-table.md) (partiell)
+[Verknüpfungstabelle](shortcut-table.md) (partiell)
 
 
 
-| Abkürzung  | Symbol\_ |
+| Verknüpfung  | Symbol\_ |
 |-----------|--------|
-| Shortcut1 | Icon2  |
+| Shortcut1 | Symbol2  |
 
 
 
@@ -86,7 +86,7 @@ Verknüpfungs [Tabelle](shortcut-table.md) (partiell)
 
 <dl> <dt>
 
-[Ice-Referenz](ice-reference.md)
+[ICE-Referenz](ice-reference.md)
 </dt> </dl>
 
  

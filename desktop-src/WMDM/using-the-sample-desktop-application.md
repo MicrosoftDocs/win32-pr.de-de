@@ -1,47 +1,47 @@
 ---
-title: Verwenden der Beispiel-Desktop Anwendung
-description: Verwenden der Beispiel-Desktop Anwendung
+title: Verwenden der Beispieldesktopanwendung
+description: Verwenden der Beispieldesktopanwendung
 ms.assetid: 5e3e5283-9e27-4f6a-93a9-84d84f2e875a
 keywords:
-- Windows Media Device Manager, Beispiele
-- Device Manager, Beispiele
-- Desktop Anwendungen, Beispiele
-- Windows Media Device Manager, Beispiel für eine Desktop Anwendung
-- Beispiel für Device Manager Desktop Anwendung
-- Beispiele, Desktop Anwendungen
+- Windows Media Geräte-Manager, Beispiele
+- Geräte-Manager, Beispiele
+- Desktopanwendungen, Beispiele
+- Windows Beispiel für Medien-Geräte-Manager,Desktopanwendung
+- beispiel für Geräte-Manager,Desktopanwendung
+- Beispiele,Desktopanwendungen
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: bd511ea5241f458d2cd926dc8fb2f3681757ff8b
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: 91b418458c9e6091b3e2002a30afb95abb77919d062667a9667a3aac9d4dad6e
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "103708747"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118584166"
 ---
-# <a name="using-the-sample-desktop-application"></a>Verwenden der Beispiel-Desktop Anwendung
+# <a name="using-the-sample-desktop-application"></a>Verwenden der Beispieldesktopanwendung
 
-Bei der Beispiel-Desktop Anwendung handelt es sich um ein grundlegendes Fenster mit zwei Fenstern, das einem Windows-Explorer ähnelt Es ermöglicht Ihnen das Durchsuchen des Inhalts eines Geräts, das Verwenden einer Strukturansicht der Ordner im linken Bereich und von Dateien im rechten Bereich. Das Stammverzeichnis jeder Ordnerstruktur wird logisch als anderes Gerät betrachtet, obwohl einige Geräte sich selbst als mehrere Objekte (eines für jeden Stamm Speicher) darstellen könnten. Um die grundlegenden Eigenschaften eines Ordners oder einer Datei zu lesen, klicken Sie mit der rechten Maustaste auf das Objekt, und wählen Sie **Eigenschaften** aus.
+Die Beispieldesktopanwendung ist ein einfaches Fenster mit zwei Schwenken, das Windows Explorer ähnelt. Sie können den Inhalt eines Geräts durchsuchen, indem Sie eine Strukturansicht mit Ordnern im linken Bereich und Dateien im rechten Bereich anzeigen. Der Stamm jeder Ordnerstruktur wird logisch als ein anderes Gerät betrachtet, obwohl sich einige Geräte als mehrere Objekte darstellen können (eines für jeden Stammspeicher). Um die grundlegenden Eigenschaften eines Ordners oder einer Datei zu lesen, klicken Sie mit der rechten Maustaste auf das Objekt, und wählen Sie **Eigenschaften** aus.
 
-Sie können Dateien auf dem Gerät löschen, indem Sie im rechten Bereich eine Datei auswählen und im Menü **Datei** die Option **Löschen** auswählen. Zum Hinzufügen von Mediendateien zum Gerät können Sie Dateien vom Desktop auf den rechten Bereich des Programms ziehen. Beachten Sie, dass Dateien ein vom Gerät unterstütztes Medienformat aufweisen müssen. Dateien mit unzulässigen Formaten (nicht-Mediendateien, z. b. txt-Dateien oder Medienformate, die nicht vom Gerät unterstützt werden) werden nicht an das Gerät gesendet. (Beachten Sie, dass es sich bei dieser Einschränkung um das Programm handelt. Mithilfe von Windows Media Device Manager können Sie jede beliebige Datei an ein Gerät senden, wenn Sie vom Gerät akzeptiert wird.)
+Sie können Dateien auf dem Gerät löschen, indem Sie im rechten Bereich eine Datei und im Menü **Datei** die Option **Löschen** auswählen. Um dem Gerät Mediendateien hinzuzufügen, können Sie Dateien vom Desktop in den rechten Bereich des Programms ziehen. Beachten Sie, dass Dateien ein medienformat aufweisen müssen, das vom Gerät unterstützt wird. Dateien in unzulässigen Formaten (Nicht-Mediendateien wie .txt Dateien oder Medienformate, die vom Gerät nicht unterstützt werden) werden nicht an das Gerät gesendet. (Beachten Sie, dass diese Einschränkung die des Programms ist. Windows Mit media Geräte-Manager können Sie beliebige Dateien an ein Gerät senden, wenn das Gerät sie akzeptiert.)
 
-Wenn Sie Rückruf Ereignisse erfassen möchten, die an die [**iwmdmoperation**](/windows/desktop/api/mswmdm/nn-mswmdm-iwmdmoperation) -Schnittstelle gesendet werden, müssen Sie die Option "Use Operation Interface" im Menü **Optionen** aktivieren.
+Um Rückrufereignisse zu erfassen, die an die [**IWMDMOperation-Schnittstelle**](/windows/desktop/api/mswmdm/nn-mswmdm-iwmdmoperation) gesendet werden, müssen Sie die Option "Operation Interface verwenden" im Menü **Optionen** aktivieren.
 
-Mit dem Menü **Optionen** können Sie auch auswählen, ob Sie mehrere erweiterte Schnittstellen mit Funktionen verwenden möchten, die von erweiterten Geräten unterstützt werden.
+Im Menü **Optionen** können Sie auch auswählen, ob Sie mehrere erweiterte Schnittstellen mit Features verwenden möchten, die von erweiterten Geräten unterstützt werden.
 
-Das Menü **Container** enthält Optionen, mit denen Sie eine Wiedergabeliste oder ein Album erstellen können. Um eine Wiedergabeliste zu erstellen, wählen Sie mindestens ein Titel auf dem Gerät aus, und klicken Sie im Menü **Container** auf **Wiedergabeliste erstellen** . Diese Funktion funktioniert nur auf MTP-Geräten, da der Code nur die Erstellung einer "virtuellen" Wiedergabelisten Datei unterstützt. (Eine virtuelle Wiedergabeliste ist eine Wiedergabeliste, die nur durch Metadatenwerte angegeben wird, und nicht durch eine physische Datei (z. b. eine WPL-Datei). Das Gerät muss leere Wiedergabelisten unterstützen, um dieses Feature verwenden zu können.
+Das Menü **Container** verfügt über Optionen, mit denen Sie eine Wiedergabeliste oder ein Album erstellen können. Wählen Sie zum Erstellen einer Wiedergabeliste mindestens einen Song auf dem Gerät aus, und klicken Sie im Menü **Container** auf **Wiedergabeliste erstellen.** Dieses Feature funktioniert nur auf MTP-Geräten, da der Code nur die Erstellung einer "virtuellen" Wiedergabelistendatei unterstützt. (Eine virtuelle Wiedergabeliste ist eine Wiedergabeliste, die nur durch Metadatenwerte und nicht durch eine physische Datei angegeben wird, z.B. eine WPL-Datei.) Das Gerät muss leere Wiedergabelisten unterstützen, um dieses Feature verwenden zu können.
 
-Wenn Sie ein Album (eine Wiedergabeliste mit zugeordneter Grafik) erstellen möchten, wählen Sie ein oder mehrere Titel auf dem Gerät aus, und klicken Sie im Menü **Container** auf **Album erstellen** . Mit einem Dialogfeld können Sie eine Bilddatei auf Ihrem Computer suchen, die dem Album zugeordnet werden soll. Ähnlich wie bei der Erstellung von Wiedergabelisten erstellt die Anwendung eine "leere" Album Datei. Wenn das Gerät keine leeren Alben unterstützt, funktioniert diese Funktion nicht.
+Um ein Album (eine Wiedergabeliste mit einem zugeordneten Bild) zu erstellen, wählen Sie mindestens einen Song auf dem Gerät aus, und klicken Sie im Menü **Container** auf **Album erstellen.** Mit einem Dialogfeld können Sie zu einer Bilddatei auf Ihrem Computer navigieren, die dem Album zugeordnet werden soll. Ähnlich wie bei der Erstellung von Wiedergabelisten erstellt die Anwendung eine "leere" Albumdatei. Wenn das Gerät leere Alben nicht unterstützt, funktioniert dieses Feature nicht.
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
 <dl> <dt>
 
-[**Beispiel für eine Desktop Anwendung**](sample-desktop-application.md)
+[**Beispieldesktopanwendung**](sample-desktop-application.md)
 </dt> </dl>
 
- 
+ 
 
- 
+ 
 
 
 

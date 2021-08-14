@@ -1,11 +1,11 @@
 ---
-title: Iwmdrmnetreceiver processlicenseresponse-Methode (wmdrmsdk. h)
-description: Die processlicenseresponse-Methode verarbeitet die vom Sender gesendete Lizenz Antwort als Antwort auf eine Lizenz Herausforderung.
+title: IWMDRMNetReceiver ProcessLicenseResponse-Methode (Wmdrmsdk.h)
+description: Die ProcessLicenseResponse-Methode verarbeitet die Lizenzantwort, die vom Sender als Antwort auf eine Lizenzaufforderung gesendet wird.
 ms.assetid: b6d04651-746b-474e-8a02-6b7cbee9db46
 keywords:
-- Processlicenseresponse-Methode Windows Media-Format
-- Processlicenseresponse-Methode, Windows Media-Format, iwmdrmnetreceiver-Schnittstelle
-- Iwmdrmnetreceiver-Schnittstelle Windows Media-Format, processlicenseresponse-Methode
+- ProcessLicenseResponse-Methode windows Media Format
+- ProcessLicenseResponse-Methode windows Media Format , IWMDRMNetReceiver-Schnittstelle
+- IWMDRMNetReceiver-Schnittstelle windows Media Format , ProcessLicenseResponse-Methode
 topic_type:
 - apiref
 api_name:
@@ -16,16 +16,16 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 45a09ebab81b71e21b9ef922423a7bbe67b20596
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: cb7ba84c7bf58091bb17500b0d35390062710a79a9a32b939ac8b9517cbcfaba
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106357563"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118700824"
 ---
-# <a name="iwmdrmnetreceiverprocesslicenseresponse-method"></a>Iwmdrmnetreceiver::P rocess licenseresponse-Methode
+# <a name="iwmdrmnetreceiverprocesslicenseresponse-method"></a>IWMDRMNetReceiver::P rocessLicenseResponse-Methode
 
-Die **processlicenseresponse** -Methode verarbeitet die vom Sender gesendete Lizenz Antwort als Antwort auf eine Lizenz Herausforderung.
+Die **ProcessLicenseResponse-Methode** verarbeitet die Lizenzantwort, die vom Sender als Antwort auf eine Lizenzaufforderung gesendet wird.
 
 ## <a name="syntax"></a>Syntax
 
@@ -45,52 +45,52 @@ HRESULT ProcessLicenseResponse(
 
 <dl> <dt>
 
-*pblicenseresponse* \[ in\]
+*pbLicenseResponse* \[ In\]
 </dt> <dd>
 
-Vom Sender empfangene Lizenz Antwort.
+Lizenzantwort, die vom Sender empfangen wurde.
 
 </dd> <dt>
 
-*cblicenseresponse* \[ in\]
+*cbLicenseResponse* \[ In\]
 </dt> <dd>
 
 Größe der Antwort in Bytes.
 
 </dd> <dt>
 
-*ppbwmdrmnetlicenserepresentation* \[ vorgenommen\]
+*ppbWMDRMNetLicenseRepresentation* \[ out\]
 </dt> <dd>
 
-Adresse einer Variablen, die die Adresse der internen Lizenz Darstellung für die in der Lizenz Antwortnachricht enthaltene Lizenz empfängt. Wenn Sie mit diesen Daten fertig sind, müssen Sie den Arbeitsspeicher freigeben, indem Sie " **CoTaskMemFree**" aufrufen. Dieser Parameter kann auf **null** festgelegt werden, wenn die Lizenz Darstellung nicht benötigt wird.
+Adresse einer Variablen, die die Adresse der internen Lizenzdarstellung für die Lizenz empfängt, die in der Lizenzantwortnachricht enthalten ist. Wenn Sie mit diesen Daten fertig sind, müssen Sie den Arbeitsspeicher freigeben, indem Sie **CoTaskMemFree** aufrufen. Dieser Parameter kann auf **NULL** festgelegt werden, wenn die Lizenzdarstellung nicht benötigt wird.
 
 </dd> <dt>
 
-*pcbwmdrmnetlicenserepresentation* \[ vorgenommen\]
+*pwWMDRMNetLicenseRepresentation* \[ out\]
 </dt> <dd>
 
-Adresse einer Variablen, die die Größe der Lizenz Darstellung erhält. Muss auf **null** festgelegt werden, wenn *ppbwmdrmnetlicenserepresentation* **null** ist.
+Adresse einer Variablen, die die Größe der Lizenzdarstellung empfängt. Muss auf **NULL** festgelegt werden, wenn *ppbWMDRMNetLicenseRepresentation* **NULL** ist.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Die-Methode gibt ein **HRESULT** zurück. Mögliches Werte (aber nicht die Einzigen) sind die in der folgenden Tabelle.
+Die Methode gibt ein **HRESULT** zurück. Mögliches Werte (aber nicht die Einzigen) sind die in der folgenden Tabelle.
 
 
 
 | Rückgabecode                                                                                                | Beschreibung                                              |
 |------------------------------------------------------------------------------------------------------------|----------------------------------------------------------|
-| <dl> <dt>**NS \_ E \_ DRM- \_ RIV \_ zu \_ klein**</dt> </dl> | Es wird eine aktualisierte Inhalts Sperr Liste benötigt.<br/> |
+| <dl> <dt>**NS \_ E \_ \_ DRM- WIES ZU \_ \_ KLEIN**</dt> </dl> | Eine aktualisierte Inhaltssperrliste ist erforderlich.<br/> |
 | <dl> <dt>**S \_ OK**</dt> </dl>                       | Die Methode wurde erfolgreich ausgeführt.<br/>                         |
 
 
 
  
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Die mit dieser Methode verarbeitete Lizenz Antwort muss der letzten Lizenz Herausforderung entsprechen, die auf dem Client Computer generiert wurde.
+Die lizenzantwort, die mit dieser Methode verarbeitet wird, muss der letzten Lizenzaufforderung entsprechen, die auf dem Clientcomputer generiert wurde.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -98,18 +98,18 @@ Die mit dieser Methode verarbeitete Lizenz Antwort muss der letzten Lizenz Herau
 
 | Anforderung | Wert |
 |-------------------|---------------------------------------------------------------------------------------|
-| Header<br/> | <dl> <dt>Wmdrmsdk. h</dt> </dl> |
+| Header<br/> | <dl> <dt>Wmdrmsdk.h</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Iwmdrmnetreceiver-Schnittstelle**](iwmdrmnetreceiver.md)
+[**IWMDRMNetReceiver-Schnittstelle**](iwmdrmnetreceiver.md)
 </dt> <dt>
 
-[**Iwmdrmnetreceiver:: getlicensechallenge**](iwmdrmnetreceiver-getlicensechallenge.md)
+[**IWMDRMNetReceiver::GetLicenseChallenge**](iwmdrmnetreceiver-getlicensechallenge.md)
 </dt> </dl>
 
  

@@ -1,25 +1,25 @@
 ---
-description: Ein Zeilen Streifen ist ein primitiver, der aus verbundenen Liniensegmenten besteht.
+description: Ein Linienstreifen ist ein Primitiver, der aus verbundenen Liniensegmenten besteht.
 ms.assetid: 73905718-a4c6-4f73-beef-4cccac7eea8c
-title: Zeilen Streifen
+title: Linienstreifen
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 3dee7eb79b583ad04dc0ed576a7d9426e8dda9fa
-ms.sourcegitcommit: a47bd86f517de76374e4fff33cfeb613eb259a7e
+ms.openlocfilehash: 6dd8ba98518cac542a9b8272e4f96494889ef24f269744626aa24e882c7af509
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/06/2021
-ms.locfileid: "104521952"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118799631"
 ---
-# <a name="line-strips"></a>Zeilen Streifen
+# <a name="line-strips"></a>Linienstreifen
 
-Ein Zeilen Streifen ist ein primitiver, der aus verbundenen Liniensegmenten besteht. Die Anwendung kann Zeilen Streifen zum Erstellen von Polygonen verwenden, die nicht geschlossen sind. Ein geschlossenes Polygon ist ein Polygon, dessen letzter Scheitelpunkt durch ein Liniensegment mit dem ersten Scheitelpunkt verbunden ist. Wenn Ihre Anwendung Polygone auf Basis von Zeilen Streifen erstellt, sind die Scheitel Punkte nicht garantiert Coplanar.
+Ein Linienstreifen ist ein Primitiver, der aus verbundenen Liniensegmenten besteht. Ihre Anwendung kann Linienstreifen zum Erstellen von Polygonen verwenden, die nicht geschlossen sind. Ein geschlossenes Polygon ist ein Polygon, dessen letzter Scheitelpunkt durch ein Liniensegment mit seinem ersten Scheitelpunkt verbunden ist. Wenn Ihre Anwendung Polygone basierend auf Linienstreifen macht, ist nicht garantiert, dass die Scheitelpunkte koplanar sind.
 
-Die folgende Abbildung zeigt einen gerenderten Zeilen Streifen.
+Die folgende Abbildung zeigt einen gerenderten Zeilenstreifen.
 
-![Abbildung eines Zeilen Streifens](images/linstrip.gif)
+![Abbildung eines Linienstreifens](images/linstrip.gif)
 
-Der folgende Code zeigt, wie Vertices für diesen Zeilen Streifen erstellt werden.
+Der folgende Code zeigt, wie Scheitelpunkte für diesen Zeilenstreifen erstellt werden.
 
 
 ```
@@ -41,7 +41,7 @@ CUSTOMVERTEX Vertices[] =
 
 
 
-Das folgende Codebeispiel zeigt, wie Sie einen Zeilen Streifen in Direct3D 9 mit [**IDirect3DDevice9::D rawprimitiv**](/windows/win32/api/d3d9helper/nf-d3d9helper-idirect3ddevice9-drawprimitive) Renderern.
+Das folgende Codebeispiel zeigt, wie sie einen Zeilenstreifen in Direct3D 9 mit [**IDirect3DDevice9::D rawPrimitive rendern.**](/windows/win32/api/d3d9helper/nf-d3d9helper-idirect3ddevice9-drawprimitive)
 
 
 ```

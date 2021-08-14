@@ -1,7 +1,7 @@
 ---
-description: Die enableDevice-Methode wurde anstelle der allgemeineren requestStateChange-Methode, die sich direkt mit der von dieser Methode bereitgestellten Funktionalität überlappt, als veraltet markiert.
+description: Die EnableDevice-Methode ist veraltet und nicht mehr die allgemeinere RequestStateChange-Methode, die sich direkt mit der von dieser Methode bereitgestellten Funktionalität überschneidet.
 ms.assetid: 1d481417-b640-437d-82ed-d45a9e420d3b
-title: EnableDevice-Methode der CIM_LogicalDevice-Klasse
+title: EnableDevice-Methode der CIM_LogicalDevice Klasse
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,20 +13,20 @@ api_type:
 - COM
 api_location:
 - vmms.exe
-ms.openlocfilehash: 5a6da7695d7e611223a3a257be23add16094b533
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: a01d1b206d0d38f74c5701c8c088506792cb6ca6f997b9e0280adcc61e5a8633
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106362576"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118648525"
 ---
 # <a name="enabledevice-method-of-the-cim_logicaldevice-class"></a>EnableDevice-Methode der CIM \_ LogicalDevice-Klasse
 
-Die enableDevice-Methode wurde anstelle der allgemeineren requestStateChange-Methode, die sich direkt mit der von dieser Methode bereitgestellten Funktionalität überlappt, als veraltet markiert.
+Die EnableDevice-Methode ist veraltet und nicht mehr die allgemeinere RequestStateChange-Methode, die sich direkt mit der von dieser Methode bereitgestellten Funktionalität überschneidet.
 
-Fordert an, dass das LogicalDevice aktiviert ("aktivierter" Eingabeparameter = true) oder deaktiviert (= false) ist. Bei erfolgreicher Ausführung sollte die Status Eigenschaften des Geräts den gewünschten Zustand (aktiviert/deaktiviert) widerspiegeln. Beachten Sie, dass sich die Funktion dieser Methode mit der Eigenschaft requestedstate überlappt. Requestedstate wurde dem Modell hinzugefügt, um einen Datensatz (d. h. einen beibehaltenen Wert) der letzten Zustands Anforderung beizubehalten. Beim Aufrufen der enableDevice-Methode sollte die requestedstate-Eigenschaft entsprechend festgelegt werden.
+Fordert an, dass LogicalDevice aktiviert ("Enabled" input parameter = TRUE) oder disabled (= FALSE) wird. Bei erfolgreicher Aktivierung sollten die Eigenschaften StatusInfo/EnabledState des Geräts den gewünschten Zustand (aktiviert/deaktiviert) widerspiegeln. Beachten Sie, dass sich die Funktion dieser Methode mit der RequestedState-Eigenschaft überschneidet. RequestedState wurde dem Modell hinzugefügt, um einen Datensatz (d. h. einen persistenten Wert) der letzten Zustandsanforderung zu verwalten. Beim Aufrufen der EnableDevice-Methode sollte die RequestedState-Eigenschaft entsprechend festgelegt werden.
 
-Der Rückgabecode sollte 0 sein, wenn die Anforderung erfolgreich ausgeführt wurde. der Rückgabecode ist 1, wenn die Anforderung nicht unterstützt wird, und ein anderer Wert, wenn ein Fehler aufgetreten ist. In einer Unterklasse können die möglichen Rückgabecodes mit einem ValueMap-Qualifizierer für die Methode angegeben werden. Die Zeichen folgen, in die der ValueMap-Inhalt übersetzt wird, können auch in der Unterklasse als Werte Array Qualifizierer angegeben werden.
+Der Rückgabecode sollte 0 sein, wenn die Anforderung erfolgreich ausgeführt wurde, 1, wenn die Anforderung nicht unterstützt wird, und einen anderen Wert, wenn ein Fehler aufgetreten ist. In einer Unterklasse kann der Satz möglicher Rückgabecodes mithilfe eines ValueMap-Qualifizierers für die -Methode angegeben werden. Die Zeichenfolgen, in die der ValueMap-Inhalt übersetzt wird, können auch in der Unterklasse als Values-Arrayqualifizierer angegeben werden.
 
 ## <a name="syntax"></a>Syntax
 
@@ -43,16 +43,16 @@ uint32 EnableDevice(
 
 <dl> <dt>
 
-*Aktiviert* \[ in\]
+*Aktiviert* \[ In\]
 </dt> <dd>
 
-Wenn true, wird das Gerät aktiviert, wenn das Gerät durch false deaktiviert wird.
+Bei TRUE aktivieren Sie das Gerät, wenn FALSE das Gerät deaktiviert.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt bei Erfolg 0 (null) zurück. Andernfalls wird ein Fehler zurückgegeben.
+Gibt bei Erfolg eine 0 zurück. andernfalls gibt einen Fehler zurück.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -63,12 +63,12 @@ Gibt bei Erfolg 0 (null) zurück. Andernfalls wird ein Fehler zurückgegeben.
 | Unterstützte Mindestversion (Client)<br/> | Windows 8.1<br/>                                                                                  |
 | Unterstützte Mindestversion (Server)<br/> | Windows Server 2012 R2<br/>                                                                       |
 | Namespace<br/>                | \\Stammvirtualisierung \\ v2<br/>                                                                     |
-| MOF<br/>                      | <dl> <dt>Windowsvirtualization. v2. MOF</dt> </dl> |
+| MOF<br/>                      | <dl> <dt>WindowsVirtualization.V2.mof</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>Vmms.exe</dt> </dl>                     |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen:
 
 <dl> <dt>
 

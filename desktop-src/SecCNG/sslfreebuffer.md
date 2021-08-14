@@ -1,7 +1,7 @@
 ---
-description: Wird verwendet, um Arbeitsspeicher freizugeben, der von einer der Funktionen des Secure Sockets Layer-Protokolls (SSL) zugewiesen wurde.
+description: Wird verwendet, um Arbeitsspeicher freizugeben, der von einer der SSL-Anbieterfunktionen (Secure Sockets Layer Protocol) belegt wurde.
 ms.assetid: 75a85013-c745-43cb-85b5-e13a2778ec1d
-title: Sslfrebuffer-Funktion (sslprovider. h)
+title: SslFreeBuffer-Funktion (Sslprovider.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,16 +13,16 @@ api_type:
 - DllExport
 api_location:
 - Ncrypt.dll
-ms.openlocfilehash: bced83b52ddf37266f64ae0c2b8919902f30fff4
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 6121802b8815a2e13fab0f4336420b763fe931a6e022fcce73080adfb01197c2
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "104050562"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118906479"
 ---
-# <a name="sslfreebuffer-function"></a>Sslfrebuffer-Funktion
+# <a name="sslfreebuffer-function"></a>SslFreeBuffer-Funktion
 
-Die **sslfreebuffer** -Funktion wird verwendet, um Arbeitsspeicher freizugeben, der von einer der Funktionen des [*Secure Sockets Layer-Protokolls*](/windows/desktop/SecGloss/s-gly) (SSL) zugewiesen wurde.
+Die **SslFreeBuffer-Funktion** wird verwendet, um Arbeitsspeicher freizugeben, der von einer der SSL-Anbieterfunktionen [*(Secure Sockets Layer Protocol)*](/windows/desktop/SecGloss/s-gly) belegt wurde.
 
 ## <a name="syntax"></a>Syntax
 
@@ -39,26 +39,26 @@ SECURITY_STATUS WINAPI SslFreeBuffer(
 
 <dl> <dt>
 
-*pvinput* \[ in\]
+*pvInput* \[ In\]
 </dt> <dd>
 
-Ein Zeiger auf den Speicherpuffer, der freigegeben werden soll.
+Ein Zeiger auf den freizugebenden Speicherpuffer.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Wenn die Funktion erfolgreich ist, gibt Sie 0 (null) zurück.
+Wenn die Funktion erfolgreich ausgeführt wird, gibt sie 0 (null) zurück.
 
 Wenn die Funktion fehlschlägt, wird ein Fehlerwert ungleich 0 (null) zurückgegeben.
 
-Mögliche Rückgabecodes sind u. a. die folgenden:
+Mögliche Rückgabecodes sind u. a. folgende.
 
 
 
 | Rückgabecode/-wert                                                                                                                                                       | BESCHREIBUNG                                                                  |
 |-------------------------------------------------------------------------------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------|
-| <dl> <dt>**Ernte \_ Ungültiger \_ Parameter**</dt> <dt>0x80090027l</dt> </dl> | Der Parameter " *pdwprovidercount* " oder " *ppproviderlist* " ist **null**.<br/> |
+| <dl> <dt>**NTE \_ INVALID \_ PARAMETER**</dt> <dt>0x80090027L</dt> </dl> | Der *parameter pdwProviderCount* oder *ppProviderList* ist **NULL.**<br/> |
 
 
 
@@ -70,9 +70,9 @@ Mögliche Rückgabecodes sind u. a. die folgenden:
 
 | Anforderung | Wert |
 |-------------------------------------|------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>                                           |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2008 \[ -Desktop-Apps\]<br/>                                     |
-| Header<br/>                   | <dl> <dt>Sslprovider. h</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows \[Nur Vista-Desktop-Apps\]<br/>                                           |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2008-Desktop-Apps\]<br/>                                     |
+| Header<br/>                   | <dl> <dt>Sslprovider.h</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>Ncrypt.dll</dt> </dl>    |
 
 

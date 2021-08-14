@@ -1,19 +1,19 @@
 ---
 title: Paketbereitstellungs-API
-description: Erfahren Sie mehr über die paketbereitstellungs-API, die Sie zum Installieren, aktualisieren und Deinstallieren von App-Paketen im System verwenden können. Jedes app-Paket enthält die Dateien, die eine Windows-App bilden, und eine Manifest-Datei, in der die Software für Windows beschrieben wird.
+description: Erfahren Sie mehr über die Paketbereitstellungs-API, mit der Sie App-Pakete auf dem System installieren, aktualisieren und deinstallieren können. Jedes App-Paket enthält die Dateien, die eine Windows-App bilden, sowie eine Manifestdatei, die die zu Windows Software beschreibt.
 ms.assetid: E2D408E1-6048-4D15-8BF4-69FF6ACF7BD2
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 14a7559739d721781101fad804ebb040333c71c9
-ms.sourcegitcommit: 803f3ccd65bdefe36bd851b9c6e7280be9489016
+ms.openlocfilehash: b5bc1c9fc44487ff2244bee9b27d1ba26677468a2113536763b86e254a23f689
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "106339053"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118814056"
 ---
 # <a name="package-deployment-api"></a>Paketbereitstellungs-API
 
-Erfahren Sie mehr über die paketbereitstellungs-API, die Sie zum Installieren, aktualisieren und Deinstallieren von App-Paketen im System verwenden können. Jedes app-Paket enthält die Dateien, die eine Windows-App bilden, und eine Manifest-Datei, in der die Software für Windows beschrieben wird.
+Erfahren Sie mehr über die Paketbereitstellungs-API, mit der Sie App-Pakete auf dem System installieren, aktualisieren und deinstallieren können. Jedes App-Paket enthält die Dateien, die eine Windows-App bilden, sowie eine Manifestdatei, die die zu Windows Software beschreibt.
 
 ## <a name="windows-runtime-reference"></a>Windows-Runtime-Referenz
 
@@ -29,13 +29,13 @@ Erfahren Sie mehr über die paketbereitstellungs-API, die Sie zum Installieren, 
 [Beispiel zum Hinzufügen eines App-Pakets (AddPackage)](https://github.com/microsoft/Windows-classic-samples/tree/master/Samples/PackageManagerAddPackage)
 </dt> <dt>
 
-[Beispiel zum Aufzählen von App-Paketen (findpackages)](https://github.com/microsoft/Windows-classic-samples/tree/master/Samples/PackageManagerFindPackages)
+[Beispiel zum Aufzählen von App-Paketen (FindPackages)](https://github.com/microsoft/Windows-classic-samples/tree/master/Samples/PackageManagerFindPackages)
 </dt> <dt>
 
-[Beispiel für das Auflisten von App-Paketen nach Name und Herausgeber (findpackagesbynameandpublisher)](https://github.com/microsoft/Windows-classic-samples/tree/master/Samples/PackageManagerFindPackagesByNameAndPublisher)
+[Aufzählen von App-Paketen nach Name und Herausgeberbeispiel (FindPackagesByNameAndPublisher)](https://github.com/microsoft/Windows-classic-samples/tree/master/Samples/PackageManagerFindPackagesByNameAndPublisher)
 </dt> <dt>
 
-[Beispiel für das Auflisten von App-Paketen nach Benutzer-sid (findpackagesbyusersecurityid)](https://github.com/microsoft/Windows-classic-samples/tree/master/Samples/PackageManagerFindPackagesByUserSecurityIda)
+[Beispiel zum Aufzählen von App-Paketen nach Benutzer-SID (FindPackagesByUserSecurityId)](https://github.com/microsoft/Windows-classic-samples/tree/master/Samples/PackageManagerFindPackagesByUserSecurityIda)
 </dt> <dt>
 
 [Beispiel zum Entfernen eines App-Pakets (RemovePackage)](https://github.com/microsoft/Windows-classic-samples/tree/master/Samples/PackageManagerRemovePackage)
@@ -44,13 +44,13 @@ Erfahren Sie mehr über die paketbereitstellungs-API, die Sie zum Installieren, 
 **Konzepte**
 </dt> <dt>
 
-[App-Pakete und-Bereitstellung](/previous-versions/windows/apps/hh464929(v=win.10))
+[App-Pakete und Bereitstellung](/previous-versions/windows/apps/hh464929(v=win.10))
 </dt> <dt>
 
 [Glossar](appx-packaging-glossary.md)
 </dt> <dt>
 
-**Verweis**
+**Referenz**
 </dt> <dt>
 
 [App-Paketmanifestschema](/uwp/schemas/appxpackage/appx-package-manifest)
@@ -59,9 +59,9 @@ Erfahren Sie mehr über die paketbereitstellungs-API, die Sie zum Installieren, 
 [Verpacken von APIs](interfaces.md)
 </dt> <dt>
 
-[Paket Abfrage-API](functions.md)
+[Paketabfrage-API](functions.md)
 </dt> </dl>
 
- 
+ 
 
- 
+ 

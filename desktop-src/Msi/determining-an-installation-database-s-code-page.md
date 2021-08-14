@@ -1,21 +1,21 @@
 ---
-description: Zum Ermitteln der Codepage einer Datenbank müssen Sie msidatabaseexport mit hDataBase auf das Handle der Datenbank und sztablename auf \_ forcecodepage festgelegt haben.
+description: Um die Codepage einer Datenbank zu bestimmen, rufen Sie MsiDatabaseExport auf, wobei hDatabase auf das Handle der Datenbank und szTableName auf \_ ForceCodepage festgelegt ist.
 ms.assetid: afa3fbd9-9f54-4f72-ab5d-cb0dbbd9946c
-title: Festlegen der Codepage einer Installations Datenbank
+title: Bestimmen der Codepage einer Installationsdatenbank
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 212978cbce0e73ae495a0ed10ea9070cce6bd374
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 89825c99e0652c0ef324c99f8906281f3c87ed58bef099886220faa6a9311583
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "103866348"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118637849"
 ---
-# <a name="determining-an-installation-databases-code-page"></a>Festlegen der Codepage einer Installations Datenbank
+# <a name="determining-an-installation-databases-code-page"></a>Bestimmen der Codepage einer Installationsdatenbank
 
-Zum Ermitteln der Codepage einer Datenbank müssen Sie [**msidatabaseexport**](/windows/desktop/api/Msiquery/nf-msiquery-msidatabaseexporta) mit *hDataBase* auf das Handle der Datenbank und *sztablename* auf \_ forcecodepage festgelegt haben. Dadurch wird eine Textdatei mit der Erweiterung IDT exportiert. Die ersten beiden Zeilen dieser Datei sind leer. Die dritte Zeile ist die ANSI-Code Page Nummer, gefolgt von einer Registerkarte, gefolgt von dem Namen \_ forcecodepage. Siehe auch [Code Page Behandlung importierter und exportierter Tabellen](code-page-handling-of-imported-and-exported-tables.md).
+Um die Codepage einer Datenbank zu bestimmen, rufen Sie [**MsiDatabaseExport**](/windows/desktop/api/Msiquery/nf-msiquery-msidatabaseexporta) auf, wobei *hDatabase* auf das Handle der Datenbank und *szTableName* auf \_ ForceCodepage festgelegt ist. Dadurch wird eine Textdatei mit der Erweiterung IDT exportiert. Die ersten beiden Zeilen dieser Datei sind leer. Die dritte Zeile ist die Nummer der ANSI-Codepage, gefolgt von einer Registerkarte und dem Namen \_ ForceCodepage. Siehe auch [Codepagebehandlung von importierten und exportierten Tabellen.](code-page-handling-of-imported-and-exported-tables.md)
 
-Ein Beispiel für die Bestimmung der Codepage mithilfe der [**Export Methode**](database-export.md) wird im Windows Installer SDK als Teil des Hilfsprogramms WiLangId.vbs bereitgestellt. Weitere Informationen zum Verwenden von WiLangId.vbs finden Sie im Thema zum [Verwalten von Sprache und Codepage](manage-language-and-codepage.md).
+Ein Beispiel für die Bestimmung der Codepage mithilfe der [**Export-Methode**](database-export.md) finden Sie im Windows Installer SDK als Teil des Hilfsprogramms WiLangId.vbs. Weitere Informationen zur Verwendung von WiLangId.vbs finden Sie im Thema [Verwalten von Sprache und Codepage.](manage-language-and-codepage.md)
 
  
 

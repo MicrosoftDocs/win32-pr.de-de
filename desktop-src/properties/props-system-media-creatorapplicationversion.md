@@ -4,16 +4,16 @@ ms.assetid: 9370d0f3-a43c-4c34-a4ad-a585ed63e8e5
 title: System.Media.CreatorApplicationVersion
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 2442217006fc005507c314b1a9e581015f58db4f
-ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
+ms.openlocfilehash: 5b34a73c1fcf50d7adaf92cb7a73a6a458f7c0cb8f3d18218a06afe1ee32ddee
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2021
-ms.locfileid: "108092148"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118725574"
 ---
 # <a name="systemmediacreatorapplicationversion"></a>System.Media.CreatorApplicationVersion
 
-## <a name="windows-10-version-1703-windows-10-version-1607-windows-10-version-1511-windows-10-version-1507-windows-81-windows-8-windows-7-windows-vista"></a>Windows 10, version 1703, Windows 10, version 1607, Windows 10, version 1511, Windows 10, version 1507, Windows 8.1, Windows 8, Windows 7, Windows Vista
+## <a name="windows-10-version-1703-windows-10-version-1607-windows-10-version-1511-windows-10-version-1507-windows-81-windows-8-windows-7-windows-vista"></a>Windows 10, Version 1703, Windows 10, Version 1607, Windows 10, Version 1511, Windows 10, Version 1507, Windows 8.1, Windows 8, Windows 7, Windows Vista
 
 ```
 propertyDescription
@@ -29,7 +29,7 @@ propertyDescription
       IsInnate = true
 ```
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
 PKEY-Werte werden in Propkey.h definiert.
 

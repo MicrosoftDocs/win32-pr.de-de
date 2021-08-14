@@ -1,25 +1,25 @@
 ---
-title: Beispiel Code für die Suche eines Anwendungsverzeichnis-Partitions Host Servers
-description: Dieses Thema enthält ein Codebeispiel, das einen Anwendungsverzeichnis-Partitions Host Server findet.
+title: Beispielcode zum Suchen eines Anwendungsverzeichnispartitionshostservers
+description: Dieses Thema enthält ein Codebeispiel, das einen Anwendungsverzeichnispartitionshostserver sucht.
 ms.assetid: c161323b-13ce-4986-8b24-b459009ff53c
 ms.tgt_platform: multiple
 keywords:
-- Beispiel Code für die Suche nach einem Anwendungsverzeichnis-Partitions Host Server AD
-- Anwendungsverzeichnis-Partitions Anzeige, Beispiel Code für die Suche eines Anwendungsverzeichnis-Partitions Host Servers
+- Beispielcode zum Suchen eines Anwendungsverzeichnispartitionshostservers AD
+- Application Directory Partition AD , Beispielcode zum Suchen eines Application Directory-Partitionshostservers
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: fa82c91573e0ce00017fe93b8e8713f50ab7b26c
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: 03d7a218acf3608c18587b7d9b9c82779f17fd6eb251608a86d99d8acb3b7bd4
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "104309287"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118693599"
 ---
-# <a name="example-code-for-locating-an-application-directory-partition-host-server"></a>Beispiel Code für die Suche eines Anwendungsverzeichnis-Partitions Host Servers
+# <a name="example-code-for-locating-an-application-directory-partition-host-server"></a>Beispielcode zum Suchen eines Anwendungsverzeichnispartitionshostservers
 
-Dieses Thema enthält ein Codebeispiel, das einen Anwendungsverzeichnis-Partitions Host Server findet.
+Dieses Thema enthält ein Codebeispiel, das einen Anwendungsverzeichnispartitionshostserver sucht.
 
-Im folgenden C/C++-Codebeispiel wird veranschaulicht, wie die [**DsGetDcName**](/windows/desktop/api/DsGetDC/nf-dsgetdc-dsgetdcnamea) -Funktion verwendet wird, um einen Domänen Controller zu suchen, der ein Replikat einer Anwendungsverzeichnis Partition hostet. Dieses Codebeispiel zeigt auch, wie Sie die [**DsCrackNames**](/windows/desktop/api/Ntdsapi/nf-ntdsapi-dscracknamesa) -Funktion verwenden, um den Distinguished Name einer Anwendungsverzeichnis Partition in einen DNS-Namen zu konvertieren.
+Das folgende C/C++-Codebeispiel zeigt, wie sie die [**DsGetDcName-Funktion**](/windows/desktop/api/DsGetDC/nf-dsgetdc-dsgetdcnamea) verwendet, um einen Domänencontroller zu suchen, der ein Replikat einer Anwendungsverzeichnispartition hostet. Dieses Codebeispiel zeigt auch, wie sie die [**DsCrackNames-Funktion**](/windows/desktop/api/Ntdsapi/nf-ntdsapi-dscracknamesa) verwendet, um den Distinguished Name einer Anwendungsverzeichnispartition in einen DNS-Namen zu konvertieren.
 
 
 ```C++
@@ -131,9 +131,9 @@ DWORD PrintDCFromAppPartition(LPCTSTR pszAppPartitionDN)
 
 
 
- 
+ 
 
- 
+ 
 
 
 

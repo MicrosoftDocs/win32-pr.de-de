@@ -1,26 +1,26 @@
 ---
-title: Hinzufügen von Rückruf Funktionen zu einer Anwendung
-description: Hinzufügen von Rückruf Funktionen zu einer Anwendung
+title: Hinzufügen von Rückruffunktionen zu einer Anwendung
+description: Hinzufügen von Rückruffunktionen zu einer Anwendung
 ms.assetid: b7bde1be-b229-4e00-8906-22d7dcf9ea04
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 1d4f5f3dc43227f92305032decaf917bf521d95b
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: 6dcd72b1a95a416398f482b90d7cd15cd80e1698a66a4b1c482bc92fc523ab2f
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "104515794"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118941828"
 ---
-# <a name="adding-callback-functions-to-an-application"></a>Hinzufügen von Rückruf Funktionen zu einer Anwendung
+# <a name="adding-callback-functions-to-an-application"></a>Hinzufügen von Rückruffunktionen zu einer Anwendung
 
-Eine Anwendung kann Rückruf Funktionen mit dem Erfassungsfenster registrieren, damit die Anwendung in den folgenden Situationen benachrichtigt wird:
+Eine Anwendung kann Rückruffunktionen im Erfassungsfenster registrieren, sodass sie die Anwendung unter den folgenden Umständen benachrichtigt:
 
 -   Statusänderungen
 -   Fehler treten auf
--   Video Frame-und Audiopuffer werden verfügbar
--   Die Anwendung sollte während der streamingerfassung ergeben.
+-   Videoframe und Audiopuffer werden verfügbar
+-   Die Anwendung sollte während der Streamingerfassung ergebnisse
 
-Im folgenden Beispiel wird ein Aufzeichnungs Fenster erstellt und Status-, Fehler-, Videostream-und Frame Rückruf Funktionen in der Nachrichten Verarbeitungs Schleife einer Anwendung registriert. Sie enthält auch eine Beispiel Anweisung zum Deaktivieren einer Rückruffunktion. Nachfolgende Beispiele zeigen einfache Status-, Fehler-und Frame Rückruf Funktionen.
+Im folgenden Beispiel wird ein Erfassungsfenster erstellt und Status-, Fehler-, Videostream- und Framerückruffunktionen in der Nachrichtenverarbeitungsschleife einer Anwendung registriert. Sie enthält auch eine Beispiel-Anweisung zum Deaktivieren einer Rückruffunktion. Nachfolgende Beispiele zeigen einfache Status-, Fehler- und Framerückruffunktionen.
 
 
 ```C++
@@ -77,12 +77,12 @@ case WM_CLOSE:
 
 <dl> <dt>
 
-[Verwenden der Video Erfassung](using-video-capture.md)
+[Verwenden von Video Capture](using-video-capture.md)
 </dt> </dl>
 
- 
+ 
 
- 
+ 
 
 
 

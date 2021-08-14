@@ -1,11 +1,11 @@
 ---
-title: Inapsystemhealthagentcallback comparesohrequests-Methode (napsystemhealthagent. h)
+title: INapSystemHealthAgentCallback CompareSoHRequests-Methode (NapSystemHealthAgent.h)
 description: Wird vom SHA zum Vergleichen von SoH-Anforderungen verwendet.
 ms.assetid: 14ba189a-e745-44b0-b729-522087d4e08b
 keywords:
-- Comparesohrequests-Methode NAP
-- Comparesohrequests-Methode NAP, inapsystemhealthagentcallback-Schnittstelle
-- Inapsystemhealthagentcallback-Schnittstelle NAP, comparesohrequests-Methode
+- CompareSoHRequests-Methode NAP
+- CompareSoHRequests-Methode NAP, INapSystemHealthAgentCallback-Schnittstelle
+- INapSystemHealthAgentCallback-Schnittstelle NAP, CompareSoHRequests-Methode
 topic_type:
 - apiref
 api_name:
@@ -16,21 +16,21 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 9c6713f3de47cfbde6df67662f89ab3c094d0674
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 3af26786c8ef021794876d8876ae5d8faee65b8cbbfc39b434b000ff502c64c2
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "106338551"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118939435"
 ---
-# <a name="inapsystemhealthagentcallbackcomparesohrequests-method"></a>Inapsystemhealthagentcallback:: comparesohrequests-Methode
+# <a name="inapsystemhealthagentcallbackcomparesohrequests-method"></a>INapSystemHealthAgentCallback::CompareSoHRequests-Methode
 
 > [!Note]  
-> Die Netzwerk Zugriffsschutz-Plattform ist ab Windows 10 nicht verfügbar.
+> Die Netzwerkzugriffsschutz-Plattform ist ab dem Windows 10
 
  
 
-Die **inapsystemhealthagentcallback:: comparesohrequests** -Methode wird vom SHA zum Vergleichen von SoH-Anforderungen verwendet.
+Die **INapSystemHealthAgentCallback::CompareSoHRequests-Methode** wird vom SHA verwendet, um SoH-Anforderungen zu vergleichen.
 
 ## <a name="syntax"></a>Syntax
 
@@ -49,24 +49,24 @@ HRESULT CompareSoHRequests(
 
 <dl> <dt>
 
-*LHS* \[ in\]
+*ls* \[ In\]
 </dt> <dd>
 
-Ein Zeiger auf den [**sohrequest**](/windows/win32/api/naptypes/ns-naptypes-soh) Links vom Vergleichs Vorgang.
+Ein Zeiger auf [**soHRequest**](/windows/win32/api/naptypes/ns-naptypes-soh) links vom Vergleichsvorgang.
 
 </dd> <dt>
 
-*RHS* \[ in\]
+*rhs* \[ In\]
 </dt> <dd>
 
-Ein Zeiger auf den [**sohrequest**](/windows/win32/api/naptypes/ns-naptypes-soh) auf der rechten Seite des Vergleichs Vorgangs.
+Ein Zeiger auf [**soHRequest**](/windows/win32/api/naptypes/ns-naptypes-soh) rechts vom Vergleichsvorgang.
 
 </dd> <dt>
 
-*IsEqual* \[ vorgenommen\]
+*isEqual* \[ out\]
 </dt> <dd>
 
-Ein Zeiger auf einen **booleschen** Wert, der **true** ist, wenn *LHS* und *RHS* semantisch gleich sind, andernfalls **false** .
+Ein Zeiger auf eine **BOOL,** die **TRUE ist,** wenn *ls* und *rhs* semantisch gleich sind, andernfalls **FALSE.**
 
 </dd> </dl>
 
@@ -79,21 +79,21 @@ Diese Methode kann einen dieser Werte zurückgeben.
 | Rückgabecode                                                                               | Beschreibung                                           |
 |-------------------------------------------------------------------------------------------|-------------------------------------------------------|
 | <dl> <dt>**S \_ OK**</dt> </dl>      | Gibt die erfolgreiche Ausführung an.<br/>                         |
-| <dl> <dt>**E \_ notimpl**</dt> </dl> | Die Methode wurde nicht vom SHA implementiert.<br/> |
+| <dl> <dt>**E \_ NOTIMPL**</dt> </dl> | Die -Methode wurde vom SHA nicht implementiert.<br/> |
 
 
 
  
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Diese Rückruf Methode wird vom NAP-System deklariert und muss vom SHA-Writer implementiert werden.
+Diese Rückrufmethode wird vom NAP-System deklariert und muss vom SHA-Writer implementiert werden.
 
-Der SHA sollte die SoHs vergleichen und **true** zurückgeben, wenn die SoHs semantisch gleich sind. Der NAPAgent verwendet diese Informationen, um zu bestimmen, ob ein SoH-Austausch aufgrund einer Änderung des Zustands des Client Computers initiiert werden soll.
+Der SHA sollte die SoHs vergleichen und **TRUE zurückgeben,** wenn die SoHs semantisch gleich sind. NapAgent verwendet diese Informationen, um zu bestimmen, ob aufgrund einer Statusänderung des Clientcomputers ein SoH-Austausch initiiert werden soll.
 
-Wenn SHAs inkrementelle IDs oder Zeitstempel in Ihrem SoH abgelegt haben, sind SoHs möglicherweise semantisch gleich (d. h., Sie können dieselben Integritäts Informationen vermitteln), Sie können jedoch Byte Weise ungleich sein. Diese Funktion sollte von SHAs implementiert werden, um die semantische Gleichheit von SoHs zu überprüfen.
+Wenn SHAs inkrementelle IDs oder Zeitstempel in ihren SoH-Wert setzen, sind SoHs möglicherweise semantisch gleich (d. h. sie übermitteln möglicherweise die gleichen Integritätsinformationen), sind aber möglicherweise byteweise ungleich. SHAs sollten diese Funktion implementieren, um die semantische Gleichheit von SoHs zu überprüfen.
 
-Wenn SHAs keine Zeitstempel oder IDs in ihren SoHs abgelegt haben, können Sie diese Funktion nicht implementieren und **E \_ notimpl** zurückgeben. In diesem Fall führt der NAPAgent einen Byte weisen Vergleich der [**sohrequests**](/windows/win32/api/naptypes/ns-naptypes-soh)durch.
+Wenn SHAs keine Zeitstempel oder IDs in ihre SoHs setzen, können sie diese Funktion nicht implementieren und **E \_ NOTIMPL zurückgeben.** In diesem Fall führt napAgent einen byteweisen Vergleich für [**soHRequests durch.**](/windows/win32/api/naptypes/ns-naptypes-soh)
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -101,21 +101,21 @@ Wenn SHAs keine Zeitstempel oder IDs in ihren SoHs abgelegt haben, können Sie d
 
 | Anforderung | Wert |
 |-------------------------------------|-----------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>                                                      |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2008 \[ -Desktop-Apps\]<br/>                                                |
-| Header<br/>                   | <dl> <dt>Napsystemhealthagent. h</dt> </dl>   |
-| IDL<br/>                      | <dl> <dt>Napsystemhealthagent. idl</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur \[ Vista-Desktop-Apps\]<br/>                                                      |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2008-Desktop-Apps\]<br/>                                                |
+| Header<br/>                   | <dl> <dt>NapSystemHealthAgent.h</dt> </dl>   |
+| Idl<br/>                      | <dl> <dt>NapSystemHealthAgent.idl</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Inapsystemhealthagentcallback**](inapsystemhealthagentcallback.md)
+[**INapSystemHealthAgentCallback**](inapsystemhealthagentcallback.md)
 </dt> <dt>
 
-[**SoH**](/windows/win32/api/naptypes/ns-naptypes-soh)
+[**Soh**](/windows/win32/api/naptypes/ns-naptypes-soh)
 </dt> </dl>
 
  

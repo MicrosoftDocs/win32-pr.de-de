@@ -1,23 +1,23 @@
 ---
-description: Die fotometadatenrichtlinie für die System. Image. ColorSpace-Eigenschaft.
+description: Die Richtlinie für Fotometadaten für die System.Image.ColorSpace-Eigenschaft.
 ms.assetid: 10770f16-8db2-4719-bce3-452f578002ec
-title: System. Image. ColorSpace-Foto-metadatenrichtlinie
+title: System.Image.ColorSpace-Richtlinie für Fotometadaten
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 6b6ef2003d05fa19b958b28950f71ec2d5f73027
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 85c7d7c9134a8bd93a12ba6cfb6bd8605e228cb6b745ad4401a94f91a2ba9ff9
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106356197"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118710420"
 ---
-# <a name="systemimagecolorspace-photo-metadata-policy"></a>System. Image. ColorSpace-Foto-metadatenrichtlinie
+# <a name="systemimagecolorspace-photo-metadata-policy"></a>System.Image.ColorSpace-Richtlinie für Fotometadaten
 
-Die fotometadatenrichtlinie für die [System. Image. ColorSpace](../properties/props-system-image-colorspace.md) -Eigenschaft.
+Die Richtlinie für Fotometadaten für die [System.Image.ColorSpace-Eigenschaft.](../properties/props-system-image-colorspace.md)
 
-### <a name="pkey"></a>Pkey
+### <a name="pkey"></a>PKEY
 
-Pkey- \_ Image \_ Color Space
+PKEY \_ Image \_ ColorSpace
 
 ### <a name="containers"></a>Container
 
@@ -27,7 +27,7 @@ JPEG, TIFF
 
 Ja
 
-### <a name="output-propvariant-type"></a>Ausgabe-PROPVARIANT-Typ
+### <a name="output-propvariant-type"></a>PROPVARIANT-Ausgabetyp
 
 VT \_ UI2
 
@@ -35,46 +35,46 @@ VT \_ UI2
 
 UShort
 
-### <a name="conflict-resolution-policy"></a>Richtlinie zur Konfliktlösung
+### <a name="conflict-resolution-policy"></a>Konfliktlösungsrichtlinie
 
-Werte aus unterschiedlichen Schemas sind abgestimmt.
+Werte aus verschiedenen Schemas werden abgestimmt.
 
 ### <a name="jpeg-policy"></a>JPEG-Richtlinie
 
-### <a name="read-paths"></a>Pfade lesen
+### <a name="read-paths"></a>Lesepfade
 
 
 
-| Auftrag | Pfad                          | Datenträger Format |
+| Auftrag | Pfad                          | Datenträgerformat |
 |-------|-------------------------------|-------------|
-| 1     | /App1/IFD/EXIF/{ushort = 40961} | ushort      |
-| 2     | /XMP/EXIF: colorspace          | Unicode     |
+| 1     | /app1/ifd/exif/{ushort=40961} | ushort      |
+| 2     | /xmp/exif:ColorSpace          | Unicode     |
 
 
 
  
 
-### <a name="write-paths"></a>Schreib Pfade
+### <a name="write-paths"></a>Schreibpfade
 
 
 
-| Auftrag | Pfad                          | Datenträger Format |
+| Auftrag | Pfad                          | Datenträgerformat |
 |-------|-------------------------------|-------------|
-| 1     | /App1/IFD/EXIF/{ushort = 40961} | ushort      |
-| 2     | /XMP/EXIF: colorspace          | Unicode     |
+| 1     | /app1/ifd/exif/{ushort=40961} | ushort      |
+| 2     | /xmp/exif:ColorSpace          | Unicode     |
 
 
 
  
 
-### <a name="remove-paths"></a>Pfade entfernen
+### <a name="remove-paths"></a>Entfernen von Pfaden
 
 
 
 | Auftrag | Pfad                          |
 |-------|-------------------------------|
-| 1     | /App1/IFD/EXIF/{ushort = 40961} |
-| 2     | /XMP/EXIF: colorspace          |
+| 1     | /app1/ifd/exif/{ushort=40961} |
+| 2     | /xmp/exif:colorspace          |
 
 
 
@@ -82,52 +82,52 @@ Werte aus unterschiedlichen Schemas sind abgestimmt.
 
 ### <a name="tiff-policies"></a>TIFF-Richtlinien
 
-### <a name="read-paths"></a>Pfade lesen
+### <a name="read-paths"></a>Lesepfade
 
 
 
-| Auftrag | Pfad                     | Datenträger Format |
+| Auftrag | Pfad                     | Datenträgerformat |
 |-------|--------------------------|-------------|
-| 1     | /IFD/EXIF/{ushort = 40961} | ushort      |
-| 2     | /IFD/XMP/EXIF: colorspace | Unicode     |
+| 1     | /ifd/exif/{ushort=40961} | ushort      |
+| 2     | /ifd/xmp/exif:ColorSpace | Unicode     |
 
 
 
  
 
-### <a name="write-paths"></a>Schreib Pfade
+### <a name="write-paths"></a>Schreibpfade
 
 
 
-| Auftrag | Pfad                     | Datenträger Format |
+| Auftrag | Pfad                     | Datenträgerformat |
 |-------|--------------------------|-------------|
-| 1     | /IFD/EXIF/{ushort = 40961} | ushort      |
-| 2     | /IFD/XMP/EXIF: colorspace | Unicode     |
+| 1     | /ifd/exif/{ushort=40961} | ushort      |
+| 2     | /ifd/xmp/exif:ColorSpace | Unicode     |
 
 
 
  
 
-### <a name="remove-paths"></a>Pfade entfernen
+### <a name="remove-paths"></a>Entfernen von Pfaden
 
 
 
 | Auftrag | Pfad                     |
 |-------|--------------------------|
-| 1     | /IFD/EXIF/{ushort = 40961} |
-| 2     | /IFD/XMP/EXIF: colorspace |
+| 1     | /ifd/exif/{ushort=40961} |
+| 2     | /ifd/xmp/exif:colorspace |
 
 
 
  
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
 <dl> <dt>
 
-[System. Image. ColorSpace](../properties/props-system-image-colorspace.md)
+[System.Image.ColorSpace](../properties/props-system-image-colorspace.md)
 </dt> </dl>
 
  

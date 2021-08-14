@@ -1,9 +1,9 @@
 ---
-title: Kredentialssource-Element (eaptype)
-description: Erfahren Sie mehr über das Element "kredentialssource" (eaptype). Dieses Element enthält Informationen zum Speicherort des EAP-TLS-Zertifikats.
+title: CredentialsSource (EapType)-Element
+description: Erfahren Sie mehr über das CredentialsSource-Element (EapType). Dieses Element enthält Informationen zum Speicherort des EAP-TLS-Zertifikats.
 ms.assetid: 6ef48e5e-7c71-472f-ab01-0a43a97ecd96
 keywords:
-- Kredentialssource-Element EAPHost
+- CredentialsSource-Element EAPHost
 topic_type:
 - apiref
 api_name:
@@ -14,16 +14,16 @@ ms.topic: reference
 ms.date: 05/31/2018
 api_location: ''
 ROBOTS: INDEX,FOLLOW
-ms.openlocfilehash: d68eccf44b7e2c248e366d8e3d8f05f4e7dd4774
-ms.sourcegitcommit: b0ebdefc3dcd5c04bede94091833aa1015a2f95c
+ms.openlocfilehash: 3d3591caf2a2e6a51099afb9a823c64bf49af32a6c6726771d8a24a24968b485
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/21/2020
-ms.locfileid: "106340737"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118984109"
 ---
-# <a name="credentialssource-eaptype-element"></a>Kredentialssource-Element (eaptype)
+# <a name="credentialssource-eaptype-element"></a>CredentialsSource (EapType)-Element
 
-Das Element " **kredentialssource" (eaptype)** enthält Informationen zum Speicherort des EAP-TLS-Zertifikats.
+Das **CredentialsSource-Element (EapType)** enthält Informationen zum Speicherort des EAP-TLS-Zertifikats.
 
 ``` syntax
 <xs:element name="CredentialsSource"
@@ -31,49 +31,49 @@ Das Element " **kredentialssource" (eaptype)** enthält Informationen zum Speich
  />
 ```
 
-Das Element " **kredentialssource** " wird durch das [**eaptype**](eaptlsconnectionpropertiesv1schema-eaptype-element.md) -Element definiert.
+Das **CredentialsSource-Element** wird durch das [**EapType-Element**](eaptlsconnectionpropertiesv1schema-eaptype-element.md) definiert.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Das Element " **kredentialsource** " ist optional.
+Das **CredentialSource-Element** ist optional.
 
 ## <a name="requirements"></a>Anforderungen
 
 
 
-| Role | Mindestens unterstützte Betriebssystemversion |
+| Role | Unterstützte Mindestversion des Betriebssystems |
 |------|------------------------------|
-| Client<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>       |
-| Server<br/> | Nur Windows Server 2008 \[ -Desktop-Apps\]<br/> |
+| Client<br/> | Windows Nur \[ Vista-Desktop-Apps\]<br/>       |
+| Server<br/> | Windows Nur Server \[ 2008-Desktop-Apps\]<br/> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-**Definitions Kontext des Elements im Schema**
+**Definitionskontext des Elements im Schema**
 </dt> <dt>
 
-[**Eaptype**](eaptlsconnectionpropertiesv1schema-eaptype-element.md)
+[**EapType**](eaptlsconnectionpropertiesv1schema-eaptype-element.md)
 </dt> <dt>
 
-**Mögliches unmittelbar übergeordnetes Element in der Schema Instanz**
+**Mögliches unmittelbar übergeordnetes Element in der Schemainstanz**
 </dt> <dt>
 
-[**Eaptype**](eaptlsconnectionpropertiesv1schema-eaptype-element.md)
+[**EapType**](eaptlsconnectionpropertiesv1schema-eaptype-element.md)
 </dt> <dt>
 
 
 </dt> <dt>
 
-[EAPHost und Legacy Schema](eaphost-schemas.md)
+[EAPHost und Legacyschema](eaphost-schemas.md)
 </dt> <dt>
 
 [eaptlsconnectionpropertiesv1-Schema](eaptlsconnectionpropertiesv1schema-schema.md)
 </dt> <dt>
 
-[eaptlsconnectionpropertiesv1-Schema Elemente](eaptlsconnectionpropertiesv1schema-elements.md)
+[eaptlsconnectionpropertiesv1-Schemaelemente](eaptlsconnectionpropertiesv1schema-elements.md)
 </dt> </dl>
 
  

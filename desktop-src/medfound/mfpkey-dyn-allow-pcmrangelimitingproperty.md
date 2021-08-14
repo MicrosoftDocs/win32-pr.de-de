@@ -1,19 +1,19 @@
 ---
-description: Gibt an, ob der Encoder PCM-Bereichs Beschränkung verwendet.
+description: Gibt an, ob der Encoder pcm range limiting verwendet.
 ms.assetid: 00427337-8f5a-41c9-a303-378a37be1913
-title: MFPKEY_DYN_ALLOW_PCMRANGELIMITING-Eigenschaft (wmcodecdsp. h)
+title: MFPKEY_DYN_ALLOW_PCMRANGELIMITING-Eigenschaft (Wmcodecdsp.h)
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 40c9c3e9dbae3bf0637614602832cf9b08e23a58
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: da5f6d44b9e75188ba3611b2af78c6c35bf8f40f98a587891a1e9c9206d72ebf
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106370659"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118738223"
 ---
-# <a name="mfpkey_dyn_allow_pcmrangelimiting-property"></a>Mfpkey \_ dyn \_ Allow \_ PCMRANGELIMITING (Eigenschaft)
+# <a name="mfpkey_dyn_allow_pcmrangelimiting-property"></a>MFPKEY \_ DYN \_ ALLOW \_ PCMRANGELIMITING-Eigenschaft
 
-Gibt an, ob der Encoder PCM-Bereichs Beschränkung verwendet. Lese-/Schreibzugriff.
+Gibt an, ob der Encoder pcm range limiting verwendet. Lese-/Schreibzugriff.
 
 ## <a name="constant-for-ipropertybag"></a>Konstante für IPropertyBag
 
@@ -21,7 +21,7 @@ Nur mit [**IPropertyStore**](/windows/win32/api/propsys/nn-propsys-ipropertystor
 
 ## <a name="data-type"></a>Datentyp
 
-**VT \_ bool**
+**VT \_ BOOL**
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -30,15 +30,15 @@ Nur mit [**IPropertyStore**](/windows/win32/api/propsys/nn-propsys-ipropertystor
 | Anforderung | Wert |
 |-------------------|-----------------------------------------------------------------------------------------|
 | Client<br/> | Windows Vista oder Windows 7<br/>                                                   |
-| Header<br/> | <dl> <dt>Wmcodecdsp. h</dt> </dl> |
+| Header<br/> | <dl> <dt>Wmcodecdsp.h</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[Eigenschaften von Media Foundation](media-foundation-properties.md)
+[Media Foundation-Eigenschaften](media-foundation-properties.md)
 </dt> </dl>
 
  

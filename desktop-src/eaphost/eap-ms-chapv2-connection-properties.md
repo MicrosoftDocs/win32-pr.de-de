@@ -1,19 +1,19 @@
 ---
-title: Eigenschaften der EAP-MS-CHAPv2 Verbindung
-description: Erfahren Sie mehr über die Eigenschaften der EAP-MS-CHAPv2 Verbindung. Sehen Sie sich ein Beispiel an, das eine Instanz des mschapv2connectionpropertiesv1-Legacy Schemas ist.
+title: EAPMS-CHAPv2 Verbindungseigenschaften
+description: Erfahren Sie mehr über die EAPMS-CHAPv2 Verbindungseigenschaften. Sehen Sie sich ein Beispiel an, das eine Instanz des Legacyschemas mschapv2connectionpropertiesv1 ist.
 ms.assetid: d6a057e0-56f6-4a31-9391-fde631ac2898
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: e353c4685e131c2e7301db35de26d927b5882c06
-ms.sourcegitcommit: 773fa6257ead6c74154ad3cf46d21e49adc900aa
+ms.openlocfilehash: 28ec894f8e95aa08e68aae418ed2b194c02a90cd008b9ac8d810d3c497e76f9e
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/09/2020
-ms.locfileid: "104391153"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118984260"
 ---
-# <a name="eap-ms-chapv2-connection-properties"></a>Eigenschaften der EAP-MS-CHAPv2 Verbindung
+# <a name="eap-ms-chapv2-connection-properties"></a>EAPMS-CHAPv2 Verbindungseigenschaften
 
-Bei diesem Beispiel handelt es sich um eine Instanz des [mschapv2connectionpropertiesv1](mschapv2connectionpropertiesv1schema-schema.md) -Legacy Schemas.
+Dieses Beispiel ist eine Instanz des [Legacyschemas mschapv2connectionpropertiesv1.](mschapv2connectionpropertiesv1schema-schema.md)
 
 ``` syntax
   <?xml version="1.0" ?> 
@@ -41,15 +41,15 @@ Bei diesem Beispiel handelt es sich um eine Instanz des [mschapv2connectionprope
 
 <dl> <dt>
 
-[Verbindungs Eigenschaften](connection-profiles.md)
+[Verbindungseigenschaften](connection-profiles.md)
 </dt> <dt>
 
-[EAPHost und Legacy Schema](eaphost-schemas.md)
+[EAPHost und Legacyschema](eaphost-schemas.md)
 </dt> </dl>
 
- 
+ 
 
- 
+ 
 
 
 

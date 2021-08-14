@@ -1,25 +1,25 @@
 ---
-description: Die iwbemstatus-Codetext-Schnittstelle stellt die folgenden Methoden zur Verfügung.
+description: Die IWbemStatusCodeText-Schnittstelle macht die folgenden Methoden verfügbar.
 ms.assetid: 21D52B18-F56D-4C9C-9920-48E471B94B9B
 ms.tgt_platform: multiple
-title: Iwbemstatus-Codetext-Methoden
+title: IWbemStatusCodeText-Methoden
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 9233ddfb0471fc761222e4892967ccead2aeb551
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 7d2ae56e4516ebc8e77a2bf76253b710dab75f82c41f846da26fb408bd025263
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "103865355"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118555934"
 ---
-# <a name="iwbemstatuscodetext-methods"></a>Iwbemstatus-Codetext-Methoden
+# <a name="iwbemstatuscodetext-methods"></a>IWbemStatusCodeText-Methoden
 
-Die [**iwbemstatus-Codetext**](/windows/desktop/api/Wbemcli/nn-wbemcli-iwbemstatuscodetext) -Schnittstelle stellt die folgenden Methoden zur Verfügung.
+Die [**IWbemStatusCodeText-Schnittstelle**](/windows/desktop/api/Wbemcli/nn-wbemcli-iwbemstatuscodetext) macht die folgenden Methoden verfügbar.
 
 ## <a name="in-this-section"></a>In diesem Abschnitt
 
--   [**Geterrorcodetext-Methode**](/windows/desktop/api/Wbemcli/nf-wbemcli-iwbemstatuscodetext-geterrorcodetext)
--   [**Getfacilitycodetext-Methode**](/windows/desktop/api/Wbemcli/nf-wbemcli-iwbemstatuscodetext-getfacilitycodetext)
+-   [**GetErrorCodeText-Methode**](/windows/desktop/api/Wbemcli/nf-wbemcli-iwbemstatuscodetext-geterrorcodetext)
+-   [**GetFacilityCodeText-Methode**](/windows/desktop/api/Wbemcli/nf-wbemcli-iwbemstatuscodetext-getfacilitycodetext)
 
  
 

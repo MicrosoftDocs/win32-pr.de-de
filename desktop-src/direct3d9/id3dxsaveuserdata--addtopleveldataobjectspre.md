@@ -1,7 +1,7 @@
 ---
-description: Fügen Sie ein Objekt der obersten Ebene vor der Frame Hierarchie hinzu.
+description: Fügen Sie vor der Framehierarchie ein Objekt der obersten Ebene hinzu.
 ms.assetid: ab4bfc3e-58eb-4de6-b080-8b3392b801bf
-title: 'ID3DXSaveUserData:: addtopleveldataobjectspre-Methode (D3dx9anim. h)'
+title: ID3DXSaveUserData::AddTopLevelDataObjectsPre-Methode (D3dx9anim.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -14,16 +14,16 @@ api_type:
 api_location:
 - d3dx9.lib
 - d3dx9.dll
-ms.openlocfilehash: d0194c8c9c6806f96cbe75394e6650ca3e7dc74b
-ms.sourcegitcommit: 14010c34b35fa268046c7683f021f86de08ddd0a
+ms.openlocfilehash: 52052a24c34c99260a68cd5cdeaa7487e6b71c086ac30922a06de241de8319ea
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "106361242"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118801161"
 ---
-# <a name="id3dxsaveuserdataaddtopleveldataobjectspre-method"></a>ID3DXSaveUserData:: addtopleveldataobjectspre-Methode
+# <a name="id3dxsaveuserdataaddtopleveldataobjectspre-method"></a>ID3DXSaveUserData::AddTopLevelDataObjectsPre-Methode
 
-Fügen Sie ein Objekt der obersten Ebene vor der Frame Hierarchie hinzu.
+Fügen Sie vor der Framehierarchie ein Objekt der obersten Ebene hinzu.
 
 ## <a name="syntax"></a>Syntax
 
@@ -40,12 +40,12 @@ HRESULT AddTopLevelDataObjectsPre(
 
 <dl> <dt>
 
-*pxofsave* \[ in\]
+*pXofSave* \[ In\]
 </dt> <dd>
 
 Typ: **[ **LPD3DXFILESAVEOBJECT**](id3dxfilesaveobject.md)**
 
-Zeiger auf ein x-Dateispeicher Objekt. Verwenden Sie diesen Zeiger, um [**idirectxfilesaveobject:: kreatedataobject**](idirectxfilesaveobject--createdataobject.md) aufzurufen, um das zu speichernde Datenobjekt zu erstellen. Anschließend wird [**idirectxfilesaveobject:: SaveData**](idirectxfilesaveobject--savedata.md) aufgerufen, um die Daten zu speichern.
+Zeiger auf ein .x-Datei-Speicherobjekt. Verwenden Sie diesen Zeiger zum Aufrufen [**von IDirectXFileSaveObject::CreateDataObject,**](idirectxfilesaveobject--createdataobject.md) um das zu speichernde Datenobjekt zu erstellen. Rufen Sie dann [**IDirectXFileSaveObject::SaveData auf,**](idirectxfilesaveobject--savedata.md) um die Daten zu speichern.
 
 </dd> </dl>
 
@@ -53,7 +53,7 @@ Zeiger auf ein x-Dateispeicher Objekt. Verwenden Sie diesen Zeiger, um [**idirec
 
 Typ: **[ **HRESULT**](https://msdn.microsoft.com/library/Bb401631(v=MSDN.10).aspx)**
 
-Die Rückgabewerte dieser Methode werden von einem Anwendungsprogrammierer implementiert. Wenn kein Fehler auftritt, programmieren Sie im Allgemeinen die-Methode, um D3D OK zurückzugeben \_ . Andernfalls programmieren Sie die Methode, um eine entsprechende Fehlermeldung von [D3DERR](d3derr.md) oder [**D3DXERR**](./d3dxerr.md)zurückzugeben, da dies dazu führt, dass [**D3DXLoadMeshHierarchyFromX**](d3dxloadmeshhierarchyfromx.md) ebenfalls fehlschlägt, und gibt den Fehler zurück.
+Die Rückgabewerte dieser Methode werden von einem Anwendungsprogrammierer implementiert. Wenn kein Fehler auftritt, programmieren Sie im Allgemeinen die -Methode so, dass D3D \_ OK zurückgegeben wird. Programmieren Sie andernfalls die -Methode so, dass eine entsprechende Fehlermeldung von [D3DERR](d3derr.md) oder [**D3DXERR**](./d3dxerr.md)zurückgegeben wird, da dadurch auch [**D3DXLoadMeshHierarchyFromX**](d3dxloadmeshhierarchyfromx.md) fehlschlägt und der Fehler zurückgegeben wird.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -61,12 +61,12 @@ Die Rückgabewerte dieser Methode werden von einem Anwendungsprogrammierer imple
 
 | Anforderung | Wert |
 |--------------------|----------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>D3dx9anim. h</dt> </dl> |
-| Bibliothek<br/> | <dl> <dt>D3dx9. lib</dt> </dl>   |
+| Header<br/>  | <dl> <dt>D3dx9anim.h</dt> </dl> |
+| Bibliothek<br/> | <dl> <dt>D3dx9.lib</dt> </dl>   |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 

@@ -1,6 +1,6 @@
 ---
-title: WINBIO_POOL Konstanten (winbio \_ types. h)
-description: Geben Sie den Typ des biometrischen Einheiten Pools an, der in der Sitzung verwendet werden soll.
+title: WINBIO_POOL Konstanten (Winbio \_ types.h)
+description: Geben Sie den Typ des biometrischen Einheitenpools an, der in der Sitzung verwendet werden soll.
 ms.assetid: e6e49b95-981a-477d-9889-ea132db5b387
 topic_type:
 - apiref
@@ -15,25 +15,25 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: b7af1ec8d5692a390bb91ecb63736bd94efb2e85
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: fefc43bb9dc4cefbde1ce5622853a3ba2cfae498ff2f8f81e97417e306641db9
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104519025"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118909797"
 ---
-# <a name="winbio_pool-constants"></a>Winbio- \_ Pool Konstanten
+# <a name="winbio_pool-constants"></a>WINBIO \_ POOL-Konstanten
 
-Die folgenden Konstanten können in der [**winbioopensession**](/windows/desktop/api/Winbio/nf-winbio-winbioopensession) -Funktion verwendet werden, um den Typ des biometrischen Einheiten Pools anzugeben, der in der Sitzung verwendet werden soll.
+Die folgenden Konstanten können in der [**WinBioOpenSession-Funktion**](/windows/desktop/api/Winbio/nf-winbio-winbioopensession) verwendet werden, um den Typ des biometrischen Einheitenpools anzugeben, der in der Sitzung verwendet werden soll.
 
 
 
 | Konstante                                                                                                                                                                                  | BESCHREIBUNG                                                                                  |
 |:------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|:---------------------------------------------------------------------------------------------|
-| <span id="WINBIO_POOL_UNKNOWN"></span><span id="winbio_pool_unknown"></span><dl> <dt>**winbio- \_ Pool \_ unbekannt**</dt> </dl>          | Der Pooltyp ist unbekannt.<br/>                                                         |
-| <span id="WINBIO_POOL_SYSTEM"></span><span id="winbio_pool_system"></span><dl> <dt>**winbio- \_ Pool \_ System**</dt> </dl>             | Gibt eine freigegebene Auflistung biometrischer Einheiten an, die vom Dienstanbieter verwaltet werden.<br/> |
-| <span id="WINBIO_POOL_PRIVATE"></span><span id="winbio_pool_private"></span><dl> <dt>**privater winbio- \_ Pool \_**</dt> </dl>          | Gibt eine Sammlung von biometrischen Einheiten an, die vom Aufrufer verwaltet werden.<br/>         |
-| <span id="WINBIO_POOL_UNASSIGNED"></span><span id="winbio_pool_unassigned"></span><dl> <dt>**winbio- \_ Pool \_ nicht zugewiesen**</dt> </dl> | Reserviert.<br/>                                                                         |
+| <span id="WINBIO_POOL_UNKNOWN"></span><span id="winbio_pool_unknown"></span><dl> <dt>**\_WINBIO-POOL \_ UNBEKANNT**</dt> </dl>          | Der Pooltyp ist unbekannt.<br/>                                                         |
+| <span id="WINBIO_POOL_SYSTEM"></span><span id="winbio_pool_system"></span><dl> <dt>**\_WINBIO-POOLSYSTEM \_**</dt> </dl>             | Gibt eine freigegebene Sammlung biometrischer Einheiten an, die vom Dienstanbieter verwaltet werden.<br/> |
+| <span id="WINBIO_POOL_PRIVATE"></span><span id="winbio_pool_private"></span><dl> <dt>**WINBIO \_ POOL \_ PRIVATE**</dt> </dl>          | Gibt eine Auflistung biometrischer Einheiten an, die vom Aufrufer verwaltet werden.<br/>         |
+| <span id="WINBIO_POOL_UNASSIGNED"></span><span id="winbio_pool_unassigned"></span><dl> <dt>**\_WINBIO-POOL \_ NICHT ZUGEWIESEN**</dt> </dl> | Reserviert.<br/>                                                                         |
 
 
 
@@ -43,17 +43,17 @@ Die folgenden Konstanten können in der [**winbioopensession**](/windows/desktop
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows 7 \[ -Desktop-Apps\]<br/>                                                                    |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2008 R2 \[ -Desktop-Apps\]<br/>                                                       |
-| Header<br/>                   | <dl> <dt>Winbio \_ types. h (Include winbio. h)</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | nur Windows 7 \[ Desktop-Apps\]<br/>                                                                    |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server 2008 \[ R2-Desktop-Apps\]<br/>                                                       |
+| Header<br/>                   | <dl> <dt>Winbio \_ types.h (winbio.h einschließen)</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[Client Anwendungs Konstanten](client-application-constants.md)
+[Clientanwendungskonstanten](client-application-constants.md)
 </dt> </dl>
 
  

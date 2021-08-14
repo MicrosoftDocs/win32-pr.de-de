@@ -1,9 +1,9 @@
 ---
 title: usesgetlasterror-Attribut
-description: Das Attribut \ "\"-GetLastError \ "signalisiert dem Aufrufer, dass GetLastError aufgerufen werden kann, um den Fehlercode abzurufen.
+description: Das Attribut \usesgetlasterror\ signalisiert dem Aufrufer, dass er GetLastError aufrufen kann, um den Fehlercode abzurufen.
 ms.assetid: 8e9ab8b5-f446-4aab-bb40-b6f78799e18e
 keywords:
-- attributgetlasterror-Attribut (Mittel l)
+- usesgetlasterror attribute MIDL
 topic_type:
 - apiref
 api_name:
@@ -12,16 +12,16 @@ api_type:
 - NA
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: d0f403430f70fde71696ec2a35a34161f08bada9
-ms.sourcegitcommit: ebd3ce6908ff865f1ef66f2fc96769be0aad82e1
+ms.openlocfilehash: 239486792eb218d51c305f9955331e90c6c165586153dab167f2e19d3a0324e3
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/19/2020
-ms.locfileid: "103725137"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118641035"
 ---
 # <a name="usesgetlasterror-attribute"></a>usesgetlasterror-Attribut
 
-Das Attribut "$ **\[ GetLastError \]** " signalisiert dem Aufrufer, dass es [**GetLastError**](/windows/desktop/api/errhandlingapi/nf-errhandlingapi-getlasterror) aufrufen kann, um den Fehlercode abzurufen.
+Das **\[ usesgetlasterror-Attribut \]** signalisiert dem Aufrufer, dass er [**GetLastError**](/windows/desktop/api/errhandlingapi/nf-errhandlingapi-getlasterror) aufrufen kann, um den Fehlercode abzurufen.
 
 ``` syntax
 [
@@ -37,10 +37,10 @@ module module-name
 
 <dl> <dt>
 
-*Module-Attribute* 
+*module-attributes* 
 </dt> <dd>
 
-NULL oder mehr mittlere Attribute, die auf das [**Modul**](module.md)angewendet werden.
+Null oder mehr MIDL-Attribute, die auf das Modul angewendet [**werden.**](module.md)
 
 </dd> <dt>
 
@@ -51,44 +51,44 @@ Der Bezeichnername des [**Moduls**](module.md).
 
 </dd> <dt>
 
-*Eintrags-ID* 
+*entry-id* 
 </dt> <dd>
 
-Gibt den Einstiegspunkt des Moduls an – Funktionsname oder ganzzahlige Identifikationsnummer.
+Gibt den Moduleinstiegspunkt–Funktionsnamen oder die Ganzzahl-ID an.
 
 </dd> <dt>
 
-*andere-Attribute* 
+*other-attributes* 
 </dt> <dd>
 
-NULL oder mehr mittlere Attribute, die auf die Remote Prozedur angewendet werden.
+Null oder mehr MIDL-Attribute, die auf die Remoteprozedur angewendet werden.
 
 </dd> <dt>
 
-*Rückgabetyp* 
+*return-type* 
 </dt> <dd>
 
-Der Typ der Daten, die von der Remote Prozedur bei Abschluss zurückgegeben werden.
+Der Typ der Daten, die von der Remoteprozedur nach Abschluss des Vorgangs zurückgeben werden.
 
 </dd> <dt>
 
-*function-name* 
+*Funktionsname* 
 </dt> <dd>
 
-Der Name der Remote Prozedur, wie in der IDL-Datei definiert.
+Der Name der Remoteprozedur, wie in der IDL-Datei definiert.
 
 </dd> <dt>
 
-*param-Liste* 
+*param-list* 
 </dt> <dd>
 
-NULL oder mehr Parameter für die Remote Prozedur.
+Null oder mehr Parameter für die Remoteprozedur.
 
 </dd> </dl>
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Das **\[ usesgetlasterror \]** -Attribut kann für einen Modul Einstiegspunkt festgelegt werden, wenn der Einstiegspunkt die Windows-Funktion [**SetLastError**](/windows/desktop/api/errhandlingapi/nf-errhandlingapi-setlasterror) zum Zurückgeben von Fehlercodes verwendet. Das-Attribut teilt dem Aufrufer mit, dass der Aufrufer dann [**GetLastError**](/windows/desktop/api/errhandlingapi/nf-errhandlingapi-getlasterror) aufrufen kann, um den Fehlercode abzurufen, wenn beim Aufrufen der Funktion ein Fehler auftritt.
+Das **\[ usesgetlasterror-Attribut \]** kann für einen Moduleinstiegspunkt festgelegt werden, wenn dieser Einstiegspunkt die Windows [**SetLastError**](/windows/desktop/api/errhandlingapi/nf-errhandlingapi-setlasterror) verwendet, um Fehlercodes zurück zu geben. Das -Attribut teilt dem Aufrufer mit, dass der Aufrufer [**getLastError**](/windows/desktop/api/errhandlingapi/nf-errhandlingapi-getlasterror) aufrufen kann, wenn beim Aufrufen dieser Funktion ein Fehler auftritt, um den Fehlercode abzurufen.
 
 ## <a name="examples"></a>Beispiele
 
@@ -114,15 +114,15 @@ module MyModule
 
 <dl> <dt>
 
-[Erstellen einer Typbibliothek mit "Mittel l"](generating-a-type-library-with-midl-2.md)
+[Generieren einer Typbibliothek mit MIDL](generating-a-type-library-with-midl-2.md)
 </dt> <dt>
 
-[Beispiel für eine ODL-Datei](/previous-versions/windows/desktop/automat/odl-file-example)
+[ODL-Dateibeispiel](/previous-versions/windows/desktop/automat/odl-file-example)
 </dt> <dt>
 
-[Syntax der ODL-Datei](/previous-versions/windows/desktop/automat/odl-file-syntax)
+[ODL-Dateisyntax](/previous-versions/windows/desktop/automat/odl-file-syntax)
 </dt> </dl>
 
- 
+ 
 
- 
+ 

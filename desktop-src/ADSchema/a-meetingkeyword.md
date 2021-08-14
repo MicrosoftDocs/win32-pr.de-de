@@ -1,10 +1,10 @@
 ---
-title: meetingkeyword-Attribut
+title: meetingKeyword-Attribut
 description: Ein Schlüsselwort, das verwendet wird, um eine Besprechung zu finden.
 ms.assetid: d268f01b-ff16-4d53-b431-856e4ba53f73
 ms.tgt_platform: multiple
 keywords:
-- Attribut des Attributs "meetingkeyword"
+- meetingKeyword-Attribut AD-Schema
 topic_type:
 - apiref
 api_name:
@@ -13,14 +13,14 @@ api_type:
 - Schema
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: f0bc64d1a863d3b613b8a2876fd20bc8c32fcb1c
-ms.sourcegitcommit: b77ace27b0432e7cd3863191b11926be032fbe2f
+ms.openlocfilehash: b091648b5931c55713e6e9d72d0759b952a087bd8ee8944de591895fc386e1c9
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "106342896"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118687746"
 ---
-# <a name="meetingkeyword-attribute"></a>meetingkeyword-Attribut
+# <a name="meetingkeyword-attribute"></a>meetingKeyword-Attribut
 
 Ein Schlüsselwort, das verwendet wird, um eine Besprechung zu finden.
 
@@ -28,13 +28,13 @@ Ein Schlüsselwort, das verwendet wird, um eine Besprechung zu finden.
 
 | Eingabe | Wert |
 |-------------------|---------------------------------------------|
-| CN                | meetingkeyword                              |
-| LDAP-Display-Name | meetingkeyword                              |
+| CN                | meetingKeyword                              |
+| Ldap-Anzeigename | meetingKeyword                              |
 | Size              | \-                                          |
-| Berechtigung aktualisieren  | \-                                          |
-| Aktualisierungshäufigkeit  | \-                                          |
+| Aktualisieren von Berechtigungen  | \-                                          |
+| Updatehäufigkeit  | \-                                          |
 | Attribute-Id      | 1.2.840.113556.1.4.568                      |
-| System-ID-GUID    | 11b6cc7b-48C4-11d1-a9c3-0000t80367c1        |
+| System-Id-Guid    | 11b6cc7f-48c4-11d1-a9c3-0000f80367c1        |
 | Syntax            | [**String(Unicode)**](s-string-unicode.md) |
 
 
@@ -42,7 +42,7 @@ Ein Schlüsselwort, das verwendet wird, um eine Besprechung zu finden.
 ## <a name="implementations"></a>Implementierungen
 
 -   [**Windows 2000 Server**](#windows-2000-server)
--   [**Windows Server 2003**](#windows-server-2003)
+-   [**Windows Server 2003**](#windows-server-2003)
 -   [**Windows Server 2003 R2**](#windows-server-2003-r2)
 -   [**Windows Server 2008**](#windows-server-2008)
 -   [**Windows Server 2008 R2**](#windows-server-2008-r2)
@@ -56,20 +56,20 @@ Ein Schlüsselwort, das verwendet wird, um eine Besprechung zu finden.
 |------------------------|-----------------------------------------|
 | Link-ID                | \-                                      |
 | MAPI-Id                | \-                                      |
-| System-Only            | False                                   |
-| Ist-einwertig       | False                                   |
-| Ist indiziert             | False                                   |
-| Im globalen Katalog      | False                                   |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                            |
+| System-Only            | Falsch                                   |
+| Is-Single-Valued       | Falsch                                   |
+| Ist indiziert             | Falsch                                   |
+| Im globalen Katalog      | Falsch                                   |
+| NT-Security-Descriptor | O:BAG:BAD:S:                            |
 | Range-Lower            | \-                                      |
 | Range-Upper            | \-                                      |
 | Search-Flags           | 0x00000000                              |
 | System-Flags           | 0x00000010                              |
-| In verwendete Klassen        | [**Freuen**](c-meeting.md)<br/> |
+| In verwendete Klassen        | [**Sitzung**](c-meeting.md)<br/> |
 
 
 
-## <a name="windows-server-2003"></a>Windows Server 2003
+## <a name="windows-server-2003"></a>Windows Server 2003
 
 
 
@@ -77,16 +77,16 @@ Ein Schlüsselwort, das verwendet wird, um eine Besprechung zu finden.
 |------------------------|-----------------------------------------|
 | Link-ID                | \-                                      |
 | MAPI-Id                | \-                                      |
-| System-Only            | False                                   |
-| Ist-einwertig       | False                                   |
-| Ist indiziert             | False                                   |
-| Im globalen Katalog      | False                                   |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                            |
+| System-Only            | Falsch                                   |
+| Is-Single-Valued       | Falsch                                   |
+| Ist indiziert             | Falsch                                   |
+| Im globalen Katalog      | Falsch                                   |
+| NT-Security-Descriptor | O:BAG:BAD:S:                            |
 | Range-Lower            | \-                                      |
 | Range-Upper            | \-                                      |
 | Search-Flags           | 0x00000000                              |
 | System-Flags           | 0x00000010                              |
-| In verwendete Klassen        | [**Freuen**](c-meeting.md)<br/> |
+| In verwendete Klassen        | [**Sitzung**](c-meeting.md)<br/> |
 
 
 
@@ -98,16 +98,16 @@ Ein Schlüsselwort, das verwendet wird, um eine Besprechung zu finden.
 |------------------------|-----------------------------------------|
 | Link-ID                | \-                                      |
 | MAPI-Id                | \-                                      |
-| System-Only            | False                                   |
-| Ist-einwertig       | False                                   |
-| Ist indiziert             | False                                   |
-| Im globalen Katalog      | False                                   |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                            |
+| System-Only            | Falsch                                   |
+| Is-Single-Valued       | Falsch                                   |
+| Ist indiziert             | Falsch                                   |
+| Im globalen Katalog      | Falsch                                   |
+| NT-Security-Descriptor | O:BAG:BAD:S:                            |
 | Range-Lower            | \-                                      |
 | Range-Upper            | \-                                      |
 | Search-Flags           | 0x00000000                              |
 | System-Flags           | 0x00000010                              |
-| In verwendete Klassen        | [**Freuen**](c-meeting.md)<br/> |
+| In verwendete Klassen        | [**Sitzung**](c-meeting.md)<br/> |
 
 
 
@@ -119,16 +119,16 @@ Ein Schlüsselwort, das verwendet wird, um eine Besprechung zu finden.
 |------------------------|-----------------------------------------|
 | Link-ID                | \-                                      |
 | MAPI-Id                | \-                                      |
-| System-Only            | False                                   |
-| Ist-einwertig       | False                                   |
-| Ist indiziert             | False                                   |
-| Im globalen Katalog      | False                                   |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                            |
+| System-Only            | Falsch                                   |
+| Ist einwertig       | Falsch                                   |
+| Ist indiziert             | Falsch                                   |
+| Im globalen Katalog      | Falsch                                   |
+| NT-Security-Descriptor | O:BAG:BAD:S:                            |
 | Range-Lower            | \-                                      |
 | Range-Upper            | \-                                      |
 | Search-Flags           | 0x00000000                              |
 | System-Flags           | 0x00000010                              |
-| In verwendete Klassen        | [**Freuen**](c-meeting.md)<br/> |
+| In verwendete Klassen        | [**Sitzung**](c-meeting.md)<br/> |
 
 
 
@@ -140,16 +140,16 @@ Ein Schlüsselwort, das verwendet wird, um eine Besprechung zu finden.
 |------------------------|-----------------------------------------|
 | Link-ID                | \-                                      |
 | MAPI-Id                | \-                                      |
-| System-Only            | False                                   |
-| Ist-einwertig       | False                                   |
-| Ist indiziert             | False                                   |
-| Im globalen Katalog      | False                                   |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                            |
+| System-Only            | Falsch                                   |
+| Ist einwertig       | Falsch                                   |
+| Ist indiziert             | Falsch                                   |
+| Im globalen Katalog      | Falsch                                   |
+| NT-Security-Descriptor | O:BAG:BAD:S:                            |
 | Range-Lower            | \-                                      |
 | Range-Upper            | \-                                      |
 | Search-Flags           | 0x00000000                              |
 | System-Flags           | 0x00000010                              |
-| In verwendete Klassen        | [**Freuen**](c-meeting.md)<br/> |
+| In verwendete Klassen        | [**Sitzung**](c-meeting.md)<br/> |
 
 
 
@@ -161,16 +161,16 @@ Ein Schlüsselwort, das verwendet wird, um eine Besprechung zu finden.
 |------------------------|-----------------------------------------|
 | Link-ID                | \-                                      |
 | MAPI-Id                | \-                                      |
-| System-Only            | False                                   |
-| Ist-einwertig       | False                                   |
-| Ist indiziert             | False                                   |
-| Im globalen Katalog      | False                                   |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                            |
+| System-Only            | Falsch                                   |
+| Ist einwertig       | Falsch                                   |
+| Ist indiziert             | Falsch                                   |
+| Im globalen Katalog      | Falsch                                   |
+| NT-Security-Descriptor | O:BAG:BAD:S:                            |
 | Range-Lower            | \-                                      |
 | Range-Upper            | \-                                      |
 | Search-Flags           | 0x00000000                              |
 | System-Flags           | 0x00000010                              |
-| In verwendete Klassen        | [**Freuen**](c-meeting.md)<br/> |
+| In verwendete Klassen        | [**Sitzung**](c-meeting.md)<br/> |
 
 
 

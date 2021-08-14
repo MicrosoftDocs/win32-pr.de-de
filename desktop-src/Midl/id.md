@@ -1,9 +1,9 @@
 ---
 title: id-Attribut
-description: Das Attribut \ ID \ gibt eine DISPID für eine Element Funktion an (entweder eine Eigenschaft oder eine Methode in einer Schnittstelle oder einer dispinterface).
+description: Das \id\-Attribut gibt eine DISPID für eine Memberfunktion an (entweder eine Eigenschaft oder eine Methode in einer Schnittstelle oder Dispinterface).
 ms.assetid: 6f1be049-81b4-4aa2-a893-5dd79bb4d63c
 keywords:
-- ID-Attribut-Mittel l
+- ID-Attribut MIDL
 topic_type:
 - apiref
 api_name:
@@ -12,16 +12,16 @@ api_type:
 - NA
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 07c57d8ea818bbd7b8fd5bd35816e6b7227eb917
-ms.sourcegitcommit: ebd3ce6908ff865f1ef66f2fc96769be0aad82e1
+ms.openlocfilehash: 0a4d783265ebfcf9dca454c80c39031dc0c37dfb63a8749b4d0e6299a510d91a
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/19/2020
-ms.locfileid: "104390175"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118643066"
 ---
 # <a name="id-attribute"></a>id-Attribut
 
-Das **\[ ID \]** -Attribut gibt eine DISPID für eine Element Funktion an (entweder eine Eigenschaft oder eine Methode in einer Schnittstelle oder einer dispinterface).
+Das **\[ id-Attribut \]** gibt eine DISPID für eine Memberfunktion an (entweder eine Eigenschaft oder eine Methode in einer Schnittstelle oder Dispinterface).
 
 ``` syntax
 [id(id-num) [,optional-attribute-list]] return-type function-name(optional-parameter-list)
@@ -31,48 +31,48 @@ Das **\[ ID \]** -Attribut gibt eine DISPID für eine Element Funktion an (entwe
 
 <dl> <dt>
 
-*ID-num* 
+*id-num* 
 </dt> <dd>
 
 DISPID für die Funktion.
 
 </dd> <dt>
 
-*optional-Attribut-List* 
+*optional-attribute-list* 
 </dt> <dd>
 
-Gibt eine Liste von 0 (null) oder mehr Attributen der Mittelwert Schnittstelle an.
+Gibt eine Liste von null oder mehr MIDL-Schnittstellenattributen an.
 
 </dd> <dt>
 
-*Rückgabetyp* 
+*rückgabetyp* 
 </dt> <dd>
 
 Gibt den Rückgabetyp der Funktion an.
 
 </dd> <dt>
 
-*function-name* 
+*Funktionsname* 
 </dt> <dd>
 
 Gibt den Namen der Funktion in der IDL-Datei an.
 
 </dd> <dt>
 
-*Optional-Parameter-List* 
+*optional-parameter-list* 
 </dt> <dd>
 
-NULL oder mehr Funktionsparameter.
+Null oder mehr Funktionsparameter.
 
 </dd> </dl>
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Verwenden Sie das **\[ ID \]** -Attribut, wenn Sie einer Methode oder Eigenschaft eine Standard-DISPID (z. b. DISPID- \_ Wert, DISPID-Diagramm \_ usw.) zuweisen möchten, oder wenn Sie einen eigenen **IDispatch::** -Aufruf implementieren, anstatt zu delegieren, um / **ITypeInfo:: Aufrufen** zu lösen.
+Verwenden Sie das **\[ \] id-Attribut,** wenn Sie einer Methode oder Eigenschaft eine Standard-DISPID (z.B. DISPID \_ VALUE, DISPID \_ NEWENUM usw.) zuweisen möchten oder wenn Sie Ihr eigenes **IDispatch::Invoke** implementieren, anstatt an **DispInvoke** / **ITypeInfo::Invoke** zu delegieren.
 
-Wenn Sie das **\[ ID \]** -Attribut nicht für eine Schnittstelle verwenden, weist der mittlerer l-Compiler eine "DISPID" zu. Wenn Sie jedoch eine dispinterface mithilfe von Eigenschaften und Methoden angeben, müssen Sie für jede Eigenschaft und Methode eine DISPID angeben.
+Wenn Sie das **\[ ID-Attribut \]** nicht für eine Schnittstelle verwenden, weist der MIDL-Compiler Ihnen eine DISPID zu. Wenn Sie jedoch eine Disp-Schnittstelle mithilfe von Eigenschaften und Methoden angeben, müssen Sie eine DISPID für jede Eigenschaft und Methode angeben.
 
-Die *ID-num* ist ein positiver ganzzahliger Wert von 32 Bit. Negative IDs sind für die Verwendung durch Automation reserviert.
+*Id-num* ist ein positiver 32-Bit-Ganzzahlwert. Negative IDs sind für die Verwendung durch Automation reserviert.
 
 ## <a name="examples"></a>Beispiele
 
@@ -91,21 +91,21 @@ interface IKnown : IUnknown
 
 <dl> <dt>
 
-[**berfläche**](interface.md)
+[**Schnittstelle**](interface.md)
 </dt> <dt>
 
-[**dispinterface**](dispinterface.md)
+[**Dispatchschnittstelle**](dispinterface.md)
 </dt> <dt>
 
-[Syntax der ODL-Datei](/previous-versions/windows/desktop/automat/odl-file-syntax)
+[ODL-Dateisyntax](/previous-versions/windows/desktop/automat/odl-file-syntax)
 </dt> <dt>
 
-[Beispiel für eine ODL-Datei](/previous-versions/windows/desktop/automat/odl-file-example)
+[BEISPIEL FÜR ODL-Datei](/previous-versions/windows/desktop/automat/odl-file-example)
 </dt> <dt>
 
-[Erstellen einer Typbibliothek mit "Mittel l"](generating-a-type-library-with-midl-2.md)
+[Generieren einer Typbibliothek mit MIDL](generating-a-type-library-with-midl-2.md)
 </dt> </dl>
 
- 
+ 
 
- 
+ 

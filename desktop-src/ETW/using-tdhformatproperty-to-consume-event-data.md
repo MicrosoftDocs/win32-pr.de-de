@@ -1,19 +1,19 @@
 ---
-description: Im folgenden Beispiel wird gezeigt, wie Ereignisdaten mithilfe der tdhformatproperty-Funktion verarbeitet werden.
+description: Das folgende Beispiel zeigt, wie Ereignisdaten mithilfe der TdhFormatProperty-Funktion verwendet werden.
 ms.assetid: 5ebd500c-420e-4979-a03a-49b687464b0e
-title: Verwenden von tdhformatproperty zum Verarbeiten von Ereignisdaten
+title: Verwenden von TdhFormatProperty zum Verarbeiten von Ereignisdaten
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: ea9b26e13cbd6476942bfb77e6a163ddd54e540e
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
-ms.translationtype: HT
+ms.openlocfilehash: 446da0757b0f55ae88d54f65762041f1e78bf896f5841e3bdac3f7309e53b5f3
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104977784"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118951229"
 ---
-# <a name="using-tdhformatproperty-to-consume-event-data"></a>Verwenden von tdhformatproperty zum Verarbeiten von Ereignisdaten
+# <a name="using-tdhformatproperty-to-consume-event-data"></a>Verwenden von TdhFormatProperty zum Verarbeiten von Ereignisdaten
 
-Im folgenden Beispiel wird gezeigt, wie Ereignisdaten mithilfe der [**tdhformatproperty**](/windows/desktop/api/Tdh/nf-tdh-tdhformatproperty) -Funktion verarbeitet werden.
+Das folgende Beispiel zeigt, wie Ereignisdaten mithilfe der [**TdhFormatProperty-Funktion**](/windows/desktop/api/Tdh/nf-tdh-tdhformatproperty) verwendet werden.
 
 
 ```C++

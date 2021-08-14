@@ -1,21 +1,21 @@
 ---
-description: Die WM- \_ ncpaint-Meldung wird an ein Fenster gesendet, wenn Ihr Frame gezeichnet werden muss.
+description: Die WM \_ NCPAINT-Nachricht wird an ein Fenster gesendet, wenn der Rahmen gestrichen werden muss.
 ms.assetid: d8a2a8b9-2c5d-484c-be09-67eb33de67c0
-title: WM_NCPAINT Meldung (Winuser. h)
+title: WM_NCPAINT (Winuser.h)
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 6f6c2e211f3dc1602821b0197d295f940606c262
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 6be5fa951d50dbaf8663e34a5d9476ecb62576c203095bed9427dcef44425690
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "103864316"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118978000"
 ---
-# <a name="wm_ncpaint-message"></a>WM- \_ ncpaint-Meldung
+# <a name="wm_ncpaint-message"></a>WM \_ NCPAINT-Meldung
 
-Die **WM- \_ ncpaint** -Meldung wird an ein Fenster gesendet, wenn Ihr Frame gezeichnet werden muss.
+Die **WM \_ NCPAINT-Nachricht** wird an ein Fenster gesendet, wenn der Rahmen gestrichen werden muss.
 
-Ein Fenster empfängt diese Meldung über seine [**WindowProc**](/previous-versions/windows/desktop/legacy/ms633573(v=vs.85)) -Funktion.
+Ein Fenster empfängt diese Nachricht über seine [**WindowProc-Funktion.**](/previous-versions/windows/desktop/legacy/ms633573(v=vs.85))
 
 
 ```C++
@@ -36,7 +36,7 @@ LRESULT CALLBACK WindowProc(
 *wParam* 
 </dt> <dd>
 
-Ein Handle für den Aktualisierungs Bereich des Fensters. Der Aktualisierungs Bereich wird auf den Fensterrahmen zugeschnitten.
+Ein Handle für den Updatebereich des Fensters. Der Updatebereich wird an den Fensterrahmen abgeschnitten.
 
 </dd> <dt>
 
@@ -49,15 +49,15 @@ Dieser Parameter wird nicht verwendet.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Eine Anwendung gibt 0 (null) zurück, wenn Sie diese Nachricht verarbeitet.
+Eine Anwendung gibt 0 (null) zurück, wenn sie diese Nachricht verarbeitet.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Die [**defwindowproc**](/windows/desktop/api/winuser/nf-winuser-defwindowproca) -Funktion zeichnet den Fensterrahmen.
+Die [**DefWindowProc-Funktion**](/windows/desktop/api/winuser/nf-winuser-defwindowproca) zeichnet den Fensterrahmen.
 
-Eine Anwendung kann die **WM- \_ ncpaint** -Nachricht abfangen und ihren eigenen benutzerdefinierten Fensterrahmen zeichnen. Der Clippingbereich für ein Fenster ist immer rechteckig, auch wenn die Form des Frames geändert wird.
+Eine Anwendung kann die **WM \_ NCPAINT-Nachricht** abfangen und ihren eigenen benutzerdefinierten Fensterrahmen zeichnen. Der Ausschneidebereich für ein Fenster ist immer rechteckig, auch wenn die Form des Rahmens geändert wird.
 
-Der *wParam* -Wert kann wie im folgenden Beispiel an [**getdcex**](/windows/desktop/api/Winuser/nf-winuser-getdcex) übermittelt werden.
+Der *wParam-Wert* kann wie im folgenden Beispiel [**an GetDCEx**](/windows/desktop/api/Winuser/nf-winuser-getdcex) übergeben werden.
 
 
 ```C++
@@ -72,7 +72,7 @@ case WM_NCPAINT:
 
 
 
-## <a name="requirements"></a>Requirements (Anforderungen)
+## <a name="requirements"></a>Anforderungen
 
 
 
@@ -80,7 +80,7 @@ case WM_NCPAINT:
 |-------------------------------------|----------------------------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional \[nur Desktop-Apps\]<br/>                                               |
 | Unterstützte Mindestversion (Server)<br/> | Windows 2000 Server \[nur Desktop-Apps\]<br/>                                                     |
-| Header<br/>                   | <dl> <dt>Winuser. h (Windows. h einschließen)</dt> </dl> |
+| Header<br/>                   | <dl> <dt>Winuser.h (include Windows.h)</dt> </dl> |
 
 
 
@@ -88,7 +88,7 @@ case WM_NCPAINT:
 
 <dl> <dt>
 
-[Übersicht über das Zeichnen und zeichnen](painting-and-drawing.md)
+[Übersicht über Das Zeichnen und Zeichnen](painting-and-drawing.md)
 </dt> <dt>
 
 [Zeichnen und Zeichnen von Nachrichten](painting-and-drawing-messages.md)
@@ -100,10 +100,10 @@ case WM_NCPAINT:
 [**GetWindowDC**](/windows/desktop/api/Winuser/nf-winuser-getwindowdc)
 </dt> <dt>
 
-[**WM- \_ Paint**](wm-paint.md)
+[**WM \_ PAINT**](wm-paint.md)
 </dt> <dt>
 
-[**Getdcex**](/windows/desktop/api/Winuser/nf-winuser-getdcex)
+[**GetDCEx**](/windows/desktop/api/Winuser/nf-winuser-getdcex)
 </dt> </dl>
 
  

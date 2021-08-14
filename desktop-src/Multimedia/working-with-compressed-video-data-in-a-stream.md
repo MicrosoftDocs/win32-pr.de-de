@@ -1,32 +1,32 @@
 ---
-title: Arbeiten mit komprimierten Video Daten in einem Stream
-description: Arbeiten mit komprimierten Video Daten in einem Stream
+title: Arbeiten mit komprimierten Videodaten in einem Stream
+description: Arbeiten mit komprimierten Videodaten in einem Stream
 ms.assetid: b701e072-f162-438f-b607-aea7491a02f9
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: f0587ee6c12a93eb014368642ba1605f546129e0
-ms.sourcegitcommit: ebd3ce6908ff865f1ef66f2fc96769be0aad82e1
+ms.openlocfilehash: e7c09de239fa28f3d9739dafc953ce10c2a6f1d69c0c607aeb03bc388a0f3003
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/19/2020
-ms.locfileid: "104038884"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118622090"
 ---
-# <a name="working-with-compressed-video-data-in-a-stream"></a>Arbeiten mit komprimierten Video Daten in einem Stream
+# <a name="working-with-compressed-video-data-in-a-stream"></a>Arbeiten mit komprimierten Videodaten in einem Stream
 
-Avifile bietet mehrere Möglichkeiten für den Zugriff auf komprimierte Videostreams.
+AVIFile bietet mehrere Möglichkeiten für den Zugriff auf komprimierte Videostreams.
 
-Wenn Sie einen oder mehrere Frames eines komprimierten Videodaten Stroms anzeigen möchten, können Sie die Frames mithilfe der [**avistreamread**](/windows/desktop/api/Vfw/nf-vfw-avistreamread) -Funktion abrufen und die komprimierten Frame Daten an drawdib-Funktionen weiterleiten, um Sie anzuzeigen. Die drawdib-Funktionen können Bilder mehrerer Bild tiefen anzeigen und Bilder für Anzeige Dateien, die bestimmte Typen von geräteunabhängigen Bitmaps (DIBs) nicht verarbeiten können, automatisch unterscheiden. Diese Funktionen können mit nicht komprimierten und komprimierten Bildern verwendet werden. Weitere Informationen zu drawdib-Funktionen finden Sie unter [drawdib Functions](drawdib-functions.md).
+Wenn Sie einen oder mehrere Frames eines komprimierten Videostreams anzeigen möchten, können Sie die Frames mithilfe der [**AVIStreamRead-Funktion**](/windows/desktop/api/Vfw/nf-vfw-avistreamread) abrufen und die komprimierten Framedaten an DrawDib-Funktionen weiterleiten, um sie anzuzeigen. DrawDib-Funktionen können Bilder mit mehreren Bildtiefe anzeigen und automatisch Bilder für Anzeigen dithern, die bestimmte Arten von geräteunabhängigen Bitmaps (DIBs) nicht verarbeiten können. Diese Funktionen funktionieren mit unkomprimierten und komprimierten Bildern. Weitere Informationen zu DrawDib-Funktionen finden Sie unter [DrawDib-Funktionen.](drawdib-functions.md)
 
-Avifile bietet Funktionen zum Dekomprimieren eines einzelnen Video Frames. Verwenden Sie zum Zuordnen von Ressourcen die [**AVIStreamGetFrameOpen**](/windows/desktop/api/Vfw/nf-vfw-avistreamgetframeopen) -Funktion. Mit dieser Funktion wird ein Puffer für die entkomprimierten Daten erstellt.
+AVIFile bietet Funktionen zum Dekomprimieren eines einzelnen Videoframes. Verwenden Sie zum Zuordnen von Ressourcen die [**FUNKTION AVIStreamGetFrameOpen.**](/windows/desktop/api/Vfw/nf-vfw-avistreamgetframeopen) Diese Funktion erstellt einen Puffer für die dekomprimierten Daten.
 
-Sie können einen einzelnen Videoframe mithilfe der [**AVIStreamGetFrame**](/windows/desktop/api/Vfw/nf-vfw-avistreamgetframe) -Funktion entkomprimieren. Diese Funktion zerlegt den Frame und Ruft einen kompletten Rahmen der Bilddaten ab, wobei die Adresse des DIB in der [BITMAPINFOHEADER](/previous-versions//ms532290(v=vs.85)) -Struktur zurückgegeben wird. Die Anwendung kann das DIB mithilfe von Standard Zeichnungsfunktionen oder mithilfe der drawdib-Funktionen anzeigen.
+Sie können einen einzelnen Videoframe mithilfe der [**AVIStreamGetFrame-Funktion**](/windows/desktop/api/Vfw/nf-vfw-avistreamgetframe) dekomprimieren. Diese Funktion dekomprimiert den Frame und ruft einen vollständigen Frame von Bilddaten ab und gibt die Adresse des DIB in der [BITMAPINFOHEADER-Struktur](/previous-versions//ms532290(v=vs.85)) zurück. Ihre Anwendung kann das DIB mithilfe von Standardzeichnungsfunktionen oder mithilfe der DrawDib-Funktionen anzeigen.
 
-Wenn die Anwendung aufeinander folgende Aufrufe an **AVIStreamGetFrame** durchführt, überschreibt die Funktion den Puffer mit jedem abgerufenen Frame.
+Wenn Ihre Anwendung aufeinanderfolgende Aufrufe von **AVIStreamGetFrame** vornimmt, überschreibt die Funktion ihren Puffer mit jedem abgerufenen Frame.
 
-Wenn Sie die Verwendung von **AVIStreamGetFrame** abgeschlossen haben und sich das entkomprimierte DIB in seinem Puffer befindet, können Sie die zugeordneten Ressourcen mithilfe der [**avistreamgetframeclose**](/windows/desktop/api/Vfw/nf-vfw-avistreamgetframeclose) -Funktion freigeben.
+Wenn Sie mit der Verwendung von **AVIStreamGetFrame** fertig sind und sich der dekomprimierte DIB im Puffer befindet, können Sie die zugeordneten Ressourcen mithilfe der [**FUNKTION AVIStreamGetFrameClose**](/windows/desktop/api/Vfw/nf-vfw-avistreamgetframeclose) freigeben.
 
-Weitere Informationen zur Dekomprimierung von Bildern finden Sie unter [Video Compression Manager](video-compression-manager.md).
+Weitere Informationen zum Dekomprimieren von Bildern finden Sie unter [Videokomprimierungs-Manager.](video-compression-manager.md)
 
- 
+ 
 
- 
+ 

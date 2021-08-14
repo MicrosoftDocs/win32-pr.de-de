@@ -1,7 +1,7 @@
 ---
-description: Listet die Verschlüsselungs Sammlungen auf, die von einem Protokoll Anbieter für Secure Sockets Layer Protokoll (SSL) unterstützt werden.
+description: Listet die Verschlüsselungssammlungen auf, die von einem SSL-Protokollanbieter (Secure Sockets Layer Protocol) unterstützt werden.
 ms.assetid: c12bc422-71c9-44f4-abf7-76902b19d3bd
-title: Sslenenciphersuites-Funktion (sslprovider. h)
+title: SslEnumCipherSuites-Funktion (Sslprovider.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,16 +13,16 @@ api_type:
 - DllExport
 api_location:
 - Ncrypt.dll
-ms.openlocfilehash: 8991842f38f3d3dc3d721cd30ebfb857ad20308a
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 7d9fb40bf6bfebff6d0659640dfb68b718586ac822c8a779a56de300b8d55b73
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104345039"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118906692"
 ---
-# <a name="sslenumciphersuites-function"></a>Sslenenciphersuites-Funktion
+# <a name="sslenumciphersuites-function"></a>SslEnumCipherSuites-Funktion
 
-Die Funktion **sslenumciphersuites** listet die Verschlüsselungs Sammlungen auf, die von einem Protokoll Anbieter für [*Secure Sockets Layer Protokoll*](/windows/desktop/SecGloss/s-gly) (SSL) unterstützt werden.
+Die **SslEnumCipherSuites-Funktion** listet die Verschlüsselungssammlungen auf, die von einem SSL-Protokollanbieter [*(Secure Sockets Layer Protocol)*](/windows/desktop/SecGloss/s-gly) unterstützt werden.
 
 ## <a name="syntax"></a>Syntax
 
@@ -43,46 +43,46 @@ SECURITY_STATUS WINAPI SslEnumCipherSuites(
 
 <dl> <dt>
 
-*hsslprovider* \[ in\]
+*hSslProvider* \[ In\]
 </dt> <dd>
 
-Das Handle der SSL-Protokoll Anbieter Instanz.
+Das Handle der SSL-Protokollanbieterinstanz.
 
 </dd> <dt>
 
-*hprivatekey* \[ in, optional\]
+*hPrivateKey* \[ in, optional\]
 </dt> <dd>
 
-Das Handle eines [*privaten Schlüssels*](/windows/desktop/SecGloss/p-gly). Wenn ein privater Schlüssel angegeben wird, listet **sslenumciphersuites** die Verschlüsselungs Sammlungen auf, die mit dem privaten Schlüssel kompatibel sind. Wenn der private Schlüssel z. b. ein DSS-Schlüssel ist, werden nur die DSS dit-Verschlüsselungs Sammlungen \_ zurückgegeben. Wenn der private Schlüssel ein RSA-Schlüssel ist, aber keine unformatierten Entschlüsselungs Vorgänge unterstützt, werden die SSL2 verwendet-Verschlüsselungs Sammlungen nicht zurückgegeben.
+Das Handle eines [*privaten Schlüssels.*](/windows/desktop/SecGloss/p-gly) Wenn ein privater Schlüssel angegeben wird, listet **SslEnumCipherSuites** die Verschlüsselungssammlungen auf, die mit dem privaten Schlüssel kompatibel sind. Wenn der private Schlüssel beispielsweise ein DSS-Schlüssel ist, werden nur die DSS \_ DHE-Verschlüsselungssammlungen zurückgegeben. Wenn der private Schlüssel ein RSA-Schlüssel ist, aber keine unformatierten Entschlüsselungsvorgänge unterstützt, werden die SSL2-Verschlüsselungssammlungen nicht zurückgegeben.
 
-Legen Sie diesen Parameter auf **null** fest, wenn Sie keinen privaten Schlüssel angeben.
+Legen Sie diesen Parameter auf **NULL** fest, wenn Sie keinen privaten Schlüssel angeben.
 
 > [!Note]  
-> Ein *hprivatekey* -Handle wird durch Aufrufen der [**sslopenprivatekey**](sslopenprivatekey.md) -Funktion abgerufen. Handles, die von der [**ncryptopenkey**](/windows/desktop/api/Ncrypt/nf-ncrypt-ncryptopenkey) -Funktion abgerufen werden, werden nicht unterstützt.
+> Ein *hPrivateKey-Handle* wird durch Aufrufen der [**SslOpenPrivateKey-Funktion**](sslopenprivatekey.md) abgerufen. Handles, die von der [**NCryptOpenKey-Funktion**](/windows/desktop/api/Ncrypt/nf-ncrypt-ncryptopenkey) abgerufen werden, werden nicht unterstützt.
 
  
 
 </dd> <dt>
 
-*ppciphersuite* \[ vorgenommen\]
+*ppCipherSuite* \[ out\]
 </dt> <dd>
 
-Ein Zeiger auf eine [**NCrypt- \_ SSL- \_ Chiffre \_**](https://www.bing.com/search?q=**NCRYPT\_SSL\_CIPHER\_SUITE**) Sammlungs Struktur, die die Adresse der nächsten Verschlüsselungs Sammlung in der Liste empfängt.
+Ein Zeiger auf eine [**NCRYPT \_ SSL \_ CIPHER \_ SUITE-Struktur,**](https://www.bing.com/search?q=**NCRYPT\_SSL\_CIPHER\_SUITE**) um die Adresse der nächsten Verschlüsselungssammlung in der Liste zu empfangen.
 
 </dd> <dt>
 
-" *ppumschlag State* \[ " in, out\]
+*ppEnumState* \[ in, out\]
 </dt> <dd>
 
-Ein Zeiger auf einen Puffer, der die aktuelle Position in der Liste der Verschlüsselungs Sammlungen angibt.
+Ein Zeiger auf einen Puffer, der die aktuelle Position in der Liste der Verschlüsselungssammlungen angibt.
 
-Legen Sie den Zeiger beim ersten **sslenumciphersuites**-aufrufswert auf **null** fest. Übergeben Sie bei jedem nachfolgenden-Rückruf den nicht geänderten Wert zurück an **sslenenciphersuites**.
+Legen Sie den Zeiger beim ersten Aufruf von **SslEnumCipherSuites** auf **NULL** fest. Übergeben Sie bei jedem nachfolgenden Aufruf den unveränderten Wert zurück an **SslEnumCipherSuites.**
 
-Wenn keine weiteren Verschlüsselungs Sammlungen verfügbar sind, sollten Sie " *pprestate* " durch Aufrufen der Funktion " [**sslfreebuffer**](sslfreebuffer.md) " freigeben.
+Wenn keine Verschlüsselungssammlungen mehr verfügbar sind, sollten Sie *ppEnumState* freigeben, indem Sie die [**SslFreeBuffer-Funktion**](sslfreebuffer.md) aufrufen.
 
 </dd> <dt>
 
-*dwFlags* \[ in\]
+*dwFlags* \[ In\]
 </dt> <dd>
 
 Dieser Parameter ist für die zukünftige Verwendung reserviert.
@@ -91,27 +91,27 @@ Dieser Parameter ist für die zukünftige Verwendung reserviert.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Wenn die Funktion erfolgreich ist, gibt Sie 0 (null) zurück.
+Wenn die Funktion erfolgreich ausgeführt wird, gibt sie 0 (null) zurück.
 
 Wenn die Funktion fehlschlägt, wird ein Fehlerwert ungleich 0 (null) zurückgegeben.
 
-Mögliche Rückgabecodes sind u. a. die folgenden:
+Mögliche Rückgabecodes sind u. a. folgende.
 
 
 
 | Rückgabecode/-wert                                                                                                                                                    | BESCHREIBUNG                                                              |
 |----------------------------------------------------------------------------------------------------------------------------------------------------------------------|--------------------------------------------------------------------------|
-| <dl> <dt>**Ernte \_ Kein Arbeits \_ Speicher**</dt> <dt>0x8009000el</dt> </dl>      | Es ist nicht genügend Arbeitsspeicher verfügbar, um erforderliche Puffer zuzuordnen.<br/> |
-| <dl> <dt>**Ernte \_ Ungültiges \_ handle**</dt> <dt>0x80090026l</dt> </dl> | Eines der bereitgestellten Handles ist ungültig.<br/>                     |
-| <dl> <dt>**Ernte \_ Keine \_ weiteren \_ Elemente**</dt> <dt>0x8009002al</dt> </dl> | Es werden keine zusätzlichen Verschlüsselungs Sammlungen unterstützt.<br/>                    |
+| <dl> <dt>**NTE \_ NO \_ MEMORY**</dt> <dt>0x8009000EL</dt> </dl>      | Es ist nicht genügend Arbeitsspeicher verfügbar, um die erforderlichen Puffer zuzuordnen.<br/> |
+| <dl> <dt>**NTE \_ UNGÜLTIGES \_ HANDLE**</dt> <dt>0x80090026L</dt> </dl> | Einer der bereitgestellten Handles ist ungültig.<br/>                     |
+| <dl> <dt>**NTE \_ NO \_ MORE \_ ITEMS**</dt> <dt>0x8009002AL</dt> </dl> | Es werden keine zusätzlichen Verschlüsselungssammlungen unterstützt.<br/>                    |
 
 
 
  
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Um alle Verschlüsselungs Sammlungen aufzulisten, die vom SSL-Anbieter unterstützt werden, müssen Sie die **sslenumciphersuites** -Funktion in einer Schleife aufzurufen, bis die **\_ \_ \_ Elemente nicht mehr** zurückgegeben werden.
+Um alle vom SSL-Anbieter unterstützten Verschlüsselungssammlungen aufzuzählen, rufen Sie die **SslEnumCipherSuites-Funktion** in einer Schleife auf, bis **NTE \_ NO MORE \_ \_ ITEMS** zurückgegeben wird.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -119,19 +119,19 @@ Um alle Verschlüsselungs Sammlungen aufzulisten, die vom SSL-Anbieter unterstü
 
 | Anforderung | Wert |
 |-------------------------------------|------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>                                           |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2008 \[ -Desktop-Apps\]<br/>                                     |
-| Header<br/>                   | <dl> <dt>Sslprovider. h</dt> </dl> |
-| Bibliothek<br/>                  | <dl> <dt>Ncrypt. lib</dt> </dl>    |
+| Unterstützte Mindestversion (Client)<br/> | Windows \[Nur Vista-Desktop-Apps\]<br/>                                           |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2008-Desktop-Apps\]<br/>                                     |
+| Header<br/>                   | <dl> <dt>Sslprovider.h</dt> </dl> |
+| Bibliothek<br/>                  | <dl> <dt>Ncrypt.lib</dt> </dl>    |
 | DLL<br/>                      | <dl> <dt>Ncrypt.dll</dt> </dl>    |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**ncrypt-SSL-Verschlüsselungs \_ \_ \_ Sammlung**](https://www.bing.com/search?q=**NCRYPT\_SSL\_CIPHER\_SUITE**)
+[**NCRYPT \_ SSL \_ CIPHER \_ SUITE**](https://www.bing.com/search?q=**NCRYPT\_SSL\_CIPHER\_SUITE**)
 </dt> </dl>
 
  

@@ -1,6 +1,6 @@
 ---
-title: Verzeichnisdienste heute
-description: Es ist üblich, mehrere administrative Verzeichnisse in einer einzigen Organisation bereitzustellen.
+title: Directory Services Today
+description: Es ist üblich, mehrere Verwaltungsverzeichnisse zu finden, die in einer einzigen Organisation bereitgestellt werden.
 ms.assetid: e6f05beb-d88d-46d5-85c7-3477a6af03c9
 ms.tgt_platform: multiple
 keywords:
@@ -8,26 +8,26 @@ keywords:
 - Verzeichnisdienste ADSI, Hintergrund für Verzeichnisdienste
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 38e6a6e5dfd1e0f8fc3f87d407bbbce28caa0696
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: f863a20922ad29c0194985ec848df30b66c5b72e6672d4e6f1c88e9d9ce206c3
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "104206246"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118691894"
 ---
-# <a name="directory-services-today"></a>Verzeichnisdienste heute
+# <a name="directory-services-today"></a>Directory Services Today
 
-Es ist üblich, mehrere administrative Verzeichnisse in einer einzigen Organisation bereitzustellen. Diese Verzeichnisse enthalten Netzwerkressourcen Verzeichnisse wie z. b. LDAP-basierte Verzeichnisse wie den Microsoft Active Directory Directory-Dienst, den Verzeichnisdienst des Windows-Betriebssystems sowie anwendungsspezifische Verzeichnisse, wie z. b. Microsoft Exchange.
+Es ist üblich, mehrere Verwaltungsverzeichnisse zu finden, die in einer einzigen Organisation bereitgestellt werden. Zu diesen Verzeichnissen gehören Netzwerkressourcenverzeichnisse wie LDAP-basierte Verzeichnisse wie der Microsoft Active Directory-Verzeichnisdienst, Windows Verzeichnisdienst des Betriebssystems sowie anwendungsspezifische Verzeichnisse wie Microsoft Exchange.
 
 ![Bereitstellung mehrerer Verzeichnisse](images/ds2chal.png)
 
-## <a name="the-directory-challenge"></a>Die Verzeichnis Herausforderung
+## <a name="the-directory-challenge"></a>Die Verzeichnisaufgabe
 
-Mehrere Verzeichnisse in der Organisation stellen komplexe Herausforderungen für Benutzer, Administratoren und Entwickler dar. Diese Probleme verfügen über eine eingeschränkte Bereitstellung von breit Verzeichnissen. Benutzer haben mehrere Anmeldungen und eine Vielzahl von Schnittstellen für Informationen über mehrere Verzeichnisse hinweg. Administratoren sind der Komplexität der Verwaltung mehrerer Verzeichnisse ausgesetzt. Endbenutzer und Administratoren möchten, dass Anwendungsentwickler ein vorhandenes administratives Verzeichnis verwenden, aber Entwickler sind ein Problem, das zu verwenden ist. Jedes Verzeichnis verfügt über eindeutige Anwendungsschnittstellen. Ein Entwickler muss eine bestimmte Verzeichnis Implementierung auswählen oder mehrere Versionen der Anwendung unterstützen. Daher verwenden Entwickler nur selten vorhandene Verzeichnisdienste.
+Mehrere Verzeichnisse in der Organisation stellen Benutzer, Administratoren und Entwickler vor komplexe Herausforderungen. Diese Probleme weisen eine eingeschränkte Breitverzeichnisbereitstellung auf. Benutzern stehen mehrere Anmeldungen und eine Vielzahl von Schnittstellen für Informationen in mehreren Verzeichnissen zur Verfügung. Administratoren sind mit der Komplexität der Verwaltung mehrerer Verzeichnisse konfrontiert. Endbenutzer und Administratoren möchten, dass Anwendungsentwickler ein vorhandenes Administratorverzeichnis verwenden, aber Entwickler haben ein Problem damit, welches Verzeichnis Sie verwenden möchten. Jedes Verzeichnis bietet eindeutige Anwendungsschnittstellen. Ein Entwickler muss eine bestimmte Verzeichnisimplementierungen auswählen oder mehrere Versionen seiner Anwendung unterstützen. Daher verwenden Entwickler selten vorhandene Verzeichnisdienste.
 
- 
+ 
 
- 
+ 
 
 
 

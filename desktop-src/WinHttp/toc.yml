@@ -8,9 +8,9 @@
           href: winhttp-vs-wininet.md
         - name: WinHTTP-Versionen
           href: winhttp-versions.md
-        - name: Neues in WinHTTP 5.1
+        - name: Neuerungen in WinHTTP 5.1
           href: what-s-new-in-winhttp-5-1.md
-        - name: Neues in Windows Server 2008 und Windows Vista
+        - name: Neuerungen in Windows Server 2008 und Windows Vista
           href: what-s-new-in-windows-longhorn.md
         - name: Netzwerkterminologie
           href: network-terminology.md
@@ -30,7 +30,7 @@
               href: winhttp-sessions-overview.md
             - name: HINTERNET-Handles in WinHTTP
               href: hinternet-handles-in-winhttp.md
-            - name: UrLs (Uniform Resource Locators) in WinHTTP
+            - name: Uniform Resource Locators (URLs) in WinHTTP
               href: uniform-resource-locators--urls--in-winhttp.md
             - name: Authentifizierung in WinHTTP
               href: authentication-in-winhttp.md
@@ -38,7 +38,7 @@
               href: passport-authentication-in-winhttp.md
             - name: SSL in WinHTTP
               href: ssl-in-winhttp.md
-            - name: Verwenden von WinHTTP als side-by-side-Assembly
+            - name: Verwenden von WinHTTP als nebeneinander ausgeführte Assembly
               href: using-winhttp-as-a-side-by-side-assembly.md
             - name: Cookiebehandlung in WinHttp
               href: cookie-handling-in-winhttp.md
@@ -49,7 +49,7 @@
               items:
                 - name: WinHTTP AutoProxy-Funktionen
                   href: winhttp-autoproxy-api.md
-                - name: Ermittlung ohne auto-config-Datei
+                - name: Ermittlung ohne automatische Konfigurationsdatei
                   href: discovery-without-an-auto-config-file.md
                 - name: AutoProxy-Probleme in WinHTTP
                   href: autoproxy-issues-in-winhttp.md
@@ -57,10 +57,10 @@
                   href: setting-wininet-proxy-configurations-in-winhttp.md
                 - name: AutoProxy Cache
                   href: autoproxy-cache.md
-                - name: IPv6 Extensions to Navigator Auto-Config File Format
+                - name: IPv6-Erweiterungen für das Navigator-Dateiformat für die automatische Konfiguration
                   href: ipv6-extensions-to-navigator-auto-config-file-format.md
                   items:
-                    - name: IPv6-Aware proxy helper API Definitions
+                    - name: IPv6-Aware Proxyhilfs-API-Definitionen
                       href: ipv6-aware-proxy-helper-api-definitions.md
                       items:
                         - name: isResolvableEx
@@ -89,14 +89,14 @@
           items:
             - name: 'WinHttpCertCfg.exe, ein Zertifikatkonfigurationstool'
               href: winhttpcertcfg-exe--a-certificate-configuration-tool.md
-            - name: Netsh.exe und ProxyCfg.exe Proxy Konfigurationstools
+            - name: Netsh.exe und ProxyCfg.exe Proxy-Konfigurationstools
               href: proxycfg-exe--a-proxy-configuration-tool.md
             - name: 'WinHttpTraceCfg.exe, ein Tool für die Ablaufverfolgungskonfiguration'
               href: winhttptracecfg-exe--a-trace-configuration-tool.md
     - name: WinHTTP-Referenz
       href: winhttp-reference.md
       items:
-        - name: WinHTTP-C/C++-API-Referenz
+        - name: WinHTTP C/C++-API-Referenz
           href: winhttp-c-c---api-reference.md
           items:
             - name: WinHTTP-Schnittstellen

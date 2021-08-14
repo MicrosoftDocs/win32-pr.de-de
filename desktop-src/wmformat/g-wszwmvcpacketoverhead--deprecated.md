@@ -1,9 +1,9 @@
 ---
-title: g_wszWMVCPacketOverhead (wmcodecdsp. h)
-description: Aktuelle Dokumentation zu Windows Media Codecs und digitalen Signalprozessoren finden Sie unter Windows Media Audio-und Videocodec-und DSP-APIs. | g_wszWMVCPacketOverhead (wmcodecdsp. h)
+title: g_wszWMVCPacketOverhead (Wmcodecdsp.h)
+description: Die aktuelle Dokumentation zu Windows Mediencodecs und digitalen Signalprozessoren finden Sie unter Windows Medienaudio- und Videocodec und DSP-APIs. | g_wszWMVCPacketOverhead (Wmcodecdsp.h)
 ms.assetid: 76d412e0-8c7f-4bc8-b8c1-974c495856ba
 keywords:
-- g_wszWMVCPacketOverhead Windows Media-Format
+- g_wszWMVCPacketOverhead Windows-Medienformat
 topic_type:
 - apiref
 api_name:
@@ -14,16 +14,16 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: acd1cd08983697aafae06ca8878ce3757148b199
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 4dc3f65c510bde1dc6a6f23fab916c192e6983abdf6fdd75251e8158ee7c1c18
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106355874"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118703331"
 ---
-# <a name="g_wszwmvcpacketoverhead"></a>g \_ wszwmvcpackedeverhead
+# <a name="g_wszwmvcpacketoverhead"></a>g \_ wszWMVCPacketOverhead
 
-Aktuelle Dokumentation zu Windows Media Codecs und digitalen Signalprozessoren finden Sie unter [Windows Media Audio-und Videocodec-und DSP-APIs.](/previous-versions//dd464626(v=vs.85))
+Die aktuelle Dokumentation zu Windows Mediencodecs und digitalen Signalprozessoren finden Sie unter [Windows Medienaudio- und Videocodec und DSP-APIs.](/previous-versions//dd464626(v=vs.85))
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -31,7 +31,7 @@ Aktuelle Dokumentation zu Windows Media Codecs und digitalen Signalprozessoren f
 
 | Anforderung | Wert |
 |-------------------|-----------------------------------------------------------------------------------------|
-| Header<br/> | <dl> <dt>Wmcodecdsp. h</dt> </dl> |
+| Header<br/> | <dl> <dt>Wmcodecdsp.h</dt> </dl> |
 
 
 

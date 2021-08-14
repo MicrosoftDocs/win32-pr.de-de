@@ -1,5 +1,5 @@
 ---
-description: Ordnet einem virtuellen System eine Momentaufnahme zu, die vom virtuellen System erfasst wurde.
+description: Ordnet ein virtuelles System einer Momentaufnahme zu, die vom virtuellen System erfasst wurde.
 ms.assetid: CF1C1C04-02BC-4AC3-8327-FEE54ECE8541
 title: Msvm_SnapshotOfVirtualSystem-Klasse
 ms.topic: reference
@@ -15,16 +15,16 @@ api_type:
 - DllExport
 api_location:
 - vmms.exe
-ms.openlocfilehash: bd006093347d7eb9354944409082a0e069b0cd54
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: cc1971c1123ab30fb88da9278b1d4f142e35785a393a75e1bf8a3ec69771f98a
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "103959277"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118950299"
 ---
-# <a name="msvm_snapshotofvirtualsystem-class"></a>MSVM \_ snapshodessystem-Klasse
+# <a name="msvm_snapshotofvirtualsystem-class"></a>Msvm \_ SnapshotOfVirtualSystem-Klasse
 
-Ordnet einem virtuellen System eine Momentaufnahme zu, die vom virtuellen System erfasst wurde.
+Ordnet ein virtuelles System einer Momentaufnahme zu, die vom virtuellen System erfasst wurde.
 
 Die folgende Syntax wird Managed Object Format (MOF)-Code vereinfacht und enthält alle geerbten Eigenschaften.
 
@@ -41,39 +41,39 @@ class Msvm_SnapshotOfVirtualSystem : CIM_SnapshotOfVirtualSystem
 
 ## <a name="members"></a>Member
 
-Die **MSVM \_ snapshotofvirtualsystem** -Klasse verfügt über diese Typen von Membern:
+Die **Msvm \_ SnapshotOfVirtualSystem-Klasse** verfügt über die folgenden Membertypen:
 
 -   [Eigenschaften](#properties)
 
 ### <a name="properties"></a>Eigenschaften
 
-Die **MSVM \_ snapshodessystem** -Klasse verfügt über diese Eigenschaften.
+Die **Msvm \_ SnapshotOfVirtualSystem-Klasse** verfügt über diese Eigenschaften.
 
 <dl> <dt>
 
-**Vorgänger**
+**Vorläufer**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **[ **MSVM \_ Computersystem**](msvm-computersystem.md)**
+Datentyp: **[ **Msvm \_ ComputerSystem**](msvm-computersystem.md)**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Ein Verweis auf eine Instanz der [**MSVM \_ Computersystem**](msvm-computersystem.md) -Klasse, die das virtuelle System darstellt. Diese Eigenschaft wird von der [**CIM- \_ Abhängigkeit**](/windows/desktop/CIMWin32Prov/cim-dependency)abgeleitet.
+Ein Verweis auf eine Instanz der [**Msvm \_ ComputerSystem-Klasse,**](msvm-computersystem.md) die das virtuelle System darstellt. Diese Eigenschaft wird von der [**\_ CIM-Abhängigkeit abgeleitet.**](/windows/desktop/CIMWin32Prov/cim-dependency)
 
 </dd> <dt>
 
-**Dependent**
+**Abhängigen**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **[ **MSVM \_ virtualsystemsettingdata**](msvm-virtualsystemsettingdata.md)**
+Datentyp: **[ **Msvm \_ VirtualSystemSettingData**](msvm-virtualsystemsettingdata.md)**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Ein Verweis auf eine Instanz der [**MSVM \_ virtualsystemsettingdata**](msvm-virtualsystemsettingdata.md) -Klasse, die die Momentaufnahme darstellt. Diese Eigenschaft wird von der [**CIM- \_ Abhängigkeit**](/windows/desktop/CIMWin32Prov/cim-dependency)abgeleitet.
+Ein Verweis auf eine Instanz der [**Msvm \_ VirtualSystemSettingData-Klasse,**](msvm-virtualsystemsettingdata.md) die die Momentaufnahme darstellt. Diese Eigenschaft wird von der [**\_ CIM-Abhängigkeit abgeleitet.**](/windows/desktop/CIMWin32Prov/cim-dependency)
 
 </dd> </dl>
 
@@ -83,19 +83,19 @@ Ein Verweis auf eine Instanz der [**MSVM \_ virtualsystemsettingdata**](msvm-vir
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows 8 \[ -Desktop-Apps\]<br/>                                                              |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2012 \[ -Desktop-Apps\]<br/>                                                    |
-| Namespace<br/>                | \\Stammvirtualisierung \\ v2<br/>                                                                     |
-| MOF<br/>                      | <dl> <dt>Windowsvirtualization. v2. MOF</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | \[Windows 8 Nur Desktop-Apps\]<br/>                                                              |
+| Unterstützte Mindestversion (Server)<br/> | \[Windows Server 2012 Nur Desktop-Apps\]<br/>                                                    |
+| Namespace<br/>                | Root \\ Virtualization \\ V2<br/>                                                                     |
+| MOF<br/>                      | <dl> <dt>WindowsVirtualization.V2.mof</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>Vmms.exe</dt> </dl>                     |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**CIM \_ snapshoto-virtualsystem**](cim-snapshotofvirtualsystem.md)
+[**CIM \_ SnapshotOfVirtualSystem**](cim-snapshotofvirtualsystem.md)
 </dt> <dt>
 
 [**CreateSnapshot**](createsnapshot-msvm-virtualsystemsnapshotservice.md)

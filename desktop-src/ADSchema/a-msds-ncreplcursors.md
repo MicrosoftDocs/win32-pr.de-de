@@ -1,11 +1,11 @@
 ---
-title: ms-DS-NC-repl-Cursors-Attribut
-description: Eine Liste früherer und aktueller Replikations Partner, und wie aktuell wir sind.
+title: ms-DS-NC-Repl-Cursors-Attribut
+description: Eine Liste der früheren und aktuellen Replikationspartner und wie aktuell wir mit jedem dieser Partner sind.
 ms.assetid: febe8614-b68a-4001-b6ae-dae3fe6eb25f
 ms.tgt_platform: multiple
 keywords:
-- AD-Schema für das Attribut "ms-DS-NC-repl-Cursors"
-- AD-Schema des msDS-nkreplcursors-Attributs
+- MS-DS-NC-Repl-Cursors-Attribut AD-Schema
+- MSDS-NCReplCursors-Attribut-AD-Schema
 topic_type:
 - apiref
 api_name:
@@ -14,42 +14,42 @@ api_type:
 - Schema
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 555a09520079df624fffb2cb3cb3aa34b81502c2
-ms.sourcegitcommit: b77ace27b0432e7cd3863191b11926be032fbe2f
+ms.openlocfilehash: f9c362e6938437d4fcc02b3d3965aa222d9e855d041492f9ea9eb1247b4fda8f
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "104107799"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118684330"
 ---
-# <a name="ms-ds-nc-repl-cursors-attribute"></a>ms-DS-NC-repl-Cursors-Attribut
+# <a name="ms-ds-nc-repl-cursors-attribute"></a>ms-DS-NC-Repl-Cursors-Attribut
 
-Eine Liste früherer und aktueller Replikations Partner, und wie aktuell wir sind.
+Eine Liste der früheren und aktuellen Replikationspartner und wie aktuell wir mit jedem dieser Partner sind.
 
 
 
 | Eingabe | Wert |
 |-------------------|---------------------------------------------|
-| CN                | ms-DS-NC-repl-Cursor                       |
-| LDAP-Display-Name | MSDS-nkreplcursorn                          |
+| CN                | ms-DS-NC-Repl-Cursors                       |
+| Ldap-Anzeigename | msDS-NCReplCursors                          |
 | Size              | \-                                          |
-| Berechtigung aktualisieren  | Dieser Wert wird vom System festgelegt.            |
-| Aktualisierungshäufigkeit  | \-                                          |
+| Aktualisieren von Berechtigungen  | Dieser Wert wird vom System festgelegt.            |
+| Updatehäufigkeit  | \-                                          |
 | Attribute-Id      | 1.2.840.113556.1.4.1704                     |
-| System-ID-GUID    | 8a167ce4-fi9e8-47eb-8d78-fi7fe80abb2cc        |
+| System-ID-GUID    | 8a167ce4-f9e8-47eb-8d78-f7fe80abb2cc        |
 | Syntax            | [**String(Unicode)**](s-string-unicode.md) |
 
 
 
 ## <a name="implementations"></a>Implementierungen
 
--   [**Windows Server 2003**](#windows-server-2003)
+-   [**Windows Server 2003**](#windows-server-2003)
 -   [**Adam**](#adam)
 -   [**Windows Server 2003 R2**](#windows-server-2003-r2)
 -   [**Windows Server 2008**](#windows-server-2008)
 -   [**Windows Server 2008 R2**](#windows-server-2008-r2)
 -   [**Windows Server 2012**](#windows-server-2012)
 
-## <a name="windows-server-2003"></a>Windows Server 2003
+## <a name="windows-server-2003"></a>Windows Server 2003
 
 
 
@@ -57,11 +57,11 @@ Eine Liste früherer und aktueller Replikations Partner, und wie aktuell wir sin
 |------------------------|---------------------------------|
 | Link-ID                | \-                              |
 | MAPI-Id                | \-                              |
-| System-Only            | False                           |
-| Ist-einwertig       | False                           |
-| Ist indiziert             | False                           |
-| Im globalen Katalog      | False                           |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                    |
+| System-Only            | Falsch                           |
+| Ist einwertig       | Falsch                           |
+| Ist indiziert             | Falsch                           |
+| Im globalen Katalog      | Falsch                           |
+| NT-Security-Descriptor | O:BAG:BAD:S:                    |
 | Range-Lower            | \-                              |
 | Range-Upper            | \-                              |
 | Search-Flags           | 0x00000000                      |
@@ -78,11 +78,11 @@ Eine Liste früherer und aktueller Replikations Partner, und wie aktuell wir sin
 |------------------------|---------------------------------|
 | Link-ID                | \-                              |
 | MAPI-Id                | \-                              |
-| System-Only            | False                           |
-| Ist-einwertig       | False                           |
-| Ist indiziert             | False                           |
-| Im globalen Katalog      | False                           |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                    |
+| System-Only            | Falsch                           |
+| Ist einwertig       | Falsch                           |
+| Ist indiziert             | Falsch                           |
+| Im globalen Katalog      | Falsch                           |
+| NT-Security-Descriptor | O:BAG:BAD:S:                    |
 | Range-Lower            | \-                              |
 | Range-Upper            | \-                              |
 | Search-Flags           | 0x00000000                      |
@@ -99,11 +99,11 @@ Eine Liste früherer und aktueller Replikations Partner, und wie aktuell wir sin
 |------------------------|---------------------------------|
 | Link-ID                | \-                              |
 | MAPI-Id                | \-                              |
-| System-Only            | False                           |
-| Ist-einwertig       | False                           |
-| Ist indiziert             | False                           |
-| Im globalen Katalog      | False                           |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                    |
+| System-Only            | Falsch                           |
+| Ist einwertig       | Falsch                           |
+| Ist indiziert             | Falsch                           |
+| Im globalen Katalog      | Falsch                           |
+| NT-Security-Descriptor | O:BAG:BAD:S:                    |
 | Range-Lower            | \-                              |
 | Range-Upper            | \-                              |
 | Search-Flags           | 0x00000000                      |
@@ -120,11 +120,11 @@ Eine Liste früherer und aktueller Replikations Partner, und wie aktuell wir sin
 |------------------------|---------------------------------|
 | Link-ID                | \-                              |
 | MAPI-Id                | \-                              |
-| System-Only            | False                           |
-| Ist-einwertig       | False                           |
-| Ist indiziert             | False                           |
-| Im globalen Katalog      | False                           |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                    |
+| System-Only            | Falsch                           |
+| Is-Single-Valued       | Falsch                           |
+| Ist indiziert             | Falsch                           |
+| Im globalen Katalog      | Falsch                           |
+| NT-Security-Descriptor | O:BAG:BAD:S:                    |
 | Range-Lower            | \-                              |
 | Range-Upper            | \-                              |
 | Search-Flags           | 0x00000000                      |
@@ -141,11 +141,11 @@ Eine Liste früherer und aktueller Replikations Partner, und wie aktuell wir sin
 |------------------------|---------------------------------|
 | Link-ID                | \-                              |
 | MAPI-Id                | \-                              |
-| System-Only            | False                           |
-| Ist-einwertig       | False                           |
-| Ist indiziert             | False                           |
-| Im globalen Katalog      | False                           |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                    |
+| System-Only            | Falsch                           |
+| Is-Single-Valued       | Falsch                           |
+| Ist indiziert             | Falsch                           |
+| Im globalen Katalog      | Falsch                           |
+| NT-Security-Descriptor | O:BAG:BAD:S:                    |
 | Range-Lower            | \-                              |
 | Range-Upper            | \-                              |
 | Search-Flags           | 0x00000000                      |
@@ -162,11 +162,11 @@ Eine Liste früherer und aktueller Replikations Partner, und wie aktuell wir sin
 |------------------------|---------------------------------|
 | Link-ID                | \-                              |
 | MAPI-Id                | \-                              |
-| System-Only            | False                           |
-| Ist-einwertig       | False                           |
-| Ist indiziert             | False                           |
-| Im globalen Katalog      | False                           |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                    |
+| System-Only            | Falsch                           |
+| Is-Single-Valued       | Falsch                           |
+| Ist indiziert             | Falsch                           |
+| Im globalen Katalog      | Falsch                           |
+| NT-Security-Descriptor | O:BAG:BAD:S:                    |
 | Range-Lower            | \-                              |
 | Range-Upper            | \-                              |
 | Search-Flags           | 0x00000000                      |
