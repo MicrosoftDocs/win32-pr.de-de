@@ -1,9 +1,9 @@
 ---
-title: Verarbeiten von Beispielen
-description: Aktuelle Dokumentation zu Windows Media Codecs und digitalen Signalprozessoren finden Sie unter Windows Media Audio-und Videocodec-und DSP-APIs. | Verarbeiten von Beispielen
+title: Verarbeitungsbeispiele
+description: Die aktuelle Dokumentation zu Windows Mediencodecs und digitalen Signalprozessoren finden Sie unter Windows Medienaudio- und Videocodec und DSP-APIs. | Verarbeitungsbeispiele
 ms.assetid: e1a803dd-fbc8-4edb-8836-cc702ab7a8de
 keywords:
-- Verarbeiten von Beispielen im Windows Media-Format
+- Verarbeitungsbeispiele für Fenster Medienformat
 topic_type:
 - apiref
 api_name:
@@ -12,16 +12,16 @@ api_type:
 - NA
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: c40d9911dc127af5fd5a69871ff0f7a944bc6841
-ms.sourcegitcommit: 92e74c99f8f4d097676959d0c317f533c2400a80
+ms.openlocfilehash: 883801cc3296f4a02201dc52174c32a33fc9a38cba0ee835cf1f6c95b0fdf453
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/09/2021
-ms.locfileid: "106365026"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118700188"
 ---
-# <a name="processing-samples"></a>Verarbeiten von Beispielen
+# <a name="processing-samples"></a>Verarbeitungsbeispiele
 
-Aktuelle Dokumentation zu Windows Media Codecs und digitalen Signalprozessoren finden Sie unter [Windows Media Audio-und Videocodec-und DSP-APIs.](/previous-versions//dd464626(v=vs.85))
+Die aktuelle Dokumentation zu Windows Mediencodecs und digitalen Signalprozessoren finden Sie unter [Windows Medienaudio- und Videocodec und DSP-APIs.](/previous-versions//dd464626(v=vs.85))
 
  
 

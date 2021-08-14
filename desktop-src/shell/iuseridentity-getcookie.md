@@ -1,7 +1,7 @@
 ---
-description: GetCookie wird nicht unterstützt und kann in Zukunft geändert oder nicht verfügbar sein. Verwenden Sie stattdessen Benutzerkonten mit schneller Benutzerumschaltung und Remotedesktop.
+description: GetCookie wird nicht unterstützt und kann in Zukunft geändert oder nicht mehr verfügbar sein. Verwenden Sie stattdessen Benutzerkonten mit schnellem Benutzerwechsel und Remotedesktop.
 ms.assetid: 4a743d64-9af3-43cf-9a9f-d808676ab337
-title: 'Iuseridentity:: GetCookie-Methode (Msident. h)'
+title: IUserIdentity::GetCookie-Methode (Msident.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,18 +13,18 @@ api_type:
 - COM
 api_location:
 - Msident.dll
-ms.openlocfilehash: 96cafb13f2c90c41e4aa6dcaaa72cf052757d0ad
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: e8b4abb13735b2ce370623ad8e5b79a8d9830b34a3d566fb57c0539d6f2c6095
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104977913"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118220117"
 ---
-# <a name="iuseridentitygetcookie-method"></a>Iuseridentity:: GetCookie-Methode
+# <a name="iuseridentitygetcookie-method"></a>IUserIdentity::GetCookie-Methode
 
-\[**GetCookie** wird nicht unterstützt und kann in Zukunft geändert oder nicht verfügbar sein. Verwenden Sie stattdessen [Benutzerkonten mit schneller Benutzerumschaltung und Remotedesktop](fastuserswitching.md).\]
+\[**GetCookie** wird nicht unterstützt und kann in Zukunft geändert oder nicht mehr verfügbar sein. Verwenden Sie stattdessen [Benutzerkonten mit schnellem Benutzerwechsel und Remotedesktop](fastuserswitching.md).\]
 
-Ruft das Cookie ab, mit dem diese Benutzeridentität eindeutig identifiziert wird.
+Ruft das Cookie ab, das zum eindeutigen Identifizieren dieser Benutzeridentität verwendet wird.
 
 ## <a name="syntax"></a>Syntax
 
@@ -41,12 +41,12 @@ HRESULT GetCookie(
 
 <dl> <dt>
 
-*puidcookie* \[ vorgenommen\]
+*puidCookie* \[ out\]
 </dt> <dd>
 
-Geben Sie Folgendes ein: **GUID \** _
+Typ: **GUID \***
 
-Ein Zeiger auf einen _ *GUID**-Wert, der das Cookie empfängt, das zum eindeutigen Identifizieren dieser Benutzeridentität verwendet wird.
+Ein Zeiger auf einen **GUID-Wert,** der das Cookie empfängt, das zum eindeutigen Identifizieren dieser Benutzeridentität verwendet wird.
 
 </dd> </dl>
 
@@ -54,9 +54,9 @@ Ein Zeiger auf einen _ *GUID**-Wert, der das Cookie empfängt, das zum eindeutig
 
 Typ: **HRESULT**
 
-Wenn diese Methode erfolgreich ausgeführt wird, gibt Sie **S \_ OK** zurück. Andernfalls wird ein **HRESULT** -Fehlercode zurückgegeben.
+Wenn diese Methode erfolgreich ist, wird **S \_ OK zurückgegeben.** Andernfalls wird ein **HRESULT-Fehlercode** zurückgegeben.
 
-## <a name="requirements"></a>Requirements (Anforderungen)
+## <a name="requirements"></a>Anforderungen
 
 
 
@@ -66,8 +66,8 @@ Wenn diese Methode erfolgreich ausgeführt wird, gibt Sie **S \_ OK** zurück. A
 | Unterstützte Mindestversion (Server)<br/> | Windows 2000 Server \[nur Desktop-Apps\]<br/>                                   |
 | Ende des Supports (Client)<br/>    | Windows 2000 Professional<br/>                                                   |
 | Ende des Supports (Server)<br/>    | Windows 2000 Server<br/>                                                         |
-| Header<br/>                   | <dl> <dt>Msident. h</dt> </dl>   |
-| IDL<br/>                      | <dl> <dt>Msident. idl</dt> </dl> |
+| Header<br/>                   | <dl> <dt>Msident.h</dt> </dl>   |
+| Idl<br/>                      | <dl> <dt>Msident.idl</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>Msident.dll</dt> </dl> |
 
 
@@ -76,7 +76,7 @@ Wenn diese Methode erfolgreich ausgeführt wird, gibt Sie **S \_ OK** zurück. A
 
 <dl> <dt>
 
-[**Iuseridentity**](iuseridentity.md)
+[**IUserIdentity**](iuseridentity.md)
 </dt> <dt>
 
 [**GetOrdinal**](iuseridentity2-getordinal.md)

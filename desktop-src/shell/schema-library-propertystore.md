@@ -1,19 +1,19 @@
 ---
-description: Das- <propertyStore> Element gibt einen Satz von einer oder mehreren Eigenschaften an, die von dieser Bibliothek verwendet werden. Dieses Element ist optional und besitzt keine Attribute.
+description: Das <propertyStore> -Element gibt einen Satz von einer oder mehreren Eigenschaften an, die von dieser Bibliothek verwendet werden. Dieses Element ist optional und weist keine Attribute auf.
 ms.assetid: 19532C1F-686F-4c14-8BA8-0043E77BE594
-title: PropertyStore-Element (Bibliotheks Schema)
+title: propertyStore-Element (Bibliotheksschema)
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 2ad3b2c15180d6859ea54dea63ec7fc46b7e636c
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
-ms.translationtype: HT
+ms.openlocfilehash: d0ff30972a358916e715ff1b374a555c6db24ee6d512d114bcf47f57ac8a1954
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "104980320"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118452975"
 ---
-# <a name="propertystore-element-library-schema"></a>PropertyStore-Element (Bibliotheks Schema)
+# <a name="propertystore-element-library-schema"></a>propertyStore-Element (Bibliotheksschema)
 
-Das- <propertyStore> Element gibt einen Satz von einer oder mehreren Eigenschaften an, die von dieser Bibliothek verwendet werden. Dieses Element ist optional und besitzt keine Attribute.
+Das <propertyStore> -Element gibt einen Satz von einer oder mehreren Eigenschaften an, die von dieser Bibliothek verwendet werden. Dieses Element ist optional und weist keine Attribute auf.
 
 ## <a name="syntax"></a>Syntax
 
@@ -35,24 +35,24 @@ Das- <propertyStore> Element gibt einen Satz von einer oder mehreren Eigenschaft
 
 | Übergeordnetes Element                                                               | Untergeordnete Elemente                                                   |
 |------------------------------------------------------------------------------|------------------------------------------------------------------|
-| [librarydescription-Element (Bibliotheks Schema)](schema-librarydescription.md) | [Property-Element (Bibliotheks Schema)](schema-library-property.md) |
+| [libraryDescription-Element (Bibliotheksschema)](schema-librarydescription.md) | [property-Element (Bibliotheksschema)](schema-library-property.md) |
 
 
 
  
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Das- <propertyStore> Element kann ein oder mehrere untergeordnete- <property> Elemente aufweisen.
+Das <propertyStore> -Element kann über mindestens ein <property> untergeordnetes Element verfügen.
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
 <dl> <dt>
 
-[Bibliotheks Beschreibungs Schema](library-schema-entry.md)
+[Bibliotheksbeschreibungsschema](library-schema-entry.md)
 </dt> <dt>
 
-[Suchdienst-Beschreibungs Schema](../search/search-sconn-desc-schema-entry.md)
+[Suchconnectorbeschreibungsschema](../search/search-sconn-desc-schema-entry.md)
 </dt> </dl>
 
  

@@ -1,7 +1,7 @@
 ---
-description: Bewirkt, dass eine oder mehrere Eigenschaften aus dem Eigenschaften Behälter gelesen werden. Die iitempropertybag-Schnittstelle wird nur unter Windows XP und Windows Server 2003 unterstützt und sollte nicht mehr verwendet werden.
+description: Bewirkt, dass eine oder mehrere Eigenschaften aus dem Eigenschaftenbehälter gelesen werden. Die IItemPropertyBag-Schnittstelle wird nur auf Windows XP und Windows Server 2003 unterstützt und sollte nicht mehr verwendet werden.
 ms.assetid: 78a63ef0-1b79-4b07-9121-a6fbd1116c4b
-title: 'Iitempropertybag:: Read-Methode'
+title: IItemPropertyBag::Read-Methode
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -12,16 +12,16 @@ api_name:
 api_type:
 - COM
 api_location: ''
-ms.openlocfilehash: ef7af13dc42239a2823d7e7ca9b8def4748519fd
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: c04cf34720871b1254f16822a090f48f8d68aaeb82398744d5139486fb6dd2f8
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104342939"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118226605"
 ---
-# <a name="iitempropertybagread-method"></a>Iitempropertybag:: Read-Methode
+# <a name="iitempropertybagread-method"></a>IItemPropertyBag::Read-Methode
 
-Bewirkt, dass eine oder mehrere Eigenschaften aus dem Eigenschaften Behälter gelesen werden. Die [**iitempropertybag**](iitempropertybag.md) -Schnittstelle wird nur unter Windows XP und Windows Server 2003 unterstützt und sollte nicht mehr verwendet werden.
+Bewirkt, dass eine oder mehrere Eigenschaften aus dem Eigenschaftenbehälter gelesen werden. Die [**IItemPropertyBag-Schnittstelle**](iitempropertybag.md) wird nur auf Windows XP und Windows Server 2003 unterstützt und sollte nicht mehr verwendet werden.
 
 ## <a name="syntax"></a>Syntax
 
@@ -41,43 +41,43 @@ HRESULT Read(
 
 <dl> <dt>
 
-*cproperties* \[ in\]
+*cProperties* \[ In\]
 </dt> <dd>
 
-Die Anzahl der zu lesenden Eigenschaften. Dieses Argument gibt die Anzahl der Elemente in den Arrays bei *ppropbag*, *pvarvalue* und *phrerror* an.
+Die Anzahl der zu lesende Eigenschaften. Dieses Argument gibt die Anzahl der Elemente in den Arrays bei *pPropBag,* *pvarValue* und *phrError* an.
 
 </dd> <dt>
 
-*ppropbag* \[ in\]
+*pPropBag* \[ In\]
 </dt> <dd>
 
-Ein Zeiger auf ein Array von [**ItemProp**](/windows/desktop/api/subsmgr/ns-subsmgr-itemprop) -Strukturen, das die angeforderten Eigenschaften angibt.
+Zeiger auf ein Array von [**ITEMPROP-Strukturen,**](/windows/desktop/api/subsmgr/ns-subsmgr-itemprop) das die angeforderten Eigenschaften angibt.
 
 </dd> <dt>
 
-*pvarvalue* \[ vorgenommen\]
+*pvarValue* \[ out\]
 </dt> <dd>
 
-Empfängt einen Zeiger, der ein Array von **Variant** -Strukturen zurückgibt, das die Eigenschaftswerte empfängt.
+Empfängt einen Zeiger, der ein Array von **VARIANT-Strukturen** zurückgibt, die die Eigenschaftswerte empfangen.
 
 </dd> <dt>
 
-*phrerror* \[ vorgenommen\]
+*phrError* \[ out\]
 </dt> <dd>
 
-Ein Zeiger auf ein Array von **HRESULT** -Werten, die das Ergebnis der einzelnen gelesenen Eigenschaften empfangen. Es müssen mindestens *cproperties* -Elemente in diesem Array vorhanden sein.
+Zeiger auf ein Array von **HRESULT-Werten,** das das Ergebnis der einzelnen gelesenen Eigenschaften empfängt. Dieses Array muss mindestens *cProperties-Elemente* enthalten.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Wenn die Methode erfolgreich ausgeführt wird, gibt Sie S \_ OK zurück. Andernfalls wird ein **HRESULT** -Fehlercode zurückgegeben.
+Wenn die Methode erfolgreich ist, wird S \_ OK zurückgegeben. Andernfalls wird ein **HRESULT-Fehlercode** zurückgegeben.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Die [**iitempropertybag**](iitempropertybag.md) -Schnittstelle wird nur unter Windows XP und Windows Server 2003 unterstützt und sollte nicht mehr verwendet werden.
+Die [**IItemPropertyBag-Schnittstelle**](iitempropertybag.md) wird nur auf Windows XP und Windows Server 2003 unterstützt und sollte nicht mehr verwendet werden.
 
-Zum Anzeigen einer Vorschau von Anlagen mit einem Protokollhandler eines Drittanbieters auf Computern, auf denen Windows XP oder Windows Server 2003 ausgeführt wird, ist es möglicherweise erforderlich, die [**iitempropertybag**](iitempropertybag.md) -Schnittstelle und die folgenden APIs zu verwenden: die Schnittstellen [**isearchprotocolui**](-search-isearchprotocolui.md), [**iitempreviewerext**](-search-iitempreviewerext.md) und [**isearchitem**](-search-isearchitem.md) [**, die-und**](-search-linkinfo.md) [**linktype**](-search-linktype.md) [**-**](/windows/desktop/api/subsmgr/ns-subsmgr-itemprop) Enumeration.
+Zum Anzeigen einer Vorschau von Anlagen mit einem Protokollhandler eines Drittanbieters auf Computern, auf denen Windows XP oder Windows Server 2003 ausgeführt wird, ist es möglicherweise erforderlich, die [**IItemPropertyBag-Schnittstelle**](iitempropertybag.md) und die folgenden APIs zu verwenden: die Schnittstellen [**ISearchProtocolUI,**](-search-isearchprotocolui.md) [**IItemPreviewerExt**](-search-iitempreviewerext.md) und [**ISearchItem,**](-search-isearchitem.md) die [**LINKINFO-**](-search-linkinfo.md) und [**ITEMPROP-Strukturen**](/windows/desktop/api/subsmgr/ns-subsmgr-itemprop) sowie die [**LINKTYPE-Enumeration.**](-search-linktype.md)
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -85,17 +85,17 @@ Zum Anzeigen einer Vorschau von Anlagen mit einem Protokollhandler eines Drittan
 
 | Anforderung | Wert |
 |-------------------------------------|------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows XP mit SP2 \[ Desktop-Apps\]<br/> |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2003 \[ -Desktop-Apps\]<br/> |
-| Verteilbare Komponente<br/>          | Windows-Desktop Suche (WDS) 3,0<br/>          |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur XP mit \[ SP2-Desktop-Apps\]<br/> |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2003-Desktop-Apps\]<br/> |
+| Verteilbare Komponente<br/>          | Windows Desktopsuche (WDS) 3.0<br/>          |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Iitempropertybag**](iitempropertybag.md)
+[**IItemPropertyBag**](iitempropertybag.md)
 </dt> </dl>
 
  

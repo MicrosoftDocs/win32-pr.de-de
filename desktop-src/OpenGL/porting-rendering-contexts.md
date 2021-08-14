@@ -1,51 +1,51 @@
 ---
-title: Portieren von renderingkontexten
-description: Portieren von renderingkontexten
+title: Portieren von Renderingkontexten
+description: Portieren von Renderingkontexten
 ms.assetid: 8655a81b-9f13-4ee5-ba0d-9aa9da1bfd09
 keywords:
-- Rendern von Kontexten OpenGL, portieren
-- OpenGL unter Windows, renderingkontexte
-- Portieren auf OpenGL, renderingkontexte
-- OpenGL-portieren, Rendern von Kontexten
+- Renderingkontexte OpenGL, Portieren
+- OpenGL für Windows,Renderingkontexte
+- Portieren zu OpenGL, Rendern von Kontexten
+- OpenGL-Portierung, Renderingkontexte
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 43e72839d04838b3173d772fbbf29a903a295cfd
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: 1f4fcb6a70f6858ac9c11258c681345ee88a8807c91230f8d3d35fc579ab3371
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "104388481"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118358340"
 ---
-# <a name="porting-rendering-contexts"></a>Portieren von renderingkontexten
+# <a name="porting-rendering-contexts"></a>Portieren von Renderingkontexten
 
-Das X-Fenster System und Windows Rendern durch renderingkontexte. Sechs glx-Funktionen verwalten renderingkontexte und fünf davon verfügen über eine entsprechende Windows-Funktion.
+Das X-Fenstersystem und Windows über Renderingkontexte gerendert. Sechs GLX-Funktionen verwalten Renderingkontexte, und fünf davon verfügen über eine entsprechende Windows Funktion.
 
-In der folgenden Tabelle sind die glx-Renderingfunktionen und ihre entsprechenden Windows-Funktionen aufgeführt.
+In der folgenden Tabelle sind die GLX-Renderingfunktionen und die entsprechenden Windows Funktionen aufgeführt.
 
 
 
-| Glx-Rendering-Kontextfunktion                                                                            | Windows-Rendering-Kontextfunktion                                      |
+| GLX-Renderingkontextfunktion                                                                            | Windows Renderingkontextfunktion                                      |
 |-----------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------|
-| Glxcontext **glxcopycontext**(Display *\* dpy*, glxcontext *src*, glxcontext *DST*, gluint *Mask*)            | Nicht zutreffend                                                         |
-| Glxcontext **glxkreatecontext**(Display *\* dpy*, xvisualinfo *\* VIS*, glxcontext *sharelist*, bool *Direct*) | Hglrc [**wglkreatecontext**](/windows/desktop/api/wingdi/nf-wingdi-wglcreatecontext)(HDC *hdc*)          |
-| void **glxdeletecontext**(Anzeigen von *\* dpy*, glxcontext *ctx*)                                              | Bool [**wgldeletecontext**](/windows/desktop/api/wingdi/nf-wingdi-wgldeletecontext)(hglrc *hglrc*)       |
-| Glxcontext **glxgetcurrentcontext**(*void*)                                                               | Hglrc [**wglgetcurrentcontext**](/windows/desktop/api/wingdi/nf-wingdi-wglgetcurrentcontext)(*void*)      |
-| Glxdrawable **glxgetcurrentdrawable**(*void*)                                                             | HDC [**wglgetcurrentdc**](/windows/desktop/api/wingdi/nf-wingdi-wglgetcurrentdc)(*void*)                  |
-| Bool **glxmakecurrent**(Anzeigen von *\* dpy*, glxdrawable *Draw*, glxcontext *ctx*)                              | Bool [**wglmakecurrent**](/windows/desktop/api/wingdi/nf-wingdi-wglmakecurrent)(HDC *hdc*, hglrc *hglrc*) |
+| GLXContext **glXCopyContext**( Display *\* dpy*, GLXContext *src*, GLXContext *dst*, GLuint *mask*)            | Nicht zutreffend                                                         |
+| GLXContext **glXCreateContext**( Anzeigen *\* von dpy*, XVisualInfo *\* vis*,GLXContext *shareList*, Bool *direct*) | HGLRC [**wglCreateContext**](/windows/desktop/api/wingdi/nf-wingdi-wglcreatecontext)( HDC *hdc*)          |
+| void **glXDeleteContext**( Display *\* dpy*,GLXContext *ctx*)                                              | BOOL [**wglDeleteContext**](/windows/desktop/api/wingdi/nf-wingdi-wgldeletecontext)( HGLRC *hglrc*)       |
+| GLXContext **glXGetCurrentContext**(*void*)                                                               | HGLRC [**wglGetCurrentContext**](/windows/desktop/api/wingdi/nf-wingdi-wglgetcurrentcontext)(*VOID*)      |
+| GLXDrawable **glXGetCurrentDrawable**(*void*)                                                             | HDC [**wglGetCurrentDC**](/windows/desktop/api/wingdi/nf-wingdi-wglgetcurrentdc)(*VOID*)                  |
+| Bool **glXMakeCurrent**( Display *\* dpy*, GLXDrawable *draw*, GLXContext *ctx*)                              | BOOL [**wglMakeCurrent**](/windows/desktop/api/wingdi/nf-wingdi-wglmakecurrent)( HDC *hdc*, HGLRC *hglrc*) |
 
 
 
- 
+ 
 
-Rückgabe Typen und andere Typen haben unterschiedliche Namen im X-Fenster System als in Windows. Sie können nach Vorkommen von glxcontext suchen, um Teile des Codes zu finden, die portiert werden müssen.
+Rückgabetypen und andere Typen haben im X-Fenstersystem andere Namen als in Windows. Sie können nach Vorkommen von GLXContext suchen, um Teile Ihres Codes zu finden, die portiert werden müssen.
 
-In den folgenden Abschnitten werden die Codebeispiele für das Rendern von Kontext in einem X Window-System Programm und der gleiche Code verglichen, nachdem er zu Windows portiert wurde.
+In den folgenden Abschnitten werden Codebeispiele für den Renderingkontext in einem X-Fenstersystemprogramm mit dem gleichen Code verglichen, nachdem er zu Windows portiert wurde.
 
-Weitere Informationen zum Rendern von Kontexten finden Sie unter [Rendern von Kontexten](rendering-contexts.md).
+Weitere Informationen zu Renderingkontexten finden Sie unter [Renderingkontexte.](rendering-contexts.md)
 
- 
+ 
 
- 
+ 
 
 
 

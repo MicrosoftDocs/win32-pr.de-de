@@ -1,10 +1,10 @@
 ---
-title: WINBIO_EXTENDED_ENROLLMENT_STATUS Struktur (winbio \_ types. h)
-description: Enthält weitere Informationen zum Status einer aktuell ausgeführten Registrierung.
+title: WINBIO_EXTENDED_ENROLLMENT_STATUS-Struktur (Winbio \_ types.h)
+description: Enthält zusätzliche Informationen zum Status einer registrierung, die gerade ausgeführt wird.
 ms.assetid: 2FDDF4D3-6A3E-4DF5-ACA4-423F893C6F2B
 keywords:
-- WINBIO_EXTENDED_ENROLLMENT_STATUS Struktur Windows-Biometrieframework-API
-- PWINBIO_EXTENDED_ENROLLMENT_STATUS Struktur Zeiger Windows-Biometrieframework API
+- WINBIO_EXTENDED_ENROLLMENT_STATUS Struktur Windows Biometrieframework-API
+- PWINBIO_EXTENDED_ENROLLMENT_STATUS Strukturzeiger Windows Biometrieframework-API
 topic_type:
 - apiref
 api_name:
@@ -15,16 +15,16 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 937e56e438feadc646329c673af4454cb39eaddd
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 16ab3736e3ad5b0bcf10bed1fb606d3e6283715a6b10c44dcb4923920597d5e6
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104103114"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118910445"
 ---
-# <a name="winbio_extended_enrollment_status-structure"></a>Struktur der erweiterten winbio-Registrierungs \_ \_ \_ Status
+# <a name="winbio_extended_enrollment_status-structure"></a>WINBIO \_ EXTENDED \_ ENROLLMENT \_ STATUS-Struktur
 
-Enthält weitere Informationen zum Status einer aktuell ausgeführten Registrierung.
+Enthält zusätzliche Informationen zum Status einer registrierung, die gerade ausgeführt wird.
 
 ## <a name="syntax"></a>Syntax
 
@@ -73,16 +73,16 @@ typedef struct _WINBIO_EXTENDED_ENROLLMENT_STATUS {
 **TemplateStatus**
 </dt> <dd>
 
-Der Status der Beispiel Auflistung für die Registrierungs Vorlage. Die folgenden Werte sind für diesen Member möglich.
+Der Status der Beispielsammlung für die Registrierungsvorlage. Die folgenden Werte sind für diesen Member möglich.
 
 
 
 | Wert                                                                                                                                                                                                  | Bedeutung                                                        |
 |--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|----------------------------------------------------------------|
-| <span id="S_OK"></span><span id="s_ok"></span><dl> <dt>**S \_ OK**</dt> </dl>                                                                     | Die Registrierung kann jetzt gespeichert werden.<br/>                |
-| <span id="WINBIO_E_INVALID_OPERATION"></span><span id="winbio_e_invalid_operation"></span><dl> <dt>**\_Ungültiger winbio E- \_ \_ Vorgang**</dt> </dl> | Es wird keine Registrierung durchgeführt.<br/>                       |
-| <span id="WINBIO_I_MORE_DATA"></span><span id="winbio_i_more_data"></span><dl> <dt>**winbio \_ I \_ more \_ Data**</dt> </dl>                         | Weitere Beispiele sind erforderlich, um die Vorlage abzuschließen.<br/> |
-| <span id="WINBIO_E_BAD_CAPTURE"></span><span id="winbio_e_bad_capture"></span><dl> <dt>**winbio \_ E ungültige \_ \_ Erfassung**</dt> </dl>                   | Das aktuelle Beispiel kann nicht verwendet werden.<br/>               |
+| <span id="S_OK"></span><span id="s_ok"></span><dl> <dt>**S \_ OK**</dt> </dl>                                                                     | Die Registrierung kann gespeichert werden.<br/>                |
+| <span id="WINBIO_E_INVALID_OPERATION"></span><span id="winbio_e_invalid_operation"></span><dl> <dt>**WINBIO \_ E \_ INVALID \_ OPERATION**</dt> </dl> | Es wird keine Registrierung ausgeführt.<br/>                       |
+| <span id="WINBIO_I_MORE_DATA"></span><span id="winbio_i_more_data"></span><dl> <dt>**WINBIO \_ I \_ MORE \_ DATA**</dt> </dl>                         | Weitere Beispiele sind erforderlich, um die Vorlage abzuschließen.<br/> |
+| <span id="WINBIO_E_BAD_CAPTURE"></span><span id="winbio_e_bad_capture"></span><dl> <dt>**WINBIO \_ E \_ BAD \_ CAPTURE**</dt> </dl>                   | Das neueste Beispiel kann nicht verwendet werden.<br/>               |
 
 
 
@@ -90,35 +90,35 @@ Der Status der Beispiel Auflistung für die Registrierungs Vorlage. Die folgende
 
 </dd> <dt>
 
-**Rejectdetail**
+**RejectDetail**
 </dt> <dd>
 
-Der Grund, warum das aktuellste Beispiel nicht verwendbar ist, wenn der Wert des **templatestatus** -Members **winbio E ungültige \_ \_ \_ Erfassung** ist.
+Der Grund, warum das letzte Beispiel nicht verwendet werden kann, wenn der Wert des **TemplateStatus-Members** **WINBIO \_ E BAD \_ \_ CAPTURE** ist.
 
 </dd> <dt>
 
 **PercentComplete**
 </dt> <dd>
 
-Die beste Schätzung vom Modul Adapter für den Prozentsatz der abgeschlossenen Vorlage als Wert zwischen 0 und 100.
+Die beste Schätzung des Engine-Adapters für den Prozentsatz der vorlage, die abgeschlossen ist, als Wert von 0 bis 100.
 
 </dd> <dt>
 
 **Aspekt**
 </dt> <dd>
 
-Der Typ der biometrischen Einheit, für die diese Strukturinformationen zu Funktionen und Registrierungsanforderungen des Engine-Adapters enthält. Wenn z. b. der Wert des  **\_ faktermembers winbio- \_ Fingerabdruck** ist, gilt die Struktur der [**\_ erweiterten \_ Engine \_**](winbio-extended-engine-info.md) -Informationen von winbio für einen Fingerabdruckleser und enthält die relevanten Informationen in der **specifc. Fingerabdruck** -Struktur.
+Der Typ der biometrischen Einheit, für die diese Struktur Informationen zu Funktionen und Registrierungsanforderungen des Engine-Adapters enthält. Wenn der Wert des **Factor-Members** beispielsweise **WINBIO \_ TYPE \_ FINGERPRINT** ist, gilt die [**WINBIO \_ EXTENDED ENGINE \_ \_ INFO-Struktur**](winbio-extended-engine-info.md) für einen Fingerabdruckleser und enthält die relevanten Informationen in der **Specifc.Fingerprint-Struktur.**
 
 </dd> <dt>
 
-**Teilfaktor**
+**SubFactor**
 </dt> <dd>
 
-Ein Wert des **\_ \_ Subtyps "winbio biometrische** ", der zusätzliche Informationen über die Registrierung bereitstellt.
+Ein **WINBIO \_ BIOMETRIC \_ SUBTYPE-Wert,** der zusätzliche Informationen zur Registrierung bereitstellt.
 
 </dd> <dt>
 
-**Zugeschnitten**
+**Bestimmten**
 </dt> <dd>
 
 Informationen zum Status einer Registrierung, die für einen bestimmten biometrischen Faktor ausgeführt wird.
@@ -132,126 +132,126 @@ Reserviert. Muss Null sein.
 
 </dd> <dt>
 
-**Fakialfeatures**
+**FacialFeatures**
 </dt> <dd>
 
-Informationen zum Status einer Registrierung, die für Gesichts Features ausgeführt wird.
+Informationen zum Status einer Registrierung, die für Gesichtsmerkmale ausgeführt wird.
 
 <dl> <dt>
 
-**BoundingBox**
+**Boundingbox**
 </dt> <dd>
 
-Die Position innerhalb des Kamera Rahmens der Vorderseite der zu registrierenden Person in Pixel. Die Größe des Kamera Rahmens bestimmt die Obergrenze für die Anzahl der Pixel für diese Position. Die Eigenschaft " **\_ \_ erweiterter \_ Sensor \_ Info" der winbio-Eigenschaft** zum Bestimmen der Größe des Kamera Rahmens. Ein Client, der den Anwesenheits Monitor verwendet, muss den Skalierungs Vorgang ausführen, um die Position dem Kamera Rahmen zuzuordnen.
+Die Position innerhalb des Kamerarahmens des Gesichts der person, die registriert werden soll, in Pixel. Die Größe des Kamerarahmens bestimmt die Obergrenze für die Anzahl der Pixel für diese Position. Abrufen der **WINBIO \_ PROPERTY EXTENDED \_ SENSOR \_ \_ INFO-Eigenschaft,** um die Größe des Kamerarahmens zu bestimmen. Ein Client, der den Anwesenheitsmonitor verwendet, muss den Skalierungsvorgang ausführen, um die Position dem Kamerarahmen zuzuordnen.
 
 </dd> <dt>
 
 **Entfernung**
 </dt> <dd>
 
-Der Abstand zwischen dem tatsächlichen Speicherort der Vorderseite und dem idealen Fokusabstand für das Gesicht. Dieser Wert liegt zwischen-100 und 100. 0 gibt die ideale Entfernung an, positive Werte geben an, dass der tatsächliche Speicherort der Fläche zu weit entfernt ist, und negative Werte geben an, dass der tatsächliche Speicherort zu nah ist.
+Der Abstand zwischen der tatsächlichen Position des Gesichts und dem idealen Fokusabstand für das Gesicht. Dieser Wert liegt zwischen -100 und 100. 0 gibt den idealen Abstand an, positive Werte geben an, dass die tatsächliche Position des Gesichts zu weit entfernt ist, und negative Werte geben an, dass die tatsächliche Position zu nah ist.
 
 </dd> </dl> </dd> <dt>
 
 **Fingerprint**
 </dt> <dd>
 
-Informationen zum Status einer Registrierung, die für Fingerabdruck Muster in Bearbeitung ist.
+Informationen zum Status einer Registrierung, die für Fingerabdruckmuster ausgeführt wird.
 
 <dl> <dt>
 
-**Generalsamples**
+**AllgemeineSamples**
 </dt> <dd>
 
-Die Gesamtanzahl der zum Erstellen einer neuen Fingerabdruck Vorlage erforderlichen Stichproben.
+Die Gesamtzahl der Stichproben, die zum Erstellen einer neuen Fingerabdruckvorlage erforderlich sind.
 
 </dd> <dt>
 
-**Tagesstätte**
+**Center**
 </dt> <dd>
 
-Die Anzahl der Abtastungen für die Mitte des Fingerabdrucks, der zum Erstellen einer neuen Fingerabdruck Vorlage erforderlich ist.
+Die Anzahl der Stichproben für die Mitte des Fingerabdrucks, die zum Erstellen einer neuen Fingerabdruckvorlage erforderlich sind.
 
 </dd> <dt>
 
-**Topedge**
+**TopEdge**
 </dt> <dd>
 
-Die Anzahl der Abtastungen für den oberen Rand des Fingerabdrucks, der zum Erstellen einer neuen Fingerabdruck Vorlage erforderlich ist.
+Die Anzahl der Stichproben für den oberen Rand des Fingerabdrucks, die zum Erstellen einer neuen Fingerabdruckvorlage erforderlich sind.
 
 </dd> <dt>
 
-**Bottomedge**
+**BottomEdge**
 </dt> <dd>
 
-Die Anzahl der Abtastungen für den unteren Rand des Fingerabdrucks, der zum Erstellen einer neuen Fingerabdruck Vorlage erforderlich ist.
+Die Anzahl der Stichproben für den unteren Rand des Fingerabdrucks, die zum Erstellen einer neuen Fingerabdruckvorlage erforderlich sind.
 
 </dd> <dt>
 
-**Leftedge**
+**LeftEdge**
 </dt> <dd>
 
-Die Anzahl der Abtastungen für den linken Rand des Fingerabdrucks, der zum Erstellen einer neuen Fingerabdruck Vorlage erforderlich ist.
+Die Anzahl der Stichproben für den linken Rand des Fingerabdrucks, die zum Erstellen einer neuen Fingerabdruckvorlage erforderlich sind.
 
 </dd> <dt>
 
-**Rechtschaffdge**
+**RightEdge**
 </dt> <dd>
 
-Die Anzahl der Abtastungen für den rechten Rand des Fingerabdrucks, der zum Erstellen einer neuen Fingerabdruck Vorlage erforderlich ist.
+Die Anzahl der Stichproben für den rechten Rand des Fingerabdrucks, die zum Erstellen einer neuen Fingerabdruckvorlage erforderlich sind.
 
 </dd> </dl> </dd> <dt>
 
-**Augen**
+**Iris**
 </dt> <dd>
 
-Informationen zum Status einer Registrierung, die für Iris-Muster ausgeführt wird.
+Informationen zum Status einer Registrierung, die für Irismuster ausgeführt wird.
 
 <dl> <dt>
 
-**Eyeboundingbox \_ 1**
+**EyeBoundingBox \_ 1**
 </dt> <dd>
 
-Die Position innerhalb des Kamera Rahmens einer der Irises der zu registrierenden Person in Pixel. Wenn das Schwert Erkennungssystem nur ein Auge überwacht, liegt diese Position in der Schwert Position. Wenn das Schwert Erkennungssystem beide Augen überwacht, aber nur ein Auge im Kamera Rahmen ist, ist diese Position der Schwert im Kamera-Frame. Wenn das Schwert Erkennungssystem beide Augen überwacht und beide Augen im Kamera Rahmen sind, ist diese Position wahrscheinlich die Schwert Ecke der Person.
+Die Position innerhalb des Kamerarahmens einer der Schwertlilien der zu registrierenden Person in Pixel. Wenn das Iriserkennungssystem nur ein Auge überwacht, entspricht diese Position der Iris dieses Auges. Wenn das Iriserkennungssystem beide Augen überwacht, sich aber nur ein Auge im Kamerarahmen befindet, befindet sich diese Position von der Iris des Auges im Kamerarahmen. Wenn das Iriserkennungssystem beide Augen überwacht und sich beide Augen im Kamerarahmen befinden, ist diese Position wahrscheinlich die Iris des rechten Auges des Einzelnen.
 
-Die Größe des Kamera Rahmens bestimmt die Obergrenze für die Anzahl der Pixel für diese Position. Die Eigenschaft " **\_ \_ erweiterter \_ Sensor \_ Info" der winbio-Eigenschaft** zum Bestimmen der Größe des Kamera Rahmens. Ein Client, der den Anwesenheits Monitor verwendet, muss den Skalierungs Vorgang ausführen, um die Position dem Kamera Rahmen zuzuordnen.
+Die Größe des Kamerarahmens bestimmt die Obergrenze für die Anzahl der Pixel für diese Position. Abrufen der **WINBIO \_ PROPERTY EXTENDED \_ SENSOR \_ \_ INFO-Eigenschaft,** um die Größe des Kamerarahmens zu bestimmen. Ein Client, der den Anwesenheitsmonitor verwendet, muss den Skalierungsvorgang ausführen, um die Position dem Kamerarahmen zuzuordnen.
 
 </dd> <dt>
 
-**Eyeboundingbox \_ 2**
+**EyeBoundingBox \_ 2**
 </dt> <dd>
 
-Die Position innerhalb des Kamera Rahmens einer der Irises der zu registrierenden Person in Pixel. Wenn das Schwert Erkennungssystem nur ein Auge überwacht oder sich nur ein Auge im Kamera Rahmen befindet, ist dieser Wert leer. Wenn das Schwert Erkennungssystem beide Augen überwacht und beide Augen im Kamera Rahmen sind, ist diese Position wahrscheinlich die Schwert Ecke der Person.
+Die Position innerhalb des Kamerarahmens einer der Schwertlilien der zu registrierenden Person in Pixel. Wenn das Iriserkennungssystem nur ein Auge überwacht oder sich nur ein Auge im Kamerarahmen befindet, ist dieser Wert leer. Wenn das Iriserkennungssystem beide Augen überwacht und sich beide Augen im Kamerarahmen befinden, ist diese Position wahrscheinlich die Iris des linken Auges des Einzelnen.
 
-Die Größe des Kamera Rahmens bestimmt die Obergrenze für die Anzahl der Pixel für diese Position. Die Eigenschaft " **\_ \_ erweiterter \_ Sensor \_ Info" der winbio-Eigenschaft** zum Bestimmen der Größe des Kamera Rahmens. Ein Client, der den Anwesenheits Monitor verwendet, muss den Skalierungs Vorgang ausführen, um die Position dem Kamera Rahmen zuzuordnen.
+Die Größe des Kamerarahmens bestimmt die Obergrenze für die Anzahl der Pixel für diese Position. Abrufen der **WINBIO \_ PROPERTY EXTENDED \_ SENSOR \_ \_ INFO-Eigenschaft,** um die Größe des Kamerarahmens zu bestimmen. Ein Client, der den Anwesenheitsmonitor verwendet, muss den Skalierungsvorgang ausführen, um die Position dem Kamerarahmen zuzuordnen.
 
 </dd> <dt>
 
-**Pupilcenter \_ 1**
+**\_1. 1.**
 </dt> <dd>
 
-Die Position der Mitte eines der zu registrierenden Schüler und/oder der zu registrierenden Person. Wenn das Schwert Erkennungssystem nur ein Auge überwacht, liegt diese Position in der Mitte der Schülerin dieses Auges. Wenn das Schwert Erkennungssystem beide Augen überwacht, sich aber nur ein Auge im Kamera Rahmen befindet, liegt diese Position in der Mitte der Schülerin des Augen Bilds. Wenn das Schwert Erkennungssystem beide Augen überwacht und beide Augen sich im Kamera Rahmen befinden, liegt diese Position wahrscheinlich in der Mitte des Schülers der Person.
+Die Position des Mittelpunkts eines der Zu registrierenden Personen. Wenn das Schwertlilienerkennungssystem nur ein Auge überwacht, ist diese Position der Mittelpunkt des Auges. Wenn das Iriserkennungssystem beide Augen überwacht, aber nur ein Auge im Kamerarahmen ist, befindet sich diese Position in der Mitte des Mittelpunkts des Auges im Kamerarahmen. Wenn das Iriserkennungssystem beide Augen überwacht und sich beide Augen im Kamerarahmen befinden, befindet sich diese Position wahrscheinlich im Mittelpunkt des Rechten Auges des Einzelnen.
 
 </dd> <dt>
 
-**Pupilcenter \_ 2**
+**Zu den \_ 2010er-Jahren**
 </dt> <dd>
 
-Die Position der Mitte eines der zu registrierenden Schüler und/oder der zu registrierenden Person. Wenn das Schwert Erkennungssystem nur ein Auge überwacht oder sich nur ein Auge im Kamera Rahmen befindet, ist dieser Wert leer. Wenn das Schwert Erkennungssystem beide Augen überwacht und beide Augen sich im Kamera Rahmen befinden, liegt diese Position wahrscheinlich in der Mitte der Schülerin des linken Auges der Person.
+Die Position des Mittelpunkts eines der Zu registrierenden Personen. Wenn das Iriserkennungssystem nur ein Auge überwacht oder sich nur ein Auge im Kamerarahmen befindet, ist dieser Wert leer. Wenn das Iriserkennungssystem beide Augen überwacht und sich beide Augen im Kamerarahmen befinden, befindet sich diese Position wahrscheinlich im Mittelpunkt des Linken Auges des Einzelnen.
 
 </dd> <dt>
 
 **Entfernung**
 </dt> <dd>
 
-Der Abstand zwischen dem tatsächlichen Speicherort der Iris und dem idealen Fokusabstand für die Iris. Dieser Wert liegt zwischen-100 und 100. 0 gibt die ideale Entfernung an, positive Werte geben an, dass der tatsächliche Speicherort der IRIS zu weit entfernt ist, und negative Werte geben an, dass der tatsächliche Speicherort zu nah ist.
+Der Abstand zwischen der tatsächlichen Position der Iris und dem idealen Fokusabstand für die Iris. Dieser Wert liegt zwischen -100 und 100. 0 gibt den idealen Abstand an, positive Werte geben an, dass die tatsächliche Position der Iris zu weit entfernt ist, und negative Werte geben an, dass die tatsächliche Position zu nah ist.
 
 </dd> </dl> </dd> <dt>
 
 **Voice**
 </dt> <dd>
 
-Informationen zum Status einer Registrierung, die für Sprachmuster in Bearbeitung ist.
+Informationen zum Status einer Registrierung, die für Stimmmuster ausgeführt wird.
 
 <dl> <dt>
 
@@ -268,9 +268,9 @@ Reserviert.
 
 | Anforderung | Wert |
 |-------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows 10 \[ -Desktop-Apps\]<br/>                                                                                                                              |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2016 \[ -Desktop-Apps\]<br/>                                                                                                                     |
-| Header<br/>                   | <dl> <dt>Winbio \_ types. h (Include winbio. h für Client Anwendungen oder winbio \_ Adapters. h für Adapter)</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | \[Windows 10 Nur Desktop-Apps\]<br/>                                                                                                                              |
+| Unterstützte Mindestversion (Server)<br/> | \[Windows Server 2016 Nur Desktop-Apps\]<br/>                                                                                                                     |
+| Header<br/>                   | <dl> <dt>Winbio \_ types.h (winbio.h für Clientanwendungen oder Winbio \_ adapters.h für Adapter einschließen)</dt> </dl> |
 
 
 

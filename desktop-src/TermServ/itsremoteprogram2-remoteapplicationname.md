@@ -1,14 +1,14 @@
 ---
-title: ITSRemoteProgram2 remoteapplicationname-Eigenschaft
+title: ITSRemoteProgram2-Eigenschaft "RemoteApplicationName"
 description: Der Name der RemoteApp.
 ms.assetid: e6bde351-dd4c-4b14-bb11-f155c526aced
 ms.tgt_platform: multiple
 keywords:
-- Remoteapplicationname-Eigenschaft Remotedesktopdienste
-- Remoteapplicationname-Eigenschaft Remotedesktopdienste, ITSRemoteProgram2-Schnittstelle
-- ITSRemoteProgram2 Interface Remotedesktopdienste, remoteapplicationname-Eigenschaft
-- Remoteapplicationname-Eigenschaft Remotedesktopdienste, ITSRemoteProgram3-Schnittstelle
-- ITSRemoteProgram3 Interface Remotedesktopdienste, remoteapplicationname-Eigenschaft
+- RemoteApplicationName-Eigenschaft Remotedesktopdienste
+- RemoteApplicationName-Eigenschaft Remotedesktopdienste , ITSRemoteProgram2-Schnittstelle
+- ITSRemoteProgram2-Schnittstelle Remotedesktopdienste , RemoteApplicationName-Eigenschaft
+- RemoteApplicationName-Eigenschaft Remotedesktopdienste , ITSRemoteProgram3-Schnittstelle
+- ITSRemoteProgram3-Schnittstelle Remotedesktopdienste , RemoteApplicationName-Eigenschaft
 topic_type:
 - apiref
 api_name:
@@ -22,14 +22,14 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: b5fd26ea4d9b7ca4bad5cbd8f16a0526978c2abc
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 2508b382fc3d79b64e976c69ab98932f5e4b38565b264d29729f5dc47008f9fc
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "103949622"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117756745"
 ---
-# <a name="itsremoteprogram2remoteapplicationname-property"></a>ITSRemoteProgram2:: remoteapplicationname-Eigenschaft
+# <a name="itsremoteprogram2remoteapplicationname-property"></a>ITSRemoteProgram2::RemoteApplicationName-Eigenschaft
 
 Der Name der RemoteApp.
 
@@ -63,7 +63,7 @@ Der RemoteApp-Name.
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 

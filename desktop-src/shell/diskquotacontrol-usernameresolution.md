@@ -13,16 +13,16 @@ api_type:
 api_location:
 - Shell32.dll
 ms.assetid: dc936421-e66d-4762-912a-c586f9cdace4
-ms.openlocfilehash: 169f4db6e135392e9548767520f6d2b0bd2d527c
-ms.sourcegitcommit: 3caaa3c92dcb1ef12f84464d14ce6262e65e988e
+ms.openlocfilehash: cfc86f7f7da03ea4ffb092d50b51ef0c69349935cdae40586e08ae50f6ea251b
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/12/2021
-ms.locfileid: "109841461"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118224613"
 ---
 # <a name="diskquotacontrolusernameresolution-property"></a>DiskQuotaControl.UserNameResolution-Eigenschaft
 
-Legt einen Wert fest oder ruft einen Wert ab, der steuert, wie Benutzersicherheits-IDs (SID) in Benutzernamen aufgelöst werden.
+Legt einen Wert fest, der steuert, wie die Benutzersicherheits-ID (SID) in Benutzernamen aufgelöst wird, oder ruft diesen ab.
 
 Dies ist eine Eigenschaft mit Lese- und Schreibzugriff.
 
@@ -54,7 +54,7 @@ Diese Eigenschaft kann auf einen der folgenden Werte festgelegt werden.
 
 ## <a name="remarks"></a>Hinweise
 
-Diese Eigenschaft wirkt sich auf die Enumeration von [**DIDiskQuotaUser-Objekten**](didiskquotauser-object.md) sowie auf die [**AddUser-**](diskquotacontrol-adduser.md) und [**FindUser-Methoden**](diskquotacontrol-finduser.md) aus.
+Diese Eigenschaft wirkt sich auf die Enumeration von [**DIDiskQuotaUser-Objekten**](didiskquotauser-object.md) und die [**AddUser-**](diskquotacontrol-adduser.md) und [**FindUser-Methoden**](diskquotacontrol-finduser.md) aus.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -68,7 +68,7 @@ Diese Eigenschaft wirkt sich auf die Enumeration von [**DIDiskQuotaUser-Objekten
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 

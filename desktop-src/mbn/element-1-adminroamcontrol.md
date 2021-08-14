@@ -1,22 +1,22 @@
 ---
-description: "\"Wdemdmconfigprofile\" \\/ adminroamcontrol (v4)"
+description: ModemDMConfigProfile \/ AdminRoamControl (v4)
 MS-HAID: WWAN\_profile\_v4.element\_1\_AdminRoamControl
 MSHAttr:
 - PreferredSiteName:MSDN
 - PreferredLib:/library/windows/desktop
-title: Adminroamcontrol (v4)
+title: AdminRoamControl (v4)
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: a92ba97fd2657b28d1c845598825aae648124d36
-ms.sourcegitcommit: 4d4a6e9ad5de37e467cd3164276771b71e1f113f
+ms.openlocfilehash: ec631626c937555ae24460be82bd5322a0ae63185922b5e09249526118b35c9b
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/05/2021
-ms.locfileid: "106388868"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117882012"
 ---
-# <a name="span-idwwan_profile_v4element_1_adminroamcontrolspanmodemdmconfigprofileadminroamcontrol-v4"></a><span id="WWAN_profile_v4.element_1_AdminRoamControl"></span>"Wdemdmconfigprofile" \/ adminroamcontrol (v4)
+# <a name="span-idwwan_profile_v4element_1_adminroamcontrolspanmodemdmconfigprofileadminroamcontrol-v4"></a><span id="WWAN_profile_v4.element_1_AdminRoamControl"></span>ModemDMConfigProfile \/ AdminRoamControl (v4)
 
-Gibt an, ob das Profil administrativ durchlaufen wird. Dieses Element ist neu für v4. Der Wert dieses Elements ist ein [**roamcontroltype**](simpletype-roamcontroltype.md) -Wert. Dies ist ein optionales Element. Wenn kein Wert angegeben wird, ist **allroamallowed** der Standardwert.
+Gibt an, ob das Profil vom Administrator per Roaming gesteuert wird. Dieses Element ist neu für v4. Der Wert dieses Elements ist ein [**roamControlType-Wert.**](simpletype-roamcontroltype.md) Dies ist ein optionales Element. Wenn kein Wert angegeben wird, ist **AllRoamAllowed** der Standardwert.
 
 ## <a name="element-hierarchy"></a>Elementhierarchie
 
@@ -62,12 +62,12 @@ Keine.
 <tbody>
 <tr class="odd">
 <td><a href="element-mbnprofileext.md">MBNProfileExt</a></td>
-<td><p>Das <strong>mbnprofileext</strong> -Element ist eine Erweiterung des früheren mbnprofile-Elements. Es identifiziert ein mobiles Breitband Profil mit einem umfassenderen Satz von Optionen als das mbnprofile-Element.</p>
-<p>Es kann mehr als ein mbnprofileext-Element in einem Profil geben, das Profileinstellungen für einen bestimmten Satz von Betriebszuständen beschreibt. Verwenden Sie das untergeordnete <a href="element-profileconditionedon.md"><strong>profileconditionedon</strong></a> -Element von <strong>mbnprofileext</strong> , um anzugeben, welche Betriebsbedingungen ein bestimmtes Profil zum aktiven Profil machen.</p></td>
+<td><p>Das <strong>MBNProfileExt-Element</strong> ist eine Erweiterung des früheren MBNProfile-Elements. Es identifiziert ein mobiles Breitbandprofil mit einem umfangreicheren Satz von Optionen als das MBNProfile-Element.</p>
+<p>Ein Profil kann mehrere MbnProfileExt-Elemente enthalten, die Profileinstellungen für einen bestimmten Satz von Betriebsbedingungen beschreiben. Verwenden Sie das untergeordnete <a href="element-profileconditionedon.md"><strong>ProfileConditionedOn-Element</strong></a> von <strong>MBNProfileExt,</strong> um anzugeben, welche Betriebsbedingungen ein bestimmtes Profil zum aktiven Profil machen.</p></td>
 </tr>
 <tr class="even">
 <td><a href="element-modemdmconfigprofile.md">ModemDMConfigProfile</a></td>
-<td><p>Modem-DM-Konfigurations Profil.</p></td>
+<td><p>Modem DM-Konfigurationsprofil.</p></td>
 </tr>
 </tbody>
 </table>

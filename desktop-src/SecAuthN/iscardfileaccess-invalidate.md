@@ -1,7 +1,7 @@
 ---
-description: Legt fest, dass die angegebene Datei (EF oder DF) ungültig ist. Auf eine ungültige Datei kann nicht durch andere Methoden zugegriffen werden, bevor die Verwendung von "Rehabilitation" erfolgt.
+description: Macht die angegebene Datei (EF oder DF) ungültig. Auf eine ungültige Datei kann nicht von anderen Methoden zugegriffen werden, bevor Rehabilitate verwendet wird.
 ms.assetid: 5600fcf0-091c-437e-a45c-4de5b0a47d68
-title: 'Iscardfileaccess:: Invalidate-Methode'
+title: ISCardFileAccess::Invalidate-Methode
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -12,18 +12,18 @@ api_name:
 api_type:
 - COM
 api_location: ''
-ms.openlocfilehash: 3e1d74885f97eca64f403155f1dba52e398b9426
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: d0d1ed7aa9bbe69f67c0e4e4b4952e23fbfa75bfca470395d9a36eb6867ab16b
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106369732"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119481097"
 ---
-# <a name="iscardfileaccessinvalidate-method"></a>Iscardfileaccess:: Invalidate-Methode
+# <a name="iscardfileaccessinvalidate-method"></a>ISCardFileAccess::Invalidate-Methode
 
-\[Die **Invalidate** -Methode ist für die Verwendung in den Betriebssystemen verfügbar, die im Abschnitt "Anforderungen" angegeben sind. Es ist nicht für die Verwendung in Windows Server 2003 mit Service Pack 1 (SP1) und höher, Windows Vista, Windows Server 2008 und nachfolgenden Versionen des Betriebssystems verfügbar. Die [Smartcard-Module](/previous-versions/windows/desktop/secsmart/smart-card-modules) bieten eine ähnliche Funktionalität.\]
+\[Die **Invalidate-Methode** ist für die Verwendung in den im Abschnitt Anforderungen angegebenen Betriebssystemen verfügbar. Es ist nicht für die Verwendung in Windows Server 2003 mit Service Pack 1 (SP1) und höher, Windows Vista, Windows Server 2008 und nachfolgenden Versionen des Betriebssystems verfügbar. Die [Smartcardmodule](/previous-versions/windows/desktop/secsmart/smart-card-modules) bieten ähnliche Funktionen.\]
 
-Die **Invalidate** -Methode macht die angegebene Datei (EF oder DF) ungültig. Auf eine ungültige Datei kann nicht durch andere Methoden zugegriffen werden, bevor die Verwendung von " [**Rehabilitation**](iscardfileaccess-rehabilitate.md)" erfolgt.
+Die **Invalidate-Methode** macht die angegebene Datei (EF oder DF) ungültig. Auf eine ungültige Datei kann nicht von anderen Methoden vor der Verwendung von [**Rehabilitate zugegriffen werden.**](iscardfileaccess-rehabilitate.md)
 
 ## <a name="syntax"></a>Syntax
 
@@ -41,45 +41,45 @@ HRESULT Invalidate(
 
 <dl> <dt>
 
-*bstrinpathspec* \[ in\]
+*bstrPathSpec* \[ In\]
 </dt> <dd>
 
 Datei.
 
 </dd> <dt>
 
-*Flags* \[ in\]
+*Flags* \[ In\]
 </dt> <dd>
 
 Gibt an, ob sicheres Messaging verwendet werden soll.
 
 <dl><span id="SC_FL_SECURE_MESSAGING"></span><span id="sc_fl_secure_messaging"></span><dt>
 
-**SC \_ FL \_ Secure \_ Messaging**
+**SC \_ FL \_ SECURE \_ MESSAGING**
 </dt> </dl> </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Die-Methode gibt einen der folgenden möglichen Werte zurück.
+Die -Methode gibt einen der folgenden möglichen Werte zurück.
 
 
 
 | Rückgabecode                                                                                   | Beschreibung                                  |
 |-----------------------------------------------------------------------------------------------|----------------------------------------------|
 | <dl> <dt>**S \_ OK**</dt> </dl>          | Operation erfolgreich abgeschlossen.<br/> |
-| <dl> <dt>**E \_ invalidArg**</dt> </dl>  | Ein Parameter ist nicht gültig.<br/>         |
-| <dl> <dt>**E- \_ Zeiger**</dt> </dl>     | Es wurde ein fehlerhafter Zeiger übermittelt.<br/>      |
-| <dl> <dt>**E \_ outo-Memory**</dt> </dl> | Nicht genügend Arbeitsspeicher.<br/>                    |
+| <dl> <dt>**E \_ INVALIDARG**</dt> </dl>  | Ein Parameter ist nicht gültig.<br/>         |
+| <dl> <dt>**\_E-ZEIGER**</dt> </dl>     | Ein fehlerhafter Zeiger wurde übergeben.<br/>      |
+| <dl> <dt>**E \_ OUTOFMEMORY**</dt> </dl> | Nicht genügend Arbeitsspeicher.<br/>                    |
 
 
 
  
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Eine Liste aller Methoden, die durch diese Schnittstelle definiert werden, finden Sie unter [**iscardfileaccess**](iscardfileaccess.md).
+Eine Liste aller von dieser Schnittstelle definierten Methoden finden Sie unter [**ISCardFileAccess**](iscardfileaccess.md).
 
-Zusätzlich zu den oben aufgeführten com-Fehlercodes gibt diese Schnittstelle möglicherweise einen Fehlercode für die [*Smartcard*](../secgloss/s-gly.md) zurück, wenn eine smartcardfunktion aufgerufen wurde, um die Anforderung abzuschließen. Weitere Informationen finden Sie unter [Smartcard-Rückgabewerte](authentication-return-values.md).
+Zusätzlich zu den oben aufgeführten COM-Fehlercodes [](../secgloss/s-gly.md) gibt diese Schnittstelle möglicherweise einen Smartcardfehlercode zurück, wenn eine Smartcardfunktion aufgerufen wurde, um die Anforderung zu erfüllen. Weitere Informationen finden Sie unter [Smartcard-Rückgabewerte.](authentication-return-values.md)
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -87,21 +87,21 @@ Zusätzlich zu den oben aufgeführten com-Fehlercodes gibt diese Schnittstelle m
 
 | Anforderung | Wert |
 |-------------------------------------|------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows XP \[ -Desktop-Apps\]<br/>          |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2003 \[ -Desktop-Apps\]<br/> |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur \[ XP-Desktop-Apps\]<br/>          |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2003-Desktop-Apps\]<br/> |
 | Ende des Supports (Client)<br/>    | Windows XP<br/>                                |
-| Ende des Supports (Server)<br/>    | Windows Server 2003<br/>                       |
+| Ende des Supports (Server)<br/>    | Windows Server 2003<br/>                       |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Iscardfileaccess**](iscardfileaccess.md)
+[**ISCardFileAccess**](iscardfileaccess.md)
 </dt> <dt>
 
-[**Rehabilitations**](iscardfileaccess-rehabilitate.md)
+[**Rehabilitieren**](iscardfileaccess-rehabilitate.md)
 </dt> </dl>
 
  

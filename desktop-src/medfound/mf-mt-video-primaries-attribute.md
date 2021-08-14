@@ -1,31 +1,31 @@
 ---
-description: Gibt die Farb Primärwerte für einen Video Medientyp an.
+description: Gibt die Farbprimärdateien für einen Videomedientyp an.
 ms.assetid: 56f31c1a-b610-4da0-9df4-76e15add672c
-title: MF_MT_VIDEO_PRIMARIES-Attribut (mfapi. h)
+title: MF_MT_VIDEO_PRIMARIES-Attribut (Mfapi.h)
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: e6cdf26a3f49c7e2bb3aa0f48c52c9b283edd8cc
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 44b4e1c99dc9a4f288ebab36d413f7eed7c74881e7c10d3c7e9a8a4fe3f0bcf6
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106359529"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117876710"
 ---
-# <a name="mf_mt_video_primaries-attribute"></a>MF \_ MT- \_ Video- \_ primär Attribut
+# <a name="mf_mt_video_primaries-attribute"></a>MF \_ MT \_ VIDEO \_ PRIMARIES-Attribut
 
-Gibt die Farb Primärwerte für einen Video Medientyp an.
+Gibt die Farbprimärdateien für einen Videomedientyp an.
 
 ## <a name="data-type"></a>Datentyp
 
 **UINT32**
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Der Wert dieses Attributs ist ein Member der [**mfvideoprimaries**](/windows/desktop/api/mfobjects/ne-mfobjects-mfvideoprimaries) -Enumeration.
+Der Wert dieses Attributs ist ein Member der [**MFVideoPrimaries-Enumeration.**](/windows/desktop/api/mfobjects/ne-mfobjects-mfvideoprimaries)
 
-Die [**MF videoprimaries**](/windows/desktop/api/mfobjects/ne-mfobjects-mfvideoprimaries) -Enumeration identifiziert Farb Replikate, die bestimmten gängigen Videostandards zugeordnet sind. Wenn der Medientyp Farb Replikate verwendet, die nicht in der **MF videoprimaries** -Enumeration identifiziert werden, legen Sie anstelle dieses Attributs das [**benutzerdefinierte Attribut "MF \_ MT \_ Custom \_ Video \_ Primaries**](mf-mt-custom-video-primaries-attribute.md) " fest.
+Die [**MFVideoPrimaries-Enumeration**](/windows/desktop/api/mfobjects/ne-mfobjects-mfvideoprimaries) identifiziert Farbprimärdateien, die bestimmten allgemeinen Videostandards zugeordnet sind. Wenn der Medientyp Farbprimärdateien verwendet, die in der **MFVideoPrimaries-Enumeration** nicht identifiziert werden, legen Sie das [**MF MT CUSTOM VIDEO \_ \_ \_ \_ PRIMARIES-Attribut**](mf-mt-custom-video-primaries-attribute.md) anstelle dieses Attributs fest.
 
-Die GUID-Konstante für dieses Attribut wird aus "mfuuid. lib" exportiert.
+Die GUID-Konstante für dieses Attribut wird aus mfuuid.lib exportiert.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -33,29 +33,29 @@ Die GUID-Konstante für dieses Attribut wird aus "mfuuid. lib" exportiert.
 
 | Anforderung | Wert |
 |-------------------------------------|------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Windows Vista \[ -Desktop-Apps \| UWP-apps\]<br/>                              |
-| Unterstützte Mindestversion (Server)<br/> | Windows Server 2008 \[ -Desktop-Apps \| UWP-apps\]<br/>                        |
-| Header<br/>                   | <dl> <dt>Mfapi. h</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows \[Vista-Desktop-Apps \| UWP-Apps\]<br/>                              |
+| Unterstützte Mindestversion (Server)<br/> | Windows UWP-Apps für Server \[ 2008-Desktop-Apps \|\]<br/>                        |
+| Header<br/>                   | <dl> <dt>Mfapi.h</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
 [Alphabetische Liste der Media Foundation Attribute](alphabetical-list-of-media-foundation-attributes.md)
 </dt> <dt>
 
-[**Imfattributes:: GetUINT32**](/windows/desktop/api/mfobjects/nf-mfobjects-imfattributes-getuint32)
+[**ATTRIBUTEAttributes::GetUINT32**](/windows/desktop/api/mfobjects/nf-mfobjects-imfattributes-getuint32)
 </dt> <dt>
 
-[**Imfattributes:: SetUINT32**](/windows/desktop/api/mfobjects/nf-mfobjects-imfattributes-setuint32)
+[**DENKattribute::SetUINT32**](/windows/desktop/api/mfobjects/nf-mfobjects-imfattributes-setuint32)
 </dt> <dt>
 
-[**IMF MediaType**](/windows/desktop/api/mfobjects/nn-mfobjects-imfmediatype)
+[**ARCHEMEDIATYPE**](/windows/desktop/api/mfobjects/nn-mfobjects-imfmediatype)
 </dt> <dt>
 
-[Medientyp Attribute](media-type-attributes.md)
+[Medientypattribute](media-type-attributes.md)
 </dt> <dt>
 
 [Erweiterte Farbinformationen](extended-color-information.md)

@@ -1,26 +1,26 @@
 ---
-title: Position-Attribut (Lock) (VML)
-description: Position-Attribut (Lock) (VML)
+title: Position-Attribut (Lock)(VML)
+description: Position-Attribut (Lock)(VML)
 ms.assetid: 98079909-d48e-4da3-a7a9-d3db541b9910
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 7ab9059dd4bf7ca5a28ccd4afadbcd375d874548
-ms.sourcegitcommit: 592c9bbd22ba69802dc353bcb5eb30699f9e9403
+ms.openlocfilehash: 2f622a09cf8b34b890d8804ef555b6c5b77435112aea4cee72fe2a6b7a03c785
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "104474132"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119475090"
 ---
-# <a name="position-attribute-lockvml"></a>Position-Attribut (Lock) (VML)
+# <a name="position-attribute-lockvml"></a>Position-Attribut (Lock)(VML)
 
-In diesem Thema wird VML beschrieben, eine Funktion, die ab Windows Internet Explorer 9 veraltet ist. Webseiten und Anwendungen, die auf VML basieren, sollten zu SVG oder anderen allgemein unterstützten Standards migriert werden.
+In diesem Thema wird VML beschrieben, ein Feature, das ab Windows Internet Explorer 9 als veraltet gilt. Webseiten und Anwendungen, die auf VML basieren, sollten zu SVG oder anderen allgemein unterstützten Standards migriert werden.
 
 > [!Note]  
-> Ab Dezember 2011 wurde dieses Thema archiviert. Daher wird er nicht mehr aktiv verwaltet. Weitere Informationen finden Sie unter [archivierte Inhalte](/previous-versions/windows/internet-explorer/ie-developer/). Informationen, Empfehlungen und Anleitungen zur aktuellen Version von Windows Internet Explorer finden Sie im [Internet Explorer Developer Center](https://msdn.microsoft.com/ie/).
+> Seit Dezember 2011 wurde dieses Thema archiviert. Daher wird sie nicht mehr aktiv verwaltet. Weitere Informationen finden Sie unter [Archivierter Inhalt.](/previous-versions/windows/internet-explorer/ie-developer/) Informationen, Empfehlungen und Anleitungen zur aktuellen Version von Windows Internet Explorer finden Sie unter [Internet Explorer Developer Center.](https://msdn.microsoft.com/ie/)
 
- 
+ 
 
-Bestimmt, ob die Position einer Form in einem Editor gesperrt ist. Lese-/Schreibzugriff. **Vgder State**.
+Bestimmt, ob die Position einer Form in einem Editor gesperrt ist. Lese-/Schreibzugriff. **VgTriState**.
 
 **Gilt für**
 
@@ -28,7 +28,7 @@ Bestimmt, ob die Position einer Form in einem Editor gesperrt ist. Lese-/Schreib
 
 **Tagsyntax**
 
-<o: *Element* Position = " *Ausdruck* " >
+<o: *element* position=" *ausdruck* ">
 
 **Anmerkungen**
 
@@ -36,6 +36,6 @@ Bestimmt, ob die Position einer Form in einem Editor gesperrt ist. Lese-/Schreib
 
 *Microsoft Office Extensions-Attribut*
 
- 
+ 
 
- 
+ 

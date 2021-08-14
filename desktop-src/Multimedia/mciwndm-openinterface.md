@@ -1,9 +1,9 @@
 ---
-title: MCIWNDM_OPENINTERFACE Meldung (VFW. h)
-description: Die mciwndm- \_ openinterface-Nachricht fügt den Datenstrom oder die Datei, die der angegebenen Schnittstelle zugeordnet ist, einem mciwnd-Fenster an. Sie können diese Nachricht explizit oder mithilfe des mciwndopeninterface-Makros senden.
+title: MCIWNDM_OPENINTERFACE-Nachricht (Vfw.h)
+description: Die MCIWNDM \_ OPENINTERFACE-Nachricht fügt den Datenstrom oder die Datei, der bzw. die der angegebenen Schnittstelle zugeordnet ist, an ein MCIWnd-Fenster an. Sie können diese Nachricht explizit oder mithilfe des MCIWndOpenInterface-Makros senden.
 ms.assetid: 73cbd637-d315-4b39-a978-2b72aed1f303
 keywords:
-- MCIWNDM_OPENINTERFACE-Nachricht (Multimedia)
+- MCIWNDM_OPENINTERFACE Nachricht Windows Multimedia
 topic_type:
 - apiref
 api_name:
@@ -14,16 +14,16 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 9c40453f4d587429508a5aae19bc432fc46088ae
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 83097ad6301dbfdb4636a8478c2df8e544207df334efd27fe9695f15e0693533
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104391507"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118373507"
 ---
-# <a name="mciwndm_openinterface-message"></a>Mciwndm- \_ openinterface-Meldung
+# <a name="mciwndm_openinterface-message"></a>MCIWNDM \_ OPENINTERFACE-Meldung
 
-Die **mciwndm- \_ openinterface** -Nachricht fügt den Datenstrom oder die Datei, die der angegebenen Schnittstelle zugeordnet ist, einem mciwnd-Fenster an. Sie können diese Nachricht explizit oder mithilfe des [**mciwndopeninterface**](/windows/desktop/api/Vfw/nf-vfw-mciwndopeninterface) -Makros senden.
+Die **MCIWNDM \_ OPENINTERFACE-Nachricht** fügt den Datenstrom oder die Datei, der bzw. die der angegebenen Schnittstelle zugeordnet ist, an ein MCIWnd-Fenster an. Sie können diese Nachricht explizit oder mithilfe des [**MCIWndOpenInterface-Makros**](/windows/desktop/api/Vfw/nf-vfw-mciwndopeninterface) senden.
 
 
 ```C++
@@ -38,16 +38,16 @@ lParam = (LPARAM) (LPUNKNOWN) pUnk;
 
 <dl> <dt>
 
-<span id="pUnk"></span><span id="punk"></span><span id="PUNK"></span>*Kro*
+<span id="pUnk"></span><span id="punk"></span><span id="PUNK"></span>*Punk*
 </dt> <dd>
 
-Zeiger auf eine IAVI-Schnittstelle, die auf eine Datei oder einen Datenstrom in einer Datei zeigt.
+Zeiger auf eine IAVI-Schnittstelle, die auf eine Datei oder einen Datenstrom in einer Datei verweist.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt 0 (null) zurück, wenn erfolgreich, andernfalls einen Fehler.
+Gibt 0 (null) zurück, wenn der Fehler erfolgreich war, oder andernfalls ein Fehler.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -57,15 +57,15 @@ Gibt 0 (null) zurück, wenn erfolgreich, andernfalls einen Fehler.
 |-------------------------------------|----------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional \[nur Desktop-Apps\]<br/>                       |
 | Unterstützte Mindestversion (Server)<br/> | Windows 2000 Server \[nur Desktop-Apps\]<br/>                             |
-| Header<br/>                   | <dl> <dt>VFW. h</dt> </dl> |
+| Header<br/>                   | <dl> <dt>Vfw.h</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Mciwndopeninterface**](/windows/desktop/api/Vfw/nf-vfw-mciwndopeninterface)
+[**MCIWndOpenInterface**](/windows/desktop/api/Vfw/nf-vfw-mciwndopeninterface)
 </dt> </dl>
 
  

@@ -1,9 +1,9 @@
 ---
-title: einfacher multipleinstancespolicytype-Typ
-description: Definiert die instanzrichtlinienkonstanten für das multipleinstancespolicy (settingstype)-Element.
+title: MultipleInstancesPolicyType Simple Type
+description: Definiert die Instanzrichtlinienkonst constants für das MultipleInstancesPolicy (settingsType)-Element.
 ms.assetid: 6e3f83b0-b71e-49c9-9c27-5a37f996746b
 keywords:
-- multipleinstancespolicytype-Typ "Simple" Taskplaner
+- MultipleInstancesPolicyType simple type Taskplaner
 topic_type:
 - apiref
 api_name:
@@ -13,16 +13,16 @@ api_type:
 ms.topic: reference
 ms.date: 05/31/2018
 api_location: ''
-ms.openlocfilehash: 29a3523ef16224836ada474fb32265084453479c
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 0e8e847e268486e58bc36bd1bcf9f454b2d8af7b7664d0372613c40c818f932f
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "103956683"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117758509"
 ---
-# <a name="multipleinstancespolicytype-simple-type"></a>einfacher multipleinstancespolicytype-Typ
+# <a name="multipleinstancespolicytype-simple-type"></a>MultipleInstancesPolicyType Simple Type
 
-Definiert die instanzrichtlinienkonstanten für das [**multipleinstancespolicy (settingstype)**](taskschedulerschema-multipleinstancespolicy-settingstype-element.md) -Element.
+Definiert die Instanzrichtlinienkonst constants für das [**MultipleInstancesPolicy (settingsType)-Element.**](taskschedulerschema-multipleinstancespolicy-settingstype-element.md)
 
 ``` syntax
 <xs:simpleType name="multipleInstancesPolicyType">
@@ -47,16 +47,16 @@ Definiert die instanzrichtlinienkonstanten für das [**multipleinstancespolicy (
 
 ## <a name="enumeration-values"></a>Enumerationswerte
 
-Der einfache Typ " **multipleinstancespolicytype** " definiert die folgenden Werte.
+Der **einfache MultipleInstancesPolicyType-Typ** definiert die folgenden Werte.
 
 
 
 | Wert        | BESCHREIBUNG                                                                                     |
 |--------------|-------------------------------------------------------------------------------------------------|
-| Parallel     | Startet eine neue Instanz, während eine vorhandene-Instanz ausgeführt wird.<br/>                           |
-| Warteschlange        | Startet eine neue Instanz der Aufgabe, nachdem alle anderen Instanzen der Aufgabe vollständig sind.<br/>      |
-| Ignorumew    | Standard. Startet keine neue Instanz, wenn eine vorhandene Instanz der Aufgabe ausgeführt wird.<br/> |
-| Stopp vorhanden | Beendet eine vorhandene Instanz der Aufgabe vor dem Starten der neuen Instanz.<br/>                |
+| Parallel     | Startet eine neue Instanz, während eine vorhandene Instanz ausgeführt wird.<br/>                           |
+| Warteschlange        | Startet eine neue Instanz der Aufgabe, nachdem alle anderen Instanzen der Aufgabe abgeschlossen sind.<br/>      |
+| IgnoreNew    | Standard. Startet keine neue Instanz, wenn eine vorhandene Instanz der Aufgabe ausgeführt wird.<br/> |
+| StopExisting | Beendet eine vorhandene Instanz der Aufgabe, bevor sie eine neue Instanz startet.<br/>                |
 
 
 
@@ -66,16 +66,16 @@ Der einfache Typ " **multipleinstancespolicytype** " definiert die folgenden Wer
 
 | Anforderung | Wert |
 |-------------------------------------|------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>       |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2008 \[ -Desktop-Apps\]<br/> |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur \[ Vista-Desktop-Apps\]<br/>       |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2008-Desktop-Apps\]<br/> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[Einfache Typen von Taskplaner Schemas](task-scheduler-schema-complex-types.md)
+[Taskplaner schema simple types (Einfache Schematypen)](task-scheduler-schema-complex-types.md)
 </dt> <dt>
 
 [Aufgabenplanung](task-scheduler-start-page.md)

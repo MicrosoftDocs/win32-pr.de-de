@@ -1,24 +1,24 @@
 ---
-title: Beispiel Code zum Veröffentlichen des RNR-Verbindungs Punkts
-description: Das folgende Codebeispiel wird vom Winsock-Dienst verwendet, um den RNR-Verbindungspunkt für den Dienst zu registrieren.
+title: Beispielcode für die Veröffentlichung des RnR-Verbindungspunkts
+description: Das folgende Codebeispiel wird vom Winsock-Dienst verwendet, um den RnR-Verbindungspunkt für den Dienst zu registrieren.
 ms.assetid: dd2c7ac9-76fc-4366-8654-8048e6793a16
 ms.tgt_platform: multiple
 keywords:
-- Beispiel Code für die Veröffentlichung des RNR-Verbindungspunkt-AD
-- Windows Sockets-Registrierungs-und Auflösungs-AD, Beispiel Code, Veröffentlichen des RNR-Verbindungs Punkts
-- Veröffentlichen der RNR-Verbindungspunkt Anzeige, Beispiel Code
+- Beispielcode für die Veröffentlichung des RnR-Verbindungspunkt-AD
+- Windows Sockets Registration and Resolution AD , Beispielcode, Veröffentlichen des RnR-Verbindungspunkts
+- Veröffentlichen des RnR-Verbindungspunkts AD , Beispielcode
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: d2e8f5337f80f9d05bcd1e9b25a963dadba4da21
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: 6a66581ea20acc42993451a8074e08f8b15f2244d4db1c997da2a978c717aaa3
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "104206266"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118693203"
 ---
-# <a name="example-code-for-publishing-the-rnr-connection-point"></a>Beispiel Code zum Veröffentlichen des RNR-Verbindungs Punkts
+# <a name="example-code-for-publishing-the-rnr-connection-point"></a>Beispielcode für die Veröffentlichung des RnR-Verbindungspunkts
 
-Das folgende Codebeispiel wird vom Winsock-Dienst verwendet, um den RNR-Verbindungspunkt für den Dienst zu registrieren.
+Das folgende Codebeispiel wird vom Winsock-Dienst verwendet, um den RnR-Verbindungspunkt für den Dienst zu registrieren.
 
 
 ```C++
@@ -84,9 +84,9 @@ INT serverRegister(SOCKADDR * sa,
 
 
 
- 
+ 
 
- 
+ 
 
 
 

@@ -1,9 +1,9 @@
 ---
-title: LVM_GETCOLUMNORDERARRAY Meldung (kommstrg. h)
-description: Ruft die aktuelle Reihenfolge von links nach rechts von Spalten in einem Listenansicht-Steuerelement ab. Sie können diese Nachricht explizit senden oder das ListView \_ getcolumnorderarray-Makro verwenden.
+title: LVM_GETCOLUMNORDERARRAY Meldung (Commctrl.h)
+description: Ruft die aktuelle Reihenfolge von links nach rechts von Spalten in einem Listenansichtssteuerelement ab. Sie können diese Nachricht explizit senden oder das ListView \_ GetColumnOrderArray-Makro verwenden.
 ms.assetid: d4636aa8-c61e-4467-abc7-eea897bf370e
 keywords:
-- Windows-Steuerelemente für LVM_GETCOLUMNORDERARRAY Meldung
+- LVM_GETCOLUMNORDERARRAY Windows-Steuerelemente für Nachrichten
 topic_type:
 - apiref
 api_name:
@@ -14,16 +14,16 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: aee387f65abd3f30826e361778d5acac02dfab7c
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: ea54c633c7ffc9bc580609678e8ba5f62e29429aaea6f866bb7d72b6ea326eb2
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104040107"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118411496"
 ---
-# <a name="lvm_getcolumnorderarray-message"></a>LVM \_ getcolumnorderarray-Meldung
+# <a name="lvm_getcolumnorderarray-message"></a>LVM \_ GETCOLUMNORDERARRAY-Nachricht
 
-Ruft die aktuelle Reihenfolge von links nach rechts von Spalten in einem Listenansicht-Steuerelement ab. Sie können diese Nachricht explizit senden oder das [**ListView \_ getcolumnorderarray**](/windows/desktop/api/Commctrl/nf-commctrl-listview_getcolumnorderarray) -Makro verwenden.
+Ruft die aktuelle Reihenfolge von links nach rechts von Spalten in einem Listenansichtssteuerelement ab. Sie können diese Nachricht explizit senden oder das [**ListView \_ GetColumnOrderArray-Makro**](/windows/desktop/api/Commctrl/nf-commctrl-listview_getcolumnorderarray) verwenden.
 
 ## <a name="parameters"></a>Parameter
 
@@ -32,20 +32,20 @@ Ruft die aktuelle Reihenfolge von links nach rechts von Spalten in einem Listena
 *wParam* 
 </dt> <dd>
 
-Die Anzahl der Spalten im Listenansicht-Steuerelement.
+Die Anzahl der Spalten im Listenansichtssteuerelement.
 
 </dd> <dt>
 
 *lParam* 
 </dt> <dd>
 
-Ein Zeiger auf ein Array von ganzen Zahlen, das die Indexwerte der Spalten im Listenansicht-Steuerelement empfängt. Das Array muss groß genug sein, um *wParam* -Elemente zu speichern.
+Ein Zeiger auf ein Array von ganzen Zahlen, das die Indexwerte der Spalten im Listenansichtssteuerelement empfängt. Das Array muss groß genug sein, um *wParam-Elemente* zu enthalten.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Wenn erfolgreich, wird ein Wert ungleich 0 (null) zurückgegeben, und der Puffer bei *LPARAM* empfängt den Spalten Index jeder Spalte im Steuerelement in der Reihenfolge, in der Sie von links nach rechts angezeigt werden. Andernfalls ist der Rückgabewert 0 (null).
+Bei Erfolg gibt einen Wert ungleich 0 (null) zurück, und der Puffer bei *lParam* empfängt den Spaltenindex jeder Spalte im Steuerelement in der Reihenfolge, in der sie von links nach rechts angezeigt werden. Andernfalls ist der Rückgabewert 0 (null).
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -53,9 +53,9 @@ Wenn erfolgreich, wird ein Wert ungleich 0 (null) zurückgegeben, und der Puffer
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>                                        |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2003 \[ -Desktop-Apps\]<br/>                                  |
-| Header<br/>                   | <dl> <dt>Kommstrg. h</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows \[Nur Vista-Desktop-Apps\]<br/>                                        |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2003-Desktop-Apps\]<br/>                                  |
+| Header<br/>                   | <dl> <dt>Commctrl.h</dt> </dl> |
 
 
 

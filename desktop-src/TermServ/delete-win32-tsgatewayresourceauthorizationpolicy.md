@@ -1,12 +1,12 @@
 ---
 title: Delete-Methode der Win32_TSGatewayResourceAuthorizationPolicy-Klasse
-description: Löscht die aktuelle Remotedesktop Ressourcen Autorisierungs Richtlinie (RD \ 160; Rap).
+description: Löscht die aktuelle Remotedesktop-Ressourcenautorisierungsrichtlinie (RD \ 160; HIER WIRD DER 16.
 ms.assetid: cbabb997-63b8-4a4c-9e16-34f2638fca97
 ms.tgt_platform: multiple
 keywords:
 - Delete-Methode Remotedesktopdienste
-- Delete-Methode Remotedesktopdienste, Win32_TSGatewayResourceAuthorizationPolicy-Klasse
-- Win32_TSGatewayResourceAuthorizationPolicy-Klasse Remotedesktopdienste, DELETE-Methode
+- Delete-Methode Remotedesktopdienste , Win32_TSGatewayResourceAuthorizationPolicy-Klasse
+- Win32_TSGatewayResourceAuthorizationPolicy-Klasse Remotedesktopdienste , Delete-Methode
 topic_type:
 - apiref
 api_name:
@@ -17,16 +17,16 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 396a766fb307d1e8a912d614147a2bff2bd924c1
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 9ad39ebc5cf059575403a86cd790a6350ce520d8864fccc212f5be5a2ae3926b
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104391619"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119513486"
 ---
-# <a name="delete-method-of-the-win32_tsgatewayresourceauthorizationpolicy-class"></a>Delete-Methode der Win32-Klasse "t- \_ gatewayresourceauthorizationpolicy"
+# <a name="delete-method-of-the-win32_tsgatewayresourceauthorizationpolicy-class"></a>Delete-Methode der Win32 \_ TSGatewayResourceAuthorizationPolicy-Klasse
 
-Löscht die aktuelle Remotedesktop Ressourcen Autorisierungs Richtlinie (RD-RAP).
+Löscht die aktuelle Remotedesktop-Ressourcenautorisierungsrichtlinie (RDRAP).
 
 ## <a name="syntax"></a>Syntax
 
@@ -43,13 +43,13 @@ Diese Methode hat keine Parameter.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Wenn die Methode erfolgreich ist, gibt Sie 0 (null) zurück. Wenn die Methode nicht erfolgreich ist, wird ein Wert ungleich 0 (null) zurückgegeben. Eine Liste der Fehlercodes finden Sie unter [Remotedesktopdienste Fehlercodes des WMI-Anbieters](terminal-services-wmi-provider-error-codes.md).
+Wenn die Methode erfolgreich ist, gibt sie 0 (null) zurück. Wenn die Methode nicht erfolgreich ist, wird ein Wert ungleich 0 (null) zurückgegeben. Eine Liste der Fehlercodes finden Sie unter [Remotedesktopdienste WMI-Anbieterfehlercodes.](terminal-services-wmi-provider-error-codes.md)
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Sie müssen Mitglied der Gruppe "Administratoren" sein, um diese Methode aufzurufen.
+Sie müssen Mitglied der Gruppe Administratoren sein, um diese Methode aufzurufen.
 
-Managed Object Format-Dateien (MOF) enthalten die Definitionen für Windows-Verwaltungsinstrumentation (WMI)-Klassen. MOF-Dateien werden nicht als Teil des Microsoft Windows Software Development Kit (SDK) installiert. Sie werden auf dem Server installiert, wenn Sie die zugehörige Rolle mithilfe der Server-Manager hinzufügen. Weitere Informationen zu MOF-Dateien finden Sie unter [Managed Object Format (MOF)](/windows/desktop/WmiSdk/managed-object-format--mof-).
+Managed Object Format -Dateien (MOF) enthalten die Definitionen für Windows Management Instrumentation (WMI)-Klassen. MOF-Dateien werden nicht als Teil des Microsoft Windows Software Development Kit (SDK) installiert. Sie werden auf dem Server installiert, wenn Sie die zugeordnete Rolle mithilfe der Server-Manager hinzufügen. Weitere Informationen zu MOF-Dateien finden Sie unter [Managed Object Format (MOF).](/windows/desktop/WmiSdk/managed-object-format--mof-)
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -60,16 +60,16 @@ Managed Object Format-Dateien (MOF) enthalten die Definitionen für Windows-Verw
 | Unterstützte Mindestversion (Client)<br/> | Nicht unterstützt<br/>                                                                |
 | Unterstützte Mindestversion (Server)<br/> | Windows Server 2008<br/>                                                           |
 | Namespace<br/>                | Root \\ CIMv2 \\ TerminalServices<br/>                                                 |
-| MOF<br/>                      | <dl> <dt>"T-Gateway. mof"</dt> </dl> |
+| MOF<br/>                      | <dl> <dt>TSGateway.mof</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>AagWmi.dll</dt> </dl>    |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Win32- \_ faigatewayresourceauthorizationpolicy**](win32-tsgatewayresourceauthorizationpolicy.md)
+[**Win32 \_ TSGatewayResourceAuthorizationPolicy**](win32-tsgatewayresourceauthorizationpolicy.md)
 </dt> </dl>
 
  

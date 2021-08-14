@@ -1,33 +1,33 @@
 ---
-title: Eigenschaft "muvecause"
-description: Eigenschaft "muvecause"
+title: MoveCause-Eigenschaft
+description: MoveCause-Eigenschaft
 ms.assetid: 8f78a6da-8498-4a39-a4b9-5ab7a43d97f5
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: dfc7f91d068befa2b919c04818c46dbc1a48faa0
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: aa797338e64edfd67ae2347f2983df624464df923a64883e3adc5143671b15dd
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "103856211"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117883831"
 ---
-# <a name="movecause-property"></a>Eigenschaft "muvecause"
+# <a name="movecause-property"></a>MoveCause-Eigenschaft
 
-\[Der Microsoft-Agent ist ab Windows 7 veraltet und in nachfolgenden Versionen von Windows möglicherweise nicht verfügbar.\]
+\[Microsoft Agent ist ab Version Windows 7 veraltet und in nachfolgenden Versionen von Windows.\]
 
 <dl> <dt>
 
 <span id="Description"></span><span id="description"></span><span id="DESCRIPTION"></span>**Beschreibung**
 </dt> <dd>
 
-Gibt einen ganzzahligen Wert zurück, der angibt, was das letzte Verschieben des Zeichens verursacht hat.
+Gibt einen ganzzahligen Wert zurück, der angibt, was die letzte Bewegung des Zeichens verursacht hat.
 
 </dd> <dt>
 
 <span id="Syntax"></span><span id="syntax"></span><span id="SYNTAX"></span>**Syntax**
 </dt> <dd>
 
-*Agent*. **Zeichen ("***Merkmal-ID***"). "Muvecause** "
+*-Agent.* **Characters("**_CharacterID_*_"). MoveCause_*
 
 
 
@@ -36,27 +36,27 @@ Gibt einen ganzzahligen Wert zurück, der angibt, was das letzte Verschieben des
 | 0     | Das Zeichen wurde nicht verschoben.                                                          |
 | 1     | Der Benutzer hat das Zeichen verschoben.                                                              |
 | 2     | Die Anwendung hat das Zeichen verschoben.                                                      |
-| 3     | Das Zeichen wurde von einer anderen Client Anwendung verschoben.                                            |
-| 4     | Der Agent-Server hat das Zeichen verschoben, um es nach einer Änderung der Bildschirmauflösung auf dem Bildschirm aufzubewahren. |
+| 3     | Das Zeichen wurde von einer anderen Clientanwendung verschoben.                                            |
+| 4     | Der -Agent-Server hat das Zeichen verschoben, um es nach einer Änderung der Bildschirmauflösung auf dem Bildschirm zu halten. |
 
 
 
- 
+ 
 
 </dd> </dl>
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Sie können diese Eigenschaft verwenden, um zu bestimmen, was das Zeichen bewegt hat, wenn mehr als eine Anwendung das gleiche Zeichen gemeinsam nutzt (hat geladen). Diese Werte sind identisch mit denen, die vom [**Move**](move-event.md) -Ereignis zurückgegeben werden.
+Sie können diese Eigenschaft verwenden, um zu bestimmen, was das Verschieben des Zeichens verursacht hat, wenn mehrere Anwendungen dasselbe Zeichen gemeinsam nutzen (geladen hat). Diese Werte sind mit denen identisch, die vom [**Move-Ereignis zurückgegeben**](move-event.md) werden.
 
 ## <a name="see-also"></a>Weitere Informationen
 
-[**Move-Ereignis**](move-event.md), [ **MoveTo-Methode**](moveto-method.md)
+[**Move-Ereignis,**](move-event.md) [ **MoveTo-Methode**](moveto-method.md)
 
 
- 
+ 
 
- 
+ 
 
 
 

@@ -1,15 +1,15 @@
 ---
 description: Wird an das oberste betroffene Fenster gesendet, nachdem die Eingabesprache einer Anwendung geändert wurde. Sie sollten anwendungsspezifische Einstellungen vornehmen und die Nachricht an die DefWindowProc-Funktion übergeben, die die Nachricht an alle untergeordneten Fenster der ersten Ebene übergibt.
 ms.assetid: 4d403b1d-f6f7-40d5-9bf5-6a9c4da0803c
-title: WM_INPUTLANGCHANGE-Nachricht (Winuser.h)
+title: WM_INPUTLANGCHANGE-Meldung (Winuser.h)
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: b7e2ceb943290fceab13bf6f22c3d9dafbac27a8
-ms.sourcegitcommit: 40dddb65cba5c5470631f1f4c78218edf7e515de
+ms.openlocfilehash: 72f56367045fe72a8288220e1aeef662e648d702c3b48ead23bf179142dff92c
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/01/2021
-ms.locfileid: "108332405"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118436245"
 ---
 # <a name="wm_inputlangchange-message"></a>WM \_ INPUTLANGCHANGE-Nachricht
 
@@ -69,19 +69,19 @@ case WM_INPUTLANGCHANGE:
 
 ## <a name="requirements"></a>Anforderungen
 
-| Anforderungen | Wert |
+| Anforderung | Wert |
 |-------------------------------------|----------------------------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional \[nur Desktop-Apps\]<br/>                                               |
 | Unterstützte Mindestversion (Server)<br/> | Windows 2000 Server \[nur Desktop-Apps\]<br/>                                                     |
-| Header<br/>                   | <dl> <dt>Winuser.h (windows.h einschließen)</dt> </dl> |
+| Header<br/>                   | <dl> <dt>Winuser.h (include Windows.h)</dt> </dl> |
 
 ## <a name="see-also"></a>Weitere Informationen
 
-**Verweis**
+**Referenz**
 
 - [**DefWindowProc**](/windows/desktop/api/winuser/nf-winuser-defwindowproca)
 - [**WM \_ INPUTLANGCHANGEREQUEST**](wm-inputlangchangerequest.md)
 
-**Konzept**
+**Konzeptionellen**
 
 - [Windows](windows.md) 

@@ -1,10 +1,10 @@
 ---
-title: IADsContainer-Eigenschaften Methoden (IADs. h)
-description: Mit den Eigenschafts Methoden der IADsContainer-Schnittstelle werden die in der folgenden Tabelle beschriebenen Eigenschaften angezeigt oder festgelegt. Weitere Informationen und eine allgemeine Erörterung von Eigenschaften Methoden finden Sie unter Interface Property Methods.
+title: IADsContainer-Eigenschaftsmethoden (Iads.h)
+description: Die Eigenschaftenmethoden der IADsContainer-Schnittstelle erhalten oder legen die in der folgenden Tabelle beschriebenen Eigenschaften fest. Weitere Informationen und eine allgemeine Erläuterung zu Eigenschaftsmethoden finden Sie unter Schnittstelleneigenschaftenmethoden.
 ms.assetid: 74d348bf-7b7f-4971-ba03-f77940600674
 ms.tgt_platform: multiple
 keywords:
-- IADsContainer-Eigenschaften Methoden ADSI
+- IADsContainer-Eigenschaftsmethoden ADSI
 topic_type:
 - apiref
 api_name:
@@ -23,16 +23,16 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: c5196addda0d9ff89f8a4976f3197bbeeae07044
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 13515bcf90c926db839aad60d49599967ee0d24bedbe0deb4b7d1d21c3c016e3
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104105152"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118428085"
 ---
-# <a name="iadscontainer-property-methods"></a>IADsContainer-Eigenschaften Methoden
+# <a name="iadscontainer-property-methods"></a>IADsContainer-Eigenschaftsmethoden
 
-Mit den Eigenschafts Methoden der [**IADsContainer**](/windows/desktop/api/Iads/nn-iads-iadscontainer) -Schnittstelle werden die in der folgenden Tabelle beschriebenen Eigenschaften angezeigt oder festgelegt. Weitere Informationen und eine allgemeine Erörterung von Eigenschaften Methoden finden Sie unter [Interface Property Methods](interface-property-methods.md).
+Die Eigenschaftenmethoden der [**IADsContainer-Schnittstelle**](/windows/desktop/api/Iads/nn-iads-iadscontainer) erhalten oder legen die in der folgenden Tabelle beschriebenen Eigenschaften fest. Weitere Informationen und eine allgemeine Erläuterung zu Eigenschaftsmethoden finden Sie unter [Schnittstelleneigenschaftenmethoden.](interface-property-methods.md)
 
 ## <a name="properties"></a>Eigenschaften
 
@@ -41,14 +41,14 @@ Mit den Eigenschafts Methoden der [**IADsContainer**](/windows/desktop/api/Iads/
 **Count**
 </dt> <dd> <dl>
 
-Ruft die Anzahl der Elemente im Container ab. Wenn **Filter** festgelegt ist, gibt **count** nur die Anzahl der gefilterten Elemente zurück.
+Ruft die Anzahl der Elemente im Container ab. Wenn **Filter** festgelegt ist, gibt **Count** nur die Anzahl der gefilterten Elemente zurück.
 
 <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Skript Datentyp: **Long**
+Skriptdatentyp: **LONG**
 </dt> <dt>
 
 
@@ -66,14 +66,14 @@ HRESULT get_Count(
 **Filter**
 </dt> <dd> <dl>
 
-Ruft den Filter ab, mit dem Objektklassen in einer angegebenen Enumeration ausgewählt werden, oder legt diesen fest. Dabei handelt es sich um ein Variant-Array, bei dem es sich bei jedem Element um den Namen einer Schema Klasse handelt. Wenn **Filter** nicht festgelegt oder auf leer festgelegt ist, werden alle Objekte aller Klassen vom Enumerator abgerufen.
+Ruft den Filter ab, der zum Auswählen von Objektklassen in einer bestimmten Enumeration verwendet wird, oder legt diesen fest. Dies ist ein variant-Array, von dem jedes Element der Name einer Schemaklasse ist. Wenn **Filter** nicht auf leer festgelegt oder festgelegt ist, werden alle Objekte aller Klassen vom Enumerator abgerufen.
 
 <dt>
 
 Zugriffstyp: Lesen/Schreiben
 </dt> <dt>
 
-Skript Datentyp: **Variant**
+Skriptdatentyp: **VARIANT**
 </dt> <dt>
 
 
@@ -94,14 +94,14 @@ HRESULT put_Filter(
 **Hinweise**
 </dt> <dd> <dl>
 
-Ein Variant-Array von **BSTR** -Zeichen folgen. Jedes Element identifiziert den Namen einer Eigenschaft, die in der Schema Definition gefunden wurde. Der *vhints* -Parameter ermöglicht es dem Client, anzugeben, welche Attribute für jedes Enumerationsobjekt geladen werden sollen. Diese Daten können verwendet werden, um den Netzwerk Zugriff zu optimieren. Die genaue Implementierung ist jedoch Anbieter spezifisch und wird zurzeit nicht vom WinNT-Anbieter verwendet.
+Ein Variantenarray von **BSTR-Zeichenfolgen.** Jedes Element identifiziert den Namen einer Eigenschaft, die sich in der Schemadefinition befindet. Mit dem *vHints-Parameter* kann der Client angeben, welche Attribute für jedes aufzählte Objekt geladen werden sollen. Diese Daten können verwendet werden, um den Netzwerkzugriff zu optimieren. Die genaue Implementierung ist jedoch anbieterspezifisch und wird derzeit nicht vom WinNT-Anbieter verwendet.
 
 <dt>
 
 Zugriffstyp: Lesen/Schreiben
 </dt> <dt>
 
-Skript Datentyp: **Variant**
+Skriptdatentyp: **VARIANT**
 </dt> <dt>
 
 
@@ -121,13 +121,13 @@ HRESULT put_Hints(
 
  
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Die enumerationsprozesse unter [**IADsContainer:: get \_ \_ NewEnum**](/windows/desktop/api/Iads/nf-iads-iadscontainer-get__newenum) und **IADsContainer:: get \_ count** werden für die enthaltenen Objekte im Cache ausgeführt. Wenn ein Container eine große Anzahl von Objekten enthält, wirkt sich dies möglicherweise negativ auf die Leistung aus. Um die Leistung zu verbessern, deaktivieren Sie den Cache, richten Sie eine geeignete Seitengröße ein, und verwenden Sie die [**IDirectorySearch**](/windows/desktop/api/Iads/nn-iads-idirectorysearch) -Schnittstelle. Aus diesem Grund wird die Eigenschaft **get \_ count** im Microsoft LDAP-Anbieter nicht unterstützt.
+Die Enumerationsprozesse unter [**IADsContainer::get \_ \_ NewEnum**](/windows/desktop/api/Iads/nf-iads-iadscontainer-get__newenum) und **IADsContainer::get \_ Count** werden für die enthaltenen Objekte im Cache ausgeführt. Wenn ein Container eine große Anzahl von -Objekten enthält, kann die Leistung beeinträchtigt werden. Um die Leistung zu verbessern, deaktivieren Sie den Cache, richten Sie eine geeignete Seitengröße ein, und verwenden Sie die [**IDirectorySearch-Schnittstelle.**](/windows/desktop/api/Iads/nn-iads-idirectorysearch) Aus diesem Grund wird die **\_ get Count-Eigenschaft** im Microsoft LDAP-Anbieter nicht unterstützt.
 
 ## <a name="examples"></a>Beispiele
 
-Im folgenden Visual Basic Codebeispiel wird gezeigt, wie Eigenschafts Methoden von [**IADsContainer**](/windows/desktop/api/Iads/nn-iads-iadscontainer) verwendet werden können.
+Das folgende Visual Basic Codebeispiel zeigt, wie Eigenschaftsmethoden von [**IADsContainer**](/windows/desktop/api/Iads/nn-iads-iadscontainer) verwendet werden können.
 
 
 ```VB
@@ -157,7 +157,7 @@ Cleanup:
 
 
 
-Im folgenden C++-Codebeispiel wird gezeigt, wie die-Eigenschaften Methoden von [**IADsContainer**](/windows/desktop/api/Iads/nn-iads-iadscontainer) verwendet werden können. Aus Gründen der Übersichtlichkeit wird die Fehlerüberprüfung ausgelassen.
+Das folgende C++-Codebeispiel zeigt, wie die Eigenschaftsmethoden von [**IADsContainer**](/windows/desktop/api/Iads/nn-iads-iadscontainer) verwendet werden können. Aus Gründen der Kürze wird die Fehlerüberprüfung ausgelassen.
 
 
 ```C++
@@ -234,20 +234,20 @@ Cleanup:
 |-------------------------------------|-----------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows Vista<br/>                                                                |
 | Unterstützte Mindestversion (Server)<br/> | Windows Server 2008<br/>                                                          |
-| Header<br/>                   | <dl> <dt>IADs. h</dt> </dl>       |
+| Header<br/>                   | <dl> <dt>Iads.h</dt> </dl>       |
 | DLL<br/>                      | <dl> <dt>Activeds.dll</dt> </dl> |
-| IID<br/>                      | IID \_ IADsContainer ist definiert als 001677d0-SD16-11CE-abc4-02608c9e7553<br/>        |
+| IID<br/>                      | IID \_ IADsContainer ist als 001677D0-FD16-11CE-ABC4-02608C9E7553 definiert.<br/>        |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
 [**IADsContainer**](/windows/desktop/api/Iads/nn-iads-iadscontainer)
 </dt> <dt>
 
-[**IDirectorySearch**](/windows/desktop/api/Iads/nn-iads-idirectorysearch)
+[**Idirectorysearch**](/windows/desktop/api/Iads/nn-iads-idirectorysearch)
 </dt> </dl>
 
  

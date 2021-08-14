@@ -1,23 +1,23 @@
 ---
-description: Der Symbol Handler dient zum Nachverfolgen verschiedener Sätze von Symbol Dateien.
+description: Der Symbolhandler ist so konzipiert, dass verschiedene Sätze von Symboldateien nachverfolgt werden.
 ms.assetid: 1bd7ac25-e46d-442b-b365-52edcd8bf922
-title: Initialisierung von Symbol Handlern
+title: Initialisierung des Symbolhandlers
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 146af0e1118e85a3478ca45be7a86c4b1d8dfe83
-ms.sourcegitcommit: c7add10d695482e1ceb72d62b8a4ebd84ea050f7
+ms.openlocfilehash: bf9d3664a564b0198d97549f2815abebf0e5e6058beb197ed33ca191a64407f9
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104126050"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118406080"
 ---
-# <a name="symbol-handler-initialization"></a>Initialisierung von Symbol Handlern
+# <a name="symbol-handler-initialization"></a>Initialisierung des Symbolhandlers
 
-Der Symbol Handler dient zum Nachverfolgen verschiedener Sätze von Symbol Dateien.
+Der Symbolhandler ist so konzipiert, dass verschiedene Sätze von Symboldateien nachverfolgt werden.
 
-Zum Initialisieren des Symbol Handlers wird die [**syminitialize**](/windows/desktop/api/Dbghelp/nf-dbghelp-syminitialize) -Funktion aufgerufen. Der *hProcess* -Parameter kann eine eindeutige beliebige Zahl, ein Wert, der von der [**GetCurrentProcess**](/windows/win32/api/processthreadsapi/nf-processthreadsapi-getcurrentprocess) -Funktion zurückgegeben wird, oder der Bezeichner eines beliebigen laufenden Prozesses sein. Der *finvadeprocess* -Parameter gibt an, ob der Symbol Handler die vom Prozess geladenen Module aufzählen und Symbole für die einzelnen Module laden soll. Wenn *finvadeprocess* auf **true** festgelegt ist, muss der *hProcess* -Parameter der von **GetCurrentProcess** zurückgegebene Wert oder der Bezeichner eines vorhandenen Prozesses sein. Um diese Liste zu aktualisieren, verwenden Sie die [**symrefresh modulelist**](/windows/desktop/api/Dbghelp/nf-dbghelp-symrefreshmodulelist) -Funktion.
+Um den Symbolhandler zu initialisieren, rufen Sie die [**SymInitialize-Funktion**](/windows/desktop/api/Dbghelp/nf-dbghelp-syminitialize) auf. Der *hProcess-Parameter* kann eine eindeutige beliebige Zahl, ein von der [**GetCurrentProcess-Funktion**](/windows/win32/api/processthreadsapi/nf-processthreadsapi-getcurrentprocess) zurückgegebener Wert oder der Bezeichner eines ausgeführten Prozesses sein. Der *fInvadeProcess-Parameter* gibt an, ob der Symbolhandler die vom Prozess geladenen Module aufzählen und Symbole für jedes seiner Module laden soll. Wenn *fInvadeProcess* **TRUE** ist, muss der *hProcess-Parameter* der von **GetCurrentProcess** zurückgegebene Wert oder der Bezeichner eines vorhandenen Prozesses sein. Verwenden Sie zum Aktualisieren dieser Liste die [**Funktion SymRefreshModuleList.**](/windows/desktop/api/Dbghelp/nf-dbghelp-symrefreshmodulelist)
 
-Die Verwendung von *finvadeprocess* ist eine einfache Möglichkeit, alle Symbol Dateien für einen Prozess zu laden. Der Symbol Handler versucht jedoch nicht, Symbole für Module zu laden, die anschließend von der [**LoadLibrary**](/windows/win32/api/libloaderapi/nf-libloaderapi-loadlibrarya) -Funktion geladen werden. In diesem Fall müssen Sie die [**symloadmoduleex**](/windows/desktop/api/Dbghelp/nf-dbghelp-symloadmoduleex) -Funktion verwenden.
+Die Verwendung von *fInvadeProcess* ist eine einfache Möglichkeit, alle Symboldateien für einen Prozess zu laden. Der Symbolhandler versucht jedoch nicht, Symbole für Module zu laden, die anschließend von der [**LoadLibrary-Funktion**](/windows/win32/api/libloaderapi/nf-libloaderapi-loadlibrarya) geladen werden. In diesem Fall müssen Sie die [**Funktion SymLoadModuleEx**](/windows/desktop/api/Dbghelp/nf-dbghelp-symloadmoduleex) verwenden.
 
  
 

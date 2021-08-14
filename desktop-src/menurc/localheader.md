@@ -1,9 +1,9 @@
 ---
-title: Localheader-Struktur
-description: Enthält die x-und y-Koordinaten eines Hotspots, der mit dem durch eine resdir-Struktur identifizierten Cursor verknüpft ist. Die hier bereitgestellte Struktur Definition dient nur der Erläuterung. Es ist in keiner Standard Header Datei vorhanden.
+title: LOCALHEADER-Struktur
+description: Enthält die x- und y-Koordinaten eines Hotspots, die dem cursor zugeordnet sind, der durch eine RESDIR-Struktur identifiziert wird. Die hier bereitgestellte Strukturdefinition dient nur zur Erklärung. sie ist in keiner Standardheaderdatei vorhanden.
 ms.assetid: 8cf74040-8b8f-447e-a881-1bcf05b151e2
 keywords:
-- Localheader-Struktur Menüs und andere Ressourcen
+- LOCALHEADER-StrukturMenüs und andere Ressourcen
 topic_type:
 - apiref
 api_name:
@@ -13,16 +13,16 @@ api_type:
 ms.topic: reference
 ms.date: 05/31/2018
 api_location: ''
-ms.openlocfilehash: 7aa2ee51e1a9e456398a42d8190781b5dbec8d14
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 52ec46b802b847b73c99cc81939531d8f9ec1a6a2e0addb4c928d5610ac5b80c
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104392007"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117870318"
 ---
-# <a name="localheader-structure"></a>Localheader-Struktur
+# <a name="localheader-structure"></a>LOCALHEADER-Struktur
 
-Enthält die x-und y-Koordinaten eines Hotspots, der mit dem durch eine [**resdir**](resdir.md) -Struktur identifizierten Cursor verknüpft ist. Die hier bereitgestellte Struktur Definition dient nur der Erläuterung. Es ist in keiner Standard Header Datei vorhanden.
+Enthält die x- und y-Koordinaten eines Hotspots, die dem cursor zugeordnet sind, der durch eine [**RESDIR-Struktur**](resdir.md) identifiziert wird. Die hier bereitgestellte Strukturdefinition dient nur zur Erklärung. sie ist in keiner Standardheaderdatei vorhanden.
 
 ## <a name="syntax"></a>Syntax
 
@@ -40,31 +40,31 @@ typedef struct {
 
 <dl> <dt>
 
-**xhotspot**
+**xHotSpot**
 </dt> <dd>
 
-Typ: **Word**
+Typ: **WORD**
 
 </dd> <dd>
 
-Die x-Koordinate der Cursorposition in Pixel.
+Die x-Koordinate des Cursor-Hotspots in Pixel.
 
 </dd> <dt>
 
-**yhotspot**
+**yHotSpot**
 </dt> <dd>
 
-Typ: **Word**
+Typ: **WORD**
 
 </dd> <dd>
 
-Die y-Koordinate der Cursorposition in Pixel.
+Die y-Koordinate des Cursor-Hotspots in Pixel.
 
 </dd> </dl>
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Die **localheader** -Struktur ist die erste Daten, die in die [RT- \_ Cursor](/windows/desktop/menurc/resource-types) Ressource geschrieben werden, wenn eine [**resdir**](resdir.md) -Strukturinformationen über einen Cursor enthält.
+Die **LOCALHEADER-Struktur** ist die erste In die [RT \_ CURSOR-Ressource](/windows/desktop/menurc/resource-types) geschriebene Daten, wenn eine [**RESDIR-Struktur**](resdir.md) Informationen zu einem Cursor enthält.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -77,20 +77,20 @@ Die **localheader** -Struktur ist die erste Daten, die in die [RT- \_ Cursor](/w
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-**Verweis**
+**Referenz**
 </dt> <dt>
 
-[**Cursor Verzeichnis**](cursordir.md)
+[**CURSORDIR**](cursordir.md)
 </dt> <dt>
 
-[**Resdir**](resdir.md)
+[**RESDIR**](resdir.md)
 </dt> <dt>
 
-**Licher**
+**Konzeptionellen**
 </dt> <dt>
 
 [Ressourcen](resources.md)

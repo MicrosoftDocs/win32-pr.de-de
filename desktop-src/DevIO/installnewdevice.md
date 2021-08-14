@@ -1,7 +1,7 @@
 ---
 description: Installiert ein neues Gerät. Der Benutzer wird aufgefordert, das Gerät auszuwählen.
 ms.assetid: 9bdee82c-1d0a-41ea-8b42-7ad96ac37663
-title: Installnewdevice-Funktion
+title: InstallNewDevice-Funktion
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,14 +13,14 @@ api_type:
 - DllExport
 api_location:
 - NewDev.dll
-ms.openlocfilehash: 76a458ae071c61b9f1030aad535c4d4c6a31078c
-ms.sourcegitcommit: c7add10d695482e1ceb72d62b8a4ebd84ea050f7
+ms.openlocfilehash: cb12e87ceee4812ffc8c0e39d961ce631e26c4ab8ca7ae555785c8ad8381ca01
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104127289"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118405307"
 ---
-# <a name="installnewdevice-function"></a>Installnewdevice-Funktion
+# <a name="installnewdevice-function"></a>InstallNewDevice-Funktion
 
 Installiert ein neues Gerät. Der Benutzer wird aufgefordert, das Gerät auszuwählen.
 
@@ -41,24 +41,24 @@ BOOL WINAPI InstallNewDevice(
 
 <dl> <dt>
 
-*hwndParent* \[ in\]
+*hwndParent* \[ In\]
 </dt> <dd>
 
-Ein Handle für das Fenster auf oberster Ebene, das für jede erforderliche Benutzeroberfläche verwendet werden soll.
+Ein Handle für das Fenster der obersten Ebene, das für alle erforderlichen Benutzeroberflächen verwendet werden soll.
 
 </dd> <dt>
 
-*Klassen-GUID* \[ in\]
+*ClassGuid* \[ In\]
 </dt> <dd>
 
-Ein Zeiger auf eine Klassen- **GUID**. Dieser Parameter ist optional. Wenn dieser Parameter **null** ist, wird der Benutzer auf der Seite zur Auswahl der Erkennung gestartet. Wenn es sich bei diesem Parameter um **GUID \_ null** oder **GUID \_ DEVCLASS \_ Unknown** handelt, wird der Benutzer auf der Seite Klassenauswahl gestartet.
+Ein Zeiger auf eine **Klassen-GUID.** Dieser Parameter ist optional. Wenn dieser Parameter **NULL** ist, beginnt der Benutzer auf der Auswahlseite für die Erkennung. Wenn dieser Parameter **GUID \_ NULL** oder **GUID \_ DEVCLASS \_ UNKNOWN** ist, beginnt der Benutzer auf der Seite zur Klassenauswahl.
 
 </dd> <dt>
 
-*vorab Start* \[ vorgenommen\]
+*pReboot* \[ out\]
 </dt> <dd>
 
-Ein Zeiger auf eine Variable, die den Neustart Status empfängt. Dieser Parameter kann " **di \_ needrestart** " oder " **di \_ NEEDREBOOT**" lauten.
+Ein Zeiger auf eine Variable, die den Neustartstatus empfängt. Dieser Parameter kann **DI \_ NEEDRESTART** oder **DI \_ NEEDREBOOT** sein.
 
 </dd> </dl>
 
@@ -70,7 +70,7 @@ Wenn die Funktion fehlerhaft ist, ist der Rückgabewert null. Um erweiterte Fehl
 
 ## <a name="remarks"></a>Bemerkungen
 
-Diese Funktion verfügt über keine zugeordnete Import Bibliothek. Sie müssen die [**LoadLibrary**](/windows/desktop/api/libloaderapi/nf-libloaderapi-loadlibrarya) -Funktion und die [**GetProcAddress**](/windows/desktop/api/libloaderapi/nf-libloaderapi-getprocaddress) -Funktion verwenden, um dynamisch mit NewDev.dll zu verknüpfen.
+Dieser Funktion ist keine Importbibliothek zugeordnet. Sie müssen die [**Funktionen LoadLibrary**](/windows/desktop/api/libloaderapi/nf-libloaderapi-loadlibrarya) und [**GetProcAddress**](/windows/desktop/api/libloaderapi/nf-libloaderapi-getprocaddress) verwenden, um dynamisch mit NewDev.dll zu verknüpfen.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -79,16 +79,16 @@ Diese Funktion verfügt über keine zugeordnete Import Bibliothek. Sie müssen d
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows XP<br/>                                                                 |
-| Unterstützte Mindestversion (Server)<br/> | Windows Server 2003<br/>                                                        |
+| Unterstützte Mindestversion (Server)<br/> | Windows Server 2003<br/>                                                        |
 | DLL<br/>                      | <dl> <dt>NewDev.dll</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[Geräte Verwaltungsfunktionen](device-management-functions.md)
+[Geräteverwaltung Functions](device-management-functions.md)
 </dt> </dl>
 
  

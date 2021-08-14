@@ -1,19 +1,19 @@
 ---
-description: 'Das folgende Beispiel zeigt die grundlegende Syntax der SELECT-Anweisung für eine lokale Abfrage:'
+description: 'Im Folgenden wird die grundlegende Syntax der SELECT-Anweisung für eine lokale Abfrage veranschaulicht:'
 ms.assetid: 334aa2b9-0ef2-4a4b-9352-de5ded95afa6
 title: SELECT-Anweisung
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: e05832dab0184870a626fa4bce502d908c9b05f2
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 1df8cc5f4b6bab673d20c981e44386d3fdbd651b5a2753d8c965ee55023a6562
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106344263"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118227195"
 ---
 # <a name="select-statement"></a>SELECT-Anweisung
 
-Das folgende Beispiel zeigt die grundlegende Syntax der SELECT-Anweisung für eine lokale Abfrage:
+Im Folgenden wird die grundlegende Syntax der SELECT-Anweisung für eine lokale Abfrage veranschaulicht:
 
 
 ```
@@ -26,7 +26,7 @@ FROM [machinename.]SystemIndex
 
 
 
-Das folgende Beispiel zeigt den Spalten Teil der Syntax der SELECT-Anweisung:
+Im Folgenden wird der Spaltenteil der SELECT-Anweisungssyntax veranschaulicht:
 
 
 ```
@@ -35,20 +35,20 @@ SELECT [TOP <positive integer>] <column> [ {, <column>} ...]
 
 
 
-Die Spalten Spezifizierer müssen gültige Eigenschaftsnamen Spalten sein, die durch Kommas getrennt sind. Gültige Spaltennamen sind registrierte Eigenschafts Beschreibungen oder werden durch das Eigenschafts System Schema der Shell definiert. Sie können nur die Spalten auswählen, die im Schema des Eigenschaften Systems als abrufbar gekennzeichnet sind. Wenn Sie gemischte Schreibweise verwenden, um Eigenschaften zu identifizieren, bei denen es sich nicht um System definierte Eigenschaften handelt, müssen Sie den Spaltenspezifizierer in doppelte Anführungszeichen einschließen. System definierte Eigenschaftsnamen enthalten alle Eigenschaften, die mit "System" beginnen (z. b. System. Contact. FirstName), und erfordern keine Anführungszeichen.
+Die Spaltenspezifizierer müssen gültige Eigenschaftsnamenspalten sein, die durch Kommas getrennt sind. Gültige Spaltennamen sind registrierte Eigenschaftenbeschreibungen oder werden durch das Eigenschaftensystemschema der Shell definiert. Sie können nur die Spalten auswählen, die im Eigenschaftensystemschema als abrufbar gekennzeichnet sind. Wenn Sie eigenschaften, die keine systemdefinierten Eigenschaften sind, mit gemischter Case-Eigenschaft identifizieren, müssen Sie den Spaltenspezifizierer in doppelte Anführungszeichen setzen. Systemdefinierte Eigenschaftennamen enthalten alle Eigenschaften, die mit "System" beginnen (z. B. System.Contact.FirstName), und erfordern keine Anführungszeichen.
 
 > [!Note]  
-> Sie können für die Lesbarkeit auch System definierte Eigenschaftsnamen in doppelte Anführungszeichen einschließen. Dies hat keine Auswirkung auf die Kompatibilität.
+> Sie können systemdefinierte Eigenschaftsnamen auch in doppelte Anführungszeichen umschließen, um lesbar zu sein. Dies wirkt sich nicht auf die Kompatibilität aus.
 
  
 
-Wenn die Abfrage ein Dokument zurückgibt, das nicht die angeforderte Spalte enthält, ist der Wert dieser Spalte für das Dokument **null**.
+Wenn die Abfrage ein Dokument zurückgibt, das nicht über die angeforderte Spalte verfügt, ist der Wert dieser Spalte für das Dokument **NULL.**
 
-Sie müssen mindestens einen Spaltennamen in einer SELECT-Anweisung angeben. In der Structured Query Language (SQL)-Abfrage dürfen Sie das Sternchen () verwenden, \* um anzugeben, dass alle Spalten in einer Tabelle zurückgegeben werden sollen. Allerdings gelten für alle Dokumente keine definierten und festgelegten Eigenschaften. Aus diesem Grund ist das SQL-Sternchen im <columns> Spezifizierer der SELECT-Anweisung nicht zulässig.
+Sie müssen mindestens einen Spaltennamen in einer SELECT-Anweisung angeben. In der strukturierte Abfragesprache (SQL) dürfen Sie das Sternchen ( ) verwenden, um anzugeben, dass alle Spalten in einer Tabelle \* zurückgegeben werden sollen. Es gilt jedoch kein definierter und fester Satz von Eigenschaften für alle Dokumente. Aus diesem Grund ist SQL Sternchen im Bezeichner der <columns> SELECT-Anweisung nicht zulässig.
 
-## <a name="getting-the-top-n-results"></a>Erzielen der Top-n-Ergebnisse
+## <a name="getting-the-top-n-results"></a>Abrufen der ersten n Ergebnisse
 
-Sie können mit der Top-Syntax eine maximale Anzahl von Ergebnissen angeben, die zurückgegeben werden sollen:
+Sie können eine maximale Anzahl von Ergebnissen angeben, die mithilfe der TOP-Syntax zurückgeben werden:
 
 
 ```
@@ -57,13 +57,13 @@ SELECT TOP <positive integer> <column> [ {, <column>} ...]
 
 
 
-## <a name="casting-column-data-types"></a>Umwandeln von Spaltendatentypen
+## <a name="casting-column-data-types"></a>Umwandlung von Spaltendatentypen
 
-Manchmal müssen Sie Zeichen folgen Daten, die aus Dokumenten extrahiert werden, als einen anderen Datentyp umwandeln, damit ein entsprechender Vergleich erfolgen kann. Weitere Informationen finden Sie unter umwandeln [des Datentyps einer Spalte](-search-sql-castingdatacolumntype.md).
+Manchmal müssen Sie möglicherweise aus Dokumenten extrahierte Zeichenfolgendaten in einen anderen Datentyp casten, damit ein entsprechender Vergleich vorgenommen werden kann. Weitere Informationen finden Sie unter [Umwandlung des Datentyps einer Spalte.](-search-sql-castingdatacolumntype.md)
 
 ## <a name="examples"></a>Beispiele
 
-In den folgenden Beispielen werden der Name und die URL der übereinstimmenden Dokumente zurückgegeben.
+In den folgenden Beispielen werden der Name und die URL der übereinstimmenden Dokumente angegeben.
 
 
 ```
@@ -78,16 +78,16 @@ SELECT TOP 10 System.ItemName, System.ItemUrl FROM SystemIndex WHERE CONTAINS('M
 
 <dl> <dt>
 
-**Licher**
+**Konzeptionellen**
 </dt> <dt>
 
-[Umwandeln des Datentyps einer Spalte](-search-sql-castingdatacolumntype.md)
+[Umwandlung des Datentyps einer Spalte](-search-sql-castingdatacolumntype.md)
 </dt> <dt>
 
 **Andere Ressourcen**
 </dt> <dt>
 
-[System Eigenschaften](https://msdn.microsoft.com/library/bb763010(VS.85).aspx)
+[Systemeigenschaften](https://msdn.microsoft.com/library/bb763010(VS.85).aspx)
 </dt> </dl>
 
  

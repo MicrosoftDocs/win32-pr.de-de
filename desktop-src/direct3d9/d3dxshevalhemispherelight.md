@@ -1,7 +1,7 @@
 ---
-description: 'D3DXSHEvalChemisphereLight-Funktion (D3dx9math.h): Wertet ein Licht aus, das eine lineare Interpolation zwischen zwei Farben über der Kugel ist.'
+description: 'D3DXSHEvalHemisphereLight-Funktion (D3dx9math.h): Wertet ein Licht aus, das eine lineare Interpolation zwischen zwei Farben über der Kugel ist.'
 ms.assetid: c5815f12-f706-40f6-bf5e-78a211cfbbea
-title: D3DXSHEvalChemisphereLight-Funktion (D3dx9math.h)
+title: D3DXSHEvalHemisphereLight-Funktion (D3dx9math.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -14,14 +14,14 @@ api_type:
 api_location:
 - d3dx9.lib
 - d3dx9.dll
-ms.openlocfilehash: 7bc06dcf866c21cc5dcb96b23dea5a4640293fef
-ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
+ms.openlocfilehash: 25f1ae13b800c99d3356147d0ac5aa73a2cf091882822bee4ccbed7e160516b2
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2021
-ms.locfileid: "108093965"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118524243"
 ---
-# <a name="d3dxshevalhemispherelight-function-d3dx9mathh"></a>D3DXSHEvalChemisphereLight-Funktion (D3dx9math.h)
+# <a name="d3dxshevalhemispherelight-function-d3dx9mathh"></a>D3DXSHEvalHemisphereLight-Funktion (D3dx9math.h)
 
 Wertet ein Licht aus, das eine lineare Interpolation zwischen zwei Farben über der Kugel ist.
 
@@ -51,7 +51,7 @@ HRESULT D3DXSHEvalHemisphereLight(
 
 Typ: **[ **UINT**](../winprog/windows-data-types.md)**
 
-Die Reihenfolge der SH-Auswertung (SphericalLips). Muss im Bereich von [D3DXSH \_ MINORDER](other-d3dx-constants.md) bis D3DXSH \_ MAXORDER (einschließlich) liegen. Die Auswertung generiert Order²-Koeffizienten. Der Grad der Auswertung ist "Order - 1".
+Reihenfolge der Sh-Auswertung (PhericalIcalIcal). Muss im Bereich von [D3DXSH \_ MINORDER](other-d3dx-constants.md) bis D3DXSH \_ MAXORDER (einschließlich) liegen. Die Auswertung generiert Order Koeffizienten. Der Grad der Auswertung ist Order - 1.
 
 </dd> <dt>
 
@@ -60,16 +60,16 @@ Die Reihenfolge der SH-Auswertung (SphericalLips). Muss im Bereich von [D3DXSH \
 
 Typ: **const [**D3DXVECTOR3**](d3dxvector3.md) \***
 
-Zeiger auf den Hemisphärenrichtungsvektor (x, y, z), in dem die SH-Basisfunktionen ausgewertet werden sollen. Siehe Hinweise.
+Zeiger auf den Achsenrichtungsvektor (x, y, z), in dem die SH-Basisfunktionen ausgewertet werden. Siehe Hinweise.
 
 </dd> <dt>
 
-*Top* \[ In\]
+*Oben* \[ In\]
 </dt> <dd>
 
 Typ: **[ **D3DXCOLOR**](d3dxcolor.md)**
 
-Die Sky-Farbe.
+Die Himmelsfarbe.
 
 </dd> <dt>
 
@@ -115,9 +115,9 @@ Typ: **[ **HRESULT**](https://msdn.microsoft.com/library/Bb401631(v=MSDN.10).asp
 
 Wenn die Funktion erfolgreich ist, ist der Rückgabewert D3D \_ OK. Wenn die Funktion fehlschlägt, kann der Rückgabewert D3DERR \_ INVALIDCALL sein.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Die Interpolation erfolgt linear zwischen den beiden Punkten, nicht über der Oberfläche der Kugel (d. h., wenn die Achse (0,0,1) war, ist sie linear in Z, nicht im winkelförmigen Winkel. Die resultierende pherische Beleuchtungsfunktion wird normalisiert, sodass ein Punkt auf einer perfekt diffusen Oberfläche ohne Schatten und ein normaler Punkt, der in die Richtung *pDir* zeigt, zu einer Beendigungsfläche mit dem Wert 1 führen würde (wenn die obere Farbe weiß und die untere Farbe schwarz ist). Dies ist ein sehr einfaches Modell, bei dem *Top* die Intensität des "Sky" und *Bottom* die Intensität des "Bodens" darstellt.
+Die Interpolation erfolgt linear zwischen den beiden Punkten, nicht über der Oberfläche der Kugel (d. h., wenn die Achse (0,0,1) war, ist sie linear in Z, nicht im azi linearen Winkel). Die resultierende pherische Beleuchtungsfunktion wird normalisiert, sodass ein Punkt auf einer perfekt diffusen Oberfläche ohne Schatten und ein normaler Punkt, der in die Richtung *pDir* zeigt, zu einer Beendigungsfläche mit dem Wert 1 führen würde (wenn die obere Farbe weiß und die untere Farbe schwarz ist). Dies ist ein sehr einfaches Modell, bei dem *Top* die Intensität des "Sky" und *Bottom* die Intensität des "Bodens" darstellt.
 
 Auf der Kugel mit Einheitenradius, wie in der folgenden Abbildung dargestellt, kann die Richtung einfach mit theta, dem Winkel um die Z-Achse in der rechtshändigen Richtung und phi, dem Winkel von z, angegeben [werden.](coordinate-systems.md)
 
@@ -131,7 +131,7 @@ Die folgenden Gleichungen zeigen die Beziehung zwischen kartesischen Koordinaten
 
 
 
-| Anforderungen | Wert |
+| Anforderung | Wert |
 |--------------------|----------------------------------------------------------------------------------------|
 | Header<br/>  | <dl> <dt>D3dx9math.h</dt> </dl> |
 | Bibliothek<br/> | <dl> <dt>D3dx9.lib</dt> </dl>   |
@@ -145,7 +145,7 @@ Die folgenden Gleichungen zeigen die Beziehung zwischen kartesischen Koordinaten
 [Mathematische Funktionen](dx9-graphics-reference-d3dx-functions-math.md)
 </dt> <dt>
 
-[Vorausberechnen der Übertragungsstärke (Direct3D 9)](precomputed-radiance-transfer.md)
+[Vorausberechnungsübertragung der Radiance (Direct3D 9)](precomputed-radiance-transfer.md)
 </dt> </dl>
 
  

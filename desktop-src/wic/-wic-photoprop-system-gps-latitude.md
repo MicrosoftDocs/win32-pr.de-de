@@ -1,23 +1,23 @@
 ---
-description: Die fotometadatenrichtlinie für die System. GPS. Latitude-Eigenschaft.
+description: Die Richtlinie für Fotometadaten für die System.GPS.Latitude-Eigenschaft.
 ms.assetid: 0f8cea07-da96-4d2a-8444-6073b51e1236
-title: System. GPS. Latitude-Foto-metadatenrichtlinie
+title: System.GPS.Latitude Photo Metadata Policy
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 5320869c1e8fd0d4b17bb17da455fc939bf44b9a
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 41dd1eb0ee21ab02eeb8c83d5ea84f28c07c2811929f2b8c973cace4a4a06fd7
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106350825"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118710624"
 ---
-# <a name="systemgpslatitude-photo-metadata-policy"></a>System. GPS. Latitude-Foto-metadatenrichtlinie
+# <a name="systemgpslatitude-photo-metadata-policy"></a>System.GPS.Latitude Photo Metadata Policy
 
-Die fotometadatenrichtlinie für die [System. GPS. Latitude](../properties/props-system-gps-latitude.md) -Eigenschaft.
+Die Richtlinie für Fotometadaten für die [System.GPS.Latitude-Eigenschaft.](../properties/props-system-gps-latitude.md)
 
-### <a name="pkey"></a>Pkey
+### <a name="pkey"></a>PKEY
 
-Pkey \_ GPS- \_ Breite
+PKEY \_ GPS \_ Latitude
 
 ### <a name="containers"></a>Container
 
@@ -27,50 +27,50 @@ JPEG, TIFF
 
 Ja
 
-### <a name="output-propvariant-type"></a>Ausgabe-PROPVARIANT-Typ
+### <a name="output-propvariant-type"></a>PROPVARIANT-Ausgabetyp
 
-VT \_ Vector \| VT \_ R8
+VT \_ VECTOR \| VT \_ R8
 
-### <a name="conflict-resolution-policy"></a>Richtlinie zur Konfliktlösung
+### <a name="conflict-resolution-policy"></a>Konfliktlösungsrichtlinie
 
-Dieser Wert kann durch Schreiben in "System. GPS. latitudenumerator" und "System. GPS. latitudebug" geschrieben werden. Sie kann nicht direkt geschrieben werden. Werte aus unterschiedlichen Schemas sind abgestimmt.
+Dieser Wert kann durch Schreiben in System.GPS.LatitudeNumerator und System.GPS.LatitudeDenominator geschrieben werden. Sie kann nicht direkt geschrieben werden. Werte aus verschiedenen Schemas werden abgestimmt.
 
 ### <a name="jpeg-policy"></a>JPEG-Richtlinie
 
-### <a name="read-paths"></a>Pfade lesen
+### <a name="read-paths"></a>Lesepfade
 
 
 
-| Auftrag | Pfad                     | Datenträger Format |
+| Auftrag | Pfad                     | Datenträgerformat |
 |-------|--------------------------|-------------|
-| 1     | /App1/IFD/GPS/{ushort = 2} |             |
-| 2     | /XMP/EXIF: gpslatitude    |             |
+| 1     | /app1/ifd/gps/{ushort=2} |             |
+| 2     | /xmp/exif:GPSL übertragen    |             |
 
 
 
  
 
-### <a name="write-paths"></a>Schreib Pfade
+### <a name="write-paths"></a>Schreibpfade
 
 
 
-| Auftrag | Pfad                     | Datenträger Format |
+| Auftrag | Pfad                     | Datenträgerformat |
 |-------|--------------------------|-------------|
-| 1     | /App1/IFD/GPS/{ushort = 2} |             |
-| 2     | /XMP/EXIF: gpslatitude    |             |
+| 1     | /app1/ifd/gps/{ushort=2} |             |
+| 2     | /xmp/exif:GPSL übertragen    |             |
 
 
 
  
 
-### <a name="remove-paths"></a>Pfade entfernen
+### <a name="remove-paths"></a>Entfernen von Pfaden
 
 
 
 | Auftrag | Pfad                     |
 |-------|--------------------------|
-| 1     | /App1/IFD/GPS/{ushort = 2} |
-| 2     | /XMP/EXIF: gpslatitude    |
+| 1     | /app1/ifd/gps/{ushort=2} |
+| 2     | /xmp/exif:gpsl veralten    |
 
 
 
@@ -78,52 +78,52 @@ Dieser Wert kann durch Schreiben in "System. GPS. latitudenumerator" und "System
 
 ### <a name="tiff-policies"></a>TIFF-Richtlinien
 
-### <a name="read-paths"></a>Pfade lesen
+### <a name="read-paths"></a>Lesepfade
 
 
 
-| Auftrag | Pfad                      | Datenträger Format |
+| Auftrag | Pfad                      | Datenträgerformat |
 |-------|---------------------------|-------------|
-| 1     | /IFD/GPS/{ushort = 2}       |             |
-| 2     | /IFD/XMP/EXIF: gpslatitude |             |
+| 1     | /ifd/gps/{ushort=2}       |             |
+| 2     | /ifd/xmp/exif:GPSL zu |             |
 
 
 
  
 
-### <a name="write-paths"></a>Schreib Pfade
+### <a name="write-paths"></a>Schreibpfade
 
 
 
-| Auftrag | Pfad                      | Datenträger Format |
+| Auftrag | Pfad                      | Datenträgerformat |
 |-------|---------------------------|-------------|
-| 1     | /IFD/GPS/{ushort = 2}       |             |
-| 2     | /IFD/XMP/EXIF: gpslatitude |             |
+| 1     | /ifd/gps/{ushort=2}       |             |
+| 2     | /ifd/xmp/exif:GPSL zu |             |
 
 
 
  
 
-### <a name="remove-paths"></a>Pfade entfernen
+### <a name="remove-paths"></a>Entfernen von Pfaden
 
 
 
 | Auftrag | Pfad                      |
 |-------|---------------------------|
-| 1     | /IFD/GPS/{ushort = 2}       |
-| 2     | /IFD/XMP/EXIF: gpslatitude |
+| 1     | /ifd/gps/{ushort=2}       |
+| 2     | /ifd/xmp/exif:gpsl zu |
 
 
 
  
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
 <dl> <dt>
 
-[System. GPS. Latitude](../properties/props-system-gps-latitude.md)
+[System.GPS.Latitude](../properties/props-system-gps-latitude.md)
 </dt> </dl>
 
  

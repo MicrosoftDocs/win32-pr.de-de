@@ -1,10 +1,10 @@
 ---
-title: IADsAccessControlList-Eigenschaften Methoden (IADs. h)
-description: Mit den Eigenschafts Methoden der IADsAccessControlList-Schnittstelle werden die in der folgenden Tabelle beschriebenen Eigenschaften ermittelt oder festgelegt. Weitere Informationen finden Sie unter Interface Property Methods.
+title: IADsAccessControlList-Eigenschaftsmethoden (Iads.h)
+description: Die Eigenschaftenmethoden der IADsAccessControlList-Schnittstelle erhalten oder legen die in der folgenden Tabelle beschriebenen Eigenschaften fest. Weitere Informationen finden Sie unter Schnittstelleneigenschaftsmethoden.
 ms.assetid: cb68bb61-4216-4f69-bea1-ab7f98937a27
 ms.tgt_platform: multiple
 keywords:
-- IADsAccessControlList-Eigenschaften Methoden ADSI
+- IADsAccessControlList-Eigenschaftsmethoden ADSI
 topic_type:
 - apiref
 api_name:
@@ -21,32 +21,32 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 55763b7c52071ca5bfd0a875912941090b7992c4
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 29c42a005b89215a974fe0d546a1e87b23c78be25c33a1b494b172fa19bead94
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104391650"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118428395"
 ---
-# <a name="iadsaccesscontrollist-property-methods"></a>IADsAccessControlList-Eigenschaften Methoden
+# <a name="iadsaccesscontrollist-property-methods"></a>IADsAccessControlList-Eigenschaftenmethoden
 
-Mit den Eigenschafts Methoden der [**IADsAccessControlList**](/windows/desktop/api/Iads/nn-iads-iadsaccesscontrollist) -Schnittstelle werden die in der folgenden Tabelle beschriebenen Eigenschaften ermittelt oder festgelegt. Weitere Informationen finden Sie unter [Interface Property Methods](interface-property-methods.md).
+Die Eigenschaftenmethoden der [**IADsAccessControlList-Schnittstelle**](/windows/desktop/api/Iads/nn-iads-iadsaccesscontrollist) erhalten oder legen die in der folgenden Tabelle beschriebenen Eigenschaften fest. Weitere Informationen finden Sie unter [Schnittstelleneigenschaftsmethoden.](interface-property-methods.md)
 
 ## <a name="properties"></a>Eigenschaften
 
 <dl> <dt>
 
-**Acecount**
+**AceCount**
 </dt> <dd> <dl>
 
-Die Anzahl der Zugriffs Steuerungs Einträge in der Zugriffs Steuerungs Liste.
+Die Anzahl der Zugriffssteuerungseinträge in der Zugriffssteuerungsliste.
 
 <dt>
 
 Zugriffstyp: Lesen/Schreiben
 </dt> <dt>
 
-Skript Datentyp: **Long**
+Skriptdatentyp: **LONG**
 </dt> <dt>
 
 
@@ -64,17 +64,17 @@ HRESULT put_AceCount(
 
 </dt> </dl> </dd> <dt>
 
-**Aclrevision**
+**AclRevision**
 </dt> <dd> <dl>
 
-Die Revisions Ebene einer Zugriffs Steuerungs Liste. Dieser Wert kann eine **ACL- \_ Revision** oder **ACL- \_ Revision \_** sein. Verwenden Sie **ACL \_ Revision \_ DS** , wenn die ACL einen Objekt spezifischen ACE enthält. Alle ACEs in einer ACL müssen die gleiche Revisions Ebene aufweisen.
+Die Revisionsebene einer Zugriffssteuerungsliste. Dieser Wert kann **ACL \_ REVISION oder** **ACL REVISION \_ \_ DS sein.** Verwenden **Sie ACL \_ REVISION \_ DS,** wenn die ACL einen objektspezifischen ACE enthält. Alle ACEs in einer ACL müssen auf derselben Revisionsebene sein.
 
 <dt>
 
 Zugriffstyp: Lesen/Schreiben
 </dt> <dt>
 
-Skript Datentyp: **Long**
+Skriptdatentyp: **LONG**
 </dt> <dt>
 
 
@@ -205,13 +205,13 @@ HRESULT ShowACEInACL(LPWSTR guestPath,LPWSTR user,LPWSTR passwd)
 |-------------------------------------|------------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows Vista<br/>                                                                 |
 | Unterstützte Mindestversion (Server)<br/> | Windows Server 2008<br/>                                                           |
-| Header<br/>                   | <dl> <dt>IADs. h</dt> </dl>        |
+| Header<br/>                   | <dl> <dt>Iads.h</dt> </dl>        |
 | DLL<br/>                      | <dl> <dt>Activeds.dll</dt> </dl>  |
 | IID<br/>                      | IID \_ IADsAccessControlList ist als B7EE91CC-9BDD-11D0-852C-00C04FD8D503 definiert.<br/> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 

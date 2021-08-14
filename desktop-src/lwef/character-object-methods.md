@@ -1,39 +1,39 @@
 ---
-title: Zeichen Objektmethoden
-description: Zeichen Objektmethoden
+title: Zeichenobjektmethoden
+description: Zeichenobjektmethoden
 ms.assetid: 0f926b7b-c1cf-4bd6-ba8c-1b2877eb1d24
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 19bb0dbb256c99660cbce1613c9fdd27d85a92dc
-ms.sourcegitcommit: ebd3ce6908ff865f1ef66f2fc96769be0aad82e1
+ms.openlocfilehash: 141c0fbcfe26e198984fd4a4d8c6c67858085e41178786d2cb78d2938231fdf2
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/19/2020
-ms.locfileid: "103948606"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118480314"
 ---
-# <a name="character-object-methods"></a>Zeichen Objektmethoden
+# <a name="character-object-methods"></a>Zeichenobjektmethoden
 
-\[Der Microsoft-Agent ist ab Windows 7 veraltet und in nachfolgenden Versionen von Windows möglicherweise nicht verfügbar.\]
+\[Der Microsoft-Agent ist ab Windows 7 veraltet und in nachfolgenden Versionen von Windows möglicherweise nicht mehr verfügbar.\]
 
-Der Server macht auch Methoden für jedes Zeichen in einer [**Zeichen**](/windows/desktop/lwef/the-characters-object) Auflistung verfügbar. Folgende Methoden werden unterstützt:
+Der Server macht auch Methoden für jedes Zeichen in einer [**Characters-Auflistung**](/windows/desktop/lwef/the-characters-object) verfügbar. Folgende Methoden werden unterstützt:
 
 -   [**Aktivieren**](activate-method.md)
--   [**Gestureat**](gestureat-method.md)
+-   [**GestureAt**](gestureat-method.md)
 -   [**Erhalten**](get-method.md)
 -   [**Ausblenden**](hide-method.md)
 -   [**Interrupt**](interrupt-method.md)
--   [**Lauschen**](listen-method.md)
--   [**MoveTo**](moveto-method.md)
+-   [**Hören**](listen-method.md)
+-   [**Moveto**](moveto-method.md)
 -   [**Abspielen**](play-method.md)
--   [**Auftritt**](show-method.md)
+-   [**Zeigen**](show-method.md)
 -   [**ShowPopupMenu**](showpopupmenu-method.md)
 -   [**Speak**](speak-method.md)
--   [**Stop**](stop-method.md)
+-   [**Beenden**](stop-method.md)
 -   [**StopAll**](stopall-method.md)
--   [**Meiner**](think-method.md)
+-   [**Denke**](think-method.md)
 -   [**Wait**](wait-method.md)
 
-Um eine Methode zu verwenden, verweisen Sie auf das Zeichen in der Auflistung. In VBScript und Visual Basic müssen Sie dazu die ID für ein Zeichen angeben:
+Um eine Methode zu verwenden, verweisen Sie auf das Zeichen in der Auflistung. In VBScript und Visual Basic geben Sie dazu die ID für ein Zeichen an:
 
 
 ```
@@ -52,7 +52,7 @@ Um eine Methode zu verwenden, verweisen Sie auf das Zeichen in der Auflistung. I
 
 
 
-Um die Syntax des Codes zu vereinfachen, können Sie eine Objekt Variable definieren und Sie so festlegen, dass Sie auf ein Zeichen Objekt in der [**Zeichen**](/windows/desktop/lwef/the-characters-object) Auflistung verweist. Anschließend können Sie die Variable verwenden, um auf Methoden oder Eigenschaften des Zeichens zu verweisen. Im folgenden Beispiel wird veranschaulicht, wie Sie dies mit der Visual Basic Set-Anweisung erreichen können:
+Um die Syntax Ihres Codes zu vereinfachen, können Sie eine Objektvariable definieren und festlegen, um auf ein Zeichenobjekt in der [**Characters-Auflistung**](/windows/desktop/lwef/the-characters-object) zu verweisen. dann können Sie ihre Variable verwenden, um auf Methoden oder Eigenschaften des Zeichens zu verweisen. Im folgenden Beispiel wird veranschaulicht, wie Sie dies mithilfe der set-Anweisung Visual Basic:
 
 
 ```
@@ -81,7 +81,7 @@ Um die Syntax des Codes zu vereinfachen, können Sie eine Objekt Variable defini
 
 
 
-In Visual Basic 5,0 können Sie auch den Verweis erstellen, indem Sie die Variable als [**Zeichen**](/windows/desktop/lwef/the-characters-object)Objekt deklarieren:
+In Visual Basic 5.0 können Sie den Verweis auch erstellen, indem Sie Ihre Variable als [**Zeichenobjekt**](/windows/desktop/lwef/the-characters-object)deklarieren:
 
 
 ```
@@ -103,9 +103,9 @@ In Visual Basic 5,0 können Sie auch den Verweis erstellen, indem Sie die Variab
 
 
 
-Durch das Deklarieren Ihres Objekts vom Typ iagentctlcharakteriex wird eine frühe Bindung für das Objekt ermöglicht, was zu einer besseren Leistung führt.
+Das Deklarieren ihres Objekts vom Typ IAgentCtlCharacterEx ermöglicht eine frühe Bindung des Objekts, was zu einer besseren Leistung führt.
 
-In VBScript können Sie keinen Verweis als bestimmten Typ deklarieren. Sie können jedoch einfach den Variablen Verweis deklarieren:
+In VBScript können Sie einen Verweis nicht als bestimmten Typ deklarieren. Sie können jedoch einfach den Variablenverweis deklarieren:
 
 
 ```
@@ -136,7 +136,7 @@ In VBScript können Sie keinen Verweis als bestimmten Typ deklarieren. Sie könn
 
 
 
-Einige Programmiersprachen unterstützen keine Auflistungen. Allerdings können Sie mit der [**Zeichen**](character-method.md) Methode auf die Methoden eines [**Zeichen**](/windows/desktop/lwef/the-characters-object) Objekts zugreifen:
+Einige Programmiersprachen unterstützen keine Sammlungen. Sie können jedoch mit der [**Character-Methode**](/windows/desktop/lwef/the-characters-object) auf die Methoden eines [**Character-Objekts**](character-method.md) zugreifen:
 
 
 ```
@@ -145,7 +145,7 @@ Einige Programmiersprachen unterstützen keine Auflistungen. Allerdings können 
 
 
 
-Darüber hinaus können Sie auch einen Verweis auf das [**Zeichen**](/windows/desktop/lwef/the-characters-object) Objekt erstellen, damit der Skriptcode leichter befolgt werden kann:
+Darüber hinaus können Sie auch einen Verweis auf das [**Character-Objekt**](/windows/desktop/lwef/the-characters-object) erstellen, damit Ihr Skriptcode leichter zu befolgen ist:
 
 
 ```
@@ -171,6 +171,6 @@ Darüber hinaus können Sie auch einen Verweis auf das [**Zeichen**](/windows/de
 
 
 
- 
+ 
 
- 
+ 

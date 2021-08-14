@@ -1,5 +1,5 @@
 ---
-description: Veranschaulicht, wie ein benutzerdefiniertes Dialogfeld zum Öffnen und Speichern von Dateien mithilfe verschiedener allgemeiner Datei Dialogfeld-APIs erstellt wird.
+description: Veranschaulicht das Erstellen eines benutzerdefinierten Dialogfelds zum Öffnen/Speichern von Dateien mithilfe verschiedener COMMON FILE DIALOG-APIs.
 title: Dialogfeld „Gemeinsame Dateien“ (Beispiel)
 ms.topic: article
 ms.date: 05/31/2018
@@ -9,30 +9,30 @@ api_type: ''
 api_location: ''
 topic_type:
 - kbArticle
-ms.openlocfilehash: 42dc86cb1e777f3580a7f6fb349310621b703913
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: d2cb9a1a89f122d41066de75002ea0ed2c575a6208a06f0be99b5c7c7bfd2b97
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "103960290"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117858583"
 ---
 # <a name="common-file-dialog-sample"></a>Dialogfeld „Gemeinsame Dateien“ (Beispiel)
 
-Veranschaulicht, wie ein benutzerdefiniertes Dialogfeld zum Öffnen und Speichern von Dateien mithilfe verschiedener allgemeiner Datei Dialogfeld-APIs erstellt wird.
+Veranschaulicht das Erstellen eines benutzerdefinierten Dialogfelds zum Öffnen/Speichern von Dateien mithilfe verschiedener COMMON FILE DIALOG-APIs.
 
 Dieses Thema enthält folgende Abschnitte:
 
--   [Anforderungen](#requirements)
+-   [Requirements](#requirements)
 -   [Herunterladen des Beispiels](#downloading-the-sample)
--   [Beispiel zum Aufbau](#building-the-sample)
+-   [Erstellen des Beispiels](#building-the-sample)
 -   [Ausführen des Beispiels](#running-the-sample)
 -   [Zugehörige Themen](#related-topics)
 
-## <a name="requirements"></a>Requirements (Anforderungen)
+## <a name="requirements"></a>Anforderungen
 
 
 
-| Produkt                                | Minimale Produkt Version |
+| Product (Produkt)                                | Mindestproduktversion |
 |----------------------------------------|-------------------------|
 | Windows                                | Windows Vista           |
 | Windows Software Development Kit (SDK) | 6.1                     |
@@ -41,27 +41,27 @@ Dieses Thema enthält folgende Abschnitte:
 
  
 
-Weitere Anforderungen finden Sie in der im Beispiel enthaltenen Infodatei.
+Weitere Anforderungen finden Sie in der im Beispiel enthaltenen Readme-Datei.
 
 ## <a name="downloading-the-sample"></a>Herunterladen des Beispiels
 
 | Standort      | Pfad-URL                                                                                             |
 |---------------|------------------------------------------------------------------------------------------------------|
-| GitHub  | [Commonfiledialog-Beispiel](https://github.com/microsoft/Windows-classic-samples/tree/master/Samples/Win7Samples/winui/shell/appplatform/commonfiledialog) |
+| GitHub  | [CommonFileDialog-Beispiel](https://github.com/microsoft/Windows-classic-samples/tree/master/Samples/Win7Samples/winui/shell/appplatform/commonfiledialog) |
 
 ## <a name="building-the-sample"></a>Erstellen des Beispiels
 
-Anweisungen zum Erstellen des Beispiels finden Sie in der im Beispiel enthaltenen Infodatei.
+Anweisungen zum Erstellen des Beispiels finden Sie in der im Beispiel enthaltenen Readme-Datei.
 
 ## <a name="running-the-sample"></a>Ausführen des Beispiels
 
-Anweisungen zum Erstellen des Beispiels finden Sie in der im Beispiel enthaltenen Infodatei.
+Anweisungen zum Erstellen des Beispiels finden Sie in der im Beispiel enthaltenen Readme-Datei.
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
 <dl> <dt>
 
-[**Ifiledialog**](/windows/win32/api/shobjidl_core/nn-shobjidl_core-ifiledialog)
+[**IFileDialog**](/windows/win32/api/shobjidl_core/nn-shobjidl_core-ifiledialog)
 </dt> <dt>
 
 [**IFileSaveDialog**](/windows/desktop/api/Shobjidl_core/nn-shobjidl_core-ifilesavedialog)

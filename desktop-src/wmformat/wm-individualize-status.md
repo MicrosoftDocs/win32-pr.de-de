@@ -1,9 +1,9 @@
 ---
-title: WM_INDIVIDUALIZE_STATUS Struktur (drmexternals. h)
-description: Die WM \_ Individual- \_ Status Struktur zeichnet den Status des Individualisierungs Vorgangs auf.
+title: WM_INDIVIDUALIZE_STATUS -Struktur (Drmexternals.h)
+description: Die WM \_ INDIVIDUALIZE \_ STATUS-Struktur zeichnet den Status des Individualisierungsprozesses auf.
 ms.assetid: 3779ed6f-c133-4a9d-b60c-ef8c41fcc4af
 keywords:
-- WM_INDIVIDUALIZE_STATUS Struktur-Windows Media-Format
+- WM_INDIVIDUALIZE_STATUS struktur windows media format
 topic_type:
 - apiref
 api_name:
@@ -14,16 +14,16 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: ddec51fbdfecd407a68b3e168a82af449decce6a
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: eb083c2a90a791099f6438f2911ac9735ecd4dada9118811aa0ff581a8db37ee
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "106346313"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118699020"
 ---
-# <a name="wm_individualize_status-structure-drmexternalsh"></a>WM_INDIVIDUALIZE_STATUS Struktur (drmexternals. h)
+# <a name="wm_individualize_status-structure-drmexternalsh"></a>WM_INDIVIDUALIZE_STATUS -Struktur (Drmexternals.h)
 
-Die **WM \_ Individual- \_ Status** Struktur zeichnet den Status des [*Individualisierungs*](wmformat-glossary.md) Vorgangs auf.
+Die **WM \_ INDIVIDUALIZE \_ STATUS-Struktur** zeichnet den Status des [*Individualisierungsprozesses*](wmformat-glossary.md) auf.
 
 ## <a name="syntax"></a>Syntax
 
@@ -49,55 +49,55 @@ typedef struct _WMIndividualizeStatus {
 **Std.**
 </dt> <dd>
 
-**HRESULT** -Rückgabecode.
+**HRESULT-Rückgabecode.**
 
 </dd> <dt>
 
-**"Endstatus"**
+**enIndiStatus**
 </dt> <dd>
 
-Der Wert des DRM-Enumerationstyps für den [**\_ Individualisierungs \_ Status**](drm-individualization-status.md) .
+Der Wert des [**DRM \_ INDIVIDUALIZATION \_ STATUS-Enumerationstyps.**](drm-individualization-status.md)
 
 </dd> <dt>
 
-**pszindirespurl**
+**pszIndiRespUrl**
 </dt> <dd>
 
-Zeiger auf eine mit NULL endenden Zeichenfolge, die die Antwort-URL der Individualisierung enthält.
+Zeiger auf eine auf NULL beendete Zeichenfolge, die die Individualisierungsantwort-URL enthält.
 
 </dd> <dt>
 
-**dwhttprequest**
+**dwHTTPRequest**
 </dt> <dd>
 
-**DWORD** , das die Anzahl von HTTP-Roundtrips zum Individualisierungs Dienst angibt, die abgeschlossen wurden.
+**DWORD,** das die Anzahl der abgeschlossenen HTTP-Roundtrips zum Individualisierungsdienst angibt.
 
 </dd> <dt>
 
-**umhttpstatus**
+**enHTTPStatus**
 </dt> <dd>
 
-Der Wert des [**DRM- \_ http-statusenumerationstyps \_**](drm-http-status.md) .
+Der Wert des [**\_ DRM-HTTP \_ STATUS-Enumerationstyps.**](drm-http-status.md)
 
 </dd> <dt>
 
-**dwhttpreadprogress**
+**dwHTTPReadProgress**
 </dt> <dd>
 
-**DWORD** , das die Anzahl der bis jetzt heruntergeladenen Bytes enthält.
+**DWORD** mit der Anzahl der bis jetzt heruntergeladenen Bytes.
 
 </dd> <dt>
 
-**dwhttpreadtotal**
+**dwHTTPReadTotal**
 </dt> <dd>
 
-**DWORD** , das die Gesamtzahl der herunter zuladenden Bytes enthält. Verwenden Sie diesen Wert und **dwhttpreadprogress** , um eine Benutzeroberfläche anzuzeigen, die angibt, wie viel der Download abgeschlossen ist und wie viel verbleiben muss.
+**DWORD** mit der Gesamtzahl der herunterzuladenden Bytes. Verwenden Sie diesen Wert und **dwHTTPReadProgress,** um eine Benutzeroberfläche anzuzeigen, die angibt, wie viel der Download abgeschlossen wurde und wie viel noch zu tun ist.
 
 </dd> </dl>
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Diese Struktur wird von den DRM-Laufzeitkomponenten ausgefüllt und an Anwendungen im *pValue* -Parameter der Anwendung [**iwmstatuscallback:: OnStatus**](/previous-versions/windows/desktop/api/Wmsdkidl/nf-wmsdkidl-iwmstatuscallback-onstatus) -Methode gesendet, wenn das Ereignis gleich WMT \_ Individual ist. Die Anwendung empfängt dieses Ereignis mehrmals während des Downloadvorgangs.
+Diese Struktur wird von den DRM-Laufzeitkomponenten ausgefüllt und an Anwendungen im *pValue-Parameter* der [**IWMStatusCallback::OnStatus-Methode**](/previous-versions/windows/desktop/api/Wmsdkidl/nf-wmsdkidl-iwmstatuscallback-onstatus) der Anwendung gesendet, wenn das Ereignis WMT \_ INDIVIDUALIZE entspricht. Die Anwendung empfängt dieses Ereignis mehrmals während des Downloadprozesses.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -107,16 +107,16 @@ Diese Struktur wird von den DRM-Laufzeitkomponenten ausgefüllt und an Anwendung
 |-------------------------------------|-------------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional \[nur Desktop-Apps\]<br/>                                |
 | Unterstützte Mindestversion (Server)<br/> | Windows 2000 Server \[nur Desktop-Apps\]<br/>                                      |
-| Version<br/>                  | SDK für Windows Media-Format 7 oder höhere Versionen des SDKs<br/>                       |
-| Header<br/>                   | <dl> <dt>Drmexternals. h</dt> </dl> |
+| Version<br/>                  | Windows Media Format 7 SDK oder neuere Versionen des SDK<br/>                       |
+| Header<br/>                   | <dl> <dt>Drmexternals.h</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**DRM- \_ http- \_ Status**](drm-http-status.md)
+[**\_DRM-HTTP-STATUS \_**](drm-http-status.md)
 </dt> <dt>
 
 [**Strukturen**](structures.md)

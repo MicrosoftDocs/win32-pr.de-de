@@ -1,11 +1,11 @@
 ---
-title: Isearchresult thumbnailstate-Methode
-description: Reserviert. | Isearchresult thumbnailstate-Methode
+title: ISearchResult ThumbnailState-Methode
+description: Reserviert. | ISearchResult ThumbnailState-Methode
 ms.assetid: b91727a6-a193-4767-a8ff-05ac64f1f27f
 keywords:
-- Thumbnailstate-Methode, ältere Windows-Umgebungs Features
-- Thumbnailstate-Methode, ältere Windows-Umgebungs Features, isearchresult-Schnittstelle
-- Isearchresult Interface Legacy Windows-Umgebungs Features, thumbnailstate-Methode
+- ThumbnailState-Methode Legacy Windows Umgebungsfeatures
+- ThumbnailState-Methode Legacy Windows Umgebungsfeatures, ISearchResult-Schnittstelle
+- ISearchResult interface Legacy Windows Environment Features , ThumbnailState method
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,14 +13,14 @@ topic_type:
 api_name: ''
 api_type: ''
 api_location: ''
-ms.openlocfilehash: 73d9220753081a6016f60eaad35ea6e116aed958
-ms.sourcegitcommit: 92e74c99f8f4d097676959d0c317f533c2400a80
+ms.openlocfilehash: 6164445de7cd88f37877154e0f0c03845dfe3904e5af117ecd521c82907cbf4a
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/09/2021
-ms.locfileid: "104219262"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118481084"
 ---
-# <a name="isearchresultthumbnailstate-method"></a>Isearchresult:: thumbnailstate-Methode
+# <a name="isearchresultthumbnailstate-method"></a>ISearchResult::ThumbnailState-Methode
 
 Diese Methode ist nicht implementiert.
 

@@ -1,7 +1,7 @@
 ---
-description: Führt ein Verb für eine Auflistung von folderItem-Objekten aus. Bei dieser Methode handelt es sich um eine Erweiterung der invokeverb-Methode, die eine zusätzliche Steuerung des Vorgangs über einen Satz von Flags ermöglicht.
+description: Führt ein Verb für eine Auflistung von FolderItem-Objekten aus. Diese Methode ist eine Erweiterung der InvokeVerb-Methode, die eine zusätzliche Steuerung des Vorgangs über einen Satz von Flags ermöglicht.
 ms.assetid: 2c02985d-8877-4a02-a232-6aeb1716928c
-title: FolderItems2. invokeverbex-Methode (Shldisp. h)
+title: FolderItems2.InvokeVerbEx-Methode (Shldisp.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,16 +13,16 @@ api_type:
 - COM
 api_location:
 - Shell32.dll
-ms.openlocfilehash: aa9b986b5cb76f14cc950f522e1e289224c17b58
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 94d62de132a61bb357acac77aea41d2278ba1eb4453afa826ac32be90095ab25
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104977016"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117860149"
 ---
-# <a name="folderitems2invokeverbex-method"></a>FolderItems2. invokeverbex-Methode
+# <a name="folderitems2invokeverbex-method"></a>FolderItems2.InvokeVerbEx-Methode
 
-Führt ein Verb für eine Auflistung von [**folderItem**](folderitem.md) -Objekten aus. Bei dieser Methode handelt es sich um eine Erweiterung der [**invokeverb**](folderitem-invokeverb.md) -Methode, die eine zusätzliche Steuerung des Vorgangs über einen Satz von Flags ermöglicht.
+Führt ein Verb für eine Auflistung von [**FolderItem-Objekten**](folderitem.md) aus. Diese Methode ist eine Erweiterung der [**InvokeVerb-Methode,**](folderitem-invokeverb.md) die eine zusätzliche Steuerung des Vorgangs über einen Satz von Flags ermöglicht.
 
 ## <a name="syntax"></a>Syntax
 
@@ -40,12 +40,12 @@ iRetVal = FolderItems2.InvokeVerbEx(
 
 <dl> <dt>
 
-*vverb* \[ in, optional\]
+*vVerb* \[ in, optional\]
 </dt> <dd>
 
 Typ: **Variant**
 
-Eine **Variante** mit der Verb Zeichenfolge, die dem auszuführenden Befehl entspricht. Wenn kein Verb angegeben ist, wird das Standardverb ausgeführt.
+Eine **Variante** mit der Verbzeichenfolge, die dem auszuführenden Befehl entspricht. Wenn kein Verb angegeben wird, wird das Standardverb ausgeführt.
 
 </dd> <dt>
 
@@ -54,19 +54,19 @@ Eine **Variante** mit der Verb Zeichenfolge, die dem auszuführenden Befehl ents
 
 Typ: **Variant**
 
-Eine **Variante** , die aus einer Zeichenfolge mit einem oder mehreren Argumenten für den von *vverb* angegebenen Befehl besteht. Das Format dieser Zeichenfolge hängt von dem jeweiligen Verb ab.
+Eine **Variante,** die aus einer Zeichenfolge mit einem oder mehreren Argumenten für den von *vVerb* angegebenen Befehl besteht. Das Format dieser Zeichenfolge hängt vom jeweiligen Verb ab.
 
 </dd> </dl>
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Ein Verb ist eine Zeichenfolge, die verwendet wird, um eine bestimmte Aktion anzugeben, die einem Element oder einer Auflistung von Elementen zugeordnet ist. Wenn Sie ein Verb aufrufen, wird in der Regel eine verwandte Anwendung gestartet. Wenn Sie z. b. das **geöffnete** Verb in einer txt-Datei aufrufen, wird die Datei normalerweise mit einem Text-Editor geöffnet, in der Regel Microsoft Notepad. Weitere Erläuterungen zu Verben finden Sie unter [Starten von Anwendungen](launch.md).
+Ein Verb ist eine Zeichenfolge, die verwendet wird, um eine bestimmte Aktion anzugeben, die einem Element oder einer Auflistung von Elementen zugeordnet ist. In der Regel wird beim Aufrufen eines Verbs eine verwandte Anwendung gestartet. Wenn Sie z. B. das **geöffnete** Verb für eine .txt Datei aufrufen, wird die Datei normalerweise mit einem Text-Editor geöffnet, in der Regel microsoft Editor. Weitere Informationen zu Verben finden Sie unter [Starten von Anwendungen.](launch.md)
 
 ## <a name="examples"></a>Beispiele
 
-Im folgenden Beispiel wird **invokeverbex** verwendet, um das Standardverb ("Öffnen") auf **Arbeitsplatz** aufzurufen. Die richtige Verwendung wird für JScript, VBScript und Visual Basic angezeigt.
+Im folgenden Beispiel wird **InvokeVerbEx** verwendet, um das Standardverb ("open") für **Arbeitsplatz** aufzurufen. Die richtige Verwendung wird für JScript, VBScript und Visual Basic angezeigt.
 
-JScript
+JScript:
 
 
 ```JScript
@@ -94,7 +94,7 @@ JScript
 
 
 
-VBScript
+Vbscript:
 
 
 ```VB
@@ -155,17 +155,17 @@ End Sub
 
 
 
-## <a name="requirements"></a>Requirements (Anforderungen)
+## <a name="requirements"></a>Anforderungen
 
 
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional, Windows XP \[ Desktop-Apps\]<br/>                                        |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2003 \[ -Desktop-Apps\]<br/>                                                          |
-| Header<br/>                   | <dl> <dt>Shldisp. h</dt> </dl>                          |
-| IDL<br/>                      | <dl> <dt>Shldisp. idl</dt> </dl>                        |
-| DLL<br/>                      | <dl> <dt>Shell32.dll (Version 5,0 oder höher)</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional, nur Windows \[ XP-Desktop-Apps\]<br/>                                        |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2003-Desktop-Apps\]<br/>                                                          |
+| Header<br/>                   | <dl> <dt>Shldisp.h</dt> </dl>                          |
+| Idl<br/>                      | <dl> <dt>Shldisp.idl</dt> </dl>                        |
+| DLL<br/>                      | <dl> <dt>Shell32.dll (Version 5.0 oder höher)</dt> </dl> |
 
 
 
@@ -176,7 +176,7 @@ End Sub
 [**FolderItems2**](folderitems2-object.md)
 </dt> <dt>
 
-[**Invokeverb**](folderitem-invokeverb.md)
+[**InvokeVerb**](folderitem-invokeverb.md)
 </dt> </dl>
 
  

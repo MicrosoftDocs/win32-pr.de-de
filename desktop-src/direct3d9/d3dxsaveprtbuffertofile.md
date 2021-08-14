@@ -1,7 +1,7 @@
 ---
-description: Speichert einen PRT-Puffer (preberechneten Radiance Transfer) auf dem Datenträger.
+description: Speichert einen vorausberechnen PRT-Puffer (Radiance Transfer) auf dem Datenträger.
 ms.assetid: 1fca69bd-6729-45af-981f-b7480c741bc2
-title: D3DXSavePRTBufferToFile-Funktion (D3DX9Mesh. h)
+title: D3DXSavePRTBufferToFile-Funktion (D3DX9Mesh.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -14,16 +14,16 @@ api_type:
 api_location:
 - d3dx9.lib
 - d3dx9.dll
-ms.openlocfilehash: b796ee24be44bf65be7df938bdfe85d6784cc5f3
-ms.sourcegitcommit: 14010c34b35fa268046c7683f021f86de08ddd0a
+ms.openlocfilehash: 0bfa3d06970d138ff1c868403c20bb41cf14f0a5cbb7116cbe0f0843a51258dc
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "106365086"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118524530"
 ---
 # <a name="d3dxsaveprtbuffertofile-function"></a>D3DXSavePRTBufferToFile-Funktion
 
-Speichert einen PRT-Puffer (preberechneten Radiance Transfer) auf dem Datenträger.
+Speichert einen vorausberechnen PRT-Puffer (Radiance Transfer) auf dem Datenträger.
 
 ## <a name="syntax"></a>Syntax
 
@@ -36,29 +36,29 @@ HRESULT D3DXSavePRTBufferToFile(
 
 ## <a name="parameters"></a>Parameter
 
-*pfilename* \[ in\]
+*pFileName* \[ In\]
 
 Typ: **[LPCSTR](../winprog/windows-data-types.md)**
 
-Der Name der Datei, in der der Puffer gespeichert werden soll.
+Name der Datei, in der der Puffer gespeichert werden soll.
 
-*pbuffer* \[ in\]
+*pBuffer* \[ In\]
 
 Typ: **[LPD3DXPRTBUFFER](id3dxprtbuffer.md)**
 
-Adresse eines Zeigers auf das Eingabe- [**ID3DXPRTBuffer**](id3dxprtbuffer.md) -Objekt.
+Adresse eines Zeigers auf das [**Eingabeobjekt ID3DXPRTBuffer.**](id3dxprtbuffer.md)
 
 ## <a name="return-value"></a>Rückgabewert
 
 Typ: **[HRESULT](../com/structure-of-com-error-codes.md)**
 
-Wenn die Methode erfolgreich ausgeführt wird, ist der Rückgabewert **D3D \_ OK**. Wenn die Methode fehlschlägt, kann der Rückgabewert " **D3DERR \_ invalidcall"** lauten.
+Wenn die Methode erfolgreich ist, lautet der Rückgabewert **D3D \_ OK**. Wenn die Methode fehlschlägt, kann der Rückgabewert **D3DERR \_ INVALIDCALL** sein.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Die Compilereinstellung bestimmt auch die Funktions Version. Wenn Unicode definiert ist, wird der Funktions aufzurufen in [D3DXSavePRTBufferToFileW]()aufgelöst. Andernfalls wird der Funktions aufrufin **D3DXSavePRTBufferToFileA** aufgelöst.
+Die Compilereinstellung bestimmt auch die Funktionsversion. Wenn Unicode definiert ist, wird der Funktionsaufruf in [D3DXSavePRTBufferToFileW]()aufgelöst. Andernfalls wird der Funktionsaufruf in **D3DXSavePRTBufferToFileA** aufgelöst.
 
-Das PRT-Dateiformat ist eine Binärdatei in Form eines-Headers und dann ein-Datenblock.
+Das PRT-Dateiformat ist eine Binärdatei in Form eines Headers und dann eines Datenblocks.
 
 ```cpp
 struct PRTHeader
@@ -72,7 +72,7 @@ struct PRTHeader
 };
 ```
 
-Wenn " *bistex* " ungleich 0 (null) ist, sollten die *NumSamples* gleich sein `TexWidth * TexHeight` .
+Für den Fall, dass *bIsTex* ungleich 0 (null) ist, sollten *NumSamples* gleich `TexWidth * TexHeight` sein.
 
 Der Datenblock, der auf den Header folgt, ist `NumSamples * NumCoeffs * NumChannels * sizeof(float)` Bytes.
 
@@ -80,9 +80,9 @@ Der Datenblock, der auf den Header folgt, ist `NumSamples * NumCoeffs * NumChann
 
 | Anforderung | Wert |
 |--------------------|----------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>D3DX9Mesh. h</dt> </dl> |
-| Bibliothek<br/> | <dl> <dt>D3dx9. lib</dt> </dl>   |
+| Header<br/>  | <dl> <dt>D3DX9Mesh.h</dt> </dl> |
+| Bibliothek<br/> | <dl> <dt>D3dx9.lib</dt> </dl>   |
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
-[Voraus berechnete Strahlungs Übertragungsfunktionen](dx9-graphics-reference-d3dx-functions-prt.md)
+[Vorausberechnen von Übertragungsfunktionen für Die Radiance](dx9-graphics-reference-d3dx-functions-prt.md)

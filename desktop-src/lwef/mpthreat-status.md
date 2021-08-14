@@ -1,10 +1,10 @@
 ---
-title: MPTHREAT_STATUS-Enumeration (mpclient. h)
-description: Möglicher Bedrohungs Status.
+title: MPTHREAT_STATUS-Enumeration (MpClient.h)
+description: Möglicher Bedrohungsstatus.
 ms.assetid: 64B57C8B-231B-4A2C-BF2E-45DB62B8350E
 keywords:
-- MPTHREAT_STATUS-Enumerationsfunktionen der Legacy-Windows-Umgebung
-- PMPTHREAT_STATUS enumerationszeiger Legacy-Windows-Umgebungs Features
+- MPTHREAT_STATUS enumeration Legacy Windows Environment Features (Legacy-Windows-Umgebungsfeatures)
+- PMPTHREAT_STATUS enumeration pointer Legacy Windows Environment Features (Legacy Windows-Umgebungsfeatures)
 topic_type:
 - apiref
 api_name:
@@ -15,16 +15,16 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 978a152d6f14d7b3577ece0a2e8bd5a8ba741a3b
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 92d800cbfb0adbeb994586a69e38ac4a1ad2a8957091508b147bd582fef5233e
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "106339954"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118476262"
 ---
-# <a name="mpthreat_status-enumeration"></a>Mpthreat- \_ statusenumeration
+# <a name="mpthreat_status-enumeration"></a>MPTHREAT \_ STATUS-Enumeration
 
-Möglicher Bedrohungs Status.
+Möglicher Bedrohungsstatus.
 
 ## <a name="syntax"></a>Syntax
 
@@ -53,43 +53,43 @@ typedef enum tagMPTHREAT_STATUS {
 
 <dl> <dt>
 
-<span id="MP_THREAT_STATUS_UNKNOWN"></span><span id="mp_threat_status_unknown"></span>**MP- \_ Bedrohungs \_ Status \_ unbekannt**
+<span id="MP_THREAT_STATUS_UNKNOWN"></span><span id="mp_threat_status_unknown"></span>**MP \_ THREAT \_ STATUS \_ UNKNOWN**
 </dt> <dd></dd> <dt>
 
-<span id="MP_THREAT_STATUS_DETECTED"></span><span id="mp_threat_status_detected"></span>**MP- \_ Bedrohungs \_ Status \_ erkannt**
+<span id="MP_THREAT_STATUS_DETECTED"></span><span id="mp_threat_status_detected"></span>**\_ \_ MP-BEDROHUNGSSTATUS \_ ERKANNT**
 </dt> <dd></dd> <dt>
 
-<span id="MP_THREAT_STATUS_CLEANED"></span><span id="mp_threat_status_cleaned"></span>**Management Pack- \_ Bedrohungs \_ Status \_ bereinigt**
+<span id="MP_THREAT_STATUS_CLEANED"></span><span id="mp_threat_status_cleaned"></span>**\_ \_ MP-BEDROHUNGSSTATUS \_ BEREINIGT**
 </dt> <dd></dd> <dt>
 
-<span id="MP_THREAT_STATUS_QUARANTINED"></span><span id="mp_threat_status_quarantined"></span>**MP- \_ Bedrohungs \_ Status unter \_ Quarantäne**
+<span id="MP_THREAT_STATUS_QUARANTINED"></span><span id="mp_threat_status_quarantined"></span>**\_MP-BEDROHUNGSSTATUS \_ \_ UNTER QUARANTÄNE GESTELLT**
 </dt> <dd></dd> <dt>
 
-<span id="MP_THREAT_STATUS_REMOVED"></span><span id="mp_threat_status_removed"></span>**MP- \_ Bedrohungs \_ Status \_ entfernt**
+<span id="MP_THREAT_STATUS_REMOVED"></span><span id="mp_threat_status_removed"></span>**\_ \_ MP-BEDROHUNGSSTATUS \_ ENTFERNT**
 </dt> <dd></dd> <dt>
 
-<span id="MP_THREAT_STATUS_ALLOWED"></span><span id="mp_threat_status_allowed"></span>**MP- \_ Bedrohungs \_ Status \_ zulässig**
+<span id="MP_THREAT_STATUS_ALLOWED"></span><span id="mp_threat_status_allowed"></span>**\_ \_ MP-BEDROHUNGSSTATUS \_ ZULÄSSIG**
 </dt> <dd></dd> <dt>
 
-<span id="MP_THREAT_STATUS_BLOCKED"></span><span id="mp_threat_status_blocked"></span>**MP- \_ Bedrohungs \_ Status \_ blockiert**
+<span id="MP_THREAT_STATUS_BLOCKED"></span><span id="mp_threat_status_blocked"></span>**\_MP-BEDROHUNGSSTATUS \_ \_ BLOCKIERT**
 </dt> <dd></dd> <dt>
 
-<span id="MP_THREAT_STATUS_CLEAN_FAILED"></span><span id="mp_threat_status_clean_failed"></span>**Fehler \_ beim \_ \_ Bereinigen des Management Packs. \_**
+<span id="MP_THREAT_STATUS_CLEAN_FAILED"></span><span id="mp_threat_status_clean_failed"></span>**\_FEHLER \_ BEIM \_ BEREINIGEN DES MP-BEDROHUNGSSTATUS \_**
 </dt> <dd></dd> <dt>
 
-<span id="MP_THREAT_STATUS_QUARANTINE_FAILED"></span><span id="mp_threat_status_quarantine_failed"></span>**Fehler bei MP- \_ Bedrohungs \_ Status \_ \_**
+<span id="MP_THREAT_STATUS_QUARANTINE_FAILED"></span><span id="mp_threat_status_quarantine_failed"></span>**\_FEHLER \_ BEI \_ MP-BEDROHUNGSSTATUSQUARANTÄNE \_**
 </dt> <dd></dd> <dt>
 
-<span id="MP_THREAT_STATUS_REMOVE_FAILED"></span><span id="mp_threat_status_remove_failed"></span>**Fehler \_ beim \_ \_ Entfernen \_ des Management Packs.**
+<span id="MP_THREAT_STATUS_REMOVE_FAILED"></span><span id="mp_threat_status_remove_failed"></span>**MP \_ THREAT \_ STATUS \_ REMOVE \_ FAILED**
 </dt> <dd></dd> <dt>
 
-<span id="MP_THREAT_STATUS_ALLOW_FAILED"></span><span id="mp_threat_status_allow_failed"></span>**Fehler bei MP- \_ Bedrohungs \_ Status \_ \_**
+<span id="MP_THREAT_STATUS_ALLOW_FAILED"></span><span id="mp_threat_status_allow_failed"></span>**MP \_ THREAT \_ STATUS \_ ALLOW \_ FAILED**
 </dt> <dd></dd> <dt>
 
-<span id="MP_THREAT_STATUS_ABANDONED"></span><span id="mp_threat_status_abandoned"></span>**MP- \_ Bedrohungs \_ Status \_ abgebrochen**
+<span id="MP_THREAT_STATUS_ABANDONED"></span><span id="mp_threat_status_abandoned"></span>**\_ \_ MP-BEDROHUNGSSTATUS \_ ABGEBROCHEN**
 </dt> <dd></dd> <dt>
 
-<span id="MP_THREAT_STATUS_BLOCK_FAILED"></span><span id="mp_threat_status_block_failed"></span>**Fehler beim MP- \_ Bedrohungs \_ Status. \_ \_**
+<span id="MP_THREAT_STATUS_BLOCK_FAILED"></span><span id="mp_threat_status_block_failed"></span>**\_FEHLER \_ BEIM \_ MP-BEDROHUNGSSTATUSBLOCK \_**
 </dt> <dd></dd> </dl>
 
 ## <a name="requirements"></a>Anforderungen
@@ -98,9 +98,9 @@ typedef enum tagMPTHREAT_STATUS {
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows 8 \[ -Desktop-Apps\]<br/>                                            |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2012 \[ -Desktop-Apps\]<br/>                                  |
-| Header<br/>                   | <dl> <dt>Mpclient. h</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | \[Windows 8 Nur Desktop-Apps\]<br/>                                            |
+| Unterstützte Mindestversion (Server)<br/> | \[Windows Server 2012 Nur Desktop-Apps\]<br/>                                  |
+| Header<br/>                   | <dl> <dt>MpClient.h</dt> </dl> |
 
 
 

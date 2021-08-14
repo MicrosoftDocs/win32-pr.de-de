@@ -1,9 +1,9 @@
 ---
-title: MCI_MARK Befehl (MMSYSTEM. h)
-description: Mit dem Befehl MCI \_ Mark werden Markierungen aufgezeichnet oder gelöscht, die mit dem MCI-Such \_ Befehl für hoch Geschwindigkeits Suchvorgänge verwendet werden können. VCR-Geräte erkennen diesen Befehl.
+title: MCI_MARK Befehl (Mmsystem.h)
+description: Der MCI MARK-Befehl zeichnet Markierungen auf oder löscht Markierungen, die mit dem \_ MCI \_ SEEK-Befehl für schnelle Suchvorgänge verwendet werden können. VCR-Geräte erkennen diesen Befehl.
 ms.assetid: 69b17e5b-99a1-4fb9-bc0e-30e772c1f11f
 keywords:
-- MCI_MARK Befehl Windows-Multimedia
+- MCI_MARK-Befehl Windows Multimedia
 topic_type:
 - apiref
 api_name:
@@ -14,18 +14,18 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 1ddc80decb4559659efb29132f17f18459c334fb
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: e83cdb6c8c62fa19d66dc6042b6c8b16837f9dc4657060c0955098ed90e1c016
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104040299"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118374995"
 ---
-# <a name="mci_mark-command"></a>Befehl "MCI- \_ Markierung"
+# <a name="mci_mark-command"></a>MCI \_ MARK-Befehl
 
-Mit dem Befehl MCI \_ Mark werden Markierungen aufgezeichnet oder gelöscht, die mit dem MCI-Suchbefehl für hoch Geschwindigkeits [ \_ Suchvorgänge](mci-seek.md) verwendet werden können. VCR-Geräte erkennen diesen Befehl.
+Der MCI MARK-Befehl zeichnet Markierungen auf oder löscht Markierungen, die mit dem \_ [MCI \_ SEEK-Befehl](mci-seek.md) für schnelle Suchvorgänge verwendet werden können. VCR-Geräte erkennen diesen Befehl.
 
-Um diesen Befehl zu senden, wenden Sie die [**mciSendCommand**](/previous-versions//dd757160(v=vs.85)) -Funktion mit den folgenden Parametern an.
+Um diesen Befehl zu senden, rufen Sie die [**mciSendCommand-Funktion**](/previous-versions//dd757160(v=vs.85)) mit den folgenden Parametern auf.
 
 
 ```C++
@@ -43,45 +43,45 @@ MCIERROR mciSendCommand(
 
 <dl> <dt>
 
-<span id="wDeviceID"></span><span id="wdeviceid"></span><span id="WDEVICEID"></span>*WDE viceid*
+<span id="wDeviceID"></span><span id="wdeviceid"></span><span id="WDEVICEID"></span>*wDeviceID*
 </dt> <dd>
 
-Geräte Bezeichner des MCI-Geräts, das die Befehls Meldung empfangen soll.
+Gerätebezeichner des MCI-Geräts, das die Befehlsnachricht empfangen soll.
 
 </dd> <dt>
 
-<span id="dwFlags"></span><span id="dwflags"></span><span id="DWFLAGS"></span>*dwFlags*
+<span id="dwFlags"></span><span id="dwflags"></span><span id="DWFLAGS"></span>*Dwflags*
 </dt> <dd>
 
-MCI- \_ Benachrichtigung, MCI- \_ Wartezeit oder MCI- \_ Test. Weitere Informationen zu diesen Flags finden Sie [unter Wait-, notify-und testflags](the-wait-notify-and-test-flags.md).
+MCI \_ NOTIFY, MCI \_ WAIT oder MCI \_ TEST. Informationen zu diesen Flags finden Sie unter [Die Warte-, Benachrichtigungs- und Testflags](the-wait-notify-and-test-flags.md).
 
 </dd> <dt>
 
-<span id="lpMark"></span><span id="lpmark"></span><span id="LPMARK"></span>*lpmark*
+<span id="lpMark"></span><span id="lpmark"></span><span id="LPMARK"></span>*lpMark*
 </dt> <dd>
 
-Zeiger auf eine [**generische MCI-Struktur von \_ \_ Parametern**](mci-generic-parms.md) . (Geräte mit erweiterten Befehlssätzen können diese Struktur durch eine gerätespezifische Struktur ersetzen.)
+Zeiger auf eine [**MCI \_ GENERIC \_ PARMS-Struktur.**](mci-generic-parms.md) (Geräte mit erweiterten Befehlssätzen ersetzen diese Struktur möglicherweise durch eine gerätespezifische Struktur.)
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt 0 (null) zurück, wenn erfolgreich, andernfalls einen Fehler.
+Gibt 0 (null) zurück, wenn erfolgreich, andernfalls ein Fehler.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
 Die folgenden zusätzlichen Flags gelten für VCR-Geräte:
 
 <dl> <dt>
 
-<span id="MCI_VCR_MARK_ERASE"></span><span id="mci_vcr_mark_erase"></span>MCI- \_ VCR- \_ Markierung \_ Löschen
+<span id="MCI_VCR_MARK_ERASE"></span><span id="mci_vcr_mark_erase"></span>MCI \_ VCR \_ MARK \_ ERASE
 </dt> <dd>
 
-Löscht eine Markierung an der aktuellen Position, wenn eine Markierung vorhanden ist.
+Löscht eine Markierung an der aktuellen Position, sofern vorhanden.
 
 </dd> <dt>
 
-<span id="MCI_VCR_MARK_WRITE"></span><span id="mci_vcr_mark_write"></span>MCI- \_ VCR- \_ Markierung \_ schreiben
+<span id="MCI_VCR_MARK_WRITE"></span><span id="mci_vcr_mark_write"></span>MCI \_ VCR \_ MARK \_ WRITE
 </dt> <dd>
 
 Schreibt eine Markierung an der aktuellen Position.
@@ -96,15 +96,15 @@ Schreibt eine Markierung an der aktuellen Position.
 |-------------------------------------|-----------------------------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional \[nur Desktop-Apps\]<br/>                                                |
 | Unterstützte Mindestversion (Server)<br/> | Windows 2000 Server \[nur Desktop-Apps\]<br/>                                                      |
-| Header<br/>                   | <dl> <dt>MMSYSTEM. h (Include Windows. h)</dt> </dl> |
+| Header<br/>                   | <dl> <dt>Mmsystem.h (include Windows.h)</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[MCI](mci.md)
+[Mci](mci.md)
 </dt> <dt>
 
 [MCI-Befehle](mci-commands.md)

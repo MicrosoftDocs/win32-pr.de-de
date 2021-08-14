@@ -1,7 +1,7 @@
 ---
-description: Die Funktion "ccheapfree" gibt den von der Funktion "cbillizuzuordnungs" zugeordneten Speicher frei.
+description: Die CCHeapFree-Funktion gibt den von der CCHeapAlloc-Funktion zugeordneten Arbeitsspeicher frei.
 ms.assetid: 4e1f3332-b0cb-4c21-8c36-59e14c9686cd
-title: Ccheapfree-Funktion (Netmon. h)
+title: CCHeapFree-Funktion (Netmon.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,16 +13,16 @@ api_type:
 - DllExport
 api_location:
 - Nmapi.dll
-ms.openlocfilehash: 5e89ca9a7d00559724edc6679a0ed99e4bdf9c2d
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: b29d57c3d56136103fb1948340472343f56727c2df0268a5036dc148fdd0493a
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "104131860"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117796340"
 ---
-# <a name="ccheapfree-function"></a>Ccheapfree-Funktion
+# <a name="ccheapfree-function"></a>CCHeapFree-Funktion
 
-Die Funktion " **ccheapfree** " gibt den von der Funktion " **cbillizuzuordnungs** " zugeordneten Speicher frei.
+Die **CCHeapFree-Funktion** gibt den von der **CCHeapAlloc-Funktion zugeordneten Arbeitsspeicher** frei.
 
 ## <a name="syntax"></a>Syntax
 
@@ -39,18 +39,18 @@ BOOL WINAPI CCHeapFree(
 
 <dl> <dt>
 
-*lpmem* 
+*lpMem* 
 </dt> <dd>
 
-Zeiger auf den Arbeitsspeicher, der von dieser Funktion freigegeben wird.
+Zeiger auf den Arbeitsspeicher, den diese Funktion frei gibt.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Wenn die **ccheapfree** -Funktion erfolgreich ist, ist der Rückgabewert " **true**".
+Wenn die **CCHeapFree-Funktion** erfolgreich ist, ist der Rückgabewert **TRUE.**
 
-Wenn die Funktion nicht erfolgreich ist, ist der Rückgabewert **false**.
+Wenn die Funktion nicht erfolgreich ist, ist der Rückgabewert **FALSE.**
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -60,29 +60,29 @@ Wenn die Funktion nicht erfolgreich ist, ist der Rückgabewert **false**.
 |-------------------------------------|--------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional \[nur Desktop-Apps\]<br/>                           |
 | Unterstützte Mindestversion (Server)<br/> | Windows 2000 Server \[nur Desktop-Apps\]<br/>                                 |
-| Header<br/>                   | <dl> <dt>Netmon. h</dt> </dl>  |
-| Bibliothek<br/>                  | <dl> <dt>Nmapi. lib</dt> </dl> |
+| Header<br/>                   | <dl> <dt>Netmon.h</dt> </dl>  |
+| Bibliothek<br/>                  | <dl> <dt>Nmapi.lib</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>Nmapi.dll</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[Setccinstptr](setccinstptr.md)
+[SetCCInstPtr](setccinstptr.md)
 </dt> <dt>
 
-[Getccinstptr](getccinstptr.md)
+[GetCCInstPtr](getccinstptr.md)
 </dt> <dt>
 
-[Ccheap-Zuweisung](ccheapalloc.md)
+[CCHeapAlloc](ccheapalloc.md)
 </dt> <dt>
 
-[Ccheaprezuweisung](ccheaprealloc.md)
+[CCHeapReAlloc](ccheaprealloc.md)
 </dt> <dt>
 
-[Ccheapsize](ccheapsize.md)
+[CCHeapSize](ccheapsize.md)
 </dt> </dl>
 
  

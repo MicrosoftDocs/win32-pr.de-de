@@ -1,32 +1,32 @@
 ---
-description: Zum Ändern der Attribute einer Verbindung, z. b. der Verschlüsselungs Sammlung oder der Client Authentifizierung, können Sie eine &0034, eine \# Wiederholung&\# 0034 oder eine erneute Aushandlung der Verbindung anfordern.
+description: Um die Attribute einer Verbindung zu ändern, z. B. die Verschlüsselungssammlung oder die Clientauthentifizierung, können Sie eine &\# 0034;redo&0034 oder eine Neuverhandlung der \# Verbindung anfordern.
 ms.assetid: 681b607d-66d8-4012-9a84-d202c9778a26
 title: Neuverhandlung einer Kanalverbindung
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 9fbcd25dad39ab7f35e77277eee9275004cd8a26
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: b904400f5a440046214c39ea736c296685e0e56859f43b3a458f621d2a07d273
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106367917"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118919399"
 ---
 # <a name="renegotiating-an-schannel-connection"></a>Neuverhandlung einer Kanalverbindung
 
-Wenn Sie die Attribute einer Verbindung ändern möchten, z. b. die Verschlüsselungs Sammlung oder die Client Authentifizierung, können Sie eine Wiederholung oder eine erneute Aushandlung der Verbindung anfordern.
+Um die Attribute einer Verbindung zu ändern, z. B. die Verschlüsselungssammlung oder die Clientauthentifizierung, können Sie eine "Erneute" oder Neuverhandlung der Verbindung anfordern.
 
-Wenn die zu ändernde Attribute über Anmelde Informationen gesteuert werden, müssen Sie vor der erneuten Aushandlung der Verbindung neue Anmelde Informationen abrufen. Weitere Informationen finden Sie unter Abrufen von [SChannel-Anmelde](obtaining-schannel-credentials.md)Informationen.
+Wenn die Attribute, die Sie ändern möchten, durch Anmeldeinformationen gesteuert werden, müssen Sie neue Anmeldeinformationen abrufen, bevor Sie die Verbindung neu aushandeln. Weitere Informationen finden Sie unter [Abrufen von Schannel-Anmeldeinformationen.](obtaining-schannel-credentials.md)
 
-Um eine Wiederholung von einer Client Anwendung anzufordern, müssen Sie die Funktion [**InitializeSecurityContext (SChannel)**](./initializesecuritycontext--schannel.md) aufzurufen. Server Anwendungen nennen die Funktion " [**akzeptsecuritycontext" (SChannel)**](acceptsecuritycontext--schannel.md) . Legen Sie die Parameter wie folgt fest:
+Rufen Sie die [**InitializeSecurityContext-Funktion (Schannel)**](./initializesecuritycontext--schannel.md) auf, um eine Wiederholen-Funktion von einer Clientanwendung an fordern. Serveranwendungen rufen die [**Funktion AcceptSecurityContext (Schannel)**](acceptsecuritycontext--schannel.md) auf. Legen Sie die Parameter wie folgt fest:
 
--   Geben Sie den vorhandenen [*Sicherheitskontext*](../secgloss/s-gly.md#_SECURITY_SECURITY_CONTEXT_GLY) im Parameter " *phcontext* " an.
--   (Nur Clients) Geben Sie den gleichen Servernamen (im *psztargetname* -Parameter) an, wie beim Einrichten des Kontexts angegeben.
--   Geben Sie ggf. neue Anmelde Informationen mithilfe des Parameters *phcredential* an.
--   Wenn Sie Kontext Attribute ändern möchten, die nicht mit den Anmelde Informationen verknüpft sind, geben Sie diese Attribute mithilfe des *fContextReq* -Parameters an.
+-   Geben Sie den vorhandenen [*Sicherheitskontext*](../secgloss/s-gly.md#_SECURITY_SECURITY_CONTEXT_GLY) im *phContext-Parameter* an.
+-   (nur Clients) Geben Sie den gleichen Servernamen (im *Parameter pszTargetName)* an, den Sie beim Einrichten des Kontexts angegeben haben.
+-   Geben Sie neue Anmeldeinformationen an, indem Sie *ggf. den Parameter phCredential* verwenden.
+-   Wenn Sie Kontextattribute ändern möchten, die nicht mit den Anmeldeinformationen in Zusammenhang stehen, geben Sie diese Attribute mit dem *fContextReq-Parameter* an.
 
-Nachdem Sie die entsprechende Funktion aufgerufen haben, sollte Ihre Anwendung die Ergebnisse an den Client senden und die Verarbeitung eingehender Nachrichten mit der Funktion [**DecryptMessage (SChannel)**](decryptmessage--schannel.md) fortsetzen.
+Nach dem Aufruf der entsprechenden Funktion sollte Ihre Anwendung die Ergebnisse an den Client senden und die Verarbeitung eingehender Nachrichten mithilfe der [**Funktion DecryptMessage (Schannel)**](decryptmessage--schannel.md) fortsetzen.
 
-Die Funktion [**DecryptMessage (SChannel)**](decryptmessage--schannel.md) gibt Sekunde zurück \_ , die ich erneut \_ aushandeln, wenn SChannel für die Fortsetzung ihrer Anwendung bereit ist. Wenn Sie die Sekunde nach der erneuten Aushandlung von \_ \_ Rückgabecode erhalten, muss Ihre Anwendung " [**Accept-SecurityContext (SChannel)**](acceptsecuritycontext--schannel.md) (Server)" oder " [**InitializeSecurityContext (SChannel)**](./initializesecuritycontext--schannel.md) (Clients)" abrufen und die Inhalte der von "DecryptMessage" zurückgegebenen SECBUFFER_EXTRA in der SECBUFFER_TOKEN übergeben. Nachdem dieser Rückruf einen Wert zurückgegeben hat, fahren Sie so fort, als ob Ihre Anwendung eine neue Verbindung erstellt hat.
+Die [**Funktion DecryptMessage (Schannel)**](decryptmessage--schannel.md) gibt SEC \_ I RENEGOTIATE zurück, wenn Schannel bereit ist, ihre \_ Anwendung fortzufahren. Wenn Sie den SEC I RENEGOTIATE-Rückgabecode erhalten, muss Ihre Anwendung \_ \_ [**AcceptSecurityContext (Schannel) (Server)**](acceptsecuritycontext--schannel.md) oder [**InitializeSecurityContext (Schannel) (Clients)**](./initializesecuritycontext--schannel.md) aufrufen und den Inhalt von SECBUFFER_EXTRA übergeben, der von DecryptMessage im SECBUFFER_TOKEN zurückgegeben wird. Nachdem dieser Aufruf einen Wert zurückgegeben hat, fahren Sie so fort, als ob Ihre Anwendung eine neue Verbindung erstellt hat.
 
  
 

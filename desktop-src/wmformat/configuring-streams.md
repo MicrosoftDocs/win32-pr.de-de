@@ -3,65 +3,65 @@ title: Konfigurieren von Streams
 description: Konfigurieren von Streams
 ms.assetid: d119362f-e23c-4985-aff5-8c084106df30
 keywords:
-- Windows Media-Format-SDK, Streams
+- Windows Medienformat-SDK, Streams
 - Profile, Streams
-- Streams, konfigurieren
-- Codecs, Konfigurieren von Streams
-- Profile, iwmstreamconfig-Schnittstelle
-- Streams, iwmstreamconfig-Schnittstelle
-- Iwmstreamconfig
+- Streams,Konfigurieren
+- Codecs,Konfigurieren von Streams
+- profiles,IWMStreamConfig-Schnittstelle
+- streams,IWMStreamConfig-Schnittstelle
+- IWMStreamConfig
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 6bc159fbd5390eb430e035db676685153d0cf174
-ms.sourcegitcommit: 592c9bbd22ba69802dc353bcb5eb30699f9e9403
+ms.openlocfilehash: 7d55db0d02c8eae3ddd3ec780f5d6470d87628a6f7b12feceb5faa413b2e4546
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "104473132"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118199316"
 ---
 # <a name="configuring-streams"></a>Konfigurieren von Streams
 
-Das einzige, was in einem Profil erforderlich ist, ist mindestens ein Stream. Die anderen Optionen ermöglichen den Zugriff auf Erweiterte Funktionen, aber mit mindestens einem Stream können Sie eine ASF-Datei erstellen. Es ist von grundlegender Bedeutung, dass Sie wissen, wie Datenströme vor dem Erstellen komplexer Profile konfiguriert werden.
+Das einzige, was in einem Profil erforderlich ist, ist mindestens ein Stream. Die anderen Optionen bieten Zugriff auf erweiterte Features, aber mit mindestens einem Stream können Sie eine ASF-Datei erstellen. Es ist wichtig, dass Sie wissen, wie Streams konfiguriert werden, bevor Sie komplexe Profile erstellen.
 
-Für Profile können Datenströme in zwei Typen unterteilt werden: solche, die mit Windows Media Codecs und beliebigen Streams komprimiert werden, die nicht mit Codecs verarbeitet werden. Audiostreams und Videostreams sind die Typen, die die Windows Media-Codecs verwenden. Natürlich können Streams Audiodaten oder Videos enthalten, die mit einem Drittanbieter-Codec komprimiert sind, aber der Prozess der Konfiguration eines solchen Datenstroms ist ein Sonderfall. Weitere Informationen finden Sie [unter So erstellen Sie ASF-Dateien mithilfe von Drittanbieter-Codecs](to-create-asf-files-using-third-party-codecs.md).
+Zum Zweck von Profilen können Streams in zwei Typen unterteilt werden: datenströme, die mit Windows Mediencodecs komprimiert werden, und beliebige Datenströme, die nicht mit Codecs verarbeitet werden. Audiostreams und Videostreams sind die Typen, die die Windows Mediencodecs verwenden. Natürlich können Streams Audio- oder Videodaten enthalten, die mit einem Codec eines Drittanbieters komprimiert sind, aber der Prozess der Konfiguration eines solchen Streams ist ein Sonderfall. Weitere Informationen finden Sie unter [So erstellen Sie ASF-Dateien mithilfe von Codecs von Drittanbietern.](to-create-asf-files-using-third-party-codecs.md)
 
-In der folgenden Liste wird der Prozess der Konfiguration eines Datenstroms zusammengefasst.
+In der folgenden Liste wird der Prozess zum Konfigurieren eines Streams zusammengefasst.
 
-1.  Abrufen eines Datenstrom-Konfigurations Objekts für den Datenstrom.
-    -   Wenn Sie einen Stream mit einem der Windows Media-Codecs erstellen, müssen Sie das Datenstrom-Konfigurationsobjekt als Codec-Format mithilfe der Methoden von [**IWMCodecInfo3**](/previous-versions/windows/desktop/api/wmsdkidl/nn-wmsdkidl-iwmcodecinfo3)abrufen.
-    -   Wenn der Stream ein beliebiger Typ ist, erhalten Sie ein leeres Datenstrom-Konfigurationsobjekt mithilfe von [**iwmprofile:: builddatenstream**](/previous-versions/windows/desktop/api/Wmsdkidl/nf-wmsdkidl-iwmprofile-createnewstream).
-2.  Konfigurieren Sie den Stream entsprechend Ihren Anforderungen.
-    -   Streams aller Typen sollten ein Name, ein Verbindungs Name und eine streamnummer zugewiesen werden.
-    -   Streams mit Windows Media Codecs sollten nur auf vordefinierte Weise aus dem Codec-Format geändert werden. Für Audiostreams sollten nur die Einstellungen der Variablen Bitrate (VBR) für die zweistufige VBR geändert werden. Videostreams müssen mit den gewünschten Frame Eigenschaften konfiguriert werden.
-    -   Beliebige Datenströme weisen abweichende Konfigurations Anforderungen nach Typ auf. Alle erfordern eine Bitrate und ein Puffer Fenster.
-3.  Fügen Sie den Stream zum Profil hinzu, indem Sie [**iwmprofile:: addstream**](/previous-versions/windows/desktop/api/Wmsdkidl/nf-wmsdkidl-iwmprofile-addstream)aufrufen.
+1.  Rufen Sie ein Streamkonfigurationsobjekt für den Stream ab.
+    -   Wenn Sie einen Stream mit einem der Windows Mediencodecs erstellen, müssen Sie das Streamkonfigurationsobjekt mithilfe der Methoden von [**IWMCodecInfo3**](/previous-versions/windows/desktop/api/wmsdkidl/nn-wmsdkidl-iwmcodecinfo3)als Codecformat abrufen.
+    -   Wenn der Stream ein beliebiger Typ ist, erhalten Sie mithilfe von [**IWMProfile::CreateNewStream**](/previous-versions/windows/desktop/api/Wmsdkidl/nf-wmsdkidl-iwmprofile-createnewstream)ein leeres Streamkonfigurationsobjekt.
+2.  Konfigurieren Sie den Datenstrom entsprechend Ihren Anforderungen.
+    -   Streams aller Typen sollten ein Name, ein Verbindungsname und eine Streamnummer zugewiesen werden.
+    -   Streams mit Windows Mediencodecs sollten nur auf vordefinierte Weise aus dem Codecformat geändert werden. Bei Audiostreams sollten nur einstellungen für die variable Bitrate (VBR) für vbr mit zwei Durchläufen geändert werden. Videostreams müssen mit den gewünschten Frameeigenschaften konfiguriert werden.
+    -   Für beliebige Datenströme gibt es unterschiedliche Konfigurationsanforderungen nach Typ. Alle erfordern eine Bitrate und ein Pufferfenster.
+3.  Fügen Sie den Stream dem Profil hinzu, indem [**Sie IWMProfile::AddStream**](/previous-versions/windows/desktop/api/Wmsdkidl/nf-wmsdkidl-iwmprofile-addstream)aufrufen.
 
-Alle Streams werden mithilfe von Datenstrom-Konfigurationsobjekten definiert. Die Hauptschnittstelle für ein Datenstrom-Konfigurationsobjekt ist [**iwmstreamconfig**](/previous-versions/windows/desktop/api/wmsdkidl/nn-wmsdkidl-iwmstreamconfig), das Methoden zum Festlegen der grundlegenden Einstellungen eines Streams bereitstellt, z. b. die Datenstrom Nummer, die Bitrate usw. **Iwmstreamconfig** wird von den neueren Schnittstellen geerbt, [**IWMStreamConfig2**](/previous-versions/windows/desktop/api/wmsdkidl/nn-wmsdkidl-iwmstreamconfig2) und [**IWMStreamConfig3**](/previous-versions/windows/desktop/api/wmsdkidl/nn-wmsdkidl-iwmstreamconfig3). Wie bei allen nummerierten Schnittstellen Revisionen sollten Sie immer die neueste Version mithilfe der **QueryInterface** -Methode abrufen.
+Alle Datenströme werden mithilfe von Streamkonfigurationsobjekten definiert. Die Hauptschnittstelle für ein Streamkonfigurationsobjekt ist [**IWMStreamConfig,**](/previous-versions/windows/desktop/api/wmsdkidl/nn-wmsdkidl-iwmstreamconfig)das Methoden zum Festlegen der grundlegenden Einstellungen eines Streams bereitstellt, z. B. die Streamnummer, die Bitrate usw. **IWMStreamConfig** wird von den neueren Schnittstellen [**IWMStreamConfig2**](/previous-versions/windows/desktop/api/wmsdkidl/nn-wmsdkidl-iwmstreamconfig2) und [**IWMStreamConfig3**](/previous-versions/windows/desktop/api/wmsdkidl/nn-wmsdkidl-iwmstreamconfig3)geerbt. Wie bei allen nummerierten Schnittstellenrevisionen sollten Sie immer die neueste Version mit der **QueryInterface-Methode** abrufen.
 
-Der Zugriff auf die meisten Einstellungen in einem Stream erfolgt über [**iwmmedia-**](/previous-versions/windows/desktop/api/wmsdkidl/nn-wmsdkidl-iwmmediaprops)Eigenschaften. Diese Einstellungen werden in einer [**WM- \_ \_ Medientyp**](/previous-versions/windows/desktop/api/wmsdkidl/ns-wmsdkidl-wm_media_type) Struktur gekapselt. Für Audiodaten und Videos verweist die **WM- \_ \_ Medientyp** Struktur auf eine andere Struktur mit weiteren Informationen, die für den Medientyp spezifisch sind. Diese sekundäre Struktur ist in der Regel [**WaveFormatEx**](/previous-versions/windows/desktop/legacy/dd757720(v=vs.85)) für Audiodaten und [**wmvideoinfoheader**](/previous-versions/windows/desktop/api/wmsdkidl/ns-wmsdkidl-wmvideoinfoheader) für Video. Außerdem verfügen Videostreams über eine tertiäre Struktur, **BITMAPINFOHEADER**, die die Merkmale eines einzelnen Frame eines Videos beschreibt. **BITMAPINFOHEADER** ist eine gemeinsame Struktur und befindet sich im Abschnitt Graphics Device Interface (GDI) des Platform SDK.
+Auf die meisten Einstellungen in einem Stream wird über [**IWMMediaProps**](/previous-versions/windows/desktop/api/wmsdkidl/nn-wmsdkidl-iwmmediaprops)zugegriffen. Diese Einstellungen sind in einer [**WM \_ MEDIA \_ TYPE-Struktur**](/previous-versions/windows/desktop/api/wmsdkidl/ns-wmsdkidl-wm_media_type) gekapselt. Für Audio und Video zeigt die **WM \_ MEDIA \_ TYPE-Struktur** auf eine andere Struktur mit weiteren Informationen, die für den Medientyp spezifisch sind. Diese sekundäre Struktur ist in der Regel [**WAVEFORMATEX**](/previous-versions/windows/desktop/legacy/dd757720(v=vs.85)) für Audio und [**WMVIDEOINFOHEADER**](/previous-versions/windows/desktop/api/wmsdkidl/ns-wmsdkidl-wmvideoinfoheader) für Video. Darüber hinaus verfügen Videostreams über eine tertiäre Struktur, **BITMAPINFOHEADER,** die die Merkmale eines einzelnen Videoframes beschreibt. **BITMAPINFOHEADER** ist eine allgemeine Struktur und befindet sich im Abschnitt Graphics Device Interface (GDI) des Platform SDK.
 
-In den folgenden Abschnitten wird beschrieben, wie Datenströme konfiguriert werden.
+In den folgenden Abschnitten wird beschrieben, wie Streams konfiguriert werden.
 
 
 
 | `Section`                                                                                                          | BESCHREIBUNG                                                                                                                                                     |
 |------------------------------------------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| [Allgemeine Konfiguration für alle Streams](configuration-common-to-all-streams.md)                                   | Beschreibt die grundlegende Datenstrom Konfiguration, die für alle Arten von Streams gemeinsam ist.                                                                                        |
-| [Informationen zu streamkonfigurations Informationen von Codecs](getting-stream-configuration-information-from-codecs.md) | Beschreibt, wie Sie Datenstrom-Konfigurationsinformationen aus den Codecs erhalten, um die ordnungsgemäße Konfiguration von Streams mithilfe der Windows Media Audio und der Video Codecs sicherzustellen. |
-| [Konfigurieren von Audiodatenströmen](configuring-audio-streams.md)                                                       | Beschreibt das Konfigurieren von Audiodatenströmen.                                                                                                                       |
-| [Konfigurieren von Videostreams](configuring-video-streams.md)                                                       | Beschreibt, wie Videostreams konfiguriert werden.                                                                                                                       |
-| [Konfigurieren von Videostreams zum Suchen der Leistung](configuring-video-streams-for-seeking-performance.md)       | Beschreibt, wie Videostreams konfiguriert werden, für die eine effiziente Suche wichtig ist.                                                                              |
-| [Konfigurieren von Bildschirm Aufzeichnungsdaten strömen](configuring-screen-capture-streams.md)                                     | Beschreibt, wie Videostreams für die Bildschirmaufnahme konfiguriert werden.                                                                                                    |
-| [Konfigurieren von bildstreams](configuring-image-streams.md)                                                       | Beschreibt das Konfigurieren von bildstreams.                                                                                                                       |
-| [Verwenden von unkomprimierten Audiodaten und Videostreams](using-uncompressed-audio-and-video-streams.md)                     | Beschreibt, wie ein unkomprimierter Audiodatenstrom oder Videostream eingerichtet wird.                                                                                                  |
-| [Konfigurieren beliebiger Streamtypen](configuring-arbitrary-stream-types.md)                                     | Beschreibt, wie Datenströme so konfiguriert werden, dass die vordefinierten willkürlichen Streamtypen verwendet werden.                                                                                |
-| [Konfigurieren von VBR-Streams](configuring-vbr-streams.md)                                                           | Beschreibt, wie Datenströme für die Verwendung der variablenbitrate-Codierung (VBR) konfiguriert werden.                                                                                     |
-| [Konfigurieren von Dateneinheitserweiterung en](configuring-data-unit-extensions.md)                                         | Beschreibt, wie ein Stream so konfiguriert wird, dass Dateneinheiten Erweiterungen beim Schreiben der Datei angefügt werden können.                                                      |
-| [Wieder verwenden von streamkonfigurationen](reusing-stream-configurations.md)                                               | Beschreibt die Möglichkeiten, wie Sie Datenstrom-Konfigurationsobjekte aus vorhandenen Profilen zum Erstellen neuer Profile verwenden können.                                               |
+| [Allgemeine Konfiguration für alle Streams](configuration-common-to-all-streams.md)                                   | Beschreibt die grundlegende Streamkonfiguration, die allen Arten von Streams gemeinsam ist.                                                                                        |
+| [Abrufen von Streamkonfigurationsinformationen von Codecs](getting-stream-configuration-information-from-codecs.md) | Beschreibt das Abrufen von Datenstromkonfigurationsinformationen aus den Codecs, um eine ordnungsgemäße Konfiguration von Streams mithilfe der Windows Medienaudio- und Videocodecs sicherzustellen. |
+| [Konfigurieren von Audio Streams](configuring-audio-streams.md)                                                       | Beschreibt, wie Audiostreams konfiguriert werden.                                                                                                                       |
+| [Konfigurieren von Video Streams](configuring-video-streams.md)                                                       | Beschreibt, wie Videostreams konfiguriert werden.                                                                                                                       |
+| [Konfigurieren von Video Streams zur Leistungssuche](configuring-video-streams-for-seeking-performance.md)       | Beschreibt, wie Videostreams konfiguriert werden, für die effiziente Suche wichtig ist.                                                                              |
+| [Konfigurieren von Screen Capture Streams](configuring-screen-capture-streams.md)                                     | Beschreibt, wie Videostreams für die Bildschirmaufnahme konfiguriert werden.                                                                                                    |
+| [Konfigurieren von Image Streams](configuring-image-streams.md)                                                       | Beschreibt, wie Imagestreams konfiguriert werden.                                                                                                                       |
+| [Verwenden von unkomprimierten Audio- und Video-Streams](using-uncompressed-audio-and-video-streams.md)                     | Beschreibt das Einrichten eines unkomprimierten Audio- oder Videostreams.                                                                                                  |
+| [Konfigurieren beliebiger Streamtypen](configuring-arbitrary-stream-types.md)                                     | Beschreibt, wie Streams für die Verwendung der vordefinierten beliebigen Streamtypen konfiguriert werden.                                                                                |
+| [Konfigurieren von VBR-Streams](configuring-vbr-streams.md)                                                           | Beschreibt, wie Streams für die Verwendung der Codierung variabler Bitraten (VBR) konfiguriert werden.                                                                                     |
+| [Konfigurieren von Dateneinheitserweiterung en](configuring-data-unit-extensions.md)                                         | Beschreibt, wie ein Stream so konfiguriert wird, dass Dateneinheiterweiterungen angefügt werden können, wenn die Datei geschrieben wird.                                                      |
+| [Wiederverwenden von Streamkonfigurationen](reusing-stream-configurations.md)                                               | Beschreibt die Möglichkeiten, wie Sie Streamkonfigurationsobjekte aus vorhandenen Profilen verwenden können, um neue Profile zu erstellen.                                               |
 
 
 
- 
+ 
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
@@ -73,6 +73,6 @@ In den folgenden Abschnitten wird beschrieben, wie Datenströme konfiguriert wer
 [**Arbeiten mit Profilen**](working-with-profiles.md)
 </dt> </dl>
 
- 
+ 
 
- 
+ 

@@ -1,6 +1,6 @@
 ---
-title: WINBIO_SETTING_SOURCE Konstanten (winbio \_ types. h)
-description: Bestimmen Sie, ob die Windows-Biometrieframework derzeit aktiviert ist.
+title: WINBIO_SETTING_SOURCE Konstanten (Winbio \_ types.h)
+description: Bestimmen Sie, ob das Windows Biometric Framework derzeit aktiviert ist.
 ms.assetid: d95aa6cc-ddff-40fb-ab82-eac78dc0cb6b
 topic_type:
 - apiref
@@ -15,25 +15,25 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: b54723612c7e0948e09baddf22ad4f4703ca5c38
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 2f02a5edc80d00d098a592626ad4d9f0e1030f9f6eee119bf615375680d11842
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "103957156"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118909318"
 ---
-# <a name="winbio_setting_source-constants"></a>Winbio- \_ Einstellungs \_ Quellen Konstanten
+# <a name="winbio_setting_source-constants"></a>WINBIO \_ SETTING \_ SOURCE Constants
 
-Die folgenden Konstanten werden von der [**winbiogetenabledsetting**](/windows/desktop/api/Winbio/nf-winbio-winbiogetenabledsetting) -Funktion verwendet, um zu bestimmen, ob die Windows-Biometrieframework derzeit aktiviert ist. Die Konstanten geben an, woher die Einstellung stammt.
+Die folgenden Konstanten werden von der [**WinBioGetEnabledSetting-Funktion**](/windows/desktop/api/Winbio/nf-winbio-winbiogetenabledsetting) verwendet, um zu bestimmen, ob die Windows Biometric Framework derzeit aktiviert ist. Die Konstanten geben an, woher die Einstellung stammt.
 
 
 
 | Konstante                                                                                                                                                                                                        | BESCHREIBUNG                                                       |
 |:----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|:------------------------------------------------------------------|
-| <span id="WINBIO_SETTING_SOURCE_INVALID"></span><span id="winbio_setting_source_invalid"></span><dl> <dt>**winbio- \_ Einstellungs \_ Quelle \_ ungültig**</dt> </dl> | Die Einstellung ist ungültig.<br/>                              |
-| <span id="WINBIO_SETTING_SOURCE_DEFAULT"></span><span id="winbio_setting_source_default"></span><dl> <dt>**Standardeinstellung für winbio- \_ Einstellungs \_ Quelle \_**</dt> </dl> | Die Einstellung stammt aus der integrierten Richtlinie.<br/>           |
-| <span id="WINBIO_SETTING_SOURCE_POLICY"></span><span id="winbio_setting_source_policy"></span><dl> <dt>**winbio- \_ Einstellungs \_ Quell \_ Richtlinie**</dt> </dl>    | Die Einstellung stammt aus der Registrierung des lokalen Computers.<br/> |
-| <span id="WINBIO_SETTING_SOURCE_LOCAL"></span><span id="winbio_setting_source_local"></span><dl> <dt>**winbio- \_ Einstellungs \_ Quelle \_ lokal**</dt> </dl>       | Die Einstellung wurde von Gruppenrichtlinie<br/>                |
+| <span id="WINBIO_SETTING_SOURCE_INVALID"></span><span id="winbio_setting_source_invalid"></span><dl> <dt>**WINBIO \_ SETTING \_ SOURCE \_ INVALID**</dt> </dl> | Die Einstellung ist ungültig.<br/>                              |
+| <span id="WINBIO_SETTING_SOURCE_DEFAULT"></span><span id="winbio_setting_source_default"></span><dl> <dt>**WINBIO \_ SETTING \_ SOURCE \_ DEFAULT**</dt> </dl> | Die Einstellung stammt aus der integrierten Richtlinie.<br/>           |
+| <span id="WINBIO_SETTING_SOURCE_POLICY"></span><span id="winbio_setting_source_policy"></span><dl> <dt>**WINBIO \_ SETTING \_ SOURCE \_ POLICY**</dt> </dl>    | Die Einstellung stammt aus der Registrierung des lokalen Computers.<br/> |
+| <span id="WINBIO_SETTING_SOURCE_LOCAL"></span><span id="winbio_setting_source_local"></span><dl> <dt>**WINBIO \_ SETTING \_ SOURCE \_ LOCAL**</dt> </dl>       | Die Einstellung wurde von Gruppenrichtlinie<br/>                |
 
 
 
@@ -43,17 +43,17 @@ Die folgenden Konstanten werden von der [**winbiogetenabledsetting**](/windows/d
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows 7 \[ -Desktop-Apps\]<br/>                                                                    |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2008 R2 \[ -Desktop-Apps\]<br/>                                                       |
-| Header<br/>                   | <dl> <dt>Winbio \_ types. h (Include winbio. h)</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | nur Windows 7 \[ Desktop-Apps\]<br/>                                                                    |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server 2008 \[ R2-Desktop-Apps\]<br/>                                                       |
+| Header<br/>                   | <dl> <dt>Winbio \_ types.h (winbio.h einschließen)</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[Client Anwendungs Konstanten](client-application-constants.md)
+[Clientanwendungskonstanten](client-application-constants.md)
 </dt> </dl>
 
  

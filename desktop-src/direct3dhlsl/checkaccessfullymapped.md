@@ -1,9 +1,9 @@
 ---
-title: Checkaccessfullymapping-Funktion
-description: Bestimmt, ob alle Werte aus einem Sample-, Gather-oder LOAD-Vorgang auf zugeordnete Kacheln in einer gekachelten Ressource zugreifen.
+title: CheckAccessFullyMapped-Funktion
+description: Bestimmt, ob alle Werte aus einem Sample-, Gather- oder Load-Vorgang auf zugeordnete Kacheln in einer gekachelten Ressource zugegriffen haben.
 ms.assetid: 2CAB7770-143E-4E29-A57F-96C27021AC5F
 keywords:
-- Checkaccessfullymapping-Funktion HLSL
+- CheckAccessFullyMapped-Funktion HLSL
 topic_type:
 - apiref
 api_name:
@@ -13,22 +13,22 @@ api_type:
 ms.topic: reference
 ms.date: 05/31/2018
 api_location: ''
-ms.openlocfilehash: c7310e0ebac496fc8f5a56ba3843b7496b8ce7c7
-ms.sourcegitcommit: 592c9bbd22ba69802dc353bcb5eb30699f9e9403
+ms.openlocfilehash: 8e7241fa5546edffb2b7c5ff36d2e43919e6d0b6fef9ff617c0fb63a674ffee5
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "103729369"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118516673"
 ---
-# <a name="checkaccessfullymapped-function"></a>Checkaccessfullymapping-Funktion
+# <a name="checkaccessfullymapped-function"></a>CheckAccessFullyMapped-Funktion
 
-Bestimmt, ob alle Werte aus einem **Sample**-, **Gather**-oder **Load** -Vorgang auf zugeordnete Kacheln in einer [gekachelten Ressource](/windows/desktop/direct3d11/direct3d-11-2-features)zugreifen.
+Bestimmt, ob alle Werte aus einem **Beispiel-,** **Gather-** oder **Load-Vorgang** auf zugeordnete Kacheln in einer [kachelgekachelten Ressource zugegriffen haben.](/windows/desktop/direct3d11/direct3d-11-2-features)
 
 ## <a name="syntax"></a>Syntax
 
 ``` syntax
 bool CheckAccessFullyMapped(
-  in uint_only status
+  in uint_only status
 );
 ```
 
@@ -36,12 +36,12 @@ bool CheckAccessFullyMapped(
 
 <dl> <dt>
 
-*Status* \[ in\]
+*Status* \[ In\]
 </dt> <dd>
 
-Typ: **\_ nur uint**
+Typ: **nur \_ uint**
 
-Der Statuswert, der von einem **Sample**-, **Gather**-oder **Load** -Vorgang zurückgegeben wird. Da Sie nicht direkt auf diesen Statuswert zugreifen können, müssen Sie ihn an **checkaccessfullymapping** übergeben.
+Der Statuswert, der von einem **Sample-,** **Gather- oder** **Load-Vorgang zurückgegeben** wird. Da Sie nicht direkt auf diesen Statuswert zugreifen können, müssen Sie ihn an **CheckAccessFullyMapped übergeben.**
 
 </dd> </dl>
 
@@ -49,43 +49,43 @@ Der Statuswert, der von einem **Sample**-, **Gather**-oder **Load** -Vorgang zur
 
 Typ: **bool**
 
-Gibt einen **booleschen** Wert zurück, der angibt, ob alle Werte aus einem **Sample**-, **Gather**-oder **Load** -Vorgang auf zugeordnete Kacheln in einer [gekachelten Ressource](/windows/desktop/direct3d11/direct3d-11-2-features)zugreifen. Gibt **true** zurück, wenn alle Werte aus dem Vorgang auf zugeordnete Kacheln zugegriffen haben. Andernfalls wird **false** zurückgegeben, wenn Werte von einer nicht zugeordneten Kachel entnommen wurden.
+Gibt einen **booleschen Wert** zurück, der angibt, ob alle Werte aus einem **Sample-,** **Gather-** oder **Load-Vorgang** auf zugeordnete Kacheln in einer [gekachelten Ressource zugegriffen haben.](/windows/desktop/direct3d11/direct3d-11-2-features) Gibt **TRUE zurück,** wenn auf alle Werte des Vorgangs zugegriffen wird, auf die zugeordnete Kacheln zugegriffen haben. andernfalls gibt **FALSE zurück,** wenn Werte aus einer nicht zugeordneten Kachel übernommen wurden.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-### <a name="minimum-shader-model"></a>Minimaler Shader-Modell
+### <a name="minimum-shader-model"></a>Minimales Shadermodell
 
-Diese Funktion wird in den folgenden shadermodellen unterstützt.
+Diese Funktion wird in den folgenden Shadermodellen unterstützt.
 
 
 
 | Shadermodell                                                                | Unterstützt |
 |-----------------------------------------------------------------------------|-----------|
-| [Shader Model 5](d3d11-graphics-reference-sm5.md) und höhere shadermodelle | ja       |
+| [Shadermodell 5](d3d11-graphics-reference-sm5.md) und höher – Shadermodelle | ja       |
 
 
 
- 
+ 
 
-Diese Funktion wird in den folgenden Typen von Shadern unterstützt:
+Diese Funktion wird in den folgenden Shadertypen unterstützt:
 
 
 
-| Scheitelpunkt | Hülle | Domain | Geometrie | Pixel | Compute |
+| Scheitelpunkt | Rumpf | Domain | Geometrie | Pixel | Compute |
 |--------|------|--------|----------|-------|---------|
 |        |      |        |          | x     | x       |
 
 
 
- 
+ 
 
 ## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[Intrinsische Funktionen](dx-graphics-hlsl-intrinsic-functions.md)
+[Systeminterne Funktionen](dx-graphics-hlsl-intrinsic-functions.md)
 </dt> </dl>
 
- 
+ 
 
- 
+ 

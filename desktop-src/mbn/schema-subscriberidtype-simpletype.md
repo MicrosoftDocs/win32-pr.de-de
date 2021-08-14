@@ -1,7 +1,7 @@
 ---
-description: Definiert einen Typ für das abonniert-Element des mobilen Breitband Profils.
+description: Definiert einen Typ für das SubscriberID-Element des Mobile Broadband-Profils.
 ms.assetid: b36df4d3-f558-4af8-8f63-e4991c34990f
-title: einfacher Typ des abonniert-Typs
+title: subscriberIdType Simple Type
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -11,16 +11,16 @@ api_name:
 - subscriberIdType
 api_type:
 - Schema
-ms.openlocfilehash: c3c776bbd721bbb03b4f5549f87d48248a35206b
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: aac83be84ae313f572d82e6b4c9a2afb14beeb7e15c531eaae7efd67bcc90464
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104041707"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117881364"
 ---
-# <a name="subscriberidtype-simple-type"></a>einfacher Typ des abonniert-Typs
+# <a name="subscriberidtype-simple-type"></a>subscriberIdType Simple Type
 
-Der einfache Typ " **abonniert Type** " definiert einen Typ für das " [**abonniert**](schema-subscriberid-mbnprofile-element.md) "-Element des mobilen Breitband Profils. Dieser Typ ist eine Auflistung von einem oder mehreren Zeichen.
+Der **einfache Typ subscriberIdType** definiert einen Typ für das [**SubscriberID-Element**](schema-subscriberid-mbnprofile-element.md) des Mobile Broadband-Profils. Dieser Typ ist eine Auflistung von mindestens einem Zeichen.
 
 ``` syntax
 <xs:simpleType name="subscriberIdType">
@@ -40,7 +40,7 @@ Der einfache Typ " **abonniert Type** " definiert einen Typ für das " [**abonni
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Windows 7 \[ -Desktop-Apps \| UWP-apps\]<br/> |
+| Unterstützte Mindestversion (Client)<br/> | Windows 7 \[ Desktop-Apps \| UWP-Apps\]<br/> |
 | Unterstützte Mindestversion (Server)<br/> | Nicht unterstützt<br/>                         |
 
 

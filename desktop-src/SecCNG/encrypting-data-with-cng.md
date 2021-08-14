@@ -1,52 +1,52 @@
 ---
-description: CNG ermöglicht das Verschlüsseln von Daten mithilfe einer minimalen Anzahl von Funktionsaufrufen und ermöglicht Ihnen die Durchführung der gesamten Speicherverwaltung.
+description: CNG ermöglicht es Ihnen, Daten mithilfe einer minimalen Anzahl von Funktionsaufrufen zu verschlüsseln, und ermöglicht Ihnen die Durchführung der speicherverwaltung.
 ms.assetid: 40622282-e190-40d0-80d4-cab9eddc2091
 title: Verschlüsseln von Daten mit CNG
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: a8f161cd23ec6863bee7f5ffd5b696fa99880e3b
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: b264518c2a0ccfe0f626c869ba3062c0429941234ca0c286f9e7801961485b74
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106343028"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118907738"
 ---
 # <a name="encrypting-data-with-cng"></a>Verschlüsseln von Daten mit CNG
 
-Die primäre Verwendung einer beliebigen kryptografieapi besteht darin, Daten zu verschlüsseln und zu entschlüsseln. CNG ermöglicht das Verschlüsseln von Daten mithilfe einer minimalen Anzahl von Funktionsaufrufen und ermöglicht Ihnen die Durchführung der gesamten Speicherverwaltung. Während viele Details der Protokoll Implementierung dem Benutzer überlassen werden, stellt CNG die primitiven bereit, die die eigentlichen Daten Verschlüsselungs-und Entschlüsselungs Aufgaben ausführen.
+Die primäre Verwendung einer Kryptografie-API ist das Verschlüsseln und Entschlüsseln von Daten. CNG ermöglicht es Ihnen, Daten mithilfe einer minimalen Anzahl von Funktionsaufrufen zu verschlüsseln, und ermöglicht Ihnen die Durchführung der speicherverwaltung. Während viele details der Protokollimplementierung dem Benutzer bleiben, stellt CNG die Grundtypen zur Verfügung, die die eigentlichen Datenverschlüsselungs- und Entschlüsselungsaufgaben ausführen.
 
 -   [Verschlüsseln von Daten](#encrypting-data-with-cng)
--   [Beispiel für das Verschlüsseln von Daten](#encrypting-data-example)
+-   [Beispiel für die Verschlüsselung von Daten](#encrypting-data-example)
 -   [Entschlüsseln von Daten](#decrypting-data)
 
 ## <a name="encrypting-data"></a>Verschlüsseln von Daten
 
-Führen Sie die folgenden Schritte aus, um Daten zu verschlüsseln:
+Führen Sie zum Verschlüsseln von Daten die folgenden Schritte aus:
 
-1.  Öffnen Sie einen Algorithmusanbieter, der die Verschlüsselung unterstützt, z. **b. bcrypt \_ des- \_ Algorithmus**
-2.  Erstellen Sie einen Schlüssel, mit dem die Daten verschlüsselt werden. Ein Schlüssel kann mit einer der folgenden Funktionen erstellt werden:
-    -   [**BCryptGenerateKeyPair**](/windows/desktop/api/Bcrypt/nf-bcrypt-bcryptgeneratekeypair) oder [**BCryptImportKeyPair**](/windows/desktop/api/Bcrypt/nf-bcrypt-bcryptimportkeypair) für asymmetrische Anbieter.
-    -   [**BCryptGenerateSymmetricKey**](/windows/desktop/api/Bcrypt/nf-bcrypt-bcryptgeneratesymmetrickey) oder [**BCryptImportKey**](/windows/desktop/api/Bcrypt/nf-bcrypt-bcryptimportkey) für symmetrische Anbieter.
+1.  Öffnen Sie einen Algorithmusanbieter, der Verschlüsselung unterstützt, z. **B. BCRYPT \_ DES \_ ALGORITHM**.
+2.  Erstellen Sie einen Schlüssel zum Verschlüsseln der Daten. Ein Schlüssel kann mit einer der folgenden Funktionen erstellt werden:
+    -   [**BCryptGenerateKeyPair oder**](/windows/desktop/api/Bcrypt/nf-bcrypt-bcryptgeneratekeypair) [**BCryptImportKeyPair**](/windows/desktop/api/Bcrypt/nf-bcrypt-bcryptimportkeypair) für asymmetrische Anbieter.
+    -   [**BCryptGenerateSymmetricKey**](/windows/desktop/api/Bcrypt/nf-bcrypt-bcryptgeneratesymmetrickey) oder [**BCryptImportKey für**](/windows/desktop/api/Bcrypt/nf-bcrypt-bcryptimportkey) symmetrische Anbieter.
 
     > [!Note]  
-    > Die Verschlüsselung und Entschlüsselung von Daten mit einem asymmetrischen Schlüssel ist im Vergleich zur Verschlüsselung des symmetrischen Schlüssels Rechen intensiv. Wenn Sie Daten mit einem asymmetrischen Schlüssel verschlüsseln müssen, sollten Sie die Daten mit einem symmetrischen Schlüssel verschlüsseln, den symmetrischen Schlüssel mit einem asymmetrischen Schlüssel verschlüsseln und den verschlüsselten symmetrischen Schlüssel mit der Nachricht einschließen. Der Empfänger kann dann den symmetrischen Schlüssel entschlüsseln und den symmetrischen Schlüssel verwenden, um die Daten zu entschlüsseln.
+    > Die Datenverschlüsselung und -entschlüsselung mit einem asymmetrischen Schlüssel ist im Vergleich zur Verschlüsselung symmetrischer Schlüssel rechenintensiv. Wenn Sie Daten mit einem asymmetrischen Schlüssel verschlüsseln müssen, sollten Sie die Daten mit einem symmetrischen Schlüssel verschlüsseln, den symmetrischen Schlüssel mit einem asymmetrischen Schlüssel verschlüsseln und den verschlüsselten symmetrischen Schlüssel mit der Nachricht enthalten. Der Empfänger kann dann den symmetrischen Schlüssel entschlüsseln und den symmetrischen Schlüssel verwenden, um die Daten zu entschlüsseln.
 
      
 
-3.  Abrufen der Größe der verschlüsselten Daten. Dies basiert auf dem Verschlüsselungsalgorithmus, dem Auffüll Schema (sofern vorhanden) und der Größe der zu verschlüsselnden Daten. Sie können die verschlüsselte Datengröße mit der [**BCryptEncrypt**](/windows/desktop/api/Bcrypt/nf-bcrypt-bcryptencrypt) -Funktion abrufen und dabei **null** für den *pboutput* -Parameter übergeben. Alle anderen Parameter müssen mit Ausnahme des Parameters *pbinput* , der in diesem Fall nicht verwendet wird, identisch sein, wenn die Daten tatsächlich verschlüsselt werden.
-4.  Sie können entweder die Daten direkt mit dem gleichen Puffer verschlüsseln oder die Daten in einem separaten Puffer verschlüsseln.
+3.  Abrufen der Größe der verschlüsselten Daten. Dies basiert auf dem Verschlüsselungsalgorithmus, dem Auf padding-Schema (falls möglich) und der Größe der zu verschlüsselnden Daten. Sie können die verschlüsselte Datengröße abrufen, indem Sie die [**BCryptEncrypt-Funktion**](/windows/desktop/api/Bcrypt/nf-bcrypt-bcryptencrypt) verwenden und **NULL** für den *pbOutput-Parameter* übergeben. Alle anderen Parameter müssen mit dem tatsächlichen Verschlüsseln der Daten identisch sein, mit Ausnahme des *pbInput-Parameters,* der in diesem Fall nicht verwendet wird.
+4.  Sie können die Daten entweder direkt mit demselben Puffer oder in einem separaten Puffer verschlüsseln.
 
-    Wenn Sie die Daten direkt verschlüsseln möchten, übergeben Sie den Klartext-Puffer Zeiger sowohl für den Parameter *pbinput* als auch für den Parameter *pboutput* in der Funktion [**BCryptEncrypt**](/windows/desktop/api/Bcrypt/nf-bcrypt-bcryptencrypt) . Es ist möglich, dass die verschlüsselte Datengröße größer als die unverschlüsselte Datengröße ist, sodass der Klartext-Puffer groß genug sein muss, um die verschlüsselten Daten zu speichern, nicht nur den Klartext. Sie können die in Schritt 3 erhaltene Größe verwenden, um den Klartext-Puffer zuzuordnen.
+    Wenn Sie die Daten an Ort und Stelle verschlüsseln möchten, übergeben Sie den Klartextpufferzeiger für die Parameter *pbInput* und *pbOutput* in der [**BCryptEncrypt-Funktion.**](/windows/desktop/api/Bcrypt/nf-bcrypt-bcryptencrypt) Es ist möglich, dass die verschlüsselte Datengröße größer als die unverschlüsselte Datengröße ist, sodass der Klartextpuffer groß genug sein muss, um die verschlüsselten Daten und nicht nur den Klartext zu halten. Sie können die in Schritt 3 erhaltene Größe verwenden, um den Klartextpuffer zu zuordnen.
 
-    Wenn Sie die Daten in einem separaten Puffer verschlüsseln möchten, weisen Sie einen Speicherpuffer für die verschlüsselten Daten zu, indem Sie die in Schritt 3 abzurufende Größe verwenden.
+    Wenn Sie die Daten in einem separaten Puffer verschlüsseln möchten, ordnen Sie einen Speicherpuffer für die verschlüsselten Daten zu, indem Sie die in Schritt 3 ermittelte Größe verwenden.
 
-5.  Aufrufen der [**BCryptEncrypt**](/windows/desktop/api/Bcrypt/nf-bcrypt-bcryptencrypt) -Funktion, um die Daten zu verschlüsseln. Diese Funktion schreibt die verschlüsselten Daten an den Speicherort, der im *pboutput* -Parameter bereitgestellt wird.
-6.  Speichern Sie die verschlüsselten Daten bei Bedarf.
+5.  Rufen Sie die [**BCryptEncrypt-Funktion**](/windows/desktop/api/Bcrypt/nf-bcrypt-bcryptencrypt) auf, um die Daten zu verschlüsseln. Diese Funktion schreibt die verschlüsselten Daten an den Speicherort, der im *pbOutput-Parameter angegeben* ist.
+6.  Die verschlüsselten Daten werden bei Bedarf beibehalten.
 7.  Wiederholen Sie die Schritte 5 und 6, bis alle Daten verschlüsselt wurden.
 
-## <a name="encrypting-data-example"></a>Beispiel für das Verschlüsseln von Daten
+## <a name="encrypting-data-example"></a>Beispiel für die Verschlüsselung von Daten
 
-Im folgenden Beispiel wird gezeigt, wie Daten mit CNG mithilfe des symmetrischen Verschlüsselungsalgorithmus Advanced Encryption Standard verschlüsselt werden.
+Das folgende Beispiel zeigt, wie Daten mit CNG mithilfe des erweiterten symmetrischen Verschlüsselungsalgorithmus für den Verschlüsselungsstandard verschlüsselt werden.
 
 
 ```C++
@@ -445,18 +445,18 @@ Cleanup:
 
 Führen Sie zum Entschlüsseln von Daten die folgenden Schritte aus:
 
-1.  Öffnen Sie einen Algorithmusanbieter, der die Verschlüsselung unterstützt, z. **b. bcrypt \_ des- \_ Algorithmus**
-2.  Rufen Sie den Schlüssel ab, mit dem die Daten verschlüsselt wurden, und verwenden Sie diesen Schlüssel zum Abrufen eines Handles für den Schlüssel.
-3.  Abrufen der Größe der entschlüsselten Daten. Dies basiert auf dem Verschlüsselungsalgorithmus, dem Auffüll Schema (sofern vorhanden) und der Größe der zu entschlüsselnden Daten. Sie können die verschlüsselte Datengröße mit der Funktion " [**bcryptentschlüsseln**](/windows/desktop/api/Bcrypt/nf-bcrypt-bcryptdecrypt) " abrufen und dabei **null** für den *pboutput* -Parameter übergeben. Die Parameter, mit denen das Auffüll Schema und der [*Initialisierungs Vektor*](/windows/desktop/SecGloss/i-gly) (IV) angegeben werden, müssen mit Ausnahme des *pbinput* -Parameters identisch sein, der in diesem Fall nicht verwendet wird.
-4.  Zuordnen eines Speicherpuffers für die entschlüsselten Daten.
-5.  Sie können die Daten entweder mit dem gleichen Puffer entschlüsseln oder die Daten in einem separaten Puffer entschlüsseln.
+1.  Öffnen Sie einen Algorithmusanbieter, der Verschlüsselung unterstützt, z. **B. BCRYPT \_ DES \_ ALGORITHM**.
+2.  Beschaffen Sie den Schlüssel, mit dem die Daten verschlüsselt wurden, und verwenden Sie diesen Schlüssel, um ein Handle für den Schlüssel zu erhalten.
+3.  Abrufen der Größe der entschlüsselten Daten. Dies basiert auf dem Verschlüsselungsalgorithmus, dem Auf padding-Schema (falls möglich) und der Größe der zu entschlüsselnden Daten. Sie können die verschlüsselte Datengröße abrufen, indem Sie die [**BCryptDecrypt-Funktion**](/windows/desktop/api/Bcrypt/nf-bcrypt-bcryptdecrypt) verwenden und **NULL** für den *pbOutput-Parameter* übergeben. Die Parameter, die das Auf [](/windows/desktop/SecGloss/i-gly) padding-Schema und den Initialisierungsvektor (IV) angeben, müssen mit denen identisch sein, als die Daten verschlüsselt wurden, mit Ausnahme des *pbInput-Parameters,* der in diesem Fall nicht verwendet wird.
+4.  Ordnen Sie einen Speicherpuffer für die entschlüsselten Daten zu.
+5.  Sie können die Daten entweder mithilfe desselben Puffers oder in einem separaten Puffer entschlüsseln.
 
-    Wenn Sie die Daten direkt entschlüsseln möchten, übergeben Sie den Chiffre Text Puffer Zeiger sowohl für den *pbinput* -Parameter als auch für den *pboutput* -Parameter in der Funktion " [**bcryptentschlpt**](/windows/desktop/api/Bcrypt/nf-bcrypt-bcryptdecrypt) ".
+    Wenn Sie die Daten an Ort und Stelle entschlüsseln möchten, übergeben Sie den Pufferzeiger für Chiffretext für die Parameter *pbInput* und *pbOutput* in der [**BCryptDecrypt-Funktion.**](/windows/desktop/api/Bcrypt/nf-bcrypt-bcryptdecrypt)
 
-    Wenn Sie die Daten in einem separaten Puffer entschlüsseln möchten, weisen Sie einen Arbeitsspeicher Puffer für die entschlüsselten Daten zu, indem Sie die in Schritt 3 abzurufende Größe verwenden.
+    Wenn Sie die Daten in einem separaten Puffer entschlüsseln möchten, ordnen Sie einen Speicherpuffer für die entschlüsselten Daten zu, indem Sie die in Schritt 3 ermittelte Größe verwenden.
 
-6.  Aufrufen der Funktion " [**bcryptentschlpt**](/windows/desktop/api/Bcrypt/nf-bcrypt-bcryptdecrypt) " zum Entschlüsseln der Daten. Die Parameter, die das Paddingschema und der IV angeben, müssen identisch mit dem Zeitpunkt sein, an dem die Daten verschlüsselt wurden. Diese Funktion schreibt die entschlüsselten Daten in den Speicherort, der im *pboutput* -Parameter bereitgestellt wird.
-7.  Speichern Sie die entschlüsselten Daten bei Bedarf.
+6.  Rufen Sie die [**BCryptDecrypt-Funktion**](/windows/desktop/api/Bcrypt/nf-bcrypt-bcryptdecrypt) auf, um die Daten zu entschlüsseln. Die Parameter, die das Auf padding-Schema und IV angeben, müssen mit denen identisch sein, als die Daten verschlüsselt wurden. Diese Funktion schreibt die entschlüsselten Daten an den Speicherort, der im *pbOutput-Parameter angegeben* ist.
+7.  Die entschlüsselten Daten werden bei Bedarf beibehalten.
 8.  Wiederholen Sie die Schritte 5 und 6, bis alle Daten entschlüsselt wurden.
 
  

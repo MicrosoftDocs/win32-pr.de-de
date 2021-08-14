@@ -1,6 +1,6 @@
 ---
-title: glMapGrid2f-Funktion (GL. h)
-description: Definiert ein eindimensionales Mesh. | glMapGrid2f-Funktion (GL. h)
+title: glMapGrid2f-Funktion (Gl.h)
+description: Definiert ein eindimensionales Gitternetz. | glMapGrid2f-Funktion (Gl.h)
 ms.assetid: f9bc2b0c-dec5-4762-8c99-46546a81893e
 keywords:
 - glMapGrid2f-Funktion OpenGL
@@ -14,16 +14,16 @@ api_type:
 - DllExport
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 087e42aa3d490ec605b4478d5691b256271268f5
-ms.sourcegitcommit: 92e74c99f8f4d097676959d0c317f533c2400a80
+ms.openlocfilehash: f37975e7ca88f829286872b5352ff3e59d84fd4d123d457defb01b6d14003dad
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/09/2021
-ms.locfileid: "104219139"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118358937"
 ---
 # <a name="glmapgrid2f-function"></a>glMapGrid2f-Funktion
 
-Definiert ein eindimensionales Mesh.
+Definiert ein eindimensionales Gitternetz.
 
 ## <a name="syntax"></a>Syntax
 
@@ -48,42 +48,42 @@ void WINAPI glMapGrid2f(
 *un* 
 </dt> <dd>
 
-Die Anzahl der Partitionen im Raster Bereichs Intervall \[ U1, U2 \] . Dieser Wert muss positiv sein.
+Die Anzahl der Partitionen im Rasterbereichsintervall \[ u1, u2 \] . Dieser Wert muss positiv sein.
 
 </dd> <dt>
 
-*U1* 
+*u1* 
 </dt> <dd>
 
-Ein Wert, der als Zuordnung für den ganzzahligen Raster Domänen Wert i = 0 verwendet wird.
+Ein -Wert, der als Zuordnung für den Domänenwert des ganzzahligen Rasters i = 0 verwendet wird.
 
 </dd> <dt>
 
-*hinweg* 
+*u2* 
 </dt> <dd>
 
-Ein Wert, der als Zuordnung für den ganzzahligen Raster Domänen Wert i = UN verwendet wird.
+Ein -Wert, der als Zuordnung für den Domänenwert des ganzzahligen Rasters i = un verwendet wird.
 
 </dd> <dt>
 
-*VN* 
+*vn* 
 </dt> <dd>
 
-Die Anzahl der Partitionen im Raster Bereichs Intervall \[ v1 (v2) \] .
+Die Anzahl der Partitionen im Rasterbereichsintervall \[ v1, \] v2.
 
 </dd> <dt>
 
 *v1* 
 </dt> <dd>
 
-Ein Wert, der als Zuordnung für den ganzzahligen Raster Domänen Wert j = 0 verwendet wird.
+Ein -Wert, der als Zuordnung für den Ganzzahlrasterdomänenwert j = 0 verwendet wird.
 
 </dd> <dt>
 
 *v2* 
 </dt> <dd>
 
-Ein Wert, der als Zuordnung für den ganzzahligen Raster Domänen Wert j = VN verwendet wird.
+Ein -Wert, der als Zuordnung für den Domänenwert des ganzzahligen Rasters j = vn verwendet wird.
 
 </dd> </dl>
 
@@ -93,43 +93,43 @@ Diese Funktion gibt keinen Wert zurück.
 
 ## <a name="error-codes"></a>Fehlercodes
 
-Die folgenden Fehlercodes können von der Funktion " [**glgeterror**](glgeterror.md) " abgerufen werden.
+Die folgenden Fehlercodes können von der [**glGetError-Funktion**](glgeterror.md) abgerufen werden.
 
 
 
 | Name                                                                                                  | Bedeutung                                                                                                                               |
 |-------------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------|
-| <dl> <dt>**\_Ungültiger GL- \_ Wert**</dt> </dl>     | Entweder ' *UN* ' oder ' *VN* ' war nicht positiv.<br/>                                                                                      |
-| <dl> <dt>**\_ungültiger \_ Vorgang**</dt> </dl> | Die Funktion wurde zwischen einem Aufruf von [**glBegin**](glbegin.md) und dem entsprechenden Aufruf von [**glEnd**](glend.md)aufgerufen.<br/> |
+| <dl> <dt>**GL \_ UNGÜLTIGER \_ WERT**</dt> </dl>     | Entweder *un* oder *vn* war nicht positiv.<br/>                                                                                      |
+| <dl> <dt>**GL \_ INVALID \_ OPERATION**</dt> </dl> | Die Funktion wurde zwischen einem Aufruf von [**glBegin**](glbegin.md) und dem entsprechenden Aufruf von [**glEnd**](glend.md)aufgerufen.<br/> |
 
 
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Die Funktionen **glmapgrid** und [glevalmesh](glevalmesh-functions.md) werden zusammen verwendet, um eine Reihe von Zuordnungs Domänen Werten, die gleichmäßig verteilt sind, effizient zu generieren und auszuwerten. Die glevalmesh-Funktion durchläuft die ganzzahlige Domäne eines ein-oder zweidimensionalen Rasters, dessen Bereich die Domäne der Auswertungs Zuordnungen ist, die von [**glMap1**](glmap1.md) und [**glMap2**](glmap2.md)angegeben werden.
+Die Funktionen **glMapGrid** und [glEvalMesh](glevalmesh-functions.md) werden zusammen verwendet, um eine Reihe von gleichmäßigen Zuordnungsdomänenwerten effizient zu generieren und auszuwerten. Die glEvalMesh-Funktion durchgehen die ganzzahlige Domäne eines ein- oder zweidimensionalen Rasters, dessen Bereich die Domäne der Auswertungszuordnungen ist, die von [**glMap1**](glmap1.md) und [**glMap2**](glmap2.md)angegeben werden.
 
-Die [**glMapGrid1**](glmapgrid1d.md) -Funktion und die [**glMapGrid2**](glmapgrid2d.md) -Funktion geben die linearen Raster Zuordnungen zwischen den ganzzahligen Raster Koordinaten i (bzw. i und j) und den Kartenkoordinaten für die Gleit Komma Auswertung von u (oder v) an. Ausführliche Informationen zur Auswertung von und v-Koordinaten finden Sie unter [**glMap1**](glmap1.md) und [**glMap2**](glmap2.md) .
+Die Funktionen [**glMapGrid1**](glmapgrid1d.md) und [**glMapGrid2**](glmapgrid2d.md) geben die linearen Rasterzuordnungen zwischen den ganzzahligen Rasterkoordinaten i (oder i und j) für die u-Koordinaten (oder Sie und v) der Gleitkommaauswertungskarte an. Unter [**glMap1**](glmap1.md) und [**glMap2**](glmap2.md) finden Sie Details dazu, wie Sie und v-Koordinaten ausgewertet werden.
 
-Die [**glMapGrid1**](glmapgrid1d.md) *-* Funktion gibt eine einzelne lineare Zuordnung so an, dass die ganzzahlige Raster Koordinate 0 genau zu U1 zugeordnet ist, und die ganzzahlige Raster Koordinate werden genau auf *U2* Alle anderen ganzzahligen Raster Koordinaten, die *mir* zugeordnet sind:
+Die [**glMapGrid1-Funktion**](glmapgrid1d.md) gibt eine einzelne lineare Zuordnung an, sodass die ganzzahlige Rasterkoordinate 0 genau u1 und die ganzzahlige Rasterkoordinate genau *u2* entspricht.  Alle anderen Ganzzahlrasterkoordinaten *i* werden so zugeordnet, dass:
 
-*u = i (U2 U1)/un + U1*
+*u = i(u2 u1)/un + u1*
 
-Die [**glMapGrid2**](glmapgrid2d.md) -Funktion gibt zwei lineare Zuordnungen an. Eine ordnet eine ganzzahlige Raster Koordinate *i = 0* genau auf *U1* an, und die ganzzahlige Raster Koordinate *i =* ist genau auf *U2*. Der andere ordnet die ganzzahlige Raster Koordinate *j = 0* exakt auf *v1* und die ganzzahlige Raster Koordinate *j = VN* exakt auf *v2* zu. Andere ganzzahlige Raster Koordinaten i und j werden zugeordnet, damit
+Die [**glMapGrid2-Funktion**](glmapgrid2d.md) gibt zwei solcher linearen Zuordnungen an. Eine ordnet die ganzzahlige Rasterkoordinate *i = 0* genau zu *u1* und die ganzzahlige Rasterkoordinate *i = un* genau zu *u2* zu. Die andere ordnet die ganzzahlige Rasterkoordinate *j = 0* genau zu *v1* und die ganzzahlige Rasterkoordinate *j = vn* genau zu *v2* zu. Andere ganzzahlige Rasterkoordinaten i und j werden so zugeordnet, dass
 
-*u = i (U2 U1)/un + U1*
+*u = i(u2 u1)/un + u1*
 
-*v = j (V2 V1)/VN + v1*
+*v = j (v2 v1)/vn + v1*
 
-Die von [**glmapgrid**](glmapgrid1d.md) angegebenen Zuordnungen werden von [glevalmesh](glevalmesh-functions.md) und [**glevalpoint**](glevalpoint.md)identisch verwendet.
+Die von [**glMapGrid**](glmapgrid1d.md) angegebenen Zuordnungen werden von [glEvalMesh](glevalmesh-functions.md) und [**glEvalPoint**](glevalpoint.md)identisch verwendet.
 
-Mit den folgenden Funktionen werden Informationen im Zusammenhang mit [**glmapgrid**](glmapgrid1d.md)abgerufen:
+Die folgenden Funktionen rufen Informationen im Zusammenhang mit [**glMapGrid**](glmapgrid1d.md)ab:
 
 <dl>
 
-[**glget**](glgetbooleanv--glgetdoublev--glgetfloatv--glgetintegerv.md) mit Argument GL \_ zuordnung1 \_ Raster \_ Domäne  
-[**glget**](glgetbooleanv--glgetdoublev--glgetfloatv--glgetintegerv.md) mit Argument GL \_ map2 \_ Raster \_ Domäne  
-[**glget**](glgetbooleanv--glgetdoublev--glgetfloatv--glgetintegerv.md) mit Argument GL \_ zuordnung1 \_ Raster \_ Segmente  
-[**glget**](glgetbooleanv--glgetdoublev--glgetfloatv--glgetintegerv.md) mit Argument GL \_ map2 \_ Raster \_ Segmente  
+[**glGet**](glgetbooleanv--glgetdoublev--glgetfloatv--glgetintegerv.md) mit dem Argument GL \_ MAP1 \_ GRID \_ DOMAIN  
+[**glGet**](glgetbooleanv--glgetdoublev--glgetfloatv--glgetintegerv.md) mit argument GL \_ MAP2 \_ GRID \_ DOMAIN  
+[**glGet**](glgetbooleanv--glgetdoublev--glgetfloatv--glgetintegerv.md) mit dem Argument GL \_ MAP1 \_ GRID \_ SEGMENTS  
+[**glGet**](glgetbooleanv--glgetdoublev--glgetfloatv--glgetintegerv.md) mit dem Argument GL \_ MAP2 \_ GRID \_ SEGMENTS  
 </dl>
 
 ## <a name="requirements"></a>Anforderungen
@@ -140,13 +140,13 @@ Mit den folgenden Funktionen werden Informationen im Zusammenhang mit [**glmapgr
 |-------------------------------------|-----------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional \[nur Desktop-Apps\]<br/>                              |
 | Unterstützte Mindestversion (Server)<br/> | Windows 2000 Server \[nur Desktop-Apps\]<br/>                                    |
-| Header<br/>                   | <dl> <dt>GL. h</dt> </dl>         |
-| Bibliothek<br/>                  | <dl> <dt>Opengl32. lib</dt> </dl> |
+| Header<br/>                   | <dl> <dt>Gl.h</dt> </dl>         |
+| Bibliothek<br/>                  | <dl> <dt>Opengl32.lib</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>Opengl32.dll</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
@@ -156,13 +156,13 @@ Mit den folgenden Funktionen werden Informationen im Zusammenhang mit [**glmapgr
 [**glEnd**](glend.md)
 </dt> <dt>
 
-[**glevalcoord**](glevalcoord-functions.md)
+[**glEvalCoord**](glevalcoord-functions.md)
 </dt> <dt>
 
-[glevalmesh](glevalmesh-functions.md)
+[glEvalMesh](glevalmesh-functions.md)
 </dt> <dt>
 
-[**glevalpoint**](glevalpoint.md)
+[**glEvalPoint**](glevalpoint.md)
 </dt> <dt>
 
 [**glMap1**](glmap1.md)

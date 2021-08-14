@@ -1,29 +1,29 @@
 ---
-title: Bildstreams
-description: Bildstreams
+title: Image Streams
+description: Image Streams
 ms.assetid: 17a945aa-463a-4aac-82cc-68b49c720c0a
 keywords:
-- Windows Media-Format-SDK, bildstreams
-- Advanced Systems Format (ASF), bildstreams
-- ASF (Advanced Systems Format), bildstreams
-- Windows Media-Format-SDK, Streams
+- Windows Medienformat-SDK, Bildstreams
+- Advanced Systems Format (ASF), Imagestreams
+- ASF (Advanced Systems Format), Imagestreams
+- Windows Medienformat-SDK, Streams
 - Advanced Systems Format (ASF), Streams
 - ASF (Advanced Systems Format), Streams
-- bildstreams, Informationen
+- Imagestreams, Informationen
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 280d029715a3c722d05ee335a3a88ae4632cabbb
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: c2067710e6b2be627bd16125d73e567a2f1ba1557ae01b81f55712d8c5a7b8bc
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "104310844"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118702864"
 ---
-# <a name="image-streams"></a>Bildstreams
+# <a name="image-streams"></a>Image Streams
 
-Ein Bildstream ist ein spezieller Typ von Datenstrom, der weiterhin Bilder enthält, die Präsentations Zeiten zugewiesen sind. Eine Anwendung kann die Bilder wie gewünscht in einem Bildstream anzeigen, aber die typische Implementierung besteht darin, jedes Bild anzuzeigen, bis das nächste Bild übermittelt wird, wie z. b. eine Folien Anzeige. In der Regel wird ein Bildstream in einer Datei mit einem Audiostream codiert, um eine einfache Präsentation von Bildern zu schaffen, die mit Musik oder Sprache synchronisiert werden.
+Ein Bildstream ist ein spezieller Streamtyp, der Standbilder enthält, die Präsentationszeiten zugewiesen sind. Eine Anwendung kann die Bilder wie gewünscht in einem Bildstream anzeigen, aber die typische Implementierung besteht darin, jedes Bild anzuzeigen, bis das nächste Bild übermittelt wird, z. B. eine Bildschirmpräsentation. Normalerweise wird ein Bildstream in einer Datei mit einem Audiostream codiert, um eine einfache Darstellung von Bildern zu erzeugen, die mit Musik oder Sprache synchronisiert werden.
 
-Bildstreams ähneln den Videostreams darin, dass Sie aus nicht komprimierten Beispielen erstellt werden, die im Rahmen des Datei Schreibvorgangs komprimiert werden, aber Sie sind auch beliebige Streams, da Sie dem Inhalt eine Bitrate und ein Puffer Fenster zuweisen müssen, ohne dass die vom Codec zugewiesenen Eigenschaften abhängig sind.
+Bildstreams ähneln Videostreams darin, dass sie aus unkomprimierten Beispielen erstellt werden, die im Rahmen des Dateischreibvorgangs komprimiert werden. Sie ähneln aber auch beliebigen Streams, da Sie eine Bitrate und ein Pufferfenster zuweisen müssen, das für den Inhalt geeignet ist, ohne sich auf codec-zugewiesene Eigenschaften zu verlassen.
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
@@ -32,18 +32,18 @@ Bildstreams ähneln den Videostreams darin, dass Sie aus nicht komprimierten Bei
 [**Beliebige Streams**](arbitrary-streams.md)
 </dt> <dt>
 
-[**Funktionen der ASF-Datei**](asf-file-features.md)
+[**ASF-Dateifeatures**](asf-file-features.md)
 </dt> <dt>
 
-[**Audiodaten und Videostreams**](audio-and-video-streams.md)
+[**Audio- und Video-Streams**](audio-and-video-streams.md)
 </dt> <dt>
 
-[**Schreiben von bildstreams**](writing-image-streams.md)
+[**Schreiben von Streams**](writing-image-streams.md)
 </dt> </dl>
 
- 
+ 
 
- 
+ 
 
 
 

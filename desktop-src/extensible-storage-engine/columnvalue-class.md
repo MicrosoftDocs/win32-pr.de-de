@@ -1,5 +1,5 @@
 ---
-description: 'Weitere Informationen finden Sie unter: ColumnValue-Klasse'
+description: Weitere Informationen finden Sie unter ColumnValue-Klasse.
 title: ColumnValue-Klasse
 TOCTitle: ColumnValue class
 ms:assetid: T:Microsoft.Isam.Esent.Interop.ColumnValue
@@ -24,27 +24,27 @@ api_type:
 api_location:
 - Microsoft.Isam.Esent.Interop.dll
 ROBOTS: INDEX,FOLLOW
-ms.openlocfilehash: dcc0f011882cfb1f834ef317332948ce194c8de5
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: edf7db9ba14b990478617f18d681da721dcca5015574b23df2f1075f50310298
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "103863207"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117716875"
 ---
 # <a name="columnvalue-class"></a>ColumnValue-Klasse
 
-Basisklasse für Objekte, die einen Spaltenwert darstellen, der festgelegt werden soll.
+Basisklasse für Objekte, die einen zu setzenden Spaltenwert darstellen.
 
 ## <a name="inheritance-hierarchy"></a>Vererbungshierarchie
 
 [System.Object](/dotnet/api/system.object)  
-  Microsoft. ISAM. ESENT. Interop. ColumnValue  
-    [Microsoft. ISAM. ESENT. Interop. bytescolumnvalue](./bytescolumnvalue-class.md)  
-    [Microsoft. ISAM. ESENT. Interop. columnvalueofistruct\<T\>](./columnvalueofstruct-t-class.md)  
-    [Microsoft. ISAM. ESENT. Interop. stringcolumnvalue](./stringcolumnvalue-class.md)  
+  Microsoft.Isam.Esent.Interop.ColumnValue  
+    [Microsoft.Isam.Esent.Interop.BytesColumnValue](./bytescolumnvalue-class.md)  
+    [Microsoft.Isam.Esent.Interop.ColumnValueOfStruct\<T\>](./columnvalueofstruct-t-class.md)  
+    [Microsoft.Isam.Esent.Interop.StringColumnValue](./stringcolumnvalue-class.md)  
 
-**Namespace:**  [Microsoft. ISAM. ESENT. Interop](./microsoft.isam.esent.interop-namespace.md)  
-**Assembly:**  Microsoft. ISAM. ESENT. Interop (in Microsoft.Isam.Esent.Interop.dll)
+**Namespace:**  [Microsoft.Isam.Esent.Interop](./microsoft.isam.esent.interop-namespace.md)  
+**Assembly:**  Microsoft.Isam.Esent.Interop (in Microsoft.Isam.Esent.Interop.dll)
 
 ## <a name="syntax"></a>Syntax
 
@@ -63,10 +63,10 @@ public abstract class ColumnValue
 
 Alle öffentlichen statischen Elemente dieses Typs (Shared in Microsoft Visual Basic) sind threadsicher. Bei Instanzmembern ist die Threadsicherheit nicht gewährleistet.
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
-#### <a name="reference"></a>Referenz
+#### <a name="reference"></a>Verweis
 
-[ColumnValue-Member](./columnvalue-members.md)
+[ColumnValue-Elemente](./columnvalue-members.md)
 
-[Microsoft. ISAM. ESENT. Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)
+[Microsoft.Isam.Esent.Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)

@@ -1,19 +1,19 @@
 ---
-description: Eine Regel Zeichenfolge für die Schutz Deskriptoren enthält eine sequenzielle Liste mit mindestens einer Schutzvorrichtung.
+description: Eine Schutzbeschreibungsregelzeichenfolge enthält eine sequenzielle Liste mit mindestens einer Schutzvorrichtung.
 ms.assetid: FBFE2143-DC40-40F3-83CE-E6D8841F9C11
-title: Schutz Deskriptoren
+title: Schutzdeskriptoren
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 11814df2af5bd9abee4260f4aadab5bb74c77a9f
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 4e99d4ec8de08ad2f657d2b3ac1992ce6e399ede277f8fde3e12f0732571b01a
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104215556"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118907252"
 ---
-# <a name="protection-descriptors"></a>Schutz Deskriptoren
+# <a name="protection-descriptors"></a>Schutzdeskriptoren
 
-Eine Regel Zeichenfolge für die Schutz Deskriptoren enthält eine sequenzielle Liste mit mindestens einer Schutzvorrichtung. Es muss mindestens eine Schutzvorrichtung vorhanden sein. Wenn mehr als eine vorhanden ist, müssen die Schutzvorrichtungen in der Zeichenfolge durch **and** oder **or** getrennt werden. Diese Werte müssen in Großbuchstaben geschrieben werden. Die folgende Syntax zeigt das Zeichen folgen Format eines Schutz Deskriptors.
+Eine Schutzbeschreibungsregelzeichenfolge enthält eine sequenzielle Liste mit mindestens einer Schutzvorrichtung. Es muss mindestens eine Schutzvorrichtung geben. Wenn es mehrere gibt, müssen die Schutzvorrichtungen in der Zeichenfolge durch **AND** oder **OR getrennt werden.** Diese Werte müssen groß sein. Die folgende Syntax zeigt das Zeichenfolgenformat eines Schutzdeskriptors.
 
 
 ```C++
@@ -100,43 +100,43 @@ Descriptor = [ Protector-or
 
 
 
-Schutz Deskriptoren können derzeit für die folgenden Autorisierungs Typen definiert werden:
+Schutzdeskriptoren können derzeit für die folgenden Autorisierungstypen definiert werden:
 
--   Eine Gruppe in einer Active Directory Gesamtstruktur.
--   Ein Satz von webanmelde Informationen.
--   Ein Zertifikat im Zertifikat Speicher des Benutzers.
+-   Eine Gruppe in einer Active Directory-Gesamtstruktur.
+-   Ein Satz von Webanmeldeinformationen.
+-   Ein Zertifikat im Zertifikatspeicher des Benutzers.
 
-Beispiele für Schutz Deskriptor-Regel Zeichenfolgen für eine Active Directory Gruppe:
+Beispiele für Schutzdeskriptor-Regelzeichenfolgen für eine Active Directory-Gruppe sind:
 
--   "Sid = s-1-5-21-4392301 und sid = s-1-5-21-3101812"
--   "SDDL = o:s-1-5-5-0-290724g: Syd: (A;; CCDC;;; S-1-5-5-0-290724) (A;;D C;;; WD) "
--   "Local = User"
--   "Local = Machine"
+-   "SID=S-1-5-21-4392301 AND SID=S-1-5-21-3101812"
+-   "SDDL=O:S-1-5-5-0-290724G:SYD:(A;; CCDC;;; S-1-5-5-0-290724)(A;;D C;;; WD)"
+-   "LOCAL=user"
+-   "LOCAL=machine"
 
-Beispiele für Schutz Deskriptor-Regel Zeichenfolgen für eine Gruppe von webanmelde Informationen:
+Beispiele für Schutzdeskriptor-Regelzeichenfolgen für einen Satz von Webanmeldeinformationen sind:
 
--   "Webanmelde Informationen = mypasswordname"
--   "Webanmelde Informationen = mypasswordname, myweb. com"
+-   "WEBCREDENTIALS=MyPasswordName"
+-   "WEBCREDENTIALS=MyPasswordName,myweb.com"
 
-Beispiele für Schutz Deskriptor-Regel Zeichenfolgen für ein Zertifikat:
+Beispiele für Schutzdeskriptor-Regelzeichenfolgen für ein Zertifikat sind:
 
--   "Certificate = Hashid: SHA1- \_ Hash \_ des \_ Zertifikats"
--   "Certificate = certblob: base64String"
+-   "CERTIFICATE=HashID:sha1 \_ hash \_ of \_ certificate"
+-   "CERTIFICATE=CertBlob:base64String"
 
-Der von Ihnen angegebene Schutz Deskriptor bestimmt automatisch, welcher Schlüsselschutz Anbieter verwendet wird. Weitere Informationen finden Sie unter [Schutz Anbieter](protection-providers.md).
+Der von Ihnen angegebenen Schutzdeskriptor bestimmt automatisch, welcher Schlüsselschutzanbieter verwendet wird. Weitere Informationen finden Sie unter [Schutzanbieter.](protection-providers.md)
 
-Beachten Sie, dass auf der linken Seite des Gleichheitszeichens (=) **sid**, **SDDL**, **local**, **webanmelde** Informationen oder **Zertifikat** vorliegen muss. Bei den Werten wird nicht zwischen Groß- und Kleinschreibung unterschieden.
+Beachten Sie, dass die linke Seite des Gleichheitszeichens (=) **SID,** **SDDL,** **LOCAL,** **WEBCREDENTIALS** oder **CERTIFICATE sein muss.** Bei den Werten wird nicht zwischen Groß- und Kleinschreibung unterschieden.
 
-Wenn Sie die [**ncryptkreateschutzdescriptor**](/windows/desktop/api/NCryptprotect/nf-ncryptprotect-ncryptcreateprotectiondescriptor) -Funktion aufrufen, müssen Sie eine Regel Zeichenfolge (oder einen anzeigen Amen, der einer Regel Zeichenfolge zugeordnet ist) angeben. Da die Verwendung von Schutz Deskriptoren-Regel Zeichenfolgen etwas umständlich ist, können Sie einen anzeigen Amen mit der Regel Zeichenfolge verknüpfen und beides mithilfe der [**ncryptregisterschutzdescriptorname**](/windows/desktop/api/NCryptprotect/nf-ncryptprotect-ncryptregisterprotectiondescriptorname) -Funktion registrieren. Anschließend können Sie den anzeigen Amen in **ncryptkreateschutzdescriptor** verwenden.
+Sie müssen eine Regelzeichenfolge (oder einen Anzeigenamen, der einer Regelzeichenfolge zugeordnet ist) angeben, wenn Sie die [**NCryptCreateProtectionDescriptor-Funktion**](/windows/desktop/api/NCryptprotect/nf-ncryptprotect-ncryptcreateprotectiondescriptor) aufrufen. Alternativ können Sie der Regelzeichenfolge einen Anzeigenamen zuordnen und beides mithilfe der [**NCryptRegisterProtectionDescriptorName-Funktion**](/windows/desktop/api/NCryptprotect/nf-ncryptprotect-ncryptregisterprotectiondescriptorname) registrieren, da die Verwendung und Merken von Schutzdeskriptor-Regelzeichenfolgen etwas umständlich ist. Anschließend können Sie den Anzeigenamen in **NCryptCreateProtectionDescriptor verwenden.**
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
 <dl> <dt>
 
-[CNG-DPAPI](cng-dpapi.md)
+[CNG DPAPI](cng-dpapi.md)
 </dt> <dt>
 
-[Schutz Anbieter](protection-providers.md)
+[Schutzanbieter](protection-providers.md)
 </dt> </dl>
 
  

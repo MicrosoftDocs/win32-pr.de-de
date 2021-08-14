@@ -1,11 +1,11 @@
 ---
-title: Iwmdrmlicense | atesecuredecryptor-Methode (wmdrmsdk. h)
-description: Die Methode "kreatesecuredecryptor" erstellt ein sicheres Entschlüsselungs-Objekt. Der sichere entschlüsselungstyp unterscheidet sich vom normalen entschlüsselungstyp darin, dass er den Inhalt entschlüsselt und dann gemäß den in den Parametern dieser Methode angegebenen Einstellungen erneut verschlüsselt.
+title: IWMDRMLicense CreateSecureDecryptor-Methode (Wmdrmsdk.h)
+description: Die CreateSecureDecryptor-Methode erstellt ein sicheres Entschlüsselungsobjekt. Die sichere Entschlüsselung unterscheidet sich von der normalen Entschlüsselungsmethode darin, dass sie den Inhalt entschlüsselt und dann gemäß den in den Parametern dieser Methode angegebenen Einstellungen erneut verschlüsselt.
 ms.assetid: f3fe8d47-ec7b-4ba5-b5ae-6262cb455ffc
 keywords:
-- "\"Kreatesecuredecryptor\"-Methode Windows Media-Format"
-- Kreatesecuredecryptor-Methode Windows Media-Format, iwmdrmlicense-Schnittstelle
-- Iwmdrmlicense-Schnittstelle Windows Media-Format, Methode "kreatesecuredecryptor"
+- CreateSecureDecryptor-Methode windows Media Format
+- CreateSecureDecryptor-Methode windows Media Format , IWMDRMLicense-Schnittstelle
+- IWMDRMLicense-Schnittstelle windows Media Format , CreateSecureDecryptor-Methode
 topic_type:
 - apiref
 api_name:
@@ -16,16 +16,16 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: ededb4c985e345c1e40563d02c87bfe447b8960f
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 96c562dcafd72a72ecef340688fd709ecbe5446abae53403d403c9a70bdd6f2b
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106358210"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118433669"
 ---
-# <a name="iwmdrmlicensecreatesecuredecryptor-method"></a>Iwmdrmlicense:: kreatesecuredecryptor-Methode
+# <a name="iwmdrmlicensecreatesecuredecryptor-method"></a>IWMDRMLicense::CreateSecureDecryptor-Methode
 
-Die Methode " **kreatesecuredecryptor** " erstellt ein sicheres Entschlüsselungs-Objekt. Der sichere entschlüsselungstyp unterscheidet sich vom normalen entschlüsselungstyp darin, dass er den Inhalt entschlüsselt und dann gemäß den in den Parametern dieser Methode angegebenen Einstellungen erneut verschlüsselt.
+Die **CreateSecureDecryptor-Methode** erstellt ein sicheres Entschlüsselungsobjekt. Die sichere Entschlüsselung unterscheidet sich von der normalen Entschlüsselungsmethode darin, dass sie den Inhalt entschlüsselt und dann gemäß den in den Parametern dieser Methode angegebenen Einstellungen erneut verschlüsselt.
 
 ## <a name="syntax"></a>Syntax
 
@@ -48,37 +48,37 @@ HRESULT CreateSecureDecryptor(
 
 <dl> <dt>
 
-*pbcertificate* \[ in\]
+*pbCertificate* \[ In\]
 </dt> <dd>
 
 Zertifikat der aufrufenden Anwendung.
 
 </dd> <dt>
 
-*cbcertificate* \[ in\]
+*cbCertificate* \[ In\]
 </dt> <dd>
 
 Größe des Zertifikats in Bytes.
 
 </dd> <dt>
 
-*dwcertifialisietype* \[ in\]
+*dwCertificateType* \[ In\]
 </dt> <dd>
 
-Der Typ des Zertifikats. Legen Sie auf WMDRM \_ Certificate \_ Type \_ XML fest.
+Der Typ des Zertifikats. Legen Sie auf WMDRM \_ CERTIFICATE \_ TYPE XML \_ fest.
 
 </dd> <dt>
 
-*dwFlags* \[ in\]
+*dwFlags* \[ In\]
 </dt> <dd>
 
-Der Typ des Sitzungs Schutzes, der für die erneute Codierung verwendet werden soll. Muss auf eine der Konstanten in der folgenden Tabelle festgelegt werden:
+Der Typ des Sitzungsschutzes, der für die erneute Codierung verwendet werden soll. Muss auf eine der Konstanten in der folgenden Tabelle festgelegt werden:
 
 
 
-| Konstante                     | BESCHREIBUNG                                                                                                 |
+| Konstante                     | Beschreibung                                                                                                 |
 |------------------------------|-------------------------------------------------------------------------------------------------------------|
-| WMDRM \_ - \_ Schutztyp \_ RC4 | Verwendet die RC4-Verschlüsselung für die Sitzungs Verschlüsselung. Dies ist der einzige unterstützte Sitzungs Schutz für diese Version. |
+| \_WMDRM-SCHUTZTYP \_ \_ RC4 | Verwendet RC4-Verschlüsselung für die Sitzungsverschlüsselung. Dies ist der einzige unterstützte Sitzungsschutz für diese Version. |
 
 
 
@@ -86,30 +86,30 @@ Der Typ des Sitzungs Schutzes, der für die erneute Codierung verwendet werden s
 
 </dd> <dt>
 
-*pbinitializationvector* \[ vorgenommen\]
+*pbInitializationVector* \[ out\]
 </dt> <dd>
 
-Empfängt den Initialisierungs Vektor. Der Initialisierungs Vektor ist RSA mit dem OAEP-Auffüll Schema verschlüsselt, wobei der öffentliche RSA-Schlüssel im Zertifikat gefunden wird. Legen Sie diesen Wert auf **null** fest, um die erforderliche Puffergröße in *pcbinitializationvector* zu erhalten.
+Empfängt den Initialisierungsvektor. Der Initialisierungsvektor wird mithilfe des OAEP-Auffüllungsschemas mit dem öffentlichen RSA-Schlüssel im Zertifikat verschlüsselt. Legen Sie diese Einstellung auf **NULL** fest, um die erforderliche Puffergröße in *"pwInitializationVector"* zu erhalten.
 
 </dd> <dt>
 
-*pcbinitializationvector* \[ in, out\]
+*pwInitializationVector* \[ in, out\]
 </dt> <dd>
 
-Bei Eingabe die Größe des Puffers, der als *pbinitializationvector* übergeben wird. Bei Ausgabe die Größe des verwendeten Teils des Puffers. Wenn Sie **null** für *pbinitializationvector* übergeben, wird dieser Wert auf die erforderliche Puffergröße bei der Ausgabe festgelegt.
+Bei der Eingabe die Größe des Puffers, der als *pbInitializationVector* übergeben wird. Bei der Ausgabe die Größe des verwendeten Teils des Puffers. Wenn Sie **NULL** für *pbInitializationVector* übergeben, wird dieser Wert bei der Ausgabe auf die erforderliche Puffergröße festgelegt.
 
 </dd> <dt>
 
-*ppdecryptor* \[ vorgenommen\]
+*ppDecryptor* \[ out\]
 </dt> <dd>
 
-Empfängt einen Zeiger auf die [**iwmdrmentschlüsseln**](iwmdrmdecrypt.md) -Schnittstelle des neu erstellten Objekts.
+Empfängt einen Zeiger auf die [**IWMDRMDecrypt-Schnittstelle**](iwmdrmdecrypt.md) des neu erstellten Objekts.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Die-Methode gibt ein **HRESULT** zurück. Mögliches Werte (aber nicht die Einzigen) sind die in der folgenden Tabelle.
+Die Methode gibt ein **HRESULT** zurück. Mögliches Werte (aber nicht die Einzigen) sind die in der folgenden Tabelle.
 
 
 
@@ -131,15 +131,15 @@ Keine.
 
 | Anforderung | Wert |
 |-------------------|---------------------------------------------------------------------------------------|
-| Header<br/> | <dl> <dt>Wmdrmsdk. h</dt> </dl> |
+| Header<br/> | <dl> <dt>Wmdrmsdk.h</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Iwmdrmlicense-Schnittstelle**](iwmdrmlicense.md)
+[**IWMDRMLicense-Schnittstelle**](iwmdrmlicense.md)
 </dt> </dl>
 
  

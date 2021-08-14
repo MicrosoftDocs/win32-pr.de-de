@@ -1,7 +1,7 @@
 ---
-description: Konvertiert klein geschriebene Zeichen in einem Puffer in Großbuchstaben.
+description: Konvertiert Kleinbuchstaben in einem Puffer in Großbuchstaben.
 ms.assetid: 63293fda-6f55-419a-b5b4-7a3ada31580c
-title: Charupperbuffwrapw-Funktion
+title: CharUpperBuffWrapW-Funktion
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,21 +13,21 @@ api_type:
 - DllExport
 api_location:
 - Shlwapi.dll
-ms.openlocfilehash: dacc5e7609ca7f91bf7c66651d7ba9bdd11ab688
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 288a119586e9f2e58172daaba33a8b9f27c791aa0005b5349f47cb0b2670a631
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104525397"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117861555"
 ---
-# <a name="charupperbuffwrapw-function"></a>Charupperbuffwrapw-Funktion
+# <a name="charupperbuffwrapw-function"></a>CharUpperBuffWrapW-Funktion
 
-\[**Charupperbuffwrapw** ist für die Verwendung in Windows XP verfügbar. Sie ist möglicherweise in nachfolgenden Versionen nicht verfügbar. Sie sollten an seiner Stelle [**charupperbuffw**](/windows/win32/api/winuser/nf-winuser-charupperbuffa) verwenden.\]
+\[**CharUpperBuffWrapW** ist für die Verwendung in Windows XP verfügbar. In nachfolgenden Versionen ist sie möglicherweise nicht verfügbar. Sie sollten [**CharUpperBuffW**](/windows/win32/api/winuser/nf-winuser-charupperbuffa) an seiner Stelle verwenden.\]
 
-Konvertiert klein geschriebene Zeichen in einem Puffer in Großbuchstaben. Die-Funktion konvertiert die Zeichen an Ort und Stelle.
+Konvertiert Kleinbuchstaben in einem Puffer in Großbuchstaben. Die Funktion konvertiert die Zeichen an Ort und Stelle.
 
 > [!Note]  
-> **Charupperbuffwrapw** ist ein Wrapper für die **charupperbuffw** -Funktion. Weitere Hinweise zur Verwendung finden Sie auf der Seite [**charupperbuff**](/windows/win32/api/winuser/nf-winuser-charupperbuffa) .
+> **CharUpperBuffWrapW** ist ein Wrapper für die **CharUpperBuffW-Funktion.** Weitere Nutzungshinweise finden Sie auf der [**CharUpperBuff-Seite.**](/windows/win32/api/winuser/nf-winuser-charupperbuffa)
 
  
 
@@ -47,7 +47,7 @@ DWORD CharUpperBuffWrapW(
 
 <dl> <dt>
 
-*PCH* \[ in\]
+*pch* \[ In\]
 </dt> <dd>
 
 Typ: **LPWSTR**
@@ -56,12 +56,12 @@ Ein Zeiger auf einen Puffer, der ein oder mehrere zu verarbeitende Unicode-Zeich
 
 </dd> <dt>
 
-*cchlength* \[ in\]
+*cchLength* \[ In\]
 </dt> <dd>
 
 Typ: **DWORD**
 
-Gibt die Größe des Puffers, auf den *PCH* zeigt, in Zeichen an.
+Gibt die Größe des Puffers in Zeichen an, auf den *pch* zeigt.
 
 </dd> </dl>
 
@@ -71,21 +71,21 @@ Typ: **DWORD**
 
 Die Anzahl der verarbeiteten Zeichen.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Die bevorzugte Methode ist die Verwendung von [**charupperbuffw**](/windows/win32/api/winuser/nf-winuser-charupperbuffa) in Verbindung mit der Microsoft-Schicht für Unicode (MSLU).
+Die bevorzugte Methode ist die Verwendung von [**CharUpperBuffW**](/windows/win32/api/winuser/nf-winuser-charupperbuffa) in Verbindung mit der Microsoft Layer for Unicode (MSLU).
 
-**Charupperbuffwrapw** muss direkt aus Shlwapi.dll aufgerufen werden, und zwar mithilfe der Ordinalzahl 44.
+**CharUpperBuffWrapW** muss direkt über Shlwapi.dll aufgerufen werden, wobei Ordinalzahl 44 verwendet wird.
 
-## <a name="requirements"></a>Requirements (Anforderungen)
+## <a name="requirements"></a>Anforderungen
 
 
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional, Windows XP \[ Desktop-Apps\]<br/>                                        |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2003 \[ -Desktop-Apps\]<br/>                                                          |
-| DLL<br/>                      | <dl> <dt>Shlwapi.dll (Version 5,0 oder höher)</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional, nur Windows \[ XP-Desktop-Apps\]<br/>                                        |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2003-Desktop-Apps\]<br/>                                                          |
+| DLL<br/>                      | <dl> <dt>Shlwapi.dll (Version 5.0 oder höher)</dt> </dl> |
 
 
 
@@ -93,7 +93,7 @@ Die bevorzugte Methode ist die Verwendung von [**charupperbuffw**](/windows/win3
 
 <dl> <dt>
 
-[**Charupperbuff**](/windows/win32/api/winuser/nf-winuser-charupperbuffa)
+[**CharUpperBuff**](/windows/win32/api/winuser/nf-winuser-charupperbuffa)
 </dt> </dl>
 
  

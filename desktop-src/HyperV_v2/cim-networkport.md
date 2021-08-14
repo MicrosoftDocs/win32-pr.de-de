@@ -24,14 +24,14 @@ api_type:
 - DllExport
 api_location:
 - vmms.exe
-ms.openlocfilehash: 9e3ac64b55e17d0526527ebbaca168c3f7b289f9
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: aa69b2728f3d0cdb97bcc972ef6b72ab5bd0df3202df60e92f87e161ea9a1702
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "104217815"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119694710"
 ---
-# <a name="cim_networkport-class"></a>CIM- \_ networkport-Klasse
+# <a name="cim_networkport-class"></a>CIM \_ NetworkPort-Klasse
 
 Eine logische Darstellung eines Netzwerkports auf einem Netzwerkgerät.
 
@@ -57,71 +57,71 @@ class CIM_NetworkPort : CIM_LogicalPort
 
 ## <a name="members"></a>Member
 
-Die **CIM- \_ networkport** -Klasse verfügt über diese Typen von Membern:
+Die **CIM \_ NetworkPort-Klasse** verfügt über folgende Typen von Membern:
 
 -   [Eigenschaften](#properties)
 
 ### <a name="properties"></a>Eigenschaften
 
-Die **CIM- \_ networkport** -Klasse verfügt über diese Eigenschaften.
+Die **CIM \_ NetworkPort-Klasse** verfügt über diese Eigenschaften.
 
 <dl> <dt>
 
-**Activemaximumtransmissionunit**
+**ActiveMaximumTransmissionUnit**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt64**
+Datentyp: **uint64**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**Einheiten**](/windows/desktop/WmiSdk/standard-qualifiers) ("Bytes"), **Punit** ("Byte")
+Qualifizierer: [**Einheiten**](/windows/desktop/WmiSdk/standard-qualifiers) ("Bytes"), **PUnit** ("Byte")
 </dt> </dl>
 
-Die aktive oder ausgehandelte maximale Übertragungseinheit (Maximum Transmission Unit, MTU), die vom Port unterstützt wird.
+Die aktive oder ausgehandelte maximale Übertragungseinheit (MAXIMUM TRANSMISSION Unit, MTU), die vom Port unterstützt wird.
 
 </dd> <dt>
 
-**AutoSense**
+**Autosense**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **boolescher** Wert
+Datentyp: **boolescher Wert**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-**true** , wenn der Port die Geschwindigkeit oder andere Kommunikationsmerkmale der angeschlossenen Netzwerk Medien automatisch bestimmen kann. andernfalls **false**.
+**TRUE,** wenn der Port automatisch die Geschwindigkeit oder ein anderes Kommunikationsmerkmal des angefügten Netzwerkmediums bestimmen kann; andernfalls **FALSE.**
 
 </dd> <dt>
 
-**Vollduplex**
+**FullDuplex**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **boolescher** Wert
+Datentyp: **boolescher Wert**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-**true** , wenn der Port im Vollduplex Modus betrieben wird. andernfalls **false**.
+**TRUE,** wenn der Port im Vollduplexmodus ausgeführt wird. andernfalls **FALSE.**
 
 </dd> <dt>
 
-**Linktechnology**
+**LinkTechnology**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt16**
+Datentyp: **uint16**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**modelcorrespondence**](/windows/desktop/WmiSdk/standard-qualifiers) ("**CIM \_ networkport**".**Otherlinktechnology**")
+Qualifizierer: [**ModelCorrespondence**](/windows/desktop/WmiSdk/standard-qualifiers) ("**CIM \_ NetworkPort**.**OtherLinkTechnology**")
 </dt> </dl>
 
-Die vom Port verwendete Link Technologie. Wenn der Wert auf "1" festgelegt ist, enthält die **otherlinktechnology** -Eigenschaft eine Beschreibung des linktyps.
+Die vom Port verwendete Linktechnologie. Bei Festlegung auf "1" (other) enthält die **OtherLinkTechnology-Eigenschaft** eine Beschreibung des Linktyps.
 
 <dt>
 
@@ -134,7 +134,7 @@ Die vom Port verwendete Link Technologie. Wenn der Wert auf "1" festgelegt ist, 
 
 <span id="Other"></span><span id="other"></span><span id="OTHER"></span>
 
-**Sonstige** (1)
+**Andere** (1)
 
 
 </dt> <dd></dd> <dt>
@@ -162,7 +162,7 @@ Die vom Port verwendete Link Technologie. Wenn der Wert auf "1" festgelegt ist, 
 
 <span id="FDDI"></span><span id="fddi"></span>
 
-**F-di** (5)
+**FDDI** (5)
 
 
 </dt> <dd></dd> <dt>
@@ -176,7 +176,7 @@ Die vom Port verwendete Link Technologie. Wenn der Wert auf "1" festgelegt ist, 
 
 <span id="Token_Ring"></span><span id="token_ring"></span><span id="TOKEN_RING"></span>
 
-**TokenRing** (7)
+**Tokenring** (7)
 
 
 </dt> <dd></dd> <dt>
@@ -190,138 +190,138 @@ Die vom Port verwendete Link Technologie. Wenn der Wert auf "1" festgelegt ist, 
 
 <span id="Infrared"></span><span id="infrared"></span><span id="INFRARED"></span>
 
-**Infrarot** (9)
+**Wird** (9)
 
 
 </dt> <dd></dd> <dt>
 
 <span id="BlueTooth"></span><span id="bluetooth"></span><span id="BLUETOOTH"></span>
 
-**Bluetooth** (10)
+**BlueTooth** (10)
 
 
 </dt> <dd></dd> <dt>
 
 <span id="Wireless_LAN"></span><span id="wireless_lan"></span><span id="WIRELESS_LAN"></span>
 
-**Drahtlos LAN** (11)
+**Wlan** (11)
 
 
 </dt> <dd></dd> </dl>
 
 </dd> <dt>
 
-**"Networkaddresses"**
+**NetworkAddresses**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichen** folgen Array
+Datentyp: **Zeichenfolgenarray**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**maxlen**](/windows/desktop/WmiSdk/standard-qualifiers) (64), [**mappingstrings**](/windows/desktop/WmiSdk/standard-qualifiers) ("MIF". DMTF- \| Netzwerk Adapter 802-Port \| 001,3 ")
+Qualifizierer: [**MaxLen**](/windows/desktop/WmiSdk/standard-qualifiers) (64), [**MappingStrings**](/windows/desktop/WmiSdk/standard-qualifiers) ("MIF. \|DMTF-Netzwerkadapter 802 Port \| 001.3")
 </dt> </dl>
 
 Ein Array, das die Netzwerkadressen für den Port enthält.
 
 </dd> <dt>
 
-**Otherlinktechnology**
+**OtherLinkTechnology**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**modelcorrespondence**](/windows/desktop/WmiSdk/standard-qualifiers) ("**CIM \_ networkport**".**Linktechnology**")
+Qualifizierer: [**ModelCorrespondence**](/windows/desktop/WmiSdk/standard-qualifiers) ("**CIM \_ NetworkPort**.**LinkTechnology**")
 </dt> </dl>
 
-Die Link Technologie, wenn **linktechnology** auf "1" festgelegt ist, (andere).
+Die Linktechnologie, wenn **LinkTechnology** auf "1" (sonstige) festgelegt ist.
 
 </dd> <dt>
 
-**Othernetworkporttype**
+**OtherNetworkPortType**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**veraltet**](/windows/desktop/WmiSdk/standard-wmi-qualifiers) ("**CIM \_ networkport**.**Otherporttype**"), [**modelcorrespondence**](/windows/desktop/WmiSdk/standard-qualifiers) ("[**CIM \_ logicalport**](cim-logicalport.md)".**PortType**")
+Qualifizierer: [**Veraltet**](/windows/desktop/WmiSdk/standard-wmi-qualifiers) ("**CIM \_ NetworkPort**.**OtherPortType**"), [**ModelCorrespondence**](/windows/desktop/WmiSdk/standard-qualifiers) ("[**CIM \_ LogicalPort**](cim-logicalport.md).**PortType**")
 </dt> </dl>
 
 > [!Note]  
-> Deprecated Description: der Modultyp des Ports, wenn die **portType** -Eigenschaft 1 (Sonstiges) enthält.
+> Veraltete Beschreibung: Der Modultyp des Ports, wenn die **PortType-Eigenschaft** 1 (andere) enthält.
 
  
 
-Diese Eigenschaft ist veraltet. Stattdessen empfehlen wir die **portType** -Eigenschaft in der [**CIM \_ logicalport**](cim-logicalport.md) -Klasse.
+Diese Eigenschaft ist veraltet. Stattdessen wird die **PortType-Eigenschaft** in der [**CIM \_ LogicalPort-Klasse**](cim-logicalport.md) empfohlen.
 
 </dd> <dt>
 
-**Permanent Address**
+**PermanentAddress**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**maxlen**](/windows/desktop/WmiSdk/standard-qualifiers) (64), [**mappingstrings**](/windows/desktop/WmiSdk/standard-qualifiers) ("MIF". DMTF- \| Netzwerk Adapter 802-Port \| 001,2 ")
+Qualifizierer: [**MaxLen**](/windows/desktop/WmiSdk/standard-qualifiers) (64), [**MappingStrings**](/windows/desktop/WmiSdk/standard-qualifiers) ("MIF. \|DMTF-Netzwerkadapter 802 Port \| 001.2")
 </dt> </dl>
 
-Die Netzwerkadresse, die in einem Port hart codiert ist. Die hart codierte Adresse kann mithilfe eines Firmwareupdates oder einer Softwarekonfiguration geändert werden. Wenn diese Änderung vorgenommen wird, sollte diese Eigenschaft gleichzeitig aktualisiert werden. " **Permanentaddress** " sollte leer gelassen werden, wenn die Adresse nicht vorhanden ist.
+Die Netzwerkadresse, die in einen Port hartcodiert ist. Die hartcodierte Adresse kann mithilfe eines Firmwareupgrades oder einer Softwarekonfiguration geändert werden. Wenn diese Änderung vorgenommen wird, sollte diese Eigenschaft gleichzeitig aktualisiert werden. **PermanentAddress** sollte leer gelassen werden, wenn die Adresse nicht vorhanden ist.
 
 </dd> <dt>
 
-**PortNumber**
+**Portnumber**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt16**
+Datentyp: **uint16**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Die Portnummer des Netzwerkports. Netzwerkports sind häufig in Bezug auf ein logisches Modul oder ein Netzwerkelement nummeriert.
+Die Portnummer des Netzwerkports. Netzwerkports sind häufig relativ zu einem logischen Modul oder einem Netzwerkelement nummeriert.
 
 </dd> <dt>
 
 **Geschwindigkeit**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt64**
+Datentyp: **uint64**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: über [**Schreiben**](/windows/desktop/WmiSdk/standard-qualifiers) ("Geschwindigkeit"), [**Einheiten**](/windows/desktop/WmiSdk/standard-qualifiers) ("Bits pro Sekunde"), [**mappingstrings**](/windows/desktop/WmiSdk/standard-qualifiers) ("MIB. IETF \| MIB-II. IfSpeed "," MIF. DMTF- \| Netzwerk Adapter 802 Port \| 001,5 "), **Punit** (" Bit/Sekunde ")
+Qualifizierer: [**Überschreiben**](/windows/desktop/WmiSdk/standard-qualifiers) ("Geschwindigkeit"), [**Einheiten**](/windows/desktop/WmiSdk/standard-qualifiers) ("Bits pro Sekunde"), [**MappingStrings**](/windows/desktop/WmiSdk/standard-qualifiers) ("MIB. IETF \| MIB-II.ifSpeed", "MIF. \|DMTF-Netzwerkadapter 802 Port \| 001.5"), **PUnit** ("bit/second")
 </dt> </dl>
 
-Die aktuelle Bandbreite des Ports in Bits pro Sekunde. Für Ports, die die Bandbreite variieren, oder für diejenigen, bei denen keine genaue Schätzung vorgenommen werden kann, sollte diese Eigenschaft die nominale Bandbreite enthalten.
+Die aktuelle Bandbreite des Ports in Bits pro Sekunde. Für Ports, die sich in der Bandbreite unterscheiden, oder für Ports, für die keine genaue Schätzung vorgenommen werden kann, sollte diese Eigenschaft die nominale Bandbreite enthalten.
 
 </dd> <dt>
 
-**Supportedmaximumtransmissionunit**
+**SupportedMaximumTransmissionUnit**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt64**
+Datentyp: **uint64**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**Einheiten**](/windows/desktop/WmiSdk/standard-qualifiers) ("Bytes"), **Punit** ("Byte")
+Qualifizierer: [**Einheiten**](/windows/desktop/WmiSdk/standard-qualifiers) ("Bytes"), **PUnit** ("Byte")
 </dt> </dl>
 
-Die vom Port unterstützte maximale Übertragungseinheit (MTU).
+Die maximale Übertragungseinheit (MTU), die vom Port unterstützt wird.
 
 </dd> </dl>
 
@@ -333,17 +333,17 @@ Die vom Port unterstützte maximale Übertragungseinheit (MTU).
 |-------------------------------------|---------------------------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows 8<br/>                                                                                    |
 | Unterstützte Mindestversion (Server)<br/> | Windows Server 2012<br/>                                                                          |
-| Namespace<br/>                | \\Stammvirtualisierung \\ v2<br/>                                                                     |
-| MOF<br/>                      | <dl> <dt>Windowsvirtualization. v2. MOF</dt> </dl> |
+| Namespace<br/>                | \\Root-Virtualisierung \\ v2<br/>                                                                     |
+| MOF<br/>                      | <dl> <dt>WindowsVirtualization.V2.mof</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>Vmms.exe</dt> </dl>                     |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**CIM \_ logicalport**](cim-logicalport.md)
+[**CIM \_ LogicalPort**](cim-logicalport.md)
 </dt> </dl>
 
  

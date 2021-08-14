@@ -1,11 +1,11 @@
 ---
-title: Iconfigasfwriter getcurrentprofile-Methode
-description: Die getcurrentprofile-Methode ruft das Anwendungs definierte Profil ab.
+title: IConfigAsfWriter GetCurrentProfile-Methode
+description: Die GetCurrentProfile-Methode ruft das anwendungsdefinierte Profil ab.
 ms.assetid: 7f6e7085-982b-4234-b890-950efdcdb559
 keywords:
-- Getcurrentprofile-Methode Windows Media-Format
-- Getcurrentprofile-Methode Windows Media-Format, iconfigasfwriter-Schnittstelle
-- Iconfigasfwriter-Schnittstelle Windows Media-Format, getcurrentprofile-Methode
+- GetCurrentProfile-Methode windows Media Format
+- GetCurrentProfile-Methode windows Media Format , IConfigAsfWriter-Schnittstelle
+- IConfigAsfWriter-Schnittstelle windows Media Format , GetCurrentProfile-Methode
 topic_type:
 - apiref
 api_name:
@@ -15,23 +15,23 @@ api_type:
 ms.topic: reference
 ms.date: 05/31/2018
 api_location: ''
-ms.openlocfilehash: 88931d83674ffa84288b4bec10e3c9dba15c812a
-ms.sourcegitcommit: 592c9bbd22ba69802dc353bcb5eb30699f9e9403
+ms.openlocfilehash: 9b7a07ed6ab5b94138c0c04d40782496535e0ae4a3eff0f443c89d7ccd0c4b1a
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "106338069"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118198381"
 ---
-# <a name="iconfigasfwritergetcurrentprofile-method"></a>Iconfigasfwriter:: getcurrentprofile-Methode
+# <a name="iconfigasfwritergetcurrentprofile-method"></a>IConfigAsfWriter::GetCurrentProfile-Methode
 
-Die **getcurrentprofile** -Methode ruft das Anwendungs definierte Profil ab.
+Die **GetCurrentProfile-Methode** ruft das anwendungsdefinierte Profil ab.
 
 ## <a name="syntax"></a>Syntax
 
 
 ```C++
 HRESULT GetCurrentProfile(
-  [out] IWMProfile **ppProfile
+  [out] IWMProfile **ppProfile
 );
 ```
 
@@ -41,28 +41,28 @@ HRESULT GetCurrentProfile(
 
 <dl> <dt>
 
-*ppprofile* \[ vorgenommen\]
+*ppProfile* \[ out\]
 </dt> <dd>
 
-Adresse eines Zeigers, der die [**iwmprofile**](iwmprofile.md) -Schnittstelle des Anwendungs definierten Profils empfängt.
+Adresse eines Zeigers, der die [**IWMProfile-Schnittstelle**](iwmprofile.md) des anwendungsdefinierte Profils empfängt.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Wenn die Methode erfolgreich ausgeführt wird, gibt Sie S \_ OK zurück. Wenn ein Fehler auftritt, wird ein **HRESULT** -Fehlercode zurückgegeben.
+Wenn die Methode erfolgreich ist, wird S \_ OK zurückgegeben. Wenn ein Fehler auftritt, wird ein **HRESULT-Fehlercode** zurückgegeben.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Wenn die Methode erfolgreich ausgeführt wird, weist der zurückgegebene **iwmprofile** -Zeiger einen ausstehenden Verweis Zähler auf. Stellen Sie sicher, dass Sie die-Schnittstelle freigeben, wenn Sie Sie nicht mehr benötigen.
+Wenn die Methode erfolgreich ist, weist der **zurückgegebene IWMProfile-Zeiger** einen ausstehenden Verweiszähler auf. Stellen Sie sicher, dass Sie die Schnittstelle freigeben, wenn Sie sie nicht mehr verwenden.
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Iconfigasfwriter-Schnittstelle**](/previous-versions/windows/desktop/legacy/dd743205(v=vs.85))
+[**IConfigAsfWriter-Schnittstelle**](/previous-versions/windows/desktop/legacy/dd743205(v=vs.85))
 </dt> </dl>
 
- 
+ 
 
- 
+ 

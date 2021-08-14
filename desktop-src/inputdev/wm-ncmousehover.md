@@ -1,9 +1,9 @@
 ---
-title: WM_NCMOUSEHOVER Meldung (Winuser. h)
-description: Wird in einem Fenster gepostet, wenn der Cursor für den Zeitraum, der in einem vorherigen Aufruf von TrackMouseEvent angegeben ist, auf den nicht-Client Bereich des Fensters zeigt.
+title: WM_NCMOUSEHOVER (Winuser.h)
+description: Wird in ein Fenster geschrieben, wenn der Cursor für den Zeitraum, der in einem vorherigen Aufruf von TrackMouseEvent angegeben wurde, über den Nicht-Clientbereich des Fensters bewegt wird.
 ms.assetid: ca1afdc2-7884-445e-b9b7-4d7dd5dcea38
 keywords:
-- Tastatur-und Maus Eingaben für WM_NCMOUSEHOVER Nachricht
+- WM_NCMOUSEHOVER der Tastatur- und Mauseingabe
 topic_type:
 - apiref
 api_name:
@@ -14,18 +14,18 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: cde2e70b04602de5936e945789007a6c5fea8542
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 323464d32a2529475823003e51d5bbf0b15c616e32edb0622efe5be7f94dfb4c
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104040922"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119611460"
 ---
-# <a name="wm_ncmousehover-message"></a>WM \_ ncmouseelhover-Meldung
+# <a name="wm_ncmousehover-message"></a>WM \_ NCMOUSEHOVER-Meldung
 
-Wird in einem Fenster gepostet, wenn der Cursor für den Zeitraum, der in einem vorherigen Aufruf von [**TrackMouseEvent**](/windows/win32/api/winuser/nf-winuser-trackmouseevent)angegeben ist, auf den nicht-Client Bereich des Fensters zeigt.
+Wird in einem Fenster angezeigt, wenn der Cursor für den Zeitraum, der in einem vorherigen Aufruf von [**TrackMouseEvent**](/windows/win32/api/winuser/nf-winuser-trackmouseevent)angegeben wurde, über den Nicht-Clientbereich des Fensters bewegt wird.
 
-Ein Fenster empfängt diese Meldung über seine [**WindowProc**](/previous-versions/windows/desktop/legacy/ms633573(v=vs.85)) -Funktion.
+Ein Fenster empfängt diese Nachricht über seine [**WindowProc-Funktion.**](/previous-versions/windows/desktop/legacy/ms633573(v=vs.85))
 
 
 ```C++
@@ -41,26 +41,26 @@ Ein Fenster empfängt diese Meldung über seine [**WindowProc**](/previous-versi
 *wParam* 
 </dt> <dd>
 
-Der Treffer Test Wert, der von der [**defwindowproc**](/windows/desktop/api/winuser/nf-winuser-defwindowproca) -Funktion als Ergebnis der Verarbeitung der [**WM- \_ nchittest**](wm-nchittest.md) -Nachricht zurückgegeben wird. Eine Liste der Treffer Test Werte finden Sie unter **WM \_ nchittest**.
+Der Treffertestwert, der von der [**DefWindowProc-Funktion**](/windows/desktop/api/winuser/nf-winuser-defwindowproca) als Ergebnis der Verarbeitung der [**WM \_ NCHITTEST-Nachricht zurückgegeben**](wm-nchittest.md) wird. Eine Liste der Treffertestwerte finden Sie unter **WM \_ NCHITTEST**.
 
 </dd> <dt>
 
 *lParam* 
 </dt> <dd>
 
-Eine [**Points**](/previous-versions//dd162808(v=vs.85)) -Struktur, die die x-und y-Koordinaten des Cursors enthält. Die Koordinaten sind relativ zur oberen linken Ecke des Bildschirms.
+Eine [](/previous-versions//dd162808(v=vs.85)) POINTS-Struktur, die die x- und y-Koordinaten des Cursors enthält. Die Koordinaten sind relativ zur oberen linken Ecke des Bildschirms.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Wenn eine Anwendung diese Nachricht verarbeitet, sollte Sie 0 (null) zurückgeben.
+Wenn eine Anwendung diese Nachricht verarbeitet, sollte sie 0 (null) zurückgeben.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Die Hover-Nachverfolgung wird beendet, wenn diese Meldung generiert wird. Die Anwendung muss [**TrackMouseEvent**](/windows/win32/api/winuser/nf-winuser-trackmouseevent) erneut aufrufen, wenn Sie eine weitere Nachverfolgung des Mauszeiger Verhaltens erfordert.
+Die Nachverfolgung des Hovers wird beendet, wenn diese Meldung generiert wird. Die Anwendung muss [**TrackMouseEvent erneut aufrufen,**](/windows/win32/api/winuser/nf-winuser-trackmouseevent) wenn eine weitere Nachverfolgung des Mauszeigerbewegungsverhaltens erforderlich ist.
 
-Sie können auch die Makros [**get \_ x \_ LPARAM**](/windows/desktop/api/windowsx/nf-windowsx-get_x_lparam) und [**get \_ Y \_ LPARAM**](/windows/desktop/api/windowsx/nf-windowsx-get_y_lparam) verwenden, um die Werte der X-und y-Koordinaten aus *LPARAM* zu extrahieren.
+Sie können auch die [**GET \_ X \_ LPARAM-**](/windows/desktop/api/windowsx/nf-windowsx-get_x_lparam) und [**GET \_ \_ Y-LPARAM-Makros**](/windows/desktop/api/windowsx/nf-windowsx-get_y_lparam) verwenden, um die Werte der x- und y-Koordinaten aus *lParam zu extrahieren.*
 
 
 ```
@@ -71,7 +71,7 @@ yPos = GET_Y_LPARAM(lParam);
 
 
 > [!IMPORTANT]
-> Verwenden Sie die [**LoWord**](/previous-versions/windows/desktop/legacy/ms632659(v=vs.85)) -oder [**HIWORD**](/previous-versions/windows/desktop/legacy/ms632657(v=vs.85)) -Makros nicht, um die x-und y-Koordinaten der Cursorposition zu extrahieren, da diese Makros falsche Ergebnisse für Systeme mit mehreren Monitoren zurückgeben. Systeme mit mehreren Monitoren können über negative x-und y-Koordinaten verfügen, und **LoWord** und **HIWORD** behandeln die Koordinaten als nicht signierte Mengen.
+> Verwenden Sie nicht die [**LOWORD-**](/previous-versions/windows/desktop/legacy/ms632659(v=vs.85)) oder [**HIWORD-Makros,**](/previous-versions/windows/desktop/legacy/ms632657(v=vs.85)) um die x- und y-Koordinaten der Cursorposition zu extrahieren, da diese Makros falsche Ergebnisse auf Systemen mit mehreren Monitoren zurückgeben. Systeme mit mehreren Monitoren können negative x- und y-Koordinaten haben, **und LOWORD** und **HIWORD** behandeln die Koordinaten als Mengen ohne Vorzeichen.
 
  
 
@@ -83,15 +83,15 @@ yPos = GET_Y_LPARAM(lParam);
 |-------------------------------------|-----------------------------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional \[nur Desktop-Apps\]<br/>                                                |
 | Unterstützte Mindestversion (Server)<br/> | Windows 2000 Server \[nur Desktop-Apps\]<br/>                                                      |
-| Header<br/>                   | <dl> <dt>Winuser. h (Include WINDOWSX. h)</dt> </dl> |
+| Header<br/>                   | <dl> <dt>Winuser.h (einschließlich Windowsx.h)</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-**Verweis**
+**Referenz**
 </dt> <dt>
 
 [**DefWindowProc**](/windows/desktop/api/winuser/nf-winuser-defwindowproca)
@@ -100,7 +100,7 @@ yPos = GET_Y_LPARAM(lParam);
 [**GET \_ X \_ LPARAM**](/windows/desktop/api/windowsx/nf-windowsx-get_x_lparam)
 </dt> <dt>
 
-[**\_Y- \_ LPARAM**](/windows/desktop/api/windowsx/nf-windowsx-get_y_lparam)
+[**GET \_ Y \_ LPARAM**](/windows/desktop/api/windowsx/nf-windowsx-get_y_lparam)
 </dt> <dt>
 
 [**TrackMouseEvent**](/windows/win32/api/winuser/nf-winuser-trackmouseevent)
@@ -109,13 +109,13 @@ yPos = GET_Y_LPARAM(lParam);
 [**TRACKMOUSEEVENT**](/windows/win32/api/winuser/ns-winuser-trackmouseevent)
 </dt> <dt>
 
-[**WM- \_ nchittest**](wm-nchittest.md)
+[**WM \_ NCHITTEST**](wm-nchittest.md)
 </dt> <dt>
 
-[**WM- \_ moupagehover**](wm-mousehover.md)
+[**WM \_ MOUSEHOVER**](wm-mousehover.md)
 </dt> <dt>
 
-**Licher**
+**Konzeptionellen**
 </dt> <dt>
 
 [Mauseingabe](mouse-input.md)
@@ -124,10 +124,10 @@ yPos = GET_Y_LPARAM(lParam);
 **Andere Ressourcen**
 </dt> <dt>
 
-[**Makepoints**](/windows/desktop/api/wingdi/nf-wingdi-makepoints)
+[**MAKEPOINTS**](/windows/desktop/api/wingdi/nf-wingdi-makepoints)
 </dt> <dt>
 
-[**Punkt**](/previous-versions//dd162808(v=vs.85))
+[**Punkte**](/previous-versions//dd162808(v=vs.85))
 </dt> </dl>
 
  

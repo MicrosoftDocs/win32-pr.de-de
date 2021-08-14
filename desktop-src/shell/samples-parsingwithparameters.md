@@ -1,5 +1,5 @@
 ---
-description: Veranschaulicht, wie Sie shellhilfen nutzen können, die den-namens Namen verwenden, um mit Elementen über das shellprogrammierungs Modell zu interagieren.
+description: Veranschaulicht, wie Shell-Hilfsprogrammierer genutzt werden, die den Analysenamen verwenden, um über das Shell-Programmiermodell mit Elementen zu interagieren.
 title: Analysieren mit Parametern (Beispiel)
 ms.topic: article
 ms.date: 05/31/2018
@@ -9,29 +9,29 @@ api_type: ''
 api_location: ''
 topic_type:
 - kbArticle
-ms.openlocfilehash: b9d14b3aa5386f187b2f6cdf0a5d435e2e57d31e
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
-ms.translationtype: HT
+ms.openlocfilehash: 5a559732a5a5b2b669402e2e0526dce1a08e37e4bfa31ba97cb41930a15b6cd1
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "104980473"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118219836"
 ---
 # <a name="parsing-with-parameters-sample"></a>Analysieren mit Parametern (Beispiel)
 
-Veranschaulicht, wie Sie shellhilfen nutzen können, die den-namens Namen verwenden, um mit Elementen über das shellprogrammierungs Modell zu interagieren.
+Veranschaulicht, wie Shell-Hilfsprogrammierer genutzt werden, die den Analysenamen verwenden, um über das Shell-Programmiermodell mit Elementen zu interagieren.
 
 Dieses Thema enthält folgende Abschnitte:
 
--   [Anforderungen](#requirements)
+-   [Requirements](#requirements)
 -   [Herunterladen des Beispiels](#downloading-the-sample)
--   [Beispiel zum Aufbau](#building-the-sample)
+-   [Erstellen des Beispiels](#building-the-sample)
 -   [Ausführen des Beispiels](#running-the-sample)
 
-## <a name="requirements"></a>Requirements (Anforderungen)
+## <a name="requirements"></a>Anforderungen
 
 
 
-| Produkt                                | Minimale Produkt Version |
+| Product (Produkt)                                | Mindestversion des Produkts |
 |----------------------------------------|-------------------------|
 | Windows                                | Windows Vista           |
 | Windows Software Development Kit (SDK) | 7.0                     |
@@ -40,21 +40,21 @@ Dieses Thema enthält folgende Abschnitte:
 
  
 
-Weitere Anforderungen finden Sie in der im Beispiel enthaltenen Infodatei.
+Weitere Anforderungen finden Sie in der im Beispiel enthaltenen Readme-Datei.
 
 ## <a name="downloading-the-sample"></a>Herunterladen des Beispiels
 
 | Standort      | Pfad-URL                                                                                             |
 |---------------|------------------------------------------------------------------------------------------------------|
-| GitHub  | [Beispiel für "beispielwithparameters"](https://github.com/microsoft/Windows-classic-samples/tree/master/Samples/Win7Samples/winui/shell/appplatform/ParsingWithParameters) |
+| GitHub  | [ParsingWithParameters-Beispiel](https://github.com/microsoft/Windows-classic-samples/tree/master/Samples/Win7Samples/winui/shell/appplatform/ParsingWithParameters) |
 
 ## <a name="building-the-sample"></a>Erstellen des Beispiels
 
-Anweisungen zum Erstellen des Beispiels finden Sie in der im Beispiel enthaltenen Infodatei.
+Anweisungen zum Erstellen des Beispiels finden Sie in der im Beispiel enthaltenen Readme-Datei.
 
 ## <a name="running-the-sample"></a>Ausführen des Beispiels
 
-Anweisungen zum Erstellen des Beispiels finden Sie in der im Beispiel enthaltenen Infodatei.
+Anweisungen zum Erstellen des Beispiels finden Sie in der im Beispiel enthaltenen Readme-Datei.
 
  
 

@@ -1,23 +1,23 @@
 ---
-description: Die fotometadatenrichtlinie für die System. GPS. imgdirection-Eigenschaft.
+description: Die Fotometadatenrichtlinie für die System.GPS.ImgDirection-Eigenschaft.
 ms.assetid: c9a0f5de-4010-4251-a5d5-8728b7ae6d33
-title: System. GPS. imgdirection-fotometadatenrichtlinie
+title: System.GPS.ImgDirection-Fotometadatenrichtlinie
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 013edd632f98f1359c4f3c04856b0409c70eaa56
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 43544458c4b6a64df1d396426ebbe487d80324d24dd10c2f8f6f0e548d9eca99
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106349664"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118710670"
 ---
-# <a name="systemgpsimgdirection-photo-metadata-policy"></a>System. GPS. imgdirection-fotometadatenrichtlinie
+# <a name="systemgpsimgdirection-photo-metadata-policy"></a>System.GPS.ImgDirection-Fotometadatenrichtlinie
 
-Die fotometadatenrichtlinie für die [System. GPS. imgdirection](../properties/props-system-gps-imgdirection.md) -Eigenschaft.
+Die Fotometadatenrichtlinie für die [System.GPS.ImgDirection-Eigenschaft.](../properties/props-system-gps-imgdirection.md)
 
-### <a name="pkey"></a>Pkey
+### <a name="pkey"></a>PKEY
 
-Pkey \_ GPS \_ imgdirection
+PKEY \_ GPS \_ ImgDirection
 
 ### <a name="containers"></a>Container
 
@@ -27,50 +27,50 @@ JPEG, TIFF
 
 Ja
 
-### <a name="output-propvariant-type"></a>Ausgabe-PROPVARIANT-Typ
+### <a name="output-propvariant-type"></a>PROPVARIANT-Ausgabetyp
 
 VT \_ R8
 
-### <a name="conflict-resolution-policy"></a>Richtlinie zur Konfliktlösung
+### <a name="conflict-resolution-policy"></a>Konfliktlösungsrichtlinie
 
-Dieser Wert kann durch Schreiben in System. GPS. imgdirectionnumerator und System. GPS. imgdirectionnenner geschrieben werden. Sie kann nicht direkt geschrieben werden. Werte aus unterschiedlichen Schemas sind abgestimmt.
+Dieser Wert kann durch Schreiben in System.GPS.ImgDirectionNumerator und System.GPS.ImgDirectionDenominator geschrieben werden. Er kann nicht direkt geschrieben werden. Werte aus unterschiedlichen Schemas werden abgestimmt.
 
 ### <a name="jpeg-policy"></a>JPEG-Richtlinie
 
-### <a name="read-paths"></a>Pfade lesen
+### <a name="read-paths"></a>Lesepfade
 
 
 
-| Auftrag | Pfad                      | Datenträger Format |
+| Auftrag | Pfad                      | Datenträgerformat |
 |-------|---------------------------|-------------|
-| 1     | /App1/IFD/GPS/{ushort = 17} |             |
-| 2     | /XMP/EXIF: gpsimgdirection |             |
+| 1     | /app1/ifd/gps/{ushort=17} |             |
+| 2     | /xmp/exif:GPSImgDirection |             |
 
 
 
  
 
-### <a name="write-paths"></a>Schreib Pfade
+### <a name="write-paths"></a>Schreibpfade
 
 
 
-| Auftrag | Pfad                      | Datenträger Format |
+| Auftrag | Pfad                      | Datenträgerformat |
 |-------|---------------------------|-------------|
-| 1     | /App1/IFD/GPS/{ushort = 17} |             |
-| 2     | /XMP/EXIF: gpsimgdirection |             |
+| 1     | /app1/ifd/gps/{ushort=17} |             |
+| 2     | /xmp/exif:GPSImgDirection |             |
 
 
 
  
 
-### <a name="remove-paths"></a>Pfade entfernen
+### <a name="remove-paths"></a>Entfernen von Pfaden
 
 
 
 | Auftrag | Pfad                      |
 |-------|---------------------------|
-| 1     | /App1/IFD/GPS/{ushort = 17} |
-| 2     | /XMP/EXIF: gpsimgdirection |
+| 1     | /app1/ifd/gps/{ushort=17} |
+| 2     | /xmp/exif:gpsimgdirection |
 
 
 
@@ -78,52 +78,52 @@ Dieser Wert kann durch Schreiben in System. GPS. imgdirectionnumerator und Syste
 
 ### <a name="tiff-policies"></a>TIFF-Richtlinien
 
-### <a name="read-paths"></a>Pfade lesen
+### <a name="read-paths"></a>Lesepfade
 
 
 
-| Auftrag | Pfad                          | Datenträger Format |
+| Auftrag | Pfad                          | Datenträgerformat |
 |-------|-------------------------------|-------------|
-| 1     | /IFD/GPS/{ushort = 17}          |             |
-| 2     | /IFD/XMP/EXIF: gpsimgdirection |             |
+| 1     | /ifd/gps/{ushort=17}          |             |
+| 2     | /ifd/xmp/exif:GPSImgDirection |             |
 
 
 
  
 
-### <a name="write-paths"></a>Schreib Pfade
+### <a name="write-paths"></a>Schreibpfade
 
 
 
-| Auftrag | Pfad                          | Datenträger Format |
+| Auftrag | Pfad                          | Datenträgerformat |
 |-------|-------------------------------|-------------|
-| 1     | /IFD/GPS/{ushort = 17}          |             |
-| 2     | /IFD/XMP/EXIF: gpsimgdirection |             |
+| 1     | /ifd/gps/{ushort=17}          |             |
+| 2     | /ifd/xmp/exif:GPSImgDirection |             |
 
 
 
  
 
-### <a name="remove-paths"></a>Pfade entfernen
+### <a name="remove-paths"></a>Entfernen von Pfaden
 
 
 
 | Auftrag | Pfad                          |
 |-------|-------------------------------|
-| 1     | /IFD/GPS/{ushort = 17}          |
-| 2     | /IFD/XMP/EXIF: gpsimgdirection |
+| 1     | /ifd/gps/{ushort=17}          |
+| 2     | /ifd/xmp/exif:gpsimgdirection |
 
 
 
  
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
 <dl> <dt>
 
-[System. GPS. imgdirection](../properties/props-system-gps-imgdirection.md)
+[System.GPS.ImgDirection](../properties/props-system-gps-imgdirection.md)
 </dt> </dl>
 
  

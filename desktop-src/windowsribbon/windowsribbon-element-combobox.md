@@ -3,7 +3,7 @@ title: ComboBox-Element
 description: Stellt ein Kombinationsfeld-Steuerelement dar.
 ms.assetid: d796e26b-44c2-4e11-b1a5-2ede5bcff676
 keywords:
-- ComboBox-Element Windows-Menüband
+- ComboBox-Element Windows Menüband
 topic_type:
 - apiref
 api_name:
@@ -13,18 +13,18 @@ api_type:
 ms.topic: reference
 ms.date: 05/31/2018
 api_location: ''
-ms.openlocfilehash: 60ad8866b655be587e0c3d0f123d8bc59b6b8a21
-ms.sourcegitcommit: 099ecdda1e83618b844387405da0db0ebda93a65
+ms.openlocfilehash: 60ee7a03d25508df45469577f4d4159b5db5f5190f188ca594b71f176d037526
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/04/2021
-ms.locfileid: "111443581"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117851189"
 ---
 # <a name="combobox-element"></a>ComboBox-Element
 
 Stellt ein [Kombinationsfeld-Steuerelement](windowsribbon-controls-combobox.md) dar.
 
-## <a name="usage"></a>Verwendung
+## <a name="usage"></a>Verbrauch
 
 ``` syntax
 <ComboBox
@@ -48,7 +48,7 @@ Stellt ein [Kombinationsfeld-Steuerelement](windowsribbon-controls-combobox.md) 
 <thead>
 <tr class="header">
 <th>attribute</th>
-<th>Typ</th>
+<th>type</th>
 <th>Erforderlich</th>
 <th>BESCHREIBUNG</th>
 </tr>
@@ -58,8 +58,8 @@ Stellt ein [Kombinationsfeld-Steuerelement](windowsribbon-controls-combobox.md) 
 <td><strong>CommandName</strong><br/></td>
 <td>xs:positiveInteger oder xs:string<br/></td>
 <td>Nein<br/></td>
-<td>Ordnet das Element einem <a href="windowsribbon-element-command.md"><strong>Command zu.</strong></a><br/> <br/>
-<dt><span></span><span></span><strong></strong> (xs:positiveInteger oder xs:string)<br/> </dt> <dd> Eine Zeichenfolge, ein ganzzahliger Wert zwischen 2 und 59999 einschließlich oder ein Hexadezimalwert zwischen 0x2 und 0xea5f einschließlich. <br/> Der Wert muss innerhalb des Menüband-XML-Dokuments eindeutig sein. <br/> Maximale Länge: 100 Zeichen. <br/> </dd> </dl></td>
+<td>Ordnet das Element einem Befehl <a href="windowsribbon-element-command.md"><strong>zu.</strong></a><br/> <br/>
+<dt><span></span><span></span><strong></strong> (xs:positiveInteger oder xs:string)<br/> </dt> <dd> Eine Zeichenfolge, ein ganzzahliger Wert zwischen 2 und 59999, einschließlich, oder ein Hexadezimalwert zwischen 0x2 und 0xea5f einschließlich. <br/> Der Wert muss innerhalb des Menüband-XML-Dokuments eindeutig sein. <br/> Maximale Länge: 100 Zeichen. <br/> </dd> </dl></td>
 </tr>
 <tr class="even">
 <td><strong>IsAutoCompleteEnabled</strong><br/></td>
@@ -145,19 +145,19 @@ Windows 8 und neuer.
 
 ## <a name="remarks"></a>Hinweise
 
-Dies ist optional.
+Optional.
 
-Kann ein oder mehrere Male für jedes [**ControlGroup-,**](windowsribbon-element-controlgroup.md) [**DropDownButton-,**](windowsribbon-element-dropdownbutton.md) [**DropDownGallery-,**](windowsribbon-element-dropdowngallery.md) [**Group-, MenuGroup-**](windowsribbon-element-menugroup.md)oder [**SplitButtonGallery-Element**](windowsribbon-element-splitbuttongallery.md) auftreten. [](windowsribbon-element-group.md)
+Kann ein oder mehrere Male für jedes [**ControlGroup-,**](windowsribbon-element-controlgroup.md) [**DropDownButton-,**](windowsribbon-element-dropdownbutton.md) [**DropDownGallery-,**](windowsribbon-element-dropdowngallery.md) [**Group-,**](windowsribbon-element-group.md) [**MenuGroup-**](windowsribbon-element-menugroup.md)oder [**SplitButtonGallery-Element**](windowsribbon-element-splitbuttongallery.md) auftreten.
 
-Da es sich bei **ComboBox** ausschließlich um einen Elementkatalog handelt, werden keine Befehlselemente unterstützt. Es ist auch das einzige Katalogsteuerelement, das keinen Befehlsbereich unterstützt (eine Sammlung von Befehlen, die im Markup deklariert und am unteren Rand eines Elementkatalogs oder Befehlskatalogs aufgeführt sind). Weitere Informationen finden Sie unter [Arbeiten mit Katalogen.](ribbon-controls-galleries.md)
+Da **comboBox ausschließlich** ein Elementkatalog ist, werden keine Befehlselemente unterstützt. Es ist auch das einzige Katalogsteuerelement, das keinen Befehlsraum unterstützt (eine Sammlung von Befehlen, die im Markup deklariert und am unteren Rand eines Elementkatalogs oder Befehlskatalogs aufgeführt werden). Weitere Informationen finden Sie unter [Arbeiten mit Katalogen.](ribbon-controls-galleries.md)
 
-Der folgende Screenshot veranschaulicht ein [Menüband-Kombinationsfeld-Steuerelement](windowsribbon-controls-combobox.md) von Windows Live Movie Maker.
+Der folgende Screenshot veranschaulicht ein [Menüband-Kombinationsfeld-Steuerelement](windowsribbon-controls-combobox.md) aus Windows Live Movie Maker.
 
-![Screenshot eines Combobox-Steuerelements im Microsoft Paint-Menüband.](images/controls/combobox.png)
+![Screenshot eines Kombinationsfeld-Steuerelements im Microsoft-Farbband.](images/controls/combobox.png)
 
 ## <a name="examples"></a>Beispiele
 
-In den folgenden Beispielen wird das grundlegende Markup für **comboBox** veranschaulicht.
+In den folgenden Beispielen wird das grundlegende Markup für **comboBox veranschaulicht.**
 
 Dieser Codeabschnitt zeigt die **ComboBox-Befehlsdeklarationen** mit einer zugeordneten [**Gruppe,**](windowsribbon-element-group.md) die als übergeordneter Container für das **ComboBox-Element** fungiert.
 
@@ -196,7 +196,7 @@ Dieser Codeabschnitt zeigt die **ComboBox-Steuerelementdeklarationen.**
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 

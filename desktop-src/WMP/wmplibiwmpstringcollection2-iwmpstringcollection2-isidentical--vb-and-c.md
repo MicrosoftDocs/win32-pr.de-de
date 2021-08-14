@@ -1,11 +1,11 @@
 ---
-title: IWMPStringCollection2 isidentical-Methode
-description: Die isidentical-Methode gibt einen Wert zurück, der angibt, ob das durch die angegebene Schnittstelle dargestellte Objekt mit dem aktuellen identisch ist.
+title: IWMPStringCollection2 isIdentical-Methode
+description: Die isIdentical-Methode gibt einen Wert zurück, der angibt, ob das von der angegebenen Schnittstelle dargestellte Objekt mit dem aktuellen identisch ist.
 ms.assetid: 826e7fd8-88f8-4a2a-9ca0-82a500099272
 keywords:
-- isidentical-Methode, Windows Media Player
-- isidentical-Methode, Windows Media Player, IWMPStringCollection2-Schnittstelle
-- IWMPStringCollection2 Interface, Windows Media Player, isidentical-Methode
+- isIdentical-Windows Media Player
+- isIdentical-Windows Media Player , IWMPStringCollection2-Schnittstelle
+- IWMPStringCollection2-Schnittstelle Windows Media Player , isIdentical-Methode
 topic_type:
 - apiref
 api_name:
@@ -16,16 +16,16 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 2bb760dae213f28d44fbc707b4430cb151cfe578
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 4576522c1b6d6834ded5e100a2618dcb45204f887420968a5828fdc5c9bd0fef
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106365747"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118330904"
 ---
-# <a name="iwmpstringcollection2isidentical-method"></a>IWMPStringCollection2:: isidentical-Methode
+# <a name="iwmpstringcollection2isidentical-method"></a>IWMPStringCollection2::isIdentical-Methode
 
-Die **isidentical** -Methode gibt einen Wert zurück, der angibt, ob das durch die angegebene Schnittstelle dargestellte Objekt mit dem aktuellen identisch ist.
+Die **isIdentical-Methode** gibt einen Wert zurück, der angibt, ob das von der angegebenen Schnittstelle dargestellte Objekt mit dem aktuellen identisch ist.
 
 ## <a name="syntax"></a>Syntax
 
@@ -53,20 +53,20 @@ Implements IWMPStringCollection2.isIdentical
 
 <dl> <dt>
 
-*pIWMPStringCollection2* \[ in\]
+*pIWMPStringCollection2* \[ In\]
 </dt> <dd>
 
-Die **WMPLib. IWMPStringCollection2** -Schnittstelle, die das Objekt darstellt, das mit dem aktuellen verglichen werden soll.
+Die **WMPLib.IWMPStringCollection2-Schnittstelle,** die das Objekt darstellt, das mit der aktuellen verglichen werden soll.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Der **System. Boolean** -Wert, der das Ergebnis des Vergleichs ist. Der Wert **true** gibt an, dass die Zeichen folgen Auflistungs Objekte identisch sind.
+Der **Boolesche Wert system.boolean,** der das Ergebnis des Vergleichs ist. Der Wert **true gibt an,** dass die Zeichenfolgensammlungsobjekte identisch sind.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Um diese Methode verwenden zu können, ist Lesezugriff auf die Bibliothek erforderlich. Weitere Informationen finden Sie unter [Bibliotheks Zugriff](library-access.md).
+Um diese Methode verwenden zu können, ist Lesezugriff auf die Bibliothek erforderlich. Weitere Informationen finden Sie unter [Bibliothekszugriff.](library-access.md)
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -80,11 +80,11 @@ Um diese Methode verwenden zu können, ist Lesezugriff auf die Bibliothek erford
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**IWMPStringCollection2-Schnittstelle (VB und c#)**](iwmpstringcollection2--vb-and-c.md)
+[**IWMPStringCollection2-Schnittstelle (VB und C#)**](iwmpstringcollection2--vb-and-c.md)
 </dt> </dl>
 
  

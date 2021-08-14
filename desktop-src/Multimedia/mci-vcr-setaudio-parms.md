@@ -1,6 +1,6 @@
 ---
-title: MCI_VCR_SETAUDIO_PARMS Struktur (VCR. h)
-description: Die Struktur der MCI- \_ VCR \_ - \_ setaudioparameter enthält Parameter für den MCI \_ setaudiobefehl für Video-Kassetten-Recorder.
+title: MCI_VCR_SETAUDIO_PARMS-Struktur (Vcr.h)
+description: Die MCI \_ VCR \_ SETAUDIO \_ PARMS-Struktur enthält Parameter für den MCI \_ SETAUDIO-Befehl für Video-Cassette-Aufzeichnungen.
 ms.assetid: 328d8e63-7ddd-4c9b-85d6-2e56fd802dbc
 keywords:
 - MCI_VCR_SETAUDIO_PARMS Struktur Windows Multimedia
@@ -14,16 +14,16 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 143345f494f381054335d2dfec3b0c10222adca4
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: fa07d4cf8b88eb246019bf18dd1c1328413718a70b17ebb16e27606958473f5c
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "103858708"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117802958"
 ---
-# <a name="mci_vcr_setaudio_parms-structure"></a>MCI \_ VCR \_ -setaudioparamemstruktur \_
+# <a name="mci_vcr_setaudio_parms-structure"></a>MCI \_ VCR \_ SETAUDIO \_ PARMS-Struktur
 
-Die Struktur der **MCI- \_ VCR \_ -setaudioparameter \_** enthält Parameter für den [**MCI \_ setaudiobefehl**](mci-setaudio.md) für Video-Kassetten-Recorder.
+Die **MCI \_ VCR \_ SETAUDIO \_ PARMS-Struktur** enthält Parameter für den [**MCI \_ SETAUDIO-Befehl**](mci-setaudio.md) für Video-Cassette-Aufzeichnungen.
 
 ## <a name="syntax"></a>Syntax
 
@@ -43,37 +43,37 @@ typedef struct tagMCI_VCR_SETAUDIO_PARMS {
 
 <dl> <dt>
 
-**dwcallback**
+**dwCallback**
 </dt> <dd>
 
-Das nieder wertige Wort gibt ein Fenster Handle an, das für das MCI-Benachrichtigungs Kennzeichen verwendet wird \_ .
+Das Wort mit niedriger Reihenfolge gibt ein Fensterhandle an, das für das MCI \_ NOTIFY-Flag verwendet wird.
 
 </dd> <dt>
 
-**dwtrack**
+**dwTrack**
 </dt> <dd>
 
 Audiospur.
 
 </dd> <dt>
 
-**dwto**
+**dwTo**
 </dt> <dd>
 
-Typ der Eingabe-oder überwachten Eingabe.
+Typ der Eingabe oder überwachten Eingabe.
 
 </dd> <dt>
 
-**dwnumber**
+**dwNumber**
 </dt> <dd>
 
-Audioeingabe (des Typs, der im **dwto** -Member angegeben ist), der verwendet werden soll.
+Zu verwendende Audioeingabe (vom im **dwTo-Member** angegebenen Typ).
 
 </dd> </dl>
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Wenn Sie den Membern dieser Strukturdaten zuweisen, legen Sie die entsprechenden Flags im *fdwcommand* -Parameter der [**mciSendCommand**](/previous-versions//dd757160(v=vs.85)) -Funktion fest, um die Elemente zu überprüfen.
+Legen Sie beim Zuweisen von Daten zu den Membern dieser Struktur die entsprechenden Flags im *fdwCommand-Parameter* der [**mciSendCommand-Funktion**](/previous-versions//dd757160(v=vs.85)) fest, um die Member zu überprüfen.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -83,21 +83,21 @@ Wenn Sie den Membern dieser Strukturdaten zuweisen, legen Sie die entsprechenden
 |-------------------------------------|----------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional \[nur Desktop-Apps\]<br/>                       |
 | Unterstützte Mindestversion (Server)<br/> | Windows 2000 Server \[nur Desktop-Apps\]<br/>                             |
-| Header<br/>                   | <dl> <dt>VCR. h</dt> </dl> |
+| Header<br/>                   | <dl> <dt>Vcr.h</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**MCI**](mci.md)
+[**Mci**](mci.md)
 </dt> <dt>
 
 [**MCI-Strukturen**](mci-structures.md)
 </dt> <dt>
 
-[**MCI \_ -setaudiodatei**](mci-setaudio.md)
+[**MCI \_ SETAUDIO**](mci-setaudio.md)
 </dt> <dt>
 
 [**mciSendCommand**](/previous-versions//dd757160(v=vs.85))

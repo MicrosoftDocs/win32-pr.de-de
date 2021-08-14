@@ -1,35 +1,35 @@
 ---
-title: MIB-Funktionen der Routerverwaltung
-description: Verwenden Sie die folgenden Router-Manager-Funktionen zum Abfragen und Festlegen von MIB-Variablen.
+title: MIB-Funktionen für die Routerverwaltung
+description: Verwenden Sie die folgenden Router-Manager-Funktionen, um MIB-Variablen abzufragen und festzulegen.
 ms.assetid: c911daa4-4f3d-4944-9dc0-695a4efbcb1b
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 603df49dd0bb2a5ddc1ce21cb89e079e9583b1c8
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: df886dc90909ddbb70bb8ab7157a231052aebdf6306939a88f55e710b5fd484b
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "103856831"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117790444"
 ---
-# <a name="router-management-mib-functions"></a>MIB-Funktionen der Routerverwaltung
+# <a name="router-management-mib-functions"></a>MIB-Funktionen für die Routerverwaltung
 
-Verwenden Sie die folgenden Router-Manager-Funktionen zum Abfragen und Festlegen von MIB-Variablen:
+Verwenden Sie die folgenden Router-Manager-Funktionen, um MIB-Variablen abzufragen und festzulegen:
 
--   [**Mpradminmibbufferfree**](/windows/desktop/api/Mprapi/nf-mprapi-mpradminmibbufferfree)
--   [**Mpradminmibentrycreate**](/windows/desktop/api/Mprapi/nf-mprapi-mpradminmibentrycreate)
--   [**Mpradminmibentrydelete**](/windows/desktop/api/Mprapi/nf-mprapi-mpradminmibentrydelete)
--   [**Mpradminmibentryget**](/windows/desktop/api/Mprapi/nf-mprapi-mpradminmibentryget)
--   [**Mpradminmibentrygetfirst**](/windows/desktop/api/Mprapi/nf-mprapi-mpradminmibentrygetfirst)
--   [**Mpradminmibentrygetnext**](/windows/desktop/api/Mprapi/nf-mprapi-mpradminmibentrygetnext)
--   [**Mpradminmibentryset**](/windows/desktop/api/Mprapi/nf-mprapi-mpradminmibentryset)
--   [**Mpradminmibgettrapinfo**](/windows/desktop/api/Mprapi/nf-mprapi-mpradminmibgettrapinfo)
--   [**Mpradminmibserverconnect**](/windows/desktop/api/Mprapi/nf-mprapi-mpradminmibserverconnect)
--   [**Mpradminmibserverdisconnect**](/windows/desktop/api/Mprapi/nf-mprapi-mpradminmibserverdisconnect)
--   [**Mpradminmibsettrapinfo**](/windows/desktop/api/Mprapi/nf-mprapi-mpradminmibsettrapinfo)
+-   [**MprAdminMIBBufferFree**](/windows/desktop/api/Mprapi/nf-mprapi-mpradminmibbufferfree)
+-   [**MprAdminMIBEntryCreate**](/windows/desktop/api/Mprapi/nf-mprapi-mpradminmibentrycreate)
+-   [**MprAdminMIBEntryDelete**](/windows/desktop/api/Mprapi/nf-mprapi-mpradminmibentrydelete)
+-   [**MprAdminMIBEntryGet**](/windows/desktop/api/Mprapi/nf-mprapi-mpradminmibentryget)
+-   [**MprAdminMIBEntryGetFirst**](/windows/desktop/api/Mprapi/nf-mprapi-mpradminmibentrygetfirst)
+-   [**MprAdminMIBEntryGetNext**](/windows/desktop/api/Mprapi/nf-mprapi-mpradminmibentrygetnext)
+-   [**MprAdminMIBEntrySet**](/windows/desktop/api/Mprapi/nf-mprapi-mpradminmibentryset)
+-   [**MprAdminMIBGetTrapInfo**](/windows/desktop/api/Mprapi/nf-mprapi-mpradminmibgettrapinfo)
+-   [**MprAdminMIBServerConnect**](/windows/desktop/api/Mprapi/nf-mprapi-mpradminmibserverconnect)
+-   [**MprAdminMIBServerDisconnect**](/windows/desktop/api/Mprapi/nf-mprapi-mpradminmibserverdisconnect)
+-   [**MprAdminMIBSetTrapInfo**](/windows/desktop/api/Mprapi/nf-mprapi-mpradminmibsettrapinfo)
 
- 
+ 
 
- 
+ 
 
 
 

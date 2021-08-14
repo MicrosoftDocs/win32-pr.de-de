@@ -1,6 +1,6 @@
 ---
-title: dcl_constantBuffer (SM4-ASM)
-description: DCL \_ constantbuffer (SM4-ASM)
+title: dcl_constantBuffer (sm4 - asm)
+description: dcl \_ constantBuffer (sm4 - asm)
 ms.assetid: 164fb2a4-8782-42f0-b4ba-1f87d9c7255d
 ms.topic: reference
 ms.date: 05/31/2018
@@ -9,20 +9,20 @@ topic_type:
 api_name: ''
 api_type: ''
 api_location: ''
-ms.openlocfilehash: b2eeb9368af0121ee61fde5d106eb0f3b08e5acb
-ms.sourcegitcommit: fe03c5d92ca6a0d66a114b2303e99c0a19241ffb
+ms.openlocfilehash: 437266c5a37f266a4f8847f09719380f436b6d9d38e8dee21b3258c79adb32b6
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/20/2019
-ms.locfileid: "104101094"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117727264"
 ---
-# <a name="dcl_constantbuffer-sm4---asm"></a>DCL \_ constantbuffer (SM4-ASM)
+# <a name="dcl_constantbuffer-sm4---asm"></a>dcl \_ constantBuffer (sm4 - asm)
 
-Deklariert einen Shader-Konstantenpuffer.
+Deklariert einen Shaderkonst konstanten Puffer.
 
 
 
-| DCL \_ constantbuffer *CBN \[ - \] Größe*, *accesspattern* |
+| dcl \_ constantBuffer *cbN \[ size \]*, *AccessPattern* |
 |----------------------------------------------------|
 
 
@@ -44,12 +44,12 @@ Deklariert einen Shader-Konstantenpuffer.
 </thead>
 <tbody>
 <tr class="odd">
-<td><span id="cbN_size_"></span><span id="cbn_size_"></span><span id="CBN_SIZE_"></span>CB<em>N [Größe]</em><br/></td>
-<td>in Ein Shader-Konstantenpuffer, bei dem N eine ganze Zahl ist, die die Anzahl und Größe des Konstanten Puffers angibt, ist eine ganze Zahl, die die Anzahl der Elemente im Puffer angibt.<br/></td>
+<td><span id="cbN_size_"></span><span id="cbn_size_"></span><span id="CBN_SIZE_"></span>cb<em>N[size]</em><br/></td>
+<td>[in] Ein shader-Konstantenpuffer, bei dem N eine ganze Zahl ist, die die Konstante-Puffer-Registernummer angibt, und size eine ganze Zahl ist, die die Anzahl der Elemente im Puffer angibt.<br/></td>
 </tr>
 <tr class="even">
-<td><span id="AccessPattern"></span><span id="accesspattern"></span><span id="ACCESSPATTERN"></span><em>Accesspattern</em><br/></td>
-<td>in Der Zugriff auf den Puffer erfolgt über den Shader-Code, der eines der folgenden ist: <br/> 
+<td><span id="AccessPattern"></span><span id="accesspattern"></span><span id="ACCESSPATTERN"></span><em>AccessPattern</em><br/></td>
+<td>[in] Der Zugriff auf den Puffer durch Shadercode ist eine der folgenden: <br/> 
 <table>
 <thead>
 <tr class="header">
@@ -59,7 +59,7 @@ Deklariert einen Shader-Konstantenpuffer.
 </thead>
 <tbody>
 <tr class="odd">
-<td>sofort eingepackt</td>
+<td>immediateIndexed</td>
 <td>Indizieren Sie den Puffer mit einem Literalwert.</td>
 </tr>
 <tr class="even">
@@ -78,7 +78,7 @@ Deklariert einen Shader-Konstantenpuffer.
 
  
 
-Diese Anweisung gilt für die folgenden Shader-Phasen:
+Diese Anweisung gilt für die folgenden Shaderstufen:
 
 
 
@@ -90,11 +90,11 @@ Diese Anweisung gilt für die folgenden Shader-Phasen:
 
  
 
-Diese Anweisung ist enthalten, um das Debuggen eines Shaders in der Assembly zu unterstützen. Es ist nicht möglich, einen Shader mit Shadermodell 4 in der Assemblysprache zu erstellen.
+Diese Anweisung ist enthalten, um das Debuggen eines Shaders in der Assembly zu erleichtern. Mit shader Model 4 können Sie keinen Shader in der Assemblysprache erstellen.
 
 ## <a name="example"></a>Beispiel
 
-In diesem Beispiel wird ein konstanter Puffer für Register CB0 mit 19 Elementen deklariert. Auf diese Elemente wird mit einem literalen Index zugegriffen.
+In diesem Beispiel wird ein konstanter Puffer für register cb0 deklariert, der 19 Elemente enthält. Auf diese Elemente wird mit einem literalen Index zugegriffen.
 
 
 ```
@@ -103,20 +103,20 @@ dcl_constantbuffer  cb0[19], immediateIndexed
 
 
 
-## <a name="minimum-shader-model"></a>Minimaler Shader-Modell
+## <a name="minimum-shader-model"></a>Minimales Shadermodell
 
-Diese Funktion wird in den folgenden shadermodellen unterstützt.
+Diese Funktion wird in den folgenden Shadermodellen unterstützt.
 
 
 
 | Shadermodell                                              | Unterstützt |
 |-----------------------------------------------------------|-----------|
-| [Shader-Modell 5](d3d11-graphics-reference-sm5.md)        | ja       |
-| [Shadermodell 4,1](dx-graphics-hlsl-sm4.md)              | ja       |
+| [Shadermodell 5](d3d11-graphics-reference-sm5.md)        | ja       |
+| [Shadermodell 4.1](dx-graphics-hlsl-sm4.md)              | ja       |
 | [Shadermodell 4](dx-graphics-hlsl-sm4.md)                | ja       |
-| [Shader-Modell 3 (DirectX HLSL)](dx-graphics-hlsl-sm3.md) | nein        |
-| [Shader-Modell 2 (DirectX HLSL)](dx-graphics-hlsl-sm2.md) | nein        |
-| [Shader-Modell 1 (DirectX HLSL)](dx-graphics-hlsl-sm1.md) | nein        |
+| [Shadermodell 3 (DirectX HLSL)](dx-graphics-hlsl-sm3.md) | nein        |
+| [Shadermodell 2 (DirectX HLSL)](dx-graphics-hlsl-sm2.md) | nein        |
+| [Shadermodell 1 (DirectX HLSL)](dx-graphics-hlsl-sm1.md) | nein        |
 
 
 

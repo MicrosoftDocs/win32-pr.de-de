@@ -1,6 +1,6 @@
 ---
-description: 'Weitere Informationen finden Sie unter: API. retrievekey-Methode'
-title: API. retrievekey-Methode
+description: Weitere Informationen finden Sie unter Api.RetrieveKey-Methode.
+title: Api.RetrieveKey-Methode
 TOCTitle: 'RetrieveKey method '
 ms:assetid: M:Microsoft.Isam.Esent.Interop.Api.RetrieveKey(Microsoft.Isam.Esent.Interop.JET_SESID,Microsoft.Isam.Esent.Interop.JET_TABLEID,Microsoft.Isam.Esent.Interop.RetrieveKeyGrbit)
 ms:mtpsurl: https://msdn.microsoft.com/library/microsoft.isam.esent.interop.api.retrievekey(v=EXCHG.10)
@@ -24,19 +24,19 @@ api_type:
 api_location:
 - Microsoft.Isam.Esent.Interop.dll
 ROBOTS: INDEX,FOLLOW
-ms.openlocfilehash: fcabab7639a9cf3128b0b2c314ba60c2de8f8e09
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 70eb4900c1b3fc4ea8b66f138db4b51328ae019c15c6fdfc05d7b786a574d5c6
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "103749489"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117717844"
 ---
-# <a name="apiretrievekey-method"></a>API. retrievekey-Methode
+# <a name="apiretrievekey-method"></a>Api.RetrieveKey-Methode
 
-Ruft den Schlüssel für den Index Eintrag an der aktuellen Position eines Cursors ab.
+Ruft den Schlüssel für den Indexeintrag an der aktuellen Position eines Cursors ab.
 
-**Namespace:**  [Microsoft. ISAM. ESENT. Interop](./microsoft.isam.esent.interop-namespace.md)  
-**Assembly:**  Microsoft. ISAM. ESENT. Interop (in Microsoft.Isam.Esent.Interop.dll)
+**Namespace:**  [Microsoft.Isam.Esent.Interop](./microsoft.isam.esent.interop-namespace.md)  
+**Assembly:**  Microsoft.Isam.Esent.Interop (in Microsoft.Isam.Esent.Interop.dll)
 
 ## <a name="syntax"></a>Syntax
 
@@ -67,36 +67,36 @@ public static byte[] RetrieveKey(
 
 #### <a name="parameters"></a>Parameter
 
-  - -sid  
-    Typ: [Microsoft.ISAM.ESENT.Interop.JET_SESID](./jet-sesid-structure.md)  
+  - sesid  
+    Typ: [Microsoft.Isam.Esent.Interop.JET_SESID](./jet-sesid-structure.md)  
     
     Die zu verwendende Sitzung.
 
 <!-- end list -->
 
-  - TableID  
-    Typ: [Microsoft.ISAM.ESENT.Interop.JET_TABLEID](./jet-tableid-structure.md)  
+  - tableid  
+    Typ: [Microsoft.Isam.Esent.Interop.JET_TABLEID](./jet-tableid-structure.md)  
     
     Der Cursor, aus dem der Schlüssel abgerufen werden soll.
 
 <!-- end list -->
 
   - grbit  
-    Typ: [Microsoft. ISAM. ESENT. Interop. retrievekeygrbit](./retrievekeygrbit-enumeration.md)  
+    Typ: [Microsoft.Isam.Esent.Interop.RetrieveKeyGrbit](./retrievekeygrbit-enumeration.md)  
     
-    Abrufen von Schlüsseloptionen
+    Abrufen von Schlüsseloptionen.
 
 #### <a name="return-value"></a>Rückgabewert
 
-Sorte \[\]  
+Typ: \[\]  
 Der abgerufene Schlüssel.  
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
-#### <a name="reference"></a>Referenz
+#### <a name="reference"></a>Verweis
 
 [API-Klasse](./api-class.md)
 
-[API-Mitglieder](./api-members.md)
+[API-Member](./api-members.md)
 
-[Microsoft. ISAM. ESENT. Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)
+[Microsoft.Isam.Esent.Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)

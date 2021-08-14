@@ -1,12 +1,12 @@
 ---
-title: Addcomputergroupnames-Methode der Win32_TSGatewayConnectionAuthorizationPolicy-Klasse
-description: Fügt die angegebenen Computer Gruppennamen der computergroupnames-Eigenschaft hinzu.
+title: AddComputerGroupNames-Methode der Win32_TSGatewayConnectionAuthorizationPolicy Klasse
+description: Fügt der ComputerGroupNames-Eigenschaft die angegebenen Computergruppennamen hinzu.
 ms.assetid: f0c440d6-0cc2-48b4-b656-65f12e652151
 ms.tgt_platform: multiple
 keywords:
-- Addcomputergroupnames-Methode Remotedesktopdienste
-- Addcomputergroupnames-Methode Remotedesktopdienste, Win32_TSGatewayConnectionAuthorizationPolicy-Klasse
-- Win32_TSGatewayConnectionAuthorizationPolicy-Klasse Remotedesktopdienste, addcomputergroupnames-Methode
+- AddComputerGroupNames-Remotedesktopdienste
+- AddComputerGroupNames-Methode Remotedesktopdienste , Win32_TSGatewayConnectionAuthorizationPolicy-Klasse
+- Win32_TSGatewayConnectionAuthorizationPolicy klasse Remotedesktopdienste , AddComputerGroupNames-Methode
 topic_type:
 - apiref
 api_name:
@@ -17,16 +17,16 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 72647ef66b9e2eeaed824b3e77c404214786b615
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: b495eecd7058a2baa854a02d93d05a66510ac5cc38fd897a3310d4acb15e0ef2
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104104342"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117757886"
 ---
-# <a name="addcomputergroupnames-method-of-the-win32_tsgatewayconnectionauthorizationpolicy-class"></a>Addcomputergroupnames-Methode der Win32- \_ Klasse "sgatewayconnectionauthorizationpolicy"
+# <a name="addcomputergroupnames-method-of-the-win32_tsgatewayconnectionauthorizationpolicy-class"></a>AddComputerGroupNames-Methode der Win32 \_ TSGatewayConnectionAuthorizationPolicy-Klasse
 
-Fügt die angegebenen Computer Gruppennamen der **computergroupnames** -Eigenschaft hinzu.
+Fügt der **ComputerGroupNames-Eigenschaft** die angegebenen Computergruppennamen hinzu.
 
 ## <a name="syntax"></a>Syntax
 
@@ -43,24 +43,24 @@ uint32 AddComputerGroupNames(
 
 <dl> <dt>
 
-*Computer groupnames* \[ in\]
+*ComputerGroupNames* \[ In\]
 </dt> <dd>
 
-Durch Semikolons getrennte Liste der Computer Gruppennamen, die der **computergroupnames** -Eigenschaft hinzugefügt werden sollen. Computer Gruppennamen müssen im Format " *Domäne \\ Computername*" vorliegen.
+Durch Semikolons getrennte Liste der Computergruppennamen, die der **ComputerGroupNames-Eigenschaft hinzugefügt werden.** Computergruppennamen müssen das Format *Domäne \\ ComputerGroupName haben.*
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Wenn die Methode erfolgreich ist, gibt Sie 0 (null) zurück. Wenn die Methode nicht erfolgreich ist, wird ein Wert ungleich 0 (null) zurückgegeben. Eine Liste der Fehlercodes finden Sie unter [Remotedesktopdienste Fehlercodes des WMI-Anbieters](terminal-services-wmi-provider-error-codes.md).
+Wenn die Methode erfolgreich ist, gibt sie 0 (null) zurück. Wenn die Methode nicht erfolgreich ist, wird ein Wert ungleich 0 (null) zurückgegeben. Eine Liste der Fehlercodes finden Sie unter Remotedesktopdienste [WMI-Anbieterfehlercodes](terminal-services-wmi-provider-error-codes.md).
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Wenn sich mehrere Computer Gruppennamen im *computergroupnames* -Parameter befinden und einer der Namen nicht verarbeitet werden kann, wird keiner der Namen verarbeitet.
+Wenn mehrere Computergruppennamen im *Parameter ComputerGroupNames* enthalten sind und einer der Namen nicht verarbeitet werden kann, wird keiner der Namen verarbeitet.
 
-Sie müssen Mitglied der Gruppe "Administratoren" sein, um diese Methode aufzurufen.
+Sie müssen Mitglied der Gruppe Administratoren sein, um diese Methode aufrufen zu können.
 
-Managed Object Format-Dateien (MOF) enthalten die Definitionen für Windows-Verwaltungsinstrumentation (WMI)-Klassen. MOF-Dateien werden nicht als Teil des Microsoft Windows Software Development Kit (SDK) installiert. Sie werden auf dem Server installiert, wenn Sie die zugehörige Rolle mithilfe der Server-Manager hinzufügen. Weitere Informationen zu MOF-Dateien finden Sie unter [Managed Object Format (MOF)](/windows/desktop/WmiSdk/managed-object-format--mof-).
+Managed Object Format -Dateien (MOF) enthalten die Definitionen für Windows WMI-Klassen (Management Instrumentation). MOF-Dateien werden nicht als Teil des Microsoft Windows Software Development Kit (SDK) installiert. Sie werden auf dem Server installiert, wenn Sie die zugeordnete Rolle mithilfe der Server-Manager. Weitere Informationen zu MOF-Dateien finden Sie unter [Managed Object Format (MOF).](/windows/desktop/WmiSdk/managed-object-format--mof-)
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -70,17 +70,17 @@ Managed Object Format-Dateien (MOF) enthalten die Definitionen für Windows-Verw
 |-------------------------------------|------------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Nicht unterstützt<br/>                                                                |
 | Unterstützte Mindestversion (Server)<br/> | Windows Server 2008<br/>                                                           |
-| Namespace<br/>                | Root \\ CIMv2 \\ TerminalServices<br/>                                                 |
-| MOF<br/>                      | <dl> <dt>"T-Gateway. mof"</dt> </dl> |
+| Namespace<br/>                | \\ \\ CiMv2-Stammterminaldienste<br/>                                                 |
+| MOF<br/>                      | <dl> <dt>TSGateway.mof</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>AagWmi.dll</dt> </dl>    |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Win32- \_ faigatewayconnectionauthorizationpolicy**](win32-tsgatewayconnectionauthorizationpolicy.md)
+[**Win32 \_ TSGatewayConnectionAuthorizationPolicy**](win32-tsgatewayconnectionauthorizationpolicy.md)
 </dt> </dl>
 
  

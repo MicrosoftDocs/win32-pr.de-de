@@ -1,69 +1,69 @@
 ---
-title: Portieren von Bildschirm-und Puffer Lösch Befehlen
-description: OpenGL ersetzt eine Reihe von IRIS GL Clear-Funktionen (z. b. zclear, aclear, sClear usw.) durch eine einzelne Funktion, glClear. Geben Sie genau an, was Sie löschen möchten, indem Sie Masken an glClear übergeben.
+title: Befehle zum Portieren des Bildschirms und Zum Löschen von Puffern
+description: OpenGL ersetzt eine Vielzahl von CLEAR-Funktionen für IRIS GL (zclear, aclear, sclear und so weiter) durch eine einzelne Funktion, glClear. Geben Sie genau an, was Sie löschen möchten, indem Sie Masken an glClear übergeben.
 ms.assetid: 52ba503d-e412-4815-a039-a039b41327f4
 keywords:
-- IRIS GL portieren, Löschen von Funktionen
-- Portieren von IRIS GL, Löschen von Funktionen
-- Portieren auf OpenGL von IRIS GL, Clear Functions
-- OpenGL-Portierung von IRIS GL, Clear Functions
-- Funktionen löschen
-- IRIS GL Porting, Befehle zum Löschen von Bildschirmen
-- portieren aus IRIS GL, Befehle zum Löschen von Bildschirmen
-- Portieren auf OpenGL von IRIS GL, Befehle zum Löschen von Bildschirmen
-- OpenGL-Portierung von IRIS GL, Befehle zum Löschen von Bildschirmen
-- Bildschirm Lösch Befehle
-- IRIS GL Porting, Befehle zum Löschen von Puffern
-- Portieren von IRIS GL, Puffer Lösch Befehle
-- Portieren von IRIS gl auf OpenGL, Puffer Lösch Befehle
-- OpenGL-Portierung von IRIS GL, Puffer Lösch Befehle
-- Puffer Lösch Befehle
+- IRIS GL-Portierung, Clear-Funktionen
+- Portieren von IRIS GL,Clear-Funktionen
+- Portieren von IRIS GL zu OpenGL, Löschen von Funktionen
+- OpenGL-Portierung von IRIS GL,Clear-Funktionen
+- Clear-Funktionen
+- IRIS GL-Portierung, Befehle zum Löschen des Bildschirms
+- Portieren von IRIS GL, Befehle zum Löschen des Bildschirms
+- Portieren von IRIS GL zu OpenGL, Befehle zum Löschen des Bildschirms
+- OpenGL-Portierung über IRIS GL, Befehle zum Löschen des Bildschirms
+- Befehle zum Löschen des Bildschirms
+- IRIS GL-Portierung, Befehle zum Löschen von Puffern
+- Portieren von IRIS GL,Befehle zum Löschen von Puffern
+- Portieren von IRIS GL zu OpenGL, Befehle zum Löschen von Puffern
+- OpenGL-Portierung über IRIS GL,Befehle zum Löschen von Puffern
+- Befehle zum Löschen von Puffern
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: e53566c9fe14922f3965133cef9e30cbea4548b4
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: fbff0fed3472fd4374605cb96dbae845998c0ba2d8ce488420f9b4c6895a07c9
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "106341463"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117794875"
 ---
-# <a name="porting-screen-and-buffer-clearing-commands"></a>Portieren von Bildschirm-und Puffer Lösch Befehlen
+# <a name="porting-screen-and-buffer-clearing-commands"></a>Befehle zum Portieren des Bildschirms und Zum Löschen von Puffern
 
-OpenGL ersetzt eine Reihe von IRIS GL **Clear** -Funktionen (z. b. **zclear**, **aclear**, **sClear** usw.) durch eine einzelne Funktion, [**glClear**](glclear.md). Geben Sie genau an, was Sie löschen möchten, indem Sie Masken an **glClear** übergeben.
+OpenGL ersetzt eine Vielzahl von clear-Funktionen von IRIS **GL** **(zclear, aclear,** **sclear** und so weiter) durch eine einzelne Funktion, [**glClear**](glclear.md).  Geben Sie genau an, was Sie löschen möchten, indem Sie Masken an **glClear übergeben.**
 
-Beachten Sie die folgenden Punkte, wenn Sie Bildschirm-und Puffer Befehle portieren:
+Beachten Sie beim Portieren von Bildschirm- und Pufferbefehlen folgende Punkte:
 
--   Bei OpenGL wird das Löschen von Farben getrennt von Zeichnungs Farben mit aufrufen wie " [**glclearcolor**](glclearcolor.md) " und " [**glclearindex**](glclearindex.md)" beibehalten. Stellen Sie sicher, dass Sie die klar Farbe für jeden Puffer vor dem Löschen festlegen.
--   Anstatt einen von mehreren unterschiedlichen benannten Clear-aufrufen zu verwenden, löschen Sie nun mehrere Puffer mit einem Aufruf, einem [**glClear**](glclear.md)- **oder** -up-Puffer Masken. Beispielsweise wird " **czclear** " durch Folgendes ersetzt:
+-   OpenGL verwaltet das Löschen von Farben getrennt vom Zeichnen von Farben mit Aufrufen wie [**glClearColor**](glclearcolor.md) und [**glClearIndex.**](glclearindex.md) Achten Sie darauf, dass Sie vor dem Löschen die klare Farbe für jeden Puffer festlegen.
+-   Anstatt einen von mehreren unterschiedlich benannten clear-Aufrufen zu verwenden, löschen Sie jetzt mehrere Puffer mit einem Aufruf, [**glClear,**](glclear.md)durch **OR,** indem Sie Puffermasken zusammen verwenden. Beispielsweise wird **"clear"** durch Folgendes ersetzt:
 
     ``` syntax
     glClear( GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT )
     ```
 
--   IRIS GL verweist auf den Polygon Stippel und die Farb schreibfrage. OpenGL ignoriert den Polygon-Stippel, verweist jedoch auf die Farb schreibfrage. (Die Funktion " **czclear** " ignoriert sowohl den Polygon Stippel als auch die Farb schreibfrage.)
+-   IRIS GL verweist auf den Polygonausschnitt und die Farb-Schreibmaske. OpenGL ignoriert den Polygonausschnitt, verweist aber auf die Farb-Schreibmaske. (Die **funktion "clear"** ignoriert sowohl den Polygonausschnitt als auch die Farb-Schreibmaske.)
 
-In der folgenden Tabelle werden die verschiedenen "IRIS GL Clear"-Funktionen mit ihren entsprechenden OpenGL-Funktionen aufgelistet.
+In der folgenden Tabelle sind die verschiedenen clear-Funktionen von IRIS GL mit den entsprechenden OpenGL-Funktionen aufgeführt.
 
 
 
-| IRIS GL-Befehl         | OpenGL-Befehl                                                               | Bedeutung                                           |
+| IRIS GL-Aufruf         | OpenGL-Aufruf                                                               | Bedeutung                                           |
 |----------------------|---------------------------------------------------------------------------|---------------------------------------------------|
-| **acbuf**(AC \_ Clear) | **glClear**(GL- \_ Accum- \_ Puffer \_ Bit)                                     | Löschen Sie den Akkumulations Puffer.                    |
-|                      | **glclearcolor**                                                          | Legen Sie die RGBA-Clear-Farbe fest.                         |
-|                      | **glclearindex**                                                          | Legen Sie den Clear-Color-Index fest.                        |
-| **Löschen**            | **glClear**(GL- \_ Farb \_ Puffer \_ Bit)                                     | Löschen Sie den Farb Puffer.                           |
-|                      | **glcleartiefe**                                                          | Geben Sie den undeutlichen Wert für den tiefen Puffer an.     |
-| **zclear**           | **glClear**(GL- \_ Tiefe- \_ Puffer \_ Bit)                                     | Löschen Sie den tiefen Puffer.                           |
-| **czclear**          | **glClear**(GL- \_ Farb \_ Puffer Bit-GL- \_ \| \_ tiefen \_ Puffer \_ Bit)<br/> | Löschen Sie den Farb Puffer und den tiefen Puffer.      |
-|                      | **glclearaccum**                                                          | Geben Sie eindeutige Werte für den Akkumulations Puffer an. |
-|                      | **glclearstencil**                                                        | Geben Sie den undeutlichen Wert für den Schablonen Puffer an.   |
-| **sClear**           | **glClear**(GL- \_ Schablone- \_ Puffer \_ Bit)                                   | Löschen Sie den Schablonen Puffer.                         |
+| **acbuf**(AC \_ CLEAR) | **glClear**( \_ GL BUFFERM \_ BUFFER BIT \_ )                                     | Löschen Sie den Akkumulationspuffer.                    |
+|                      | **glClearColor**                                                          | Legen Sie die RGBA-Klarfarbe fest.                         |
+|                      | **glClearIndex**                                                          | Legen Sie den Clear-Color-Index fest.                        |
+| **Löschen**            | **glClear**( GL \_ COLOR BUFFER BIT \_ \_ )                                     | Löschen Sie den Farbpuffer.                           |
+|                      | **glClearDepth**                                                          | Geben Sie den eindeutigen Wert für den Tiefenpuffer an.     |
+| **zclear**           | **glClear**( GL \_ DEPTH BUFFER BIT \_ \_ )                                     | Löschen Sie den Tiefenpuffer.                           |
+| **-100000000**          | **glClear**( GL \_ COLOR BUFFER BIT GL DEPTH BUFFER BIT \_ \_ \| \_ \_ \_ )<br/> | Löschen Sie den Farbpuffer und den Tiefenpuffer.      |
+|                      | **glClearAccum**                                                          | Geben Sie klare Werte für den Akkumulationspuffer an. |
+|                      | **glClearStencil**                                                        | Geben Sie den unverankerten Wert für den Schablonenpuffer an.   |
+| **sclear**           | **glClear**( GL \_ STENCIL \_ BUFFER BIT \_ )                                   | Löschen Sie den Schablonenpuffer.                         |
 
 
 
  
 
-Wenn Ihr IRIS GL-Code sowohl **gclear** als auch **sClear** verwendet, können Sie diese in einem einzelnen **glClear** -Befehl kombinieren. kann die Leistung des Programms verbessern.
+Wenn Ihr IRIS GL-Code **sowohl gclear** als auch **sclear verwendet,** können Sie sie in einem einzelnen **glClear-Aufruf** kombinieren. kann die Leistung Ihres Programms verbessern.
 
  
 

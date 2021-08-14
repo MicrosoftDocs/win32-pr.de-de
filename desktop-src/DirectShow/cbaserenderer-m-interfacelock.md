@@ -1,7 +1,7 @@
 ---
-description: Filter-State-Sperre.
+description: Filterzustandssperre.
 ms.assetid: ff29d6b1-ff65-4ee9-b64e-6067a06671f4
-title: 'Cbaserenderer:: m_InterfaceLock Member (renbase. h)'
+title: CBaseRenderer::m_InterfaceLock-Mitglied (Renbase.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -16,16 +16,16 @@ api_location:
 - Strmbase.dll
 - Strmbasd.lib
 - Strmbasd.dll
-ms.openlocfilehash: a3fd401419706cbe792ab52df691cf47a711c541
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: ec9e8a285c6333181efbef46a127ef930a496ba94e69a7e611413bd0ada246ee
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106359769"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118402964"
 ---
-# <a name="cbaserendererm_interfacelock-member"></a>Cbaserenderer:: m \_ interfakelock-Member
+# <a name="cbaserendererm_interfacelock-member"></a>CBaseRenderer::m \_ InterfaceLock-Member
 
-Filter-State-Sperre.
+Filterzustandssperre.
 
 ## <a name="syntax"></a>Syntax
 
@@ -42,16 +42,16 @@ CCritSec m_InterfaceLock;
 
 | Anforderung | Wert |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>Renbase. h (Include Streams. h)</dt> </dl>                                                                                   |
-| Bibliothek<br/> | <dl> " <dt>Straumbase. lib" (Einzelhandels Builds);</dt> " <dt>Straumbasd. lib" (Debugbuilds)</dt> </dl> |
+| Header<br/>  | <dl> <dt>Renbase.h (include Streams.h)</dt> </dl>                                                                                   |
+| Bibliothek<br/> | <dl> <dt>Strmbase.lib (Einzelhandels-Builds); </dt> <dt>Strmbasd.lib (Debugbuilds)</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Cbaserderderer-Klasse**](cbaserenderer.md)
+[**CBaseRenderer-Klasse**](cbaserenderer.md)
 </dt> </dl>
 
  

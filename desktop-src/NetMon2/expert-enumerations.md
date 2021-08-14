@@ -1,38 +1,38 @@
 ---
-description: Die expertenstrukturen verwenden diese Enumeration.
+description: Die Expertenstrukturen verwenden diese Enumeration.
 ms.assetid: 62a824d6-0f0d-465a-8b3a-e462104ec612
-title: Expertenenumerationen
+title: Expert-Enumerationen
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 9f15574f3d3fcb58e195fcfa7e1cc24f7ec91a25
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 74475e032a351ed91f77a38ec2c979613b059b5efa86c690a216754092a30886
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "103862028"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118367101"
 ---
-# <a name="expert-enumerations"></a>Expertenenumerationen
+# <a name="expert-enumerations"></a>Expert-Enumerationen
 
-Die expertenstrukturen verwenden diese Enumeration.
+Die Expertenstrukturen verwenden diese Enumeration.
 
 
 
 | Enumeration                                            | Beschreibung             |
 |--------------------------------------------------------|-------------------------|
-| ["Expertstatus usenumeration"](expertstatusenumeration.md) | Stellt Statuswerte bereit. |
+| [EXPERTSTATUSENUMERATION](expertstatusenumeration.md) | Stellt Statuswerte zur |
 
 
 
  
 
-Netzwerkmonitor bietet auch Exportfunktionen, Hilfsfunktionen, die der Experte aufzurufen kann, Strukturen und Enumerationen.
+Netzwerkmonitor bietet auch Exportfunktionen, Hilfsfunktionen, die der Experte aufrufen kann, Strukturen und Enumerationen.
 
 
 
 | Informationen über                               | Finden Sie unter                                                                          |
 |-----------------------------------------------------|------------------------------------------------------------------------------|
-| Funktionen, die Experten exportieren.                      | [Export Funktionen der Experten-dll](expert-dll-export-functions.md)               |
-| Hilfsfunktionen, die von Experten und Parser aufgerufen werden können. | [Allgemeine Funktionen für Experten und Parser](expert-and-parser-common-functions.md) |
+| Funktionen, die Experten exportieren.                      | [Exportfunktionen der Expert-DLL](expert-dll-export-functions.md)               |
+| Hilfsfunktionen, die Experten und Parser aufrufen können. | [Allgemeine Funktionen von Experten und Parsern](expert-and-parser-common-functions.md) |
 | Hilfsfunktionen, die nur von Experten aufgerufen werden.   | [Expertenfunktionen](expert-functions.md)                                     |
 | Strukturen, die von Expertenfunktionen verwendet werden.               | [Expertenstrukturen](expert-structures.md)                                   |
 

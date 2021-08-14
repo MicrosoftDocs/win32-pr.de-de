@@ -4,34 +4,34 @@ ms.assetid: 1c003534-96b4-419b-94d1-73b5ffa2eba1
 title: Festlegen von Eigenschaften für ein einzelnes Objekt
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 5649d05ccadfeaef0dd8805abd7d556f7725f175
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 44a38964282b4ff6a51ee104bafc596f40f6107a87ae8069eba84a25386e7842
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106350139"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119704280"
 ---
 # <a name="setting-properties-for-a-single-object"></a>Festlegen von Eigenschaften für ein einzelnes Objekt
 
-Nachdem die Anwendung einen Objekt Bezeichner abgerufen hat (siehe das Thema zum Auflisten von [Inhalten](enumerating-content.md) ), können Sie die Eigenschaften für dieses Objekt festlegen, indem Sie Methoden in den in der folgenden Tabelle beschriebenen Schnittstellen aufrufen.
+Nachdem Ihre Anwendung einen Objektbezeichner (siehe das Thema [Enumerating Content)](enumerating-content.md) für ein bestimmtes Objekt abgerufen hat, kann sie Eigenschaften für dieses Objekt festlegen, indem sie Methoden in den schnittstellen aufruft, die in der folgenden Tabelle beschrieben werden.
 
 
 
 | Schnittstelle                                                                | BESCHREIBUNG                                                                                                                                                 |
 |--------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| [**Iportabledeviceproperties-Schnittstelle**](/windows/desktop/api/portabledeviceapi/nn-portabledeviceapi-iportabledeviceproperties) | Wird verwendet, um zu bestimmen, ob eine bestimmte Eigenschaft geschrieben werden kann, und um den Schreibvorgang zu senden.                                                                  |
-| [**Iportabledevicecontent-Schnittstelle**](/windows/desktop/api/portabledeviceapi/nn-portabledeviceapi-iportabledevicecontent)       | Ermöglicht den Zugriff auf die Inhalts spezifischen Methoden.                                                                                                            |
-| [**Iportabledebug-Schnittstelle**](iportabledevicevalues.md)         | Dient zum Speichern der zu schreibenden Werte, zum Bestimmen der Ergebnisse des Schreibvorgangs und zum Abrufen von Attribut Attributen (beim Bestimmen der Schreibfunktion). |
+| [**IPortableDeviceProperties-Schnittstelle**](/windows/desktop/api/portabledeviceapi/nn-portabledeviceapi-iportabledeviceproperties) | Wird verwendet, um zu bestimmen, ob eine bestimmte Eigenschaft geschrieben werden kann, und um den Schreibvorgang zu senden.                                                                  |
+| [**IPortableDeviceContent-Schnittstelle**](/windows/desktop/api/portabledeviceapi/nn-portabledeviceapi-iportabledevicecontent)       | Ermöglicht den Zugriff auf die inhaltsspezifischen Methoden.                                                                                                            |
+| [**IPortableDeviceValues-Schnittstelle**](iportabledevicevalues.md)         | Wird verwendet, um die zu schreibenden Werte zu speichern, die Ergebnisse des Schreibvorgangs zu bestimmen und Attribute von Eigenschaften abzurufen (beim Bestimmen der Schreibfunktion). |
 
 
 
  
 
-Anwendungen legen Eigenschaften für ein Objekt fest, indem Sie zuerst einen Eigenschaften Behälter erstellen, der die neuen Werte mithilfe der [**iportabledebug-Schnittstelle**](iportabledevicevalues.md)angibt. Nachdem der Eigenschaften Behälter erstellt wurde, legt eine Anwendung diese Eigenschaften fest, indem Sie die [**iportabledeviceproperties:: SetValues**](/windows/desktop/api/PortableDeviceApi/nf-portabledeviceapi-iportabledeviceproperties-setvalues) -Methode aufruft.
+Anwendungen legen Eigenschaften für ein Objekt fest, indem sie zuerst einen Eigenschaftenbehälter erstellen, der die neuen Werte mithilfe der [**IPortableDeviceValues-Schnittstelle**](iportabledevicevalues.md)angibt. Nachdem die Eigenschaftensammlung erstellt wurde, legt eine Anwendung diese Eigenschaften fest, indem sie die [**IPortableDeviceProperties::SetValues-Methode aufruft.**](/windows/desktop/api/PortableDeviceApi/nf-portabledeviceapi-iportabledeviceproperties-setvalues)
 
-Die `WriteContentProperties` Funktion im Modul contentproperties. cpp der Beispielanwendung veranschaulicht, wie eine Anwendung für ein ausgewähltes Objekt eine neue Eigenschaft für den Objektnamen festlegen könnte.
+Die `WriteContentProperties` Funktion im ContentProperties.cpp-Modul der Beispielanwendung veranschaulicht, wie eine Anwendung eine neue Objektnameneigenschaft für ein ausgewähltes Objekt festlegen kann.
 
-Die erste Aufgabe, die von der-Funktion durchgeführt `WriteContentProperties` wird, besteht darin, den Benutzer zur Eingabe eines Objekt Bezeichners für das Objekt aufzufordern, für das die Anwendung den neuen Namen schreiben soll.
+Die erste Aufgabe der `WriteContentProperties` Funktion besteht darin, den Benutzer aufzufordern, einen Objektbezeichner für das Objekt einzugeben, für das die Anwendung den neuen Namen schreibt.
 
 
 ```C++
@@ -56,7 +56,7 @@ if (FAILED(hr))
 
 
 
-Danach ruft die Anwendung das WPD- \_ Eigenschafts Attribut ab und \_ \_ kann \_ einen Wert für die Eigenschaft WPD- \_ Objekt \_ Name schreiben, um zu bestimmen, ob die Eigenschaft geschrieben werden kann. (Beachten Sie, dass Ihre Anwendung jede Eigenschaft festlegen kann, für die die WPD \_ Das Eigenschafts \_ Attribut \_ kann den Wert "true" \_ schreiben.)
+Danach ruft die Anwendung den WPD \_ PROPERTY \_ ATTRIBUTE CAN \_ \_ WRITE-Wert für die WPD \_ OBJECT \_ NAME-Eigenschaft ab, um zu bestimmen, ob die Eigenschaft geschrieben werden kann. (Beachten Sie, dass Ihre Anwendung eine beliebige Eigenschaft festlegen kann, für die die WPD \_ PROPERTY \_ ATTRIBUTE CAN WRITE value is \_ \_ true.)
 
 
 ```C++
@@ -110,7 +110,7 @@ if (SUCCEEDED(hr))
 
 
 
-Der nächste Schritt besteht darin, den Benutzer zur Eingabe der neuen Namens Zeichenfolge aufzufordern. (Beachten Sie, dass durch den Aufrufen der [**iportabledevicevalues:: SetStringValue**](iportabledevicevalues-setstringvalue.md) -Methode lediglich der Eigenschaften Behälter erstellt wird. die tatsächliche Eigenschaft wurde noch nicht geschrieben.)
+Der nächste Schritt besteht darin, den Benutzer zur Eingabe der neuen Namenszeichenfolge aufzufordern. (Beachten Sie, dass der Aufruf der [**IPortableDeviceValues::SetStringValue-Methode**](iportabledevicevalues-setstringvalue.md) lediglich den Eigenschaftenbehälter erstellt. Die tatsächliche Eigenschaft wurde noch nicht geschrieben.)
 
 
 ```C++
@@ -147,7 +147,7 @@ if (bCanWrite)
 
 
 
-Schließlich wird der neue Wert, der vom Benutzer angegeben wird, auf das Objekt angewendet.
+Schließlich wird der vom Benutzer angegebene neue Wert auf das -Objekt angewendet.
 
 
 ```C++
@@ -173,22 +173,22 @@ if (SUCCEEDED(hr))
 
 <dl> <dt>
 
-[**Iportabledevice-Schnittstelle**](/windows/desktop/api/PortableDeviceApi/nn-portabledeviceapi-iportabledevice)
+[**IPortableDevice-Schnittstelle**](/windows/desktop/api/PortableDeviceApi/nn-portabledeviceapi-iportabledevice)
 </dt> <dt>
 
-[**Iportabledevicecontent-Schnittstelle**](/windows/desktop/api/portabledeviceapi/nn-portabledeviceapi-iportabledevicecontent)
+[**IPortableDeviceContent-Schnittstelle**](/windows/desktop/api/portabledeviceapi/nn-portabledeviceapi-iportabledevicecontent)
 </dt> <dt>
 
-[**Iportabledevicekeycollection-Schnittstelle**](iportabledevicekeycollection.md)
+[**IPortableDeviceKeyCollection-Schnittstelle**](iportabledevicekeycollection.md)
 </dt> <dt>
 
-[**Iportabledeviceproperties-Schnittstelle**](/windows/desktop/api/portabledeviceapi/nn-portabledeviceapi-iportabledeviceproperties)
+[**IPortableDeviceProperties-Schnittstelle**](/windows/desktop/api/portabledeviceapi/nn-portabledeviceapi-iportabledeviceproperties)
 </dt> <dt>
 
-[**Iportabledevicepropertiesbulk-Schnittstelle**](/windows/desktop/api/PortableDeviceApi/nn-portabledeviceapi-iportabledevicepropertiesbulk)
+[**IPortableDevicePropertiesBulk-Schnittstelle**](/windows/desktop/api/PortableDeviceApi/nn-portabledeviceapi-iportabledevicepropertiesbulk)
 </dt> <dt>
 
-[**Iportabledevicepropvariantcollection-Schnittstelle**](iportabledevicepropvariantcollection.md)
+[**IPortableDevicePropVariantCollection-Schnittstelle**](iportabledevicepropvariantcollection.md)
 </dt> <dt>
 
 [**Programmierhandbuch**](programming-guide.md)

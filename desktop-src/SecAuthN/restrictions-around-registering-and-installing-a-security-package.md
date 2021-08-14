@@ -1,23 +1,23 @@
 ---
-description: Aktionen von Sicherheitspaketen, die in Windows nicht unterstützt werden.
+description: Aktionen von Sicherheitspaketen, die in der Anwendung nicht Windows.
 ms.assetid: E2BF8041-DF2F-4282-A3CC-A15FF2D7F4A2
-title: Einschränkungen bei der Registrierung und Installation eines Sicherheitspakets
+title: Einschränkungen beim Registrieren und Installieren eines Sicherheitspakets
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 5dd10cd8e2e98d4dccfc3a6230c3daecaeb8fec0
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: dce9f2d81a0a724d232e39c6e6fd7565b946ca319ba9f134041f6865b4bb2450
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "103749609"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118918906"
 ---
-# <a name="restrictions-around-registering-and-installing-a-security-package"></a>Einschränkungen bei der Registrierung und Installation eines Sicherheitspakets
+# <a name="restrictions-around-registering-and-installing-a-security-package"></a>Einschränkungen beim Registrieren und Installieren eines Sicherheitspakets
 
-Das entfernen, ersetzen oder Umpacken von Posteingang-Sicherheitspaketen (z. b. Kerberos oder NTLM) wird in Windows nicht unterstützt, und ab dem 10. Januar 2017 wird dies verhindert. Sicherheitspakete von Drittanbietern (SSPs/APS) können hinzugefügt werden. Windows unterstützt jedoch nicht das Entfernen vorkonfigurierter SSPs/APS. Insbesondere wird die Bearbeitung der Registrierungs Einstellung für das **HKLM- \\ System \\ CurrentControlSet \\ Control \\ LSA \\ osconfig \\ Security Packages** nie unterstützt.
+Das Entfernen, Ersetzen oder Umschließen von Posteingangssicherheitspaketen (z. B. Kerberos oder NTLM) wird in Windows nicht unterstützt, und ab dem 10. Januar 2017 wird dies verhindert. Sicherheitspakete von Drittanbietern (SSPs/APs) können hinzugefügt werden. Allerdings unterstützt Windows das Entfernen vorkonfigurierten SSPs/APs nicht. Insbesondere das Bearbeiten der **Registrierungseinstellung HKLM \\ SYSTEM \\ CurrentControlSet \\ Control \\ Lsa \\ OSConfig Security \\ Packages** wurde nie unterstützt.
 
-Ab Windows 8.1 können Kunden, die zusätzliche Funktionen bereitstellen möchten, ihre Sicherheitspakete mithilfe der Registrierungs Einstellung **HKLM \\ System \\ CurrentControlSet \\ Control \\ LSA \\ Security Packages** (Registrieren von [SSP/AP-DLLs](registering-ssp-ap-dlls.md)) und der zugehörigen Registrierungs Einstellung **SecurityProviders** ([schreiben und Installieren eines Sicherheits Unterstützungs Anbieters](writing-and-installing-a-security-support-provider.md)) hinzufügen, falls zutreffend. Der Zweck von [Sicherheitspaketen](../secgloss/s-gly.md#_security_security_package_gly) besteht darin, neue *Sicherheitsprotokolle* zu implementieren, die in Form eines Security Support Provider (SSP) oder eines [Authentifizierungs Pakets](../secgloss/a-gly.md#_security_authentication_package_gly) (AP) vorliegen können. Der Zweck eines SSP besteht darin, *authentifizierte Verbindungs*-, *Nachrichten Integritäts*-und *Nachrichten Verschlüsselungsdienste* bereitzustellen, die im System nicht bereits unterstützt werden, während ein Zugriffspunkt verwendet wird, um eine neue *Authentifizierungs Logik* hinzuzufügen, mit der bestimmt wird, ob sich ein Benutzer anmelden kann.
+Ab Windows 8.1 können Kunden, die zusätzliche Funktionen bereitstellen möchten, ihre Sicherheitspakete mithilfe der Registrierungseinstellung **HKLM \\ SYSTEM \\ CurrentControlSet \\ Control \\ Lsa Security \\ Packages** ([Registering SSP/AP DLLs)](registering-ssp-ap-dlls.md)und der zugehörigen Registrierungseinstellung SecurityProviders ([Writing and Installing a Security Support Provider](writing-and-installing-a-security-support-provider.md)) (Schreiben und Installieren eines Sicherheitssupportanbieters) hinzufügen.  Darüber hinaus besteht der Zweck von  [Sicherheitspaketen](../secgloss/s-gly.md#_security_security_package_gly) in der Implementierung neuer Sicherheitsprotokolle, die in Form eines Sicherheitssupportanbieters (Security Support Provider, SSP) oder eines Authentifizierungspakets [(AP)](../secgloss/a-gly.md#_security_authentication_package_gly) verwendet werden können. Der Zweck eines SSP besteht im Bereitstellen authentifizierter  Verbindungs-, Nachrichtenintegritäts- und Nachrichtenverschlüsselungsdienste, die nicht  bereits im System unterstützt werden, während ein AP verwendet wird, um eine neue Authentifizierungslogik hinzuzufügen, die verwendet wird, um zu bestimmen, ob ein Benutzer sich anmelden darf. 
 
-Microsoft ist in die Kunden Sicherheit investiert und versucht sicherzustellen, dass kritische Prozesse wie SSPs und APS nicht einfach aus dem System entfernt werden können. Daher wurde die Registrierungs Einstellung für das **HKLM- \\ System \\ CurrentControlSet \\ Control \\ LSA \\ osconfig \\ Security Packages** auf Windows 8.1 eingeschränkt, um Änderungen zu verhindern. Um Sicherheitspakete von Drittanbietern zu vereinfachen, wurde das **HKLM \\ System \\ CurrentControlSet \\ Control \\ LSA \\ Security Packages** als festgelegte Einstellung für benutzerdefinierte SSPs/APS festgelegt. Es wird ferner empfohlen, dass sämtliche Funktionen in benutzerdefinierten SSPs/APS, die außerhalb des Bereichs der von Microsoft definierten Sicherheitspakete liegen, aus solchen benutzerdefinierten SSPs/APS entfernt werden, und dass die Posteingang-Sicherheitspakete von keinem Produkt entfernt werden.
+Microsoft investiert in die Kundensicherheit und versucht sicherzustellen, dass wichtige Prozesse wie SSPs und APs nicht einfach aus dem System austauschbar sind. Daher wurde die **Registrierungseinstellung HKLM \\ SYSTEM \\ CurrentControlSet \\ Control \\ Lsa \\ OSConfig Security \\ Packages** ab Windows 8.1 eingeschränkt, um Änderungen daran zu verhindern. Zur Vereinfachung von Sicherheitspaketen von Drittanbietern wurde **HKLM \\ SYSTEM \\ CurrentControlSet \\ Control \\ Lsa Security \\ Packages** zur festgelegten Einstellung für benutzerdefinierte SSPs/APs gemacht. Darüber hinaus wird empfohlen, alle Funktionen in benutzerdefinierten SSPs/APs, die außerhalb des von Microsoft definierten Bereichs von Sicherheitspaketen liegen, aus solchen benutzerdefinierten SSPs/APs zu entfernen, und dass Posteingangssicherheitspakete von keinen Produkten entfernt werden.
 
  
 

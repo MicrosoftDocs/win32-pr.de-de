@@ -4,40 +4,40 @@ description: Anwenden von Transformationen in Direct2D
 ms.assetid: 4b54dcfc-f915-4e4a-aa88-ee23c341c2a4
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 8edddbb3150f16428c56bd4c6da828c9b2ce594e
-ms.sourcegitcommit: ebd3ce6908ff865f1ef66f2fc96769be0aad82e1
+ms.openlocfilehash: ab83cb9a7981ada944de07e362c2f568889a84a4f90f2171150fbab948ab3a6f
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/19/2020
-ms.locfileid: "103727337"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118388490"
 ---
 # <a name="applying-transforms-in-direct2d"></a>Anwenden von Transformationen in Direct2D
 
-Beim [Zeichnen mit Direct2D](drawing-with-direct2d.md)haben wir gesehen, dass die [**ID2D1RenderTarget:: FillEllipse**](/windows/win32/api/d2d1/nf-d2d1-id2d1rendertarget-fillellipse(constd2d1_ellipse__id2d1brush)) -Methode eine Ellipse zeichnet, die an der x-und y-Achse ausgerichtet ist. Angenommen, Sie möchten eine Ellipse, die an einem Winkel gekippt ist, zeichnen?
+Beim [Zeichnen mit Direct2D](drawing-with-direct2d.md)haben wir gesehen, dass die [**ID2D1RenderTarget::FillEllipse-Methode**](/windows/win32/api/d2d1/nf-d2d1-id2d1rendertarget-fillellipse(constd2d1_ellipse__id2d1brush)) eine Ellipse zeichnet, die an den x- und y-Achsen ausgerichtet ist. Angenommen, Sie möchten eine Ellipse zeichnen, die in einem Winkel geneigt ist?
 
-![ein Bild, das eine gekippte Ellipse anzeigt.](images/graphics16.png)
+![Ein Bild, das eine geneigte Ellipse zeigt.](images/graphics16.png)
 
-Mithilfe von Transformationen können Sie eine Form wie folgt ändern.
+Mithilfe von Transformationen können Sie eine Form auf folgende Weise ändern.
 
 -   Drehung um einen Punkt.
 -   Skalieren.
--   Übersetzung (Verschiebung in der X-oder Y-Richtung).
--   Schiefe (auch als *Schere* bezeichnet).
+-   Übersetzung (Verschiebung in X- oder Y-Richtung).
+-   Schiefe (auch als *"Schubar"* bezeichnet).
 
-Eine Transformation ist eine mathematische Operation, bei der eine Gruppe von Punkten einem neuen Satz von Punkten zugeordnet wird. Das folgende Diagramm zeigt z. b. ein Dreieck, das um den Punkt P3 gedreht wurde. Nachdem die Drehung angewendet wurde, wird der Punkt P1 "P1" zugeordnet, der Punkt P2 wird P2 zugeordnet, und der Punkt P3 wird sich selbst zugeordnet.
+Eine Transformation ist ein mathematischer Vorgang, bei dem eine Gruppe von Punkten einem neuen Satz von Punkten zugeordnet wird. Das folgende Diagramm zeigt beispielsweise ein Dreieck, das um den Punkt P3 gedreht wird. Nachdem die Drehung angewendet wurde, wird der Punkt P1 " zugeordnet, der Punkt P2 wird P2 zugeordnet, und der Punkt P3 wird sich selbst zugeordnet.
 
-![ein Diagramm, das die Drehung um einen Punkt zeigt.](images/graphics17.png)
+![Ein Diagramm, das die Drehung um einen Punkt zeigt.](images/graphics17.png)
 
-Transformationen werden mithilfe von Matrizen implementiert. Allerdings müssen Sie die Mathematik von Matrizen nicht verstehen, um Sie zu verwenden. Weitere Informationen über die mathematische Informationen finden Sie unter [Anhang: Matrix Transformationen](appendix--matrix-transforms.md).
+Transformationen werden mithilfe von Matrizen implementiert. Sie müssen jedoch die Mathematik von Matrizen nicht verstehen, um sie verwenden zu können. Weitere Informationen zur Mathematik finden Sie unter [Anhang: Matrixtransformationen.](appendix--matrix-transforms.md)
 
-Um eine Transformation in Direct2D anzuwenden, müssen Sie die [**ID2D1RenderTarget:: setTransform**](/windows/desktop/Direct2D/id2d1rendertarget-settransform) -Methode aufrufen. Diese Methode nimmt eine [**D2D1 \_ Matrix \_ 3x2 \_ F-**](/windows/desktop/Direct2D/d2d1-matrix-3x2-f) Struktur an, die die Transformation definiert. Sie können diese Struktur initialisieren, indem Sie Methoden für die [**D2D1:: Matrix3x2F**](/windows/desktop/api/d2d1helper/nl-d2d1helper-matrix3x2f) -Klasse aufrufen. Diese Klasse enthält statische Methoden, die eine Matrix für jede Art von Transformation zurückgeben:
+Um eine Transformation in Direct2D anzuwenden, rufen Sie die [**ID2D1RenderTarget::SetTransform-Methode**](/windows/desktop/Direct2D/id2d1rendertarget-settransform) auf. Diese Methode verwendet eine [**D2D1 \_ MATRIX \_ 3X2 \_ F-Struktur,**](/windows/desktop/Direct2D/d2d1-matrix-3x2-f) die die Transformation definiert. Sie können diese Struktur initialisieren, indem Sie Methoden für die [**D2D1::Matrix3x2F-Klasse**](/windows/desktop/api/d2d1helper/nl-d2d1helper-matrix3x2f) aufrufen. Diese Klasse enthält statische Methoden, die eine Matrix für jede Art von Transformation zurückgeben:
 
--   [**Matrix3x2F:: Rotation**](/windows/desktop/api/d2d1helper/nf-d2d1helper-matrix3x2f-rotation)
--   [**Matrix3x2F:: Scale**](/windows/win32/api/d2d1helper/nf-d2d1helper-matrix3x2f-scale(d2d1_size_f_d2d1_point_2f))
--   [**Matrix3x2F:: Translation**](/windows/win32/api/d2d1helper/nf-d2d1helper-matrix3x2f-translation(d2d1_size_f))
--   [**Matrix3x2F:: schiefe**](/windows/desktop/api/d2d1helper/nf-d2d1helper-matrix3x2f-skew)
+-   [**Matrix3x2F::Rotation**](/windows/desktop/api/d2d1helper/nf-d2d1helper-matrix3x2f-rotation)
+-   [**Matrix3x2F::Scale**](/windows/win32/api/d2d1helper/nf-d2d1helper-matrix3x2f-scale(d2d1_size_f_d2d1_point_2f))
+-   [**Matrix3x2F::Translation**](/windows/win32/api/d2d1helper/nf-d2d1helper-matrix3x2f-translation(d2d1_size_f))
+-   [**Matrix3x2F::Skew**](/windows/desktop/api/d2d1helper/nf-d2d1helper-matrix3x2f-skew)
 
-Mit dem folgenden Code wird z. b. eine 20-Grad-Drehung um den Punkt (100, 100) angewendet.
+Der folgende Code wendet beispielsweise eine Drehung um 20 Grad um den Punkt (100, 100) an.
 
 
 ```C++
@@ -45,20 +45,20 @@ pRenderTarget->SetTransform(
     D2D1::Matrix3x2F::Rotation(20, D2D1::Point2F(100,100)));
 ```
 
-Die Transformation wird auf alle späteren Zeichnungsvorgänge angewendet, bis Sie [**setTransform**](/windows/desktop/Direct2D/id2d1rendertarget-settransform) erneut aufrufen. Zum Entfernen der aktuellen Transformation aufrufen Sie **setTransform** mit der Identitätsmatrix. Um die Identitätsmatrix zu erstellen, rufen Sie die [**Matrix3x2F:: Identity**](/windows/desktop/api/d2d1helper/nf-d2d1helper-identitymatrix) -Funktion auf.
+Die Transformation wird auf alle späteren Zeichnungsvorgänge angewendet, bis Sie [**SetTransform**](/windows/desktop/Direct2D/id2d1rendertarget-settransform) erneut aufrufen. Um die aktuelle Transformation zu entfernen, rufen **Sie SetTransform** mit der Identitätsmatrix auf. Um die Identitätsmatrix zu erstellen, rufen Sie die [**Matrix3x2F::Identity-Funktion**](/windows/desktop/api/d2d1helper/nf-d2d1helper-identitymatrix) auf.
 
 
 ```C++
 pRenderTarget->SetTransform(D2D1::Matrix3x2F::Identity());
 ```
 
-## <a name="drawing-clock-hands"></a>Zeichnen von Takt Händen
+## <a name="drawing-clock-hands"></a>Zeichnen von Uhrzeigern
 
-Wir setzen Transformationen ein, indem wir unser kreisprogramm in eine analoge Uhr umrechnen. Dies erreichen Sie, indem Sie Zeilen für die Hände hinzufügen.
+Lassen Sie uns Transformationen verwenden, indem wir unser Circle-Programm in eine analoge Uhr konvertieren. Dazu fügen wir Zeilen für die Hände hinzu.
 
-![ein Screenshot des Programms zur analogen Uhr.](images/graphics18.png)
+![Ein Screenshot des analogen Uhrprogramms.](images/graphics18.png)
 
-Anstatt die Koordinaten für die Linien zu berechnen, können wir den Winkel berechnen und dann eine Drehungs Transformation anwenden. Der folgende Code zeigt eine Funktion, die eine Uhr Hand zeichnet. Der *fangle* -Parameter gibt den Winkel der Hand in Grad an.
+Anstatt die Koordinaten für die Linien zu berechnen, können wir den Winkel berechnen und dann eine Drehungstransformation anwenden. Der folgende Code zeigt eine Funktion, die eine Uhr hand zeichnet. Der *fAngle-Parameter* gibt den Winkel der Hand in Grad an.
 
 ```C++
 void Scene::DrawClockHand(float fHandLength, float fAngle, float fStrokeWidth)
@@ -79,11 +79,11 @@ void Scene::DrawClockHand(float fHandLength, float fAngle, float fStrokeWidth)
 }
 ```
 
-Dieser Code zeichnet eine vertikale Linie, beginnend ab der Mitte der Uhr und endet am Punkt *Endpunkt*. Die Linie wird um den Mittelpunkt der Ellipse gedreht, indem eine Rotations Transformation angewendet wird. Der Mittelpunkt der Drehung ist der Mittelpunkt der Ellipse, der die Uhr darstellt.
+Dieser Code zeichnet eine vertikale Linie, beginnend von der Mitte des Uhrzeigers bis zum *Punktendpunkt*. Die Linie wird um die Mitte der Ellipse gedreht, indem eine Drehtransformation angewendet wird. Der Mittelpunkt für die Drehung ist der Mittelpunkt der Ellipse, die das Uhr face bildet.
 
-![ein Diagramm, das die Drehung der Uhrzeitangabe anzeigt.](images/graphics19.png)
+![Ein Diagramm, das die Drehung der Uhr zeigt.](images/graphics19.png)
 
-Der folgende Code zeigt, wie die gesamte Takt Fläche gezeichnet wird.
+Der folgende Code zeigt, wie das gesamte Uhr face gezeichnet wird.
 
 ```C++
 void Scene::RenderScene()
@@ -109,11 +109,11 @@ void Scene::RenderScene()
 }
 ```
 
-Sie können das komplette Visual Studio-Projekt aus dem [Direct2D Clock-Beispiel](direct2d-clock-sample.md)herunterladen. (Nur zum Spaß fügt die Download Version ein radiales gradiant zum Takt Gesicht hinzu.)
+Sie können das vollständige Visual Studio Projekt von [Direct2D Clock Sample](direct2d-clock-sample.md)herunterladen. (Aus Spaß fügt die Downloadversion dem Uhr face einen radialen Gradiant hinzu.)
 
 ## <a name="combining-transforms"></a>Kombinieren von Transformationen
 
-Die vier grundlegenden Transformationen können kombiniert werden, indem zwei oder mehr Matrizen multipliziert werden. Der folgende Code kombiniert z. b. eine Drehung mit einer Übersetzung.
+Die vier grundlegenden Transformationen können kombiniert werden, indem zwei oder mehr Matrizen multipliziert werden. Der folgende Code kombiniert beispielsweise eine Drehung mit einer Übersetzung.
 
 ```C++
 const D2D1::Matrix3x2F rot = D2D1::Matrix3x2F::Rotation(20);
@@ -122,11 +122,11 @@ const D2D1::Matrix3x2F trans = D2D1::Matrix3x2F::Translation(40, 10);
 pRenderTarget->SetTransform(rot * trans);
 ```
 
-Die [**Matrix3x2F**](/windows/desktop/api/d2d1helper/nl-d2d1helper-matrix3x2f) -Klasse stellt [**Operator \* ()**](/windows/desktop/api/d2d1helper/nf-d2d1helper-matrix3x2f-operator-mult) für die Matrix Multiplikation bereit. Die Reihenfolge, in der Sie die Matrizen multiplizieren, ist wichtig. Das Festlegen einer Transformation (m × N) bedeutet "m zuerst anwenden, gefolgt von N". Hier sehen Sie beispielsweise die Drehung, gefolgt von der Übersetzung:
+Die [**Matrix3x2F-Klasse**](/windows/desktop/api/d2d1helper/nl-d2d1helper-matrix3x2f) stellt [**operator \* ()**](/windows/desktop/api/d2d1helper/nf-d2d1helper-matrix3x2f-operator-mult) für die Matrixmultiplikation bereit. Die Reihenfolge, in der Sie die Matrizen multiplizieren, ist wichtig. Das Festlegen einer Transformation (M × N) bedeutet "Zuerst M anwenden, gefolgt von N". Hier sehen Sie beispielsweise die Drehung gefolgt von der Übersetzung:
 
-![ein Diagramm, das die Drehung anzeigt, gefolgt von der Übersetzung.](images/graphics20.png)
+![Ein Diagramm, das die Drehung gefolgt von der Übersetzung zeigt.](images/graphics20.png)
 
-Dies ist der Code für diese Transformation:
+Hier ist der Code für diese Transformation:
 
 ```C++
 const D2D1::Matrix3x2F rot = D2D1::Matrix3x2F::Rotation(45, center);
@@ -134,11 +134,11 @@ const D2D1::Matrix3x2F trans = D2D1::Matrix3x2F::Translation(x, 0);
 pRenderTarget->SetTransform(rot * trans);
 ```
 
-Vergleichen Sie nun diese Transformation mit einer Transformation in umgekehrter Reihenfolge, Übersetzung und Drehung, gefolgt von der Drehung.
+Vergleichen Sie diese Transformation nun mit einer Transformation in umgekehrter Reihenfolge, der Übersetzung gefolgt von der Drehung.
 
-![ein Diagramm, das die Übersetzung anzeigt, gefolgt von der Drehung.](images/graphics21.png)
+![Ein Diagramm, das die Übersetzung gefolgt von der Drehung zeigt.](images/graphics21.png)
 
-Die Drehung erfolgt um die Mitte des ursprünglichen Rechtecks. Dies ist der Code für diese Transformation.
+Die Drehung erfolgt um die Mitte des ursprünglichen Rechtecks. Hier ist der Code für diese Transformation.
 
 ```C++
 D2D1::Matrix3x2F rot = D2D1::Matrix3x2F::Rotation(45, center);
@@ -146,8 +146,8 @@ D2D1::Matrix3x2F trans = D2D1::Matrix3x2F::Translation(x, 0);
 pRenderTarget->SetTransform(trans * rot);
 ```
 
-Wie Sie sehen können, sind die Matrizen identisch, aber die Reihenfolge der Vorgänge hat sich geändert. Dies liegt daran, dass die Matrix Multiplikation nicht commutative ist: M × N ≠ N × M.
+Wie Sie sehen können, sind die Matrizen identisch, aber die Reihenfolge der Vorgänge hat sich geändert. Dies liegt daran, dass die Matrixmultiplikation nicht kommutativ ist: M × N ≠ N × M.
 
 ## <a name="next"></a>Nächste
 
-[Anhang: Matrix Transformationen](appendix--matrix-transforms.md)
+[Anhang: Matrixtransformationen](appendix--matrix-transforms.md)

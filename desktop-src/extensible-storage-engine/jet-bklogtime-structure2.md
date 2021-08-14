@@ -1,6 +1,6 @@
 ---
-description: 'Weitere Informationen finden Sie hier: JET_BKLOGTIME Struktur'
-title: JET_BKLOGTIME Struktur
+description: Weitere Informationen zu JET_BKLOGTIME Struktur
+title: JET_BKLOGTIME-Struktur
 TOCTitle: JET_BKLOGTIME structure
 ms:assetid: T:Microsoft.Isam.Esent.Interop.JET_BKLOGTIME
 ms:mtpsurl: https://msdn.microsoft.com/library/microsoft.isam.esent.interop.jet_bklogtime(v=EXCHG.10)
@@ -24,19 +24,19 @@ api_type:
 api_location:
 - Microsoft.Isam.Esent.Interop.dll
 ROBOTS: INDEX,FOLLOW
-ms.openlocfilehash: b718254082095592f097097500d2690be320dd63
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 79a1ce202d504364075f0d71754fb1c9b7a70ff9627de910a47cd6d09cafe005
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104130185"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119475800"
 ---
-# <a name="jet_bklogtime-structure"></a>JET_BKLOGTIME Struktur
+# <a name="jet_bklogtime-structure"></a>JET_BKLOGTIME-Struktur
 
 Beschreibt ein Datum/eine Uhrzeit, zu der eine Sicherung aufgetreten ist.
 
-**Namespace:**  [Microsoft. ISAM. ESENT. Interop](./microsoft.isam.esent.interop-namespace.md)  
-**Assembly:**  Microsoft. ISAM. ESENT. Interop (in Microsoft.Isam.Esent.Interop.dll)
+**Namespace:**  [Microsoft.Isam.Esent.Interop](./microsoft.isam.esent.interop-namespace.md)  
+**Assembly:**  Microsoft.Isam.Esent.Interop (in Microsoft.Isam.Esent.Interop.dll)
 
 ## <a name="syntax"></a>Syntax
 
@@ -60,10 +60,10 @@ public struct JET_BKLOGTIME : IEquatable<JET_BKLOGTIME>,
 
 Alle öffentlichen statischen Elemente dieses Typs (Shared in Microsoft Visual Basic) sind threadsicher. Bei Instanzmembern ist die Threadsicherheit nicht gewährleistet.
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
-#### <a name="reference"></a>Referenz
+#### <a name="reference"></a>Verweis
 
-[Mitglieder JET_BKLOGTIME](./jet-bklogtime-members.md)
+[JET_BKLOGTIME-Member](./jet-bklogtime-members.md)
 
-[Microsoft. ISAM. ESENT. Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)
+[Microsoft.Isam.Esent.Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)

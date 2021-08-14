@@ -3,30 +3,30 @@ title: Zeitlimit
 description: Zeitlimit
 ms.assetid: 7c07755b-ba4d-4ec0-82ee-f76a533c6c5b
 keywords:
-- Captuprojektms-Struktur
+- CAPTUREPARMS-Struktur
 - WM_CAP_GET_SEQUENCE_SETUP Meldung
-- capcapturegetsetup-Makro
-- Captuprojektms-Struktur
+- capCaptureGetSetup-Makro
+- CAPTUREPARMS-Struktur
 - WM_CAP_SET_SEQUENCE_SETUP Meldung
-- capcapturesetsetup-Makro
+- capCaptureSetSetup-Makro
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 878c76ab1e380fe878cd8c9493163bcb71e574cf
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: 1b6211edf3ce3fb86b4c0430c685ff05ff7f95c718c0a89e7ba782ae342feb18
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "103714441"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117801264"
 ---
 # <a name="time-limit"></a>Zeitlimit
 
-Sie können die Dauer eines Aufzeichnungs Vorgangs beschränken, indem Sie die Elemente **flimitenabled** und **wtimelimit** der [**captuvertrams**](/windows/win32/api/vfw/ns-vfw-captureparms) -Struktur verwenden. Der **flimitenabled** -Member gibt an, ob der Aufzeichnungs Vorgang zeitgleich ist, während **wtimelimit** die maximale Dauer des Aufzeichnungs Vorgangs angibt.
+Sie können die Dauer eines Erfassungsvorgangs begrenzen, indem Sie die Member **fLimitEnabled** und **wTimeLimit** der [**CAPTUREPARMS-Struktur**](/windows/win32/api/vfw/ns-vfw-captureparms) verwenden. Der **fLimitEnabled-Member** gibt an, ob der Erfassungsvorgang zeitlich begrenzt werden soll, während **wTimeLimit** die maximale Dauer des Erfassungsvorgangs angibt.
 
-Sie können die Werte für " **flimitenabled** " und " **wtimelimit** " mithilfe der " [**WM \_ Cap \_ get \_ Sequence \_**](wm-cap-get-sequence-setup.md) "-Setup Nachricht (oder des " [**capcapturegetsetup**](/windows/desktop/api/Vfw/nf-vfw-capcapturegetsetup) "-Makros) abrufen. Sie können einen Timer für den Aufzeichnungs Vorgang aktivieren, indem Sie " **true** " als Wert von " **flimitenabled**" angeben, oder Sie können die Dauer des Aufzeichnungs Vorgangs festlegen, indem Sie einen Wert (in Sekunden) für " **wtimelimit**" angeben. Nachdem Sie diese Member festgelegt haben, senden Sie die aktualisierte [**captuadapms**](/windows/win32/api/vfw/ns-vfw-captureparms) -Struktur mithilfe der " [**WM \_ Cap \_ Set \_ Sequence \_**](wm-cap-set-sequence-setup.md) "-Setup Nachricht (oder dem " [**capcapturesetsetup**](/windows/desktop/api/Vfw/nf-vfw-capcapturesetsetup) "-Makro) an das Aufzeichnungs Fenster. Der Standardwert von **flimitenabled** ist **false**.
+Sie können die Werte für **fLimitEnabled** und **wTimeLimit** abrufen, indem Sie die [**WM CAP GET SEQUENCE \_ \_ \_ \_ SETUP-Meldung**](wm-cap-get-sequence-setup.md) (oder das [**CapCaptureGetSetup-Makro)**](/windows/desktop/api/Vfw/nf-vfw-capcapturegetsetup) verwenden. Sie können einen Timer für den Erfassungsvorgang aktivieren, indem Sie **TRUE** als Wert von **fLimitEnabled** angeben, oder Sie können die Dauer des Erfassungsvorgangs festlegen, indem Sie einen Wert in Sekunden für **wTimeLimit** angeben. Nachdem Sie diese Member festgelegt haben, senden Sie die aktualisierte [**CAPTUREPARMS-Struktur**](/windows/win32/api/vfw/ns-vfw-captureparms) mithilfe der [**WM CAP SET SEQUENCE \_ \_ \_ \_ SETUP-Meldung**](wm-cap-set-sequence-setup.md) (oder des [**CapCaptureSetSetup-Makros)**](/windows/desktop/api/Vfw/nf-vfw-capcapturesetsetup) an das Erfassungsfenster. Der Standardwert von **fLimitEnabled** ist **FALSE.**
 
- 
+ 
 
- 
+ 
 
 
 

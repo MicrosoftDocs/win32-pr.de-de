@@ -1,6 +1,6 @@
 ---
 description: Wird von einer Datei-Manager-Erweiterung gesendet, um den Typ des Datei-Manager-Fensters abzurufen, das den Eingabefokus besitzt.
-title: FM_GETFOCUS (Wfext.h)
+title: FM_GETFOCUS Nachricht (Wfext.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,12 +13,12 @@ api_type:
 api_location:
 - Wfext.h
 ms.assetid: e2d5f825-5678-4dd7-adad-eec1cbcc7e49
-ms.openlocfilehash: e5f6470ea1217485b401387150cae786b44ccca1
-ms.sourcegitcommit: 3caaa3c92dcb1ef12f84464d14ce6262e65e988e
+ms.openlocfilehash: 7512595008ad79d33bf1ac9b381b63831977282b83a8ce595c3d2689087c869c
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/12/2021
-ms.locfileid: "109841411"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118459110"
 ---
 # <a name="fm_getfocus-message"></a>FM \_ GETFOCUS-Nachricht
 
@@ -44,8 +44,8 @@ Gibt den Typ des Datei-Manager-Fensters zurück, das den Eingabefokus besitzt. D
 |------------------------------------------------------------------------------------------------|-----------------------------------------------------|
 | <dl> <dt>**FMFOCUS \_ DIR**</dt> </dl>    | Verzeichnisteil eines Verzeichnisfensters.<br/> |
 | <dl> <dt>**\_FMFOCUS-STRUKTUR**</dt> </dl>   | Strukturteil eines Verzeichnisfensters.<br/>      |
-| <dl> <dt>**\_FMFOCUS-LAUFWERKE**</dt> </dl> | Die Laufwerkleiste eines Verzeichnisfensters.<br/>         |
-| <dl> <dt>**\_FMFOCUS-SUCHE**</dt> </dl> | Suchergebnisfenster.<br/>                   |
+| <dl> <dt>**\_FMFOCUS-LAUFWERKE**</dt> </dl> | Laufwerksleiste eines Verzeichnisfensters.<br/>         |
+| <dl> <dt>**\_FMFOCUS-SUCHE**</dt> </dl> | Fenster "Suchergebnisse".<br/>                   |
 
 
 

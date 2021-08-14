@@ -3,86 +3,86 @@ title: Referenz zum Audiokomprimierungs-Manager
 description: Referenz zum Audiokomprimierungs-Manager
 ms.assetid: a4e234c7-4dd3-4269-90a5-5de2c8837c0f
 keywords:
-- Windows-Multimedia, ACM-Referenz
-- Multimedia, ACM-Referenz
-- Multimedia-Audiodatei, ACM-Referenz
-- Audiodatei, ACM-Referenz)
+- Windows Multimedia,ACM-Referenz
+- multimedia,ACM-Referenz
+- Multimediaaudio, ACM-Referenz
+- audio,ACM-Referenz)
 - Audiokomprimierungs-Manager (ACM), Referenz
 - ACM (Audiokomprimierungs-Manager), Referenz
-- ACM-Referenz, Informationen zu
-- Referenz für ACM, Informationen zu
+- ACM-Referenz, Informationen
+- Referenz zu ACM, Informationen
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 0d365b0a69ecd94a07811b24762aa4bffdc8c9f1
-ms.sourcegitcommit: ebd3ce6908ff865f1ef66f2fc96769be0aad82e1
+ms.openlocfilehash: 29729fa19e67fb4695d8e6eca986488735d9b4529d9479615665a9ba2b5f3360
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/19/2020
-ms.locfileid: "104516721"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118375797"
 ---
 # <a name="audio-compression-manager-reference"></a>Referenz zum Audiokomprimierungs-Manager
 
-In diesem Abschnitt werden die Funktionen, Strukturen und Meldungen beschrieben, die dem ACM zugeordnet sind. Diese Elemente werden wie folgt gruppiert.
+In diesem Abschnitt werden die Funktionen, Strukturen und Meldungen beschrieben, die dem ACM zugeordnet sind. Diese Elemente sind wie folgt gruppiert.
 
 ## <a name="drivers"></a>Treiber
 
--   [**acmdriveradd**](/windows/desktop/api/Msacm/nf-msacm-acmdriveradd)
--   [**acmdriverclose**](/windows/desktop/api/Msacm/nf-msacm-acmdriverclose)
--   [**Acmdriverdetails**](/windows/win32/api/msacm/ns-msacm-acmdriverdetails)
--   [**acmdriverenum**](/windows/desktop/api/Msacm/nf-msacm-acmdriverenum)
--   [**acmdriverenumcallback**](/windows/win32/api/msacm/nc-msacm-acmdriverenumcb)
--   [**acmdriverid**](/windows/desktop/api/Msacm/nf-msacm-acmdriverid)
--   [**acmdrivermessage**](/windows/desktop/api/Msacm/nf-msacm-acmdrivermessage)
--   [**acmdriveropen**](/windows/desktop/api/Msacm/nf-msacm-acmdriveropen)
--   [**acmdriverpriority**](/windows/desktop/api/Msacm/nf-msacm-acmdriverpriority)
--   [**acmdriverproc**](/windows/desktop/api/Msacm/nc-msacm-acmdriverproc)
--   [**acmdriverremove**](/windows/desktop/api/Msacm/nf-msacm-acmdriverremove)
+-   [**acmDriverAdd**](/windows/desktop/api/Msacm/nf-msacm-acmdriveradd)
+-   [**acmDriverClose**](/windows/desktop/api/Msacm/nf-msacm-acmdriverclose)
+-   [**ACMDRIVERDETAILS**](/windows/win32/api/msacm/ns-msacm-acmdriverdetails)
+-   [**acmDriverEnum**](/windows/desktop/api/Msacm/nf-msacm-acmdriverenum)
+-   [**acmDriverEnumCallback**](/windows/win32/api/msacm/nc-msacm-acmdriverenumcb)
+-   [**acmDriverID**](/windows/desktop/api/Msacm/nf-msacm-acmdriverid)
+-   [**acmDriverMessage**](/windows/desktop/api/Msacm/nf-msacm-acmdrivermessage)
+-   [**acmDriverOpen**](/windows/desktop/api/Msacm/nf-msacm-acmdriveropen)
+-   [**acmDriverPriority**](/windows/desktop/api/Msacm/nf-msacm-acmdriverpriority)
+-   [**acmDriverProc**](/windows/desktop/api/Msacm/nc-msacm-acmdriverproc)
+-   [**acmDriverRemove**](/windows/desktop/api/Msacm/nf-msacm-acmdriverremove)
 
 ## <a name="filters"></a>Filter
 
--   [**Acmfilterchoose**](/windows/win32/api/msacm/ns-msacm-acmfilterchoose)
--   [**acmfilterchooabhuokproc**](/windows/desktop/api/Msacm/nc-msacm-acmfilterchoosehookproc)
--   [**Acmfilterdetails**](/windows/win32/api/msacm/ns-msacm-acmfilterdetails)
--   [**acmfilteraufzählung**](/windows/desktop/api/Msacm/nf-msacm-acmfilterenum)
--   [**acmfilterenumcallback**](/windows/desktop/api/Msacm/nc-msacm-acmfilterenumcb)
--   [**Acmfiltertagdetails**](/windows/win32/api/msacm/ns-msacm-acmfiltertagdetails)
--   [**acmfiltertagenum**](/windows/desktop/api/Msacm/nf-msacm-acmfiltertagenum)
--   [**acmfiltertagenumschlag**](/windows/desktop/api/Msacm/nc-msacm-acmfiltertagenumcb)
+-   [**ACMFILTERCHOOSE**](/windows/win32/api/msacm/ns-msacm-acmfilterchoose)
+-   [**acmFilterChooseHookProc**](/windows/desktop/api/Msacm/nc-msacm-acmfilterchoosehookproc)
+-   [**ACMFILTERDETAILS**](/windows/win32/api/msacm/ns-msacm-acmfilterdetails)
+-   [**acmFilterEnum**](/windows/desktop/api/Msacm/nf-msacm-acmfilterenum)
+-   [**acmFilterEnumCallback**](/windows/desktop/api/Msacm/nc-msacm-acmfilterenumcb)
+-   [**ACMFILTERTAGDETAILS**](/windows/win32/api/msacm/ns-msacm-acmfiltertagdetails)
+-   [**acmFilterTagEnum**](/windows/desktop/api/Msacm/nf-msacm-acmfiltertagenum)
+-   [**acmFilterTagEnumCallback**](/windows/desktop/api/Msacm/nc-msacm-acmfiltertagenumcb)
 
 ## <a name="formats"></a>Formate
 
--   [**Acmformatchoose**](/windows/win32/api/msacm/ns-msacm-acmformatchoose)
--   [**acmformatchooabhuokproc**](/windows/desktop/api/Msacm/nc-msacm-acmformatchoosehookproc)
--   [**Acmformatdetails**](/windows/win32/api/msacm/ns-msacm-acmformatdetails)
--   [**acmformaterum**](/windows/desktop/api/Msacm/nf-msacm-acmformatenum)
--   [**acmformatenumcallback**](/windows/desktop/api/Msacm/nc-msacm-acmformatenumcb)
--   [**acmformatvorschlagen**](/windows/desktop/api/Msacm/nf-msacm-acmformatsuggest)
--   [**Acmformattagdetails**](/windows/win32/api/msacm/ns-msacm-acmformattagdetails)
--   [**acmformattagenum**](/windows/desktop/api/Msacm/nf-msacm-acmformattagenum)
--   [**acmformattagenumschlag**](/windows/desktop/api/Msacm/nc-msacm-acmformattagenumcb)
+-   [**ACMFORMATCHOOSE**](/windows/win32/api/msacm/ns-msacm-acmformatchoose)
+-   [**acmFormatChooseHookProc**](/windows/desktop/api/Msacm/nc-msacm-acmformatchoosehookproc)
+-   [**ACMFORMATDETAILS**](/windows/win32/api/msacm/ns-msacm-acmformatdetails)
+-   [**acmFormatEnum**](/windows/desktop/api/Msacm/nf-msacm-acmformatenum)
+-   [**acmFormatEnumCallback**](/windows/desktop/api/Msacm/nc-msacm-acmformatenumcb)
+-   [**acmFormatSuggest**](/windows/desktop/api/Msacm/nf-msacm-acmformatsuggest)
+-   [**ACMFORMATTAGDETAILS**](/windows/win32/api/msacm/ns-msacm-acmformattagdetails)
+-   [**acmFormatTagEnum**](/windows/desktop/api/Msacm/nf-msacm-acmformattagenum)
+-   [**acmFormatTagEnumCallback**](/windows/desktop/api/Msacm/nc-msacm-acmformattagenumcb)
 
 ## <a name="messages"></a>Meldungen
 
--   [**MM \_ ACM \_ filterchoose**](mm-acm-filterchoose.md)
--   [**MM \_ ACM \_ formatchoose**](mm-acm-formatchoose.md)
+-   [**MM \_ ACM \_ FILTERCHOOSE**](mm-acm-filterchoose.md)
+-   [**MM \_ ACM \_ FORMATCHOOSE**](mm-acm-formatchoose.md)
 
 ## <a name="streams"></a>Datenströme
 
--   [**acmstreamclose**](/windows/desktop/api/Msacm/nf-msacm-acmstreamclose)
+-   [**acmStreamClose**](/windows/desktop/api/Msacm/nf-msacm-acmstreamclose)
 -   [**acmStreamConvert**](/windows/desktop/api/Msacm/nf-msacm-acmstreamconvert)
--   [**acmstreamconvertcallback**](/previous-versions//dd742925(v=vs.85))
+-   [**acmStreamConvertCallback**](/previous-versions//dd742925(v=vs.85))
 -   [**ACMSTREAMHEADER**](/windows/win32/api/msacm/ns-msacm-acmstreamheader)
--   [**acmstreammessage**](/windows/desktop/api/Msacm/nf-msacm-acmstreammessage)
--   [**acmstreamopen**](/windows/desktop/api/Msacm/nf-msacm-acmstreamopen)
+-   [**acmStreamMessage**](/windows/desktop/api/Msacm/nf-msacm-acmstreammessage)
+-   [**acmStreamOpen**](/windows/desktop/api/Msacm/nf-msacm-acmstreamopen)
 -   [**acmStreamPrepareHeader**](/windows/desktop/api/Msacm/nf-msacm-acmstreamprepareheader)
--   [**acmstreamreset**](/windows/desktop/api/Msacm/nf-msacm-acmstreamreset)
--   [**acmstreamsize**](/windows/desktop/api/Msacm/nf-msacm-acmstreamsize)
--   [**acmstreamunprepareheader**](/windows/desktop/api/Msacm/nf-msacm-acmstreamunprepareheader)
+-   [**acmStreamReset**](/windows/desktop/api/Msacm/nf-msacm-acmstreamreset)
+-   [**acmStreamSize**](/windows/desktop/api/Msacm/nf-msacm-acmstreamsize)
+-   [**acmStreamUnprepareHeader**](/windows/desktop/api/Msacm/nf-msacm-acmstreamunprepareheader)
 
-## <a name="miscellaneous"></a>Verschiedenes
+## <a name="miscellaneous"></a>verschiedene gefährliche Stoffe
 
--   [**acmgetversion**](/windows/desktop/api/Msacm/nf-msacm-acmgetversion)
--   [**acmmetrics**](/windows/desktop/api/Msacm/nf-msacm-acmmetrics)
+-   [**acmGetVersion**](/windows/desktop/api/Msacm/nf-msacm-acmgetversion)
+-   [**acmMetrics**](/windows/desktop/api/Msacm/nf-msacm-acmmetrics)
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
@@ -91,6 +91,6 @@ In diesem Abschnitt werden die Funktionen, Strukturen und Meldungen beschrieben,
 [Audiokomprimierungs-Manager](audio-compression-manager.md)
 </dt> </dl>
 
- 
+ 
 
- 
+ 

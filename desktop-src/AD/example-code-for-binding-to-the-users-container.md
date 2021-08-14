@@ -1,22 +1,22 @@
 ---
-title: Beispiel Code für die Bindung an den Container des Benutzers
-description: Dieses Thema enthält ein Codebeispiel, das an den Benutzer Container in der aktuellen Domäne gebunden wird und die IADsContainer-Schnittstelle für den Container zurückgibt.
+title: Beispielcode für die Bindung an den Container des Benutzers
+description: Dieses Thema enthält ein Codebeispiel, das an den Benutzercontainer in der aktuellen Domäne gebunden und die Schnittstelle return und IADsContainer für den Container zurückgibt.
 ms.assetid: 78524b05-f57a-4816-92eb-e37be74dd245
 ms.tgt_platform: multiple
 keywords:
-- Active Directory Beispiele Active Directory, binden an den Container des Benutzers
+- 'Active Directory-Beispiele: Active Directory, Bindung an den Container des Benutzers'
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 8db1ccb3d2331c4ccef5bbf28f58fa5c046337c7
-ms.sourcegitcommit: 803f3ccd65bdefe36bd851b9c6e7280be9489016
+ms.openlocfilehash: 21f270f1814f996e84b3fa57f9753219c957cb05cd7cf29a9622f4a64f3b907d
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "104038759"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118694563"
 ---
-# <a name="example-code-for-binding-to-the-users-container"></a>Beispiel Code für die Bindung an den Container des Benutzers
+# <a name="example-code-for-binding-to-the-users-container"></a>Beispielcode für die Bindung an den Container des Benutzers
 
-Im folgenden C++-Codebeispiel wird an den Benutzer Container in der aktuellen Domäne gebunden, und es wird die [**IADsContainer**](/windows/desktop/api/iads/nn-iads-iadscontainer) -Schnittstelle für den Container zurückgegeben. Weitere Informationen zum Binden an bekannte Objekte finden [Sie unterbinden an Well-Known Objekte mithilfe von wkguid](binding-to-well-known-objects-using-wkguid.md).
+Das folgende C++-Codebeispiel bindet an den Benutzercontainer in der aktuellen Domäne und gibt die Schnittstelle und [**IADsContainer**](/windows/desktop/api/iads/nn-iads-iadscontainer) für den Container zurück. Weitere Informationen zum Binden an bekannte Objekte finden Sie unter [Binden an Well-Known Objekte mithilfe von WKGUID.](binding-to-well-known-objects-using-wkguid.md)
 
 
 ```C++
@@ -100,6 +100,6 @@ HRESULT GetUsersContainer(IADsContainer **ppContainer)
 
 
 
- 
+ 
 
- 
+ 

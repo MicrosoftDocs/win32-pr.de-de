@@ -16,12 +16,12 @@ api_location:
 - Strmbase.dll
 - Strmbasd.lib
 - Strmbasd.dll
-ms.openlocfilehash: 389ac06488762d95afa1894f7cfc27d2f9e2725e
-ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
+ms.openlocfilehash: ccec7fa6e4cfaf8cd3c5ffb0f1c05dbdf77a95dba614ebcbd292d32693abbb36
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2021
-ms.locfileid: "108085648"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118402520"
 ---
 # <a name="cimagedisplaycimagedisplay-constructor"></a>CImageDisplay.CImageDisplay-Konstruktor
 
@@ -40,7 +40,7 @@ CImageDisplay();
 
 Dieser Konstruktor verfügt über keine Parameter.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
 Der Konstruktor initialisiert den Formattyp unter Verwendung der Anzeigeeinstellungen für das Hauptanzeigegerät.
 
@@ -48,10 +48,10 @@ Der Konstruktor initialisiert den Formattyp unter Verwendung der Anzeigeeinstell
 
 
 
-| Anforderungen | Wert |
+| Anforderung | Wert |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>Winutil.h (einschließlich Streams.h)</dt> </dl>                                                                                   |
-| Bibliothek<br/> | <dl> <dt>Strmbase.lib (Einzelhandels-Builds); </dt> <dt>Strmbasd.lib (Debugbuilds)</dt> </dl> |
+| Header<br/>  | <dl> <dt>Winutil.h (include Streams.h)</dt> </dl>                                                                                   |
+| Bibliothek<br/> | <dl> <dt>Strmbase.lib (Verkaufsbuilds); </dt> <dt>Strmbasd.lib (Debugbuilds)</dt> </dl> |
 
 
 

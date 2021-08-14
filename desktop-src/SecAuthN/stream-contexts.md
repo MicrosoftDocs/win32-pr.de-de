@@ -1,84 +1,84 @@
 ---
-description: Streamkontexte verarbeiten die sicheren Datenstrom orientierten Protokolle, wie z. b. SSL oder PCT.
+description: Streamkontexte verarbeiten die sicheren streamorientierten Protokolle wie SSL oder PCT.
 ms.assetid: 05a6b036-1f7f-473f-9813-a1e1534e0f0d
 title: Streamkontexte
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 53103dc1269c05e5a2c162133d21e167d8035c2c
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: c843889df6aec3f82e8cb8516a7c23ccbf7a6de9957f9a0c572f6e6ca63ac75d
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "103959348"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118916679"
 ---
 # <a name="stream-contexts"></a>Streamkontexte
 
-Streamkontexte verarbeiten die sicheren Datenstrom orientierten Protokolle, wie z. b. SSL oder PCT. Um die gleiche Schnittstelle und ähnliche Verwaltung von Anmelde Informationen zu nutzen, bietet SSPI Unterstützung für streamkontexte. Das [*Sicherheitsprotokoll*](../secgloss/s-gly.md) enthält sowohl das streamingauthentifizierungsschema als auch Datensatzformate.
+Streamkontexte verarbeiten die sicheren streamorientierten Protokolle wie SSL oder PCT. Im Interesse der gemeinsamen Nutzung derselben Schnittstelle und ähnlicher Verwaltung von Anmeldeinformationen bietet SSPI Unterstützung für Streamkontexte. Das [*Sicherheitsprotokoll umfasst*](../secgloss/s-gly.md) sowohl das Streamauthentifizierungsschema als auch die Datensatzformate.
 
-Zum Bereitstellen von streamorientierten Protokollen weisen [*Sicherheitspakete*](../secgloss/s-gly.md) , die streamkontexte unterstützen, die folgenden Prozess Eigenschaften auf:
+Sicherheitspakete, die Streamkontexte [*unterstützen,*](../secgloss/s-gly.md) verfügen über die folgenden Prozessmerkmale, um streamorientierte Protokolle bereitstellen zu können:
 
--   Das Paket legt das Flag "secpkg Flag Stream" fest, \_ \_ um anzugeben, dass die Datenstrom Semantik unterstützt wird.
--   Transport Anwendungen fordern eine Datenstrom Semantik an, indem Sie die Funktionen "ISC \_ req \_ Stream" und "ASC \_ req \_ Stream" in den Aufrufen der Funktionen " [**InitializeSecurityContext (allgemein)**](/windows/win32/api/sspi/nf-sspi-initializesecuritycontexta) " und " [**akzeptsecuritycontext (allgemein)**](/windows/win32/api/sspi/nf-sspi-acceptsecuritycontext) " festlegen.
--   Die Anwendung ruft die [**QueryContextAttributes (General)**](/windows/win32/api/sspi/nf-sspi-querycontextattributesa) -Funktion mit einer [**secpkgcontext \_ streamsizes**](/windows/desktop/api/Sspi/ns-sspi-secpkgcontext_streamsizes) -Struktur auf, um den [*Sicherheitskontext*](../secgloss/s-gly.md) für die Anzahl der bereit zustellenden Puffer und die für Header oder Nachspann zu reservierenden Größen abzufragen.
--   Die Anwendung bietet Puffer Deskriptoren, die während der eigentlichen Verarbeitung der Daten verschont werden. Durch die Angabe der Datenstrom Semantik weist der Aufrufer die Bereitschaft an, zusätzliche Verarbeitungsschritte durchzuführen, damit das [*Sicherheitspaket*](../secgloss/s-gly.md) die Blockierung der Nachrichten verarbeiten kann. Im wesentlichen übergibt der Aufrufer für die Funktionen [**makesignature**](/windows/desktop/api/Sspi/nf-sspi-makesignature) und [**VerifySignature**](/windows/desktop/api/Sspi/nf-sspi-verifysignature) eine Liste der Puffer. Wenn eine Nachricht von einem Stream-orientierten Kanal empfangen wird (z. b. einem TCP-Port), übergibt der Aufrufer wie folgt eine Puffer Liste.
+-   Das Paket legt das FLAG SECPKG \_ FLAG \_ STREAM fest, um anzugeben, dass es Streamsemantik unterstützt.
+-   Transportanwendungen fordern Streamsemantik an, indem sie die ISC \_ REQ STREAM- und ASC REQ STREAM-Flags in den Aufrufen der \_ Funktionen \_ \_ [**InitializeSecurityContext (General)**](/windows/win32/api/sspi/nf-sspi-initializesecuritycontexta) und [**AcceptSecurityContext (General)**](/windows/win32/api/sspi/nf-sspi-acceptsecuritycontext) festlegen.
+-   Die Anwendung ruft die [**QueryContextAttributes (General)-Funktion**](/windows/win32/api/sspi/nf-sspi-querycontextattributesa) mit einer [**SecPkgContext \_ StreamSizes-Struktur**](/windows/desktop/api/Sspi/ns-sspi-secpkgcontext_streamsizes) auf, um den Sicherheitskontext nach der Anzahl der bereitgestellten Puffer und den größen zu reservierenden Größen für Header oder Nachspannen abfragt. [](../secgloss/s-gly.md)
+-   Die Anwendung bietet Pufferdeskriptoren, die während der eigentlichen Verarbeitung der Daten verschont werden müssen. Durch Angabe der Streamsemantik gibt der Aufrufer die [](../secgloss/s-gly.md) Bereitschaft an, zusätzliche Verarbeitungen zu übernehmen, damit das Sicherheitspaket die Blockierung der Nachrichten verarbeiten kann. Im Wesentlichen übergibt der Aufrufer für die [**Funktionen MakeSignature**](/windows/desktop/api/Sspi/nf-sspi-makesignature) und [**VerifySignature**](/windows/desktop/api/Sspi/nf-sspi-verifysignature) eine Liste von Puffern. Wenn eine Nachricht von einem streamorientierten Kanal (z. B. einem TCP-Port) empfangen wird, übergibt der Aufrufer wie folgt eine Pufferliste.
 
     | Buffer | Länge         | Puffertyp      |
     |--------|----------------|------------------|
-    | 1      | Nachrichten Länge | secbuffer- \_ Daten  |
-    | 2      | 0              | secbuffer ist \_ leer. |
-    | 3      | 0              | secbuffer ist \_ leer. |
-    | 4      | 0              | secbuffer ist \_ leer. |
-    | 5      | 0              | secbuffer ist \_ leer. |
+    | 1      | Nachrichtenlänge | \_SECBUFFER-DATEN  |
+    | 2      | 0              | SECBUFFER \_ EMPTY |
+    | 3      | 0              | SECBUFFER \_ EMPTY |
+    | 4      | 0              | SECBUFFER \_ EMPTY |
+    | 5      | 0              | SECBUFFER \_ EMPTY |
 
     
 
      
 
-    Das Sicherheitspaket funktioniert dann für das [*BLOB*](../secgloss/b-gly.md). Wenn die Funktion erfolgreich zurückgegeben wird, sieht die Puffer Liste wie folgt aus.
+    Das Sicherheitspaket funktioniert dann im [*BLOB*](../secgloss/b-gly.md). Wenn die Funktion erfolgreich zurückgegeben wird, sieht die Pufferliste wie folgt aus.
 
     
 
     | Buffer | Länge         | Puffertyp                |
     |--------|----------------|----------------------------|
-    | 1      | Header Länge  | secbuffer \_ - \_ Streamheader  |
-    | 2      | Daten Länge    | secbuffer- \_ Daten            |
-    | 3      | Nachspann Länge | secbuffer- \_ streamnachspann \_ |
-    | 4      | 0              | secbuffer ist \_ leer.           |
-    | 5      | 0              | secbuffer ist \_ leer.           |
+    | 1      | Headerlänge  | \_SECBUFFER-STREAMHEADER \_  |
+    | 2      | Datenlänge    | \_SECBUFFER-DATEN            |
+    | 3      | Länge des Nachspanns | SECBUFFER \_ STREAM \_ TRAILER |
+    | 4      | 0              | SECBUFFER \_ EMPTY           |
+    | 5      | 0              | SECBUFFER \_ EMPTY           |
 
     
 
      
 
-    Das Paket könnte auch Puffer \# 4 mit der Länge x und den Puffertyp secbuffer extra zurückgegeben haben \_ , um anzugeben, dass die Daten in diesem Puffer Teil des nächsten Datensatzes sind und noch nicht verarbeitet wurden. Wenn die Message-Funktion hingegen den \_ \_ Fehlercode der unvollständigen Sek.-Nachricht zurückgibt \_ , würde die zurückgegebene Puffer Liste wie folgt aussehen.
+    Das Paket hätte auch den Puffer 4 mit der Länge x und dem Puffertyp SECBUFFER EXTRA zurückgegeben, der angibt, dass die Daten in diesem Puffer Teil des nächsten Datensatzes sind und noch \# \_ nicht verarbeitet wurden. Wenn die Nachrichtenfunktion umgekehrt den Fehlercode SEC E INCOMPLETE MESSAGE zurückgibt, sieht die zurückgegebene Pufferliste \_ \_ wie folgt \_ aus.
 
     
 
     | Buffer | Länge | Puffertyp        |
     |--------|--------|--------------------|
-    | 1      | x      | secbuffer \_ fehlt. |
+    | 1      | x      | SECBUFFER \_ FEHLT |
 
     
 
      
 
-    Dies weist darauf hin, dass für die Verarbeitung des Datensatzes mehr Daten benötigt wurden. Im Gegensatz zu den meisten von einer Nachrichten Funktion zurückgegebenen Fehlern zeigt dieser Puffertyp nicht an, dass der Kontext kompromittiert wurde. Stattdessen wird angegeben, dass mehr Daten benötigt werden. [*Sicherheitspakete*](../secgloss/s-gly.md) dürfen Ihren [*Status*](../secgloss/s-gly.md) in diesem Zustand nicht aktualisieren.
+    Dies weist darauf hin, dass weitere Daten zum Verarbeiten des Datensatzes erforderlich waren. Im Gegensatz zu den meisten Fehlern, die von einer Nachrichtenfunktion zurückgegeben werden, gibt dieser Puffertyp nicht an, dass der Kontext kompromittiert wurde. Stattdessen gibt sie an, dass mehr Daten benötigt werden. [*-Sicherheitspakete*](../secgloss/s-gly.md) dürfen ihren Zustand in [*dieser*](../secgloss/s-gly.md) Bedingung nicht aktualisieren.
 
-    Ebenso kann der Aufrufer auf der Absender Seite der Kommunikation die [**makesignature**](/windows/desktop/api/Sspi/nf-sspi-makesignature) -Funktion aufzurufen. Das Sicherheitspaket muss den Puffer möglicherweise erneut zuordnen oder die Dinge kopieren. Der Aufrufer kann effizienter sein, indem er wie folgt eine Puffer Liste bereitstellt.
+    Auf ähnliche Weise kann der Aufrufer auf absenderseitiger Seite der Kommunikation die [**MakeSignature-Funktion**](/windows/desktop/api/Sspi/nf-sspi-makesignature) aufrufen. Das Sicherheitspaket muss möglicherweise den Puffer neu zuspeichern oder Dinge kopieren. Der Aufrufer kann effizienter sein, indem er eine Pufferliste wie folgt an die Hand gibt.
 
     
 
     | Buffer | Länge         | type                       |
     |--------|----------------|----------------------------|
-    | 1      | Header Länge  | secbuffer \_ - \_ Streamheader  |
-    | 2      | Daten Länge    | secbuffer- \_ Daten            |
-    | 3      | Nachspann Länge | secbuffer- \_ streamnachspann \_ |
+    | 1      | Headerlänge  | \_SECBUFFER-STREAMHEADER \_  |
+    | 2      | Datenlänge    | \_SECBUFFER-DATEN            |
+    | 3      | Länge des Nachspanns | SECBUFFER \_ STREAM \_ TRAILER |
 
     
 
      
 
-    Dies ermöglicht es dem Aufrufer, die Puffer effizienter zu verwenden. Durch Aufrufen der [**QueryContextAttributes**](/windows/win32/api/sspi/nf-sspi-querycontextattributesa) -Funktion zum Ermitteln des Speicherplatzes, der reserviert werden soll, bevor [**makesignature**](/windows/desktop/api/Sspi/nf-sspi-makesignature)aufgerufen wird, ist der Vorgang für die Anwendung und das Sicherheitspaket effizienter.
+    Dadurch kann der Aufrufer die Puffer effizienter verwenden. Durch Aufrufen der [**QueryContextAttributes-Funktion,**](/windows/win32/api/sspi/nf-sspi-querycontextattributesa) um den zu reservierenden Speicherplatz vor dem Aufruf von [**MakeSignature**](/windows/desktop/api/Sspi/nf-sspi-makesignature)zu bestimmen, ist der Vorgang für die Anwendung und das Sicherheitspaket effizienter.
 
  
 

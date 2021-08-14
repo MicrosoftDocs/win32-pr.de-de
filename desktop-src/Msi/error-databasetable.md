@@ -1,7 +1,7 @@
 ---
-description: Die schreibgeschützte databasetable-Eigenschaft des Error-Objekts gibt den Namen der Tabelle in der Datenbank zurück, die den Fehler verursacht hat.
+description: Die schreibgeschützte DatabaseTable-Eigenschaft des Error-Objekts gibt den Namen der Tabelle in der Datenbank zurück, die den Fehler verursacht hat.
 ms.assetid: 38ff45ca-4bd6-43f3-88ad-db4077daeb77
-title: Error. databasetable-Eigenschaft (Mergemod. h)
+title: Error.DatabaseTable-Eigenschaft (Mergemod.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -14,16 +14,16 @@ api_type:
 - COM
 api_location:
 - Mergemod.dll
-ms.openlocfilehash: 8d7be883597d30059f6c949a800fe9803563c2b3
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: b9e52523b37c90de4c4592fdeb059e6269f4e05e240242e69e14f0be6d4d53a0
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106369524"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118378171"
 ---
-# <a name="errordatabasetable-property"></a>Error. databasetable-Eigenschaft
+# <a name="errordatabasetable-property"></a>Error.DatabaseTable-Eigenschaft
 
-Die schreibgeschützte **databasetable** -Eigenschaft des [**Error**](error-object.md) -Objekts gibt den Namen der Tabelle in der Datenbank zurück, die den Fehler verursacht hat.
+Die schreibgeschützte **DatabaseTable-Eigenschaft** des [**Error-Objekts**](error-object.md) gibt den Namen der Tabelle in der Datenbank zurück, die den Fehler verursacht hat.
 
 Diese Eigenschaft ist schreibgeschützt.
 
@@ -38,13 +38,13 @@ propVal = Error.DatabaseTable
 
 ## <a name="property-value"></a>Eigenschaftswert
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Die Auflistung ist leer, wenn die Werte nicht auf den Fehlertyp zutreffen. Sie können den Fehlertyp ermitteln, indem Sie die [**Type**](error-type.md) -Eigenschaft des [**Error**](error-object.md) -Objekts aufrufen.
+Die Auflistung ist leer, wenn die Werte nicht auf den Fehlertyp angewendet werden. Sie können den Fehlertyp ermitteln, indem Sie die [**Type-Eigenschaft**](error-type.md) des [**Error-Objekts**](error-object.md) aufrufen.
 
 ### <a name="c"></a>C++
 
-Weitere Informationen finden [**Sie unter Get \_ databasetable**](/windows/win32/api/mergemod/nf-mergemod-imsmerror-get_databasetable) function.
+Weitere Informationen finden Sie unter Abrufen der [**\_ DatabaseTable-Funktion.**](/windows/win32/api/mergemod/nf-mergemod-imsmerror-get_databasetable)
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -52,8 +52,8 @@ Weitere Informationen finden [**Sie unter Get \_ databasetable**](/windows/win32
 
 | Anforderung | Wert |
 |--------------------|-----------------------------------------------------------------------------------------|
-| Version<br/> | Mergemod.dll 1,0 oder höher<br/>                                                    |
-| Header<br/>  | <dl> <dt>Mergemod. h</dt> </dl>   |
+| Version<br/> | Mergemod.dll 1.0 oder höher<br/>                                                    |
+| Header<br/>  | <dl> <dt>Mergemod.h</dt> </dl>   |
 | DLL<br/>     | <dl> <dt>Mergemod.dll</dt> </dl> |
 
 

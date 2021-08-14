@@ -1,37 +1,37 @@
 ---
-title: Einfügen von nativen streamformaten in ASF-Dateien (qasf)
-description: Einfügen von nativen streamformaten in ASF-Dateien (qasf)
+title: Einfügen nativer Streamformate in ASF-Dateien (QASF)
+description: Einfügen nativer Streamformate in ASF-Dateien (QASF)
 ms.assetid: ec7a69f3-0d4c-43dd-8d4b-fe066329a98f
 keywords:
-- Windows Media-Format-SDK, Native Streamformate (qasf)
-- Windows Media-Format-SDK, Einfügen von nativen streamformaten in ASF-Dateien (qasf)
-- Windows Media-Format-SDK, DirectShow
-- Advanced Systems Format (ASF), Einfügen von nativen streamformaten (qasf)
-- ASF (Advanced Systems Format), Einfügen von nativen streamformaten (qasf)
-- Advanced Systems Format (ASF), Native Streamformate (qasf)
-- ASF (Advanced Systems Format), Native Stream-Formate (qasf)
-- Advanced Systems Format (ASF), DirectShow
+- Windows Media Format SDK, native Streamformate (QASF)
+- Windows Medienformat-SDK, Einfügen nativer Streamformate in ASF-Dateien (QASF)
+- Windows Medienformat-SDK, DirectShow
+- Advanced Systems Format (ASF), Einfügen nativer Streamformate (QASF)
+- ASF (Advanced Systems Format), Einfügen nativer Streamformate (QASF)
+- Advanced Systems Format (ASF), native Streamformate (QASF)
+- ASF (Advanced Systems Format), native Streamformate (QASF)
+- Advanced Systems Format (ASF),DirectShow
 - ASF (Advanced Systems Format), DirectShow
-- DirectShow, Native Streamformate (qasf)
-- DirectShow, Einfügen von nativen streamformaten in ASF-Dateien (qasf)
-- Windows Media-Format-SDK, qasf
-- Advanced Systems Format (ASF), qasf
-- ASF (Advanced Systems Format), qasf
-- DirectShow, qasf
+- DirectShow, native Streamformate (QASF)
+- DirectShow,Einfügen nativer Streamformate in ASF-Dateien (QASF)
+- Windows Medienformat-SDK, QASF
+- Advanced Systems Format (ASF), QASF
+- ASF (Advanced Systems Format), QASF
+- DirectShow, QASF
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: af4736c450b3620a05fe01dcc1808adc297ebbd1
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: 9b395748520943a62645a88c018131f909577191ebafbe1f9c4d3a80219cb39f
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "103856692"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118701777"
 ---
-# <a name="inserting-native-stream-formats-into-asf-files-qasf"></a>Einfügen von nativen streamformaten in ASF-Dateien (qasf)
+# <a name="inserting-native-stream-formats-into-asf-files-qasf"></a>Einfügen nativer Streamformate in ASF-Dateien (QASF)
 
-Standardmäßig erwartet der [WM-ASF-Writer](wm-asf-writer-filter.md) unkomprimierte Audiodaten und Videostreams auf den Eingabe Pins und verwendet das SDK für den Windows Media-Format, um auf die Windows Media Audio und Windows Media Video Codecs zuzugreifen, die die Streams komprimieren. Der ASF-Datei Container kann jedoch für beliebige Datentypen verwendet werden. Durch das Platzieren digitaler Mediendaten in einem ASF-Datei Container können Sie Features hinzufügen, die von ASF bereitgestellt werden, wie z. b. Metadaten und Digital Rights Management (DRM), ohne dass Sie Ihre Inhalte transcodieren müssen.
+Standardmäßig erwartet der [WM ASF Writer](wm-asf-writer-filter.md) unkomprimierte Audio- und Videostreams auf seinen Eingabepins und verwendet das Windows Media Format SDK für den Zugriff auf die Codecs Windows Media Audio und Windows Media Video, die die Streams komprimieren. Der ASF-Dateicontainer kann jedoch für jede Art von Daten verwendet werden. Indem Sie digitale Mediendaten in einem ASF-Dateicontainer platzieren, können Sie von ASF bereitgestellte Features hinzufügen, z. B. Metadaten und Digital Rights Management (DRM), ohne Ihre Inhalte transcodieren zu müssen.
 
-Zum Erstellen einer ASF-Datei, die Inhalte enthält, die nicht auf Windows Media – basieren, muss die Anwendung den Datenstrom im Filter Diagramm Upstream des WM-ASF-Writers komprimieren und den Komprimierungs Mechanismus des WM-ASF-Writers durch Aufrufen von [**IConfigAsfWriter2:: SetParam**](iconfigasfwriter2-setparam.md) wie folgt umgehen:
+Um eine ASF-Datei zu erstellen, die Inhalte enthält, die nicht Windows Media-basiert sind, muss die Anwendung den Stream im Filterdiagramm vor wm asf Writer komprimieren und den Komprimierungsmechanismus des WM ASF Writer umgehen, indem [**sie IConfigAsfWriter2::SetParam**](iconfigasfwriter2-setparam.md) wie folgt aufruft:
 
 
 ```C++
@@ -41,13 +41,13 @@ pConfigAsfWriter2->SetParam(AM_CONFIGASFWRITER_PARAM_DONTCOMPRESS,TRUE,0)
 
 
 
-Konfigurieren Sie dann den Filter mit dem gewünschten Profil. Es ist von entscheidender Bedeutung, dass der Medientyp des Eingabestreams genau mit dem Format im Profil übereinstimmt. In einigen Fällen kann es erforderlich sein, das Format des Eingabestreams zu untersuchen und ein benutzerdefiniertes Profil zu erstellen, um es abzugleichen. Weitere Informationen finden Sie [unter So erstellen Sie ASF-Dateien mithilfe von Drittanbieter-Codecs](to-create-asf-files-using-third-party-codecs.md).
+Konfigurieren Sie dann den Filter mit dem gewünschten Profil. Es ist wichtig, dass der Medientyp des Eingabestreams genau dem Format im Profil entspricht. In einigen Fällen kann es erforderlich sein, das Format des Eingabestreams zu untersuchen und ein benutzerdefiniertes Profil zu erstellen, um es zu finden. Weitere Informationen finden Sie unter [So erstellen Sie ASF-Dateien mitHilfe von Drittanbietercodecs.](to-create-asf-files-using-third-party-codecs.md)
 
-Wenn Sie den WM-ASF-Writer mit dem upstreamfilter verbinden, verwenden Sie die **igraphbuilder:: connectdirect** -Methode. Verwenden Sie keine "Intelligent Connect"-Methoden wie z. b. **igraphbuilder:: Connect** oder **igraphbuilder:: RenderFile** , um den Filter zu verbinden, da dadurch der Modus "Umgehung der Umgehungs Komprimierung" deaktiviert wird.
+Wenn Sie den WM ASF Writer mit dem Upstreamfilter verbinden, verwenden Sie die **IGraphBuilder::ConnectDirect-Methode.** Verwenden Sie keine "intelligent connect"-Methoden wie **IGraphBuilder::Verbinden** oder **IGraphBuilder::RenderFile,** um den Filter zu verbinden, da dadurch der Modus "Umgehungskomprimierung" des Filters deaktiviert wird.
 
- 
+ 
 
- 
+ 
 
 
 

@@ -1,55 +1,55 @@
 ---
-title: Verwenden der Bandbreiten Freigabe
-description: Verwenden der Bandbreiten Freigabe
+title: Verwenden der Bandbreitenfreigabe
+description: Verwenden der Bandbreitenfreigabe
 ms.assetid: 1df61a3a-d34a-447e-a7ee-d5d409e7c4fa
 keywords:
-- Windows Media-Format-SDK, Bandbreiten Freigabe
-- Bandbreiten Freigabe, Informationen zu
-- Profile, Bandbreiten Freigabe
-- Streams, Bandbreiten Freigabe
-- Bandbreiten Freigabe, iwmprofile-Schnittstelle
+- Windows Medienformat-SDK, Bandbreitenfreigabe
+- Bandbreitenfreigabe, Informationen
+- Profile,Bandbreitenfreigabe
+- Streams, Bandbreitenfreigabe
+- Bandbreitenfreigabe, IWMProfile-Schnittstelle
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 298c690b484a8b4b5990aacd5d525867da8923c0
-ms.sourcegitcommit: ad672d3a10192c5ccac619ad2524407109266e93
+ms.openlocfilehash: 7259ddf441a4e32eb7eb4aea19a52d633c6aacd3a27ad6d392e4fea41c3f4fa8
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/25/2020
-ms.locfileid: "104390062"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117845156"
 ---
-# <a name="using-bandwidth-sharing"></a>Verwenden der Bandbreiten Freigabe
+# <a name="using-bandwidth-sharing"></a>Verwenden der Bandbreitenfreigabe
 
-Mit Bandbreiten Freigabe Objekten können Sie angeben, dass bestimmte Datenströme, wenn kombiniert, nicht mehr Bandbreite als angegeben verwenden. Die Informationen in einem Bandbreiten Freigabe Objekt werden weder vom Writer generiert noch überprüft.
+Sie können Bandbreitenfreigabeobjekte verwenden, um anzugeben, dass bestimmte Streams in Kombination nicht mehr Bandbreite als angegeben verwenden. Die Informationen in einem Bandbreitenfreigabeobjekt werden weder vom Writer generiert oder überprüft noch vom Reader für etwas verwendet.
 
-Wenn eine Datei mit Informationen zur Bandbreiten Freigabe im Profil geschrieben wird, werden die Daten im Header Abschnitt gespeichert. Sie können die [**iwmprofile**](iwmprofile.md) -Schnittstelle im Reader verwenden, um Informationen zur Bandbreiten Freigabe zu überprüfen, wenn die Datei wiedergegeben wird.
+Wenn eine Datei geschrieben wird, deren Profil Informationen zur Bandbreitenfreigabe enthält, werden die Daten im Headerabschnitt gespeichert. Sie können die [**IWMProfile-Schnittstelle**](iwmprofile.md) im Reader verwenden, um nach Informationen zur Bandbreitenfreigabe zu überprüfen, wenn die Datei abgespielt wird.
 
-Jedes Bandbreiten Freigabe Objekt wird durch zwei Einstellungen definiert. Die erste ist die Bandbreite, wie durch die Bandbreite und ein Puffer Fenster definiert. Die zweite Einstellung ist ein Typ der Bandbreiten Freigabe, der entweder exklusiv oder partiell sein kann. Exklusive Bandbreiten Freigabe bedeutet, dass die einzelnen Datenströme nacheinander wiedergegeben werden, während partiell bedeutet, dass die Streams gleichzeitig übermittelt werden.
+Jedes Bandbreitenfreigabeobjekt wird durch zwei Einstellungen definiert. Erstens ist die Bandbreite, wie durch eine Bandbreite und ein Pufferfenster definiert. Die zweite Einstellung ist ein Bandbreitenfreigabetyp, der entweder exklusiv oder partiell sein kann. Exklusive Bandbreitenfreigabe bedeutet, dass die konstituierenden Streams nach und nach abgespielt werden, während teilteilig bedeutet, dass die Streams gleichzeitig übermittelt werden.
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
 <dl> <dt>
 
-[**Iwmprofile-Schnittstelle**](iwmprofile.md)
+[**IWMProfile-Schnittstelle**](iwmprofile.md)
 </dt> <dt>
 
-[**IWMProfile3:: addbandwidthsharing**](/previous-versions/windows/desktop/api/Wmsdkidl/nf-wmsdkidl-iwmprofile3-addbandwidthsharing)
+[**IWMProfile3::AddBandwidthSharing**](/previous-versions/windows/desktop/api/Wmsdkidl/nf-wmsdkidl-iwmprofile3-addbandwidthsharing)
 </dt> <dt>
 
-[**IWMProfile3:: kreatenewbandwidthsharing**](/previous-versions/windows/desktop/api/Wmsdkidl/nf-wmsdkidl-iwmprofile3-createnewbandwidthsharing)
+[**IWMProfile3::CreateNewBandwidthSharing**](/previous-versions/windows/desktop/api/Wmsdkidl/nf-wmsdkidl-iwmprofile3-createnewbandwidthsharing)
 </dt> <dt>
 
-[**IWMProfile3:: getbandwidthsharing**](/previous-versions/windows/desktop/api/Wmsdkidl/nf-wmsdkidl-iwmprofile3-getbandwidthsharing)
+[**IWMProfile3::GetBandwidthSharing**](/previous-versions/windows/desktop/api/Wmsdkidl/nf-wmsdkidl-iwmprofile3-getbandwidthsharing)
 </dt> <dt>
 
-[**IWMProfile3:: getbandwidthsharingcount**](/previous-versions/windows/desktop/api/wmsdkidl/nf-wmsdkidl-iwmprofile3-getbandwidthsharingcount)
+[**IWMProfile3::GetBandwidthSharingCount**](/previous-versions/windows/desktop/api/wmsdkidl/nf-wmsdkidl-iwmprofile3-getbandwidthsharingcount)
 </dt> <dt>
 
 [**Arbeiten mit Profilen**](working-with-profiles.md)
 </dt> </dl>
 
- 
+ 
 
- 
+ 
 
 
 

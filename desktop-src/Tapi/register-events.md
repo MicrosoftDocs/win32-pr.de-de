@@ -1,26 +1,26 @@
 ---
-description: In den folgenden Codebeispielen wird die Implementierung eines einfachen Ereignis Handlers, die Registrierung der Haupt-TAPI-Ereignis Schnittstelle, das Festlegen des Ereignis Filters und die Registrierung für-Rückruf Benachrichtigungen veranschaulicht.
+description: Die folgenden Codebeispiele veranschaulichen die Implementierung eines einfachen Ereignishandlers, die Registrierung der TAPI-Hauptereignisschnittstelle, die Einstellung des Ereignisfilters und die Registrierung für Aufrufbenachrichtigungen.
 ms.assetid: e7662a26-d7b2-4bff-aa72-e38b58bc15df
 title: Registrieren von Ereignissen
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 0b0a554c2e1ea5c226aa4a3c432f3430a30a978e
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: f61e9c6229525443b81429d713a58b19bfbb97d52745677d18e0e1c96f21a787
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106364257"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117761177"
 ---
 # <a name="register-events"></a>Registrieren von Ereignissen
 
-In den folgenden Codebeispielen wird die Implementierung eines einfachen Ereignis Handlers, die Registrierung der Haupt-TAPI-Ereignis Schnittstelle, das Festlegen des Ereignis Filters und die Registrierung für-Rückruf Benachrichtigungen veranschaulicht.
+Die folgenden Codebeispiele veranschaulichen die Implementierung eines einfachen Ereignishandlers, die Registrierung der TAPI-Hauptereignisschnittstelle, die Einstellung des Ereignisfilters und die Registrierung für Aufrufbenachrichtigungen.
 
-Der angezeigte Ereignishandler ist ein Beispiel und keine Anforderung. Das primäre Ziel besteht darin sicherzustellen, dass der Thread, der Ereignisse empfängt, eine minimale Verarbeitung durchführt, bevor Arbeit an einen anderen Thread übergeben wird Dadurch wird verhindert, dass der Ereignishandler in Situationen mit hoher Ereignis Auslastung zu einem Leistungsproblem wird.
+Der gezeigte Ereignishandler ist ein Beispiel anstelle einer Anforderung. Das Hauptziel besteht darin, sicherzustellen, dass der Thread, der Ereignisse empfängt, eine minimale Verarbeitung vor der Übergabe von Arbeit an einen anderen Thread vorgibt. Dadurch wird verhindert, dass der Ereignishandler in Situationen mit hoher Ereignislast zu einem Leistungsproblem wird.
 
-Bevor Sie dieses Codebeispiel verwenden, müssen Sie die Vorgänge in [Initialize TAPI](initialize-tapi.md) ausführen und [eine Adresse auswählen](select-an-address.md).
+Bevor Sie dieses Codebeispiel verwenden, müssen Sie die Vorgänge unter [Initialize TAPI (TAPI initialisieren)](initialize-tapi.md) und [Select an Address (Adresse auswählen)](select-an-address.md)ausführen.
 
 > [!Note]  
-> Dieses Beispiel enthält nicht die Fehlerüberprüfung und die Releases, die für Produktionscode geeignet sind.
+> Dieses Beispiel verfügt nicht über die Fehlerüberprüfung und releases, die für Produktionscode geeignet sind.
 
  
 
@@ -130,19 +130,19 @@ hr = gpTapi->RegisterCallNotifications(
 
 <dl> <dt>
 
-[**Ittapieventnotification:: Event**](/windows/desktop/api/Tapi3if/nf-tapi3if-ittapieventnotification-event)
+[**ITTAPIEventNotification::Event**](/windows/desktop/api/Tapi3if/nf-tapi3if-ittapieventnotification-event)
 </dt> <dt>
 
-[**TAPI- \_ Ereignis**](/windows/desktop/api/Tapi3if/ne-tapi3if-tapi_event)
+[**\_TAPI-EREIGNIS**](/windows/desktop/api/Tapi3if/ne-tapi3if-tapi_event)
 </dt> <dt>
 
-[**Ittapi::p UT- \_ Ereignis Filter**](/windows/desktop/api/tapi3if/nf-tapi3if-ittapi-put_eventfilter)
+[**ITTAPI::put \_ EventFilter**](/windows/desktop/api/tapi3if/nf-tapi3if-ittapi-put_eventfilter)
 </dt> <dt>
 
-[Tapimediatype- \_ Konstanten](tapimediatype--constants.md)
+[TAPIMEDIATYPE-Konstanten \_](tapimediatype--constants.md)
 </dt> <dt>
 
-[**Ittapi:: registercallbenachrichtigungen**](/windows/desktop/api/tapi3if/nf-tapi3if-ittapi-registercallnotifications)
+[**ITTAPI::RegisterCallNotifications**](/windows/desktop/api/tapi3if/nf-tapi3if-ittapi-registercallnotifications)
 </dt> </dl>
 
  
