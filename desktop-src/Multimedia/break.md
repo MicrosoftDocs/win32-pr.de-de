@@ -1,9 +1,9 @@
 ---
-title: Break-Befehl
-description: Mit dem Break-Befehl wird ein Schlüssel angegeben, mit dem ein Befehl abgebrochen wird, der mithilfe von \ 0034; Wait \ 0034; aufgerufen wurde. ssen. Dieser Befehl ist ein MCI-Systembefehl. Sie wird direkt von MCI interpretiert.
+title: Befehl "break"
+description: Der Break-Befehl gibt einen Schlüssel zum Abbrechen eines Befehls an, der mithilfe von \ 0034;wait \ 0034 aufgerufen wurde. Flag. Dieser Befehl ist ein MCI-Systembefehl. sie wird direkt von MCI interpretiert.
 ms.assetid: 959df85f-5020-4e37-952b-15ba5e6fb672
 keywords:
-- Umbruch Befehl Windows-Multimedia
+- Befehl "break" Windows Multimedia
 topic_type:
 - apiref
 api_name:
@@ -12,18 +12,18 @@ api_type:
 - NA
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 6f727fb6cf375e09a260ee68f62eac83816ff5d4
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: f99c8609b1364d374d91965816fde2d9c48b750d7bf0b3f6fb2957ed205a85a9
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104478933"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118375472"
 ---
-# <a name="break-command"></a>Break-Befehl
+# <a name="break-command"></a>Befehl "break"
 
-Mit dem Break-Befehl wird ein Schlüssel angegeben, mit dem ein Befehl abgebrochen wird, der mit dem Flag "wait" aufgerufen wurde. Dieser Befehl ist ein MCI-Systembefehl. Sie wird direkt von MCI interpretiert.
+Der Befehl break gibt einen Schlüssel zum Abbrechen eines Befehls an, der mithilfe des Flags "wait" aufgerufen wurde. Dieser Befehl ist ein MCI-Systembefehl. sie wird direkt von MCI interpretiert.
 
-Um diesen Befehl zu senden, wenden Sie die [**mciSendString**](/previous-versions//dd757161(v=vs.85)) -Funktion mit dem festgelegten *lpszcommand* -Parameter wie folgt an.
+Um diesen Befehl zu senden, rufen Sie die [**mciSendString-Funktion**](/previous-versions//dd757161(v=vs.85)) auf, wobei der *lpszCommand-Parameter* wie folgt festgelegt ist.
 
 ``` syntax
 _stprintf_s(
@@ -39,14 +39,14 @@ _stprintf_s(
 
 <dl> <dt>
 
-<span id="lpszDeviceID"></span><span id="lpszdeviceid"></span><span id="LPSZDEVICEID"></span>*lpszde viceid*
+<span id="lpszDeviceID"></span><span id="lpszdeviceid"></span><span id="LPSZDEVICEID"></span>*lpszDeviceID*
 </dt> <dd>
 
-Der Bezeichner eines MCI-Geräts. Dieser Bezeichner oder Alias wird zugewiesen, wenn das Gerät geöffnet wird.
+Bezeichner eines MCI-Geräts. Dieser Bezeichner oder Alias wird zugewiesen, wenn das Gerät geöffnet wird.
 
 </dd> <dt>
 
-<span id="lpszVirtKey"></span><span id="lpszvirtkey"></span><span id="LPSZVIRTKEY"></span>*lpszvirtkey*
+<span id="lpszVirtKey"></span><span id="lpszvirtkey"></span><span id="LPSZVIRTKEY"></span>*lpszVirtKey*
 </dt> <dd>
 
 Eines der folgenden Flags.
@@ -55,8 +55,8 @@ Eines der folgenden Flags.
 
 | Wert                 | Bedeutung                                                                         |
 |-----------------------|---------------------------------------------------------------------------------|
-| auf *virtuellem Schlüsselcode* | Gibt den Schlüssel an, der einen Befehl abbricht, der mit dem Flag "wait" gestartet wurde. |
-| aus                   | Deaktiviert die aktuelle Break-Taste.                                                 |
+| *im Code des virtuellen Schlüssels* | Gibt den Schlüssel an, der einen Befehl abbricht, der mit dem Flag "wait" gestartet wurde. |
+| aus                   | Deaktiviert den aktuellen Halteschlüssel.                                                 |
 
 
 
@@ -64,24 +64,24 @@ Eines der folgenden Flags.
 
 </dd> <dt>
 
-<span id="lpszFlags"></span><span id="lpszflags"></span><span id="LPSZFLAGS"></span>*lpszflags*
+<span id="lpszFlags"></span><span id="lpszflags"></span><span id="LPSZFLAGS"></span>*lpszFlags*
 </dt> <dd>
 
-Kann "wait", "notify" oder beides sein. Für Digital Video-und VCR-Geräte kann auch "Test" angegeben werden. Weitere Informationen zu diesen Flags finden Sie [unter warte-, Benachrichtigungs-und testflags](the-wait-notify-and-test-flags.md).
+Kann "wait", "notify" oder beides sein. Für DigitalVideo- und VCR-Geräte kann auch "Test" angegeben werden. Weitere Informationen zu diesen Flags finden Sie unter [Die Warte-, Benachrichtigungs- und Testflags.](the-wait-notify-and-test-flags.md)
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt 0 (null) zurück, wenn erfolgreich, andernfalls einen Fehler.
+Gibt 0 (null) zurück, wenn der Fehler erfolgreich war, oder andernfalls ein Fehler.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Wenn die Break-Taste aktiviert ist und der Benutzer den Schlüssel drückt, der durch den im *lpszvirtkey* -Parameter angegebenen Code des virtuellen Schlüssels gekennzeichnet ist, gibt das Gerät die Steuerung an die Anwendung zurück. Wenn möglich, wird die Ausführung des Befehls fortgesetzt.
+Wenn die Haltetaste aktiviert ist und der Benutzer die Taste drückt, die durch den im *lpszVirtKey-Parameter* angegebenen Code für virtuelle Schlüssel identifiziert wird, gibt das Gerät die Steuerung an die Anwendung zurück. Nach Möglichkeit wird die Ausführung des Befehls fortgesetzt.
 
 ## <a name="examples"></a>Beispiele
 
-Der folgende Befehl legt F2 als Break Key für das "mysound"-Gerät fest.
+Mit dem folgenden Befehl wird F2 als Haltetaste für das Gerät "mysound" festgelegt.
 
 ``` syntax
 break mysound on 113
@@ -98,14 +98,14 @@ break mysound on 113
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[MCI](mci.md)
+[Mci](mci.md)
 </dt> <dt>
 
-[MCI-Befehls Zeichenfolgen](mci-command-strings.md)
+[MCI-Befehlszeichenfolgen](mci-command-strings.md)
 </dt> </dl>
 
  

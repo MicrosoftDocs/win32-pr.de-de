@@ -1,12 +1,12 @@
 ---
-title: ResourceLocator. mustverständlicherweise Options-Eigenschaft (WSManDisp. h)
-description: Ruft den mustverständlicherweise Options-Wert für das ResourceLocator-Objekt ab oder legt ihn fest.
+title: ResourceLocator.MustUnderstandOptions-Eigenschaft (WSManDisp.h)
+description: Ruft den MustUnderstandOptions-Wert für das ResourceLocator-Objekt ab oder legt den Wert fest.
 ms.assetid: d366696c-9128-4cbd-98d0-6c2d16c75d59
 ms.tgt_platform: multiple
 keywords:
-- Mustverständlicherweise Options-Eigenschaft Windows-Remoteverwaltung
-- Mustverständlicherweise Options-Eigenschaft Windows-Remoteverwaltung, ResourceLocator-Objekt
-- ResourceLocator-Objekt Windows-Remoteverwaltung, mustverständlicherweise Options-Eigenschaft
+- MustUnderstandOptions-Eigenschaft Windows Remoteverwaltung
+- MustUnderstandOptions-Eigenschaft Windows Remoteverwaltung, ResourceLocator-Objekt
+- ResourceLocator-Objekt Windows Remoteverwaltung , MustUnderstandOptions-Eigenschaft
 topic_type:
 - apiref
 api_name:
@@ -17,16 +17,16 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 2945efd1a224c333f45956a29df779efc98e944f
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: a49c3af0372553c221dae902a5fdca0e026bb874f612b8e21f41e6a6870f7ea8
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "103957051"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118323738"
 ---
-# <a name="resourcelocatormustunderstandoptions-property"></a>ResourceLocator. mustverständlicherweise Options-Eigenschaft
+# <a name="resourcelocatormustunderstandoptions-property"></a>ResourceLocator.MustUnderstandOptions-Eigenschaft
 
-Ruft den **mustverständlicherweise Options** -Wert für das [**ResourceLocator**](resourcelocator.md) -Objekt ab oder legt ihn fest. Sie können ein [**ResourceLocator**](resourcelocator.md) -Objekt bereitstellen, anstatt einen Ressourcen-URI in [**Sitzungs**](session.md) Objekt Vorgängen wie " [**Session. Get**](session-get.md)", " [**Session. Put**](session-put.md)" oder " [**Session. Enumerate**](session-enumerate.md)" anzugeben.
+Ruft den **MustUnderstandOptions-Wert** für das [**ResourceLocator-Objekt**](resourcelocator.md) ab oder legt den Wert fest. Sie können ein [**ResourceLocator-Objekt**](resourcelocator.md) angeben, anstatt einen Ressourcen-URI in [**Sitzungsobjektvorgängen**](session.md) wie [**Session.Get,**](session-get.md) [**Session.Put**](session-put.md)oder [**Session.Enumerate**](session-enumerate.md)anzugeben.
 
 Dies ist eine Eigenschaft mit Lese- und Schreibzugriff.
 
@@ -41,11 +41,11 @@ ResourceLocator.MustUnderstandOptions As boolean
 
 ## <a name="property-value"></a>Eigenschaftswert
 
-Gibt an, dass der Dienst, der die [WS-Management-Protokoll](ws-management-protocol.md) implementiert, beim Wert " **true**" einen Fehler zurückgeben muss, wenn er die Option nicht verarbeiten kann.
+Gibt bei **True** an, dass der Dienst, der die [WS-Management-Protokoll](ws-management-protocol.md) implementiert, einen Fehler zurückgeben muss, wenn er die Option nicht verarbeiten kann.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-**Iwsmanresourcelocator:: mustverständlicherweise Options** ist die entsprechende C++-Eigenschaft.
+**IWSManResourceLocator::MustUnderstandOptions** ist die entsprechende C++-Eigenschaft.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -55,18 +55,18 @@ Gibt an, dass der Dienst, der die [WS-Management-Protokoll](ws-management-protoc
 |-------------------------------------|------------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows Vista<br/>                                                                 |
 | Unterstützte Mindestversion (Server)<br/> | Windows Server 2008<br/>                                                           |
-| Header<br/>                   | <dl> <dt>WSManDisp. h</dt> </dl>   |
-| IDL<br/>                      | <dl> <dt>WSManDisp. idl</dt> </dl> |
-| Bibliothek<br/>                  | <dl> <dt>WSManDisp. tlb</dt> </dl> |
+| Header<br/>                   | <dl> <dt>WSManDisp.h</dt> </dl>   |
+| Idl<br/>                      | <dl> <dt>WSManDisp.idl</dt> </dl> |
+| Bibliothek<br/>                  | <dl> <dt>WSManDisp.tlb</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>WSMAuto.dll</dt> </dl>   |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**ResourceLocator**](resourcelocator.md)
+[**Resourcelocator**](resourcelocator.md)
 </dt> </dl>
 
  

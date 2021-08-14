@@ -1,9 +1,9 @@
 ---
-title: Bestätigung für Close-Session
-description: Verwenden Sie die Bestätigung für Close-Session Paket, um die Close-Session Anforderung des Clients zu bestätigen. Der Server sendet die Bestätigung, nachdem alle der Uploadsitzung zugeordneten Ressourcen freigegeben wurden.
+title: Ack for Close-Session
+description: Verwenden Sie das Ack for Close-Session-Paket, um die Anforderung des Clients Close-Session bestätigen. Der Server sendet die Bestätigung nach der Freigabe aller Ressourcen, die der Uploadsitzung zugeordnet sind.
 ms.assetid: 9d4b658a-8b41-4678-b996-f2174784cdd6
 keywords:
-- Bestätigung für Close-Session Bits
+- Ack für Close-Session BITS
 topic_type:
 - apiref
 api_name:
@@ -12,16 +12,16 @@ api_type:
 - NA
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: b7142bfd8d1d5d65d1f669a328c75a2c8cdfb036
-ms.sourcegitcommit: 73417d55867c804274a55abe5ca71bcba7006119
+ms.openlocfilehash: 289f2cfc2ca9f1e879e0aa592af28d86ae433f6e06d007aa71e00581baba2af5
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/20/2020
-ms.locfileid: "104102534"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117835413"
 ---
-# <a name="ack-for-close-session"></a>Bestätigung für Close-Session
+# <a name="ack-for-close-session"></a>Ack for Close-Session
 
-Verwenden Sie das Paket " **ACK for Close-Session** ", um die Anforderung zum [**Schließen der Sitzung**](close-session.md) zu bestätigen. Der Server sendet die Bestätigung, nachdem alle der Uploadsitzung zugeordneten Ressourcen freigegeben wurden.
+Verwenden Sie **das Ack for Close-Session-Paket,** um die [**Close-Session-Anforderung**](close-session.md) des Clients zu bestätigen. Der Server sendet die Bestätigung nach der Freigabe aller Ressourcen, die der Uploadsitzung zugeordnet sind.
 
 ``` syntax
 reason-code reason-description
@@ -36,72 +36,72 @@ BITS-Error-Context: error-context
 
 <dl> <dt>
 
-<span id="reason-code"></span><span id="REASON-CODE"></span>Grund: Code
+<span id="reason-code"></span><span id="REASON-CODE"></span>reason-code
 </dt> <dd>
 
-Ersetzen Sie Reason-Code durch den HTTP-Ursachen Code. Legen Sie z. b. Reason-Code auf 200 fest, wenn Erfolg. Eine Liste der http-Ursachen Codes finden Sie unter [RFC 2616](https://www.ietf.org/rfc/rfc2616.txt).
+Ersetzen Sie reason-code durch den HTTP-Grundcode. Legen Sie z. B. reason-code bei Erfolg auf 200 fest. Eine Liste der HTTP-Grundcodes finden Sie unter [RFC 2616](https://www.ietf.org/rfc/rfc2616.txt).
 
 </dd> <dt>
 
-<span id="reason-description"></span><span id="REASON-DESCRIPTION"></span>Ursache: Beschreibung
+<span id="reason-description"></span><span id="REASON-DESCRIPTION"></span>reason-description
 </dt> <dd>
 
-Ersetzen Sie Reason-Description durch die http-Beschreibung, die dem Ursachen Code zugeordnet ist. Legen Sie beispielsweise Reason-Description auf OK fest, wenn der Grund Code 200 ist.
+Ersetzen Sie reason-description durch die HTTP-Beschreibung, die dem Grundcode zugeordnet ist. Legen Sie beispielsweise reason-description auf OK fest, wenn reason-code 200 ist.
 
 </dd> <dt>
 
-<span id="BITS-Packet-Type"></span><span id="bits-packet-type"></span><span id="BITS-PACKET-TYPE"></span>Bits-Pakettyp
+<span id="BITS-Packet-Type"></span><span id="bits-packet-type"></span><span id="BITS-PACKET-TYPE"></span>BITS-Packet-Type
 </dt> <dd>
 
-Identifiziert dieses Antwortpaket als ACK-Paket.
+Identifiziert dieses Antwortpaket als Ack-Paket.
 
 </dd> <dt>
 
-<span id="BITS-Session-Id"></span><span id="bits-session-id"></span><span id="BITS-SESSION-ID"></span>Bits-Session-ID
+<span id="BITS-Session-Id"></span><span id="bits-session-id"></span><span id="BITS-SESSION-ID"></span>BITS-Session-Id
 </dt> <dd>
 
-Zeichen folgen-GUID, die die Sitzung für den Client identifiziert. Ersetzen Sie {GUID} durch die Sitzungs-ID, die der Client im Anforderungspaket der Sitzung für die [**Sitzung**](close-session.md) gesendet hat. Wenn Sie die Sitzungs-ID nicht erkennen, legen Sie den Bits-Error-Code-Header auf BG \_ E \_ Session \_ nicht \_ gefunden fest.
+Zeichenfolgen-GUID, die die Sitzung mit dem Client identifiziert. Ersetzen Sie {guid} durch den Sitzungsbezeichner, den der Client im [**Close-Session-Anforderungspaket**](close-session.md) gesendet hat. Wenn Sie den Sitzungsbezeichner nicht erkennen, legen Sie den BITS-Error-Code-Header auf BG \_ E SESSION NOT FOUND \_ \_ \_ fest.
 
 </dd> <dt>
 
-<span id="Content-Length"></span><span id="content-length"></span><span id="CONTENT-LENGTH"></span>Inhalts Länge
+<span id="Content-Length"></span><span id="content-length"></span><span id="CONTENT-LENGTH"></span>Content-Length
 </dt> <dd>
 
-Ersetzen Sie length durch die Anzahl der Bytes, die im Text der Antwort enthalten sind. Content-length ist erforderlich, auch wenn der Text der Antwort keinen Inhalt enthält.
+Ersetzen Sie length durch die Anzahl der Bytes, die im Text der Antwort enthalten sind. Content-Length ist erforderlich, auch wenn der Text der Antwort keinen Inhalt enthält.
 
 </dd> <dt>
 
-<span id="BITS-Error-Code"></span><span id="bits-error-code"></span><span id="BITS-ERROR-CODE"></span>Bits-Fehler Code
+<span id="BITS-Error-Code"></span><span id="bits-error-code"></span><span id="BITS-ERROR-CODE"></span>BITS-Fehlercode
 </dt> <dd>
 
-Ersetzen Sie Error-Code durch eine hexadezimale Zahl, die einen HRESULT-Wert darstellt, der einem serverseitigen Fehler zugeordnet ist. Schließen Sie diesen Header nur ein, wenn Reason-Code nicht 200 oder 201 ist.
+Ersetzen Sie error-code durch eine Hexadezimalzahl, die einen HRESULT-Wert darstellt, der einem serverseitigen Fehler zugeordnet ist. Schließen Sie diesen Header nur ein, wenn reason-code nicht 200 oder 201 ist.
 
 </dd> <dt>
 
-<span id="BITS-Error-Context"></span><span id="bits-error-context"></span><span id="BITS-ERROR-CONTEXT"></span>Bits-Fehler-Kontext
+<span id="BITS-Error-Context"></span><span id="bits-error-context"></span><span id="BITS-ERROR-CONTEXT"></span>BITS-Error-Context
 </dt> <dd>
 
-Ersetzen Sie Error-Context durch eine hexadezimale Zahl, die den Kontext darstellt, in dem der Fehler aufgetreten ist. Geben Sie die hexadezimale Zahl der [**\_ \_ \_ Remote \_ Datei des BG-Fehler Kontexts**](/windows/win32/api/bits/ne-bits-bg_error_context) (0x5) an, wenn der Server den Fehler generiert hat. Andernfalls geben Sie die hexadezimale Zahl für eine **BG- \_ Fehler \_ Kontext- \_ Remote \_ Anwendung** (0x7) an, wenn der Fehler von der Anwendung generiert wurde, an die die Uploaddatei weitergeleitet wird. Fügen Sie diesen Header nur ein, wenn der Grund Code nicht 200 oder 201 ist.
+Ersetzen Sie error-context durch eine Hexadezimalzahl, die den Kontext darstellt, in dem der Fehler aufgetreten ist. Geben Sie die Hexadezimalzahl für [**BG ERROR CONTEXT REMOTE \_ \_ \_ \_ FILE**](/windows/win32/api/bits/ne-bits-bg_error_context) (0x5) an, wenn der Server den Fehler generiert hat. Geben Sie andernfalls die Hexadezimalzahl für **BG ERROR CONTEXT REMOTE \_ \_ \_ \_ APPLICATION** (0x7) an, wenn der Fehler von der Anwendung generiert wurde, an die die Uploaddatei übergeben wird. Schließen Sie diesen Header nur ein, wenn der Grundcode nicht 200 oder 201 ist.
 
 </dd> </dl>
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Der BITS-Client sendet das [**Close-Session**](close-session.md) -Paket erneut, wenn der Grund Code im Bereich 500 bis 599 liegt, es sei denn, der Bits-Error-Code-Header ist mit dem Wert "BG \_ E Session" vorhanden \_ \_ \_ . Der Client versucht nicht, die Ursachen Codes 100 bis 499 zu wiederholen.
+Der BITS-Client gibt das [**Close-Session-Paket**](close-session.md) erneut zurück, wenn der Grundcode im Bereich von 500 bis 599 liegt, es sei denn, der BITS-Error-Code-Header ist mit dem Wert BG \_ E SESSION NOT FOUND \_ \_ \_ vorhanden. Der Client wird den Grundcode 100 bis 499 nicht wiederholen.
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Bestätigung für Cancel-Session**](ack-for-cancel-session.md)
+[**Ack für Cancel-Session**](ack-for-cancel-session.md)
 </dt> <dt>
 
-[**Sitzung schließen**](close-session.md)
+[**Close-Session**](close-session.md)
 </dt> </dl>
 
- 
+ 
 
- 
+ 
 
 
 

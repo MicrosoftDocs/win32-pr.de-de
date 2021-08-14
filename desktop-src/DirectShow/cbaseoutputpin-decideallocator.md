@@ -1,7 +1,7 @@
 ---
-description: Die decidezuordcator-Methode wählt eine Speicherzuweisung aus.
+description: Die DecideAllocator-Methode wählt eine Speicherzuweisung aus.
 ms.assetid: cdc15b0e-ea1b-43aa-9267-95fa9db56ed5
-title: Cbaseoutputpin. decidezuordcator-Methode (amfilter. h)
+title: CBaseOutputPin.DecideAllocator-Methode (Amfilter.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -16,16 +16,16 @@ api_location:
 - Strmbase.dll
 - Strmbasd.lib
 - Strmbasd.dll
-ms.openlocfilehash: 4e587562341118b904803302f0fd7249ebf8e507
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 73d822450d635fe5f7620d59f39fcc7ed85fe1e2465f34af3ef561dfc2f3828f
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106366754"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119814210"
 ---
-# <a name="cbaseoutputpindecideallocator-method"></a>Cbaseoutputpin. decidezuzuordcator-Methode
+# <a name="cbaseoutputpindecideallocator-method"></a>CBaseOutputPin.DecideAllocator-Methode
 
-Die- `DecideAllocator` Methode wählt eine Speicherzuweisung aus.
+Die `DecideAllocator` -Methode wählt eine Speicherzuweisung aus.
 
 ## <a name="syntax"></a>Syntax
 
@@ -43,32 +43,32 @@ virtual HRESULT DecideAllocator(
 
 <dl> <dt>
 
-*ppin* 
+*pPin* 
 </dt> <dd>
 
-Ein Zeiger auf die [**IMemInputPin**](/windows/desktop/api/Strmif/nn-strmif-imeminputpin) -Schnittstelle der Eingabe-PIN.
+Zeiger auf die [**IMemInputPin-Schnittstelle**](/windows/desktop/api/Strmif/nn-strmif-imeminputpin) des Eingabepins.
 
 </dd> <dt>
 
-*palloc* 
+*pAlloc* 
 </dt> <dd>
 
-Adresse einer Variablen, die einen Zeiger auf die [**imemfercator**](/windows/desktop/api/Strmif/nn-strmif-imemallocator) -Schnittstelle des Zuordners empfängt.
+Adresse einer Variablen, die einen Zeiger auf die [**IMemAllocator-Schnittstelle**](/windows/desktop/api/Strmif/nn-strmif-imemallocator) der Zuweisung empfängt.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt \_ bei Erfolg S OK oder einen **HRESULT** -Wert zurück, der die Ursache des Fehlers angibt.
+Gibt bei Erfolg S \_ OK oder einen **HRESULT-Wert** zurück, der die Ursache des Fehlers angibt.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Diese Methode wird am Ende des PIN-Verbindungsprozesses aufgerufen. Sie führt die folgenden Schritte aus:
+Diese Methode wird am Ende des Pinverbindungsprozesses aufgerufen. Sie führt die folgenden Schritte aus:
 
-1.  Ruft die [**IMemInputPin:: getalloerrequirements**](/windows/desktop/api/Strmif/nf-strmif-imeminputpin-getallocatorrequirements) -Methode auf, um die Puffer Anforderungen der Eingabe-PIN (sofern vorhanden) abzurufen.
-2.  Ruft die [**IMemInputPin:: getallocator**](/windows/desktop/api/Strmif/nf-strmif-imeminputpin-getallocator) -Methode auf, um eine Zuweisung von der eingabepin anzufordern. Wenn die eingabepin keine Zuweisung bereitstellt, erstellt die Ausgabe-PIN eine, indem Sie die [**cbaseoutputpin:: initaccesscator**](cbaseoutputpin-initallocator.md) -Klassenmethode aufrufen.
-3.  Ruft die [**cbaseoutputpin::D ecidebuffersize**](cbaseoutputpin-decidebuffersize.md) -Klassenmethode auf, mit der die zuordnereigenschaften festgelegt werden. Dies ist eine reine virtuelle Methode. Diese Klasse muss von der abgeleiteten Klasse implementiert werden.
-4.  Ruft die [**IMemInputPin:: notifyzucator**](/windows/desktop/api/Strmif/nf-strmif-imeminputpin-notifyallocator) -Methode auf, die die Eingabe-PIN der verwendeten Zuweisung benachrichtigt.
+1.  Ruft die [**IMemInputPin::GetAllocatorRequirements-Methode**](/windows/desktop/api/Strmif/nf-strmif-imeminputpin-getallocatorrequirements) auf, um ggf. die Pufferanforderungen des Eingabepins abzurufen.
+2.  Ruft die [**IMemInputPin::GetAllocator-Methode**](/windows/desktop/api/Strmif/nf-strmif-imeminputpin-getallocator) auf, um eine Zuweisung vom Eingabepin anzufordern. Wenn der Eingabepin keine Zuweisung bereitstellt, erstellt der Ausgabepin einen durch Aufrufen der [**CBaseOutputPin::InitAllocator-Klassenmethode.**](cbaseoutputpin-initallocator.md)
+3.  Ruft die [**CBaseOutputPin::D ecideBufferSize-Klassenmethode**](cbaseoutputpin-decidebuffersize.md) auf, die die Zuweisungseigenschaften festlegt. Dies ist eine reine virtuelle Methode. die abgeleitete Klasse muss sie implementieren.
+4.  Ruft die [**IMemInputPin::NotifyAllocator-Methode**](/windows/desktop/api/Strmif/nf-strmif-imeminputpin-notifyallocator) auf, die den Eingabepin über die verwendete Zuweisung benachrichtigt.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -76,16 +76,16 @@ Diese Methode wird am Ende des PIN-Verbindungsprozesses aufgerufen. Sie führt d
 
 | Anforderung | Wert |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>Amfilter. h (Include Streams. h)</dt> </dl>                                                                                  |
-| Bibliothek<br/> | <dl> " <dt>Straumbase. lib" (Einzelhandels Builds);</dt> " <dt>Straumbasd. lib" (Debugbuilds)</dt> </dl> |
+| Header<br/>  | <dl> <dt>Amfilter.h (include Streams.h)</dt> </dl>                                                                                  |
+| Bibliothek<br/> | <dl> <dt>Strmbase.lib (Verkaufsbuilds); </dt> <dt>Strmbasd.lib (Debugbuilds)</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Cbaseoutputpin-Klasse**](cbaseoutputpin.md)
+[**CBaseOutputPin-Klasse**](cbaseoutputpin.md)
 </dt> </dl>
 
  

@@ -1,9 +1,9 @@
 ---
-title: UserID-Element (logontriggertype)
-description: Der Bezeichner des Benutzers. Der Task wird gestartet, wenn sich der Benutzer am Computer anmeldet.
+title: UserId (logonTriggerType)-Element
+description: Bezeichner des Benutzers. Die Aufgabe wird gestartet, wenn sich dieser Benutzer beim Computer anmeldet.
 ms.assetid: 52568899-e351-4ee1-b613-d7c42d7b983d
 keywords:
-- UserID-Element Taskplaner
+- UserId-Element Taskplaner
 topic_type:
 - apiref
 api_name:
@@ -13,16 +13,16 @@ api_type:
 ms.topic: reference
 ms.date: 05/31/2018
 api_location: ''
-ms.openlocfilehash: 69d6534122b4b5e11a18a64ffa9bbb5e29e2a68a
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 33a1e0f82a3005bfec8e689d088a8d8e28ebbf0a949e4288338d27e68c3a0314
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104519108"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118355566"
 ---
-# <a name="userid-logontriggertype-element"></a>UserID-Element (logontriggertype)
+# <a name="userid-logontriggertype-element"></a>UserId (logonTriggerType)-Element
 
-Der Bezeichner des Benutzers. Der Task wird gestartet, wenn sich der Benutzer am Computer anmeldet.
+Bezeichner des Benutzers. Die Aufgabe wird gestartet, wenn sich dieser Benutzer beim Computer anmeldet.
 
 ``` syntax
 <xs:element name="UserId"
@@ -32,7 +32,7 @@ Der Bezeichner des Benutzers. Der Task wird gestartet, wenn sich der Benutzer am
  />
 ```
 
-Das **UserID** -Element wird durch den komplexen [**logontriggertype**](taskschedulerschema-logontriggertype-complextype.md) -Typ definiert.
+Das **UserId-Element** wird durch den [**komplexen LogonTriggerType-Typ**](taskschedulerschema-logontriggertype-complextype.md) definiert.
 
 ## <a name="parent-element"></a>Übergeordnetes Element
 
@@ -40,19 +40,19 @@ Das **UserID** -Element wird durch den komplexen [**logontriggertype**](tasksche
 
 | Element                                                                       | Abgeleitet von                                                                 | BESCHREIBUNG                                                            |
 |-------------------------------------------------------------------------------|------------------------------------------------------------------------------|------------------------------------------------------------------------|
-| [**Logonauslöst**](taskschedulerschema-logontrigger-triggergroup-element.md) | [**logontriggertype**](taskschedulerschema-logontriggertype-complextype.md) | Gibt einen-Vorgang an, der einen Task startet, wenn sich ein Benutzer anmeldet.<br/> |
+| [**LogonTrigger**](taskschedulerschema-logontrigger-triggergroup-element.md) | [**logonTriggerType**](taskschedulerschema-logontriggertype-complextype.md) | Gibt einen Trigger an, der eine Aufgabe startet, wenn sich ein Benutzer anmeldet.<br/> |
 
 
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Bei der Skripterstellung wird die Benutzer-ID für den Logon-Auslösers mithilfe der [**logonauslöst. UserID**](logontrigger-userid.md) -Eigenschaft angegeben.
+Für die Skriptentwicklung wird der Benutzerbezeichner für den Anmeldetrigger mithilfe der [**LogonTrigger.UserId-Eigenschaft**](logontrigger-userid.md) angegeben.
 
-Bei der C++-Entwicklung wird die Benutzer-ID für den Logon-Auslösers mithilfe der [**iLogon-Eigenschaft:: UserID**](/windows/desktop/api/taskschd/nf-taskschd-ilogontrigger-get_userid) -Eigenschaft angegeben.
+Für die C++-Entwicklung wird der Benutzerbezeichner für den Anmeldetrigger mithilfe der [**ILogonTrigger::UserId-Eigenschaft**](/windows/desktop/api/taskschd/nf-taskschd-ilogontrigger-get_userid) angegeben.
 
 ## <a name="examples"></a>Beispiele
 
-Ein umfassendes Beispiel für den XML-Code für eine Aufgabe, die einen Logon-Vorgang angibt, finden Sie unter [Logon-auslöserbeispiel (XML)](logon-trigger-example--xml-.md).
+Ein vollständiges Beispiel für den XML-Code für eine Aufgabe, die einen Anmeldetrigger angibt, finden Sie unter [Logon Trigger Example (XML) (Beispiel für Logon-Trigger (XML)).](logon-trigger-example--xml-.md)
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -60,16 +60,16 @@ Ein umfassendes Beispiel für den XML-Code für eine Aufgabe, die einen Logon-Vo
 
 | Anforderung | Wert |
 |-------------------------------------|------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>       |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2008 \[ -Desktop-Apps\]<br/> |
+| Unterstützte Mindestversion (Client)<br/> | Windows \[Nur Vista-Desktop-Apps\]<br/>       |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2008-Desktop-Apps\]<br/> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[Schema Elemente Taskplaner](task-scheduler-schema-elements.md)
+[Taskplaner Schemaelemente](task-scheduler-schema-elements.md)
 </dt> <dt>
 
 [Aufgabenplanung](task-scheduler-start-page.md)

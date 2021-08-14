@@ -1,9 +1,9 @@
 ---
-title: WM_CAP_SET_SCALE Meldung (VFW. h)
-description: Mit der \_ Einstellung für die WM-Cap- \_ \_ Skalierung wird die Skalierung der Preview-Videobilder aktiviert oder deaktiviert.
+title: WM_CAP_SET_SCALE (Vfw.h)
+description: Die WM \_ CAP \_ SET \_ SCALE-Meldung aktiviert oder deaktiviert die Skalierung der Vorschauvideobilder.
 ms.assetid: f15f1d18-2c5a-40c1-baa1-0d18549bee23
 keywords:
-- WM_CAP_SET_SCALE-Nachricht (Multimedia)
+- WM_CAP_SET_SCALE-Nachricht Windows Multimedia
 topic_type:
 - apiref
 api_name:
@@ -14,16 +14,16 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: fd3bfc5dc463d84c935f994519060c33f89b8c0a
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 3293be6917917581957df0f5dae9456274f1d2cc3eeffff5ea971c3596209a62
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104106112"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118369394"
 ---
-# <a name="wm_cap_set_scale-message"></a>Formel zum Festlegen der WM-Abdeckung \_ \_ \_
+# <a name="wm_cap_set_scale-message"></a>WM \_ CAP \_ SET \_ SCALE-Meldung
 
-Mit der Einstellung für die **WM-Cap- \_ \_ \_ Skalierung** wird die Skalierung der Preview-Videobilder aktiviert oder deaktiviert. Wenn die Skalierung aktiviert ist, wird der erfasste Videoframe auf die Abmessungen des Aufzeichnungs Fensters gestreckt. Sie können diese Nachricht explizit oder mithilfe des [**cappreviewscale**](/windows/desktop/api/Vfw/nf-vfw-cappreviewscale) -Makros senden.
+Die **WM CAP SET \_ \_ \_ SCALE-Meldung** aktiviert oder deaktiviert die Skalierung der Vorschauvideobilder. Wenn die Skalierung aktiviert ist, wird der erfasste Videoframe auf die Dimensionen des Erfassungsfensters gestreckt. Sie können diese Nachricht explizit oder mithilfe des [**Makros capPreviewScale**](/windows/desktop/api/Vfw/nf-vfw-cappreviewscale) senden.
 
 
 ```C++
@@ -38,22 +38,22 @@ lParam = 0L;
 
 <dl> <dt>
 
-<span id="f"></span><span id="F"></span>*c*
+<span id="f"></span><span id="F"></span>*F*
 </dt> <dd>
 
-Flag für die Vorschau Skalierung. Geben Sie **true** für diesen Parameter an, um die Vorschau Rahmen auf die Größe des Erfassungs Fensters zu erweitern, oder auf **false** , um Sie in ihrer natürlichen Größe anzuzeigen.
+Vorschauskalierungsflag. Geben **Sie TRUE** für diesen Parameter an, um Vorschauframes auf die Größe des Erfassungsfensters zu strecken, oder **FALSE,** um sie in ihrer natürlichen Größe anzuzeigen.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt **true** zurück, wenn erfolgreich, andernfalls **false** .
+Gibt **TRUE zurück,** wenn erfolgreich, **andernfalls FALSE.**
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Durch das Skalieren von Vorschaubildern wird die sofortige Darstellung der aufgezeichneten Frames im Aufzeichnungs Fenster gesteuert. Dies hat keine Auswirkung auf die Größe der in der Datei gespeicherten Frames.
+Das Skalieren von Vorschaubildern steuert die sofortige Darstellung erfasster Frames im Erfassungsfenster. Dies hat keine Auswirkungen auf die Größe der in der Datei gespeicherten Frames.
 
-Die Skalierung hat keine Auswirkungen, wenn Sie das Overlay zum Anzeigen von Videos im Frame Puffer verwenden.
+Die Skalierung hat keine Auswirkungen, wenn überlagernd verwendet wird, um Videos im Framepuffer anzuzeigen.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -63,18 +63,18 @@ Die Skalierung hat keine Auswirkungen, wenn Sie das Overlay zum Anzeigen von Vid
 |-------------------------------------|----------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional \[nur Desktop-Apps\]<br/>                       |
 | Unterstützte Mindestversion (Server)<br/> | Windows 2000 Server \[nur Desktop-Apps\]<br/>                             |
-| Header<br/>                   | <dl> <dt>VFW. h</dt> </dl> |
+| Header<br/>                   | <dl> <dt>Vfw.h</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[Video Erfassung](video-capture.md)
+[Videoaufnahme](video-capture.md)
 </dt> <dt>
 
-[Video Erfassungs Meldungen](video-capture-messages.md)
+[Videoaufnahmenachrichten](video-capture-messages.md)
 </dt> </dl>
 
  

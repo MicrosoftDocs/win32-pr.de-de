@@ -1,11 +1,11 @@
 ---
-title: Inapenforcementclientbinding notifyconnectionstatedown-Methode (napforcementclient. h)
-description: Wird verwendet, um den NAPAgent darüber zu informieren, dass eine Verbindung zu einem Erzwingungs Client nicht mehr besteht.
+title: INapEnforcementClientBinding NotifyConnectionStateDown-Methode (NapEnforcementClient.h)
+description: Wird verwendet, um napAgent darüber zu informieren, dass eine Verbindung mit einem Erzwingungsclient beendet wurde.
 ms.assetid: 504c61c1-c8f9-46b8-87cd-c1f04846f0b3
 keywords:
-- Notifyconnectionstatedown-Methode NAP
-- Notifyconnectionstatedown-Methode NAP, inapenforcementclientbinding-Schnittstelle
-- Inapenforcementclientbinding-Schnittstelle NAP, notifyconnectionstatedown-Methode
+- NotifyConnectionStateDown-Methode NAP
+- NotifyConnectionStateDown-Methode NAP, INapEnforcementClientBinding-Schnittstelle
+- INapEnforcementClientBinding-Schnittstelle NAP , NotifyConnectionStateDown-Methode
 topic_type:
 - apiref
 api_name:
@@ -16,21 +16,21 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 3129883342f493fd56a4cc81513910e8789ca4f1
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 0e0e40d3b46e8c970287f49d983d89733d4858e38671ac93fb75d482c0259a73
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104519279"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119803050"
 ---
-# <a name="inapenforcementclientbindingnotifyconnectionstatedown-method"></a>Inapenforcementclientbinding:: notifyconnectionstatedown-Methode
+# <a name="inapenforcementclientbindingnotifyconnectionstatedown-method"></a>INapEnforcementClientBinding::NotifyConnectionStateDown-Methode
 
 > [!Note]  
-> Die Netzwerk Zugriffsschutz-Plattform ist ab Windows 10 nicht verfügbar.
+> Die Netzwerkzugriffsschutz-Plattform ist ab Windows 10 nicht verfügbar.
 
  
 
-Die **inapenforcementclientbinding:: notifyconnectionstatedown** -Methode wird verwendet, um den NAPAgent darüber zu informieren, dass eine Verbindung zu einem Erzwingungs Client nicht mehr besteht.
+Die **INapEnforcementClientBinding::NotifyConnectionStateDown-Methode** wird verwendet, um napAgent darüber zu informieren, dass eine Verbindung mit einem Erzwingungsclient getrennt wurde.
 
 ## <a name="syntax"></a>Syntax
 
@@ -47,37 +47,37 @@ HRESULT NotifyConnectionStateDown(
 
 <dl> <dt>
 
-*downcxn* \[ in\]
+*downCxn* \[ In\]
 </dt> <dd>
 
-Ein com-Zeiger auf die [**inapenforcementclientconnection**](inapenforcementclientconnection.md) -Schnittstelle der nach-unten-Verbindung.
+Ein COM-Zeiger auf die [**INapEnforcementClientConnection-Schnittstelle**](inapenforcementclientconnection.md) der down-Verbindung.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Es können auch andere com-spezifische Fehlercodes zurückgegeben werden.
+Andere COM-spezifische Fehlercodes können ebenfalls zurückgegeben werden.
 
 
 
 | Rückgabecode                                                                                             | Beschreibung                                                        |
 |---------------------------------------------------------------------------------------------------------|--------------------------------------------------------------------|
 | <dl> <dt>**S \_ OK**</dt> </dl>                   | Der Vorgang ist erfolgreich.<br/>                            |
-| <dl> <dt>**E \_ Access verweigert**</dt> </dl>         | Berechtigungs Fehler, Zugriff verweigert.<br/>                       |
-| <dl> <dt>**E \_ Outo-Memory**</dt> </dl>          | System Ressourcen Limit, der Vorgang konnte nicht durchgeführt werden.<br/> |
-| <dl> <dt>**NAP \_ E \_ nicht \_ Initialisiert**</dt> </dl> | Der Enforcer wurde nicht bereits initialisiert.<br/>       |
+| <dl> <dt>**E \_ ACCESSDENIED**</dt> </dl>         | Berechtigungsfehler, Zugriff verweigert.<br/>                       |
+| <dl> <dt>**E \_ OUTOFMEMORY**</dt> </dl>          | Systemressourcenlimit, konnte den Vorgang nicht ausführen.<br/> |
+| <dl> <dt>**NAP \_ E \_ NICHT \_ INITIALISIERT**</dt> </dl> | Der Enforcer wurde zuvor nicht initialisiert.<br/>       |
 
 
 
  
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Wenn eine der von einem Erzwingungs Client eingerichteten Verbindungen herunterfährt, sollte der Erzwingungs Client die Verbindung aus der aktiven Liste entfernen und den NAPAgent mithilfe dieser Methode informieren. Sobald dieser Rückruf zurückkehrt, kann das Verbindungs Objekt freigegeben und freigegeben werden. Der NAPAgent hält keine Verweise auf das Verbindungs Objekt.
+Wenn eine der von einem Erzwingungsclient hergestellten Verbindungen ausgeschaltet wird, sollte der Erzwingungsclient die Verbindung aus der aktiven Liste entfernen und napAgent mit dieser Methode informieren. Sobald dieser Aufruf zurückgegeben wird, kann das Verbindungsobjekt freigegeben und freigegeben werden. NapAgent enthält keine Verweise auf das Verbindungsobjekt.
 
-Als Ergebnis dieser Benachrichtigung aktualisiert der NAPAgent den NAP-Status des Systems entsprechend.
+Aufgrund dieser Benachrichtigung aktualisiert NapAgent den NAP-Systemstatus nach Bedarf.
 
-Der Erzwingungs Client muss die [**inapenforcementclientbinding:: Initialize**](inapenforcementclientbinding-initialize-method.md) -Methode aufrufen, bevor diese oder eine andere Methode der [**inapenforcementclientbinding**](inapenforcementclientbinding.md) -Schnittstelle aufgerufen wird.
+Der Erzwingungsclient muss die [**INapEnforcementClientBinding::Initialize-Methode**](inapenforcementclientbinding-initialize-method.md) aufrufen, bevor er diese oder eine andere Methode der [**INapEnforcementClientBinding-Schnittstelle aufruft.**](inapenforcementclientbinding.md)
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -85,22 +85,22 @@ Der Erzwingungs Client muss die [**inapenforcementclientbinding:: Initialize**](
 
 | Anforderung | Wert |
 |-------------------------------------|-----------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>                                                      |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2008 \[ -Desktop-Apps\]<br/>                                                |
-| Header<br/>                   | <dl> <dt>Napforcementclient. h</dt> </dl>   |
-| IDL<br/>                      | <dl> <dt>Napforcementclient. idl</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows \[Nur Vista-Desktop-Apps\]<br/>                                                      |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2008-Desktop-Apps\]<br/>                                                |
+| Header<br/>                   | <dl> <dt>NapEnforcementClient.h</dt> </dl>   |
+| Idl<br/>                      | <dl> <dt>NapEnforcementClient.idl</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>Qagent.dll</dt> </dl>               |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
 
 </dt> <dt>
 
-[**Inapenforcementclientbinding**](inapenforcementclientbinding.md)
+[**INapEnforcementClientBinding**](inapenforcementclientbinding.md)
 </dt> </dl>
 
  

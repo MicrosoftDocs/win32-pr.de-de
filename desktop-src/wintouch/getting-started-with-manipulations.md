@@ -1,42 +1,42 @@
 ---
 title: Manipulationen
-description: In diesem Abschnitt wird die Objekt Bearbeitung für Windows-Fingerabdruck erläutert.
+description: In diesem Abschnitt wird die Objektbearbeitung für Windows Touch erläutert.
 ms.assetid: 7f905c36-7804-422c-8a60-a281e03c5e15
 keywords:
-- Windows-Fingereingabe, Manipulationen
-- Manipulationen, Informationen zu
-- Manipulationen, Gesten Unterschiede
-- Gesten, Manipulations Unterschiede
+- Windows Touch,Manipulationen
+- Manipulationen,About
+- Manipulationen,Gestenunterschiede
+- Gesten,Manipulationsunterschiede
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 10fe65494de990305e4268aa4191b5dabaa267f4
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: 5368b39de1f35cc9a547bc240fc3c984fc1f10f658972b0f845a965e09bb29c8
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "104309348"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118435985"
 ---
 # <a name="manipulations"></a>Manipulationen
 
-In diesem Abschnitt wird die Objekt Bearbeitung für Windows-Fingerabdruck erläutert.
+In diesem Abschnitt wird die Objektbearbeitung für Windows Touch erläutert.
 
-## <a name="manipulation-overview"></a>Übersicht über Manipulationen
+## <a name="manipulation-overview"></a>Übersicht über die Manipulation
 
-Eine praktische Möglichkeit, Manipulationen zu berücksichtigen, besteht darin, Sie als eine Reihe von Gesten zu betrachten. Mit Gesten können Sie mehr Flexibilität und eine präzisere Genauigkeit durch die Verwendung von Manipulationen erreichen. Der Unterschied zwischen Manipulationen und Gesten wird am besten anhand eines einfachen Beispiels veranschaulicht. Sie können ein Objekt erweitern und gleichzeitig mithilfe von Manipulationen übersetzen. mit Gesten können Sie nur eine gleichzeitig ausführen. Diese Möglichkeit, ein Objekt in Echtzeit zu manipulieren, macht Anwendungen intuitiver für Benutzer, indem es eine realistischere Benutzerfreundlichkeit ermöglicht.
+Eine praktische Möglichkeit, sich über Manipulationen gedanken zu machen, ist, sie als Obermenge von Gesten zu betrachten. Was Sie mit Gesten tun können, können Sie mithilfe von Manipulationen mit mehr Flexibilität und mit feinerer Genauigkeit tun. Der Unterschied zwischen Manipulationen und Gesten wird am besten anhand eines einfachen Beispiels demonstriert. Sie können ein Objekt erweitern und gleichzeitig mithilfe von Bearbeitungen übersetzen. mit Gesten können Sie nur eine nach der anderen tun. Diese Möglichkeit, ein Objekt in Echtzeit zu bearbeiten, macht Anwendungen für Benutzer intuitiver, da sie eine realistischere Erfahrung ermöglichen.
 
-Die Manipulations-APIs werden verwendet, um Transformations Vorgänge für Objekte für Anwendungen mit aktiviertem Touchscreen zu vereinfachen. Manipulationen werden in Windows 7 durch das Manipulationen-com-Objekt durchgeführt. Mithilfe von Manipulationen können Entwickler die Trägheit (Objekt Physik) leichter unterstützen und problemlos Transformationen für Objekte auf eine Weise durchführen, die mit anderen Anwendungen konsistent ist. In den folgenden Abschnitten werden verschiedene Möglichkeiten erläutert, wie Sie Manipulationen durchführen können.
+Die Manipulations-APIs werden verwendet, um Transformationsvorgänge für Objekte für Touch-fähige Anwendungen zu vereinfachen. Manipulationen werden in Windows 7 über das COM-Objekt manipulations ausgeführt. Durch die Verwendung von Manipulationen können Entwickler Trägheit (Objektkörper) einfacher unterstützen und Transformationen für Objekte problemlos auf eine Weise durchführen, die mit anderen Anwendungen konsistent ist. In den folgenden Abschnitten werden verschiedene Möglichkeiten zum Ausführen von Bearbeitungen erläutert.
 
 
 
 | `Section`                                                                                            | BESCHREIBUNG                                                                                                                                          |
 |----------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------|
-| [Hinzufügen von Manipulations Unterstützung zu nicht verwaltetem Code](adding-manipulation-support-in-unmanaged-code.md) | Erläutert das Implementieren einer Ereignis Senke für die [**\_ imanipulationevents**](/windows/win32/api/manipulations/nn-manipulations-_imanipulationevents) -Schnittstelle und das Hinzufügen von Ereignis Handlern zu Ihrem Code. |
-| [Erweiterte Manipulationen](advanced-manipulations.md)                                               | Erläutert, wie komplexe Manipulationen durchgeführt werden.                                                                                                       |
-| [Drehung mit einem Finger](single-finger-rotation.md)                                               | Erläutert, wie ein Objekt mithilfe eines pivotpunkts und des Manipulations Prozessors gedreht wird.                                                              |
+| [Hinzufügen von Manipulationsunterstützung zu nicht verwaltetem Code](adding-manipulation-support-in-unmanaged-code.md) | Erläutert das Implementieren einer Ereignissenke für die [**\_ IManipulationEvents-Schnittstelle**](/windows/win32/api/manipulations/nn-manipulations-_imanipulationevents) und das Hinzufügen von Ereignishandlern zum Code. |
+| [Erweiterte Manipulationen](advanced-manipulations.md)                                               | Erläutert das Ausführen komplexer Bearbeitungen.                                                                                                       |
+| [Drehung mit einem Finger](single-finger-rotation.md)                                               | Erläutert, wie ein Objekt mithilfe eines Pivotpunkts und des Bearbeitungsprozessors gedreht wird.                                                              |
 
 
 
- 
+ 
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
@@ -45,9 +45,9 @@ Die Manipulations-APIs werden verwendet, um Transformations Vorgänge für Objek
 [Manipulationen und Trägheit](manipulation-and-inertia.md)
 </dt> </dl>
 
- 
+ 
 
- 
+ 
 
 
 

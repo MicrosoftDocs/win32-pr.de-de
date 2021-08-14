@@ -1,25 +1,25 @@
 ---
-description: Feature-Satz für Eltern Steuerelemente
+description: Featuresatz "Jugendschutz"
 ms.assetid: 25b9d906-6e26-488c-9d5b-a0c27d6cfe76
-title: Feature-Satz für Eltern Steuerelemente
+title: Featuresatz "Jugendschutz"
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: fcc5f43a2e393356dca760f2df70de415b430aeb
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 89544e39ee3a2d4c2c894739ca7ddaf525ed0b8a93c634bcc85153afa1c41dfb
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "104349099"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117869285"
 ---
-# <a name="parental-controls-feature-set"></a>Feature-Satz für Eltern Steuerelemente
+# <a name="parental-controls-feature-set"></a>Featuresatz "Jugendschutz"
 
-Informationen zu den Featuresatz in Jugendschutz-Steuerelementen sind wie folgt organisiert:
+Informationen zum Featuresatz in Der Jugendschutz sind wie folgt organisiert:
 
--   [Eltern Steuerelemente Top-Level Benutzeroberfläche](parental-controls-top-level-user-interface.md)
--   [Aktivitätsberichte für Eltern Steuerelemente](parental-controls-activity-reporting.md)
--   [Elterliche Kontrollen In-Box Einschränkungen und Benutzeroberflächen](parental-controls-in-box-restrictions-and-user-interfaces.md)
--   [Übersicht über die Eltern Steuerungs-API](parental-controls-api-overview.md)
--   [Übersicht über die Erweiterbarkeits Features für Eltern Steuerelemente](parental-controls-extensibility-features-overview.md)
+-   [Top-Level Benutzeroberfläche der Jugendschutzfunktionen](parental-controls-top-level-user-interface.md)
+-   [Aktivitätsberichterstattung der Jugendschutzfunktionen](parental-controls-activity-reporting.md)
+-   [Jugendschutz In-Box Einschränkungen und Benutzeroberflächen](parental-controls-in-box-restrictions-and-user-interfaces.md)
+-   [Übersicht über die API für die Jugendschutz-API](parental-controls-api-overview.md)
+-   [Übersicht über die Erweiterbarkeitsfunktionen für Jugendschutzelemente](parental-controls-extensibility-features-overview.md)
 
  
 

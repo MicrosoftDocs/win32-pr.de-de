@@ -1,30 +1,30 @@
 ---
-title: Initialisieren von directcomposition
-description: In diesem Thema wird veranschaulicht, wie der minimale Satz von Microsoft directcomposition-Objekten, die zum Erstellen einer einfachen Komposition benötigt werden, erstellt und initialisiert wird.
+title: Initialisieren von DirectComposition
+description: In diesem Thema wird veranschaulicht, wie sie den minimalen Satz von Microsoft DirectComposition-Objekten erstellen und initialisieren, die zum Erstellen einer einfachen Komposition erforderlich sind.
 ms.assetid: F2BF9CE2-05EF-4345-A00E-F5C8A8660B24
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 3f8d248c3036bd0c901ee318ae0274809dafdf20
-ms.sourcegitcommit: 592c9bbd22ba69802dc353bcb5eb30699f9e9403
+ms.openlocfilehash: 58c915bded416d7359c32558a00feaa1d058c02f28882b73caa5dc010d8bb5b5
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "104102106"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118505151"
 ---
-# <a name="how-to-initialize-directcomposition"></a>Initialisieren von directcomposition
+# <a name="how-to-initialize-directcomposition"></a>Initialisieren von DirectComposition
 
 > [!NOTE]
-> Für apps unter Windows 10 wird die Verwendung von Windows. UI. Composition-APIs anstelle von directcomposition empfohlen. Weitere Informationen finden Sie unter [modernisieren ihrer Desktop-App mithilfe der visuellen Ebene](/windows/uwp/composition/visual-layer-in-desktop-apps).
+> Für Apps in Windows 10 wird empfohlen, Windows.UI.Composition-APIs anstelle von DirectComposition zu verwenden. Weitere Informationen finden Sie unter [Modernisieren Ihrer Desktop-App mithilfe der visuellen Ebene](/windows/uwp/composition/visual-layer-in-desktop-apps).
 
-In diesem Thema wird veranschaulicht, wie der minimale Satz von Microsoft directcomposition-Objekten, die zum Erstellen einer einfachen Komposition benötigt werden, erstellt und initialisiert wird.
+In diesem Thema wird veranschaulicht, wie sie den minimalen Satz von Microsoft DirectComposition-Objekten erstellen und initialisieren, die zum Erstellen einer einfachen Komposition erforderlich sind.
 
-## <a name="what-you-need-to-know"></a>Was Sie wissen müssen
+## <a name="what-you-need-to-know"></a>Wichtige Informationen
 
 ### <a name="technologies"></a>Technologien
 
 -   [DirectComposition](directcomposition-portal.md)
 -   [Direct3D 11-Grafik](/windows/desktop/direct3d11/atoc-dx-graphics-direct3d-11)
--   [DirectX-Grafik Infrastruktur (DXGI)](/windows/desktop/direct3ddxgi/dx-graphics-dxgi)
+-   [DirectX Graphic Infrastructure (DXGI)](/windows/desktop/direct3ddxgi/dx-graphics-dxgi)
 
 ### <a name="prerequisites"></a>Voraussetzungen
 
@@ -34,9 +34,9 @@ In diesem Thema wird veranschaulicht, wie der minimale Satz von Microsoft direct
 
 ## <a name="instructions"></a>Anweisungen
 
-### <a name="step-1-create-the-direct3d-device-object"></a>Schritt 1: Erstellen des Direct3D-Geräte Objekts
+### <a name="step-1-create-the-direct3d-device-object"></a>Schritt 1: Erstellen des Direct3D-Geräteobjekts
 
-Verwenden Sie die [**D3D11CreateDevice**](/windows/desktop/api/d3d11/nf-d3d11-d3d11createdevice) -Funktion aus der Microsoft Direct3D-API, um eine Instanz eines Geräte Objekts zu erstellen, das den Anzeige Adapter darstellt.
+Verwenden Sie die [**D3D11CreateDevice-Funktion**](/windows/desktop/api/d3d11/nf-d3d11-d3d11createdevice) aus der Microsoft Direct3D-API, um eine Instanz eines Geräteobjekts zu erstellen, das den Anzeigeadapter darstellt.
 
 
 ```C++
@@ -66,7 +66,7 @@ Verwenden Sie die [**D3D11CreateDevice**](/windows/desktop/api/d3d11/nf-d3d11-d3
 
 ### <a name="step-2-retrieve-a-pointer-to-the-dxgi-object"></a>Schritt 2: Abrufen eines Zeigers auf das DXGI-Objekt
 
-Verwenden Sie die **QueryInterface** -Methode, um den [**idxgidevice**](/windows/desktop/api/dxgi/nn-dxgi-idxgidevice) -Zeiger aus dem Direct3D-Geräte Objekt abzurufen. Directcomposition verwendet das Microsoft DirectX Graphics Infrastructure (DXGI)-Objekt, um alle Surface-Objekte für das directcomposition-Gerät zu erstellen.
+Verwenden Sie die **QueryInterface-Methode,** um den [**IDXGIDevice-Zeiger**](/windows/desktop/api/dxgi/nn-dxgi-idxgidevice) aus dem Direct3D-Geräteobjekt abzurufen. DirectComposition verwendet das Dxgi-Objekt (Microsoft DirectX Graphic Infrastructure), um alle Oberflächenobjekte für das DirectComposition-Gerät zu erstellen.
 
 
 ```C++
@@ -82,9 +82,9 @@ Verwenden Sie die **QueryInterface** -Methode, um den [**idxgidevice**](/windows
 
 
 
-### <a name="step-3-create-the-directcomposition-device-object"></a>Schritt 3: Erstellen des directcomposition-Geräte Objekts
+### <a name="step-3-create-the-directcomposition-device-object"></a>Schritt 3: Erstellen des DirectComposition-Geräteobjekts
 
-Verwenden Sie die [**dcompositionkreatedevice**](/windows/desktop/api/Dcomp/nf-dcomp-dcompositioncreatedevice) -Funktion, um eine Instanz des directcomposition-Geräte Objekts zu erstellen. Geben Sie dabei den [**idxgidevice**](/windows/desktop/api/dxgi/nn-dxgi-idxgidevice) -Zeiger an, den Sie im vorherigen Schritt abgerufen haben. Die-Funktion Ruft einen [**idcompositiondevice**](/windows/win32/api/dcomp/nn-dcomp-idcompositiondevice) -Zeiger ab, der zum Erstellen aller anderen directcomposition-Objekte verwendet wird, die in einer Komposition verwendet werden.
+Verwenden Sie die [**DCompositionCreateDevice-Funktion,**](/windows/desktop/api/Dcomp/nf-dcomp-dcompositioncreatedevice) um eine Instanz des DirectComposition-Geräteobjekts zu erstellen, und geben Sie dabei den [**IDXGIDevice-Zeiger**](/windows/desktop/api/dxgi/nn-dxgi-idxgidevice) an, den Sie im vorherigen Schritt abgerufen haben. Die Funktion ruft einen [**IDCompositionDevice-Zeiger**](/windows/win32/api/dcomp/nn-dcomp-idcompositiondevice) ab, der verwendet wird, um alle anderen DirectComposition-Objekte zu erstellen, die in einer Komposition verwendet werden.
 
 
 ```C++
@@ -104,9 +104,9 @@ Verwenden Sie die [**dcompositionkreatedevice**](/windows/desktop/api/Dcomp/nf-d
 
 
 
-### <a name="step-4-create-the-composition-target-object"></a>Schritt 4: Erstellen des Kompositions Zielobjekts
+### <a name="step-4-create-the-composition-target-object"></a>Schritt 4: Erstellen des Kompositionszielobjekts
 
-Verwenden Sie die [**idcompositiondevice:: kreatetargetforhwnd**](/windows/win32/api/dcomp/nf-dcomp-idcompositiondevice-createtargetforhwnd) -Methode, um eine Instanz des Kompositions Zielobjekts zu erstellen. Durch Aufrufen von **createtargetforhwnd** wird das Geräte Objekt an das Anwendungsfenster gebunden, in dem die Komposition angezeigt wird.
+Verwenden Sie die [**IDCompositionDevice::CreateTargetForHwnd-Methode,**](/windows/win32/api/dcomp/nf-dcomp-idcompositiondevice-createtargetforhwnd) um eine Instanz des Kompositionszielobjekts zu erstellen. Der Aufruf **von CreateTargetForHwnd** bindet das Geräteobjekt an das Anwendungsfenster, in dem die Komposition angezeigt wird.
 
 
 ```C++
@@ -127,7 +127,7 @@ Verwenden Sie die [**idcompositiondevice:: kreatetargetforhwnd**](/windows/win32
 
 ### <a name="step-5-create-a-visual-object"></a>Schritt 5: Erstellen eines visuellen Objekts
 
-Verwenden Sie die [**idcompositiondevice:: anatevisual**](/windows/win32/api/dcomp/nf-dcomp-idcompositiondevice-createvisual) -Methode, um ein visuelles Objekt zu erstellen. Die-Methode ruft einen [**idcompositionvisual**](/windows/win32/api/dcomp/nn-dcomp-idcompositionvisual) -Zeiger ab, der verwendet wird, um die Eigenschaften des visuellen Elements festzulegen. Weitere Informationen finden Sie unter [Eigenschaften eines visuellen Objekts](basic-concepts.md).
+Verwenden Sie die [**IDCompositionDevice::CreateVisual-Methode,**](/windows/win32/api/dcomp/nf-dcomp-idcompositiondevice-createvisual) um ein visuelles Objekt zu erstellen. Die -Methode ruft einen [**IDCompositionVisual-Zeiger**](/windows/win32/api/dcomp/nn-dcomp-idcompositionvisual) ab, mit dem die Eigenschaften des Visuals festgelegt werden. Weitere Informationen finden Sie unter [Eigenschaften eines visuellen Objekts.](basic-concepts.md)
 
 
 ```C++
@@ -139,9 +139,9 @@ Verwenden Sie die [**idcompositiondevice:: anatevisual**](/windows/win32/api/dco
 
 
 
-### <a name="step-6-create-a-composition-surface-and-render-a-bitmap-to-the-surface"></a>Schritt 6: Erstellen einer Kompositions Oberfläche und renderens einer Bitmap auf der Oberfläche
+### <a name="step-6-create-a-composition-surface-and-render-a-bitmap-to-the-surface"></a>Schritt 6: Erstellen einer Kompositionsoberfläche und Rendern einer Bitmap auf der Oberfläche
 
-Erstellen Sie einen [**idcompositionsurface**](/windows/win32/api/dcomp/nn-dcomp-idcompositionsurface) -Zeiger.
+Erstellen Sie einen [**IDCompositionSurface-Zeiger.**](/windows/win32/api/dcomp/nn-dcomp-idcompositionsurface)
 
 
 ```C++
@@ -157,7 +157,7 @@ Erstellen Sie einen [**idcompositionsurface**](/windows/win32/api/dcomp/nn-dcomp
 
 
 
-Die folgende Funktion erstellt eine Microsoft directcomposition-Oberfläche und zeichnet die Bitmap auf der-Oberfläche.
+Die folgende Funktion erstellt eine Microsoft DirectComposition-Oberfläche und zeichnet die Bitmap auf der Oberfläche.
 
 
 ```C++
@@ -253,11 +253,11 @@ HRESULT DemoApp::MyCreateGDIRenderedDCompSurface(HBITMAP hBitmap,
 
 
 
-### <a name="step-7-bind-surface-to-visual-and-set-the-properties-of-the-visual-object"></a>Schritt 7: Binden der Oberfläche an die Visualisierung und Festlegen der Eigenschaften des visuellen Objekts
+### <a name="step-7-bind-surface-to-visual-and-set-the-properties-of-the-visual-object"></a>Schritt 7: Binden der Oberfläche an visual und Festlegen der Eigenschaften des visuellen Objekts
 
-Rufen Sie die Methoden der [**idcompositionvisual**](/windows/win32/api/dcomp/nn-dcomp-idcompositionvisual) -Schnittstelle des visuellen Objekts auf, um die Eigenschaften des visuellen Objekts festzulegen.
+Rufen Sie die Methoden der [**IDCompositionVisual-Schnittstelle**](/windows/win32/api/dcomp/nn-dcomp-idcompositionvisual) des visuellen Objekts auf, um die Eigenschaften des Visuals festzulegen.
 
-Im nächsten Beispiel wird der Bitmapinhalt für das visuelle Element und die horizontale und vertikale Position des visuellen Elements relativ zur oberen linken Ecke des Containers festgelegt. Da es sich um das visuelle Stamm Element handelt, ist der Container für dieses visuelle Element das Fenster Kompositions Ziel.
+Im nächsten Beispiel werden der Bitmapinhalt für das Visual und die horizontale und vertikale Position des Visuals relativ zur linken oberen Ecke des Containers festgelegt. Da es sich um das Stammvisual handelt, ist der Container für dieses Visual das Kompositionszielfenster.
 
 
 ```C++
@@ -281,9 +281,9 @@ Im nächsten Beispiel wird der Bitmapinhalt für das visuelle Element und die ho
 
 
 
-### <a name="step-8-set-the-root-visual-of-the-visual-tree"></a>Schritt 8: Festlegen der visuellen Stamm Visualisierung der visuellen Struktur
+### <a name="step-8-set-the-root-visual-of-the-visual-tree"></a>Schritt 8: Festlegen des Stammvisuals der visuellen Struktur
 
-Legen Sie das visuelle Stamm Element der visuellen Struktur fest, indem Sie die [**idcompositiontarget:: setRoot**](/windows/win32/api/dcomp/nf-dcomp-idcompositiontarget-setroot) -Methode aufrufen.
+Legen Sie das Stammvisual der visuellen Struktur fest, indem Sie die [**IDCompositionTarget::SetRoot-Methode**](/windows/win32/api/dcomp/nf-dcomp-idcompositiontarget-setroot) aufrufen.
 
 
 ```C++
@@ -296,9 +296,9 @@ Legen Sie das visuelle Stamm Element der visuellen Struktur fest, indem Sie die 
 
 
 
-### <a name="step-9-commit-the-composition"></a>Schritt 9: Commit der Komposition ausführen
+### <a name="step-9-commit-the-composition"></a>Schritt 9: Committen der Komposition
 
-Rufen Sie die [**idcompositiondevice:: Commit**](/windows/win32/api/dcomp/nf-dcomp-idcompositiondevice-commit) -Methode auf, um den Batch von Befehlen für die Verarbeitung in directcomposition zu committen. Die resultierende Komposition wird im Zielfenster angezeigt.
+Rufen Sie die [**IDCompositionDevice::Commit-Methode**](/windows/win32/api/dcomp/nf-dcomp-idcompositiondevice-commit) auf, um den Befehlsbatch zur Verarbeitung an DirectComposition zu committen. Die resultierende Komposition wird im Zielfenster angezeigt.
 
 
 ```C++
@@ -311,9 +311,9 @@ Rufen Sie die [**idcompositiondevice:: Commit**](/windows/win32/api/dcomp/nf-dco
 
 
 
-### <a name="step-10-free-the-directcomposition-objects"></a>Schritt 10: Freigeben der directcomposition-Objekte
+### <a name="step-10-free-the-directcomposition-objects"></a>Schritt 10: Freigeben der DirectComposition-Objekte
 
-Es empfiehlt sich, alle visuellen Objekte freizugeben, sobald Sie Sie nicht mehr benötigen. Im folgenden Beispiel wird das Anwendungs definierte [**saferelease**](/windows/desktop/medfound/saferelease) -Makro aufgerufen, um das visuelle Objekt freizugeben.
+Es ist eine bewährte Programmierpraktiken, visuelle Objekte frei zu lassen, sobald Sie sie nicht mehr benötigen. Im folgenden Beispiel wird das anwendungsdefinierte [**SafeRelease-Makro**](/windows/desktop/medfound/saferelease) zum Freigeben des visuellen Objekts aufrufen.
 
 
 ```C++
@@ -323,7 +323,7 @@ Es empfiehlt sich, alle visuellen Objekte freizugeben, sobald Sie Sie nicht mehr
 
 
 
-Denken Sie auch daran, das DXGI-Objekt, das Geräte Objekt und das Kompositions Zielobjekt freizugeben, bevor die Anwendung beendet wird.
+Denken Sie außerdem daran, das DXGI-Objekt, das Geräteobjekt und das Kompositionszielobjekt frei zu lassen, bevor Ihre Anwendung beendet wird.
 
 
 ```C++
@@ -958,36 +958,36 @@ HRESULT DemoApp::MyCreateGDIRenderedDCompSurface(HBITMAP hBitmap,
 
 <dl> <dt>
 
-[**Dcompositionkreatedevice**](/windows/desktop/api/Dcomp/nf-dcomp-dcompositioncreatedevice)
+[**DCompositionCreateDevice**](/windows/desktop/api/Dcomp/nf-dcomp-dcompositioncreatedevice)
 </dt> <dt>
 
 [**D3D11CreateDevice**](/windows/desktop/api/d3d11/nf-d3d11-d3d11createdevice)
 </dt> <dt>
 
-[**Idcompositiondevice:: Commit**](/windows/win32/api/dcomp/nf-dcomp-idcompositiondevice-commit)
+[**IDCompositionDevice::Commit**](/windows/win32/api/dcomp/nf-dcomp-idcompositiondevice-commit)
 </dt> <dt>
 
-[**Idcompositiondevice:: kreatetargetforhwnd**](/windows/win32/api/dcomp/nf-dcomp-idcompositiondevice-createtargetforhwnd)
+[**IDCompositionDevice::CreateTargetForHwnd**](/windows/win32/api/dcomp/nf-dcomp-idcompositiondevice-createtargetforhwnd)
 </dt> <dt>
 
-[**Idcompositiondevice:: kreatevisual**](/windows/win32/api/dcomp/nf-dcomp-idcompositiondevice-createvisual)
+[**IDCompositionDevice::CreateVisual**](/windows/win32/api/dcomp/nf-dcomp-idcompositiondevice-createvisual)
 </dt> <dt>
 
-[**Idcompositionsurface**](/windows/win32/api/dcomp/nn-dcomp-idcompositionsurface)
+[**IDCompositionSurface**](/windows/win32/api/dcomp/nn-dcomp-idcompositionsurface)
 </dt> <dt>
 
-[**Idcompositiontarget:: Abort**](/windows/win32/api/dcomp/nf-dcomp-idcompositiontarget-setroot)
+[**IDCompositionTarget::SetRoot**](/windows/win32/api/dcomp/nf-dcomp-idcompositiontarget-setroot)
 </dt> <dt>
 
-[**Idcompositionvisual:: setContent**](/windows/win32/api/dcomp/nf-dcomp-idcompositionvisual-setcontent)
+[**IDCompositionVisual::SetContent**](/windows/win32/api/dcomp/nf-dcomp-idcompositionvisual-setcontent)
 </dt> <dt>
 
-[**Idxgidevice**](/windows/desktop/api/dxgi/nn-dxgi-idxgidevice)
+[**IDXGIDevice**](/windows/desktop/api/dxgi/nn-dxgi-idxgidevice)
 </dt> <dt>
 
-[**Saferelease**](/windows/desktop/medfound/saferelease)
+[**SafeRelease**](/windows/desktop/medfound/saferelease)
 </dt> </dl>
 
- 
+ 
 
- 
+ 

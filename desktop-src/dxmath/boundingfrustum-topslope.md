@@ -1,19 +1,19 @@
 ---
-description: Die Steigung des oberen Rands von boundingfrustum.
+description: Die Steigung des oberen Rands des BoundingFrustums.
 ms.assetid: 66aa839f-6280-4788-8e48-947e4d27ffbd
-title: Boundingfrustum. topslope (directxcollision. h)
+title: BoundingFrustum.TopScro (DirectXCollision.h)
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: c4c334de36d26fe81397cd8f8510036c75dcdc8b
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 66a8007ebe3980a9536a538d2ba2796d670e03882d4458e585034334932e23b9
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106358273"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118502251"
 ---
-# <a name="boundingfrustumtopslope"></a>Boundingfrustum. topslope
+# <a name="boundingfrustumtopslope"></a>BoundingFrustum.TopScro
 
-Die Steigung des oberen Rands von [**boundingfrustum**](/windows/win32/api/directxcollision/ns-directxcollision-boundingfrustum).
+Die Steigung des oberen Rands des [**BoundingFrustum**](/windows/win32/api/directxcollision/ns-directxcollision-boundingfrustum).
 
 
 ```C++
@@ -23,7 +23,7 @@ public:
 
 
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
 ### <a name="platform-requirements"></a>Plattformanforderungen
 
@@ -35,21 +35,21 @@ Microsoft Visual Studio 2010 oder Microsoft Visual Studio 2012 mit dem Windows S
 
 | Anforderung | Wert |
 |-------------------|-----------------------------------------------------------------------------------------------|
-| Header<br/> | <dl> <dt>Directxcollision. h</dt> </dl> |
+| Header<br/> | <dl> <dt>DirectXCollision.h</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
 [Fields](boundingfrustum-fields.md)
 </dt> <dt>
 
-**Verweis**
+**Referenz**
 </dt> <dt>
 
-[**Boundingfrustum**](/windows/win32/api/directxcollision/ns-directxcollision-boundingfrustum)
+[**BoundingFrustum**](/windows/win32/api/directxcollision/ns-directxcollision-boundingfrustum)
 </dt> </dl>
 
  

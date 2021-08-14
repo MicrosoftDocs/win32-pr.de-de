@@ -1,7 +1,7 @@
 ---
 description: Ruft die Gesamtgröße der Systemdateien des virtuellen Computers ab.
 ms.assetid: 492aa0df-1562-4d83-a0ea-43776b12c1b1
-title: Getsizeofsystemfiles-Methode der Msvm_VirtualSystemManagementService-Klasse
+title: GetSizeOfSystemFiles-Methode der Msvm_VirtualSystemManagementService-Klasse
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,16 +13,16 @@ api_type:
 - COM
 api_location:
 - vmms.exe
-ms.openlocfilehash: ed9fcf93093e17c2989121bf33ee5f5fbf09bab0
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 385235e407cac2dd67f3dade99e4d1c834d082dfe59b541020a4548e8eea383c
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "103752217"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118392903"
 ---
-# <a name="getsizeofsystemfiles-method-of-the-msvm_virtualsystemmanagementservice-class"></a>Getsizeofsystemfiles-Methode der MSVM \_ virtualsystemmanagementservice-Klasse
+# <a name="getsizeofsystemfiles-method-of-the-msvm_virtualsystemmanagementservice-class"></a>GetSizeOfSystemFiles-Methode der Msvm \_ VirtualSystemManagementService-Klasse
 
-Ruft die Gesamtgröße der Systemdateien des virtuellen Computers ab. Dies schließt die Konfigurations-und die gespeicherten Zustands Dateien ein.
+Ruft die Gesamtgröße der Systemdateien des virtuellen Computers ab. Dazu gehören die Konfigurations- und gespeicherten Zustandsdateien.
 
 ## <a name="syntax"></a>Syntax
 
@@ -40,14 +40,14 @@ uint32 GetSizeOfSystemFiles(
 
 <dl> <dt>
 
-*VSSD* \[ in\]
+*Vssd* \[ In\]
 </dt> <dd>
 
-Ein Verweis auf die [**CIM \_ virtualsystemsettingdata**](/previous-versions//cc136954(v=vs.85)) -Instanz, deren Systemdateien abgerufen werden sollen. Diese Instanz kann entweder die aktuelle Instanziierung der virtuellen Maschine oder eine Instanz einer Momentaufnahme eines virtuellen Computers darstellen.
+Ein Verweis auf die [**CIM \_ VirtualSystemSettingData-Instanz,**](/previous-versions//cc136954(v=vs.85)) deren Größe der Systemdateien abgerufen werden soll. Diese Instanz kann entweder die aktuelle Instanziierung des virtuellen Computers oder eine Instanz einer Momentaufnahme eines virtuellen Computers darstellen.
 
 </dd> <dt>
 
-*Größe* \[ vorgenommen\]
+*Größe* \[ out\]
 </dt> <dd>
 
 Die Gesamtgröße der Systemdateien in Bytes.
@@ -63,10 +63,10 @@ Diese Methode gibt einen der folgenden Werte zurück.
 **Abgeschlossen ohne Fehler** (0)
 </dt> <dt>
 
-Über **prüfte Methoden Parameter-Auftrag gestartet** (4096)
+**Überprüfte Methodenparameter – Auftragsstart** (4096)
 </dt> <dt>
 
-Fehler **(32768** )
+**Fehler** (32768)
 </dt> <dt>
 
 **Zugriff verweigert** (32769)
@@ -75,7 +75,7 @@ Fehler **(32768** )
 **Nicht unterstützt** (32770)
 </dt> <dt>
 
-Der **Status ist "Unknown** " (32771).
+**Status ist unbekannt** (32771)
 </dt> <dt>
 
 **Timeout** (32772)
@@ -87,16 +87,16 @@ Der **Status ist "Unknown** " (32771).
 **System wird verwendet** (32774)
 </dt> <dt>
 
-**Ungültiger Status für diesen Vorgang** (32775).
+**Ungültiger Zustand für diesen Vorgang** (32775)
 </dt> <dt>
 
-**Falscher Datentyp** (32776).
+**Falscher Datentyp** (32776)
 </dt> <dt>
 
-Das **System ist nicht verfügbar** (32777).
+**System ist nicht verfügbar** (32777)
 </dt> <dt>
 
-**Nicht** genügend Arbeitsspeicher (32778)
+**Nicht genügend Arbeitsspeicher** (32778)
 </dt> </dl>
 
 ## <a name="requirements"></a>Anforderungen
@@ -105,19 +105,19 @@ Das **System ist nicht verfügbar** (32777).
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows 8 \[ -Desktop-Apps\]<br/>                                                              |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2012 \[ -Desktop-Apps\]<br/>                                                    |
-| Namespace<br/>                | \\Stammvirtualisierung \\ v2<br/>                                                                     |
-| MOF<br/>                      | <dl> <dt>Windowsvirtualization. v2. MOF</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | \[Windows 8 Nur Desktop-Apps\]<br/>                                                              |
+| Unterstützte Mindestversion (Server)<br/> | \[Windows Server 2012 Nur Desktop-Apps\]<br/>                                                    |
+| Namespace<br/>                | Root \\ Virtualization \\ V2<br/>                                                                     |
+| MOF<br/>                      | <dl> <dt>WindowsVirtualization.V2.mof</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>Vmms.exe</dt> </dl>                     |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**MSVM \_ virtualsystemmanagementservice**](msvm-virtualsystemmanagementservice.md)
+[**Msvm \_ VirtualSystemManagementService**](msvm-virtualsystemmanagementservice.md)
 </dt> </dl>
 
  

@@ -1,9 +1,9 @@
 ---
-title: Wiedergabeliste. disableditemcolor
-description: Das disableditemcolor-Attribut gibt die Farbe einer deaktivierten CD-Spur oder von Online Inhalt offline an oder ruft diese ab.
+title: PLAYLIST.disabledItemColor
+description: Das disabledItemColor-Attribut gibt die Farbe einer deaktivierten CD-Spur oder von Onlineinhalten im Offlinemodus an oder ruft sie ab.
 ms.assetid: a6e3af4b-2492-43fe-b508-393632512971
 keywords:
-- Wiedergabeliste. disableditemcolor Windows Media Player
+- PLAYLIST.disabledItemColor-Windows Media Player
 topic_type:
 - apiref
 api_name:
@@ -12,16 +12,16 @@ api_type:
 - NA
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: e8ad1f1ce647fc23852d58a79daf3f827e73990a
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: f1bf0d51cd921e3b8d164ffad3a26d20dc615bb0566dfaf5a97813e391108a72
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106362126"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118336783"
 ---
-# <a name="playlistdisableditemcolor"></a>Wiedergabeliste. disableditemcolor
+# <a name="playlistdisableditemcolor"></a>PLAYLIST.disabledItemColor
 
-Das **disableditemcolor** -Attribut gibt die Farbe einer deaktivierten CD-Spur oder von Online Inhalt offline an oder ruft diese ab.
+Das **disabledItemColor-Attribut** gibt die Farbe einer deaktivierten CD-Spur oder von Onlineinhalten im Offlinemodus an oder ruft sie ab.
 
 ``` syntax
         elementID.disabledItemColor
@@ -29,7 +29,7 @@ Das **disableditemcolor** -Attribut gibt die Farbe einer deaktivierten CD-Spur o
 
 ## <a name="possible-values"></a>Mögliche Werte
 
-Dieses Attribut ist eine Lese- **/schreibzeichenfolge** mit einem beliebigen Microsoft Internet Explorer-Farbwert. Der Standardwert ist "GrayText".
+Dieses Attribut ist eine **Zeichenfolge** mit Lese-/Schreibzugriff, die einen beliebigen Microsoft Internet Explorer Farbwert enthält. Er hat den Standardwert "graytext".
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -37,18 +37,18 @@ Dieses Attribut ist eine Lese- **/schreibzeichenfolge** mit einem beliebigen Mic
 
 | Anforderung | Wert |
 |--------------------|------------------------------------------------------|
-| Version<br/> | Windows Media Player, Version 7,0 oder höher<br/> |
+| Version<br/> | Windows Media Player Version 7.0 oder höher<br/> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Farb Verweis**](color-reference.md)
+[**Farbreferenz**](color-reference.md)
 </dt> <dt>
 
-[**Wiedergabelisten Element**](playlist-element.md)
+[**PLAYLIST-Element**](playlist-element.md)
 </dt> </dl>
 
  

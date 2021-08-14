@@ -1,7 +1,7 @@
 ---
-description: Legt den BLOB-ETYPE/SAP-Filter fest.
+description: Legt den BLOB-Filter Etype/Sap fest.
 ms.assetid: cd659c93-3415-4737-b848-936e80318544
-title: Setnppeer Type esapfilter-Funktion (Netmon. h)
+title: SetNPPEtypeSapFilter-Funktion (Netmon.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,16 +13,16 @@ api_type:
 - DllExport
 api_location:
 - Npptools.dll
-ms.openlocfilehash: 14657536e09b65912afa1715c296663d8d1916b7
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 30b2f6ffbefad955034f520162b6fdc44d80198d926f35443ce21fefd80ef5c5
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104344959"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118363826"
 ---
-# <a name="setnppetypesapfilter-function"></a>Setnppeer Type esapfilter-Funktion
+# <a name="setnppetypesapfilter-function"></a>SetNPPEtypeSapFilter-Funktion
 
-Die **setnppeer Type esapfilter** -Funktion legt den BLOB-ETYPE/SAP-Filter fest.
+Die **SetNPPEtypeSapFilter-Funktion** legt den BLOB-Filter Etype/Sap fest.
 
 ## <a name="syntax"></a>Syntax
 
@@ -45,60 +45,60 @@ DWORD SetNPPEtypeSapFilter(
 
 <dl> <dt>
 
-*hblob* \[ in\]
+*hBlob* \[ In\]
 </dt> <dd>
 
 Ein Handle für das BLOB.
 
 </dd> <dt>
 
-*NSAPs* \[ in\]
+*nSaps* \[ In\]
 </dt> <dd>
 
-Die Anzahl der SAPS.
+Die Anzahl der SAPs.
 
 </dd> <dt>
 
-" *ntypes* \[ " in\]
+*nEtypes* \[ In\]
 </dt> <dd>
 
-Die Anzahl der ETYPEs in der ETYPE-Tabelle, die festgelegt wird.
+Die Anzahl der Etypes in der Etype-Tabelle, die festgelegt wird.
 
 </dd> <dt>
 
-*lpsaptable* \[ in\]
+*lpSapTable* \[ In\]
 </dt> <dd>
 
-Ein Zeiger auf die festgelegte SAP-Tabelle.
+Ein Zeiger auf die SAP-Tabelle, die festgelegt ist.
 
 </dd> <dt>
 
-*lpeer typetable* \[ in\]
+*lpEtypeTable* \[ In\]
 </dt> <dd>
 
-Ein Zeiger auf die ETYPE-Tabelle, die festgelegt wird.
+Ein Zeiger auf die Etype-Tabelle, die festgelegt ist.
 
 </dd> <dt>
 
-*Filterflags* \[ in\]
+*FilterFlags* \[ In\]
 </dt> <dd>
 
-Die Filterflags, die festgelegt werden.
+Die festgelegten Filterflags.
 
 </dd> <dt>
 
-*herrorblob* \[ vorgenommen\]
+*hErrorBlob* \[ out\]
 </dt> <dd>
 
-Das Handle für ein fehlerblob, das angibt, wo der Fehler im ursprünglichen BLOB aufgetreten ist (sofern vorhanden).
+Das Handle für ein Fehler-BLOB, das angibt, wo im ursprünglichen BLOB der Fehler aufgetreten ist (falls vorhanden).
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Wenn die Funktion erfolgreich ist, ist der Rückgabewert nmerr \_ Success.
+Wenn die Funktion erfolgreich ist, lautet der Rückgabewert NMERR \_ SUCCESS.
 
-Wenn die Funktion nicht erfolgreich ist, ist der Rückgabewert ein nmerr-Wert, der den Fehler angibt.
+Wenn die Funktion nicht erfolgreich ist, ist der Rückgabewert ein NMERR-Wert, der den Fehler angibt.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -108,17 +108,17 @@ Wenn die Funktion nicht erfolgreich ist, ist der Rückgabewert ein nmerr-Wert, d
 |-------------------------------------|-----------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional \[nur Desktop-Apps\]<br/>                              |
 | Unterstützte Mindestversion (Server)<br/> | Windows 2000 Server \[nur Desktop-Apps\]<br/>                                    |
-| Header<br/>                   | <dl> <dt>Netmon. h</dt> </dl>     |
-| Bibliothek<br/>                  | <dl> <dt>Npptools. lib</dt> </dl> |
+| Header<br/>                   | <dl> <dt>Netmon.h</dt> </dl>     |
+| Bibliothek<br/>                  | <dl> <dt>Npptools.lib</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>Npptools.dll</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[Getnpettypesapfilter](getnppetypesapfilter.md)
+[GetNPPEtypeSapFilter](getnppetypesapfilter.md)
 </dt> </dl>
 
  

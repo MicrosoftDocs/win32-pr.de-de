@@ -1,9 +1,9 @@
 ---
-title: Closedcaption. samilang
-description: Die samilang-Eigenschaft gibt die für Untertitel angezeigte Sprache an oder ruft Sie ab.
+title: ClosedCaption.SAMILang
+description: Die SAMILang-Eigenschaft gibt die Sprache an, die für Untertitel angezeigt wird, oder ruft sie ab.
 ms.assetid: 990fb180-cb37-4022-b236-03f5acfd3ad3
 keywords:
-- Closedcaption. samilang-Fenster Media Player
+- ClosedCaption.SAMILang-Windows Media Player
 topic_type:
 - apiref
 api_name:
@@ -14,16 +14,16 @@ api_type:
 - DllExport
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: ae99b9a164e29b4adeb2fd7b23a1b79945dcb26e
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 4c423b041601a38e81b1c4e83c34c010edb3365a4eb7e05596038fa887818ba1
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106370635"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118342285"
 ---
-# <a name="closedcaptionsamilang"></a>Closedcaption. samilang
+# <a name="closedcaptionsamilang"></a>ClosedCaption.SAMILang
 
-Die **samilang** -Eigenschaft gibt die für Untertitel angezeigte Sprache an oder ruft Sie ab.
+Die **SAMILang-Eigenschaft** gibt die Sprache an, die für Untertitel angezeigt wird, oder ruft sie ab.
 
 ``` syntax
 player.closedCaption.SAMILang
@@ -31,11 +31,11 @@ player.closedCaption.SAMILang
 
 ## <a name="possible-values"></a>Mögliche Werte
 
-Diese Eigenschaft ist eine Lese- **/schreibzeichenfolge**.
+Diese Eigenschaft ist eine Zeichenfolge mit **Lese-/Schreibzugriff.**
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Eine Sami-Datei kann Text für eine oder mehrere Sprachen enthalten. Die Sprachen, die für Untertitel verfügbar sind, werden zwischen den Tags und in der Sami <STYLE> - </STYLE> Datei definiert. Eine Sprach-ID wird mit einer eindeutigen alphanumerischen Zeichenfolge angegeben, der ein Zeitraum (.) vorangestellt ist. Der für eine Sprache angegebene Name kann eine beliebige Zeichenfolge sein. Beispielsweise könnte Folgendes zum Definieren von US-Englisch verwendet werden:
+Eine SAMI-Datei kann Text für eine oder mehrere Sprachen enthalten. Die für Untertitel verfügbaren Sprachen werden zwischen den Tags <STYLE> und </STYLE> in der SAMI-Datei definiert. Ein Sprachbezeichner wird mit einer eindeutigen alphanumerischen Zeichenfolge angegeben, der ein Zeitraum (.) voran steht. Der für eine Sprache angegebene Name kann eine beliebige Zeichenfolge sein. Beispielsweise kann folgendes verwendet werden, um englisch (USA) zu definieren:
 
 
 ```
@@ -45,15 +45,15 @@ Eine Sami-Datei kann Text für eine oder mehrere Sprachen enthalten. Die Sprache
 
 
 
-Wenn keine Sami-Sprache angegeben ist, wird standardmäßig die erste in der Sami-Datei definierte Sprache verwendet.
+Wenn keine SAMI-Sprache angegeben ist, wird standardmäßig die erste sprache verwendet, die in der SAMI-Datei definiert ist.
 
-Der Wert, den Sie mithilfe von *closedcaption* übergeben. **Samilang** muss mit dem **Name** -Attribut im sprachspezifizierer identisch sein.
+Der Wert, den Sie mit *ClosedCaption übergeben.* **SAMILang muss** mit dem **Name-Attribut** im Sprachspezifizierer übereinstimmen.
 
 **Windows Media Player 10 Mobile:** Diese Eigenschaft ist schreibgeschützt und gibt immer eine leere Zeichenfolge zurück.
 
 ## <a name="examples"></a>Beispiele
 
-Im folgenden JScript-Beispiel wird *closedcaption* verwendet. **Samilang** in einem HTML-SELECT-Element, um die Closed Caption-Sprache anzugeben. Das **Player** -Objekt wurde mit ID = "Player" erstellt.
+Im folgenden beispiel JScript *ClosedCaption verwendet.* **SAMILang** in einem HTML SELECT-Element, um die Sprache für Untertitel anzugeben. Das **Player-Objekt** wurde mit der ID = "Player" erstellt.
 
 
 ```JScript
@@ -82,19 +82,19 @@ Im folgenden JScript-Beispiel wird *closedcaption* verwendet. **Samilang** in ei
 
 | Anforderung | Wert |
 |--------------------|------------------------------------------------------------------------------------|
-| Version<br/> | Windows Media Player Version 7,0 oder höher.<br/>                              |
+| Version<br/> | Windows Media Player Version 7.0 oder höher.<br/>                              |
 | DLL<br/>     | <dl> <dt>Wmp.dll</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
 [**Hinzufügen von Untertiteln zu digitalen Medien**](adding-closed-captions-to-digital-media.md)
 </dt> <dt>
 
-[**Closedcaption-Objekt**](closedcaption-object.md)
+[**ClosedCaption-Objekt**](closedcaption-object.md)
 </dt> </dl>
 
  

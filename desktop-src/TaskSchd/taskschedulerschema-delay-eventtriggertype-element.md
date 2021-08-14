@@ -1,9 +1,9 @@
 ---
-title: Delay (eventtriggertype)-Element
-description: Gibt die Zeitspanne zwischen dem Auftreten des Ereignisses und dem Start der Aufgabe an.
+title: Delay(eventTriggerType)-Element
+description: Gibt die Zeit zwischen dem Auftreten des Ereignisses und dem Start der Aufgabe an.
 ms.assetid: b38bebc7-9818-41f0-a277-cb0e63c28d86
 keywords:
-- Verzögertes Element Taskplaner
+- Delay-Taskplaner
 topic_type:
 - apiref
 api_name:
@@ -13,16 +13,16 @@ api_type:
 ms.topic: reference
 ms.date: 05/31/2018
 api_location: ''
-ms.openlocfilehash: de1117ff4f7e0f823b1b213721521e1b526125bd
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: f9c9523b450d5f1ea86bdf09afba26604ebfe8055661fc18c439b4e30c97169d
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "106341042"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118357106"
 ---
-# <a name="delay-eventtriggertype-element"></a>Delay (eventtriggertype)-Element
+# <a name="delay-eventtriggertype-element"></a>Delay(eventTriggerType)-Element
 
-Gibt die Zeitspanne zwischen dem Auftreten des Ereignisses und dem Start der Aufgabe an. Das Format dieser Zeichenfolge lautet pnynmndtnhnmns. dabei ist "NY" die Anzahl der Jahre, "nm" die Anzahl von Monaten, "ND" die Anzahl der Tage, "t" ist das Trennzeichen für Datum/Uhrzeit, "NH" die Anzahl von Stunden, "nm" die Anzahl der Minuten und "NS" die Anzahl von Sekunden (z Weitere Informationen zum Duration-Typ finden Sie unter <https://go.microsoft.com/fwlink/p/?linkid=106886> .
+Gibt die Zeit zwischen dem Auftreten des Ereignisses und dem Start der Aufgabe an. Das Format für diese Zeichenfolge ist PnYnMnDTnHnMnS, Dabei steht nY für die Anzahl von Jahren, nM für die Anzahl von Monaten, nD für die Anzahl von Tagen, "T" für das Datums-/Uhrzeittrennzeichen, nH für die Anzahl von Stunden, nM für die Anzahl von Minuten und nS für die Anzahl von Sekunden (PT5M gibt beispielsweise 5 Minuten an, und P1M4DT2H5M gibt einen Monat, vier Tage, zwei Stunden und fünf Minuten an). Weitere Informationen zum Dauertyp finden Sie unter <https://go.microsoft.com/fwlink/p/?linkid=106886> .
 
 ``` syntax
 <xs:element name="Delay"
@@ -30,7 +30,7 @@ Gibt die Zeitspanne zwischen dem Auftreten des Ereignisses und dem Start der Auf
  />
 ```
 
-Das **Delay** -Element wird durch den komplexen Typ [**eventtriggertype**](taskschedulerschema-eventtriggertype-complextype.md) definiert.
+Das **Delay-Element** wird durch den komplexen [**EventTriggerType-Typ**](taskschedulerschema-eventtriggertype-complextype.md) definiert.
 
 ## <a name="parent-element"></a>Übergeordnetes Element
 
@@ -38,15 +38,15 @@ Das **Delay** -Element wird durch den komplexen Typ [**eventtriggertype**](tasks
 
 | Element                                                                       | Abgeleitet von                                                                 | BESCHREIBUNG                                                                   |
 |-------------------------------------------------------------------------------|------------------------------------------------------------------------------|-------------------------------------------------------------------------------|
-| [**EventTrigger**](taskschedulerschema-eventtrigger-triggergroup-element.md) | [**eventtriggertype**](taskschedulerschema-eventtriggertype-complextype.md) | Gibt einen-Fehler an, der einen Task startet, wenn ein System Ereignis auftritt.<br/> |
+| [**EventTrigger**](taskschedulerschema-eventtrigger-triggergroup-element.md) | [**eventTriggerType**](taskschedulerschema-eventtriggertype-complextype.md) | Gibt einen Trigger an, der eine Aufgabe startet, wenn ein Systemereignis auftritt.<br/> |
 
 
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Bei der Skript Entwicklung wird die Ereignis Trigger-Verzögerung von der [**EventTrigger. Delay**](eventtrigger-delay.md) -Eigenschaft angegeben.
+Für die Skriptentwicklung wird die Ereignistriggerverzögerung durch die [**EventTrigger.Delay-Eigenschaft**](eventtrigger-delay.md) angegeben.
 
-Bei der C++-Entwicklung wird die Verzögerung des Ereignis Auslösers durch die [**ieventvent::D Elay**](/windows/desktop/api/taskschd/nf-taskschd-ieventtrigger-get_delay) -Eigenschaft angegeben.
+Für die C++-Entwicklung wird die Ereignistriggerverzögerung durch die [**IEventTrigger::D elay-Eigenschaft**](/windows/desktop/api/taskschd/nf-taskschd-ieventtrigger-get_delay) angegeben.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -54,16 +54,16 @@ Bei der C++-Entwicklung wird die Verzögerung des Ereignis Auslösers durch die 
 
 | Anforderung | Wert |
 |-------------------------------------|------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>       |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2008 \[ -Desktop-Apps\]<br/> |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur \[ Vista-Desktop-Apps\]<br/>       |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2008-Desktop-Apps\]<br/> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[Schema Elemente Taskplaner](task-scheduler-schema-elements.md)
+[Taskplaner Schemaelemente](task-scheduler-schema-elements.md)
 </dt> <dt>
 
 [Aufgabenplanung](task-scheduler-start-page.md)

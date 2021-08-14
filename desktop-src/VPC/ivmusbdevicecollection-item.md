@@ -1,11 +1,11 @@
 ---
-title: Ivmusbdevicecollection-Element Eigenschaft (vpccominterfaces. h)
-description: Ruft das USB-Geräte Objekt ab, das dem angegebenen Index entspricht.
+title: IVMUSBDeviceCollection-Elementeigenschaft (VPCCOMInterfaces.h)
+description: Ruft das USB-Geräteobjekt ab, das dem angegebenen Index entspricht.
 ms.assetid: 664a038e-7c86-43a9-a376-c913d431dc93
 keywords:
-- Element Eigenschaft virtueller PC
-- Item-Eigenschaft Virtual PC, ivmusbdebug ecollection-Schnittstelle
-- Ivmusbdebug-Schnittstelle virtueller PC, Element Eigenschaft
+- Elementeigenschaft Virtueller PC
+- Elementeigenschaft Virtueller PC, IVMUSBDeviceCollection-Schnittstelle
+- IVMUSBDeviceCollection-Schnittstelle Virtueller PC, Item-Eigenschaft
 topic_type:
 - apiref
 api_name:
@@ -17,18 +17,18 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 6b50b96de6b19dab15852f58d78480b46da1e9ce
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 83374a4ab9eafec42c43d0d2ab969355403cccf8a28e4b80da226a77af095d45
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104477046"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117752549"
 ---
-# <a name="ivmusbdevicecollectionitem-property"></a>Ivmusbdebug:: Item-Eigenschaft
+# <a name="ivmusbdevicecollectionitem-property"></a>IVMUSBDeviceCollection::Item-Eigenschaft
 
-\[Windows Virtual PC ist nicht mehr für die Verwendung ab Windows 8 verfügbar. Verwenden Sie stattdessen den [Hyper-V-WMI-Anbieter (v2)](/windows/desktop/HyperV_v2/windows-virtualization-portal).\]
+\[Windows Der virtuelle PC ist ab Windows 8 nicht mehr für die Verwendung verfügbar. Verwenden Sie stattdessen den [Hyper-V-WMI-Anbieter (V2).](/windows/desktop/HyperV_v2/windows-virtualization-portal)\]
 
-Ruft das USB-Geräte Objekt ab, das dem angegebenen Index entspricht.
+Ruft das USB-Geräteobjekt ab, das dem angegebenen Index entspricht.
 
 Diese Eigenschaft ist schreibgeschützt.
 
@@ -46,7 +46,7 @@ HRESULT get_Item(
 
 ## <a name="property-value"></a>Eigenschaftswert
 
-Das [**ivmusbdevice**](ivmusbdevice.md) -Objekt.
+Das [**IVMUSBDevice-Objekt.**](ivmusbdevice.md)
 
 ## <a name="error-codes"></a>Fehlercodes
 
@@ -55,9 +55,9 @@ Das [**ivmusbdevice**](ivmusbdevice.md) -Objekt.
 | Name/Wert                                                                                                                                                    | Bedeutung                                                                                        |
 |---------------------------------------------------------------------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------|
 | <dl> <dt>S \_ OK</dt> <dt>0</dt> </dl>                       | Der Vorgang wurde durchgeführt. <br/>                                                      |
-| <dl> <dt>E \_ Zeiger</dt> <dt>0x80004003</dt> </dl>         | Der *Parameter* "" ist **null**. <br/>                                             |
-| <dl> <dt>DISP \_ E \_ badindex</dt> <dt>0x8002000B</dt> </dl>  | Der Index des angeforderten Elements entspricht keinem Element in dieser Auflistung. <br/> |
-| <dl> <dt>DISP \_ E- \_ Ausnahme</dt> <dt>0x80020009</dt> </dl> | Ein unerwarteter Fehler ist aufgetreten.<br/>                                                   |
+| <dl> <dt>E \_ POINTER</dt> <dt>0x80004003</dt> </dl>         | Der *usbDevice-Parameter* ist **NULL.** <br/>                                             |
+| <dl> <dt>DISP \_ E \_ BADINDEX</dt> <dt>0x8002000B</dt> </dl>  | Der Index des angeforderten Elements entspricht keinem Element in dieser Auflistung. <br/> |
+| <dl> <dt>DISP \_ E \_ EXCEPTION</dt> <dt>0x80020009</dt> </dl> | Ein unerwarteter Fehler ist aufgetreten.<br/>                                                   |
 
 
 
@@ -67,23 +67,23 @@ Das [**ivmusbdevice**](ivmusbdevice.md) -Objekt.
 
 | Anforderung | Wert |
 |-------------------------------------|-----------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows 7 \[ -Desktop-Apps\]<br/>                                                    |
+| Unterstützte Mindestversion (Client)<br/> | nur Windows 7 \[ Desktop-Apps\]<br/>                                                    |
 | Unterstützte Mindestversion (Server)<br/> | Nicht unterstützt<br/>                                                                     |
 | Ende des Supports (Client)<br/>    | Windows 7<br/>                                                                          |
-| Produkt<br/>                  | Windows Virtual PC<br/>                                                                 |
-| Header<br/>                   | <dl> <dt>Vpccominterfaces. h</dt> </dl> |
-| IID<br/>                      | IID \_ ivmusbdevicecollection ist als 4f-cd6a5--ID definiert. d1c-9s4d-e90abb8b3749<br/>     |
+| Product (Produkt)<br/>                  | Windows Virtual PC<br/>                                                                 |
+| Header<br/>                   | <dl> <dt>VPCCOMInterfaces.h</dt> </dl> |
+| IID<br/>                      | IID \_ IVMUSBDeviceCollection ist als 4FBCD6A5-F53C-4d1c-9F4D-E90ABB8B3749 definiert.<br/>     |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Ivmusbdevice**](ivmusbdevice.md)
+[**IVMUSBDevice**](ivmusbdevice.md)
 </dt> <dt>
 
-[**Ivmusbde vicecollection**](ivmusbdevicecollection.md)
+[**IVMUSBDeviceCollection**](ivmusbdevicecollection.md)
 </dt> </dl>
 
  

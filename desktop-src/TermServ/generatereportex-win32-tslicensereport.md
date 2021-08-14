@@ -1,12 +1,12 @@
 ---
-title: Generatereportex-Methode der Win32_TSLicenseReport-Klasse
-description: Generiert einen aktuellen Lizenz Verwendungs Bericht für die Lizenzen pro Benutzer und pro Gerät.
+title: GenerateReportEx-Methode der Win32_TSLicenseReport-Klasse
+description: Generiert einen aktuellen Lizenznutzungsbericht für Lizenzen pro Benutzer und Pro Gerät.
 ms.assetid: c454e0c5-ca1c-41c7-86b2-1e52c414aeb5
 ms.tgt_platform: multiple
 keywords:
-- Generatereportex-Methode Remotedesktopdienste
-- Generatereportex-Methode Remotedesktopdienste, Win32_TSLicenseReport-Klasse
-- Win32_TSLicenseReport-Klasse Remotedesktopdienste, generatereportex-Methode
+- GenerateReportEx-Remotedesktopdienste
+- GenerateReportEx-Methode Remotedesktopdienste , Win32_TSLicenseReport-Klasse
+- Win32_TSLicenseReport klasse Remotedesktopdienste , GenerateReportEx-Methode
 topic_type:
 - apiref
 api_name:
@@ -17,16 +17,16 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 893e6e29d1e4716560b0f0f6b41e6109c89e2f5b
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 2bfe9bc9a8ed31c2f272f3ae081556f47d21f360d719abe1363a04c170afe5b6
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104391611"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118353827"
 ---
-# <a name="generatereportex-method-of-the-win32_tslicensereport-class"></a>Generatereportex-Methode der Win32- \_ Klasse "zlicensereport"
+# <a name="generatereportex-method-of-the-win32_tslicensereport-class"></a>GenerateReportEx-Methode der Win32 \_ TSLicenseReport-Klasse
 
-Generiert einen aktuellen Lizenz Verwendungs Bericht für die Lizenzen pro Benutzer und pro Gerät.
+Generiert einen aktuellen Lizenznutzungsbericht für Lizenzen pro Benutzer und Pro Gerät.
 
 ## <a name="syntax"></a>Syntax
 
@@ -43,7 +43,7 @@ uint32 GenerateReportEx(
 
 <dl> <dt>
 
-*Dateiname* \[ vorgenommen\]
+*FileName* \[ out\]
 </dt> <dd>
 
 Der Dateiname des generierten Berichts.
@@ -52,15 +52,15 @@ Der Dateiname des generierten Berichts.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Wenn die Methode erfolgreich ist, gibt Sie 0 (null) zurück. Wenn die Methode nicht erfolgreich ist, wird ein Wert ungleich 0 (null) zurückgegeben. Eine Liste der Fehlercodes finden Sie unter [Remotedesktopdienste Fehlercodes des WMI-Anbieters](terminal-services-wmi-provider-error-codes.md).
+Wenn die Methode erfolgreich ist, gibt sie 0 (null) zurück. Wenn die Methode nicht erfolgreich ist, wird ein Wert ungleich 0 (null) zurückgegeben. Eine Liste der Fehlercodes finden Sie unter Remotedesktopdienste [WMI-Anbieterfehlercodes](terminal-services-wmi-provider-error-codes.md).
 
 ## <a name="remarks"></a>Bemerkungen
 
 Dies ist eine statische Methode.
 
-Sie müssen Mitglied der Gruppe "Administratoren" sein, um diese Methode aufzurufen.
+Sie müssen Mitglied der Gruppe Administratoren sein, um diese Methode aufrufen zu können.
 
-Managed Object Format-Dateien (MOF) enthalten die Definitionen für Windows-Verwaltungsinstrumentation (WMI)-Klassen. MOF-Dateien werden nicht als Teil des Microsoft Windows Software Development Kit (SDK) installiert. Sie werden auf dem Server installiert, wenn Sie die zugehörige Rolle mithilfe der Server-Manager hinzufügen. Weitere Informationen zu MOF-Dateien finden Sie unter [Managed Object Format (MOF)](/windows/desktop/WmiSdk/managed-object-format--mof-).
+Managed Object Format -Dateien (MOF) enthalten die Definitionen für Windows WMI-Klassen (Management Instrumentation). MOF-Dateien werden nicht als Teil des Microsoft Windows Software Development Kit (SDK) installiert. Sie werden auf dem Server installiert, wenn Sie die zugeordnete Rolle mithilfe der Server-Manager. Weitere Informationen zu MOF-Dateien finden Sie unter [Managed Object Format (MOF).](/windows/desktop/WmiSdk/managed-object-format--mof-)
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -71,16 +71,16 @@ Managed Object Format-Dateien (MOF) enthalten die Definitionen für Windows-Verw
 | Unterstützte Mindestversion (Client)<br/> | Nicht unterstützt<br/>                                                                 |
 | Unterstützte Mindestversion (Server)<br/> | Windows Server 2012<br/>                                                            |
 | Namespace<br/>                | Root\\CIMv2<br/>                                                                    |
-| MOF<br/>                      | <dl> <dt>Tltaumiprov. MOF</dt> </dl> |
+| MOF<br/>                      | <dl> <dt>TlsWmiProv.mof</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>TlsWmiProv.dll</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Win32-Datei- \_ /licensereport**](win32-tslicensereport.md)
+[**Win32 \_ TSLicenseReport**](win32-tslicensereport.md)
 </dt> </dl>
 
  

@@ -1,7 +1,7 @@
 ---
-description: Die componentstate-Eigenschaft ist der Installationsstatus der Komponente für die Instanz dieses Produkts. Diese Eigenschaft ruft msiquerycomponentstate mit ProductCode, UserSID und Kontext des-Objekts auf.
+description: Die ComponentState-Eigenschaft ist der Installationsstatus der Komponente für die Instanz dieses Produkts. Diese Eigenschaft ruft MsiQueryComponentState mit productCode, UserSid und Context des Objekts auf.
 ms.assetid: 2939048a-42a5-4ffb-868c-251c0f15e5ed
-title: Product. componentstate-Methode
+title: Product.ComponentState-Methode
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,18 +13,18 @@ api_type:
 - COM
 api_location:
 - Msi.dll
-ms.openlocfilehash: 240a854a899f46bf80703bbd6cfb6b1529848586
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: d2bc9c5c1f5325dc631f8866ba1a8c7d88ce18d624a2974974f4692bf4f7b067
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106365535"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118376779"
 ---
-# <a name="productcomponentstate-method"></a>Product. componentstate-Methode
+# <a name="productcomponentstate-method"></a>Product.ComponentState-Methode
 
-Die **componentstate** -Eigenschaft ist der Installationsstatus der Komponente für die Instanz dieses Produkts.
+Die **ComponentState-Eigenschaft** ist der Installationsstatus der Komponente für die Instanz dieses Produkts.
 
-Diese Eigenschaft ruft [**msiquerycomponentstate**](/windows/desktop/api/Msi/nf-msi-msiquerycomponentstatea)mit ProductCode, UserSID und Kontext des-Objekts auf. Die Komponenten-ID-GUID wird als Parameter bereitgestellt.
+Diese Eigenschaft ruft [**MsiQueryComponentState**](/windows/desktop/api/Msi/nf-msi-msiquerycomponentstatea)mit productCode, UserSid und Context des Objekts auf. Die KOMPONENTEN-ID-GUID wird als Parameter bereitgestellt.
 
 ## <a name="syntax"></a>Syntax
 
@@ -44,7 +44,7 @@ Product.ComponentState(
 *ID* 
 </dt> <dd>
 
-Komponenten Code-GUID der Komponente, wie Sie in der ComponentID-Spalte der [Component-Tabelle](component-table.md)gefunden wird.
+Komponentencode-GUID der Komponente, wie in der ComponentID-Spalte der [Component-Tabelle](component-table.md)zu finden.
 
 </dd> </dl>
 
@@ -52,34 +52,34 @@ Komponenten Code-GUID der Komponente, wie Sie in der ComponentID-Spalte der [Com
 
 Diese Methode gibt keinen Wert zurück.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Wenn der-Befehl erfolgreich ausgeführt wird, enthält die-Eigenschaft den Wert als **DWORD**.
+Wenn der Aufruf erfolgreich ist, enthält die -Eigenschaft den Wert als **DWORD.**
 
 
 
 | State                | Bedeutung                                            |
 |----------------------|----------------------------------------------------|
-| InstallState \_ lokal  | Die Komponente wird lokal installiert.                |
-| InstallState- \_ Quelle | Die Komponente wird zum Ausführen von der Quelle installiert. |
+| INSTALLSTATE \_ LOCAL  | Die Komponente wird lokal installiert.                |
+| \_INSTALLSTATE-QUELLE | Die Komponente wird installiert, um von der Quelle aus ausgeführt zu werden. |
 
 
 
  
 
-Wenn der-Befehl fehlschlägt, enthält die-Eigenschaft einen Fehlercode aus [**msiquerycomponentstate**](/windows/desktop/api/Msi/nf-msi-msiquerycomponentstatea).
+Wenn der Aufruf fehlschlägt, enthält die -Eigenschaft einen Fehlercode aus [**MsiQueryComponentState.**](/windows/desktop/api/Msi/nf-msi-msiquerycomponentstatea)
 
 
 
 | Fehler                     | Bedeutung                                                                                                            |
 |---------------------------|--------------------------------------------------------------------------------------------------------------------|
-| Fehler \_ Zugriff \_ verweigert     | Der Aufrufprozess muss über Administratorrechte verfügen, um Informationen für einen anderen Benutzer als den aktuellen Benutzer zu erhalten. |
-| Fehler \_ hafte \_ Konfiguration | Die Konfigurationsdaten sind beschädigt.                                                                                 |
-| Fehler bei \_ ungültigem \_ Parameter | An die Funktion wurde ein ungültiger Parameter übergeben.                                                                   |
-| Fehler \_ erfolgreich            | Die Funktion wurde erfolgreich abgeschlossen.                                                                               |
-| \_unbekannter Fehler \_ Komponente. | Die Komponenten-ID identifiziert keine bekannte Komponente.                                                              |
-| Unbekannter Fehler. \_ \_   | Der Produktcode identifiziert kein bekanntes Produkt.                                                                |
-| Fehler bei Fehler \_ Funktion \_   | Unerwarteter interner Fehler.                                                                                    |
+| FEHLERZUGRIFF \_ \_ VERWEIGERT     | Der aufrufende Prozess muss über Administratorrechte verfügen, um Informationen für einen anderen Benutzer als den aktuellen Benutzer abzurufen. |
+| FEHLER: \_ FEHLERHAFTE \_ KONFIGURATION | Die Konfigurationsdaten sind beschädigt.                                                                                 |
+| FEHLER: \_ UNGÜLTIGER \_ PARAMETER | Ein ungültiger Parameter wurde an die Funktion übergeben.                                                                   |
+| FEHLER \_ ERFOLGREICH            | Die Funktion wurde erfolgreich abgeschlossen.                                                                               |
+| \_FEHLER UNBEKANNTE \_ KOMPONENTE | Die Komponenten-ID identifiziert keine bekannte Komponente.                                                              |
+| FEHLER \_ \_ UNBEKANNTES PRODUKT   | Der Produktcode identifiziert kein bekanntes Produkt.                                                                |
+| \_ \_ FEHLERFUNKTION FEHLGESCHLAGEN   | Ein unerwarteter interner Fehler.                                                                                    |
 
 
 
@@ -91,23 +91,23 @@ Wenn der-Befehl fehlschlägt, enthält die-Eigenschaft einen Fehlercode aus [**m
 
 | Anforderung | Wert |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Version<br/> | Windows Installer 5,0 unter Windows Server 2012, Windows 8, Windows Server 2008 R2 oder Windows 7. Windows Installer 4,0 oder Windows Installer 4,5 unter Windows Server 2008 oder Windows Vista. Windows Installer 3,0 oder höher unter Windows Server 2003, Windows XP und Windows 2000<br/> |
+| Version<br/> | Windows Installationsprogramm 5.0 auf Windows Server 2012, Windows 8, Windows Server 2008 R2 oder Windows 7. Windows Installer 4.0 oder Windows Installer 4.5 auf Windows Server 2008 oder Windows Vista. Windows Installationsprogramm 3.0 oder höher auf Windows Server 2003, Windows XP und Windows 2000<br/> |
 | DLL<br/>     | <dl> <dt>Msi.dll</dt> </dl>                                                                                                                                                                                                   |
-| IID<br/>     | IID \_ iproduct ist definiert als 000c10a0-0000-0000-C000-000000000046<br/>                                                                                                                                                                                                          |
+| IID<br/>     | IID \_ IProduct ist als 000C10A0-0000-0000-C000-000000000046 definiert.<br/>                                                                                                                                                                                                          |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Product**](product-object.md)
+[**Produkt**](product-object.md)
 </dt> <dt>
 
-[**Msiquerycomponentstate**](/windows/desktop/api/Msi/nf-msi-msiquerycomponentstatea)
+[**MsiQueryComponentState**](/windows/desktop/api/Msi/nf-msi-msiquerycomponentstatea)
 </dt> <dt>
 
-[Wird in Windows Installer 2,0 und früher nicht unterstützt.](not-supported-in-windows-installer-version-2-0.md)
+[Nicht unterstützt in Windows Installer 2.0 und früher](not-supported-in-windows-installer-version-2-0.md)
 </dt> </dl>
 
  

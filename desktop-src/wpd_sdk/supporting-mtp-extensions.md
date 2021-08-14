@@ -4,24 +4,24 @@ ms.assetid: 9e5f3da6-346a-4eca-bc85-2755c569986d
 title: Unterstützen von MTP-Erweiterungen
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 898df3f1347af2ccc42a796b480156b6603b13ec
-ms.sourcegitcommit: 0f7a8198bacd5493ab1e78a9583c7a3578794765
+ms.openlocfilehash: c16a80b640b50346f1724aec771d8ffd82de565f078e5b3e1d562c346e34973a
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/25/2021
-ms.locfileid: "110423730"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118193571"
 ---
 # <a name="supporting-mtp-extensions"></a>Unterstützen von MTP-Erweiterungen
 
 ## <a name="media-transfer-protocol"></a>Medienübertragungsprotokoll
 
-Das Media Transfer Protocol (MTP) ist eine Erweiterung des Picture Transfer Protocol (PTP). Daher sind alle PTP-Protokollsemantiken in MTP gültig.
+Media Transfer Protocol (MTP) ist eine Erweiterung des Picture Transfer Protocol (PTP). Daher sind alle PTP-Protokollsemantiken in MTP gültig.
 
-MTP kommuniziert mithilfe von Befehlen und Antworten zwischen zwei Parteien, dem Initiator und dem Beantworter. Die Rollen der beteiligten Geräte sind sehr klar definiert. Der PC ist in der Regel der Initiator, und das Gerät ist immer der Antworter. Ein Nicht-PC-Gerät kann auch ein Initiator sein (z. B. ein Autostapel oder eine Microsoft X-Box). Ein Gerät kann nie beide Rollen gleichzeitig übernehmen.
+MTP kommuniziert mithilfe von Befehlen und Antworten zwischen zwei Parteien, dem Initiator und dem Antwortgeber. Die Rollen der beteiligten Geräte sind sehr klar definiert. Der PC ist in der Regel der Initiator, und das Gerät ist immer der Antwortgeber. Ein Nicht-PC-Gerät kann auch ein Initiator sein (z. B. ein Autosatz oder ein Microsoft X-Box). Ein Gerät kann nie beide Rollen gleichzeitig übernehmen.
 
-Der Initiator startet die Kommunikation, indem er einen Befehl an den Antworter sendet. Der Antworter verarbeitet den Befehl und sendet eine entsprechende Antwort zurück. Dem Befehl kann eine Datenphase zugeordnet sein. Wenn dies der Fall ist, muss die Richtung des Datenflusses im Voraus bekannt sein und sowohl vom Initiator als auch vom Antworter akzeptiert werden. Beachten Sie, dass es keinen beschreibenden Header gibt, der Datenflüsse für neue Befehle angibt.
+Der Initiator startet die Kommunikation, indem er einen Befehl an den Antwortenden sendet. Der Beantworter verarbeitet den Befehl und sendet eine entsprechende Antwort zurück. Möglicherweise ist dem Befehl eine Datenphase zugeordnet. Wenn dies der Fall ist, muss die Richtung des Datenflusses im Voraus bekannt sein und sowohl vom Initiator als auch vom Antwortgeber akzeptiert werden. Beachten Sie, dass es keinen beschreibenden Header gibt, der Datenflüsse für neue Befehle angibt.
 
-Der Beantworter kann die Kommunikation unabhängig vom Initiator starten. Beispielsweise kann der Beantworter Ereignisse an den Initiator senden. Es können jedoch keine Daten zusammen mit dem Ereignis gesendet werden. Wenn Daten im Rahmen des Ereignisses gelesen werden müssen, muss der Initiator einen MTP-Befehl senden, und das Gerät kann dann daten als Reaktion auf den Befehl senden.
+Der Antwortgeber kann die Kommunikation unabhängig vom Initiator starten. Beispielsweise kann der Antwortende Ereignisse an den Initiator senden. Es können jedoch keine Daten zusammen mit dem Ereignis gesendet werden. Wenn Daten im Rahmen des Ereignisses gelesen werden müssen, muss der Initiator einen MTP-Befehl senden, und das Gerät kann dann Daten als Antwort auf den Befehl senden.
 
 Eine vollständige Beschreibung von MTP finden Sie in der [MTP-Spezifikation.](https://www.usb.org/sites/default/files/MTPv1_1.zip)
 
@@ -48,7 +48,7 @@ Beachten Sie, dass diese Befehle für MTP spezifisch sind. und werden daher nur 
 
 Unabhängig von der Phase müssen **WPD \_ PROPERTY \_ MTP \_ EXT OPERATION \_ \_ CODE** und **WPD PROPERTY \_ \_ MTP EXT OPERATION \_ \_ \_ PARAMS** angegeben werden.
 
-Wenn der MTP-Treiber den Befehl an das Gerät senden konnte, enthalten die Rückgabewerte immer **WPD \_ PROPERTY \_ MTP \_ EXT RESPONSE \_ \_ CODE**. Wenn der Antwortcode den Erfolg angibt und die Semantik des Befehls Antwortparameter zulässt, ist **WPD \_ PROPERTY \_ MTP \_ EXT RESPONSE \_ \_ PARAMS** ebenfalls verfügbar.
+Wenn der MTP-Treiber den Befehl an das Gerät senden konnte, enthalten die Rückgabewerte immer **WPD \_ PROPERTY \_ MTP \_ EXT RESPONSE \_ \_ CODE**. Wenn der Antwortcode einen Erfolg angibt und die Semantik des Befehls Antwortparameter zugibt, ist **WPD \_ PROPERTY \_ MTP \_ EXT RESPONSE \_ \_ PARAMS** ebenfalls verfügbar.
 
 ## <a name="related-topics"></a>Zugehörige Themen
 

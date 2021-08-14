@@ -1,9 +1,9 @@
 ---
-title: MCIWNDM_SETTIMERS Meldung (VFW. h)
-description: Die mciwndm \_ settimers-Nachricht legt die Aktualisierungs Zeiträume fest, die von mciwnd verwendet werden, um die TrackBar im mciwnd-Fenster zu aktualisieren, die in der Fenstertitelleiste angezeigten Positionsinformationen zu aktualisieren und Benachrichtigungs Meldungen an das übergeordnete Fenster zu senden.
+title: MCIWNDM_SETTIMERS-Nachricht (Vfw.h)
+description: Die MCIWNDM \_ SETTIMERS-Meldung legt die Aktualisierungszeiträume fest, die MCIWnd verwendet, um die Trackleiste im MCIWnd-Fenster zu aktualisieren, die in der Titelleiste des Fensters angezeigten Positionsinformationen zu aktualisieren und Benachrichtigungsmeldungen an das übergeordnete Fenster zu senden.
 ms.assetid: 06407c67-b620-4f80-9fe9-456cdf3d0666
 keywords:
-- MCIWNDM_SETTIMERS-Nachricht (Multimedia)
+- MCIWNDM_SETTIMERS nachricht Windows Multimedia
 topic_type:
 - apiref
 api_name:
@@ -14,16 +14,16 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 7bba3fa2e474a15dc23deb9cdc6d00d148b8cd3a
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 3e9c17a131827459555ae51adc5d5bd48d98fabb88fc4c1f0dbbcd1eb3673466
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "103740233"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119807555"
 ---
-# <a name="mciwndm_settimers-message"></a>Mciwndm \_ settimers-Nachricht
+# <a name="mciwndm_settimers-message"></a>MCIWNDM \_ SETTIMERS-Nachricht
 
-Die **mciwndm \_ settimers** -Nachricht legt die Aktualisierungs Zeiträume fest, die von mciwnd verwendet werden, um die TrackBar im mciwnd-Fenster zu aktualisieren, die in der Fenstertitelleiste angezeigten Positionsinformationen zu aktualisieren und Benachrichtigungs Meldungen an das übergeordnete Fenster zu senden. Sie können diese Nachricht explizit oder mithilfe des Makros [**mciwndsettimers**](/windows/desktop/api/Vfw/nf-vfw-mciwndsettimers) senden.
+Die **MCIWNDM \_ SETTIMERS-Meldung** legt die Aktualisierungszeiträume fest, die MCIWnd verwendet, um die Trackleiste im MCIWnd-Fenster zu aktualisieren, die in der Titelleiste des Fensters angezeigten Positionsinformationen zu aktualisieren und Benachrichtigungsmeldungen an das übergeordnete Fenster zu senden. Sie können diese Nachricht explizit oder mithilfe des [**MCIWndSetTimers-Makros**](/windows/desktop/api/Vfw/nf-vfw-mciwndsettimers) senden.
 
 
 ```C++
@@ -38,17 +38,17 @@ lParam = (LPARAM) (UINT) inactive;
 
 <dl> <dt>
 
-<span id="active"></span><span id="ACTIVE"></span>*enden*
+<span id="active"></span><span id="ACTIVE"></span>*aktiv*
 </dt> <dd>
 
-Aktualisierungs Zeitraum, der von mciwnd verwendet wird, wenn es sich um das aktive Fenster handelt. Der Standardwert ist 500 Millisekunden. Der Speicher für diesen Wert ist auf 16 Bits beschränkt.
+Aktualisierungszeitraum, der von MCIWnd verwendet wird, wenn es sich um das aktive Fenster handelt. Der Standardwert ist 500 Millisekunden. Storage für diesen Wert ist auf 16 Bits beschränkt.
 
 </dd> <dt>
 
-<span id="inactive"></span><span id="INACTIVE"></span>*VSTE*
+<span id="inactive"></span><span id="INACTIVE"></span>*Inaktiv*
 </dt> <dd>
 
-Update Zeitraum, der von mciwnd verwendet wird, wenn es sich um das inaktive Fenster handelt. Der Standardwert beträgt 2.000 Millisekunden. Der Speicher für diesen Wert ist auf 16 Bits beschränkt.
+Aktualisierungszeitraum, der von MCIWnd verwendet wird, wenn es sich um das inaktive Fenster handelt. Der Standardwert beträgt 2.000 Millisekunden. Storage für diesen Wert ist auf 16 Bits beschränkt.
 
 </dd> </dl>
 
@@ -64,15 +64,15 @@ Diese Meldung gibt keinen Wert zurück.
 |-------------------------------------|----------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional \[nur Desktop-Apps\]<br/>                       |
 | Unterstützte Mindestversion (Server)<br/> | Windows 2000 Server \[nur Desktop-Apps\]<br/>                             |
-| Header<br/>                   | <dl> <dt>VFW. h</dt> </dl> |
+| Header<br/>                   | <dl> <dt>Vfw.h</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Mciwndsettimers**](/windows/desktop/api/Vfw/nf-vfw-mciwndsettimers)
+[**MCIWndSetTimers**](/windows/desktop/api/Vfw/nf-vfw-mciwndsettimers)
 </dt> </dl>
 
  

@@ -1,5 +1,5 @@
 ---
-description: Veranschaulicht, wie eine Anwendung mehrere switchziele (wie für Registerkarten) in einem TaskBand verfügbar machen und Ihre Miniaturansichten bereitstellen kann.
+description: Veranschaulicht, wie eine Anwendung mehrere Switchziele (z. B. Registerkarten) auf einem Taskband verfügbar machen und ihre Miniaturansichten bereitstellen kann.
 title: TabThumbnails-Beispiel
 ms.topic: article
 ms.date: 05/31/2018
@@ -9,29 +9,29 @@ api_type: ''
 api_location: ''
 topic_type:
 - kbArticle
-ms.openlocfilehash: 323604d104be3432a5fc251901c4308bfc989f90
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: abfabc93947f5eb583c4178fa47b20468eb7eaf9a8f651c76baf0c1e1256311e
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "104980745"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118219776"
 ---
 # <a name="tabthumbnails-sample"></a>TabThumbnails-Beispiel
 
-Veranschaulicht, wie eine Anwendung mehrere switchziele (wie für Registerkarten) in einem TaskBand verfügbar machen und Ihre Miniaturansichten bereitstellen kann.
+Veranschaulicht, wie eine Anwendung mehrere Switchziele (z. B. Registerkarten) auf einem Taskband verfügbar machen und ihre Miniaturansichten bereitstellen kann.
 
 Dieses Thema enthält folgende Abschnitte:
 
--   [Anforderungen](#requirements)
+-   [Requirements](#requirements)
 -   [Herunterladen des Beispiels](#downloading-the-sample)
--   [Beispiel zum Aufbau](#building-the-sample)
+-   [Erstellen des Beispiels](#building-the-sample)
 -   [Ausführen des Beispiels](#running-the-sample)
 
-## <a name="requirements"></a>Requirements (Anforderungen)
+## <a name="requirements"></a>Anforderungen
 
 
 
-| Produkt                                | Minimale Produkt Version |
+| Product (Produkt)                                | Mindestversion des Produkts |
 |----------------------------------------|-------------------------|
 | Windows                                | Windows 7               |
 | Windows Software Development Kit (SDK) | 7.0                     |
@@ -44,25 +44,25 @@ Dieses Thema enthält folgende Abschnitte:
 
 | Standort      | Pfad-URL                                                                                             |
 |---------------|------------------------------------------------------------------------------------------------------|
-| GitHub  | [Tabthumbnails-Beispiel](https://github.com/microsoft/Windows-classic-samples/tree/master/Samples/Win7Samples/winui/shell/appshellintegration/TabThumbnails) |
+| GitHub  | [TabThumbnails-Beispiel](https://github.com/microsoft/Windows-classic-samples/tree/master/Samples/Win7Samples/winui/shell/appshellintegration/TabThumbnails) |
 
 ## <a name="building-the-sample"></a>Erstellen des Beispiels
 
-So erstellen Sie das Beispiel von der Eingabeaufforderung aus:
+So erstellen Sie das Beispiel über die Eingabeaufforderung:
 
-1.  Öffnen Sie das Eingabe Aufforderungs Fenster, und navigieren Sie zum Projektverzeichnis **tabminiatur Ansichten** .
+1.  Öffnen Sie das Eingabeaufforderungsfenster, und navigieren Sie zum Projektverzeichnis **TabThumbnails.**
 2.  Geben Sie `msbuild TabThumbnails.sln` ein.
 
-So erstellen Sie das Beispiel mithilfe Microsoft Visual Studio (bevorzugt):
+So erstellen Sie das Beispiel mit Microsoft Visual Studio (bevorzugt):
 
-1.  Öffnen Sie Windows-Explorer, und navigieren Sie zum Projektverzeichnis **tabminiatur Ansichten** .
-2.  Doppelklicken Sie auf das Symbol für die Datei tabthumbnails. sln, um das Projekt in Visual Studio zu öffnen.
-3.  Wählen Sie im Menü **Erstellen** die Option Projekt Mappe **Erstellen** aus.
+1.  Öffnen Sie Windows Explorer, und navigieren Sie zum Projektverzeichnis **TabThumbnails.**
+2.  Doppelklicken Sie auf das Symbol für die Datei TabThumbnails.sln, um das Projekt in Visual Studio zu öffnen.
+3.  Klicken Sie im Menü **Build** (Erstellen) auf **Build Solution** (Projektmappe erstellen).
 
 ## <a name="running-the-sample"></a>Ausführen des Beispiels
 
-1.  Navigieren Sie mithilfe der Eingabeaufforderung oder Windows-Explorer zu dem Verzeichnis, das die neue ausführbare Datei enthält.
-2.  Geben Sie in der Befehlszeile ein `TabThumbnails.exe` . Alternativ können Sie in Windows-Explorer auf das Symbol für TabThumbnails.exe doppelklicken.
+1.  Navigieren Sie über die Eingabeaufforderung oder Windows Explorer zu dem Verzeichnis, das die neue ausführbare Datei enthält.
+2.  Geben Sie in der Befehlszeile `TabThumbnails.exe` ein. Alternativ können Sie in Windows Explorer auf das Symbol für TabThumbnails.exe doppelklicken.
 
  
 

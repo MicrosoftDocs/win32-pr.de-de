@@ -1,9 +1,9 @@
 ---
-title: Wiedergabeliste. ForegroundColor
-description: Das ForegroundColor-Attribut gibt die Vordergrundfarbe an oder ruft Sie ab.
+title: PLAYLIST.foregroundColor
+description: Das foregroundColor-Attribut gibt die Vordergrundfarbe an oder ruft sie ab.
 ms.assetid: a83ceeec-033e-4060-b968-1d19bd7e391b
 keywords:
-- Wiedergabeliste. ForegroundColor Windows Media Player
+- PLAYLIST.foregroundColor-Windows Media Player
 topic_type:
 - apiref
 api_name:
@@ -12,16 +12,16 @@ api_type:
 - NA
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 754544dec05319a6d4f1ce0d14b593969d543813
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 98dbacf3d6439dc379c41163557189b98b8cdcc27db82eb4ec1bb04ad8de03be
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106358231"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118336756"
 ---
-# <a name="playlistforegroundcolor"></a>Wiedergabeliste. ForegroundColor
+# <a name="playlistforegroundcolor"></a>PLAYLIST.foregroundColor
 
-Das **ForegroundColor** -Attribut gibt die Vordergrundfarbe an oder ruft Sie ab.
+Das **foregroundColor-Attribut** gibt die Vordergrundfarbe an oder ruft sie ab.
 
 ``` syntax
         elementID.foregroundColor
@@ -29,7 +29,7 @@ Das **ForegroundColor** -Attribut gibt die Vordergrundfarbe an oder ruft Sie ab.
 
 ## <a name="possible-values"></a>Mögliche Werte
 
-Dieses Attribut ist eine Lese- **/schreibzeichenfolge** mit einem beliebigen Microsoft Internet Explorer-Farbwert. Der Standardwert ist gleich der Textfarbe des Windows-Systems.
+Dieses Attribut ist eine **Zeichenfolge** mit Lese-/Schreibzugriff, die einen beliebigen Microsoft Internet Explorer Farbwert enthält. Er hat einen Standardwert, der der Windows Systemtextfarbe entspricht.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -37,18 +37,18 @@ Dieses Attribut ist eine Lese- **/schreibzeichenfolge** mit einem beliebigen Mic
 
 | Anforderung | Wert |
 |--------------------|------------------------------------------------------|
-| Version<br/> | Windows Media Player, Version 7,0 oder höher<br/> |
+| Version<br/> | Windows Media Player Version 7.0 oder höher<br/> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Farb Verweis**](color-reference.md)
+[**Farbreferenz**](color-reference.md)
 </dt> <dt>
 
-[**Wiedergabelisten Element**](playlist-element.md)
+[**PLAYLIST-Element**](playlist-element.md)
 </dt> </dl>
 
  

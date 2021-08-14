@@ -129,16 +129,16 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 6d789a233df777d98860e519f7e877a030aba55a
-ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
+ms.openlocfilehash: 1e937ad9cc32a7837303d535b73b176c7e16f2d0ab0033bf625f629d2d5f7bc7
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2021
-ms.locfileid: "108087808"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118504352"
 ---
 # <a name="directdraw-return-codes"></a>DirectDraw-Rückgabecodes
 
-Fehler werden durch negative Werte dargestellt und können nicht kombiniert werden. In dieser Tabelle sind die Werte aufgeführt, die von allen Methoden der [DirectDraw-Schnittstellen](directdraw-interfaces.md) und [DirectDraw-Funktionen](directdraw-functions.md)zurückgegeben werden können. Eine Liste der Fehlercodes, die jede Methode oder Funktion zurückgeben kann, finden Sie in der Beschreibung der Methode oder Funktion.
+Fehler werden durch negative Werte dargestellt und können nicht kombiniert werden. In dieser Tabelle sind die Werte aufgeführt, die von allen Methoden der [DirectDraw-Schnittstellen](directdraw-interfaces.md) und [DirectDraw-Funktionen zurückgegeben werden können.](directdraw-functions.md) Eine Liste der Fehlercodes, die jede Methode oder Funktion zurückgeben kann, finden Sie in der Methoden- oder Funktionsbeschreibung.
 
 <dl> <dt>
 
@@ -162,12 +162,12 @@ Das -Objekt wurde bereits initialisiert.
 
 </dt> </dl> </dd> <dt>
 
-<span id="DDERR_BLTFASTCANTCLIP"></span><span id="dderr_bltfastcantclip"></span>**DDERR \_ BLTFASTCLIPCLIP**
+<span id="DDERR_BLTFASTCANTCLIP"></span><span id="dderr_bltfastcantclip"></span>**DDERR \_ BLTFASTCANTCLIP**
 </dt> <dd> <dl> <dt>
 
 
 
-Ein DirectDrawClipper-Objekt wird an eine Quelloberfläche angefügt, die an einen Aufruf der [**IDirectDrawSurface7::BltFast-Methode**](/windows/desktop/api/Ddraw/nf-ddraw-idirectdrawsurface7-bltfast) übergeben wurde.
+Ein DirectDrawClipper-Objekt wird an eine Quelloberfläche angefügt, die an einen Aufruf der [**IDirectDrawSurface7::BltFast-Methode übergeben**](/windows/desktop/api/Ddraw/nf-ddraw-idirectdrawsurface7-bltfast) wurde.
 
 
 </dt> </dl> </dd> <dt>
@@ -197,7 +197,7 @@ Eine Oberfläche kann nicht von einer anderen angeforderten Oberfläche getrennt
 
 
 
-Windows kann keine weiteren Gerätekontexte (DCs) erstellen, oder ein DC hat eine palettenindizierte Oberfläche angefordert, wenn die Oberfläche keine Palette aufweist und der Anzeigemodus nicht palettenindiziert war (in diesem Fall kann DirectDraw keine richtige Palette im DC auswählen).
+Windows können keine gerätespezifischen Kontexte (DCs) mehr erstellen, oder ein DC hat eine palettenindizierte Oberfläche angefordert, wenn die Oberfläche keine Palette hatte und der Anzeigemodus nicht palettenindiziert wurde (in diesem Fall kann DirectDraw keine richtige Palette im DC auswählen).
 
 
 </dt> </dl> </dd> <dt>
@@ -397,7 +397,7 @@ Die Oberfläche kann nicht wiederhergestellt werden, da es sich um eine implizit
 
 
 
-Die Anforderung zur Erstellung der primären Oberfläche stimmt nicht mit der vorhandenen primären Oberfläche überein.
+Die Anforderung zur Erstellung der primären Oberfläche passt nicht zur vorhandenen primären Oberfläche.
 
 
 </dt> </dl> </dd> <dt>
@@ -407,7 +407,7 @@ Die Anforderung zur Erstellung der primären Oberfläche stimmt nicht mit der vo
 
 
 
-Ein oder mehrere der an die Rückruffunktion übergebenen Funktionsbits sind falsch.
+Mindestens ein Funktionsbit, das an die Rückruffunktion übergeben wird, ist falsch.
 
 
 </dt> </dl> </dd> <dt>
@@ -417,7 +417,7 @@ Ein oder mehrere der an die Rückruffunktion übergebenen Funktionsbits sind fal
 
 
 
-DirectDraw unterstützt die angegebene Clipliste nicht.
+DirectDraw unterstützt die bereitgestellte Clipliste nicht.
 
 
 </dt> </dl> </dd> <dt>
@@ -427,7 +427,7 @@ DirectDraw unterstützt die angegebene Clipliste nicht.
 
 
 
-Der guid (Globally Unique Identifier), der an die [**DirectDrawCreate-Funktion**](/windows/desktop/api/Ddraw/nf-ddraw-directdrawcreate) übergeben wird, ist kein gültiger DirectDraw-Treiberbezeichner.
+Der guiD (Globally Unique Identifier), der an die [**DirectDrawCreate-Funktion**](/windows/desktop/api/Ddraw/nf-ddraw-directdrawcreate) übergeben wird, ist kein gültiger DirectDraw-Treiberbezeichner.
 
 
 </dt> </dl> </dd> <dt>
@@ -457,7 +457,7 @@ DirectDraw hat einen Zeiger empfangen, der ein ungültiges DirectDraw-Objekt war
 
 
 
-Mindestens ein Parameter, der an die Methode übergeben wird, ist falsch.
+Mindestens einer der an die -Methode übergebenen Parameter ist falsch.
 
 
 </dt> </dl> </dd> <dt>
@@ -487,7 +487,7 @@ Die Position der Überlagerung auf dem Ziel ist nicht mehr gültig.
 
 
 
-Das angegebene Rechteck war ungültig.
+Das bereitgestellte Rechteck war ungültig.
 
 
 </dt> </dl> </dd> <dt>
@@ -507,7 +507,7 @@ Der angegebene Stream enthält ungültige Daten.
 
 
 
-Die Oberfläche hat den falschen Typ.
+Die Oberfläche war vom falschen Typ.
 
 
 </dt> </dl> </dd> <dt>
@@ -517,7 +517,7 @@ Die Oberfläche hat den falschen Typ.
 
 
 
-Eine oder mehrere Oberflächen sind gesperrt, was zu einem Fehler des angeforderten Vorgangs führt.
+Eine oder mehrere Oberflächen sind gesperrt, was den Fehler des angeforderten Vorgangs verursacht.
 
 
 </dt> </dl> </dd> <dt>
@@ -527,7 +527,7 @@ Eine oder mehrere Oberflächen sind gesperrt, was zu einem Fehler des angeforder
 
 
 
-Es sind mehr Daten verfügbar, als die angegebene Puffergröße enthalten kann.
+Es sind mehr Daten verfügbar, als von der angegebenen Puffergröße gespeichert werden können.
 
 
 </dt> </dl> </dd> <dt>
@@ -537,7 +537,7 @@ Es sind mehr Daten verfügbar, als die angegebene Puffergröße enthalten kann.
 
 
 
-Neu für DirectX 7.0. Wenn [**IDirectDraw7::StartModeTest**](/windows/desktop/api/Ddraw/nf-ddraw-idirectdraw7-startmodetest) mit dem DDSMT \_ ISTESTREQUIRED-Flag aufgerufen wird, wird dieser Wert möglicherweise zurückgegeben, um anzugeben, dass einige oder alle Auflösungen getestet werden können und sollten. [**IDirectDraw7::EvaluateMode**](/windows/desktop/api/Ddraw/nf-ddraw-idirectdraw7-evaluatemode) gibt diesen Wert zurück, um anzugeben, dass der Test in einen neuen Anzeigemodus gewechselt ist.
+Neu für DirectX 7.0. Wenn [**IDirectDraw7::StartModeTest**](/windows/desktop/api/Ddraw/nf-ddraw-idirectdraw7-startmodetest) mit dem DDSMT ISTESTREQUIRED-Flag aufgerufen wird, wird dieser Wert möglicherweise zurückgeben, um zu kennzeichnen, dass einige oder alle Auflösungen getestet werden können und \_ sollten. [**IDirectDraw7::EvaluateMode gibt**](/windows/desktop/api/Ddraw/nf-ddraw-idirectdraw7-evaluatemode) diesen Wert zurück, um anzugeben, dass der Test in einen neuen Anzeigemodus umgeschaltet wurde.
 
 
 </dt> </dl> </dd> <dt>
@@ -557,7 +557,7 @@ Es ist keine 3D-Hardware oder Emulation vorhanden.
 
 
 
-Es ist keine Hardware für die Alphabeschleunigung vorhanden oder verfügbar, was zu einem Fehler des angeforderten Vorgangs führt.
+Es ist keine Hardware für die Alphabeschleunigung vorhanden oder verfügbar, die den Fehler des angeforderten Vorgangs verursacht.
 
 
 </dt> </dl> </dd> <dt>
@@ -567,7 +567,7 @@ Es ist keine Hardware für die Alphabeschleunigung vorhanden oder verfügbar, wa
 
 
 
-Es ist kein Bitblock vorhanden, der Hardware überträgt.
+Es ist keine Bitblockübertragungshardware vorhanden.
 
 
 </dt> </dl> </dd> <dt>
@@ -677,7 +677,7 @@ DirectDraw-Unterstützung ist mit dem aktuellen Anzeigetreiber nicht möglich.
 
 
 
-Neu für DirectX 7.0. Die Tests können nicht fortgesetzt werden, da der Treiber für den Anzeigeadapter keine Aktualisierungsraten aufzählt.
+Neu für DirectX 7.0. Der Test kann nicht fortgesetzt werden, da der Adaptertreiber keine Aktualisierungsraten aufzählt.
 
 
 </dt> </dl> </dd> <dt>
@@ -687,7 +687,7 @@ Neu für DirectX 7.0. Die Tests können nicht fortgesetzt werden, da der Treiber
 
 
 
-Softwareemulation ist nicht verfügbar.
+Die Softwareemulation ist nicht verfügbar.
 
 
 </dt> </dl> </dd> <dt>
@@ -697,7 +697,7 @@ Softwareemulation ist nicht verfügbar.
 
 
 
-Für den Vorgang muss die Anwendung über den exklusiven Modus verfügen, die Anwendung jedoch nicht über den exklusiven Modus.
+Für den Vorgang muss die Anwendung über den exklusiven Modus verfügen, die Anwendung verfügt jedoch nicht über den exklusiven Modus.
 
 
 </dt> </dl> </dd> <dt>
@@ -717,7 +717,7 @@ Das Spiegeln sichtbarer Oberflächen wird nicht unterstützt.
 
 
 
-Es wurde versucht, ein Gerätefenster zu erstellen oder festzulegen, ohne zuerst das Fokusfenster festzulegen.
+Es wurde versucht, ein Gerätefenster zu erstellen oder festlegen, ohne zuerst das Fokusfenster festlegen zu müssen.
 
 
 </dt> </dl> </dd> <dt>
@@ -737,7 +737,7 @@ Es ist keine GDI vorhanden.
 
 
 
-Die Clipper-Benachrichtigung erfordert ein Fensterhandle, oder es wurde zuvor kein Fensterhandle als Fensterhandle auf kooperativer Ebene festgelegt.
+Clipper Benachrichtigung erfordert ein Fensterhand handle, oder es wurde zuvor kein Fensterhand handle als kooperatives Fensterhand handle festgelegt.
 
 
 </dt> </dl> </dd> <dt>
@@ -917,7 +917,7 @@ Das DirectDrawSurface-Objekt verwendet keine 8-Bit-Farbpalette, und der angeford
 
 
 
-Eine Überlagerungskomponente wird für eine nicht überlappende Oberfläche aufgerufen.
+Eine Überlagerungskomponente wird für eine Nichtüberlagerungsoberfläche aufgerufen.
 
 
 </dt> </dl> </dd> <dt>
@@ -937,7 +937,7 @@ Der Vorgang kann nicht ausgeführt werden, da keine Texturzuordnungshardware vor
 
 
 
-Es wurde versucht, eine Oberfläche zu spiegeln, die nicht gekippt werden kann.
+Es wurde versucht, eine Oberfläche zu kippen, die nicht gekippt werden kann.
 
 
 </dt> </dl> </dd> <dt>
@@ -957,7 +957,7 @@ Das angeforderte Element wurde nicht gefunden.
 
 
 
-Es wurde versucht, eine Schnittstellenmethode eines DirectDraw-Objekts aufzurufen, das von [**CoCreateInstance**](/windows/desktop/api/combaseapi/nf-combaseapi-cocreateinstance) erstellt wurde, bevor das Objekt initialisiert wurde.
+Es wurde versucht, eine Schnittstellenmethode eines DirectDraw-Objekts auf rufen, das von [**CoCreateInstance**](/windows/desktop/api/combaseapi/nf-combaseapi-cocreateinstance) erstellt wurde, bevor das Objekt initialisiert wurde.
 
 
 </dt> </dl> </dd> <dt>
@@ -1017,7 +1017,7 @@ Es gibt keine Hardwareunterstützung für vertikale, leere synchronisierte Vorg�
 
 
 
-Der Vorgang zum Erstellen eines Z-Puffers im Anzeigespeicher oder zum Ausführen einer Bitblockübertragung (bitblt) mithilfe eines Z-Puffers kann nicht ausgeführt werden, da keine Hardwareunterstützung für Z-Puffer verfügbar ist.
+Der Vorgang zum Erstellen eines Z-Puffers im Anzeigespeicher oder zum Ausführen einer Bitblockübertragung (bitblt) mithilfe eines Z-Puffers kann nicht ausgeführt werden, da keine Hardwareunterstützung für Z-Puffer besteht.
 
 
 </dt> </dl> </dd> <dt>
@@ -1047,7 +1047,7 @@ Die für den angeforderten Vorgang benötigte Hardware wurde bereits zugeordnet.
 
 
 
-DirectDraw verfügt nicht über genügend Arbeitsspeicher, um den Vorgang durchzuführen.
+DirectDraw verfügt nicht über genügend Arbeitsspeicher zum Ausführen des Vorgangs.
 
 
 </dt> </dl> </dd> <dt>
@@ -1072,7 +1072,7 @@ Die Quell- und Zielrechtecke befinden sich auf derselben Oberfläche und überla
 
 </dt> </dl> </dd> <dt>
 
-<span id="DDERR_OVERLAYCANTCLIP"></span><span id="dderr_overlaycantclip"></span>**DDERR \_ OVERLAYCLIP**
+<span id="DDERR_OVERLAYCANTCLIP"></span><span id="dderr_overlaycantclip"></span>**DDERR \_ OVERLAYCANTCLIP**
 </dt> <dd> <dl> <dt>
 
 
@@ -1087,7 +1087,7 @@ Die Hardware unterstützt keine abgeschnittenen Überlagerungen.
 
 
 
-Es wurde versucht, mehr als einen Farbschlüssel für eine Überlagerung zu aktivieren.
+Es wurde versucht, mehr als einen Farbschlüssel auf einer Überlagerung aktiv zu haben.
 
 
 </dt> </dl> </dd> <dt>
@@ -1097,7 +1097,7 @@ Es wurde versucht, mehr als einen Farbschlüssel für eine Überlagerung zu akti
 
 
 
-Die [**IDirectDrawSurface7::GetOverlayPosition-Methode**](/windows/desktop/api/Ddraw/nf-ddraw-idirectdrawsurface7-getoverlayposition) wurde für eine ausgeblendete Überlagerung aufgerufen.
+Die [**IDirectDrawSurface7::GetOverlayPosition-Methode**](/windows/desktop/api/Ddraw/nf-ddraw-idirectdrawsurface7-getoverlayposition) wurde für eine verborgene Überlagerung aufgerufen.
 
 
 </dt> </dl> </dd> <dt>
@@ -1107,7 +1107,7 @@ Die [**IDirectDrawSurface7::GetOverlayPosition-Methode**](/windows/desktop/api/D
 
 
 
-Der Zugriff auf diese Palette wird verweigert, da die Palette durch einen anderen Thread gesperrt ist.
+Der Zugriff auf diese Palette wird verweigert, da die Palette von einem anderen Thread gesperrt wird.
 
 
 </dt> </dl> </dd> <dt>
@@ -1127,7 +1127,7 @@ Dieser Prozess hat bereits eine primäre Oberfläche erstellt.
 
 
 
-Der an die [**IDirectDrawClipper::GetClipList-Methode**](/windows/desktop/api/Ddraw/nf-ddraw-idirectdrawclipper-getcliplist) übergebene Bereich ist zu klein.
+Die an die [**IDirectDrawClipper::GetClipList-Methode**](/windows/desktop/api/Ddraw/nf-ddraw-idirectdrawclipper-getcliplist) übergebene Region ist zu klein.
 
 
 </dt> </dl> </dd> <dt>
@@ -1137,7 +1137,7 @@ Der an die [**IDirectDrawClipper::GetClipList-Methode**](/windows/desktop/api/Dd
 
 
 
-Es wurde versucht, eine Oberfläche an eine andere Oberfläche anzufügen, an die sie bereits angefügt ist.
+Es wurde versucht, eine Oberfläche an eine andere Oberfläche anfügen, an die sie bereits angefügt ist.
 
 
 </dt> </dl> </dd> <dt>
@@ -1147,7 +1147,7 @@ Es wurde versucht, eine Oberfläche an eine andere Oberfläche anzufügen, an di
 
 
 
-Es wurde versucht, eine Oberfläche zu einer Abhängigkeit einer anderen Oberfläche zu machen, von der sie bereits abhängig ist.
+Es wurde versucht, eine Oberfläche zu einer Abhängigkeit von einer anderen Oberfläche zu machen, von der sie bereits abhängig ist.
 
 
 </dt> </dl> </dd> <dt>
@@ -1157,7 +1157,7 @@ Es wurde versucht, eine Oberfläche zu einer Abhängigkeit einer anderen Oberfl�
 
 
 
-Der Zugriff auf die Oberfläche wird verweigert, da die Oberfläche durch einen anderen Thread gesperrt ist.
+Der Zugriff auf die Oberfläche wird verweigert, da die Oberfläche von einem anderen Thread gesperrt wird.
 
 
 </dt> </dl> </dd> <dt>
@@ -1177,7 +1177,7 @@ Der Zugriff auf die Oberfläche wird verweigert, da die Oberfläche verdeckt ist
 
 
 
-Der Zugriff auf die Oberfläche wird verweigert, weil der Oberflächenspeicher nicht mehr verfügbar ist. Rufen Sie [**die IDirectDrawSurface7::Restore-Methode**](/windows/desktop/api/Ddraw/nf-ddraw-idirectdrawsurface7-restore) auf dieser Oberfläche auf, um den zugeordneten Arbeitsspeicher wiederherzustellen.
+Der Zugriff auf die Oberfläche wird verweigert, da der Oberflächenspeicher nicht mehr verfügbar ist. Rufen Sie [**die IDirectDrawSurface7::Restore-Methode**](/windows/desktop/api/Ddraw/nf-ddraw-idirectdrawsurface7-restore) auf dieser Oberfläche auf, um den zugeordneten Arbeitsspeicher wiederherzustellen.
 
 
 </dt> </dl> </dd> <dt>
@@ -1202,7 +1202,7 @@ Neu für DirectX 7.0. Wenn dieser Wert von der [**IDirectDraw7::StartModeTest-Me
 
 </dt> </dl> </dd> <dt>
 
-<span id="DDERR_TOOBIGHEIGHT"></span><span id="dderr_toobigheight"></span>**DDERR \_ TO WIEGE**
+<span id="DDERR_TOOBIGHEIGHT"></span><span id="dderr_toobigheight"></span>**DDERR \_ TOIGHT**
 </dt> <dd> <dl> <dt>
 
 
@@ -1277,7 +1277,7 @@ Die Anzeige befindet sich derzeit in einem nicht unterstützten Modus.
 
 
 
-Ein vertikales Leerzeichen wird ausgeführt.
+Ein vertikales Leerzeichen wird in Bearbeitung.
 
 
 </dt> </dl> </dd> <dt>
@@ -1292,12 +1292,12 @@ Der Videoport ist nicht aktiv.
 
 </dt> </dl> </dd> <dt>
 
-<span id="DDERR_WASSTILLDRAWING"></span><span id="dderr_wasstilldrawing"></span>**DDERR \_ WASDRAWING**
+<span id="DDERR_WASSTILLDRAWING"></span><span id="dderr_wasstilldrawing"></span>**DDERR \_ WASUNGDRAWING**
 </dt> <dd> <dl> <dt>
 
 
 
-Der vorherige Bitblt-Vorgang, der Informationen an diese oder von dieser Oberfläche überträgt, ist unvollständig.
+Der vorherige bitblt-Vorgang, bei dem Informationen auf oder von dieser Oberfläche übertragen werden, ist unvollständig.
 
 
 </dt> </dl> </dd> <dt>
@@ -1326,7 +1326,7 @@ Das bereitgestellte Rechteck wurde nicht horizontal an einer erforderlichen Gren
 
 
 
-| Anforderungen | Wert |
+| Anforderung | Wert |
 |-------------------|------------------------------------------------------------------------------------|
 | Header<br/> | <dl> <dt>Ddraw.h</dt> </dl> |
 

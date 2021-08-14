@@ -1,32 +1,32 @@
 ---
-description: Autorisierungs Referenzseiten enthalten ausführliche Beschreibungen der Autorisierungs Funktionen, Schnittstellen, Objekte, Strukturen und anderen Programmier Elemente von Microsoft.
+description: Autorisierungsreferenzseiten enthalten ausführliche Beschreibungen der Microsoft-Autorisierungsfunktionen, Schnittstellen, Objekte, Strukturen und anderen Programmierelemente.
 ms.assetid: edfc2012-d948-4b01-a7c8-387a7d5caa86
-title: Autorisierungs Verweis
+title: Autorisierungsreferenz
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 31ba982d3b717c6896f689f45e32548a3d36c943
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 0843554144eee31ed0bf1c20eff30728009ebf6630b354a19d1a6157e1567908
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106363855"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117784166"
 ---
-# <a name="authorization-reference"></a>Autorisierungs Verweis
+# <a name="authorization-reference"></a>Autorisierungsreferenz
 
-Autorisierungs Referenzseiten enthalten ausführliche Beschreibungen der Autorisierungs Funktionen, Schnittstellen, Objekte, Strukturen und anderen Programmier Elemente von Microsoft. Diese Seiten enthalten Referenz Beschreibungen der API für die Arbeit mit Zugriffs Steuerungen, einschließlich der Zugriffs Steuerungs-Editoren.
+Autorisierungsreferenzseiten enthalten ausführliche Beschreibungen der Microsoft-Autorisierungsfunktionen, Schnittstellen, Objekte, Strukturen und anderen Programmierelemente. Diese Seiten enthalten Referenzbeschreibungen der API für die Arbeit mit Zugriffssteuerungen, einschließlich der Zugriffssteuerungs-Editoren.
 
-Verweis Seiten sind in die folgenden Gruppen unterteilt.
+Verweisseiten sind in die folgenden Gruppen unterteilt.
 
 | `Section`                                                                                        | BESCHREIBUNG                                                            |
 |------------------------------------------------------------------------------------------------|------------------------------------------------------------------------|
-| [Microsoft. Interop. Security. azrollen-Assembly](microsoft-interop-security-azroles-assembly.md) | Links zur Dokumentation für die azrollen-Assemblyschnittstellen.            |
-| [Autorisierungs Konstanten](authorization-constants.md)                                         | Konstanten, die von Autorisierungs Programmierungs Elementen verwendet werden.                  |
-| [Autorisierungs Datentypen](authorization-data-types.md)                                       | Datentypen, die von Autorisierungs Programmier Elementen verwendet werden.                 |
-| [Autorisierungs Enumerationen](authorization-enumerations.md)                                   | Enumerationen, die von Autorisierungs Programmierungs Elementen verwendet werden.               |
-| [Autorisierungs Funktionen](authorization-functions.md)                                         | Mit der Autorisierung verwendete Funktionen.                                     |
-| [Autorisierungs Schnittstellen](authorization-interfaces.md)                                       | Mit der Autorisierung verwendete Schnittstellen.                                    |
-| [Autorisierungs Objekte](authorization-objects.md)                                             | Mit der Autorisierung verwendete Objekte.                                       |
-| [Autorisierungs Strukturen](authorization-structures.md)                                       | Strukturen, die mit Autorisierungs Funktionen, Schnittstellen und Objekten verwendet werden. |
+| [Microsoft.Interop.Security.AzRoles-Assembly](microsoft-interop-security-azroles-assembly.md) | Links zur Dokumentation für die AzRoles-Assemblyschnittstellen.            |
+| [Autorisierungskonstanten](authorization-constants.md)                                         | Konstanten, die von Autorisierungsprogrammierelementen verwendet werden.                  |
+| [Autorisierungsdatentypen](authorization-data-types.md)                                       | Datentypen, die von Autorisierungsprogrammierelementen verwendet werden.                 |
+| [Autorisierungsenumerationen](authorization-enumerations.md)                                   | Enumerationen, die von Autorisierungsprogrammierelementen verwendet werden.               |
+| [Autorisierungsfunktionen](authorization-functions.md)                                         | Funktionen, die mit der Autorisierung verwendet werden.                                     |
+| [Autorisierungsschnittstellen](authorization-interfaces.md)                                       | Schnittstellen, die mit der Autorisierung verwendet werden.                                    |
+| [Autorisierungsobjekte](authorization-objects.md)                                             | Objekte, die mit der Autorisierung verwendet werden.                                       |
+| [Autorisierungsstrukturen](authorization-structures.md)                                       | Strukturen, die mit Autorisierungsfunktionen, Schnittstellen und Objekten verwendet werden. |
 
 
 

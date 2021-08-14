@@ -1,6 +1,6 @@
 ---
-description: 'Weitere Informationen über: JET_CALLBACK Callback-Funktion'
-title: JET_CALLBACK Callback-Funktion
+description: 'Weitere Informationen zu: JET_CALLBACK Rückruffunktion'
+title: JET_CALLBACK Rückruffunktion
 TOCTitle: JET_CALLBACK Callback Function
 ms:assetid: d15d4f84-8378-4b4b-9b8b-e89a56be5ead
 ms:mtpsurl: https://msdn.microsoft.com/library/Gg294098(v=EXCHG.10)
@@ -15,23 +15,23 @@ api_type:
 - COM
 api_location: ''
 ROBOTS: INDEX,FOLLOW
-ms.openlocfilehash: 5e6d26bd5e347757fce270d5f2c78ab471755c1a
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: d50f0f3a0908b725d7f704df962324a0f16af1fc6f7353515a8d604e87edd0a5
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106348833"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118487613"
 ---
-# <a name="jet_callback-callback-function"></a>JET_CALLBACK Callback-Funktion
+# <a name="jet_callback-callback-function"></a>JET_CALLBACK Rückruffunktion
 
 
 _**Gilt für:** Windows | Windows Server_
 
-## <a name="jet_callback-callback-function"></a>JET_CALLBACK Callback-Funktion
+## <a name="jet_callback-callback-function"></a>JET_CALLBACK Rückruffunktion
 
-Die **JET_CALLBACK** -Funktion ist eine multizweck-Rückruffunktion, die von der Datenbank-Engine verwendet wird, um die Anwendung über ein Ereignis zu informieren, das Online Defragmentierung und Cursor Zustands Benachrichtigungen umfasst.
+Die **JET_CALLBACK-Funktion** ist eine mehrzweckige Rückruffunktion, die von der Datenbank-Engine verwendet wird, um die Anwendung über ein Ereignis zu informieren, das Onlinedefragmentierung und Cursorzustandsbenachrichtigungen umfasst.
 
-Informationen zu bestimmten Einstellungen, die für die Parameter dieser Funktion verwendet werden können, finden Sie unter [JET_CBTYP](./jet-cbtyp.md) , da sich diese Einstellungen abhängig von der **JET_CBTYP** Option unterscheiden, die für die Verwendung im *cbyp* -Parameter ausgewählt ist.
+Informationen zu bestimmten Einstellungen, die für die Parameter dieser Funktion verwendet werden sollen, finden Sie unter [JET_CBTYP,](./jet-cbtyp.md) da sich diese Einstellungen je nach **JET_CBTYP** Option unterscheiden, die für die Verwendung im *cbtyp-Parameter* ausgewählt ist.
 
 ```cpp
     JET_ERR JET_API* JET_CALLBACK(
@@ -48,87 +48,87 @@ Informationen zu bestimmten Einstellungen, die für die Parameter dieser Funktio
 
 ### <a name="parameters"></a>Parameter
 
-*-sid*
+*sesid*
 
-Die Sitzung, für die der Rückruf erstellt wird.
+Die Sitzung, für die der Rückruf erfolgt.
 
-*DBID*
+*Dbid*
 
-Die Datenbank, für die der Rückruf erstellt wird.
+Die Datenbank, für die der Rückruf erfolgt.
 
-*TableID*
+*tableid*
 
-Der Cursor, für den der Rückruf erstellt wird.
+Der Cursor, für den der Rückruf ausgeführt wird.
 
-*cbyp*
+*cbtyp*
 
-Der Punkt in dem Vorgang, an dem der Rückruf durchgeführt wird. Unter [JET_CBTYP](./jet-cbtyp.md) finden Sie eine Liste der Werte und die Bedeutung der folgenden Parameter in jedem Fall.
+Der Punkt im Vorgang, an dem der Rückruf erfolgt. Unter [JET_CBTYP](./jet-cbtyp.md) finden Sie jeweils eine Liste der Werte und die Bedeutung der folgenden Parameter.
 
 *pvArg1*
 
-Ein Parameter, der für die Kommunikation mit der Anwendung mithilfe des-Rückrufs verwendet wird. Weitere Informationen zur Verwendung dieses Parameters für jeden Rückruf, der von der Datenbank-Engine unterstützt wird, finden Sie unter [JET_CBTYP](./jet-cbtyp.md) .
+Ein Parameter, der für die Kommunikation mit der Anwendung mithilfe des Rückrufs verwendet wird. Informationen zur Verwendung dieses Parameters für jeden rückruf, der von der Datenbank-Engine unterstützt wird, finden Sie unter [JET_CBTYP.](./jet-cbtyp.md)
 
 *pvArg2*
 
-Ein Parameter, der für die Kommunikation mit der Anwendung mithilfe des-Rückrufs verwendet wird. Weitere Informationen zur Verwendung dieses Parameters für jeden Rückruf, der von der Datenbank-Engine unterstützt wird, finden Sie unter [JET_CBTYP](./jet-cbtyp.md) .
+Ein Parameter, der für die Kommunikation mit der Anwendung mithilfe des Rückrufs verwendet wird. Informationen zur Verwendung dieses Parameters für jeden rückruf, der von der Datenbank-Engine unterstützt wird, finden Sie unter [JET_CBTYP.](./jet-cbtyp.md)
 
-*pvcontext*
+*pvContext*
 
-Ein Parameter, der für die Kommunikation mit der Anwendung mithilfe des-Rückrufs verwendet wird. Weitere Informationen zur Verwendung dieses Parameters für jeden Rückruf, der von der Datenbank-Engine unterstützt wird, finden Sie unter [JET_CBTYP](./jet-cbtyp.md) .
+Ein Parameter, der für die Kommunikation mit der Anwendung mithilfe des Rückrufs verwendet wird. Informationen zur Verwendung dieses Parameters für jeden rückruf, der von der Datenbank-Engine unterstützt wird, finden Sie unter [JET_CBTYP.](./jet-cbtyp.md)
 
-*ulungenutzt*
+*ulUnused*
 
-Ein Parameter, der für die Kommunikation mit der Anwendung mithilfe des-Rückrufs verwendet wird. Weitere Informationen zur Verwendung dieses Parameters für jeden Rückruf, der von der Datenbank-Engine unterstützt wird, finden Sie unter [JET_CBTYP](./jet-cbtyp.md) .
+Ein Parameter, der für die Kommunikation mit der Anwendung mithilfe des Rückrufs verwendet wird. Informationen zur Verwendung dieses Parameters für jeden rückruf, der von der Datenbank-Engine unterstützt wird, finden Sie unter [JET_CBTYP.](./jet-cbtyp.md)
 
 #### <a name="return-value"></a>Rückgabewert
 
-Die-Funktion gibt einen der [Fehlercodes für die erweiterbare Speicher-Engine](./extensible-storage-engine-error-codes.md)zurück. Informationen dazu, wie diese Codes als HRESULTs zurückgegeben werden, finden Sie unter [Fehler bei Extensible Storage Engine](./extensible-storage-engine-errors.md). Bei Erfolg kann der Vorgang, der den Rückruf ausgegeben hat, normal fortgesetzt werden. In einigen Fällen gibt der Rückruf möglicherweise eine Warnung zurück, die diesen Vorgang beeinflusst. Unter [JET_CBTYP](./jet-cbtyp.md) finden Sie Informationen zur Verwendung dieser Warnungen durch den-Vorgang.
+Die Funktion gibt einen der [Extensible Storage Engine-Fehlercodes](./extensible-storage-engine-error-codes.md)zurück. Informationen zum Zurückgeben dieser Codes als HRESULTs finden Sie unter [Extensible Storage Engine Errors](./extensible-storage-engine-errors.md). Bei Erfolg kann der Vorgang, der den Rückruf ausgegeben hat, normal fortgesetzt werden. In einigen Fällen gibt der Rückruf möglicherweise eine Warnung zurück, die diesen Vorgang beeinflusst. Informationen zur Verwendung dieser Warnungen durch den Vorgang finden Sie unter [JET_CBTYP.](./jet-cbtyp.md)
 
-Bei einem Fehler wird der Vorgang, der den Rückruf ausgegeben hat, normalerweise ordnungsgemäß fortgesetzt oder schlägt fehl. Unter [JET_CBTYP](./jet-cbtyp.md) finden Sie Informationen zur Verwendung des Fehlercodes durch den Vorgang.
+Bei einem Fehler kann der Vorgang, der den Rückruf ausgegeben hat, normal fortgesetzt werden oder fehlschlagen. Informationen zur Verwendung des Fehlercodes durch den Vorgang finden Sie unter [JET_CBTYP.](./jet-cbtyp.md)
 
-#### <a name="remarks"></a>Bemerkungen
+#### <a name="remarks"></a>Hinweise
 
-Wenn der Rückruf einen Cursor an die Anwendung übergibt, ist es wichtig zu wissen, dass dieser Cursor absichtlich auf einen kleineren Satz von Funktionen beschränkt ist, um Rekursion und andere Hässlichkeit zu vermeiden. Die folgenden Vorgänge sind zulässig:
+Wenn der Rückruf einen Cursor an die Anwendung übergibt, ist es wichtig zu wissen, dass dieser Cursor absichtlich auf einen kleineren Satz von Funktionen beschränkt ist, um Rekursion und andere Hässlichkeiten zu vermeiden. Die folgenden Vorgänge sind zulässig:
 
-  - [Jetdupcursor](./jetdupcursor-function.md)
+  - [JetDupCursor](./jetdupcursor-function.md)
 
-  - [Jetenreeratecolumschlag](./jetenumeratecolumns-function.md)
+  - [JetEnumerateColumns](./jetenumeratecolumns-function.md)
 
-  - [Jetgetbookmark](./jetgetbookmark-function.md)
+  - [JetGetBookmark](./jetgetbookmark-function.md)
 
-  - [Jetgetcurrentindex](./jetgetcurrentindex-function.md)
+  - [JetGetCurrentIndex](./jetgetcurrentindex-function.md)
 
-  - [Jetgetcursor Info](./jetgetcursorinfo-function.md)
+  - [JetGetCursorInfo](./jetgetcursorinfo-function.md)
 
-  - [Jetgetls](./jetgetls-function.md)
+  - [JetGetLS](./jetgetls-function.md)
 
-  - [Jetgetrecordposition](./jetgetrecordposition-function.md)
+  - [JetGetRecordPosition](./jetgetrecordposition-function.md)
 
-  - [Jetgetsecondaryindexbookmark](./jetgetsecondaryindexbookmark-function.md)
+  - [JetGetSecondaryIndexBookmark](./jetgetsecondaryindexbookmark-function.md)
 
-  - [Jetgettablecolumninfo](./jetgettablecolumninfo-function.md)
+  - [JetGetTableColumnInfo](./jetgettablecolumninfo-function.md)
 
-  - [Jetgettableindexinfo](./jetgettableindexinfo-function.md)
+  - [JetGetTableIndexInfo](./jetgettableindexinfo-function.md)
 
-  - [Jetgettableinfo](./jetgettableinfo-function.md)
+  - [JetGetTableInfo](./jetgettableinfo-function.md)
 
-  - [Jetregistercallback](./jetregistercallback-function.md)
+  - [JetRegisterCallback](./jetregistercallback-function.md)
 
-  - [Jetretrievecolumschlag](./jetretrievecolumn-function.md)
+  - [JetRetrieveColumn](./jetretrievecolumn-function.md)
 
-  - [Jetretrievecolumschlag](./jetretrievecolumns-function.md)
+  - [JetRetrieveColumns](./jetretrievecolumns-function.md)
 
-  - [Jetretrievekey](./jetretrievekey-function.md)
+  - [JetRetrieveKey](./jetretrievekey-function.md)
 
-  - [Jetsetcolumn](./jetsetcolumn-function.md)
+  - [JetSetColumn](./jetsetcolumn-function.md)
 
-  - [Jetsetcolumns](./jetsetcolumns-function.md)
+  - [JetSetColumns](./jetsetcolumns-function.md)
 
-  - [Jetsetls](./jetsetls-function.md)
+  - [JetSetLS](./jetsetls-function.md)
 
-  - [Jetunregistercallback](./jetunregistercallback-function.md)
+  - [JetUnregisterCallback](./jetunregistercallback-function.md)
 
-Berücksichtigen Sie beim Entwerfen Ihres Rückrufs, dass auch mit diesen Einschränkungen das Fehlschlagen des Rückrufs möglich ist.
+Berücksichtigen Sie beim Entwerfen des Rückrufs, dass der Rückruf auch bei diesen Einschränkungen weiterhin fehlschlägt.
 
 #### <a name="requirements"></a>Anforderungen
 
@@ -148,7 +148,7 @@ Berücksichtigen Sie beim Entwerfen Ihres Rückrufs, dass auch mit diesen Einsch
 </tr>
 <tr class="odd">
 <td><p><strong>Header</strong></p></td>
-<td><p>In "ESENT. h" deklariert.</p></td>
+<td><p>Deklariert in Esent.h.</p></td>
 </tr>
 </tbody>
 </table>

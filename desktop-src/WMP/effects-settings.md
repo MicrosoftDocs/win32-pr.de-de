@@ -1,9 +1,9 @@
 ---
-title: Effekte. Settings
-description: Die Settings-Methode zeigt die Attribut Seite für die aktuelle Visualisierung an (sofern vorhanden).
+title: EFFECTS.settings
+description: Die Einstellungsmethode zeigt die Attributseite für die aktuelle Visualisierung an, falls vorhanden.
 ms.assetid: d5c858d4-b5ee-4490-bc58-1fd38bd6a250
 keywords:
-- Effekte. Settings Windows Media Player
+- EFFECTS.settings Windows Media Player
 topic_type:
 - apiref
 api_name:
@@ -13,16 +13,16 @@ api_type:
 ms.topic: reference
 ms.date: 05/31/2018
 api_location: ''
-ms.openlocfilehash: 511e7d4a2890c45e30d497280c3907c3517ee761
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 556bbc388cac62d69758c7047d43a1a9a56a1be30015ebdb3bcfc27212e429c4
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106367750"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118339965"
 ---
-# <a name="effectssettings"></a>Effekte. Settings
+# <a name="effectssettings"></a>EFFECTS.settings
 
-Die **Settings** -Methode zeigt die Attribut Seite für die aktuelle Visualisierung an (sofern vorhanden).
+Die **Einstellungsmethode** zeigt die Attributseite für die aktuelle Visualisierung an, falls vorhanden.
 
 ``` syntax
         elementID.settings()
@@ -42,15 +42,15 @@ Diese Methode gibt keinen Wert zurück.
 
 | Anforderung | Wert |
 |--------------------|------------------------------------------------------|
-| Version<br/> | Windows Media Player, Version 7,0 oder höher<br/> |
+| Version<br/> | Windows Media Player Version 7.0 oder höher<br/> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Effects-Element**](effects-element.md)
+[**EFFECTS-Element**](effects-element.md)
 </dt> </dl>
 
  

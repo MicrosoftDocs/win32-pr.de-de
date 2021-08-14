@@ -1,19 +1,19 @@
 ---
-description: In den folgenden Beispielen wird die setstringinblob-Funktion verwendet, um spezielle BLOB-Einträge zu erstellen.
+description: In den folgenden Beispielen wird die SetStringInBlob-Funktion verwendet, um spezielle BLOB-Einträge zu erstellen.
 ms.assetid: 4a921b0d-9934-48e2-8837-be0bd7b7fa7a
 title: Spezielle BLOB-Einträge
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 5cfc40029e0a0f88c2f7bd242881b0d750a5dfa1
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: b0659fa05219dcc715c6c00b3d28635e2500f73e4e5bece72049ee43839a0820
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "103752176"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118363138"
 ---
 # <a name="special-blob-entries"></a>Spezielle BLOB-Einträge
 
-In den folgenden Beispielen wird die [**setstringinblob**](setstringinblob.md) -Funktion verwendet, um spezielle BLOB-Einträge zu erstellen.
+In den folgenden Beispielen wird die [**SetStringInBlob-Funktion**](setstringinblob.md) verwendet, um spezielle BLOB-Einträge zu erstellen.
 
 ## <a name="npp-name"></a>NPP-Name
 
@@ -26,7 +26,7 @@ SetStringInBlob(
    "My NPP Name"); 
 ```
 
-## <a name="npp-class-identifier"></a>NPP-Klassen Bezeichner
+## <a name="npp-class-identifier"></a>NPP-Klassenbezeichner
 
 ``` syntax
 SetClassIDInBlob(
@@ -37,7 +37,7 @@ SetClassIDInBlob(
    &CLSID_ThisNPP);
 ```
 
-## <a name="cfgproc-procedure-name"></a>Name der cfgproc-Prozedur
+## <a name="cfgproc-procedure-name"></a>CFGPROC-Prozedurname
 
 ``` syntax
 SetStringInBlob(
@@ -48,7 +48,7 @@ SetStringInBlob(
    "MyGetNPPBlobs");
 ```
 
-## <a name="tree-root-name-for-finder-ui"></a>Struktur Stamm Name für die Finder-Benutzeroberfläche
+## <a name="tree-root-name-for-finder-ui"></a>Strukturstammname für die Finder-Benutzeroberfläche
 
 ``` syntax
 SetStringInBlob(
@@ -59,7 +59,7 @@ SetStringInBlob(
    "My Tree Root name");
 ```
 
-## <a name="display-string-for-finder-ui"></a>Anzeige Zeichenfolge für Finder-UI
+## <a name="display-string-for-finder-ui"></a>Anzeigen einer Zeichenfolge für die Finder-Benutzeroberfläche
 
 ``` syntax
 SetStringInBlob(
@@ -70,9 +70,9 @@ SetStringInBlob(
    "Double click to select my UI");
 ```
 
-## <a name="interface-tags"></a>Schnittstellen Tags
+## <a name="interface-tags"></a>Schnittstellentags
 
-Dieses Beispiel enthält jede Schnittstelle, die vom NPP unterstützt wird.
+Dieses Beispiel enthält jede schnittstelle, die vom NPP unterstützt wird.
 
 ``` syntax
 SetBoolInBlob(  

@@ -1,23 +1,23 @@
 ---
-description: Die fotometadatenrichtlinie für die System. simplerating-Eigenschaft.
+description: Die Richtlinie für Fotometadaten für die System.SimpleRating-Eigenschaft.
 ms.assetid: d932a251-f238-4582-a1c4-cf4855f26fb3
-title: System. simplerating Photo Metadata Policy
+title: System.SimpleRating-Richtlinie für Fotometadaten
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 63b91e41a0684c8e395992683e0a1d4fe43306a0
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 38c65c9e49d7e905a4cefe890b6c5aab257250baa41171470666ba38b3fb5c96
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "104050292"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118709964"
 ---
-# <a name="systemsimplerating-photo-metadata-policy"></a>System. simplerating Photo Metadata Policy
+# <a name="systemsimplerating-photo-metadata-policy"></a>System.SimpleRating-Richtlinie für Fotometadaten
 
-Die fotometadatenrichtlinie für die [System. simplerating](../properties/props-system-simplerating.md) -Eigenschaft.
+Die Richtlinie für Fotometadaten für die [System.SimpleRating-Eigenschaft.](../properties/props-system-simplerating.md)
 
-### <a name="pkey"></a>Pkey
+### <a name="pkey"></a>PKEY
 
-Pkey- \_ simplerating
+PKEY \_ SimpleRating
 
 ### <a name="containers"></a>Container
 
@@ -27,54 +27,54 @@ JPEG, TIFF
 
 Nein
 
-### <a name="output-propvariant-type"></a>Ausgabe-PROPVARIANT-Typ
+### <a name="output-propvariant-type"></a>PROPVARIANT-Ausgabetyp
 
 VT \_ UI4
 
-### <a name="input-propvariant-type"></a>Eingabe-PROPVARIANT-Typ
+### <a name="input-propvariant-type"></a>PROPVARIANT-Eingabetyp
 
-Kann "VT \_ UI1", "VT \_ UI2" oder "VT UI4" lauten \_ . Der ganzzahlige Wert kann zwischen 0 und 5 liegen.
+Dies kann VT \_ UI1, VT \_ UI2 oder VT \_ UI4 sein. Der ganzzahlige Wert kann zwischen 0 und 5 liegen.
 
-### <a name="conflict-resolution-policy"></a>Richtlinie zur Konfliktlösung
+### <a name="conflict-resolution-policy"></a>Konfliktlösungsrichtlinie
 
-Werte aus unterschiedlichen Schemas sind abgestimmt.
+Werte aus verschiedenen Schemas werden abgestimmt.
 
 ### <a name="jpeg-policy"></a>JPEG-Richtlinie
 
-### <a name="read-paths"></a>Pfade lesen
+### <a name="read-paths"></a>Lesepfade
 
 
 
-| Auftrag | Pfad                     | Datenträger Format |
+| Auftrag | Pfad                     | Datenträgerformat |
 |-------|--------------------------|-------------|
-| 1     | /App1/IFD/{ushort = 18246} | ushort      |
-| 2     | /XMP/XMP: Bewertung          | Unicode     |
+| 1     | /app1/ifd/{ushort=18246} | ushort      |
+| 2     | /xmp/xmp:Rating          | Unicode     |
 
 
 
  
 
-### <a name="write-paths"></a>Schreib Pfade
+### <a name="write-paths"></a>Schreibpfade
 
 
 
-| Auftrag | Pfad                     | Datenträger Format |
+| Auftrag | Pfad                     | Datenträgerformat |
 |-------|--------------------------|-------------|
-| 1     | /App1/IFD/{ushort = 18246} | ushort      |
-| 2     | /XMP/XMP: Bewertung          | Unicode     |
+| 1     | /app1/ifd/{ushort=18246} | ushort      |
+| 2     | /xmp/xmp:Rating          | Unicode     |
 
 
 
  
 
-### <a name="remove-paths"></a>Pfade entfernen
+### <a name="remove-paths"></a>Entfernen von Pfaden
 
 
 
 | Auftrag | Pfad                     |
 |-------|--------------------------|
-| 1     | /App1/IFD/{ushort = 18246} |
-| 2     | /XMP/XMP: Bewertung          |
+| 1     | /app1/ifd/{ushort=18246} |
+| 2     | /xmp/xmp:rating          |
 
 
 
@@ -82,52 +82,52 @@ Werte aus unterschiedlichen Schemas sind abgestimmt.
 
 ### <a name="tiff-policies"></a>TIFF-Richtlinien
 
-### <a name="read-paths"></a>Pfade lesen
+### <a name="read-paths"></a>Lesepfade
 
 
 
-| Auftrag | Pfad                | Datenträger Format |
+| Auftrag | Pfad                | Datenträgerformat |
 |-------|---------------------|-------------|
-| 1     | /IFD/{ushort = 18246} | ushort      |
-| 2     | /IFD/XMP/XMP: Bewertung | Unicode     |
+| 1     | /ifd/{ushort=18246} | ushort      |
+| 2     | /ifd/xmp/xmp:Rating | Unicode     |
 
 
 
  
 
-### <a name="write-paths"></a>Schreib Pfade
+### <a name="write-paths"></a>Schreibpfade
 
 
 
-| Auftrag | Pfad                | Datenträger Format |
+| Auftrag | Pfad                | Datenträgerformat |
 |-------|---------------------|-------------|
-| 1     | /IFD/{ushort = 18246} | ushort      |
-| 2     | /IFD/XMP/XMP: Bewertung | Unicode     |
+| 1     | /ifd/{ushort=18246} | ushort      |
+| 2     | /ifd/xmp/xmp:Rating | Unicode     |
 
 
 
  
 
-### <a name="remove-paths"></a>Pfade entfernen
+### <a name="remove-paths"></a>Entfernen von Pfaden
 
 
 
 | Auftrag | Pfad                |
 |-------|---------------------|
-| 1     | /IFD/{ushort = 18246} |
-| 2     | /IFD/XMP/XMP: Bewertung |
+| 1     | /ifd/{ushort=18246} |
+| 2     | /ifd/xmp/xmp:rating |
 
 
 
  
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
 <dl> <dt>
 
-[System. simplerating](../properties/props-system-simplerating.md)
+[System.SimpleRating](../properties/props-system-simplerating.md)
 </dt> </dl>
 
  

@@ -1,6 +1,6 @@
 ---
-description: Wird an eine Erweiterungs-DLL gesendet, wenn der Benutzer einen Dateinamen im Datei-Manager-Verzeichnisfenster oder im Fenster Suchergebnisse auswählt.
-title: FMEVENT_SELCHANGE Nachricht (Wfext.h)
+description: Wird an eine Erweiterungs-DLL gesendet, wenn der Benutzer einen Dateinamen im Verzeichnisfenster des Datei-Managers oder im Fenster Suchergebnisse auswählt.
+title: FMEVENT_SELCHANGE (Wfext.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,16 +13,16 @@ api_type:
 api_location:
 - Wfext.h
 ms.assetid: 0773aa74-adf2-4e90-aead-2a9a981be3cb
-ms.openlocfilehash: e9aa647434aab5a483626757179a7b23b3372a02
-ms.sourcegitcommit: 3caaa3c92dcb1ef12f84464d14ce6262e65e988e
+ms.openlocfilehash: befc217eeb24453d7db726cf68d233fa57e5a7971fd148406cf90810b52b070d
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/12/2021
-ms.locfileid: "109842261"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118459037"
 ---
 # <a name="fmevent_selchange-message"></a>FMEVENT \_ SELCHANGE-Nachricht
 
-Wird an eine Erweiterungs-DLL gesendet, wenn der Benutzer einen Dateinamen im Datei-Manager-Verzeichnisfenster oder im Fenster Suchergebnisse auswählt.
+Wird an eine Erweiterungs-DLL gesendet, wenn der Benutzer einen Dateinamen im Verzeichnisfenster des Datei-Managers oder im Fenster Suchergebnisse auswählt.
 
 ## <a name="parameters"></a>Parameter
 
@@ -36,13 +36,13 @@ Wird an eine Erweiterungs-DLL gesendet, wenn der Benutzer einen Dateinamen im Da
 
 ## <a name="return-value"></a>Rückgabewert
 
-Eine Erweiterungs-DLL sollte 0 (null) zurückgeben, wenn diese Meldung verarbeitet wird.
+Eine Erweiterungs-DLL sollte 0 (null) zurückgeben, wenn sie diese Meldung verarbeitet.
 
 ## <a name="remarks"></a>Hinweise
 
-Änderungen am Strukturteil des Verzeichnisfensters erzeugen diese Meldung nicht.
+Änderungen im Strukturbereich des Verzeichnisfensters erzeugen diese Meldung nicht.
 
-Da der Benutzer die Auswahl mehrmals ändern kann, muss die Erweiterungs-DLL nach der Verarbeitung dieser Meldung sofort zurückgeben, um eine Verlangsamung des Auswahlprozesses für den Benutzer zu vermeiden.
+Da der Benutzer die Auswahl mehrmals ändern kann, muss die Erweiterungs-DLL nach der Verarbeitung dieser Meldung sofort zurückkehren, um zu vermeiden, dass der Auswahlprozess für den Benutzer verlangsamt wird.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -56,7 +56,7 @@ Da der Benutzer die Auswahl mehrmals ändern kann, muss die Erweiterungs-DLL nac
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 

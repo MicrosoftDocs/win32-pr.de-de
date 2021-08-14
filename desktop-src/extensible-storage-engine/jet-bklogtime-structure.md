@@ -1,5 +1,5 @@
 ---
-description: 'Weitere Informationen finden Sie hier: JET_BKLOGTIME Struktur'
+description: 'Weitere Informationen finden Sie unter: JET_BKLOGTIME Struktur'
 title: JET_BKLOGTIME Struktur
 TOCTitle: JET_BKLOGTIME Structure
 ms:assetid: 31460079-7c5b-4145-837d-b112ba0117d6
@@ -15,12 +15,12 @@ api_type:
 - COM
 api_location: ''
 ROBOTS: INDEX,FOLLOW
-ms.openlocfilehash: 0b3ebfd1c0b807a491695ba18d6735e0230a16fe
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: b34740d582e341cce3b2fd0b28203b7346a4de1d94a8586289be8ab252247943
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106350834"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118487722"
 ---
 # <a name="jet_bklogtime-structure"></a>JET_BKLOGTIME Struktur
 
@@ -29,7 +29,7 @@ _**Gilt für:** Windows | Windows Server_
 
 ## <a name="jet_bklogtime-structure"></a>JET_BKLOGTIME Struktur
 
-Die **JET_BKLOGTIME** -Struktur enthält die Datums-und Uhrzeit Elemente eines Ereignisses. Es handelt sich um eine Erweiterung von [JET_LOGTIME](./jet-logtime-structure.md).
+Die **JET_BKLOGTIME-Struktur** enthält die Datums- und Uhrzeitelemente eines Ereignisses. Es ist eine Erweiterung von [JET_LOGTIME.](./jet-logtime-structure.md)
 
 **Windows Vista: JET_BKLOGTIME** wird in Windows Vista eingeführt.
 
@@ -60,39 +60,39 @@ Die **JET_BKLOGTIME** -Struktur enthält die Datums-und Uhrzeit Elemente eines E
 
 ### <a name="members"></a>Member
 
-**bseconds**
+**bSeconds**
 
-Die Uhrzeit des Ereignisses in Sekunden. Dies kann 0 (null) bis 60 sein. 0 (null) wird verwendet, wenn die **JET_BKLOGTIME** Struktur "Null" ist.
+Die Zeit des Ereignisses in Sekunden. Dies kann 0 (null) bis 60 sein. 0 (null) wird verwendet, wenn die **JET_BKLOGTIME** "NULL" ist.
 
-**bminuten**
+**bMinutes**
 
-Die Uhrzeit des Ereignisses (in Minuten). Dies kann 0 (null) bis 60 sein. 0 (null) wird verwendet, wenn die **JET_BKLOGTIME** Struktur "Null" ist.
+Die Zeit des Ereignisses in Minuten. Dies kann 0 (null) bis 60 sein. 0 (null) wird verwendet, wenn die **JET_BKLOGTIME** "NULL" ist.
 
-**bhours**
+**bHours**
 
-Die Uhrzeit des Ereignisses (in Stunden). Dies kann 0 (null) bis 24 sein. 0 (null) wird verwendet, wenn die **JET_BKLOGTIME** Struktur "Null" ist.
+Die Zeit des Ereignisses in Stunden. Dies kann 0 (null) bis 24 sein. 0 (null) wird verwendet, wenn die **JET_BKLOGTIME** "NULL" ist.
 
-**bday**
+**Bday**
 
-Der Tag des Monats des Ereignisses. Dies kann 0 (null) bis 31 sein. 0 (null) wird verwendet, wenn die **JET_BKLOGTIME** Struktur "Null" ist.
+Der Tag des Monats des Ereignisses. Dies kann 0 (null) bis 31 sein. 0 (null) wird verwendet, wenn die **JET_BKLOGTIME** "NULL" ist.
 
-**bmonth**
+**bMonth**
 
-Der Monat des Jahres des Ereignisses. Der Wert kann zwischen 0 (null) und 12 liegen. 0 (null) wird verwendet, wenn die **JET_BKLOGTIME** Struktur "Null" ist.
+Der Monat des Jahres des Ereignisses. Dies kann 0 (null) bis 12 sein. 0 (null) wird verwendet, wenn die **JET_BKLOGTIME** "NULL" ist.
 
-**byear**
+**bYear**
 
-Das Jahr (Offset um 1900) des Ereignisses. Um das tatsächliche Jahr zu erreichen, fügen Sie diesem Wert 1900 hinzu. 0 (null) wird verwendet, wenn die **JET_BKLOGTIME** Struktur "Null" ist.
+Das Jahr (Offset um 1900) des Ereignisses. Um das tatsächliche Jahr zu erreichen, fügen Sie diesem Wert 1900 hinzu. 0 (null) wird verwendet, wenn die **JET_BKLOGTIME** "NULL" ist.
 
 **bFiller1**
 
 Dieses Feld sollte ignoriert werden.
 
-**"f"**
+**fTimeIsUTC**
 
-Die Uhrzeit liegt im UTC-Format vor.
+Die Zeit liegt im UTC-Format vor.
 
-**funused**
+**fUnused**
 
 Dieses Feld sollte ignoriert werden.
 
@@ -100,9 +100,9 @@ Dieses Feld sollte ignoriert werden.
 
 Dieses Feld sollte ignoriert werden.
 
-**fossnapshot**
+**fOSSnapshot**
 
-Wenn dieses Ereignis eine Sicherung ist, enthält dieses Flag einen der folgenden möglichen Werte:
+Wenn es sich bei diesem Ereignis um eine Sicherung handelt, enthält dieses Flag einen der folgenden möglichen Werte:
 
 <table>
 <colgroup>
@@ -118,21 +118,21 @@ Wenn dieses Ereignis eine Sicherung ist, enthält dieses Flag einen der folgende
 <tbody>
 <tr class="odd">
 <td><p>Streamingsicherung</p></td>
-<td><p>0 (null)</p></td>
+<td><p>0 (Null)</p></td>
 </tr>
 <tr class="even">
-<td><p>Momentaufnahme Sicherung</p></td>
+<td><p>Momentaufnahmesicherung</p></td>
 <td><p>1</p></td>
 </tr>
 </tbody>
 </table>
 
 
-**frei bedient**
+**fReserved**
 
 Dieses Feld sollte ignoriert werden.
 
-### <a name="remarks"></a>Bemerkungen
+### <a name="remarks"></a>Hinweise
 
 Diese Struktur wird beim Debuggen verwendet.
 
@@ -154,7 +154,7 @@ Diese Struktur wird beim Debuggen verwendet.
 </tr>
 <tr class="odd">
 <td><p><strong>Header</strong></p></td>
-<td><p>In "ESENT. h" deklariert.</p></td>
+<td><p>In Esent.h deklariert.</p></td>
 </tr>
 </tbody>
 </table>

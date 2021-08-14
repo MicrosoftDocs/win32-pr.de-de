@@ -1,7 +1,7 @@
 ---
 description: Verschiebt ein Element oder Elemente in diesen Ordner.
 ms.assetid: 07723dc1-5d9d-4f32-ab18-52617b0988c4
-title: Folder. muvehere-Methode (Shldisp. h)
+title: Folder.MoveHere-Methode (Shldisp.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,14 +13,14 @@ api_type:
 - COM
 api_location:
 - Shell32.dll
-ms.openlocfilehash: da6590d63f4a3c79252e25f3625c0ee75b146b6d
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: eb826d23a168d81d838341e96fa5e613f8b6f5261a3cda548a2be320acebbde8
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "103749177"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118458918"
 ---
-# <a name="foldermovehere-method"></a>Folder. muvehere-Methode
+# <a name="foldermovehere-method"></a>Folder.MoveHere-Methode
 
 Verschiebt ein Element oder Elemente in diesen Ordner.
 
@@ -40,21 +40,21 @@ Folder.MoveHere(
 
 <dl> <dt>
 
-*vitem* \[ in\]
+*vItem* \[ In\]
 </dt> <dd>
 
 Typ: **Variant**
 
-Das Element oder die Elemente, die verschoben werden sollen. Dabei kann es sich um eine Zeichenfolge handeln, die einen Dateinamen, ein [**folderItem**](folderitem.md) -Objekt oder ein [**folderitems**](folderitems.md) -Objekt darstellt.
+Das element oder die Elemente, die bzw. die sie verschieben. Dies kann eine Zeichenfolge sein, die einen Dateinamen, ein [**FolderItem-Objekt**](folderitem.md) oder ein [**FolderItems-Objekt**](folderitems.md) darstellt.
 
 </dd> <dt>
 
-*voptions* \[ in, optional\]
+*vOptions* \[ in, optional\]
 </dt> <dd>
 
 Typ: **Variant**
 
-Optionen für den Verschiebungs Vorgang. Dieser Wert kann 0 (null) oder eine Kombination der folgenden Werte sein. Diese Werte basieren auf Flags, die für die Verwendung mit dem **fFlags** -Member der C++ [**shfleopstruct**](/windows/desktop/api/Shellapi/ns-shellapi-shfileopstructa) -Struktur definiert sind. Diese Flags sind nicht für Visual Basic, VBScript oder JScript definiert, sodass Sie Sie selbst definieren oder deren numerische Entsprechungen verwenden müssen.
+Optionen für den Move-Vorgang. Dieser Wert kann 0 (null) oder eine Kombination der folgenden Werte sein. Diese Werte basieren auf Flags, die für die Verwendung mit dem **fFlags-Member** der C++-SHFILEOPSTRUCT-Struktur [**definiert**](/windows/desktop/api/Shellapi/ns-shellapi-shfileopstructa) sind. Diese Flags sind nicht als solche für Visual Basic, VBScript oder JScript definiert, daher müssen Sie sie selbst definieren oder ihre numerischen Entsprechungen verwenden.
 
 <dt>
 
@@ -65,7 +65,7 @@ Optionen für den Verschiebungs Vorgang. Dieser Wert kann 0 (null) oder eine Kom
 
 </dt> <dd>
 
-Zeigt kein Status Dialogfeld an.
+Zeigt kein Statusdialogfeld an.
 
 </dd> <dt>
 
@@ -76,7 +76,7 @@ Zeigt kein Status Dialogfeld an.
 
 </dt> <dd>
 
-Übergeben Sie die Datei mit einem neuen Namen in einem Verschiebungs-, Kopier-oder Umbenennungs Vorgang, wenn bereits eine Datei mit dem Zielnamen vorhanden ist.
+Geben Sie der Datei, die in einem Verschieben, Kopieren oder Umbenennen verwendet wird, einen neuen Namen, wenn bereits eine Datei mit dem Zielnamen vorhanden ist.
 
 </dd> <dt>
 
@@ -87,7 +87,7 @@ Zeigt kein Status Dialogfeld an.
 
 </dt> <dd>
 
-Antworten Sie für jedes Dialogfeld, das angezeigt wird, mit "Ja, alle".
+Antworten Sie mit "Ja zu allen" für jedes dialogfeld, das angezeigt wird.
 
 </dd> <dt>
 
@@ -98,7 +98,7 @@ Antworten Sie für jedes Dialogfeld, das angezeigt wird, mit "Ja, alle".
 
 </dt> <dd>
 
-Behalten Sie die rückgängig-Informationen bei, sofern möglich.
+Behalten Sie nach Möglichkeit rückgängig gemachte Informationen bei.
 
 </dd> <dt>
 
@@ -109,7 +109,7 @@ Behalten Sie die rückgängig-Informationen bei, sofern möglich.
 
 </dt> <dd>
 
-Der Vorgang wird nur für Dateien durchgeführt, wenn ein Platzhalter Dateiname ( \* . \* ) angegeben wird.
+Führen Sie den Vorgang für Dateien nur aus, wenn ein Platzhalterdateiname ( \* . \* ) angegeben ist.
 
 </dd> <dt>
 
@@ -120,7 +120,7 @@ Der Vorgang wird nur für Dateien durchgeführt, wenn ein Platzhalter Dateiname 
 
 </dt> <dd>
 
-Zeigt ein Status Dialogfeld an, aber die Dateinamen werden nicht angezeigt.
+Zeigt ein Statusdialogfeld an, zeigt jedoch nicht die Dateinamen an.
 
 </dd> <dt>
 
@@ -131,7 +131,7 @@ Zeigt ein Status Dialogfeld an, aber die Dateinamen werden nicht angezeigt.
 
 </dt> <dd>
 
-Bestätigen Sie die Erstellung eines neuen Verzeichnisses nicht, wenn der Vorgang zum Erstellen eines neuen Verzeichnisses erforderlich ist.
+Bestätigen Sie die Erstellung eines neuen Verzeichnisses nicht, wenn für den Vorgang ein Verzeichnis erstellt werden muss.
 
 </dd> <dt>
 
@@ -142,7 +142,7 @@ Bestätigen Sie die Erstellung eines neuen Verzeichnisses nicht, wenn der Vorgan
 
 </dt> <dd>
 
-Wenn ein Fehler auftritt, wird keine Benutzeroberfläche angezeigt.
+Zeigen Sie keine Benutzeroberfläche an, wenn ein Fehler auftritt.
 
 </dd> <dt>
 
@@ -153,7 +153,7 @@ Wenn ein Fehler auftritt, wird keine Benutzeroberfläche angezeigt.
 
 </dt> <dd>
 
-[Version 4,71.](versions.md) Kopieren Sie die Sicherheits Attribute der Datei nicht.
+[Version 4.71.](versions.md) Kopieren Sie nicht die Sicherheitsattribute der Datei.
 
 </dd> <dt>
 
@@ -164,7 +164,7 @@ Wenn ein Fehler auftritt, wird keine Benutzeroberfläche angezeigt.
 
 </dt> <dd>
 
-Nur im lokalen Verzeichnis ausführen. Arbeiten Sie nicht rekursiv in Unterverzeichnissen.
+Wird nur im lokalen Verzeichnis betrieben. Arbeiten Sie nicht rekursiv in Unterverzeichnisse.
 
 </dd> <dt>
 
@@ -175,7 +175,7 @@ Nur im lokalen Verzeichnis ausführen. Arbeiten Sie nicht rekursiv in Unterverze
 
 </dt> <dd>
 
-[Version 5,0.](versions.md) Verschieben Sie verbundene Dateien nicht als Gruppe. Verschieben Sie nur die angegebenen Dateien.
+[Version 5.0.](versions.md) Verschieben Sie verbundene Dateien nicht als Gruppe. Verschieben Sie nur die angegebenen Dateien.
 
 </dd> </dl> </dd> </dl>
 
@@ -183,18 +183,18 @@ Nur im lokalen Verzeichnis ausführen. Arbeiten Sie nicht rekursiv in Unterverze
 
 Diese Methode gibt keinen Wert zurück.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
 > [!Note]  
-> Nicht alle Methoden werden für alle Ordner implementiert. Beispielsweise ist die Methode " [**Parser Name**](folder-parsename.md) " nicht für den System Steuerungs Ordner (CSIDL-Steuer \_ Elemente) implementiert. Wenn Sie versuchen, eine nicht implementierte Methode aufzurufen, wird ein 0x800a01bd (Decimal 445)-Fehler ausgelöst.
+> Nicht alle Methoden werden für alle Ordner implementiert. Beispielsweise ist die [**ParseName-Methode**](folder-parsename.md) nicht für den ordner Systemsteuerung (CSIDL \_ CONTROLS) implementiert. Wenn Sie versuchen, eine nichtimplementierte Methode auf 0x800A01BD fehler (dezimal 445) wird ausgelöst.
 
  
 
 ## <a name="examples"></a>Beispiele
 
-Im folgenden Beispiel wird **movehere** verwendet, um die Datei Temp.txt aus dem Stammverzeichnis des Laufwerks c in den Ordner c: Windows zu verschieben \\ . Die richtige Verwendung wird für JScript, VBScript und Visual Basic angezeigt.
+Im folgenden Beispiel wird **MoveHere** verwendet, um die Datei Temp.txt aus dem Stammverzeichnis des Laufwerks C in den Ordner C: Windows \\ zu verschieben. Die richtige Verwendung wird für JScript, VBScript und Visual Basic.
 
-JScript
+JScript:
 
 
 ```JScript
@@ -217,7 +217,7 @@ JScript
 
 
 
-VBScript
+Vbscript:
 
 
 ```VB
@@ -267,17 +267,17 @@ End Sub
 
 
 
-## <a name="requirements"></a>Requirements (Anforderungen)
+## <a name="requirements"></a>Anforderungen
 
 
 
 | Anforderung | Wert |
 |-------------------------------------|----------------------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional, Windows XP \[ Desktop-Apps\]<br/>                                         |
+| Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional, nur Windows \[ XP-Desktop-Apps\]<br/>                                         |
 | Unterstützte Mindestversion (Server)<br/> | Windows 2000 Server \[nur Desktop-Apps\]<br/>                                                           |
-| Header<br/>                   | <dl> <dt>Shldisp. h</dt> </dl>                           |
-| IDL<br/>                      | <dl> <dt>Shldisp. idl</dt> </dl>                         |
-| DLL<br/>                      | <dl> <dt>Shell32.dll (Version 4,71 oder höher)</dt> </dl> |
+| Header<br/>                   | <dl> <dt>Shldisp.h</dt> </dl>                           |
+| Idl<br/>                      | <dl> <dt>Shldisp.idl</dt> </dl>                         |
+| DLL<br/>                      | <dl> <dt>Shell32.dll (Version 4.71 oder höher)</dt> </dl> |
 
 
 

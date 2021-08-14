@@ -1,6 +1,6 @@
 ---
-description: 'Weitere Informationen finden Sie unter: API. jetgettablecolumninfo-Methode (JET_SESID, JET_TABLEID, JET_COLUMNID, JET_COLUMNDEF)'
-title: API. jetgettablecolumninfo-Methode (JET_SESID, JET_TABLEID, JET_COLUMNID, JET_COLUMNDEF)
+description: 'Weitere Informationen finden Sie unter: Api.JetGetTableColumnInfo-Methode (JET_SESID, JET_TABLEID, JET_COLUMNID, JET_COLUMNDEF)'
+title: Api.JetGetTableColumnInfo-Methode (JET_SESID, JET_TABLEID, JET_COLUMNID, JET_COLUMNDEF)
 TOCTitle: JetGetTableColumnInfo method (JET_SESID, JET_TABLEID, JET_COLUMNID, JET_COLUMNDEF)
 ms:assetid: M:Microsoft.Isam.Esent.Interop.Api.JetGetTableColumnInfo(Microsoft.Isam.Esent.Interop.JET_SESID,Microsoft.Isam.Esent.Interop.JET_TABLEID,Microsoft.Isam.Esent.Interop.JET_COLUMNID,Microsoft.Isam.Esent.Interop.JET_COLUMNDEF@)
 ms:mtpsurl: https://msdn.microsoft.com/library/microsoft.isam.esent.interop.api.jetgettablecolumninfo(v=EXCHG.10)
@@ -20,19 +20,19 @@ api_type:
 api_location:
 - Microsoft.Isam.Esent.Interop.dll
 ROBOTS: INDEX,FOLLOW
-ms.openlocfilehash: fa120cf78001ed608a2385e07f388ae91bc9b425
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 9a1d4cb2b6c6dc742fa0e6b3707363380aa0b6d138525138c070226ea8ab4bcc
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "103758988"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117719154"
 ---
-# <a name="apijetgettablecolumninfo-method-jet_sesid-jet_tableid-jet_columnid-jet_columndef"></a>API. jetgettablecolumninfo-Methode (JET_SESID, JET_TABLEID, JET_COLUMNID, JET_COLUMNDEF)
+# <a name="apijetgettablecolumninfo-method-jet_sesid-jet_tableid-jet_columnid-jet_columndef"></a>Api.JetGetTableColumnInfo-Methode (JET_SESID, JET_TABLEID, JET_COLUMNID, JET_COLUMNDEF)
 
-Ruft Informationen über eine Tabellenspalte ab.
+Ruft Informationen zu einer Tabellenspalte ab.
 
-**Namespace:**  [Microsoft. ISAM. ESENT. Interop](./microsoft.isam.esent.interop-namespace.md)  
-**Assembly:**  Microsoft. ISAM. ESENT. Interop (in Microsoft.Isam.Esent.Interop.dll)
+**Namespace:**  [Microsoft.Isam.Esent.Interop](./microsoft.isam.esent.interop-namespace.md)  
+**Assembly:**  Microsoft.Isam.Esent.Interop (in Microsoft.Isam.Esent.Interop.dll)
 
 ## <a name="syntax"></a>Syntax
 
@@ -63,40 +63,40 @@ public static void JetGetTableColumnInfo(
 
 #### <a name="parameters"></a>Parameter
 
-  - -sid  
-    Typ: [Microsoft.ISAM.ESENT.Interop.JET_SESID](./jet-sesid-structure.md)  
+  - sesid  
+    Typ: [Microsoft.Isam.Esent.Interop.JET_SESID](./jet-sesid-structure.md)  
     
     Die zu verwendende Sitzung.
 
 <!-- end list -->
 
-  - TableID  
-    Typ: [Microsoft.ISAM.ESENT.Interop.JET_TABLEID](./jet-tableid-structure.md)  
+  - tableid  
+    Typ: [Microsoft.Isam.Esent.Interop.JET_TABLEID](./jet-tableid-structure.md)  
     
     Die Tabelle, die die Spalte enthält.
 
 <!-- end list -->
 
   - columnid  
-    Typ: [Microsoft.ISAM.ESENT.Interop.JET_COLUMNID](./jet-columnid-structure.md)  
+    Typ: [Microsoft.Isam.Esent.Interop.JET_COLUMNID](./jet-columnid-structure.md)  
     
-    Das ColumnID der Spalte.
+    Die columnid der Spalte.
 
 <!-- end list -->
 
   - columndef  
-    Typ: [Microsoft.ISAM.ESENT.Interop.JET_COLUMNDEF](./jet-columndef-class.md)  
+    Typ: [Microsoft.Isam.Esent.Interop.JET_COLUMNDEF](./jet-columndef-class.md)  
     
-    Wird mit Informationen über die Spalte ausgefüllt.
+    Mit Informationen zur Spalte ausgefüllt.
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
-#### <a name="reference"></a>Referenz
+#### <a name="reference"></a>Verweis
 
 [API-Klasse](./api-class.md)
 
-[API-Mitglieder](./api-members.md)
+[API-Member](./api-members.md)
 
-[Jetgettablecolumninfo-Überladung](./api.jetgettablecolumninfo-method.md)
+[JetGetTableColumnInfo-Überladung](./api.jetgettablecolumninfo-method.md)
 
-[Microsoft. ISAM. ESENT. Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)
+[Microsoft.Isam.Esent.Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)

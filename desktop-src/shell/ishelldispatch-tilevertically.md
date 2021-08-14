@@ -1,7 +1,7 @@
 ---
-description: Kachelt alle Fenster auf dem Desktop vertikal. Diese Methode hat denselben Effekt, wenn Sie mit der rechten Maustaste auf die Taskleiste klicken und Fenster nebeneinander anzeigen auswählen.
+description: Kachelt alle Fenster auf dem Desktop vertikal. Diese Methode hat die gleiche Auswirkung wie das Klicken mit der rechten Maustaste auf die Taskleiste und das Gleichzeitige Auswählen von Fenster anzeigen.
 ms.assetid: 63CB7E20-48E6-4cfe-B0BA-0D28A7B151BD
-title: Ishelldispatch. tilevertikal-Methode (Shldisp. h)
+title: IShellDispatch.TileVertically-Methode (Shldisp.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,16 +13,16 @@ api_type:
 - COM
 api_location:
 - Shell32.dll
-ms.openlocfilehash: 42f98ae99814495029c67d41b05e86182c6b8b34
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 0863db300f18e0231143b4f3aaa28cf4fcdb9ff1a46f4c92bd99d2092fdc088d
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104978080"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118221497"
 ---
-# <a name="ishelldispatchtilevertically-method"></a>Ishelldispatch. tilevertikal-Methode
+# <a name="ishelldispatchtilevertically-method"></a>IShellDispatch.TileVertically-Methode
 
-Kachelt alle Fenster auf dem Desktop vertikal. Diese Methode hat denselben Effekt, wenn Sie mit der rechten Maustaste auf die Taskleiste klicken und **Fenster nebeneinander anzeigen** auswählen.
+Kachelt alle Fenster auf dem Desktop vertikal. Diese Methode hat die gleiche Auswirkung wie das Klicken mit der rechten Maustaste auf die Taskleiste und das Auswählen **von Fenster nebeneinander anzeigen.**
 
 ## <a name="syntax"></a>Syntax
 
@@ -55,15 +55,15 @@ Diese Methode gibt keinen Wert zurück.
 
 Diese Methode gibt keinen Wert zurück.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Diese Methode wird implementiert und über die [**Shell. tilevertikal**](shell-tilevertically.md) -Methode aufgerufen.
+Diese Methode wird implementiert und über die [**Shell.TileVertically-Methode**](shell-tilevertically.md) aufgerufen.
 
 ## <a name="examples"></a>Beispiele
 
-In den folgenden Beispielen wird die Verwendung von **tilevertikal** in JScript, VBScript und Visual Basic veranschaulicht.
+Die folgenden Beispiele zeigen die Verwendung von **TileVertically** in JScript, VBScript und Visual Basic.
 
-JScript
+JScript:
 
 
 ```JScript
@@ -79,7 +79,7 @@ JScript
 
 
 
-VBScript
+Vbscript:
 
 
 ```VB
@@ -113,17 +113,17 @@ End Sub
 
 
 
-## <a name="requirements"></a>Requirements (Anforderungen)
+## <a name="requirements"></a>Anforderungen
 
 
 
 | Anforderung | Wert |
 |-------------------------------------|----------------------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional, Windows XP \[ Desktop-Apps\]<br/>                                         |
+| Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional, nur Windows \[ XP-Desktop-Apps\]<br/>                                         |
 | Unterstützte Mindestversion (Server)<br/> | Windows 2000 Server \[nur Desktop-Apps\]<br/>                                                           |
-| Header<br/>                   | <dl> <dt>Shldisp. h</dt> </dl>                           |
-| IDL<br/>                      | <dl> <dt>Shldisp. idl</dt> </dl>                         |
-| DLL<br/>                      | <dl> <dt>Shell32.dll (Version 4,71 oder höher)</dt> </dl> |
+| Header<br/>                   | <dl> <dt>Shldisp.h</dt> </dl>                           |
+| Idl<br/>                      | <dl> <dt>Shldisp.idl</dt> </dl>                         |
+| DLL<br/>                      | <dl> <dt>Shell32.dll (Version 4.71 oder höher)</dt> </dl> |
 
 
 

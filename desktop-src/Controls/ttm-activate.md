@@ -1,9 +1,9 @@
 ---
-title: TTM_ACTIVATE Meldung (kommstrg. h)
+title: TTM_ACTIVATE Meldung (Commctrl.h)
 description: Aktiviert oder deaktiviert ein QuickInfo-Steuerelement.
 ms.assetid: f37da001-748c-4c51-bb32-dc49031ff2fb
 keywords:
-- Windows-Steuerelemente für TTM_ACTIVATE Meldung
+- TTM_ACTIVATE Windows-Steuerelemente für Nachrichten
 topic_type:
 - apiref
 api_name:
@@ -14,14 +14,14 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: e200b769cd3d9e07cb63a5a540960bcc707f862d
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: f1b2a0c67fec22b11adc54f04ed7a6e4f3cb299ad67018b29f1239cebe0f8604
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104040628"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118166393"
 ---
-# <a name="ttm_activate-message"></a>TTM- \_ Aktivierungs Nachricht
+# <a name="ttm_activate-message"></a>TTM \_ ACTIVATE-Nachricht
 
 Aktiviert oder deaktiviert ein QuickInfo-Steuerelement.
 
@@ -32,7 +32,7 @@ Aktiviert oder deaktiviert ein QuickInfo-Steuerelement.
 *wParam* 
 </dt> <dd>
 
-Aktivierungs Kennzeichen. Wenn dieser Parameter **true** ist, wird das QuickInfo-Steuerelement aktiviert. Wenn der Wert **false** ist, wird das QuickInfo-Steuerelement deaktiviert.
+Aktivierungsflag. Wenn dieser Parameter **TRUE** ist, wird das QuickInfo-Steuerelement aktiviert. Wenn false **ist,** wird das QuickInfo-Steuerelement deaktiviert.
 
 </dd> <dt>
 
@@ -49,9 +49,9 @@ Kein Rückgabewert.
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>                                        |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2003 \[ -Desktop-Apps\]<br/>                                  |
-| Header<br/>                   | <dl> <dt>Kommstrg. h</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows \[Nur Vista-Desktop-Apps\]<br/>                                        |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2003-Desktop-Apps\]<br/>                                  |
+| Header<br/>                   | <dl> <dt>Commctrl.h</dt> </dl> |
 
 
 

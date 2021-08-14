@@ -1,68 +1,68 @@
 ---
-title: Code Details
-description: In diesem Abschnitt wird der Quellcode für die Implementierung der ADSI-Beispiel Anbieter Komponente aufgeführt. Alle Quell Code Verweise in diesem Dokument unterliegen Änderungen und sind im Beispielcode Verzeichnis verfügbar, das im ADSI SDK enthalten ist.
+title: Codedetails
+description: In diesem Abschnitt wird der Quellcode für die Implementierung der ADSI-Beispielanbieterkomponente aufgelistet. Alle Quellcodeverweise in diesem Dokument können geändert werden und sind im Beispielcodeverzeichnis verfügbar, das im ADSI SDK enthalten ist.
 ms.assetid: 207912e5-ac17-48c7-9536-981a8e92e8cf
 ms.tgt_platform: multiple
 keywords:
-- Code Details ADSI
+- Codedetails ADSI
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 1d959357f2cdd094b26cde4f649c3286389b8415
-ms.sourcegitcommit: b0ebdefc3dcd5c04bede94091833aa1015a2f95c
+ms.openlocfilehash: b0f03e7c7ed7d61d56f338a8bb44d51b1890d4bd24cd7dc1e6050f1900f6ff61
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/21/2020
-ms.locfileid: "104039598"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118692286"
 ---
-# <a name="code-details"></a>Code Details
+# <a name="code-details"></a>Codedetails
 
-In diesem Abschnitt wird der Quellcode für die Implementierung der ADSI-Beispiel Anbieter Komponente aufgeführt. Alle Quell Code Verweise in diesem Dokument unterliegen Änderungen und sind im Beispielcode Verzeichnis verfügbar, das im ADSI SDK enthalten ist.
+In diesem Abschnitt wird der Quellcode für die Implementierung der ADSI-Beispielanbieterkomponente aufgelistet. Alle Quellcodeverweise in diesem Dokument können geändert werden und sind im Beispielcodeverzeichnis verfügbar, das im ADSI SDK enthalten ist.
 
 > [!Note]  
-> Die [**IADs**](/windows/desktop/api/Iads/nn-iads-iads) -Methoden **Getex** und **PutEx** sind nicht in der ADSI-Beispiel Anbieter Komponente implementiert. Das heißt, Code, der Active Directory Objekte implementiert, die von **IADs** erben, verfügt nicht über **Getex** -und **PutEx** -Methoden. Dies schließt das Schema Klassenobjekt ein, das [**iadsclass**](/windows/desktop/api/Iads/nn-iads-iadsclass)unterstützt, das Eigenschafts Objekt, das [**iadsproperty**](/windows/desktop/api/Iads/nn-iads-iadsproperty)unterstützt, das generische Active Directory Objekt, das **IADs** unterstützt, und ein beliebiges Container Objekt, das [**IADsContainer**](/windows/desktop/api/Iads/nn-iads-iadscontainer)unterstützt. Außerdem sind Syntax Objekte nicht in der Beispiel Anbieter Komponente vorhanden. Die ADSI-Architektur erfordert jedoch, dass die Syntax Objekte im Schema Container Objekt enthalten sind, ebenso wie die Schema Klasse und die Eigenschafts Objekte.
+> Die [**IADs-Methoden**](/windows/desktop/api/Iads/nn-iads-iads) **GetEx** und **PutEx** sind in der ADSI-Beispielanbieterkomponente nicht implementiert. Das heißt, Code, der Active Directory-Objekte implementiert, die von **IADs** erben, verfügt nicht über **die Methoden GetEx** und **PutEx.** Dazu gehören das Schemaklassenobjekt, das [**IADsClass**](/windows/desktop/api/Iads/nn-iads-iadsclass)unterstützt, das Eigenschaftenobjekt, das [**IADsProperty**](/windows/desktop/api/Iads/nn-iads-iadsproperty)unterstützt, das generische Active Directory-Objekt, das **IADs** unterstützt, und alle Containerobjekte, die [**IADsContainer**](/windows/desktop/api/Iads/nn-iads-iadscontainer)unterstützen. Darüber hinaus sind Syntaxobjekte in der Beispielanbieterkomponente nicht vorhanden. Die ADSI-Architektur erfordert jedoch, dass die Syntaxobjekte in das Schemacontainerobjekt eingeschlossen werden, ebenso wie die Schemaklasse und eigenschaftenobjekte.
 
- 
+ 
 
-In der folgenden Tabelle sind Quell Code Dateien aufgelistet, die im Beispiel Verzeichnis des Anbieters im Active Directory Dienst Schnittstellen-SDK enthalten sind.
+Die folgende Tabelle enthält Quellcodedateien, die im Beispielverzeichnis des Anbieters im Active Directory Service Interfaces SDK enthalten sind.
 
 
 
-| Quell Code Datei                 | BESCHREIBUNG                                                                                                                                                       |
+| Quellcodedatei                 | Beschreibung                                                                                                                                                       |
 |----------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| [cclsobj. cpp](cclsobj-cpp.md)   | Schema Klassen-Objekt Routinen.                                                                                                                                     |
-| [cdispmgr. cpp](cdispmgr-cpp.md) | Dispatch-Manager-Implementierung.                                                                                                                                  |
-| [cenum NS. cpp](cenumns-cpp.md)   | Namespace-enumerationsroutinen.                                                                                                                                   |
-| [cenum Sch. cpp](cenumsch-cpp.md) | Schemenumerationsroutinen.                                                                                                                                      |
-| [cenumubj. cpp](cenumobj-cpp.md) | Generische objektenumerationsroutinen.                                                                                                                              |
-| [cenum var. cpp](cenumvar-cpp.md) | Basis Implementierung für von xxxenenumvariant abgeleitete Klassen.                                                                                                           |
-| [cgenobj. cpp](cgenobj-cpp.md)   | Generische Objekt Routinen.                                                                                                                                          |
-| [cnamcf. cpp](cnamcf-cpp.md)     | Namespace-Klassenfactory-Routinen.                                                                                                                                 |
-| [cnamesp. cpp](cnamesp-cpp.md)   | Namespace-Objekt Routinen.                                                                                                                                        |
-| [Common. cpp](common-cpp.md)     | Code, der allen Anbieter Objekten gemeinsam ist.                                                                                                                              |
-| [Core. cpp](core-cpp.md)         | Implementierungen für "Core"-Eigenschaften, die von allen Active Directory Objekten gemeinsam genutzt werden.                                                                                     |
-| [c-Eigenschaften. cpp](cprops-cpp.md)     | Eigenschaften Cache Features.                                                                                                                                          |
-| [cprov. cpp](cprov-cpp.md)       | Anbieter Objekt Routinen der obersten Ebene.                                                                                                                               |
-| [cprovcf. cpp](cprovcf-cpp.md)   | Klassen Routinen für Anbieter Objektklassen der obersten Ebene.                                                                                                                 |
-| [cprpobj. cpp](cprpobj-cpp.md)   | Eigenschafts Objekt Routinen.                                                                                                                                         |
-| [cschobj. cpp](cschobj-cpp.md)   | Schema Objekt Routinen.                                                                                                                                           |
-| [getobj. cpp](getobj-cpp.md)     | GetObject-Feature.                                                                                                                                                |
-| [Globals. cpp](globals-cpp.md)   | ADSI-Beispiel Anbieter Komponente Globals.                                                                                                                          |
-| [GUID. cpp](guid-cpp.md)         | Beispiel Anbieter Komponenten-CLSIDs und ligebote.                                                                                                                     |
-| [LibMain. cpp](libmain-cpp.md)   | LibMain für adssmp.dll.                                                                                                                                           |
-| [Arbeitsspeicher. cpp](memory-cpp.md)     | Beispiel Routinen für die Speicherverwaltung von Anbieter Komponenten.                                                                                                            |
-| [Paket. cpp](pack-cpp.md)         | Beispiel Anbieter Komponenten Paket/entpacken von Daten in Varianten.                                                                                                          |
-| [analysieren. cpp](parse-cpp.md)       | Die Pfad--Verarbeitung für den Beispiel Anbieter Komponenten-Namespace.                                                                                                            |
-| [Property. cpp](property-cpp.md) | Eigenschaften mit dem Namen "Get" und "Put".                                                                                                                                   |
-| [Object. cpp](object-cpp.md)     | Beispielcode für den Objekttyp der Anbieter Komponente zum Filtern.                                                                                                   |
-| [regdsapi. cpp](regdsapi-cpp.md) | Beispiel-APIs für den Registrierungs Verzeichnisdienst für Anbieter Komponenten.                                                                                                       |
-| smpoper. cpp                      | Daten Konvertierungs Routinen.                                                                                                                                         |
-| [stdfact. cpp](stdfact-cpp.md)   | Standard Implementierung von [**IClassFactory**](/windows/win32/api/unknwn/nn-unknwn-iclassfactory) .                                                                                                  |
-| adssmp. inf                       | Beispiel Registrierungsdaten für den Verzeichnis Datenspeicher. Weitere Informationen finden Sie unter [Installieren der Beispiel Anbieter Komponente](installing-the-example-provider-component.md). |
+| [cclsobj.cpp](cclsobj-cpp.md)   | Schemaklassenobjektroutinen.                                                                                                                                     |
+| [cdispmgr.cpp](cdispmgr-cpp.md) | Dispatch Manager-Implementierung.                                                                                                                                  |
+| [cenumns.cpp](cenumns-cpp.md)   | Namespaceenumerationsroutinen.                                                                                                                                   |
+| [cenumsch.cpp](cenumsch-cpp.md) | Schemaenumerationsroutinen.                                                                                                                                      |
+| [cenumobj.cpp](cenumobj-cpp.md) | Generische Objektenumerationsroutinen.                                                                                                                              |
+| [cenumvar.cpp](cenumvar-cpp.md) | Basisimplementierungen für von xxxEnumVariant abgeleitete Klassen.                                                                                                           |
+| [cgenobj.cpp](cgenobj-cpp.md)   | Generische Objektroutinen.                                                                                                                                          |
+| [cnamcf.cpp](cnamcf-cpp.md)     | Namespaceklassenfactoryroutinen.                                                                                                                                 |
+| [cnamesp.cpp](cnamesp-cpp.md)   | Namespaceobjektroutinen.                                                                                                                                        |
+| [common.cpp](common-cpp.md)     | Code, der allen Anbieterobjekten gemeinsam ist.                                                                                                                              |
+| [core.cpp](core-cpp.md)         | Implementierungen für Kerneigenschaften, die von allen Active Directory-Objekten gemeinsam genutzt werden.                                                                                     |
+| [cprops.cpp](cprops-cpp.md)     | Eigenschaftencachefeatures.                                                                                                                                          |
+| [cprov.cpp](cprov-cpp.md)       | Anbieterobjektroutinen der obersten Ebene.                                                                                                                               |
+| [cprovcf.cpp](cprovcf-cpp.md)   | Factoryroutinen der Anbieterobjektklasse der obersten Ebene.                                                                                                                 |
+| [cprpobj.cpp](cprpobj-cpp.md)   | Eigenschaftenobjektroutinen.                                                                                                                                         |
+| [cschobj.cpp](cschobj-cpp.md)   | Schemaobjektroutinen.                                                                                                                                           |
+| [getobj.cpp](getobj-cpp.md)     | GetObject-Funktion.                                                                                                                                                |
+| [globals.cpp](globals-cpp.md)   | ADSI-Beispielanbieterkomponenten – globale Komponenten.                                                                                                                          |
+| [guid.cpp](guid-cpp.md)         | Beispielanbieterkomponenten-CLSIDs und LIBIDs.                                                                                                                     |
+| [libmain.cpp](libmain-cpp.md)   | Libmain für adssmp.dll.                                                                                                                                           |
+| [memory.cpp](memory-cpp.md)     | Beispielroutinen für die Speicherverwaltung von Anbieterkomponenten.                                                                                                            |
+| [pack.cpp](pack-cpp.md)         | Beispiel für das Packen/Entpacken von Daten in VTARTS durch Anbieterkomponenten.                                                                                                          |
+| [parse.cpp](parse-cpp.md)       | Pfadparsierung, z. B. Anbieterkomponentennamespace.                                                                                                            |
+| [property.cpp](property-cpp.md) | Abrufen und Legen Sie die Eigenschaften nach Namen ab.                                                                                                                                   |
+| [object.cpp](object-cpp.md)     | Beispielcode für die Objekttypliste der Anbieterkomponente für die Filterung.                                                                                                   |
+| [regdsapi.cpp](regdsapi-cpp.md) | Beispiel für Verzeichnisdienst-APIs der Anbieterkomponentenregistrierung.                                                                                                       |
+| smpoper.cpp                      | Datenkonvertierungsroutinen.                                                                                                                                         |
+| [stdfact.cpp](stdfact-cpp.md)   | IClassFactory-Standardimplementierungen. [](/windows/win32/api/unknwn/nn-unknwn-iclassfactory)                                                                                                  |
+| adssmp.inf                       | Beispielregistrierungsdaten des Verzeichnisdatenspeichers. Weitere Informationen finden Sie unter [Installieren der Beispielanbieterkomponente](installing-the-example-provider-component.md). |
 
 
 
- 
+ 
 
- 
+ 
 
- 
+ 

@@ -1,46 +1,46 @@
 ---
-title: VML-Margin-Right Attribut
-description: VML-Margin-Right Attribut
+title: VML-Margin-Right-Attribut
+description: VML-Margin-Right-Attribut
 ms.assetid: 7b635bea-df3f-4a24-aa22-cfca95575599
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 0d5529257a0e21c8a8f8c7a1a2f8381c10a6e3b7
-ms.sourcegitcommit: 592c9bbd22ba69802dc353bcb5eb30699f9e9403
+ms.openlocfilehash: 1a5569f4f89cbe5320cfc348f2e2929b986736412f4cb864a62dd4584bde43a9
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "104039582"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118346458"
 ---
-# <a name="vml-margin-right-attribute"></a>VML-Margin-Right Attribut
+# <a name="vml-margin-right-attribute"></a>VML-Margin-Right-Attribut
 
-In diesem Thema wird VML beschrieben, eine Funktion, die ab Windows Internet Explorer 9 veraltet ist. Webseiten und Anwendungen, die auf VML basieren, sollten zu SVG oder anderen allgemein unterstützten Standards migriert werden.
+In diesem Thema wird VML beschrieben, ein Feature, das ab Windows Internet Explorer 9 als veraltet gilt. Webseiten und Anwendungen, die auf VML basieren, sollten zu SVG oder anderen allgemein unterstützten Standards migriert werden.
 
 > [!Note]  
-> Ab Dezember 2011 wurde dieses Thema archiviert. Daher wird er nicht mehr aktiv verwaltet. Weitere Informationen finden Sie unter [archivierte Inhalte](/previous-versions/windows/internet-explorer/ie-developer/). Informationen, Empfehlungen und Anleitungen zur aktuellen Version von Windows Internet Explorer finden Sie im [Internet Explorer Developer Center](https://msdn.microsoft.com/ie/).
+> Seit Dezember 2011 wurde dieses Thema archiviert. Daher wird sie nicht mehr aktiv verwaltet. Weitere Informationen finden Sie unter [Archivierter Inhalt.](/previous-versions/windows/internet-explorer/ie-developer/) Informationen, Empfehlungen und Anleitungen zur aktuellen Version von Windows Internet Explorer finden Sie unter [Internet Explorer Developer Center.](https://msdn.microsoft.com/ie/)
 
- 
+ 
 
-Gibt den rechten Rand des enthaltenden Rechtecks der Form an, das relativ zum Shape-Anker ist. Lese-/Schreibzugriff. **Zeichenfolge**.
+Gibt den rechten Rand des enthaltenden Rechtecks der Form relativ zum Formanker an. Lese-/Schreibzugriff. **Zeichenfolge**.
 
 **Gilt für**
 
-[Form](shape-element--vml.md)
+[Formen](shape-element--vml.md)
 
 **Tagsyntax**
 
-<v: *Element* Style = "margin-right: *Expression* " >
+<v: *element* style="margin-right: *ausdruck* ">
 
-**Skript Syntax**
+**Skriptsyntax**
 
-*Element* . Style. MarginRight = "*Ausdruck*"
+*element* .style.marginright="*expression*"
 
-*Ausdruck* = *Element*. Style. MarginRight
+*expression* = *.style.marginright-Element*
 
 **Anmerkungen**
 
-Das Attribut " **margin-right** " ähnelt dem standardmäßigen HTML-Attribut " **margin-right** ", das mit Stylesheets verwendet wird.
+Das **Margin-Right-Attribut** ähnelt dem standardmäßigen **HTML-Margin-Right-Attribut,** das mit Stylesheets verwendet wird.
 
-Beachten Sie, dass **MarginRight** anstelle von **margin-right** für die Skripterstellung verwendet wird. Beachten Sie auch, dass der Rand nicht geändert werden kann, wenn die **Position** **absolut** ist.
+Beachten Sie, dass **marginright** anstelle von **margin-right** für die Skripterstellung verwendet wird. Beachten Sie außerdem, dass sich der Rand nicht zu ändern scheint, wenn die **Position** **absolut** ist.
 
 Mögliche Werte:
 
@@ -48,15 +48,15 @@ Mögliche Werte:
 
 | Wert      | BESCHREIBUNG                                                                                                                                                                                       |
 |------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Auto       | Die Standardposition eines Elements im Fluss der Seite.                                                                                                                                           |
-| units      | Standard. Eine Zahl mit einem absoluten Einheiten Kenn Zeichner (cm, mm, in, PT, PC oder px) oder einem relativen Einheiten Kenn Zeichner (em oder Ex). Wenn keine Einheiten angegeben werden, wird die Pixel (px) angenommen. Der Standardwert ist 0. |
-| Prozentwert | Wert, ausgedrückt als Prozentsatz der Höhe des übergeordneten Objekts.                                                                                                                                    |
+| Automatisch       | Standardposition eines Elements im Seitenfluss.                                                                                                                                           |
+| units      | Standard. Eine Zahl mit einem absoluten Einheiten-Kennzeichner (cm, mm, in, pt, pc oder px) oder einem bezeichner für relative Einheiten (em oder ex). Wenn keine Einheiten angegeben werden, wird von Pixeln (px) ausgegangen. Der Standardwert ist 0. |
+| Prozentwert | Der Als Prozentsatz der Höhe des übergeordneten Objekts ausgedrückte Wert.                                                                                                                                    |
 
 
 
- 
+ 
 
-*VML-Standard Attribut*
+*VML-Standardattribut*
 
 **Siehe auch**
 
@@ -64,7 +64,7 @@ Mögliche Werte:
 
 **Beispiel**
 
-Der Rechte Rand ist auf 25 Pixel festgelegt.
+Der rechte Rand ist auf 25 Pixel festgelegt.
 
 
 ```HTML
@@ -75,8 +75,8 @@ Der Rechte Rand ist auf 25 Pixel festgelegt.
 
 
 
-[Beispiel für das margin-right-Attribut](/previous-versions/bb229677(v=vs.85)). (Erfordert Microsoft Internet Explorer 5 oder höher.)
+[Beispiel für ein Margin-Right-Attribut.](/previous-versions/bb229677(v=vs.85)) (Erfordert Microsoft Internet Explorer 5 oder höher.)
 
- 
+ 
 
- 
+ 

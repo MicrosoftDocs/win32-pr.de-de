@@ -1,25 +1,25 @@
 ---
-description: Die iwbemkausalityaccess-Schnittstelle stellt die folgenden Methoden zur Verfügung.
+description: Die IWbemCausalityAccess-Schnittstelle macht die folgenden Methoden verfügbar.
 ms.assetid: B5243AB9-0F81-47A1-B633-D956A8A1C88A
 ms.tgt_platform: multiple
-title: Iwbemkausalityaccess-Methoden
+title: IWbemCausalityAccess-Methoden
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 987bd634aed9bd93d4970a1ca3c80be798191695
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: cbac128087b361f7c7daba39fcaabcd33c1e16563d2abb0beabdc71023915274
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "103758011"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118318229"
 ---
-# <a name="iwbemcausalityaccess-methods"></a>Iwbemkausalityaccess-Methoden
+# <a name="iwbemcausalityaccess-methods"></a>IWbemCausalityAccess-Methoden
 
-Die [**iwbemkausalityaccess**](iwbemcausalityaccess.md) -Schnittstelle stellt die folgenden Methoden zur Verfügung.
+Die [**IWbemCausalityAccess-Schnittstelle**](iwbemcausalityaccess.md) macht die folgenden Methoden verfügbar.
 
 ## <a name="in-this-section"></a>In diesem Abschnitt
 
--   [**GetRequestID-Methode**](iwbemcausalityaccess-getrequestid.md)
--   [**Ischildof-Methode**](iwbemcausalityaccess-ischildof.md)
+-   [**GetRequestId-Methode**](iwbemcausalityaccess-getrequestid.md)
+-   [**IsChildOf-Methode**](iwbemcausalityaccess-ischildof.md)
 
  
 

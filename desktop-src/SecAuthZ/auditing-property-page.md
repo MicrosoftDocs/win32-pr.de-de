@@ -1,25 +1,25 @@
 ---
-description: Der Zugriffs Steuerungs-Editor kann eine Eigenschaften Seite für die Überwachung enthalten, die es dem Benutzer ermöglicht, die Zugriffs Steuerungs Einträge (Access Control Entries, ACEs) in einer System Zugriffs Steuerungs Liste (SACL) von Objekten anzuzeigen und zu bearbeiten. Weitere Informationen zu SACLs finden Sie unter Access Control Listen (ACLs).
+description: Der Zugriffssteuerungs-Editor kann eine Überwachungseigenschaftsseite enthalten, die es dem Benutzer ermöglicht, die Zugriffssteuerungseinträge (ACCESS Control Entries, ACEs) in einer Systemzugriffssteuerungsliste (SACL) für Objekte anzuzeigen und zu bearbeiten. Weitere Informationen zu SACLs finden Sie unter Access Control Lists (ACLs).
 ms.assetid: 2a9152b7-c72d-4f03-bc3f-b75927fb4b6c
-title: Eigenschaften Seite "Überwachung"
+title: Eigenschaftenseite "Überwachung"
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: b7fc85691c93994a764199f0b77d52a7a8a71e9f
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: ecf116a9079c5b7b6dfeb7e6df57b45d6a0a2555c14de88a32fee4fadcdc6373
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "104216919"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117784318"
 ---
-# <a name="auditing-property-page"></a>Eigenschaften Seite "Überwachung"
+# <a name="auditing-property-page"></a>Eigenschaftenseite "Überwachung"
 
-Der Zugriffs Steuerungs-Editor **kann eine Eigenschaften** Seite für die Überwachung enthalten, die es dem Benutzer ermöglicht, die [*Zugriffs Steuerungs Einträge (Access Control Entries*](/windows/desktop/SecGloss/a-gly) , ACEs) in der [*System-Zugriffs Steuerungs Liste*](/windows/desktop/SecGloss/s-gly) (SACL) eines Objekts anzuzeigen und zu bearbeiten. Weitere Informationen zu SACLs finden Sie unter [Access Control Listen](access-control-lists.md) (ACLs).
+Der Zugriffssteuerungs-Editor  kann eine Überwachungseigenschaftsseite enthalten, die es dem Benutzer ermöglicht, die Zugriffssteuerungseinträge (ACCESS [*Control Entries,*](/windows/desktop/SecGloss/a-gly) ACEs) in der Systemzugriffssteuerungsliste (SACL) eines Objekts anzuzeigen und zu bearbeiten. [](/windows/desktop/SecGloss/s-gly) Weitere Informationen zu SACLs finden Sie unter [Access Control Lists](access-control-lists.md) (ACLs).
 
-**So zeigen Sie die Eigenschaften Seite "Auditing" an**
+**So zeigen Sie die Eigenschaftenseite "Überwachung" an**
 
--   Klicken Sie auf der [Eigenschaften Seite grundlegende Sicherheit](basic-security-property-page.md)auf **erweitert**. Die **Eigenschaften Seite für die Überwachung** befindet sich auf der Eigenschaften Seite " [Erweiterte Sicherheit](advanced-security-property-sheet.md)".
+-   Klicken Sie [auf der Eigenschaftenseite grundlegende Sicherheit](basic-security-property-page.md)auf **Erweitert.** Die **Eigenschaftenseite** Überwachung befindet sich im [Erweiterten Sicherheitseigenschaftsblatt](advanced-security-property-sheet.md).
 
-Wenn Sie die Eigenschaften Seite **Auditing** einschließen möchten, legen Sie die Flags für **Si \_ Advanced** und **Si \_ Edit \_** Überwachungen in der [**Si- \_ Objekt \_ Informations**](/windows/desktop/api/Aclui/ns-aclui-si_object_info) Struktur fest, die von Ihrer [**ISecurityInformation:: GetObjectInformation**](/windows/win32/api/aclui/nf-aclui-isecurityinformation-getobjectinformation) -Implementierung zurückgegeben wurde.
+Legen Sie zum Hinzufügen der **Eigenschaftenseite** Überwachung die **SI \_ ADVANCED-** und **SI EDIT \_ \_ AUDITS-Flags** in der SI OBJECT [**\_ \_ INFO-Struktur**](/windows/desktop/api/Aclui/ns-aclui-si_object_info) fest, die von Ihrer [**ISecurityInformation::GetObjectInformation-Implementierung zurückgegeben**](/windows/win32/api/aclui/nf-aclui-isecurityinformation-getobjectinformation) wird.
 
  
 

@@ -1,33 +1,33 @@
 ---
-title: Standard-MIDI-schlüsselzuweisungen
-description: Standard-MIDI-schlüsselzuweisungen
+title: STANDARDMÄßIGE SCHLÜSSELZUWEISUNGEN
+description: STANDARDMÄßIGE SCHLÜSSELZUWEISUNGEN
 ms.assetid: 9d3c5fe0-42bc-4101-9f5a-595e925ee7a5
 keywords:
-- Erstellen von MIDI-Dateien, Standardschlüssel Zuweisungen
-- Standard-MIDI-schlüsselzuweisungen
-- Digital Instrumentation Digital Interface (MIDI), Standardschlüssel Zuweisungen
-- MIDI (Digital Interface Digital Interface), Standardschlüssel Zuweisungen
-- Zuordnung von MIDI-Herstellern (MMA)
-- MMA (Zuordnung von MIDI-Herstellern)
-- Allgemeine Beschreibung des MIDI-Modus
+- Erstellen von DATEIEN, Standardschlüsselzuweisungen
+- STANDARDMÄßIGE ZUWEISUNGEN VON SCHLÜSSELN
+- Music Instrument Digital Interface (TASTE), Standardschlüsselzuweisungen
+- INSTRUMENTS (Music Instrument Digital Interface), Standardschlüsselzuweisungen
+- ASSOCIATION Manufacturers Association (MMA)
+- MMA (ASSOCIATION DER HERSTELLER)
+- Allgemeine SPEZIFIKATION FÜR DEN MODUS
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 3aff9a70d791bd0a0812f2cbd78aaff13a9e4875
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: 3a825d44f3ec61d876828a804e22e10e691bb2c93cc0e11decd28e862491017f
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "104388699"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117801504"
 ---
-# <a name="standard-midi-key-assignments"></a>Standard-MIDI-schlüsselzuweisungen
+# <a name="standard-midi-key-assignments"></a>STANDARDMÄßIGE SCHLÜSSELZUWEISUNGEN
 
-Die standardmäßigen MIDI-schlüsselzuweisungen für Percussion-Instrumente basieren auf der allgemeinen MMA-Format Spezifikation von MMA. Die folgende Abbildung zeigt die Standardschlüssel Zuweisungen für für Windows erstellte-Dateien.
+Die STANDARDMÄßIGEN SCHLÜSSELzuweisungen für Instrumente basieren auf der MMA General CSV Mode-Spezifikation. Die folgende Abbildung zeigt die Standardschlüsselzuweisungen für DIE DATEIEN, die für Windows erstellt wurden.
 
-![Bild zur Zuordnung von MIDI-Schlüsseln](images/pian-a01.gif)
+![Bild der Schlüsselzuweisung](images/pian-a01.gif)
 
- 
+ 
 
- 
+ 
 
 
 

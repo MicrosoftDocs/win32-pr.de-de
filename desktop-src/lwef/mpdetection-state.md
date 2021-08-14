@@ -1,10 +1,10 @@
 ---
-title: MPDETECTION_STATE-Enumeration (mpclient. h)
-description: Der Status der aktuell erkannten Bedrohung.
+title: MPDETECTION_STATE -Enumeration (MpClient.h)
+description: Der Status der derzeit erkannten Bedrohung.
 ms.assetid: 293771FF-A210-41D0-88A5-3B52ACAA9295
 keywords:
-- MPDETECTION_STATE-Enumerationsfunktionen der Legacy-Windows-Umgebung
-- PMPDETECTION_STATE enumerationszeiger Legacy-Windows-Umgebungs Features
+- MPDETECTION_STATE enumeration Legacy Windows Environment Features
+- PMPDETECTION_STATE-Enumerationszeiger Legacy Windows Umgebungsfeatures
 topic_type:
 - apiref
 api_name:
@@ -15,16 +15,16 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: f9265a15641d2072d87b33af2782f17974bf07be
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 0443e0c47eef4d4943d39bd671c28c19db0ff5e1fbe79e5af8d034603b1ab78d
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104476113"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117883517"
 ---
-# <a name="mpdetection_state-enumeration"></a>Mperkennungs- \_ statusenumeration
+# <a name="mpdetection_state-enumeration"></a>MPDETECTION \_ STATE-Enumeration
 
-Der Status der aktuell erkannten Bedrohung.
+Der Status der derzeit erkannten Bedrohung.
 
 ## <a name="syntax"></a>Syntax
 
@@ -47,52 +47,52 @@ typedef enum tagMPDETECTION_STATE {
 
 <dl> <dt>
 
-<span id="MPDETECTION_STATE_UNKNOWN"></span><span id="mpdetection_state_unknown"></span>**Unbekannter mperkennungs- \_ Zustand. \_**
+<span id="MPDETECTION_STATE_UNKNOWN"></span><span id="mpdetection_state_unknown"></span>**MPDETECTION \_ STATE \_ UNKNOWN**
 </dt> <dd>
 
 In einem Fehlerzustand.
 
 </dd> <dt>
 
-<span id="MPDETECTION_STATE_ACTIVE"></span><span id="mpdetection_state_active"></span>**mperkennungs- \_ Status \_ aktiv**
+<span id="MPDETECTION_STATE_ACTIVE"></span><span id="mpdetection_state_active"></span>**MPDETECTION \_ STATE \_ ACTIVE**
 </dt> <dd>
 
 Aktive Bedrohung.
 
 </dd> <dt>
 
-<span id="MPDETECTION_STATE_FINISHED"></span><span id="mpdetection_state_finished"></span>**mperkennungs- \_ Status \_ abgeschlossen**
+<span id="MPDETECTION_STATE_FINISHED"></span><span id="mpdetection_state_finished"></span>**MPDETECTION-STATUS \_ \_ ABGESCHLOSSEN**
 </dt> <dd>
 
-Ausstehende 24 Stunden bis zum Löschen.
+Ausstehende 24 Stunden bis zu einer Zusendung.
 
 </dd> <dt>
 
-<span id="MPDETECTION_STATE_ADDITIONAL_ACTIONS"></span><span id="mpdetection_state_additional_actions"></span>**mperkennungs \_ Status \_ zusätzliche \_ Aktionen**
+<span id="MPDETECTION_STATE_ADDITIONAL_ACTIONS"></span><span id="mpdetection_state_additional_actions"></span>**MPDETECTION STATE ADDITIONAL ACTIONS (ZUSÄTZLICHE \_ \_ AKTIONEN ZUM MPDETECTION-ZUSTAND) \_**
 </dt> <dd>
 
-Weitere erforderliche Aktionen.
+Zusätzliche Aktionen sind erforderlich.
 
 </dd> <dt>
 
-<span id="MPDETECTION_STATE_FAILED"></span><span id="mpdetection_state_failed"></span>**mperkennungs- \_ Status ist \_ fehlgeschlagen**
+<span id="MPDETECTION_STATE_FAILED"></span><span id="mpdetection_state_failed"></span>**FEHLER BEIM \_ MPDETECTION-ZUSTAND \_**
 </dt> <dd>
 
-Nicht schwerwiegender Fehler bei der Wiederherstellung.
+Nicht kritischer Korrekturfehler.
 
 </dd> <dt>
 
-<span id="MPDETECTION_STATE_CRITICALLY_FAILED"></span><span id="mpdetection_state_critically_failed"></span>**Fehler beim mperkennungs \_ Zustand. \_ \_**
+<span id="MPDETECTION_STATE_CRITICALLY_FAILED"></span><span id="mpdetection_state_critically_failed"></span>**MPDETECTION \_ STATE \_ CRITICALLY \_ FAILED**
 </dt> <dd>
 
-Kritischer Fehler bei der Wiederherstellung.
+Kritischer Korrekturfehler.
 
 </dd> <dt>
 
-<span id="MPDETECTION_STATE_CLEARED"></span><span id="mpdetection_state_cleared"></span>**mperkennungs- \_ Status \_ gelöscht**
+<span id="MPDETECTION_STATE_CLEARED"></span><span id="mpdetection_state_cleared"></span>**MPDETECTION \_ STATE \_ CLEARED**
 </dt> <dd>
 
-Die Bedrohung wird in der Zustands Abfrage nicht angezeigt, sondern nur im Verlauf.
+Die Bedrohung wird nicht in der Zustandsabfrage angezeigt, sondern nur im Verlauf.
 
 </dd> </dl>
 
@@ -102,9 +102,9 @@ Die Bedrohung wird in der Zustands Abfrage nicht angezeigt, sondern nur im Verla
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows 8 \[ -Desktop-Apps\]<br/>                                            |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2012 \[ -Desktop-Apps\]<br/>                                  |
-| Header<br/>                   | <dl> <dt>Mpclient. h</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | \[Windows 8 Nur Desktop-Apps\]<br/>                                            |
+| Unterstützte Mindestversion (Server)<br/> | \[Windows Server 2012 Nur Desktop-Apps\]<br/>                                  |
+| Header<br/>                   | <dl> <dt>MpClient.h</dt> </dl> |
 
 
 

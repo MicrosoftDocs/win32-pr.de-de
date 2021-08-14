@@ -1,7 +1,7 @@
 ---
 description: Signalisiert eine DVD-Fehlerbedingung.
 ms.assetid: 2cd3e0c4-e2b7-4aa1-9f3c-9003eabfb08a
-title: EC_DVD_ERROR (dvdevcode. h)
+title: EC_DVD_ERROR (Dvdevcode.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,14 +13,14 @@ api_type:
 - HeaderDef
 api_location:
 - dvdevcode.h
-ms.openlocfilehash: 3b338889836bf78a334784ea66c0e346e9f6b672
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: c0afa9ce750016001ddbe054d8cb9a589a2c68d8856e8e4db5c59043eb881129
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106369477"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117820527"
 ---
-# <a name="ec_dvd_error"></a>EC- \_ DVD- \_ Fehler
+# <a name="ec_dvd_error"></a>\_ \_ EC-DVD-FEHLER
 
 Signalisiert eine DVD-Fehlerbedingung.
 
@@ -31,18 +31,18 @@ Signalisiert eine DVD-Fehlerbedingung.
 <span id="lParam1"></span><span id="lparam1"></span><span id="LPARAM1"></span>*lParam1*
 </dt> <dd>
 
-**DWORD** -Wert, der den Fehlerzustand angibt. Member des enumerierten Datentyps des [**DVD- \_ Fehlers**](/previous-versions/windows/desktop/api/dvdevcod/ne-dvdevcod-dvd_error) .
+**DWORD-Wert,** der die Fehlerbedingung angibt. Member des [**\_ aufzählten DVD**](/previous-versions/windows/desktop/api/dvdevcod/ne-dvdevcod-dvd_error) ERROR-Datentyps.
 
 </dd> <dt>
 
 <span id="lParam2"></span><span id="lparam2"></span><span id="LPARAM2"></span>*lParam2*
 </dt> <dd>
 
-Bedeutung hängt vom Wert von *lParam1* ab. Weitere Informationen finden Sie unter [**DVD- \_ Fehler**](/previous-versions/windows/desktop/api/dvdevcod/ne-dvdevcod-dvd_error) .
+Die Bedeutung hängt vom Wert von *lParam1 ab.* Weitere Informationen finden Sie unter [**\_ DVD-FEHLER.**](/previous-versions/windows/desktop/api/dvdevcod/ne-dvdevcod-dvd_error)
 
 </dd> </dl>
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
 Dieses Ereignis wird in allen Domänen ausgelöst.
 
@@ -52,21 +52,21 @@ Dieses Ereignis wird in allen Domänen ausgelöst.
 
 | Anforderung | Wert |
 |-------------------|----------------------------------------------------------------------------------------------------------|
-| Header<br/> | <dl> <dt>Dvdevcode. h (Include DShow. h)</dt> </dl> |
+| Header<br/> | <dl> <dt>Dvdevcode.h (include Dshow.h)</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
 [DVD-Anwendungen](dvd-applications.md)
 </dt> <dt>
 
-[DVD-Ereignis Benachrichtigungs Codes](dvd-notification-codes.md)
+[DVD-Ereignisbenachrichtigungscodes](dvd-notification-codes.md)
 </dt> <dt>
 
-[Ereignis Benachrichtigung in DirectShow](event-notification-in-directshow.md)
+[Ereignisbenachrichtigung in DirectShow](event-notification-in-directshow.md)
 </dt> </dl>
 
  

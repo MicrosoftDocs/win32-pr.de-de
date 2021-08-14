@@ -1,32 +1,32 @@
 ---
-title: Optischer Speicher auf Ebene 1
-description: Optischer Speicher auf Ebene 1
+title: Optische Storage
+description: Optische Storage
 ms.assetid: 4ba0b3fa-d9ed-4058-896e-18c9d6707839
 keywords:
-- Multimedia-PC (MPC), Stufe 1
-- MPC (multimediakpc), Ebene 1
-- Multimedia PC Marketing-Rat, Stufe 1
-- MPC Ebene 1, optischer Speicher
+- Multimedia-PC (MPC), Ebene 1
+- MPC (Multimedia PC),Level 1
+- Multimedia PC Marketing Council,Level 1
+- MPC Level 1, optischer Speicher
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 98189cd6ab9ffde07b5f2682ef0723828b947f55
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: c3a36b14ab23c636a3cdbdae7eb5b6da749947c3c0353873a5e35bc5b81c6f4a
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "104471172"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118139868"
 ---
-# <a name="level-1-optical-storage"></a>Optischer Speicher auf Ebene 1
+# <a name="level-1-optical-storage"></a>Optische Storage
 
-Bei dem optischen minimal Speichergerät handelt es sich um ein CD-ROM-Laufwerk, das die folgenden Kriterien erfüllt:
+Das optische Speichergerät mit minimaler Leistung ist ein CD-ROM-Laufwerk, das die folgenden Kriterien erfüllt:
 
 -   Eine dauerhafte Datenübertragungsrate von 150 Kilobyte pro Sekunde
--   Eine CPU-Bandbreitenauslastung von 40 Prozent oder weniger, wenn eine dauerhafte Datenübertragungsrate von 150 Kilobyte pro Sekunde beibehalten wird.
+-   Eine CPU-Bandbreitenauslastung von 40 Prozent oder weniger bei einer dauerhaften Datenübertragungsrate von 150 Kilobyte pro Sekunde
 -   Eine durchschnittliche Suchzeit von 1 Sekunde oder weniger
 
- 
+ 
 
- 
+ 
 
 
 

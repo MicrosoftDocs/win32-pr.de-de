@@ -1,11 +1,11 @@
 ---
-title: MS-DNS-is-signed-Attribut
+title: ms-DNS-Is-Signed-Attribut
 description: Ein Attribut, mit dem definiert wird, ob die DNS-Zone signiert ist.
 ms.assetid: 488661fd-1a3b-4b63-9ec6-d402f4318c59
 ms.tgt_platform: multiple
 keywords:
-- AD-Schema für MS-DNS-is-signed-Attribut
-- AD-Schema des MSDNs-IsSigned-Attributs
+- AD-Schema des ms-DNS-Is-Signed-Attributs
+- AD-Schema des msDNS-IsSigned-Attributs
 topic_type:
 - apiref
 api_name:
@@ -14,14 +14,14 @@ api_type:
 - Schema
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 142fdda1a0c072159cdee1f21982099609472bfe
-ms.sourcegitcommit: b77ace27b0432e7cd3863191b11926be032fbe2f
+ms.openlocfilehash: daaabf907d75db04eb0c760e79cb48e37814141cdfa24bdc9513db5ee189ab7d
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "104392280"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118427084"
 ---
-# <a name="ms-dns-is-signed-attribute"></a>MS-DNS-is-signed-Attribut
+# <a name="ms-dns-is-signed-attribute"></a>ms-DNS-Is-Signed-Attribut
 
 Ein Attribut, mit dem definiert wird, ob die DNS-Zone signiert ist.
 
@@ -29,14 +29,14 @@ Ein Attribut, mit dem definiert wird, ob die DNS-Zone signiert ist.
 
 | Eingabe | Wert |
 |-------------------|--------------------------------------|
-| CN                | MS-DNS-ist-signiert                     |
-| LDAP-Display-Name | MSDNs-IsSigned                       |
+| CN                | ms-DNS-Is-Signed                     |
+| Ldap-Anzeigename | msDNS-IsSigned                       |
 | Size              | \-                                   |
-| Berechtigung aktualisieren  | \-                                   |
-| Aktualisierungshäufigkeit  | \-                                   |
+| Aktualisieren von Berechtigungen  | \-                                   |
+| Updatehäufigkeit  | \-                                   |
 | Attribute-Id      | 1.2.840.113556.1.4.2130              |
-| System-ID-GUID    | aa12854c-d8fc-4d5e-91ca-368b8d829bee |
-| Syntax            | [**Booleschen**](s-boolean.md)         |
+| System-Id-Guid    | aa12854c-d8fc-4d5e-91ca-368b8d829bee |
+| Syntax            | [**Boolean**](s-boolean.md)         |
 
 
 
@@ -53,10 +53,10 @@ Ein Attribut, mit dem definiert wird, ob die DNS-Zone signiert ist.
 | Link-ID                | \-                                       |
 | MAPI-Id                | \-                                       |
 | System-Only            | False                                    |
-| Ist-einwertig       | Richtig                                     |
+| Is-Single-Valued       | True                                     |
 | Ist indiziert             | False                                    |
 | Im globalen Katalog      | False                                    |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                             |
+| NT-Security-Descriptor | O:BAG:BAD:S:                             |
 | Range-Lower            | \-                                       |
 | Range-Upper            | \-                                       |
 | Search-Flags           | 0x00000008                               |

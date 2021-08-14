@@ -1,7 +1,7 @@
 ---
-description: Der \_ \_ Enumerationstyp CAPICOM-exportflag definiert, ob Export Fehler des privaten Schlüssels ignoriert werden.
+description: Der CAPICOM \_ EXPORT \_ FLAG-Enumerationstyp definiert, ob Exportfehler für private Schlüssel ignoriert werden.
 ms.assetid: 12e6862b-5c73-4e45-8829-8086048e94f3
-title: CAPICOM_EXPORT_FLAG-Enumeration (CAPICOM. h)
+title: CAPICOM_EXPORT_FLAG -Enumeration (Capicom.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,16 +13,16 @@ api_type:
 - HeaderDef
 api_location:
 - Capicom.h
-ms.openlocfilehash: fe99b1123ae35083e5c59df37234821efd2db208
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: d6be9953640eeb2eb1d6c7fad812f5efe2d2da2f6888a01b4450c638ab68bfca
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106369683"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117772465"
 ---
-# <a name="capicom_export_flag-enumeration"></a>CAPICOM \_ - \_ exportflag-Enumeration
+# <a name="capicom_export_flag-enumeration"></a>CAPICOM \_ EXPORT \_ FLAG-Enumeration
 
-Der Enumerationstyp **CAPICOM- \_ \_ exportflag** definiert, ob Export Fehler des privaten Schlüssels ignoriert werden.
+Der **CAPICOM \_ EXPORT \_ FLAG-Enumerationstyp** definiert, ob Exportfehler für private Schlüssel ignoriert werden.
 
 ## <a name="members"></a>Member
 
@@ -30,16 +30,16 @@ Der Enumerationstyp **CAPICOM- \_ \_ exportflag** definiert, ob Export Fehler de
 
 | Member                                                            | BESCHREIBUNG                                               | Wert |
 |-------------------------------------------------------------------|-----------------------------------------------------------|-------|
-| **Standardwert für CAPICOM- \_ Export \_**                                      | Alle Export Fehler des privaten Schlüssels werden nicht ignoriert.<br/> | 0     |
-| **CAPICOM \_ - \_ Export \_ \_ Fehler beim \_ nicht \_ exportierbaren privaten Schlüssel \_ ignorieren** | Alle Export Fehler des privaten Schlüssels werden ignoriert.<br/>     | 1     |
+| **CAPICOM \_ EXPORT \_ DEFAULT**                                      | Exportfehler bei privaten Schlüsseln werden nicht ignoriert.<br/> | 0     |
+| **CAPICOM \_ EXPORT \_ IGNORE \_ PRIVATE \_ KEY \_ NOT \_ EXPORTABLE \_ ERROR** | Alle Exportfehler beim privaten Schlüssel werden ignoriert.<br/>     | 1     |
 
 
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Der \_ \_ Enumerationstyp CAPICOM-exportflag wird von der folgenden Methode verwendet:
+Der CAPICOM \_ EXPORT \_ FLAG-Enumerationstyp wird von der folgenden Methode verwendet:
 
--   [**Zertifikate. speichern**](certificates-save.md)
+-   [**Certificates.Save**](certificates-save.md)
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -47,8 +47,8 @@ Der \_ \_ Enumerationstyp CAPICOM-exportflag wird von der folgenden Methode verw
 
 | Anforderung | Wert |
 |----------------------------|--------------------------------------------------------------------------------------|
-| Verteilbare Komponente<br/> | CAPICOM 2,0 oder höher unter Windows Server 2003 und Windows XP<br/>                |
-| Header<br/>          | <dl> <dt>CAPICOM. h</dt> </dl> |
+| Verteilbare Komponente<br/> | CAPICOM 2.0 oder höher auf Windows Server 2003 und Windows XP<br/>                |
+| Header<br/>          | <dl> <dt>Capicom.h</dt> </dl> |
 
 
 

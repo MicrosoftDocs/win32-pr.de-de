@@ -1,55 +1,55 @@
 ---
-title: Geräte Registrierungs Objekt
-description: Geräte Registrierungs Objekt
+title: Geräteregistrierungsobjekt
+description: Geräteregistrierungsobjekt
 ms.assetid: 6a23b314-deec-47aa-b12e-cb8f4ff71fb6
 keywords:
-- Windows Media-Format-SDK, Geräte Registrierungs Objekte
-- Advanced Systems Format (ASF), Geräte Registrierungs Objekte
-- ASF (Advanced Systems Format), Geräte Registrierungs Objekte
-- Objekte, Geräte Registrierungs Objekte
-- Geräte Registrierungs Objekte
+- Windows Medienformat-SDK, Geräteregistrierungsobjekte
+- Advanced Systems Format (ASF), Geräteregistrierungsobjekte
+- ASF (Advanced Systems Format), Geräteregistrierungsobjekte
+- Objekte,Geräteregistrierungsobjekte
+- Geräteregistrierungsobjekte
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 67ba6b72637cf7ba439d0bb38109645742cda4ac
-ms.sourcegitcommit: 48d1c892045445bcbd0f22bafa2fd3861ffaa6e7
+ms.openlocfilehash: 4594b17f6824e4e3a9e7690e5ea933e24670e9c8b5d95feb16e555f577f87f1c
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/19/2020
-ms.locfileid: "106337634"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118433886"
 ---
-# <a name="device-registration-object"></a>Geräte Registrierungs Objekt
+# <a name="device-registration-object"></a>Geräteregistrierungsobjekt
 
-Mit dem Geräte Registrierungs Objekt wird die Geräte Registrierungsdatenbank verwaltet. In dieser Datenbank werden Informationen zu Netzwerkgeräten, wie z. b. Set-Top-Video Playern, gespeichert, die mit dem Client Computer verbunden sind. Der primäre Zweck der Geräte Registrierungsdatenbank ist die Verwaltung von Geräten, von denen das Windows Media DRM 10 for Network Devices-Protokoll verwendet wird, um gesicherte Datenströme zu empfangen.
+Das Geräteregistrierungsobjekt verwaltet die Geräteregistrierungsdatenbank. Diese Datenbank speichert Informationen zu Netzwerkgeräten, z. B. Set-Top-Videoplayern, die mit dem Clientcomputer verbunden sind. Der Hauptzweck der Geräteregistrierungsdatenbank ist die Verwaltung von Geräten, die das Windows Media DRM 10 for Network Devices-Protokoll verwenden, um gesicherte Datenströme zu empfangen.
 
-Wenn Ihre Anwendung Windows Media DRM 10 für Netzwerkgeräte unterstützt, müssen Sie die Schnittstellen dieses Objekts verwenden, um Netzwerkgeräte zu registrieren und diese Geräte zu überprüfen. Sie können die Geräte Registrierungsdatenbank auch zum Speichern von Informationen zu Netzwerkgeräten verwenden, die nicht Windows Media DRM 10 für Netzwerkgeräte verwenden, obwohl nicht alle Informationen in der-Datenbank auf solche Geräte angewendet werden.
+Wenn Ihre Anwendung Windows Media DRM 10 für Netzwerkgeräte unterstützt, müssen Sie die Schnittstellen dieses Objekts verwenden, um Netzwerkgeräte zu registrieren und diese Geräte zu überprüfen. Sie können auch die Geräteregistrierungsdatenbank verwenden, um Informationen zu Netzwerkgeräten zu speichern, die Windows Media DRM 10 für Netzwerkgeräte nicht verwenden, obwohl nicht alle Informationen in der Datenbank für solche Geräte gelten.
 
-Das Geräte Registrierungs Objekt wird von der [**wmkreatedeviceregistration**](/previous-versions/windows/desktop/api/Wmsdkidl/nf-wmsdkidl-wmcreatedeviceregistration) -Funktion erstellt, mit der ein Zeiger auf eine **iwmdeviceregistration** -Schnittstelle festgelegt wird. Die anderen Methoden des Geräte Registrierungs Objekts können durch Aufrufen der **QueryInterface** -Methode abgerufen werden.
+Das Geräteregistrierungsobjekt wird von der [**WMCreateDeviceRegistration-Funktion**](/previous-versions/windows/desktop/api/Wmsdkidl/nf-wmsdkidl-wmcreatedeviceregistration) erstellt, die einen Zeiger auf eine **IWMDeviceRegistration-Schnittstelle** legt. Die anderen Methoden des Geräteregistrierungsobjekts können durch Aufrufen der **QueryInterface-Methode ermittelt** werden.
 
-Die folgenden Schnittstellen werden vom Geräte Registrierungs Objekt unterstützt.
+Die folgenden Schnittstellen werden vom Geräteregistrierungsobjekt unterstützt.
 
 
 
 | Schnittstelle                                              | BESCHREIBUNG                               |
 |--------------------------------------------------------|-------------------------------------------|
-| [**Iwmdeviceregistration**](/previous-versions/windows/desktop/api/wmsdkidl/nn-wmsdkidl-iwmdeviceregistration) | Verwaltet die Geräte Registrierungsdatenbank. |
-| [**Iwmdrmmessageparser**](/previous-versions/windows/desktop/api/wmsdkidl/nn-wmsdkidl-iwmdrmmessageparser)     | Analysiert Nachrichten, die von Geräten gesendet werden.          |
-| [**Iwmproximityerkennung**](/previous-versions/windows/desktop/api/wmsdkidl/nn-wmsdkidl-iwmproximitydetection) | Verwaltet die Gerätevalidierung.                |
+| [**IWMDeviceRegistration**](/previous-versions/windows/desktop/api/wmsdkidl/nn-wmsdkidl-iwmdeviceregistration) | Verwaltet die Geräteregistrierungsdatenbank. |
+| [**IWMDRMMessageParser**](/previous-versions/windows/desktop/api/wmsdkidl/nn-wmsdkidl-iwmdrmmessageparser)     | Analysiert von Geräten gesendete Nachrichten.          |
+| [**IWMProximityDetection**](/previous-versions/windows/desktop/api/wmsdkidl/nn-wmsdkidl-iwmproximitydetection) | Verwaltet die Geräteüberprüfung.                |
 
 
 
- 
+ 
 
-Die folgende Rückruf Schnittstelle muss von der Anwendung implementiert werden, damit die-Methoden der **iwmproximityerkennungs** -Schnittstelle verwendet werden können.
+Die folgende Rückrufschnittstelle muss von der Anwendung implementiert werden, um die Methoden der **IWMProximityDetection-Schnittstelle verwenden zu** können.
 
 
 
 | Schnittstelle                                      | BESCHREIBUNG                                                                |
 |------------------------------------------------|----------------------------------------------------------------------------|
-| [**Iwmstatus Callback**](/previous-versions/windows/desktop/api/wmsdkidl/nn-wmsdkidl-iwmstatuscallback) | Empfängt Statusmeldungen von Prozessen, die in einem separaten Thread ausgeführt werden. |
+| [**IWMStatusCallback**](/previous-versions/windows/desktop/api/wmsdkidl/nn-wmsdkidl-iwmstatuscallback) | Empfängt Statusmeldungen von Prozessen, die in einem separaten Thread ausgeführt werden. |
 
 
 
- 
+ 
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
@@ -58,9 +58,9 @@ Die folgende Rückruf Schnittstelle muss von der Anwendung implementiert werden,
 [**Objekte**](objects.md)
 </dt> </dl>
 
- 
+ 
 
- 
+ 
 
 
 

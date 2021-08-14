@@ -1,29 +1,29 @@
 ---
-description: In diesem Thema wird beschrieben, wie Geräte Verluste bei der Verwendung eines Video Aufzeichnungs Geräts erkannt werden.
+description: In diesem Thema wird beschrieben, wie Geräteverluste bei Verwendung eines Videoaufnahmegeräts erkannt werden.
 ms.assetid: 2bffe156-c507-437e-8f32-62aaebedd6f0
-title: Verarbeiten von Video Geräte Verlusten
+title: Behandeln von Videogeräteverlusten
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: d0d083ebeb1203b0bba49a63745f62a4dff6b231
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 6219518d3018aae5600e66387363bbd71e29e72b83174b370bf25377c8c6b669
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106350518"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117878952"
 ---
-# <a name="handling-video-device-loss"></a>Verarbeiten von Video Geräte Verlusten
+# <a name="handling-video-device-loss"></a>Behandeln von Videogeräteverlusten
 
-In diesem Thema wird beschrieben, wie Geräte Verluste bei der Verwendung eines Video Aufzeichnungs Geräts erkannt werden. Sie enthält die folgenden Abschnitte:
+In diesem Thema wird beschrieben, wie Geräteverluste bei Verwendung eines Videoaufnahmegeräts erkannt werden. Sie enthält die folgenden Abschnitte:
 
--   [Für Geräte Benachrichtigung registrieren](#register-for-device-notification)
--   [Den symbolischen Link des Geräts erhalten](#get-the-symbolic-link-of-the-device)
--   [Behandeln von WM \_ devicechange](/windows)
--   [Registrierung für Benachrichtigung aufheben](#unregister-for-notification)
+-   [Registrieren für Gerätebenachrichtigungen](#register-for-device-notification)
+-   [Abrufen der symbolischen Verknüpfung des Geräts](#get-the-symbolic-link-of-the-device)
+-   [Behandeln von WM \_ DEVICECHANGE](/windows)
+-   [Aufheben der Registrierung für Benachrichtigungen](#unregister-for-notification)
 -   [Zugehörige Themen](#related-topics)
 
-## <a name="register-for-device-notification"></a>Für Geräte Benachrichtigung registrieren
+## <a name="register-for-device-notification"></a>Registrieren für Gerätebenachrichtigungen
 
-Bevor Sie mit der Erfassung vom Gerät beginnen, müssen Sie die [**registerdevicenotifi-**](/windows/win32/api/winuser/nf-winuser-registerdevicenotificationa) Funktion aufrufen, um sich für Geräte Benachrichtigungen zu registrieren. Registrieren Sie sich für die **kscategory- \_ Erfassungs** Geräteklasse, wie im folgenden Code gezeigt.
+Bevor Sie mit der Erfassung vom Gerät beginnen, rufen Sie die [**RegisterDeviceNotification-Funktion**](/windows/win32/api/winuser/nf-winuser-registerdevicenotificationa) auf, um sich für Gerätebenachrichtigungen zu registrieren. Registrieren Sie sich für die **KSCATEGORY \_ CAPTURE-Geräteklasse,** wie im folgenden Code gezeigt.
 
 
 ```C++
@@ -57,9 +57,9 @@ BOOL RegisterForDeviceNotification(HWND hwnd)
 
 
 
-## <a name="get-the-symbolic-link-of-the-device"></a>Den symbolischen Link des Geräts erhalten
+## <a name="get-the-symbolic-link-of-the-device"></a>Abrufen der symbolischen Verknüpfung des Geräts
 
-Zählen Sie die Videogeräte auf dem System auf, wie unter Auflisten von [Video Erfassungs Geräten](enumerating-video-capture-devices.md)beschrieben. Wählen Sie ein Gerät aus der Liste aus, und Fragen Sie dann das Aktivierungs Objekt für das Attribut [ \_ \_ \_ \_ Quelltyp " \_ VidCap \_ \_ " des MF-devsource-Attributs](mf-devsource-attribute-source-type-vidcap-symbolic-link.md) ab, wie im folgenden Code gezeigt.
+Aufzählen der Videogeräte auf dem System, wie unter [Aufzählen von Videoaufnahmegeräten](enumerating-video-capture-devices.md)beschrieben. Wählen Sie ein Gerät aus der Liste aus, und fragen Sie dann das Aktivierungsobjekt nach dem [ATTRIBUT MF \_ DEVSOURCE ATTRIBUTE SOURCE TYPE \_ \_ \_ \_ VIDCAP \_ SYMBOLIC \_ LINK](mf-devsource-attribute-source-type-vidcap-symbolic-link.md) ab, wie im folgenden Code gezeigt.
 
 
 ```C++
@@ -78,9 +78,9 @@ HRESULT GetSymbolicLink(IMFActivate *pActivate)
 
 
 
-## <a name="handle-wm_devicechange"></a>Behandeln von WM \_ devicechange
+## <a name="handle-wm_devicechange"></a>Behandeln von WM \_ DEVICECHANGE
 
-Lauschen Sie in der Nachrichten Schleife auf " [**WM \_ devicechange**](../devio/wm-devicechange.md) "-Nachrichten. Der *LPARAM* -Nachrichten Parameter ist ein Zeiger auf eine Entwicklungs- [**\_ Broadcast- \_ HDR**](/windows/win32/api/dbt/ns-dbt-dev_broadcast_hdr) -Struktur.
+Lauschen Sie in der Nachrichtenschleife auf [**WM \_ DEVICECHANGE-Nachrichten.**](../devio/wm-devicechange.md) Der *lParam-Nachrichtenparameter* ist ein Zeiger auf eine [**DEV BROADCAST \_ \_ HDR-Struktur.**](/windows/win32/api/dbt/ns-dbt-dev_broadcast_hdr)
 
 
 ```C++
@@ -104,10 +104,10 @@ Lauschen Sie in der Nachrichten Schleife auf " [**WM \_ devicechange**](../devio
 
 
 
-Vergleichen Sie als nächstes die Geräte Benachrichtigungs Meldung mit der symbolischen Verknüpfung Ihres Geräts wie folgt:
+Vergleichen Sie als Nächstes die Benachrichtigungsmeldung des Geräts wie folgt mit der symbolischen Verknüpfung Ihres Geräts:
 
-1.  Überprüfen Sie das dbch-Element " **\_ tvicetype** " der Entwicklungs [**Broadcast- \_ \_ HDR**](/windows/win32/api/dbt/ns-dbt-dev_broadcast_hdr) -Struktur. Wenn der Wert **DBT \_ devd \_ deviceinterface** ist, wandeln Sie den Struktur Zeiger in eine [**dev \_ Broadcast \_ deviceinterface**](/windows/win32/api/dbt/ns-dbt-dev_broadcast_deviceinterface_a) -Struktur um.
-2.  Vergleicht den **DBCC \_ Name** -Member dieser Struktur mit der symbolischen Verknüpfung des Geräts.
+1.  Überprüfen Sie den **dbch \_ devicetype-Member** der [**DEV BROADCAST \_ \_ HDR-Struktur.**](/windows/win32/api/dbt/ns-dbt-dev_broadcast_hdr) Wenn der Wert **DBT \_ DEVTYP \_ DEVICEINTERFACE** ist, casten Sie den Strukturzeiger in eine [**DEV BROADCAST \_ \_ DEVICEINTERFACE-Struktur.**](/windows/win32/api/dbt/ns-dbt-dev_broadcast_deviceinterface_a)
+2.  Vergleichen Sie den **dbcc \_ name-Member** dieser -Struktur mit der symbolischen Verknüpfung des Geräts.
 
 
 ```C++
@@ -153,9 +153,9 @@ HRESULT CheckDeviceLost(DEV_BROADCAST_HDR *pHdr, BOOL *pbDeviceLost)
 
 
 
-## <a name="unregister-for-notification"></a>Registrierung für Benachrichtigung aufheben
+## <a name="unregister-for-notification"></a>Aufheben der Registrierung für Benachrichtigungen
 
-Bevor die Anwendung beendet wird, wird [**unregisterdevicenotifiaufgerufen**](/windows/win32/api/winuser/nf-winuser-unregisterdevicenotification) , um die Registrierung für Geräte Benachrichtigungen aufzuheben/
+Rufen Sie vor dem Beenden der Anwendung [**UnregisterDeviceNotification**](/windows/win32/api/winuser/nf-winuser-unregisterdevicenotification) auf, um die Registrierung für Gerätebenachrichtigungen zu aufheben.
 
 
 ```C++
@@ -176,10 +176,10 @@ void OnClose(HWND /*hwnd*/)
 
 <dl> <dt>
 
-[Auflisten von Video Erfassungs Geräten](enumerating-video-capture-devices.md)
+[Aufzählen von Videoaufnahmegeräten](enumerating-video-capture-devices.md)
 </dt> <dt>
 
-[Video Erfassung](video-capture.md)
+[Videoaufnahme](video-capture.md)
 </dt> </dl>
 
  

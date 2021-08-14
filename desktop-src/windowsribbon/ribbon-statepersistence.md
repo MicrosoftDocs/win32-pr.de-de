@@ -1,72 +1,72 @@
 ---
-title: Beibehalten des Multifunktionsleisten Status
-description: Das Windows Ribon-Framework (Menüband) bietet die Möglichkeit, den Zustand einer Vielzahl von Benutzereinstellungen und-Einstellungen über Anwendungs Sitzungen hinweg beizubehalten.
+title: Beibehalten des Menübandzustands
+description: Das Windows-Frameworks (Menüband) bietet die Möglichkeit, den Zustand einer Vielzahl von Benutzereinstellungen und -einstellungen anwendungssitzungenübergreifend beizubehalten.
 ms.assetid: f59e36be-8e3d-454a-b93c-9fc5fc5ecb47
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: f4a3b704151b657bdfe95845c8473a0fd197e87b
-ms.sourcegitcommit: 592c9bbd22ba69802dc353bcb5eb30699f9e9403
+ms.openlocfilehash: c1e506d1cc8138f569dc21b491cc11ed58411131c0dd80532c19043c5974995e
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "104315764"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118707941"
 ---
-# <a name="persisting-ribbon-state"></a>Beibehalten des Multifunktionsleisten Status
+# <a name="persisting-ribbon-state"></a>Beibehalten des Menübandzustands
 
-Das Windows Ribon-Framework (Menüband) bietet die Möglichkeit, den Zustand einer Vielzahl von Benutzereinstellungen und-Einstellungen über Anwendungs Sitzungen hinweg beizubehalten.
+Das Windows-Frameworks (Menüband) bietet die Möglichkeit, den Zustand einer Vielzahl von Benutzereinstellungen und -einstellungen anwendungssitzungenübergreifend beizubehalten.
 
 -   [Introduction (Einführung)](#introduction)
--   [Vorhersagbare Darstellung](#a-predictable-experience)
--   [Menüband-Einstellungen speichern](#save-ribbon-settings)
--   [Menüband-Einstellungen laden](#load-ribbon-settings)
+-   [Eine vorhersagbare Benutzeroberfläche](#a-predictable-experience)
+-   [Menüband Einstellungen speichern](#save-ribbon-settings)
+-   [Einstellungen des Menübands laden](#load-ribbon-settings)
 -   [Zugehörige Themen](#related-topics)
 
 ## <a name="introduction"></a>Einführung
 
-Verschiedene Aspekte eines Menübands, einschließlich der Einstellungen für Konfiguration und Interaktion, können von einem Benutzer zur Laufzeit angepasst werden, um die Benutzerfreundlichkeit und Produktivität zu verbessern. Das Multifunktionsleisten-Framework stellt die Funktionalität bereit, um diese Einstellungen über mehrere Anwendungs Sitzungen hinweg durch zwei Methoden zu erhalten, die in der Implementierung der [**iuiribbon**](/windows/desktop/api/uiribbon/nn-uiribbon-iuiribbon) -Schnittstelle definiert sind: [**iuiribbon:: loadsettingsfromstream**](/windows/desktop/api/uiribbon/nf-uiribbon-iuiribbon-loadsettingsfromstream) und [**iuiribbon:: savesettingstostream**](/windows/desktop/api/uiribbon/nf-uiribbon-iuiribbon-savesettingstostream).
+Verschiedene Aspekte eines Menübands, einschließlich Konfigurations- und Interaktionseinstellungen, können von einem Benutzer zur Laufzeit angepasst werden, um die Benutzerfreundlichkeit und Produktivität zu verbessern. Das Menübandframework bietet die Funktionalität, diese Einstellungen über Anwendungssitzungen hinweg durch zwei Methoden beizubehalten, die in der Implementierung der [**IUIRibbon-Schnittstelle**](/windows/desktop/api/uiribbon/nn-uiribbon-iuiribbon) definiert sind: [**IUIRibbon::LoadSettingsFromStream**](/windows/desktop/api/uiribbon/nf-uiribbon-iuiribbon-loadsettingsfromstream) und [**IUIRibbon::SaveSettingsToStream**](/windows/desktop/api/uiribbon/nf-uiribbon-iuiribbon-savesettingstostream).
 
-## <a name="a-predictable-experience"></a>Vorhersagbare Darstellung
+## <a name="a-predictable-experience"></a>Eine vorhersagbare Benutzeroberfläche
 
-Mit den [Richtlinien](https://msdn.microsoft.com/library/cc872782.aspx) für die Multifunktionsleisten-Benutzer Leistung wird empfohlen, dass Multifunktionsleisten Anwendungen den Zustand des Menübands (abgesehen von der letzten ausgewählten Registerkarte) beibehalten, wenn die Anwendung geschlossen wird. Auf diese Weise können, wenn dieselbe Anwendung gestartet wird, die Einstellungen und Anpassungen aus der vorherigen Sitzung wieder hergestellt werden, und der Benutzer kann davon ausgehen, dass die Interaktion mit der Anwendung auf die gleiche Weise wie Sie verlassen wird.
+In den Richtlinien für die [Menübandbenutzerfreundlichkeit](https://msdn.microsoft.com/library/cc872782.aspx) wird empfohlen, dass Menübandanwendungen den Status des Menübands (abgesehen von der letzten ausgewählten Registerkarte) beibehalten sollten, wenn die Anwendung geschlossen wird, um eine möglichst vorhersagbare Benutzeroberfläche bereitzustellen. Auf diese Weise können beim Starten derselben Anwendung die Einstellungen und Anpassungen aus der vorherigen Sitzung wiederhergestellt werden, und der Benutzer kann davon ausgehen, dass die Interaktion mit der Anwendung auf die gleiche Weise fortgesetzt wird, wie sie sie verlassen hat.
 
-Menü Band Einstellungen, die zur Laufzeit geändert und über Anwendungs Sitzungen hinweg beibehalten werden, werden im Kontextmenü des Befehls aufgeführt. Dazu gehören:
+Menübandeinstellungen, die zur Laufzeit geändert und anwendungsübergreifend beibehalten werden können, sind im Kontextmenü Befehl aufgeführt. Dazu gehören:
 
--   Befehle, die vom Benutzer der Symbolleisten-Befehlsliste für den [schnell Zugriff](windowsribbon-controls-quickaccesstoolbar.md) hinzugefügt werden. Wird von einem [**iuicollection**](/windows/desktop/api/uiribbon/nn-uiribbon-iuicollection) -Objekt über den [UI \_ pkey \_ ItemsSource](windowsribbon-reference-properties-uipkey-itemssource.md) -Eigenschafts Schlüssel angegeben.
+-   Befehle, die der Befehlsliste der Symbolleiste für den [Schnellzugriff](windowsribbon-controls-quickaccesstoolbar.md) durch den Benutzer hinzugefügt wurden. Wird durch ein [**IUICollection-Objekt**](/windows/desktop/api/uiribbon/nn-uiribbon-iuicollection) über den [ \_ PKEY \_ ItemsSource-Eigenschaftenschlüssel](windowsribbon-reference-properties-uipkey-itemssource.md) der Benutzeroberfläche angegeben.
 
-    Der folgende Screenshot zeigt den Kontextmenü Befehl **Hinzufügen zum schnell Zugriff-Symbolleiste** .
+    Der folgende Screenshot zeigt das Kontextmenü Befehl zum Hinzufügen zur Symbolleiste für **den Schnellzugriff.**
 
-    ![Screenshot des Befehls Kontextmenüs im Microsoft Paint-Menüband.](images/controls/qat-contextmenu-add.png)
+    ![Screenshot des Befehlskontextmenüs im Microsoft Paint-Menüband.](images/controls/qat-contextmenu-add.png)
 
--   Der bevorzugte Symbolleisten-Andock Zustand des [schnell Zugriffs](windowsribbon-controls-quickaccesstoolbar.md) . Wird durch den [**UI- \_ controldock**](/windows/desktop/api/uiribbon/ne-uiribbon-ui_controldock) -Wert der [UI \_ pkey \_ quickaccesstoolbardock](windowsribbon-reference-properties-uipkey-quickaccesstoolbardock.md) -Eigenschafts Taste angegeben.
+-   Der bevorzugte Andockstatus [der Symbolleiste für den Schnellzugriff.](windowsribbon-controls-quickaccesstoolbar.md) Angegeben durch den [**UI \_ CONTROLDOCK-Wert**](/windows/desktop/api/uiribbon/ne-uiribbon-ui_controldock) des [ \_ UI-PKEY \_ QuickAccessToolbarDock-Eigenschaftsschlüssels.](windowsribbon-reference-properties-uipkey-quickaccesstoolbardock.md)
 
-    Dieser Screenshot zeigt die Symbolleiste für den [schnell Zugriff](windowsribbon-controls-quickaccesstoolbar.md) in der Standardposition der Titelleiste der Anwendung und die **Symbolleiste für den schnell Zugriff anzeigen unter dem** Kontextmenü Befehl des Menübands.
+    Dieser Screenshot zeigt die [Symbolleiste für](windowsribbon-controls-quickaccesstoolbar.md) den Schnellzugriff in der Standardposition der Anwendungstitelleiste und die **Symbolleiste Schnellzugriff anzeigen unterhalb des Menübandkontextmenüs** Befehl.
 
-    ![Screenshot des Befehls Kontextmenüs im Microsoft Paint-Menüband.](images/controls/qat-contextmenu-add.png)
+    ![Screenshot des Befehlskontextmenüs im Microsoft Paint-Menüband.](images/controls/qat-contextmenu-add.png)
 
-    Dieser Screenshot zeigt die [Symbolleiste für den schnell Zugriff](windowsribbon-controls-quickaccesstoolbar.md) unterhalb des Menübands.
+    Dieser Screenshot zeigt die [Symbolleiste für](windowsribbon-controls-quickaccesstoolbar.md) den Schnellzugriff unterhalb des Menübands.
 
-    ![Screenshot der Symbolleiste für den schnell Zugriff, die unter dem Menüband angedockt ist.](images/controls/qat-dockbottom.png)
+    ![Screenshot der Symbolleiste für den Schnellzugriff, die unter dem Menüband angedockt ist.](images/controls/qat-dockbottom.png)
 
--   Der von der Multifunktionsleiste minimierte Zustand, wie durch den booleschen Wert des [ \_ \_ minimierten](windowsribbon-reference-properties-uipkey-minimized.md) Eigenschafts Schlüssels der UI pkey angegeben.
+-   Der minimierte Status des Menübands, wie durch den booleschen Wert des [ \_ \_ PKEY-Eigenschaftenschlüssels](windowsribbon-reference-properties-uipkey-minimized.md) der Benutzeroberfläche minimiert angegeben.
 
     > [!Note]  
-    > Der minimierte Zustand des Menübands entspricht nicht dem Zustand "Multifunktionsleisten reduziert". Im reduzierten Zustand ist das Menüband vollständig ausgeblendet und kann nicht mit interagiert werden. Das Framework ruft diesen Zustand automatisch auf, wenn das Anwendungsfenster auf die Größe (horizontal oder vertikal) reduziert wird, bis zu dem Punkt, an dem die Multifunktionsleiste den Anwendungs Arbeitsbereich verdeckt. Das-Framework stellt das Menüband wieder her, wenn die Größe des Anwendungsfensters erweitert wird.
+    > Der minimierte Status des Menübands entspricht nicht dem reduzierten Zustand des Menübands. Wenn sich das Menüband im reduzierten Zustand befindet, wird es vollständig ausgeblendet und kann nicht interagiert werden. Das Framework ruft diesen Zustand automatisch auf, wenn das Anwendungsfenster horizontal oder vertikal verkleinert wird, bis das Menüband den Anwendungsarbeitsbereich verdeckt. Das Framework stellt das Menüband wieder her, wenn die Größe des Anwendungsfensters erhöht wird.
 
-     
+     
 
-    Dieser Screenshot zeigt den Menübefehl "Menü **Band Kontext minimieren** ".
+    Dieser Screenshot zeigt das Kontextmenü **Menüband minimieren** Befehl.
 
-    ![Screenshot des Befehls Kontextmenüs im Microsoft Paint-Menüband.](images/controls/qat-contextmenu-add.png)
+    ![Screenshot des Befehlskontextmenüs im Microsoft Paint-Menüband.](images/controls/qat-contextmenu-add.png)
 
-    Dieser Screenshot zeigt eine minimierte Multifunktionsleiste.
+    Dieser Screenshot zeigt ein minimiertes Menüband.
 
     ![Screenshot des minimierten Microsoft Paint-Menübands.](images/properties/ui-pkey-minimized.png)
 
-## <a name="save-ribbon-settings"></a>Menüband-Einstellungen speichern
+## <a name="save-ribbon-settings"></a>Menüband Einstellungen speichern
 
-Die [**iuiribbon:: savesettingstostream**](/windows/desktop/api/uiribbon/nf-uiribbon-iuiribbon-savesettingstostream) -Methode schreibt eine binäre Darstellung des permanenten Menüband-Zustands (im vorherigen Abschnitt beschrieben) in ein [IStream](/windows/win32/api/objidl/nn-objidl-istream) -Objekt. Die Anwendung speichert dann den Inhalt des IStream-Objekts in einer Datei oder in der Windows-Registrierung.
+Die [**IUIRibbon::SaveSettingsToStream-Methode**](/windows/desktop/api/uiribbon/nf-uiribbon-iuiribbon-savesettingstostream) schreibt eine binäre Darstellung des persistenten Menübandzustands (im vorherigen Abschnitt beschrieben) in ein [IStream-Objekt.](/windows/win32/api/objidl/nn-objidl-istream) Die Anwendung speichert dann den Inhalt des IStream-Objekts in einer Datei oder der Windows Registrierung.
 
-Im folgenden Beispiel wird der grundlegende Code veranschaulicht, der zum Schreiben des multifunktionsleistenzustands in ein [IStream](/windows/win32/api/objidl/nn-objidl-istream) -Objekt mithilfe der [**iuiribbon:: savesettingstostream**](/windows/desktop/api/uiribbon/nf-uiribbon-iuiribbon-savesettingstostream) -Methode erforderlich ist.
+Im folgenden Beispiel wird der grundlegende Code veranschaulicht, der erforderlich ist, um den Menübandzustand mithilfe der [**IUIRibbon::SaveSettingsToStream-Methode**](/windows/desktop/api/uiribbon/nf-uiribbon-iuiribbon-savesettingstostream) in ein [IStream-Objekt](/windows/win32/api/objidl/nn-objidl-istream) zu schreiben.
 
 
 ```C++
@@ -98,11 +98,11 @@ HRESULT CApplication::SaveRibbonStatusToStream(
 
 
 
-## <a name="load-ribbon-settings"></a>Menüband-Einstellungen laden
+## <a name="load-ribbon-settings"></a>Einstellungen des Menübands laden
 
-Die [**iuiribbon:: loadsettingsfromstream**](/windows/desktop/api/uiribbon/nf-uiribbon-iuiribbon-loadsettingsfromstream) -Methode wird verwendet, um die permanenten Informationen des Ribbon-Zustands abzurufen, die von der [**iuiribbon:: savesettingstostream**](/windows/desktop/api/uiribbon/nf-uiribbon-iuiribbon-savesettingstostream) -Methode als [IStream](/windows/win32/api/objidl/nn-objidl-istream) -Objekt gespeichert werden. Die Informationen im IStream-Objekt werden auf die Multifunktionsleisten-Benutzeroberfläche angewendet, wenn die Anwendung initialisiert wird.
+Die [**IUIRibbon::LoadSettingsFromStream-Methode**](/windows/desktop/api/uiribbon/nf-uiribbon-iuiribbon-loadsettingsfromstream) wird verwendet, um die permanenten Menübandzustandsinformationen abzurufen, die von der [**IUIRibbon::SaveSettingsToStream-Methode**](/windows/desktop/api/uiribbon/nf-uiribbon-iuiribbon-savesettingstostream) als [IStream-Objekt](/windows/win32/api/objidl/nn-objidl-istream) gespeichert werden. Die Informationen im IStream-Objekt werden auf die Menüband-Benutzeroberfläche angewendet, wenn die Anwendung initialisiert wird.
 
-Im folgenden Beispiel wird der grundlegende Code veranschaulicht, der zum Laden des Menüband-Zustands aus einem [IStream](/windows/win32/api/objidl/nn-objidl-istream) -Objekt mit der [**iuiribbon:: loadsettingsfromstream**](/windows/desktop/api/uiribbon/nf-uiribbon-iuiribbon-loadsettingsfromstream) -Methode erforderlich ist.
+Im folgenden Beispiel wird der grundlegende Code veranschaulicht, der zum Laden des Menübandzustands aus einem [IStream-Objekt](/windows/win32/api/objidl/nn-objidl-istream) mit der [**IUIRibbon::LoadSettingsFromStream-Methode**](/windows/desktop/api/uiribbon/nf-uiribbon-iuiribbon-loadsettingsfromstream) erforderlich ist.
 
 
 ```C++
@@ -127,7 +127,7 @@ HRESULT CApplication::LoadRibbonStatusFromStream(
 
 
 
-Um eine optimale Leistung zu erzielen, sollte die [**iuiribbon:: loadsettingsfromstream**](/windows/desktop/api/uiribbon/nf-uiribbon-iuiribbon-loadsettingsfromstream) -Methode während der Framework-Initialisierungsphase von der [**iuiapplication:: OnViewChanged**](/windows/desktop/api/uiribbon/nf-uiribbon-iuiapplication-onviewchanged) -Rückruffunktion aufgerufen werden, wie im folgenden Beispiel gezeigt.
+Um eine optimale Leistung zu erzielen, sollte die [**IUIRibbon::LoadSettingsFromStream-Methode**](/windows/desktop/api/uiribbon/nf-uiribbon-iuiribbon-loadsettingsfromstream) während der Frameworkinitialisierungsphase von der [**IUIApplication::OnViewChanged-Rückruffunktion**](/windows/desktop/api/uiribbon/nf-uiribbon-iuiapplication-onviewchanged) aufgerufen werden, wie im folgenden Beispiel gezeigt.
 
 
 ```C++
@@ -163,9 +163,9 @@ HRESULT CMyRibbonApplication::_LoadRibbonSettings(IUIRibbon* pRibbon)
 
 
 
-Mehrere Instanzen der gleichen Multifunktionsleisten-Framework-Anwendung können jeden Menüband-Zustand unabhängig als separate [IStream](/windows/win32/api/objidl/nn-objidl-istream) -Objekte oder als Gruppe durch ein einzelnes IStream-Objekt verwalten.
+Mehrere Instanzen der gleichen Menübandframeworkanwendung können jeden Menübandzustand unabhängig voneinander als separate [IStream-Objekte](/windows/win32/api/objidl/nn-objidl-istream) oder als Gruppe über ein einzelnes IStream-Objekt verwalten.
 
-Beim Synchronisieren des Menüband-Zustands über eine Gruppe von Anwendungs Instanzen hinweg muss jedes Fenster der obersten Ebene auf eine [WM- \_ Aktivierungs](../inputdev/wm-activate.md) Benachrichtigung lauschen. Das deaktivierte Fenster der obersten Ebene speichert den Multifunktionsleisten Zustand mithilfe der [**iuiribbon:: savesettingstostream**](/windows/desktop/api/uiribbon/nf-uiribbon-iuiribbon-savesettingstostream) -Methode, und das Fenster der obersten Ebene, das aktiviert wird, lädt seinen Multifunktionsleisten Zustand mithilfe der [**iuiribbon:: loadsettingsfromstream**](/windows/desktop/api/uiribbon/nf-uiribbon-iuiribbon-loadsettingsfromstream) -Methode.
+Beim Synchronisieren des Menübandzustands für eine Gruppe von Anwendungsinstanzen muss jedes Fenster der obersten Ebene auf eine [WM \_ ACTIVATE-Benachrichtigung](../inputdev/wm-activate.md) lauschen. Das Fenster der obersten Ebene, das deaktiviert wird, speichert seinen Menübandzustand mithilfe der [**IUIRibbon::SaveSettingsToStream-Methode,**](/windows/desktop/api/uiribbon/nf-uiribbon-iuiribbon-savesettingstostream) und das fenster der obersten Ebene, das aktiviert wird, lädt seinen Menübandzustand mithilfe der [**IUIRibbon::LoadSettingsFromStream-Methode.**](/windows/desktop/api/uiribbon/nf-uiribbon-iuiribbon-loadsettingsfromstream)
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
@@ -174,6 +174,6 @@ Beim Synchronisieren des Menüband-Zustands über eine Gruppe von Anwendungs Ins
 [Symbolleiste für den Schnellzugriff](windowsribbon-controls-quickaccesstoolbar.md)
 </dt> </dl>
 
- 
+ 
 
- 
+ 

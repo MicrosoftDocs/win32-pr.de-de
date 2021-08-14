@@ -1,27 +1,27 @@
 ---
-title: Datei Datenströme (Windows Media-Format 11 SDK)
-description: Dateistreams
+title: File Streams (Windows Media Format 11 SDK)
+description: Datei Streams
 ms.assetid: 6a4ad6ef-dc53-4d31-8de5-ce35c343244b
 keywords:
-- Windows Media-Format-SDK, Dateistreams
+- Windows Medienformat-SDK, Dateistreams
 - Advanced Systems Format (ASF), Dateistreams
 - ASF (Advanced Systems Format), Dateistreams
-- Windows Media-Format-SDK, Streams
+- Windows Medienformat-SDK, Streams
 - Advanced Systems Format (ASF), Streams
 - ASF (Advanced Systems Format), Streams
 - Dateistreams
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: a2a850c938d9582bd128980ef59329a5d5aa6a08
-ms.sourcegitcommit: 40a1246849dba8ececf54c716b2794b99c96ad50
+ms.openlocfilehash: e7bc05663ab9f2d81ac94bd1483ac5bc22c903333a8e477cc94e88141ff671ef
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "103719247"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118703908"
 ---
-# <a name="file-streams"></a>Dateistreams
+# <a name="file-streams"></a>Datei Streams
 
-Ein Datei Datenstrom enthält mindestens eine Datendatei. Wenn Sie Dateiinformationen als Datenstrom übertragen, sollten Sie den Dateinamen an jede Stichprobe im Stream anfügen. Weitere Informationen zum Anfügen von verwandten Informationen an Beispiele finden Sie unter [Dateneinheiten Erweiterungen](data-unit-extensions.md).
+Ein Dateistream enthält mindestens eine Datendatei. Wenn Sie Dateiinformationen als Stream übertragen, sollten Sie den Dateinamen an jedes Beispiel im Stream anfügen. Informationen zum Anfügen verwandter Informationen an Beispiele finden Sie unter [Dateneinheitenerweiterungen.](data-unit-extensions.md)
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
@@ -30,12 +30,12 @@ Ein Datei Datenstrom enthält mindestens eine Datendatei. Wenn Sie Dateiinformat
 [**Beliebige Streams**](arbitrary-streams.md)
 </dt> <dt>
 
-[**Konfigurieren von Datei Übertragungsdaten strömen**](configuring-file-transfer-streams.md)
+[**Konfigurieren von Streams**](configuring-file-transfer-streams.md)
 </dt> </dl>
 
- 
+ 
 
- 
+ 
 
 
 

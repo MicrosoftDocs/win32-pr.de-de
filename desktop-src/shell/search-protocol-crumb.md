@@ -1,6 +1,6 @@
 ---
-description: Hier erfahren Sie, wie Sie das CRUMB-Argument in der Windows Shell-Benutzeroberfläche verwenden, um den Bereich einer Suche zu steuern.
-title: CRUMB-Argument (Die Windows-Shell)
+description: Hier erfahren Sie, wie Sie das ARGUMENTS in der Windows Shell-Benutzeroberfläche verwenden, um den Bereich einer Suche zu steuern.
+title: ARGUMENTS-Argument (die Windows Shell)
 ms.topic: article
 ms.date: 05/31/2018
 ms.assetid: 8f87a2b7-7f5a-4629-b881-44bf418b2df0
@@ -9,29 +9,29 @@ api_type: ''
 api_location: ''
 topic_type:
 - kbArticle
-ms.openlocfilehash: 543bc90647bbe1daed1a3a6d1f7bc54a4713a8ed
-ms.sourcegitcommit: 5d4e99f4c8f42f5f543e52cb9beb9fb13ec56c5f
+ms.openlocfilehash: b93764f8014a5d9446811ef622f7c5afc20acbc6193d938c98642afaae5392fa
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2021
-ms.locfileid: "112403603"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118452876"
 ---
-# <a name="crumb-argument-the-windows-shell"></a>CRUMB-Argument (Die Windows-Shell)
+# <a name="crumb-argument-the-windows-shell"></a>ARGUMENTS-Argument (die Windows Shell)
 
-Das `crumb` -Argument unterstützt vollständige AQS-Anweisungen (Advanced Query Syntax) und ist besonders nützlich, um den Bereich einer Suche zu steuern. Zusätzlich zu AQS-Anweisungen kann das -Argument einen speziellen Parameter unter Windows Vista und parameter unter Windows XP verwenden, wie weiter unten `crumb` `location` in diesem Thema `kind` `store` beschrieben.
+Das `crumb` -Argument unterstützt vollständige AQS-Anweisungen (Advanced Query Syntax) und ist besonders nützlich, um den Bereich einer Suche zu steuern. Zusätzlich zu AQS-Anweisungen kann das `crumb` Argument einen speziellen Parameter für Windows Vista und parameter für Windows XP `location` `kind` `store` verwenden, wie weiter unten in diesem Thema beschrieben.
 
 Dieses Thema enthält folgende Abschnitte:
 
--   [Crumb-Syntax](#crumb-syntax)
+-   [Syntax der Verrenkung](#crumb-syntax)
     -   [Allgemeine Beispiele](#general-examples)
--   [Verwenden von Crumb mit Vista (Standort)](#using-crumb-with-vista-location)
+-   [Verwenden von "vererbte" mit Vista (Standort)](#using-crumb-with-vista-location)
     -   [Vista-Beispiele](#vista-examples)
     -   [Konstanten für allgemeine Ordner](#constants-for-common-folders)
     -   [Argumentinformationen](#argument-information)
 
-## <a name="crumb-syntax"></a>Crumb-Syntax
+## <a name="crumb-syntax"></a>Syntax der Verrenkung
 
-Die Crumb-Syntax lautet wie folgt:
+Die Syntax für die Unbrütlichung lautet wie folgt:
 
 
 ```
@@ -40,7 +40,7 @@ crumb=<column>:<value>[,<label>][,<column>:<value>[,<label>]]&
 
 
 
-Der <column> -Teil ist eine beliebige Eigenschaft im Eigenschaftensystem, und <value> portion ist ein gültiger Wert für diese Eigenschaft. Der <label> -Teil ist ein optionaler Alias für die Eigenschaft, die als Benutzeroberflächenhinweis angezeigt wird.
+Der <column> Teil ist eine beliebige Eigenschaft im Eigenschaftensystem, und der <value> -Teil ist ein gültiger Wert für diese Eigenschaft. Der <label> -Teil ist ein optionaler Alias für die Eigenschaft, die als Benutzeroberflächenhinweis angezeigt wird.
 
 ### <a name="general-examples"></a>Allgemeine Beispiele
 
@@ -53,40 +53,40 @@ crumb=location:c%3a%5cMyVacationPix,Vacation&
 
 
 
-## <a name="using-crumb-with-vista-location"></a>Verwenden von Crumb mit Vista (Standort)
+## <a name="using-crumb-with-vista-location"></a>Verwenden von "vererbte" mit Vista (Standort)
 
-Im crumb-Parameter unterstützt Windows Vista die vollständige AQS-Version sowie die -Eigenschaft, die nur unter Windows Vista über eine spezielle Implementierung `location` verfügt. Sie können entweder eine AQS-Zeichenfolge oder die -Eigenschaft innerhalb eines `location` einzelnen crumb-Parameters verwenden, aber nicht beide. Wenn der crumb-Parameter AQS enthält, wird alles andere in diesem crumb-Parameter ignoriert.
+Im Parameters "vista" unterstützt Windows Vista vollständige AQS-Funktionen und auch die `location` -Eigenschaft, die nur auf Windows Vista über eine spezielle Implementierung verfügt. Sie können entweder eine AQS-Zeichenfolge oder die `location` -Eigenschaft innerhalb eines einzigen Vererbeparameters verwenden, aber nicht beides. Wenn der Parameters zum Überschließen AQS enthält, wird alles andere in diesem Parameter ignoriert.
 
-Mit `location` der -Eigenschaft können Sie einen zu durchsuchenden Pfad angeben. Windows Vista kann den Indexer umgehen und das Verzeichnis direkt durchlaufen, wenn sich der Speicherort außerhalb des Indexer-Durchforstungsbereichs befindet. Folglich sind diese Suchvorgänge möglicherweise langsamer als Suchvorgänge, die den Indexer verwenden.
+Mit `location` der -Eigenschaft können Sie einen Pfad für die Suche angeben. Windows Vista kann den Indexer umgehen und das Verzeichnis direkt durchlaufen, wenn sich der Speicherort außerhalb des Durchforstungsbereichs des Indexers befindet. Folglich sind diese Suchvorgänge möglicherweise langsamer als Suchvorgänge, die den Indexer verwenden.
 
-Wenn Sie eine Eigenschaft `location` angeben, werden zwei zusätzliche Parameter unterstützt und optional:
+Wenn Sie eine `location` Eigenschaft angeben, werden zwei zusätzliche Parameter unterstützt und optional:
 
 
 
 | Parameter | Werte                  | Beschreibung                                                                                                                                                                       |
 |-----------|-------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Aufnahme | include, exclude        | Gibt an, ob die Abfrage Elemente in diesen Pfad ein- oder ausschließen soll. "Include" ist die Standardeinstellung. Windows Vista unterstützt keine Ausschlüsse ohne Einschlüsse. (Siehe Beispiel) |
-| Rekursion | rekursiv, nicht rekursiv | Gibt an, ob bei der Suche alle Unterordner beginnend mit dem am Speicherort definierten Wert erneut wiederholt werden sollen:<value>. "Rekursiv" ist die Standardeinstellung.                             |
+| Aufnahme | Include, Exclude        | Gibt an, ob die Abfrage Elemente in diesen Pfad einschließen oder davon ausschließen soll. "Include" ist die Standardeinstellung. Windows Vista unterstützt keine Ausschlüsse ohne Einschlüsse. (Siehe Beispiel) |
+| Rekursion | rekursiv, nicht rekursiv | Gibt an, ob bei der Suche alle Unterordner beginnend mit dem am Speicherort definierten Wert wiederholt werden sollen:<value>. "Rekursiv" ist die Standardeinstellung.                             |
 
 
 
  
 
-Für den Bereich einer Suche mithilfe des **Protokolls search:** stehen Ihnen je nach Ziel des Bereichs unterschiedliche Optionen zur Verfügung.
+Sie haben je nach Ziel des Bereichs unterschiedliche Optionen, um eine Suche mithilfe des **Protokolls search:** zu ermöglichen.
 
 Ordner auf einem lokalen Computer:
 
--   Verwenden Sie AQS (crumb=folder:<URL-codierten Pfad>)
--   Verwenden Sie das location-Argument (crumb=location:<URL-codierten Pfad>)
+-   Verwenden Sie AQS (folder=folder:<URL-codierter Pfad>)
+-   Verwenden Sie das Location-Argument (vererb=location:<URL-codierter Pfad>)
 
-Ordner auf einem Remotecomputer/-netzwerk:
+Ordner auf einem Remotecomputer/Netzwerk:
 
--   Verwenden Sie das location-Argument (crumb=location:<URL-codierten Pfad>)
+-   Verwenden Sie das Location-Argument (vererb=location:<URL-codierter Pfad>)
 
-Ordner, auf den über einen bekannten UNIVERSAL NAMING CONVENTION(UNC)-Protokollhandler zugegriffen wird:
+Ordner, auf den über einen bekannten UNC-Protokollhandler (Universal Naming Convention) zugegriffen wird:
 
--   Verwenden Sie AQS (crumb=store: <UNC protocol handler name> ).
--   Verwenden Sie das location-Argument (crumb=location:<URL-codierten Pfad>)
+-   Verwenden Sie AQS (vererb=store: <UNC protocol handler name> ).
+-   Verwenden Sie das Location-Argument (vererb=location:<URL-codierter Pfad>)
 
 ### <a name="vista-examples"></a>Vista-Beispiele
 
@@ -101,15 +101,15 @@ search:crumb=location:c%3a%5cDocuments&crumb=kind:pics&
 
 
 
-Im ersten Beispiel wird eine Suche nach "Vacation" ausgeführt, die am Speicherort beginnt (eine spezielle Verknüpfung zum Ordner Eigene Dokumente des Benutzers), einschließlich dieses Ordners und aller `shell://Personal` Unterordner.  Siehe dazu die folgende Tabelle.
+Im ersten Beispiel wird eine Suche nach "Vacation" am Standort (eine spezielle Verknüpfung zum ordner Eigene Dokumente des Benutzers) ausgeführt, `shell://Personal` einschließlich dieses Ordners und aller Unterordner.  Siehe dazu die folgende Tabelle.
 
-Im zweiten Beispiel wird eine Suche in C: \\ Bilder ausgeführt, jedoch nicht in C: \\ \\ Bildduplizieren.
+Im zweiten Beispiel wird eine Suche in C: \\ Bilder ausgeführt, jedoch nicht in C: \\ \\ Bildduplikate.
 
-Im dritten Beispiel wird eine Suche in C: Dokumente ausgeführt, die auf Dateien beschränkt ist, bei der \\ `kind` die -Eigenschaft auf Pics festgelegt ist.
+Im dritten Beispiel wird eine Suche in C: \\ Dokumente ausgeführt, die auf Dateien beschränkt ist, `kind` deren -Eigenschaft auf Bilder festgelegt ist.
 
 ### <a name="constants-for-common-folders"></a>Konstanten für allgemeine Ordner
 
-Windows Vista ermöglicht die Verwendung von CSIDL-Werten, die eine eindeutige systemunabhängige Möglichkeit bieten, spezielle Ordner zu identifizieren, die häufig von Anwendungen verwendet werden, aber möglicherweise nicht denselben Namen oder Speicherort auf einem bestimmten System haben. Der Systemordner kann beispielsweise "C: Windows" auf einem System und \\ "C: \\ Winnt" auf einem anderen System sein.
+Windows Vista ermöglicht die Verwendung von CSIDL-Werten, die eine eindeutige systemunabhängige Möglichkeit bieten, spezielle Ordner zu identifizieren, die häufig von Anwendungen verwendet werden, aber möglicherweise nicht den gleichen Namen oder Speicherort auf einem bestimmten System aufweisen. Beispielsweise kann der Systemordner auf einem System "C: \\ Windows" und auf einem anderen "C: \\ Winnt" sein.
 
 Verwenden Sie diese Speicherorte mit dieser Syntax:
 
@@ -127,56 +127,56 @@ In der folgenden Tabelle sind die CSIDL-Werte aufgeführt. Weitere Informationen
 | Name                        | Suchzeichenfolge                   | Beschreibung                                                                                                                                                                            |
 |-----------------------------|---------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | VERWALTUNGSTOOLS        | ADMINISTRATIVE%20TOOLS          | Dateisystemverzeichnis, das als Repository für Verwaltungstools dient.                                                                                                            |
-| APPDATA                     | APPDATA                         | Dateisystemverzeichnis, das als allgemeines Repository für anwendungsspezifische Daten dient. Ein typischer Pfad ist C: Dokumente und Einstellungen Benutzername \\ \\ \\ Anwendungsdaten.                      |
-| CACHE                       | CACHE                           | Dateisystemverzeichnis, das als allgemeines Repository für temporäre Internetdateien dient. Ein typischer Pfad ist C: \\ Benutzername für Dokumente und Einstellungen Temporäre \\ \\ Internetdateien.               |
-| CD- UND CD-20                  | CD%20 WIE                    | Ordner, der Daten enthält, die auf CD glühen sollen.                                                                                                                                             |
+| APPDATA                     | APPDATA                         | Dateisystemverzeichnis, das als allgemeines Repository für anwendungsspezifische Daten dient. Ein typischer Pfad ist C: \\ Dokumente und Einstellungen Benutzername \\ \\ Anwendungsdaten.                      |
+| CACHE                       | CACHE                           | Dateisystemverzeichnis, das als allgemeines Repository für temporäre Internetdateien dient. Ein typischer Pfad ist C: \\ Dokumente und Einstellungen Benutzername Temporäre \\ \\ Internetdateien.               |
+| CD-AKTUSER                  | CD%20 VERARBEITUNG                    | Ordner, der Daten enthält, die auf CD 1000000000000000000000                                                                                                                                             |
 | ALLGEMEINE VERWALTUNGSTOOLS | COMMON%20ADMINISTRATIVE%20TOOLS | Verwaltungstools für alle Benutzer.                                                                                                                                                    |
-| ALLGEMEINE APP-DATEN              | COMMON%20APPDATA                | Anwendungsdaten für alle Benutzer. Ein typischer Pfad ist C: \\ Dokumente und Einstellungen Alle \\ \\ Benutzeranwendungsdaten.                                                                             |
+| ALLGEMEINE APPDATA              | COMMON%20APPDATA                | Anwendungsdaten für alle Benutzer. Ein typischer Pfad ist C: \\ Dokumente und Einstellungen Alle \\ \\ Benutzeranwendungsdaten.                                                                             |
 | COMMON DESKTOP              | COMMON DESKTOP                  | Microsoft Windows Desktop-Daten für alle Benutzer. Virtueller Ordner, der das Stammverzeichnis des Namespaces ist.                                                                                        |
 | ALLGEMEINE DOKUMENTE            | COMMON%20DOCUMENTS              | Dokumente für alle Benutzer. Ein typischer Pfad ist C: \\ Dokumente und Einstellungen Alle Benutzer \\ \\ Eigene Dokumente.                                                                                        |
 | ALLGEMEINE PROGRAMME             | COMMON%20PROGRAMS               | Programmgruppen, die allen Benutzern gemeinsam sind. Ein typischer Pfad ist C: \\ Dokumente und Einstellungen Alle Benutzer \\ \\ \\ Startmenüprogramme.                                                                     |
-| ALLGEMEINES STARTMENÜ           | COMMON%20START%20MENU           | Startmenü elemente, die allen Benutzern gemeinsam sind. Ein typischer Pfad ist C: \\ Startmenü "Dokumente und \\ Einstellungen für alle \\ Benutzer".                                                                             |
-| COMMON STARTUP              | COMMON%20STARTUP                | Startprogrammgruppe, die allen Benutzern gemeinsam ist.                                                                                                                                             |
+| ALLGEMEINES STARTMENÜ           | COMMON%20START%20MENU           | Startmenü Elemente, die allen Benutzern gemeinsam sind. Ein typischer Pfad ist C: \\ Dokumente und Einstellungen Alle Benutzer \\ \\ Startmenü.                                                                             |
+| ALLGEMEINER START              | COMMON%20STARTUP                | Startprogrammgruppe, die allen Benutzern gemeinsam ist.                                                                                                                                             |
 | ALLGEMEINE VORLAGEN            | COMMON%20TEMPLATES              | Dokumentvorlagen, die allen Benutzern gemeinsam sind.                                                                                                                                                |
-| COMMONLÄUFIGKEIT                 | MY%20BIRD                      | Meine Ordnervorlagen für Musik, die allen Benutzern gemeinsam sind.                                                                                                                                         |
-| COMMONPICTURES              | MY%20PICTURES                   | Ordnervorlagen "Meine Bilder", die allen Benutzern gemeinsam sind.                                                                                                                                      |
+| COMMONOLO                 | MY%20 WIES                      | Meine Musik Ordnervorlagen, die allen Benutzern gemeinsam sind.                                                                                                                                         |
+| COMMONPICTURES              | MY%20PICTURES                   | My Pictures-Ordnervorlagen, die allen Benutzern gemeinsam sind.                                                                                                                                      |
 | COMMONVIDEO                 | MY%20VIDEO                      | Meine Videoordnervorlagen, die allen Benutzern gemeinsam sind.                                                                                                                                         |
-| CONNECTIONSFOLDER           | CONNECTIONSFOLDER               | Ordner, der Verbindungsdaten enthält.                                                                                                                                                     |
-| ORDNER "SYSTEMSTEUERUNG"        | CONTROLPANELFOLDER              | Virtueller Ordner mit Symbolen für die Systemsteuerung Anwendungen.                                                                                                                    |
+| CONNECTIONSFOLDER           | CONNECTIONSFOLDER               | Ordner, der Die Verbindungsdaten enthält.                                                                                                                                                     |
+| SYSTEMSTEUERUNGSORDNER        | CONTROLPANELFOLDER              | Virtueller Ordner, der Symbole für die Systemsteuerung enthält.                                                                                                                    |
 | Cookies                     | Cookies                         | Dateisystemverzeichnis, das als allgemeines Repository für Internetcookies dient. Ein typischer Pfad ist C: \\ Dokumente und Einstellungen Benutzername \\ \\ Cookies.                                        |
 | DESKTOP                     | DESKTOP                         | Microsoft Windows Desktop. Virtueller Ordner, der das Stammverzeichnis des Namespaces ist.                                                                                                           |
-| FAVORITEN                   | FAVORITEN                       | Dateisystemverzeichnis, das als allgemeines Repository für die favoriten Elemente des Benutzers dient. Ein typischer Pfad ist C: \\ Dokumente und Einstellungen Benutzername \\ \\ Favoriten.                             |
-| Schriftarten                       | Schriftarten                           | Virtueller Ordner, der installierte Schriftarten enthält. Ein typischer Pfad ist C: \\ \\ WINDOWS-Schriftarten.                                                                                                       |
+| FAVORITEN                   | FAVORITEN                       | Dateisystemverzeichnis, das als allgemeines Repository für die bevorzugten Elemente des Benutzers dient. Ein typischer Pfad ist C: \\ Dokumente und Einstellungen \\ \\ Favoriten für Benutzernamen.                             |
+| Schriftarten                       | Schriftarten                           | Virtueller Ordner mit installierten Schriftarten. Ein typischer Pfad ist C: \\ \\ WINDOWS-Schriftarten.                                                                                                       |
 | VERLAUF                     | VERLAUF                         | Dateisystemverzeichnis, das als allgemeines Repository für Internetverlaufselemente dient.                                                                                                   |
 | INTERNETFOLDER              | INTERNETFOLDER                  | Ordner, der Internetdaten enthält.                                                                                                                                                    |
-| LOKALE APPDATA               | LOCAL%20APPDATA                 | Dateisystemverzeichnis, das als Daten-Repository für lokale Anwendungen (ohne Roaming) dient. Ein typischer Pfad ist C: \\ Dokumente und Einstellungen Benutzername Lokale Einstellungen \\ \\ \\ Anwendungsdaten. |
+| LOKALE APPDATA               | LOCAL%20APPDATA                 | Dateisystemverzeichnis, das als Datenrepository für lokale (nicht roamingbasierte) Anwendungen dient. Ein typischer Pfad ist C: \\ Dokumente und Einstellungen Benutzername Local Einstellungen \\ \\ \\ Anwendungsdaten. |
 | LOCALIZEDRESOURCEDIR        | LOCALIZEDRESOURCEDIR            | Lokalisiertes Ressourcenverzeichnis.                                                                                                                                                          |
 | MYCOMPUTERFOLDER            | MYCOMPUTERFOLDER                | Arbeitsplatz. Virtueller Ordner, der alles auf dem lokalen Computer enthält: Speichergeräte, Drucker und Systemsteuerung. Dieser Ordner kann auch zugeordnete Netzwerklaufwerke enthalten.             |
-| MEINE MUSIK                    | MY%20BIRD                      | Ordner "Meine Musik". Ein typischer Pfad ist C: \\ Benutzername für Dokumente und Einstellungen Eigene Dokumente My \\ \\ \\ Music.                                                                                       |
-| MEINE BILDER                 | MY%20PICTURES                   | Ordner "Meine Bilder". Ein typischer Pfad ist C: \\ Benutzername für Dokumente und Einstellungen Eigene Dokumente Meine \\ \\ \\ Bilder.                                                                                 |
-| MEIN VIDEO                    | MY%20VIDEO                      | Ordner "Mein Video". Ein typischer Pfad ist C: Benutzername für \\ Dokumente und Einstellungen Eigene Dokumente Mein \\ \\ \\ Video.                                                                                       |
+| MY MUSIC                    | MY%20 WIES                      | Mein Musik Ordner. Ein typischer Pfad ist C: \\ Dokumente und Einstellungen Benutzername Eigene Dokumente My \\ \\ \\ Musik.                                                                                       |
+| MEINE BILDER                 | MY%20PICTURES                   | Ordner "Meine Bilder". Ein typischer Pfad ist C: \\ Dokumente und Einstellungen benutzername Eigene Dokumente Meine \\ \\ \\ Bilder.                                                                                 |
+| MEIN VIDEO                    | MY%20VIDEO                      | Mein Videoordner. Ein typischer Pfad ist C: \\ Dokumente und Einstellungen Benutzername Eigene Dokumente Mein \\ \\ \\ Video.                                                                                       |
 | NETHOOD                     | NETHOOD                         | Virtueller Ordner, der den Stamm der Netzwerknamespacehierarchie darstellt.                                                                                                               |
-| ORDNER "NETZWERKSPEICHERORTE"       | NETWORKDPLACESFOLDER            | Ein Dateisystemordner, der die Linkobjekte enthält, die möglicherweise im virtuellen Ordner Meine Netzwerkplätze vorhanden sind. Es ist nicht identisch mit NETHOOD, das den Stamm des Netzwerknamespace darstellt.   |
+| ORDNER "NETZWERKSPEICHERORTE"       | NETWORKDPLACESFOLDER            | Ein Dateisystemordner mit den Linkobjekten, die möglicherweise im virtuellen Ordner "Meine Netzwerkorte" vorhanden sind. Es ist nicht identisch mit NETHOOD, das den Netzwerknamespacestamm darstellt.   |
 | OEM-LINKS                   | OEM%20LINKS                     | Ordner mit Links zu OEM-Standorten.                                                                                                                                                  |
-| PERSONAL                    | PERSONAL                        | Dateisystemverzeichnis, das als allgemeines Repository für die Dokumente eines Benutzers dient. Ein typischer Pfad ist C: Benutzername für \\ Dokumente und Einstellungen \\ \\ Eigene Dokumente.                                 |
-| ORDNER "DRUCKER"             | ORDNER "DRUCKER"                 | Virtueller Ordner mit installierten Druckern.                                                                                                                                          |
-| PRINTHOOD                   | PRINTHOOD                       | Dateisystemverzeichnis, das die Linkobjekte enthält, die möglicherweise im virtuellen Ordner Drucker vorhanden sind. Ein typischer Pfad ist "C: \\ Documents and Settings username \\ \\ PrintHood".                 |
-| PROGRAMME                    | PROGRAMME                        | Dateisystemverzeichnis, das die Programmgruppen des Benutzers enthält (die auch Dateisystemverzeichnisse sind). Ein typischer Pfad ist C: \\ Dokumente und Einstellungen Benutzername \\ \\ \\ Startmenüprogramme.  |
+| PERSONAL                    | PERSONAL                        | Dateisystemverzeichnis, das als allgemeines Repository für die Dokumente eines Benutzers dient. Ein typischer Pfad ist C: \\ Dokumente und Einstellungen Benutzername \\ \\ Eigene Dokumente.                                 |
+| DRUCKERORDNER             | DRUCKERORDNER                 | Virtueller Ordner mit installierten Druckern.                                                                                                                                          |
+| PRINTHOOD                   | PRINTHOOD                       | Dateisystemverzeichnis, das die Linkobjekte enthält, die möglicherweise im virtuellen Ordner Drucker vorhanden sind. Ein typischer Pfad ist C: \\ Dokumente und Einstellungen \\ \\ PrintHood.                 |
+| PROGRAMME                    | PROGRAMME                        | Dateisystemverzeichnis, das die Programmgruppen des Benutzers enthält (die auch Dateisystemverzeichnisse sind). Ein typischer Pfad ist C: \\ Dokumente und Einstellungen \\ \\ \\ Startmenüprogramme.  |
 | PROFILE                     | PROFILE                         | Der Profilordner des Benutzers.                                                                                                                                                                 |
 | PROGRAMMDATEIEN               | PROGRAM%20FILES                 | Ordner "Programme". Ein typischer Pfad ist C: \\ Programme.                                                                                                                             |
-| PROGRAMMDATEIEN ( COMMON)        | PROGRAMFILESCOMMON              | Der Ordner "Programme" ist für alle Benutzer gleich.                                                                                                                                              |
+| ALLGEMEINE PROGRAMMDATEIEN        | PROGRAMFILESCOMMON              | Ordner "Programme", der allen Benutzern gemeinsam ist.                                                                                                                                              |
 | PROGRAMME COMMON x86    | PROGRAMFILESCOMMONX86           | Ordner "Programme", der allen Benutzern auf x86-Computern gemeinsam ist.                                                                                                                              |
 | PROGRAM FILESx86            | PROGRAMFILESx86                 | Ordner "Programme" auf x86-Computern.                                                                                                                                                  |
-| ZULETZT VERWENDET                      | ZULETZT VERWENDET                          | Dateisystemverzeichnis, das die zuletzt verwendeten Dokumente des Benutzers enthält. Ein typischer Pfad ist C: \\ Dokumente und Einstellungen Benutzername Zuletzt \\ \\ verwendet.                                           |
-| PAPIERKORBORDNER          | RECYCLEBINFOLDER                | Virtueller Ordner, der die Objekte im Papierkorb des Benutzers enthält.                                                                                                                       |
+| ZULETZT VERWENDET                      | ZULETZT VERWENDET                          | Dateisystemverzeichnis, das die zuletzt verwendeten Dokumente des Benutzers enthält. Ein typischer Pfad ist C: \\ Dokumente und Einstellungen Benutzername \\ \\ Zuletzt.                                           |
+| ORDNER "PAPIERKORB"          | RECYCLEBINFOLDER                | Virtueller Ordner, der die Objekte im Benutzerordner Papierkorb.                                                                                                                       |
 | RESOURCEDIR                 | RESOURCEDIR                     | Das Ressourcenverzeichnis.                                                                                                                                                                |
-| Sendto                      | Sendto                          | Dateisystemverzeichnis, das die Menüelemente Senden an enthält. Ein typischer Pfad ist C: \\ Dokumente und Einstellungen Benutzername \\ \\ SendTo.                                                                |
-| STARTMENÜ                  | START%20MENU                    | Dateisystemverzeichnis, das Startmenü Elemente enthält. Ein typischer Pfad ist C: \\ Dokumente und Einstellungen Benutzername \\ \\ Startmenü.                                                                 |
+| Sendto                      | Sendto                          | Dateisystemverzeichnis, das Menüelemente an senden enthält. Ein typischer Pfad ist C: \\ Dokumente und Einstellungen \\ \\ SendTo.                                                                |
+| STARTMENÜ                  | START%20MENU                    | Dateisystemverzeichnis, das Startmenü enthält. Ein typischer Pfad ist C: \\ Dokumente und Einstellungen \\ \\ Startmenü des Benutzernamens.                                                                 |
 | Start                     | Start                         | Dateisystemverzeichnis, das der Startprogrammgruppe des Benutzers entspricht.                                                                                                            |
 | SYSTEMx86                   | SYSTEMx86                       | Systemordner auf x86-Computern.                                                                                                                                                         |
 | VORLAGEN                   | VORLAGEN                       | Dateisystemverzeichnis, das als allgemeines Repository für Dokumentvorlagen dient.                                                                                                       |
-| SYSTEM                      | SYSTEM                          | Systemordner. Ein typischer Pfad ist C: \\ \\ Windows-System.                                                                                                                                  |
-| WINDOWS                     | WINDOWS                         | Windows-Verzeichnis oder SYSROOT.                                                                                                                                                          |
+| SYSTEM                      | SYSTEM                          | Systemordner. Ein typischer Pfad ist C: \\ Windows \\ System.                                                                                                                                  |
+| WINDOWS                     | WINDOWS                         | Windows oder SYSROOT.                                                                                                                                                          |
 
 
 

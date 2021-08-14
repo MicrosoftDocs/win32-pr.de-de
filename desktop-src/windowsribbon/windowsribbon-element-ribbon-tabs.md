@@ -1,9 +1,9 @@
 ---
-title: Ribbon. Tabs (Eigenschaft)
-description: Stellt einen Container für alle Kern Registerkarten in einem Menüband dar.
+title: Ribbon.Tabs-Eigenschaft
+description: Stellt einen Container für alle Kernregisterkarte in einem Menüband dar.
 ms.assetid: b43d0544-c110-4785-85d7-935842b8f03e
 keywords:
-- Menüband. Registerkarten-Eigenschaften Fenster
+- Ribbon.Tabs-Eigenschaft Windows Menüband
 topic_type:
 - apiref
 api_name:
@@ -12,16 +12,16 @@ api_type:
 - NA
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 4300a2385b6ada64e05e16671802460930cc2a7b
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 7b055a2fd8d69b45e2f7059022908b5cb91f8e790196504172c0ad1c608b78c2
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104475417"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118202211"
 ---
-# <a name="ribbontabs-property"></a>Ribbon. Tabs (Eigenschaft)
+# <a name="ribbontabs-property"></a>Ribbon.Tabs-Eigenschaft
 
-Stellt einen Container für alle Kern Registerkarten in einem Menüband dar.
+Stellt einen Container für alle Kernregisterkarte in einem Menüband dar.
 
 ## <a name="usage"></a>Verbrauch
 
@@ -41,7 +41,7 @@ Es gibt keine Attribute.
 
 | Element                                             | BESCHREIBUNG                                     |
 |-----------------------------------------------------|-------------------------------------------------|
-| [**Registerkarte**](windowsribbon-element-tab.md)<br/> | Muss mindestens einmal vorkommen<br/> <br/> |
+| [**Registerkarte**](windowsribbon-element-tab.md)<br/> | Muss mindestens einmal auftreten<br/> <br/> |
 
 
 
@@ -55,15 +55,15 @@ Es gibt keine Attribute.
 
 
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
 Erforderlich.
 
-Kann für jedes [**Menüband**](windowsribbon-element-ribbon.md)einmal oder mehrmals vorkommen.
+Kann ein oder mehrere Male für jedes Menüband [**auftreten.**](windowsribbon-element-ribbon.md)
 
 ## <a name="examples"></a>Beispiele
 
-Das folgende Beispiel veranschaulicht das einfache Markup für ein **Ribbon. Tabs** -Element mit einer Registerkarten Deklaration der [**Registerkarte**](windowsribbon-element-tab.md) **Home** .
+Im folgenden Beispiel wird das grundlegende Markup für ein **Ribbon.Tabs-Element** mit einer Home **Tab-Deklaration** [](windowsribbon-element-tab.md) veranschaulicht.
 
 
 ```C++
@@ -118,16 +118,16 @@ Das folgende Beispiel veranschaulicht das einfache Markup für ein **Ribbon. Tab
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows 7 \[ -Desktop-Apps\]<br/>              |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2008 R2 \[ -Desktop-Apps\]<br/> |
+| Unterstützte Mindestversion (Client)<br/> | Windows 7 \[ Desktop-Apps\]<br/>              |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server 2008 \[ R2-Desktop-Apps\]<br/> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Menüband. contextualtabs**](windowsribbon-element-ribbon-contextualtabs.md)
+[**Ribbon.ContextualTabs**](windowsribbon-element-ribbon-contextualtabs.md)
 </dt> </dl>
 
  

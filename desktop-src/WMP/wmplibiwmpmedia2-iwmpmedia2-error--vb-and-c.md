@@ -1,11 +1,11 @@
 ---
-title: IWMPMedia2 Error (Eigenschaft)
-description: Die Error-Eigenschaft ruft eine iwmperroritem-Schnittstelle ab, wenn das Medien Element einen Fehlerzustand aufweist.
+title: IWMPMedia2-Fehlereigenschaft
+description: Die Error-Eigenschaft ruft eine IWMPErrorItem-Schnittstelle ab, wenn das Medienelement eine Fehlerbedingung aufweist.
 ms.assetid: 57dc8aef-5f22-43da-87bc-fdc0c8ebe49b
 keywords:
-- Fehler Eigenschaften Fenster Media Player
-- Fehler Eigenschaft, Windows Media Player, IWMPMedia2-Schnittstelle
-- IWMPMedia2 Interface, Windows Media Player, Fehler Eigenschaft
+- Fehlereigenschaft Windows Media Player
+- Fehlereigenschaft Windows Media Player , IWMPMedia2-Schnittstelle
+- IWMPMedia2-Schnittstelle Windows Media Player , Error-Eigenschaft
 topic_type:
 - apiref
 api_name:
@@ -17,16 +17,16 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 2179b4604efd03574c78261575ce02311cd18a0c
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 6c841e52f2a5adda5a2098f591b141aa334ee5138c1a5cc7d6eff9b54dca5e92
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106355266"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118331970"
 ---
-# <a name="iwmpmedia2error-property"></a>IWMPMedia2:: Error (Eigenschaft)
+# <a name="iwmpmedia2error-property"></a>IWMPMedia2::Error-Eigenschaft
 
-Die **Error** -Eigenschaft ruft eine **iwmperroritem** -Schnittstelle ab, wenn das Medien Element einen Fehlerzustand aufweist.
+Die **Error-Eigenschaft** ruft eine **IWMPErrorItem-Schnittstelle** ab, wenn das Medienelement eine Fehlerbedingung aufweist.
 
 Diese Eigenschaft ist schreibgeschützt.
 
@@ -49,11 +49,11 @@ Public ReadOnly Property Error As IWMPErrorItem
 
 ## <a name="property-value"></a>Eigenschaftswert
 
-Eine **WMPLib. iwmperroritem** -Schnittstelle, die Zugriff auf Informationen über den Fehlerzustand bereitstellt.
+Eine **WMPLib.IWMPErrorItem-Schnittstelle,** die Zugriff auf Informationen zur Fehlerbedingung bietet.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Wenn das Medien Element nicht wiedergegeben werden kann, ruft diese Eigenschaft eine **iwmperroritem** -Schnittstelle ab, die Informationen über das aufgetretene Problem enthält.
+Wenn das Medienelement nicht wiedergegeben werden kann, ruft diese Eigenschaft eine **IWMPErrorItem-Schnittstelle** ab, die Informationen zum aufgetretenen Problem enthält.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -61,20 +61,20 @@ Wenn das Medien Element nicht wiedergegeben werden kann, ruft diese Eigenschaft 
 
 | Anforderung | Wert |
 |----------------------|------------------------------------------------------------------------------------------------------------------------|
-| Version<br/>   | Windows Media Player 9-Serie oder höher<br/>                                                                      |
+| Version<br/>   | Windows Media Player 9er Serie oder höher<br/>                                                                      |
 | Namespace<br/> | **WMPLib**<br/>                                                                                                  |
 | Assembly<br/>  | <dl> <dt>Interop.WMPLib.dll (Interop.WMPLib.dll.dll)</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Iwmperroritem (VB und c#)**](iwmperroritem--vb-and-c.md)
+[**IWMPErrorItem (VB und C#)**](iwmperroritem--vb-and-c.md)
 </dt> <dt>
 
-[**IWMPMedia2-Schnittstelle (VB und c#)**](iwmpmedia2--vb-and-c.md)
+[**IWMPMedia2-Schnittstelle (VB und C#)**](iwmpmedia2--vb-and-c.md)
 </dt> </dl>
 
  

@@ -1,21 +1,21 @@
 ---
 description: Wird gesendet, wenn eine Anwendung den aktivierten Zustand eines Fensters ändert.
 ms.assetid: df2cf953-121f-43bb-a06c-d10e445bfb5e
-title: WM_ENABLE Meldung (Winuser. h)
+title: WM_ENABLE (Winuser.h)
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 82bc83b84cbbf8e0c0145ef7d2730179cab54a23
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 5e01477de7cf1b9052bba752929210a1bc7553445f81f971aec67d7b510653a9
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106348134"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118200481"
 ---
-# <a name="wm_enable-message"></a>WM- \_ Aktivierungs Nachricht
+# <a name="wm_enable-message"></a>WM \_ ENABLE-Meldung
 
-Wird gesendet, wenn eine Anwendung den aktivierten Zustand eines Fensters ändert. Er wird an das Fenster gesendet, dessen aktivierter Zustand geändert wird. Diese Nachricht wird gesendet, bevor die [**EnableWindow**](/windows/win32/api/winuser/nf-winuser-enablewindow) -Funktion zurückgegeben wird, aber nachdem der aktivierte Zustand (das [**\_ Deaktivierte WS**](window-styles.md) -Stilbit) des Fensters geändert wurde.
+Wird gesendet, wenn eine Anwendung den aktivierten Zustand eines Fensters ändert. Sie wird an das Fenster gesendet, dessen aktivierter Zustand sich ändert. Diese Meldung wird gesendet, bevor die [**EnableWindow-Funktion**](/windows/win32/api/winuser/nf-winuser-enablewindow) zurückgegeben wird, aber nachdem sich der aktivierte Zustand ([**WS \_ DISABLED**](window-styles.md) style bit) des Fensters geändert hat.
 
-Ein Fenster empfängt diese Meldung über seine [**WindowProc**](/previous-versions/windows/desktop/legacy/ms633573(v=vs.85)) -Funktion.
+Ein Fenster empfängt diese Nachricht über seine [**WindowProc-Funktion.**](/previous-versions/windows/desktop/legacy/ms633573(v=vs.85))
 
 
 ```C++
@@ -31,7 +31,7 @@ Ein Fenster empfängt diese Meldung über seine [**WindowProc**](/previous-versi
 *wParam* 
 </dt> <dd>
 
-Gibt an, ob das Fenster aktiviert oder deaktiviert wurde. Dieser Parameter ist **true** , wenn das Fenster aktiviert wurde, oder **false** , wenn das Fenster deaktiviert wurde.
+Gibt an, ob das Fenster aktiviert oder deaktiviert wurde. Dieser Parameter ist **TRUE,** wenn das Fenster aktiviert wurde, oder **FALSE,** wenn das Fenster deaktiviert wurde.
 
 </dd> <dt>
 
@@ -46,7 +46,7 @@ Dieser Parameter wird nicht verwendet.
 
 Typ: **LRESULT**
 
-Wenn eine Anwendung diese Nachricht verarbeitet, sollte Sie 0 (null) zurückgeben.
+Wenn eine Anwendung diese Nachricht verarbeitet, sollte sie 0 (null) zurückgeben.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -56,21 +56,21 @@ Wenn eine Anwendung diese Nachricht verarbeitet, sollte Sie 0 (null) zurückgebe
 |-------------------------------------|----------------------------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional \[nur Desktop-Apps\]<br/>                                               |
 | Unterstützte Mindestversion (Server)<br/> | Windows 2000 Server \[nur Desktop-Apps\]<br/>                                                     |
-| Header<br/>                   | <dl> <dt>Winuser. h (Windows. h einschließen)</dt> </dl> |
+| Header<br/>                   | <dl> <dt>Winuser.h (include Windows.h)</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-**Verweis**
+**Referenz**
 </dt> <dt>
 
 [**EnableWindow**](/windows/win32/api/winuser/nf-winuser-enablewindow)
 </dt> <dt>
 
-**Licher**
+**Konzeptionellen**
 </dt> <dt>
 
 [Windows](windows.md)

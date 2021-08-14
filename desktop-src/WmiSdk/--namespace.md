@@ -15,18 +15,18 @@ api_type:
 - Schema
 api_location:
 - All
-ms.openlocfilehash: 9f396b588f372f26a808e97593ffcc30eac9b3ad
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 4640570dd834b42652d04262b70ec84fac106d99f463ca22144e28ad388a0937
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "103868136"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118320768"
 ---
 # <a name="__namespace-class"></a>\_\_Namespace-Klasse
 
-Die **\_ \_ Namespace** -System Klasse stellt einen WMI-Namespace dar.
+Die **\_ \_ Namespace-Systemklasse** stellt einen WMI-Namespace dar.
 
-Die folgende Syntax wird durch MOF-Code (Managed Object Format) vereinfacht und schließt alle geerbten Eigenschaften ein. Eigenschaften werden in alphabetischer Reihenfolge und nicht in der MOF-Reihenfolge aufgelistet.
+Die folgende Syntax wird durch MOF-Code (Managed Object Format) vereinfacht und schließt alle geerbten Eigenschaften ein. Eigenschaften werden in alphabetischer Reihenfolge und nicht in MOF-Reihenfolge aufgeführt.
 
 ## <a name="syntax"></a>Syntax
 
@@ -39,20 +39,20 @@ class __Namespace : __SystemClass
 
 ## <a name="members"></a>Member
 
-Die **\_ \_ Namespace** -Klasse verfügt über diese Typen von Membern:
+Die **\_ \_ Namespace-Klasse** verfügt über diese Typen von Membern:
 
 -   [Eigenschaften](#properties)
 
 ### <a name="properties"></a>Eigenschaften
 
-Die **\_ \_ Namespace** -Klasse verfügt über diese Eigenschaften.
+Die **\_ \_ Namespace-Klasse** verfügt über diese Eigenschaften.
 
 <dl> <dt>
 
 **Name**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Lesen/Schreiben
@@ -65,21 +65,21 @@ Namespacename.
 
 </dd> </dl>
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Die **\_ \_ Namespace** -Klasse wird von [**\_ \_ systemclass**](--systemclass.md)abgeleitet, die keine Eigenschaften hat.
+Die **\_ \_ Namespace-Klasse** wird von [**\_ \_ SystemClass**](--systemclass.md)abgeleitet, die keine Eigenschaften aufweist.
 
-Sie können **\_ \_ Namespace** verwenden, um untergeordnete Namespaces innerhalb des aktuellen funktionierenden Namespaces zu identifizieren, zu erstellen und zu löschen, für den Sie ein [**IWbemServices**](/windows/desktop/api/WbemCli/nn-wbemcli-iwbemservices) -Objekt haben. Beim Erstellen einer neuen Instanz des **\_ \_ Namespace** in einem funktionierenden Namespace wird ein untergeordneter Namespace innerhalb des funktionierenden Namespaces erstellt. Umgekehrt entfernt das Löschen einer Instanz von **\_ \_ Namespace** den untergeordneten Namespace aus dem funktionierenden Namespace. Beachten Sie, dass beim Löschen eines untergeordneten Namespace auch alle seine Klassen und Instanzen gelöscht werden.
+Sie können **\_ \_ Namespace** verwenden, um untergeordnete Namespaces innerhalb des aktuellen funktionierenden Namespace zu identifizieren, zu erstellen und zu löschen, für den Sie über ein [**IWbemServices-Objekt**](/windows/desktop/api/WbemCli/nn-wbemcli-iwbemservices) verfügen. Beim Erstellen einer neuen Instanz von **\_ \_ Namespace** innerhalb eines funktionierenden Namespaces wird ein untergeordneter Namespace innerhalb des funktionierenden Namespaces erstellt. Umgekehrt entfernt das Löschen einer Instanz von **\_ \_ Namespace** den untergeordneten Namespace aus dem funktionierenden Namespace. Beachten Sie, dass beim Löschen eines untergeordneten Namespace auch alle zugehörigen Klassen und Instanzen gelöscht werden.
 
-Durch das Auflisten von Instanzen dieser Klasse in einem funktionierenden Namespace werden die verfügbaren untergeordneten Namespaces bereitgestellt.
+Durch das Aufzählen von Instanzen dieser Klasse innerhalb eines funktionierenden Namespaces werden die verfügbaren untergeordneten Namespaces bereitgestellt.
 
-Im Stamm \\ Namespace sind z. b. zwei Instanzen von **\_ \_ Namespace**. Der **Name** der Eigenschaft ist auf "Default" festgelegt, der andere **Name** ist auf "Cimv2" festgelegt. Diese Instanzen stellen die \\ Stamm \\ -Standard \\ \\ Namespaces bzw. root cimv2-Namespaces dar.
+Im Stammnamespace befinden sich beispielsweise \\ zwei Instanzen von **\_ \_ Namespace**. Bei einer ist die **Name-Eigenschaft** auf "Default" festgelegt, während der andere **name** auf "Cimv2" festgelegt ist. Diese Instanzen stellen den \\ \\ Stammstandard bzw. die \\ \\ cimv2-Stammnamespaces dar.
 
 ## <a name="examples"></a>Beispiele
 
-Das Beispiel zum [Auflisten aller WMI-Namespaces](https://Gallery.TechNet.Microsoft.Com/4a8e84f1-4b52-452c-ae4f-e4e00e266257) VBScript in der TechNet Gallery verwendet einen rekursiven-Befehl, um alle Instanzen der \_ \_ Namespace Klasse auf einem System aufzulisten.
+Im VBScript-Beispiel [List All WMI Namespaces](https://Gallery.TechNet.Microsoft.Com/4a8e84f1-4b52-452c-ae4f-e4e00e266257) im TechNet Gallery wird ein rekursiver Aufruf verwendet, um alle Instanzen der \_ \_ Namespace-Klasse auf einem System aufzulisten.
 
-Das folgende Codebeispiel ruft alle Namespaces in PowerShell ab.
+Im folgenden Codebeispiel werden alle Namespaces in PowerShell abgerufen.
 
 
 ```PowerShell
@@ -88,7 +88,7 @@ get-wmiobject __namespace -namespace 'root' -list -recurse | format-table __name
 
 
 
-Im folgenden Codebeispiel wird das vorherige Beispiel verbessert, und es werden zusätzliche Informationen hinzugefügt.
+Das folgende Codebeispiel verbessert das vorherige Beispiel und fügt zusätzliche Informationen hinzu.
 
 
 ```PowerShell
@@ -118,14 +118,14 @@ $NameSpace| sort __namespace  | Format-Table @{Expression = "__Namespace"; Label
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**\_\_System Class**](--systemclass.md)
+[**\_\_SystemClass**](--systemclass.md)
 </dt> <dt>
 
-[WMI-System Klassen](wmi-system-classes.md)
+[WMI-Systemklassen](wmi-system-classes.md)
 </dt> </dl>
 
  

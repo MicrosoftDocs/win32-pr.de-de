@@ -1,5 +1,5 @@
 ---
-description: 'GetErrorEx-Methode der Msvm_ConcreteJob Klasse: Ruft die Fehlerobjekte für den Auftrag ab, sofern vorhanden.'
+description: 'GetErrorEx-Methode der Msvm_ConcreteJob-Klasse: Ruft die Fehlerobjekte für den Auftrag ab, sofern vorhanden.'
 ms.assetid: B4B4F60C-9221-4125-8D42-F0F1D32C3E79
 title: GetErrorEx-Methode der Msvm_ConcreteJob-Klasse
 ms.topic: reference
@@ -13,16 +13,16 @@ api_type:
 - COM
 api_location:
 - vmms.exe
-ms.openlocfilehash: 67abbd06fdaae9c23cca53f5516586f45216f20d
-ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
+ms.openlocfilehash: f0e6af7883ec5aa1b7c0a714b822c8a0d8fd4a33dcda32ab4772e0573d60d046
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2021
-ms.locfileid: "108119348"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118149793"
 ---
 # <a name="geterrorex-method-of-the-msvm_concretejob-class"></a>GetErrorEx-Methode der Msvm \_ ConcreteJob-Klasse
 
-Ruft die Fehlerobjekte für den Auftrag ab, sofern vorhanden. Wenn der Auftrag ausgeführt wird oder ohne Fehler beendet wurde, gibt diese Methode keine [**Msvm \_ Error-Instanz**](msvm-error.md) zurück. Wenn der Auftrag jedoch aufgrund eines internen Problems fehlgeschlagen ist oder weil der Auftrag von einem Client beendet wurde, wird mindestens eine **Msvm \_ Error-Instanz** zurückgegeben.
+Ruft die Fehlerobjekte für den Auftrag ab, sofern vorhanden. Wenn der Auftrag ausgeführt wird oder ohne Fehler beendet wurde, gibt diese Methode keine [**\_ Msvm-Fehlerinstanz**](msvm-error.md) zurück. Wenn der Auftrag jedoch aufgrund eines internen Problems fehlgeschlagen ist oder weil der Auftrag von einem Client beendet wurde, wird mindestens eine **\_ Msvm-Fehlerinstanz** zurückgegeben.
 
 ## <a name="syntax"></a>Syntax
 
@@ -44,7 +44,7 @@ uint32 GetErrorEx(
 
 Typ: **\[ \] Zeichenfolge**
 
-Wenn der Betriebsstatus des Auftrags nicht 2 (OK) ist, gibt diese Methode mindestens eine eingebettete Instanz der [**Msvm \_ Error-Klasse**](msvm-error.md) im CIM-XML-Format zurück, die die im Auftrag aufgetretenen Fehler darstellen. Wenn der Betriebsstatus des Auftrags 2 (OK) ist, wird **NULL** zurückgegeben.
+Wenn der Betriebsstatus des Auftrags nicht 2 (OK) lautet, gibt diese Methode eine oder mehrere eingebettete Instanzen der [**Msvm \_ Error-Klasse**](msvm-error.md) im CIM-XML-Format zurück, die die im Auftrag aufgetretenen Fehler darstellen. Wenn der Betriebsstatus des Auftrags 2 (OK) lautet, wird **NULL** zurückgegeben.
 
 </dd> </dl>
 
@@ -74,7 +74,7 @@ Diese Methode gibt einen der folgenden Werte zurück.
 **Timeout** (32772)
 </dt> <dt>
 
-**Ungültiger** Parameter (32773)
+**Ungültiger Parameter** (32773)
 </dt> <dt>
 
 **System wird verwendet** (32774)
@@ -92,7 +92,7 @@ Diese Methode gibt einen der folgenden Werte zurück.
 **Nicht genügend Arbeitsspeicher** (32778)
 </dt> </dl>
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
 Der Zugriff auf die [**Msvm \_ ConcreteJob-Klasse**](msvm-concretejob.md) kann durch die UAC-Filterung eingeschränkt werden. Weitere Informationen finden Sie unter [Benutzerkontensteuerung und WMI.](/windows/desktop/WmiSdk/user-account-control-and-wmi)
 
@@ -100,10 +100,10 @@ Der Zugriff auf die [**Msvm \_ ConcreteJob-Klasse**](msvm-concretejob.md) kann d
 
 
 
-| Anforderungen | Wert |
+| Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | nur Windows 8 \[ Desktop-Apps\]<br/>                                                              |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server \[ 2012-Desktop-Apps\]<br/>                                                    |
+| Unterstützte Mindestversion (Client)<br/> | \[Windows 8 Nur Desktop-Apps\]<br/>                                                              |
+| Unterstützte Mindestversion (Server)<br/> | \[Windows Server 2012 Nur Desktop-Apps\]<br/>                                                    |
 | Namespace<br/>                | Root \\ Virtualization \\ V2<br/>                                                                     |
 | MOF<br/>                      | <dl> <dt>WindowsVirtualization.V2.mof</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>Vmms.exe</dt> </dl>                     |

@@ -1,7 +1,7 @@
 ---
 description: Die Partitions-GUID des Abonnenten.
 ms.assetid: 0b2411d3-cdc1-492c-a54f-ca3d3bd8b953
-title: 'IEventSubscription3:: abonniert-Eigenschaft'
+title: IEventSubscription3::SubscriberPartitionID (Eigenschaft)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -14,14 +14,14 @@ api_name:
 api_type:
 - COM
 api_location: ''
-ms.openlocfilehash: b09c41ac1b3a90c3275daf7afa0cd90fe2bb905c
-ms.sourcegitcommit: c7add10d695482e1ceb72d62b8a4ebd84ea050f7
+ms.openlocfilehash: b8d53d7a0fee03de201da1c38fe0e0a3e28804117d4575a4743b1b375218badd
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104214284"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117916363"
 ---
-# <a name="ieventsubscription3subscriberpartitionid-property"></a>IEventSubscription3:: abonniert-Eigenschaft
+# <a name="ieventsubscription3subscriberpartitionid-property"></a>IEventSubscription3::SubscriberPartitionID (Eigenschaft)
 
 Die Partitions-GUID des Abonnenten.
 
@@ -44,11 +44,11 @@ HRESULT get_SubscriberPartitionID(
 
 ## <a name="property-value"></a>Eigenschaftswert
 
-Eine Zeichenfolge, die die GUID der Abonnenten Partition enthält.
+Eine Zeichenfolge, die die GUID der Abonnentenpartition enthält.
 
 ## <a name="error-codes"></a>Fehlercodes
 
-Diese Methode kann die Standard Rückgabewerte e \_ invalidArg, e \_ outo fmemory, e \_ unerwartet, e \_ Fail und S OK \_ zurückgeben.
+Diese Methode kann die Standard-Rückgabewerte E \_ INVALIDARG, E \_ OUTOFMEMORY, E \_ UNEXPECTED, E \_ FAIL und S \_ OK zurückgeben.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -61,7 +61,7 @@ Diese Methode kann die Standard Rückgabewerte e \_ invalidArg, e \_ outo fmemor
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 

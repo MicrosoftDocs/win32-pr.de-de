@@ -1,9 +1,9 @@
 ---
-title: Wiedergabeliste. Sättigung
-description: Das Sättigungs Attribut gibt den Sättigungswert der Dropdown Bilder an oder ruft ihn ab.
+title: PLAYLIST.saturation
+description: Das Sättigungsattribut gibt den Sättigungswert der Dropdownbilder an oder ruft sie ab.
 ms.assetid: 4c5dd3d9-828a-45c9-896a-9a702d354544
 keywords:
-- Wiedergabeliste. Sättigungs Fenster Media Player
+- PLAYLIST.saturation-Windows Media Player
 topic_type:
 - apiref
 api_name:
@@ -12,16 +12,16 @@ api_type:
 - NA
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 82eb53afeafb0754f0e754f68fd5ff785eaade8a
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 1f5ce3c576fd923dae5c7a6cb4b7227b67dbebd87c6a497fc6c48e6e453b53f7
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106351266"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118336536"
 ---
-# <a name="playlistsaturation"></a>Wiedergabeliste. Sättigung
+# <a name="playlistsaturation"></a>PLAYLIST.saturation
 
-Das **Sättigungs** Attribut gibt den Sättigungswert der Dropdown Bilder an oder ruft ihn ab.
+Das  Sättigungsattribut gibt den Sättigungswert der Dropdownbilder an oder ruft sie ab.
 
 ``` syntax
         elementID.saturation
@@ -29,11 +29,11 @@ Das **Sättigungs** Attribut gibt den Sättigungswert der Dropdown Bilder an ode
 
 ## <a name="possible-values"></a>Mögliche Werte
 
-Dieses Attribut ist eine Lese-/schreibnummer (**float**) mit einem Wert zwischen 0,0 und 2,0 mit dem Standardwert 1,0. 
+Dieses Attribut ist eine Lese-/Schreibnummer **(** **float**) mit einem Wert zwischen 0,0 und 2,0 mit dem Standardwert 1,0.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Dieses Attribut ändert den Sättigungswert der Bilder, die durch das **dropdownbackgroundimage** -Attribut und das **dropdownimage** -Attribut angegeben werden, wenn Sie angegeben wurden, und verweisen auf 8-Bit-BMP-Bilder.
+Dieses Attribut ändert den Sättigungswert der Bilder, die durch die **Attribute dropDownBackgroundImage** und **dropDownImage** angegeben werden, wenn sie angegeben wurden und auf 8-Bit-BMP-Bilder verweisen.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -41,24 +41,24 @@ Dieses Attribut ändert den Sättigungswert der Bilder, die durch das **dropdown
 
 | Anforderung | Wert |
 |--------------------|---------------------------------------------------|
-| Version<br/> | Windows Media Player 9-Serie oder höher<br/> |
+| Version<br/> | Windows Media Player 9er Serie oder höher<br/> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Wiedergabelisten Element**](playlist-element.md)
+[**PLAYLIST-Element**](playlist-element.md)
 </dt> <dt>
 
-[**Wiedergabeliste. dropdownbackgroundimage**](playlist-dropdownbackgroundimage.md)
+[**PLAYLIST.dropDownBackgroundImage**](playlist-dropdownbackgroundimage.md)
 </dt> <dt>
 
-[**Wiedergabeliste. dropdownimage**](playlist-dropdownimage.md)
+[**PLAYLIST.dropDownImage**](playlist-dropdownimage.md)
 </dt> <dt>
 
-[**Wiedergabeliste. hueshift**](playlist-hueshift.md)
+[**PLAYLIST.hueShift**](playlist-hueshift.md)
 </dt> </dl>
 
  

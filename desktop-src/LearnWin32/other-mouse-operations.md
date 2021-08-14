@@ -1,23 +1,23 @@
 ---
-title: Verschiedene Maus Vorgänge
-description: In den vorherigen Abschnitten wurden Mausklicks und Mausbewegung erläutert. Im folgenden finden Sie einige andere Vorgänge, die mit der Maus ausgeführt werden können.
+title: Verschiedene Mausvorgänge
+description: In den vorherigen Abschnitten wurden Mausklicks und Mausbewegungen erläutert. Im Folgenden finden Sie einige weitere Vorgänge, die mit der Maus ausgeführt werden können.
 ms.assetid: 6A5B953F-7032-4AA6-8B64-2E9CBB8F59F1
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: bfba63dce8116d79a557cbbbf8895f17d2a8f1b9
-ms.sourcegitcommit: ebd3ce6908ff865f1ef66f2fc96769be0aad82e1
+ms.openlocfilehash: a31877ab5a71819fa896fd1253e7391f9ed748dffff636ab9d3e8591669b7fae
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/19/2020
-ms.locfileid: "104315068"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118387966"
 ---
-# <a name="miscellaneous-mouse-operations"></a>Verschiedene Maus Vorgänge
+# <a name="miscellaneous-mouse-operations"></a>Verschiedene Mausvorgänge
 
-In den vorherigen Abschnitten wurden Mausklicks und Mausbewegung erläutert. Im folgenden finden Sie einige andere Vorgänge, die mit der Maus ausgeführt werden können.
+In den vorherigen Abschnitten wurden Mausklicks und Mausbewegungen erläutert. Im Folgenden finden Sie einige weitere Vorgänge, die mit der Maus ausgeführt werden können.
 
-## <a name="dragging-ui-elements"></a>Ziehen von UI-Elementen
+## <a name="dragging-ui-elements"></a>Ziehen von Benutzeroberflächenelementen
 
-Wenn Ihre Benutzeroberfläche das Ziehen von UI-Elementen unterstützt, gibt es eine andere Funktion, die Sie in Ihrem MouseDown-Meldungs Handler aufzurufen: [**dragdetect**](/windows/desktop/api/winuser/nf-winuser-dragdetect). Die **dragdetect** -Funktion gibt **true** zurück, wenn der Benutzer eine Mausbewegung initiiert, die als Drag & amp; Drop interpretiert werden soll. Der folgende Code zeigt, wie Sie diese Funktion verwenden.
+Wenn Die Benutzeroberfläche das Ziehen von UI-Elementen unterstützt, sollten Sie im Mauszeiger-Meldungshandler eine weitere Funktion aufrufen: [**DragDetect.**](/windows/desktop/api/winuser/nf-winuser-dragdetect) Die **DragDetect-Funktion** gibt **TRUE** zurück, wenn der Benutzer eine Mausbewegung initiiert, die als Ziehen interpretiert werden soll. Der folgende Code zeigt, wie diese Funktion verwendet wird.
 
 
 ```C++
@@ -34,18 +34,18 @@ Wenn Ihre Benutzeroberfläche das Ziehen von UI-Elementen unterstützt, gibt es 
 
 
 
-Hier ist die Idee: Wenn ein Programm Drag & Drop unterstützt, möchten Sie nicht, dass alle Mausklicks als Drag & amp; Drop interpretiert werden. Andernfalls kann der Benutzer versehentlich etwas ziehen, wenn er einfach darauf klickt (z. b. um ihn auszuwählen). Wenn eine Maus jedoch besonders empfindlich ist, kann es schwierig sein, die Maus beim Klicken immer noch perfekt zu halten. Daher definiert Windows einen Zieh Schwellenwert von einigen Pixeln. Wenn der Benutzer die Maustaste drückt, wird er nicht als Drag-Vorgang betrachtet, es sei denn, der Mauszeiger überschreitet diesen Schwellenwert. Die [**dragdetect**](/windows/desktop/api/winuser/nf-winuser-dragdetect) -Funktion testet, ob dieser Schwellenwert erreicht ist. Wenn die Funktion **true** zurückgibt, können Sie den Mauszeiger als Drag & amp; Drop interpretieren. Andernfalls ist dies nicht der Fall.
+Dies ist die Idee: Wenn ein Programm Drag & Drop unterstützt, möchten Sie nicht, dass jeder Mausklick als Ziehpunkt interpretiert wird. Andernfalls kann der Benutzer versehentlich etwas ziehen, wenn er einfach darauf klicken wollte (z. B. um es auszuwählen). Wenn eine Maus jedoch besonders sensibel ist, kann es schwierig sein, die Maus während des Klickens perfekt zu halten. Daher definiert Windows einen Ziehschwellenwert von einigen Pixeln. Wenn der Benutzer die Maustaste drückt, wird dies nicht als Ziehpunkt betrachtet, es sei denn, die Maus überschreitet diesen Schwellenwert. Die [**DragDetect-Funktion**](/windows/desktop/api/winuser/nf-winuser-dragdetect) testet, ob dieser Schwellenwert erreicht wird. Wenn die Funktion **TRUE** zurückgibt, können Sie den Mausklick als Ziehpunkt interpretieren. Andernfalls nicht.
 
 > [!Note]  
-> Wenn [**dragdetect**](/windows/desktop/api/winuser/nf-winuser-dragdetect) **false** zurückgibt, unterdrückt Windows die [**WM \_ lbuttonup**](/windows/desktop/inputdev/wm-lbuttonup) -Meldung, wenn der Benutzer die Maustaste loslässt. Verwenden Sie daher nicht **dragdetect** , es sei denn, Ihr Programm befindet sich derzeit in einem Modus, der das Ziehen unterstützt. (Z. b. Wenn ein Draggable-Element bereits ausgewählt ist.) Am Ende dieses Moduls wird ein längeres Codebeispiel angezeigt, in dem die **dragdetect** -Funktion verwendet wird.
+> Wenn [**DragDetect**](/windows/desktop/api/winuser/nf-winuser-dragdetect) **FALSE** zurückgibt, unterdrückt Windows die [**\_ WM-LBUTTONUP-Meldung,**](/windows/desktop/inputdev/wm-lbuttonup) wenn der Benutzer die Maustaste freigibt. Rufen Sie daher **DragDetect** nicht auf, es sei denn, ihr Programm befindet sich derzeit in einem Modus, der ziehen unterstützt. (Wenn z. B. bereits ein dragable UI-Element ausgewählt ist.) Am Ende dieses Moduls sehen wir ein längeres Codebeispiel, das die **DragDetect-Funktion** verwendet.
 
- 
+ 
 
-## <a name="confining-the-cursor"></a>Einschränken des Cursors
+## <a name="confining-the-cursor"></a>Einbeigen des Cursors
 
-Manchmal möchten Sie möglicherweise den Cursor auf den Client Bereich oder einen Teil des Client Bereichs einschränken. Die [**clipcursor**](/windows/desktop/api/winuser/nf-winuser-clipcursor) -Funktion schränkt die Bewegung des Cursors auf ein angegebenes Rechteck ein. Dieses Rechteck wird anstelle von Client Koordinaten in Bildschirm Koordinaten angegeben, sodass der Punkt (0,0) die obere linke Ecke des Bildschirms bedeutet. Wenn Sie Client Koordinaten in Bildschirm Koordinaten übersetzen möchten, müssen Sie die Funktion [**clientumscreen**](/windows/desktop/api/winuser/nf-winuser-clienttoscreen)aufzurufen.
+Manchmal möchten Sie den Cursor auf den Clientbereich oder einen Teil des Clientbereichs beschränken. Die [**ClipCursor-Funktion**](/windows/desktop/api/winuser/nf-winuser-clipcursor) schränkt die Bewegung des Cursors auf ein angegebenes Rechteck ein. Dieses Rechteck wird in Bildschirmkoordinaten und nicht in Clientkoordinaten angegeben, sodass der Punkt (0, 0) die obere linke Ecke des Bildschirms bedeutet. Um Clientkoordinaten in Bildschirmkoordinaten zu übersetzen, rufen Sie die Funktion [**ClientToScreen auf.**](/windows/desktop/api/winuser/nf-winuser-clienttoscreen)
 
-Der folgende Code schränkt den Cursor auf den Client Bereich des Fensters ein.
+Der folgende Code beschränkt den Cursor auf den Clientbereich des Fensters.
 
 
 ```C++
@@ -66,9 +66,9 @@ Der folgende Code schränkt den Cursor auf den Client Bereich des Fensters ein.
 
 
 
-[**Clipcursor**](/windows/desktop/api/winuser/nf-winuser-clipcursor) nimmt eine [**Rect**](/previous-versions//dd162897(v=vs.85)) -Struktur, aber [**clientchanscreen**](/windows/desktop/api/winuser/nf-winuser-clienttoscreen) übernimmt eine [**Punkt**](/previous-versions//dd162805(v=vs.85)) Struktur. Ein Rechteck wird durch seine oberen linken und unteren rechten Punkte definiert. Sie können den Cursor auf einen beliebigen rechteckigen Bereich beschränken, einschließlich Bereiche außerhalb des Fensters, aber das Einschränken des Cursors auf den Client Bereich ist eine typische Methode zur Verwendung der Funktion. Die Beschränkung des Cursors auf eine Region außerhalb des Fensters wäre ungewöhnlich, und Benutzer würden Sie wahrscheinlich als Fehler betrachten.
+[**ClipCursor**](/windows/desktop/api/winuser/nf-winuser-clipcursor) übernimmt eine [**RECT-Struktur,**](/previous-versions//dd162897(v=vs.85)) [**aber ClientToScreen**](/windows/desktop/api/winuser/nf-winuser-clienttoscreen) eine [**POINT-Struktur.**](/previous-versions//dd162805(v=vs.85)) Ein Rechteck wird durch die Punkte oben links und unten rechts definiert. Sie können den Cursor auf einen beliebigen rechteckigen Bereich beschränken, einschließlich Bereichen außerhalb des Fensters, aber das Beschränken des Cursors auf den Clientbereich ist eine typische Möglichkeit, die Funktion zu verwenden. Das Wiederherstellen des Cursors in einen Bereich außerhalb Ihres Fensters wäre ungewöhnlich, und Benutzer würden ihn wahrscheinlich als Fehler merken.
 
-Um die Einschränkung zu entfernen, wenden Sie [**clipcursor**](/windows/desktop/api/winuser/nf-winuser-clipcursor) mit dem Wert **null** an.
+Um die Einschränkung zu entfernen, rufen [**Sie ClipCursor**](/windows/desktop/api/winuser/nf-winuser-clipcursor) mit dem Wert **NULL** auf.
 
 
 ```C++
@@ -77,14 +77,14 @@ ClipCursor(NULL);
 
 
 
-## <a name="mouse-tracking-events-hover-and-leave"></a>Maus Verfolgungs Ereignisse: hover und Leave
+## <a name="mouse-tracking-events-hover-and-leave"></a>Mausnachverfolgungsereignisse: Zeigen und Verlassen
 
-Zwei andere Maus Meldungen sind standardmäßig deaktiviert, können aber für einige Anwendungen nützlich sein:
+Zwei andere Mausnachrichten sind standardmäßig deaktiviert, können aber für einige Anwendungen nützlich sein:
 
--   [**WM \_ MouseHover**](/windows/desktop/inputdev/wm-mousehover): der Cursor befindet sich für einen bestimmten Zeitraum über den Client Bereich.
--   [**WM \_ MouseLeave**](/windows/desktop/inputdev/wm-mouseleave): der Cursor hat den Client Bereich verlassen.
+-   [**WM \_ MOUSEHOVER:**](/windows/desktop/inputdev/wm-mousehover)Der Cursor hat über einen festen Zeitraum auf den Clientbereich zeigen können.
+-   [**WM \_ MOUSELEAVE:**](/windows/desktop/inputdev/wm-mouseleave)Der Cursor hat den Clientbereich verlassen.
 
-Um diese Nachrichten zu aktivieren, müssen Sie die [**trackmousevent**](/windows/desktop/api/winuser/nf-winuser-trackmouseevent) -Funktion aufrufen.
+Um diese Nachrichten zu aktivieren, rufen Sie die [**TrackMouseEvent-Funktion**](/windows/desktop/api/winuser/nf-winuser-trackmouseevent) auf.
 
 
 ```C++
@@ -98,11 +98,11 @@ Um diese Nachrichten zu aktivieren, müssen Sie die [**trackmousevent**](/window
 
 
 
-Die [**trackmousevent**](/windows/win32/api/winuser/ns-winuser-trackmouseevent) -Struktur enthält die Parameter für die Funktion. Der **dwFlags** -Member der-Struktur enthält Bitflags, die angeben, an welchen nach Verfolgungs Meldungen Sie interessiert sind. Sie können sowohl [**WM \_ moust Hover**](/windows/desktop/inputdev/wm-mousehover) als auch [**WM \_ MouseLeave**](/windows/desktop/inputdev/wm-mouseleave)erhalten, wie hier gezeigt, oder nur eine der beiden Optionen. Der **dwhovertime** -Member gibt an, wie lange der Mauszeiger bewegen muss, bevor das System eine Hover-Nachricht generiert. Dieser Wert wird in Millisekunden angegeben. Der **\_ Standard** Wert der Konstanten Hover bedeutet, dass die Standardeinstellung des Systems verwendet wird
+Die [**TRACKMOUSEEVENT-Struktur**](/windows/win32/api/winuser/ns-winuser-trackmouseevent) enthält die Parameter für die Funktion. Der **dwFlags-Member** der -Struktur enthält Bitflags, die angeben, an welchen Nachverfolgungsmeldungen Sie interessiert sind. Sie können sowohl [**WM \_ MOUSEHOVER**](/windows/desktop/inputdev/wm-mousehover) als auch [**WM \_ MOUSELEAVE**](/windows/desktop/inputdev/wm-mouseleave)abrufen, wie hier gezeigt, oder nur eine der beiden. Der **dwHoverTime-Member** gibt an, wie lange die Maus zeigen muss, bevor das System eine Hovermeldung generiert. Dieser Wert wird in Millisekunden angegeben. Die Konstante **HOVER \_ DEFAULT** bedeutet, dass die Systemstandardeinstellung verwendet wird.
 
-Nachdem Sie eine der angeforderten Nachrichten erhalten haben, setzt die [**TrackMouseEvent**](/windows/desktop/api/winuser/nf-winuser-trackmouseevent) -Funktion zurück. Sie müssen ihn erneut abrufen, um eine weitere nach Verfolgungs Meldung zu erhalten. Sie sollten jedoch bis zur nächsten Mausbewegung warten, bevor Sie **TrackMouseEvent** erneut aufrufen. Andernfalls wird das Fenster möglicherweise mit nach Verfolgungs Meldungen überflutet. Wenn der Mauszeiger z. b. mit der Maus bewegt wird, generiert das System weiterhin einen Stream von [**WM- \_ MouseHover**](/windows/desktop/inputdev/wm-mousehover) -Nachrichten, während die Maus stationär ist. Sie möchten keine weitere **WM- \_ MouseHover** -Nachricht, bis der Mauszeiger an eine andere Stelle bewegt wird, und dann erneut darauf zeigen.
+Nachdem Sie eine der angeforderten Nachrichten erhalten haben, wird die [**TrackMouseEvent-Funktion**](/windows/desktop/api/winuser/nf-winuser-trackmouseevent) zurückgesetzt. Sie müssen sie erneut aufrufen, um eine weitere Nachverfolgungsmeldung zu erhalten. Sie sollten jedoch warten, bis die nächste Mauszeigermeldung angezeigt wird, bevor **Sie TrackMouseEvent** erneut aufrufen. Andernfalls wird Ihr Fenster möglicherweise mit Nachverfolgungsmeldungen überflutet. Wenn die Maus z. B. mit dem Mauszeiger darauf zeigen würde, würde das System weiterhin einen Stream von [**WM \_ MOUSEHOVER-Nachrichten**](/windows/desktop/inputdev/wm-mousehover) generieren, während die Maus stationär ist. Sie möchten eigentlich keine weitere **WM \_ MOUSEHOVER-Nachricht,** bis die Maus an eine andere Stelle bewegt und wieder bewegt wird.
 
-Hier ist eine kleine Hilfsklasse, die Sie zum Verwalten von Maus Verfolgungs Ereignissen verwenden können.
+Hier ist eine kleine Hilfsklasse, mit der Sie Mausnachverfolgungsereignisse verwalten können.
 
 
 ```C++
@@ -138,7 +138,7 @@ public:
 
 
 
-Im nächsten Beispiel wird gezeigt, wie Sie diese Klasse in der Fenster Prozedur verwenden.
+Das nächste Beispiel zeigt, wie Sie diese Klasse in Ihrer Fensterprozedur verwenden.
 
 
 ```C++
@@ -174,9 +174,9 @@ LRESULT MainWindow::HandleMessage(UINT uMsg, WPARAM wParam, LPARAM lParam)
 
 
 
-Maus Verfolgungs Ereignisse erfordern eine zusätzliche Verarbeitung durch das System, sodass Sie deaktiviert bleiben, wenn Sie Sie nicht benötigen.
+Mausverfolgungsereignisse erfordern eine zusätzliche Verarbeitung durch das System. Lassen Sie sie daher deaktiviert, wenn Sie sie nicht benötigen.
 
-Aus Gründen der Vollständigkeit ist hier eine Funktion, die das System auf das standardmäßige Hover-Timeout abfragt.
+Aus Gründen der Vollständigkeit finden Sie hier eine Funktion, die das System nach dem Standardmäßigen Timeout für das Hovern abfragt.
 
 
 ```C++
@@ -210,14 +210,14 @@ BOOL IsMouseWheelPresent()
 
 
 
-Wenn der Benutzer das Mausrad dreht, empfängt das Fenster mit dem Fokus eine [**WM- \_ MouseWheel**](/windows/desktop/inputdev/wm-mousewheel) -Nachricht. Der *wParam* -Parameter dieser Nachricht enthält einen ganzzahligen Wert, der als *Delta* bezeichnet wird und misst, wie weit das Rad gedreht wurde. Das Delta verwendet beliebige Einheiten, wobei 120 Einheiten als Drehung definiert werden, die zum Ausführen einer Aktion erforderlich ist. Die Definition einer Aktion hängt natürlich von Ihrem Programm ab. Wenn das Mausrad z. b. zum Scrollen von Text verwendet wird, werden die einzelnen 120 Einheiten der Drehung in einer Textzeile angezeigt.
+Wenn der Benutzer das Mausrad dreht, erhält das Fenster mit dem Fokus eine [**WM \_ MOUSEWHEEL-Meldung.**](/windows/desktop/inputdev/wm-mousewheel) Der *wParam-Parameter* dieser Nachricht enthält einen ganzzahligen Wert namens *Delta,* der misst, wie weit das Rad gedreht wurde. Das Delta verwendet beliebige Einheiten, wobei 120 Einheiten als Drehung definiert sind, die erforderlich ist, um eine "Aktion" auszuführen. Natürlich hängt die Definition einer Aktion von Ihrem Programm ab. Wenn z. B. das Mausrad zum Scrollen von Text verwendet wird, führt jede 120 Drehungseinheit einen Bildlauf um eine Textzeile aus.
 
-Das Vorzeichen des Deltas gibt die Richtung der Drehung an:
+Das Vorzeichen des Deltas gibt die Drehrichtung an:
 
--   Positiv: Drehen Sie vorwärts, vom Benutzer entfernt.
--   Negativ: Drehen Sie rückwärts zu dem Benutzer.
+-   Positiv: Drehen Sie vorwärts, weg vom Benutzer.
+-   Negativ: Drehen Sie rückwärts in Richtung des Benutzers.
 
-Der Wert des Deltas wird zusammen mit einigen zusätzlichen Flags in *wParam* platziert. Verwenden Sie das [**get \_ Wheel \_ Delta \_ wParam**](/windows/desktop/api/winuser/nf-winuser-get_wheel_delta_wparam) -Makro, um den Wert des Deltas zu erhalten.
+Der Wert des Deltas wird zusammen mit einigen zusätzlichen Flags in *wParam* platziert. Verwenden Sie das [**GET \_ WHEEL DELTA \_ \_ WPARAM-Makro,**](/windows/desktop/api/winuser/nf-winuser-get_wheel_delta_wparam) um den Wert des Deltas abzurufen.
 
 
 ```C++
@@ -226,12 +226,12 @@ int delta = GET_WHEEL_DELTA_WPARAM(wParam);
 
 
 
-Wenn das Mausrad eine hohe Auflösung aufweist, kann der absolute Wert des Deltas kleiner als 120 sein. Wenn es in diesem Fall sinnvoll ist, die Aktion in kleineren Schritten durchzuführen, können Sie dies tun. Beispielsweise kann Text durch Inkremente von weniger als einer Zeile scrollen. Akkumulieren Sie andernfalls das gesamte Delta, bis das Rad genug dreht, um die Aktion auszuführen. Speichern Sie das nicht verwendete Delta in einer Variablen, und führen Sie die Aktion aus, wenn 120 Einheiten akkumuliert werden (entweder positiv oder negativ).
+Wenn das Mausrad eine hohe Auflösung auf hat, kann der absolute Wert des Deltas kleiner als 120 sein. Wenn es in diesem Fall sinnvoll ist, dass die Aktion in kleineren Schritten ausgeführt wird, können Sie dies tun. Beispielsweise kann Text in Schritten von weniger als einer Zeile scrollen. Andernfalls akkumulieren Sie das gesamte Delta, bis das Rad so lange gedreht wird, um die Aktion auszuführen. Store das nicht verwendete Delta in einer Variablen, und führen Sie die Aktion aus, wenn sich 120 Einheiten ansammeln (entweder positiv oder negativ).
 
 ## <a name="next"></a>Nächste
 
-[Tastatureingabe](keyboard-input.md)
+[Tastatureingaben](keyboard-input.md)
 
- 
+ 
 
- 
+ 
