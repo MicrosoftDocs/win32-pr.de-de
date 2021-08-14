@@ -1,7 +1,7 @@
 ---
-description: Die blockoutputpin-Methode blockiert die PIN.
+description: Die BlockOutputPin-Methode blockiert die Stecknadel.
 ms.assetid: 49f6b8da-a8b2-482d-b70d-2c68a1b45a10
-title: Cdynamicoutputpin. blockoutputpin-Methode (amfilter. h)
+title: CDynamicOutputPin.BlockOutputPin-Methode (Amfilter.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -16,16 +16,16 @@ api_location:
 - Strmbase.dll
 - Strmbasd.lib
 - Strmbasd.dll
-ms.openlocfilehash: 3998774550363b7d22e05ca491f1d76ba7f2ff2b
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 9dc1f4cdafd732821398ee04e127c0525798dd6cc02f67f8af5d977b195a6a74
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106371357"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119983360"
 ---
-# <a name="cdynamicoutputpinblockoutputpin-method"></a>Cdynamicoutputpin. blockoutputpin-Methode
+# <a name="cdynamicoutputpinblockoutputpin-method"></a>CDynamicOutputPin.BlockOutputPin-Methode
 
-Die- `BlockOutputPin` Methode blockiert die PIN. Während die PIN blockiert ist, wartet die [**cdynamicoutputpin:: startusingoutputpin**](cdynamicoutputpin-startusingoutputpin.md) -Methode auf die Blockierung der PIN. Der blockierte Zustand verhindert, dass die Ausgabe-PIN Beispiele bereitstellt, das Ausgabeformat ändert oder eine erneute Verbindung herstellt.
+Die `BlockOutputPin` -Methode blockiert die Stecknadel. Während der Pin blockiert ist, wartet die [**CDynamicOutputPin::StartUsingOutputPin-Methode**](cdynamicoutputpin-startusingoutputpin.md) darauf, dass die Blockierung des Pins aufgehoben wird. Der blockierte Zustand verhindert, dass der Ausgabepin Stichproben liefert, das Ausgabeformat ändert oder sich selbst erneut verbindet.
 
 ## <a name="syntax"></a>Syntax
 
@@ -44,9 +44,9 @@ Diese Methode hat keine Parameter.
 
 Diese Methode gibt keinen Wert zurück.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Halten Sie vor dem Aufrufen dieser Methode den kritischen Abschnitt [**cdynamicoutputpin:: m \_ blockstatus eLOCK**](cdynamicoutputpin-m-blockstatelock.md) . Diese Methode kann nicht aufgerufen werden, wenn ein streamingingthread die PIN verwendet, um Daten bereitzustellen oder um die Verbindung zu ändern. Um zu überprüfen, ob ein streamingthread die PIN verwendet, können Sie die [**cdynamicoutputpin:: streamingthreadusingoutputpin**](cdynamicoutputpin-streamingthreadusingoutputpin.md) -Methode aufrufen.
+Halten Sie vor dem Aufrufen dieser Methode den kritischen Abschnitt [**CDynamicOutputPin::m \_ BlockStateLock**](cdynamicoutputpin-m-blockstatelock.md) bereit. Rufen Sie diese Methode nicht auf, wenn ein Streamingthread den Pin verwendet, um Daten zu übermitteln oder die Verbindung zu ändern. Um zu überprüfen, ob ein Streamingthread den Pin verwendet, rufen Sie die [**CDynamicOutputPin::StreamingThreadUsingOutputPin-Methode**](cdynamicoutputpin-streamingthreadusingoutputpin.md) auf.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -54,16 +54,16 @@ Halten Sie vor dem Aufrufen dieser Methode den kritischen Abschnitt [**cdynamico
 
 | Anforderung | Wert |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>Amfilter. h (Include Streams. h)</dt> </dl>                                                                                  |
-| Bibliothek<br/> | <dl> " <dt>Straumbase. lib" (Einzelhandels Builds);</dt> " <dt>Straumbasd. lib" (Debugbuilds)</dt> </dl> |
+| Header<br/>  | <dl> <dt>Amfilter.h (include Streams.h)</dt> </dl>                                                                                  |
+| Bibliothek<br/> | <dl> <dt>Strmbase.lib (Verkaufsbuilds); </dt> <dt>Strmbasd.lib (Debugbuilds)</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Cdynamicoutputpin-Klasse**](cdynamicoutputpin.md)
+[**CDynamicOutputPin-Klasse**](cdynamicoutputpin.md)
 </dt> </dl>
 
  

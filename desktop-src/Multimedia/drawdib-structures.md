@@ -1,40 +1,40 @@
 ---
-title: Drawdib-Strukturen
-description: Drawdib-Strukturen
+title: DrawDib-Strukturen
+description: DrawDib-Strukturen
 ms.assetid: dde56eae-2f20-4c76-9d3d-8f8fe84217a9
 keywords:
-- Windows Multimedia, drawdib-Strukturen
-- Multimedia-, drawdib-Strukturen
-- Video für Windows (Vfw), drawdib-Strukturen
-- VFW (Video für Windows), drawdib-Strukturen
-- Drawdib, Strukturen
-- Drawdib-Referenz, Strukturen
-- Verweis für drawdib, Strukturen
+- Windows multimedia,DrawDib-Strukturen
+- multimedia,DrawDib-Strukturen
+- Video für Windows (VFW),DrawDib-Strukturen
+- VFW (Video für Windows),DrawDib-Strukturen
+- DrawDib,structures
+- DrawDib-Referenz,Strukturen
+- Referenz für DrawDib,structures
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: d8e725b4a241780f3837d264a5ed2a7e9ee60406
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: 08d020b40399a148a08243d6e547ee7ba35418a1d17e0b233bcaa5c3bd9bd545
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "103947999"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118375187"
 ---
-# <a name="drawdib-structures"></a>Drawdib-Strukturen
+# <a name="drawdib-structures"></a>DrawDib-Strukturen
 
-Die folgende Struktur wird mit drawdib verwendet.
+Die folgende -Struktur wird mit DrawDib verwendet.
 
-[**Drawdibtime**](/windows/desktop/api/Vfw/ns-vfw-drawdibtime)
+[**DRAWDIBTIME**](/windows/desktop/api/Vfw/ns-vfw-drawdibtime)
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
 <dl> <dt>
 
-[Drawdib-Referenz](drawdib-reference.md)
+[DrawDib-Referenz](drawdib-reference.md)
 </dt> </dl>
 
- 
+ 
 
- 
+ 
 
 
 

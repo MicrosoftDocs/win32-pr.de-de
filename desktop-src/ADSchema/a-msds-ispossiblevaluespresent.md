@@ -1,11 +1,11 @@
 ---
-title: ms-DS-ist-möglichen-Values-Present-Attribut
-description: Dieses Attribut gibt an, ob ms-DS-Claim-possible-Values für die verknüpfte Ressourcen Eigenschaft einen Wert aufweisen muss oder keinen Wert aufweisen darf.
+title: ms-DS-Is-Possible-Values-Present-Attribut
+description: Dieses Attribut identifiziert, ob ms-DS-Claim-Possible-Values für die verknüpfte Ressourceneigenschaft einen Wert oder keinen Wert aufweisen muss.
 ms.assetid: a63d7937-5045-4d38-a436-b47acde6399d
 ms.tgt_platform: multiple
 keywords:
-- "\"ms-DS-is-possible-Values-Present Attribute ad Schema\""
-- AD-Schema des msDS-ispossiblevaluespresent-Attributs
+- ms-DS-is-Possible-Values-Present-Attribut AD-Schema
+- msDS-IsPossibleValuesPresent-Attribut AD-Schema
 topic_type:
 - apiref
 api_name:
@@ -14,29 +14,29 @@ api_type:
 - Schema
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: f3acac2c36b2962ff2ae9f4c3f36375f09abe0a8
-ms.sourcegitcommit: b77ace27b0432e7cd3863191b11926be032fbe2f
+ms.openlocfilehash: 815c6a5c90aa331390bbe5e35b97bf93e1230dcfbdddbfcfbd078fc97e935ba8
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "104392310"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118426100"
 ---
-# <a name="ms-ds-is-possible-values-present-attribute"></a>ms-DS-ist-möglichen-Values-Present-Attribut
+# <a name="ms-ds-is-possible-values-present-attribute"></a>ms-DS-Is-Possible-Values-Present-Attribut
 
-Dieses Attribut gibt an, ob ms-DS-Claim-possible-Values für die verknüpfte Ressourcen Eigenschaft einen Wert aufweisen muss oder keinen Wert aufweisen darf.
+Dieses Attribut identifiziert, ob ms-DS-Claim-Possible-Values für die verknüpfte Ressourceneigenschaft einen Wert oder keinen Wert aufweisen muss.
 
 
 
 | Eingabe | Wert |
 |-------------------|--------------------------------------|
-| CN                | ms-DS-ist-mögliche Werte-vorhanden     |
-| LDAP-Display-Name | MSDS-ispossiblevaluespresent         |
+| CN                | ms-DS-is-possible-values-Present     |
+| Ldap-Anzeigename | msDS-IsPossibleValuesPresent         |
 | Size              | \-                                   |
-| Berechtigung aktualisieren  | \-                                   |
-| Aktualisierungshäufigkeit  | \-                                   |
+| Aktualisieren von Berechtigungen  | \-                                   |
+| Updatehäufigkeit  | \-                                   |
 | Attribute-Id      | 1.2.840.113556.1.4.2186              |
 | System-ID-GUID    | 6fabdcda-8c53-204f-b1a4-9df0c67c1eb4 |
-| Syntax            | [**Booleschen**](s-boolean.md)         |
+| Syntax            | [**Boolean**](s-boolean.md)         |
 
 
 
@@ -52,16 +52,16 @@ Dieses Attribut gibt an, ob ms-DS-Claim-possible-Values für die verknüpfte Res
 |------------------------|---------------------------------------------------------|
 | Link-ID                | \-                                                      |
 | MAPI-Id                | \-                                                      |
-| System-Only            | Richtig                                                    |
-| Ist-einwertig       | Richtig                                                    |
+| System-Only            | True                                                    |
+| Ist einwertig       | True                                                    |
 | Ist indiziert             | False                                                   |
 | Im globalen Katalog      | False                                                   |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                            |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                            |
 | Range-Lower            | \-                                                      |
 | Range-Upper            | \-                                                      |
 | Search-Flags           | 0x00000000                                              |
 | System-Flags           | 0x00000010                                              |
-| In verwendete Klassen        | [**ms-DS-Werttyp**](c-msds-valuetype.md)<br/> |
+| In verwendete Klassen        | [**ms-DS-Value-Type**](c-msds-valuetype.md)<br/> |
 
 
 

@@ -1,7 +1,7 @@
 ---
 description: Erstellt ein Enumeratorobjekt. Veraltet.
 ms.assetid: 9e72bb2f-143e-4690-baef-ccded21572ec
-title: 'Idirectxfile:: kreatedenumuject-Methode (dxfile. h)'
+title: IDirectXFile::CreateEnumObject-Methode (DXFile.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -14,14 +14,14 @@ api_type:
 api_location:
 - D3dxof.lib
 - D3dxof.dll
-ms.openlocfilehash: 3d15738b78299441fe08333a41f0652f1b4224d2
-ms.sourcegitcommit: 14010c34b35fa268046c7683f021f86de08ddd0a
+ms.openlocfilehash: 1af10a0f46877a159ab8c6543fba9c1406d083e6b3f4a57cf1c41b9fb2d92612
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "103762249"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119985150"
 ---
-# <a name="idirectxfilecreateenumobject-method"></a>Idirectxfile:: deateeinumuject-Methode
+# <a name="idirectxfilecreateenumobject-method"></a>IDirectXFile::CreateEnumObject-Methode
 
 Erstellt ein Enumeratorobjekt. Veraltet.
 
@@ -42,30 +42,30 @@ HRESULT CreateEnumObject(
 
 <dl> <dt>
 
-*pvsource* \[ in\]
+*pvSource* \[ In\]
 </dt> <dd>
 
 Typ: **[ **LPVOID**](../winprog/windows-data-types.md)**
 
-Zeiger auf Daten, deren Inhalt vom Wert von dwloadoption abhängt
+Zeiger auf Daten, deren Inhalt vom Wert von dwLoadOptions abhängt
 
 </dd> <dt>
 
-*dwloadoption* \[ in\]
+*dwLoadOptions* \[ In\]
 </dt> <dd>
 
-Typ: **[ **dxfileloadoptions**](dxfile.md)**
+Typ: **[ **DXFILELOADOPTIONS**](dxfile.md)**
 
-Der-Wert, der die Quelle der Daten angibt. Bei diesem Wert kann es sich um eines der dxfileload \_ xxx-Flags in [dxfile-Konstanten](dxfile.md)handeln.
+Wert, der die Quelle der Daten angibt. Dieser Wert kann eines der DXFILELOAD \_ xxx-Flags in [DXFILE-Konstanten sein.](dxfile.md)
 
 </dd> <dt>
 
-*ppumubj* \[ Out, retval\]
+*ppEnumObj* \[ out, retval\]
 </dt> <dd>
 
-Typ: **[ **lpdirectxfileerumubject**](idirectxfileenumobject.md)\***
+Typ: **[ **LPDIRECTXFILEENUMOBJECT**](idirectxfileenumobject.md)\***
 
-Adresse eines Zeigers auf eine [**idirectxfileenumubject**](idirectxfileenumobject.md) -Schnittstelle, die das erstellte Enumeratorobjekt darstellt.
+Adresse eines Zeigers auf eine [**IDirectXFileEnumObject-Schnittstelle,**](idirectxfileenumobject.md) die das erstellte Enumeratorobjekt darstellt.
 
 </dd> </dl>
 
@@ -73,11 +73,11 @@ Adresse eines Zeigers auf eine [**idirectxfileenumubject**](idirectxfileenumobje
 
 Typ: **[ **HRESULT**](https://msdn.microsoft.com/library/Bb401631(v=MSDN.10).aspx)**
 
-Wenn die Methode erfolgreich ausgeführt wird, ist dxfile OK der Rückgabewert \_ . Wenn die Methode fehlschlägt, kann der Rückgabewert einer der folgenden sein: dxfileerr \_ badzuweisung, dxfileerr \_ badfilefloatsize, dxfileerr \_ badfiletype, dxfileerr \_ badfileversion, dxfileerr \_ badresource, dxfileerr \_ badvalue, dxfileerr file \_ otfound, dxfileerr \_ resourcenotfound, dxfileerr \_ urlnotfound.
+Wenn die Methode erfolgreich ist, lautet der Rückgabewert DXFILE \_ OK. Wenn die Methode fehlschlägt, kann der Rückgabewert einer der folgenden Werte sein: DXFILEERR \_ BADALLOC, DXFILEERR \_ BADFILEFLOATSIZE, DXFILEERR \_ BADFILETYPE, DXFILEERR \_ BADFILEVERSION, DXFILEERR \_ BADRESOURCE, DXFILEERR \_ BADVALUE, DXFILEERR \_ FILENOTFOUND, DXFILEERR \_ RESOURCENOTFOUND, DXFILEERR \_ URLNOTFOUND.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Nachdem Sie diese Methode verwendet haben, verwenden Sie eine der idirectxfileenumubject-Methoden, um ein Datenobjekt abzurufen.
+Verwenden Sie nach der Verwendung dieser Methode eine der IDirectXFileEnumObject-Methoden, um ein Datenobjekt abzurufen.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -85,16 +85,16 @@ Nachdem Sie diese Methode verwendet haben, verwenden Sie eine der idirectxfileen
 
 | Anforderung | Wert |
 |--------------------|---------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>Dxfile. h</dt> </dl>   |
-| Bibliothek<br/> | <dl> <dt>D3dxof. lib</dt> </dl> |
+| Header<br/>  | <dl> <dt>DXFile.h</dt> </dl>   |
+| Bibliothek<br/> | <dl> <dt>D3dxof.lib</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[Idirectxfile](idirectxfile.md)
+[IDirectXFile](idirectxfile.md)
 </dt> </dl>
 
  

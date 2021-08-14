@@ -1,7 +1,7 @@
 ---
-description: 'CImageAllocator::m_pFilter Member: Die m pFilter-Membervariable ist ein Zeiger \_ auf den besitzenden Filter.'
+description: 'CImageAllocator::m_pFilter Member: Die \_ m pFilter-Membervariable ist ein Zeiger auf den besitzenden Filter.'
 ms.assetid: 57ba31bb-e047-4046-a58d-6ca39d6093f8
-title: CImageAllocator::m_pFilter Member (Winutil.h)
+title: CImageAllocator::m_pFilter-Member (Winutil.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -16,12 +16,12 @@ api_location:
 - Strmbase.dll
 - Strmbasd.lib
 - Strmbasd.dll
-ms.openlocfilehash: f62a7e9ce7a9449072cfdd318330f5bfae0bbb16
-ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
+ms.openlocfilehash: f68e87c58c66ab6d1a910bbf8f7e4f7d91b71e7f11756d6b1d089eee24d95b56
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2021
-ms.locfileid: "108085658"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118402667"
 ---
 # <a name="cimageallocatorm_pfilter-member"></a>CImageAllocator::m \_ pFilter-Member
 
@@ -40,10 +40,10 @@ CBaseFilter *m_pFilter;
 
 
 
-| Anforderungen | Wert |
+| Anforderung | Wert |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>Winutil.h (einschließlich Streams.h)</dt> </dl>                                                                                   |
-| Bibliothek<br/> | <dl> <dt>Strmbase.lib (Einzelhandels-Builds); </dt> <dt>Strmbasd.lib (Debugbuilds)</dt> </dl> |
+| Header<br/>  | <dl> <dt>Winutil.h (include Streams.h)</dt> </dl>                                                                                   |
+| Bibliothek<br/> | <dl> <dt>Strmbase.lib (Verkaufsbuilds); </dt> <dt>Strmbasd.lib (Debugbuilds)</dt> </dl> |
 
 
 

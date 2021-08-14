@@ -1,26 +1,26 @@
 ---
-title: VML-Entfernungs Attribut
-description: VML-Entfernungs Attribut
+title: VML-Entfernungsattribut
+description: VML-Entfernungsattribut
 ms.assetid: 8f5d2b91-011f-4788-80ac-b6d851bea5fa
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 73f31145f011dd58e48a3c1642d638a175f6bb15
-ms.sourcegitcommit: 592c9bbd22ba69802dc353bcb5eb30699f9e9403
+ms.openlocfilehash: e27dfe1fefafd10da8797e2b0b61f06105d2843657190d51d62f5c9b5761dd2c
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "104390674"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118346760"
 ---
-# <a name="vml-distance-attribute"></a>VML-Entfernungs Attribut
+# <a name="vml-distance-attribute"></a>VML-Entfernungsattribut
 
-In diesem Thema wird VML beschrieben, eine Funktion, die ab Windows Internet Explorer 9 veraltet ist. Webseiten und Anwendungen, die auf VML basieren, sollten zu SVG oder anderen allgemein unterstützten Standards migriert werden.
+In diesem Thema wird VML beschrieben, ein Feature, das ab Windows Internet Explorer 9 als veraltet gilt. Webseiten und Anwendungen, die auf VML basieren, sollten zu SVG oder anderen allgemein unterstützten Standards migriert werden.
 
 > [!Note]  
-> Ab Dezember 2011 wurde dieses Thema archiviert. Daher wird er nicht mehr aktiv verwaltet. Weitere Informationen finden Sie unter [archivierte Inhalte](/previous-versions/windows/internet-explorer/ie-developer/). Informationen, Empfehlungen und Anleitungen zur aktuellen Version von Windows Internet Explorer finden Sie im [Internet Explorer Developer Center](https://msdn.microsoft.com/ie/).
+> Seit Dezember 2011 wurde dieses Thema archiviert. Daher wird sie nicht mehr aktiv verwaltet. Weitere Informationen finden Sie unter [Archivierter Inhalt.](/previous-versions/windows/internet-explorer/ie-developer/) Informationen, Empfehlungen und Anleitungen zur aktuellen Version von Windows Internet Explorer finden Sie unter [Internet Explorer Developer Center.](https://msdn.microsoft.com/ie/)
 
- 
+ 
 
-Definiert den Ablage Abstand einer Legende. Lese-/Schreibzugriff. **Zeichenfolge**.
+Definiert den Ablageabstand eines Aufrufs. Lese-/Schreibzugriff. **Zeichenfolge**.
 
 **Gilt für**
 
@@ -28,14 +28,14 @@ Definiert den Ablage Abstand einer Legende. Lese-/Schreibzugriff. **Zeichenfolge
 
 **Tagsyntax**
 
-<o: *Element* Distance = " *Ausdruck* " >
+<o: *element* distance=" *ausdruck* ">
 
 **Anmerkungen**
 
-Der Ablage Abstand einer Legende wird vom Rand der Form gemessen, in der die zeigerlinie beginnt und die absolute Länge des Entfernungs Werts fortsetzt.
+Der Ablageabstand eines Aufrufs wird vom Rand der Form gemessen, an dem die Zeigerlinie beginnt und die absolute Länge des Entfernungswerts fortsetzt.
 
 *Microsoft Office Extensions-Attribut*
 
- 
+ 
 
- 
+ 

@@ -1,22 +1,22 @@
 ---
-title: Beispiel Code für die Typumwandlung von objectSID in eine bindbare Zeichenfolge
-description: Dieses Thema enthält ein Codebeispiel, in dem eine objectSID in eine bindbare Zeichenfolge konvertiert wird, um einer Gruppe in einer auf der Ebene basierenden Domäne einen Member hinzuzufügen, der zu einer untergeordneten Domäne gehört.
+title: Beispielcode zum Konvertieren einer objectSid in eine bindbare Zeichenfolge
+description: Dieses Thema enthält ein Codebeispiel, in dem eine objectSid in eine bindbare Zeichenfolge konvertiert wird, um einer Gruppe in einer übergeordneten Domäne ein Mitglied hinzuzufügen, das zu einer Downleveldomäne gehört.
 ms.assetid: 8308c2e1-1a6f-4bbe-84fd-03b5fe13f0ec
 ms.tgt_platform: multiple
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 27a6b8d58bdffba73f5b765e0fa6570cbc15bf5f
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: 883e9c2b00a9f874424070b141a6a41da4727d8c6d91b794cb4dd49322a06616
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "103855451"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118191090"
 ---
-# <a name="example-code-for-converting-an-objectsid-into-a-bindable-string"></a>Beispiel Code für die Typumwandlung von objectSID in eine bindbare Zeichenfolge
+# <a name="example-code-for-converting-an-objectsid-into-a-bindable-string"></a>Beispielcode zum Konvertieren einer objectSid in eine bindbare Zeichenfolge
 
-Dieses Thema enthält ein Codebeispiel, in dem eine **objectSID** in eine bindbare Zeichenfolge konvertiert wird, um einer Gruppe in einer auf der Ebene basierenden Domäne einen Member hinzuzufügen, der zu einer untergeordneten Domäne gehört.
+Dieses Thema enthält ein Codebeispiel, in dem eine **objectSid** in eine bindbare Zeichenfolge konvertiert wird, um einer Gruppe in einer übergeordneten Domäne ein Mitglied hinzuzufügen, das zu einer Downleveldomäne gehört.
 
-Im folgenden C++-Codebeispiel wird gezeigt, wie eine **objectSID** in eine bindbare Zeichenfolge konvertiert wird.
+Das folgende C++-Codebeispiel zeigt, wie sie eine **objectSid** in eine bindbare Zeichenfolge konvertieren.
 
 
 ```C++
@@ -134,9 +134,9 @@ HRESULT VariantArrayToBytes(VARIANT Variant,
 
 
 
- 
+ 
 
- 
+ 
 
 
 

@@ -1,50 +1,50 @@
 ---
-title: Ausgefülltes VML-Attribut
-description: Ausgefülltes VML-Attribut
+title: VML-Gefülltes Attribut
+description: VML-Gefülltes Attribut
 ms.assetid: c5a71a8d-5310-4e58-9153-c5cc64b0a5e0
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 232d8b36b6d272c3a1ee8c17f3ddeca023ab4708
-ms.sourcegitcommit: 592c9bbd22ba69802dc353bcb5eb30699f9e9403
+ms.openlocfilehash: c7053263f989dbbef163e04ca19e28afa882d20347b103c97cf2db3be4b8d25b
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "104474188"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118346604"
 ---
-# <a name="vml-filled-attribute"></a>Ausgefülltes VML-Attribut
+# <a name="vml-filled-attribute"></a>VML-Gefülltes Attribut
 
-In diesem Thema wird VML beschrieben, eine Funktion, die ab Windows Internet Explorer 9 veraltet ist. Webseiten und Anwendungen, die auf VML basieren, sollten zu SVG oder anderen allgemein unterstützten Standards migriert werden.
+In diesem Thema wird VML beschrieben, ein Feature, das ab Version 9 Windows Internet Explorer ist. Webseiten und Anwendungen, die auf VML basieren, sollten zu SVG oder anderen weit verbreiteten Standards migriert werden.
 
 > [!Note]  
-> Ab Dezember 2011 wurde dieses Thema archiviert. Daher wird er nicht mehr aktiv verwaltet. Weitere Informationen finden Sie unter [archivierte Inhalte](/previous-versions/windows/internet-explorer/ie-developer/). Informationen, Empfehlungen und Anleitungen zur aktuellen Version von Windows Internet Explorer finden Sie im [Internet Explorer Developer Center](https://msdn.microsoft.com/ie/).
+> Seit Dezember 2011 wurde dieses Thema archiviert. Daher wird sie nicht mehr aktiv verwaltet. Weitere Informationen finden Sie unter [Archivierter Inhalt.](/previous-versions/windows/internet-explorer/ie-developer/) Informationen, Empfehlungen und Anleitungen zur aktuellen Version von Windows Internet Explorer finden Sie im [Internet Explorer Developer Center.](https://msdn.microsoft.com/ie/)
 
- 
+ 
 
-Bestimmt, ob der geschlossene Pfad ausgefüllt wird. Lese-/Schreibzugriff. **Vgder State**.
+Bestimmt, ob der geschlossene Pfad ausgefüllt wird. Lese-/Schreibzugriff. **VgTriState**.
 
 **Gilt für**
 
-[Form](shape-element--vml.md)
+[Formen](shape-element--vml.md)
 
 **Tagsyntax**
 
-<v: *Element* ausgefüllt = " *Ausdruck* " >
+<v: *element* filled="-Ausdruck "> 
 
-**Skript Syntax**
+**Skriptsyntax**
 
-*Element* . Fill = "*Ausdruck*"
+*element* .filled="*expression*"
 
-*Ausdruck* = *Element*. ausgefüllt
+*expression* = *Element*.filled
 
 **Anmerkungen**
 
-Der Wert wird aus dem **on** -Attribut des [Fill](msdn-online-vml-fill-element.md) -Elements dupliziert.
+Der Wert wird aus dem **On-Attribut** des [Fill-Elements dupliziert.](msdn-online-vml-fill-element.md)
 
-*VML-Standard Attribut*
+*VML-Standardattribut*
 
 **Beispiel**
 
-Der Shape-Pfad ist ausgefüllt.
+Der Formpfad ist ausgefüllt.
 
 
 ```HTML
@@ -58,8 +58,8 @@ Der Shape-Pfad ist ausgefüllt.
 
 
 
-[Beispiel für ausgefülltes Attribut](/previous-versions/bb229669(v=vs.85)). (Erfordert Microsoft Internet Explorer 5 oder höher.)
+[Beispiel für ein ausgefülltes Attribut.](/previous-versions/bb229669(v=vs.85)) (Erfordert Microsoft Internet Explorer 5 oder höher.)
 
- 
+ 
 
- 
+ 

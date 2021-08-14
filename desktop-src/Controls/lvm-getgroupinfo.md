@@ -1,9 +1,9 @@
 ---
-title: LVM_GETGROUPINFO Meldung (kommstrg. h)
+title: LVM_GETGROUPINFO Meldung (Commctrl.h)
 description: Ruft Gruppeninformationen ab.
 ms.assetid: 72d84e0b-121e-473b-a34d-874234c598b6
 keywords:
-- Windows-Steuerelemente für LVM_GETGROUPINFO Meldung
+- LVM_GETGROUPINFO Windows-Steuerelemente für Nachrichten
 topic_type:
 - apiref
 api_name:
@@ -14,14 +14,14 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: b55d5b1d781e7749df97bd0c9f7782f56545dbee
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: f5c48a21a1bba0c6dd1af3fd567ea853dc922591c553ea11a935fb705ad65bf6
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104040441"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118411394"
 ---
-# <a name="lvm_getgroupinfo-message"></a>LVM \_ getgroupinfo-Meldung
+# <a name="lvm_getgroupinfo-message"></a>LVM \_ GETGROUPINFO-Meldung
 
 Ruft Gruppeninformationen ab.
 
@@ -33,18 +33,18 @@ Ruft Gruppeninformationen ab.
 </dt> <dd>Eine ID, die die Gruppe angibt, deren Informationen abgerufen werden.</dd> <dt>
 
 *lParam* 
-</dt> <dd>Ein Zeiger auf eine <a href="/windows/win32/api/commctrl/ns-commctrl-lvgroup">**orgroup**</a> -Struktur, die die abgerufenen Informationen empfängt. Legen Sie den **CBSIZE** -Member dieser Struktur auf sizeof (LVGROUP) fest. </dd> </dl>
+</dt> <dd>Ein Zeiger auf eine <a href="/windows/win32/api/commctrl/ns-commctrl-lvgroup">**LVGROUP-Struktur,**</a> die die abgerufenen Informationen empfängt. Legen Sie den **cbSize-Member** dieser Struktur auf sizeof(LVGROUP) fest. </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt die ID der Gruppe zurück, wenn erfolgreich, andernfalls-1.
+Gibt bei Erfolg die ID der Gruppe zurück, andernfalls -1.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Bevor Sie versuchen, die Kopfzeile für eine Gruppe abzurufen, stellen Sie zunächst sicher, dass die Gruppe nicht über den lbgs- \_ noheader-Stil verfügt.
+Bevor Sie versuchen, den Header für eine Gruppe abzurufen, stellen Sie zunächst sicher, dass die Gruppe nicht über den \_ LBGS NOHEADER-Stil verfügt.
 
 > [!Note]  
-> Um diese Meldung zu verwenden, müssen Sie ein Manifest bereitstellen, das Comclt32.dll Version 6,0 angibt. Weitere Informationen zu Manifesten finden Sie unter [Aktivieren von visuellen Stilen](cookbook-overview.md).
+> Um diese Meldung zu verwenden, müssen Sie ein Manifest angeben, das Comclt32.dll Version 6.0 angibt. Weitere Informationen zu Manifesten finden Sie unter [Aktivieren von visuellen Stilen.](cookbook-overview.md)
 
  
 
@@ -54,9 +54,9 @@ Bevor Sie versuchen, die Kopfzeile für eine Gruppe abzurufen, stellen Sie zunä
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>                                        |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2003 \[ -Desktop-Apps\]<br/>                                  |
-| Header<br/>                   | <dl> <dt>Kommstrg. h</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows \[Nur Vista-Desktop-Apps\]<br/>                                        |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2003-Desktop-Apps\]<br/>                                  |
+| Header<br/>                   | <dl> <dt>Commctrl.h</dt> </dl> |
 
 
 

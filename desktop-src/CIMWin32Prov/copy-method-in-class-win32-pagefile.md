@@ -1,8 +1,8 @@
 ---
-description: Kopiert die logische Auslagerungs Datei oder das im Objekt Pfad angegebene Verzeichnis an den Speicherort, der durch den Eingabeparameter angegeben wird.
+description: Kopiert die logische Auslagerungsdatei oder das verzeichnis, die bzw. das im Objektpfad angegeben ist, an den vom Eingabeparameter angegebenen Speicherort.
 ms.assetid: e1ff3e91-dc30-4849-b80a-8838b527ad63
 ms.tgt_platform: multiple
-title: Copy-Methode der Win32_PageFile-Klasse
+title: Copy-Methode der Win32_PageFile Klasse
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -14,18 +14,18 @@ api_type:
 - COM
 api_location:
 - CIMWin32.dll
-ms.openlocfilehash: bde9e0b5cf9b8ab88b5efa1c6aae58a9b8a54cfb
-ms.sourcegitcommit: c7add10d695482e1ceb72d62b8a4ebd84ea050f7
+ms.openlocfilehash: f078e040a356cd575dfc222c9c13548737d8846ad9c211ff1dedc334faee1cb4
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104214179"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118419674"
 ---
-# <a name="copy-method-of-the-win32_pagefile-class"></a>Copy-Methode der Win32- \_ Pagefile-Klasse
+# <a name="copy-method-of-the-win32_pagefile-class"></a>Copy-Methode der Win32 \_ PageFile-Klasse
 
-Die **Copy** - [WMI-Klassen](/windows/desktop/WmiSdk/retrieving-a-class) Methode kopiert die logische Auslagerungs Datei oder das im Objekt Pfad angegebene Verzeichnis in den Speicherort, der durch den Eingabeparameter angegeben wird. Eine Kopie wird nicht unterstützt, wenn eine vorhandene logische Datei überschrieben werden muss.
+Die **Copy** [WMI-Klassenmethode](/windows/desktop/WmiSdk/retrieving-a-class) kopiert die logische Auslagerungsdatei oder das verzeichnis, die bzw. das im Objektpfad angegeben ist, an den vom Eingabeparameter angegebenen Speicherort. Eine Kopie wird nicht unterstützt, wenn das Überschreiben einer vorhandenen logischen Datei erforderlich ist.
 
-In diesem Thema wird die MOF-Syntax (Managed Object Format) verwendet. Weitere Informationen zum Verwenden dieser Methode finden Sie unter [Aufrufen einer Methode](/windows/desktop/WmiSdk/calling-a-method).
+In diesem Thema wird Managed Object Format (MOF)-Syntax verwendet. Weitere Informationen zur Verwendung dieser Methode finden Sie unter [Aufrufen einer Methode.](/windows/desktop/WmiSdk/calling-a-method)
 
 ## <a name="syntax"></a>Syntax
 
@@ -42,18 +42,18 @@ uint32 Copy(
 
 <dl> <dt>
 
-*Dateiname* \[ in\]
+*FileName* \[ In\]
 </dt> <dd>
 
-Der voll qualifizierte Name der Kopie der Datei (oder des Verzeichnisses).
+Vollqualifizierter Name der Kopie der Datei (oder des Verzeichnisses).
 
-Beispiel: c: \\ Temp \\ NewDirectory
+Beispiel: c: \\ temp \\ newdirectory
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt den Wert 0 (null) zurück, wenn die Datei erfolgreich kopiert wurde, und jede andere Zahl gibt einen Fehler an.
+Gibt den Wert 0 (null) zurück, wenn die Datei erfolgreich kopiert wurde, und eine beliebige andere Zahl, um einen Fehler anzugeben.
 
 <dl> <dt>
 
@@ -74,7 +74,7 @@ Der Zugriff wurde verweigert.
 **8**
 </dt> <dd>
 
-Ein nicht angegebener Fehler ist aufgetreten.
+Es ist ein nicht angegebener Fehler aufgetreten.
 
 </dd> <dt>
 
@@ -123,7 +123,7 @@ Das Verzeichnis ist nicht leer.
 **15**
 </dt> <dd>
 
-Es ist eine Freigabe Verletzung aufgetreten.
+Es ist ein Freigabeverstoß vor worden.
 
 </dd> <dt>
 
@@ -137,7 +137,7 @@ Die angegebene Startdatei war ungültig.
 **17**
 </dt> <dd>
 
-Eine für den Vorgang erforderliche Berechtigung wird nicht aufrechterhalten.
+Für den Vorgang ist keine Berechtigung erforderlich.
 
 </dd> <dt>
 
@@ -156,20 +156,20 @@ Ein angegebener Parameter ist ungültig.
 |-------------------------------------|-----------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows Vista<br/>                                                                |
 | Unterstützte Mindestversion (Server)<br/> | Windows Server 2008<br/>                                                          |
-| Namespace<br/>                | Root \\ CIMV2<br/>                                                                  |
-| MOF<br/>                      | <dl> <dt>Cimwin32. MOF</dt> </dl> |
+| Namespace<br/>                | \\Stamm-CIMV2<br/>                                                                  |
+| MOF<br/>                      | <dl> <dt>CIMWin32.mof</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>CIMWin32.dll</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
 [Betriebssystemklassen](/previous-versions//aa392727(v=vs.85))
 </dt> <dt>
 
-[**Win32- \_ Pagefile**](win32-pagefile.md)
+[**Win32 \_ PageFile**](win32-pagefile.md)
 </dt> </dl>
 
  

@@ -1,26 +1,26 @@
 ---
-description: Das qualifiziererobjekt macht die folgenden Eigenschaften verfügbar.
+description: Das Qualifiziererobjekt macht die folgenden Eigenschaften verfügbar.
 ms.assetid: C705B936-1233-4E1C-8176-813D26F05883
-title: Qualifizierereigenschaften
+title: Eigenschaften des Qualifizierers
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 4383db41365898d3fab626d13fda91f18135ca70
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: a8142621d3ee3da8332d69903267a9c887b55088443f3efa3c4f61c7e5f1e20d
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106348128"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118901030"
 ---
-# <a name="qualifier-properties"></a>Qualifizierereigenschaften
+# <a name="qualifier-properties"></a>Eigenschaften des Qualifizierers
 
-Das [**qualifiziererobjekt**](qualifier.md) macht die folgenden Eigenschaften verfügbar.
+Das [**Qualifiziererobjekt**](qualifier.md) macht die folgenden Eigenschaften verfügbar.
 
 ## <a name="in-this-section"></a>In diesem Abschnitt
 
--   [**Cpspointer (Eigenschaft)**](qualifier-cpspointer.md)
--   [**Explittext-Eigenschaft**](qualifier-explicittext.md)
--   [**Noticenenbers (Eigenschaft)**](qualifier-noticenumbers.md)
--   [**Oid-Eigenschaft**](qualifier-oid.md)
+-   [**CPSPointer-Eigenschaft**](qualifier-cpspointer.md)
+-   [**ExplicitText-Eigenschaft**](qualifier-explicittext.md)
+-   [**NoticeNumbers-Eigenschaft**](qualifier-noticenumbers.md)
+-   [**OID-Eigenschaft**](qualifier-oid.md)
 -   [**OrganizationName-Eigenschaft**](qualifier-organizationname.md)
 
  

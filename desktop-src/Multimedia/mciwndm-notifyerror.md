@@ -1,9 +1,9 @@
 ---
-title: MCIWNDM_NOTIFYERROR Meldung (VFW. h)
-description: Die mciwndm \_ notifyerror-Meldung benachrichtigt das übergeordnete Fenster einer Anwendung, dass ein MCI-Fehler aufgetreten ist.
+title: MCIWNDM_NOTIFYERROR Nachricht (Vfw.h)
+description: Die MCIWNDM \_ NOTIFYERROR-Meldung benachrichtigt das übergeordnete Fenster einer Anwendung, dass ein MCI-Fehler aufgetreten ist.
 ms.assetid: 0f54886a-77dc-43cc-be46-2d322c75471a
 keywords:
-- MCIWNDM_NOTIFYERROR-Nachricht (Multimedia)
+- MCIWNDM_NOTIFYERROR nachricht Windows Multimedia
 topic_type:
 - apiref
 api_name:
@@ -14,16 +14,16 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: bbef9180c31091f3bd1a85f23a08990c2f7e7ea0
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: f5dcca10f593c14e1532aa53b59b8c0bb106ea721ad0d09bde742727fddaeb07
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104040479"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118374131"
 ---
-# <a name="mciwndm_notifyerror-message"></a>Mciwndm \_ notifyerror-Meldung
+# <a name="mciwndm_notifyerror-message"></a>MCIWNDM \_ NOTIFYERROR-Meldung
 
-Die **mciwndm \_ notifyerror** -Meldung benachrichtigt das übergeordnete Fenster einer Anwendung, dass ein MCI-Fehler aufgetreten ist.
+Die **MCIWNDM \_ NOTIFYERROR-Meldung** benachrichtigt das übergeordnete Fenster einer Anwendung, dass ein MCI-Fehler aufgetreten ist.
 
 
 ```C++
@@ -38,23 +38,23 @@ lParam = (LPARAM) (LONG) errorCode;
 
 <dl> <dt>
 
-<span id="hwnd"></span><span id="HWND"></span>*HWND*
+<span id="hwnd"></span><span id="HWND"></span>*Hwnd*
 </dt> <dd>
 
-Handle für das mciwnd-Fenster.
+Handle für das MCIWnd-Fenster.
 
 </dd> <dt>
 
-<span id="errorCode"></span><span id="errorcode"></span><span id="ERRORCODE"></span>*ErrorCode*
+<span id="errorCode"></span><span id="errorcode"></span><span id="ERRORCODE"></span>*Errorcode*
 </dt> <dd>
 
 Numerischer Code für den MCI-Fehler.
 
 </dd> </dl>
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Sie können die MCI-Fehler Benachrichtigung aktivieren, indem Sie den Fenster Stil "mciwndf \_ notifyerror" angeben.
+Sie können die MCI-Fehlerbenachrichtigung aktivieren, indem Sie das MCIWNDF \_ NOTIFYERROR-Fensterformat angeben.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -64,7 +64,7 @@ Sie können die MCI-Fehler Benachrichtigung aktivieren, indem Sie den Fenster St
 |-------------------------------------|----------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional \[nur Desktop-Apps\]<br/>                       |
 | Unterstützte Mindestversion (Server)<br/> | Windows 2000 Server \[nur Desktop-Apps\]<br/>                             |
-| Header<br/>                   | <dl> <dt>VFW. h</dt> </dl> |
+| Header<br/>                   | <dl> <dt>Vfw.h</dt> </dl> |
 
 
 

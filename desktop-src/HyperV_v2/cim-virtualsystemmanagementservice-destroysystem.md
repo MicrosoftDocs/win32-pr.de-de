@@ -1,7 +1,7 @@
 ---
 description: Zerstört ein virtuelles System.
 ms.assetid: 8d2504dc-ce23-4257-9dfd-6a35dfd84b2d
-title: Destroysystem-Methode der CIM_VirtualSystemManagementService-Klasse
+title: DestroySystem-Methode der CIM_VirtualSystemManagementService-Klasse
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,18 +13,18 @@ api_type:
 - COM
 api_location:
 - vmms.exe
-ms.openlocfilehash: 41355970bb70063b8e90deb8f49b5e6f4b439017
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: fa7bf479e1e861e8425376fa0ebb610cd0b728cc9f02ba80acc9c1faa284fc16
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106347925"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119980550"
 ---
-# <a name="destroysystem-method-of-the-cim_virtualsystemmanagementservice-class"></a>Destroysystem-Methode der CIM \_ virtualsystemmanagementservice-Klasse
+# <a name="destroysystem-method-of-the-cim_virtualsystemmanagementservice-class"></a>DestroySystem-Methode der CIM \_ VirtualSystemManagementService-Klasse
 
 Zerstört ein virtuelles System.
 
-Das virtuelle System, auf das verwiesen wird, wird zerstört, einschließlich der Elemente, auf die es verweist. Virtuelle Ressourcen werden an Ihre Ressourcenpools zurückgegeben, was möglicherweise die Zerstörung dieser Ressourcen impliziert (implementierungsabhängig). Wenn das virtuelle System aktiv ist, wenn der Vorgang aufgerufen wird, wird es zuerst deaktiviert und anschließend zerstört. Wenn Momentaufnahmen aus dem virtuellen System erstellt wurden, werden diese ebenfalls zerstört.
+Das virtuelle System, auf das verwiesen wird, wird zerstört, einschließlich aller Darin enthaltenen Elemente. Virtuelle Ressourcen werden an ihre Ressourcenpools zurückgegeben, was die Zerstörung dieser Ressourcen nach sich ziehen kann (implementierungsabhängig). Wenn das virtuelle System beim Aufrufen des Vorgangs aktiv ist, wird es zuerst deaktiviert und dann zerstört. Wenn Momentaufnahmen aus dem virtuellen System erstellt wurden, werden diese ebenfalls zerstört.
 
 ## <a name="syntax"></a>Syntax
 
@@ -42,23 +42,23 @@ uint32 DestroySystem(
 
 <dl> <dt>
 
-*Affectedsystem* \[ in\]
+*AffectedSystem* \[ In\]
 </dt> <dd>
 
-Verweis auf eine Instanz der Klasse " [**CIM \_ Computersystem**](cim-computersystem.md) ", die das virtuelle Computersystem darstellt, das zerstört werden soll.
+Verweis auf eine Instanz der [**Klasse CIM \_ ComputerSystem, die**](cim-computersystem.md) das zu zerstörende virtuelle Computersystem darstellt.
 
 </dd> <dt>
 
-*Auftrag* \[ vorgenommen\]
+*Auftrag* \[ out\]
 </dt> <dd>
 
-Wenn der Vorgang lange ausgeführt wird, kann optional ein [**CIM-" \_ concretejob**](cim-concretejob.md) " zurückgegeben werden, der den Auftrag darstellt.
+Wenn der Vorgang lange ausgeführt wird, kann optional ein [**CIM \_ ConcreteJob**](cim-concretejob.md) zurückgegeben werden, der den Auftrag darstellt.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt bei Erfolg 0 (null) zurück. Andernfalls wird ein Fehler zurückgegeben.
+Gibt bei Erfolg den Wert 0 zurück. andernfalls wird ein Fehler zurückgegeben.
 
 <dl> <dt>
 
@@ -68,7 +68,7 @@ Gibt bei Erfolg 0 (null) zurück. Andernfalls wird ein Fehler zurückgegeben.
 **Nicht unterstützt** (1)
 </dt> <dt>
 
-Fehler **(2** )
+**Fehler** (2)
 </dt> <dt>
 
 **Timeout** (3)
@@ -77,19 +77,19 @@ Fehler **(2** )
 **Ungültiger Parameter** (4)
 </dt> <dt>
 
-**Ungültiger Status** (5)
+**Ungültiger Zustand** (5)
 </dt> <dt>
 
-**DMTF reserviert** (..)
+**DMTF Reserved** (..)
 </dt> <dt>
 
-Über **prüfte Methoden Parameter-Auftrag gestartet** (4096)
+**Überprüfte Methodenparameter – Auftragsstart** (4096)
 </dt> <dt>
 
-**Reservierte Methode** (4097.32767)
+**Reservierte Methode** (4097..32767)
 </dt> <dt>
 
-**Hersteller spezifisch** (32768.65535)
+**Herstellerspezifisch** (32768..65535)
 </dt> </dl>
 
 ## <a name="requirements"></a>Anforderungen
@@ -100,17 +100,17 @@ Fehler **(2** )
 |-------------------------------------|---------------------------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows 8.1<br/>                                                                                  |
 | Unterstützte Mindestversion (Server)<br/> | Windows Server 2012 R2<br/>                                                                       |
-| Namespace<br/>                | \\Stammvirtualisierung \\ v2<br/>                                                                     |
-| MOF<br/>                      | <dl> <dt>Windowsvirtualization. v2. MOF</dt> </dl> |
+| Namespace<br/>                | \\Root-Virtualisierung \\ v2<br/>                                                                     |
+| MOF<br/>                      | <dl> <dt>WindowsVirtualization.V2.mof</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>Vmms.exe</dt> </dl>                     |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**CIM \_ virtualsystemmanagementservice**](cim-virtualsystemmanagementservice.md)
+[**CIM \_ VirtualSystemManagementService**](cim-virtualsystemmanagementservice.md)
 </dt> </dl>
 
  

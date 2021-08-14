@@ -12,12 +12,12 @@ api_name:
 api_type:
 - COM
 api_location: ''
-ms.openlocfilehash: 2da6b428db156ddf18483951701216942aebbeaf
-ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
+ms.openlocfilehash: ac5609ecee2be86f5cc3600147e90ebcd9087b181a02fcbf09a539d32d14b338
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2021
-ms.locfileid: "108089298"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118404546"
 ---
 # <a name="ifeedbackhubappinfogetaumidfromapplistentry-method"></a>IFeedbackHubAppInfo::GetAumidFromAppListEntry-Methode
 
@@ -61,10 +61,10 @@ Diese Methode gibt keinen Wert zurück.
 
 
 
-| Anforderungen | Wert |
+| Anforderung | Wert |
 |-------------------------------------|------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | nur Windows 10 \[ Desktop-Apps\]<br/>          |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server \[ 2016-Desktop-Apps\]<br/> |
+| Unterstützte Mindestversion (Client)<br/> | \[Windows 10 Nur Desktop-Apps\]<br/>          |
+| Unterstützte Mindestversion (Server)<br/> | \[Windows Server 2016 Nur Desktop-Apps\]<br/> |
 
 
 

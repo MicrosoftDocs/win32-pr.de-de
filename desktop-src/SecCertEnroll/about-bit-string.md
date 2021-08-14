@@ -1,23 +1,23 @@
 ---
-description: Der bitstring-Datentyp wird in eine TLV-Kette codiert, die mit einem tagbyte von 0x03 beginnt.
+description: Der BIT STRING-Datentyp wird in ein TLV-Triplet codiert, das mit einem Tag-Byte 0x03.
 ms.assetid: 7464dd20-5e79-4ca1-a6ae-9b706e9cb925
-title: Bitzeichenfolge
+title: BIT STRING
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 115ead46663b94d6db2d089f1fae2fd8c40a2ac7
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 056616a22cf2e683e943afef9369ed4c885963174aff0e72dea6ef718ddbdf7c
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104553408"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118905060"
 ---
-# <a name="bit-string"></a>Bitzeichenfolge
+# <a name="bit-string"></a>BIT STRING
 
-Der **bitstring** -Datentyp wird in eine TLV-Kette codiert, die mit einem **tagbyte** von 0x03 beginnt. Das **Wertfeld** des TLV-Dreiecks enthält ein führendes Byte, das die Anzahl der Bits angibt, die im letzten Byte des Inhalts nicht verwendet werden. Im folgenden Beispiel wird das **Längen** Feld auf 0x03 festgelegt, da drei Inhalts Bytes befolgt werden und das führende Byte des **Wertfelds** auf 0x04 festgelegt ist, weil im letzten Inhalts Byte vier nicht verwendete Bits vorhanden sind. Alle nicht verwendeten Bits werden durch den Buchstaben x gekennzeichnet.
+Der **BIT STRING-Datentyp** wird in ein TLV-Triplet codiert, das mit einem **Tag-Byte** 0x03. Das **Feld Wert** des TLV-Triplets enthält ein führendes Byte, das die Anzahl der Bits angibt, die im endgültigen Byte des Inhalts nicht verwendet werden. Im folgenden Beispiel wird das Feld **Length** auf 0x03 festgelegt, da drei Inhaltsbytes folgen, und das führende Byte des Felds **Value** wird auf 0x04 festgelegt, da im letzten Inhaltsbyte vier nicht verwendete Bits enthalten sind. Jedes nicht verwendete Bit wird durch den Buchstaben x bezeichnet.
 
-![der-Codierung des bitstring-Datentyps](images/der-tlv-bitstring.png)
+![Der-Codierung des Bitzeichenfolgen-Datentyps](images/der-tlv-bitstring.png)
 
-Das folgende Beispiel, das aus dem [PKCS \# 10-codierten ASN. 1](pkcs--10-encoded-asn-1.md) -Thema angepasst wurde, zeigt die codierte Signatur einer PKCS 10-Beispiel \# Zertifikat Anforderung. Das erste Byte enthält den **Tagwert** für den **Bit-Zeichen** folgen-Datentyp 0x03. Das zweite und das dritte Byte enthalten die Länge des Byte Arrays. Bit 7 des zweiten Bytes ist auf 1 festgelegt, da mehr als 127 Bytes Inhalt vorhanden sind. Bits 0 bis 6 des zweiten Bytes geben Sie die Anzahl der nachfolgenden **Länge** von Bytes an, in diesem Fall 1. Das dritte Byte gibt die Anzahl der Inhalts Bytes an, 0x81. Das vierte Byte, 0x00, gibt die Anzahl der nicht verwendeten Bits an, die im letzten Inhalts Byte vorhanden sind. Beachten Sie, dass die Signatur in Big-Endian-Byte Reihenfolge codiert ist.
+Das folgende Beispiel, das aus dem [PKCS \# 10 Encoded ASN.1-Thema](pkcs--10-encoded-asn-1.md) angepasst wurde, zeigt die codierte Signatur einer PKCS \# 10-Beispielzertifikatanforderung. Das erste Byte enthält den **Tagwert** für den **BIT STRING-Datentyp** 0x03. Das zweite und dritte Bytes enthalten die Länge des Bytearrays. Bit 7 des zweiten Byte wird auf 1 festgelegt, da mehr als 127 Bytes Inhalt enthalten. Bits 0 bis 6 des zweiten Byte  geben die Anzahl der nach folgenden Längenbytes an, in diesem Fall eins. Das dritte Byte gibt die Anzahl der Inhaltsbytes an, 0x81. Das vierte Byte, 0x00, gibt die Anzahl der nicht verwendeten Bits an, die im letzten Inhalts-Byte vorhanden sind. Beachten Sie, dass die Signatur in Big-Endian-Byte-Reihenfolge codiert ist.
 
 ``` syntax
 0299:    03 81 81           ; BIT_STRING (81 Bytes)
@@ -36,13 +36,13 @@ Das folgende Beispiel, das aus dem [PKCS \# 10-codierten ASN. 1](pkcs--10-encode
 
 <dl> <dt>
 
-[ASN. 1-Typsystem](about-asn-1-type-system.md)
+[ASN.1-Typsystem](about-asn-1-type-system.md)
 </dt> <dt>
 
-[Der-Codierung von ASN. 1-Typen](about-der-encoding-of-asn-1-types.md)
+[DER-Codierung von ASN.1-Typen](about-der-encoding-of-asn-1-types.md)
 </dt> <dt>
 
-[Codierte Länge und Wert Bytes](about-encoded-length-and-value-bytes.md)
+[Codierte Längen- und Wertbytes](about-encoded-length-and-value-bytes.md)
 </dt> </dl>
 
  

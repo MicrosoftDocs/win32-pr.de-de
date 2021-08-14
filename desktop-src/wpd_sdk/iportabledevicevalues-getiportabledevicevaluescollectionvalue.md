@@ -1,7 +1,7 @@
 ---
-description: Die getiportabledevicevaluescollectionvalue-Methode ruft einen iportabledevicevaluescollection-Wert (Typ VT unknown) ab, der \_ durch einen Schlüssel angegeben wird.
+description: Die GetIPortableDeviceValuesCollectionValue-Methode ruft einen IPortableDeviceValuesCollection-Wert (Typ VT UNKNOWN) ab, der durch einen \_ Schlüssel angegeben wird.
 ms.assetid: 07b41ef8-d299-4d69-98ad-f1818c09ef6c
-title: 'Iportabledevicevalues:: getiportabledevicevaluescollectionvalue-Methode (portabledevicetypes. h)'
+title: IPortableDeviceValues::GetIPortableDeviceValuesCollectionValue-Methode (PortableDeviceTypes.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -14,16 +14,16 @@ api_type:
 api_location:
 - PortableDeviceGUIDs.lib
 - PortableDeviceGUIDs.dll
-ms.openlocfilehash: 3db3b8410ca82a97a41fdf45ee3f866cb8d2e4b5
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: cbbea545f0f3c75281c5abb7e68795750521251392529d037bf18682e84dc436
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106358038"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118697078"
 ---
-# <a name="iportabledevicevaluesgetiportabledevicevaluescollectionvalue-method"></a>Iportabledevicevalues:: getiportabledevicevaluescollectionvalue-Methode
+# <a name="iportabledevicevaluesgetiportabledevicevaluescollectionvalue-method"></a>IPortableDeviceValues::GetIPortableDeviceValuesCollectionValue-Methode
 
-Die **getiportabledevicevaluescollectionvalue** -Methode ruft einen **iportabledevicevaluescollection** -Wert (Typ VT unknown) ab, der \_ durch einen Schlüssel angegeben wird.
+Die **GetIPortableDeviceValuesCollectionValue-Methode** ruft einen **IPortableDeviceValuesCollection-Wert** (Typ VT UNKNOWN) ab, der durch einen \_ Schlüssel angegeben wird.
 
 ## <a name="syntax"></a>Syntax
 
@@ -41,31 +41,31 @@ HRESULT GetIPortableDeviceValuesCollectionValue(
 
 <dl> <dt>
 
-*Schlüssel* \[ in\]
+*Schlüssel* \[ In\]
 </dt> <dd>
 
-Ein **refpropertykey** -Schlüssel, der das abzurufende Element angibt.
+Ein **REFPROPERTYKEY-Schlüssel,** der das abzurufende Element angibt.
 
 </dd> <dt>
 
-*ppValue* \[ vorgenommen\]
+*ppValue* \[ out\]
 </dt> <dd>
 
-Adresse einer Variablen, die einen Zeiger auf die [**abgerufene iportableendvicevaluescollection**](iportabledevicevaluescollection.md) -Schnittstelle empfängt. Der Aufrufer ist für das Aufrufen von **Release** an der abgerufenen Schnittstelle verantwortlich.
+Adresse einer Variablen, die einen Zeiger auf die abgerufene [**IPortableDeviceValuesCollection-Schnittstelle**](iportabledevicevaluescollection.md) empfängt. Der Aufrufer ist für den Aufruf von **Release auf** der abgerufenen Schnittstelle verantwortlich.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Die-Methode gibt ein **HRESULT** zurück. Mögliches Werte (aber nicht die Einzigen) sind die in der folgenden Tabelle.
+Die Methode gibt ein **HRESULT** zurück. Mögliches Werte (aber nicht die Einzigen) sind die in der folgenden Tabelle.
 
 
 
 | Rückgabecode                                                                                                            | Beschreibung                                                                                         |
 |------------------------------------------------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------|
 | <dl> <dt>**S \_ OK**</dt> </dl>                                   | Die Methode wurde erfolgreich ausgeführt.<br/>                                                                    |
-| <dl> <dt>**DISP \_ E \_ typemismatch**</dt> </dl>                   | Die von *Key* angegebene Eigenschaft ist keine **iportabletovicevaluescollection** -Schnittstelle.<br/> |
-| <dl> <dt>**HRESULT \_ von \_ Win32 (Fehler \_ nicht \_ gefunden)**</dt> </dl> | Die von *Key* angegebene Eigenschaft ist nicht in der Auflistung.<br/>                                |
+| <dl> <dt>**DISP \_ E \_ TYPEMISMATCH**</dt> </dl>                   | Die durch key angegebene *Eigenschaft* ist keine **IPortableDeviceValuesCollection-Schnittstelle.**<br/> |
+| <dl> <dt>**HRESULT \_ FROM \_ WIN32(ERROR \_ NOT \_ FOUND)**</dt> </dl> | Die durch key angegebene *Eigenschaft* ist nicht in der Auflistung.<br/>                                |
 
 
 
@@ -73,7 +73,7 @@ Die-Methode gibt ein **HRESULT** zurück. Mögliches Werte (aber nicht die Einzi
 
 ## <a name="examples"></a>Beispiele
 
-Ein Beispiel für die Verwendung dieser Methode finden Sie [unter Abrufen der von einem Gerät unterstützten Renderingfunktionen](retrieving-the-rendering-capabilities-supported-by-a-device.md).
+Ein Beispiel für die Verwendung dieser Methode finden Sie unter Abrufen der von einem Gerät [unterstützten Renderingfunktionen.](retrieving-the-rendering-capabilities-supported-by-a-device.md)
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -81,22 +81,22 @@ Ein Beispiel für die Verwendung dieser Methode finden Sie [unter Abrufen der vo
 
 | Anforderung | Wert |
 |--------------------|----------------------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>Portablede vicetypes. h</dt> </dl>   |
-| Bibliothek<br/> | <dl> <dt>Portabledeviceguids. lib</dt> </dl> |
+| Header<br/>  | <dl> <dt>PortableDeviceTypes.h</dt> </dl>   |
+| Bibliothek<br/> | <dl> <dt>PortableDeviceGUIDs.lib</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Iportabledebug-Schnittstelle**](iportabledevicevalues.md)
+[**IPortableDeviceValues-Schnittstelle**](iportabledevicevalues.md)
 </dt> <dt>
 
 [Abrufen der von einem Gerät unterstützten Renderingfunktionen](retrieving-the-rendering-capabilities-supported-by-a-device.md)
 </dt> <dt>
 
-[**"Stiportableendvicevaluescollectionvalue"**](iportabledevicevalues-setiportabledevicevaluescollectionvalue.md)
+[**SetIPortableDeviceValuesCollectionValue**](iportabledevicevalues-setiportabledevicevaluescollectionvalue.md)
 </dt> </dl>
 
  

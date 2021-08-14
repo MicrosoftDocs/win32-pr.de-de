@@ -1,58 +1,58 @@
 ---
-title: Avifile-Makros
-description: Avifile-Makros
+title: AVIFile-Makros
+description: AVIFile-Makros
 ms.assetid: 5544e706-89e9-46e8-8703-ad978e675bbf
 keywords:
-- Video für Windows (Vfw), avifile-Makros
-- VFW (Video für Windows), avifile-Makros
-- Avifile-Makros, Referenz
-- Avifile-Referenz, Makros
-- Referenz für avifile, Makros
+- Video für Windows (VFW), AVIFile-Makros
+- VFW (Video für Windows),AVIFile-Makros
+- AVIFile-Makros, Referenz
+- AVIFile-Referenz, Makros
+- Referenz für AVIFile,macros
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 3963c8d937e8fabdaf9006d349a1ab6b1a103ab8
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: 25356bd7086a24ee82b2252e8a5d80b051680c431fd8b1b11e36afddcf5cf406
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "103856840"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118375617"
 ---
-# <a name="avifile-macros"></a>Avifile-Makros
+# <a name="avifile-macros"></a>AVIFile-Makros
 
-Die folgenden Makros werden mit avifile verwendet.
+Die folgenden Makros werden mit AVIFile verwendet.
 
--   [**Avistreamdatasize**](/windows/desktop/api/Vfw/nf-vfw-avistreamdatasize)
--   [**Avistreamend**](/windows/desktop/api/Vfw/nf-vfw-avistreamend)
--   [**Avistreamendzeit**](/windows/desktop/api/Vfw/nf-vfw-avistreamendtime)
--   [**Avistreamformatsize**](/windows/desktop/api/Vfw/nf-vfw-avistreamformatsize)
--   [**Avistreamiskeyframe**](/windows/desktop/api/Vfw/nf-vfw-avistreamiskeyframe)
--   [**Avistreamverlängert-Zeit**](/windows/desktop/api/Vfw/nf-vfw-avistreamlengthtime)
--   [**Avistreamnearestkeyframe**](/windows/desktop/api/Vfw/nf-vfw-avistreamnearestkeyframe)
--   [**Avistreamnearestkeyframetime**](/windows/desktop/api/Vfw/nf-vfw-avistreamnearestkeyframetime)
--   [**Avistreamnearestsample**](/windows/desktop/api/Vfw/nf-vfw-avistreamnearestsample)
--   [**Avistreamnearestsampletime**](/windows/desktop/api/Vfw/nf-vfw-avistreamnearestsampletime)
--   [**Avistreamnextkeyframe**](/windows/desktop/api/Vfw/nf-vfw-avistreamnextkeyframe)
--   [**Avistreamnextkeyframetime**](/windows/desktop/api/Vfw/nf-vfw-avistreamnextkeyframetime)
--   [**Avistreamnextsample**](/windows/desktop/api/Vfw/nf-vfw-avistreamnextsample)
--   [**Avistreamnextsampletime**](/windows/desktop/api/Vfw/nf-vfw-avistreamnextsampletime)
--   [**Avistreamprevkeyframe**](/windows/desktop/api/Vfw/nf-vfw-avistreamprevkeyframe)
--   [**Avistreamprevkeyframetime**](/windows/desktop/api/Vfw/nf-vfw-avistreamprevkeyframetime)
--   [**Avistreamprevsample**](/windows/desktop/api/Vfw/nf-vfw-avistreamprevsample)
--   [**Avistreamprevsampletime**](/windows/desktop/api/Vfw/nf-vfw-avistreamprevsampletime)
--   [**Avistreamsamplesize**](/windows/desktop/api/Vfw/nf-vfw-avistreamsamplesize)
--   [**Avistreamsampleprosample**](/windows/desktop/api/Vfw/nf-vfw-avistreamsampletosample)
--   [**Avistreamstarttime**](/windows/desktop/api/Vfw/nf-vfw-avistreamstarttime)
+-   [**AVIStreamDataSize**](/windows/desktop/api/Vfw/nf-vfw-avistreamdatasize)
+-   [**AVIStreamEnd**](/windows/desktop/api/Vfw/nf-vfw-avistreamend)
+-   [**AVIStreamEndTime**](/windows/desktop/api/Vfw/nf-vfw-avistreamendtime)
+-   [**AVIStreamFormatSize**](/windows/desktop/api/Vfw/nf-vfw-avistreamformatsize)
+-   [**AVIStreamIsKeyFrame**](/windows/desktop/api/Vfw/nf-vfw-avistreamiskeyframe)
+-   [**AVIStreamLengthTime**](/windows/desktop/api/Vfw/nf-vfw-avistreamlengthtime)
+-   [**AVIStreamStreamRestKeyFrame**](/windows/desktop/api/Vfw/nf-vfw-avistreamnearestkeyframe)
+-   [**AVIStreamStreamRestKeyFrameTime**](/windows/desktop/api/Vfw/nf-vfw-avistreamnearestkeyframetime)
+-   [**AVIStreamStreamRestSample**](/windows/desktop/api/Vfw/nf-vfw-avistreamnearestsample)
+-   [**AVIStreamStreamRestSampleTime**](/windows/desktop/api/Vfw/nf-vfw-avistreamnearestsampletime)
+-   [**AVIStreamNextKeyFrame**](/windows/desktop/api/Vfw/nf-vfw-avistreamnextkeyframe)
+-   [**AVIStreamNextKeyFrameTime**](/windows/desktop/api/Vfw/nf-vfw-avistreamnextkeyframetime)
+-   [**AVIStreamNextSample**](/windows/desktop/api/Vfw/nf-vfw-avistreamnextsample)
+-   [**AVIStreamNextSampleTime**](/windows/desktop/api/Vfw/nf-vfw-avistreamnextsampletime)
+-   [**AVIStreamPrevKeyFrame**](/windows/desktop/api/Vfw/nf-vfw-avistreamprevkeyframe)
+-   [**AVIStreamPrevKeyFrameTime**](/windows/desktop/api/Vfw/nf-vfw-avistreamprevkeyframetime)
+-   [**AVIStreamPrevSample**](/windows/desktop/api/Vfw/nf-vfw-avistreamprevsample)
+-   [**AVIStreamPrevSampleTime**](/windows/desktop/api/Vfw/nf-vfw-avistreamprevsampletime)
+-   [**AVIStreamSampleSize**](/windows/desktop/api/Vfw/nf-vfw-avistreamsamplesize)
+-   [**AVIStreamSampleToSample**](/windows/desktop/api/Vfw/nf-vfw-avistreamsampletosample)
+-   [**AVIStreamStartTime**](/windows/desktop/api/Vfw/nf-vfw-avistreamstarttime)
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
 <dl> <dt>
 
-[Avifile-Referenz](avifile-reference.md)
+[AVIFile-Referenz](avifile-reference.md)
 </dt> </dl>
 
- 
+ 
 
- 
+ 
 
 
 

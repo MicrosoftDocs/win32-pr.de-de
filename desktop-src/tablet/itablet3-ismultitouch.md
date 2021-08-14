@@ -1,7 +1,7 @@
 ---
-description: Bestimmt, ob ein Eingabegerät Multitouchscreen unterstützt.
+description: Bestimmt, ob ein Eingabegerät Multitouch unterstützt.
 ms.assetid: 4fef7060-2235-4bee-a37b-40d827732b30
-title: 'ITablet3:: ismultitouchscreen-Methode'
+title: ITablet3::IsMultiTouch-Methode
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -14,16 +14,16 @@ api_type:
 api_location:
 - wisptis.exe
 - wisptis.exe.dll
-ms.openlocfilehash: ed05e110c13af8fe73eebf004183de42eb9fffd7
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: bbdd18d27c8b9f5f4b7567e6aa22fd0c74f5e2c2dc74d80e1f46aca4195b93ba
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "104217670"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118717299"
 ---
-# <a name="itablet3ismultitouch-method"></a>ITablet3:: ismultitouchscreen-Methode
+# <a name="itablet3ismultitouch-method"></a>ITablet3::IsMultiTouch-Methode
 
-Bestimmt, ob ein Eingabegerät Multitouchscreen unterstützt.
+Bestimmt, ob ein Eingabegerät Multitouch unterstützt.
 
 ## <a name="syntax"></a>Syntax
 
@@ -40,20 +40,20 @@ HRESULT IsMultiTouch(
 
 <dl> <dt>
 
-*bismultiberühren* \[ vorgenommen\]
+*bIsMultiTouch* \[ out\]
 </dt> <dd>
 
-Gibt an, ob das Gerät multiberühren ist.
+Gibt an, ob das Gerät multitouch ist.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt bei Erfolg **S \_ OK** zurück, andernfalls wird ein Fehlercode wie **z \_ . b**. "Fehler" zurückgegeben.
+Gibt bei Erfolg **S \_ OK** zurück, andernfalls wird ein Fehlercode wie **E FAIL \_ zurückgegeben.**
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Nachdem Sie über [**IRealTimeStylus3:: multitouchenabled**](/windows/desktop/api/rtscom/nf-rtscom-irealtimestylus3-get_multitouchenabled) oder **ITablet3:: ismultiberühren** festgelegt haben, dass multiinput verfügbar ist, wählt eine Anwendung möglicherweise multifingereingabenachrichten aus. Weitere Informationen zum Filtern von multifingermethoden finden Sie im Abschnitt **IRealTimeStylus3:: multitouchenabled** -Eigenschaft.
+Nachdem sie über [**IRealTimeStylus3::MultiTouchEnabled**](/windows/desktop/api/rtscom/nf-rtscom-irealtimestylus3-get_multitouchenabled) oder **ITablet3::IsMultiTouch** ermittelt haben, dass Multitouch verfügbar ist, kann eine Anwendung multitouch-Eingabenachrichten auswählen. Weitere Informationen zum Filtern von Multitouch-Methoden finden Sie im Eigenschaftenabschnitt **IRealTimeStylus3::MultiTouchEnabled.**
 
 ## <a name="examples"></a>Beispiele
 
@@ -72,13 +72,13 @@ spITablet3->get_IsMultiTouch(&b);
 
 | Anforderung | Wert |
 |-------------------------------------|----------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows 7 \[ -Desktop-Apps\]<br/>                                             |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2008 R2 \[ -Desktop-Apps\]<br/>                                |
+| Unterstützte Mindestversion (Client)<br/> | nur Windows 7 \[ Desktop-Apps\]<br/>                                             |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server 2008 \[ R2-Desktop-Apps\]<br/>                                |
 | Bibliothek<br/>                  | <dl> <dt>Wisptis.exe</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 

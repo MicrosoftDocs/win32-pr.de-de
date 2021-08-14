@@ -1,55 +1,55 @@
 ---
-title: Konfigurieren von WM ASF Writer (qasf)
-description: Konfigurieren von WM ASF Writer (qasf)
+title: Konfigurieren des WM ASF Writer (QASF)
+description: Konfigurieren des WM ASF Writer (QASF)
 ms.assetid: 0f49ed5a-c228-456a-9551-8d277adccd0e
 keywords:
-- Windows Media-Format-SDK, Konfigurieren von WM-ASF-Writer (qasf)
-- Windows Media-Format-SDK, DirectShow
-- Windows Media-Format-SDK, WM-ASF-Writer
-- Windows Media-Format-SDK, qasf
-- Advanced Systems Format (ASF), Konfigurieren von WM ASF Writer (qasf)
-- ASF (Advanced Systems Format), Konfigurieren von WM ASF Writer (qasf)
-- Advanced Systems Format (ASF), WM-ASF-Writer
-- ASF (Advanced Systems Format), WM-ASF-Writer
+- Windows Medienformat-SDK, Konfigurieren von WM ASF Writer (QASF)
+- Windows Medienformat-SDK, DirectShow
+- Windows Medienformat-SDK, WM ASF Writer
+- Windows Medienformat-SDK, QASF
+- Advanced Systems Format (ASF), Konfigurieren von WM ASF Writer (QASF)
+- ASF (Advanced Systems Format), Konfigurieren von WM ASF Writer (QASF)
+- Advanced Systems Format (ASF), WM ASF Writer
+- ASF (Advanced Systems Format), WM ASF Writer
 - Advanced Systems Format (ASF), DirectShow
 - ASF (Advanced Systems Format), DirectShow
-- Advanced Systems Format (ASF), qasf
-- ASF (Advanced Systems Format), qasf
-- DirectShow, Konfigurieren von WM-ASF-Writer (qasf)
-- DirectShow, WM-ASF-Writer
-- DirectShow, qasf
-- WM-ASF-Writer, konfigurieren
+- Advanced Systems Format (ASF), QASF
+- ASF (Advanced Systems Format), QASF
+- DirectShow,Konfigurieren von WM ASF Writer (QASF)
+- DirectShow,WM ASF Writer
+- DirectShow, QASF
+- WM ASF Writer,Konfigurieren
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 72f954522c4acae89e6f6dd001561811088c2a9e
-ms.sourcegitcommit: 592c9bbd22ba69802dc353bcb5eb30699f9e9403
+ms.openlocfilehash: 8ba4559fc1780bdb9a9b398471cc842e2f3cf46f9c84a483229b01b3b6fa4a1c
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "104102147"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118199176"
 ---
-# <a name="configuring-the-wm-asf-writer-qasf"></a>Konfigurieren von WM ASF Writer (qasf)
+# <a name="configuring-the-wm-asf-writer-qasf"></a>Konfigurieren des WM ASF Writer (QASF)
 
-Wenn der [WM-ASF-Writer](wm-asf-writer-filter.md) -Filter erstellt wird, wird er automatisch mit dem wmprofile \_ V80 256- \_ Video Profil als Standard konfiguriert. Da für dieses Profil die Codecs Windows Media Audio und Windows Media Video Version 8 verwendet werden, empfiehlt es sich, ein benutzerdefiniertes Profil zu erstellen, das die Codecs der Windows Media 9-Serie verwendet, und dann seinen [**iwmprofile**](iwmprofile.md) -Zeiger mithilfe der [**iconfigasfwriter::**](iconfigasfwriter-configurefilterusingprofile.md) Configuration Report profile-Methode an den Filter zu übergeben. Der Filter muss dem Diagramm hinzugefügt werden, bevor der Filter konfiguriert werden kann, und er muss konfiguriert werden, bevor er mit upstreamfiltern verbunden werden kann. Der Filter verwendet das Profil, um zu bestimmen, welche Art von Windows Media-Format Datei geschrieben werden soll, wie viele Eingabe Pins eingerichtet werden und welche Medientypen von den Pins akzeptiert werden können.
+Wenn der [WM ASF Writer-Filter](wm-asf-writer-filter.md) erstellt wird, wird er automatisch mit dem WMProfile \_ V80 \_ 256Video-Profil als Standard konfiguriert. Da dieses Profil die Codecs Windows Media Audio und Windows Media Video Version 8 verwendet, wird empfohlen, ein benutzerdefiniertes Profil zu erstellen, das die Codecs der Windows Media 9-Serie verwendet, und dann den [**IWMProfile-Zeiger**](iwmprofile.md) mithilfe der [**IConfigAsfWriter::ConfigureFilterUsingProfile-Methode**](iconfigasfwriter-configurefilterusingprofile.md) an den Filter zu übergeben. Der Filter muss dem Diagramm hinzugefügt werden, bevor der Filter konfiguriert werden kann, und er muss konfiguriert werden, bevor er mit Upstreamfiltern verbunden werden kann. Der Filter verwendet das Profil, um zu bestimmen, welche Art von Windows Medienformatdatei geschrieben werden soll, wie viele Eingabepins eingerichtet werden müssen und welche Medientypen die Pins akzeptieren können.
 
-Der Filter ermöglicht das Zurücksetzen von Profilen, während die Eingabe Pins verbunden sind, solange das neue Profil keine zusätzlichen Eingabe Pins erfordert. Wenn Sie z. b. das Profil aus einem reinen Audioprofil in ein zweidimensionales Audio-und Video Profil ändern, muss nur die audiopin mit einem Zeitstempel versehen werden, und alle Eingabe Pins müssen verbunden sein, bevor der Filter ausgeführt oder angehalten werden kann. Dies bedeutet Folgendes: Wenn Sie den Filter mit einem Profil konfigurieren, das über einen Audiostream und einen Videostream verfügt, erstellt der Filter eine Audioeingabe-PIN und eine Videoeingabe-PIN. beide Pins müssen miteinander verbunden sein, bevor der Filter ausgeführt werden kann.
+Der Filter ermöglicht das Zurücksetzen von Profilen, während die Eingabepins verbunden sind, solange für das neue Profil keine zusätzlichen Eingabepins erforderlich sind. Wenn Sie z. B. das Profil von einem Profil mit nur einer Eingabe in ein Audio- und Videoprofil mit zwei Eingaben ändern, wird nur der Audioanschluss erneut verbundenAlle Eingabedaten müssen mit einem Zeitstempel versehen sein, und alle Eingabepins müssen verbunden werden, bevor der Filter ausgeführt oder angehalten werden kann. Wenn Sie den Filter also mit einem Profil konfigurieren, das über einen Audiostream und einen Videostream verfügt, erstellt der Filter eine Audio- und einen Videoeingabepin, und beide Pins müssen verbunden werden, bevor der Filter ausgeführt werden kann.
 
-Hinzufügen von Dateneinheiten Erweiterungen
+Hinzufügen von Dateneinheiterweiterungen
 
-Sie können einen profilstream für dateneinheits Erweiterungen konfigurieren, wie z. b. SMPTE-Zeit Codes, entweder vor oder nach dem Verbinden des Filters, solange Sie dieser Reihenfolge von Vorgängen folgen:
+Sie können einen Profildatenstrom für Dateneinheiterweiterungen konfigurieren, z. B. SMPTE-Zeitcodes, entweder vor oder nach dem Verbinden des Filters, sofern Sie diese Reihenfolge von Vorgängen befolgen:
 
-1.  Fügen Sie dem Stream mithilfe von [**IWMStreamConfig2:: adddataunitextension**](/previous-versions/windows/desktop/api/Wmsdkidl/nf-wmsdkidl-iwmstreamconfig2-adddataunitextension)eine oder mehrere Dateneinheiten Erweiterungen hinzu.
-2.  [**Wmprofile:: reconfigstream**](/previous-versions/windows/desktop/api/Wmsdkidl/nf-wmsdkidl-iwmprofile-reconfigstream) zum Aktualisieren des Profils aufruft.
-3.  Nennen Sie [**iconfigasfwriter:: konfigurierfilterusingprofile**](iconfigasfwriter-configurefilterusingprofile.md) mit dem aktualisierten Profil Objekt.
-4.  Suchen Sie die Videoeingabe-PIN, und wenden Sie Ihre [**iamwmbufferpass:: setnotify**](iamwmbufferpass-setnotify.md) -Methode an, um Ihre Anwendungs definierte [**iamwmbufferpasscallback**](/previous-versions/windows/desktop/api/dshowasf/nn-dshowasf-iamwmbufferpasscallback) -Schnittstelle zu registrieren.
+1.  Fügen Sie dem Stream mithilfe von [**IWMStreamConfig2::AddDataUnitExtension**](/previous-versions/windows/desktop/api/Wmsdkidl/nf-wmsdkidl-iwmstreamconfig2-adddataunitextension)eine oder mehrere Dateneinheitserweiterungen hinzu.
+2.  Rufen Sie [**WMProfile::ReconfigStream**](/previous-versions/windows/desktop/api/Wmsdkidl/nf-wmsdkidl-iwmprofile-reconfigstream) auf, um das Profil zu aktualisieren.
+3.  Rufen Sie [**IConfigAsfWriter::ConfigureFilterUsingProfile**](iconfigasfwriter-configurefilterusingprofile.md) mit dem aktualisierten Profilobjekt auf.
+4.  Suchen Sie den Videoeingabepin, und rufen Sie die [**zugehörige IAMWMBufferPass::SetNotify-Methode**](iamwmbufferpass-setnotify.md) auf, um Ihre anwendungsdefinierte [**IAMWMBufferPassCallback-Schnittstelle**](/previous-versions/windows/desktop/api/dshowasf/nn-dshowasf-iamwmbufferpasscallback) zu registrieren.
 
-Wenn das Diagramm ausgeführt wird, wird die [**iamwmbufferpasscallback:: notify**](iamwmbufferpasscallback-notify.md) -Methode für jeden Frame aufgerufen, und Sie können Eigenschaften für das Beispiel mithilfe der [**INSSBuffer3**](/previous-versions/windows/desktop/api/wmsbuffer/nn-wmsbuffer-inssbuffer3) -Schnittstellen Methoden erhalten und festlegen.
+Wenn das Diagramm ausgeführt wird, wird ihre [**IAMWMBufferPassCallback::Notify-Methode**](iamwmbufferpasscallback-notify.md) für jeden Frame aufgerufen, und Sie können Eigenschaften für das Beispiel mithilfe der [**INSSBuffer3-Schnittstellenmethoden**](/previous-versions/windows/desktop/api/wmsbuffer/nn-wmsbuffer-inssbuffer3) abrufen und festlegen.
 
 > [!Note]  
-> In einigen Prozessor intensiven Szenarien wie z. b. Inverse Telecine benötigt der WM-ASF-Writer möglicherweise mehr Ausgabepuffer, als von einigen downstreamfiltern unterstützt werden kann. Der DV-Decoder nimmt z. b. für die Ausgabepin nicht mehr als einen Puffer an, und dasselbe gilt für den AVI-Dekompressor unter bestimmten Bedingungen. Wenn beim Versuch, eine Verbindung mit diesen Filtern herzustellen, oder möglicherweise beim Ausführen des Diagramms Probleme auftreten, kann es erforderlich sein, einen Vermittler Filter zu schreiben, der eine beliebige Anzahl von Puffern in der Ausgabe-PIN akzeptiert.
+> In einigen prozessorintensiven Szenarien, z. B. inverse Telekope, benötigt WM ASF Writer möglicherweise mehr Ausgabepuffer, als einige Downstreamfilter unterstützen können. Der DV-Decoder akzeptiert z. B. nicht mehr als einen Puffer für seinen Ausgabepin, und das gleiche gilt für den AVI-Dekomprimierer unter bestimmten Bedingungen. Wenn beim Versuch, eine Verbindung mit diesen Filtern herzustellen, oder möglicherweise beim Ausführen des Graphen Probleme auftreten, ist es möglicherweise erforderlich, einen Zwischenfilter zu schreiben, der eine beliebige Anzahl von Puffern auf dem Ausgabepin akzeptiert.
 
- 
+ 
 
- 
+ 
 
- 
+ 

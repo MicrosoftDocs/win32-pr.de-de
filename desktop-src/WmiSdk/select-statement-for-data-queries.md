@@ -1,20 +1,20 @@
 ---
-description: Beschreiben Sie die SELECT-Anweisung für eine Datenabfrage.
+description: Beschreiben der SELECT-Anweisung für eine Datenabfrage.
 ms.assetid: 9c1a164e-4728-4fbe-8a49-b571005a46ec
 ms.tgt_platform: multiple
-title: SELECT-Anweisung für Daten Abfragen
+title: SELECT-Anweisung für Datenabfragen
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 06905cfd9ef5e55022b3fc2275ed705a670a0ecc
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 44fec0526c5e5d47a74d6e165726222f9e521bd7102072e5a4b79e960f8dae19
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106348527"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118315948"
 ---
-# <a name="select-statement-for-data-queries"></a>SELECT-Anweisung für Daten Abfragen
+# <a name="select-statement-for-data-queries"></a>SELECT-Anweisung für Datenabfragen
 
-Sie können eine Vielzahl von SELECT-Anweisungen verwenden, um Informationen abzufragen. Die Anweisungen können einfache Anweisungen sein, oder Sie können restriktiver sein, um das Resultset einzugrenzen, das von der Abfrage zurückgegeben wird.
+Sie können eine Vielzahl von SELECT-Anweisungen verwenden, um Informationen abzufragen. Die Anweisungen können einfache Anweisungen oder restriktiver sein, um das von der Abfrage zurückgegebene Resultset einzugrenzen.
 
 Das folgende Beispiel ist eine einfache SELECT-Anweisung, die zum Abfragen von Daten verwendet wird.
 
@@ -25,11 +25,11 @@ SELECT * FROM Class
 
 
 
-Diese Anweisung gibt Instanzen der angegebenen Klasse und aller zugehörigen Unterklassen zurück. Alle System-und benutzerdefinierten Eigenschaften für die Klassen sind eingeschlossen. Wenn eine System Eigenschaft für eine bestimmte Abfrage nicht relevant ist, enthält Sie **null**.
+Diese Anweisung gibt Instanzen der angegebenen Klasse und eine ihrer Unterklassen zurück. Alle System- und benutzerdefinierten Eigenschaften für die Klassen sind enthalten. Wenn eine Systemeigenschaft für eine bestimmte Abfrage nicht relevant ist, enthält sie **NULL.**
 
-Sie können mehrere Techniken verwenden, um die Bandbreite zu reduzieren, die zum Abrufen des Resultsets erforderlich ist, wenn die Ausführung der Abfrage zu viel mehr Aufwand verursacht und der Benutzer nur an einer Teilmenge der Eigenschaften interessiert ist. Zuerst können Abfragen das Sternchen durch die gewünschten Eigenschaften ersetzen.
+Sie können mehrere Techniken verwenden, um die bandbreitenbezogene Menge zu reduzieren, die zum Abrufen des Resultset erforderlich ist, wenn die Ausführung der Abfrage zu viel Mehraufwand verursacht und der Benutzer nur an einer Teilmenge der Eigenschaften interessiert ist. Zuerst können Abfragen das Sternchen durch die gewünschten Eigenschaften ersetzen.
 
-Im folgenden Beispiel wird gezeigt, wie bestimmte Eigenschaften abgefragt werden.
+Im folgenden Beispiel wird veranschaulicht, wie bestimmte Eigenschaften abgefragt werden.
 
 
 ```sql
@@ -38,11 +38,11 @@ SELECT property_1, property_2, property_3 FROM class
 
 
 
-Das Resultset enthält alle Systemeigenschaften und die angegebenen nicht-Systemeigenschaften.
+Das Resultset enthält alle Systemeigenschaften und die angegebenen Nichtsystemeigenschaften.
 
-Ein weiteres Verfahren zum Einschränken des Gültigkeits Bereichs des Resultsets einer Abfrage ist die Verwendung der- [**\_ \_ Klassen**](wmi-system-properties.md) System Eigenschaft. Bei Abfragen werden standardmäßig alle Instanzen der angegebenen Klasse und ihrer Unterklassen zurückgegeben. Sie können die **\_ \_ Klassen** System Eigenschaft verwenden, um nur Instanzen der angegebenen Klasse anzufordern, ausgenommen deren Unterklassen.
+Eine weitere Technik zum Eingrenzen des Gültigkeitsbereichs des Resultset einer Abfrage ist die Verwendung der [**\_ \_ CLASS-Systemeigenschaft.**](wmi-system-properties.md) Abfragen geben standardmäßig alle Instanzen der angegebenen Klasse und deren Unterklassen zurück. Sie können die **\_ \_ CLASS-Systemeigenschaft** verwenden, um nur Instanzen der angegebenen Klasse anzufordern, mit Ausnahme ihrer Unterklassen.
 
-Im folgenden Beispiel wird gezeigt, wie die- [**\_ \_ Klassen**](wmi-system-properties.md) System Eigenschaft in einer WHERE-Klausel verwendet wird.
+Das folgende Beispiel zeigt, wie die [**\_ \_ CLASS-Systemeigenschaft**](wmi-system-properties.md) in einer WHERE-Klausel verwendet wird.
 
 
 ```sql
@@ -51,9 +51,9 @@ SELECT * FROM Device WHERE __CLASS = "Device"
 
 
 
-Sie können auch die [**\_ \_ Class**](wmi-system-properties.md) System-Eigenschaft verwenden, um das Resultset auf Instanzen bestimmter Unterklassen einzuschränken.
+Sie können auch die [**\_ \_ CLASS-Systemeigenschaft**](wmi-system-properties.md) verwenden, um das Resultset auf Instanzen bestimmter Unterklassen zu beschränken.
 
-Im folgenden Beispiel wird gezeigt, wie das Resultset auf Instanzen bestimmter Unterklassen beschränkt wird.
+Das folgende Beispiel zeigt, wie das Resultset auf Instanzen bestimmter Unterklassen beschränkt wird.
 
 
 ```sql
@@ -67,7 +67,7 @@ SELECT * FROM Device WHERE __CLASS = "Modem" OR __CLASS = "Keyboard"
 
  
 
-Im folgenden Beispiel wird eine Instanz der **MainClass** zurückgegeben, vorausgesetzt, dass eine Instanz der **MainClass** vorhanden ist, die das eingebettete Objekt **embedobj** mit der Eigenschaft **P \_ UInt32** enthält, die gleich "70011" ist.
+Im folgenden Beispiel wird eine Instanz von **MainClass** zurückgegeben, vorausgesetzt, dass eine Instanz von **MainClass** vorhanden ist, die das **eingebettete Objekt EmbedObj** mit einer **P \_ Uint32-Eigenschaft** enthält, die gleich "70011" ist.
 
 
 ```sql
@@ -76,7 +76,7 @@ SELECT * FROM MainClass WHERE EmbedObj.P_Uint32 = 70011
 
 
 
-Im folgenden Beispiel werden keine Ergebnisse zurückgegeben, und es wird kein Fehler zurückgegeben, vorausgesetzt, dass das eingebettete Objekt **embedobj** in der Instanz der **MainClass** keine **ungültige** Eigenschaft besitzt.
+Das folgende Beispiel gibt keine Ergebnisse zurück und gibt keinen Fehler zurück, vorausgesetzt, das **eingebettete Objekt EmbedObj** in der Instanz von **MainClass** verfügt nicht über die Eigenschaft **INVALID**.
 
 
 ```sql

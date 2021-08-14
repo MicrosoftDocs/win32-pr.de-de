@@ -1,11 +1,11 @@
 ---
-title: Iwmdrmlicense canpersistent-Methode (wmdrmsdk. h)
-description: Die canpersistent-Methode fragt ab, ob die Lizenz in einem lokalen Lizenz Speicher persistent gespeichert werden kann.
+title: IWMDRMLicense CanPersist-Methode (Wmdrmsdk.h)
+description: Die CanPersist-Methode fragt ab, ob die Lizenz in einem lokalen Lizenzspeicher beibehalten werden kann.
 ms.assetid: 040b30d8-4e47-44a3-8b09-e81cc30e8a53
 keywords:
-- Canpersistent-Methode Windows Media-Format
-- Canpersistent-Methode Windows Media-Format, iwmdrmlicense-Schnittstelle
-- Iwmdrmlicense-Schnittstelle Windows Media-Format, canpersistent-Methode
+- 'CanPersist-Methode : Windows-Medienformat'
+- CanPersist-Methode windows Media Format, IWMDRMLicense-Schnittstelle
+- IWMDRMLicense-Schnittstelle Windows Media Format , CanPersist-Methode
 topic_type:
 - apiref
 api_name:
@@ -16,16 +16,16 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 8a7772dac73b99443626b1eeec6f5e90851f92c4
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 9e174f0b7d48684e40cc5796d2ae95ec1bcaca99216c493c73609323daf276b4
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106354194"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118701218"
 ---
-# <a name="iwmdrmlicensecanpersist-method"></a>Iwmdrmlicense:: canpersistent-Methode
+# <a name="iwmdrmlicensecanpersist-method"></a>IWMDRMLicense::CanPersist-Methode
 
-Die **canpersistent** -Methode fragt ab, ob die Lizenz in einem lokalen Lizenz Speicher persistent gespeichert werden kann.
+Die **CanPersist-Methode** fragt ab, ob die Lizenz in einem lokalen Lizenzspeicher beibehalten werden kann.
 
 ## <a name="syntax"></a>Syntax
 
@@ -42,7 +42,7 @@ HRESULT CanPersist(
 
 <dl> <dt>
 
-*pfcanpersistent* \[ vorgenommen\]
+*pfCanPersist* \[ out\]
 </dt> <dd>
 
 TRUE gibt an, dass die Lizenz beibehalten werden kann.
@@ -51,7 +51,7 @@ TRUE gibt an, dass die Lizenz beibehalten werden kann.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Die-Methode gibt ein **HRESULT** zurück. Mögliches Werte (aber nicht die Einzigen) sind die in der folgenden Tabelle.
+Die Methode gibt ein **HRESULT** zurück. Mögliches Werte (aber nicht die Einzigen) sind die in der folgenden Tabelle.
 
 
 
@@ -73,15 +73,15 @@ Keine.
 
 | Anforderung | Wert |
 |-------------------|---------------------------------------------------------------------------------------|
-| Header<br/> | <dl> <dt>Wmdrmsdk. h</dt> </dl> |
+| Header<br/> | <dl> <dt>Wmdrmsdk.h</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Iwmdrmlicense-Schnittstelle**](iwmdrmlicense.md)
+[**IWMDRMLicense-Schnittstelle**](iwmdrmlicense.md)
 </dt> </dl>
 
  

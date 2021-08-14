@@ -1,29 +1,29 @@
 ---
-description: Die Ergebnisse einer Abfrage enthalten sowohl die von der Abfrage zurückgegebenen Zeilen als auch einen Rangwert für jede Zeile, wenn die Rang Spalte in der SELECT-Klausel enthalten ist.
+description: Die Ergebnisse einer Abfrage enthalten sowohl die von der Abfrage zurückgegebenen Zeilen als auch einen Rangwert für jede Zeile, wenn die Rangfolgespalte in der SELECT-Klausel enthalten ist.
 ms.assetid: 8655eec4-5151-4f82-b485-4dbef947df0d
-title: Rank by-Klausel
+title: RANK BY-Klausel
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 5de7f7a63e33f43ba6387cbcea44a5f5b5ae8f99
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 33daf4865b0f7f08689802822d8c0d5b4d38702a1cb1f813563564e001811a6e
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104214457"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118462439"
 ---
-# <a name="rank-by-clause"></a>Rank by-Klausel
+# <a name="rank-by-clause"></a>RANK BY-Klausel
 
-Die Ergebnisse einer Abfrage enthalten sowohl die von der Abfrage zurückgegebenen Zeilen als auch einen Rangwert für jede Zeile, wenn die Rang Spalte in der SELECT-Klausel enthalten ist. Die Rang Werte werden von der Suchmaschine berechnet und als ganze Zahlen im Bereich von 0 bis 1000 zurückgegeben. Damit die Rang Ergebnisse aussagekräftiger werden, kann die Abfrage steuern, wie rohrang Werte in der Rank by-Klausel berechnet werden.
+Die Ergebnisse einer Abfrage enthalten sowohl die von der Abfrage zurückgegebenen Zeilen als auch einen Rangwert für jede Zeile, wenn die Rangfolgespalte in der SELECT-Klausel enthalten ist. Die Rangwerte werden von der Suchmaschine berechnet und als ganze Zahlen im Bereich 0 bis 1000 zurückgegeben. Um die Rangfolgeergebnisse aussagekräftiger zu gestalten, kann die Abfrage steuern, wie unformatierte Rangwerte in der RANK BY-Klausel berechnet werden.
 
 Dieses Thema ist wie folgt organisiert:
 
--   [Rank by-Klausel](#rank-by-clause)
--   [Weight-Funktion](#weight-function)
--   [Umwandlungs Funktion](#coercion-function)
+-   [RANK BY-Klausel](#rank-by-clause)
+-   [WEIGHT-Funktion](#weight-function)
+-   [COERCION-Funktion](#coercion-function)
 
-## <a name="rank-by-clause"></a>Rank by-Klausel
+## <a name="rank-by-clause"></a>RANK BY-Klausel
 
-Die Syntax für die Rank by-Klausel lautet wie folgt:
+Die Syntax für die RANK BY-Klausel lautet wie folgt:
 
 
 ```
@@ -33,20 +33,20 @@ RANK BY [ ( ] <rank_specification> [ ) ]
 
 
 
-Die Rank by-Klausel wird auf die \_ unmittelbar vorhergehende Such Bedingung angewendet. dabei wird ein niedrigerer oder höherer Rang für Zeilen angegeben, die von dieser Such Bedingung zurückgegeben werden, als von einer anderen Such Bedingung zurückgegebene Zeilen. Die Klammern, die die Such Bedingung umgeben, \_ sind erforderlich. Die Klammern, die die Rang Spezifikation umgeben, sind optional.
+Die RANK BY-Klausel wird auf die unmittelbar vorausgehende Suchbedingung angewendet und gibt effektiv einen niedrigeren oder höheren Rang für Zeilen an, die von dieser Suchbedingung zurückgegeben werden, als Zeilen, die von einer anderen Suchbedingung \_ zurückgegeben werden. Die Klammern um die \_ Suchbedingung sind erforderlich. Die Klammern um die Rangangabe sind optional.
 
-Auf eine einzelne Bedingung können mehr als eine Rang by-Klausel angewendet werden. Sie können zusätzliche Rank by-Klauseln nacheinander mithilfe von Klammern einschließen.
+Mehrere RANK BY-Klauseln können auf eine einzelne Bedingung angewendet werden. Sie können mithilfe von Klammern nacheinander zusätzliche RANK BY-Klauseln verwenden.
 
 > [!Note]  
-> Volltext-Prädikate geben Rang Werte im Bereich von 0 bis 1000 zurück. Rang Werte für alle Dokumente, die mit einem nicht-voll Text Prädikat übereinstimmen, sind 1000. Bei Änderungen an den Rang Werten sollten diese Informationen berücksichtigt werden.
+> Volltext-Prädikate geben Rangwerte im Bereich von 0 bis 1000 zurück. Rangwerte für alle Dokumente, die mit einem Nicht-Volltext-Prädikat übereinstimmen, sind 1000. Änderungen an den Rangwerten sollten diese Informationen berücksichtigen.
 
  
 
-Der Rang \_ Spezifikations Teil der rankby-Klausel identifiziert mindestens eine Funktion, die auf die Rang Werte angewendet werden soll. Die Weight-Funktion wendet einen Multiplikator auf den unformatierten Rangwert für eine zurückgegebene Zeile an. Je kleiner der Multiplikator, desto niedriger ist der resultierende Rangwert. Die Umwandlungs Funktion kann verwendet werden, um einen bestimmten Rangwert für eine zurückgegebene Zeile zu multiplizieren, zu addieren oder festzulegen. Jede Rang Spezifikation kann entweder NULL oder eine Gewichtungsfunktion und NULL oder mehr koerationsfunktionen enthalten. Wenn sowohl Gewichtungs-als auch dekoerationsfunktionen in eine Rank by-Klausel eingeschlossen werden, muss die Gewichtungsfunktion zuerst sein.
+Der \_ Rangspezifikationsteil der RANKBY-Klausel identifiziert eine oder mehrere Funktionen, die auf die Rangwerte angewendet werden. Die WEIGHT-Funktion wendet einen Multiplikator auf den rohen Rangwert für eine zurückgegebene Zeile an. Je kleiner der Multiplikator, desto niedriger der resultierende Rangwert. Mit der COERCION-Funktion kann ein bestimmter Rangwert für eine zurückgegebene Zeile multipliziert, hinzugefügt oder festgelegt werden. Jede Rangfolgespezifikation kann entweder null oder eine WEIGHT-Funktion und null oder mehr COERCION-Funktionen enthalten. Wenn sowohl die WEIGHT- als auch die COERCION-Funktion in einer RANK BY-Klausel enthalten sind, muss die WEIGHT-Funktion an erster Stelle stehen.
 
-## <a name="weight-function"></a>Weight-Funktion
+## <a name="weight-function"></a>WEIGHT-Funktion
 
-Die Syntax der Gewichtungsfunktion lautet wie folgt:
+Die Syntax der WEIGHT-Funktion ist:
 
 
 ```
@@ -55,9 +55,9 @@ WEIGHT ( <weight_multipler> )
 
 
 
-Der Multiplikator muss ein Dezimalwert zwischen 0,001 und 1,000 sein. Der vom Such Bedingungs Prädikat zurückgegebene rohrangwert wird mit dem Gewichtungs Multiplikator multipliziert, um einen neuen Rangwert festzulegen.
+Der Multiplikator muss eine Dezimalzahl von 0,001 bis 1,000 sein. Der unformatierte Rangwert, der vom Suchbedingungs-Prädikat zurückgegeben wird, wird mit dem Gewichtungsmultiplikator multipliziert, um einen neuen Rangwert zu setzen.
 
-Im folgenden Beispiel gibt die Weight-Funktion Dokumente mit dem Wort "Theresia" im System.Doc-Umschlag. Lastauthor-Feld halber der Rangwert von Dokumenten mit "Theresa" im Feld "System. Author":
+Im folgenden Beispiel enthält die WEIGHT-Funktion Dokumente mit dem Wort "Theresa" im System.Document. LastAuthor-Feld zur Hälfte des Rangwerts von Dokumenten mit "Theresa" im Feld System.Author:
 
 
 ```
@@ -73,11 +73,11 @@ WHERE CONTAINS ( System.Author,'"Theresa"' )
  
 
 > [!Note]  
-> Die Spalten Gewichtungs Features "enthält" und "frei Text Prädikat" unterstützen eine Kurzform mit einem Doppelpunkt zwischen dem Suchbegriff und dem Multiplikator ("Software": 0,25). Die Rang-nach-Klausel unterstützt das gekürzte Formular nicht.
+> Die Spaltengewichtungsfeatures CONTAINS und FREETEXT unterstützen ein Kurzformat mit einem Doppelpunkt zwischen dem Suchbegriff und dem Multiplikator ("software":0.25). Die RANK BY-Klausel unterstützt die verkürzte Form nicht.
 
  
 
-Bei der Verwendung von Rang nach Gewichtung gibt es eine Einschränkung: es funktioniert nicht mit Klauseln, die boolesche Bedingungen verwenden; Das folgende Beispiel ist beispielsweise nicht zulässig:
+Es gibt eine Einschränkung bei der Verwendung von RANK BY WEIGHT: Es funktioniert nicht mit CONTAINS-Klauseln, die boolesche Bedingungen verwenden. Das folgende Beispiel ist beispielsweise nicht zulässig:
 
 
 ```
@@ -86,11 +86,11 @@ CONTAINS ( System.Author,'"Theresa" OR "Teresa"' ) RANK BY WEIGHT ( 0.400 )
 
 
 
-## <a name="coercion-function"></a>Umwandlungs Funktion
+## <a name="coercion-function"></a>COERCION-Funktion
 
-Die Rang Umwandlungs Funktion kann verwendet werden, um den zurückgegebenen Rangwert durch Hinzufügen oder Multiplikation oder durch Zuweisen eines bestimmten Werts zu ändern.
+Die Rangkoercion-Funktion kann verwendet werden, um den zurückgegebenen Rangwert durch Addition oder Multiplikation oder durch Zuweisen eines bestimmten Werts zu ändern.
 
-Die Syntax der erumwandlungs Funktion lautet wie folgt:
+Die Syntax der COERCION-Funktion ist:
 
 
 ```
@@ -99,17 +99,17 @@ COERCION ( <coercion_operation> , <coercion_value> )
 
 
 
-Der koerationswert ist ein ganzzahliger Wert.
+Der Koercion-Wert ist ein ganzzahliger Wert.
 
-In der folgenden Tabelle werden die verfügbaren Umwandlungs Vorgangs Einstellungen beschrieben.
+In der folgenden Tabelle werden die verfügbaren Einstellungen für den Koercion-Vorgang beschrieben.
 
 
 
-| Umwandlungs Vorgang | BESCHREIBUNG                                                                                    | Wertebereich  |
+| Koercion-Vorgang | BESCHREIBUNG                                                                                    | Wertebereich  |
 |--------------------|------------------------------------------------------------------------------------------------|--------------|
-| ABSOLUTE           | Der zurückgegebene Rangwert ist der Wert, der im koerationswert angegeben wird.                          | 0 bis 1000    |
-| ADD                | Der zurückgegebene Rangwert ist die Summe des rohrang Werts und des angegebenen koerationswerts.     | 0,001 bis 1,0 |
-| MULTIPLIZIEREN           | Der zurückgegebene Rangwert ist das Produkt des rohrang Werts und des angegebenen koerationswerts. | 0,001 bis 1,0 |
+| ABSOLUTE           | Der zurückgegebene Rangwert ist der im Koercion-Wert angegebene Wert.                          | 0 bis 1000    |
+| ADD                | Der zurückgegebene Rangwert ist die Summe aus dem rohen Rangwert und dem angegebenen Koercion-Wert.     | 0,001 bis 1,0 |
+| MULTIPLIZIEREN           | Der zurückgegebene Rangwert ist das Produkt des rohen Rangwerts und des angegebenen Koercion-Werts. | 0,001 bis 1,0 |
 
 
 
@@ -118,13 +118,13 @@ In der folgenden Tabelle werden die verfügbaren Umwandlungs Vorgangs Einstellun
  
 
 > [!IMPORTANT]
-> Die Suche kann Rang Werte nur im Bereich von 0 bis 1000 zurückgeben.
+> Die Suche kann Rangwerte nur im Bereich von 0 bis 1000 zurückgeben.
 
  
 
  
 
-Im folgenden Beispiel wird die Erteilungs Funktion verwendet, um alle Dokumente mit dem Titel "Computer" im Titel auf einen Rang von 1000 festzulegen, während der Rang der Dokumente, die im Titel "Computer" und "Software" enthalten, um ein Quartal reduziert wird.
+Im folgenden Beispiel wird die COERCION-Funktion verwendet, um alle Dokumente mit "computer" im Titel auf einen Rang von 1000 zu setzen, während der Rang der Dokumente, die sowohl "computer" als auch "software" im Titel enthalten, um ein Quartal reduziert wird.
 
 
 ```

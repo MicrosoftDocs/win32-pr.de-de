@@ -1,9 +1,9 @@
 ---
 title: ContextMenu-Element
-description: Stellt ein Kontextmenüsteuerelement dar.
+description: Stellt ein Kontextmenü-Steuerelement dar.
 ms.assetid: 08cc0514-0795-4e6b-b80c-33d920783032
 keywords:
-- ContextMenu-Element Windows-Menüband
+- ContextMenu-Element Windows Menüband
 topic_type:
 - apiref
 api_name:
@@ -13,18 +13,18 @@ api_type:
 ms.topic: reference
 ms.date: 05/31/2018
 api_location: ''
-ms.openlocfilehash: 916a031ed642a76fb22ecc58dbbe1ce29cbcd105
-ms.sourcegitcommit: 099ecdda1e83618b844387405da0db0ebda93a65
+ms.openlocfilehash: 4fb061c08635cff46ca80d803089ebc01c48c19cdcc9136b1052c5a0ef2c3a1f
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/04/2021
-ms.locfileid: "111443468"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118707433"
 ---
 # <a name="contextmenu-element"></a>ContextMenu-Element
 
-Stellt ein Kontextmenüsteuerelement dar.
+Stellt ein Kontextmenü-Steuerelement dar.
 
-## <a name="usage"></a>Verwendung
+## <a name="usage"></a>Verbrauch
 
 ``` syntax
 <ContextMenu
@@ -37,9 +37,9 @@ Stellt ein Kontextmenüsteuerelement dar.
 
 
 
-| attribute           | Typ                 | Erforderlich       | BESCHREIBUNG                                                                                                                                                                                                                |
+| attribute           | type                 | Erforderlich       | Beschreibung                                                                                                                                                                                                                |
 |---------------------|----------------------|----------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| **Name**<br/> | xs:string<br/> | Ja<br/> | <dt> (xs:string)<br/> </dt> <dd> Eine Zeichenfolge, die aus einer beliebigen Sequenz von Zeichen besteht, einschließlich Leerzeichen und Zeilenunterbrechungszeichen.<br/> </dd> </dl> |
+| **Name**<br/> | xs:string<br/> | Ja<br/> | <dt> (xs:string)<br/> </dt> <dd> Eine Zeichenfolge, die aus einer beliebigen Folge von Zeichen besteht, einschließlich Leerzeichen und Zeilenumbruchzeichen.<br/> </dd> </dl> |
 
 
 
@@ -47,7 +47,7 @@ Stellt ein Kontextmenüsteuerelement dar.
 
 
 
-| Element                                                         | BESCHREIBUNG                                     |
+| Element                                                         | Beschreibung                                     |
 |-----------------------------------------------------------------|-------------------------------------------------|
 | [**Menugroup**](windowsribbon-element-menugroup.md)<br/> | Muss mindestens einmal auftreten<br/> <br/> |
 
@@ -65,12 +65,12 @@ Stellt ein Kontextmenüsteuerelement dar.
 
 ## <a name="remarks"></a>Hinweise
 
-Dies ist optional.
+Optional.
 
-Kann ein oder mehrere Male für jede [**ContextPopup.ContextMenus**](windowsribbon-element-contextpopup-contextmenus.md)auftreten.
+Kann ein oder mehrere Male für jedes [**ContextPopup.ContextMenus auftreten.**](windowsribbon-element-contextpopup-contextmenus.md)
 
 > [!IMPORTANT]
-> **Ein ContextMenu** kann keine [Kombinationsfeld-](windowsribbon-controls-combobox.md) oder [Spinner-Steuerelemente](windowsribbon-controls-spinner.md) hosten.
+> Ein **ContextMenu kann** keine [Combo Box- oder](windowsribbon-controls-combobox.md) [Spinner-Steuerelemente](windowsribbon-controls-spinner.md) hosten.
 
  
 
@@ -78,7 +78,7 @@ Kann ein oder mehrere Male für jede [**ContextPopup.ContextMenus**](windowsribb
 
 Im folgenden Beispiel wird das grundlegende Markup für eine [**ContextPopup-Ansicht**](windowsribbon-element-contextpopup.md) veranschaulicht.
 
-Dieser Codeabschnitt zeigt einen Satz von **ContextMenu-Steuerelementdeklarationen.**
+Dieser Codeabschnitt zeigt eine Reihe von **ContextMenu-Steuerelementdeklarationen.**
 
 
 ```XML
@@ -172,7 +172,7 @@ Dieser Codeabschnitt zeigt einen Satz von **ContextMenu-Steuerelementdeklaration
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 

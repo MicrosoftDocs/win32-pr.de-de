@@ -1,22 +1,22 @@
 ---
-title: Beispiel Code für das Auflisten von Benutzern auf einem Mitglieds Server
-description: Dieses Thema enthält Codebeispiele, in denen Benutzer auf einem Mitglieds Server aufgelistet werden.
+title: Beispielcode zum Aufzählen von Benutzern auf einem Mitgliedsserver
+description: Dieses Thema enthält Codebeispiele, die Benutzer auf einem Mitgliedsserver aufzählen.
 ms.assetid: a856281a-7f84-44d0-9123-b27fda56e0ea
 ms.tgt_platform: multiple
 keywords:
-- Active Directory Beispiele Active Directory, Auflisten von Benutzern auf einem Mitglieds Server
+- 'Active Directory-Beispiele: Active Directory, Aufzählen von Benutzern auf einem Mitgliedsserver'
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 7b066e92ced26c58ef932025f4e818d87a907b30
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: 03064d2030cd84ea75c1225bc6592c33e5af5a20b2fe6946987d4ca7caf7497f
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "103947391"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118693699"
 ---
-# <a name="example-code-for-enumerating-users-on-a-member-server"></a>Beispiel Code für das Auflisten von Benutzern auf einem Mitglieds Server
+# <a name="example-code-for-enumerating-users-on-a-member-server"></a>Beispielcode zum Aufzählen von Benutzern auf einem Mitgliedsserver
 
-Im folgenden Visual Basic Codebeispiel werden alle Benutzer auf einem Mitglieds Server oder Windows 2000 Professional aufgelistet.
+Im folgenden Visual Basic Codebeispiel werden alle Benutzer auf einem Mitgliedsserver oder Windows 2000-Professional.
 
 
 ```VB
@@ -73,7 +73,7 @@ End Sub
 
 
 
-Im folgenden C++-Codebeispiel werden alle Objekte einer angegebenen Klasse, z. b. ein Benutzer, aufgelistet und die in jedem Objekt auf einem Mitglieds Server oder in Windows 2000 Professional enthaltenen Elemente angezeigt.
+Das folgende C++-Codebeispiel listet alle Objekte einer angegebenen Klasse auf, z. B. einen Benutzer, und zeigt die Member an, die in jedem -Objekt auf einem Memberserver oder Windows 2000-Professional.
 
 
 ```C++
@@ -203,9 +203,9 @@ HRESULT ListObjectsWithWinNtProvider(
 
 
 
- 
+ 
 
- 
+ 
 
 
 

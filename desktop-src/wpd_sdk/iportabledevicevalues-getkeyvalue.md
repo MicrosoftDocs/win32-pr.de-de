@@ -1,7 +1,7 @@
 ---
-description: Die getkeyvalue-Methode ruft einen PropertyKey-Wert ab, der von einem Schlüssel angegeben wird.
+description: Die GetKeyValue-Methode ruft einen PROPERTYKEY-Wert ab, der durch einen Schlüssel angegeben wird.
 ms.assetid: 2c92b1c0-3ea6-4a14-8b63-d57752b649b8
-title: 'Iportabledevicevalues:: getkeyvalue-Methode (portabledevicetypes. h)'
+title: IPortableDeviceValues::GetKeyValue-Methode (PortableDeviceTypes.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -14,16 +14,16 @@ api_type:
 api_location:
 - PortableDeviceGUIDs.lib
 - PortableDeviceGUIDs.dll
-ms.openlocfilehash: 3d5080a35faa5555d2813c6e419a1965def05bdd
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: fb22fa8f93365cb7b0bc1f29b479683728b508a973a8702f5b86cc2605d0445d
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106358053"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118194020"
 ---
-# <a name="iportabledevicevaluesgetkeyvalue-method"></a>Iportabledevicevalues:: getkeyvalue-Methode
+# <a name="iportabledevicevaluesgetkeyvalue-method"></a>IPortableDeviceValues::GetKeyValue-Methode
 
-Die **getkeyvalue** -Methode ruft einen **PropertyKey** -Wert ab, der von einem Schlüssel angegeben wird.
+Die **GetKeyValue-Methode** ruft einen **PROPERTYKEY-Wert** ab, der durch einen Schlüssel angegeben wird.
 
 ## <a name="syntax"></a>Syntax
 
@@ -41,31 +41,31 @@ HRESULT GetKeyValue(
 
 <dl> <dt>
 
-*Schlüssel* \[ in\]
+*Schlüssel* \[ In\]
 </dt> <dd>
 
-Ein **refpropertykey** -Schlüssel, der das abzurufende Element angibt.
+Ein **REFPROPERTYKEY-Schlüssel,** der das abzurufende Element angibt.
 
 </dd> <dt>
 
-*pValue* \[ vorgenommen\]
+*pValue* \[ out\]
 </dt> <dd>
 
-Zeiger auf den abgerufenen **PropertyKey** -Wert.
+Zeiger auf den abgerufenen **PROPERTYKEY-Wert.**
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Die-Methode gibt ein **HRESULT** zurück. Mögliches Werte (aber nicht die Einzigen) sind die in der folgenden Tabelle.
+Die Methode gibt ein **HRESULT** zurück. Mögliches Werte (aber nicht die Einzigen) sind die in der folgenden Tabelle.
 
 
 
 | Rückgabecode                                                                                                            | Beschreibung                                                               |
 |------------------------------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------|
 | <dl> <dt>**S \_ OK**</dt> </dl>                                   | Die Methode wurde erfolgreich ausgeführt.<br/>                                          |
-| <dl> <dt>**DISP \_ E \_ typemismatch**</dt> </dl>                   | Die von *Key* angegebene Eigenschaft ist kein **PropertyKey** -Typ.<br/> |
-| <dl> <dt>**HRESULT \_ von \_ Win32 (Fehler \_ nicht \_ gefunden)**</dt> </dl> | Die von *Key* angegebene Eigenschaft ist nicht in der Auflistung.<br/>      |
+| <dl> <dt>**DISP \_ E \_ TYPEMISMATCH**</dt> </dl>                   | Die durch key angegebene *Eigenschaft* ist kein **PROPERTYKEY-Typ.**<br/> |
+| <dl> <dt>**HRESULT \_ FROM \_ WIN32(ERROR \_ NOT \_ FOUND)**</dt> </dl> | Die durch key angegebene *Eigenschaft* ist nicht in der Auflistung.<br/>      |
 
 
 
@@ -77,19 +77,19 @@ Die-Methode gibt ein **HRESULT** zurück. Mögliches Werte (aber nicht die Einzi
 
 | Anforderung | Wert |
 |--------------------|----------------------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>Portablede vicetypes. h</dt> </dl>   |
-| Bibliothek<br/> | <dl> <dt>Portabledeviceguids. lib</dt> </dl> |
+| Header<br/>  | <dl> <dt>PortableDeviceTypes.h</dt> </dl>   |
+| Bibliothek<br/> | <dl> <dt>PortableDeviceGUIDs.lib</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Iportabledebug-Schnittstelle**](iportabledevicevalues.md)
+[**IPortableDeviceValues-Schnittstelle**](iportabledevicevalues.md)
 </dt> <dt>
 
-[**Iportabledebug:: SetKeyValue**](iportabledevicevalues-setkeyvalue.md)
+[**IPortableDeviceValues::SetKeyValue**](iportabledevicevalues-setkeyvalue.md)
 </dt> </dl>
 
  

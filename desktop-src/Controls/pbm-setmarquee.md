@@ -1,9 +1,9 @@
 ---
-title: PBM_SETMARQUEE Meldung (kommstrg. h)
-description: Legt die Statusanzeige auf den Marquee-Modus fest. Dies bewirkt, dass die Statusanzeige wie ein Marquee verschoben wird.
+title: PBM_SETMARQUEE (Commctrl.h)
+description: Legt die Statusleiste auf den Festzeltmodus fest. Dies bewirkt, dass sich die Statusleiste wie ein Festzelt bewegt.
 ms.assetid: 6501bcb9-a711-470f-874f-f3484d3613b6
 keywords:
-- Windows-Steuerelemente für PBM_SETMARQUEE Meldung
+- PBM_SETMARQUEE message Windows Controls
 topic_type:
 - apiref
 api_name:
@@ -14,16 +14,16 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 9229291113f034924cf9ce8112c0e99376d37932
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: f724f87faa6e989fddb17e8d6fb3b115dd04859ea426addb7d4c0b893aff407a
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "103956811"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119986140"
 ---
-# <a name="pbm_setmarquee-message"></a>PBM- \_ setmarquee-Nachricht
+# <a name="pbm_setmarquee-message"></a>PBM \_ SETMARQUEE-Nachricht
 
-Legt die Statusanzeige auf den Marquee-Modus fest. Dies bewirkt, dass die Statusanzeige wie ein Marquee verschoben wird.
+Legt die Statusleiste auf den Festzeltmodus fest. Dies bewirkt, dass sich die Statusleiste wie ein Festzelt bewegt.
 
 ## <a name="parameters"></a>Parameter
 
@@ -32,30 +32,30 @@ Legt die Statusanzeige auf den Marquee-Modus fest. Dies bewirkt, dass die Status
 *wParam* 
 </dt> <dd>
 
-Gibt an, ob der Marquee-Modus aktiviert oder deaktiviert werden soll.
+Gibt an, ob der Festzeltmodus aktiviert oder deaktiviert werden soll.
 
 </dd> <dt>
 
 *lParam* 
-</dt> <dd>Zeit (in Millisekunden) zwischen der Aktualisierung der Marquee-Animation. Wenn dieser Parameter 0 (null) ist, wird die Marquee-Animation alle 30 Millisekunden aktualisiert.</dd> </dl>
+</dt> <dd>Zeit in Millisekunden zwischen Aktualisierungen der Festzeltanimation. Wenn dieser Parameter 0 (null) ist, wird die Festzeltanimation alle 30 Millisekunden aktualisiert.</dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt immer **true** zurück.
+Gibt immer **TRUE zurück.**
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Verwenden Sie diese Meldung, wenn Sie den Fortschritt im Hinblick auf den Abschluss nicht kennen, aber angeben möchten, dass der Fortschritt ausgeführt wird.
+Verwenden Sie diese Meldung, wenn Sie den Fortschritt bis zum Abschluss nicht kennen, aber angeben möchten, dass der Fortschritt erzielt wird.
 
-Senden Sie die **PBM- \_ setmarquee** -Nachricht, um die Animation zu starten oder zu unterbinden.
+Senden Sie die **PBM \_ SETMARQUEE-Nachricht,** um die Animation zu starten oder zu beenden.
 
 > [!Note]  
-> Sie müssen den Steuer Stil des Steuer Elements auf [**PSB- \_ Marquee**](progress-bar-control-styles.md) festlegen, bevor Sie versuchen, die Animation zu starten.
+> Sie müssen den Steuerelementstil auf [**PBS \_ MARQUEE festlegen,**](progress-bar-control-styles.md) bevor Sie versuchen, die Animation zu starten.
 
  
 
 > [!Note]  
-> Diese Meldung erfordert ComCtl32.dll-Version 6,00 oder höher.
+> Diese Meldung erfordert ComCtl32.dll Version 6.00 oder höher.
 
  
 
@@ -65,9 +65,9 @@ Senden Sie die **PBM- \_ setmarquee** -Nachricht, um die Animation zu starten od
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>                                        |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2003 \[ -Desktop-Apps\]<br/>                                  |
-| Header<br/>                   | <dl> <dt>Kommstrg. h</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur \[ Vista-Desktop-Apps\]<br/>                                        |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2003-Desktop-Apps\]<br/>                                  |
+| Header<br/>                   | <dl> <dt>Commctrl.h</dt> </dl> |
 
 
 

@@ -1,22 +1,22 @@
 ---
-title: Code Beispiel für das Arbeiten mit ADSI-Fehlermeldungen
-description: Im folgenden Codebeispiel wird gezeigt, wie eine ADSI-Fehlermeldung abgerufen wird.
+title: Codebeispiel für die Arbeit mit ADSI-Fehlermeldungen
+description: Das folgende Codebeispiel zeigt, wie eine ADSI-Fehlermeldung abgerufen wird.
 ms.assetid: c09fea2e-b6c1-4318-a7a6-b1c4c30ef4cb
 ms.tgt_platform: multiple
 keywords:
 - Fehlermeldungen und Beispielcode für ADSI
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 6aed5285a41dc51b8c42a82f7c1f600d1bae33e3
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: 70e378e7ae73002e4fdbb7137f89d895ddf23d3e51a87bafa533a4a07722a61d
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "103855336"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118692231"
 ---
-# <a name="code-example-for-working-with-adsi-error-messages"></a>Code Beispiel für das Arbeiten mit ADSI-Fehlermeldungen
+# <a name="code-example-for-working-with-adsi-error-messages"></a>Codebeispiel für die Arbeit mit ADSI-Fehlermeldungen
 
-Im folgenden Codebeispiel wird gezeigt, wie eine ADSI-Fehlermeldung abgerufen wird.
+Das folgende Codebeispiel zeigt, wie eine ADSI-Fehlermeldung abgerufen wird.
 
 
 ```C++
@@ -163,9 +163,9 @@ CString GetADSIError( HRESULT hr )
 
 
 
- 
+ 
 
- 
+ 
 
 
 

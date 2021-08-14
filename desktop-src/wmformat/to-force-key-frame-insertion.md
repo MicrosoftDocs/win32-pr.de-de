@@ -1,55 +1,55 @@
 ---
-title: So erzwingen Sie Key-Frame einfügen
-description: So erzwingen Sie Key-Frame einfügen
+title: So erzwingen Key-Frame einfügen
+description: So erzwingen Key-Frame einfügen
 ms.assetid: 456482da-aaa2-41f8-93f7-c0fa5abe7dd2
 keywords:
-- Advanced Systems Format (ASF), Erzwingen von Tasten Frame-Einfügungen
-- ASF (Advanced Systems Format), Erzwingen von Tasten Frame-Einfügungen
-- Advanced Systems Format (ASF), Keyframe-Einfügungen
-- ASF (Advanced Systems Format), Keyframe-Einfügungen
+- Advanced Systems Format (ASF), Erzwingen von Keyframeeinfügungen
+- ASF (Advanced Systems Format), Erzwingen von Keyframeeinfügungen
+- Advanced Systems Format (ASF), Keyframeeinfügungen
+- ASF (Advanced Systems Format), Keyframeeinfügungen
 - Keyframes
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 23006eef1e51d8bc63f2d55cac22e09a2052d83e
-ms.sourcegitcommit: ad672d3a10192c5ccac619ad2524407109266e93
+ms.openlocfilehash: 80d400c0ee4ba97aa7de559b1394dbe5c9fb2a974c124924aeae0839b1b4dae0
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/25/2020
-ms.locfileid: "104472389"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118196496"
 ---
-# <a name="to-force-key-frame-insertion"></a>So erzwingen Sie Key-Frame einfügen
+# <a name="to-force-key-frame-insertion"></a>So erzwingen Key-Frame einfügen
 
-Der Windows Media Video 9-Codec unterstützt erzwungene Keyframe-Einfügevorgänge. Wenn Sie ein Beispiel an den Writer übergeben, können Sie angeben, dass es als [*Keyframe*](wmformat-glossary.md)codiert werden muss.
+Der Windows Media Video 9-Codec unterstützt das erzwungene Einfügen von Keyframes. Wenn Sie ein Beispiel an den Writer übergeben, können Sie angeben, dass es als Keyframe [*codiert werden muss.*](wmformat-glossary.md)
 
-Führen Sie die folgenden Schritte aus, um das Einfügen von Schlüsseln für ein Beispiel zu erzwingen.
+Um das Einfügen eines Keyframes für ein Beispiel zu erzwingen, führen Sie die folgenden Schritte aus.
 
-1.  Weisen Sie einen Puffer zum Speichern des Beispiels zu, und rufen Sie einen Zeiger auf die [**inssbuffer**](/previous-versions/windows/desktop/api/wmsbuffer/nn-wmsbuffer-inssbuffer) -Schnittstelle ab, die den Puffer durch Aufrufen von [**iwmwriter:: allopriesample**](/previous-versions/windows/desktop/api/Wmsdkidl/nf-wmsdkidl-iwmwriter-allocatesample)enthält.
-2.  Rufen Sie den Speicherort und die Größe des Puffers ab, der in Schritt 1 erstellt wurde, indem Sie [**inssbuffer:: getbufferandlength**](/previous-versions/windows/desktop/api/Wmsbuffer/nf-wmsbuffer-inssbuffer-getbufferandlength)aufrufen.
-3.  Kopieren Sie die Beispiel Daten in den Puffer Speicherort, und stellen Sie sicher, dass das Beispiel erfolgreich in den zugeordneten Puffer passt. Abhängig von der Quelle der Beispiele können Sie eine Vielzahl von Funktionen verwenden, um die Daten zu kopieren. Wenn Sie z. b. einen Stream aus einer AVI-Datei kopieren, können Sie die AVI-Funktion **avistreamread** verwenden.
-4.  Aktualisieren Sie die im Puffer verwendete Datenmenge, um die tatsächliche Größe des Beispiels durch Aufrufen von " [**inssbuffer:: SetLength**](/previous-versions/windows/desktop/api/Wmsbuffer/nf-wmsbuffer-inssbuffer-setlength)" widerzuspiegeln.
-5.  Abrufen eines Zeigers auf die [**INSSBuffer3**](/previous-versions/windows/desktop/api/wmsbuffer/nn-wmsbuffer-inssbuffer3) -Schnittstelle durch Aufrufen von " **inssbuffer:: QueryInterface**".
-6.  Legen Sie das Beispiel als erzwungener Keyframe fest, indem Sie die [**INSSBuffer3:: SetProperty**](/previous-versions/windows/desktop/api/Wmsbuffer/nf-wmsbuffer-inssbuffer3-setproperty) -Methode aufrufen, um die "WM \_ sampleextensionguid \_ outputcleanpoint"-Eigenschaft festzulegen. Diese Eigenschaft ist ein boolescher Wert. Legen Sie diese Einstellung auf **true** fest.
-7.  Übergeben Sie die Puffer Schnittstelle zusammen mit der Eingabe Nummer und der Beispiel Zeit mithilfe der Methode [**iwmwriter:: schreitesample**](/previous-versions/windows/desktop/api/Wmsdkidl/nf-wmsdkidl-iwmwriter-writesample) an den Writer.
+1.  Ordnen Sie einen Puffer zum Speichern des Beispiels zu, und rufen Sie einen Zeiger auf die [**INSSBuffer-Schnittstelle**](/previous-versions/windows/desktop/api/wmsbuffer/nn-wmsbuffer-inssbuffer) ab, die den Puffer enthält, indem [**Sie IWMWriter::AllocateSample aufrufen.**](/previous-versions/windows/desktop/api/Wmsdkidl/nf-wmsdkidl-iwmwriter-allocatesample)
+2.  Rufen Sie den Speicherort und die Größe des in Schritt 1 erstellten Puffers ab, indem Sie [**INSSBuffer::GetBufferAndLength aufrufen.**](/previous-versions/windows/desktop/api/Wmsbuffer/nf-wmsbuffer-inssbuffer-getbufferandlength)
+3.  Kopieren Sie die Beispieldaten an die Pufferposition, und stellen Sie sicher, dass das übergebene Beispiel in den zugeordneten Puffer passt. Abhängig von der Quelle Ihrer Beispiele können Sie eine Vielzahl von Funktionen verwenden, um die Daten zu kopieren. Wenn Sie beispielsweise einen Stream aus einer AVI-Datei kopieren, können Sie die AVI-Funktion **AVIStreamRead verwenden.**
+4.  Aktualisieren Sie die im Puffer verwendete Datenmenge, um die tatsächliche Größe des Beispiels widerzurufen, indem [**Sie INSSBuffer::SetLength aufrufen.**](/previous-versions/windows/desktop/api/Wmsbuffer/nf-wmsbuffer-inssbuffer-setlength)
+5.  Rufen Sie einen Zeiger auf die [**INSSBuffer3-Schnittstelle**](/previous-versions/windows/desktop/api/wmsbuffer/nn-wmsbuffer-inssbuffer3) ab, indem Sie **INSSBuffer::QueryInterface aufrufen.**
+6.  Legen Sie das Beispiel als erzwungenen Keyframe fest, indem Sie die [**INSSBuffer3::SetProperty-Methode**](/previous-versions/windows/desktop/api/Wmsbuffer/nf-wmsbuffer-inssbuffer3-setproperty) aufrufen, um die WM \_ SampleExtensionGUID \_ OutputCleanPoint-Eigenschaft festlegen. Diese Eigenschaft ist ein boolescher Wert. Legen Sie ihn auf **TRUE fest.**
+7.  Übergeben Sie die Pufferschnittstelle zusammen mit der Eingabenummer und der Beispielzeit mithilfe der [**IWMWriter::WriteSample-Methode**](/previous-versions/windows/desktop/api/Wmsdkidl/nf-wmsdkidl-iwmwriter-writesample) an den Writer.
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
 <dl> <dt>
 
-[**Iwmwriter:: schreitesample**](/previous-versions/windows/desktop/api/Wmsdkidl/nf-wmsdkidl-iwmwriter-writesample)
+[**IWMWriter::WriteSample**](/previous-versions/windows/desktop/api/Wmsdkidl/nf-wmsdkidl-iwmwriter-writesample)
 </dt> <dt>
 
 [**So schreiben Sie Beispiele**](to-write-samples.md)
 </dt> <dt>
 
-[**Codierung der Variablen Bitrate (VBR)**](variable-bit-rate--vbr--encoding.md)
+[**VBR-Codierung (Variable Bit Rate)**](variable-bit-rate--vbr--encoding.md)
 </dt> <dt>
 
 [**Schreiben von ASF-Dateien**](writing-asf-files.md)
 </dt> </dl>
 
- 
+ 
 
- 
+ 
 
 
 

@@ -1,81 +1,81 @@
 ---
 title: Neues in Taskplaner
-description: Liste der neuen Funktionen, die von verschiedenen Versionen von Taskplaner eingeführt wurden.
+description: Liste der neuen Funktionen, die durch verschiedene Versionen von Taskplaner.
 ms.assetid: 43fbbbd2-6e97-4ba5-9474-23c5e2b33612
 keywords:
-- Taskplaner Taskplaner, Neuerungen
+- Taskplaner Taskplaner , neues
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 5245ab4e681af937924cfbd217095009d80d6a11
-ms.sourcegitcommit: c7add10d695482e1ceb72d62b8a4ebd84ea050f7
+ms.openlocfilehash: 3592cc5efd08afe4737e9af429d52fa41216b6c756a64faeaa45f6cc5c0774b2
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106342620"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118354782"
 ---
 # <a name="whats-new-in-task-scheduler"></a>Neues in Taskplaner
 
-Die folgenden Änderungen fassen zusammen, welche Neuerungen in verschiedenen Versionen von Taskplaner sind.
+Die folgenden Änderungen fassen die Neuerungen in verschiedenen Versionen von Taskplaner.
 
 ## <a name="windows-10-and-windows-server-2016"></a>Windows 10 (und Windows Server 2016)
 
-Die folgenden Taskplaner Änderungen werden in Windows 10 eingeführt.
+Die folgenden Taskplaner werden in Windows 10.
 
--   Wenn Akku Schoner eingeschaltet ist, werden Windows Taskplaner-Tasks nur ausgelöst, wenn die Aufgabe wie folgt lautet:
+-   Wenn Stromsparmodus ist, Windows Taskplaner Aufgaben nur ausgelöst, wenn die Aufgabe wie die folgenden ist:
 
-    -   Nicht so festgelegt, dass **der Task nur gestartet wird, wenn sich der Computer im Leerlauf befindet...** (der Task verwendet nicht [**idlesettings**](/windows/desktop/api/taskschd/nf-taskschd-itasksettings-get_idlesettings))
-    -   Nicht für die automatische Wartung festgelegt (der Task verwendet keine [**maintenancesettings**](/windows/desktop/api/Taskschd/nf-taskschd-itasksettings3-get_maintenancesettings))
-    -   Ist so festgelegt, dass Sie **nur ausgeführt wird, wenn der Benutzer angemeldet ist** (Task [**logontype**](/windows/desktop/api/taskschd/nf-taskschd-iprincipal-get_logontype) ist **\_ interaktive Aufgaben Anmeldung \_ \_** oder **Task \_ Anmelde \_ Gruppe**)
+    -   Nicht auf **Task starten nur festgelegt, wenn sich der Computer** im Leerlauf befindet... (task doesn't use [**IdleSettings**](/windows/desktop/api/taskschd/nf-taskschd-itasksettings-get_idlesettings))
+    -   Während der automatischen Wartung nicht für die Ausführung festgelegt (task doesn't [**use MaintenanceSettings**](/windows/desktop/api/Taskschd/nf-taskschd-itasksettings3-get_maintenancesettings))
+    -   Ist auf **Nur ausführen festgelegt, wenn** der Benutzer angemeldet ist (Task [**LogonType**](/windows/desktop/api/taskschd/nf-taskschd-iprincipal-get_logontype) ist **TASK \_ LOGON INTERACTIVE \_ \_ TOKEN** oder **TASK \_ LOGON \_ GROUP**).
 
-    Alle anderen Trigger werden verzögert, bis Akku Schoner ausgeschaltet ist. Weitere Informationen zum Zugreifen auf den Akku Schoner Status in Ihrer Anwendung finden Sie unter [**System \_ Energie \_ Status**](/windows/desktop/api/winbase/ns-winbase-system_power_status). Allgemeine Informationen zum Akku Schoner finden Sie unter [Batterie Schoner (in den Richtlinien für die Hardwarekomponente)](/windows-hardware/design/component-guidelines/battery-saver).
+    Alle anderen Trigger werden verzögert, bis Stromsparmodus deaktiviert ist. Weitere Informationen zum Zugreifen auf Stromsparmodus Status in Ihrer Anwendung finden Sie unter [**SYSTEM \_ POWER \_ STATUS**](/windows/desktop/api/winbase/ns-winbase-system_power_status). Allgemeine Informationen zu Stromsparmodus finden Sie unter Stromsparmodus [(in den Richtlinien für Hardwarekomponenten).](/windows-hardware/design/component-guidelines/battery-saver)
 
--   Aus Sicherheitsgründen kann ein Benutzer ohne Administratorrechte keine Windows Taskplaner-Aufgabe anzeigen und verwalten, die von einem anderen Benutzer erstellt wurde.
+-   Aus Sicherheitsgründen kann ein Benutzer ohne Administratorrechte einen von einem anderen Benutzer erstellten Windows Taskplaner nicht anzeigen oder verwalten.
 
 ## <a name="windows-8"></a>Windows 8
 
-Die folgenden Taskplaner 2,0-Änderungen werden in Windows 8 eingeführt:
+Die folgenden Taskplaner 2.0-Änderungen werden in Windows 8:
 
--   PowerShell-Unterstützung: Benutzer können verwalten (erstellen, löschen, ändern, explizit starten, abbrechen usw.) Windows Taskplaner Tasks mithilfe des PowerShell-Moduls scheduledtasks.
--   Verwaltete Kenn Wörter: Administratoren können die Active Directory verwalteten Kenn Wort Konten als Aufgaben Prinzipale verwenden. Diese Aufgaben erfordern keine erzwungene Richtlinie zum Zurücksetzen von Kenn Wörtern mehr.
--   API-Änderungen: in wurden zwei neue Aufgaben Einstellungen mit der [**ITaskSettings3**](/windows/desktop/api/taskschd/nn-taskschd-itasksettings3) -Schnittstelle eingeführt.
-    -   [**Maintenancesettings**](/windows/desktop/api/Taskschd/nf-taskschd-itasksettings3-get_maintenancesettings): Tasks, die diese Einstellungen verwenden, werden als neuer Typ geplanter Aufgaben behandelt, die während der automatischen Wartungszeit des Betriebssystems entsprechend der angegebenen Periodizität und Frist aufgerufen werden.
-    -   [**Flüchtig**](/windows/desktop/api/Taskschd/nf-taskschd-itasksettings3-get_volatile): Tasks, die als flüchtig festgelegt sind, werden bei einem Betriebssystem Start immer deaktiviert und müssen bei Bedarf explizit wieder aktiviert werden. Flüchtige Tasks werden von den Failoverclustern verwendet, um sicherzustellen, dass jeweils nur eine Task Instanz in einem Cluster geplant wird.
--   Die vereinheitlichte Planungs-Engine unterstützt jetzt die folgenden Features:
-    -   S4U Logon Type, über das [**logontype**](taskschedulerschema-logontype-principaltype-element.md) -Element.
-    -   XPath-Abfrage Werte für Ereignis Trigger durch das [**valuequeries**](taskschedulerschema-valuequeries-eventtriggertype-element.md) -Element.
-    -   Erlauben Sie die Beendigung der Aufgabe nicht durch das Element " [**Zustellungs**](taskschedulerschema-allowhardterminate-settingstype-element.md) Element".
+-   PowerShell-Unterstützung: Benutzer können verwalten (Erstellen, Löschen, Ändern, explizites Starten, Beenden usw.). Windows Taskplaner aufgaben mithilfe des ScheduledTasks-PowerShell-Moduls.
+-   Verwaltete Kennwörter: Administratoren können die verwalteten Active Directory-Kennwortkonten als Aufgabenprinzipale verwenden. Diese Aufgaben erfordern keine erzwungene Kennwortzurücksetzungsrichtlinie mehr.
+-   API-Änderungen: Es wurden zwei neue Aufgabeneinstellungen mit der [**ITaskSettings3-Schnittstelle**](/windows/desktop/api/taskschd/nn-taskschd-itasksettings3) eingeführt.
+    -   [**MaintenanceSettings:**](/windows/desktop/api/Taskschd/nf-taskschd-itasksettings3-get_maintenancesettings)Tasks, die diese Einstellungen verwenden, werden als neue Art geplanter Aufgaben behandelt, die während der automatischen Wartung des Betriebssystems gemäß der angegebenen Periodizität und dem angegebenen Stichtag aufgerufen werden.
+    -   [**Volatile:**](/windows/desktop/api/Taskschd/nf-taskschd-itasksettings3-get_volatile)Aufgaben, die als flüchtig festgelegt sind, werden bei einem Betriebssystemstart immer deaktiviert und müssen bei Bedarf explizit wieder aktiviert werden. Flüchtige Tasks werden von den Failoverclustern verwendet, um sicherzustellen, dass nur eine Taskinstanz gleichzeitig in einem Cluster geplant wird.
+-   Die einheitliche Zeitplanungs-Engine unterstützt jetzt die folgenden Features:
+    -   S4U Logon-Typ über das [**LogonType-Element.**](taskschedulerschema-logontype-principaltype-element.md)
+    -   XPath-Abfragewerte für Ereignistrigger über das [**ValueQueries-Element.**](taskschedulerschema-valuequeries-eventtriggertype-element.md)
+    -   Lassen Sie keine harte Taskbeendung über das [**AllowHardTerminate-Element**](taskschedulerschema-allowhardterminate-settingstype-element.md) zu.
 -   In dieser Version veraltete Features
-    -   Aktion: [**SendEmail**](taskschedulerschema-sendemail-actiongroup-element.md) (Sie können [**IExecAction**](/windows/desktop/api/taskschd/nn-taskschd-iexecaction) mit dem [Windows PowerShell](https://technet.microsoft.com/library/bb978526.aspx)-Cmdlet "[Send-Mail Message](/powershell/module/microsoft.powershell.utility/send-mailmessage?view=powershell-7&preserve-view=true) " als Problem Umgehung verwenden).
-    -   Action: [**ShowMessage**](taskschedulerschema-showmessage-actiongroup-element.md).
+    -   Aktion: [**sendEmail**](taskschedulerschema-sendemail-actiongroup-element.md) (Sie können [**IExecAction**](/windows/desktop/api/taskschd/nn-taskschd-iexecaction) mit dem Cmdlet [Windows PowerShell](https://technet.microsoft.com/library/bb978526.aspx)[Send-MailMessage](/powershell/module/microsoft.powershell.utility/send-mailmessage?view=powershell-7&preserve-view=true) als Problemumgehung verwenden).
+    -   Aktion: [**showMessage**](taskschedulerschema-showmessage-actiongroup-element.md).
     -   AT.exe cmdline-Hilfsprogramm
 
 ## <a name="windows-7"></a>Windows 7
 
-Die folgenden Taskplaner 2,0-Änderungen werden in Windows 7 eingeführt:
+Die folgenden Taskplaner 2.0-Änderungen werden in Windows 7 eingeführt:
 
--   Verwenden der vereinheitlichten Planungs-Engine, die vom zugrunde liegenden Betriebssystem bereitgestellt wird.
--   Möglichkeit zum ablehnen von Start Tasks in lokalen Anwendungen, die lokal (Schiene) integriert sind.
--   Task Sicherheitshärtung (für Tasks, die nur als "Netzwerkdienst" oder "lokaler Dienst" ausgeführt werden):
+-   Verwenden der einheitlichen Zeitplanungs-Engine, die vom zugrunde liegenden Betriebssystem bereitgestellt wird.
+-   Möglichkeit zum Ablehnen von Startaufgaben in RAIL-Sitzungen (Remote Applications Integrated Locally).
+-   Sicherheitsmaßnahmen für Tasks (nur für Aufgaben, die als "NETWORK SERVICE" oder "LOCAL SERVICE" ausgeführt werden):
 
-    -   Möglichkeit zum Zuweisen eines Sicherheitstokentyps für die Prozess Token (z. b. "uneingeschränkt" oder "keine") zu einer Aufgabe.
-    -   Erlauben Sie Aufgaben Entwicklern, den exakten Satz von Berechtigungen anzufordern, die ihre Aufgabe benötigt.
+    -   Möglichkeit, einem Task einen Prozesstoken-Sicherheitsbezeichnertyp (z. B. uneingeschränkt oder keine) zu zuweisen.
+    -   Ermöglichen Sie Es Taskentwicklern, den genauen Satz von Berechtigungen anfordern, den ihre Aufgabe erfordert.
 
 -   API-Änderungen:
 
-    -   Unterstützung der Unterstützung der Sicherheit: das neue Feature zur Sicherheitshärtung wird mit der neuen IPrincipal2-Schnittstelle eingeführt
-    -   In wurden zwei neue Aufgaben Einstellungen mit der neuen ITaskSettings2-Schnittstelle eingeführt.
+    -   Unterstützung der Tasksicherheitshärteung: Die neue Funktion zur Sicherheit von Aufgaben wird mit der neuen IPrincipal2-Schnittstelle eingeführt.
+    -   Es wurden zwei neue Aufgabeneinstellungen mit der neuen ITaskSettings2-Schnittstelle eingeführt.
 
-        -   Disallowstartonremoteappsession: die neue disallowstartonremoteappsession-Einstellung kann einen Task Start ablehnen, wenn Sie in [lokal (in der lokalen Sitzung) integrierten Remote Anwendungen](/openspecs/windows_protocols/MS-WINPROTLP/df36f95e-6a6b-48d6-a3ae-35a17674f546) ausgelöst wird.
-        -   Useunifiedschedulingengine: mithilfe der Einstellung useunifiedschedulingengine wird ein zusammenhängendes Verhalten für Windows-Tasks und-Dienste bereitstellt, da es auf einheitliche Weise durch eine gängige systemweite Planungs-Engine verwaltet wird. Obwohl die Verwendung eines vereinheitlichten Moduls empfohlen wird, werden einige der Taskplaner Features nicht unterstützt. Wenn die Kombination der Eigenschaften das Ausführen der Aufgabe unter einem vereinheitlichten Modul nicht zulässt, wird die Registrierung dieser solchen abgelehnt.
-        -   Zu den Aufgaben Features, die von der Unified Scheduling-Engine nicht unterstützt werden, gehören:
+        -   DisallowStartOnRemoteAppSession: Die neue DisallowStartOnRemoteAppSession-Einstellung kann einen Taskstart ablehnen, wenn er in RAIL-Sitzungen [(Remote Applications Integrated Locally)](/openspecs/windows_protocols/MS-WINPROTLP/df36f95e-6a6b-48d6-a3ae-35a17674f546) ausgelöst wird.
+        -   UseUnifiedSchedulingEngine: Die Verwendung der UseUnifiedSchedulingEngine-Einstellung bietet ein kohäsives Verhalten für Windows Tasks und Dienste, da sie auf einheitliche Weise von einer gemeinsamen systemweiten Planungs-Engine verwaltet wird. Obwohl die Verwendung einer einheitlichen Engine empfohlen wird, unterstützt sie einige der Taskplaner Features nicht. Wenn die Kombination von Eigenschaften die Ausführung der Aufgabe unter einer einheitlichen Engine nicht zu ermöglicht, wird die Registrierung einer solchen abgelehnt.
+        -   Zu den Aufgabenfunktionen, die von der einheitlichen Zeitplanungs-Engine nicht unterstützt werden, gehören:
 
-            -   Anmelde Typen:
+            -   Anmeldetypen:
 
-                -   [\_ \_ interaktives \_ Token \_ oder \_ Kennwort für die Task Anmeldung](./taskschedulerschema-logontype-principaltype-element.md)
+                -   [INTERAKTIVES \_ TOKEN ODER KENNWORT FÜR DIE \_ \_ \_ \_ TASKANMELDUNG](./taskschedulerschema-logontype-principaltype-element.md)
 
             -   Richtlinie für mehrere Instanzen:
 
-                -   [**Task \_ Instanzen \_ beendet \_ vorhandene**](taskschedulerschema-multipleinstancespolicy-settingstype-element.md)
+                -   [**\_TASKINSTANZEN \_ BEENDEN \_ VORHANDEN**](taskschedulerschema-multipleinstancespolicy-settingstype-element.md)
 
             -   Aktionen:
 
@@ -84,23 +84,23 @@ Die folgenden Taskplaner 2,0-Änderungen werden in Windows 7 eingeführt:
 
             -   Einstellungen:
 
-                -   [Task Netzwerkeinstellungen](./taskschedulerschema-networksettings-settingstype-element.md)
-                -   [Aufgabe nicht schwer beenden](./taskschedulerschema-allowhardterminate-settingstype-element.md)
+                -   [Netzwerkeinstellungen für Aufgaben](./taskschedulerschema-networksettings-settingstype-element.md)
+                -   [Task nicht hart beenden lassen](./taskschedulerschema-allowhardterminate-settingstype-element.md)
 
             -   Trigger:
 
-                -   [Zeitlimit für die Triggerausführung](./taskschedulerschema-executiontimelimit-triggerbasetype-element.md)
-                -   [Wiederholungsmuster für Kalender Trigger]( ./taskschedulerschema-repetition-triggerbasetype-element.md)
-                -   [XPath-Abfrage Werte für Ereignis Trigger]( ./taskschedulerschema-valuequeries-eventtriggertype-element.md)
-                -   [Monatliche](./taskschedulerschema-schedulebymonth-calendartriggertype-element.md) und [monatliche Day-of-week](./taskschedulerschema-schedulebymonthdayofweek-calendartriggertype-element.md) -Auslösertypen
+                -   [Triggerausführungszeitlimit](./taskschedulerschema-executiontimelimit-triggerbasetype-element.md)
+                -   [Wiederholungsmuster für Kalendertrigger]( ./taskschedulerschema-repetition-triggerbasetype-element.md)
+                -   [XPath-Abfragewerte für Ereignistrigger]( ./taskschedulerschema-valuequeries-eventtriggertype-element.md)
+                -   [Triggertypen](./taskschedulerschema-schedulebymonth-calendartriggertype-element.md) für monatliche und monatliche [Wochentage](./taskschedulerschema-schedulebymonthdayofweek-calendartriggertype-element.md)
 
 ## <a name="windows-vista"></a>Windows Vista
 
-Die Taskplaner 2,0-API sollte zum Entwickeln von Anwendungen verwendet werden, die den Taskplaner-Dienst unter Windows Vista verwenden. Weitere Informationen finden Sie unter [Taskplaner Referenz](task-scheduler-reference.md) und [Verwenden der Taskplaner](using-the-task-scheduler.md).
+Die Taskplaner 2.0-API sollte bei der Entwicklung von Anwendungen verwendet werden, die den Taskplaner-Dienst auf Windows Vista verwenden. Weitere Informationen finden Sie unter [Taskplaner Referenz und](task-scheduler-reference.md) [Verwenden der Taskplaner](using-the-task-scheduler.md).
 
 ## <a name="windows-2000-windows-xp-and-windows-server-2003"></a>Windows 2000, Windows XP und Windows Server 2003
 
-Die Taskplaner 2,0-API ist nicht verfügbar. Verwenden Sie Taskplaner 1,0.
+Die Taskplaner 2.0-API ist nicht verfügbar. Verwenden Taskplaner 1.0.
 
 ## <a name="related-topics"></a>Zugehörige Themen
 

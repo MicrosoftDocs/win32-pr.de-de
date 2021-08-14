@@ -1,7 +1,7 @@
 ---
-description: Der wpdattributeform-Enumerationstyp beschreibt, wie eine Eigenschaft ihre Werte speichert.
+description: Der WpdAttributeForm-Enumerationstyp beschreibt, wie eine Eigenschaft ihre Werte speichert.
 ms.assetid: 3ad8d1f9-1b74-4f34-9af5-1acdd588b650
-title: Wpdattributeform-Enumeration (portabledevice. h)
+title: WpdAttributeForm-Enumeration (PortableDevice.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,16 +13,16 @@ api_type:
 - HeaderDef
 api_location:
 - PortableDevice.h
-ms.openlocfilehash: 4c70f68dc04adcb454fcc7c5ae301f0dabf60c28
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 8366f90fe41eaa92d826f4d761fe8cdf58304f54e1f57cb074ae94d6fd9f1ea9
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106365413"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118696278"
 ---
-# <a name="wpdattributeform-enumeration"></a>Wpdattributeform-Enumeration
+# <a name="wpdattributeform-enumeration"></a>WpdAttributeForm-Enumeration
 
-Der **wpdattributeform** -Enumerationstyp beschreibt, wie eine Eigenschaft ihre Werte speichert.
+Der **WpdAttributeForm-Enumerationstyp** beschreibt, wie eine Eigenschaft ihre Werte speichert.
 
 ## <a name="syntax"></a>Syntax
 
@@ -43,44 +43,44 @@ typedef enum WpdAttributeForm {
 
 <dl> <dt>
 
-<span id="WPD_PROPERTY_ATTRIBUTE_FORM_UNSPECIFIED"></span><span id="wpd_property_attribute_form_unspecified"></span>**Das WPD- \_ Eigenschafts \_ Attribut ist \_ \_ nicht angegeben.**
+<span id="WPD_PROPERTY_ATTRIBUTE_FORM_UNSPECIFIED"></span><span id="wpd_property_attribute_form_unspecified"></span>**\_ \_ WPD-EIGENSCHAFTENATTRIBUTFORMULAR \_ \_ NICHT ANGEGEBEN**
 </dt> <dd>
 
-Die Form der Eigenschaften Daten ist nicht angegeben.
+Die Form der Daten der Eigenschaft ist nicht angegeben.
 
 </dd> <dt>
 
-<span id="WPD_PROPERTY_ATTRIBUTE_FORM_RANGE"></span><span id="wpd_property_attribute_form_range"></span>**WPD- \_ Eigenschafts \_ Attribut- \_ Formular \_ Bereich**
+<span id="WPD_PROPERTY_ATTRIBUTE_FORM_RANGE"></span><span id="wpd_property_attribute_form_range"></span>**FORMULARBEREICH DES \_ \_ WPD-EIGENSCHAFTSATTRIBUTS \_ \_**
 </dt> <dd>
 
-Der Wert wird als Wertebereich mit einem minimal-und Maximalwert ausgedrückt.
+Der Wert wird als Wertebereich mit einem Minimum und einem Maximum ausgedrückt.
 
 </dd> <dt>
 
-<span id="WPD_PROPERTY_ATTRIBUTE_FORM_ENUMERATION"></span><span id="wpd_property_attribute_form_enumeration"></span>**WPD- \_ Eigenschafts \_ Attribut- \_ Formular \_ Enumeration**
+<span id="WPD_PROPERTY_ATTRIBUTE_FORM_ENUMERATION"></span><span id="wpd_property_attribute_form_enumeration"></span>**\_ \_ WPD-EIGENSCHAFTENATTRIBUT \_ FORMULARENUMERATION \_**
 </dt> <dd>
 
-Die-Eigenschaft verfügt über eine Reihe einzelner Werte.
+Die -Eigenschaft verfügt über eine Reihe einzelner Werte.
 
 </dd> <dt>
 
-<span id="WPD_PROPERTY_ATTRIBUTE_FORM_REGULAR_EXPRESSION"></span><span id="wpd_property_attribute_form_regular_expression"></span>**\_ \_ \_ \_ regulärer \_ Ausdruck für WPD-Eigenschafts Attribut**
+<span id="WPD_PROPERTY_ATTRIBUTE_FORM_REGULAR_EXPRESSION"></span><span id="wpd_property_attribute_form_regular_expression"></span>**\_ \_ WPD-EIGENSCHAFTENATTRIBUT \_ FORMULAR \_ REGULÄRER \_ AUSDRUCK**
 </dt> <dd>
 
-Der Eigenschafts Wert ist ein regulärer Ausdruck und kein literaler Ausdruck.
+Der Eigenschaftswert ist ein regulärer Ausdruck, kein Literalausdruck.
 
 </dd> <dt>
 
-<span id="WPD_PROPERTY_ATTRIBUTE_FORM_OJBECT_IDENTIFIER"></span><span id="wpd_property_attribute_form_ojbect_identifier"></span>**WPD- \_ Eigenschafts \_ Attribut ( \_ \_ Ojbect- \_ Bezeichner)**
+<span id="WPD_PROPERTY_ATTRIBUTE_FORM_OJBECT_IDENTIFIER"></span><span id="wpd_property_attribute_form_ojbect_identifier"></span>**WPD \_ PROPERTY \_ ATTRIBUTE \_ FORM \_ OJBECT \_ IDENTIFIER**
 </dt> <dd>
 
-Der Eigenschafts Wert stellt einen Objekt Bezeichner dar.
+Der -Eigenschaftswert stellt einen Objektbezeichner dar.
 
 </dd> </dl>
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Diese Enumeration wird von der Eigenschaft " [WPD \_ Property \_ Attribute \_ Form](attributes.md) " verwendet, um zu beschreiben, wie die Daten einer Eigenschaft gespeichert werden.
+Diese Enumeration wird von der [WPD \_ PROPERTY ATTRIBUTE \_ \_ FORM-Eigenschaft verwendet,](attributes.md) um zu beschreiben, wie die Daten einer Eigenschaft gespeichert werden.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -88,11 +88,11 @@ Diese Enumeration wird von der Eigenschaft " [WPD \_ Property \_ Attribute \_ Fo
 
 | Anforderung | Wert |
 |-------------------|---------------------------------------------------------------------------------------------|
-| Header<br/> | <dl> <dt>Portabledevice. h</dt> </dl> |
+| Header<br/> | <dl> <dt>PortableDevice.h</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 

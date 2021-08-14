@@ -1,9 +1,9 @@
 ---
-title: Ribbon. sizedefinitions (Eigenschaft)
-description: Stellt einen Container für benutzerdefinierte Layoutvorlagen von Menü Band Steuerelementen dar.
+title: Ribbon.SizeDefinitions(Eigenschaft)
+description: Stellt einen Container für benutzerdefinierte Layoutvorlagen von Menüband-Steuerelementen dar.
 ms.assetid: 1f5fcffc-7f2e-4763-b0a7-4e8f46534da8
 keywords:
-- Menüband. sizedefinitions-Eigenschaft (Fenster)
+- Ribbon.SizeDefinitions-Eigenschaft Windows Menüband
 topic_type:
 - apiref
 api_name:
@@ -12,16 +12,16 @@ api_type:
 - NA
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 1b8ffe5a3339b0f32e493a1f7ddc33789526695e
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 24f3109c7e9f709267310415b48238b24050c7531bc0f784290876ab47706d6e
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104040190"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118202256"
 ---
-# <a name="ribbonsizedefinitions-property"></a>Ribbon. sizedefinitions (Eigenschaft)
+# <a name="ribbonsizedefinitions-property"></a>Ribbon.SizeDefinitions(Eigenschaft)
 
-Stellt einen Container für benutzerdefinierte Layoutvorlagen von Menü Band Steuerelementen dar.
+Stellt einen Container für benutzerdefinierte Layoutvorlagen von Menüband-Steuerelementen dar.
 
 ## <a name="usage"></a>Verbrauch
 
@@ -41,7 +41,7 @@ Es gibt keine Attribute.
 
 | Element                                                                   | BESCHREIBUNG                                        |
 |---------------------------------------------------------------------------|----------------------------------------------------|
-| [**Sizedefinition**](windowsribbon-element-sizedefinition.md)<br/> | Kann ein-oder mehrmals vorkommen<br/> <br/> |
+| [**SizeDefinition**](windowsribbon-element-sizedefinition.md)<br/> | Kann ein oder mehrere Male auftreten.<br/> <br/> |
 
 
 
@@ -55,15 +55,15 @@ Es gibt keine Attribute.
 
 
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Dies ist optional.
+Optional.
 
-Kann höchstens einmal für jedes [**Menüband**](windowsribbon-element-ribbon.md)auftreten.
+Kann für jedes Menüband mindestens einmal [**auftreten.**](windowsribbon-element-ribbon.md)
 
 ## <a name="examples"></a>Beispiele
 
-Im folgenden Codebeispiel wird eine grundlegende benutzerdefinierte Vorlage veranschaulicht.
+Das folgende Codebeispiel veranschaulicht eine einfache benutzerdefinierte Vorlage.
 
 
 ```
@@ -90,16 +90,16 @@ Im folgenden Codebeispiel wird eine grundlegende benutzerdefinierte Vorlage vera
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows 7 \[ -Desktop-Apps\]<br/>              |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2008 R2 \[ -Desktop-Apps\]<br/> |
+| Unterstützte Mindestversion (Client)<br/> | Windows 7 \[ Desktop-Apps\]<br/>              |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server 2008 \[ R2-Desktop-Apps\]<br/> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[Anpassen eines Menübands durch Größen Definitionen und Skalierungs Richtlinien](windowsribbon-templates.md)
+[Anpassen eines Menübands durch Größendefinitionen und Skalierungsrichtlinien](windowsribbon-templates.md)
 </dt> </dl>
 
  

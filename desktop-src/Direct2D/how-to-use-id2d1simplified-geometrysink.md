@@ -1,26 +1,26 @@
 ---
-title: Abrufen von Geometriedaten durch Erweiterung von ID2D1SimplifiedGeometrySink
-description: Zeigt, wie Geometriedaten durch Erweiterung der ID2D1SimplifiedGeometrySink-Schnittstelle abgerufen werden.
+title: Abrufen von Geometriedaten durch Erweitern von ID2D1SimplifiedGeometrySink
+description: Zeigt, wie Geometriedaten durch Erweitern der ID2D1SimplifiedGeometrySink-Schnittstelle abgerufen werden.
 ms.assetid: c6777b11-6d4e-409e-9c30-da1e060c9aca
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 3ba3670eb8d0152cc1dae8fbcc164bd8a6167630
-ms.sourcegitcommit: 592c9bbd22ba69802dc353bcb5eb30699f9e9403
+ms.openlocfilehash: 8b9cd7e3f5e01b77c07e0082d3460b718a4363cf88288859b715369a94ca09bf
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "104039411"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118003429"
 ---
-# <a name="how-to-retrieve-geometry-data-by-extending-id2d1simplifiedgeometrysink"></a>Abrufen von Geometriedaten durch Erweiterung von ID2D1SimplifiedGeometrySink
+# <a name="how-to-retrieve-geometry-data-by-extending-id2d1simplifiedgeometrysink"></a>Abrufen von Geometriedaten durch Erweitern von ID2D1SimplifiedGeometrySink
 
-Obwohl ein [**ID2D1Geometry**](/windows/win32/api/d2d1/nn-d2d1-id2d1geometry) -Objekt unveränderlich ist, gibt es Fälle, in denen Sie die Geometriedaten in einem Pfad Geometrie Objekt bearbeiten müssen. Direct2D ermöglicht Ihnen dies, indem Sie eine erweiterbare Schnittstelle mit dem Namen " [**ID2D1SimplifiedGeometrySink**](/windows/win32/api/d2d1/nn-d2d1-id2d1simplifiedgeometrysink)" bereitstellen. In diesem Thema wird beschrieben, wie Sie diese Schnittstelle zum Abrufen der Geometriedaten aus einem Pfad Geometrie Objekt erweitern können.
+Während ein [**ID2D1Geometry-Objekt**](/windows/win32/api/d2d1/nn-d2d1-id2d1geometry) unveränderlich ist, gibt es Fälle, in denen Sie die Geometriedaten in einem geometry-Pfadobjekt bearbeiten müssen. Direct2D ermöglicht Ihnen dies, indem Sie eine erweiterbare Schnittstelle namens [**ID2D1SimplifiedGeometrySink**](/windows/win32/api/d2d1/nn-d2d1-id2d1simplifiedgeometrysink)bereitstellen. Zur Veranschaulichung des Konzepts wird in diesem Thema beschrieben, wie diese Schnittstelle erweitert wird, um die Geometriedaten aus einem geometry-Pfadobjekt abzurufen.
 
 **So erweitern Sie die ID2D1SimplifiedGeometrySink-Schnittstelle**
 
-1.  Implementieren Sie eine Klasse, die von [**ID2D1SimplifiedGeometrySink**](/windows/win32/api/d2d1/nn-d2d1-id2d1simplifiedgeometrysink)erbt.
-2.  Erstellen Sie eine Instanz dieser Klasse, und übergeben Sie Sie an [**ID2D1Geometry:: Simple**](id2d1geometry-simplify.md).
+1.  Implementieren Sie eine Klasse, die von [**ID2D1SimplifiedGeometrySink erbt.**](/windows/win32/api/d2d1/nn-d2d1-id2d1simplifiedgeometrysink)
+2.  Erstellen Sie eine Instanz dieser Klasse, und übergeben Sie sie an [**ID2D1Geometry::Simplify**](id2d1geometry-simplify.md).
 
-Im folgenden Codebeispiel wird gezeigt, wie eine Klasse namens "spezizedsink" implementiert wird, die von der [**ID2D1SimplifiedGeometrySink**](/windows/win32/api/d2d1/nn-d2d1-id2d1simplifiedgeometrysink) -Schnittstelle erbt. Zur Vereinfachung der Konzept Abbildung werden die Geometriedaten von der erweiterten **AddLines** -Methode abgerufen und im Konsolenfenster angezeigt. Sie können diese Methode anpassen, um Ihre spezifischen Datenanforderungen zu erfüllen.
+Das folgende Codebeispiel zeigt, wie Sie eine Klasse namens SpecializedSink implementieren, die von der [**ID2D1SimplifiedGeometrySink-Schnittstelle**](/windows/win32/api/d2d1/nn-d2d1-id2d1simplifiedgeometrysink) erbt. Zur Vereinfachung der Konzeptdarstellung ruft die erweiterte **AddLines-Methode** die Geometriedaten ab und zeigt sie dann im Konsolenfenster an. Sie können diese Methode an Ihre spezifischen Datenanforderungen anpassen.
 
 
 ```C++
@@ -118,7 +118,7 @@ class SpecializedSink : public ID2D1SimplifiedGeometrySink
 
 
 
-Im Beispiel wird dann ein Satz von Daten (182, 209), (211, 251), (251, 226), (392, 360) und (101, 360) verwendet, um eine aufgefüllte Pfad Geometrie (**m \_ pgeometry**) zu erstellen, in der Daten abgerufen werden können.
+Im Beispiel wird dann ein Satz von Daten (182, 209), (211, 251), (251, 226), (392, 360) und (101, 360) verwendet, um eine aufgefüllte Pfadgeometrie **(m \_ pGeometry)** zu erstellen, in der Daten abgerufen werden können.
 
 
 ```C++
@@ -159,7 +159,7 @@ if(SUCCEEDED(hr))
 
 
 
-Zum Schluss erstellt das Beispiel ein spezizedsink-Objekt und ruft dann die [**ID2D1Geometry:: Simple**](id2d1geometry-simplify.md) -Methode auf, wobei das spezialisizedsink-Objekt und der [**D2D1 \_ Geometry- \_ \_ Option \_ Lines**](/windows/desktop/api/d2d1/ne-d2d1-d2d1_geometry_simplification_option) -Parameter übergeben werden, was dazu führt, dass alle Kurven in Liniensegmente vereinfacht werden.
+Schließlich erstellt das Beispiel ein SpecializedSink-Objekt und ruft dann die [**ID2D1Geometry::Simplify-Methode**](id2d1geometry-simplify.md) auf, wobei das SpecializedSink-Objekt und der [**Parameter D2D1 \_ GEOMETRY \_ SIMPLIFY OPTION \_ \_ LINES**](/windows/desktop/api/d2d1/ne-d2d1-d2d1_geometry_simplification_option) übergeben werden, wodurch alle Kurven in Liniensegmente vereinfacht werden.
 
 
 ```C++
@@ -194,7 +194,7 @@ Zum Schluss erstellt das Beispiel ein spezizedsink-Objekt und ruft dann die [**I
 
 
 
-Das Programm erstellt Ausgaben, wie im folgenden Screenshot gezeigt.
+Das Programm erstellt Ausgaben wie im folgenden Screenshot gezeigt.
 
 ![Screenshot eines Konsolenfensters mit Ausgabe zum Hinzufügen und Abrufen von Geometriedaten](images/specializedgeometrysink.png)
 
@@ -205,6 +205,6 @@ Das Programm erstellt Ausgaben, wie im folgenden Screenshot gezeigt.
 [Direct2D-Referenz](reference.md)
 </dt> </dl>
 
- 
+ 
 
- 
+ 

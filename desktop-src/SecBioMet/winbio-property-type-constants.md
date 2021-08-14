@@ -1,6 +1,6 @@
 ---
-title: WINBIO_PROPERTY_TYPE Konstanten (winbio. h)
-description: Geben Sie die Quelle der Eigenschafts Informationen in der winbiogetproperty-Funktion an.
+title: WINBIO_PROPERTY_TYPE Konstanten (Winbio.h)
+description: Geben Sie die Quelle der Eigenschafteninformationen in der WinBioGetProperty-Funktion an.
 ms.assetid: 82C54092-032B-4F32-820E-A1D4BB81ECCE
 topic_type:
 - apiref
@@ -15,55 +15,55 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 1f4a1420af18bfa4d2ba5d0457b22cd5f77e7b0c
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: be7b7c17da736e117f099ec66dafc4ef2cfbba037f90a35f2522d7710cb3cef0
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104479251"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118909358"
 ---
-# <a name="winbio_property_type-constants"></a>Winbio \_ - \_ Eigenschaftentyp Konstanten
+# <a name="winbio_property_type-constants"></a>WINBIO \_ PROPERTY \_ TYPE-Konstanten
 
-Die folgenden **winbio \_ - \_ Eigenschaftentyp** Konstanten können verwendet werden, um die Quelle der Eigenschafts Informationen in der [**winbiogetproperty**](/windows/desktop/api/Winbio/nf-winbio-winbiogetproperty) -Funktion anzugeben.
+Die folgenden **WINBIO \_ PROPERTY \_ TYPE-Konstanten** können verwendet werden, um die Quelle der Eigenschafteninformationen in der [**WinBioGetProperty-Funktion**](/windows/desktop/api/Winbio/nf-winbio-winbiogetproperty) anzugeben.
 
 <dl> <dt>
 
-<span id="WINBIO_PROPERTY_TYPE_SESSION"></span><span id="winbio_property_type_session"></span>**winbio \_ - \_ Eigenschaftentyp \_ Sitzung**
+<span id="WINBIO_PROPERTY_TYPE_SESSION"></span><span id="winbio_property_type_session"></span>**\_ \_ WINBIO-EIGENSCHAFTENTYPSITZUNG \_**
 </dt> <dd> <dl> <dt>
 
 
 
-Die-Eigenschaft gilt für eine bestimmte biometrische Sitzung.
+Die -Eigenschaft gilt für eine bestimmte biometrische Sitzung.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="WINBIO_PROPERTY_TYPE_TEMPLATE"></span><span id="winbio_property_type_template"></span>**winbio \_ - \_ Eigenschaftentyp \_ Vorlage**
+<span id="WINBIO_PROPERTY_TYPE_TEMPLATE"></span><span id="winbio_property_type_template"></span>**\_ \_ \_ WINBIO-EIGENSCHAFTENTYPVORLAGE**
 </dt> <dd> <dl> <dt>
 
 
 
-Die-Eigenschaft gilt für eine bestimmte biometrische Vorlage.
+Die -Eigenschaft gilt für eine bestimmte biometrische Vorlage.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="WINBIO_PROPERTY_TYPE_UNIT"></span><span id="winbio_property_type_unit"></span>**winbio \_ - \_ Eigenschaftentyp \_ Einheit**
+<span id="WINBIO_PROPERTY_TYPE_UNIT"></span><span id="winbio_property_type_unit"></span>**\_WINBIO-EIGENSCHAFTSTYPEINHEIT \_ \_**
 </dt> <dd> <dl> <dt>
 
 
 
-Die-Eigenschaft gilt für eine bestimmte biometrische Einheit.
+Die -Eigenschaft gilt für eine bestimmte biometrische Einheit.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="WINBIO_PROPERTY_TYPE_ACCOUNT"></span><span id="winbio_property_type_account"></span>**winbio \_ - \_ Eigenschaftentyp \_ Konto**
+<span id="WINBIO_PROPERTY_TYPE_ACCOUNT"></span><span id="winbio_property_type_account"></span>**\_ \_ WINBIO-EIGENSCHAFTENTYPKONTO \_**
 </dt> <dd> <dl> <dt>
 
 
 
-Die-Eigenschaft gilt für ein bestimmtes Benutzerkonto, das über eine biometrische Registrierung verfügt. Dieser Wert wird ab Windows 10 unterstützt.
+Die -Eigenschaft gilt für ein bestimmtes Benutzerkonto, das über eine biometrische Registrierung verfügt. Dieser Wert wird ab Windows 10 unterstützt.
 
 
 </dt> </dl> </dd> </dl>
@@ -74,20 +74,20 @@ Die-Eigenschaft gilt für ein bestimmtes Benutzerkonto, das über eine biometris
 
 | Anforderung | Wert |
 |-------------------------------------|--------------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows 7 \[ -Desktop-Apps\]<br/>                                                             |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2008 R2 \[ -Desktop-Apps\]<br/>                                                |
-| Header<br/>                   | <dl> <dt>Winbio. h (Include winbio. h)</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | nur Windows 7 \[ Desktop-Apps\]<br/>                                                             |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server 2008 \[ R2-Desktop-Apps\]<br/>                                                |
+| Header<br/>                   | <dl> <dt>Winbio.h (winbio.h einschließen)</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[Client Anwendungs Konstanten](client-application-constants.md)
+[Clientanwendungskonstanten](client-application-constants.md)
 </dt> <dt>
 
-[**Winbiogetproperty**](/windows/desktop/api/Winbio/nf-winbio-winbiogetproperty)
+[**WinBioGetProperty**](/windows/desktop/api/Winbio/nf-winbio-winbiogetproperty)
 </dt> </dl>
 
  

@@ -13,12 +13,12 @@ api_type:
 - HeaderDef
 api_location:
 - D3D9Types.h
-ms.openlocfilehash: 022aa20fab0739b32aa75eb5f4bc575c0a8ad853
-ms.sourcegitcommit: b40a986d5ded926ae7617119cdd35d99b533bad9
+ms.openlocfilehash: 299246ef890015a6d7de465ecc7c00251a52432d276a87f3d5f336b63d563737
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/24/2021
-ms.locfileid: "110342995"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119986990"
 ---
 # <a name="d3dtransformstatetype-enumeration"></a>D3DTRANSFORMSTATETYPE-Enumeration
 
@@ -122,7 +122,7 @@ Identifiziert die Transformationsmatrix, die für die angegebene Texturphase fes
 <span id="D3DTS_FORCE_DWORD"></span><span id="d3dts_force_dword"></span>**D3DTS \_ FORCE \_ DWORD**
 </dt> <dd>
 
-Erzwingt, dass diese Enumeration auf eine Größe von 32 Bits kompiliert wird. Ohne diesen Wert würden einige Compiler zulassen, dass diese Enumeration in eine andere Größe als 32 Bits kompiliert wird. Dieser Wert wird nicht verwendet.
+Erzwingt, dass diese Enumeration in eine Größe von 32 Bits kompiliert wird. Ohne diesen Wert würden einige Compiler zulassen, dass diese Enumeration in eine andere Größe als 32 Bits kompiliert wird. Dieser Wert wird nicht verwendet.
 
 </dd> </dl>
 
@@ -135,7 +135,7 @@ Die Transformationszustände im Bereich von 256 bis 511 sind für die Speicherun
 | Makros                                                  | BESCHREIBUNG                                                                                                                                                                      |
 |---------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | [**D3DTS \_ WORLD**](d3dts-world.md)                     | Entspricht D3DTS \_ WORLDMATRIX(0).                                                                                                                                  |
-| [**D3DTS \_ WORLDMATRIX**](d3dts-worldmatrix.md) (Index) | Identifiziert die Transformationsmatrix, die für die Weltmatrix am Index festgelegt werden soll. Mehrere Weltmatrizen werden nur für Scheitelpunktmischungen verwendet. Andernfalls wird nur D3DTS \_ WORLD verwendet. |
+| [**D3DTS \_ WORLDMATRIX**](d3dts-worldmatrix.md) (Index) | Identifiziert die Transformationsmatrix, die für die Weltmatrix am Index festgelegt werden soll. Mehrere Weltmatrizen werden nur für vertex blending verwendet. Andernfalls wird nur D3DTS \_ WORLD verwendet. |
 
 
 

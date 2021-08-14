@@ -1,18 +1,18 @@
 ---
-title: IMsRdpClientAdvancedSettings5 redirectclipboard (Eigenschaft)
-description: Legt die Konfiguration für die Umleitung der Zwischenablage fest oder ruft Sie ab.
+title: IMsRdpClientAdvancedSettings5 RedirectClipboard-Eigenschaft
+description: Legt die Konfiguration für die Umleitung in der Zwischenablage fest oder ruft sie ab.
 ms.assetid: c653f593-9912-4ade-a0a3-70d9afac2ab1
 ms.tgt_platform: multiple
 keywords:
-- Redirectclipboard-Eigenschaft Remotedesktopdienste
-- Redirectclipboard-Eigenschaft Remotedesktopdienste, IMsRdpClientAdvancedSettings5-Schnittstelle
-- IMsRdpClientAdvancedSettings5 Interface Remotedesktopdienste, redirectclipboard (Eigenschaft)
-- Redirectclipboard-Eigenschaft Remotedesktopdienste, IMsRdpClientAdvancedSettings6-Schnittstelle
-- IMsRdpClientAdvancedSettings6 Interface Remotedesktopdienste, redirectclipboard (Eigenschaft)
-- Redirectclipboard-Eigenschaft Remotedesktopdienste, IMsRdpClientAdvancedSettings7-Schnittstelle
-- IMsRdpClientAdvancedSettings7 Interface Remotedesktopdienste, redirectclipboard (Eigenschaft)
-- Redirectclipboard-Eigenschaft Remotedesktopdienste, IMsRdpClientAdvancedSettings8-Schnittstelle
-- IMsRdpClientAdvancedSettings8 Interface Remotedesktopdienste, redirectclipboard (Eigenschaft)
+- RedirectClipboard-Eigenschaft Remotedesktopdienste
+- RedirectClipboard-Eigenschaft Remotedesktopdienste , IMsRdpClientAdvancedSettings5-Schnittstelle
+- IMsRdpClientAdvancedSettings5-Schnittstelle Remotedesktopdienste , RedirectClipboard-Eigenschaft
+- RedirectClipboard-Eigenschaft Remotedesktopdienste , IMsRdpClientAdvancedSettings6-Schnittstelle
+- IMsRdpClientAdvancedSettings6-Schnittstelle Remotedesktopdienste , RedirectClipboard-Eigenschaft
+- RedirectClipboard-Eigenschaft Remotedesktopdienste , IMsRdpClientAdvancedSettings7-Schnittstelle
+- IMsRdpClientAdvancedSettings7-Schnittstelle Remotedesktopdienste , RedirectClipboard-Eigenschaft
+- RedirectClipboard-Eigenschaft Remotedesktopdienste , IMsRdpClientAdvancedSettings8-Schnittstelle
+- IMsRdpClientAdvancedSettings8-Schnittstelle Remotedesktopdienste , RedirectClipboard-Eigenschaft
 topic_type:
 - apiref
 api_name:
@@ -34,16 +34,16 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 2aba9950b8d602ca239d66364279a5876a432d04
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 5847ef4ccb5798ea74cccecbcabbb04303df93f3cd9a8a6155cd94eabbc8a824
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "103949629"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118352284"
 ---
-# <a name="imsrdpclientadvancedsettings5redirectclipboard-property"></a>IMsRdpClientAdvancedSettings5:: redirectclipboard (Eigenschaft)
+# <a name="imsrdpclientadvancedsettings5redirectclipboard-property"></a>IMsRdpClientAdvancedSettings5::RedirectClipboard-Eigenschaft
 
-Legt die Konfiguration für die Umleitung der Zwischenablage fest oder ruft Sie ab.
+Legt die Konfiguration für die Umleitung in der Zwischenablage fest oder ruft sie ab.
 
 Dies ist eine Eigenschaft mit Lese- und Schreibzugriff.
 
@@ -64,7 +64,7 @@ HRESULT get_RedirectClipboard(
 
 ## <a name="property-value"></a>Eigenschaftswert
 
-Legt den Umleitungs Modus für die Zwischenablage auf **true** oder **false** fest. Wenn diese Option auf **true** festgelegt ist, ist der Umleitungs Modus der zwischen
+Legt den Zwischenablageumleitungsmodus auf **TRUE** oder **FALSE** fest. Wenn **true** festgelegt ist, ist der Zwischenablageumleitungsmodus aktiviert.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -80,7 +80,7 @@ Legt den Umleitungs Modus für die Zwischenablage auf **true** oder **false** fe
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 

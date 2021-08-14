@@ -1,9 +1,9 @@
 ---
-title: RBN_CHEVRONPUSHED Benachrichtigungs Code (kommctrl. h)
-description: Wird von einem Grund leisten-Steuerelement gesendet, wenn ein Chevron gepusht wird. Dieser Benachrichtigungs Code wird in Form einer WM-Benachrichtigungs \_ Meldung gesendet.
+title: RBN_CHEVRONPUSHED Benachrichtigungscode (Commctrl.h)
+description: Wird von einem Rebar-Steuerelement gesendet, wenn ein Chevron gepusht wird. Dieser Benachrichtigungscode wird in Form einer WM \_ NOTIFY-Nachricht gesendet.
 ms.assetid: 58aa2c9d-8ab6-46ee-b32f-5c04fb7afa84
 keywords:
-- Windows-Steuerelemente für RBN_CHEVRONPUSHED Benachrichtigungs
+- RBN_CHEVRONPUSHED Benachrichtigungscode Windows Controls
 topic_type:
 - apiref
 api_name:
@@ -14,16 +14,16 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: ab28d992b6d4a617b7aa7ee144eb50aef3b0e834
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: a3f5f8d52558251524e9d978c52ae703565a9641febdd53190925cfb8b127160
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104040588"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119985320"
 ---
-# <a name="rbn_chevronpushed-notification-code"></a>RBN \_ chevronpushbenachrichtigungen-Benachrichtigungs Code
+# <a name="rbn_chevronpushed-notification-code"></a>\_RBN-CHEVRONPUSHED-Benachrichtigungscode
 
-Wird von einem Grund leisten-Steuerelement gesendet, wenn ein Chevron gepusht wird. Dieser Benachrichtigungs Code wird in Form einer WM- [**\_ Benachrichtigungs**](wm-notify.md) Meldung gesendet.
+Wird von einem Rebar-Steuerelement gesendet, wenn ein Chevron gepusht wird. Dieser Benachrichtigungscode wird in Form einer [**WM \_ NOTIFY-Nachricht**](wm-notify.md) gesendet.
 
 
 ```C++
@@ -41,7 +41,7 @@ RBN_CHEVRONPUSHED
 *lParam* 
 </dt> <dd>
 
-Zeiger auf die [**nmrebarchevron**](/windows/win32/api/commctrl/ns-commctrl-nmrebarchevron) -Struktur des Bands.
+Zeiger auf die [**NMREBARCHEVRON-Struktur**](/windows/win32/api/commctrl/ns-commctrl-nmrebarchevron) des Bands.
 
 </dd> </dl>
 
@@ -49,9 +49,9 @@ Zeiger auf die [**nmrebarchevron**](/windows/win32/api/commctrl/ns-commctrl-nmre
 
 Der Rückgabewert für diese Benachrichtigung wird nicht verwendet.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Wenn eine Anwendung diesen Benachrichtigungs Code empfängt, ist Sie für die Anzeige eines Popup Menüs mit Elementen für jedes ausgeblendete Tool verantwortlich. Verwenden Sie das **RC** -Element der [**nmrebarchevron**](/windows/win32/api/commctrl/ns-commctrl-nmrebarchevron) -Struktur, um die richtige Position für das Popup Menü zu suchen.
+Wenn eine Anwendung diesen Benachrichtigungscode empfängt, ist sie für die Anzeige eines Popupmenüs mit Elementen für jedes ausgeblendete Tool verantwortlich. Verwenden Sie den **rc-Member** der [**NMREBARCHEVRON-Struktur,**](/windows/win32/api/commctrl/ns-commctrl-nmrebarchevron) um die richtige Position für das Popupmenü zu finden.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -59,9 +59,9 @@ Wenn eine Anwendung diesen Benachrichtigungs Code empfängt, ist Sie für die An
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>                                        |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2003 \[ -Desktop-Apps\]<br/>                                  |
-| Header<br/>                   | <dl> <dt>Kommstrg. h</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows \[Nur Vista-Desktop-Apps\]<br/>                                        |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2003-Desktop-Apps\]<br/>                                  |
+| Header<br/>                   | <dl> <dt>Commctrl.h</dt> </dl> |
 
 
 

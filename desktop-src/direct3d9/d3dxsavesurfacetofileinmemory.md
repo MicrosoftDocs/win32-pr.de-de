@@ -1,7 +1,7 @@
 ---
 description: Speichert eine Oberfläche in einer Bilddatei.
 ms.assetid: 6320e5ed-e43d-43bf-a746-5478df42941d
-title: D3DXSaveSurfaceToFileInMemory-Funktion (D3dx9tex. h)
+title: D3DXSaveSurfaceToFileInMemory-Funktion (D3dx9tex.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -14,12 +14,12 @@ api_type:
 api_location:
 - d3dx9.lib
 - d3dx9.dll
-ms.openlocfilehash: 8e8bbdd447b7154e150b3469a4b12180252ed516
-ms.sourcegitcommit: 14010c34b35fa268046c7683f021f86de08ddd0a
+ms.openlocfilehash: 6dd6715c05be0e6472b1c630ebdda209d48dfc571d4b3d5234b80f3700e597d8
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "106366458"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119986440"
 ---
 # <a name="d3dxsavesurfacetofileinmemory-function"></a>D3DXSaveSurfaceToFileInMemory-Funktion
 
@@ -44,48 +44,48 @@ HRESULT D3DXSaveSurfaceToFileInMemory(
 
 <dl> <dt>
 
-*ppdestbuf* \[ vorgenommen\]
+*ppDestBuf* \[ out\]
 </dt> <dd>
 
 Typ: **[ **LPD3DXBUFFER**](id3dxbuffer.md)\***
 
-Adresse eines Zeigers auf eine [**ID3DXBuffer**](id3dxbuffer.md) , in der das Bild gespeichert wird.
+Adresse eines Zeigers auf einen [**ID3DXBuffer,**](id3dxbuffer.md) der das Bild speichert.
 
 </dd> <dt>
 
-*Destformat* \[ in\]
+*DestFormat* \[ In\]
 </dt> <dd>
 
-Type: **[ **D3DXIMAGE \_ File Format**](./d3dximage-fileformat.md)**
+Typ: **[ **D3DXIMAGE \_ FILEFORMAT**](./d3dximage-fileformat.md)**
 
-[**D3DXIMAGE \_ Dateiformat**](./d3dximage-fileformat.md) , das das beim Speichern zu verwendende Dateiformat angibt. Diese Funktion unterstützt das Speichern in allen **D3DXIMAGE \_ File Format** -Formaten außer Portable pixmap (. ppm) und TARGA/Truevision Graphics Adapter (. TGA).
+[**D3DXIMAGE \_ FILEFORMAT,**](./d3dximage-fileformat.md) das das beim Speichern zu verwendende Dateiformat angibt. Diese Funktion unterstützt das Speichern in allen **D3DXIMAGE \_ FILEFORMAT-Formaten** mit Ausnahme von Portable Pixmap (.ppm) und Targa/Truevision Graphics Adapter (.tga).
 
 </dd> <dt>
 
-*psrcsurface* \[ in\]
+*pSrcSurface* \[ In\]
 </dt> <dd>
 
 Typ: **[ **LPDIRECT3DSURFACE9**](/windows/win32/api/d3d9helper/nn-d3d9helper-idirect3dsurface9)**
 
-Zeiger auf die [**IDirect3DSurface9**](/windows/win32/api/d3d9helper/nn-d3d9helper-idirect3dsurface9) -Schnittstelle, die das zu speichernde Bild enthält.
+Zeiger auf die [**IDirect3DSurface9-Schnittstelle,**](/windows/win32/api/d3d9helper/nn-d3d9helper-idirect3dsurface9) die das zu speichernde Image enthält.
 
 </dd> <dt>
 
-*psrcpalette* \[ in\]
+*pSrcPalette* \[ In\]
 </dt> <dd>
 
-Typ: **Konstanten [**PaletteEntry**](/windows/win32/api/wingdi/ns-wingdi-paletteentry) \***
+Typ: **const [**PALETTEENTRY**](/windows/win32/api/wingdi/ns-wingdi-paletteentry) \***
 
-Ein Zeiger auf eine [**PaletteEntry**](/windows/win32/api/wingdi/ns-wingdi-paletteentry) -Struktur, die eine Palette von 256 Farben enthält. Dieser Parameter kann **NULL** sein.
+Zeiger auf eine [**PALETTEENTRY-Struktur,**](/windows/win32/api/wingdi/ns-wingdi-paletteentry) die eine Palette von 256 Farben enthält. Dieser Parameter kann **NULL** sein.
 
 </dd> <dt>
 
-*psrcrect* \[ in\]
+*pSrcRect* \[ In\]
 </dt> <dd>
 
-Typ: Konstante **[**Rect**](/previous-versions//dd162897(v=vs.85)) \***
+Typ: **const [**RECT**](/previous-versions//dd162897(v=vs.85)) \***
 
-Zeiger auf eine [**Rect**](/previous-versions//dd162897(v=vs.85)) -Struktur. Gibt das Quell Rechteck an. Legen Sie diesen Parameter auf **null** fest, um das gesamte Bild anzugeben.
+Zeiger auf eine [**RECT-Struktur.**](/previous-versions//dd162897(v=vs.85)) Gibt das Quellrechteck an. Legen Sie diesen Parameter auf **NULL** fest, um das gesamte Bild anzugeben.
 
 </dd> </dl>
 
@@ -93,11 +93,11 @@ Zeiger auf eine [**Rect**](/previous-versions//dd162897(v=vs.85)) -Struktur. Gib
 
 Typ: **[ **HRESULT**](https://msdn.microsoft.com/library/Bb401631(v=MSDN.10).aspx)**
 
-Wenn die Funktion erfolgreich ausgeführt wird, ist der Rückgabewert D3D \_ OK. Wenn die Funktion fehlschlägt, kann der Rückgabewert wie folgt lauten: D3DERR \_ invalidcall.
+Wenn die Funktion erfolgreich ausgeführt wird, lautet der Rückgabewert D3D \_ OK. Wenn die Funktion fehlschlägt, kann der Rückgabewert wie folgt sein: D3DERR \_ INVALIDCALL.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Diese Funktion übernimmt die Konvertierung in und aus komprimierten Textur Formaten.
+Diese Funktion verarbeitet die Konvertierung in und aus komprimierten Texturformaten.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -105,16 +105,16 @@ Diese Funktion übernimmt die Konvertierung in und aus komprimierten Textur Form
 
 | Anforderung | Wert |
 |--------------------|---------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>D3dx9tex. h</dt> </dl> |
-| Bibliothek<br/> | <dl> <dt>D3dx9. lib</dt> </dl>  |
+| Header<br/>  | <dl> <dt>D3dx9tex.h</dt> </dl> |
+| Bibliothek<br/> | <dl> <dt>D3dx9.lib</dt> </dl>  |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[Textur Funktionen in D3DX 9](dx9-graphics-reference-d3dx-functions-texture.md)
+[Texturfunktionen in D3DX 9](dx9-graphics-reference-d3dx-functions-texture.md)
 </dt> <dt>
 
 [**D3DXSaveVolumeToFileInMemory**](d3dxsavevolumetofileinmemory.md)

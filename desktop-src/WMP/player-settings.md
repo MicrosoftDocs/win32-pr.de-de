@@ -1,9 +1,9 @@
 ---
-title: Player. Settings
-description: Die Settings-Eigenschaft ruft das Einstellungs Objekt ab.
+title: Player.settings
+description: Die settings-Eigenschaft ruft das Einstellungen-Objekt ab.
 ms.assetid: 9edd7d27-893a-4a32-8aaf-5efec6c50903
 keywords:
-- Player. Settings-Fenster Media Player
+- Player.settings Windows Media Player
 topic_type:
 - apiref
 api_name:
@@ -14,16 +14,16 @@ api_type:
 - DllExport
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 5d5482574069ea94052016272ff22cde2ac563f6
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: fb14137fba6ba460dda0d3bbdc32f0b97c442d75979e603460a645241d37e84e
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106360420"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118337964"
 ---
-# <a name="playersettings"></a>Player. Settings
+# <a name="playersettings"></a>Player.settings
 
-Die **Settings** -Eigenschaft ruft das Einstellungs Objekt ab.
+Die **settings-Eigenschaft** ruft das Einstellungen-Objekt ab.
 
 ## <a name="syntax"></a>Syntax
 
@@ -31,7 +31,7 @@ Die **Settings** -Eigenschaft ruft das Einstellungs Objekt ab.
 
 ## <a name="possible-values"></a>Mögliche Werte
 
-Diese Eigenschaft ist ein Schreib geschütztes Einstellungs Objekt.
+Diese Eigenschaft ist ein schreibgeschütztes Einstellungen-Objekt.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -39,19 +39,19 @@ Diese Eigenschaft ist ein Schreib geschütztes Einstellungs Objekt.
 
 | Anforderung | Wert |
 |--------------------|------------------------------------------------------------------------------------|
-| Version<br/> | Windows Media Player Version 7,0 oder höher.<br/>                              |
+| Version<br/> | Windows Media Player Version 7.0 oder höher.<br/>                              |
 | DLL<br/>     | <dl> <dt>Wmp.dll</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
 [**Player-Objekt**](player-object.md)
 </dt> <dt>
 
-[**Einstellungs Objekt**](settings-object.md)
+[**Einstellungen Objekt**](settings-object.md)
 </dt> </dl>
 
  

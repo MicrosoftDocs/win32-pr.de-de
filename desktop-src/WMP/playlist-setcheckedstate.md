@@ -1,9 +1,9 @@
 ---
-title: Wiedergabeliste. setcheckedstate
-description: Die setcheckedstate-Methode gibt an, dass das indizierte Element in der Wiedergabeliste überprüft wird.
+title: PLAYLIST.setCheckedState
+description: Die setCheckedState-Methode gibt an, dass das indizierte Element in der Wiedergabeliste überprüft wird.
 ms.assetid: ce5de21b-6354-485e-b6f7-f4d090c149f7
 keywords:
-- Wiedergabeliste. setcheckedstate Windows Media Player
+- PLAYLIST.setCheckedState Windows Media Player
 topic_type:
 - apiref
 api_name:
@@ -13,16 +13,16 @@ api_type:
 ms.topic: reference
 ms.date: 05/31/2018
 api_location: ''
-ms.openlocfilehash: 6a8c86459dcf590b1ff1e884a8aa671dc1bba78a
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 93e143f738197524e1555f18aedf84aa606626de645a98149c65507b71291cde
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106369935"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118336247"
 ---
-# <a name="playlistsetcheckedstate"></a>Wiedergabeliste. setcheckedstate
+# <a name="playlistsetcheckedstate"></a>PLAYLIST.setCheckedState
 
-Die **setcheckedstate** -Methode gibt an, dass das indizierte Element in der Wiedergabeliste überprüft wird.
+Die **setCheckedState-Methode** gibt an, dass das indizierte Element in der Wiedergabeliste überprüft wird.
 
 ``` syntax
         elementID.setCheckedState(item)
@@ -32,22 +32,22 @@ Die **setcheckedstate** -Methode gibt an, dass das indizierte Element in der Wie
 
 <dl> <dt>
 
-<span id="item"></span><span id="ITEM"></span>*Position*
+<span id="item"></span><span id="ITEM"></span>*Artikel*
 </dt> <dd>
 
-**Number** (**Long**), der den Index des zu überprüfenden Wiedergabelisten Elements angibt.
+**Number** (**long**), die den Index des zu überprüfenden Wiedergabelistenelements angibt.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Diese Methode gibt einen **booleschen** Wert zurück.
+Diese Methode gibt einen **booleschen zurück.**
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Sie können alle Elemente in den aktivierten Zustand setzen, indem Sie im *Item* -Parameter den Wert 1 angeben.
+Sie können alle Elemente auf den aktivierten Zustand festlegen, indem Sie 1 im *Elementparameter* angeben.
 
-Diese Methode wurde durch **setCheckedState2** ersetzt, der als Unterstützung für die wieder-Wiedergabeliste steht.
+Diese Methode wurde durch **setCheckedState2** ersetzt, das geschachtelte Wiedergabelisten unterstützt.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -55,18 +55,18 @@ Diese Methode wurde durch **setCheckedState2** ersetzt, der als Unterstützung f
 
 | Anforderung | Wert |
 |--------------------|------------------------------------------------------|
-| Version<br/> | Windows Media Player, Version 7,0 oder höher<br/> |
+| Version<br/> | Windows Media Player Version 7.0 oder höher<br/> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Wiedergabelisten Element**](playlist-element.md)
+[**PLAYLIST-Element**](playlist-element.md)
 </dt> <dt>
 
-[**Wiedergabeliste. setCheckedState2**](playlist-setcheckedstate2.md)
+[**PLAYLIST.setCheckedState2**](playlist-setcheckedstate2.md)
 </dt> </dl>
 
  

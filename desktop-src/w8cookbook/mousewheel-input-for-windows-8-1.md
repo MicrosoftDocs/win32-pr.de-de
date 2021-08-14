@@ -1,47 +1,47 @@
 ---
-title: Mouswheel-Eingabe für Windows 8.1
-description: Mouswheel-Eingabe für Windows 8.1
+title: Mausradeingabe für Windows 8.1
+description: Mausradeingabe für Windows 8.1
 ms.assetid: A178E86C-16A6-4DF5-9880-CF83F62AAF04
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: cd9480280bf5526c8cd63c0703705c7ef742bff4
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: d2285d2a0456376b01289ac7a4c2607117441384ebd13b0aaf0a162eac50fdfb
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "103855811"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118211383"
 ---
-# <a name="mousewheel-input-for-windows-81"></a>Mouswheel-Eingabe für Windows 8.1
+# <a name="mousewheel-input-for-windows-81"></a>Mausradeingabe für Windows 8.1
 
 ## <a name="platform"></a>Plattform
 
-<dl> Clients-Windows 8.1  
-Server-Windows Server 2012 R2  
+<dl> Clients – Windows 8.1  
+Server – Windows Server 2012 R2  
 </dl>
 
 ## <a name="description"></a>BESCHREIBUNG
 
-In Windows 8.1 werden mouserwheel-Ereignisse nicht mehr basierend auf dem Tastaturfokus wie in früheren Windows-Versionen bereitgestellt. Wenn in Windows 8.1 der Mauszeiger auf eine Store-App zeigt, wird Mausrad an diese APP übermittelt. aus Kompatibilitätsgründen wird Mausrad jedoch weiterhin basierend auf dem Tastaturfokus übermittelt, wenn der Mauszeiger auf eine Desktop-App zeigt.
+In Windows 8.1 werden Mausradereignisse nicht mehr basierend auf dem Tastaturfokus übermittelt, wie in früheren Versionen von Windows. Wenn Windows 8.1 mit der Maus auf eine Store-App bewegen, wird das Mausrad an diese App übermittelt. Aus Kompatibilitätsgründen wird das Mausrad jedoch weiterhin basierend auf dem Tastaturfokus übermittelt, wenn der Mauszeiger auf eine Desktop-Appzeigerzeiger ist.
 
-## <a name="manifestations"></a>Kundgebungen
+## <a name="manifestations"></a>Manifestationen
 
-Wenn die Maus über Store-Apps bewegt wird, führt Mausrad einen Bildlauf für alle anwendbaren Inhalte durch, ohne dass der Benutzer auf die Store-App klicken muss. Dies gilt auch für den Startbildschirm. Dadurch wird das Scrollen durch mouswheel zu einer einfacheren Interaktion in Windows 8.1 als in Windows 8.
+Wenn der Mauszeiger mit dem Mauszeiger auf Store Apps klickt, führt das Mausrad einen Bildlauf für alle anwendbaren Inhalte durch, ohne dass der Benutzer auf die Store muss. Dies gilt auch für den Startbildschirm. Dadurch wird das Scrollen mit dem Mausrad zu einer einfacheren Interaktion in Windows 8.1 als in Windows 8.
 
 ## <a name="mitigation"></a>Minderung
 
-Zum größten Teil sollte diese Änderung keine Auswirkungen auf vorhandene apps haben. Wenn eine Store-App nur nach dem Registrieren eines Mausklicks auf Mausrad-Ereignisse lauscht, würde diese APP wahrscheinlich nicht auf Mausrad Antworten, bis der Benutzer Sie aktiv geklickt hat. Folglich besteht der wahrscheinlichste Nachteil darin, dass eine APP weiterhin genauso funktioniert wie in Windows 8. Bei Desktop-Apps wird der APP mit dem Tastaturfokus nicht mehr ein Monopol über Mausrad-Eingaben erteilt, aber auch diese apps werden nicht in irgendeiner Weise unterstützt. Es sind also keine kurzfristigen Maßnahmen erforderlich.
+In den meisten Jahren sollte diese Änderung keine Auswirkungen auf vorhandene Apps haben. Wenn eine Store-App erst nach der Registrierung eines Mausklickereignisses auf Mausradereignisse laused, reagiert diese App wahrscheinlich erst, wenn der Benutzer aktiv darauf geklickt hat. Daher ist der wahrscheinlichste Nachteil hier einfach, dass eine App weiterhin wie in der Windows 8. Bei Desktop-Apps bietet der Tastaturfokus der App keine Mausradeingabe mehr, aber dies führt auch nicht zu einer Unterbrechung dieser Apps. Daher sind keine kurzfristigen Entschärfungen erforderlich.
 
 ## <a name="solution"></a>Lösung
 
-Entwickler von Store-Apps sollten mit dem Empfang von Mausrad-Ereignissen ohne ein gedrückter Mausklicks rechnen. Sie sollten z. b. nur nach dem Registrieren eines Mausklicks auf Mausrad-Ereignisse lauschen. Ebenso sollten Desktop Anwendungen nicht versuchen, Mausrad-Ereignisse zu erfassen (z. b. durch Festlegen eines Hooks auf niedriger Ebene), wenn Sie den Tastaturfokus haben.
+Store App-Entwickler sollten davon ausgehen, Mausradereignisse ohne ein vorzappungsbereites Mausklickereignis zu empfangen. Sie sollten beispielsweise nicht erst nach dem Registrieren eines Mausklicks auf Mausradereignisse lauschen. Ebenso sollten Desktopanwendungen nicht versuchen, Mausradereignisse zu erfassen (z. B. durch Festlegen eines Hooks auf niedriger Ebene), wenn sie den Tastaturfokus haben.
 
 ## <a name="tests"></a>Tests
 
-Store-App-Entwickler sollten sich auf Windows 8.1 testen, um zu überprüfen, ob alle scrollfunktionen funktionieren, wenn der Mauszeiger über die APP bewegt wird. Entwickler von Desktop-Apps sollten auf Windows 8.1 testen, um sicherzustellen, dass Sie keine Mausrad-Ereignisse erfassen (pro Leitfaden oben).
+Store app developers should test on Windows 8.1 to verify that all scrolling functionality works whenever the mouse is hingovering over the app. Desktop-App-Entwickler sollten Windows 8.1 testen, um sicherzustellen, dass sie keine Mausradereignisse erfassen (wie oben beschrieben).
 
- 
+ 
 
- 
+ 
 
 
 

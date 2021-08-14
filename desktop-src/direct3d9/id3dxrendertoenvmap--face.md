@@ -1,7 +1,7 @@
 ---
-description: Initiieren Sie die Zeichnung der einzelnen Gesichter einer Umgebungs Zuordnung.
+description: Initiieren sie das Zeichnen der einzelnen Gesichtserkennungen einer Umgebungskarte.
 ms.assetid: c100e138-c5a8-49bb-9a91-e7f70410470f
-title: 'ID3DXRenderToEnvMap:: Face-Methode (D3dx9core. h)'
+title: ID3DXRenderToEnvMap::Face-Methode (D3dx9core.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -14,16 +14,16 @@ api_type:
 api_location:
 - d3dx9.lib
 - d3dx9.dll
-ms.openlocfilehash: 452933c0d85a7aad2987011796ff47eff41dc32b
-ms.sourcegitcommit: 14010c34b35fa268046c7683f021f86de08ddd0a
+ms.openlocfilehash: 1190e033f9aa83b13f327fcb8a8b530be17132bfd330c9be6b9cc6d87d5e35a0
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "103762345"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118801219"
 ---
-# <a name="id3dxrendertoenvmapface-method"></a>ID3DXRenderToEnvMap:: Face-Methode
+# <a name="id3dxrendertoenvmapface-method"></a>ID3DXRenderToEnvMap::Face-Methode
 
-Initiieren Sie die Zeichnung der einzelnen Gesichter einer Umgebungs Zuordnung.
+Initiieren sie das Zeichnen der einzelnen Gesichtserkennungen einer Umgebungskarte.
 
 ## <a name="syntax"></a>Syntax
 
@@ -41,21 +41,21 @@ HRESULT Face(
 
 <dl> <dt>
 
-*Gesicht* \[ in\]
+*Gesicht* \[ In\]
 </dt> <dd>
 
-Typ: **[ **D3DCUBEMAP \_ Gesichter**](./d3dcubemap-faces.md)**
+Typ: **[ **D3DCUBEMAP \_ FACES**](./d3dcubemap-faces.md)**
 
-Das erste Gesicht der Umgebungs Cube-Karte. Siehe [**D3DCUBEMAP \_ Gesichter**](./d3dcubemap-faces.md).
+Das erste Gesicht der Umgebungscubekarte. Siehe [**D3DCUBEMAP \_ FACES**](./d3dcubemap-faces.md).
 
 </dd> <dt>
 
-*MipFilter* \[ in\]
+*MipFilter* \[ In\]
 </dt> <dd>
 
 Typ: **[ **DWORD**](../winprog/windows-data-types.md)**
 
-Eine gültige Kombination aus einem oder mehreren [D3DX- \_ Filterflags](d3dx-filter.md) .
+Eine gültige Kombination aus mindestens einem [D3DX \_ FILTER-Flag.](d3dx-filter.md)
 
 </dd> </dl>
 
@@ -63,11 +63,11 @@ Eine gültige Kombination aus einem oder mehreren [D3DX- \_ Filterflags](d3dx-fi
 
 Typ: **[ **HRESULT**](https://msdn.microsoft.com/library/Bb401631(v=MSDN.10).aspx)**
 
-Wenn die Methode erfolgreich ausgeführt wird, ist der Rückgabewert D3D \_ OK. Wenn die Methode fehlschlägt, kann der Rückgabewert "D3DERR \_ invalidcall" lauten.
+Wenn die Methode erfolgreich ist, ist der Rückgabewert D3D \_ OK. Wenn bei der Methode ein Fehler auftritt, kann der Rückgabewert D3DERR \_ INVALIDCALL sein.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Diese Methode muss für jeden Typ von Umgebungs Zuordnung einmal aufgerufen werden. Die einzige Ausnahme ist eine kubische Umgebungs Zuordnung, die erfordert, dass diese Methode sechs Mal aufgerufen wird, einmal für jedes Gesicht in D3DCUBEMAP \_ Gesichter. Weitere Informationen finden Sie unter [Umgebungs Zuordnung (Direct3D 9)](environment-mapping.md).
+Diese Methode muss einmal für jeden Typ von Umgebungszuordnung aufgerufen werden. Die einzige Ausnahme ist eine kubische Umgebungskarte, die erfordert, dass diese Methode sechsmal aufgerufen wird, einmal für jedes Gesicht in D3DCUBEMAP \_ FACES. Weitere Informationen finden Sie unter [Umgebungszuordnung (Direct3D 9).](environment-mapping.md)
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -75,12 +75,12 @@ Diese Methode muss für jeden Typ von Umgebungs Zuordnung einmal aufgerufen werd
 
 | Anforderung | Wert |
 |--------------------|----------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>D3dx9core. h</dt> </dl> |
-| Bibliothek<br/> | <dl> <dt>D3dx9. lib</dt> </dl>   |
+| Header<br/>  | <dl> <dt>D3dx9core.h</dt> </dl> |
+| Bibliothek<br/> | <dl> <dt>D3dx9.lib</dt> </dl>   |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 

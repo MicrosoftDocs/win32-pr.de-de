@@ -1,19 +1,19 @@
 ---
 description: Tritt ein, wenn der Mauszeiger über das InkPicture-Steuerelement bewegt und eine Maustaste losgelassen wird.
 ms.assetid: 5e49acc8-1ce1-45ff-b87c-04bdc653156a
-title: InkPicture. mousetup-Ereignis (msink AUT. h)
+title: InkPicture.MouseUp-Ereignis (Msinkaut.h)
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: bf652e1ad4110afb4819e5326a5a19a894a310a2
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 0ec780348191a4bfe8d0aadb0ad075a3784f49f23504c7dc02ca5f6da14c0d54
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106373118"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118218376"
 ---
-# <a name="inkpicturemouseup-event"></a>InkPicture. mousetup-Ereignis
+# <a name="inkpicturemouseup-event"></a>InkPicture.MouseUp-Ereignis
 
-Tritt ein, wenn der Mauszeiger über das [InkPicture](inkpicture-control-reference.md) -Steuerelement bewegt und eine Maustaste losgelassen wird.
+Tritt ein, wenn der Mauszeiger über das [InkPicture-Steuerelement](inkpicture-control-reference.md) bewegt und eine Maustaste losgelassen wird.
 
 ## <a name="syntax"></a>Syntax
 
@@ -34,38 +34,38 @@ void MouseUp(
 
 <dl> <dt>
 
-*Schaltfläche* \[ in\]
+*Schaltfläche* \[ In\]
 </dt> <dd>
 
 Die Schaltfläche, die gedrückt wurde.
 
 </dd> <dt>
 
-*UMSCHALT* \[ in\]
+*Umschalten* \[ In\]
 </dt> <dd>
 
 Der Zustand der UMSCHALTTASTE.
 
 </dd> <dt>
 
-*px* \[ in\]
+*pX* \[ In\]
 </dt> <dd>
 
-Die x-Koordinate des [**iinkcursor**](/windows/desktop/api/msinkaut/nn-msinkaut-iinkcursor) -Objekts in Pixel.
+Die x-Koordinate des [**IInkCursor-Objekts**](/windows/desktop/api/msinkaut/nn-msinkaut-iinkcursor) in Pixel.
 
 </dd> <dt>
 
-*pY* \[ in\]
+*pY* \[ In\]
 </dt> <dd>
 
-Die y-Koordinate des [**iinkcursor**](/windows/desktop/api/msinkaut/nn-msinkaut-iinkcursor) -Objekts in Pixel.
+Die y-Koordinate des [**IInkCursor-Objekts**](/windows/desktop/api/msinkaut/nn-msinkaut-iinkcursor) in Pixel.
 
 </dd> <dt>
 
 *Abbrechen* \[ in, out\]
 </dt> <dd>
 
-**Variant \_ TRUE** , um das mouberup-Ereignis für das übergeordnete Steuerelement abzubrechen. Andernfalls ist der Wert **\_ false**.
+**VARIANT \_ TRUE,** um das MouseUp-Ereignis für das übergeordnete Steuerelement abzubrechen. Andernfalls **VARIANT \_ FALSE**.
 
 </dd> </dl>
 
@@ -73,19 +73,19 @@ Die y-Koordinate des [**iinkcursor**](/windows/desktop/api/msinkaut/nn-msinkaut-
 
 Dieses Ereignis gibt keinen Wert zurück.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
 > [!Note]  
-> Die Parameter *px* und *pY* liegen in Pixel und nicht in den HIMETRIC-Einheiten, die dem Freihand Raumkoordinaten System zugeordnet sind. Dies liegt daran, dass dieses Ereignis das verknüpfte Maus Ereignis einer Anwendung ersetzt, die nicht mit Pen kompatibel ist, und dieser Anwendungstyp nur auf Pixel verweist.
+> Die Parameter *pX* und *pY* sind in Pixel und nicht die HIMETRIC-Einheiten, die dem Freihandraumkoordinatensystem zugeordnet sind. Dies liegt daran, dass dieses Ereignis das zugehörige Mausereignis einer Anwendung ersetzt, die keinen Stift erkennt, und dieser Anwendungstyp sich nur auf Pixel bezieht.
 
  
 
 > [!Caution]  
-> Einige Steuerelemente basieren auf einer bestimmten Beziehung zwischen [**mouledown**](inkpicture-mousedown.md)-, [**mousermove**](inkpicture-mousemove.md)-und **mouberup** -Ereignissen. Das Abbrechen einiger dieser Ereignisse kann zu unerwarteten Ergebnissen führen.
+> Einige Steuerelemente basieren auf einer bestimmten Beziehung zwischen [**MouseDown-,**](inkpicture-mousedown.md) [**MouseMove-**](inkpicture-mousemove.md)und **MouseUp-Ereignissen.** Das Abbrechen einiger dieser Ereignisse kann unerwartete Ergebnisse haben.
 
  
 
-Diese Ereignismethode wird in der **\_ iinkpictureevents** -Schnittstelle definiert. Die **\_ iinkpictureevents** -Schnittstelle implementiert die [**IDispatch**](/windows/win32/api/oaidl/nn-oaidl-idispatch) -Schnittstelle mit dem Bezeichner "DISPID \_ ipemouabdown".
+Diese Ereignismethode wird in der **\_ IInkPictureEvents-Schnittstelle** definiert. Die **\_ IInkPictureEvents-Schnittstelle** implementiert die [**IDispatch-Schnittstelle**](/windows/win32/api/oaidl/nn-oaidl-idispatch) mit dem Bezeichner DISPID \_ IPEMouseDown.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -93,18 +93,18 @@ Diese Ereignismethode wird in der **\_ iinkpictureevents** -Schnittstelle defini
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows XP Tablet PC Edition \[ Desktop-Apps\]<br/>                                                       |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur Desktop-Apps der XP Tablet PC Edition \[\]<br/>                                                       |
 | Unterstützte Mindestversion (Server)<br/> | Nicht unterstützt<br/>                                                                                           |
-| Header<br/>                   | <dl> <dt>Msink AUT. h (erfordert auch msink AUT \_ i. c)</dt> </dl> |
+| Header<br/>                   | <dl> <dt>Msinkaut.h (erfordert auch Msinkaut \_ i.c)</dt> </dl> |
 | Bibliothek<br/>                  | <dl> <dt>InkObj.dll</dt> </dl>                               |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[InkPicture](inkpicture-control-reference.md)
+[Inkpicture](inkpicture-control-reference.md)
 </dt> </dl>
 
  

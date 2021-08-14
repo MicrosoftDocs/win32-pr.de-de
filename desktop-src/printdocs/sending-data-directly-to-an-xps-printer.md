@@ -1,30 +1,30 @@
 ---
-description: In diesem Thema wird beschrieben, wie Drucker Steuerungsdaten direkt an Drucker gesendet werden, die XPSDrv-Druckertreiber verwenden.
+description: In diesem Thema wird beschrieben, wie Druckersteuerelementdaten direkt an Drucker gesendet werden, die XPSDrv-Druckertreiber verwenden.
 ms.assetid: 7e98e08a-d572-451d-befb-18fc86f0e505
-title: 'Gewusst wie: direktes Senden von Daten an einen XPS-Drucker'
+title: 'Vorgehensweise: Direktes Senden von Daten an einen XPS-Drucker'
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: d78a8c36d6862860862059f9bbcc8db25e171b19
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 65fba87578f9257290123b737f2d1d8c3e48f57e6a628110a20a232ddb290ea0
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106347341"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118470152"
 ---
-# <a name="how-to-send-data-directly-to-an-xps-printer"></a>Gewusst wie: direktes Senden von Daten an einen XPS-Drucker
+# <a name="how-to-send-data-directly-to-an-xps-printer"></a>Vorgehensweise: Direktes Senden von Daten an einen XPS-Drucker
 
-In diesem Thema wird beschrieben, wie Drucker Steuerungsdaten direkt an Drucker gesendet werden, die XPSDrv-Druckertreiber verwenden.
+In diesem Thema wird beschrieben, wie Druckersteuerelementdaten direkt an Drucker gesendet werden, die XPSDrv-Druckertreiber verwenden.
 
 In den folgenden Schritten wird beschrieben, wie Daten direkt an einen Drucker gesendet werden. Diese Schritte werden auch im folgenden Codebeispiel veranschaulicht.
 
-1.  [**Öffnen Sie OpenPrinter**](openprinter.md) , um ein Handle für den Drucker abzurufen.
-2.  Initialisieren Sie eine [**DocInfo**](/windows/desktop/api/wingdi/ns-wingdi-docinfoa) -Struktur mit den Druckerdaten.
-3.  Aufrufen von [**StartDocPrinter**](startdocprinter.md) , um anzugeben, dass die Anwendung Dokument Daten an den Drucker sendet.
-4.  Schreiben Sie " [**Write-Printer**](writeprinter.md) ", um die Daten zu senden.
-5.  Ruft [**enddocprinter**](enddocprinter.md) auf, um anzugeben, dass alle Daten für dieses Dokument gesendet wurden.
-6.  Ruft [**closeprinter**](closeprinter.md) auf, um die Ressourcen freizugeben.
+1.  Rufen Sie [**OpenPrinter**](openprinter.md) auf, um ein Handle für den Drucker abzurufen.
+2.  Initialisieren Sie eine [**DOCINFO-Struktur**](/windows/desktop/api/wingdi/ns-wingdi-docinfoa) mit den Druckerdaten.
+3.  Rufen [**Sie StartDocPrinter**](startdocprinter.md) auf, um anzugeben, dass die Anwendung Dokumentdaten an den Drucker sendet.
+4.  Rufen Sie [**WritePrinter**](writeprinter.md) auf, um die Daten zu senden.
+5.  Rufen Sie [**EndDocPrinter**](enddocprinter.md) auf, um anzugeben, dass alle Daten für dieses Dokument gesendet wurden.
+6.  Rufen Sie [**ClosePrinter**](closeprinter.md) auf, um die Ressourcen freizugeben.
 
-Senden Sie Drucker Steuerungsdaten direkt an Drucker, die XPSDrv-Druckertreiber verwenden.
+Senden Sie Druckersteuerelementdaten direkt an Drucker, die XPSDrv-Druckertreiber verwenden.
 
 
 ```C++
@@ -100,13 +100,13 @@ BOOL RawDataToXpsPrinter (LPTSTR szPrinterName, LPBYTE lpData, DWORD dwCount)
 
 <dl> <dt>
 
-[**Closeprinter**](closeprinter.md)
+[**ClosePrinter**](closeprinter.md)
 </dt> <dt>
 
-[**Enddocprinter**](enddocprinter.md)
+[**EndDocPrinter**](enddocprinter.md)
 </dt> <dt>
 
-[**Endpageprinter**](endpageprinter.md)
+[**EndPagePrinter**](endpageprinter.md)
 </dt> <dt>
 
 [**OpenPrinter**](openprinter.md)
@@ -115,10 +115,10 @@ BOOL RawDataToXpsPrinter (LPTSTR szPrinterName, LPBYTE lpData, DWORD dwCount)
 [**StartDocPrinter**](startdocprinter.md)
 </dt> <dt>
 
-[**Startpageprinter**](startpageprinter.md)
+[**StartPagePrinter**](startpageprinter.md)
 </dt> <dt>
 
-[**"Write Printer"**](writeprinter.md)
+[**WritePrinter**](writeprinter.md)
 </dt> </dl>
 
  

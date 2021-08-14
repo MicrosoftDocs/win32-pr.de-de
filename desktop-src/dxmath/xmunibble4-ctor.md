@@ -11,12 +11,12 @@ api_name: ''
 api_type:
 - NA
 api_location: ''
-ms.openlocfilehash: 2a4a7f561dc0bf114a5824b1f8fe6d9547c327d5
-ms.sourcegitcommit: adba238660d8a5f4fe98fc6f5d105d56aac3a400
+ms.openlocfilehash: 92a300f292633e3d54264349e79491360c7017c38c62da60a953d36371189791
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/09/2021
-ms.locfileid: "111826128"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118499511"
 ---
 # <a name="xmunibble4-constructors"></a>XMUNIBBLE4-Konstruktoren
 
@@ -65,7 +65,7 @@ Dieser Konstruktor ist nur unter C++ verfügbar.
 </tr>
 <tr class="odd">
 <td style="text-align: left;"><a href="/windows/desktop/api/directxpackedvector/nf-directxpackedvector-xmunibble4-xmunibble4(constfloat)"><strong>XMUNIBBLE4 (const float*)</strong></a></td>
-<td style="text-align: left;">Initialisiert eine neue Instanz von <code>XMUNIBBLE4</code> aus einem Arrayargument mit vier <code>float</code> Elementen. <br/> Dieser Konstruktor initialisiert eine neue Instanz von <a href="/windows/desktop/api/directxpackedvector/ns-directxpackedvector-xmunibble4"><strong>XMUNIBBLE4</strong></a> aus einem aus einem Arrayargument mit vier <code>float</code> Elementen. <br/>
+<td style="text-align: left;">Initialisiert eine neue Instanz von aus einem Arrayargument mit <code>XMUNIBBLE4</code> vier <code>float</code> Elementen. <br/> Dieser Konstruktor initialisiert eine neue Instanz von <a href="/windows/desktop/api/directxpackedvector/ns-directxpackedvector-xmunibble4"><strong>XMUNIBBLE4</strong></a> aus einem aus einem Arrayargument mit vier <code>float</code> Elementen. <br/>
 <blockquote>
 [!Note]<br />
 Dieser Konstruktor ist nur unter C++ verfügbar.
@@ -74,7 +74,7 @@ Dieser Konstruktor ist nur unter C++ verfügbar.
 </tr>
 <tr class="even">
 <td style="text-align: left;"><a href="/windows/desktop/api/directxpackedvector/nf-directxpackedvector-xmunibble4-xmunibble4(constuint8_t)"><strong>XMUNIBBLE4 (const uint8_t*)</strong></a></td>
-<td style="text-align: left;">Initialisiert eine neue Instanz von <code>XMUNIBBLE4</code> aus einem Arrayargument mit vier <code>uint8_t</code> Elementen. <br/> Dieser Konstruktor initialisiert eine neue Instanz von <a href="/windows/desktop/api/directxpackedvector/ns-directxpackedvector-xmunibble4"><strong>XMUNIBBLE4</strong></a> aus einem aus einem Arrayargument mit vier <code>uint8_t</code> Elementen. <br/>
+<td style="text-align: left;">Initialisiert eine neue Instanz von aus einem Arrayargument mit <code>XMUNIBBLE4</code> vier <code>uint8_t</code> Elementen. <br/> Dieser Konstruktor initialisiert eine neue Instanz von <a href="/windows/desktop/api/directxpackedvector/ns-directxpackedvector-xmunibble4"><strong>XMUNIBBLE4</strong></a> aus einem aus einem Arrayargument mit vier <code>uint8_t</code> Elementen. <br/>
 <blockquote>
 [!Note]<br />
 Dieser Konstruktor ist nur unter C++ verfügbar.
@@ -82,7 +82,7 @@ Dieser Konstruktor ist nur unter C++ verfügbar.
 <br/></td>
 </tr>
 <tr class="odd">
-<td style="text-align: left;"><a href="/windows/desktop/api/directxpackedvector/nf-directxpackedvector-xmunibble4-xmunibble4(float_float_float_float)"><strong>XMUNIBBLE4 (float, float, float, float)</strong></a></td>
+<td style="text-align: left;"><a href="/windows/desktop/api/directxpackedvector/nf-directxpackedvector-xmunibble4-xmunibble4(float_float_float_float)"><strong>XMUNIBBLE4 (float,float,float,float)</strong></a></td>
 <td style="text-align: left;">Initialisiert eine neue Instanz von <code>XMUNIBBLE4</code> aus vier <code>float</code> Argumenten. <br/> Dieser Konstruktor initialisiert eine neue Instanz von <a href="/windows/desktop/api/directxpackedvector/ns-directxpackedvector-xmunibble4"><strong>XMUNIBBLE4</strong></a> aus vier <code>float</code> Argumenten. <br/>
 <blockquote>
 [!Note]<br />
@@ -104,7 +104,7 @@ Dieser Konstruktor ist nur unter C++ verfügbar.
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 

@@ -1,33 +1,33 @@
 ---
-description: In der folgenden Tabelle werden die Klassen für vorinstallierte, permanente WMI-Consumer aufgeführt.
+description: In der folgenden Tabelle sind die Klassen für vorinstallierte permanente WMI-Consumer aufgeführt.
 ms.assetid: 1239ea25-2835-4546-b66d-20a83704653e
 ms.tgt_platform: multiple
-title: Standard Consumer-Klassen
+title: Standard-Consumerklassen
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 2a5033077f3dabf90d3e935b2dfec9fad892f630
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 4f89463a459adb3dd800f77564002366c7500a2abbaa6010444ba7890802d5a9
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "104218487"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118315277"
 ---
-# <a name="standard-consumer-classes"></a>Standard Consumer-Klassen
+# <a name="standard-consumer-classes"></a>Standard-Consumerklassen
 
-In der folgenden Tabelle werden die Klassen für vorinstallierte, permanente WMI-Consumer aufgeführt. Sie können Instanzen dieser Klassen erstellen, um die permanente Consumerklasse bereitzustellen, die den logischen Consumer bereitstellt, der antwortet, wenn Sie durch die im Filter angegebenen Ereignisse ausgelöst wird. Verwenden Sie z. b. die [**activescripteventconsumer**](activescripteventconsumer.md) -Klasse, um das Skript zu definieren, das ausgeführt wird, wenn ein bestimmtes Ereignis eintritt.
+In der folgenden Tabelle sind die Klassen für vorinstallierte permanente WMI-Consumer aufgeführt. Sie können Instanzen dieser Klassen erstellen, um die permanente Consumerklasse bereitzustellen, um den logischen Consumer bereitzustellen, der reagiert, wenn er durch die im Filter angegebenen Ereignisse ausgelöst wird. Verwenden Sie beispielsweise die [**ActiveScriptEventConsumer-Klasse,**](activescripteventconsumer.md) um das Skript zu definieren, das ausgeführt wird, wenn ein angegebenes Ereignis auftritt.
 
-Weitere Informationen finden Sie unter über [wachen und reagieren auf Ereignisse mit Standardconsumern](monitoring-and-responding-to-events-with-standard-consumers.md) und [Überwachungs Ereignissen](monitoring-events.md).
+Weitere Informationen finden Sie unter [Überwachen und Reagieren auf Ereignisse mit Standardverbrauchern](monitoring-and-responding-to-events-with-standard-consumers.md) und Überwachen von [Ereignissen.](monitoring-events.md)
 
 
 
 | Klasse                                                                        | BESCHREIBUNG                                                                                                                                                                                                                                           |
 |------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| [**Activescripteventconsumer**](activescripteventconsumer.md)               | Führt ein vordefiniertes Skript in einer beliebigen Skriptsprache aus, wenn ein Ereignis zugestellt wird.<br/> Beispiel: [Ausführen eines Skripts auf der Grundlage eines Ereignisses](running-a-script-based-on-an-event.md)<br/>                                         |
-| [**Commandlineeventconsumer**](commandlineeventconsumer.md)                 | Hiermit wird ein beliebiger Prozess im Kontext des lokalen Systems gestartet, wenn ein Ereignis an ihn übermittelt wird.<br/> Beispiel: [Ausführen eines Programms von der Befehlszeile auf Grundlage eines Ereignisses](running-a-program-from-the-command-line-based-on-an-event.md)<br/> |
-| [**Logfileeventconsumer**](logfileeventconsumer.md)                         | Schreibt angepasste Zeichen folgen in eine Text Protokolldatei, wenn Ereignisse an Sie übermittelt werden.<br/> Beispiel: [Schreiben in eine Protokolldatei auf Grundlage eines Ereignisses](writing-to-a-log-file-based-on-an-event.md)<br/>                                                   |
-| [**Nteventlogeventconsumer**](nteventlogeventconsumer.md)                   | Protokolliert eine bestimmte Meldung im Windows-Ereignisprotokoll, wenn ein Ereignis zugestellt wird.<br/> Beispiel: [Protokollierung in NT-Ereignisprotokoll basierend auf einem Ereignis](logging-to-nt-event-log-based-on-an-event.md)<br/>                                          |
-| [**Scriptingstandardconsumersetting**](scriptingstandardconsumersetting.md) | Stellt Registrierungsdaten bereit, die allen Instanzen der [**activescripteventconsumer**](activescripteventconsumer.md) -Klasse gemeinsam sind.<br/>                                                                                                            |
-| [**Smtpeer-Consumer**](smtpeventconsumer.md)                               | Sendet immer dann eine e-Mail-Nachricht mit SMTP, wenn ein Ereignis zugestellt wird.<br/> Beispiel: [Senden von e-Mails auf der Grundlage eines Ereignisses](sending-e-mail-based-on-an-event.md)<br/>                                                                       |
+| [**ActiveScriptEventConsumer**](activescripteventconsumer.md)               | Führt ein vordefiniertes Skript in einer beliebigen Skriptsprache aus, wenn ein Ereignis an das Skript übermittelt wird.<br/> Beispiel: [Ausführen eines Skripts basierend auf einem Ereignis](running-a-script-based-on-an-event.md)<br/>                                         |
+| [**CommandLineEventConsumer**](commandlineeventconsumer.md)                 | Startet einen beliebigen Prozess im lokalen Systemkontext, wenn ein Ereignis an ihn übermittelt wird.<br/> Beispiel: [Ausführen eines Programms über die Befehlszeile basierend auf einem Ereignis](running-a-program-from-the-command-line-based-on-an-event.md)<br/> |
+| [**LogFileEventConsumer**](logfileeventconsumer.md)                         | Schreibt benutzerdefinierte Zeichenfolgen in eine Textdatei, wenn Ereignisse an sie übermittelt werden.<br/> Beispiel: [Schreiben in eine Protokolldatei basierend auf einem Ereignis](writing-to-a-log-file-based-on-an-event.md)<br/>                                                   |
+| [**NTEventLogEventConsumer**](nteventlogeventconsumer.md)                   | Protokolliert eine bestimmte Nachricht im Windows Ereignisprotokoll, wenn ein Ereignis an das Ereignis übermittelt wird.<br/> Beispiel: [Protokollierung im NT-Ereignisprotokoll basierend auf einem Ereignis](logging-to-nt-event-log-based-on-an-event.md)<br/>                                          |
+| [**ScriptingStandardConsumerSetting**](scriptingstandardconsumersetting.md) | Stellt Registrierungsdaten bereit, die allen Instanzen der [**ActiveScriptEventConsumer-Klasse**](activescripteventconsumer.md) gemeinsam sind.<br/>                                                                                                            |
+| [**SMTPEventConsumer**](smtpeventconsumer.md)                               | Sendet bei jeder Zustellung eines Ereignisses eine E-Mail-Nachricht mitHILFE von SMTP.<br/> Beispiel: [Senden von E-Mails basierend auf einem Ereignis](sending-e-mail-based-on-an-event.md)<br/>                                                                       |
 
 
 
@@ -40,13 +40,13 @@ Weitere Informationen finden Sie unter über [wachen und reagieren auf Ereigniss
 [Überwachen von Ereignissen](monitoring-events.md)
 </dt> <dt>
 
-[Empfangen von Ereignissen zu allen Zeitpunkten](receiving-events-at-all-times.md)
+[Empfangen von Ereignissen zu jedem Zeitpunkt](receiving-events-at-all-times.md)
 </dt> <dt>
 
-[Ausführen eines Skripts auf der Grundlage eines Ereignisses](running-a-script-based-on-an-event.md)
+[Ausführen eines Skripts basierend auf einem Ereignis](running-a-script-based-on-an-event.md)
 </dt> <dt>
 
-[Senden von e-Mails auf der Grundlage eines Ereignisses](sending-e-mail-based-on-an-event.md)
+[Senden von E-Mails basierend auf einem Ereignis](sending-e-mail-based-on-an-event.md)
 </dt> </dl>
 
  

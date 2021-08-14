@@ -1,6 +1,6 @@
 ---
-title: ps_3_0 Anweisungen
-description: Dieser Abschnitt enthält Referenzinformationen für die Anweisungen für die Pixel-Shader, Version 3 \_ 0.
+title: ps_3_0-Anweisungen
+description: Dieser Abschnitt enthält Referenzinformationen für die Anweisungen in Version 3 0 des \_ Pixelshader.
 ms.assetid: 36972b9b-a4e7-45b4-83f5-959e75d270de
 ms.topic: article
 ms.date: 05/31/2018
@@ -9,113 +9,113 @@ topic_type:
 api_name: ''
 api_type: ''
 api_location: ''
-ms.openlocfilehash: d43f17ef765feb5899c7dd4537a1770155b4aa59
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: e44d13bfc726830a8c3fb770b34d5563fde2684f5c8bdf3fea54dec2312af4d3
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "103856980"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119982860"
 ---
-# <a name="ps_3_0-instructions"></a>PS \_ 3 \_ 0-Anweisungen
+# <a name="ps_3_0-instructions"></a>ps \_ 3 \_ 0-Anweisungen
 
-Dieser Abschnitt enthält Referenzinformationen für die Anweisungen für die Pixel-Shader, Version 3 \_ 0.
+Dieser Abschnitt enthält Referenzinformationen für die Anweisungen in Version 3 0 des \_ Pixelshader.
 
-Es gibt mehrere Arten von pixelshaderanweisungen, wie in der Tabelle dargestellt. Spalten auf der rechten Seite bedeuten Folgendes:
+Es gibt mehrere Arten von Pixelshaderanweisungen, wie in der Tabelle gezeigt. Spalten auf der rechten Seite bedeuten Folgendes:
 
--   Anweisungs Slots: Anzahl der Anweisungs Slots, die von jeder Anweisung verwendet werden.
--   Setup: ein Pixelshader muss über eine Versions Anweisung verfügen, und es muss sich um die erste Anweisung handeln.
--   Arithmetik: diese Anweisungen bieten die mathematischen Vorgänge in einem Shader.
--   Textur: diese Anweisungen werden verwendet, um Textur Daten zu laden und zu untersuchen und um Texturkoordinaten zu ändern.
--   Fluss Steuerung: diese Anweisungen bieten statische und dynamische Fluss Steuerung für die Ausführung von Anweisungen.
--   Neu: diese Anweisungen sind neu in dieser Version.
+-   Anweisungsslots: Anzahl von Anweisungsslots, die von jeder Anweisung verwendet werden.
+-   Setup: Ein Pixelshader muss über eine Versionsanweisung verfügen und muss die erste Anweisung sein.
+-   Arithmetisch: Diese Anweisungen stellen die mathematischen Operationen in einem Shader bereit.
+-   Textur: Diese Anweisungen werden verwendet, um Texturdaten zu laden und zu probieren sowie Texturkoordinaten zu ändern.
+-   Flow-Steuerelement: Diese Anweisungen bieten statische und dynamische Flusssteuerung für die Ausführung von Anweisungen.
+-   Neu: Diese Anweisungen sind für diese Version neu.
 
 ## <a name="instruction-set"></a>Instruktionssatz
 
 
 
-| Name                                                             | BESCHREIBUNG                                                                          | Anweisungs Slots | Einrichten | Arithmetik | Struktur | Flusssteuerung | Neu |
+| Name                                                             | BESCHREIBUNG                                                                          | Anweisungsslots | Einrichten | Arithmetik | Struktur | Flusssteuerung | Neu |
 |------------------------------------------------------------------|--------------------------------------------------------------------------------------|-------------------|-------|------------|---------|--------------|-----|
-| [ABS-PS](abs---ps.md)                                         | Absoluter Wert                                                                       | 1                 |       | x          |         |              |     |
-| [Add-PS](add---ps.md)                                         | Hinzufügen von zwei Vektoren                                                                      | 1                 |       | x          |         |              |     |
-| [Break-PS](break---ps.md)                                     | Abbrechen einer Schleife... ENDLOOP oder Rep... ENDREP-Block                                  | 1                 |       |            |         | x            |     |
-| [\_Comp-PS Abbrechen](break-comp---ps.md)                          | Bedingt aus einer Schleife abbrechen... ENDLOOP oder Rep... ENDREP-Block mit einem Vergleich | 3                 |       |            |         | x            |     |
-| [breakp-PS](break-p---ps.md)                                  | Abbrechen einer Schleife... ENDLOOP oder Rep... ENDREP-Block, basierend auf einem Prädikat            | 3                 |       |            |         | x            |     |
-| [callps](call---ps.md)                                       | Aufrufen einer Unterroutine                                                                    | 2                 |       |            |         | x            |     |
-| [callnz bool-PS](callnz-bool---ps.md)                         | Unterroutine aufrufen, wenn ein boolesches Register nicht 0 (null) ist                                  | 3                 |       |            |         | x            |     |
-| [callnz pred-PS](callnz-pred---ps.md)                         | Unterroutine aufrufen, wenn ein Prädikat Register nicht 0 (null) ist                                | 3                 |       |            |         | x            |     |
-| [CMP-PS](cmp---ps.md)                                         | Quelle mit 0 vergleichen                                                                  | 1                 |       | x          |         |              |     |
-| [CRS-PS](crs---ps.md)                                         | Kreuz Produkt                                                                        | 2                 |       | x          |         |              |     |
-| [DCL- \_ samplertype (SM2, SM3-PS ASM)](dcl-samplertype---ps.md) | Die Textur Dimension für einen Sampler deklarieren                                          | 0                 | x     |            |         |              |     |
-| [DCL \_ -Semantik (SM3-PS ASM)](dcl-usage---ps.md)              | Deklarieren von Eingabe-und Ausgabe Registern                                                   | 0                 | x     |            |         |              | x   |
-| [DEF-PS](def---ps.md)                                         | Definieren von Konstanten                                                                     | 0                 | x     |            |         |              |     |
-| [DEFB-PS](defb---ps.md)                                       | Definieren einer booleschen Konstante                                                            | 0                 | x     |            |         |              |     |
-| [Defi-PS](defi---ps.md)                                       | Definieren einer ganzzahligen Konstante                                                           | 0                 | x     |            |         |              |     |
-| [dp2add-PS](dp2add---ps.md)                                   | 2D-Punktprodukt und hinzufügen                                                               | 2                 |       | x          |         |              |     |
-| [DP3-PS](dp3---ps.md)                                         | 3D-Punktprodukt                                                                       | 1                 |       | x          |         |              |     |
-| [DP4-PS](dp4---ps.md)                                         | 4D-Punktprodukt                                                                       | 1                 |       | x          |         |              |     |
-| [DSX-PS](dsx---ps.md)                                         | Änderungs Rate in der x-Richtung                                                    | 2                 |       | x          |         |              |     |
-| [DSY-PS](dsy---ps.md)                                         | Änderungs Rate in der y-Richtung                                                    | 2                 |       | x          |         |              |     |
-| [Else-PS](else---ps.md)                                       | BEGIN an einem Else-Block                                                                  | 1                 |       |            |         | x            |     |
-| [in-PS-PS](endif---ps.md)                                     | Beenden einer if... Else-Block                                                               | 1                 |       |            |         | x            |     |
-| [ENDLOOP-PS](endloop---ps.md)                                 | Beenden einer Schleife                                                                           | 2                 |       |            |         | x            | x   |
-| [ENDREP-PS](endrep---ps.md)                                   | Ende eines Wiederholungs Blocks                                                                | 2                 |       |            |         | x            |     |
-| [Exp-PS](exp---ps.md)                                         | Vollständige Genauigkeit 2<sup>x</sup>                                                         | 1                 |       | x          |         |              |     |
-| [FRC-PS](frc---ps.md)                                         | Bruchteile                                                                 | 1                 |       | x          |         |              |     |
-| [Wenn bool-PS](if-bool---ps.md)                                 | BEGIN an einem If-Block                                                                    | 3                 |       |            |         | x            |     |
-| [Wenn \_ Comp-PS](if-comp---ps.md)                                | Startet einen If-Block mit einem Vergleich.                                                  | 3                 |       |            |         | x            |     |
-| [Wenn pred-PS](if-pred---ps.md)                                 | BEGIN an einem If-Block mit Prädikat                                                   | 3                 |       |            |         | x            |     |
-| [Bezeichnung-PS](label---ps.md)                                     | Bezeichnung                                                                                | 0                 |       |            |         | x            |     |
-| [Log-PS](log---ps.md)                                         | Protokoll der vollständigen Genauigkeit (x)                                                               | 1                 |       | x          |         |              |     |
-| [Schleife-PS](loop---ps.md)                                       | Loop                                                                                 | 3                 |       |            |         | x            | x   |
-| [LRP-PS](lrp---ps.md)                                         | Lineare interpolieren                                                                   | 2                 |       | x          |         |              |     |
-| [m3x2-PS](m3x2---ps.md)                                       | 3 x 2 multiplizieren                                                                         | 2                 |       | x          |         |              |     |
-| [M3x3-PS](m3x3---ps.md)                                       | 3X3 multiplizieren                                                                         | 3                 |       | x          |         |              |     |
-| [M3x4-PS](m3x4---ps.md)                                       | rund m3 multiplizieren                                                                         | 4                 |       | x          |         |              |     |
-| [m4x3-PS](m4x3---ps.md)                                       | 4 x 3 multiplizieren                                                                         | 3                 |       | x          |         |              |     |
-| [M4x4-PS](m4x4---ps.md)                                       | 4 x 4 multiplizieren                                                                         | 4                 |       | x          |         |              |     |
-| [Mad-PS](mad---ps.md)                                         | Multiplizieren und hinzufügen                                                                     | 1                 |       | x          |         |              |     |
-| [Max-PS](max---ps.md)                                         | Maximum                                                                              | 1                 |       | x          |         |              |     |
-| [min-PS](min---ps.md)                                         | Minimum                                                                              | 1                 |       | x          |         |              |     |
-| [MOV-PS](mov---ps.md)                                         | Move                                                                                 | 1                 |       | x          |         |              |     |
-| [Mul-PS](mul---ps.md)                                         | Multiplizieren                                                                             | 1                 |       | x          |         |              |     |
-| [NOP-PS](nop---ps.md)                                         | Keine Operation                                                                         | 1                 |       | x          |         |              |     |
-| [NRM-PS](nrm---ps.md)                                         | Normalize                                                                            | 3                 |       | x          |         |              |     |
-| [Pow-PS](pow---ps.md)                                         | x<sup>y</sup>                                                                        | 3                 |       | x          |         |              |     |
-| [Psel](ps---ps.md)                                                | Version                                                                              | 0                 | x     |            |         |              |     |
-| [RCP-PS](rcp---ps.md)                                         | Reziproke                                                                           | 1                 |       | x          |         |              |     |
-| [Rep-PS](rep---ps.md)                                         | Repeat                                                                               | 3                 |       |            |         | x            |     |
-| [Ret-PS](ret---ps.md)                                         | Ende einer Unterroutine                                                                  | 1                 |       |            |         | x            |     |
-| [RSQ-PS](rsq---ps.md)                                         | Gegenseitige Quadratwurzel                                                               | 1                 |       | x          |         |              |     |
-| [SETP \_ comp](setp-comp---ps.md)                                 | Legen Sie das Prädikat Register fest.                                                           | 1                 |       |            |         | x            |     |
-| [SinCos-PS](sincos---ps.md)                                   | Sinus und Kosinus                                                                      | 8                 |       | x          |         |              |     |
-| [Sub-PS](sub---ps.md)                                         | Subtrahieren                                                                             | 1                 |       | x          |         |              |     |
-| [texkill-PS](texkill---ps.md)                                 | Pixel Rendering beenden                                                                    | 2                 |       |            | x       |              |     |
-| [texld-PS \_ 2 \_ 0 und aufwärts](texld---ps-2-0.md)                    | Beispiel für eine Textur                                                                     | Siehe Hinweis 1        |       |            | x       |              |     |
-| [texldb-PS](texldb---ps.md)                                   | Textur Stichproben mit einer Detailebene von w-Component                          | 6                 |       |            | x       |              |     |
-| [texldl-PS](texldl---ps.md)                                   | Textur Stichproben mit Detailstufe von w-Component                               | Siehe Hinweis 2        |       |            | x       |              | x   |
-| [texldd-PS](texldd---ps.md)                                   | Textur Stichproben mit vom Benutzer bereitgestellten Farbverläufen                                        | 3                 |       |            | x       |              |     |
-| [texldp-PS](texldp---ps.md)                                   | Textur Sampling mit Projective Division durch w-Component                               | Siehe Hinweis 3        |       |            | x       |              |     |
+| [abs – ps](abs---ps.md)                                         | Absoluter Wert                                                                       | 1                 |       | x          |         |              |     |
+| [add – ps](add---ps.md)                                         | Hinzufügen von zwei Vektoren                                                                      | 1                 |       | x          |         |              |     |
+| [break – ps](break---ps.md)                                     | Break out of a loop... endloop oder rep... endrep-Block                                  | 1                 |       |            |         | x            |     |
+| [break \_ comp - ps](break-comp---ps.md)                          | Bedingtes Unterbrechen einer Schleife... endloop oder rep... endrep-Block mit einem Vergleich | 3                 |       |            |         | x            |     |
+| [breakp – ps](break-p---ps.md)                                  | break out of a loop... endloop oder rep... endrep-Block basierend auf einem Prädikat            | 3                 |       |            |         | x            |     |
+| [call - ps](call---ps.md)                                       | Aufrufen einer Unterroutine                                                                    | 2                 |       |            |         | x            |     |
+| [callnz bool – ps](callnz-bool---ps.md)                         | Aufrufen einer Unterroutine, wenn ein boolescher Register nicht 0 (null) ist                                  | 3                 |       |            |         | x            |     |
+| [callnz pred - ps](callnz-pred---ps.md)                         | Aufrufen einer Unterroutine, wenn ein Prädikatregister nicht 0 (null) ist                                | 3                 |       |            |         | x            |     |
+| [cmp – ps](cmp---ps.md)                                         | Vergleichen der Quelle mit 0                                                                  | 1                 |       | x          |         |              |     |
+| [crs - ps](crs---ps.md)                                         | Produktübergreifend                                                                        | 2                 |       | x          |         |              |     |
+| [dcl \_ samplerType (sm2, sm3 – ps asm)](dcl-samplertype---ps.md) | Deklarieren der Texturdimension für einen Sampler                                          | 0                 | x     |            |         |              |     |
+| [\_dcl-Semantik (sm3 – ps asm)](dcl-usage---ps.md)              | Deklarieren von Eingabe- und Ausgaberegistern                                                   | 0                 | x     |            |         |              | x   |
+| [def - ps](def---ps.md)                                         | Definieren von Konstanten                                                                     | 0                 | x     |            |         |              |     |
+| [defb – ps](defb---ps.md)                                       | Definieren einer booleschen Konstante                                                            | 0                 | x     |            |         |              |     |
+| [defi – ps](defi---ps.md)                                       | Definieren einer ganzzahligen Konstante                                                           | 0                 | x     |            |         |              |     |
+| [dp2add – ps](dp2add---ps.md)                                   | 2D-Punktprodukt und Hinzufügen                                                               | 2                 |       | x          |         |              |     |
+| [dp3 – ps](dp3---ps.md)                                         | 3D-Punktprodukt                                                                       | 1                 |       | x          |         |              |     |
+| [dp4 – ps](dp4---ps.md)                                         | 4D-Punktprodukt                                                                       | 1                 |       | x          |         |              |     |
+| [dsx – ps](dsx---ps.md)                                         | Änderungsrate in x-Richtung                                                    | 2                 |       | x          |         |              |     |
+| [dsy – ps](dsy---ps.md)                                         | Änderungsrate in y-Richtung                                                    | 2                 |       | x          |         |              |     |
+| [else – ps](else---ps.md)                                       | Starten eines else-Blocks                                                                  | 1                 |       |            |         | x            |     |
+| [endif – ps](endif---ps.md)                                     | Beenden sie eine if... else-Block                                                               | 1                 |       |            |         | x            |     |
+| [endloop – ps](endloop---ps.md)                                 | Beenden einer Schleife                                                                           | 2                 |       |            |         | x            | x   |
+| [endrep – ps](endrep---ps.md)                                   | Ende eines Wiederholungsblocks                                                                | 2                 |       |            |         | x            |     |
+| [exp – ps](exp---ps.md)                                         | Vollständige Genauigkeit 2<sup>x</sup>                                                         | 1                 |       | x          |         |              |     |
+| [frc - ps](frc---ps.md)                                         | Bruchkomponente                                                                 | 1                 |       | x          |         |              |     |
+| [if bool - ps](if-bool---ps.md)                                 | Starten eines if-Blocks                                                                    | 3                 |       |            |         | x            |     |
+| [if \_ comp - ps](if-comp---ps.md)                                | Beginnen eines if-Blocks mit einem Vergleich                                                  | 3                 |       |            |         | x            |     |
+| [if pred - ps](if-pred---ps.md)                                 | Beginnen eines if-Blocks mit Prädication                                                   | 3                 |       |            |         | x            |     |
+| [label – ps](label---ps.md)                                     | Bezeichnung                                                                                | 0                 |       |            |         | x            |     |
+| [log – ps](log---ps.md)                                         | Protokoll mit vollständiger genauigkeit₂(x)                                                               | 1                 |       | x          |         |              |     |
+| [loop – ps](loop---ps.md)                                       | Loop                                                                                 | 3                 |       |            |         | x            | x   |
+| [lrp – ps](lrp---ps.md)                                         | Lineare Interpolation                                                                   | 2                 |       | x          |         |              |     |
+| [m3x2 – ps](m3x2---ps.md)                                       | 3x2 multiplizieren                                                                         | 2                 |       | x          |         |              |     |
+| [m3x3 – ps](m3x3---ps.md)                                       | 3x3 Multiplikation                                                                         | 3                 |       | x          |         |              |     |
+| [m3x4 – ps](m3x4---ps.md)                                       | Multiplikation von 3 x 4                                                                         | 4                 |       | x          |         |              |     |
+| [m4x3 – ps](m4x3---ps.md)                                       | 4x3 multiplizieren                                                                         | 3                 |       | x          |         |              |     |
+| [m4x4 – ps](m4x4---ps.md)                                       | Multiplikation von 4 x 4                                                                         | 4                 |       | x          |         |              |     |
+| [mad – ps](mad---ps.md)                                         | Multiplizieren und Hinzufügen                                                                     | 1                 |       | x          |         |              |     |
+| [max – ps](max---ps.md)                                         | Maximum                                                                              | 1                 |       | x          |         |              |     |
+| [min – ps](min---ps.md)                                         | Minimum                                                                              | 1                 |       | x          |         |              |     |
+| [mov – ps](mov---ps.md)                                         | Move                                                                                 | 1                 |       | x          |         |              |     |
+| [mul – ps](mul---ps.md)                                         | Multiplizieren                                                                             | 1                 |       | x          |         |              |     |
+| [nop - ps](nop---ps.md)                                         | Keine Operation                                                                         | 1                 |       | x          |         |              |     |
+| [nrm - ps](nrm---ps.md)                                         | Normalize                                                                            | 3                 |       | x          |         |              |     |
+| [pow – ps](pow---ps.md)                                         | x<sup>y</sup>                                                                        | 3                 |       | x          |         |              |     |
+| [ps](ps---ps.md)                                                | Version                                                                              | 0                 | x     |            |         |              |     |
+| [rcp – ps](rcp---ps.md)                                         | Gegenseitige                                                                           | 1                 |       | x          |         |              |     |
+| [rep - ps](rep---ps.md)                                         | Repeat                                                                               | 3                 |       |            |         | x            |     |
+| [ret – ps](ret---ps.md)                                         | Ende einer Unterroutine                                                                  | 1                 |       |            |         | x            |     |
+| [rsq – ps](rsq---ps.md)                                         | Reziproke Quadratwurzel                                                               | 1                 |       | x          |         |              |     |
+| [setp \_ comp](setp-comp---ps.md)                                 | Festlegen des Prädikatregisters                                                           | 1                 |       |            |         | x            |     |
+| [sincos – ps](sincos---ps.md)                                   | Sinus und Kosinus                                                                      | 8                 |       | x          |         |              |     |
+| [sub – ps](sub---ps.md)                                         | Subtrahieren                                                                             | 1                 |       | x          |         |              |     |
+| [texkill - ps](texkill---ps.md)                                 | Pixelrendering ab kill                                                                    | 2                 |       |            | x       |              |     |
+| [texld – ps \_ 2 \_ 0 und up](texld---ps-2-0.md)                    | Beispiel für eine Textur                                                                     | Siehe Hinweis 1        |       |            | x       |              |     |
+| [texldb – ps](texldb---ps.md)                                   | Texturs sampling with level-of-detail bias from w-component                          | 6                 |       |            | x       |              |     |
+| [texldl - ps](texldl---ps.md)                                   | Texturs sampling with level-of-detail from w-component (Textursyntmuster mit Detailebene von w-component)                               | Siehe Hinweis 2        |       |            | x       |              | x   |
+| [texldd – ps](texldd---ps.md)                                   | Texturstichproben mit vom Benutzer bereitgestellten Farbverläufen                                        | 3                 |       |            | x       |              |     |
+| [texldp – ps](texldp---ps.md)                                   | Texturs sampling with projective divide by w-component                               | Siehe Hinweis 3        |       |            | x       |              |     |
 
 
 
- 
+ 
 
 Hinweise:
 
-1.  Wenn die Textur eine cubemap ist, Slots = 4; Andernfalls Slots = 1.
-2.  Wenn die Textur eine cubemap ist, Slots = 5; Andernfalls Slots = 2.
-3.  Wenn die Textur eine cubemap ist, Slots = 4; Andernfalls Slots = 3.
+1.  Wenn die Textur eine Cube map ist, slots = 4; andernfalls slots = 1.
+2.  Wenn es sich bei der Textur um eine Cubemap handelt, werden Slots = 5; andernfalls slots = 2.
+3.  Wenn die Textur eine Cube map ist, slots = 4; andernfalls slots = 3.
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
 <dl> <dt>
 
-[Pixelshaderanweisungen](dx9-graphics-reference-asm-ps-instructions.md)
+[Anweisungen zum Pixel-Shader](dx9-graphics-reference-asm-ps-instructions.md)
 </dt> </dl>
 
- 
+ 
 
- 
+ 
 
 
 

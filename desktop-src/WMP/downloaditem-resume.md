@@ -1,11 +1,11 @@
 ---
-title: Downloader. Resume-Methode
-description: In diesem Abschnitt werden die Funktionen beschrieben, die für die Verwendung durch Online Stores entwickelt wurden. Die Verwendung dieser Funktion außerhalb des Kontexts eines Online Stores wird nicht unterstützt. Mit der Resume-Methode wird der Download fortgesetzt.
+title: DownloadItem.resume-Methode
+description: Hinweis In diesem Abschnitt werden Funktionen beschrieben, die für die Verwendung durch Onlineshops entwickelt wurden. Die Verwendung dieser Funktionalität außerhalb des Kontexts eines Onlineshops wird nicht unterstützt. Die Resume-Methode setzt den Download wieder auf.
 ms.assetid: f58e4838-7b00-4485-90c6-ba5960a17699
 keywords:
-- Methoden Fenster wieder aufnehmen Media Player
-- Resume-Methode, Windows Media Player, Downloader-Klasse
-- Download Item-Klasse, Windows Media Player, Resume-Methode
+- resume-Windows Media Player
+- resume-Methode Windows Media Player , DownloadItem-Klasse
+- DownloadItem-Klasse Windows Media Player , resume-Methode
 topic_type:
 - apiref
 api_name:
@@ -16,21 +16,21 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 870de9199731cf0031fa1df5eb36eb952f9566ef
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: f83055ed3bc5a24016ea069482ff8625f48c48987ee5de2a1a4d15c905ba011c
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106369616"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118340685"
 ---
-# <a name="downloaditemresume-method"></a>Downloader. Resume-Methode
+# <a name="downloaditemresume-method"></a>DownloadItem.resume-Methode
 
 > [!Note]  
-> In diesem Abschnitt werden die-Funktionen beschrieben, die für die Verwendung durch Online Stores Die Verwendung dieser Funktion außerhalb des Kontexts eines Online Stores wird nicht unterstützt.
+> In diesem Abschnitt werden Funktionen beschrieben, die für die Verwendung durch Onlineshops entwickelt wurden. Die Verwendung dieser Funktionalität außerhalb des Kontexts eines Onlineshops wird nicht unterstützt.
 
  
 
-Mit der **Resume** -Methode wird der Download fortgesetzt.
+Die **Resume-Methode** setzt den Download wieder auf.
 
 ## <a name="syntax"></a>Syntax
 
@@ -49,9 +49,9 @@ Diese Methode hat keine Parameter.
 
 Diese Methode gibt keinen Wert zurück.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Die **Resume** -Methode hat keine Auswirkungen auf Echt Zeit Downloads.
+Die **Resume-Methode** hat keine Auswirkungen auf Echtzeitdownloads.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -59,19 +59,19 @@ Die **Resume** -Methode hat keine Auswirkungen auf Echt Zeit Downloads.
 
 | Anforderung | Wert |
 |--------------------|------------------------------------------------------------------------------------|
-| Version<br/> | Windows Media Player 9 oder höher.<br/>                                 |
+| Version<br/> | Windows Media Player 9-Serie oder höher.<br/>                                 |
 | DLL<br/>     | <dl> <dt>Wmp.dll</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Download Item-Objekt**](downloaditem-object.md)
+[**DownloadItem-Objekt**](downloaditem-object.md)
 </dt> <dt>
 
-[**Download Item. Pause**](downloaditem-pause.md)
+[**DownloadItem.pause**](downloaditem-pause.md)
 </dt> </dl>
 
  

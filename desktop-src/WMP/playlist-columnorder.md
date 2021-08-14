@@ -1,9 +1,9 @@
 ---
-title: Wiedergabeliste. ColumnOrder
-description: Das ColumnOrder-Attribut gibt die Reihenfolge der Wiedergabelisten Spalten an oder ruft diese ab.
+title: PLAYLIST.columnOrder
+description: Das columnOrder-Attribut gibt die Reihenfolge der Wiedergabelistenspalten an oder ruft sie ab.
 ms.assetid: 91a2e15b-1993-4666-98ef-b893df2b570c
 keywords:
-- Wiedergabeliste. ColumnOrder Windows Media Player
+- PLAYLIST.columnOrder Windows Media Player
 topic_type:
 - apiref
 api_name:
@@ -12,16 +12,16 @@ api_type:
 - NA
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 0ab1a64f40987faa7daa43e9e371c7fa5d75f24e
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 9e4dca1e740edc3066c82369c01ffb3313500b886d698c03ccd44d1283dc7d48
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106363216"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118337125"
 ---
-# <a name="playlistcolumnorder"></a>Wiedergabeliste. ColumnOrder
+# <a name="playlistcolumnorder"></a>PLAYLIST.columnOrder
 
-Das **ColumnOrder** -Attribut gibt die Reihenfolge der Wiedergabelisten Spalten an oder ruft diese ab.
+Das **columnOrder-Attribut** gibt die Reihenfolge der Wiedergabelistenspalten an oder ruft sie ab.
 
 ``` syntax
         elementID.columnOrder
@@ -29,7 +29,7 @@ Das **ColumnOrder** -Attribut gibt die Reihenfolge der Wiedergabelisten Spalten 
 
 ## <a name="possible-values"></a>Mögliche Werte
 
-Dieses Attribut ist eine Lese- **/schreibzeichenfolge** , die eine durch Semikolons getrennte Liste von Wiedergabelisten-Spalten Indizes angibt. Der Standardwert ist "0; 1; 2; 3". Führende und nachfolgende Semikolons und Leerzeichen sollten nicht vorhanden sein.
+Dieses Attribut ist eine **Zeichenfolge** mit Lese-/Schreibzugriff, die eine durch Semikolons getrennte Liste von Playlist-Spaltenindizes angibt. Der Standardwert ist "0;1;2;3". Führende und nachfolgende Semikolons und Leerzeichen dürfen nicht vorhanden sein.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -37,15 +37,15 @@ Dieses Attribut ist eine Lese- **/schreibzeichenfolge** , die eine durch Semikol
 
 | Anforderung | Wert |
 |--------------------|------------------------------------------------------|
-| Version<br/> | Windows Media Player, Version 7,0 oder höher<br/> |
+| Version<br/> | Windows Media Player Version 7.0 oder höher<br/> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Wiedergabelisten Element**](playlist-element.md)
+[**PLAYLIST-Element**](playlist-element.md)
 </dt> </dl>
 
  

@@ -1,19 +1,19 @@
 ---
-description: Der Radius der boundingsphere.
+description: Der Radius der BoundingSphere.
 ms.assetid: baa212ac-81f6-4765-a484-f1a98c431474
-title: Boundingsphere. Radius (directxcollision. h)
+title: BoundingSphere.Radius (DirectXCollision.h)
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 2512406bc5e8815872f071ac5e99193cbc583d50
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: eba7ef192b4417454df088a1dccb419c46ee0df3974937629cadc18ddf3c4b3a
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106369117"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118502106"
 ---
-# <a name="boundingsphereradius"></a>Boundingsphere. RADIUS
+# <a name="boundingsphereradius"></a>BoundingSphere.Radius
 
-Der Radius der boundingsphere.
+Der Radius der BoundingSphere.
 
 
 ```C++
@@ -23,7 +23,7 @@ public:
 
 
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
 ### <a name="platform-requirements"></a>Plattformanforderungen
 
@@ -36,18 +36,18 @@ Microsoft Visual Studio 2010 oder Microsoft Visual Studio 2012 mit dem Windows S
 | Anforderung | Wert |
 |----------------------|-----------------------------------------------------------------------------------------------|
 | Namespace<br/> | Verwenden Sie DirectX.<br/>                                                                       |
-| Header<br/>    | <dl> <dt>Directxcollision. h</dt> </dl> |
+| Header<br/>    | <dl> <dt>DirectXCollision.h</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
 [Fields](boundingsphere-fields.md)
 </dt> <dt>
 
-**Verweis**
+**Referenz**
 </dt> <dt>
 
 [**Boundingsphere**](/windows/win32/api/directxcollision/ns-directxcollision-boundingsphere)

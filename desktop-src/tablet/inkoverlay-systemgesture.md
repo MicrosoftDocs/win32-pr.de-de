@@ -4,12 +4,12 @@ ms.assetid: 6f82b234-2088-4207-a6b4-6c6919623d6a
 title: InkOverlay.SystemGesture-Ereignis (Msinkaut.h)
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 3498d6b5fa779f6a15866ac93d53be8348f3d1a5
-ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
+ms.openlocfilehash: 3e1e55048a60edef4344ec3b566b08de29d9f3d0a16ccccc1f3094949c2aec86
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2021
-ms.locfileid: "108086668"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118218763"
 ---
 # <a name="inkoverlaysystemgesture-event"></a>InkOverlay.SystemGesture-Ereignis
 
@@ -39,7 +39,7 @@ void SystemGesture(
 *Cursor* \[ In\]
 </dt> <dd>
 
-Das [**IInkCursor-Objekt,**](/windows/desktop/api/msinkaut/nn-msinkaut-iinkcursor) das das [**SystemGesture-Ereignis**](inkcollector-systemgesture.md) generiert hat.
+Das [**IInkCursor-Objekt,**](/windows/desktop/api/msinkaut/nn-msinkaut-iinkcursor) das das [**SystemGesture-Ereignis generiert**](inkcollector-systemgesture.md) hat.
 
 </dd> <dt>
 
@@ -81,7 +81,7 @@ Reserviert.
 *CursorMode* \[ In\]
 </dt> <dd>
 
-Ein -Wert, der angibt, ob sich das [**IInkCursor-Objekt**](/windows/desktop/api/msinkaut/nn-msinkaut-iinkcursor) im Normalen- oder Radierermodus befindet. 1 gilt für den normalen Modus und 2 für den Radierermodus.
+Ein -Wert, der angibt, ob sich [**das IInkCursor-Objekt**](/windows/desktop/api/msinkaut/nn-msinkaut-iinkcursor) im normalen Modus oder Radierermodus befindet. 1 ist für den normalen Modus und 2 für radierermodus.
 
 </dd> </dl>
 
@@ -89,25 +89,25 @@ Ein -Wert, der angibt, ob sich das [**IInkCursor-Objekt**](/windows/desktop/api/
 
 Dieses Ereignis gibt keinen Wert zurück.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Systemgesten sind nützlich, da sie Informationen über das [**IInkCursor-Objekt**](/windows/desktop/api/msinkaut/nn-msinkaut-iinkcursor) liefern, das zum Erstellen der Geste verwendet wird. Sie bieten auch Verknüpfungen zu Kombinationen von Mausereignissen und sind "kostengünstigere" Methoden zum Erkennen von Mausereignissen.
+Systemgesten sind nützlich, da sie Informationen über das [**IInkCursor-Objekt**](/windows/desktop/api/msinkaut/nn-msinkaut-iinkcursor) geben, das zum Erstellen der Geste verwendet wird. Sie bieten auch Verknüpfungen zu Kombinationen von Mausereignissen und sind "kostengünstigere" Möglichkeiten, Mausereignisse zu erkennen.
 
-Anstatt beispielsweise nach einem [**MouseDown Event MouseDown**](inkcollector-mouseup.md)Event-Ereignispaar zu suchen, bei dem  /  [](inkcollector-mousedown.md) keine anderen Mausereignisse dazwischen auftreten, können Sie nach den [**Systemgesten Tap**](/windows/desktop/api/msinkaut/ne-msinkaut-inksystemgesture) oder **RightTap** suchen.
+Anstatt beispielsweise nach einem [**MouseDown-Ereignispaar**](inkcollector-mouseup.md)für MouseUp-Ereignisse zu suchen, in dem keine anderen Mausereignisse dazwischen auftreten, können Sie nach den Systemgesten Tap oder  /  [](inkcollector-mousedown.md) **RightTap** suchen. [](/windows/desktop/api/msinkaut/ne-msinkaut-inksystemgesture)
 
-Ein weiteres Beispiel: Anstatt auf [**MouseDown Event**](inkcollector-mousedown.md)  /  [**MouseMove Event-Ereignisse**](inkcollector-mousemove.md) zu lauschen und zahlreiche **MouseMove Event-Meldungen** zu erhalten, können Sie auf die [**Drag-**](/windows/desktop/api/msinkaut/ne-msinkaut-inksystemgesture) oder **RightDrag-Systemgesten** achten, solange Sie nicht an den (x, y) Koordinaten jeder Position der Maus interessiert sind. Dadurch können Sie anstelle zahlreicher **MouseMove-Ereignismeldungen** nur eine Nachricht empfangen.
+Ein weiteres Beispiel: Anstatt auf [**MouseDown**](inkcollector-mousedown.md)Event MouseMove Event-Ereignisse zu lauschen und zahlreiche MouseMove-Ereignismeldungen zu erhalten, können Sie auf die Drag- oder RightDrag-Systemgesten achten, solange Sie nicht an den  /  [](inkcollector-mousemove.md) (x, y)-Koordinaten  [](/windows/desktop/api/msinkaut/ne-msinkaut-inksystemgesture) jeder Position der Maus interessiert sind.  Dadurch können Sie anstelle zahlreicher **MouseMove-Ereignismeldungen nur** eine Nachricht empfangen.
 
-Eine Liste der spezifischen Systemgesten finden Sie unter [**InkSystemGesture-Enumerationstyp.**](/windows/desktop/api/msinkaut/ne-msinkaut-inksystemgesture) Weitere Informationen zu Systemgesten finden Sie unter Verwenden von Gesten und [Befehlseingaben auf dem Tablet PC.](/previous-versions//dd314533(v=vs.85)) [](using-gestures.md)
+Eine Liste mit bestimmten Systemgesten finden Sie unter [**InkSystemGesture-Enumerationstyp.**](/windows/desktop/api/msinkaut/ne-msinkaut-inksystemgesture) Weitere Informationen zu Systemgesten finden Sie unter Verwenden von Gesten und [Befehlseingabe](using-gestures.md) [auf dem Tablet PC.](/previous-versions//dd314533(v=vs.85))
 
-Diese Ereignismethode wird in den \_ \_ Dispatch-Only-Schnittstellen IInkCollectorEvents, IInkOverlayEvents und \_ IInkPictureEvents (dispinterfaces) mit der ID DISPID \_ ICESystemGesture definiert.
+Diese Ereignismethode wird in den \_ Dispatch-Schnittstellen IInkCollectorEvents, \_ IInkOverlayEvents und \_ IInkPictureEvents (dispinterfaces) mit der ID DISPID \_ ICESystemGesture definiert.
 
 ## <a name="requirements"></a>Anforderungen
 
 
 
-| Anforderungen | Wert |
+| Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Desktop-Apps der Windows XP Tablet PC Edition \[\]<br/>                                                       |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur Desktop-Apps der XP Tablet PC Edition \[\]<br/>                                                       |
 | Unterstützte Mindestversion (Server)<br/> | Nicht unterstützt<br/>                                                                                           |
 | Header<br/>                   | <dl> <dt>Msinkaut.h (erfordert auch Msinkaut \_ i.c)</dt> </dl> |
 | Bibliothek<br/>                  | <dl> <dt>InkObj.dll</dt> </dl>                               |

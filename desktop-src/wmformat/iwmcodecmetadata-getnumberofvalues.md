@@ -1,9 +1,9 @@
 ---
-title: Getnumofvalues
-description: Aktuelle Dokumentation zu Windows Media Codecs und digitalen Signalprozessoren finden Sie unter Windows Media Audio-und Videocodec-und DSP-APIs. | Getnumofvalues
+title: GetNumberOfValues
+description: Die aktuelle Dokumentation zu Windows Mediencodecs und digitalen Signalprozessoren finden Sie unter Windows Media Audio and Video Codec and DSP APIs (Medienaudio- und Videocodec und DSP-APIs). | GetNumberOfValues
 ms.assetid: d766da06-4dd0-4556-9a94-4c675c310a98
 keywords:
-- Getnumofvalues-Windows-Medien Format
+- GetNumberOfValues-Windows-Medienformat
 topic_type:
 - apiref
 api_name:
@@ -12,16 +12,16 @@ api_type:
 - NA
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: a1ec8ea859822247af78b54b60d32f9cfdba8cf4
-ms.sourcegitcommit: 92e74c99f8f4d097676959d0c317f533c2400a80
+ms.openlocfilehash: 84cb967fc516fb53481e4c1ed5857d575dbb2af4ac842d88efea4eb02110c646
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/09/2021
-ms.locfileid: "103869808"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118198214"
 ---
-# <a name="getnumberofvalues"></a>Getnumofvalues
+# <a name="getnumberofvalues"></a>GetNumberOfValues
 
-Aktuelle Dokumentation zu Windows Media Codecs und digitalen Signalprozessoren finden Sie unter [Windows Media Audio-und Videocodec-und DSP-APIs.](/previous-versions//dd464626(v=vs.85))
+Die aktuelle Dokumentation zu Windows Mediencodecs und Digitalsignalprozessoren finden Sie unter Windows Media Audio and Video Codec and DSP APIs (Medienaudio- und Videocodec und [DSP-APIs).](/previous-versions//dd464626(v=vs.85))
 
  
 

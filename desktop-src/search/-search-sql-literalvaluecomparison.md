@@ -1,21 +1,21 @@
 ---
-description: Der literale Wert Vergleich verwendet Standard Vergleichs Operatoren, um eine einwertige Spalte mit einem Literalwert zu vergleichen.
+description: Der Literalwertvergleich verwendet Standardvergleichsoperatoren, um eine einwertige Spalte mit einem Literalwert abzugleichen.
 ms.assetid: 941298b4-d703-4b3f-8bde-0e6e158560df
-title: Vergleich von literalen Werten
+title: Literalwertvergleich
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 0d8577e5a97dcc92131658c325f175efa1d0c3fd
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 7c1e311c6f98c1114b63a1bf650d6e7be004e1e8e4cf5848b962a7cbf8049bfd
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106346909"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118227175"
 ---
-# <a name="literal-value-comparison"></a>Vergleich von literalen Werten
+# <a name="literal-value-comparison"></a>Literalwertvergleich
 
-Der literale Wert Vergleich verwendet Standard Vergleichs Operatoren, um eine einwertige Spalte mit einem [Literalwert](-search-sql-literals.md) zu vergleichen. Weitere Informationen zum Vergleichen von mehrwertigen Spalten finden Sie unter [Vergleiche mit mehreren Werten (Array)](-search-sql-multivaluedcomparisons.md).
+Der Literalwertvergleich verwendet Standardvergleichsoperatoren, um eine einwertige Spalte mit einem [Literalwert](-search-sql-literals.md) abzugleichen. Informationen zum Vergleichen mehrwertiger Spalten finden Sie unter [Arrayvergleiche mit mehreren Werten.](-search-sql-multivaluedcomparisons.md)
 
-Das Vergleichs Prädikat literale Wert weist die folgende Syntax auf:
+Das Literalwertvergleichsprädikat weist die folgende Syntax auf:
 
 
 ```
@@ -25,24 +25,24 @@ Das Vergleichs Prädikat literale Wert weist die folgende Syntax auf:
 
 
 > [!Note]  
-> Die Rechte Seite des Vergleichs muss ein Literalwert sein. Es ist nicht möglich, eine Spalte mit einem berechneten Wert zu vergleichen, und Sie können eine Spalte nicht mit einer anderen Spalte vergleichen.
+> Die rechte Seite des Vergleichs muss ein Literal sein. Sie können eine Spalte nicht mit einem berechneten Wert vergleichen, und Sie können eine Spalte nicht mit einer anderen Spalte vergleichen.
 
  
 
-Der Spalten Teil ist eine beliebige gültige Eigenschafts Spalte und kann ggf. in einen anderen Typ umgewandelt werden. Optional können Sie den Spaltennamen für die Lesbarkeit in doppelte Anführungszeichen einschließen, ohne dass sich dies auf die Funktionalität auswirkt. Weitere Informationen finden Sie unter umwandeln [des Datentyps einer Spalte](-search-sql-castingdatacolumntype.md).
+Der Spaltenteil ist eine beliebige gültige Eigenschaftenspalte und kann bei Bedarf in einen anderen Typ typisiert werden. Optional können Sie den Spaltennamen aus Gründen der Lesbarkeit in doppelte Anführungszeichen einschließen, ohne die Funktionalität zu beeinträchtigen. Weitere Informationen finden Sie unter [Umwandeln des Datentyps einer Spalte.](-search-sql-castingdatacolumntype.md)
 
-Das Literale kann eine beliebige Zeichenfolge, ein numerisches, ein hexadezimal, ein boolescher Wert oder ein Datumsliteral in einfachen Anführungszeichen sein Nur genaue Übereinstimmungen werden erkannt, und Platzhalter Zeichen werden ignoriert. Das Literale kann auch in einen anderen Typ umgewandelt werden.
+Das Literal kann ein beliebiges Zeichenfolgenliteral, numerisches, hexadezimales, boolesches oder Datumsliteral sein, das in einfache Anführungszeichen eingeschlossen ist. Es werden nur genaue Übereinstimmungen erkannt, und Platzhalterzeichen werden ignoriert. Das Literal kann auch in einen anderen Typ typisiert werden.
 
 ## <a name="comparison-operators"></a>Vergleichsoperatoren
 
-In der folgenden Tabelle werden die unterstützten Vergleichs Operatoren beschrieben.
+In der folgenden Tabelle werden die unterstützten Vergleichsoperatoren beschrieben.
 
 
 
 | Vergleichsoperator | BESCHREIBUNG              |
 |---------------------|--------------------------|
 | =                   | Gleich                 |
-| ! = oder <>      | Ungleich             |
+| != oder <>      | Ungleich             |
 | >                | Größer als             |
 | >=               | Größer als oder gleich |
 | <                | Kleiner als                |
@@ -54,7 +54,7 @@ In der folgenden Tabelle werden die unterstützten Vergleichs Operatoren beschri
 
  
 
-In Verbindung mit dem Operator "=" unterstützt Windows Search Structured Query Language (SQL) die Verwendung der Schlüsselwörter "Before" und "After", die angeben, ob die Abfrage Spaltenwerte vor oder nach einem angegebenen Wert in der Wörterbuch Sortierung vergleichen soll.
+In Verbindung mit dem Operator "=" unterstützt Windows Search strukturierte Abfragesprache (SQL) die Verwendung der Schlüsselwörter BEFORE und AFTER, die angeben, ob die Abfrage Spaltenwerte vor oder nach einem angegebenen Wert in der Sortierreihenfolge des Wörterbuchs vergleichen soll.
 
 
 ```
@@ -65,7 +65,7 @@ In Verbindung mit dem Operator "=" unterstützt Windows Search Structured Query 
 
 ## <a name="examples"></a>Beispiele
 
-Im folgenden finden Sie Beispiele für das Vergleichs Prädikat Literalwert.
+Im Folgenden sind Beispiele für das Vergleichsprädikat für Literalwerte aufgeführt.
 
 
 ```
@@ -94,22 +94,22 @@ SELECT System.ItemUrl,System.ItemNameDisplay FROM SystemIndex
 [LIKE-Prädikat](-search-sql-like.md)
 </dt> <dt>
 
-[DateAdd-Funktion](-search-sql-dateadd.md)
+[DATEADD-Funktion](-search-sql-dateadd.md)
 </dt> <dt>
 
-[Mehrwertige Vergleiche (Array)](-search-sql-multivaluedcomparisons.md)
+[Mehrwertige Vergleiche (ARRAY)](-search-sql-multivaluedcomparisons.md)
 </dt> <dt>
 
 [NULL-Prädikat](-search-sql-null.md)
 </dt> <dt>
 
-**Licher**
+**Konzeptionellen**
 </dt> <dt>
 
-[Voll Text Prädikate](-search-sql-fulltextpredicates.md)
+[Volltextprädikate](-search-sql-fulltextpredicates.md)
 </dt> <dt>
 
-[Nicht-voll Text Prädikate](-search-sql-nonfulltextpredicates.md)
+[Nicht-Volltextprädikate](-search-sql-nonfulltextpredicates.md)
 </dt> </dl>
 
  

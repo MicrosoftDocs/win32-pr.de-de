@@ -1,53 +1,53 @@
 ---
-title: SplitButton-Steuer Elementtyp
-description: Dieses Thema enthält Informationen zur Unterstützung der Microsoft-Benutzeroberflächen Automatisierung für den SplitButton-Steuer Elementtyp.
+title: SplitButton-Steuerelementtyp
+description: Dieses Thema enthält Informationen zu Microsoft Benutzeroberflächenautomatisierung Unterstützung für den SplitButton-Steuerelementtyp.
 ms.assetid: ca4f8e45-7487-4a8b-9df5-edc2b0e56663
 keywords:
-- Benutzeroberflächen Automatisierung, Unterstützung für den Steuer Elementtyp "SplitButton
-- Benutzeroberflächenautomatisierungs, SplitButton-Steuer Elementtyp
-- UI-Automatisierung, Baumstruktur für den SplitButton-Steuer Elementtyp
-- UI-Automatisierung, Eigenschaften für den SplitButton-Steuer Elementtyp
-- UI-Automatisierung, Steuerelement Muster für den SplitButton-Steuer Elementtyp
-- UI-Automatisierung, Ereignisse für den SplitButton-Steuer Elementtyp
-- Struktur Strukturen, SplitButton-Steuer Elementtyp
-- Eigenschaften, SplitButton-Steuer Elementtyp
-- Steuerelement Muster, SplitButton-Steuer Elementtyp
-- Ereignisse, SplitButton-Steuer Elementtyp
-- Unterstützung für den SplitButton-Steuer Elementtyp
-- SplitButton-Steuer Elementtyp
-- Steuerelement Typen, Baumstruktur für den SplitButton-Steuer Elementtyp
-- Steuerelement Typen, Steuerelement Muster für den SplitButton-Steuer Elementtyp
-- Steuerelement Typen, Unterstützung für SplitButton
-- Steuerelement Typen, SplitButton
+- Benutzeroberflächenautomatisierung,Unterstützung für den SplitButton-Steuerelementtyp
+- Benutzeroberflächenautomatisierung,SplitButton-Steuerelementtyp
+- Benutzeroberflächenautomatisierung,Struktur für den SplitButton-Steuerelementtyp
+- Benutzeroberflächenautomatisierung,Eigenschaften für den SplitButton-Steuerelementtyp
+- Benutzeroberflächenautomatisierung,Steuerelementmuster für den SplitButton-Steuerelementtyp
+- Benutzeroberflächenautomatisierung,Ereignisse für den SplitButton-Steuerelementtyp
+- Strukturstrukturen, SplitButton-Steuerelementtyp
+- Properties, SplitButton-Steuerelementtyp
+- Steuerelementmuster, SplitButton-Steuerelementtyp
+- Ereignisse, SplitButton-Steuerelementtyp
+- Unterstützung für den SplitButton-Steuerelementtyp
+- SplitButton-Steuerelementtyp
+- Steuerelementtypen, Struktur für SplitButton-Steuerelementtyp
+- Steuerelementtypen, Steuerelementmuster für den SplitButton-Steuerelementtyp
+- Steuerelementtypen,Unterstützung für SplitButton
+- Steuerelementtypen, SplitButton
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 9c56cd6b22838dfa92ba25ce05e74d228f4173ac
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: fb04f75a075fdd10b1cf31db01d09c6a9d9fd9a5d78c7c0499d9196a9ff8a956
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "103712696"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118825227"
 ---
-# <a name="splitbutton-control-type"></a>SplitButton-Steuer Elementtyp
+# <a name="splitbutton-control-type"></a>SplitButton-Steuerelementtyp
 
-Dieses Thema enthält Informationen zur Unterstützung der Microsoft-Benutzeroberflächen Automatisierung für den **SplitButton** -Steuer Elementtyp.
+Dieses Thema enthält Informationen zur Unterstützung von Microsoft Benutzeroberflächenautomatisierung für den **SplitButton-Steuerelementtyp.**
 
-Das Steuerelement unterteilte Schaltflächen ermöglicht das Ausführen einer Aktion für ein Steuerelement und das Erweitern des Steuer Elements, um eine Liste mit anderen möglichen Aktionen anzuzeigen, die ausgeführt werden können.
+Das Steuerelement für geteilte Schaltflächen ermöglicht das Ausführen einer Aktion für ein Steuerelement und das Erweitern des Steuerelements, um eine Liste anderer möglicher Aktionen anzuzeigen, die ausgeführt werden können.
 
-In den folgenden Abschnitten werden die erforderliche Benutzeroberflächenautomatisierungs-Struktur, Eigenschaften, Steuerelement Muster und Ereignisse für den **SplitButton** -Steuer Elementtyp definiert. Die Benutzeroberflächenautomatisierungs-Anforderungen gelten für alle Steuerelemente für unterteilte Schaltflächen, in denen Benutzeroberflächen-Framework/Plattform die Unterstützung der Benutzeroberflächen Automatisierung für Steuerelement
+In den folgenden Abschnitten werden die erforderlichen Benutzeroberflächenautomatisierung Struktur, Eigenschaften, Steuerelementmuster und Ereignisse für den **SplitButton-Steuerelementtyp** definiert. Die Benutzeroberflächenautomatisierung Anforderungen gelten für alle Steuerelemente für geteilte Schaltflächen, bei denen das Benutzeroberflächenframework bzw. die Plattform Benutzeroberflächenautomatisierung Unterstützung für Steuerelementtypen und Steuerelementmuster integriert.
 
 Dieses Thema enthält folgende Abschnitte:
 
--   [Typische Baumstruktur](#typical-tree-structure)
+-   [Typische Struktur](#typical-tree-structure)
 -   [Relevante Eigenschaften](#relevant-properties)
--   [Erforderliche Steuerelement Muster](#required-control-patterns)
+-   [Erforderliche Steuerelementmuster](#required-control-patterns)
 -   [Erforderliche Ereignisse](#required-events)
--   [Beispiel für den SplitButton-Steuer Elementtyp](#splitbutton-control-type-example)
+-   [Beispiel für splitButton-Steuerelementtyp](#splitbutton-control-type-example)
 -   [Zugehörige Themen](#related-topics)
 
-## <a name="typical-tree-structure"></a>Typische Baumstruktur
+## <a name="typical-tree-structure"></a>Typische Struktur
 
-In der folgenden Tabelle wird eine typische Steuerelement-und Inhaltsansicht der Benutzeroberflächenautomatisierungs-Struktur für unterteilte Schaltflächen-Steuerelemente sowie die möglichen Inhalte der Ansichten beschrieben. Weitere Informationen zur Benutzeroberflächenautomatisierungs-Struktur finden Sie unter [UI Automation Tree Overview](uiauto-treeoverview.md).
+Die folgende Tabelle zeigt eine typische Steuerelement- und Inhaltsansicht der Benutzeroberflächenautomatisierung Struktur, die sich auf Steuerelemente für geteilte Schaltflächen bezieht, und beschreibt, was in jeder Ansicht enthalten sein kann. Weitere Informationen zur Benutzeroberflächenautomatisierung-Struktur finden Sie unter [Benutzeroberflächenautomatisierung Tree Overview](uiauto-treeoverview.md).
 
 
 
@@ -71,7 +71,7 @@ In der folgenden Tabelle wird eine typische Steuerelement-und Inhaltsansicht der
 <li>Text (0 oder 1)</li>
 <li>Button (1 oder 2)
 <ul>
-<li>Menu (0 oder 1; wird als untergeordnetes Element einer untergeordneten Schaltfläche angezeigt, die das ExpandCollapse-Muster unterstützt)
+<li>Menü (0 oder 1; wird als untergeordnetes Element einer Unterschaltfläche angezeigt, die das ExpandCollapse-Muster unterstützt)
 <ul>
 <li>MenuItem (1:n)</li>
 </ul></li>
@@ -93,72 +93,72 @@ In der folgenden Tabelle wird eine typische Steuerelement-und Inhaltsansicht der
 
 
 
- 
+ 
 
 ## <a name="relevant-properties"></a>Relevante Eigenschaften
 
-In der folgenden Tabelle sind die Benutzeroberflächenautomatisierungs-Eigenschaften aufgelistet, deren Wert oder Definition für den **SplitButton** -Steuer Elementtyp besonders relevant ist. Weitere Informationen zu Eigenschaften von Benutzeroberflächen Automatisierung finden Sie unter [Abrufen von Eigenschaften aus Benutzeroberflächenautomatisierungs-Elementen](uiauto-propertiesforclients.md).
+In der folgenden Tabelle sind die Benutzeroberflächenautomatisierung Eigenschaften aufgeführt, deren Wert oder Definition für den **SplitButton-Steuerelementtyp** besonders relevant ist. Weitere Informationen zu Benutzeroberflächenautomatisierung Eigenschaften finden Sie unter [Abrufen von Eigenschaften aus Benutzeroberflächenautomatisierung Elements](uiauto-propertiesforclients.md).
 
 
 
-| Benutzeroberflächenautomatisierungs-Eigenschaft                                                                                              | Wert           | Notizen                                                                                                                                                                                                |
+| Benutzeroberflächenautomatisierungs-Eigenschaft                                                                                              | Wert           | Hinweise                                                                                                                                                                                                |
 |---------------------------------------------------------------------------------------------------------------------|-----------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| [**UIA \_ automationidpropertyid**](uiauto-automation-element-propids.md)                 | Siehe Hinweise.      | Der Wert dieser Eigenschaft muss für alle Peer Elemente in der unformatierten Ansicht der Benutzeroberflächenautomatisierungs-Struktur eindeutig sein.                                                                                         |
-| [**UIA \_ boundingrechglepropertyid**](uiauto-automation-element-propids.md)       | Siehe Hinweise.      | Das äußere Rechteck, das das gesamte Steuerelement enthält.                                                                                                                                             |
-| [**UIA \_ clickablepointpropertyid**](uiauto-automation-element-propids.md)             | Siehe Hinweise.      | Unterstützt, wenn es ein umschließendes Rechteck gibt. Wenn nicht jeder Punkt innerhalb des umgebenden Rechtecks klickbar ist und das Element spezialisierte Treffer Tests durchführt, überschreiben und einen durch Klicken aktivierbaren Punkt bereitstellen. |
-| [**UIA \_ controltypepropertyid**](uiauto-automation-element-propids.md)                   | **SplitButton** | Dieser Wert ist für alle Benutzeroberflächen-Frameworks gleich.                                                                                                                                                        |
-| [**UIA \_ helptextpropertyid**](uiauto-automation-element-propids.md)                         | Siehe Hinweise.      | Der Hilfetext kann das Ergebnis der Aktivierung der unterteilten Schaltfläche angeben. Hierbei handelt es sich in der Regel um dieselben Informationen, die durch ein QuickInfo angezeigt werden.                                                   |
-| [**UIA \_ iscontentelementpropertyid**](uiauto-automation-element-propids.md)         | TRUE            | Das Steuerelement für eine unterteilte Schaltfläche enthält Informationen für den Endbenutzer.                                                                                                                                      |
-| [**UIA \_ iscontrolelementpropertyid**](uiauto-automation-element-propids.md)         | TRUE            | Das Steuerelement für eine unterteilte Schaltfläche ist für den Endbenutzer sichtbar.                                                                                                                                                 |
-| [**UIA \_ iskeyboardfocus ablepropertyid**](uiauto-automation-element-propids.md)   | Siehe Hinweise.      | Wenn das Steuerelement den Tastaturfokus erhalten kann, muss es diese Eigenschaft unterstützen.                                                                                                                            |
-| [**UIA \_ labeledbypropertyid**](uiauto-automation-element-propids.md)                       | NULL            | Steuerelemente für unterteilte Schaltflächen verfügen nicht über eine statische Textbezeichnung.                                                                                                                                               |
-| [**UIA \_ localizedcontroltypepropertyid**](uiauto-automation-element-propids.md) | Siehe Hinweise.      | Lokalisierte Zeichenfolge, die dem **SplitButton** -Steuer Elementtyp entspricht. Der Standardwert ist "unterteilte Schaltfläche" für en-US oder Englisch (USA).                                                        |
-| [**UIA- \_ namepropertyid**](uiauto-automation-element-propids.md)                                 | Siehe Hinweise.      | Der Text, der zum bezeichnen der Trenn Schaltfläche verwendet wird. Wenn ein Bild zum Bezeichnen einer unterteilten Schaltfläche verwendet wird, muss für die Eigenschaft Name der unterteilten Schaltfläche alternativer Text angegeben werden.                              |
+| [**UIA \_ AutomationIdPropertyId**](uiauto-automation-element-propids.md)                 | Siehe Hinweise.      | Der Wert dieser Eigenschaft muss für alle Peerelemente in der rohen Ansicht der Benutzeroberflächenautomatisierung-Struktur eindeutig sein.                                                                                         |
+| [**UIA \_ BoundingRectanglePropertyId**](uiauto-automation-element-propids.md)       | Siehe Hinweise.      | Das äußere Rechteck, das das gesamte Steuerelement enthält.                                                                                                                                             |
+| [**UIA \_ ClickablePointPropertyId**](uiauto-automation-element-propids.md)             | Siehe Hinweise.      | Unterstützt, wenn es ein umschließendes Rechteck gibt. Wenn nicht jeder Punkt innerhalb des umschließenden Rechtecks klickbar ist und das Element spezielle Treffertests durchführt, überschreibt und stellt einen klickbaren Punkt bereit. |
+| [**UIA \_ ControlTypePropertyId**](uiauto-automation-element-propids.md)                   | **SplitButton** | Dieser Wert ist für alle Benutzeroberflächen-Frameworks gleich.                                                                                                                                                        |
+| [**UIA \_ HelpTextPropertyId**](uiauto-automation-element-propids.md)                         | Siehe Hinweise.      | Der Hilfetext kann das Ergebnis der Aktivierung der unterteilten Schaltfläche angeben. Hierbei handelt es sich in der Regel um dieselben Informationen, die durch ein QuickInfo angezeigt werden.                                                   |
+| [**UIA \_ IsContentElementPropertyId**](uiauto-automation-element-propids.md)         | TRUE            | Das Steuerelement für eine unterteilte Schaltfläche enthält Informationen für den Endbenutzer.                                                                                                                                      |
+| [**UIA \_ IsControlElementPropertyId**](uiauto-automation-element-propids.md)         | TRUE            | Das Steuerelement für eine unterteilte Schaltfläche ist für den Endbenutzer sichtbar.                                                                                                                                                 |
+| [**UIA \_ IsKeyboardFocusablePropertyId**](uiauto-automation-element-propids.md)   | Siehe Hinweise.      | Wenn das Steuerelement den Tastaturfokus erhalten kann, muss es diese Eigenschaft unterstützen.                                                                                                                            |
+| [**UIA \_ LabeledByPropertyId**](uiauto-automation-element-propids.md)                       | NULL            | Steuerelemente für unterteilte Schaltflächen verfügen nicht über eine statische Textbezeichnung.                                                                                                                                               |
+| [**UIA \_ LocalizedControlTypePropertyId**](uiauto-automation-element-propids.md) | Siehe Hinweise.      | Lokalisierte Zeichenfolge, die dem **SplitButton-Steuerelementtyp** entspricht. Der Standardwert ist "split button" für en-US oder Englisch (USA).                                                        |
+| [**\_UIA-NamePropertyId**](uiauto-automation-element-propids.md)                                 | Siehe Hinweise.      | Der Text, der zum Bezeichnen der geteilten Schaltfläche verwendet wird. Wenn ein Bild verwendet wird, um eine geteilte Schaltfläche zu bezeichnen, muss alternativer Text für die Name-Eigenschaft der geteilten Schaltfläche angegeben werden.                              |
 
 
 
- 
+ 
 
-## <a name="required-control-patterns"></a>Erforderliche Steuerelement Muster
+## <a name="required-control-patterns"></a>Erforderliche Steuerelementmuster
 
-In der folgenden Tabelle sind die Steuerelement Muster für die Benutzeroberflächen Automatisierung aufgeführt Weitere Informationen zu Steuerelementmustern finden Sie unter [UI Automation Control Patterns Overview](uiauto-controlpatternsoverview.md).
+In der folgenden Tabelle sind die Benutzeroberflächenautomatisierung Steuerelementmuster aufgeführt, die von allen Steuerelementen für geteilte Schaltflächen unterstützt werden müssen. Weitere Informationen zu Steuerelementmustern finden Sie unter [UI Automation Control Patterns Overview](uiauto-controlpatternsoverview.md).
 
 
 
 | Steuerelementmuster                                                   | Support  | Notizen                                                                                                                                                                                                                          |
 |-------------------------------------------------------------------|----------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| [**IExpandCollapseProvider**](/windows/desktop/api/UIAutomationCore/nn-uiautomationcore-iexpandcollapseprovider) | Erforderlich | Da unterteilte Schaltflächen immer in der Lage sind, eine Liste von Optionen zu erweitern, müssen Sie das [ExpandCollapse](uiauto-implementingexpandcollapse.md) -Steuerelement Muster unterstützen.                                                      |
-| [**IInvokeProvider**](/windows/desktop/api/UIAutomationCore/nn-uiautomationcore-iinvokeprovider)                 | Erforderlich | Da Trenn Schaltflächen immer über eine Standardaktion verfügen, die der [**IInvokeProvider:: Aufrufen**](/windows/desktop/api/UIAutomationCore/nf-uiautomationcore-iinvokeprovider-invoke) -Methode zugeordnet ist, müssen Sie [das Steuerelement](uiauto-implementinginvoke.md) -Steuerelement Muster unterstützen. |
+| [**IExpandCollapseProvider**](/windows/desktop/api/UIAutomationCore/nn-uiautomationcore-iexpandcollapseprovider) | Erforderlich | Da geteilte Schaltflächen immer die Möglichkeit haben, eine Liste von Optionen zu erweitern, müssen sie das [ExpandCollapse-Steuerelementmuster](uiauto-implementingexpandcollapse.md) unterstützen.                                                      |
+| [**IInvokeProvider**](/windows/desktop/api/UIAutomationCore/nn-uiautomationcore-iinvokeprovider)                 | Erforderlich | Da geteilte Schaltflächen immer einer Standardaktion zugeordnet sind, die der [**IInvokeProvider::Invoke-Methode**](/windows/desktop/api/UIAutomationCore/nf-uiautomationcore-iinvokeprovider-invoke) zugeordnet ist, müssen sie das [Invoke-Steuerelementmuster](uiauto-implementinginvoke.md) unterstützen. |
 
 
 
- 
+ 
 
 ## <a name="required-events"></a>Erforderliche Ereignisse
 
-In der folgenden Tabelle sind die Benutzeroberflächenautomatisierungs-Ereignisse aufgeführt, die unterteilte Schaltflächen-Steuerelemente für die Weitere Informationen zu Ereignissen finden Sie unter [UI Automation Events Overview](uiauto-eventsoverview.md).
+In der folgenden Tabelle sind die Benutzeroberflächenautomatisierung Ereignisse aufgeführt, die steuerelemente für geteilte Schaltflächen unterstützen müssen. Weitere Informationen zu Ereignissen finden Sie unter [UI Automation Events Overview](uiauto-eventsoverview.md).
 
 
 
-| Benutzeroberflächen-Automatisierungs Ereignis                                                                                                                                                | Notizen                                                                                                                      |
+| Benutzeroberflächenautomatisierung-Ereignis                                                                                                                                                | Hinweise                                                                                                                      |
 |--------------------------------------------------------------------------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------------|
-| [**UIA \_ automationfocuschangedebug-ID**](uiauto-event-ids.md)                                                                   |                                                                                                                            |
-| [**UIA \_ Boundingrechglepropertyid**](uiauto-automation-element-propids.md) -Eigenschaft-geändertes Ereignis.                              |                                                                                                                            |
-| [**UIA \_ Expandredugenexpandredugenstatepropertyid**](uiauto-control-pattern-propids.md) -Eigenschaft-geändertes Ereignis. |                                                                                                                            |
-| [**UIA \_ aufrufen \_ invokedebug-ID**](uiauto-event-ids.md)                                                                                  |                                                                                                                            |
-| [**UIA \_ Isenabledpropertyid**](uiauto-automation-element-propids.md) -Eigenschaft-geändertes Ereignis.                                              | Wenn das Steuerelement die [**isaktivierte**](uiauto-automation-element-propids.md) Eigenschaft unterstützt, muss es dieses Ereignis unterstützen.   |
-| [**UIA \_ Isoffscreenpropertyid**](uiauto-automation-element-propids.md) -Eigenschaft-geändertes Ereignis.                                          | Wenn das Steuerelement die [**IsOffscreen**](uiauto-automation-element-propids.md) -Eigenschaft unterstützt, muss es dieses Ereignis unterstützen. |
-| [**UIA \_ structurechangedebug**](uiauto-event-ids.md)                                                                               |                                                                                                                            |
+| [**UIA \_ AutomationFocusChangedEventId**](uiauto-event-ids.md)                                                                   |                                                                                                                            |
+| [**UIA \_ BoundingRectanglePropertyId-Eigenschaftsänderungsereignis.**](uiauto-automation-element-propids.md)                              |                                                                                                                            |
+| [**UIA \_ ExpandCollapseExpandCollapseStatePropertyId-Eigenschaftsänderungsereignis.**](uiauto-control-pattern-propids.md) |                                                                                                                            |
+| [**UIA \_ Invoke \_ InvokedEventId**](uiauto-event-ids.md)                                                                                  |                                                                                                                            |
+| [**UIA \_ IsEnabledPropertyId-Eigenschaftsänderungsereignis.**](uiauto-automation-element-propids.md)                                              | Wenn das Steuerelement die [**IsEnabled-Eigenschaft unterstützt,**](uiauto-automation-element-propids.md) muss es dieses Ereignis unterstützen.   |
+| [**UIA \_ IsOffscreenPropertyId-Eigenschaftsänderungsereignis.**](uiauto-automation-element-propids.md)                                          | Wenn das Steuerelement die [**IsOffscreen-Eigenschaft unterstützt,**](uiauto-automation-element-propids.md) muss es dieses Ereignis unterstützen. |
+| [**UIA \_ StructureChangedEventId**](uiauto-event-ids.md)                                                                               |                                                                                                                            |
 
 
 
- 
+ 
 
-## <a name="splitbutton-control-type-example"></a>Beispiel für den SplitButton-Steuer Elementtyp
+## <a name="splitbutton-control-type-example"></a>Beispiel für den SplitButton-Steuerelementtyp
 
-Die folgende Abbildung veranschaulicht ein Steuerelement, das den **SplitButton** -Steuer Elementtyp implementiert.
+Die folgende Abbildung veranschaulicht ein Steuerelement, das den **SplitButton-Steuerelementtyp** implementiert.
 
-![Screenshot mit einem Beispiel für ein SplitButton-Steuerelement](images/splitbuttonxmpl.jpg)
+![Screenshot: Beispiel für ein SplitButton-Steuerelement](images/splitbuttonxmpl.jpg)
 
 
 
@@ -169,16 +169,16 @@ Die folgende Abbildung veranschaulicht ein Steuerelement, das den **SplitButton*
 </colgroup>
 <thead>
 <tr class="header">
-<th>Benutzeroberflächenautomatisierungs-Struktur – Steuerelement Ansicht</th>
-<th>Benutzeroberflächenautomatisierungs-Struktur – Inhaltsansicht</th>
+<th>Benutzeroberflächenautomatisierung Struktur – Steuerelementansicht</th>
+<th>Benutzeroberflächenautomatisierung Struktur – Inhaltsansicht</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
 <td><ul>
-<li>SplitButton- &quot; Name &quot; (aufrufen, ExpandCollapse)
+<li>&quot;SplitButton-Name &quot; (Invoke, ExpandCollapse)
 <ul>
-<li>Schaltfläche " &quot; Weitere Optionen" &quot; (aufrufen)
+<li>Schaltfläche &quot; "Mehr" &quot; (Option) (Aufrufen)
 <ul>
 <li>Menü
 <ul>
@@ -189,9 +189,9 @@ Die folgende Abbildung veranschaulicht ein Steuerelement, das den **SplitButton*
 </ul></li>
 </ul></td>
 <td><ul>
-<li>SplitButton- &quot; Name &quot; (aufrufen, ExpandCollapse)
+<li>&quot;SplitButton-Name &quot; (Invoke, ExpandCollapse)
 <ul>
-<li>Schaltfläche " &quot; Weitere Optionen" &quot; (aufrufen)
+<li>Schaltfläche &quot; "Mehr" &quot; (Option) (Aufrufen)
 <ul>
 <li>Menü
 <ul>
@@ -207,13 +207,13 @@ Die folgende Abbildung veranschaulicht ein Steuerelement, das den **SplitButton*
 
 
 
- 
+ 
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
 <dl> <dt>
 
-**Licher**
+**Konzeptionellen**
 </dt> <dt>
 
 [Übersicht über Steuerelementtypen für Benutzeroberflächenautomatisierung](uiauto-controltypesoverview.md)
@@ -222,9 +222,9 @@ Die folgende Abbildung veranschaulicht ein Steuerelement, das den **SplitButton*
 [Übersicht über die Benutzeroberflächenautomatisierung](uiauto-uiautomationoverview.md)
 </dt> </dl>
 
- 
+ 
 
- 
+ 
 
 
 

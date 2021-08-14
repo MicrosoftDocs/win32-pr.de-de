@@ -1,58 +1,58 @@
 ---
-title: Sitzungs-zu-Sitzung-Aktivierung mit einem sitzungsmoniker
-description: Die Sitzungs-zu-Sitzung-Aktivierung (auch Sitzungs übergreifende Aktivierung genannt) ermöglicht einem Client Prozess das Starten (aktivieren) eines lokalen Server Prozesses für eine bestimmte Sitzung.
+title: Sitzungs-zu-Sitzung-Aktivierung mit einem Sitzungsmoniker
+description: Die Sitzungs-zu-Sitzung-Aktivierung (auch als sitzungsübergreifende Aktivierung bezeichnet) ermöglicht es einem Clientprozess, einen lokalen Serverprozess in einer angegebenen Sitzung zu starten (zu aktivieren).
 ms.assetid: d405c276-040b-4cde-aeb2-482a25e2867f
 ms.tgt_platform: multiple
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 2714f3dbe7b23c8b7f04d4271018891960b87f76
-ms.sourcegitcommit: 592c9bbd22ba69802dc353bcb5eb30699f9e9403
+ms.openlocfilehash: 213627facdd2dee9e4ba7cc698d2be5455424b4394d295448a07aeb52788dd42
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "103729617"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119988130"
 ---
-# <a name="session-to-session-activation-with-a-session-moniker"></a>Sitzungs-zu-Sitzung-Aktivierung mit einem sitzungsmoniker
+# <a name="session-to-session-activation-with-a-session-moniker"></a>Sitzungs-zu-Sitzung-Aktivierung mit einem Sitzungsmoniker
 
-Die Sitzungs-zu-Sitzung-Aktivierung (auch Sitzungs übergreifende Aktivierung genannt) ermöglicht einem Client Prozess das Starten (aktivieren) eines lokalen Server Prozesses für eine bestimmte Sitzung. Diese Funktion ist für Anwendungen verfügbar, die so konfiguriert sind, dass Sie im Sicherheitskontext des interaktiven Benutzers ausgeführt werden, der auch als "runas Interactive User"-Objekt Aktivierungs Modus bezeichnet wird. Weitere Informationen zu Sicherheits Kontexten finden Sie [im Sicherheitskontext des Clients](/windows/desktop/SecAuthZ/the-client-security-context).
+Die Sitzungs-zu-Sitzung-Aktivierung (auch als sitzungsübergreifende Aktivierung bezeichnet) ermöglicht es einem Clientprozess, einen lokalen Serverprozess in einer angegebenen Sitzung zu starten (zu aktivieren). Dieses Feature ist für Anwendungen verfügbar, die für die Ausführung im Sicherheitskontext des interaktiven Benutzers konfiguriert sind, der auch als Objektaktivierungsmodus "Interaktiver RunAs-Benutzer" bezeichnet wird. Weitere Informationen zu Sicherheitskontexten finden Sie unter [Sicherheitskontext des Clients.](/windows/desktop/SecAuthZ/the-client-security-context)
 
-Verteiltes com (DCOM) ermöglicht die Objekt Aktivierung pro Sitzung mithilfe eines vom System bereitgestellten [sitzungsmonikers](session-monikers.md). Andere vom System bereitgestellte Moniker sind [dateimoniker](../com/file-monikers.md), [elementmoniker](../com/item-monikers.md), generische zusammen [gesetzte Moniker](../com/composite-monikers.md), [Anti-Moniker](../com/anti-monikers.md), [zeigermoniker](../com/pointer-monikers.md)und [URL-Moniker](../com/url-monikers.md).
+Distributed COM (DCOM) ermöglicht die Objektaktivierung pro Sitzung mithilfe eines vom System bereitgestellten [Sitzungsmonikers.](session-monikers.md) Andere vom System bereitgestellte Moniker umfassen [Dateimoniker,](../com/file-monikers.md) [Elementmoniker,](../com/item-monikers.md)generische zusammengesetzte [Moniker,](../com/composite-monikers.md)Antimoniker, [Zeigermoniker](../com/pointer-monikers.md)und [URL-Moniker.](../com/url-monikers.md) [](../com/anti-monikers.md)
 
-Damit der sitzungsmoniker verwendet werden kann, muss die DCOM-Anwendung so festgelegt werden, dass Sie als interaktiver Benutzer ausgeführt wird. Dies kann mithilfe des Verwaltungs Tools Komponenten Dienste, Anzeigen der Eigenschaften der DCOM-Anwendung und auswählen **des interaktiven Benutzers** auf der Registerkarte **Identität** festgelegt werden. Weitere Informationen zu den möglichen Sicherheitsrisiken im Zusammenhang mit der Festlegung einer DCOM-Anwendung für die Verwendung als interaktiver Benutzer in einer Remotedesktopdienste Umgebung finden Sie im Abschnitt "Anwendungs Identität (com)" der com-Dokumentation im Platform Software Development Kit (SDK).
+Um den Sitzungsmoniker verwenden zu können, muss die DCOM-Anwendung so festgelegt werden, dass sie als interaktiver Benutzer ausgeführt wird. Sie können dies festlegen, indem Sie das Verwaltungstool für Komponentendienste verwenden, die Eigenschaften der DCOM-Anwendung anzeigen und auf der Registerkarte Identität die Option **Der** interaktive Benutzer **auswählen.** Weitere Informationen zu den möglichen Sicherheitsrisiken im Zusammenhang mit dem Festlegen einer DCOM-Anwendung, die als interaktiver Benutzer in einer Remotedesktopdienste-Umgebung ausgeführt wird, finden Sie im Abschnitt "Anwendungsidentität (COM)" der COM-Dokumentation im Platform Software Development Kit (SDK).
 
-Wenn ein anderer Benutzertyp ausgewählt ist, um die Anwendung auszuführen, wird der sitzungsmoniker von der Anwendung ignoriert. Der sitzungsmoniker wird auch von com+-Server Anwendungen ignoriert. Weitere Informationen zu anderen Methoden zum Auswählen des Benutzer Typs zum Ausführen der Anwendung finden Sie in der com-Dokumentation im Platform SDK.
+Wenn ein anderer Benutzertyp zum Ausführen der Anwendung ausgewählt ist, wird der Sitzungsmoniker von der Anwendung ignoriert. Der Sitzungsmoniker wird auch von COM+-Serveranwendungen ignoriert. Weitere Informationen zu anderen Methoden zum Auswählen des Benutzertyps zum Ausführen der Anwendung finden Sie in der COM-Dokumentation im Platform SDK.
 
-Um einen sitzungsmoniker zu erstellen, müssen Sie die Sitzungs-ID der Remotedesktopdienste Sitzung mit einem klassenmoniker verfassen, der die Klassen-ID des Prozess Servers angibt.
+Um einen Sitzungsmoniker zu erstellen, müssen Sie die Sitzungs-ID der Remotedesktopdienste-Sitzung mit einem Klassenmoniker zusammenstellen, der die Klassen-ID des Prozessservers angibt.
 
-**So erstellen Sie einen sitzungsmoniker**
+**So erstellen Sie einen Sitzungsmoniker**
 
-1.  Legen Sie den anzeigen amen des klassenmonikers mit dem anzeigen amen des sitzungsmonikers mit der folgenden Syntax als Präfix:
+1.  Stellen Sie dem Anzeigenamen des Klassenmonikers mithilfe der folgenden Syntax den Anzeigenamen des Sitzungsmonikers voran:
 
     ``` syntax
     "Session:[digits]!clsid:[class id]"
     ```
 
-    , wobei *Ziffern* die Sitzungs-ID der Sitzung darstellt, für die der Server Prozess gestartet wird, und WHERE *Class ID* die Klassen-ID des Servers darstellt. Beachten Sie, dass die Sitzungs-ID eine Basis-10-Nummer ist.
+    Dabei *stellen Ziffern die Sitzungs-ID* der Sitzung dar, in der der Serverprozess gestartet wird, und wobei die Klassen-ID die Klassen-ID des Servers darstellt.  Beachten Sie, dass die Sitzungs-ID eine Basis-10-Zahl ist.
 
-    Bei Computern, auf denen Windows XP oder höher ausgeführt wird, führt die Verwendung der folgenden Syntax dazu, dass com die Aktivierung an die derzeit aktive physische Konsolen Sitzung sendet, je nachdem, wie die Sitzungs-ID lautet:
+    Bei Computern, auf denen Windows XP oder höher ausgeführt wird, führt die Verwendung der folgenden Syntax dazu, dass COM die Aktivierung an die derzeit aktive physische Konsolensitzung sendet, unabhängig von der Sitzungs-ID:
 
     ``` syntax
     "Session:Console!clsid:[class id]"
     ```
 
-2.  Nachdem Sie den sitzungsmoniker erstellt haben, können Sie das Ergebnis entweder an die Funktion " [**mkparamesedisplayname**](/windows/desktop/api/objbase/nf-objbase-mkparsedisplayname) " oder an die Funktion " [mkzisedisplaynameex](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/ms775113(v=vs.85)) " übergeben.
+2.  Nachdem Sie den Sitzungsmoniker erstellt haben, können Sie das Ergebnis entweder an die [**MkParseDisplayName-Funktion**](/windows/desktop/api/objbase/nf-objbase-mkparsedisplayname) oder die [MkParseDisplayNameEx-Funktion](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/ms775113(v=vs.85)) übergeben.
 
-Sie können einen sitzungsmoniker auf die gleiche Weise verwenden wie einen beliebigen anderen Moniker.
+Sie können einen Sitzungsmoniker auf die gleiche Weise wie jeden anderen Moniker verwenden.
 
-Ein Codebeispiel, in dem veranschaulicht wird, wie Sie einen lokalen Server Prozess für eine bestimmte Sitzung aktivieren, finden [Sie unter using an Session Moniker](using-a-session-moniker.md).
+Ein Codebeispiel, das veranschaulicht, wie ein lokaler Serverprozess in einer angegebenen Sitzung aktiviert wird, finden Sie unter [Verwenden eines Sitzungsmonikers.](using-a-session-moniker.md)
 
-Weitere Informationen zur Objekt Aktivierung, vom System bereitgestellte Moniker und klassenmoniker finden Sie in der com-Dokumentation im Platform SDK.
+Weitere Informationen zur Objektaktivierung, vom System bereitgestellten Monikern und Klassenmonikern finden Sie in der COM-Dokumentation im Platform SDK.
 
 > [!Note]  
-> Prozesse, die Sitzungs übergreifend erstellt werden, weisen eine Obergrenze für die Größe des Umgebungs Blocks auf. Dieser Grenzwert beträgt ca. 4 KB, kann jedoch je nach den anderen zum Erstellen des Prozesses benötigten Informationen (z. b. Dateinamen, Verzeichnisse und Parameter für den neuen Prozess) größer oder kleiner sein.
+> Prozesse, die sitzungsübergreifend erstellt werden, haben eine Obergrenze für die Größe des Umgebungsblocks. Dieser Grenzwert beträgt etwa 4 KB, kann jedoch größer oder kleiner sein, je nachdem, welche anderen Informationen zum Erstellen des Prozesses erforderlich sind (z. B. Dateinamen, Verzeichnisse und Parameter für den neuen Prozess).
 
- 
+ 
 
- 
+ 
 
- 
+ 

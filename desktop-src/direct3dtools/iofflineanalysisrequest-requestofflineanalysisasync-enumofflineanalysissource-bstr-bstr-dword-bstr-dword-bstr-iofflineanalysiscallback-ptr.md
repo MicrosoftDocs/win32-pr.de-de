@@ -1,10 +1,10 @@
 ---
-description: Fordert an, eine Offline Analyse mit der angegebenen Quelle, dem angegebenen Manifest, den angegebenen Parametern und dem angegebenen Frame auszuführen.
+description: Anforderungen zum Ausführen der Offlineanalyse mit der angegebenen Quelle, dem angegebenen Manifest, den angegebenen Parametern und dem angegebenen Frame.
 MS-HAID: vspixengine.IOfflineAnalysisRequest\_RequestOfflineAnalysisAsync\_enumOFFLINEANALYSISSOURCE\_BSTR\_BSTR\_DWORD\_BSTR\_DWORD\_BSTR\_IOfflineAnalysisCallback\_ptr
 MSHAttr:
 - PreferredSiteName:MSDN
 - PreferredLib:/library/windows/desktop
-title: 'Iofflineanalysisrequest:: requestofflineanalysisasync-Methode'
+title: IOfflineAnalysisRequest::RequestOfflineAnalysisAsync-Methode
 ms.topic: reference
 ms.date: 05/31/2018
 ms.assetid: C836D9C1-D3E0-4661-9B89-048B61028F53
@@ -17,16 +17,16 @@ api_location:
 topic_type:
 - APIRef
 - kbSyntax
-ms.openlocfilehash: d027b9ec463c0bebfefca3ee7f9af4b50c514755
-ms.sourcegitcommit: a47bd86f517de76374e4fff33cfeb613eb259a7e
+ms.openlocfilehash: 2a8a36f65f2158d03650257cf13458d36330e7fd3184210d99c05200e1731231
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/06/2021
-ms.locfileid: "104392685"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119981140"
 ---
-# <a name="span-idvspixengineiofflineanalysisrequest_requestofflineanalysisasync_enumofflineanalysissource_bstr_bstr_dword_bstr_dword_bstr_iofflineanalysiscallback_ptrspaniofflineanalysisrequestrequestofflineanalysisasync-method"></a><span id="vspixengine.iofflineanalysisrequest_requestofflineanalysisasync_enumofflineanalysissource_bstr_bstr_dword_bstr_dword_bstr_iofflineanalysiscallback_ptr"></span>Iofflineanalysisrequest:: requestofflineanalysisasync-Methode
+# <a name="span-idvspixengineiofflineanalysisrequest_requestofflineanalysisasync_enumofflineanalysissource_bstr_bstr_dword_bstr_dword_bstr_iofflineanalysiscallback_ptrspaniofflineanalysisrequestrequestofflineanalysisasync-method"></a><span id="vspixengine.iofflineanalysisrequest_requestofflineanalysisasync_enumofflineanalysissource_bstr_bstr_dword_bstr_dword_bstr_iofflineanalysiscallback_ptr"></span>IOfflineAnalysisRequest::RequestOfflineAnalysisAsync-Methode
 
-Fordert an, eine Offline Analyse mit der angegebenen Quelle, dem angegebenen Manifest, den angegebenen Parametern und dem angegebenen Frame auszuführen.
+Anforderungen zum Ausführen der Offlineanalyse mit der angegebenen Quelle, dem angegebenen Manifest, den angegebenen Parametern und dem angegebenen Frame.
 
 ## <a name="syntax"></a>Syntax
 
@@ -46,41 +46,41 @@ HRESULT RequestOfflineAnalysisAsync(
 
 ## <a name="parameters"></a>Parameter
 
-*Analyse*   
-Gibt an, wo die Analyse Quelle von zwischengespeicherten Berichten oder der Wiedergabe stammt.
+*analysisSource*   
+Gibt an, wo die Analysequelle aus zwischengespeicherten Berichten oder aus der Wiedergabe stammt.
 
 *manifestXml*   
-Eine com-Zeichenfolge, die den Pfadnamen der XML-Manifest-Datei enthält.
+Eine COM-Zeichenfolge, die den Pfadnamen der XML-Manifestdatei enthält.
 
-*parametersxml*   
-Eine com-Zeichenfolge, die den Pfadnamen der XML-Parameterdatei enthält.
+*parametersXml*   
+Eine COM-Zeichenfolge, die den Pfadnamen der XML-Parameterdatei enthält.
 
-*KS*   
-Ein Cookie, das die Anforderung eindeutig identifiziert, und kann verwendet werden, um zu signalisieren, dass es abgebrochen werden soll.
+*Cookie*   
+Ein Cookie, das die Anforderung eindeutig identifiziert und verwendet werden kann, um zu signalisieren, dass sie abgebrochen wird.
 
-*capturefullfilename*   
-Eine com-Zeichenfolge, die den absoluten Pfadnamen der Erfassungs Datei (. vsglog) enthält.
+*captureFullFileName*   
+Eine COM-Zeichenfolge, die den absoluten Pfadnamen der Erfassungsdatei (.vsglog) enthält.
 
-*Framezahl*   
+*frameNumber*   
 Der angegebene Frame.
 
-*outputfullfilename*   
-Eine com-Zeichenfolge, die den absoluten Pfadnamen der Datei enthält, in die die Ausgabe geschrieben wird.
+*outputFullFileName*   
+Eine COM-Zeichenfolge, die den absoluten Pfadnamen der Datei enthält, in die die Ausgabe geschrieben wird.
 
 *requestCallback*   
-Die Adresse eines Rückrufs, der zum Benachrichtigen des Hosts der Ergebnisse verwendet wird.
+Die Adresse eines Rückrufs, der verwendet wird, um den Host über Ergebnisse zu benachrichtigen.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Wenn diese Methode erfolgreich ausgeführt wird, gibt Sie **S \_ OK** zurück. Andernfalls wird ein **HRESULT** -Fehlercode zurückgegeben.
+Wenn diese Methode erfolgreich ist, wird **S \_ OK zurückgegeben.** Andernfalls wird ein **HRESULT-Fehlercode** zurückgegeben.
 
 ## <a name="requirements"></a>Anforderungen
 
-<table><colgroup><col style="width: 50%" /><col style="width: 50%" /></colgroup><tbody><tr class="odd"><td><p>Header</p></td><td>Vspixengine. h</td></tr></tbody></table>
+<table><colgroup><col style="width: 50%" /><col style="width: 50%" /></colgroup><tbody><tr class="odd"><td><p>Header</p></td><td>Vspixengine.h</td></tr></tbody></table>
 
 ## <a name="span-idsee_alsospansee-also"></a><span id="see_also"></span>Siehe auch
 
-[**Iofflineanalysisrequest**](/windows/desktop/direct3dtools/iofflineanalysisrequest)
+[**IOfflineAnalysisRequest**](/windows/desktop/direct3dtools/iofflineanalysisrequest)
 
  
 

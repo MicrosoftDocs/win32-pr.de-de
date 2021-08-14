@@ -1,155 +1,155 @@
 ---
-title: Mciwnd-Referenz
-description: Mciwnd-Referenz
+title: MCIWnd-Referenz
+description: MCIWnd-Referenz
 ms.assetid: 11fba6bb-17f1-4fbe-b148-4755a3c6216a
 keywords:
-- MCI (Media Control Interface), mciwnd-Referenz
-- Mciwnd-Fenster Klasse, Referenz
-- Mciwnd-Fenster, Referenz
-- Mciwnd-Referenz, Informationen zu
+- MCI (Media Control Interface), MCIWnd-Referenz
+- MCIWnd-Fensterklasse, Referenz
+- MCIWnd-Fenster, Referenz
+- MCIWnd-Referenz,about
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 76333f38a5dec3edaadcae69777703ebea61296f
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: 03249d5e0f0a0f4fef8110d878021437f7aee667085a0720a86de77c8cbdfe49
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "104471060"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118374360"
 ---
-# <a name="mciwnd-reference"></a>Mciwnd-Referenz
+# <a name="mciwnd-reference"></a>MCIWnd-Referenz
 
-In diesem Abschnitt werden die Funktionen, Meldungen und Makros beschrieben, die der mciwnd-Fenster Klasse zugeordnet sind. Diese Elemente werden wie folgt gruppiert.
+In diesem Abschnitt werden die Funktionen, Meldungen und Makros beschrieben, die der MCIWnd-Fensterklasse zugeordnet sind. Diese Elemente sind wie folgt gruppiert.
 
 ## <a name="window-management"></a>Fensterverwaltung
 
--   [**Mciwndchangestyles**](/windows/desktop/api/Vfw/nf-vfw-mciwndchangestyles)
--   [**Mciwndcreate**](/windows/desktop/api/Vfw/nf-vfw-mciwndcreatea)
--   [**Mciwndgetstyles**](/windows/desktop/api/Vfw/nf-vfw-mciwndgetstyles)
--   [**Mciwndregisterclass**](/windows/desktop/api/Vfw/nf-vfw-mciwndregisterclass)
+-   [**MCIWndChangeStyles**](/windows/desktop/api/Vfw/nf-vfw-mciwndchangestyles)
+-   [**MCIWndCreate**](/windows/desktop/api/Vfw/nf-vfw-mciwndcreatea)
+-   [**MCIWndGetStyles**](/windows/desktop/api/Vfw/nf-vfw-mciwndgetstyles)
+-   [**MCIWndRegisterClass**](/windows/desktop/api/Vfw/nf-vfw-mciwndregisterclass)
 
-## <a name="file-and-device-management"></a>Datei-und Geräteverwaltung
+## <a name="file-and-device-management"></a>Datei und Geräteverwaltung
 
--   [**Mciwndclose**](/windows/desktop/api/Vfw/nf-vfw-mciwndclose)
--   [**Mciwnddestroy**](/windows/desktop/api/Vfw/nf-vfw-mciwnddestroy)
--   [**Mciwndebug**](/windows/desktop/api/Vfw/nf-vfw-mciwndeject)
--   [**Mciwndnew**](/windows/desktop/api/Vfw/nf-vfw-mciwndnew)
--   [**Mciwndopen**](/windows/desktop/api/Vfw/nf-vfw-mciwndopen)
--   [**Mciwndopendialog**](/windows/desktop/api/Vfw/nf-vfw-mciwndopendialog)
--   [**Mciwndsave**](/windows/desktop/api/Vfw/nf-vfw-mciwndsave)
--   [**Mciwndsavedialog**](/windows/desktop/api/Vfw/nf-vfw-mciwndsavedialog)
+-   [**MCIWndClose**](/windows/desktop/api/Vfw/nf-vfw-mciwndclose)
+-   [**MCIWndDestroy**](/windows/desktop/api/Vfw/nf-vfw-mciwnddestroy)
+-   [**MCIWndEject**](/windows/desktop/api/Vfw/nf-vfw-mciwndeject)
+-   [**MCIWndNew**](/windows/desktop/api/Vfw/nf-vfw-mciwndnew)
+-   [**MCIWndOpen**](/windows/desktop/api/Vfw/nf-vfw-mciwndopen)
+-   [**MCIWndOpenDialog**](/windows/desktop/api/Vfw/nf-vfw-mciwndopendialog)
+-   [**MCIWndSave**](/windows/desktop/api/Vfw/nf-vfw-mciwndsave)
+-   [**MCIWndSaveDialog**](/windows/desktop/api/Vfw/nf-vfw-mciwndsavedialog)
 
-## <a name="playback-options"></a>Wiedergabe Optionen
+## <a name="playback-options"></a>Wiedergabeoptionen
 
--   [**Mciwndgetrepeat**](/windows/desktop/api/Vfw/nf-vfw-mciwndgetrepeat)
--   [**Mciwndplay**](/windows/desktop/api/Vfw/nf-vfw-mciwndplay)
--   [**Mciwndplayfrom**](/windows/desktop/api/Vfw/nf-vfw-mciwndplayfrom)
--   [**Mciwndplayfromto**](/windows/desktop/api/Vfw/nf-vfw-mciwndplayfromto)
--   [**Mciwndplayreverse**](/windows/desktop/api/Vfw/nf-vfw-mciwndplayreverse)
--   [**Mciwndplayto**](/windows/desktop/api/Vfw/nf-vfw-mciwndplayto)
--   [**Mciwndgtrepeat**](/windows/desktop/api/Vfw/nf-vfw-mciwndsetrepeat)
+-   [**MCIWndGetRepeat**](/windows/desktop/api/Vfw/nf-vfw-mciwndgetrepeat)
+-   [**MCIWndPlay**](/windows/desktop/api/Vfw/nf-vfw-mciwndplay)
+-   [**MCIWndPlayFrom**](/windows/desktop/api/Vfw/nf-vfw-mciwndplayfrom)
+-   [**MCIWndPlayFromTo**](/windows/desktop/api/Vfw/nf-vfw-mciwndplayfromto)
+-   [**MCIWndPlayReverse**](/windows/desktop/api/Vfw/nf-vfw-mciwndplayreverse)
+-   [**MCIWndPlayTo**](/windows/desktop/api/Vfw/nf-vfw-mciwndplayto)
+-   [**MCIWndSetRepeat**](/windows/desktop/api/Vfw/nf-vfw-mciwndsetrepeat)
 
 ## <a name="recording"></a>Aufzeichnung
 
--   [**Mciwnddatensatz**](/windows/desktop/api/Vfw/nf-vfw-mciwndrecord)
+-   [**MCIWndRecord**](/windows/desktop/api/Vfw/nf-vfw-mciwndrecord)
 
 ## <a name="positioning"></a>Positionierung
 
--   [**Mciwndend**](/windows/desktop/api/Vfw/nf-vfw-mciwndend)
--   [**Mciwndgetend**](/windows/desktop/api/Vfw/nf-vfw-mciwndgetend)
--   [**Mciwndgetlength**](/windows/desktop/api/Vfw/nf-vfw-mciwndgetlength)
--   [**Mciwndgetposition**](/windows/desktop/api/Vfw/nf-vfw-mciwndgetposition)
--   [**Mciwndgetpositionstring**](/windows/desktop/api/Vfw/nf-vfw-mciwndgetpositionstring)
--   [**Mciwndgetstart**](/windows/desktop/api/Vfw/nf-vfw-mciwndgetstart)
--   [**Mciwndhome**](/windows/desktop/api/Vfw/nf-vfw-mciwndhome)
--   [**Mciwndseek**](/windows/desktop/api/Vfw/nf-vfw-mciwndseek)
--   [**Mciwndstep**](/windows/desktop/api/Vfw/nf-vfw-mciwndstep)
+-   [**MCIWndEnd**](/windows/desktop/api/Vfw/nf-vfw-mciwndend)
+-   [**MCIWndGetEnd**](/windows/desktop/api/Vfw/nf-vfw-mciwndgetend)
+-   [**MCIWndGetLength**](/windows/desktop/api/Vfw/nf-vfw-mciwndgetlength)
+-   [**MCIWndGetPosition**](/windows/desktop/api/Vfw/nf-vfw-mciwndgetposition)
+-   [**MCIWndGetPositionString**](/windows/desktop/api/Vfw/nf-vfw-mciwndgetpositionstring)
+-   [**MCIWndGetStart**](/windows/desktop/api/Vfw/nf-vfw-mciwndgetstart)
+-   [**MCIWndHome**](/windows/desktop/api/Vfw/nf-vfw-mciwndhome)
+-   [**MCIWndSeek**](/windows/desktop/api/Vfw/nf-vfw-mciwndseek)
+-   [**MCIWndStep**](/windows/desktop/api/Vfw/nf-vfw-mciwndstep)
 
-## <a name="pause-and-resume-playback"></a>Wiedergabe anhalten und fortsetzen
+## <a name="pause-and-resume-playback"></a>Anhalten und Fortsetzen der Wiedergabe
 
--   [**Mciwndgetrepeat**](/windows/desktop/api/Vfw/nf-vfw-mciwndgetrepeat)
--   [**Mciwndplay**](/windows/desktop/api/Vfw/nf-vfw-mciwndplay)
--   [**Mciwndplayfrom**](/windows/desktop/api/Vfw/nf-vfw-mciwndplayfrom)
--   [**Mciwndplayfromto**](/windows/desktop/api/Vfw/nf-vfw-mciwndplayfromto)
--   [**Mciwndplayreverse**](/windows/desktop/api/Vfw/nf-vfw-mciwndplayreverse)
--   [**Mciwndplayto**](/windows/desktop/api/Vfw/nf-vfw-mciwndplayto)
--   [**Mciwndgtrepeat**](/windows/desktop/api/Vfw/nf-vfw-mciwndsetrepeat)
+-   [**MCIWndGetRepeat**](/windows/desktop/api/Vfw/nf-vfw-mciwndgetrepeat)
+-   [**MCIWndPlay**](/windows/desktop/api/Vfw/nf-vfw-mciwndplay)
+-   [**MCIWndPlayFrom**](/windows/desktop/api/Vfw/nf-vfw-mciwndplayfrom)
+-   [**MCIWndPlayFromTo**](/windows/desktop/api/Vfw/nf-vfw-mciwndplayfromto)
+-   [**MCIWndPlayReverse**](/windows/desktop/api/Vfw/nf-vfw-mciwndplayreverse)
+-   [**MCIWndPlayTo**](/windows/desktop/api/Vfw/nf-vfw-mciwndplayto)
+-   [**MCIWndSetRepeat**](/windows/desktop/api/Vfw/nf-vfw-mciwndsetrepeat)
 
 ## <a name="performance-tuning"></a>Leistungsoptimierung
 
--   [**Mciwndgetspeed**](/windows/desktop/api/Vfw/nf-vfw-mciwndgetspeed)
--   [**Mciwndgetvolume**](/windows/desktop/api/Vfw/nf-vfw-mciwndgetvolume)
--   [**Mciwndgetzoom**](/windows/desktop/api/Vfw/nf-vfw-mciwndgetzoom)
--   [**Mciwndsetspeed**](/windows/desktop/api/Vfw/nf-vfw-mciwndsetspeed)
--   [**Mciwndsetvolume**](/windows/desktop/api/Vfw/nf-vfw-mciwndsetvolume)
--   [**Mciwndsetzoom**](/windows/desktop/api/Vfw/nf-vfw-mciwndsetzoom)
+-   [**MCIWndGetSpeed**](/windows/desktop/api/Vfw/nf-vfw-mciwndgetspeed)
+-   [**MCIWndGetVolume**](/windows/desktop/api/Vfw/nf-vfw-mciwndgetvolume)
+-   [**MCIWndGetZoom**](/windows/desktop/api/Vfw/nf-vfw-mciwndgetzoom)
+-   [**MCIWndSetSpeed**](/windows/desktop/api/Vfw/nf-vfw-mciwndsetspeed)
+-   [**MCIWndSetVolume**](/windows/desktop/api/Vfw/nf-vfw-mciwndsetvolume)
+-   [**MCIWndSetZoom**](/windows/desktop/api/Vfw/nf-vfw-mciwndsetzoom)
 
-## <a name="image-and-palette-adjustments"></a>Bild-und palettenanpassungen
+## <a name="image-and-palette-adjustments"></a>Anpassungen von Bildern und Paletten
 
--   [**Mciwndgetdest**](/windows/desktop/api/Vfw/nf-vfw-mciwndgetdest)
--   [**Mciwndgetpalette**](/windows/desktop/api/Vfw/nf-vfw-mciwndgetpalette)
--   [**Mciwndgetsource**](/windows/desktop/api/Vfw/nf-vfw-mciwndgetsource)
--   [**Mciwndputdest**](/windows/desktop/api/Vfw/nf-vfw-mciwndputdest)
--   [**Mciwndputsource**](/windows/desktop/api/Vfw/nf-vfw-mciwndputsource)
--   [**Mciwndrealize**](/windows/desktop/api/Vfw/nf-vfw-mciwndrealize)
--   [**Mciwndsetpalette**](/windows/desktop/api/Vfw/nf-vfw-mciwndsetpalette)
+-   [**MCIWndGetDest**](/windows/desktop/api/Vfw/nf-vfw-mciwndgetdest)
+-   [**MCIWndGetPalette**](/windows/desktop/api/Vfw/nf-vfw-mciwndgetpalette)
+-   [**MCIWndGetSource**](/windows/desktop/api/Vfw/nf-vfw-mciwndgetsource)
+-   [**MCIWndPutDest**](/windows/desktop/api/Vfw/nf-vfw-mciwndputdest)
+-   [**MCIWndPutSource**](/windows/desktop/api/Vfw/nf-vfw-mciwndputsource)
+-   [**MCIWndRealize**](/windows/desktop/api/Vfw/nf-vfw-mciwndrealize)
+-   [**MCIWndSetPalette**](/windows/desktop/api/Vfw/nf-vfw-mciwndsetpalette)
 
-## <a name="event-and-error-notification"></a>Ereignis-und Fehler Benachrichtigung
+## <a name="event-and-error-notification"></a>Ereignis- und Fehlerbenachrichtigung
 
--   [**Mciwndgeterror**](/windows/desktop/api/Vfw/nf-vfw-mciwndgeterror)
--   [**mciwndm \_ notifyerror**](mciwndm-notifyerror.md)
--   [**mciwndm \_ notifymedia**](mciwndm-notifymedia.md)
--   [**mciwndm \_ notifymode**](mciwndm-notifymode.md)
--   [**mciwndm- \_ notifypos**](mciwndm-notifypos.md)
--   [**mciwndm \_ notifiysize**](mciwndm-notifysize.md)
+-   [**MCIWndGetError**](/windows/desktop/api/Vfw/nf-vfw-mciwndgeterror)
+-   [**MCIWNDM \_ NOTIFYERROR**](mciwndm-notifyerror.md)
+-   [**MCIWNDM \_ NOTIFYMEDIA**](mciwndm-notifymedia.md)
+-   [**MCIWNDM \_ NOTIFYMODE**](mciwndm-notifymode.md)
+-   [**MCIWNDM \_ NOTIFYPOS**](mciwndm-notifypos.md)
+-   [**MCIWNDM \_ NOTIFYSIZE**](mciwndm-notifysize.md)
 
 ## <a name="time-formats"></a>Zeitformate
 
--   [**Mciwndgettimeformat**](/windows/desktop/api/Vfw/nf-vfw-mciwndgettimeformat)
--   [**Mciwndsettimeformat**](/windows/desktop/api/Vfw/nf-vfw-mciwndsettimeformat)
--   [**Mciwnduabframes**](/windows/desktop/api/Vfw/nf-vfw-mciwnduseframes)
--   [**Mciwndul-Zeit**](/windows/desktop/api/Vfw/nf-vfw-mciwndusetime)
--   [**Mciwndvalidatemedia**](/windows/desktop/api/Vfw/nf-vfw-mciwndvalidatemedia)
+-   [**MCIWndGetTimeFormat**](/windows/desktop/api/Vfw/nf-vfw-mciwndgettimeformat)
+-   [**MCIWndSetTimeFormat**](/windows/desktop/api/Vfw/nf-vfw-mciwndsettimeformat)
+-   [**MCIWndUseFrames**](/windows/desktop/api/Vfw/nf-vfw-mciwnduseframes)
+-   [**MCIWndUseTime**](/windows/desktop/api/Vfw/nf-vfw-mciwndusetime)
+-   [**MCIWndValidateMedia**](/windows/desktop/api/Vfw/nf-vfw-mciwndvalidatemedia)
 
-## <a name="status-updates"></a>Status Aktualisierungen
+## <a name="status-updates"></a>Statusupdates
 
--   [**Mciwndgetactivetimer**](/windows/desktop/api/Vfw/nf-vfw-mciwndgetactivetimer)
--   [**Mciwndgetinactivetimer**](/windows/desktop/api/Vfw/nf-vfw-mciwndgetinactivetimer)
--   [**Mciwndabtactivetimer**](/windows/desktop/api/Vfw/nf-vfw-mciwndsetactivetimer)
--   [**Mciwndstitinactivetimer**](/windows/desktop/api/Vfw/nf-vfw-mciwndsetinactivetimer)
--   [**Mciwndsettimers**](/windows/desktop/api/Vfw/nf-vfw-mciwndsettimers)
+-   [**MCIWndGetActiveTimer**](/windows/desktop/api/Vfw/nf-vfw-mciwndgetactivetimer)
+-   [**MCIWndGetInactiveTimer**](/windows/desktop/api/Vfw/nf-vfw-mciwndgetinactivetimer)
+-   [**MCIWndSetActiveTimer**](/windows/desktop/api/Vfw/nf-vfw-mciwndsetactivetimer)
+-   [**MCIWndSetInactiveTimer**](/windows/desktop/api/Vfw/nf-vfw-mciwndsetinactivetimer)
+-   [**MCIWndSetTimers**](/windows/desktop/api/Vfw/nf-vfw-mciwndsettimers)
 
 ## <a name="device-capabilities"></a>Gerätefunktionen
 
--   [**Mciwndcanconfig**](/windows/desktop/api/Vfw/nf-vfw-mciwndcanconfig)
--   [**Mciwndcaneject**](/windows/desktop/api/Vfw/nf-vfw-mciwndcaneject)
--   [**Mciwndcanplay**](/windows/desktop/api/Vfw/nf-vfw-mciwndcanplay)
--   [**Mciwndcanrecord**](/windows/desktop/api/Vfw/nf-vfw-mciwndcanrecord)
--   [**Mciwndcansave**](/windows/desktop/api/Vfw/nf-vfw-mciwndcansave)
--   [**Mciwndcanwindow**](/windows/desktop/api/Vfw/nf-vfw-mciwndcanwindow)
+-   [**MCIWndCanConfig**](/windows/desktop/api/Vfw/nf-vfw-mciwndcanconfig)
+-   [**MCIWndCanEject**](/windows/desktop/api/Vfw/nf-vfw-mciwndcaneject)
+-   [**MCIWndCanPlay**](/windows/desktop/api/Vfw/nf-vfw-mciwndcanplay)
+-   [**MCIWndCanRecord**](/windows/desktop/api/Vfw/nf-vfw-mciwndcanrecord)
+-   [**MCIWndCanSave**](/windows/desktop/api/Vfw/nf-vfw-mciwndcansave)
+-   [**MCIWndCanWindow**](/windows/desktop/api/Vfw/nf-vfw-mciwndcanwindow)
 
-## <a name="mci-device-settings"></a>MCI-Geräteeinstellungen
+## <a name="mci-device-settings"></a>MCI-Einstellungen
 
--   [**Mciwndgetalias**](/windows/desktop/api/Vfw/nf-vfw-mciwndgetalias)
--   [**Mciwndgetdevice**](/windows/desktop/api/Vfw/nf-vfw-mciwndgetdevice)
--   [**Mciwndgetde viceid**](/windows/desktop/api/Vfw/nf-vfw-mciwndgetdeviceid)
--   [**Mciwndgetfilename**](/windows/desktop/api/Vfw/nf-vfw-mciwndgetfilename)
--   [**Mciwndgetmode**](/windows/desktop/api/Vfw/nf-vfw-mciwndgetmode)
+-   [**MCIWndGetAlias**](/windows/desktop/api/Vfw/nf-vfw-mciwndgetalias)
+-   [**MCIWndGetDevice**](/windows/desktop/api/Vfw/nf-vfw-mciwndgetdevice)
+-   [**MCIWndGetDeviceID**](/windows/desktop/api/Vfw/nf-vfw-mciwndgetdeviceid)
+-   [**MCIWndGetFileName**](/windows/desktop/api/Vfw/nf-vfw-mciwndgetfilename)
+-   [**MCIWndGetMode**](/windows/desktop/api/Vfw/nf-vfw-mciwndgetmode)
 
-## <a name="mci-command-string-interface"></a>MCI-Command-String-Schnittstelle
+## <a name="mci-command-string-interface"></a>MCICommand-String Schnittstelle
 
--   [**Mciwndreturnstring**](/windows/desktop/api/Vfw/nf-vfw-mciwndreturnstring)
--   [**Mciwndsendstring**](/windows/desktop/api/Vfw/nf-vfw-mciwndsendstring)
+-   [**MCIWndReturnString**](/windows/desktop/api/Vfw/nf-vfw-mciwndreturnstring)
+-   [**MCIWndSendString**](/windows/desktop/api/Vfw/nf-vfw-mciwndsendstring)
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
 <dl> <dt>
 
-[Mciwnd-Fenster Klasse](mciwnd-window-class.md)
+[MCIWnd-Fensterklasse](mciwnd-window-class.md)
 </dt> </dl>
 
- 
+ 
 
- 
+ 
 
 
 

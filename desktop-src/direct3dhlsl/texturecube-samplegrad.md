@@ -1,9 +1,9 @@
 ---
-title: 'Texturecube:: texturecube samplegrad-Methoden'
-description: 'Verwendet einen Farbverlauf, um die Art und Weise zu beeinflussen, in der der Beispiel Speicherort berechnet wird | Texturecube:: texturecube samplegrad-Methoden'
+title: TextureCube::TextureCube SampleGrad-Methoden
+description: Probieren Sie eine Textur mithilfe eines Farbverlaufs aus, um die Art und Weise zu beeinflussen, wie die Stichprobenposition berechnet wird. | TextureCube::TextureCube SampleGrad-Methoden
 ms.assetid: 710A3049-53EF-4166-ABE3-CFA1DA90FB71
 keywords:
-- Samplegrad-Methoden HLSL
+- SampleGrad-Methoden HLSL
 topic_type:
 - apiref
 api_type:
@@ -12,16 +12,16 @@ ms.topic: reference
 ms.date: 05/31/2018
 api_name: ''
 api_location: ''
-ms.openlocfilehash: 941fd0b4f0d69deb8dcdea95853ab5d81084af0e
-ms.sourcegitcommit: 92e74c99f8f4d097676959d0c317f533c2400a80
+ms.openlocfilehash: fab8b2c5c247e8b37134d0cb99280ca7f974bb32cf32fea8d0af0969e632b29d
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/09/2021
-ms.locfileid: "104982077"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118505458"
 ---
-# <a name="texturecubesamplegrad-methods"></a>Texturecube:: samplegrad-Methoden
+# <a name="texturecubesamplegrad-methods"></a>TextureCube::SampleGrad-Methoden
 
-Verwendet einen Farbverlauf, um die Art und Weise zu beeinflussen, in der der Beispiel Speicherort berechnet wird
+Probieren Sie eine Textur mithilfe eines Farbverlaufs aus, um die Art und Weise zu beeinflussen, wie die Stichprobenposition berechnet wird.
 
 ### <a name="overload-list"></a>Überladeliste
 
@@ -29,9 +29,9 @@ Verwendet einen Farbverlauf, um die Art und Weise zu beeinflussen, in der der Be
 
 | Methode                                                                                                 | BESCHREIBUNG                                                                                                                                                                                                        |
 |:-------------------------------------------------------------------------------------------------------|:-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| [**Samplegrad (S, float, float, float)**](dx-graphics-hlsl-to-samplegrad.md)                              | Abtast eine Textur und verwendet einen Farbverlauf, um die Art und Weise zu beeinflussen, in der die Stichproben<br/>                                                                                                             |
-| [**Samplegrad (S, float, float, float, float)**](tcube-samplegrad-s-float-float-float-float-.md)           | Verwendet einen Farbverlauf, um die Art und Weise zu beeinflussen, wie der Beispiel Speicherort berechnet wird, mit einem optionalen Wert, mit dem Samplingrate-Werte (LOD-Werte) fixiert werden.<br/>                                     |
-| [**Samplegrad (S, float, float, float, float, uint)**](tcube-samplegrad-s-float-float-float-float-uint-.md) | Verwendet einen Farbverlauf, um die Art und Weise zu beeinflussen, wie der Beispiel Speicherort berechnet wird, mit einem optionalen Wert, mit dem Samplingrate-Werte (LOD-Werte) fixiert werden. Gibt den Status des Vorgangs zurück.<br/> |
+| [**SampleGrad(S,float,float,float)**](dx-graphics-hlsl-to-samplegrad.md)                              | Stichproben einer Textur mithilfe eines Farbverlaufs, um die Art und Weise zu beeinflussen, wie die Stichprobenposition berechnet wird.<br/>                                                                                                             |
+| [**SampleGrad(S,float,float,float,float)**](tcube-samplegrad-s-float-float-float-float-.md)           | Stichproben einer Textur, wobei ein Farbverlauf verwendet wird, um die Berechnung der Stichprobenposition zu beeinflussen, mit einem optionalen Wert zum Zusammenbinden von LOD-Werten (Sample Level of Detail).<br/>                                     |
+| [**SampleGrad(S,float,float,float,float,uint)**](tcube-samplegrad-s-float-float-float-float-uint-.md) | Stichproben einer Textur, wobei ein Farbverlauf verwendet wird, um die Berechnung der Stichprobenposition zu beeinflussen, mit einem optionalen Wert zum Zusammenbinden von LOD-Werten (Sample Level of Detail). Gibt den Status des Vorgangs zurück.<br/> |
 
 
 
@@ -42,7 +42,7 @@ Verwendet einen Farbverlauf, um die Art und Weise zu beeinflussen, in der der Be
 [**TextureCube**](texturecube.md)
 </dt> <dt>
 
-[Texture-Objekt](dx-graphics-hlsl-to-type.md)
+[Texturobjekt](dx-graphics-hlsl-to-type.md)
 </dt> </dl>
 
  

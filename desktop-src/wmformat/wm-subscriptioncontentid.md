@@ -1,9 +1,9 @@
 ---
-title: WM/Abonnement-ID
-description: Das WM/abonnementcontentid-Attribut enthält den Abonnement Inhalts Bezeichner.
+title: WM/SubscriptionContentID
+description: Das WM/SubscriptionContentID-Attribut enthält den Abonnementinhaltsbezeichner.
 ms.assetid: c287c324-aa48-48ee-8699-d30e5b30117b
 keywords:
-- WM/abonnemencontentid Windows Media-Format
+- WM/SubscriptionContentID windows Media Format
 topic_type:
 - apiref
 api_name:
@@ -12,35 +12,35 @@ api_type:
 - NA
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 2013ddfa4fd6de7737dd317ee5fcaf2725961bfd
-ms.sourcegitcommit: 57758ecb246c84d65e6e0e4bd5570d9176fa39cd
+ms.openlocfilehash: 67cf61973cbf754dfdabee5d88466bc0fe4e3c4f5fb6e3c3856fa476531e3b1c
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "104100898"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118195603"
 ---
-# <a name="wmsubscriptioncontentid"></a>WM/Abonnement-ID
+# <a name="wmsubscriptioncontentid"></a>WM/SubscriptionContentID
 
-Das **WM/abonnementcontentid-** Attribut enthält den Abonnement Inhalts Bezeichner.
+Das **WM/SubscriptionContentID-Attribut** enthält den Abonnementinhaltsbezeichner.
 
 ## <a name="global-constant"></a>Globale Konstante
 
-g \_ wszwmabonnemencontentid
+g \_ wszWMSubscriptionContentID
 
 ## <a name="data-type"></a>Datentyp
 
-**WMT \_ - \_ Typzeichenfolge**
+**\_WMT-TYPZEICHENFOLGE \_**
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
 [**Attributliste**](attribute-list.md)
 </dt> </dl>
 
- 
+ 
 
- 
+ 
 
 
 

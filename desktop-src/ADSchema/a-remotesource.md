@@ -1,11 +1,11 @@
 ---
 title: Remote-Source-Attribut
-description: Rückwärts Zeiger auf fremde Objekte.
+description: Rückwärtszeiger auf Fremdobjekte.
 ms.assetid: 99d6d80f-b11a-48f2-93c9-866a99105488
 ms.tgt_platform: multiple
 keywords:
-- AD-Schema für Remote-Source-Attribut
-- AD-Schema des remotesource-Attributs
+- Remote-Source AD-Schema
+- remoteSource-Attribut AD-Schema
 topic_type:
 - apiref
 api_name:
@@ -14,28 +14,28 @@ api_type:
 - Schema
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 147cfb24c72c4e0250d03def69d5cb5408778780
-ms.sourcegitcommit: b77ace27b0432e7cd3863191b11926be032fbe2f
+ms.openlocfilehash: 6ce5b833f409822934125eced7622e8aeeb38f8f9876cd446aa16ec5f9961747
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "103859579"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118423821"
 ---
 # <a name="remote-source-attribute"></a>Remote-Source-Attribut
 
-Rückwärts Zeiger auf fremde Objekte.
+Rückwärtszeiger auf Fremdobjekte.
 
 
 
 | Eingabe | Wert |
 |-------------------|---------------------------------------------|
 | CN                | Remote-Source                               |
-| LDAP-Display-Name | remotesource                                |
+| Ldap-Anzeigename | remoteSource                                |
 | Size              | \-                                          |
-| Berechtigung aktualisieren  | \-                                          |
-| Aktualisierungshäufigkeit  | \-                                          |
+| Aktualisieren von Berechtigungen  | \-                                          |
+| Updatehäufigkeit  | \-                                          |
 | Attribute-Id      | 1.2.840.113556.1.4.107                      |
-| System-ID-GUID    | bf967a14-0de6-11d0-a285-00aa003049e2        |
+| System-Id-Guid    | bf967a14-0de6-11d0-a285-00aa003049e2        |
 | Syntax            | [**String(Unicode)**](s-string-unicode.md) |
 
 
@@ -43,7 +43,7 @@ Rückwärts Zeiger auf fremde Objekte.
 ## <a name="implementations"></a>Implementierungen
 
 -   [**Windows 2000 Server**](#windows-2000-server)
--   [**Windows Server 2003**](#windows-server-2003)
+-   [**Windows Server 2003**](#windows-server-2003)
 -   [**Windows Server 2003 R2**](#windows-server-2003-r2)
 -   [**Windows Server 2008**](#windows-server-2008)
 -   [**Windows Server 2008 R2**](#windows-server-2008-r2)
@@ -58,19 +58,19 @@ Rückwärts Zeiger auf fremde Objekte.
 | Link-ID                | \-                                                                |
 | MAPI-Id                | \-                                                                |
 | System-Only            | False                                                             |
-| Ist-einwertig       | Richtig                                                              |
+| Is-Single-Valued       | True                                                              |
 | Ist indiziert             | False                                                             |
 | Im globalen Katalog      | False                                                             |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                                      |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                                      |
 | Range-Lower            | 1                                                                 |
 | Range-Upper            | 1024                                                              |
 | Search-Flags           | 0x00000000                                                        |
 | System-Flags           | 0x00000010                                                        |
-| In verwendete Klassen        | [**Remote-e-Mail-Empfänger**](c-remotemailrecipient.md)<br/> |
+| In verwendete Klassen        | [**Remote-Mail-Recipient**](c-remotemailrecipient.md)<br/> |
 
 
 
-## <a name="windows-server-2003"></a>Windows Server 2003
+## <a name="windows-server-2003"></a>Windows Server 2003
 
 
 
@@ -79,15 +79,15 @@ Rückwärts Zeiger auf fremde Objekte.
 | Link-ID                | \-                                                                |
 | MAPI-Id                | \-                                                                |
 | System-Only            | False                                                             |
-| Ist-einwertig       | Richtig                                                              |
+| Is-Single-Valued       | True                                                              |
 | Ist indiziert             | False                                                             |
 | Im globalen Katalog      | False                                                             |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                                      |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                                      |
 | Range-Lower            | 1                                                                 |
 | Range-Upper            | 1024                                                              |
 | Search-Flags           | 0x00000000                                                        |
 | System-Flags           | 0x00000010                                                        |
-| In verwendete Klassen        | [**Remote-e-Mail-Empfänger**](c-remotemailrecipient.md)<br/> |
+| In verwendete Klassen        | [**Remote-Mail-Recipient**](c-remotemailrecipient.md)<br/> |
 
 
 
@@ -100,15 +100,15 @@ Rückwärts Zeiger auf fremde Objekte.
 | Link-ID                | \-                                                                |
 | MAPI-Id                | \-                                                                |
 | System-Only            | False                                                             |
-| Ist-einwertig       | Richtig                                                              |
+| Is-Single-Valued       | True                                                              |
 | Ist indiziert             | False                                                             |
 | Im globalen Katalog      | False                                                             |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                                      |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                                      |
 | Range-Lower            | 1                                                                 |
 | Range-Upper            | 1024                                                              |
 | Search-Flags           | 0x00000000                                                        |
 | System-Flags           | 0x00000010                                                        |
-| In verwendete Klassen        | [**Remote-e-Mail-Empfänger**](c-remotemailrecipient.md)<br/> |
+| In verwendete Klassen        | [**Remote-Mail-Recipient**](c-remotemailrecipient.md)<br/> |
 
 
 
@@ -121,15 +121,15 @@ Rückwärts Zeiger auf fremde Objekte.
 | Link-ID                | \-                                                                |
 | MAPI-Id                | \-                                                                |
 | System-Only            | False                                                             |
-| Ist-einwertig       | Richtig                                                              |
+| Is-Single-Valued       | True                                                              |
 | Ist indiziert             | False                                                             |
 | Im globalen Katalog      | False                                                             |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                                      |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                                      |
 | Range-Lower            | 1                                                                 |
 | Range-Upper            | 1024                                                              |
 | Search-Flags           | 0x00000000                                                        |
 | System-Flags           | 0x00000010                                                        |
-| In verwendete Klassen        | [**Remote-e-Mail-Empfänger**](c-remotemailrecipient.md)<br/> |
+| In verwendete Klassen        | [**Remote-Mail-Recipient**](c-remotemailrecipient.md)<br/> |
 
 
 
@@ -142,15 +142,15 @@ Rückwärts Zeiger auf fremde Objekte.
 | Link-ID                | \-                                                                |
 | MAPI-Id                | \-                                                                |
 | System-Only            | False                                                             |
-| Ist-einwertig       | Richtig                                                              |
+| Is-Single-Valued       | True                                                              |
 | Ist indiziert             | False                                                             |
 | Im globalen Katalog      | False                                                             |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                                      |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                                      |
 | Range-Lower            | 1                                                                 |
 | Range-Upper            | 1024                                                              |
 | Search-Flags           | 0x00000000                                                        |
 | System-Flags           | 0x00000010                                                        |
-| In verwendete Klassen        | [**Remote-e-Mail-Empfänger**](c-remotemailrecipient.md)<br/> |
+| In verwendete Klassen        | [**Remote-Mail-Recipient**](c-remotemailrecipient.md)<br/> |
 
 
 
@@ -163,15 +163,15 @@ Rückwärts Zeiger auf fremde Objekte.
 | Link-ID                | \-                                                                |
 | MAPI-Id                | \-                                                                |
 | System-Only            | False                                                             |
-| Ist-einwertig       | Richtig                                                              |
+| Is-Single-Valued       | True                                                              |
 | Ist indiziert             | False                                                             |
 | Im globalen Katalog      | False                                                             |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                                      |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                                      |
 | Range-Lower            | 1                                                                 |
 | Range-Upper            | 1024                                                              |
 | Search-Flags           | 0x00000000                                                        |
 | System-Flags           | 0x00000010                                                        |
-| In verwendete Klassen        | [**Remote-e-Mail-Empfänger**](c-remotemailrecipient.md)<br/> |
+| In verwendete Klassen        | [**Remote-Mail-Recipient**](c-remotemailrecipient.md)<br/> |
 
 
 

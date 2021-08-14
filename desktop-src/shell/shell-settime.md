@@ -1,7 +1,7 @@
 ---
-description: Zeigt das Dialogfeld Datums-und Uhrzeit Eigenschaften an. Diese Methode hat denselben Effekt wie das Klicken mit der rechten Maustaste auf die Uhr im Statusbereich der Taskleiste und das Auswählen von Datum/Uhrzeit anpassen.
+description: Zeigt das Dialogfeld Datums- und Uhrzeiteigenschaften an. Diese Methode hat die gleiche Auswirkung wie das Klicken mit der rechten Maustaste auf die Uhr im Taskleistenstatusbereich und das Auswählen von Datum/Uhrzeit anpassen.
 ms.assetid: 01694607-3fc2-4d0d-ba48-5bdbb40da000
-title: Shell. setTime-Methode (Shldisp. h)
+title: Shell.SetTime-Methode (Shldisp.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,16 +13,16 @@ api_type:
 - COM
 api_location:
 - Shell32.dll
-ms.openlocfilehash: b610effe87bd9e4ab33a6e8396e90f79e7bbbe9f
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: cff10e89cfdc8ba038be2b619264c02b1c7b168d4ecb35cd625683f648121be6
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104979761"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118452840"
 ---
-# <a name="shellsettime-method"></a>Shell. setTime-Methode
+# <a name="shellsettime-method"></a>Shell.SetTime-Methode
 
-Zeigt das Dialogfeld **Datums-und Uhrzeit Eigenschaften** an. Diese Methode hat denselben Effekt wie das Klicken mit der rechten Maustaste auf die Uhr im Statusbereich der Taskleiste und das Auswählen von **Datum/Uhrzeit anpassen**.
+Zeigt das Dialogfeld **Datums- und Uhrzeiteigenschaften** an. Diese Methode hat die gleiche Auswirkung wie das Klicken mit der rechten Maustaste auf die Uhr im Taskleistenstatusbereich und das Auswählen **von Datum/Uhrzeit anpassen.**
 
 ## <a name="syntax"></a>Syntax
 
@@ -47,9 +47,9 @@ Diese Methode hat keine Parameter.
 
 ## <a name="examples"></a>Beispiele
 
-Im folgenden Beispiel wird die Verwendung von **setTime** veranschaulicht. Die richtige Verwendung wird für JScript, VBScript und Visual Basic angezeigt.
+Im folgenden Beispiel **wird SetTime** verwendet. Die richtige Verwendung wird für JScript, VBScript und Visual Basic angezeigt.
 
-JScript
+JScript:
 
 
 ```JScript
@@ -65,7 +65,7 @@ JScript
 
 
 
-VBScript
+Vbscript:
 
 
 ```VB
@@ -99,17 +99,17 @@ End Sub
 
 
 
-## <a name="requirements"></a>Requirements (Anforderungen)
+## <a name="requirements"></a>Anforderungen
 
 
 
 | Anforderung | Wert |
 |-------------------------------------|----------------------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional, Windows XP \[ Desktop-Apps\]<br/>                                         |
+| Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional, nur Windows \[ XP-Desktop-Apps\]<br/>                                         |
 | Unterstützte Mindestversion (Server)<br/> | Windows 2000 Server \[nur Desktop-Apps\]<br/>                                                           |
-| Header<br/>                   | <dl> <dt>Shldisp. h</dt> </dl>                           |
-| IDL<br/>                      | <dl> <dt>Shldisp. idl</dt> </dl>                         |
-| DLL<br/>                      | <dl> <dt>Shell32.dll (Version 4,71 oder höher)</dt> </dl> |
+| Header<br/>                   | <dl> <dt>Shldisp.h</dt> </dl>                           |
+| Idl<br/>                      | <dl> <dt>Shldisp.idl</dt> </dl>                         |
+| DLL<br/>                      | <dl> <dt>Shell32.dll (Version 4.71 oder höher)</dt> </dl> |
 
 
 

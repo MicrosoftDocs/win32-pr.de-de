@@ -1,75 +1,75 @@
 ---
-title: Player-Element
-description: Player-Element
+title: PLAYER-Element
+description: PLAYER-Element
 ms.assetid: 009090b3-0055-4700-9078-0749da239674
 keywords:
-- Windows Media Player Skins, Player-Element
-- Skins, Player-Element
-- Player-Element
-- Verweis für Skins, Player-Element
-- Elemente, Player
+- Windows Media Player Skins, PLAYER-Element
+- skins,PLAYER-Element
+- PLAYER-Element
+- Referenz für Skins, PLAYER-Element
+- elements,PLAYER
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: a50eb4383eab279c28b75467a9ed803501e7720b
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: e8bef2e7758a0146ae6197d17dc3790011a758f9d2fa4e3d54af9461a8b870c9
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "104100758"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118338116"
 ---
-# <a name="player-element"></a>Player-Element
+# <a name="player-element"></a>PLAYER-Element
 
-Das **Player** -Element ermöglicht Ihnen das Definieren von Ereignis Handlern und das Angeben der **URL** -Eigenschaft des **Player** -Objekts zur Entwurfszeit in einer Skin-Definitionsdatei. Innerhalb von Skriptcode erfolgt der Zugriff auf das **Player** -Objekt über das globale Attribut des **Players** anstelle eines Namens, der durch ein **ID** -Attribut angegeben wird. Dies wird vom **Player** -Element nicht unterstützt.
+Mit dem **PLAYER-Element** können Sie Ereignishandler definieren und die **URL-Eigenschaft** des **Player-Objekts** zur Entwurfszeit innerhalb einer Skindefinitionsdatei angeben. Innerhalb des Skriptcodes erfolgt der Zugriff auf das **Player-Objekt** über das globale **Playerattribut** und nicht über einen Namen, der durch ein **ID-Attribut** angegeben wird, was vom **PLAYER-Element** nicht unterstützt wird.
 
-Das **Player** -Element unterstützt das folgende Attribut.
+Das **PLAYER-Element** unterstützt das folgende Attribut.
 
 
 
-| Attribut             | BESCHREIBUNG                                          |
+| attribute             | BESCHREIBUNG                                          |
 |-----------------------|------------------------------------------------------|
-| [URL](player-url.md) | Gibt den Namen der Datei an, die wiedergegeben werden soll, oder ruft ihn ab. |
+| [URL](player-url.md) | Gibt den Namen der abzuspielenden Datei an oder ruft diesen ab. |
 
 
 
- 
+ 
 
-Das **Player** -Element kann Ereignishandler für die folgenden Ereignisse implementieren, die aus dem **Player** -Objekt ausgelöst werden.
+Das **PLAYER-Element** kann Ereignishandler für die folgenden Ereignisse implementieren, die vom **Player-Objekt** ausgelöst werden.
 
 
 
 | Ereignis                                                                                            | BESCHREIBUNG                                                                      |
 |--------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------|
-| [Audiolanguagechange](player-player-audiolanguagechange.md)                                     | Tritt auf, wenn sich die aktuelle Audiosprache ändert.                                  |
-| [Pufferung](player-player-buffering.md)                                                         | Tritt auf, wenn Windows Media Player Pufferung startet oder beendet.                       |
-| [Cdrommediachange](player-player-cdrommediachange.md)                                           | Tritt auf, wenn das CD-Medium geändert wird.                                                |
-| [Ereignis Wechsel](player-player-currentitemchange.md)                                         | Tritt ein, wenn das aktuelle Element geändert wird.                                            |
-| [Currentmediaitemavailable](player-player-currentmediaitemavailable.md)                         | Tritt ein, wenn das aktuelle Medien Element verfügbar wird.                            |
-| [Currentplaylistchange](player-player-currentplaylistchange.md)                                 | Tritt ein, wenn die aktuelle Wiedergabeliste geändert wird.                                        |
-| [Currentplaylistitemavailable](player-player-currentplaylistitemavailable.md)                   | Tritt ein, wenn das aktuelle Wiedergabelisten Element verfügbar wird.                         |
-| [Domainchange](player-player-domainchange.md)                                                   | Tritt auf, wenn die DVD-Domäne geändert wird.                                              |
-| [Fehler](player-player-error.md)                                                                 | Tritt auf, wenn das Windows Media Player-Steuerelement einen Fehlerzustand aufweist.             |
-| [Markerhit](player-player-markerhit.md)                                                         | Tritt auf, wenn ein Windows-Media Player einen Marker im Clip trifft.                |
-| [Mediachange](player-player-mediachange.md)                                                     | Tritt auf, wenn ein Medien Element geändert wird.                                                |
-| [Mediacollectionattributestringadded](player-player-mediacollectionattributestringadded.md)     | Tritt auf, wenn der Bibliothek ein Attribut Wert hinzugefügt wird.                          |
-| [Mediacollectionattributestringchanged](player-player-mediacollectionattributestringchanged.md) | Tritt auf, wenn ein Attribut Wert in der Bibliothek geändert wird.                        |
-| [Mediacollectionattributestraningrebewegt](player-player-mediacollectionattributestringremoved.md) | Tritt auf, wenn ein Attribut Wert aus der Bibliothek entfernt wird.                      |
-| [Mediacollectionchange](player-player-mediacollectionchange.md)                                 | Tritt auf, wenn das **mediacollection** -Objekt geändert wird.                              |
-| [MediaError](player-player-mediaerror.md)                                                       | Tritt auf, wenn das **Medien** Objekt einen Fehlerzustand aufweist.                         |
-| [Modeänderung](player-player-modechange.md)                                                       | Tritt beim Wechseln zwischen dem shuffle-und dem Normalmodus auf.                           |
-| [Openplaylistswitch](player-player-openplaylistswitch.md)                                       | Tritt auf, wenn die Wiedergabe eines Titels auf einer DVD beginnt.                                     |
-| [OpenStateChange](player-player-openstatechange.md)                                             | Tritt auf, wenn der *Player*. **openstate** -Änderungen.                                      |
-| [Playlistchange](player-player-playlistchange.md)                                               | Tritt auf, wenn eine Wiedergabeliste geändert wird.                                                  |
-| [Playlistcollectionchange](player-player-playlistcollectionchange.md)                           | Tritt auf, wenn sich etwas in der Wiedergabelisten Auflistung ändert.                        |
-| [Playlistcollectionplaylistadded](player-player-playlistcollectionplaylistadded.md)             | Tritt auf, wenn der Wiedergabelisten Auflistung eine Wiedergabeliste hinzugefügt wird.                      |
-| [Playlistcollectionplaylistreverschohe](player-player-playlistcollectionplaylistremoved.md)         | Tritt auf, wenn eine Wiedergabeliste aus der Wiedergabelisten Auflistung entfernt wird.                  |
-| [PlayStateChange](player-player-playstatechange.md)                                             | Tritt auf, wenn der *Player*. **playstate** ändert sich.                                      |
-| [Positionsänderung](player-player-positionchange.md)                                               | Tritt auf, wenn der *Player*. -Steuer *Elemente*. **CurrentPosition** ändert sich.                     |
-| [ScriptCommand](player-player-scriptcommand.md)                                                 | Tritt auf, wenn Windows Media Player einen in eine Datei eingebetteten Skript Befehl trifft. |
-| [StatusChange](player-player-statuschange.md)                                                   | Tritt ein, wenn der Wert der **Status** Eigenschaft geändert wird.                               |
+| [AudioLanguageChange](player-player-audiolanguagechange.md)                                     | Tritt ein, wenn sich die aktuelle Audiosprache ändert.                                  |
+| [Pufferung](player-player-buffering.md)                                                         | Tritt ein, wenn Windows Media Player die Pufferung beginnt oder beendet.                       |
+| [CholeMediaChange](player-player-cdrommediachange.md)                                           | Tritt ein, wenn sich das CD-Medium ändert.                                                |
+| [CurrentItemChange](player-player-currentitemchange.md)                                         | Tritt ein, wenn sich das aktuelle Element ändert.                                            |
+| [CurrentMediaItemAvailable](player-player-currentmediaitemavailable.md)                         | Tritt ein, wenn das aktuelle Medienelement verfügbar wird.                            |
+| [CurrentPlaylistChange](player-player-currentplaylistchange.md)                                 | Tritt ein, wenn sich die aktuelle Wiedergabeliste ändert.                                        |
+| [CurrentPlaylistItemAvailable](player-player-currentplaylistitemavailable.md)                   | Tritt ein, wenn das aktuelle Wiedergabelistenelement verfügbar wird.                         |
+| [DomainChange](player-player-domainchange.md)                                                   | Tritt ein, wenn sich die DVD-Domäne ändert.                                              |
+| [Fehler](player-player-error.md)                                                                 | Tritt ein, wenn das Windows Media Player-Steuerelement eine Fehlerbedingung aufweist.             |
+| [MarkerHit](player-player-markerhit.md)                                                         | Tritt ein, wenn Windows Media Player auf einen Marker im Clip trifft.                |
+| [MediaChange](player-player-mediachange.md)                                                     | Tritt ein, wenn sich ein Medienelement ändert.                                                |
+| [MediaCollectionAttributeStringAdded](player-player-mediacollectionattributestringadded.md)     | Tritt ein, wenn der Bibliothek ein Attributwert hinzugefügt wird.                          |
+| [MediaCollectionAttributeStringChanged](player-player-mediacollectionattributestringchanged.md) | Tritt ein, wenn ein Attributwert in der Bibliothek geändert wird.                        |
+| [MediaCollectionAttributeStringRemoved](player-player-mediacollectionattributestringremoved.md) | Tritt ein, wenn ein Attributwert aus der Bibliothek entfernt wird.                      |
+| [MediaCollectionChange](player-player-mediacollectionchange.md)                                 | Tritt ein, wenn sich das **MediaCollection-Objekt** ändert.                              |
+| [MediaError](player-player-mediaerror.md)                                                       | Tritt ein, wenn das **Medienobjekt** eine Fehlerbedingung aufweist.                         |
+| [ModeChange](player-player-modechange.md)                                                       | Tritt auf, wenn zwischen shuffle und normalem Modus gewechselt wird.                           |
+| [OpenPlaylistSwitch](player-player-openplaylistswitch.md)                                       | Tritt ein, wenn die Wiedergabe eines Titels auf einer DVD beginnt.                                     |
+| [OpenStateChange](player-player-openstatechange.md)                                             | Tritt auf, wenn *player*. **openState-Änderungen.**                                      |
+| [PlaylistChange](player-player-playlistchange.md)                                               | Tritt ein, wenn sich eine Wiedergabeliste ändert.                                                  |
+| [PlaylistCollectionChange](player-player-playlistcollectionchange.md)                           | Tritt ein, wenn sich etwas in der Wiedergabelistenauflistung ändert.                        |
+| [PlaylistCollectionPlaylistAdded](player-player-playlistcollectionplaylistadded.md)             | Tritt ein, wenn der Wiedergabelistensammlung eine Wiedergabeliste hinzugefügt wird.                      |
+| [PlaylistCollectionPlaylistRemoved](player-player-playlistcollectionplaylistremoved.md)         | Tritt ein, wenn eine Wiedergabeliste aus der Wiedergabelistenauflistung entfernt wird.                  |
+| [PlayStateChange](player-player-playstatechange.md)                                             | Tritt auf, wenn *player*. **playState-Änderungen.**                                      |
+| [PositionChange](player-player-positionchange.md)                                               | Tritt auf, wenn *player*. *steuert*. **currentPosition-Änderungen.**                     |
+| [ScriptCommand](player-player-scriptcommand.md)                                                 | Tritt ein, wenn Windows Media Player auf einen skriptbasierten Befehl trifft, der in eine Datei eingebettet ist. |
+| [StatusChange](player-player-statuschange.md)                                                   | Tritt ein, wenn sich der Wert der **Statuseigenschaft** ändert.                               |
 
 
 
- 
+ 
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
@@ -78,12 +78,12 @@ Das **Player** -Element kann Ereignishandler für die folgenden Ereignisse imple
 [**Player-Objekt**](player-object.md)
 </dt> <dt>
 
-[**Referenz zur Skin-Programmierung**](skin-programming-reference.md)
+[**Referenz zur Skinprogrammierung**](skin-programming-reference.md)
 </dt> </dl>
 
- 
+ 
 
- 
+ 
 
 
 

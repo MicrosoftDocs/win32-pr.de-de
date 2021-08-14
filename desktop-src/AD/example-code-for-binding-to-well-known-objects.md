@@ -1,22 +1,22 @@
 ---
-title: Beispiel Code für die Bindung an bekannte Objekte
-description: Dieses Thema enthält ein Codebeispiel, das mithilfe der wkguid-Bindungs Zeichenfolge an ein bekanntes Objekt gebunden wird.
+title: Beispielcode für die Bindung an bekannte Objekte
+description: Dieses Thema enthält ein Codebeispiel, das mithilfe der WKGUID-Bindungszeichenfolge an ein bekanntes Objekt gebunden wird.
 ms.assetid: 59345173-5598-4b0a-976c-c5741b785ce1
 ms.tgt_platform: multiple
 keywords:
-- Active Directory Beispiele Active Directory, binden an bekannte Objekte
+- 'Active Directory-Beispiele: Active Directory, Bindung an bekannte Objekte'
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 8f60a1bbf457bab5b6a22a1b4b5470a4f4dbb4c0
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: fb113e13889dfebdd34adc553ea21693684d6848f9d25bc2bb4c436fe0b71b5e
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "104470909"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118191283"
 ---
-# <a name="example-code-for-binding-to-well-known-objects"></a>Beispiel Code für die Bindung an bekannte Objekte
+# <a name="example-code-for-binding-to-well-known-objects"></a>Beispielcode für die Bindung an bekannte Objekte
 
-Im folgenden C++-Codebeispiel wird gezeigt, wie mithilfe der wkguid-Bindungs Zeichenfolge eine Bindung an ein bekanntes Objekt hergestellt wird.
+Das folgende C++-Codebeispiel zeigt, wie sie mithilfe der WKGUID-Bindungszeichenfolge an ein bekanntes Objekt gebunden werden.
 
 
 ```C++
@@ -98,9 +98,9 @@ HRESULT BindToWellKnownObject(LPCWSTR pwszGUID, IADs **ppObject)
 
 
 
- 
+ 
 
- 
+ 
 
 
 

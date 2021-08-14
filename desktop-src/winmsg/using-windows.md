@@ -1,32 +1,32 @@
 ---
-description: In den Beispielen in diesem Abschnitt wird beschrieben, wie mit Windows verbundene Aufgaben ausgeführt werden.
+description: In den Beispielen in diesem Abschnitt wird beschrieben, wie Aufgaben im Zusammenhang mit der Verwendung von Fenstern ausgeführt werden.
 ms.assetid: 7695fb64-3918-4d9a-8cd8-01d20edd9c55
 title: Verwenden von Windows
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 54bebe537f82de65efddc086ee457e1abe47a617
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 75681987a4bc012618135f666b3ff973880b8129d2ad1ee896bcdbed266d179d
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "103867988"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118436966"
 ---
 # <a name="using-windows"></a>Verwenden von Windows
 
 In den Beispielen in diesem Abschnitt wird beschrieben, wie die folgenden Aufgaben ausgeführt werden:
 
 -   [Erstellen eines Hauptfensters](#creating-a-main-window)
--   [Erstellen, auflisten und Größenanpassung von untergeordneten Fenstern](#creating-enumerating-and-sizing-child-windows)
+-   [Erstellen, Aufzählen und Dimensionieren von untergeordneten Windows](#creating-enumerating-and-sizing-child-windows)
 -   [Zerstören eines Fensters](#destroying-a-window)
--   [Verwenden von geschichteten Fenstern](#using-layered-windows)
+-   [Verwenden von mehrstufigen Windows](#using-layered-windows)
 
 ## <a name="creating-a-main-window"></a>Erstellen eines Hauptfensters
 
-Das erste Fenster, das eine Anwendung erstellt, ist in der Regel das Hauptfenster. Sie erstellen das Hauptfenster mithilfe der Funktion "up- [**windowex**](/windows/win32/api/winuser/nf-winuser-createwindowexa) " und geben die Fenster Klasse, den Fensternamen, die Fenster Stile, die Größe, die Position, das Menü handle, das Instanzhandle und die Erstellungs Daten an. Ein Hauptfenster gehört zu einer von der Anwendung definierten Fenster Klasse, sodass Sie die Fenster Klasse registrieren und eine Fenster Prozedur für die Klasse bereitstellen müssen, bevor Sie das Hauptfenster erstellen.
+Das erste Fenster, das eine Anwendung erstellt, ist in der Regel das Hauptfenster. Sie erstellen das Hauptfenster mithilfe der [**CreateWindowEx-Funktion**](/windows/win32/api/winuser/nf-winuser-createwindowexa) und geben die Fensterklasse, den Fensternamen, die Fensterstile, die Größe, die Position, das Menühandle, das Instanzhandle und die Erstellungsdaten an. Ein Hauptfenster gehört zu einer von der Anwendung definierten Fensterklasse. Daher müssen Sie die Fensterklasse registrieren und eine Fensterprozedur für die Klasse bereitstellen, bevor Sie das Hauptfenster erstellen.
 
-Die meisten Anwendungen verwenden normalerweise den [**WS \_ overlappedwindow**](window-styles.md) -Stil, um das Hauptfenster zu erstellen. Dieser Stil gibt dem Fenster eine Titelleiste, ein Fenstermenü, einen Größen Anpassungsrahmen und Schaltflächen zum minimieren und maximieren. Die Funktion " [**kreatewindowex**](/windows/win32/api/winuser/nf-winuser-createwindowexa) " gibt ein Handle zurück, das das Fenster eindeutig identifiziert.
+Die meisten Anwendungen verwenden in der Regel den [**WS \_ OVERLAPPEDWINDOW-Stil,**](window-styles.md) um das Hauptfenster zu erstellen. Dieser Stil bietet dem Fenster eine Titelleiste, ein Fenstermenü, einen Größenrahmen sowie Schaltflächen zum Minimieren und Maximieren. Die [**CreateWindowEx-Funktion**](/windows/win32/api/winuser/nf-winuser-createwindowexa) gibt ein Handle zurück, das das Fenster eindeutig identifiziert.
 
-Im folgenden Beispiel wird ein Hauptfenster erstellt, das zu einer Anwendungs definierten Fenster Klasse gehört. Der Fenster Name, das **Hauptfenster**, wird in der Titelleiste des Fensters angezeigt. Durch die Kombination der [**WS- \_ VScroll**](window-styles.md) -und **WS \_ HScroll** -Stile mit dem **WS \_ overlappedwindow** -Stil erstellt die Anwendung ein Hauptfenster mit horizontalen und vertikalen Schiebe leisten zusätzlich zu den Komponenten, die vom **WS \_ overlappedwindow** -Stil bereitgestellt werden. Die vier Vorkommen der **CW \_ usedefault** -Konstante legen die anfängliche Größe und Position des Fensters auf die vom System definierten Standardwerte fest. Wenn Sie anstelle eines Menü Handles **null** angeben, wird im Fenster das Menü für die Fenster Klasse definiert.
+Im folgenden Beispiel wird ein Hauptfenster erstellt, das zu einer von der Anwendung definierten Fensterklasse gehört. Der Fenstername **Hauptfenster** wird in der Titelleiste des Fensters angezeigt. Durch kombinieren der [**WS \_ VSCROLL-**](window-styles.md) und **WS \_ HSCROLL-Stil** mit dem **WS \_ OVERLAPPEDWINDOW-Stil** erstellt die Anwendung ein Hauptfenster mit horizontalen und vertikalen Scrollleisten zusätzlich zu den Komponenten, die vom **WS \_ OVERLAPPEDWINDOW-Stil** bereitgestellt werden. Die vier Vorkommen der **CW \_ USEDEFAULT-Konstante** legen die Anfangsgröße und Position des Fensters auf die vom System definierten Standardwerte fest. Wenn **Sie NULL** anstelle eines Menühandle angeben, wird für das Fenster das Menü für die Fensterklasse definiert.
 
 
 ```
@@ -64,15 +64,15 @@ UpdateWindow(hwndMain);
 
 
 
-Beachten Sie, dass im vorherigen Beispiel die [**ShowWindow**](/windows/win32/api/winuser/nf-winuser-showwindow) -Funktion aufgerufen wird, nachdem das Hauptfenster erstellt wurde. Dies geschieht, da das System nach dem Erstellen nicht automatisch das Hauptfenster anzeigt. Durch die Übergabe des " **SW \_ showdefault** "-Flags an **ShowWindow** ermöglicht die Anwendung dem Programm, das die Anwendung gestartet hat, den anfänglichen Anzeige Zustand des Hauptfensters festzulegen. Die [**UpdateWindow**](/windows/win32/api/winuser/nf-winuser-updatewindow) -Funktion sendet das Fenster als erste WM-Zeichnungs Nachricht. [**\_**](../gdi/wm-paint.md)
+Beachten Sie, dass im vorherigen Beispiel die [**ShowWindow-Funktion**](/windows/win32/api/winuser/nf-winuser-showwindow) nach dem Erstellen des Hauptfensters aufruft. Dies geschieht, da das System das Hauptfenster nach der Erstellung nicht automatisch anzeigt. Durch Übergeben des **SW \_ SHOWDEFAULT-Flags** an **ShowWindow** ermöglicht die Anwendung dem Programm, das die Anwendung gestartet hat, den anfänglichen Showzustand des Hauptfensters festzulegen. Die [**UpdateWindow-Funktion**](/windows/win32/api/winuser/nf-winuser-updatewindow) sendet die erste [**WM \_ PAINT-Meldung**](../gdi/wm-paint.md) an das Fenster.
 
-## <a name="creating-enumerating-and-sizing-child-windows"></a>Erstellen, auflisten und Größenanpassung von untergeordneten Fenstern
+## <a name="creating-enumerating-and-sizing-child-windows"></a>Erstellen, Aufzählen und Dimensionieren von untergeordneten Windows
 
-Mithilfe von untergeordneten Fenstern können Sie den Client Bereich eines Fensters in andere Funktionsbereiche aufteilen. Das Erstellen eines untergeordneten Fensters ähnelt dem Erstellen eines Hauptfensters – Sie verwenden die Funktion "up- [**windowex**](/windows/win32/api/winuser/nf-winuser-createwindowexa) ". Wenn Sie ein Fenster einer Anwendungs definierten Fenster Klasse erstellen möchten, müssen Sie die Fenster Klasse registrieren und eine Fenster Prozedur bereitstellen, bevor Sie das untergeordnete Fenster erstellen. Sie müssen dem untergeordneten Fenster den untergeordneten [**WS \_**](window-styles.md) -Stil geben und ein übergeordnetes Fenster für das untergeordnete Fenster angeben, wenn Sie es erstellen.
+Sie können den Clientbereich eines Fensters mithilfe von untergeordneten Fenstern in verschiedene Funktionsbereiche unterteilen. Das Erstellen eines untergeordneten Fensters entspricht dem Erstellen eines Hauptfensters– Sie verwenden die [**CreateWindowEx-Funktion.**](/windows/win32/api/winuser/nf-winuser-createwindowexa) Um ein Fenster einer anwendungsdefinierte Fensterklasse zu erstellen, müssen Sie die Fensterklasse registrieren und vor dem Erstellen des untergeordneten Fensters eine Fensterprozedur bereitstellen. Sie müssen dem untergeordneten Fenster das [**WS \_ CHILD-Format**](window-styles.md) geben und beim Erstellen ein übergeordnetes Fenster für das untergeordnete Fenster angeben.
 
-Im folgenden Beispiel wird der Client Bereich des Hauptfensters einer Anwendung in drei Funktionsbereiche aufgeteilt, indem drei untergeordnete Fenster der gleichen Größe erstellt werden. Jedes untergeordnete Fenster hat dieselbe Höhe wie der Client Bereich des Hauptfensters, jede Breite ist jedoch ein Drittel. Im Hauptfenster werden die untergeordneten Fenster als Antwort auf die [**WM \_ Create**](wm-create.md) -Nachricht erstellt, die das Hauptfenster während des eigenen Fenster Erstellungs Prozesses empfängt. Da jedes untergeordnete Fenster die [**WS \_**](window-styles.md) -Rahmenart hat, weist jedes untergeordnete Fenster einen schmalen Linien Rahmen auf. Da der nicht **\_ sichtbare WS** -Stil nicht angegeben ist, wird jedes untergeordnete Fenster anfänglich ausgeblendet. Beachten Sie auch, dass jedes untergeordnete Fenster einem untergeordneten Fenster Bezeichner zugewiesen wird.
+Im folgenden Beispiel wird der Clientbereich des Hauptfensters einer Anwendung in drei Funktionsbereiche unterteilt, indem drei untergeordnete Fenster gleicher Größe erstellt werden. Jedes untergeordnete Fenster hat die gleiche Höhe wie der Clientbereich des Hauptfensters, aber jedes ist ein Drittel seiner Breite. Das Hauptfenster erstellt die untergeordneten Fenster als Reaktion auf die [**WM \_ CREATE-Meldung,**](wm-create.md) die das Hauptfenster während seines eigenen Fenstererstellungsprozesses empfängt. Da jedes untergeordnete Fenster den [**WS \_ BORDER-Stil**](window-styles.md) auf hat, verfügt jedes über einen schlanken Linienrahmen. Da der **WS \_ VISIBLE-Stil** nicht angegeben ist, wird jedes untergeordnete Fenster anfänglich ausgeblendet. Beachten Sie auch, dass jedem untergeordneten Fenster ein Bezeichner für untergeordnete Fenster zugewiesen wird.
 
-Im Hauptfenster werden die untergeordneten Fenster als Antwort auf die [**WM- \_ Größen**](wm-size.md) Nachricht angezeigt, die das Hauptfenster empfängt, wenn sich die Größe ändert. Als Antwort auf die **WM- \_ Größe** Ruft das Hauptfenster die Dimensionen seines Client Bereichs mithilfe der [**GetClientRect**](/windows/win32/api/winuser/nf-winuser-getclientrect) -Funktion ab und übergibt dann die Dimensionen an die [**enumchildwindows**](/windows/win32/api/winuser/nf-winuser-enumchildwindows) -Funktion. **Enumchildwindows** übergibt das Handle wiederum an jedes untergeordnete Fenster an die Anwendungs definierte [**enumchildproc**](/previous-versions/windows/desktop/legacy/ms633493(v=vs.85)) -Rückruffunktion. Mit dieser Funktion wird jedes untergeordnete Fenster durch Aufrufen der Funktion " [**vwindow**](/windows/win32/api/winuser/nf-winuser-movewindow) " Größe und Position positioniert. Größe und Position basieren auf den Abmessungen des Client Bereichs des Hauptfensters und dem Bezeichner des untergeordneten Fensters. Danach ruft **enumchildproc** die [**ShowWindow**](/windows/win32/api/winuser/nf-winuser-showwindow) -Funktion auf, um das Fenster sichtbar zu machen.
+Das Hauptfenster dimensioniert und positioniert die untergeordneten Fenster als Reaktion auf die [**WM \_ SIZE-Meldung,**](wm-size.md) die das Hauptfenster empfängt, wenn sich seine Größe ändert. Als Reaktion auf **WM \_ SIZE** ruft das Hauptfenster die Dimensionen seines Clientbereichs mithilfe der [**GetClientRect-Funktion**](/windows/win32/api/winuser/nf-winuser-getclientrect) ab und übergibt die Dimensionen dann an die [**EnumChildWindows-Funktion.**](/windows/win32/api/winuser/nf-winuser-enumchildwindows) **EnumChildWindows** übergibt das Handle an jedes untergeordnete Fenster wiederum an die anwendungsdefinierte [**Rückruffunktion EnumChildProc.**](/previous-versions/windows/desktop/legacy/ms633493(v=vs.85)) Diese Funktion größent und positioniert jedes untergeordnete Fenster, indem die [**MoveWindow-Funktion**](/windows/win32/api/winuser/nf-winuser-movewindow) aufgerufen wird. Größe und Position basieren auf den Abmessungen des Clientbereichs des Hauptfensters und dem Bezeichner des untergeordneten Fensters. Anschließend ruft **EnumChildProc** die [**ShowWindow-Funktion**](/windows/win32/api/winuser/nf-winuser-showwindow) auf, um das Fenster sichtbar zu machen.
 
 
 ```
@@ -160,9 +160,9 @@ BOOL CALLBACK EnumChildProc(HWND hwndChild, LPARAM lParam)
 
 ## <a name="destroying-a-window"></a>Zerstören eines Fensters
 
-Sie können die [**DestroyWindow**](/windows/win32/api/winuser/nf-winuser-destroywindow) -Funktion verwenden, um ein Fenster zu zerstören. Normalerweise sendet eine Anwendung die " [**WM \_ Close**](wm-close.md) "-Nachricht, bevor ein Fenster zerstört wird, sodass dem Fenster die Möglichkeit gegeben wird, den Benutzer zur Bestätigung aufzufordern, bevor das Fenster zerstört wird. Ein Fenster, in dem ein Fenstermenü enthalten ist, erhält automatisch die Meldung zum **\_ Schließen der WM** , wenn der Benutzer im Menü Fenster auf **Schließen** klickt. Wenn der Benutzer bestätigt, dass das Fenster zerstört werden soll, ruft die Anwendung **DestroyWindow** auf. Das System sendet die [**WM- \_ zerstörungsmeldung**](wm-destroy.md) an das Fenster, nachdem es vom Bildschirm entfernt wurde. Als Antwort auf **WM \_ Destroy** speichert das Fenster seine Daten und gibt alle zugeordneten Ressourcen frei. Ein Hauptfenster beendet die Verarbeitung von **WM- \_ Zerstörung** durch Aufrufen der [**PostQuitMessage**](/windows/win32/api/winuser/nf-winuser-postquitmessage) -Funktion, um die Anwendung zu beenden.
+Sie können die [**DestroyWindow-Funktion**](/windows/win32/api/winuser/nf-winuser-destroywindow) verwenden, um ein Fenster zu zerstören. In der Regel sendet eine Anwendung die [**WM \_ CLOSE-Nachricht,**](wm-close.md) bevor ein Fenster zerstört wird, und gibt dem Fenster die Möglichkeit, den Benutzer zur Bestätigung aufzufordern, bevor das Fenster zerstört wird. Ein Fenster, das ein Fenstermenü enthält, empfängt automatisch die **WM \_ CLOSE-Meldung,** wenn der Benutzer im Fenstermenü auf **Schließen** klickt. Wenn der Benutzer bestätigt, dass das Fenster zerstört werden soll, ruft die Anwendung **DestroyWindow** auf. Das System sendet die [**WM \_ DESTROY-Nachricht**](wm-destroy.md) an das Fenster, nachdem es sie vom Bildschirm entfernt hat. Als Reaktion auf **WM \_ DESTROY** speichert das Fenster seine Daten und gibt alle zugeordneten Ressourcen frei. Ein Hauptfenster schließt die Verarbeitung von **WM \_ DESTROY** ab, indem die [**PostQuitMessage-Funktion**](/windows/win32/api/winuser/nf-winuser-postquitmessage) aufgerufen wird, um die Anwendung zu beenden.
 
-Im folgenden Beispiel wird gezeigt, wie Sie vor dem Zerstören eines Fensters zur Bestätigung des Benutzers aufgefordert werden. Als Antwort auf [**" \_ WM close**](wm-close.md)" zeigt das Beispiel ein Dialogfeld an, das die Schaltflächen **Ja**, **Nein** und **Abbrechen** enthält. Wenn der Benutzer auf **Ja** klickt, wird [**DestroyWindow**](/windows/win32/api/winuser/nf-winuser-destroywindow) aufgerufen. Andernfalls wird das Fenster nicht zerstört. Da das Fenster, das zerstört wird, ein Hauptfenster ist, wird [**PostQuitMessage**](/windows/win32/api/winuser/nf-winuser-postquitmessage) im Beispiel als Antwort auf [**WM \_ Destroy**](wm-destroy.md)aufgerufen.
+Das folgende Beispiel zeigt, wie Sie vor dem Zerstören eines Fensters zur Bestätigung des Benutzers auffordern. Als Reaktion auf [**WM \_ CLOSE**](wm-close.md)zeigt das Beispiel ein Dialogfeld an, das die Schaltflächen **Ja,** **Nein** und **Abbrechen** enthält. Wenn der Benutzer auf **Ja** klickt, wird [**DestroyWindow**](/windows/win32/api/winuser/nf-winuser-destroywindow) aufgerufen. Andernfalls wird das Fenster nicht zerstört. Da das zu zerstörende Fenster ein Hauptfenster ist, ruft das Beispiel [**PostQuitMessage**](/windows/win32/api/winuser/nf-winuser-postquitmessage) als Reaktion auf [**WM \_ DESTROY**](wm-destroy.md)auf.
 
 
 ```
@@ -187,9 +187,9 @@ case WM_DESTROY:
 
 
 
-## <a name="using-layered-windows"></a>Verwenden von geschichteten Fenstern
+## <a name="using-layered-windows"></a>Verwenden von mehrstufigen Windows
 
-Wenn ein Dialogfeld als durchlässiges Fenster angezeigt werden soll, erstellen Sie zuerst das Dialogfeld wie üblich. Legen Sie dann bei [**WM \_ InitDialog**](../dlgbox/wm-initdialog.md)das geschichtete Bit des erweiterten Stils des Fensters fest, und nennen Sie [**SetLayeredWindowAttributes**](/windows/win32/api/winuser/nf-winuser-setlayeredwindowattributes) mit dem gewünschten Alpha-Wert. Der Code könnte wie folgt aussehen:
+Damit ein Dialogfeld als durchscheinendes Fenster angezeigt wird, erstellen Sie den Dialog zunächst wie gewohnt. Legen Sie dann auf [**WM \_ INITDIALOG**](../dlgbox/wm-initdialog.md)das mehrstufige Bit des erweiterten Stils des Fensters fest, und rufen [**Sie SetLayeredWindowAttributes**](/windows/win32/api/winuser/nf-winuser-setlayeredwindowattributes) mit dem gewünschten Alphawert auf. Der Code könnte wie folgt aussehen:
 
 
 ```
@@ -204,9 +204,9 @@ SetLayeredWindowAttributes(hwnd, 0, (255 * 70) / 100, LWA_ALPHA);
 
 
 
-Beachten Sie, dass der dritte Parameter von [**SetLayeredWindowAttributes**](/windows/win32/api/winuser/nf-winuser-setlayeredwindowattributes) ein Wert zwischen 0 und 255 ist, wobei 0 das Fenster vollständig transparent ist und 255 vollständig deckend ist. Dieser Parameter imitiert die vielseitigere [**BLENDFUNCTION**](/windows/win32/api/wingdi/ns-wingdi-blendfunction) der [**AlphaBlend**](/windows/win32/api/wingdi/nf-wingdi-alphablend) -Funktion.
+Beachten Sie, dass der dritte Parameter von [**SetLayeredWindowAttributes**](/windows/win32/api/winuser/nf-winuser-setlayeredwindowattributes) ein Wert ist, der zwischen 0 und 255 liegt. 0 macht das Fenster vollständig transparent und 255 macht es vollständig deckend. Dieser Parameter imitiert die vielseitigere [**BLENDFUNCTION**](/windows/win32/api/wingdi/ns-wingdi-blendfunction) der [**AlphaBlend-Funktion.**](/windows/win32/api/wingdi/nf-wingdi-alphablend)
 
-Um dieses Fenster wieder vollständig zu deinstallieren, entfernen Sie das überlappende **WS \_ Ex \_** -Bit, indem Sie [**SetWindowLong**](/windows/win32/api/winuser/nf-winuser-setwindowlonga) aufrufen und dann das Fenster zum Umzeichnen auffordern. Das Entfernen des Bits ist erwünscht, damit das System weiß, dass es Arbeitsspeicher freigeben kann, der mit der Schichtung und Umleitung verknüpft ist. Der Code könnte wie folgt aussehen:
+Um dieses Fenster wieder vollständig deckend zu gestalten, entfernen Sie das **WS \_ EX \_ LAYERED-Bit,** indem [**Sie SetWindowLong**](/windows/win32/api/winuser/nf-winuser-setwindowlonga) aufrufen und dann das Fenster zum erneuten Anstrich auffordern. Das Entfernen des Bits soll das System darüber informieren, dass es speicherplatzauflösen kann, der mit der Schichtung und Umleitung verbunden ist. Der Code könnte wie folgt aussehen:
 
 
 ```
@@ -224,7 +224,7 @@ RedrawWindow(hwnd,
 
 
 
-Um untergeordnete Fenster mit Ebenen zu verwenden, muss die Anwendung Windows 8-fähig im Manifest deklarieren.
+Um mehrstufige untergeordnete Fenster verwenden zu können, muss sich die Anwendung Windows 8 im Manifest selbst deklarieren.
 
  
 

@@ -1,19 +1,19 @@
 ---
-description: Beschreibt einen 4D-Vektor, der aus Ganzzahlen ohne Vorzeichen besteht, 8 Bits (1 Byte).
+description: Beschreibt einen 4D-Vektor, der aus ganzen Zahlen ohne Vorzeichen und einer Länge von 8 Bits (1 Byte) besteht.
 ms.assetid: d606293a-3a6d-49b5-832c-82ee5943c634
 title: XMUBYTE4-Erweiterungen
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 3a7bfa347620b0852e1a2bb8962ce2983b78498a
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 92c68f1920ee66ec949c39b6e104ae03524a4d1df5f7cbecf1601979f9ccaf03
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106349096"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119979520"
 ---
 # <a name="xmubyte4-extensions"></a>XMUBYTE4-Erweiterungen
 
-Beschreibt einen 4D-Vektor, der aus Ganzzahlen ohne Vorzeichen besteht, 8 Bits (1 Byte).
+Beschreibt einen 4D-Vektor, der aus ganzen Zahlen ohne Vorzeichen und einer Länge von 8 Bits (1 Byte) besteht.
 
 > [!Note]  
 > Die hier aufgeführten Features sind nur bei der Entwicklung mit C++ verfügbar.
@@ -26,8 +26,8 @@ Beschreibt einen 4D-Vektor, der aus Ganzzahlen ohne Vorzeichen besteht, 8 Bits (
 
 | Thema                                                       | BESCHREIBUNG                                    |
 |-------------------------------------------------------------|------------------------------------------------|
-| [**XMUBYTE4-Konstruktoren**](xmubyte4-ctor.md)<br/>   | Von verfügbar gemachte Konstruktoren `XMUBYTE4` .<br/> |
-| [XMUBYTE4-Operatoren](ovw-xmubyte4-operators.md)<br/> | Von verfügbar gemachte Operatoren `XMUBYTE4` .<br/>    |
+| [**XMUBYTE4-Konstruktoren**](xmubyte4-ctor.md)<br/>   | Konstruktoren, die von verfügbar gemacht `XMUBYTE4` werden.<br/> |
+| [XMUBYTE4-Operatoren](ovw-xmubyte4-operators.md)<br/> | Operatoren, die von verfügbar gemacht `XMUBYTE4` werden.<br/>    |
 
 
 

@@ -1,1947 +1,1947 @@
 ---
-description: Diese WMI-Klassen werden in cimwin32. MOF deklariert.
+description: Diese WMI-Klassen werden in CimWin32.mof deklariert.
 ms.assetid: 53122499-1CC0-4B48-AEA1-B70B7BBC3A99
 ms.tgt_platform: multiple
 title: CIM-WMI-Anbieter
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 8a3249549e0915f51b6a9a6f2386c18ba695919a
-ms.sourcegitcommit: c7add10d695482e1ceb72d62b8a4ebd84ea050f7
+ms.openlocfilehash: acb9a01e0771645cf6101171ce870be593181cb61d6118e627b9bf96b61994be
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104523107"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118420334"
 ---
 # <a name="cim-wmi-provider"></a>CIM-WMI-Anbieter
 
-Diese WMI-Klassen werden in cimwin32. MOF deklariert.
+Diese WMI-Klassen werden in CimWin32.mof deklariert.
 
 ## <a name="in-this-section"></a>In diesem Abschnitt
 
 <dl> <dt>
 
-[**CIM- \_ Aktion**](cim-action.md)
+[**\_CIM-Aktion**](cim-action.md)
 </dt> <dd>
 
-Eine [**CIM- \_ Aktions**](cim-action.md) Klasse ist ein Vorgang, der Teil eines Prozesses ist, um entweder ein Softwareelement im nächsten Zustand zu erstellen oder das Softwareelement im aktuellen Zustand zu entfernen.
+Eine [**CIM \_ Action-Klasse**](cim-action.md) ist ein Vorgang, der Teil eines Prozesses ist, um entweder ein Softwareelement im nächsten Zustand zu erstellen oder das Softwareelement im aktuellen Zustand zu beseitigen.
 
 </dd> <dt>
 
-[**CIM- \_ Aktions Sequenz**](cim-actionsequence.md)
+[**CIM \_ ActionSequence**](cim-actionsequence.md)
 </dt> <dd>
 
-Die CIM-Aktion " [**\_ aktionequenz**](cim-actionsequence.md) " definiert eine Reihe von Vorgängen, die das Softwareelement (auf das durch die [**CIM- \_ softwareelementactions**](cim-softwareelementactions.md) -Zuordnung verwiesen wird) in den nächsten Zustand übergehen oder das Softwareelement aus seinem aktuellen Zustand entfernt.
+Die [**CIM \_ ActionSequence-Zuordnung**](cim-actionsequence.md) definiert eine Reihe von Vorgängen, die das Softwareelement (auf das durch die [**CIM \_ SoftwareElementActions-Zuordnung**](cim-softwareelementactions.md) verwiesen wird) in den nächsten Zustand überarbeiten oder das Softwareelement aus seinem aktuellen Zustand entfernen.
 
 </dd> <dt>
 
-[**CIM- \_ acsiasspare**](cim-actsasspare.md)
+[**\_CIM-AktionenAsSpare**](cim-actsasspare.md)
 </dt> <dd>
 
-Die [**CIM- \_ aczasspare-Zuordnung**](cim-actsasspare.md) gibt an, welche Elemente Spares sein können oder andere aggregierte Elemente ersetzen. Ein Ersatz kann im Modus "Hot-Standby" ausgeführt werden, wie auf Element Weise angegeben.
+Die [**\_ CIM-Zuordnung "ActsAsSpare"**](cim-actsasspare.md) gibt an, welche Elemente ersatz- oder andere aggregierte Elemente ersetzen können. Ein Ersatz kann im Modus "Heißer Standbymodus" ausgeführt werden, wie auf Element-für-Element-Basis angegeben.
 
 </dd> <dt>
 
-[**CIM- \_ annäheringslots**](cim-adjacentslots.md)
+[**CIM \_ AdjacentSlots**](cim-adjacentslots.md)
 </dt> <dd>
 
-Die [**CIM \_**](cim-adjacentslots.md) -Zuordnungs Slots-Zuordnung beschreibt das Layout von Slots auf einem hostboard oder einer Adapterkarte. Informationen, wie z. b. der Abstand zwischen den Slots und ob Sie "Shared" sind (wenn eine aufgefüllt wird, der andere Slot kann nicht verwendet werden), werden als Zuordnungs Eigenschaften übermittelt.
+Die [**Zuordnung CIM \_ AdjacentSlots**](cim-adjacentslots.md) beschreibt das Layout von Slots auf einem Hostboard oder einer Adapterkarte. Informationen, z. B. der Abstand zwischen den Slots und ob sie "freigegeben" sind (wenn einer aufgefüllt wird, kann der andere Slot nicht verwendet werden), werden als Zuordnungseigenschaften übermittelt.
 
 </dd> <dt>
 
-[**CIM- \_ aggregatepblock**](cim-aggregatepextent.md)
+[**\_CIM-AggregatPExtent**](cim-aggregatepextent.md)
 </dt> <dd>
 
-Die [**CIM- \_ aggregatepblock**](cim-aggregatepextent.md) -Klasse bietet zusammenfassende Informationen über adressierbare logische Blöcke, die sich in derselben Speicher Redundanz Gruppe befinden und sich auf demselben physischen Medium befinden.
+Die [**CIM \_ AggregatePExtent-Klasse**](cim-aggregatepextent.md) stellt zusammenfassende Informationen zu adressierbaren logischen Blöcken zur Verfügung, die sich in derselben Speicherredundanzgruppe befinden und sich auf demselben physischen Medium befinden.
 
 </dd> <dt>
 
-[**CIM \_ aggregatepsextent**](cim-aggregatepsextent.md)
+[**CIM \_ AggregatePSExtent**](cim-aggregatepsextent.md)
 </dt> <dd>
 
-Die [**CIM- \_ aggregatepsextent**](cim-aggregatepsextent.md) -Klasse definiert die Anzahl der adressierbaren logischen Blöcke auf einem einzelnen Speichergerät, ausgenommen logische Blöcke, die als Prüfdaten zugeordnet sind. Wenn Volumesets definiert sind, sind die logischen Blöcke innerhalb eines einzelnen Volumesatzes enthalten. Dies ist eine alternative Gruppierung für [**CIM \_ protectedspaceblock**](cim-protectedspaceextent.md), wenn nur Zusammenfassungs Informationen benötigt werden oder wenn die automatische Konfiguration verwendet wird.
+Die [**CIM \_ AggregatePSExtent-Klasse**](cim-aggregatepsextent.md) definiert die Anzahl der adressierbaren logischen Blöcke auf einem einzelnen Speichergerät, mit Ausnahme logischer Blöcke, die als Prüfdaten zugeordnet sind. Wenn Volumesätze definiert sind, sind die logischen Blöcke in einem einzelnen Volumesatz enthalten. Dies ist eine alternative Gruppierung für [**CIM \_ ProtectedSpaceExtent,**](cim-protectedspaceextent.md)wenn nur Zusammenfassungsinformationen benötigt werden oder wenn die automatische Konfiguration verwendet wird.
 
 </dd> <dt>
 
-[**CIM \_ aggregateredundancycomponent**](cim-aggregateredundancycomponent.md)
+[**CIM \_ AggregateRedundancyComponent**](cim-aggregateredundancycomponent.md)
 </dt> <dd>
 
-Die [**CIM- \_ aggregateredundancycomponent**](cim-aggregateredundancycomponent.md) -Klasse beschreibt den aggregierten physischen Block in einer Speicher Redundanz Gruppe.
+Die [**CIM \_ AggregateRedundancyComponent-Klasse**](cim-aggregateredundancycomponent.md) beschreibt den aggregierten physischen Umfang in einer Speicherredundanzgruppe.
 
 </dd> <dt>
 
-[**CIM- \_ alarmdevice**](cim-alarmdevice.md)
+[**CIM \_ AlarmDevice**](cim-alarmdevice.md)
 </dt> <dd>
 
-Die [**CIM \_ alarmdevice**](cim-alarmdevice.md) -Klasse ist ein Alarmgerät, das akustische oder sichtbare Anzeichen für eine Problemsituation ausgibt.
+Die [**CIM \_ AlarmDevice-Klasse**](cim-alarmdevice.md) ist ein Alarmgerät, das akustische oder sichtbare Hinweise im Zusammenhang mit einer Problemsituation aus gibt.
 
 </dd> <dt>
 
-[**CIM- \_ Verteilungs Quelle**](cim-allocatedresource.md)
+[**CIM \_ AllocatedResource**](cim-allocatedresource.md)
 </dt> <dd>
 
-Die CIM-Klasse " [**\_ Zuweisungs**](cim-allocatedresource.md) Klasse" stellt eine Zuordnung zwischen logischen Geräten und Systemressourcen dar und zeigt an, dass die Ressource dem Gerät zugewiesen ist.
+Die [**CIM \_ AllocatedResource-Klasse**](cim-allocatedresource.md) stellt eine Zuordnung zwischen logischen Geräten und Systemressourcen dar und gibt an, dass die Ressource dem Gerät zugewiesen ist.
 
 </dd> <dt>
 
-[**CIM- \_ applicationsystem**](cim-applicationsystem.md)
+[**CIM \_ ApplicationSystem**](cim-applicationsystem.md)
 </dt> <dd>
 
-Die [**CIM \_ applicationsystem**](cim-applicationsystem.md) -Klasse stellt ein Anwendungs-oder Softwaresystem dar, das eine bestimmte Geschäftsfunktion unterstützt, die als unabhängige Einheit verwaltet werden kann. Ein solches System kann mithilfe der [**CIM- \_ Softwarefeature**](cim-softwarefeature.md) -Klasse in seine funktionalen Komponenten zerlegt werden. Die Software Features für eine bestimmte Anwendung oder ein bestimmtes Softwaresystem werden mithilfe der [**CIM \_ applicationsystemsoftwarefeature-Zuordnung**](cim-applicationsystemsoftwarefeature.md) gefunden.
+Die [**CIM \_ ApplicationSystem-Klasse**](cim-applicationsystem.md) stellt eine Anwendung oder ein Softwaresystem dar, die eine bestimmte Geschäftsfunktion unterstützt, die als unabhängige Einheit verwaltet werden kann. Ein solches System kann mithilfe der [**CIM \_ SoftwareFeature-Klasse**](cim-softwarefeature.md) in seine funktionalen Komponenten zersetzt werden. Die Softwarefeatures für eine bestimmte Anwendung oder ein bestimmtes Softwaresystem werden mithilfe der [**CIM \_ ApplicationSystemSoftwareFeature-Zuordnung**](cim-applicationsystemsoftwarefeature.md) gespeichert.
 
 </dd> <dt>
 
-[**CIM \_ applicationsystemsoftwarefeature**](cim-applicationsystemsoftwarefeature.md)
+[**CIM \_ ApplicationSystemSoftwareFeature**](cim-applicationsystemsoftwarefeature.md)
 </dt> <dd>
 
-Die [**CIM \_ applicationsystemsoftwarefeature**](cim-applicationsystemsoftwarefeature.md) -Klasse stellt eine Zuordnung dar, mit der die Software Features identifiziert werden, die ein bestimmtes Anwendungssystem bilden. Die Software Features können in verschiedene Produkte eingeschlossen werden.
+Die [**CIM \_ ApplicationSystemSoftwareFeature-Klasse**](cim-applicationsystemsoftwarefeature.md) stellt eine Zuordnung dar, die die Softwarefeatures identifiziert, aus denen ein bestimmtes Anwendungssystem bestehende ist. Die Softwarefeatures können in verschiedenen Produkten enthalten sein.
 
 </dd> <dt>
 
-[**CIM \_ associatedalarm**](cim-associatedalarm.md)
+[**CIM \_ AssociatedAlarm**](cim-associatedalarm.md)
 </dt> <dd>
 
-Die [**CIM \_ associatedalarm**](cim-associatedalarm.md) -Abhängigkeit ordnet einem logischen Gerät einen Alarm zu.
+Die [**CIM \_ AssociatedAlarm-Abhängigkeit**](cim-associatedalarm.md) ordnet einem logischen Gerät einen Alarm zu.
 
 </dd> <dt>
 
-[**CIM \_ associatedakku**](cim-associatedbattery.md)
+[**CIM \_ AssociatedBattery**](cim-associatedbattery.md)
 </dt> <dd>
 
-Die [**CIM \_ associatedakku**](cim-associatedbattery.md) -Abhängigkeit ordnet einen Akku einem logischen Gerät zu. Verwenden Sie diese Zuordnung, um einzelne Batterien zu modellieren, die eine unterbrechungsfreie Stromversorgung (USV) bilden.
+Die [**CIM \_ AssociatedBattery-Abhängigkeit**](cim-associatedbattery.md) ordnet einem logischen Gerät einen Akku zu. Verwenden Sie diese Zuordnung, um einzelne Akkus zu modellieren, die eine unterbrechungsfreie Stromversorgung (USV) machen.
 
 </dd> <dt>
 
-[**CIM \_ associatedcooling**](cim-associatedcooling.md)
+[**CIM \_ Associated CimIng**](cim-associatedcooling.md)
 </dt> <dd>
 
-Die [**CIM \_ associatedcooling**](cim-associatedcooling.md) -Zuordnung gibt an, wann die Lüfter oder andere Kühlgeräte für ein Gerät spezifisch sind (im Gegensatz zur Bereitstellung von Gehäuse oder CAB-Kühlung).
+Die [**Zuordnung CIM Associated Cooling \_ gibt**](cim-associatedcooling.md) an, wann Lüfter oder andere Kühlgeräte für ein Gerät spezifisch sind (im Gegensatz zur Bereitstellung von Gehäuse- oder Kühlschränken).
 
 </dd> <dt>
 
-[**CIM \_ associatedmemory**](cim-associatedmemory.md)
+[**CIM \_ AssociatedMemory**](cim-associatedmemory.md)
 </dt> <dd>
 
-Die [**CIM \_ associatememory**](cim-associatedmemory.md) -Klasse ordnet installierten oder zugeordneten Arbeitsspeicher zu, z. b. Cache Speicher mit einem logischen Gerät.
+Die [**CIM \_ AssociateMemory-Klasse**](cim-associatedmemory.md) ordnet installierten oder zugeordneten Arbeitsspeicher, z. B. Cachespeicher, einem logischen Gerät zu.
 
 </dd> <dt>
 
-[**CIM \_ associatedprocessormemory**](cim-associatedprocessormemory.md)
+[**CIM \_ AssociatedProcessorMemory**](cim-associatedprocessormemory.md)
 </dt> <dd>
 
-Die [**CIM \_ associatedprocessormemory**](cim-associatedprocessormemory.md) -Klasse ordnet den Prozessor-und Systemspeicher oder den Cache eines Prozessors zu.
+Die [**CIM \_ AssociatedProcessorMemory-Klasse**](cim-associatedprocessormemory.md) ordnet den Prozessor- und Systemspeicher oder den Cache eines Prozessors zu.
 
 </dd> <dt>
 
-[**CIM \_ associatedsensor**](cim-associatedsensor.md)
+[**CIM \_ AssociatedSensor**](cim-associatedsensor.md)
 </dt> <dd>
 
-Die [**CIM \_ associatedsensor**](cim-associatedsensor.md) -Klasse ordnet einen installierten Sensor einem logischen Gerät zu. Der Sensor misst wichtige Eingabe-und Ausgabe Eigenschaften und kann im Gerät enthalten oder in der Nähe installiert werden.
+Die [**CIM \_ AssociatedSensor-Klasse**](cim-associatedsensor.md) ordnet einem logischen Gerät einen installierten Sensor zu. Der Sensor misst kritische Eingabe- und Ausgabeeigenschaften und kann in das Gerät aufgenommen oder in der Nähe installiert werden.
 
 </dd> <dt>
 
-[**CIM \_ associatedsupplycurrentsensor**](cim-associatedsupplycurrentsensor.md)
+[**CIM \_ AssociatedSupplyCurrentSensor**](cim-associatedsupplycurrentsensor.md)
 </dt> <dd>
 
-Die [**CIM \_ associatedsupplycurrentsensor**](cim-associatedsupplycurrentsensor.md) -Klasse ordnet eine Stromversorgung einem aktuellen (AMPERAGE) Sensor zu, der die Eingabe Häufigkeit überwacht.
+Die [**CIM \_ AssociatedSupplyCurrentSensor-Klasse**](cim-associatedsupplycurrentsensor.md) ordnet eine Stromversorgung einem aktuellen Sensor (Amperage) zu, der die Eingangsfrequenz überwacht.
 
 </dd> <dt>
 
-[**CIM \_ associatedsupplyvoltagesensor**](cim-associatedsupplyvoltagesensor.md)
+[**CIM \_ AssociatedSupplyVoltageSensor**](cim-associatedsupplyvoltagesensor.md)
 </dt> <dd>
 
-Verknüpft eine Stromversorgung mit einem Spannungssensor, der die Eingangsspannung überwacht.
+Ordnet einem Spannungssensor, der die Eingangsspannung überwacht, eine Stromversorgung zu.
 
 </dd> <dt>
 
-[**CIM- \_ BasedOn**](cim-basedon.md)
+[**CIM \_ BasedOn**](cim-basedon.md)
 </dt> <dd>
 
-Die [**CIM- \_ BasedOn**](cim-basedon.md) -Klasse stellt eine Zuordnung dar, die beschreibt, wie Speicherblöcke aus Blöcken auf niedrigerer Ebene zusammengestellt werden können. Physische Blöcke enthalten beispielsweise Blöcke mit geschütztem Speicherplatz. Volumesätze werden daher aus einem oder mehreren physischen oder geschützten Speicherplatz Blöcken zusammengestellt. Der Cache Speicher kann unabhängig voneinander definiert und in einem physischen Element realisiert werden. er kann aber auch auf flüchtigen oder nicht flüchtigen Speicherblöcken basieren.
+Die [**CIM \_ BasedOn-Klasse**](cim-basedon.md) stellt eine Zuordnung dar, die beschreibt, wie Speicher extents aus Unterebenen-Extents zusammengestellt werden können. Physische Extents enthalten z. B. Geschützte Speicherplatz-Extents. Daher werden Volumesätze aus einem oder mehr physischen oder geschützten Speicherplatzbereich zusammengestellt. Cachespeicher kann unabhängig voneinander definiert und in einem physischen Element realisiert werden, oder er kann auf flüchtigen oder nicht flüchtigen Speichermodulen basieren.
 
 </dd> <dt>
 
-[**CIM- \_ Akku**](cim-battery.md)
+[**\_CIM-Akku**](cim-battery.md)
 </dt> <dd>
 
-Die [**CIM- \_ Akku**](cim-battery.md) Klasse stellt die Funktionen und die Verwaltung des logischen Akku Geräts dar. Diese Klasse gilt für Akkus in Laptop Systemen und anderen internen und externen Akkus.
+Die [**CIM \_ Battery-Klasse**](cim-battery.md) stellt die Funktionen und die Verwaltung des logischen Akkugeräts dar. Diese Klasse gilt für Akkus in Laptopsystemen und anderen internen und externen Akkus.
 
 </dd> <dt>
 
-[**CIM- \_ BinarySensor**](cim-binarysensor.md)
+[**CIM \_ BinarySensor**](cim-binarysensor.md)
 </dt> <dd>
 
-Die [**CIM \_ BinarySensor**](cim-binarysensor.md) -Klasse stellt eine boolesche Ausgabe bereit. Die Eigenschaften " **CurrentState** " und " **possiblestates** " wurden für die sensorung hinzugefügt, sodass die **CIM- \_ BinarySensor** -Unterklasse nicht mehr benötigt wird, obwohl Sie aus Gründen der Abwärtskompatibilität beibehalten wird. Ein binärer Sensor kann erstellt werden, indem ein Sensor mit zwei möglichen Zuständen instanziiert wird.
+Die [**CIM \_ BinarySensor-Klasse**](cim-binarysensor.md) bietet eine boolesche Ausgabe. Die **Eigenschaften CurrentState** und **PossibleStates** wurden für die Sensoring hinzugefügt, wodurch die **CIM \_ BinarySensor-Unterklasse** nicht mehr benötigt wird, obwohl sie aus Gründen der Abwärtskompatibilität beibehalten wird. Ein binärer Sensor kann erstellt werden, indem ein Sensor mit zwei möglichen Zuzuständen instanziiert wird.
 
 </dd> <dt>
 
-[**CIM- \_ bioselare**](cim-bioselement.md)
+[**CIM \_ BIOSElement**](cim-bioselement.md)
 </dt> <dd>
 
-Die [**CIM \_ bioselfigure**](cim-bioselement.md) -Klasse stellt die Software auf niedriger Ebene dar, die in einen nicht flüchtigen Speicher geladen und zum Starten und Konfigurieren eines Computer Systems verwendet wird.
+Die [**CIM \_ BIOSElement-Klasse**](cim-bioselement.md) stellt die Low-Level-Software dar, die in nicht flüchtigen Speicher geladen und zum Starten und Konfigurieren eines Computersystems verwendet wird.
 
 </dd> <dt>
 
-[**CIM- \_ biosfeature**](cim-biosfeature.md)
+[**CIM \_ BIOSFeature**](cim-biosfeature.md)
 </dt> <dd>
 
-stellt die Funktionen der Low-Level-Software dar, die zum Starten und Konfigurieren eines Computer Systems verwendet wird.
+stellt die Funktionen der Low-Level-Software dar, die zum Starten und Konfigurieren eines Computersystems verwendet wird.
 
 </dd> <dt>
 
-[**CIM \_ biosfeaturebioselements**](cim-biosfeaturebioselements.md)
+[**CIM \_ BIOSFeatureBIOSElements**](cim-biosfeaturebioselements.md)
 </dt> <dd>
 
-Die [**CIM \_ biosfeaturebioselements**](cim-biosfeaturebioselements.md) -Klasse ordnet eine BIOS-Funktion und deren aggregierte BIOS-Elemente zu.
+Die [**CIM \_ BIOSFeatureBIOSElements-Klasse**](cim-biosfeaturebioselements.md) ordnet ein BIOS-Feature und seine aggregierten BIOS-Elemente zu.
 
 </dd> <dt>
 
-[**CIM \_ biosloadedinnv**](cim-biosloadedinnv.md)
+[**CIM \_ BIOSLoadedInNV**](cim-biosloadedinnv.md)
 </dt> <dd>
 
-Die [**CIM \_ biosloadedinnv**](cim-biosloadedinnv.md) -Klasse ordnet ein BIOS-Element und den nicht flüchtigen Speicher zu, in dem er geladen ist.
+Die [**CIM \_ BIOSLoadedInNV-Klasse**](cim-biosloadedinnv.md) ordnet ein BIOS-Element und den nicht flüchtigen Speicher zu, in den es geladen wird.
 
 </dd> <dt>
 
-[**CIM \_ bootosfromfs**](cim-bootosfromfs.md)
+[**CIM \_ BootOSFromFS**](cim-bootosfromfs.md)
 </dt> <dd>
 
-Die [**CIM \_ bootosfromfs**](cim-bootosfromfs.md) -Klasse ordnet das Betriebssystem und die Dateisysteme zu, von denen das Betriebssystem geladen wurde. Die Zuordnung ist m:n-. ein verteiltes Betriebssystem kann davon abhängen, dass mehrere Dateisysteme ordnungsgemäß und vollständig geladen werden.
+Die [**CIM \_ BootOSFromFS-Klasse**](cim-bootosfromfs.md) ordnet das Betriebssystem und die Dateisysteme zu, aus denen das Betriebssystem geladen wird. Die Zuordnung ist n:n. Ein verteiltes Betriebssystem kann davon abhängen, dass mehrere Dateisysteme ordnungsgemäß und vollständig geladen werden.
 
 </dd> <dt>
 
-[**CIM- \_ bootsap**](cim-bootsap.md)
+[**CIM \_ BootSAP**](cim-bootsap.md)
 </dt> <dd>
 
-Die [**CIM- \_ bootsap**](cim-bootsap.md) -Klasse stellt die Zugriffspunkte eines Start Dienstanbieter dar.
+Die [**CIM \_ BootSAP-Klasse**](cim-bootsap.md) stellt die Zugriffspunkte eines Startdiensts dar.
 
 </dd> <dt>
 
-[**CIM- \_ Bootservice**](cim-bootservice.md)
+[**CIM \_ BootService**](cim-bootservice.md)
 </dt> <dd>
 
-Die [**CIM- \_ Bootservice**](cim-bootservice.md) -Klasse stellt die Funktionalität dar, die von einem Gerät oder einer Software oder von einem Netzwerk bereitgestellt wird, um ein Betriebssystem auf einem einheitlichen Computersystem zu laden.
+Die [**CIM \_ BootService-Klasse**](cim-bootservice.md) stellt die Funktionalität dar, die von einem Gerät, einer Software oder einem Netzwerk zum Laden eines Betriebssystems auf einem unitären Computersystem bereitgestellt wird.
 
 </dd> <dt>
 
-[**CIM \_ bootserviceaccessbysap**](cim-bootserviceaccessbysap.md)
+[**CIM \_ BootServiceAccessBySAP**](cim-bootserviceaccessbysap.md)
 </dt> <dd>
 
-Die [**CIM \_ bootserviceaccessbysap**](cim-bootserviceaccessbysap.md) -Klasse ordnet einen Start Dienst und seine Zugriffspunkte zu.
+Die [**CIM \_ BootServiceAccessBySAP-Klasse**](cim-bootserviceaccessbysap.md) ordnet einen Startdienst und seine Zugriffspunkte zu.
 
 </dd> <dt>
 
-[**CIM- \_ CacheMemory**](cim-cachememory.md)
+[**CIM \_ CacheMemory**](cim-cachememory.md)
 </dt> <dd>
 
-Die [**CIM \_ CacheMemory**](cim-cachememory.md) -Klasse definiert die Funktionen und die Verwaltung des Cache Speichers.
+Die [**CIM \_ CacheMemory-Klasse**](cim-cachememory.md) definiert die Funktionen und die Verwaltung des Cachespeichers.
 
 </dd> <dt>
 
-[**CIM- \_ Karte**](cim-card.md)
+[**\_CIM-Karte**](cim-card.md)
 </dt> <dd>
 
-Die [**CIM- \_ Karten**](cim-card.md) Klasse stellt einen Typ von physischem Container dar, der an eine andere Karte oder ein hostingboard angeschlossen werden kann oder selbst ein hostingboard/-Motherboard in einem Chassis ist. Diese Klasse enthält alle Pakete, die Signale ausführen können und einen Bereitstellungs Punkt für physische Komponenten bereitstellen, wie z. b. Chips oder andere physische Pakete, wie z. b. andere Karten.
+Die [**CIM \_ Card-Klasse**](cim-card.md) stellt einen physischen Containertyp dar, der an eine andere Karte oder ein Hostingboard angeschlossen werden kann oder selbst ein Hostingboard/eine Hauptplatine in einem Gehäuse ist. Diese Klasse enthält alle Pakete, die Signale tragen und einen Bereitstellungspunkt für physische Komponenten bereitstellen können, z. B. Chips oder andere physische Pakete, z. B. andere Karten.
 
 </dd> <dt>
 
-[**CIM- \_ cardinslot**](cim-cardinslot.md)
+[**CIM \_ CardInSlot**](cim-cardinslot.md)
 </dt> <dd>
 
-Die [**CIM \_ cardinslot**](cim-cardinslot.md) -Klasse ordnet eine Adapterkarte dem Container zu, in den Sie eingefügt wird.
+Die [**CIM \_ CardInSlot-Klasse**](cim-cardinslot.md) ordnet dem Container, in den sie eingefügt wird, eine Adapterkarte zu.
 
 </dd> <dt>
 
-[**CIM- \_ kardoncard**](cim-cardoncard.md)
+[**CIM \_ CardOnCard**](cim-cardoncard.md)
 </dt> <dd>
 
-Die [**CIM \_ cardoncard**](cim-cardoncard.md) -Zuordnung beschreibt die Beziehungen zu Karten, die an den über Ladungen/Baseboards, daughtercards eines Adapters oder Karten mit speziellen Karten ähnlichen Modulen angeschlossen werden können.
+Die [**CIM \_ CardOnCard-Zuordnung**](cim-cardoncard.md) beschreibt Beziehungen zu Karten, die in Hauptplatinen/Baseboards, Intokcards eines Adapters oder Karten, die spezielle kartenbasierte Module unterstützen, angeschlossen werden können.
 
 </dd> <dt>
 
-[**CIM- \_ cdromdrive**](cim-cdromdrive.md)
+[**CIM \_ C CIMDrive**](cim-cdromdrive.md)
 </dt> <dd>
 
-Die [**CIM- \_ cdromdrive**](cim-cdromdrive.md) -Klasse stellt ein CD-ROM-Laufwerk auf dem Computer dar.
+Die [**CIM \_ C CIMDrive-Klasse**](cim-cdromdrive.md) stellt ein CD-ROM-Laufwerk auf dem Computer dar.
 
 </dd> <dt>
 
-[**CIM- \_ Chassis**](cim-chassis.md)
+[**\_CIM-Gehäuse**](cim-chassis.md)
 </dt> <dd>
 
-Die [**CIM- \_ Chassis**](cim-chassis.md) -Klasse stellt die physischen Elemente dar, die andere Elemente einschließen und definierbare Funktionen bereitstellen, wie z. b. einen Desktop, Verarbeitungs Knoten, UPS, Datenträger-oder Band Speicher oder eine Kombination dieser Elemente.
+Die [**\_ CIM-Chassis-Klasse**](cim-chassis.md) stellt die physischen Elemente dar, die andere Elemente umschließen und definierbare Funktionen bereitstellen, z. B. desktop, verarbeitungsknoten, UPS, Datenträger- oder Bandspeicher oder eine Kombination dieser Elemente.
 
 </dd> <dt>
 
-[**CIM \_ chassisinrack**](cim-chassisinrack.md)
+[**CIM \_ ChassisInRack**](cim-chassisinrack.md)
 </dt> <dd>
 
-Die [**CIM \_ chassisinrack**](cim-chassisinrack.md) -Zuordnung stellt die "enthaltende" Beziehung zwischen einem Gestell und einem darin enthaltenen Chassis dar.
+Die [**\_ CIM-ChassisInRack-Zuordnung**](cim-chassisinrack.md) stellt die "enthaltende" Beziehung zwischen einem Rack und einem darin enthaltenden Gehäuse dar.
 
 </dd> <dt>
 
-[**CIM- \_ Überprüfung**](cim-check.md)
+[**\_CIM-Überprüfung**](cim-check.md)
 </dt> <dd>
 
-Die [**CIM- \_ Check**](cim-check.md) -Klasse stellt eine Bedingung oder ein Merkmal dar, die in einer Umgebung erwartungsgemäß definiert ist, die von einer Instanz einer [**CIM \_ Computersystem**](cim-computersystem.md) -Klasse definiert oder festgelegt wird. Die Überprüfungen, die einem bestimmten Softwareelement zugeordnet sind, werden in einer von zwei Gruppen organisiert, wobei die **Phase** -Eigenschaft der [**CIM- \_ softwareelementchecks**](cim-softwareelementchecks.md) -Zuordnung verwendet wird.
+Die [**CIM \_ Check-Klasse**](cim-check.md) stellt eine Bedingung oder ein Merkmal dar, die in einer Umgebung erfüllt sein soll, die von einer Instanz einer [**\_ CIM-ComputerSystem-Klasse**](cim-computersystem.md) definiert oder festgelegt wird. Die einem bestimmten Softwareelement zugeordneten Überprüfungen werden mithilfe der **Phase-Eigenschaft** der [**CIM \_ SoftwareElementChecks-Zuordnung**](cim-softwareelementchecks.md) in eine von zwei Gruppen organisiert.
 
 </dd> <dt>
 
-[**CIM- \_ Chip**](cim-chip.md)
+[**\_CIM-Chip**](cim-chip.md)
 </dt> <dd>
 
-Die [**CIM- \_ Chip**](cim-chip.md) Klasse stellt den Typ der integrierten Verbindungs Hardware dar, einschließlich ASICs, Prozessoren, Speicherchips usw.
+Die [**\_ CIM-Chipklasse**](cim-chip.md) stellt den Typ der integrierten Leitungshardware dar, einschließlich ASICs, Prozessoren, Speicherchips usw.
 
 </dd> <dt>
 
-[**CIM \_ clusteringsap**](cim-clusteringsap.md)
+[**\_CIM-ClusteringSAP**](cim-clusteringsap.md)
 </dt> <dd>
 
-Die [**CIM \_ clusteringsap**](cim-clusteringsap.md) -Klasse stellt die Zugriffspunkte eines Clustering-Dienstanbieter dar.
+Die [**CIM \_ ClusteringSAP-Klasse**](cim-clusteringsap.md) stellt die Zugriffspunkte eines Clusteringdiensts dar.
 
 </dd> <dt>
 
-[**CIM- \_ clusteringservice**](cim-clusteringservice.md)
+[**CIM \_ ClusteringService**](cim-clusteringservice.md)
 </dt> <dd>
 
-Die [**CIM \_ clusteringservice**](cim-clusteringservice.md) -Klasse stellt die Funktionalität dar, die von einem Cluster bereitgestellt wird. Beispielsweise können Failoverfunktionen als Dienst eines Failoverclusters modelliert werden.
+Die [**CIM \_ ClusteringService-Klasse**](cim-clusteringservice.md) stellt die von einem Cluster bereitgestellte Funktionalität dar. Beispielsweise kann die Failoverfunktion als Dienst eines Failoverclusters modelliert werden.
 
 </dd> <dt>
 
-[**CIM \_ clusterserviceaccessbysap**](cim-clusterserviceaccessbysap.md)
+[**\_CIM-ClusterServiceAccessBySAP**](cim-clusterserviceaccessbysap.md)
 </dt> <dd>
 
-Die [**CIM \_ clusterserviceaccessbysap**](cim-clusterserviceaccessbysap.md) -Klasse stellt die Beziehung zwischen einem Clustering-Dienst und seinen Zugriffs Punkten dar.
+Die [**CIM \_ ClusterServiceAccessBySAP-Klasse**](cim-clusterserviceaccessbysap.md) stellt die Beziehung zwischen einem Clusteringdienst und seinen Zugriffspunkten dar.
 
 </dd> <dt>
 
-[**CIM \_ collectedcollections**](cim-collectedcollections.md)
+[**CIM \_ CollectedCollections**](cim-collectedcollections.md)
 </dt> <dd>
 
-Die [**CIM \_ collectedcollections**](cim-collectedcollections.md) -Klasse ist eine Aggregations Zuordnung, die eine Auflistung verwalteter System Elemente (MSE) darstellt, die in einer Auflistung von MSES enthalten sind.
+Die [**CIM \_ CollectedCollections-Klasse**](cim-collectedcollections.md) ist eine Aggregationszuordnung, die eine Auflistung verwalteter Systemelemente (Managed System Elements, MSE) darstellt, die in einer Sammlung von MSEs enthalten sind.
 
 </dd> <dt>
 
-[**CIM \_ collectedmses**](cim-collectedmses.md)
+[**CIM \_ CollectedMSEs**](cim-collectedmses.md)
 </dt> <dd>
 
-Die [**CIM \_ collectedmses**](cim-collectedmses.md) Association-Klasse stellt die Member des Gruppierungs Objekts dar, eine [**CollectionOfMSEs**](cim-collectionofmses.md) -Klasse.
+Die [**CIM \_ CollectedMSEs-Zuordnungsklasse**](cim-collectedmses.md) stellt die Member des Gruppierungsobjekts dar, eine [**CollectionOfMSEs-Klasse.**](cim-collectionofmses.md)
 
 </dd> <dt>
 
 [**CIM \_ CollectionOfMSEs**](cim-collectionofmses.md)
 </dt> <dd>
 
-Das [**CIM \_ CollectionOfMSEs**](cim-collectionofmses.md) -Objekt ermöglicht das Gruppieren von [**CIM \_ ManagedSystemElement**](cim-managedsystemelement.md) -Objekten zum Zweck der Zuordnung von Einstellungen und Konfigurationen. Es ist abstrakt, eine weitere Definition und semantische Optimierung in Unterklassen zu erfordern.
+Das [**CIM \_ CollectionOfMSEs-Objekt**](cim-collectionofmses.md) ermöglicht die Gruppierung von [**CIM \_ ManagedSystemElement-Objekten**](cim-managedsystemelement.md) zum Zuordnen von Einstellungen und Konfigurationen. Es ist abstrakt, eine weitere Definition und semantische Optimierung in Unterklassen zu erfordern.
 
 </dd> <dt>
 
-[**CIM \_ collectionofsensors**](cim-collectionofsensors.md)
+[**CIM \_ CollectionOfSensors**](cim-collectionofsensors.md)
 </dt> <dd>
 
-Die [**CIM \_ collectionofsensors**](cim-collectionofsensors.md) -Zuordnung stellt die binären Sensoren dar, die den Multistate-Sensor bilden.
+Die [**CIM \_ CollectionOfSensors-Zuordnung**](cim-collectionofsensors.md) stellt die binären Sensoren dar, aus denen der Sensor mit mehreren States zusammenfällt.
 
 </dd> <dt>
 
-[**CIM- \_ CollectionSetting**](cim-collectionsetting.md)
+[**CIM \_ CollectionSetting**](cim-collectionsetting.md)
 </dt> <dd>
 
-Die [**CIM \_ CollectionSetting**](cim-collectionsetting.md) -Klasse stellt die Zuordnung zwischen einem [**CIM \_ CollectionOfMSEs**](cim-collectionofmses.md) und der Einstellungs Klasse dar, die für Sie definiert ist.
+Die [**CIM \_ CollectionSetting-Klasse**](cim-collectionsetting.md) stellt die Zuordnung zwischen einer [**CIM \_ CollectionOfMSEs-Klasse**](cim-collectionofmses.md) und der für sie definierten Einstellungsklasse dar.
 
 </dd> <dt>
 
-[**CIM- \_ Kompatibilitäts Produkt**](cim-compatibleproduct.md)
+[**CIM \_ CompatibleProduct**](cim-compatibleproduct.md)
 </dt> <dd>
 
-Die [**CIM \_ compatibleproduct**](cim-compatibleproduct.md) -Klasse stellt eine Zuordnung zwischen Produkten dar, die angibt, ob zwei referenzierte Produkte interoperabel sind, z. b. ob Sie gemeinsam installiert werden können oder ob es sich um den physischen Container für den anderen handeln kann usw.
+Die [**CIM \_ CompatibleProduct-Klasse**](cim-compatibleproduct.md) stellt eine Zuordnung zwischen Produkten dar, die angibt, ob zwei Referenzprodukte interoperabel sind, z. B. ob sie zusammen installiert werden können oder ob eines der physischen Container für das andere sein kann usw.
 
 </dd> <dt>
 
-[**CIM- \_ Komponente**](cim-component.md)
+[**\_CIM-Komponente**](cim-component.md)
 </dt> <dd>
 
-Die [**CIM- \_ Komponenten**](cim-component.md) Zuordnung stellt die Bestandteile einer Beziehung zwischen MSES dar.
+Die [**\_ CIM-Komponentenzuordnung**](cim-component.md) stellt die Teile einer Beziehung zwischen MSEs dar.
 
 </dd> <dt>
 
-[**CIM- \_ Computersystem**](cim-computersystem.md)
+[**CIM \_ ComputerSystem**](cim-computersystem.md)
 </dt> <dd>
 
-Eine [**CIM \_ Computersystem**](cim-computersystem.md) -Klasse stellt eine spezielle Auflistung von [**CIM \_ ManagedSystemElement**](cim-managedsystemelement.md) -Instanzen dar. Diese Sammlung bietet Computerfunktionen und dient als Aggregations Punkt zum Zuordnen eines oder mehrerer der folgenden Elemente: Dateisystem, Betriebssystem, Prozessor und Arbeitsspeicher (flüchtiger und nicht flüchtiger Speicher). Diese Klasse wird vom [**CIM- \_ System**](cim-system.md)abgeleitet.
+Eine [**CIM \_ ComputerSystem-Klasse**](cim-computersystem.md) stellt eine spezielle Sammlung von [**CIM \_ ManagedSystemElement-Instanzen**](cim-managedsystemelement.md) dar. Diese Sammlung bietet Computerfunktionen und dient als Aggregationspunkt, um eines oder mehrere der folgenden Elemente zuzuordnen: Dateisystem, Betriebssystem, Prozessor und Arbeitsspeicher (flüchtiger und nicht flüchtiger Speicher). Diese Klasse wird von [**CIM \_ System**](cim-system.md)abgeleitet.
 
 </dd> <dt>
 
-[**CIM \_ computersystemdma**](cim-computersystemdma.md)
+[**CIM \_ ComputerSystemDMA**](cim-computersystemdma.md)
 </dt> <dd>
 
-Die [**CIM \_ computersystemdma**](cim-computersystemdma.md) -Klasse stellt eine Zuordnung zwischen einem Computersystem und den verfügbaren DMA-Kanälen (Direct Memory Access) dar.
+Die [**CIM \_ ComputerSystemDMA-Klasse**](cim-computersystemdma.md) stellt eine Zuordnung zwischen einem Computersystem und den verfügbaren DMA-Kanälen (Direct Memory Access) dar.
 
 </dd> <dt>
 
-[**CIM \_ computersystemirq**](cim-computersystemirq.md)
+[**CIM \_ ComputerSystemIRQ**](cim-computersystemirq.md)
 </dt> <dd>
 
-Die [**CIM \_ computersystemirq**](cim-computersystemirq.md) -Klasse stellt eine Zuordnung zwischen einem Computersystem und den verfügbaren Interrupt Request Lines (unqs) dar.
+Die [**CIM \_ ComputerSystemIRQ-Klasse**](cim-computersystemirq.md) stellt eine Zuordnung zwischen einem Computersystem und den verfügbaren Interruptanforderungszeilen (IRQs) dar.
 
 </dd> <dt>
 
-[**CIM \_ computersystemmappedio**](cim-computersystemmappedio.md)
+[**CIM \_ ComputerSystemMappedIO**](cim-computersystemmappedio.md)
 </dt> <dd>
 
-Die [**CIM \_ computersystemmappedio**](cim-computersystemmappedio.md) -Klasse stellt eine Zuordnung zwischen einem Computersystem und den verfügbaren Speicher Abbild-e/a-Ports dar.
+Die [**CIM \_ ComputerSystemMappedIO-Klasse**](cim-computersystemmappedio.md) stellt eine Zuordnung zwischen einem Computersystem und den verfügbaren speicherzuordnungen E/A-Ports dar.
 
 </dd> <dt>
 
-[**CIM \_ computersystempackage**](cim-computersystempackage.md)
+[**CIM \_ ComputerSystemPackage**](cim-computersystempackage.md)
 </dt> <dd>
 
-Die [**CIM \_ computersystempackage**](cim-computersystempackage.md) -Klasse stellt eine Zuordnung dar, die explizit die Beziehung zwischen einheitlichen Computersystemen und einem oder mehreren physischen Paketen definiert. Die Zuordnung ähnelt der Art und Weise, in der logische Geräte durch physische Elemente realisiert werden.
+Die [**CIM \_ ComputerSystemPackage-Klasse**](cim-computersystempackage.md) stellt eine Zuordnung dar, die explizit die Beziehung zwischen unitären Computersystemen und einem oder mehreren physischen Paketen definiert. Die Zuordnung ähnelt der Art und Weise, wie logische Geräte durch physische Elemente realisiert werden.
 
 </dd> <dt>
 
-[**CIM \_ computersystemresource**](cim-computersystemresource.md)
+[**CIM \_ ComputerSystemResource**](cim-computersystemresource.md)
 </dt> <dd>
 
-Die [**CIM \_ computersystemresource**](cim-computersystemresource.md) -Klasse stellt eine Zuordnung zwischen einem Computersystem und den verfügbaren Systemressourcen dar.
+Die [**CIM \_ ComputerSystemResource-Klasse**](cim-computersystemresource.md) stellt eine Zuordnung zwischen einem Computersystem und den verfügbaren Systemressourcen dar.
 
 </dd> <dt>
 
-[**CIM- \_ Konfiguration**](cim-configuration.md)
+[**\_CIM-Konfiguration**](cim-configuration.md)
 </dt> <dd>
 
-Das [**CIM- \_ Konfigurations**](cim-configuration.md) Objekt ermöglicht die Gruppierung von Parametersätzen (definiert in [**CIM- \_ Einstellungs**](cim-setting.md) Objekten) und Abhängigkeiten für ein oder mehrere verwaltete Systemelemente.
+Das [**\_ CIM-Konfigurationsobjekt**](cim-configuration.md) ermöglicht die Gruppierung von Parametersätzen (definiert in [**CIM \_ Setting-Objekten)**](cim-setting.md) und Abhängigkeiten für ein oder mehrere verwaltete Systemelemente.
 
 </dd> <dt>
 
-[**CIM \_ connectedto**](cim-connectedto.md)
+[**CIM \_ ConnectedTo**](cim-connectedto.md)
 </dt> <dd>
 
-Die [**CIM \_ connectedto**](cim-connectedto.md) -Klasse stellt eine Zuordnung dar, die angibt, dass zwei oder mehr physische Connectors verbunden sind.
+Die [**\_ CIM ConnectedTo-Klasse**](cim-connectedto.md) stellt eine Zuordnung dar, die angibt, dass zwei oder mehr physische Connectors verbunden sind.
 
 </dd> <dt>
 
-[**CIM \_ connectorionpackage**](cim-connectoronpackage.md)
+[**CIM \_ ConnectorOnPackage**](cim-connectoronpackage.md)
 </dt> <dd>
 
-Die [**CIM \_ connectoronpackage**](cim-connectoronpackage.md) -Klasse stellt eine Zuordnung dar, die die Einschluss Beziehung zwischen Connectors und Paketen explizit macht. Physische Pakete enthalten Connectors und andere physische Elemente.
+Die [**CIM \_ ConnectorOnPackage-Klasse**](cim-connectoronpackage.md) stellt eine Zuordnung dar, die die Einschlussbeziehung zwischen Connectors und Paketen explizit macht. Physische Pakete enthalten Connectors sowie andere physische Elemente.
 
 </dd> <dt>
 
-[**CIM- \_ Container**](cim-container.md)
+[**\_CIM-Container**](cim-container.md)
 </dt> <dd>
 
-Die [**CIM- \_ Container**](cim-container.md) Klasse stellt eine Zuordnung zwischen einem enthaltenen und einem enthaltenden physischen Element dar. Ein enthaltende Objekt muss ein physisches Paket sein.
+Die [**CIM \_ Container-Klasse**](cim-container.md) stellt eine Zuordnung zwischen einem enthaltenen und einem enthaltenden physischen Element dar. Ein enthaltenes -Objekt muss ein physisches Paket sein.
 
 </dd> <dt>
 
-[**CIM- \_ controlledby**](cim-controlledby.md)
+[**CIM \_ ControlledBy**](cim-controlledby.md)
 </dt> <dd>
 
-Die [**CIM \_ controlledby**](cim-controlledby.md) -Beziehung gibt an, welche Geräte von dem logischen Controller Gerät befohlen werden bzw. darauf zugreifen.
+Die [**CIM \_ ControlledBy-Beziehung**](cim-controlledby.md) gibt an, welche Geräte vom logischen Controllergerät gesteuert werden oder über das darauf zugegriffen wird.
 
 </dd> <dt>
 
-[**CIM- \_ Controller**](cim-controller.md)
+[**\_CIM-Controller**](cim-controller.md)
 </dt> <dd>
 
-Die [**CIM- \_ Controller**](cim-controller.md) Klasse ist eine übergeordnete Klasse zum Gruppieren von verschiedenen Steuerelement bezogenen Geräten. Beispiele für Controller sind SCSI-Controller, USB-Controller und serielle Controller.
+Die [**CIM \_ Controller-Klasse**](cim-controller.md) ist eine übergeordnete Klasse zum Gruppieren verschiedener steuerelementbezogener Geräte. Beispiele für Controller sind SCSI-Controller, USB-Controller und serielle Controller.
 
 </dd> <dt>
 
-[**CIM \_ coolingdevice**](cim-coolingdevice.md)
+[**\_CIM-KühlungGeräte**](cim-coolingdevice.md)
 </dt> <dd>
 
-Die [**CIM \_ coolingdevice**](cim-coolingdevice.md) -Klasse stellt die Funktionen und die Verwaltung von Kühlgeräten dar.
+Die [**CIM \_ CoolingDevice-Klasse**](cim-coolingdevice.md) stellt die Funktionen und die Verwaltung von Kühlgeräten dar.
 
 </dd> <dt>
 
-[**CIM- \_ copyfileaction**](cim-copyfileaction.md)
+[**CIM \_ CopyFileAction**](cim-copyfileaction.md)
 </dt> <dd>
 
-Die [**CIM \_ copyfileaction**](cim-copyfileaction.md) -Klasse stellt das Verschieben oder Kopieren von Dateien von einem Computersystem an einen neuen Speicherort dar.
+Die [**CIM \_ CopyFileAction-Klasse**](cim-copyfileaction.md) stellt das Verschieben oder Kopieren von Dateien von einem Computersystem an einen neuen Speicherort dar.
 
 </dd> <dt>
 
-[**CIM- \_ Aktion**](cim-createdirectoryaction.md)
+[**CIM \_ CreateDirectoryAction**](cim-createdirectoryaction.md)
 </dt> <dd>
 
-Die CIM-Klasse " [**\_ kreatedirectoryaction**](cim-createdirectoryaction.md) " erstellt leere Verzeichnisse für Software Elemente, die lokal installiert werden sollen.
+Die [**CIM \_ CreateDirectoryAction-Klasse**](cim-createdirectoryaction.md) erstellt leere Verzeichnisse für Softwareelemente, die lokal installiert werden sollen.
 
 </dd> <dt>
 
 [**CIM \_ CurrentSensor**](cim-currentsensor.md)
 </dt> <dd>
 
-Die [**CIM \_ CurrentSensor**](cim-currentsensor.md) -Klasse ist für die Abwärtskompatibilität mit früheren CIM-Schema Definitionen vorhanden.
+Die [**CIM \_ CurrentSensor-Klasse**](cim-currentsensor.md) ist aus Gründen der Abwärtskompatibilität mit früheren CIM-Schemadefinitionen vorhanden.
 
 </dd> <dt>
 
-[**CIM- \_ Datendatei**](cim-datafile.md)
+[**CIM \_ DataFile**](cim-datafile.md)
 </dt> <dd>
 
-Die [**CIM \_ DataFile**](cim-datafile.md) -Klasse stellt eine benannte Auflistung von Daten oder ausführbarem Code dar. Es werden nur Instanzen von Dateien auf lokalen Festplatten Datenträgern zurückgegeben.
+Die [**CIM \_ DataFile-Klasse**](cim-datafile.md) stellt eine benannte Auflistung von Daten oder ausführbarem Code dar. Es werden nur Instanzen von Dateien auf lokalen Festplatten zurückgegeben.
 
 </dd> <dt>
 
-[**CIM- \_ Abhängigkeit**](cim-dependency.md)
+[**\_CIM-Abhängigkeit**](cim-dependency.md)
 </dt> <dd>
 
-Die [**CIM- \_ Abhängigkeits**](cim-dependency.md) Klasse stellt eine Zuordnung dar, die Abhängigkeitsbeziehungen zwischen Objekten herstellt.
+Die [**\_ CIM-Abhängigkeitsklasse**](cim-dependency.md) stellt eine Zuordnung dar, die Abhängigkeitsbeziehungen zwischen Objekten herstellt.
 
 </dd> <dt>
 
-[**CIM \_ dependencycontext**](cim-dependencycontext.md)
+[**CIM \_ DependencyContext**](cim-dependencycontext.md)
 </dt> <dd>
 
-Die [**CIM \_ dependencycontext**](cim-dependencycontext.md) -Beziehung ordnet eine [**CIM- \_ Abhängigkeits**](cim-dependency.md) Klasse einem oder mehreren [**CIM- \_ Konfigurations**](cim-configuration.md) Objekten zu. Beispielsweise können die Abhängigkeiten eines Computer Systems je nach Netzwerk, an das das System angefügt ist, geändert werden.
+Die [**CIM \_ DependencyContext-Beziehung**](cim-dependencycontext.md) ordnet eine [**\_ CIM-Abhängigkeitsklasse**](cim-dependency.md) einem oder [**mehreren \_ CIM-Konfigurationsobjekten**](cim-configuration.md) zu. Beispielsweise können sich die Abhängigkeiten eines Computersystems basierend auf dem Netzwerk ändern, an das das System angefügt ist.
 
 </dd> <dt>
 
-[**CIM- \_ Desktop Monitor**](cim-desktopmonitor.md)
+[**CIM \_ DesktopMonitor**](cim-desktopmonitor.md)
 </dt> <dd>
 
-Die [**CIM \_ Desktopmonitor**](cim-desktopmonitor.md) -Klasse stellt die Funktionen und die Verwaltung des logischen CRT-Geräts (Desktop Monitor) dar.
+Die [**CIM \_ DesktopMonitor-Klasse**](cim-desktopmonitor.md) stellt die Funktionen und die Verwaltung des logischen Desktopmonitorgeräts (CRT) dar.
 
 </dd> <dt>
 
-[**CIM \_ deviceaccessedbyfile**](cim-deviceaccessedbyfile.md)
+[**CIM \_ DeviceAccessedByFile**](cim-deviceaccessedbyfile.md)
 </dt> <dd>
 
-Die [**CIM \_ deviceaccessedbyfile**](cim-deviceaccessedbyfile.md) -Zuordnungs Klasse gibt das logische Gerät an, auf das über die [**CIM \_ Devicefile**](cim-devicefile.md) -Klasse zugegriffen wird.
+Die [**CIM \_ DeviceAccessedByFile-Zuordnungsklasse**](cim-deviceaccessedbyfile.md) gibt das logische Gerät an, auf das mit der [**CIM \_ DeviceFile-Klasse**](cim-devicefile.md) zugegriffen wird, auf die verwiesen wird.
 
 </dd> <dt>
 
-[**CIM-Geräte \_ Steuerung**](cim-deviceconnection.md)
+[**CIM \_ DeviceConnection**](cim-deviceconnection.md)
 </dt> <dd>
 
-Die [**CIM- \_ deviceconnetction**](cim-deviceconnection.md) -Zuordnungs Klasse stellt zwei oder mehr verbundene Geräte dar.
+Die [**CIM \_ DeviceConnection-Zuordnungsklasse**](cim-deviceconnection.md) stellt zwei oder mehr verbundene Geräte dar.
 
 </dd> <dt>
 
-[**CIM \_ deviceerrorcounts**](cim-deviceerrorcounts.md)
+[**CIM \_ DeviceErrorCounts**](cim-deviceerrorcounts.md)
 </dt> <dd>
 
-Die [**CIM \_ deviceerrorcounts**](cim-deviceerrorcounts.md) -Klasse ist eine statistische Klasse, die Fehler bezogene Leistungsindikatoren für ein logisches Gerät enthält. Die Fehlertypen werden von CCITT (REC X. 733) und ISO (IEC 10164-4) definiert.
+Die [**CIM \_ DeviceErrorCounts-Klasse**](cim-deviceerrorcounts.md) ist eine statistische Klasse, die fehlerbezogene Leistungsindikatoren für ein logisches Gerät enthält. Die Fehlertypen werden durch CCITT (Rec X.733) und ISO (IEC 10164-4) definiert.
 
 </dd> <dt>
 
-[**CIM- \_ Devicefile**](cim-devicefile.md)
+[**CIM \_ DeviceFile**](cim-devicefile.md)
 </dt> <dd>
 
-Die [**CIM \_ Devicefile**](cim-devicefile.md) -Klasse stellt einen logischen Dateityp dar, der ein Gerät darstellt. Diese Konvention eignet sich für Betriebssysteme, die Geräte mit einem Bytestream-e/a-Modell verwalten. Das logische Gerät, das dieser Datei zugeordnet ist, wird mithilfe der [**CIM \_ deviceaccessedbyfile**](cim-deviceaccessedbyfile.md) -Beziehung angegeben.
+Die [**CIM \_ DeviceFile-Klasse**](cim-devicefile.md) stellt einen Typ logischer Datei dar, der ein Gerät darstellt. Diese Konvention ist für Betriebssysteme nützlich, die Geräte mit einem Bytestream-E/A-Modell verwalten. Das logische Gerät, das dieser Datei zugeordnet ist, wird mithilfe der [**CIM \_ DeviceAccessedByFile-Beziehung**](cim-deviceaccessedbyfile.md) angegeben.
 
 </dd> <dt>
 
-[**CIM-Geräte \_ Implementierung**](cim-devicesapimplementation.md)
+[**CIM \_ DeviceSAPImplementation**](cim-devicesapimplementation.md)
 </dt> <dd>
 
-Die [**CIM-Klasse \_ devicesapimplementation**](cim-devicesapimplementation.md) stellt eine Zuordnung zwischen einem Dienst Zugriffspunkt (SAP) und der Art der Implementierung dar. Wenn einem SAP Viele logische Geräte zugeordnet sind, werden die Elemente zusammen mit dem Zugriffspunkt bereitgestellt. Wenn verschiedene Implementierungen eines SAP vorhanden sind, führt jede Implementierung zu einzelnen Instanziierungen des SAP-Objekts.
+Die [**CIM \_ DeviceSAPImplementation-Klasse**](cim-devicesapimplementation.md) stellt eine Zuordnung zwischen einem Dienstzugriffspunkt (SAP) und seiner Implementierung dar. Wenn viele logische Geräte einem SAP zugeordnet sind, arbeiten die Elemente zusammen, um den Zugriffspunkt bereitzustellen. Wenn unterschiedliche Implementierungen eines SAP vorhanden sind, führt jede Implementierung zu einzelnen Instanziierungen des SAP-Objekts.
 
 </dd> <dt>
 
-[**CIM-Geräte \_ Erweiterung**](cim-deviceserviceimplementation.md)
+[**CIM \_ DeviceServiceImplementation**](cim-deviceserviceimplementation.md)
 </dt> <dd>
 
-Die [**CIM- \_ deviceserviceimplementation**](cim-deviceserviceimplementation.md) -Klasse stellt eine Zuordnung zwischen einem Dienst und seiner Implementierung dar. Wenn mehrere Geräte einem Dienst zugeordnet sind, werden die Elemente zusammen verwendet, um den Dienst bereitzustellen. Wenn verschiedene Implementierungen eines Dienstanbieter vorhanden sind, führt jede Implementierung zu einzelnen Instanziierungen des Dienst Objekts.
+Die [**CIM \_ DeviceServiceImplementation-Klasse**](cim-deviceserviceimplementation.md) stellt eine Zuordnung zwischen einem Dienst und seiner Implementierung dar. Wenn mehrere Geräte einem Dienst zugeordnet sind, werden die Elemente zusammen ausgeführt, um den Dienst bereitzustellen. Wenn unterschiedliche Implementierungen eines Diensts vorhanden sind, führt jede Implementierung zu einzelnen Instanziierungen des Dienstobjekts.
 
 </dd> <dt>
 
-[**CIM-Geräte \_ Abteilung**](cim-devicesoftware.md)
+[**CIM \_ DeviceSoftware**](cim-devicesoftware.md)
 </dt> <dd>
 
-Die [**CIM- \_ devicesoftware**](cim-devicesoftware.md) -Beziehung identifiziert Software, die einem Gerät zugeordnet ist, z. b. Treiber, Konfigurations-oder Anwendungssoftware oder Firmware.
+Die [**Cim \_ DeviceSoftware-Beziehung**](cim-devicesoftware.md) identifiziert Software, die einem Gerät zugeordnet ist, z. B. Treiber, Konfigurations- oder Anwendungssoftware oder Firmware.
 
 </dd> <dt>
 
-[**CIM- \_ Verzeichnis**](cim-directory.md)
+[**\_CIM-Verzeichnis**](cim-directory.md)
 </dt> <dd>
 
-Die [**CIM- \_ Verzeichnis**](cim-directory.md) Klasse stellt einen Dateityp dar, der die darin enthaltenen Datendateien logisch gruppiert und Pfadinformationen für die gruppierten Dateien bereitstellt.
+Die [**CIM \_ Directory-Klasse**](cim-directory.md) stellt einen Dateityp dar, der die darin enthaltenen Datendateien logisch gruppiert und Pfadinformationen für die gruppierten Dateien bereitstellt.
 
 </dd> <dt>
 
-[**CIM \_ Director Action**](cim-directoryaction.md)
+[**CIM \_ DirectoryAction**](cim-directoryaction.md)
 </dt> <dd>
 
-Die [**abstrakte \_ directoryaction**](cim-directoryaction.md) -Klasse wird Verzeichnisse verwaltet. Die Verzeichnis Erstellung wird von der CIM-Klasse " [**\_ kreatedirectoryaction**](cim-createdirectoryaction.md) " verarbeitet, und die Verzeichnis Entfernung erfolgt durch die [**CIM- \_ removedirectoryaction**](cim-removedirectoryaction.md) -Klasse.
+Die abstrakte [**\_ CIM DirectoryAction-Klasse**](cim-directoryaction.md) verwaltet Verzeichnisse. Die Verzeichniserstellung wird von der [**CIM \_ CreateDirectoryAction-Klasse**](cim-createdirectoryaction.md) und das Entfernen des Verzeichnisses von der [**CIM \_ RemoveDirectoryAction-Klasse**](cim-removedirectoryaction.md) durchgeführt.
 
 </dd> <dt>
 
-[**CIM \_ directoriykontainsfile**](cim-directorycontainsfile.md)
+[**CIM \_ DirectoryContainsFile**](cim-directorycontainsfile.md)
 </dt> <dd>
 
-Die [**CIM \_ directorykontainsfile**](cim-directorycontainsfile.md) -Klasse stellt eine Zuordnung zwischen einem Verzeichnis und den Dateien dar, die in diesem Verzeichnis enthalten sind.
+Die [**CIM \_ DirectoryContainsFile-Klasse**](cim-directorycontainsfile.md) stellt eine Zuordnung zwischen einem Verzeichnis und dateien dar, die in diesem Verzeichnis enthalten sind.
 
 </dd> <dt>
 
-[**CIM- \_ directspecification**](cim-directoryspecification.md)
+[**CIM \_ DirectorySpecification**](cim-directoryspecification.md)
 </dt> <dd>
 
-Die [**CIM- \_ directoryspecification**](cim-directoryspecification.md) -Klasse erfasst die Hauptverzeichnis Struktur eines Software Elements. Diese Klasse wird verwendet, um die Dateien eines Software Elements in verwaltbaren Einheiten zu organisieren, die auf einem Computersystem verschoben werden können.
+Die [**CIM \_ DirectorySpecification-Klasse**](cim-directoryspecification.md) erfasst die Hauptverzeichnisstruktur eines Softwareelements. Diese Klasse wird verwendet, um die Dateien eines Softwareelements in verwaltbare Einheiten zu organisieren, die auf einem Computersystem verschoben werden können.
 
 </dd> <dt>
 
-[**CIM \_ directoriyspecificationfile**](cim-directoryspecificationfile.md)
+[**CIM \_ DirectorySpecificationFile**](cim-directoryspecificationfile.md)
 </dt> <dd>
 
-Die [**CIM- \_ directoryspecificationfile-Zuordnung**](cim-directoryspecificationfile.md) stellt das Verzeichnis dar, das die Datei enthält, die durch Verweisen auf die CIM- [**\_ directoryspecification**](cim-directoryspecification.md) -Klasse angegeben wird.
+Die [**CIM \_ DirectorySpecificationFile-Zuordnung**](cim-directoryspecificationfile.md) stellt das Verzeichnis dar, das die durch Verweisen auf die [**CIM \_ DirectorySpecification-Klasse**](cim-directoryspecification.md) angegebene Datei enthält.
 
 </dd> <dt>
 
-[**CIM \_ diskretesensor**](cim-discretesensor.md)
+[**CIM \_ DiscreteSensor**](cim-discretesensor.md)
 </dt> <dd>
 
-Die [**CIM \_ diskretesensor**](cim-discretesensor.md) -Klasse verfügt über einen Satz gültiger Zeichen folgen Werte, die Sie melden kann. Die Werte werden in der **PossibleValues** -Eigenschaft des Sensors aufgelistet. Ein diskreter Sensor verfügt immer über einen aktuellen Lesevorgang, der einem der-Enumerationswerte entspricht.
+Die [**CIM \_ DiscreteSensor-Klasse**](cim-discretesensor.md) verfügt über einen Satz von rechtlichen Zeichenfolgenwerten, die sie melden kann. Die Werte werden in der **PossibleValues-Eigenschaft** des Sensors aufzählt. Ein diskreter Sensor verfügt immer über einen aktuellen Messwert, der einem der aufzählten Werte entspricht.
 
 </dd> <dt>
 
-[**CIM- \_ diskdrive**](cim-diskdrive.md)
+[**CIM \_ DiskDrive**](cim-diskdrive.md)
 </dt> <dd>
 
-Die [**CIM \_ diskdrive**](cim-diskdrive.md) -Klasse stellt ein physisches Laufwerk dar, das vom Betriebssystem erkannt wird. Die Festplattenlaufwerke entsprechen den logischen und Verwaltungs Merkmalen des Laufwerks, und in manchen Fällen werden die physischen Merkmale des Geräts möglicherweise nicht angezeigt. Eine Schnittstelle zu einem physischen Laufwerk ist ein Member dieser Klasse. Ein Objekt, das auf einem anderen logischen Gerät basiert, ist jedoch kein Member dieser Klasse.
+Die [**CIM \_ DiskDrive-Klasse**](cim-diskdrive.md) stellt ein physisches Laufwerk dar, das vom Betriebssystem aus gesehen wird. Die Datenträgerfeatures entsprechen den logischen und Verwaltungsmerkmalen des Laufwerks und spiegeln in einigen Fällen möglicherweise nicht die physischen Merkmale des Geräts wider. Eine Schnittstelle zu einem physischen Laufwerk ist ein Member dieser Klasse. Ein Objekt, das auf einem anderen logischen Gerät basiert, ist jedoch kein Member dieser Klasse.
 
 </dd> <dt>
 
-[**CIM- \_ Diskettelaufwerk**](cim-diskettedrive.md)
+[**CIM \_ DisketteDrive**](cim-diskettedrive.md)
 </dt> <dd>
 
-Die [**CIM \_ diskettedrive**](cim-diskettedrive.md) -Klasse stellt die Funktionen und die Verwaltung eines Disketten Laufwerks dar.
+Die [**CIM \_ DisketteDrive-Klasse**](cim-diskettedrive.md) stellt die Funktionen und die Verwaltung eines Diskettenlaufwerks dar.
 
 </dd> <dt>
 
-[**CIM \_ Diskpartition**](cim-diskpartition.md)
+[**CIM \_ DiskPartition**](cim-diskpartition.md)
 </dt> <dd>
 
-Die [**CIM \_ Diskpartition**](cim-diskpartition.md) -Klasse stellt einen zusammenhängenden Bereich logischer Blöcke dar, der vom Betriebssystem mithilfe der Felder Typ und Untertyp der Partition identifiziert werden kann. Datenträger Partitionen sollten direkt durch physische Medien (angegeben durch die [**CIM- \_**](cim-realizesdiskpartition.md) Neuzuordnung) oder auf Speichervolumes erstellt werden.
+Die [**CIM \_ DiskPartition-Klasse**](cim-diskpartition.md) stellt einen zusammenhängenden Bereich logischer Blöcke dar, der vom Betriebssystem anhand der Felder typ und subtype der Partition identifiziert werden kann. Datenträgerpartitionen sollten direkt durch physische Medien (angegeben durch die [**CIM \_ RealizesDiskPartition-Zuordnung)**](cim-realizesdiskpartition.md) oder auf Speichervolumes erstellt werden.
 
 </dd> <dt>
 
-[**CIM \_ diskspacecheck**](cim-diskspacecheck.md)
+[**CIM \_ DiskSpaceCheck**](cim-diskspacecheck.md)
 </dt> <dd>
 
-Die [**CIM \_ diskspacecheck**](cim-diskspacecheck.md) -Klasse überprüft die Menge an verfügbarem Speicherplatz des Systems und gibt Sie in der **AvailableDiskSpace** -Eigenschaft an. Details werden mit dem Wert in der **AvailableSpace** -Eigenschaft des [**CIM- \_ Dateisystem**](cim-filesystem.md) Objekts verglichen, das dem [**CIM \_ Computersystem**](cim-computersystem.md) -Objekt zugeordnet ist, in dem die Systemumgebung beschrieben wird. Wenn der Wert der **AvailableSpace** -Eigenschaft größer oder gleich dem Wert ist, der in der **AvailableDiskSpace** -Eigenschaft angegeben ist, wird die Bedingung erfüllt.
+Die [**CIM \_ DiskSpaceCheck-Klasse**](cim-diskspacecheck.md) überprüft den verfügbaren Speicherplatz des Systems und gibt ihn in der **AvailableDiskSpace-Eigenschaft** an. Details werden mit dem Wert in der **AvailableSpace-Eigenschaft** des [**CIM \_ FileSystem-Objekts**](cim-filesystem.md) verglichen, das dem [**\_ CIM-ComputerSystem-Objekt**](cim-computersystem.md) zugeordnet ist, das die Systemumgebung beschreibt. Wenn der Wert der **AvailableSpace-Eigenschaft** größer oder gleich dem in der **AvailableDiskSpace-Eigenschaft** angegebenen Wert ist, wird die Bedingung erfüllt.
 
 </dd> <dt>
 
-[**CIM- \_ Anzeige**](cim-display.md)
+[**\_CIM-Anzeige**](cim-display.md)
 </dt> <dd>
 
-Die [**CIM- \_ Anzeige**](cim-display.md) Klasse ist eine übergeordnete Klasse zum Gruppieren von verschiedenen Anzeigegeräten.
+Die [**CIM \_ Display-Klasse**](cim-display.md) ist eine übergeordnete Klasse zum Gruppieren verschiedener Anzeigegeräte.
 
 </dd> <dt>
 
-[**CIM \_ DMA**](cim-dma.md)
+[**\_CIM-DMA**](cim-dma.md)
 </dt> <dd>
 
-Die [**CIM- \_ DMA**](cim-dma.md) -Klasse stellt die Computerarchitektur für den direkten Speicherzugriff (DMA) dar.
+Die [**\_ CIM-DMA-Klasse**](cim-dma.md) stellt den direkten Arbeitsspeicherzugriff (DMA) der Computerarchitektur dar.
 
 </dd> <dt>
 
-[**CIM \_ angedockt**](cim-docked.md)
+[**CIM \_ andockt**](cim-docked.md)
 </dt> <dd>
 
-Die in [**CIM \_ angedockte**](cim-docked.md) Zuordnung stellt die Beziehung zwischen zwei Chassis dar. Beispielsweise kann ein Laptop (ein Typ von Chassis) an einer Docking Station (einem anderen Typ von Chassis) angedockt werden. Diese typische Beziehung wird explizit beschrieben.
+Die [**\_ ANGED-Zuordnung**](cim-docked.md) stellt die Beziehung zwischen zwei Gehäusen dar. Beispielsweise kann ein Laptop (ein Gehäusetyp) an eine Andockstation (eine andere Art von Gehäuse) angedockt werden. Diese typische Beziehung wird explizit beschrieben.
 
 </dd> <dt>
 
-[**CIM- \_ Element Kapazität**](cim-elementcapacity.md)
+[**\_CIM-ElementCapacity**](cim-elementcapacity.md)
 </dt> <dd>
 
-Die [**CIM \_ elementcapacity**](cim-elementcapacity.md) -Klasse ordnet ein [**CIM \_ physicalcapacity**](cim-physicalcapacity.md) -Objekt einem oder mehreren physischen Elementen zu. Es ordnet eine Beschreibung der minimalen und maximalen Hardwareanforderungen (bzw.-Funktionen) den physischen Elementen zu, die beschrieben werden.
+Die [**\_ CIM-ElementCapacity-Klasse**](cim-elementcapacity.md) ordnet ein [**CIM \_ PhysicalCapacity-Objekt**](cim-physicalcapacity.md) einem oder mehrere physischen Elementen zu. Sie ordnet den beschriebenen physischen Elementen eine Beschreibung der minimalen und maximalen Hardwareanforderungen (oder Funktionen) zu.
 
 </dd> <dt>
 
-[**CIM- \_ Element Konfiguration**](cim-elementconfiguration.md)
+[**\_CIM-ElementKonfiguration**](cim-elementconfiguration.md)
 </dt> <dd>
 
-Die [**CIM- \_ ElementConfiguration**](cim-elementconfiguration.md) -Zuordnung verknüpft ein [**CIM- \_ Konfigurations**](cim-configuration.md) Objekt mit einem oder mehreren verwalteten Systemelementen. Das **CIM- \_ Konfigurations** Objekt stellt ein bestimmtes Verhalten oder einen gewünschten funktionalen Zustand für das zugeordnete [**CIM \_ ManagedSystemElement**](cim-managedsystemelement.md)dar.
+Die [**\_ CIM-ElementConfiguration-Zuordnung**](cim-elementconfiguration.md) bezieht ein [**\_ CIM-Konfigurationsobjekt**](cim-configuration.md) auf ein oder mehrere verwaltete Systemelemente. Das **\_ CIM-Konfigurationsobjekt** stellt ein bestimmtes Verhalten oder einen gewünschten Funktionszustand für das zugeordnete [**CIM \_ ManagedSystemElement dar.**](cim-managedsystemelement.md)
 
 </dd> <dt>
 
-[**CIM- \_ Element Setting**](cim-elementsetting.md)
+[**\_CIM-ElementSetting**](cim-elementsetting.md)
 </dt> <dd>
 
-Die [**CIM- \_ ElementSetting**](cim-elementsetting.md) -Klasse stellt die Zuordnung zwischen verwalteten Systemelementen und der Einstellungs Klasse dar, die für Sie definiert ist.
+Die [**\_ CIM-ElementSetting-Klasse**](cim-elementsetting.md) stellt die Zuordnung zwischen verwalteten Systemelementen und der für sie definierten Einstellungsklasse dar.
 
 </dd> <dt>
 
-[**CIM- \_ elementslinked**](cim-elementslinked.md)
+[**\_CIM-ElementeVerknlinkt**](cim-elementslinked.md)
 </dt> <dd>
 
-Die [**CIM \_ elementslinked**](cim-elementslinked.md) Association stellt physische Elemente dar, die von einem physischen Link miteinander verkabelt werden.
+Die [**ZUORDNUNG CIM \_ ElementsLinked**](cim-elementslinked.md) stellt physische Elemente dar, die über eine physische Verbindung miteinander verkabelt werden.
 
 </dd> <dt>
 
-[**CIM \_ errorcountersfordevice**](cim-errorcountersfordevice.md)
+[**CIM \_ ErrorCountersForDevice**](cim-errorcountersfordevice.md)
 </dt> <dd>
 
-Die [**CIM-Klasse \_ errorcountersfordevice**](cim-errorcountersfordevice.md) ordnet dem logischen Gerät, auf das Sie angewendet wird, die [**CIM \_ deviceerrorcounts**](cim-deviceerrorcounts.md) -Klasse zu.
+Die [**\_ CIM-Klasse ErrorCountersForDevice**](cim-errorcountersfordevice.md) ordnet die [**CIM \_ DeviceErrorCounts-Klasse**](cim-deviceerrorcounts.md) dem logischen Gerät zu, auf das sie angewendet wird.
 
 </dd> <dt>
 
-[**CIM \_ executeprogram**](cim-executeprogram.md)
+[**CIM \_ ExecuteProgram**](cim-executeprogram.md)
 </dt> <dd>
 
-Die [**CIM \_ executeprogram**](cim-executeprogram.md) -Klasse stellt Dateien dar, die auf dem System ausgeführt werden können, auf dem das Softwareelement installiert ist.
+Die [**CIM \_ ExecuteProgram-Klasse**](cim-executeprogram.md) stellt Dateien dar, die auf dem System ausgeführt werden können, auf dem das Softwareelement installiert ist.
 
 </dd> <dt>
 
-[**CIM- \_ Export**](cim-export.md)
+[**\_CIM-Export**](cim-export.md)
 </dt> <dd>
 
-Die [**CIM- \_ Export**](cim-export.md) Klasse stellt eine Zuordnung zwischen einem lokalen Dateisystem und den zugehörigen Verzeichnissen dar, die angeben, dass die angegebenen Verzeichnisse zum Einbinden verfügbar sind. Beim Exportieren eines vollständigen Dateisystems sollte das Verzeichnis auf das oberste Verzeichnis des Dateisystems verweisen.
+Die [**CIM \_ Export-Klasse**](cim-export.md) stellt eine Zuordnung zwischen einem lokalen Dateisystem und seinen Verzeichnissen dar, die angeben, dass die angegebenen Verzeichnisse für die Bereitstellung verfügbar sind. Beim Exportieren eines gesamten Dateisystems sollte das Verzeichnis auf das oberste Verzeichnis des Dateisystems verweisen.
 
 </dd> <dt>
 
-[**CIM \_ extracapacitygroup**](cim-extracapacitygroup.md)
+[**CIM \_ ExtraCapacityGroup**](cim-extracapacitygroup.md)
 </dt> <dd>
 
-Die [**CIM \_ extracapacitygroup**](cim-extracapacitygroup.md) -Klasse wird von einer Redundanz Gruppe abgeleitet, die angibt, dass die aggregierten Elemente mehr Kapazität oder mehr Kapazität aufweisen, als erforderlich sind. Ein Beispiel für diese Art von Redundanz ist die Installation von N + 1 Stromversorgungen oder Lüfter in einem System.
+Die [**CIM \_ ExtraCapacityGroup-Klasse**](cim-extracapacitygroup.md) wird von einer Redundanzgruppe abgeleitet, die angibt, dass die aggregierten Elemente über mehr Kapazität oder Funktionalität verfügen, als erforderlich ist. Ein Beispiel für diese Art von Redundanz ist die Installation von N+1-Netzteilen oder Lüftern in einem System.
 
 </dd> <dt>
 
-[**CIM- \_ Lüfter**](cim-fan.md)
+[**\_CIM-Lüfter**](cim-fan.md)
 </dt> <dd>
 
-Die [**CIM- \_ Lüfter**](cim-fan.md) -Klasse stellt die Funktionen und die Verwaltung eines Lüfter-kühl Geräts dar.
+Die [**\_ CIM-Lüfterklasse**](cim-fan.md) stellt die Funktionen und die Verwaltung eines Lüfter-Kühlgeräts dar.
 
 </dd> <dt>
 
-[**CIM- \_ fileaction**](cim-fileaction.md)
+[**CIM \_ FileAction**](cim-fileaction.md)
 </dt> <dd>
 
-Mit der [**CIM \_ fileaction**](cim-fileaction.md) -Klasse kann der Autor Dateien suchen, die bereits auf dem Computer eines Benutzers vorhanden sind, und diese Dateien dann verschieben oder an einen neuen Speicherort kopieren.
+Mit [**der CIM \_ FileAction-Klasse**](cim-fileaction.md) kann der Autor Dateien suchen, die bereits auf dem Computer eines Benutzers vorhanden sind, und diese Dateien dann an einen neuen Speicherort verschieben oder kopieren.
 
 </dd> <dt>
 
-[**CIM- \_ Datei Spezifikation**](cim-filespecification.md)
+[**\_CIM-DateiSpezifizierung**](cim-filespecification.md)
 </dt> <dd>
 
-Die [**CIM- \_ filespecification**](cim-filespecification.md) -Klasse stellt eine Datei dar, die sich entweder in einem oder aus dem System befindet. Die Datei befindet sich in dem Verzeichnis, das durch die [**CIM \_ Director yspecificationfile-Zuordnung**](cim-directoryspecificationfile.md) identifiziert wird. Die [**Aufruf**](invoke-method-in-class-cim-filespecification.md) Methode verwendet die Informationen, um zu überprüfen, ob die Datei vorhanden ist. Beachten Sie, dass Eigenschaften mit einem **null** -Wert nicht geprüft werden.
+Die [**CIM \_ FileSpecification-Klasse**](cim-filespecification.md) stellt eine Datei dar, die sich entweder ein- oder aus dem System befindet. Die Datei befindet sich in dem Verzeichnis, das durch die [**CIM \_ DirectorySpecificationFile-Zuordnung identifiziert**](cim-directoryspecificationfile.md) wird. Die [**Invoke-Methode**](invoke-method-in-class-cim-filespecification.md) verwendet die Informationen, um das Vorhandensein der Datei zu überprüfen. Beachten Sie, dass Eigenschaften mit **einem NULL-Wert** nicht überprüft werden.
 
 </dd> <dt>
 
-[**CIM- \_ FileStorage**](cim-filestorage.md)
+[**CIM \_ FileStorage**](cim-filestorage.md)
 </dt> <dd>
 
-Die [**CIM- \_ FileStorage**](cim-filestorage.md) -Zuordnung verknüpft das Dateisystem und die logischen Dateien, die über das Dateisystem adressiert werden.
+Die [**CIM \_ FileStorage-Zuordnung**](cim-filestorage.md) verknüpft das Dateisystem und die logischen Dateien, die über das Dateisystem adressiert werden.
 
 </dd> <dt>
 
-[**CIM- \_ Dateisystem**](cim-filesystem.md)
+[**CIM \_ FileSystem**](cim-filesystem.md)
 </dt> <dd>
 
-Die [**CIM- \_ Dateisystem**](cim-filesystem.md) Klasse stellt eine Datei oder ein DataSet dar, die sich lokal auf einem Computersystem befinden oder von einem Dateiserver Remote eingebunden werden.
+Die [**CIM \_ FileSystem-Klasse**](cim-filesystem.md) stellt eine Datei oder ein DataSet dar, die lokal auf einem Computersystem oder remote von einem Dateiserver bereitgestellt wird.
 
 </dd> <dt>
 
-[**CIM- \_ Flatpanel**](cim-flatpanel.md)
+[**CIM \_ FlatPanel**](cim-flatpanel.md)
 </dt> <dd>
 
-Die [**CIM- \_ Flatpanel**](cim-flatpanel.md) -Klasse stellt die Funktionen und die Verwaltung des logischen Flatpanel-Geräts dar.
+Die [**CIM \_ FlatPanel-Klasse**](cim-flatpanel.md) stellt die Funktionen und die Verwaltung des logischen Flatpanelgeräts dar.
 
 </dd> <dt>
 
-[**CIM \_ fromdirector Action**](cim-fromdirectoryaction.md)
+[**CIM \_ FromDirectoryAction**](cim-fromdirectoryaction.md)
 </dt> <dd>
 
-Die [**CIM \_ fromdirector Action**](cim-fromdirectoryaction.md) -Zuordnung identifiziert das Quellverzeichnis für die Datei Aktion. Wenn diese Zuordnung verwendet wird, wird davon ausgegangen, dass das Quellverzeichnis durch eine vorherige Aktion erstellt wurde. Diese Zuordnung darf nicht mit einer [**CIM \_ fromdirector yspecification**](cim-fromdirectoryspecification.md) -Zuordnung vorhanden sein. eine Datei Aktion kann nur ein einzelnes Quellverzeichnis umfassen.
+Die [**ZUORDNUNG CIM \_ FromDirectoryAction**](cim-fromdirectoryaction.md) identifiziert das Quellverzeichnis für die Dateiaktion. Wenn diese Zuordnung verwendet wird, wird davon ausgegangen, dass das Quellverzeichnis durch eine vorherige Aktion erstellt wurde. Diese Zuordnung kann nicht mit einer [**CIM \_ FromDirectorySpecification-Zuordnung**](cim-fromdirectoryspecification.md) vorhanden sein. Eine Dateiaktion kann nur ein einzelnes Quellverzeichnis umfassen.
 
 </dd> <dt>
 
-[**CIM \_ fromdirectoriyspecification**](cim-fromdirectoryspecification.md)
+[**CIM \_ FromDirectorySpecification**](cim-fromdirectoryspecification.md)
 </dt> <dd>
 
-Die [**CIM \_ fromdirector yspecification**](cim-fromdirectoryspecification.md) -Zuordnung identifiziert das Quellverzeichnis für die Datei Aktion. Wenn diese Zuordnung verwendet wird, wird davon ausgegangen, dass das Quellverzeichnis bereits vorhanden ist. Diese Zuordnung darf nicht mit einer [**CIM \_ fromdirector yaction**](cim-fromdirectoryaction.md) -Zuordnung vorhanden sein. eine Datei Aktion kann nur ein einzelnes Quellverzeichnis umfassen.
+Die [**ZUORDNUNG CIM \_ FromDirectorySpecification**](cim-fromdirectoryspecification.md) identifiziert das Quellverzeichnis für die Dateiaktion. Wenn diese Zuordnung verwendet wird, wird davon ausgegangen, dass das Quellverzeichnis bereits vorhanden ist. Diese Zuordnung kann nicht mit einer [**CIM \_ FromDirectoryAction-Zuordnung**](cim-fromdirectoryaction.md) vorhanden sein. Eine Dateiaktion kann nur ein einzelnes Quellverzeichnis umfassen.
 
 </dd> <dt>
 
 [**CIM \_ FRU**](cim-fru.md)
 </dt> <dd>
 
-Die [**CIM \_ FRU**](cim-fru.md) -Klasse stellt eine Hersteller definierte Auflistung von Produkten und physischen Elementen dar, die einer von einem Feld ersetzbaren Einheit (FRU) zugeordnet sind, um ein Produkt am Standort des Kunden zu unterstützen, zu warten oder zu aktualisieren.
+Die [**CIM \_ FRU-Klasse**](cim-fru.md) stellt eine vom Hersteller definierte Sammlung von Produkten und physischen Elementen dar, die einer FRU (Field Replaceable Unit) zugeordnet sind, um ein Produkt am Kundenstandort zu unterstützen, zu warten oder zu aktualisieren.
 
 </dd> <dt>
 
-[**CIM- \_ fruincluentsproduct**](cim-fruincludesproduct.md)
+[**CIM \_ FRUIncludesProduct**](cim-fruincludesproduct.md)
 </dt> <dd>
 
-Die CIM-Klasse " [**\_ fruincludesproduct**](cim-fruincludesproduct.md) " zeigt an, dass eine ersetzbare Feld Einheit (FRU) aus anderen Produkten bestehen kann.
+Die [**CIM \_ FRUIncludesProduct-Klasse**](cim-fruincludesproduct.md) gibt an, dass eine FRU (Field Replaceable Unit) aus anderen Produkten bestehen kann.
 
 </dd> <dt>
 
-[**CIM \_ fruphysicalelements**](cim-fruphysicalelements.md)
+[**CIM \_ FRUPhysicalElements**](cim-fruphysicalelements.md)
 </dt> <dd>
 
-Die CIM-Klasse " [**\_ fruphysicalelements**](cim-fruphysicalelements.md) " stellt die physischen Elemente dar, die eine ersetzbare (Feld) Einheit (FRU) bilden.
+Die [**CIM \_ FRUPhysicalElements-Klasse**](cim-fruphysicalelements.md) stellt die physischen Elemente dar, aus denen eine fru-Einheit (Field Replaceable Unit) erstellt wird.
 
 </dd> <dt>
 
-[**CIM- \_ Heatpipe**](cim-heatpipe.md)
+[**CIM \_ HeatPipe**](cim-heatpipe.md)
 </dt> <dd>
 
-Die [**CIM- \_ Heatpipe**](cim-heatpipe.md) -Klasse stellt die Funktionen und die Verwaltung eines wärmepipe-kühl Geräts dar.
+Die [**CIM \_ HeatPipe-Klasse**](cim-heatpipe.md) stellt die Funktionen und die Verwaltung eines Wärmeleitungs-Kühlgeräts dar.
 
 </dd> <dt>
 
-[**CIM- \_ hubspoint**](cim-hostedaccesspoint.md)
+[**CIM \_ HostedAccessPoint**](cim-hostedaccesspoint.md)
 </dt> <dd>
 
-Die CIM-Klasse " [**\_ stestedaccesspoint**](cim-hostedaccesspoint.md) " stellt eine Zuordnung zwischen einem Dienst Zugriffspunkt (SAP) und dem System dar, auf dem es bereitgestellt wird. Jedes System hostet möglicherweise viele SAPS.
+Die [**CIM \_ HostedAccessPoint-Klasse**](cim-hostedaccesspoint.md) stellt eine Zuordnung zwischen einem Dienstzugriffspunkt (SAP) und dem System dar, auf dem er bereitgestellt wird. Jedes System kann viele SAPs hosten.
 
 </dd> <dt>
 
-[**CIM- \_ boostedbootsap**](cim-hostedbootsap.md)
+[**CIM \_ HostedBootSAP**](cim-hostedbootsap.md)
 </dt> <dd>
 
-Die CIM-Klasse " [**\_ shostedbootsap**](cim-hostedbootsap.md) " definiert das Hosting-einheitliche Computersystem für eine [**CIM- \_ bootsap**](cim-bootsap.md) -Klasse. Da diese Beziehung von [**CIM \_ hostspoint**](cim-hostedaccesspoint.md)untergeordnet ist, erbt Sie das für [**CIM \_ serviceaccesspoint**](cim-serviceaccesspoint.md)definierte Bereichs Schema/Benennungs Schema, bei dem ein Zugriffspunkt dem Hostingsystem entspricht. In diesem Fall muss **CIM \_ bootsap** auf seine hostende [**CIM \_ unitarycomputersystem**](cim-unitarycomputersystem.md) -Klasse zurückgreifen.
+Die [**CIM \_ HostedBootSAP-Klasse**](cim-hostedbootsap.md) definiert das hostend unitäre Computersystem für eine [**CIM \_ BootSAP-Klasse.**](cim-bootsap.md) Da diese Beziehung von [**CIM \_ HostedAccessPoint**](cim-hostedaccesspoint.md)untergliedert ist, erbt sie das bereichs-/benennungsschema, das für [**CIM \_ ServiceAccessPoint**](cim-serviceaccesspoint.md)definiert ist, wobei ein Zugriffspunkt auf sein Hostingsystem zurückstellung. In diesem Fall muss **CIM \_ BootSAP** die Hostklasse [**CIM \_ UnitaryComputerSystem**](cim-unitarycomputersystem.md) zurückführen.
 
 </dd> <dt>
 
-[**CIM- \_ Boots Dienst**](cim-hostedbootservice.md)
+[**CIM \_ HostedBootService**](cim-hostedbootservice.md)
 </dt> <dd>
 
-Die CIM-Klasse " [**\_ hostbootservice**](cim-hostedbootservice.md) " ordnet ein Hostingsystem und einen Start Dienst zu. Da diese Beziehung vom [**CIM- \_ Hostingdienst**](cim-hostedservice.md)untergeordnet ist, erbt Sie das für den Dienst definierte Bereichs Schema/Benennungs Schema, bei dem ein Dienst auf das Hostingsystem beschränkt wird.
+Die [**CIM \_ HostedBootService-Klasse**](cim-hostedbootservice.md) ordnet ein Hostingsystem und einen Startdienst zu. Da diese Beziehung von [**CIM \_ HostedService**](cim-hostedservice.md)untergliedert ist, erbt sie das bereichs-/benennungsschema, das für den Dienst definiert ist, wobei ein Dienst auf sein Hostingsystem zurücktiert.
 
 </dd> <dt>
 
-[**CIM- \_ Dateisystem**](cim-hostedfilesystem.md)
+[**CIM \_ HostedFileSystem**](cim-hostedfilesystem.md)
 </dt> <dd>
 
-Die [**CIM \_ hostedfile**](cim-hostedfilesystem.md) System-Zuordnung stellt eine Verknüpfung zwischen dem Computersystem und dem Dateisystem dar, das auf dem Computersystem gehostet wird.
+Die [**Cim \_ HostedFileSystem-Zuordnung**](cim-hostedfilesystem.md) stellt eine Verbindung zwischen dem Computersystem und dem Dateisystem dar, das auf dem Computersystem gehostet wird.
 
 </dd> <dt>
 
-[**CIM-Host- \_ jobdestination**](cim-hostedjobdestination.md)
+[**CIM \_ HostedJobDestination**](cim-hostedjobdestination.md)
 </dt> <dd>
 
-Die CIM-Klasse " [**\_ hostjobdestination**](cim-hostedjobdestination.md) " stellt eine Zuordnung zwischen einem Auftrags Ziel und dem System dar, auf dem es sich befindet. Ein System kann viele Auftrags Warteschlangen hosten. Auftrags Ziele werden an das Hostingsystem zurück verschoben.
+Die [**CIM \_ HostedJobDestination-Klasse**](cim-hostedjobdestination.md) stellt eine Zuordnung zwischen einem Auftragsziel und dem System dar, in dem es sich befindet. Ein System kann viele Auftragswarteschlangen hosten. Auftragsziele werden auf das Hostingsystem zurückstelle.
 
 </dd> <dt>
 
-[**CIM- \_ Dienst**](cim-hostedservice.md)
+[**CIM \_ HostedService**](cim-hostedservice.md)
 </dt> <dd>
 
-Die CIM-Klasse " [**\_ Hostdienst**](cim-hostedservice.md) " stellt eine Zuordnung zwischen einem Dienst und dem System dar, auf dem sich die Funktionalität befindet. Ein System kann viele Dienste hosten, die auf das Hostingsystem zurückgreifen. Das Modell stellt keine Dienste dar, die auf mehreren Systemen gehostet werden.
+Die [**CIM \_ HostedService-Klasse**](cim-hostedservice.md) stellt eine Zuordnung zwischen einem Dienst und dem System dar, in dem sich die Funktionalität befindet. Ein System kann viele Dienste hosten, die auf das Hostsystem zurückdringen. Das Modell stellt keine Dienste dar, die auf mehreren Systemen gehostet werden.
 
 </dd> <dt>
 
-[**CIM- \_ infraredcontroller**](cim-infraredcontroller.md)
+[**\_CIM-Controller**](cim-infraredcontroller.md)
 </dt> <dd>
 
-Die CIM-Klasse " [**\_ infraredcontroller**](cim-infraredcontroller.md) " stellt die Funktionen und die Verwaltung eines Infrarot Controllers dar.
+Die [**\_ CIM-Klasse "ControllersController"**](cim-infraredcontroller.md) stellt die Funktionen und die Verwaltung eines Controller für Dieksteuerung dar.
 
 </dd> <dt>
 
-[**CIM- \_ instanalledos**](cim-installedos.md)
+[**CIM \_ InstalledOS**](cim-installedos.md)
 </dt> <dd>
 
-Die [**CIM \_ installedos**](cim-installedos.md) Association-Klasse stellt eine Verknüpfung zwischen dem Computersystem und dem installierten Betriebssystem dar. Ein Betriebssystem wird installiert, wenn es sich im Speicherbereich eines Computer Systems befindet (z. b. auf ein Laufwerk kopiert oder in den Arbeitsspeicher heruntergeladen wird).
+Die [**CIM \_ InstalledOS-Zuordnungsklasse**](cim-installedos.md) stellt eine Verknüpfung zwischen dem Computersystem und dem installierten Betriebssystem dar. Ein Betriebssystem wird installiert, wenn es sich im Speicherbereich eines Computersystems befindet (z. B. auf ein Laufwerk kopiert oder in den Arbeitsspeicher heruntergeladen).
 
 </dd> <dt>
 
 [**CIM \_ InstalledSoftwareElement**](cim-installedsoftwareelement.md)
 </dt> <dd>
 
-Die [**CIM \_ InstalledSoftwareElement**](cim-installedsoftwareelement.md) -Klasse ordnet ein Computersystem einem installierten Softwareelement zu.
+Die [**CIM \_ InstalledSoftwareElement-Klasse**](cim-installedsoftwareelement.md) ordnet ein Computersystem einem installierten Softwareelement zu.
 
 </dd> <dt>
 
-[**CIM \_ -Antwort**](cim-irq.md)
+[**CIM \_ IRQ**](cim-irq.md)
 </dt> <dd>
 
-Die CIM-Klasse " [**\_ iriq**](cim-irq.md) " stellt eine Intel Architecture Interrupt Request Line (UNQ) dar.
+Die [**CIM \_ IRQ-Klasse**](cim-irq.md) stellt eine Intel Architecture Interrupt Request Line (IRQ) dar.
 
 </dd> <dt>
 
-[**CIM- \_ Auftrag**](cim-job.md)
+[**\_CIM-Auftrag**](cim-job.md)
 </dt> <dd>
 
-Die [**CIM- \_ Auftrags**](cim-job.md) Klasse stellt eine Arbeitseinheit für ein System dar, z. b. einen Druckauftrag. Ein Auftrag unterscheidet sich von einem Prozess, weil ein Auftrag geplant werden kann.
+Die [**\_ CIM-Auftragsklasse**](cim-job.md) stellt eine Arbeitseinheit für ein System dar, z. B. einen Druckauftrag. Ein Auftrag unterscheidet sich von einem Prozess, da ein Auftrag geplant werden kann.
 
 </dd> <dt>
 
-[**CIM \_ jobdestination**](cim-jobdestination.md)
+[**\_CIM-JobDestination**](cim-jobdestination.md)
 </dt> <dd>
 
-Die [**CIM \_ jobdestination**](cim-jobdestination.md) -Klasse stellt dar, wo ein Auftrag zur Verarbeitung übermittelt wird. Sie kann auf eine Warteschlange verweisen, die NULL oder mehr Aufträge enthält, z. b. eine Druck Warteschlange, die Druckaufträge enthält. Auftrags Ziele werden auf Systemen gehostet, ähnlich der Art, in der Dienste auf Systemen gehostet werden.
+Die [**CIM \_ JobDestination-Klasse**](cim-jobdestination.md) stellt dar, wo ein Auftrag zur Verarbeitung übermittelt wird. Sie kann auf eine Warteschlange verweisen, die null oder mehr Aufträge enthält, z. B. eine Druckwarteschlange mit Druckaufträgen. Auftragsziele werden auf Systemen gehostet, ähnlich wie Dienste auf Systemen gehostet werden.
 
 </dd> <dt>
 
-[**CIM \_ jobdestinationjobs**](cim-jobdestinationjobs.md)
+[**CIM \_ JobDestinationJobs**](cim-jobdestinationjobs.md)
 </dt> <dd>
 
-Die [**CIM \_ jobdestinationjobs-Zuordnung**](cim-jobdestinationjobs.md) beschreibt, wo ein Auftrag zur Verarbeitung übermittelt wird (d. h. an welches Auftrags Ziel).
+Die [**CIM \_ JobDestinationJobs-Zuordnung**](cim-jobdestinationjobs.md) beschreibt, wo ein Auftrag zur Verarbeitung übermittelt wird (d. h. an welches Auftragsziel).
 
 </dd> <dt>
 
-[**CIM- \_ Tastatur**](cim-keyboard.md)
+[**\_CIM-Tastatur**](cim-keyboard.md)
 </dt> <dd>
 
-Die [**CIM- \_ Tastatur**](cim-keyboard.md) Klasse stellt die Funktionen und die Verwaltung des logischen Tastatur Geräts dar.
+Die [**\_ CIM-Tastaturklasse**](cim-keyboard.md) stellt die Funktionen und die Verwaltung des logischen Tastaturgeräts dar.
 
 </dd> <dt>
 
-[**CIM \_ linkhasconnector**](cim-linkhasconnector.md)
+[**CIM \_ LinkHasConnector**](cim-linkhasconnector.md)
 </dt> <dd>
 
-Die [**CIM \_ linkhasconnector**](cim-linkhasconnector.md) -Klasse ordnet Kabel und Verknüpfungen zu, die als physische Connectors verwendet werden, die die physischen Elemente verbinden. Diese Zuordnung definiert explizit die Beziehung von Connectors für [**CIM \_ physicallink**](cim-physicallink.md).
+Die [**CIM \_ LinkHasConnector-Klasse**](cim-linkhasconnector.md) ordnet Kabel und Verbindungen zu, die als physische Connectors verwendet werden, die die physischen Elemente verbinden. Diese Zuordnung definiert explizit die Beziehung von Connectors für [**CIM \_ PhysicalLink**](cim-physicallink.md).
 
 </dd> <dt>
 
-[**CIM \_ LocalFile System**](cim-localfilesystem.md)
+[**CIM \_ LocalFileSystem**](cim-localfilesystem.md)
 </dt> <dd>
 
-Die [**CIM \_ LocalFile**](cim-localfilesystem.md) System-Klasse stellt den Dateispeicher dar, der von einem Computersystem über lokale Mittel (z. b. direkten Zugriff auf Gerätetreiber) gesteuert wird. Der Dateispeicher kann direkt vom Computersystem verwaltet werden, ohne dass ein anderer Computer als Dateiserver fungieren muss. Bei einem Cluster Dateisystem ist das Dateisystem jedoch lokal und wird daher auf den Cluster abgehandelt.
+Die [**CIM \_ LocalFileSystem-Klasse**](cim-localfilesystem.md) stellt den Dateispeicher dar, der von einem Computersystem auf lokale Weise gesteuert wird (z. B. direkter Gerätetreiberzugriff). Der Dateispeicher kann direkt vom Computersystem verwaltet werden, ohne dass ein anderer Computer als Dateiserver fungieren muss. Bei einem gruppierten Dateisystem ist das Dateisystem jedoch lokal und wird daher auf den Cluster übertragen.
 
 </dd> <dt>
 
-[**CIM- \_ Speicherort**](cim-location.md)
+[**\_CIM-Speicherort**](cim-location.md)
 </dt> <dd>
 
-Die [**CIM- \_ Location**](cim-location.md) -Klasse stellt die Position und die Adresse eines physischen Elements dar.
+Die [**CIM \_ Location-Klasse**](cim-location.md) stellt die Position und Adresse eines physischen Elements dar.
 
 </dd> <dt>
 
 [**CIM \_ LogicalDevice**](cim-logicaldevice.md)
 </dt> <dd>
 
-Die [**CIM \_ LogicalDevice**](cim-logicaldevice.md) -Klasse stellt eine Hardware Entität dar, die in physischer Hardware erkannt werden kann oder nicht.
+Die [**CIM \_ LogicalDevice-Klasse**](cim-logicaldevice.md) stellt eine Hardwareentität dar, die in physischer Hardware realisiert werden kann oder nicht.
 
 </dd> <dt>
 
 [**CIM \_ LogicalDisk**](cim-logicaldisk.md)
 </dt> <dd>
 
-Die [**CIM \_ LogicalDisk**](cim-logicaldisk.md) -Klasse stellt einen zusammenhängenden Bereich logischer Blöcke dar, die von einem Dateisystem über das **DeviceID** (Key)-Feld des Datenträgers identifiziert werden. Beispielsweise enthält das Feld " **DeviceID** " in einer Windows-Umgebung einen Laufwerk Buchstaben. in einer UNIX-Umgebung enthält Sie den Zugriffs Pfad. und in einer NetWare-Umgebung enthält Sie den Volumenamen.
+Die [**CIM \_ LogicalDisk-Klasse**](cim-logicaldisk.md) stellt einen zusammenhängenden Bereich logischer Blöcke dar, der von einem Dateisystem über das **Feld DeviceID** (Schlüssel) des Datenträgers identifiziert werden kann. In einer Windows-Umgebung enthält das Feld **DeviceID** beispielsweise einen Laufwerkbuchstaben. in einer UNIX-Umgebung enthält sie den Zugriffspfad. und in einer NetWare-Umgebung enthält sie den Volumenamen.
 
 </dd> <dt>
 
 [**CIM \_ LogicalDiskBasedOnPartition**](cim-logicaldiskbasedonpartition.md)
 </dt> <dd>
 
-Die [**CIM \_ LogicalDiskBasedOnPartition**](cim-logicaldiskbasedonpartition.md) -Klasse ordnet der Festplatten Partition, auf der Sie sich befindet, einen logischen Datenträger zu.
+Die [**CIM \_ LogicalDiskBasedOnPartition-Klasse**](cim-logicaldiskbasedonpartition.md) ordnet einen logischen Datenträger der Datenträgerpartition zu, auf der er sich befindet.
 
 </dd> <dt>
 
-[**CIM \_ logicaldiskbasedonvolumeset**](cim-logicaldiskbasedonvolumeset.md)
+[**CIM \_ LogicalDiskBasedOnVolumeSet**](cim-logicaldiskbasedonvolumeset.md)
 </dt> <dd>
 
-Die [**CIM \_ logicaldiskbasedonvolumeset**](cim-logicaldiskbasedonvolumeset.md) -Zuordnung bezieht logische Datenträger mit dem Volume, auf dem Sie gefunden werden. Logische Datenträger können auf einem einzelnen Volume (z. b. von einem Software Volume-Manager verfügbar gemacht) oder auf einer Datenträger Partition basieren.
+Die [**CIM \_ LogicalDiskBasedOnVolumeSet-Zuordnung**](cim-logicaldiskbasedonvolumeset.md) verknüpft logische Datenträger mit dem Volume, auf dem sie gefunden werden. Logische Datenträger können auf einem einzelnen Volume (z. B. durch einen Softwarevolume-Manager verfügbar gemacht) oder auf einer Datenträgerpartition basieren.
 
 </dd> <dt>
 
 [**CIM \_ LogicalElement**](cim-logicalelement.md)
 </dt> <dd>
 
-Die [**CIM \_ LogicalElement**](cim-logicalelement.md) -Klasse ist die Basisklasse für alle Systemkomponenten, die abstrakte Systemkomponenten, z. b. profile, Prozesse oder Systemfunktionen, in Form logischer Geräte darstellen.
+Die [**CIM \_ LogicalElement-Klasse**](cim-logicalelement.md) ist die Basisklasse für alle Systemkomponenten, die abstrakte Systemkomponenten wie Profile, Prozesse oder Systemfunktionen in Form von logischen Geräten darstellen.
 
 </dd> <dt>
 
 [**CIM \_ LogicalFile**](cim-logicalfile.md)
 </dt> <dd>
 
-Die [**CIM \_ LogicalFile**](cim-logicalfile.md) -Klasse stellt eine benannte Auflistung von Daten dar, bei der es sich um ausführbaren Code handeln kann, der sich in einem Dateisystem in einem Speicherblock befindet.
+Die [**CIM \_ LogicalFile-Klasse**](cim-logicalfile.md) stellt eine benannte Sammlung von Daten dar, bei der es sich um ausführbaren Code handeln kann, der sich in einem Dateisystem in einem Speicherumfang befindet.
 
 </dd> <dt>
 
-[**CIM- \_ logikalidentität**](cim-logicalidentity.md)
+[**CIM \_ LogicalIdentity**](cim-logicalidentity.md)
 </dt> <dd>
 
-Die [**CIM \_ logicalidentity**](cim-logicalidentity.md) -Klasse ist eine abstrakte und generische Zuordnung, die angibt, dass zwei logische Elemente verschiedene Aspekte der gleichen zugrunde liegenden Entität darstellen.
+Die [**CIM \_ LogicalIdentity-Klasse**](cim-logicalidentity.md) ist eine abstrakte und generische Zuordnung, die angibt, dass zwei logische Elemente verschiedene Aspekte derselben zugrunde liegenden Entität darstellen.
 
 </dd> <dt>
 
-[**CIM- \_ Magnet Laufwerk**](cim-magnetoopticaldrive.md)
+[**CIM \_ MagnetoOpticalDrive**](cim-magnetoopticaldrive.md)
 </dt> <dd>
 
-Die CIM-Klasse " [**\_ magnetyopticaldrive**](cim-magnetoopticaldrive.md) " stellt die Funktionen und die Verwaltung eines "Magneto-Optical"-Laufwerks dar, einen Untertyp des Medien Zugriffs Geräts.
+Die [**CIM \_ MagnetoOpticalDrive-Klasse**](cim-magnetoopticaldrive.md) stellt die Funktionen und die Verwaltung eines magnetooptischen Laufwerks dar, einem Untertyp des Medienzugriffsgeräts.
 
 </dd> <dt>
 
 [**CIM \_ ManagedSystemElement**](cim-managedsystemelement.md)
 </dt> <dd>
 
-Die [**CIM \_ ManagedSystemElement**](cim-managedsystemelement.md) -Klasse ist die Basisklasse für die System Element Hierarchie. Jede unterscheidbare Systemkomponente ist ein Kandidat für die Einbindung in diese Klasse.
+Die [**CIM \_ ManagedSystemElement-Klasse**](cim-managedsystemelement.md) ist die Basisklasse für die Systemelementhierarchie. Jede unterscheidbare Systemkomponente ist ein Kandidat für die Aufnahme in diese Klasse.
 
 </dd> <dt>
 
-[**CIM- \_ Managementcontroller**](cim-managementcontroller.md)
+[**CIM \_ ManagementController**](cim-managementcontroller.md)
 </dt> <dd>
 
-Die [**CIM \_ Managementcontroller**](cim-managementcontroller.md) -Klasse bezieht sich auf die Funktionen und die Verwaltung eines Verwaltungs Controllers.
+Die [**CIM \_ ManagementController-Klasse**](cim-managementcontroller.md) bezieht sich auf die Funktionen und die Verwaltung eines Verwaltungscontrollers.
 
 </dd> <dt>
 
-[**CIM \_ mediaaccessdevice**](cim-mediaaccessdevice.md)
+[**CIM \_ MediaAccessDevice**](cim-mediaaccessdevice.md)
 </dt> <dd>
 
-Die [**CIM \_ mediaaccessdevice**](cim-mediaaccessdevice.md) -Klasse stellt die Möglichkeit dar, auf ein oder mehrere Medien zuzugreifen und dann die Medien zum Speichern und Abrufen von Daten zu verwenden.
+Die [**CIM \_ MediaAccessDevice-Klasse**](cim-mediaaccessdevice.md) stellt die Möglichkeit dar, auf ein oder mehrere Medien zuzugreifen und diese dann zum Speichern und Abrufen von Daten zu verwenden.
 
 </dd> <dt>
 
-[**CIM- \_ mediapresent**](cim-mediapresent.md)
+[**CIM \_ MediaPresent**](cim-mediapresent.md)
 </dt> <dd>
 
-Die [**CIM \_ mediapresent**](cim-mediapresent.md) -Zuordnung beschreibt eine Beziehung, bei der über ein Medien Zugriffsgerät auf einen Speicherblock zugegriffen werden muss.
+Die [**CIM \_ MediaPresent-Zuordnung**](cim-mediapresent.md) beschreibt eine Beziehung, in der über ein Medienzugriffsgerät auf einen Speicherbereich zugegriffen werden muss.
 
 </dd> <dt>
 
-[**CIM- \_ Speicher**](cim-memory.md)
+[**\_CIM-Arbeitsspeicher**](cim-memory.md)
 </dt> <dd>
 
-Die [**CIM- \_ Speicher**](cim-memory.md) Klasse stellt die Funktionen und die Verwaltung von speicherbezogenen logischen Geräten dar.
+Die [**CIM \_ Memory-Klasse**](cim-memory.md) stellt die Funktionen und die Verwaltung speicherbezogener logischer Geräte dar.
 
 </dd> <dt>
 
-[**CIM- \_ memorycapacity**](cim-memorycapacity.md)
+[**CIM \_ MemoryCapacity**](cim-memorycapacity.md)
 </dt> <dd>
 
-Die [**CIM \_ memorycapacity**](cim-memorycapacity.md) -Klasse stellt den Arbeitsspeicher dar, der auf einem physischen Element und dessen minimalen und maximalen Konfigurationen installiert werden kann. Informationen zu derzeit installiertem Arbeitsspeicher und den minimalen und maximalen Anforderungen eines Elements befinden sich in Instanzen der [**CIM \_ PhysicalMemory**](cim-physicalmemory.md) -Klasse.
+Die [**CIM \_ MemoryCapacity-Klasse**](cim-memorycapacity.md) stellt Arbeitsspeicher dar, der auf einem physischen Element installiert werden kann, sowie die minimalen und maximalen Konfigurationen. Informationen zum derzeit installierten Arbeitsspeicher und den Mindest- und Maximalanforderungen eines Elements befinden sich in Instanzen der [**CIM \_ PhysicalMemory-Klasse.**](cim-physicalmemory.md)
 
 </dd> <dt>
 
-[**CIM- \_ memorycheck**](cim-memorycheck.md)
+[**CIM \_ MemoryCheck**](cim-memorycheck.md)
 </dt> <dd>
 
-Die [**CIM \_ memorycheck**](cim-memorycheck.md) -Klasse gibt eine Bedingung für die minimale Arbeitsspeicher Menge an, die auf einem System verfügbar sein muss.
+Die [**CIM \_ MemoryCheck-Klasse**](cim-memorycheck.md) gibt eine Bedingung für die Mindestmenge an Arbeitsspeicher an, die auf einem System verfügbar sein muss.
 
 </dd> <dt>
 
-[**CIM \_ memorymappedio**](cim-memorymappedio.md)
+[**CIM \_ MemoryMappedIO**](cim-memorymappedio.md)
 </dt> <dd>
 
-Die [**CIM \_ memorymappedio**](cim-memorymappedio.md) -Klasse stellt die Computerarchitektur-e/a mit Speicher Abbild dar. Diese Klasse adressiert Arbeitsspeicher-und Port-e/a-Ressourcen.
+Die [**CIM \_ MemoryMappedIO-Klasse**](cim-memorymappedio.md) stellt speicher abgebildete E/A-Auslastungen der Computerarchitektur dar. Diese Klasse bezieht sich auf Speicher- und Port-E/A-Ressourcen.
 
 </dd> <dt>
 
-[**CIM \_ memoryoncard**](cim-memoryoncard.md)
+[**CIM \_ MemoryOnCard**](cim-memoryoncard.md)
 </dt> <dd>
 
-Die [**CIM \_ memoryoncard**](cim-memoryoncard.md) -Klasse ordnet physischen Speicher zu, der sich auf hostingboards, Adapterkarten usw. befindet. Diese Zuordnung definiert explizit die Beziehung Zwischenspeicher und Karten.
+Die [**CIM \_ MemoryOnCard-Klasse**](cim-memoryoncard.md) ordnet physischen Speicher zu, der sich auf Hostboards, Adapterkarten usw. befindet. Diese Zuordnung definiert explizit die Beziehung zwischen Arbeitsspeicher und Karten.
 
 </dd> <dt>
 
-[**CIM- \_ memorywithmedia**](cim-memorywithmedia.md)
+[**CIM \_ MemoryWithMedia**](cim-memorywithmedia.md)
 </dt> <dd>
 
-Die [**CIM- \_ memorywithmedia**](cim-memorywithmedia.md) -Klasse ordnet physischen Speicher einem physischen Medium und der zugehörigen Cartridge zu. Der Arbeitsspeicher bietet Medien Identifikation und speichert benutzerspezifische Daten.
+Die [**CIM \_ MemoryWithMedia-Klasse**](cim-memorywithmedia.md) ordnet physischen Speicher einem physischen Medium und dessen Bänder zu. Der Arbeitsspeicher ermöglicht die Medienidentifikation und speichert benutzerspezifische Daten.
 
 </dd> <dt>
 
-[**CIM \_ modifysettingaction**](cim-modifysettingaction.md)
+[**CIM \_ ModifySettingAction**](cim-modifysettingaction.md)
 </dt> <dd>
 
-Die [**CIM \_ modifysettingaction**](cim-modifysettingaction.md) -Klasse stellt die Informationen zum Ändern einer bestimmten Einstellungsdatei für einen bestimmten Eintrag mit einem bestimmten Wert dar.
+Die [**CIM \_ ModifySettingAction-Klasse**](cim-modifysettingaction.md) stellt die Informationen zum Ändern einer bestimmten Einstellungsdatei für einen bestimmten Eintrag mit einem bestimmten Wert dar.
 
 </dd> <dt>
 
-[**CIM- \_ Monitorauflösung**](cim-monitorresolution.md)
+[**\_CIM-MonitorResolution**](cim-monitorresolution.md)
 </dt> <dd>
 
-Die [**CIM- \_ monitorresolution**](cim-monitorresolution.md) -Klasse stellt die Beziehung zwischen horizontaler und vertikaler Auflösung und der Aktualisierungsrate und dem Überprüfungs Modus für einen Desktop Monitor dar. Werte werden im Videocontroller Objekt angegeben.
+Die [**CIM \_ MonitorResolution-Klasse**](cim-monitorresolution.md) stellt die Beziehung zwischen horizontalen und vertikalen Auflösungen sowie die Aktualisierungsrate und den Scanmodus für einen Desktopmonitor dar. Werte werden im Videocontrollerobjekt angegeben.
 
 </dd> <dt>
 
-[**CIM- \_ monitorsetting**](cim-monitorsetting.md)
+[**CIM \_ MonitorSetting**](cim-monitorsetting.md)
 </dt> <dd>
 
-Die [**CIM- \_ monitorsetting**](cim-monitorsetting.md) -Klasse ordnet die Monitor Auflösung dem Desktop Monitor zu, auf den Sie angewendet wird.
+Die [**CIM \_ MonitorSetting-Klasse**](cim-monitorsetting.md) ordnet die Monitorauflösung dem Desktopmonitor zu, auf den sie angewendet wird.
 
 </dd> <dt>
 
-[**CIM- \_ einbinden**](cim-mount.md)
+[**\_CIM-Bereitstellung**](cim-mount.md)
 </dt> <dd>
 
-Die [**CIM \_**](cim-mount.md) -Bereitstellungs Klasse stellt eine Zuordnung zwischen einem Dateisystem und einem Verzeichnis dar, an das es angefügt ist.
+Die [**CIM \_ Mount-Klasse**](cim-mount.md) stellt eine Zuordnung zwischen einem Dateisystem und einem Verzeichnis dar, an das es angefügt ist.
 
 </dd> <dt>
 
-[**CIM- \_ multistaatensor**](cim-multistatesensor.md)
+[**CIM \_ MultiStateSensor**](cim-multistatesensor.md)
 </dt> <dd>
 
-Die [**CIM \_ multistaatensor**](cim-multistatesensor.md) -Klasse stellt eine multimember-Gruppe von binären Sensoren dar, in der jeder binäre Sensor ein boolesches Ergebnis meldet.
+Die [**CIM \_ MultiStateSensor-Klasse**](cim-multistatesensor.md) stellt einen Satz binärer Sensoren mit mehreren Membern dar, wobei jeder binäre Sensor ein boolesches Ergebnis meldet.
 
 </dd> <dt>
 
-[**CIM- \_ Netzwerkadapter**](cim-networkadapter.md)
+[**CIM \_ NetworkAdapter**](cim-networkadapter.md)
 </dt> <dd>
 
-Die [**CIM- \_ netzwerkadapterklasse**](cim-networkadapter.md) ist eine abstrakte Klasse, die allgemeine Konzepte der Netzwerkhardware definiert (z. b. permanente Adresse oder Geschwindigkeit der Operation). Die Informationen werden mithilfe der CIM-Zuordnung " [**\_ devicesapimplementation**](cim-devicesapimplementation.md) " übermittelt.
+Die [**CIM \_ NetworkAdapter-Klasse**](cim-networkadapter.md) ist eine abstrakte Klasse, die allgemeine Netzwerkhardwarekonzepte definiert (z. B. permanente Adresse oder Betriebsgeschwindigkeit). Die Informationen werden mithilfe der [**CIM \_ DeviceSAPImplementation-Zuordnung**](cim-devicesapimplementation.md) übermittelt.
 
 </dd> <dt>
 
-[**CIM- \_ NFS**](cim-nfs.md)
+[**CIM \_ NFS**](cim-nfs.md)
 </dt> <dd>
 
-Die [**CIM- \_ NFS**](cim-nfs.md) -Klasse stellt ein Remote Dateisystem dar, das mit dem NFS-Protokoll (Network File System) von einem Computersystem bereitgestellt wird.
+Die [**\_ CIM-NFS-Klasse**](cim-nfs.md) stellt ein Remotedateisystem dar, das mithilfe des NFS-Protokolls (Network File System) von einem Computersystem bereitgestellt wird.
 
 </dd> <dt>
 
-[**CIM- \_ NonVolatileStorage**](cim-nonvolatilestorage.md)
+[**CIM \_ NonVolatileStorage**](cim-nonvolatilestorage.md)
 </dt> <dd>
 
-Die [**CIM-Klasse \_ NonVolatileStorage**](cim-nonvolatilestorage.md) stellt die Funktionen und die Verwaltung von nichtflüchtigem Speicher dar. Nicht flüchtiger Speicher umfasst nativ Flash-und ROM-Speicher.
+Die [**\_ CIM NonVolatileStorage-Klasse**](cim-nonvolatilestorage.md) stellt die Funktionen und die Verwaltung von nicht flüchtigem Speicher dar. Nicht flüchtiger Arbeitsspeicher umfasst nativ Flash- und ROM-Speicher.
 
 </dd> <dt>
 
-[**CIM- \_ numericsensor**](cim-numericsensor.md)
+[**CIM \_ NumericSensor**](cim-numericsensor.md)
 </dt> <dd>
 
-Die [**CIM- \_ numericsensor**](cim-numericsensor.md) -Klasse stellt einen numerischen Sensor dar, der numerische Messwerte zurückgibt und optional Schwellenwert Einstellungen unterstützt.
+Die [**CIM \_ NumericSensor-Klasse**](cim-numericsensor.md) stellt einen numerischen Sensor dar, der numerische Messwerte zurückgibt und optional Schwellenwerteinstellungen unterstützt.
 
 </dd> <dt>
 
-[**CIM- \_ OperatingSystem**](cim-operatingsystem.md)
+[**CIM \_ OperatingSystem**](cim-operatingsystem.md)
 </dt> <dd>
 
-Die [**CIM \_ OperatingSystem**](cim-operatingsystem.md) -Klasse stellt ein Computerbetriebssystem dar, das aus Software und Firmware besteht, mit denen die Hardware eines Computer Systems verwendbar ist.
+Die [**CIM \_ OperatingSystem-Klasse**](cim-operatingsystem.md) stellt ein Computerbetriebssystem dar, das aus Software und Firmware besteht, die die Hardware eines Computersystems nutzbar machen.
 
 </dd> <dt>
 
-[**CIM- \_ operatingsystemsoftwarefeature**](cim-operatingsystemsoftwarefeature.md)
+[**CIM \_ OperatingSystemSoftwareFeature**](cim-operatingsystemsoftwarefeature.md)
 </dt> <dd>
 
-Die [**CIM \_ operatingsystemsoftwarefeature**](cim-operatingsystemsoftwarefeature.md) -Klasse stellt die Softwarefunktionen dar, aus denen das Betriebssystem besteht.
+Die [**CIM \_ OperatingSystemSoftwareFeature-Klasse**](cim-operatingsystemsoftwarefeature.md) stellt die Softwarefeatures dar, die das Betriebssystem bilden.
 
 </dd> <dt>
 
-[**CIM- \_ osprocess**](cim-osprocess.md)
+[**CIM \_ OSProcess**](cim-osprocess.md)
 </dt> <dd>
 
-Die [**CIM \_ osprocess**](cim-osprocess.md) -Klasse ordnet das Betriebssystem und einen oder mehrere Prozesse zu, die im Kontext des Betriebssystems ausgeführt werden.
+Die [**CIM \_ OSProcess-Klasse**](cim-osprocess.md) ordnet das Betriebssystem und einen oder mehrere Prozesse zu, die im Kontext des Betriebssystems ausgeführt werden.
 
 </dd> <dt>
 
-[**CIM- \_ osversioncheck**](cim-osversioncheck.md)
+[**CIM \_ OSVersionCheck**](cim-osversioncheck.md)
 </dt> <dd>
 
-Die [**CIM \_ osversioncheck**](cim-osversioncheck.md) -Klasse gibt die Versionen des Betriebssystems an, die ein Softwareelement unterstützen können.
+Die [**CIM \_ OSVersionCheck-Klasse**](cim-osversioncheck.md) gibt die Versionen des Betriebssystems an, die ein Softwareelement unterstützen können.
 
 </dd> <dt>
 
-[**CIM- \_ packagealarm**](cim-packagealarm.md)
+[**CIM \_ PackageAlarm**](cim-packagealarm.md)
 </dt> <dd>
 
-Die [**CIM \_ packagealarm**](/windows/desktop/SecCrypto/extendedproperties-newenum) -Zuordnung stellt die Beziehung dar, in der ein Alarmgerät als Teil eines Pakets installiert wird. Die Installation zeigt Probleme mit der Umgebung des Pakets an – den Sicherheitsstatus oder den Gesamtzustand.
+Die [**CIM \_ PackageAlarm-Zuordnung**](/windows/desktop/SecCrypto/extendedproperties-newenum) stellt die Beziehung dar, in der ein Alarmgerät als Teil eines Pakets installiert wird. Die Installation weist auf Probleme mit der Umgebung des Pakets hin, d. h. mit dem Sicherheitsstatus oder der Gesamtzustand des Pakets.
 
 </dd> <dt>
 
-[**CIM- \_ packagecooling**](cim-packagecooling.md)
+[**CIM \_ Package Auspacken**](cim-packagecooling.md)
 </dt> <dd>
 
-Die [**CIM \_ packagecooling**](cim-packagecooling.md) -Zuordnung stellt die Beziehung dar, in der ein Kühlgerät in einem Paket installiert wird, z. b. ein Chassis oder Rack, um die Kühlung des Pakets zu unterstützen.
+Die [**CIM \_ Package Rolling-Zuordnung**](cim-packagecooling.md) stellt die Beziehung dar, in der ein Kühlgerät in einem Paket installiert wird, z. B. einem Gehäuse oder Rack, um die Kühlung des Pakets zu unterstützen.
 
 </dd> <dt>
 
-[**CIM \_ packagedcomponent**](cim-packagedcomponent.md)
+[**CIM \_ PackagedComponent**](cim-packagedcomponent.md)
 </dt> <dd>
 
-Die [**CIM \_ packagedcomponent**](cim-packagedcomponent.md) -Zuordnung stellt eine explizite Beziehung dar, in der eine Komponente in der Regel in einem physischen Paket (z. b. einem Chassis oder einer Karte) enthalten ist.
+Die [**CIM \_ PackagedComponent-Zuordnung**](cim-packagedcomponent.md) stellt eine explizite Beziehung dar, in der eine Komponente in der Regel in einem physischen Paket enthalten ist, z. B. einem Gehäuse oder einer Karte.
 
 </dd> <dt>
 
-[**CIM \_ packageingechassis**](cim-packageinchassis.md)
+[**CIM \_ PackageInChassis**](cim-packageinchassis.md)
 </dt> <dd>
 
-Die [**CIM \_ packageinchassis**](cim-packageinchassis.md) -Zuordnung stellt die Beziehung dar, in der ein Chassis Andere Pakete enthalten kann, z. b. anderes Chassis und Karten.
+Die [**CIM \_ PackageInChassis-Zuordnung**](cim-packageinchassis.md) stellt die Beziehung dar, in der ein Gehäuse andere Pakete enthalten kann, z. B. andere Gehäuse und Karten.
 
 </dd> <dt>
 
-[**CIM- \_ packageinslot**](cim-packageinslot.md)
+[**CIM \_ PackageInSlot**](cim-packageinslot.md)
 </dt> <dd>
 
-Die [**CIM \_ packageinslot**](cim-packageinslot.md) -Zuordnung stellt die Beziehung zwischen den Geräte Karten und dem Gehäuse dar, in dem Sie eingebunden werden.
+Die [**CIM \_ PackageInSlot-Zuordnung**](cim-packageinslot.md) stellt die Beziehung zwischen Gerätekarten und dem Gehäuse dar, in dem sie eingebunden sind.
 
 </dd> <dt>
 
-[**CIM \_ packagetempsensor**](cim-packagetempsensor.md)
+[**CIM \_ PackageTempSensor**](cim-packagetempsensor.md)
 </dt> <dd>
 
-Die [**CIM \_ packagetempsensor**](cim-packagetempsensor.md) -Zuordnung stellt die Beziehung dar, in der ein Temperatursensor häufig in einem Paket installiert wird, z. b. ein Chassis oder Rack, um die Umgebung des Pakets zu überwachen.
+Die [**CIM \_ PackageTempSensor-Zuordnung**](cim-packagetempsensor.md) stellt die Beziehung dar, in der ein Temperatursensor häufig in einem Paket installiert wird, z. B. einem Gehäuse oder rack, um die Umgebung des Pakets zu überwachen.
 
 </dd> <dt>
 
-[**CIM- \_ parallelcontroller**](cim-parallelcontroller.md)
+[**CIM \_ ParallelController**](cim-parallelcontroller.md)
 </dt> <dd>
 
-Die [**CIM \_ parallelcontroller**](cim-parallelcontroller.md) -Zuordnung bezieht sich auf die Funktionen und die Verwaltung des logischen Parallel Port-Geräts.
+Die [**CIM \_ ParallelController-Zuordnung**](cim-parallelcontroller.md) bezieht sich auf die Funktionen und die Verwaltung des logischen Parallelportgeräts.
 
 </dd> <dt>
 
-[**CIM- \_ participatesinset**](cim-participatesinset.md)
+[**CIM \_ ParticipatesInSet**](cim-participatesinset.md)
 </dt> <dd>
 
-Die [**CIM \_ participatesinset**](cim-participatesinset.md) -Klasse identifiziert physische Elemente, die zusammen ersetzt werden sollen.
+Die [**CIM \_ ParticipatesInSet-Klasse**](cim-participatesinset.md) identifiziert physische Elemente, die zusammen ersetzt werden sollen.
 
 </dd> <dt>
 
-[**CIM- \_ PCIController**](cim-pcicontroller.md)
+[**CIM \_ PCIController**](cim-pcicontroller.md)
 </dt> <dd>
 
-Die [**CIM \_ PCIController**](cim-pcicontroller.md) -Klasse stellt die Eigenschaften und die Verwaltung eines PCI-Controllers dar. Die Eigenschaften in dieser Klasse und deren Unterklassen werden in den verschiedenen PCI-Spezifikationen definiert, die von PCI SIG veröffentlicht werden.
+Die [**CIM \_ PCIController-Klasse**](cim-pcicontroller.md) stellt die Eigenschaften und die Verwaltung eines PCI-Controllers dar. Die Eigenschaften in dieser Klasse und ihre Unterklassen werden in den verschiedenen PCI-Spezifikationen definiert, die vom PCI SIG veröffentlicht werden.
 
 </dd> <dt>
 
 [**CIM \_ PCMCIAController**](cim-pcmciacontroller.md)
 </dt> <dd>
 
-Die [**CIM \_ PCMCIAController**](cim-pcmciacontroller.md) -Klasse stellt die Funktionen und die Verwaltung eines PCMCIA-Controllers (private Computer Memory Card International Association) dar.
+Die [**CIM \_ PCMCIAController-Klasse**](cim-pcmciacontroller.md) stellt die Funktionen und die Verwaltung eines PCMCIA-Controllers (Personal Computer Memory Card International Association) dar.
 
 </dd> <dt>
 
-[**CIM \_ pcvideocontroller**](cim-pcvideocontroller.md)
+[**CIM \_ PCVideoController**](cim-pcvideocontroller.md)
 </dt> <dd>
 
-Der [**CIM \_ pcvideocontroller**](cim-pcvideocontroller.md) stellt die Funktionen und die Verwaltung eines Video Controllers für persönliche Computer dar, einen Untertyp eines Video Controllers.
+Cim [**\_ PCVideoController**](cim-pcvideocontroller.md) stellt die Funktionen und die Verwaltung eines Pc-Videocontrollers dar, einem Untertyp eines Videocontrollers.
 
 </dd> <dt>
 
-[**CIM \_ pextentredundancycomponent**](cim-pextentredundancycomponent.md)
+[**CIM \_ PExtentRedundancyComponent**](cim-pextentredundancycomponent.md)
 </dt> <dd>
 
-Die [**CIM \_ pextentredundancycomponent**](cim-pextentredundancycomponent.md) -Klasse stellt die physischen Blöcke dar, die Teil einer Speicher Redundanz Gruppe sind.
+Die [**\_ CIM-Klasse PExtentRedundancyComponent**](cim-pextentredundancycomponent.md) stellt die physischen Erweiterungen dar, die teil einer Speicherredundanzgruppe sind.
 
 </dd> <dt>
 
-[**CIM- \_ physicalcapacity**](cim-physicalcapacity.md)
+[**CIM \_ PhysicalCapacity**](cim-physicalcapacity.md)
 </dt> <dd>
 
-Die [**CIM \_ physicalcapacity**](cim-physicalcapacity.md) -Klasse ist eine abstrakte Klasse, die die minimalen und maximalen Anforderungen eines physischen Elements und die Fähigkeit zur Unterstützung verschiedener Hardwaretypen darstellt. So können z. b. die minimalen und maximalen Arbeitsspeicher Anforderungen als eine Unterklasse von **CIM \_ physicalcapacity** modelliert werden.
+Die [**CIM \_ PhysicalCapacity-Klasse**](cim-physicalcapacity.md) ist eine abstrakte Klasse, die die minimalen und maximalen Anforderungen eines physischen Elements und seine Fähigkeit zur Unterstützung verschiedener Hardwaretypen darstellt. Beispielsweise können minimale und maximale Arbeitsspeicheranforderungen als Unterklasse von **CIM \_ PhysicalCapacity** modelliert werden.
 
 </dd> <dt>
 
-[**CIM- \_ physicalcomponent**](cim-physicalcomponent.md)
+[**CIM \_ PhysicalComponent**](cim-physicalcomponent.md)
 </dt> <dd>
 
-Die [**CIM \_ physicalcomponent**](cim-physicalcomponent.md) -Klasse stellt eine Komponente auf niedriger Ebene oder eine grundlegende Komponente innerhalb eines Pakets dar. Ein physisches Element, bei dem es sich nicht um einen Link, einen Connector oder ein Paket handelt, ist ein Nachfolger (oder Member) dieser Klasse.
+Die [**CIM \_ PhysicalComponent-Klasse**](cim-physicalcomponent.md) stellt eine Low-Level- oder Basic-Komponente innerhalb eines Pakets dar. Ein physisches Element, das kein Link, Connector oder Paket ist, ist ein Nachfolger (oder Member) dieser Klasse.
 
 </dd> <dt>
 
-[**CIM \_ physicalconnector**](cim-physicalconnector.md)
+[**CIM \_ PhysicalConnector**](cim-physicalconnector.md)
 </dt> <dd>
 
-Die [**CIM \_ physicalconnector**](cim-physicalconnector.md) -Klasse stellt ein beliebiges physisches Element dar, das verwendet wird, um eine Verbindung mit anderen Elementen herzustellen. Jedes Objekt, das eine Verbindung herstellen und Signale oder eine Stromversorgung zwischen mindestens zwei physischen Elementen übertragen kann, ist ein Nachfolger (oder Member) dieser Klasse.
+Die [**CIM \_ PhysicalConnector-Klasse**](cim-physicalconnector.md) stellt jedes physische Element dar, das zum Herstellen einer Verbindung mit anderen Elementen verwendet wird. Jedes Objekt, das Signale oder Strom zwischen zwei oder mehr physischen Elementen verbinden und übertragen kann, ist ein Nachfolger (oder Member) dieser Klasse.
 
 </dd> <dt>
 
 [**CIM \_ PhysicalElement**](cim-physicalelement.md)
 </dt> <dd>
 
-Die [**CIM \_ PhysicalElement**](cim-physicalelement.md) -Unterklassen definieren jede Komponente eines Systems, das über eine eindeutige physische Identität verfügt. Instanzen dieser Klasse können in Bezug auf Bezeichnungen definiert werden, die physisch an das Objekt angefügt werden können.
+Die [**CIM \_ PhysicalElement-Unterklassen**](cim-physicalelement.md) definieren jede Komponente eines Systems, die über eine eigene physische Identität verfügt. Instanzen dieser Klasse können als Bezeichnungen definiert werden, die physisch an das Objekt angefügt werden können.
 
 </dd> <dt>
 
-[**CIM \_ physicalelementlocation**](cim-physicalelementlocation.md)
+[**CIM \_ PhysicalElementLocation**](cim-physicalelementlocation.md)
 </dt> <dd>
 
-Die [**CIM \_ physicalelementlocation**](cim-physicalelementlocation.md) -Klasse ordnet ein physisches Element einem [**CIM- \_ Speicherort**](cim-location.md) Objekt zu Inventur-oder Ersetzungs Zwecken zu.
+Die [**CIM \_ PhysicalElementLocation-Klasse**](cim-physicalelementlocation.md) ordnet ein physisches Element zu Inventar- oder Ersetzungszwecken einem [**CIM \_ Location-Objekt**](cim-location.md) zu.
 
 </dd> <dt>
 
-[**CIM- \_ physicalblock**](cim-physicalextent.md)
+[**CIM \_ PhysicalExtent**](cim-physicalextent.md)
 </dt> <dd>
 
-Die [**CIM- \_ physicalblock**](cim-physicalextent.md) -Klasse stellt eine SCC RAID-Implementierung dar. Sie definiert die aufeinander folgenden adressierbaren Block Adressen auf einem einzelnen Speichergerät, die als einzelner Speicherblock in derselben [**CIM \_ storageredundancygroup**](cim-storageredundancygroup.md) -Klasse behandelt werden. Eine Alternative, wenn die automatische Konfiguration verwendet wird, besteht darin, die [**CIM- \_ aggregatepblock**](cim-aggregatepextent.md) -Klasse zu instanziieren oder zu erweitern.
+Die [**CIM \_ PhysicalExtent-Klasse**](cim-physicalextent.md) stellt eine SCC RAID-Implementierung dar. Sie definiert die aufeinander folgenden adressierbaren Blockadressen auf einem einzelnen Speichergerät, die als einzelner Speicherblock in derselben [**CIM \_ StorageRedundancyGroup-Klasse**](cim-storageredundancygroup.md) behandelt werden. Wenn die automatische Konfiguration verwendet wird, besteht eine Alternative darin, die [**CIM \_ AggregatePExtent-Klasse**](cim-aggregatepextent.md) zu instanziieren oder zu erweitern.
 
 </dd> <dt>
 
-[**CIM- \_ physicalframe**](cim-physicalframe.md)
+[**CIM \_ PhysicalFrame**](cim-physicalframe.md)
 </dt> <dd>
 
-Die [**CIM \_ physicalframe**](cim-physicalframe.md) -Klasse ist eine übergeordnete Klasse von Rack, Chassis und anderen Frame Gehäusen, die in Erweiterungs Klassen definiert sind. In dieser übergeordneten Klasse sind Eigenschaften wie **visiblewecker** und **audiblealarm** sowie Daten, die sich auf Sicherheitsverletzungen beziehen, enthalten.
+Die [**CIM \_ PhysicalFrame-Klasse**](cim-physicalframe.md) ist eine übergeordnete Klasse von Racks, Gehäusen und anderen Rahmengehäusen, da sie in Erweiterungsklassen definiert sind. Eigenschaften wie **VisibleAlarm** und **HörbleAlarm** sowie Daten im Zusammenhang mit Sicherheitsverletzungen sind in dieser übergeordneten Klasse enthalten.
 
 </dd> <dt>
 
-[**CIM \_ physicallink**](cim-physicallink.md)
+[**CIM \_ PhysicalLink**](cim-physicallink.md)
 </dt> <dd>
 
-Die [**CIM \_ physicallink**](cim-physicallink.md) -Klasse stellt die Verkabelung physischer Elemente dar.
+Die [**CIM \_ PhysicalLink-Klasse**](cim-physicallink.md) stellt die Verkabelung physischer Elemente dar.
 
 </dd> <dt>
 
-[**CIM- \_ physicalmedia**](cim-physicalmedia.md)
+[**CIM \_ PhysicalMedia**](cim-physicalmedia.md)
 </dt> <dd>
 
-Die [**CIM \_ physicalmedia**](cim-physicalmedia.md) -Klasse stellt Typen von Dokumentation und Speichermedium (z. b. Bänder, CD-ROMs usw.) dar.
+Die [**CIM \_ PhysicalMedia-Klasse**](cim-physicalmedia.md) stellt Typen von Dokumentation und Speichermedien wie Bänder, CD ROMs usw. dar.
 
 </dd> <dt>
 
-[**CIM- \_ PhysicalMemory**](cim-physicalmemory.md)
+[**CIM \_ PhysicalMemory**](cim-physicalmemory.md)
 </dt> <dd>
 
-Die [**CIM \_ PhysicalMemory**](cim-physicalmemory.md) -Klasse stellt Speichergeräte auf niedriger Ebene dar, wie z. b. Simms, DIMMs, Rohdaten Speicher-Chips usw.
+Die [**\_ CIM PhysicalMemory-Klasse**](cim-physicalmemory.md) stellt Speichergeräte auf niedriger Ebene dar, z. B. SIMMS, DIMMs, Rohspeicherchips usw.
 
 </dd> <dt>
 
-[**CIM- \_ physicalpackage**](cim-physicalpackage.md)
+[**CIM \_ PhysicalPackage**](cim-physicalpackage.md)
 </dt> <dd>
 
-Die [**CIM \_ physicalpackage**](cim-physicalpackage.md) -Klasse stellt physische Elemente dar, die andere Komponenten enthalten oder hosten. Beispiele hierfür sind ein Regal Gehäuse oder eine Adapterkarte.
+Die [**CIM \_ PhysicalPackage-Klasse**](cim-physicalpackage.md) stellt physische Elemente dar, die andere Komponenten enthalten oder hosten. Beispiele hierfür sind ein Rackgehäuse oder eine Adapterkarte.
 
 </dd> <dt>
 
-[**CIM- \_ pointingdevice**](cim-pointingdevice.md)
+[**CIM \_ PointingDevice**](cim-pointingdevice.md)
 </dt> <dd>
 
-Die [**CIM \_ pointingdevice**](cim-pointingdevice.md) -Klasse stellt ein Gerät dar, das auf die Bereiche auf der Anzeige zeigt. Jedes Gerät, das einen Zeiger bearbeitet oder auf Bereiche in einer visuellen Anzeige zeigt, ist ein Member dieser Klasse. Beispielsweise eine Maus, einen Tablettstift, ein Touchpad oder ein Tablet.
+Die [**CIM \_ PointingDevice-Klasse**](cim-pointingdevice.md) stellt ein Gerät dar, das auf Bereiche auf dem Display zeigt. Jedes Gerät, das einen Zeiger bearbeitet oder auf Bereiche auf einer visuellen Anzeige zeigt, ist ein Member dieser Klasse. Beispielsweise eine Maus, ein Tablettstift, ein Touchpad oder ein Tablet.
 
 </dd> <dt>
 
-[**CIM- \_ potsmodem**](cim-potsmodem.md)
+[**CIM \_ CIM CIMSModem**](cim-potsmodem.md)
 </dt> <dd>
 
-Die CIM-Klasse " [**\_ potsmodem**](cim-potsmodem.md) " stellt ein Gerät dar, das binäre Daten in Wellen Modulationen für die Sound basierte Übertragung übersetzt, indem eine Verbindung mit dem reinen Telefon System ("Pots") hergestellt wird.
+Die [**CIM \_ CIM CIMSModem-Klasse**](cim-potsmodem.md) stellt ein Gerät dar, das binäre Daten für die soundbasierte Übertragung in Wellenbandbreiten übersetzt, indem eine Verbindung mit dem PLAIN OLD Phone System-Netzwerk (CIMS) hergestellt wird.
 
 </dd> <dt>
 
-[**CIM- \_ Netzteil**](cim-powersupply.md)
+[**CIM \_ PowerSupply**](cim-powersupply.md)
 </dt> <dd>
 
-Die [**CIM- \_ PowerSupply**](cim-powersupply.md) -Klasse stellt die Funktionen und die Verwaltung des logischen netzwerknetzwerkgeräts dar.
+Die [**CIM \_ PowerSupply-Klasse**](cim-powersupply.md) stellt die Funktionen und die Verwaltung des logischen Stromversorgungsgeräts dar.
 
 </dd> <dt>
 
-[**CIM- \_ Drucker**](cim-printer.md)
+[**\_CIM-Drucker**](cim-printer.md)
 </dt> <dd>
 
-Die [**CIM- \_ Drucker**](cim-printer.md) Klasse stellt die Funktionen und die Verwaltung des logischen Drucker Geräts dar.
+Die [**CIM \_ Printer-Klasse**](cim-printer.md) stellt die Funktionen und die Verwaltung des logischen Druckergeräts dar.
 
 </dd> <dt>
 
-[**CIM- \_ Prozess**](cim-process.md)
+[**\_CIM-Prozess**](cim-process.md)
 </dt> <dd>
 
-Die [**CIM- \_ Prozess**](cim-process.md) Klasse stellt eine einzelne Instanz eines laufenden Programms dar. Ein Benutzer sieht in der Regel einen Prozess als Anwendung oder Aufgabe.
+Die [**CIM \_ Process-Klasse**](cim-process.md) stellt eine einzelne Instanz eines ausgeführten Programms dar. Ein Benutzer sieht einen Prozess in der Regel als Anwendung oder Aufgabe.
 
 </dd> <dt>
 
-[**CIM- \_ processexecutable**](cim-processexecutable.md)
+[**CIM \_ ProcessExecutable**](cim-processexecutable.md)
 </dt> <dd>
 
-Die [**CIM \_ processexecutable**](cim-processexecutable.md) -Klasse stellt einen Link zwischen einem Prozess und einer Datendatei dar und gibt an, dass die Datei an der Ausführung des Prozesses beteiligt ist.
+Die [**CIM \_ ProcessExecutable-Klasse**](cim-processexecutable.md) stellt eine Verknüpfung zwischen einem Prozess und einer Datendatei dar und gibt an, dass die Datei an der Ausführung des Prozesses beteiligt ist.
 
 </dd> <dt>
 
-[**CIM- \_ Prozessor**](cim-processor.md)
+[**\_CIM-Prozessor**](cim-processor.md)
 </dt> <dd>
 
-Die [**CIM- \_ Prozessor**](cim-processor.md) Klasse stellt die Funktionen und die Verwaltung des logischen Prozessor Geräts dar.
+Die [**\_ CIM-Prozessorklasse**](cim-processor.md) stellt die Funktionen und die Verwaltung des logischen Prozessorgeräts dar.
 
 </dd> <dt>
 
-[**CIM- \_ ProcessThread**](cim-processthread.md)
+[**CIM \_ ProcessThread**](cim-processthread.md)
 </dt> <dd>
 
-Die [**CIM- \_ ProcessThread**](cim-processthread.md) -Klasse stellt einen Link zwischen einem Prozess und den Threads dar, die im Kontext des Prozesses ausgeführt werden.
+Die [**CIM \_ ProcessThread-Klasse**](cim-processthread.md) stellt eine Verknüpfung zwischen einem Prozess und den Threads dar, die im Kontext des Prozesses ausgeführt werden.
 
 </dd> <dt>
 
-[**CIM- \_ Produkt**](cim-product.md)
+[**\_CIM-Produkt**](cim-product.md)
 </dt> <dd>
 
-Die [**CIM- \_ Produkt**](cim-product.md) Klasse ist eine konkrete Klasse, die eine Auflistung physischer Elemente, Software Features und anderer Produkte darstellt, die als Einheit erworben wurden. Der Erwerb impliziert eine Vereinbarung zwischen dem Lieferanten und dem Consumer, die Auswirkungen auf die Produkt Lizenzierung, den Support und die Gewährleistung haben kann.
+Die [**\_ CIM-Produktklasse**](cim-product.md) ist eine konkrete Klasse, die eine Sammlung physischer Elemente, Softwarefeatures und anderer Produkte darstellt, die als Einheit erworben wurden. Der Erwerb impliziert eine Vereinbarung zwischen dem Lieferanten und dem Verbraucher, die Auswirkungen auf die Produktlizenzierung, den Support und die Garantie haben kann.
 
 </dd> <dt>
 
-[**CIM \_ productfru**](cim-productfru.md)
+[**CIM \_ ProductFRU**](cim-productfru.md)
 </dt> <dd>
 
-Die [**CIM \_ productfru**](cim-productfru.md) -Klasse stellt eine Zuordnung zwischen dem Produkt und einer ersetzbaren (Feld) Einheit (FRU) dar, die Informationen zu Produktkomponenten bereitstellt, die bereits waren oder ersetzt werden.
+Die [**CIM \_ ProductFRU-Klasse**](cim-productfru.md) stellt eine Zuordnung zwischen dem Produkt und einer FRU (Field Replaceable Unit) dar, die Informationen zu Produktkomponenten bereitstellt, die ersetzt wurden oder ersetzt werden.
 
 </dd> <dt>
 
-[**CIM \_ productparser**](cim-productparentchild.md)
+[**CIM \_ ProductParentChild**](cim-productparentchild.md)
 </dt> <dd>
 
-Die [**CIM \_ productparser**](cim-productparentchild.md) -Zuordnung definiert eine Hierarchie mit über-und untergeordneten Elementen zwischen Produkten. Beispielsweise kann ein Produkt mit anderen Produkten gebündelt werden.
+Die [**\_ CIM-Zuordnung ProductParentChild**](cim-productparentchild.md) definiert eine Über-/Unterordnungshierarchie zwischen Produkten. Beispielsweise kann ein Produkt zusammen mit anderen Produkten enthalten sein.
 
 </dd> <dt>
 
-[**CIM \_ productphysicalelements**](cim-productphysicalelements.md)
+[**CIM \_ ProductPhysicalElements**](cim-productphysicalelements.md)
 </dt> <dd>
 
-Die [**CIM \_ productphysicalelements**](cim-productphysicalelements.md) -Klasse stellt die physischen Elemente dar, die ein Produkt bilden.
+Die [**\_ CIM-Klasse ProductPhysicalElements**](cim-productphysicalelements.md) stellt die physischen Elemente dar, aus denen sich ein Produkt zusammen setzt.
 
 </dd> <dt>
 
-[**CIM \_ productproductabhängigkeit**](cim-productproductdependency.md)
+[**CIM \_ ProductProductDependency**](cim-productproductdependency.md)
 </dt> <dd>
 
-Die [**CIM \_ productproductdepen-Klasse**](cim-productproductdependency.md) stellt eine Zuordnung zwischen zwei Produkten dar, die angibt, dass eine für die andere installiert werden muss oder nicht. Dies entspricht konzeptionell der [**CIM \_ serviceserviceabhängigkeiten**](cim-serviceservicedependency.md) -Zuordnung.
+Die [**CIM \_ ProductProductDependency-Klasse**](cim-productproductdependency.md) stellt eine Zuordnung zwischen zwei Produkten dar, die angibt, dass eines installiert werden muss oder nicht vorhanden sein muss, damit das andere funktioniert. Dies entspricht konzeptionell der [**CIM \_ ServiceServiceDependency-Zuordnung.**](cim-serviceservicedependency.md)
 
 </dd> <dt>
 
-[**CIM \_ productsoftwarefeatures**](cim-productsoftwarefeatures.md)
+[**CIM \_ ProductSoftwareFeatures**](cim-productsoftwarefeatures.md)
 </dt> <dd>
 
-Die [**CIM \_ productsoftwarefeatures**](cim-productsoftwarefeatures.md) -Zuordnung identifiziert die Software Features für ein bestimmtes Produkt.
+Die [**\_ CIM-Zuordnung ProductSoftwareFeatures**](cim-productsoftwarefeatures.md) identifiziert die Softwarefeatures für ein bestimmtes Produkt.
 
 </dd> <dt>
 
-[**CIM- \_ productsupport**](cim-productsupport.md)
+[**CIM \_ ProductSupport**](cim-productsupport.md)
 </dt> <dd>
 
-Die [**CIM \_ productsupport**](cim-productsupport.md) -Klasse stellt eine Zuordnung Zwischenprodukt und Support Zugriff dar, die die Art der Unterstützung für das Produkt übermittelt. Für ein Produkt sind verschiedene Support Typen verfügbar. das gleiche Support Objekt bietet Unterstützung für mehrere Produkte.
+Die [**CIM \_ ProductSupport-Klasse**](cim-productsupport.md) stellt eine Zuordnung zwischen Produkt- und Supportzugriff dar, die vermittelt, wie Support für das Produkt erhalten wird. Für ein Produkt stehen verschiedene Arten von Support zur Verfügung. dasselbe Unterstützungsobjekt kann Unterstützung für mehrere Produkte bereitstellen.
 
 </dd> <dt>
 
-[**CIM \_ protectedspaceblock**](cim-protectedspaceextent.md)
+[**CIM \_ ProtectedSpaceExtent**](cim-protectedspaceextent.md)
 </dt> <dd>
 
-Die [**CIM \_ protectedspaceblock**](cim-protectedspaceextent.md) -Klasse stellt adressierbare logische Block Adressen dar, die als einzelner Speicherblock behandelt werden, sich jedoch in einem einzelnen physischen Block befinden.
+Die [**CIM \_ ProtectedSpaceExtent-Klasse**](cim-protectedspaceextent.md) stellt adressierbare logische Blockadressen dar, die als einzelner Speicherbereich behandelt werden, sich aber in einem einzelnen physischen Block befinden.
 
 </dd> <dt>
 
-[**CIM \_ psextentbasedonpblock**](cim-psextentbasedonpextent.md)
+[**CIM \_ PSExtentBasedOnPExtent**](cim-psextentbasedonpextent.md)
 </dt> <dd>
 
-Die [**CIM \_ psextentbasedonpblock**](cim-psextentbasedonpextent.md) -Klasse ordnet Blöcke mit geschütztem Speicherplatz zu, die auf einem physischen Block basieren.
+Die [**CIM \_ PSExtentBasedOnPExtent-Klasse**](cim-psextentbasedonpextent.md) ordnet geschützte Speicherplatzerweiterungen zu, die auf einem physischen Extent basieren.
 
 </dd> <dt>
 
-[**CIM- \_ Rack**](cim-rack.md)
+[**\_CIM-Rack**](cim-rack.md)
 </dt> <dd>
 
-Die [**CIM- \_ Rack**](cim-rack.md) -Klasse stellt ein Gestell (ein physischer Frame oder Gehäuse) dar, in dem das Chassis gespeichert wird. In der Regel stellt ein Rack das Gehäuse dar. Alle funktionierenden Komponenten werden in das Chassis gepackt.
+Die [**CIM \_ Rack-Klasse**](cim-rack.md) stellt ein Rack (einen physischen Rahmen oder ein Gehäuse) dar, in dem Gehäuse gespeichert werden. In der Regel stellt ein Rack das Gehäuse dar. alle funktionierenden Komponenten werden im Gehäuse verpackt.
 
 </dd> <dt>
 
-[**CIM \_ erkennt**](cim-realizes.md)
+[**CIM \_ realisiert**](cim-realizes.md)
 </dt> <dd>
 
-Die [**CIM \_**](cim-realizes.md) -Klasse stellt die Zuordnung dar, die die Zuordnung zwischen einem logischen Gerät und der physischen Komponente definiert, die das Gerät implementiert.
+Die [**CIM \_ Realizes-Klasse**](cim-realizes.md) stellt die Zuordnung dar, die die Zuordnung zwischen einem logischen Gerät und der physischen Komponente definiert, die das Gerät implementiert.
 
 </dd> <dt>
 
-[**CIM \_ realizesaggregatepblock**](cim-realizesaggregatepextent.md)
+[**CIM \_ RealizesAggregatePExtent**](cim-realizesaggregatepextent.md)
 </dt> <dd>
 
-Die CIM-Erweiterung " [**\_ realizesaggregatepblock**](cim-realizesaggregatepextent.md) " stellt die Beziehung dar, in der die [**CIM- \_ aggregatepblock**](cim-aggregatepextent.md) -Klasse auf einem physischen Medium realisiert wird.
+Die [**CIM \_ RealizesAggregatePExtent-Zuordnung**](cim-realizesaggregatepextent.md) stellt die Beziehung dar, in der die [**CIM \_ AggregatePExtent-Klasse**](cim-aggregatepextent.md) auf einem physischen Medium realisiert wird.
 
 </dd> <dt>
 
-[**CIM- \_ realizesdiskpartition**](cim-realizesdiskpartition.md)
+[**CIM \_ RealizesDiskPartition**](cim-realizesdiskpartition.md)
 </dt> <dd>
 
-Die CIM-Klasse " [**\_ realizesdiskpartition**](cim-realizesdiskpartition.md) " stellt eine Datenträger Partition auf einem physischen Medium dar, die die Erstellung von Partitionen auf einem unformatierten SCSI-oder IDE-Laufwerk modelliert.
+Die [**CIM \_ RealizesDiskPartition-Klasse**](cim-realizesdiskpartition.md) stellt eine Datenträgerpartition auf einem physischen Medium dar, die die Erstellung von Partitionen auf einem unformatierten SCSI- oder IDE-Laufwerk modelliert.
 
 </dd> <dt>
 
-[**CIM- \_ realizespblock**](cim-realizespextent.md)
+[**CIM \_ RealizesPExtent**](cim-realizespextent.md)
 </dt> <dd>
 
-Die CIM-Erweiterung " [**\_ realizespblock**](cim-realizespextent.md) " stellt die Beziehung dar, in der physische Blöcke auf einem physischen Medium realisiert werden. Außerdem wird die Startadresse des physischen Wertebereichs auf dem physischen Medium angegeben.
+Die [**CIM \_ RealizesPExtent-Zuordnung**](cim-realizespextent.md) stellt die Beziehung dar, in der physische Erweiterungen auf einem physischen Medium realisiert werden. Darüber hinaus wird die Startadresse des physischen Extents auf dem physischen Medium angegeben.
 
 </dd> <dt>
 
-[**CIM- \_ rebootaction**](cim-rebootaction.md)
+[**CIM \_ RebootAction**](cim-rebootaction.md)
 </dt> <dd>
 
-Die [**CIM \_ rebootaction**](cim-rebootaction.md) -Klasse verursacht einen Systemneustart, bei dem das Softwareelement installiert ist.
+Die [**CIM \_ RebootAction-Klasse**](cim-rebootaction.md) verursacht einen Systemneustart, bei dem das Softwareelement installiert ist.
 
 </dd> <dt>
 
-[**CIM \_ redundant cycomponent**](cim-redundancycomponent.md)
+[**CIM \_ RedundancyComponent**](cim-redundancycomponent.md)
 </dt> <dd>
 
-Die [**CIM \_ RedundancyComponent**](cim-redundancycomponent.md) -Klasse ordnet eine Redundanz Gruppe zu, die aus verwalteten Systemelementen besteht, und gibt an, dass die Elemente zusammen Redundanz bereitstellen. Alle Elemente, die in einer Redundanz Gruppe aggregiert werden, sollten Instanziierungen der gleichen Objektklasse sein.
+Die [**CIM \_ RedundancyComponent-Klasse**](cim-redundancycomponent.md) ordnet eine Redundanzgruppe zu, die aus verwalteten Systemelementen besteht, und gibt an, dass die Elemente zusammen Redundanz bereitstellen. Alle elemente, die in einer Redundanzgruppe aggregiert werden, sollten Instanziierungen derselben Objektklasse sein.
 
 </dd> <dt>
 
-[**CIM- \_ RedundancyGroup**](cim-redundancygroup.md)
+[**CIM \_ RedundancyGroup**](cim-redundancygroup.md)
 </dt> <dd>
 
-Die [**CIM \_ RedundancyGroup**](cim-redundancygroup.md) -Klasse stellt eine Auflistung verwalteter Systemelemente dar, die angibt, dass die aggregierten Komponenten zusammen Redundanz bereitstellen. Alle Elemente, die in einer Redundanz Gruppe aggregiert werden, sollten Instanziierungen der gleichen Objektklasse sein.
+Die [**CIM \_ RedundancyGroup-Klasse**](cim-redundancygroup.md) stellt eine Auflistung verwalteter Systemelemente dar, die angibt, dass die aggregierten Komponenten zusammen Redundanz bereitstellen. Alle elemente, die in einer Redundanzgruppe aggregiert werden, sollten Instanziierungen derselben Objektklasse sein.
 
 </dd> <dt>
 
-[**CIM- \_ Kühlung**](cim-refrigeration.md)
+[**\_CIM-Kühlung**](cim-refrigeration.md)
 </dt> <dd>
 
-Die [**CIM- \_ kühl**](cim-refrigeration.md) Klasse stellt die Funktionen und die Verwaltung eines kühl Geräts dar.
+Die [**CIM \_ Refrigeration-Klasse**](cim-refrigeration.md) stellt die Funktionen und die Verwaltung eines Kühlgeräts dar.
 
 </dd> <dt>
 
-[**CIM \_ relatedstatistics**](cim-relatedstatistics.md)
+[**CIM \_ RelatedStatistics**](cim-relatedstatistics.md)
 </dt> <dd>
 
-Die [**CIM \_ relatedstatistics**](cim-relatedstatistics.md) -Zuordnung stellt Hierarchien und Abhängigkeiten verwandter [**CIM \_ statisticalinformation**](cim-statisticalinformation.md) -Klassen dar.
+Die [**CIM \_ RelatedStatistics-Zuordnung**](cim-relatedstatistics.md) stellt Hierarchien und Abhängigkeiten verwandter [**CIM \_ StatisticalInformation-Klassen**](cim-statisticalinformation.md) dar.
 
 </dd> <dt>
 
-[**CIM- \_ remotefile System**](cim-remotefilesystem.md)
+[**CIM \_ RemoteFileSystem**](cim-remotefilesystem.md)
 </dt> <dd>
 
-Die [**CIM- \_ remotefile**](cim-remotefilesystem.md) System-Klasse stellt ein Remote Dateisystem dar, auf das über einen netzwerkbezogenen Dienst zugegriffen wird. In diesem Fall wird der Dateispeicher von einem Computer gehostet, der als Dateiserver fungiert.
+Die [**CIM \_ RemoteFileSystem-Klasse**](cim-remotefilesystem.md) stellt ein Remotedateisystem dar, auf das über einen netzwerkbezogenen Dienst zugegriffen wird. In diesem Fall wird der Dateispeicher von einem Computer gehostet, der als Dateiserver fungiert.
 
 </dd> <dt>
 
-[**CIM \_ removedirectoriyaction**](cim-removedirectoryaction.md)
+[**CIM \_ RemoveDirectoryAction**](cim-removedirectoryaction.md)
 </dt> <dd>
 
-Die [**CIM \_ removedirectoryaction**](cim-removedirectoryaction.md) -Klasse entfernt Verzeichnisse für Software Elemente.
+Die [**CIM \_ RemoveDirectoryAction-Klasse**](cim-removedirectoryaction.md) entfernt Verzeichnisse für Softwareelemente.
 
 </dd> <dt>
 
-[**CIM- \_ removefileaction**](cim-removefileaction.md)
+[**CIM \_ RemoveFileAction**](cim-removefileaction.md)
 </dt> <dd>
 
-Mit der [**CIM \_ removefileaction**](cim-removefileaction.md) -Klasse werden Dateien deinstalliert.
+Die [**CIM \_ RemoveFileAction-Klasse**](cim-removefileaction.md) deinstalliert Dateien.
 
 </dd> <dt>
 
-[**CIM-Ersatz \_ Satz**](cim-replacementset.md)
+[**CIM \_ ReplacementSet**](cim-replacementset.md)
 </dt> <dd>
 
-Die [**CIM \_ replacementset**](cim-replacementset.md) -Klasse aggregiert physische Elemente, die zusammen ersetzt werden müssen. Wenn Sie z. b. eine Speicherkarte austauschen, können die Komponenten Speicher-Chips auch entfernt und ersetzt werden. Oder diese Zuordnung kann verwendet werden, um einen Satz von Speicherchips zu ersetzen oder zu aktualisieren.
+Die [**CIM \_ ReplacementSet-Klasse**](cim-replacementset.md) aggregiert physische Elemente, die zusammen ersetzt werden müssen. Wenn Sie beispielsweise eine Grafikkarte ersetzen, können die Komponentenspeicherchips auch entfernt und ersetzt werden. Alternativ kann diese Zuordnung verwendet werden, um einen Satz von Speicherchips zu ersetzen oder zu aktualisieren.
 
 </dd> <dt>
 
-[**CIM \_ resiwisonblock**](cim-residesonextent.md)
+[**CIM \_ ResidesOnExtent**](cim-residesonextent.md)
 </dt> <dd>
 
-Die [**CIM \_ residesonblock**](cim-residesonextent.md) -Klasse stellt eine Zuordnung zwischen einem Dateisystem und dem Speicherblock dar, in dem es sich befindet. In der Regel befindet sich ein Dateisystem auf einem logischen Datenträger.
+Die [**CIM \_ ResidesOnExtent-Klasse**](cim-residesonextent.md) stellt eine Zuordnung zwischen einem Dateisystem und dem Speicherumfang dar, in dem es sich befindet. In der Regel befindet sich ein Dateisystem auf einem logischen Datenträger.
 
 </dd> <dt>
 
-[**CIM- \_ runningos**](cim-runningos.md)
+[**CIM \_ RunningOS**](cim-runningos.md)
 </dt> <dd>
 
-Die [**CIM \_ runningos**](cim-runningos.md) -Klasse stellt das aktuell ausgeführte Betriebssystem dar. Höchstens ein Betriebssystem kann zu einem beliebigen Zeitpunkt auf einem Computersystem ausgeführt werden. das Computersystem ist möglicherweise nicht gestartet, oder sein Betriebssystem ist unbekannt.
+Die [**CIM \_ RunningOS-Klasse**](cim-runningos.md) stellt das derzeit ausgeführte Betriebssystem dar. Höchstens ein Betriebssystem kann jederzeit auf einem Computersystem ausgeführt werden. Das Computersystem ist derzeit möglicherweise nicht gestartet, oder sein Betriebssystem ist unbekannt.
 
 </dd> <dt>
 
-[**CIM \_ sapsapabhängigkeit**](cim-sapsapdependency.md)
+[**CIM \_ SAPSAPDependency**](cim-sapsapdependency.md)
 </dt> <dd>
 
-Die [**CIM \_ sapsapabhängigkeits**](cim-sapsapdependency.md) -Klasse ist eine Zuordnung zwischen zwei Dienst Zugriffs Punkten (SAPS), mit der angegeben wird, dass die zweite SAP-Komponente erforderlich ist, damit der erste SAP eine Verbindung mit dem Dienst herstellt.
+Die [**CIM \_ SAPSAPDependency-Klasse**](cim-sapsapdependency.md) ist eine Zuordnung zwischen zwei Dienstzugriffspunkten (SAPs), die angibt, dass der zweite SAP erforderlich ist, damit der erste SAP eine Verbindung mit seinem Dienst herstellen kann.
 
 </dd> <dt>
 
-[**CIM- \_ Scanner**](cim-scanner.md)
+[**\_CIM-Scanner**](cim-scanner.md)
 </dt> <dd>
 
-Der [**CIM- \_ Scanner**](cim-scanner.md) stellt die Funktionen und die Verwaltung des logischen Scanner-Geräts dar.
+Der [**\_ CIM-Scanner**](cim-scanner.md) stellt die Funktionen und die Verwaltung des logischen Scannergeräts dar.
 
 </dd> <dt>
 
-[**CIM- \_ SCSIController**](cim-scsicontroller.md)
+[**CIM \_ SCSIController**](cim-scsicontroller.md)
 </dt> <dd>
 
-Die [**CIM \_ SCSIController**](cim-scsicontroller.md) -Klasse stellt die Funktionen und die Verwaltung des logischen SCSI-Controller Geräts dar.
+Die [**CIM \_ SCSIController-Klasse**](cim-scsicontroller.md) stellt die Funktionen und die Verwaltung des logischen SCSI-Controllergeräts dar.
 
 </dd> <dt>
 
-[**CIM- \_ scsiinterface**](cim-scsiinterface.md)
+[**CIM \_ SCSIInterface**](cim-scsiinterface.md)
 </dt> <dd>
 
-stellt eine [**CIM \_ controlledby**](cim-controlledby.md) -Beziehung dar, die angibt, auf welche Geräte über einen SCSI-Controller und die Zugriffs Eigenschaften zugegriffen wird.
+stellt eine [**CIM \_ ControlledBy-Beziehung**](cim-controlledby.md) dar, die angibt, auf welche Geräte über einen SCSI-Controller zugegriffen wird und welche Zugriffsmerkmale vorliegen.
 
 </dd> <dt>
 
-[**CIM- \_ Sensor**](cim-sensor.md)
+[**\_CIM-Sensor**](cim-sensor.md)
 </dt> <dd>
 
-Die [**CIM- \_ Sensor**](cim-sensor.md) Klasse stellt ein Hardware Gerät dar, mit dem die Eigenschaften einer physischen Eigenschaft (z. b. die Temperatur-oder Spannungs Merkmale eines einheitlichen Computer Systems) gemessen werden können.
+Die [**CIM \_ Sensor-Klasse**](cim-sensor.md) stellt ein Hardwaregerät dar, das die Merkmale einer physischen Eigenschaft messen kann (z. B. die Temperatur- oder Spannungseigenschaften eines unitären Computersystems).
 
 </dd> <dt>
 
-[**CIM- \_ SerialController**](cim-serialcontroller.md)
+[**CIM \_ SerialController**](cim-serialcontroller.md)
 </dt> <dd>
 
-Die [**CIM \_ SerialController**](cim-serialcontroller.md) -Klasse stellt die Funktionen und die Verwaltung des logischen Geräts des seriellen Ports dar.
+Die [**CIM \_ SerialController-Klasse**](cim-serialcontroller.md) stellt die Funktionen und die Verwaltung des logischen Seriellen Anschlussgeräts dar.
 
 </dd> <dt>
 
-[**CIM- \_ serialschnittstelle**](cim-serialinterface.md)
+[**CIM \_ SerialInterface**](cim-serialinterface.md)
 </dt> <dd>
 
-Die [**CIM \_ serialinterface**](cim-serialinterface.md) -Klasse stellt eine [**CIM \_ controlledby**](cim-controlledby.md) -Beziehung dar, die angibt, auf welche Geräte über den seriellen Controller und die Eigenschaften des Zugriffs zugegriffen werden.
+Die [**CIM \_ SerialInterface-Klasse**](cim-serialinterface.md) stellt eine [**CIM \_ ControlledBy-Beziehung**](cim-controlledby.md) dar, die angibt, auf welche Geräte über den seriellen Controller zugegriffen wird, und die Eigenschaften des Zugriffs.
 
 </dd> <dt>
 
-[**CIM- \_ Dienst**](cim-service.md)
+[**\_CIM-Dienst**](cim-service.md)
 </dt> <dd>
 
-Die [**CIM- \_ Dienst**](cim-service.md) Klasse stellt ein logisches Element dar, das Informationen zur Darstellung und Verwaltung der von einem Gerät oder einer Software Funktion bereitgestellten Funktionen enthält. Bei einem Dienst handelt es sich um ein allgemeines Objekt, um die Implementierung von Funktionen zu konfigurieren und zu verwalten. Es handelt sich nicht um die eigentliche Funktionalität.
+Die [**\_ CIM-Dienstklasse**](cim-service.md) stellt ein logisches Element dar, das Informationen zum Darstellen und Verwalten der Funktionalität enthält, die von einem Gerät oder softwarefeature bereitgestellt wird. Ein Dienst ist ein allgemeines Objekt zum Konfigurieren und Verwalten der Implementierung von Funktionen. es ist nicht die Funktionalität selbst.
 
 </dd> <dt>
 
-[**CIM \_ serviceaccessbysap**](cim-serviceaccessbysap.md)
+[**CIM \_ ServiceAccessBySAP**](cim-serviceaccessbysap.md)
 </dt> <dd>
 
-Die [**CIM \_ serviceaccessbysap**](cim-serviceaccessbysap.md) Association-Klasse stellt die Zugriffspunkte für einen Dienst dar. Beispielsweise kann auf einen Drucker über NetWare, Macintosh oder Windows-Dienst Zugriffspunkte (SAPS) zugegriffen werden, die potenziell auf unterschiedlichen Systemen gehostet werden.
+Die [**CIM \_ ServiceAccessBySAP-Zuordnungsklasse**](cim-serviceaccessbysap.md) stellt die Zugriffspunkte für einen Dienst dar. Auf einen Drucker kann beispielsweise über NetWare, Macintosh oder Windows Service Access Points (SAPs) zugegriffen werden, die möglicherweise auf verschiedenen Systemen gehostet werden.
 
 </dd> <dt>
 
-[**CIM \_ serviceaccesspoint**](cim-serviceaccesspoint.md)
+[**CIM \_ ServiceAccessPoint**](cim-serviceaccesspoint.md)
 </dt> <dd>
 
-Die [**CIM \_ serviceaccesspoint**](cim-serviceaccesspoint.md) -Klasse stellt die Möglichkeit dar, einen Dienst zu verwenden oder aufzurufen. Zugriffspunkte stellen Dienste dar, die von anderen Entitäten verwendet werden können.
+Die [**CIM \_ ServiceAccessPoint-Klasse**](cim-serviceaccesspoint.md) stellt die Möglichkeit dar, einen Dienst zu verwenden oder aufzurufen. Zugriffspunkte stellen Dienste dar, die für die Verwendung durch andere Entitäten verfügbar sind.
 
 </dd> <dt>
 
-[**CIM \_ servicesapabhängigkeit**](cim-servicesapdependency.md)
+[**CIM \_ ServiceSAPDependency**](cim-servicesapdependency.md)
 </dt> <dd>
 
-Die [**CIM \_ servicesapdepen-Klasse**](cim-servicesapdependency.md) stellt eine Zuordnung zwischen einem Dienst und einem Dienst Zugriffspunkt (SAP) dar, der angibt, dass der referenzierte SAP vom Dienst verwendet wird, um seine Funktionalität bereitzustellen.
+Die [**CIM \_ ServiceSAPDependency-Klasse**](cim-servicesapdependency.md) stellt eine Zuordnung zwischen einem Dienst und einem Dienstzugriffspunkt (SAP) dar, die angibt, dass die referenzierte SAP vom Dienst verwendet wird, um seine Funktionalität bereitzustellen.
 
 </dd> <dt>
 
-[**CIM \_ serviceserviceabhängigkeiten**](cim-serviceservicedependency.md)
+[**CIM \_ ServiceServiceDependency**](cim-serviceservicedependency.md)
 </dt> <dd>
 
-Die [**CIM \_ serviceservicedepen-Klasse**](cim-serviceservicedependency.md) stellt eine Zuordnung zwischen zwei Diensten dar.
+Die [**CIM \_ ServiceServiceDependency-Klasse**](cim-serviceservicedependency.md) stellt eine Zuordnung zwischen zwei Diensten dar.
 
 </dd> <dt>
 
-[**CIM- \_ Einstellung**](cim-setting.md)
+[**\_CIM-Einstellung**](cim-setting.md)
 </dt> <dd>
 
-Die [**CIM- \_ Einstellungs**](cim-setting.md) Klasse stellt Konfigurations bezogene und operative Parameter für ein oder mehrere verwaltete Systemelemente dar.
+Die [**CIM \_ Setting-Klasse**](cim-setting.md) stellt konfigurationsbezogene und betriebsbezogene Parameter für mindestens ein verwaltetes Systemelement dar.
 
 </dd> <dt>
 
-[**CIM- \_ settingcheck**](cim-settingcheck.md)
+[**\_CIM-EinstellungÜberprüfung**](cim-settingcheck.md)
 </dt> <dd>
 
-Die [**CIM \_ settingcheck**](cim-settingcheck.md) -Klasse gibt Informationen an, die erforderlich sind, um eine bestimmte Einstellungsdatei für einen bestimmten Eintrag zu überprüfen, der einen Wert gleich dem angegebenen Wert enthält. Bei allen vergleichen wird die Groß-/Kleinschreibung nicht beachtet.
+Die [**CIM \_ SettingCheck-Klasse**](cim-settingcheck.md) gibt Informationen an, die erforderlich sind, um eine bestimmte Einstellungsdatei auf einen bestimmten Eintrag zu überprüfen, der einen Wert enthält, der dem angegebenen Wert entspricht. Bei allen Vergleichen wird davon ausgegangen, dass die Groß-/Kleinschreibung nicht beachtet wird.
 
 </dd> <dt>
 
-[**CIM- \_ settingcontext**](cim-settingcontext.md)
+[**CIM \_ SettingContext**](cim-settingcontext.md)
 </dt> <dd>
 
-Die [**CIM \_ settingcontext**](cim-settingcontext.md) -Klasse ordnet Konfigurationsobjekte Einstellungs Objekten zu.
+Die [**CIM \_ SettingContext-Klasse**](cim-settingcontext.md) ordnet Konfigurationsobjekte Einstellungsobjekten zu.
 
 </dd> <dt>
 
-[**CIM- \_ Slot**](cim-slot.md)
+[**\_CIM-Slot**](cim-slot.md)
 </dt> <dd>
 
-Die [**CIM- \_ Slot**](cim-slot.md) -Klasse stellt Connectors dar, in die Pakete eingefügt werden.
+Die [**CIM \_ Slot-Klasse**](cim-slot.md) stellt Connectors dar, in die Pakete eingefügt werden.
 
 </dd> <dt>
 
-[**CIM \_ slotinslot**](cim-slotinslot.md)
+[**CIM \_ SlotInSlot**](cim-slotinslot.md)
 </dt> <dd>
 
-Die [**CIM \_ slotinslot**](cim-slotinslot.md) -Beziehung stellt die Fähigkeit eines speziellen Adapters dar, die vorhandene slotstruktur zu erweitern, um ansonsten inkompatible Karten zu ermöglichen, die an einem Frame oder einem hostingboard angeschlossen werden.
+Die [**CIM \_ SlotInSlot-Beziehung**](cim-slotinslot.md) stellt die Fähigkeit eines speziellen Adapters dar, die vorhandene Slotstruktur zu erweitern, damit ansonsten inkompatible Karten in einen Frame oder ein Hostingboard integriert werden können.
 
 </dd> <dt>
 
-[**CIM- \_ Softwareelement**](cim-softwareelement.md)
+[**CIM \_ SoftwareElement**](cim-softwareelement.md)
 </dt> <dd>
 
-Die [**CIM- \_ Softwareelement**](cim-softwareelement.md) -Klasse zerlegt ein [**CIM- \_ Softwarefeature**](cim-softwarefeature.md) -Objekt in einen Satz individuell verwaltbarer oder bereitstell barer Teile für eine bestimmte Plattform. Die Plattform eines Software Elements wird durch die zugrunde liegende Hardwarearchitektur und das Betriebssystem eindeutig identifiziert.
+Die [**CIM \_ SoftwareElement-Klasse**](cim-softwareelement.md) zerlegt ein [**CIM \_ SoftwareFeature-Objekt**](cim-softwarefeature.md) in eine Reihe von einzeln verwaltbaren oder bereitstellbaren Teilen für eine bestimmte Plattform. Die Plattform eines Softwareelements wird durch die zugrunde liegende Hardwarearchitektur und das Betriebssystem eindeutig identifiziert.
 
 </dd> <dt>
 
-[**CIM- \_ softwareelementactions**](cim-softwareelementactions.md)
+[**CIM \_ SoftwareElementActions**](cim-softwareelementactions.md)
 </dt> <dd>
 
-Die [**CIM- \_ softwareelementactions**](cim-softwareelementactions.md) -Zuordnung identifiziert die Aktionen für ein Softwareelement.
+Die [**CIM \_ SoftwareElementActions-Zuordnung**](cim-softwareelementactions.md) identifiziert die Aktionen für ein Softwareelement.
 
 </dd> <dt>
 
-[**CIM- \_ softwareelementchecks**](cim-softwareelementchecks.md)
+[**CIM \_ SoftwareElementChecks**](cim-softwareelementchecks.md)
 </dt> <dd>
 
-Die [**CIM- \_ softwareelementchecks**](cim-softwareelementchecks.md) -Zuordnungs Klasse verknüpft ein Softwareelement mit Bedingungs-oder Standortinformationen, die für eine Funktion erforderlich sind.
+Die [**CIM \_ SoftwareElementChecks-Zuordnungsklasse**](cim-softwareelementchecks.md) verknüpft ein Softwareelement mit Bedingungs- oder Standortinformationen, die ein Feature möglicherweise erfordert.
 
 </dd> <dt>
 
-[**CIM- \_ softwareelementversioncheck**](cim-softwareelementversioncheck.md)
+[**CIM \_ SoftwareElementVersionCheck**](cim-softwareelementversioncheck.md)
 </dt> <dd>
 
-Die [**CIM \_ softwareelementversioncheck**](cim-softwareelementversioncheck.md) -Klasse stellt einen Typ von Softwareelement dar, der in der Umgebung vorhanden sein muss.
+Die [**CIM \_ SoftwareElementVersionCheck-Klasse**](cim-softwareelementversioncheck.md) stellt einen Typ von Softwareelement dar, das in der Umgebung vorhanden sein muss.
 
 </dd> <dt>
 
-[**CIM- \_ Softwarefeature**](cim-softwarefeature.md)
+[**CIM \_ SoftwareFeature**](cim-softwarefeature.md)
 </dt> <dd>
 
-Die [**CIM- \_ Softwarefeature**](cim-softwarefeature.md) -Klasse stellt eine bestimmte Funktion oder Funktion eines Produkts oder Anwendungs Systems dar.
+Die [**CIM \_ SoftwareFeature-Klasse**](cim-softwarefeature.md) stellt eine bestimmte Funktion oder Funktion eines Produkt- oder Anwendungssystems dar.
 
 </dd> <dt>
 
-[**CIM- \_ softwarefeaturesapimplementation**](cim-softwarefeaturesapimplementation.md)
+[**CIM \_ SoftwareFeatureSAPImplementation**](cim-softwarefeaturesapimplementation.md)
 </dt> <dd>
 
-Die [**CIM- \_ softwarefeaturesapimplementation**](cim-softwarefeaturesapimplementation.md) -Klasse stellt eine Zuordnung zwischen einem Dienst Zugriffspunkt (SAP) und der Art der Implementierung in Software dar.
+Die [**CIM \_ SoftwareFeatureSAPImplementation-Klasse**](cim-softwarefeaturesapimplementation.md) stellt eine Zuordnung zwischen einem Dienstzugriffspunkt (SAP) und ihrer Implementierung in Software dar.
 
 </dd> <dt>
 
-[**CIM \_ softwarefeatureserviceimplementation**](cim-softwarefeatureserviceimplementation.md)
+[**CIM \_ SoftwareFeatureServiceImplementation**](cim-softwarefeatureserviceimplementation.md)
 </dt> <dd>
 
-Die [**CIM \_ softwarefeatureserviceimplementation**](cim-softwarefeatureserviceimplementation.md) -Klasse stellt eine Zuordnung zwischen einem Dienst und seiner Implementierung in Software dar.
+Die [**CIM \_ SoftwareFeatureServiceImplementation-Klasse**](cim-softwarefeatureserviceimplementation.md) stellt eine Zuordnung zwischen einem Dienst und seiner Implementierung in Software dar.
 
 </dd> <dt>
 
-[**CIM- \_ softwarefeaturesoftwareelements**](cim-softwarefeaturesoftwareelements.md)
+[**CIM \_ SoftwareFeatureSoftwareElements**](cim-softwarefeaturesoftwareelements.md)
 </dt> <dd>
 
-Die [**CIM- \_ softwarefeaturesoftwareelements**](cim-softwarefeaturesoftwareelements.md) -Zuordnung identifiziert die Software Elemente, die ein bestimmtes Software Feature bilden.
+Die [**CIM \_ SoftwareFeatureSoftwareElements-Zuordnung**](cim-softwarefeaturesoftwareelements.md) identifiziert die Softwareelemente, die ein bestimmtes Softwarefeature bilden.
 
 </dd> <dt>
 
-[**CIM- \_ SpareGroup**](cim-sparegroup.md)
+[**CIM \_ SpareGroup**](cim-sparegroup.md)
 </dt> <dd>
 
-Die [**CIM \_ SpareGroup**](cim-sparegroup.md) -Klasse wird von der [**CIM \_ redundant cygroup**](cim-redundancygroup.md) -Klasse abgeleitet und gibt an, dass mindestens eines der aggregierten Elemente geschont werden kann.
+Die [**\_ CIM-SpareGroup-Klasse**](cim-sparegroup.md) wird von der [**CIM \_ RedundancyGroup-Klasse**](cim-redundancygroup.md) abgeleitet und gibt an, dass mindestens eines der aggregierten Elemente vermieden werden kann.
 
 </dd> <dt>
 
-[**CIM- \_ statisticalinformation**](cim-statisticalinformation.md)
+[**CIM \_ StatisticalInformation**](cim-statisticalinformation.md)
 </dt> <dd>
 
-Die [**CIM \_ statisticalinformation**](cim-statisticalinformation.md) -Klasse ist eine Stamm Klasse für die beliebige Auflistung von statistischen Daten oder Metriken, die für ein oder mehrere verwaltete Systemelemente anwendbar sind.
+Die [**CIM \_ StatisticalInformation-Klasse**](cim-statisticalinformation.md) ist eine Stammklasse für die beliebige Sammlung statistischer Daten oder Metriken, die auf ein oder mehrere verwaltete Systemelemente anwendbar sind.
 
 </dd> <dt>
 
-[**CIM- \_ Statistik**](cim-statistics.md)
+[**\_CIM-Statistiken**](cim-statistics.md)
 </dt> <dd>
 
-Die [**CIM \_ Statistics**](cim-statistics.md) -Klasse stellt eine Zuordnung dar, die verwaltete Systemelemente mit den statistischen Gruppen verknüpft, die für Sie gelten.
+Die [**CIM \_ Statistics-Klasse**](cim-statistics.md) stellt eine Zuordnung dar, die verwaltete Systemelemente mit den statistischen Gruppen verknüpft, die für sie gelten.
 
 </dd> <dt>
 
-[**CIM- \_ storagemängel**](cim-storagedefect.md)
+[**CIM \_ StorageDefect**](cim-storagedefect.md)
 </dt> <dd>
 
-Die [**CIM \_ storagemängel**](cim-storagedefect.md) -Aggregation sammelt die Speicherfehler für einen Speicherblock.
+Die [**CIM \_ StorageDefect-Aggregation**](cim-storagedefect.md) erfasst die Speicherfehler für einen Speicherumfang.
 
 </dd> <dt>
 
-[**CIM- \_ storageerror**](cim-storageerror.md)
+[**CIM \_ StorageError**](cim-storageerror.md)
 </dt> <dd>
 
-Die [**CIM \_ storageerror**](cim-storageerror.md) -Klasse stellt Blöcke von Medien oder Speicherplatz dar, die aufgrund von Fehlern nicht verwendeter Speicher zugeordnet sind. Der Schlüssel der-Klasse ist die **StartingAddress** -Eigenschaft der Bytes, die fehlerhaft sind.
+Die [**CIM \_ StorageError-Klasse**](cim-storageerror.md) stellt Blöcke von Medien oder Arbeitsspeicher dar, die aufgrund von Fehlern nicht mehr verwendet werden können. Der Schlüssel der -Klasse ist die **StartingAddress-Eigenschaft** der fehlerhaften Bytes.
 
 </dd> <dt>
 
-[**CIM- \_ storageblock**](cim-storageextent.md)
+[**CIM \_ StorageExtent**](cim-storageextent.md)
 </dt> <dd>
 
-Die [**CIM \_ storageblock**](cim-storageextent.md) -Klasse stellt die Funktionen und die Verwaltung der verschiedenen Medien dar, die zum Speichern von Daten und zum Abrufen des Datenabrufs vorhanden sind. Diese übergeordnete Klasse kann die verschiedenen Komponenten von RAID (Hardware oder Software) oder einen logischen Bereich auf physischen Medien darstellen.
+Die [**CIM \_ StorageExtent-Klasse**](cim-storageextent.md) stellt die Funktionen und die Verwaltung der verschiedenen Medien dar, die vorhanden sind, um Daten zu speichern und den Datenabruf zu ermöglichen. Diese übergeordnete Klasse kann die verschiedenen Komponenten von RAID (Hardware oder Software) oder einen unformatierten logischen Umfang auf physischen Medien darstellen.
 
 </dd> <dt>
 
-[**CIM \_ storageredundancygroup**](cim-storageredundancygroup.md)
+[**CIM \_ StorageRedundancyGroup**](cim-storageredundancygroup.md)
 </dt> <dd>
 
-Die [**CIM \_ storageredundancygroup**](cim-storageredundancygroup.md) -Klasse stellt Massenspeicher bezogene Redundanz Informationen dar.
+Die [**CIM \_ StorageRedundancyGroup-Klasse**](cim-storageredundancygroup.md) stellt Massenspeicherbezogene Redundanzinformationen dar.
 
 </dd> <dt>
 
-[**CIM- \_ supportaccess**](cim-supportaccess.md)
+[**\_CIM-UnterstützungZugriff**](cim-supportaccess.md)
 </dt> <dd>
 
-Die [**CIM \_ supportaccess**](cim-supportaccess.md) -Klasse definiert, wie Sie Unterstützung für ein Produkt erhalten.
+Die [**CIM \_ SupportAccess-Klasse**](cim-supportaccess.md) definiert, wie Sie Unterstützung für ein Produkt erhalten.
 
 </dd> <dt>
 
-[**CIM- \_ Swap-Papier**](cim-swapspacecheck.md)
+[**CIM \_ SwapSpaceCheck**](cim-swapspacecheck.md)
 </dt> <dd>
 
-Die [**CIM \_ swapspacecheck**](cim-swapspacecheck.md) -Klasse gibt die Menge an Auslagerungs Bereich an, die auf dem System verfügbar sein muss.
+Die [**CIM \_ SwapSpaceCheck-Klasse**](cim-swapspacecheck.md) gibt die Menge an Auslagerungsspeicherplatz an, der auf dem System verfügbar sein muss.
 
 </dd> <dt>
 
-[**CIM- \_ System**](cim-system.md)
+[**\_CIM-System**](cim-system.md)
 </dt> <dd>
 
-Die [**CIM- \_ System**](cim-system.md) Klasse aggregiert einen Aufzähl baren Satz verwalteter System Elemente. Die Aggregation funktioniert als Ganzes funktionstüchtig. Innerhalb einer bestimmten Unterklasse des Systems gibt es eine klar definierte Liste der verwalteten System Element Klassen, deren Instanzen aggregiert werden müssen.
+Die [**\_ CIM-Systemklasse**](cim-system.md) aggregiert einen aufzählbaren Satz verwalteter Systemelemente. Die Aggregation fungiert als funktionales Ganzes. Innerhalb einer bestimmten Unterklasse des Systems gibt es eine klar definierte Liste verwalteter Systemelementklassen, deren Instanzen aggregiert werden müssen.
 
 </dd> <dt>
 
-[**CIM- \_ SystemComponent**](cim-systemcomponent.md)
+[**CIM \_ SystemComponent**](cim-systemcomponent.md)
 </dt> <dd>
 
-eine Common Information Model (CIM)-Zuordnungs Klasse, mit der Beziehungen zwischen einem System und den verwalteten Systemelementen hergestellt werden, von denen es zusammengesetzt wird.
+eine cim-Zuordnungsklasse (Common Information Model), die Beziehungen zwischen einem System und den verwalteten Systemelementen herstellt, aus denen es besteht.
 
 </dd> <dt>
 
-[**CIM- \_ System Gerät**](cim-systemdevice.md)
+[**CIM \_ SystemDevice**](cim-systemdevice.md)
 </dt> <dd>
 
-Die [**CIM- \_ SystemDevice**](cim-systemdevice.md) -Zuordnung stellt eine explizite Beziehung dar, in der logische Geräte von einem System aggregiert werden können.
+Die [**\_ CIM-SystemGerätezuordnung**](cim-systemdevice.md) stellt eine explizite Beziehung dar, in der logische Geräte von einem System aggregiert werden können.
 
 </dd> <dt>
 
-[**CIM- \_ Systemresource**](cim-systemresource.md)
+[**CIM \_ SystemResource**](cim-systemresource.md)
 </dt> <dd>
 
-Die [**CIM- \_ systemressourcenklasse**](cim-systemresource.md) stellt eine Entität dar, die von BIOS verwaltet wird, oder ein Betriebssystem, das für die Verwendung durch Software und logische Geräte verfügbar ist.
+Die [**CIM \_ SystemResource-Klasse**](cim-systemresource.md) stellt eine Entität dar, die vom BIOS verwaltet wird, oder ein Betriebssystem, das für die Verwendung durch Software und logische Geräte verfügbar ist.
 
 </dd> <dt>
 
-[**CIM- \_ Tachometer**](cim-tachometer.md)
+[**\_CIM-Tachometer**](cim-tachometer.md)
 </dt> <dd>
 
-Die CIM-Klasse " [**\_ Tachometer**](cim-tachometer.md) " ist für die Abwärtskompatibilität mit früheren CIM-Schema Definitionen vorhanden.
+Die [**CIM \_ Tachometer-Klasse**](cim-tachometer.md) ist aus Gründen der Abwärtskompatibilität mit früheren CIM-Schemadefinitionen vorhanden.
 
 </dd> <dt>
 
-[**CIM- \_ TapeDrive**](cim-tapedrive.md)
+[**CIM \_ TapeDrive**](cim-tapedrive.md)
 </dt> <dd>
 
-Die [**CIM \_ TapeDrive**](cim-tapedrive.md) -Klasse stellt ein Bandlaufwerk auf dem System dar. Bandlaufwerke unterscheiden sich hauptsächlich darin, dass nur sequenziell auf Sie zugegriffen werden kann.
+Die [**CIM \_ TapeDrive-Klasse**](cim-tapedrive.md) stellt ein Bandlaufwerk auf dem System dar. Bandlaufwerke unterscheiden sich hauptsächlich darin, dass auf sie nur sequenziell zugegriffen werden kann.
 
 </dd> <dt>
 
-[**CIM- \_ Temperatursensor**](cim-temperaturesensor.md)
+[**CIM \_ TemperatureSensor**](cim-temperaturesensor.md)
 </dt> <dd>
 
-Die [**CIM- \_ Temperatursensor**](cim-temperaturesensor.md) Klasse ist für die Abwärtskompatibilität mit früheren CIM-Schema Definitionen vorhanden.
+Die [**CIM \_ TemperatureSensor-Klasse**](cim-temperaturesensor.md) ist aus Gründen der Abwärtskompatibilität mit früheren CIM-Schemadefinitionen vorhanden.
 
 </dd> <dt>
 
-[**CIM- \_ Thread**](cim-thread.md)
+[**\_CIM-Thread**](cim-thread.md)
 </dt> <dd>
 
-Die [**CIM- \_ Thread**](cim-thread.md) Klasse stellt die Möglichkeit dar, gleichzeitig Einheiten eines Prozesses oder einer Aufgabe auszuführen. Ein Prozess kann über viele Threads verfügen, von denen jede für den Prozess schwach ist.
+Die [**\_ CIM-Threadklasse**](cim-thread.md) stellt die Möglichkeit dar, Einheiten eines Prozesses oder Tasks parallel auszuführen. Ein Prozess kann viele Threads enthalten, von denen jeder für den Prozess schwach ist.
 
 </dd> <dt>
 
-[**CIM- \_ Verzeichnis Aktion**](cim-todirectoryaction.md)
+[**CIM \_ ToDirectoryAction**](cim-todirectoryaction.md)
 </dt> <dd>
 
-Die [**CIM \_**](cim-todirectoryaction.md) -Verzeichnis Verbindungs Zuordnung identifiziert das Zielverzeichnis für die Datei Aktion.
+Die [**CIM \_ ToDirectoryAction-Zuordnung**](cim-todirectoryaction.md) identifiziert das Zielverzeichnis für die Dateiaktion.
 
 </dd> <dt>
 
-[**CIM- \_ Verzeichnis Spezifikation**](cim-todirectoryspecification.md)
+[**CIM \_ ToDirectorySpecification**](cim-todirectoryspecification.md)
 </dt> <dd>
 
-Die [**CIM \_**](cim-todirectoryspecification.md) -Verzeichnisdienst Spezifikation identifiziert das Zielverzeichnis für die Datei Aktion.
+Die [**\_ CIM-Zuordnung ToDirectorySpecification**](cim-todirectoryspecification.md) identifiziert das Zielverzeichnis für die Dateiaktion.
 
 </dd> <dt>
 
-[**CIM- \_ uninterruptiblepowersupply**](cim-uninterruptiblepowersupply.md)
+[**CIM \_ UninterruptiblePowerSupply**](cim-uninterruptiblepowersupply.md)
 </dt> <dd>
 
-Die [**CIM-Klasse \_ uninterruptiblepowersupply**](cim-uninterruptiblepowersupply.md) stellt die Funktionen und die Verwaltung einer unterbrechungsfreien Stromversorgung (UPS) dar.
+Die [**CIM \_ UninterruptiblePowerSupply-Klasse**](cim-uninterruptiblepowersupply.md) stellt die Funktionen und die Verwaltung einer unterbrechungslosen Stromversorgung (USV) dar.
 
 </dd> <dt>
 
-[**CIM \_ unitarycomputersystem**](cim-unitarycomputersystem.md)
+[**CIM \_ UnitaryComputerSystem**](cim-unitarycomputersystem.md)
 </dt> <dd>
 
-Die [**CIM \_ unitarycomputersystem**](cim-unitarycomputersystem.md) -Klasse stellt einen Desktop-, Mobil-, Netzwerk Computer-, Server-oder anderen Typ eines Computer Systems mit einem einzelnen Knoten dar.
+Die [**CIM \_ UnitaryComputerSystem-Klasse**](cim-unitarycomputersystem.md) stellt einen Desktop, einen mobilen Computer, einen Netzwerkcomputer, einen Server oder einen anderen Computersystemtyp mit einem einzelnen Knoten dar.
 
 </dd> <dt>
 
-[**CIM-Start \_ Controller**](cim-usbcontroller.md)
+[**CIM \_ USBController**](cim-usbcontroller.md)
 </dt> <dd>
 
-Die [**CIM \_**](cim-usbcontroller.md) -Klasse "Start Controller" stellt die Funktionen und die Verwaltung eines USB-Controllers dar.
+Die [**CIM \_ USBController-Klasse**](cim-usbcontroller.md) stellt die Funktionen und die Verwaltung eines USB-Controllers dar.
 
 </dd> <dt>
 
-[**CIM-Start \_ Controller-controllerhashub**](cim-usbcontrollerhashub.md)
+[**CIM \_ USBControllerHasHub**](cim-usbcontrollerhashub.md)
 </dt> <dd>
 
-Die [**CIM \_**](cim-usbcontrollerhashub.md) -Klasse "-Klasse" definiert die Hubs, die dem USB-Controller nachgelagert werden.
+Die [**CIM \_ USBControllerHasHub-Klasse**](cim-usbcontrollerhashub.md) definiert die Hubs, die dem USB-Controller nachgeschaltet sind.
 
 </dd> <dt>
 
-[**CIM-Start \_ Gerät**](cim-usbdevice.md)
+[**CIM \_ USBDevice**](cim-usbdevice.md)
 </dt> <dd>
 
-Die [**CIM \_**](cim-usbdevice.md) -Klasse "-Klasse" stellt die Verwaltungsmerkmale eines USB-Geräts dar.
+Die [**CIM \_ USBDevice-Klasse**](cim-usbdevice.md) stellt die Verwaltungsmerkmale eines USB-Geräts dar.
 
 </dd> <dt>
 
-[**CIM-Startseite \_**](cim-usbhub.md)
+[**CIM \_ USBHub**](cim-usbhub.md)
 </dt> <dd>
 
-Die [**CIM \_**](cim-usbhub.md) -Klasse "-Klasse" stellt die Funktionen und die Verwaltung eines USB-Hubs dar.
+Die [**CIM \_ USBHub-Klasse**](cim-usbhub.md) stellt die Funktionen und die Verwaltung eines USB-Hubs dar.
 
 </dd> <dt>
 
-[**CIM- \_ userdevice**](cim-userdevice.md)
+[**CIM \_ UserDevice**](cim-userdevice.md)
 </dt> <dd>
 
-Die [**CIM- \_ userdevice**](cim-userdevice.md) -Klasse ist eine übergeordnete Klasse, von der andere Klassen, z. b. [**CIM- \_ Tastatur**](cim-keyboard.md) oder [**CIM \_ Desktopmonitor**](cim-desktopmonitor.md), abgeleitet werden. Benutzer Geräte sind logische Geräte, die es einem Computersystem ermöglichen, Daten einzugeben, anzuzeigen oder zu hören.
+Die [**CIM \_ UserDevice-Klasse**](cim-userdevice.md) ist eine übergeordnete Klasse, von der andere Klassen, z. B. [**\_ CIM-Tastatur**](cim-keyboard.md) oder [**CIM \_ DesktopMonitor,**](cim-desktopmonitor.md)absteigen. Benutzergeräte sind logische Geräte, die es dem Benutzer eines Computersystems ermöglichen, Daten einzugeben, anzuzeigen oder zu hören.
 
 </dd> <dt>
 
-[**CIM \_ versioncompatibilitycheck**](cim-versioncompatibilitycheck.md)
+[**CIM \_ VersionCompatibilityCheck**](cim-versioncompatibilitycheck.md)
 </dt> <dd>
 
-Die [**CIM \_ versioncompatibilitycheck**](cim-versioncompatibilitycheck.md) -Klasse gibt an, ob es zulässig ist, den nächsten Zustand eines Software Elements zu erstellen.
+Die [**CIM \_ VersionCompatibilityCheck-Klasse**](cim-versioncompatibilitycheck.md) gibt an, ob es zulässig ist, den nächsten Zustand eines Softwareelements zu erstellen.
 
 </dd> <dt>
 
-[**CIM- \_ videobioselements**](cim-videobioselement.md)
+[**CIM \_ VideoBIOSElement**](cim-videobioselement.md)
 </dt> <dd>
 
-Die [**CIM \_ videobioselfigure**](cim-videobioselement.md) -Klasse stellt die Software auf niedriger Ebene dar, die in nicht flüchtigen Speicher geladen wird und zum Konfigurieren und Zugreifen auf den Videocontroller und die Anzeige eines Computer Systems verwendet wird.
+Die [**CIM \_ VideoBIOSElement-Klasse**](cim-videobioselement.md) stellt die Software auf niedriger Ebene dar, die in einen nicht flüchtigen Speicher geladen wird und zum Konfigurieren und Zugreifen auf den Videocontroller und die Anzeige eines Computersystems verwendet wird.
 
 </dd> <dt>
 
-[**CIM \_ videobiosfeature**](cim-videobiosfeature.md)
+[**CIM \_ VideoBIOSFeature**](cim-videobiosfeature.md)
 </dt> <dd>
 
-Die [**CIM \_ videobiosfeature**](cim-videobiosfeature.md) -Klasse stellt die Funktionen der Low-Level-Software dar, die zum Konfigurieren und Zugreifen auf den Videocontroller und die Anzeige eines Computer Systems verwendet wird.
+Die [**CIM \_ VideoBIOSFeature-Klasse**](cim-videobiosfeature.md) stellt die Funktionen der Low-Level-Software dar, die verwendet wird, um den Videocontroller und die Anzeige eines Computersystems zu konfigurieren und darauf zuzugreifen.
 
 </dd> <dt>
 
-[**CIM \_ videobiosfeaturevideobioselements**](cim-videobiosfeaturevideobioselements.md)
+[**CIM \_ VideoBIOSFeatureVideoBIOSElements**](cim-videobiosfeaturevideobioselements.md)
 </dt> <dd>
 
-Die [**CIM \_ videobiosfeaturevideobioselements**](cim-videobiosfeaturevideobioselements.md) -Klasse ordnet eine Video-BIOS-Funktion und ihre aggregierten Video-BIOS-Elemente zu.
+Die [**CIM \_ VideoBIOSFeatureVideoBIOSElements-Klasse**](cim-videobiosfeaturevideobioselements.md) ordnet ein Video-BIOS-Feature und die zugehörigen aggregierten BioS-Videoelemente zu.
 
 </dd> <dt>
 
-[**CIM- \_ Videocontroller**](cim-videocontroller.md)
+[**CIM \_ VideoController**](cim-videocontroller.md)
 </dt> <dd>
 
-Die [**CIM \_ Videocontroller**](cim-videocontroller.md) -Klasse stellt die Funktionen und die Verwaltung des Video Controllers dar.
+Die [**CIM \_ VideoController-Klasse**](cim-videocontroller.md) stellt die Funktionen und die Verwaltung des Videocontrollers dar.
 
 </dd> <dt>
 
-[**CIM- \_ videocontrollerresolution**](cim-videocontrollerresolution.md)
+[**CIM \_ VideoControllerResolution**](cim-videocontrollerresolution.md)
 </dt> <dd>
 
-Die [**CIM \_ videocontrollerresolution**](cim-videocontrollerresolution.md) -Klasse stellt die verschiedenen Video Modi dar, die von einem Videocontroller unterstützt werden können.
+Die [**CIM \_ VideoControllerResolution-Klasse**](cim-videocontrollerresolution.md) stellt die verschiedenen Videomodi dar, die ein Videocontroller unterstützen kann.
 
 </dd> <dt>
 
-[**CIM- \_ videosetting**](cim-videosetting.md)
+[**CIM \_ VideoSetting**](cim-videosetting.md)
 </dt> <dd>
 
-Die [**CIM- \_ videosetting**](cim-videosetting.md) -Klasse ordnet das [**CIM \_ videocontrollerresolution**](cim-videocontrollerresolution.md) -Einstellungs Objekt dem Controller zu, auf den es angewendet wird.
+Die [**CIM \_ VideoSetting-Klasse**](cim-videosetting.md) ordnet das [**CIM \_ VideoControllerResolution-Einstellungsobjekt**](cim-videocontrollerresolution.md) dem Controller zu, auf den es angewendet wird.
 
 </dd> <dt>
 
-[**CIM- \_ VolatileStorage**](cim-volatilestorage.md)
+[**CIM \_ VolatileStorage**](cim-volatilestorage.md)
 </dt> <dd>
 
-Die [**CIM \_ VolatileStorage**](cim-volatilestorage.md) -Klasse stellt die Funktionen und die Verwaltung von flüchtigem Speicher dar.
+Die [**CIM \_ VolatileStorage-Klasse**](cim-volatilestorage.md) stellt die Funktionen und die Verwaltung von flüchtigem Speicher dar.
 
 </dd> <dt>
 
-[**CIM- \_ Temperatursensor**](cim-voltagesensor.md)
+[**CIM \_ VoltageSensor**](cim-voltagesensor.md)
 </dt> <dd>
 
-Die CIM-Klasse " [**\_ VoltageSensor**](cim-voltagesensor.md) " ist für die Abwärtskompatibilität mit früheren CIM-Schema Definitionen vorhanden. Mit Ergänzungen der [**CIM- \_ Sensor**](cim-sensor.md) -und [**CIM- \_ numericsensor**](cim-numericsensor.md) -Klassen in Version 2,2 ist es nicht mehr erforderlich.
+Die [**CIM \_ VoltageSensor-Klasse**](cim-voltagesensor.md) ist aus Gründen der Abwärtskompatibilität mit früheren CIM-Schemadefinitionen vorhanden. Mit Ergänzungen der Cim [**\_ Sensor-**](cim-sensor.md) und [**CIM \_ NumericSensor-Klassen**](cim-numericsensor.md) in Version 2.2 ist dies nicht mehr erforderlich.
 
 </dd> <dt>
 
-[**CIM- \_ volumeset**](cim-volumeset.md)
+[**CIM \_ VolumeSet**](cim-volumeset.md)
 </dt> <dd>
 
-Die [**CIM \_ volumeset**](cim-volumeset.md) -Klasse stellt einen zusammenhängenden Bereich logischer Blöcke dar, die der Betriebsumgebung zum Lesen und Schreiben von Benutzerdaten präsentiert werden.
+Die [**CIM \_ VolumeSet-Klasse**](cim-volumeset.md) stellt einen zusammenhängenden Bereich logischer Blöcke dar, die der Betriebsumgebung zum Lesen und Schreiben von Benutzerdaten angezeigt werden.
 
 </dd> <dt>
 
-[**CIM- \_ Wurm Laufwerk**](cim-wormdrive.md)
+[**CIM \_ WORMDrive**](cim-wormdrive.md)
 </dt> <dd>
 
-Die CIM-Klasse " [**\_ Wormdrive**](cim-wormdrive.md) " stellt die Funktionen und die Verwaltung eines Wurm Laufwerks dar, einen Untertyp des Medien Zugriffs Geräts.
+Die [**CIM \_ WORMDrive-Klasse**](cim-wormdrive.md) stellt die Funktionen und die Verwaltung eines WORM-Laufwerks dar, einem Untertyp des Medienzugriffsgeräts.
 
 </dd> </dl>
 
