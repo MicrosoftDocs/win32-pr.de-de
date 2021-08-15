@@ -1,7 +1,7 @@
 ---
-description: Veraltet. Ermöglicht das Benachrichtigen von Änderungen an Benutzer Identitäten im System sowie Benutzer Anforderungen zum Wechseln der aktuellen Benutzeridentität.
+description: Veraltet. Stellt Benachrichtigungen zu Änderungen an Benutzeridentitäten im System sowie Benutzeranforderungen zum Wechseln der aktuellen Benutzeridentität bereit.
 ms.assetid: 09903aa6-62bf-4820-9a09-79956d775441
-title: Iidentitychangenotify-Schnittstelle (Msident. h)
+title: IIdentityChangeNotify-Schnittstelle (Msident.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,46 +13,46 @@ api_type:
 - COM
 api_location:
 - Msoe.dll
-ms.openlocfilehash: 4a217b2cfb046bfb9ae5546e015264f74d00b1d0
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 4419f55b2fe4561a22035d962da5e3c271108d06fa417cfbed1b603c883e5b32
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104215931"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118721908"
 ---
-# <a name="iidentitychangenotify-interface"></a>Iidentitychangenotify-Schnittstelle
+# <a name="iidentitychangenotify-interface"></a>IIdentityChangeNotify-Schnittstelle
 
-\[Die **iidentitychangenotify** -Schnittstelle ist für die Verwendung in Windows 2000 verfügbar. In Windows XP wurde diese Funktion durch [Benutzerkonten mit schneller Benutzerumschaltung und Remotedesktop](fastuserswitching.md)abgelöst und kann in nachfolgenden Versionen geändert oder nicht verfügbar sein.\]
+\[Die **IIdentityChangeNotify-Schnittstelle** ist für die Verwendung in Windows 2000 verfügbar. In Windows XP wurde diese Funktion durch Benutzerkonten [mit schnellem Benutzerwechsel und Remotedesktop](fastuserswitching.md)ersetzt und kann in nachfolgenden Versionen geändert oder nicht verfügbar sein.\]
 
-Veraltet. Ermöglicht das Benachrichtigen von Änderungen an Benutzer Identitäten im System sowie Benutzer Anforderungen zum Wechseln der aktuellen Benutzeridentität.
+Veraltet. Stellt Benachrichtigungen zu Änderungen an Benutzeridentitäten im System sowie Benutzeranforderungen zum Wechseln der aktuellen Benutzeridentität bereit.
 
 ## <a name="members"></a>Member
 
-Die **iidentitychangenotify** -Schnittstelle erbt von der [**IUnknown**](/windows/win32/api/unknwn/nn-unknwn-iunknown) -Schnittstelle. **Iidentitychangenotify** verfügt auch über die folgenden Typen von Membern:
+Die **IIdentityChangeNotify-Schnittstelle** erbt von der [**IUnknown-Schnittstelle.**](/windows/win32/api/unknwn/nn-unknwn-iunknown) **IIdentityChangeNotify** verfügt auch über diese Typen von Membern:
 
 -   [Methoden](#methods)
 
 ### <a name="methods"></a>Methoden
 
-Die **iidentitychangenotifisierungsschnittstelle** verfügt über diese Methoden.
+Die **IIdentityChangeNotify-Schnittstelle** verfügt über diese Methoden.
 
 
 
-| Methode                                                                                 | BESCHREIBUNG                                                                                                                           |
+| Methode                                                                                 | Beschreibung                                                                                                                           |
 |:---------------------------------------------------------------------------------------|:--------------------------------------------------------------------------------------------------------------------------------------|
-| [**Identityinformationchanged**](iidentitychangenotify-identityinformationchanged.md) | Veraltet. Wird aufgerufen, wenn sich die Informationen zu einer Benutzeridentität geändert haben oder wenn eine Benutzeridentität hinzugefügt oder gelöscht wurde.<br/>  |
-| [**Queryswitchidentities**](iidentitychangenotify-queryswitchidentities.md)           | Veraltet. Wird aufgerufen, wenn der aktuelle Benutzer angefordert hat, dass die Benutzeridentität gewechselt wird, jedoch bevor der Switch auftritt.<br/> |
-| [**Switchidentities**](iidentitychangenotify-switchidentities.md)                     | Veraltet. Wird aufgerufen, wenn Benutzer Identitäten gewechselt werden.<br/>                                                                      |
+| [**IdentityInformationChanged**](iidentitychangenotify-identityinformationchanged.md) | Veraltet. Wird aufgerufen, wenn Informationen zu einer Benutzeridentität geändert wurden oder wenn eine Benutzeridentität hinzugefügt oder gelöscht wurde.<br/>  |
+| [**QuerySwitchIdentities**](iidentitychangenotify-queryswitchidentities.md)           | Veraltet. Wird aufgerufen, wenn der aktuelle Benutzer angefordert hat, dass seine Benutzeridentität gewechselt wird, aber bevor der Wechsel erfolgt.<br/> |
+| [**SwitchIdentities**](iidentitychangenotify-switchidentities.md)                     | Veraltet. Wird aufgerufen, wenn Benutzeridentitäten gewechselt werden.<br/>                                                                      |
 
 
 
  
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Um Benachrichtigungen zu implementieren, muss eine abgeleitete Schnittstelle eine Verbindung mit dem [**iuseridentitymanager**](iuseridentitymanager.md) herstellen, indem [**IConnectionPoint:: Rat**](/windows/win32/api/ocidl/nf-ocidl-iconnectionpoint-advise) aufgerufen und ein Zeiger an die-Schnittstelle übergeben wird.
+Um Benachrichtigungen zu implementieren, muss eine abgeleitete Schnittstelle eine Verbindung mit [**dem IUserIdentityManager**](iuseridentitymanager.md) herstellen, indem [**IConnectionPoint::Advise**](/windows/win32/api/ocidl/nf-ocidl-iconnectionpoint-advise) aufgerufen und ein Zeiger an die Schnittstelle übergeben wird.
 
-## <a name="requirements"></a>Requirements (Anforderungen)
+## <a name="requirements"></a>Anforderungen
 
 
 
@@ -60,8 +60,8 @@ Um Benachrichtigungen zu implementieren, muss eine abgeleitete Schnittstelle ein
 |-------------------------------------|----------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional \[nur Desktop-Apps\]<br/>                             |
 | Unterstützte Mindestversion (Server)<br/> | Windows 2000 Server \[nur Desktop-Apps\]<br/>                                   |
-| Header<br/>                   | <dl> <dt>Msident. h</dt> </dl>   |
-| IDL<br/>                      | <dl> <dt>Msident. idl</dt> </dl> |
+| Header<br/>                   | <dl> <dt>Msident.h</dt> </dl>   |
+| Idl<br/>                      | <dl> <dt>Msident.idl</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>Msoe.dll</dt> </dl>    |
 
 
@@ -70,7 +70,7 @@ Um Benachrichtigungen zu implementieren, muss eine abgeleitete Schnittstelle ein
 
 <dl> <dt>
 
-[**Iuseridentitymanager**](iuseridentitymanager.md)
+[**IUserIdentityManager**](iuseridentitymanager.md)
 </dt> <dt>
 
 [**IConnectionPoint**](/windows/win32/api/ocidl/nn-ocidl-iconnectionpoint)

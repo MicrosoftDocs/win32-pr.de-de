@@ -1,9 +1,9 @@
 ---
-title: Mpbedrohlich Open-Funktion (mpclient. h)
-description: Gibt ein enumerationshandle zum Abrufen von Bedrohungen zurück.
+title: MpThreatOpen-Funktion (MpClient.h)
+description: Gibt ein Enumerationshand handle zum Abrufen von Bedrohungen zurück.
 ms.assetid: E1178F0C-E9C0-4532-AE9B-452770600DF2
 keywords:
-- Mpbedrohlich Open-Funktion Legacy-Windows-Umgebungs Features
+- MpThreatOpen-Funktion Legacy Windows Umgebungsfeatures
 topic_type:
 - apiref
 api_name:
@@ -14,16 +14,16 @@ api_type:
 - DllExport
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: ca30435f9d7cba32771a2445d8a1156f0edaa9b1
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 949fd1c8291ecb183cf51cf5385fe356a33cb1288978fda42f37d748f1a162a6
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "106339984"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118746889"
 ---
-# <a name="mpthreatopen-function"></a>Mpbedrohlich Open-Funktion
+# <a name="mpthreatopen-function"></a>MpThreatOpen-Funktion
 
-Gibt ein enumerationshandle zum Abrufen von Bedrohungen zurück. Diese Funktion kann verwendet werden, um von einer bestimmten Überprüfung erkannte Bedrohungen, alle aktiven Bedrohungen im System, den Verlauf der Bedrohungs Desinfektion oder alle Bedrohungen in der Signaturdatenbank zu öffnen.
+Gibt ein Enumerationshand handle zum Abrufen von Bedrohungen zurück. Diese Funktion kann verwendet werden, um Bedrohungen zu öffnen, die von einer bestimmten Überprüfung erkannt wurden, alle aktiven Bedrohungen im System, den Verlauf der Bedrohungsbedrohung oder alle Bedrohungen, die in der Signaturdatenbank vorhanden sind.
 
 ## <a name="syntax"></a>Syntax
 
@@ -43,32 +43,32 @@ HRESULT WINAPI MpThreatOpen(
 
 <dl> <dt>
 
-*hscanhandle* \[ in\]
+*hScanHandle* \[ In\]
 </dt> <dd>
 
-Typ: **mphandle**
+Typ: **MPHANDLE**
 
-Kann ein Handle für einen abgeschlossenen Scanvorgang sein, der von der [**mpscanstart**](mpscanstart.md) -Funktion zurückgegeben wird. Alternativ kann dieser Parameter auf das von [**mpmanageropen**](mpmanageropen.md) zurückgegebene Malware Protection Manager-Schnittstellen handle festgelegt werden, um alle aktiven Bedrohungen im System, den Verlauf der Bedrohungs Desinfektion oder Bedrohungen aus der Signaturdatenbank aufzulisten.
+Kann ein Handle für einen abgeschlossenen Scanvorgang sein, der von der [**MpScanStart-Funktion zurückgegeben**](mpscanstart.md) wird. Alternativ kann dieser Parameter auf das Handle der Malware Protection Manager-Schnittstelle festgelegt werden, das von [**MpManagerOpen**](mpmanageropen.md) zurückgegeben wird, um alle aktiven Bedrohungen im System, den Verlauf der Bedrohungsbedrohung oder Bedrohungen aus der Signaturdatenbank aufzählen zu können.
 
 </dd> <dt>
 
-*Quelle* \[ in\]
+*ThreatSource* \[ In\]
 </dt> <dd>
 
-Typ: **mpthreat- \_ Quelle**
+Typ: **MPTHREAT \_ SOURCE**
 
-Wird verwendet, um die Quelle der Bedrohungs Aufzählung zu steuern. Die möglichen Werte für diesen Parameter sind:
+Wird verwendet, um die Quelle der Bedrohungsenumeration zu steuern. Die möglichen Werte für diesen Parameter sind:
 
 
 
 | Wert                                                                                                                                                                                                 | Bedeutung                                                                                                            |
 |-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------|
-| <span id="MPTHREAT_SOURCE_SCAN"></span><span id="mpthreat_source_scan"></span><dl> <dt>**mpthreat- \_ Quell \_ Scan**</dt> </dl>                   | Bedrohungen, die dem jeweiligen Scan Handle zugeordnet sind.<br/>                                              |
-| <span id="MPTHREAT_SOURCE_ACTIVE"></span><span id="mpthreat_source_active"></span><dl> <dt>**mpthreat- \_ Quelle \_ aktiv**</dt> </dl>             | Bedrohungen, die derzeit im System aktiv sind.<br/>                                                        |
-| <span id="MPTHREAT_SOURCE_HISTORY"></span><span id="mpthreat_source_history"></span><dl> <dt>**mpthreat- \_ Quell \_ Verlauf**</dt> </dl>          | Bedrohungen, die als Verlauf behandelt und beibehalten werden.<br/>                                                 |
-| <span id="MPTHREAT_SOURCE_QUARANTINE"></span><span id="mpthreat_source_quarantine"></span><dl> <dt>**\_Quellen Quarantäne für mpthreat \_**</dt> </dl> | Bedrohungen, die unter Quarantäne gestellt werden.<br/>                                                                           |
-| <span id="MPTHREAT_SOURCE_SIGNATURE"></span><span id="mpthreat_source_signature"></span><dl> <dt>**mpthreat- \_ Quell \_ Signatur**</dt> </dl>    | Bedrohungen, die mit der aktuellen Signaturdatenbank erkannt werden können.<br/>                                |
-| <span id="MPTHREAT_SOURCE_STATE"></span><span id="mpthreat_source_state"></span><dl> <dt>**mpthreat- \_ Quell \_ Status**</dt> </dl>                | Bedrohungen, die vor kurzem bearbeitet wurden. ("Kürzlich" wird durch eine konfigurierbare interne Einstellung definiert.)<br/> |
+| <span id="MPTHREAT_SOURCE_SCAN"></span><span id="mpthreat_source_scan"></span><dl> <dt>**\_MPTHREAT-QUELLSCAN \_**</dt> </dl>                   | Bedrohungen, die dem spezifischen Überprüfungshand handle zugeordnet sind.<br/>                                              |
+| <span id="MPTHREAT_SOURCE_ACTIVE"></span><span id="mpthreat_source_active"></span><dl> <dt>**MPTHREAT \_ SOURCE \_ ACTIVE**</dt> </dl>             | Bedrohungen, die derzeit im System aktiv sind.<br/>                                                        |
+| <span id="MPTHREAT_SOURCE_HISTORY"></span><span id="mpthreat_source_history"></span><dl> <dt>**\_MPTHREAT-QUELLVERLAUF \_**</dt> </dl>          | Bedrohungen, die als Verlauf umgesetzt und beibehalten werden.<br/>                                                 |
+| <span id="MPTHREAT_SOURCE_QUARANTINE"></span><span id="mpthreat_source_quarantine"></span><dl> <dt>**\_MPTHREAT-QUELLQUARANTÄNE \_**</dt> </dl> | Bedrohungen, die unter Quarantäne gestellt werden.<br/>                                                                           |
+| <span id="MPTHREAT_SOURCE_SIGNATURE"></span><span id="mpthreat_source_signature"></span><dl> <dt>**\_MPTHREAT-QUELLSIGNATUR \_**</dt> </dl>    | Bedrohungen, die mit der aktuellen Signaturdatenbank erkannt werden können.<br/>                                |
+| <span id="MPTHREAT_SOURCE_STATE"></span><span id="mpthreat_source_state"></span><dl> <dt>**\_MPTHREAT-QUELLZUSTAND \_**</dt> </dl>                | Bedrohungen, auf die vor Kurzem reagiert wurde. ("Recently" wird durch eine konfigurierbare interne Einstellung definiert.)<br/> |
 
 
 
@@ -76,22 +76,22 @@ Wird verwendet, um die Quelle der Bedrohungs Aufzählung zu steuern. Die möglic
 
 </dd> <dt>
 
-*Typ* \[ in\]
+*ThreatType* \[ In\]
 </dt> <dd>
 
-Typ: **mpthreat- \_ Typ**
+Typ: **MPTHREAT \_ TYPE**
 
-Wird verwendet, um aufgelistete Bedrohungen basierend auf dem Erkennungs Typ zu filtern. Die möglichen Werte für diesen Parameter sind:
+Wird verwendet, um aufzählte Bedrohungen basierend auf dem Erkennungstyp zu filtern. Die möglichen Werte für diesen Parameter sind:
 
 
 
 | Wert                                                                                                                                                                                           | Bedeutung                                                                                                       |
 |-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------|
-| <span id="MPTHREAT_TYPE_KNOWNBAD"></span><span id="mpthreat_type_knownbad"></span><dl> <dt>**mpthreat- \_ Typ \_ knownbad**</dt> </dl>       | Die Erkennung erfolgt basierend auf einer bestimmten Signatur, Emulation oder anderen Bedrohungs Erkennungsmethode.<br/> |
-| <span id="MPTHREAT_TYPE_SUSPICIOUS"></span><span id="mpthreat_type_suspicious"></span><dl> <dt>**mpthreat- \_ Typ \_ verdächtig**</dt> </dl> | Die Erkennung erfolgt basierend auf der Verhaltens Überwachung.<br/>                                               |
-| <span id="MPTHREAT_TYPE_UNKNOWN"></span><span id="mpthreat_type_unknown"></span><dl> <dt>**mpthreat- \_ Typ \_ unbekannt**</dt> </dl>          | Die Erkennung erfolgt basierend auf unbekannten Bedrohungen (nicht klassifiziert).<br/>                                    |
-| <span id="MPTHREAT_TYPE_KNOWNGOOD"></span><span id="mpthreat_type_knowngood"></span><dl> <dt>**mpthreat- \_ Typ \_ knowngood**</dt> </dl>    | Die Erkennung erfolgt basierend auf bekannten sicheren Bedrohungen.<br/>                                                |
-| <span id="MPTHREAT_TYPE_NIS"></span><span id="mpthreat_type_nis"></span><dl> <dt>**mpthreat- \_ Typ \_ NIS**</dt> </dl>                      | Die Erkennung erfolgt basierend auf NIS-Bedrohungen.<br/>                                                       |
+| <span id="MPTHREAT_TYPE_KNOWNBAD"></span><span id="mpthreat_type_knownbad"></span><dl> <dt>**MPTHREAT-TYP \_ \_ KNOWNBAD**</dt> </dl>       | Die Erkennung erfolgt basierend auf einer bestimmten Signatur, Emulation oder einer anderen Bedrohungserkennungsmethode.<br/> |
+| <span id="MPTHREAT_TYPE_SUSPICIOUS"></span><span id="mpthreat_type_suspicious"></span><dl> <dt>**MPTHREAT-TYP \_ VERDÄCHTIG \_**</dt> </dl> | Die Erkennung erfolgt basierend auf der Verhaltensüberwachung.<br/>                                               |
+| <span id="MPTHREAT_TYPE_UNKNOWN"></span><span id="mpthreat_type_unknown"></span><dl> <dt>**MPTHREAT-TYP \_ \_ UNBEKANNT**</dt> </dl>          | Die Erkennung erfolgt basierend auf unbekannten Bedrohungen (nicht klassifiziert).<br/>                                    |
+| <span id="MPTHREAT_TYPE_KNOWNGOOD"></span><span id="mpthreat_type_knowngood"></span><dl> <dt>**MPTHREAT-TYP \_ \_ KNOWNGOOD**</dt> </dl>    | Die Erkennung erfolgt basierend auf bekannten sicheren Bedrohungen.<br/>                                                |
+| <span id="MPTHREAT_TYPE_NIS"></span><span id="mpthreat_type_nis"></span><dl> <dt>**MPTHREAT \_ TYPE \_ NIS**</dt> </dl>                      | Die Erkennung erfolgt basierend auf NIS-Bedrohungen.<br/>                                                       |
 
 
 
@@ -99,12 +99,12 @@ Wird verwendet, um aufgelistete Bedrohungen basierend auf dem Erkennungs Typ zu 
 
 </dd> <dt>
 
-*phbedrohlich-enumhandle* \[ vorgenommen\]
+*phThreatEnumHandle* \[ out\]
 </dt> <dd>
 
-Typ: **pmphandle**
+Typ: **PMPHANDLE**
 
-Rückgabe Handle für Bedrohungs Enumeration, das den enumerationskontext identifiziert. Dieses Handle kann zum Auflisten von Bedrohungs Informationen mithilfe von [**mpgefährenumerate**](mpthreatenumerate.md)verwendet werden. Das Handle muss mit der [**mplenker close**](mphandleclose.md) -Funktion geschlossen werden.
+Zurückgegebenes Bedrohungsenumerationshand handle, das den Enumerationskontext identifiziert. Dieses Handle kann zum Aufzählen von Bedrohungsinformationen mit [**mpThreatEnumerate verwendet werden.**](mpthreatenumerate.md) Das Handle muss mit der [**MpHandleClose-Funktion geschlossen**](mphandleclose.md) werden.
 
 </dd> </dl>
 
@@ -112,9 +112,9 @@ Rückgabe Handle für Bedrohungs Enumeration, das den enumerationskontext identi
 
 Typ: **HRESULT**
 
-Wenn die Funktion erfolgreich ausgeführt wird, ist der Rückgabewert **S \_ OK**.
+Wenn die Funktion erfolgreich ist, ist der Rückgabewert **S \_ OK.**
 
-Wenn die Funktion fehlschlägt, ist der Rückgabewert ein fehlerhafter **HRESULT** -Code. Der Aufrufer kann die [**mperrormessageformat**](mperrormessageformat.md) -Funktion verwenden, um eine generische Beschreibung der Fehlermeldung zu erhalten.
+Wenn die Funktion fehlschlägt, ist der Rückgabewert ein fehlerhafter **HRESULT-Code.** Der Aufrufer kann die [**MpErrorMessageFormat-Funktion**](mperrormessageformat.md) verwenden, um eine generische Beschreibung der Fehlermeldung zu erhalten.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -122,30 +122,30 @@ Wenn die Funktion fehlschlägt, ist der Rückgabewert ein fehlerhafter **HRESULT
 
 | Anforderung | Wert |
 |-------------------------------------|-----------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows 8 \[ -Desktop-Apps\]<br/>                                              |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2012 \[ -Desktop-Apps\]<br/>                                    |
-| Header<br/>                   | <dl> <dt>Mpclient. h</dt> </dl>   |
+| Unterstützte Mindestversion (Client)<br/> | \[Windows 8 Nur Desktop-Apps\]<br/>                                              |
+| Unterstützte Mindestversion (Server)<br/> | \[Windows Server 2012 Nur Desktop-Apps\]<br/>                                    |
+| Header<br/>                   | <dl> <dt>MpClient.h</dt> </dl>   |
 | DLL<br/>                      | <dl> <dt>MpClient.dll</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Mperrormessageformat**](mperrormessageformat.md)
+[**MpErrorMessageFormat**](mperrormessageformat.md)
 </dt> <dt>
 
-[**Mplenker schließen**](mphandleclose.md)
+[**MpHandleClose**](mphandleclose.md)
 </dt> <dt>
 
-[**Mpmanageropen**](mpmanageropen.md)
+[**MpManagerOpen**](mpmanageropen.md)
 </dt> <dt>
 
-[**Mpscanstart**](mpscanstart.md)
+[**MpScanStart**](mpscanstart.md)
 </dt> <dt>
 
-[**Mpzerenumerate**](mpthreatenumerate.md)
+[**MpThreatEnumerate**](mpthreatenumerate.md)
 </dt> </dl>
 
  

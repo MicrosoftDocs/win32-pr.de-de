@@ -1,5 +1,5 @@
 ---
-description: IWICColorContext_InitializeFromMemory_Proxy- Proxyfunktion für die InitializeFromMemory-Methode.
+description: 'IWICColorContext_InitializeFromMemory_Proxy Funktion: Proxyfunktion für die InitializeFromMemory-Methode.'
 ms.assetid: d98fe40c-c3f1-4c46-a558-1910e3dee51b
 title: IWICColorContext_InitializeFromMemory_Proxy-Funktion
 ms.topic: reference
@@ -14,12 +14,12 @@ api_type:
 api_location:
 - Windowscodecs.dll
 - Wincodec.lib
-ms.openlocfilehash: e77bbcf1e430891b031b2e77bc168c33f781eacf
-ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
+ms.openlocfilehash: e662e4a88858d413636289e6418e38fb1a1fe0bb864620d029cc8975bde7278f
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2021
-ms.locfileid: "108097218"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118711471"
 ---
 # <a name="iwiccolorcontext_initializefrommemory_proxy-function"></a>IWICColorContext \_ InitializeFromMemory-Proxyfunktion \_
 
@@ -42,7 +42,7 @@ HRESULT IWICColorContext_InitializeFromMemory_Proxy(
 
 <dl> <dt>
 
-*THIS \_ PTR* \[ in\]
+*DIES \_ PTR* \[ in\]
 </dt> <dd>
 
 Typ: **[ **IWICColorContext**](/windows/desktop/api/Wincodec/nn-wincodec-iwiccolorcontext)\***
@@ -54,7 +54,7 @@ Typ: **[ **IWICColorContext**](/windows/desktop/api/Wincodec/nn-wincodec-iwiccol
 
 Typ: **const \* BYTE**
 
-Der Puffer, der zum Initialisieren von [**IWICColorContext verwendet wird.**](/windows/desktop/api/Wincodec/nn-wincodec-iwiccolorcontext)
+Der Puffer, der zum Initialisieren des [**IWICColorContext**](/windows/desktop/api/Wincodec/nn-wincodec-iwiccolorcontext)verwendet wird.
 
 </dd> <dt>
 
@@ -71,7 +71,7 @@ Die Größe des *pbBuffer-Puffers.*
 
 Typ: **HRESULT**
 
-Wenn diese Funktion erfolgreich ist, wird **S \_ OK zurückgegeben.** Andernfalls wird ein **HRESULT-Fehlercode** zurückgegeben.
+Wenn diese Funktion erfolgreich ausgeführt wird, wird **S \_ OK** zurückgegeben. Andernfalls wird ein **HRESULT-Fehlercode** zurückgegeben.
 
 ## <a name="remarks"></a>Bemerkungen
 
@@ -79,10 +79,10 @@ Wenn diese Funktion erfolgreich ist, wird **S \_ OK zurückgegeben.** Andernfall
 
 
 
-| Anforderungen | Wert |
+| Anforderung | Wert |
 |-------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Windows XP mit SP2, nur Windows \[ Vista-Desktop-Apps\]<br/>                                                                                              |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server \[ 2008-Desktop-Apps\]<br/>                                                                                                             |
+| Unterstützte Mindestversion (Client)<br/> | Windows NUR XP mit SP2, Windows \[ Vista-Desktop-Apps\]<br/>                                                                                              |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2008-Desktop-Apps\]<br/>                                                                                                             |
 | DLL<br/>                      | <dl> <dt>Windowscodecs.dll; </dt> <dt>Wincodec.lib</dt> </dl> |
 
 

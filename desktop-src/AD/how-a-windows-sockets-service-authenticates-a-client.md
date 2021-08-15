@@ -1,32 +1,32 @@
 ---
-title: Authentifizieren eines Clients durch einen Windows-Sockets-Dienst
-description: Wenn ein Client eine Verbindung mit dem Windows Sockets-Dienst herstellt, startet der Dienst seine Vorgänge für die gegenseitige Authentifizierungs Sequenz, die in den folgenden Codebeispielen gezeigt wird.
+title: Authentifizieren eines Clients durch einen Windows Sockets-Dienst
+description: Wenn ein Client eine Verbindung mit dem Windows Sockets-Dienst herstellt, beginnt der Dienst seine Vorgänge für die sequenzbasierte Authentifizierung, wie in den folgenden Codebeispielen gezeigt.
 ms.assetid: 32f62fb9-41c6-4932-9b91-753174919707
 ms.tgt_platform: multiple
 keywords:
-- Authentifizieren eines Client-Ad durch einen Windows Sockets-Dienst
+- Authentifizieren eines Client-AD durch einen Windows Sockets-Dienst
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: cad096ddfb9569d6289c1e775465232431c20ad6
-ms.sourcegitcommit: 803f3ccd65bdefe36bd851b9c6e7280be9489016
+ms.openlocfilehash: c2975d356de011818514d6999f03d1998e066a4b8bdadd6eaba8835541e4b8e5
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "103948566"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118188522"
 ---
-# <a name="how-a-windows-sockets-service-authenticates-a-client"></a>Authentifizieren eines Clients durch einen Windows-Sockets-Dienst
+# <a name="how-a-windows-sockets-service-authenticates-a-client"></a>Authentifizieren eines Clients durch einen Windows Sockets-Dienst
 
-Wenn ein Client eine Verbindung mit dem Windows Sockets-Dienst herstellt, startet der Dienst seine Vorgänge für die gegenseitige Authentifizierungs Sequenz, die in den folgenden Codebeispielen gezeigt wird.
+Wenn ein Client eine Verbindung mit dem Windows Sockets-Dienst herstellt, beginnt der Dienst seine Vorgänge für die sequenzbasierte Authentifizierung, wie in den folgenden Codebeispielen gezeigt.
 
-Die **doauthentication** -Routine verwendet das Sockethandle zum Empfangen des ersten Authentifizierungs Pakets vom Client. Der Client Puffer wird an die **genservercontext** -Funktion weitergeleitet, die den Puffer dann zur Authentifizierung an das SSPI-Sicherheitspaket übergibt. Die Sicherheitspaket Ausgabe wird von der **doauthentication** zurück an den Client gesendet. Diese Schleife wird wiederholt, bis die Authentifizierung fehlschlägt oder **genservercontext** ein Flag festlegt, das angibt, dass die Authentifizierung erfolgreich war.
+Die **DoAuthentication-Routine** verwendet das Sockethandle, um das erste Authentifizierungspaket vom Client zu empfangen. Der Clientpuffer wird an die **GenServerContext-Funktion** übergeben, die den Puffer dann zur Authentifizierung an das SSPI-Sicherheitspaket übergibt. **DoAuthentication** sendet dann die Ausgabe des Sicherheitspakets zurück an den Client. Diese Schleife wird wiederholt, bis die Authentifizierung fehlschlägt oder **GenServerContext** ein Flag festlegt, das angibt, dass die Authentifizierung erfolgreich war.
 
-**Genservercontext** Ruft die folgenden Funktionen aus einem SSPI-Sicherheitspaket auf:
+**GenServerContext** ruft die folgenden Funktionen aus einem SSPI-Sicherheitspaket auf:
 
--   [**AcquireCredentialsHandle**](../SecAuthN/acquirecredentialshandle--general.md) extrahiert die Dienst Anmelde Informationen aus dem Dienst Sicherheitskontext, der beim Starten des Diensts erstellt wurde.
--   " [**Accept-SecurityContext**](../SecAuthN/acceptsecuritycontext--general.md) " versucht, die gegenseitige Authentifizierung mit den Dienst Anmelde Informationen und den vom Client empfangenen Authentifizierungsdaten auszuführen. Um die gegenseitige Authentifizierung anzufordern, muss der **Accept-SecurityContext** -Befehl das Flag für die gegenseitige Authentifizierung von ASC \_ req angeben \_ \_ .
--   [**Completeauthtoken**](/windows/desktop/api/sspi/nf-sspi-completeauthtoken) wird bei Bedarf aufgerufen, um den Authentifizierungs Vorgang abzuschließen.
+-   [**AcquireCredentialsHandle**](../SecAuthN/acquirecredentialshandle--general.md) extrahiert die Dienstanmeldeinformationen aus dem Dienstsicherheitskontext, der beim Starten des Diensts eingerichtet wurde.
+-   [**AcceptSecurityContext**](../SecAuthN/acceptsecuritycontext--general.md) versucht, die gegenseitige Authentifizierung mit den Dienstanmeldeinformationen und den vom Client empfangenen Authentifizierungsdaten durchzuführen. Um gegenseitige Authentifizierung anzufordern, muss der **AcceptSecurityContext-Aufruf** das ASC \_ REQ \_ MUTUAL \_ AUTH-Flag angeben.
+-   [**CompleteAuthToken**](/windows/desktop/api/sspi/nf-sspi-completeauthtoken) wird bei Bedarf aufgerufen, um den Authentifizierungsvorgang abzuschließen.
 
-Im folgenden Codebeispiel wird das Aushandlungs Paket aus der Secur32.dll-Bibliothek von Sicherheitspaketen verwendet.
+Im folgenden Codebeispiel wird das Negotiate-Paket aus der Secur32.dll Bibliothek von Sicherheitspaketen verwendet.
 
 
 ```C++
@@ -206,6 +206,6 @@ return TRUE;
 
 
 
- 
+ 
 
- 
+ 

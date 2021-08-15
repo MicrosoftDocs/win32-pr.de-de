@@ -1,35 +1,35 @@
 ---
-description: Legt die Basis Thread Priorität für den Quell-oder senderwriter fest.
+description: Legt die Basisthreadpriorität für den Quelllese- oder Senkenwriter fest.
 ms.assetid: 9513AE28-2AF4-45EC-AC19-C0718540E26F
-title: MF_READWRITE_MMCSS_PRIORITY-Attribut (mfreadwrite. h)
+title: MF_READWRITE_MMCSS_PRIORITY-Attribut (Mfreadwrite.h)
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: ad7b83485b49e6ae584a38024e180f37c878d27d
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 56f108b7cce9f1c9d6226803bf2a2cc32b62ac94077f7f84cbc78e632cb25ea8
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "104050459"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118740602"
 ---
-# <a name="mf_readwrite_mmcss_priority-attribute"></a>MF- \_ Attribut zum Lesen von \_ MMCSS- \_ Priorität
+# <a name="mf_readwrite_mmcss_priority-attribute"></a>MF \_ READWRITE \_ MMCSS \_ PRIORITY-Attribut
 
-Legt die Basis Thread Priorität für den Quell-oder senderwriter fest.
+Legt die Basisthreadpriorität für den Quelllese- oder Senkenwriter fest.
 
 ## <a name="data-type"></a>Datentyp
 
-**Int32** als **UInt32** gespeichert
+**INT32** als **UINT32** gespeichert
 
 ## <a name="getset"></a>Abrufen/Festlegen
 
-Um dieses Attribut abzurufen, nennen Sie [**imfattributes:: GetUINT32**](/windows/desktop/api/mfobjects/nf-mfobjects-imfattributes-getuint32).
+Rufen Sie ZUM Abrufen dieses [**Attributs DIE ATTRIBUTEAttributes::GetUINT32 auf.**](/windows/desktop/api/mfobjects/nf-mfobjects-imfattributes-getuint32)
 
-Um dieses Attribut festzulegen, nennen Sie [**imfattributes:: SetUINT32**](/windows/desktop/api/mfobjects/nf-mfobjects-imfattributes-setuint32).
+Rufen Sie ZUM Festlegen dieses [**Attributs DIE ATTRIBUTEAttributes::SetUINT32 auf.**](/windows/desktop/api/mfobjects/nf-mfobjects-imfattributes-setuint32)
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Legen Sie dieses Attribut optional fest, wenn Sie eine Instanz des [Quell](source-reader.md) -oder [Senke Writers](sink-writer.md)erstellen. Wenn Sie dieses Attribut festlegen, legen Sie auch das MF-Attribut der Klasse "read [ \_ Write \_ MMCSS \_ Class](mf-readwrite-mmcss-class.md) " fest. Andernfalls wird dieses Attribut ignoriert.
+Legen Sie dieses Attribut optional fest, wenn Sie eine Instanz des [Quelllesers](source-reader.md) oder [des Senkenwriters](sink-writer.md)erstellen. Wenn Sie dieses Attribut festlegen, legen Sie auch das [MF \_ READWRITE \_ MMCSS \_ CLASS-Attribut](mf-readwrite-mmcss-class.md) fest. Andernfalls wird dieses Attribut ignoriert.
 
-Wenn der Quell-oder senkenwriter Threads beim [Multimedia Class Scheduler-Dienst](../procthread/multimedia-class-scheduler-service.md)registriert, gibt der Wert dieses Attributs die Basis Thread Priorität an. Wenn dieses Attribut nicht festgelegt ist, ist der Standardwert 0 (null).
+Wenn der Quelllese- oder Senkenwriter Threads beim [Multimedia Class Scheduler Service](../procthread/multimedia-class-scheduler-service.md)registriert, gibt der Wert dieses Attributs die Basisthreadpriorität an. Wenn dieses Attribut nicht festgelegt ist, ist der Standardwert 0 (null).
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -37,13 +37,13 @@ Wenn der Quell-oder senkenwriter Threads beim [Multimedia Class Scheduler-Dienst
 
 | Anforderung | Wert |
 |-------------------------------------|------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Windows 8 \[ -Desktop-Apps \| UWP-apps\]<br/>                                        |
-| Unterstützte Mindestversion (Server)<br/> | Windows Server 2012 \[ -Desktop-Apps \| UWP-apps\]<br/>                              |
-| Header<br/>                   | <dl> <dt>"Mfreadwrite. h"</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | \[Windows 8 \|Desktop-Apps UWP-Apps\]<br/>                                        |
+| Unterstützte Mindestversion (Server)<br/> | \[Windows Server 2012 \|Desktop-Apps UWP-Apps\]<br/>                              |
+| Header<br/>                   | <dl> <dt>Mfreadwrite.h</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 

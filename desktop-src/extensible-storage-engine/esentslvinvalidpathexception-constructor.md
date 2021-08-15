@@ -1,6 +1,6 @@
 ---
-description: 'Weitere Informationen finden Sie hier: esentslvinvalidpathexception-Konstruktor'
-title: Esentslvinvalidpathexception-Konstruktor
+description: 'Weitere Informationen zu: EsentSLVInvalidPathException-Konstruktor'
+title: EsentSLVInvalidPathException-Konstruktor
 TOCTitle: 'EsentSLVInvalidPathException constructor '
 ms:assetid: M:Microsoft.Isam.Esent.Interop.EsentSLVInvalidPathException.#ctor
 ms:mtpsurl: https://msdn.microsoft.com/library/microsoft.isam.esent.interop.esentslvinvalidpathexception.esentslvinvalidpathexception(v=EXCHG.10)
@@ -24,17 +24,17 @@ api_type:
 api_location:
 - Microsoft.Isam.Esent.Interop.dll
 ROBOTS: INDEX,FOLLOW
-ms.openlocfilehash: 982e128a7d530b4efb6b57dca795d35a4804902a
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: c3e9eb66d6d2d108ad7c25a67370039fd127c98c14e2e432896c11135dcf844e
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "104042511"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118772702"
 ---
-# <a name="esentslvinvalidpathexception-constructor"></a>Esentslvinvalidpathexception-Konstruktor
+# <a name="esentslvinvalidpathexception-constructor"></a>EsentSLVInvalidPathException-Konstruktor
 
-**Namespace:**  [Microsoft. ISAM. ESENT. Interop](./microsoft.isam.esent.interop-namespace.md)  
-**Assembly:**  Microsoft. ISAM. ESENT. Interop (in Microsoft.Isam.Esent.Interop.dll)
+**Namespace:**  [Microsoft.Isam.Esent.Interop](./microsoft.isam.esent.interop-namespace.md)  
+**Assembly:**  Microsoft.Isam.Esent.Interop (in Microsoft.Isam.Esent.Interop.dll)
 
 ## <a name="syntax"></a>Syntax
 
@@ -50,12 +50,12 @@ Dim instance As New EsentSLVInvalidPathException()
 public EsentSLVInvalidPathException()
 ```
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
-#### <a name="reference"></a>Referenz
+#### <a name="reference"></a>Verweis
 
-[Esentslvinvalidpathexception-Klasse](./esentslvinvalidpathexception-class.md)
+[EsentSLVInvalidPathException-Klasse](./esentslvinvalidpathexception-class.md)
 
-[Esentslvinvalidpathexception-Member](./esentslvinvalidpathexception-members.md)
+[EsentSLVInvalidPathException-Member](./esentslvinvalidpathexception-members.md)
 
-[Microsoft. ISAM. ESENT. Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)
+[Microsoft.Isam.Esent.Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)

@@ -1,19 +1,19 @@
 ---
-description: Eine Vorlage weist die folgende Syntax Definition auf.
+description: Eine Vorlage verfügt über die folgende Syntaxdefinition.
 ms.assetid: 77eb739d-8da3-4481-8dd1-f9f2f0eda136
 title: Vorlagen (X-Dateiformat)
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 0ef9ccca6627e82eaa4fdcc6467fc093000682a2
-ms.sourcegitcommit: a47bd86f517de76374e4fff33cfeb613eb259a7e
+ms.openlocfilehash: 5fbae3f8c74dcf2905ee38e948b7c128b6fd79bd0c469bdba6dfd721095070e4
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/06/2021
-ms.locfileid: "106343137"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118523401"
 ---
 # <a name="templates-x-file-format-binary-encoding"></a>Vorlagen (X-Dateiformat, binäre Codierung)
 
-Eine Vorlage weist die folgende Syntax Definition auf.
+Eine Vorlage verfügt über die folgende Syntaxdefinition.
 
 
 ```

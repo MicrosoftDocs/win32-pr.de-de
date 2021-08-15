@@ -1,6 +1,6 @@
 ---
-description: 'Erfahren Sie mehr über: esentpagesizemismatchexception-Konstruktor'
-title: Esentpagesizemismatchexception-Konstruktor
+description: 'Weitere Informationen zu: EsentPageSizeMismatchException-Konstruktor'
+title: EsentPageSizeMismatchException-Konstruktor
 TOCTitle: 'EsentPageSizeMismatchException constructor '
 ms:assetid: M:Microsoft.Isam.Esent.Interop.EsentPageSizeMismatchException.#ctor
 ms:mtpsurl: https://msdn.microsoft.com/library/microsoft.isam.esent.interop.esentpagesizemismatchexception.esentpagesizemismatchexception(v=EXCHG.10)
@@ -24,19 +24,19 @@ api_type:
 api_location:
 - Microsoft.Isam.Esent.Interop.dll
 ROBOTS: INDEX,FOLLOW
-ms.openlocfilehash: 2d180946fbf04f7390c71118550f2b3d93f0c35f
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: f919ff658d05694b4c04c3c4a3b41cf758391dfc0239694f9d55025456f2fb2d
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "103866216"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117898501"
 ---
-# <a name="esentpagesizemismatchexception-constructor"></a>Esentpagesizemismatchexception-Konstruktor
+# <a name="esentpagesizemismatchexception-constructor"></a>EsentPageSizeMismatchException-Konstruktor
 
-Initialisiert eine neue Instanz der esentpagesizemismatchexception-Klasse.
+Initialisiert eine neue Instanz der EsentPageSizeMismatchException-Klasse.
 
-**Namespace:**  [Microsoft. ISAM. ESENT. Interop](./microsoft.isam.esent.interop-namespace.md)  
-**Assembly:**  Microsoft. ISAM. ESENT. Interop (in Microsoft.Isam.Esent.Interop.dll)
+**Namespace:**  [Microsoft.Isam.Esent.Interop](./microsoft.isam.esent.interop-namespace.md)  
+**Assembly:**  Microsoft.Isam.Esent.Interop (in Microsoft.Isam.Esent.Interop.dll)
 
 ## <a name="syntax"></a>Syntax
 
@@ -52,12 +52,12 @@ Dim instance As New EsentPageSizeMismatchException()
 public EsentPageSizeMismatchException()
 ```
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
-#### <a name="reference"></a>Referenz
+#### <a name="reference"></a>Verweis
 
-[Esentpagesizemismatchexception-Klasse](./esentpagesizemismatchexception-class.md)
+[EsentPageSizeMismatchException-Klasse](./esentpagesizemismatchexception-class.md)
 
-[Esentpagesizemismatchexception-Member](./esentpagesizemismatchexception-members.md)
+[EsentPageSizeMismatchException-Member](./esentpagesizemismatchexception-members.md)
 
-[Microsoft. ISAM. ESENT. Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)
+[Microsoft.Isam.Esent.Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)

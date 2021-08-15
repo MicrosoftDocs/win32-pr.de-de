@@ -1,23 +1,23 @@
 ---
-description: Die fotometadatenrichtlinie für die System. GPS. Status-Eigenschaft.
+description: Die Richtlinie für Fotometadaten für die System.GPS.Status-Eigenschaft.
 ms.assetid: 74ea0384-3b1f-4d5e-8713-7b3936813a3a
-title: System. GPS. Status Photo-metadatenrichtlinie
+title: Richtlinie für System.GPS.Status-Fotometadaten
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: dac08139a267052f8d6dd3dc463e2a2768309a41
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: a99237b9fe14d9adbc97dd5de95158a8aa714caaa4a0a8440d9f3798a2155d20
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106358936"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118710515"
 ---
-# <a name="systemgpsstatus-photo-metadata-policy"></a>System. GPS. Status Photo-metadatenrichtlinie
+# <a name="systemgpsstatus-photo-metadata-policy"></a>Richtlinie für System.GPS.Status-Fotometadaten
 
-Die fotometadatenrichtlinie für die [System. GPS. Status](../properties/props-system-gps-status.md) -Eigenschaft.
+Die Richtlinie für Fotometadaten für die [System.GPS.Status-Eigenschaft.](../properties/props-system-gps-status.md)
 
-### <a name="pkey"></a>Pkey
+### <a name="pkey"></a>PKEY
 
-Pkey \_ GPS- \_ Status
+PKEY \_ GPS \_ Status
 
 ### <a name="containers"></a>Container
 
@@ -27,54 +27,54 @@ JPEG, TIFF
 
 Nein
 
-### <a name="output-propvariant-type"></a>Ausgabe-PROPVARIANT-Typ
+### <a name="output-propvariant-type"></a>PROPVARIANT-Ausgabetyp
 
 VT \_ LPWSTR
 
-### <a name="input-propvariant-type"></a>Eingabe-PROPVARIANT-Typ
+### <a name="input-propvariant-type"></a>PROPVARIANT-Eingabetyp
 
-VT \_ LPWSTR wird bevorzugt, aber VT \_ LPSTR wird ebenfalls akzeptiert.
+VT \_ LPWSTR wird bevorzugt, aber auch VT \_ LPSTR wird akzeptiert.
 
-### <a name="conflict-resolution-policy"></a>Richtlinie zur Konfliktlösung
+### <a name="conflict-resolution-policy"></a>Konfliktlösungsrichtlinie
 
-Werte aus unterschiedlichen Schemas sind abgestimmt.
+Werte aus verschiedenen Schemas werden abgestimmt.
 
 ### <a name="jpeg-policies"></a>JPEG-Richtlinien
 
-### <a name="read-paths"></a>Pfade lesen
+### <a name="read-paths"></a>Lesepfade
 
 
 
-| Auftrag | Pfad                     | Datenträger Format |
+| Auftrag | Pfad                     | Datenträgerformat |
 |-------|--------------------------|-------------|
-| 1     | /App1/IFD/GPS/{ushort = 9} | ascii       |
-| 2     | /XMP/EXIF: gpsstatus      | Unicode     |
+| 1     | /app1/ifd/gps/{ushort=9} | ascii       |
+| 2     | /xmp/exif:GPSStatus      | Unicode     |
 
 
 
  
 
-### <a name="write-paths"></a>Schreib Pfade
+### <a name="write-paths"></a>Schreibpfade
 
 
 
-| Auftrag | Pfad                     | Datenträger Format |
+| Auftrag | Pfad                     | Datenträgerformat |
 |-------|--------------------------|-------------|
-| 1     | /App1/IFD/GPS/{ushort = 9} | ascii       |
-| 2     | /XMP/EXIF: gpsstatus      | Unicode     |
+| 1     | /app1/ifd/gps/{ushort=9} | ascii       |
+| 2     | /xmp/exif:GPSStatus      | Unicode     |
 
 
 
  
 
-### <a name="remove-paths"></a>Pfade entfernen
+### <a name="remove-paths"></a>Entfernen von Pfaden
 
 
 
 | Auftrag | Pfad                     |
 |-------|--------------------------|
-| 1     | /App1/IFD/GPS/{ushort = 9} |
-| 2     | /XMP/EXIF: gpsstatus      |
+| 1     | /app1/ifd/gps/{ushort=9} |
+| 2     | /xmp/exif:gpsstatus      |
 
 
 
@@ -82,52 +82,52 @@ Werte aus unterschiedlichen Schemas sind abgestimmt.
 
 ### <a name="tiff-policies"></a>TIFF-Richtlinien
 
-### <a name="read-paths"></a>Pfade lesen
+### <a name="read-paths"></a>Lesepfade
 
 
 
-| Auftrag | Pfad                    | Datenträger Format |
+| Auftrag | Pfad                    | Datenträgerformat |
 |-------|-------------------------|-------------|
-| 1     | /IFD/GPS/{ushort = 9}     | ascii       |
-| 2     | /IFD/XMP/EXIF: gpsstatus | Unicode     |
+| 1     | /ifd/gps/{ushort=9}     | ascii       |
+| 2     | /ifd/xmp/exif:GPSStatus | Unicode     |
 
 
 
  
 
-### <a name="write-paths"></a>Schreib Pfade
+### <a name="write-paths"></a>Schreibpfade
 
 
 
-| Auftrag | Pfad                    | Datenträger Format |
+| Auftrag | Pfad                    | Datenträgerformat |
 |-------|-------------------------|-------------|
-| 1     | /IFD/GPS/{ushort = 9}     | ascii       |
-| 2     | /IFD/XMP/EXIF: gpsstatus | Unicode     |
+| 1     | /ifd/gps/{ushort=9}     | ascii       |
+| 2     | /ifd/xmp/exif:GPSStatus | Unicode     |
 
 
 
  
 
-### <a name="remove-paths"></a>Pfade entfernen
+### <a name="remove-paths"></a>Entfernen von Pfaden
 
 
 
 | Auftrag | Pfad                    |
 |-------|-------------------------|
-| 1     | /IFD/GPS/{ushort = 9}     |
-| 2     | /IFD/XMP/EXIF: gpsstatus |
+| 1     | /ifd/gps/{ushort=9}     |
+| 2     | /ifd/xmp/exif:gpsstatus |
 
 
 
  
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
 <dl> <dt>
 
-[System. GPS. Status](../properties/props-system-gps-status.md)
+[System.GPS.Status](../properties/props-system-gps-status.md)
 </dt> </dl>
 
  

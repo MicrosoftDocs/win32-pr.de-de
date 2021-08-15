@@ -1,11 +1,11 @@
 ---
-title: Wiedergabe. RemoveItem-Methode
-description: Die RemoveItem-Methode entfernt das angegebene Element aus der Wiedergabeliste.
+title: Playlist.removeItem-Methode
+description: Die removeItem-Methode entfernt das angegebene Element aus der Wiedergabeliste.
 ms.assetid: 294ba4fb-967b-4a03-b0c5-6e9c15db3bff
 keywords:
-- RemoveItem-Methode, Windows-Media Player
-- RemoveItem-Methode, Windows Media Player, Wiedergabelisten Klasse
-- Wiedergabelisten-Klasse, Windows Media Player, RemoveItem-Methode
+- removeItem-Windows Media Player
+- removeItem-Methode Windows Media Player , Playlist-Klasse
+- Playlist-Klasse Windows Media Player , removeItem-Methode
 topic_type:
 - apiref
 api_name:
@@ -16,16 +16,16 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 2de03333e2373744f9e9197be8ed8582997c557d
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: a8a55fb45fa7ea8d172d76321d7c907fbedfd3f868448f1ad63e220ff8e69f9a
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106368411"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118336591"
 ---
-# <a name="playlistremoveitem-method"></a>Wiedergabe. RemoveItem-Methode
+# <a name="playlistremoveitem-method"></a>Playlist.removeItem-Methode
 
-Die **RemoveItem** -Methode entfernt das angegebene Element aus der Wiedergabeliste.
+Die **removeItem-Methode** entfernt das angegebene Element aus der Wiedergabeliste.
 
 ## <a name="syntax"></a>Syntax
 
@@ -42,10 +42,10 @@ Playlist.removeItem(
 
 <dl> <dt>
 
-*Element* \[ in\]
+*item* \[ In\]
 </dt> <dd>
 
-Das zu entfernende **Medien** Objekt.
+**Medienobjekt,** das entfernt werden soll.
 
 </dd> </dl>
 
@@ -53,11 +53,11 @@ Das zu entfernende **Medien** Objekt.
 
 Diese Methode gibt keinen Wert zurück.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-, Wenn das entfernte Element die aktuell wiedergegebene Spur (*Player*) ist.**currentMedia**), Wiedergabe wird beendet, und das nächste Element in der Wiedergabeliste wird zum aktuellen Element. Wenn kein nächstes Element vorhanden ist, wird das vorherige Element verwendet, oder wenn keine anderen Elemente vorhanden sind, dann *Player*. **currentMedia** wird auf **null** festgelegt.
+Wenn das entfernte Element die gerade abspielte Spur ist (*Player*.**currentMedia**), die Wiedergabe wird beendet, und das nächste Element in der Wiedergabeliste wird zum aktuellen Element. Wenn kein nächstes Element enthalten ist, wird das vorherige Element verwendet, oder wenn keine anderen Elemente enthalten sind, dann *Player*. **currentMedia** ist auf **NULL festgelegt.**
 
-Um diese Methode verwenden zu können, ist der vollständige Zugriff auf die Bibliothek erforderlich. Weitere Informationen finden Sie unter [Bibliotheks Zugriff](library-access.md).
+Um diese Methode verwenden zu können, ist Vollzugriff auf die Bibliothek erforderlich. Weitere Informationen finden Sie unter [Bibliothekszugriff.](library-access.md)
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -65,31 +65,31 @@ Um diese Methode verwenden zu können, ist der vollständige Zugriff auf die Bib
 
 | Anforderung | Wert |
 |--------------------|------------------------------------------------------------------------------------|
-| Version<br/> | Windows Media Player Version 7,0 oder höher.<br/>                              |
+| Version<br/> | Windows Media Player Version 7.0 oder höher.<br/>                              |
 | DLL<br/>     | <dl> <dt>Wmp.dll</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Player. currentMedia**](player-currentmedia.md)
+[**Player.currentMedia**](player-currentmedia.md)
 </dt> <dt>
 
-[**Wiedergabelisten Objekt**](playlist-object.md)
+[**Playlist-Objekt**](playlist-object.md)
 </dt> <dt>
 
-[**Wiedergabeliste. InsertItem**](playlist-insertitem.md)
+[**Playlist.insertItem**](playlist-insertitem.md)
 </dt> <dt>
 
-[**Wiedergabeliste. Element**](playlist-item.md)
+[**Playlist.item**](playlist-item.md)
 </dt> <dt>
 
-[**Settings. mediaaccessrights**](settings-mediaaccessrights.md)
+[**Einstellungen.mediaAccessRights**](settings-mediaaccessrights.md)
 </dt> <dt>
 
-[**Settings. requestmediaaccessrights**](settings-requestmediaaccessrights.md)
+[**Einstellungen.requestMediaAccessRights**](settings-requestmediaaccessrights.md)
 </dt> </dl>
 
  

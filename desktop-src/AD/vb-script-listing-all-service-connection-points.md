@@ -1,8 +1,8 @@
 ---
-title: VB-Skript, das alle Dienst Verbindungspunkte auflistet
+title: VB Skript zum Auflisten aller Dienstverbindungspunkte
 ms.assetid: 7a76f872-3e4e-4bb7-8f2d-e30b1246369f
 ms.tgt_platform: multiple
-description: 'Weitere Informationen: VB-Skript Auflistung aller Dienst Verbindungspunkte'
+description: Weitere Informationen finden Sie unter VB Script Listing all Service Connection Points (Skript zum Auflisten aller Dienstverbindungspunkte).
 ms.topic: article
 ms.date: 05/31/2018
 topic_type:
@@ -10,16 +10,16 @@ topic_type:
 api_name: ''
 api_type: ''
 api_location: ''
-ms.openlocfilehash: e1166afff8147785332db615b916fd3ff35c15ab
-ms.sourcegitcommit: c7add10d695482e1ceb72d62b8a4ebd84ea050f7
+ms.openlocfilehash: b6872a8a516d7f6a75cd25ddb6970b0830775fb881f0a0f601756021e2264072
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104483003"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118182264"
 ---
-# <a name="vb-script-listing-all-service-connection-points"></a>VB-Skript, das alle Dienst Verbindungspunkte auflistet
+# <a name="vb-script-listing-all-service-connection-points"></a>VB Skript zum Auflisten aller Dienstverbindungspunkte
 
-Dienst Verbindungspunkte können mithilfe von VB-Skripts verwaltet werden. Der folgende Beispielcode zeigt, wie alle Dienst Verbindungspunkte auf dem Domänen Namen in der Befehlszeile aufgelistet werden:
+Dienstverbindungspunkte können mithilfe von VB verwaltet werden. Der folgende Beispielcode zeigt, wie sie alle Dienstverbindungspunkte unter dem Domänennamen auflisten, der in der Befehlszeile angegeben ist:
 
 
 ```VB

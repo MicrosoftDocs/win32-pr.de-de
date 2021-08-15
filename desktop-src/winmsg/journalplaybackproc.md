@@ -1,7 +1,7 @@
 ---
 UID: ''
-title: Journalplaybackproc-Rückruffunktion
-description: Gibt eine Reihe von Maus-und Tastatur Meldungen wieder, die zuvor aufgezeichnet wurden.
+title: Rückruffunktion "JournalPlaybackProc"
+description: Gibt eine Reihe von zuvor aufgezeichneten Maus- und Tastaturmeldungen wieder.
 old-location: ''
 ms.assetid: na
 ms.date: 04/05/2019
@@ -32,23 +32,23 @@ api_name: ''
 targetos: Windows
 req.typenames: ''
 req.redist: ''
-ms.openlocfilehash: 9bceede3cd6ab009aace4679dfb3d4d85bd37276
-ms.sourcegitcommit: 61bde60d4c3bc09defc3dcdb64c0ddadf52b214e
+ms.openlocfilehash: bee538bf2c20cc3cadb6f0bdf6f5dd6a2ae12dfe8a21baeb56b8ad62cb23ff3e
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/11/2020
-ms.locfileid: "104390107"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118437127"
 ---
-# <a name="journalplaybackproc-function"></a>Journalplaybackproc-Funktion
+# <a name="journalplaybackproc-function"></a>JournalPlaybackProc-Funktion
 
-## <a name="description"></a>BESCHREIBUNG
+## <a name="description"></a>Beschreibung
 
-Eine von der Anwendung definierte oder Bibliotheks definierte Rückruffunktion, die mit der [SetWindowsHookEx](/windows/desktop/api/winuser/nf-winuser-setwindowshookexw) -Funktion verwendet wird.
-In der Regel verwendet eine Anwendung diese Funktion, um eine Reihe von Maus-und Tastatur Meldungen wiederzugeben, die zuvor von der **journalrecordproc** -Hook-Prozedur aufgezeichnet wurden.
-Solange eine **journalplaybackproc** -Hook-Prozedur installiert ist, sind normale Maus-und Tastatureingaben deaktiviert.
+Eine anwendungs- oder bibliotheksdefinierte Rückruffunktion, die mit der [SetWindowsHookEx-Funktion verwendet](/windows/desktop/api/winuser/nf-winuser-setwindowshookexw) wird.
+In der Regel verwendet eine Anwendung diese Funktion, um eine Reihe von Maus- und Tastaturmeldungen wiederzuspielen, die zuvor von der Hookprozedur **JournalRecordProc** aufgezeichnet wurden.
+Solange eine **JournalPlaybackProc-Hookprozedur** installiert ist, werden reguläre Maus- und Tastatureingaben deaktiviert.
 
-Der **HookProc** -Typ definiert einen Zeiger auf diese Rückruffunktion.
-**Journalplaybackproc** ist ein Platzhalter für den Anwendungs definierten oder Bibliotheks definierten Funktionsnamen.
+Der **HOOKPROC-Typ** definiert einen Zeiger auf diese Rückruffunktion.
+**JournalPlaybackProc ist** ein Platzhalter für den anwendungs- oder bibliotheksdefinierten Funktionsnamen.
 
 ```cpp
 LRESULT CALLBACK JournalPlaybackProc(
@@ -64,21 +64,21 @@ LRESULT CALLBACK JournalPlaybackProc(
 
 Typ: **int**
 
-Ein Code, den die Hook-Prozedur verwendet, um zu bestimmen, wie die Nachricht verarbeitet wird.
-Wenn *Code* kleiner als 0 (null) ist, muss die Hook-Prozedur die Nachricht ohne weitere Verarbeitung an die [CallNextHookEx](/windows/desktop/api/winuser/nf-winuser-callnexthookex) -Funktion übergeben und den von **CallNextHookEx** zurückgegebenen Wert zurückgeben.
+Ein Code, mit dem die Hookprozedur bestimmt, wie die Nachricht zu verarbeiten ist.
+Wenn *der* Code kleiner als 0 (null) ist, muss die Hookprozedur die Nachricht ohne weitere Verarbeitung an die [CallNextHookEx-Funktion](/windows/desktop/api/winuser/nf-winuser-callnexthookex) übergeben und den von **CallNextHookEx** zurückgegebenen Wert zurückgeben.
 Dieser Parameter kann einen der folgenden Werte annehmen.
 
 | Wert | Bedeutung |
 |-------|---------|
-| **HC_GETNEXT** 1 | Die Hook-Prozedur muss die aktuelle Maus-oder Tastatur Nachricht in die [eventmsg](/windows/desktop/api/winuser/ns-winuser-eventmsg) -Struktur kopieren, auf die durch den *LPARAM* -Parameter verwiesen wird. |
-| **HC_NOREMOVE** 3 | Eine Anwendung hat die Funktion " [Peer Message](/windows/desktop/api/winuser/nf-winuser-peekmessagew) " aufgerufen, wobei "wremovemsg" auf " **PM_NOREMOVE**" festgelegt ist. Dies deutet darauf hin, dass die **Nachricht nach der** Verarbeitung der Verarbeitung nicht aus der Nachrichten Warteschlange |
-| **HC_NOREMOVE** 2 | Die Hook-Prozedur muss darauf vorbereitet sein, die nächste Maus-oder Tastatur Nachricht in die **eventmsg** -Struktur zu kopieren, auf die von *LPARAM* verwiesen wird. Beim Empfang des **HC_GETNEXT** Codes muss die Hook-Prozedur die Nachricht in die-Struktur kopieren. |
-| **HC_SYSMODALOFF** 5 | Ein System modales Dialogfeld wurde zerstört. Die Hook-Prozedur muss die Wiedergabe der Nachrichten fortsetzen. |
-| **HC_SYSMODALON** 4 | Ein System modales Dialogfeld wird angezeigt. Bis das Dialogfeld zerstört ist, muss die Hook-Prozedur die Wiedergabe von Nachrichten abbrechen. |
+| **HC_GETNEXT** 1 | Die Hookprozedur muss die aktuelle Maus- oder Tastaturmeldung in die [EVENTMSG-Struktur](/windows/desktop/api/winuser/ns-winuser-eventmsg) kopieren, auf die der *lParam-Parameter* zeigt. |
+| **HC_NOREMOVE** 3 | Eine Anwendung hat die [PeekMessage-Funktion](/windows/desktop/api/winuser/nf-winuser-peekmessagew) aufgerufen, bei der wRemoveMsg auf **PM_NOREMOVE** festgelegt ist. Dies bedeutet, dass die Nachricht nach der **PeekMessage-Verarbeitung** nicht aus der Nachrichtenwarteschlange entfernt wird. |
+| **HC_NOREMOVE** 2 | Die Hookprozedur muss das Kopieren der nächsten Maus- oder Tastaturmeldung in die **EVENTMSG-Struktur** vorbereiten, auf die *lParam zeigt.* Nach dem Empfang **HC_GETNEXT** Code muss die Hookprozedur die Nachricht in die -Struktur kopieren. |
+| **HC_SYSMODALOFF** 5 | Ein system modales Dialogfeld wurde zerstört. Die Hookprozedur muss die Wiedergabe der Nachrichten fortsetzen. |
+| **HC_SYSMODALON** 4 | Ein system modales Dialogfeld wird angezeigt. Bis das Dialogfeld zerstört wird, muss die Hookprozedur die Wiedergabe von Nachrichten beenden. |
 
 ### <a name="wparam"></a>wParam
 
-Typ: **wParam**
+Typ: **WPARAM**
 
 Dieser Parameter wird nicht verwendet.
 
@@ -86,52 +86,52 @@ Dieser Parameter wird nicht verwendet.
 
 Typ: **LPARAM**
 
-Ein Zeiger auf eine **eventmsg** -Struktur, die eine Meldung darstellt, die von der Hook-Prozedur verarbeitet wird.
-Dieser Parameter ist nur gültig, wenn der *Code* Parameter **HC_GETNEXT** ist.
+Ein Zeiger auf eine **EVENTMSG-Struktur,** die eine Nachricht darstellt, die von der Hookprozedur verarbeitet wird.
+Dieser Parameter ist nur gültig, wenn *der Codeparameter* **HC_GETNEXT.**
 
 ## <a name="returns"></a>Gibt zurück
 
 Typ: **LRESULT**
 
-Damit das System vor der Verarbeitung der Nachricht warten kann, muss es sich bei dem Rückgabewert um die Zeitspanne (in Takt Einheiten) handeln, die vom System gewartet werden soll.
+Damit das System vor der Verarbeitung der Nachricht wartet, muss der Rückgabewert die Zeit in Takten sein, die das System warten soll.
 
-(Dieser Wert kann berechnet werden, indem der Unterschied zwischen den Zeit Elementen in der aktuellen und der vorherigen Eingabe Nachricht berechnet wird.)
+(Dieser Wert kann berechnet werden, indem die Differenz zwischen den Zeitmitgliedern in den aktuellen und vorherigen Eingabemeldungen berechnet wird.)
 
-Der Rückgabewert muss 0 (null) lauten, damit die Nachricht sofort verarbeitet werden kann. Der Rückgabewert wird nur verwendet, wenn der Hook-Code **HC_GETNEXT** ist. Andernfalls wird Sie ignoriert.
+Um die Nachricht sofort zu verarbeiten, sollte der Rückgabewert 0 (null) sein. Der Rückgabewert wird nur verwendet, wenn der **Hookcode** HC_GETNEXT; andernfalls wird er ignoriert.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Eine **journalplaybackproc** -Hook-Prozedur sollte eine Eingabe Nachricht in den *LPARAM* -Parameter kopieren.
-Die Nachricht muss zuvor mit einer **journalrecordproc** -Hook-Prozedur aufgezeichnet worden sein, die die Nachricht nicht ändern sollte.
+Eine **JournalPlaybackProc-Hookprozedur** sollte eine Eingabenachricht in den *lParam-Parameter* kopieren.
+Die Nachricht muss zuvor mithilfe einer **JournalRecordProc-Hookprozedur** aufgezeichnet worden sein, die die Nachricht nicht ändern sollte.
 
-Um dieselbe Nachricht immer wieder abzurufen, kann die Hook-Prozedur mehrmals aufgerufen werden, wobei der *Code* Parameter auf **HC_GETNEXT** festgelegt ist, ohne dass ein zwischengeschalteter Aufruf von *Code* auf **HC_SKIP** festgelegt ist.
+Um dieselbe Nachricht immer wieder abzurufen, kann die Hookprozedur mehrmals aufgerufen werden, während der  Codeparameter auf HC_GETNEXT festgelegt **ist,** ohne dass ein intervening-Aufruf mit Code auf **HC_SKIP.** 
 
-Wenn *Code* **HC_GETNEXT** und der Rückgabewert größer als 0 (null) ist, wird das System für die durch den Rückgabewert angegebene Anzahl von Millisekunden eingestellt. Wenn das System fortgesetzt wird, wird die Hook-Prozedur erneut aufgerufen, wobei *Code* auf **HC_GETNEXT** festgelegt ist, um dieselbe Nachricht abzurufen.
-Der Rückgabewert dieses neuen Aufrufes **journalplaybackproc** muss NULL sein. Andernfalls wechselt das System für die Anzahl von Millisekunden, die durch den Rückgabewert angegeben wird, wieder in den Standbymodus, rufen Sie **journalplaybackproc** erneut auf, usw.
-Das System reagiert anscheinend nicht.
+Wenn  Code **HC_GETNEXT** und der Rückgabewert größer als 0 (null) ist, wird das System für die durch den Rückgabewert angegebene Anzahl von Millisekunden in den Ruhezustand gesetzt. Wenn das System fortgesetzt wird, ruft  es die Hookprozedur erneut auf, und der Code ist auf **HC_GETNEXT,** um dieselbe Nachricht abzurufen.
+Der Rückgabewert dieses neuen Aufrufs von **JournalPlaybackProc** sollte 0 (null) sein. Andernfalls wird das System für die durch den Rückgabewert angegebene Anzahl von Millisekunden wieder in den Ruhezustand wechseln, **JournalPlaybackProc** erneut aufrufen und so weiter.
+Das System reagiert offenbar nicht.
 
-Im Gegensatz zu den meisten anderen globalen Hook-Prozeduren werden die Hook-Prozeduren **journalrecordproc** und **journalplaybackproc** immer im Kontext des Threads aufgerufen, der den Hook festgelegt hat.
+Im Gegensatz zu den meisten anderen globalen Hookprozeduren werden die Hookprozeduren **JournalRecordProc** und **JournalPlaybackProc** immer im Kontext des Threads aufgerufen, der den Hook festlegen.
 
-Nachdem die Hook-Prozedur die Steuerung an das System zurückgegeben hat, wird die Nachricht weiterhin verarbeitet. Wenn *Code* **HC_SKIP** ist, muss die Hook-Prozedur die Rückgabe der nächsten aufgezeichneten Ereignis Nachricht beim nächsten-Befehl vorbereiten.
+Nachdem die Hookprozedur die Steuerung an das System zurückgegeben hat, wird die Nachricht weiterhin verarbeitet. Wenn *Der Code* HC_SKIP ist, muss die Hookprozedur darauf vorbereiten, beim nächsten Aufruf die nächste aufgezeichnete Ereignismeldung zurück zu geben. 
 
-Installieren Sie die **journalplaybackproc** -Hook-Prozedur, indem Sie den [WH_JOURNALPLAYBACK](about-hooks.md) -Typ und einen Zeiger auf die Hook-Prozedur in einem Aufrufen der **SetWindowsHookEx** -Funktion angeben.
+Installieren Sie die Hookprozedur **JournalPlaybackProc,** indem Sie den WH_JOURNALPLAYBACK-Typ und einen Zeiger auf die Hookprozedur in einem Aufruf der **SetWindowsHookEx-Funktion** angeben. [](about-hooks.md)
 
-Wenn der Benutzer während der Journal Wiedergabe STRG + ESC oder STRG + ALT + ENTF drückt, wird die Wiedergabe beendet, die Wiedergabe der Journal Wiedergabe Prozedur aufgehoben, und es wird eine [WM_CANCELJOURNAL](wm-canceljournal.md) Nachricht an die journalinganwendung ausgegeben.
+Wenn der Benutzer während der Journalwiedergabe STRG+ESC ODER STRG+ALT+ENTF drückt, beendet das System die Wiedergabe, enthookt die Journalwiedergabeprozedur und stellt eine [WM_CANCELJOURNAL-Nachricht an](wm-canceljournal.md) die Journalanwendung.
 
-Wenn die Hook-Prozedur eine Nachricht im Bereich zurückgibt, **WM_KEYFIRST** an **WM_KEYLAST**, gelten die folgenden Bedingungen:
+Wenn die Hookprozedur eine  Meldung im Bereich zurückgibt, WM_KEYFIRST **auf** WM_KEYLAST, gelten die folgenden Bedingungen:
 
-* Der **paraml** -Member der **eventmsg** -Struktur gibt den Code des virtuellen Schlüssels der Taste an, die gedrückt wurde.
-* Der **paramh** -Member der **eventmsg** -Struktur gibt den Scancode an.
-* Es gibt keine Möglichkeit, eine Wiederholungs Anzahl anzugeben.
-Das Ereignis wird immer zur Darstellung eines schlüsselereignisses verwendet.
+* Der **paramL-Member** der **EVENTMSG-Struktur** gibt den virtuellen Schlüsselcode des gedrückten Schlüssels an.
+* Der **paramH-Member** der **EVENTMSG-Struktur** gibt den Scancode an.
+* Es gibt keine Möglichkeit, eine Wiederholungsanzahl anzugeben.
+Das -Ereignis stellt immer ein Schlüsselereignis dar.
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 [CallNextHookEx](/windows/desktop/api/winuser/nf-winuser-callnexthookex)
 
-[Eventmsg](/windows/desktop/api/winuser/ns-winuser-eventmsg)
+[EVENTMSG](/windows/desktop/api/winuser/ns-winuser-eventmsg)
 
-[Journalrecordproc](journalrecordproc.md)
+[JournalRecordProc](journalrecordproc.md)
 
 [PeekMessage](/windows/desktop/api/winuser/nf-winuser-peekmessagew)
 

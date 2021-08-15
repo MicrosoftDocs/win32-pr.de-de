@@ -1,9 +1,9 @@
 ---
-title: Ddccigettimingreport-Funktion
-description: Ruft die horizontale und vertikale Synchronisierungs Häufigkeit eines Monitors ab.
+title: DDCCIGetTimingReport-Funktion
+description: Ruft die horizontalen und vertikalen Synchronisierungshäufigkeiten eines Monitors ab.
 ms.assetid: d490cb89-082a-42a1-ac0a-335c929cd5d7
 keywords:
-- Konfiguration der ddccigettimingreport-Funktion
+- DDCCIGetTimingReport-Funktion Monitorkonfiguration
 topic_type:
 - apiref
 api_name:
@@ -14,21 +14,21 @@ api_type:
 - DllExport
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 1b87cb4269c2cdff2303bbe763905cb572acfbb7
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 930149ebc2acfa69f479c889c6fa2c33acdfb3f528a67f83ee0bfbe7ab0467a9
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "103956441"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118382363"
 ---
-# <a name="ddccigettimingreport-function"></a>Ddccigettimingreport-Funktion
+# <a name="ddccigettimingreport-function"></a>DDCCIGetTimingReport-Funktion
 
 > [!IMPORTANT]
-> Diese Funktion wird von der Monitor Konfigurations-API verwendet, um auf die Funktionalität des Anzeige Treibers zuzugreifen. Anwendungen sollten diese Funktion nicht aufzurufen.
+> Diese Funktion wird von der Überwachungskonfigurations-API verwendet, um auf funktionen im Anzeigetreiber zuzugreifen. Anwendungen sollten diese Funktion nicht aufrufen.
 
  
 
-Ruft die horizontale und vertikale Synchronisierungs Häufigkeit eines Monitors ab.
+Ruft die horizontalen und vertikalen Synchronisierungshäufigkeiten eines Monitors ab.
 
 ## <a name="syntax"></a>Syntax
 
@@ -46,29 +46,29 @@ NTSTATUS WINAPI DDCCIGetTimingReport(
 
 <dl> <dt>
 
-*Hmonitor* \[ in\]
+*hMonitor* \[ In\]
 </dt> <dd>
 
 Ein Handle für einen physischen Monitor.
 
 </dd> <dt>
 
-*pmtr* \[ vorgenommen\]
+*pmtr* \[ out\]
 </dt> <dd>
 
-Ein Zeiger auf eine [**MC- \_ Zeit Steuerungs \_ Berichts**](/windows/desktop/api/LowLevelMonitorConfigurationAPI/ns-lowlevelmonitorconfigurationapi-mc_timing_report) Struktur, die die Zeit Steuerungsinformationen empfängt.
+Ein Zeiger auf eine [**MC \_ TIMING \_ REPORT-Struktur,**](/windows/desktop/api/LowLevelMonitorConfigurationAPI/ns-lowlevelmonitorconfigurationapi-mc_timing_report) die die Zeitsteuerungsinformationen empfängt.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Wenn die Methode erfolgreich ausgeführt wird, wird der **Status \_ erfolgreich** zurückgegeben. Andernfalls wird ein **NTSTATUS** -Fehlercode zurückgegeben.
+Wenn die Methode erfolgreich ist, wird **STATUS \_ SUCCESS** zurückgegeben. Andernfalls wird ein **NTSTATUS-Fehlercode** zurückgegeben.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Anwendungen sollten [**gettimingreport**](/windows/desktop/api/LowLevelMonitorConfigurationAPI/nf-lowlevelmonitorconfigurationapi-gettimingreport) aufrufen, anstatt diese Funktion aufzurufen.
+Anwendungen sollten [**GetTimingReport**](/windows/desktop/api/LowLevelMonitorConfigurationAPI/nf-lowlevelmonitorconfigurationapi-gettimingreport) aufrufen, anstatt diese Funktion aufzurufen.
 
-Diese Funktion verfügt über keine zugeordnete Import Bibliothek. Um diese Funktion aufzurufen, müssen Sie die [**LoadLibrary**](/windows/desktop/api/libloaderapi/nf-libloaderapi-loadlibrarya) -Funktion und die [**GetProcAddress**](/windows/desktop/api/libloaderapi/nf-libloaderapi-getprocaddress) -Funktion verwenden, um dynamisch mit Gdi32.dll zu verknüpfen.
+Dieser Funktion ist keine Importbibliothek zugeordnet. Um diese Funktion aufzurufen, müssen Sie die [**Funktionen LoadLibrary**](/windows/desktop/api/libloaderapi/nf-libloaderapi-loadlibrarya) und [**GetProcAddress**](/windows/desktop/api/libloaderapi/nf-libloaderapi-getprocaddress) verwenden, um dynamisch mit Gdi32.dll zu verknüpfen.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -76,13 +76,13 @@ Diese Funktion verfügt über keine zugeordnete Import Bibliothek. Um diese Funk
 
 | Anforderung | Wert |
 |-------------------------------------|--------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>                                       |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2008 \[ -Desktop-Apps\]<br/>                                 |
+| Unterstützte Mindestversion (Client)<br/> | Windows \[Nur Vista-Desktop-Apps\]<br/>                                       |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2008-Desktop-Apps\]<br/>                                 |
 | DLL<br/>                      | <dl> <dt>Gdi32.dll</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 

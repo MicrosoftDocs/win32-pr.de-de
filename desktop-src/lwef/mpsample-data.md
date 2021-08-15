@@ -1,10 +1,10 @@
 ---
-title: MPSAMPLE_DATA Struktur (mpclient. h)
-description: Benachrichtigungs Daten, die an die Rückruffunktion der Beispiel Übermittlung übergeben werden.
+title: MPSAMPLE_DATA-Struktur (MpClient.h)
+description: Benachrichtigungsdaten, die an die Rückruffunktion für die Beispielübermittlung übergeben werden.
 ms.assetid: 58F348C6-411D-4545-9D4D-A80095FD139B
 keywords:
-- MPSAMPLE_DATA Struktur Funktionen der Legacy-Windows-Umgebung
-- PMPSAMPLE_DATA Struktur Zeiger Legacy-Windows-Umgebungs Features
+- MPSAMPLE_DATA Struktur legacy Windows Environment Features (Legacy-Windows-Umgebungsfeatures)
+- PMPSAMPLE_DATA Strukturzeiger Legacy Windows-Umgebungsfeatures
 topic_type:
 - apiref
 api_name:
@@ -15,16 +15,16 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 24a894638465c0362069b8fdcbacddf98bfdd2c1
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: aafafd2ff7162dcb50bd5e2ea92cd56ab9f073332238dc0742845f9c48c5a588
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104106298"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118747413"
 ---
-# <a name="mpsample_data-structure"></a>Mpsample- \_ Datenstruktur
+# <a name="mpsample_data-structure"></a>MPSAMPLE \_ DATA-Struktur
 
-Benachrichtigungs Daten, die an die Rückruffunktion der Beispiel Übermittlung übergeben werden.
+Benachrichtigungsdaten, die an die Rückruffunktion für die Beispielübermittlung übergeben werden.
 
 ## <a name="syntax"></a>Syntax
 
@@ -41,14 +41,14 @@ typedef struct tagMPSAMPLE_DATA {
 
 <dl> <dt>
 
-**dwsampleingedex**
+**dwSampleIndex**
 </dt> <dd>
 
 Typ: **DWORD**
 
 </dd> <dd>
 
-Der Index des Beispiel Elements, für das der Übermittlungs Status gemeldet wird.
+Index des Beispielelements, für das der Übermittlungsstatus gemeldet wird.
 
 </dd> </dl>
 
@@ -58,9 +58,9 @@ Der Index des Beispiel Elements, für das der Übermittlungs Status gemeldet wir
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows 8 \[ -Desktop-Apps\]<br/>                                            |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2012 \[ -Desktop-Apps\]<br/>                                  |
-| Header<br/>                   | <dl> <dt>Mpclient. h</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | \[Windows 8 Nur Desktop-Apps\]<br/>                                            |
+| Unterstützte Mindestversion (Server)<br/> | \[Windows Server 2012 Nur Desktop-Apps\]<br/>                                  |
+| Header<br/>                   | <dl> <dt>MpClient.h</dt> </dl> |
 
 
 

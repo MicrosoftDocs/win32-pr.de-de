@@ -1,30 +1,30 @@
 ---
-title: Win32_TSGeneralSetting Methoden
-description: Die Win32- \_ Klasse "zgeneralsetting" stellt die folgenden Methoden zur Verfügung.
+title: Win32_TSGeneralSetting-Methoden
+description: Die Win32 \_ TSGeneralSetting-Klasse macht die folgenden Methoden verfügbar.
 ms.assetid: 8D7720D0-7D7F-4E01-B92F-FAC8D8C58074
 ms.tgt_platform: multiple
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: bd52614ec0d653d789a7d926475ad12cbba9bdc9
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: 2a8febc118b69f3be54a92e65763dad19bb3e2221c93666840a9d070e5ff2b54
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "104037218"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118847391"
 ---
-# <a name="win32_tsgeneralsetting-methods"></a>Win32-Methoden für die- \_ generalsetting
+# <a name="win32_tsgeneralsetting-methods"></a>Win32 \_ TSGeneralSetting-Methoden
 
-Die Win32-Klasse " [**\_ zgeneralsetting**](win32-tsgeneralsetting.md) " stellt die folgenden Methoden zur Verfügung.
+Die [**Win32 \_ TSGeneralSetting-Klasse**](win32-tsgeneralsetting.md) macht die folgenden Methoden verfügbar.
 
 ## <a name="in-this-section"></a>In diesem Abschnitt
 
--   [**Setencryptionlevel-Methode**](win32-tsgeneralsetting-setencryptionlevel.md)
--   [**Setsecuritylayer-Methode**](win32-tsgeneralsetting-setsecuritylayer.md)
--   [**Setuserauthenticationrequired-Methode**](setuserauthenticationrequired-win32-tsgeneralsetting.md)
+-   [**SetEncryptionLevel-Methode**](win32-tsgeneralsetting-setencryptionlevel.md)
+-   [**SetSecurityLayer-Methode**](win32-tsgeneralsetting-setsecuritylayer.md)
+-   [**SetUserAuthenticationRequired-Methode**](setuserauthenticationrequired-win32-tsgeneralsetting.md)
 
- 
+ 
 
- 
+ 
 
 
 

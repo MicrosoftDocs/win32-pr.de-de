@@ -1,25 +1,25 @@
 ---
-description: Die iazbizruleinterfaces-Schnittstelle stellt die folgenden Methoden zur Verfügung.
+description: Die IAzBizRuleInterfaces-Schnittstelle macht die folgenden Methoden verfügbar.
 ms.assetid: C4057FA6-79D0-4E39-851A-541FC71DEE03
-title: Iazbizruleinterfaces-Methoden
+title: IAzBizRuleInterfaces-Methoden
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 3ee05755dec72eef2ab3b6caeea416d420a37381
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 312b7fbc848fd5b3c6ce0007a465e5feb8431c38e79d83a53628e1d685225d8b
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "103866684"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118913233"
 ---
-# <a name="iazbizruleinterfaces-methods"></a>Iazbizruleinterfaces-Methoden
+# <a name="iazbizruleinterfaces-methods"></a>IAzBizRuleInterfaces-Methoden
 
-Die [**iazbizruleinterfaces**](/windows/desktop/api/Azroles/nn-azroles-iazbizruleinterfaces) -Schnittstelle stellt die folgenden Methoden zur Verfügung.
+Die [**IAzBizRuleInterfaces-Schnittstelle**](/windows/desktop/api/Azroles/nn-azroles-iazbizruleinterfaces) macht die folgenden Methoden verfügbar.
 
 ## <a name="in-this-section"></a>In diesem Abschnitt
 
 -   [**AddInterface-Methode**](/windows/desktop/api/Azroles/nf-azroles-iazbizruleinterfaces-addinterface)
--   [**Addinterfaces-Methode**](/windows/desktop/api/Azroles/nf-azroles-iazbizruleinterfaces-addinterfaces)
--   [**Getinterfacevalue-Methode**](/windows/desktop/api/Azroles/nf-azroles-iazbizruleinterfaces-getinterfacevalue)
+-   [**AddInterfaces-Methode**](/windows/desktop/api/Azroles/nf-azroles-iazbizruleinterfaces-addinterfaces)
+-   [**GetInterfaceValue-Methode**](/windows/desktop/api/Azroles/nf-azroles-iazbizruleinterfaces-getinterfacevalue)
 -   [**Remove-Methode**](/windows/desktop/api/Azroles/nf-azroles-iazbizruleinterfaces-remove)
 -   [**RemoveAll-Methode**](/windows/desktop/api/Azroles/nf-azroles-iazbizruleinterfaces-removeall)
 

@@ -1,12 +1,12 @@
 ---
-title: Rdvcopybasevmlokal-Methode der Win32_RdvhManagement-Klasse
-description: Kopiert eine lokale virtuelle Basismaschine auf einen angegebenen RDV-Host Server (Remote Desktop Virtualization).
+title: RdvCopyBaseVmLocally-Methode der Win32_RdvhManagement-Klasse
+description: Kopiert einen lokalen virtuellen Basiscomputer auf einen angegebenen RDV-Hostserver (RemoteDesktopvirtualisierung).
 ms.assetid: 13c0c629-42c6-4689-9740-f13f31688e42
 ms.tgt_platform: multiple
 keywords:
-- Rdvcopybasevmlokal-Methode Remotedesktopdienste
-- Rdvcopybasevmlokal-Methode Remotedesktopdienste, Win32_RdvhManagement-Klasse
-- Win32_RdvhManagement-Klasse Remotedesktopdienste, rdvcopybasevmlokal-Methode
+- RdvCopyBaseVmLocally-Remotedesktopdienste
+- RdvCopyBaseVmLocally-Methode Remotedesktopdienste , Win32_RdvhManagement-Klasse
+- Win32_RdvhManagement klasse Remotedesktopdienste , RdvCopyBaseVmLocally-Methode
 topic_type:
 - apiref
 api_name:
@@ -17,16 +17,16 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 2d96e01038a4b41edcf32a6a5a9b353403fa6021
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 76c260f8e9b659ac6e1316fc699ab832174a4aa0d0c24df26daecf5a4895ccd3
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104392168"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118852625"
 ---
-# <a name="rdvcopybasevmlocally-method-of-the-win32_rdvhmanagement-class"></a>Rdvcopybasevmlokal-Methode der Win32 \_ rdvhmanagement-Klasse
+# <a name="rdvcopybasevmlocally-method-of-the-win32_rdvhmanagement-class"></a>RdvCopyBaseVmLocally-Methode der Win32 \_ RdvhManagement-Klasse
 
-Kopiert eine lokale virtuelle Basismaschine auf einen angegebenen RDV-Host Server (Remote Desktop Virtualization).
+Kopiert einen lokalen virtuellen Basiscomputer auf einen angegebenen RDV-Hostserver (RemoteDesktopvirtualisierung).
 
 ## <a name="syntax"></a>Syntax
 
@@ -45,30 +45,30 @@ uint32 RdvCopyBaseVmLocally(
 
 <dl> <dt>
 
-*Basevmlocation* \[ in\]
+*BaseVmLocation* \[ In\]
 </dt> <dd>
 
-Der Speicherort der virtuellen Basismaschine.
+Der Basisspeicherort des virtuellen Computers.
 
 </dd> <dt>
 
-*Farmname* \[ in\]
+*FarmName* \[ In\]
 </dt> <dd>
 
-Der Name der Host Farm, in die kopiert werden soll.
+Der Name der Hostfarm, in die kopiert werden soll.
 
 </dd> <dt>
 
-*Goldcacheloation* \[ in\]
+*GoldCacheLocation* \[ In\]
 </dt> <dd>
 
-Der Speicherort des Gold Caches.
+Der Speicherort des Goldcaches.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt bei Erfolg 0 zurück, andernfalls wird ein WMI-Fehlercode zurückgegeben. Eine Liste dieser Werte finden Sie unter [Remotedesktopdienste Fehler Codes des WMI-Anbieters](terminal-services-wmi-provider-error-codes.md) .
+Gibt bei Erfolg 0 zurück, andernfalls wird ein WMI-Fehlercode zurückgegeben. Eine Liste dieser Remotedesktopdienste finden Sie unter [Fehlercodes](terminal-services-wmi-provider-error-codes.md) für WMI-Anbieter.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -78,17 +78,17 @@ Gibt bei Erfolg 0 zurück, andernfalls wird ein WMI-Fehlercode zurückgegeben. E
 |-------------------------------------|--------------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Nicht unterstützt<br/>                                                                  |
 | Unterstützte Mindestversion (Server)<br/> | Windows Server 2012<br/>                                                             |
-| Namespace<br/>                | Root \\ CIMv2 \\ TerminalServices<br/>                                                   |
-| MOF<br/>                      | <dl> <dt>"Zvmhost. mof"</dt> </dl>    |
+| Namespace<br/>                | \\ \\ CiMv2-Stammterminaldienste<br/>                                                   |
+| MOF<br/>                      | <dl> <dt>TSVmHost.mof</dt> </dl>    |
 | DLL<br/>                      | <dl> <dt>TSVmHostWmi.dll</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Win32- \_ rdvhmanagement**](win32-rdvhmanagement.md)
+[**Win32 \_ RdvhManagement**](win32-rdvhmanagement.md)
 </dt> </dl>
 
  

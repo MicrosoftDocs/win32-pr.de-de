@@ -1,19 +1,19 @@
 ---
-description: Gibt die Funktionen-Flags für einen H. 264-Videostream an.
+description: Gibt die Funktionenflags für einen H.264-Videostream an.
 ms.assetid: 59EF18D6-6063-4EF3-BBFB-51A966CFF09E
-title: MF_MT_H264_CAPABILITIES-Attribut (mfapi. h)
+title: MF_MT_H264_CAPABILITIES-Attribut (Mfapi.h)
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: b67f796e09d4b57667a3d8f7c7c0fa888eba7894
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 138cfa32fc50ebb02ca4d399a178b338e58016c64ae3486d7f7b4a76f3e47afe
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "103868552"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118741798"
 ---
-# <a name="mf_mt_h264_capabilities-attribute"></a>MF \_ MT \_ H264- \_ Funktionen-Attribut
+# <a name="mf_mt_h264_capabilities-attribute"></a>MF \_ MT \_ H264 \_ CAPABILITIES-Attribut
 
-Gibt die Funktionen-Flags für einen H. 264-Videostream an.
+Gibt die Funktionenflags für einen H.264-Videostream an.
 
 ## <a name="data-type"></a>Datentyp
 
@@ -21,19 +21,19 @@ Gibt die Funktionen-Flags für einen H. 264-Videostream an.
 
 ## <a name="getset"></a>Abrufen/Festlegen
 
-Um dieses Attribut abzurufen, nennen Sie [**imfattributes:: GetUINT32**](/windows/desktop/api/mfobjects/nf-mfobjects-imfattributes-getuint32).
+Rufen Sie ZUM Abrufen dieses [**Attributs DIE ATTRIBUTEAttributes::GetUINT32 auf.**](/windows/desktop/api/mfobjects/nf-mfobjects-imfattributes-getuint32)
 
-Um dieses Attribut festzulegen, nennen Sie [**imfattributes:: SetUINT32**](/windows/desktop/api/mfobjects/nf-mfobjects-imfattributes-setuint32).
+Rufen Sie ZUM Festlegen dieses [**Attributs DIE ATTRIBUTEAttributes::SetUINT32 auf.**](/windows/desktop/api/mfobjects/nf-mfobjects-imfattributes-setuint32)
 
 ## <a name="applies-to"></a>Gilt für:
 
-[**IMF MediaType**](/windows/desktop/api/mfobjects/nn-mfobjects-imfmediatype)
+[**ARCHEMEDIATYPE**](/windows/desktop/api/mfobjects/nn-mfobjects-imfmediatype)
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Dieses Attribut gilt für Medientypen für H. 264-Streams, die über USB übertragen werden. Der Wert entspricht dem Feld **bmfunktionen** im Video Frame Deskriptor UVC 1,5 H. 264.
+Dieses Attribut gilt für Medientypen für H.264-Streams, die über USB übertragen werden. Der Wert entspricht dem **bmCapabilities-Feld** im UVC 1.5 H.264-Videoframedeskriptor.
 
-Dieses Attribut wird auch mit [H. 264 UVC 1,5-Kamera Codierern](camera-encoder-h264-uvc-1-5.md)verwendet.
+Dieses Attribut wird auch mit [H.264 UVC 1.5-Kameraencodern](camera-encoder-h264-uvc-1-5.md)verwendet.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -41,20 +41,20 @@ Dieses Attribut wird auch mit [H. 264 UVC 1,5-Kamera Codierern](camera-encoder-h
 
 | Anforderung | Wert |
 |-------------------------------------|------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Windows 8 \[ -Desktop-Apps \| UWP-apps\]<br/>                                  |
-| Unterstützte Mindestversion (Server)<br/> | Windows Server 2012 \[ -Desktop-Apps \| UWP-apps\]<br/>                        |
-| Header<br/>                   | <dl> <dt>Mfapi. h</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | \[Windows 8 \|Desktop-Apps UWP-Apps\]<br/>                                  |
+| Unterstützte Mindestversion (Server)<br/> | \[Windows Server 2012 \|Desktop-Apps UWP-Apps\]<br/>                        |
+| Header<br/>                   | <dl> <dt>Mfapi.h</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
 [Alphabetische Liste der Media Foundation Attribute](alphabetical-list-of-media-foundation-attributes.md)
 </dt> <dt>
 
-[Medientyp Attribute](media-type-attributes.md)
+[Medientypattribute](media-type-attributes.md)
 </dt> </dl>
 
  

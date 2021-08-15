@@ -1,17 +1,17 @@
 ---
 description: Die folgenden Schnittstellen können zum Erstellen von Zertifikatregistrierungs-API-Objekten auf einer Webseite verwendet werden.
 ms.assetid: de9c1204-6a51-4e0b-a42e-6dcb3be9c3b2
-title: Zertifikatregistrierungsfactory-Schnittstellen
+title: Schnittstellen der Zertifikatregistrierungs-Factory
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: e8d19a868577bb53c9315651318964d8e5d36238
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 64f96c3c6150202f780b89a0e117b3d9e8be00f3c439aa7c3805c055090f6ba5
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104041746"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118902721"
 ---
-# <a name="certificate-enrollment-factory-interfaces"></a>Zertifikatregistrierungsfactory-Schnittstellen
+# <a name="certificate-enrollment-factory-interfaces"></a>Schnittstellen der Zertifikatregistrierungs-Factory
 
 Die folgenden Schnittstellen können zum Erstellen von Zertifikatregistrierungs-API-Objekten auf einer Webseite verwendet werden.
 
@@ -19,8 +19,8 @@ Die folgenden Schnittstellen können zum Erstellen von Zertifikatregistrierungs-
 
 | Schnittstelle                                                                | BESCHREIBUNG                                                                            |
 |--------------------------------------------------------------------------|----------------------------------------------------------------------------------------|
-| [**IX509EnrollmentWebClassFactory**](/windows/desktop/api/CertEnroll/nn-certenroll-ix509enrollmentwebclassfactory) | Erstellt ein-Objekt im Benutzer Kontext auf einer Webseite.                                    |
-| [**IX509MachineEnrollmentFactory**](/windows/desktop/api/Certenroll/nn-certenroll-ix509machineenrollmentfactory)   | Erstellt ein [**IX509EnrollmentHelper**](/windows/desktop/api/Certenroll/nn-certenroll-ix509enrollmenthelper) -Objekt auf einer Webseite. |
+| [**IX509EnrollmentWebClassFactory**](/windows/desktop/api/CertEnroll/nn-certenroll-ix509enrollmentwebclassfactory) | Erstellt ein -Objekt im Benutzerkontext auf einer Webseite.                                    |
+| [**IX509MachineEnrollmentFactory**](/windows/desktop/api/Certenroll/nn-certenroll-ix509machineenrollmentfactory)   | Erstellt ein [**IX509EnrollmentHelper-Objekt**](/windows/desktop/api/Certenroll/nn-certenroll-ix509enrollmenthelper) auf einer Webseite. |
 
 
 

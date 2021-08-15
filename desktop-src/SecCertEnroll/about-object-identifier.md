@@ -1,29 +1,29 @@
 ---
-description: Der objektbezeichnerdatentyp wird in eine TLV-Dreiecks Codierung codiert, die mit einem Tagwert von 0x06 beginnt.
+description: Der OBJECT IDENTIFIER-Datentyp wird in ein TLV-Triplet codiert, das mit dem Tagwert 0x06.
 ms.assetid: 42c015c8-3de1-4482-bf27-b19c422b8cdb
-title: Objekt Bezeichner
+title: OBJEKTBEZEICHNER
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: d6cc81169968bfb3be5a49b0f30b8171cd904bf6
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: b35c2bf64424fa158eef3c666743142d5ec5a65108e3def28c43194d2eaf5adc
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104216004"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118903788"
 ---
-# <a name="object-identifier"></a>Objekt Bezeichner
+# <a name="object-identifier"></a>OBJEKTBEZEICHNER
 
-Der **objektbezeichnerdatentyp** wird in eine TLV-Dreiecks Codierung codiert, die mit einem **Tagwert** von 0x06 beginnt. Jede Ganzzahl eines punktierten dezimalen Objekt Bezeichners (OID) wird gemäß den folgenden Regeln codiert:
+Der **OBJECT IDENTIFIER-Datentyp** wird in ein TLV-Triplet codiert, das mit dem **Tagwert** 0x06. Jede ganze Zahl eines gepunkteten Dezimalobjektbezeichners (OID) wird gemäß den folgenden Regeln codiert:
 
--   Die ersten beiden Knoten der OID werden auf ein einzelnes Byte codiert. Der erste Knoten wird mit dem Dezimaltrennzeichen 40 multipliziert, und das Ergebnis wird dem Wert des zweiten Knotens hinzugefügt.
--   Knotenwerte, die kleiner oder gleich 127 sind, werden auf einem Byte codiert.
--   Knotenwerte, die größer oder gleich 128 sind, werden mit mehreren Bytes codiert. Bit 7 des ganz links stehenden Byte ist auf eins festgelegt. Bits 0 bis 6 der einzelnen Bytes enthalten den codierten Wert.
+-   Die ersten beiden Knoten der OID werden in einem einzelnen Byte codiert. Der erste Knoten wird mit dem Dezimaltrennzeichen 40 multipliziert, und das Ergebnis wird dem Wert des zweiten Knotens hinzugefügt.
+-   Knotenwerte kleiner oder gleich 127 werden in einem Byte codiert.
+-   Knotenwerte, die größer oder gleich 128 sind, werden in mehreren Bytes codiert. Bit 7 des äußerst linken Byte ist auf 1 festgelegt. Die Bits 0 bis 6 jedes Byte enthalten den codierten Wert.
 
 Diese Punkte werden in der folgenden Abbildung dargestellt.
 
-![der-Codierung des objektbezeichnerdatentyps](images/der-tlv-oid.png)
+![der Codierung des Objektbezeichnerdatentyps](images/der-tlv-oid.png)
 
-Im folgenden Beispiel wird gezeigt, wie das **ClientID-** Attribut in einer Zertifikat Anforderung codiert wird.
+Das folgende Beispiel zeigt, wie das **ClientId-Attribut** in einer Zertifikatanforderung codiert wird.
 
 ``` syntax
 06 09                                ; OBJECT_ID (9 Bytes)

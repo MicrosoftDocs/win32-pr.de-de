@@ -1,51 +1,51 @@
 ---
-description: Gibt eine Liste von Skript Befehlen und Parametern für eine ASF-Datei (Advanced Systems Format) an. Dieses Attribut entspricht dem Skript Befehls Objekt im ASF-Header, das in der ASF-Spezifikation definiert ist.
+description: Gibt eine Liste von Skriptbefehlen und die Parameter für eine ASF-Datei (Advanced Systems Format) an. Dieses Attribut entspricht dem Skriptbefehlsobjekt im ASF-Header, das in der ASF-Spezifikation definiert ist.
 ms.assetid: c85c9da4-f0b5-4055-a645-2a71cabbe4a3
-title: MF_PD_ASF_SCRIPT-Attribut (wmcontainer. h)
+title: MF_PD_ASF_SCRIPT -Attribut (Wmcontainer.h)
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 03de86298d28183aa57cc80b451c4e46bb054de2
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: b98a078b0196add597ab184703306a7b2eba260082e3544ae84697b70bf71822
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106351782"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118740721"
 ---
-# <a name="mf_pd_asf_script-attribute"></a>MF \_ PD, \_ ASF- \_ Skript Attribut
+# <a name="mf_pd_asf_script-attribute"></a>MF \_ PD \_ ASF \_ SCRIPT-Attribut
 
-Gibt eine Liste von Skript Befehlen und Parametern für eine ASF-Datei (Advanced Systems Format) an. Dieses Attribut entspricht dem Skript Befehls Objekt im ASF-Header, das in der ASF-Spezifikation definiert ist.
+Gibt eine Liste von Skriptbefehlen und die Parameter für eine ASF-Datei (Advanced Systems Format) an. Dieses Attribut entspricht dem Skriptbefehlsobjekt im ASF-Header, das in der ASF-Spezifikation definiert ist.
 
 ## <a name="data-type"></a>Datentyp
 
 Bytearray
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Dieses Attribut gilt für Präsentations Deskriptoren für den ASF-Inhalt.
+Dieses Attribut gilt für Präsentationsdeskriptoren für ASF-Inhalte.
 
-Die [**imfasf ContentInfo:: generatepresentationdescriptor**](/windows/desktop/api/wmcontainer/nf-wmcontainer-imfasfcontentinfo-generatepresentationdescriptor) -Methode erstellt den Präsentations Deskriptor und generiert dieses Attribut aus dem Objekt Header des Skript Befehls. In der folgenden Tabelle wird das Format des BLOBs angezeigt:
+Die [**IMFASFContentInfo::GeneratePresentationDescriptor-Methode erstellt den Präsentationsdeskriptor**](/windows/desktop/api/wmcontainer/nf-wmcontainer-imfasfcontentinfo-generatepresentationdescriptor) und generiert dieses Attribut aus dem Script Command Object-Header. Die folgende Tabelle zeigt das Format des Blobs:
 
 
 
-| Objektfeld für Skript Befehl | Datentyp    | Size    | BESCHREIBUNG               |
+| Feld "Skriptbefehlsobjekt" | Datentyp    | Size    | Beschreibung               |
 |-----------------------------|--------------|---------|---------------------------|
-| Anzahl von Befehlen              | **DWORD**    | 4 Bytes | Anzahl von Skript Befehlen |
-| Befehlstyp, Befehle      | **Hobby**\[\] | Varies  | Array von Skript Befehlen  |
+| Anzahl der Befehle              | **DWORD**    | 4 Bytes | Anzahl von Skriptbefehlen |
+| Befehlstyp, Befehle      | **Byte**\[\] | Varies  | Array von Skriptbefehlen  |
 
 
 
  
 
-Der erste **DWORD** -Wert ist die Anzahl von Skript Befehlen, gefolgt von einem Array von Befehlen. Jeder Skript Befehl weist das folgende Format auf:
+Das erste **DWORD ist** die Anzahl der Skriptbefehle, gefolgt von einem Array von Befehlen. Jeder Skriptbefehl hat das folgende Format:
 
 
 
-| Objektfeld für Skript Befehl | Datentyp     | Size    | BESCHREIBUNG                                                              |
+| Feld "Skriptbefehlsobjekt" | Datentyp     | Size    | Beschreibung                                                              |
 |-----------------------------|---------------|---------|--------------------------------------------------------------------------|
-| Länge des Befehlsnamens         | **DWORD**     | 4 Bytes | Größe der Befehls Zeichenfolge in Bytes, einschließlich des NULL-Zeichens.      |
-| Befehlsname                | **WCHAR**\[\] | Varies  | Eine auf NULL endenden Zeichenfolge, die den Skript Befehl enthält.                 |
-| Länge des Befehls Typnamens    | **DWORD**     | 4 Bytes | Größe der Befehlstyp Zeichenfolge in Bytes, einschließlich des NULL-Zeichens. |
-| Befehlstyp Name           | **WCHAR**\[\] | Varies  | Eine auf NULL endenden Zeichenfolge, die den Befehlstyp enthält.                   |
+| Länge des Befehlsnamens         | **DWORD**     | 4 Bytes | Größe der Befehlszeichenfolge in Bytes, einschließlich des NULL-Zeichens.      |
+| Befehlsname                | **Wchar**\[\] | Varies  | Auf NULL beendete Zeichenfolge, die den Skriptbefehl enthält.                 |
+| Länge des Befehlstypnamens    | **DWORD**     | 4 Bytes | Größe der Befehlstypzeichenfolge in Bytes, einschließlich des NULL-Zeichens. |
+| Befehlstypname           | **Wchar**\[\] | Varies  | Auf NULL beendete Zeichenfolge, die den Befehlstyp enthält.                   |
 | Präsentationszeit           | **DWORD**     | 4 Bytes | Präsentationszeit des Befehls in Millisekunden.                        |
 
 
@@ -58,35 +58,35 @@ Der erste **DWORD** -Wert ist die Anzahl von Skript Befehlen, gefolgt von einem 
 
 | Anforderung | Wert |
 |-------------------------------------|------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>                                           |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2008 \[ -Desktop-Apps\]<br/>                                     |
-| Header<br/>                   | <dl> <dt>Wmcontainer. h</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur \[ Vista-Desktop-Apps\]<br/>                                           |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2008-Desktop-Apps\]<br/>                                     |
+| Header<br/>                   | <dl> <dt>Wmcontainer.h</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[Alphabetische Liste der Media Foundation Attribute](alphabetical-list-of-media-foundation-attributes.md)
+[Alphabetische Liste Media Foundation Attribute](alphabetical-list-of-media-foundation-attributes.md)
 </dt> <dt>
 
-[**Imfattributes:: GetBlob**](/windows/desktop/api/mfobjects/nf-mfobjects-imfattributes-getblob)
+[**ATTRIBUTEs::GetBlob**](/windows/desktop/api/mfobjects/nf-mfobjects-imfattributes-getblob)
 </dt> <dt>
 
-[**Imfattributes:: setBlob**](/windows/desktop/api/mfobjects/nf-mfobjects-imfattributes-setblob)
+[**ATTRIBUTEs::SetBlob**](/windows/desktop/api/mfobjects/nf-mfobjects-imfattributes-setblob)
 </dt> <dt>
 
-[**IMF presentationdescriptor**](/windows/desktop/api/mfidl/nn-mfidl-imfpresentationdescriptor)
+[**BESCHRIFTungDescriptor**](/windows/desktop/api/mfidl/nn-mfidl-imfpresentationdescriptor)
 </dt> <dt>
 
-[Präsentations deskriptorattribute](presentation-descriptor-attributes.md)
+[Präsentationsdeskriptorattribute](presentation-descriptor-attributes.md)
 </dt> <dt>
 
-[ASF-Header Objekt](asf-file-structure.md)
+[ASF-Headerobjekt](asf-file-structure.md)
 </dt> <dt>
 
-[Präsentations Deskriptoren](presentation-descriptors.md)
+[Präsentationsdeskriptoren](presentation-descriptors.md)
 </dt> </dl>
 
  

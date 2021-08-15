@@ -1,11 +1,11 @@
 ---
-title: Iwmpmedia getiteminfo-Methode
-description: Die getiteminfo-Methode gibt den Wert des angegebenen Attributs für das Medien Element zurück.
+title: IWMPMedia getItemInfo-Methode
+description: Die getItemInfo-Methode gibt den Wert des angegebenen Attributs für das Medienelement zurück.
 ms.assetid: b95fa61d-a600-4f31-a930-d80516204034
 keywords:
-- getiteminfo-Methode, Windows Media Player
-- getiteminfo-Methode, Windows Media Player, iwmpmedia-Schnittstelle
-- Iwmpmedia Interface, Windows Media Player, getiteminfo-Methode
+- getItemInfo-Windows Media Player
+- getItemInfo-Methode Windows Media Player , IWMPMedia-Schnittstelle
+- IWMPMedia-Schnittstelle Windows Media Player , getItemInfo-Methode
 topic_type:
 - apiref
 api_name:
@@ -16,16 +16,16 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 523e57e68d13df55395cd4deca6e09904723bbaf
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: ce8fa8b55074781dd835e116b0403391fe9343af30d5236610219dca8aba810b
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106356068"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118331990"
 ---
-# <a name="iwmpmediagetiteminfo-method"></a>Iwmpmedia:: getiteminfo-Methode
+# <a name="iwmpmediagetiteminfo-method"></a>IWMPMedia::getItemInfo-Methode
 
-Die **getiteminfo** -Methode gibt den Wert des angegebenen Attributs für das Medien Element zurück.
+Die **getItemInfo-Methode** gibt den Wert des angegebenen Attributs für das Medienelement zurück.
 
 ## <a name="syntax"></a>Syntax
 
@@ -53,28 +53,28 @@ Implements IWMPMedia.getItemInfo
 
 <dl> <dt>
 
-*bstritemname* \[ in\]
+*bstrItemName* \[ In\]
 </dt> <dd>
 
-Ein **System. String** -Wert, der den Namen des Attributs ist. Informationen zu den Attributen, die von Windows Media Player unterstützt werden, finden Sie in der [Attribut Referenz](attribute-reference.md).
+Eine **System.String,die** den Namen des Attributs ist. Informationen zu den Attributen, die von Windows Media Player unterstützt werden, finden Sie in der [Attributreferenz.](attribute-reference.md)
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Ein **System. String** -Wert, der den Wert des angegebenen Attributs ist.
+Eine **System.String,** die der Wert des angegebenen Attributs ist.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Diese Methode gibt die Metadaten für ein einzelnes Medien Element oder ein Medien Element zurück, das Teil einer Wiedergabeliste ist.
+Diese Methode gibt die Metadaten für ein einzelnes Medienelement oder ein Medienelement zurück, das Teil einer Wiedergabeliste ist.
 
-Die **AttributeCount** -Eigenschaft ruft die Anzahl der für ein bestimmtes Medien Element verfügbaren Attributnamen ab. Index Nummern können dann mit der **GetAttributeName** -Methode verwendet werden, um den Namen der einzelnen verfügbaren Attribute zu bestimmen. Einzelne Attributnamen können an **getiteminfo** übermittelt werden.
+Die **attributeCount-Eigenschaft** ruft die Anzahl der Attributnamen ab, die für ein bestimmtes Medienelement verfügbar sind. Indexnummern können dann mit der **getAttributeName-Methode** verwendet werden, um den Namen jedes verfügbaren Attributs zu bestimmen. Einzelne Attributnamen können an **getItemInfo übergeben werden.**
 
-Um Attribute mit mehreren Werten und Attributen mit komplexen Werten abzurufen, verwenden Sie die **getItemInfoByType** -Methode.
+Verwenden Sie zum Abrufen von Attributen mit mehreren Werten und Attributen mit komplexen Werten die **getItemInfoByType-Methode.**
 
-Wenn das Medien Element aus einer Bibliothek stammt, die durch den Aufruf von [iwmplibrary. mediacollection](wmplibiwmplibrary-iwmplibrary-mediacollection--vb-and-c.md)abgerufen wurde, unterscheidet sich der Satz verfügbarer Attribute von denjenigen, die von der lokalen Bibliothek abgerufen werden können, die durch Aufrufen von [AxWindowsMediaPlayer. mediacollection](axwmplib-axwindowsmediaplayer-mediacollection--vb-and-c.md)abgerufen wurde. Beispielsweise sind die Attribute, die in der lokalen Bibliothek verfügbar sind, die mithilfe von **iwmplibrary** abgerufen werden, eine Teilmenge der Attribute, die in der lokalen Bibliothek verfügbar sind, die mithilfe von **iwmpcore** abgerufen wurde. Der Satz von Attributen, der aus anderen Quellen (Remote Bibliotheken, portable Geräte oder CDs) verfügbar ist, wird von den anderen Quellen definiert.
+Wenn das Medienelement aus einer Bibliothek stammt, die durch Aufrufen von [IWMPLibrary.mediaCollection](wmplibiwmplibrary-iwmplibrary-mediacollection--vb-and-c.md)abgerufen wurde, unterscheiden sich die verfügbaren Attribute von den Attributen, die von der lokalen Bibliothek abgefragt werden können, die durch Aufrufen von [AxWindowsMediaPlayer.mediaCollection](axwmplib-axwindowsmediaplayer-mediacollection--vb-and-c.md)abgerufen wird. Beispielsweise sind die attributes, die aus der lokalen Bibliothek verfügbar sind, die mithilfe von **IWMPLibrary** abgerufen wurde, eine Teilmenge der Attribute, die aus der lokalen Bibliothek verfügbar sind, die mithilfe von **IWMPCore abgerufen wurde.** Der Satz von Attributen, die aus anderen Quellen (Remotebibliotheken, portable Geräte oder CDs) verfügbar sind, wird von den anderen Quellen definiert.
 
-Vor dem Aufrufen dieser Methode müssen Sie über Lesezugriff auf die Bibliothek verfügen. Weitere Informationen finden Sie unter [Bibliotheks Zugriff](library-access.md).
+Bevor Sie diese Methode aufrufen, müssen Sie über Lesezugriff auf die Bibliothek verfügen. Weitere Informationen finden Sie unter [Bibliothekszugriff.](library-access.md)
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -82,32 +82,32 @@ Vor dem Aufrufen dieser Methode müssen Sie über Lesezugriff auf die Bibliothek
 
 | Anforderung | Wert |
 |----------------------|------------------------------------------------------------------------------------------------------------------------|
-| Version<br/>   | Windows Media Player 9-Serie oder höher<br/>                                                                      |
+| Version<br/>   | Windows Media Player 9er Serie oder höher<br/>                                                                      |
 | Namespace<br/> | **WMPLib**<br/>                                                                                                  |
 | Assembly<br/>  | <dl> <dt>Interop.WMPLib.dll (Interop.WMPLib.dll.dll)</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Attribut Verweis**](attribute-reference.md)
+[**Attributreferenz**](attribute-reference.md)
 </dt> <dt>
 
-[**Iwmpmedia-Schnittstelle (VB und c#)**](iwmpmedia--vb-and-c.md)
+[**IWMPMedia-Schnittstelle (VB und C#)**](iwmpmedia--vb-and-c.md)
 </dt> <dt>
 
-[**Iwmpmedia. AttributeCount (VB und c#)**](wmplibiwmpmedia-iwmpmedia-attributecount--vb-and-c.md)
+[**IWMPMedia.attributeCount (VB und C#)**](wmplibiwmpmedia-iwmpmedia-attributecount--vb-and-c.md)
 </dt> <dt>
 
-[**Iwmpmedia. GetAttributeName (VB und c#)**](wmplibiwmpmedia-iwmpmedia-getattributename--vb-and-c.md)
+[**IWMPMedia.getAttributeName (VB und C#)**](wmplibiwmpmedia-iwmpmedia-getattributename--vb-and-c.md)
 </dt> <dt>
 
-[**Iwmpmedia. Einstellungs Verzeichnis (VB und c#)**](wmplibiwmpmedia-iwmpmedia-setiteminfo--vb-and-c.md)
+[**IWMPMedia.setItemInfo (VB und C#)**](wmplibiwmpmedia-iwmpmedia-setiteminfo--vb-and-c.md)
 </dt> <dt>
 
-[**IWMPMedia3. getItemInfoByType (VB und c#)**](wmplibiwmpmedia3-iwmpmedia3-getiteminfobytype--vb-and-c.md)
+[**IWMPMedia3.getItemInfoByType (VB und C#)**](wmplibiwmpmedia3-iwmpmedia3-getiteminfobytype--vb-and-c.md)
 </dt> </dl>
 
  

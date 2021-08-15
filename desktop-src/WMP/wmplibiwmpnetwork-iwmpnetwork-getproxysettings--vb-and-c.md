@@ -1,11 +1,11 @@
 ---
-title: Iwmpnetwork getproxysettings-Methode
-description: Die getproxysettings-Methode gibt Informationen zu den Proxy Einstellungen für ein Protokoll zurück.
+title: IWMPNetwork getProxySettings-Methode
+description: Die getProxySettings-Methode gibt Informationen zu den Proxyeinstellungen für ein Protokoll zurück.
 ms.assetid: eda4829a-4869-4557-8fe9-8061a1e0f586
 keywords:
-- getproxysettings-Methode, Windows-Media Player
-- getproxysettings-Methode, Windows Media Player, iwmpnetwork-Schnittstelle
-- Iwmpnetwork Interface, Windows Media Player, getproxysettings-Methode
+- getProxySettings-Methode Windows Media Player
+- getProxySettings-Methode Windows Media Player , IWMPNetwork-Schnittstelle
+- IWMPNetwork-Schnittstelle Windows Media Player , getProxySettings-Methode
 topic_type:
 - apiref
 api_name:
@@ -16,16 +16,16 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: d970160c07c90e84585c87ed1abf740fbe3c6318
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: e69c990b01ed885b80c96e3e36ad28c2793baf618fea68b0e20006390c2adeed
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106372143"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118331640"
 ---
-# <a name="iwmpnetworkgetproxysettings-method"></a>Iwmpnetwork:: getproxysettings-Methode
+# <a name="iwmpnetworkgetproxysettings-method"></a>IWMPNetwork::getProxySettings-Methode
 
-Die **getproxysettings** -Methode gibt Informationen zu den Proxy Einstellungen für ein Protokoll zurück.
+Die **getProxySettings-Methode** gibt Informationen zu den Proxyeinstellungen für ein Protokoll zurück.
 
 ## <a name="syntax"></a>Syntax
 
@@ -53,37 +53,37 @@ Implements IWMPNetwork.getProxySettings
 
 <dl> <dt>
 
-*bstrauprotocol* \[ in\]
+*bstrProtocol* \[ In\]
 </dt> <dd>
 
-Ein **System. String** -Wert, der der Protokoll Name ist. Eine Liste der unterstützten Protokolle finden Sie [unter Unterstützte Protokolle und Dateitypen](supported-protocols-and-file-types.md).
+Eine **System.String,die** der Protokollname ist. Eine Liste der unterstützten Protokolle finden Sie unter [Unterstützte Protokolle und Dateitypen.](supported-protocols-and-file-types.md)
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Ein **System. Int32** -Wert, der einem der folgenden Werte entspricht.
+Eine **System.Int32-Datei,** die einer der folgenden Werte ist.
 
 
 
 | Wert | BESCHREIBUNG                                                                      |
 |-------|----------------------------------------------------------------------------------|
-| 0     | Ein Proxy Server wird nicht verwendet.                                                |
-| 1     | Die Proxy Einstellungen für den aktuellen Browser werden verwendet (nur für http gültig). |
-| 2     | Die manuell angegebenen Proxy Einstellungen werden verwendet.                            |
-| 3     | Die Proxy Einstellungen werden automatisch erkannt.                                      |
+| 0     | Ein Proxyserver wird nicht verwendet.                                                |
+| 1     | Die Proxyeinstellungen für den aktuellen Browser werden verwendet (nur für HTTP gültig). |
+| 2     | Die manuell angegebenen Proxyeinstellungen werden verwendet.                            |
+| 3     | Die Proxyeinstellungen werden automatisch erkannt.                                      |
 
 
 
  
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Diese Methode schlägt fehl, es sei denn, die aufrufenden Anwendung wird auf dem lokalen Computer oder Intranet ausgeführt.
+Diese Methode schlägt fehl, es sei denn, die aufrufende Anwendung wird auf dem lokalen Computer oder Intranet ausgeführt.
 
 ## <a name="examples"></a>Beispiele
 
-Im folgenden Codebeispiel wird **getproxysettings** verwendet, um eine Meldung anzuzeigen, die Informationen über die aktuellen Proxy Einstellungen des Players in einer Bezeichnung enthält. Das **AxWMPLib. AxWindowsMediaPlayer** -Objekt wird durch die Variable mit dem Namen "Player" dargestellt.
+Im folgenden Codebeispiel wird **getProxySettings** verwendet, um eine Meldung mit Informationen zu den aktuellen Proxyeinstellungen des Players in einer Bezeichnung anzuzeigen. Das **AxWMPLib.AxWindowsMediaPlayer-Objekt** wird durch die Variable player dargestellt.
 
 
 ```CSharp
@@ -152,20 +152,20 @@ End Select
 
 | Anforderung | Wert |
 |----------------------|------------------------------------------------------------------------------------------------------------------------|
-| Version<br/>   | Windows Media Player 9-Serie oder höher<br/>                                                                      |
+| Version<br/>   | Windows Media Player 9er Serie oder höher<br/>                                                                      |
 | Namespace<br/> | **WMPLib**<br/>                                                                                                  |
 | Assembly<br/>  | <dl> <dt>Interop.WMPLib.dll (Interop.WMPLib.dll.dll)</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Iwmpnetwork-Schnittstelle (VB und c#)**](iwmpnetwork--vb-and-c.md)
+[**IWMPNetwork-Schnittstelle (VB und C#)**](iwmpnetwork--vb-and-c.md)
 </dt> <dt>
 
-[**Iwmpnetwork. setproxysettings (VB und c#)**](wmplibiwmpnetwork-iwmpnetwork-setproxysettings--vb-and-c.md)
+[**IWMPNetwork.setProxySettings (VB und C#)**](wmplibiwmpnetwork-iwmpnetwork-setproxysettings--vb-and-c.md)
 </dt> </dl>
 
  

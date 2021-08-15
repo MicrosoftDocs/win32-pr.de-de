@@ -1,9 +1,9 @@
 ---
-title: Framerate-Attribut (Windows Media Player SDK)
-description: Der Framerate ist ein Dezimalwert, der die Framerate (in Frames pro Sekunde) für eine Videodatei angibt.
+title: FrameRate-Attribut (Windows Media Player SDK)
+description: FrameRate ist ein Dezimalwert, der die Bildfrequenz (in Frames pro Sekunde) für eine Videodatei angibt.
 ms.assetid: 9ca54620-f877-4934-8fda-e5ae31566128
 keywords:
-- Media Player des Framerate-Attributs
+- FrameRate-Attribut Windows Media Player
 topic_type:
 - apiref
 api_name:
@@ -12,24 +12,24 @@ api_type:
 - NA
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: e00b1a0e43de379a0a125b80304150b451c3b881
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: c0749c8f719557c97bb165f091e54729fd8dd198fb3737ff9f49f6152bf61e84
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106355968"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118339144"
 ---
-# <a name="framerate-attribute"></a>Framerate-Attribut
+# <a name="framerate-attribute"></a>FrameRate-Attribut
 
-Der **Framerate** ist ein Dezimalwert, der die Framerate (in Frames pro Sekunde) für eine Videodatei angibt.
+**FrameRate ist** ein Dezimalwert, der die Bildfrequenz (in Frames pro Sekunde) für eine Videodatei angibt.
 
 ## <a name="applies-to"></a>Gilt für
 
--   [Video Elemente](video-item-attributes.md)
+-   [Videoelemente](video-item-attributes.md)
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Um zu ermitteln, ob Sie den Wert dieses Attributs ändern können, verwenden Sie die [Media. isread onlyitem](media-isreadonlyitem.md) -Methode.
+Um zu bestimmen, ob Sie den Wert dieses Attributs ändern können, verwenden Sie die [Media.isReadOnlyItem-Methode.](media-isreadonlyitem.md)
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -41,11 +41,11 @@ Um zu ermitteln, ob Sie den Wert dieses Attributs ändern können, verwenden Sie
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Attribut Verweis**](attribute-reference.md)
+[**Attributreferenz**](attribute-reference.md)
 </dt> </dl>
 
  

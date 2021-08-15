@@ -1,6 +1,6 @@
 ---
-description: Weitere Informationen finden Sie in der Eigenschaft bytescolumnvalue. length.
-title: Bytescolumnvalue. length (Eigenschaft)
+description: 'Weitere Informationen zu: BytesColumnValue.Length-Eigenschaft'
+title: BytesColumnValue.Length-Eigenschaft
 TOCTitle: 'Length property '
 ms:assetid: P:Microsoft.Isam.Esent.Interop.BytesColumnValue.Length
 ms:mtpsurl: https://msdn.microsoft.com/library/microsoft.isam.esent.interop.bytescolumnvalue.length(v=EXCHG.10)
@@ -25,19 +25,19 @@ api_type:
 api_location:
 - Microsoft.Isam.Esent.Interop.dll
 ROBOTS: INDEX,FOLLOW
-ms.openlocfilehash: f49b38cdab8d5e4a7b3554651a7dc2f97f651b59
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 3951ae20cd8094f543bcb86e1ca9d748f0bb0a601b31beb0f857d3e4e9d5e441
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "104348378"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117901961"
 ---
-# <a name="bytescolumnvaluelength-property"></a>Bytescolumnvalue. length (Eigenschaft)
+# <a name="bytescolumnvaluelength-property"></a>BytesColumnValue.Length-Eigenschaft
 
-Ruft die Byte Länge eines Spaltenwerts ab, der 0 (null) ist, wenn die Spalte NULL ist, andernfalls entspricht der tatsächlichen Länge des Byte Arrays.
+Ruft die Bytelänge eines Spaltenwerts ab, der 0 (null) ist, wenn die Spalte NULL ist, andernfalls entspricht sie der tatsächlichen Länge des Bytearrays.
 
-**Namespace:**  [Microsoft. ISAM. ESENT. Interop](./microsoft.isam.esent.interop-namespace.md)  
-**Assembly:**  Microsoft. ISAM. ESENT. Interop (in Microsoft.Isam.Esent.Interop.dll)
+**Namespace:**  [Microsoft.Isam.Esent.Interop](./microsoft.isam.esent.interop-namespace.md)  
+**Assembly:**  Microsoft.Isam.Esent.Interop (in Microsoft.Isam.Esent.Interop.dll)
 
 ## <a name="syntax"></a>Syntax
 
@@ -58,14 +58,14 @@ public override int Length { get; }
 
 #### <a name="property-value"></a>Eigenschaftswert
 
-Typ: [System. Int32](/dotnet/api/system.int32)  
+Typ: [System.Int32](/dotnet/api/system.int32)  
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
-#### <a name="reference"></a>Referenz
+#### <a name="reference"></a>Verweis
 
-[Bytescolumnvalue-Klasse](./bytescolumnvalue-class.md)
+[BytesColumnValue-Klasse](./bytescolumnvalue-class.md)
 
-[Bytescolumnvalue-Member](./bytescolumnvalue-members.md)
+[BytesColumnValue-Member](./bytescolumnvalue-members.md)
 
-[Microsoft. ISAM. ESENT. Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)
+[Microsoft.Isam.Esent.Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)

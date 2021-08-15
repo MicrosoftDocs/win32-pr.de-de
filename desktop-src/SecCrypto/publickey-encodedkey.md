@@ -1,7 +1,7 @@
 ---
 description: Ruft den Wert des öffentlichen Schlüssels ab.
 ms.assetid: d9846ebe-44df-4ee0-8f15-cc96883d9d53
-title: PublicKey. encodecodkey (Eigenschaft)
+title: PublicKey.EncodedKey-Eigenschaft
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,18 +13,18 @@ api_type:
 - COM
 api_location:
 - Capicom.dll
-ms.openlocfilehash: de2c7b2bfbbdaf28345ae29e260bfd30c5754ffd
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 0d4708461f5ff51d5f86170ba0f1df35669859149b4882f8fb86aafdbed5e436
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106370817"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118901462"
 ---
-# <a name="publickeyencodedkey-property"></a>PublicKey. encodecodkey (Eigenschaft)
+# <a name="publickeyencodedkey-property"></a>PublicKey.EncodedKey-Eigenschaft
 
-\[Die **encodedkey** -Eigenschaft ist für die Verwendung in den Betriebssystemen verfügbar, die im Abschnitt "Anforderungen" angegeben sind. Verwenden Sie stattdessen die [**X509Certificate2. PublicKey-Eigenschaft**](/dotnet/api/system.security.cryptography.x509certificates.x509certificate2.publickey?view=netcore-3.1) im [**System. Security. Cryptography. X509Certificates**](/dotnet/api/system.security.cryptography.x509certificates.publickey.-ctor?view=netcore-3.1) -Namespace.\]
+\[Die **EncodedKey-Eigenschaft** ist für die Verwendung in den im Abschnitt Anforderungen angegebenen Betriebssystemen verfügbar. Verwenden Sie stattdessen die [**X509Certificate2.PublicKey-Eigenschaft**](/dotnet/api/system.security.cryptography.x509certificates.x509certificate2.publickey?view=netcore-3.1) im [**System.Security.Cryptography.X509Certificates-Namespace.**](/dotnet/api/system.security.cryptography.x509certificates.publickey.-ctor?view=netcore-3.1)\]
 
-Die **encodecodkey** -Eigenschaft ruft den Wert des öffentlichen Schlüssels ab.
+Die **EncodedKey-Eigenschaft** ruft den Wert des öffentlichen Schlüssels ab.
 
 ## <a name="syntax"></a>Syntax
 
@@ -37,7 +37,7 @@ PublicKey.EncodedKey As EncodedData
 
 ## <a name="property-value"></a>Eigenschaftswert
 
-Ein [**encoddata**](encodeddata.md) -Objekt, das Zugriff auf den Wert des öffentlichen Schlüssels bereitstellt.
+Ein [**EncodedData-Objekt,**](encodeddata.md) das Zugriff auf den Wert des öffentlichen Schlüssels bereitstellt.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -45,16 +45,16 @@ Ein [**encoddata**](encodeddata.md) -Objekt, das Zugriff auf den Wert des öffen
 
 | Anforderung | Wert |
 |----------------------------|----------------------------------------------------------------------------------------|
-| Verteilbare Komponente<br/> | CAPICOM 2,0 oder höher unter Windows Server 2003 und Windows XP<br/>                  |
+| Verteilbare Komponente<br/> | CAPICOM 2.0 oder höher auf Windows Server 2003 und Windows XP<br/>                  |
 | DLL<br/>             | <dl> <dt>Capicom.dll</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**PublicKey**](publickey.md)
+[**Publickey**](publickey.md)
 </dt> </dl>
 
  

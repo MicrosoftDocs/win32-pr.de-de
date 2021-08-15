@@ -9,10 +9,10 @@ keywords:
 - Windows Medienformat-SDK, Skriptstreams
 - Advanced Systems Format (ASF), Skriptstreams
 - ASF (Advanced Systems Format), Skriptstreams
-- Windows Medienformat-SDK, Streams
+- Windows Medienformat-SDK,Streams
 - Advanced Systems Format (ASF),streams
 - ASF (Advanced Systems Format), Streams
-- Skripts,Befehle
+- Skripts, Befehle
 - Skripts,Streams
 ms.topic: article
 ms.date: 05/31/2018
@@ -25,7 +25,7 @@ ms.locfileid: "118197528"
 ---
 # <a name="script-commands"></a>Skriptbefehle
 
-Die skriptbefehle, die vom Windows Media Format SDK unterstützt werden, sind einfache Name-Wert-Zeichenfolgenpaare. Ein gängiger Skriptbefehl ist z. B. "URL", der von Windows Media Player anwendungen zum Öffnen von Webseiten verwendet wird. Die andere Hälfte des Skriptpaars für den Befehl "URL" enthält eine gültige URL (Uniform Resource Locator), z. `https://www.adatum.com` B. . Die Objekte dieses SDK unterstützen keine bestimmten Befehle. Ihre Anwendung muss Logik für die Handhabung der von Ihnen verwendeten Befehle enthalten. Sie können die befehle verwenden, die von Windows Media Player, um die Kompatibilität mit den meisten Playern zu gewährleisten.
+Die skriptbefehle, die vom Windows Media Format SDK unterstützt werden, sind einfache Name-Wert-Zeichenfolgenpaare. Ein gängiger Skriptbefehl ist z. B. "URL", der von Windows Media Player und anderen Abspielanwendungen zum Öffnen von Webseiten verwendet wird. Die andere Hälfte des Skriptpaars für den Befehl "URL" enthält eine gültige URL (Uniform Resource Locator), z. `https://www.adatum.com` B. . Die Objekte dieses SDK unterstützen keine bestimmten Befehle. Ihre Anwendung muss Logik für die Handhabung der von Ihnen verwendeten Befehle enthalten. Sie können die befehle verwenden, die von Windows Media Player, um die Kompatibilität mit den meisten Playern zu gewährleisten.
 
 Skriptbefehle können auf zwei Arten übermittelt werden: in einem Skriptstream oder im Dateiheader.
 
@@ -35,7 +35,7 @@ Sie können Skriptbefehle in einem eigenen Stream in einer ASF-Datei senden. Jed
 
 ## <a name="script-commands-in-the-file-header"></a>Skriptbefehle im Dateiheader
 
-Skriptbefehle können zum Zeitpunkt der Wiedergabe zum Abrufen in den Dateiheader eingeschlossen werden. Die Wiedergabeanwendung ist dafür verantwortlich, die Skriptbefehle zum richtigen Zeitpunkt auszuführen. Der Vorteil der Verwendung von Skriptbefehlen im Dateiheader ist, dass alle Skriptbefehle verfügbar sind, bevor sie mit dem Empfangen von Beispielen beginnen.
+Skriptbefehle können zum Zeitpunkt der Wiedergabe zum Abrufen in den Dateiheader eingeschlossen werden. Die Wiedergabeanwendung ist dafür verantwortlich, die Skriptbefehle zum richtigen Zeitpunkt auszuführen. Der Vorteil der Verwendung von Skriptbefehlen im Dateiheader ist, dass alle Skriptbefehle verfügbar sind, bevor Sie mit dem Empfangen von Beispielen beginnen.
 
 ## <a name="related-topics"></a>Zugehörige Themen
 

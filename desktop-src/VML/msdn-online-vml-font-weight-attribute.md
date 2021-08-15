@@ -1,44 +1,44 @@
 ---
-title: VML-Font-Weight Attribut
-description: VML-Font-Weight Attribut
+title: VMLFont-Weight Attribut
+description: VMLFont-Weight Attribut
 ms.assetid: d7b2b0c5-b5cf-4e7d-bbca-c554d12bf97e
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 70e4de8a1bb4132c75d4520dcacc661fbbc97eef
-ms.sourcegitcommit: 592c9bbd22ba69802dc353bcb5eb30699f9e9403
+ms.openlocfilehash: a14dd5edb3fed869390edeff514471359162ee39fd1d78796af3d2a260c96bdb
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "104390530"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117754641"
 ---
-# <a name="vml-font-weight-attribute"></a>VML-Font-Weight Attribut
+# <a name="vml-font-weight-attribute"></a>VMLFont-Weight Attribut
 
-In diesem Thema wird VML beschrieben, eine Funktion, die ab Windows Internet Explorer 9 veraltet ist. Webseiten und Anwendungen, die auf VML basieren, sollten zu SVG oder anderen allgemein unterstützten Standards migriert werden.
+In diesem Thema wird VML beschrieben, ein Feature, das ab Version 9 Windows Internet Explorer ist. Webseiten und Anwendungen, die auf VML basieren, sollten zu SVG oder anderen weit verbreiteten Standards migriert werden.
 
 > [!Note]  
-> Ab Dezember 2011 wurde dieses Thema archiviert. Daher wird er nicht mehr aktiv verwaltet. Weitere Informationen finden Sie unter [archivierte Inhalte](/previous-versions/windows/internet-explorer/ie-developer/). Informationen, Empfehlungen und Anleitungen zur aktuellen Version von Windows Internet Explorer finden Sie im [Internet Explorer Developer Center](https://msdn.microsoft.com/ie/).
+> Seit Dezember 2011 wurde dieses Thema archiviert. Daher wird sie nicht mehr aktiv verwaltet. Weitere Informationen finden Sie unter [Archivierter Inhalt.](/previous-versions/windows/internet-explorer/ie-developer/) Informationen, Empfehlungen und Anleitungen zur aktuellen Version von Windows Internet Explorer finden Sie im [Internet Explorer Developer Center.](https://msdn.microsoft.com/ie/)
 
- 
+ 
 
-Definiert die Stärke der Buchstaben der Schriftart. Lese-/Schreibzugriff. **Zeichenfolge**.
+Definiert die Stärke der Buchstaben der Schriftart. Lese-/Schreibzugriff. **Zeichenfolge.**
 
 **Gilt für**
 
-[TextPath](msdn-online-vml-textpath-element.md)
+[Textpath](msdn-online-vml-textpath-element.md)
 
 **Tagsyntax**
 
-<v: *Element* Style = "Font-Weight: *Expression* " >
+<v: *element* style="font-weight: *expression* ">
 
-**Skript Syntax**
+**Skriptsyntax**
 
-*Element* . Style. FontWeight = "*Ausdruck*"
+*element* .style.fontweight="*expression*"
 
-*Ausdruck* = *Element*. Style. FontWeight
+*expression* = *Element*.style.fontweight
 
 **Anmerkungen**
 
-Die Werte sind identisch mit den standardmäßigen HTML-Format Attributen. Mögliche Werte:
+Die Werte sind identisch mit den Standardattributen im HTML-Format. Mögliche Werte:
 
 
 
@@ -46,27 +46,27 @@ Die Werte sind identisch mit den standardmäßigen HTML-Format Attributen. Mögl
 |---------|-----------------------------------------------------------------------------|
 | normal  | Normal. Standard.                                                            |
 | fett    | Fettdruck                                                                       |
-| bolder  | Schwerer als normal.                                                        |
-| lighter | Heller als normal.                                                        |
-| 100     | Mindestens so hell wie die 200-Gewichtung.                                        |
-| 200     | Mindestens so fett wie die 100-Gewichtung und mindestens so leicht wie die 300-Gewichtung. |
-| 300     | Mindestens so fett wie die 200-Gewichtung und mindestens so leicht wie die 400-Gewichtung. |
+| bolder  | Größer als normal.                                                        |
+| lighter | Leichter als normal.                                                        |
+| 100     | Mindestens so hell wie das Gewicht von 200.                                        |
+| 200     | Mindestens so fett wie das 100-Gewicht und mindestens so hell wie das 300-Gewicht. |
+| 300     | Mindestens so fett wie das 200-Gewicht und mindestens so hell wie das 400-Gewicht. |
 | 400     | Normal.                                                                     |
-| 500     | Mindestens so fett wie die 400-Gewichtung und mindestens so leicht wie die 600-Gewichtung. |
-| 600     | Mindestens so fett wie die 500-Gewichtung und mindestens so leicht wie die 700-Gewichtung. |
+| 500     | Mindestens so fett wie das 400-Gewicht und mindestens so hell wie das 600-Gewicht. |
+| 600     | Mindestens so fett wie das 500-Gewicht und mindestens so hell wie das 700-Gewicht. |
 | 700     | Fettdruck                                                                       |
-| 800     | Mindestens so fett wie die 700-Gewichtung und mindestens so leicht wie die 900-Gewichtung. |
+| 800     | Mindestens so fett wie das 700-Gewicht und mindestens so hell wie das 900-Gewicht. |
 | 900     | Mindestens so fett wie die 800-Gewichtung.                                         |
 
 
 
- 
+ 
 
-*VML-Standard Attribut*
+*VML-Standardattribut*
 
 **Beispiel**
 
-Die Schrift Breite ist fett formatiert.
+Die Schriftgewichtung ist fett.
 
 
 ```HTML
@@ -80,6 +80,6 @@ Die Schrift Breite ist fett formatiert.
 
 
 
- 
+ 
 
- 
+ 

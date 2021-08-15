@@ -1,27 +1,27 @@
 ---
-description: Dies ist eine Computer spezifische System Richtlinie, die verwendet werden kann, wenn der Administrator nur Computer spezifische Anwendungen installieren möchte.
+description: Dies ist eine computerspezifische Systemrichtlinie, die verwendet werden kann, wenn der Administrator nur computerspezifische Anwendungen installieren möchte.
 ms.assetid: 3afa1d89-b76b-4184-b0d7-25cbf6749c7f
-title: Disableuserinstallationen
+title: DisableUserInstalls
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: a5ee8275567c62fc383c0488d6ad3ef8dfc928f0
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 171c003dbe739c890bf15e5c372e40840fee0aabc9159a837c0b5572a8741b76
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104128392"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118378513"
 ---
-# <a name="disableuserinstalls"></a>Disableuserinstallationen
+# <a name="disableuserinstalls"></a>DisableUserInstalls
 
-Dies ist eine Computer spezifische [System Richtlinie](system-policy.md) , die verwendet werden kann, wenn der Administrator nur Computer spezifische Anwendungen installieren möchte.
+Dies ist eine computerspezifische [Systemrichtlinie,](system-policy.md) die verwendet werden kann, wenn der Administrator nur computerspezifische Anwendungen installieren möchte.
 
-Wenn diese Richtlinie nicht festgelegt ist, durchsucht das Installationsprogramm die Registrierung nach Anwendungen in der folgenden Reihenfolge: verwaltete Anwendungen, die als pro Benutzer registrierte, nicht verwaltete Anwendungen registriert sind, und schließlich als pro-Computer registrierte Anwendungen.
+Wenn diese Richtlinie nicht festgelegt ist, durchsucht das Installationsprogramm die Registrierung in der folgenden Reihenfolge nach Anwendungen: verwaltete Anwendungen, die als benutzerspezifische Anwendungen registriert sind, nicht verwaltete Anwendungen, die pro Benutzer registriert sind, und schließlich Anwendungen, die pro Computer registriert sind.
 
-Wenn diese Richtlinie auf 1 festgelegt ist, ignoriert das Installationsprogramm alle Anwendungen, die als pro Benutzer registriert sind, und sucht nur nach Anwendungen, die als Computer bezogen registriert sind. Aufrufe an die Windows Installer-Anwendungsprogrammierschnittstelle oder das System ignorieren Anwendungen pro Benutzer. Wenn Sie versuchen, eine Installation im Einzelbenutzer- [Installations Kontext](installation-context.md) auszuführen, zeigt das Installationsprogramm eine Fehlermeldung an und beendet die Installation. In diesem Fall werden durch den Windows Installer auch benutzerspezifische Installationen von einem Terminal Server verhindert.
+Wenn diese Richtlinie auf 1 festgelegt ist, ignoriert das Installationsprogramm alle Als pro Benutzer registrierten Anwendungen und sucht nur nach Anwendungen, die als computerspezifische Anwendungen registriert sind. Aufrufe der Windows Installer-Anwendungsprogrammierschnittstelle oder des Systems ignorieren benutzerspezifische Anwendungen. Wenn versucht wird, eine Installation [](installation-context.md) im Benutzerinstallationskontext durchzuführen, zeigt das Installationsprogramm eine Fehlermeldung an und beendet die Installation. In diesem Fall verhindert der Windows Installer auch benutzerspezifische Installationen von einem Terminalserver.
 
 ## <a name="registry-key"></a>Registrierungsschlüssel
 
-**HKEY \_ Software Richtlinien für lokale \_ Computer** \\  \\  \\ **Microsoft** \\ **Windows** \\ **Installer**
+**HKEY \_ LOCAL \_** \\ **MACHINE-Softwarerichtlinien** \\  \\ **Microsoft** \\ **Windows** \\ **Installer**
 
 ## <a name="data-type"></a>Datentyp
 

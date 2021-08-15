@@ -1,10 +1,10 @@
 ---
-title: MPSCAN_RESOURCES Struktur (mpclient. h)
-description: Während eines Scanvorgangs übergebenen Ressourcen Informationen.
+title: MPSCAN_RESOURCES-Struktur (MpClient.h)
+description: Ressourceninformationen, die während eines Scanvorgangs übergeben werden.
 ms.assetid: D97712A6-547D-44CC-B55D-039A5CCE20BF
 keywords:
-- MPSCAN_RESOURCES Struktur Funktionen der Legacy-Windows-Umgebung
-- PMPSCAN_RESOURCES Struktur Zeiger Legacy-Windows-Umgebungs Features
+- MPSCAN_RESOURCES Struktur legacy Windows Environment Features
+- PMPSCAN_RESOURCES Strukturzeiger Legacy Windows Umgebungsfeatures
 topic_type:
 - apiref
 api_name:
@@ -15,16 +15,16 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 69ee9ea259bca6bf66eb81fcd17b13d509d5a065
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: dd70b442e7179d516d2e9c60b81e6c52b0f696f5719a255871e8687773bf71ce
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "103957195"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118747349"
 ---
-# <a name="mpscan_resources-structure"></a>Mpscan- \_ Ressourcenstruktur
+# <a name="mpscan_resources-structure"></a>MPSCAN \_ RESOURCES-Struktur
 
-Während eines Scanvorgangs übergebenen Ressourcen Informationen.
+Ressourceninformationen, die während eines Scanvorgangs übergeben werden.
 
 ## <a name="syntax"></a>Syntax
 
@@ -42,7 +42,7 @@ typedef struct tagMPSCAN_RESOURCES {
 
 <dl> <dt>
 
-**dwresourcecount**
+**dwResourceCount**
 </dt> <dd>
 
 Typ: **DWORD**
@@ -53,14 +53,14 @@ Anzahl der Ressourcen.
 
 </dd> <dt>
 
-**präsourcelist**
+**pResourceList**
 </dt> <dd>
 
-Typ: **pmpresource- \_ Informationen**
+Typ: **PMPRESOURCE \_ INFO**
 
 </dd> <dd>
 
-Array von Ressourcen. Informationen finden Sie unter [**mpresource- \_ Informationen**](mpresource-info.md).
+Array von Ressourcen. Weitere Informationen finden Sie unter [**MPRESOURCE \_ INFO**](mpresource-info.md).
 
 </dd> </dl>
 
@@ -70,17 +70,17 @@ Array von Ressourcen. Informationen finden Sie unter [**mpresource- \_ Informati
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows 8 \[ -Desktop-Apps\]<br/>                                            |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2012 \[ -Desktop-Apps\]<br/>                                  |
-| Header<br/>                   | <dl> <dt>Mpclient. h</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | \[Windows 8 Nur Desktop-Apps\]<br/>                                            |
+| Unterstützte Mindestversion (Server)<br/> | \[Windows Server 2012 Nur Desktop-Apps\]<br/>                                  |
+| Header<br/>                   | <dl> <dt>MpClient.h</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**mpresource- \_ Informationen**](mpresource-info.md)
+[**\_MPRESOURCE-INFORMATIONEN**](mpresource-info.md)
 </dt> </dl>
 
  

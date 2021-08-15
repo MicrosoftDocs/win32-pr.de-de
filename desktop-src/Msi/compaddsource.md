@@ -1,5 +1,5 @@
 ---
-description: Der Wert der COMPADDSOURCE-Eigenschaft ist eine Liste der Komponenten-GUIDs aus der ComponentId -Spalte der Component-Tabelle, getrennt durch Kommas, die für die Ausführung über das Quellmedium installiert werden sollen.
+description: Der Wert der COMPADDSOURCE-Eigenschaft ist eine Liste von Komponenten-GUIDs aus der ComponentId -Spalte der Component-Tabelle, getrennt durch Kommas, die für die Ausführung auf dem Quellmedium installiert werden sollen.
 ms.assetid: ee1e0650-674d-4189-8ef7-3d2ece89cc28
 title: COMPADDSOURCE-Eigenschaft
 ms.topic: reference
@@ -13,7 +13,7 @@ ms.locfileid: "118380052"
 ---
 # <a name="compaddsource-property"></a>COMPADDSOURCE-Eigenschaft
 
-Der Wert der **COMPADDSOURCE-Eigenschaft** ist eine Liste der Komponenten-GUIDs aus der ComponentId -Spalte der Component-Tabelle, getrennt durch Kommas, die für die Ausführung über das Quellmedium installiert werden sollen. [](component-table.md) Das Installationsprogramm verwendet diesen Wert, um basierend auf den angegebenen Komponenten zu bestimmen, welche Funktionen für die Ausführung aus der Quelle installiert werden sollen. Für jede aufgeführte Komponenten-ID überprüft das Installationsprogramm alle Funktionen, die (über die [Tabelle FeatureComponents)](featurecomponents-table.md) mit dieser Komponente verknüpft sind, und installiert das Feature, das die geringste Menge an Speicherplatz für die Installation benötigt. Die aufgelisteten Komponenten müssen in der Spalte Komponente der Tabelle [Komponente vorhanden](component-table.md) sein.
+Der Wert der **COMPADDSOURCE-Eigenschaft** ist eine Liste von Komponenten-GUIDs aus der ComponentId -Spalte der Component-Tabelle, getrennt durch Kommas, die für die Ausführung auf dem Quellmedium installiert werden sollen. [](component-table.md) Das Installationsprogramm verwendet diesen Wert, um basierend auf den angegebenen Komponenten zu bestimmen, welche Funktionen zur Ausführung aus der Quelle installiert werden sollen. Für jede aufgeführte Komponenten-ID überprüft das Installationsprogramm alle Funktionen, die (über die [Tabelle FeatureComponents)](featurecomponents-table.md) mit dieser Komponente verknüpft sind, und installiert das Feature, das die geringste Menge an Speicherplatz für die Installation erfordert. Die aufgelisteten Komponenten müssen in der Spalte Komponente der Tabelle [Komponente vorhanden](component-table.md) sein.
 
 ## <a name="remarks"></a>Hinweise
 
@@ -34,9 +34,9 @@ Das Installationsprogramm wertet die folgenden Eigenschaften immer in der folgen
 11. [**FILEADDSOURCE**](fileaddsource.md)
 12. [**FILEADDDEFAULT**](fileadddefault.md)
 
-Wenn die Befehlszeile z. B. FOLGENDEs angibt: ADDLOCAL=ALL, ADDSOURCE = MyFeature, werden alle Features zuerst auf run-local und dann myFeature auf run-from-source festgelegt. Wenn die Befehlszeile ist: ADDSOURCE=ALL, ADDLOCAL=MyFeature, wird zuerst MyFeature auf run-local festgelegt, und wenn ADDSOURCE=ALL ausgewertet wird, werden alle Features (einschließlich MyFeature) auf die Ausführung aus der Quelle zurückgesetzt.
+Wenn die Befehlszeile z. B. FOLGENDEs angibt: ADDLOCAL=ALL, ADDSOURCE = MyFeature, werden alle Features zuerst auf run-local und dann myFeature auf run-from-source festgelegt. Wenn die Befehlszeile auf ADDSOURCE=ALL, ADDLOCAL=MyFeature festgelegt ist, wird zuerst MyFeature auf run-local festgelegt, und wenn ADDSOURCE=ALL ausgewertet wird, werden alle Features (einschließlich MyFeature) auf die Ausführung aus der Quelle zurückgesetzt.
 
-Das Installationsprogramm legt die [**Eigenschaft Vorab**](preselected.md) ausgewählt während der Wiederaufnahme einer angehaltenen Installation oder bei Angabe einer der oben genannten Eigenschaften in der Befehlszeile auf den Wert "1" fest.
+Das Installationsprogramm legt die [**Preselected-Eigenschaft**](preselected.md) während der Wiederaufnahme einer angehaltenen Installation oder bei Angabe einer der oben genannten Eigenschaften in der Befehlszeile auf den Wert "1" fest.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -44,7 +44,7 @@ Das Installationsprogramm legt die [**Eigenschaft Vorab**](preselected.md) ausge
 
 | Anforderung | Wert |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Version<br/> | Windows Installer 5.0 auf Windows Server 2012, Windows 8, Windows Server 2008 R2 oder Windows 7. Windows Installer 4.0 oder Windows Installer 4.5 auf Windows Server 2008 oder Windows Vista. Windows Installationsprogramm auf Windows Server 2003 oder Windows XP. Informationen zum [Windows Service](windows-installer-portal.md) Pack, das für eine Windows Windows Installer-Version erforderlich ist, finden Sie unter Windows Installer Run-Time Anforderungen.<br/> |
+| Version<br/> | Windows Installer 5.0 auf Windows Server 2012, Windows 8, Windows Server 2008 R2 oder Windows 7. Windows Installer 4.0 oder Windows Installer 4.5 auf Windows Server 2008 oder Windows Vista. Windows Installationsprogramm auf Windows Server 2003 oder Windows XP. Informationen zum [Windows Service](windows-installer-portal.md) Pack, das für eine Windows Installer-Version erforderlich ist, finden Sie unter Windows Installer Run-Time Anforderungen.<br/> |
 
 
 

@@ -1,38 +1,38 @@
 ---
-description: Mit dem System File Checker-Hilfsprogramm (Sfc.exe) können Administratoren alle geschützten Ressourcen überprüfen, um Ihre Versionen zu überprüfen.
+description: Mit dem Hilfsprogramm für die Systemdateiüberprüfung Sfc.exe können Administratoren alle geschützten Ressourcen überprüfen, um ihre Versionen zu überprüfen.
 ms.assetid: 72f69ad2-15d9-4191-a8aa-4c23a2392006
 title: System File Checker
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: da4e0d67f6de6aba62fe262969d7f30db0c45335
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 2c2f751aa30c06dbff90b8d5221974236b45edf9f0f278c144f755568a0040f8
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106351120"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118330282"
 ---
 # <a name="system-file-checker"></a>System File Checker
 
-Mit dem System File Checker-Hilfsprogramm (Sfc.exe) können Administratoren alle geschützten Ressourcen überprüfen, um Ihre Versionen zu überprüfen.
+Mit dem Hilfsprogramm für die Systemdateiüberprüfung Sfc.exe können Administratoren alle geschützten Ressourcen überprüfen, um ihre Versionen zu überprüfen.
 
-Dateien, die für den Neustart von Fenstern wichtig sind und nicht mit der erwarteten Windows-Version identisch sind, können durch die richtigen Versionen ersetzt werden. Wenn eine Datei repariert wird, werden auch die entsprechenden Registrierungsdaten repariert. Geschützte Dateien, die für den Neustart von Windows nicht wichtig sind, werden nicht repariert
+Dateien, die für einen Neustart Windows wichtig sind, die nicht mit der erwarteten Windows Version übereinstimmen, werden möglicherweise durch die richtigen Versionen ersetzt. Wenn eine Datei repariert wird, werden auch die entsprechenden Registrierungsdaten repariert. Geschützte Dateien, die für einen Neustart nicht wichtig sind, Windows nicht repariert werden.
 
 ## <a name="syntax"></a>Syntax
 
-Im folgenden finden Sie die Befehlszeilen Syntax für SFC.
+Im Folgenden ist die Befehlszeilensyntax für Sfc angegeben.
 
-**SFC-Optionen \[ = Vollständiger Dateipfad\]**
+**SFC options \[ =full file path\]**
 
 ## <a name="options"></a>Optionen
 
 <dl> <dt>
 
-<span id="_CACHESIZE_x"></span><span id="_cachesize_x"></span><span id="_CACHESIZE_X"></span>/CacheSize =*x*
+<span id="_CACHESIZE_x"></span><span id="_cachesize_x"></span><span id="_CACHESIZE_X"></span>/CACHESIZE=*x*
 </dt> <dd>
 
 Dieser Wert wird nicht unterstützt.
 
-**Windows Server 2003 und Windows XP:** Legt die Dateicache Größe fest. Die Standardgröße des Caches beträgt 0x32 (50 MB).
+**Windows Server 2003 und Windows XP:** Legt die Größe des Dateicaches fest. Die Standardgröße des Caches ist 0x32 (50 MB).
 
 </dd> <dt>
 
@@ -53,27 +53,27 @@ Dieser Wert wird nicht unterstützt.
 <span id="_FILESONLY"></span><span id="_filesonly"></span>/FILESONLY
 </dt> <dd>
 
-Nur Dateien überprüfen oder reparieren. Überprüfen oder reparieren Sie keine Registrierungsschlüssel.
+Überprüfen oder reparieren Sie nur Dateien. Überprüfen oder reparieren Sie Registrierungsschlüssel nicht.
 
-**Windows XP:** Nicht unterstützt.
+**Windows XP:** Wird nicht unterstützt.
 
 </dd> <dt>
 
 <span id="_OFFBOOTDIR"></span><span id="_offbootdir"></span>/OFFBOOTDIR
 </dt> <dd>
 
-Verwenden Sie diese Option für Offline Reparaturen. Geben Sie den Speicherort des Offline-Start Verzeichnisses an.
+Verwenden Sie diese Option für Offlinereparaturen. Geben Sie den Speicherort des Offlinestartverzeichnisses an.
 
-**Windows XP:** Nicht unterstützt.
+**Windows XP:** Wird nicht unterstützt.
 
 </dd> <dt>
 
 <span id="_OFFWINDIR"></span><span id="_offwindir"></span>/OFFWINDIR
 </dt> <dd>
 
-Verwenden Sie diese Option für Offline Reparaturen. Geben Sie den Speicherort des Windows-offline Verzeichnisses an.
+Verwenden Sie diese Option für Offlinereparaturen. Geben Sie den Speicherort des Offlineverzeichnisses Windows an.
 
-**Windows XP:** Nicht unterstützt.
+**Windows XP:** Wird nicht unterstützt.
 
 </dd> <dt>
 
@@ -86,7 +86,7 @@ Dieser Wert wird nicht unterstützt.
 
 </dd> <dt>
 
-<span id="_QUIET"></span><span id="_quiet"></span>/Quiet
+<span id="_QUIET"></span><span id="_quiet"></span>/QUIET
 </dt> <dd>
 
 Dieser Wert wird nicht unterstützt.
@@ -98,7 +98,7 @@ Dieser Wert wird nicht unterstützt.
 
 Kehren Sie zu den Standardeinstellungen zurück.
 
-**Windows Server 2008 und Windows Vista:** Nicht unterstützt.
+**Windows Server 2008 und Windows Vista:** Wird nicht unterstützt.
 
 </dd> <dt>
 
@@ -107,16 +107,16 @@ Kehren Sie zu den Standardeinstellungen zurück.
 
 Dieser Wert wird nicht unterstützt.
 
-**Windows Server 2003 und Windows XP:** Scannt alle geschützten Systemdateien bei jedem Start.
+**Windows Server 2003 und Windows XP:** Scannt bei jedem Start alle geschützten Systemdateien.
 
 </dd> <dt>
 
 <span id="_SCANFILE"></span><span id="_scanfile"></span>/SCANFILE
 </dt> <dd>
 
-Scannt und repariert die Datei, die sich unter dem angegebenen vollständigen Pfad befindet.
+Überprüft und repariert die Datei unter dem angegebenen vollständigen Pfad.
 
-**Windows XP:** Nicht unterstützt.
+**Windows XP:** Wird nicht unterstützt.
 
 </dd> <dt>
 
@@ -139,42 +139,42 @@ Dieser Wert wird nicht unterstützt.
 <span id="_VERIFYFILE"></span><span id="_verifyfile"></span>/VERIFYFILE
 </dt> <dd>
 
-Überprüft die Datei am angegebenen vollständigen Pfad. Mit dieser Option wird die Datei nicht repariert.
+Überprüft die Datei unter dem angegebenen vollständigen Pfad. Mit dieser Option wird die Datei nicht repariert.
 
-**Windows XP:** Nicht unterstützt.
+**Windows XP:** Wird nicht unterstützt.
 
 </dd> <dt>
 
 <span id="_VERIFYONLY"></span><span id="_verifyonly"></span>/VERIFYONLY
 </dt> <dd>
 
-Scannt alle geschützten Systemdateien, repariert jedoch keine Dateien.
+Scannt alle geschützten Systemdateien, repariert aber keine Dateien.
 
-**Windows XP:** Nicht unterstützt.
+**Windows XP:** Wird nicht unterstützt.
 
 </dd> </dl>
 
-SFC legt den folgenden Registrierungs Wert fest:
+Sfc legt den folgenden Registrierungswert fest:
 
- = HKEY \_ local \_ Machine \\ Software \\ Microsoft \\ Windows NT \\ CurrentVersion \\ Winlogon \\ SfcScan
+ = HKEY \_ LOCAL MACHINE SOFTWARE Microsoft Windows NT \_ \\ \\ \\ \\ CurrentVersion \\ Winlogon \\ SFCScan
 
-Weitere Informationen finden Sie unter [WFP-Registrierungs Werte](wfp-registry-values.md).
+Weitere Informationen finden Sie unter [WFP-Registrierungswerte.](wfp-registry-values.md)
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Nur unter Windows Vista können Sie die Umgebungsvariable **Windows \_ Tracing \_ logfile** auf den Speicherort eines gültigen Verzeichnisses festlegen, um eine Protokolldatei zu erhalten.
+Nur auf Windows Vista können Sie die Umgebungsvariable **WINDOWS \_ TRACING \_ LOGFILE** auf den Speicherort eines gültigen Verzeichnisses festlegen, um eine Protokolldatei zu empfangen.
 
 ## <a name="examples"></a>Beispiele
 
-Die folgenden Beispiel Befehlszeilen sind Beispiele für sfc.exe-Syntax.
+Die folgenden Beispielbefehlszeilen sind Beispiele für sfc.exe Syntax.
 
-**sfc-/scannow**
+**sfc /SCANNOW**
 
-**SFC/VERIFYFILE = c: \\ Windows \\ system32 \\kernel32.dll**
+**sfc /VERIFYFILE=c: \\ windows \\ system32 \\kernel32.dll**
 
-**SFC/SCANFILE = d: \\ Windows \\ system32 \\kernel32.dll/OFFBOOTDIR = d: \\ /OFFWINDIR = d: \\ Windows**
+**sfc /SCANFILE=d: \\ windows \\ system32 \\kernel32.dll /OFFBOOTDIR=d: \\ /OFFWINDIR=d: \\ windows**
 
-**SFC/VERIFYONLY/FILESONLY**
+**sfc /VERIFYONLY /FILESONLY**
 
  
 

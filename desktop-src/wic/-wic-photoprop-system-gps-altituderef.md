@@ -1,27 +1,27 @@
 ---
-description: Die fotometadatenrichtlinie für die System. GPS. altituderef-Eigenschaft.
+description: Die Fotometadatenrichtlinie für die System.GPS.HeightRef-Eigenschaft.
 ms.assetid: abbb2441-25ca-484b-a744-620ff2794221
-title: System. GPS. altituderef-Foto-metadatenrichtlinie
+title: System.GPS.HeightRef-Fotometadatenrichtlinie
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: db600d218d72014c49fd3f0a8b5eb11dd4c467d5
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: ca49213754f605dcf6df40dfa3ff00e2b7aeaf765008037c23da21e35ab9ddee
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106355374"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118710697"
 ---
-# <a name="systemgpsaltituderef-photo-metadata-policy"></a>System. GPS. altituderef-Foto-metadatenrichtlinie
+# <a name="systemgpsaltituderef-photo-metadata-policy"></a>System.GPS.HeightRef-Fotometadatenrichtlinie
 
-Die fotometadatenrichtlinie für die [System. GPS. altituderef](../properties/props-system-gps-altituderef.md) -Eigenschaft.
+Die Fotometadatenrichtlinie für die [System.GPS.HeightRef-Eigenschaft.](../properties/props-system-gps-altituderef.md)
 
-### <a name="pkey"></a>Pkey
+### <a name="pkey"></a>PKEY
 
-Pkey \_ GPS \_ altituderef
+PKEY \_ GPS \_ HeightRef
 
-### <a name="description"></a>BESCHREIBUNG
+### <a name="description"></a>Beschreibung
 
-Gibt die als Bezugs Höhe verwendete Höhe an. Der Wert 0 gibt an, dass die Höhe oberhalb der sebene liegt. Der Wert 1 gibt eine Höhe unterhalb der sebene an.
+Gibt die Höhe an, die als Referenzhöhe verwendet wird. Der Wert 0 gibt an, dass die Höhe über dem Wasserstand liegt. Der Wert 1 gibt eine Höhe unterhalb des Wasserstands an.
 
 ### <a name="containers"></a>Container
 
@@ -31,54 +31,54 @@ JPEG, TIFF
 
 Nein
 
-### <a name="output-propvariant-type"></a>Ausgabe-PROPVARIANT-Typ
+### <a name="output-propvariant-type"></a>PROPVARIANT-Ausgabetyp
 
 VT \_ UI1
 
 ### <a name="input-type"></a>Eingabetyp
 
-Hobby.
+Byte.
 
-### <a name="conflict-resolution-policy"></a>Richtlinie zur Konfliktlösung
+### <a name="conflict-resolution-policy"></a>Konfliktlösungsrichtlinie
 
-Werte aus unterschiedlichen Schemas sind abgestimmt.
+Werte aus unterschiedlichen Schemas werden abgestimmt.
 
 ### <a name="jpeg-policies"></a>JPEG-Richtlinien
 
-### <a name="read-paths"></a>Pfade lesen
+### <a name="read-paths"></a>Lesepfade
 
 
 
-| Auftrag | Pfad                     | Datenträger Format |
+| Auftrag | Pfad                     | Datenträgerformat |
 |-------|--------------------------|-------------|
-| 1     | /App1/IFD/GPS/{ushort = 5} | byte        |
-| 2     | /XMP/EXIF: gpsaltituderef | Unicode     |
+| 1     | /app1/ifd/gps/{ushort=5} | byte        |
+| 2     | /xmp/exif:GPSAltitudeRef | Unicode     |
 
 
 
  
 
-### <a name="write-paths"></a>Schreib Pfade
+### <a name="write-paths"></a>Schreibpfade
 
 
 
-| Auftrag | Pfad                     | Datenträger Format |
+| Auftrag | Pfad                     | Datenträgerformat |
 |-------|--------------------------|-------------|
-| 1     | /App1/IFD/GPS/{ushort = 5} | byte        |
-| 2     | /XMP/EXIF: gpsaltituderef | Unicode     |
+| 1     | /app1/ifd/gps/{ushort=5} | byte        |
+| 2     | /xmp/exif:GPSAltitudeRef | Unicode     |
 
 
 
  
 
-### <a name="remove-paths"></a>Pfade entfernen
+### <a name="remove-paths"></a>Entfernen von Pfaden
 
 
 
 | Auftrag | Pfad                     |
 |-------|--------------------------|
-| 1     | /App1/IFD/GPS/{ushort = 5} |
-| 2     | /XMP/EXIF: gpsaltituderef |
+| 1     | /app1/ifd/gps/{ushort=5} |
+| 2     | /xmp/exif:gpsaltituderef |
 
 
 
@@ -86,52 +86,52 @@ Werte aus unterschiedlichen Schemas sind abgestimmt.
 
 ### <a name="tiff-policies"></a>TIFF-Richtlinien
 
-### <a name="read-paths"></a>Pfade lesen
+### <a name="read-paths"></a>Lesepfade
 
 
 
-| Auftrag | Pfad                         | Datenträger Format |
+| Auftrag | Pfad                         | Datenträgerformat |
 |-------|------------------------------|-------------|
-| 1     | /IFD/GPS/{ushort = 5}          | byte        |
-| 2     | /IFD/XMP/EXIF: gpsaltituderef | Unicode     |
+| 1     | /ifd/gps/{ushort=5}          | byte        |
+| 2     | /ifd/xmp/exif:GPSAltitudeRef | Unicode     |
 
 
 
  
 
-### <a name="write-paths"></a>Schreib Pfade
+### <a name="write-paths"></a>Schreibpfade
 
 
 
-| Auftrag | Pfad                         | Datenträger Format |
+| Auftrag | Pfad                         | Datenträgerformat |
 |-------|------------------------------|-------------|
-| 1     | /IFD/GPS/{ushort = 5}          | byte        |
-| 2     | /IFD/XMP/EXIF: gpsaltituderef | Unicode     |
+| 1     | /ifd/gps/{ushort=5}          | byte        |
+| 2     | /ifd/xmp/exif:GPSAltitudeRef | Unicode     |
 
 
 
  
 
-### <a name="remove-paths"></a>Pfade entfernen
+### <a name="remove-paths"></a>Entfernen von Pfaden
 
 
 
 | Auftrag | Pfad                         |
 |-------|------------------------------|
-| 1     | /IFD/GPS/{ushort = 5}          |
-| 2     | /IFD/XMP/EXIF: gpsaltituderef |
+| 1     | /ifd/gps/{ushort=5}          |
+| 2     | /ifd/xmp/exif:gpsaltituderef |
 
 
 
  
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
 <dl> <dt>
 
-[System. GPS. altituderef](../properties/props-system-gps-altituderef.md)
+[System.GPS.HeightRef](../properties/props-system-gps-altituderef.md)
 </dt> </dl>
 
  

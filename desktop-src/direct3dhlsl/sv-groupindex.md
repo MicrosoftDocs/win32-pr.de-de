@@ -1,6 +1,6 @@
 ---
 title: SV_GroupIndex
-description: Der \ 0034; vereinfacht \ 0034; der Index eines Compute-Shader-Threads innerhalb einer Thread Gruppe, der den mehrdimensionalen SV \_ groupthreadid in einen 1D-Wert umwandelt. SV \_ groupIndex variiert zwischen 0 und (numthreadsx \ numthreadsy \ numthreadsz) \ 8211; 1.
+description: '\ 0034;flattened \ 0034; Index eines Compute-Shaderthreads innerhalb einer Threadgruppe, wodurch die mehrdimensionale SV \_ GroupThreadID in einen 1D-Wert umgewandelt wird. SV \_ GroupIndex variiert von 0 bis (numthreadsX \ numthreadsY \ numThreadsZ) \ 8211; 1.'
 ms.assetid: e793be10-7c83-478c-859a-4b0a2c537570
 keywords:
 - SV_GroupIndex HLSL
@@ -13,16 +13,16 @@ api_type:
 ms.topic: reference
 ms.date: 05/31/2018
 api_location: ''
-ms.openlocfilehash: 952a94378a0570d5bb7bc4f08959074bc8a4da4d
-ms.sourcegitcommit: 592c9bbd22ba69802dc353bcb5eb30699f9e9403
+ms.openlocfilehash: fd8c10212a2dd91e4ecbe7fd48a427e4019b2cd79b3d56457635ab9ef9d9262a
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "103728177"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118508250"
 ---
-# <a name="sv_groupindex"></a>SV \_ groupIndex
+# <a name="sv_groupindex"></a>SV \_ GroupIndex
 
-Der "vereinfachte" Index eines Compute-Shader-Threads innerhalb einer Thread Gruppe, der den mehrdimensionalen SV \_ groupthreadid in einen 1D-Wert umwandelt. SV \_ groupIndex variiert zwischen 0 und (numthreadsx \* \* numthreadsz) – 1.
+Der "vereinfachte" Index eines Compute-Shaderthreads innerhalb einer Threadgruppe, der die mehrdimensionale SV \_ GroupThreadID in einen 1D-Wert umsetzt. SV \_ GroupIndex variiert von 0 bis (numthreadsX \* numthreadsY \* numThreadsZ) – 1.
 
 ## <a name="type"></a>Typ
 
@@ -34,9 +34,9 @@ Der "vereinfachte" Index eines Compute-Shader-Threads innerhalb einer Thread Gru
 
 
 
- 
+ 
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
 
 ```
@@ -47,25 +47,25 @@ SV_GroupIndex = SV_GroupThreadID.z*dimx*dimy +
 
 
 
-Dabei sind "dimx" und "dimy" die Dimensionen, die im [numThreads](sm5-attributes-numthreads.md) -Attribut für den Einstiegspunkt angegeben sind.
+dabei sind dimx und dimy die Dimensionen, die im [numthreads-Attribut](sm5-attributes-numthreads.md) für den Einstiegspunkt angegeben sind.
 
-Dieser System Wert ist optional. Durch die Verwendung wird jedoch sichergestellt, dass ein Thread nur in den zugewiesenen Speicherbereich in der groupshared-Variablen schreibt.
+Dieser Systemwert ist optional. Durch seine Verwendung wird jedoch sichergestellt, dass ein Thread nur in den zugewiesenen Speicherbereich in der groupshared-Variablen schreibt.
 
-Die folgende Abbildung zeigt die Beziehung zwischen den Parametern, die an Verknüpfung id3d11devicecontext aus übermittelt werden [**::D ispatch**](/windows/desktop/api/d3d11/nf-d3d11-id3d11devicecontext-dispatch), Dispatch (5, 3, 2), die im [numThreads](sm5-attributes-numthreads.md) -Attribut angegebenen Werte, numThreads (10, 8, 3) und Werte, die an den Compute-Shader für die Thread bezogenen System Werte (SV \_ groupIndex,[SV \_ dispatchthreadid](sv-dispatchthreadid.md),[SV \_ groupthreadid](sv-groupthreadid.md),[SV \_ GroupID](sv-groupid.md)) weitergegeben werden.
+Die folgende Abbildung zeigt die Beziehung zwischen den Parametern, die an [**ID3D11DeviceContext::D ispatch,**](/windows/desktop/api/d3d11/nf-d3d11-id3d11devicecontext-dispatch)Dispatch(5,3,2) übergeben werden, den im [attribut numthreads angegebenen](sm5-attributes-numthreads.md) Werten, numthreads(10,8,3) und werten, die an den Compute-Shader für die threadbezogenen Systemwerte (SV \_ GroupIndex,[SV \_ DispatchThreadID,](sv-dispatchthreadid.md)[SV \_ GroupThreadID](sv-groupthreadid.md),[SV \_ GroupID)](sv-groupid.md)übergeben werden.
 
-![Darstellung der Beziehung zwischen Dispatch, Thread Gruppen und Threads](images/threadgroupids.png)
+![Abbildung der Beziehung zwischen Dispatch, Threadgruppen und Threads](images/threadgroupids.png)
 
-Diese Funktion wird in den folgenden Typen von Shadern unterstützt:
+Diese Funktion wird in den folgenden Shadertypen unterstützt:
 
 
 
-| Scheitelpunkt | Hülle | Domain | Geometrie | Pixel | Compute |
+| Scheitelpunkt | Rumpf | Domain | Geometrie | Pixel | Compute |
 |--------|------|--------|----------|-------|---------|
 |        |      |        |          |       | x       |
 
 
 
- 
+ 
 
 ## <a name="see-also"></a>Weitere Informationen
 
@@ -74,9 +74,9 @@ Diese Funktion wird in den folgenden Typen von Shadern unterstützt:
 [Semantik](dx-graphics-hlsl-semantics.md)
 </dt> <dt>
 
-[Shader-Modell 5](d3d11-graphics-reference-sm5.md)
+[Shadermodell 5](d3d11-graphics-reference-sm5.md)
 </dt> </dl>
 
- 
+ 
 
- 
+ 

@@ -1,7 +1,7 @@
 ---
-description: Ermöglicht, dass ein vorhandener Arbeitsspeicher eine Gruppe von Scheitel Punkten beeinflusst und festlegt, wie viel Einfluss der Knochen auf jeden Scheitelpunkt hat.
+description: Ermöglichen Sie es einem vorhandenen Gitter, eine Gruppe von Scheitelpunkte zu beeinflussen und zu definieren, wie viel Einfluss die Ziese auf die einzelnen Scheitelpunkte hat.
 ms.assetid: 37ba97a8-ba40-4700-b8b8-fa7cc9118307
-title: 'ID3DX10SkinInfo:: addboneinfluences-Methode (d3dx10. h)'
+title: ID3DX10SkinInfo::AddBoneInfluences-Methode (D3DX10.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -14,16 +14,16 @@ api_type:
 api_location:
 - D3DX10.lib
 - D3DX10.dll
-ms.openlocfilehash: 8531d70e301b0583309817ac23a36762cacf563f
-ms.sourcegitcommit: 14010c34b35fa268046c7683f021f86de08ddd0a
+ms.openlocfilehash: 7f640481c664c51614a45ff10250a4c40d769a27d793868c4bec316c2cab9ded
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "104219530"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117914346"
 ---
-# <a name="id3dx10skininfoaddboneinfluences-method"></a>ID3DX10SkinInfo:: addboneinfluences-Methode
+# <a name="id3dx10skininfoaddboneinfluences-method"></a>ID3DX10SkinInfo::AddBoneInfluences-Methode
 
-Ermöglicht, dass ein vorhandener Arbeitsspeicher eine Gruppe von Scheitel Punkten beeinflusst und festlegt, wie viel Einfluss der Knochen auf jeden Scheitelpunkt hat.
+Ermöglichen Sie es einem vorhandenen Gitter, eine Gruppe von Scheitelpunkte zu beeinflussen und zu definieren, wie viel Einfluss die Ziese auf die einzelnen Scheitelpunkte hat.
 
 ## <a name="syntax"></a>Syntax
 
@@ -43,39 +43,39 @@ HRESULT AddBoneInfluences(
 
 <dl> <dt>
 
-*Boneingedex* \[ in\]
+*Index* \[ In\]
 </dt> <dd>
 
-Typ: **[ **uint**](../winprog/windows-data-types.md)**
+Typ: **[ **UINT**](../winprog/windows-data-types.md)**
 
-Ein Index, der einen vorhandenen Knochen Wert angibt. Muss zwischen 0 und dem von [**ID3DX10SkinInfo:: getnumbones**](id3dx10skininfo-getnumbones.md)zurückgegebenen Wert liegen.
+Ein Index, der einen vorhandenen Zeichner angibt. Muss zwischen 0 und dem von [**ID3DX10SkinInfo::GetNumBones zurückgegebenen Wert liegen.**](id3dx10skininfo-getnumbones.md)
 
 </dd> <dt>
 
-*Einfluss Zähler* \[ in\]
+*InfluenceCount* \[ In\]
 </dt> <dd>
 
-Typ: **[ **uint**](../winprog/windows-data-types.md)**
+Typ: **[ **UINT**](../winprog/windows-data-types.md)**
 
-Anzahl der Scheitel Punkte, die dem knochenwert hinzugefügt werden sollen.
+Anzahl der Scheitelpunkt, die dem Einfluss des Gitters hinzugefügt werden.
 
 </dd> <dt>
 
-*PIndizes* \[ in\]
+*pIndices* \[ In\]
 </dt> <dd>
 
-Typ: **[ **uint**](../winprog/windows-data-types.md)\***
+Typ: **[ **UINT**](../winprog/windows-data-types.md)\***
 
-Zeiger auf ein Array von Scheitelpunkt Indizes. Jedes Element dieses Arrays verfügt über einen entsprechenden Member in pgewichtungen, d. b., PIndizes \[ \] entsprechen den pgewichtungen \[ i \] . Der entsprechende Wert in pgewichtungen \[ i legt fest, \] wie viel Einfluss boneindex auf den Scheitelpunkt hat, der von PIndizes i indiziert wird \[ \] . Die Größe des PIndizes-Arrays muss größer oder gleich "Einfluss Wert" sein.
+Zeiger auf ein Array von Scheitelpunktindizes. Jedes Member dieses Arrays verfügt über einen entsprechenden Member in pWeights, damit pIndices \[ i \] pWeights \[ i \] entspricht. Der entsprechende Wert in pWeights i bestimmt, wie viel EinflussIndex auf den von \[ pIndices i indizierten Scheitelpunkt \] \[ \] hat. Die Größe des pIndices-Arrays muss größer oder gleich InfluenceCount sein.
 
 </dd> <dt>
 
-*pgewichtungen* \[ in\]
+*pWeights* \[ In\]
 </dt> <dd>
 
-Typ: **float \***
+Typ: **\* float**
 
-Zeiger auf ein Array von Knochen Gewichtungen. Jedes Element dieses Arrays verfügt über einen entsprechenden Member in PIndizes, d. b., die pgewichtungen \[ \] entsprechen den PIndizes \[ i \] . Jeder Wert in pgewichtungen liegt zwischen 0 und 1 und definiert den Umfang der Auswirkung, den der Knochen über jedem Scheitelpunkt hat. Die Größe der pgewichtungen muss gleich oder größer als Einfluss Wert sein.
+Zeiger auf ein Array von Gewichtungen. Jedes Member dieses Arrays verfügt über ein entsprechendes Member in pIndices, damit pWeights \[ i \] pIndices \[ i \] entspricht. Jeder Wert in "pWeights" liegt zwischen 0 und 1 und definiert den Einfluss, den die Zie auf jeden Scheitelpunkt hat. Die Größe von pWeights muss größer oder gleich InfluenceCount sein.
 
 </dd> </dl>
 
@@ -83,7 +83,7 @@ Zeiger auf ein Array von Knochen Gewichtungen. Jedes Element dieses Arrays verf�
 
 Typ: **[ **HRESULT**](https://msdn.microsoft.com/library/Bb401631(v=MSDN.10).aspx)**
 
-Wenn die Methode erfolgreich ausgeführt wird, ist der Rückgabewert S \_ OK. Wenn die Methode fehlschlägt, kann der Rückgabewert lauten: E \_ invalidArg oder e \_ oudef Memory.
+Wenn die Methode erfolgreich ist, ist der Rückgabewert S \_ OK. Wenn bei der Methode ein Fehler auftritt, kann der Rückgabewert E \_ INVALIDARG oder E \_ OUTOFMEMORY sein.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -91,12 +91,12 @@ Wenn die Methode erfolgreich ausgeführt wird, ist der Rückgabewert S \_ OK. We
 
 | Anforderung | Wert |
 |--------------------|---------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>D3dx10. h</dt> </dl>   |
-| Bibliothek<br/> | <dl> <dt>D3dx10. lib</dt> </dl> |
+| Header<br/>  | <dl> <dt>D3DX10.h</dt> </dl>   |
+| Bibliothek<br/> | <dl> <dt>D3DX10.lib</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 

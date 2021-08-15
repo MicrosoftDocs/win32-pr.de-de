@@ -1,27 +1,27 @@
 ---
-description: Benutzerdefinierte asynchrone Ergebnis Objekte
+description: Benutzerdefinierte asynchrone Ergebnisobjekte
 ms.assetid: 78cef367-b007-46d5-bb7f-2b3f7eed9926
-title: Benutzerdefinierte asynchrone Ergebnis Objekte
+title: Benutzerdefinierte asynchrone Ergebnisobjekte
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: de5a0109b47255bc14fcccafbbb09c419848b5a3
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 7212152de737a0af8e290b2c837b40cd4ad68840a49df79db148b4691068678b
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104214329"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118742926"
 ---
-# <a name="custom-asynchronous-result-objects"></a>Benutzerdefinierte asynchrone Ergebnis Objekte
+# <a name="custom-asynchronous-result-objects"></a>Benutzerdefinierte asynchrone Ergebnisobjekte
 
-In diesem Thema wird beschrieben, wie die [**imfasynkresult**](/windows/desktop/api/mfobjects/nn-mfobjects-imfasyncresult) -Schnittstelle implementiert wird.
+In diesem Thema wird beschrieben, wie [**dieASYNCAsyncResult-Schnittstelle implementiert**](/windows/desktop/api/mfobjects/nn-mfobjects-imfasyncresult) wird.
 
-Es ist selten, dass Sie eine benutzerdefinierte Implementierung der [**imfasynkresult**](/windows/desktop/api/mfobjects/nn-mfobjects-imfasyncresult) -Schnittstelle schreiben müssen. In fast allen Fällen ist die Standard Media Foundation Implementierung ausreichend. (Diese Implementierung wird von der MF-Funktion " [**MF**](/windows/desktop/api/mfapi/nf-mfapi-mfcreateasyncresult) -Funktion" zurückgegeben.) Wenn Sie jedoch eine benutzerdefinierte Implementierung schreiben, müssen Sie einige Punkte beachten.
+Es ist selten, dass Sie eine benutzerdefinierte Implementierung [**derASYNCAsyncResult-Schnittstelle**](/windows/desktop/api/mfobjects/nn-mfobjects-imfasyncresult) schreiben müssen. In fast allen Fällen ist die Standardimplementierung Media Foundation ausreichend. (Diese Implementierung wird von der [**MFCreateAsyncResult-Funktion**](/windows/desktop/api/mfapi/nf-mfapi-mfcreateasyncresult) zurückgegeben.) Wenn Sie jedoch eine benutzerdefinierte Implementierung schreiben, müssen Sie einige Probleme beachten.
 
-Zuerst muss Ihre Implementierung die [**mfasynkresult**](/windows/win32/api/mfapi/ns-mfapi-mfasyncresult) -Struktur erben. Die Media Foundation Arbeits Warteschlangen verwenden diese Struktur intern, um den Vorgang zu verteilen. Initialisieren Sie alle Strukturmember mit Ausnahme des **pCallback** -Members, der einen Zeiger auf die Rückruf Schnittstelle des Aufrufers enthält.
+Zunächst muss Ihre Implementierung die [**MFASYNCRESULT-Struktur**](/windows/win32/api/mfapi/ns-mfapi-mfasyncresult) erben. Die Media Foundation Arbeitswarteschlangen verwenden diese Struktur intern, um den Vorgang zu senden. Initialisieren Sie alle Strukturmitglieder mit Ausnahme des **pCallback-Members,** der einen Zeiger auf die Rückrufschnittstelle des Aufrufers enthält, auf 0 (null).
 
-Zweitens sollte Ihr Objekt [**mflockplatform**](/windows/desktop/api/mfapi/nf-mfapi-mflockplatform) in seinem Konstruktor anrufen, um die Media Foundation Plattform zu sperren. Zum Entsperren der Plattform muss [**mfunlockplatform**](/windows/desktop/api/mfapi/nf-mfapi-mfunlockplatform) aufgerufen werden. Diese Funktionen tragen dazu bei, das Herunterfahren der Plattform zu verhindern, bevor das Objekt zerstört wird. Weitere Informationen finden Sie unter [Arbeits Warteschlangen](work-queues.md).
+Zweitens sollte Ihr Objekt [**MFLockPlatform**](/windows/desktop/api/mfapi/nf-mfapi-mflockplatform) in seinem Konstruktor aufrufen, um die Media Foundation sperren. Rufen [**Sie MFUnlockPlatform auf,**](/windows/desktop/api/mfapi/nf-mfapi-mfunlockplatform) um die Plattform zu entsperren. Diese Funktionen verhindern, dass die Plattform heruntergefahren wird, bevor das Objekt zerstört wird. Weitere Informationen finden Sie unter [Arbeitswarteschlangen](work-queues.md).
 
-Der folgende Code zeigt eine grundlegende Implementierung der [**imfasynkresult**](/windows/desktop/api/mfobjects/nn-mfobjects-imfasyncresult) -Schnittstelle. Wie gezeigt, stellt dieser Code keine weiteren Funktionen bereit, die über die Standard Media Foundation Implementierung hinausgehen.
+Der folgende Code zeigt eine grundlegende Implementierung [**derASYNCAsyncResult-Schnittstelle.**](/windows/desktop/api/mfobjects/nn-mfobjects-imfasyncresult) Wie gezeigt, bietet dieser Code keine zusätzlichen Features, die über die Standardimplementierung Media Foundation hinausgehen.
 
 
 ```C++
@@ -223,10 +223,10 @@ public:
 
 <dl> <dt>
 
-[Arbeits Warteschlangen](work-queues.md)
+[Arbeitswarteschlangen](work-queues.md)
 </dt> <dt>
 
-[Asynchrone Rückruf Methoden](asynchronous-callback-methods.md)
+[Asynchrone Rückrufmethoden](asynchronous-callback-methods.md)
 </dt> </dl>
 
  

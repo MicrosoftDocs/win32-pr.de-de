@@ -1,25 +1,25 @@
 ---
-description: Dieses Thema listet die Häufigkeits Tabellen auf, die für die Optimierung des analogen TV für Österreich verwendet werden
+description: In diesem Thema werden die Häufigkeitstabellen aufgeführt, die für die analoge TV-Optimierung für Deutschland verwendet werden.
 ms.assetid: 200355f8-e472-4497-8d36-c77f6b2cf5c7
-title: Österreich-Kanal Zuweisungen
+title: Zuweisungen des Kanals "Channel"
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 12f7ca86799e733f989c0de01faba23cb5eb581d
-ms.sourcegitcommit: a47bd86f517de76374e4fff33cfeb613eb259a7e
+ms.openlocfilehash: 3324e47aea4fc9ef5326a6f96d784b36ebf30f9b0bb4419b312480d580aa90f0
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/06/2021
-ms.locfileid: "104521451"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117824260"
 ---
-# <a name="austria-channel-assignments"></a>Österreich-Kanal Zuweisungen
+# <a name="austria-channel-assignments"></a>Zuweisungen des Kanals "Channel"
 
-Dieses Thema listet die Häufigkeits Tabellen auf, die für die Optimierung des analogen TV für Österreich verwendet werden
+In diesem Thema werden die Häufigkeitstabellen aufgeführt, die für die analoge TV-Optimierung für Deutschland verwendet werden.
 
-Eine Erläuterung der folgenden Tabellen finden Sie unter [Tabellen und Zuweisungen](tables-and-assignments.md).
+Eine Erläuterung der folgenden Tabellen finden Sie unter [Tabellen und Zuweisungen.](tables-and-assignments.md)
 
-Die folgenden Kanal Zuweisungen wurden in Windows 7 eingeführt. Zuvor wurde die [Tabelle "Unicable Frequency](unicable-frequency-table.md) " verwendet.
+Die folgenden Kanalzuweisungen wurden in Windows 7 eingeführt. Zuvor wurde die [Unicable Frequency-Tabelle](unicable-frequency-table.md) verwendet.
 
-## <a name="cable-assignments"></a>Kabel Zuweisungen
+## <a name="cable-assignments"></a>Kabelzuweisungen
 
 ``` syntax
         1L,             // Lowest channel
@@ -138,7 +138,7 @@ Die folgenden Kanal Zuweisungen wurden in Windows 7 eingeführt. Zuvor wurde die
 
 <dl> <dt>
 
-[Internationale Analog-TV-Optimierung](international-analog-tv-tuning.md)
+[Internationale analoge TV-Optimierung](international-analog-tv-tuning.md)
 </dt> </dl>
 
  

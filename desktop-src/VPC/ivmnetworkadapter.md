@@ -1,10 +1,10 @@
 ---
-title: Ivmnetworkadapter-Schnittstelle (vpccominterfaces. h)
-description: Dient als Schnittstelle für eine virtuelle Netzwerkschnittstellenkarte.
+title: IVMNetworkAdapter-Schnittstelle (VPCCOMInterfaces.h)
+description: Dient als Schnittstelle zu einer virtuellen Netzwerkschnittstellenkarte.
 ms.assetid: df050706-09be-47d1-9ae1-1eb0e1836d64
 keywords:
-- Ivmnetworkadapter Interface Virtual PC
-- Virtueller Computer für ivmnetworkadapter Interface, beschrieben
+- IVMNetworkAdapter-Schnittstelle Virtueller PC
+- IVMNetworkAdapter-Schnittstelle Virtueller PC , beschrieben
 topic_type:
 - apiref
 api_name:
@@ -15,37 +15,37 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 74a0ccf722715896743129b6666609bd8a88df3f
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 73622161629f6d3746c153fb9e2df32ee120fd748defc60d0d02ef6ea4378b14
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104391957"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118843897"
 ---
-# <a name="ivmnetworkadapter-interface"></a>Ivmnetworkadapter-Schnittstelle
+# <a name="ivmnetworkadapter-interface"></a>IVMNetworkAdapter-Schnittstelle
 
-\[Windows Virtual PC ist nicht mehr für die Verwendung ab Windows 8 verfügbar. Verwenden Sie stattdessen den [Hyper-V-WMI-Anbieter (v2)](/windows/desktop/HyperV_v2/windows-virtualization-portal).\]
+\[Windows Der virtuelle PC ist ab Windows 8 nicht mehr für die Verwendung verfügbar. Verwenden Sie stattdessen den [Hyper-V-WMI-Anbieter (V2).](/windows/desktop/HyperV_v2/windows-virtualization-portal)\]
 
-Dient als Schnittstelle für eine virtuelle Netzwerkschnittstellenkarte (NIC). Es wird verwendet, um einzurichten, wie ein virtueller Computer vernetzt ist. Netzwerkschnittstellenkarten können mithilfe von [**ivmvirtualmachine:: addnetworkadapter**](ivmvirtualmachine-addnetworkadapter.md) und [**ivmvirtualmachine:: removenetworkadapter**](ivmvirtualmachine-removenetworkadapter.md)hinzugefügt und entfernt werden. Sie können auch ein **ivmnetworkadapter** -Objekt aus der [**ivmnetworkadaptercollection**](ivmnetworkadaptercollection.md) -Sammlung abrufen, die von den Eigenschaften [**ivmvirtualmachine:: NetworkAdapters**](ivmvirtualmachine-networkadapters.md) oder [**ivmvirtualnetwork:: NetworkAdapters**](ivmvirtualnetwork-networkadapters.md) zurückgegeben wurde.
+Dient als Schnittstelle zu einer virtuellen Netzwerkschnittstellenkarte (NIC). Sie wird verwendet, um einzurichten, wie ein virtueller Computer vernetzt wird. Netzwerkschnittstellenkarten können mithilfe von [**IVMVirtualMachine::AddNetworkAdapter**](ivmvirtualmachine-addnetworkadapter.md) und [**IVMVirtualMachine::RemoveNetworkAdapter**](ivmvirtualmachine-removenetworkadapter.md)hinzugefügt und entfernt werden. Sie können auch ein **IVMNetworkAdapter-Objekt** aus der [**IVMNetworkAdapterCollection-Auflistung**](ivmnetworkadaptercollection.md) abrufen, die von den Eigenschaften [**IVMVirtualMachine::NetworkAdapters**](ivmvirtualmachine-networkadapters.md) oder [**IVMVirtualNetwork::NetworkAdapters**](ivmvirtualnetwork-networkadapters.md) zurückgegeben wird.
 
 ## <a name="members"></a>Member
 
-Die **ivmnetworkadapter** -Schnittstelle erbt von der [**IDispatch**](/windows/win32/api/oaidl/nn-oaidl-idispatch) -Schnittstelle. **Ivmnetworkadapter** verfügt auch über die folgenden Typen von Membern:
+Die **IVMNetworkAdapter-Schnittstelle** erbt von der [**IDispatch-Schnittstelle.**](/windows/win32/api/oaidl/nn-oaidl-idispatch) **IVMNetworkAdapter** verfügt auch über diese Typen von Membern:
 
 -   [Methoden](#methods)
 -   [Eigenschaften](#properties)
 
 ### <a name="methods"></a>Methoden
 
-Die **ivmnetworkadapter** -Schnittstelle verfügt über diese Methoden.
+Die **IVMNetworkAdapter-Schnittstelle** verfügt über diese Methoden.
 
 
 
 | Methode                                                                         | BESCHREIBUNG                                                                 |
 |:-------------------------------------------------------------------------------|:----------------------------------------------------------------------------|
-| [**\_id**](ivmnetworkadapter--id.md)                                          | Ruft den internen Bezeichner dieser Netzwerkschnittstelle ab.<br/>     |
-| [**Attachanvirtualnetwork**](ivmnetworkadapter-attachtovirtualnetwork.md)     | Fügt die Netzwerkschnittstelle an das angegebene virtuelle Netzwerk an.<br/> |
-| [**Detachfromvirtualnetwork**](ivmnetworkadapter-detachfromvirtualnetwork.md) | Trennt die Netzwerkschnittstelle von Ihrem virtuellen Netzwerk.<br/>         |
+| [**\_Id**](ivmnetworkadapter--id.md)                                          | Ruft den internen Bezeichner dieser Netzwerkschnittstelle ab.<br/>     |
+| [**AttachToVirtualNetwork**](ivmnetworkadapter-attachtovirtualnetwork.md)     | Fügt die Netzwerkschnittstelle an das angegebene virtuelle Netzwerk an.<br/> |
+| [**DetachFromVirtualNetwork**](ivmnetworkadapter-detachfromvirtualnetwork.md) | Trennt die Netzwerkschnittstelle von ihrem virtuellen Netzwerk.<br/>         |
 
 
 
@@ -53,39 +53,39 @@ Die **ivmnetworkadapter** -Schnittstelle verfügt über diese Methoden.
 
 ### <a name="properties"></a>Eigenschaften
 
-Die **ivmnetworkadapter** -Schnittstelle verfügt über diese Eigenschaften.
+Die **IVMNetworkAdapter-Schnittstelle** verfügt über diese Eigenschaften.
 
 
 
 | Eigenschaft                                                                                  | Zugriffstyp           | BESCHREIBUNG                                                                 |
 |:------------------------------------------------------------------------------------------|:----------------------|:----------------------------------------------------------------------------|
-| [**Ethernetaddress**](ivmnetworkadapter-ethernetaddress.md)<br/>                   | Lesen/Schreiben<br/> | Die Ethernet-Adresse (Mac-Adresse) der Netzwerkschnittstelle.<br/>             |
-| [**Isethernetaddressdynamic**](ivmnetworkadapter-isethernetaddressdynamic.md)<br/> | Lesen/Schreiben<br/> | Gibt an, ob die Ethernet-Adresse dynamisch generiert wird.<br/> |
+| [**EthernetAddress**](ivmnetworkadapter-ethernetaddress.md)<br/>                   | Lesen/Schreiben<br/> | Die Ethernet-Adresse (MAC) der Netzwerkschnittstelle.<br/>             |
+| [**IsEthernetAddressDynamic**](ivmnetworkadapter-isethernetaddressdynamic.md)<br/> | Lesen/Schreiben<br/> | Gibt an, ob die Ethernet-Adresse dynamisch generiert wird.<br/> |
 | [**VirtualMachine**](ivmnetworkadapter-virtualmachine.md)<br/>                     | Schreibgeschützt<br/>  | Der virtuelle Computer, der dieser Netzwerkschnittstelle zugeordnet ist.<br/>      |
-| [**VirtualNetwork**](ivmnetworkadapter-virtualnetwork.md)<br/>                     | Schreibgeschützt<br/>  | Das virtuelle Netzwerk, an das die Netzwerkschnittstelle angefügt wird.<br/>  |
+| [**VirtualNetwork**](ivmnetworkadapter-virtualnetwork.md)<br/>                     | Schreibgeschützt<br/>  | Das virtuelle Netzwerk, an das die Netzwerkschnittstelle angefügt ist.<br/>  |
 
 
 
  
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Die standardethernet-Adresse für eine Netzwerkschnittstelle ist "00-00-00-00-00-00", die von den meisten Betriebssystemen als ungültige Ethernet-Adresse angesehen wird. Wenn [**isethernetaddressdynamic**](ivmnetworkadapter-isethernetaddressdynamic.md) auf **false** festgelegt ist, muss [**ethernetaddress**](ivmnetworkadapter-ethernetaddress.md) mit einer gültigen Ethernet-Netzwerkadresse initialisiert werden.
+Die Standard-Ethernet-Adresse für eine Netzwerkschnittstelle ist "00-00-00-00-00-00", was von den meisten Betriebssystemen als ungültige Ethernet-Adresse angesehen wird. Wenn [**IsEthernetAddressDynamic**](ivmnetworkadapter-isethernetaddressdynamic.md) auf **FALSE** festgelegt ist, muss [**EthernetAddress**](ivmnetworkadapter-ethernetaddress.md) mit einer gültigen Ethernet-Netzwerkadresse initialisiert werden.
 
-In den folgenden Prozeduren wird erläutert, wie die **ivmnetworkadapter** -Schnittstelle verwendet wird.
+In den folgenden Verfahren wird die Verwendung der **IVMNetworkAdapter-Schnittstelle** erläutert.
 
 **So fügen Sie eine virtuelle NIC an eine Host-NIC an**
 
--   Virtuelle (Guest) NICs sind nicht direkt an eine Host-NIC angefügt. Stattdessen wird die virtuelle NIC an ein virtuelles Netzwerk angefügt, das mit einer Host-NIC verbunden ist. Weitere Informationen zum Konfigurieren virtueller Netzwerke finden Sie unter [**ivmvirtualnetwork**](ivmvirtualnetwork.md). Verwenden Sie die [**attachdevirtualnetwork**](ivmnetworkadapter-attachtovirtualnetwork.md) -Methode, um die virtuelle NIC an ein virtuelles Netzwerk anzufügen.
+-   Virtuelle NICs (Gast-NICs) werden nicht direkt an eine Host-NIC angefügt. Stattdessen wird die virtuelle NIC an ein virtuelles Netzwerk angefügt, das an eine Host-NIC angefügt ist. Weitere Informationen zum Konfigurieren virtueller Netzwerke finden Sie unter [**IVMVirtualNetwork**](ivmvirtualnetwork.md). Um die virtuelle NIC an ein virtuelles Netzwerk anzufügen, verwenden Sie die [**AttachToVirtualNetwork-Methode.**](ivmnetworkadapter-attachtovirtualnetwork.md)
 
 **So trennen Sie eine virtuelle NIC vom virtuellen Netzwerk**
 
--   Die Methode [**detachfromvirtualnetwork**](ivmnetworkadapter-detachfromvirtualnetwork.md) trennt die virtuelle NIC vom virtuellen Netzwerk. Nachdem diese Funktion aufgerufen wurde, gibt die [**VirtualNetwork**](ivmnetworkadapter-virtualnetwork.md) -Eigenschaft eine ungültige virtuelle Netzwerk-ID zurück.
+-   Die [**DetachFromVirtualNetwork-Methode**](ivmnetworkadapter-detachfromvirtualnetwork.md) trennt die virtuelle NIC vom virtuellen Netzwerk. Nach dem Aufruf dieser Funktion gibt die [**VirtualNetwork-Eigenschaft**](ivmnetworkadapter-virtualnetwork.md) eine ungültige ID des virtuellen Netzwerks zurück.
 
-**So entfernen Sie eine virtuelle NIC aus einer virtuellen Maschine, wenn Sie über das virtuelle NIC-Objekt verfügen**
+**So entfernen Sie eine virtuelle NIC von einem virtuellen Computer, wenn Sie über das virtuelle NIC-Objekt verfügen**
 
-1.  Holen Sie den virtuellen Computer, der der virtuellen NIC zugeordnet ist, mithilfe der [**virtualmachine**](ivmnetworkadapter-virtualmachine.md) -Eigenschaft ab.
-2.  Verwenden Sie das aktuelle-Objekt als Parameter für die [**ivmvirtualmachine:: removenetworkadapter**](ivmvirtualmachine-removenetworkadapter.md) -Methode.
+1.  Abrufen des virtuellen Computers, der der virtuellen NIC zugeordnet ist, mithilfe der [**VirtualMachine-Eigenschaft.**](ivmnetworkadapter-virtualmachine.md)
+2.  Verwenden Sie das aktuelle -Objekt als Parameter für die [**IVMVirtualMachine::RemoveNetworkAdapter-Methode.**](ivmvirtualmachine-removenetworkadapter.md)
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -93,12 +93,12 @@ In den folgenden Prozeduren wird erläutert, wie die **ivmnetworkadapter** -Schn
 
 | Anforderung | Wert |
 |-------------------------------------|-----------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows 7 \[ -Desktop-Apps\]<br/>                                                    |
+| Unterstützte Mindestversion (Client)<br/> | nur Windows 7 \[ Desktop-Apps\]<br/>                                                    |
 | Unterstützte Mindestversion (Server)<br/> | Nicht unterstützt<br/>                                                                     |
 | Ende des Supports (Client)<br/>    | Windows 7<br/>                                                                          |
-| Produkt<br/>                  | Windows Virtual PC<br/>                                                                 |
-| Header<br/>                   | <dl> <dt>Vpccominterfaces. h</dt> </dl> |
-| IID<br/>                      | IID \_ ivmnetworkadapter ist als e32e4165-22b8-4DC0-8d57-850171ae207a definiert.<br/>          |
+| Product (Produkt)<br/>                  | Windows Virtual PC<br/>                                                                 |
+| Header<br/>                   | <dl> <dt>VPCCOMInterfaces.h</dt> </dl> |
+| IID<br/>                      | IID \_ IVMNetworkAdapter ist als e32e4165-22b8-4dc0-8d57-850171ae207a definiert.<br/>          |
 
 
 

@@ -1,11 +1,11 @@
 ---
-title: Methode zum Abbrechen von iwmpcontrols
-description: Die Methode "beenden" beendet die Wiedergabe des Medien Elements. | Methode zum Abbrechen von iwmpcontrols
+title: IWMPControls stop-Methode
+description: Die stop-Methode beendet die Wiedergabe des Medienelements. | IWMPControls stop-Methode
 ms.assetid: 4be601af-6321-4115-a94d-cfc9228991cb
 keywords:
-- Windows-Media Player "Methode"
-- Methode "Methode Media Player", "iwmpcontrols"-Schnittstelle
-- Iwmpcontrols-Schnittstelle, Windows Media Player, Methode "Ende"
+- stop-Methode Windows Media Player
+- stop-Methode Windows Media Player , IWMPControls-Schnittstelle
+- IWMPControls-Schnittstelle Windows Media Player , stop-Methode
 topic_type:
 - apiref
 api_name:
@@ -16,16 +16,16 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: a73271098340ea0cf0a645472b5ef6333ae0f4b2
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 6f941ac90fa86cdd16dedf5349c0a6d614c57f49bc91009f5d62c56bb83144bd
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106371310"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118332075"
 ---
-# <a name="iwmpcontrolsstop-method"></a>Iwmpcontrols:: End-Methode
+# <a name="iwmpcontrolsstop-method"></a>IWMPControls::stop-Methode
 
-Die Methode " **Beenden** " beendet die Wiedergabe des Medien Elements.
+Die **stop-Methode** beendet die Wiedergabe des Medienelements.
 
 ## <a name="syntax"></a>Syntax
 
@@ -53,15 +53,15 @@ Diese Methode hat keine Parameter.
 
 Diese Methode gibt keinen Wert zurück.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Diese Methode bewirkt, dass Windows Media Player alle verwendeten Systemressourcen, z. b. das Audiogerät, freigibt. Das aktuelle Medien Element wird jedoch nicht freigegeben.
+Diese Methode bewirkt, dass Windows Media Player alle verwendeten Systemressourcen freigibt, z. B. das Audiogerät. Das aktuelle Medienelement wird jedoch nicht freigegeben.
 
-Wenn Windows Media Player beendet wird, wird die aktuelle Wiedergabe Position im Medien Element auf den Anfang des Elements zurückgesetzt. Wenn Sie anschließend **iwmpcontrols. Play** aufrufen, wird die Wiedergabe am Anfang des Medien Elements gestartet. Verwenden Sie die **iwmpcontrols. Pause** -Methode, um einen Wiedergabe Vorgang anzuhalten, ohne die aktuelle Position zu ändern.
+Wenn Windows Media Player beendet wird, wird die aktuelle Wiedergabeposition im Medienelement auf den Anfang des Elements zurückgesetzt. Anschließend startet der Aufruf von **IWMPControls.play** die Wiedergabe vom Anfang des Medienelements aus. Um einen Wiedergabevorgang anzuhalten, ohne die aktuelle Position zu ändern, verwenden Sie die **IWMPControls.pause-Methode.**
 
 ## <a name="examples"></a>Beispiele
 
-Im folgenden Beispiel wird die Option zum Abbrechen des aktuellen Medien Elements als Reaktion auf das Click-Ereignis einer Schalt **Fläche verwendet.** Das **AxWMPLib. AxWindowsMediaPlayer** -Objekt wird durch die Variable mit dem Namen "Player" dargestellt.
+Im folgenden Beispiel wird **stop** verwendet, um das aktuelle Medienelement als Reaktion auf das Click-Ereignis einer Schaltfläche zu beenden. Das **AxWMPLib.AxWindowsMediaPlayer-Objekt** wird durch die Variable player dargestellt.
 
 
 ```CSharp
@@ -108,29 +108,29 @@ End Sub
 
 | Anforderung | Wert |
 |----------------------|------------------------------------------------------------------------------------------------------------------------|
-| Version<br/>   | Windows Media Player 9-Serie oder höher<br/>                                                                      |
+| Version<br/>   | Windows Media Player 9er Serie oder höher<br/>                                                                      |
 | Namespace<br/> | **WMPLib**<br/>                                                                                                  |
 | Assembly<br/>  | <dl> <dt>Interop.WMPLib.dll (Interop.WMPLib.dll.dll)</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Iwmpcontrols-Schnittstelle (VB und c#)**](iwmpcontrols--vb-and-c.md)
+[**IWMPControls-Schnittstelle (VB und C#)**](iwmpcontrols--vb-and-c.md)
 </dt> <dt>
 
-[**Iwmpcontrols. Next (VB und c#)**](wmplibiwmpcontrols-iwmpcontrols-next--vb-and-c.md)
+[**IWMPControls.next (VB und C#)**](wmplibiwmpcontrols-iwmpcontrols-next--vb-and-c.md)
 </dt> <dt>
 
-[**Iwmpcontrols. Pause (VB und c#)**](wmplibiwmpcontrols-iwmpcontrols-pause--vb-and-c.md)
+[**IWMPControls.pause (VB und C#)**](wmplibiwmpcontrols-iwmpcontrols-pause--vb-and-c.md)
 </dt> <dt>
 
-[**Iwmpcontrols. Play (VB und c#)**](wmplibiwmpcontrols-iwmpcontrols-play--vb-and-c.md)
+[**IWMPControls.play (VB und C#)**](wmplibiwmpcontrols-iwmpcontrols-play--vb-and-c.md)
 </dt> <dt>
 
-[**Iwmpcontrols. Previous (VB und c#)**](wmplibiwmpcontrols-iwmpcontrols-previous--vb-and-c.md)
+[**IWMPControls.previous (VB und C#)**](wmplibiwmpcontrols-iwmpcontrols-previous--vb-and-c.md)
 </dt> </dl>
 
  

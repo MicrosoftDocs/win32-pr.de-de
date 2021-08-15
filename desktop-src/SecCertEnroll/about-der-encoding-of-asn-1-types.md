@@ -1,47 +1,47 @@
 ---
-description: Wie die von der Zertifikatregistrierungs-API unterstützten ASN. 1-Datentypen mithilfe von Distinguished Encoding Rules (der) codiert werden.
+description: Wie die von der Zertifikatregistrierungs-API unterstützten ASN.1-Datentypen mithilfe von Distinguished Encoding Rules (DER) codiert werden.
 ms.assetid: 901dc977-79fe-4b02-9a0c-68474d6bbf31
-title: Der-Codierung von ASN. 1-Typen
+title: DER-Codierung von ASN.1-Typen
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 3f2c1c2e22b1f996c3c975a2eea93bc910225d02
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: d53e46fb7183aca410ce7712955608406c1611769315cb8dcd4ae29686afa702
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106347932"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118904459"
 ---
-# <a name="der-encoding-of-asn1-types"></a>Der-Codierung von ASN. 1-Typen
+# <a name="der-encoding-of-asn1-types"></a>DER-Codierung von ASN.1-Typen
 
-In den folgenden Themen wird erläutert, wie die von der Zertifikatregistrierungs-API unterstützten ASN. 1-Datentypen mithilfe von Distinguished Encoding Rules (der) codiert werden:
+In den folgenden Themen wird erläutert, wie die von der Zertifikatregistrierungs-API unterstützten ASN.1-Datentypen mithilfe von Distinguished Encoding Rules (DER) codiert werden:
 
--   [Bitzeichenfolge](about-bit-string.md)
--   [Booleschen](about-boolean.md)
+-   [BIT STRING](about-bit-string.md)
+-   [Boolean](about-boolean.md)
 -   [INTEGER](about-integer.md)
 -   [NULL](about-null.md)
--   [Objekt Bezeichner](about-object-identifier.md)
--   [Oktett-Zeichenfolge](about-octet-string.md)
--   [Bmpstring](about-bmpstring.md)
+-   [OBJEKTBEZEICHNER](about-object-identifier.md)
+-   [OKTETTZEICHENFOLGE](about-octet-string.md)
+-   [BMPString](about-bmpstring.md)
 -   [IA5String](about-ia5string.md)
 -   [PrintableString](about-printablestring.md)
 -   [UTF8String](about-utf8string.md)
--   [SEQUENCE](about-sequence.md)
+-   [Sequenz](about-sequence.md)
 -   [SET](about-set.md)
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
 <dl> <dt>
 
-[ASN. 1-Typsystem](about-asn-1-type-system.md)
+[ASN.1-Typsystem](about-asn-1-type-system.md)
 </dt> <dt>
 
-[DER-Übertragungs Syntax](about-der-transfer-syntax.md)
+[DER-Übertragungssyntax](about-der-transfer-syntax.md)
 </dt> <dt>
 
 [Distinguished Encoding Rules](distinguished-encoding-rules.md)
 </dt> <dt>
 
-[Einführung in die ASN. 1-Syntax und-Codierung](about-introduction-to-asn-1-syntax-and-encoding.md)
+[Einführung in die ASN.1-Syntax und -Codierung](about-introduction-to-asn-1-syntax-and-encoding.md)
 </dt> </dl>
 
  

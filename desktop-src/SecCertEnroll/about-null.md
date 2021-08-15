@@ -1,23 +1,23 @@
 ---
-description: Der NULL-Wert wird in eine TLV-Dreiecks Codierung codiert, die mit einem Tagwert von 0x05 beginnt, eine Länge von 0x00 und kein Wert Byte, wie in der folgenden Abbildung dargestellt.
+description: Der NULL-Wert wird in ein TLV-Triplet codiert, das mit dem Tagwert 0x05, einer Länge von 0x00 und ohne Value-Byte beginnt, wie in der folgenden Abbildung dargestellt.
 ms.assetid: f712f84a-c4d3-41bb-b151-62b0f86046af
 title: "NULL"
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: a6dec81fb2024899121ad4e2eb78aa54372a1b71
-ms.sourcegitcommit: de72a1294df274b0a71dc0fdc42d757e5f6df0f3
+ms.openlocfilehash: 9be83b4e57640fdee783214186a8a2135f3d7d14325a4b3235f80d729ef4b6e8
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/05/2021
-ms.locfileid: "106351857"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118903807"
 ---
 # <a name="null"></a>NULL
 
-Der **null** -Wert wird in eine TLV-Dreiecks Codierung codiert, die mit einem **Tagwert** von 0x05 beginnt, eine **Länge** von 0x00 und kein **Wert** Byte, wie in der folgenden Abbildung dargestellt.
+Der **NULL-Wert** wird in ein TLV-Triplet codiert, das mit  dem **Tagwert** 0x05, einer Länge von 0x00 und ohne **Value-Byte** beginnt, wie in der folgenden Abbildung dargestellt.
 
-![der-Codierung des NULL-Datentyps](images/der-tlv-null.png)
+![Der-Codierung des NULL-Datentyps](images/der-tlv-null.png)
 
-Die fünfte Zeile des folgenden Beispiels, die aus dem [PKCS \# 10-codierten ASN. 1](pkcs--10-encoded-asn-1.md) -Thema angepasst wurde, zeigt einen codierten **null** -Wert an. Das erste Byte ist 0x05, das zweite Byte ist 0x00. Es ist kein Inhalts Byte vorhanden.
+Die fünfte Zeile des folgenden Beispiels, angepasst aus dem [PKCS \# 10 Encoded ASN.1-Thema,](pkcs--10-encoded-asn-1.md) zeigt einen codierten **NULL-Wert.** Das erste Byte ist 0x05, und das zweite Byte 0x00. Es gibt kein Inhalts-Byte.
 
 ``` syntax
 30 81 9f                                ; SEQUENCE (9f Bytes)
@@ -46,10 +46,10 @@ Die fünfte Zeile des folgenden Beispiels, die aus dem [PKCS \# 10-codierten ASN
 
 <dl> <dt>
 
-[ASN. 1-Typsystem](about-asn-1-type-system.md)
+[ASN.1-Typsystem](about-asn-1-type-system.md)
 </dt> <dt>
 
-[Der-Codierung von ASN. 1-Typen](about-der-encoding-of-asn-1-types.md)
+[DER-Codierung von ASN.1-Typen](about-der-encoding-of-asn-1-types.md)
 </dt> </dl>
 
  

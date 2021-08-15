@@ -1,7 +1,7 @@
 ---
-description: 'Die Methode "frei-Eigenschaften" gibt Ressourcen frei, die von der ipropertysetter:: getrequiemethode zugeordnet werden. Rufen Sie diese Methode nach dem Aufrufen von gettial auf, und übergeben Sie dabei die von gettial zurückgegebenen Strukturen.'
+description: Die FreeProps-Methode gibt Ressourcen frei, die von der IPropertySetter::GetProps-Methode zugeordnet werden. Rufen Sie diese Methode nach dem Aufruf von GetProps auf, und übergeben Sie ihr die von GetProps zurückgegebenen Strukturen.
 ms.assetid: 5920d63d-d8eb-4fd5-b0d6-9d175e8e2c86
-title: 'Ipropertysetter:: frerequiproperemethode (qedit. h)'
+title: IPropertySetter::FreeProps-Methode (Qedit.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -14,21 +14,21 @@ api_type:
 api_location:
 - strmiids.lib
 - strmiids.dll
-ms.openlocfilehash: 3cc90d094d3213b5b68f61585296bcb21ebbf5a7
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 34529c7d78ad36a87eb441f624af8daf1167a77148758ff376feacc70250f18e
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106352875"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118397551"
 ---
-# <a name="ipropertysetterfreeprops-method"></a>Ipropertysetter:: frerequismethode
+# <a name="ipropertysetterfreeprops-method"></a>IPropertySetter::FreeProps-Methode
 
 > [!Note]  
-> \[Veraltet. Diese API kann aus zukünftigen Versionen von Windows entfernt werden.\]
+> \[Veraltet. Diese API kann aus zukünftigen Releases von Windows entfernt werden.\]
 
  
 
-Die-Methode gibt Ressourcen frei, `FreeProps` die von der [**ipropertysetter:: getrequiemethode**](ipropertysetter-getprops.md) zugeordnet werden. Rufen Sie diese Methode nach dem Aufrufen von **gettial** auf, und übergeben Sie dabei die von **gettial** zurückgegebenen Strukturen.
+Die `FreeProps` -Methode gibt von der [**IPropertySetter::GetProps-Methode zugeordnete**](ipropertysetter-getprops.md) Ressourcen frei. Rufen Sie diese Methode nach dem Aufruf von **GetProps** auf, und übergeben Sie ihr die von **GetProps zurückgegebenen** Strukturen.
 
 ## <a name="syntax"></a>Syntax
 
@@ -47,24 +47,24 @@ void FreeProps(
 
 <dl> <dt>
 
-*cparameams* \[ in\]
+*cParams* \[ In\]
 </dt> <dd>
 
-Die Anzahl der Elemente *im Array Array* .
+Die Anzahl der Elemente im *paParam-Array.*
 
 </dd> <dt>
 
-mit einem *paar* \[ in\]
+*paParam* \[ In\]
 </dt> <dd>
 
-Zeiger auf ein Array von [**Dexter- \_ param**](dexter-param.md) -Strukturen.
+Zeiger auf ein Array von [**DEXTER \_ PARAM-Strukturen.**](dexter-param.md)
 
 </dd> <dt>
 
-*Wert* \[ in\]
+*paValue* \[ In\]
 </dt> <dd>
 
-Zeiger auf ein Array von [**Dexter- \_ Wert**](dexter-value.md) Strukturen.
+Zeiger auf ein Array von [**DEXTER \_ VALUE-Strukturen.**](dexter-value.md)
 
 </dd> </dl>
 
@@ -72,15 +72,15 @@ Zeiger auf ein Array von [**Dexter- \_ Wert**](dexter-value.md) Strukturen.
 
 Diese Methode gibt keinen Wert zurück.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
 > [!Note]  
-> Die Header Datei "qedit. h" ist nicht mit Direct3D-Headern nach Version 7 kompatibel.
+> Die Headerdatei Qedit.h ist nicht mit Direct3D-Headern kompatibel, die höher als Version 7 sind.
 
  
 
 > [!Note]  
-> Zum Abrufen von "qedit. h" Laden Sie das [Microsoft Windows SDK Update für Windows Vista und .NET Framework 3,0](https://msdn.microsoft.com/windowsvista/bb980924.aspx)herunter. "Qedit. h" ist im Microsoft Windows SDK für Windows 7 und .NET Framework 3,5 Service Pack 1 nicht verfügbar.
+> Laden Sie zum Abrufen von Qedit.h das [Microsoft Windows SDK-Update für Windows Vista und .NET Framework 3.0](https://msdn.microsoft.com/windowsvista/bb980924.aspx)herunter. Qedit.h ist im Microsoft Windows SDK für Windows 7 und .NET Framework 3.5 Service Pack 1 nicht verfügbar.
 
  
 
@@ -90,19 +90,19 @@ Diese Methode gibt keinen Wert zurück.
 
 | Anforderung | Wert |
 |--------------------|-----------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>"Qedit. h"</dt> </dl>      |
-| Bibliothek<br/> | <dl> <dt>"" "" ". Lib"</dt> </dl> |
+| Header<br/>  | <dl> <dt>Qedit.h</dt> </dl>      |
+| Bibliothek<br/> | <dl> <dt>Strmiids.lib</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Ipropertysetter-Schnittstelle**](ipropertysetter.md)
+[**IPropertySetter-Schnittstelle**](ipropertysetter.md)
 </dt> <dt>
 
-[Fehler-und Erfolgs Codes](error-and-success-codes.md)
+[Fehler- und Erfolgscodes](error-and-success-codes.md)
 </dt> </dl>
 
  

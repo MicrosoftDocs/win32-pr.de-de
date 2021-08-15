@@ -1,26 +1,26 @@
-- name: Berührungs Treffer Tests
+- name: Touchtreffertests
   href: touch-hit-testing-portal.md
   items:
-    - name: Referenz zu Berührungs Treffer Tests
+    - name: Referenz zu Touchtreffertests
       href: touchhittest-reference.md
       items:
         - name: Konstanten
           href: constants.md
           items:
-            - name: Verhalten der Berührungs Treffer Tests
+            - name: Touch-Treffertestverhalten
               href: hit-testing-behaviors.md
-            - name: Treffer Treffer Test-Ergebnisse
+            - name: Treffertestergebnisse für Toucheingaben
               href: hit-testing-scores.md
         - name: Functions
           href: functions.md
           items:
-            - name: Evaluateproximitytopolygon
+            - name: EvaluateProximityToPolygon
               href: /windows/win32/api/winuser/nf-winuser-evaluateproximitytopolygon
-            - name: Evaluateproximitytor
+            - name: EvaluateProximityToRect
               href: /windows/win32/api/winuser/nf-winuser-evaluateproximitytorect
-            - name: Packtouchhittestingproximityevaluation
+            - name: PackTouchHitTestingProximityEvaluation
               href: /windows/win32/api/winuser/nf-winuser-packtouchhittestingproximityevaluation
-            - name: Registertouchhittestingwindow
+            - name: RegisterTouchHitTestingWindow
               href: /windows/win32/api/winuser/nf-winuser-registertouchhittestingwindow
         - name: Strukturen
           href: structures.md

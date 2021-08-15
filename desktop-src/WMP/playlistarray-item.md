@@ -1,11 +1,11 @@
 ---
-title: Playlistarray. Item-Methode
+title: PlaylistArray.item-Methode
 description: Die Item-Methode ruft die Wiedergabeliste am angegebenen Index ab.
 ms.assetid: cc851695-f9a2-4594-8bd3-3555c18bfa10
 keywords:
-- Element-Methoden Fenster Media Player
-- Item-Methode, Windows Media Player, playlistarray-Klasse
-- Playlistarray-Klasse, Windows Media Player, Element-Methode
+- Item-Windows Media Player
+- item-Windows Media Player , PlaylistArray-Klasse
+- PlaylistArray-Klasse Windows Media Player , Item-Methode
 topic_type:
 - apiref
 api_name:
@@ -16,16 +16,16 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: b6144f6e1cfda93be32060e8206a96b0da7568d6
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 4a45bb38250285563d9e4b7abcc1a4bfd1f7a0bea35b41b7e4cd801f8eff1d00
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106360931"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118335427"
 ---
-# <a name="playlistarrayitem-method"></a>Playlistarray. Item-Methode
+# <a name="playlistarrayitem-method"></a>PlaylistArray.item-Methode
 
-Die **Item** -Methode ruft die Wiedergabeliste am angegebenen Index ab.
+Die **Item-Methode** ruft die Wiedergabeliste am angegebenen Index ab.
 
 ## <a name="syntax"></a>Syntax
 
@@ -42,20 +42,20 @@ retVal = PlaylistArray.item(
 
 <dl> <dt>
 
-*Index* \[ in\]
+*Index* \[ In\]
 </dt> <dd>
 
-**Zahl** (**Long**), die den Index der abzurufenden Wiedergabeliste enthält.
+**Number** (**long**), die den Index der wiedergabeliste enthält, die abgerufen werden soll.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Diese Methode gibt ein **Wiedergabe** Listen Objekt zurück.
+Diese Methode gibt ein **Playlist-Objekt** zurück.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Um diese Methode verwenden zu können, ist Lesezugriff auf die Bibliothek erforderlich. Weitere Informationen finden Sie unter [Bibliotheks Zugriff](library-access.md).
+Um diese Methode verwenden zu können, ist Lesezugriff auf die Bibliothek erforderlich. Weitere Informationen finden Sie unter [Bibliothekszugriff.](library-access.md)
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -63,22 +63,22 @@ Um diese Methode verwenden zu können, ist Lesezugriff auf die Bibliothek erford
 
 | Anforderung | Wert |
 |--------------------|------------------------------------------------------------------------------------|
-| Version<br/> | Windows Media Player Version 7,0 oder höher.<br/>                              |
+| Version<br/> | Windows Media Player Version 7.0 oder höher.<br/>                              |
 | DLL<br/>     | <dl> <dt>Wmp.dll</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Playlistarray-Objekt**](playlistarray-object.md)
+[**PlaylistArray-Objekt**](playlistarray-object.md)
 </dt> <dt>
 
-[**Settings. mediaaccessrights**](settings-mediaaccessrights.md)
+[**Einstellungen.mediaAccessRights**](settings-mediaaccessrights.md)
 </dt> <dt>
 
-[**Settings. requestmediaaccessrights**](settings-requestmediaaccessrights.md)
+[**Einstellungen.requestMediaAccessRights**](settings-requestmediaaccessrights.md)
 </dt> </dl>
 
  

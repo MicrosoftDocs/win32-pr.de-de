@@ -1,19 +1,19 @@
 ---
-description: Der Datentyp der ASN. 1-Oktett-Zeichenfolge wird in eine TLV-Kette codiert, die mit einem tagbyte von 0x04 beginnt.
+description: Der ASN.1 OCTET STRING-Datentyp wird in ein TLV-Triplet codiert, das mit einem Tag-Byte 0x04.
 ms.assetid: 9d07a6c8-a15f-4030-838c-3063e315684f
-title: Oktett-Zeichenfolge
+title: OKTETT-ZEICHENFOLGE
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: ed2a042312a4415ea9554b7519404097287244f5
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 588547e5211efbe6b4b91a8a72f6644de0c7c4dcbacc570f0a1f272e7cc97962
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104485419"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118903744"
 ---
-# <a name="octet-string"></a>Oktett-Zeichenfolge
+# <a name="octet-string"></a>OKTETT-ZEICHENFOLGE
 
-Der Datentyp der ASN. 1- **Oktett-Zeichenfolge** wird in eine TLV-Kette codiert, die mit einem **tagbyte** von 0x04 beginnt. Die Datentypen der **Oktett-Zeichenfolge** und der [Bitzeichenfolge](about-bit-string.md) sind sehr ähnlich. Folglich werden die beiden Typen auf ähnliche Weise codiert, es sei denn, das nachfolgende Byte einer **Oktett-Zeichenfolge** darf keine nicht verwendeten Bits aufweisen. dem Inhalt müssen keine führenden Bytes hinzugefügt werden. Das folgende Beispiel, das aus dem Thema " [CMC-codiertes ASN. 1](cmc-encoded-asn-1.md) " angepasst wurde, zeigt, wie der Name einer Zertifikat Vorlage als Bytearray codiert wird.
+Der ASN.1 **OCTET STRING-Datentyp** wird in ein TLV-Triplet codiert, das mit einem **Tag-Byte** 0x04. Die **Datentypen OCTET STRING** und [BIT STRING](about-bit-string.md) sind sehr ähnlich. Daher werden die beiden Typen auf ähnliche Weise codiert, mit der Ausnahme, dass dem Inhalt keine führenden Bytes hinzugefügt werden müssen, da das nachführende Byte einer **OCTET-ZEICHENFOLGE** keine nicht verwendeten Bits enthalten darf. Das folgende Beispiel, das aus dem [THEMA CMC-codierte ASN.1](cmc-encoded-asn-1.md) angepasst wurde, zeigt, wie der Name einer Zertifikatvorlage als Bytearray codiert wird.
 
 ``` syntax
 30 17                                 ; SEQUENCE (17 Bytes)
@@ -23,7 +23,7 @@ Der Datentyp der ASN. 1- **Oktett-Zeichenfolge** wird in eine TLV-Kette codiert,
 |     1e 08 00 55 00 73 00 65  00 72  ;   ...U.s.e.r
 ```
 
-Wenn das Bytearray weniger als 128 Bytes enthält, benötigt das **Längen** Feld des TLV-Dreiecks nur ein Byte, um die Inhalts Länge anzugeben. Wenn Sie mehr als 127 Bytes hat, wird Bit 7 des **Längen** Felds auf 1 festgelegt, und Bits 6 bis 0 geben Sie die Anzahl zusätzlicher Bytes an, die zum Identifizieren der Inhalts Länge verwendet werden. Dies wird im folgenden Beispiel gezeigt, bei dem das High-Order-Bit des zweiten Bytes in der ersten Zeile auf 1 festgelegt ist und das Byte angibt, dass ein nach gestelltes **Längen** Byte vorliegt. Das dritte Byte gibt daher an, dass der Inhalt 0x80 Bytes lang ist.
+Wenn das Bytearray weniger als 128 Bytes enthält, benötigt das **Feld Length** des TLV-Triplets nur ein Byte, um die Inhaltslänge anzugeben. Wenn es sich um mehr als 127 Bytes handelt, wird Bit 7 des **Felds Length** auf 1 festgelegt, und die Bits 6 bis 0 geben die Anzahl zusätzlicher Bytes an, die zum Identifizieren der Inhaltslänge verwendet werden. Dies wird im folgenden Beispiel gezeigt, in dem das obere Bit des zweiten Byte in der ersten  Zeile auf 1 festgelegt ist und das Byte angibt, dass es ein nachfolgendes Length-Byte gibt. Das dritte Byte gibt daher an, dass der Inhalt 0x80 Bytes lang ist.
 
 ``` syntax
 04 81 80                       ; OCTET_STRING (80 Bytes)
@@ -49,10 +49,10 @@ Wenn das Bytearray weniger als 128 Bytes enthält, benötigt das **Längen** Fel
 
 <dl> <dt>
 
-[ASN. 1-Typsystem](about-asn-1-type-system.md)
+[ASN.1-Typsystem](about-asn-1-type-system.md)
 </dt> <dt>
 
-[Der-Codierung von ASN. 1-Typen](about-der-encoding-of-asn-1-types.md)
+[DER-Codierung von ASN.1-Typen](about-der-encoding-of-asn-1-types.md)
 </dt> </dl>
 
  

@@ -16,18 +16,18 @@ api_location: ''
 topic_type:
 - APIRef
 - kbSyntax
-ms.openlocfilehash: f6df58bc0765b5254645c45270f8145f5d10d422
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 72b713907924a9d14227e879cc4a6cae907a20c4a86dc4336c7d6f23ecf7c40e
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106347160"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118745105"
 ---
 # <a name="span-idwwan_profile_v4element_dataroamingpartnersspandataroamingpartners"></a><span id="WWAN_profile_v4.element_DataRoamingPartners"></span>DataRoamingPartners
 
 Gibt eine Liste der bevorzugten Netzwerkanbieter beim Roaming an.
 
-Weitere Informationen finden Sie in der Dokumentation für das v1 [**dataroamingpartners**](./schema-dataroamingpartners-mbnprofile-element.md) -Element.
+Weitere Informationen finden Sie in der Dokumentation zum [**DataRoamingPartners-Element**](./schema-dataroamingpartners-mbnprofile-element.md) v1.
 
 ## <a name="element-hierarchy"></a>Elementhierarchie
 
@@ -45,9 +45,9 @@ Weitere Informationen finden Sie in der Dokumentation für das v1 [**dataroaming
 </DataRoamingPartners>
 ```
 
-### <a name="key"></a>Schlüssel
+### <a name="key"></a>Key
 
-`+`   erforderlich (mindestens ein)
+`+`   erforderlich (mindestens eins)
 
 ## <a name="span-idattributes_and_elementsspanspan-idattributes_and_elementsspanspan-idattributes_and_elementsspanattributes-and-elements"></a><span id="Attributes_and_Elements"></span><span id="attributes_and_elements"></span><span id="ATTRIBUTES_AND_ELEMENTS"></span>Attribute und Elemente
 
@@ -72,7 +72,7 @@ Keine.
 <tr class="odd">
 <td><a href="element-provider.md">Anbieter</a></td>
 <td><p>Gibt einen bevorzugten Netzwerkanbieter in einer Liste von Anbietern an, die beim Roaming verwendet werden sollen.</p>
-<p>Der Wert dieses Elements ist eine Instanz des komplexen Typs v1 <a href="../mbn/schema-providertype-complextype.md"><strong>ProviderType</strong></a> .</p></td>
+<p>Der Wert dieses Elements ist eine Instanz des komplexen <a href="../mbn/schema-providertype-complextype.md"><strong>Typs v1 providerType.</strong></a></p></td>
 </tr>
 </tbody>
 </table>
@@ -89,14 +89,14 @@ Keine.
 <thead>
 <tr class="header">
 <th>Übergeordnetes Element</th>
-<th>BESCHREIBUNG</th>
+<th>Beschreibung</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
 <td><a href="element-mbnprofileext.md">MBNProfileExt</a></td>
-<td><p>Das <strong>mbnprofileext</strong> -Element ist eine Erweiterung des früheren mbnprofile-Elements. Es identifiziert ein mobiles Breitband Profil mit einem umfassenderen Satz von Optionen als das mbnprofile-Element.</p>
-<p>Es kann mehr als ein mbnprofileext-Element in einem Profil geben, das Profileinstellungen für einen bestimmten Satz von Betriebszuständen beschreibt. Verwenden Sie das untergeordnete <a href="element-profileconditionedon.md"><strong>profileconditionedon</strong></a> -Element von <strong>mbnprofileext</strong> , um anzugeben, welche Betriebsbedingungen ein bestimmtes Profil zum aktiven Profil machen.</p></td>
+<td><p>Das <strong>MBNProfileExt-Element</strong> ist eine Erweiterung des früheren MBNProfile-Elements. Es identifiziert ein Mobile Broadband-Profil mit einem vielfältigeren Satz von Optionen als das MBNProfile-Element.</p>
+<p>Es kann mehrere MbnProfileExt-Elemente in einem Profil geben, die Profileinstellungen für einen bestimmten Satz von Betriebsbedingungen beschreiben. Verwenden Sie <a href="element-profileconditionedon.md"><strong>das untergeordnete ProfileConditionedOn-Element</strong></a> von <strong>MBNProfileExt,</strong> um anzugeben, welche Betriebsbedingungen ein bestimmtes Profil zum aktiven Profil machen.</p></td>
 </tr>
 </tbody>
 </table>

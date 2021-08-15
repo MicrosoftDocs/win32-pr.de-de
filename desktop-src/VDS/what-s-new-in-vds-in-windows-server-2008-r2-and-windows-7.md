@@ -4,18 +4,18 @@ ms.assetid: 4ab37529-8d56-47a3-ad3d-0197cabd4f87
 title: Neues in VDS in Windows Server 2008 R2 und Windows 7
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 9050b157e9ce3c78550fdcffbd688988b7eacf90
-ms.sourcegitcommit: b32433cc0394159c7263809ae67615ab5792d40d
+ms.openlocfilehash: b7461a4389a8b276bba33ceacb812f0990344e32a47d848f5d5bce461c3f89f8
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/30/2021
-ms.locfileid: "113119655"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118347521"
 ---
 # <a name="whats-new-in-vds-in-windows-server-2008-r2-and-windows-7"></a>Neues in VDS in Windows Server 2008 R2 und Windows 7
 
-\[Ab Windows 8 Windows Server 2012 wird die COM-Schnittstelle des [Virtual Disk Service](virtual-disk-service-portal.md) durch die Windows Storage-Schnittstelle [Verwaltungs-API.](/previous-versions/windows/desktop/stormgmt/windows-storage-management-api-portal)\]
+\[Ab Windows 8 und Windows Server 2012 wird die COM-Schnittstelle des [Virtual Disk Service](virtual-disk-service-portal.md) durch die [Windows Storage Verwaltungs-API](/previous-versions/windows/desktop/stormgmt/windows-storage-management-api-portal)ersetzt.\]
 
-Windows Server 2008 R2 und Windows 7 führen die folgenden Änderungen am Dienst für virtuelle Datenträger (Virtual Disk Service, VDS) ein:
+Windows Server 2008 R2 und Windows 7 führen die folgenden Änderungen am Virtual Disk Service (VDS) ein:
 
 - [Neue VDS-Schnittstellen](#new-vds-interfaces)
 - [Neue VDS-Enumerationen](#new-vds-enumerations)
@@ -77,7 +77,7 @@ Windows Server 2008 R2 und Windows 7 führen die folgenden Änderungen am Dienst
 
 ## <a name="modifications-to-existing-vds-enumerations"></a>Änderungen an vorhandenen VDS-Enumerationen
 
-[**VDS_ASYNC_OUTPUT_TYPE**](/windows/desktop/api/Vds/ne-vds-vds_async_output_type) enumeration added values (Enumerationserumeration hinzugefügte Werte):
+[**VDS_ASYNC_OUTPUT_TYPE**](/windows/desktop/api/Vds/ne-vds-vds_async_output_type) Hinzugefügte Enumerationswerte:
 
  **VDS_ASYNCOUT_CREATE_VDISK**  
 **VDS_ASYNCOUT_ATTACH_VDISK**  
@@ -97,7 +97,7 @@ Windows Server 2008 R2 und Windows 7 führen die folgenden Änderungen am Dienst
 **VDS_DF_CURRENT_READ_ONLY**  
 
 
-[**VDS_DRIVE_FLAG**](/windows/desktop/api/Vds/ne-vds-vds_drive_flag) enumeration added values (Enumerationserumeration hinzugefügte Werte):
+[**VDS_DRIVE_FLAG**](/windows/desktop/api/Vds/ne-vds-vds_drive_flag) Hinzugefügte Enumerationswerte:
 
 **VDS_DRF_ASSIGNED**  
 **VDS_DRF_UNASSIGNED**  
@@ -115,20 +115,20 @@ Windows Server 2008 R2 und Windows 7 führen die folgenden Änderungen am Dienst
 **VDS_FST_EXFAT**  
 
 
-[**VDS_HEALTH**](/windows/desktop/api/Vds/ne-vds-vds_health) enumeration added values (Enumerationserumeration hinzugefügte Werte):
+[**VDS_HEALTH**](/windows/desktop/api/Vds/ne-vds-vds_health) Hinzugefügte Enumerationswerte:
 
 **VDS_H_REPLACED**  
 **VDS_H_PENDING_FAILURE**  
 **VDS_H_DEGRADED**  
 
 
-[**VDS_HWPROVIDER_TYPE**](/windows/desktop/api/Vds/ne-vds-vds_hwprovider_type) enumeration added values (Enumerationserumeration hinzugefügte Werte):
+[**VDS_HWPROVIDER_TYPE**](/windows/desktop/api/Vds/ne-vds-vds_hwprovider_type) Hinzugefügte Enumerationswerte:
 
 **VDS_HWT_SAS**  
 **VDS_HWT_HYBRID**  
 
 
-[**VDS_LUN_FLAG**](/windows/desktop/api/Vds/ne-vds-vds_lun_flag) Enumerationserumeration hinzugefügte Werte:
+[**VDS_LUN_FLAG**](/windows/desktop/api/Vds/ne-vds-vds_lun_flag) Hinzugefügte Enumerationswerte:
 
 **VDS_LF_READ_CACHE_ENABLED**  
 **VDS_LF_WRITE_CACHE_ENABLED**  
@@ -137,7 +137,7 @@ Windows Server 2008 R2 und Windows 7 führen die folgenden Änderungen am Dienst
 **VDS_LF_SNAPSHOT**  
 
 
-[**VDS_LUN_PLEX_TYPE**](/windows/desktop/api/Vds/ne-vds-vds_lun_plex_type) enumeration added values (Enumerationserumeration hinzugefügte Werte):
+[**VDS_LUN_PLEX_TYPE**](/windows/desktop/api/Vds/ne-vds-vds_lun_plex_type) Hinzugefügte Enumerationswerte:
 
 **VDS_LPT_RAID2**  
 **VDS_LPT_RAID3**  
@@ -154,7 +154,7 @@ Windows Server 2008 R2 und Windows 7 führen die folgenden Änderungen am Dienst
 **VDS_LPT_RAID60**  
 
 
-[**VDS_LUN_TYPE**](/windows/desktop/api/Vds/ne-vds-vds_lun_type) enumeration added values (Enumerationserumeration hinzugefügte Werte):
+[**VDS_LUN_TYPE**](/windows/desktop/api/Vds/ne-vds-vds_lun_type) Hinzugefügte Enumerationswerte:
 
 **VDS_LT_RAID2**  
 **VDS_LT_RAID3**  
@@ -174,7 +174,7 @@ Windows Server 2008 R2 und Windows 7 führen die folgenden Änderungen am Dienst
 **VDS_LT_RAID61**  
 
 
-[**VDS_OBJECT_TYPE**](/windows/desktop/api/Vds/ne-vds-vds_object_type) Hinzugefügte Enumerationswerte:
+[**VDS_OBJECT_TYPE**](/windows/desktop/api/Vds/ne-vds-vds_object_type) Enumerations-Mehrwerte:
 
 **VDS_OT_STORAGE_POOL**  
 **VDS_OT_VDISK**  
@@ -186,25 +186,25 @@ Windows Server 2008 R2 und Windows 7 führen die folgenden Änderungen am Dienst
 **VDS_DRS_REMOVED**  
 
 
-[**VDS_PROVIDER_FLAG**](/windows/desktop/api/Vds/ne-vds-vds_provider_flag) Hinzugefügte Enumerationswerte:
+[**VDS_PROVIDER_FLAG**](/windows/desktop/api/Vds/ne-vds-vds_provider_flag) enumeration added values (Enumerationserumeration hinzugefügte Werte):
 
 **VDS_PF_SUPPORT_MIRROR**  
 **VDS_PF_SUPPORT_RAID5**  
 
 
-[**VDS_PROVIDER_TYPE**](/windows/desktop/api/Vds/ne-vds-vds_provider_type) Hinzugefügte Enumerationswerte:
+[**VDS_PROVIDER_TYPE**](/windows/desktop/api/Vds/ne-vds-vds_provider_type) Enumerations-Mehrwerte:
 
 **VDS_PT_VIRTUALDISK**  
 **VDS_PT_MAX**  
 
 
-[**VDS_SERVICE_FLAG**](/windows/desktop/api/Vds/ne-vds-vds_service_flag) Hinzugefügte Enumerationswerte:
+[**VDS_SERVICE_FLAG**](/windows/desktop/api/Vds/ne-vds-vds_service_flag) Enumerations-Mehrwerte:
 
 **VDS_SVF_SUPPORT_MIRROR**  
 **VDS_SVF_SUPPORT_RAID5**  
 
 
-[**VDS_SUB_SYSTEM_FLAG**](/windows/desktop/api/Vds/ne-vds-vds_sub_system_flag) Hinzugefügte Enumerationswerte:
+[**VDS_SUB_SYSTEM_FLAG**](/windows/desktop/api/Vds/ne-vds-vds_sub_system_flag) Enumerations-Mehrwerte:
 
 **VDS_SF_SUPPORTS_LUN_NUMBER**  
 **VDS_SF_SUPPORTS_MIRRORED_CACHE**  
@@ -219,7 +219,7 @@ Windows Server 2008 R2 und Windows 7 führen die folgenden Änderungen am Dienst
 **VDS_TS_RESTRIPING**  
 
 
-[**VDS_VERSION_SUPPORT_FLAG**](/windows/desktop/api/Vds/ne-vds-vds_version_support_flag) Hinzugefügte Enumerationswerte:
+[**VDS_VERSION_SUPPORT_FLAG**](/windows/desktop/api/Vds/ne-vds-vds_version_support_flag) Enumerations-Mehrwerte:
 
 **VDS_VSF_2_0**  
 **VDS_VSF_2_1**  
@@ -239,12 +239,12 @@ VDS_NF_CONTROLLER_MODIFY
 VDS_NF_CONTROLLER_REMOVED  
 
 
-[**VDS_DRIVE_NOTIFICATION-Struktur**](/windows/desktop/api/Vds/ns-vds-vds_drive_notification) wurde **ein ulEvent-Wert** hinzugefügt:
+[**VDS_DRIVE_NOTIFICATION-Struktur**](/windows/desktop/api/Vds/ns-vds-vds_drive_notification) wurde **ulEvent-Wert** hinzugefügt:
 
 VDS_NF_DRIVE_REMOVED  
 
 
-[**VDS_PORT_NOTIFICATION**](/windows/desktop/api/Vds/ns-vds-vds_port_notification) Struktur wurden **ulEvent-Werte** hinzugefügt:
+[**VDS_PORT_NOTIFICATION-Struktur**](/windows/desktop/api/Vds/ns-vds-vds_port_notification) wurden **ulEvent-Werte** hinzugefügt:
 
 VDS_NF_PORT_MODIFY  
 VDS_NF_PORT_REMOVED  

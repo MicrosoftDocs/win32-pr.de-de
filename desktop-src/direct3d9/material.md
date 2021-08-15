@@ -1,19 +1,19 @@
 ---
-description: Definiert eine grundlegende Material Farbe, die entweder auf ein ganzes Mesh oder auf die einzelnen Flächen eines Netzes angewendet werden kann. Die Stromversorgung ist der Glanz Exponent des Materials.
+description: Definiert eine grundlegende Materialfarbe, die entweder auf ein vollständiges Gitternetz oder auf die einzelnen Gesichter eines Gitters angewendet werden kann. Die Potenz ist der Glanz exponent des Materials.
 ms.assetid: vs|directx_sdk|~\material.htm
 title: Material
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 54c13d201152350a8a61950bb609f73cbdb2a3aa
-ms.sourcegitcommit: a47bd86f517de76374e4fff33cfeb613eb259a7e
+ms.openlocfilehash: 53d4dcb1cef7597ff7c02d16f1db311287511166c9259c89a0ea60a0c49fb7bf
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/06/2021
-ms.locfileid: "104480702"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118798967"
 ---
 # <a name="material"></a>Material
 
-Definiert eine grundlegende Material Farbe, die entweder auf ein ganzes Mesh oder auf die einzelnen Flächen eines Netzes angewendet werden kann. Die Stromversorgung ist der Glanz Exponent des Materials.
+Definiert eine grundlegende Materialfarbe, die entweder auf ein vollständiges Gitternetz oder auf die einzelnen Gesichter eines Gitters angewendet werden kann. Die Potenz ist der Glanz exponent des Materials.
 
 ``` syntax
 template Material
@@ -29,19 +29,19 @@ template Material
 
 Hierbei gilt:
 
--   fakecolor-Vordergrundfarbe. Eine colorrgba-Vorlage. Siehe [**colorrgba**](colorrgba.md).
--   Glanz Farben-Exponent für Energie Material.
--   SpecularColor-Material Glanz Farbe. Eine colorrgb-Vorlage. Siehe [**colorrgb**](colorrgb.md).
--   emissivecolor-Material selbst leuchtendes Color. Eine colorrgb-Vorlage. Siehe [**colorrgb**](colorrgb.md).
+-   faceColor: Gesichtsfarbe. Eine ColorRGBA-Vorlage. Weitere Informationen finden Sie unter [**ColorRGBA**](colorrgba.md).
+-   power : Material specular color exponent.
+-   specularColor: Material specular color. Eine ColorRGB-Vorlage. Weitere Informationen finden Sie unter [**ColorRGB**](colorrgb.md).
+-   emissiveColor: Materialemissive Farbe. Eine ColorRGB-Vorlage. Weitere Informationen finden Sie unter [**ColorRGB**](colorrgb.md).
 
 > [!Note]  
-> Die Umgebungs Farbe erfordert eine Alpha Komponente.
+> Die Umgebungsfarbe erfordert eine Alphakomponente.
 
  
 
-[**Texturefilename**](texturefilename.md) ist ein optionales Datenobjekt. Wenn dieses Objekt nicht vorhanden ist, wird das Gesicht nicht texturiert.
+[**TextureFilename**](texturefilename.md) ist ein optionales Datenobjekt. Wenn dieses Objekt nicht vorhanden ist, wird das Gesicht nicht textiert.
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 

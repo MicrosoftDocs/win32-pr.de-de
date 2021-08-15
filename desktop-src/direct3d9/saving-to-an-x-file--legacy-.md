@@ -1,31 +1,31 @@
 ---
-description: Verwenden Sie das folgende Verfahren in Legacy Anwendungen, um x-Datei Vorlagen und-Daten in einer x-Datei zu speichern.
+description: Verwenden Sie das folgende Verfahren in älteren Anwendungen, um X-Dateivorlagen und -Daten in einer X-Datei zu speichern.
 ms.assetid: 5401b381-3599-465a-b41b-e63b7372fc0e
 title: Speichern in einer X-Datei (Legacy) (Direct3D 9)
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 467f824c8e3ab9cd360a93d3f69fd1a2352548ae
-ms.sourcegitcommit: a47bd86f517de76374e4fff33cfeb613eb259a7e
+ms.openlocfilehash: 03070b25c8839ddd17ab698a4f017822004d027d978b5c4ce589491f2e8fb8f3
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/06/2021
-ms.locfileid: "104341698"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118797782"
 ---
 # <a name="saving-to-an-x-file-legacy-direct3d-9"></a>Speichern in einer X-Datei (Legacy) (Direct3D 9)
 
-Verwenden Sie das folgende Verfahren in Legacy Anwendungen, um x-Datei Vorlagen und-Daten in einer x-Datei zu speichern.
+Verwenden Sie das folgende Verfahren in älteren Anwendungen, um X-Dateivorlagen und -Daten in einer X-Datei zu speichern.
 
-1.  Verwenden Sie die Funktion [**directxfilecreate**](directxfilecreate.md) zum Erstellen eines [**idirectxfile**](idirectxfile.md) -Objekts.
-2.  Verwenden Sie die [**idirectxfile:: registertemplates**](idirectxfile--registertemplates.md) -Methode, um das DirectX-Dateisystem über alle Vorlagen zu informieren, die Sie verwenden werden.
-3.  Verwenden Sie die [**idirectxfile:: kreatesaveobject**](idirectxfile--createsaveobject.md) -Methode, um ein [**idirectxfilesaveobject**](idirectxfilesaveobject.md) -Objekt zu erstellen.
-4.  Verwenden Sie die [**idirectxfilesaveobject:: savetemplates**](idirectxfilesaveobject--savetemplates.md) -Methode, um Vorlagen zu speichern, wenn gewünscht.
-5.  Durchlaufen Sie die zu speichernden Objekte. Führen Sie für jedes Objekt der obersten Ebene die folgenden Schritte aus.
-    -   Verwenden Sie die [**idirectxfilesaveobject:: kreatedataobject**](idirectxfilesaveobject--createdataobject.md) -Methode, um ein [**idirectxfiledata**](idirectxfiledata.md) -Objekt als Objekt der obersten Ebene in der Datei zu erstellen. Wenn das Datenobjekt der obersten Ebene optionale untergeordnete Objekte aufweist, fügen Sie Sie dem-Objekt hinzu, indem Sie die entsprechende-Methode aus dem nächsten Schritt verwenden.
-    -   Jedes [**idirectxfiledata**](idirectxfiledata.md) -Objekt kann optionale untergeordnete Objekte haben, wenn seine Vorlage dies zulässt. Bei den untergeordneten Objekten kann es sich um einen beliebigen der drei Objekttypen handeln: **idirectxfiledata**, [**idirectxfiledatareferenzierung**](idirectxfiledatareference.md)oder [**idirectxfilebinary**](idirectxfilebinary.md). Durchlaufen Sie die Objekte, die Sie speichern müssen, und fügen Sie jedes optionale untergeordnete Element der Objektliste entsprechend dem Typ hinzu, wie in den folgenden Schritten veranschaulicht. Wenn der Objekttyp "Daten" ist, rufen Sie dann die [**idirectxfilesaveobject:: kreatedataobject**](idirectxfilesaveobject--createdataobject.md) -Methode auf, um ein **idirectxfiledata** -Objekt zu erstellen, und rufen Sie dann die [**idirectxfiledata:: adddataobject**](idirectxfiledata--adddataobject.md) -Methode auf, um Sie als untergeordnetes Element des Objekts hinzuzufügen Wenn der Objekttyp Daten Verweis ist, rufen Sie die [**idirectxfiledata:: adddatareferenzierungsmethode**](idirectxfiledata--adddatareference.md) auf, um das Daten Verweis Objekt als untergeordnetes Element des-Objekts zu erstellen und hinzuzufügen. Wenn der Objekttyp binär ist, rufen Sie die [**idirectxfiledata:: addbinaryobject**](idirectxfiledata--addbinaryobject.md) -Methode auf, um das binäre Objekt als untergeordnetes Element des-Objekts zu erstellen und hinzuzufügen.
-    -   Ruft die [**idirectxfilesaveobject:: SaveData**](idirectxfilesaveobject--savedata.md) -Methode auf, um das Datenobjekt und seine untergeordneten Elemente zu speichern.
-    -   Geben Sie das [**idirectxfiledata**](idirectxfiledata.md) -Objekt frei.
-6.  Geben Sie das [**idirectxfilesaveobject**](idirectxfilesaveobject.md) -Objekt frei.
-7.  Geben Sie das [**idirectxfile**](idirectxfile.md) -Objekt frei.
+1.  Verwenden Sie die [**DirectXFileCreate-Funktion,**](directxfilecreate.md) um ein [**IDirectXFile-Objekt zu**](idirectxfile.md) erstellen.
+2.  Verwenden Sie [**die IDirectXFile::RegisterTemplates-Methode,**](idirectxfile--registertemplates.md) um das DirectX-Dateisystem über alle Vorlagen zu informieren, die Sie verwenden werden.
+3.  Verwenden Sie [**die IDirectXFile::CreateSaveObject-Methode,**](idirectxfile--createsaveobject.md) um ein [**IDirectXFileSaveObject-Objekt zu**](idirectxfilesaveobject.md) erstellen.
+4.  Verwenden Sie [**die IDirectXFileSaveObject::SaveTemplates-Methode,**](idirectxfilesaveobject--savetemplates.md) um Vorlagen bei Wunsch zu speichern.
+5.  Schleife durch die zu speichernden Objekte. Führen Sie für jedes Objekt der obersten Ebene die folgenden Schritte aus.
+    -   Verwenden Sie [**die IDirectXFileSaveObject::CreateDataObject-Methode,**](idirectxfilesaveobject--createdataobject.md) um ein [**IDirectXFileData-Objekt**](idirectxfiledata.md) als Objekt der obersten Ebene in der Datei zu erstellen. Wenn das Datenobjekt der obersten Ebene über optionale untergeordnete Objekte verfügt, fügen Sie sie dem -Objekt hinzu, indem Sie die entsprechende Methode aus dem nächsten Schritt verwenden.
+    -   Jedes [**IDirectXFileData-Objekt**](idirectxfiledata.md) kann optionale untergeordnete Objekte enthalten, wenn die Vorlage dies zulässt. Die untergeordneten Objekte können einen der drei Objekttypen sein: **IDirectXFileData**, [**IDirectXFileDataReference**](idirectxfiledatareference.md)oder [**IDirectXFileBinary**](idirectxfilebinary.md). Führen Sie eine Schleife durch die Objekte durch, die Sie speichern müssen, und fügen Sie jeder optionalen untergeordneten Member der Objektliste auf die weise hinzu, die ihrem Typ entsprechend ist, wie in den folgenden Schritten veranschaulicht. Wenn der Objekttyp Data ist, rufen Sie dann die [**IDirectXFileSaveObject::CreateDataObject-Methode**](idirectxfilesaveobject--createdataobject.md) auf, um ein **IDirectXFileData-Objekt** zu erstellen, und rufen Sie dann die [**IDirectXFileData::AddDataObject-Methode**](idirectxfiledata--adddataobject.md) auf, um es als untergeordnetes Element des Objekts hinzuzufügen. Wenn der Objekttyp Datenverweis ist, rufen Sie die [**IDirectXFileData::AddDataReference-Methode**](idirectxfiledata--adddatareference.md) auf, um das Datenverweisobjekt als untergeordnetes Element des Objekts zu erstellen und hinzuzufügen. Wenn der Objekttyp "Binary" ist, rufen Sie die [**IDirectXFileData::AddBinaryObject-Methode**](idirectxfiledata--addbinaryobject.md) auf, um das binäre Objekt als untergeordnetes Element des Objekts zu erstellen und hinzuzufügen.
+    -   Rufen Sie [**die IDirectXFileSaveObject::SaveData-Methode**](idirectxfilesaveobject--savedata.md) auf, um das Datenobjekt und seine unteren Daten zu speichern.
+    -   Geben Sie das [**IDirectXFileData-Objekt**](idirectxfiledata.md) frei.
+6.  Geben Sie das [**IDirectXFileSaveObject-Objekt**](idirectxfilesaveobject.md) frei.
+7.  Geben Sie das [**IDirectXFile-Objekt**](idirectxfile.md) frei.
 
 ## <a name="related-topics"></a>Zugehörige Themen
 

@@ -1,19 +1,19 @@
 ---
-description: Wird in einem Mesh-Objekt verwendet, um anzugeben, welches Material für welche Gesichter gilt. Der nmaterials-Member gibt an, wie viele Materialien vorhanden sind, und Materialien geben an, welches Material angewendet werden soll.
+description: Wird in einem Gittermodellobjekt verwendet, um anzugeben, welches Material für welche Gesichter gilt. Das Element nMaterials gibt an, wie viele Materialien vorhanden sind, und Materialien geben an, welches Material angewendet werden soll.
 ms.assetid: b38fd445-1a31-41ed-abbe-084abfe1c221
-title: Meshmateriallist
+title: MeshMaterialList
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 4b746802dc3ef54a8feacc8ddfdaa0db1e45112b
-ms.sourcegitcommit: a47bd86f517de76374e4fff33cfeb613eb259a7e
+ms.openlocfilehash: a9ef1d200e5f6a6913f996c186e121a8390de01e8f3347b6dcbaeac8eeefa708
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/06/2021
-ms.locfileid: "106339645"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118798786"
 ---
-# <a name="meshmateriallist"></a>Meshmateriallist
+# <a name="meshmateriallist"></a>MeshMaterialList
 
-Wird in einem Mesh-Objekt verwendet, um anzugeben, welches Material für welche Gesichter gilt. Der nmaterials-Member gibt an, wie viele Materialien vorhanden sind, und Materialien geben an, welches Material angewendet werden soll.
+Wird in einem Gittermodellobjekt verwendet, um anzugeben, welches Material für welche Gesichter gilt. Das Element nMaterials gibt an, wie viele Materialien vorhanden sind, und Materialien geben an, welches Material angewendet werden soll.
 
 ``` syntax
 template MeshMaterialList
@@ -28,11 +28,11 @@ template MeshMaterialList
 
 Hierbei gilt:
 
--   nmaterials: ein DWORD. Die Anzahl der Materialien.
--   nfakeindexes: ein DWORD. Die Anzahl der Indizes.
--   fakeindexes \[ nfakeindexes \] : ein Array von DWords, das die Gesichts Indizes enthält.
+-   nMaterials : Ein DWORD. Die Anzahl der Materialien.
+-   nFaceIndexes: Ein DWORD. Die Anzahl der Indizes.
+-   faceIndexes \[ nFaceIndexes: \] Ein Array von DWORDs, die die Gesichtsindizes enthalten.
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 

@@ -1,45 +1,45 @@
 ---
-description: Winlogon behält den Arbeitsstations Status bei, der von Gina verwendet wird, um zu bestimmen, welche Authentifizierungs Aktionen erforderlich sind.
+description: Winlogon verwaltet den Arbeitsstationsstatus, der von der GINA verwendet wird, um zu bestimmen, welche Authentifizierungsaktionen erforderlich sind.
 ms.assetid: e04175c4-bb43-4f76-8ceb-50282a1ebed0
 title: Winlogon-Zustände
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: e4d2e4ec690d6bdda15fb8e350969b36e01d5c68
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: fef22cdd172572b1d5032990abae929712dc0be29a926524520c7ce6f9bbfe69
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "104554662"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118915053"
 ---
 # <a name="winlogon-states"></a>Winlogon-Zustände
 
-[*Winlogon*](../secgloss/w-gly.md) behält den Arbeitsstations Status bei, der von [*Gina*](../secgloss/g-gly.md) verwendet wird, um zu bestimmen, welche Authentifizierungs Aktionen erforderlich sind.
+[*Winlogon verwaltet*](../secgloss/w-gly.md) den Arbeitsstationsstatus, der von [*der GINA*](../secgloss/g-gly.md) verwendet wird, um zu bestimmen, welche Authentifizierungsaktionen erforderlich sind.
 
-Der Winlogon-Dienst befindet sich zu einem beliebigen Zeitpunkt in einem von drei Zuständen:
+Winlogon befindet sich zu einem beliebigen Zeitpunkt in einem von drei Zuzuständen:
 
--   [Abgemeldet](#logged-off-state)
+-   [Status "Abgemeldet"](#logged-off-state)
 -   [Angemeldeter Status](#logged-on-state)
--   [Arbeitsstations-gesperrt](#workstation-locked-state)
+-   [Gesperrter Status der Arbeitsstation](#workstation-locked-state)
 
-Diese drei Zustände werden in der folgenden Abbildung dargestellt.
+Diese drei Zustände sind in der folgenden Abbildung dargestellt.
 
-![Winlogon-Status](images/winlogonst.png)
+![WinLogon-Zustände](images/winlogonst.png)
 
 ## <a name="logged-off-state"></a>Logged-Off Status
 
-Wenn sich Winlogon im abgerufenen Zustand befindet, werden Benutzer aufgefordert, sich selbst zu identifizieren und Authentifizierungsinformationen bereitzustellen. Wenn ein Benutzer korrekte Benutzerkontoinformationen und keine Einschränkungen zur Verfügung stellt, wird der Benutzer angemeldet, und ein Shellprogramm (z. b. Windows-Explorer) wird auf dem Anwendungs Desktop ausgeführt. Winlogon wechselt in den angemeldeten Zustand.
+Wenn sich Winlogon im abgemeldeten Zustand befindet, werden Benutzer aufgefordert, sich selbst zu identifizieren und Authentifizierungsinformationen zur Verfügung zu stellen. Wenn ein Benutzer die richtigen Benutzerkontoinformationen enthält und keine Einschränkungen dies verhindern, wird der Benutzer angemeldet, und ein Shellprogramm (z. B. Windows Explorer) wird auf dem Anwendungsdesktop ausgeführt. Winlogon ändert sich in den angemeldeten Zustand.
 
 ## <a name="logged-on-state"></a>Logged-On Status
 
-Wenn sich Winlogon im angemeldeten Zustand befindet, können Benutzer mit der Shell interagieren, zusätzliche Anwendungen aktivieren und ihre Arbeit erledigen. Aus dem angemeldeten Zustand können Benutzer entweder die gesamte Arbeit beenden und abmelden oder Ihre Arbeitsstationen Sperren (sodass die gesamte Arbeit nicht mehr vorhanden ist). Wenn sich der Benutzer entscheidet, sich abzumelden, beendet Winlogon alle Prozesse, die dieser [*Anmelde Sitzung*](../secgloss/l-gly.md) zugeordnet sind, und die Arbeitsstation wird für einen anderen Benutzer verfügbar sein. Wenn der Benutzer stattdessen die Sperre der Arbeitsstation beschließt, wechselt Winlogon in den Zustand der Arbeitsstation.
+Wenn sich Winlogon im angemeldeten Zustand befindet, können Benutzer mit der Shell interagieren, zusätzliche Anwendungen aktivieren und ihre Arbeit tun. Vom angemeldeten Zustand aus können Benutzer entweder alle Arbeitsstationen beenden und sich abmelden oder ihre Arbeitsstationen sperren (alle Arbeitsstationen bleiben an Ort und Stelle). Wenn sich der Benutzer abmelden soll, beendet Winlogon alle Prozesse, die dieser Anmeldesitzung zugeordnet sind, und die Arbeitsstation steht einem anderen Benutzer zur Verfügung. [](../secgloss/l-gly.md) Wenn der Benutzer stattdessen entscheidet, die Arbeitsstation zu sperren, ändert sich winlogon in den gesperrten Status der Arbeitsstation.
 
 ## <a name="workstation-locked-state"></a>Workstation-Locked Status
 
-Wenn sich Winlogon im Zustand "Arbeitsstations gesperrt" befindet, wird ein sicherer Desktop angezeigt, bis der Benutzer die Arbeitsstation entsperrt, indem er die gleichen Identifikations-und Authentifizierungsinformationen wie der Benutzer, der sich ursprünglich angemeldet hat, bereitstellt, oder bis ein Administrator eine Abmeldung erzwingt. Wenn die Arbeitsstation entsperrt ist, wird der Anwendungs Desktop angezeigt, und die Arbeit kann fortgesetzt werden. Wenn ein Administrator jedoch die Arbeitsstation entsperrt (indem er die Identifikations-und Authentifizierungsinformationen eines Administrator Kontos bereitstellt), werden die Prozesse des angemeldeten Benutzers beendet, und Winlogon wechselt in den abangemeldeten Zustand.
+Wenn winlogon sich im gesperrten Zustand der Arbeitsstation befindet, wird ein sicherer Desktop angezeigt, bis der Benutzer die Arbeitsstation entsperrt, indem er die gleichen Identifikations- und Authentifizierungsinformationen wie der benutzer, der sich ursprünglich angemeldet hat, oder bis ein Administrator eine Abmelde erzwingt. Wenn die Arbeitsstation entsperrt ist, wird der Anwendungsdesktop angezeigt, und die Arbeit kann fortgesetzt werden. Wenn ein Administrator die Arbeitsstation jedoch entsperrt (durch Angabe der Identifikations- und Authentifizierungsinformationen eines Administratorkontos), werden die Prozesse des angemeldeten Benutzers beendet, und Winlogon ändert sich in den abgemeldeten Zustand.
 
-In jedem der Winlogon-Zustände können verschiedene Aktionen ausgeführt werden. Eine Gina-DLL kann Aktionen implementieren, die nicht Teil des standardmäßigen Windows-Betriebssystems sind. Beispielsweise könnte ein hoch Sicherheitssystem eine Arbeitsstation automatisch alle 10 Minuten Sperren und erzwingen, dass sich die Benutzer erneut authentifizieren.
+In jedem winlogon-Zustände können verschiedene Aktionen ausgeführt werden. Eine GINA-DLL kann Aktionen implementieren, die nicht Teil des Standardbetriebssystems Windows sind. Beispielsweise könnte ein System mit hoher Sicherheit eine Arbeitsstation automatisch alle 10 Minuten sperren und benutzer zwingen, sich selbst erneut zu authentifizieren.
 
-Weitere Informationen zum Erstellen von Desktops und zum Registrieren einer Sicherheits-und Registrierungs [*Sequenz*](../secgloss/s-gly.md) finden Sie unter [Initialisieren von Winlogon](initializing-winlogon.md). Weitere Informationen zu Timeout Vorgängen finden [Sie unter Unterstützte Dialog Feld-Dienstnutzungsdauer-out-Vorgänge](supported-dialog-box-service-time-out-operations.md). Informationen zum Senden von Nachrichten an die Gina, während ein Dialogfeld angezeigt wird, finden [Sie unter Senden von Nachrichten an die Gina](sending-messages-to-the-gina.md). Weitere Informationen zu Unterstützungsfunktionen finden Sie unter [Winlogon-Unterstützungsfunktionen](authentication-functions.md).
+Informationen zum Erstellen von Desktops und zum Registrieren einer [*Secure Attention Sequence*](../secgloss/s-gly.md) (SAS) finden Sie unter [Initialisieren von Winlogon](initializing-winlogon.md). Informationen zu Time out-Vorgängen finden Sie unter [Supported Dialog Box Service Time-out Operations](supported-dialog-box-service-time-out-operations.md). Informationen zum Senden von Nachrichten an die GINA, während ein Dialogfeld angezeigt wird, finden Sie unter Senden von [Nachrichten an die GINA.](sending-messages-to-the-gina.md) Informationen zu Unterstützungsfunktionen finden Sie unter [Winlogon-Unterstützungsfunktionen.](authentication-functions.md)
 
  
 

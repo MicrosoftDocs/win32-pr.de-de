@@ -1,11 +1,11 @@
 ---
-title: Playlistcollection. importwiedergabe-Methode
-description: Die importwiedergabe-Methode fügt der Bibliothek eine statische Wiedergabeliste hinzu. | Playlistcollection. importwiedergabe-Methode
+title: PlaylistCollection.importPlaylist-Methode
+description: Die importPlaylist-Methode fügt der Bibliothek eine statische Wiedergabeliste hinzu. | PlaylistCollection.importPlaylist-Methode
 ms.assetid: 0611ba42-fd8f-4fb9-9fbb-809a82775c2a
 keywords:
-- importwiedergabe-Methode, Windows-Media Player
-- importwiedergabe-Methode, Windows Media Player, playlistcollection-Klasse
-- Playlistcollection-Klasse, Windows Media Player, importwiedergabe-Methode
+- importPlaylist-Methode Windows Media Player
+- importPlaylist-Methode Windows Media Player , PlaylistCollection-Klasse
+- PlaylistCollection-Klasse Windows Media Player , importPlaylist-Methode
 topic_type:
 - apiref
 api_name:
@@ -16,16 +16,16 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 736e9afa17f571428fada48660726b606268796a
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 7f6c2a61b6603c0bfb38025548eaa4b0943bcdd1a5e81cb1ac27c17969fe87ca
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106351376"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118334842"
 ---
-# <a name="playlistcollectionimportplaylist-method"></a>Playlistcollection. importwiedergabe-Methode
+# <a name="playlistcollectionimportplaylist-method"></a>PlaylistCollection.importPlaylist-Methode
 
-Die **importwiedergabe** -Methode fügt der Bibliothek eine statische Wiedergabeliste hinzu.
+Die **importPlaylist-Methode** fügt der Bibliothek eine statische Wiedergabeliste hinzu.
 
 ## <a name="syntax"></a>Syntax
 
@@ -42,24 +42,24 @@ retVal = PlaylistCollection.importPlaylist(
 
 <dl> <dt>
 
-*Wiedergabeliste* \[ in\]
+*Wiedergabeliste* \[ In\]
 </dt> <dd>
 
-Das hinzu zufügende **Wiedergabe** Listen Objekt.
+**Wiedergabelistenobjekt,** das hinzugefügt werden soll.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Diese Methode gibt das **Wiedergabe** Listen Objekt zurück, das hinzugefügt wurde.
+Diese Methode gibt das **hinzugefügte Playlist-Objekt** zurück.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Wiedergabelisten, die keine Medienelemente enthalten, können der Bibliothek nicht mithilfe dieser Methode hinzugefügt werden. Verwenden Sie die **newwiedergabe** -Methode, um eine leere Wiedergabeliste in der Bibliothek zu erstellen. Anschließend können Sie die resultierende Wiedergabeliste mithilfe von *Wiedergabe* Listen mit Medien Elementen ausfüllen. **appendItem** oder *Wiedergabeliste*. **InsertItem**.
+Wiedergabelisten, die keine Medienelemente enthalten, können der Bibliothek mit dieser Methode nicht hinzugefügt werden. Verwenden Sie die **newPlaylist-Methode,** um eine leere Wiedergabeliste in der Bibliothek zu erstellen. Anschließend können Sie die resultierende Wiedergabeliste mit Medienelementen füllen, indem Sie *Wiedergabeliste* verwenden. **appendItem** oder *Playlist*. **insertItem**.
 
-Wenn Sie diese Methode an eine automatische Wiedergabeliste übergeben, wird die Abfrage einmal ausgeführt, und das Ergebnis wird der Bibliothek als statische Wiedergabeliste hinzugefügt. Wenn Sie der Bibliothek eine automatische Wiedergabeliste hinzufügen und das automatische Verhalten beibehalten möchten, verwenden Sie *mediacollection*. **fügen Sie hinzu**. Weitere Informationen finden Sie unter [statische und automatische Wiedergabelisten](static-and-auto-playlists.md).
+Wenn Sie diese Methode an eine automatische Wiedergabeliste übergeben, wird die Abfrage einmal ausgeführt, und das Ergebnis wird der Bibliothek als statische Wiedergabeliste hinzugefügt. Verwenden Sie *MediaCollection,* um der Bibliothek eine automatische Wiedergabeliste hinzuzufügen und ihr automatisches Verhalten beizubehalten. **fügen Sie hinzu.** Weitere Informationen finden Sie unter [Statische und automatische Wiedergabelisten.](static-and-auto-playlists.md)
 
-Um diese Methode verwenden zu können, ist der vollständige Zugriff auf die Bibliothek erforderlich. Weitere Informationen finden Sie unter [Bibliotheks Zugriff](library-access.md).
+Um diese Methode verwenden zu können, ist vollzugriff auf die Bibliothek erforderlich. Weitere Informationen finden Sie unter [Bibliothekszugriff.](library-access.md)
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -67,43 +67,43 @@ Um diese Methode verwenden zu können, ist der vollständige Zugriff auf die Bib
 
 | Anforderung | Wert |
 |--------------------|------------------------------------------------------------------------------------|
-| Version<br/> | Windows Media Player Version 7,0 oder höher.<br/>                              |
+| Version<br/> | Windows Media Player Version 7.0 oder höher.<br/>                              |
 | DLL<br/>     | <dl> <dt>Wmp.dll</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
 [**Verwalten von Wiedergabelisten**](managing-playlists.md)
 </dt> <dt>
 
-[**Mediacollection-Objekt**](mediacollection-object.md)
+[**MediaCollection-Objekt**](mediacollection-object.md)
 </dt> <dt>
 
-[**Mediacollection. Add**](mediacollection-add.md)
+[**MediaCollection.add**](mediacollection-add.md)
 </dt> <dt>
 
-[**Wiedergabeliste. appendItem**](playlist-appenditem.md)
+[**Playlist.appendItem**](playlist-appenditem.md)
 </dt> <dt>
 
-[**Wiedergabeliste. InsertItem**](playlist-insertitem.md)
+[**Playlist.insertItem**](playlist-insertitem.md)
 </dt> <dt>
 
-[**Playlistcollection-Objekt**](playlistcollection-object.md)
+[**PlaylistCollection-Objekt**](playlistcollection-object.md)
 </dt> <dt>
 
-[**Playlistcollection. newwiedergabe**](playlistcollection-newplaylist.md)
+[**PlaylistCollection.newPlaylist**](playlistcollection-newplaylist.md)
 </dt> <dt>
 
-[**Playlistcollection. Remove**](playlistcollection-remove.md)
+[**PlaylistCollection.remove**](playlistcollection-remove.md)
 </dt> <dt>
 
-[**Settings. mediaaccessrights**](settings-mediaaccessrights.md)
+[**Einstellungen.mediaAccessRights**](settings-mediaaccessrights.md)
 </dt> <dt>
 
-[**Settings. requestmediaaccessrights**](settings-requestmediaaccessrights.md)
+[**Einstellungen.requestMediaAccessRights**](settings-requestmediaaccessrights.md)
 </dt> </dl>
 
  

@@ -1,89 +1,89 @@
 ---
-description: Voraus berechnete Strahlungs Übertragung (Direct3D 9)
+description: Vorausberechnungsübertragung der Radiance (Direct3D 9)
 ms.assetid: 2a233d23-9a9e-4774-9be0-f3bfe0369b21
-title: Voraus berechnete Strahlungs Übertragung (Direct3D 9)
+title: Vorausberechnungsübertragung der Radiance (Direct3D 9)
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 94829a2559888c61ae795309bac5d1ab699d7f27
-ms.sourcegitcommit: a47bd86f517de76374e4fff33cfeb613eb259a7e
+ms.openlocfilehash: dc18eff66dab9a696a3e441d894a327890c53888da008d72a5f143ca0d345a51
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/06/2021
-ms.locfileid: "104569040"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118798732"
 ---
-# <a name="precomputed-radiance-transfer-direct3d-9"></a>Voraus berechnete Strahlungs Übertragung (Direct3D 9)
+# <a name="precomputed-radiance-transfer-direct3d-9"></a>Vorausberechnungsübertragung der Radiance (Direct3D 9)
 
-## <a name="using-precomputed-radiance-transfer"></a>Verwenden der Voraus berechneten Strahlungs Übertragung
+## <a name="using-precomputed-radiance-transfer"></a>Verwenden der vorausbesetzten Radianceübertragung
 
-Es gibt verschiedene Formen der Komplexität in interessanten Szenen, einschließlich der Modellierung der Beleuchtungs Umgebung (d. h. Flächen Beleuchtungs Modelle im Vergleich zu Punkt-/direktionalen) und der Art von globalen Effekten, die modelliert werden (z. b. Schatten, interreflektionen, unter Oberflächen Streuung). Herkömmliche interaktive Renderingverfahren modellieren einen begrenzten Anteil dieser Komplexität. PRT aktiviert diese Effekte mit einigen erheblichen Einschränkungen:
+Es gibt verschiedene Formen der Komplexität in interessanten Szenen, z. B. wie die Beleuchtungsumgebung modelliert wird (d. h. Bereichsbeleuchtungsmodelle im Vergleich zu punkt-/richtungsalen Modellen) und welche Art von globalen Effekten modelliert werden (z. B. Schatten, Interreflectionen, Unteroberflächen-Punktion). Herkömmliche interaktive Renderingtechniken modellieren einen begrenzten Teil dieser Komplexität. PRT ermöglicht diese Auswirkungen mit einigen erheblichen Einschränkungen:
 
--   Es wird davon ausgegangen, dass Objekte starr sind (d. h. keine Deformationen).
--   Dabei handelt es sich um einen Objekt zentrierten Ansatz (es sei denn, Objekte werden gemeinsam verschoben, diese globalen Effekte werden nicht zwischen ihnen beibehalten).
--   Nur die Beleuchtung mit niedriger Frequenz wird modelliert (was zu weichen Schatten führt). Bei Hochfrequenz Lichtern (scharfe Schatten) müssten herkömmliche Techniken eingesetzt werden.
+-   Es wird davon ausgegangen, dass Objekte fest (d. h. keine Ns) sind.
+-   Es handelt sich um einen objektzentrierten Ansatz (sofern Objekte nicht zusammen verschoben werden, werden diese globalen Effekte nicht zwischen ihnen beibehalten).
+-   Es wird nur eine Beleuchtung mit niedriger Frequenz modelliert (was zu weichen Schatten führt). Für Hochfrequenzlichter (starke Schatten) müssten herkömmliche Techniken eingesetzt werden.
 
-PRT erfordert eine der folgenden beiden Optionen:
+PRT erfordert eine der folgenden, aber nicht beide:
 
--   hochgradig Mosaik Modelle und vs \_ 1 \_ 1
--   PS \_ 2 \_ 0
+-   stark mosaikierte Modelle und im Vergleich \_ zu 1 \_ 1
+-   ps \_ 2 \_ 0
 
-### <a name="standard-diffuse-lighting-versus-prt"></a>Standard mäßige diffuse Beleuchtung im Vergleich zu PRT
+### <a name="standard-diffuse-lighting-versus-prt"></a>Diffuse Standard-Beleuchtung im Vergleich zu PRT
 
-Die folgende Abbildung wird mithilfe des herkömmlichen (n) Beleuchtungs Modells gerendert. Scharfe Schatten können mit einem anderen Durchlauf und einer Form der Shadowing-Technik (Schatten Tiefe Karten oder schattenvolumes) aktiviert werden. Das Hinzufügen mehrerer Lichter erfordert entweder mehrere Durchgänge (wenn Schatten verwendet werden sollen) oder komplexere Shader mit herkömmlichen Techniken.
+Die folgende Abbildung wird mit dem herkömmlichen Beleuchtungsmodell (n · l) gerendert. Sharp shadows could be enabled using another pass and some form of shadowing technique (shadow depth maps or shadow volumes) (Sharp shadows could be enabled using another pass and some form of shadowing technique (Schattentiefekarten oder Schattenvolumen)). Das Hinzufügen mehrerer Beleuchtungen erfordert entweder mehrere Durchläufe (wenn Schatten verwendet werden sollen) oder komplexere Shader mit herkömmlichen Techniken.
 
-![Screenshot einer Abbildung, die mithilfe des herkömmlichen Beleuchtungs Modells gerendert wird](images/prt-diffuse-cropped.png)
+![Screenshot einer Mithilfe des herkömmlichen Beleuchtungsmodells gerenderten Abbildung](images/prt-diffuse-cropped.png)
 
-Die nächste Abbildung wird mit PRT mit der besten Näherung eines einzelnen direktionalen Lichts gerendert, das Sie auflösen kann. Dies führt dazu, dass weiche Schatten nicht mit herkömmlichen Techniken erzeugt werden. Da PRT immer alle Beleuchtungs Umgebungen mit mehreren Lichtern oder einer Umgebungs Zuordnung modelliert, würden Sie nur die Werte (aber nicht die Anzahl) der Konstanten ändern, die vom Shader verwendet werden.
+Die nächste Abbildung wird mit PRT mit der besten Näherung eines einzelnen direktionalen Lichts gerendert, das es auflösen kann. Dies führt zu weichen Schatten, die mit herkömmlichen Techniken schwer zu erzeugen sind. Da DAS PRT immer beleuchtungsumgebungen vollständig modelliert, die mehrere Beleuchtungslichter hinzufügen oder eine Umgebungszuordnung verwenden, würden Sie nur die Werte (aber nicht die Anzahl) von Konstanten ändern, die vom Shader verwendet werden.
 
-![Screenshot einer mit PRT gerenderten Abbildung](images/prt-diffuseshadows-cropped.png)
+![Screenshot einer Mithilfe von PRT gerenderten Abbildung](images/prt-diffuseshadows-cropped.png)
 
-### <a name="prt-with-interreflections"></a>PRT mit interreflektionen
+### <a name="prt-with-interreflections"></a>PRT mit Interreflections
 
-Die direkte Beleuchtung erreicht die Oberfläche direkt vom Licht. Interreflektionen sind Lichtreich und erreichen die Oberfläche, nachdem eine andere Oberfläche so oft wie oft ausgeschaltet wurde. PRT kann dieses Verhalten modellieren, ohne die Leistung zur Laufzeit zu ändern, indem der Simulator einfach mit anderen Parametern ausgeführt wird.
+Die direkte Beleuchtung erreicht die Oberfläche direkt vom Licht. Interreflectionen erreichen die Oberfläche, nachdem sie einige Male von einer anderen Oberfläche abgeknüpft wurden. PRT kann dieses Verhalten modellieren, ohne die Leistung zur Laufzeit zu ändern, indem der Simulator einfach mit unterschiedlichen Parametern ausgeführt wird.
 
-Die folgende Abbildung wird nur mithilfe von Direct PRT erstellt (0 springt ohne interreflektionen).
+Die folgende Abbildung wird nur mit dem direkten PRT erstellt (0 Bounces ohne Interreflectionen).
 
-![Screenshot einer Abbildung, die nur mit Direct PRT gerendert wird](images/prt-nointerreflections.png)
+![Screenshot einer Abbildung, die nur mithilfe des direkten PRT gerendert wird](images/prt-nointerreflections.png)
 
-Die folgende Abbildung wird mithilfe von PRT mit interreflektionen erstellt (2 springt with interreflektionen).
+Die folgende Abbildung wird mithilfe von PRT mit Interreflectionen (2 Bounces mit Interreflectionen) erstellt.
 
-![Screenshot einer Abbildung, die mithilfe von PRT mit interreflektionen gerendert wird](images/prt-interreflections.png)
+![Screenshot einer Abbildung, die mithilfe von PRT mit Interreflectionen gerendert wurde](images/prt-interreflections.png)
 
-### <a name="prt-with-subsurface-scattering"></a>PRT with subsurface Scattering
+### <a name="prt-with-subsurface-scattering"></a>PRT mit Subsurface Scattering
 
-Unter Surface im ist ein Verfahren, das die Art und Weise anzeigt, wie das Licht durch bestimmte Materialien verläuft. Drücken Sie als Beispiel eine Beleuchtung mit beleuchteter Taschenlampe. Das Licht aus der Taschenlampe durchläuft Ihre Hand, springt um (Ändern der Farbe im Prozess) und beendet von der anderen Seite. Dies kann auch mit einfachen Änderungen am Simulator und ohne Änderungen an der Laufzeit modelliert werden.
+Das Streuen von Unteroberflächen ist eine Technik, die modelliert, wie Licht bestimmte Materialien durchläuft. Drücken Sie z. B. eine leuchtende Taschenlampe gegen die Handfläche. Das Licht der Taschenlampe durchläuft Ihre Hand, springt umher (ändert die Farbe im Prozess) und verlässt die andere Seite Ihrer Hand. Dies kann auch mit einfachen Änderungen am Simulator und ohne Änderungen an der Laufzeit modelliert werden.
 
-In der folgenden Abbildung wird PRT mit unter Oberflächen Streuung veranschaulicht.
+Die folgende Abbildung veranschaulicht PRT mit Unteroberflächen-Punktung.
 
-![Screenshot einer Abbildung, die durch die Verwendung von PRT mit der unter Oberflächen Streuung gerendert wird](images/prt-subsurface.png)
+![Screenshot einer Abbildung, die mithilfe von prt mit Unteroberflächen-Punktung gerendert wurde](images/prt-subsurface.png)
 
 ## <a name="how-prt-works"></a>Funktionsweise von PRT
 
-Die folgenden Begriffe sind hilfreich, um zu verstehen, wie PRT funktioniert, wie in der folgenden Abbildung dargestellt.
+Die folgenden Begriffe sind nützlich, um zu verstehen, wie PRT funktioniert, wie im folgenden Diagramm dargestellt.
 
-Quell Ausstrahlung: die Quell Ausstrahlung stellt die Beleuchtungs Umgebung als Ganzes dar. In PRT wird eine beliebige Umgebung mithilfe der kugelförmigen harmonischen Basis angezeigt. diese Beleuchtung wird vorausgesetzt, dass Sie relativ zum-Objekt ist (dieselbe Annahme wird in Umgebungs Zuordnungen vorgenommen).
+Quellradanz: Die Quellenresonanz stellt die gesamte Beleuchtungsumgebung dar. In PRT wird eine beliebige Umgebung mithilfe der pherischen Tropenbasis als ungefähre Umgebung bezeichnet. Es wird davon ausgegangen, dass diese Beleuchtung relativ zum Objekt entfernt ist (die gleiche Annahme wie bei Umgebungszuordnungen).
 
-Exit-Ausdruck: die Ausgangs-Glanz ist das Licht, das von einem Punkt auf der Oberfläche von einer beliebigen möglichen Quelle verlässt (reflektierte Strahlen, unter Oberflächen-Scattering, Ausgabe).
+Exit Radiance :Exit radiance (Exit-Radiance) ist das Licht, das von einem Punkt auf der Oberfläche aus einer beliebigen möglichen Quelle (reflektierte Bogenstärke, Streuung des Unteroberflächen, Lichtabbild) verlässt.
 
-Übertragungs Vektoren: Übertragungs Vektoren ordnen Quell Strahlen in eine Ausgangs-und vorab berechnete Verwendung einer komplexen Light-Transport-Simulation.
+Übertragungsvektoren: Übertragungsvektoren ordnen quellauslösend dem Ausgangsbild zu und werden offline mithilfe einer komplexen Lichttransportsimulation vorausberechnunget.
 
-![Diagramm zur Funktionsweise von PRT](images/prt-lightingpicture.png)
+![Diagramm zur Funktionsweise von prt](images/prt-lightingpicture.png)
 
-PRT Faktoren den Renderingprozess in zwei Phasen, wie im folgenden Diagramm dargestellt:
+PRT bestimmt den Renderingprozess in zwei Phasen, wie im folgenden Diagramm dargestellt:
 
-1.  Eine teure Light-Transport-Simulation führt eine Vorberechnung der Übertragungskoeffizienten aus, die zur Laufzeit verwendet werden können.
-2.  In einer relativ einfachen Lauf Zeit Phase wird zunächst die Beleuchtungs Umgebung unter Verwendung der kugelförmigen harmonischen Basis und dann diese Beleuchtungs Koeffizienten und die Voraus berechneten Übertragungskoeffizienten (aus Phase 1) mit einem einfachen Shader verwendet, was zu einem exitglanz führt (das Licht, das das Objekt verlässt).
+1.  Eine teure Lichttransportsimulation berechnet Übertragungskoeffizienten, die zur Laufzeit verwendet werden können.
+2.  Eine relativ einfache Laufzeitphase wird zuerst der Beleuchtungsumgebung mithilfe der pherischen Glühbirne angewend, dann werden diese Beleuchtungskoeffizienten und die vorausbesetzten Übertragungskoeffizienten (aus Phase 1) mit einem einfachen Shader verwendet, was zu Einer-Beendigungs-Lichtauslösung (dem Licht, das das Objekt verlässt) führt.
 
 ![Diagramm des PRT-Datenflusses](images/prt-dataflow.png)
 
 ### <a name="how-to-use-the-prt-api"></a>Verwenden der PRT-API
 
-1.  Berechnen Sie die Übertragungs Vektoren mit einem der COMPUTE-... Methoden von [**ID3DXPRTEngine**](id3dxprtengine.md).
+1.  Berechnen Sie die Übertragungsvektoren mit einer der Compute-... -Methoden von [**ID3DXPRTEngine**](id3dxprtengine.md).
 
-    Der direkte Umgang mit diesen Übertragungs Vektoren erfordert eine beträchtliche Menge an Arbeitsspeicher-und shaderberechnung. Durch die Komprimierung wird der erforderliche Arbeitsspeicher und die Shader-Berechnung erheblich reduziert.
+    Der direkte Umgang mit diesen Übertragungsvektoren erfordert eine erhebliche Menge an Arbeitsspeicher und Shaderberechnung. Durch die Komprimierung wird die Erforderliche Menge an Arbeitsspeicher und Shaderberechnung erheblich reduziert.
 
-    Die abschließenden Beleuchtungs Werte werden in einem Vertex-Shader berechnet, der die folgende komprimierte renderinggleichung implementiert.
+    Die endgültigen Beleuchtungswerte werden in einem Vertex-Shader berechnet, der die folgende komprimierte Renderinggleichung implementiert.
 
-    ![Gleichung des PRT-Rendering](images/prt-shaderequation.png)
+    ![Gleichung des PRT-Renderings](images/prt-shaderequation.png)
 
     Hierbei gilt:
 
@@ -91,40 +91,40 @@ PRT Faktoren den Renderingprozess in zwei Phasen, wie im folgenden Diagramm darg
 
     | Parameter      | BESCHREIBUNG                                                                                                     |
     |----------------|-----------------------------------------------------------------------------------------------------------------|
-    | Neutraler             | Ein einzelner Kanal mit exitstrahlung bei Scheitelpunkt p und wird bei jedem Scheitelpunkt im Mesh ausgewertet.                     |
-    | Gegründete             | Der Mittelwert für Cluster k. Dies ist ein "Order ²"-Vektor von Koeffizienten.                                               |
-    | k              | Die Cluster-ID für Vertex p.                                                                                    |
-    | L<sup>'</sup>  | Die Näherung der Quell Ausstrahlung in die sh-Basisfunktionen. Dies ist ein "Order ²"-Vektor von Koeffizienten. |
+    | Rp             | Ein einzelner Kanal mit Beendigungsausdance bei Scheitelpunkt p und wird an jedem Scheitelpunkt im Gitternetz ausgewertet.                     |
+    | Mk             | Der Mittelwert für Cluster k. Dies ist ein Order 2-Vektor von Koeffizienten.                                               |
+    | k              | Die Cluster-ID für Scheitelpunkt p.                                                                                    |
+    | L<sup>'</sup>  | Die Näherung der Quellquelle in die SH-Basisfunktionen. Dies ist ein Order 2-Vektor von Koeffizienten. |
     | j              | Eine ganze Zahl, die die Anzahl der PCA-Vektoren summiert.                                                            |
-    | w-<sub>PJ</sub> | Die Jth-PCA-Gewichtung für Punkt p. Dies ist ein einzelner Koeffizient.                                                   |
-    | B-<sub>kJ</sub> | Der Jth PCA-Basis Vektor für Cluster k. Dies ist ein "Order ²"-Vektor von Koeffizienten.                               |
+    | w<sub>pj</sub> | Die jth PCA-Gewichtung für Punkt p. Dies ist ein einzelner Koeffizient.                                                   |
+    | B<sub>kj</sub> | Der jth PCA-Basisvektor für Cluster k. Dies ist ein Order 2-Vektor von Koeffizienten.                               |
 
     
 
      
 
-    Der Extraktions-... [**ID3DXPRTCompBuffer**](id3dxprtcompbuffer.md) -Methoden ermöglichen den Zugriff auf komprimierte Daten aus der Simulation.
+    Extrahieren... -Methoden von [**ID3DXPRTCompBuffer ermöglichen**](id3dxprtcompbuffer.md) den Zugriff auf komprimierte Daten aus der Simulation.
 
-2.  Berechnen der Quell Ausstrahlung.
+2.  Berechnen Sie die Quellleistung.
 
-    Es gibt mehrere Hilfsfunktionen in der API, die eine Vielzahl von gängigen Beleuchtungs Szenarios verarbeiten können.
+    Es gibt mehrere Hilfsfunktionen in der API, um eine Vielzahl gängiger Beleuchtungsszenarien zu verarbeiten.
 
     
 
     | Funktion                                                         | Zweck                                                                                                     |
     |------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------|
-    | [**D3DXSHEvalDirectionalLight**](d3dxshevaldirectionallight.md) | Gleicht ein herkömmliches Direktionales Licht.                                                              |
-    | [**D3DXSHEvalSphericalLight**](d3dxshevalsphericallight.md)     | Entspricht lokalen kugelförmigen Lichtquellen. (Beachten Sie, dass PRT nur bei Entfernungs Beleuchtungs Umgebungen funktioniert.) |
-    | [**D3DXSHEvalConeLight**](d3dxshevalconelight.md)               | Gleicht eine entfernte Bereichs-Lichtquelle. Ein Beispiel wäre die Sun (sehr kleiner Kegelwinkel).              |
-    | [**D3DXSHEvalHemisphereLight**](d3dxshevalhemispherelight.md)   | Wertet ein Licht aus, bei dem es sich um eine lineare interpolung zwischen zwei Farben handelt (eine auf jedem Pol einer Kugel).         |
+    | [**D3DXSHEvalDirectionalLight**](d3dxshevaldirectionallight.md) | Entspricht einem konventionellen direktionalen Licht.                                                              |
+    | [**D3DXSHEvalSphericalLight**](d3dxshevalsphericallight.md)     | Ungefähre lokale pherische Lichtquellen. (Beachten Sie, dass PRT nur mit Entfernungslichtumgebungen funktioniert.) |
+    | [**D3DXSHEvalConeLight**](d3dxshevalconelight.md)               | Entspricht einer entfernten Bereichslichtquelle. Ein Beispiel wäre die Sote (sehr kleiner Kegelwinkel).              |
+    | [**D3DXSHEvalHemisphereLight**](d3dxshevalhemispherelight.md)   | Wertet ein Licht aus, bei dem es sich um eine lineare Interpolation zwischen zwei Farben handelt (eine auf jedem Pol einer Kugel).         |
 
     
 
      
 
-3.  Berechnen Sie die Exit-Strahlkraft.
+3.  Berechnen Sie die Beendigungsausdance.
 
-    Gleichung 1 muss nun entweder mit einem Scheitelpunkt oder einem Pixelshader an jedem Punkt ausgewertet werden. Bevor der Shader ausgewertet werden kann, müssen Konstanten vorab berechnet und in die Konstante Tabelle geladen werden (Weitere Informationen finden Sie im [PRT-Demo Beispiel](https://msdn.microsoft.com/library/Ee418763(v=VS.85).aspx) ). Der Shader selbst ist eine einfache Implementierung dieser Gleichung.
+    Gleichung 1 muss jetzt an jedem Punkt mit einem Scheitelpunkt oder einem Pixel-Shader ausgewertet werden. Bevor der Shader ausgewertet werden kann, müssen Konstanten vorausbewertet und in die Konstantentabelle geladen werden (weitere Informationen finden Sie im [PRT-Demobeispiel).](https://msdn.microsoft.com/library/Ee418763(v=VS.85).aspx) Der Shader selbst ist eine einfache Implementierung dieser Gleichung.
 
     ```
     struct VS_OUTPUT
@@ -161,9 +161,9 @@ PRT Faktoren den Renderingprozess in zwei Phasen, wie im folgenden Diagramm darg
 
     
 
-## <a name="references"></a>References
+## <a name="references"></a>Literatur
 
-Weitere Informationen zu PRT-und sphärischen Harmonisierungen finden Sie in den folgenden Artikeln:
+Weitere Informationen zu PRT und pherischen Trophäen finden Sie in den folgenden Arbeiten:
 
 
 ```
@@ -225,7 +225,7 @@ D. A. Varshalovich, A.N. Moskalev, V.K. Khersonskii
 
 <dl> <dt>
 
-[Erweiterte Themen](advanced-topics.md)
+[Weiterführende Themen](advanced-topics.md)
 </dt> <dt>
 
 [PRT-Gleichungen (Direct3D 9)](prt-equations.md)
@@ -246,7 +246,7 @@ D. A. Varshalovich, A.N. Moskalev, V.K. Khersonskii
 [**ID3DXTextureGutterHelper**](id3dxtexturegutterhelper.md)
 </dt> <dt>
 
-[Voraus berechnete Strahlungs Übertragungsfunktionen](dx9-graphics-reference-d3dx-functions-prt.md)
+[Vorausberechnungsfunktionen für die Übertragung von Radiance](dx9-graphics-reference-d3dx-functions-prt.md)
 </dt> <dt>
 
 [Mathematische Funktionen](dx9-graphics-reference-d3dx-functions-math.md)

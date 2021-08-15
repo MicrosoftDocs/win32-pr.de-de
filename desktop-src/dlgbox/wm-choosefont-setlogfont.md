@@ -1,9 +1,9 @@
 ---
-title: WM_CHOOSEFONT_SETLOGFONT Meldung (kommdlg. h)
-description: Eine Anwendung sendet die Meldung "WM \_ choosefont \_ setlogfont" an ein Schriftart Dialogfeld, um die aktuellen Informationen zur logischen Schriftart festzulegen.
+title: WM_CHOOSEFONT_SETLOGFONT Meldung (Commdlg.h)
+description: Eine Anwendung sendet die \_ WM-Nachricht CHOOSEFONT \_ SETLOGFONT an ein Dialogfeld Schriftart, um die aktuellen logischen Schriftartinformationen festzulegen.
 ms.assetid: ad169eca-a3ae-45bd-90df-821a93a7a764
 keywords:
-- Dialog Felder WM_CHOOSEFONT_SETLOGFONT Meldung
+- Dialogfelder für WM_CHOOSEFONT_SETLOGFONT Meldung
 topic_type:
 - apiref
 api_name:
@@ -14,16 +14,16 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: b6a588ebff7c8e56bb559a2cc9faa1d6290fbd8f
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 1d35c6f54679389b411417e5539382fd322c0873e6dba87fc90efb93b8be7ba1
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "103742584"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118503423"
 ---
-# <a name="wm_choosefont_setlogfont-message"></a>WM \_ choosefont- \_ setlogfont-Meldung
+# <a name="wm_choosefont_setlogfont-message"></a>WM \_ CHOOSEFONT \_ SETLOGFONT-Meldung
 
-Eine Anwendung sendet die Meldung " **WM \_ choosefont \_ setlogfont** " an ein **Schriftart** Dialogfeld, um die aktuellen Informationen zur logischen Schriftart festzulegen.
+Eine Anwendung sendet die **\_ WM-Nachricht CHOOSEFONT \_ SETLOGFONT** an ein Dialogfeld **Schriftart,** um die aktuellen logischen Schriftartinformationen festzulegen.
 
 
 ```C++
@@ -47,7 +47,7 @@ Dieser Parameter wird nicht verwendet.
 *lParam* 
 </dt> <dd>
 
-Ein Zeiger auf eine [**LOGFONT**](/windows/win32/api/wingdi/ns-wingdi-logfonta) -Struktur, die Informationen über die aktuelle logische Schriftart enthält.
+Ein Zeiger auf eine [**LOGFONT-Struktur,**](/windows/win32/api/wingdi/ns-wingdi-logfonta) die Informationen zur aktuellen logischen Schriftart enthält.
 
 </dd> </dl>
 
@@ -55,11 +55,11 @@ Ein Zeiger auf eine [**LOGFONT**](/windows/win32/api/wingdi/ns-wingdi-logfonta) 
 
 Diese Nachricht weist keinen Rückgabewert auf.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Wenn Sie zum Erstellen eines **Schriftart** Dialogfelds die [**choolfont**](/windows/win32/api/commdlg/ns-commdlg-choosefonta) -Funktion aufzurufen, können Sie den **lplogfont** -Member der [**chooonfont**](/windows/win32/api/commdlg/ns-commdlg-choosefonta) -Struktur verwenden, um eine [**LOGFONT**](/windows/win32/api/wingdi/ns-wingdi-logfonta) -Struktur anzugeben, die Anfangswerte für das Dialogfeld enthält. Verwenden Sie die " **WM \_ choosefont \_ setlogfont** "-Meldung, um eine **LOGFONT** -Struktur mit unterschiedlichen Werten anzugeben, während das Dialogfeld **Schriftart** geöffnet ist.
+Wenn Sie die [**ChooseFont-Funktion**](/windows/win32/api/commdlg/ns-commdlg-choosefonta) aufrufen, um **ein** Schriftartdialogfeld zu erstellen, können Sie den **lpLogFont-Member** der [**CHOOSEFONT-Struktur**](/windows/win32/api/commdlg/ns-commdlg-choosefonta) verwenden, um eine [**LOGFONT-Struktur**](/windows/win32/api/wingdi/ns-wingdi-logfonta) anzugeben, die Anfangswerte für das Dialogfeld enthält. Verwenden Sie die **WM \_ CHOOSEFONT \_ SETLOGFONT-Meldung,** um eine **LOGFONT-Struktur** mit unterschiedlichen Werten anzugeben, während das Dialogfeld **Schriftart** geöffnet ist.
 
-In der Regel würden Sie die **WM \_ choosefont- \_ setlogfont** -Nachricht von einer [**cfhuokproc**](/windows/win32/api/commdlg/nc-commdlg-lpcfhookproc) -Hook-Prozedur senden. Die Hook-Prozedur kann auch die Nachrichten [**WM \_ choosefont \_ getlogfont**](wm-choosefont-getlogfont.md) und [**WM \_ choosefont \_ setFlags**](wm-choosefont-setflags.md) senden.
+In der Regel senden Sie die **WM \_ CHOOSEFONT \_ SETLOGFONT-Nachricht** von einer [**CFHookProc-Hookprozedur.**](/windows/win32/api/commdlg/nc-commdlg-lpcfhookproc) Die Hookprozedur kann auch die [**WM \_ CHOOSEFONT \_ GETLOGFONT-**](wm-choosefont-getlogfont.md) und [**WM \_ CHOOSEFONT \_ SETFLAGS-Nachrichten**](wm-choosefont-setflags.md) senden.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -69,42 +69,42 @@ In der Regel würden Sie die **WM \_ choosefont- \_ setlogfont** -Nachricht von 
 |-------------------------------------|----------------------------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional \[nur Desktop-Apps\]<br/>                                               |
 | Unterstützte Mindestversion (Server)<br/> | Windows 2000 Server \[nur Desktop-Apps\]<br/>                                                     |
-| Header<br/>                   | <dl> <dt>Kommdlg. h (Include Windows. h)</dt> </dl> |
+| Header<br/>                   | <dl> <dt>Commdlg.h (include Windows.h)</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-**Verweis**
+**Referenz**
 </dt> <dt>
 
-[**Cfhuokproc**](/windows/win32/api/commdlg/nc-commdlg-lpcfhookproc)
+[**CFHookProc**](/windows/win32/api/commdlg/nc-commdlg-lpcfhookproc)
 </dt> <dt>
 
-[**Auswahl Schriftart**](/windows/win32/api/commdlg/ns-commdlg-choosefonta)
+[**ChooseFont**](/windows/win32/api/commdlg/ns-commdlg-choosefonta)
 </dt> <dt>
 
-[**Auswahl Schriftart**](/windows/win32/api/commdlg/ns-commdlg-choosefonta)
+[**CHOOSEFONT**](/windows/win32/api/commdlg/ns-commdlg-choosefonta)
 </dt> <dt>
 
-[**WM- \_ Auswahl Schriftart \_ getlogfont**](wm-choosefont-getlogfont.md)
+[**WM \_ CHOOSEFONT \_ GETLOGFONT**](wm-choosefont-getlogfont.md)
 </dt> <dt>
 
-[**WM \_ choosefont- \_ setFlags**](wm-choosefont-setflags.md)
+[**WM \_ CHOOSEFONT \_ SETFLAGS**](wm-choosefont-setflags.md)
 </dt> <dt>
 
-**Licher**
+**Konzeptionellen**
 </dt> <dt>
 
-[Allgemeine Dialog Feld Bibliothek](common-dialog-box-library.md)
+[Allgemeine Dialogfeldbibliothek](common-dialog-box-library.md)
 </dt> <dt>
 
 **Andere Ressourcen**
 </dt> <dt>
 
-[**"LogFont"**](/windows/win32/api/wingdi/ns-wingdi-logfonta)
+[**Logfont**](/windows/win32/api/wingdi/ns-wingdi-logfonta)
 </dt> </dl>
 
  

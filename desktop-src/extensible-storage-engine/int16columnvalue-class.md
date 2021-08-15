@@ -24,26 +24,26 @@ api_type:
 api_location:
 - Microsoft.Isam.Esent.Interop.dll
 ROBOTS: INDEX,FOLLOW
-ms.openlocfilehash: d1981082ef349f692859fae55e170e8791619b59
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 3bc307015612196bbe24d88dac57088322fd700ee3567f0013beb3c7dccf780d
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106352778"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118767790"
 ---
 # <a name="int16columnvalue-class"></a>Int16ColumnValue-Klasse
 
-Ein [Int16](/dotnet/api/system.int16) -Spaltenwert.
+Ein [Int16-Spaltenwert.](/dotnet/api/system.int16)
 
 ## <a name="inheritance-hierarchy"></a>Vererbungshierarchie
 
 [System.Object](/dotnet/api/system.object)  
-  [Microsoft. ISAM. ESENT. Interop. ColumnValue](./columnvalue-class.md)  
-    [Microsoft. ISAM. ESENT. Interop. columnvalueofistruct](./columnvalueofstruct-t-class.md)\<[Int16](/dotnet/api/system.int16)\>  
-      Microsoft. ISAM. ESENT. Interop. Int16ColumnValue  
+  [Microsoft.Isam.Esent.Interop.ColumnValue](./columnvalue-class.md)  
+    [Microsoft.Isam.Esent.Interop.ColumnValueOfStruct](./columnvalueofstruct-t-class.md)\<[Int16](/dotnet/api/system.int16)\>  
+      Microsoft.Isam.Esent.Interop.Int16ColumnValue  
 
-**Namespace:**  [Microsoft. ISAM. ESENT. Interop](./microsoft.isam.esent.interop-namespace.md)  
-**Assembly:**  Microsoft. ISAM. ESENT. Interop (in Microsoft.Isam.Esent.Interop.dll)
+**Namespace:**  [Microsoft.Isam.Esent.Interop](./microsoft.isam.esent.interop-namespace.md)  
+**Assembly:**  Microsoft.Isam.Esent.Interop (in Microsoft.Isam.Esent.Interop.dll)
 
 ## <a name="syntax"></a>Syntax
 
@@ -63,10 +63,10 @@ public class Int16ColumnValue : ColumnValueOfStruct<short>
 
 Alle öffentlichen statischen Elemente dieses Typs (Shared in Microsoft Visual Basic) sind threadsicher. Bei Instanzmembern ist die Threadsicherheit nicht gewährleistet.
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
-#### <a name="reference"></a>Referenz
+#### <a name="reference"></a>Verweis
 
 [Int16ColumnValue-Member](./int16columnvalue-members.md)
 
-[Microsoft. ISAM. ESENT. Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)
+[Microsoft.Isam.Esent.Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)

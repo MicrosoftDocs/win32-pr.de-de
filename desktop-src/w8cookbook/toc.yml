@@ -1,4 +1,4 @@
-- name: Cookbook zur Kompatibilität für Windows
+- name: Kompatibilitäts-Cookbook für Windows
   href: windows-8-and-windows-server-8-compatibility-cookbook-portal.md
   items:
     - name: Einführung
@@ -6,169 +6,169 @@
     - name: Windows 10
       href: windows-10.md
       items:
-        - name: 'Wichtige Änderungen seit Windows 7, um die Kompatibilität zu gewährleisten'
+        - name: 'Wichtige Änderungen seit Windows 7, um die Kompatibilität sicherzustellen'
           href: key-changes-since-windows-7-to-ensure-compatibility.md
-        - name: Wie wir die Kompatibilität des kombinierten Ökosystems gewährleisten können
+        - name: Sicherstellen der Kompatibilität des kombinierten Ökosystems
           href: how-we-can-ensure-compatibility-of-the-combined-ecosystem.md
           items:
             - name: Windows-Versionsprüfung
               href: windows-version-check.md
             - name: Nicht dokumentierte APIs
               href: undocumented-apis.md
-            - name: Entwickeln von universelle Windows-Plattform-Apps (UWP)
+            - name: Entwickeln von UWP-Apps (Universal Windows Platform)
               href: develop-universal-windows-platform-apps.md
-            - name: 'Die Funktionalität der Desktop-App ist beeinträchtigt, wenn Sie nicht im Fenstermodus ausgeführt wird.'
+            - name: 'Die Desktop-App-Funktionalität ist beeinträchtigt, wenn sie nicht im Fenstermodus ausgeführt wird.'
               href: modern-desktop-app-functionality-is-impacted-if-not-run-in-windowed-mode.md
-            - name: Verfügbarkeit der anwendbaren Grafiktreiber auf Windows Update
+            - name: Verfügbarkeit anwendbarer Grafiktreiber bei Windows Update
               href: availability-of-applicable-graphics-drivers-on-windows-update.md
-            - name: Migration von Grafiktreibern zu Windows 10
+            - name: Migration des Grafiktreibers zu Windows 10
               href: graphics-driver-migration-to-windows-10.md
-            - name: Bluetooth-Treiber
+            - name: Bluetooth Treiber
               href: bluetooth-drivers.md
-            - name: Remote Aufrufe des Sam RPC-Protokolls sind nur auf lokale Administratoren beschränkt.
+            - name: Remoteaufrufe des SAM RPC-Protokolls sind nur auf lokale Administratoren beschränkt.
               href: remote-calls-to-the-sam-rpc-protocol-are-restricted-to-only-local-administrators.md
-            - name: Kernel Überprüfungen für nicht-WHQL-signierte Treiber
+            - name: Kernelüberprüfungen für Nicht-WHQL-signierte Treiber
               href: kernel-checks-for-non-whql-signed-drivers.md
-            - name: Security Support Provider von Drittanbietern mit Credential Guard
+            - name: Sicherheitssupportanbieter von Drittanbietern mit Credential Guard
               href: third-party-security-support-providers-with-credential-guard.md
     - name: Windows 8.1
       href: windows-8-1.md
       items:
         - name: Windows Store-Apps
           href: windows-store-apps.md
-        - name: Client-und Server Kompatibilität
+        - name: Client- und Serverkompatibilität
           href: windows-8-1-and-windows-server-2012-client-and-server-compatibility.md
           items:
-            - name: Änderungen an der Betriebssystemversion in Windows 8.1
+            - name: Änderungen der Betriebssystemversion in Windows 8.1
               href: operating-system-version-changes-in-windows-8-1.md
-            - name: Bedarfs gesteuerte Installation von Windows-Komponenten
+            - name: bei Bedarf installierte Windows-Komponenten
               href: windows-components-installed-on-demand.md
-            - name: HTML-Schriftart-Fall Back-Verhalten
+            - name: Fallbackverhalten von HTML-Schriftarten
               href: html-font-fallback-behavior.md
-            - name: Windows 8.1 nur HTTPS-URIs und keine http-URIs zulässt.
+            - name: 'Windows 8.1 lässt nur HTTPS-URIs zu, nicht HTTP-URIs.'
               href: windows-8-1-allows-only-https-uris--not-http-uris.md
-            - name: Mouswheel-Eingabe für Windows 8.1
+            - name: Mausradeingabe für Windows 8.1
               href: mousewheel-input-for-windows-8-1.md
-            - name: Touchpad-Geräte mit Windows Precision
+            - name: Windows Präzisionstouchpad-Geräte
               href: windows-precision-touchpad-devices.md
-            - name: Hohe dpi-Informationen für Desktop-Apps in Windows 8.1
+            - name: Hoher DPI-Anteil für Desktop-Apps in Windows 8.1
               href: high-dpi-for-desktop-apps-in-windows-8-1.md
-            - name: Die Edge-Benutzeroberfläche wird in Szenarios mit "in-out-in" und "Trägheit" unterdrückt.
+            - name: Die Edge-Benutzeroberfläche wird in "In-Out-In"- und "Trägheit"-Szenarien unterdrückt.
               href: edge-ui-is-suppressed-in--in-out-in--and--inertia--scenarios.md
-            - name: Das Aufrufen von immsetconfiguration Manager Status () oder immgetanversionstatus () aus Windows Store-Apps wird nicht unterstützt.
+            - name: Das Aufrufen von ImmSetConversionStatus() oder ImmGetConversionStatus() aus Windows Store Apps wird nicht unterstützt.
               href: calling-immsetconversionstatus---or-immgetconversionstatus---from-windows-store-apps-is-not-supported.md
-            - name: IME-modusmodell von pro Benutzer in Thread pro Thread geändert
+            - name: ImE-Modusmodell von Benutzer zu Thread geändert
               href: ime-mode-model-changed-from-per-user-to-per-thread.md
-            - name: Eingabemethoden-Manager-APIs werden vom vereinfachten Chinesisch (IME) nicht unterstützt
+            - name: Eingabemethoden-Manager-APIs werden vom vereinfachten chinesischen IME nicht unterstützt.
               href: input-method-manager-apis-are-not-supported-by-simplified-chinese-ime.md
-            - name: Einige ostasiatische IME-Software Eingabe Panels senden jetzt VKey.
+            - name: Einige ostasiatische IME-Softwareeingabepanels senden jetzt vKey.
               href: some-east-asian-ime-software-input-panels-now-send-vkey.md
         - name: Neue Features und Verbesserungen
           href: new-features-and-enhancement-in-windows-8-1-and-windows-server-2012-r2.md
           items:
-            - name: Start der Windows-Abbild Datei (wimboot)
+            - name: Windows Start der Imagedatei (WimBoot)
               href: windows-image-file-boot--wimboot-.md
             - name: Webanwendungsproxy
               href: web-application-proxy.md
-            - name: Nachverfolgen von geänderten Bereichen einer Datei
+            - name: Nachverfolgen geänderter Bereiche einer Datei
               href: tracking-modified-ranges-of-a-file.md
-            - name: Platzhalter Dateien
+            - name: Platzhalterdateien
               href: placeholder-files.md
         - name: 'Tools, bewährte Methoden und Anleitungen'
           href: tools--best-practices--and-guidance-for-windows-8-1-preview-and-windows-server-2012-r2.md
           items:
             - name: MPR (Microsoft Platform Ready)-Testtool
               href: windows-server-app-certification-kit--sck-.md
-            - name: Leitfaden für internationale Text-und Schriftarten
+            - name: Internationale Text- und Schriftführung
               href: international-text-and-font-guidance.md
             - name: Zertifizierungskit für Windows-Apps
               href: windows-app-certification-kit-for-windows-8-1-preview.md
     - name: Windows 8
       href: windows-8.md
       items:
-        - name: Client-und Server Kompatibilität
+        - name: Client- und Serverkompatibilität
           href: windows-8-and-windows-server-2012-client-and-server-compatibility.md
           items:
-            - name: Aktualisieren von Erkennungsregeln für Sicherheitsanwendungen
+            - name: Update der Regeln für die Erkennung von Sicherheits-Apps
               href: security-app-detection-rules-update.md
-            - name: Bestimmen des Shim-Status
+            - name: Bestimmen des Shimstatus
               href: determining-shim-status.md
-            - name: Server-apps müssen ohne die servergrafikshell ausgeführt werden können
+            - name: Server-Apps müssen ohne die grafische Shell des Servers ausgeführt werden können
               href: server-apps-must-be-able-to-run-without-the-server-graphical-shell.md
-            - name: Remote Data Service-Server Komponenten werden in Windows 8 entfernt
+            - name: Remote data service server components are removed in Windows 8
               href: remote-data-service-server-components-are-removed-in-windows-8.md
-            - name: Dateityp und URI-Zuordnungs Modell
+            - name: Modell für Dateityp- und URI-Zuordnungen
               href: file-type-and-protocol-associations-model.md
             - name: Desktopaktivitätenmoderator
               href: desktop-activity-moderator.md
-            - name: '.NET Framework 4,5 ist Standard, und .NET Framework 3,5 ist optional.'
+            - name: '.NET Framework 4.5 ist Standard, und .NET Framework 3.5 ist optional'
               href: '-net-framework-4-5-is-default-and--net-framework-3-5-is-optional.md'
-            - name: Desktop-Apps sind nach dem Start der Standard Webbrowser-oder Windows Store-Apps möglicherweise nicht sichtbar.
+            - name: Desktop-Apps sind möglicherweise nach dem Starten des Standardwebbrowsers oder Windows Store Apps nicht sichtbar.
               href: desktop-apps-may-not-be-visible-after-launching-the-default-web-browser.md
             - name: Modus mit hohem Kontrast
               href: high-contrast-mode.md
             - name: App-Manifest (ausführbare Datei)
               href: application--executable--manifest.md
-            - name: Ein in der Warteschlange vorhandenes Modell ist veraltet.
+            - name: Aktuelles Modell in der Warteschlange ist veraltet
               href: queued-present-model-is-being-deprecated.md
             - name: PCA-Szenarien für Windows 8
               href: pca-scenarios-for-windows-8.md
-            - name: Desktop-Mini Anwendungen entfernt
+            - name: Desktop-Gadgets entfernt
               href: desktop-gadgets-removed.md
-            - name: Update der Datenträger Kompatibilität im erweiterten Format (4K)
+            - name: Advanced Format -Datenträgerkompatibilitätsupdate (4K)
               href: advanced-format--4k--disk-compatibility-update.md
             - name: Schlanke Bereitstellung von LUNs
               href: thin-provisioning-of-luns.md
-            - name: Erweiterter Speicher ist jetzt für die WinPE-und Server-SKU optional.
+            - name: Erweiterte Storage jetzt für WINPE und Server-SKU optional
               href: enhanced-storage-is-now-optional-for-winpe-and-server-sku.md
-            - name: VDS wechselt zur Windows-Speicherverwaltungs-API
+            - name: VDS wechselt zu Windows Storage Verwaltungs-API
               href: vds-is-transitioning-to-wmiv2-based-windows-storage-management-api.md
-            - name: Die Benutzeroberfläche der früheren Versionen wurde für lokale Volumes entfernt.
+            - name: Benutzeroberfläche früherer Versionen für lokale Volumes entfernt
               href: volume-shadow-copy-service-ui-removed.md
-            - name: Storahci ersetzt msahci
+            - name: StorAHCI ersetzt MSAHCI.
               href: storahci-replaces-msahci.md
-            - name: Windows 7-Sicherung und-Wiederherstellung als veraltet markiert
+            - name: 'Windows 7: Sicherung und Wiederherstellung als veraltet'
               href: windows-7-backup-and-restore-deprecated.md
-            - name: Offloaded-Datenübertragungen
+            - name: Ausgelagerte Datenübertragungen
               href: offloaded-data-transfers.md
-            - name: Desktopfenster-Manager ist Always on
+            - name: Desktopfenster-Manager ist Always On
               href: desktop-window-manager-is-always-on.md
-            - name: Direct2D bietet keine Unterstützung für das Rendern von Rich-Metafiles in Internet Explorer 9.
+            - name: Direct2D unterstützt in Internet Explorer 9 kein Rendering in Rich Metafiles.
               href: direct2d-does-not-support-rendering-to-rich-metafiles-in-internet-explorer-9.md
-            - name: Änderungen in DX9 Legacy Hardware Unterstützung
+            - name: Änderungen an der DX9-Legacyhardwareunterstützung
               href: changes-in-dx9-legacy-hardware-support.md
             - name: MSAA ist für Windows Store-Apps nicht verfügbar.
               href: msaa-is-not-available-to-appcontainer-apps.md
-            - name: 'Port 3 ist für NDIS 6,30-Treiber veraltet'
+            - name: Port 3 ist für NDIS 6.30-Treiber veraltet
               href: port-3-is-deprecated-for-ndis-6-30-drivers.md
         - name: Neue Features und Verbesserungen
           href: new-features-and-enhancements.md
           items:
             - name: Antischadsoftware-Frühstart
               href: secured-boot.md
-            - name: Funktionen zum Signieren von sicheren Start Features für Kernelmodustreiber
+            - name: Signierungsanforderungen für Sichere Startfeatures für Kernelmodustreiber
               href: secured-boot-signing-requirements-for-kernel-mode-drivers.md
             - name: Kontrollierter Start
               href: measured-boot.md
-            - name: Start-apps
+            - name: Start-Apps
               href: startup-apps.md
             - name: Automatische Wartung
               href: automatic-maintenance.md
             - name: Eingabemethoden-Editoren von Drittanbietern
               href: third-party-input-method-editors.md
-            - name: Neue API ermöglicht apps das Senden &quot; von Trim-und unmap- &quot; hinweisen an Speichermedien.
+            - name: Neue API ermöglicht Apps das Senden von &quot; TRIM- und Unmap-Hinweisen &quot; an Storage Medien
               href: new-api-allows-apps-to-send--trim-and-unmap--hints-to-storage-media.md
-            - name: Multipfad-e/a unterstützt jetzt erweiterte SRSB
+            - name: Multipfad-E/A unterstützt jetzt erweiterte SRBs.
               href: multipath-i-o-now-supports-extended-srbs.md
             - name: 'Robustes Dateisystem (Resilient File System, ReFS)'
               href: resilient-file-system--refs-.md
-            - name: Datei Server-API-Unterstützung
+            - name: Dateiserver-API-Unterstützung
               href: file-server-api-support.md
-            - name: Neue Funktion "Datei Versionsverlauf"
+            - name: Neues Dateiversionsverlauf-Feature
               href: new-file-history-feature.md
-            - name: Betriebs System steuert jetzt die Stromversorgung auf optischen Laufwerken
+            - name: Betriebssystem steuert jetzt die Stromversorgung von optischen Laufwerken
               href: operating-system-now-controls-power-to-optical-disk-drives.md
-            - name: 'Unterstützung für USB 3,0'
+            - name: Unterstützung für USB 3.0
               href: support-for-usb-3-0.md
         - name: 'Tools, bewährte Methoden und Anleitungen'
           href: tools--best-practices--and-guidance.md

@@ -14,16 +14,16 @@ api_type:
 api_location:
 - Windowscodecs.dll
 - Wincodec.lib
-ms.openlocfilehash: 0f8ab87860c77cf58f73491a1fb5fc1b658ed67f
-ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
+ms.openlocfilehash: af57499fb59c88d3cf8a1d0e4625550825df5f0e04245f9bec4706e602fd2006
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2021
-ms.locfileid: "108091118"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118711923"
 ---
 # <a name="iwicbitmapframeencode_commit_proxy-function"></a>IWICBitmapFrameEncode-Commitproxyfunktion \_ \_
 
-Proxyfunktion für die [**Commit-Methode.**](/windows/desktop/api/Wincodec/nf-wincodec-iwicbitmapframeencode-commit)
+Proxyfunktion für [](/windows/desktop/api/Wincodec/nf-wincodec-iwicbitmapframeencode-commit) die Commit-Methode.
 
 ## <a name="syntax"></a>Syntax
 
@@ -40,7 +40,7 @@ HRESULT IWICBitmapFrameEncode_Commit_Proxy(
 
 <dl> <dt>
 
-*THIS \_ PTR* \[ in\]
+*DIES \_ PTR* \[ in\]
 </dt> <dd>
 
 Typ: **[ **IWICBitmapFrameEncode**](/windows/desktop/api/Wincodec/nn-wincodec-iwicbitmapframeencode)\***
@@ -53,7 +53,7 @@ Zeiger auf dieses [**IWICBitmapFrameEncode-Objekt.**](/windows/desktop/api/Winco
 
 Typ: **HRESULT**
 
-Wenn diese Funktion erfolgreich ist, wird **S \_ OK zurückgegeben.** Andernfalls wird ein **HRESULT-Fehlercode** zurückgegeben.
+Wenn diese Funktion erfolgreich ausgeführt wird, wird **S \_ OK** zurückgegeben. Andernfalls wird ein **HRESULT-Fehlercode** zurückgegeben.
 
 ## <a name="remarks"></a>Bemerkungen
 
@@ -61,10 +61,10 @@ Wenn diese Funktion erfolgreich ist, wird **S \_ OK zurückgegeben.** Andernfall
 
 
 
-| Anforderungen | Wert |
+| Anforderung | Wert |
 |-------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Windows XP mit SP2, nur Windows \[ Vista-Desktop-Apps\]<br/>                                                                                              |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server \[ 2008-Desktop-Apps\]<br/>                                                                                                             |
+| Unterstützte Mindestversion (Client)<br/> | Windows NUR XP mit SP2, Windows \[ Vista-Desktop-Apps\]<br/>                                                                                              |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2008-Desktop-Apps\]<br/>                                                                                                             |
 | DLL<br/>                      | <dl> <dt>Windowscodecs.dll; </dt> <dt>Wincodec.lib</dt> </dl> |
 
 

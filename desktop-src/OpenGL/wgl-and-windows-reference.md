@@ -1,53 +1,53 @@
 ---
-title: WGL-und Windows-Referenz
-description: WGL-und Windows-Referenz
+title: WGL- und Windows-Referenz
+description: WGL- und Windows-Referenz
 ms.assetid: 76775ae9-0467-487f-afbd-a995d2c157d9
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: e1cc45e4fafa8657954758be6e2f49fc5c812954
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: 9c7f3b1467b5f744bea37f29f39f671c155af79d5915e9d46cc64b2dbac81c72
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "103711219"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117980278"
 ---
-# <a name="wgl-and-windows-reference"></a>WGL-und Windows-Referenz
+# <a name="wgl-and-windows-reference"></a>WGL- und Windows-Referenz
 
-Im folgenden sind die Funktionen aufgeführt:
+Es folgen die Funktionen:
 
--   [**Auswahl Pixel Format**](/windows/desktop/api/wingdi/nf-wingdi-choosepixelformat)
--   [**Describepixelformat**](/windows/desktop/api/wingdi/nf-wingdi-describepixelformat)
--   [**Getenhmetafilepixelformat**](/windows/desktop/api/wingdi/nf-wingdi-getenhmetafilepixelformat)
+-   [**ChoosePixelFormat**](/windows/desktop/api/wingdi/nf-wingdi-choosepixelformat)
+-   [**DescribePixelFormat**](/windows/desktop/api/wingdi/nf-wingdi-describepixelformat)
+-   [**GetEnhMetaFilePixelFormat**](/windows/desktop/api/wingdi/nf-wingdi-getenhmetafilepixelformat)
 -   [**GetPixelFormat**](/windows/desktop/api/wingdi/nf-wingdi-getpixelformat)
 -   [**SetPixelFormat**](/windows/desktop/api/wingdi/nf-wingdi-setpixelformat)
--   [**Austausch Puffer**](/windows/desktop/api/wingdi/nf-wingdi-swapbuffers)
--   [**wglkreatecontext**](/windows/desktop/api/wingdi/nf-wingdi-wglcreatecontext)
--   [**wglkreatelayercontext**](/windows/desktop/api/wingdi/nf-wingdi-wglcreatelayercontext)
--   [**wglcopycontext**](/windows/desktop/api/wingdi/nf-wingdi-wglcopycontext)
--   [**wgldeletecontext**](/windows/desktop/api/wingdi/nf-wingdi-wgldeletecontext)
--   [**wgldescribelayerplane**](/windows/desktop/api/wingdi/nf-wingdi-wgldescribelayerplane)
--   [**wglgetcurrentcontext**](/windows/desktop/api/wingdi/nf-wingdi-wglgetcurrentcontext)
--   [**wglgetcurrentdc**](/windows/desktop/api/wingdi/nf-wingdi-wglgetcurrentdc)
--   [**wglgetlayerpaletteentries**](/windows/desktop/api/wingdi/nf-wingdi-wglgetlayerpaletteentries)
--   [**wglgetprocaddress**](/windows/desktop/api/wingdi/nf-wingdi-wglgetprocaddress)
--   [**wglmakecurrent**](/windows/desktop/api/wingdi/nf-wingdi-wglmakecurrent)
--   [**wglrealizelayerpalette**](/windows/desktop/api/wingdi/nf-wingdi-wglrealizelayerpalette)
--   [**wglsetlayerpaletteentries**](/windows/desktop/api/wingdi/nf-wingdi-wglsetlayerpaletteentries)
--   [**wglsharelists**](/windows/desktop/api/wingdi/nf-wingdi-wglsharelists)
--   [**wglswaplayerbuffers**](/windows/desktop/api/wingdi/nf-wingdi-wglswaplayerbuffers)
--   [**wgluseefontbitmaps**](/windows/desktop/api/wingdi/nf-wingdi-wglusefontbitmapsa)
--   [**wgluseelfontgliederungen**](/windows/desktop/api/wingdi/nf-wingdi-wglusefontoutlinesa)
+-   [**SwapBuffers**](/windows/desktop/api/wingdi/nf-wingdi-swapbuffers)
+-   [**wglCreateContext**](/windows/desktop/api/wingdi/nf-wingdi-wglcreatecontext)
+-   [**wglCreateLayerContext**](/windows/desktop/api/wingdi/nf-wingdi-wglcreatelayercontext)
+-   [**wglCopyContext**](/windows/desktop/api/wingdi/nf-wingdi-wglcopycontext)
+-   [**wglDeleteContext**](/windows/desktop/api/wingdi/nf-wingdi-wgldeletecontext)
+-   [**wglDescribeLayerPlane**](/windows/desktop/api/wingdi/nf-wingdi-wgldescribelayerplane)
+-   [**wglGetCurrentContext**](/windows/desktop/api/wingdi/nf-wingdi-wglgetcurrentcontext)
+-   [**wglGetCurrentDC**](/windows/desktop/api/wingdi/nf-wingdi-wglgetcurrentdc)
+-   [**wglGetLayerPaletteEntries**](/windows/desktop/api/wingdi/nf-wingdi-wglgetlayerpaletteentries)
+-   [**wglGetProcAddress**](/windows/desktop/api/wingdi/nf-wingdi-wglgetprocaddress)
+-   [**wglMakeCurrent**](/windows/desktop/api/wingdi/nf-wingdi-wglmakecurrent)
+-   [**wglRealizeLayerPalette**](/windows/desktop/api/wingdi/nf-wingdi-wglrealizelayerpalette)
+-   [**wglSetLayerPaletteEntries**](/windows/desktop/api/wingdi/nf-wingdi-wglsetlayerpaletteentries)
+-   [**wglShareLists**](/windows/desktop/api/wingdi/nf-wingdi-wglsharelists)
+-   [**wglSwapLayerBuffers**](/windows/desktop/api/wingdi/nf-wingdi-wglswaplayerbuffers)
+-   [**wglUseFontBitmaps**](/windows/desktop/api/wingdi/nf-wingdi-wglusefontbitmapsa)
+-   [**wglUseFontOutlines**](/windows/desktop/api/wingdi/nf-wingdi-wglusefontoutlinesa)
 
-Im folgenden sind die-Strukturen aufgeführt:
+Es folgen die Strukturen:
 
--   [**Glyphmetricsfloat**](/windows/desktop/api/wingdi/ns-wingdi-glyphmetricsfloat)
--   [**Layerplanedescriptor**](/windows/win32/api/wingdi/ns-wingdi-layerplanedescriptor)
--   [**Pixelformatdescriptor**](/windows/win32/api/wingdi/ns-wingdi-pixelformatdescriptor)
--   [**Pointfloat**](/windows/desktop/api/wingdi/ns-wingdi-pointfloat)
+-   [**GLYPHMETRICSFLOAT**](/windows/desktop/api/wingdi/ns-wingdi-glyphmetricsfloat)
+-   [**LAYERPLANEDESCRIPTOR**](/windows/win32/api/wingdi/ns-wingdi-layerplanedescriptor)
+-   [**PIXELFORMATDESCRIPTOR**](/windows/win32/api/wingdi/ns-wingdi-pixelformatdescriptor)
+-   [**POINTFLOAT**](/windows/desktop/api/wingdi/ns-wingdi-pointfloat)
 
- 
+ 
 
- 
+ 
 
 
 

@@ -1,17 +1,17 @@
 ---
-title: Itssbtarget-IPADRESSEN (Eigenschaft)
-description: Ruft die externen IP-Adressen des Ziels ab oder legt Sie fest.
+title: ITsSbTarget IpAddresses-Eigenschaft
+description: Ruft die externen IP-Adressen des Ziels ab oder gibt sie an.
 ms.assetid: 938a753c-d541-4772-b41b-817324488685
 ms.tgt_platform: multiple
 keywords:
-- Targetexternalipadressen-Eigenschaft Remotedesktopdienste
-- Targetexternalipadressen-Eigenschaft Remotedesktopdienste, itssbtarget-Schnittstelle
-- Targetexternalipadressen-Eigenschaft Remotedesktopdienste, itssbtarget-Schnittstelle
-- IPADRESSEN-Eigenschaft Remotedesktopdienste
-- IPADRESSEN-Eigenschaft Remotedesktopdienste, itssbtarget-Schnittstelle
-- Itssbtarget-Schnittstelle Remotedesktopdienste, IPADRESSEN-Eigenschaft
-- IPADRESSEN-Eigenschaft Remotedesktopdienste, itssbtargetex-Schnittstelle
-- Itssbtargetex-Schnittstelle Remotedesktopdienste, IPADRESSEN-Eigenschaft
+- TargetExternalIpAddresses-Eigenschaft Remotedesktopdienste
+- TargetExternalIpAddresses-Eigenschaft Remotedesktopdienste , ITsSbTarget-Schnittstelle
+- TargetExternalIpAddresses-Eigenschaft Remotedesktopdienste , ITsSbTarget-Schnittstelle
+- IpAddresses-Eigenschaft Remotedesktopdienste
+- IpAddresses-Eigenschaft Remotedesktopdienste , ITsSbTarget-Schnittstelle
+- ITsSbTarget-Schnittstelle Remotedesktopdienste , IpAddresses-Eigenschaft
+- IpAddresses-Eigenschaft Remotedesktopdienste , ITsSbTargetEx-Schnittstelle
+- ITsSbTargetEx-Schnittstelle Remotedesktopdienste , IpAddresses-Eigenschaft
 topic_type:
 - apiref
 api_name:
@@ -31,16 +31,16 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: c8b3902840b24bc49ae3bda0510c8355afb67810
-ms.sourcegitcommit: 57758ecb246c84d65e6e0e4bd5570d9176fa39cd
+ms.openlocfilehash: e2ff06e60f125590154a17cb7467deae3611a617b684e9068439c9e15609d8fe
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "104389125"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118351252"
 ---
-# <a name="itssbtargetipaddresses-property"></a>Itssbtarget:: IPADRESSEN-Eigenschaft
+# <a name="itssbtargetipaddresses-property"></a>ITsSbTarget::IpAddresses-Eigenschaft
 
-Ruft die externen IP-Adressen des Ziels ab oder legt Sie fest.
+Ruft die externen IP-Adressen des Ziels ab oder gibt sie an.
 
 Dies ist eine Eigenschaft mit Lese- und Schreibzugriff.
 
@@ -63,15 +63,15 @@ HRESULT get_IpAddresses(
 
 ## <a name="property-value"></a>Eigenschaftswert
 
-Ein Zeiger auf ein Array von [**Tssd- \_ ConnectionPoint**](/windows/win32/api/sessdirpublictypes/ns-sessdirpublictypes-tssd_connectionpoint) -Strukturen, die die externen IP-Adressen des Ziels empfangen.
+Ein Zeiger auf ein Array von [**TSSD \_ ConnectionPoint-Strukturen,**](/windows/win32/api/sessdirpublictypes/ns-sessdirpublictypes-tssd_connectionpoint) die die externen IP-Adressen des Ziels empfangen.
 
-Ein Zeiger auf eine **DWORD** -Variable, die die Anzahl externer IP-Adressen im *sockaddr* -Parameter enthält. Wenn die Anzahl der Adressen unbekannt ist, übergeben Sie *sockaddr* als **null**. Die-Methode gibt die Anzahl der [**Tssd- \_ ConnectionPoint**](/windows/win32/api/sessdirpublictypes/ns-sessdirpublictypes-tssd_connectionpoint) -Strukturen zurück, die erforderlich sind, um im Array zuzuordnen, auf das durch den *sockaddr* -Parameter verwiesen wird.
+Ein Zeiger auf eine **DWORD-Variable,** die die Anzahl externer IP-Adressen im *Sockaddr-Parameter* enthält. Wenn die Anzahl der Adressen unbekannt ist, übergeben Sie *sockaddr* als **NULL.** Die -Methode gibt die Anzahl der [**\_ TSSD-ConnectionPoint-Strukturen**](/windows/win32/api/sessdirpublictypes/ns-sessdirpublictypes-tssd_connectionpoint) zurück, die für die Zuordnung im Array erforderlich sind, auf das der *sockaddr-Parameter* zeigt.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Diese Eigenschaft wurde früher als **targetexternalipadressen** in Windows Server 2008 R2 bezeichnet.
+Diese Eigenschaft wurde in Windows Server 2008 R2 früher als **TargetExternalIpAddresses** bezeichnet.
 
-Wenn die Anzahl externer IP-Adressen unbekannt ist, können Sie diese Methode mit *sockaddr* -Wert auf **null** festlegen. Die-Methode gibt dann im *numadkleidungs* -Parameter die Anzahl der [**Tssd- \_ ConnectionPoint**](/windows/win32/api/sessdirpublictypes/ns-sessdirpublictypes-tssd_connectionpoint) -Strukturen zurück, die erforderlich sind, um alle externen IP-Adressen zu erhalten. Weisen Sie das Array für *sockaddr* auf Grundlage dieser Zahl zu, und klicken Sie dann erneut auf die Methode, und legen Sie *sockaddr* auf das neu zugewiesene Array und *numadcookiezeichen* auf die Zahl fest, die vom ersten-Befehl zurückgegeben wird.
+Wenn die Anzahl der externen IP-Adressen unbekannt ist, können Sie diese Methode aufrufen, wobei *sockaddr* auf **NULL** festgelegt ist. Die -Methode gibt dann im *numAddresses-Parameter* die Anzahl der [**TSSD-ConnectionPoint-Strukturen \_**](/windows/win32/api/sessdirpublictypes/ns-sessdirpublictypes-tssd_connectionpoint) zurück, die zum Empfangen aller externen IP-Adressen erforderlich sind. Ordnen Sie das Array für *sockaddr* basierend auf dieser Zahl zu, und rufen Sie dann die -Methode erneut auf, indem Sie *sockaddr* auf das neu zugeordnete Array und *numAddresses* auf die Zahl festlegen, die durch den ersten Aufruf zurückgegeben wird.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -92,15 +92,15 @@ Wenn die Anzahl externer IP-Adressen unbekannt ist, können Sie diese Methode mi
 <td>Windows Server 2012<br/></td>
 </tr>
 <tr class="odd">
-<td>IDL<br/></td>
-<td><dl> <dt>Sbtsv. idl</dt> </dl></td>
+<td>Idl<br/></td>
+<td><dl> <dt>Sbtsv.idl</dt> </dl></td>
 </tr>
 <tr class="even">
 <td>IID<br/></td>
-<td>IID_ITsSbTarget ist definiert als:
+<td>IID_ITsSbTarget ist wie folgt definiert:
 <ul>
-<li>16616ecc-272d-411d-b324-126893033856</li>
-<li>e85e10ea-db0b-4752-b456-5sd5840901c0 unter Windows Server 2008 R2</li>
+<li>16616ECC-272D-411D-B324-126893033856</li>
+<li>e85e10ea-db0b-4752-b456-5fd5840901c0 auf Windows Server 2008 R2</li>
 </ul></td>
 </tr>
 </tbody>
@@ -108,17 +108,17 @@ Wenn die Anzahl externer IP-Adressen unbekannt ist, können Sie diese Methode mi
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Itssbtargetex**](itssbtargetex.md)
+[**ITsSbTargetEx**](itssbtargetex.md)
 </dt> <dt>
 
-[**Itssbtarget**](/windows/desktop/api/sbtsv/nn-sbtsv-itssbtarget)
+[**ITsSbTarget**](/windows/desktop/api/sbtsv/nn-sbtsv-itssbtarget)
 </dt> <dt>
 
-[**Tssd- \_ ConnectionPoint**](/windows/win32/api/sessdirpublictypes/ns-sessdirpublictypes-tssd_connectionpoint)
+[**TSSD \_ ConnectionPoint**](/windows/win32/api/sessdirpublictypes/ns-sessdirpublictypes-tssd_connectionpoint)
 </dt> </dl>
 
  

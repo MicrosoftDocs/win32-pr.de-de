@@ -1,33 +1,33 @@
 ---
-title: Umbenennen der kompilierten Ressourcen Datei
-description: Bei der Ressourcen Kompilierung benennt RC die kompilierte Ressourcen Datei (. res) standardmäßig mit dem Basis Namen der RC-Datei und platziert Sie im gleichen Verzeichnis wie die RC-Datei.
+title: Umbenennen der kompilierten Ressourcendatei
+description: Standardmäßig benennt RC beim Kompilieren von Ressourcen die kompilierte Ressourcendatei (RES) mit dem Basisnamen der RC-Datei und platziert sie im gleichen Verzeichnis wie die RC-Datei.
 ms.assetid: be120032-666f-4627-8f98-96bde7c55fa4
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 8c54e22cff753dbc59cbce61cd71874c8fe77a85
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: 60f2a920eeed6c1b96b512511b965b0243b89e4f6888120c6183b7a3104963c6
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "104206314"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118733517"
 ---
-# <a name="renaming-the-compiled-resource-file"></a>Umbenennen der kompilierten Ressourcen Datei
+# <a name="renaming-the-compiled-resource-file"></a>Umbenennen der kompilierten Ressourcendatei
 
-Bei der Ressourcen Kompilierung benennt RC die kompilierte Ressourcen Datei (. res) standardmäßig mit dem Basis Namen der RC-Datei und platziert Sie im gleichen Verzeichnis wie die RC-Datei. CVTRES muss dann aufgerufen werden, um die res-Datei in ein binäres Ressourcen Format (. RBJ) zu konvertieren, das vom Linker interpretiert werden kann. Im folgenden Beispiel wird "MyApp. RC" kompiliert und eine kompilierte Ressourcen Datei mit dem Namen "MyApp. res" im selben Verzeichnis wie "MyApp. RC" erstellt:
+Standardmäßig benennt RC beim Kompilieren von Ressourcen die kompilierte Ressourcendatei (RES) mit dem Basisnamen der RC-Datei und platziert sie im gleichen Verzeichnis wie die RC-Datei. CVTRES muss dann aufgerufen werden, um die RES-Datei in ein binäres Ressourcenformat (.rbj) zu konvertieren, das vom Linker verstanden werden kann. Im folgenden Beispiel wird MyApp.rc kompiliert und eine kompilierte Ressourcendatei namens MyApp.res im gleichen Verzeichnis wie MyApp.rc erstellt:
 
-**RC MyApp. RC**
+**rc myapp.rc**
 
-Die **/FO** -Option gibt der resultierenden res-Datei einen Namen, der sich vom Namen der entsprechenden RC-Datei unterscheidet. Verwenden Sie z. b. den folgenden Befehl, um die resultierende res-Datei "newFile. res" zu benennen:
+Die **Option /fo** gibt der resultierenden RES-Datei einen Namen, der sich vom Namen der entsprechenden RC-Datei unterscheidet. Um beispielsweise die resultierende RES-Datei NewFile.res zu benennen, verwenden Sie den folgenden Befehl:
 
-**RC-FO newFile. res MyApp. RC**
+**rc -fo newfile.res myapp.rc**
 
-Die **/FO** -Option kann die res-Datei auch in einem anderen Verzeichnis platzieren. Beispielsweise wird mit dem folgenden Befehl die kompilierte Ressourcen Datei "MyApp. res" in das Verzeichnis "C: Source" eingefügt \\ \\ :
+Mit **der Option /fo** kann die RES-Datei auch in einem anderen Verzeichnis gespeichert werden. Beispielsweise platziert der folgende Befehl die kompilierte Ressourcendatei MyApp.res im Verzeichnis C: \\ \\ Quellressource:
 
-**RC-FO c: \\ Quell \\ Ressource \\ myapp. res MyApp. RC**
+**rc -fo c: \\ \\ \\ Quellressource myapp.res myapp.rc**
 
- 
+ 
 
- 
+ 
 
 
 

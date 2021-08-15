@@ -13,7 +13,7 @@ ms.locfileid: "118547062"
 ---
 # <a name="registering-and-activating-components-in-partitions"></a>Registrieren und Aktivieren von Komponenten in Partitionen
 
-Nachdem eine Partition erstellt wurde, registrieren Sie im nächsten Schritt Ihre COM+-Komponenten in dieser Partition. Eine Komponente wird innerhalb einer Partition registriert, wenn eine neue COM+-Anwendung erstellt wird oder wenn eine vorhandene COM+-Anwendung in der Partition installiert wird. Um die Verwaltung der Registrierung zu erleichtern, wenn mehrere Partitionen die gleichen COM+-Komponenten enthalten, ermöglicht der Partitionsdienst einem Administrator das Kopieren von Anwendungen oder Komponenten aus einer Partition in eine andere. Wenn eine COM+-Anwendung oder eine Komponente kopiert wird, werden alle zugeordneten Partitionseigenschaften mit ausnahme der Identität der Anwendung oder eines der Mitglieder einer Rolle kopiert.
+Nachdem eine Partition erstellt wurde, besteht der nächste Schritt darin, Ihre COM+-Komponenten in dieser Partition zu registrieren. Eine Komponente wird innerhalb einer Partition registriert, wenn eine neue COM+-Anwendung erstellt oder eine vorhandene COM+-Anwendung in der Partition installiert wird. Um die Verwaltung der Registrierung zu vereinfachen, wenn mehrere Partitionen die gleichen COM+-Komponenten enthalten, ermöglicht der Partitionsdienst einem Administrator das Kopieren von Anwendungen oder Komponenten aus einer Partition in eine andere. Wenn eine COM+-Anwendung oder eine Komponente kopiert wird, werden alle zugehörigen Partitionseigenschaften mit Ausnahme der Identität der Anwendung oder eines der Mitglieder einer Rolle kopiert.
 
 Wenn das Clientprogramm die [**CoCreateInstance-**](/windows/desktop/api/combaseapi/nf-combaseapi-cocreateinstance) oder [**CoGetObject-Funktion**](/windows/desktop/api/objbase/nf-objbase-cogetobject) aufruft, um ein Objekt zu instanziieren, führt COM+ wie folgt zwei unterschiedliche Schritte aus:
 
@@ -29,10 +29,10 @@ In den folgenden Themen in diesem Abschnitt werden diese Schritte ausführlich b
 
 <dl> <dt>
 
-[Anwendungsentwurfseinschränkungen](application-design-restrictions.md)
+[Einschränkungen beim Anwendungsentwurf](application-design-restrictions.md)
 </dt> <dt>
 
-[KOMPONENTEN und Partitionen in DER COM+-Warteschlange](com--queued-components-and-partitions.md)
+[COM+-Komponenten und -Partitionen in der Warteschlange](com--queued-components-and-partitions.md)
 </dt> <dt>
 
 [Partitionsimplementierung](partition-implementation.md)

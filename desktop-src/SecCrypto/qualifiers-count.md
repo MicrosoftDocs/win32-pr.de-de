@@ -1,7 +1,7 @@
 ---
-description: Ruft die Anzahl der qualifiziererobjekte in der Auflistung ab.
+description: Ruft die Anzahl der Qualifiziererobjekte in der Auflistung ab.
 ms.assetid: 9dafb83a-ff7f-4317-8ed4-2a46dcebf409
-title: Qualifizierer. Count-Eigenschaft
+title: Qualifiers.Count-Eigenschaft
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,18 +13,18 @@ api_type:
 - COM
 api_location:
 - Capicom.dll
-ms.openlocfilehash: 2ffb79941a78602bfda8f5287b0f4df7205d4d86
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 5fd4cfe0d600c99251db77b1764edb83353b01143fc5179c1efc29673e30e734
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106354813"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118900946"
 ---
-# <a name="qualifierscount-property"></a>Qualifizierer. Count-Eigenschaft
+# <a name="qualifierscount-property"></a>Qualifiers.Count-Eigenschaft
 
-\[Die **count** -Eigenschaft ist für die Verwendung in den Betriebssystemen verfügbar, die im Abschnitt "Anforderungen" angegeben sind. Verwenden Sie stattdessen die [**X509Extension-Klasse**](/dotnet/api/system.security.cryptography.x509certificates.x509extension?view=netcore-3.1) im [**System. Security. Cryptography. X509Certificates**](/dotnet/api/system.security.cryptography.x509certificates.publickey.-ctor?view=netcore-3.1) -Namespace, indem Sie den Konstruktor aufrufen, der eine OID als Parameter annimmt, und dann die OID für Zertifikat Richtlinien verwenden, um Qualifizierer zu verarbeiten, die Teil der Richtlinien Informationen in der Zertifikat Richtlinien Erweiterung sind.\]
+\[Die **Count-Eigenschaft** ist für die Verwendung in den im Abschnitt Anforderungen angegebenen Betriebssystemen verfügbar. Verwenden Sie stattdessen die [**X509Extension-Klasse**](/dotnet/api/system.security.cryptography.x509certificates.x509extension?view=netcore-3.1) im [**Namespace System.Security.Cryptography.X509Certificates,**](/dotnet/api/system.security.cryptography.x509certificates.publickey.-ctor?view=netcore-3.1) indem Sie den Konstruktor aufrufen, der eine OID als Parameter akzeptiert, und dann die OID für Zertifikatrichtlinien verwenden, um Qualifizierer zu verarbeiten, die Teil der Richtlinieninformationen in der Zertifikatrichtlinienerweiterung sind.\]
 
-Die **count** -Eigenschaft ruft die Anzahl der [**qualifiziererobjekte**](qualifier.md) in der Auflistung ab.
+Die **Count-Eigenschaft** ruft die Anzahl der [**Qualifiziererobjekte**](qualifier.md) in der Auflistung ab.
 
 ## <a name="syntax"></a>Syntax
 
@@ -37,7 +37,7 @@ Qualifiers.Count As Long
 
 ## <a name="property-value"></a>Eigenschaftswert
 
-Anzahl der [**qualifiziererobjekte**](qualifier.md) in der Auflistung.
+Anzahl der [**Qualifiziererobjekte**](qualifier.md) in der Auflistung.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -45,12 +45,12 @@ Anzahl der [**qualifiziererobjekte**](qualifier.md) in der Auflistung.
 
 | Anforderung | Wert |
 |----------------------------|----------------------------------------------------------------------------------------|
-| Verteilbare Komponente<br/> | CAPICOM 2,0 oder höher unter Windows Server 2003 und Windows XP<br/>                  |
+| Verteilbare Komponente<br/> | CAPICOM 2.0 oder höher auf Windows Server 2003 und Windows XP<br/>                  |
 | DLL<br/>             | <dl> <dt>Capicom.dll</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
