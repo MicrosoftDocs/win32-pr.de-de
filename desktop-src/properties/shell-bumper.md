@@ -17,7 +17,7 @@ ms.locfileid: "118463895"
 
 
 
-| Thema                                                                                                  | Beschreibung                                                                                                                 |
+| Thema                                                                                                  | BESCHREIBUNG                                                                                                                 |
 |--------------------------------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------|
 | [System.DescriptionID](./props-system-descriptionid.md)<br/>                               | Der Inhalt einer [**SHDESCRIPTIONID-Struktur,**](/windows/win32/api/shlobj_core/ns-shlobj_core-shdescriptionid) dargestellt als Bytepuffer.<br/> |
 | [System.InternalName](./props-system-internalname.md)<br/>                                 | Der Name eines .exe oder .dll, wie er in einem Ressourcenabschnitt in dieser Datei gespeichert ist.<br/>                                |

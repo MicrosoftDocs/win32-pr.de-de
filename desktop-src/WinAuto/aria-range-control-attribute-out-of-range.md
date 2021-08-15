@@ -19,11 +19,11 @@ ms.locfileid: "118326748"
 
 Das Element verfügt über **eine Progressbar-** oder **Schiebereglerrolle,** aber der verfügbar gemachte **aria-valuenow-Wert** liegt außerhalb des **Bereichs aria-valuemin** **aria-valuemax.**
 
-## <a name="type"></a>type
+## <a name="type"></a>Typ
 
 Fehler
 
-## <a name="description"></a>BESCHREIBUNG
+## <a name="description"></a>Beschreibung
 
 Dieser Fehler gilt für Elemente, die über eine [**Rolle**](https://developer.mozilla.org/docs/Web/HTML/Reference) (implizit oder explizit) verfügen, die der **Statusleiste,** dem **Schieberegler** oder dem **Drehfeld entspricht.**
 

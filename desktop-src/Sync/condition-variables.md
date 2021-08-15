@@ -1,43 +1,43 @@
 ---
-description: Bedingungs Variablen sind Synchronisierungs primitive, mit denen Threads warten können, bis eine bestimmte Bedingung eintritt. Bedingungs Variablen sind Benutzermodus-Objekte, die nicht Prozess übergreifend freigegeben werden können.
+description: Bedingungsvariablen sind Synchronisierungsprimitiven, mit denen Threads warten können, bis eine bestimmte Bedingung auftritt. Bedingungsvariablen sind Benutzermodusobjekte, die nicht prozessübergreifend freigegeben werden können.
 ms.assetid: fef9bab0-cd69-4812-869a-b43a10772d86
-title: Bedingungs Variablen
+title: Bedingungsvariablen
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 711fad7d80c1c5e06fc6e496198cd298b190daba
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: ed05d7ee98b4f5c5a65e633f7d1647b6c624840f9740efb639959c1500bec591
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106368892"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118886360"
 ---
-# <a name="condition-variables"></a>Bedingungs Variablen
+# <a name="condition-variables"></a>Bedingungsvariablen
 
-Bedingungs Variablen sind Synchronisierungs primitive, mit denen Threads warten können, bis eine bestimmte Bedingung eintritt. Bedingungs Variablen sind Benutzermodus-Objekte, die nicht Prozess übergreifend freigegeben werden können.
+Bedingungsvariablen sind Synchronisierungsprimitiven, mit denen Threads warten können, bis eine bestimmte Bedingung auftritt. Bedingungsvariablen sind Benutzermodusobjekte, die nicht prozessübergreifend freigegeben werden können.
 
-Mit Bedingungs Variablen können Threads eine Sperre atomisch freigeben und in den Ruhezustand wechseln. Sie können mit kritischen Abschnitten oder SRW-Sperren (Slim Reader/Writer) verwendet werden. Bedingungs Variablen unterstützen Vorgänge, die wartende Threads "reaktivieren" oder "alle reaktivieren". Nachdem ein Thread aktiviert wurde, erhält er die Sperre erneut, die er freigegeben hat, als der Thread in den Ruhezustand wechselt.
+Bedingungsvariablen ermöglichen Threads, atomisch eine Sperre freizugeben und in den Ruhezustand zu gelangen. Sie können mit kritischen Abschnitten oder SRW-Sperren (Reader/Writer) verwendet werden. Bedingungsvariablen unterstützen Vorgänge, die wartende Threads "reaktivieren". Nachdem ein Thread weckt wurde, erhält er die Sperre erneut, die er freigegeben hat, wenn der Thread in den Ruhezustand übergegangen ist.
 
-Beachten Sie, dass der Aufrufer eine Bedingungs **\_ Variablen** Struktur zuordnen und diese initialisieren muss, indem [**InitializeConditionVariable**](/windows/win32/api/synchapi/nf-synchapi-initializeconditionvariable) aufgerufen wird (um die Struktur dynamisch zu initialisieren), oder die Konstante Bedingungs **\_ Variable \_ Init** der Struktur Variablen zuzuweisen (um die Struktur statisch zu initialisieren).
+Beachten Sie, dass der Aufrufer eine **CONDITION \_ VARIABLE-Struktur** zuordnen und initialisieren muss, indem er entweder [**InitializeConditionVariable**](/windows/win32/api/synchapi/nf-synchapi-initializeconditionvariable) aufruft (um die Struktur dynamisch zu initialisieren) oder die konstante **CONDITION VARIABLE \_ \_ INIT** der Strukturvariablen zuweist (um die Struktur statisch zu initialisieren).
 
-**Windows Server 2003 und Windows XP:** Bedingungs Variablen werden nicht unterstützt.
+**Windows Server 2003 und Windows XP:** Bedingungsvariablen werden nicht unterstützt.
 
-Es folgen die Bedingungs Variablen Funktionen.
+Im Folgenden sind die Bedingungsvariablenfunktionen.
 
 
 
-| Bedingungs Variablen Funktion                                        | BESCHREIBUNG                                                                                                    |
+| Bedingungsvariablenfunktion                                        | BESCHREIBUNG                                                                                                    |
 |--------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------|
-| [**InitializeConditionVariable**](/windows/win32/api/synchapi/nf-synchapi-initializeconditionvariable) | Initialisiert eine Bedingungs Variable.                                                                              |
-| [**SleepConditionVariableCS**](/windows/win32/api/synchapi/nf-synchapi-sleepconditionvariablecs)       | Gibt für die angegebene Bedingungs Variable aus und gibt den angegebenen kritischen Abschnitt als atomarischen Vorgang frei. |
-| [**SleepConditionVariableSRW**](/windows/win32/api/synchapi/nf-synchapi-sleepconditionvariablesrw)     | Gibt für die angegebene Bedingungs Variable aus und gibt die angegebene SRW-Sperre als atomarischen Vorgang frei.         |
-| [**WakeAllConditionVariable**](/windows/win32/api/synchapi/nf-synchapi-wakeallconditionvariable)       | Aktiviert alle Threads, die auf die angegebene Bedingungs Variable warten.                                                 |
-| [**WakeConditionVariable**](/windows/win32/api/synchapi/nf-synchapi-wakeconditionvariable)             | Aktiviert einen einzelnen Thread, der auf die angegebene Bedingungs Variable wartet.                                             |
+| [**InitializeConditionVariable**](/windows/win32/api/synchapi/nf-synchapi-initializeconditionvariable) | Initialisiert eine Bedingungsvariable.                                                                              |
+| [**SleepConditionVariableCS**](/windows/win32/api/synchapi/nf-synchapi-sleepconditionvariablecs)       | Standbymodus für die angegebene Bedingungsvariable und Freigabe des angegebenen kritischen Abschnitts als atomarer Vorgang. |
+| [**SleepConditionVariableSRW**](/windows/win32/api/synchapi/nf-synchapi-sleepconditionvariablesrw)     | Standbymodus für die angegebene Bedingungsvariable und Freigabe der angegebenen SRW-Sperre als atomarer Vorgang.         |
+| [**WakeAllConditionVariable**](/windows/win32/api/synchapi/nf-synchapi-wakeallconditionvariable)       | Aktiviert alle Threads, die auf die angegebene Bedingungsvariable warten.                                                 |
+| [**WakeConditionVariable**](/windows/win32/api/synchapi/nf-synchapi-wakeconditionvariable)             | Aktiviert einen einzelnen Thread, der auf die angegebene Bedingungsvariable wartet.                                             |
 
 
 
  
 
-Der folgende Pseudo Code veranschaulicht das typische Verwendungs Muster von Bedingungs Variablen.
+Der folgende Pseudocode veranschaulicht das typische Verwendungsmuster von Bedingungsvariablen.
 
 ``` syntax
 CRITICAL_SECTION CritSection;
@@ -67,19 +67,19 @@ void PerformOperationOnSharedData()
 }
 ```
 
-Beispielsweise würde die Funktion in einer Implementierung einer Reader-/Schreibsperre `TestPredicate` überprüfen, ob die aktuelle Sperranforderung mit den vorhandenen Besitzern kompatibel ist. Wenn dies der Fall ist, erhalten Sie die Sperre. andernfalls der Standbymodus. Ein ausführlicheres Beispiel finden Sie unter [verwenden](using-condition-variables.md)von Bedingungs Variablen.
+Beispielsweise würde die Funktion in einer Implementierung einer Reader-/Writersperre `TestPredicate` überprüfen, ob die aktuelle Sperranforderung mit den vorhandenen Besitzern kompatibel ist. Wenn dies der Grund ist, erhalten Sie die Sperre. Andernfalls standby. Ein ausführlicheres Beispiel finden Sie unter [Verwenden von Bedingungsvariablen.](using-condition-variables.md)
 
-Bedingungs Variablen unterliegen falschen aufwecken (die nicht mit einem expliziten Aktivierungs Modus verknüpft sind) und gestohlenen aufwecken (ein anderer Thread wird vor dem aufwachten Thread verwaltet). Daher sollten Sie ein Prädikat (in der Regel in einer **while** -Schleife) nach dem zurückkehren eines Ruhe Zustands erneut überprüfen.
+Bedingungsvariablen unterliegen falschen Aktivierungen (die nicht einer expliziten Aktivierung zugeordnet sind) und gestohlenen Aktivierungen (ein anderer Thread verwaltet die Ausführung vor dem aufgeweckten Thread). Daher sollten Sie ein Prädikat (in  der Regel in einer while-Schleife) erneut überprüfen, nachdem ein Standbyvorgang zurückgegeben wurde.
 
-Sie können andere Threads mithilfe von [**WakeConditionVariable**](/windows/win32/api/synchapi/nf-synchapi-wakeconditionvariable) oder [**WakeAllConditionVariable**](/windows/win32/api/synchapi/nf-synchapi-wakeallconditionvariable) entweder innerhalb oder außerhalb der der Bedingungs Variablen zugeordneten Sperre aktivieren. Es ist in der Regel besser, die Sperre freizugeben, bevor andere Threads aktiviert werden, um die Anzahl von Kontext Schaltern zu verringern.
+Sie können andere Threads mit [**WakeConditionVariable**](/windows/win32/api/synchapi/nf-synchapi-wakeconditionvariable) oder [**WakeAllConditionVariable**](/windows/win32/api/synchapi/nf-synchapi-wakeallconditionvariable) entweder innerhalb oder außerhalb der Sperre reaktivieren, die der Bedingungsvariablen zugeordnet ist. Es ist in der Regel besser, die Sperre freizugeben, bevor Sie andere Threads aufrufen, um die Anzahl der Kontextwechsel zu reduzieren.
 
-Häufig ist es praktisch, mehr als eine Bedingungs Variable mit derselben Sperre zu verwenden. Beispielsweise kann eine Implementierung einer Reader-/Writer-Sperre einen einzelnen kritischen Abschnitt verwenden, aber separate Bedingungs Variablen für Reader und Writer.
+Es ist häufig praktisch, mehrere Bedingungsvariablen mit der gleichen Sperre zu verwenden. Beispielsweise kann eine Implementierung einer Reader-/Writersperre einen einzelnen kritischen Abschnitt, aber separate Bedingungsvariablen für Leser und Writer verwenden.
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
 <dl> <dt>
 
-[Verwenden von Bedingungs Variablen](using-condition-variables.md)
+[Verwenden von Bedingungsvariablen](using-condition-variables.md)
 </dt> </dl>
 
  

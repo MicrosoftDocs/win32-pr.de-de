@@ -46,19 +46,19 @@ Typ: **[ **FLOAT**](../winprog/windows-data-types.md)**
 
 </dd> <dd>
 
-Die Komponente (i, j) der Matrix, wobei i die Zeilennummer und j die Spaltennummer ist. Beispielsweise \_ bedeutet 34 das gleiche wie \[ a₃₄ , die Komponente in der \] dritten Zeile und vierten Spalte.
+Die Komponente (i, j) der Matrix, wobei i die Zeilennummer und j die Spaltennummer ist. 34 bedeutet z. B. dasselbe wie a₃₄ , die Komponente in der \_ dritten Zeile und vierten \[ \] Spalte.
 
 </dd> </dl>
 
 ## <a name="remarks"></a>Hinweise
 
-C-Programmierer können die D3DXMATRIX-Struktur nicht verwenden, sie müssen die [**D3DMATRIX-Struktur**](d3dmatrix.md) verwenden. C++-Programmierer können überladene Konstruktoren und Zuweisungsoperatoren, unäre und binäre Operatoren (einschließlich Gleichheit) nutzen.
+C-Programmierer können die D3DXMATRIX-Struktur nicht verwenden. Sie müssen die [**D3DMATRIX-Struktur**](d3dmatrix.md) verwenden. C++-Programmierer können überladene Konstruktoren und Zuweisungsoperatoren, unäre operatoren und binäre Operatoren (einschließlich Gleichheit) nutzen.
 
-In D3DX darf das \_ 34-Element einer Projektionsmatrix keine negative Zahl sein. Wenn Ihre Anwendung an dieser Position einen negativen Wert verwenden muss, sollte stattdessen die gesamte Projektionsmatrix um -1 skaliert werden.
+In D3DX darf \_ das 34-Element einer Projektionsmatrix keine negative Zahl sein. Wenn Ihre Anwendung an dieser Position einen negativen Wert verwenden muss, sollte sie stattdessen die gesamte Projektionsmatrix um -1 skalieren.
 
 ### <a name="d3dxmatrix-extensions"></a>D3DXMATRIX-Erweiterungen
 
-**D3DXMATRIX** verfügt über die folgenden C++-Erweiterungen.
+**D3DXMATRIX verfügt** über die folgenden C++-Erweiterungen.
 
 
 ```

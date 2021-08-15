@@ -1,34 +1,34 @@
 ---
-description: Mithilfe von WMI können Sie Programm gesteuert auf System Leistungsdaten von Objekten in den Leistungs Bibliotheken zugreifen.
+description: Mithilfe von WMI können Sie programmgesteuert über Objekte in den Leistungsbibliotheken auf Systemzählerdaten zugreifen.
 ms.assetid: a0ed14e9-d2ec-43eb-8c8e-eac3c134ea1d
 ms.tgt_platform: multiple
 title: Überwachen von Leistungsdaten
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 95cee18ba88a8aff920c2d14b5709a0fd913e2ad
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: ba4f3ddd5024fb27d83f08225fa65faaa2e7d02cdd28189c86fc979175861453
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106364239"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118317104"
 ---
 # <a name="monitoring-performance-data"></a>Überwachen von Leistungsdaten
 
-Mithilfe von WMI können Sie Programm gesteuert auf System Leistungsdaten von Objekten in den Leistungs Bibliotheken zugreifen. Dies sind die gleichen Leistungsdaten, die im System Monitor im Dienstprogramm Perfmon angezeigt werden. Verwenden Sie die vorinstallierten [Leistungs Leistungs](/windows/desktop/CIMWin32Prov/performance-counter-classes) Daten-Klassen, um Leistungsdaten in Skripts oder C++-Anwendungen abzurufen.
+Mithilfe von WMI können Sie programmgesteuert über Objekte in den Leistungsbibliotheken auf Systemzählerdaten zugreifen. Dies sind die gleichen Leistungsdaten, die im Systemmonitor des Hilfsprogramms Perfmon angezeigt werden. Verwenden Sie die vorinstallierten [Leistungsindikatorklassen,](/windows/desktop/CIMWin32Prov/performance-counter-classes) um Leistungsdaten in Skripts oder C++-Anwendungen abzurufen.
 
-In diesem Thema werden die folgenden Abschnitte erläutert:
+Die folgenden Abschnitte werden in diesem Thema erläutert:
 
 -   [WMI-Leistungsklassen](#wmi-performance-classes)
--   [Leistungsdaten Anbieter](#performance-data-providers)
--   [Verwenden von formatierten Leistungsdaten Klassen](#using-formatted-performance-data-classes)
--   [Verwenden von rohleistungs Daten-Klassen](#using-raw-performance-data-classes)
+-   [Leistungsdatenanbieter](#performance-data-providers)
+-   [Verwenden formatierter Leistungsdatenklassen](#using-formatted-performance-data-classes)
+-   [Verwenden von Unformatierten Leistungsdatenklassen](#using-raw-performance-data-classes)
 -   [Zugehörige Themen](#related-topics)
 
 ## <a name="wmi-performance-classes"></a>WMI-Leistungsklassen
 
-Beispielsweise wird das "Network Interface"-Objekt im System Monitor in WMI durch die [**Win32 \_ perfrawdata \_ tcpip \_ NetworkInterface**](./retrieving-raw-and-formatted-performance-data.md) -Klasse für Rohdaten und die [**Win32 \_ perfformatteddata \_ tcpip \_ NetworkInterface**](/windows/desktop/WmiSdk/retrieving-raw-and-formatted-performance-data) -Klasse für vorab berechnete oder formatierte Daten dargestellt. Klassen, die von [**Win32 \_ perfrawdata**](/windows/desktop/CIMWin32Prov/win32-perfrawdata) und [**Win32 \_ perfformatteddata**](/windows/desktop/CIMWin32Prov/win32-perfformatteddata) abgeleitet werden, müssen mit [*einem Aktualisierungs*](gloss-r.md) Objekt verwendet werden. Bei Rohdaten Klassen muss die C++-Anwendung oder das Skript Berechnungen ausführen, um dieselbe Ausgabe wie Perfmon.exe zu erhalten. Formatierte Daten Klassen stellen vorab berechnete Daten bereit. Weitere Informationen zum Abrufen von Daten in C++-Anwendungen finden Sie unter [zugreifen auf Leistungsdaten in C++](accessing-performance-data-in-c--.md). Informationen zur Skripterstellung finden Sie unter [zugreifen auf Leistungsdaten im Skript](accessing-performance-data-in-script.md) und Aktualisieren von [WMI-Daten in](refreshing-wmi-data-in-scripts.md)Skripts.
+Als Beispiel wird das Objekt "NetworkInterface" im Systemmonitor in WMI durch die [**Win32 \_ PerfRawData \_ Tcpip \_ NetworkInterface-Klasse**](./retrieving-raw-and-formatted-performance-data.md) für Rohdaten und die [**Win32 \_ PerfFormattedData \_ Tcpip \_ NetworkInterface-Klasse**](/windows/desktop/WmiSdk/retrieving-raw-and-formatted-performance-data) für vorab berechnete oder formatierte Daten dargestellt. Von [**Win32 \_ PerfRawData**](/windows/desktop/CIMWin32Prov/win32-perfrawdata) und [**Win32 \_ PerfFormattedData**](/windows/desktop/CIMWin32Prov/win32-perfformatteddata) abgeleitete Klassen müssen mit einem [*Aktualisierungsobjekt*](gloss-r.md) verwendet werden. Bei Rohdatenklassen muss Die C++-Anwendung oder das C++-Skript Berechnungen ausführen, um die gleiche Ausgabe wie Perfmon.exe zu erhalten. Formatierte Datenklassen stellen vorab berechnete Daten zur Verfügung. Weitere Informationen zum Abrufen von Daten in C++-Anwendungen finden Sie unter [Zugreifen auf Leistungsdaten in C++.](accessing-performance-data-in-c--.md) Informationen zur Skripterstellung finden Sie unter [Zugreifen auf Leistungsdaten in Skripts](accessing-performance-data-in-script.md) und [Aktualisieren von WMI-Daten in Skripts.](refreshing-wmi-data-in-scripts.md)
 
-Im folgenden VBScript-Codebeispiel wird der [**Win32 \_ perfformatteddata \_ perfproc- \_ Prozess**](/windows/desktop/WmiSdk/retrieving-raw-and-formatted-performance-data) verwendet, um Leistungsdaten für den Leerlauf Prozess zu erhalten. Das Skript zeigt die gleichen Daten an, die in Perfmon für den Leistungs Monitor "Prozessorzeit (%)" des Prozess Objekts angezeigt werden. Der Aktualisierungs Vorgang wird durch den Aufrufen von " [**errbemubjectex. Refresh \_**](swbemobjectex-refresh-.md) " durchführt. Beachten Sie, dass die Daten bei der Lease einmal aktualisiert werden müssen, um eine Baseline zu erhalten.
+Im folgenden VBScript-Codebeispiel wird [**der Win32 \_ PerfFormattedData \_ PerfProc-Prozess \_**](/windows/desktop/WmiSdk/retrieving-raw-and-formatted-performance-data) verwendet, um Leistungsdaten für den Idle-Prozess abzurufen. Das Skript zeigt die gleichen Daten an, die in Perfmon für den Prozessorzeitindikator %des Process-Objekts angezeigt werden. Der Aufruf von [**SWbemObjectEx.Refresh \_**](swbemobjectex-refresh-.md) führt den Aktualisierungsvorgang aus. Beachten Sie, dass die Daten bei einer Lease einmal aktualisiert werden müssen, um eine Baseline zu erhalten.
 
 
 ```VB
@@ -48,21 +48,21 @@ Wend
 
 
 
-Leistungs Leistungsdaten-Klassen können auch statistische Daten bereitstellen. Weitere Informationen finden Sie unter Abrufen [statistischer Leistungsdaten](obtaining-statistical-performance-data.md).
+Leistungsindikatorklassen können auch statistische Daten bereitstellen. Weitere Informationen finden Sie unter [Abrufen statistischer Leistungsdaten.](obtaining-statistical-performance-data.md)
 
-## <a name="performance-data-providers"></a>Leistungsdaten Anbieter
+## <a name="performance-data-providers"></a>Leistungsdatenanbieter
 
-WMI verfügt über vorinstallierte Anbieter, die die Systemleistung sowohl auf dem lokalen System als auch remote überwachen. Der [wmiperfclass](wmiperfclass-provider.md) -Anbieter erstellt die von [**Win32 \_ perfrawdata**](/windows/desktop/CIMWin32Prov/win32-perfrawdata) abgeleiteten Klassen und aus [**Win32 \_ perfformatteddata**](/windows/desktop/CIMWin32Prov/win32-perfformatteddata). Der [wmiperfinst](wmiperfinst-provider.md) -Anbieter liefert Daten dynamisch für rohklassen und formatierte Klassen.
+WMI verfügt über vorinstallierte Anbieter, die die Systemleistung sowohl auf dem lokalen System als auch remote überwachen. Der [WmiPerfClass-Anbieter](wmiperfclass-provider.md) erstellt die von [**Win32 \_ PerfRawData**](/windows/desktop/CIMWin32Prov/win32-perfrawdata) und [**win32 \_ PerfFormattedData abgeleiteten**](/windows/desktop/CIMWin32Prov/win32-perfformatteddata)Klassen. Der [WmiPerfInst-Anbieter](wmiperfinst-provider.md) stellt Daten dynamisch sowohl für unformatierte als auch für formatierte Klassen bereit.
 
-## <a name="using-formatted-performance-data-classes"></a>Verwenden von formatierten Leistungsdaten Klassen
+## <a name="using-formatted-performance-data-classes"></a>Verwenden formatierter Leistungsdatenklassen
 
-Im folgenden VBScript-Codebeispiel werden Leistungsdaten zu Arbeitsspeicher, Datenträger Partitionen und Server Arbeits Warteschlangen abgerufen. Das Skript bestimmt dann, ob die Werte in einem akzeptablen Bereich liegen.
+Das folgende VBScript-Codebeispiel ruft Leistungsdaten zu Arbeitsspeicher, Datenträgerpartitionen und Serverarbeitswarteschlangen ab. Das Skript bestimmt dann, ob die Werte innerhalb eines akzeptablen Bereichs liegen.
 
-Das Skript verwendet die folgenden WMI-Anbieter Objekte und Skript Objekte:
+Das Skript verwendet die folgenden WMI-Anbieterobjekte und Skriptobjekte:
 
--   Vorinstallierte WMI-Leistungs Leistungsdaten-Klassen.
--   Das aktualisierbare Objekt, [**Swap**](swbemrefresher.md)-Aktualisierungs Programm.
--   Elemente, die dem Aktualisierungs Container hinzugefügt werden sollen, " [ **Swap freshableitem** "](swbemrefreshableitem.md)
+-   Vorinstallierte WMI-Leistungsindikatorklassen.
+-   Das Aktualisierungsobjekt, [**SWbemRefresher.**](swbemrefresher.md)
+-   Elemente, die dem Aktualisierungscontainer hinzugefügt werden sollen, [ **SWbemRefreshableItem**](swbemrefreshableitem.md)
 
 
 ```VB
@@ -125,11 +125,11 @@ Next
 
 
 
-## <a name="using-raw-performance-data-classes"></a>Verwenden von rohleistungs Daten-Klassen
+## <a name="using-raw-performance-data-classes"></a>Verwenden von Unformatierten Leistungsdatenklassen
 
-Im folgenden VBScript-Codebeispiel wird die Rohdaten Prozessorzeit (aktuell%) auf dem lokalen Computer abgerufen und in einen Prozentsatz konvertiert. Das Beispiel zeigt, wie Sie rohleistungs Daten aus der Eigenschaft " **%processortime** " der [**Win32 \_ perfrawdata \_ perfos- \_ Prozessor**](/windows/desktop/WmiSdk/retrieving-raw-and-formatted-performance-data) Klasse abrufen.
+Im folgenden VBScript-Codebeispiel wird die aktuelle Prozessorzeit in Rohdaten in Prozent auf dem lokalen Computer erhalten und in einen Prozentsatz konvertiert. Das Beispiel zeigt, wie Sie Rohleistungsdaten aus der **PercentProcessorTime-Eigenschaft** der [**Win32 \_ PerfRawData \_ PerfOS-Prozessorklasse \_**](/windows/desktop/WmiSdk/retrieving-raw-and-formatted-performance-data) abrufen.
 
-Um den Wert für die Prozessorzeit in Prozent zu berechnen, müssen Sie die Formel suchen. Suchen Sie den Wert im **CounterType** -Qualifizierer für die Eigenschaft " **prozentuprocessortime** " in der Tabelle " [**CounterType Qualifizierer**](countertype-qualifier.md) ", um den konstanten Namen zu erhalten. Suchen Sie den konstanten Namen in den [Counter-Typen](/previous-versions/windows/it-pro/windows-server-2003/cc785636(v=ws.10)) , um die Formel zu erhalten.
+Um den Prozessorzeitwert in Prozent zu berechnen, müssen Sie die Formel suchen. Suchen Sie den Wert im **CounterType-Qualifizierer** für die **PercentProcessorTime-Eigenschaft** in der [**CounterType-Qualifizierertabelle,**](countertype-qualifier.md) um den konstanten Namen abzurufen. Suchen Sie den konstanten Namen in [Indikatortypen,](/previous-versions/windows/it-pro/windows-server-2003/cc785636(v=ws.10)) um die Formel abzurufen.
 
 
 ```VB

@@ -1,6 +1,6 @@
 ---
-title: Verweis für HLSL
-description: In der HLSL-Referenz Dokumentation werden die Sprachmerkmale angegeben. Es ist in mehrere Abschnitte unterteilt.
+title: Referenz zu HLSL
+description: In der HLSL-Referenzdokumentation werden die Sprachmerkmale angegeben. Sie ist in mehrere Abschnitte unterteilt.
 ms.assetid: 1d0e12ff-8559-4e5c-9914-6ed313ea5464
 ms.topic: article
 ms.date: 05/31/2018
@@ -9,39 +9,39 @@ topic_type:
 api_name: ''
 api_type: ''
 api_location: ''
-ms.openlocfilehash: ce0bb59dd26bd8bb9723bcdff23bbc79ee810253
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: 425dc1d56801bbbd6b73429d8d17024a78dffe47a045ec6b34d5cd45b752bcca
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "104037349"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118513849"
 ---
-# <a name="reference-for-hlsl"></a>Verweis für HLSL
+# <a name="reference-for-hlsl"></a>Referenz zu HLSL
 
-In der HLSL-Referenz Dokumentation werden die Sprachmerkmale angegeben. Es ist in mehrere Abschnitte unterteilt.
+In der HLSL-Referenzdokumentation werden die Sprachmerkmale angegeben. Sie ist in mehrere Abschnitte unterteilt.
 
--   [Sprachsyntax (DirectX HLSL)](dx-graphics-hlsl-language-syntax.md) : das Programmieren von Shadern in HLSL erfordert, dass Sie die Sprachsyntax verstehen, d. h. wie Sie HLSL-Code schreiben. Dies umfasst Code zum Deklarieren und Initialisieren von Variablen, Schreiben benutzerdefinierter Shaderfunktionen und Hinzufügen von flowsteuerungsanweisungen, damit ihre Funktionen leistungsfähiger werden.
--   [Shader-Modelle vs shaderprofile](dx-graphics-hlsl-models.md) : der HLSL-Compiler implementiert Regeln und Einschränkungen basierend auf shadermodellen. Der Code in jedem Vertex-Shader, Geometry-Shader (bei Verwendung von Direct3D 10) und PixelShader werden anhand eines shadermodells überprüft, das Sie zum Zeitpunkt der Kompilierung angeben.
--   [**Intrinsische Funktionen (DirectX HLSL)**](dx-graphics-hlsl-intrinsic-functions.md) : HLSL verfügt über viele intrinsische Funktionen. Diese werden implementiert und getestet, damit Sie Sie verwenden können, um Sie zu überprüfen, dass Sie bereits gedeentschlallte und gut funktionieren. Wenn Sie eigene Funktionen schreiben möchten, lesen Sie den Abschnitt Sprachsyntax zum Schreiben von benutzerdefinierten Funktionen.
--   [ASM-Shader](dx9-graphics-reference-asm.md) -verweisassemblyanweisungen, mit denen Sie Shader programmieren und Debuggen können.
--   [D3DCompiler Reference](dx-graphics-d3dcompiler-reference.md) : kompiliert eine Rohdaten-HLSL-Quelle.
--   [Referenz zur Inline-Formatkonvertierung](inline-format-conversion-reference.md) : die D3DX \_ dxgiformatconvert. INL-Datei enthält Funktionen für Inline Formatkonvertierungen, die Sie im COMPUTE-Shader oder Pixel-Shader auf Direct3D 11-Hardware verwenden können. Sie können diese Funktionen in der Anwendung verwenden, um gleichzeitig Lese-und Schreibvorgänge für eine Textur auszuführen. Das heißt, Sie können eine direkte Bildbearbeitung ausführen. Um diese Funktionen für die Inline Formatkonvertierung zu verwenden, schließen \_ Sie die Datei D3DX dxgiformatconvert. INL in Ihre Anwendung ein.
--   [Anhang (DirectX HLSL)](dx-graphics-hlsl-appendix.md) : der Anhang ist aus Gründen der Vollständigkeit enthalten. Sie enthält eine Liste der Schlüsselwörter und reservierten Wörter. Diese Wörter können nicht als Bezeichner in ihren Programmen verwendet werden. Außerdem enthält Sie eine Auflistung der Sprachgrammatik für den Verweis.
--   [**HLSL-Fehler und-Warnungen**](hlsl-errors-and-warnings.md) : gibt Fehler-und Warn Codes an, die ein Shader zurückgeben kann.
+-   [Sprachsyntax (DirectX HLSL):](dx-graphics-hlsl-language-syntax.md) Zum Programmieren von Shadern in HLSL müssen Sie die Sprachsyntax verstehen, d. h. wie Sie HLSL-Code schreiben. Dies umfasst Code zum Deklarieren und Initialisieren von Variablen, zum Schreiben benutzerdefinierter Shaderfunktionen und zum Hinzufügen von Flusssteuerungs-Anweisungen, um Ihre Funktionen leistungsfähiger zu machen.
+-   [Shadermodelle im Vergleich zu Shaderprofilen:](dx-graphics-hlsl-models.md) Der HLSL-Compiler implementiert Regeln und Einschränkungen, die auf Shadermodellen basieren. Der Code in jedem Vertex-Shader, Geometrie-Shader (bei Verwendung von Direct3D 10) und Pixel-Shader wird anhand eines Shadermodells überprüft, das Sie zur Kompilierzeit zur Hand haben.
+-   [**Systeminterne Funktionen (DirectX HLSL):**](dx-graphics-hlsl-intrinsic-functions.md) HLSL verfügt über viele systeminterne Funktionen. Diese werden implementiert und getestet, damit Sie sie in dem Wissen verwenden können, dass sie bereits gedebuggt sind und eine gute Leistung haben. Wenn Sie ihre eigenen Funktionen schreiben möchten, lesen Sie den Abschnitt zur Sprachsyntax zum Schreiben benutzerdefinierter Funktionen.
+-   [Asm-Shaderreferenz:](dx9-graphics-reference-asm.md) Assemblyanweisungen, die Sie zum Programmieren und Debuggen von Shadern verwenden können.
+-   [D3DCompiler-Referenz:](dx-graphics-d3dcompiler-reference.md) Kompiliert eine unformatierte HLSL-Quelle.
+-   [Inlineformatkonvertierungsreferenz:](inline-format-conversion-reference.md) Die Datei D3DX DXGIFormatConvert.inl enthält Inlineformatkonvertierungsfunktionen, die Sie im Compute-Shader oder Pixel-Shader auf \_ Direct3D 11-Hardware verwenden können. Sie können diese Funktionen in Ihrer Anwendung verwenden, um gleichzeitig aus einer Textur zu lesen und in diese zu schreiben. Das heißt, Sie können die Bildbearbeitung vor Ort durchführen. Um diese Inlineformatkonvertierungsfunktionen zu verwenden, schließen Sie die Datei D3DX \_ DXGIFormatConvert.inl in Ihre Anwendung ein.
+-   [Anhang (DirectX HLSL):](dx-graphics-hlsl-appendix.md) Der Anhang ist der Vollständigkeit halber enthalten. Sie enthält eine Liste der Schlüsselwörter und reservierten Wörter. diese Wörter können nicht als Bezeichner in Ihren Programmen verwendet werden. Sie enthält auch eine Liste der Sprachgrammatik als Referenz.
+-   [**HLSL errors and warnings (HLSL-Fehler und -Warnungen)**](hlsl-errors-and-warnings.md) – Stellt Fehler- und Warnungscodes fest, die ein Shader zurückgeben kann.
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
 <dl> <dt>
 
-[HLSL](dx-graphics-hlsl.md)
+[Hlsl](dx-graphics-hlsl.md)
 </dt> <dt>
 
 [Programmieranleitung für HLSL](dx-graphics-hlsl-pguide.md)
 </dt> </dl>
 
- 
+ 
 
- 
+ 
 
 
 

@@ -1,7 +1,7 @@
 ---
-description: Dieses Thema gilt für Windows XP Service Pack 2 oder höher. Die KSTOPOLOGY \_ CONNECTION-Struktur beschreibt eine Knotenverbindung innerhalb eines Kernelstreamingfilters (KS). Ein Knoten kann mit einem anderen Knoten innerhalb des Filters oder mit einem Pin im Filter verbunden werden.
+description: Dieses Thema gilt für Windows XP Service Pack 2 oder höher. Die KSTOPOLOGY \_ CONNECTION-Struktur beschreibt eine Knotenverbindung innerhalb eines Kernelstreamingfilters (KS). Ein Knoten kann mit einem anderen Knoten innerhalb des Filters oder mit einer Stecknadel im Filter verbunden werden.
 ms.assetid: 8fca47b7-4c52-46db-809c-77a0e3414276
-title: KSTOPOLOGY_CONNECTION-Struktur (Ks.h)
+title: KSTOPOLOGY_CONNECTION -Struktur (Ks.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -24,7 +24,7 @@ ms.locfileid: "118397244"
 
 Dieses Thema gilt für Windows XP Service Pack 2 oder höher.
 
-Die **KSTOPOLOGY \_ CONNECTION-Struktur** beschreibt eine Knotenverbindung innerhalb eines Kernelstreamingfilters (KS). Ein Knoten kann mit einem anderen Knoten innerhalb des Filters oder mit einem Pin im Filter verbunden werden.
+Die **KSTOPOLOGY \_ CONNECTION-Struktur** beschreibt eine Knotenverbindung innerhalb eines Kernelstreamingfilters (KS). Ein Knoten kann mit einem anderen Knoten innerhalb des Filters oder mit einer Stecknadel im Filter verbunden werden.
 
 ## <a name="syntax"></a>Syntax
 
@@ -47,28 +47,28 @@ typedef struct {
 **FromNode**
 </dt> <dd>
 
-Index des Upstreamknotens in der Verbindung. Wenn es sich bei der Upstreamverbindung nicht um einen Knoten, sondern um einen Pin handelt, lautet der Wert KSFILTER \_ NODE.
+Index des Upstreamknotens in der Verbindung. Wenn die Upstreamverbindung ein Pin und kein Knoten ist, ist der Wert KSFILTER \_ NODE.
 
 </dd> <dt>
 
 **FromNodePin**
 </dt> <dd>
 
-Wenn der Wert des **FromNode-Felds** KSFILTER \_ NODE ist, gibt dieses Feld den Index des Upstreampins an. Andernfalls wird dieses Feld ignoriert.
+Wenn der Wert des **FromNode-Felds** KSFILTER NODE ist, gibt dieses Feld den Index \_ des Upstreampins an. Andernfalls wird dieses Feld ignoriert.
 
 </dd> <dt>
 
 **ToNode**
 </dt> <dd>
 
-Index des Downstreamknotens in der Verbindung. Wenn es sich bei der Downstreamverbindung nicht um einen Knoten, sondern um einen Pin handelt, lautet der Wert KSFILTER \_ NODE.
+Index des Downstreamknotens in der Verbindung. Wenn die Downstreamverbindung ein Pin und kein Knoten ist, ist der Wert KSFILTER \_ NODE.
 
 </dd> <dt>
 
 **ToNodePin**
 </dt> <dd>
 
-Wenn der Wert des **ToNode-Felds** KSFILTER \_ NODE ist, gibt dieses Feld den Index des Downstreampins an. Andernfalls wird dieses Feld ignoriert.
+Wenn der Wert des **Felds ToNode** KSFILTER NODE ist, gibt dieses Feld den Index \_ des Downstreampins an. Andernfalls wird dieses Feld ignoriert.
 
 </dd> </dl>
 

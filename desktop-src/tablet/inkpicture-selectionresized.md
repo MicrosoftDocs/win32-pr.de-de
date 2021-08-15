@@ -63,7 +63,7 @@ Diese Ereignismethode wird in den dispatch-only-Schnittstellen (dispinterfaces) 
 
 
 
-## <a name="see-also"></a>Weitere Informationen:
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 

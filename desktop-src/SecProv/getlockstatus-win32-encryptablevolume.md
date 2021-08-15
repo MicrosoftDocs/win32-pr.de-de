@@ -1,7 +1,7 @@
 ---
-description: Gibt an, ob der Inhalt des Volumes von Windows aus zugänglich ist.
+description: Gibt an, ob auf den Inhalt des Volumes von einem Windows.
 ms.assetid: 54b2a41b-11c6-40ec-97fa-74996c15554e
-title: Getlockstatus-Methode der Win32_EncryptableVolume-Klasse
+title: GetLockStatus-Methode der Win32_EncryptableVolume Klasse
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,16 +13,16 @@ api_type:
 - COM
 api_location:
 - Root\CIMV2\Security\MicrosoftVolumeEncryption
-ms.openlocfilehash: 3e81f77c37904f26e87f22b8e2b3b88763fe86cc
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: caa213dbebc7db07851bc8df41b5d9379d3dfe97ee207f9b2578b0567fd9b65b
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106342838"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118892016"
 ---
-# <a name="getlockstatus-method-of-the-win32_encryptablevolume-class"></a>Getlockstatus-Methode der Win32- \_ Klasse "verschlüsseltablevolume"
+# <a name="getlockstatus-method-of-the-win32_encryptablevolume-class"></a>GetLockStatus-Methode der Win32 \_ EncryptableVolume-Klasse
 
-Die **getlockstatus** -Methode der Win32-Klasse " [**\_ verschlüsseltablevolume**](win32-encryptablevolume.md) " gibt an, ob der Inhalt des Volumes von Windows aus zugänglich ist.
+Die **GetLockStatus-Methode** der [**Win32 \_ EncryptableVolume-Klasse**](win32-encryptablevolume.md) gibt an, ob auf den Inhalt des Volumes über die Windows.
 
 ## <a name="syntax"></a>Syntax
 
@@ -39,19 +39,19 @@ uint32 GetLockStatus(
 
 <dl> <dt>
 
-*Sperr Status* \[ vorgenommen\]
+*LockStatus* \[ out\]
 </dt> <dd>
 
-Typ: **UInt32**
+Typ: **uint32**
 
-Gibt an, ob der Inhalt des Volumes von Windows aus zugänglich ist.
+Gibt an, ob auf den Inhalt des Volumes über die Windows.
 
 
 
 | Wert                                                                                                                                                                                                                           | Bedeutung                                                                                                                                                                                                                                                                                                                                                                                                               |
 |---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| <span id="Unlocked"></span><span id="unlocked"></span><span id="UNLOCKED"></span><dl> <dt>**Entsperrt**</dt> <dt>0</dt> </dl> | Für eine Standard-HDD:<br/> Der gesamte Inhalt des Volumes ist verfügbar. Ein entsperrtes Volume wird entweder vollständig entschlüsselt, oder der Verschlüsselungsschlüssel ist auf dem Datenträger Clear (Löschen) verfügbar. Das Volume mit dem aktuell ausgelaufenden Betriebssystem (z. b. dem ausgelaufenden Windows-Volume) ist immer verfügbar und kann nicht gesperrt werden.<br/> Für einen ehdd:<br/> Das Band ist dauerhaft entsperrt.<br/> |
-| <span id="Locked"></span><span id="locked"></span><span id="LOCKED"></span><dl> <dt>**Gesperrt**</dt> <dt>1</dt> </dl>         | Für eine Standard-HDD:<br/> Auf alle oder einen Teil des Inhalts des Volumes kann nicht zugegriffen werden. Ein gesperrtes Volume muss teilweise oder vollständig verschlüsselt sein, und der Verschlüsselungsschlüssel darf nicht auf dem Datenträger "Clear on" verfügbar sein.<br/> Für einen ehdd:<br/> Das Band ist entsperrt oder gesperrt.<br/>                                                                                                             |
+| <span id="Unlocked"></span><span id="unlocked"></span><span id="UNLOCKED"></span><dl> <dt>**Entsperrt**</dt> <dt>0</dt> </dl> | Für eine HDD Standard-Festplatte:<br/> Auf den vollständigen Inhalt des Volumes kann zugegriffen werden. Ein entsperrtes Volume ist entweder vollständig entschlüsselt oder verfügt über den Verschlüsselungsschlüssel, der auf dem Datenträger unverschlüsselt verfügbar ist. Auf das Volume mit dem aktuell ausgeführten Betriebssystem (z. B. das ausgeführte Windows) kann immer zugegriffen werden und kann nicht gesperrt werden.<br/> Für eine EHDD:<br/> Das Band ist unbefristet entsperrt.<br/> |
+| <span id="Locked"></span><span id="locked"></span><span id="LOCKED"></span><dl> <dt>**Gesperrt**</dt> <dt>1</dt> </dl>         | Für eine HDD Standard-Festplatte:<br/> Auf alle oder einen Teil des Inhalts des Volumes kann nicht zugegriffen werden. Ein gesperrtes Volume muss teilweise oder vollständig verschlüsselt sein und darf nicht über den Verschlüsselungsschlüssel verfügen, der auf dem Datenträger in clear verfügbar ist.<br/> Für eine EHDD:<br/> Das Band ist entsperrt oder gesperrt.<br/>                                                                                                             |
 
 
 
@@ -61,7 +61,7 @@ Gibt an, ob der Inhalt des Volumes von Windows aus zugänglich ist.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Typ: **UInt32**
+Typ: **uint32**
 
 Diese Methode gibt einen der folgenden Codes oder einen anderen Fehlercode zurück, wenn ein Fehler auftritt.
 
@@ -75,13 +75,13 @@ Diese Methode gibt einen der folgenden Codes oder einen anderen Fehlercode zurü
 
  
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Verwenden Sie [**unlockwithexternalkey**](unlockwithexternalkey-win32-encryptablevolume.md) und [**unlockwithnumericalpassword**](unlockwithnumericalpassword-win32-encryptablevolume.md) , um Zugriff auf die volumeinhalte zu erhalten. Verwenden Sie die [**Lock**](lock-win32-encryptablevolume.md) -Methode, um den Zugriff auf den volumeinhalt zu
+Verwenden Sie [**unlockWithExternalKey und**](unlockwithexternalkey-win32-encryptablevolume.md) [**UnlockWithNumericalPassword,**](unlockwithnumericalpassword-win32-encryptablevolume.md) um Zugriff auf den Volumeinhalt zu erhalten. Verwenden [](lock-win32-encryptablevolume.md) Sie die Lock-Methode, um den Zugriff auf Volumeinhalte zu vererbn.
 
-Das Volume mit dem aktuell ausgelaufenden Betriebssystem ist immer erreichbar und kann nicht gesperrt werden.
+Auf das Volume, das das derzeit ausgeführte Betriebssystem enthält, kann immer zugegriffen werden und kann nicht gesperrt werden.
 
-Managed Object Format-Dateien (MOF) enthalten die Definitionen für Windows-Verwaltungsinstrumentation (WMI)-Klassen. MOF-Dateien werden nicht als Teil des Windows SDK installiert. Sie werden auf dem Server installiert, wenn Sie die zugehörige Rolle mithilfe der Server-Manager hinzufügen. Weitere Informationen zu MOF-Dateien finden Sie unter [Managed Object Format (MOF)](../wmisdk/managed-object-format--mof-.md).
+Managed Object Format -Dateien (MOF) enthalten die Definitionen für Windows WMI-Klassen (Management Instrumentation). MOF-Dateien werden nicht als Teil des Windows SDK installiert. Sie werden auf dem Server installiert, wenn Sie die zugeordnete Rolle mithilfe der Server-Manager. Weitere Informationen zu MOF-Dateien finden Sie unter [Managed Object Format (MOF).](../wmisdk/managed-object-format--mof-.md)
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -89,18 +89,18 @@ Managed Object Format-Dateien (MOF) enthalten die Definitionen für Windows-Verw
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista Enterprise, Windows Vista Ultimate \[ Desktop-Apps\]<br/>                       |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2008 \[ -Desktop-Apps\]<br/>                                                    |
-| Namespace<br/>                | Root \\ CIMV2 \\ Sicherheit ( \\ microsoftvolumeencryption)<br/>                                             |
-| MOF<br/>                      | <dl> <dt>Win32 \_ verschlüsseltablevolume. MOF</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows Vista Enterprise, Windows Vista \[ Ultimate-Desktop-Apps\]<br/>                       |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2008-Desktop-Apps\]<br/>                                                    |
+| Namespace<br/>                | \\CimV2-Stammsicherheit \\ \\ MicrosoftVolumeEncryption<br/>                                             |
+| MOF<br/>                      | <dl> <dt>Win32 \_ encryptablevolume.mof</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Win32- \_ verschlüsseltablevolume**](win32-encryptablevolume.md)
+[**Win32 \_ EncryptableVolume**](win32-encryptablevolume.md)
 </dt> </dl>
 
  

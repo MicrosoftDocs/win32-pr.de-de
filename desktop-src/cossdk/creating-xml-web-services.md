@@ -13,7 +13,7 @@ ms.locfileid: "118307337"
 ---
 # <a name="creating-xml-web-services"></a>Erstellen von XML-Webdiensten
 
-Jede COM+-Anwendung kann als XML-Webdienst verfügbar gemacht werden. Die Methoden in den Standardschnittstellen der von Anwendungen konfigurierten Komponenten (Komponenten im COM+-Katalog des Servers) können dann remote aufgerufen werden. Sie können das Verwaltungstool Komponentendienste verwenden, um ein virtuelles IIS-Stammverzeichnis zu erstellen, aus dem die Komponentenmethoden mit SOAP aufgerufen werden können.
+Jede COM+-Anwendung kann als XML-Webdienst verfügbar gemacht werden. Die Methoden in den Standardschnittstellen der anwendungskonfigurierten Komponenten (Komponenten im COM+-Katalog der Server) können dann remote aufgerufen werden. Sie können das Verwaltungstool komponentendienste verwenden, um ein virtuelles IIS-Stammverzeichnis zu erstellen, aus dem die Komponentenmethoden mit SOAP aufgerufen werden können.
 
 > [!Note]  
 > Die .NET Framework muss auf Ihrem Computer installiert sein, um eine COM+-Anwendung als XML-Webdienst verfügbar zu machen.
@@ -22,23 +22,23 @@ Jede COM+-Anwendung kann als XML-Webdienst verfügbar gemacht werden. Die Method
 
 **So machen Sie eine COM+-Anwendung als XML-Webdienst verfügbar**
 
-1.  Öffnen Sie in der Konsolenstruktur des Component Services-Verwaltungstools unter **Komponentendienste** den Ordner **COM+-Anwendungen,** der dem zu verwaltenden Computer zugeordnet ist.
+1.  Öffnen Sie in der Konsolenstruktur des Verwaltungstool Komponentendienste unter Komponentendienste den **Ordner COM+-Anwendungen,** der dem computer zugeordnet ist, den Sie verwalten möchten.
 
-2.  Klicken Sie mit der rechten Maustaste auf die Anwendung, die Sie als XML-Webdienst verfügbar machen möchten, und wählen Sie **Eigenschaften** aus.
+2.  Klicken Sie mit der rechten Maustaste auf die Anwendung, die Sie als XML-Webdienst verfügbar machen möchten, und wählen Sie **Eigenschaften aus.**
 
-3.  Klicken Sie im Eigenschaftendialogfeld auf die Registerkarte **Aktivierung.**
+3.  Klicken Sie **im Eigenschaftendialogfeld** auf die Registerkarte Aktivierung.
 
-4.  Aktivieren Sie das Kontrollkästchen **SOAP verwendet.**
+4.  Aktivieren Sie das **Kontrollkästchen Soap** verwendet .
 
-5.  Geben Sie im Textfeld **SOAP VRoot** den Namen des virtuellen IIS-Stammverzeichnisses ein, über das remote auf die Komponentenmethoden zugegriffen werden kann. Beachten Sie, dass soap VRoot kein Unterverzeichnis eines anderen SOAP VRoot-Verzeichnisses sein kann.
+5.  Geben Sie **im Textfeld SOAP VRoot** den Namen des virtuellen IIS-Stammverzeichnisses ein, von dem aus remote auf die Komponentenmethoden zugegriffen werden kann. Beachten Sie, dass ein SOAP-VRoot kein Unterverzeichnis eines anderen SOAP VRoot-Verzeichnisses sein kann.
 
 6.  Klicken Sie auf **OK**.
 
-    Wenn Sie das virtuelle IIS-Stammverzeichnis als *vroot* angeben und der vollqualifizierte Domänenname ihres Servers *servername* lautet, lautet die URL, unter der Ihre Komponente als XML-Webdienst verfügbar gemacht wird, https://*Servername* / *vroot*/.
+    Wenn Sie das virtuelle IIS-Stammverzeichnis als *vroot* angeben und der vollqualifizierte Domänenname Ihres Servers *servername* ist, wird die URL, unter der Ihre Komponente als XML-Webdienst verfügbar gemacht wird, https://*servername* / *vroot*/ angegeben.
 
-    Das entsprechende Verzeichnis in Ihrem Dateisystem ist \\ windows \\ system32 \\ com \\ SoapVRoots \\ *vroot* \\ ; COM+ platziert dort mehrere Konfigurationsdateien und ASP.NET Programme. Für einen XML-Webdienst mit hoher Auslastung können Sie die parameter anpassen, die in der Datei web.config gespeichert sind. Informationen zu dieser Datei finden Sie in der IIS-Dokumentation.
+    Das entsprechende Verzeichnis in Ihrem Dateisystem ist \\ windows \\ system32 \\ com \\ SoapVRoots \\ *vroot;* \\ COM+ platziert mehrere Konfigurationsdateien und ASP.NET Programme dort. Für einen XML-Webdienst mit starker Auslastung sollten Sie die in der Datei gespeicherten Parameter anpassen, web.config. Informationen zu dieser Datei finden Sie in der IIS-Dokumentation.
 
-    Die Standardsicherheitseinstellungen für eine COM+-Anwendung, die als XML-Webdienst verfügbar gemacht wird, unterscheiden sich je nachdem, welche Version des .NET Framework installiert ist. Wenn Version 1.0 installiert ist, sind XML-Webdienste standardmäßig unsicher. alle Aufrufe werden akzeptiert, und es wird keine Verschlüsselung verwendet. Wenn Version 1.1 oder höher installiert ist, sind XML-Webdienste standardmäßig sicher. Aufrufer müssen authentifiziert werden, und verschlüsselung ist erforderlich.
+    Die Standardsicherheitseinstellungen für eine COM+-Anwendung, die als XML-Webdienst verfügbar gemacht wird, unterscheiden sich je nachdem, welche Version der .NET Framework installiert ist. Wenn Version 1.0 installiert ist, sind XML-Webdienste standardmäßig unsicher. alle Aufrufe werden akzeptiert, und es wird keine Verschlüsselung verwendet. Wenn Version 1.1 oder höher installiert ist, sind XML-Webdienste standardmäßig sicher. -Aufrufer müssen authentifiziert werden, und eine Verschlüsselung ist erforderlich.
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
@@ -50,7 +50,7 @@ Jede COM+-Anwendung kann als XML-Webdienst verfügbar gemacht werden. Die Method
 [Zugreifen auf XML-Webdienste im WKO-Modus](accessing-xml-web-services-in-wko-mode.md)
 </dt> <dt>
 
-[Übersicht über den COM+-SOAP-Dienst](com--soap-service-overview.md)
+[ÜBERSICHT ÜBER DEN COM+-SOAP-Dienst](com--soap-service-overview.md)
 </dt> <dt>
 
 [Sichern von XML-Webdiensten](securing-xml-web-services.md)

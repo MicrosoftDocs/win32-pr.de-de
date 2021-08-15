@@ -1,5 +1,5 @@
 ---
-description: Gibt Informationen zur Zusammenfassung der virtuellen Computer für die angegebenen Definitions Dateien der virtuellen Maschine zurück.
+description: Gibt Zusammenfassungsinformationen für virtuelle Computer für die angegebenen VM-Definitionsdateien zurück.
 ms.assetid: 5a3d7f2c-3b89-4dd6-909d-4452afc3705f
 title: GetDefinitionFileSummaryInformation-Methode der Msvm_VirtualSystemManagementService-Klasse
 ms.topic: reference
@@ -13,16 +13,16 @@ api_type:
 - COM
 api_location:
 - vmms.exe
-ms.openlocfilehash: a46daedd282d07c2367931a9f20a7fbfa1849f9e
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 7c6d3da6ef920488edb7fde723880b9f53768cfd246e91d287390bb6fb02fb17
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106357370"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117995297"
 ---
-# <a name="getdefinitionfilesummaryinformation-method-of-the-msvm_virtualsystemmanagementservice-class"></a>GetDefinitionFileSummaryInformation-Methode der MSVM \_ virtualsystemmanagementservice-Klasse
+# <a name="getdefinitionfilesummaryinformation-method-of-the-msvm_virtualsystemmanagementservice-class"></a>GetDefinitionFileSummaryInformation-Methode der Msvm \_ VirtualSystemManagementService-Klasse
 
-Gibt Informationen zur Zusammenfassung der virtuellen Computer für die angegebenen Definitions Dateien der virtuellen Maschine zurück.
+Gibt Zusammenfassungsinformationen für virtuelle Computer für die angegebenen VM-Definitionsdateien zurück.
 
 ## <a name="syntax"></a>Syntax
 
@@ -40,23 +40,23 @@ uint32 GetDefinitionFileSummaryInformation(
 
 <dl> <dt>
 
-*DefinitionFiles* \[ in\]
+*DefinitionFiles* \[ In\]
 </dt> <dd>
 
-Ein Array von Pfaden zu XML-Konfigurationsdateien, für die Zusammenfassungs Informationen zurückgegeben werden sollen.
+Ein Array von Pfaden zu XML-Konfigurationsdateien, für die Zusammenfassungsinformationen zurückgegeben werden sollen.
 
 </dd> <dt>
 
-*SummaryInformation* \[ vorgenommen\]
+*SummaryInformation* \[ out\]
 </dt> <dd>
 
-Ein Array von [**MSVM- \_ summaryinformationbase**](msvm-summaryinformation.md) -Instanzen, die die angeforderten Informationen für die virtuellen Computer und/oder Momentaufnahmen enthalten, die im *DefinitionFiles* -Array angegeben sind. Nur die Eigenschaften **Name**, **ElementName**, **kreationtime** und **Notes** werden zurückgegeben, alle anderen Eigenschaften sind **null**.
+Ein Array von [**Msvm \_ SummaryInformationBase-Instanzen,**](msvm-summaryinformation.md) das die angeforderten Informationen für die virtuellen Computer und/oder Momentaufnahmen enthält, die im *DefinitionFiles-Array* angegeben sind. Nur die Eigenschaften **Name,** **ElementName,** **CreationTime** und **Notes** werden zurückgegeben. Alle anderen Eigenschaften sind **NULL.**
 
 > [!Note]  
 
  
 
-Vor Windows 10, Version 1703, war Datentyp [**MSVM \_ SummaryInformation**](msvm-summaryinformation.md).
+Vor Windows 10 Version 1703 war der Datentyp [**Msvm \_ SummaryInformation**](msvm-summaryinformation.md).
 
 </dd> </dl>
 
@@ -69,10 +69,10 @@ Diese Methode gibt einen der folgenden Werte zurück.
 **Abgeschlossen ohne Fehler** (0)
 </dt> <dt>
 
-Über **prüfte Methoden Parameter-Auftrag gestartet** (4096)
+**Überprüfte Methodenparameter – Auftragsstart** (4096)
 </dt> <dt>
 
-Fehler **(32768** )
+**Fehler** (32768)
 </dt> <dt>
 
 **Zugriff verweigert** (32769)
@@ -81,7 +81,7 @@ Fehler **(32768** )
 **Nicht unterstützt** (32770)
 </dt> <dt>
 
-Der **Status ist "Unknown** " (32771).
+**Status ist unbekannt** (32771)
 </dt> <dt>
 
 **Timeout** (32772)
@@ -93,16 +93,16 @@ Der **Status ist "Unknown** " (32771).
 **System wird verwendet** (32774)
 </dt> <dt>
 
-**Ungültiger Status für diesen Vorgang** (32775).
+**Ungültiger Zustand für diesen Vorgang** (32775)
 </dt> <dt>
 
-**Falscher Datentyp** (32776).
+**Falscher Datentyp** (32776)
 </dt> <dt>
 
-Das **System ist nicht verfügbar** (32777).
+**System ist nicht verfügbar** (32777)
 </dt> <dt>
 
-**Nicht** genügend Arbeitsspeicher (32778)
+**Nicht genügend Arbeitsspeicher** (32778)
 </dt> </dl>
 
 ## <a name="requirements"></a>Anforderungen
@@ -111,19 +111,19 @@ Das **System ist nicht verfügbar** (32777).
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows 8 \[ -Desktop-Apps\]<br/>                                                              |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2012 \[ -Desktop-Apps\]<br/>                                                    |
-| Namespace<br/>                | \\Stammvirtualisierung \\ v2<br/>                                                                     |
-| MOF<br/>                      | <dl> <dt>Windowsvirtualization. v2. MOF</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | \[Windows 8 Nur Desktop-Apps\]<br/>                                                              |
+| Unterstützte Mindestversion (Server)<br/> | \[Windows Server 2012 Nur Desktop-Apps\]<br/>                                                    |
+| Namespace<br/>                | Root \\ Virtualization \\ V2<br/>                                                                     |
+| MOF<br/>                      | <dl> <dt>WindowsVirtualization.V2.mof</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>Vmms.exe</dt> </dl>                     |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**MSVM \_ virtualsystemmanagementservice**](msvm-virtualsystemmanagementservice.md)
+[**Msvm \_ VirtualSystemManagementService**](msvm-virtualsystemmanagementservice.md)
 </dt> </dl>
 
  

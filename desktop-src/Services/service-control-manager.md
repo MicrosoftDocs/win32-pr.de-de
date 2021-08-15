@@ -1,35 +1,35 @@
 ---
-description: Der Dienststeuerungs-Manager (SCM) wird beim Systemstart gestartet. Dabei handelt es sich um einen RPC-Server (Remote Procedure Aufruf), sodass Dienst Konfiguration und Dienst Steuerungsprogramme Dienste auf Remote Computern bearbeiten können.
+description: Der Dienststeuerungs-Manager (Service Control Manager, SCM) wird beim Systemstart gestartet. Es handelt sich um einen RPC-Server (RemoteProzeduraufruf), damit Dienstkonfigurations- und Dienststeuerungsprogramme Dienste auf Remotecomputern bearbeiten können.
 ms.assetid: 56ad011d-17c4-4410-b598-6ef47fb3638f
 title: Dienststeuerungs-Manager
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 4a8a35fd34bd2714d22d40ccf618c89a8b66a6c2
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: d37d651a96f9685fa82b5ea92ebb3a0b72d80bfc62cd0db80729ec1cb95acc45
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106343277"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118889033"
 ---
 # <a name="service-control-manager"></a>Dienststeuerungs-Manager
 
-Der Dienststeuerungs-Manager (SCM) wird beim Systemstart gestartet. Dabei handelt es sich um einen RPC-Server (Remote Procedure Aufruf), sodass Dienst Konfiguration und Dienst Steuerungsprogramme Dienste auf Remote Computern bearbeiten können.
+Der Dienststeuerungs-Manager (Service Control Manager, SCM) wird beim Systemstart gestartet. Es handelt sich um einen RPC-Server (RemoteProzeduraufruf), damit Dienstkonfigurations- und Dienststeuerungsprogramme Dienste auf Remotecomputern bearbeiten können.
 
-Die Dienstfunktionen stellen eine Schnittstelle für die folgenden vom SCM ausgeführten Aufgaben bereit:
+Die Dienstfunktionen stellen eine Schnittstelle für die folgenden Aufgaben bereit, die vom SCM ausgeführt werden:
 
--   Die Datenbank der installierten Dienste wird beibehalten.
--   Starten von Diensten und Treiber Diensten entweder beim Systemstart oder nach Bedarf.
--   Die installierten Dienste und Treiber Dienste werden aufgelistet.
--   Verwalten von Statusinformationen für die Ausführung von Diensten und Treiber Diensten
--   Übertragen von Steuerungsanforderungen an die laufenden Dienste
--   Sperren und Entsperren der Dienst Datenbank.
+-   Verwalten der Datenbank der installierten Dienste.
+-   Starten von Diensten und Treiberdiensten entweder beim Systemstart oder bei Bedarf.
+-   Aufzählen installierter Dienste und Treiberdienste.
+-   Verwalten von Statusinformationen zum Ausführen von Diensten und Treiberdiensten.
+-   Übertragen von Steuerungsanforderungen an ausgeführte Dienste.
+-   Sperren und Entsperren der Dienstdatenbank.
 
 In den folgenden Abschnitten wird der SCM ausführlicher beschrieben:
 
 -   [Datenbank der installierten Dienste](database-of-installed-services.md)
--   [Dienste werden automatisch gestartet](automatically-starting-services.md)
+-   [Automatisches Starten von Diensten](automatically-starting-services.md)
 -   [Starten von Diensten bei Bedarf](starting-services-on-demand.md)
--   [Dienst Daten Satz Liste](service-record-list.md)
+-   [Dienstdatensatzliste](service-record-list.md)
 -   [SCM-Handles](scm-handles.md)
 
  

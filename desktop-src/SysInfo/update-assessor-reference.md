@@ -1,23 +1,23 @@
 ---
-description: WAAS-Bewertungs Referenz
+description: WaaS-Bewertungsreferenz
 ms.assetid: 1B3C8EE1-607A-43F8-AF6E-855CF2D37191
-title: WAAS-Bewertungs Referenz
+title: WaaS-Bewertungsreferenz
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: a7ee090c71f36dbf028a07dfd3a874f1e6ef79c3
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 4a5e9c077a773ce127727fe43699adae28c7bf9445af46d5c3363a44e8a9d5c6
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104526978"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118884481"
 ---
-# <a name="waas-assessment-reference"></a>WAAS-Bewertungs Referenz
+# <a name="waas-assessment-reference"></a>WaaS-Bewertungsreferenz
 
-Die folgenden Objekte werden in der WAAS Assessment Platform-API verwendet:
+Die folgenden Objekte werden in der WaaS Assessment Platform-API verwendet:
 
--   [WAAS-Bewertungs Strukturen](update-assessor-structures.md)
--   [WAAS-Bewertungs Enumerationen](update-assessor-enumerations.md)
--   [WAAS-Bewertungs Schnittstellen](update-assessor-interfaces.md)
+-   [WaaS-Bewertungsstrukturen](update-assessor-structures.md)
+-   [WaaS-Bewertungsenumerationen](update-assessor-enumerations.md)
+-   [WaaS-Bewertungsschnittstellen](update-assessor-interfaces.md)
 
  
 

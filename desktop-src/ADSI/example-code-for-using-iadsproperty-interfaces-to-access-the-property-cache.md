@@ -1,23 +1,23 @@
 ---
-title: Beispiel Code für die Verwendung von iadsproperty-Schnittstellen für den Zugriff auf den Eigenschaften Cache
-description: Im folgenden Codebeispiel wird gezeigt, wie die Schnittstellen IADsPropertyList, iadspropertyentry und iadspropertyvalue mit C++ und ADSI verwendet werden.
+title: Beispielcode für die Verwendung von IADsEigenschaftenschnittstellen für den Zugriff auf den Eigenschaftencache
+description: Das folgende Codebeispiel zeigt die Verwendung der Schnittstellen IADsPropertyList, IADsPropertyEntry und IADsPropertyValue mit C++ und ADSI.
 ms.assetid: d2ac3a1e-642c-451c-a79e-baa38dacb4a2
 ms.tgt_platform: multiple
 keywords:
-- Beispiel Code ADSI, Verwendung von iadsproperty-Schnittstellen für den Zugriff auf den Eigenschaften Cache
-- Beispiel Code für die Verwendung von iadsproperty-Schnittstellen für den Zugriff auf den Eigenschaften Cache ADSI
+- ADSI-Beispielcode, Verwenden von IADsEigenschaftenschnittstellen für den Zugriff auf den Eigenschaftencache
+- Beispielcode für die Verwendung von IADsProperty-Schnittstellen für den Zugriff auf den Eigenschaftencache ADSI
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 2053e3d78120e39cb7a377eaf6e50524bb780c34
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: a885a52b9c699153a17d33e0ec52edbb6f59c226e6844ac2c8c02b3ec082157c
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "106340406"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119023588"
 ---
-# <a name="example-code-for-using-iadsproperty-interfaces-to-access-the-property-cache"></a>Beispiel Code für die Verwendung von iadsproperty-Schnittstellen für den Zugriff auf den Eigenschaften Cache
+# <a name="example-code-for-using-iadsproperty-interfaces-to-access-the-property-cache"></a>Beispielcode für die Verwendung von IADsEigenschaftenschnittstellen für den Zugriff auf den Eigenschaftencache
 
-Im folgenden Codebeispiel wird gezeigt, wie die Schnittstellen [**IADsPropertyList**](/windows/desktop/api/Iads/nn-iads-iadspropertylist), [**iadspropertyentry**](/windows/desktop/api/Iads/nn-iads-iadspropertyentry)und [**iadspropertyvalue**](/windows/desktop/api/Iads/nn-iads-iadspropertyvalue) mit C++ und ADSI verwendet werden.
+Das folgende Codebeispiel zeigt die Verwendung der [**Schnittstellen IADsPropertyList,**](/windows/desktop/api/Iads/nn-iads-iadspropertylist) [**IADsPropertyEntry**](/windows/desktop/api/Iads/nn-iads-iadspropertyentry)und [**IADsPropertyValue**](/windows/desktop/api/Iads/nn-iads-iadspropertyvalue) mit C++ und ADSI.
 
 
 ```C++
@@ -93,7 +93,7 @@ if (SUCCEEDED(hr))
 
 
 
-Im folgenden Codebeispiel wird gezeigt, wie die Schnittstellen [**IADsPropertyList**](/windows/desktop/api/Iads/nn-iads-iadspropertylist), [**iadspropertyentry**](/windows/desktop/api/Iads/nn-iads-iadspropertyentry)und [**iadspropertyvalue**](/windows/desktop/api/Iads/nn-iads-iadspropertyvalue) mithilfe von Visual Basic und ADSI verwendet werden.
+Das folgende Codebeispiel zeigt, wie die [**Schnittstellen IADsPropertyList,**](/windows/desktop/api/Iads/nn-iads-iadspropertylist) [**IADsPropertyEntry**](/windows/desktop/api/Iads/nn-iads-iadspropertyentry)und [**IADsPropertyValue**](/windows/desktop/api/Iads/nn-iads-iadspropertyvalue) mithilfe von Visual Basic ADSI verwendet werden.
 
 
 ```VB
@@ -124,9 +124,9 @@ Next
 
 
 
- 
+ 
 
- 
+ 
 
 
 

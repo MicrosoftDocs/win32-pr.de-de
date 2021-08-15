@@ -19,7 +19,7 @@ Dieser Abschnitt enthält konzeptionelle und how-to-Themen, in denen Windows Ima
 
 
 
-| Thema                                                                     | Beschreibung                                                                                                              |
+| Thema                                                                     | BESCHREIBUNG                                                                                                              |
 |---------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------|
 | [Übersicht über die Decodierung](-wic-creating-decoder.md)<br/>                 | In diesem Thema wird der Bitmapdecoder beschrieben, eine WIC-Codec-Kernkomponente, die zum Decodieren von Bilddateien aus einem Stream verwendet wird.<br/> |
 | [Übersicht über die progressive Decodierung](-wic-progressive-decoding.md)<br/> | In diesem Thema wird die progressive Decodierung und die Verwendung der progressiven Decodierung in Anwendungen beschrieben.<br/>               |

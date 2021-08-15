@@ -1,34 +1,34 @@
 ---
-description: Bei der Verwendung des Peer Diagramms oder der Peer Gruppierungs Infrastrukturen werden die Informationen (Datensätze), die Peers in einem Diagramm oder einer Gruppe veröffentlichen, als Datenbank auf jedem Peer Computer gespeichert.
+description: Bei Verwendung von Peer Graphing oder der Peer grouping Infrastructures werden die Informationen (Datensätze), die Peers in einem Diagramm oder einer Gruppe veröffentlichen, als Datenbank auf jedem Peercomputer gespeichert.
 ms.assetid: 1412b2eb-c97d-4415-998c-5f21eaadcc66
-title: Daten Bank Import und-Export
+title: Datenbankimport und -export
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: b48fc09259c06e6ebaf537d26c7288d0ad09c501
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: acc047e6f58c7aeab07f6d13f8f7364f3f2f1191e50320513bc153e34c4c042c
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "103959788"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119979060"
 ---
-# <a name="database-import-and-export"></a>Daten Bank Import und-Export
+# <a name="database-import-and-export"></a>Datenbankimport und -export
 
-Bei der Verwendung des Peer Diagramms oder der Peer Gruppierungs Infrastrukturen werden die Informationen (Datensätze), die Peers in einem Diagramm oder einer Gruppe veröffentlichen, als Datenbank auf jedem Peer Computer gespeichert. Wenn Sie eine Anwendung von einem Computer auf einen anderen Computer migrieren möchten, können Sie eine Peer Diagramm-oder Peer Gruppierungs Datenbank von einem Computer exportieren und dann in einen anderen importieren.
+Bei Verwendung von Peer Graphing oder der Peer grouping Infrastructures werden die Informationen (Datensätze), die Peers in einem Diagramm oder einer Gruppe veröffentlichen, als Datenbank auf jedem Peercomputer gespeichert. Um eine Anwendung von einem Computer zu einem anderen Computer zu migrieren, können Sie eine Peer Graphing- oder Peergringdatenbank von einem Computer exportieren und dann auf einen anderen importieren.
 
 In der folgenden Liste sind wichtige Informationen zum Arbeiten mit Datenbanken aufgeführt:
 
--   Sie können nur eine Datenbank importieren, die das gleiche Diagramm und die gleiche Peer-ID aufweist.
--   Sie können die Import-und Exportfunktionen nicht aufrufen, wenn " [**Peer Diagramm**](/windows/desktop/api/P2P/nf-p2p-peergraphlisten)", " [**Peer groupconnect**](/windows/desktop/api/P2P/nf-p2p-peergroupconnect)" oder " [**Peer Name Connect**](/windows/desktop/api/P2P/nf-p2p-peergraphconnect) " aufgerufen wurden.
+-   Sie können nur eine Datenbank importieren, die über denselben Graphen und dieselbe Peer-ID verfügt.
+-   Sie können die Import- und Exportfunktionen nicht aufrufen, wenn [**PeerGraphListen,**](/windows/desktop/api/P2P/nf-p2p-peergraphlisten) [**PeerGroupConnect**](/windows/desktop/api/P2P/nf-p2p-peergroupconnect)oder [**PeerGraphConnect**](/windows/desktop/api/P2P/nf-p2p-peergraphconnect) aufgerufen wurden.
 
-Die **Peer-graphinginfrastruktur** verwendet die folgenden Aufrufe zum Importieren und Exportieren einer datensatzdatenbank:
+**Die Peer graphing-Infrastruktur** verwendet die folgenden Aufrufe zum Importieren und Exportieren einer Datensatzdatenbank:
 
--   [**Peer graphexportdatabase**](/windows/desktop/api/P2P/nf-p2p-peergraphexportdatabase)
--   [**Peer graphimportdatabase**](/windows/desktop/api/P2P/nf-p2p-peergraphimportdatabase)
+-   [**PeerGraphExportDatabase**](/windows/desktop/api/P2P/nf-p2p-peergraphexportdatabase)
+-   [**PeerGraphImportDatabase**](/windows/desktop/api/P2P/nf-p2p-peergraphimportdatabase)
 
-Die **Peer Gruppierungs Infrastruktur** verwendet die folgenden Aufrufe zum Importieren und Exportieren einer datensatzdatenbank:
+**Die Peergruppeninfrastruktur verwendet** die folgenden Aufrufe zum Importieren und Exportieren einer Datensatzdatenbank:
 
--   [**"Peer groupexportdatabase"**](/windows/desktop/api/P2P/nf-p2p-peergroupexportdatabase)
--   [**"Peer groupimportdatabase"**](/windows/desktop/api/P2P/nf-p2p-peergroupimportdatabase)
+-   [**PeerGroupExportDatabase**](/windows/desktop/api/P2P/nf-p2p-peergroupexportdatabase)
+-   [**PeerGroupImportDatabase**](/windows/desktop/api/P2P/nf-p2p-peergroupimportdatabase)
 
  
 

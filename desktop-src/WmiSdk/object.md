@@ -1,5 +1,5 @@
 ---
-description: Der OBJECT-Datentyp ist ein WMI-Klassenobjekt, das verwendet wird, um schwach typierte Zuordnungen und eingebettete Objekte zu deklarieren.
+description: Der OBJECT-Datentyp ist ein WMI-Klassenobjekt, das verwendet wird, um schwach typisierte Zuordnungen und eingebettete Objekte zu deklarieren.
 ms.assetid: 1ad99b92-dfd4-4147-abf5-045edceaa97d
 ms.tgt_platform: multiple
 title: OBJECT
@@ -14,7 +14,7 @@ ms.locfileid: "118554929"
 ---
 # <a name="object"></a>OBJECT
 
-Der OBJECT-Datentyp ist ein WMI-Klassenobjekt, das verwendet wird, um schwach typierte Zuordnungen und eingebettete Objekte zu deklarieren. Sie definieren die spezifische Klasse für ein schwach typiertes Objekt erst, wenn Sie eine Instanz der -Klasse erstellen. Eingebettete Objekte, die mit dem OBJECT-Datentyp definiert sind, können Instanzen einer beliebigen WMI-Klasse enthalten. Weitere Informationen finden Sie unter [Eingebettete Objekte.](embedded-objects.md)
+Der OBJECT-Datentyp ist ein WMI-Klassenobjekt, das verwendet wird, um schwach typisierte Zuordnungen und eingebettete Objekte zu deklarieren. Sie definieren die spezifische Klasse für ein schwach typisiertes Objekt erst, wenn Sie eine Instanz der -Klasse erstellen. Eingebettete Objekte, die mit dem OBJECT-Datentyp definiert sind, können Instanzen jeder WMI-Klasse enthalten. Weitere Informationen finden Sie unter [Eingebettete Objekte.](embedded-objects.md)
 
 Im folgenden Beispiel werden Instanzen von zwei Klassen definiert und erstellt, von denen eine ein eingebettetes Objekt vom Typ OBJECT enthält:
 

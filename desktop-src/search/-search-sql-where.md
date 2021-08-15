@@ -1,19 +1,19 @@
 ---
-description: Die Bedingungen, die bestimmen, ob ein Dokument in den von der Abfrage zurückgegebenen Ergebnissen enthalten ist, werden durch die WHERE-Klausel angegeben.
+description: Die Bedingungen, die bestimmen, ob ein Dokument in den von der Abfrage zurückgegebenen Ergebnissen enthalten ist, werden von der WHERE-Klausel angegeben.
 ms.assetid: e3b5ee92-e817-49b8-aa8b-5d68254bb819
-title: WHERE-Klausel (Windows-Suche)
+title: WHERE-Klausel (Windows Search)
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: b45a37334d656b0a321abdcdd4a5d045eb9d4985
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 8e711219ff8eea81e8c4f8fd8145baccc35f49389d412f0e4ac088aa06666643
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106344674"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118462402"
 ---
-# <a name="where-clause-windows-search"></a>WHERE-Klausel (Windows-Suche)
+# <a name="where-clause-windows-search"></a>WHERE-Klausel (Windows Search)
 
-Die Bedingungen, die bestimmen, ob ein Dokument in den von der Abfrage zurückgegebenen Ergebnissen enthalten ist, werden durch die WHERE-Klausel angegeben. Auf der höchsten Ebene gibt es zwei Teile der Syntax der WHERE-Klausel:
+Die Bedingungen, die bestimmen, ob ein Dokument in den von der Abfrage zurückgegebenen Ergebnissen enthalten ist, werden von der WHERE-Klausel angegeben. Auf der höchsten Ebene gibt es zwei Teile der WHERE-Klauselsyntax:
 
 
 ```
@@ -23,59 +23,59 @@ Die Bedingungen, die bestimmen, ob ein Dokument in den von der Abfrage zurückge
 
 
 
-Der optionale <\_ Gruppenalias> Teil der-Klausel vereinfacht komplexe Abfragen, indem einer Gruppe von mindestens einer Spalte ein Alias zugewiesen wird. Dies kann die Lesbarkeit komplexer Abfragen verbessern, die über mehrere durch URLs angegebene Spalten hinweg nach denselben Informationen suchen. Weitere Informationen zu Gruppen Aliasen finden Sie unter [with-as Group Alias Predicate](-search-sql-with-as.md).
+Der optionale <\_ Gruppenalias> Teil der -Klausel vereinfacht komplexe Abfragen, indem einer Gruppe von einer oder mehreren Spalten ein Alias zugewiesen wird. Dies kann die Lesbarkeit komplexer Abfragen verbessern, die in mehreren durch URLs angegebenen Spalten nach denselben Informationen suchen. Weitere Informationen zu Gruppenaliasen finden Sie unter [WITH -- AS Group Alias Predicate](-search-sql-with-as.md).
 
-Der <search condition> Teil der WHERE-Klausel ist ein oder mehrere Such Prädikate, die übereinstimmende Kriterien für die Suche angeben. Such Prädikate sind Ausdrücke, die einige Fakten über einen Wert bestätigen.
+Der <search condition> Teil der WHERE-Klausel ist ein oder mehrere Suchprädikate, die Übereinstimmungskriterien für die Suche angeben. Bei Suchprädikaten handelt es sich um Ausdrücke, die eine Tatsache zu einem Bestimmten Wert bestätigen.
 
-Das Ergebnis einer Such Bedingung ist ein boolescher Wert, entweder **true** , wenn das Dokument die angegebenen Suchbedingungen erfüllt, oder **false** , wenn dies nicht der Fall ist. Wenn das Ergebnis **true** ist, wird das Dokument zurückgegeben. Wenn das Ergebnis **false** ist, wird das Dokument nicht zurückgegeben. Bei Dokumenten, die in einer Microsoft Windows Search-Abfrage zurückgegeben werden, werden Rang Werte entsprechend der Übereinstimmung der Suchbedingungen zugewiesen. Jede der Abfrage Suchbedingungen kann eine [rankby](-search-sql-rankby.md) -Klausel enthalten, die das Ändern der zurückgegebenen Rang Werte unterstützt.
+Das Ergebnis einer Suchbedingung ist ein boolescher Wert, entweder **TRUE,** wenn das Dokument die angegebenen Suchbedingungen erfüllt, oder **FALSE,** wenn dies nicht der Fall ist. Wenn das Ergebnis **TRUE** ist, wird das Dokument zurückgegeben. Wenn das Ergebnis **FALSE** ist, wird das Dokument nicht zurückgegeben. Dokumenten, die in einer Microsoft Windows Search-Abfrage zurückgegeben werden, werden Rangwerte entsprechend ihrer Übereinstimmung mit den Suchbedingungen zugewiesen. Jede der Abfragesuchbedingungen kann eine [RANKBY-Klausel](-search-sql-rankby.md) enthalten, die das Ändern der zurückgegebenen Rangwerte unterstützt.
 
-Die [reusewhere-Funktion](-search-sql-reusewhere.md) macht mehrere Abfragen, die die gleichen Suchbedingungen verwenden, effizienter. Die WHERE-Klausel in einer Abfrage gibt den Satz von Elementen an, die in einer Abfrage gefunden werden. Nachfolgende Abfragen können die Arbeit, die für die vorherige Auswertung ausgeführt wird, mithilfe der Funktion reusewhere in der neuen Abfrage WHERE-Klausel freigeben.
+Die [ReuseWhere-Funktion](-search-sql-reusewhere.md) macht mehrere Abfragen effizienter, die einige der gleichen Suchbedingungen verwenden. Die WHERE-Klausel in einer Abfrage gibt den Satz von Elementen an, die in einer Abfrage übereinstimmen. Nachfolgende Abfragen können die Für die vorherige Auswertung ausgeführte Arbeit mithilfe der ReuseWhere-Funktion in der neuen WHERE-Abfrageklausel freigeben.
 
-## <a name="search-predicates"></a>Such Prädikate
+## <a name="search-predicates"></a>Suchprädikate
 
-Eine Such Bedingung besteht aus einem oder mehreren Prädikaten oder Suchbedingungen, die beschreiben, wie der Benutzer sucht (z. b. wenn System. DateCreated > "2006-04-19"). Such Prädikate können mit den logischen Operatoren **and**, **or** oder **Not** kombiniert werden. Der optionale unäre Operator **Not** kann nur mit **und** und nur verwendet werden, um den logischen Wert eines Prädikats oder einer Such Bedingung zu negieren. Sie können Klammern verwenden, um logische Begriffe zu gruppieren und zu schachteln.
+Eine Suchbedingung besteht aus einem oder mehreren Prädikaten oder Suchbedingungen, die beschreiben, wonach der Benutzer sucht (z.B. WHERE System.DateCreated >'2006-04-19'). Suchprädikate können mithilfe der logischen Operatoren **AND,** **OR** oder **NOT** kombiniert werden. Der optionale unäre Operator **NOT** kann nur mit **AND** und nur zum Negieren des logischen Werts eines Prädikats oder einer Suchbedingung verwendet werden. Sie können logische Begriffe mithilfe von Klammern gruppieren und schachteln.
 
-Die folgende Tabelle zeigt die Rangfolge der logischen Operatoren.
+Die folgende Tabelle zeigt die Rangfolge für die logischen Operatoren.
 
 
 
 | Reihenfolge (Rangfolge) | Logischer Operator |
 |--------------------|------------------|
-| First (höchste)    | **NOT**          |
-| Sekunde             | **AND**          |
+| Erste (höchste)    | **NOT**          |
+| Second             | **AND**          |
 | Dritte (niedrigste)     | **OR**           |
 
 
 
  
 
-Logische Operatoren desselben Typs sind assoziativ, und es ist keine Berechnungs Reihenfolge angegeben. Beispielsweise können (a **und** B) **und** (c **und** d) (a **und** d) **und** (B **und** C) ohne Änderung im logischen Ergebnis berechnet werden.
+Logische Operatoren desselben Typs sind assoziativ, und es gibt keine angegebene Berechnungsreihenfolge. Beispielsweise können (A **UND** B) **AND** (C **UND** D) (A **UND** D) **UND** (B **UND** C) ohne Änderung des logischen Ergebnisses berechnet werden.
 
 > [!IMPORTANT]
 >
-> Falsch: Where **Not** enthält (' Computer ')
+> Falsch: WHERE **NOT** CONTAINS ('computer')
 >
-> Richtig: Where enthält ("Software") **und enthält keine** ("Computer").
+> Richtig: WHERE CONTAINS ('software') **AND NOT** CONTAINS ('computer')
 
  
 
-In komplexen Abfragen möchten Sie möglicherweise mehr Akzente in einigen Spalten als in anderen Spalten platzieren. Wenn Sie z. b. nach Dokumenten suchen, in denen "Software Design" erläutert wird, ist die Suche nach dem Suchbegriff im Dokumenttitel wahrscheinlich eine gute Frage, als die einzelnen Wörter im Text des Dokuments zu suchen. Um die Rangfolge von Dokumenten auf diese Weise zu beeinflussen, unterstützt die Microsoft Windows Search-Abfragesprache das Abwägen der Suchbedingungen. Weitere Informationen zur Spalten Gewichtung finden Sie unter [enthält ein Prädikat](-search-sql-contains.md) und ein frei [Text Prädikat](-search-sql-freetext.md).
+Bei komplexen Abfragen sollten Sie übereinstimmungen in einigen Spalten mehr Aufmerksamkeit als in anderen spalten. Wenn Sie beispielsweise nach Dokumenten suchen, die "Softwareentwurf" besprechen, ist es wahrscheinlicher, den Suchbegriff im Dokumenttitel zu finden, als die einzelnen Wörter im Text des Dokuments zu finden. Um die Rangfolge von Dokumenten auf diese Weise zu beeinflussen, unterstützt die Abfragesprache Microsoft Windows Search die Gewichtung der Suchbedingungen. Weitere Informationen zur Spaltengewichtung finden Sie unter [CONTAINS-Prädikat](-search-sql-contains.md) und [FREETEXT-Prädikat.](-search-sql-freetext.md)
 
-Es gibt drei Gruppen von Such Prädikaten in Windows Search: Volltext, nicht Volltext und Ordner Tiefe suchen. Prädikate für die Volltextsuche entsprechen in der Regel der Bedeutung von Inhalt, Titel und anderen Spalten und unterstützen die linguistische Übereinstimmung (z. b. Alternative Word-Formulare, Ausdrücke und Near-Suche). Im Gegensatz dazu entsprechen nicht-voll Text Suchprädikate dem Wert der angegebenen Spalten und enthalten keine besondere linguistische Verarbeitung, aber in einigen Fällen bieten Zeichen basierten Musterabgleich. Mit den Prädikaten für die Ordner Tiefe wird der Suchbereich auf einen angegebenen Pfad beschränkt.
+Es gibt drei Gruppen von Suchprädikaten in Windows Search: Volltext-, Nicht-Volltext- und Ordnertiefesuchvorgänge. Volltextsuchprädikate stimmen in der Regel mit der Bedeutung von Inhalt, Titel und anderen Spalten überein und unterstützen linguistische Übereinstimmungen (z. B. alternative Wortformen, Ausdrücke und Näherungssuche). Im Gegensatz dazu stimmen Prädikate ohne Volltextsuche mit dem Wert der angegebenen Spalten überein und enthalten keine spezielle linguistische Verarbeitung, bieten jedoch in mehreren Fällen zeichenbasierte Musterübereinstimmungen. Ordnertiefeprädikate beschränken den Suchbereich auf einen angegebenen Pfad.
 
 > [!Note]  
-> Wenn die Abfrage ein Dokument zurückgibt, weil ein nicht-voll Text Prädikat für dieses Dokument **true** ergibt, wird der Rangwert als 1000 berechnet. Durch die Verwendung der Rang Umwandlungs [Funktion](-search-sql-rankby.md) kann der Rangwert geändert werden.
+> Wenn die Abfrage ein Dokument zurückgibt, weil ein Nicht-Volltextprädikat für dieses Dokument zu **TRUE** ausgewertet wird, wird der Rangwert als 1000 berechnet. Mithilfe der [Rangfolgekoersionsfunktion](-search-sql-rankby.md) kann der Rangwert geändert werden.
 
  
 
-In den folgenden Tabellen werden die Prädikate für Volltext-, nicht-Volltext-und Ordner Tiefe-Suche beschrieben.
+In den folgenden Tabellen werden die Prädikate für die Suche nach Volltext, Nicht-Volltext und Ordnertiefe beschrieben.
 
 
 
-| Volltext-Prädikat                  | BESCHREIBUNG                                                                                                                                                                                                                                                      |
+| Volltextprädikat                  | BESCHREIBUNG                                                                                                                                                                                                                                                      |
 |--------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| [CONTAINS](-search-sql-contains.md) | Unterstützt komplexe Suchvorgänge für Begriffe in Dokument Textspalten (z. b. Titel, Inhalt). Kann nach inflektierte Formen der Suchbegriffe suchen, auf die Nähe der Begriffe testen und logische Vergleiche durchführen. Suchbegriffe können Platzhalter Zeichen enthalten. |
-| [FREETEXT](-search-sql-freetext.md) | Sucht nach Dokumenten, die der Bedeutung des Such Ausdrucks entsprechen. Verwandte Wörter und ähnliche Ausdrücke stimmen überein, wobei die Rang Spalte auf der Grundlage der Übereinstimmung des Dokuments mit dem Suchbegriff berechnet wird. Suchbegriffe dürfen keine Platzhalter Zeichen enthalten.  |
+| [CONTAINS](-search-sql-contains.md) | Unterstützt komplexe Suchen nach Begriffen in Dokumenttextspalten (z. B. Titel, Inhalt). Kann nach inflektierten Formen der Suchbegriffe suchen, die Nähe der Begriffe testen und logische Vergleiche durchführen. Suchbegriffe können Platzhalterzeichen enthalten. |
+| [FREETEXT](-search-sql-freetext.md) | Sucht nach Dokumenten, die der Bedeutung des Suchbegriffs entsprechen. Verwandte Wörter und ähnliche Ausdrücke stimmen überein, wobei die Rangfolgespalte basierend darauf berechnet wird, wie genau das Dokument mit dem Suchbegriff übereinstimmt. Suchbegriffe dürfen keine Platzhalterzeichen enthalten.  |
 
 
 
@@ -83,12 +83,12 @@ In den folgenden Tabellen werden die Prädikate für Volltext-, nicht-Volltext-u
 
 
 
-| Nicht-voll Text Prädikat                                                    | BESCHREIBUNG                                                                                                                                                                           |
+| Nicht-Volltextprädikat                                                    | BESCHREIBUNG                                                                                                                                                                           |
 |----------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| [LIKE](-search-sql-like.md)                                               | Spaltenwerte werden mithilfe eines einfachen Musterabgleich mit Platzhaltern verglichen.                                                                                                    |
-| [Vergleich von literalen Werten](-search-sql-literalvaluecomparison.md)         | Spaltenwerte werden mit Zeichen folgen-, Datums-, Zeitstempel-, numerischen und anderen Literalwerten verglichen. Dieses Prädikat unterstützt Gleichheit und Ungleichheiten wie "größer als" und "kleiner als". |
-| [Mehrwertige Vergleiche (Array)](-search-sql-multivaluedcomparisons.md) | Mehrwertige Spalten werden mit einem mehrwertigen Array von literalen verglichen.                                                                                                             |
-| [NULL](-search-sql-null.md)                                               | Spaltenwerte, die für das Dokument nicht definiert sind, können mithilfe des **null** -Prädikats erkannt werden.                                                                                    |
+| [LIKE](-search-sql-like.md)                                               | Spaltenwerte werden mithilfe eines einfachen Musterabgleichs mit Platzhalterzeichen verglichen.                                                                                                    |
+| [Literalwertvergleich](-search-sql-literalvaluecomparison.md)         | Spaltenwerte werden mit Zeichenfolgen-, Datums-, Zeitstempel-, numerischen und anderen Literalwerten verglichen. Dieses Prädikat unterstützt Gleichheit und Gleichheit, z. B. größer als und kleiner als. |
+| [Mehrwertige Vergleiche (ARRAY)](-search-sql-multivaluedcomparisons.md) | Mehrwertige Spalten werden mit einem mehrwertigen Array von Literalen verglichen.                                                                                                             |
+| [NULL](-search-sql-null.md)                                               | Spaltenwerte, die für das Dokument nicht definiert sind,  können mithilfe des NULL-Prädikats erkannt werden.                                                                                    |
 
 
 
@@ -96,10 +96,10 @@ In den folgenden Tabellen werden die Prädikate für Volltext-, nicht-Volltext-u
 
 
 
-| Ordner Tiefe                             | BESCHREIBUNG                                                                                        |
+| Ordnertiefe                             | BESCHREIBUNG                                                                                        |
 |------------------------------------------|----------------------------------------------------------------------------------------------------|
-| [Umfang](-search-sql-folderdepth.md)     | Führt einen tiefen Durchlauf des angegebenen Pfads aus, einschließlich des jeweiligen Ordners und aller Unterordner. |
-| [Befinden](-search-sql-folderdepth.md) | Führt einen flachen Durchlauf des angegebenen Pfads durch und sucht nur nach dem jeweiligen Ordner.            |
+| [Umfang](-search-sql-folderdepth.md)     | Führt einen tiefen Durchlauf des angegebenen Pfads aus, einschließlich des spezifischen Ordners und aller Unterordner. |
+| [Verzeichnis](-search-sql-folderdepth.md) | Führt einen flachen Durchlauf des angegebenen Pfads durch und durchsucht nur den bestimmten Ordner.            |
 
 
 
@@ -107,7 +107,7 @@ In den folgenden Tabellen werden die Prädikate für Volltext-, nicht-Volltext-u
 
 ## <a name="examples"></a>Beispiele
 
-Beispiele für die WHERE-Klausel finden Sie in den Themen zu den einzelnen Prädikaten, die in der obigen Tabelle verknüpft sind.
+Beispiele für die WHERE-Klausel finden Sie in den einzelnen Prädikatthemen, die in der vorherigen Tabelle verknüpft sind.
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
@@ -116,7 +116,7 @@ Beispiele für die WHERE-Klausel finden Sie in den Themen zu den einzelnen Präd
 **Referenz**
 </dt> <dt>
 
-[Reusewhere-Funktion](-search-sql-reusewhere.md)
+[ReuseWhere-Funktion](-search-sql-reusewhere.md)
 </dt> <dt>
 
 [Rowset-Eigenschaften](-search-sql-rowset-properties.md)
@@ -125,25 +125,25 @@ Beispiele für die WHERE-Klausel finden Sie in den Themen zu den einzelnen Präd
 [FROM-Klausel](-search-sql-from.md)
 </dt> <dt>
 
-[Übersicht über die SQL-Such Syntax](-search-sql-ovwofsearchquery.md)
+[Übersicht über die Syntax für SQL suchen](-search-sql-ovwofsearchquery.md)
 </dt> <dt>
 
-[WITH--as Group Alias-Prädikat](-search-sql-with-as.md)
+[WITH – AS-Gruppenaliasprädikat](-search-sql-with-as.md)
 </dt> <dt>
 
-[Bereichs-und Verzeichnis Prädikate](-search-sql-folderdepth.md)
+[SCOPE- und DIRECTORY-Prädikate](-search-sql-folderdepth.md)
 </dt> <dt>
 
-[Rank by-Klausel](-search-sql-rankby.md)
+[RANK BY-Klausel](-search-sql-rankby.md)
 </dt> <dt>
 
-**Licher**
+**Konzeptionellen**
 </dt> <dt>
 
-[Voll Text Prädikate](-search-sql-fulltextpredicates.md)
+[Volltextprädikate](-search-sql-fulltextpredicates.md)
 </dt> <dt>
 
-[Nicht-voll Text Prädikate](-search-sql-nonfulltextpredicates.md)
+[Nicht-Volltextprädikate](-search-sql-nonfulltextpredicates.md)
 </dt> </dl>
 
  

@@ -37,7 +37,7 @@ Sie können auch das AmbientLightAware-Beispiel aus dem Codekatalog herunterlade
 
 Das Windows SDK enthält einen virtuellen Lichtsensor, mit dem Sie ein hardwarebasiertes Lichtsensorgerät simulieren können. Sie können dieses Tool verwenden, um Daten für das AmbientLightAware-Beispiel zur Verfügung zu stellen, um zu sehen, wie der Code im Beispiel funktioniert.
 
-In der folgenden Tabelle werden die Dateien beschrieben, die Sie zum Ausführen des virtuellen Lichtsensors verwenden müssen. Sie finden diese Dateien im Ordner Bin, in dem Sie das Windows installiert haben. Wenn Sie beispielsweise das Windows SDK auf Laufwerk C auf einem 32-Bit-Computer installiert haben, befinden sich die Dateien des virtuellen Lichtsensors im folgenden Ordner: C: Programme \\ \\ Microsoft SDKs Windows \\ \\ v7.0 \\ Bin. Auf 64-Bit-Computern müssen Sie die 64-Bit-Version des Tools verwenden. Im Windows SDK befinden sich 64-Bit-Tools im Unterordner x64.
+In der folgenden Tabelle werden die Dateien beschrieben, die Sie zum Ausführen des virtuellen Lichtsensors verwenden müssen. Sie finden diese Dateien im Ordner Bin, in dem Sie das Windows INSTALLIERT haben. Wenn Sie beispielsweise das Windows SDK auf Laufwerk C auf einem 32-Bit-Computer installiert haben, befinden sich die Dateien des virtuellen Lichtsensors im folgenden Ordner: C: Programme \\ \\ Microsoft SDKs Windows \\ \\ v7.0 \\ Bin. Auf 64-Bit-Computern müssen Sie die 64-Bit-Version des Tools verwenden. Im Windows SDK befinden sich 64-Bit-Tools im Unterordner x64.
 
 
 
@@ -63,7 +63,7 @@ Bevor Sie die Anwendung für den virtuellen Lichtsensor verwenden, müssen Sie d
 
 ### <a name="running-the-virtual-light-sensor"></a>Ausführen des virtuellen Lichtsensors
 
-Doppelklicken Sie einfach auf die .exe, um den virtuellen Lichtsensor ausführen zu können. Stellen Sie sicher, dass Sie den Sensor aktivieren, wenn Sie dazu aufgefordert werden.
+Doppelklicken Sie zum Ausführen des virtuellen Lichtsensors einfach auf die .exe Datei. Stellen Sie sicher, dass Sie den Sensor aktivieren, wenn Sie dazu aufgefordert werden.
 
 Wenn Sie das Programm ausführen, stellen Sie möglicherweise fest, dass es eine Verzögerung gibt, bevor der Sensor verfügbar wird. Die Benutzeroberfläche des virtuellen Lichtsensors zeigt die Meldung "Warten" in der Titelleiste an, während der logische Sensor-Manager einen Geräteknoten für den logischen Sensor erstellt. Nachdem die wartende Nachricht entfernt wurde, können Sie mit dem Schieberegler die Lux-Ausgabeebene für den virtuellen Lichtsensor festlegen.
 

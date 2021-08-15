@@ -1,58 +1,58 @@
 ---
-title: Idlestart-Ereignis
-description: Idlestart-Ereignis
+title: IdleStart-Ereignis
+description: IdleStart-Ereignis
 ms.assetid: 3d97c26b-b88a-42e3-9072-0bc65510efc2
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 706aafc13cb1639484539e3d08b305df217ecec8
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: 81458d4c88bc5db4ae4231ecb4ca47f456700917f42d6ccdfe5a6013bc288849
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "106338991"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119716050"
 ---
-# <a name="idlestart-event"></a>Idlestart-Ereignis
+# <a name="idlestart-event"></a>IdleStart-Ereignis
 
-\[Der Microsoft-Agent ist ab Windows 7 veraltet und in nachfolgenden Versionen von Windows möglicherweise nicht verfügbar.\]
+\[Der Microsoft-Agent ist ab Windows 7 veraltet und in nachfolgenden Versionen von Windows möglicherweise nicht mehr verfügbar.\]
 
 <dl> <dt>
 
 <span id="Description"></span><span id="description"></span><span id="DESCRIPTION"></span>**Beschreibung**
 </dt> <dd>
 
-Tritt auf, wenn der Server ein Zeichen auf den **idck** -Zustand festlegt.
+Tritt ein, wenn der Server ein Zeichen auf den **Idling-Zustand** festlegt.
 
 </dd> <dt>
 
 <span id="Syntax"></span><span id="syntax"></span><span id="SYNTAX"></span>**Syntax**
 </dt> <dd>
 
-**Sub** - *Agent * * * \_ idlestart* *  **(ByVal** -Merkmal- *ID * * *)**
+ *Sub-Agent** \_ IdleStart* *  **(ByVal** *CharacterID))**
 
 
 
 | Teil          | BESCHREIBUNG                                         |
 |---------------|-----------------------------------------------------|
-| *Merkmal-ID* | Gibt die ID des idult-Zeichens als Zeichenfolge zurück. |
+| *CharacterID* | Gibt die ID des idling-Zeichens als Zeichenfolge zurück. |
 
 
 
- 
+ 
 
 </dd> </dl>
 
-### <a name="remarks"></a>Bemerkungen
+### <a name="remarks"></a>Hinweise
 
 Der Server sendet dieses Ereignis an alle Clients des Zeichens.
 
 ### <a name="see-also"></a>Weitere Informationen
 
-[**Idlecomplete-Ereignis**](idlecomplete-event.md)
+[**IdleComplete-Ereignis**](idlecomplete-event.md)
 
 
- 
+ 
 
- 
+ 
 
 
 

@@ -1,5 +1,5 @@
 ---
-description: Stellt die Statusdaten für die Auslagerungs Funktion dar.
+description: Stellt die Statusdaten der Port offload-Funktion dar.
 ms.assetid: 1117b9e4-cff7-4c9e-bf5e-74499297e84e
 title: Msvm_EthernetSwitchPortOffloadData-Klasse
 ms.topic: reference
@@ -38,16 +38,16 @@ api_type:
 - DllExport
 api_location:
 - vmms.exe
-ms.openlocfilehash: fd60e98c8df12b539bb51c60b34e7931b762dc03
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: e6e2de8571d665dc86393708b2afcf73fc4885f0b4de26624daafcdccff995b1
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106373391"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119681480"
 ---
-# <a name="msvm_ethernetswitchportoffloaddata-class"></a>MSVM \_ ethernezwitchportoffloaddata-Klasse
+# <a name="msvm_ethernetswitchportoffloaddata-class"></a>Msvm \_ EthernetSwitchPortOffloadData-Klasse
 
-Stellt die Statusdaten für die Auslagerungs Funktion dar.
+Stellt die Statusdaten der Port offload-Funktion dar.
 
 Die folgende Syntax wird Managed Object Format (MOF)-Code vereinfacht und enthält alle geerbten Eigenschaften.
 
@@ -87,107 +87,107 @@ class Msvm_EthernetSwitchPortOffloadData : Msvm_EthernetPortData
 
 ## <a name="members"></a>Member
 
-Die **MSVM \_ ethernezwitchportoffloaddata** -Klasse verfügt über diese Typen von Membern:
+Die **Msvm \_ EthernetSwitchPortOffloadData-Klasse** verfügt über die folgenden Membertypen:
 
 -   [Eigenschaften](#properties)
 
 ### <a name="properties"></a>Eigenschaften
 
-Die **MSVM \_ ethernezwitchportoffloaddata** -Klasse verfügt über diese Eigenschaften.
+Die **Msvm \_ EthernetSwitchPortOffloadData-Klasse** verfügt über diese Eigenschaften.
 
 <dl> <dt>
 
 **Caption**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Eine kurze Beschreibung des-Objekts. Diese Eigenschaft wird vom [**CIM- \_ managedelta**](/previous-versions/windows/desktop/iscsitarg/cim-managedelement)geerbt und ist immer auf "Ethernet Switch Port Offload Feature Status" festgelegt.
+Eine kurze Beschreibung des -Objekts. Diese Eigenschaft wird von [**CIM \_ ManagedElement geerbt**](/previous-versions/windows/desktop/iscsitarg/cim-managedelement)und immer auf "Ethernet Switch Port Offload Feature Status" festgelegt.
 
 </dd> <dt>
 
-**"Name der Klassenname"**
+**CreationClassName**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: **Key**, **maxlen** (256)
+Qualifizierer: **Key**, **MaxLen** ( 256 )
 </dt> </dl>
 
-Der Name der Unterklasse, die bei der Erstellung dieser Port Daten Instanz verwendet wird. Diese Eigenschaft wird von [**MSVM \_ ethernetportdata**](msvm-ethernetportdata.md)geerbt und ist immer auf "MSVM \_ ethernezwitchportoffloaddata" festgelegt.
+Der Name der Unterklasse, die bei der Erstellung dieser Portdateninstanz verwendet wurde. Diese Eigenschaft wird von [**Msvm \_ EthernetPortData**](msvm-ethernetportdata.md)geerbt und immer auf "Msvm \_ EthernetSwitchPortOffloadData" festgelegt.
 
 </dd> <dt>
 
 **Beschreibung**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Eine Beschreibung des -Objekts. Diese Eigenschaft wird von [**CIM \_ managedelta**](/previous-versions/windows/desktop/iscsitarg/cim-managedelement)geerbt und ist immer auf "stellt die Statusdaten für die Port Auslagerungs Funktion" dar.
+Eine Beschreibung des -Objekts. Diese Eigenschaft wird von [**CIM \_ ManagedElement geerbt**](/previous-versions/windows/desktop/iscsitarg/cim-managedelement)und immer auf "Stellt die Statusdaten der Port offloadfunktion dar." festgelegt.
 
 </dd> <dt>
 
-**Geräteklassen Name**
+**DeviceCreationClassName**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: **Key**, **maxlen** (256)
+Qualifizierer: **Key**, **MaxLen** ( 256 )
 </dt> </dl>
 
-Der Name der Erstellungs Klasse des Bereichs Systems. Diese Eigenschaft wird von [**MSVM \_ ethernetportdata**](msvm-ethernetportdata.md)geerbt und ist immer auf "MSVM \_ ethernetzwitchport" festgelegt.
+Der Name der Erstellungsklasse des Bereichssystems. Diese Eigenschaft wird von [**Msvm \_ EthernetPortData**](msvm-ethernetportdata.md)geerbt und immer auf "Msvm \_ EthernetSwitchPort" festgelegt.
 
 </dd> <dt>
 
-**DeviceID**
+**Deviceid**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: **Key**, **maxlen** (64)
+Qualifizierer: **Key**, **MaxLen** ( 64 )
 </dt> </dl>
 
-Die Geräte-ID des Ports, der diese Port Daten Instanz eingibt. Diese Eigenschaft wird von [**MSVM \_ ethernetportdata**](msvm-ethernetportdata.md)geerbt.
+Die Geräte-ID des Ports, der den Bereich dieser Portdateninstanz ein geltungsbereicht. Diese Eigenschaft wird von [**Msvm \_ EthernetPortData geerbt.**](msvm-ethernetportdata.md)
 
 </dd> <dt>
 
 **ElementName**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Ein Anzeige Name für das-Objekt. Diese Eigenschaft wird vom [**CIM- \_ managedelta**](/previous-versions/windows/desktop/iscsitarg/cim-managedelement)geerbt und ist immer auf "Ethernet Switch Port Offload Feature Status" festgelegt.
+Ein Anzeigename für das Objekt. Diese Eigenschaft wird von [**CIM \_ ManagedElement geerbt**](/previous-versions/windows/desktop/iscsitarg/cim-managedelement)und immer auf "Ethernet Switch Port Offload Feature Status" festgelegt.
 
 </dd> <dt>
 
 **InstanceID**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
@@ -196,333 +196,333 @@ Zugriffstyp: Schreibgeschützt
 Qualifizierer: **Schlüssel**
 </dt> </dl>
 
-Identifiziert eine Instanz dieser Klasse eindeutig. Diese Eigenschaft wird von [**CIM \_ managedelta**](/previous-versions/windows/desktop/iscsitarg/cim-managedelement)geerbt.
+Identifiziert eine Instanz dieser Klasse eindeutig. Diese Eigenschaft wird von [**CIM \_ ManagedElement geerbt.**](/previous-versions/windows/desktop/iscsitarg/cim-managedelement)
 
 </dd> <dt>
 
-**Iovoffloadusage**
+**IovOffloadUsage**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt32**
+Datentyp: **uint32**
 </dt> <dt>
 
 Zugriffstyp: Lesen/Schreiben
 </dt> <dt>
 
-Qualifizierer: **wmidataid** (2), **interfacetten** (1), **interfakerevision** (0)
+Qualifizierer: **WmiDataId** (2), **InterfaceVersion** (1), **InterfaceRevision** (0)
 </dt> </dl>
 
-Die aktuelle Nutzung der e/a-Virtualisierung (IOV).
+Die aktuelle Nutzung der E/A-Virtualisierung (IOV).
 
 </dd> <dt>
 
-**Iovqueuepairusage**
+**IovQueuePairUsage**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt32**
+Datentyp: **uint32**
 </dt> <dt>
 
 Zugriffstyp: Lesen/Schreiben
 </dt> <dt>
 
-Qualifizierer: **wmidataid** (7), **interfacetten** (1), **interfakerevision** (0)
+Qualifizierer: **WmiDataId** (7), **InterfaceVersion** (1), **InterfaceRevision** (0)
 </dt> </dl>
 
-Die aktuelle Anzahl der Warteschlangen Paare, die vom Port verwendet werden.
+Die aktuelle Anzahl von Warteschlangenpaaren, die vom Port verwendet werden.
 
 </dd> <dt>
 
-**Iovvfdatapathactive**
+**IovVfDataPathActive**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **boolescher** Wert
+Datentyp: **boolescher Wert**
 </dt> <dt>
 
 Zugriffstyp: Lesen/Schreiben
 </dt> <dt>
 
-Qualifizierer: **wmidataid** (6), **interfacetten** (1), **interfakerevision** (0)
+Qualifizierer: **WmiDataId** (6), **InterfaceVersion** (1), **InterfaceRevision** (0)
 </dt> </dl>
 
-Gibt an, ob der IOV VF-Datenpfad aktiv ist.
+Gibt an, ob der IOV-VF-Datenpfad aktiv ist.
 
 </dd> <dt>
 
-**Iovvfid**
+**IovVfId**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt16**
+Datentyp: **uint16**
 </dt> <dt>
 
 Zugriffstyp: Lesen/Schreiben
 </dt> <dt>
 
-Qualifizierer: **wmidataid** (5), **interfacetten** (1), **interfakerevision** (0)
+Qualifizierer: **WmiDataId** (5), **InterfaceVersion** (1), **InterfaceRevision** (0)
 </dt> </dl>
 
-Der aktuelle IOV VF-Bezeichner, der dem Port zugewiesen ist. Dies ist gültig, wenn **iovoffloadusage** nicht 0 (null) ist.
+Der aktuelle IOV-VF-Bezeichner, der dem Port zugewiesen ist. Dies ist gültig, **wenn IovOffloadUsage** nicht 0 (null) ist.
 
 </dd> <dt>
 
-**Ipseccurrentoffloadsacount**
+**IpsecCurrentOffloadSaCount**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt32**
+Datentyp: **uint32**
 </dt> <dt>
 
 Zugriffstyp: Lesen/Schreiben
 </dt> <dt>
 
-Qualifizierer: **wmidataid** (1), **interfacetten** (1), **interfakerevision** (0)
+Qualifizierer: **WmiDataId** (1), **InterfaceVersion** (1), **InterfaceRevision** (0)
 </dt> </dl>
 
-Die aktuelle Anzahl der auf dem Port verwendeten Sicherheits Zuordnungs Slots (SA).
+Die aktuelle Anzahl von Sa-Ausladeslots (Security Association, Sicherheitszuordnung), die auf dem Port verwendet werden.
 
 </dd> <dt>
 
 **Name**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: **Key**, **maxlen** (256)
+Qualifizierer: **Key**, **MaxLen** ( 256 )
 </dt> </dl>
 
-Eine Zeichenfolge, die diese Port Daten Instanz innerhalb des Bereichs des Schalters und des Ports eindeutig identifiziert. Diese Eigenschaft wird von [**MSVM \_ ethernetportdata**](msvm-ethernetportdata.md)geerbt.
+Eine Zeichenfolge, die diese Portdateninstanz innerhalb des Bereichs von Switch und Port eindeutig identifiziert. Diese Eigenschaft wird von [**Msvm \_ EthernetPortData geerbt.**](msvm-ethernetportdata.md)
 
 </dd> <dt>
 
-**Systemkreationclassname**
+**SystemCreationClassName**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: **Key**, **maxlen** (256)
+Qualifizierer: **Key**, **MaxLen** (256)
 </dt> </dl>
 
-Der Name der Erstellungs Klasse des Bereichs Systems. Diese Eigenschaft wird von [**MSVM \_ ethernetportdata**](msvm-ethernetportdata.md)geerbt und ist immer auf "MSVM \_ virtualethernwitch" festgelegt.
+Der Name der Erstellungsklasse des Bereichssystems. Diese Eigenschaft wird von [**Msvm \_ EthernetPortData**](msvm-ethernetportdata.md)geerbt und immer auf "Msvm \_ VirtualEthernetSwitch" festgelegt.
 
 </dd> <dt>
 
 **Systemname**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: **Key**, **maxlen** (256)
+Qualifizierer: **Key**, **MaxLen** ( 256 )
 </dt> </dl>
 
-Der Name des virtuellen Switches, der diese Port Daten Instanz eingibt. Diese Eigenschaft wird von [**MSVM \_ ethernetportdata**](msvm-ethernetportdata.md)geerbt.
+Der Name des virtuellen Switches, der den Gültigkeitsbereich dieser Portdateninstanz ein bereichet. Diese Eigenschaft wird von [**Msvm \_ EthernetPortData geerbt.**](msvm-ethernetportdata.md)
 
 </dd> <dt>
 
-**Vmmqaktivierte**
+**VmmqEnabled**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **boolescher** Wert
+Datentyp: **boolescher Wert**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: **wmidataid** (9), **interfacetten** (2), **interfakerevision** (0)
+Qualifizierer: **WmiDataId** (9), **InterfaceVersion** (2), **InterfaceRevision** (0)
 </dt> </dl>
 
-Gibt an, ob vmmq aktiv ist.
+Gibt an, ob VMMQ aktiv ist.
 
 > [!Note]  
-> Diese Eigenschaft wurde in Windows 10, Version 1703, hinzugefügt.
+> Diese Eigenschaft wurde in Windows 10 Version 1703 hinzugefügt.
 
  
 
 </dd> <dt>
 
-**Vmmqqueuepairs**
+**VmmqQueuePairs**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt32**
+Datentyp: **uint32**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: **wmidataid** (10), **interfacetten** (2), **interfakerevision** (0)
+Qualifizierer: **WmiDataId** (10), **InterfaceVersion** (2), **InterfaceRevision** (0)
 </dt> </dl>
 
-Gibt an, wie viele Warteschlangen für vrss/vmmq verwendet werden.
+Gibt an, wie viele Warteschlangen für VRSS/VMMQ verwendet werden.
 
 > [!Note]  
-> Diese Eigenschaft wurde in Windows 10, Version 1703 und Windows Server 2016 hinzugefügt.
+> Diese Eigenschaft wurde in Windows 10 Version 1703 und Windows Server 2016 hinzugefügt.
 
  
 
 </dd> <dt>
 
-**Vmqid**
+**VMQId**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt32**
+Datentyp: **uint32**
 </dt> <dt>
 
 Zugriffstyp: Lesen/Schreiben
 </dt> <dt>
 
-Qualifizierer: **wmidataid** (4), **interfacetten** (1), **interfakerevision** (0)
+Qualifizierer: **WmiDataId** (4), **InterfaceVersion** (1), **InterfaceRevision** (0)
 </dt> </dl>
 
-Die aktuelle Warteschlangen Kennung des virtuellen Computers, die dem Port zugewiesen ist. Dies ist gültig, wenn " **vmqoffloadusage** " nicht 0 (null) ist.
+Der aktuelle Warteschlangenbezeichner des virtuellen Computers, der dem Port zugewiesen ist. Dies ist gültig, wenn **VMQOffloadUsage** nicht 0 (null) ist.
 
 </dd> <dt>
 
-**Vmqoffloadusage**
+**VMQOffloadUsage**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt32**
+Datentyp: **uint32**
 </dt> <dt>
 
 Zugriffstyp: Lesen/Schreiben
 </dt> <dt>
 
-Qualifizierer: **wmidataid** (3), **interfacetten** (1), **interfakerevision** (0)
+Qualifizierer: **WmiDataId** (3), **InterfaceVersion** (1), **InterfaceRevision** (0)
 </dt> </dl>
 
-Die aktuelle Virtual Machine Queue (VMQ)-Auslastungs Auslastung.
+Die aktuelle VM-Warteschlange (VMQ) lädt die Nutzung aus.
 
 </dd> <dt>
 
-**Vrssaktivierte**
+**VrssEnabled**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **boolescher** Wert
+Datentyp: **boolescher Wert**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: **wmidataid** (8), **interfacetten** (2), **interfakerevision** (0)
+Qualifizierer: **WmiDataId** (8), **InterfaceVersion** (2), **InterfaceRevision** (0)
 </dt> </dl>
 
-Gibt an, ob vrss aktiv ist.
+Gibt an, ob vRSS aktiv ist.
 
 > [!Note]  
-> Diese Eigenschaft wurde in Windows 10, Version 1703, hinzugefügt.
+> Diese Eigenschaft wurde in Windows 10 Version 1703 hinzugefügt.
 
  
 
 </dd> <dt>
 
-**Vrssexcludeprimaryprocessor**
+**VrssExcludePrimaryProcessor**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **boolescher** Wert
+Datentyp: **boolescher Wert**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: **wmidataid** (13), **interfacetten** (3), **interfakerevision** (0)
+Qualifizierer: **WmiDataId** (13), **InterfaceVersion** (3), **InterfaceRevision** (0)
 </dt> </dl>
 
-Gibt an, ob die primäre VMQ-CPU von der vrss/vmmq-dereferenzierungstabelle ausgeschlossen wird.
+Gibt an, ob die primäre VMQ-CPU aus der VRSS-/VMMQ-Dedizierungstabelle ausgeschlossen ist.
 
 > [!Note]  
-> Hinzugefügt in Windows 10, Version 1709.
+> Hinzugefügt in Windows 10 Version 1709.
 
  
 
 </dd> <dt>
 
-**Vrssindependenthostverteilung**
+**VrssIndependentHostSpreading**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **boolescher** Wert
+Datentyp: **boolescher Wert**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: **wmidataid** (14), **interfacetten** (3), **interfakerevision** (0)
+Qualifizierer: **WmiDataId** (14), **InterfaceVersion** (3), **InterfaceRevision** (0)
 </dt> </dl>
 
-Gibt an, ob die Host seitige vrss-/vmmq-Verteilung stattfindet, unabhängig von den RSS-Einstellungen der virtuellen NIC.
+Gibt an, ob die hostseitige VRSS/VMMQ-Verteilung unabhängig von den RSS-Einstellungen der virtuellen NIC erfolgt.
 
 > [!Note]  
-> Hinzugefügt in Windows 10, Version 1709.
+> Hinzugefügt in Windows 10 Version 1709.
 
  
 
 </dd> <dt>
 
-**Vrssminqueuepairs**
+**VrssMinQueuePairs**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt32**
+Datentyp: **uint32**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: **wmidataid** (11), **interfacetten** (3), **interfakerevision** (0)
+Qualifizierer: **WmiDataId** (11), **InterfaceVersion** (3), **InterfaceRevision** (0)
 </dt> </dl>
 
-Gibt die Mindestanzahl von Warteschlangen an, die für vrss/vmmq verwendet werden.
+Gibt die Mindestanzahl von Warteschlangen an, die für VRSS/VMMQ verwendet werden.
 
 > [!Note]  
-> Hinzugefügt in Windows 10, Version 1709.
+> Hinzugefügt in Windows 10 Version 1709.
 
  
 
 </dd> <dt>
 
-**Vrssqueueschedulingmode**
+**VrssQueueSchedulingMode**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt32**
+Datentyp: **uint32**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: **wmidataid** (12), **interfacetten** (3), **interfakerevision** (0)
+Qualifizierer: **WmiDataId** (12), **InterfaceVersion** (3), **InterfaceRevision** (0)
 </dt> </dl>
 
-Gibt an, wie vrss/vmmq-Warteschlangen an verschiedene Host Prozessoren geleitet werden.
+Gibt an, wie VRSS/VMMQ-Warteschlangen an verschiedene Hostprozessoren gesteuert werden.
 
 > [!Note]  
-> Hinzugefügt in Windows 10, Version 1709.
+> Hinzugefügt in Windows 10 Version 1709.
 
  
 
 </dd> <dt>
 
-**Vrssvmbuschannelaffinitypolicy**
+**VrssVmbusChannelAffinityPolicy**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt32**
+Datentyp: **uint32**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: **wmidataid** (15), **interfacetten** (3), **interfakerevision** (0)
+Qualifizierer: **WmiDataId** (15), **InterfaceVersion** (3), **InterfaceRevision** (0)
 </dt> </dl>
 
-Gibt an, wie VMBus-Kanäle Host Prozessoren zugeordnet werden.
+Gibt an, wie Vmbuskanäle hostprozessoren zugeordnet werden.
 
 > [!Note]  
-> Hinzugefügt in Windows 10, Version 1709.
+> Hinzugefügt in Windows 10 Version 1709.
 
  
 
@@ -534,10 +534,10 @@ Gibt an, wie VMBus-Kanäle Host Prozessoren zugeordnet werden.
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows 8 \[ -Desktop-Apps\]<br/>                                                              |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2012 \[ -Desktop-Apps\]<br/>                                                    |
-| Namespace<br/>                | \\Stammvirtualisierung \\ v2<br/>                                                                     |
-| MOF<br/>                      | <dl> <dt>Windowsvirtualization. v2. MOF</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | \[Windows 8 Nur Desktop-Apps\]<br/>                                                              |
+| Unterstützte Mindestversion (Server)<br/> | \[Windows Server 2012 Nur Desktop-Apps\]<br/>                                                    |
+| Namespace<br/>                | Root \\ Virtualization \\ V2<br/>                                                                     |
+| MOF<br/>                      | <dl> <dt>WindowsVirtualization.V2.mof</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>Vmms.exe</dt> </dl>                     |
 
 

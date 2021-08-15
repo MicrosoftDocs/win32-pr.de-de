@@ -1,28 +1,28 @@
 ---
-title: Verwenden des Ereignis Benachrichtigungs Rückrufs
-description: Im folgenden Verfahren werden die Schritte beschrieben, die der Client zum Empfangen von Änderungs Benachrichtigungs Meldungen vom RTM- \_ Ereignis Rückruf verwenden soll \_ . Der folgende Beispielcode zeigt, wie die Prozedur implementiert wird.
+title: Verwenden des Ereignisbenachrichtigungsrückrufs
+description: Im folgenden Verfahren werden die Schritte beschrieben, die der Client zum Empfangen von Änderungsbenachrichtigungsmeldungen vom RTM \_ EVENT \_ CALLBACK verwenden sollte. Der folgende Beispielcode zeigt, wie die Prozedur implementiert wird.
 ms.assetid: e079c585-6457-4c2c-82bd-e95d233c4aa6
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 85a650a762600c254979aaea974379b4021d0d73
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: a524c162aed66fec2112c3d0aeb61743b94c2eee131a10f935dba876a480baae
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "104037184"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120127820"
 ---
-# <a name="use-the-event-notification-callback"></a>Verwenden des Ereignis Benachrichtigungs Rückrufs
+# <a name="use-the-event-notification-callback"></a>Verwenden des Ereignisbenachrichtigungsrückrufs
 
-Im folgenden Verfahren werden die Schritte beschrieben, die der Client zum Empfangen von Änderungs Benachrichtigungs Meldungen vom RTM- \_ Ereignis Rückruf verwenden soll \_ . Der folgende Beispielcode zeigt, wie die Prozedur implementiert wird.
+Im folgenden Verfahren werden die Schritte beschrieben, die der Client zum Empfangen von Änderungsbenachrichtigungsmeldungen vom RTM \_ EVENT \_ CALLBACK verwenden sollte. Der folgende Beispielcode zeigt, wie die Prozedur implementiert wird.
 
-**Abrufen der Änderungs Benachrichtigungs Meldungen**
+**Abrufen der Änderungsbenachrichtigungsmeldungen**
 
-1.  Rufen Sie [**rtmgetchangeddebug**](/windows/desktop/api/Rtmv2/nf-rtmv2-rtmgetchangeddests) auf, um einen Satz von Änderungen abzurufen.
+1.  Rufen [**Sie RtmGetChangedDests auf,**](/windows/desktop/api/Rtmv2/nf-rtmv2-rtmgetchangeddests) um eine Reihe von Änderungen abzurufen.
 2.  Verarbeiten Sie die Änderungen.
-3.  Geben Sie die Ziele mithilfe von [**rtmreleasechangeddebug**](/windows/desktop/api/Rtmv2/nf-rtmv2-rtmreleasechangeddests)frei.
-4.  Wiederholen Sie die Schritte 1, 2 und 3, bis [**rtmgetchangeddests**](/windows/desktop/api/Rtmv2/nf-rtmv2-rtmgetchangeddests) Fehler \_ ohne \_ Weitere Elemente zurückgibt \_ .
+3.  Geben Sie die Ziele mit [**rtmReleaseChangedDests frei.**](/windows/desktop/api/Rtmv2/nf-rtmv2-rtmreleasechangeddests)
+4.  Wiederholen Sie die Schritte 1, 2 und 3, bis [**RtmGetChangedDests**](/windows/desktop/api/Rtmv2/nf-rtmv2-rtmgetchangeddests) ERROR \_ NO MORE ITEMS \_ \_ zurückgibt.
 
-Der folgende Beispielcode zeigt, wie ein vom Routing Tabellen-Manager empfangener [**RTM- \_ Ereignis \_ Rückruf**](/windows/win32/api/rtmv2/nc-rtmv2-_event_callback) Rückruf verarbeitet wird.
+Der folgende Beispielcode zeigt, wie Sie einen [**RTM \_ EVENT \_ CALLBACK-Rückruf**](/windows/win32/api/rtmv2/nc-rtmv2-_event_callback) verarbeiten, der vom Routingtabellen-Manager empfangen wurde.
 
 
 ```C++
@@ -217,9 +217,9 @@ EntityEventCallback (
 
 
 
- 
+ 
 
- 
+ 
 
 
 

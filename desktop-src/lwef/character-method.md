@@ -13,7 +13,7 @@ ms.locfileid: "118480627"
 ---
 # <a name="character-method"></a>Character-Methode
 
-\[Microsoft Agent ist ab Version Windows 7 veraltet und möglicherweise in nachfolgenden Versionen von Windows.\]
+\[Microsoft Agent ist ab Version Windows 7 veraltet und in nachfolgenden Versionen von Windows.\]
 
 <dl> <dt>
 
@@ -36,7 +36,7 @@ Gibt ein [**Character-Objekt**](/windows/desktop/lwef/the-characters-object) in 
 Mit dieser Methode können Sie auf die Methoden und Eigenschaften eines [**Character-Objekts**](/windows/desktop/lwef/the-characters-object) zugreifen.
 
 > [!Note]  
-> Diese Methode ist möglicherweise für einige Programmiersprachen erforderlich, die keine Auflistungen unterstützen. Dies ist für VBScript oder Visual Basic. Weitere Informationen zum Angeben von [**Zeichenmethoden finden**](/windows/desktop/lwef/the-characters-object) Sie unter Zeichenobjektmethoden.
+> Diese Methode ist möglicherweise für einige Programmiersprachen erforderlich, die keine Auflistungen unterstützen. Dies ist für VBScript oder Visual Basic. Weitere Informationen zum Angeben von Zeichenmethoden [**finden**](/windows/desktop/lwef/the-characters-object) Sie unter Zeichenobjektmethoden.
 
  
 

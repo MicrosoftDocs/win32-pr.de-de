@@ -1,11 +1,11 @@
 ---
-title: Ibasicdevice-SerialNumber-Methode
+title: IBasicDevice SerialNumber-Methode
 description: Ruft die Seriennummer des Geräts ab.
 ms.assetid: 238A5999-0E8B-4462-AFCF-790DB58CFCB4
 keywords:
-- SerialNumber-Methode Medien Streaming-API
-- SerialNumber-Methode Medien Streaming-API, ibasicdevice-Schnittstelle
-- Ibasicdevice-Schnittstelle Medien Streaming-API, SerialNumber-Methode
+- Media Streaming-API der SerialNumber-Methode
+- SerialNumber-Methode Media Streaming-API , IBasicDevice-Schnittstelle
+- IBasicDevice-Schnittstelle Medienstreaming-API , SerialNumber-Methode
 topic_type:
 - apiref
 api_name:
@@ -15,14 +15,14 @@ api_type:
 ms.topic: reference
 ms.date: 05/31/2018
 api_location: ''
-ms.openlocfilehash: f24fad2e74c3ec2a5b489d8f5dd57265ea6d21bf
-ms.sourcegitcommit: 57758ecb246c84d65e6e0e4bd5570d9176fa39cd
+ms.openlocfilehash: 37a4985754982b8b64246d8d0d0fac0d2c37f4a37f159d2e5087497442c97a75
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "104312486"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119712940"
 ---
-# <a name="ibasicdeviceserialnumber-method"></a>Ibasicdevice:: SerialNumber-Methode
+# <a name="ibasicdeviceserialnumber-method"></a>IBasicDevice::SerialNumber-Methode
 
 Ruft die Seriennummer des Geräts ab.
 
@@ -41,7 +41,7 @@ HRESULT SerialNumber(
 
 <dl> <dt>
 
-*Wert* \[ vorgenommen\]
+*wert* \[ out\]
 </dt> <dd>
 
 Empfängt einen Zeiger auf die Seriennummer des Geräts.
@@ -50,7 +50,7 @@ Empfängt einen Zeiger auf die Seriennummer des Geräts.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Die-Methode gibt ein **HRESULT** zurück. Mögliches Werte (aber nicht die Einzigen) sind die in der folgenden Tabelle.
+Die Methode gibt ein **HRESULT** zurück. Mögliches Werte (aber nicht die Einzigen) sind die in der folgenden Tabelle.
 
 
 
@@ -62,11 +62,11 @@ Die-Methode gibt ein **HRESULT** zurück. Mögliches Werte (aber nicht die Einzi
 
  
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Ibasicdevice**](ibasicdevice.md)
+[**IBasicDevice**](ibasicdevice.md)
 </dt> </dl>
 
  

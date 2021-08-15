@@ -1,7 +1,7 @@
 ---
-description: Erstellt ein Animations Controller Objekt.
+description: Erstellt ein Animationscontrollerobjekt.
 ms.assetid: 771e5966-ac1a-43c2-8e81-b6d573343ff0
-title: D3DXCreateAnimationController-Funktion (D3dx9anim. h)
+title: D3DXCreateAnimationController-Funktion (D3dx9anim.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -14,16 +14,16 @@ api_type:
 api_location:
 - d3dx9.lib
 - d3dx9.dll
-ms.openlocfilehash: a61b2c42a1eafa2ed28ac98c753588181a0ccf7a
-ms.sourcegitcommit: 14010c34b35fa268046c7683f021f86de08ddd0a
+ms.openlocfilehash: 0edda07aa5ae443a268bd5df50a154aa2a7f2ec9ca1873dc486e8e46532ae468
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "106353717"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118526635"
 ---
 # <a name="d3dxcreateanimationcontroller-function"></a>D3DXCreateAnimationController-Funktion
 
-Erstellt ein Animations Controller Objekt.
+Erstellt ein Animationscontrollerobjekt.
 
 ## <a name="syntax"></a>Syntax
 
@@ -44,48 +44,48 @@ HRESULT D3DXCreateAnimationController(
 
 <dl> <dt>
 
-*Maxnumanimationoutputs* \[ in\]
+*MaxNumAnimationOutputs* \[ In\]
 </dt> <dd>
 
-Typ: **[ **uint**](../winprog/windows-data-types.md)**
+Typ: **[ **UINT**](../winprog/windows-data-types.md)**
 
-Maximale Anzahl von Animations Ausgaben, die der Controller unterstützen kann.
+Maximale Anzahl von Animationsausgaben, die der Controller unterstützen kann.
 
 </dd> <dt>
 
-*Maxnumanimationsets* \[ in\]
+*MaxNumAnimationSets* \[ In\]
 </dt> <dd>
 
-Typ: **[ **uint**](../winprog/windows-data-types.md)**
+Typ: **[ **UINT**](../winprog/windows-data-types.md)**
 
-Maximale Anzahl der Animations Sätze, die gemischt werden können.
+Maximale Anzahl von Animationssätzen, die gemischt werden können.
 
 </dd> <dt>
 
-*Maxnumtracks* \[ in\]
+*MaxNumTracks* \[ In\]
 </dt> <dd>
 
-Typ: **[ **uint**](../winprog/windows-data-types.md)**
+Typ: **[ **UINT**](../winprog/windows-data-types.md)**
 
-Maximale Anzahl von Animations Sätzen, die gleichzeitig gemischt werden können.
+Maximale Anzahl von Animationssätzen, die gleichzeitig gemischt werden können.
 
 </dd> <dt>
 
-*Maxnumevents* \[ in\]
+*MaxNumEvents* \[ In\]
 </dt> <dd>
 
-Typ: **[ **uint**](../winprog/windows-data-types.md)**
+Typ: **[ **UINT**](../winprog/windows-data-types.md)**
 
-Maximale Anzahl ausstehender Ereignisse, die vom Controller unterstützt werden.
+Maximale Anzahl ausstehender Ereignisse, die der Controller unterstützt.
 
 </dd> <dt>
 
-*ppanimcontroller* \[ vorgenommen\]
+*ppAnimController* \[ out\]
 </dt> <dd>
 
 Typ: **[ **LPD3DXANIMATIONCONTROLLER**](id3dxanimationcontroller.md)\***
 
-Zeiger auf das erstellte Animations Controller Objekt. Siehe [**ID3DXAnimationController**](id3dxanimationcontroller.md).
+Zeiger auf das erstellte Animationscontrollerobjekt. Siehe [**ID3DXAnimationController.**](id3dxanimationcontroller.md)
 
 </dd> </dl>
 
@@ -93,11 +93,11 @@ Zeiger auf das erstellte Animations Controller Objekt. Siehe [**ID3DXAnimationCo
 
 Typ: **[ **HRESULT**](https://msdn.microsoft.com/library/Bb401631(v=MSDN.10).aspx)**
 
-Wenn die Funktion erfolgreich ausgeführt wird, ist der Rückgabewert D3D \_ OK. Wenn die Funktion fehlschlägt, kann der Rückgabewert einer der folgenden Werte sein: D3DERR \_ invalidcall, E \_ outo fmemory.
+Wenn die Funktion erfolgreich ausgeführt wird, lautet der Rückgabewert D3D \_ OK. Wenn die Funktion fehlschlägt, kann der Rückgabewert einer der folgenden Werte sein: D3DERR \_ INVALIDCALL, E \_ OUTOFMEMORY.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Ein Animations Controller steuert einen Animations-Mixer. Der Controller fügt Methoden hinzu, um Mischungs Parameter im Zeitverlauf zu ändern, um reibungslose Übergänge zu ermöglichen
+Ein Animationscontroller steuert einen Animationsmixer. Der Controller fügt Methoden hinzu, um Überblendungsparameter im Laufe der Zeit zu ändern, um reibungslose Übergänge zu ermöglichen.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -105,16 +105,16 @@ Ein Animations Controller steuert einen Animations-Mixer. Der Controller fügt M
 
 | Anforderung | Wert |
 |--------------------|----------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>D3dx9anim. h</dt> </dl> |
-| Bibliothek<br/> | <dl> <dt>D3dx9. lib</dt> </dl>   |
+| Header<br/>  | <dl> <dt>D3dx9anim.h</dt> </dl> |
+| Bibliothek<br/> | <dl> <dt>D3dx9.lib</dt> </dl>   |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[Animations Funktionen](dx9-graphics-reference-d3dx-functions-animation.md)
+[Animationsfunktionen](dx9-graphics-reference-d3dx-functions-animation.md)
 </dt> </dl>
 
  

@@ -54,10 +54,10 @@ Wird mit RODCs verwendet, um zu definieren, welche Benutzer, Computer und Gruppe
 |------------------------|------------------------------------------------------------------------------------|
 | Link-ID                | 2106                                                                               |
 | MAPI-Id                | \-                                                                                 |
-| System-Only            | Falsch                                                                              |
-| Is-Single-Valued       | Falsch                                                                              |
-| Ist indiziert             | Falsch                                                                              |
-| Im globalen Katalog      | Falsch                                                                              |
+| System-Only            | False                                                                              |
+| Is-Single-Valued       | False                                                                              |
+| Ist indiziert             | False                                                                              |
+| Im globalen Katalog      | False                                                                              |
 | NT-Security-Descriptor | O:BAG:BAD:S:                                                                       |
 | Range-Lower            | \-                                                                                 |
 | Range-Upper            | \-                                                                                 |
@@ -75,10 +75,10 @@ Wird mit RODCs verwendet, um zu definieren, welche Benutzer, Computer und Gruppe
 |------------------------|------------------------------------------------------------------------------------|
 | Link-ID                | 2106                                                                               |
 | MAPI-Id                | \-                                                                                 |
-| System-Only            | Falsch                                                                              |
-| Is-Single-Valued       | Falsch                                                                              |
-| Ist indiziert             | Falsch                                                                              |
-| Im globalen Katalog      | Falsch                                                                              |
+| System-Only            | False                                                                              |
+| Is-Single-Valued       | False                                                                              |
+| Ist indiziert             | False                                                                              |
+| Im globalen Katalog      | False                                                                              |
 | NT-Security-Descriptor | O:BAG:BAD:S:                                                                       |
 | Range-Lower            | \-                                                                                 |
 | Range-Upper            | \-                                                                                 |
@@ -96,10 +96,10 @@ Wird mit RODCs verwendet, um zu definieren, welche Benutzer, Computer und Gruppe
 |------------------------|------------------------------------------------------------------------------------|
 | Link-ID                | 2106                                                                               |
 | MAPI-Id                | \-                                                                                 |
-| System-Only            | Falsch                                                                              |
-| Is-Single-Valued       | Falsch                                                                              |
-| Ist indiziert             | Falsch                                                                              |
-| Im globalen Katalog      | Falsch                                                                              |
+| System-Only            | False                                                                              |
+| Is-Single-Valued       | False                                                                              |
+| Ist indiziert             | False                                                                              |
+| Im globalen Katalog      | False                                                                              |
 | NT-Security-Descriptor | O:BAG:BAD:S:                                                                       |
 | Range-Lower            | \-                                                                                 |
 | Range-Upper            | \-                                                                                 |

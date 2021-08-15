@@ -1,5 +1,5 @@
 ---
-description: Die PublishComponent-Tabelle ordnet komponenten, die in der Component-Tabelle aufgelistet sind, einer Textzeichenfolge für den Qualifizierer und einer Kategorie-ID-GUID zu.
+description: Die PublishComponent-Tabelle ordnet komponenten, die in der Tabelle Komponente aufgeführt sind, einer Qualifizierertextzeichenfolge und einer Kategorie-ID-GUID zu.
 ms.assetid: 4a6be647-3e73-47a1-acfa-7d6d0a2fb2f4
 title: PublishComponent-Tabelle
 ms.topic: article
@@ -13,7 +13,7 @@ ms.locfileid: "118376383"
 ---
 # <a name="publishcomponent-table"></a>PublishComponent-Tabelle
 
-Die PublishComponent-Tabelle ordnet [](component-table.md) komponenten, die in der Component-Tabelle aufgelistet sind, einer Textzeichenfolge für den Qualifizierer und einer Kategorie-ID-GUID zu. Komponenten mit paralleler Funktionalität, die auf diese Weise gruppiert wurden, werden als qualifizierte Komponenten bezeichnet. Weitere Informationen [finden Sie unter Qualifizierte Komponenten.](qualified-components.md) Dies stellt dem Installationsprogramm eine Methode für die Deskription auf ein ebener Ebene zur Auswahl, wenn auf Komponenten bezugsweise verwendet wird. Weitere Informationen [finden Sie unter Verwenden von qualifizierten Komponenten.](using-qualified-components.md)
+Die PublishComponent-Tabelle ordnet komponenten, die in der [Tabelle Komponente](component-table.md) aufgeführt sind, einer Qualifizierertextzeichenfolge und einer Kategorie-ID-GUID zu. Komponenten mit paralleler Funktionalität, die auf diese Weise gruppiert wurden, werden als qualifizierte Komponenten bezeichnet. Weitere Informationen finden Sie unter [Qualifizierte Komponenten.](qualified-components.md) Dadurch wird dem Installationsprogramm beim Verweisen auf Komponenten eine Methode für die Dekonstruktion auf einer einzelnen Ebene zur Verfügung stellen. Weitere Informationen finden Sie [unter Verwenden von qualifizierten Komponenten.](using-qualified-components.md)
 
 Die PublishComponent-Tabelle enthält die folgenden Spalten.
 
@@ -38,28 +38,28 @@ Die PublishComponent-Tabelle enthält die folgenden Spalten.
 <span id="ComponentId"></span><span id="componentid"></span><span id="COMPONENTID"></span>Componentid
 </dt> <dd>
 
-Eine [Zeichenfolgen-GUID,](guid.md) die die Kategorie der zu gruppierenden Komponenten darstellt. Beachten Sie, dass der Titel dieser Spalte irreführend ist. Dies ist die GUID für die Kategorie der qualifizierten Komponenten und nicht die gleiche GUID, die in der ComponentId -Spalte der [Component-Tabelle angezeigt wird.](component-table.md) Hier bezieht sie sich auf einen Server, der die Funktionalität einer Komponente für externe Clients und nicht für die Komponente selbst zur Verfügung stellt.
+Eine [Zeichenfolgen-GUID,](guid.md) die die Kategorie der zu gruppierenden Komponenten darstellt. Beachten Sie, dass der Titel dieser Spalte irreführend ist. Dies ist die GUID für die Kategorie der qualifizierten Komponenten und nicht die gleiche GUID, die in der ComponentId-Spalte der [Component-Tabelle](component-table.md)angezeigt wird. Hier bezieht er sich auf einen Server, der die Funktionalität einer Komponente für externe Clients und nicht für die Komponente selbst bereitstellt.
 
 </dd> <dt>
 
 <span id="Qualifier"></span><span id="qualifier"></span><span id="QUALIFIER"></span>Qualifizierer
 </dt> <dd>
 
-Eine Textzeichenfolge, die den Wert in der ComponentId -Spalte qualifiziert. Ein Qualifizierer wird verwendet, um mehrere Formen derselben Komponente zu unterscheiden, z. B. eine Komponente, die in mehreren Sprachen implementiert ist. Dies sind die Textzeichenfolgen des Qualifizierers, die von [**MsiEnumComponentQualifiers zurückgegeben werden.**](/windows/desktop/api/Msi/nf-msi-msienumcomponentqualifiersa)
+Eine Textzeichenfolge, die den Wert in der ComponentId-Spalte qualifiziert. Ein Qualifizierer wird verwendet, um mehrere Formen derselben Komponente zu unterscheiden, z. B. eine Komponente, die in mehreren Sprachen implementiert ist. Dies sind die Qualifizierertextzeichenfolgen, die von [**MsiEnumComponentQualifiers**](/windows/desktop/api/Msi/nf-msi-msienumcomponentqualifiersa)zurückgegeben werden.
 
 </dd> <dt>
 
 <span id="Component_"></span><span id="component_"></span><span id="COMPONENT_"></span>Komponente\_
 </dt> <dd>
 
-Externer Schlüssel in Spalte 1 der [Komponententabelle](component-table.md). Dieser Bezeichner verweist auf den Datensatz der qualifizierten Komponente in der Component-Tabelle.
+Externer Schlüssel in Spalte 1 der [Component-Tabelle.](component-table.md) Dieser Bezeichner bezieht sich auf den Datensatz der qualifizierten Komponente in der Tabelle Komponente.
 
 </dd> <dt>
 
 <span id="AppData"></span><span id="appdata"></span><span id="APPDATA"></span>Appdata
 </dt> <dd>
 
-Ein optionaler lokalisierbarer Text, der die qualifizierte Komponente dieses Datensatzes beschreibt. Die Zeichenfolge wird häufig von der Anwendung analysiert und kann dem Benutzer angezeigt werden. Sie sollte die qualifizierte Komponente beschreiben. Dies kann mit [**MsiEnumComponentQualifiers abgerufen werden.**](/windows/desktop/api/Msi/nf-msi-msienumcomponentqualifiersa)
+Ein optionaler lokalisierbarer Text, der die qualifizierte Komponente dieses Datensatzes beschreibt. Die Zeichenfolge wird häufig von der Anwendung analysiert und kann dem Benutzer angezeigt werden. Sie sollte die qualifizierte Komponente beschreiben. Dies kann mit [**MsiEnumComponentQualifiers**](/windows/desktop/api/Msi/nf-msi-msienumcomponentqualifiersa)abgerufen werden.
 
 </dd> <dt>
 
@@ -74,7 +74,7 @@ Externer Schlüssel in Spalte 1 der [Featuretabelle](feature-table.md). Dies ist
 
 Auf diese Tabelle wird verwiesen, wenn die [PublishComponents-Aktion](publishcomponents-action.md) oder die [UnpublishComponents-Aktion](unpublishcomponents-action.md) ausgeführt wird.
 
-Beachten Sie, dass der Name dieser Tabelle irreführend ist. Diese Tabelle ist nicht erforderlich, um Ankündigungen zu erstellen. Informationen zum Festlegen des Installationszustands von komponenten, die angekündigt werden, finden Sie in der Spalte Attribute der Tabelle [Komponente](component-table.md) und in der [Featuretabelle.](feature-table.md)
+Beachten Sie, dass der Name dieser Tabelle irreführend ist. Diese Tabelle ist zum Erstellen von Ankündigungen nicht erforderlich. Informationen zum Festlegen des Installationszustands von Komponenten, die ankündigen sollen, finden Sie in der Spalte Attribute der [Tabelle Komponenten](component-table.md) und in der [Featuretabelle.](feature-table.md)
 
 ## <a name="validation"></a>Überprüfen
 

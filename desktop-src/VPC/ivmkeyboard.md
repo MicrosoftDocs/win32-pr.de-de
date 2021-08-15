@@ -1,6 +1,6 @@
 ---
 title: IVMKeyboard-Schnittstelle (VPCCOMInterfaces.h)
-description: Steuert das Tastaturgerät auf einem virtuellen Computer. Das IVMKeyboard für einen virtuellen Computer kann mithilfe der IVMVirtualMachine-Tastatureigenschaft abgerufen werden.
+description: Steuert das Tastaturgerät auf einem virtuellen Computer. Das IVMKeyboard für einen virtuellen Computer kann mithilfe der EIGENSCHAFT IVMVirtualMachine Keyboard abgerufen werden.
 ms.assetid: a64a23b6-3937-40c6-af9d-fb341c04fbf7
 keywords:
 - IVMKeyboard-Schnittstelle Virtueller PC
@@ -24,9 +24,9 @@ ms.locfileid: "118344797"
 ---
 # <a name="ivmkeyboard-interface"></a>IVMKeyboard-Schnittstelle
 
-\[Windows Der virtuelle PC ist ab Windows 8 nicht mehr für die Verwendung verfügbar. Verwenden Sie stattdessen den [Hyper-V-WMI-Anbieter (V2).](/windows/desktop/HyperV_v2/windows-virtualization-portal)\]
+\[Windows Der virtuelle PC ist ab diesem Zeitraum nicht mehr Windows 8. Verwenden Sie stattdessen den [Hyper-V-WMI-Anbieter (V2).](/windows/desktop/HyperV_v2/windows-virtualization-portal)\]
 
-Steuert das Tastaturgerät auf einem virtuellen Computer. Das **IVMKeyboard** für einen virtuellen Computer kann mithilfe der [**IVMVirtualMachine::Keyboard-Eigenschaft**](ivmvirtualmachine-keyboard.md) abgerufen werden.
+Steuert das Tastaturgerät auf einem virtuellen Computer. Das **IVMKeyboard** für einen virtuellen Computer kann mithilfe der [**IVMVirtualMachine::Keyboard-Eigenschaft abgerufen**](ivmvirtualmachine-keyboard.md) werden.
 
 ## <a name="members"></a>Member
 
@@ -43,12 +43,12 @@ Die **IVMKeyboard-Schnittstelle** verfügt über diese Methoden.
 
 | Methode                                                       | BESCHREIBUNG                                                                   |
 |:-------------------------------------------------------------|:------------------------------------------------------------------------------|
-| [**Ispressed**](ivmkeyboard-ispressed.md)                   | Bestimmt, ob der angegebene Schlüssel ausgeschaltet ist.<br/>                      |
-| [**PressAndReleaseKey**](ivmkeyboard-pressandreleasekey.md) | Simuliert, dass eine Taste gedrückt und dann losgelassen wird.<br/>              |
+| [**Ispressed**](ivmkeyboard-ispressed.md)                   | Bestimmt, ob der angegebene Schlüssel nicht mehr verwendet werden kann.<br/>                      |
+| [**PressAndReleaseKey**](ivmkeyboard-pressandreleasekey.md) | Simuliert, dass eine Taste gedrückt und dann freigegeben wird.<br/>              |
 | [**PressKey**](ivmkeyboard-presskey.md)                     | Simuliert, dass eine Taste gedrückt wird.<br/>                                |
-| [**ReleaseKey**](ivmkeyboard-releasekey.md)                 | Simuliert einen Schlüssel, der freigegeben wird.<br/>                                    |
-| [**TypeAsciiText**](ivmkeyboard-typeasciitext.md)           | Simuliert eine Reihe von ASCII-Schlüsseln, die in den Gast eingegeben werden.<br/>       |
-| [**TypeKeySequence**](ivmkeyboard-typekeysequence.md)       | Simuliert eine durch Trennzeichen getrennte Liste von Schlüsseln, die im Gast eingegeben werden.<br/> |
+| [**ReleaseKey**](ivmkeyboard-releasekey.md)                 | Simuliert, dass ein Schlüssel freigegeben wird.<br/>                                    |
+| [**TypeAsciiText**](ivmkeyboard-typeasciitext.md)           | Simuliert eine Reihe von ASCII-Schlüsseln, die in den Gasttyp eingedrungen werden.<br/>       |
+| [**TypeKeySequence**](ivmkeyboard-typekeysequence.md)       | Simuliert eine durch Trennzeichen getrennte Liste von Schlüsseln, die im Gasttyp verwendet werden.<br/> |
 
 
 
@@ -70,9 +70,9 @@ Die **IVMKeyboard-Schnittstelle** verfügt über diese Eigenschaften.
 
 ## <a name="remarks"></a>Hinweise
 
-Schlüssel können auf verschiedene Weise in den virtuellen Computer eingegeben werden. Verwenden Sie die [**TypeAsciiText-Methode,**](ivmkeyboard-typeasciitext.md) um eine normale ASCII-Zeichensequenz einzugeben. Wenn mehr Flexibilität erforderlich ist, verfügt **IVMKeyboard über** mehrere Methoden, die für die Verwendung mit den Schlüsselcodes in der folgenden Liste konzipiert sind. Die [**TypeKeySequence-Methode**](ivmkeyboard-typekeysequence.md) kann eine durch Trennzeichen getrennte Zeichenfolge mit Schlüsselcodes akzeptieren, die auf dem virtuellen Computer gedrückt und in der Reihenfolge freigegeben wird. Zusätzlich zu diesen Schlüsselcodes können die Schlüsselwörter UP und DOWN verwendet werden, um zu erzwingen, dass eine Taste nur gedrückt oder nur freigegeben wird. Die Schlüsselwörter UP und DOWN gelten nur für den Schlüsselcode, der direkt auf das Schlüsselwort folgt.
+Schlüssel können auf verschiedene Weise in den virtuellen Computer typisierten werden. Verwenden Sie zum Eingeben einer normalen ASCII-Sequenz von Zeichen [**die TypeAsciiText-Methode.**](ivmkeyboard-typeasciitext.md) Wenn mehr Flexibilität erforderlich ist, verfügt **IVMKeyboard** über mehrere Methoden, die für die Verwendung mit den Schlüsselcodes in der folgenden Liste entworfen wurden. Die [**TypeKeySequence-Methode**](ivmkeyboard-typekeysequence.md) kann eine durch Trennzeichen getrennte Zeichenfolge von Schlüsselcodes akzeptieren, die auf dem virtuellen Computer in der reihenfolgenweise gedrückt und freigegeben werden. Zusätzlich zu diesen Schlüsselcodes können die Schlüsselwörter UP und DOWN verwendet werden, um zu erzwingen, dass eine Taste nur gedrückt oder nur freigegeben wird. Die Schlüsselwörter UP und DOWN gelten nur für den Schlüsselcode, der direkt auf das Schlüsselwort folgt.
 
-Um zu vermeiden, dass mehrere Skripts, Anwendungen oder Benutzer gleichzeitig versuchen, auf dasselbe Tastaturgerät zuzugreifen, legen Sie die [**HasExclusiveAccess-Eigenschaft**](ivmkeyboard-hasexclusiveaccess.md) auf **TRUE** fest. Wenn ein Prozess exklusiven Zugriff erhält, werden alle Versuche anderer Prozesse, Eingaben an das Tastaturgerät zu senden, ignoriert, bis der exklusive Zugriff freigegeben wurde.
+Um zu vermeiden, dass mehrere Skripts, Anwendungen oder Benutzer gleichzeitig versuchen, auf dasselbe Tastaturgerät zu zugreifen, legen Sie die [**HasExclusiveAccess-Eigenschaft**](ivmkeyboard-hasexclusiveaccess.md) auf **TRUE fest.** Wenn ein Prozess exklusiven Zugriff erlangt, werden alle Versuche anderer Prozesse, Eingaben an das Tastaturgerät zu senden, ignoriert, bis der exklusive Zugriff freigegeben wurde.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -80,7 +80,7 @@ Um zu vermeiden, dass mehrere Skripts, Anwendungen oder Benutzer gleichzeitig ve
 
 | Anforderung | Wert |
 |-------------------------------------|-----------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | nur Windows 7 \[ Desktop-Apps\]<br/>                                                    |
+| Unterstützte Mindestversion (Client)<br/> | Windows 7 \[ Desktop-Apps\]<br/>                                                    |
 | Unterstützte Mindestversion (Server)<br/> | Nicht unterstützt<br/>                                                                     |
 | Ende des Supports (Client)<br/>    | Windows 7<br/>                                                                          |
 | Product (Produkt)<br/>                  | Windows Virtual PC<br/>                                                                 |
@@ -93,7 +93,7 @@ Um zu vermeiden, dass mehrere Skripts, Anwendungen oder Benutzer gleichzeitig ve
 
 <dl> <dt>
 
-[Windows Schnittstellen virtueller PCs](virtual-pc-interfaces.md)
+[Windows Virtuelle PC-Schnittstellen](virtual-pc-interfaces.md)
 </dt> <dt>
 
 [Schlüsselsequenzen](key-sequences.md)

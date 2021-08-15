@@ -1,7 +1,7 @@
 ---
-description: Benutzer von PrintCapabilities-Dokumenten haben bestimmte Verpflichtungen, die sie erfüllen müssen, bevor sie ein PrintCapabilities-Dokument verwenden können.
+description: Consumer von PrintCapabilities-Dokumenten haben bestimmte Verpflichtungen, die sie erfüllen müssen, bevor sie ein PrintCapabilities-Dokument verwenden können.
 ms.assetid: 2377763b-9b3b-49ec-ab6c-476b8009ddcb
-title: Zuständigkeiten der Verbraucher des PrintCapabilities-Dokuments
+title: Verantwortlichkeiten der Consumer des PrintCapabilities-Dokuments
 ms.topic: article
 ms.date: 05/31/2018
 ms.openlocfilehash: f49cd8f843bfa39a4313b0958fe9874f1263403e3fb3b2f22e2c965927bf6f25
@@ -11,25 +11,25 @@ ms.contentlocale: de-DE
 ms.lasthandoff: 08/11/2021
 ms.locfileid: "118470252"
 ---
-# <a name="responsibilities-of-consumers-of-the-printcapabilities-document"></a>Zuständigkeiten der Verbraucher des PrintCapabilities-Dokuments
+# <a name="responsibilities-of-consumers-of-the-printcapabilities-document"></a>Verantwortlichkeiten der Consumer des PrintCapabilities-Dokuments
 
-Dieses Thema ist nicht aktuell. Die aktuellen Informationen finden Sie unter [Print Schema Specification (Spezifikation des Druckschemas).](https://download.microsoft.com/download/D/E/C/DECA6E6B-3E81-48E7-B7EF-6D92A547D03C/print-schema-spec-2-0.zip)
+Dieses Thema ist nicht aktuell. Die aktuellsten Informationen finden Sie unter Print Schema Specification (Spezifikation des [Druckschemas).](https://download.microsoft.com/download/D/E/C/DECA6E6B-3E81-48E7-B7EF-6D92A547D03C/print-schema-spec-2-0.zip)
 
-Benutzer von PrintCapabilities-Dokumenten haben bestimmte Verpflichtungen, die sie erfüllen müssen, bevor sie ein PrintCapabilities-Dokument verwenden können. Die folgenden Anforderungen gelten für Clients eines PrintCapabilities-Dokuments.
+Consumer von PrintCapabilities-Dokumenten haben bestimmte Verpflichtungen, die sie erfüllen müssen, bevor sie ein PrintCapabilities-Dokument verwenden können. Die folgenden Anforderungen gelten für Clients eines PrintCapabilities-Dokuments.
 
--   Sie dürfen keine syntaktisch gültigen PrintCapabilities-Daten ablehnen oder nicht verarbeiten. das heißt, alle PrintCapabilities-Dokumente, die dem PrintCapabilities-Schema entsprechen.
+-   Sie dürfen keine syntaktisch gültigen PrintCapabilities ablehnen oder nicht verarbeiten. Das heißt, jedes PrintCapabilities-Dokument, das dem PrintCapabilities-Schema entspricht.
 
--   Sie müssen das unerwartete Vorhandensein oder Fehlen von privat definierten Inhalten abarbeiten können. Dies schließt privat definierte Inhalte ein, die in Instanzen von druckschemadefinierten Elementen angezeigt werden.
+-   Sie müssen in der Lage sein, das unerwartete Vorhandensein oder Fehlen von privat definierten Inhalten zu umgehen. Dies schließt privat definierten Inhalt ein, der in Instanzen von durch das Druckschema definierten Elementen angezeigt wird.
 
--   Sie müssen in der Lage sein, optionalen Inhalt des Druckschemas zu umarbeiten, der nicht vorhanden ist.
+-   Sie müssen in der Lage sein, optionalen Inhalt des Druckschemas zu umgehen, der nicht vorhanden ist.
 
--   Sie müssen wissen, wann sie ein neues Dokument anfordern müssen.
+-   Sie müssen wissen, wann ein neues Dokument angefordert werden soll.
 
-    -   Werte von Property-Instanzen sind konfigurationsabhängig (daher momentaufnahmeabhängig). Sie müssen die Momentaufnahme aktualisieren, wenn Sie auf eine Property-Instanz zugreifen.
+    -   Werte von Eigenschafteninstanzen sind konfigurationsabhängig (also momentaufnahmeabhängig). Sie müssen die Momentaufnahme aktualisieren, wenn Sie auf eine Eigenschaftsinstanz zugreifen.
 
-    -   Feature-, Option- und ScoredProperty-Instanzen, die in ein PrintTicket kopiert werden sollen, sind definitionsgemäß statisch. Das heißt, sie sind nicht von der Gerätekonfiguration abhängig (und dürfen nicht sein). Wenn Sie auf Instanzen dieser Typen zugreifen, müssen Sie kein neues PrintCapabilities-Dokument abrufen, wenn sich die Konfiguration ändert.
+    -   Funktions-, Options- und ScoredProperty-Instanzen, die in ein PrintTicket kopiert werden sollen, sind definitionsgemäß statisch. Das heißt, sie sind nicht (und dürfen nicht) von der Gerätekonfiguration abhängig sein. Wenn Sie auf Instanzen dieser Typen zugreifen, müssen Sie kein neues PrintCapabilities-Dokument abrufen, wenn sich die Konfiguration ändert.
 
--   Benutzer von PrintCapabilities-Clients, die Benutzeroberflächenclients sind, müssen Informationen in einem PrintCapabilities-Dokument verwenden können, um eine Benutzeroberfläche zu erstellen und ein gültiges PrintTicket aus der Benutzerauswahl zu erstellen. Dazu gehört das Wissen, welche ParameterInit-Instanzen angegeben werden müssen, und die Validierung der angegebenen Instanzen.
+-   Consumer von PrintCapabilities, bei denen es sich um Benutzeroberflächenclients handelt, müssen in der Lage sein, Informationen in einem PrintCapabilities-Dokument zu verwenden, um eine Benutzeroberfläche zu erstellen und ein gültiges PrintTicket aus der Benutzerauswahl zu erstellen. Dazu gehört das Wissen, welche ParameterInit-Instanzen angegeben werden müssen, und das Überprüfen der angegebenen Instanzen.
 
 ## <a name="related-topics"></a>Zugehörige Themen
 

@@ -1,6 +1,6 @@
 ---
 title: PLAYLIST.playlistItemsVisible
-description: Das playlistItemsVisible-Attribut gibt einen Wert an, der angibt, ob der Wiedergabelisten-Elementbereich sichtbar ist, oder ruft einen Wert ab.
+description: Das playlistItemsVisible-Attribut gibt einen Wert an, der angibt, ob der Bereich Wiedergabelistenelemente sichtbar ist, oder ruft einen Wert ab.
 ms.assetid: 9335bd64-c692-4d11-9912-c611208fbc34
 keywords:
 - PLAYLIST.playlistItemsVisible Windows Media Player
@@ -21,7 +21,7 @@ ms.locfileid: "118336706"
 ---
 # <a name="playlistplaylistitemsvisible"></a>PLAYLIST.playlistItemsVisible
 
-Das **playlistItemsVisible-Attribut** gibt einen Wert an, der angibt, ob der Wiedergabelisten-Elementbereich sichtbar ist, oder ruft einen Wert ab.
+Das **playlistItemsVisible-Attribut** gibt einen Wert an, der angibt, ob der Bereich Wiedergabelistenelemente sichtbar ist, oder ruft einen Wert ab.
 
 ``` syntax
         elementID.playlistItemsVisible
@@ -29,14 +29,14 @@ Das **playlistItemsVisible-Attribut** gibt einen Wert an, der angibt, ob der Wie
 
 ## <a name="possible-values"></a>Mögliche Werte
 
-Dieses Attribut ist ein boolescher Wert mit **Lese-/Schreibzugriff.**
+Dieses Attribut ist ein **boolescher** Lese-/Schreib-Wert.
 
 
 
 | Wert | BESCHREIBUNG                              |
 |-------|------------------------------------------|
-| true  | Standard. Der Bereich Wiedergabelistenelemente ist sichtbar. |
-| false | Der Bereich Wiedergabelistenelemente ist nicht sichtbar.      |
+| true  | Standard. Der Bereich "Wiedergabelistenelemente" ist sichtbar. |
+| false | Der Bereich "Wiedergabelistenelemente" ist nicht sichtbar.      |
 
 
 
@@ -44,7 +44,7 @@ Dieses Attribut ist ein boolescher Wert mit **Lese-/Schreibzugriff.**
 
 ## <a name="remarks"></a>Hinweise
 
-Der Bereich Wiedergabelistenelemente enthält die Spaltenüberschriften, den Inhalt der Spalten und die Scrollleisten (falls vorhanden).
+Der Bereich Wiedergabelistenelemente enthält die Spaltenüberschriften, den Inhalt der Spalten und die Scrollleisten (sofern vorhanden).
 
 ## <a name="requirements"></a>Anforderungen
 

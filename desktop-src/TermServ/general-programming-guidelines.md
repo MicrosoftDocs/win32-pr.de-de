@@ -14,7 +14,7 @@ ms.locfileid: "118353881"
 ---
 # <a name="general-programming-guidelines"></a>Allgemeine Programmierrichtlinien
 
-Die folgenden Abschnitte enthalten allgemeine Richtlinien für die Entwicklung von Anwendungen in einer Remotedesktopdienste Umgebung.
+Die folgenden Abschnitte enthalten allgemeine Richtlinien für die Entwicklung von Anwendungen in Remotedesktopdienste Umgebung.
 
 ## <a name="in-this-section"></a>In diesem Abschnitt
 

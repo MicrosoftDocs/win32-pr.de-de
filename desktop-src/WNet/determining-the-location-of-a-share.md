@@ -1,6 +1,6 @@
 ---
 title: Bestimmen des Speicherorts einer Freigabe
-description: Im folgenden Beispiel wird veranschaulicht, wie die WNetGetUniversalName-Funktion aufgerufen wird, um den Speicherort einer Freigabe auf einem umgeleiteten Laufwerk zu bestimmen.
+description: Im folgenden Beispiel wird veranschaulicht, wie sie die WNetGetUniversalName-Funktion aufruft, um den Speicherort einer Freigabe auf einem umgeleiteten Laufwerk zu bestimmen.
 ms.assetid: ce57fecb-8b14-4514-a3fd-45d7ef6eee89
 ms.topic: article
 ms.date: 05/31/2018
@@ -13,18 +13,18 @@ ms.locfileid: "118566893"
 ---
 # <a name="determining-the-location-of-a-share"></a>Bestimmen des Speicherorts einer Freigabe
 
-Im folgenden Beispiel wird veranschaulicht, wie die [**WNetGetUniversalName-Funktion**](/windows/win32/api/winnetwk/nf-winnetwk-wnetgetuniversalnamea) aufgerufen wird, um den Speicherort einer Freigabe auf einem umgeleiteten Laufwerk zu bestimmen.
+Im folgenden Beispiel wird veranschaulicht, wie sie die [**WNetGetUniversalName-Funktion**](/windows/win32/api/winnetwk/nf-winnetwk-wnetgetuniversalnamea) aufruft, um den Speicherort einer Freigabe auf einem umgeleiteten Laufwerk zu bestimmen.
 
-Zuerst ruft das Codebeispiel die **WNetGetUniversalName-Funktion** auf und gibt die [**Informationsebene UNIVERSAL \_ NAME \_ INFO**](/windows/desktop/api/Winnetwk/ns-winnetwk-universal_name_infoa) an, um einen Zeiger auf eine Universal Naming Convention (UNC)-Namenszeichenfolge für die Ressource abzurufen. Anschließend ruft das Beispiel **WNetGetUniversalName** ein zweites Mal auf und gibt die [**Informationsebene REMOTE \_ NAME \_ INFO**](/windows/desktop/api/Winnetwk/ns-winnetwk-remote_name_infoa) an, um zwei zusätzliche Netzwerkverbindungsinformationszeichenfolgen abzurufen. Wenn die Aufrufe erfolgreich sind, gibt das Beispiel den Speicherort der Freigabe aus.
+Zuerst ruft das Codebeispiel die **WNetGetUniversalName-Funktion** auf und gibt die Informationsebene [**UNIVERSAL NAME \_ \_ INFO**](/windows/desktop/api/Winnetwk/ns-winnetwk-universal_name_infoa) an, um einen Zeiger auf eine Universal Naming Convention-Namenszeichenfolge (UNC) für die Ressource abzurufen. Anschließend ruft das Beispiel ein zweites Mal **WNetGetUniversalName** auf, und gibt die [**Informationsebene \_ REMOTENAME \_ INFO**](/windows/desktop/api/Winnetwk/ns-winnetwk-remote_name_infoa) an, um zwei zusätzliche Zeichenfolgen für Netzwerkverbindungsinformationen abzurufen. Wenn die Aufrufe erfolgreich sind, gibt das Beispiel den Speicherort der Freigabe aus.
 
-Führen Sie die folgenden Schritte aus, um das folgende Codebeispiel zu testen:
+Führen Sie zum Testen des folgenden Codebeispiels die folgenden Schritte aus:
 
 1.  Nennen Sie das Codebeispiel GetUni.cpp.
 2.  Fügen Sie das Beispiel einer Konsolenanwendung namens GetUni hinzu.
 3.  Verknüpfen Sie die Bibliotheken Shell32.lib, Mpr.lib und NetApi32.lib mit der Compilerliste der Bibliotheken.
 4.  Wechseln Sie an der Eingabeaufforderung in das Verzeichnis GetUni.
 5.  Kompilieren Sie GetUni.cpp.
-6.  Führen Sie die Datei GetUni.exe gefolgt von einem Laufwerkbuchstaben und Doppelpunkt wie folgt aus:
+6.  Führen Sie die Datei GetUni.exe, gefolgt von einem Laufwerkbuchstaben und Doppelpunkt wie folgt aus:
 
     **GetUni H:\\**
 

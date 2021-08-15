@@ -46,7 +46,7 @@ Beachten Sie beim **Implementieren des Tabellensteuermusters** die folgenden Ric
 
      
 
--   Verwandte [Rasterfunktionen finden Sie](uiauto-implementinggrid.md) unter Rastersteuermuster.
+-   Informationen [zu verwandten Rasterfunktionen finden](uiauto-implementinggrid.md) Sie unter Rastersteuermuster.
 
     Die folgende Abbildung zeigt eine Tabelle mit komplexen Spaltenüberschriften.
 

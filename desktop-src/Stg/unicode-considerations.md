@@ -1,21 +1,21 @@
 ---
-title: Überlegungen zu Unicode
-description: Die in der iPaper-Speichermethode verwendete Funktion "Write Teammanager tusertypestg" erfordert Unicode-Zeichen folgen Parameter.
+title: Unicode-Überlegungen
+description: Die Dienstfunktion WriteFmtUserTypeStg, die in der IPaper Save-Methode verwendet wird, erfordert Unicode-Zeichenfolgenparameter.
 ms.assetid: 34a1d30e-4401-474e-999e-832b963064bb
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 0a7bef75ec88318f4a2af8c5c7b693f0fc7c877f
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: a06f8fa9592d3f29ccf82d42f38a48b2dc57d36bccf79b22b8fe159bad337cc0
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "103856175"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118886738"
 ---
-# <a name="unicode-considerations"></a>Überlegungen zu Unicode
+# <a name="unicode-considerations"></a>Unicode-Überlegungen
 
-Die in der [**iPaper:: Save**](ipaper--save.md) -Methode verwendete Dienstfunktion " **Beschreib tefmtusertypestg** " erfordert Unicode-Zeichen folgen Parameter. Dies ist der Fall bei com/OLE-Dienst aufrufen, die Zeichen folgen Parameter annehmen. Beim Kompilieren für ANSI-Zeichen folgen müssen die erwarteten Unicode-Parameter von ANSI in Unicode konvertiert werden. Dieser Prozess wird mithilfe einiger Makros in "apputil. h" erzielt, die Konvertierungen möglicherweise verschleiern. Informationen hierzu finden Sie beispielsweise unter " **Beschreib tefmtusertypestg**".
+Die **WriteFmtUserTypeStg-Dienstfunktion,** die in der [**IPaper::Save-Methode**](ipaper--save.md) verwendet wird, erfordert Unicode-Zeichenfolgenparameter. Dies ist bei COM/OLE-Dienstaufrufen der Fall, die Zeichenfolgenparameter annehmen. Beim Kompilieren für ANSI-Zeichenfolgen müssen die erwarteten Unicode-Parameter von ANSI in Unicode konvertiert werden. Dieser Prozess wird mithilfe einiger Makros in APPUTIL.h erreicht, die Konvertierungen möglicherweise verbergen. Beispiel: **WriteFmtUserTypeStg.**
 
-Der folgende-Befehl wird in der [**Save**](ipaper--save.md) -Methode angezeigt.
+Der folgende Aufruf wird in der [**Save-Methode**](ipaper--save.md) angezeigt.
 
 
 ```C++
@@ -24,7 +24,7 @@ WriteFmtUserTypeStg(pIStorage, m_ClipBdFmt, TEXT(CLIPBDFMT_STR));
 
 
 
-Wenn **stoservice** für ANSI (nicht für Unicode) kompiliert wird, reduziert sich dieser-Aufrufe tatsächlich auf einen-Rückruf einer internen apputil-Ersatzfunktion. Um dies zu unterstützen, wird das folgende Makro Schema in "apputil. h" verwendet, bei dem es sich um eine enthaltene Datei im gesamten Codebeispiel handelt. Cpp-Dateien.
+Wenn **StoServe** für ANSI kompiliert wird (nicht für Unicode), wird dieser Aufruf tatsächlich auf einen Aufruf einer internen APPUTIL-Ersatzfunktion reduziert. Um dies zu unterstützen, wird das folgende Makroschema in Apputil.h verwendet, bei dem es sich um eine eingeschlossene Datei in allen Codebeispielen handelt. CPP-Dateien.
 
 
 ```C++
@@ -44,11 +44,11 @@ Wenn **stoservice** für ANSI (nicht für Unicode) kompiliert wird, reduziert si
 
 
 
-Das Schema verwendet die Funktion für den Ersatzdienst Rückruf. Die ANSI-Versionen der Aufrufe beginnen mit einem \_ . Diese Stellvertreter-ANSI-Funktionen werden in "apputil. cpp" implementiert. Sie werden verwendet, wenn das Codebeispiel für ANSI-Zeichen folgen kompiliert wird (die Standardeinstellung in Makefiles). Die Dienstfunktionen, die von den Surrogates anstelle von vorhanden sind, unterstützen nur Unicode-Zeichen folgen Parameter. Dies erzwingt einige Zeichen folgen Konvertierungen von ANSI in Unicode, bevor der tatsächliche com/OLE-Dienst-Rückruf innerhalb des Ersatz Zeichens erfolgt.
+Das Schema verwendet Ersatzdienstaufruffunktionen. Die ANSI-Versionen der Aufrufe beginnen mit A \_ . Diese Ersatz-ANSI-Funktionen werden in Apputil.cpp implementiert. Sie werden verwendet, wenn das Codebeispiel für ANSI-Zeichenfolgen kompiliert wird (der Standardwert in den Makefiles). Die Dienstfunktionen, die die Ersatzzeichen anstelle von unterstützen, unterstützen nur Unicode-Zeichenfolgenparameter. Dies erzwingt einige Zeichenfolgenkonvertierungen von ANSI in Unicode, bevor der tatsächliche COM/OLE-Dienstaufruf innerhalb des Ersatzzeichens erfolgt.
 
-Wenn z. b. Unicode während des Kompilierens nicht definiert ist, werden alle Aufrufe in den Beispielen für die Funktion " **Write-fmtusertypestg** com-Dienst" tatsächlich von den Makros in Aufrufe einer \_ in apputil implementierten Funktion "Beschreib tefmtusertypestg" geändert. CPP. Diese Funktion akzeptiert den Eingabe-ANSI-Zeichen folgen Zeiger, konvertiert sie in eine Unicode-Kopie und übergibt diese Unicode-Kopie als Zeichen folgen Parameter in einem **calltefmtusertypestg** -Vorgang.
+Wenn unicode beispielsweise während der Kompilierung nicht definiert wird, werden alle Aufrufe in den Beispielen der COM-Dienstfunktion **WriteFmtUserTypeStg** tatsächlich von den Makros in Aufrufe einer \_ In APPUTIL implementierten WriteFmtUserTypeStg-Funktion geändert. Cpp. Diese Funktion akzeptiert den EINGABE-ANSI-Zeichenfolgenzeiger, konvertiert ihn in eine Unicode-Kopie und übergibt diese Unicode-Kopie als Zeichenfolgenparameter in einem Aufruf an die eigentliche **WriteFmtUserTypeStg-Funktion.**
 
-Hier ist ein " \_ Write-fmtusertypestg" aus "apputil. cpp".
+Hier ist ein \_ WriteFmtUserTypeStg aus Apputil.cpp.
 
 ``` syntax
 STDAPI A_WriteFmtUserTypeStg(
@@ -72,9 +72,9 @@ STDAPI A_WriteFmtUserTypeStg(
   }
 ```
 
- 
+ 
 
- 
+ 
 
 
 

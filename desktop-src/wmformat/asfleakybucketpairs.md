@@ -1,9 +1,9 @@
 ---
 title: ASFLeakyBucketPairs
-description: Das ASFLeakyBucketPairs-Attribut ist ein optionales Attribut, das die Pufferanforderungen für eine Variable Bitratendatei beschreibt.
+description: Das ASFLeakyBucketPairs-Attribut ist ein optionales Attribut, das die Pufferanforderungen für eine Datei mit variabler Bitrate beschreibt.
 ms.assetid: d1b3e8cc-c082-4283-88bc-172f58adf2d9
 keywords:
-- ASFLeakyBucketPairs-Windows-Medienformat
+- ASFLeakyBucketPairs windows Media Format
 topic_type:
 - apiref
 api_name:
@@ -21,7 +21,7 @@ ms.locfileid: "118434619"
 ---
 # <a name="asfleakybucketpairs"></a>ASFLeakyBucketPairs
 
-Das **ASFLeakyBucketPairs-Attribut** ist ein optionales Attribut, das die Pufferanforderungen für eine Variable Bitratendatei beschreibt.
+Das **ASFLeakyBucketPairs-Attribut** ist ein optionales Attribut, das die Pufferanforderungen für eine Datei mit variabler Bitrate beschreibt.
 
 ## <a name="global-constant"></a>Globale Konstante
 
@@ -29,7 +29,7 @@ g \_ wszASFLeakyBucketPairs
 
 ## <a name="data-type"></a>Datentyp
 
-**BINÄRER \_ \_ WMT-TYP**
+**\_WMT-TYP \_ BINARY**
 
 ## <a name="remarks"></a>Hinweise
 
@@ -43,7 +43,7 @@ struct
 };
 ```
 
-Dabei *muss wReserved* gleich 0 (null) sein, und *bucket* ist ein Array von [**WM \_ LEAKY BUCKET \_ \_ PAIR-Strukturen.**](/previous-versions/windows/desktop/api/wmsdkidl/ns-wmsdkidl-wm_leaky_bucket_pair) Das Array muss mindestens zwei Einträge enthalten, kann jedoch größer sein. Das Readerobjekt verwendet dieses Attribut, um die Menge an Inhalt zu bestimmen, der vor der Wiedergabe gepuffert werden soll.
+Wobei *wReserved* gleich 0 (null) sein muss und *bucket* ein Array von [**WM \_ LEAKY BUCKET \_ \_ PAIR-Strukturen**](/previous-versions/windows/desktop/api/wmsdkidl/ns-wmsdkidl-wm_leaky_bucket_pair) ist. Das Array muss mindestens zwei Einträge enthalten, kann jedoch größer sein. Das Readerobjekt verwendet dieses Attribut, um die Menge des Inhalts zu bestimmen, der vor der Wiedergabe gepuffert werden soll.
 
 ## <a name="see-also"></a>Weitere Informationen
 

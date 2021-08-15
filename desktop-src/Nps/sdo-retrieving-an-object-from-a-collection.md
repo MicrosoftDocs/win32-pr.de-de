@@ -1,20 +1,20 @@
 ---
-title: Abrufen eines Objekts aus einer Sammlung
-description: Abrufen eines Objekts aus einer Sammlung
+title: Abrufen eines Objekts aus einer Auflistung
+description: Abrufen eines Objekts aus einer Auflistung
 ms.assetid: df7cbff5-2d09-4031-8f41-3f4eea51598f
 ms.tgt_platform: multiple
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: fe8d5bfcba8a1671c7824a4b1356e9c8e1dd7567
-ms.sourcegitcommit: 592c9bbd22ba69802dc353bcb5eb30699f9e9403
+ms.openlocfilehash: 936cde1b897be9fc9fd7855401fdcef16b0754a59ae726a561acebd4ccd93283
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "104516934"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120128560"
 ---
-# <a name="retrieving-an-object-from-a-collection"></a>Abrufen eines Objekts aus einer Sammlung
+# <a name="retrieving-an-object-from-a-collection"></a>Abrufen eines Objekts aus einer Auflistung
 
-Der folgende Code Ruft die IP-Adresse eines Clients aus einer Sammlung von Clients ab. Die Variable "pclientscollection" verweist auf eine [**isdocollection**](/windows/desktop/api/sdoias/nn-sdoias-isdocollection) -Schnittstelle für die Auflistung. Informationen zum Abrufen des Sammlungs Objekts finden Sie unter [Abrufen einer](/windows/desktop/Nps/sdo-retrieving-a-collection) Auflistung.
+Der folgende Code ruft die IP-Adresse eines Clients aus einer Auflistung von Clients ab. Die Variable pClientsCollection verweist auf eine [**ISdoCollection-Schnittstelle**](/windows/desktop/api/sdoias/nn-sdoias-isdocollection) für die Auflistung. Informationen zum Abrufen des Sammlungsobjekts finden Sie unter [Abrufen einer](/windows/desktop/Nps/sdo-retrieving-a-collection) Sammlung.
 
 
 ```C++
@@ -58,10 +58,10 @@ Der folgende Code Ruft die IP-Adresse eines Clients aus einer Sammlung von Clien
 
 <dl> <dt>
 
-[**Isdocollection:: Item**](/windows/desktop/api/sdoias/nf-sdoias-isdocollection-item)
+[**ISdoCollection::Item**](/windows/desktop/api/sdoias/nf-sdoias-isdocollection-item)
 </dt> <dt>
 
-[Abrufen einer Sammlung](/windows/desktop/Nps/sdo-retrieving-a-collection)
+[Abrufen einer Auflistung](/windows/desktop/Nps/sdo-retrieving-a-collection)
 </dt> <dt>
 
 [**SysAllocString**](/windows/win32/api/oleauto/nf-oleauto-sysallocstring)
@@ -70,9 +70,9 @@ Der folgende Code Ruft die IP-Adresse eines Clients aus einer Sammlung von Clien
 [**SysFreeString**](/windows/win32/api/oleauto/nf-oleauto-sysfreestring)
 </dt> <dt>
 
-[**Konfigur**](/windows/win32/api/oaidl/ns-oaidl-variant)
+[**Variante**](/windows/win32/api/oaidl/ns-oaidl-variant)
 </dt> </dl>
 
- 
+ 
 
- 
+ 

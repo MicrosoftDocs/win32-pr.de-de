@@ -1,7 +1,7 @@
 ---
-description: Die Eigenschaft "featurestate" ist der Installationsstatus des Features für die Instanz dieses Produkts. Diese Eigenschaft ruft "msiqueryfeaturestateex" mit "ProductCode", "UserSID" und dem Kontext des-Objekts auf. Die Funktions-ID wird als Parameter bereitgestellt.
+description: Die FeatureState-Eigenschaft ist der Installationsstatus des Features für die Instanz dieses Produkts. Diese Eigenschaft ruft MsiQueryFeatureStateEx mit productCode, UserSid und Context des Objekts auf. Die Feature-ID wird als Parameter bereitgestellt.
 ms.assetid: 6821be80-4065-465e-b4c9-4cf17856bc5f
-title: Product. featurestate-Methode
+title: Product.FeatureState-Methode
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,18 +13,18 @@ api_type:
 - COM
 api_location:
 - Msi.dll
-ms.openlocfilehash: 3f7e602ce5d5b0a8e524f76144c7f1eff8876bb5
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 484b8f7f3094cf5bca2cb9d03941d68619995ba98de08e2845c3717439709e2b
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106366025"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120129050"
 ---
-# <a name="productfeaturestate-method"></a>Product. featurestate-Methode
+# <a name="productfeaturestate-method"></a>Product.FeatureState-Methode
 
-Die Eigenschaft " **featurestate** " ist der Installationsstatus des Features für die Instanz dieses Produkts.
+Die **FeatureState-Eigenschaft** ist der Installationsstatus des Features für die Instanz dieses Produkts.
 
-Diese Eigenschaft ruft " [**msiqueryfeaturestateex**](/windows/desktop/api/Msi/nf-msi-msiqueryfeaturestateexa)" mit " *ProductCode*", " *UserSID* " und dem *Kontext* des-Objekts auf. Die Funktions-ID wird als Parameter bereitgestellt.
+Diese Eigenschaft ruft [**MsiQueryFeatureStateEx**](/windows/desktop/api/Msi/nf-msi-msiqueryfeaturestateexa)mit *productCode,* *UserSid* und *Context* des Objekts auf. Die Feature-ID wird als Parameter bereitgestellt.
 
 ## <a name="syntax"></a>Syntax
 
@@ -44,7 +44,7 @@ Product.FeatureState(
 *FeatureId* 
 </dt> <dd>
 
-Funktions-ID, die in der Funktions Spalte der [Featuretabelle](feature-table.md)angezeigt wird.
+Feature-ID, die in der Spalte Feature der [Featuretabelle](feature-table.md)angezeigt wird.
 
 </dd> </dl>
 
@@ -52,35 +52,35 @@ Funktions-ID, die in der Funktions Spalte der [Featuretabelle](feature-table.md)
 
 Diese Methode gibt keinen Wert zurück.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Wenn der-Befehl erfolgreich ausgeführt wird, enthält die-Eigenschaft den Wert als **DWORD**.
+Wenn der Aufruf erfolgreich ist, enthält die -Eigenschaft den Wert als **DWORD.**
 
 
 
 | State                    | Bedeutung                                      |
 |--------------------------|----------------------------------------------|
-| InstallState \_ angekündigt | Diese Funktion wird angekündigt.                  |
-| InstallState \_ lokal      | Das Feature wird lokal installiert.            |
-| InstallState- \_ Quelle     | Das Feature wird zum Ausführen von der Quelle installiert. |
+| INSTALLSTATE \_ ANGEKÜNDIGT | Dieses Feature wird angekündigt.                  |
+| INSTALLSTATE \_ LOCAL      | Das Feature wird lokal installiert.            |
+| \_INSTALLSTATE-QUELLE     | Das Feature wird installiert, um von der Quelle aus ausgeführt zu werden. |
 
 
 
  
 
-Wenn der-Befehl fehlschlägt, enthält die-Eigenschaft einen Fehlercode von [**msiqueryfeaturestateex**](/windows/desktop/api/Msi/nf-msi-msiqueryfeaturestateexa).
+Wenn der Aufruf fehlschlägt, enthält die -Eigenschaft einen Fehlercode aus [**MsiQueryFeatureStateEx.**](/windows/desktop/api/Msi/nf-msi-msiqueryfeaturestateexa)
 
 
 
 | Fehler                     | Bedeutung                                                                                                                                    |
 |---------------------------|--------------------------------------------------------------------------------------------------------------------------------------------|
-| Fehler \_ Zugriff \_ verweigert     | Der Aufrufprozess muss über Administratorrechte verfügen, um Informationen zu einem Produkt zu erhalten, das für einen anderen Benutzer als den aktuellen Benutzer installiert ist. |
-| Fehler \_ hafte \_ Konfiguration | Die Konfigurationsdaten sind beschädigt.                                                                                                         |
-| Fehler bei \_ ungültigem \_ Parameter | An die Funktion wurde ein ungültiger Parameter übergeben.                                                                                           |
-| Fehler \_ erfolgreich            | Die Funktion wurde erfolgreich abgeschlossen.                                                                                                       |
-| Unbekannter Fehler. \_ \_   | Die Funktions-ID identifiziert keine bekannte Funktion.                                                                                          |
-| Unbekannter Fehler. \_ \_   | Der Produktcode identifiziert kein bekanntes Produkt.                                                                                        |
-| Fehler bei Fehler \_ Funktion \_   | Unerwarteter interner Fehler.                                                                                                            |
+| FEHLERZUGRIFF \_ \_ VERWEIGERT     | Der aufrufende Prozess muss über Administratorrechte verfügen, um Informationen zu einem Produkt abzurufen, das für einen anderen Benutzer als den aktuellen Benutzer installiert ist. |
+| FEHLER: \_ FEHLERHAFTE \_ KONFIGURATION | Die Konfigurationsdaten sind beschädigt.                                                                                                         |
+| FEHLER: \_ UNGÜLTIGER \_ PARAMETER | Ein ungültiger Parameter wurde an die Funktion übergeben.                                                                                           |
+| FEHLER \_ ERFOLGREICH            | Die Funktion wurde erfolgreich abgeschlossen.                                                                                                       |
+| \_ \_ FEHLER: UNBEKANNTES FEATURE   | Die Feature-ID identifiziert kein bekanntes Feature.                                                                                          |
+| FEHLER \_ \_ UNBEKANNTES PRODUKT   | Der Produktcode identifiziert kein bekanntes Produkt.                                                                                        |
+| \_ \_ FEHLERFUNKTION FEHLGESCHLAGEN   | Ein unerwarteter interner Fehler.                                                                                                            |
 
 
 
@@ -92,23 +92,23 @@ Wenn der-Befehl fehlschlägt, enthält die-Eigenschaft einen Fehlercode von [**m
 
 | Anforderung | Wert |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Version<br/> | Windows Installer 5,0 unter Windows Server 2012, Windows 8, Windows Server 2008 R2 oder Windows 7. Windows Installer 4,0 oder Windows Installer 4,5 unter Windows Server 2008 oder Windows Vista. Windows Installer 3,0 oder höher unter Windows Server 2003, Windows XP und Windows 2000<br/> |
+| Version<br/> | Windows Installationsprogramm 5.0 auf Windows Server 2012, Windows 8, Windows Server 2008 R2 oder Windows 7. Windows Installer 4.0 oder Windows Installer 4.5 auf Windows Server 2008 oder Windows Vista. Windows Installationsprogramm 3.0 oder höher auf Windows Server 2003, Windows XP und Windows 2000<br/> |
 | DLL<br/>     | <dl> <dt>Msi.dll</dt> </dl>                                                                                                                                                                                                   |
-| IID<br/>     | IID \_ iproduct ist definiert als 000c10a0-0000-0000-C000-000000000046<br/>                                                                                                                                                                                                          |
+| IID<br/>     | IID \_ IProduct ist als 000C10A0-0000-0000-C000-000000000046 definiert.<br/>                                                                                                                                                                                                          |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Product**](product-object.md)
+[**Produkt**](product-object.md)
 </dt> <dt>
 
-[**Msiqueryfeaturestateex**](/windows/desktop/api/Msi/nf-msi-msiqueryfeaturestateexa)
+[**MsiQueryFeatureStateEx**](/windows/desktop/api/Msi/nf-msi-msiqueryfeaturestateexa)
 </dt> <dt>
 
-[Wird in Windows Installer 2,0 und früher nicht unterstützt.](not-supported-in-windows-installer-version-2-0.md)
+[Nicht unterstützt in Windows Installer 2.0 und früher](not-supported-in-windows-installer-version-2-0.md)
 </dt> </dl>
 
  

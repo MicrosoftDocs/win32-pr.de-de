@@ -1,21 +1,21 @@
 ---
-title: IPaper speichern
-description: Der wichtigste Schwerpunkt in diesem Beispielcode ist, wie copaper seine Papier Daten in Verbund Dateien laden und speichern kann. Die iPaper-, Load-und Save-Methoden Implementierungen werden ausführlich erläutert.
+title: IPaper Save
+description: Der Hauptfokus in diesem Beispielcode liegt darauf, wie COPaper seine Papierdaten in Verbunddateien laden und speichern kann. Die Implementierungen der IPaper-, Load- und Save-Methode werden ausführlich erläutert.
 ms.assetid: 62154658-ff47-425f-94da-ee2806de5318
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 96ea49f194e64ab3f0cfd78569b1e6ff9ddee577
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: 52772002fe8f0ed234a4f430eaff4328f96f9d1ef151e83da3f4aa3e255dba09
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "106340233"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117961370"
 ---
-# <a name="ipapersave"></a>IPaper:: Save
+# <a name="ipapersave"></a>IPaper::Save
 
-Der wichtigste Schwerpunkt in diesem Beispielcode ist, wie copaper seine Papier Daten in Verbund Dateien laden und speichern kann. Die [**iPaper**](ipaper-methods.md)-, [**Load**](ipaper--load.md)-und **Save** -Methoden Implementierungen werden ausführlich erläutert.
+Der Hauptfokus in diesem Beispielcode liegt darauf, wie COPaper seine Papierdaten in Verbunddateien laden und speichern kann. Die Implementierungen der [**IPaper-,**](ipaper-methods.md) [**Load-**](ipaper--load.md)und **Save-Methode** werden ausführlich erläutert.
 
-Im folgenden finden Sie die **iPaper:: Save** -Methode von Paper. cpp.
+Es folgt die **IPaper::Save-Methode** aus Paper.cpp.
 
 
 ```C++
@@ -89,29 +89,29 @@ STDMETHODIMP COPaper::CImpIPaper::Save(
 
 
 
-In dieser Client-und Server Beziehung erstellt copaper nicht die Verbund Datei, mit der Papier Daten gespeichert werden. Sowohl für die **Save** -als auch die [**Load**](ipaper--load.md) -Methode übergibt der Client einen [**IStorage**](/windows/desktop/api/Objidl/nn-objidl-istorage) -Schnittstellen Zeiger für eine vorhandene Verbund Datei. Anschließend wird der **IStorage** zum Schreiben und Lesen von Daten in dieser Verbund Datei verwendet. In **iPaper:: Save** oberhalb werden mehrere Datentypen gespeichert.
+In dieser Client- und Serverbeziehung erstellt COPaper nicht die Verbunddatei, die zum Speichern von Papierdaten verwendet wird. Für die Methoden **Save** und [**Load**](ipaper--load.md) übergibt der Client einen [**IStorage-Schnittstellenzeiger**](/windows/desktop/api/Objidl/nn-objidl-istorage) für eine vorhandene Verbunddatei. Anschließend wird **IStorage** verwendet, um Daten in dieser Verbunddatei zu schreiben und zu lesen. In **IPaper::Save** oben werden mehrere Datentypen gespeichert.
 
-Die CLSID für dllpaper, CLSID \_ dllpaper, wird serialisiert und in einem speziellen com-gesteuerten Stream im Speicher Objekt mit dem Namen " \\ 001compobj" gespeichert. Die Funktion " [**Write Service classstg**](/windows/desktop/api/coml2api/nf-coml2api-writeclassstg) " führt diesen Speicher aus. Diese gespeicherten CLSID-Daten können verwendet werden, um die Speicherinhalte der dllpaper-Komponente zuzuordnen, die Sie erstellt hat und interpretieren kann. In diesem Beispiel wird der Stamm Speicher von **stoclien** übergeben, und daher ist die gesamte Verbund Datei der Komponente dllpaper zugeordnet. Diese CLSID-Daten können später mit einem Rückruf der Dienstfunktion " [**leserclassg**](/windows/desktop/api/coml2api/nf-coml2api-readclassstg) " abgerufen werden.
+Die CLSID für DllPaper, CLSID \_ DllPaper, wird serialisiert und in einem speziellen COM-gesteuerten Stream innerhalb des Speicherobjekts namens \\ "001CompObj" gespeichert. Die [**WriteClassStg-Dienstfunktion**](/windows/desktop/api/coml2api/nf-coml2api-writeclassstg) führt diesen Speicher aus. Diese gespeicherten CLSID-Daten können verwendet werden, um den Speicherinhalt der dllPaper-Komponente zuzuordnen, die erstellt wurde und sie interpretieren kann. In diesem Beispiel wird der Stammspeicher von **StoClien** übergeben, und daher wird die gesamte Verbunddatei der DllPaper-Komponente zugeordnet. Diese CLSID-Daten können später mit einem Aufruf der [**ReadClassStg-Dienstfunktion**](/windows/desktop/api/coml2api/nf-coml2api-readclassstg) abgerufen werden.
 
-Da in dllpaper bearbeitbare Daten behandelt werden, ist es auch sinnvoll, ein Zwischenablage Format im Speicher aufzuzeichnen. Die Funktion " [**schreitefmtusertypestg**](/windows/desktop/api/Ole2/nf-ole2-writefmtusertypestg) " wird aufgerufen, um sowohl eine Format Bezeichnung für die Zwischenablage als auch einen Benutzer lesbaren Namen für das Format zu speichern. Der für den Benutzer lesbare Name ist für die GUI-Anzeige in Auswahllisten bestimmt. Der oben weiter gegebene Name verwendet das-Makro clipbdfmt \_ Str, das in Paper. h als "dllpaper 1,0" definiert ist. Diese gespeicherten Zwischenablage Daten können später mit einem Aufrufen der Dienstfunktion " [**leserfmtusertypestg**](/windows/desktop/api/Ole2/nf-ole2-readfmtusertypestg)" abgerufen werden. Diese Funktion gibt einen Zeichen folgen Wert zurück, der mithilfe der Arbeitsspeicher Zuweisung zugeordnet wird. Der Aufrufer ist für das Freigeben der Zeichenfolge verantwortlich.
+Da DllPaper bearbeitbare Daten verarbeitet, ist es auch sinnvoll, ein Zwischenablageformat im Speicher aufzuzeichnen. Die [**WriteFmtUserTypeStg-Dienstfunktion**](/windows/desktop/api/Ole2/nf-ole2-writefmtusertypestg) wird aufgerufen, um sowohl eine Formatbezeichnung in der Zwischenablage als auch einen benutzerlesbaren Namen für das Format zu speichern. Der benutzerlesbare Name ist für die GUI-Anzeige in Auswahllisten vorgesehen. Der oben übergebene Name verwendet das Makro CLIPBDFMT \_ STR, das in Paper.h als "DllPaper 1.0" definiert ist. Diese gespeicherten Zwischenablagedaten können später mit einem Aufruf der Dienstfunktion [**ReadFmtUserTypeStg**](/windows/desktop/api/Ole2/nf-ole2-readfmtusertypestg)abgerufen werden. Diese Funktion gibt einen Zeichenfolgenwert zurück, der mithilfe der Taskspeicherzuweisung zugeordnet wird. Der Aufrufer ist für das Freigeben der Zeichenfolge verantwortlich.
 
-Beim nächsten **Speichern** wird ein Stream im Speicher für die copaper-Papier Daten erstellt. Der Stream wird als "Taschen Daten" bezeichnet und mithilfe des Stream \_ Taschen \_ datentops "USTR" übermittelt. Die [**IStorage:: foratestream**](/windows/desktop/api/Objidl/nf-objidl-istorage-createstream) -Methode erfordert, dass diese Zeichenfolge in Unicode enthalten ist. Da die Zeichenfolge zur Kompilierzeit festgelegt ist, wird das Makro in Paper. h als Unicode definiert.
+**Speichern** erstellt als Nächstes einen Stream im Speicher für die COPaper-Papierdaten. Der Stream wird als "PAPERDATA" bezeichnet und mithilfe des STREAM \_ PAPERDATA \_ USTR-Makros übergeben. Die [**IStorage::CreateStream-Methode**](/windows/desktop/api/Objidl/nf-objidl-istorage-createstream) erfordert, dass diese Zeichenfolge in Unicode enthalten ist. Da die Zeichenfolge zur Kompilierzeit festgelegt ist, wird das Makro in Paper.h als Unicode definiert.
 
 ``` syntax
 #define STREAM_PAPERDATA_USTR L"PAPERDATA"
 ```
 
-Das "L" vor der Zeichenfolge, das Long angibt, erreicht dies.
+Das "L" vor der Zeichenfolge, das LONG angibt, erreicht dies.
 
-Die Methode " [**kreatestream**](/windows/desktop/api/Objidl/nf-objidl-istorage-createstream) " erstellt und öffnet einen Stream innerhalb des angegebenen Speichers. Ein [**IStream**](/windows/desktop/api/Objidl/nn-objidl-istream) -Schnittstellen Zeiger für den neuen Stream wird in der Zeiger Variablen der aufrufenden Schnittstelle übergeben. Die adressf wird für diesen Schnittstellen Zeiger innerhalb von " **kreatestream**" aufgerufen, und der Aufrufer muss diesen Zeiger nach der Verwendung freigeben. Der Methode " **kreatestream** " werden wie folgt zahlreiche zugriffsmodusflags übergeben.
+Die [**CreateStream-Methode**](/windows/desktop/api/Objidl/nf-objidl-istorage-createstream) erstellt und öffnet einen Stream innerhalb des angegebenen Speichers. Ein [](/windows/desktop/api/Objidl/nn-objidl-istream) IStream-Schnittstellenzeiger für den neuen Stream wird in einer Aufruferschnittstellenzeigervariablen übergeben. AddRef wird für diesen Schnittstellenzeiger in **CreateStream** aufgerufen, und der Aufrufer muss diesen Zeiger nach der Verwendung freigeben. Der **CreateStream-Methode** werden wie folgt zahlreiche Zugriffsmodusflags übergeben.
 
-STGM \_ Create \| STGM \_ Write \| STGM \_ Direct \| STGM \_ share \_ exklusiv
+STGM \_ CREATE \| STGM \_ WRITE \| STGM \_ DIRECT \| STGM \_ SHARE \_ EXCLUSIVE
 
-[**STGM \_ Create**](stgm-constants.md) erstellt einen neuen Stream oder überschreibt einen vorhandenen Namen. [**STGM \_ Write**](stgm-constants.md) öffnet den Stream mit Schreib Berechtigung. [**STGM \_ Direkt**](stgm-constants.md) öffnet den Stream für den direkten Zugriff im Gegensatz zum transaktiven Zugriff. [**STGM \_ Freigabe \_ exklusiv**](stgm-constants.md) öffnet die Datei für den exklusiven, nicht freigegebenen Gebrauch durch den Aufrufer.
+[**STGM \_ CREATE**](stgm-constants.md) erstellt einen neuen Stream oder überschreibt einen vorhandenen mit dem gleichen Namen. [**STGM \_ WRITE**](stgm-constants.md) öffnet den Stream mit Schreibberechtigung. [**STGM \_ DIRECT**](stgm-constants.md) öffnet den Stream für den direkten Zugriff und nicht für den transaktiven Zugriff. [**STGM \_ SHARE \_ EXCLUSIVE**](stgm-constants.md) öffnet die Datei für die exklusive, nicht freigegebene Verwendung durch den Aufrufer.
 
-Nachdem der Taschen Datenstrom erfolgreich erstellt wurde, wird die [**IStream**](/windows/desktop/api/Objidl/nn-objidl-istream) -Schnittstelle verwendet, um in den Stream zu schreiben. Die **IStream:: Write** -Methode wird verwendet, um zuerst den Inhalt der Papier \_ Eigenschafts Struktur zu speichern. Dabei handelt es sich im Wesentlichen um einen Eigenschaften Header am Anfang des Streams. Da die Versionsnummer das erste Ergebnis in der Datei ist, kann Sie unabhängig voneinander gelesen werden, um zu bestimmen, wie die folgenden Daten behandelt werden. Wenn die tatsächlich geschriebene Datenmenge nicht mit der angeforderten Menge übereinstimmt, wird die Save-Methode abgebrochen und gibt STG \_ E \_ kansave zurück.
+Nachdem der PAPERDATA-Stream erfolgreich erstellt wurde, wird die [**IStream-Schnittstelle**](/windows/desktop/api/Objidl/nn-objidl-istream) verwendet, um in den Stream zu schreiben. Die **IStream::Write-Methode** wird verwendet, um zuerst den Inhalt der PAPER \_ PROPERTIES-Struktur zu speichern. Dies ist im Wesentlichen ein Eigenschaftenheader am Anfang des Streams. Da die Versionsnummer der erste Punkt in der Datei ist, kann sie unabhängig gelesen werden, um zu bestimmen, wie mit den folgenden Daten umgegangen wird. Wenn die tatsächlich geschriebene Datenmenge nicht der angeforderten Menge entspricht, wird die Save-Methode abgebrochen und STG \_ E \_ CANTSAVE zurückgegeben.
 
-Es ist einfach, das gesamte Array von frei Hand Daten in den Stream zu speichern.
+Das Speichern des gesamten Arrays von Ink-Daten im Stream ist einfach.
 
 
 ```C++
@@ -124,15 +124,15 @@ Es ist einfach, das gesamte Array von frei Hand Daten in den Stream zu speichern
 
 
 
-Da die [**IStream:: Write**](/windows/desktop/api/Objidl/nn-objidl-istream) -Methode mit einem Bytearray arbeitet, wird die Anzahl der Bytes gespeicherter frei Hand Daten im Array berechnet, und der Schreibvorgang beginnt am Anfang des Arrays. Wenn die tatsächlich geschriebene Datenmenge nicht mit der angeforderten Menge übereinstimmt, gibt die **Save** -Methode STG \_ E \_ kansave zurück.
+Da die [**IStream::Write-Methode**](/windows/desktop/api/Objidl/nn-objidl-istream) für ein Bytearray verwendet wird, wird die Anzahl der Bytes der gespeicherten Freihanddaten im Array berechnet, und der Schreibvorgang beginnt am Anfang des Arrays. Wenn die tatsächlich geschriebene Datenmenge nicht mit der angeforderten Menge identisch ist, gibt die **Save-Methode** STG \_ E \_ CANTSAVE zurück.
 
-Nachdem der Stream geschrieben wurde, gibt die **iPaper:: Save** -Methode den verwendeten [**IStream**](/windows/desktop/api/Objidl/nn-objidl-istream) -Zeiger frei.
+Nachdem der Stream geschrieben wurde, gibt die **IPaper::Save-Methode** den [**verwendeten IStream-Zeiger**](/windows/desktop/api/Objidl/nn-objidl-istream) frei.
 
-Die **Save** -Methode ruft auch den Client [**itaschen Sink**](ipapersink-methods.md) (in der internen Methode "copaper-notifysinks") auf, um den Client zu benachrichtigen, dass der Speichervorgang beendet wurde. An diesem Punkt wird die **Save** -Methode an den aufrufenden Client zurückgegeben, der in der Regel den [**IStorage**](/windows/desktop/api/Objidl/nn-objidl-istorage) -Zeiger freigibt.
+Die **Save-Methode** ruft auch den Client [**IPaperSink**](ipapersink-methods.md) (in der internen NotifySinks-Methode von COPaper) auf, um den Client zu benachrichtigen, dass der Speichervorgang abgeschlossen ist. An diesem Punkt kehrt die **Save-Methode** zum aufrufenden Client zurück, der in der Regel den [**IStorage-Zeiger**](/windows/desktop/api/Objidl/nn-objidl-istorage) freigibt.
 
- 
+ 
 
- 
+ 
 
 
 

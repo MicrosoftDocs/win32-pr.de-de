@@ -1,9 +1,9 @@
 ---
-title: MCI_VCR_PLAY_PARMS-Struktur (Vcr.h)
-description: Die MCI \_ VCR \_ PLAY \_ PARMS-Struktur enthält Parameter für den MCI \_ PLAY-Befehl für Video-Cassette-Aufzeichnungen.
+title: MCI_VCR_PLAY_PARMS -Struktur (Vcr.h)
+description: Die MCI \_ VCR \_ PLAY \_ PARMS-Struktur enthält Parameter für den MCI \_ PLAY-Befehl für Video cassette-Aufzeichnungen.
 ms.assetid: e180c203-3113-4fdb-bcf1-ea3e45e646e2
 keywords:
-- MCI_VCR_PLAY_PARMS Struktur Windows Multimedia
+- MCI_VCR_PLAY_PARMS-Struktur Windows Multimedia
 topic_type:
 - apiref
 api_name:
@@ -23,7 +23,7 @@ ms.locfileid: "118374359"
 ---
 # <a name="mci_vcr_play_parms-structure"></a>MCI \_ VCR \_ PLAY \_ PARMS-Struktur
 
-Die **MCI \_ VCR \_ PLAY \_ PARMS-Struktur** enthält Parameter für den [**MCI \_ PLAY-Befehl**](mci-play.md) für Video-Cassette-Aufzeichnungen.
+Die **MCI \_ VCR \_ PLAY \_ PARMS-Struktur** enthält Parameter für den [**MCI \_ PLAY-Befehl**](mci-play.md) für Video cassette-Aufzeichnungen.
 
 ## <a name="syntax"></a>Syntax
 
@@ -46,28 +46,28 @@ typedef struct tagMCI_VCR_PLAY_PARMS {
 **dwCallback**
 </dt> <dd>
 
-Das Wort mit niedriger Reihenfolge gibt ein Fensterhandle an, das für das MCI \_ NOTIFY-Flag verwendet wird.
+Das Wort mit niedriger Reihenfolge gibt ein Fensterhand handle an, das für das MCI \_ NOTIFY-Flag verwendet wird.
 
 </dd> <dt>
 
 **dwFrom**
 </dt> <dd>
 
-Position, aus der wiedergegeben werden soll.
+Position, von der aus sie abspielt werden soll.
 
 </dd> <dt>
 
 **dwTo**
 </dt> <dd>
 
-Position, an der wiedergegeben werden soll.
+Position, an der abspielt werden soll.
 
 </dd> <dt>
 
 **dwAt**
 </dt> <dd>
 
-Zeitwert, der sich auf den [**MCI \_ PLAY-**](mci-play.md) oder [**MCI \_ CUE-Befehl**](mci-cue.md) auswirkt. Für [**MCI \_ PLAY**](mci-play-parms.md)ist dies der Zeitpunkt, zu dem die Wiedergabe beginnt. Für **MCI \_ CUE** ist dies der Zeitpunkt, zu dem das gerät mit dem Cuing die in **dwFrom** angegebene Position erreicht.
+Zeitwert, der den [**MCI \_ PLAY- oder**](mci-play.md) [**MCI \_ CUE-Befehl**](mci-cue.md) beeinflusst. Bei [**MCI \_ PLAY**](mci-play-parms.md)ist dies der Zeitpunkt, zu dem die Wiedergabe beginnt. Für **MCI \_ CUE** ist dies der Zeitpunkt, zu dem das Cued-Gerät die in **dwFrom gegebene Position erreicht.**
 
 </dd> </dl>
 

@@ -1,34 +1,34 @@
 ---
-title: Band Initialisierung
-description: Eine Anwendung muss die Funktion "Funktion" verwenden, um ein Handle eines Bandgeräts zu erstellen. Dieses Handle wird bei nachfolgenden Vorgängen auf dem Band des Geräts verwendet.
+title: Bandinitialisierung
+description: Eine Anwendung muss die CreateFile-Funktion verwenden, um ein Handle eines Bandgeräts zu erstellen. Dieses Handle wird in nachfolgenden Vorgängen auf dem Band auf dem Gerät verwendet.
 ms.assetid: 5e7eddd2-8137-4e79-b1ee-c371bc4c7f75
 keywords:
-- Sicherung der Band Initialisierung
+- Sicherung der Bandinitialisierung
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 64f77b5c4d52641d2a3f195d517e575c9e2f780f
-ms.sourcegitcommit: 592c9bbd22ba69802dc353bcb5eb30699f9e9403
+ms.openlocfilehash: 2aeba729feb9351b5af15d26f6366b455c5ce74a9cc6300c9ab8d25047b4760b
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "104473677"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117835403"
 ---
-# <a name="tape-initialization"></a>Band Initialisierung
+# <a name="tape-initialization"></a>Bandinitialisierung
 
-Eine Anwendung muss [**die Funktion "**](/windows/desktop/api/fileapi/nf-fileapi-createfilea) Funktion" verwenden, um ein Handle eines Bandgeräts zu erstellen. Dieses Handle wird bei nachfolgenden Vorgängen auf dem Band des Geräts verwendet.
+Eine Anwendung muss die [**CreateFile-Funktion**](/windows/desktop/api/fileapi/nf-fileapi-createfilea) verwenden, um ein Handle eines Bandgeräts zu erstellen. Dieses Handle wird in nachfolgenden Vorgängen auf dem Band auf dem Gerät verwendet.
 
-Bevor eine Anwendung auf ein Band schreibt, muss das Band gemäß den Anforderungen der Anwendung und den Funktionen des verwendeten Band Laufwerks formatiert werden. Die Funktion " [**kreatetapepartition**](/windows/desktop/api/Winbase/nf-winbase-createtapepartition) " formatiert ein Band neu und erstellt dabei eine angegebene Anzahl von Partitionen mit einer angegebenen Größe.
+Bevor eine Anwendung auf ein Band schreibt, muss das Band entsprechend den Anforderungen der Anwendung und den Funktionen des verwendeten Bandlaufwerks formatiert werden. Die [**CreateTapePartition-Funktion**](/windows/desktop/api/Winbase/nf-winbase-createtapepartition) formatiert ein Band neu und erstellt darauf eine bestimmte Anzahl von Partitionen einer angegebenen Größe.
 
-Die [**preparetape**](/windows/desktop/api/Winbase/nf-winbase-preparetape) -Funktion bereitet ein Band für den Zugriff oder die Entfernung vor. Mit dieser Funktion kann ein Band geladen, entladen, gesperrt oder entsperrt werden. Diese Funktion kann auch das Band spannen, indem Sie das Band an das Ende des Bands und zurück an den Anfang verschiebt.
+Die [**PrepareTape-Funktion**](/windows/desktop/api/Winbase/nf-winbase-preparetape) bereitet ein Band für den Zugriff auf oder das Entfernen vor. Diese Funktion kann ein Band laden, entladen, sperren oder entsperren. Diese Funktion kann das Band auch absichern, indem sie das Band an das Ende des Bandes und wieder zurück an den Anfang bewegt.
 
-Zum Abrufen und Festlegen von Informationen zu einem Band und Bandlaufwerk verwendet eine Anwendung die Funktionen [**gettapeparameters**](/windows/desktop/api/Winbase/nf-winbase-gettapeparameters), [**settapeparameters**](/windows/desktop/api/Winbase/nf-winbase-settapeparameters)und [**gettapestatus**](/windows/desktop/api/Winbase/nf-winbase-gettapestatus) .
+Zum Abrufen und Festlegen von Informationen zu einem Band- und Bandlaufwerk verwendet eine Anwendung die Funktionen [**GetTapeParameters,**](/windows/desktop/api/Winbase/nf-winbase-gettapeparameters) [**SetTapeParameters**](/windows/desktop/api/Winbase/nf-winbase-settapeparameters)und [**GetTapeStatus.**](/windows/desktop/api/Winbase/nf-winbase-gettapestatus)
 
-[**Gettapeparameters**](/windows/desktop/api/Winbase/nf-winbase-gettapeparameters) Ruft Informationen ab, die ein Band oder ein Bandlaufwerk beschreiben. Die Bandinformationen umfassen den Typ, die Dichte und die Blockgröße des Bands. die Anzahl der Partitionen auf dem Band. die verbleibende bandmenge. Und so weiter. Die Informationen zum Bandlaufwerk enthalten die Standard Blockgröße des Laufwerks, die maximale Anzahl von Partitionen und die unterstützten Funktionen.
+[**GetTapeParameters**](/windows/desktop/api/Winbase/nf-winbase-gettapeparameters) ruft Informationen ab, die ein Band oder ein Bandlaufwerk beschreiben. Die Bandinformationen umfassen den Typ, die Dichte und die Blockgröße des Bands. die Anzahl der Partitionen auf dem Band; die menge des verbleibenden Bandes; Und so weiter. Die Informationen zum Bandlaufwerk umfassen die Standardblockgröße des Laufwerks, die maximale Partitionsanzahl und die unterstützten Features.
 
-Mit [**settapeparameters**](/windows/desktop/api/Winbase/nf-winbase-settapeparameters) wird entweder die Band Blockgröße festgelegt oder die Bandlaufwerks-Flags festgelegt, die angeben, ob das Laufwerk Hardwarefehler Korrektur, Datenkomprimierung, Daten Auffüll Vorgänge oder eine beliebige Kombination der drei unterstützt.
+[**SetTapeParameters**](/windows/desktop/api/Winbase/nf-winbase-settapeparameters) legt entweder die Bandblockgröße oder die Bandlaufwerkflags fest, die angeben, ob das Laufwerk hardwarefehlerkorrektur, Datenkomprimierung, Datenauffüllung oder eine beliebige Kombination der drei unterstützt.
 
-[**Gettapestatus**](/windows/desktop/api/Winbase/nf-winbase-gettapestatus) gibt an, ob das Bandlaufwerk für die Verarbeitung von Band Befehlen bereit ist.
+[**GetTapeStatus**](/windows/desktop/api/Winbase/nf-winbase-gettapestatus) gibt an, ob das Bandlaufwerk bereit ist, Bandbefehle zu verarbeiten.
 
- 
+ 
 
- 
+ 

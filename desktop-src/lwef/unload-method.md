@@ -13,7 +13,7 @@ ms.locfileid: "118474498"
 ---
 # <a name="unload-method"></a>Unload-Methode
 
-\[Der Microsoft-Agent ist ab Windows 7 veraltet und in nachfolgenden Versionen von Windows möglicherweise nicht mehr verfügbar.\]
+\[Microsoft Agent ist ab Version Windows 7 veraltet und in nachfolgenden Versionen von Windows.\]
 
 <dl> <dt>
 
@@ -33,7 +33,7 @@ Entlädt die Zeichendaten für das angegebene Zeichen.
 
 ## <a name="remarks"></a>Hinweise
 
-Verwenden Sie diese Methode, wenn Sie kein Zeichen mehr benötigen, um Arbeitsspeicher freizugeben, der zum Speichern von Informationen über das Zeichen verwendet wird. Wenn Sie erneut auf das Zeichen zugreifen, verwenden Sie die [**Load-Methode.**](load-method.md)
+Verwenden Sie diese Methode, wenn Sie kein Zeichen mehr benötigen, um Arbeitsspeicher frei zu geben, der zum Speichern von Informationen über das Zeichen verwendet wird. Wenn Sie erneut auf das Zeichen zugreifen, verwenden Sie die [**Load-Methode.**](load-method.md)
 
 Diese Methode gibt kein [**Request-Objekt**](/windows/desktop/lwef/the-request-object) zurück.
 

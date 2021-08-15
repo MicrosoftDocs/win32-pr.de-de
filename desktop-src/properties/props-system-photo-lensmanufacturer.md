@@ -1,5 +1,5 @@
 ---
-description: Zeichenfolge, die den Hersteller der Brille angibt, die zum Aufnehmen des Bilds verwendet wird. Kann leer oder nicht vorhanden sein.
+description: Eine Zeichenfolge, die den Hersteller der Zum Aufnahme des Bilds verwendeten Brille angibt. Kann leer oder nicht vorhanden sein.
 ms.assetid: 81fb5540-509d-44ac-a249-430a0466fdbd
 title: System.Photo.LensManufacturer
 ms.topic: article
@@ -13,7 +13,7 @@ ms.locfileid: "118228428"
 ---
 # <a name="systemphotolensmanufacturer"></a>System.Photo.LensManufacturer
 
-Zeichenfolge, die den Hersteller der Brille angibt, die zum Aufnehmen des Bilds verwendet wird. Kann leer oder nicht vorhanden sein.
+Eine Zeichenfolge, die den Hersteller der Zum Aufnahme des Bilds verwendeten Brille angibt. Kann leer oder nicht vorhanden sein.
 
 ## <a name="windows-10-version-1703-windows-10-version-1607-windows-10-version-1511-windows-10-version-1507-windows-81-windows-8-windows-7-windows-vista"></a>Windows 10, Version 1703, Windows 10, Version 1607, Windows 10, Version 1511, Windows 10, Version 1507, Windows 8.1, Windows 8, Windows 7, Windows Vista
 

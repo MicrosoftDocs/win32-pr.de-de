@@ -22,12 +22,12 @@ ms.locfileid: "118452995"
 ---
 # <a name="ischaralphanumericwrapw-function"></a>IsCharAlphaNumericWrapW-Funktion
 
-\[**IsCharAlphaNumericWrapW** ist für die Verwendung in Windows XP verfügbar. Sie ist in nachfolgenden Versionen nicht verfügbar. Sie sollten [**isCharAlphaNumericW**](/windows/win32/api/winuser/nf-winuser-ischaralphanumerica) verwenden.\]
+\[**IsCharAlphaNumericWrapW** ist für die Verwendung in Windows XP verfügbar. Sie ist in nachfolgenden Versionen nicht verfügbar. Sie sollten [**IsCharAlphaNumericW**](/windows/win32/api/winuser/nf-winuser-ischaralphanumerica) an seiner Stelle verwenden.\]
 
-Bestimmt, ob ein Zeichen entweder ein alphabetisches oder ein numerisches Zeichen ist. Diese Bestimmung basiert auf der Semantik der Sprache, die der Benutzer während des Setups oder über Systemsteuerung.
+Bestimmt, ob ein Zeichen entweder ein alphabetisches oder ein numerisches Zeichen ist. Diese Bestimmung basiert auf der Semantik der Sprache, die der Benutzer während des Setups oder über Systemsteuerung ausgewählt hat.
 
 > [!Note]  
-> **IsCharAlphaNumericWrapW** ist ein Wrapper für die **IsCharAlphaNumericW-Funktion.** Weitere Hinweise zur Verwendung finden Sie auf der Seite [**IsCharAlphaNumeric.**](/windows/win32/api/winuser/nf-winuser-ischaralphanumerica)
+> **IsCharAlphaNumericWrapW** ist ein Wrapper für die **IsCharAlphaNumericW-Funktion.** Weitere Nutzungshinweise finden Sie auf der [**IsCharAlphaNumeric-Seite.**](/windows/win32/api/winuser/nf-winuser-ischaralphanumerica)
 
  
 
@@ -59,15 +59,15 @@ Das unicode-Zeichen, das getestet werden soll.
 
 Typ: **BOOL**
 
-Wenn das Zeichen alphanumerisch ist, ist der Rückgabewert ungleich null.
+Wenn das Zeichen alphanumerisch ist, ist der Rückgabewert ungleich 0 (null).
 
 Wenn das Zeichen nicht alphanumerisch ist, ist der Rückgabewert 0 (null). Um erweiterte Fehlerinformationen zu erhalten, rufen Sie [**GetLastError**](/windows/win32/api/errhandlingapi/nf-errhandlingapi-getlasterror) auf.
 
 ## <a name="remarks"></a>Bemerkungen
 
-**IsCharAlphaNumericWrapW** bietet die Möglichkeit, Unicode-Zeichenfolgen in Betriebssystemen vor Windows XP zu verwenden. Die bevorzugte Methode ist die Verwendung [**von IsCharAlphaNumericW**](/windows/win32/api/winuser/nf-winuser-ischaralphanumerica) in Verbindung mit der Microsoft Layer for Unicode (MSLU).
+**IsCharAlphaNumericWrapW** bietet die Möglichkeit, Unicode-Zeichenfolgen in Betriebssystemen vor Windows XP zu verwenden. Die bevorzugte Methode ist die Verwendung von [**IsCharAlphaNumericW**](/windows/win32/api/winuser/nf-winuser-ischaralphanumerica) in Verbindung mit der Microsoft Layer for Unicode (MSLU).
 
-**IsCharAlphaNumericWrapW** muss mithilfe der Ordnungszahl 28 direkt aus Shlwapi.dll aufgerufen werden.
+**IsCharAlphaNumericWrapW** muss direkt über Shlwapi.dll aufgerufen werden, wobei Ordinalzahl 28 verwendet wird.
 
 ## <a name="requirements"></a>Anforderungen
 

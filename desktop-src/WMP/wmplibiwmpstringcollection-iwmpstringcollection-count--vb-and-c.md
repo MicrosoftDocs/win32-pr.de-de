@@ -1,9 +1,9 @@
 ---
 title: IWMPStringCollection count-Eigenschaft
-description: Die count-Eigenschaft ruft die Anzahl der Elemente in der Zeichenfolgenauflistung ab.
+description: Die count-Eigenschaft ruft die Anzahl der Elemente in der Zeichenfolgensammlung ab.
 ms.assetid: 0ba2d158-fa54-46a8-9124-8a412e71bd09
 keywords:
-- count-Eigenschaft Windows Media Player
+- count-Windows Media Player
 - count-Eigenschaft Windows Media Player , IWMPStringCollection-Schnittstelle
 - IWMPStringCollection-Schnittstelle Windows Media Player , count-Eigenschaft
 topic_type:
@@ -26,7 +26,7 @@ ms.locfileid: "118568456"
 ---
 # <a name="iwmpstringcollectioncount-property"></a>IWMPStringCollection::count-Eigenschaft
 
-Die **count-Eigenschaft** ruft die Anzahl der Elemente in der Zeichenfolgenauflistung ab.
+Die **count-Eigenschaft** ruft die Anzahl der Elemente in der Zeichenfolgensammlung ab.
 
 Diese Eigenschaft ist schreibgeschützt.
 
@@ -49,11 +49,11 @@ Public ReadOnly Property count As System.Int32
 
 ## <a name="property-value"></a>Eigenschaftswert
 
-Eine **System.Int32,die** die Anzahl der Elemente in der Zeichenfolgenauflistung ist.
+Ein **System.Int32,** das die Anzahl der Elemente in der Zeichenfolgensammlung angibt.
 
 ## <a name="remarks"></a>Hinweise
 
-Bevor Sie diese Eigenschaft verwenden können, benötigen Sie Lesezugriff auf die Bibliothek. Weitere Informationen finden Sie unter [Bibliothekszugriff.](library-access.md)
+Bevor Sie diese Eigenschaft verwenden können, müssen Sie über Lesezugriff auf die Bibliothek verfügen. Weitere Informationen finden Sie unter [Bibliothekszugriff.](library-access.md)
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -61,13 +61,13 @@ Bevor Sie diese Eigenschaft verwenden können, benötigen Sie Lesezugriff auf di
 
 | Anforderung | Wert |
 |----------------------|------------------------------------------------------------------------------------------------------------------------|
-| Version<br/>   | Windows Media Player Serie 9 oder höher<br/>                                                                      |
+| Version<br/>   | Windows Media Player 9-Serie oder höher<br/>                                                                      |
 | Namespace<br/> | **WMPLib**<br/>                                                                                                  |
 | Assembly<br/>  | <dl> <dt>Interop.WMPLib.dll (Interop.WMPLib.dll.dll)</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Weitere Informationen:
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 

@@ -72,7 +72,7 @@ Definiert die untergeordneten Elemente und Sequenzierungsinformationen für das 
 
 <dl> <dt>
 
-[komplexe Schematypen Taskplaner](task-scheduler-schema-complex-types.md)
+[komplexe Typen Taskplaner Schemas](task-scheduler-schema-complex-types.md)
 </dt> <dt>
 
 [Aufgabenplanung](task-scheduler-start-page.md)

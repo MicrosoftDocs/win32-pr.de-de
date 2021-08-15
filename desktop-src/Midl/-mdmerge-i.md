@@ -1,9 +1,9 @@
 ---
-title: /i-Schalter (mdmerge)
-description: Der/i-Schalter gibt das Verzeichnis an, das die zusammen zuführenden Metadatendateien enthält.
+title: /i-Switch (MDMERGE)
+description: Der Schalter /i gibt das Verzeichnis an, das metadatendateien enthält, die zusammengeführt werden sollen.
 ms.assetid: 52CFCB90-555F-487E-BB42-76B6DFC5DA93
 keywords:
-- /i-Schalter-Mittel l
+- /i switch MIDL
 topic_type:
 - apiref
 api_name:
@@ -12,16 +12,16 @@ api_type:
 - NA
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 3fbf038d16d05933fe889fc7d4088708765173dc
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 881fa5f6428e85a089fb914e4a4b7dadf36415d1c2c67a0c58ce6d66974853e8
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106367767"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118385468"
 ---
 # <a name="i-switch"></a>/i-Schalter
 
-Der **/i** -Schalter gibt das Verzeichnis an, das die zusammen zuführenden Metadatendateien enthält.
+Der Schalter **/i** gibt das Verzeichnis an, das metadatendateien enthält, die zusammengeführt werden sollen.
 
 ``` syntax
 mdmerge /i metadata_directory
@@ -34,7 +34,7 @@ mdmerge /i metadata_directory
 *\_Metadatenverzeichnis* 
 </dt> <dd>
 
-Gibt das Verzeichnis an, das die zusammen zuführenden Metadatendateien enthält.
+Gibt das Verzeichnis an, das metadatendateien enthält, die zusammengeführt werden sollen.
 
 </dd> </dl>
 
@@ -42,7 +42,7 @@ Gibt das Verzeichnis an, das die zusammen zuführenden Metadatendateien enthält
 
 ## <a name="examples"></a>Beispiele
 
-**mdmerge/i \_ Metadatenverzeichnis**
+**mdmerge /i-Metadatenverzeichnis \_**
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -55,11 +55,11 @@ Gibt das Verzeichnis an, das die zusammen zuführenden Metadatendateien enthält
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[Allgemeine Syntax der Mittell-Befehlszeile](general-midl-command-line-syntax.md)
+[Allgemeine MIDL-Befehlszeilensyntax](general-midl-command-line-syntax.md)
 </dt> </dl>
 
  

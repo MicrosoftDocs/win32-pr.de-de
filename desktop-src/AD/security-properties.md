@@ -1,39 +1,39 @@
 ---
 title: Benutzersicherheitsattribute
-description: Zusätzlich zu den Benennungs Eigenschaften für Benutzer Objekte (z. b. "objectGUID", "objectSID", "CN", "Unterscheid Name" usw.) gibt es weitere Sicherheitseigenschaften, die für die Anmeldung, den Netzwerk Zugriff und die Zugriffs Steuerung verwendet werden.
+description: Zusätzlich zum Benennen von Eigenschaften für Benutzerobjekte, z. B. objectGUID, objectSid, cn, distinguishedName und so weiter, gibt es weitere Sicherheitseigenschaften, die für die Anmeldung, den Netzwerkzugriff und die Zugriffssteuerung verwendet werden.
 ms.assetid: eeb16938-4380-4622-804f-6b2ff19aa68d
 ms.tgt_platform: multiple
 keywords:
-- Sicherheits Attribute mit AD
-- Benutzer Sicherheits Attribute ad
+- Sicherheitsattribute, Verwenden von AD
+- Benutzersicherheitsattribute AD
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: c51000aefdf9ec0f26406607bd781ac4d87b6106
-ms.sourcegitcommit: 25bf66769c2087b1a87d6db5930b604cb57e0f98
+ms.openlocfilehash: 5dfe23252002f2ffbbba3f8e8a8faf5a2d36ce348bdbd7503c0d99a816a81902
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "103949196"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119024888"
 ---
 # <a name="user-security-attributes"></a>Benutzersicherheitsattribute
 
-Zusätzlich zu den Benennungs Eigenschaften für Benutzer Objekte (z. b. " [**objectGUID**](/windows/desktop/ADSchema/a-objectguid)", " [**objectSID**](/windows/desktop/ADSchema/a-objectsid)", " [**CN**](/windows/desktop/ADSchema/a-cn)", " [**Unterscheid Name**](/windows/desktop/ADSchema/a-distinguishedname)" usw.) gibt es weitere Sicherheitseigenschaften, die für die Anmeldung, den Netzwerk Zugriff und die Zugriffs Steuerung verwendet werden. Diese Eigenschaften werden vom Sicherheitssystem von Windows 2000 verwendet. Diese Eigenschaften können über das Active Directory Benutzer-und Computer-Snap-in angezeigt und verwaltet werden.
+Zusätzlich zum Benennen von Eigenschaften für Benutzerobjekte, z. B. [**objectGUID,**](/windows/desktop/ADSchema/a-objectguid) [**objectSid,**](/windows/desktop/ADSchema/a-objectsid) [**cn,**](/windows/desktop/ADSchema/a-cn) [**distinguishedName**](/windows/desktop/ADSchema/a-distinguishedname)und so weiter, gibt es weitere Sicherheitseigenschaften, die für die Anmeldung, den Netzwerkzugriff und die Zugriffssteuerung verwendet werden. Diese Eigenschaften werden vom Windows 2000-Sicherheitssystem verwendet. Diese Eigenschaften können vom Snap-In Active Directory-Benutzer und -Computer angezeigt und verwaltet werden.
 
 <dl> <dt>
 
-<span id="accountExpires"></span><span id="accountexpires"></span><span id="ACCOUNTEXPIRES"></span>[**AccountExpires**](/windows/desktop/ADSchema/a-accountexpires)
+<span id="accountExpires"></span><span id="accountexpires"></span><span id="ACCOUNTEXPIRES"></span>[**accountExpires**](/windows/desktop/ADSchema/a-accountexpires)
 </dt> <dd>
 
-Das [**AccountExpires**](/windows/desktop/ADSchema/a-accountexpires) -Attribut gibt an, wann ein Konto abläuft. Dieser Wert wird als große ganze Zahl gespeichert, die die Anzahl von 100-Nanosekunden-Intervallen seit dem 1. Januar 1601 (UTC) darstellt. Ein Wert von **timeq \_ Forever** (definiert in "lmaccess. h") gibt an, dass ein Konto nie abläuft.
+Das [**accountExpires-Attribut**](/windows/desktop/ADSchema/a-accountexpires) gibt an, wann ein Konto abläuft. Dieser Wert wird als große ganze Zahl gespeichert, die die Anzahl von Intervallen von 100 Nanosekunden seit dem 1. Januar 1601 (UTC) darstellt. Der Wert **TIMEQ \_ FOREVER** (definiert in Lmaccess.h) gibt an, dass ein Konto nie abläuft.
 
 </dd> <dt>
 
-<span id="altSecurityIdentities"></span><span id="altsecurityidentities"></span><span id="ALTSECURITYIDENTITIES"></span>[**altsecurityidentitäten**](/windows/desktop/ADSchema/a-altsecurityidentities)
+<span id="altSecurityIdentities"></span><span id="altsecurityidentities"></span><span id="ALTSECURITYIDENTITIES"></span>[**altSecurityIdentities**](/windows/desktop/ADSchema/a-altsecurityidentities)
 </dt> <dd>
 
-Das Attribut " [**altsecurityidentities**](/windows/desktop/ADSchema/a-altsecurityidentities) " ist ein mehr wertiges Attribut, das Zuordnungen für X. 509-Zertifikate oder externe Kerberos-Benutzerkonten für diesen Benutzer zum Zweck der Authentifizierung enthält. Verschiedene Sicherheitspakete, einschließlich des Public Key-Authentifizierungs Pakets und der Kerberos-Authentifizierung, verwenden diese Daten zum Authentifizieren von Benutzern, wenn Sie die Alternative identifikationsform (z. b. Zertifikat, UNIX-Kerberos-Ticket usw.) darstellen. Erstellen Sie ein Windows 2000-Token basierend auf dem entsprechenden Benutzerkonto, damit Sie auf Systemressourcen zugreifen können.
+Das [**altSecurityIdentities-Attribut**](/windows/desktop/ADSchema/a-altsecurityidentities) ist ein mehrwertiges Attribut, das Zuordnungen für X.509-Zertifikate oder externe Kerberos-Benutzerkonten zu diesem Benutzer für die Authentifizierung enthält. Verschiedene Sicherheitspakete, einschließlich des Authentifizierungspakets für öffentliche Schlüssel und Kerberos, verwenden diese Daten, um Benutzer zu authentifizieren, wenn sie die alternative Form der Identifizierung wie Zertifikat, UNIX Kerberos-Ticket und so weiter präsentieren. Erstellen Sie Windows 2000-Token basierend auf dem entsprechenden Benutzerkonto, damit sie auf Systemressourcen zugreifen können.
 
-Bei X. 509-Zertifikaten sollten die Werte der Aussteller-und Antragsteller Namen in 509v3-Zertifikaten sein, die von einer externen öffentlichen Zertifizierungsstelle ausgestellt wurden und die dem Benutzerkonto zugeordnet sind, das für die Suche nach einem Konto für die Authentifizierung verwendet wird. Das SSL-Paket (SChannel) verwendet die folgende Syntax: X509: <somecertinfotype> somecertinfo. Der folgende Wert gibt beispielsweise den Aussteller-DN "" \<I\> mit dem DN "c = US, O = internetca, CN = apubliccertificateauthority" und "Subject DN" \<S\> mit dem DN "c = US, o = fabrikam, OU = Sales, CN = Jeff Smith" an.
+Bei X.509-Zertifikaten sollten die Werte die Aussteller- und Betreffnamen in 509v3-Zertifikaten sein, die von einer externen öffentlichen Zertifizierungsstelle ausgestellt wurden und dem Benutzerkonto zugeordnet werden, das zum Suchen eines Kontos für die Authentifizierung verwendet wird. Das SSL-Paket (Schannel) verwendet die folgende Syntax: X509: <somecertinfotype> somecertinfo. Der folgende Wert gibt beispielsweise den Aussteller-DN " " mit dem \<I\> DN "C=US,O=InternetCA,CN=APublicCertificateAuthority" und dem Betreff DN " " mit dem \<S\> DN "C=US,O=Fabrikam,OU=Sales,CN=Jeff Smith" an.
 
 
 ```C++
@@ -42,9 +42,9 @@ X509:<I>C=US,O=InternetCA,CN=APublicCertificateAuthority<S>C=US,O=Fabrikam,OU=Sa
 
 
 
-Beachten Sie, dass " \<S\> " oder " \<I> " und "" \<S\> unterstützt werden. Die Verwendung von " \<I\> " wird nicht unterstützt. Anwendungen sollten die Werte in " \<I\> " oder "" nicht ändern, \<S\> da die partielle DN-Übereinstimmung nicht unterstützt wird.
+Beachten Sie, dass \<S\> " oder " " " und " " " unterstützt \<I> \<S\> werden. Nur \<I\> "" wird nicht unterstützt. Anwendungen sollten die Werte in \<I\> "" oder "" nicht ändern, da \<S\> ein teilweiser DN-Abgleich nicht unterstützt wird.
 
-Bei externen Kerberos-Konten muss es sich bei den Werten um den Kerberos-Kontonamen handeln. Das Kerberos-Paket verwendet die folgende Syntax: "Kerberos: mitaccountname". Beispielsweise ist Folgendes der Wert für ein Konto unter fabrikam.com:
+Bei externen Kerberos-Konten sollten die Werte der Kerberos-Kontoname sein. Das Kerberos-Paket verwendet die folgende Syntax: "Kerberos:MITaccountname". Im Folgenden finden Sie beispielsweise den Wert für ein Konto Fabrikam.com:
 
 
 ```C++
@@ -58,46 +58,46 @@ Kerberos:Jeff.Smith@Fabrikam.com
 <span id="badPasswordTime"></span><span id="badpasswordtime"></span><span id="BADPASSWORDTIME"></span>[**badPasswordTime**](/windows/desktop/ADSchema/a-badpasswordtime)
 </dt> <dd>
 
-Nicht repliziert. Das [**badpasswordtime**](/windows/desktop/ADSchema/a-badpasswordtime) -Attribut gibt den Zeitpunkt an, zu dem der Benutzer das letzte Mal versucht hat, sich mit einem falschen Kennwort beim Konto anzumelden. Dieser Wert wird als große ganze Zahl gespeichert, die die Anzahl von 100-Nanosekunden-Intervallen seit dem 1. Januar 1601 (UTC) darstellt. Dieses Attribut wird auf jedem Domänen Controller in der Domäne separat verwaltet. Der Wert 0 (null) bedeutet, dass die letzte ungültige Kenn Wort Zeit unbekannt ist. Um einen exakten Wert für das letzte ungültige Kennwort des Benutzers in der Domäne zu erhalten, muss jeder Domänen Controller in der Domäne abgefragt werden, und der größte Wert sollte verwendet werden.
+Nicht repliziert. Das [**badPasswordTime-Attribut**](/windows/desktop/ADSchema/a-badpasswordtime) gibt an, zu welchem Zeitpunkt der Benutzer zuletzt versucht hat, sich mit einem falschen Kennwort beim Konto zu anmelden. Dieser Wert wird als große ganze Zahl gespeichert, die die Anzahl von Intervallen von 100 Nanosekunden seit dem 1. Januar 1601 (UTC) darstellt. Dieses Attribut wird separat auf jedem Domänencontroller in der Domäne verwaltet. Der Wert 0 bedeutet, dass der Zeitpunkt des letzten fehlerhaften Kennworts unbekannt ist. Um einen genauen Wert für den Zeitpunkt des letzten fehlerhaften Kennworts des Benutzers in der Domäne zu erhalten, muss jeder Domänencontroller in der Domäne abgefragt und der größte Wert verwendet werden.
 
 </dd> <dt>
 
-<span id="badPwdCount"></span><span id="badpwdcount"></span><span id="BADPWDCOUNT"></span>[**BadPwdCount**](/windows/desktop/ADSchema/a-badpwdcount)
+<span id="badPwdCount"></span><span id="badpwdcount"></span><span id="BADPWDCOUNT"></span>[**badPwdCount**](/windows/desktop/ADSchema/a-badpwdcount)
 </dt> <dd>
 
-Nicht repliziert. Das [**BadPwdCount**](/windows/desktop/ADSchema/a-badpwdcount) -Attribut gibt an, wie oft der Benutzer versucht hat, sich mit einem falschen Kennwort beim Konto anzumelden. Dieses Attribut wird auf jedem Domänen Controller in der Domäne separat verwaltet. Der Wert 0 gibt an, dass der Wert unbekannt ist. Um einen exakten Wert für die Gesamtanzahl fehlerhafter Kenn Wörter des Benutzers in der Domäne zu erhalten, muss jeder Domänen Controller in der Domäne abgefragt werden, und die Summe der Werte sollte verwendet werden.
+Nicht repliziert. Das [**badPwdCount-Attribut**](/windows/desktop/ADSchema/a-badpwdcount) gibt an, wie oft der Benutzer versucht hat, sich mit einem falschen Kennwort beim Konto zu anmelden. Dieses Attribut wird separat auf jedem Domänencontroller in der Domäne verwaltet. Der Wert 0 gibt an, dass der Wert unbekannt ist. Um einen genauen Wert für die gesamten fehlerhaften Kennwortversuche des Benutzers in der Domäne zu erhalten, muss jeder Domänencontroller in der Domäne abgefragt werden, und die Summe der Werte sollte verwendet werden.
 
 </dd> <dt>
 
 <span id="codePage"></span><span id="codepage"></span><span id="CODEPAGE"></span>[**Codepage**](/windows/desktop/ADSchema/a-codepage)
 </dt> <dd>
 
-Das [**Codepage**](/windows/desktop/ADSchema/a-codepage) -Attribut gibt die Codepage für die gewählte Sprache des Benutzers an. Dieser Wert wird von Windows 2000 nicht verwendet.
+Das [**codePage-Attribut**](/windows/desktop/ADSchema/a-codepage) gibt die Codepage für die vom Benutzer ausgewählte Sprache an. Dieser Wert wird nicht von Windows 2000 verwendet.
 
 </dd> <dt>
 
-<span id="countryCode"></span><span id="countrycode"></span><span id="COUNTRYCODE"></span>[**CountryCode**](/windows/desktop/ADSchema/a-countrycode)
+<span id="countryCode"></span><span id="countrycode"></span><span id="COUNTRYCODE"></span>[**Countrycode**](/windows/desktop/ADSchema/a-countrycode)
 </dt> <dd>
 
-Das [**CountryCode**](/windows/desktop/ADSchema/a-countrycode) -Attribut gibt den Länder-/Regionscode für die Sprache des Benutzers an. Dieser Wert wird von Windows 2000 nicht verwendet.
+Das [**countryCode-Attribut**](/windows/desktop/ADSchema/a-countrycode) gibt den Länder-/Regioncode für die Sprache des Benutzers an. Dieser Wert wird nicht von Windows 2000 verwendet.
 
 </dd> <dt>
 
-<span id="homeDirectory"></span><span id="homedirectory"></span><span id="HOMEDIRECTORY"></span>[**homedirectory**](/windows/desktop/ADSchema/a-homedirectory)
+<span id="homeDirectory"></span><span id="homedirectory"></span><span id="HOMEDIRECTORY"></span>[**homeDirectory**](/windows/desktop/ADSchema/a-homedirectory)
 </dt> <dd>
 
-Das [**Homedirectory**](/windows/desktop/ADSchema/a-homedirectory) -Attribut gibt den Pfad des Basisverzeichnisses für den Benutzer an. Die Zeichenfolge kann NULL sein.
+Das [**homeDirectory-Attribut**](/windows/desktop/ADSchema/a-homedirectory) gibt den Pfad des Startverzeichnisses für den Benutzer an. Die Zeichenfolge kann NULL sein.
 
-Wenn [**HOMEDRIVE**](/windows/desktop/ADSchema/a-homedrive) festgelegt ist und einen Laufwerk Buchstaben angibt, muss das [**Homedirectory**](/windows/desktop/ADSchema/a-homedirectory) ein UNC-Pfad sein. Der Pfad muss ein Netzwerk-UNC-Pfad des Formular \\ \\ Server \\ Freigabe- \\ Verzeichnisses sein. Dieser Wert kann eine NULL-Zeichenfolge sein.
+Wenn [**homeDrive festgelegt**](/windows/desktop/ADSchema/a-homedrive) ist und einen Laufwerkbuchstaben angibt, [**sollte homeDirectory**](/windows/desktop/ADSchema/a-homedirectory) ein UNC-Pfad sein. Der Pfad muss ein UNC-Netzwerkpfad des \\ \\ Formularserverfreigabeverzeichnisses \\ \\ sein. Dieser Wert kann eine NULL-Zeichenfolge sein.
 
-Wenn [**HOMEDRIVE**](/windows/desktop/ADSchema/a-homedrive) nicht festgelegt ist, muss das [**Homedirectory**](/windows/desktop/ADSchema/a-homedirectory) ein lokaler Pfad sein, z. b \\ . C: mylocaldir.
+Wenn [**homeDrive nicht**](/windows/desktop/ADSchema/a-homedrive) festgelegt ist, [**sollte homeDirectory**](/windows/desktop/ADSchema/a-homedirectory) ein lokaler Pfad sein, z. B. C: \\ mylocaldir.
 
 </dd> <dt>
 
 <span id="homeDrive"></span><span id="homedrive"></span><span id="HOMEDRIVE"></span>[**homeDrive**](/windows/desktop/ADSchema/a-homedrive)
 </dt> <dd>
 
-Das [**HOMEDRIVE**](/windows/desktop/ADSchema/a-homedrive) -Attribut gibt den Laufwerk Buchstaben an, dem der von **Homedirectory** angegebene UNC-Pfad zugeordnet werden soll. Der Laufwerk Buchstabe muss in der folgenden Form angegeben werden:
+Das [**homeDrive-Attribut**](/windows/desktop/ADSchema/a-homedrive) gibt den Laufwerkbuchstaben an, dem der durch **homeDirectory** angegebene UNC-Pfad zuordnen soll. Der Laufwerkbuchstaben muss in der folgenden Form angegeben werden:
 
 
 ```C++
@@ -106,7 +106,7 @@ Das [**HOMEDRIVE**](/windows/desktop/ADSchema/a-homedrive) -Attribut gibt den La
 
 
 
-dabei \<drive letter\> ist "" der Buchstabe des zuzuordnenden Laufwerks. Beispiel:
+Wobei " \<drive letter\> " der Buchstabe des zu zuordnenden Laufwerks ist. Beispiel:
 
 
 ```C++
@@ -115,203 +115,203 @@ Z:
 
 
 
-Wenn dieses Attribut nicht festgelegt ist, sollte das [**Homedirectory**](/windows/desktop/ADSchema/a-homedirectory) ein lokaler Pfad sein, z. b. C: \\ mylocaldir.
+Wenn dieses Attribut nicht festgelegt ist, sollte [**homeDirectory**](/windows/desktop/ADSchema/a-homedirectory) ein lokaler Pfad sein, z. B. C: \\ mylocaldir.
 
 </dd> <dt>
 
-<span id="lastLogoff"></span><span id="lastlogoff"></span><span id="LASTLOGOFF"></span>[**lastlogoff**](/windows/desktop/ADSchema/a-lastlogoff)
+<span id="lastLogoff"></span><span id="lastlogoff"></span><span id="LASTLOGOFF"></span>[**lastLogoff**](/windows/desktop/ADSchema/a-lastlogoff)
 </dt> <dd>
 
-Nicht repliziert. Das [**lastlogoff**](/windows/desktop/ADSchema/a-lastlogoff) -Attribut gibt an, wann die letzte Abmeldung aufgetreten ist. Dieser Wert wird als große ganze Zahl gespeichert, die die Anzahl von 100-Nanosekunden-Intervallen seit dem 1. Januar 1601 (UTC) darstellt. Der hohe Teil dieser großen Ganzzahl entspricht dem **dwHighDateTime** -Member der [**FILETIME**](/windows/desktop/api/minwinbase/ns-minwinbase-filetime) -Struktur, und der niedrige Teil entspricht dem **dwLowDateTime** -Member der **FILETIME** -Struktur. Dieses Attribut wird auf jedem Domänen Controller in der Domäne separat verwaltet. Der Wert 0 (null) bedeutet, dass die letzte Abmelde Zeit unbekannt ist. Um einen exakten Wert für die letzte Abmeldung des Benutzers in der Domäne zu erhalten, muss jeder Domänen Controller in der Domäne abgefragt werden, und der größte Wert sollte verwendet werden.
+Nicht repliziert. Das [**lastLogoff-Attribut**](/windows/desktop/ADSchema/a-lastlogoff) gibt an, wann die letzte Abmelde erfolgt ist. Dieser Wert wird als große ganze Zahl gespeichert, die die Anzahl von Intervallen von 100 Nanosekunden seit dem 1. Januar 1601 (UTC) darstellt. Der hohe Teil dieser großen ganzen Zahl entspricht dem **dwHighDateTime-Member** der [**FILETIME-Struktur,**](/windows/desktop/api/minwinbase/ns-minwinbase-filetime) und der untere Teil entspricht dem **dwLowDateTime-Member** der **FILETIME-Struktur.** Dieses Attribut wird separat auf jedem Domänencontroller in der Domäne verwaltet. Der Wert 0 bedeutet, dass der Zeitpunkt der letzten Abmeldezeit unbekannt ist. Um einen genauen Wert für die letzte Abmeldeung des Benutzers in der Domäne zu erhalten, muss jeder Domänencontroller in der Domäne abgefragt und der größte Wert verwendet werden.
 
 </dd> <dt>
 
 <span id="lastLogon"></span><span id="lastlogon"></span><span id="LASTLOGON"></span>[**lastLogon**](/windows/desktop/ADSchema/a-lastlogon)
 </dt> <dd>
 
-Nicht repliziert. Das [**lastLogon**](/windows/desktop/ADSchema/a-lastlogon) -Attribut gibt an, wann die letzte Anmeldung aufgetreten ist. Dieser Wert wird als große ganze Zahl gespeichert, die die Anzahl von 100-Nanosekunden-Intervallen seit dem 1. Januar 1601 (UTC) darstellt. Der hohe Teil dieser großen Ganzzahl entspricht dem **dwHighDateTime** -Member der [**FILETIME**](/windows/desktop/api/minwinbase/ns-minwinbase-filetime) -Struktur, und der niedrige Teil entspricht dem **dwLowDateTime** -Member der **FILETIME** -Struktur. Dieses Attribut wird auf jedem Domänen Controller in der Domäne separat verwaltet. Der Wert 0 (null) bedeutet, dass die Uhrzeit der letzten Anmeldung unbekannt ist. Um einen exakten Wert für die letzte Anmeldung des Benutzers in der Domäne zu erhalten, muss jeder Domänen Controller in der Domäne abgefragt werden, und der größte Wert sollte verwendet werden.
+Nicht repliziert. Das [**lastLogon-Attribut**](/windows/desktop/ADSchema/a-lastlogon) gibt an, wann die letzte Anmeldung erfolgt ist. Dieser Wert wird als große ganze Zahl gespeichert, die die Anzahl von Intervallen von 100 Nanosekunden seit dem 1. Januar 1601 (UTC) darstellt. Der hohe Teil dieser großen ganzen Zahl entspricht dem **dwHighDateTime-Member** der [**FILETIME-Struktur,**](/windows/desktop/api/minwinbase/ns-minwinbase-filetime) und der untere Teil entspricht dem **dwLowDateTime-Member** der **FILETIME-Struktur.** Dieses Attribut wird separat auf jedem Domänencontroller in der Domäne verwaltet. Der Wert 0 bedeutet, dass der Zeitpunkt der letzten Anmeldung unbekannt ist. Um einen genauen Wert für die letzte Anmeldung des Benutzers in der Domäne zu erhalten, muss jeder Domänencontroller in der Domäne abgefragt und der größte Wert verwendet werden.
 
 </dd> <dt>
 
-<span id="lmPwdHistory"></span><span id="lmpwdhistory"></span><span id="LMPWDHISTORY"></span>[**lmpwdhistory**](/windows/desktop/ADSchema/a-lmpwdhistory)
+<span id="lmPwdHistory"></span><span id="lmpwdhistory"></span><span id="LMPWDHISTORY"></span>[**lmPwdHistory**](/windows/desktop/ADSchema/a-lmpwdhistory)
 </dt> <dd>
 
-Das [**lmpwdhistory**](/windows/desktop/ADSchema/a-lmpwdhistory) -Attribut ist der Kenn Wort Verlauf des Benutzers im LAN-Manager (LM) (unidirektionales Format). Der LM-owf wird für die Kompatibilität mit LAN-Manager 2. x-Clients, Windows 95 und Windows 98 verwendet. Dieses Attribut wird nur vom Betriebssystem verwendet. Beachten Sie, dass Sie das Klartext-Kennwort nicht aus der OWF-Form des Kennworts ableiten können.
+Das [**lmPwdHistory-Attribut**](/windows/desktop/ADSchema/a-lmpwdhistory) ist der Kennwortverlauf des Benutzers im OWF-Format (One-Way Format) von LAN Manager (LM). Die LM-OWF wird für die Kompatibilität mit LAN Manager 2.x-Clients, Windows 95 und Windows 98 verwendet. Dieses Attribut wird nur vom Betriebssystem verwendet. Beachten Sie, dass Sie das Klartextkennwort nicht aus der OWF-Form des Kennworts ableiten können.
 
 </dd> <dt>
 
-<span id="logonCount"></span><span id="logoncount"></span><span id="LOGONCOUNT"></span>[**LogonCount**](/windows/desktop/ADSchema/a-logoncount)
+<span id="logonCount"></span><span id="logoncount"></span><span id="LOGONCOUNT"></span>[**logonCount**](/windows/desktop/ADSchema/a-logoncount)
 </dt> <dd>
 
-Nicht repliziert. Das [**LogonCount**](/windows/desktop/ADSchema/a-logoncount) -Attribut zählt, wie oft der Benutzer versucht hat, sich bei diesem Konto anzumelden. Dieses Attribut wird auf jedem Domänen Controller in der Domäne verwaltet. Der Wert 0 gibt an, dass der Wert unbekannt ist. Um einen exakten Wert für die Gesamtzahl erfolgreicher Anmeldeversuche in der Domäne des Benutzers zu erhalten, muss jeder Domänen Controller in der Domäne abgefragt werden, und die Summe der Werte sollte verwendet werden.
+Nicht repliziert. Das [**LogonCount-Attribut**](/windows/desktop/ADSchema/a-logoncount) zählt die Anzahl der erfolgreichen Anmeldezeiten des Benutzers bei diesem Konto. Dieses Attribut wird auf jedem Domänencontroller in der Domäne beibehalten. Der Wert 0 gibt an, dass der Wert unbekannt ist. Um einen genauen Wert für die Gesamtzahl der erfolgreichen Anmeldeversuche des Benutzers in der Domäne zu erhalten, muss jeder Domänencontroller in der Domäne abgefragt werden, und die Summe der Werte sollte verwendet werden.
 
 </dd> <dt>
 
-<span id="mail"></span><span id="MAIL"></span>[**Mail@@**](/windows/desktop/ADSchema/a-mail)
+<span id="mail"></span><span id="MAIL"></span>[**Mail**](/windows/desktop/ADSchema/a-mail)
 </dt> <dd>
 
-Das [**Mail**](/windows/desktop/ADSchema/a-mail) -Attribut ist ein einwertiges Attribut, das die SMTP-Adresse für den Benutzer enthält, z jeff@Fabrikam.com . b. "".
+Das [**mail-Attribut**](/windows/desktop/ADSchema/a-mail) ist ein einwertiges Attribut, das die SMTP-Adresse für den Benutzer enthält, z. B. " jeff@Fabrikam.com ".
 
 </dd> <dt>
 
-<span id="maxStorage"></span><span id="maxstorage"></span><span id="MAXSTORAGE"></span>[**maxstorage**](/windows/desktop/ADSchema/a-maxstorage)
+<span id="maxStorage"></span><span id="maxstorage"></span><span id="MAXSTORAGE"></span>[**maxStorage**](/windows/desktop/ADSchema/a-maxstorage)
 </dt> <dd>
 
-Das [**maxstorage**](/windows/desktop/ADSchema/a-maxstorage) -Attribut gibt die maximale Menge an Festplattenspeicher an, die vom Benutzer verwendet werden kann. Verwenden Sie den Wert **Benutzer \_ maxstorage \_ Unlimited** (in lmaccess. h definiert), um den gesamten verfügbaren Speicherplatz zu verwenden.
+Das [**maxStorage-Attribut**](/windows/desktop/ADSchema/a-maxstorage) gibt die maximale Menge an Festplattenlaufwerkspeicher an, die der Benutzer verwenden kann. Verwenden Sie **den Wert USER \_ MAXSTORAGE \_ UNLIMITED** (definiert in Lmaccess.h), um den verfügbaren Speicherplatz zu nutzen.
 
 </dd> <dt>
 
-<span id="memberOf"></span><span id="memberof"></span><span id="MEMBEROF"></span>[**memberOf**](/windows/desktop/ADSchema/a-memberof)
+<span id="memberOf"></span><span id="memberof"></span><span id="MEMBEROF"></span>[**Memberof**](/windows/desktop/ADSchema/a-memberof)
 </dt> <dd>
 
-Das Attribut Attribut ist ein mehr [**wertiges Attribut,**](/windows/desktop/ADSchema/a-memberof) das Gruppen enthält, in denen der Benutzer ein direkter Member ist, mit Ausnahme der primären Gruppe, die durch die [**primaryGroupId**](/windows/desktop/ADSchema/a-primarygroupid)repräsentiert wird. Die Gruppenmitgliedschaft ist abhängig vom Domänen Controller (DC), von dem das Attribut abgerufen wird:
+Das [**memberOf-Attribut**](/windows/desktop/ADSchema/a-memberof) ist ein mehrwertiges Attribut, das Gruppen enthält, deren direktes Mitglied der Benutzer ist, mit Ausnahme der primären Gruppe, die durch [**primaryGroupId dargestellt wird.**](/windows/desktop/ADSchema/a-primarygroupid) Die Gruppenmitgliedschaft hängt vom Domänencontroller (DC) ab, von dem dieses Attribut abgerufen wird:
 
--   Auf einem Domänen Controller für die Domäne, in der der Benutzer enthalten [**ist, ist**](/windows/desktop/ADSchema/a-memberof) die Mitgliedschaft für den Benutzer in Bezug auf die Mitgliedschaft in Gruppen in dieser Domäne vollständig. die Mitgliedschaft der Benutzer in lokalen und globalen Domänen Gruppen in anderen Domänen ist jedoch nicht in der **Mitgliedschaften** enthalten.
--   Auf einem GC-Server ist die [**Mitgliedschaft**](/windows/desktop/ADSchema/a-memberof) für den Benutzer in Bezug auf alle universellen Gruppenmitgliedschaften vollständig.
+-   Auf einem Domänencontroller für die Domäne, die den Benutzer enthält, ist [**memberOf**](/windows/desktop/ADSchema/a-memberof) für den Benutzer in Bezug auf die Mitgliedschaft für Gruppen in dieser Domäne vollständig. memberOf **enthält** jedoch nicht die Mitgliedschaft des Benutzers in lokalen und globalen Domänengruppen in anderen Domänen.
+-   Auf einem GC-Server [**ist memberOf**](/windows/desktop/ADSchema/a-memberof) für den Benutzer in Bezug auf alle universellen Gruppenmitgliedschaften vollständig.
 
-Wenn beide Bedingungen für den DC zutreffen, sind beide Datensätze in der [**Mitgliedschaft**](/windows/desktop/ADSchema/a-memberof)enthalten.
+Wenn beide Bedingungen für den DC erfüllt sind, sind beide Sätze von Daten in [**memberOf enthalten.**](/windows/desktop/ADSchema/a-memberof)
 
-Beachten Sie, dass dieses Attribut die Gruppen auflistet, die den Benutzer in Ihrem Member-Attribut enthalten – es enthält nicht die rekursive Liste der in der Tabelle enthaltenen Vorgänger. Wenn Benutzer o z. b. ein Mitglied der Gruppe c ist und Gruppe b und Gruppe b in Gruppe a eingefügt wurden, listet [**das Attribut Attribut von User**](/windows/desktop/ADSchema/a-memberof) o die Gruppe c und Gruppe b, jedoch nicht Gruppe a auf.
+Beachten Sie, dass dieses Attribut die Gruppen auflistet, die den Benutzer in seinem Memberattribut enthalten– es enthält nicht die rekursive Liste der geschachtelten Vorgänger. Wenn benutzer O beispielsweise Mitglied von Gruppe C ist und Gruppe B und Gruppe B in Gruppe A geschachtelt sind, würde das [**memberOf-Attribut**](/windows/desktop/ADSchema/a-memberof) von Benutzer O Gruppe C und Gruppe B auflisten, aber nicht Gruppe A.
 
-Dieses Attribut ist nicht gespeichert – es handelt sich um ein berechnetes Backlinkattribut.
+Dieses Attribut wird nicht gespeichert– es ist ein berechnetes Backlinkattribut.
 
 </dd> <dt>
 
-<span id="ntPwdHistory"></span><span id="ntpwdhistory"></span><span id="NTPWDHISTORY"></span>[**ntpwdhistory**](/windows/desktop/ADSchema/a-ntpwdhistory)
+<span id="ntPwdHistory"></span><span id="ntpwdhistory"></span><span id="NTPWDHISTORY"></span>[**ntPwdHistory**](/windows/desktop/ADSchema/a-ntpwdhistory)
 </dt> <dd>
 
-Das [**ntpwdhistory**](/windows/desktop/ADSchema/a-ntpwdhistory) -Attribut ist der Kenn Wort Verlauf des Benutzers im unidirektionalen Windows NT-Format (owf). Windows 2000 verwendet Windows NT owf. Dieses Attribut wird nur vom Betriebssystem verwendet. Beachten Sie, dass Sie das Klartext-Kennwort nicht aus der OWF-Form des Kennworts ableiten können.
+Das [**ntPwdHistory-Attribut**](/windows/desktop/ADSchema/a-ntpwdhistory) ist der Kennwortverlauf des Benutzers im Windows NT-OWF (One-Way Format). Windows 2000 verwendet den Windows NT OWF. Dieses Attribut wird nur vom Betriebssystem verwendet. Beachten Sie, dass Sie das Klartextkennwort nicht von der OWF-Form des Kennworts ableiten können.
 
 </dd> <dt>
 
-<span id="otherMailbox"></span><span id="othermailbox"></span><span id="OTHERMAILBOX"></span>[**othermailbox**](/windows/desktop/ADSchema/a-othermailbox)
+<span id="otherMailbox"></span><span id="othermailbox"></span><span id="OTHERMAILBOX"></span>[**otherMailbox**](/windows/desktop/ADSchema/a-othermailbox)
 </dt> <dd>
 
-Das [**othermailbox**](/windows/desktop/ADSchema/a-othermailbox) -Attribut ist ein mehr wertiges Attribut, das andere zusätzliche e-Mail-Adressen in einem Formular enthält, z. b. "CCMAIL: JeffSmith".
+Das [**otherMailbox-Attribut**](/windows/desktop/ADSchema/a-othermailbox) ist ein mehrwertiges Attribut, das weitere zusätzliche E-Mail-Adressen in einem Formular enthält, z. B. "CCMAIL: JeffSmith".
 
 </dd> <dt>
 
-<span id="PasswordExpirationDate"></span><span id="passwordexpirationdate"></span><span id="PASSWORDEXPIRATIONDATE"></span>[**Passwordexpirationdate**](/windows/desktop/ADSI/iadsuser-property-methods)
+<span id="PasswordExpirationDate"></span><span id="passwordexpirationdate"></span><span id="PASSWORDEXPIRATIONDATE"></span>[**PasswordExpirationDate**](/windows/desktop/ADSI/iadsuser-property-methods)
 </dt> <dd>
 
-Das Ablaufdatum für das Kennwort ist kein Attribut für das User-Objekt. Es ist ein berechneter Wert, der auf der Summe von [**pwdLastSet**](/windows/desktop/ADSchema/a-pwdlastset) für den Benutzer und [**maxpwdage**](/windows/desktop/ADSchema/a-maxpwdage) der Domäne des Benutzers basiert. Um das Ablaufdatum für das Kennwort zu erhalten, holen Sie sich die [**IADsUser. passwordexpirationdate**](/windows/desktop/ADSI/iadsuser-property-methods) -Eigenschaft. Dieses Attribut kann für einen Benutzer nicht geändert werden. Legen Sie stattdessen die [**iadsdomain. maxpasswordage**](/windows/desktop/ADSI/iadsdomain-property-methods) -Eigenschaft fest, um die Einstellung für die Domäne zu ändern.
+Das Kennwortablaufdatum ist kein Attribut für das Benutzerobjekt. Es handelt sich um einen berechneten Wert, der auf der Summe von [**pwdLastSet**](/windows/desktop/ADSchema/a-pwdlastset) für den Benutzer und [**maxPwdAge**](/windows/desktop/ADSchema/a-maxpwdage) der Domäne des Benutzers basiert. Um das Ablaufdatum des Kennworts abzurufen, erhalten Sie die [**Eigenschaft IADsUser.PasswordExpirationDate.**](/windows/desktop/ADSI/iadsuser-property-methods) Sie können dieses Attribut für einen Benutzer nicht ändern. Legen Sie stattdessen die [**Eigenschaft IADsDomain.MaxPasswordAge**](/windows/desktop/ADSI/iadsdomain-property-methods) fest, um die Einstellung für die Domäne zu ändern.
 
 </dd> <dt>
 
 <span id="primaryGroupID"></span><span id="primarygroupid"></span><span id="PRIMARYGROUPID"></span>[**primaryGroupId**](/windows/desktop/ADSchema/a-primarygroupid)
 </dt> <dd>
 
-Das [**primaryGroupId**](/windows/desktop/ADSchema/a-primarygroupid) -Attribut ist ein einwertiges Attribut, das das [**primarygrouptoken**](/windows/desktop/ADSchema/a-primarygrouptoken) der Gruppe enthält, die die primäre Gruppe des Objekts ist. Die primäre Gruppe des-Objekts ist nicht im Attribut [**für die Mitgliedschaft**](/windows/desktop/ADSchema/a-memberof) enthalten. Beispielsweise ist die primäre Gruppe eines Benutzer Objekts standardmäßig das **primarygrouptoken** der Domänen Benutzergruppe, die Domänen Benutzergruppe ist jedoch nicht Teil des Attributs **für** das Benutzerobjekt.
+Das [**primaryGroupId-Attribut**](/windows/desktop/ADSchema/a-primarygroupid) ist ein einwertiges Attribut, das das [**primaryGroupToken**](/windows/desktop/ADSchema/a-primarygrouptoken) der Gruppe enthält, die die primäre Gruppe des Objekts ist. Die primäre Gruppe des Objekts ist nicht im [**memberOf-Attribut**](/windows/desktop/ADSchema/a-memberof) enthalten. Standardmäßig ist die primäre Gruppe eines Benutzerobjekts beispielsweise das **primaryGroupToken** der Gruppe Domänenbenutzer, aber die Gruppe Domänenbenutzer ist nicht Teil des **memberOf-Attributs** des Benutzerobjekts.
 
 </dd> <dt>
 
-<span id="profilePath"></span><span id="profilepath"></span><span id="PROFILEPATH"></span>[**Profilpfad**](/windows/desktop/ADSchema/a-profilepath)
+<span id="profilePath"></span><span id="profilepath"></span><span id="PROFILEPATH"></span>[**profilePath**](/windows/desktop/ADSchema/a-profilepath)
 </dt> <dd>
 
-Das Attribut " [**ProfilePath**](/windows/desktop/ADSchema/a-profilepath) " gibt einen Pfad zum Profil des Benutzers an. Dieser Wert kann eine NULL-Zeichenfolge, ein lokaler absoluter Pfad oder ein UNC-Pfad sein.
+Das [**attribut profilePath**](/windows/desktop/ADSchema/a-profilepath) gibt einen Pfad zum Profil des Benutzers an. Dieser Wert kann eine NULL-Zeichenfolge, ein lokaler absoluter Pfad oder ein UNC-Pfad sein.
 
 </dd> <dt>
 
 <span id="pwdLastSet"></span><span id="pwdlastset"></span><span id="PWDLASTSET"></span>[**pwdLastSet**](/windows/desktop/ADSchema/a-pwdlastset)
 </dt> <dd>
 
-Das [**pwdLastSet**](/windows/desktop/ADSchema/a-pwdlastset) -Attribut gibt an, wann das Kennwort zuletzt geändert wurde. Dieser Wert wird als große ganze Zahl gespeichert, die die Anzahl von 100-Nanosekunden-Intervallen seit dem 1. Januar 1601 (UTC) darstellt.
+Das [**pwdLastSet-Attribut**](/windows/desktop/ADSchema/a-pwdlastset) gibt an, wann das Kennwort zuletzt geändert wurde. Dieser Wert wird als große ganze Zahl gespeichert, die die Anzahl von 100-Nanosekunden-Intervallen seit dem 1. Januar 1601 (UTC) darstellt.
 
-Das System verwendet den Wert dieses Attributs und das Attribut [**maxpwdage**](/windows/desktop/ADSchema/a-maxpwdage) der Domäne, die das Benutzerobjekt enthält, um das Ablaufdatum des Kennworts zu berechnen. Das heißt, die Summe von " [**pwdLastSet**](/windows/desktop/ADSchema/a-pwdlastset) " für "User" und " **maxpwdage** " der Domäne des Benutzers.
+Das System verwendet den Wert dieses Attributs und das [**attribut maxPwdAge**](/windows/desktop/ADSchema/a-maxpwdage) der Domäne, die das Benutzerobjekt enthält, um das Kennwortablaufdatum zu berechnen. Das heißt, die Summe von [**pwdLastSet**](/windows/desktop/ADSchema/a-pwdlastset) für den Benutzer und **maxPwdAge** der Domäne des Benutzers.
 
-Dieses Attribut steuert, ob der Benutzer das Kennwort ändern muss, wenn sich der Benutzer beim nächsten anmeldet. Wenn [**pwdLastSet**](/windows/desktop/ADSchema/a-pwdlastset) gleich 0 (null) ist, muss der Benutzer das Kennwort bei der nächsten Anmeldung ändern. Der Wert-1 gibt an, dass der Benutzer das Kennwort bei der nächsten Anmeldung nicht ändern muss. Das System legt diesen Wert auf-1 fest, nachdem der Benutzer das Kennwort festgelegt hat.
+Dieses Attribut steuert, ob der Benutzer das Kennwort ändern muss, wenn sich der Benutzer als Nächstes anmeldet. Wenn [**pwdLastSet**](/windows/desktop/ADSchema/a-pwdlastset) gleich 0 (null) ist, muss der Benutzer das Kennwort bei der nächsten Anmeldung ändern. Der Wert -1 gibt an, dass der Benutzer das Kennwort bei der nächsten Anmeldung nicht ändern muss. Das System legt diesen Wert auf -1 fest, nachdem der Benutzer das Kennwort festgelegt hat.
 
 </dd> <dt>
 
-<span id="sAMAccountType"></span><span id="samaccounttype"></span><span id="SAMACCOUNTTYPE"></span>[**samAccountType**](/windows/desktop/ADSchema/a-samaccounttype)
+<span id="sAMAccountType"></span><span id="samaccounttype"></span><span id="SAMACCOUNTTYPE"></span>[**sAMAccountType**](/windows/desktop/ADSchema/a-samaccounttype)
 </dt> <dd>
 
-Das [**samAccountType**](/windows/desktop/ADSchema/a-samaccounttype) -Attribut gibt eine ganze Zahl an, die den Kontotyp darstellt. Dies wird vom Betriebssystem festgelegt, wenn das Objekt erstellt wird.
+Das [**sAMAccountType-Attribut**](/windows/desktop/ADSchema/a-samaccounttype) gibt eine ganze Zahl an, die den Kontotyp darstellt. Dies wird vom Betriebssystem festgelegt, wenn das -Objekt erstellt wird.
 
 </dd> <dt>
 
 <span id="scriptPath"></span><span id="scriptpath"></span><span id="SCRIPTPATH"></span>[**scriptPath**](/windows/desktop/ADSchema/a-scriptpath)
 </dt> <dd>
 
-Das [**ScriptPath**](/windows/desktop/ADSchema/a-scriptpath) -Attribut gibt den Pfad des Anmelde Skripts des Benutzers, der cmd-, exe-oder bat-Datei an. Die Zeichenfolge kann NULL sein.
+Das [**scriptPath-Attribut**](/windows/desktop/ADSchema/a-scriptpath) gibt den Pfad des Anmeldeskripts, der CMD-, .exe- oder .bat-Datei des Benutzers an. Die Zeichenfolge kann NULL sein.
 
 </dd> <dt>
 
 <span id="unicodePwd"></span><span id="unicodepwd"></span><span id="UNICODEPWD"></span>[**unicodePwd**](/windows/desktop/ADSchema/a-unicodepwd)
 </dt> <dd>
 
-Das [**unicodePwd**](/windows/desktop/ADSchema/a-unicodepwd) -Attribut ist das Benutzer Kennwort.
+Das [**unicodePwd-Attribut**](/windows/desktop/ADSchema/a-unicodepwd) ist das Benutzerkennwort.
 
-Um das Benutzer Kennwort festzulegen, verwenden Sie die [**IADsUser. ChangePassword**](/windows/desktop/api/iads/nf-iads-iadsuser-changepassword) -Methode, wenn das Skript oder die Anwendung es dem Benutzer ermöglicht, sein eigenes Kennwort zu ändern, oder die [**IADsUser. SetPassword**](/windows/desktop/api/iads/nf-iads-iadsuser-setpassword) -Methode, wenn Ihr Skript oder Ihre Anwendung einem Administrator das Zurücksetzen eines Kennworts gestattet.
+Verwenden Sie zum Festlegen des Benutzerkennworts die [**IADsUser.ChangePassword-Methode,**](/windows/desktop/api/iads/nf-iads-iadsuser-changepassword) wenn Ihr Skript oder Ihre Anwendung es dem Benutzer ermöglicht, sein eigenes Kennwort zu ändern, oder [**die IADsUser.SetPassword-Methode,**](/windows/desktop/api/iads/nf-iads-iadsuser-setpassword) wenn Ihr Skript oder Ihre Anwendung einem Administrator das Zurücksetzen eines Kennworts erlaubt.
 
-Das Kennwort des Benutzers im unidirektionalen Windows NT-Format (owf). Windows 2000 verwendet Windows NT owf. Dieses Attribut wird nur von einem Betriebssystem verwendet. Beachten Sie, dass Sie das Klartext-Kennwort nicht aus der OWF-Form des Kennworts ableiten können.
+Das Kennwort des Benutzers im Windows one-way-Format (OWF) von NT. Windows 2000 verwendet den Windows NT OWF. Dieses Attribut wird nur vom Betriebssystem verwendet. Beachten Sie, dass Sie das Klartextkennwort nicht von der OWF-Form des Kennworts ableiten können.
 
 </dd> <dt>
 
 <span id="userAccountControl"></span><span id="useraccountcontrol"></span><span id="USERACCOUNTCONTROL"></span>[**userAccountControl**](/windows/desktop/ADSchema/a-useraccountcontrol)
 </dt> <dd>
 
-Das [**userAccountControl**](/windows/desktop/ADSchema/a-useraccountcontrol) -Attribut gibt Flags an, die das Verhalten von Kennwort, Sperre, deaktivieren/aktivieren, Skript und Basisverzeichnis des Benutzers steuern. Dieses Attribut enthält auch ein Flag, das den Kontotyp des Objekts angibt. Das Benutzerobjekt verfügt in der Regel über das Standardkonto "UF" \_ \_ .
+Das [**userAccountControl-Attribut**](/windows/desktop/ADSchema/a-useraccountcontrol) gibt Flags an, die das Verhalten von Kennwörtern, Sperren, Deaktivieren/Aktivieren, Skripts und Startverzeichnissen für den Benutzer steuern. Dieses Attribut enthält auch ein Flag, das den Kontotyp des Objekts angibt. Für das Benutzerobjekt ist normalerweise UF \_ NORMAL \_ ACCOUNT festgelegt.
 
-Die folgenden Flags sind in "lmaccess. h" definiert.
+Die folgenden Flags sind in Lmaccess.h definiert.
 
 
 
 | Flag                     | Beschreibung                                                                                                                                                      |
 |--------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| UF- \_ Skript               | Das ausgeführte Anmelde Skript. Dieser Wert muss für den LAN-Manager 2,0 oder Windows NT festgelegt werden.                                                                             |
-| UF \_ accountdeaktiviert       | Das Benutzerkonto ist deaktiviert.                                                                                                                                    |
-| "UF \_ homedir" \_ erforderlich    | Das Basisverzeichnis ist erforderlich. Dieser Wert wird in Windows NT und Windows 2000 ignoriert.                                                                            |
-| UF \_ passwd \_ notreqd      | Es ist kein Kennwort erforderlich.                                                                                                                                         |
-| "UF \_ passwd cant"- \_ \_ Änderung | Der Benutzer kann das Kennwort nicht ändern.                                                                                                                             |
-| UF- \_ Sperre              | Das Konto ist zurzeit gesperrt. Dieser Wert kann gelöscht werden, um ein zuvor gesperrtes Konto zu entsperren. Dieser Wert kann nicht zum Sperren eines zuvor gesperrten Kontos verwendet werden. |
-| "UF \_ 't \_ expire \_ passwd" | Stellt das Kennwort dar, das nie für das Konto ablaufen soll.                                                                                               |
+| UF \_ SCRIPT               | Das ausgeführte Anmeldeskript. Dieser Wert muss für LAN Manager 2.0 oder Windows NT festgelegt werden.                                                                             |
+| UF \_ ACCOUNTDISABLE       | Das Benutzerkonto ist deaktiviert.                                                                                                                                    |
+| UF \_ HOMEDIR \_ ERFORDERLICH    | Das Stammverzeichnis ist erforderlich. Dieser Wert wird in Windows NT und Windows 2000 ignoriert.                                                                            |
+| UF \_ PASSWD \_ NOTREQD      | Es ist kein Kennwort erforderlich.                                                                                                                                         |
+| UF \_ PASSWD \_ CANT \_ CHANGE | Der Benutzer kann das Kennwort nicht ändern.                                                                                                                             |
+| UF \_ LOCKOUT              | Das Konto ist derzeit gesperrt. Dieser Wert kann gelöscht werden, um ein zuvor gesperrtes Konto zu entsperren. Dieser Wert kann nicht zum Sperren eines zuvor gesperrten Kontos verwendet werden. |
+| UF \_ DONT \_ EXPIRE \_ PASSWD | Stellt das Kennwort dar, das nie für das Konto ablaufen sollte.                                                                                               |
 
 
 
- 
+ 
 
-Die folgenden Flags beschreiben den Kontotyp. Es kann nur ein Wert festgelegt werden. Der Kontotyp kann nicht geändert werden.
+Die folgenden Flags beschreiben den Kontotyp. Es kann nur ein Wert festgelegt werden. Sie können den Kontotyp nicht ändern.
 
 
 
 | Flag                            | Beschreibung                                                                                                                                                                                                                                     |
 |---------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| \_normales \_ Konto             | Dies ist ein Standard Kontotyp, der einen typischen Benutzer darstellt.                                                                                                                                                                                  |
-| \_Konto für Temp Temp- \_ Duplizierung \_    | Dies ist ein Konto für Benutzer, deren primäres Konto sich in einer anderen Domäne befindet. Dieses Konto ermöglicht dem Benutzer den Zugriff auf diese Domäne, jedoch nicht auf eine Domäne, die dieser Domäne vertraut. Der Benutzer-Manager verweist auf diesen Kontotyp als lokales Benutzerkonto. |
-| Konto der Vertrauensstellung der \_ \_ Vertrauensstellung \_ | Hierbei handelt es sich um ein Computer Konto für einen Windows NT-Arbeitsstations-/Windows 2000 Professional-oder Windows NT Server/Windows 2000-Server, der Mitglied dieser Domäne ist.                                                                                     |
-| \_ \_ \_ Konto Vertrauens Konto für den Server      | Hierbei handelt es sich um ein Computer Konto für einen Windows NT-Sicherungs Domänen Controller, der Mitglied dieser Domäne ist.                                                                                                                                           |
-| Konto für die Vertrauensstellung der \_ Verbindungs Domäne \_ \_ | Dies ist ein vertrauenswürdiges Konto für eine Windows NT-Domäne, die anderen Domänen vertraut.                                                                                                                                                            |
+| UF \_ NORMAL \_ ACCOUNT             | Dies ist ein Standardkontotyp, der einen typischen Benutzer darstellt.                                                                                                                                                                                  |
+| TEMPORÄRES \_ \_ DOPPELTES \_ UF-KONTO    | Dies ist ein Konto für Benutzer, deren primäres Konto sich in einer anderen Domäne befindet. Dieses Konto ermöglicht den Benutzerzugriff auf diese Domäne, jedoch nicht auf eine Domäne, die dieser Domäne vertraut. Der Benutzer-Manager bezieht sich auf diesen Kontotyp als lokales Benutzerkonto. |
+| UF \_ WORKSTATION \_ TRUST \_ ACCOUNT | Dies ist ein Computerkonto für eine Windows NT-Arbeitsstation/Windows 2000 Professional oder Windows NT Server/Windows 2000-Server, der Mitglied dieser Domäne ist.                                                                                     |
+| UF \_ SERVER \_ TRUST \_ ACCOUNT      | Dies ist ein Computerkonto für einen Windows NT Backup-Domänencontroller, der Mitglied dieser Domäne ist.                                                                                                                                           |
+| UF \_ INTERDOMAIN \_ TRUST \_ ACCOUNT | Dies ist eine Zulassung zum Vertrauenswürdigkeitskonto für eine Windows NT-Domäne, die anderen Domänen vertraut.                                                                                                                                                            |
 
 
 
- 
+ 
 
 </dd> <dt>
 
 <span id="userCertificate"></span><span id="usercertificate"></span><span id="USERCERTIFICATE"></span>[**userCertificate**](/windows/desktop/ADSchema/a-usercertificate)
 </dt> <dd>
 
-Das [**userCertificate**](/windows/desktop/ADSchema/a-usercertificate) -Attribut ist ein mehr wertiges Attribut, das die für den Benutzer ausgestellten X509v3-Zertifikate enthält. Beachten Sie, dass dieses Attribut die Zertifikate des öffentlichen Schlüssels enthält, die für diesen Benutzer vom Microsoft-Zertifikat Dienst ausgestellt wurden.
+Das [**userCertificate-Attribut**](/windows/desktop/ADSchema/a-usercertificate) ist ein mehrwertiges Attribut, das die DER-codierten X509v3-Zertifikate enthält, die für den Benutzer ausgestellt wurden. Beachten Sie, dass dieses Attribut die Öffentlichen Schlüsselzertifikate enthält, die vom Microsoft Certificate Service für diesen Benutzer ausgestellt wurden.
 
 </dd> <dt>
 
-<span id="userSharedFolder"></span><span id="usersharedfolder"></span><span id="USERSHAREDFOLDER"></span>[**usersharedfolder**](/windows/desktop/ADSchema/a-usersharedfolder)
+<span id="userSharedFolder"></span><span id="usersharedfolder"></span><span id="USERSHAREDFOLDER"></span>[**userSharedFolder**](/windows/desktop/ADSchema/a-usersharedfolder)
 </dt> <dd>
 
-Das [**usersharedfolder**](/windows/desktop/ADSchema/a-usersharedfolder) -Attribut gibt einen UNC-Pfad zum freigegebenen Dokument Ordner des Benutzers an. Der Pfad muss ein Netzwerk-UNC-Pfad des Formular \\ \\ Server \\ Freigabe- \\ Verzeichnisses sein. Dieser Wert kann eine NULL-Zeichenfolge sein.
+Das [**userSharedFolder-Attribut**](/windows/desktop/ADSchema/a-usersharedfolder) gibt einen UNC-Pfad zum Ordner mit freigegebenen Dokumenten des Benutzers an. Der Pfad muss ein Netzwerk-UNC-Pfad des \\ \\ \\ \\ Formularserverfreigabeverzeichnisses sein. Dieser Wert kann eine NULL-Zeichenfolge sein.
 
 </dd> <dt>
 
-<span id="userWorkstations"></span><span id="userworkstations"></span><span id="USERWORKSTATIONS"></span>[**Benutzer Arbeitsstationen**](/windows/desktop/ADSchema/a-userworkstations)
+<span id="userWorkstations"></span><span id="userworkstations"></span><span id="USERWORKSTATIONS"></span>[**userWorkstations**](/windows/desktop/ADSchema/a-userworkstations)
 </dt> <dd>
 
-Das [**userworkstations**](/windows/desktop/ADSchema/a-userworkstations) -Attribut ist ein einwertiges Attribut, das die NetBIOS-Namen der Arbeitsstationen enthält, an denen sich der Benutzer anmelden kann. Jeder NetBIOS-Name wird durch ein Komma getrennt.
+Das [**userWorkstations-Attribut**](/windows/desktop/ADSchema/a-userworkstations) ist ein einwertiges Attribut, das die NetBIOS-Namen der Arbeitsstationen enthält, bei denen sich der Benutzer anmelden kann. Jeder NetBIOS-Name wird durch ein Komma getrennt.
 
-Wenn keine Werte festgelegt sind, ist dies ein Hinweis darauf, dass keine Einschränkung vorhanden ist. Um Anmeldungen von allen Arbeitsstationen für dieses Konto zu deaktivieren, legen Sie den Wert für den Wert "UF \_ accountdeaktivieren" (definiert in "lmaccess. h") im [**userAccountControl**](/windows/desktop/ADSchema/a-useraccountcontrol) -Attribut fest.
+Wenn keine Werte festgelegt sind, gibt dies an, dass keine Einschränkung vorliegt. Um Anmeldungen von allen Arbeitsstationen für dieses Konto zu deaktivieren, legen Sie den Wert UF \_ ACCOUNTDISABLE (definiert in Lmaccess.h) im [**userAccountControl-Attribut**](/windows/desktop/ADSchema/a-useraccountcontrol) fest.
 
 </dd> </dl>
 
- 
+ 
 
- 
+ 

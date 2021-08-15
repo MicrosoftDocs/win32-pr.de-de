@@ -1,7 +1,7 @@
 ---
-description: Tritt auf, wenn der Benutzer den Tablettstift von der tabletdigitalisiereroberfläche ausgelöst hat.
+description: Tritt ein, wenn der Benutzer den Tablettstift von der Tablettdigisiereroberfläche ausgelöst hat.
 ms.assetid: 34dc7e6b-101a-4edd-8c3c-9aafb85cf58b
-title: 'Itableteventsink:: Cursor Methode'
+title: ITabletEventSink::CursorUp-Methode
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -14,16 +14,16 @@ api_type:
 api_location:
 - wisptis.exe
 - wisptis.exe.dll
-ms.openlocfilehash: 5e163fd01933ad0fc1a11429e77b37163655f39b
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 586f18750e832bad653a3df92d14efb41b39547ee532913ac52c986a9b5e137c
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "104218368"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119712130"
 ---
-# <a name="itableteventsinkcursorup-method"></a>Itableteventsink:: Cursor Methode
+# <a name="itableteventsinkcursorup-method"></a>ITabletEventSink::CursorUp-Methode
 
-Tritt auf, wenn der Benutzer den Tablettstift von der tabletdigitalisiereroberfläche ausgelöst hat.
+Tritt ein, wenn der Benutzer den Tablettstift von der Tablettdigisiereroberfläche ausgelöst hat.
 
 ## <a name="syntax"></a>Syntax
 
@@ -44,44 +44,44 @@ HRESULT CursorUp(
 
 <dl> <dt>
 
-*TCID* \[ in\]
+*tcid* \[ In\]
 </dt> <dd>
 
 Der Bezeichner des Tablets.
 
 </dd> <dt>
 
-*CID* \[ in\]
+*cid* \[ in\]
 </dt> <dd>
 
-Der Bezeichner des Tablettstifts.
+Der Bezeichner des Stifts.
 
 </dd> <dt>
 
-*nserialnumber* \[ in\]
+*nSerialNumber* \[ In\]
 </dt> <dd>
 
-Die Seriennummer des Tablettstifts.
+Die Seriennummer des Stifts.
 
 </dd> <dt>
 
-*cbpkt* \[ in\]
+*cbPkt* \[ In\]
 </dt> <dd>
 
-Die Anzahl von Bytes in einem Tablettstift-Datenpaket.
+Die Anzahl der Bytes in einem Stiftdatenpaket.
 
 </dd> <dt>
 
-*pbpkt* \[ in\]
+*pbPkt* \[ In\]
 </dt> <dd>
 
-Die Tablettstiftdaten, die den Speicherort angeben, an dem der Tablettstift vom Tablet entfernt wurde.
+Die Tablettstiftdaten, die die Position angeben, an der der Tablettstift vom Tablett entfernt wurde.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Wenn diese Methode erfolgreich ausgeführt wird, gibt Sie **S \_ OK** zurück. Andernfalls wird ein **HRESULT** -Fehlercode zurückgegeben.
+Wenn diese Methode erfolgreich ist, wird **S \_ OK zurückgegeben.** Andernfalls wird ein **HRESULT-Fehlercode** zurückgegeben.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -89,17 +89,17 @@ Wenn diese Methode erfolgreich ausgeführt wird, gibt Sie **S \_ OK** zurück. A
 
 | Anforderung | Wert |
 |-------------------------------------|----------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows XP Tablet PC Edition \[ Desktop-Apps\]<br/>                          |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur Desktop-Apps der XP Tablet PC Edition \[\]<br/>                          |
 | Unterstützte Mindestversion (Server)<br/> | Nicht unterstützt<br/>                                                              |
 | Bibliothek<br/>                  | <dl> <dt>Wisptis.exe</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Itableteventsink-Schnittstelle**](itableteventsink.md)
+[**ITabletEventSink-Schnittstelle**](itableteventsink.md)
 </dt> </dl>
 
  

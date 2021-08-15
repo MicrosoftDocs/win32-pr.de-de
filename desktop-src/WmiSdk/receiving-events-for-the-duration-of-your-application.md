@@ -1,5 +1,5 @@
 ---
-description: Eine der gängigsten Möglichkeiten zum Empfangen eines Ereignisses ist eine ausgeführte Anwendung, z. B. eine Verwaltungsanwendung, die Ereignisse sammelt und einem Benutzer anzeigt.
+description: Eine der gängigsten Methoden zum Empfangen eines Ereignisses ist eine ausgeführte Anwendung, z. B. eine Verwaltungsanwendung, die Ereignisse sammelt und einem Benutzer anzeigt.
 ms.assetid: 380ac556-ba0a-4fae-8b76-0645d99e8583
 ms.tgt_platform: multiple
 title: Empfangen von Ereignissen für die Dauer Ihrer Anwendung
@@ -14,18 +14,18 @@ ms.locfileid: "118554218"
 ---
 # <a name="receiving-events-for-the-duration-of-your-application"></a>Empfangen von Ereignissen für die Dauer Ihrer Anwendung
 
-Eine der gängigsten Möglichkeiten zum Empfangen eines Ereignisses ist eine ausgeführte Anwendung, z. B. eine Verwaltungsanwendung, die Ereignisse sammelt und einem Benutzer anzeigt. Solche Anwendungen werden als "temporär" bezeichnet, da ein temporärer Consumer beim Herunterfahren keine Ereignisbenachrichtigungen empfängt.
+Eine der gängigsten Methoden zum Empfangen eines Ereignisses ist eine ausgeführte Anwendung, z. B. eine Verwaltungsanwendung, die Ereignisse sammelt und einem Benutzer anzeigt. Solche Anwendungen werden als "temporär" bezeichnet, da ein temporärer Consumer beim Herunterfahren keine Ereignisbenachrichtigungen erhält.
 
-Ein temporärer Consumer ruft [**SWbemServices.ExecNotificationQuery**](swbemservices-execnotificationquery.md) im Skript oder [**IWbemServices.ExecNotificationQuery**](/windows/desktop/api/WbemCli/nf-wbemcli-iwbemservices-execnotificationquery) in C++ auf, um Ereignisse in einem Namespace zu abonnieren. Die diesem Abonnement zugeordnete Identität ist der Aufrufer.
+Ein temporärer Consumer ruft [**SWbemServices.ExecNotificationQuery**](swbemservices-execnotificationquery.md) in script oder [**IWbemServices.ExecNotificationQuery**](/windows/desktop/api/WbemCli/nf-wbemcli-iwbemservices-execnotificationquery) in C++ auf, um Ereignisse in einem Namespace zu abonnieren. Die diesem Abonnement zugeordnete Identität ist der Aufrufer.
 
-Ein temporärer Ereignisverbraucher kann Benachrichtigungen entweder asynchron oder semisynchron in Skripts und C++ empfangen.
+Ein temporärer Ereignisverbraucher kann Benachrichtigungen entweder asynchron oder halbsynchron sowohl in Skripts als auch in C++ empfangen.
 
 > [!Note]  
-> Aus Sicherheitsgründen ist es wichtig zu beachten, dass asynchrone Ereignisbenachrichtigungen nicht empfohlen werden. Weitere Informationen finden Sie unter [Festlegen der Sicherheit für einen asynchronen Aufruf.](setting-security-on-an-asynchronous-call.md) Ereignisverbraucher haben besondere Sicherheitsbedenken. Weitere Informationen finden Sie unter [Sichern von WMI-Ereignissen.](securing-wmi-events.md)
+> Aus Sicherheitsgründen ist es wichtig zu beachten, dass asynchrone Ereignisbenachrichtigungen nicht empfohlen werden. Weitere Informationen finden Sie unter [Festlegen der Sicherheit für einen asynchronen Aufruf](setting-security-on-an-asynchronous-call.md)von . Ereignisverbraucher haben besondere Sicherheitsbedenken. Weitere Informationen finden Sie unter [Sichern von WMI-Ereignissen.](securing-wmi-events.md)
 
  
 
-Weitere Informationen zum Empfangen von asynchronen und semisynchronen Ereignisbenachrichtigungen finden Sie unter [Empfangen von asynchronen Ereignisbenachrichtigungen](receiving-asynchronous-event-notifications.md) und [Empfangen von semisynchronen Ereignisbenachrichtigungen.](receiving-synchronous-and-semisynchronous-event-notifications.md)
+Weitere Informationen zum Empfangen von asynchronen und semisynchronen Ereignisbenachrichtigungen finden Sie unter Empfangen von asynchronen [Ereignisbenachrichtigungen](receiving-asynchronous-event-notifications.md) und Empfangen [von semisynchronen Ereignisbenachrichtigungen.](receiving-synchronous-and-semisynchronous-event-notifications.md)
 
  
 

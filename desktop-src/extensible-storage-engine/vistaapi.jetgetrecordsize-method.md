@@ -1,6 +1,6 @@
 ---
-description: 'Weitere Informationen finden Sie hier: vistaapi. jetgetrecordsize-Methode'
-title: Vistaapi. jetgetrecordsize-Methode (Microsoft. ISAM. ESENT. Interop. Vista)
+description: 'Weitere Informationen finden Sie unter: VistaApi.JetGetRecordSize-Methode'
+title: VistaApi.JetGetRecordSize-Methode (Microsoft.Isam.Esent.Interop.Vista)
 TOCTitle: 'JetGetRecordSize method '
 ms:assetid: M:Microsoft.Isam.Esent.Interop.Vista.VistaApi.JetGetRecordSize(Microsoft.Isam.Esent.Interop.JET_SESID,Microsoft.Isam.Esent.Interop.JET_TABLEID,Microsoft.Isam.Esent.Interop.Vista.JET_RECSIZE@,Microsoft.Isam.Esent.Interop.GetRecordSizeGrbit)
 ms:mtpsurl: https://msdn.microsoft.com/library/microsoft.isam.esent.interop.vista.vistaapi.jetgetrecordsize(v=EXCHG.10)
@@ -24,19 +24,19 @@ api_type:
 api_location:
 - Microsoft.Isam.Esent.Interop.dll
 ROBOTS: INDEX,FOLLOW
-ms.openlocfilehash: 37576e39d83270dcac3333e4d1f78fce32bb2669
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: d439bc8fe9823a69748d61b2b2c327b0f15a8c7114f7b7a7311e0a7e16f35d14
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106349026"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118484489"
 ---
-# <a name="vistaapijetgetrecordsize-method"></a>Vistaapi. jetgetrecordsize-Methode
+# <a name="vistaapijetgetrecordsize-method"></a>VistaApi.JetGetRecordSize-Methode
 
-Ruft Informationen zur Daten Satz Größe vom gewünschten Speicherort ab.
+Ruft Informationen zur Datensatzgröße vom gewünschten Speicherort ab.
 
-**Namespace:**  [Microsoft. ISAM. ESENT. Interop. Vista](./microsoft.isam.esent.interop.vista-namespace.md)  
-**Assembly:**  Microsoft. ISAM. ESENT. Interop (in Microsoft.Isam.Esent.Interop.dll)
+**Namespace:**  [Microsoft.Isam.Esent.Interop.Vista](./microsoft.isam.esent.interop.vista-namespace.md)  
+**Assembly:**  Microsoft.Isam.Esent.Interop (in Microsoft.Isam.Esent.Interop.dll)
 
 ## <a name="syntax"></a>Syntax
 
@@ -67,38 +67,38 @@ public static void JetGetRecordSize(
 
 #### <a name="parameters"></a>Parameter
 
-  - -sid  
-    Typ: [Microsoft.ISAM.ESENT.Interop.JET_SESID](./jet-sesid-structure.md)  
+  - sesid  
+    Typ: [Microsoft.Isam.Esent.Interop.JET_SESID](./jet-sesid-structure.md)  
     
     Die zu verwendende Sitzung.
 
 <!-- end list -->
 
-  - TableID  
-    Typ: [Microsoft.ISAM.ESENT.Interop.JET_TABLEID](./jet-tableid-structure.md)  
+  - tableid  
+    Typ: [Microsoft.Isam.Esent.Interop.JET_TABLEID](./jet-tableid-structure.md)  
     
-    Der Cursor, der für den API-Befehl verwendet wird. Der Cursor muss auf einem Datensatz positioniert werden, oder es muss ein Update vorbereitet werden.
+    Der Cursor, der für den API-Aufruf verwendet wird. Der Cursor muss auf einem Datensatz positioniert sein oder ein Update vorbereitet haben.
 
 <!-- end list -->
 
-  - neugröße  
-    Typ: [Microsoft.ISAM.ESENT.Interop.Vista.JET_RECSIZE](./jet-recsize-structure2.md)  
+  - recsize  
+    Typ: [Microsoft.Isam.Esent.Interop.Vista.JET_RECSIZE](./jet-recsize-structure2.md)  
     
     Gibt die Größe des Datensatzes zurück.
 
 <!-- end list -->
 
   - grbit  
-    Typ: [Microsoft. ISAM. ESENT. Interop. getrecordsizegrbit](./getrecordsizegrbit-enumeration.md)  
+    Typ: [Microsoft.Isam.Esent.Interop.GetRecordSizeGrbit](./getrecordsizegrbit-enumeration.md)  
     
-    Ruft Optionen auf.
+    Aufrufoptionen.
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
-#### <a name="reference"></a>Referenz
+#### <a name="reference"></a>Verweis
 
-[Vistaapi-Klasse](./vistaapi-class.md)
+[VistaApi-Klasse](./vistaapi-class.md)
 
-[Vistaapi-Member](./vistaapi-members.md)
+[VistaApi-Member](./vistaapi-members.md)
 
-[Microsoft. ISAM. ESENT. Interop. Vista-Namespace](./microsoft.isam.esent.interop.vista-namespace.md)
+[Microsoft.Isam.Esent.Interop.Vista-Namespace](./microsoft.isam.esent.interop.vista-namespace.md)

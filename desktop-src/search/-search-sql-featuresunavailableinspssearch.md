@@ -1,47 +1,47 @@
 ---
-description: Die Microsoft Windows Search-Abfragesprache basiert auf Structured Query Language (SQL). Es wird jedoch nicht in einer relationalen Datenbank mit benutzerdefinierten Tabellen oder Indizes durchsucht.
+description: Die Abfragesprache Windows Microsoft-Suche basiert auf strukturierte Abfragesprache (SQL); Es wird jedoch nicht in einer relationalen Datenbank mit benutzerdefinierten Tabellen oder Indizes gesucht.
 ms.assetid: e81c436e-3a33-4b00-9860-9a54bc0eebbf
-title: SQL-Funktionen sind in Microsoft Windows Search nicht verfügbar.
+title: SQL Features in Microsoft Windows Search nicht verfügbar
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 20cf0e082a10a7775ca2d880be6153b7d99b6bc7
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 66adb175aa7fae799e0ad9b69916415f12c94ee984d276b5a2238ebb19ec2f06
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106341188"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119716120"
 ---
-# <a name="sql-features-unavailable-in-microsoft-windows-search"></a>SQL-Funktionen sind in Microsoft Windows Search nicht verfügbar.
+# <a name="sql-features-unavailable-in-microsoft-windows-search"></a>SQL Features in Microsoft Windows Search nicht verfügbar
 
-Die Microsoft Windows Search-Abfragesprache basiert auf Structured Query Language (SQL). Es wird jedoch nicht in einer relationalen Datenbank mit benutzerdefinierten Tabellen oder Indizes durchsucht. Aus diesem Grund sind viele Standard-SQL-Anweisungen und Syntax Funktionen nicht anwendbar. Im folgenden finden Sie eine Liste der signifikanteren SQL-Features, die in Windows Search nicht unterstützt werden.
+Die Abfragesprache Windows Microsoft-Suche basiert auf strukturierte Abfragesprache (SQL); Es wird jedoch nicht in einer relationalen Datenbank mit benutzerdefinierten Tabellen oder Indizes gesucht. Aus diesem Grund gelten viele standard SQL-Anweisungen und Syntaxfeatures nicht. Im Folgenden finden Sie eine Liste der wichtigsten SQL, die in der Suchfunktion nicht Windows werden.
 
 
--   Batch-Anweisungen
--   COALESCE- \_ Tabellen Funktion
--   Convert-Funktion (verwenden Sie stattdessen die Cast Funktionen)
+-   BATCH-Anweisungen
+-   COALESCE \_ TABLE-Funktion
+-   CONVERT-Funktion (verwenden Sie stattdessen die CAST-Funktionen)
 -   CREATE VIEW-Anweisung
 -   Datendefinitionssprache
--   DataSource-Anweisung
--   Datums-und Uhrzeit Formate außer ISO-Datums-und Zeitstempel
+-   DATASOURCE-Anweisung
+-   Andere Datums- und Uhrzeitformate als ISO-Datums- und Zeitstempel
 -   DELETE-Anweisung
 -   GRANT-Anweisung
--   Informations Schema
+-   Informationsschema
 -   INSERT-Anweisung
--   Datentypen OLE DB
--   Reguläre SQL-Standard Ausdrücke (verwenden Sie stattdessen "enthält" oder ähnliches)
--   Parameter für SQL-Abfragen
--   Vergleich von relationalen Spalten
--   Revision-ID-Header
+-   OLE DB Datentypen
+-   SQL regulären Ausdrücken (verwenden Sie stattdessen CONTAINS oder LIKE)
+-   Parameter zum SQL Abfragen
+-   Vergleich relationaler Spalten
+-   Revisions-ID-Header
 -   REVOKE-Anweisung
--   Bereichs Aliase oder Revisionsnummern
--   Alles auswählen (entfernt Duplikate automatisch)
+-   SCOPE-Aliase oder Revisionsnummern
+-   SELECT ALL (Duplikate werden automatisch entfernt)
 -   Gespeicherte Prozeduren
--   Strukturierte Dokument Erweiterung
+-   Erweiterung strukturierter Dokumente
 -   UNION ALL
--   Unbekanntes Schlüsselwort
+-   UNKNOWN-Schlüsselwort
 -   UPDATE-Anweisung
 
-Windows Search unterstützt keine Thesaurus-und Füll Wörter.
+Windows Die Suche unterstützt Thesaurus und Rauschwörter nicht.
 
  
 

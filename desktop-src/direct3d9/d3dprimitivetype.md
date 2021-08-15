@@ -1,5 +1,5 @@
 ---
-description: Definiert die von Direct3D unterstützten Primitive.
+description: Definiert die primitiven Typen, die von Direct3D unterstützt werden.
 ms.assetid: 89e697f9-02b9-4ae1-9e86-6178da0cb008
 title: D3DPRIMITIVETYPE-Enumeration (D3D9Types.h)
 ms.topic: reference
@@ -22,7 +22,7 @@ ms.locfileid: "118527516"
 ---
 # <a name="d3dprimitivetype-enumeration"></a>D3DPRIMITIVETYPE-Enumeration
 
-Definiert die von Direct3D unterstützten Primitive.
+Definiert die primitiven Typen, die von Direct3D unterstützt werden.
 
 ## <a name="syntax"></a>Syntax
 
@@ -55,7 +55,7 @@ Rendert die Scheitelpunkte als Auflistung isolierter Punkte. Dieser Wert wird f�
 <span id="D3DPT_LINELIST"></span><span id="d3dpt_linelist"></span>**D3DPT \_ LINELIST**
 </dt> <dd>
 
-Rendert die Scheitelstriche als Liste isolierter gerader Liniensegmente.
+Rendert die Scheitelungen als Liste isolierter gerader Liniensegmente.
 
 </dd> <dt>
 
@@ -71,7 +71,7 @@ Rendert die Scheitellinien als einzelne Polylinie.
 
 Rendert die angegebenen Scheitelungen als Sequenz isolierter Dreiecke. Jede Gruppe von drei Scheitelstellen definiert ein separates Dreieck.
 
-Das Back-Face-Culling wird durch den aktuellen Renderzustand der Wickelrichtung beeinflusst.
+Die Back-Face-Culling wird durch den aktuellen Renderzustand der Wickelrichtung beeinflusst.
 
 </dd> <dt>
 

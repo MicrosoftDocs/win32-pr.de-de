@@ -1,9 +1,9 @@
 ---
-title: WM_NCXBUTTONDBLCLK-Nachricht (Winuser.h)
-description: Wird gesendet, wenn der Benutzer auf die erste oder zweite X-Schaltfläche doppelklickt, während sich der Cursor im Nichtclientbereich eines Fensters befindet. Diese Meldung wird an das Fenster gesendet, das den Cursor enthält. Wenn ein Fenster die Maus erfasst hat, wird diese Meldung nicht gesendet.
+title: WM_NCXBUTTONDBLCLK (Winuser.h)
+description: Wird veröffentlicht, wenn der Benutzer auf die erste oder zweite X-Schaltfläche doppelklickt, während sich der Cursor im Nicht-Clientbereich eines Fensters befindet. Diese Meldung wird an das Fenster gesendet, das den Cursor enthält. Wenn ein Fenster die Maus erfasst hat, wird diese Meldung nicht gesendet.
 ms.assetid: 8c0b1e96-9cbb-4ef8-83ff-9253f1a934ef
 keywords:
-- WM_NCXBUTTONDBLCLK Meldung Tastatur- und Mauseingabe
+- WM_NCXBUTTONDBLCLK der Tastatur- und Mauseingabe
 topic_type:
 - apiref
 api_name:
@@ -21,11 +21,11 @@ ms.contentlocale: de-DE
 ms.lasthandoff: 08/11/2021
 ms.locfileid: "118482640"
 ---
-# <a name="wm_ncxbuttondblclk-message"></a>WM \_ NCXBUTTONDBLCLK-Nachricht
+# <a name="wm_ncxbuttondblclk-message"></a>WM \_ NCXBUTTONDBLCLK-Meldung
 
-Wird gesendet, wenn der Benutzer auf die erste oder zweite X-Schaltfläche doppelklickt, während sich der Cursor im Nichtclientbereich eines Fensters befindet. Diese Meldung wird an das Fenster gesendet, das den Cursor enthält. Wenn ein Fenster die Maus erfasst hat, wird diese Meldung nicht gesendet.
+Wird veröffentlicht, wenn der Benutzer auf die erste oder zweite X-Schaltfläche doppelklickt, während sich der Cursor im Nicht-Clientbereich eines Fensters befindet. Diese Meldung wird an das Fenster gesendet, das den Cursor enthält. Wenn ein Fenster die Maus erfasst hat, wird diese Meldung nicht gesendet.
 
-Ein Fenster empfängt diese Meldung über seine [**WindowProc-Funktion.**](/previous-versions/windows/desktop/legacy/ms633573(v=vs.85))
+Ein Fenster empfängt diese Nachricht über seine [**WindowProc-Funktion.**](/previous-versions/windows/desktop/legacy/ms633573(v=vs.85))
 
 
 ```C++
@@ -41,16 +41,16 @@ Ein Fenster empfängt diese Meldung über seine [**WindowProc-Funktion.**](/prev
 *wParam* 
 </dt> <dd>
 
-Das Wort mit niedriger Reihenfolge gibt den Treffertestwert an, der von der [**DefWindowProc-Funktion**](/windows/desktop/api/winuser/nf-winuser-defwindowproca) bei der Verarbeitung der [**\_ WM-NCHITTEST-Nachricht**](wm-nchittest.md) zurückgegeben wird. Eine Liste der Treffertestwerte finden Sie unter **WM \_ NCHITTEST**.
+Das Wort in niedriger Reihenfolge gibt den Treffertestwert an, der von der [**DefWindowProc-Funktion**](/windows/desktop/api/winuser/nf-winuser-defwindowproca) bei der Verarbeitung der [**WM \_ NCHITTEST-Nachricht zurückgegeben**](wm-nchittest.md) wird. Eine Liste der Treffertestwerte finden Sie unter **WM \_ NCHITTEST**.
 
-Das Wort in hoher Reihenfolge gibt an, auf welche Schaltfläche doppelklickt wurde. Dieses Argument einen der folgenden Werte annehmen.
+Das obere Wort gibt an, auf welche Schaltfläche doppelklickt wurde. Dieses Argument einen der folgenden Werte annehmen.
 
 
 
 | Wert                                                                                                                                                                                                     | Bedeutung                                            |
 |-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|----------------------------------------------------|
-| <span id="XBUTTON1"></span><span id="xbutton1"></span><dl> <dt>**XBUTTON1**</dt> <dt>0x0001</dt> </dl> | Auf die erste X-Schaltfläche wurde doppelklickt.<br/> |
-| <span id="XBUTTON2"></span><span id="xbutton2"></span><dl> <dt>**XBUTTON2**</dt> <dt>0x0002</dt> </dl> | Auf die zweite X-Schaltfläche wurde doppelklicken.<br/> |
+| <span id="XBUTTON1"></span><span id="xbutton1"></span><dl> <dt>**XBUTTON1-0x0001**</dt> <dt></dt> </dl> | Auf die erste X-Schaltfläche wurde doppelklicken.<br/> |
+| <span id="XBUTTON2"></span><span id="xbutton2"></span><dl> <dt>**XBUTTON2-0x0002**</dt> <dt></dt> </dl> | Auf die zweite X-Schaltfläche wurde doppelklicken.<br/> |
 
 
 
@@ -61,17 +61,17 @@ Das Wort in hoher Reihenfolge gibt an, auf welche Schaltfläche doppelklickt wur
 *lParam* 
 </dt> <dd>
 
-Ein Zeiger [](/previous-versions//dd162808(v=vs.85)) auf eine POINTS-Struktur, die die x- und y-Koordinaten des Cursors enthält. Die Koordinaten sind relativ zur oberen linken Ecke des Bildschirms.
+Ein Zeiger auf eine [**POINTS-Struktur,**](/previous-versions//dd162808(v=vs.85)) die die x- und y-Koordinaten des Cursors enthält. Die Koordinaten sind relativ zur oberen linken Ecke des Bildschirms.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Wenn eine Anwendung diese Nachricht verarbeitet, sollte sie **TRUE** zurückgeben. Weitere Informationen zur Verarbeitung des Rückgabewerts finden Sie im Abschnitt Hinweise.
+Wenn eine Anwendung diese Nachricht verarbeitet, sollte sie **TRUE zurückgeben.** Weitere Informationen zur Verarbeitung des Rückgabewerts finden Sie im Abschnitt Hinweise.
 
 ## <a name="remarks"></a>Hinweise
 
-Verwenden Sie den folgenden Code, um die Informationen im *wParam-Parameter* abzurufen.
+Verwenden Sie den folgenden Code, um die Informationen im *wParam-Parameter* zu erhalten.
 
 
 ```
@@ -81,7 +81,7 @@ fwButton = GET_XBUTTON_WPARAM(wParam);
 
 
 
-Sie können auch den folgenden Code verwenden, um die x- und y-Koordinaten von *lParam* abzurufen:
+Sie können auch den folgenden Code verwenden, um die x- und y-Koordinaten aus *lParam zu erhalten:*
 
 
 ```
@@ -92,15 +92,15 @@ yPos = GET_Y_LPARAM(lParam);
 
 
 > [!IMPORTANT]
-> Verwenden Sie nicht die [**LOWORD-**](/previous-versions/windows/desktop/legacy/ms632659(v=vs.85)) oder [**HIWORD-Makros,**](/previous-versions/windows/desktop/legacy/ms632657(v=vs.85)) um die x- und y-Koordinaten der Cursorposition zu extrahieren, da diese Makros falsche Ergebnisse auf Systemen mit mehreren Monitoren zurückgeben. Systeme mit mehreren Monitoren können negative x- und y-Koordinaten aufweisen, und **LOWORD** und **HIWORD** behandeln die Koordinaten als Mengen ohne Vorzeichen.
+> Verwenden Sie nicht die [**LOWORD-**](/previous-versions/windows/desktop/legacy/ms632659(v=vs.85)) oder [**HIWORD-Makros,**](/previous-versions/windows/desktop/legacy/ms632657(v=vs.85)) um die x- und y-Koordinaten der Cursorposition zu extrahieren, da diese Makros falsche Ergebnisse auf Systemen mit mehreren Monitoren zurückgeben. Systeme mit mehreren Monitoren können negative x- und y-Koordinaten haben, **und LOWORD** und **HIWORD** behandeln die Koordinaten als Mengen ohne Vorzeichen.
 
  
 
-Standardmäßig testet die [**DefWindowProc-Funktion**](/windows/desktop/api/winuser/nf-winuser-defwindowproca) den angegebenen Punkt, um die Position des Cursors abzurufen, und führt die entsprechende Aktion aus. Bei Bedarf wird die [**\_ WM-SYSCOMMAND-Nachricht**](/windows/desktop/menurc/wm-syscommand) an das Fenster gesendet.
+Standardmäßig testet die [**DefWindowProc-Funktion**](/windows/desktop/api/winuser/nf-winuser-defwindowproca) den angegebenen Punkt, um die Position des Cursors zu erhalten, und führt die entsprechende Aktion aus. Gegebenenfalls wird die [**WM \_ SYSCOMMAND-Nachricht an**](/windows/desktop/menurc/wm-syscommand) das Fenster gesendet.
 
-Ein Fenster muss nicht den **CS \_ DBLCLKS-Stil** aufweisen, um **WM \_ NCXBUTTONDBLCLK-Nachrichten** zu empfangen. Das System generiert eine **WM \_ NCXBUTTONDBLCLK-Nachricht,** wenn der Benutzer eine X-Taste innerhalb des Doppelklick-Zeitlimits des Systems drückt, loslässt und erneut drückt. Wenn Sie auf eine dieser Schaltflächen doppelklicken, werden vier Meldungen generiert: [**WM \_ NCXBUTTONDOWN,**](wm-ncxbuttondown.md) [**WM \_ NCXBUTTONUP,**](wm-ncxbuttonup.md) **WM \_ NCXBUTTONDBLCLK** und **WM \_ NCXBUTTONUP.**
+Ein Fenster muss nicht über das **CS \_ DBLCLKS-Format** verfügen, um **WM \_ NCXBUTTONDBLCLK-Nachrichten zu** empfangen. Das System generiert eine **WM \_ NCXBUTTONDBLCLK-Meldung,** wenn der Benutzer eine X-Taste innerhalb des Zeitlimits für Doppelklicken des Systems drückt, loslässt und erneut drückt. Wenn Sie auf eine dieser Schaltflächen doppelklicken, werden tatsächlich vier Meldungen generiert: [**WM \_ NCXBUTTONDOWN**](wm-ncxbuttondown.md), [**WM \_ NCXBUTTONUP,**](wm-ncxbuttonup.md) **WM \_ NCXBUTTONDBLCLK** und **WM \_ NCXBUTTONUP.**
 
-Im Gegensatz zu den [**\_ WM-Nachrichten NCLBUTTONDBLCLK,**](wm-nclbuttondblclk.md) [**WM \_ NCMBUTTONDBLCLK**](wm-ncmbuttondblclk.md)und [**WM \_ NCRBUTTONDBLCLK**](wm-ncrbuttondblclk.md) sollte eine Anwendung **TRUE** aus dieser Nachricht zurückgeben, wenn sie sie verarbeitet. Auf diese Weise kann Software, die diese Nachricht auf Windows Systemen vor Windows 2000 simuliert, bestimmen, ob die Fensterprozedur die Nachricht verarbeitet oder [**DefWindowProc**](/windows/desktop/api/winuser/nf-winuser-defwindowproca) aufgerufen hat, um sie zu verarbeiten.
+Im Gegensatz [**zu den \_ WM-Meldungen NCLBUTTONDBLCLK,**](wm-nclbuttondblclk.md) [**WM \_ NCMBUTTONDBLCLK**](wm-ncmbuttondblclk.md)und [**WM \_ NCRBUTTONDBLCLK**](wm-ncrbuttondblclk.md) sollte eine Anwendung **true** aus dieser Meldung zurückgeben, wenn sie sie verarbeitet. Auf diese Weise kann Software, die diese Nachricht auf Windows-Systemen vor Windows 2000 simuliert, bestimmen, ob die Fensterprozedur die Nachricht verarbeitet oder [**DefWindowProc**](/windows/desktop/api/winuser/nf-winuser-defwindowproca) aufgerufen hat, um sie zu verarbeiten.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -110,7 +110,7 @@ Im Gegensatz zu den [**\_ WM-Nachrichten NCLBUTTONDBLCLK,**](wm-nclbuttondblclk.
 |-------------------------------------|-----------------------------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional \[nur Desktop-Apps\]<br/>                                                |
 | Unterstützte Mindestversion (Server)<br/> | Windows 2000 Server \[nur Desktop-Apps\]<br/>                                                      |
-| Header<br/>                   | <dl> <dt>Winuser.h (windowsx.h einschließen)</dt> </dl> |
+| Header<br/>                   | <dl> <dt>Winuser.h (einschließlich Windowsx.h)</dt> </dl> |
 
 
 

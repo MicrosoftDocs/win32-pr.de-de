@@ -15,19 +15,19 @@ ms.locfileid: "118327686"
 
 ## <a name="text"></a>Text
 
-AccessibleObjectFromPoint( {0} , ) hat zurückgegeben und erwartet S {1} {2} \_ OK
+AccessibleObjectFromPoint( {0} , ) zurückgegeben und erwartet S {1} {2} \_ OK
 
-## <a name="type"></a>type
+## <a name="type"></a>Typ
 
 Warnung
 
-## <a name="description"></a>BESCHREIBUNG
+## <a name="description"></a>Beschreibung
 
-[**AccessibleObjectFromPoint**](/windows/desktop/api/Oleacc/nf-oleacc-accessibleobjectfrompoint) hat S OK nicht \_ wie erwartet für die angegebenen Koordinaten zurückgeben.
+[**AccessibleObjectFromPoint**](/windows/desktop/api/Oleacc/nf-oleacc-accessibleobjectfrompoint) hat S OK für die angegebenen Koordinaten nicht \_ wie erwartet zurückgegeben.
 
 ## <a name="possible-causes"></a>Mögliche Ursachen
 
--   Die Benutzerinteraktion während der Überprüfung, z. B. das Verschieben des Fokus auf ein HWND ohne Ziel, beeinträchtigt den Überprüfungsprozess.
+-   Die Benutzerinteraktion während der Überprüfung, z. B. das Verschieben des Fokus auf ein Nicht-Ziel-HWND, hat den Überprüfungsprozess beeinträchtigt.
 -   Eine falsche oder ungültige MSAA-Implementierung.
 
 ## <a name="related-topics"></a>Zugehörige Themen

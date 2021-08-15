@@ -1,5 +1,5 @@
 ---
-description: Die SourceListClearSource-Methode entfernt ein Netzwerk oder eine URL-Quelle. Akzeptiert Type, den Quelltyp und SourcePath, den Quellpfad, als zu entfernende Parameter. Diese Methode ruft msiSourceListClearSource auf.
+description: Die SourceListClearSource-Methode entfernt ein Netzwerk oder eine URL-Quelle. Akzeptiert Type, den Quelltyp und SourcePath, den Quellpfad, als zu entfernende Parameter. Diese Methode ruft die MsiSourceListClearSource auf.
 ms.assetid: a55676d4-795d-4ffe-8621-ef47c16a936c
 title: Product.SourceListClearSource-Methode
 ms.topic: reference
@@ -22,7 +22,7 @@ ms.locfileid: "118376693"
 ---
 # <a name="productsourcelistclearsource-method"></a>Product.SourceListClearSource-Methode
 
-Die **SourceListClearSource-Methode** entfernt ein Netzwerk oder eine URL-Quelle. Akzeptiert *Type*, den Quelltyp und *SourcePath*, den Quellpfad, als zu entfernende Parameter. Diese Methode ruft [**msiSourceListClearSource auf.**](/windows/desktop/api/Msi/nf-msi-msisourcelistclearsourcea)
+Die **SourceListClearSource-Methode** entfernt ein Netzwerk oder eine URL-Quelle. Akzeptiert *Type*, den Quelltyp und *SourcePath*, den Quellpfad, als zu entfernende Parameter. Diese Methode ruft die [**MsiSourceListClearSource**](/windows/desktop/api/Msi/nf-msi-msisourcelistclearsourcea)auf.
 
 ## <a name="syntax"></a>Syntax
 
@@ -43,7 +43,7 @@ Product.SourceListClearSource(
 *Typ* 
 </dt> <dd>
 
-Typ der zu entfernenden Quelle: MSISOURCETYPE \_ NETWORK- oder MSISOURCETYPE-URL. \_
+Typ der zu entfernenden Quelle: MSISOURCETYPE \_ NETWORK oder MSISOURCETYPE \_ URL.
 
 </dd> <dt>
 
@@ -64,9 +64,9 @@ Diese Methode gibt keinen Wert zurück.
 
 | Anforderung | Wert |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Version<br/> | Windows Installer 5.0 auf Windows Server 2012, Windows 8, Windows Server 2008 R2 oder Windows 7. Windows Installer 4.0 oder Windows Installer 4.5 auf Windows Server 2008 oder Windows Vista. Windows Installer 3.0 oder höher auf Windows Server 2003, Windows XP und Windows 2000<br/> |
+| Version<br/> | Windows Installationsprogramm 5.0 auf Windows Server 2012, Windows 8, Windows Server 2008 R2 oder Windows 7. Windows Installer 4.0 oder Windows Installer 4.5 auf Windows Server 2008 oder Windows Vista. Windows Installationsprogramm 3.0 oder höher auf Windows Server 2003, Windows XP und Windows 2000<br/> |
 | DLL<br/>     | <dl> <dt>Msi.dll</dt> </dl>                                                                                                                                                                                                   |
-| IID<br/>     | IID IProduct ist als \_ 000C10A0-0000-0000-C000-00000000046 definiert.<br/>                                                                                                                                                                                                          |
+| IID<br/>     | IID \_ IProduct ist als 000C10A0-0000-0000-C000-000000000046 definiert.<br/>                                                                                                                                                                                                          |
 
 
 

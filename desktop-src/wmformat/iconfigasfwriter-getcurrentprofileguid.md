@@ -3,7 +3,7 @@ title: IConfigAsfWriter GetCurrentProfileGuid-Methode
 description: Die GetCurrentProfileGuid-Methode ruft die aktuelle Windows Profil-GUID des Mediensystems ab.
 ms.assetid: e7a2ecc0-48d4-446c-852a-0d7677cbbe71
 keywords:
-- 'GetCurrentProfileGuid-Methode : Windows Media Format'
+- GetCurrentProfileGuid-Methode windows Media Format
 - GetCurrentProfileGuid-Methode windows Media Format , IConfigAsfWriter-Schnittstelle
 - IConfigAsfWriter-Schnittstelle windows Media Format , GetCurrentProfileGuid-Methode
 topic_type:
@@ -24,7 +24,7 @@ ms.locfileid: "118433639"
 ---
 # <a name="iconfigasfwritergetcurrentprofileguid-method"></a>IConfigAsfWriter::GetCurrentProfileGuid-Methode
 
-Die **GetCurrentProfileGuid-Methode** ruft die aktuelle Windows Profil-GUID des Mediensystems ab.
+Die **GetCurrentProfileGuid-Methode** ruft die aktuelle Windows Media-Systemprofil-GUID ab.
 
 ## <a name="syntax"></a>Syntax
 

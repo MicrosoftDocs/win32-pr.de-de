@@ -1,6 +1,6 @@
 ---
-title: PS \_ 1 \_ 4-quellregistrierungs modifiziererer für texld, texcrd
-description: Zwei Pixel-Shader Version 1 \_ 4 Textur Adress Anweisungen, texld-PS \_ 1 \_ 4 und texcrd-PS, haben eine benutzerdefinierte Syntax.
+title: ps \_ 1 \_ 4 Quellregistermodifizierer für texld, texcrd
+description: Anweisungen zur Texturadresse für zwei Pixel-Shader, Version 1 \_ 4, texld – ps \_ 1 4 und \_ texcrd – ps – verfügen über benutzerdefinierte Syntax.
 ms.assetid: bbc8074f-882e-4b67-ae4d-1641ceb7f3ad
 ms.topic: article
 ms.date: 05/31/2018
@@ -9,37 +9,37 @@ topic_type:
 api_name: ''
 api_type: ''
 api_location: ''
-ms.openlocfilehash: af2097ee682aec7da0ca36df9e4b465fb360f814
-ms.sourcegitcommit: b95a94ffffda33f9ebbdd41787c01866444b4cf4
-ms.translationtype: HT
+ms.openlocfilehash: 63a0cfd212767a0219af83d734d3562edacc84901098afcf77c786d8895f32d8
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/27/2019
-ms.locfileid: "104101142"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118512876"
 ---
-# <a name="ps_1_4-source-register-modifiers-for-texld-texcrd"></a>PS \_ 1 \_ 4-quellregistrierungs modifiziererer für texld, texcrd
+# <a name="ps_1_4-source-register-modifiers-for-texld-texcrd"></a>ps \_ 1 \_ 4 Quellregistermodifizierer für texld, texcrd
 
-Zwei Pixel-Shader Version 1 \_ 4 Textur Adress Anweisungen, [texld-PS \_ 1 \_ 4](texld---ps-1-4.md) und [texcrd-PS](texcrd---ps.md), haben eine benutzerdefinierte Syntax. Diese Anweisungen unterstützen Ihren eigenen Satz von Quell Registrierungs Modifizierern, Quell Registrierungs-Selectors und Ziel-Register-Schreib Masken, wie hier gezeigt.
+Anweisungen zur Texturadresse für zwei Pixel-Shader, Version 1 \_ 4, [texld – ps \_ 1 \_ 4](texld---ps-1-4.md) und [texcrd – ps](texcrd---ps.md)– verfügen über benutzerdefinierte Syntax. Diese Anweisungen unterstützen ihren eigenen Satz von Quellregistermodifizierern, Quellregister-Selektoren und Zielregister-Schreibmasken, wie hier gezeigt.
 
-## <a name="source-register-modifiers-for-texld-and-texcrd"></a>Quellregistrierungs modifiziererer für texld und texcrd
+## <a name="source-register-modifiers-for-texld-and-texcrd"></a>Quellregistermodifizierer für texld und texcrd
 
-Diese Modifizierer stellen eine Projective Teilungs Funktionalität bereit, indem die x-und y-Werte durch die z-oder w-Werte aufgeteilt werden.
+Diese Modifizierer bieten projektive Divisionsfunktionen, indem die x- und y-Werte entweder durch die z- oder w-Werte dividiert werden.
 
 
 
-| Quellregistrierungs modifiziererer | BESCHREIBUNG                | Syntax       |
+| Quellregistermodifizierer | BESCHREIBUNG                | Syntax       |
 |---------------------------|----------------------------|--------------|
-| \_DZ                      | Dividieren von x, y-Komponenten durch z | Registrieren von \_ DZ |
-| \_db                      | Dividieren von x, y-Komponenten durch z | Datenbank \_ registrieren |
-| \_DW                      | Dividieren von x, y-Komponenten durch w | \_DW registrieren |
-| \_da                      | Dividieren von x, y-Komponenten durch w | Registrieren von \_ da |
+| \_( )                      | Dividieren von x,y-Komponenten durch z | Registrieren \_ von "Register" |
+| \_db                      | Dividieren von x,y-Komponenten durch z | register \_ db |
+| \_Dw                      | Dividieren von x,y-Komponenten durch w | register \_ dw |
+| \_da                      | Dividieren von x,y-Komponenten durch w | register \_ da |
 
 
 
- 
+ 
 
-### <a name="remarks"></a>Bemerkungen
+### <a name="remarks"></a>Hinweise
 
-Der-Modifizierer für die-oder-Datenbank \_ \_ führt Folgendes aus:
+Der \_ \_ Modifizierer "modifizierer" oder "db" führt Folgendes aus:
 
 
 ```
@@ -51,7 +51,7 @@ w' is undefined
 
 
 
-Der \_ DW-oder \_ da-Modifizierer führt Folgendes aus:
+Der \_ dw- oder \_ da-Modifizierer führt Folgendes aus:
 
 
 ```
@@ -67,12 +67,12 @@ w' is undefined
 
 <dl> <dt>
 
-[Pixel-Shader-quellregistrierungs Modifizierern](dx9-graphics-reference-asm-ps-registers-modifiers-source.md)
+[Modifizierer für Das Pixel-Shader-Quellregister](dx9-graphics-reference-asm-ps-registers-modifiers-source.md)
 </dt> </dl>
 
- 
+ 
 
- 
+ 
 
 
 

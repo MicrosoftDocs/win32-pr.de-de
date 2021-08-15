@@ -1,9 +1,9 @@
 ---
-title: Waveprefixzähltbits-Funktion
-description: Gibt die Summe aller angegebenen booleschen Variablen für alle aktiven Bereiche mit Indizes zurück, die kleiner als die aktuelle Seite sind.
+title: WavePrefixCountBits-Funktion
+description: Gibt die Summe aller angegebenen booleschen Variablen zurück, die für alle aktiven Lanes mit Indizes, die kleiner als die aktuelle Spur sind, auf TRUE festgelegt sind.
 ms.assetid: AEC9AFD7-6478-4397-B531-73990D30AA48
 keywords:
-- Waveprefixzähltbits-Funktion HLSL
+- WavePrefixCountBits-Funktion HLSL
 topic_type:
 - apiref
 api_name:
@@ -13,16 +13,16 @@ api_type:
 ms.topic: reference
 ms.date: 05/31/2018
 api_location: ''
-ms.openlocfilehash: 72f35df1e463ff89441938e4cae19a890821baf9
-ms.sourcegitcommit: f01bc6744cea55ad1aeeace7981a30b567e6fe60
-ms.translationtype: HT
+ms.openlocfilehash: 048b63d24e87d97f0e0223083a91694c0471b9e38ad21afbc487c02d711d720d
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/04/2020
-ms.locfileid: "104039845"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118504676"
 ---
-# <a name="waveprefixcountbits-function"></a>Waveprefixzähltbits-Funktion
+# <a name="waveprefixcountbits-function"></a>WavePrefixCountBits-Funktion
 
-Gibt die Summe aller angegebenen booleschen Variablen für alle aktiven Bereiche mit Indizes zurück, die kleiner als die aktuelle Seite sind.
+Gibt die Summe aller angegebenen booleschen Variablen zurück, die für alle aktiven Lanes mit Indizes, die kleiner als die aktuelle Spur sind, auf TRUE festgelegt sind.
 
 ## <a name="syntax"></a>Syntax
 
@@ -39,7 +39,7 @@ uint WavePrefixCountBits(
 
 <dl> <dt>
 
-*Bbit* 
+*bBit* 
 </dt> <dd>
 
 Die angegebenen booleschen Variablen.
@@ -48,11 +48,11 @@ Die angegebenen booleschen Variablen.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Die Summe aller angegebenen booleschen Variablen ist für alle aktiven Bereiche mit Indizes, die kleiner als die aktuelle Strecke sind, auf true festgelegt.
+Die Summe aller angegebenen booleschen Variablen, die für alle aktiven Lanes mit Indizes, die kleiner als die aktuelle Spur sind, auf TRUE festgelegt sind.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Diese Funktion wird vom Shader-Modell 6,0 in allen shaderphasen unterstützt. 
+Diese Funktion wird von Shadermodell 6.0 in allen Shaderstufen unterstützt. 
 
 
 
@@ -60,7 +60,7 @@ Diese Funktion wird vom Shader-Modell 6,0 in allen shaderphasen unterstützt.
 
 ## <a name="examples"></a>Beispiele
 
-Im folgenden Code wird beschrieben, wie ein komprimierter Schreibvorgang in einen geordneten Stream implementiert wird, wobei die Anzahl der pro Lane geschriebenen Elemente entweder 1 oder 0 ist.
+Der folgende Code beschreibt, wie ein komprimierter Schreibzugriff in einen geordneten Stream implementiert wird, wobei die Anzahl der pro Lane geschriebenen Elemente entweder 1 oder 0 beträgt.
 
 ``` syntax
 bool bDoesThisLaneHaveAnAppendItem = <expr>;
@@ -84,10 +84,10 @@ buffer[appendOffset] = myData; // write to the offset location for this lane
 
 <dl> <dt>
 
-[Übersicht über Shader-Modell 6](hlsl-shader-model-6-0-features-for-direct3d-12.md)
+[Übersicht über Shadermodell 6](hlsl-shader-model-6-0-features-for-direct3d-12.md)
 </dt> <dt>
 
-[Shader-Modell 6](shader-model-6-0.md)
+[Shadermodell 6](shader-model-6-0.md)
 </dt> </dl>
 
  

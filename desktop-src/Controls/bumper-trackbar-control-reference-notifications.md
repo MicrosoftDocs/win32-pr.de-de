@@ -15,9 +15,9 @@ ms.locfileid: "118414832"
 
 ## <a name="in-this-section"></a>In diesem Abschnitt
 
--   [NM \_ CUSTOMDRAW (Trackleiste)](nm-customdraw-trackbar.md)
--   [NM \_ RELEASEDCAPTURE (Trackleiste)](nm-releasedcapture-trackbar-.md)
--   [TRBN \_ THUMBPOSCHANGING](trbn-thumbposchanging.md)
+-   [NM \_ CUSTOMDRAW (Trackbar)](nm-customdraw-trackbar.md)
+-   [NM \_ RELEASEDCAPTURE (Trackbar)](nm-releasedcapture-trackbar-.md)
+-   [TRBN \_ THUMBPOSCHANGEING](trbn-thumbposchanging.md)
 -   [WM \_ HSCROLL](wm-hscroll.md)
 -   [WM \_ VSCROLL](wm-vscroll.md)
 

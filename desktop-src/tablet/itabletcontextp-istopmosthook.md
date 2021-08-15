@@ -1,5 +1,5 @@
 ---
-description: Gibt an, ob sich der Tablet-Kontext im obersten Hook befindet.
+description: Gibt an, ob sich der Tablet-Kontext am oberen Ende des Hooks befindet.
 ms.assetid: b4aaee47-3d77-49cd-9600-f41764b9fb85
 title: ITabletContextP::IsTopMostHook-Methode
 ms.topic: reference
@@ -23,7 +23,7 @@ ms.locfileid: "118449803"
 ---
 # <a name="itabletcontextpistopmosthook-method"></a>ITabletContextP::IsTopMostHook-Methode
 
-Gibt an, ob sich der Tablet-Kontext im obersten Hook befindet.
+Gibt an, ob sich der Tablet-Kontext am oberen Ende des Hooks befindet.
 
 ## <a name="syntax"></a>Syntax
 
@@ -65,7 +65,7 @@ Diese Methode kann einen dieser Werte zurückgeben.
 
 
 
-## <a name="see-also"></a>Weitere Informationen:
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 

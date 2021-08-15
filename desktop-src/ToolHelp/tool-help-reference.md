@@ -15,7 +15,7 @@ ms.locfileid: "118348317"
 
 Die folgenden Funktionen und Strukturen sind der Toolhilfebibliothek zugeordnet.
 
--   [Tool-Hilfefunktionen](tool-help-functions.md)
+-   [Toolhilfefunktionen](tool-help-functions.md)
 -   [Hilfestrukturen für Tools](tool-help-structures.md)
 
  

@@ -1,7 +1,7 @@
 ---
 description: Winsock-Katalogänderungsereignis für einen LSP-Entfernungsvorgang (Layered Service Provider).
 ms.assetid: 86FF17F7-8CCF-4A03-899F-42BFACDF3F54
-title: WINSOCK_WS2HELP_LSP_REMOVE Ereignis
+title: WINSOCK_WS2HELP_LSP_REMOVE-Ereignis
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -22,11 +22,11 @@ ms.locfileid: "118321592"
 # <a name="winsock_ws2help_lsp_remove-event"></a>WINSOCK \_ WS2HELP \_ LSP \_ REMOVE-Ereignis
 
 > [!Note]  
-> Mehrstufige Dienstanbieter sind veraltet. Verwenden Sie ab Windows 8 und Windows Server 2012 [Windows Filterplattform](../fwp/windows-filtering-platform-start-page.md).
+> Mehrschichtige Dienstanbieter sind veraltet. Verwenden Sie ab Windows 8 Windows Server 2012 Filterplattform [Windows Filterplattform](../fwp/windows-filtering-platform-start-page.md).
 
  
 
-Das **WINSOCK \_ WS2HELP \_ LSP \_ REMOVE-Ereignis** ist ein Winsock-Katalogänderungsereignis für einen LSP-Entfernungsvorgang (Layered Service Provider).
+Das **WINSOCK \_ WS2HELP \_ LSP \_ REMOVE-Ereignis** ist ein Winsock-Katalogänderungsereignis für einen mehrschichtigen Dienstanbieter-Entfernungsvorgang (Layered Service Provider, LSP).
 
 
 ```C++
@@ -42,21 +42,21 @@ const EVENT_DESCRIPTOR WINSOCK_WS2HELP_LSP_REMOVE = {0x2, 0x0, 0x10, 0x0, 0x0, 0
 *LSP-Name* 
 </dt> <dd>
 
-Der Name des LSP, der aus dem **szProtocol-Member** der [**WSAPROTOCOL \_ INFO-Struktur**](/windows/win32/api/winsock2/ns-winsock2-wsaprotocol_infoa) für den LSP abgerufen wurde, der entfernt wird.
+Der Name des LSP, der vom **szProtocol-Member** der [**WSAPROTOCOL \_ INFO-Struktur**](/windows/win32/api/winsock2/ns-winsock2-wsaprotocol_infoa) für den zu entfernenden LSP erhalten wurde.
 
 </dd> <dt>
 
 *Katalog* 
 </dt> <dd>
 
-Der Winsock-Katalog (32-Bit oder 64-Bit), aus dem der LSP entfernt wird. Dies ist ein ganzzahliger Wert, der entweder 32 oder 64 ist.
+Der Winsock-Katalog (32-Bit oder 64-Bit), in dem der LSP entfernt wird. Dies ist ein ganzzahliger Wert, der entweder 32 oder 64 ist.
 
 </dd> <dt>
 
 *Installationsprogramm* 
 </dt> <dd>
 
-Der Moduldateiname der Anwendung, die den LSP-Entfernungsaufruf vornimmt.
+Der Moduldateiname der Anwendung, die den LSP-Entfernungsaufruf abhebt.
 
 </dd> <dt>
 
@@ -70,7 +70,7 @@ Der GUID-Wert des Winsock-Transportanbieters, aus dem der LSP entfernt wird.
 *Kategorie* 
 </dt> <dd>
 
-Der **dwCatalogEntryId-Member** der [**WSAPROTOCOL \_ INFO-Struktur**](/windows/win32/api/winsock2/ns-winsock2-wsaprotocol_infoa) für den LSP, der entfernt wird.
+Das **dwCatalogEntryId-Member** der [**WSAPROTOCOL \_ INFO-Struktur**](/windows/win32/api/winsock2/ns-winsock2-wsaprotocol_infoa) für den zu entfernenden LSP.
 
 </dd> </dl>
 
@@ -84,7 +84,7 @@ Das **WINSOCK \_ WS2HELP \_ LSP \_ REMOVE-Ereignis** wird für einen LSP-Entfern
 
 | Anforderung | Wert |
 |-------------------------------------|------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Windows \[Nur Vista-Desktop-Apps\]<br/>       |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur \[ Vista-Desktop-Apps\]<br/>       |
 | Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2008-Desktop-Apps\]<br/> |
 
 
@@ -102,7 +102,7 @@ Das **WINSOCK \_ WS2HELP \_ LSP \_ REMOVE-Ereignis** wird für einen LSP-Entfern
 [Winsock-Ablaufverfolgungsebenen](winsock-tracing-levels.md)
 </dt> <dt>
 
-[Details zur Ablaufverfolgung von Winsock-Katalogänderungen](winsock-layered-service-provider-tracing-event-details.md)
+[Details zur Ablaufverfolgung für Winsock-Katalogänderung](winsock-layered-service-provider-tracing-event-details.md)
 </dt> </dl>
 
  

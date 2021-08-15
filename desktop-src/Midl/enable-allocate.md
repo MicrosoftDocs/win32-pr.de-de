@@ -1,9 +1,9 @@
 ---
 title: enable_allocate-Attribut
-description: Das Attribut \ enable \_ attributs\acf gibt an, dass der Serverstub-Code die Stub-Speicher Verwaltungs Umgebung aktivieren soll.
+description: Das Attribut \enable allocate\ ACF gibt an, dass der \_ Serverstubcode die Stubspeicherverwaltungsumgebung aktivieren soll.
 ms.assetid: 3a232a82-f114-4d8c-8b71-cf8860c77db3
 keywords:
-- enable_allocate Attribut-Mittel l
+- enable_allocate MIDL-Attribut
 topic_type:
 - apiref
 api_name:
@@ -12,21 +12,21 @@ api_type:
 - NA
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: f43e8c10592fcf99ea294327c400c579ce45bf6b
-ms.sourcegitcommit: ebd3ce6908ff865f1ef66f2fc96769be0aad82e1
+ms.openlocfilehash: 58f44b3a2f11094c37edf24f5fc00bbd8229d65dc2a54292acd2ca3221472e85
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/19/2020
-ms.locfileid: "104101506"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119979620"
 ---
-# <a name="enable_allocate-attribute"></a>\_Attribut zuweisen aktivieren
+# <a name="enable_allocate-attribute"></a>Attribut \_ "allocate" aktivieren
 
-Das Attribut "Zuordnungs-ACF **\[ aktivieren \_ \]** " gibt an, dass der serverstubcode die Stub-Speicher Verwaltungs Umgebung aktivieren soll.
+Das **\[ Enable \_ allocate \]** ACF-Attribut gibt an, dass der Serverstubcode die Stubspeicherverwaltungsumgebung aktivieren soll.
 
 > [!Note]  
-> Das Attribut " **\[ \_ zuordnen \]** " ist veraltet und wird nicht mehr unterstützt.
+> Das **\[ Attribut enable \_ allocate \]** ist veraltet und wird nicht mehr unterstützt.
 
- 
+ 
 
 ``` syntax
 [
@@ -43,51 +43,51 @@ interface interface-name
 
 <dl> <dt>
 
-*optional-Attribut-List* 
+*optional-attribute-list* 
 </dt> <dd>
 
-Gibt eine Liste von 0 (null) oder mehr zusätzlichen Mittelwert Attributen an.
+Gibt eine Liste mit null oder mehr zusätzlichen MIDL-Attributen an.
 
 </dd> <dt>
 
-*Schnittstellen Name* 
+*Schnittstellenname* 
 </dt> <dd>
 
-Der Name der Schnittstelle, auf die das **\[ enable \_ allcoate \]** -Attribut angewendet wird.
+Der Name der Schnittstelle, auf die **\[ das Enable \_ allcoate-Attribut \]** angewendet wird.
 
 </dd> </dl>
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Im Standardmodus aktiviert der Serverstub die Arbeitsspeicher Umgebung nur, wenn das Attribut " **\[ \_ zuordnen \]** " verwendet wird. Die Speicher Verwaltungs Umgebung muss aktiviert werden, damit der Arbeitsspeicher mithilfe von [**rpcsmallozugewiesen**](/windows/desktop/api/rpcndr/nf-rpcndr-rpcsmallocate)werden kann. Im **eines Zertifikats** -Modus (bei der Kompilierung mithilfe des [**/OSF**](-osf.md) -Schalters) aktiviert der Stub diese Umgebung automatisch oder bei einer Anforderung, wenn das Attribut " **\[ \_ zuordnen \]** " verwendet wird.
+Im Standardmodus aktiviert der Serverstub die Speicherumgebung nur, wenn das **\[ Attribut enable \_ allocate \]** verwendet wird. Die Speicherverwaltungsumgebung muss aktiviert sein, bevor Arbeitsspeicher mithilfe von [**RpcSmAllocate zugeordnet werden kann.**](/windows/desktop/api/rpcndr/nf-rpcndr-rpcsmallocate) Im **osf-Modus** (wenn Sie mit dem [**Schalter /osf**](-osf.md) kompilieren) aktiviert der Stub diese Umgebung automatisch oder auf Anforderung, wenn das **\[ Attribut enable \_ allocate \]** verwendet wird.
 
-Der Client seitige Stub kann für die **RPCSS** -Speicher Verwaltungs Umgebung empfindlich sein. Wenn ein sensibler Clientstub ausgeführt wird, wenn das **RPCSS** -Paket deaktiviert ist, werden die standardmäßigen benutzerallokator/-deallocators aufgerufen (z. b. " [Mittel l Benutzer", wenn Sie den \_ \_](/windows/desktop/Rpc/the-midl-user-allocate-function) /  [ \_ Benutzer \_ kostenlos](/windows/desktop/Rpc/the-midl-user-free-function)zuweisen). Wenn diese Option aktiviert ist, verwendet das **RPCSS** -Paket das zuordnerpaar/das dezuordnerpaar aus dem Paket. Im Standardmodus ist der Client nur dann sensibel, wenn das Attribut " **\[ \_ zuordnen \]** " verwendet wird. In der Regel arbeitet der Client seitige Stub in der deaktivierten Umgebung. Im **eines Zertifikats** -Modus (bei der Kompilierung mithilfe des [**/OSF**](-osf.md) -Schalters) ist der Client immer für die **RPCSS** -Speicher Verwaltungs Umgebung sensibel. Daher wirkt sich das Attribut " **\[ \_ zuordnen \]** " nicht auf die Clientstub aus.
+Der clientseitige Stub kann für die **Rpcss-Speicherverwaltungsumgebung** vertraulich sein. Wenn ein sensibler Clientstub ausgeführt wird, wenn das **Rpcss-Paket** deaktiviert ist, werden die Standardbenutzerzuweisungen bzw. -zuordnungen aufgerufen (z. B. der Midl-Benutzer weist [midl \_ \_](/windows/desktop/Rpc/the-midl-user-allocate-function)user /  [ \_ free \_ zu).](/windows/desktop/Rpc/the-midl-user-free-function) Wenn diese Option aktiviert ist, verwendet das **Rpcss-Paket** das Zuweisungs-/Zuordnungspaar aus dem Paket. Im Standardmodus ist der Client nur dann sensibel, wenn das **\[ Attribut enable \_ allocate \]** verwendet wird. In der Regel wird der clientseitige Stub in der deaktivierten Umgebung ausgeführt. Im **osf-Modus** (wenn Sie mit dem [**Schalter /osf**](-osf.md) kompilieren) ist der Client immer auf die **Rpcss-Speicherverwaltungsumgebung** sensibel, und daher wirkt sich das **\[ Enable \_ \] Allocate-Attribut** nicht auf die Clientstubs aus.
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[Anwendungs Konfigurationsdatei (ACF)](application-configuration-file-acf-.md)
+[Anwendungskonfigurationsdatei (Application Configuration File, ACF)](application-configuration-file-acf-.md)
 </dt> <dt>
 
-[mittlere Benutzer Zuordnungen \_ \_](/windows/desktop/Rpc/the-midl-user-allocate-function)
+[midl \_ user \_ allocate](/windows/desktop/Rpc/the-midl-user-allocate-function)
 </dt> <dt>
 
-[mittlerer l- \_ Benutzer \_ kostenlos](/windows/desktop/Rpc/the-midl-user-free-function)
+[midl \_ user \_ free](/windows/desktop/Rpc/the-midl-user-free-function)
 </dt> <dt>
 
 [**/osf**](-osf.md)
 </dt> <dt>
 
-[Rpcsmdisablezuordnen](/windows/desktop/api/rpcndr/nf-rpcndr-rpcsmdisableallocate)
+[RpcSmDisableAllocate](/windows/desktop/api/rpcndr/nf-rpcndr-rpcsmdisableallocate)
 </dt> <dt>
 
-[Rpcsmenablezuordnen](/windows/desktop/api/rpcndr/nf-rpcndr-rpcsmenableallocate)
+[RpcSmEnableAllocate](/windows/desktop/api/rpcndr/nf-rpcndr-rpcsmenableallocate)
 </dt> <dt>
 
-[Rpcsmfree](/windows/desktop/api/rpcndr/nf-rpcndr-rpcsmfree)
+[RpcSmFree](/windows/desktop/api/rpcndr/nf-rpcndr-rpcsmfree)
 </dt> </dl>
 
- 
+ 
 
- 
+ 

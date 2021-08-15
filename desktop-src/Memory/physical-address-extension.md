@@ -1,77 +1,77 @@
 ---
-description: Bei der physischen Adress Erweiterung (PE) handelt es sich um eine Prozessor Funktion, mit der x86-Prozessoren auf mehr als 4 GB physischen Arbeitsspeicher in fähigen Windows-Versionen zugreifen können.
+description: Physical Address Extension (PAE) ist ein Prozessorfeature, das x86-Prozessoren den Zugriff auf mehr als 4 GB physischen Speicher in fähigen Versionen von Windows.
 ms.assetid: 1aec2414-cc93-4a86-955d-2433360c9125
 title: Physical Address Extension
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 5cd313c1025eaaf4859436aebef90288c6d3fe49
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: f2fd9193a19d228f26a09865086c59b65c0019b3cee42142dfd27188eff30169
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "104050603"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119979720"
 ---
 # <a name="physical-address-extension"></a>Physical Address Extension
 
-Bei der physischen Adress Erweiterung (PE) handelt es sich um eine Prozessor Funktion, mit der x86-Prozessoren auf mehr als 4 GB physischen Arbeitsspeicher in fähigen Windows-Versionen zugreifen können. Bestimmte 32-Bit-Versionen von Windows Server, die auf x86-basierten Systemen ausgeführt werden, können für den Zugriff auf bis zu 64 GB oder 128 GB an physischem Arbeitsspeicher verwenden. Dies hängt von der physischen Adressgröße des Prozessors ab. Weitere Informationen finden Sie unter Arbeits [Speicher Grenzwerte für Windows-Releases](memory-limits-for-windows-releases.md).
+Physical Address Extension (PAE) ist ein Prozessorfeature, das x86-Prozessoren den Zugriff auf mehr als 4 GB physischen Speicher in fähigen Versionen von Windows. Bestimmte 32-Bit-Versionen von Windows Server, die auf x86-basierten Systemen ausgeführt werden, können PAE verwenden, um abhängig von der physischen Adressgröße des Prozessors auf bis zu 64 GB oder 128 GB physischen Arbeitsspeicher zu zugreifen. Weitere Informationen finden Sie unter [Arbeitsspeicherlimits für Windows Releases.](memory-limits-for-windows-releases.md)
 
-Die Intel Itanium-und x64-Prozessorarchitekturen können nativ auf mehr als 4 GB physischen Speicher zugreifen und somit nicht die Entsprechung von "PE" bereitstellen. Die Verwendung von "bin" wird nur von 32-Bit-Versionen von Windows verwendet, die auf x86-basierten Systemen ausgeführt werden.
+Die Intel Itanium- und x64-Prozessorarchitekturen können nativ auf mehr als 4 GB physischen Speicher zugreifen und bieten daher nicht das Äquivalent zu PAE. PAE wird nur von 32-Bit-Versionen von Windows auf x86-basierten Systemen verwendet.
 
-Bei der Verwendung von PE wechselt das Betriebssystem von der zweistufigen linearen Adressübersetzung in die Adressübersetzung mit drei Ebenen. Anstatt eine lineare Adresse in drei separate Felder zur Indizierung in Speicher Tabellen aufzuteilen, wird Sie in vier separate Felder aufgeteilt: ein 2-Bit-Bitfeld, 2 9-Bit-Bitfelder und ein 12-Bit-Bitfeld, das der von der Intel-Architektur (4 KB) implementierten Seitengröße entspricht. Die Größe von Seitentabellen Einträgen (PTEs) und Seiten Verzeichnis Einträgen (PDEs) im PAE-Modus wird von 32 auf 64 Bits angehoben. Die zusätzlichen Bits ermöglichen einem Betriebssystem-Pte oder PDE den Verweis auf physischen Speicher über 4 GB.
+Mit PAE wechselt das Betriebssystem von der linearen Adressübersetzung auf zwei Ebene in die Adressübersetzung auf drei Ebene. Anstatt eine lineare Adresse in drei separate Felder für die Indizierung in Speichertabellen zu unterteilen, wird sie in vier separate Felder aufgeteilt: ein 2-Bit-Bitfeld, zwei 9-Bit-Bitfelder und ein 12-Bit-Bitfeld, das der von der Intel-Architektur implementierten Seitengröße entspricht (4 KB). Die Größe von Seitentabelleneinträgen (Page Table Entries, PTEs) und Seitenverzeichniseinträgen (PDEs) im PAE-Modus wird von 32 auf 64 Bits erhöht. Die zusätzlichen Bits ermöglichen einem PTE- oder PDE-Betriebssystem, auf physischen Speicher über 4 GB zu verweisen.
 
-In 32-Bit-Fenstern, die auf x64-basierten Systemen ausgeführt werden, bietet auch eine Reihe erweiterter System-und Prozessor Features, wie z. b. die Hardware aktivierte [Daten Ausführungs Verhinderung (Data Execution Prevention](data-execution-prevention.md) , DEP), [nicht einheitlicher Speicherzugriff (Non-Uniform Memory Access, NUMA)](../procthread/numa-support.md)und die Möglichkeit, einem System während der Ausführung Arbeitsspeicher hinzuzufügen (Speicherplatz
+In 32-Bit-Windows, die auf x64-basierten Systemen ausgeführt werden, ermöglicht PAE auch mehrere erweiterte System- und Prozessorfeatures, darunter hardwarefähige Datenausführungsverhindung (Data [Execution Prevention,](data-execution-prevention.md) DEP), nicht einheitlicher Speicherzugriff [(NON-Uniform Memory Access, NUMA)](../procthread/numa-support.md)und die Möglichkeit, einem System während der Ausführung Arbeitsspeicher hinzuzufügen (Hot-Add-Arbeitsspeicher).
 
-Der für einen Prozess verfügbare virtuelle Adressraum wird von der Kategorie nicht geändert. Jeder Prozess, der in 32-Bit-Windows ausgeführt wird, ist immer noch auf einen virtuellen Adressraum von 4 GB beschränkt.
+Pae ändert nicht die Menge des virtuellen Adressraums, der für einen Prozess verfügbar ist. Jeder Prozess, der in 32-Bit-Windows ausgeführt wird, ist weiterhin auf einen virtuellen Adressraum von 4 GB beschränkt.
 
-## <a name="system-support-for-pae"></a>System Unterstützung für die
+## <a name="system-support-for-pae"></a>Systemunterstützung für PAE
 
-Der Wert von "bin" wird nur für die folgenden 32-Bit-Versionen von Windows unterstützt, die auf x86-basierten Systemen ausgeführt werden
+PAE wird nur in den folgenden 32-Bit-Versionen von Windows auf x86-basierten Systemen unterstützt:
 
 -   Windows 7 (nur 32 Bit)
 -   Windows Server 2008 (nur 32 Bit)
--   Windows Vista (nur 32 Bit)
+-   Windows Vista (nur 32-Bit)
 -   Windows Server 2003 (nur 32 Bit)
--   Windows XP (nur 32 Bit)
+-   Windows XP (nur 32-Bit)
 
-## <a name="enabling-pae"></a>Aktivieren von "bin"
+## <a name="enabling-pae"></a>Aktivieren der PAE
 
-Wenn die DEP-Funktion auf einem Computer aktiviert ist, der das Hardware fähige DEP-Gerät unterstützt, oder wenn der Computer für das Hinzufügen von Arbeitsspeicher Geräten im Arbeitsspeicher mit einem Wert von mehr als 4 GB konfiguriert ist. Wenn der Computer kein Hardware fähiges DEP-Gerät unterstützt oder nicht für das Hinzufügen von Arbeitsspeicher Geräten im Arbeitsspeicher in einem Arbeitsspeicher Bereich von mehr als 4 GB konfiguriert ist, muss die-Option explizit aktiviert werden.
+Windows aktiviert PAE automatisch, wenn DEP auf einem Computer aktiviert ist, der hardwarefähigen DEP unterstützt, oder wenn der Computer für Hot-Add-Speichergeräte in Arbeitsspeicherbereichen über 4 GB konfiguriert ist. Wenn der Computer keinen hardwarefähigen DEP unterstützt oder nicht für Hot-Add-Speichergeräte im Arbeitsspeicher von mehr als 4 GB konfiguriert ist, muss PAE explizit aktiviert werden.
 
-Verwenden Sie zum expliziten Aktivieren von PAE den folgenden [**Bcdedit**](/windows-hardware/drivers/devtest/bcdedit--set) -Befehl/Set, um die Option für den **PAE** -Start Eintrag festzulegen:
+Um PAE explizit zu aktivieren, verwenden Sie den folgenden [**BCDEdit /set-Befehl,**](/windows-hardware/drivers/devtest/bcdedit--set) um die Option für den **Pae-Starteintrag** zu festlegen:
 
- **bcdedit/set \[ {ID} \] PAE forceenable**  
-
-
-Wenn DEP aktiviert ist, kann die Funktion nicht deaktiviert werden. Verwenden Sie die folgenden [**bcdedit/set**](/windows-hardware/drivers/devtest/bcdedit--set) -Befehle, um DEP und PAE zu deaktivieren:
-
- **bcdedit/set \[ {ID} \] NX AlwaysOff**  
-**bcdedit/set \[ {ID} \] PAE forcedeaktiviert**  
+ **bcdedit /set \[ {ID} \] pae ForceEnable**  
 
 
-**Windows Server 2003 und Windows XP:** Verwenden Sie zum Aktivieren von "PE" den Schalter " **/PAE-Schalter** " in der [boot.ini](/windows-hardware/drivers/devtest/overview-of-the-boot-ini-file) -Datei. Verwenden Sie zum Deaktivieren von "PE" den **/NOPAE** -Schalter. Verwenden Sie zum Deaktivieren des DEP den **/Execute** -Schalter.
+Wenn DEP aktiviert ist, kann PAE nicht deaktiviert werden. Verwenden Sie die folgenden [**BCDEdit /set-Befehle,**](/windows-hardware/drivers/devtest/bcdedit--set) um DEP und PAE zu deaktivieren:
 
-## <a name="comparing-pae-and-other-large-memory-support"></a>Vergleichen von Unterstützung von "PE" und anderem Umfang
+ **bcdedit /set \[ {ID} \] nx AlwaysOff**  
+**bcdedit /set \[ {ID} \] pae ForceDisable**  
 
-Die Erweiterungen von "PE", " [4 Gigabyte](4-gigabyte-tuning.md) " (4GT) und " [Address windowingextensions](address-windowing-extensions.md) " (AWE) dienen unterschiedlichen Zwecken und können unabhängig voneinander verwendet werden:
 
--   Das Betriebssystem ermöglicht dem Betriebssystem den Zugriff auf und die Verwendung von mehr als 4 GB physischem Arbeitsspeicher.
--   4GT vergrößert den Teil des virtuellen Adressraums, der einem Prozess von 2 GB bis zu 3 GB zur Verfügung steht.
--   Bei AWE handelt es sich um einen Satz von APIs, mit denen ein Prozess nicht auslagerbarer physischer Speicher zuordnen und dann Teile dieses Speichers dynamisch dem virtuellen Adressraum des Prozesses zuordnen kann.
+**Windows Server 2003 und Windows XP:** Verwenden Sie zum Aktivieren der PAE den **Schalter /PAE** in der [boot.ini](/windows-hardware/drivers/devtest/overview-of-the-boot-ini-file) Datei. Verwenden Sie zum Deaktivieren der PAE **den Schalter /NOPAE.** Verwenden Sie zum Deaktivieren von DEP den **Schalter /EXECUTE.**
 
-Wenn weder "4GT" noch "AWE" verwendet wird, wird die Größe des physischen Speichers, der von einem einzelnen 32-Bit-Prozess verwendet werden kann, durch die Größe des Adressraums (2 GB) beschränkt. In diesem Fall kann ein für die PE aktiviertes System immer noch mehr als 4 GB RAM verwenden, um mehrere Prozesse gleichzeitig auszuführen oder Datei Daten im Arbeitsspeicher zwischenzuspeichern.
+## <a name="comparing-pae-and-other-large-memory-support"></a>Vergleichen von PAE und anderer Unterstützung für großen Arbeitsspeicher
 
-4GT kann mit oder ohne paar verwendet werden. Einige Versionen von Windows schränken jedoch die maximale Menge an physischem Arbeitsspeicher ein, die bei Verwendung von 4GT unterstützt werden kann. Bei solchen Systemen wird durch das Starten mit 4GT aktiviert das Betriebssystem ignoriert, dass der Arbeitsspeicher über den Grenzwert hinausgeht.
+PAE, [4-Gigabyte-Optimierung](4-gigabyte-tuning.md) (4GT) und [Adressfenstererweiterungen](address-windowing-extensions.md) (Address Windowing Extensions, AWE) dienen verschiedenen Zwecken und können unabhängig voneinander verwendet werden:
 
-AWE erfordert weder "PE" noch "4GT", wird aber häufig in Verbindung mit "PE" verwendet, um mehr als 4 GB physischen Arbeitsspeicher aus einem einzelnen 32-Bit-Prozess zuzuordnen.
+-   Pae ermöglicht dem Betriebssystem den Zugriff auf und die Verwendung von mehr als 4 GB physischem Speicher.
+-   4GT erhöht den Teil des virtuellen Adressraums, der für einen Prozess verfügbar ist, von 2 GB auf bis zu 3 GB.
+-   AWE ist ein Satz von APIs, mit denen ein Prozess nicht auspageten physischen Speicher zuordnen und dann Teile dieses Arbeitsspeichers dynamisch dem virtuellen Adressraum des Prozesses zuordnen kann.
+
+Wenn weder 4GT noch AWE verwendet werden, wird die Menge des physischen Speichers, den ein einzelner 32-Bit-Prozess verwenden kann, durch die Größe des Adressraums (2 GB) beschränkt. In diesem Fall kann ein PAE-fähiges System weiterhin mehr als 4 GB RAM nutzen, um mehrere Prozesse gleichzeitig ausführen oder Dateidaten im Arbeitsspeicher zwischenspeichern zu können.
+
+4GT kann mit oder ohne PAE verwendet werden. Einige Versionen von Windows begrenzen jedoch die maximale Menge an physischem Arbeitsspeicher, die unterstützt werden kann, wenn 4GT verwendet wird. Auf solchen Systemen führt das Starten mit aktivierter 4GT-Funktion dazu, dass das Betriebssystem jeglichen Arbeitsspeicher ignoriert, der den Grenzwert überschreitet.
+
+AWE erfordert keine PAE oder 4GT, wird aber häufig zusammen mit PAE verwendet, um mehr als 4 GB physischen Speicher aus einem einzelnen 32-Bit-Prozess zu reservieren.
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
 
 
-[**Isprocessorfeaturepräsentiert**](/windows/win32/api/processthreadsapi/nf-processthreadsapi-isprocessorfeaturepresent)
+[**IsProcessorFeaturePresent**](/windows/win32/api/processthreadsapi/nf-processthreadsapi-isprocessorfeaturepresent)
 </dt> <dt>
 
-[Technische Referenz zu "PE x86"](/previous-versions/windows/it-pro/windows-server-2003/cc728455(v=ws.10))
+[Technische Referenz zu PAE X86](/previous-versions/windows/it-pro/windows-server-2003/cc728455(v=ws.10))
 </dt> </dl>
 
  

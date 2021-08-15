@@ -57,7 +57,7 @@ Dieses Ereignis gibt keinen Wert zurück.
 
 Der Name der aktuellen Wiedergabeliste kann verwendet werden, um das entsprechende **Playlist-Objekt** mithilfe der *PlaylistCollection abzurufen.* **getByName-Methode.**
 
-Der Wert von Ereignisparametern wird von Windows Media Player angegeben und kann mithilfe des angegebenen Parameternamens auf eine Methode in einer importierten JScript-Datei zugegriffen oder an diese übergeben werden. Dieser Parametername muss genau wie gezeigt typisieren, einschließlich Groß-/Groß-/Schreibanforderungen.
+Der Wert von Ereignisparametern wird von Windows Media Player angegeben und kann mithilfe des angegebenen Parameternamens auf eine Methode in einer importierten JScript datei zugegriffen oder an diese übergeben werden. Dieser Parametername muss genau wie gezeigt typisieren, einschließlich Groß- und Groß-/Schreibanforderungen.
 
 **Windows Media Player 10 Mobile:** Dieses Ereignis wird nicht unterstützt.
 
@@ -79,7 +79,7 @@ Der Wert von Ereignisparametern wird von Windows Media Player angegeben und kann
 [**Player-Objekt**](player-object.md)
 </dt> <dt>
 
-[**Playlist-Objekt**](playlist-object.md)
+[**Wiedergabelistenobjekt**](playlist-object.md)
 </dt> <dt>
 
 [**PlaylistCollection.getByName**](playlistcollection-getbyname.md)

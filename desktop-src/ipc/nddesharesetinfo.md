@@ -1,7 +1,7 @@
 ---
-description: Legt DDE-Freigabe Informationen fest. Dies erfolgt in der Regel nach der Bearbeitung.
+description: Legt DDE-Freigabeinformationen fest. Dies erfolgt in der Regel nach der Bearbeitung.
 ms.assetid: 002c73ce-7b35-4e8e-bb7e-0e1393b97ccc
-title: Nddesharesetinfo-Funktion (nddeapi. h)
+title: NDdeShareSetInfo-Funktion (Nddeapi.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -15,18 +15,18 @@ api_type:
 - DllExport
 api_location:
 - Nddeapi.dll
-ms.openlocfilehash: cee7660a58e8f2747a800650b79db20f95504f87
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: ccfa8cc80f60477e8512ac43f0e93825642dd0603ee398e232bbb67d6979a4c2
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106339736"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118481700"
 ---
-# <a name="nddesharesetinfo-function"></a>Nddesharesetinfo-Funktion
+# <a name="nddesharesetinfo-function"></a>NDdeShareSetInfo-Funktion
 
-\[Network DDE wird nicht mehr unterstützt. Nddeapi.dll ist unter Windows Vista vorhanden, aber alle Funktionsaufrufe geben "ndde" \_ nicht \_ implementiert zurück.\]
+\[Netzwerk-DDE wird nicht mehr unterstützt. Nddeapi.dll ist auf Windows Vista vorhanden, aber alle Funktionsaufrufe geben NDDE \_ NOT \_ IMPLEMENTED zurück.\]
 
-Legt DDE-Freigabe Informationen fest. Dies erfolgt in der Regel nach der Bearbeitung.
+Legt DDE-Freigabeinformationen fest. Dies erfolgt in der Regel nach der Bearbeitung.
 
 ## <a name="syntax"></a>Syntax
 
@@ -48,21 +48,21 @@ UINT NDdeShareSetInfo(
 
 <dl> <dt>
 
-*lpszserver* \[ in\]
+*lpszServer* \[ In\]
 </dt> <dd>
 
 Der Name des Servers, dessen DSDM geändert werden soll.
 
 </dd> <dt>
 
-*lpszsharename* \[ in\]
+*lpszShareName* \[ In\]
 </dt> <dd>
 
-Der Name des Freigabe namens, dessen Informationen geändert werden sollen. Dieser Parameter darf nicht **null** sein.
+Der Name des Freigabenamens, dessen Informationen geändert werden sollen. Dieser Parameter darf nicht **NULL** sein.
 
 </dd> <dt>
 
-*Nlevel* \[ in\]
+*nLevel* \[ In\]
 </dt> <dd>
 
 Die Informationsebene. Dieser Parameter muss 2 sein.
@@ -72,29 +72,29 @@ Die Informationsebene. Dieser Parameter muss 2 sein.
 *lpBuffer* \[in\]
 </dt> <dd>
 
-Ein Zeiger auf die [**nddeshareinfo**](nddeshareinfo-str.md) -Struktur, die die DDE-Freigabe Informationen angibt, die in der DSDM gespeichert werden sollen. Derzeit werden die DDE-Freigabe Informationen als Ganzes geändert, d. h., es werden keine partiellen Änderungen vorgenommen. Dieser Parameter darf nicht **null** sein.
+Ein Zeiger auf die [**NDDESHAREINFO-Struktur,**](nddeshareinfo-str.md) der die DDE-Freigabeinformationen angibt, die im DSDM gespeichert werden sollen. Derzeit werden die DDE-Freigabeinformationen als Ganzes geändert, d. h., es werden keine Teilbearbeitungen vorgenommen. Dieser Parameter darf nicht **NULL** sein.
 
 </dd> <dt>
 
-*cbubsize* \[ in\]
+*cBufSize* \[ In\]
 </dt> <dd>
 
-Die Größe des *lpBuffer* -Puffers in Bytes.
+Die Größe des *lpBuffer-Puffers* in Bytes.
 
 </dd> <dt>
 
-*sparmnum* \[ in\]
+*sParmNum* \[ In\]
 </dt> <dd>
 
-Der Parameter Index, der geändert werden soll. Die aktuelle Implementierung unterstützt keine partielle Änderung. Daher muss dieser Parameter NULL sein.
+Der zu ändernde Parameterindex. Die aktuelle Implementierung unterstützt keine Teiländerungen. daher muss dieser Parameter 0 (null) sein.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Wenn die Funktion erfolgreich ausgeführt wird, lautet der Rückgabewert "ndde \_ No \_ Error".
+Wenn die Funktion erfolgreich ausgeführt wird, lautet der Rückgabewert NDDE \_ NO \_ ERROR.
 
-Wenn die Funktion fehlschlägt, ist der Rückgabewert ein Fehlercode, der durch den Aufruf von [**nddegeterrorstring**](nddegeterrorstring.md)in eine Text Fehlermeldung übersetzt werden kann.
+Wenn die Funktion fehlschlägt, ist der Rückgabewert ein Fehlercode, der durch Aufrufen von [**NDdeGetErrorString**](nddegeterrorstring.md)in eine Textfehlermeldung übersetzt werden kann.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -104,27 +104,27 @@ Wenn die Funktion fehlschlägt, ist der Rückgabewert ein Fehlercode, der durch 
 |-------------------------------------|----------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional \[nur Desktop-Apps\]<br/>                             |
 | Unterstützte Mindestversion (Server)<br/> | Windows 2000 Server \[nur Desktop-Apps\]<br/>                                   |
-| Header<br/>                   | <dl> <dt>Ndde API. h</dt> </dl>   |
-| Bibliothek<br/>                  | <dl> <dt>Ndde API. lib</dt> </dl> |
+| Header<br/>                   | <dl> <dt>Nddeapi.h</dt> </dl>   |
+| Bibliothek<br/>                  | <dl> <dt>Nddeapi.lib</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>Nddeapi.dll</dt> </dl> |
-| Unicode- und ANSI-Name<br/>   | **Ndde sharesetinfow** (Unicode) und **nddebug** (ANSI)<br/>            |
+| Unicode- und ANSI-Name<br/>   | **NDdeShareSetInfoW** (Unicode) und **NDdeShareSetInfoA** (ANSI)<br/>            |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[Übersicht über das Netzwerk dynamischer Datenaustausch](network-dynamic-data-exchange.md)
+[Network dynamische Daten Exchange Overview (Übersicht über Netzwerk-dynamische Daten Exchange)](network-dynamic-data-exchange.md)
 </dt> <dt>
 
-[Network DDE-Funktionen](network-dde-functions.md)
+[Netzwerk-DDE-Funktionen](network-dde-functions.md)
 </dt> <dt>
 
-[**Nddebug-Info**](nddeshareinfo-str.md)
+[**NDDESHAREINFO**](nddeshareinfo-str.md)
 </dt> <dt>
 
-[**Ndde sharegetinfo**](nddesharegetinfo.md)
+[**NDdeShareGetInfo**](nddesharegetinfo.md)
 </dt> </dl>
 
  

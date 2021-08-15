@@ -1,7 +1,7 @@
 ---
-description: Konvertiert eine hexadezimale Zeichenfolge in eine Zeichenfolge mit Binär Zeichen.
+description: Konvertiert eine hexadezimale Zeichenfolge in eine binär gepackte Zeichenfolge.
 ms.assetid: 1f5fabf3-0729-44f8-bda7-a10b98c6e933
-title: Utilities. hexybinary-Methode
+title: Utilities.HexToBinary-Methode
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,18 +13,18 @@ api_type:
 - COM
 api_location:
 - Capicom.dll
-ms.openlocfilehash: 79276f206cebc0490bff0ba9d44810bed83bce70
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: c44290a38d041acf17dfe1a9e3e274674d9d5c15091cfa5767e6974e72bb2b71
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106371090"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118896386"
 ---
-# <a name="utilitieshextobinary-method"></a>Utilities. hexybinary-Methode
+# <a name="utilitieshextobinary-method"></a>Utilities.HexToBinary-Methode
 
-\[Die **hextobinary** -Methode ist für die Verwendung in den Betriebssystemen verfügbar, die im Abschnitt "Anforderungen" angegeben sind.\]
+\[Die **HexToBinary-Methode** ist für die Verwendung in den Betriebssystemen verfügbar, die im Abschnitt Anforderungen angegeben sind.\]
 
-Mit der **hexybinary** -Methode wird eine hexadezimale Zeichenfolge in eine Binär Zeichenfolge konvertiert.
+Die **HexToBinary-Methode** konvertiert eine hexadezimale Zeichenfolge in eine binär gepackte Zeichenfolge.
 
 ## <a name="syntax"></a>Syntax
 
@@ -41,16 +41,16 @@ Utilities.HexToBinary( _
 
 <dl> <dt>
 
-*Hexzeichenfolge* \[ in\]
+*HexString* \[ In\]
 </dt> <dd>
 
-Die hexadezimale Zeichenfolge, die in eine Binär Zeichenfolge konvertiert werden soll.
+Die hexadezimale Zeichenfolge, die in eine binär gepackte Zeichenfolge konvertiert werden soll.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Eine Binär geladene Zeichenfolge, die der angegebenen hexadezimalen Zeichenfolge entspricht.
+Eine binär gepackte Zeichenfolge, die der angegebenen hexadezimalen Zeichenfolge entspricht.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -58,16 +58,16 @@ Eine Binär geladene Zeichenfolge, die der angegebenen hexadezimalen Zeichenfolg
 
 | Anforderung | Wert |
 |----------------------------|----------------------------------------------------------------------------------------|
-| Verteilbare Komponente<br/> | CAPICOM 2,0 oder höher unter Windows Server 2003 und Windows XP<br/>                  |
+| Verteilbare Komponente<br/> | CAPICOM 2.0 oder höher auf Windows Server 2003 und Windows XP<br/>                  |
 | DLL<br/>             | <dl> <dt>Capicom.dll</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Versorgungsunternehmen**](utilities.md)
+[**Hilfsprogramme**](utilities.md)
 </dt> </dl>
 
  

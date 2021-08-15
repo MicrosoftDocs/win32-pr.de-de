@@ -1,10 +1,10 @@
 ---
-title: IMsRdpClientAdvancedSettings7 NetworkConnectionType-Eigenschaft
-description: Ruft den Typ der Netzwerkverbindung ab, die zwischen Client und Server verwendet wird, oder legt diese fest. Die an den Server übergebenen Informationen zum Netzwerkverbindungstyp helfen dem Server, mehrere Parameter basierend auf dem Netzwerkverbindungstyp zu optimieren.
+title: IMsRdpClientAdvancedSettings7 NetworkConnectionType (Eigenschaft)
+description: Ruft den Typ der Netzwerkverbindung ab, die zwischen client und server verwendet wird, oder legt diesen fest. Die an den Server übergebenen Informationen zum Netzwerkverbindungstyp helfen dem Server, mehrere Parameter basierend auf dem Netzwerkverbindungstyp zu optimieren.
 ms.assetid: 4dd4fa17-f121-412d-a30d-1c01f4c892b0
 ms.tgt_platform: multiple
 keywords:
-- NetworkConnectionType-Eigenschaft Remotedesktopdienste
+- NetworkConnectionType-Remotedesktopdienste
 - NetworkConnectionType-Eigenschaft Remotedesktopdienste , IMsRdpClientAdvancedSettings7-Schnittstelle
 - IMsRdpClientAdvancedSettings7-Schnittstelle Remotedesktopdienste , NetworkConnectionType-Eigenschaft
 - NetworkConnectionType-Eigenschaft Remotedesktopdienste , IMsRdpClientAdvancedSettings8-Schnittstelle
@@ -31,9 +31,9 @@ ms.contentlocale: de-DE
 ms.lasthandoff: 08/11/2021
 ms.locfileid: "118352157"
 ---
-# <a name="imsrdpclientadvancedsettings7networkconnectiontype-property"></a>IMsRdpClientAdvancedSettings7::NetworkConnectionType-Eigenschaft
+# <a name="imsrdpclientadvancedsettings7networkconnectiontype-property"></a>IMsRdpClientAdvancedSettings7::NetworkConnectionType (Eigenschaft)
 
-Ruft den Typ der Netzwerkverbindung ab, die zwischen Client und Server verwendet wird, oder legt diese fest. Die an den Server übergebenen Informationen zum Netzwerkverbindungstyp helfen dem Server, mehrere Parameter basierend auf dem Netzwerkverbindungstyp zu optimieren.
+Ruft den Typ der Netzwerkverbindung ab, die zwischen client und server verwendet wird, oder legt diesen fest. Die an den Server übergebenen Informationen zum Netzwerkverbindungstyp helfen dem Server, mehrere Parameter basierend auf dem Netzwerkverbindungstyp zu optimieren.
 
 Dies ist eine Eigenschaft mit Lese- und Schreibzugriff.
 
@@ -60,7 +60,7 @@ Der Netzwerkverbindungstyp.
 
 <span id="CONNECTION_TYPE_MODEM"></span><span id="connection_type_modem"></span>
 
-<span id="CONNECTION_TYPE_MODEM"></span><span id="connection_type_modem"></span>**CONNECTION \_ TYPE \_ MODEM** (1 (0x1))
+<span id="CONNECTION_TYPE_MODEM"></span><span id="connection_type_modem"></span>**VERBINDUNG \_ \_TYPMODEM** (1 (0x1))
 
 
 </dt> <dd>
@@ -71,7 +71,7 @@ Modem (56 KBit/s)
 
 <span id="CONNECTION_TYPE_BROADBAND_LOW"></span><span id="connection_type_broadband_low"></span>
 
-<span id="CONNECTION_TYPE_BROADBAND_LOW"></span><span id="connection_type_broadband_low"></span>**CONNECTION \_ TYPE \_ BROADBAND \_ LOW** (2 (0x2))
+<span id="CONNECTION_TYPE_BROADBAND_LOW"></span><span id="connection_type_broadband_low"></span>**VERBINDUNG \_ TYP \_ BREITBAND \_ NIEDRIG** (2 (0x2))
 
 
 </dt> <dd>
@@ -82,40 +82,40 @@ Breitband mit niedriger Geschwindigkeit (256 KBit/s bis 2 MBit/s)
 
 <span id="CONNECTION_TYPE_SATELLITE"></span><span id="connection_type_satellite"></span>
 
-<span id="CONNECTION_TYPE_SATELLITE"></span><span id="connection_type_satellite"></span>**CONNECTION \_ TYPE \_ SATELLITE** (3 (0x3))
+<span id="CONNECTION_TYPE_SATELLITE"></span><span id="connection_type_satellite"></span>**VERBINDUNG \_ TYPE \_ SATELLITE** (3 (0x3))
 
 
 </dt> <dd>
 
-Satellite (2 MBit/s bis 16 MBit/s, mit hoher Latenz)
+Satellit (2 MBit/s bis 16 MBit/s, mit hoher Latenz)
 
 </dd> <dt>
 
 <span id="CONNECTION_TYPE_BROADBAND_HIGH"></span><span id="connection_type_broadband_high"></span>
 
-<span id="CONNECTION_TYPE_BROADBAND_HIGH"></span><span id="connection_type_broadband_high"></span>**CONNECTION \_ TYPE \_ BROADBAND \_ HIGH** (4 (0x4))
+<span id="CONNECTION_TYPE_BROADBAND_HIGH"></span><span id="connection_type_broadband_high"></span>**VERBINDUNG \_ TYP \_ BREITBAND \_ HOCH** (4 (0x4))
 
 
 </dt> <dd>
 
-Hochgeschwindigkeits-Breitband (2 MBit/s bis 10 MBit/s)
+Schnelles Breitband (2 MBit/s bis 10 MBit/s)
 
 </dd> <dt>
 
 <span id="CONNECTION_TYPE_WAN"></span><span id="connection_type_wan"></span>
 
-<span id="CONNECTION_TYPE_WAN"></span><span id="connection_type_wan"></span>**CONNECTION \_ TYPE \_ WAN** (5 (0x5))
+<span id="CONNECTION_TYPE_WAN"></span><span id="connection_type_wan"></span>**VERBINDUNG \_ TYPE \_ WAN** (5 (0x5))
 
 
 </dt> <dd>
 
-Wan (Wide Area Network) (10 MBit/s oder höher, mit hoher Latenz)
+Wide Area Network (WAN) (10 MBit/s oder höher mit hoher Latenz)
 
 </dd> <dt>
 
 <span id="CONNECTION_TYPE_LAN"></span><span id="connection_type_lan"></span>
 
-<span id="CONNECTION_TYPE_LAN"></span><span id="connection_type_lan"></span>**CONNECTION \_ TYPE \_ LAN** (6 (0x6))
+<span id="CONNECTION_TYPE_LAN"></span><span id="connection_type_lan"></span>**VERBINDUNG \_ TYPE \_ LAN** (6 (0x6))
 
 
 </dt> <dd>

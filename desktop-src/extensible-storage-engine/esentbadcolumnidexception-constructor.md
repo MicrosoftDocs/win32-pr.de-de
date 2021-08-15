@@ -1,6 +1,6 @@
 ---
-description: 'Weitere Informationen finden Sie unter: esentbadcolumnidexception-Konstruktor'
-title: Esentbadcolumnidexception-Konstruktor
+description: 'Weitere Informationen finden Sie unter: EsentBadColumnIdException-Konstruktor'
+title: EsentBadColumnIdException-Konstruktor
 TOCTitle: 'EsentBadColumnIdException constructor '
 ms:assetid: M:Microsoft.Isam.Esent.Interop.EsentBadColumnIdException.#ctor
 ms:mtpsurl: https://msdn.microsoft.com/library/microsoft.isam.esent.interop.esentbadcolumnidexception.esentbadcolumnidexception(v=EXCHG.10)
@@ -24,19 +24,19 @@ api_type:
 api_location:
 - Microsoft.Isam.Esent.Interop.dll
 ROBOTS: INDEX,FOLLOW
-ms.openlocfilehash: c4c245e27897cb88e00beb35ad2d54790233c6e9
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 808038dfffe06830e17cdec73139971e07e9776cfdebe54e4c55a0a7ff3b6c7a
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106349564"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119975890"
 ---
-# <a name="esentbadcolumnidexception-constructor"></a>Esentbadcolumnidexception-Konstruktor
+# <a name="esentbadcolumnidexception-constructor"></a>EsentBadColumnIdException-Konstruktor
 
-Initialisiert eine neue Instanz der esentbadcolumnidexception-Klasse.
+Initialisiert eine neue Instanz der EsentBadColumnIdException-Klasse.
 
-**Namespace:**  [Microsoft. ISAM. ESENT. Interop](./microsoft.isam.esent.interop-namespace.md)  
-**Assembly:**  Microsoft. ISAM. ESENT. Interop (in Microsoft.Isam.Esent.Interop.dll)
+**Namespace:**  [Microsoft.Isam.Esent.Interop](./microsoft.isam.esent.interop-namespace.md)  
+**Assembly:**  Microsoft.Isam.Esent.Interop (in Microsoft.Isam.Esent.Interop.dll)
 
 ## <a name="syntax"></a>Syntax
 
@@ -52,12 +52,12 @@ Dim instance As New EsentBadColumnIdException()
 public EsentBadColumnIdException()
 ```
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
-#### <a name="reference"></a>Referenz
+#### <a name="reference"></a>Verweis
 
-[Esentbadcolumnidexception-Klasse](./esentbadcolumnidexception-class.md)
+[EsentBadColumnIdException-Klasse](./esentbadcolumnidexception-class.md)
 
-[Esentbadcolumnidexception-Member](./esentbadcolumnidexception-members.md)
+[EsentBadColumnIdException-Member](./esentbadcolumnidexception-members.md)
 
-[Microsoft. ISAM. ESENT. Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)
+[Microsoft.Isam.Esent.Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)

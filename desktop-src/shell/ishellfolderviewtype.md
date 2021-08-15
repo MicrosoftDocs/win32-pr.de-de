@@ -13,12 +13,12 @@ api_type:
 api_location:
 - Shell32.dll
 ms.assetid: 9b597f6b-ef27-4fa1-ad00-e131dbd979e7
-ms.openlocfilehash: f3ccb4073d59e0ebe9b840bd6f8f592f463e1e46
-ms.sourcegitcommit: 3caaa3c92dcb1ef12f84464d14ce6262e65e988e
+ms.openlocfilehash: 30722e32a555b386e166e5525e0d4361dbe9d9bc6a58051e4727c661ebe49073
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/12/2021
-ms.locfileid: "109842691"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119714120"
 ---
 # <a name="ishellfolderviewtype-interface"></a>IShellFolderViewType-Schnittstelle
 
@@ -41,7 +41,7 @@ Die **IShellFolderViewType-Schnittstelle** verfügt über diese Methoden.
 | [**EnumViews**](ishellfolderviewtype-enumviews.md)                         | Ruft einen Enumerator ab, der eine PIDL für jede erweiterte Ansicht zurück gibt.<br/>                                                                                |
 | [**GetDefaultViewName**](ishellfolderviewtype-getdefaultviewname.md)       | Ruft den Namen der Standardansicht ab. Rufen [**Sie IShellFolder::GetDisplayNameOf auf,**](/windows/desktop/api/shobjidl_core/nf-shobjidl_core-ishellfolder-getdisplaynameof) um die Namen der anderen Ansichten abzurufen.<br/> |
 | [**GetViewTypeProperties**](ishellfolderviewtype-getviewtypeproperties.md) | Ruft die Eigenschaften der Ansicht ab.<br/>                                                                                                                          |
-| [**TranslateViewPidl**](ishellfolderviewtype-translateviewpidl.md)         | Rekonstruiert eine PIDL aus einer hierarchischen Darstellung des Shellordners in einer anderen Darstellung.<br/>                                             |
+| [**TranslateViewPidl**](ishellfolderviewtype-translateviewpidl.md)         | Rekonstruiert eine PIDL aus einer hierarchischen Darstellung des Shellordners in eine andere Darstellung.<br/>                                             |
 
 
 

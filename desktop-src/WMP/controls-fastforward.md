@@ -1,11 +1,11 @@
 ---
 title: Controls.fastForward-Methode
-description: Die fastForward-Methode startet die schnelle Wiedergabe des Medienelements in Vorwärtsrichtung. | Controls.fastForward-Methode
+description: Die fastForward-Methode startet die schnelle Wiedergabe des Medienelements in vorwärts gerichteter Richtung. | Controls.fastForward-Methode
 ms.assetid: 69cee803-f76b-4a8c-a2c2-1870665afaf9
 keywords:
-- fastForward-Methode Windows Media Player
+- fastForward-Windows Media Player
 - fastForward-Methode Windows Media Player , Controls-Klasse
-- Steuert die Klasse Windows Media Player , fastForward-Methode
+- Steuert die Windows Media Player , fastForward-Methode
 topic_type:
 - apiref
 api_name:
@@ -25,7 +25,7 @@ ms.locfileid: "118341816"
 ---
 # <a name="controlsfastforward-method"></a>Controls.fastForward-Methode
 
-Die **fastForward-Methode** startet die schnelle Wiedergabe des Medienelements in Vorwärtsrichtung.
+Die **fastForward-Methode** startet die schnelle Wiedergabe des Medienelements in vorwärts gerichteter Richtung.
 
 ## <a name="syntax"></a>Syntax
 
@@ -46,13 +46,13 @@ Diese Methode gibt keinen Wert zurück.
 
 ## <a name="remarks"></a>Hinweise
 
-Die **fastForward-Methode** gibt den Clip um das Fünffache der Normalgeschwindigkeit wieder. Durch den Aufruf von **fastForward** wird die *Einstellungen* geändert. **rate-Eigenschaft** auf 5,0. Wenn **die Rate** anschließend geändert wird oder **Wiedergabe** oder **Beendigung** aufgerufen wird, beenden Windows Media Player die schnelle Weiterleitung.
+Die **fastForward-Methode** gibt den Clip mit der fünffachen Normalengeschwindigkeit wieder. Durch das Aufrufen **von fastForward** wird die *Einstellungen.* **rate-Eigenschaft** auf 5,0. Wenn **die** Rate anschließend geändert wird oder **wiedergabe** oder **stop** aufgerufen wird, Windows Media Player die schnelle Weiterleitung beendet.
 
-Die **fastForward-Methode** funktioniert nicht für Liveübertragungen und bestimmte Medientypen. Rufen Sie **isAvailable**("FastForward") auf, um zu ermitteln, ob Sie in einem Clip schnell vorwärts vorwärtskommen.
+Die **fastForward-Methode** funktioniert nicht für Liveübertragungen und bestimmte Medientypen. Rufen Sie **isAvailable**("FastForward") auf, um zu bestimmen, ob Sie in einem Clip schnell vorwärts gehen können.
 
 ## <a name="examples"></a>Beispiele
 
-Im folgenden Beispiel wird ein HTML BUTTON-Element erstellt, das **fastForward** verwendet, um die schnelle Wiedergabe des Medienelements zu starten. Das **Player-Objekt** wurde mit der ID = "Player" erstellt.
+Im folgenden Beispiel wird ein HTML BUTTON-Element erstellt, das **fastForward verwendet,** um die schnelle Wiedergabe des Medienelements zu starten. Das **Player-Objekt** wurde mit der ID = "Player" erstellt.
 
 
 ```JScript

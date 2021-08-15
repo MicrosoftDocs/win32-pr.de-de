@@ -1,6 +1,6 @@
 ---
 title: MDM_Firewall_Action04-Klasse
-description: Die MDM- \_ Firewall \_ Action04-Klasse wird verwendet, um die Windows Defender Firewall-Einstellungen zu konfigurieren.
+description: Die KLASSE MDM \_ Firewall \_ Action04 wird verwendet, um die Windows Defender Firewalleinstellungen zu konfigurieren.
 ms.assetid: d0704662-ac2b-4ff5-a2c1-8f2bc7835488
 keywords:
 - MDM_Firewall_Action04-Klasse
@@ -18,18 +18,18 @@ api_type:
 - DllExport
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: b1eede757f6a3e129300e6d81a28d34248dda1f5
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: f8af0b646b362174d91b95c1ace9ebed13b632c113dafcab9f7eb5cc9470b73e
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104476053"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119694863"
 ---
-# <a name="mdm_firewall_action04-class"></a>MDM- \_ Firewall \_ Action04-Klasse
+# <a name="mdm_firewall_action04-class"></a>MDM \_ Firewall \_ Action04-Klasse
 
 \[Einige Informationen beziehen sich auf Vorabversionen, die vor der kommerziellen Freigabe grundlegend geändert werden können. Microsoft übernimmt keine Garantie, weder ausdrücklich noch stillschweigend, für die hier bereitgestellten Informationen.\]
 
-Die MDM- \_ Firewall \_ Action04-Klasse wird verwendet, um die Windows Defender Firewall-Einstellungen zu konfigurieren.
+Die KLASSE MDM \_ Firewall \_ Action04 wird verwendet, um die Windows Defender Firewalleinstellungen zu konfigurieren.
 
 Die folgende Syntax enthält vereinfachten MOF-Code und schließt alle geerbten Eigenschaften ein.
 
@@ -47,45 +47,45 @@ class MDM_Firewall_Action04
 
 ## <a name="members"></a>Member
 
-Die **MDM- \_ Firewall \_ Action04** -Klasse verfügt über diese Typen von Membern:
+Die **MDM \_ Firewall \_ Action04-Klasse** verfügt über diese Typen von Membern:
 
 -   [Eigenschaften](#properties)
 
 ### <a name="properties"></a>Eigenschaften
 
-Die **MDM- \_ Firewall \_ Action04** -Klasse verfügt über diese Eigenschaften.
+Die **MDM \_ Firewall \_ Action04-Klasse** verfügt über diese Eigenschaften.
 
 <dl> <dt>
 
 **InstanceID**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [ **Schlüssel**](/windows/desktop/WmiSdk/key-qualifier)
+Qualifizierer: [ **key**](/windows/desktop/WmiSdk/key-qualifier)
 </dt> </dl>
 
 </dd> <dt>
 
-**ParentID**
+**Parentid**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [ **Schlüssel**](/windows/desktop/WmiSdk/key-qualifier)
+Qualifizierer: [ **key**](/windows/desktop/WmiSdk/key-qualifier)
 </dt> </dl>
 
 </dd> <dt>
 
-**Type**
+**Typ**
 </dt> <dd> <dl> <dt>
 
 Datentyp: **sint32**
@@ -102,10 +102,10 @@ Zugriffstyp: Lesen/Schreiben
 
 | Anforderung | Wert |
 |-------------------------------------|-------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows 10 \[ -Desktop-Apps\]<br/>                                                     |
+| Unterstützte Mindestversion (Client)<br/> | \[Windows 10 Nur Desktop-Apps\]<br/>                                                     |
 | Unterstützte Mindestversion (Server)<br/> | Nicht unterstützt<br/>                                                                       |
-| Namespace<br/>                | Root \\ CIMV2 \\ MDM- \\ dmmap<br/>                                                              |
-| MOF<br/>                      | <dl> <dt>DMWmiBridgeProv1. MOF</dt> </dl> |
+| Namespace<br/>                | Root \\ cimv2 \\ mdm \\ dmmap<br/>                                                              |
+| MOF<br/>                      | <dl> <dt>DMWmiBridgeProv1.mof</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>DMWmiBridgeProv.dll</dt> </dl>  |
 
 

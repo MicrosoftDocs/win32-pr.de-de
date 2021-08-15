@@ -1,10 +1,10 @@
 ---
-title: WM_ADSPROP_NOTIFY_APPLY Meldung (adsprop. h)
-description: Eine Active Directory Verzeichnisdienst-Eigenschaften Blatt Erweiterung sendet die WM- \_ adsprop \_ Notify \_ Apply-Meldung an das Benachrichtigungs Objekt, wenn die Eigenschaften Seite "PSN \_ Apply Handler" erfolgreich ist.
+title: WM_ADSPROP_NOTIFY_APPLY (Adsprop.h)
+description: Eine Eigenschaftenblatterweiterung für den Active Directory-Verzeichnisdienst sendet die WM ADSPROP NOTIFY APPLY-Meldung an das Benachrichtigungsobjekt, wenn der PSN APPLY-Handler der Eigenschaftenseite \_ \_ erfolgreich \_ \_ ist.
 ms.assetid: 3536054b-83ee-4cfa-ab54-c0af3a46289e
 ms.tgt_platform: multiple
 keywords:
-- WM_ADSPROP_NOTIFY_APPLY Meldung Active Directory
+- WM_ADSPROP_NOTIFY_APPLY Active Directory-Nachricht
 topic_type:
 - apiref
 api_name:
@@ -15,16 +15,16 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: b0ccd5bb95e3f092634d54ba0534e81ded6701bf
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 6cc130a83aa77021e0be512d9b2ad27914b4c6be382c0290e082e1fbd67b8b22
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "106345504"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119024298"
 ---
-# <a name="wm_adsprop_notify_apply-message"></a>"WM \_ adsprop \_ Notify \_ Apply Message"
+# <a name="wm_adsprop_notify_apply-message"></a>WM \_ ADSPROP \_ NOTIFY \_ APPLY-Meldung
 
-Eine Active Directory Verzeichnisdienst-Eigenschaften Blatt Erweiterung sendet die **WM- \_ adsprop \_ Notify \_ Apply** -Meldung an das Benachrichtigungs Objekt, wenn die Eigenschaften Seite "PSN \_ Apply Handler" erfolgreich ist.
+Eine Eigenschaftenblatterweiterung für den Active Directory-Verzeichnisdienst sendet die **WM \_ ADSPROP \_ NOTIFY \_ APPLY-Meldung** an das Benachrichtigungsobjekt, wenn der PSN APPLY-Handler der Eigenschaftenseite \_ erfolgreich ist.
 
 
 ```C++
@@ -41,34 +41,34 @@ WM_ADSPROP_NOTIFY_APPLY
 
 <dl> <dt>
 
-*HWND* 
+*Hwnd* 
 </dt> <dd>
 
-Das Handle des Benachrichtigungs Objekts. Rufen Sie zum Abrufen dieses Handles [**adspropkreatenotifyobj**](/windows/desktop/api/Adsprop/nf-adsprop-adspropcreatenotifyobj)auf.
+Das Handle des Benachrichtigungsobjekts. Um dieses Handle zu erhalten, rufen Sie [**ADsPropCreateNotifyObj auf.**](/windows/desktop/api/Adsprop/nf-adsprop-adspropcreatenotifyobj)
 
 </dd> <dt>
 
 *wParam* 
 </dt> <dd>
 
-Nicht verwendet.
+Wird nicht verwendet.
 
 </dd> <dt>
 
 *lParam* 
 </dt> <dd>
 
-Nicht verwendet.
+Wird nicht verwendet.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Diese Nachricht weist keinen Rückgabewert auf.
+Diese Meldung hat keinen Rückgabewert.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Beim Hinzufügen von Seiten zum MMC-Snap-in "Active Directory-Manager" erstellt Active Directory MMC-Eigenschaften Blätter die Benachrichtigungsobjekte durch einen Aufrufen der Funktion " [**adspropkreatenotifyobj**](/windows/desktop/api/Adsprop/nf-adsprop-adspropcreatenotifyobj) " und übergibt dann das Benachrichtigungs Objekt Handle an jede Eigenschaften Seite.
+Beim Hinzufügen von Seiten zum MMC-Snap-In des Active Directory-Managers erstellen die Active Directory-MMC-Eigenschaftenblätter die Benachrichtigungsobjekte durch einen Aufruf der [**ADsPropCreateNotifyObj-Funktion**](/windows/desktop/api/Adsprop/nf-adsprop-adspropcreatenotifyobj) und übergeben dann das Benachrichtigungsobjekthandl an jede Eigenschaftenseite.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -78,15 +78,15 @@ Beim Hinzufügen von Seiten zum MMC-Snap-in "Active Directory-Manager" erstellt 
 |-------------------------------------|--------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows Vista<br/>                                                             |
 | Unterstützte Mindestversion (Server)<br/> | Windows Server 2008<br/>                                                       |
-| Header<br/>                   | <dl> <dt>Adsprop. h</dt> </dl> |
+| Header<br/>                   | <dl> <dt>Adsprop.h</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Adspropkreatenotifyobj**](/windows/desktop/api/Adsprop/nf-adsprop-adspropcreatenotifyobj)
+[**ADsPropCreateNotifyObj**](/windows/desktop/api/Adsprop/nf-adsprop-adspropcreatenotifyobj)
 </dt> <dt>
 
 [Nachrichten in Active Directory Domain Services](messages-in-active-directory-domain-services.md)

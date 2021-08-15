@@ -1,19 +1,19 @@
 ---
-title: Iagentcharacter getidleon
-description: Iagentcharacter getidleon
+title: IAgentCharacter GetIdleOn
+description: IAgentCharacter GetIdleOn
 ms.assetid: e5371326-33d0-4ecc-bda7-28f36f46ddeb
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 9fdaf3ea460a76549112741ac77f83e10ec37cd9
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: 75a5ce64b39b615325a3de55c1643004cffaeecf89e2e0a024d317bb56e32d4f
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "103714592"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118478367"
 ---
-# <a name="iagentcharactergetidleon"></a>Iagentcharacter:: getidleon
+# <a name="iagentcharactergetidleon"></a>IAgentCharacter::GetIdleOn
 
-\[Der Microsoft-Agent ist ab Windows 7 veraltet und in nachfolgenden Versionen von Windows möglicherweise nicht verfügbar.\]
+\[Microsoft Agent ist ab Version Windows 7 veraltet und in nachfolgenden Versionen von Windows.\]
 
 ``` syntax
 HRESULT GetIdleOn(
@@ -21,27 +21,27 @@ HRESULT GetIdleOn(
 );
 ```
 
-Gibt den automatischen Leerlauf Verarbeitungs Status für ein Zeichen an.
+Gibt den automatischen Verarbeitungszustand im Leerlauf für ein Zeichen an.
 
 -   Gibt S \_ OK zurück, um anzugeben, dass der Vorgang erfolgreich war.
 
 <dl> <dt>
 
-<span id="pbOn"></span><span id="pbon"></span><span id="PBON"></span>*pbon*
+<span id="pbOn"></span><span id="pbon"></span><span id="PBON"></span>*pbOn*
 </dt> <dd>
 
-Die Adresse einer Variablen, die " **true** " empfängt, wenn der Microsoft-Agent-Server für ein Zeichen automatisch **idlinger** -Zustands Animationen abspielt, andernfalls " **false** ".
+Adresse einer Variablen, die **TRUE empfängt,** wenn der Microsoft Agent-Server automatisch Idling-Zustandsanimationen für ein Zeichen und **FALSE** wieder gibt, wenn dies nicht der Fall ist. 
 
 </dd> </dl>
 
 ## <a name="see-also"></a>Weitere Informationen
 
-[**Iagentcharacter::/tidleon**](iagentcharacter--setidleon.md)
+[**IAgentCharacter::SetIdleOn**](iagentcharacter--setidleon.md)
 
 
- 
+ 
 
- 
+ 
 
 
 

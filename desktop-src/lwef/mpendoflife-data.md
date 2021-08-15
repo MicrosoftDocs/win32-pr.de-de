@@ -3,7 +3,7 @@ title: MPENDOFLIFE_DATA-Struktur (MpClient.h)
 description: '\ 0034; Ende der Lebensdauer \ 0034; Benachrichtigungsdaten.'
 ms.assetid: 00C2E707-9034-4BBC-99CF-3DFA4B8C08D9
 keywords:
-- MPENDOFLIFE_DATA struktur legacy Windows Environment Features (Legacy-Windows-Umgebungsfeatures)
+- MPENDOFLIFE_DATA struktur legacy Windows Environment Features (Legacyumgebungsfeatures)
 - PMPENDOFLIFE_DATA Strukturzeiger Legacy Windows Umgebungsfeatures
 topic_type:
 - apiref

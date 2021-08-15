@@ -1,5 +1,5 @@
 ---
-description: Auf Windows XP wird ein neues Befehlszeilentool zum Konfigurieren und Verwalten von IPv4 bereitgestellt. Dieses Tool verwendet den Befehl &\# 0034;netsh interface ip&0034; zum Konfigurieren und Verwalten \# von IPv4.
+description: Auf Windows XP wird ein neues Befehlszeilentool zum Konfigurieren und Verwalten von IPv4 bereitgestellt. Dieses Tool verwendet den befehl &\# 0034;netsh interface ip&\# 0034; zum Konfigurieren und Verwalten von IPv4.
 ms.assetid: d27eb0c2-4ae0-42d1-b92e-055a1c232e1c
 title: Verwenden von IPv6
 ms.topic: article
@@ -15,13 +15,13 @@ ms.locfileid: "118559206"
 
 Auf Windows XP wird ein neues Befehlszeilentool zum Konfigurieren und Verwalten von IPv4 bereitgestellt. Dieses Tool verwendet den Befehl "netsh interface ip" zum Konfigurieren und Verwalten von IPv4.
 
-In Windows XP mit Service Pack 1 (SP1) und höher wurde dieses neue Befehlszeilentool erweitert, um die Konfiguration und Verwaltung von IPv6 zu unterstützen. Dieses erweiterte Tool ist der Befehl "netsh interface ipv6". Konfigurationsänderungen, die mithilfe Netsh.exe Befehlen vorgenommen werden, sind dauerhaft und gehen nicht verloren, wenn der Computer oder das IPv6-Protokoll neu gestartet wird.
+Auf Windows XP mit Service Pack 1 (SP1) und höher wurde dieses neue Befehlszeilentool erweitert, um die Konfiguration und Verwaltung von IPv6 zu unterstützen. Dieses erweiterte Tool ist der Befehl "netsh interface ipv6". Konfigurationsänderungen, die mithilfe der befehle Netsh.exe vorgenommen werden, sind dauerhaft und gehen nicht verloren, wenn der Computer oder das IPv6-Protokoll neu gestartet wird.
 
-Der folgende Befehl ist auf Windows XP mit SP1 und höher verfügbar, um IPv6 auf einem lokalen Computer abfragen und konfigurieren zu können:
+Der folgende Befehl ist auf Windows XP mit SP1 und höher verfügbar, um IPv6 auf einem lokalen Computer abzufragen und zu konfigurieren:
 
 -   [Netsh.exe](netsh-exe.md)
 
-Vor der Windows XP mit Service Pack 1 (SP1) wurden für die IPv6-Konfiguration und -Verwaltung mehrere ältere Befehlszeilentools verwendet, um IPv6 zu konfigurieren und zu verwalten. Bei Verwendung dieser älteren Tools sind die IPv6-Änderungen nicht dauerhaft und gehen verloren, wenn der Computer oder das IPv6-Protokoll neu gestartet wurde.
+Vor Windows XP mit Service Pack 1 (SP1) wurden für die IPv6-Konfiguration und -Verwaltung mehrere ältere Befehlszeilentools verwendet, um IPv6 zu konfigurieren und zu verwalten. Mit diesen älteren Tools sind die IPv6-Änderungen nicht dauerhaft und gehen verloren, wenn der Computer oder das IPv6-Protokoll neu gestartet wurde.
 
 Die folgenden älteren Befehle sind auf Windows XP verfügbar.
 
@@ -31,7 +31,7 @@ Die folgenden älteren Befehle sind auf Windows XP verfügbar.
 
 Diese älteren Tools wurden auch in der IPv6-Technologievorschau für Windows 2000 bereitgestellt.
 
-Konfigurationsänderungen, die diese älteren Tools verwenden, können beibehalten werden, indem sie als Befehlszeilen in einer Befehlsskriptdatei (CMD) platziert werden, die nach dem Neustart des Computers oder des IPv6-Protokolls ausgeführt wird. Um Konfigurationsänderungen nach dem Neustart automatisch wiederherzustellen, war möglich, den Windows Scheduled Tasks zu verwenden, um die CMD-Datei auszuführen, wenn der Computer gestartet wird.
+Konfigurationsänderungen mit diesen älteren Tools können beibehalten werden, indem sie als Befehlszeilen in einer Befehlsskriptdatei (CMD) platziert werden, die nach dem Neustart des Computers oder des IPv6-Protokolls ausgeführt wird. Um Konfigurationsänderungen nach dem Neustart automatisch wiederherzustellen, war es möglich, die Windows Geplante Aufgaben zu verwenden, um die CMD-Datei auszuführen, wenn der Computer gestartet wird.
 
 Diese älteren Tools werden auf Windows Server 2003 und höher nicht bereitgestellt. Das Tool "netsh interface ipv6" wird zum Konfigurieren und Verwalten von IPv6 über die Befehlszeile auf Windows Server 2003 und höher bereitgestellt.
 
@@ -42,7 +42,7 @@ Diese älteren Tools werden auf Windows Server 2003 und höher nicht bereitgeste
 [Internetprotokoll Version 6 (IPv6)](internet-protocol-version-6-ipv6-2.md)
 </dt> <dt>
 
-[IPv6-Handbuch für Windows Sockets-Anwendungen](ipv6-guide-for-windows-sockets-applications-2.md)
+[IPv6-Leitfaden für Windows Sockets-Anwendungen](ipv6-guide-for-windows-sockets-applications-2.md)
 </dt> <dt>
 
 [IPv6 Technology Preview für Windows 2000](https://www.microsoft.com/downloads/details.aspx?FamilyID=27b1e6a6-bbdd-43c9-af57-dae19795a088)

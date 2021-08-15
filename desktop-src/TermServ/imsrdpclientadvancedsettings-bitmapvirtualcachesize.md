@@ -1,26 +1,26 @@
 ---
-title: IMsRdpClientAdvancedSettings BitmapVirtualCacheSize-Eigenschaft
-description: Gibt die Größe der persistenten Bitmapcachedatei in Megabyte an, die für die Farbe 8 Bits pro Pixel verwendet werden soll.
+title: IMsRdpClientAdvancedSettings BitmapVirtualCacheSize (Eigenschaft)
+description: Gibt die Größe der persistenten Bitmapcachedatei in Megabyte an, die für eine Farbe von 8 Bits pro Pixel verwendet werden soll.
 ms.assetid: 4efcabd2-8671-40a3-ad12-af0b2b6e495a
 ms.tgt_platform: multiple
 keywords:
-- BitmapVirtualCacheSize-Eigenschaft Remotedesktopdienste
+- BitmapVirtualCacheSize-Remotedesktopdienste
 - BitmapVirtualCacheSize-Eigenschaft Remotedesktopdienste , IMsRdpClientAdvancedSettings-Schnittstelle
-- IMsRdpClientAdvancedSettings-Schnittstelle Remotedesktopdienste , BitmapVirtualCacheSize-Eigenschaft
+- IMsRdpClientAdvancedSettings-Schnittstelle Remotedesktopdienste , BitmapVirtualCacheSize(Eigenschaft)
 - BitmapVirtualCacheSize-Eigenschaft Remotedesktopdienste , IMsRdpClientAdvancedSettings2-Schnittstelle
 - IMsRdpClientAdvancedSettings2-Schnittstelle Remotedesktopdienste , BitmapVirtualCacheSize-Eigenschaft
 - BitmapVirtualCacheSize-Eigenschaft Remotedesktopdienste , IMsRdpClientAdvancedSettings3-Schnittstelle
-- IMsRdpClientAdvancedSettings3-Schnittstelle Remotedesktopdienste , BitmapVirtualCacheSize-Eigenschaft
+- IMsRdpClientAdvancedSettings3-Schnittstelle Remotedesktopdienste , BitmapVirtualCacheSize(Eigenschaft)
 - BitmapVirtualCacheSize-Eigenschaft Remotedesktopdienste , IMsRdpClientAdvancedSettings4-Schnittstelle
-- IMsRdpClientAdvancedSettings4-Schnittstelle Remotedesktopdienste , BitmapVirtualCacheSize-Eigenschaft
+- IMsRdpClientAdvancedSettings4-Schnittstelle Remotedesktopdienste , BitmapVirtualCacheSize(Eigenschaft)
 - BitmapVirtualCacheSize-Eigenschaft Remotedesktopdienste , IMsRdpClientAdvancedSettings5-Schnittstelle
-- IMsRdpClientAdvancedSettings5-Schnittstelle Remotedesktopdienste , BitmapVirtualCacheSize-Eigenschaft
+- IMsRdpClientAdvancedSettings5-Schnittstelle Remotedesktopdienste , BitmapVirtualCacheSize (Eigenschaft)
 - BitmapVirtualCacheSize-Eigenschaft Remotedesktopdienste , IMsRdpClientAdvancedSettings6-Schnittstelle
-- IMsRdpClientAdvancedSettings6-Schnittstelle Remotedesktopdienste , BitmapVirtualCacheSize-Eigenschaft
+- IMsRdpClientAdvancedSettings6-Schnittstelle Remotedesktopdienste , BitmapVirtualCacheSize (Eigenschaft)
 - BitmapVirtualCacheSize-Eigenschaft Remotedesktopdienste , IMsRdpClientAdvancedSettings7-Schnittstelle
-- IMsRdpClientAdvancedSettings7-Schnittstelle Remotedesktopdienste , BitmapVirtualCacheSize-Eigenschaft
+- IMsRdpClientAdvancedSettings7-Schnittstelle Remotedesktopdienste , BitmapVirtualCacheSize(Eigenschaft)
 - BitmapVirtualCacheSize-Eigenschaft Remotedesktopdienste , IMsRdpClientAdvancedSettings8-Schnittstelle
-- IMsRdpClientAdvancedSettings8-Schnittstelle Remotedesktopdienste , BitmapVirtualCacheSize-Eigenschaft
+- IMsRdpClientAdvancedSettings8-Schnittstelle Remotedesktopdienste , BitmapVirtualCacheSize(Eigenschaft)
 topic_type:
 - apiref
 api_name:
@@ -61,9 +61,9 @@ ms.contentlocale: de-DE
 ms.lasthandoff: 08/11/2021
 ms.locfileid: "118353174"
 ---
-# <a name="imsrdpclientadvancedsettingsbitmapvirtualcachesize-property"></a>IMsRdpClientAdvancedSettings::BitmapVirtualCacheSize-Eigenschaft
+# <a name="imsrdpclientadvancedsettingsbitmapvirtualcachesize-property"></a>IMsRdpClientAdvancedSettings::BitmapVirtualCacheSize (Eigenschaft)
 
-Gibt die Größe der persistenten Bitmapcachedatei in Megabyte an, die für die Farbe 8 Bits pro Pixel verwendet werden soll.
+Gibt die Größe der persistenten Bitmapcachedatei in Megabyte an, die für eine Farbe von 8 Bits pro Pixel verwendet werden soll.
 
 Dies ist eine Eigenschaft mit Lese- und Schreibzugriff.
 
@@ -88,7 +88,7 @@ Die neue Cachegröße. Die gültigen Werte sind 1 bis einschließlich 32. Beacht
 
 ## <a name="error-codes"></a>Fehlercodes
 
-Gibt bei Erfolg **S \_ OK** zurück.
+Gibt **S \_ OK zurück,** wenn erfolgreich.
 
 ## <a name="remarks"></a>Hinweise
 

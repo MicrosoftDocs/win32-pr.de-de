@@ -14,7 +14,7 @@ ms.locfileid: "118315839"
 ---
 # <a name="select-statement-for-event-queries"></a>SELECT-Anweisung für Ereignisabfragen
 
-Sie können eine Vielzahl von SELECT-Anweisungen verwenden, um Ereignisinformationen abzufragen. Die Anweisungen können einfache Anweisungen oder restriktiver sein, um das von der Abfrage zurückgegebene Resultset einzugrenzen.
+Sie können eine Vielzahl von SELECT-Anweisungen verwenden, um Ereignisinformationen abfragt. Bei den Anweisungen kann es sich um einfache Anweisungen oder um restriktivere Anweisungen zum Einschränken des von der Abfrage zurückgegebenen Ergebnisses handelt.
 
 Das folgende Beispiel ist eine einfache SELECT-Anweisung, die zum Abfragen von Ereignisinformationen verwendet wird.
 
@@ -25,11 +25,11 @@ SELECT * FROM EventClass
 
 
 
-Wenn ein Consumer eine Abfrage übermittelt, ist es eine Anforderung, über alle Vorkommen des ereignisses benachrichtigt zu werden, das durch **EventClass** dargestellt wird. Diese Anforderung enthält eine Anforderung zur Benachrichtigung über alle Ereignissystem- und Nichtsystemeigenschaften. Wenn ein Ereignisanbieter eine Abfrage übermittelt, registriert er Unterstützung für das Generieren von Benachrichtigungen, wenn ein durch **EventClass** dargestelltes Ereignis auftritt.
+Wenn ein Consumer eine Abfrage übermittelt, ist es eine Anforderung, über alle Vorkommen des Ereignisses benachrichtigt zu werden, das durch **EventClass dargestellt wird.** Diese Anforderung enthält eine Anforderung zur Benachrichtigung über alle Ereignissystem- und Nichtsystemeigenschaften. Wenn ein Ereignisanbieter eine Abfrage übermittelt, registriert er Unterstützung für das Generieren von Benachrichtigungen, wenn ein durch **EventClass** dargestelltes Ereignis auftritt.
 
-Consumer können einzelne Eigenschaften anstelle des Sternchens \* () in der SELECT-Anweisung angeben.
+Consumers können einzelne Eigenschaften anstelle des Sternchens ( \* ) in der SELECT-Anweisung angeben.
 
-Im folgenden Beispiel wird veranschaulicht, wie bestimmte Eigenschaften abgefragt werden.
+Das folgende Beispiel zeigt, wie sie bestimmte Eigenschaften abfragen.
 
 
 ```sql
@@ -58,9 +58,9 @@ SELECT targetInstance.Name FROM __InstanceCreationEvent within 2
 
 
 
-Wenn eine Systemeigenschaft für eine bestimmte Abfrage nicht relevant ist, enthält sie **NULL.** Beispielsweise ist der Wert der **\_ \_ RELPATH-Systemeigenschaft** für alle Ereignisabfragen **NULL.**
+Wenn eine Systemeigenschaft für eine bestimmte Abfrage nicht relevant ist, enthält sie **NULL.** Beispielsweise ist der Wert der **\_ \_ RELPATH-Systemeigenschaft** **für alle** Ereignisabfragen NULL.
 
-Die folgenden Systemeigenschaften enthalten **NULL** für Ereignisabfragen:
+Die folgenden Systemeigenschaften enthalten **NULL für** Ereignisabfragen:
 
 <dl> \_\_Namespace  
 \_\_Pfad  
@@ -68,11 +68,11 @@ Die folgenden Systemeigenschaften enthalten **NULL** für Ereignisabfragen:
 \_\_Server  
 </dl>
 
-Weitere Informationen finden Sie unter [WMI-Systemeigenschaftenreferenz.](wmi-system-properties.md)
+Weitere Informationen finden Sie unter [WMI-Systemeigenschaftsreferenz.](wmi-system-properties.md)
 
-Alle Ereignisabfragen können eine optionale [WHERE-Klausel](where-clause.md)enthalten. WHERE-Klauseln werden jedoch hauptsächlich von Consumern verwendet, um zusätzliche Filter anzugeben. Es wird dringend empfohlen, dass Consumer immer eine WHERE-Klausel angeben. Die Kosten einer komplexen Abfrage sind im Vergleich zu den Kosten für die Übermittlung und Verarbeitung nicht benötigter Benachrichtigungen minimal.
+Alle Ereignisabfragen können eine optionale [WHERE-Klausel enthalten.](where-clause.md)WHERE-Klauseln werden jedoch in erster Linie von Consumers verwendet, um zusätzliche Filter anzugeben. Es wird dringend empfohlen, dass Benutzer immer eine WHERE-Klausel angeben. Die Kosten einer komplexen Abfrage sind im Vergleich zu den Kosten für die Bereitstellung und Verarbeitung nicht verwendeter Benachrichtigungen minimal.
 
-Das folgende Beispiel zeigt eine Abfrage, die Benachrichtigungen über alle Instanzänderungsereignisse anfordert, die sich auf die hypothetische **Klasse EmailEvent** auswirken.
+Das folgende Beispiel zeigt eine Abfrage, die Benachrichtigungen über alle Instanzänderungsereignisse anfragt, die sich auf die hypothetische Klasse **EmailEvent auswirken.**
 
 
 ```sql
@@ -81,9 +81,9 @@ SELECT * FROM EmailEvent
 
 
 
-Wenn Ereignisse im Zusammenhang mit **EmailEvent** häufig auftreten, wird der Consumer mit Ereignissen überflutet. Eine bessere Abfrage fordert Ereignisse nur dann an, wenn bestimmte Bedingungen Eigenschaften der angegebenen Klasse verwenden, z. B. wenn die Wichtigkeitsstufe hoch ist.
+Wenn Ereignisse im Zusammenhang **mit EmailEvent** häufig auftreten, wird der Consumer mit Ereignissen überflutet. Eine bessere Abfrage fordert Ereignisse nur an, wenn bestimmte Bedingungen Eigenschaften der angegebenen Klasse verwenden, z. B. wenn die Wichtigkeitsstufe hoch ist.
 
-Das folgende Beispiel zeigt die Abfrage, die Sie verwenden können, wenn **EmailImportance** eine Eigenschaft der **Klasse EmailEvent** ist.
+Das folgende Beispiel zeigt die Abfrage, die Sie verwenden können, **wenn EmailImportance** eine Eigenschaft der Klasse **EmailEvent ist.**
 
 
 ```sql
@@ -92,11 +92,11 @@ SELECT * FROM EmailEvent WHERE EmailImportance > 3
 
 
 
-Beachten Sie, dass WMI eine Abfrage aus verschiedenen Gründen ablehnen kann. Beispielsweise kann die Abfrage zu komplex oder ressourcenintensiv für die Auswertung sein. In diesem Fall gibt WMI bestimmte Fehlercodes zurück, z. B. **WBEM \_ E \_ INVALID \_ QUERY**.
+Beachten Sie, dass WMI eine Abfrage aus verschiedenen Gründen ablehnen kann. Beispielsweise kann die Abfrage zu komplex oder ressourcenintensiv für die Auswertung sein. In diesem Fall gibt WMI bestimmte Fehlercodes zurück, z. **B. WBEM \_ E INVALID \_ \_ QUERY**.
 
 Eigenschaften eingebetteter Objekte können in der WHERE-Klausel verwendet werden.
 
-Das folgende Beispiel zeigt, wie Nach -Objekten abgefragt wird, bei denen die **TargetInstance-Eigenschaft** der [**\_ \_ InstanceModificationEvent-Systemklasse**](--instancemodificationevent.md) ein eingebettetes [**Win32 \_ LogicalDisk-Objekt**](/windows/desktop/CIMWin32Prov/win32-logicaldisk) und **FreeSpace** eine Eigenschaft von **Win32 \_ LogicalDisk** ist.
+Im folgenden Beispiel wird gezeigt, wie Sie Objekte abfragen, bei denen die **TargetInstance-Eigenschaft** der [**\_ \_ InstanceModificationEvent-Systemklasse**](--instancemodificationevent.md) ein eingebettetes [**Win32 \_ LogicalDisk-Objekt**](/windows/desktop/CIMWin32Prov/win32-logicaldisk) und **FreeSpace** eine Eigenschaft von **Win32 \_ LogicalDisk ist.**
 
 
 ```sql
@@ -109,7 +109,7 @@ SELECT * FROM __InstanceModificationEvent WITHIN 600
 
 ## <a name="examples"></a>Beispiele
 
-Das Beispiel Monitor creation event for specific process name VBScript on TechNet [(Monitorerstellungsereignis für einen bestimmten Prozessnamen)](https://Gallery.TechNet.Microsoft.Com/52716121-f386-49de-86cd-46ca54d1714f) auf TechNet verwendet die SELECT-Anweisung, um Die Erstellungsereignisse der WMI-Instanz für win32 Process zu überwachen \_ und nach einem bestimmten Prozessnamen zu filtern.
+Das VbScript-Beispiel monitor creation event [for specific process name](https://Gallery.TechNet.Microsoft.Com/52716121-f386-49de-86cd-46ca54d1714f) (Überwachung der Erstellung eines bestimmten Prozessnamens) auf TechNet verwendet die SELECT-Anweisung, um WMI-Instanzerstellungsereignisse für den Win32-Prozess zu überwachen und nach einem bestimmten \_ Prozessnamen zu filtern.
 
  
 

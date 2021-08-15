@@ -13,7 +13,7 @@ ms.locfileid: "118391113"
 ---
 # <a name="locale_sposinfinity"></a>LOCALE \_ SPOSINFINITY
 
-**Windows Vista und höher:** Zeichenfolgenwert für "positive unendlich", z. B. "Infinity" für das englische (USA) -Locale. Es gibt keine Beschränkung für die Anzahl von Zeichen, die für die Zeichenfolge zulässig sind.
+**Windows Vista und höher:** Zeichenfolgenwert für "positive Unendlichkeit", z.B. "Infinity" für das gebietsschema "englisch" (USA). Es gibt keine Beschränkung für die Anzahl von Zeichen, die für die Zeichenfolge zulässig sind.
 
  
 

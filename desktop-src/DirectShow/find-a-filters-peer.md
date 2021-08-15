@@ -13,9 +13,9 @@ ms.locfileid: "118401764"
 ---
 # <a name="find-a-filters-peer"></a>Suchen eines Filter-Peers
 
-Bei einem Filter können Sie das Diagramm durchlaufen, indem Sie die Filter suchen, mit denen es verbunden ist. Beginnen Sie mit dem Aufzählen der Pins des Filters. Überprüfen Sie für jeden Pin, ob dieser Anheft mit einem anderen Pin verbunden ist. Falls ja, fragen Sie den anderen Pin nach dem besitzenden Filter ab. Sie können das Diagramm in Upstreamrichtung durch aufzählen, indem Sie die Eingabepins des Filters aufzählen, oder in downstream-Richtung, indem Sie die Ausgabepins aufzählen.
+Bei einem Filter können Sie das Diagramm durchlaufen, indem Sie die Filter suchen, mit denen es verbunden ist. Beginnen Sie, indem Sie die Pins des Filters aufzählen. Überprüfen Sie für jeden Pin, ob dieser Stecknadel mit einem anderen Pin verbunden ist. Wenn ja, fragen Sie den anderen Pin nach seinem besitzenden Filter ab. Sie können das Diagramm in Upstreamrichtung durch aufzählen, indem Sie die Eingabepins des Filters aufzählen, oder in downstream-Richtung, indem Sie die Ausgabepins aufzählen.
 
-Die folgende Funktion durchsucht upstream oder downstream nach einem verbundenen Filter. Es wird der erste übereinstimmende Filter zurückgegeben, der gefunden wird:
+Die folgende Funktion durchsucht upstream oder downstream nach einem verbundenen Filter. Sie gibt den ersten übereinstimmenden Filter zurück, der gefunden wird:
 
 
 ```C++
@@ -76,9 +76,9 @@ HRESULT GetNextFilter(
 
 
 
-Die Funktion ruft [**IBaseFilter::EnumPins**](/windows/desktop/api/Strmif/nf-strmif-ibasefilter-enumpins) auf, um die Pins des ersten Filters zu aufzählen. Für jeden Pin ruft er [**IPin::QueryDirection**](/windows/desktop/api/Strmif/nf-strmif-ipin-querydirection) auf, um zu überprüfen, ob der Pin der angegebenen Richtung (Eingabe oder Ausgabe) entspricht. Wenn dies der Wert ist, bestimmt die Funktion durch Aufrufen der [**IPin::ConnectedTo-Methode,**](/windows/desktop/api/Strmif/nf-strmif-ipin-connectedto) ob diese Stecknadel mit einem anderen Pin verbunden ist. Schließlich ruft sie [**IPin::QueryPinInfo auf**](/windows/desktop/api/Strmif/nf-strmif-ipin-querypininfo) dem verbundenen Pin auf. Diese Methode gibt eine -Struktur zurück, die unter anderem einen Zeiger auf den besitzenden Filter dieses Pins enthält. Dieser Zeiger wird an den Aufrufer im *ppNext-Parameter* zurückgegeben. Der Aufrufer muss den Zeiger frei geben.
+Die Funktion ruft [**IBaseFilter::EnumPins**](/windows/desktop/api/Strmif/nf-strmif-ibasefilter-enumpins) auf, um die Pins des ersten Filters aufzuzählen. Für jede Stecknadel ruft sie [**IPin::QueryDirection**](/windows/desktop/api/Strmif/nf-strmif-ipin-querydirection) auf, um zu überprüfen, ob der Stecknadel mit der angegebenen Richtung (Eingabe oder Ausgabe) übereinstimmt. Wenn ja, bestimmt die Funktion durch Aufrufen der [**IPin::ConnectedTo-Methode,**](/windows/desktop/api/Strmif/nf-strmif-ipin-connectedto) ob dieser Pin mit einem anderen Pin verbunden ist. Schließlich ruft sie [**IPin::QueryPinInfo**](/windows/desktop/api/Strmif/nf-strmif-ipin-querypininfo) auf dem verbundenen Pin auf. Diese Methode gibt eine -Struktur zurück, die unter anderem einen Zeiger auf den besitzenden Filter dieses Pins enthält. Dieser Zeiger wird an den Aufrufer im *ppNext-Parameter* zurückgegeben. Der Aufrufer muss den Zeiger freigeben.
 
-Der folgende Code zeigt, wie sie diese Funktion aufruft:
+Der folgende Code zeigt, wie diese Funktion aufgerufen wird:
 
 
 ```C++
@@ -93,9 +93,9 @@ if (SUCCEEDED(GetNextFilter(pF, PINDIR_INPUT, &pUpstream)))
 
 
 
-Ein Filter kann in beide Richtungen mit zwei oder mehr Filtern verbunden sein. Beispielsweise kann es sich um einen Splitterfilter mit mehreren filtern, die nachgeschaltet sind. Oder es kann sich um einen Muxfilter mit mehreren filtern, die vorgelagert sind. Daher sollten Sie alle in einer Liste sammeln.
+Ein Filter kann in beide Richtungen mit zwei oder mehr Filtern verbunden sein. Es kann sich z. B. um einen Splitterfilter mit mehreren Filtern nachgeschaltet haben. Oder es kann sich um einen mux-Filter mit mehreren Upstreamfiltern aus diesem filtert. Aus diesem Grund sollten Sie alle in einer Liste erfassen.
 
-Der folgende Code zeigt eine mögliche Möglichkeit, eine solche Funktion zu implementieren. Es wird die [**CGenericList-Klasse**](cgenericlist.md) von DirectShow verwendet. Sie könnten eine äquivalente Funktion mit einer anderen Datenstruktur schreiben.
+Der folgende Code zeigt eine mögliche Möglichkeit, eine solche Funktion zu implementieren. Es wird die [**DirectShow CGenericList-Klasse**](cgenericlist.md) verwendet. Sie könnten eine entsprechende Funktion mithilfe einer anderen Datenstruktur schreiben.
 
 
 ```C++
@@ -178,7 +178,7 @@ void AddFilterUnique(CFilterList &FilterList, IBaseFilter *pNew)
 
 
 
-Um dies etwas zu erschweren, kann ein Filter mehrere Pinverbindungen mit demselben Filter haben. Um zu vermeiden, dass Duplikate in die Liste aufgenommen werden, fragen Sie jeden **IBaseFilter-Zeiger** nach **IUnknown** ab, und vergleichen Sie die **IUnknown-Zeiger.** Nach den Regeln von COM verweisen zwei Schnittstellenzeige nur dann auf dasselbe Objekt, wenn sie identische **IUnknown-Zeiger** zurückgeben. Im vorherigen Beispiel behandelt die AddFilterUnique-Funktion dieses Detail.
+Um dies etwas zu erschweren, kann ein Filter mehrere Stecknadelverbindungen mit demselben Filter aufweisen. Um zu vermeiden, dass Duplikate in die Liste aufgenommen werden, fragen Sie jeden **IBaseFilter-Zeiger** nach **IUnknown** ab, und vergleichen Sie die **IUnknown-Zeiger.** Nach den Regeln von COM verweisen zwei Schnittstellenzeiger nur dann auf dasselbe Objekt, wenn sie identische **IUnknown-Zeiger** zurückgeben. Im vorherigen Beispiel behandelt die AddFilterUnique-Funktion dieses Detail.
 
 Das folgende Beispiel zeigt die Verwendung der GetPeerFilters-Funktion:
 

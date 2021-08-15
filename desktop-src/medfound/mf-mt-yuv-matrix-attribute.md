@@ -1,29 +1,29 @@
 ---
-description: Definiert bei YUV-Medientypen die Konvertierungs Matrix aus dem YCbCr-Farbraum in den RGB-Farbraum.
+description: Definiert für YUV-Medientypen die Konvertierungsmatrix vom YCbCr-Farbraum in den RGB-Farbraum.
 ms.assetid: b268d16d-b4cc-4026-9ba7-805cc5409b95
-title: MF_MT_YUV_MATRIX-Attribut (mfapi. h)
+title: MF_MT_YUV_MATRIX -Attribut (Mfapi.h)
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: f0c6976e4652c69b3bddc910dcc536a3d07bf39a
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 20f055490873bf1af07b8278c249679da53bc24b1a76be7a0384a010edff81c6
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106373315"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117876504"
 ---
-# <a name="mf_mt_yuv_matrix-attribute"></a>MF \_ MT \_ YUV \_ Matrix-Attribut
+# <a name="mf_mt_yuv_matrix-attribute"></a>MF \_ MT \_ YUV \_ MATRIX-Attribut
 
-Definiert bei YUV-Medientypen die Konvertierungs Matrix aus dem Farbraum ' ' der ' '-Eigenschaft ' CR ' in den ' g '-Farbbereich.
+Definiert für YUV-Medientypen die Konvertierungsmatrix vom Farbraum Y'Cb'Cr' in den Farbraum R'G'B'.
 
 ## <a name="data-type"></a>Datentyp
 
 **UINT32**
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Der Wert dieses Attributs ist ein Member der [**mfvideotransfermatrix**](/windows/desktop/api/mfobjects/ne-mfobjects-mfvideotransfermatrix) -Enumeration.
+Der Wert dieses Attributs ist ein Member der [**MFVideoTransferMatrix-Enumeration.**](/windows/desktop/api/mfobjects/ne-mfobjects-mfvideotransfermatrix)
 
-Die GUID-Konstante für dieses Attribut wird aus "mfuuid. lib" exportiert.
+Die GUID-Konstante für dieses Attribut wird aus mfuuid.lib exportiert.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -31,29 +31,29 @@ Die GUID-Konstante für dieses Attribut wird aus "mfuuid. lib" exportiert.
 
 | Anforderung | Wert |
 |-------------------------------------|------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Windows Vista \[ -Desktop-Apps \| UWP-apps\]<br/>                              |
-| Unterstützte Mindestversion (Server)<br/> | Windows Server 2008 \[ -Desktop-Apps \| UWP-apps\]<br/>                        |
-| Header<br/>                   | <dl> <dt>Mfapi. h</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows \[Vista-Desktop-Apps \| UWP-Apps\]<br/>                              |
+| Unterstützte Mindestversion (Server)<br/> | Windows UWP-Apps für Server \[ 2008-Desktop-Apps \|\]<br/>                        |
+| Header<br/>                   | <dl> <dt>Mfapi.h</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[Alphabetische Liste der Media Foundation Attribute](alphabetical-list-of-media-foundation-attributes.md)
+[Alphabetische Liste Media Foundation Attribute](alphabetical-list-of-media-foundation-attributes.md)
 </dt> <dt>
 
-[**Imfattributes:: GetUINT32**](/windows/desktop/api/mfobjects/nf-mfobjects-imfattributes-getuint32)
+[**ATTRIBUTEs::GetUINT32**](/windows/desktop/api/mfobjects/nf-mfobjects-imfattributes-getuint32)
 </dt> <dt>
 
-[**Imfattributes:: SetUINT32**](/windows/desktop/api/mfobjects/nf-mfobjects-imfattributes-setuint32)
+[**ATTRIBUTEs::SetUINT32**](/windows/desktop/api/mfobjects/nf-mfobjects-imfattributes-setuint32)
 </dt> <dt>
 
-[**IMF MediaType**](/windows/desktop/api/mfobjects/nn-mfobjects-imfmediatype)
+[**VERERBungstyp**](/windows/desktop/api/mfobjects/nn-mfobjects-imfmediatype)
 </dt> <dt>
 
-[Medientyp Attribute](media-type-attributes.md)
+[Medientypattribute](media-type-attributes.md)
 </dt> <dt>
 
 [Erweiterte Farbinformationen](extended-color-information.md)

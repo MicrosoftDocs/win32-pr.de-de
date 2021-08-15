@@ -28,7 +28,7 @@ ms.locfileid: "118421891"
 Die **CIM \_ ProcessThread-Klasse** stellt eine Verknüpfung zwischen einem Prozess und den Threads dar, die im Kontext des Prozesses ausgeführt werden.
 
 > [!IMPORTANT]
-> Die CIM-Klassen (Distributed Management Task Force) (DMTF (Distributed Management Task Force) (Common Information Model) sind die übergeordneten Klassen, auf denen WMI-Klassen erstellt werden. WMI unterstützt derzeit nur die [CIM 2.x-Versionsschemas.](https://dmtf.org/standards/cim/schemas)
+> Die CIM-Klassen (Distributed Management Task Force) (DMTF) (Common Information Model) sind die übergeordneten Klassen, auf denen WMI-Klassen erstellt werden. WMI unterstützt derzeit nur die [CIM 2.x-Versionsschemas.](https://dmtf.org/standards/cim/schemas)
 
  
 
@@ -47,7 +47,7 @@ class CIM_ProcessThread : CIM_Component
 
 ## <a name="members"></a>Member
 
-Die **CIM \_ ProcessThread-Klasse** verfügt über folgende Typen von Membern:
+Die **CIM \_ ProcessThread-Klasse** verfügt über die folgenden Membertypen:
 
 -   [Eigenschaften](#properties)
 
@@ -66,7 +66,7 @@ Datentyp: **\_ CIM-Prozess**
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**Max(**](/windows/desktop/WmiSdk/standard-qualifiers) 1), [**Min**](/windows/desktop/WmiSdk/standard-qualifiers) (1), [**Override**](/windows/desktop/WmiSdk/standard-qualifiers) ("GroupComponent")
+Qualifizierer: [**Max.**](/windows/desktop/WmiSdk/standard-qualifiers) (1), [**Min.**](/windows/desktop/WmiSdk/standard-qualifiers) (1), [**Außerkraftsetzung**](/windows/desktop/WmiSdk/standard-qualifiers) ("GroupComponent")
 </dt> </dl>
 
 Ein [**\_ CIM-Prozess,**](cim-process.md) der den Prozess beschreibt.
@@ -82,7 +82,7 @@ Datentyp: **\_ CIM-Thread**
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**Überschreiben**](/windows/desktop/WmiSdk/standard-qualifiers) ("PartComponent"), [**Schwach**](/windows/desktop/WmiSdk/standard-qualifiers)
+Qualifizierer: [**Außerkraftsetzung**](/windows/desktop/WmiSdk/standard-qualifiers) ("PartComponent"), [**Schwach**](/windows/desktop/WmiSdk/standard-qualifiers)
 </dt> </dl>
 
 Ein [**\_ CIM-Thread,**](cim-thread.md) der den Thread beschreibt, der im Kontext des Prozesses ausgeführt wird.
@@ -93,7 +93,7 @@ Ein [**\_ CIM-Thread,**](cim-thread.md) der den Thread beschreibt, der im Kontex
 
 WMI implementiert diese Klasse nicht.
 
-Diese Dokumentation wird von den CIM-Klassenbeschreibungen abgeleitet, die von dmtf veröffentlicht wurden. Möglicherweise hat Microsoft Änderungen vorgenommen, um kleinere Fehler zu korrigieren, den Dokumentationsstandards des Microsoft SDK zu entsprechen oder weitere Informationen bereitzustellen.
+Diese Dokumentation wird von den CIM-Klassenbeschreibungen abgeleitet, die von DMTF veröffentlicht wurden. Microsoft hat möglicherweise Änderungen vorgenommen, um kleinere Fehler zu beheben, die Dokumentationsstandards des Microsoft SDK zu erfüllen oder weitere Informationen zur Verfügung zu stellen.
 
 ## <a name="requirements"></a>Anforderungen
 

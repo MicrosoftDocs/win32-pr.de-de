@@ -32,12 +32,12 @@ Folgende Werte sind für dieses Attribut möglich:
 -   SAM \_ NON SECURITY GROUP OBJECT \_ \_ \_ 0x10000001
 -   \_SAM ALIAS OBJECT \_ 0x20000000
 -   SAM \_ NON SECURITY ALIAS OBJECT \_ \_ \_ 0x20000001
--   SAM \_ USER \_ OBJECT 0x30000000
+-   \_SAM USER OBJECT \_ 0x30000000
 -   SAM \_ NORMAL USER ACCOUNT \_ \_ 0x30000000
--   \_SAM MACHINE ACCOUNT \_ 0x30000001
+-   0X30000001 FÜR \_ SAM-COMPUTERKONTEN \_
 -   SAM \_ TRUST \_ ACCOUNT 0x30000002
 -   SAM \_ APP BASIC GROUP \_ \_ 0x40000000
--   \_SAM APP QUERY GROUP \_ \_ 0x40000001
+-   0X40000001 DER \_ SAM-APP-ABFRAGEGRUPPE \_ \_
 -   \_ \_ SAM-KONTOTYP \_ MAX 0x7fffffff
 
 
@@ -136,7 +136,7 @@ Folgende Werte sind für dieses Attribut möglich:
 | Link-ID                | \-                                                           |
 | MAPI-Id                | \-                                                           |
 | System-Only            | False                                                        |
-| Is-Single-Valued       | True                                                         |
+| Ist einwertig       | True                                                         |
 | Ist indiziert             | True                                                         |
 | Im globalen Katalog      | True                                                         |
 | NT-Security-Descriptor | O:BAG:BAD:S:                                                 |
@@ -157,7 +157,7 @@ Folgende Werte sind für dieses Attribut möglich:
 | Link-ID                | \-                                                           |
 | MAPI-Id                | \-                                                           |
 | System-Only            | False                                                        |
-| Is-Single-Valued       | True                                                         |
+| Ist einwertig       | True                                                         |
 | Ist indiziert             | True                                                         |
 | Im globalen Katalog      | True                                                         |
 | NT-Security-Descriptor | O:BAG:BAD:S:                                                 |
@@ -178,7 +178,7 @@ Folgende Werte sind für dieses Attribut möglich:
 | Link-ID                | \-                                                           |
 | MAPI-Id                | \-                                                           |
 | System-Only            | False                                                        |
-| Is-Single-Valued       | True                                                         |
+| Ist einwertig       | True                                                         |
 | Ist indiziert             | True                                                         |
 | Im globalen Katalog      | True                                                         |
 | NT-Security-Descriptor | O:BAG:BAD:S:                                                 |

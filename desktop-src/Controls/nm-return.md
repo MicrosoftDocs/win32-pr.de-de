@@ -1,9 +1,9 @@
 ---
 title: NM_RETURN Benachrichtigungscode (Commctrl.h)
-description: Benachrichtigt das übergeordnete Fenster eines Steuerelements, dass das Steuerelement über den Eingabefokus verfügt und der Benutzer die EINGABETASTE gedrückt hat. Dieser Benachrichtigungscode wird in Form einer WM \_ NOTIFY-Nachricht gesendet.
+description: Benachrichtigt das übergeordnete Fenster eines Steuerelements, dass das Steuerelement über den Eingabefokus verfügt und dass der Benutzer die EINGABETASTE gedrückt hat. Dieser Benachrichtigungscode wird in Form einer WM \_ NOTIFY-Nachricht gesendet.
 ms.assetid: 2c4839bc-6b23-469b-978f-cdf5f7bc0549
 keywords:
-- NM_RETURN Benachrichtigungscode Windows Steuerelementen
+- NM_RETURN Benachrichtigungscode Windows-Steuerelemente
 topic_type:
 - apiref
 api_name:
@@ -23,7 +23,7 @@ ms.locfileid: "118410530"
 ---
 # <a name="nm_return-notification-code"></a>NM \_ RETURN-Benachrichtigungscode
 
-Benachrichtigt das übergeordnete Fenster eines Steuerelements, dass das Steuerelement über den Eingabefokus verfügt und der Benutzer die EINGABETASTE gedrückt hat. Dieser Benachrichtigungscode wird in Form einer [**WM \_ NOTIFY-Nachricht**](wm-notify.md) gesendet.
+Benachrichtigt das übergeordnete Fenster eines Steuerelements, dass das Steuerelement über den Eingabefokus verfügt und dass der Benutzer die EINGABETASTE gedrückt hat. Dieser Benachrichtigungscode wird in Form einer [**WM \_ NOTIFY-Nachricht**](wm-notify.md) gesendet.
 
 
 ```C++
@@ -55,7 +55,7 @@ Der Rückgabewert wird vom -Steuerelement ignoriert.
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Windows Nur \[ Vista-Desktop-Apps\]<br/>                                        |
+| Unterstützte Mindestversion (Client)<br/> | Windows \[Nur Vista-Desktop-Apps\]<br/>                                        |
 | Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2003-Desktop-Apps\]<br/>                                  |
 | Header<br/>                   | <dl> <dt>Commctrl.h</dt> </dl> |
 

@@ -1,29 +1,29 @@
 ---
 title: EAP-Strukturen
-description: Anbieter sollten die folgenden Strukturtypen für Authentifizierungsprotokolle und Authentifizierungs Anbieter verwenden.
+description: Anbieter sollten die folgenden Strukturtypen für Authentifizierungsprotokolle und Authentifizierungsanbieter verwenden.
 ms.assetid: f2f1cf75-18d4-4764-a747-24662f166eb7
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 6816322e2b18e14a7aa8290240913c13bbf7894f
-ms.sourcegitcommit: c20a43b333f03175ac23823c55f3204bfe8cd243
+ms.openlocfilehash: 25ef9f3ba8faa8b1b7f0584d4526199d6e1d1591cd2ba892cd4a4257ee6ab57c
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/26/2019
-ms.locfileid: "103948339"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119978430"
 ---
 # <a name="eap-structures"></a>EAP-Strukturen
 
-Anbieter sollten die folgenden Strukturtypen für Authentifizierungsprotokolle und Authentifizierungs Anbieter verwenden:
+Anbieter sollten die folgenden Strukturtypen für Authentifizierungsprotokolle und Authentifizierungsanbieter verwenden:
 
--   [**PPP- \_ EAP- \_ Informationen**](/windows/desktop/api/Raseapif/ns-raseapif-ppp_eap_info)
--   [**PPP- \_ EAP- \_ Eingabe**](/windows/desktop/api/Raseapif/ns-raseapif-ppp_eap_input)
--   [**PPP- \_ EAP- \_ Ausgabe**](/windows/desktop/api/Raseapif/ns-raseapif-ppp_eap_output)
--   [**PPP- \_ EAP- \_ Paket**](/windows/desktop/api/Raseapif/ns-raseapif-ppp_eap_packet)
--   [**RAS-Authentifizierungs \_ \_ Attribut**](/windows/desktop/api/Raseapif/ns-raseapif-ras_auth_attribute)
+-   [**\_EAP-INFO ZU PPS \_**](/windows/desktop/api/Raseapif/ns-raseapif-ppp_eap_info)
+-   [**EMAILS \_ EAP \_ INPUT**](/windows/desktop/api/Raseapif/ns-raseapif-ppp_eap_input)
+-   [**AUSGABE DES \_ EAP-AUSGABEWERTS FÜR DIE EAP-AUSGABE \_**](/windows/desktop/api/Raseapif/ns-raseapif-ppp_eap_output)
+-   [**EMAILS \_ EAP \_ PACKET**](/windows/desktop/api/Raseapif/ns-raseapif-ppp_eap_packet)
+-   [**\_RAS-AUTH-ATTRIBUT \_**](/windows/desktop/api/Raseapif/ns-raseapif-ras_auth_attribute)
 
- 
+ 
 
- 
+ 
 
 
 
