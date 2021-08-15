@@ -1,40 +1,40 @@
 ---
-description: Die Medien Sitzung ist ein Objekt, das den Datenfluss in der Pipeline verwaltet. Sie kann für die Wiedergabe und Codierung von Dateien verwendet werden.
+description: Die Mediensitzung ist ein Objekt, das den Datenfluss in der Pipeline verwaltet. Sie kann sowohl für Wiedergabe- als auch für Codierungsdateien verwendet werden.
 ms.assetid: dac99908-be90-415d-8837-2f97d573feb5
-title: Medien Sitzung
+title: Mediensitzung
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: b3df4597e5461788f990f620875bce946570ab97
-ms.sourcegitcommit: c16214e53680dc71d1c07111b51f72b82a4512d8
+ms.openlocfilehash: fd54b08b6fda774ac08db46122569c1559dc23eb04d766e6e082b7d010663713
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/03/2021
-ms.locfileid: "106351851"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117877905"
 ---
-# <a name="media-session"></a>Medien Sitzung
+# <a name="media-session"></a>Mediensitzung
 
-Die Medien Sitzung ist ein Objekt, das den Datenfluss in der Pipeline verwaltet. Sie kann für die Wiedergabe und Codierung von Dateien verwendet werden.
+Die Mediensitzung ist ein Objekt, das den Datenfluss in der Pipeline verwaltet. Sie kann sowohl für Wiedergabe- als auch für Codierungsdateien verwendet werden.
 
-In diesem Abschnitt wird die Medien Sitzung von einem architektonischen Standpunkt aus beschrieben. Sie enthält die folgenden Abschnitte:
+In diesem Abschnitt wird die Mediensitzung aus architektonischer Sicht beschrieben. Sie enthält die folgenden Abschnitte:
 
 
 
 | Thema                                                                                        | BESCHREIBUNG                                                                                                                                      |
 |----------------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------|
-| [Informationen zur Medien Sitzung](about-the-media-session.md)                                       | Bietet eine Übersicht über die Medien Sitzung, die Art und Weise, wie eine Anwendung die Medien Sitzung erstellen kann, und wie die Medien Sitzung die Präsentationszeit verwaltet. |
+| [Informationen zur Mediensitzung](about-the-media-session.md)                                       | Bietet eine Übersicht über die Mediensitzung, wie eine Anwendung die Mediensitzung erstellen kann und wie die Mediensitzung die Präsentationszeit verwaltet. |
 | [Topologien](topologies.md)                                                                 | Eine Topologie ist ein Objekt, das den Datenfluss in der Pipeline darstellt.                                                                        |
-| [Medien Sitzungs Ereignisse](media-session-events.md)                                             | Beschreibt die Ereignisse, die von einer Anwendung möglicherweise von der Medien Sitzung empfangen werden.                                                                   |
-| [Steuern von Präsentations Zuständen](how-to-control-presentation-states.md)                 | Beschreibt die Transport Steuerelemente für Medien Sitzungen: wiedergeben, anhalten und anhalten.                                                                           |
-| [Verwenden von Medienquellen mit der Medien Sitzung](using-media-sources-with-the-media-session.md) | Verwenden von Medienquellen mit der Medien Sitzung.                                                                                                 |
-| [Raten Steuerung](rate-control.md)                                                             | Beschreibt, wie die Wiedergabe Rate gesteuert wird.                                                                                                          |
-| [Video Qualitäts Verwaltung](video-quality-management.md)                                     | Hier werden Verbesserungen an der Video Pipeline in Windows 7 beschrieben.                                                                                       |
-| [PMP-Medien Sitzung](pmp-media-session.md)                                                   | Hier wird beschrieben, wie die Medien Sitzung in einem PMP-Prozess (Protected Media Path) erstellt wird.                                                           |
+| [Mediensitzungsereignisse](media-session-events.md)                                             | Beschreibt die Ereignisse, die eine Anwendung möglicherweise von der Mediensitzung erhält.                                                                   |
+| [Steuern von Präsentationszuständen](how-to-control-presentation-states.md)                 | Beschreibt die Mediensitzungs-Transportsteuerelemente: Wiedergabe, Anhalten und Beenden.                                                                           |
+| [Verwenden von Medienquellen mit der Mediensitzung](using-media-sources-with-the-media-session.md) | Verwenden von Medienquellen mit der Mediensitzung.                                                                                                 |
+| [Rate Control](rate-control.md)                                                             | Beschreibt, wie die Wiedergaberate kontrolliert wird.                                                                                                          |
+| [VideoQualitätsverwaltung](video-quality-management.md)                                     | Beschreibt Verbesserungen an der Videopipeline in Windows 7.                                                                                       |
+| [PMP-Mediensitzung](pmp-media-session.md)                                                   | Beschreibt, wie die Mediensitzung in einem PMP-Prozess (Protected Media Path) erstellt wird.                                                           |
 
 
 
  
 
-In den folgenden Themen wird beschrieben, wie die Medien Sitzung in bestimmten Anwendungsszenarien verwendet wird:
+In den folgenden Themen wird beschrieben, wie die Mediensitzung in bestimmten Anwendungsszenarien verwendet wird:
 
 -   [Audio-/Videowiedergabe](audio-video-playback.md)
 -   [Codierung und Dateierstellung](encoding-and-file-authoring.md)
@@ -46,7 +46,7 @@ In den folgenden Themen wird beschrieben, wie die Medien Sitzung in bestimmten A
 [Media Foundation-Architektur](media-foundation-architecture.md)
 </dt> <dt>
 
-[**Imfmediasession**](/windows/desktop/api/mfidl/nn-mfidl-imfmediasession)
+[**BESENTMediaSession**](/windows/desktop/api/mfidl/nn-mfidl-imfmediasession)
 </dt> </dl>
 
  

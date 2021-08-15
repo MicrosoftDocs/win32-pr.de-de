@@ -1,7 +1,7 @@
 ---
-description: Die setnetworkinfoinblob-Funktion füllt die networkinfo-Struktur im BLOB auf.
+description: Die Funktion SetNetworkInfoInBlob füllt die NETWORKINFO-Struktur im BLOB aus.
 ms.assetid: 1a511c26-2fa7-4fe4-a5a9-23188c59bc34
-title: Setnetworkinfoinblob-Funktion (Netmon. h)
+title: SetNetworkInfoInBlob-Funktion (Netmon.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,16 +13,16 @@ api_type:
 - DllExport
 api_location:
 - Npptools.dll
-ms.openlocfilehash: a0019bfaf802b5d4dc80d73e75affa3c50d95de1
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: bb83fffc219cb7cc82b2b20d6672cef0b74a6cf108577126e4200a3342edaa2d
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106353599"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118364068"
 ---
-# <a name="setnetworkinfoinblob-function"></a>Setnetworkinfoinblob-Funktion
+# <a name="setnetworkinfoinblob-function"></a>SetNetworkInfoInBlob-Funktion
 
-Die **setnetworkinfoinblob** -Funktion füllt die **networkinfo** -Struktur im BLOB auf.
+Die **Funktion SetNetworkInfoInBlob** füllt die **NETWORKINFO-Struktur** im BLOB aus.
 
 ## <a name="syntax"></a>Syntax
 
@@ -40,25 +40,25 @@ DWORD SetNetworkInfoInBlob(
 
 <dl> <dt>
 
-*hblob* \[ in\]
+*hBlob* \[ In\]
 </dt> <dd>
 
 Handle für ein BLOB.
 
 </dd> <dt>
 
-*lpnetworkinfo* \[ in\]
+*lpNetworkInfo* \[ In\]
 </dt> <dd>
 
-Ein Zeiger auf die vom Benutzer zugewiesene [networkinfo](networkinfo.md) -Struktur, die die Funktion ausfüllt.
+Zeiger auf die vom Benutzer zugewiesene [NETWORKINFO-Struktur,](networkinfo.md) die die Funktion ausfüllt.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Wenn die Funktion erfolgreich ist, ist der Rückgabewert nmerr \_ Success.
+Wenn die Funktion erfolgreich ist, ist der Rückgabewert NMERR \_ SUCCESS.
 
-Wenn die Funktion nicht erfolgreich ist, ist der Rückgabewert ein nmerr-Wert, der den Fehler angibt.
+Wenn die Funktion nicht erfolgreich ist, ist der Rückgabewert ein NMERR-Wert, der den Fehler angibt.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -68,41 +68,41 @@ Wenn die Funktion nicht erfolgreich ist, ist der Rückgabewert ein nmerr-Wert, d
 |-------------------------------------|-----------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional \[nur Desktop-Apps\]<br/>                              |
 | Unterstützte Mindestversion (Server)<br/> | Windows 2000 Server \[nur Desktop-Apps\]<br/>                                    |
-| Header<br/>                   | <dl> <dt>Netmon. h</dt> </dl>     |
-| Bibliothek<br/>                  | <dl> <dt>Npptools. lib</dt> </dl> |
+| Header<br/>                   | <dl> <dt>Netmon.h</dt> </dl>     |
+| Bibliothek<br/>                  | <dl> <dt>Npptools.lib</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>Npptools.dll</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[Getnetworkinfofromblob](getnetworkinfofromblob.md)
+[GetNetworkInfoFromBlob](getnetworkinfofromblob.md)
 </dt> <dt>
 
-[Setboolinblob](setboolinblob.md)
+[SetBoolInBlob](setboolinblob.md)
 </dt> <dt>
 
-[Setclassidinblob](setclassidinblob.md)
+[SetClassIDInBlob](setclassidinblob.md)
 </dt> <dt>
 
-[Setdwordinblob](setdwordinblob.md)
+[SetDwordInBlob](setdwordinblob.md)
 </dt> <dt>
 
-[Setmacaddressinblob](setmacaddressinblob.md)
+[SetMacAddressInBlob](setmacaddressinblob.md)
 </dt> <dt>
 
-[Setnppaddressfilterinblob](setnppaddressfilterinblob.md)
+[SetNPPAddressFilterInBlob](setnppaddressfilterinblob.md)
 </dt> <dt>
 
-[Setnpppatternfilterinblob](setnpppatternfilterinblob.md)
+[SetNPPPatternFilterInBlob](setnpppatternfilterinblob.md)
 </dt> <dt>
 
-[Setnpptriggerinblob](setnpptriggerinblob.md)
+[SetNPPTriggerInBlob](setnpptriggerinblob.md)
 </dt> <dt>
 
-[Setstringinblob](setstringinblob.md)
+[SetStringInBlob](setstringinblob.md)
 </dt> </dl>
 
  

@@ -1,7 +1,7 @@
 ---
-description: Ruft einen zugehörigen Textteil zum Einbetten in den MHTML-Ausgabedatenstrom ab.
+description: Ruft einen verwandten Textteil zum Einbetten in den MHTML-Ausgabestream ab.
 ms.assetid: 7810568b-5fb7-4814-aa9f-d7ae805c97e1
-title: 'Iitempreviewerext:: getrelatedpart-Methode'
+title: IItemPreviewerExt::GetRelatedPart-Methode
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -12,16 +12,16 @@ api_name:
 api_type:
 - COM
 api_location: ''
-ms.openlocfilehash: 281d91b1679b2a944996bb1c85060d16c4e0b966
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 9abc4415eef014697376c9df4b89af47037a99df5c9ab5a3c74a3d7825b344c1
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106339760"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117863973"
 ---
-# <a name="iitempreviewerextgetrelatedpart-method"></a>Iitempreviewerext:: getrelatedpart-Methode
+# <a name="iitempreviewerextgetrelatedpart-method"></a>IItemPreviewerExt::GetRelatedPart-Methode
 
-Ruft einen zugehörigen Textteil zum Einbetten in den MHTML-Ausgabedatenstrom ab.
+Ruft einen verwandten Textteil zum Einbetten in den MHTML-Ausgabestream ab.
 
 ## <a name="syntax"></a>Syntax
 
@@ -41,39 +41,39 @@ HRESULT GetRelatedPart(
 
 <dl> <dt>
 
-*dwcontext* \[ in\]
+*dwContext* \[ In\]
 </dt> <dd>
 
 Typ: **DWORD**
 
-Der Kontext Bezeichner für den Vorgang. Überschreiben Sie den **dwcontext** -Standard, um den Kontext Bezeichner auf einen Wert Ihrer Wahl festzulegen.
+Der Kontextbezeichner für den Vorgang. Überschreiben Sie **den dwContext-Standardwert,** um den Kontextbezeichner auf einen Wert Ihrer Wahl zu setzen.
 
 </dd> <dt>
 
-*pwszprop* \[ in\]
+*pwszProp* \[ In\]
 </dt> <dd>
 
-Typ: **lpcolestr**
+Typ: **LPCOLESTR**
 
-Ein Zeiger auf die-Eigenschaft des verknüpften Inhalts als Unicode-Zeichenfolge.
+Ein Zeiger auf die -Eigenschaft des verknüpften Inhalts als Unicode-Zeichenfolge.
 
 </dd> <dt>
 
-*dwIndex* \[ in\]
+*dwIndex* \[ In\]
 </dt> <dd>
 
 Typ: **DWORD**
 
-Der Wert einer langen ganzen Zahl ohne Vorzeichen, der den NULL basierten Index des zugehörigen Textteils enthält.
+Ein ganzzahliger Wert ohne Vorzeichen, der den nullbasierten Index des verknüpften Textteiles enthält.
 
 </dd> <dt>
 
-*pinfo* \[ Out, retval\]
+*pInfo* \[ out, retval\]
 </dt> <dd>
 
-Typ: **[**linkinfo**](-search-linkinfo.md) \** _
+Typ: **[ **LINKINFO**](-search-linkinfo.md)\***
 
-Empfängt einen Zeiger auf die [_ *linkinfo* *](-search-linkinfo.md) -Struktur, in der die-Methode Informationen über die Transaktion zurückgibt. *pinfo* darf kein **null** -Zeiger sein.
+Empfängt einen Zeiger auf die [**LINKINFO-Struktur,**](-search-linkinfo.md) in der die Methode Informationen zur Transaktion zurückgibt. *pInfo* darf kein **NULL-Zeiger** sein.
 
 </dd> </dl>
 
@@ -81,13 +81,13 @@ Empfängt einen Zeiger auf die [_ *linkinfo* *](-search-linkinfo.md) -Struktur, 
 
 Typ: **HRESULT**
 
-Wenn diese Methode erfolgreich ausgeführt wird, gibt Sie **S \_ OK** zurück. Andernfalls wird ein **HRESULT** -Fehlercode zurückgegeben.
+Wenn diese Methode erfolgreich ist, wird **S \_ OK zurückgegeben.** Andernfalls wird ein **HRESULT-Fehlercode** zurückgegeben.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Die [**iitempreviewerext**](-search-iitempreviewerext.md) -Schnittstelle wird nur unter Windows XP und Windows Server 2003 unterstützt und sollte nicht mehr verwendet werden.
+Die [**IItemPreviewerExt-Schnittstelle**](-search-iitempreviewerext.md) wird nur auf Windows XP und Windows Server 2003 unterstützt und sollte nicht mehr verwendet werden.
 
-Zum Anzeigen einer Vorschau von Anlagen mit einem Protokollhandler eines Drittanbieters auf Computern, auf denen Windows XP oder Windows Server 2003 ausgeführt wird, ist es möglicherweise erforderlich, die [**iitempreviewerext**](-search-iitempreviewerext.md) -Schnittstelle und die folgenden APIs zu verwenden: die Schnittstellen [**isearchprotocolui**](-search-isearchprotocolui.md), [**iitempropertybag**](iitempropertybag.md) und [**isearchitem**](-search-isearchitem.md) , die [**linkinfo**](-search-linkinfo.md) -Struktur und die [**linktype**](-search-linktype.md)
+Um eine Vorschau von Anlagen mit einem Protokollhandler eines Drittanbieters auf Computern anzuzeigen, auf denen Windows XP oder Windows Server 2003 ausgeführt wird, ist es möglicherweise erforderlich, die [**IItemPreviewerExt-Schnittstelle**](-search-iitempreviewerext.md) und die folgenden APIs zu verwenden: die [**Schnittstellen ISearchProtocolUI,**](-search-isearchprotocolui.md) [**IItemPropertyBag**](iitempropertybag.md) und [**ISearchItem,**](-search-isearchitem.md) die [**LINKINFO-Struktur**](-search-linkinfo.md) und die [**LINKTYPE-Enumeration.**](-search-linktype.md)
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -95,17 +95,17 @@ Zum Anzeigen einer Vorschau von Anlagen mit einem Protokollhandler eines Drittan
 
 | Anforderung | Wert |
 |-------------------------------------|------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows XP mit SP2 \[ Desktop-Apps\]<br/> |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2003 \[ -Desktop-Apps\]<br/> |
-| Verteilbare Komponente<br/>          | Windows-Desktop Suche (WDS) 3,0<br/>          |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur XP mit \[ SP2-Desktop-Apps\]<br/> |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2003-Desktop-Apps\]<br/> |
+| Verteilbare Komponente<br/>          | Windows Desktopsuche (WDS) 3.0<br/>          |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Iitempreviewerext**](-search-iitempreviewerext.md)
+[**IItemPreviewerExt**](-search-iitempreviewerext.md)
 </dt> </dl>
 
  

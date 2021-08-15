@@ -1,7 +1,7 @@
 ---
-description: Die onwaitstart-Methode wird aufgerufen, wenn der Filter beginnt, auf die Präsentationszeit eines Beispiels zu warten.
+description: Die OnWaitStart-Methode wird aufgerufen, wenn der Filter beginnt, auf die Präsentationszeit eines Beispiels zu warten.
 ms.assetid: 598cd676-3afe-4ec9-ae38-83971412e6a7
-title: Cbaserderderer. onwaitstart-Methode (renbase. h)
+title: CBaseRenderer.OnWaitStart-Methode (Renbase.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -16,14 +16,14 @@ api_location:
 - Strmbase.dll
 - Strmbasd.lib
 - Strmbasd.dll
-ms.openlocfilehash: c2f88f11e370c6d1962ae6076f4c8f5eecc31407
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: eaad14d0eec765a0ad12693c0a1eee67386bc9bb26344ee52c29224d129edf5c
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106362153"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117822647"
 ---
-# <a name="cbaserendereronwaitstart-method"></a>Cbaserderderer. onwaitstart-Methode
+# <a name="cbaserendereronwaitstart-method"></a>CBaseRenderer.OnWaitStart-Methode
 
 Die `OnWaitStart` -Methode wird aufgerufen, wenn der Filter beginnt, auf die Präsentationszeit eines Beispiels zu warten.
 
@@ -44,11 +44,11 @@ Diese Methode hat keine Parameter.
 
 Diese Methode gibt keinen Wert zurück.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Die [**cbaserderderer:: waitforrendertime**](cbaserenderer-waitforrendertime.md) -Methode ruft diese Methode auf, wenn Sie beginnt, auf die Präsentationszeit eines Beispiels zu warten. Diese Methode führt in der Basisklasse keine Aktionen aus, Sie kann jedoch von der abgeleiteten Klasse überschrieben werden.
+Die [**CBaseRenderer::WaitForRenderTime-Methode**](cbaserenderer-waitforrendertime.md) ruft diese Methode auf, wenn sie mit dem Warten auf die Präsentationszeit eines Beispiels beginnt. Diese Methode führt in der Basisklasse nichts aus, aber die abgeleitete Klasse kann sie überschreiben.
 
-Wenn Sie die Qualitätskontrolle implementieren, können Sie diese Methode zusammen mit der [**cbaserenderer:: onwaitend**](cbaserenderer-onwaitend.md) -Methode überschreiben. Sie können diese Methoden verwenden, um die Leistung des Filters zu verfolgen.
+Wenn Sie die Qualitätskontrolle implementieren, können Sie diese Methode zusammen mit der [**CBaseRenderer::OnWaitEnd-Methode**](cbaserenderer-onwaitend.md) überschreiben. Mit diesen Methoden können Sie die Leistung des Filters nachverfolgen.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -56,16 +56,16 @@ Wenn Sie die Qualitätskontrolle implementieren, können Sie diese Methode zusam
 
 | Anforderung | Wert |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>Renbase. h (Include Streams. h)</dt> </dl>                                                                                   |
-| Bibliothek<br/> | <dl> " <dt>Straumbase. lib" (Einzelhandels Builds);</dt> " <dt>Straumbasd. lib" (Debugbuilds)</dt> </dl> |
+| Header<br/>  | <dl> <dt>Renbase.h (include Streams.h)</dt> </dl>                                                                                   |
+| Bibliothek<br/> | <dl> <dt>Strmbase.lib (Einzelhandels-Builds); </dt> <dt>Strmbasd.lib (Debugbuilds)</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Cbaserderderer-Klasse**](cbaserenderer.md)
+[**CBaseRenderer-Klasse**](cbaserenderer.md)
 </dt> </dl>
 
  

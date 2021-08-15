@@ -1,33 +1,33 @@
 ---
-description: Gibt an, ob die Anwendung die Echt Zeit Codierungs Leistung erfordert.
+description: Gibt an, ob die Anwendung die Codierungsleistung in Echtzeit erfordert.
 ms.assetid: 7e98a9f4-113b-45d0-ae55-7dc3f2af099e
-title: Avenccommonrealtime-Eigenschaft (codecapi. h)
+title: AVEncCommonRealTime-Eigenschaft (Codecapi.h)
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 5a03e51da1a088603273da3d083573e5921edf7a
-ms.sourcegitcommit: a47bd86f517de76374e4fff33cfeb613eb259a7e
+ms.openlocfilehash: b718f4f58d230448689700fc2e681c109e645d48cb33eb1788e45ac607350951
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/06/2021
-ms.locfileid: "106344181"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118403890"
 ---
-# <a name="avenccommonrealtime-property"></a>Avenccommonrealtime (Eigenschaft)
+# <a name="avenccommonrealtime-property"></a>AVEncCommonRealTime(Eigenschaft)
 
-Gibt an, ob die Anwendung die Echt Zeit Codierungs Leistung erfordert.
+Gibt an, ob die Anwendung die Codierungsleistung in Echtzeit erfordert.
 
 Dies ist eine Eigenschaft mit Lese- und Schreibzugriff.
 
 ## <a name="data-type"></a>Datentyp
 
-**Variant \_ bool** (**VT \_ bool**)
+**VARIANT \_ BOOL** (**VT \_ BOOL**)
 
 ## <a name="property-guid"></a>Eigenschaften-GUID
 
-**Codecapi \_ avenccommonrealtime**
+**CODECAPI \_ AVEncCommonRealTime**
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Legen Sie diese Eigenschaft auf **Variant \_ true** fest, um anzugeben, dass die Codierung in Echtzeit ausgeführt werden muss. Codecs können diese Eigenschaft auch als Funktion zurückgeben.
+Um anzugeben, dass die Codierung in Echtzeit ausgeführt werden muss, legen Sie diese Eigenschaft auf **VARIANT \_ TRUE fest.** Codecs können diese Eigenschaft auch als Funktion zurückgeben.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -35,20 +35,20 @@ Legen Sie diese Eigenschaft auf **Variant \_ true** fest, um anzugeben, dass die
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional \[ Desktop Apps \| UWP-apps\]<br/>                     |
-| Unterstützte Mindestversion (Server)<br/> | Windows 2000 Server \[ Desktop Apps \| UWP-apps\]<br/>                           |
-| Header<br/>                   | <dl> <dt>Codecapi. h</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional \[ Desktop-Apps \| UWP-Apps\]<br/>                     |
+| Unterstützte Mindestversion (Server)<br/> | Windows 2000 \[ Server-Desktop-Apps \| UWP-Apps\]<br/>                           |
+| Header<br/>                   | <dl> <dt>Codecapi.h</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[Eigenschaften der Codec-API](codec-api-properties.md)
+[Codec-API-Eigenschaften](codec-api-properties.md)
 </dt> <dt>
 
-[**Icodecapi-Schnittstelle**](/windows/desktop/api/Strmif/nn-strmif-icodecapi)
+[**ICodecAPI-Schnittstelle**](/windows/desktop/api/Strmif/nn-strmif-icodecapi)
 </dt> </dl>
 
  

@@ -1,9 +1,9 @@
 ---
-title: Player. aktiviert
-description: Mit der aktivierten Eigenschaft wird ein Wert angegeben oder abgerufen, der angibt, ob das Windows Media Player-Steuerelement aktiviert ist.
+title: Player.enabled
+description: Die enabled-Eigenschaft gibt einen Wert an, der angibt, ob das Windows Media Player-Steuerelement aktiviert ist, oder ruft einen Wert ab.
 ms.assetid: 65fea4d2-3330-4cce-bdaf-fae00304271a
 keywords:
-- Player. aktivierte Windows-Media Player
+- Player.enabled Windows Media Player
 topic_type:
 - apiref
 api_name:
@@ -14,16 +14,16 @@ api_type:
 - DllExport
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: d002d1f1420d17d4b1a0b7dd3028b0f2dc0f6f7b
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 804baa0dbb887cd389214c1c90e7a438e3529d7b7609cf3162091d2bf52cb17d
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106373618"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117747595"
 ---
-# <a name="playerenabled"></a>Player. aktiviert
+# <a name="playerenabled"></a>Player.enabled
 
-Mit der **aktivierten** Eigenschaft wird ein Wert angegeben oder abgerufen, der angibt, ob das Windows Media Player-Steuerelement aktiviert ist.
+Die **enabled-Eigenschaft** gibt einen Wert an, der angibt, ob das Windows Media Player-Steuerelement aktiviert ist, oder ruft einen Wert ab.
 
 ## <a name="syntax"></a>Syntax
 
@@ -31,7 +31,7 @@ Mit der **aktivierten** Eigenschaft wird ein Wert angegeben oder abgerufen, der 
 
 ## <a name="possible-values"></a>Mögliche Werte
 
-Diese Eigenschaft ist ein **boolescher** Wert mit Lese-/Schreibzugriff.
+Diese Eigenschaft ist ein **boolescher Lese-/Schreibzugriff.**
 
 
 
@@ -44,9 +44,9 @@ Diese Eigenschaft ist ein **boolescher** Wert mit Lese-/Schreibzugriff.
 
  
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Wenn **aktiviert** ist, ist der Wert false, während der Vollbild-Wiedergabe Media Player Fenster die Benutzer Steuerelemente ausblendet.
+Wenn **aktiviert** gleich FALSE ist, werden die Benutzersteuerelemente während der Vollbildwiedergabe Windows Media Player ausgeblendet.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -54,12 +54,12 @@ Wenn **aktiviert** ist, ist der Wert false, während der Vollbild-Wiedergabe Med
 
 | Anforderung | Wert |
 |--------------------|------------------------------------------------------------------------------------|
-| Version<br/> | Windows Media Player Version 7,0 oder höher.<br/>                              |
+| Version<br/> | Windows Media Player Version 7.0 oder höher.<br/>                              |
 | DLL<br/>     | <dl> <dt>Wmp.dll</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 

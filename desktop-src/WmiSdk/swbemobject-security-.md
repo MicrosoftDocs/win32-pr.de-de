@@ -1,8 +1,8 @@
 ---
-description: Die Security- \_ Eigenschaft des-Objekts mit dem-Objekt wird zum Lesen oder Festlegen der Sicherheitseinstellungen für ein-Objekt vom typaustausch verwendet.
+description: Die \_ Security-Eigenschaft des SWbemObject-Objekts wird verwendet, um die Sicherheitseinstellungen für ein SWbemObject-Objekt zu lesen oder festzulegen.
 ms.assetid: add77267-d62f-4ee4-a0ff-8ca06a6bf7cd
 ms.tgt_platform: multiple
-title: SWbemObject.Security_-Eigenschaft (wbemdisp. h)
+title: SWbemObject.Security_-Eigenschaft (Wbemdisp.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -16,23 +16,23 @@ api_type:
 - COM
 api_location:
 - Wbemdisp.dll
-ms.openlocfilehash: f4d4b9aec7b6d800fa27609abd5d0cb1f3a435a5
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: d83a155057e445848e727615978c3414e96f63334ffc70c78d5f055a396b53f7
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "104349219"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118313784"
 ---
-# <a name="swbemobjectsecurity_-property"></a>Errbemubject. Security ( \_ Eigenschaft)
+# <a name="swbemobjectsecurity_-property"></a>SWbemObject.Security-Eigenschaft \_
 
-Die **Security \_** -Eigenschaft des [**-Objekts mit**](swbemobject.md) dem-Objekt wird zum Lesen oder Festlegen der Sicherheitseinstellungen für ein-Objekt vom **typaustausch** verwendet. Diese Eigenschaft ist ein [**Swap Security**](swbemsecurity.md) -Objekt. Die Sicherheitseinstellungen in diesem Objekt geben nicht die Authentifizierung, den Identitätswechsel oder die Berechtigungseinstellungen an, die für eine Verbindung mit Windows-Verwaltungsinstrumentation (WMI) vorgenommen wurden, oder die für den Proxy geltenden Sicherheit, wenn ein Objekt in einem asynchronen-Befehl an eine Senke übermittelt wird. Weitere Informationen finden Sie unter Verwalten der [WMI-Sicherheit](maintaining-wmi-security.md).
+Die **\_ Security-Eigenschaft** des [**SWbemObject-Objekts**](swbemobject.md) wird verwendet, um die Sicherheitseinstellungen für ein **SWbemObject-Objekt** zu lesen oder festzulegen. Diese Eigenschaft ist ein [**SWbemSecurity-Objekt.**](swbemsecurity.md) Die Sicherheitseinstellungen in diesem Objekt geben weder die Authentifizierungs-, Identitätswechsel- oder Berechtigungseinstellungen an, die für eine Verbindung mit Windows Management Instrumentation (WMI) vorgenommen wurden, noch die sicherheit, die für den Proxy gilt, wenn ein Objekt in einem asynchronen Aufruf an eine Senke übermittelt wird. Weitere Informationen finden Sie unter [Verwalten der WMI-Sicherheit.](maintaining-wmi-security.md)
 
 > [!Note]  
-> Das Festlegen **der \_ Security** -Eigenschaft eines " [**errbemubject**](swbemobject.md) "-Objekts auf **null** gewährt allen Benutzern uneingeschränkten Zugriff. Weitere Informationen finden Sie unter [**Swap Security**](swbemsecurity.md).
+> Wenn Sie die **Security-Eigenschaft \_** eines [**SWbemObject-Objekts**](swbemobject.md) auf **NULL** festlegen, wird jedem jederzeit unbegrenzter Zugriff gewährt. Weitere Informationen finden Sie unter [**SWbemSecurity**](swbemsecurity.md).
 
  
 
-Eine Erläuterung dieser Syntax finden Sie unter [Dokument Konventionen für die Skript-API](document-conventions-for-the-scripting-api.md).
+Eine Erläuterung dieser Syntax finden Sie unter [Dokumentkonventionen für die Skripterstellungs-API.](document-conventions-for-the-scripting-api.md)
 
 Diese Eigenschaft ist schreibgeschützt.
 
@@ -55,40 +55,40 @@ SWbemObject.Security_ As Object
 |-------------------------------------|-----------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows Vista<br/>                                                                |
 | Unterstützte Mindestversion (Server)<br/> | Windows Server 2008<br/>                                                          |
-| Header<br/>                   | <dl> <dt>Wbemdisp. h</dt> </dl>   |
-| Typbibliothek<br/>             | <dl> <dt>Wbemdisp. tlb</dt> </dl> |
+| Header<br/>                   | <dl> <dt>Wbemdisp.h</dt> </dl>   |
+| Typbibliothek<br/>             | <dl> <dt>Wbemdisp.tlb</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>Wbemdisp.dll</dt> </dl> |
-| CLSID<br/>                    | CLSID- \_ Austausch Objekt<br/>                                                           |
-| IID<br/>                      | IID \_ iswbemujekt<br/>                                                            |
+| CLSID<br/>                    | CLSID \_ SWbemObject<br/>                                                           |
+| IID<br/>                      | IID \_ ISWbemObject<br/>                                                            |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Austausch Objekt**](swbemobject.md)
+[**Swbemobject**](swbemobject.md)
 </dt> <dt>
 
-[Erstellen einer WMI-Anwendung oder eines Skripts](creating-a-wmi-application-or-script.md)
+[Erstellen einer WMI-Anwendung oder eines WMI-Skripts](creating-a-wmi-application-or-script.md)
 </dt> <dt>
 
-[Festlegen der \_ Prozesssicherheit für Client Anwendungen \_](setting-client-application-process-security.md)
+[Festlegen der \_ \_ Clientanwendungsprozesssicherheit](setting-client-application-process-security.md)
 </dt> <dt>
 
-[**Austausch Sicherheit**](swbemsecurity.md)
+[**SWbemSecurity**](swbemsecurity.md)
 </dt> <dt>
 
-[**Wbemauthenticationlevelerum**](/windows/desktop/api/Wbemdisp/ne-wbemdisp-wbemauthenticationlevelenum)
+[**WbemAuthenticationLevelEnum**](/windows/desktop/api/Wbemdisp/ne-wbemdisp-wbemauthenticationlevelenum)
 </dt> <dt>
 
-[**Wbemimpersonationlevelenum**](/windows/desktop/api/Wbemdisp/ne-wbemdisp-wbemimpersonationlevelenum)
+[**WbemImpersonationLevelEnum**](/windows/desktop/api/Wbemdisp/ne-wbemdisp-wbemimpersonationlevelenum)
 </dt> <dt>
 
-[**Wbemprivilegeumum**](/windows/desktop/api/Wbemdisp/ne-wbemdisp-wbemprivilegeenum)
+[**WbemPrivilegeEnum**](/windows/desktop/api/Wbemdisp/ne-wbemdisp-wbemprivilegeenum)
 </dt> <dt>
 
-[**Berechtigungs Konstanten**](privilege-constants.md)
+[**Berechtigungskonstanten**](privilege-constants.md)
 </dt> </dl>
 
  

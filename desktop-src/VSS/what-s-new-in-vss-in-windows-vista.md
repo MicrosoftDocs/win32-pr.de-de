@@ -4,16 +4,16 @@ ms.assetid: 3b16744d-b9c2-4462-a409-de94d9103c39
 title: Neues in VSS in Windows Vista
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 122caa350ede984d5b05eb7eedd6039d82a76f1d
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: bc9e0780b092b2bed0235ba62377da9a4f7f0b53bded9e3f7feb5d412f5ab982
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106356768"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117751142"
 ---
 # <a name="whats-new-in-vss-in-windows-vista"></a>Neues in VSS in Windows Vista
 
-In Windows Vista werden die folgenden Änderungen am Volumeschattenkopie-Dienst eingeführt.
+Windows Vista führt die folgenden Änderungen an der Volumeschattenkopie-Dienst ein.
 
 Beachten Sie, dass alle Änderungen für Windows Vista auch für Windows Server 2008 und Windows Vista mit Service Pack 1 (SP1) gelten.
 
@@ -21,27 +21,27 @@ Beachten Sie, dass alle Änderungen für Windows Vista auch für Windows Server 
 
 [**IVssBackupComponentsEx2**](/windows/desktop/api/VsBackup/nl-vsbackup-ivssbackupcomponentsex2)
 
-[**Ivsscomponstex**](/windows/desktop/api/VsWriter/nl-vswriter-ivsscomponentex)
+[**IVssComponentEx**](/windows/desktop/api/VsWriter/nl-vswriter-ivsscomponentex)
 
 [**IVssCreateWriterMetadataEx**](/windows/desktop/api/VsWriter/nl-vswriter-ivsscreatewritermetadataex)
 
 [**IVssDifferentialSoftwareSnapshotMgmt2**](/windows/desktop/api/VsMgmt/nn-vsmgmt-ivssdifferentialsoftwaresnapshotmgmt2)
 
-[**IVssExamineWriterMetadataEx2**](/windows/desktop/api/VsBackup/nl-vsbackup-ivssexaminewritermetadataex2)
+[**IVssExwriterMetadataEx2**](/windows/desktop/api/VsBackup/nl-vsbackup-ivssexaminewritermetadataex2)
 
 ## <a name="new-vss-classes"></a>Neue VSS-Klassen
 
-[**Cvssbeschreiterex**](/windows/desktop/api/VsWriter/nl-vswriter-cvsswriterex)
+[**CVssWriterEx**](/windows/desktop/api/VsWriter/nl-vswriter-cvsswriterex)
 
 ## <a name="new-vss-enumerations"></a>Neue VSS-Enumerationen
 
-[**VSS- \_ Rollforward- \_ Typ**](/windows/desktop/api/Vss/ne-vss-vss_rollforward_type)
+[**VSS \_ \_ ROLLFORWARD-TYP**](/windows/desktop/api/Vss/ne-vss-vss_rollforward_type)
 
-## <a name="existing-vss-enumeration-modifications"></a>Vorhandene Änderungen der VSS-Enumeration
+## <a name="existing-vss-enumeration-modifications"></a>Vorhandene VSS-Enumerationsänderungen
 
 <dl> <dt>
 
-<span id="VSS_BACKUP_SCHEMA_enumeration"></span><span id="vss_backup_schema_enumeration"></span><span id="VSS_BACKUP_SCHEMA_ENUMERATION"></span>[**VSS \_ Sicherungs \_ Schema**](/windows/desktop/api/Vss/ne-vss-vss_backup_schema) -Enumeration
+<span id="VSS_BACKUP_SCHEMA_enumeration"></span><span id="vss_backup_schema_enumeration"></span><span id="VSS_BACKUP_SCHEMA_ENUMERATION"></span>[**VSS \_ BACKUP \_ SCHEMA-Enumeration**](/windows/desktop/api/Vss/ne-vss-vss_backup_schema)
 </dt> <dd>
 
 <dl> <dt>
@@ -49,19 +49,19 @@ Beachten Sie, dass alle Änderungen für Windows Vista auch für Windows Server 
 <span id="Added_values_"></span><span id="added_values_"></span><span id="ADDED_VALUES_"></span>Hinzugefügte Werte:
 </dt> <dd>
 
-\_ \_ autorisierende \_ Wiederherstellung in VSS
+\_AUTORITATIVE \_ WIEDERHERSTELLUNG VON VSS BS \_
 
-\_ \_ \_ System \_ Status von VSS-SB (unabhängig)
+VSS \_ BS \_ INDEPENDENT \_ SYSTEM \_ STATE
 
-Umbenennen von VSS- \_ \_ \_ Benennungen
+VSS \_ BS \_ RESTORE \_ RENAME
 
-VSS- \_ SB- \_ Roll Forward- \_ Wiederherstellung
+VSS \_ BS \_ ROLLFORWARD \_ RESTORE
 
 </dd> </dl> </dd> </dl>
 
 <dl> <dt>
 
-<span id="VSS_COMPONENT_FLAGS_enumeration"></span><span id="vss_component_flags_enumeration"></span><span id="VSS_COMPONENT_FLAGS_ENUMERATION"></span>[**VSS \_ \_Komponentenflags**](/windows/desktop/api/VsWriter/ne-vswriter-vss_component_flags) -Enumeration
+<span id="VSS_COMPONENT_FLAGS_enumeration"></span><span id="vss_component_flags_enumeration"></span><span id="VSS_COMPONENT_FLAGS_ENUMERATION"></span>[**VSS \_ COMPONENT \_ FLAGS-Enumeration**](/windows/desktop/api/VsWriter/ne-vswriter-vss_component_flags)
 </dt> <dd>
 
 <dl> <dt>
@@ -69,13 +69,13 @@ VSS- \_ SB- \_ Roll Forward- \_ Wiederherstellung
 <span id="Added_values_"></span><span id="added_values_"></span><span id="ADDED_VALUES_"></span>Hinzugefügte Werte:
 </dt> <dd>
 
-VSS \_ CF \_ nicht \_ System \_ Status
+VSS \_ CF \_ NOT \_ SYSTEM \_ STATE
 
 </dd> </dl> </dd> </dl>
 
 <dl> <dt>
 
-<span id="_VSS_VOLUME_SNAPSHOT_ATTRIBUTES_enumeration"></span><span id="_vss_volume_snapshot_attributes_enumeration"></span><span id="_VSS_VOLUME_SNAPSHOT_ATTRIBUTES_ENUMERATION"></span>Enumeration der [**\_ VSS- \_ volumemomentaufnahme- \_ \_ Attribute**](/windows/desktop/api/Vss/ne-vss-vss_volume_snapshot_attributes)
+<span id="_VSS_VOLUME_SNAPSHOT_ATTRIBUTES_enumeration"></span><span id="_vss_volume_snapshot_attributes_enumeration"></span><span id="_VSS_VOLUME_SNAPSHOT_ATTRIBUTES_ENUMERATION"></span>[**\_ VSS \_ VOLUME \_ SNAPSHOT \_ ATTRIBUTES-Enumeration**](/windows/desktop/api/Vss/ne-vss-vss_volume_snapshot_attributes)
 </dt> <dd>
 
 <dl> <dt>
@@ -83,30 +83,30 @@ VSS \_ CF \_ nicht \_ System \_ Status
 <span id="Added_values_"></span><span id="added_values_"></span><span id="ADDED_VALUES_"></span>Hinzugefügte Werte:
 </dt> <dd>
 
-VSS \_ Volsnap \_ attr \_ No \_ AutoRecovery
+VSS \_ VOLSNAP \_ ATTR \_ NO \_ AUTORECOVERY
 
-VSS- \_ Volsnap- \_ attr \_ nicht \_ transaktiv
+VSS \_ VOLSNAP \_ ATTR \_ NOT \_ TRANSACTED
 
 </dd> </dl> </dd> </dl>
 
-## <a name="vss-event-tracing-and-logging"></a>VSS-Ereignis Ablauf Verfolgung und Protokollierung
+## <a name="vss-event-tracing-and-logging"></a>VSS-Ereignisablaufverfolgung und -protokollierung
 
--   Die VSS-Ablauf Verfolgungs Datei kann sich jetzt auf einem beliebigen lokalen Volume befinden. In Windows-Versionen vor Windows Vista konnte die VSS-Ablauf Verfolgungs Datei nicht auf einem Volume gefunden werden, das sich im Schattenkopiesatz befand.
--   Viele Ereignisprotokoll Einträge wurden neu formuliert, um sie übersichtlicher zu machen.
--   Alle VSS-Ereignisprotokoll Einträge enthalten nun Kontextinformationen.
+-   Die VSS-Ablaufverfolgungsdatei kann jetzt auf jedem lokalen Volume gespeichert werden. In Versionen von Windows vor Windows Vista konnte sich die VSS-Ablaufverfolgungsdatei nicht auf einem Volume befinden, das sich im Schattenkopiesatz befand.
+-   Viele Ereignisprotokolleinträge wurden umgeschrieben, um sie übersichtlicher zu machen.
+-   Alle VSS-Ereignisprotokolleinträge enthalten jetzt Kontextinformationen.
 
 ## <a name="vss-error-reporting"></a>VSS-Fehlerberichterstattung
 
--   Beschreibungen aller VSS-Fehlercodes können jetzt durch Aufrufen der [**FormatMessage**](/windows/win32/api/winbase/nf-winbase-formatmessage) -Funktion mit dem \_ \_ \_ im *dwFlags* -Parameter angegebenen Flag "Format Message from HMODULE" abgerufen werden.
--   Die VSS-Fehlercode Meldungen sind in vsstrace.dll enthalten. Ein Handle für dieses Modul muss im *lpSource* -Parameter angegeben werden.
+-   Beschreibungen aller VSS-Fehlercodes können jetzt durch Aufrufen der [**FormatMessage-Funktion**](/windows/win32/api/winbase/nf-winbase-formatmessage) mit dem \_ im \_ \_ *dwFlags-Parameter* angegebenen FORMAT MESSAGE FROM HMODULE-Flag abgerufen werden.
+-   Die VSS-Fehlermeldungen sind in vsstrace.dll enthalten. Ein Handle für dieses Modul muss im *lpSource-Parameter* angegeben werden.
 
-## <a name="excluding-files-from-shadow-copies"></a>Ausschließen von Dateien aus Schatten Kopien
+## <a name="excluding-files-from-shadow-copies"></a>Ausschließen von Dateien aus Schattenkopien
 
-Anwendungen oder Dienste können den Registrierungsschlüssel filesnottosnapshot verwenden, um Dateien anzugeben, die aus neu erstellten Schatten Kopien gelöscht werden sollen. Weitere Informationen finden Sie unter [Ausschließen von Dateien aus Schatten Kopien](excluding-files-from-shadow-copies.md).
+Anwendungen oder Dienste können den Registrierungsschlüssel FilesNotToSnapshot verwenden, um Dateien anzugeben, die aus neu erstellten Schattenkopien gelöscht werden sollen. Weitere Informationen finden Sie unter [Ausschließen von Dateien aus Schattenkopien.](excluding-files-from-shadow-copies.md)
 
-## <a name="backup-and-restore-application-compatibility"></a>Sichern und Wiederherstellen der Anwendungs Kompatibilität
+## <a name="backup-and-restore-application-compatibility"></a>Sicherungs- und Wiederherstellungsanwendungskompatibilität
 
-Entwickler von Sicherungs-und Wiederherstellungs Anwendungen müssen bestimmte neue Features in Windows Vista und Windows Server 2008 kennen. Eine Checkliste zur Anwendungs Kompatibilität finden Sie unter [Anwendungs Kompatibilität für die Sicherung und Wiederherstellung](application-compatibility-for-backup-and-restore.md).
+Entwickler von Sicherungs- und Wiederherstellungsanwendungen müssen bestimmte neue Features in Windows Vista und Windows Server 2008 kennen. Eine Prüfliste für die Anwendungskompatibilität finden Sie unter [Anwendungskompatibilität für Sicherung und Wiederherstellung.](application-compatibility-for-backup-and-restore.md)
 
  
 

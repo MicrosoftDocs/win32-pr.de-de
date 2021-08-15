@@ -1,11 +1,11 @@
 ---
-title: Idwrite telocalfontfileloader getfilepathlängen fromkey-Methode
-description: Ruft die Länge des absoluten Dateipfads aus dem Verweis Schlüssel der Schriftart Datei ab.
+title: IDWriteLocalFontFileLoader GetFilePathLengthFromKey-Methode
+description: Erhält die Länge des absoluten Dateipfads aus dem Verweisschlüssel der Schriftartdatei.
 ms.assetid: bdd84d75-5a7a-448a-a52c-0f5997ab07b9
 keywords:
-- Getfilepathlängen fromkey-Methode direkt schreiben
-- Getfilepathlängen fromkey-Methode Direct Write, idwrite telocalfontfileloader-Schnittstelle
-- Idwrite telocalfontfileloader-Schnittstelle Direct Write, getfilepathlängen fromkey-Methode
+- GetFilePathLengthFromKey-Methode Direct Write
+- GetFilePathLengthFromKey-Methode Direct Write, IDWriteLocalFontFileLoader-Schnittstelle
+- IDWriteLocalFontFileLoader-Schnittstelle Direct Write , GetFilePathLengthFromKey-Methode
 topic_type:
 - apiref
 api_name:
@@ -16,16 +16,16 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 091c3cd5f1e13c40d364a3db005793f1dd0bf5f1
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 587f432f006493097ec8262fcc2201e2c3b67abe7115c395332671ec35efeba9
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106365523"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117816351"
 ---
-# <a name="idwritelocalfontfileloadergetfilepathlengthfromkey-method"></a>Idwrite telocalfontfileloader:: getfilepathlängen fromkey-Methode
+# <a name="idwritelocalfontfileloadergetfilepathlengthfromkey-method"></a>IDWriteLocalFontFileLoader::GetFilePathLengthFromKey-Methode
 
-Ruft die Länge des absoluten Dateipfads aus dem Verweis Schlüssel der Schriftart Datei ab.
+Erhält die Länge des absoluten Dateipfads aus dem Verweisschlüssel der Schriftartdatei.
 
 ## <a name="syntax"></a>Syntax
 
@@ -44,30 +44,30 @@ HRESULT GetFilePathLengthFromKey(
 
 <dl> <dt>
 
-*fontfilereferencekey* \[ in\]
+*fontFileReferenceKey* \[ In\]
 </dt> <dd>
 
-Typ: Konstante **void \***
+Typ: **const \* void**
 
-Verweis Schlüssel der Schriftart Datei, der die lokale Schriftart Datei innerhalb des Gültigkeits Bereichs des verwendeten Schriftart Lade Moduls eindeutig identifiziert.
+Der Verweisschlüssel der Schriftartdatei, der die lokale Schriftartdatei innerhalb des Bereichs des verwendeten Schriftartladefelds eindeutig identifiziert.
 
 </dd> <dt>
 
-*fontfilereferencekeysize* 
+*fontFileReferenceKeySize* 
 </dt> <dd>
 
-Typ: **UInt32**
+Typ: **UINT32**
 
-Größe des Verweis Schlüssels der Schriftart Datei in Bytes.
+Größe des Verweisschlüssels der Schriftartdatei in Bytes.
 
 </dd> <dt>
 
-*filepathlength* \[ vorgenommen\]
+*filePathLength* \[ out\]
 </dt> <dd>
 
-Typ: **UInt32 \***
+Typ: **UINT32 \***
 
-Länge der Dateipfad-Zeichenfolge ohne das beendete **null** Zeichen.
+Länge der Dateipfadzeichenfolge, ohne das beendete **NULL-Zeichen.**
 
 </dd> </dl>
 
@@ -75,7 +75,7 @@ Länge der Dateipfad-Zeichenfolge ohne das beendete **null** Zeichen.
 
 Typ: **HRESULT**
 
-Wenn diese Methode erfolgreich ausgeführt wird, gibt Sie **S \_ OK** zurück. Andernfalls wird ein **HRESULT** -Fehlercode zurückgegeben.
+Wenn diese Methode erfolgreich ist, wird **S \_ OK zurückgegeben.** Andernfalls wird ein **HRESULT-Fehlercode** zurückgegeben.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -83,16 +83,16 @@ Wenn diese Methode erfolgreich ausgeführt wird, gibt Sie **S \_ OK** zurück. A
 
 | Anforderung | Wert |
 |--------------------|---------------------------------------------------------------------------------------|
-| Bibliothek<br/> | <dl> <dt>Dwrite. lib</dt> </dl> |
+| Bibliothek<br/> | <dl> <dt>Dwrite.lib</dt> </dl> |
 | DLL<br/>     | <dl> <dt>Dwrite.dll</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Idschreitelocalfontfileloader**](idwritelocalfontfileloader.md)
+[**IDWriteLocalFontFileLoader**](idwritelocalfontfileloader.md)
 </dt> </dl>
 
  

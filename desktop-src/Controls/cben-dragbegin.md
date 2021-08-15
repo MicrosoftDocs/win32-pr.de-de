@@ -1,9 +1,9 @@
 ---
-title: CBEN_DRAGBEGIN Benachrichtigungs Code (kommctrl. h)
-description: Wird gesendet, wenn der Benutzer mit dem Ziehen des Bilds des Elements beginnt, das im Bearbeitungsbereich des Steuer Elements angezeigt wird. Dieser Benachrichtigungs Code wird in Form einer WM-Benachrichtigungs \_ Meldung gesendet.
+title: CBEN_DRAGBEGIN Benachrichtigungscode (Commctrl.h)
+description: Wird gesendet, wenn der Benutzer mit dem Ziehen des Bilds des Elements beginnt, das im Bearbeitungsteil des Steuerelements angezeigt wird. Dieser Benachrichtigungscode wird in Form einer WM \_ NOTIFY-Nachricht gesendet.
 ms.assetid: bdab2700-a605-48af-aee3-bbf573408e3f
 keywords:
-- Windows-Steuerelemente für CBEN_DRAGBEGIN Benachrichtigungs
+- CBEN_DRAGBEGIN Benachrichtigungscode Windows-Steuerelemente
 topic_type:
 - apiref
 api_name:
@@ -16,16 +16,16 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 910e6ac494b49f685a55e77b432e96b4fb22bd29
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 626ad4d6abbcaaeb6f647aa94657ee1a681801a3ce13a9b5539216b1b67565a4
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104105758"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118414060"
 ---
-# <a name="cben_dragbegin-notification-code"></a>Cben \_ dragbegin-Benachrichtigungs Code
+# <a name="cben_dragbegin-notification-code"></a>CBEN \_ DRAGBEGIN-Benachrichtigungscode
 
-Wird gesendet, wenn der Benutzer mit dem Ziehen des Bilds des Elements beginnt, das im Bearbeitungsbereich des Steuer Elements angezeigt wird. Dieser Benachrichtigungs Code wird in Form einer WM- [**\_ Benachrichtigungs**](wm-notify.md) Meldung gesendet.
+Wird gesendet, wenn der Benutzer mit dem Ziehen des Bilds des Elements beginnt, das im Bearbeitungsteil des Steuerelements angezeigt wird. Dieser Benachrichtigungscode wird in Form einer [**WM \_ NOTIFY-Nachricht**](wm-notify.md) gesendet.
 
 
 ```C++
@@ -43,7 +43,7 @@ CBEN_DRAGBEGIN
 *lParam* 
 </dt> <dd>
 
-Ein Zeiger auf eine [**nmcbedragbegin**](/windows/desktop/api/Commctrl/ns-commctrl-nmcbedragbegina) -Struktur, die Informationen über den Benachrichtigungs Code enthält.
+Ein Zeiger auf eine [**NMCBEDRAGBEGIN-Struktur,**](/windows/desktop/api/Commctrl/ns-commctrl-nmcbedragbegina) die Informationen zum Benachrichtigungscode enthält.
 
 </dd> </dl>
 
@@ -51,9 +51,9 @@ Ein Zeiger auf eine [**nmcbedragbegin**](/windows/desktop/api/Commctrl/ns-commct
 
 Der Rückgabewert wird ignoriert.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Wenn die empfangende Anwendung die Drag & Drop-Funktionalität aus dem Steuerelement implementiert, startet die Anwendung den Drag & Drop-Vorgang als Reaktion auf diesen Benachrichtigungs Code.
+Wenn die empfangende Anwendung Drag & Drop-Funktionen aus dem Steuerelement implementiert, beginnt die Anwendung den Drag & Drop-Vorgang als Reaktion auf diesen Benachrichtigungscode.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -61,10 +61,10 @@ Wenn die empfangende Anwendung die Drag & Drop-Funktionalität aus dem Steuerele
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>                                        |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2003 \[ -Desktop-Apps\]<br/>                                  |
-| Header<br/>                   | <dl> <dt>Kommstrg. h</dt> </dl> |
-| Unicode- und ANSI-Name<br/>   | **Cben \_ Dragbeginw** (Unicode) und **cben \_ dragbegina** (ANSI)<br/>             |
+| Unterstützte Mindestversion (Client)<br/> | Windows \[Nur Vista-Desktop-Apps\]<br/>                                        |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2003-Desktop-Apps\]<br/>                                  |
+| Header<br/>                   | <dl> <dt>Commctrl.h</dt> </dl> |
+| Unicode- und ANSI-Name<br/>   | **CBEN \_ DRAGBEGINW** (Unicode) und **CBEN \_ DRAGBEGINA** (ANSI)<br/>             |
 
 
 

@@ -1,10 +1,10 @@
 ---
-title: ORPC_DBG_BUFFER Struktur
-description: Die ORPC \_ dbg- \_ Puffer Struktur ist das Puffer Format, das zum Mars Hallen von RPC-Daten an die Methoden der iorpcdebugnotify-Schnittstelle verwendet wird.
+title: ORPC_DBG_BUFFER-Struktur
+description: Die ORPC DBG BUFFER-Struktur ist das Pufferformat, das zum Marshallen von RPC-Daten zu den Methoden der \_ \_ IOrpcDebugNotify-Schnittstelle verwendet wird.
 ms.assetid: 444cd3b8-bc7b-425d-9ccc-04fd6c7393b2
 keywords:
-- COM für ORPC_DBG_BUFFER Struktur
-- PORPC_DBG_BUFFER Struktur Zeiger com
+- ORPC_DBG_BUFFER-Struktur COM
+- PORPC_DBG_BUFFER Strukturzeiger COM
 topic_type:
 - apiref
 api_name:
@@ -15,16 +15,16 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 4dc42251b928207a2b009a18c1d88e94dcf1492a
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 7cb1f83cfcbe673cd2d5701e57ae1e94d4e04b59b845cd9ec7b617077da24bb0
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "106341786"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118310256"
 ---
-# <a name="orpc_dbg_buffer-structure"></a>ORPC \_ dbg- \_ Puffer Struktur
+# <a name="orpc_dbg_buffer-structure"></a>ORPC \_ DBG \_ BUFFER-Struktur
 
-Die **ORPC \_ dbg- \_ Puffer** Struktur ist das Puffer Format, das zum Mars Hallen von RPC-Daten an die Methoden der [**iorpcdebugnotify**](iorpcdebugnotify.md) -Schnittstelle verwendet wird.
+Die **ORPC \_ DBG \_ BUFFER-Struktur** ist das Pufferformat, das zum Marshallen von RPC-Daten zu den Methoden der [**IOrpcDebugNotify-Schnittstelle verwendet**](iorpcdebugnotify.md) wird.
 
 ## <a name="syntax"></a>Syntax
 
@@ -56,17 +56,17 @@ typedef struct _ORPC_DBG_BUFFER {
 
 <dl> <dt>
 
-**alwaysorbisweilen**
+**alwaysOrSometimes**
 </dt> <dd>
 
-Ein Wert, der das Erzeugen des Debuggers steuert. **alwaysorsometimes** kann einen der folgenden Werte aufweisen:
+Ein -Wert, der das Debugger-Spawning steuert. **alwaysOrSometimes** kann einer der folgenden Werte sein:
 
 
 
 | Wert                                                                                                                                                                                                                                                                   | Bedeutung                                                                                                                                                                                                                                        |
 |-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| <span id="ORPC_DEBUG_ALWAYS"></span><span id="orpc_debug_always"></span><dl> <dt>**ORPC \_ \_Immer**</dt> <dt>0x00000000</dt> Debuggen </dl>                              | Wenn diese Einstellung festgelegt ist, wird die Client-oder Server Benachrichtigung für den Empfänger immer von com erhoben.<br/>                                                                                                                                                    |
-| <span id="ORPC_DEBUG_IF_HOOK_ENABLED"></span><span id="orpc_debug_if_hook_enabled"></span><dl> <dt>**ORPC \_ Debuggen, \_ Wenn der \_ Hook \_ aktiviert ist**</dt> <dt>0x00000001</dt> </dl> | Wenn festgelegt, wird von com nur die Client-oder Server Benachrichtigung für den Empfänger ausgegeben, wenn das com-Debuggen aktiviert wurde, indem [**dlldebugobjectrpchook**](dlldebugobjectrpchook.md) in diesem Prozess aufgerufen wird, wobei **ftrace** auf **true** festgelegt ist. <br/> |
+| <span id="ORPC_DEBUG_ALWAYS"></span><span id="orpc_debug_always"></span><dl> <dt>**ORPC \_ DEBUGGEN \_ VON ALWAYS**</dt> <dt>0X00000000</dt> </dl>                              | Wenn festgelegt, gibt COM immer die Client- oder Serverbenachrichtigung auf dem Empfänger aus.<br/>                                                                                                                                                    |
+| <span id="ORPC_DEBUG_IF_HOOK_ENABLED"></span><span id="orpc_debug_if_hook_enabled"></span><dl> <dt>**ORPC \_ \_DEBUGGEN, \_ WENN HOOK \_ AKTIVIERT**</dt> <dt>0X00000001</dt> </dl> | Wenn festgelegt, gibt COM nur dann die Client- oder Serverbenachrichtigung auf dem Empfänger aus, wenn das COM-Debuggen aktiviert wurde, indem [**DllDebugObjectRPCHook**](dlldebugobjectrpchook.md) in diesem Prozess mit **fTrace** auf TRUE festgelegt **wird.** <br/> |
 
 
 
@@ -77,35 +77,35 @@ Ein Wert, der das Erzeugen des Debuggers steuert. **alwaysorsometimes** kann ein
 **verMajor**
 </dt> <dd>
 
-Die Hauptversionsnummer der Datenformat Spezifikation.
+Die Hauptversionsnummer der Datenformatspezifikation.
 
 </dd> <dt>
 
 **verMinor**
 </dt> <dd>
 
-Die neben Versionsnummer der Datenformat Spezifikation.
+Die Nebenversionsnummer der Datenformatspezifikation.
 
 </dd> <dt>
 
-**cbremaineing**
+**cbRemaining**
 </dt> <dd>
 
-Die Anzahl von Bytes (einschließlich **cbremaineing**), die in dieser-Struktur befolgt werden.
+Die Anzahl der Bytes, einschließlich **cbRemaining**, die in dieser Struktur folgen.
 
 </dd> <dt>
 
-**guidsemantic**
+**guidSemantic**
 </dt> <dd>
 
-Eine GUID, die bestimmt, welche Member der Union unten vorhanden sind. **guidsemantic** kann einen der folgenden Werte annehmen:
+Eine GUID, die bestimmt, welche Member der Union unten vorhanden sind. **guidSemantic** kann einen der folgenden Werte verwenden:
 
 
 
 | Wert                                                                                                           | Bedeutung                                                                                                                                                                                      |
 |-----------------------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| <dl> <dt>9cade560-8F 43-101A-b07b-00dd01113f 11</dt> </dl> | Bestimmt, ob ein Einzelschritt vom Debugger ausgeführt werden soll. Im folgenden ist nur das **fstoponotherside** -Member der Union vorhanden.<br/>                                             |
-| <dl> <dt>D62AEDFA-57EA-11ce-A964-00AA006C3706</dt> </dl> | Bestimmt, ob die an den Empfänger gemarshallte RPC-Daten und debugopcodes übermittelt werden. Alle Member der Union sind unten mit Ausnahme von **fstoponotherside** enthalten.<br/> |
+| <dl> <dt>9CADE560-8F43-101A-B07B-00DD01113F11</dt> </dl> | Bestimmt, ob einzelne Einzelschritte vom Debugger ausgeführt werden sollen. Unten ist **nur das fStopOnOtherSide-Member** der Union vorhanden.<br/>                                             |
+| <dl> <dt>D62AEDFA-57EA-11ce-A964-00AA006C3706</dt> </dl> | Bestimmt, ob RPC-marshallte Daten und Debugopcodes an den Empfänger übergeben werden. Alle Member der Union sind unten mit Ausnahme von **fStopOnOtherSide vorhanden.**<br/> |
 
 
 
@@ -113,24 +113,24 @@ Eine GUID, die bestimmt, welche Member der Union unten vorhanden sind. **guidsem
 
 </dd> <dt>
 
-**"f"**
+**fStopOnOtherSide**
 </dt> <dd>
 
-**True** gibt an, dass der Debugger einen Einzelschritt durchläuft und den Server ausführen und die Ausführung fortsetzen soll, sobald die andere Seite erreicht ist. Andernfalls wird ein Einzelschritt nicht durchgeführt, und die Debugger-Ausführung wird auf der anderen Seite angehalten.
+True **gibt an,** dass ein einzelner Schritt vom Debugger ausgeführt wird, und er sollte den Server schrittweise beenden und die Ausführung fortsetzen, sobald die andere Seite erreicht ist. Andernfalls wird kein einzelner Einzelschritt ausgeführt, und die Debuggerausführung wird auf der anderen Seite beendet.
 
 </dd> <dt>
 
-**wdebuggingopcode**
+**wDebuggingOpCode**
 </dt> <dd>
 
-Ein Wert, mit dem eine Reihe von Vorgängen angegeben werden kann. **wdebuggingopcode** kann einen der folgenden Werte annehmen:
+Ein -Wert, der die Angabe einer Reihe von Vorgängen ermöglicht. **wDebuggingOpCode** kann einen der folgenden Werte verwenden:
 
 
 
 | Wert                                                                             | Bedeutung                                                                                              |
 |-----------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------|
 | <dl> <dt>0x0000</dt> </dl> | Keine Operation.<br/>                                                                             |
-| <dl> <dt>0x0001</dt> </dl> | Wenn der Wert festgelegt ist, ist die Semantik mit einem Schritt mit **fstoponotherside** identisch, wenn auf **true** festgelegt.<br/> |
+| <dl> <dt>0x0001</dt> </dl> | Wenn festgelegt, ist die Einzelschrittsemantik mit **fStopOnOtherSide** identisch, wenn sie auf **TRUE festgelegt ist.**<br/> |
 
 
 
@@ -138,37 +138,37 @@ Ein Wert, mit dem eine Reihe von Vorgängen angegeben werden kann. **wdebuggingo
 
 </dd> <dt>
 
-**cblock**
+**cExtent**
 </dt> <dd>
 
-Auffüllung. Darf nicht verwendet werden.
+Polsterung. Darf nicht verwendet werden.
 
 </dd> <dt>
 
 **padding**
 </dt> <dd>
 
-Auffüllung. Darf nicht verwendet werden.
+Polsterung. Darf nicht verwendet werden.
 
 </dd> <dt>
 
-**betrieben**
+**Cb**
 </dt> <dd>
 
-Die Größe in Bytes der Daten in **rgbData**.
+Die Größe der Daten in **rgbData** in Bytes.
 
 </dd> <dt>
 
-**guidextent**
+**guidExtent**
 </dt> <dd>
 
-Eine **GUID** , die den Typ der Daten in **rgbData** bestimmt. " **guidextent** " kann einen der folgenden Werte annehmen:
+Eine **GUID,** die den Datentyp in **rgbData bestimmt.** **guidExtent** kann einen der folgenden Werte verwenden:
 
 
 
 | Wert                                                                                                           | Bedeutung                                                   |
 |-----------------------------------------------------------------------------------------------------------------|-----------------------------------------------------------|
-| <dl> <dt>53199051-57eb-11CE-a964-00aa006c3706</dt> </dl> | **rgbData** ist ein marshallte Schnittstellen Zeiger.<br/> |
+| <dl> <dt>53199051-57EB-11ce-A964-00AA006C3706</dt> </dl> | **rgbData** ist ein marshallter Schnittstellenzeiger.<br/> |
 
 
 
@@ -179,13 +179,13 @@ Eine **GUID** , die den Typ der Daten in **rgbData** bestimmt. " **guidextent** 
 **rgbData**
 </dt> <dd>
 
-Ein **Byte** Puffer, der verwendet wird, um RPC-Daten zwischen den Client-und serverbuggern zu übergeben. Der Inhalt von **rgbData** wird durch die **GUID** in " **guidextent**" bestimmt.
+Ein **BYTE-Puffer,** der verwendet wird, um PER RPC marshallte COM-Daten zwischen client- und serverdebuggern zu übergeben. Der Inhalt von **rgbData** wird durch die **GUID** in **guidExtent bestimmt.**
 
 
 
-| Wert für "guidextent"                     | rgbData-Inhalt                                                                                                                                                                                                                                    |
+| guidExtent-Wert                     | rgbData-Inhalte                                                                                                                                                                                                                                    |
 |--------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| 53199051-57eb-11CE-a964-00aa006c3706 | Ein gemarshallte Schnittstellen Zeiger, der sich aus dem Aufruf von [**comarshalinterface**](/windows/desktop/api/combaseapi/nf-combaseapi-comarshalinterface)ergibt. Der Marshalling-Zeiger wird mithilfe von " [**count**](/windows/desktop/api/combaseapi/nf-combaseapi-counmarshalinterface)" in den entsprechenden Schnittstellen Zeiger konvertiert. |
+| 53199051-57EB-11ce-A964-00AA006C3706 | Ein marshallter Schnittstellenzeiger, der sich aus dem Aufruf von [**CoMarshalInterface ergibt.**](/windows/desktop/api/combaseapi/nf-combaseapi-comarshalinterface) Der marshalled-Zeiger wird mithilfe von [**CoUnmarshalInterface**](/windows/desktop/api/combaseapi/nf-combaseapi-counmarshalinterface)in den entsprechenden Schnittstellenzeiger konvertiert. |
 
 
 
@@ -193,9 +193,9 @@ Ein **Byte** Puffer, der verwendet wird, um RPC-Daten zwischen den Client-und se
 
 </dd> </dl>
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Diese Member dieser Struktur haben eine 1-Byte-Ausrichtung und werden immer in Little-Endian-Byte Reihenfolge übertragen.
+Diese Member dieser Struktur haben eine 1-Byte-Ausrichtung und werden immer in Little-Endian-Byte-Reihenfolge übertragen.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -209,20 +209,20 @@ Diese Member dieser Struktur haben eine 1-Byte-Ausrichtung und werden immer in L
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**ORPC \_ dbg \_ alle**](orpc-dbg-all.md)
+[**ORPC \_ DBG \_ ALL**](orpc-dbg-all.md)
 </dt> <dt>
 
-[**ORPC-init-Argumente \_ \_**](orpc-init-args.md)
+[**ORPC \_ INIT \_ ARGS**](orpc-init-args.md)
 </dt> <dt>
 
-[**Dlldebugobjectrpchook**](dlldebugobjectrpchook.md)
+[**DllDebugObjectRPCHook**](dlldebugobjectrpchook.md)
 </dt> <dt>
 
-[**Iorpcdebug-Benachrichtigung**](iorpcdebugnotify.md)
+[**IOrpcDebugNotify**](iorpcdebugnotify.md)
 </dt> </dl>
 
  

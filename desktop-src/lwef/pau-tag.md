@@ -4,16 +4,16 @@ description: Pau-Tag
 ms.assetid: c3278320-1a19-4d96-8a3b-3aafa9dd211f
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 04261792451f3b2917f8ce2bc03d89dcb1b16c59
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: 41d7bba367365291f4c79bf640a20bdb73fe7ff4c578aaf9fe63ee8bc7bd0372
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "104388290"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118475780"
 ---
 # <a name="pau-tag"></a>Pau-Tag
 
-\[Der Microsoft-Agent ist ab Windows 7 veraltet und in nachfolgenden Versionen von Windows möglicherweise nicht verfügbar.\]
+\[Der Microsoft-Agent ist ab Windows 7 veraltet und in nachfolgenden Versionen von Windows möglicherweise nicht mehr verfügbar.\]
 
 <dl> <dt>
 
@@ -27,27 +27,27 @@ Hält die Sprache für die angegebene Anzahl von Millisekunden an.
 <span id="Syntax"></span><span id="syntax"></span><span id="SYNTAX"></span>**Syntax**
 </dt> <dd>
 
-**\\Pau =***Zahl***\\**
+**\\ Pau=**_Number_*_\\_*
 
 
 
 | Teil     | BESCHREIBUNG                          |
 |----------|--------------------------------------|
-| *Zahl* | Die Anzahl von Millisekunden, die angehalten werden sollen. |
+| *Zahl* | Die Anzahl der anzuhaltenden Millisekunden. |
 
 
 
- 
+ 
 
 </dd> </dl>
 
-### <a name="remarks"></a>Bemerkungen
+### <a name="remarks"></a>Hinweise
 
-Dieses Tag wird nur für die von TTS generierte Ausgabe unterstützt. Der Wertebereich für den-Parameter kann abhängig von der installierten TTS-Engine variieren.
+Dieses Tag wird nur für TTS-generierte Ausgaben unterstützt. Der Wertebereich für den Parameter kann je nach installierter TTS-Engine variieren.
 
- 
+ 
 
- 
+ 
 
 
 

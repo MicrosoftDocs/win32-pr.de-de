@@ -1,19 +1,19 @@
 ---
-description: Eine Anwendung zeichnet einen Rahmen um einen Bereich, indem die framergn-Funktion aufgerufen und die Rahmenbreite und das Pinsel Muster angegeben werden, die das System zum Zeichnen des Frames verwendet.
+description: Eine Anwendung zeichnet einen Rahmen um einen Bereich durch Aufrufen der FrameRgn-Funktion und Angeben der Rahmenbreite und des Pinselmusters, die das System beim Zeichnen des Rahmens verwendet.
 ms.assetid: 88ac7428-681c-44dd-93ae-9225baa93259
-title: Rahmen Bereiche
+title: Rahmenregionen
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 6879ae6595aec418ae8ccffc5b506acea4ce28bb
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 349171eb642b59011ee2be6b01c69c4542bd83f4cd806f253a45660fd4386563
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "103863643"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117886804"
 ---
-# <a name="framing-regions"></a>Rahmen Bereiche
+# <a name="framing-regions"></a>Rahmenregionen
 
-Eine Anwendung zeichnet einen Rahmen um einen Bereich, indem die [**framergn**](/windows/desktop/api/Wingdi/nf-wingdi-framergn) -Funktion aufgerufen und die Rahmenbreite und das Pinsel Muster angegeben werden, die das System zum Zeichnen des Frames verwendet.
+Eine Anwendung zeichnet einen Rahmen um einen Bereich durch Aufrufen der [**FrameRgn-Funktion**](/windows/desktop/api/Wingdi/nf-wingdi-framergn) und Angeben der Rahmenbreite und des Pinselmusters, die das System beim Zeichnen des Rahmens verwendet.
 
  
 

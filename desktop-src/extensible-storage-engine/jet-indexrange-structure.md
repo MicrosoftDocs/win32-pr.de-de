@@ -1,5 +1,5 @@
 ---
-description: 'Weitere Informationen finden Sie hier: JET_INDEXRANGE Struktur'
+description: 'Weitere Informationen finden Sie unter: JET_INDEXRANGE Struktur'
 title: JET_INDEXRANGE Struktur
 TOCTitle: JET_INDEXRANGE Structure
 ms:assetid: 8e437f7d-1e21-4a0b-a5a5-1c78235a4f80
@@ -15,12 +15,12 @@ api_type:
 - COM
 api_location: ''
 ROBOTS: INDEX,FOLLOW
-ms.openlocfilehash: ecbd8151be8ef278fc1bddc12323f41abd05b09e
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: b5b68e7ebf6df39757ab39947201b945e35a3ece85518a3cb202525033cdd214
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106363608"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118485598"
 ---
 # <a name="jet_indexrange-structure"></a>JET_INDEXRANGE Struktur
 
@@ -29,7 +29,7 @@ _**Gilt für:** Windows | Windows Server_
 
 ## <a name="jet_indexrange-structure"></a>JET_INDEXRANGE Struktur
 
-Die **JET_INDEXRANGE** -Struktur identifiziert einen Index Bereich, wenn er mit der [jetintersectindexes](./jetintersectindexes-function.md) -Funktion verwendet wird.
+Die **JET_INDEXRANGE** identifiziert einen Indexbereich, wenn er mit der [JetIntersectIndexes-Funktion verwendet](./jetintersectindexes-function.md) wird.
 
 ```cpp
     typedef struct {
@@ -43,15 +43,15 @@ Die **JET_INDEXRANGE** -Struktur identifiziert einen Index Bereich, wenn er mit 
 
 **cbStruct**
 
-Die Größe (in Bytes) der **JET_INDEXRANGE**.
+Die Größe des -JET_INDEXRANGE **.**
 
-**TableID**
+**tableid**
 
-Ein Cursor, für den zuvor ein Index Bereich mit [jetsetindexrange](./jetsetindexrange-function.md)festgelegt wurde.
+Ein Cursor, für den zuvor ein Indexbereich mit [JetSetIndexRange festgelegt wurde.](./jetsetindexrange-function.md)
 
 **grbit**
 
-Eine Bitmaske, die aus genau einer der folgenden Elemente besteht.
+Eine Bitmaske, die aus genau einer der folgenden Punkte besteht.
 
 <table>
 <colgroup>
@@ -67,7 +67,7 @@ Eine Bitmaske, die aus genau einer der folgenden Elemente besteht.
 <tbody>
 <tr class="odd">
 <td><p>JET_bitRecordInIndex</p></td>
-<td><p>Gibt an, dass der Index Bereich normal behandelt werden soll.</p></td>
+<td><p>Gibt an, dass der Indexbereich normal behandelt werden soll.</p></td>
 </tr>
 <tr class="even">
 <td><p>JET_bitRecordNotInIndex</p></td>
@@ -77,9 +77,9 @@ Eine Bitmaske, die aus genau einer der folgenden Elemente besteht.
 </table>
 
 
-### <a name="remarks"></a>Bemerkungen
+### <a name="remarks"></a>Hinweise
 
-Jede **JET_INDEXRANGE** Struktur, die an [jetintersectindexes](./jetintersectindexes-function.md) übermittelt wird, stellt einen Index Bereich dar, der durch den API--Befehl interdiert wird. Der Cursor, der in **JET_INDEXRANGE** angegeben ist, muss bereits über einen gültigen Index Bereich verfügen, wobei [jetsetindexrange](./jetsetindexrange-function.md)erfolgreich aufgerufen werden kann.
+Jede **JET_INDEXRANGE,** die an [JetIntersectIndexes](./jetintersectindexes-function.md) übergeben wird, stellt einen Indexbereich dar, der durch den API-Aufruf schneidet. Für den **Cursor,** der in JET_INDEXRANGE angegeben wird, muss bereits ein gültiger Indexbereich festgelegt sein, mit einem erfolgreichen Aufruf von [JetSetIndexRange.](./jetsetindexrange-function.md)
 
 ### <a name="requirements"></a>Anforderungen
 
@@ -99,7 +99,7 @@ Jede **JET_INDEXRANGE** Struktur, die an [jetintersectindexes](./jetintersectind
 </tr>
 <tr class="odd">
 <td><p><strong>Header</strong></p></td>
-<td><p>In "ESENT. h" deklariert.</p></td>
+<td><p>In Esent.h deklariert.</p></td>
 </tr>
 </tbody>
 </table>
@@ -110,6 +110,6 @@ Jede **JET_INDEXRANGE** Struktur, die an [jetintersectindexes](./jetintersectind
 [JET_COLUMNID](./jet-columnid.md)  
 [JET_GRBIT](./jet-grbit.md)  
 [JET_TABLEID](./jet-tableid.md)  
-[Jetclosetable](./jetclosetable-function.md)  
-[Jetintersectindexes](./jetintersectindexes-function.md)  
-[Jetsetindexrange](./jetsetindexrange-function.md)
+[JetCloseTable](./jetclosetable-function.md)  
+[JetIntersectIndexes](./jetintersectindexes-function.md)  
+[JetSetIndexRange](./jetsetindexrange-function.md)

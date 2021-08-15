@@ -1,5 +1,5 @@
 ---
-description: 'TcpIp_Fail Klasse: Diese Klasse ist die Ereignistypklasse für TCP/IP-Fehlerereignisse. Die folgende Syntax wird durch MOF-Code vereinfacht.'
+description: 'TcpIp_Fail-Klasse: Diese Klasse ist die Ereignistypklasse für TCP/IP-Fehlerereignisse. Die folgende Syntax wird durch einen MOF-Code vereinfacht.'
 ms.assetid: 1fe20b8c-b8f1-4db0-af78-1ebfc40b2bbd
 title: TcpIp_Fail-Klasse
 ms.topic: reference
@@ -14,18 +14,18 @@ api_name:
 api_type:
 - NA
 api_location: ''
-ms.openlocfilehash: 897c42a1c2530d3e41d1f937d5d59356a2913e2b
-ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
+ms.openlocfilehash: cd637db3f509e8c23de764eb82cc35b49cb435a7772a14adbe2954d292696e55
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2021
-ms.locfileid: "108105848"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117814530"
 ---
 # <a name="tcpip_fail-class"></a>TcpIp \_ Fail-Klasse
 
 Diese Klasse ist die Ereignistypklasse für TCP/IP-Fehlerereignisse.
 
-Die folgende Syntax wird durch MOF-Code vereinfacht.
+Die folgende Syntax wird durch einen MOF-Code vereinfacht.
 
 ## <a name="syntax"></a>Syntax
 
@@ -40,7 +40,7 @@ class TcpIp_Fail : TcpIp
 
 ## <a name="members"></a>Member
 
-Die **TcpIp \_ Fail-Klasse** verfügt über die folgenden Membertypen:
+Die **TcpIp \_ Fail-Klasse** verfügt über diese Typen von Membern:
 
 -   [Eigenschaften](#properties)
 
@@ -78,7 +78,7 @@ Die Ursache für den Fehler. Kann einer der folgenden Codes sein:
 <span id="ERROR_OTHER"></span><span id="error_other"></span>**FEHLER \_ OTHER** (5)
 </dt> <dt>
 
-<span id="ERROR_TIMEWAIT_ADDRESS_EXIST"></span><span id="error_timewait_address_exist"></span>**FEHLER \_ TIMEWAIT \_ ADDRESS \_ EXIST** (6)
+<span id="ERROR_TIMEWAIT_ADDRESS_EXIST"></span><span id="error_timewait_address_exist"></span>**FEHLER \_ \_TIMEWAIT-ADRESSE \_ VORHANDEN** (6)
 </dt> </dl>
 
 </dd> <dt>
@@ -92,7 +92,7 @@ Datentyp: **uint16**
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Identifiziert das Protokoll. Folgenden Werte sind möglich:
+Identifiziert das Protokoll. Es kann sich um einen der folgenden Werte handeln:
 
 
 
@@ -111,10 +111,10 @@ Identifiziert das Protokoll. Folgenden Werte sind möglich:
 
 
 
-| Anforderungen | Wert |
+| Anforderung | Wert |
 |-------------------------------------|------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows \[ Vista-Desktop-Apps\]<br/>       |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server \[ 2008-Desktop-Apps\]<br/> |
+| Unterstützte Mindestversion (Client)<br/> | Windows \[Nur Vista-Desktop-Apps\]<br/>       |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2008-Desktop-Apps\]<br/> |
 
 
 

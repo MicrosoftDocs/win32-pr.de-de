@@ -1,9 +1,9 @@
 ---
-title: 'Structuredbuffer:: Operator-Funktion'
-description: Gibt eine schreibgeschützte Ressourcen Variable eines structuredbuffer zurück.
+title: StructuredBuffer::Operator-Funktion
+description: Gibt eine schreibgeschützte Ressourcenvariable eines StructuredBuffer zurück.
 ms.assetid: e2a1b0f7-f374-44a3-b567-8a2318e8b2b8
 keywords:
-- Operator Function HLSL
+- Operatorfunktion HLSL
 topic_type:
 - apiref
 api_name:
@@ -13,16 +13,16 @@ api_type:
 ms.topic: reference
 ms.date: 05/31/2018
 api_location: ''
-ms.openlocfilehash: 1f0d75bdfbcd3bfc560e896416f241f1291120d6
-ms.sourcegitcommit: 8fa6614b715bddf14648cce36d2df22e5232801a
+ms.openlocfilehash: c852a56769df2179daf6055542c9ebf4724a353312e295daecd59af08163711c
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/10/2020
-ms.locfileid: "104102718"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118509116"
 ---
-# <a name="structuredbufferoperator--function"></a>Structuredbuffer:: Operator-Funktion
+# <a name="structuredbufferoperator--function"></a>StructuredBuffer::Operator-Funktion
 
-Gibt eine schreibgeschützte Ressourcen Variable eines [**structuredbuffer**](sm5-object-structuredbuffer.md)zurück.
+Gibt eine schreibgeschützte Ressourcenvariable eines [**StructuredBuffer-Werts zurück.**](sm5-object-structuredbuffer.md)
 
 ## <a name="syntax"></a>Syntax
 
@@ -36,7 +36,7 @@ R Operator[](
 
 <dl> <dt>
 
-*POS* \[ in\]
+*pos* \[ In\]
 </dt> <dd>
 
 Typ: **uint**
@@ -49,15 +49,15 @@ Die Indexposition.
 
 Typ: **R**
 
-Eine schreibgeschützte Ressourcen Variable.
+Eine schreibgeschützte Ressourcenvariable.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Diese Funktion wird für die folgenden Typen von Shadern unterstützt:
+Diese Funktion wird für die folgenden Shadertypen unterstützt:
 
 
 
-| Scheitelpunkt | Hülle | Domain | Geometrie | Pixel | Compute |
+| Scheitelpunkt | Rumpf | Domain | Geometrie | Pixel | Compute |
 |--------|------|--------|----------|-------|---------|
 | x      | x    | x      | x        | x     | x       |
 
@@ -69,10 +69,10 @@ Diese Funktion wird für die folgenden Typen von Shadern unterstützt:
 
 <dl> <dt>
 
-[Structuredbuffer](sm5-object-structuredbuffer.md)
+[StructuredBuffer](sm5-object-structuredbuffer.md)
 </dt> <dt>
 
-[Shader-Modell 5](d3d11-graphics-reference-sm5.md)
+[Shadermodell 5](d3d11-graphics-reference-sm5.md)
 </dt> </dl>
 
  

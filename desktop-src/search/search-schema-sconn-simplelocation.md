@@ -1,19 +1,19 @@
 ---
-description: Das- <simpleLocation> Element gibt den Speicherort für Suchconnectors an, die auf Dateisystem oder auf Protokoll Handlern basieren. Dieses Element verfügt über zwei untergeordnete Elemente und keine Attribute.
+description: Das <simpleLocation> -Element gibt den Speicherort für Suchconnectors an, die dateisystembasiert oder protokollhandlerbasiert sind. Dieses Element verfügt über zwei untergeordnete Elemente und keine Attribute.
 ms.assetid: 04ffc178-0a76-4870-a075-a2ecd31937a1
-title: simpleloation-Element (Suchconnector-Schema)
+title: simpleLocation-Element (Search Connector Schema)
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: d12c17ace36314ceb180f14b6de0eb7a890a385b
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 82731c5a230f8dd12b9d73cafd75dfc7d3cdd66bf1e57120701ed3ca0ba54b07
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104342899"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117862461"
 ---
-# <a name="simplelocation-element-search-connector-schema"></a>simpleloation-Element (Suchconnector-Schema)
+# <a name="simplelocation-element-search-connector-schema"></a>simpleLocation-Element (Search Connector Schema)
 
-Das- <simpleLocation> Element gibt den Speicherort für Suchconnectors an, die auf Dateisystem oder auf Protokoll Handlern basieren. Dieses Element verfügt über zwei untergeordnete Elemente und keine Attribute.
+Das <simpleLocation> -Element gibt den Speicherort für Suchconnectors an, die dateisystembasiert oder protokollhandlerbasiert sind. Dieses Element verfügt über zwei untergeordnete Elemente und keine Attribute.
 
 ## <a name="syntax"></a>Syntax
 
@@ -45,16 +45,16 @@ Das- <simpleLocation> Element gibt den Speicherort für Suchconnectors an, die a
 
 | Übergeordnetes Element                                                                                                   | Untergeordnete Elemente                                                                                                                                                                                                                                                                                                     |
 |------------------------------------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| [searchconnectordescriptiontype-Element (suchconnectorschema)](search-schema-searchconnectordescription.md) | [simpleloation-URL-Element (Suchconnector-Schema)](search-schema-sconn-url.md)                                                                                                                                                                                                                                |
-|                                                                                                                  | serialized: dieses Element enthält den Base64-codierten shelllink, der auf den im-Element definierten Speicherort verweist <url> . Windows 7 erstellt shelllink aus dem Wert des <url> -Elements und aktualisiert dieses Feld ordnungsgemäß auf dem ersten Laden dieser Bibliothek. Daher sollte es vom Autor leer gelassen werden. |
+| [searchConnectorDescriptionType-Element (Search Connector Schema)](search-schema-searchconnectordescription.md) | [simpleLocation url-Element (Connectorschema suchen)](search-schema-sconn-url.md)                                                                                                                                                                                                                                |
+|                                                                                                                  | serialisiert: Dieses Element enthält den Base64-codierten ShellLink, der auf den im -Element definierten Speicherort <url> zeigt. Windows 7 erstellt den ShellLink aus dem Wert des <url> Elements und aktualisiert dieses Feld beim ersten Laden dieser Bibliothek ordnungsgemäß, sodass es vom Autor leer gelassen werden sollte. |
 
 
 
  
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Dieses Element kann anstelle von verwendet werden, <locationProvider> Wenn sich der Speicherort im Dateisystem befindet oder der Connector ein bekannter Protokollhandler (wie MAPI:) ist. Wenn <simpleLocation> vorhanden ist, darf kein-Element vorhanden sein <locationProvider> . Verwenden Sie für Webdienstanbieter-Suchconnectors stattdessen das- [<locationProvider>](search-schema-sconn-locationprovider.md) Element.
+Dieses Element kann anstelle von verwendet <locationProvider> werden, wenn sich der Speicherort im Dateisystem befindet oder der Connector ein bekannter Protokollhandler (z.B. mapi:) ist. Wenn <simpleLocation> vorhanden ist, DARF KEIN -Element vorhanden <locationProvider> sein. Verwenden Sie für Suchconnectors für Webdienstanbieter stattdessen das [<locationProvider>](search-schema-sconn-locationprovider.md) -Element.
 
 ## <a name="examples"></a>Beispiele
 

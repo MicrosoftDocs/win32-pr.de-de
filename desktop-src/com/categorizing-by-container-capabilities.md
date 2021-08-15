@@ -1,21 +1,21 @@
 ---
-title: Kategorisierung nach Container Funktionen
-description: Komponenten erfordern häufig bestimmte Funktionen aus dem Container und funktionieren nicht mit einem Container, der keine Unterstützung bietet.
+title: Kategorisieren nach Containerfunktionen
+description: Komponenten erfordern häufig bestimmte Funktionen aus dem Container und funktionieren nicht mit einem Container, der die Unterstützung nicht bereitstellt.
 ms.assetid: 11002f3e-17de-4e05-a2df-0c9e6326846d
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 987546c20ff77a40666bb74689466a15fab989a6
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: 67811a40c2c1bbffd4529b3f7c885a0d3e2bea19bda04035ffb80b601c266807
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "104037530"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118310887"
 ---
-# <a name="categorizing-by-container-capabilities"></a>Kategorisierung nach Container Funktionen
+# <a name="categorizing-by-container-capabilities"></a>Kategorisieren nach Containerfunktionen
 
-Komponenten erfordern häufig bestimmte Funktionen aus dem Container und funktionieren nicht mit einem Container, der keine Unterstützung bietet. Die Benutzeroberfläche sollte Komponenten herausfiltern, die Funktionen erfordern, die der Container nicht unterstützt. Um dies zu erreichen, können Komponenten nach den erforderlichen Container Funktionen kategorisiert werden.
+Komponenten erfordern häufig bestimmte Funktionen aus dem Container und funktionieren nicht mit einem Container, der die Unterstützung nicht bereitstellt. Die Benutzeroberfläche sollte Komponenten herausfiltern, die Funktionen erfordern, die der Container nicht unterstützt. Zu diesem Zweck können Komponenten nach den erforderlichen Containerfunktionen kategorisiert werden.
 
-Ein Beispiel für Komponenten, die Funktionen aus dem Container erfordern und nicht in Containern funktionieren, die diese Funktionalität nicht unterstützen, sind einfache Frame-OLE-Steuerelemente. Die Kategorisierung nach Container Funktionen erfolgt durch einen zusätzlichen Registrierungsschlüssel innerhalb des CLSID-Schlüssels der Komponente:
+Ein Beispiel für Komponenten, die Funktionen aus dem Container erfordern und nicht in Containern funktionieren, die diese Funktionalität nicht unterstützen, sind einfache Frame-OLE-Steuerelemente. Die Kategorisierung nach Containerfunktionen erfolgt durch einen zusätzlichen Registrierungsschlüssel im CLSID-Schlüssel der Komponente:
 
 ``` syntax
 ;The CLSID for "Simple Frame Control" is {123456FF-ABCD-4321-0101-00000000000C}HKEY_CASSES_ROOT\CLSID\{12346FF-ABCD-4321-0101-00000000000C}\Implemented Categories
@@ -25,9 +25,9 @@ HKEY_CLASSES_ROOT\CLSID\{123456FF-ABCD-4321-0101-00000000000C}Required Categorie
  
 ```
 
-Wie in diesem Beispiel gezeigt, kann eine Komponente zu Komponenten Kategorien gehören, die auf unterstützte Funktionen hinweisen, sowie auf Komponenten Kategorien, die die erforderliche Funktionalität angeben.
+Wie in diesem Beispiel gezeigt, kann eine Komponente zu Komponentenkategorien gehören, die unterstützte Funktionalität angeben, sowie zu Komponentenkategorien, die die erforderliche Funktionalität angeben.
 
-Im folgenden Beispiel ist das Schaltflächen-Steuerelement ein generisches OLE-Steuerelement, das keine zusätzliche Funktionalität unterstützt. Es funktioniert in jedem OLE-Steuerelement Container.
+Im folgenden Beispiel ist das Schaltflächensteuerelement ein generisches OLE-Steuerelement, das keine zusätzliche Funktionalität unterstützt. Sie funktioniert in jedem OLE-Steuerelementcontainer.
 
 ``` syntax
 HKEY_CLASSES_ROOT\CLSID\{...CLSID_Button...}\Implemented Categories
@@ -35,7 +35,7 @@ HKEY_CLASSES_ROOT\CLSID\{...CLSID_Button...}\Implemented Categories\{...CATID_Co
  
 ```
 
-Vergleichen Sie das vorangehende Beispiel mit dem nächsten Beispiel, in dem mydbcontrol Visual Basic Datenbindung verwenden kann, wenn es vom Container unterstützt wird. Sie wurde jedoch so definiert, dass Sie in Containern funktioniert, die keine Visual Basic Datenbindung unterstützen (möglicherweise durch eine andere Datenbank-API):
+Vergleichen Sie das vorherige Beispiel mit dem nächsten Beispiel, in dem MyDBControl Visual Basic Datenbindung verwenden kann, wenn der Container dies unterstützt. Sie wurde jedoch so definiert, dass sie in Containern funktioniert, die Visual Basic Datenbindung (möglicherweise durch eine andere Datenbank-API) nicht unterstützen:
 
 ``` syntax
 HKEY_CLASSES_ROOT\CLSID\{...CLSID_MyDBControl...}\Implemented Categories
@@ -44,7 +44,7 @@ HKEY_CLASSES_ROOT\CLSID\{...CLSID_MyDBControl...}\Implemented Categories\{...CAT
  
 ```
 
-Das GroupBox-Steuerelement ist ein einfaches Frame-Steuerelement. Er basiert auf dem Container, der die [**ISimpleFrameSite**](/windows/desktop/api/OCIdl/nn-ocidl-isimpleframesite) -Schnittstelle implementiert, und funktioniert nur in solchen Containern ordnungsgemäß:
+Das GroupBox-Steuerelement ist ein einfaches Rahmensteuerelement. Er basiert auf dem Container, der die [**ISimpleFrameSite-Schnittstelle**](/windows/desktop/api/OCIdl/nn-ocidl-isimpleframesite) implementiert, und funktioniert nur in solchen Containern ordnungsgemäß:
 
 ``` syntax
 HKEY_CLASSES_ROOT\CLSID\{...CLSID_GroupBox...}\Implemented Categories
@@ -54,7 +54,7 @@ HKEY_CLASSES_ROOT\CLSID\{...CLSID_GroupBox...}\Required Categories\{...CATID_Sim
  
 ```
 
-Ein Container, der Visual Basic Daten gebundene Steuerelemente unterstützt, aber keine einfachen Frame Steuerelemente unterstützt, würde das CATID- \_ Steuerelement und CATID \_ vbdatbound an die Benutzeroberfläche des einfügesteuerelements Die Liste der Steuerelemente, die dem Benutzer angezeigt werden, enthält die CLSID \_ -Schaltfläche und die CLSID \_ mydbcontrol. Die CLSID- \_ GroupBox wird nicht angezeigt.
+Ein Container, der Visual Basic datengebundenen Steuerelementen unterstützt, aber keine einfachen Framesteuerelemente unterstützt, würde CATID \_ Control und CATID \_ VBDatabound für die Benutzeroberfläche des Einfügesteuerelements angeben. Die Liste der Steuerelemente, die dem Benutzer angezeigt werden, würde die \_ CLSID-Schaltfläche und CLSID \_ MyDBControl enthalten. CLSID \_ GroupBox wird nicht angezeigt.
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
@@ -63,21 +63,21 @@ Ein Container, der Visual Basic Daten gebundene Steuerelemente unterstützt, abe
 [Zuordnen von Symbolen zu einer Kategorie](associating-icons-with-a-category.md)
 </dt> <dt>
 
-[Kategorisierung nach Komponenten Funktionen](categorizing-by-component-capabilities.md)
+[Kategorisieren nach Komponentenfunktionen](categorizing-by-component-capabilities.md)
 </dt> <dt>
 
-[Standardklassen und-Zuordnungen](default-classes-and-associations.md)
+[Standardklassen und Zuordnungen](default-classes-and-associations.md)
 </dt> <dt>
 
-[Definieren von Komponenten Kategorien](defining-component-categories.md)
+[Definieren von Komponentenkategorien](defining-component-categories.md)
 </dt> <dt>
 
-[Der Komponenten Kategorien-Manager](the-component-categories-manager.md)
+[Der Komponentenkategorien-Manager](the-component-categories-manager.md)
 </dt> </dl>
 
- 
+ 
 
- 
+ 
 
 
 

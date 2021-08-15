@@ -1,11 +1,11 @@
 ---
-title: Player. mediacollectionattributestraningrebewegereignis
-description: Das Ereignis mediacollectionattributestraningrebewegt tritt auf, wenn ein Attribut Wert aus der Bibliothek entfernt wird. | Player. mediacollectionattributestraningrebewegereignis
+title: Player.MediaCollectionAttributeStringRemoved-Ereignis
+description: Das MediaCollectionAttributeStringRemoved-Ereignis tritt auf, wenn ein Attributwert aus der Bibliothek entfernt wird. | Player.MediaCollectionAttributeStringRemoved-Ereignis
 ms.assetid: f1253996-10d1-42fa-89f9-1e52ca830aea
 keywords:
-- Ereignisfenster für mediacollectionattributestraningrebewesfenster Media Player
-- Mediacollectionattributestraningrebewegereignis-Ereignis, Windows Media Player, Player-Klasse
-- Windows Media Player der Player-Klasse, mediacollectionattributestraningrebewegereignis
+- MediaCollectionAttributeStringRemoved-Ereignis Windows Media Player
+- MediaCollectionAttributeStringRemoved-Ereignis Windows Media Player , Player-Klasse
+- Player-Klasse Windows Media Player , MediaCollectionAttributeStringRemoved-Ereignis
 topic_type:
 - apiref
 api_name:
@@ -16,16 +16,16 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: b1b85dfd566c507f6ae5557134ac95544e42d688
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 8b89e46d4dbe86f185fb636b5c8de453e2addbf83c92d1231b5f067ce0b3b1d9
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106364038"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117747406"
 ---
-# <a name="playermediacollectionattributestringremoved-event"></a>Player. mediacollectionattributestraningrebewegereignis
+# <a name="playermediacollectionattributestringremoved-event"></a>Player.MediaCollectionAttributeStringRemoved-Ereignis
 
-Das Ereignis **mediacollectionattributestraningrebewegt** tritt auf, wenn ein Attribut Wert aus der Bibliothek entfernt wird.
+Das **MediaCollectionAttributeStringRemoved-Ereignis** tritt auf, wenn ein Attributwert aus der Bibliothek entfernt wird.
 
 ## <a name="syntax"></a>Syntax
 
@@ -43,17 +43,17 @@ Player.MediaCollectionAttributeStringRemoved(
 
 <dl> <dt>
 
-*bstrattribname* 
+*bstrAttribName* 
 </dt> <dd>
 
-**Zeichenfolge** , die den Namen des Attributs angibt. Informationen zu den Attributen, die von Windows Media Player unterstützt werden, finden Sie in der [Referenz](attribute-reference.md)zu Windows Media Player-Attributen.
+**Zeichenfolge,** die den Namen des Attributs angibt. Informationen zu den attributen, die von Windows Media Player unterstützt werden, finden Sie in der Windows Media Player [Attributreferenz.](attribute-reference.md)
 
 </dd> <dt>
 
-*bstrattribval* 
+*bstrAttribVal* 
 </dt> <dd>
 
-Eine **Zeichenfolge** , die den Wert des Attributs angibt.
+**Zeichenfolge,** die den Wert des Attributs angibt.
 
 </dd> </dl>
 
@@ -61,11 +61,11 @@ Eine **Zeichenfolge** , die den Wert des Attributs angibt.
 
 Dieses Ereignis gibt keinen Wert zurück.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Wenn ein Medien Element aus der Bibliothek entfernt wird, werden die zugehörigen Metadaten aus dem **mediacollection** -Objekt entfernt, und dieses Ereignis wird für jedes entfernte Attribut ausgelöst.
+Wenn ein Medienelement aus der Bibliothek entfernt wird, werden seine Metadaten aus dem **MediaCollection-Objekt** entfernt, und dieses Ereignis wird für jedes entfernte Attribut ausgelöst.
 
-Der Wert von Ereignis Parametern wird von Windows Media Player festgelegt, und der Zugriff auf und die Übergabe an eine Methode in einer importierten JScript-Datei mithilfe des angegebenen Parameter namens ist möglich. Dieser Parameter Name muss genau wie gezeigt eingegeben werden, einschließlich der Groß-/Kleinschreibung.
+Der Wert von Ereignisparametern wird von Windows Media Player angegeben und kann mithilfe des angegebenen Parameternamens in einer importierten JScript-Datei auf eine Methode zugegriffen oder an diese übergeben werden. Dieser Parametername muss genau wie gezeigt eingegeben werden, einschließlich Der Groß-/Großschreibung.
 
 **Windows Media Player 10 Mobile:** Dieses Ereignis wird nicht unterstützt.
 
@@ -75,22 +75,22 @@ Der Wert von Ereignis Parametern wird von Windows Media Player festgelegt, und d
 
 | Anforderung | Wert |
 |--------------------|------------------------------------------------------------------------------------|
-| Version<br/> | Windows Media Player Version 7,0 oder höher.<br/>                              |
+| Version<br/> | Windows Media Player Version 7.0 oder höher.<br/>                              |
 | DLL<br/>     | <dl> <dt>Wmp.dll</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Mediacollection-Objekt**](mediacollection-object.md)
+[**MediaCollection-Objekt**](mediacollection-object.md)
 </dt> <dt>
 
 [**Player-Objekt**](player-object.md)
 </dt> <dt>
 
-[**Player. mediacollection**](player-mediacollection.md)
+[**Player.mediaCollection**](player-mediacollection.md)
 </dt> </dl>
 
  

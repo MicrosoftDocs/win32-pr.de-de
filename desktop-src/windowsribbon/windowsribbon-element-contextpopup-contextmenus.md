@@ -1,9 +1,9 @@
 ---
-title: Contextpopup. ContextMenus (Eigenschaft)
+title: ContextPopup.ContextMenus-Eigenschaft
 description: Stellt einen Container für ContextMenu-Elemente dar.
 ms.assetid: 92633689-a892-421e-a5fb-e494f4cd1ea8
 keywords:
-- Contextpopup. ContextMenus-Eigenschaften Fenster (Menüband)
+- ContextPopup.ContextMenus-Eigenschaft Windows Menüband
 topic_type:
 - apiref
 api_name:
@@ -12,16 +12,16 @@ api_type:
 - NA
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 12ef8ab053b9912f545c2aad931eb8ad9583ff62
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 45641f1431726ec75c60be48683f19fb3139cbd9159baaed9def3b293a48772d
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "106343466"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117851016"
 ---
-# <a name="contextpopupcontextmenus-property"></a>Contextpopup. ContextMenus (Eigenschaft)
+# <a name="contextpopupcontextmenus-property"></a>ContextPopup.ContextMenus-Eigenschaft
 
-Stellt einen Container für [**ContextMenu**](windowsribbon-element-contextmenu.md) -Elemente dar.
+Stellt einen Container für [**ContextMenu-Elemente**](windowsribbon-element-contextmenu.md) dar.
 
 ## <a name="usage"></a>Verbrauch
 
@@ -41,7 +41,7 @@ Es gibt keine Attribute.
 
 | Element                                                             | BESCHREIBUNG                                        |
 |---------------------------------------------------------------------|----------------------------------------------------|
-| [**ContextMenu**](windowsribbon-element-contextmenu.md)<br/> | Kann ein-oder mehrmals vorkommen<br/> <br/> |
+| [**ContextMenu**](windowsribbon-element-contextmenu.md)<br/> | Kann ein oder mehrere Male auftreten.<br/> <br/> |
 
 
 
@@ -51,21 +51,21 @@ Es gibt keine Attribute.
 
 | Element                                                               |
 |-----------------------------------------------------------------------|
-| [**Contextpopup**](windowsribbon-element-contextpopup.md)<br/> |
+| [**ContextPopup**](windowsribbon-element-contextpopup.md)<br/> |
 
 
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Dies ist optional.
+Optional.
 
-Kann höchstens einmal für jedes [**contextpopup**](windowsribbon-element-contextpopup.md)vorkommen.
+Kann höchstens einmal für jede [**ContextPopup-Datei**](windowsribbon-element-contextpopup.md)auftreten.
 
 ## <a name="examples"></a>Beispiele
 
-Im folgenden Beispiel wird das grundlegende Markup für eine [**contextpopup**](windowsribbon-element-contextpopup.md) -Ansicht veranschaulicht.
+Im folgenden Beispiel wird das grundlegende Markup für eine [**ContextPopup-Ansicht**](windowsribbon-element-contextpopup.md) veranschaulicht.
 
-Dieser Code Abschnitt zeigt eine **contextpopup. ContextMenus** -Steuerelement Deklaration.
+Dieser Codeabschnitt zeigt eine **ContextPopup.ContextMenus-Steuerelementdeklaration.**
 
 
 ```XML
@@ -158,16 +158,16 @@ Dieser Code Abschnitt zeigt eine **contextpopup. ContextMenus** -Steuerelement D
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows 7 \[ -Desktop-Apps\]<br/>              |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2008 R2 \[ -Desktop-Apps\]<br/> |
+| Unterstützte Mindestversion (Client)<br/> | nur Windows 7 \[ Desktop-Apps\]<br/>              |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server 2008 \[ R2-Desktop-Apps\]<br/> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[Kontext-Popup Steuerelement](windowsribbon-controls-contextpopup.md)
+[Kontext-Popup-Steuerelement](windowsribbon-controls-contextpopup.md)
 </dt> </dl>
 
  

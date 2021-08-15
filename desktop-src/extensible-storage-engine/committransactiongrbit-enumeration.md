@@ -1,6 +1,6 @@
 ---
-description: Weitere Informationen finden Sie in der committransaktiongrbit-Enumeration.
-title: Committransaktiongrbit-Enumeration
+description: 'Weitere Informationen zu: CommitTransactionGrbit-Enumeration'
+title: CommitTransactionGrbit-Enumeration
 TOCTitle: CommitTransactionGrbit enumeration
 ms:assetid: T:Microsoft.Isam.Esent.Interop.CommitTransactionGrbit
 ms:mtpsurl: https://msdn.microsoft.com/library/microsoft.isam.esent.interop.committransactiongrbit(v=EXCHG.10)
@@ -30,21 +30,21 @@ api_type:
 api_location:
 - Microsoft.Isam.Esent.Interop.dll
 ROBOTS: INDEX,FOLLOW
-ms.openlocfilehash: a93504d688d1eddfcde81ae23c87e62f70e0aab0
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: ec61d29a2bfc3fc502b532b83dbb02640a600a0a5034c9751caab7185f1b037c
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106366330"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117716649"
 ---
-# <a name="committransactiongrbit-enumeration"></a>Committransaktiongrbit-Enumeration
+# <a name="committransactiongrbit-enumeration"></a>CommitTransactionGrbit-Enumeration
 
-Optionen für jetcommittransaction.
+Optionen für JetCommitTransaction.
 
 Diese Enumeration enthält ein [FlagsAttribute](/dotnet/api/system.flagsattribute)-Attribut, das eine bitweise Kombination der Memberwerte zulässt.
 
-**Namespace:**  [Microsoft. ISAM. ESENT. Interop](./microsoft.isam.esent.interop-namespace.md)  
-**Assembly:**  Microsoft. ISAM. ESENT. Interop (in Microsoft.Isam.Esent.Interop.dll)
+**Namespace:**  [Microsoft.Isam.Esent.Interop](./microsoft.isam.esent.interop-namespace.md)  
+**Assembly:**  Microsoft.Isam.Esent.Interop (in Microsoft.Isam.Esent.Interop.dll)
 
 ## <a name="syntax"></a>Syntax
 
@@ -84,21 +84,21 @@ public enum CommitTransactionGrbit
 </tr>
 <tr class="even">
 <td></td>
-<td>Lazyflush</td>
-<td>Die Transaktion wird normal ausgeführt, aber diese API wartet nicht, bis die Transaktion in die Transaktionsprotokoll Datei geleert wurde, bevor Sie an den Aufrufer zurückgegeben wird. Dadurch wird die Dauer eines Commitvorgangs drastisch reduziert und die Dauerhaftigkeit beeinträchtigt. Alle Transaktionen, die vor einem Absturz nicht in das Protokoll geschrieben werden, werden während des nächsten Aufrufens von jetinit automatisch abgebrochen. Wenn WaitLastLevel0Commit oder WaitAllLevel0Commit angegeben wird, wird diese Option ignoriert.</td>
+<td>LazyFlush</td>
+<td>Für die Transaktion wird normal ein Commit ausgeführt, aber diese API wartet nicht, bis die Transaktion in die Transaktionsprotokolldatei geleert wird, bevor sie an den Aufrufer zurückgegeben wird. Dadurch wird die Dauer eines Commitvorgangs auf Kosten der Dauerhaftigkeit drastisch reduziert. Jede Transaktion, die vor einem Absturz nicht in das Protokoll geleert wird, wird während der Absturzwiederherstellung beim nächsten Aufruf von JetInit automatisch abgebrochen. Wenn WaitLastLevel0Commit oder WaitAllLevel0Commit angegeben sind, wird diese Option ignoriert.</td>
 </tr>
 <tr class="odd">
 <td></td>
 <td>WaitLastLevel0Commit</td>
-<td>Wenn für die Sitzung bereits ein Commit für Transaktionen ausgeführt wurde und diese noch nicht in die Transaktionsprotokoll Datei geleert wurden, sollten Sie sofort geleert werden. Diese API wartet, bis die Transaktionen geleert wurden, bevor Sie an den Aufrufer zurückgegeben werden. Dies ist nützlich, wenn die Anwendung zuvor mehrere Transaktionen mit JET_bitCommitLazyFlush committet hat und diese nun auf den Datenträger leeren möchte.
-<p>Diese Option kann auch verwendet werden, wenn sich die Sitzung derzeit nicht in einer Transaktion befindet. Diese Option kann nicht in Kombination mit anderen Optionen verwendet werden.</p></td>
+<td>Wenn für die Sitzung zuvor ein Commit für Transaktionen ausgeführt wurde und sie noch nicht in die Transaktionsprotokolldatei geleert wurden, sollten sie sofort geleert werden. Diese API wartet, bis die Transaktionen geleert wurden, bevor sie an den Aufrufer zurückgegeben wird. Dies ist nützlich, wenn die Anwendung zuvor mithilfe von JET_bitCommitLazyFlush mehrere Transaktionen ausgeführt hat und nun alle Transaktionen auf den Datenträger leeren möchte.
+<p>Diese Option kann auch dann verwendet werden, wenn sich die Sitzung derzeit nicht in einer Transaktion befindet. Diese Option kann nicht in Kombination mit einer anderen Option verwendet werden.</p></td>
 </tr>
 </tbody>
 </table>
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
-#### <a name="reference"></a>Referenz
+#### <a name="reference"></a>Verweis
 
-[Microsoft. ISAM. ESENT. Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)
+[Microsoft.Isam.Esent.Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)

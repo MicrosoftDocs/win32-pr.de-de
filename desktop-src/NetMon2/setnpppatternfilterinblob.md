@@ -1,7 +1,7 @@
 ---
-description: Legt den Übereinstimmungs Filter für blobmuster fest.
+description: Legt den Blobmuster-Übereinstimmungsfilter fest.
 ms.assetid: 44e7c67a-f430-4d68-bc7f-f6bbd5b9e5a9
-title: Setnpppatternfilterinblob-Funktion (Netmon. h)
+title: SetNPPPatternFilterInBlob-Funktion (Netmon.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,16 +13,16 @@ api_type:
 - DllExport
 api_location:
 - Npptools.dll
-ms.openlocfilehash: b2e8989264a042368b37926bbb502f48ab2fb04b
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: a920d6ffc135855826719e31613119a27671e334d5a75ce7dba29c2b140816fc
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104526750"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118363751"
 ---
-# <a name="setnpppatternfilterinblob-function"></a>Setnpppatternfilterinblob-Funktion
+# <a name="setnpppatternfilterinblob-function"></a>SetNPPPatternFilterInBlob-Funktion
 
-Die **setnpppatternfilterinblob** -Funktion legt den Filter für die blobmusterübereinstimmung fest.
+Die **SetNPPPatternFilterInBlob-Funktion legt** den Blobmuster-Übereinstimmungsfilter fest.
 
 ## <a name="syntax"></a>Syntax
 
@@ -41,36 +41,36 @@ DWORD SetNPPPatternFilterInBlob(
 
 <dl> <dt>
 
-*hblob* \[ in\]
+*hBlob* \[ In\]
 </dt> <dd>
 
 Das Handle für das BLOB.
 
 </dd> <dt>
 
-*pexpression* \[ in\]
+*pExpression* \[ In\]
 </dt> <dd>
 
-Ein Zeiger auf eine [Ausdrucks](expression.md) Struktur, die den festgelegten Filter Ausdruck definiert.
+Ein Zeiger auf eine [EXPRESSION-Struktur,](expression.md) die den festgelegten Filterausdruck definiert.
 
 </dd> <dt>
 
-*herrorblob* \[ vorgenommen\]
+*hErrorBlob* \[ out\]
 </dt> <dd>
 
-Das Handle für ein fehlerblob, das angibt, wo der Fehler im ursprünglichen BLOB aufgetreten ist (sofern vorhanden).
+Das Handle für ein Fehlerblob, das angibt, wo im ursprünglichen BLOB der Fehler aufgetreten ist (sofern ein Fehler aufgetreten ist).
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Wenn die **setnpppatternfilterinblob** -Funktion erfolgreich ist, ist der Rückgabewert nmerr \_ Success.
+Wenn die **SetNPPPatternFilterInBlob-Funktion** erfolgreich ist, ist der Rückgabewert NMERR \_ SUCCESS.
 
-Wenn die Funktion nicht erfolgreich ist, ist der Rückgabewert ein nmerr-Wert, der den Fehler angibt.
+Wenn die Funktion nicht erfolgreich ist, ist der Rückgabewert ein NMERR-Wert, der den Fehler angibt.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Das Muster entspricht den Filterdaten, die in der Kategorie " **config** " des BLOBs gespeichert sind.
+Die In der **Config-Kategorie** des BLOB gespeicherten Muster-Matchfilterdaten.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -80,41 +80,41 @@ Das Muster entspricht den Filterdaten, die in der Kategorie " **config** " des B
 |-------------------------------------|-----------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional \[nur Desktop-Apps\]<br/>                              |
 | Unterstützte Mindestversion (Server)<br/> | Windows 2000 Server \[nur Desktop-Apps\]<br/>                                    |
-| Header<br/>                   | <dl> <dt>Netmon. h</dt> </dl>     |
-| Bibliothek<br/>                  | <dl> <dt>Npptools. lib</dt> </dl> |
+| Header<br/>                   | <dl> <dt>Netmon.h</dt> </dl>     |
+| Bibliothek<br/>                  | <dl> <dt>Npptools.lib</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>Npptools.dll</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[Getnppaddressfilterfromblob](getnppaddressfilterfromblob.md)
+[GetNPPAddressFilterFromBlob](getnppaddressfilterfromblob.md)
 </dt> <dt>
 
-[Setboolinblob](setboolinblob.md)
+[SetBoolInBlob](setboolinblob.md)
 </dt> <dt>
 
-[Setclassidinblob](setclassidinblob.md)
+[SetClassIDInBlob](setclassidinblob.md)
 </dt> <dt>
 
-[Setdwordinblob](setdwordinblob.md)
+[SetDwordInBlob](setdwordinblob.md)
 </dt> <dt>
 
-[Setmacaddressinblob](setmacaddressinblob.md)
+[SetMacAddressInBlob](setmacaddressinblob.md)
 </dt> <dt>
 
-[Setnetworkinfoinblob](setnetworkinfoinblob.md)
+[SetNetworkInfoInBlob](setnetworkinfoinblob.md)
 </dt> <dt>
 
-[Setnppaddressfilterinblob](setnppaddressfilterinblob.md)
+[SetNPPAddressFilterInBlob](setnppaddressfilterinblob.md)
 </dt> <dt>
 
-[Setnpptriggerinblob](setnpptriggerinblob.md)
+[SetNPPTriggerInBlob](setnpptriggerinblob.md)
 </dt> <dt>
 
-[Setstringinblob](setstringinblob.md)
+[SetStringInBlob](setstringinblob.md)
 </dt> </dl>
 
  

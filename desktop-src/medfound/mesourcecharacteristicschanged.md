@@ -1,29 +1,29 @@
 ---
 description: Wird von einer Medienquelle ausgelöst, wenn sich die Merkmale der Quellen ändern.
 ms.assetid: df7bb9a3-5949-4a4a-8835-c5b1d01b5cb3
-title: Mesourcecharakteristicschangi-Ereignis (mfobjects. h)
+title: MESourceCharacteristicsChanged-Ereignis (Mfobjects.h)
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 659e9eea0352d131aac4959b2952e8426ae408a7
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: fd69be00727ec3f1f635b82fb6c8e29c4016959ced480be4e9de6b8a83cfe8cb
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106349107"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117877368"
 ---
-# <a name="mesourcecharacteristicschanged-event"></a>Mesourcecharakteristicschge-Ereignis
+# <a name="mesourcecharacteristicschanged-event"></a>MESourceCharacteristicsChanged-Ereignis
 
 Wird von einer Medienquelle ausgelöst, wenn sich die Merkmale der Quelle ändern.
 
 ## <a name="event-values"></a>Ereigniswerte
 
-Mögliche Werte, die von [**imfmediaevent:: GetValue**](/windows/desktop/api/mfobjects/nf-mfobjects-imfmediaevent-getvalue) abgerufen werden, sind folgende.
+Mögliche Werte, die von [**DERMEDIAEVENT::GetValue**](/windows/desktop/api/mfobjects/nf-mfobjects-imfmediaevent-getvalue) abgerufen werden, sind:
 
 
 
 | VARTYPE              | BESCHREIBUNG                           |
 |----------------------|---------------------------------------|
-| VT \_ leer<br/> | Keine Ereignisdaten.<br/> <br/> |
+| VT \_ EMPTY<br/> | Keine Ereignisdaten.<br/> <br/> |
 
 
 
@@ -33,10 +33,10 @@ Für dieses Ereignis sind die folgenden Attribute definiert:
 
 
 
-| Attribut                                                                                                   | BESCHREIBUNG                                                          |
+| attribute                                                                                                   | BESCHREIBUNG                                                          |
 |-------------------------------------------------------------------------------------------------------------|----------------------------------------------------------------------|
-| [**Eigenschaften der MF- \_ Ereignis \_ Quelle \_**](mf-event-source-characteristics-attribute.md)<br/>          | Neue Merkmale der Medienquelle.<br/> <br/>      |
-| [**Eigenschaften der MF- \_ Ereignis \_ Quelle \_ \_ alt**](mf-event-source-characteristics-old-attribute.md)<br/> | Vorherige Merkmale der Medienquelle.<br/> <br/> |
+| [**MERKMALE \_ DER MF-EREIGNISQUELLE \_ \_**](mf-event-source-characteristics-attribute.md)<br/>          | Neue Merkmale der Medienquelle.<br/> <br/>      |
+| [**\_ \_ MF-EREIGNISQUELLENMERKMALE \_ \_ ALT**](mf-event-source-characteristics-old-attribute.md)<br/> | Vorherige Merkmale der Medienquelle.<br/> <br/> |
 
 
 
@@ -46,20 +46,20 @@ Für dieses Ereignis sind die folgenden Attribute definiert:
 
 | Anforderung | Wert |
 |-------------------------------------|----------------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>                                                           |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2008 \[ -Desktop-Apps\]<br/>                                                     |
-| Header<br/>                   | <dl> <dt>Mfobjects. h (Include mfdl. h)</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows \[Nur Vista-Desktop-Apps\]<br/>                                                           |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2008-Desktop-Apps\]<br/>                                                     |
+| Header<br/>                   | <dl> <dt>Mfobjects.h (include Mfidl.h)</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Imfmediasource**](/windows/desktop/api/mfidl/nn-mfidl-imfmediasource)
+[**WFMEDIASOURCE**](/windows/desktop/api/mfidl/nn-mfidl-imfmediasource)
 </dt> <dt>
 
-[Ereignisse Media Foundation](media-foundation-events.md)
+[Media Foundation Ereignisse](media-foundation-events.md)
 </dt> </dl>
 
  

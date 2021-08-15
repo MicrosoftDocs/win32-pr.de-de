@@ -1,5 +1,5 @@
 ---
-description: Diese Klasse ist die Ereignistyp Klasse für IPv4-TCP/IP Connect-und Accept-Ereignisse. Die folgende Syntax wird durch den MOF-Code vereinfacht.
+description: Diese Klasse ist die Ereignistypklasse für IPv4-TCP/IP-Verbindungs- und -Accept-Ereignisse. Die folgende Syntax wird durch einen MOF-Code vereinfacht.
 ms.assetid: a9b33ceb-7d50-4cd7-8224-0b2cf895b3b4
 title: TcpIp_TypeGroup2-Klasse
 ms.topic: reference
@@ -27,18 +27,18 @@ api_name:
 api_type:
 - NA
 api_location: ''
-ms.openlocfilehash: 398b6b0e2b7e4684481f13f73bdd94ef4cd76829
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 316daec5b6bb186756f8597a63ee35d18125181b6575ae24c8ba8fae63f53d3a
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104528220"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117814500"
 ---
-# <a name="tcpip_typegroup2-class"></a>Tcpip \_ TypeGroup2-Klasse
+# <a name="tcpip_typegroup2-class"></a>TcpIp \_ TypeGroup2-Klasse
 
-Diese Klasse ist die Ereignistyp Klasse für IPv4-TCP/IP Connect-und Accept-Ereignisse.
+Diese Klasse ist die Ereignistypklasse für IPv4-TCP/IP-Verbindungs- und -Accept-Ereignisse.
 
-Die folgende Syntax wird durch den MOF-Code vereinfacht.
+Die folgende Syntax wird durch einen MOF-Code vereinfacht.
 
 ## <a name="syntax"></a>Syntax
 
@@ -66,42 +66,42 @@ class TcpIp_TypeGroup2 : TcpIp
 
 ## <a name="members"></a>Member
 
-Die **tcpip- \_ TypeGroup2** -Klasse verfügt über diese Typen von Membern:
+Die **TcpIp \_ TypeGroup2-Klasse** verfügt über diese Typen von Membern:
 
 -   [Eigenschaften](#properties)
 
 ### <a name="properties"></a>Eigenschaften
 
-Die **tcpip- \_ TypeGroup2** -Klasse verfügt über diese Eigenschaften.
+Die **TcpIp \_ TypeGroup2-Klasse** verfügt über diese Eigenschaften.
 
 <dl> <dt>
 
-**nicht konform**
+**connid**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt32**
+Datentyp: **uint32**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: **wmidataid (15)**, **Zeiger**
+Qualifizierer: **WmiDataId(15)**, **Zeiger**
 </dt> </dl>
 
-Ein eindeutiger Verbindungs Bezeichner zum Korrelieren von Ereignissen, die zur gleichen Verbindung gehören.
+Ein eindeutiger Verbindungsbezeichner zum Korrelieren von Ereignissen, die zur gleichen Verbindung gehören.
 
 </dd> <dt>
 
 **daddr**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Object**
+Datentyp: **object**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: **wmidataid (3)**, **Extension ("IPAddrV4")**
+Qualifizierer: **WmiDataId(3)**, **Extension("IPAddrV4")**
 </dt> </dl>
 
 Ziel-IP-Adresse.
@@ -111,64 +111,64 @@ Ziel-IP-Adresse.
 **dport**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Object**
+Datentyp: **object**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: **wmidataid (5)**, **Erweiterung ("Port")**
+Qualifizierer: **WmiDataId(5)**, **Extension("Port")**
 </dt> </dl>
 
-Die Ziel Portnummer.
+Zielportnummer.
 
 </dd> <dt>
 
-**MSS**
+**Mss**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt16**
+Datentyp: **uint16**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: **wmidataid (7)**
+Qualifizierer: **WmiDataId(7)**
 </dt> </dl>
 
 Maximale Segmentgröße.
 
 </dd> <dt>
 
-**Lauer**
+**Pid**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt32**
+Datentyp: **uint32**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: **wmidataid (1)**
+Qualifizierer: **WmiDataId(1)**
 </dt> </dl>
 
-Der Bezeichner des Prozesses, der der Anforderung zugeordnet ist.
+Bezeichner des Prozesses, der der Anforderung zugeordnet ist.
 
 </dd> <dt>
 
 **rcvwin**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt32**
+Datentyp: **uint32**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: **wmidataid (11)**
+Qualifizierer: **WmiDataId(11)**
 </dt> </dl>
 
-TCP-Empfangs Fenstergröße.
+Größe des TCP-Empfangsfensters.
 
 </dd> <dt>
 
@@ -181,55 +181,55 @@ Datentyp: **sint16**
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: **wmidataid (12)**
+Qualifizierer: **WmiDataId(12)**
 </dt> </dl>
 
-Skalierungsfaktor für TCP-Empfangs Fenster.
+TCP-Empfangsfensterskalierungsfaktor.
 
 </dd> <dt>
 
 **sackopt**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt16**
+Datentyp: **uint16**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: **wmidataid (8)**
+Qualifizierer: **WmiDataId(8)**
 </dt> </dl>
 
-Die Option für die selektive Bestätigung (ACK) im TCP-Header.
+Option "Selektive Bestätigung" (Selective Acknowledgment, SACK) im TCP-Header.
 
 </dd> <dt>
 
 **saddr**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Object**
+Datentyp: **object**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: **wmidataid (4)**, **Extension ("IPAddrV4")**
+Qualifizierer: **WmiDataId(4)**, **Extension("IPAddrV4")**
 </dt> </dl>
 
 Quell-IP-Adresse.
 
 </dd> <dt>
 
-**SEQNUM**
+**seqnum**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt32**
+Datentyp: **uint32**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: **wmidataid (14)**
+Qualifizierer: **WmiDataId(14)**
 </dt> </dl>
 
 Sequenznummer.
@@ -239,13 +239,13 @@ Sequenznummer.
 **size**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt32**
+Datentyp: **uint32**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: **wmidataid (2)**
+Qualifizierer: **WmiDataId(2)**
 </dt> </dl>
 
 Größe des Pakets.
@@ -261,69 +261,69 @@ Datentyp: **sint16**
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: **wmidataid (13)**
+Qualifizierer: **WmiDataId(13)**
 </dt> </dl>
 
 Skalierungsfaktor für TCP-Sendefenster.
 
 </dd> <dt>
 
-**Reit**
+**Sport**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Object**
+Datentyp: **object**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: **wmidataid (6)**, **Erweiterung ("Port")**
+Qualifizierer: **WmiDataId(6)**, **Extension("Port")**
 </dt> </dl>
 
-Quell Portnummer.
+Quellportnummer.
 
 </dd> <dt>
 
-**nach-oben**
+**tsopt**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt16**
+Datentyp: **uint16**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: **wmidataid (9)**
+Qualifizierer: **WmiDataId(9)**
 </dt> </dl>
 
-Zeitstempel Option im TCP-Header.
+Option "Zeitstempel" im TCP-Header.
 
 </dd> <dt>
 
 **wsopt**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt16**
+Datentyp: **uint16**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: **wmidataid (10)**
+Qualifizierer: **WmiDataId(10)**
 </dt> </dl>
 
-Fenster Skalierungs Option im TCP-Header.
+Option "Fensterskala" im TCP-Header.
 
 </dd> </dl>
 
-## <a name="requirements"></a>Requirements (Anforderungen)
+## <a name="requirements"></a>Anforderungen
 
 
 
 | Anforderung | Wert |
 |-------------------------------------|------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>       |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2008 \[ -Desktop-Apps\]<br/> |
+| Unterstützte Mindestversion (Client)<br/> | Windows \[Nur Vista-Desktop-Apps\]<br/>       |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2008-Desktop-Apps\]<br/> |
 
 
 
@@ -331,7 +331,7 @@ Fenster Skalierungs Option im TCP-Header.
 
 <dl> <dt>
 
-[**TcpIp**](tcpip.md)
+[**Tcpip**](tcpip.md)
 </dt> </dl>
 
  

@@ -1,6 +1,6 @@
 ---
-description: 'Weitere Informationen finden Sie hier: Windows8Param. hungioactions-Feld'
-title: Windows8Param. hungioactions-Feld (Microsoft. ISAM. ESENT. Interop. Windows8)
+description: 'Weitere Informationen zu: Windows8Param.HungIOActions-Feld'
+title: Windows8Param.HungIOActions-Feld (Microsoft.Isam.Esent.Interop.Windows8)
 TOCTitle: HungIOActions field
 ms:assetid: F:Microsoft.Isam.Esent.Interop.Windows8.Windows8Param.HungIOActions
 ms:mtpsurl: https://msdn.microsoft.com/library/microsoft.isam.esent.interop.windows8.windows8param.hungioactions(v=EXCHG.10)
@@ -24,19 +24,19 @@ api_type:
 api_location:
 - Microsoft.Isam.Esent.Interop.dll
 ROBOTS: INDEX,FOLLOW
-ms.openlocfilehash: 514dabcd9d0f28b1a6d71f5eb272f960a1498839
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 890f0e8e7594236d18642bf12ed1001364d6c06491f6cbaecc5d2ab734a735a7
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104214971"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117889207"
 ---
-# <a name="windows8paramhungioactions-field"></a>Windows8Param. hungioactions-Feld
+# <a name="windows8paramhungioactions-field"></a>Windows8Param.HungIOActions-Feld
 
-Eine Reihe von Aktionen, die für IOS ausgeführt werden sollen, die anscheinend nicht ausgeführt werden.
+Eine Reihe von Aktionen, die für IOs ausgeführt werden sollen, die hängen zu sein scheinen.
 
-**Namespace:**  [Microsoft. ISAM. ESENT. Interop. Windows8](./microsoft.isam.esent.interop.windows8-namespace.md)  
-**Assembly:**  Microsoft. ISAM. ESENT. Interop (in Microsoft.Isam.Esent.Interop.dll)
+**Namespace:**  [Microsoft.Isam.Esent.Interop.Windows8](./microsoft.isam.esent.interop.windows8-namespace.md)  
+**Assembly:**  Microsoft.Isam.Esent.Interop (in Microsoft.Isam.Esent.Interop.dll)
 
 ## <a name="syntax"></a>Syntax
 
@@ -53,12 +53,12 @@ value = Windows8Param.HungIOActions
 public const JET_param HungIOActions
 ```
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
-#### <a name="reference"></a>Referenz
+#### <a name="reference"></a>Verweis
 
 [Windows8Param-Klasse](./windows8param-class.md)
 
 [Windows8Param-Member](./windows8param-members.md)
 
-[Microsoft. ISAM. ESENT. Interop. Windows8-Namespace](./microsoft.isam.esent.interop.windows8-namespace.md)
+[Microsoft.Isam.Esent.Interop.Windows8-Namespace](./microsoft.isam.esent.interop.windows8-namespace.md)

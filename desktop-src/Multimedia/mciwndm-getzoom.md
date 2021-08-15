@@ -1,9 +1,9 @@
 ---
-title: MCIWNDM_GETZOOM Meldung (VFW. h)
-description: Die mciwndm \_ getzoom-Nachricht Ruft den aktuellen Zoomwert ab, der von einem MCI-Gerät verwendet wird. Sie können diese Nachricht explizit oder mithilfe des mciwndgetzoom-Makros senden.
+title: MCIWNDM_GETZOOM (Vfw.h)
+description: Die MCIWNDM \_ GETZOOM-Nachricht ruft den aktuellen Zoomwert ab, der von einem MCI-Gerät verwendet wird. Sie können diese Nachricht explizit oder mithilfe des MCIWndGetZoom-Makros senden.
 ms.assetid: 92db8df2-515a-4616-a0f5-245d466ba379
 keywords:
-- MCIWNDM_GETZOOM-Nachricht (Multimedia)
+- MCIWNDM_GETZOOM-Nachricht Windows Multimedia
 topic_type:
 - apiref
 api_name:
@@ -14,16 +14,16 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: fcb4ae1883787f1b86dcc17f2d4a3e0e0ee29ced
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 52c247230ffe6269f77b906d874a4cf82a21ed8d3388ffa18193417603e45fbd
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104476227"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118374141"
 ---
-# <a name="mciwndm_getzoom-message"></a>Mciwndm \_ getzoom-Meldung
+# <a name="mciwndm_getzoom-message"></a>MCIWNDM \_ GETZOOM-Nachricht
 
-Die **mciwndm \_ getzoom** -Nachricht Ruft den aktuellen Zoomwert ab, der von einem MCI-Gerät verwendet wird. Sie können diese Nachricht explizit oder mithilfe des [**mciwndgetzoom**](/windows/desktop/api/Vfw/nf-vfw-mciwndgetzoom) -Makros senden.
+Die **MCIWNDM \_ GETZOOM-Nachricht** ruft den aktuellen Zoomwert ab, der von einem MCI-Gerät verwendet wird. Sie können diese Nachricht explizit oder mithilfe des [**MCIWndGetZoom-Makros**](/windows/desktop/api/Vfw/nf-vfw-mciwndgetzoom) senden.
 
 
 ```C++
@@ -36,11 +36,11 @@ lParam = 0;
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt die neuesten Werte zurück, die mit [**mciwndm- \_ setzoom**](mciwndm-setzoom.md)verwendet werden.
+Gibt die neuesten Werte zurück, die mit [**MCIWNDM \_ SETZOOM verwendet werden.**](mciwndm-setzoom.md)
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Der Rückgabewert 100 gibt an, dass das Bild nicht verkleinert wird. Der Wert 200 gibt an, dass das Bild auf die doppelte Größe vergrößert wird. Der Wert 50 gibt an, dass das Bild auf die Hälfte seiner ursprünglichen Größe reduziert wird.
+Der Rückgabewert 100 gibt an, dass das Bild nicht vergrößert wird. Der Wert 200 gibt an, dass das Bild auf das Doppelte seiner ursprünglichen Größe vergrößert wird. Der Wert 50 gibt an, dass das Bild auf die Hälfte seiner ursprünglichen Größe reduziert wird.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -50,18 +50,18 @@ Der Rückgabewert 100 gibt an, dass das Bild nicht verkleinert wird. Der Wert 20
 |-------------------------------------|----------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional \[nur Desktop-Apps\]<br/>                       |
 | Unterstützte Mindestversion (Server)<br/> | Windows 2000 Server \[nur Desktop-Apps\]<br/>                             |
-| Header<br/>                   | <dl> <dt>VFW. h</dt> </dl> |
+| Header<br/>                   | <dl> <dt>Vfw.h</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Mciwndgetzoom**](/windows/desktop/api/Vfw/nf-vfw-mciwndgetzoom)
+[**MCIWndGetZoom**](/windows/desktop/api/Vfw/nf-vfw-mciwndgetzoom)
 </dt> <dt>
 
-[**mciwndm- \_ setzoom**](mciwndm-setzoom.md)
+[**MCIWNDM \_ SETZOOM**](mciwndm-setzoom.md)
 </dt> </dl>
 
  

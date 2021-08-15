@@ -1,7 +1,7 @@
 ---
-description: Ruft eine Zeichenfolge ab, die den Namen des Zertifikat Ausstellers enthält.
+description: Ruft eine Zeichenfolge ab, die den Namen des Zertifikatausstellers enthält.
 ms.assetid: 6cf528e3-061a-44dc-b320-0e4b48a6c6ab
-title: Certificate. IssuerName-Eigenschaft
+title: Certificate.IssuerName-Eigenschaft
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,18 +13,18 @@ api_type:
 - COM
 api_location:
 - Capicom.dll
-ms.openlocfilehash: 6b34b3bf198759d08fd3d0e3e4261407389a69a2
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: f4404a105748a79ef942f37c088a5436fc3eeea0784bb6ff814dd0782262dcf2
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106370087"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117771579"
 ---
-# <a name="certificateissuername-property"></a>Certificate. IssuerName-Eigenschaft
+# <a name="certificateissuername-property"></a>Certificate.IssuerName-Eigenschaft
 
-\[CAPICOM ist eine nur-32-Bit-Komponente, die für die Verwendung in den folgenden Betriebssystemen verfügbar ist: Windows Server 2008, Windows Vista und Windows XP. Verwenden Sie stattdessen die [**X509Certificate2-Klasse**](/previous-versions/windows/embedded/hh424017(v=msdn.10)) im [**System. Security. Cryptography. X509Certificates**](/dotnet/api/system.security.cryptography.x509certificates.publickey.-ctor?view=netcore-3.1) -Namespace.\]
+\[CAPICOM ist eine nur 32-Bit-Komponente, die für die Verwendung in den folgenden Betriebssystemen verfügbar ist: Windows Server 2008, Windows Vista und Windows XP. Verwenden Sie stattdessen die [**X509Certificate2-Klasse**](/previous-versions/windows/embedded/hh424017(v=msdn.10)) im [**Namespace System.Security.Cryptography.X509Certificates.**](/dotnet/api/system.security.cryptography.x509certificates.publickey.-ctor?view=netcore-3.1)\]
 
-Die **IssuerName** -Eigenschaft ruft eine Zeichenfolge ab, die den Namen des Zertifikat Ausstellers enthält.
+Die **IssuerName-Eigenschaft** ruft eine Zeichenfolge ab, die den Namen des Zertifikatausstellers enthält.
 
 Diese Eigenschaft ist schreibgeschützt.
 
@@ -39,7 +39,7 @@ Certificate.IssuerName As String
 
 ## <a name="property-value"></a>Eigenschaftswert
 
-Eine Zeichenfolge, die den Namen des Zertifikat Ausstellers enthält.
+Zeichenfolge, die den Namen des Zertifikatausstellers enthält.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -49,7 +49,7 @@ Eine Zeichenfolge, die den Namen des Zertifikat Ausstellers enthält.
 |----------------------------------|----------------------------------------------------------------------------------------|
 | Ende des Supports (Client)<br/> | Windows Vista<br/>                                                               |
 | Ende des Supports (Server)<br/> | Windows Server 2008<br/>                                                         |
-| Verteilbare Komponente<br/>       | CAPICOM 2,0 oder höher unter Windows Server 2003 und Windows XP<br/>                  |
+| Verteilbare Komponente<br/>       | CAPICOM 2.0 oder höher auf Windows Server 2003 und Windows XP<br/>                  |
 | DLL<br/>                   | <dl> <dt>Capicom.dll</dt> </dl> |
 
 

@@ -1,35 +1,35 @@
 ---
-description: Im folgenden Beispiel wird ein alternativer Prozess der Codierung einer signierten Nachricht veranschaulicht. dabei wird die signierte Nachricht als innerer Inhalt für eine eingeschlossene Nachricht verwendet. Zur Vorbereitung der Decodierung wird der innere Inhalt getestet, um seinen inneren Inhaltstyp zu bestimmen.
+description: Im folgenden Beispiel wird ein alternativer Prozess zum Codieren einer signierten Nachricht veranschaulicht, bei dem diese signierte Nachricht als innerer Inhalt für eine umhumschlagte Nachricht verwendet wird. Zur Vorbereitung der Decodierung wird der innere Inhalt getestet, um seinen inneren Inhaltstyp zu bestimmen.
 ms.assetid: ba174e3c-bc2f-48bd-a1bf-fec491dc0ce3
-title: Alternativer Code zum Codieren einer eingeschlossenen Nachricht
+title: Alternativer Code zum Codieren einer umschlagten Nachricht
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 2f974623c526603744bf2b0179352605ed783056
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: e80c57b5de2191809e3e3ec9df439f6a30a4e17d1442ea6775394c210d1ada0b
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106349965"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117773694"
 ---
-# <a name="alternate-code-for-encoding-an-enveloped-message"></a>Alternativer Code zum Codieren einer eingeschlossenen Nachricht
+# <a name="alternate-code-for-encoding-an-enveloped-message"></a>Alternativer Code zum Codieren einer umschlagten Nachricht
 
-Im folgenden Beispiel wird ein alternativer Prozess der Codierung einer signierten Nachricht veranschaulicht. dabei wird die signierte Nachricht als [*innerer Inhalt*](../secgloss/i-gly.md) für eine eingeschlossene Nachricht verwendet. Zur Vorbereitung der Decodierung wird der innere Inhalt getestet, um seinen inneren Inhaltstyp zu bestimmen.
+Im folgenden Beispiel wird ein alternativer Prozess zum Codieren [](../secgloss/i-gly.md) einer signierten Nachricht veranschaulicht, bei dem diese signierte Nachricht als innerer Inhalt für eine umhumschlagte Nachricht verwendet wird. Zur Vorbereitung der Decodierung wird der innere Inhalt getestet, um seinen inneren Inhaltstyp zu bestimmen.
 
-In diesem Beispiel werden die folgenden CryptoAPI-Funktionen veranschaulicht:
+Dieses Beispiel veranschaulicht die folgenden CryptoAPI-Funktionen:
 
 -   [**CryptAcquireContext**](/windows/desktop/api/Wincrypt/nf-wincrypt-cryptacquirecontexta)
--   [**Certopeinsystemstore**](/windows/desktop/api/Wincrypt/nf-wincrypt-certopensystemstorea)
--   [**Cryptmsgcalculateencodecodlength**](/windows/desktop/api/Wincrypt/nf-wincrypt-cryptmsgcalculateencodedlength)
--   [**Cryptmsgopentoen-Code**](/windows/desktop/api/Wincrypt/nf-wincrypt-cryptmsgopentoencode)
--   [**Cryptmsgupdate**](/windows/desktop/api/Wincrypt/nf-wincrypt-cryptmsgupdate)
--   [**Cryptmsggetparam**](/windows/desktop/api/Wincrypt/nf-wincrypt-cryptmsggetparam)
--   [**Cryptmsgopentodecode**](/windows/desktop/api/Wincrypt/nf-wincrypt-cryptmsgopentodecode)
--   [**Certfindcertifi. Store**](/windows/desktop/api/Wincrypt/nf-wincrypt-certfindcertificateinstore)
--   [**Cryptmsgclose**](/windows/desktop/api/Wincrypt/nf-wincrypt-cryptmsgclose)
--   [**Certclosestore**](/windows/desktop/api/Wincrypt/nf-wincrypt-certclosestore)
--   [**Cryptreleasecontext**](/windows/desktop/api/Wincrypt/nf-wincrypt-cryptreleasecontext)
+-   [**CertOpenSystemStore**](/windows/desktop/api/Wincrypt/nf-wincrypt-certopensystemstorea)
+-   [**CryptMsgCalculateEncodedLength**](/windows/desktop/api/Wincrypt/nf-wincrypt-cryptmsgcalculateencodedlength)
+-   [**CryptMsgOpenToEncode**](/windows/desktop/api/Wincrypt/nf-wincrypt-cryptmsgopentoencode)
+-   [**CryptMsgUpdate**](/windows/desktop/api/Wincrypt/nf-wincrypt-cryptmsgupdate)
+-   [**CryptMsgGetParam**](/windows/desktop/api/Wincrypt/nf-wincrypt-cryptmsggetparam)
+-   [**CryptMsgOpenToDecode**](/windows/desktop/api/Wincrypt/nf-wincrypt-cryptmsgopentodecode)
+-   [**CertFindCertificateInStore**](/windows/desktop/api/Wincrypt/nf-wincrypt-certfindcertificateinstore)
+-   [**CryptMsgClose**](/windows/desktop/api/Wincrypt/nf-wincrypt-cryptmsgclose)
+-   [**CertCloseStore**](/windows/desktop/api/Wincrypt/nf-wincrypt-certclosestore)
+-   [**CryptReleaseContext**](/windows/desktop/api/Wincrypt/nf-wincrypt-cryptreleasecontext)
 
-In diesem Beispiel werden auch die Funktionen [**mylenker Error**](myhandleerror.md) und [**getsignercert**](getsignercert.md)verwendet. Der C-Code für diese Funktionen ist im Beispiel enthalten. Informationen zu Code, der diese und andere Hilfsfunktionen veranschaulicht, finden Sie unter [universell Functions](general-purpose-functions.md).
+In diesem Beispiel werden auch die Funktionen [**MyHandleError**](myhandleerror.md) und [**GetSignerCert verwendet.**](getsignercert.md) C-Code für diese Funktionen ist im Beispiel enthalten. Code, der diese und andere Hilfsfunktionen veranschaulicht, finden Sie unter [Universell Functions](general-purpose-functions.md).
 
 
 ```C++

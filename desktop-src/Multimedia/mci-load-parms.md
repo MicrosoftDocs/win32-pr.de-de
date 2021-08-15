@@ -1,6 +1,6 @@
 ---
-title: MCI_LOAD_PARMS-Struktur (MMSYSTEM. h)
-description: Die Struktur des MCI- \_ Lade- \_ Parametern enthält den Dateinamen, der für den Befehl MCI Load geladen werden soll \_ .
+title: MCI_LOAD_PARMS-Struktur (Mmsystem.h)
+description: Die MCI \_ LOAD \_ PARMS-Struktur enthält den Dateinamen, der für den MCI LOAD-Befehl geladen werden \_ soll.
 ms.assetid: 371d11cc-44db-496b-b51a-66d7b919b794
 keywords:
 - MCI_LOAD_PARMS Struktur Windows Multimedia
@@ -14,16 +14,16 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 04697a52eb9f8bb33db6063eb47e791be674f1d2
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: d52a5c875bbbfff6f94857bc7337a0cba1473571bfdb8edc8ccfa8f3f1a471fd
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "103742945"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118375005"
 ---
-# <a name="mci_load_parms-structure"></a>Struktur von MCI- \_ Lade- \_ Parametern
+# <a name="mci_load_parms-structure"></a>MCI \_ LOAD \_ PARMS-Struktur
 
-Die Struktur des **MCI- \_ Lade- \_ Parametern** enthält den Dateinamen, der für den Befehl [**MCI \_**](mci-load.md) Load geladen werden soll.
+Die **MCI \_ LOAD \_ PARMS-Struktur** enthält den Dateinamen, der für den [**MCI \_ LOAD-Befehl**](mci-load.md) geladen werden soll.
 
 ## <a name="syntax"></a>Syntax
 
@@ -41,23 +41,23 @@ typedef struct {
 
 <dl> <dt>
 
-**dwcallback**
+**dwCallback**
 </dt> <dd>
 
-Das nieder wertige Wort gibt ein Fenster Handle an, das für das MCI-Benachrichtigungs Kennzeichen verwendet wird \_ .
+Das Wort mit niedriger Reihenfolge gibt ein Fensterhandle an, das für das MCI \_ NOTIFY-Flag verwendet wird.
 
 </dd> <dt>
 
-**lpFileName**
+**lpfilename**
 </dt> <dd>
 
-Der Name der zu ladenden Datei.
+Name der datei, die geladen werden soll.
 
 </dd> </dl>
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Wenn Sie den Membern dieser Strukturdaten zuweisen, legen Sie die entsprechenden Flags im *fdwcommand* -Parameter der [**mciSendCommand**](/previous-versions//dd757160(v=vs.85)) -Funktion fest, um die Elemente zu überprüfen.
+Legen Sie beim Zuweisen von Daten zu den Membern dieser Struktur die entsprechenden Flags im *fdwCommand-Parameter* der [**mciSendCommand-Funktion**](/previous-versions//dd757160(v=vs.85)) fest, um die Member zu überprüfen.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -67,21 +67,21 @@ Wenn Sie den Membern dieser Strukturdaten zuweisen, legen Sie die entsprechenden
 |-------------------------------------|---------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional \[nur Desktop-Apps\]<br/>                            |
 | Unterstützte Mindestversion (Server)<br/> | Windows 2000 Server \[nur Desktop-Apps\]<br/>                                  |
-| Header<br/>                   | <dl> <dt>MMSYSTEM. h</dt> </dl> |
+| Header<br/>                   | <dl> <dt>Mmsystem.h</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**MCI**](mci.md)
+[**Mci**](mci.md)
 </dt> <dt>
 
 [**MCI-Strukturen**](mci-structures.md)
 </dt> <dt>
 
-[**MCI- \_ Auslastung**](mci-load.md)
+[**MCI \_ LOAD**](mci-load.md)
 </dt> <dt>
 
 [**mciSendCommand**](/previous-versions//dd757160(v=vs.85))

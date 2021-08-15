@@ -1,7 +1,7 @@
 ---
-description: Private Nachricht, die das Fenster in den Vordergrund bringt.
+description: Private Nachricht, die das Fenster in den Vordergrund versetzt.
 ms.assetid: 88b28888-d729-4cf3-8b9d-618dbe150926
-title: 'Cbasewindow:: m_ShowStageMessage Member (winutil. h)'
+title: CBaseWindow::m_ShowStageMessage-Member (Winutil.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -16,16 +16,16 @@ api_location:
 - Strmbase.dll
 - Strmbasd.lib
 - Strmbasd.dll
-ms.openlocfilehash: ccf358eba577c0ee950f8628090a2f3024297fe3
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 37897747d9a144935055d734cbc02fdade611b3b1abbdddcc6efc25129f55279
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106371976"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117822360"
 ---
-# <a name="cbasewindowm_showstagemessage-member"></a>Cbasewindow:: m \_ showstagemess-Member
+# <a name="cbasewindowm_showstagemessage-member"></a>CBaseWindow::m \_ ShowStageMessage-Member
 
-Private Nachricht, die das Fenster in den Vordergrund bringt.
+Private Nachricht, die das Fenster in den Vordergrund versetzt.
 
 ## <a name="syntax"></a>Syntax
 
@@ -36,9 +36,9 @@ UINT m_ShowStageMessage;
 
 
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Diese Meldung wird von der [**cbasewindow::D osetwindowvorder Grund**](cbasewindow-dosetwindowforeground.md) -Methode gesendet.
+Die [**CBaseWindow::D oSetWindowForeground-Methode**](cbasewindow-dosetwindowforeground.md) sendet diese Nachricht.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -46,16 +46,16 @@ Diese Meldung wird von der [**cbasewindow::D osetwindowvorder Grund**](cbasewind
 
 | Anforderung | Wert |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>Winutil. h (Include Streams. h)</dt> </dl>                                                                                   |
-| Bibliothek<br/> | <dl> " <dt>Straumbase. lib" (Einzelhandels Builds);</dt> " <dt>Straumbasd. lib" (Debugbuilds)</dt> </dl> |
+| Header<br/>  | <dl> <dt>Winutil.h (include Streams.h)</dt> </dl>                                                                                   |
+| Bibliothek<br/> | <dl> <dt>Strmbase.lib (Verkaufsbuilds); </dt> <dt>Strmbasd.lib (Debugbuilds)</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Cbasewindow-Klasse**](cbasewindow.md)
+[**CBaseWindow-Klasse**](cbasewindow.md)
 </dt> </dl>
 
  

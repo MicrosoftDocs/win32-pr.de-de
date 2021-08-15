@@ -4,12 +4,12 @@ ms.assetid: e56fdd68-b72d-4167-9e4c-b5bbf103880b
 title: idlFunctionDeclarations-Element
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: bf4d1648ac6d9c3ac6900826ebe90a64418822b6
-ms.sourcegitcommit: b6fe9acffad983c14864b8fe0296f6025cb1f961
+ms.openlocfilehash: e3f4bc12f0269e79142a4e55ad0cdc252b88b01959f6d18a6d4a4b5a8e72cde6
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2021
-ms.locfileid: "107994737"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118311732"
 ---
 # <a name="idlfunctiondeclarations-element"></a>idlFunctionDeclarations-Element
 
@@ -33,9 +33,9 @@ Es gibt keine Attribute.
 
 | Element                                   | BESCHREIBUNG                                                                                                             |
 |-------------------------------------------|-------------------------------------------------------------------------------------------------------------------------|
-| [**async**](async.md)<br/>         | Gibt an, ob asynchrone Vorgänge in den generierten Proxyfunktionen enthalten sind.<br/> <br/>         |
+| [**Asynchrone**](async.md)<br/>         | Gibt an, ob asynchrone Vorgänge in den generierten Proxyfunktionen enthalten sind.<br/> <br/>         |
 | [**eventArg**](eventarg.md)<br/>   | Gibt an, ob verwandte Ereignisargumente in den generierten Funktionen enthalten sind.<br/> <br/>               |
-| [**Ereignisse**](events.md)<br/>       | Gibt an, ob verwandte Ereignisse in den generierten Funktionen enthalten sind.<br/> <br/>                        |
+| [**Ereignisse**](events.md)<br/>       | Gibt an, ob verknüpfte Ereignisse in den generierten Funktionen enthalten sind.<br/> <br/>                        |
 | [**faultInfo**](faultinfo.md)<br/> | Gibt an, ob Parameter, die zum Übergeben von Fehlerinformationen verwendet werden, in generierten Funktionen enthalten sind.<br/> <br/> |
 | [**Vorgang**](operation.md)<br/> | Gibt einen Vorgang an, für den Code generiert werden soll.<br/> <br/>                                        |
 | [**Porttype**](porttype.md)<br/>   | Gibt den Porttyp an, für den Code generiert werden soll.<br/> <br/>                                       |
@@ -67,7 +67,7 @@ Es gibt keine Attribute.
 
 ## <a name="remarks"></a>Hinweise
 
-Dieses Element generiert Deklarationen von Memberfunktionen, die vorgängen entsprechen, die vom Vertrag aufgerufen werden. Diese Deklarationen sind in einer Für den MIDL-Compiler geeigneten Form und werden im Allgemeinen in IDL-Dateien verwendet.
+Dieses Element generiert Deklarationen von Memberfunktionen, die den vom Vertrag aufgerufenen Vorgängen entsprechen. Diese Deklarationen sind in einer Form enthalten, die für die Verwendung durch den MIDL-Compiler geeignet ist und in der Regel in IDL-Dateien verwendet werden.
 
 Beispiel:
 

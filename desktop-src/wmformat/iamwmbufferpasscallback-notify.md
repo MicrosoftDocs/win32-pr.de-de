@@ -1,11 +1,11 @@
 ---
-title: Iamwmbufferpasscallback-Benachrichtigungs Methode
-description: Die Notify-Methode wird von der PIN für jeden Puffer aufgerufen, der beim Streaming zugestellt wird.
+title: IAMWMBufferPassCallback Notify-Methode
+description: Die Notify-Methode wird vom Pin für jeden Puffer aufgerufen, der während des Streamings übermittelt wird.
 ms.assetid: 3f252754-c784-4ffd-bcfc-fab73fa02b9a
 keywords:
-- Notify-Methode Windows Media-Format
-- Notify-Methode Windows Media-Format, iamwmbufferpasscallback-Schnittstelle
-- Iamwmbufferpasscallback-Schnittstelle Windows Media-Format, Notify-Methode
+- Benachrichtigen von Methodenfenstern im Medienformat
+- Notify method windows Media Format , IAMWMBufferPassCallback interface
+- IAMWMBufferPassCallback-Schnittstelle windows Media Format , Notify-Methode
 topic_type:
 - apiref
 api_name:
@@ -15,26 +15,26 @@ api_type:
 ms.topic: reference
 ms.date: 05/31/2018
 api_location: ''
-ms.openlocfilehash: e8f362262b36dee0bfc9a18e57010d102b2fa2cb
-ms.sourcegitcommit: 592c9bbd22ba69802dc353bcb5eb30699f9e9403
+ms.openlocfilehash: f364243e40400884287c6219698991ccf8afc0be86a85ec612a5b193253994dc
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "104102143"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117847535"
 ---
-# <a name="iamwmbufferpasscallbacknotify-method"></a>Iamwmbufferpasscallback:: Notify-Methode
+# <a name="iamwmbufferpasscallbacknotify-method"></a>IAMWMBufferPassCallback::Notify-Methode
 
-Die **Notify** -Methode wird von der PIN für jeden Puffer aufgerufen, der beim Streaming zugestellt wird.
+Die **Notify-Methode** wird vom Pin für jeden Puffer aufgerufen, der während des Streamings übermittelt wird.
 
 ## <a name="syntax"></a>Syntax
 
 
 ```C++
 HRESULT Notify(
-  [in] INSSBuffer3    *pNSSBuffer3,
-  [in] IPin           *pPin,
-  [in] REFERENCE_TIME *prtStart,
-  [in] REFERENCE_TIME *prtEnd
+  [in] INSSBuffer3    *pNSSBuffer3,
+  [in] IPin           *pPin,
+  [in] REFERENCE_TIME *prtStart,
+  [in] REFERENCE_TIME *prtEnd
 );
 ```
 
@@ -44,28 +44,28 @@ HRESULT Notify(
 
 <dl> <dt>
 
-*pNSSBuffer3* \[ in\]
+*pNSSBuffer3* \[ In\]
 </dt> <dd>
 
-Zeiger auf die [**INSSBuffer3**](/previous-versions/windows/desktop/api/wmsbuffer/nn-wmsbuffer-inssbuffer3) -Schnittstelle, die für das Medien Beispiel verfügbar gemacht wird
+Zeiger auf die [**INSSBuffer3-Schnittstelle,**](/previous-versions/windows/desktop/api/wmsbuffer/nn-wmsbuffer-inssbuffer3) die im Medienbeispiel verfügbar gemacht wird.
 
 </dd> <dt>
 
-*ppin* \[ in\]
+*pPin* \[ In\]
 </dt> <dd>
 
-Ein Zeiger auf die PIN, die dem Mediendaten Strom zugeordnet ist, zu dem das Beispiel gehört.
+Zeiger auf den Pin, der dem Medienstream zugeordnet ist, zu dem das Beispiel gehört.
 
 </dd> <dt>
 
-*prtstart* \[ in\]
+*prtStart* \[ In\]
 </dt> <dd>
 
-Die Startzeit des Beispiels.
+Startzeit des Beispiels.
 
 </dd> <dt>
 
-*prtend* \[ in\]
+*prtEnd* \[ In\]
 </dt> <dd>
 
 Endzeit des Beispiels.
@@ -74,25 +74,25 @@ Endzeit des Beispiels.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Es ist kein bestimmter Rückgabewert angegeben. Die aufrufenden Pin ignoriert das **HRESULT**.
+Es wird kein bestimmter Rückgabewert angegeben. Der aufrufende Pin ignoriert das **HRESULT**.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Diese Methode ermöglicht es einer Anwendung, Informationen im Medien Puffer zu überprüfen und zu bearbeiten, bevor die Puffer Inhalte verarbeitet werden. Die Anwendung ist dafür verantwortlich, den Medientyp in der PIN zu kennen. Diese Informationen können abgerufen werden, indem zuerst die streaminformationen aus dem Profil abgerufen und anschließend die [**IConfigAsfWriter2:: streamnumfrompin**](iconfigasfwriter2-streamnumfrompin.md) -Methode aufgerufen wird, um zu bestimmen, welche Pin den einzelnen Datenströmen zugeordnet ist.
+Mit dieser Methode kann eine Anwendung Informationen im Medienpuffer untersuchen und darauf reagieren, bevor der Pufferinhalt verarbeitet wird. Die Anwendung ist dafür verantwortlich, den Medientyp auf dem Pin zu kennen. Diese Informationen können abgerufen werden, indem zuerst die Streaminformationen aus dem Profil abgerufen und dann die [**IConfigAsfWriter2::StreamNumFromPin-Methode**](iconfigasfwriter2-streamnumfrompin.md) aufgerufen wird, um zu bestimmen, welcher Pin den einzelnen Datenströmen zugeordnet ist.
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**DirectShow-qasf-Referenz**](directshow-qasf-reference.md)
+[**DirectShow-QASF-Referenz**](directshow-qasf-reference.md)
 </dt> <dt>
 
-[**Iamwmbufferpasscallback-Schnittstelle**](/previous-versions/windows/desktop/api/dshowasf/nn-dshowasf-iamwmbufferpasscallback)
+[**IAMWMBufferPassCallback-Schnittstelle**](/previous-versions/windows/desktop/api/dshowasf/nn-dshowasf-iamwmbufferpasscallback)
 </dt> <dt>
 
 [**INSSBuffer3-Schnittstelle**](/previous-versions/windows/desktop/api/wmsbuffer/nn-wmsbuffer-inssbuffer3)
 </dt> </dl>
 
- 
+ 
 
- 
+ 

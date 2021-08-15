@@ -1,24 +1,24 @@
 ---
-description: Die issubpicturestreamaktivierte-Methode ruft einen Wert ab, der angibt, ob der angegebene subbildstream im aktuellen Titel aktiviert ist.
+description: Die IsSubpictureStreamEnabled-Methode ruft einen Wert ab, der angibt, ob der angegebene Unterbilddatenstrom im aktuellen Titel aktiviert ist.
 ms.assetid: c6436f77-ca94-464f-9336-f485f5d5d199
-title: Issubpicturestreamaktivierte Methode
+title: IsSubpictureStreamEnabled-Methode
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 818b4ff18dac87ea3346a1a503764b2e5e9cd02a
-ms.sourcegitcommit: a47bd86f517de76374e4fff33cfeb613eb259a7e
+ms.openlocfilehash: bc982120b6a7a57d59d5213fc57b5ba3851d7d9d2f4c3e553fba97d3307d8bec
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/06/2021
-ms.locfileid: "103860428"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117817047"
 ---
-# <a name="issubpicturestreamenabled-method"></a>Issubpicturestreamaktivierte Methode
+# <a name="issubpicturestreamenabled-method"></a>IsSubpictureStreamEnabled-Methode
 
 > [!Note]  
 > Diese Komponente ist für die Verwendung in den Betriebssystemen Microsoft Windows 2000, Windows XP und Windows Server 2003 verfügbar. Es kann in nachfolgenden Versionen geändert oder entfernt werden.
 
  
 
-Die- `IsSubpictureStreamEnabled` Methode ruft einen Wert ab, der angibt, ob der angegebene teilbildstream im aktuellen Titel aktiviert ist.
+Die `IsSubpictureStreamEnabled` -Methode ruft einen Wert ab, der angibt, ob der angegebene Unterbildstream im aktuellen Titel aktiviert ist.
 
 ``` syntax
 [ bEnabled = ] MSWebDVD.IsSubpictureStreamEnabled(iStream)
@@ -28,17 +28,17 @@ Die- `IsSubpictureStreamEnabled` Methode ruft einen Wert ab, der angibt, ob der 
 
 <dl> <dt>
 
-<span id="iStream"></span><span id="istream"></span><span id="ISTREAM"></span>*IStream*
+<span id="iStream"></span><span id="istream"></span><span id="ISTREAM"></span>*Istream*
 </dt> <dd>
 
-Gibt den subbildstream als Ganzzahl an.
+Gibt den Unterbilddatenstrom als ganze Zahl an.
 
 
 
 | Wert   | BESCHREIBUNG              |
 |---------|--------------------------|
-| 0 bis 31 | subbildstream        |
-| 63      | gedämpfter Datenstrom mit niedriger Bitrate |
+| 0 bis 31 | Subpicture-Datenstrom        |
+| 63      | Muted Low-Bitrate-Stream |
 
 
 
@@ -48,11 +48,11 @@ Gibt den subbildstream als Ganzzahl an.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt einen booleschen Wert zurück, der angibt, ob der angegebene Audiostream im aktuellen Titel verfügbar ist. "True" bedeutet, dass Sie verfügbar ist.
+Gibt einen booleschen Wert zurück, der angibt, ob der angegebene Audiostream im aktuellen Titel verfügbar ist. True bedeutet, dass es verfügbar ist.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Obwohl eine CD bis zu 32 unter bildstreams enthalten kann, ist jeder Stream nicht notwendigerweise für jeden Titel verfügbar. Überprüfen Sie vor dem Festlegen der [**currentsubpicturestream**](currentsubpicturestream-property.md) -Eigenschaft immer, ob ein Datenstrom für einen Titel verfügbar ist.
+Obwohl ein Datenträger bis zu 32 Unterbildstreams enthalten kann, ist nicht unbedingt jeder Stream für jeden Titel verfügbar. Überprüfen Sie immer, ob ein Stream für einen Titel verfügbar ist, bevor Sie die [**CurrentSubpictureStream-Eigenschaft**](currentsubpicturestream-property.md) festlegen.
 
  
 

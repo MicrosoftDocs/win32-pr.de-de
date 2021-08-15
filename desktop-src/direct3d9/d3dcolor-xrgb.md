@@ -1,7 +1,7 @@
 ---
-description: Initialisiert eine Farbe mit den angegebenen Werten für Rot, grün und blau.
+description: Initialisiert eine Farbe mit den angegebenen Werten für Rot, Grün und Blau.
 ms.assetid: 832a4a78-c166-4e45-a907-57730da1c2c8
-title: D3DCOLOR_XRGB-Makro (D3d9types. h)
+title: D3DCOLOR_XRGB Makro (D3d9types.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,16 +13,16 @@ api_type:
 - HeaderDef
 api_location:
 - D3d9types.h
-ms.openlocfilehash: 4932e34979b0913f27874e57cfa881f18fb16364
-ms.sourcegitcommit: 14010c34b35fa268046c7683f021f86de08ddd0a
+ms.openlocfilehash: a31801236720d0a01eefe7f41ac6bd260c1364bb81c437cf6a85088c1c022b9c
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "104394081"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118527600"
 ---
-# <a name="d3dcolor_xrgb-macro"></a>D3DCOLOR \_ xrgb-Makro
+# <a name="d3dcolor_xrgb-macro"></a>D3DCOLOR \_ XRGB-Makro
 
-Initialisiert eine Farbe mit den angegebenen Werten für Rot, grün und blau.
+Initialisiert eine Farbe mit den angegebenen Werten für Rot, Grün und Blau.
 
 ## <a name="syntax"></a>Syntax
 
@@ -64,7 +64,7 @@ Blaue Komponente der Farbe. Dieser Wert muss zwischen 0 und 255 liegen.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt den [**D3DCOLOR**](d3dcolor.md) -Wert zurück, der den angegebenen RGB-Werten entspricht.
+Gibt den [**D3DCOLOR-Wert**](d3dcolor.md) zurück, der den angegebenen RGB-Werten entspricht.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -72,11 +72,11 @@ Gibt den [**D3DCOLOR**](d3dcolor.md) -Wert zurück, der den angegebenen RGB-Wert
 
 | Anforderung | Wert |
 |-------------------|----------------------------------------------------------------------------------------|
-| Header<br/> | <dl> <dt>D3d9types. h</dt> </dl> |
+| Header<br/> | <dl> <dt>D3d9types.h</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 

@@ -1,11 +1,11 @@
 ---
-title: Controls. Step-Methode
-description: Die Step-Methode bewirkt, dass das aktuelle Video Medien Element die Wiedergabe für den nächsten Frame oder den vorherigen Frame fixiert.
+title: Controls.step-Methode
+description: Die Schrittmethode bewirkt, dass das aktuelle Videomedienelement die Wiedergabe im nächsten oder vorherigen Frame einfriert.
 ms.assetid: f717c583-4073-45a9-b05d-7134d02724a4
 keywords:
-- Step-Methode (Windows Media Player)
-- Step-Methode, Windows Media Player, Controls-Klasse
-- Steuerelemente-Klasse, Windows Media Player, Step-Methode
+- step-Methode Windows Media Player
+- step-Methode Windows Media Player , Controls-Klasse
+- Controls-Klasse Windows Media Player , Step-Methode
 topic_type:
 - apiref
 api_name:
@@ -16,16 +16,16 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 43fc50ea28bde95efef6e6261788fdcc62df6089
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 4626ff80aee55ad6c22be7580a07ef2319afb6792a8c11b815d72af23b5727fc
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106366044"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118839825"
 ---
-# <a name="controlsstep-method"></a>Controls. Step-Methode
+# <a name="controlsstep-method"></a>Controls.step-Methode
 
-Die **Step** -Methode bewirkt, dass das aktuelle Video Medien Element die Wiedergabe für den nächsten Frame oder den vorherigen Frame fixiert.
+Die **Schrittmethode** bewirkt, dass das aktuelle Videomedienelement die Wiedergabe im nächsten oder vorherigen Frame einfriert.
 
 ## <a name="syntax"></a>Syntax
 
@@ -42,10 +42,10 @@ Controls.step(
 
 <dl> <dt>
 
-*FrameCount* \[ in\]
+*frameCount* \[ In\]
 </dt> <dd>
 
-**Zahl** (**Long**), die angibt, wie viele Frames vor dem Einfrieren durchlaufen werden sollen. Muss derzeit auf 1 oder-1 festgelegt werden.
+**Number** (**long**), die angibt, wie viele Frames vor dem Einfrieren geschritten werden sollen. Muss derzeit auf 1 oder -1 festgelegt sein.
 
 </dd> </dl>
 
@@ -53,9 +53,9 @@ Controls.step(
 
 Diese Methode gibt keinen Wert zurück.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Diese Methode unterstützt derzeit nur die Parameter 1 oder-1, sodass Sie nur einen Frame gleichzeitig ausführen können.
+Diese Methode unterstützt derzeit nur die Parameter 1 oder -1, sodass Sie jeweils nur einen Frame schrittweise verwenden können.
 
 **Windows Media Player 10 Mobile:** Diese Methode wird nicht unterstützt.
 
@@ -70,7 +70,7 @@ Diese Methode unterstützt derzeit nur die Parameter 1 oder-1, sodass Sie nur ei
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 

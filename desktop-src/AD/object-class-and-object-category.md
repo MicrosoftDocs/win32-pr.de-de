@@ -1,34 +1,34 @@
 ---
-title: Objektklasse und Objekt Kategorie
-description: Jede Instanz einer Objektklasse verfügt über eine mehrwertige objectClass-Eigenschaft, die die Klasse identifiziert, für die das Objekt eine Instanz ist, sowie alle strukturellen oder abstrakten Element, von denen diese Klasse abgeleitet ist.
+title: Objektklasse und Objektkategorie
+description: Jede Instanz einer Objektklasse verfügt über eine mehrwertige objectClass-Eigenschaft, die die Klasse identifiziert, von der das Objekt eine Instanz ist, sowie alle strukturellen oder abstrakten Superklassen, von denen diese Klasse abgeleitet wird.
 ms.assetid: b3c5f9ee-98e0-42dd-9b61-3731e14b9cd4
 ms.tgt_platform: multiple
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: c74941b4f32cc197d3dbbf3aa0dc3179b4098ee8
-ms.sourcegitcommit: 803f3ccd65bdefe36bd851b9c6e7280be9489016
+ms.openlocfilehash: 4b35e7f461caa27e8668cfc47cd94852bf53b291658b828ea017e3dc00a19d39
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "103948553"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118185697"
 ---
-# <a name="object-class-and-object-category"></a>Objektklasse und Objekt Kategorie
+# <a name="object-class-and-object-category"></a>Objektklasse und Objektkategorie
 
-Jede Instanz einer Objektklasse verfügt über eine mehrwertige [**objectClass**](/windows/desktop/ADSchema/a-objectclass) -Eigenschaft, die die Klasse identifiziert, für die das Objekt eine Instanz ist, sowie alle strukturellen oder abstrakten Element, von denen diese Klasse abgeleitet ist. Folglich identifiziert die **objectClass** -Eigenschaft eines User-Objekts die Klassen " [**Top**](/windows/desktop/ADSchema/c-top)", " [**Person**](/windows/desktop/ADSchema/c-person)", " [**OrganizationalPerson**](/windows/desktop/ADSchema/c-organizationalperson)" und " [**User**](/windows/desktop/ADSchema/c-user) ". Die **objectClass** -Eigenschaft enthält keine Erweiterungs Klassen in der Liste. Das System legt den **objectClass** -Wert fest, wenn die Objektinstanz erstellt wird, und kann nicht geändert werden.
+Jede Instanz einer Objektklasse verfügt über eine mehrwertige [**objectClass-Eigenschaft,**](/windows/desktop/ADSchema/a-objectclass) die die Klasse identifiziert, von der das Objekt eine Instanz ist, sowie alle strukturellen oder abstrakten Superklassen, von denen diese Klasse abgeleitet wird. Daher würde die **objectClass-Eigenschaft** eines Benutzerobjekts die [**obersten**](/windows/desktop/ADSchema/c-top) [**Benutzerklassen**](/windows/desktop/ADSchema/c-user) , [**person**](/windows/desktop/ADSchema/c-person), [**organizationalPerson**](/windows/desktop/ADSchema/c-organizationalperson)und identifizieren. Die **objectClass-Eigenschaft** enthält keine zusätzlichen Klassen in der Liste. Das System legt den **objectClass-Wert** fest, wenn die Objektinstanz erstellt wird, und kann nicht geändert werden.
 
-Jede Instanz einer Objektklasse verfügt auch über eine [**objectCategory**](/windows/desktop/ADSchema/a-objectcategory) -Eigenschaft, bei der es sich um eine Eigenschaft mit einem Wert handelt, die den Distinguished Name der Klasse enthält, für die das Objekt eine Instanz oder eine der übergeordneten Klassen ist. Wenn ein Objekt erstellt wird, legt das System seine **objectCategory** -Eigenschaft auf den Wert fest, der von der [**defaultobjectcategory**](/windows/desktop/ADSchema/a-defaultobjectcategory) -Eigenschaft der zugehörigen Objektklasse angegeben wird. Die **objectCategory** -Eigenschaft eines Objekts kann nicht geändert werden.
+Jede Instanz einer Objektklasse verfügt auch über eine [**objectCategory-Eigenschaft,**](/windows/desktop/ADSchema/a-objectcategory) bei der es sich um eine einwertige Eigenschaft handelt, die den Distinguished Name der Klasse enthält, deren Objekt eine Instanz oder eine ihrer Übergeordneten Klassen ist. Wenn ein Objekt erstellt wird, legt das System seine **objectCategory-Eigenschaft** auf den Wert fest, der von der [**defaultObjectCategory-Eigenschaft**](/windows/desktop/ADSchema/a-defaultobjectcategory) seiner Objektklasse angegeben wird. Die **objectCategory-Eigenschaft** eines Objekts kann nicht geändert werden.
 
-Weitere Informationen und ein Codebeispiel, in dem die [**objectClass**](/windows/desktop/ADSchema/a-objectclass) -Eigenschaft eines Objekts abgerufen wird, finden Sie unter [Abrufen des Attributs "objectClass](retrieving-the-objectclass-property.md)".
+Weitere Informationen und ein Codebeispiel zum Abrufen der [**objectClass-Eigenschaft**](/windows/desktop/ADSchema/a-objectclass) eines Objekts finden Sie unter [Abrufen des objectClass-Attributs.](retrieving-the-objectclass-property.md)
 
 > [!IMPORTANT]
-> Vor Windows Server 2008 ist das [**objectClass**](/windows/desktop/ADSchema/a-objectclass) -Attribut nicht indiziert. Dies liegt daran, dass Sie über mehrere Werte verfügt und stark nicht eindeutig ist. Das heißt, jede Instanz des **objectClass** -Attributs enthält die [**Top**](/windows/desktop/ADSchema/c-top) -Klasse. Dies bedeutet, dass ein Index sehr groß und wirkungslos wäre. Um Objekte einer bestimmten Klasse zu suchen, verwenden Sie das [**objectCategory**](/windows/desktop/ADSchema/a-objectcategory) -Attribut, das einwertig und indiziert ist. Weitere Informationen zum Verwenden dieser Eigenschaften in Suchfiltern finden Sie unter [entscheiden, was](deciding-what-to-find.md)gesucht werden soll.
+> Vor Windows Server 2008 wurde das [**objectClass-Attribut**](/windows/desktop/ADSchema/a-objectclass) nicht indiziert. Dies liegt daran, dass sie über mehrere Werte verfügt und in hohem Maße nicht eindeutig ist. Das heißt, jede Instanz des **objectClass-Attributs** enthält die [**oberste**](/windows/desktop/ADSchema/c-top) Klasse. Dies bedeutet, dass ein Index sehr groß und ineffektiv wäre. Um Objekte einer bestimmten Klasse zu suchen, verwenden Sie das [**objectCategory-Attribut,**](/windows/desktop/ADSchema/a-objectcategory) das einwertig und indiziert ist. Weitere Informationen zur Verwendung dieser Eigenschaften in Suchfiltern finden Sie unter [Entscheidung, was gesucht werden soll.](deciding-what-to-find.md)
 
- 
+ 
 
-Bei den meisten Klassen ist die [**defaultobjectcategory**](/windows/desktop/ADSchema/a-defaultobjectcategory) der Distinguished Name des [**classSchema**](/windows/desktop/ADSchema/c-classschema) -Objekts der Klasse. Die **defaultobjectcategory** für die [**OrganizationalUnit**](/windows/desktop/ADSchema/c-organizationalunit) -Klasse lautet z. b. "CN = Organisationseinheit, CN = Schema, CN = Configuration, <DC = forestroot>". Einige Klassen verweisen jedoch auf eine andere Klasse als **defaultobjectcategory**. Dadurch kann eine Abfrage Gruppen verwandter Objekte problemlos finden, auch wenn Sie unterschiedliche Klassen haben. Beispielsweise identifizieren die Klassen [**User**](/windows/desktop/ADSchema/c-user), [**Person**](/windows/desktop/ADSchema/c-person), [**OrganizationalPerson**](/windows/desktop/ADSchema/c-organizationalperson)und [**Contact**](/windows/desktop/ADSchema/c-contact) alle die **Person** -Klasse in Ihren **defaultobjectcategory** -Eigenschaften. Dies ermöglicht Suchfiltern wie (objectCategory = Person) das Auffinden von Instanzen dieser Klassen mit einer einzelnen Abfrage. Abfragen für Personen sind sehr häufig, sodass es sich hierbei um eine einfache Optimierung handelt.
+Für die meisten Klassen ist [**defaultObjectCategory**](/windows/desktop/ADSchema/a-defaultobjectcategory) der Distinguished Name des [**classSchema-Objekts**](/windows/desktop/ADSchema/c-classschema) der Klasse. Die **defaultObjectCategory-Klasse** für die [**organizationalUnit-Klasse**](/windows/desktop/ADSchema/c-organizationalunit) ist beispielsweise "CN=Organizational-Unit,CN=Schema,CN=Configuration,<DC=forestroot>". Einige Klassen verweisen jedoch auf eine andere Klasse als **defaultObjectCategory**. Dadurch kann eine Abfrage Gruppen verwandter Objekte leicht finden, auch wenn sie von unterschiedlichen Klassen sind. Beispielsweise identifizieren die [**Benutzer-,**](/windows/desktop/ADSchema/c-user) [**Personen-, Organisationsperson-**](/windows/desktop/ADSchema/c-organizationalperson)und [**Kontaktklassen**](/windows/desktop/ADSchema/c-contact) alle die **Person-Klasse** in ihren [](/windows/desktop/ADSchema/c-person) **defaultObjectCategory-Eigenschaften.** Dadurch können Suchfilter wie (objectCategory=person) Instanzen aller dieser Klassen mit einer einzelnen Abfrage suchen. Abfragen für Personen sind sehr häufig, sodass dies eine einfache Optimierung ist.
 
-Wenn Sie eine Unterklasse aus einer strukturellen Klasse erstellen, empfiehlt es sich, den [**defaultobjectcategory**](/windows/desktop/ADSchema/a-defaultobjectcategory) -Wert der neuen Klasse auf denselben Distinguished Name der übergeordneten Klasse festzulegen. Dadurch kann die Standardbenutzer Oberfläche die Unterklasse "finden".
+Wenn Sie eine Unterklasse aus einer strukturellen Klasse erstellen, besteht die bewährte Methode darin, den [**defaultObjectCategory-Wert**](/windows/desktop/ADSchema/a-defaultobjectcategory) der neuen Klasse auf den gleichen Distinguished Name der Übergeordneten Klasse festzulegen. Dadurch kann die Standard-Benutzeroberfläche die Unterklasse "suchen".
 
- 
+ 
 
- 
+ 

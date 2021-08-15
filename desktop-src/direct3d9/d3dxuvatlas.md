@@ -1,7 +1,7 @@
 ---
-description: Definiert Optionen zum Ausführen von geodäschen Entfernungs Berechnungen, wenn eine Textur an eine gekrümmte Oberfläche angepasst wird. Verwenden Sie dieses Flag, um beim Berechnen eines Textur Atlas zwischen hochwertigen und schnellen Berechnungen zu wählen.
+description: Definiert Optionen zum Ausführen von geodätischen Entfernungsberechnungen beim Anpassen einer Textur an eine gekrümmte Oberfläche. Verwenden Sie dieses Flag, um beim Berechnen eines Texturat atlas zwischen hoher Qualität und schnellen Berechnungen zu wählen.
 ms.assetid: 76649c57-e5ae-4e0d-a7ab-f56385a327c2
-title: D3DXUVATLAS-Enumeration (D3dx9mesh. h)
+title: D3DXUVATLAS-Enumeration (D3dx9mesh.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,16 +13,16 @@ api_type:
 - HeaderDef
 api_location:
 - d3dx9mesh.h
-ms.openlocfilehash: 64cc116199b688fc9dcd8d6fbf331d85da508948
-ms.sourcegitcommit: 14010c34b35fa268046c7683f021f86de08ddd0a
+ms.openlocfilehash: 1edcf2b1cbe2363f805bee1f5eb67f5558702ea9e163a865e1a6c51d6f5ed6ff
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "106355799"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118523836"
 ---
 # <a name="d3dxuvatlas-enumeration"></a>D3DXUVATLAS-Enumeration
 
-Definiert Optionen zum Ausführen von geodäschen Entfernungs Berechnungen, wenn eine Textur an eine gekrümmte Oberfläche angepasst wird. Verwenden Sie dieses Flag, um beim Berechnen eines Textur Atlas zwischen hochwertigen und schnellen Berechnungen zu wählen.
+Definiert Optionen zum Ausführen von geodätischen Entfernungsberechnungen beim Anpassen einer Textur an eine gekrümmte Oberfläche. Verwenden Sie dieses Flag, um beim Berechnen eines Texturat atlas zwischen hoher Qualität und schnellen Berechnungen zu wählen.
 
 ## <a name="syntax"></a>Syntax
 
@@ -41,24 +41,24 @@ typedef enum _D3DXUVATLAS {
 
 <dl> <dt>
 
-<span id="D3DXUVATLAS_DEFAULT"></span><span id="d3dxuvatlas_default"></span>**D3DXUVATLAS \_ Standard**
+<span id="D3DXUVATLAS_DEFAULT"></span><span id="d3dxuvatlas_default"></span>**D3DXUVATLAS \_ DEFAULT**
 </dt> <dd>
 
-Für Netzen mit mehr als 25 KB wird die schnelle geodasic-Entfernungs Methode angewendet, während für Netzen mit weniger als 25 KB die Entfernungs Methode für höhere Qualität auf Sie angewendet wird.
+Für Gitternetze mit mehr als 25.000 Gesichtern wird die schnelle geodasische Entfernungsmethode angewendet, während für Gitternetze mit weniger als 25.000 Gesichtern stattdessen die geodätische Entfernungsmethode höherer Qualität angewendet wird.
 
 </dd> <dt>
 
-<span id="D3DXUVATLAS_GEODESIC_FAST"></span><span id="d3dxuvatlas_geodesic_fast"></span>**D3DXUVATLAS \_ Geodesic \_ fast**
+<span id="D3DXUVATLAS_GEODESIC_FAST"></span><span id="d3dxuvatlas_geodesic_fast"></span>**D3DXUVATLAS \_ GEODESIC \_ FAST**
 </dt> <dd>
 
-Verwendet Näherungs Werte, um die Diagramm Geschwindigkeit zu verbessern, indem zusätzliche Stretch oder mehr Diagramme für das Mesh ausgegeben werden.
+Verwendet Näherungen, um die Diagrammgeschwindigkeit auf Kosten von zusätzlichen Stretchingdiagrammen oder mehr Diagrammen zu verbessern, die für das Gitternetz ausgegeben werden.
 
 </dd> <dt>
 
-<span id="D3DXUVATLAS_GEODESIC_QUALITY"></span><span id="d3dxuvatlas_geodesic_quality"></span>**D3DXUVATLAS \_ Geodesic- \_ Qualität**
+<span id="D3DXUVATLAS_GEODESIC_QUALITY"></span><span id="d3dxuvatlas_geodesic_quality"></span>**D3DXUVATLAS \_ GEODESIC \_ QUALITY**
 </dt> <dd>
 
-Bietet bessere Qualitäts Diagramme, erfordert jedoch mehr Zeit und Arbeitsspeicher als schnell.
+Stellt Diagramme mit besserer Qualität bereit, erfordert jedoch mehr Zeit und Arbeitsspeicher als schnell.
 
 </dd> </dl>
 
@@ -68,11 +68,11 @@ Bietet bessere Qualitäts Diagramme, erfordert jedoch mehr Zeit und Arbeitsspeic
 
 | Anforderung | Wert |
 |-------------------|----------------------------------------------------------------------------------------|
-| Header<br/> | <dl> <dt>D3dx9mesh. h</dt> </dl> |
+| Header<br/> | <dl> <dt>D3dx9mesh.h</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 

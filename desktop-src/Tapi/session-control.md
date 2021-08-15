@@ -1,26 +1,26 @@
 ---
-description: Eine Sitzung oder ein-Rückruf stellt eine Verbindung zwischen zwei oder mehr Adressen dar.
+description: Eine Sitzung oder ein Aufruf stellt eine Verbindung zwischen zwei oder mehr Adressen dar.
 ms.assetid: f598c1cd-2b50-4ac6-a05e-4fd8eeb5e3e1
 title: Sitzungssteuerung
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 09250a90f978bde9be4f20aad6ee38f5e9766818
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 7985bd468cdb006d50d21c5579073adf982117a2697c70fddcdba1ab2bbb1c30
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "103760795"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117760853"
 ---
 # <a name="session-control"></a>Sitzungssteuerung
 
-Eine Sitzung oder ein-Rückruf stellt eine Verbindung zwischen zwei oder mehr Adressen dar. Diese Verbindung ist dynamisch, und die zugehörigen Programmier Objekte müssen bei Bedarf erstellt, manipuliert und freigegeben werden. Im einfachsten Fall bedeutet dies, dass Sie einen Telefonanruf tätigen und trennen. Bei erweiterten Anwendungen kann die Sitzungssteuerung die Verwaltung von Multimedia-Konferenzen über ein IP-Netzwerk bis zu der Ebene einzelner Teilnehmer umfassen.
+Eine Sitzung oder ein Aufruf stellt eine Verbindung zwischen zwei oder mehr Adressen dar. Diese Verbindung ist dynamisch, und die zugeordneten Programmierobjekte müssen bei Bedarf erstellt, bearbeitet und freigegeben werden. Im einfachsten Fall bedeutet dies das Tätigen und Trennen eines Telefonanrufs. Bei erweiterten Anwendungen kann die Sitzungssteuerung die Verwaltung von Multimediakonferenzen über ein IP-Netzwerk bis zur Ebene einzelner Teilnehmer umfassen.
 
 Die Sitzungssteuerung umfasst zwei grundlegende Bereiche:
 
--   [Sitzungs Vorgänge](session-operations-ovr.md) sind Steuerelemente, mit denen eine Kommunikationssitzung initiiert, gewartet und beendet wird.
--   [Sitzungsinformationen](session-information-ovr.md) beschreiben Daten, die in Bezug auf eine Kommunikationssitzung abgerufen werden können.
+-   [Sitzungsvorgänge](session-operations-ovr.md) sind Steuerelemente, die eine Kommunikationssitzung initiieren, verwalten und beenden.
+-   [Sitzungsinformationen](session-information-ovr.md) beschreiben Daten, die für eine Kommunikationssitzung abgerufen werden können.
 
-Zwei spezialisierte Typen der Sitzungssteuerung werden in diesem Abschnitt nicht behandelt. Informationen zu automatischen Callcenter finden Sie unter [callcentersteuerelement](./call-center-control.md) (TAPI 2. x) oder Informationen [zu callcentersteuerelementen](about-call-center-controls.md) (TAPI 3. x). Weitere Informationen zu IP-Konferenzen finden Sie unter Informationen [zu Rendezvous-IP-telefoniekonferenzen](about-rendezvous-ip-telephony-conferencing.md).
+Zwei spezielle Typen von Sitzungssteuerelement werden in diesem Abschnitt nicht behandelt. Informationen zu automatischen Callverteilungscentern finden Sie unter [Call Center Control](./call-center-control.md) (TAPI 2.x) oder About Call Center [Controls](about-call-center-controls.md) (TAPI 3.x). Informationen zu IP-Konferenzen finden Sie unter [Informationen zu Rendezvous-IP-Telefoniekonferenzen.](about-rendezvous-ip-telephony-conferencing.md)
 
  
 

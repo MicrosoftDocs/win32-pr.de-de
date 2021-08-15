@@ -1,27 +1,27 @@
 ---
-description: Das folgende Beispiel veranschaulicht die Verwendung der Funktionen virtualzuordc und VirtualFree beim reservieren und committen von Arbeitsspeicher nach Bedarf für ein dynamisches Array.
+description: Das folgende Beispiel veranschaulicht die Verwendung der Funktionen VirtualAlloc und VirtualFree beim Reservieren und Committen von Arbeitsspeicher nach Bedarf für ein dynamisches Array.
 ms.assetid: f46bd57d-7684-4a08-8ac7-de204aecb207
-title: Reservieren und Commit des Arbeitsspeichers
+title: Reservieren und Committen von Arbeitsspeicher
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 66ff5853d01561454265e1ee2102fbf6ebd9bb04
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 615f3c4321dc432b5ef83a841cea12215563e7d103443512a4d3b2c553849540
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106369884"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118386278"
 ---
-# <a name="reserving-and-committing-memory"></a>Reservieren und Commit des Arbeitsspeichers
+# <a name="reserving-and-committing-memory"></a>Reservieren und Committen von Arbeitsspeicher
 
-Das folgende Beispiel veranschaulicht die Verwendung der Funktionen [**virtualzuordc**](/windows/win32/api/memoryapi/nf-memoryapi-virtualalloc) und [**VirtualFree**](/windows/win32/api/memoryapi/nf-memoryapi-virtualfree) beim reservieren und committen von Arbeitsspeicher nach Bedarf für ein dynamisches Array. Zunächst wird **virtualzuweisung** aufgerufen, um einen Block von Seiten zu reservieren, wobei **null** als Basis Adress Parameter angegeben wird. Dadurch wird das System gezwungen, den Speicherort des Blocks zu ermitteln. Später wird **virtualbelegc** aufgerufen, wenn es erforderlich ist, einen Commit für eine Seite aus dieser reservierten Region durchzusetzen, und die Basisadresse der nächsten Seite, für die ein Commit ausgeführt werden soll, angegeben wird.
+Das folgende Beispiel veranschaulicht die Verwendung der [**Funktionen VirtualAlloc**](/windows/win32/api/memoryapi/nf-memoryapi-virtualalloc) und [**VirtualFree**](/windows/win32/api/memoryapi/nf-memoryapi-virtualfree) beim Reservieren und Committen von Arbeitsspeicher nach Bedarf für ein dynamisches Array. Zunächst wird **VirtualAlloc** aufgerufen, um einen Block von Seiten mit **NULL** als Basisadressenparameter zu reservieren, sodass das System gezwungen wird, den Speicherort des Blocks zu bestimmen. Später wird **VirtualAlloc** immer dann aufgerufen, wenn ein Commit für eine Seite aus dieser reservierten Region erforderlich ist und die Basisadresse der nächsten Seite angegeben wird, für die ein Commit ausgeführt werden soll.
 
-Im Beispiel wird eine strukturierte Ausnahme Behandlungs Syntax verwendet, um Seiten aus dem reservierten Bereich zu übertragen. Wenn während der Ausführung des **\_ \_ try** -Blocks eine Seiten Fehler Ausnahme auftritt, wird die Filter-Funktion im Ausdruck ausgeführt, der **\_ \_ mit Ausnahme** Block vorangestellt ist. Wenn die Filterfunktion eine andere Seite zuordnen kann, wird die Ausführung im **\_ \_ try** -Block an dem Punkt fortgesetzt, an dem die Ausnahme aufgetreten ist. Andernfalls wird der Ausnahmehandler im **\_ \_ Ausnahme** -Block ausgeführt. Weitere Informationen finden Sie unter [strukturierte Ausnahmebehandlung](../debug/structured-exception-handling.md).
+Im Beispiel wird eine strukturierte Ausnahmebehandlungssyntax verwendet, um Seiten aus der reservierten Region zu commiten. Wenn während der Ausführung des **\_ \_ try-Blocks** eine Seitenfehlerausnahme auftritt, wird die Filterfunktion im Ausdruck vor dem **\_ \_ except-Block** ausgeführt. Wenn die Filterfunktion eine andere Seite zuordnen kann, wird die Ausführung im **\_ \_ try-Block** an dem Punkt fortgesetzt, an dem die Ausnahme aufgetreten ist. Andernfalls wird der Ausnahmehandler im **\_ \_ except-Block** ausgeführt. Weitere Informationen finden Sie unter [Strukturierte Ausnahmebehandlung.](../debug/structured-exception-handling.md)
 
-Als Alternative zur dynamischen Zuordnung kann der Prozess einfach einen Commit für die gesamte Region durchsetzen, anstatt ihn nur zu reservieren. Beide Methoden führen zu derselben physischen Speicherauslastung, da commitseiten keinen physischen Speicher beanspruchen, bis auf Sie zugegriffen wird. Der Vorteil der dynamischen Zuordnung besteht darin, dass dadurch die Gesamtzahl der zugegebenen Seiten im System minimiert wird. Bei sehr großen Zuordnungen kann das System vor dem Commit einer vollständigen Zuordnung dazu führen, dass das System nicht über commitfähige Seiten verfügt. Dies führt zu Fehlern bei der virtuellen Speicher Belegung.
+Als Alternative zur dynamischen Zuordnung kann der Prozess einfach ein Commit für die gesamte Region erstellen, anstatt sie nur zu reservieren. Beide Methoden führen zur gleichen physischen Speicherauslastung, da seiten, für die ein Committed durchgeführt wurde, erst dann physischen Speicher nutzen, wenn auf sie zugegriffen wird. Der Vorteil der dynamischen Zuordnung besteht in der Minimierung der Gesamtzahl der Seiten, für die ein Committed auf dem System besteht. Bei sehr großen Zuordnungen kann das Vorab committen einer gesamten Zuordnung dazu führen, dass dem System keine commitbaren Seiten mehr zur Verfügung sind, was zu Fehlern bei der virtuellen Speicherbelegung führt.
 
-Die [**ExitProcess**](/windows/win32/api/processthreadsapi/nf-processthreadsapi-exitprocess) -Funktion im **\_ \_ Ausnahme** Block gibt automatisch virtuelle Speicher Belegungen frei, sodass es nicht notwendig ist, die Seiten explizit freizugeben, wenn das Programm den Ausführungs Pfad beendet. Die [**VirtualFree**](/windows/win32/api/memoryapi/nf-memoryapi-virtualfree) -Funktion gibt die reservierten und zugesicherte Seiten frei, wenn das Programm mit deaktivierter Ausnahmebehandlung erstellt wurde. Diese Funktion verwendet die Arbeitsspeicher **\_ Freigabe** , um den gesamten Bereich von reservierten und commitenden Seiten zu übernehmen und freizugeben.
+Die [**ExitProcess-Funktion**](/windows/win32/api/processthreadsapi/nf-processthreadsapi-exitprocess) im **\_ \_ except-Block** gibt automatisch virtuelle Speicherzuordnungen frei, sodass es nicht erforderlich ist, die Seiten explizit frei zu geben, wenn das Programm über diesen Ausführungspfad beendet wird. Die [**VirtualFree-Funktion**](/windows/win32/api/memoryapi/nf-memoryapi-virtualfree) gibt die reservierten seiten und die Seiten, für die ein Committed ausgeführt wurde, frei, wenn das Programm mit deaktivierter Ausnahmebehandlung erstellt wurde. Diese Funktion verwendet **MEM \_ RELEASE,** um denCommit für die gesamte Region reservierter und mit einem Committed gebundener Seiten zu dekomprimiert und frei zu geben.
 
-Im folgenden C++-Beispiel wird die dynamische Speicher Belegung mithilfe eines strukturierten Ausnahme Handlers veranschaulicht.
+Im folgenden C++-Beispiel wird die dynamische Speicherbelegung mithilfe eines strukturierten Ausnahmehandlers veranschaulicht.
 
 
 ```C++

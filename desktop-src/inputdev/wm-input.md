@@ -1,9 +1,9 @@
 ---
-title: WM_INPUT Meldung (Winuser. h)
-description: Wird an das Fenster gesendet, das roheingaben erhält. Ein Fenster empfängt diese Meldung über seine WindowProc-Funktion.
+title: WM_INPUT (Winuser.h)
+description: Wird an das Fenster gesendet, in dem rohe Eingaben angezeigt werden. Ein Fenster empfängt diese Nachricht über seine WindowProc-Funktion.
 ms.assetid: a014d68c-841c-4120-b752-4b3fac60e12d
 keywords:
-- Tastatur-und Maus Eingaben für WM_INPUT Nachricht
+- WM_INPUT der Tastatur- und Mauseingabe
 topic_type:
 - apiref
 api_name:
@@ -14,18 +14,18 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 04/17/2020
-ms.openlocfilehash: ffe64a5ca79bbe886ddae31661c06dae695259a7
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 5d317ba21c69b22ae9c6b7cb5be0be84cd15f561b34ec65f1f99e7335cd1badb
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104391793"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117884287"
 ---
-# <a name="wm_input-message"></a>WM- \_ Eingabe Meldung
+# <a name="wm_input-message"></a>WM \_ INPUT-Meldung
 
-Wird an das Fenster gesendet, das roheingaben erhält.
+Wird an das Fenster gesendet, in dem rohe Eingaben angezeigt werden.
 
-Ein Fenster empfängt diese Meldung über seine [**WindowProc**](/previous-versions/windows/desktop/legacy/ms633573(v=vs.85)) -Funktion.
+Ein Fenster empfängt diese Nachricht über seine [**WindowProc-Funktion.**](/previous-versions/windows/desktop/legacy/ms633573(v=vs.85))
 
 
 ```cpp
@@ -40,14 +40,14 @@ Ein Fenster empfängt diese Meldung über seine [**WindowProc**](/previous-versi
 
 </dt> <dd>
 
-Der Eingabecode. Verwenden Sie das Makro [**get \_ rawinput \_ Code \_ wParam**](/windows/win32/api/winuser/nf-winuser-get_rawinput_code_wparam) , um den Wert zu erhalten.
+Der Eingabecode. Verwenden [**Sie das \_ \_ \_ WPARAM-Makro GET RAWINPUT CODE,**](/windows/win32/api/winuser/nf-winuser-get_rawinput_code_wparam) um den Wert zu erhalten.
 
-Folgenden Werte sind möglich:
+Es kann sich um einen der folgenden Werte handeln:
 
 | Wert | Bedeutung |
 |---|---|
-| <span id="RIM_INPUT"></span><span id="rim_input"></span><dl> <dt>**Rand \_ Eingabe**</dt> <dt>0</dt> </dl> | Die Eingabe ist aufgetreten, während sich die Anwendung im Vordergrund befand. </br> Die Anwendung muss [**defwindowproc**](/windows/desktop/api/winuser/nf-winuser-defwindowproca) aufzurufen, damit das System eine Bereinigung durchführen kann. |
-| <span id="RIM_INPUTSINK"></span><span id="rim_inputsink"></span><dl> <dt>**Rand \_ Inputsink**</dt> <dt>1</dt> </dl> | Die Eingabe ist aufgetreten, während sich die Anwendung nicht im Vordergrund befand. |
+| <span id="RIM_INPUT"></span><span id="rim_input"></span><dl> <dt>**BESEN \_ EINGABE**</dt> <dt>0</dt> </dl> | Die Eingabe ist aufgetreten, während sich die Anwendung im Vordergrund befindet. </br> Die Anwendung muss [**DefWindowProc aufrufen,**](/windows/desktop/api/winuser/nf-winuser-defwindowproca) damit das System eine Bereinigung durchführen kann. |
+| <span id="RIM_INPUTSINK"></span><span id="rim_inputsink"></span><dl> <dt>**BESEN \_ INPUTSINK**</dt> <dt>1</dt> </dl> | Die Eingabe ist aufgetreten, während sich die Anwendung nicht im Vordergrund befindet. |
 
 </dd> <dt>
 
@@ -55,38 +55,38 @@ Folgenden Werte sind möglich:
 
 </dt> <dd>
 
-Ein **hrawinput** -Handle für die [**rawinput**](/windows/win32/api/winuser/ns-winuser-rawinput) -Struktur, die die unformatierte Eingabe des Geräts enthält. Verwenden Sie zum Abrufen der Rohdaten dieses Handle im-Befehl von " [**getrawinputdata**](/windows/win32/api/winuser/nf-winuser-getrawinputdata)".
+Ein **HRAWINPUT-Handle** für die [**RAWINPUT-Struktur,**](/windows/win32/api/winuser/ns-winuser-rawinput) die die rohe Eingabe des Geräts enthält. Verwenden Sie dieses Handle im Aufruf von [**GetRawInputData,**](/windows/win32/api/winuser/nf-winuser-getrawinputdata)um die Rohdaten zu erhalten.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Wenn eine Anwendung diese Nachricht verarbeitet, sollte Sie 0 (null) zurückgeben.
+Wenn eine Anwendung diese Nachricht verarbeitet, sollte sie 0 (null) zurückgeben.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Unformatierte Eingaben sind nur verfügbar, wenn die Anwendung [**registerrawinputdevices**](/windows/win32/api/winuser/nf-winuser-registerrawinputdevices) mit gültigen Gerätespezifikationen aufruft.
+Unformatierte Eingaben sind nur verfügbar, wenn die Anwendung [**RegisterRawInputDevices mit gültigen**](/windows/win32/api/winuser/nf-winuser-registerrawinputdevices) Gerätespezifikationen aufruft.
 
 ## <a name="requirements"></a>Anforderungen
 
 | Anforderung | Wert |
 |--------------------------|-------------------------------------------|
-| Unterstützte Mindestversion (Client) | Nur Windows XP \[ -Desktop-Apps\] |
-| Unterstützte Mindestversion (Server) | Nur Windows Server 2003 \[ -Desktop-Apps\] |
-| Header | <dl> <dt>**Winuser. h (Windows. h einschließen)**</dt> </dl> |
+| Unterstützte Mindestversion (Client) | Windows Nur \[ XP-Desktop-Apps\] |
+| Unterstützte Mindestversion (Server) | Windows Nur Server \[ 2003-Desktop-Apps\] |
+| Header | <dl> <dt>**Winuser.h (include Windows.h)**</dt> </dl> |
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
-**Verweis**
+**Referenz**
 
-[**Getrawinputdata**](/windows/win32/api/winuser/nf-winuser-getrawinputdata)
+[**GetRawInputData**](/windows/win32/api/winuser/nf-winuser-getrawinputdata)
 
-[**Registerrawinputdevices**](/windows/win32/api/winuser/nf-winuser-registerrawinputdevices)
+[**RegisterRawInputDevices**](/windows/win32/api/winuser/nf-winuser-registerrawinputdevices)
 
-[**Rawinput**](/windows/win32/api/winuser/ns-winuser-rawinput)
+[**RAWINPUT**](/windows/win32/api/winuser/ns-winuser-rawinput)
 
-[**GET \_ rawinput \_ Code \_ wParam**](/windows/win32/api/winuser/nf-winuser-get_rawinput_code_wparam)
+[**GET \_ RAWINPUT \_ CODE \_ WPARAM**](/windows/win32/api/winuser/nf-winuser-get_rawinput_code_wparam)
 
-**Licher**
+**Konzeptionellen**
 
-[Rohdaten Eingabe](raw-input.md)
+[Rohdateneingabe](raw-input.md)

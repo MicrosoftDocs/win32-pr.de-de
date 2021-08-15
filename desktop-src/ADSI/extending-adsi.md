@@ -1,20 +1,20 @@
 ---
 title: Erweitern von ADSI
-description: Mit dem ADSI-Erweiterungs Modell können Sie Ihrem eigenen com-Objekt eine Verzeichnis Klasse zuordnen.
+description: Mit dem ADSI-Erweiterungsmodell können Sie eine Verzeichnisklasse Ihrem eigenen COM-Objekt zuordnen.
 ms.assetid: bf9a324d-14eb-4eb9-a80d-b0431db3af26
 ms.tgt_platform: multiple
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 4e597d4b2dd2cf6a3b4a81f1fff3515289418b9d
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: 15e9f5bd316fc4703cf522e2c5facfd6c32c5236da191668f6ba38ae6a904f00
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "103707427"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118428453"
 ---
 # <a name="extending-adsi"></a>Erweitern von ADSI
 
-Mit dem ADSI-Erweiterungs Modell können Sie Ihrem eigenen com-Objekt eine Verzeichnis Klasse zuordnen. Aus der Perspektive eines ADSI-Programmierers oder Skripts wird die Erweiterung zu einem integralen Bestandteil von ADSI. Wenn ein neuer Mitarbeiter z. b. mit Fabrikam verbunden ist, erstellt der Windows NT-Administrator ein Benutzerobjekt im Verzeichnis, und der Gehalts Erstellungs Administrator muss einige Einträge in den Personalressourcen Systemen für diesen Benutzer einrichten. Mit einer ADSI-Erweiterung kann dieser Prozess in einem einzelnen Skript optimiert werden.
+Mit dem ADSI-Erweiterungsmodell können Sie eine Verzeichnisklasse Ihrem eigenen COM-Objekt zuordnen. Aus Sicht eines ADSI-Programmierers oder Skriptwriters wird die Erweiterung zu einem integralen Bestandteil von ADSI. Wenn beispielsweise ein neuer Mitarbeiter fabrikam beitritt, erstellt der Windows NT-Administrator ein Benutzerobjekt im Verzeichnis, und der Gehaltsadministrator muss einige Einträge in den Personalsystemen für diesen Benutzer einrichten. Mit einer ADSI-Erweiterung kann dieser Prozess in einem einzigen Skript optimiert werden.
 
 
 ```VB
@@ -53,11 +53,11 @@ Debug.Print "User: " & usr.Name & "has been created"
 
 
 
-Weitere Informationen finden Sie unter [ADSI Extensions](adsi-extensions.md).
+Weitere Informationen finden Sie unter [ADSI-Erweiterungen.](adsi-extensions.md)
 
- 
+ 
 
- 
+ 
 
 
 

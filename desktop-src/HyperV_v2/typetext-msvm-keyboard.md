@@ -13,16 +13,16 @@ api_type:
 - COM
 api_location:
 - vmms.exe
-ms.openlocfilehash: 37e8227a545975a6193be63a8bd363e10e9805f5
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: d56bc65bba5728c95521a53a51ad77f34b710d3cddcb987f5209d28619870f34
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106351483"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118391629"
 ---
-# <a name="typetext-method-of-the-msvm_keyboard-class"></a>TypeText-Methode der MSVM- \_ Tastatur Klasse
+# <a name="typetext-method-of-the-msvm_keyboard-class"></a>TypeText-Methode der \_ Msvm-Tastaturklasse
 
-Simuliert eine Reihe von typisierten Zeichen. Dies entspricht dem Aufrufen von [**Press Key**](presskey-msvm-keyboard.md) gefolgt von [**releasekey**](releasekey-msvm-keyboard.md) für jedes Zeichen in der Zeichenfolge.
+Simuliert eine Reihe von typisierten Zeichen. Dies entspricht dem Aufruf von [**PressKey**](presskey-msvm-keyboard.md) gefolgt von [**ReleaseKey**](releasekey-msvm-keyboard.md) für jedes Zeichen in der Zeichenfolge.
 
 ## <a name="syntax"></a>Syntax
 
@@ -39,19 +39,19 @@ uint32 TypeText(
 
 <dl> <dt>
 
-*asciitext* \[ in\]
+*asciiText* \[ In\]
 </dt> <dd>
 
 Typ: **Zeichenfolge**
 
-Die Reihe von ASCII-oder Unicode-Zeichen, die eingegeben werden sollen. Die maximale Länge dieser Zeichenfolge hängt vom Typ der Zeichen in der Zeichenfolge ab.
+Die Reihe von ASCII- oder Unicode-Zeichen, die eingegeben werden sollen. Die maximale Länge dieser Zeichenfolge hängt vom Typ der Zeichen in der Zeichenfolge ab.
 
 
 
-| Zeichenfolgentyp        | Maximale Zeichen Anzahl                                                               |
+| Zeichenfolgentyp        | Maximale Anzahl von Zeichen                                                               |
 |--------------------|----------------------------------------------------------------------------------|
 | ASCII<br/>   | 512<br/>                                                                   |
-| Unicode<br/> | 256 bis 512, abhängig von der Anzahl der Ersatz Zeichenpaare in der Zeichenfolge.<br/> |
+| Unicode<br/> | 256 bis 512, abhängig von der Anzahl der Ersatzzeichenpaare in der Zeichenfolge.<br/> |
 
 
 
@@ -61,19 +61,19 @@ Die Reihe von ASCII-oder Unicode-Zeichen, die eingegeben werden sollen. Die maxi
 
 ## <a name="return-value"></a>Rückgabewert
 
-Typ: **UInt32**
+Typ: **uint32**
 
-Der Rückgabewert 0 (null) gibt den Erfolg an. Der Rückgabewert 1 gibt einen Fehler an, der durch nicht übersetzbare Zeichen in der Eingabe Zeichenfolge verursacht wird. Alle anderen Werte ungleich 0 (null) geben an, dass der Schlüssel Zustand nicht geändert werden konnte.
+Der Rückgabewert 0 (null) gibt den Erfolg an. Der Rückgabewert 1 gibt einen Fehler an, der durch nicht überschreibbare Zeichen in der Eingabezeichenfolge verursacht wird. Alle anderen Werte ungleich 0 (null) weisen auf einen Fehler beim Ändern des Schlüsselzustands hin.
 
 <dl> <dt>
 
 **Abgeschlossen ohne Fehler** (0)
 </dt> <dt>
 
-Über **prüfte Methoden Parameter-Auftrag gestartet** (4096)
+**Überprüfte Methodenparameter – Auftragsstart** (4096)
 </dt> <dt>
 
-Fehler **(32768** )
+**Fehler** (32768)
 </dt> <dt>
 
 **Zugriff verweigert** (32769)
@@ -82,7 +82,7 @@ Fehler **(32768** )
 **Nicht unterstützt** (32770)
 </dt> <dt>
 
-Der **Status ist "Unknown** " (32771).
+**Status ist unbekannt** (32771)
 </dt> <dt>
 
 **Timeout** (32772)
@@ -91,28 +91,28 @@ Der **Status ist "Unknown** " (32771).
 **Ungültiger Parameter** (32773)
 </dt> <dt>
 
-Das **System wird verwendet** (32774).
+**System wird verwendet** (32774)
 </dt> <dt>
 
-**Ungültiger Status für diesen Vorgang** (32775).
+**Ungültiger Zustand für diesen Vorgang** (32775)
 </dt> <dt>
 
-**Falscher Datentyp** (32776).
+**Falscher Datentyp** (32776)
 </dt> <dt>
 
-Das **System ist nicht verfügbar** (32777).
+**System ist nicht verfügbar** (32777)
 </dt> <dt>
 
-**Nicht** genügend Arbeitsspeicher (32778)
+**Nicht genügend Arbeitsspeicher** (32778)
 </dt> </dl>
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Der Zugriff auf die [**MSVM- \_ Tastatur**](msvm-keyboard.md) Klasse kann durch die UAC-Filterung eingeschränkt werden. Weitere Informationen finden Sie unter [Benutzerkontensteuerung und WMI](/windows/desktop/WmiSdk/user-account-control-and-wmi).
+Der Zugriff auf die [**\_ Msvm-Tastaturklasse**](msvm-keyboard.md) kann durch die UAC-Filterung eingeschränkt werden. Weitere Informationen finden Sie unter [Benutzerkontensteuerung und WMI.](/windows/desktop/WmiSdk/user-account-control-and-wmi)
 
 ## <a name="examples"></a>Beispiele
 
-Im folgenden c#-Beispiel wird die Eingabe von Text simuliert. Die Dienstprogramme, auf die verwiesen wird, finden Sie unter [Allgemeine Hilfsprogramme für die Virtualisierungsbeispiele (v2)](common-utilities-for-the-virtualization-samples-v2.md).
+Im folgenden C#-Beispiel wird die Eingabe von Text simuliert. Die referenzierten Hilfsprogramme finden Sie unter [Allgemeine Hilfsprogramme für die Virtualisierungsbeispiele (V2).](common-utilities-for-the-virtualization-samples-v2.md)
 
 
 ```CSharp
@@ -191,7 +191,7 @@ namespace HyperVSamples
 
 
 
-Im folgenden Visual Basic Scripting Edition (VBScript)-Beispiel wird die Eingabe von Text simuliert.
+Im folgenden Beispiel Visual Basic Scripting Edition (VBScript) wird die Eingabe von Text simuliert.
 
 
 ```VB
@@ -328,19 +328,19 @@ End Function
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows 8 \[ -Desktop-Apps\]<br/>                                                              |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2012 \[ -Desktop-Apps\]<br/>                                                    |
-| Namespace<br/>                | \\Stammvirtualisierung \\ v2<br/>                                                                     |
-| MOF<br/>                      | <dl> <dt>Windowsvirtualization. v2. MOF</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | \[Windows 8 Nur Desktop-Apps\]<br/>                                                              |
+| Unterstützte Mindestversion (Server)<br/> | \[Windows Server 2012 Nur Desktop-Apps\]<br/>                                                    |
+| Namespace<br/>                | Root \\ Virtualization \\ V2<br/>                                                                     |
+| MOF<br/>                      | <dl> <dt>WindowsVirtualization.V2.mof</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>Vmms.exe</dt> </dl>                     |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**MSVM- \_ Tastatur**](msvm-keyboard.md)
+[**\_Msvm-Tastatur**](msvm-keyboard.md)
 </dt> </dl>
 
  

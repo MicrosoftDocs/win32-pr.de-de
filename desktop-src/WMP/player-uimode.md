@@ -1,9 +1,9 @@
 ---
-title: Player. uiMode
-description: Mit der uiMode-Eigenschaft wird ein Wert angegeben oder abgerufen, der angibt, welche Steuerelemente in der Benutzeroberfläche angezeigt werden.
+title: Player.uiMode
+description: Die uiMode-Eigenschaft gibt einen Wert an, der angibt, welche Steuerelemente auf der Benutzeroberfläche angezeigt werden, oder ruft einen Wert ab.
 ms.assetid: 6297d22b-e8ed-4f28-83f6-b74d3265c520
 keywords:
-- Player. uiMode-Windows-Media Player
+- Player.uiMode Windows Media Player
 topic_type:
 - apiref
 api_name:
@@ -14,16 +14,16 @@ api_type:
 - DllExport
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 2b1fd2e8e3a2ac6314255cd6ebc350b2ace8cb63
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: f082da34ffc3b77869e84ceb576b4e6273ccaff15a5f95e66d98cae93697c251
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106357639"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118835337"
 ---
-# <a name="playeruimode"></a>Player. uiMode
+# <a name="playeruimode"></a>Player.uiMode
 
-Mit der **uiMode** -Eigenschaft wird ein Wert angegeben oder abgerufen, der angibt, welche Steuerelemente in der Benutzeroberfläche angezeigt werden.
+Die **uiMode-Eigenschaft** gibt einen Wert an, der angibt, welche Steuerelemente auf der Benutzeroberfläche angezeigt werden, oder ruft einen Wert ab.
 
 ## <a name="syntax"></a>Syntax
 
@@ -31,39 +31,39 @@ Mit der **uiMode** -Eigenschaft wird ein Wert angegeben oder abgerufen, der angi
 
 ## <a name="possible-values"></a>Mögliche Werte
 
-Diese Eigenschaft ist eine Lese- **/schreibzeichenfolge**.
+Diese Eigenschaft ist eine **Zeichenfolge** mit Lese-/Schreibzugriff.
 
 
 
-| Wert     | BESCHREIBUNG                                                                                                                                                                                                           | Audiobeispiel                                          | Video Beispiel                                          |
+| Wert     | BESCHREIBUNG                                                                                                                                                                                                           | Audiobeispiel                                          | Videobeispiel                                          |
 |-----------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|--------------------------------------------------------|--------------------------------------------------------|
-| Unsichtbar | Windows Media Player ist ohne sichtbare Benutzeroberfläche eingebettet (Steuerelemente, Video-oder Visualisierungs Fenster).                                                                                                        | (Nichts wird angezeigt.)                                | (Nichts wird angezeigt.)                                |
-| none      | Windows Media Player ist ohne Steuerelemente eingebettet, und nur das Video-oder Visualisierungs Fenster wird angezeigt.                                                                                                         | !["None" mit Audiodaten](images/uimode-none-audio-v11.png) | !["None" mit Video](images/uimode-none-video-v11.png) |
-| Minibar      | Windows Media Player ist in das Fenster "Status", "Wiedergabe", "anhalten", "anhalten", "stumm" und "Lautstärke" neben dem Video-oder Visualisierungs Fenster eingebettet                                                          | !["Mini" mit Audiodaten](images/uimode-mini-audio-v11.png) | !["Mini" mit Video](images/uimode-mini-video-v11.png) |
-| Voll      | Standard. Windows Media Player ist neben dem Video-oder Visualisierungs Fenster in die Steuerelemente "Status", "suchen", "Wiedergabe", "anhalten", "stumm Schaltung", "weiter", "schnell vorwärts", "schnelles umkehren" und "Handels@@ | !["Full" mit Audiodaten](images/uimode-full-audio-v11.png) | !["Full" mit Video](images/uimode-full-video-v11.png) |
+| Unsichtbar | Windows Media Player wird ohne sichtbare Benutzeroberfläche (Steuerelemente, Video oder Visualisierungsfenster) eingebettet.                                                                                                        | (Es wird nichts angezeigt.)                                | (Es wird nichts angezeigt.)                                |
+| Keine      | Windows Media Player wird ohne Steuerelemente eingebettet, und nur das Video- oder Visualisierungsfenster wird angezeigt.                                                                                                         | !["none" mit Audio](images/uimode-none-audio-v11.png) | !["none" mit Video](images/uimode-none-video-v11.png) |
+| Mini      | Windows Media Player wird in die Steuerelemente Statusfenster, Wiedergabe/Pause, Beenden, Stummschalten und Lautstärke eingebettet, die zusätzlich zum Video- oder Visualisierungsfenster angezeigt werden.                                                          | !["mini" mit Audio](images/uimode-mini-audio-v11.png) | !["mini" mit Video](images/uimode-mini-video-v11.png) |
+| Voll      | Standard. Windows Media Player ist zusätzlich zum Video- oder Visualisierungsfenster in das Statusfenster, suchleisten-, wiedergabe-/pausen-, stop-, mute-, next-, previous-, fast forward-, fast reverse- und volume-Steuerelemente eingebettet. | !["vollständig" mit Audio](images/uimode-full-audio-v11.png) | !["vollständig" mit Video](images/uimode-full-video-v11.png) |
 | custom    | Windows Media Player ist mit einer benutzerdefinierten Benutzeroberfläche eingebettet. Kann nur in C++-Programmen verwendet werden.                                                                                                                      | (Benutzerdefinierte Benutzeroberfläche wird angezeigt.)                  | (Benutzerdefinierte Benutzeroberfläche wird angezeigt.)                  |
 
 
 
  
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Diese Eigenschaft gibt die Darstellung der eingebetteten Windows-Media Player an. Wenn **uiMode** auf "None", "Mini" oder "Full" festgelegt ist, ist ein Fenster für die Anzeige von Videoclips und Audiovisualisierungen vorhanden. Dieses Fenster kann im Mini-oder vollständigen Modus ausgeblendet werden, indem das **height** -Attribut des **Object** -Tags auf 40 festgelegt wird. dieses Fenster wird von unten gemessen und lässt den Steuerelement Teil der Benutzeroberfläche sichtbar. Wenn keine eingebettete Schnittstelle gewünscht ist, legen Sie die Attribute " **Width** " und " **height** " auf NULL fest.
+Diese Eigenschaft gibt die Darstellung des eingebetteten Windows Media Player an. Wenn **uiMode** auf "none", "mini" oder "full" festgelegt ist, ist ein Fenster für die Anzeige von Videoclips und Audiovisualisierungen vorhanden. Dieses Fenster kann im Mini- oder Vollmodus ausgeblendet werden, indem das **Height-Attribut** des **OBJECT-Tags** auf 40 festgelegt wird, das von unten gemessen wird, und lässt den Steuerelementteil der Benutzeroberfläche sichtbar. Wenn keine eingebettete Schnittstelle gewünscht wird, legen Sie sowohl das **Breiten-** als auch das **Höhenattribute** auf 0 (null) fest.
 
-Wenn **uiMode** auf "unsichtbar" festgelegt ist, wird keine Benutzeroberfläche angezeigt, aber der Leerraum ist nach wie vor durch **Breite** und **Höhe** angegeben. Dies ist nützlich, um das Seitenlayout beizubehalten, wenn **uiMode** geändert werden kann. Außerdem ist der reservierte Speicherplatz transparent, sodass alle Elemente hinter dem Steuerelement sichtbar sind.
+Wenn **uiMode** auf "invisible" festgelegt ist, wird keine Benutzeroberfläche angezeigt, aber der Platz auf der Seite ist weiterhin reserviert, wie durch **Breite** und **Höhe** angegeben. Dies ist nützlich, um das Seitenlayout beizubehalten, wenn **uiMode** geändert werden kann. Darüber hinaus ist der reservierte Speicherplatz transparent, sodass alle Elemente, die sich hinter dem Steuerelement befinden, sichtbar sind.
 
-Wenn **uiMode** auf "Full" oder "Mini" festgelegt ist, zeigt Windows Media Player Transport Steuerelemente im Vollbildmodus an. Wenn **uiMode** auf "None" festgelegt ist, werden keine Steuerelemente im Vollbildmodus angezeigt.
+Wenn **uiMode** auf "full" oder "mini" festgelegt ist, zeigt Windows Media Player Transportsteuerelemente im Vollbildmodus an. Wenn **uiMode** auf "none" festgelegt ist, werden keine Steuerelemente im Vollbildmodus angezeigt.
 
-Wenn das Fenster sichtbar ist und Audioinhalt wiedergegeben wird, wird die Visualisierung angezeigt, die zuletzt in Windows Media Player verwendet wurde.
+Wenn das Fenster sichtbar ist und Audioinhalte wiedergegeben werden, wird die Visualisierung angezeigt, die zuletzt in Windows Media Player verwendet wurde.
 
-Wenn **uiMode** in einem C++-Programm, das **iwmpremotemediaservices** implementiert, auf "Custom" festgelegt ist, wird die von **iwmpremotemediaservices:: getcustomuimode** angezeigte Skin-Datei angezeigt.
+Wenn **uiMode** in einem C++-Programm, das **IWMPRemoteMediaServices** implementiert, auf "custom" festgelegt ist, wird die von **IWMPRemoteMediaServices::GetCustomUIMode** angegebene Skindatei angezeigt.
 
-Während der Vollbildwiedergabe blendet Windows Media Player den Mauszeiger aus, wenn **enablecontextmenu** den Wert false hat und **uiMode** den Wert "None" hat.
+Während der Vollbildwiedergabe blendet Windows Media Player den Mauszeiger aus, wenn **enableContextMenu** gleich false und **uiMode** gleich "none" ist.
 
 ## <a name="examples"></a>Beispiele
 
-Im folgenden Beispiel wird ein HTML-SELECT-Element erstellt, das es dem Benutzer ermöglicht, die Benutzeroberfläche für ein eingebettetes **Player** -Objekt zu ändern. Das **Player** -Objekt wurde mit ID = "Player" erstellt.
+Im folgenden Beispiel wird ein SELECT-HTML-Element erstellt, mit dem der Benutzer die Benutzeroberfläche für ein eingebettetes **Player-Objekt** ändern kann. Das **Player-Objekt** wurde mit der ID = "Player" erstellt.
 
 
 ```
@@ -84,7 +84,7 @@ Im folgenden Beispiel wird ein HTML-SELECT-Element erstellt, das es dem Benutzer
 
 
 
-Windows Media Player 10 Mobile: Diese Eigenschaft akzeptiert nur die Werte "None" oder "Full" oder gibt Sie zurück. Auf Smartphone-Geräten werden nur Wiedergabe Status und ein Counter angezeigt, wenn *uiMode* auf "Full" festgelegt ist.
+Windows Media Player 10 Mobile: Diese Eigenschaft akzeptiert oder gibt nur Werte von "none" oder "full" zurück. Auf Smartphonegeräten werden nur der Wiedergabestatus und ein Zähler angezeigt, wenn *uiMode* auf "full" festgelegt ist.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -92,19 +92,19 @@ Windows Media Player 10 Mobile: Diese Eigenschaft akzeptiert nur die Werte "None
 
 | Anforderung | Wert |
 |--------------------|---------------------------------------------------------------------------------------------------------------------------|
-| Version<br/> | Windows Media Player Version 7,0 oder höher. Windows Media Player 9 oder höher für "unsichtbar" oder "Benutzer definiert".<br/> |
+| Version<br/> | Windows Media Player Version 7.0 oder höher. Windows Media Player Serie 9 oder höher für "unsichtbar" oder "benutzerdefiniert".<br/> |
 | DLL<br/>     | <dl> <dt>Wmp.dll</dt> </dl>                                        |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Iwmpremotemediaservices-Schnittstelle**](/previous-versions/windows/desktop/api/wmp/nn-wmp-iwmpremotemediaservices)
+[**IWMPRemoteMediaServices-Schnittstelle**](/previous-versions/windows/desktop/api/wmp/nn-wmp-iwmpremotemediaservices)
 </dt> <dt>
 
-[**Iwmpremotemediaservices:: getcustomuimode**](/previous-versions/windows/desktop/api/wmp/nf-wmp-iwmpremotemediaservices-getcustomuimode)
+[**IWMPRemoteMediaServices::GetCustomUIMode**](/previous-versions/windows/desktop/api/wmp/nf-wmp-iwmpremotemediaservices-getcustomuimode)
 </dt> <dt>
 
 [**Player-Objekt**](player-object.md)

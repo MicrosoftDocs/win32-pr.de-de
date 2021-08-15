@@ -1,23 +1,23 @@
 ---
-description: In den folgenden Abschnitten wird die Semantik der Verwendung von Connect-Vorgängen für verbindungslose Protokolle, z. b. UDP und IPX, beschrieben. Herstellen einer Verbindung mit einem standardmäßigen "Peer-Verbindung" und "DisconnectingUsing SendTo" während
+description: In den folgenden Abschnitten wird die Semantik der Verwendung von Verbindungsvorgängen für verbindungslose Protokolle wie UDP und IPX beschrieben. Herstellen einer Verbindung mit einem Standard-PeerReconnecting und DisconnectingUsing Sendto While Connected
 ms.assetid: 7d69c82e-51cb-4e54-8097-744e211eb032
-title: Socketverbindungen bei Verbindungs losen Protokollen
+title: Socketverbindungen für verbindungslose Protokolle
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 8a4d436b1fda94291342716e0edf814dacf09818
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 71f17ea7240990c47822e5e9f904964fa133d0e8461f10974563a354fea54eb6
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106363273"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117740338"
 ---
-# <a name="socket-connections-on-connectionless-protocols"></a>Socketverbindungen bei Verbindungs losen Protokollen
+# <a name="socket-connections-on-connectionless-protocols"></a>Socketverbindungen für verbindungslose Protokolle
 
-In den folgenden Abschnitten wird die Semantik der Verwendung von Connect-Vorgängen für verbindungslose Protokolle, z. b. UDP und IPX, beschrieben.
+In den folgenden Abschnitten wird die Semantik der Verwendung von Verbindungsvorgängen für verbindungslose Protokolle wie UDP und IPX beschrieben.
 
--   [Herstellen einer Verbindung mit einem standardpeer](connecting-to-a-default-peer-2.md)
--   [Erneutes Herstellen einer Verbindung und trennen](reconnecting-and-disconnecting-2.md)
--   [Verwenden von SendTo während der Verbindung](using-sendto-while-connected-2.md)
+-   [Herstellen einer Verbindung mit einem Standardspeer](connecting-to-a-default-peer-2.md)
+-   [Erneutes Verbinden und Trennen](reconnecting-and-disconnecting-2.md)
+-   [Verwenden von Sendto während der Verbindung](using-sendto-while-connected-2.md)
 
  
 

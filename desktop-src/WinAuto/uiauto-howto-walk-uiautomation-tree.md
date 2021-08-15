@@ -1,27 +1,27 @@
 ---
-title: Vorgehensweise beim Durchlaufen der Benutzeroberflächenautomatisierungs-Struktur
-description: Dieses Thema enthält Beispielcode, der zeigt, wie die iuiautomationtreewalker-Schnittstelle verwendet wird, um die Elemente in der Microsoft UI Automation-Struktur zu durchlaufen und zu untersuchen.
+title: Exemplarische Vorgehensweise für die Benutzeroberflächenautomatisierung-Struktur
+description: Dieses Thema enthält Beispielcode, der zeigt, wie die IUIAutomationTreeWalker-Schnittstelle verwendet wird, um die Elemente in der Microsoft Benutzeroberflächenautomatisierung-Struktur zu durchlaufen und zu untersuchen.
 ms.assetid: 41ca783d-56d1-4ad5-8f07-c265ff2e07bd
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 2ed5c6c1bec961d4f0df83687cd19eecba6ed179
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: 16fe6539a24f271f5c1e8042b1be9933a77f1118b27730d510026de1852d7938
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "103855992"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118324448"
 ---
-# <a name="how-to-walk-the-ui-automation-tree"></a>Vorgehensweise beim Durchlaufen der Benutzeroberflächenautomatisierungs-Struktur
+# <a name="how-to-walk-the-ui-automation-tree"></a>Exemplarische Vorgehensweise für die Benutzeroberflächenautomatisierung-Struktur
 
-Dieses Thema enthält Beispielcode, der zeigt, wie die [**iuiautomationtreewalker**](/windows/desktop/api/UIAutomationClient/nn-uiautomationclient-iuiautomationtreewalker) -Schnittstelle verwendet wird, um die Elemente in der Microsoft UI Automation-Struktur zu durchlaufen und zu untersuchen. In diesem Thema werden die folgenden Themen behandelt:
+Dieses Thema enthält Beispielcode, der zeigt, wie die [**IUIAutomationTreeWalker-Schnittstelle**](/windows/desktop/api/UIAutomationClient/nn-uiautomationclient-iuiautomationtreewalker) verwendet wird, um die Elemente in der Microsoft Benutzeroberflächenautomatisierung-Struktur zu durchlaufen und zu untersuchen. Es werden die folgenden Themen behandelt:
 
--   [Durchlaufen der nachfolgenden Elemente eines Elements](#walking-through-descendants-of-an-element)
--   [Durchlaufen von Vorgänger Elementen](#walking-through-ancestor-elements)
+-   [Durchlaufen von Nachfolgern eines Elements](#walking-through-descendants-of-an-element)
+-   [Durchlaufen von Vorgängerelementen](#walking-through-ancestor-elements)
 -   [Zugehörige Themen](#related-topics)
 
-## <a name="walking-through-descendants-of-an-element"></a>Durchlaufen der nachfolgenden Elemente eines Elements
+## <a name="walking-through-descendants-of-an-element"></a>Durchlaufen von Nachfolgern eines Elements
 
-Das folgende Codebeispiel ist eine rekursive Funktion, die alle Nachfolger eines UI-Elements durchläuft und deren Steuerelement Typen in einer hierarchischen Liste anzeigt.
+Das folgende Codebeispiel ist eine rekursive Funktion, die alle Nachfolgerelemente eines UI-Elements durchläuft und deren Steuerelementtypen in einer hierarchischen Liste anzeigt.
 
 
 ```C++
@@ -74,9 +74,9 @@ cleanup:
 
 
 
-## <a name="walking-through-ancestor-elements"></a>Durchlaufen von Vorgänger Elementen
+## <a name="walking-through-ancestor-elements"></a>Durchlaufen von Vorgängerelementen
 
-Das folgende Codebeispiel stellt eine Funktion dar, die die übergeordneten Elemente eines-Elements durchläuft, um das übergeordnete Element zu identifizieren. Dies ist hilfreich, wenn Sie das übergeordnete Fenster eines Steuer Elements identifizieren müssen. Die-Funktion gibt **null** für Elemente der obersten Ebene zurück. Das heißt, Elemente, deren übergeordnetes Element der Desktop ist.
+Das folgende Codebeispiel ist eine Funktion, die die Vorgänger eines Elements durchläuft, um das übergeordnete Element zu identifizieren. Dies ist nützlich, wenn Sie das übergeordnete Fenster eines Steuerelements identifizieren müssen. Die Funktion gibt **NULL** für Elemente der obersten Ebene zurück. Das heißt, Elemente, deren übergeordnetes Element der Desktop ist.
 
 
 ```C++
@@ -153,18 +153,18 @@ cleanup:
 
 <dl> <dt>
 
-**Licher**
+**Konzeptionellen**
 </dt> <dt>
 
 [Abrufen von Benutzeroberflächenautomatisierungs-Elementen](uiauto-obtainingelements.md)
 </dt> <dt>
 
-[Themen zur Vorgehensweise für Benutzeroberflächenautomatisierungs-Clients](uiauto-howto-topics-for-uiautomation-clients.md)
+[Anleitungsthemen für Benutzeroberflächenautomatisierung Clients](uiauto-howto-topics-for-uiautomation-clients.md)
 </dt> </dl>
 
- 
+ 
 
- 
+ 
 
 
 
