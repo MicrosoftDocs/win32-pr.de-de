@@ -1,23 +1,23 @@
 ---
-title: UGE (SM4-ASM)
-description: Die Komponenten Weise Vektor-Ganzzahl ohne Vorzeichen, größer-als-oder-gleich-Vergleich.
+title: uge (sm4 - asm)
+description: Komponentenweiser Vektor, ganzzahliger Ganzzahlvergleich ohne Vorzeichen, größer als oder gleich.
 ms.assetid: CA8E19EC-619F-4C19-B6FD-91650B5DAF9F
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: f4aecd9e39aa94c69acefff0f6a0fdf843cec5d8
-ms.sourcegitcommit: fe03c5d92ca6a0d66a114b2303e99c0a19241ffb
+ms.openlocfilehash: a7145e011b9d08bc64ab6b2252afbfb7506a115f5a0f30c3d02db450371c569c
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/20/2019
-ms.locfileid: "103857767"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118505078"
 ---
-# <a name="uge-sm4---asm"></a>UGE (SM4-ASM)
+# <a name="uge-sm4---asm"></a>uge (sm4 - asm)
 
-Die Komponenten Weise Vektor-Ganzzahl ohne Vorzeichen, größer-als-oder-gleich-Vergleich.
+Komponentenweiser Vektor, ganzzahliger Ganzzahlvergleich ohne Vorzeichen, größer als oder gleich.
 
 
 
-| UGE dest \[ . mask \] , src0 \[ . Swizzle \] , Quelle1 \[ . Swizzle\] |
+| uge dest \[ .mask \] , src0 \[ .swizzle \] , src1 \[ .swizzle\] |
 |-------------------------------------------------------|
 
 
@@ -28,21 +28,21 @@ Die Komponenten Weise Vektor-Ganzzahl ohne Vorzeichen, größer-als-oder-gleich-
 
 | Element                                                            | BESCHREIBUNG                                                   |
 |-----------------------------------------------------------------|---------------------------------------------------------------|
-| <span id="dest"></span><span id="DEST"></span>*dest*<br/> | \[in \] der Adresse des Vorgangs Ergebnisses.<br/> |
-| <span id="src0"></span><span id="SRC0"></span>*src0*<br/> | \[in \] den Komponenten, die mit *Quelle1* verglichen werden sollen.<br/>        |
-| <span id="src1"></span><span id="SRC1"></span>*Quelle1*<br/> | \[in \] den Komponenten, die mit *src0* verglichen werden sollen.<br/>        |
+| <span id="dest"></span><span id="DEST"></span>*Dest*<br/> | \[in \] Die Adresse des Ergebnisses des Vorgangs.<br/> |
+| <span id="src0"></span><span id="SRC0"></span>*src0*<br/> | \[in \] Die Komponenten, die mit *src1 verglichen werden.*<br/>        |
+| <span id="src1"></span><span id="SRC1"></span>*src1*<br/> | \[in \] Die Komponenten, die mit *src0 verglichen werden.*<br/>        |
 
 
 
  
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Diese Anweisung führt den Vergleich der Ganzzahl ohne Vorzeichen (*src0*  >=  *Quelle1*) für jede Komponente aus und schreibt das Ergebnis in *dest*.
+Diese Anweisung führt den Ganzzahlvergleich ohne Vorzeichen (*src0*  >=  *src1*) für jede Komponente aus und schreibt das Ergebnis in *dest.*
 
-Wenn der Vergleich true ist, wird 0xFFFFFFFF für diese Komponente zurückgegeben. Andernfalls wird 0x0000000 zurückgegeben.
+Wenn der Vergleich true ist, wird 0xFFFFFFFF Komponente zurückgegeben. Andernfalls 0x0000000 zurückgegeben.
 
-Diese Anweisung gilt für die folgenden Shader-Phasen:
+Diese Anweisung gilt für die folgenden Shaderstufen:
 
 
 
@@ -54,20 +54,20 @@ Diese Anweisung gilt für die folgenden Shader-Phasen:
 
  
 
-## <a name="minimum-shader-model"></a>Minimaler Shader-Modell
+## <a name="minimum-shader-model"></a>Minimales Shadermodell
 
-Diese Funktion wird in den folgenden shadermodellen unterstützt.
+Diese Funktion wird in den folgenden Shadermodellen unterstützt.
 
 
 
 | Shadermodell                                              | Unterstützt |
 |-----------------------------------------------------------|-----------|
-| [Shader-Modell 5](d3d11-graphics-reference-sm5.md)        | ja       |
-| [Shadermodell 4,1](dx-graphics-hlsl-sm4.md)              | ja       |
+| [Shadermodell 5](d3d11-graphics-reference-sm5.md)        | ja       |
+| [Shadermodell 4.1](dx-graphics-hlsl-sm4.md)              | ja       |
 | [Shadermodell 4](dx-graphics-hlsl-sm4.md)                | ja       |
-| [Shader-Modell 3 (DirectX HLSL)](dx-graphics-hlsl-sm3.md) | nein        |
-| [Shader-Modell 2 (DirectX HLSL)](dx-graphics-hlsl-sm2.md) | nein        |
-| [Shader-Modell 1 (DirectX HLSL)](dx-graphics-hlsl-sm1.md) | nein        |
+| [Shadermodell 3 (DirectX HLSL)](dx-graphics-hlsl-sm3.md) | nein        |
+| [Shadermodell 2 (DirectX HLSL)](dx-graphics-hlsl-sm2.md) | nein        |
+| [Shadermodell 1 (DirectX HLSL)](dx-graphics-hlsl-sm1.md) | nein        |
 
 
 

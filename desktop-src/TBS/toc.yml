@@ -1,25 +1,25 @@
 - name: TPM-Basisdienste
   href: tpm-base-services-portal.md
   items:
-    - name: Informationen zu TSB
+    - name: Informationen zu TBS
       href: about-tbs.md
-    - name: Verwenden von TSB
+    - name: Verwenden von TBS
       href: using-tbs.md
       items:
         - name: Ressourcenvirtualisierung
           href: resource-virtualization.md
-        - name: Befehls Planung
+        - name: Befehlsplanung
           href: command-scheduling.md
         - name: Energieverwaltung
           href: power-management.md
-        - name: Befehls Blockierung
+        - name: Befehlsblockierung
           href: command-blocking.md
-    - name: TSB-Referenz
+    - name: TBS-Referenz
       href: tbs-reference.md
       items:
-        - name: TSB-Datentypen
+        - name: TBS-Datentypen
           href: tbs-data-types.md
-        - name: TSB-Funktionen
+        - name: TBS-Funktionen
           href: tbs-functions.md
           items:
             - name: Tbsi_Context_Create
@@ -46,9 +46,9 @@
               href: /windows/desktop/api/Tbs/nf-tbs-tbsip_context_close
             - name: Tbsip_Submit_Command
               href: /windows/desktop/api/Tbs/nf-tbs-tbsip_submit_command
-        - name: TSB-Rückgabe Codes
+        - name: TBS-Rückgabecodes
           href: tbs-return-codes.md
-        - name: TSB-Strukturen
+        - name: TBS-Strukturen
           href: tbs-structures.md
           items:
             - name: TBS_CONTEXT_PARAMS

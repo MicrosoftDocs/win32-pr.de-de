@@ -5,30 +5,30 @@ ms.assetid: 84c00072-74d9-4629-980c-7308f9b641c0
 title: T (Volumeschattenkopie-Dienst)
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 0fae6d3f19d8501efc8c60332a029f4682a2e763
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: cb1511a4b696d9aaeb70c9186cd2d5c79f1b8f23c107f985237d18aa109bfda9
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104526273"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117751196"
 ---
 # <a name="t-volume-shadow-copy-service"></a>T (Volumeschattenkopie-Dienst)
 
-[a](vssgloss-a.md) [B](vssgloss-b.md) [C](vssgloss-c.md) [D](vssgloss-d.md) [E](vssgloss-e.md) [F](vssgloss-f.md) [G](vssgloss-g.md) [H](vssgloss-h.md) [I](vssgloss-i.md) J K [L](vssgloss-l.md) M [N](vssgloss-n.md) [O](vssgloss-o.md) [P](vssgloss-p.md) Q [R](vssgloss-r.md) [S](vssgloss-s.md) T U [V](vssgloss-v.md) [W](vssgloss-w.md) X Y Z
+[A](vssgloss-a.md) [B](vssgloss-b.md) [C](vssgloss-c.md) [D](vssgloss-d.md) [E](vssgloss-e.md) [F](vssgloss-f.md) [G](vssgloss-g.md) [H](vssgloss-h.md) [I](vssgloss-i.md) J K [L](vssgloss-l.md) M [N](vssgloss-n.md) [O](vssgloss-o.md) [P](vssgloss-p.md) Q [R](vssgloss-r.md) [S](vssgloss-s.md) T U [V](vssgloss-v.md) [W](vssgloss-w.md) X Y Z
 
 <dl> <dt>
 
-<span id="base.vssgloss_thaw_event"></span><span id="BASE.VSSGLOSS_THAW_EVENT"></span>**Ereignis "Thaw"**
+<span id="base.vssgloss_thaw_event"></span><span id="BASE.VSSGLOSS_THAW_EVENT"></span>**Thaw-Ereignis**
 </dt> <dd>
 
-Ein von VSS ausgestelltes VSS-Ereignis, das angibt, dass eine schattenkopiesperrung abgeschlossen wurde. Sie wird verwendet, um die Vorbereitung eines Writers auf eine Sperre zu entfernen. Siehe auch [*Einfrieren*](vssgloss-f.md), [*Schatten Kopie*](vssgloss-s.md).
+Ein von VSS ausgegebenes VSS-Ereignis, das angibt, dass ein Einfrieren der Schattenkopie abgeschlossen wurde. Es wird verwendet, um die Vorbereitungen eines Writers für ein Einfrieren zu entfernen. Siehe auch [*Einfrieren*](vssgloss-f.md)von , [*Schattenkopie*](vssgloss-s.md).
 
 </dd> <dt>
 
-<span id="base.vssgloss_transportable_shadow_copy"></span><span id="BASE.VSSGLOSS_TRANSPORTABLE_SHADOW_COPY"></span>**austauschen-Schatten Kopie**
+<span id="base.vssgloss_transportable_shadow_copy"></span><span id="BASE.VSSGLOSS_TRANSPORTABLE_SHADOW_COPY"></span>**Transportable shadow copy (Transportable Shadow Copy)**
 </dt> <dd>
 
-Eine Schatten Kopie, die von einem System zu einem anderen verschoben werden kann. In der Regel wird eine austauschen-Schatten Kopie nicht lokal angezeigt. Siehe auch Anzeigen einer [*Schatten Kopie*](vssgloss-s.md).
+Eine Schattenkopie, die von einem System in ein anderes verschoben werden kann. In der Regel wird eine transportierbare Schattenkopie nicht lokal eingedrungen. Siehe auch [*surfaced shadow copy*](vssgloss-s.md).
 
 </dd> </dl>
 

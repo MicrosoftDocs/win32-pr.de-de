@@ -1,31 +1,31 @@
 ---
-title: Bezeichnen von Owner-Drawn Steuerelementen
-description: Anwendungsentwickler sollten für alle Steuerelemente, die vom Besitzer gezeichnet werden, eine Bezeichnung definieren, die auch als Beschriftungs Text bezeichnet wird, auch wenn die Bezeichnung nicht auf dem Bildschirm sichtbar ist.
+title: Beschriften von Owner-Drawn-Steuerelementen
+description: Anwendungsentwickler sollten eine Bezeichnung definieren, die auch als Beschriftungstext bezeichnet wird, für alle vom Besitzer gezeichneten Steuerelemente, auch wenn die Bezeichnung auf dem Bildschirm nicht sichtbar ist.
 ms.assetid: 7150570d-d593-4d95-b1c9-1445bbf5de77
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 69d219e35924544af0879a3cf8f41dd7bcdac50b
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: 7b6f106ce8bdc1e568834238f2ab3b7b0395ce3c97dde49bb0cc4ca404a39023
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "106341653"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118325417"
 ---
-# <a name="labeling-owner-drawn-controls"></a>Bezeichnen von Owner-Drawn Steuerelementen
+# <a name="labeling-owner-drawn-controls"></a>Beschriften von Owner-Drawn-Steuerelementen
 
-Anwendungsentwickler sollten für alle Steuerelemente, die vom Besitzer gezeichnet werden, eine Bezeichnung definieren, die auch als Beschriftungs Text bezeichnet wird, auch wenn die Bezeichnung nicht auf dem Bildschirm sichtbar ist. Die Bezeichnung muss direkt vor dem Steuerelement stehen, das Sie kennzeichnen, und muss sich im nächsten Element in der Aktivier Reihenfolge befinden.
+Anwendungsentwickler sollten eine Bezeichnung definieren, die auch als Beschriftungstext bezeichnet wird, für alle vom Besitzer gezeichneten Steuerelemente, auch wenn die Bezeichnung auf dem Bildschirm nicht sichtbar ist. Die Bezeichnung muss unmittelbar vor dem Steuerelement stehen, das beschriftet wird, und muss sich im nächsten Element in der Reihenfolge der Registerkarten befindet.
 
-Wenn Sie z. b. eine Bezeichnung definieren, wenn Sie eine von einem Besitzer gezeichnete Schaltfläche erstellen, in der anstelle des normalen Beschriftungs Texts eine Grafik angezeigt wird, erhalten Client Anwendungen die Bezeichnung und verwenden Sie, um das Steuerelement zu identifizieren.
+Wenn Sie beispielsweise eine Bezeichnung definieren, wenn Sie eine vom Besitzer gezeichnete Schaltfläche erstellen, in der anstelle des normalen Beschriftungstexts eine Grafik angezeigt wird, erhalten Clientanwendungen die Bezeichnung und verwenden sie, um das Steuerelement zu identifizieren.
 
 ## <a name="in-this-section"></a>In diesem Abschnitt
 
--   [Verfügbar machen von Owner-Drawn Menü Elementen](exposing-owner-drawn-menu-items.md)
--   [Verfügbar machen von Owner-Drawn Listenfeld Elementen](exposing-owner-drawn-list-box-items.md)
--   [Verfügbar machen von Owner-Drawn Kombinations Feld Elementen](exposing-owner-drawn-combo-box-items.md)
+-   [Verfügbarmachen von Owner-Drawn Menüelementen](exposing-owner-drawn-menu-items.md)
+-   [Verfügbarmachen Owner-Drawn Listenfeldelemente](exposing-owner-drawn-list-box-items.md)
+-   [Verfügbarmachen Owner-Drawn Kombinationsfeldelemente](exposing-owner-drawn-combo-box-items.md)
 
- 
+ 
 
- 
+ 
 
 
 

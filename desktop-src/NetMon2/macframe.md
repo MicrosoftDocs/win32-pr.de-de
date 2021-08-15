@@ -1,7 +1,7 @@
 ---
-description: Die macframe-Struktur ist eine Vereinigung der gängigsten anfänglichen Protokolle.
+description: Die MACFRAME-Struktur ist eine Vereinigung der gängigsten Anfangsprotokolle.
 ms.assetid: ec7e3a54-a47f-4390-a137-9574c63c9a11
-title: Macframe-Union (Netmon. h)
+title: MACFRAME union (Netmon.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,16 +13,16 @@ api_type:
 - HeaderDef
 api_location:
 - Netmon.h
-ms.openlocfilehash: a7901daf467a63586543c52ca8a214d5d0094982
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: dcff7294d2800e797b43b3a05bd25c35418c6fb466c95130b97be73f25040d3a
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106357368"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118364708"
 ---
-# <a name="macframe-union"></a>Macframe-Union
+# <a name="macframe-union"></a>MACFRAME-Vereinigung
 
-Die **macframe** -Struktur ist eine Vereinigung der gängigsten anfänglichen Protokolle.
+Die **MACFRAME-Struktur** ist eine Vereinigung der gängigsten Anfangsprotokolle.
 
 ## <a name="syntax"></a>Syntax
 
@@ -42,7 +42,7 @@ typedef union {
 
 <dl> <dt>
 
-**Machereader**
+**MacHeader**
 </dt> <dd>
 
 Generischer Zeiger auf einen Frame.
@@ -63,16 +63,16 @@ Tokenringzeiger auf einen Frame.
 
 </dd> <dt>
 
-**FDDI**
+**Fddi**
 </dt> <dd>
 
 FDDI-Zeiger auf einen Frame.
 
 </dd> </dl>
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Diese Struktur wird am häufigsten als Überlagerung verwendet. Um die Eigenschaften des ersten Protokolls zugänglich zu machen, wandeln Sie den Frame in denselben Typ wie das Protokoll um.
+Diese Struktur wird am häufigsten als Überlagerung verwendet. Um die Eigenschaften des ersten Protokolls zugänglich zu machen, umwandlungen Sie den Frame in den gleichen Typ wie das Protokoll.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -82,7 +82,7 @@ Diese Struktur wird am häufigsten als Überlagerung verwendet. Um die Eigenscha
 |-------------------------------------|-------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional \[nur Desktop-Apps\]<br/>                          |
 | Unterstützte Mindestversion (Server)<br/> | Windows 2000 Server \[nur Desktop-Apps\]<br/>                                |
-| Header<br/>                   | <dl> <dt>Netmon. h</dt> </dl> |
+| Header<br/>                   | <dl> <dt>Netmon.h</dt> </dl> |
 
 
 

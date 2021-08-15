@@ -1,18 +1,18 @@
 ---
-title: IMsRdpClientAdvancedSettings5 audioredirectionmode-Eigenschaft
-description: Legt den audioumleitungs Modus und andere audioumleitungs Optionen fest und ruft ihn ab.
+title: IMsRdpClientAdvancedSettings5 AudioRedirectionMode (Eigenschaft)
+description: Legt den Audioumleitungsmodus und verschiedene Audioumleitungsoptionen fest und ruft sie ab.
 ms.assetid: c0f5762b-00fd-40bb-ac97-3351b999f38d
 ms.tgt_platform: multiple
 keywords:
-- Audioredirectionmode-Eigenschaft Remotedesktopdienste
-- Audioredirectionmode-Eigenschaft Remotedesktopdienste, IMsRdpClientAdvancedSettings5-Schnittstelle
-- IMsRdpClientAdvancedSettings5 Interface Remotedesktopdienste, audioredirectionmode-Eigenschaft
-- Audioredirectionmode-Eigenschaft Remotedesktopdienste, IMsRdpClientAdvancedSettings6-Schnittstelle
-- IMsRdpClientAdvancedSettings6 Interface Remotedesktopdienste, audioredirectionmode-Eigenschaft
-- Audioredirectionmode-Eigenschaft Remotedesktopdienste, IMsRdpClientAdvancedSettings7-Schnittstelle
-- IMsRdpClientAdvancedSettings7 Interface Remotedesktopdienste, audioredirectionmode-Eigenschaft
-- Audioredirectionmode-Eigenschaft Remotedesktopdienste, IMsRdpClientAdvancedSettings8-Schnittstelle
-- IMsRdpClientAdvancedSettings8 Interface Remotedesktopdienste, audioredirectionmode-Eigenschaft
+- AudioRedirectionMode-Remotedesktopdienste
+- AudioRedirectionMode-Eigenschaft Remotedesktopdienste , IMsRdpClientAdvancedSettings5-Schnittstelle
+- IMsRdpClientAdvancedSettings5-Schnittstelle Remotedesktopdienste , AudioRedirectionMode -Eigenschaft
+- AudioRedirectionMode-Eigenschaft Remotedesktopdienste , IMsRdpClientAdvancedSettings6-Schnittstelle
+- IMsRdpClientAdvancedSettings6-Schnittstelle Remotedesktopdienste , AudioRedirectionMode -Eigenschaft
+- AudioRedirectionMode-Eigenschaft Remotedesktopdienste , IMsRdpClientAdvancedSettings7-Schnittstelle
+- IMsRdpClientAdvancedSettings7-Schnittstelle Remotedesktopdienste , AudioRedirectionMode (Eigenschaft)
+- AudioRedirectionMode-Eigenschaft Remotedesktopdienste , IMsRdpClientAdvancedSettings8-Schnittstelle
+- IMsRdpClientAdvancedSettings8-Schnittstelle Remotedesktopdienste , AudioRedirectionMode -Eigenschaft
 topic_type:
 - apiref
 api_name:
@@ -34,16 +34,16 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: b40be8b8e63f210d060c0f585c9fe31328ac6ed6
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: df4216b4babf74e5e5f15994c0d8387e0d5087c4f69e4d0245b59cb5765dfe88
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104340527"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118352512"
 ---
-# <a name="imsrdpclientadvancedsettings5audioredirectionmode-property"></a>IMsRdpClientAdvancedSettings5:: audioredirectionmode-Eigenschaft
+# <a name="imsrdpclientadvancedsettings5audioredirectionmode-property"></a>IMsRdpClientAdvancedSettings5::AudioRedirectionMode (Eigenschaft)
 
-Legt den audioumleitungs Modus und andere audioumleitungs Optionen fest und ruft ihn ab.
+Legt den Audioumleitungsmodus und verschiedene Audioumleitungsoptionen fest und ruft sie ab.
 
 Dies ist eine Eigenschaft mit Lese- und Schreibzugriff.
 
@@ -64,27 +64,27 @@ HRESULT get_AudioRedirectionMode(
 
 ## <a name="property-value"></a>Eigenschaftswert
 
-Legt verschiedene Werte für den audioumleitungs Modus fest. Dieser Parameter verfügt über die folgenden möglichen Werte.
+Legt unterschiedliche Werte für den Audioumleitungsmodus fest. Dieser Parameter verfügt über die folgenden möglichen Werte.
 
 <dt>
 
 <span id="AUDIO_MODE_REDIRECT___0"></span><span id="audio_mode_redirect___0"></span>
 
-**Audiodatei \_ \_Modusumleitung 0** (die Audioumleitung ist aktiviert, und die Option für die Umleitung lautet "an diesen Computer übertragen". Dies ist der Standardmodus.)
+**AUDIO \_ MODE \_ REDIRECT 0** (Audioumleitung ist aktiviert, und die Option für die Umleitung ist "Bring to this computer". Dies ist der Standardmodus.)
 
 
 </dt> <dd></dd> <dt>
 
 <span id="AUDIO_MODE_PLAY_ON_SERVER_1"></span><span id="audio_mode_play_on_server_1"></span>
 
-**Audiodatei \_ Der Modus wird \_ \_ auf \_ Server 1 abgespielt** (die Audioumleitung ist aktiviert, und die Option ist "auf Remote Computer verlassen". Die Option "Remote Computer verlassen" wird nur unterstützt, wenn eine Remote Verbindung mit einem Host Computer hergestellt wird, auf dem Windows Vista ausgeführt wird. Wenn die Verbindung mit einem Host Computer hergestellt wird, auf dem Windows Server 2008 ausgeführt wird, wird die Option "auf Remote Computer verlassen" in "nicht wiedergeben" geändert.)
+**AUDIO \_ MODE \_ PLAY ON SERVER \_ \_ 1** (Audioumleitung ist aktiviert, und die Option "Auf Remotecomputer verlassen" ist aktiviert. Die Option "Auf Remotecomputer verlassen" wird nur unterstützt, wenn eine Remoteverbindung mit einem Hostcomputer mit Windows Vista besteht. Wenn die Verbindung mit einem Hostcomputer hergestellt wird, auf dem Windows Server 2008 ausgeführt wird, wird die Option "Auf Remotecomputer verlassen" in "Do not play" geändert.)
 
 
 </dt> <dd></dd> <dt>
 
 <span id="AUDIO_MODE_NONE_2"></span><span id="audio_mode_none_2"></span>
 
-**Audiodatei \_ Modus \_ None 2** (Audioumleitung ist aktiviert, und der Modus ist nicht wiedergeben).
+**AUDIO \_ MODE \_ NONE 2** (Audioumleitung ist aktiviert, und der Modus ist "Do not play".)
 
 
 </dt> <dd></dd> </dl>
@@ -103,7 +103,7 @@ Legt verschiedene Werte für den audioumleitungs Modus fest. Dieser Parameter ve
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 

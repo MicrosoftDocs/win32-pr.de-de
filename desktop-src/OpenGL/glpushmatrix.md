@@ -1,6 +1,6 @@
 ---
-title: glPushMatrix-Funktion (GL. h)
-description: Die Funktionen "glPushMatrix" und "glPopMatrix" schieben den aktuellen Matrix Stapel per Push und Pop. | glPushMatrix-Funktion (GL. h)
+title: glPushMatrix-Funktion (Gl.h)
+description: Die GlPushMatrix- und glPopMatrix-Funktionen pushen und poppen den aktuellen Matrixstapel. | glPushMatrix-Funktion (Gl.h)
 ms.assetid: 97d8e644-50bb-4130-b6b7-d87df4468e73
 keywords:
 - glPushMatrix-Funktion OpenGL
@@ -14,16 +14,16 @@ api_type:
 - DllExport
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: ee62b03e221f44db829a7167d642a766af8e129c
-ms.sourcegitcommit: 92e74c99f8f4d097676959d0c317f533c2400a80
+ms.openlocfilehash: a0d6af41bb02c82a28b667a2b5ad62d942c036c7f744a68fa9bb79188e26ae8d
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/09/2021
-ms.locfileid: "103961437"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117795135"
 ---
 # <a name="glpushmatrix-function"></a>glPushMatrix-Funktion
 
-Die Funktionen " **glPushMatrix** " und " [**glPopMatrix**](glpopmatrix.md) " schieben den aktuellen Matrix Stapel per Push und Pop.
+Die **GlPushMatrix-** und [**glPopMatrix-Funktionen**](glpopmatrix.md) pushen und poppen den aktuellen Matrixstapel.
 
 ## <a name="syntax"></a>Syntax
 
@@ -44,46 +44,46 @@ Diese Funktion gibt keinen Wert zurück.
 
 ## <a name="error-codes"></a>Fehlercodes
 
-Es ist ein Fehler, einen vollständigen Matrix Stapel per Push zu übersetzen oder einen Matrix Stapel zu popzen, der nur eine einzelne Matrix enthält. In beiden Fällen wird das Fehlerflag festgelegt, und es wird keine andere Änderung am OpenGL-Zustand vorgenommen.
+Es ist ein Fehler, einen vollständigen Matrixstapel zu pushen oder einen Matrixstapel zu popen, der nur eine einzelne Matrix enthält. In beiden Fällen wird das Fehlerflag festgelegt, und es wird keine andere Änderung am OpenGL-Zustand vorgenommen.
 
-Die folgenden Fehlercodes können von der Funktion " [**glgeterror**](glgeterror.md) " abgerufen werden.
+Die folgenden Fehlercodes können von der [**glGetError-Funktion abgerufen**](glgeterror.md) werden.
 
 
 
 | Name                                                                                                  | Bedeutung                                                                                                                               |
 |-------------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------|
-| <dl> <dt>**GL- \_ Stapel \_ Überlauf**</dt> </dl>    | Die Funktion wurde aufgerufen, während der aktuelle Matrix Stapel voll war.<br/>                                                           |
-| <dl> <dt>**\_ungültiger \_ Vorgang**</dt> </dl> | Die Funktion wurde zwischen einem Aufruf von [**glBegin**](glbegin.md) und dem entsprechenden Aufruf von [**glEnd**](glend.md)aufgerufen.<br/> |
+| <dl> <dt>**GL \_ STACK \_ OVERFLOW**</dt> </dl>    | Die Funktion wurde aufgerufen, während der aktuelle Matrixstapel voll war.<br/>                                                           |
+| <dl> <dt>**UNGÜLTIGER \_ \_ GL-VORGANG**</dt> </dl> | Die Funktion wurde zwischen einem Aufruf von [**glBegin**](glbegin.md) und dem entsprechenden Aufruf von [**glEnd aufgerufen.**](glend.md)<br/> |
 
 
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Für jeden Matrix Modus gibt es einen Stapel von Matrizen. Im GL- \_ Modelview-Modus ist die Stapel Tiefe mindestens 32. In den beiden anderen Modi, GL \_ Projection und GL \_ Texture, ist die Tiefe mindestens 2. Die aktuelle Matrix in einem beliebigen Modus ist die Matrix am oberen Rand des Stapels für diesen Modus.
+Für jeden Matrixmodus gibt es einen Stapel von Matrizen. Im GL \_ MODELVIEW-Modus beträgt die Stapeltiefe mindestens 32. In den anderen beiden Modi GL PROJECTION und GL TEXTURE beträgt die Tiefe \_ mindestens \_ 2. Die aktuelle Matrix in jedem Modus ist die Matrix am Anfang des Stapels für diesen Modus.
 
-Die **glPushMatrix** -Funktion schiebt den aktuellen Matrix Stapel um eins nach unten, wobei die aktuelle Matrix duplizieren wird. Das heißt, nach einem **glPushMatrix** -Befehl ist die Matrix am oberen Rand des Stapels mit der darunter liegenden Matrix identisch. Die Funktion " **glPopMatrix** " holt den aktuellen Matrix Stapel und ersetzt dabei die aktuelle Matrix durch die im Stapel unter dem Stapel. Anfänglich enthält jeder Stapel eine Matrix, eine Identitätsmatrix.
+Die **glPushMatrix-Funktion** pusht den aktuellen Matrixstapel um eins nach unten und dupliziert die aktuelle Matrix. Das heißt, nach einem **glPushMatrix-Aufruf** ist die Matrix oben im Stapel mit der darunter stehenden Matrix identisch. Die **glPopMatrix-Funktion** popt den aktuellen Matrixstapel und ersetzt die aktuelle Matrix durch die untere Matrix auf dem Stapel. Anfänglich enthält jeder der Stapel eine Matrix, eine Identitätsmatrix.
 
-Die folgenden Funktionen rufen Informationen im Zusammenhang mit **glPushMatrix** und **glPopMatrix** ab:
+Die folgenden Funktionen rufen Informationen im Zusammenhang mit **glPushMatrix** und **glPopMatrix ab:**
 
-[**glget**](glgetbooleanv--glgetdoublev--glgetfloatv--glgetintegerv.md) mit dem-Argument des GL- \_ Matrix \_ Modus
+[**glGet**](glgetbooleanv--glgetdoublev--glgetfloatv--glgetintegerv.md) mit Argument GL \_ MATRIX \_ MODE
 
-**glget** mit dem Argument GL \_ Modelview \_ Matrix
+**glGet** mit Argument GL \_ MODELVIEW \_ MATRIX
 
-**glget** mit dem Argument GL- \_ Projektions \_ Matrix
+**glGet** mit Argument GL \_ PROJECTION \_ MATRIX
 
-**glget** mit Argument GL- \_ Textur \_ Matrix
+**glGet** mit Argument GL \_ TEXTURE \_ MATRIX
 
-**glget** mit Argument GL \_ Modelview \_ Stack- \_ Tiefe
+**glGet** mit Argument GL \_ MODELVIEW \_ STACK \_ DEPTH
 
-**glget** mit der \_ \_ Stapel \_ Tiefe des Arguments GL
+**glGet mit** Argument GL \_ PROJECTION STACK \_ \_ DEPTH
 
-**glget** mit Argument GL- \_ Textur \_ Stapel \_ Tiefe
+**glGet mit** Argument GL \_ TEXTURE STACK \_ \_ DEPTH
 
-**glget** mit dem Argument GL \_ Max \_ Model View \_ Stack- \_ Tiefe
+**glGet** mit argument GL \_ MAX \_ MODELVIEW \_ STACK \_ DEPTH
 
-**glget** mit dem Argument GL \_ Max \_ Projection Stack- \_ \_ Tiefe
+**glGet mit** argument GL \_ MAX PROJECTION STACK \_ \_ \_ DEPTH
 
-**glget** mit der \_ maximalen \_ Textur \_ Stapel \_ Tiefe des Arguments GL
+**glGet** mit argument GL \_ MAX TEXTURE STACK \_ \_ \_ DEPTH
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -93,13 +93,13 @@ Die folgenden Funktionen rufen Informationen im Zusammenhang mit **glPushMatrix*
 |-------------------------------------|-----------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional \[nur Desktop-Apps\]<br/>                              |
 | Unterstützte Mindestversion (Server)<br/> | Windows 2000 Server \[nur Desktop-Apps\]<br/>                                    |
-| Header<br/>                   | <dl> <dt>GL. h</dt> </dl>         |
-| Bibliothek<br/>                  | <dl> <dt>Opengl32. lib</dt> </dl> |
+| Header<br/>                   | <dl> <dt>Gl.h</dt> </dl>         |
+| Bibliothek<br/>                  | <dl> <dt>Opengl32.lib</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>Opengl32.dll</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
@@ -109,34 +109,34 @@ Die folgenden Funktionen rufen Informationen im Zusammenhang mit **glPushMatrix*
 [**glEnd**](glend.md)
 </dt> <dt>
 
-[**glfrustum**](glfrustum.md)
+[**glFrustum**](glfrustum.md)
 </dt> <dt>
 
 [**glLoadIdentity**](glloadidentity.md)
 </dt> <dt>
 
-[**glloadmatrix**](glloadmatrix.md)
+[**glLoadMatrix**](glloadmatrix.md)
 </dt> <dt>
 
 [**glMatrixMode**](glmatrixmode.md)
 </dt> <dt>
 
-[**glmultmatrix**](glmultmatrix.md)
+[**glMultMatrix**](glmultmatrix.md)
 </dt> <dt>
 
-[**glortho**](glortho.md)
+[**glOrtho**](glortho.md)
 </dt> <dt>
 
 [**glPopMatrix**](glpopmatrix.md)
 </dt> <dt>
 
-[**glrotation**](glrotate.md)
+[**glRotate**](glrotate.md)
 </dt> <dt>
 
-[**glscale**](glscale.md)
+[**glScale**](glscale.md)
 </dt> <dt>
 
-[**gltranslate**](gltranslate.md)
+[**glTranslate**](gltranslate.md)
 </dt> <dt>
 
 [**glViewport**](glviewport.md)

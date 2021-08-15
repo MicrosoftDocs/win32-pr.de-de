@@ -1,6 +1,6 @@
 ---
 title: Verbindungseigenschaften
-description: Erfahren Sie mehr über Verbindungseigenschaften. Sehen Sie sich die XML-Beispieleigenschaften für verschiedene Netzwerkkonfigurationen an, und zeigen Sie zusätzliche verfügbare Ressourcen an.
+description: Erfahren Sie mehr über Verbindungseigenschaften. Weitere verfügbare Ressourcen finden Sie unter XML-Beispieleigenschaften für verschiedene Netzwerkkonfigurationen.
 ms.assetid: 95c8f5d5-75c5-48c7-b6af-e9908df56c71
 ms.topic: article
 ms.date: 05/31/2018
@@ -17,9 +17,9 @@ In den folgenden Themen werden XML-Beispieleigenschaften für verschiedene Netzw
 
 Weitere Schemabeispiele finden Sie unter [EAP-Schema.](https://go.microsoft.com/fwlink/p/?linkid=83914)
 
--   [EAP MS-CHAPv2-Verbindungseigenschaften](eap-ms-chapv2-connection-properties.md)
+-   [EAPMS-CHAPv2 Verbindungseigenschaften](eap-ms-chapv2-connection-properties.md)
 -   [EAP-TLS-Verbindungseigenschaften](eap-tls-connection-properties.md)
--   [PEAP MS-CHAPv2-Verbindungseigenschaften](peap-ms-chapv2-connection-properties.md)
+-   [PEAPMS-CHAPv2 Verbindungseigenschaften](peap-ms-chapv2-connection-properties.md)
 -   [PEAP-TLS-Verbindungseigenschaften](peap-tls-connection-properties.md)
 -   [SDK-EAP-Verbindungseigenschaften](sdk-connection-properties.md)
 

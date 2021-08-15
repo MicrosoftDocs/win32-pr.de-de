@@ -1,57 +1,57 @@
 ---
-title: Funktionsweise des Echo-Beispiels
-description: Funktionsweise des Echo-Beispiels
+title: Funktionsweise des Echobeispiels
+description: Funktionsweise des Echobeispiels
 ms.assetid: 554afc08-6e4f-427c-8a09-0d1ebf3ca8dc
 keywords:
-- Windows Media Player-Plug-ins, Übersicht über ECHO Beispiele
-- Plug-ins, Echo Sample Overview
-- Plug-Ins für die digitale Signalverarbeitung, Echo Sample Overview
-- DSP-Plug-ins, Übersicht über ECHO Beispiele
-- Echo DSP-Plug-in-Beispiel, Informationen zu
+- Windows Media Player-Plug-Ins,Echo-Beispielübersicht
+- Plug-Ins, Echo-Beispielübersicht
+- Plug-Ins für die digitale Signalverarbeitung,Echobeispiel – Übersicht
+- DSP-Plug-Ins,Echo-Beispielübersicht
+- Echo DSP-Plug-In-Beispiel, Informationen
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 08814a6f0d604c7d566a0fc8d9f07b05446fca64
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: 290cb56bbf1900dbcc09874213490f80cdc3af179ff243a2867bb232c3bb85c0
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "106341242"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118338955"
 ---
-# <a name="how-the-echo-sample-works"></a>Funktionsweise des Echo-Beispiels
+# <a name="how-the-echo-sample-works"></a>Funktionsweise des Echobeispiels
 
-Der Code erstellt den Echo Effekt durch Zuordnen eines Puffers, der ausreichend groß genug ist, um genau die Menge an Audiodaten zu erhalten, die in dem durch den Verzögerungs Zeitwert angegebenen Zeitrahmen gerendert werden können. Die Größe des Puffers wird in Bytes mit der folgenden Formel berechnet:
+Der Code erstellt den Echoeffekt, indem er einen Puffer zuteilt, der groß genug ist, um genau die Menge an Audiodaten zu enthalten, die in dem durch den Verzögerungszeitwert angegebenen Zeitrahmen gerendert werden können. Die Größe des Puffers wird mit der folgenden Formel in Bytes berechnet:
 
-Puffergröße = Verzögerungszeit \* Stichprobenrate/1000 \* Block Ausrichtung
+buffer size = delay time \* sample rate /1000 \* block alignment
 
-Die Verzögerungszeit beträgt Millisekunden. Die Werte für die Stichprobenrate und die Block Ausrichtung werden in einer WaveFormatEx-Struktur angegeben. Die Stichprobenrate beträgt Stichproben pro Sekunde. Division durch 1000 ergibt Stichproben pro Millisekunde. Die Block Ausrichtung entspricht dem Produkt der Anzahl von Kanälen (1 für Mono, 2 für Stereo) und der Anzahl von Bits pro Stichprobe (8 oder 16) dividiert durch 8 (Bits pro Byte).
+Die Verzögerungszeit be liegt in Millisekunden. Die Werte für Die Stichprobenrate und Blockausrichtung werden in einer WAVEFORMATEX-Struktur angegeben. Die Stichprobenrate liegt in Stichproben pro Sekunde. Die Division durch 1.000 ergibt Stichproben pro Millisekunde. Die Blockausrichtung entspricht dem Produkt der Anzahl von Kanälen (1 für Mono, 2 für Stereo) und der Anzahl der Bits pro Stichprobe (8 oder 16) dividiert durch 8 (Bits pro Byte).
 
-Zusätzlich zu der Zeiger Variablen, die auf den Anfang des Verzögerungs Puffers zeigt, erstellt der Code einen verschiebbaren Zeiger, der die Daten im Puffer in der Synchronisierung mit der Verarbeitungs Schleife in der **DoProcess Output** -Funktion durchläuft. Wenn der verschiebbare Zeiger das Ende des Verzögerungs Puffers erreicht, wechselt er zurück zum Anfang des Puffers. Ein auf diese Weise verwendeter Puffer wird als Zirkel Puffer bezeichnet.
+Zusätzlich zur Zeigervariablen, die auf den Kopf des Verzögerungspuffers zeigt, erstellt der Code einen verschiebbaren Zeiger, der die Daten im Puffer in der Synchronisierung mit der Verarbeitungsschleife in der **DoProcessOutput-Funktion** durchfingt. Wenn der verschiebbare Zeiger das Ende des Verzögerungspuffers erreicht, wird er zurück an den Kopf des Puffers bewegt. Ein auf diese Weise verwendeter Puffer wird als zirkulärer Puffer bezeichnet.
 
-Sobald der Verzögerungs Puffer vorhanden ist und Windows Media Player einen Eingabepuffer zum Bereitstellen von Audiodaten und einen Ausgabepuffer zum Empfangen der verarbeiteten Audiodaten zugeordnet hat, wird die Echo Verarbeitung wie folgt fortgesetzt:
+Sobald der Verzögerungspuffer vorhanden ist und Windows Media Player einen Eingabepuffer zugeordnet hat, um Audiodaten und einen Ausgabepuffer zum Empfangen verarbeiteter Audiodaten zu erhalten, wird die Echoverarbeitung wie die folgenden fortgesetzt:
 
-1.  Geben Sie eine Schleife ein, die die Verarbeitung der einzelnen Audiobeispiele im Eingabepuffer zulässt.
-2.  Rufen Sie ein Beispiel aus dem Eingabepuffer ab. Verschieben Sie dann den Eingabepuffer Zeiger auf das nächste Beispiel, um die nächste Schleifen Iterations Vorbereitung vorzubereiten.
-3.  Rufen Sie ein Beispiel aus dem verzögerten Puffer ab.
-4.  Kopieren Sie das Beispiel aus dem Eingabepuffer an den gleichen Speicherort im Verzögerungs Puffer, von dem aus die letzte Verzögerungs Stichprobe abgerufen wurde.
-5.  Verschieben Sie den Verzögerungs Puffer Zeiger auf das nächste Beispiel. Wenn sich der Zeiger über das Ende des Puffers bewegt, verschieben Sie ihn an den Anfang des Puffers.
-6.  Kombinieren Sie das Beispiel aus dem Eingabepuffer mit dem Beispiel aus dem verzögerten Puffer.
-7.  Kopieren Sie das Ergebnis in den Ausgabepuffer. Verschieben Sie dann den Ausgabepuffer Zeiger auf die nächste Einheit, um die nächste Schleifen Iterations Vorbereitung vorzubereiten.
+1.  Geben Sie eine Schleife ein, die die Verarbeitung jedes Audiobeispiels im Eingabepuffer ermöglicht.
+2.  Rufen Sie ein Beispiel aus dem Eingabepuffer ab. Bewegen Sie dann den Eingabepufferzeiger zum nächsten Beispiel, um die nächste Schleifeniteration vorzubereiten.
+3.  Rufen Sie ein Beispiel aus dem Verzögerungspuffer ab.
+4.  Kopieren Sie das Beispiel aus dem Eingabepuffer an die gleiche Position im Verzögerungspuffer, aus dem die letzte Verzögerungsstichprobe abgerufen wurde.
+5.  Bewegen Sie den Verzögerungspufferzeiger zum nächsten Beispiel. Wenn der Zeiger über das Ende des Puffers hinaus bewegt wird, verschieben Sie ihn an den Kopf des Puffers.
+6.  Kombinieren Sie das Beispiel aus dem Eingabepuffer mit dem Beispiel aus dem Verzögerungspuffer.
+7.  Kopieren Sie das Ergebnis in den Ausgabepuffer. Verschieben Sie dann den Ausgabepufferzeiger zur nächsten Einheit, um sich auf die nächste Schleifeniteration vorzubereiten.
 8.  Wiederholen Sie den Vorgang, bis alle Beispiele verarbeitet wurden.
 
-Wenn ein Eingabe Beispiel, das in Schritt 2 abgerufen wird, in den Verzögerungs Puffer in Schritt 4 kopiert wird, bleibt es so lange, bis der verschiebbare Zeiger durch die einzelnen Beispiele im Verzögerungs Puffer geht und schließlich an dieselbe Position zurückkehrt. Da die Größe des Verzögerungs Puffers so konzipiert ist, dass Sie mit der Verzögerungszeit übereinstimmt, wird die verstrichene Zeit zwischen dem Beispiel, das in den Verzögerungs Puffer kopiert wird, und dem abgerufenen Beispiel gleich der angegebenen Verzögerung (zuzüglich der von der eigentlichen Verarbeitung eingeführten Latenzzeit) wieder hergestellt.
+Wenn ein in Schritt 2 abgerufenes Eingabebeispiel in den Verzögerungspuffer in Schritt 4 kopiert wird, bleibt es dort, bis der verschiebbare Zeiger die einzelnen Stichproben im Verzögerungspuffer durchschritt und schließlich an die gleiche Position zurückkehrt. Da die Größe des Verzögerungspuffers der Verzögerungszeit entspricht, entspricht die verstrichene Zeit zwischen dem Kopieren des Beispiels in den Verzögerungspuffer und dem erneuten Abrufen der Stichprobe der angegebenen Verzögerung (zuzüglich der Latenz, die durch die tatsächliche Verarbeitung eingeführt wird).
 
-Wenn ein Stream gestartet wird, werden keine Verzögerungs Daten generiert, bis die Verzögerungszeit verstrichen ist. Daher ist es wichtig, dass der Verzögerungs Puffer anfänglich den Ruhe Wert enthält. Wenn der Verzögerungs Puffer zufällige Daten enthält, hört der Benutzer das weiß Rauschen, bis das Plug-in genügend Verzögerungs Daten generiert, um den gesamten Verzögerungs Puffer zu überschreiben.
+Wenn ein Stream gestartet wird, werden keine Verzögerungsdaten generiert, bis die Verzögerungszeit abgelaufen ist. Daher ist es wichtig, dass der Verzögerungspuffer anfänglich Stille enthält. Wenn der Verzögerungspuffer zufällige Daten enthält, wird der Benutzer ein weißes Rauschen hören, bis das Plug-In genügend Verzögerungsdaten generiert, um den gesamten Verzögerungspuffer zu überschreiben.
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
 <dl> <dt>
 
-[**Übersicht über das Echo Beispiel**](echo-sample-overview.md)
+[**Echo-Beispiel – Übersicht**](echo-sample-overview.md)
 </dt> </dl>
 
- 
+ 
 
- 
+ 
 
 
 

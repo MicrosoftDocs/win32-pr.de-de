@@ -1,9 +1,9 @@
 ---
-title: Equalizersettings. speakersize
-description: Das Attribut "speakersize" gibt die Indexnummer der aktuellen Redner Größe an oder ruft diese ab.
+title: EQUALIZERSETTINGS.speakerSize
+description: Das speakerSize-Attribut gibt die Indexnummer der aktuellen Sprechergröße an oder ruft sie ab.
 ms.assetid: 454d07bf-49cd-48a5-9724-6415a925367a
 keywords:
-- Equalizersettings. speakersize-Windows-Media Player
+- EQUALIZERSETTINGS.speakerSize Windows Media Player
 topic_type:
 - apiref
 api_name:
@@ -12,16 +12,16 @@ api_type:
 - NA
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 26dc49af55e96d3ef8de4e8a4567b3a4296ca214
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 46d289a89a22e8c10cf669e9b55fc304826acb3ce0f72468f725e7d5fae0dfc8
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106366987"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117748648"
 ---
-# <a name="equalizersettingsspeakersize"></a>Equalizersettings. speakersize
+# <a name="equalizersettingsspeakersize"></a>EQUALIZERSETTINGS.speakerSize
 
-Das Attribut " **speakersize** " gibt die Indexnummer der aktuellen Redner Größe an oder ruft diese ab.
+Das **speakerSize-Attribut** gibt die Indexnummer der aktuellen Sprechergröße an oder ruft sie ab.
 
 ``` syntax
         elementID.speakerSize
@@ -29,25 +29,25 @@ Das Attribut " **speakersize** " gibt die Indexnummer der aktuellen Redner Grö�
 
 ## <a name="possible-values"></a>Mögliche Werte
 
-Dieses Attribut ist eine Lese- **/schreibzahl** (Long), die einen der folgenden Werte enthält.
+Dieses Attribut ist eine  Lese-/Schreibnummer (long), die einen der folgenden Werte enthält.
 
 
 
 | Wert | BESCHREIBUNG                              |
 |-------|------------------------------------------|
-| 0     | Die aktuellen Referenten sind Kopfhörer.     |
-| 1     | Die aktuellen Redner haben eine normale Größe. |
-| 2     | Die aktuellen Referenten sind groß.          |
+| 0     | Bei den aktuellen Sprechern handelt es sich um Eines.     |
+| 1     | Die aktuellen Sprecher haben eine normale Größe. |
+| 2     | Die aktuellen Sprecher sind groß.          |
 
 
 
  
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Der Anzeige Name der Redner Größe kann mit dem **currentspeakername** -Attribut abgerufen werden.
+Der Angezeigte Name der Sprechergröße kann mithilfe des **currentSpeakerName-Attributs abgerufen** werden.
 
-Dieses Attribut wird ignoriert, wenn **enhancedaudiowert** auf false festgelegt ist.
+Dieses Attribut wird ignoriert, wenn **enhancedAudio** auf FALSE festgelegt ist.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -55,21 +55,21 @@ Dieses Attribut wird ignoriert, wenn **enhancedaudiowert** auf false festgelegt 
 
 | Anforderung | Wert |
 |--------------------|---------------------------------------------------|
-| Version<br/> | Windows Media Player 9-Serie oder höher<br/> |
+| Version<br/> | Windows Media Player 9er Serie oder höher<br/> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Equalizersettings-Element**](equalizersettings-element.md)
+[**EQUALIZERSETTINGS-Element**](equalizersettings-element.md)
 </dt> <dt>
 
-[**Equalizersettings. currentspeakername**](equalizersettings-currentspeakername.md)
+[**EQUALIZERSETTINGS.currentSpeakerName**](equalizersettings-currentspeakername.md)
 </dt> <dt>
 
-[**Equalizersettings. enhancedaudio**](equalizersettings-enhancedaudio.md)
+[**EQUALIZERSETTINGS.enhancedAudio**](equalizersettings-enhancedaudio.md)
 </dt> </dl>
 
  

@@ -14,7 +14,7 @@ ms.locfileid: "118428453"
 ---
 # <a name="extending-adsi"></a>Erweitern von ADSI
 
-Mit dem ADSI-Erweiterungsmodell können Sie eine Verzeichnisklasse Ihrem eigenen COM-Objekt zuordnen. Aus Sicht eines ADSI-Programmierers oder Skriptwriters wird die Erweiterung zu einem integralen Bestandteil von ADSI. Wenn beispielsweise ein neuer Mitarbeiter fabrikam beitritt, erstellt der Windows NT-Administrator ein Benutzerobjekt im Verzeichnis, und der Gehaltsadministrator muss einige Einträge in den Personalsystemen für diesen Benutzer einrichten. Mit einer ADSI-Erweiterung kann dieser Prozess in einem einzigen Skript optimiert werden.
+Mit dem ADSI-Erweiterungsmodell können Sie eine Verzeichnisklasse Ihrem eigenen COM-Objekt zuordnen. Aus Sicht eines ADSI-Programmierers oder Skriptwriters wird die Erweiterung zu einem integralen Bestandteil von ADSI. Wenn beispielsweise ein neuer Mitarbeiter Fabrikam beitritt, erstellt der Windows NT-Administrator ein Benutzerobjekt im Verzeichnis, und der Gehaltsadministrator muss einige Einträge in den Personalsystemen für diesen Benutzer einrichten. Mit einer ADSI-Erweiterung kann dieser Prozess in einem einzigen Skript optimiert werden.
 
 
 ```VB

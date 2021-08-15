@@ -1,7 +1,7 @@
 ---
-description: Links zur Dokumentation für die iazobjectpicker-Interoperabilitäts Wrapper Methoden und-Eigenschaften.
+description: Links zur Dokumentation für die IAzObjectPicker-Interoperabilitätswrappermethoden und -eigenschaften.
 ms.assetid: 8b3db64c-0772-4810-96bf-6c9334c9bc4c
-title: Microsoft. Interop. Security. azrollen. iazobjectpicker-Schnittstelle
+title: Microsoft.Interop.Security.AzRoles.IAzObjectPicker-Schnittstelle
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -19,33 +19,33 @@ api_type:
 - COM
 api_location:
 - Microsoft.Interop.Security.Azroles.dll
-ms.openlocfilehash: 0581cda6e52ad25ec0eb6d5315ea7d26c54a5ddb
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 7151a581dc16bae375a027397dd5736df97497f2fb8553f1d5e0045279f93583
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106355860"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117781058"
 ---
-# <a name="microsoftinteropsecurityazrolesiazobjectpicker-interface"></a>Microsoft. Interop. Security. azrollen. iazobjectpicker-Schnittstelle
+# <a name="microsoftinteropsecurityazrolesiazobjectpicker-interface"></a>Microsoft.Interop.Security.AzRoles.IAzObjectPicker-Schnittstelle
 
-Die **Microsoft. Interop. Security. azrollen. iazobjectpicker** -Interoperabilitäts Wrapper-Methoden und-Eigenschaften sind unter der com-Version der-Methode oder der-Eigenschaft dokumentiert. Ein Link zur korrelierenden com-Dokumentation folgt den einzelnen Elementnamen.
+Die Interoperabilitätswrappermethoden und -eigenschaften von **Microsoft.Interop.Security.Azroles.IAzObjectPicker** sind unter der COM-Version der Methode oder Eigenschaft dokumentiert. Ein Link zur korrelierenden COM-Dokumentation folgt jedem Membernamen.
 
 ## <a name="members"></a>Member
 
-Die **Microsoft. Interop. Security. azrollen. iazobjectpicker** -Schnittstelle verfügt über diese Typen von Membern:
+Die **Microsoft.Interop.Security.AzRoles.IAzObjectPicker-Schnittstelle** verfügt über folgende Typen von Membern:
 
 -   [Methoden](#methods)
 -   [Eigenschaften](#properties)
 
 ### <a name="methods"></a>Methoden
 
-Die **Microsoft. Interop. Security. azrollen. iazobjectpicker** -Schnittstelle verfügt über diese Methoden.
+Die **Microsoft.Interop.Security.AzRoles.IAzObjectPicker-Schnittstelle** verfügt über diese Methoden.
 
 
 
 | Methode                                                               | BESCHREIBUNG                                                                               |
 |:---------------------------------------------------------------------|:------------------------------------------------------------------------------------------|
-| **Microsoft. Interop. Security. azrollen. iazobjectpicker. getPrincipals** | [**Iazobjectpicker:: getPrincipals**](/windows/desktop/api/Azroles/nf-azroles-iazobjectpicker-getprincipals)<br/> |
+| **Microsoft.Interop.Security.Azroles.IAzObjectPicker.GetPrincipals** | [**IAzObjectPicker::GetPrincipals**](/windows/desktop/api/Azroles/nf-azroles-iazobjectpicker-getprincipals)<br/> |
 
 
 
@@ -53,13 +53,13 @@ Die **Microsoft. Interop. Security. azrollen. iazobjectpicker** -Schnittstelle v
 
 ### <a name="properties"></a>Eigenschaften
 
-Die **Microsoft. Interop. Security. azrollen. iazobjectpicker** -Schnittstelle verfügt über diese Eigenschaften.
+Die **Microsoft.Interop.Security.AzRoles.IAzObjectPicker-Schnittstelle** verfügt über diese Eigenschaften.
 
 
 
 | Eigenschaft                                                               | Zugriffstyp          | BESCHREIBUNG                                                                        |
 |:-----------------------------------------------------------------------|:---------------------|:-----------------------------------------------------------------------------------|
-| **Microsoft.Interop.Security.Azroles.IAzObjectPicker.Name**<br/> | Schreibgeschützt<br/> | [**Name-Eigenschaft von iazobjectpicker**](/windows/desktop/api/Azroles/nf-azroles-iazobjectpicker-get_name)<br/> |
+| **Microsoft.Interop.Security.Azroles.IAzObjectPicker.Name**<br/> | Schreibgeschützt<br/> | [**Name-Eigenschaft von IAzObjectPicker**](/windows/desktop/api/Azroles/nf-azroles-iazobjectpicker-get_name)<br/> |
 
 
 

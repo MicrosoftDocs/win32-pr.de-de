@@ -1,11 +1,11 @@
 ---
-title: RegistrationInfo. securityDescriptor (Eigenschaft)
-description: Ruft bei der Skripterstellung die Sicherheits Beschreibung der Aufgabe ab oder legt diese fest.
+title: RegistrationInfo.SecurityDescriptor-Eigenschaft
+description: Ruft für die Skripterstellung den Sicherheitsdeskriptor der Aufgabe ab oder legt diese fest.
 ms.assetid: e03607f0-c2a0-4aa1-a2b0-915b03aae968
 keywords:
 - SecurityDescriptor-Eigenschaft Taskplaner
-- SecurityDescriptor-Eigenschaft Taskplaner, RegistrationInfo-Objekt
-- RegistrationInfo-Objekt Taskplaner, securityDescriptor-Eigenschaft
+- SecurityDescriptor-Eigenschaft Taskplaner , RegistrationInfo-Objekt
+- RegistrationInfo-Objekt Taskplaner , SecurityDescriptor-Eigenschaft
 topic_type:
 - apiref
 api_name:
@@ -16,16 +16,16 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 379e42f41387a40b160a73ec3457d3d5b9feaf59
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: c5c3aa83bc05952007d9114ad9812068de5b5b0bd82a4ce9e14e4d5ba1025bb2
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "106338114"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117759561"
 ---
-# <a name="registrationinfosecuritydescriptor-property"></a>RegistrationInfo. securityDescriptor (Eigenschaft)
+# <a name="registrationinfosecuritydescriptor-property"></a>RegistrationInfo.SecurityDescriptor-Eigenschaft
 
-Ruft bei der Skripterstellung die Sicherheits Beschreibung der Aufgabe ab oder legt diese fest. Wenn bei der Task Registrierung eine andere Sicherheits Beschreibung angegeben wird, ersetzt Sie den Sicherheits Deskriptor, der durch diese Eigenschaft festgelegt wird.
+Ruft für die Skripterstellung den Sicherheitsdeskriptor der Aufgabe ab oder legt diese fest. Wenn während der Aufgabenregistrierung ein anderer Sicherheitsdeskriptor angegeben wird, wird der mit dieser Eigenschaft festgelegte Sicherheitsdeskriptor ersetzt.
 
 ## <a name="syntax"></a>Syntax
 
@@ -38,11 +38,11 @@ RegistrationInfo.SecurityDescriptor As String
 
 ## <a name="property-value"></a>Eigenschaftswert
 
-Die Sicherheits Beschreibung, die der Aufgabe zugeordnet ist.
+Der Sicherheitsdeskriptor, der der Aufgabe zugeordnet ist.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Beim Lesen oder Schreiben von XML für eine Aufgabe wird die Sicherheits Beschreibung der Aufgabe mit dem [**securityDescriptor**](taskschedulerschema-securitydescriptor-registrationinfotype-element.md) -Element des Taskplaner-Schemas angegeben.
+Beim Lesen oder Schreiben von XML für eine Aufgabe wird der Sicherheitsdeskriptor des Tasks mithilfe des [**SecurityDescriptor-Elements**](taskschedulerschema-securitydescriptor-registrationinfotype-element.md) des Taskplaner Schemas angegeben.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -50,14 +50,14 @@ Beim Lesen oder Schreiben von XML für eine Aufgabe wird die Sicherheits Beschre
 
 | Anforderung | Wert |
 |-------------------------------------|-----------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>                                          |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2008 \[ -Desktop-Apps\]<br/>                                    |
-| Typbibliothek<br/>             | <dl> <dt>Taskschd. tlb</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows \[Nur Vista-Desktop-Apps\]<br/>                                          |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2008-Desktop-Apps\]<br/>                                    |
+| Typbibliothek<br/>             | <dl> <dt>Taskschd.tlb</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>Taskschd.dll</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 

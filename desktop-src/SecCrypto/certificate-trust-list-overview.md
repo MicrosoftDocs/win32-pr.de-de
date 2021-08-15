@@ -1,25 +1,25 @@
 ---
-description: Zusätzlich zu den Zertifikaten und Zertifikat Sperr Listen (CRL) unterstützt der kryptoapi-Zertifikat Speicher die Zertifikats Vertrauens Liste (Certificate Trust List, CTL).
+description: Zusätzlich zu Zertifikaten und Zertifikatsperrlisten (Certificate Revocation Lists, CRL) unterstützt der CryptoAPI-Zertifikatspeicher die Zertifikatvertrauensliste (Certificate Trust List, CTL).
 ms.assetid: b0f7e7ce-f981-4f3f-83a0-7792224ce0e3
-title: Übersicht über Zertifikat Vertrauens Listen
+title: Übersicht über die Zertifikatvertrauensliste
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 55bdbd8b5fdfe4b2d81f3faddb052c16ecf32428
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 7906f02e9af3534445c5b1d6a48c94653feb78b57c71a23acfd9af51477cd050
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "103867196"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117771106"
 ---
-# <a name="certificate-trust-list-overview"></a>Übersicht über Zertifikat Vertrauens Listen
+# <a name="certificate-trust-list-overview"></a>Übersicht über die Zertifikatvertrauensliste
 
-Zusätzlich zu den Zertifikaten und [*Zertifikat Sperr Listen*](../secgloss/c-gly.md) (CRL) unterstützt [*der kryptoapi*](../secgloss/c-gly.md) - [*Zertifikat Speicher*](../secgloss/c-gly.md) die [*Zertifikats Vertrauens Liste (Certificate Trust List*](../secgloss/c-gly.md) , CTL). Eine CTL ist eine vordefinierte Liste von Elementen, die von einer vertrauenswürdigen Entität signiert wurden. Eine CTL ist eine Liste von Zertifikaten oder eine [*Liste mit Datei*](../secgloss/h-gly.md) Namen. Alle Elemente in der Liste werden von einer vertrauenswürdigen Signatur Entität authentifiziert und genehmigt. Eine [**CTL- \_ Kontext**](/windows/desktop/api/Wincrypt/ns-wincrypt-ctl_context) Struktur ähnelt den Kontext Strukturen Certificate und CRL. Ein CTL-Kontext kann im Zertifikat Speicher persistent gespeichert werden.
+Zusätzlich zu Zertifikaten und [*Zertifikatsperrlisten*](../secgloss/c-gly.md) (Certificate Revocation Lists, CRL) unterstützt der [*CryptoAPI-Zertifikatspeicher*](../secgloss/c-gly.md) [](../secgloss/c-gly.md) die [*Zertifikatvertrauensliste*](../secgloss/c-gly.md) (Certificate Trust List, CTL). Eine CTL ist eine vordefinierte Liste von Elementen, die von einer vertrauenswürdigen Entität signiert wurden. Eine CTL ist eine Liste von Hashes von [*Zertifikaten*](../secgloss/h-gly.md) oder eine Liste von Dateinamen. Alle Elemente in der Liste werden von einer vertrauenswürdigen Signaturentität authentifiziert und genehmigt. Eine [**CTL \_ CONTEXT-Struktur**](/windows/desktop/api/Wincrypt/ns-wincrypt-ctl_context) ähnelt Zertifikat- und Zertifikatsperrlisten-Kontextstrukturen. Ein CTL-Kontext kann im Zertifikatspeicher beibehalten werden.
 
-Eine kryptoapi-CTL ist eine Liste von Elementen, die von einer vertrauenswürdigen Entität signiert wurden. Die Liste der Elemente kann etwas sein, z. b. eine Liste mit Hashes von Zertifikaten oder eine Liste mit Dateinamen. In den meisten Fällen ist eine CTL eine Liste mit Hash Zertifikat Kontexten. Alle Elemente in der Liste werden von der Signatur Entität authentifiziert und genehmigt. Die primäre Verwendung von CTLs ist die Überprüfung signierter Nachrichten mithilfe der CTL als Quelle vertrauenswürdiger Stamm [*Zertifikate*](../secgloss/r-gly.md).
+Eine CryptoAPI-CTL ist eine Liste von Elementen, die von einer vertrauenswürdigen Entität signiert wurden. Die Liste der Elemente kann beliebig sein, z. B. eine Liste von Hashes von Zertifikaten oder eine Liste von Dateinamen. In den meisten Fällen ist eine CTL eine Liste von Hashzertifikatkontexten. Alle Elemente in der Liste werden von der Signaturentität authentifiziert und genehmigt. Die primäre Verwendung von CTLs besteht darin, signierte Nachrichten zu überprüfen, wobei die CTL als Quelle für vertrauenswürdige [*Stammzertifikate*](../secgloss/r-gly.md)verwendet wird.
 
-Die [**CTL- \_ Kontext**](/windows/desktop/api/Wincrypt/ns-wincrypt-ctl_context) Struktur ähnelt den Kontext Strukturen Certificate und CRL, aber im Gegensatz zu den Kontext Strukturen Certificate und CRL enthält die **CTL- \_ Kontext** Struktur einen **hcryptmsg** -Member. Dieses Handle wird durch einen-Vorgang geöffnet, der eine **CTL- \_ Kontext** Struktur zurückgibt, sodass die Nachrichten Funktionen verwendet werden können, um die Signatur der CTL zu überprüfen. Diese Überprüfung ist erforderlich, um sicherzustellen, dass eine CTL keine falsche CTL ist, die von einer nicht autorisierten Entität gepflanzt wird.
+Die [**CTL \_ CONTEXT-Struktur**](/windows/desktop/api/Wincrypt/ns-wincrypt-ctl_context) ähnelt den Zertifikat- und Zertifikatsperrlisten-Kontextstrukturen. Im Gegensatz zu den Zertifikat- und CRL-Kontextstrukturen enthält die **CTL \_ CONTEXT-Struktur** jedoch einen **hCryptMsg-Member.** Dieses Handle wird durch einen Aufruf einer der Funktionen geöffnet, die eine **CTL \_ CONTEXT-Struktur** zurückgeben, sodass die Nachrichtenfunktionen verwendet werden können, um die Signatur der CTL zu überprüfen. Diese Überprüfung ist erforderlich, um sicherzustellen, dass eine CTL keine gefälschte CTL ist, die von einer nicht autorisierten Entität plant wird.
 
-Verfahren zum Erstellen einer signierten CTL und zum Speichern in einem Zertifikat Speicher finden Sie unter [erstellen, Signieren und Speichern einer CTL](creating-signing-and-storing-a-ctl.md). Weitere Informationen finden Sie unter über [Prüfen einer CTL](verifying-a-ctl.md) und über [Prüfen von signierten Nachrichten mithilfe von CTLs](verifying-signed-messages-by-using-ctls.md) .
+Verfahren zum Erstellen einer signierten CTL und speichern sie in einem Zertifikatspeicher finden Sie unter [Erstellen, Signieren und Speichern einer](creating-signing-and-storing-a-ctl.md)Zertifikatsgültigkeitsdauer. Unter [Verifying a CTL (Überprüfen einer CTL)](verifying-a-ctl.md) und [Verifying Signed Messages By Using CTLs (Überprüfen von signierten Nachrichten mithilfe von CTLs)](verifying-signed-messages-by-using-ctls.md) finden Sie auch Schritt-für-Schritt-Überprüfungsverfahren.
 
  
 

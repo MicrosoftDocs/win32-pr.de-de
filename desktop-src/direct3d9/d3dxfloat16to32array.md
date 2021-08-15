@@ -1,5 +1,5 @@
 ---
-description: 'D3DXFloat16To32Array-Funktion (D3dx9math.h): Konvertiert ein Array von 16-Bit-Gleitkommadaten in 32-Bit-Gleitkomma.'
+description: 'D3DXFloat16To32Array-Funktion (D3dx9math.h): Konvertiert ein Array von 16-Bit-Gleitkommaen in 32-Bit-Gleitkommakomma.'
 ms.assetid: cabb2888-76e4-403b-99ab-f7d62478bf43
 title: D3DXFloat16To32Array-Funktion (D3dx9math.h)
 ms.topic: reference
@@ -14,16 +14,16 @@ api_type:
 api_location:
 - d3dx9.lib
 - d3dx9.dll
-ms.openlocfilehash: 171b148b112cf2064d0d9a3f89451ab0fc8c2d75
-ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
+ms.openlocfilehash: 4c5ce94dcadac8952792e31b51ad84fc2326668500c625728a0af5fd985f1d31
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2021
-ms.locfileid: "108107598"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118526037"
 ---
 # <a name="d3dxfloat16to32array-function-d3dx9mathh"></a>D3DXFloat16To32Array-Funktion (D3dx9math.h)
 
-Konvertiert ein Array von 16-Bit-Gleitkommadaten in 32-Bit-Gleitkommadaten.
+Konvertiert ein Array von 16-Bit-Gleitkommaen in 32-Bit-Gleitkommakomma.
 
 ## <a name="syntax"></a>Syntax
 
@@ -47,7 +47,7 @@ FLOAT* D3DXFloat16To32Array(
 
 Typ: **[ **FLOAT**](../winprog/windows-data-types.md)\***
 
-Zeiger auf das Array von 32-Bit-Gleitkommadaten.
+Zeiger auf das Array von 32-Bit-Gleitkommaen.
 
 </dd> <dt>
 
@@ -56,7 +56,7 @@ Zeiger auf das Array von 32-Bit-Gleitkommadaten.
 
 Typ: **const [**D3DXFLOAT16**](d3dxfloat16.md) \***
 
-Zeiger auf ein Array von 16-Bit-Gleitkommadaten.
+Zeiger auf ein Array von 16-Bit-Gleitkommaen.
 
 </dd> <dt>
 
@@ -73,13 +73,13 @@ Anzahl der Elemente im Array.
 
 Typ: **[ **FLOAT**](../winprog/windows-data-types.md)\***
 
-Zeiger auf ein Array von 32-Bit-Gleitkommadaten.
+Zeiger auf ein Array von 32-Bit-Gleitkommaen.
 
 ## <a name="requirements"></a>Anforderungen
 
 
 
-| Anforderungen | Wert |
+| Anforderung | Wert |
 |--------------------|----------------------------------------------------------------------------------------|
 | Header<br/>  | <dl> <dt>D3dx9math.h</dt> </dl> |
 | Bibliothek<br/> | <dl> <dt>D3dx9.lib</dt> </dl>   |

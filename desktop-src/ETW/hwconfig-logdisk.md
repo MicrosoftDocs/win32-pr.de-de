@@ -1,5 +1,5 @@
 ---
-description: Die Klasse hwconfig \_ logdisk ist die Ereignistyp Klasse für Konfigurations Ereignisse logischer Datenträger. Die folgende Syntax wird durch den MOF-Code vereinfacht.
+description: Die HWConfig \_ LogDisk-Klasse ist die Ereignistypklasse für Konfigurationsereignisse für logische Datenträger. Die folgende Syntax wird durch einen MOF-Code vereinfacht.
 ms.assetid: 2b7038fa-2f20-4bb5-bac1-76b272b3421c
 title: HWConfig_LogDisk-Klasse
 ms.topic: reference
@@ -16,18 +16,18 @@ api_name:
 api_type:
 - NA
 api_location: ''
-ms.openlocfilehash: dce4faed913d01f76ff23177b2dad42ea74e5c08
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 01d200fc5c34546c96f6a78fd55548e8d5a7b0dacf74d46c411174beb66f6f4a
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "104529885"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118394804"
 ---
-# <a name="hwconfig_logdisk-class"></a>Hwconfig \_ logdisk-Klasse
+# <a name="hwconfig_logdisk-class"></a>HWConfig \_ LogDisk-Klasse
 
-Die Klasse **hwconfig \_ logdisk** ist die Ereignistyp Klasse für Konfigurations Ereignisse logischer Datenträger.
+Die **HWConfig \_ LogDisk-Klasse** ist die Ereignistypklasse für Konfigurationsereignisse für logische Datenträger.
 
-Die folgende Syntax wird durch den MOF-Code vereinfacht.
+Die folgende Syntax wird durch einen MOF-Code vereinfacht.
 
 ## <a name="syntax"></a>Syntax
 
@@ -44,42 +44,42 @@ class HWConfig_LogDisk : HWConfig
 
 ## <a name="members"></a>Member
 
-Die Klasse " **hwconfig \_ logdisk** " verfügt über diese Typen von Membern:
+Die **HWConfig \_ LogDisk-Klasse** verfügt über folgende Typen von Membern:
 
 -   [Eigenschaften](#properties)
 
 ### <a name="properties"></a>Eigenschaften
 
-Die **hwconfig \_ logdisk** -Klasse verfügt über diese Eigenschaften.
+Die **HWConfig \_ LogDisk-Klasse** verfügt über diese Eigenschaften.
 
 <dl> <dt>
 
-Disknumber
+DiskNumber
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt32**
+Datentyp: **uint32**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: wmidataid (1)
+Qualifizierer: WmiDataId(1)
 </dt> </dl>
 
-Index Nummer des Datenträgers, der diese Partition enthält.
+Indexnummer des Datenträgers, der diese Partition enthält.
 
 </dd> <dt>
 
 Pad
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt32**
+Datentyp: **uint32**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: wmidataid (2)
+Qualifizierer: WmiDataId(2)
 </dt> </dl>
 
 Reserviert.
@@ -89,42 +89,42 @@ Reserviert.
 PartitionSize
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt64**
+Datentyp: **uint64**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: wmidataid (4)
+Qualifizierer: WmiDataId(4)
 </dt> </dl>
 
 Gesamtgröße der Partition in Bytes.
 
 </dd> <dt>
 
-Starto ffset
+StartOffset
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt64**
+Datentyp: **uint64**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: wmidataid (3)
+Qualifizierer: WmiDataId(3)
 </dt> </dl>
 
-Start Offset (in Bytes) der Partition vom Anfang des Datenträgers.
+Startoffset (in Bytes) der Partition vom Anfang des Datenträgers.
 
 </dd> </dl>
 
-## <a name="requirements"></a>Requirements (Anforderungen)
+## <a name="requirements"></a>Anforderungen
 
 
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows XP \[ -Desktop-Apps\]<br/> |
+| Unterstützte Mindestversion (Client)<br/> | Windows \[Nur XP-Desktop-Apps\]<br/> |
 | Unterstützte Mindestversion (Server)<br/> | Nicht unterstützt<br/>                   |
 
 
@@ -133,7 +133,7 @@ Start Offset (in Bytes) der Partition vom Anfang des Datenträgers.
 
 <dl> <dt>
 
-[**Hwconfig**](hwconfig.md)
+[**HWConfig**](hwconfig.md)
 </dt> </dl>
 
  

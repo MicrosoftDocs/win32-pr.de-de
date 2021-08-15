@@ -1,9 +1,9 @@
 ---
-title: /Win32-Schalter
-description: Der/Win32-Schalter weist den Mittelwert Compiler an, Stub-Dateien oder eine Typbibliotheks Datei für eine 32-Bit-Umgebung zu generieren.
+title: /win32-Switch
+description: Der Schalter /win32 weist den MIDL-Compiler an, Stubdateien oder eine Typbibliotheksdatei für eine 32-Bit-Umgebung zu generieren.
 ms.assetid: 8f40d284-51ef-4ff0-a025-7da3e4e4311c
 keywords:
-- /Win32-Schalter-Mittel l
+- /win32 switch MIDL
 topic_type:
 - apiref
 api_name:
@@ -12,16 +12,16 @@ api_type:
 - NA
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: a228ca879bd9785ecd6e96ddaa66354cfc6e019c
-ms.sourcegitcommit: 57758ecb246c84d65e6e0e4bd5570d9176fa39cd
+ms.openlocfilehash: 4aec36b0096aaf95414cfaa6be292ed5408f64911afbcace5ebbc1af257054a7
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "103718197"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118385274"
 ---
-# <a name="win32-switch"></a>/Win32-Schalter
+# <a name="win32-switch"></a>/win32-Switch
 
-Der **/Win32** -Schalter weist den Mittelwert Compiler an, Stub-Dateien oder eine Typbibliotheks Datei für eine 32-Bit-Umgebung zu generieren.
+Der **Schalter /win32** weist den MIDL-Compiler an, Stubdateien oder eine Typbibliotheksdatei für eine 32-Bit-Umgebung zu generieren.
 
 ``` syntax
 midl /win32
@@ -29,25 +29,25 @@ midl /win32
 
 ## <a name="switch-options"></a>Optionen wechseln
 
-Dieser Switch hat keine Parameter.
+Dieser Schalter verfügt über keine Parameter.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Der Schalter **/Win32** entspricht dem Festlegen des [**/env**](-env.md) -Schalters auf Win32.
+Der **Schalter /win32** entspricht dem Festlegen des Schalters [**/env**](-env.md) auf win32.
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**/ENV**](-env.md)
+[**/env**](-env.md)
 </dt> <dt>
 
 [**/win64**](-win64.md)
 </dt> </dl>
 
- 
+ 
 
- 
+ 
 
 
 

@@ -1,31 +1,31 @@
 ---
-title: Fehler-und Ausnahmebehandlung von ACF-Attributen
+title: ACF-Attribute für die Fehler- und Ausnahmebehandlung
 description: Verwenden Sie die folgenden Attribute für die Fehlerbehandlung.
 ms.assetid: fb00df67-4645-4ef0-9216-618d0af1d9d4
 keywords:
-- ACF-Mittell, Attribute, Fehler-und Ausnahmebehandlung
+- ACF MIDL , Attribute, Fehler- und Ausnahmebehandlung
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 8d7187ab887fa1d09b18385b86065775ca0e656f
-ms.sourcegitcommit: ebd3ce6908ff865f1ef66f2fc96769be0aad82e1
+ms.openlocfilehash: 8f780145854a463da9a983c7dccbb24b01c2eca16437bf1254f93ec34def5395
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/19/2020
-ms.locfileid: "106340268"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118384426"
 ---
-# <a name="error-and-exception-handling-acf-attributes"></a>Fehler-und Ausnahmebehandlung von ACF-Attributen
+# <a name="error-and-exception-handling-acf-attributes"></a>ACF-Attribute für die Fehler- und Ausnahmebehandlung
 
 Verwenden Sie die folgenden Attribute für die Fehlerbehandlung.
 
 
 
-| Attribut                                                                | Verbrauch                                                                                                                                                                                                                                                                                                  |
+| attribute                                                                | Verbrauch                                                                                                                                                                                                                                                                                                  |
 |--------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| [**\_**](comm-status.md)[**\_ Status Fehlerstatus** von "comm"](fault-status.md) | Lassen Sie zu, dass die Client Anwendung Ausnahmen ordnungsgemäß behandelt, indem Sie als Parameterwerte Kommunikations-und Server Fehler an den Client zurückgeben. Die Client Anwendung kann dann die RPC-Lauf Zeitfunktion [**dceerrorinqtext**](/windows/desktop/api/rpcdce/nf-rpcdce-dceerrorinqtext) aufzurufen, um eine Fehlermeldung an den Benutzer weiterzuleiten. |
+| [**\_ Comm-Statusfehlerstatus**](comm-status.md)[**\_**](fault-status.md) | Lassen Sie ihre Clientanwendung Ausnahmen ordnungsgemäß behandeln, indem Kommunikations- und Serverfehler als Parameterwerte an den Client zurückgegeben werden. Die Clientanwendung kann dann die RPC-Laufzeitfunktion [**DceErrorInqText**](/windows/desktop/api/rpcdce/nf-rpcdce-dceerrorinqtext) aufrufen, um eine Fehlermeldung an den Benutzer weiterzuleiten. |
 
 
 
- 
+ 
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
@@ -34,6 +34,6 @@ Verwenden Sie die folgenden Attribute für die Fehlerbehandlung.
 [Importieren von Dateien und Typbibliotheken](importing-files-and-type-libraries.md)
 </dt> </dl>
 
- 
+ 
 
- 
+ 

@@ -1,11 +1,11 @@
 ---
-title: Playlistcollection. getByName-Methode
-description: Die getByName-Methode ruft ein playlistarray-Objekt ab, das Wiedergabelisten mit dem angegebenen Namen enthält (sofern vorhanden).
+title: PlaylistCollection.getByName-Methode
+description: Die getByName-Methode ruft ein PlaylistArray-Objekt ab, das Wiedergabelisten mit dem angegebenen Namen enthält, sofern vorhanden.
 ms.assetid: 0308a98d-1149-4367-b602-33fa54c1760f
 keywords:
-- getByName-Methode, Windows-Media Player
-- getByName-Methode, Windows Media Player, playlistcollection-Klasse
-- Playlistcollection-Klasse, Windows Media Player, getByName-Methode
+- getByName-Windows Media Player
+- getByName-Methode Windows Media Player , PlaylistCollection-Klasse
+- PlaylistCollection-Klasse Windows Media Player , getByName-Methode
 topic_type:
 - apiref
 api_name:
@@ -16,16 +16,16 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 7954df8e0ccc487df77ea31b3a26dce9eea6d2e0
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 300307ff011abf8b28c645901422291ccab4cf7c66a7a3ba81121ffe1c22e573
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106366793"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118334641"
 ---
-# <a name="playlistcollectiongetbyname-method"></a>Playlistcollection. getByName-Methode
+# <a name="playlistcollectiongetbyname-method"></a>PlaylistCollection.getByName-Methode
 
-Die **getByName** -Methode ruft ein **playlistarray** -Objekt ab, das Wiedergabelisten mit dem angegebenen Namen enthält (sofern vorhanden).
+Die **getByName-Methode** ruft ein **PlaylistArray-Objekt** ab, das Wiedergabelisten mit dem angegebenen Namen enthält, sofern vorhanden.
 
 ## <a name="syntax"></a>Syntax
 
@@ -42,26 +42,26 @@ retVal = PlaylistCollection.getByName(
 
 <dl> <dt>
 
-*Name* \[ in\]
+*Name* \[ In\]
 </dt> <dd>
 
-**Zeichenfolge** , die den Namen der abzurufenden Wiedergabelisten enthält.
+**Eine Zeichenfolge,** die den Namen der wiedergabelisten enthält, die abgerufen werden sollen.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Diese Methode gibt ein **playlistarray** -Objekt zurück.
+Diese Methode gibt ein **PlaylistArray-Objekt** zurück.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Verwenden Sie *playlistarray*. **Anzahl** , um zu bestimmen, ob eine Wiedergabeliste vorhanden ist Wenn **count** 0 (null) ist, ist keine Wiedergabeliste vorhanden.
+Verwenden Sie *PlaylistArray*. **count,** um zu bestimmen, ob eine Wiedergabeliste vorhanden ist. Wenn **count** 0 (null) ist, ist keine Wiedergabeliste vorhanden.
 
-Um diese Methode verwenden zu können, ist Lesezugriff auf die Bibliothek erforderlich. Weitere Informationen finden Sie unter [Bibliotheks Zugriff](library-access.md).
+Um diese Methode zu verwenden, ist Lesezugriff auf die Bibliothek erforderlich. Weitere Informationen finden Sie unter [Bibliothekszugriff.](library-access.md)
 
 ## <a name="examples"></a>Beispiele
 
-Im folgenden JScript-Beispiel wird *playlistcollection* verwendet. **getByName** zum Überprüfen des **playlistcollection** -Objekts auf eine Wiedergabeliste mit dem Namen "threelist". Wenn die Wiedergabeliste "threelist" vorhanden ist, legt **getByName** "threelist" als aktuelle Wiedergabeliste fest. Das **Player** -Objekt wurde mit der ID = "Player" erstellt.
+Im folgenden beispiel JScript *playlistCollection verwendet.* **getByName zum** Überprüfen des **playlistCollection-Objekts** auf eine Wiedergabeliste mit dem Namen "ThreeList". Wenn die Wiedergabeliste "Threelist" vorhanden ist, **legt getByName** "ThreeList" als aktuelle Wiedergabeliste fest. Das **Player-Objekt** wurde mit der ID = "Player" erstellt.
 
 
 ```JScript
@@ -89,28 +89,28 @@ if (Checkit > 0){
 
 | Anforderung | Wert |
 |--------------------|------------------------------------------------------------------------------------|
-| Version<br/> | Windows Media Player Version 7,0 oder höher.<br/>                              |
+| Version<br/> | Windows Media Player Version 7.0 oder höher.<br/>                              |
 | DLL<br/>     | <dl> <dt>Wmp.dll</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Playlistarray-Objekt**](playlistarray-object.md)
+[**PlaylistArray-Objekt**](playlistarray-object.md)
 </dt> <dt>
 
-[**Playlistarray. Count**](playlistarray-count.md)
+[**PlaylistArray.count**](playlistarray-count.md)
 </dt> <dt>
 
-[**Playlistcollection-Objekt**](playlistcollection-object.md)
+[**PlaylistCollection-Objekt**](playlistcollection-object.md)
 </dt> <dt>
 
-[**Settings. mediaaccessrights**](settings-mediaaccessrights.md)
+[**Einstellungen.mediaAccessRights**](settings-mediaaccessrights.md)
 </dt> <dt>
 
-[**Settings. requestmediaaccessrights**](settings-requestmediaaccessrights.md)
+[**Einstellungen.requestMediaAccessRights**](settings-requestmediaaccessrights.md)
 </dt> </dl>
 
  

@@ -1,6 +1,6 @@
 ---
-description: Wird von der Standard Implementierung des Kontextmenüs gesendet, um einem Menübefehl einen Namen zuzuweisen.
-title: DFM_MAPCOMMANDNAME Meldung (shlobj. h)
+description: Wird von der standardmäßigen Kontextmenüimplementierungen gesendet, um einem Menübefehl einen Namen zuzuweisen.
+title: DFM_MAPCOMMANDNAME Meldung (Shlobj.h)
 ms.topic: reference
 ms.date: 05/31/2018
 ms.assetid: 8aa764f7-d5d4-4a84-94d2-993265e1eb5a
@@ -13,16 +13,16 @@ api_location:
 topic_type:
 - APIRef
 - kbSyntax
-ms.openlocfilehash: 312817e5c530078b906af63e4e8c3d00595d3a04
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 1e3dac1cdb3c04397a59b26a2212fe1c46b611ce72ba029aabd25e0b01c9000b
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104525358"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118459976"
 ---
-# <a name="dfm_mapcommandname-message"></a>DFM- \_ mapcommandname-Meldung
+# <a name="dfm_mapcommandname-message"></a>DFM \_ MAPCOMMANDNAME-Nachricht
 
-Wird von der Standard Implementierung des Kontextmenüs gesendet, um einem Menübefehl einen Namen zuzuweisen.
+Wird von der standardmäßigen Kontextmenüimplementierungen gesendet, um einem Menübefehl einen Namen zuzuweisen.
 
 
 ```C++
@@ -41,35 +41,35 @@ DFM_MAPCOMMANDNAME
 
 <dl> <dt>
 
-*DefaultID* \[ in, out\]
+*defaultID* \[ in, out\]
 </dt> <dd>
 
 Ein Zeiger auf die ID des ausgewählten Menübefehls.
 
 </dd> <dt>
 
-*pszcommandname* \[ in\]
+*pszCommandName* \[ In\]
 </dt> <dd>
 
 Ein Zeiger auf eine Unicode-Zeichenfolge, die den Namen des Befehls enthält.
 
 </dd> </dl>
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Diese Nachricht wird entweder an die Rückruffunktion oder an das Rückruf Objekt gesendet, je nachdem, wie das Standardkontext Menü-Objekt implementiert wird. Es gibt zwei APIs für die Implementierung, [**cdeffoldermenu \_ Create2**](/windows/desktop/api/shlobj_core/nf-shlobj_core-cdeffoldermenu_create2), [**shkreatedefaultcontextmenu**](/windows/desktop/api/shlobj_core/nf-shlobj_core-shcreatedefaultcontextmenu).
+Diese Meldung wird entweder an die Rückruffunktion oder das Rückrufobjekt gesendet, je nachdem, wie das Standardkontextmenüobjekt implementiert wird. Es gibt zwei APIs für die Implementierung: [**CDefFolderMenu \_ Create2**](/windows/desktop/api/shlobj_core/nf-shlobj_core-cdeffoldermenu_create2), [**SHCreateDefaultContextMenu.**](/windows/desktop/api/shlobj_core/nf-shlobj_core-shcreatedefaultcontextmenu)
 
-[**DFM \_ Invokecommandex**](dfm-invokecommandex.md) ist eine erweiterte Version dieser Nachricht und bietet weitere Informationen für den Rückruf. Verwenden Sie **DFM \_ invokecommandex** , wenn die zusätzlichen Informationen, die von dieser Schnittstelle bereitgestellt werden, in der Implementierung benötigt werden.
+[**DFM \_ INVOKECOMMANDEX**](dfm-invokecommandex.md) ist eine erweiterte Version dieser Nachricht und stellt weitere Informationen zum Rückruf bereit. Verwenden Sie **DFM \_ INVOKECOMMANDEX,** wenn die zusätzlichen Informationen, die von dieser Schnittstelle bereitgestellt werden, in Ihrer Implementierung benötigt werden.
 
-## <a name="requirements"></a>Requirements (Anforderungen)
+## <a name="requirements"></a>Anforderungen
 
 
 
 | Anforderung | Wert |
 |-------------------------------------|-------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>                                      |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2008 \[ -Desktop-Apps\]<br/>                                |
-| Header<br/>                   | <dl> <dt>Shlobj. h</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows \[Nur Vista-Desktop-Apps\]<br/>                                      |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2008-Desktop-Apps\]<br/>                                |
+| Header<br/>                   | <dl> <dt>Shlobj.h</dt> </dl> |
 
 
 

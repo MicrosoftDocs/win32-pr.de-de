@@ -1,9 +1,9 @@
 ---
-title: Head-Element
-description: Das Head-Element enthält Metadaten, die auf die gesamte Wiedergabeliste angewendet werden.
+title: head-Element
+description: Das Hauptelement enthält Metadaten, die für die gesamte Wiedergabeliste gelten.
 ms.assetid: 9554c84a-34af-4492-964a-4b262cd7c4a4
 keywords:
-- Windows-Media Player des Head-Elements
+- head-Element Windows Media Player
 topic_type:
 - apiref
 api_name:
@@ -13,16 +13,16 @@ api_type:
 ms.topic: reference
 ms.date: 05/31/2018
 api_location: ''
-ms.openlocfilehash: 8708a8a683f7457e6568df3a897c71253ad76c02
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: a865419a005927cd85ea6b03d4fabad2e2ac3ef15a840b3bd01209a4df00c075
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106361956"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118339170"
 ---
-# <a name="head-element"></a>Head-Element
+# <a name="head-element"></a>head-Element
 
-Das **Head** -Element enthält Metadaten, die auf die gesamte Wiedergabeliste angewendet werden.
+Das **Hauptelement** enthält Metadaten, die für die gesamte Wiedergabeliste gelten.
 
 ``` syntax
 <head>
@@ -33,22 +33,22 @@ Das **Head** -Element enthält Metadaten, die auf die gesamte Wiedergabeliste an
 
 Dieses Element weist keine Attribute auf.
 
-## <a name="parentchild-elements"></a>Über-/unterordnungselemente
+## <a name="parentchild-elements"></a>Übergeordnete/untergeordnete Elemente
 
 
 
 | Hierarchy | Elemente                                                  |
 |-----------|-----------------------------------------------------------|
-| Parent    | [smil](smil-element.md)                                  |
-| Untergeordnet     | [Title](title-element--wpl.md), [Meta](meta-element.md) |
+| Parent    | [Smil](smil-element.md)                                  |
+| Untergeordnet     | [title](title-element--wpl.md), [meta](meta-element.md) |
 
 
 
  
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-In der Regel enthält das **Head** -Element ein **Title** -Element und ein oder mehrere **Meta** -Elemente, die globale Merkmale der Wiedergabeliste definieren.
+In der Regel enthält das **Hauptelement** ein **Titelelement** und mindestens ein **Metaelement,** das globale Merkmale der Wiedergabeliste definiert.
 
 ## <a name="examples"></a>Beispiele
 
@@ -72,21 +72,21 @@ In der Regel enthält das **Head** -Element ein **Title** -Element und ein oder 
 
 | Anforderung | Wert |
 |--------------------|----------------------------------------------------|
-| Version<br/> | Windows Media Player 9 oder höher.<br/> |
+| Version<br/> | Windows Media Player serie 9 oder höher.<br/> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Meta-Element**](meta-element.md)
+[**meta-Element**](meta-element.md)
 </dt> <dt>
 
-[**Title-Element (WPL)**](title-element--wpl.md)
+[**title-Element (WPL)**](title-element--wpl.md)
 </dt> <dt>
 
-[**Referenz zu Windows Media-Wiedergabelisten Elementen**](windows-media-playlist-elements-reference.md)
+[**Windows Referenz zu Medienwiedergabelistenelementen**](windows-media-playlist-elements-reference.md)
 </dt> </dl>
 
  

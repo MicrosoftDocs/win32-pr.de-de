@@ -4,12 +4,12 @@ description: Die folgenden Funktionen rufen Konfigurationseinstellungen für den
 ms.topic: article
 ms.date: 05/31/2018
 ms.assetid: 5f562470-f3e8-4305-a015-3a84cd09a1eb
-ms.openlocfilehash: ee16bb0b65545c4abbef387c5b90d42fb9d3c629
-ms.sourcegitcommit: ea0069adb72dbfa717e73f3a96c3407a49ec0dab
+ms.openlocfilehash: 050db5574a1c10f01dadd1f53bb8e5a5aee2625a922680fe44f50a76e07ada97
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/17/2021
-ms.locfileid: "114394211"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118389131"
 ---
 # <a name="ip-helper-functions"></a>IP-Hilfsfunktionen
 

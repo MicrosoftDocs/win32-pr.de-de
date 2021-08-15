@@ -1,9 +1,9 @@
 ---
-title: Inribbongallery. menulayout (Eigenschaft)
-description: Stellt einen Container für In-Ribbon Katalog-Dropdown Menü Layouts dar.
+title: InRibbonGallery.MenuLayout-Eigenschaft
+description: Stellt einen Container für In-Ribbon-Katalog-Dropdownmenülayouts dar.
 ms.assetid: 89e0eb39-2790-4571-a661-ab3ebafbb13f
 keywords:
-- Inribbongallery. menulayout-Eigenschaften Fenster (Menüband)
+- InRibbonGallery.MenuLayout-Eigenschaft Windows Menüband
 topic_type:
 - apiref
 api_name:
@@ -12,16 +12,16 @@ api_type:
 - NA
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 4d2fc5e0eab5d8dbc35cd9cb3be96e5d5d351416
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 6f3748e35280972f115ae22792f28847df675b3aafe8ac91d29d930c9fd15bca
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104040192"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117850763"
 ---
-# <a name="inribbongallerymenulayout-property"></a>Inribbongallery. menulayout (Eigenschaft)
+# <a name="inribbongallerymenulayout-property"></a>InRibbonGallery.MenuLayout-Eigenschaft
 
-Stellt einen Container für [in-Ribbon-](windowsribbon-controls-inribbongallery.md) Katalog-Dropdown Menü Layouts dar.
+Stellt einen Container für Menülayouts [im](windowsribbon-controls-inribbongallery.md) Menübandkatalog dar.
 
 ## <a name="usage"></a>Verbrauch
 
@@ -41,8 +41,8 @@ Es gibt keine Attribute.
 
 | Element                                                                           | BESCHREIBUNG                                    |
 |-----------------------------------------------------------------------------------|------------------------------------------------|
-| [**Flowmenulayout**](windowsribbon-element-flowmenulayout.md)<br/>         | Muss genau einmal auftreten<br/> <br/> |
-| [**Verticalmenulayout**](windowsribbon-element-verticalmenulayout.md)<br/> | Muss genau einmal auftreten<br/> <br/> |
+| [**FlowMenuLayout**](windowsribbon-element-flowmenulayout.md)<br/>         | Muss genau einmal auftreten<br/> <br/> |
+| [**VerticalMenuLayout**](windowsribbon-element-verticalmenulayout.md)<br/> | Muss genau einmal auftreten<br/> <br/> |
 
 
 
@@ -52,26 +52,26 @@ Es gibt keine Attribute.
 
 | Element                                                                     |
 |-----------------------------------------------------------------------------|
-| [**Inribbongallery**](windowsribbon-element-inribbongallery.md)<br/> |
+| [**InRibbonGallery**](windowsribbon-element-inribbongallery.md)<br/> |
 
 
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Dies ist optional.
+Optional.
 
-Kann höchstens einmal für jedes [**inribbongallery**](windowsribbon-element-inribbongallery.md) -Element auftreten.
+Kann höchstens einmal für jedes [**InRibbonGallery-Element**](windowsribbon-element-inribbongallery.md) auftreten.
 
 > [!Note]  
-> Maximal ein untergeordnetes Element ([**verticalmenulayout**](windowsribbon-element-verticalmenulayout.md) oder [**flowmenulayout**](windowsribbon-element-flowmenulayout.md)) ist zulässig.
+> Maximal ein untergeordnetes Element ([**VerticalMenuLayout**](windowsribbon-element-verticalmenulayout.md) oder [**FlowMenuLayout**](windowsribbon-element-flowmenulayout.md)) ist zulässig.
 
  
 
 ## <a name="examples"></a>Beispiele
 
-Im folgenden Beispiel wird das grundlegende Markup für den [in-Ribbon-](windowsribbon-controls-inribbongallery.md)Katalog veranschaulicht.
+Im folgenden Beispiel wird das grundlegende Markup für den [Katalog im Menüband](windowsribbon-controls-inribbongallery.md)veranschaulicht.
 
-In diesem Code Abschnitt wird die Deklaration des **inribbongallery. menulayout** -Steuer Elements veranschaulicht.
+Dieser Codeabschnitt zeigt die **InRibbonGallery.MenuLayout-Steuerelementdeklaration.**
 
 
 ```XML
@@ -108,19 +108,19 @@ In diesem Code Abschnitt wird die Deklaration des **inribbongallery. menulayout*
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows 7 \[ -Desktop-Apps\]<br/>              |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2008 R2 \[ -Desktop-Apps\]<br/> |
+| Unterstützte Mindestversion (Client)<br/> | nur Windows 7 \[ Desktop-Apps\]<br/>              |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server 2008 \[ R2-Desktop-Apps\]<br/> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[In-Ribbon Gallery-Steuerelement](windowsribbon-controls-inribbongallery.md)
+[Katalogsteuerelement im Menüband](windowsribbon-controls-inribbongallery.md)
 </dt> <dt>
 
-[Arbeiten mit Galerien](ribbon-controls-galleries.md)
+[Arbeiten mit Katalogen](ribbon-controls-galleries.md)
 </dt> </dl>
 
  

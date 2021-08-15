@@ -1,19 +1,19 @@
 ---
-description: Tritt auf, wenn sich die Auswahl von frei Hand Eingaben innerhalb des-Steuer Elements geändert hat, z. b. durch Änderungen an der Benutzeroberfläche, Ausschneide-und Einfüge Prozeduren oder die Selection-Eigenschaft
+description: Tritt ein, wenn sich die Auswahl von Freihand innerhalb des Steuerelements geändert hat, z. B. durch Änderungen an der Benutzeroberfläche, Ausschneide- und Einfügeverfahren oder die Selection-Eigenschaft.
 ms.assetid: 6b4cd9fe-b09f-4a70-9aa5-92ef9409ff1b
-title: InkOverlay. SelectionChanged-Ereignis (msink AUT. h)
+title: InkOverlay.SelectionChanged-Ereignis (Msinkaut.h)
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 997e0c8e9620b0a269ff8cd97ff04aa3abfb1df0
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 11bbe4e239b1100277adea0b784a93bf16bf8497cfd8dd44877f7fe7e3fd7652
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106366173"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118218973"
 ---
-# <a name="inkoverlayselectionchanged-event"></a>InkOverlay. SelectionChanged-Ereignis
+# <a name="inkoverlayselectionchanged-event"></a>InkOverlay.SelectionChanged-Ereignis
 
-Tritt auf, wenn sich die Auswahl von frei Hand Eingaben innerhalb des-Steuer Elements geändert hat, z. b. durch Änderungen an der Benutzeroberfläche, Ausschneide-und Einfüge Prozeduren oder die [**Selection**](/windows/desktop/api/msinkaut/nf-msinkaut-iinkoverlay-get_selection) -Eigenschaft
+Tritt ein, wenn sich die Auswahl von Freihand innerhalb des Steuerelements geändert hat, z. [](/windows/desktop/api/msinkaut/nf-msinkaut-iinkoverlay-get_selection) B. durch Änderungen an der Benutzeroberfläche, Ausschneide- und Einfügeverfahren oder die Selection-Eigenschaft.
 
 ## <a name="syntax"></a>Syntax
 
@@ -26,17 +26,17 @@ void SelectionChanged();
 
 ## <a name="parameters"></a>Parameter
 
-Dieses Ereignis weist keine Parameter auf.
+Dieses Ereignis verfügt über keine Parameter.
 
 ## <a name="return-value"></a>Rückgabewert
 
 Dieses Ereignis gibt keinen Wert zurück.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
 Es sind keine Ereignisdaten vorhanden.
 
-Diese Ereignismethode wird in den \_ Dispatch-only-Schnittstellen iinkoverlayevents und \_ iinkpictureevents (Dispinterfaces) mit der ID DISPID \_ ioeselectionchanged definiert.
+Diese Ereignismethode wird in den \_ Dispatch-Only-Schnittstellen IInkOverlayEvents und \_ IInkPictureEvents (dispinterfaces) mit der ID DISPID \_ IOESelectionChanged definiert.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -44,21 +44,21 @@ Diese Ereignismethode wird in den \_ Dispatch-only-Schnittstellen iinkoverlayeve
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows XP Tablet PC Edition \[ Desktop-Apps\]<br/>                                                       |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur Desktop-Apps der XP Tablet PC Edition \[\]<br/>                                                       |
 | Unterstützte Mindestversion (Server)<br/> | Nicht unterstützt<br/>                                                                                           |
-| Header<br/>                   | <dl> <dt>Msink AUT. h (erfordert auch msink AUT \_ i. c)</dt> </dl> |
+| Header<br/>                   | <dl> <dt>Msinkaut.h (erfordert auch Msinkaut \_ i.c)</dt> </dl> |
 | Bibliothek<br/>                  | <dl> <dt>InkObj.dll</dt> </dl>                               |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
 [**InkOverlay-Klasse**](inkoverlay-class.md)
 </dt> <dt>
 
-[**Auswahl Eigenschaft**](/windows/desktop/api/msinkaut/nf-msinkaut-iinkoverlay-get_selection)
+[**Selection-Eigenschaft**](/windows/desktop/api/msinkaut/nf-msinkaut-iinkoverlay-get_selection)
 </dt> </dl>
 
  

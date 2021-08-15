@@ -1,19 +1,19 @@
 ---
-description: Die printhoodfolder-Eigenschaft ist der vollständige Pfad zum Ordner printhood.
+description: Die PrintHoodFolder-Eigenschaft ist der vollständige Pfad zum Ordner PrintHood.
 ms.assetid: 5cf9489c-dbba-446d-b3f6-15e9b3176904
-title: Printhoodfolder (Eigenschaft)
+title: PrintHoodFolder(Eigenschaft)
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: c8a62ee918a6b05c6e445cfadb0af66f423a9c96
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 1c58d8779559075d640f14448edfc4a063106cd00e6a8aa3e1ab9f00ee281322
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106371269"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118376759"
 ---
-# <a name="printhoodfolder-property"></a>Printhoodfolder (Eigenschaft)
+# <a name="printhoodfolder-property"></a>PrintHoodFolder(Eigenschaft)
 
-Die **printhoodfolder** -Eigenschaft ist der vollständige Pfad zum Ordner printhood.
+Die **PrintHoodFolder-Eigenschaft** ist der vollständige Pfad zum Ordner PrintHood.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -21,7 +21,7 @@ Die **printhoodfolder** -Eigenschaft ist der vollständige Pfad zum Ordner print
 
 | Anforderung | Wert |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Version<br/> | Windows Installer 5,0 unter Windows Server 2012, Windows 8, Windows Server 2008 R2 oder Windows 7. Windows Installer 4,0 oder Windows Installer 4,5 unter Windows Server 2008 oder Windows Vista. Windows Installer unter Windows Server 2003 oder Windows XP. Informationen zu den minimalen Windows-Service Pack, die für eine Windows Installer Version erforderlich sind, finden Sie in den [Windows Installer Run-Time Anforderungen](windows-installer-portal.md) .<br/> |
+| Version<br/> | Windows Installer 5.0 auf Windows Server 2012, Windows 8, Windows Server 2008 R2 oder Windows 7. Windows Installer 4.0 oder Windows Installer 4.5 auf Windows Server 2008 oder Windows Vista. Windows Installationsprogramm auf Windows Server 2003 oder Windows XP. Informationen zum [Windows Service](windows-installer-portal.md) Pack, das für eine Windows Installer-Version erforderlich ist, finden Sie unter Windows Installer Run-Time Anforderungen.<br/> |
 
 
 

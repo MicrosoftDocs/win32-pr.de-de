@@ -4,12 +4,12 @@ description: Tastatureingabefunktionen
 ms.assetid: 731b8209-1ca8-4667-bd39-7bd0cef45380
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: c1b690a93c2813eca7c7b4487e42bfc8664bd894
-ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
+ms.openlocfilehash: 9c5d0bbff14cf6475dc898a35fb0b1ab9b13bfa32f6bad2fabdf012c1f8956db
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2021
-ms.locfileid: "108112948"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118757662"
 ---
 # <a name="keyboard-input-functions"></a>Tastatureingabefunktionen
 
@@ -31,7 +31,7 @@ ms.locfileid: "108112948"
 -   [**GetKeyState**](/windows/win32/api/winuser/nf-winuser-getkeystate)
 -   [**GetLastInputInfo**](/windows/win32/api/winuser/nf-winuser-getlastinputinfo)
 -   [**IsWindowEnabled**](/windows/win32/api/winuser/nf-winuser-iswindowenabled)
--   [**keybd-Ereignis \_**](/windows/win32/api/winuser/nf-winuser-keybd_event)
+-   [**\_keybd-Ereignis**](/windows/win32/api/winuser/nf-winuser-keybd_event)
 -   [**LoadKeyboardLayout**](/windows/win32/api/winuser/nf-winuser-loadkeyboardlayouta)
 -   [**MapVirtualKey**](/windows/win32/api/winuser/nf-winuser-mapvirtualkeya)
 -   [**MapVirtualKeyEx**](/windows/win32/api/winuser/nf-winuser-mapvirtualkeyexa)

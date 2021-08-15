@@ -24,7 +24,7 @@ ms.locfileid: "118433611"
 ---
 # <a name="iconfigasfwritersetindexmode-method"></a>IConfigAsfWriter::SetIndexMode-Methode
 
-Mit **der SetIndexMode-Methode** kann die Anwendung steuern, ob die Datei temporal indiziert wird.
+Mit der **SetIndexMode-Methode** kann die Anwendung steuern, ob die Datei temporal indiziert wird.
 
 ## <a name="syntax"></a>Syntax
 
@@ -44,7 +44,7 @@ HRESULT SetIndexMode(
 *bIndexFile* \[ In\]
 </dt> <dd>
 
-Variable vom Typ **BOOL;** **TRUE** gibt an, dass die Datei temporal indiziert wird.
+Variable vom Typ **BOOL**; **TRUE** gibt an, dass die Datei temporal indiziert wird.
 
 </dd> </dl>
 
@@ -54,7 +54,7 @@ Wenn die Methode erfolgreich ist, wird S \_ OK zurückgegeben. Wenn ein Fehler a
 
 ## <a name="remarks"></a>Hinweise
 
-Standardmäßig erstellt der [WM ASF Writer](wm-asf-writer-filter.md) temporal indizierte ASF-Dateien. Sie führt die Indizierung aus, wenn das Diagramm beendet wird. Sie können dieses Verhalten deaktivieren, wenn Sie ihre eigene framebasierte Indizierung als Nachbearbeitungsschritt verwenden möchten. Rufen Sie zum Erstellen einer frameindizierten Datei **SetIndexMode**(FALSE) auf, erstellen Sie die Datei, und verwenden Sie dann direkt die SDK-Methoden für das Windows-Medienformat, um einen framebasierten Index für die Datei zu erstellen.
+Standardmäßig erstellt WM [ASF Writer](wm-asf-writer-filter.md) temporal indizierte ASF-Dateien. Die Indizierung wird ausgeführt, wenn das Diagramm beendet wird. Sie können dieses Verhalten deaktivieren, wenn Sie eine eigene framebasierte Indizierung als Nachbearbeitungsschritt durchführen möchten. Um eine frameindizierte Datei zu erstellen, rufen **Sie SetIndexMode**(FALSE) auf, erstellen Sie die Datei, und verwenden Sie dann die methoden Windows Media Format SDK direkt, um einen framebasierten Index für die Datei zu erstellen.
 
 ## <a name="see-also"></a>Weitere Informationen
 

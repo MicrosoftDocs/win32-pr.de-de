@@ -1,6 +1,6 @@
 ---
-description: 'Weitere Informationen finden Sie hier: esentapiexception-Konstruktor'
-title: Esentapiexception-Konstruktor
+description: 'Weitere Informationen zu: EsentApiException-Konstruktor'
+title: EsentApiException-Konstruktor
 TOCTitle: 'EsentApiException constructor '
 ms:assetid: Overload:Microsoft.Isam.Esent.Interop.EsentApiException.#ctor
 ms:mtpsurl: https://msdn.microsoft.com/library/microsoft.isam.esent.interop.esentapiexception.esentapiexception(v=EXCHG.10)
@@ -14,17 +14,17 @@ dev_langs:
 - JScript
 - VB
 - other
-ms.openlocfilehash: 442facd9bec7c56e90738c95e1feb7fbc8f34b3e
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: ceb80ee7778389e9dc79b732fba73d8c986483f160822492b05a6a26630a9fa5
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104524691"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117716106"
 ---
-# <a name="esentapiexception-constructor"></a>Esentapiexception-Konstruktor
+# <a name="esentapiexception-constructor"></a>EsentApiException-Konstruktor
 
-Geschützte Member einschließen  
-Geerbte Member einschließen  
+Einschließen geschützter Member  
+Einschließen geerbter Member  
 
 ## <a name="overload-list"></a>Überladeliste
 
@@ -39,13 +39,13 @@ Geerbte Member einschließen
 <tbody>
 <tr class="odd">
 <td><img src="../images/dn292116.protmethod(exchg.10).gif" title="Geschützte Methode" alt="Protected method" /></td>
-<td><a href="dn274003(v=exchg.10).md">Esentapiexception (SerializationInfo, StreamingContext)</a></td>
-<td>Initialisiert eine neue Instanz der esentapiexception-Klasse. Dieser Konstruktor wird verwendet, um eine serialisierte Ausnahme zu deserialisieren.</td>
+<td><a href="dn274003(v=exchg.10).md">EsentApiException(SerializationInfo, StreamingContext)</a></td>
+<td>Initialisiert eine neue Instanz der EsentApiException-Klasse. Dieser Konstruktor wird verwendet, um eine serialisierte Ausnahme zu deserialisieren.</td>
 </tr>
 <tr class="even">
 <td><img src="../images/dn292116.protmethod(exchg.10).gif" title="Geschützte Methode" alt="Protected method" /></td>
-<td><a href="dn274002(v=exchg.10).md">Esentapiexception (Zeichenfolge, JET_err)</a></td>
-<td>Initialisiert eine neue Instanz der esentapiexception-Klasse.</td>
+<td><a href="dn274002(v=exchg.10).md">EsentApiException(String, JET_err)</a></td>
+<td>Initialisiert eine neue Instanz der EsentApiException-Klasse.</td>
 </tr>
 </tbody>
 </table>
@@ -53,12 +53,12 @@ Geerbte Member einschließen
 
 Oben
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
-#### <a name="reference"></a>Referenz
+#### <a name="reference"></a>Verweis
 
-[Esentapiexception-Klasse](./esentapiexception-class.md)
+[EsentApiException-Klasse](./esentapiexception-class.md)
 
-[Esentapiexception-Member](./esentapiexception-members.md)
+[EsentApiException-Member](./esentapiexception-members.md)
 
-[Microsoft. ISAM. ESENT. Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)
+[Microsoft.Isam.Esent.Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)

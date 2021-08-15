@@ -1,9 +1,9 @@
 ---
-title: LVM_GETFOOTERRECT Meldung (kommstrg. h)
-description: Ruft die Koordinaten der Fußzeile für ein Listenansicht-Steuerelement ab. Senden Sie diese Nachricht explizit oder mithilfe des ListView \_ getfooterrect-Makros.
+title: LVM_GETFOOTERRECT-Nachricht (Commctrl.h)
+description: Ruft die Koordinaten der Fußzeile für ein Listenansicht-Steuerelement ab. Senden Sie diese Nachricht explizit oder mithilfe des ListView \_ GetFooterRect-Makros.
 ms.assetid: f8816f35-c1d2-4072-81d3-0a9a3df53d64
 keywords:
-- Windows-Steuerelemente für LVM_GETFOOTERRECT Meldung
+- LVM_GETFOOTERRECT Windows-Steuerelemente für Nachrichten
 topic_type:
 - apiref
 api_name:
@@ -14,16 +14,16 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 31df3a1b7b29e5ad9191da9e990e04daec99e948
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 39bc2c5cd724c9b5b4885b99123489e49ead52243d43388e7eb22808fb43a826
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104102894"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118411459"
 ---
-# <a name="lvm_getfooterrect-message"></a>LVM- \_ getfooterrect-Nachricht
+# <a name="lvm_getfooterrect-message"></a>LVM \_ GETFOOTERRECT-Nachricht
 
-Ruft die Koordinaten der Fußzeile für ein Listenansicht-Steuerelement ab. Senden Sie diese Nachricht explizit oder mithilfe des [**ListView \_ getfooterrect**](/windows/desktop/api/Commctrl/nf-commctrl-listview_getfooterrect) -Makros.
+Ruft die Koordinaten der Fußzeile für ein Listenansicht-Steuerelement ab. Senden Sie diese Nachricht explizit oder mithilfe des [**ListView \_ GetFooterRect-Makros.**](/windows/desktop/api/Commctrl/nf-commctrl-listview_getfooterrect)
 
 ## <a name="parameters"></a>Parameter
 
@@ -32,20 +32,20 @@ Ruft die Koordinaten der Fußzeile für ein Listenansicht-Steuerelement ab. Send
 *wParam* 
 </dt> <dd>
 
-Nicht verwendet. Muss den Wert 0 (null) haben.
+Wird nicht verwendet. Muss den Wert 0 (null) haben.
 
 </dd> <dt>
 
-*LPARAM* \[ in, out\]
+*lParam* \[ in, out\]
 </dt> <dd>
 
-Ein Zeiger auf eine [**Rect**](/previous-versions//dd162897(v=vs.85)) -Struktur, die die Koordinaten empfängt. Der Aufrufprozess ist für die Zuordnung dieser Struktur verantwortlich. Die empfangenen Koordinaten werden als Client Koordinaten ausgedrückt.
+Ein Zeiger auf eine [**RECT-Struktur,**](/previous-versions//dd162897(v=vs.85)) um die Koordinaten zu empfangen. Der aufrufende Prozess ist für die Zuordnung dieser Struktur verantwortlich. Die empfangenen Koordinaten werden als Clientkoordinaten ausgedrückt.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt **true** zurück, wenn erfolgreich, andernfalls **false** .
+Gibt **TRUE** zurück, wenn erfolgreich, **andernfalls FALSE.**
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -53,9 +53,9 @@ Gibt **true** zurück, wenn erfolgreich, andernfalls **false** .
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>                                        |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2008 \[ -Desktop-Apps\]<br/>                                  |
-| Header<br/>                   | <dl> <dt>Kommstrg. h</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows \[Nur Vista-Desktop-Apps\]<br/>                                        |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2008-Desktop-Apps\]<br/>                                  |
+| Header<br/>                   | <dl> <dt>Commctrl.h</dt> </dl> |
 
 
 

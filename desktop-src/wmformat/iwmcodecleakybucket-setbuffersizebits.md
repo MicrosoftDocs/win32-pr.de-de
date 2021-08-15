@@ -1,9 +1,9 @@
 ---
-title: Setbuffersizebits
-description: Aktuelle Dokumentation zu Windows Media Codecs und digitalen Signalprozessoren finden Sie unter Windows Media Audio-und Videocodec-und DSP-APIs. | Setbuffersizebits
+title: SetBufferSizeBits
+description: Die aktuelle Dokumentation zu Windows Mediencodecs und digitalen Signalprozessoren finden Sie unter Windows Media Audio and Video Codec and DSP APIs (Medienaudio- und Videocodec und DSP-APIs). | SetBufferSizeBits
 ms.assetid: f5993947-c75a-4783-8ec9-6026f9f3e1a8
 keywords:
-- Setbuffersizebits Windows Media-Format
+- SetBufferSizeBits-Windows-Medienformat
 topic_type:
 - apiref
 api_name:
@@ -12,16 +12,16 @@ api_type:
 - NA
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 0ab27884140df92d1089fe9c1f8c4bc9ec547336
-ms.sourcegitcommit: 92e74c99f8f4d097676959d0c317f533c2400a80
+ms.openlocfilehash: 37d06f60b49139abd6a0e72ac2bc33030ba21ead70ad9bce98fd201e492b8ec1
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/09/2021
-ms.locfileid: "104530674"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118701678"
 ---
-# <a name="setbuffersizebits"></a>Setbuffersizebits
+# <a name="setbuffersizebits"></a>SetBufferSizeBits
 
-Aktuelle Dokumentation zu Windows Media Codecs und digitalen Signalprozessoren finden Sie unter [Windows Media Audio-und Videocodec-und DSP-APIs.](/previous-versions//dd464626(v=vs.85))
+Die aktuelle Dokumentation zu Windows Mediencodecs und digitalen Signalprozessoren finden Sie unter Windows Media Audio and Video Codec and DSP APIs (Medienaudio- und Videocodec und [DSP-APIs).](/previous-versions//dd464626(v=vs.85))
 
  
 

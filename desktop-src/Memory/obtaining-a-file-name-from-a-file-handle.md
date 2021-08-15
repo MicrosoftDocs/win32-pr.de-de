@@ -1,19 +1,19 @@
 ---
-description: Getfinalpathnamebyhandle, eingeführt in Windows Vista und Windows Server 2008, gibt einen Pfad von einem Handle zurück.
+description: GetFinalPathNameByHandle, eingeführt in Windows Vista und Windows Server 2008, gibt einen Pfad von einem Handle zurück.
 ms.assetid: 359673bf-cc4c-4881-b946-ecdbef4a7ecb
-title: Abrufen eines Datei namens aus einem Datei Handle
+title: Abrufen eines Dateinamens aus einem Dateihand handle
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: ee7d0c6fd8ea6839fdbfbe887f7a28b38571013b
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 1f905051fdc9c26d16c00f3f1acb2629ae06b8581abb5e5de50944a74e0c6b8d
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106363006"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118386413"
 ---
-# <a name="obtaining-a-file-name-from-a-file-handle"></a>Abrufen eines Datei namens aus einem Datei Handle
+# <a name="obtaining-a-file-name-from-a-file-handle"></a>Abrufen eines Dateinamens aus einem Dateihand handle
 
-[**Getfinalpathnamebyhandle**](/windows/win32/api/fileapi/nf-fileapi-getfinalpathnamebyhandlea), eingeführt in Windows Vista und Windows Server 2008, gibt einen Pfad von einem Handle zurück. Wenn Sie dies in früheren Versionen von Windows tun müssen, wird im folgenden Beispiel ein Dateiname von einem Handle zu einem File-Objekt mithilfe eines Datei Mapping-Objekts abgerufen. Zum Erstellen der Zuordnung werden die Funktionen "| [**atefilemapping**](/windows/desktop/api/WinBase/nf-winbase-createfilemappinga) " und " [**MapViewOfFile**](/windows/win32/api/memoryapi/nf-memoryapi-mapviewoffile) " verwendet. Im nächsten Schritt wird die [**GetMappedFileName**](/windows/win32/api/psapi/nf-psapi-getmappedfilenamea) -Funktion verwendet, um den Dateinamen abzurufen. Bei Remote Dateien wird der von dieser Funktion empfangene Gerätepfad ausgegeben. Bei lokalen Dateien wird der Pfad zur Verwendung eines Laufwerk Buchstabens konvertiert und dieser Pfad ausgegeben. Um diesen Code zu testen, [**Erstellen Sie eine**](/windows/win32/api/fileapi/nf-fileapi-createfilea) **Main** -Funktion, die eine Datei mithilfe von "" erstellt und das resultierende Handle an übergibt `GetFileNameFromHandle` .
+[**GetFinalPathNameByHandle**](/windows/win32/api/fileapi/nf-fileapi-getfinalpathnamebyhandlea), eingeführt in Windows Vista und Windows Server 2008, gibt einen Pfad von einem Handle zurück. Wenn Sie dies für frühere Releases von Windows tun müssen, wird im folgenden Beispiel mithilfe eines Dateizuordnungsobjekts ein Dateiname aus einem Handle für ein Dateiobjekt erhalten. Zum Erstellen der Zuordnung werden die Funktionen [**CreateFileMapping**](/windows/desktop/api/WinBase/nf-winbase-createfilemappinga) und [**MapViewOfFile**](/windows/win32/api/memoryapi/nf-memoryapi-mapviewoffile) verwendet. Als Nächstes wird die [**GetMappedFileName-Funktion**](/windows/win32/api/psapi/nf-psapi-getmappedfilenamea) verwendet, um den Dateinamen zu erhalten. Bei Remotedateien wird der von dieser Funktion empfangene Gerätepfad gedruckt. Bei lokalen Dateien wird der Pfad so konvertiert, dass ein Laufwerkbuchstaben verwendet wird, und dieser Pfad wird gedruckt. Um diesen Code zu  testen, erstellen Sie eine Main-Funktion, die mit [**CreateFile**](/windows/win32/api/fileapi/nf-fileapi-createfilea) eine Datei öffnet und das resultierende Handle an `GetFileNameFromHandle` übergibt.
 
 
 ```C++
@@ -146,10 +146,10 @@ int _tmain(int argc, TCHAR *argv[])
 
 <dl> <dt>
 
-[Verwenden der Datei Zuordnung](using-file-mapping.md)
+[Verwenden der Dateizuordnung](using-file-mapping.md)
 </dt> <dt>
 
-[**Getfinalpathnamebyhandle**](/windows/win32/api/fileapi/nf-fileapi-getfinalpathnamebyhandlea)
+[**GetFinalPathNameByHandle**](/windows/win32/api/fileapi/nf-fileapi-getfinalpathnamebyhandlea)
 </dt> </dl>
 
  

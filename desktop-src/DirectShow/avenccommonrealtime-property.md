@@ -11,7 +11,7 @@ ms.contentlocale: de-DE
 ms.lasthandoff: 08/11/2021
 ms.locfileid: "118403890"
 ---
-# <a name="avenccommonrealtime-property"></a>AVEncCommonRealTime(Eigenschaft)
+# <a name="avenccommonrealtime-property"></a>AVEncCommonRealTime-Eigenschaft
 
 Gibt an, ob die Anwendung die Codierungsleistung in Echtzeit erfordert.
 

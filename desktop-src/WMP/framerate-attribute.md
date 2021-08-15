@@ -1,6 +1,6 @@
 ---
 title: FrameRate-Attribut (Windows Media Player SDK)
-description: FrameRate ist ein Dezimalwert, der die Bildfrequenz (in Frames pro Sekunde) für eine Videodatei angibt.
+description: FrameRate ist ein Dezimalwert, der die Bildrate (in Frames pro Sekunde) für eine Videodatei angibt.
 ms.assetid: 9ca54620-f877-4934-8fda-e5ae31566128
 keywords:
 - FrameRate-Attribut Windows Media Player
@@ -21,7 +21,7 @@ ms.locfileid: "118339144"
 ---
 # <a name="framerate-attribute"></a>FrameRate-Attribut
 
-**FrameRate ist** ein Dezimalwert, der die Bildfrequenz (in Frames pro Sekunde) für eine Videodatei angibt.
+**FrameRate** ist ein Dezimalwert, der die Bildrate (in Frames pro Sekunde) für eine Videodatei angibt.
 
 ## <a name="applies-to"></a>Gilt für
 
@@ -29,7 +29,7 @@ ms.locfileid: "118339144"
 
 ## <a name="remarks"></a>Hinweise
 
-Um zu bestimmen, ob Sie den Wert dieses Attributs ändern können, verwenden Sie die [Media.isReadOnlyItem-Methode.](media-isreadonlyitem.md)
+Verwenden Sie die [Media.isReadOnlyItem-Methode,](media-isreadonlyitem.md) um zu bestimmen, ob Sie den Wert dieses Attributs ändern können.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -45,7 +45,7 @@ Um zu bestimmen, ob Sie den Wert dieses Attributs ändern können, verwenden Sie
 
 <dl> <dt>
 
-[**Attributreferenz**](attribute-reference.md)
+[**Attributverweis**](attribute-reference.md)
 </dt> </dl>
 
  

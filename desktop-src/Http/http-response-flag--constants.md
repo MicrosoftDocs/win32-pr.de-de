@@ -1,6 +1,6 @@
 ---
-title: HTTP_RESPONSE_FLAG_ Konstanten (http. h)
-description: Definieren Sie die Optionen zum Konfigurieren von Antworten in der HTTP-Server-API.
+title: HTTP_RESPONSE_FLAG_ Konstanten (Http.h)
+description: Definieren Sie Optionen zum Konfigurieren von Antworten in der HTTP-Server-API.
 ms.assetid: bcb59457-fd22-4166-8a72-ba85209ec8c7
 topic_type:
 - apiref
@@ -12,27 +12,27 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 96b7c34d453c1b9bbe45cf2c85ad268b414f3439
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 3099012df5be9ed4a53d3072319be6dc47ede32b71567749c4668cd7870fee29
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "106337503"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118394408"
 ---
-# <a name="http_response_flag_-constants"></a>HTTP \_ - \_ antwortflag- \_ Konstanten
+# <a name="http_response_flag_-constants"></a>HTTP \_ RESPONSE \_ \_ FLAG-Konstanten
 
-Die **http \_ - \_ antwortflag \_** -Konstanten definieren Optionen zum Konfigurieren von Antworten in der HTTP-Server-API.
+Die **HTTP \_ RESPONSE \_ \_ FLAG-Konstanten** definieren Optionen zum Konfigurieren von Antworten in der HTTP-Server-API.
 
-Diese Konstanten werden im **Flags** -Member der HTTP- [**\_ Antwort \_ v1**](/windows/desktop/api/Http/ns-http-http_response_v1) -Struktur verwendet.
+Diese Konstanten werden im **Flags-Member** der [**HTTP RESPONSE \_ \_ V1-Struktur**](/windows/desktop/api/Http/ns-http-http_response_v1) verwendet.
 
 <dl> <dt>
 
-<span id="HTTP_RESPONSE_FLAG_MULTIPLE_ENCODINGS_AVAILABLE"></span><span id="http_response_flag_multiple_encodings_available"></span>**HTTP- \_ Antwort Kennzeichen \_ \_ mehrere \_ Codierungen \_ verfügbar**
+<span id="HTTP_RESPONSE_FLAG_MULTIPLE_ENCODINGS_AVAILABLE"></span><span id="http_response_flag_multiple_encodings_available"></span>**\_ \_ HTTP-ANTWORTFLAG: \_ MEHRERE \_ CODIERUNGEN \_ VERFÜGBAR**
 </dt> <dd> <dl> <dt>
 
 
 
-Andere Codierungen als das Identitäts Formular sind für diese Ressource verfügbar. Dieses Flag wird ignoriert, wenn die Anwendung nicht zum Zwischenspeichern aufgefordert wurde. Sie wird als Hinweis für die HTTP-Server-API für die Aushandlung von Inhalten verwendet, wenn Sie aus dem Kernel-Antwort Cache bedient wird.
+Für diese Ressource sind andere Codierungen als identitätsformulare verfügbar. Dieses Flag wird ignoriert, wenn die Anwendung nicht angefordert hat, dass die Antwort zwischengespeichert wird. Sie wird als Hinweis auf die HTTP-Server-API für die Inhaltsaushandlung verwendet, wenn sie aus dem Kernelantwortcache bereitgestellt wird.
 
 
 </dt> </dl> </dd> </dl>
@@ -43,20 +43,20 @@ Andere Codierungen als das Identitäts Formular sind für diese Ressource verfü
 
 | Anforderung | Wert |
 |-------------------------------------|-----------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows 7 \[ -Desktop-Apps\]<br/>                                        |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2008 R2 \[ -Desktop-Apps\]<br/>                           |
-| Header<br/>                   | <dl> <dt>Http. h</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | nur Windows 7 \[ Desktop-Apps\]<br/>                                        |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server 2008 \[ R2-Desktop-Apps\]<br/>                           |
+| Header<br/>                   | <dl> <dt>Http.h</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[HTTP-Server-API, Version 2,0, Konstanten](http-server-api-version-2-0-constants.md)
+[HTTP-Server-API- Version 2.0-Konstanten](http-server-api-version-2-0-constants.md)
 </dt> <dt>
 
-[**HTTP- \_ Antwort \_ v1**](/windows/desktop/api/Http/ns-http-http_response_v1)
+[**HTTP \_ RESPONSE \_ V1**](/windows/desktop/api/Http/ns-http-http_response_v1)
 </dt> </dl>
 
  

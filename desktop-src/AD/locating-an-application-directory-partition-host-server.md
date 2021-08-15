@@ -1,32 +1,32 @@
 ---
-title: Suchen eines Anwendungsverzeichnis-Partitions Host Servers
-description: In diesem Thema wird beschrieben, wie Sie einen Anwendungsverzeichnis-Partitions Host Server finden.
+title: Suchen eines Anwendungsverzeichnispartitionshostservers
+description: In diesem Thema wird beschrieben, wie Sie einen Hostserver für die Anwendungsverzeichnispartition suchen.
 ms.assetid: 636e8bc2-136c-42be-aa64-1b059dedf775
 ms.tgt_platform: multiple
 keywords:
-- Suchen eines Anwendungsverzeichnis-Partitions Host Server-AD
-- Anwendungsverzeichnis Partitionen AD, Suchen eines Host Servers
+- Suchen eines Anwendungsverzeichnispartitionshostservers AD
+- Anwendungsverzeichnispartitionen AD , Suchen eines Hostservers
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: d5c9e8f80ccf4b1549af9a76e7b588685d38c297
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: e3cef9442d694b80893f67d5530b83aa188df4d172028271117492ed221bd239
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "103707607"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118186791"
 ---
-# <a name="locating-an-application-directory-partition-host-server"></a>Suchen eines Anwendungsverzeichnis-Partitions Host Servers
+# <a name="locating-an-application-directory-partition-host-server"></a>Suchen eines Anwendungsverzeichnispartitionshostservers
 
-Der Anmeldedienst registriert die folgende Liste der SRV-Einträge für eine Anwendungsverzeichnis Partition:
+Der NetLogon-Dienst registriert die folgende Liste von SRV-Einträgen für eine Anwendungsverzeichnispartition:
 
--   \_LDAP. \_ TCP.<partition name>
--   \_LDAP. \_ TCP. <site name> . \_ Websites.<partition name>
+-   \_ldap. \_ Tcp.<partition name>
+-   \_ldap. \_ tcp. <site name> . \_ Websites.<partition name>
 
-Wenn Sie einen Domänen Controller suchen möchten, der ein Replikat einer angegebenen Anwendungsverzeichnis Partition hostet, müssen Sie die Funktion [**DsGetDcName**](/windows/desktop/api/DsGetDC/nf-dsgetdc-dsgetdcnamea) mit dem Parameter *Domain Name* auf den DNS-Namen der Anwendungsverzeichnis Partition und das nur für die **nur erforderliche DS-Flag für \_ \_ LDAP \_ erforderliche** Flag im *Flags* -Parameter festlegen. Weitere Informationen und ein Codebeispiel, das zeigt, wie Sie mithilfe der **DsGetDcName** -Funktion einen Domänen Controller suchen, der ein Replikat einer Anwendungsverzeichnis Partition hostet, finden Sie unter [Beispielcode für die Suche eines Anwendungsverzeichnis-Partitions Host Servers](example-code-for-locating-an-application-directory-partition-host-server.md).
+Um einen Domänencontroller zu finden, der ein Replikat einer angegebenen Anwendungsverzeichnispartition hostet, rufen Sie die [**DsGetDcName-Funktion**](/windows/desktop/api/DsGetDC/nf-dsgetdc-dsgetdcnamea) auf, wobei der *DomainName-Parameter* auf den DNS-Namen der Anwendungsverzeichnispartition und das **Flag DS \_ ONLY LDAP \_ \_ NEEDED** im *Flags-Parameter* festgelegt ist. Weitere Informationen und ein Codebeispiel, das zeigt, wie Sie mithilfe der **DsGetDcName-Funktion** einen Domänencontroller finden, der ein Replikat einer Anwendungsverzeichnispartition hostet, finden Sie unter [Beispielcode zum Suchen eines Hostservers für die Anwendungsverzeichnispartition.](example-code-for-locating-an-application-directory-partition-host-server.md)
 
- 
+ 
 
- 
+ 
 
 
 

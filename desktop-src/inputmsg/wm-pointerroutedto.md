@@ -1,9 +1,9 @@
 ---
-title: WM_POINTERROUTEDTO Meldung
-description: Wird gesendet, wenn fortlaufende Zeiger Eingaben für eine vorhandene Zeiger-ID von einem Prozess in einen anderen über den Inhalt, der für prozessübergreifende Verkettung konfiguriert ist (addcontentwithcrossprocesschaining), übertragen werden.
+title: WM_POINTERROUTEDTO-Nachricht
+description: Wird gesendet, wenn eine laufende Zeigereingabe für eine vorhandene Zeiger-ID zwischen den inhalten über geht, die für prozessübergreifende Verkettung konfiguriert sind (AddContentWithCrossProcessChaining).
 ms.assetid: 163E2C31-4E29-4CBA-B079-1963D4762D7B
 keywords:
-- Eingabe Meldungen und Benachrichtigungen der WM_POINTERROUTEDTO Nachricht
+- 'WM_POINTERROUTEDTO-Nachricht: Eingabemeldungen und Benachrichtigungen'
 topic_type:
 - apiref
 api_name:
@@ -14,18 +14,18 @@ api_type:
 - HeaderDef
 ms.topic: article
 ms.date: 02/03/2020
-ms.openlocfilehash: 7658aeef77a0f7e19f2449213e9332b4e60c9450
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 9b7de7dd1affb9100a29613e3b4186d3d5bdaa32d853e683579fdcc62e7f981f
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104391788"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117695621"
 ---
-# <a name="wm_pointerroutedto-message"></a>WM_POINTERROUTEDTO Meldung
+# <a name="wm_pointerroutedto-message"></a>WM_POINTERROUTEDTO-Nachricht
 
-Wird gesendet, wenn fortlaufende Zeiger Eingaben für eine vorhandene Zeiger-ID von einem Prozess in einen anderen über den Inhalt, der für prozessübergreifende Verkettung konfiguriert ist ([**addcontentwithcrossprocesschaining**](/windows/win32/api/directmanipulation/nf-directmanipulation-idirectmanipulationcompositor2-addcontentwithcrossprocesschaining)), übertragen werden.
+Wird bei laufender Zeigereingabe für eine vorhandene Zeiger-ID gesendet und über den für prozessübergreifende Verkettung konfigurierten Inhalt von einem Prozess in einen anderen übergewechselt ([**AddContentWithCrossProcessChaining**](/windows/win32/api/directmanipulation/nf-directmanipulation-idirectmanipulationcompositor2-addcontentwithcrossprocesschaining)).
 
-Diese Meldung wird an den Prozess gesendet, der derzeit keine Zeiger Eingaben empfängt.
+Diese Meldung wird an den Prozess gesendet, der derzeit keine Zeigereingabe empfängt.
 
 
 ```C++
@@ -56,11 +56,11 @@ Nicht verwendet.
 
 NULL
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Diese Meldung wird nicht gesendet, wenn eine [**WM_POINTERDOWN**](wm-pointerdown.md) Nachricht für eine neue Zeiger-ID in einem anderen Prozess gepostet wird.
+Diese Meldung wird nicht gesendet, [**wenn WM_POINTERDOWN**](wm-pointerdown.md) eine neue Zeiger-ID in einem anderen Prozess gesendet wird.
 
-Eine [**WM_POINTERDOWN**](wm-pointerdown.md) Meldung wird nicht gesendet, wenn zuerst eine **WM_POINTERROUTEDTO** Meldung gesendet wird.
+Eine [**WM_POINTERDOWN**](wm-pointerdown.md) wird nicht gesendet, wenn **eine** WM_POINTERROUTEDTO zuerst gesendet wird.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -68,13 +68,13 @@ Eine [**WM_POINTERDOWN**](wm-pointerdown.md) Meldung wird nicht gesendet, wenn z
 
 | Anforderung | Wert |
 |-------------------------------------|----------------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows 10 \[ -Desktop-Apps\]<br/>                                                              |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2016 \[ -Desktop-Apps\]<br/>                                                     |
-| Header<br/>                   | <dl> <dt>Winuser. h (Windows. h einschließen)</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | \[Windows 10 Nur Desktop-Apps\]<br/>                                                              |
+| Unterstützte Mindestversion (Server)<br/> | \[Windows Server 2016 Nur Desktop-Apps\]<br/>                                                     |
+| Header<br/>                   | <dl> <dt>Winuser.h (include Windows.h)</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 

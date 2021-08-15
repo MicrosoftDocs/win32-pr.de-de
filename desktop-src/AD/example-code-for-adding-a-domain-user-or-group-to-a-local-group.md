@@ -1,22 +1,22 @@
 ---
-title: Beispiel Code für das Hinzufügen eines Domänen Benutzers oder einer Gruppe zu einer lokalen Gruppe
-description: Dieses Thema enthält ein Codebeispiel, das zeigt, wie Sie einen Domänen Benutzer oder eine Gruppe zu einer lokalen Gruppe auf einem Mitglieds Server oder einem Computer hinzufügen, der auf Windows NT-Arbeitsstation oder Windows 2000 Professional ausgeführt wird.
+title: Beispielcode zum Hinzufügen eines Domänenbenutzers oder einer Gruppe zu einer lokalen Gruppe
+description: Dieses Thema enthält ein Codebeispiel, das zeigt, wie Sie einen Domänenbenutzer oder eine Gruppe zu einer lokalen Gruppe auf einem Mitgliedsserver oder einem Computer hinzufügen, der auf Windows NT-Arbeitsstation oder Windows 2000 Professional ausgeführt wird.
 ms.assetid: 6333ce9f-0396-4af7-9e81-f008cf4536ec
 ms.tgt_platform: multiple
 keywords:
-- Active Directory Beispiele Active Directory, Hinzufügen eines Domänen Benutzers oder einer Gruppe zu einer lokalen Gruppe
+- 'Active Directory-Beispiele: Active Directory, Hinzufügen eines Domänenbenutzers oder einer Gruppe zu einer lokalen Gruppe'
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 539e8fbbeed3d865a0878236745b7a3c74c76d27
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: bdca65c26c6ab1195dcd0d7fc3f44b36e39bed1d15e97627664754c918e57e96
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "103707685"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118694688"
 ---
-# <a name="example-code-for-adding-a-domain-user-or-group-to-a-local-group"></a>Beispiel Code für das Hinzufügen eines Domänen Benutzers oder einer Gruppe zu einer lokalen Gruppe
+# <a name="example-code-for-adding-a-domain-user-or-group-to-a-local-group"></a>Beispielcode zum Hinzufügen eines Domänenbenutzers oder einer Gruppe zu einer lokalen Gruppe
 
-Im folgenden C++-Codebeispiel wird ein Domänen Benutzer oder eine Gruppe zu einer lokalen Gruppe auf einem Mitglieds Server oder einem Computer hinzugefügt, der auf Windows NT-Arbeitsstation oder Windows 2000 Professional ausgeführt wird.
+Im folgenden C++-Codebeispiel wird ein Domänenbenutzer oder eine Gruppe einer lokalen Gruppe auf einem Mitgliedsserver oder einem Computer hinzugefügt, der auf Windows NT-Arbeitsstation oder Windows 2000 Professional ausgeführt wird.
 
 
 ```C++
@@ -106,7 +106,7 @@ HRESULT AddDomainUserToLocalGroup(LPCWSTR pwszComputerName,
 
 
 
-Im folgenden Visual Basic Codebeispiel wird ein Domänen Benutzer oder eine Gruppe zu einer lokalen Gruppe auf einem Mitglieds Server oder einem Computer, auf dem Windows NT Workstation oder Windows 2000 Professional ausgeführt wird, hinzugefügt.
+Im folgenden Visual Basic Codebeispiel wird ein Domänenbenutzer oder eine Gruppe einer lokalen Gruppe auf einem Mitgliedsserver oder einem Computer hinzugefügt, der auf Windows NT-Arbeitsstation oder Windows 2000 Professional ausgeführt wird.
 
 
 ```VB
@@ -154,9 +154,9 @@ End Sub
 
 
 
- 
+ 
 
- 
+ 
 
 
 

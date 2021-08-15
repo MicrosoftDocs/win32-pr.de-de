@@ -1,9 +1,9 @@
 ---
-title: g_wszWMVCEndOfPass (wmcodecdsp. h)
-description: Aktuelle Dokumentation zu Windows Media Codecs und digitalen Signalprozessoren finden Sie unter Windows Media Audio-und Videocodec-und DSP-APIs. | g_wszWMVCEndOfPass (wmcodecdsp. h)
+title: g_wszWMVCEndOfPass (Wmcodecdsp.h)
+description: Die aktuelle Dokumentation zu Windows Mediencodecs und digitalen Signalprozessoren finden Sie unter Windows Medienaudio- und Videocodec und DSP-APIs. | g_wszWMVCEndOfPass (Wmcodecdsp.h)
 ms.assetid: e590436f-85b2-472b-8e6d-6f82d4a1fe9d
 keywords:
-- g_wszWMVCEndOfPass Windows Media-Format
+- g_wszWMVCEndOfPass Windows-Medienformat
 topic_type:
 - apiref
 api_name:
@@ -14,16 +14,16 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 2642a4d790a3419b816aa947238a70aa79755ea6
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: ba32702d5f2de0b836ce0b5e45a7274ab5f3ab60e4bad1d5095fe530bb0768b2
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106366724"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118198925"
 ---
-# <a name="g_wszwmvcendofpass"></a>g \_ wszwmvcendofpass
+# <a name="g_wszwmvcendofpass"></a>g \_ wszWMVCEndOfPass
 
-Aktuelle Dokumentation zu Windows Media Codecs und digitalen Signalprozessoren finden Sie unter [Windows Media Audio-und Videocodec-und DSP-APIs.](/previous-versions//dd464626(v=vs.85))
+Die aktuelle Dokumentation zu Windows Mediencodecs und digitalen Signalprozessoren finden Sie unter [Windows Medienaudio- und Videocodec und DSP-APIs.](/previous-versions//dd464626(v=vs.85))
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -31,7 +31,7 @@ Aktuelle Dokumentation zu Windows Media Codecs und digitalen Signalprozessoren f
 
 | Anforderung | Wert |
 |-------------------|-----------------------------------------------------------------------------------------|
-| Header<br/> | <dl> <dt>Wmcodecdsp. h</dt> </dl> |
+| Header<br/> | <dl> <dt>Wmcodecdsp.h</dt> </dl> |
 
 
 

@@ -1,5 +1,5 @@
 ---
-title: EnableRequestSOH-Methode der Win32_TSGatewayServerSettings Klasse
+title: EnableRequestSOH-Methode der Win32_TSGatewayServerSettings-Klasse
 description: EnableRequestSOH ist nicht mehr verfügbar.
 ms.assetid: 4feb7530-cced-4ead-a1fb-679b81442bb3
 ms.tgt_platform: multiple

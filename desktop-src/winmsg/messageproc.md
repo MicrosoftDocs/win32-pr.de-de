@@ -1,7 +1,7 @@
 ---
 UID: ''
 title: MessageProc-Rückruffunktion
-description: Das System ruft diese Funktion auf, nachdem ein Eingabe Ereignis in einem Dialogfeld, einem Meldungs Feld, einem Menü oder einer Scrollleiste auftritt. | MessageProc-Rückruffunktion
+description: Das System ruft diese Funktion auf, nachdem ein Eingabeereignis in einem Dialogfeld, Meldungsfeld, Menü oder einer Bildlaufleiste auftritt. | MessageProc-Rückruffunktion
 old-location: ''
 ms.assetid: na
 ms.date: 04/05/2019
@@ -32,23 +32,23 @@ api_name: ''
 targetos: Windows
 req.typenames: ''
 req.redist: ''
-ms.openlocfilehash: 00a1d1c52d50d0d9a028829181c886a813112a15
-ms.sourcegitcommit: 92e74c99f8f4d097676959d0c317f533c2400a80
+ms.openlocfilehash: 6da307d00c9291ab8c27b97c5012c9887b5c12fcbc541beb5a9b7e8c176ec5a4
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/09/2021
-ms.locfileid: "104353569"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118200782"
 ---
 # <a name="messageproc-function"></a>MessageProc-Funktion
 
 ## <a name="description"></a>BESCHREIBUNG
 
-Eine von der Anwendung definierte oder Bibliotheks definierte Rückruffunktion, die mit der [SetWindowsHookEx](/windows/desktop/api/winuser/nf-winuser-setwindowshookexw) -Funktion verwendet wird.
-Das System ruft diese Funktion auf, nachdem ein Eingabe Ereignis in einem Dialogfeld, einem Meldungs Feld, einem Menü oder einer Scrollleiste aufgetreten ist, aber bevor die vom Eingabe Ereignis generierte Meldung verarbeitet wird.
-Die Hook-Prozedur kann Meldungen für ein Dialogfeld, ein Meldungs Feld, ein Menü oder eine Bild Lauf Leiste überwachen, die von einer bestimmten Anwendung oder von allen Anwendungen erstellt wurde.
+Eine anwendungs- oder bibliotheksdefinierte Rückruffunktion, die mit der [SetWindowsHookEx-Funktion verwendet](/windows/desktop/api/winuser/nf-winuser-setwindowshookexw) wird.
+Das System ruft diese Funktion auf, nachdem ein Eingabeereignis in einem Dialogfeld, Meldungsfeld, Menü oder einer Bildlaufleiste auftritt, aber bevor die vom Eingabeereignis generierte Nachricht verarbeitet wird.
+Die Hookprozedur kann Nachrichten für ein Dialogfeld, ein Meldungsfeld, ein Menü oder eine Bildlaufleiste überwachen, die von einer bestimmten Anwendung oder allen Anwendungen erstellt wurden.
 
-Der **HookProc** -Typ definiert einen Zeiger auf diese Rückruffunktion.
-**MessageProc** ist ein Platzhalter für den Anwendungs definierten oder Bibliotheks definierten Funktionsnamen.
+Der **HOOKPROC-Typ** definiert einen Zeiger auf diese Rückruffunktion.
+**MessageProc ist** ein Platzhalter für den anwendungs- oder bibliotheksdefinierten Funktionsnamen.
 
 ```cpp
 LRESULT CALLBACK MessageProc(
@@ -64,50 +64,50 @@ LRESULT CALLBACK MessageProc(
 
 Typ: **int**
 
-Der Typ des Eingabe Ereignisses, von dem die Meldung generiert wurde.
-Wenn *Code* kleiner als 0 (null) ist, muss die Hook-Prozedur die Nachricht an die [CallNextHookEx](/windows/desktop/api/winuser/nf-winuser-callnexthookex) -Funktion übergeben, ohne die Verarbeitung zu verarbeiten und den von **CallNextHookEx** zurückgegebenen Wert zurückzugeben.
+Der Typ des Eingabeereigniss, das die Nachricht generiert hat.
+Wenn *der* Code kleiner als 0 (null) ist, muss die Hookprozedur die Nachricht ohne weitere Verarbeitung an die [CallNextHookEx-Funktion](/windows/desktop/api/winuser/nf-winuser-callnexthookex) übergeben und den von **CallNextHookEx** zurückgegebenen Wert zurückgeben.
 Dieser Parameter kann einen der folgenden Werte annehmen.
 
 | Wert | Bedeutung |
 |-------|---------|
-| **MSGF_DDEMGR** 0x8001 | Das Eingabe Ereignis ist aufgetreten, während die dynamischer Datenaustausch Management Library (Ddeml) darauf wartete, dass eine synchrone Transaktion abgeschlossen wird. Weitere Informationen zu DDEML finden Sie unter [dynamischer Datenaustausch-Verwaltungs Bibliothek](../dataxchg/dynamic-data-exchange-management-library.md). |
-| **MSGF_DIALOGBOX** 0 | Das Eingabe Ereignis ist in einem Meldungs Feld oder Dialogfeld aufgetreten. |
-| **MSGF_MENU** 2 | Das Eingabe Ereignis ist in einem Menü aufgetreten. |
-| **MSGF_SCROLLBAR** 5 | Das Eingabe Ereignis ist in einer Bild Lauf Leiste aufgetreten. |
+| **MSGF_DDEMGR** 0x8001 | Das Eingabeereignis ist aufgetreten, während die dynamische Daten Exchange Management Library (DDEML) auf den Abschluss einer synchronen Transaktion wartete. Weitere Informationen zu DDEML finden Sie unter [dynamische Daten Exchange Management Library](../dataxchg/dynamic-data-exchange-management-library.md). |
+| **MSGF_DIALOGBOX** 0 | Das Eingabeereignis ist in einem Meldungsfeld oder Dialogfeld aufgetreten. |
+| **MSGF_MENU** 2 | Das Eingabeereignis ist in einem Menü aufgetreten. |
+| **MSGF_SCROLLBAR** 5 | Das Eingabeereignis ist in einer Bildlaufleiste aufgetreten. |
 
 ### <a name="wparam"></a>wParam
 
-Typ: **wParam**
+Typ: **WPARAM**
 
 Dieser Parameter wird nicht verwendet.
 
-### <a name="lparam-in"></a>LParam [in]
+### <a name="lparam-in"></a>lParam [in]
 
 Typ: **LPARAM**
 
-Ein Zeiger auf eine [msg](/windows/win32/api/winuser/ns-winuser-msg) -Struktur.
+Ein Zeiger auf eine [MSG-Struktur.](/windows/win32/api/winuser/ns-winuser-msg)
 
 ## <a name="returns"></a>Gibt zurück
 
 Typ: **LRESULT**
 
-Wenn *Code* kleiner als 0 (null) ist, muss die Hook-Prozedur den von **CallNextHookEx** zurückgegebenen Wert zurückgeben.
+Wenn *der Code* kleiner als 0 (null) ist, muss die Hookprozedur den von **CallNextHookEx** zurückgegebenen Wert zurückgeben.
 
-Wenn *Code* größer oder gleich 0 (null) ist und die Hook-Prozedur die Nachricht nicht verarbeitet hat, wird dringend empfohlen, **CallNextHookEx** aufzurufen und den zurückgegebenen Wert zurückzugeben. Andernfalls erhalten andere Anwendungen, die [WH_MSGFILTER](about-hooks.md) Hooks installiert haben, keine Hook-Benachrichtigungen und können sich daher fälschlicherweise Verhalten.
-Wenn die Hook-Prozedur die Nachricht verarbeitet hat, kann Sie einen Wert ungleich 0 (null) zurückgeben, um zu verhindern, dass das System die Nachricht an den Rest der Hook-Kette oder der Zielfenster Prozedur übergibt.
+Wenn *code* größer oder gleich 0 (null) ist und die Hookprozedur die Nachricht nicht verarbeiten konnte, wird dringend empfohlen, **CallNextHookEx** auf aufruft und den zurückgegebenen Wert zurückgibt. Andernfalls erhalten andere Anwendungen, die WH_MSGFILTER [Hooks](about-hooks.md) installiert haben, keine Hookbenachrichtigungen und verhalten sich möglicherweise falsch.
+Wenn die Hookprozedur die Nachricht verarbeitet hat, wird möglicherweise ein Wert ungleich 0 (null) zurückgeben, um zu verhindern, dass das System die Nachricht an den Rest der Hookkette oder die Zielfensterprozedur übergehen kann.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Eine Anwendung installiert die Hook-Prozedur, indem Sie den **WH_MSGFILTER** Hooktyp und einen Zeiger auf die Hook-Prozedur in einem Aufrufen der **SetWindowsHookEx** -Funktion angibt.
+Eine Anwendung installiert die Hookprozedur, indem sie den Hooktyp WH_MSGFILTER und einen Zeiger auf die Hookprozedur in einem Aufruf der **SetWindowsHookEx-Funktion** an. 
 
-Wenn eine Anwendung, die die Ddeml verwendet und synchrone Transaktionen ausführt, Nachrichten verarbeiten muss, bevor Sie gesendet werden, muss der **WH_MSGFILTER** Hook verwendet werden.
+Wenn eine Anwendung, die die DDEML verwendet und synchrone Transaktionen ausführt, Nachrichten verarbeiten muss, bevor sie **gesendet werden,** muss sie den WH_MSGFILTER verwenden.
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 [CallNextHookEx](/windows/desktop/api/winuser/nf-winuser-callnexthookex)
 
 [SetWindowsHookEx](/windows/desktop/api/winuser/nf-winuser-setwindowshookexw)
 
-[Meldung](/windows/win32/api/winuser/ns-winuser-msg)
+[Msg](/windows/win32/api/winuser/ns-winuser-msg)
 
 [Hooks](hooks.md)

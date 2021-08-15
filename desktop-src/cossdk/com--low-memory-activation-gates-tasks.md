@@ -1,19 +1,19 @@
 ---
-description: Aufgaben der com+-Low-Memory Aktivierungs Gates
+description: COM+-Low-Memory Activation Gates-Aufgaben
 ms.assetid: 42a50775-05aa-49ef-9f38-e557110670d7
-title: Aufgaben der com+-Low-Memory Aktivierungs Gates
+title: COM+-Low-Memory Activation Gates-Aufgaben
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: e5ef0aa0d84925bb54ff1f4c31eb480c8952c636
-ms.sourcegitcommit: c7add10d695482e1ceb72d62b8a4ebd84ea050f7
+ms.openlocfilehash: b98f1ff6294cafa8ed77d5178612db9e49cd7370942da4f418f5e7c0779743dd
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104342149"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118308037"
 ---
-# <a name="com-low-memory-activation-gates-tasks"></a>Aufgaben der com+-Low-Memory Aktivierungs Gates
+# <a name="com-low-memory-activation-gates-tasks"></a>COM+-Low-Memory Activation Gates-Aufgaben
 
-Die Funktion "com+-Aktivierungs Gates mit geringem Arbeitsspeicher" wird von com+ automatisch bereitgestellt. Diese Funktion kann nicht konfiguriert werden, sodass ihr keine Aufgaben zugeordnet sind.
+Das COM+-Feature für Aktivierungsstores mit geringem Arbeitsspeicher wird automatisch von COM+ bereitgestellt. Dieses Feature kann nicht konfiguriert werden, sodass ihm keine Aufgaben zugeordnet sind.
 
  
 

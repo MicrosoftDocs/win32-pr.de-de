@@ -55,7 +55,7 @@ Diese Methode gibt keinen Wert zurück.
 
 ## <a name="remarks"></a>Hinweise
 
-Wenn das entfernte Element die gerade abspielte Spur ist (*Player*.**currentMedia**), die Wiedergabe wird beendet, und das nächste Element in der Wiedergabeliste wird zum aktuellen Element. Wenn kein nächstes Element enthalten ist, wird das vorherige Element verwendet, oder wenn keine anderen Elemente enthalten sind, dann *Player*. **currentMedia** ist auf **NULL festgelegt.**
+Wenn das entfernte Element die gerade abspielte Spur ist (*Player*.**currentMedia**), die Wiedergabe wird beendet, und das nächste Element in der Wiedergabeliste wird zum aktuellen Element. Wenn es kein nächstes Element gibt, wird das vorherige Element verwendet, oder wenn keine anderen Elemente enthalten sind, dann *Player*. **currentMedia** ist auf **NULL festgelegt.**
 
 Um diese Methode verwenden zu können, ist Vollzugriff auf die Bibliothek erforderlich. Weitere Informationen finden Sie unter [Bibliothekszugriff.](library-access.md)
 
@@ -77,7 +77,7 @@ Um diese Methode verwenden zu können, ist Vollzugriff auf die Bibliothek erford
 [**Player.currentMedia**](player-currentmedia.md)
 </dt> <dt>
 
-[**Playlist-Objekt**](playlist-object.md)
+[**Wiedergabelistenobjekt**](playlist-object.md)
 </dt> <dt>
 
 [**Playlist.insertItem**](playlist-insertitem.md)

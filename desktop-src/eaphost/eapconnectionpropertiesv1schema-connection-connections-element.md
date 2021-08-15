@@ -1,9 +1,9 @@
 ---
 title: Connection (Connections)-Element
-description: Definiert jede Konfigurationseinstellung und verknüpft Sie mit einem Namen. Das Connection-Element ist optional.
+description: Definiert jede Konfigurationseinstellung und ordnet sie einem Namen zu. Das Connection-Element ist optional.
 ms.assetid: 913263ab-0e0e-4213-947b-7bca9ba0697e
 keywords:
-- Verbindungselement EAPHost
+- Connection-Element EAPHost
 topic_type:
 - apiref
 api_name:
@@ -14,16 +14,16 @@ ms.topic: reference
 ms.date: 05/31/2018
 api_location: ''
 ROBOTS: INDEX,FOLLOW
-ms.openlocfilehash: 5aabc29a7fe5122a7f7571750b97ebccb38158d8
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 6948675f7910c46cb2b5db4285ce0df795fa057f275ce29b7f4c664b14c4ce1b
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "106340594"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118498370"
 ---
 # <a name="connection-connections-element"></a>Connection (Connections)-Element
 
-Das **Connection (Connections)** -Element definiert jede Konfigurationseinstellung und ordnet ihr einen Namen zu. Das **Connection** -Element ist optional.
+Das **Connection (Connections)-Element** definiert jede Konfigurationseinstellung und ordnet sie einem Namen zu. Das **Connection-Element** ist optional.
 
 ``` syntax
 <xs:element name="Connection">
@@ -41,7 +41,7 @@ Das **Connection (Connections)** -Element definiert jede Konfigurationseinstellu
 </xs:element>
 ```
 
-Das **Connection** -Element wird durch das [**Connections**](eapconnectionpropertiesv1schema-connections-element.md) -Element definiert.
+Das **Connection-Element** wird durch das [**Connections-Element**](eapconnectionpropertiesv1schema-connections-element.md) definiert.
 
 ## <a name="child-elements"></a>Untergeordnete Elemente
 
@@ -49,8 +49,8 @@ Das **Connection** -Element wird durch das [**Connections**](eapconnectionproper
 
 | Element                                                                 | type   | BESCHREIBUNG                                                                                                             |
 |-------------------------------------------------------------------------|--------|-------------------------------------------------------------------------------------------------------------------------|
-| [**EAP**](baseeapconnectionpropertiesv1schema-eap-element.md)          |        | Identifiziert das EAP-Konfigurationselement.<br/>                                                                    |
-| [**Name**](eapconnectionpropertiesv1schema-name-connection-element.md) | Zeichenfolge | Hiermit wird der Name der zu definierenden Verbindung erfasst und die Identifizierung mehrerer Verbindungen unterstützt. <br/> |
+| [**Eap**](baseeapconnectionpropertiesv1schema-eap-element.md)          |        | Identifiziert das EAP-Konfigurationselement.<br/>                                                                    |
+| [**Name**](eapconnectionpropertiesv1schema-name-connection-element.md) | Zeichenfolge | Erfasst den Namen der zu definierenden Verbindung und hilft dabei, mehrere Verbindungen zu identifizieren. <br/> |
 
 
 
@@ -60,28 +60,28 @@ Das **Connection** -Element wird durch das [**Connections**](eapconnectionproper
 
 | Anforderung | Wert |
 |-------------------------------------|------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>       |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2008 \[ -Desktop-Apps\]<br/> |
+| Unterstützte Mindestversion (Client)<br/> | Windows \[Nur Vista-Desktop-Apps\]<br/>       |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2008-Desktop-Apps\]<br/> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-**Definitions Kontext des Elements im Schema**
+**Definitionskontext des Elements im Schema**
 </dt> <dt>
 
 [**Verbindungen**](eapconnectionpropertiesv1schema-connections-element.md)
 </dt> <dt>
 
-**Mögliches unmittelbar übergeordnetes Element in der Schema Instanz**
+**Mögliches unmittelbar übergeordnetes Element in der Schemainstanz**
 </dt> <dt>
 
 [**Verbindungen**](eapconnectionpropertiesv1schema-connections-element.md)
 </dt> <dt>
 
-[EAPHost und Legacy Schema](eaphost-schemas.md)
+[EAPHost und Legacyschema](eaphost-schemas.md)
 </dt> <dt>
 
 [eapconnectionpropertiesv1-Schema](eapconnectionpropertiesv1schema-schema.md)

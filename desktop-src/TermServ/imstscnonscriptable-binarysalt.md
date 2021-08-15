@@ -1,24 +1,24 @@
 ---
-title: Imstscnonscriptable binarysalt-Eigenschaft
-description: Diese Eigenschaft ist nicht mehr zur Verwendung verfügbar. | Imstscnonscriptable binarysalt-Eigenschaft
+title: IMsTscNonScriptable BinarySalt-Eigenschaft
+description: Diese Eigenschaft ist nicht mehr für die Verwendung verfügbar. | IMsTscNonScriptable BinarySalt-Eigenschaft
 ms.assetid: 7af2e5be-9ddb-46ab-947c-f79ab890d7bc
 ms.tgt_platform: multiple
 keywords:
-- Binarysalt-Eigenschaft Remotedesktopdienste
-- Binarysalt-Eigenschaft Remotedesktopdienste, imstscnonscriptable-Schnittstelle
-- Imstscnonscriptable-Schnittstelle Remotedesktopdienste, binarysalt-Eigenschaft
-- Binarysalt-Eigenschaft Remotedesktopdienste, mstscax-Objekt
-- Mstscax-Objekt Remotedesktopdienste, binarysalt-Eigenschaft
-- Binarysalt-Eigenschaft Remotedesktopdienste, imsrdpclientnonscriptable-Schnittstelle
-- Imsrdpclientnonscriptable-Schnittstelle Remotedesktopdienste, binarysalt-Eigenschaft
-- Binarysalt-Eigenschaft Remotedesktopdienste, IMsRdpClientNonScriptable2-Schnittstelle
-- IMsRdpClientNonScriptable2 Interface Remotedesktopdienste, binarysalt (Eigenschaft)
-- Binarysalt-Eigenschaft Remotedesktopdienste, IMsRdpClientNonScriptable3-Schnittstelle
-- IMsRdpClientNonScriptable3 Interface Remotedesktopdienste, binarysalt (Eigenschaft)
-- Binarysalt-Eigenschaft Remotedesktopdienste, IMsRdpClientNonScriptable4-Schnittstelle
-- IMsRdpClientNonScriptable4 Interface Remotedesktopdienste, binarysalt (Eigenschaft)
-- Binarysalt-Eigenschaft Remotedesktopdienste, IMsRdpClientNonScriptable5-Schnittstelle
-- IMsRdpClientNonScriptable5 Interface Remotedesktopdienste, binarysalt (Eigenschaft)
+- BinarySalt-Eigenschaft Remotedesktopdienste
+- BinarySalt-Eigenschaft Remotedesktopdienste , IMsTscNonScriptable-Schnittstelle
+- IMsTscNonScriptable-Schnittstelle Remotedesktopdienste , BinarySalt-Eigenschaft
+- BinarySalt-Eigenschaft Remotedesktopdienste , MsTscAx-Objekt
+- MsTscAx-Objekt Remotedesktopdienste , BinarySalt-Eigenschaft
+- BinarySalt-Eigenschaft Remotedesktopdienste , IMsRdpClientNonScriptable-Schnittstelle
+- IMsRdpClientNonScriptable-Schnittstelle Remotedesktopdienste , BinarySalt-Eigenschaft
+- BinarySalt-Eigenschaft Remotedesktopdienste , IMsRdpClientNonScriptable2-Schnittstelle
+- IMsRdpClientNonScriptable2-Schnittstelle Remotedesktopdienste , BinarySalt-Eigenschaft
+- BinarySalt-Eigenschaft Remotedesktopdienste , IMsRdpClientNonScriptable3-Schnittstelle
+- IMsRdpClientNonScriptable3-Schnittstelle Remotedesktopdienste , BinarySalt-Eigenschaft
+- BinarySalt-Eigenschaft Remotedesktopdienste , IMsRdpClientNonScriptable4-Schnittstelle
+- IMsRdpClientNonScriptable4-Schnittstelle Remotedesktopdienste , BinarySalt-Eigenschaft
+- BinarySalt-Eigenschaft Remotedesktopdienste , IMsRdpClientNonScriptable5-Schnittstelle
+- IMsRdpClientNonScriptable5-Schnittstelle Remotedesktopdienste , BinarySalt-Eigenschaft
 topic_type:
 - apiref
 api_name:
@@ -47,16 +47,16 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 3eb13ccb79a9cf2c309a32772a73b393756c7bdd
-ms.sourcegitcommit: 92e74c99f8f4d097676959d0c317f533c2400a80
+ms.openlocfilehash: 15e58618a59beb484e09967af42bd75c527a87693d7aed25cb86857e776c382d
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/09/2021
-ms.locfileid: "106366399"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117756917"
 ---
-# <a name="imstscnonscriptablebinarysalt-property"></a>Imstscnonscriptable:: binarysalt-Eigenschaft
+# <a name="imstscnonscriptablebinarysalt-property"></a>IMsTscNonScriptable::BinarySalt-Eigenschaft
 
-Diese Eigenschaft ist nicht mehr zur Verwendung verfügbar.
+Diese Eigenschaft ist nicht mehr für die Verwendung verfügbar.
 
 Dies ist eine Eigenschaft mit Lese- und Schreibzugriff.
 
@@ -77,11 +77,11 @@ HRESULT get_BinarySalt(
 
 ## <a name="property-value"></a>Eigenschaftswert
 
-Der neue binäre Salt-Teil für ein Binär codiertes Kennwort.
+Der neue binäre Salt-Teil für ein binär codiertes Kennwort.
 
 ## <a name="error-codes"></a>Fehlercodes
 
-Gibt " **E \_ notimpl**" zurück.
+Gibt **E \_ NOTIMPL zurück.**
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -95,15 +95,15 @@ Gibt " **E \_ notimpl**" zurück.
 | Ende des Supports (Server)<br/>    | Nicht unterstützt<br/>                                                              |
 | Typbibliothek<br/>             | <dl> <dt>MsTscAx.dll</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>MsTscAx.dll</dt> </dl> |
-| IID<br/>                      | IID \_ imstscnonscriptable ist als c1e6743a-41c1-4a74-832a-0dd06c1c7a0e definiert.<br/> |
+| IID<br/>                      | \_IID-IMsTscNonScriptable ist als c1e6743a-41c1-4a74-832a-0dd06c1c7a0e definiert.<br/> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Imsrdpclientnonscriptable**](imsrdpclientnonscriptable-interface.md)
+[**IMsRdpClientNonScriptable**](imsrdpclientnonscriptable-interface.md)
 </dt> <dt>
 
 [**IMsRdpClientNonScriptable2**](imsrdpclientnonscriptable2.md)
@@ -118,7 +118,7 @@ Gibt " **E \_ notimpl**" zurück.
 [**IMsRdpClientNonScriptable5**](imsrdpclientnonscriptable5.md)
 </dt> <dt>
 
-[**Imstscnonscriptable**](imstscnonscriptable-interface.md)
+[**IMsTscNonScriptable**](imstscnonscriptable-interface.md)
 </dt> </dl>
 
  

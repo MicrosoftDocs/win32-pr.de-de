@@ -1,27 +1,27 @@
 ---
-title: Auswählen, wann barrierefreie Objekte erstellt werden sollen
-description: Server Entwickler können alle zugänglichen Objekte in einem Container erstellen, wenn der Container erstellt wird, oder Sie können die barrierefreien Objekte dynamisch erstellen.
+title: Auswählen, wann barrierefreie Objekte erstellt werden
+description: Serverentwickler können alle zugänglichen Objekte innerhalb eines Containers erstellen, wenn der Container erstellt wird, oder sie können die barrierefreien Objekte dynamisch erstellen.
 ms.assetid: 26c8bb4b-19ec-4fd5-b758-30cb6a513818
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 987b40527c178c40101288b0192c38d9a9b06040
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: 2a53ee02cb7de574242b3ba9986cdf0ce6068e8495e1ebaf638eed08e9c04b0a
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "104037254"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118325979"
 ---
-# <a name="choosing-when-to-create-accessible-objects"></a>Auswählen, wann barrierefreie Objekte erstellt werden sollen
+# <a name="choosing-when-to-create-accessible-objects"></a>Auswählen, wann barrierefreie Objekte erstellt werden
 
-Server Entwickler können alle zugänglichen Objekte in einem Container erstellen, wenn der Container erstellt wird, oder Sie können die barrierefreien Objekte dynamisch erstellen.
+Serverentwickler können alle zugänglichen Objekte innerhalb eines Containers erstellen, wenn der Container erstellt wird, oder sie können die barrierefreien Objekte dynamisch erstellen.
 
-Stellen Sie sich z. b. ein Dialogfeld mit mehreren benutzerdefinierten Steuerelementen vor. Ein Server erstellt barrierefreie Objekte für alle benutzerdefinierten Steuerelemente, wenn das Dialogfeld angezeigt wird. Wenn eines der Steuerelemente jedoch ein benutzerdefiniertes Kombinations Feld ist, wartet der Server, bis ein Benutzer es auswählt, um barrierefreie Objekte für die im Kombinations Feld enthaltenen Elemente zu erstellen.
+Stellen Sie sich beispielsweise ein Dialogfeld mit mehreren benutzerdefinierten Steuerelementen vor. Ein Server erstellt barrierefreie Objekte für alle benutzerdefinierten Steuerelemente, wenn das Dialogfeld angezeigt wird. Wenn eines der Steuerelemente jedoch ein benutzerdefiniertes Kombinationsfeld ist, wartet der Server, bis ein Benutzer es auswählt, um barrierefreie Objekte für die Elemente zu erstellen, die das Kombinationsfeld enthält.
 
-Wenn das übergeordnete Objekt barrierefreie Objekte dynamisch erstellt, wird weniger Arbeitsspeicher verwendet, als wenn alle möglichen zugänglichen Objekte im Voraus erstellt wurden.
+Wenn das übergeordnete Element barrierefreie Objekte dynamisch erstellt, verwenden Anwendungen weniger Arbeitsspeicher, als wenn alle möglichen barrierefreien Objekte im Voraus erstellt wurden.
 
- 
+ 
 
- 
+ 
 
 
 

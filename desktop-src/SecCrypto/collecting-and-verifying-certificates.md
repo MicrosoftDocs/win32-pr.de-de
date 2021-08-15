@@ -1,25 +1,25 @@
 ---
-description: Im folgenden Beispiel werden die Zertifikate in einem lokalen Speicher aufgelistet und auf Gültigkeit überprüft.
+description: Im folgenden Beispiel werden die Zertifikate in einem lokalen Speicher aufzählt und auf Gültigkeit überprüft.
 ms.assetid: 59ae22f6-aa6d-4b53-8a27-73e1e5c62755
 title: Sammeln und Überprüfen von Zertifikaten
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: c0b160f373d5ade65679fcc4dd87e3c1c86dc4ac
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 60b793cf4aeca7d05d166a4b205b924db53faee09683cefcef7b0244a9eb0289
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106348530"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117769531"
 ---
 # <a name="collecting-and-verifying-certificates"></a>Sammeln und Überprüfen von Zertifikaten
 
-\[CAPICOM ist eine nur-32-Bit-Komponente, die für die Verwendung in den folgenden Betriebssystemen verfügbar ist: Windows Server 2008, Windows Vista und Windows XP. Verwenden Sie stattdessen die .NET Framework, um Sicherheitsfunktionen zu implementieren. Weitere Informationen finden Sie unter [Alternativen zur Verwendung von CAPICOM](alternatives-to-using-capicom.md).\]
+\[CAPICOM ist eine nur 32-Bit-Komponente, die für die Verwendung in den folgenden Betriebssystemen verfügbar ist: Windows Server 2008, Windows Vista und Windows XP. Verwenden Sie stattdessen die .NET Framework, um Sicherheitsfeatures zu implementieren. Weitere Informationen finden Sie unter [Alternativen zur Verwendung von CAPICOM.](alternatives-to-using-capicom.md)\]
 
-Häufig muss eine Gruppe von [*Zertifikaten*](../secgloss/c-gly.md) gesammelt und überprüft werden. Dies erfolgt häufig, wenn eine Gruppe von Empfängern für eine eingeschlossene Nachricht vorbereitet werden soll. Im folgenden Beispiel werden die Zertifikate in einem lokalen Speicher aufgelistet und auf Gültigkeit überprüft. Im nächsten Schritt wird ein Active Directory Store geöffnet, um die neuen Zertifikate für den lokalen Speicher abzurufen und dem lokalen Speicher hinzuzufügen. Die Zertifikate, die aus dem Active Directory-Speicher abgerufen werden, werden auf Gültigkeit überprüft und, falls gültig, dem lokalen Speicher hinzugefügt. Beide Geschäfte werden dann geschlossen.
+Häufig muss eine Gruppe von [*Zertifikaten*](../secgloss/c-gly.md) gesammelt und überprüft werden. Dies erfolgt häufig, um eine Gruppe von Empfängern auf eine umschlagete Nachricht vorzubereiten. Im folgenden Beispiel werden die Zertifikate in einem lokalen Speicher aufzählt und auf Gültigkeit überprüft. Als Nächstes wird ein Active Directory-Speicher geöffnet, um neue Zertifikate abzurufen und dem lokalen Speicher hinzuzufügen. Die aus dem Active Directory-Speicher abgerufenen Zertifikate werden auf Gültigkeit überprüft und ggf. dem lokalen Speicher hinzugefügt. Beide Speicher werden dann geschlossen.
 
-Bei einem beliebigen CAPICOM-Fehler wird der negative Dezimalwert **Err. Number** zurückgegeben. Weitere Informationen finden Sie unter [**CAPICOM- \_ Fehler \_ Code**](capicom-error-code.md). Informationen zu positiven Dezimalwerten von **Err. Number** finden Sie unter Winerror. h.
+Bei einem CAPICOM-Fehler wird ein negativer Dezimalwert von **Err.Number** zurückgegeben. Weitere Informationen finden Sie unter [**CAPICOM \_ ERROR \_ CODE**](capicom-error-code.md). Informationen zu positiven Dezimalwerten von **Err.Number** finden Sie unter Winerror.h.
 
-In diesem Beispiel wird der Name des lokalen Stores als Zeichen folgen Parameter übergeben. Eine Zeichenfolge, die die Suchkriterien für Zertifikate im Active Directory Speicher angibt, wird ebenfalls als Parameter übergeben.
+In diesem Beispiel wird der Name des lokalen Speichers als Zeichenfolgenparameter übergeben. Eine Zeichenfolge, die die Suchkriterien für Zertifikate im Active Directory-Speicher angibt, wird ebenfalls als Parameter übergeben.
 
 
 ```VB

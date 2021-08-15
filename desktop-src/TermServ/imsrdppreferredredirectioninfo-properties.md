@@ -20,7 +20,7 @@ Die [**IMsRdpPreferredRedirectionInfo-Schnittstelle**](imsrdppreferredredirectio
 
 <dl> <dt>
 
-[**UseRedirectionServerName (Eigenschaft)**](imsrdppreferredredirectioninfo-useredirectionservername.md)
+[**UseRedirectionServerName-Eigenschaft**](imsrdppreferredredirectioninfo-useredirectionservername.md)
 </dt> <dd>
 
 Ruft ab und legt fest, ob der Umleitungsservername verwendet werden soll.

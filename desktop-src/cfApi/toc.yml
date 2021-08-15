@@ -1,12 +1,12 @@
-- name: Cloud Sync Engines
+- name: Cloudsynchronisierungs-Engines
   href: cloud-files-api-portal.md
   items:
-    - name: 'Erstellen einer Cloud-Synchronisierungs-Engine, die Platzhalter Dateien unterstützt'
+    - name: 'Erstellen einer Cloudsynchronisierungs-Engine, die Platzhalterdateien unterstützt'
       href: build-a-cloud-file-sync-engine.md
-    - name: Cloudfilterverweis
+    - name: Cloudfilterreferenz
       href: cloud-filter-reference.md
       items:
-        - name: Cloud Filter-Enumerationen
+        - name: Cloudfilterenumeration
           href: cloud-files-enumerations.md
           items:
             - name: CF_CALLBACK_CANCEL_FLAGS
@@ -106,71 +106,71 @@
         - name: Cloudfilterfunktionen
           href: cloud-files-functions.md
           items:
-            - name: Cfclosehandle
+            - name: CfCloseHandle
               href: /windows/desktop/api/cfapi/nf-cfapi-cfclosehandle
-            - name: Cfconnectsyncroot
+            - name: CfConnectSyncRoot
               href: /windows/desktop/api/cfapi/nf-cfapi-cfconnectsyncroot
-            - name: Cfconverttoplachalter
+            - name: CfConvertToPlaceholder
               href: /windows/desktop/api/cfapi/nf-cfapi-cfconverttoplaceholder
-            - name: Cfup-Platzhalter
+            - name: CfCreatePlaceholders
               href: /windows/desktop/api/cfapi/nf-cfapi-cfcreateplaceholders
-            - name: Cfdisconnectsyncroot
+            - name: CfDisconnectSyncRoot
               href: /windows/desktop/api/cfapi/nf-cfapi-cfdisconnectsyncroot
-            - name: CFEXECUTE
+            - name: CfExecute
               href: /windows/desktop/api/cfapi/nf-cfapi-cfexecute
-            - name: Cfgetcorrelationvector
+            - name: CfGetCorrelationVector
               href: /windows/desktop/api/cfapi/nf-cfapi-cfgetcorrelationvector
-            - name: Cfgetplaceholderinfo
+            - name: CfGetPlaceholderInfo
               href: /windows/desktop/api/cfapi/nf-cfapi-cfgetplaceholderinfo
-            - name: Cfgetplaceholderranginfo
+            - name: CfGetPlaceholderRangeInfo
               href: /windows/desktop/api/cfapi/nf-cfapi-cfgetplaceholderrangeinfo
-            - name: Cfgetplaceholderstatuefromattributetag
+            - name: CfGetPlaceholderStateFromAttributeTag
               href: /windows/desktop/api/cfapi/nf-cfapi-cfgetplaceholderstatefromattributetag
-            - name: Cfgetplaceholderstatus-romfileingefo
+            - name: CfGetPlaceholderStateFromFileInfo
               href: /windows/desktop/api/cfapi/nf-cfapi-cfgetplaceholderstatefromfileinfo
-            - name: Cfgetplaceholderstatus efromfinddata
+            - name: CfGetPlaceholderStateFromFindData
               href: /windows/desktop/api/cfapi/nf-cfapi-cfgetplaceholderstatefromfinddata
-            - name: Cfgetplatforminfo
+            - name: CfGetPlatformInfo
               href: /windows/desktop/api/cfapi/nf-cfapi-cfgetplatforminfo
-            - name: Cfgetsyncrootinfobyhandle
+            - name: CfGetSyncRootInfoByHandle
               href: /windows/desktop/api/cfapi/nf-cfapi-cfgetsyncrootinfobyhandle
-            - name: Cfgetsyncrootinfobypath
+            - name: CfGetSyncRootInfoByPath
               href: /windows/desktop/api/cfapi/nf-cfapi-cfgetsyncrootinfobypath
-            - name: Cfgettransferkey
+            - name: CfGetTransferKey
               href: /windows/desktop/api/cfapi/nf-cfapi-cfgettransferkey
             - name: CfGetWin32HandleFromProtectedHandle
               href: /windows/desktop/api/cfapi/nf-cfapi-cfgetwin32handlefromprotectedhandle
-            - name: Cfhydraateplachalter
+            - name: CfHydratePlaceholder
               href: /windows/desktop/api/cfapi/nf-cfapi-cfhydrateplaceholder
-            - name: Cfopenfilewithoplock
+            - name: CfOpenFileWithOplock
               href: /windows/desktop/api/cfapi/nf-cfapi-cfopenfilewithoplock
-            - name: Cfquerysyncproviderstatus
+            - name: CfQuerySyncProviderStatus
               href: /windows/desktop/api/cfapi/nf-cfapi-cfquerysyncproviderstatus
-            - name: Cfreferenceprotectedhandle
+            - name: CfReferenceProtectedHandle
               href: /windows/desktop/api/cfapi/nf-cfapi-cfreferenceprotectedhandle
-            - name: Cfregistersyncroot
+            - name: CfRegisterSyncRoot
               href: /windows/desktop/api/cfapi/nf-cfapi-cfregistersyncroot
-            - name: Cfreleaseprotectedhandle
+            - name: CfReleaseProtectedHandle
               href: /windows/desktop/api/cfapi/nf-cfapi-cfreleaseprotectedhandle
-            - name: Cfreleasetransferkey
+            - name: CfReleaseTransferKey
               href: /windows/desktop/api/cfapi/nf-cfapi-cfreleasetransferkey
-            - name: Cfreportproviderprogress
+            - name: CfReportProviderProgress
               href: /windows/desktop/api/cfapi/nf-cfapi-cfreportproviderprogress
-            - name: Cfreportsyncstatus
+            - name: CfReportSyncStatus
               href: /windows/desktop/api/cfapi/nf-cfapi-cfreportsyncstatus
-            - name: Cfrevertplachalter
+            - name: CfRevertPlaceholder
               href: /windows/desktop/api/cfapi/nf-cfapi-cfrevertplaceholder
-            - name: Cfsetcorrelationvector
+            - name: CfSetCorrelationVector
               href: /windows/desktop/api/cfapi/nf-cfapi-cfsetcorrelationvector
-            - name: Cfabtinsyncstate
+            - name: CfSetInSyncState
               href: /windows/desktop/api/cfapi/nf-cfapi-cfsetinsyncstate
-            - name: Cfsetpinstate
+            - name: CfSetPinState
               href: /windows/desktop/api/cfapi/nf-cfapi-cfsetpinstate
-            - name: Cfunregistersyncroot
+            - name: CfUnregisterSyncRoot
               href: /windows/desktop/api/cfapi/nf-cfapi-cfunregistersyncroot
-            - name: Cfupdateplachalter
+            - name: CfUpdatePlaceholder
               href: /windows/desktop/api/cfapi/nf-cfapi-cfupdateplaceholder
-            - name: Cfupdatesyncproviderstatus
+            - name: CfUpdateSyncProviderStatus
               href: /windows/desktop/api/cfapi/nf-cfapi-cfupdatesyncproviderstatus
         - name: Cloudfilterstrukturen
           href: cloud-files-structures.md

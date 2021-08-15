@@ -1,32 +1,32 @@
 ---
-title: Bereitstellen von Benutzerberechtigungen für Medien brennende Geräte
-description: Standardmäßig gewähren sowohl Windows Vista als auch Windows Server 2008 Administratoren und Benutzern, die direkt auf dem Computer angemeldet sind (zwischen Benutzern), Lese-/Schreibzugriff.
+title: Bereitstellen von Benutzerberechtigungen für Mediengeräte
+description: Standardmäßig gewähren sowohl Windows Vista als auch Windows Server 2008 Administratoren und Benutzern, die direkt auf dem Computer angemeldet sind (Zwischenbenutzer), Lese-/Schreibzugriff.
 ms.assetid: 5bb8c8fc-03b4-45b5-816c-45f6cd580de6
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 613eb1bba9a18cfb08e1eee3e6b86c34235ab8e9
-ms.sourcegitcommit: af9983bab40fe0b042f177ce7ca79f2eb0f9d0e8
+ms.openlocfilehash: b1c5827b960405855ba34880e39750b39d4f934e395167479b7cae7912721af5
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/06/2021
-ms.locfileid: "104218919"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118758561"
 ---
-# <a name="providing-user-permissions-for-media-burning-devices"></a>Bereitstellen von Benutzerberechtigungen für Medien brennende Geräte
+# <a name="providing-user-permissions-for-media-burning-devices"></a>Bereitstellen von Benutzerberechtigungen für Mediengeräte
 
-Standardmäßig gewähren sowohl Windows Vista als auch Windows Server 2008 Administratoren und Benutzern, die direkt auf dem Computer angemeldet sind (zwischen Benutzern), Lese-/Schreibzugriff. In Windows XP und Windows Server 2003 muss ein Administrator diesen Geräten jedoch Lese-/Schreibberechtigungen für andere Benutzergruppen erteilen.
+Standardmäßig gewähren sowohl Windows Vista als auch Windows Server 2008 Administratoren und Benutzern, die direkt auf dem Computer angemeldet sind (Zwischenbenutzer), Lese-/Schreibzugriff. Allerdings muss ein Administrator Windows XP und Windows Server 2003 diesen Geräten Lese-/Schreibberechtigungen für andere Benutzergruppen erteilen.
 
-Ein Administrator kann bestimmte gerätebezogene Berechtigungen für Poweruser und interaktive Benutzer anpassen.
+Ein Administrator kann bestimmte gerätebezogene Berechtigungen für Energiebenutzer und interaktive Benutzer anpassen.
 
-Um den entsprechenden Bereich für Gruppenberechtigungen in Windows XP zu erreichen, klicken Sie auf **Start**, klicken Sie auf **Ausführen**, geben Sie **gpeer dit. msc** ein, und klicken Sie dann auf **OK**. Erweitern Sie in der Gruppenrichtlinie-Schnittstelle **Computer Konfiguration**, erweitern Sie **Windows-Einstellungen**, erweitern Sie **Sicherheitseinstellungen**, erweitern Sie **lokale Richtlinien**, und doppelklicken Sie auf **Sicherheitsoptionen**.
+Um den entsprechenden Gruppenberechtigungsbereich in Windows XP zu erreichen, klicken Sie auf **Start**, klicken Sie auf **Ausführen,** geben Sie **gpedit.msc** ein, und klicken Sie dann **auf OK.** Erweitern Sie Gruppenrichtlinie-Schnittstelle **Computerkonfiguration,** erweitern Sie **Windows Einstellungen,** erweitern Sie **Einstellungen,** erweitern Sie **Lokale** Richtlinien, und doppelklicken Sie **auf Sicherheitsoptionen**.
 
-![Screenshot, der das Fenster "Gruppenrichtlinie" mit einer Richtlinie anzeigt, die im Bereich "Richtlinie" ausgewählt ist.](images/gpolpanel.jpg)
+![Screenshot: Fenster "Gruppenrichtlinie" mit einer Richtlinie, die im Bereich "Richtlinie" ausgewählt ist](images/gpolpanel.jpg)
 
-In diesem Bereich muss ein Administrator die Einstellungen der beiden Geräteoptionen angeben, um die erforderlichen Gruppenberechtigungen bereitzustellen:
+In diesem Bereich muss ein Administrator die Einstellungen von zwei Geräteoptionen angeben, um die erforderlichen Gruppenberechtigungen anzugeben:
 
--   Legen Sie "Geräte: Beschränken des CD-ROM-Zugriffs auf lokal angemeldete Benutzer" auf " **aktiviert** " fest.
--   Legen Sie für **Administratoren und Hauptbenutzer** den Wert "Geräte: erlaubt zum Formatieren und Auswerfen von Wechselmedien" fest. Es ist auch möglich, Windows Vista-Berechtigungen zu emulieren, indem Sie diese Option auf **Administratoren und interaktive Benutzer** festlegen.
+-   Legen Sie "Geräte: Cd-ROM-Zugriff auf nur lokal angemeldete Benutzer beschränken" auf **Aktiviert fest.**
+-   Legen Sie "Geräte: Dürfen Wechselmedien formatieren und auswerfen" auf **Administratoren und PowerUser fest.** Es ist auch möglich, Windows Vista-Berechtigungen zu emulieren, indem Sie diese Option auf **Administratoren und interaktive Benutzer festlegen.**
 
-Obwohl eine bestimmte Benutzeroberfläche in Windows XP oder Windows Server 2003 für die Verwendung von [**setsecurityinfo**](/windows/desktop/api/aclapi/nf-aclapi-setsecurityinfo) oder [setupdisetdeviceregistryproperty](/windows/win32/api/setupapi/nf-setupapi-setupdisetdeviceregistrypropertya)nicht vorhanden ist, können diese APIs verwendet werden, um benutzerdefinierten Benutzergruppen Geräte Berechtigungen zu erteilen. Beispielsweise wird durch einen Aufrufen von **setsecurityinfo** Berechtigungen für Benutzergruppen erteilt. Berechtigungs Änderungen mit dieser API sind temporär und werden nicht über einen Neustart hinweg beibehalten. Durch Aufrufen von [setupdisetdeviceregistryproperty](/windows/win32/api/setupapi/nf-setupapi-setupdisetdeviceregistrypropertya) werden jedoch die Berechtigungs Änderungen in der Registrierung implementiert, die bei einem Neustart beibehalten werden.
+Während in Windows XP oder Windows Server 2003 keine bestimmte Benutzeroberfläche für die Verwendung von [**SetSecurityInfo**](/windows/desktop/api/aclapi/nf-aclapi-setsecurityinfo) oder [SetupDiSetDeviceRegistryProperty](/windows/win32/api/setupapi/nf-setupapi-setupdisetdeviceregistrypropertya)vorhanden ist, ist es möglich, diese APIs zu verwenden, um benutzerdefinierten Benutzergruppen Geräteberechtigungen zu erteilen. Beispielsweise gewährt ein Aufruf von **SetSecurityInfo** Benutzergruppen Berechtigungen. Berechtigungsänderungen mit dieser API sind temporär und werden während eines Neustarts nicht beibehalten. Durch aufrufen [von SetupDiSetDeviceRegistryProperty](/windows/win32/api/setupapi/nf-setupapi-setupdisetdeviceregistrypropertya) werden jedoch die Berechtigungsänderungen in der Registrierung implementiert, die während eines Neustarts beibehalten werden.
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
@@ -35,10 +35,10 @@ Obwohl eine bestimmte Benutzeroberfläche in Windows XP oder Windows Server 2003
 [Verwenden von IMAPI](using-imapi.md)
 </dt> <dt>
 
-[**Setsecurityinfo**](/windows/desktop/api/aclapi/nf-aclapi-setsecurityinfo)
+[**SetSecurityInfo**](/windows/desktop/api/aclapi/nf-aclapi-setsecurityinfo)
 </dt> <dt>
 
-[Setupdisetdeviceregistryproperty](/windows/win32/api/setupapi/nf-setupapi-setupdisetdeviceregistrypropertya)
+[SetupDiSetDeviceRegistryProperty](/windows/win32/api/setupapi/nf-setupapi-setupdisetdeviceregistrypropertya)
 </dt> </dl>
 
  

@@ -13,7 +13,7 @@ ms.locfileid: "118449350"
 ---
 # <a name="partial-trust-considerations-for-the-stylusinput-api"></a>Überlegungen zur teilweisen Vertrauenswürdigkeit für die StylusInput-API
 
-Für [**den RealTimeStylus,**](realtimestylus-class.md) der den *handle-Parameter* akzeptiert, sind die [Berechtigungen UIPermissionWindow.AllWindows](/dotnet/api/system.security.permissions.uipermissionwindow?view=dotnet-plat-ext-3.1&preserve-view=true) und [SecurityPermissionFlag.UnmanagedCode](/previous-versions/windows/) zusätzlich zu den Berechtigungen erforderlich, die vom Konstruktor benötigt werden, der den *attachedControl-Parameter* akzeptiert.
+Für [**den RealTimeStylus,**](realtimestylus-class.md) der den *handle-Parameter* akzeptiert, sind die [Berechtigungen UIPermissionWindow.AllWindows](/dotnet/api/system.security.permissions.uipermissionwindow?view=dotnet-plat-ext-3.1&preserve-view=true) und [SecurityPermissionFlag.UnmanagedCode](/previous-versions/windows/) zusätzlich zu den Berechtigungen erforderlich, die für den Konstruktor erforderlich sind, der den *attachedControl-Parameter* akzeptiert.
 
 Weitere Informationen zu Sicherheits- und Vertrauensproblemen finden Sie unter [Sicherheit und Vertrauenswürdigkeit.](security-and-trust.md)
 

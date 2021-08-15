@@ -1,24 +1,24 @@
 ---
-description: Im folgenden Beispiel wird eine Sicherheits Beschreibung für einen neuen Registrierungsschlüssel mithilfe des folgenden Prozesses erstellt. Ähnlicher Code kann verwendet werden, um eine Sicherheits Beschreibung für andere Objekttypen zu erstellen.
+description: Im folgenden Beispiel wird mithilfe des folgenden Prozesses ein Sicherheitsdeskriptor für einen neuen Registrierungsschlüssel erstellt. Ähnlicher Code kann verwendet werden, um einen Sicherheitsdeskriptor für andere Objekttypen zu erstellen.
 ms.assetid: 866992a7-95c4-4094-87bb-e6d8eeb24317
-title: Erstellen einer Sicherheits Beschreibung für ein neues Objekt in C++
+title: Erstellen eines Sicherheitsdeskriptors für ein neues Objekt in C++
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 17687b60999bc4e6828c9769eec32ec4ce5afb54
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 4fb97acf8a2c7c35d42c54a10baeabaa193f880d11a505ac459e6c705be28dd8
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "103863252"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117782634"
 ---
-# <a name="creating-a-security-descriptor-for-a-new-object-in-c"></a>Erstellen einer Sicherheits Beschreibung für ein neues Objekt in C++
+# <a name="creating-a-security-descriptor-for-a-new-object-in-c"></a>Erstellen eines Sicherheitsdeskriptors für ein neues Objekt in C++
 
-Im folgenden Beispiel wird eine [*Sicherheits Beschreibung*](/windows/desktop/SecGloss/s-gly) für einen neuen Registrierungsschlüssel mithilfe des folgenden Prozesses erstellt. Ähnlicher Code kann verwendet werden, um eine Sicherheits Beschreibung für andere Objekttypen zu erstellen.
+Im folgenden Beispiel wird [*mithilfe des folgenden*](/windows/desktop/SecGloss/s-gly) Prozesses eine Sicherheitsbeschreibung für einen neuen Registrierungsschlüssel erstellt. Ähnlicher Code kann verwendet werden, um einen Sicherheitsdeskriptor für andere Objekttypen zu erstellen.
 
--   Im Beispiel wird ein Array von [**expliziten \_ Zugriffs**](/windows/desktop/api/AccCtrl/ns-accctrl-explicit_access_a) Strukturen mit den Informationen für zwei ACEs gefüllt. Ein ACE ermöglicht den Lesezugriff auf alle. der andere ACE ermöglicht den vollständigen Zugriff auf Administratoren.
--   Das [**explizite \_ Access**](/windows/desktop/api/AccCtrl/ns-accctrl-explicit_access_a) -Array wird an die [**SetEntriesInAcl**](/windows/desktop/api/Aclapi/nf-aclapi-setentriesinacla) -Funktion übermittelt, um eine DACL für die Sicherheits Beschreibung zu erstellen.
--   Nachdem der Sicherheits Deskriptor Speicher belegt wurde, werden im Beispiel die Funktionen [**InitializeSecurityDescriptor**](/windows/win32/api/securitybaseapi/nf-securitybaseapi-initializesecuritydescriptor) und [**SetSecurityDescriptorDacl**](/windows/win32/api/securitybaseapi/nf-securitybaseapi-setsecuritydescriptordacl) aufgerufen, um die Sicherheits Beschreibung zu initialisieren und die DACL anzufügen.
--   Die Sicherheits Beschreibung wird dann in einer \_ Struktur von Sicherheits Attributen gespeichert und an die [**regkreatekeyex**](/windows/desktop/api/winreg/nf-winreg-regcreatekeyexa) -Funktion übergeben, die die Sicherheits Beschreibung an den neu erstellten Schlüssel anfügt.
+-   Im Beispiel wird ein Array von [**EXPLICIT \_ ACCESS-Strukturen**](/windows/desktop/api/AccCtrl/ns-accctrl-explicit_access_a) mit den Informationen für zwei ACEs auffüllt. Ein ACE ermöglicht allen Benutzern Lesezugriff. der andere ACE ermöglicht den Vollzugriff für Administratoren.
+-   Das [**EXPLICIT \_ ACCESS-Array**](/windows/desktop/api/AccCtrl/ns-accctrl-explicit_access_a) wird an die [**SetEntriesInAcl-Funktion**](/windows/desktop/api/Aclapi/nf-aclapi-setentriesinacla) übergeben, um eine DACL für den Sicherheitsdeskriptor zu erstellen.
+-   Nach dem Zuweisen von Arbeitsspeicher für den Sicherheitsdeskriptor ruft das Beispiel die [**Funktionen InitializeSecurityDescriptor**](/windows/win32/api/securitybaseapi/nf-securitybaseapi-initializesecuritydescriptor) und [**SetSecurityDescriptorDacl**](/windows/win32/api/securitybaseapi/nf-securitybaseapi-setsecuritydescriptordacl) auf, um den Sicherheitsdeskriptor zu initialisieren und die DACL anfügen.
+-   Der Sicherheitsdeskriptor wird dann in einer SECURITY ATTRIBUTES-Struktur gespeichert und an die \_ [**RegCreateKeyEx-Funktion**](/windows/desktop/api/winreg/nf-winreg-regcreatekeyexa) übergeben, die den Sicherheitsdeskriptor an den neu erstellten Schlüssel anfügen kann.
 
 
 ```C++

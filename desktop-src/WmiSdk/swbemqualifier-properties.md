@@ -1,30 +1,30 @@
 ---
-description: Das taubemqualifiziererobjekt macht die folgenden Eigenschaften verfügbar.
+description: Das SWbemQualifier-Objekt macht die folgenden Eigenschaften verfügbar.
 ms.assetid: 0677B63F-930A-4C3D-9C29-CF02708105A2
 ms.tgt_platform: multiple
-title: Eigenschaften von "taubemqualifier"
+title: SWbemQualifier-Eigenschaften
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 2ce3aed5adff79c200a8b7ee6fe4047408cbae96
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: f99b08846eb0570e7a0a695877cec6b9526030ca03d36870d2cb6c3c4500ff0a
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "103959329"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118313021"
 ---
-# <a name="swbemqualifier-properties"></a>Eigenschaften von "taubemqualifier"
+# <a name="swbemqualifier-properties"></a>SWbemQualifier-Eigenschaften
 
-Das [**taubemqualifiziererobjekt**](swbemqualifier.md) macht die folgenden Eigenschaften verfügbar.
+Das [**SWbemQualifier-Objekt**](swbemqualifier.md) macht die folgenden Eigenschaften verfügbar.
 
 ## <a name="in-this-section"></a>In diesem Abschnitt
 
--   [**Isgeänderte Eigenschaft**](swbemqualifier-isamended.md)
+-   [**IsAmended-Eigenschaft**](swbemqualifier-isamended.md)
 -   [**IsLocal-Eigenschaft**](swbemqualifier-islocal.md)
--   [**Propagatestoinstance (Eigenschaft)**](swbemqualifier-propagatestoinstance.md)
--   [**Propagatestosubclass (Eigenschaft)**](swbemqualifier-propagatestosubclass.md)
+-   [**PropagatesToInstance-Eigenschaft**](swbemqualifier-propagatestoinstance.md)
+-   [**PropagatesToSubClass-Eigenschaft**](swbemqualifier-propagatestosubclass.md)
 -   [**Value-Eigenschaft**](swbemqualifier-value.md)
 -   [**Name-Eigenschaft**](swbemqualifier-name.md)
--   [**Isoverridable-Eigenschaft**](swbemqualifier-isoverridable.md)
+-   [**IsOverridable-Eigenschaft**](swbemqualifier-isoverridable.md)
 
  
 

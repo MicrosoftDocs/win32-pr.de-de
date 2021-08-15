@@ -1,28 +1,28 @@
 ---
-title: Verwenden eines Ereignis Rückrufs zum Verarbeiten von Treiber Nachrichten
-description: Verwenden eines Ereignis Rückrufs zum Verarbeiten von Treiber Nachrichten
+title: Verwenden eines Ereignisrückrufs zum Verarbeiten von Treibermeldungen
+description: Verwenden eines Ereignisrückrufs zum Verarbeiten von Treibermeldungen
 ms.assetid: 5b17ff93-ed00-46ee-828c-baf716c9257c
 keywords:
-- Wellenform-Audiodatei, Ereignis Rückruf
-- Audiodatenblöcke, Ereignis Rückruf
-- Wellenform-Audiodatei, Verarbeitung von Treiber Meldungen
-- Audiodatenblöcke, Verarbeiten von Treiber Meldungen
-- Verarbeiten von Treiber Meldungen
-- Funktion "kreateevent"
+- Waveform-Audio, Ereignisrückruf
+- Audiodatenblöcke,Ereignisrückruf
+- Waveform-Audio, Verarbeiten von Treibermeldungen
+- Audiodatenblöcke,Verarbeiten von Treibermeldungen
+- Verarbeiten von Treibermeldungen
+- CreateEvent-Funktion
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 5cbfeb95fcf0e5d83f9a54fc0cf3cd223ac6ce19
-ms.sourcegitcommit: ebd3ce6908ff865f1ef66f2fc96769be0aad82e1
+ms.openlocfilehash: 70c5bdbfe46fed9fa9124a031e90af3bfefb983caf6743415d90c645afc42c6e
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/19/2020
-ms.locfileid: "103725416"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117801200"
 ---
-# <a name="using-an-event-callback-to-process-driver-messages"></a>Verwenden eines Ereignis Rückrufs zum Verarbeiten von Treiber Nachrichten
+# <a name="using-an-event-callback-to-process-driver-messages"></a>Verwenden eines Ereignisrückrufs zum Verarbeiten von Treibermeldungen
 
-Um einen Ereignis Rückruf zu verwenden, verwenden [**Sie die Funktion**](/windows/desktop/api/synchapi/nf-synchapi-createeventa) "Funktion", um ein manuelles Zurücksetzungs Ereignis zu erstellen. Geben Sie im Aufrufen der [**WaveOutOpen**](/windows/win32/api/mmeapi/nf-mmeapi-waveoutopen) -Funktion das **Rückruf \_ Ereignis** für den *fdwopen* -Parameter an. Nachdem Sie die [**waveoutprepareheader**](/windows/win32/api/mmeapi/nf-mmeapi-waveoutprepareheader) -Funktion aufgerufen haben, aber bevor Sie Waveform-Audiodaten an das Gerät gesendet haben, setzen Sie das Ereignis in einen nicht signalisierten Zustand, indem Sie die [**resettevent**](/windows/desktop/api/synchapi/nf-synchapi-resetevent) -Funktion aufrufen. Anschließend wird in einer Schleife, die überprüft, ob das **whdr \_ done** -Flag im **dwFlags** -Member der [**wavehdr**](/windows/win32/api/mmeapi/ns-mmeapi-wavehdr) -Struktur festgelegt ist, die [WaitForSingleObject](/windows/win32/api/synchapi/nf-synchapi-waitforsingleobject) -Funktion aufgerufen und als Parameter für das Ereignis Handle und einen Timeout Wert angegeben.
+Um einen Ereignisrückruf zu verwenden, verwenden Sie die [**CreateEvent-Funktion,**](/windows/desktop/api/synchapi/nf-synchapi-createeventa) um ein Ereignis für die manuelle Zurücksetzung zu erstellen. Geben Sie im Aufruf der [**waveOutOpen-Funktion**](/windows/win32/api/mmeapi/nf-mmeapi-waveoutopen) **CALLBACK \_ EVENT** für den *fdwOpen-Parameter* an. Nachdem Sie die [**waveOutPrepareHeader-Funktion**](/windows/win32/api/mmeapi/nf-mmeapi-waveoutprepareheader) aufgerufen haben, aber bevor Sie Waveform-Audiodaten an das Gerät senden, setzen Sie das Ereignis in einen nicht signalierten Zustand, indem Sie die [**ResetEvent-Funktion**](/windows/desktop/api/synchapi/nf-synchapi-resetevent) aufrufen. Rufen Sie dann in einer Schleife, die überprüft, ob das **Flag WHDR \_ DONE** im **dwFlags-Member** der [**WAVEHDR-Struktur**](/windows/win32/api/mmeapi/ns-mmeapi-wavehdr) festgelegt ist, die [WaitForSingleObject-Funktion](/windows/win32/api/synchapi/nf-synchapi-waitforsingleobject) auf, und geben Sie dabei als Parameter das Ereignishandle und einen Time out-Wert an.
 
-Da Ereignis Rückrufe keine bestimmten Close-, done-oder Open-Benachrichtigungen empfangen, muss eine Anwendung möglicherweise den Status des Prozesses überprüfen, auf den Sie wartet, nachdem das Ereignis aufgetreten ist. Es ist möglich, dass eine Reihe von Aufgaben durch die Rückgabe von [**WaitForSingleObject**](/windows/desktop/api/synchapi/nf-synchapi-waitforsingleobject) abgeschlossen wurde.
+Da Ereignisrückrufe keine spezifischen Benachrichtigungen zum Schließen, Fertig- oder Öffnen empfangen, muss eine Anwendung möglicherweise den Status des Prozesses überprüfen, auf den sie nach dem Auftreten des Ereignisses wartet. Es ist möglich, dass eine Reihe von Aufgaben bis zur Rückgabe von [**WaitForSingleObject abgeschlossen**](/windows/desktop/api/synchapi/nf-synchapi-waitforsingleobject) worden wäre.
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
@@ -31,6 +31,6 @@ Da Ereignis Rückrufe keine bestimmten Close-, done-oder Open-Benachrichtigungen
 [Audiodatenblöcke](audio-data-blocks.md)
 </dt> </dl>
 
- 
+ 
 
- 
+ 

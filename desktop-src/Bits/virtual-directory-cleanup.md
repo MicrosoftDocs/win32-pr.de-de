@@ -1,29 +1,29 @@
 ---
-title: Cleanup des virtuellen Verzeichnisses
-description: Bits erweitert virtuelle IIS-Verzeichnisse für die Unterstützung von Uploads.
+title: Bereinigung virtueller Verzeichnisse
+description: BITS erweitert virtuelle IIS-Verzeichnisse, um Uploads zu unterstützen.
 ms.assetid: 8214904e-8a95-4c4b-a1c5-91e84031587f
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 83fb689bb3c797a311ec7c2ef8134eb51ffd6f1a
-ms.sourcegitcommit: 592c9bbd22ba69802dc353bcb5eb30699f9e9403
+ms.openlocfilehash: 1ce883bbd9f1af31bc7cafb10a2484f3a56ecbcffa7917a5a0e491a38da4701b
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "103948909"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118422191"
 ---
-# <a name="virtual-directory-cleanup"></a>Cleanup des virtuellen Verzeichnisses
+# <a name="virtual-directory-cleanup"></a>Bereinigung virtueller Verzeichnisse
 
-Bits erweitert virtuelle IIS-Verzeichnisse für die Unterstützung von Uploads. Jedes virtuelle Verzeichnis verfügt über eine Sitzungs Timeout-Eigenschaft (die IIS-Eigenschaft " [bitssessiontimeout](bits-iis-extension-properties.md) Metabase"), die den Zeitraum angibt, in dem der BITS-Client beim Hochladen der Datei Fortschritte ausführen muss. Wenn während dieses Zeitraums kein Fortschritt erfolgt (der Zeitgeber wird zurückgesetzt, wenn der Fortschritt erfolgt), schließt Bits die Sitzung. Der standardmäßige Sitzungs Timeout beträgt 14 Tage.
+BITS erweitert virtuelle IIS-Verzeichnisse, um Uploads zu unterstützen. Jedes virtuelle Verzeichnis verfügt über eine Sitzungstimeout-Eigenschaft (die [IIS BITSSessionTimeout-Metabasiseigenschaft),](bits-iis-extension-properties.md) die den Zeitraum angibt, in dem der BITS-Client beim Hochladen der Datei Fortschritte machen muss. Wenn während dieses Zeitraums kein Fortschritt erfolgt (der Timer wird zurückgesetzt, wenn der Fortschritt erfolgt), schließt BITS die Sitzung. Das Standardmäßige Sitzungstime out beträgt 14 Tage.
 
-Mit Bits wird der [Taskplaner](/windows/desktop/TaskSchd/task-scheduler-start-page) für jedes virtuelle Verzeichnis, das Sie erstellen und aktivieren, ein Arbeits Element hinzugefügt. Mit dem Arbeits Element werden Ressourcen gelöscht, die den geschlossenen Sitzungen zugeordnet sind. Standardmäßig erfolgt die Bereinigung alle 12 Stunden. Wenn zwei virtuelle Verzeichnisse auf dasselbe physische Verzeichnis verweisen, löscht der Bereinigungs Prozess, der von einem der Verzeichnisse initiiert wurde, die Ressourcen, die allen geschlossenen Sitzungen im physischen Verzeichnis zugeordnet sind.
+BITS fügt dem [Taskplaner](/windows/desktop/TaskSchd/task-scheduler-start-page) für jedes virtuelle Verzeichnis, das Sie erstellen und aktivieren, ein Arbeitselement hinzu. Das Arbeitselement löscht Ressourcen, die den geschlossenen Sitzungen zugeordnet sind. Standardmäßig erfolgt die Bereinigung alle 12 Stunden. Wenn zwei virtuelle Verzeichnisse auf dasselbe physische Verzeichnis verweisen, löscht der von einem der Verzeichnisse initiierte Bereinigungsprozess die Ressourcen, die allen geschlossenen Sitzungen im physischen Verzeichnis zugeordnet sind.
 
-Verwenden Sie die Registerkarte Bits-Erweiterung oder die [Taskplaner](/windows/desktop/TaskSchd/task-scheduler-start-page) Schnittstellen, um den Bereinigungs Zeitplan entsprechend Ihrer Anwendung zu ändern. Sie können auch die [**ibitsextensionsetup:: getcleanuptask**](/windows/desktop/api/Bitscfg/nf-bitscfg-ibitsextensionsetup-getcleanuptask) -Methode aufrufen, um einen Schnittstellen Zeiger auf den Cleanuptask abzurufen, der dem virtuellen Verzeichnis zugeordnet ist.
+Verwenden Sie die Registerkarte BITS-Erweiterung oder die [Taskplaner](/windows/desktop/TaskSchd/task-scheduler-start-page) Schnittstellen, um den Bereinigungszeitplan entsprechend Ihrer Anwendung zu ändern. Sie können auch die [**IBITSExtensionSetup::GetCleanupTask-Methode**](/windows/desktop/api/Bitscfg/nf-bitscfg-ibitsextensionsetup-getcleanuptask) aufrufen, um einen Schnittstellenzeiger auf die Bereinigungsaufgabe abzurufen, die dem virtuellen Verzeichnis zugeordnet ist.
 
 > [!Note]  
-> Wenn die Taskplaner nach dem Aktivieren des virtuellen Verzeichnisses deaktiviert ist, funktioniert der Cleanupprozess des virtuellen Verzeichnisses nicht.
+> Wenn die Taskplaner deaktiviert ist, nachdem das virtuelle Verzeichnis aktiviert wurde, funktioniert der Bereinigungsprozess für virtuelle Verzeichnisse nicht.
 
- 
+ 
 
- 
+ 
 
- 
+ 

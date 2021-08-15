@@ -1,5 +1,5 @@
 ---
-description: Tritt ein, wenn das InkPicture-Steuerelement die Neuzeichnung abgeschlossen hat.
+description: Tritt ein, wenn das InkPicture-Steuerelement die Neuzeichnung selbst abgeschlossen hat.
 ms.assetid: a8194cff-ed94-402e-8564-08d370f958b4
 title: InkPicture.Painted-Ereignis (Msinkaut.h)
 ms.topic: reference
@@ -51,7 +51,7 @@ Dieses Ereignis gibt keinen Wert zurück.
 
 ## <a name="remarks"></a>Hinweise
 
-Diese Ereignismethode wird in den **\_ Disp-Interfaces IInkOverlayEvents** und **\_ IInkPictureEvents** mit der ID DISPID \_ IOEPainted definiert.
+Diese Ereignismethode wird in den **\_ IInkOverlayEvents-** und **\_ IInkPictureEvents-Disp-Interfaces** mit der ID DISPID \_ IOEPainted definiert.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -66,7 +66,7 @@ Diese Ereignismethode wird in den **\_ Disp-Interfaces IInkOverlayEvents** und *
 
 
 
-## <a name="see-also"></a>Weitere Informationen:
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 

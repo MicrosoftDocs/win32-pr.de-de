@@ -97,7 +97,7 @@ private void PaintIntersections(Graphics g, Strokes strokesToPaint)
 
 ## <a name="handling-a-pen-that-has-two-ends"></a>Behandeln eines Stifts mit zwei Enden
 
-Für das [InkCollector-Objekt](/previous-versions/ms836493(v=msdn.10)) werden drei Ereignishandler für die [CursorDown-,](/previous-versions/ms567611(v=vs.100)) [NewPackets-](/previous-versions/ms567621(v=vs.100))und [Stroke-Ereignisse](/previous-versions/ms567622(v=vs.100)) definiert. Jeder Ereignishandler überprüft die [Inverted-Eigenschaft](/previous-versions/ms839525(v=msdn.10)) des [Cursorobjekts,](/previous-versions/ms839521(v=msdn.10)) um zu sehen, welches Ende des Stifts verwendet wird. Wenn der Stift invertiert ist:
+Drei Ereignishandler werden für das [InkCollector-Objekt](/previous-versions/ms836493(v=msdn.10)) für die [CursorDown-,](/previous-versions/ms567611(v=vs.100)) [NewPackets-](/previous-versions/ms567621(v=vs.100))und [Stroke-Ereignisse](/previous-versions/ms567622(v=vs.100)) definiert. Jeder Ereignishandler überprüft die [Inverted-Eigenschaft](/previous-versions/ms839525(v=msdn.10)) des [Cursorobjekts,](/previous-versions/ms839521(v=msdn.10)) um zu sehen, welches Ende des Stifts verwendet wird. Wenn der Stift invertiert ist:
 
 -   Die `myInkCollector_CursorDown` -Methode macht den Strich transparent.
 -   Die `myInkCollector_NewPackets` -Methode löscht Striche.
@@ -162,7 +162,7 @@ private void EraseAtIntersections(Point pt)
 
 ## <a name="erasing-at-cusps"></a>Löschen bei Cusps
 
-Für jeden Strich, der innerhalb des Testradius liegt, ruft die -Methode das Array von Cusps aus der `EraseAtCusps` [PolylineCusps-Methode](/previous-versions/ms827853(v=msdn.10)) des [Stroke-Objekts](/previous-versions/ms827842(v=msdn.10)) ab. Jedes Ende des Strichs ist auch ein Cusp. Wenn der Strich also nur zwei Cusps auft, wird der gesamte Strich gelöscht. Andernfalls wird der nächste Punkt auf dem Strich zum Testpunkt gefunden, und von diesem Punkt werden die Schnittpunkte auf beiden Seiten des Punkts gefunden, was das zu entfernende Segment beschreibt.
+Für jeden Strich, der innerhalb des Testradius liegt, ruft die -Methode das Array von Cusps aus der `EraseAtCusps` [PolylineCusps-Methode](/previous-versions/ms827853(v=msdn.10)) des [Stroke-Objekts](/previous-versions/ms827842(v=msdn.10)) ab. Jedes Ende des Strichs ist auch ein Cusp. Wenn der Strich also nur zwei Cusps auft, wird der gesamte Strich gelöscht. Andernfalls wird der nächste Punkt auf dem Strich zum Testpunkt gefunden, und von diesem Punkt aus werden die Schnittpunkte auf beiden Seiten des Punkts gefunden, die das zu entfernende Segment beschreiben.
 
 Die [Split-Methode](/previous-versions/ms827842(v=msdn.10)) des [Stroke-Objekts](/previous-versions/ms828477(v=msdn.10)) wird verwendet, um das Segment vom Rest des Strichs zu trennen. Anschließend wird das Segment gelöscht, und der Rest des Strichs bleibt erhalten. Wie in `EraseStrokes` wird das Formular neu gezeichnet, bevor die Methode zurückgegeben wird.
 

@@ -14,12 +14,12 @@ api_type:
 api_location:
 - Ndisnpp.dll
 - Rmtnpp.dll
-ms.openlocfilehash: 38be5b6ba4c3f6edcd716f4d0235150e96dd692a
-ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
+ms.openlocfilehash: b5fb6442481574de6732aef1359cf9586b9cdcc1815d9f0b206a1f8a597f1967
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2021
-ms.locfileid: "108110778"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118366000"
 ---
 # <a name="idelaydcstop-method"></a>IDelaydC::Stop-Methode
 
@@ -57,17 +57,17 @@ Wenn die Methode nicht erfolgreich ist, ist der Rückgabewert einer der folgende
 
 | Rückgabecode                                                                                          | Beschreibung                                                                                                                           |
 |------------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------|
-| <dl> <dt>**NMERR \_ NICHT \_ VERBUNDEN**</dt> </dl> | Das NPP ist nicht mit dem Netzwerk verbunden. Rufen Sie [IDelaydC::Connect](idelaydc-connect.md) auf, um die NPP mit dem Netzwerk zu verbinden.<br/> |
+| <dl> <dt>**NMERR \_ NICHT \_ VERBUNDEN**</dt> </dl> | Das NPP ist nicht mit dem Netzwerk verbunden. Rufen Sie [IDelaydC::Verbinden](idelaydc-connect.md) auf, um das NPP mit dem Netzwerk zu verbinden.<br/> |
 | <dl> <dt>**NMERR \_ NICHT \_ ERFASSEN**</dt> </dl> | Das NPP erfasst keine Daten. Rufen Sie [IDelaydC::Start](idelaydc-start.md) auf, um die Erfassung zu starten.<br/>                            |
-| <dl> <dt>**NMERR \_ NICHT \_ VERZÖGERT**</dt> </dl>   | Das NPP ist mit dem Netzwerk verbunden, jedoch nicht mit der [IDelaydC::Connect-Methode.](idelaydc-connect.md)<br/>                     |
+| <dl> <dt>**NMERR \_ NICHT \_ VERZÖGERT**</dt> </dl>   | Das NPP ist mit dem Netzwerk verbunden, jedoch nicht mit der [IDelaydC::Verbinden-Methode.](idelaydc-connect.md)<br/>                     |
 
 
 
  
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Wenn **IDelaydC::Stop** aufgerufen wird, beendet Netzwerkmonitor die Erfassung von Daten und schließt die [*Erfassungsdatei*](c.md). (Der Name der Erfassungsdatei wurde zurückgegeben, als [IDelaydC::Start](idelaydc-start.md) aufgerufen wurde.) Sie können sich nun den Inhalt der Aufzeichnungsdatei ansehen.
+Wenn **IDelaydC::Stop** aufgerufen wird, beendet Netzwerkmonitor die Erfassung von Daten und schließt die [*Erfassungsdatei*](c.md). (Der Name der Erfassungsdatei wurde zurückgegeben, als [IDelaydC::Start](idelaydc-start.md) aufgerufen wurde.) Sie können sich nun den Inhalt der Erfassungsdatei ansehen.
 
 Wenn Sie die Erfassung beenden und starten, stellen Sie sicher, dass Sie jedes Mal die [IDelaydC::Configure-Methode](idelaydc-configure.md) aufrufen, wenn Sie [IDelaydC::Start](idelaydc-start.md) aufrufen, um die Erfassung neu zu starten.
 
@@ -75,7 +75,7 @@ Wenn Sie die Erfassung beenden und starten, stellen Sie sicher, dass Sie jedes M
 
 
 
-| Anforderungen | Wert |
+| Anforderung | Wert |
 |-------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional \[nur Desktop-Apps\]<br/>                                                                                               |
 | Unterstützte Mindestversion (Server)<br/> | Windows 2000 Server \[nur Desktop-Apps\]<br/>                                                                                                     |
@@ -91,7 +91,7 @@ Wenn Sie die Erfassung beenden und starten, stellen Sie sicher, dass Sie jedes M
 [IDelaydC](idelaydc.md)
 </dt> <dt>
 
-[IDelaydC::Connect](idelaydc-connect.md)
+[IDelaydC::Verbinden](idelaydc-connect.md)
 </dt> <dt>
 
 [IDelaydC::Configure](idelaydc-configure.md)

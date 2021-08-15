@@ -1,8 +1,8 @@
 ---
-description: Die Eigenschaft "chanbemerfrischendes ableitem. isset" ist ein boolescher Wert, der angibt, ob das Objekt "Swap-ableitem" ein einzelnes Objekt oder einen Objekt Satz darstellt. Das ' Swap '-Objekt ' ' ist ein einzelnes Objekt oder ein Objekt Satz.
+description: Die SWbemRefreshableItem.IsSet-Eigenschaft ist ein boolescher Wert, der angibt, ob das SWbemRefreshableItem-Objekt ein einzelnes Objekt oder einen Objektsatz darstellt. Das SWbemRefreshableItem-Objekt stellt ein einzelnes Objekt oder einen Objektsatz dar.
 ms.assetid: 4be5d27c-9020-4150-84ce-f9efc55be947
 ms.tgt_platform: multiple
-title: Swap. isset-Eigenschaft (wbemdisp. h)
+title: SWbemRefreshableItem.IsSet-Eigenschaft (Wbemdisp.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -17,18 +17,18 @@ api_type:
 - COM
 api_location:
 - Wbemdisp.dll
-ms.openlocfilehash: 71fb5f84ec7ad35f1d9beab32cb74db5b7591057
-ms.sourcegitcommit: c16214e53680dc71d1c07111b51f72b82a4512d8
+ms.openlocfilehash: 055c776c1beffe1550033d61b54256d7b2e983ca70ac13f1b9fc899920910d4c
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/03/2021
-ms.locfileid: "106367273"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118312919"
 ---
-# <a name="swbemrefreshableitemisset-property"></a>Swap. isset-Eigenschaft
+# <a name="swbemrefreshableitemisset-property"></a>SWbemRefreshableItem.IsSet (Eigenschaft)
 
-Die Eigenschaft " **chanbemerfrischendes ableitem. isset** " ist ein boolescher Wert, der angibt, ob das Objekt " [**Swap-ableitem**](swbemrefreshableitem.md) " ein einzelnes Objekt oder einen Objekt Satz darstellt.
+Die **SWbemRefreshableItem.IsSet-Eigenschaft** ist ein boolescher Wert, der angibt, ob das [**SWbemRefreshableItem-Objekt**](swbemrefreshableitem.md) ein einzelnes Objekt oder einen Objektsatz darstellt.
 
-Eine Erläuterung dieser Syntax finden Sie unter [Dokument Konventionen für die Skript-API](document-conventions-for-the-scripting-api.md).
+Eine Erläuterung dieser Syntax finden Sie unter [Dokumentkonventionen für die Skripterstellungs-API.](document-conventions-for-the-scripting-api.md)
 
 Dies ist eine Eigenschaft mit Lese- und Schreibzugriff.
 
@@ -43,9 +43,9 @@ SWbemRefreshableItem.IsSet As Boolean
 
 ## <a name="property-value"></a>Eigenschaftswert
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Wenn die Datei " **errbemaktuableitem. isset** " den Wert " **true**" hat, stellt das Element ein " [**errbewbjectset**](swbemobjectset.md) "-Objekt dar, und die [**Objekt**](swbemrefreshableitem-object.md) Eigenschaft ist **null**. Wenn der Wert **false** ist, stellt [**das Element ein-Objekt dar**](swbemobject.md) , und die- **Objekt** Eigenschaft ist **null**.
+Wenn **SWbemRefreshableItem.IsSet** **true** ist, stellt das Element ein [**SWbemObjectSet-Objekt**](swbemobjectset.md) dar, und die [**Object-Eigenschaft**](swbemrefreshableitem-object.md) ist **NULL.** False **gibt an,** dass das Element ein [**SWbemObject-Objekt**](swbemobject.md) darstellt und die **Object-Eigenschaft** **NULL ist.**
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -55,22 +55,22 @@ Wenn die Datei " **errbemaktuableitem. isset** " den Wert " **true**" hat, stell
 |-------------------------------------|-----------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows Vista<br/>                                                                |
 | Unterstützte Mindestversion (Server)<br/> | Windows Server 2008<br/>                                                          |
-| Header<br/>                   | <dl> <dt>Wbemdisp. h</dt> </dl>   |
-| Typbibliothek<br/>             | <dl> <dt>Wbemdisp. tlb</dt> </dl> |
+| Header<br/>                   | <dl> <dt>Wbemdisp.h</dt> </dl>   |
+| Typbibliothek<br/>             | <dl> <dt>Wbemdisp.tlb</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>Wbemdisp.dll</dt> </dl> |
-| CLSID<br/>                    | CLSID, \_ Swap-ableitem<br/>                                                  |
-| IID<br/>                      | IID \_ iswbemerfrischendes ableitem<br/>                                                   |
+| CLSID<br/>                    | CLSID \_ SWbemRefreshableItem<br/>                                                  |
+| IID<br/>                      | IID \_ ISWbemRefreshableItem<br/>                                                   |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Swap-aktuableitem**](swbemrefreshableitem.md)
+[**SWbemRefreshableItem**](swbemrefreshableitem.md)
 </dt> <dt>
 
-[**Swap-aktuableitem**](swbemrefresher.md)
+[**SWbemRefreshableItem**](swbemrefresher.md)
 </dt> </dl>
 
  

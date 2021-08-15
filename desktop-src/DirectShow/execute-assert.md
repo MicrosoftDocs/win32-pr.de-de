@@ -1,7 +1,7 @@
 ---
-description: Wertet einen Ausdruck in Debug-und Retail-Builds aus. In Debugbuilds zeigt eine Diagnose Meldung an, wenn der Ausdruck false ist.
+description: Wertet einen Ausdruck in Debug- und Verkaufsbuilds aus. Zeigt in Debugbuilds eine Diagnosemeldung an, wenn der Ausdruck FALSE ist.
 ms.assetid: 259a3d30-0b20-4430-8b74-83ec619576ae
-title: EXECUTE_ASSERT-Makro (wxdebug. h)
+title: EXECUTE_ASSERT Makro (Wxdebug.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,16 +13,16 @@ api_type:
 - HeaderDef
 api_location:
 - Wxdebug.h
-ms.openlocfilehash: 5db5e78d198cc9f66aa5de6fdb0160e325b82591
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 871a8e4a04ec1dc31f3240b539a943c9c1733f083166fa4b7e6f6b52d14a466c
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106365833"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118401792"
 ---
-# <a name="execute_assert-macro"></a>\_ASSERT-Makro ausführen
+# <a name="execute_assert-macro"></a>EXECUTE \_ ASSERT-Makro
 
-Wertet einen Ausdruck in Debug-und Retail-Builds aus. In Debugbuilds zeigt eine Diagnose Meldung an, wenn der Ausdruck **false** ist.
+Wertet einen Ausdruck in Debug- und Verkaufsbuilds aus. Zeigt in Debugbuilds eine Diagnosemeldung an, wenn der Ausdruck **FALSE** ist.
 
 ## <a name="syntax"></a>Syntax
 
@@ -39,7 +39,7 @@ void EXECUTE_ASSERT(
 
 <dl> <dt>
 
-*cond* 
+*Cond* 
 </dt> <dd>
 
 Der auszuwertende Ausdruck.
@@ -50,9 +50,9 @@ Der auszuwertende Ausdruck.
 
 Dieses Makro gibt keinen Wert zurück.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Im Gegensatz zum [**Assert**](assert.md) -Makro wertet dieses Makro den Ausdruck in Einzelhandels Builds aus. Wenn in Debugbuilds der Ausdruck **false** ist, zeigt das Makro ein Meldungs Feld mit dem Text des Ausdrucks, dem Namen der Quelldatei und der Zeilennummer an. Der Benutzer kann die-Übersetzung ignorieren, den Debugger eingeben oder die Anwendung beenden.
+Im Gegensatz zum [**ASSERT-Makro**](assert.md) wertet dieses Makro den Ausdruck in Einzelhandelsbuilds aus. Wenn der Ausdruck in Debugbuilds **FALSE** ist, zeigt das Makro ein Meldungsfeld mit dem Text des Ausdrucks, dem Namen der Quelldatei und der Zeilennummer an. Der Benutzer kann die Assertion ignorieren, den Debugger eingeben oder die Anwendung beenden.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -60,15 +60,15 @@ Im Gegensatz zum [**Assert**](assert.md) -Makro wertet dieses Makro den Ausdruck
 
 | Anforderung | Wert |
 |-------------------|----------------------------------------------------------------------------------------------------------|
-| Header<br/> | <dl> <dt>Wxdebug. h (Include Streams. h)</dt> </dl> |
+| Header<br/> | <dl> <dt>Wxdebug.h (include Streams.h)</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[Assert-und breakpointmakros](assert-and-breakpoint-macros.md)
+[Assert- und Breakpoint-Makros](assert-and-breakpoint-macros.md)
 </dt> </dl>
 
  

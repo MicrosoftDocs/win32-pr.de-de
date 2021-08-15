@@ -1,6 +1,6 @@
 ---
-description: Aktualisiert ein Objekt, indem ein Zeiger auf ein Array von zwei Zeigern auf Elementbezeichnerlisten (PIDLs) übergeben wird. Wird von SHShellFolderView \_ Message verwendet.
-title: SFVM_UPDATEOBJECT (Shlobj.h)
+description: Aktualisiert ein -Objekt, indem ein Zeiger auf ein Array von zwei Zeigern auf Elementbezeichnerlisten (PIDLs) übergeben wird. Wird von SHShellFolderView \_ Message verwendet.
+title: SFVM_UPDATEOBJECT Meldung (Shlobj.h)
 ms.topic: reference
 ms.date: 05/31/2018
 ms.assetid: 3bd68ace-3ccf-446c-8cf9-52f42444674e
@@ -22,7 +22,7 @@ ms.locfileid: "118452844"
 ---
 # <a name="sfvm_updateobject-message"></a>SFVM \_ UPDATEOBJECT-Meldung
 
-Aktualisiert ein Objekt, indem ein Zeiger auf ein Array von zwei Zeigern auf Elementbezeichnerlisten (PIDLs) übergeben wird. Wird von [**SHShellFolderView Message \_ verwendet.**](/windows/desktop/api/shlobj_core/nf-shlobj_core-shshellfolderview_message)
+Aktualisiert ein -Objekt, indem ein Zeiger auf ein Array von zwei Zeigern auf Elementbezeichnerlisten (PIDLs) übergeben wird. Wird von [**SHShellFolderView \_ Message**](/windows/desktop/api/shlobj_core/nf-shlobj_core-shshellfolderview_message)verwendet.
 
 
 ```C++
@@ -40,20 +40,20 @@ Aktualisiert ein Objekt, indem ein Zeiger auf ein Array von zwei Zeigern auf Ele
 
 <dl> <dt>
 
-*dldl* \[ In\]
+*ppidl* \[ In\]
 </dt> <dd>
 
-Die Adresse eines Arrays von zwei PIDLs. Die erste PIDL ist die alte PIDL. Das zweite ist eine Kopie der alten PIDL mit aktualisierten Informationen. Die Kontrolle über die Lebensdauer der Kopie gehört nach erfolgreichem Abschluss dieses Aufrufs zur Ansicht.
+Die Adresse eines Arrays mit zwei PIDLs. Die erste PIDL ist die alte PIDL. Das zweite ist eine Kopie der alten PIDL mit aktualisierten Informationen. Die Kontrolle über die Lebensdauer der Kopie gehört nach erfolgreichem Abschluss dieses Aufrufs zur Ansicht.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt die Listview-ID des aktualisierten Objekts zurück, wenn das Update erfolgreich war. Andernfalls wird -1 zurückgegeben.
+Gibt die Listview-ID des aktualisierten Objekts zurück, wenn das Update erfolgreich war. andernfalls wird -1 zurückgegeben.
 
 ## <a name="remarks"></a>Hinweise
 
-Wenn das Update nicht erfolgreich war, muss der Aufrufer den Arbeitsspeicher frei geben.
+Wenn das Update nicht erfolgreich war, muss der Aufrufer den Arbeitsspeicher freigeben.
 
 ## <a name="requirements"></a>Anforderungen
 

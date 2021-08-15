@@ -1,6 +1,6 @@
 ---
-title: callnz bool-PS
-description: Wenn nicht 0 (null). Führt einen bedingten aufrufbefehl der Anweisung aus, die durch den Bezeichnungs Index gekennzeichnet ist. | callnz bool-PS
+title: callnz bool – ps
+description: Rufen Sie auf, wenn nicht 0 (null) ist. Führt einen bedingten Aufruf der Vom Bezeichnungsindex markierten Anweisung aus. | callnz bool – ps
 ms.assetid: 1b9ff276-c2b8-46cc-96ac-a5b5455c5cc0
 ms.topic: reference
 ms.date: 05/31/2018
@@ -9,22 +9,22 @@ topic_type:
 api_name: ''
 api_type: ''
 api_location: ''
-ms.openlocfilehash: 0516e62ce07c60866715591bc59123f38dc5c272
-ms.sourcegitcommit: 92e74c99f8f4d097676959d0c317f533c2400a80
+ms.openlocfilehash: 793feb1934b86b46f26050a67b5f26d94b9f277e31735c4d1912805374bab903
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/09/2021
-ms.locfileid: "104995764"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118516626"
 ---
-# <a name="callnz-bool---ps"></a>callnz bool-PS
+# <a name="callnz-bool---ps"></a>callnz bool – ps
 
-Wenn nicht 0 (null). Führt einen bedingten aufrufbefehl der Anweisung aus, die durch den Bezeichnungs Index gekennzeichnet ist.
+Rufen Sie auf, wenn nicht 0 (null) ist. Führt einen bedingten Aufruf der Vom Bezeichnungsindex markierten Anweisung aus.
 
 ## <a name="syntax"></a>Syntax
 
 
 
-| callnz l \# , \[ ! \] b\# |
+| callnz l \# , \[ ! \] B\# |
 |----------------------|
 
 
@@ -33,15 +33,15 @@ Wenn nicht 0 (null). Führt einen bedingten aufrufbefehl der Anweisung aus, die 
 
 Hierbei gilt:
 
--   l \# ist eine [Bezeichnung-PS](label---ps.md) , die den Anfang der aufzurufenden Unterroutine markiert.
--   \[!\] ist ein optionaler Negation-Modifizierer.
--   b \# identifiziert ein [konstantes boolesches Register](dx9-graphics-reference-asm-ps-registers-constant-boolean.md).
+-   l \# ist eine Bezeichnung – [ps,](label---ps.md) die den Anfang der aufgerufenen Unterroutine markiert.
+-   \[!\] ist ein optionaler Negatmodifizierer.
+-   b \# identifiziert einen [konstanten booleschen Register.](dx9-graphics-reference-asm-ps-registers-constant-boolean.md)
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
 
 
-| Pixel-Shader-Versionen | 1\_1 | 1\_2 | 1 \_ 3 | 1\_4 | 2 \_ 0 | 2 \_ x | 2 \_ SW | 3 \_ 0 | 3 \_ SW |
+| Pixel-Shaderversionen | 1\_1 | 1\_2 | 1 \_ 3 | 1\_4 | 2 \_ 0 | 2 \_ x | 2 \_ sw | 3 \_ 0 | 3 \_ sw |
 |-----------------------|------|------|------|------|------|------|-------|------|-------|
 | callnz bool           |      |      |      |      |      | x    | x     | x    | x     |
 
@@ -66,7 +66,7 @@ if (specified Boolean register is not zero)
 
 <dl> <dt>
 
-[Pixelshaderanweisungen](dx9-graphics-reference-asm-ps-instructions.md)
+[Anweisungen für Pixel-Shader](dx9-graphics-reference-asm-ps-instructions.md)
 </dt> </dl>
 
  

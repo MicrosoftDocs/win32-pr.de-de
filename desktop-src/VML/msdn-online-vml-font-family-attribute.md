@@ -1,46 +1,46 @@
 ---
-title: VML-Font-Family Attribut
-description: VML-Font-Family Attribut
+title: VMLFont-Family Attribut
+description: VMLFont-Family Attribut
 ms.assetid: 10586ae0-1480-4ffe-a690-ce8464e9bf41
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: a29aa72775e8f00e195462cf3df06097d267b908
-ms.sourcegitcommit: 592c9bbd22ba69802dc353bcb5eb30699f9e9403
+ms.openlocfilehash: 1254be6f7264e0d8f77d5881a11b9c2ec5085a931a0cad713813c059c60e5e62
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "104039584"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117754737"
 ---
-# <a name="vml-font-family-attribute"></a>VML-Font-Family Attribut
+# <a name="vml-font-family-attribute"></a>VMLFont-Family Attribut
 
-In diesem Thema wird VML beschrieben, eine Funktion, die ab Windows Internet Explorer 9 veraltet ist. Webseiten und Anwendungen, die auf VML basieren, sollten zu SVG oder anderen allgemein unterstützten Standards migriert werden.
+In diesem Thema wird VML beschrieben, ein Feature, das ab Version 9 Windows Internet Explorer ist. Webseiten und Anwendungen, die auf VML basieren, sollten zu SVG oder anderen weit verbreiteten Standards migriert werden.
 
 > [!Note]  
-> Ab Dezember 2011 wurde dieses Thema archiviert. Daher wird er nicht mehr aktiv verwaltet. Weitere Informationen finden Sie unter [archivierte Inhalte](/previous-versions/windows/internet-explorer/ie-developer/). Informationen, Empfehlungen und Anleitungen zur aktuellen Version von Windows Internet Explorer finden Sie im [Internet Explorer Developer Center](https://msdn.microsoft.com/ie/).
+> Seit Dezember 2011 wurde dieses Thema archiviert. Daher wird sie nicht mehr aktiv verwaltet. Weitere Informationen finden Sie unter [Archivierter Inhalt.](/previous-versions/windows/internet-explorer/ie-developer/) Informationen, Empfehlungen und Anleitungen zur aktuellen Version von Windows Internet Explorer finden Sie im [Internet Explorer Developer Center.](https://msdn.microsoft.com/ie/)
 
- 
+ 
 
-Definiert die Familie der TextPath-Schriftart. Lese-/Schreibzugriff. **Zeichenfolge**.
+Definiert die Familie der Textpfadschriftart. Lese-/Schreibzugriff. **Zeichenfolge.**
 
 **Gilt für**
 
-[TextPath](msdn-online-vml-textpath-element.md)
+[Textpath](msdn-online-vml-textpath-element.md)
 
 **Tagsyntax**
 
-<v: *Element* Style = "Font-Family: *Expression* " >
+<v: *element* style="font-family: *expression* ">
 
-**Skript Syntax**
+**Skriptsyntax**
 
-*Element* . Style. FontFamily = "*Ausdruck*"
+*element* .style.fontfamily="*expression*"
 
-*Ausdruck* = *Element*. Style. FontFamily
+*expression* = *Element*.style.fontfamily
 
 **Anmerkungen**
 
-Definiert den Schriftart Namen. Bestimmte Namen wie z. b. Arial können verwendet werden oder generische Typen wie Serif, Sans-Serif, currsive, Fantasy oder Monospace. Die Werte sind identisch mit den standardmäßigen HTML-Format Attributen.
+Definiert den Schriftartnamen. Es können bestimmte Namen wie Arial oder generische Typen wie Serif, Sans-Serif, Cursive, Generic oder Monospace verwendet werden. Die Werte sind identisch mit den Standardattributen im HTML-Format.
 
-*VML-Standard Attribut*
+*VML-Standardattribut*
 
 **Beispiel**
 
@@ -58,6 +58,6 @@ Die Schriftfamilie des Texts ist Arial.
 
 
 
- 
+ 
 
- 
+ 

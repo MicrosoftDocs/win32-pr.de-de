@@ -1,21 +1,21 @@
 ---
-description: Die Anzeigezeit (in Sekunden) für das Foto aus den Informationen zur austauschbaren Bilddatei (in Sekunden).
+description: Die Belichtungszeit für das Foto in Sekunden, wie aus den ExIF-Informationen (Exchangeable Image File) gelesen.
 ms.assetid: 44f7e6d5-c4d9-4b41-b6c6-15145abb7983
-title: System. Photo. ExposureTime
+title: System.Photo.ExposureTime
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 5811a3d375f41883d1db8f392e714b7bbe0dfa8b
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: c2bc1c767344187efd0107d4efa7bcec23d6f099497d9a26f29b89153a73a2e0
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104215756"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118723865"
 ---
-# <a name="systemphotoexposuretime"></a>System. Photo. ExposureTime
+# <a name="systemphotoexposuretime"></a>System.Photo.ExposureTime
 
-Die Anzeigezeit (in Sekunden) für das Foto aus den Informationen zur austauschbaren Bilddatei (in Sekunden). Diese Eigenschaft wird aus [System. Photo. exposuretimenreerator](./props-system-photo-exposuretimenumerator.md) und [System. Photo. exposuretimenenner](./props-system-photo-exposuretimedenominator.md)berechnet.
+Die Belichtungszeit für das Foto in Sekunden, wie aus den ExIF-Informationen (Exchangeable Image File) gelesen. Diese Eigenschaft wird aus [System.Photo.ExposureTimeNumerator](./props-system-photo-exposuretimenumerator.md) und [System.Photo.ExposureTimeDenominator berechnet.](./props-system-photo-exposuretimedenominator.md)
 
-Im folgenden finden Sie eine Liste möglicher Werte, die aus der EXIF 2,2-Spezifikation entnommen wurden.
+Im Folgenden finden Sie eine Liste der möglichen Werte aus der EXIF 2.2-Spezifikation.
 
 -   30
 -   15
@@ -51,57 +51,57 @@ propertyDescription
       IsInnate = true
 ```
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Pkey-Werte werden in "propkey. h" definiert.
+PKEY-Werte werden in Propkey.h definiert.
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
 <dl> <dt>
 
-[Exchangeable Image File Format für digitale Kameras: EXIF Version 2,2](https://www.exif.org/Exif2-2.PDF)
+[Exchangeable Image File Format für Digital Still Cameras: Exif Version 2.2](https://www.exif.org/Exif2-2.PDF)
 </dt> <dt>
 
-[propertydescription](./propdesc-schema-propertydescription.md)
+[propertyDescription](./propdesc-schema-propertydescription.md)
 </dt> <dt>
 
-[SearchInfo](./propdesc-schema-searchinfo.md)
+[searchInfo](./propdesc-schema-searchinfo.md)
 </dt> <dt>
 
-[Labelinfo](./propdesc-schema-labelinfo.md)
+[labelInfo](./propdesc-schema-labelinfo.md)
 </dt> <dt>
 
-[TypeInfo](./propdesc-schema-typeinfo.md)
+[Typeinfo](./propdesc-schema-typeinfo.md)
 </dt> <dt>
 
-[Display Info](./propdesc-schema-displayinfo.md)
+[displayInfo](./propdesc-schema-displayinfo.md)
 </dt> <dt>
 
-[StringFormat](./propdesc-schema-stringformat.md)
+[Stringformat](./propdesc-schema-stringformat.md)
 </dt> <dt>
 
-[BooleanFormat](./propdesc-schema-booleanformat.md)
+[booleanFormat](./propdesc-schema-booleanformat.md)
 </dt> <dt>
 
-[NumberFormat](./propdesc-schema-numberformat.md)
+[Numberformat](./propdesc-schema-numberformat.md)
 </dt> <dt>
 
 [dateTimeFormat](./propdesc-schema-datetimeformat.md)
 </dt> <dt>
 
-[enumeratedlist](./propdesc-schema-enumeratedlist.md)
+[enumeratedList](./propdesc-schema-enumeratedlist.md)
 </dt> <dt>
 
-[DrawControl](./propdesc-schema-drawcontrol.md)
+[drawControl](./propdesc-schema-drawcontrol.md)
 </dt> <dt>
 
-[editcontrol](./propdesc-schema-editcontrol.md)
+[editControl](./propdesc-schema-editcontrol.md)
 </dt> <dt>
 
-[FilterControl](./propdesc-schema-filtercontrol.md)
+[Filtercontrol](./propdesc-schema-filtercontrol.md)
 </dt> <dt>
 
-[querycontrol](./propdesc-schema-querycontrol.md)
+[queryControl](./propdesc-schema-querycontrol.md)
 </dt> </dl>
 
  

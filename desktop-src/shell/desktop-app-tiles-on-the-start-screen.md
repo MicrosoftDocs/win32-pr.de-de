@@ -1,36 +1,36 @@
 ---
-description: Im folgenden finden Sie Informationen zu den Optionen, die beim Anpassen von Desktop-App-Kacheln für Windows 8 zu beachten sind. dazu zählen das Entwerfen von Desktop-App-Kacheln für den neuen Startbildschirm und das Auswählen der Einstiegspunkte, die auf dem Startbildschirm
+description: Im Folgenden finden Sie Informationen zu Optionen, die beim Anpassen von Desktop-App-Kacheln für Windows 8 zu berücksichtigen sind, z. B. zum Entwerfen von Desktop-App-Kacheln für die neue Startbildschirm und zum Auswählen der Einstiegspunkte, die in der Startbildschirm.
 ms.assetid: EF5182A2-09B2-46F2-B55E-4BD212CC1F7F
-title: Desktop-App-Kacheln auf dem Start Bildschirm
+title: Desktop-App-Kacheln auf dem Startbildschirm
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 0fcc5475732926300e2125ae9e97ea2d188bc468
-ms.sourcegitcommit: af9983bab40fe0b042f177ce7ca79f2eb0f9d0e8
+ms.openlocfilehash: 44ed35bd5c8405301e872ef54774914d625e1fc06c6a9fc3c26965e130301eac
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/06/2021
-ms.locfileid: "104350979"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117861221"
 ---
-# <a name="desktop-app-tiles-on-the-start-screen"></a>Desktop-App-Kacheln auf dem Start Bildschirm
+# <a name="desktop-app-tiles-on-the-start-screen"></a>Desktop-App-Kacheln auf dem Startbildschirm
 
-Im folgenden finden Sie Informationen zu den Optionen, die beim Anpassen von Desktop-App-Kacheln für Windows 8 zu beachten sind. dazu zählen das Entwerfen von Desktop-App-Kacheln für den neuen Startbildschirm und das Auswählen der Einstiegspunkte, die auf dem Startbildschirm
+Im Folgenden finden Sie Informationen zu Optionen, die beim Anpassen von Desktop-App-Kacheln für Windows 8 zu berücksichtigen sind, z. B. zum Entwerfen von Desktop-App-Kacheln für die neue Startbildschirm und zum Auswählen der Einstiegspunkte, die in der Startbildschirm.
 
-## <a name="design-your-tile-for-the-start-screen"></a>Entwerfen der Kachel für den Start Bildschirm
+## <a name="design-your-tile-for-the-start-screen"></a>Entwerfen Sie Ihre Kachel für die Startbildschirm
 
-Sie können zwei Aspekte Ihrer Desktop-App-Kacheln anpassen: den APP-Namen und das Symbol. Die Hintergrundfarbe wird von der ausgewählten Hintergrundfarbe des Benutzers abgeleitet und kann nicht Programm gesteuert angepasst werden.
+Sie können zwei Aspekte Ihrer Desktop-App-Kacheln anpassen: den App-Namen und das Symbol. Die Hintergrundfarbe wird von der vom Benutzer gewählten Hintergrundfarbe abgeleitet und ist nicht programmgesteuert anpassbar.
 
-![Entwurfs Leit Faden für App-Kacheln](images/tiles-desktop-1.png)
+![Anleitung zum Entwerfen von App-Kacheln.](images/tiles-desktop-1.png)
 
-Do: vermeiden Sie das Abschneiden des Anwendungs namens. Desktop Kacheln, die an den Start Bildschirm angeheftet sind, können bis zu zwei Zeilen Text in jeder Zeile oder ungefähr zehn Zeichen umfassen (obwohl dies von der Benutzeroberflächen Sprache abhängt). Daher sollten Sie versuchen, den Anwendungsnamen so kurz wie möglich zu halten, um das Abschneiden zu vermeiden.
+DO: Vermeiden Sie das Abschneiden des Anwendungsnamens. Desktopkacheln, die an die Startbildschirm angeheftet sind, können bis zu zwei Textzeilen pro Zeile oder etwa zehn Zeichen aufnehmen (obwohl dies von der Benutzeroberflächensprache abhängt). Versuchen Sie daher, den Anwendungsnamen kurz genug zu halten, um Kürzungen zu vermeiden.
 
-Do: Stellen Sie Symbole für die vier unterstützten Start Bildschirm-Skalierungs Werte bereit, um sicherzustellen, dass Ihre Symbole für alle Formfaktoren kurz aussehen.
+DO: Geben Sie Symbole für die vier unterstützten Startbildschirm an, um sicherzustellen, dass Ihre Symbole bei allen Formfaktoren klar aussehen.
 
 
 
-| Skalieren | Kachel Größe (in Pixel) | Verwendete Symbolgröße (in Pixel) |
+| Skalieren | Kachelgröße (in Pixel) | Verwendete Symbolgröße (in Pixel) |
 |-------|-----------------------|----------------------------|
 | 80 %   | 120 x 120             | 48 x 48                    |
-| 100 %  | 150 x 150             | 64 x 64                    |
+| 100%  | 150 x 150             | 64 x 64                    |
 | 140%  | 210 x 210             | 96 x 96                    |
 | 180%  | 270 x 270             | 128 x 128                  |
 
@@ -38,45 +38,45 @@ Do: Stellen Sie Symbole für die vier unterstützten Start Bildschirm-Skalierung
 
  
 
-Do: akzeptieren Sie die Entwurfs Prinzipien von Microsoft. Das neue Erscheinungsbild für Symbole ist flach. Wenn Sie also Symbole für Windows Store-Apps für Ihre Desktop-App imitieren möchten, sollten Sie Schlag Schatten usw. in Erwägung ziehen.
+DO: Nutzen Sie die Entwurfsprinzipien von Microsoft. Das neue Aussehen und Verhalten für Symbole ist flach. Wenn Sie also Windows Store App-Symbole für Ihre Desktop-App imitieren möchten, sollten Sie schlagschatten lassen und so weiter.
 
-Nicht: vermeiden Sie die Verwendung von Farben. Obwohl Windows Store-App-Symbole manchmal Mono-Tisch sind, empfehlen wir die Verwendung von Farbsymbolen für Desktop-Apps. Dadurch können Desktop Anwendungen auf der Taskleiste und von anderen Desktop-App-Kacheln auf dem Start Bildschirm unterschieden werden, da die Hintergrundfarbe der Desktop Kacheln nicht angepasst werden kann. Verwenden Sie mehr satte Farben.
+NICHT: Vermeiden Sie nicht die Verwendung von Farbe. Obwohl Windows Store App-Symbole manchmal monotone sind, empfehlen wir die Verwendung von Farbsymbolen für Desktop-Apps. Dies hilft, Desktopanwendungen auf der Taskleiste und von anderen Desktop-App-Kacheln im Startbildschirm zu unterscheiden, da die Hintergrundfarbe von Desktopkacheln nicht angepasst werden kann. Erwägen Sie die Verwendung von farbenerhättigten Farben.
 
-## <a name="decide-the-right-entry-points-to-include-in-the-start-screen"></a>Festlegen der richtigen Einstiegspunkte, die auf dem Start Bildschirm enthalten sein sollen
+## <a name="decide-the-right-entry-points-to-include-in-the-start-screen"></a>Entscheiden Sie sich für die richtigen Einstiegspunkte, die in die Startbildschirm
 
-Do: Fügen Sie eine Verknüpfung pro App auf dem Start Bildschirm hinzu, wenn die APP installiert wird. Dadurch wird sichergestellt, dass Benutzer Ihre APP direkt über den Start Bildschirm oder durchsuchen starten können. Wenn Sie keine Verknüpfung auf dem Start Bildschirm einschließen, wird die APP schwer zu starten. Fügen Sie insbesondere keine Verknüpfung auf dem Desktop hinzu. Benutzern wird der Startbildschirm angezeigt, wenn Sie sich zum ersten Mal anmelden. das Platzieren einer Verknüpfung nur auf dem Desktop ist nicht so effektiv wie die Aufnahme auf den Startbildschirm.
+DO: Fügen Sie eine Verknüpfung pro App im Startbildschirm, wenn die App installiert wird. Dadurch wird sichergestellt, dass Benutzer Ihre App direkt über die Startbildschirm oder über die Suche starten können. Wenn Sie keine Verknüpfung in den Startbildschirm, wird es schwierig, Ihre App zu starten. Fügen Sie insbesondere keine Verknüpfung nur auf dem Desktop hinzu. Benutzer sehen die Startbildschirm, wenn sie sich zum ersten Mal anmelden. Daher ist es nicht so effektiv, eine Verknüpfung nur auf dem Desktop zu platzieren, als sie in die Startbildschirm.
 
-![Diagramm, das ein Raster mit einer Anwendungs Kachel, Dimensionen und "Segoe U I semilight" anzeigt, um die verwendete Schriftart anzugeben.](images/tiles-desktop-2.png)
+![Diagramm, das das Raster mit einer Anwendungkachel, Dimensionen und "Segoe U I Semilight" zeigt, um die verwendete Schriftart anzugeben.](images/tiles-desktop-2.png)
 
-Nicht: Geben Sie nicht mehrere Verknüpfungen zur gleichen APP an. Sie haben z. b. keine zwei Verknüpfungen, mit denen eine app in zwei verschiedenen Modi gestartet wird, z. b. eine für Windows Internet Explorer und eine für Internet Explorer ohne Add-ons.
+NICHT: Stellen Sie nicht mehrere Verknüpfungen für dieselbe App zur Verfügung. Verfügen Sie beispielsweise nicht über zwei Tastenkombinationen, die eine App in zwei verschiedenen Modi starten, z. B. eine für Windows Internet Explorer und eine für Internet Explorer ohne Add-Ons.
 
-Do: minimieren Sie die Anzahl der Kacheln, die im Rahmen der Installation hinzugefügt werden. Es empfiehlt sich, andere Einstiegspunkte für die überflüssigen apps verfügbar zu machen. Anstatt z. b. eine separate Einstellungs-APP mit einer Konsolen-App einzuschließen, greifen Sie über eine Funktion in der Konsolen-App auf die Einstellungen zu.
+DO: Minimieren Sie die Anzahl der Kacheln, die im Rahmen der Installation hinzugefügt werden. Erwägen Sie, andere Einstiegspunkte für die unnentsprichtigen Apps verfügbar zu machen. Anstatt z. B. eine separate Einstellungen-App mit einer Konsolen-App zu verwenden, greifen Sie über ein Feature in der Konsolen-App auf die Einstellungen zu.
 
-Nicht: Fügen Sie keine Verknüpfungen zu den folgenden Elementen auf dem Start Bildschirm hinzu:
+NICHT: Verwenden Sie keine Verknüpfungen zu den folgenden Elementen auf dem Startbildschirm:
 
--   Uninstaller. Benutzer können über das Element "Programme" in der Systemsteuerung auf "Uninstaller" zugreifen.
--   Hilfedateien. Fügen Sie Hilfe Themen direkt in Ihre APP ein.
--   App-Einstellungen und-Optionen. Fügen Sie die Benutzeroberfläche zum Konfigurieren von Einstellungen für eine APP innerhalb der APP oder zum Erstellen eines System Steuerungs Elements hinzu.
--   Websites. Geben Sie entsprechende Links zu Informationen wie Hilfe-und technischen Support Websites direkt in Ihrer APP an.
--   The. Assistenten und andere einmalige Konfigurationsaufgaben sollten innerhalb der APP gestartet werden.
+-   Deinstallationen. Benutzer können auf Deinstallationen über das Element Programme in der Systemsteuerung.
+-   Hilfedateien. Schließen Sie Hilfethemen direkt in Ihre App ein.
+-   App-Einstellungen und -Optionen. Fügen Sie die Benutzeroberfläche ein, um Einstellungen für eine App in der App zu konfigurieren oder ein Systemsteuerung zu erstellen.
+-   Websites. Stellen Sie alle entsprechenden Links zu Informationen wie Hilfe- und technischen Support-Websites direkt in Ihrer App zur Verfügung.
+-   Assistenten. Assistenten und andere einmalige Konfigurationsaufgaben sollten innerhalb der App gestartet werden.
 
-Nicht: Erstellen Sie keine Verknüpfungen zu Features oder Funktionen, die in der APP selbst gestartet werden können. Spracheinstellungen können z. b. über eine beliebige Microsoft Office-App konfiguriert werden, sodass es nicht erforderlich ist, dass auf dem Start Bildschirm auch ein separater Einstiegspunkt für die Spracheinstellungen vorhanden ist.
+NICHT: Erstellen Sie keine Verknüpfungen zu Features oder Funktionen, die aus der App selbst gestartet werden können. Beispielsweise kann Language Einstellungen aus jeder Microsoft Office-App konfiguriert werden, sodass es nicht erforderlich ist, auch einen separaten Einstellungen-Einstiegspunkt auf dem Startbildschirm.
 
-Nicht: Erstellen Sie keine Verknüpfungen zu Elementen, die keine ausführbaren Dateien sind. Tastenkombinationen, die nicht ausführbaren Dateien zugeordnet sind, z. b. Verknüpfungen, die Websites oder Hilfedateien starten, werden aus dem Start Bildschirm herausgefiltert.
+NICHT: Erstellen Sie keine Verknüpfungen zu Elementen, die keine ausführbaren Dateien sind. Verknüpfungen, die nicht ausführbaren Dateien wie Verknüpfungen zum Starten von Websites oder Hilfedateien zuordnen, werden aus dem Startbildschirm.
 
-Gehen Sie wie folgt vor, wenn Sie eine Suite von apps anstelle einer einzelnen App installieren, fügen Sie eine Verknüpfung für jede app in der Sammlung hinzu. Wie bereits erwähnt, sollten Sie keine Verknüpfungen zu sekundären Funktionen wie Hilfe Informationen, Hilfsprogramme und Einstellungen erstellen. Diese Funktionalität sollte in den relevanten apps der Sammlung enthalten sein.
+DO: Wenn Sie eine Suite von Apps statt einer einzelnen App installieren, fügen Sie für jede App in der Suite eine Verknüpfung hinzu. Vermeiden Sie wie oben erwähnt das Erstellen von Verknüpfungen mit sekundären Funktionen wie Hilfeinformationen, Hilfsprogrammen und Einstellungen. Diese Funktionalität sollte in den relevanten Apps der Suite enthalten sein.
 
-Do: Erstellen Sie einen Produktordner auf einer einzelnen Ebene für Sammlungen, die drei oder mehr Kacheln enthalten. In der App-Ansicht des Start Bildschirms, auf die über den Charm "Suche" zugegriffen werden kann, werden Anwendungen nach dem Ordner der obersten Ebene gruppiert. Wählen Sie einen beschreibenden, aber präzisen Ordnernamen aus. Es werden drei Wörter oder weniger empfohlen. Beachten Sie, dass während der App-Ansicht Kacheln gruppiert werden und der Ordnername angezeigt wird. dieser Name ist nicht sichtbar, wenn eine Kachel an den Start Bildschirm angeheftet ist, sodass Sie Ihre Kachel Namen ausreichend beschreiben.
+DO: Erstellen Sie einen Produktordner auf einer ebene für Sammlungen, die drei oder mehr Kacheln enthalten. In der Ansicht Apps der Startbildschirm, auf die über den Charm Suchen zugegriffen werden kann, werden Anwendungen nach ihrem Ordner der obersten Ebene gruppiert. Wählen Sie einen aussagekräftigen, aber präzisen Ordnernamen aus. Es werden drei Wörter oder weniger empfohlen. Beachten Sie, dass dieser Name nicht sichtbar ist, wenn eine Kachel an die Startbildschirm angeheftet wird, sodass Ihre Kachelnamen ausreichend beschreibend sind, während die Ansicht Apps Kacheln auflistet und den Ordnernamen zeigt.
 
-Nicht: Erstellen Sie keinen Produktordner, wenn die Sammlung nur eine einzige Verknüpfung enthält. Platzieren Sie die Verknüpfung im Start Ordner der obersten Ebene.
+NICHT: Erstellen Sie keinen Produktordner, wenn Ihre Suite nur eine einzige Verknüpfung enthält. Platzieren Sie die Verknüpfung im Ordner Start der obersten Ebene.
 
-Gehen Sie wie folgt vor, wenn Sie eine Suite von mehr als drei apps installieren, sollten Sie berücksichtigen, ob eine dieser Apps für sekundäre, unregelmäßige Verwendung und nicht an den Start Bildschirm angeheftet werden soll. Wenn dies der Fall ist, können diese Kacheln gemäß der obigen Anleitung vollständig entfernt und in einer primären App gestartet werden. Wenn Sie die Kacheln nicht entfernen können, können Sie Sie über den Start Bildschirm lösen. Auf diese Weise werden die Verknüpfungen weiterhin in der Ansicht " **alle apps** " angezeigt, aber nicht in der Start Seite des Benutzers.
+DO: Wenn Sie eine Suite mit mehr als drei Apps installieren, sollten Sie überlegen, ob eine dieser Apps für sekundäre, unregelmäßigere Verwendung geeignet ist und nicht an die Startbildschirm. Falls ja, können diese Kacheln gemäß der obigen Anleitung vollständig entfernt und aus einer primären App heraus gestartet werden. Wenn Sie die Kacheln nicht entfernen können, ziehen Sie in Betracht, sie aus dem Startbildschirm. Auf diese Weise werden die Tastenkombinationen weiterhin in der Ansicht Alle **Apps** angezeigt, sind aber nicht unübersichtlich für Startbildschirm.
 
-Um eine APP-Verknüpfung hinzuzufügen, ohne Sie an den Start Bildschirm anzuhepten, legen Sie die folgende Eigenschaft für die Verknüpfung fest: System. appusermodel. startpinoption = 1. Der symbolische Name für 1 ist appusermodel \_ startpinoption \_ nopinoninstall.
+Um eine App-Verknüpfung hinzuzufügen, ohne sie an den Startbildschirm zu heften, legen Sie die folgende Eigenschaft für die Verknüpfung fest: System.AppUserModel.StartPinOption = 1. Der symbolische Name für 1 ist APPUSERMODEL \_ STARTPINOPTION \_ NOPINONINSTALL.
 
-Dadurch wird verhindert, dass die Verknüpfung auf dem Start Bildschirm angezeigt wird, Sie kann jedoch weiterhin in der Ansicht " **alle apps** " und in den Suchergebnissen angezeigt werden. Nur der Benutzer kann vorhandene Verknüpfungen lösen, sodass Sie diese Eigenschaft während der Installation oder unmittelbar nach dem Platzieren der APP auf dem Datenträger festlegen müssen.
+Dadurch wird verhindert, dass die Verknüpfung auf dem Startbildschirm angezeigt wird, sie kann jedoch weiterhin in der Ansicht Alle **Apps** und in den Suchergebnissen angezeigt werden. Nur der Benutzer kann vorhandene Verknüpfungen entfernen, daher müssen Sie diese Eigenschaft während der Installation oder unmittelbar nach dem Platzieren der App auf dem Datenträger festlegen.
 
-Nicht: Erstellen Sie keine Kachel für einen Host oder eine Laufzeit für Anwendungen wie Silverlight oder Java. Geben Sie in der Systemsteuerung einen Einstiegspunkt für die Deinstallation des Frameworks an.
+NICHT: Erstellen Sie keine Kachel für einen Host oder eine Runtime für Anwendungen wie Silverlight oder Java. Stellen Sie einen Einstiegspunkt zum Deinstallieren des Frameworks in "Programme hinzufügen/entfernen" und einen beliebigen Einstellungseinstiegspunkt in Systemsteuerung.
 
  
 

@@ -1,5 +1,5 @@
 ---
-description: Die FreeProps-Methode gibt Ressourcen frei, die von der IPropertySetter::GetProps-Methode zugeordnet werden. Rufen Sie diese Methode nach dem Aufruf von GetProps auf, und übergeben Sie ihr die von GetProps zurückgegebenen Strukturen.
+description: Die FreeProps-Methode gibt von der IPropertySetter::GetProps-Methode zugeordnete Ressourcen frei. Rufen Sie diese Methode nach dem Aufruf von GetProps auf, und übergeben Sie ihr die von GetProps zurückgegebenen Strukturen.
 ms.assetid: 5920d63d-d8eb-4fd5-b0d6-9d175e8e2c86
 title: IPropertySetter::FreeProps-Methode (Qedit.h)
 ms.topic: reference
@@ -24,11 +24,11 @@ ms.locfileid: "118397551"
 # <a name="ipropertysetterfreeprops-method"></a>IPropertySetter::FreeProps-Methode
 
 > [!Note]  
-> \[Veraltet. Diese API kann aus zukünftigen Releases von Windows entfernt werden.\]
+> \[Veraltet. Diese API wird möglicherweise aus zukünftigen Releases von Windows.\]
 
  
 
-Die `FreeProps` -Methode gibt von der [**IPropertySetter::GetProps-Methode zugeordnete**](ipropertysetter-getprops.md) Ressourcen frei. Rufen Sie diese Methode nach dem Aufruf von **GetProps** auf, und übergeben Sie ihr die von **GetProps zurückgegebenen** Strukturen.
+Die `FreeProps` -Methode gibt von der [**IPropertySetter::GetProps-Methode zugeordnete Ressourcen**](ipropertysetter-getprops.md) frei. Rufen Sie diese Methode nach dem Aufruf **von GetProps auf,** und übergeben Sie ihr die von **GetProps zurückgegebenen Strukturen.**
 
 ## <a name="syntax"></a>Syntax
 
@@ -75,12 +75,12 @@ Diese Methode gibt keinen Wert zurück.
 ## <a name="remarks"></a>Hinweise
 
 > [!Note]  
-> Die Headerdatei Qedit.h ist nicht mit Direct3D-Headern kompatibel, die höher als Version 7 sind.
+> Die Headerdatei Qedit.h ist nicht mit Direct3D-Headern nach Version 7 kompatibel.
 
  
 
 > [!Note]  
-> Laden Sie zum Abrufen von Qedit.h das [Microsoft Windows SDK-Update für Windows Vista und .NET Framework 3.0](https://msdn.microsoft.com/windowsvista/bb980924.aspx)herunter. Qedit.h ist im Microsoft Windows SDK für Windows 7 und .NET Framework 3.5 Service Pack 1 nicht verfügbar.
+> Um Qedit.h zu erhalten, laden Sie das Microsoft Windows SDK-Update für Windows Vista und [.NET Framework 3.0 herunter.](https://msdn.microsoft.com/windowsvista/bb980924.aspx) Qedit.h ist im Microsoft Windows SDK für Windows 7 und .NET Framework 3.5 Service Pack 1 nicht verfügbar.
 
  
 

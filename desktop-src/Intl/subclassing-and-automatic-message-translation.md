@@ -1,21 +1,21 @@
 ---
-description: Unterklassen sind eine Technik, die es einer Anwendung ermöglicht, Nachrichten abzufangen und zu verarbeiten, die an ein bestimmtes Fenster gesendet oder an ein bestimmtes Fenster gesendet werden, bevor eine Fenster Prozedur Sie verarbeiten kann.
+description: Unterklassen sind eine Technik, die es einer Anwendung ermöglicht, Nachrichten abzufangen und zu verarbeiten, die an ein bestimmtes Fenster gesendet oder an ein bestimmtes Fenster gesendet werden, bevor eine Fensterprozedur diese verarbeiten kann.
 ms.assetid: 6f7ee9ff-479d-4cb0-8de1-1c3b671551f9
-title: Unterklassen und automatische Nachrichten Übersetzung
+title: Unterklassen und automatische Nachrichtenübersetzung
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: e7f0aebabe4bde259a982152327ce61a14de915c
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: c20147567bb4cd591d31e0da5f08b76a29d0229c9bc345b8c1827fc5350dd62d
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106357898"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118390223"
 ---
-# <a name="subclassing-and-automatic-message-translation"></a>Unterklassen und automatische Nachrichten Übersetzung
+# <a name="subclassing-and-automatic-message-translation"></a>Unterklassen und automatische Nachrichtenübersetzung
 
-Unterklassen sind eine Technik, die es einer Anwendung ermöglicht, Nachrichten abzufangen und zu verarbeiten, die an ein bestimmtes Fenster gesendet oder an ein bestimmtes Fenster gesendet werden, bevor eine Fenster Prozedur Sie verarbeiten kann. Das Betriebssystem übersetzt Nachrichten automatisch in [Windows (ANSI)-Codepage](code-pages.md) oder [Unicode](unicode.md) -Formular, abhängig von der Form der Funktion, die die Fenster Prozedur untergeordnet ist.
+Unterklassen sind eine Technik, die es einer Anwendung ermöglicht, Nachrichten abzufangen und zu verarbeiten, die an ein bestimmtes Fenster gesendet oder an ein bestimmtes Fenster gesendet werden, bevor eine Fensterprozedur diese verarbeiten kann. Das Betriebssystem übersetzt Nachrichten automatisch in [Windows (ANSI)-Codepage](code-pages.md) oder [Unicode-Formular,](unicode.md) abhängig von der Form der Funktion, die die Fensterprozedur untergliedert hat.
 
-Der folgende aufrufsvorgang der [**setwindowlonga**](/windows/win32/api/winuser/nf-winuser-setwindowlonga) -Funktion Unterklassen der aktuellen Fenster Prozedur, die dem durch den *HWND* -Parameter identifizierten Fenster zugeordnet ist. Alternativ kann eine Anwendung [**setwindowlongptra**](/windows/win32/api/winuser/nf-winuser-setwindowlongptra)verwenden. Die neue Fenster Prozedur **newwndproc** empfängt Nachrichten mit Text im Windows-Codepage-Format.
+Der folgende Aufruf der [**SetWindowLongA-Funktion**](/windows/win32/api/winuser/nf-winuser-setwindowlonga) untergliedert die aktuelle Fensterprozedur, die dem durch den *hWnd-Parameter* identifizierten Fenster zugeordnet ist. Alternativ kann eine Anwendung [**SetWindowLongPtrA**](/windows/win32/api/winuser/nf-winuser-setwindowlongptra)verwenden. Die neue Fensterprozedur **NewWndProc** empfängt Nachrichten mit Text im Windows Codepageformat.
 
 
 ```C++
@@ -25,7 +25,7 @@ OldWndProc = (WNDPROC) SetWindowLongA(hWnd,
 
 
 
-Wenn **newwndproc** die Verarbeitung einer Nachricht abgeschlossen hat, verwendet Sie die [**callwindowproc**](/windows/win32/api/winuser/nf-winuser-callwindowproca) -Funktion wie folgt, um die Nachricht an **oldwndproc** zu übergeben.
+Wenn **NewWndProc** die Verarbeitung einer Nachricht abgeschlossen hat, wird die [**CallWindowProc-Funktion**](/windows/win32/api/winuser/nf-winuser-callwindowproca) wie folgt verwendet, um die Nachricht an **OldWndProc** zu übergeben.
 
 
 ```C++
@@ -34,11 +34,11 @@ CallWindowProc(OldWndProc, hWnd, uMessage, wParam, lParam);
 
 
 
-Wenn **oldwndproc** mit einem Klassen Stil von Unicode erstellt wurde, werden Nachrichten aus dem Windows-Codepage-Formular übersetzt, das von **newwndproc** in Unicode empfangen wurde.
+Wenn **OldWndProc** mit einem Unicode-Klassenstil erstellt wurde, werden Nachrichten aus dem von **NewWndProc** empfangenen Windows Codepageformular in Unicode übersetzt.
 
-Entsprechend wird durch einen Aufrufen der Funktion " [**setwindowlongw**](/windows/win32/api/winuser/nf-winuser-setwindowlonga) " oder " [**setwindowlongptrw**](/windows/win32/api/winuser/nf-winuser-setwindowlongptra) " die aktuelle Fenster Prozedur mit einer Fenster Prozedur Unterklassen, die Unicode-Textnachrichten erwartet. Die Nachrichten Übersetzung erfolgt bei Bedarf während der Verarbeitung der [**callwindowproc**](/windows/win32/api/winuser/nf-winuser-callwindowproca) -Funktion.
+Auf ähnliche Weise wird bei einem Aufruf der [**Funktion SetWindowLongW**](/windows/win32/api/winuser/nf-winuser-setwindowlonga) oder [**SetWindowLongPtrW**](/windows/win32/api/winuser/nf-winuser-setwindowlongptra) die aktuelle Fensterprozedur mit einer Fensterprozedur klassifiziert, die Unicode-Textnachrichten erwartet. Die Nachrichtenübersetzung wird bei Bedarf während der Verarbeitung der [**CallWindowProc-Funktion**](/windows/win32/api/winuser/nf-winuser-callwindowproca) ausgeführt.
 
-Weitere Informationen zu Unterklassen finden Sie unter [Fenster Prozeduren](../winmsg/window-procedures.md).
+Weitere Informationen zum Unterklassening finden Sie unter [Window Procedures](../winmsg/window-procedures.md).
 
 ## <a name="related-topics"></a>Zugehörige Themen
 

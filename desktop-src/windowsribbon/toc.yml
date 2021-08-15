@@ -1,19 +1,19 @@
-- name: Windows-Menübandframework
+- name: Windows Menübandframework
   href: '-uiplat-windowsribbon-entry.md'
   items:
-    - name: Übersichten über Menübandframeworks
+    - name: Übersichten zum Menübandframework
       href: windowsribbon-overviews-entry.md
       items:
         - name: Einführung in das Windows-Menübandframework
           href: windowsribbon-introduction.md
         - name: Deklarieren von Befehlen und Steuerelementen mit Menübandmarkup
           href: windowsribbon-schema.md
-    - name: Entwicklerhandbücher für Menübandframeworks
+    - name: Entwicklerhandbücher für Menübandframework
       href: windowsribbon-guides-entry.md
       items:
         - name: Erstellen einer Menübandanwendung
           href: windowsribbon-stepbystep.md
-        - name: Migrieren zum Windows-Menübandframework
+        - name: Migrieren zum Windows Menübandframework
           href: ribbon-migration.md
         - name: Grundlegendes zu Befehlen und Steuerelementen
           href: windowsribbon-commandscontrols.md
@@ -25,9 +25,9 @@
           href: windowsribbon-templates.md
         - name: Arbeiten mit Katalogen
           href: ribbon-controls-galleries.md
-        - name: Anzeigen kontextabhängiger Registerkarten
+        - name: Anzeigen kontextbezogener Registerkarten
           href: ribbon-contextualtabs.md
-        - name: Erneutes Konfigurieren des Menübands mit Anwendungsmodi
+        - name: Neukonfigurieren des Menübands mit Anwendungsmodi
           href: ribbon-applicationmodes.md
         - name: Anpassen von Menübandfarben
           href: ribbon-color.md
@@ -37,7 +37,7 @@
           href: ribbon-statepersistence.md
         - name: Kompilieren von Menübandmarkup
           href: windowsribbon-intentcl.md
-        - name: Grundlegendes zu Markupcompilernachrichten
+        - name: Grundlegendes zu Markupcompilermeldungen
           href: windowsribbon-compilationerrors.md
     - name: Menüband-Framework-Steuerelementbibliothek
       href: windowsribbon-controls-entry.md
@@ -56,15 +56,15 @@
           href: windowsribbon-controls-dropdownbutton.md
         - name: Drop-Down Farbwähler
           href: windowsribbon-controls-dropdowncolorpicker.md
-        - name: Drop-Down Katalog
+        - name: Drop-Down Gallery
           href: windowsribbon-controls-dropdowngallery.md
         - name: Schriftart-Steuerelement
           href: windowsribbon-controls-fontcontrol.md
-        - name: Group
+        - name: Gruppieren
           href: windowsribbon-controls-group.md
         - name: Schaltfläche "Hilfe"
           href: windowsribbon-controls-helpbutton.md
-        - name: In-Ribbon Katalog
+        - name: In-Ribbon Gallery
           href: windowsribbon-controls-inribbongallery.md
         - name: Menügruppe
           href: windowsribbon-controls-menugroup.md
@@ -93,7 +93,7 @@
             - name: Befehle und Ressourcen
               href: windowsribbon-reference-elements-command.md
               items:
-                - name: Get-Help
+                - name: Befehl
                   href: windowsribbon-element-command.md
                   items:
                     - name: Kommentar
@@ -130,7 +130,7 @@
                 - name: String
                   href: windowsribbon-element-string.md
                   items:
-                    - name: Inhalt
+                    - name: Content
                       href: windowsribbon-element-string-content.md
                     - name: Id
                       href: windowsribbon-element-string-id.md
@@ -194,7 +194,7 @@
                       href: windowsribbon-element-dropdowngallery-menulayout.md
                 - name: FontControl
                   href: windowsribbon-element-fontcontrol.md
-                - name: Group
+                - name: Gruppieren
                   href: windowsribbon-element-group.md
                 - name: Helpbutton
                   href: windowsribbon-element-helpbutton.md
@@ -241,7 +241,7 @@
                   href: windowsribbon-element-tabgroup.md
                 - name: ToggleButton
                   href: windowsribbon-element-togglebutton.md
-            - name: Andere
+            - name: Sonstige
               href: windowsribbon-reference-elements-other.md
               items:
                 - name: Application
@@ -584,7 +584,7 @@
               href: /windows/win32/api/Uiribbon/ns-uiribbon-ui_eventparams
             - name: UI_EVENTPARAMS_COMMAND
               href: /windows/win32/api/Uiribbon/ns-uiribbon-ui_eventparams_command
-    - name: Menüband-Frameworkbeispiele
+    - name: Beispiele für Menübandframework
       href: windowsribbon-samples-entry.md
       items:
         - name: SimpleRibbon-Beispiel
@@ -599,5 +599,5 @@
           href: windowsribbon-htmleditribbonsample.md
         - name: FontControl-Beispiel
           href: windowsribbon-fontcontrolsample.md
-    - name: Menübandframework-Glossar
+    - name: Glossar zum Menübandframework
       href: windowsribbon-glossary.md

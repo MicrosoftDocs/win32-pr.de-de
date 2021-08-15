@@ -1,12 +1,12 @@
 ---
-title: WSMAN. Error-Eigenschaft (WSManDisp. h)
-description: Ruft zusätzliche Fehlerinformationen, die sich in einem XML-Stream befinden, für den vorhergehenden Aufrufe einer WSMAN-Methode ab, wenn Windows-Remoteverwaltung Dienst kein Sitzungs Objekt, kein ConnectionOptions-Objekt oder ResourceLocator-Objekt erstellen konnte.
+title: WSMan.Error-Eigenschaft (WSManDisp.h)
+description: Ruft zusätzliche Fehlerinformationen in einem XML-Stream für den vorherigen Aufruf einer WSMan-Methode ab, wenn Windows Remoteverwaltungsdienst kein Session-Objekt, ein ConnectionOptions-Objekt oder ein ResourceLocator-Objekt erstellen konnte.
 ms.assetid: 72d05ef9-672c-4693-b7c9-6d689858acd4
 ms.tgt_platform: multiple
 keywords:
-- Fehler Eigenschaft Windows-Remoteverwaltung
-- Error-Eigenschaft Windows-Remoteverwaltung, WSMAN-Objekt
-- WSMAN-Objekt Windows-Remoteverwaltung, Fehler Eigenschaft
+- Fehlereigenschaft Windows Remoteverwaltung
+- Fehlereigenschaft Windows Remoteverwaltung, WSMan-Objekt
+- WSMan-Objekt Windows Remoteverwaltung , Error-Eigenschaft
 topic_type:
 - apiref
 api_name:
@@ -17,16 +17,16 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 9f9e7ffd42d67807f2f7b6096a89ed91e3d95af8
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 14d72c99150d3c6ac95e91e6a9674ab6364e8ea46fabf3d58d50556e129933cd
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104103803"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117742195"
 ---
-# <a name="wsmanerror-property"></a>WSMAN. Error (Eigenschaft)
+# <a name="wsmanerror-property"></a>WSMan.Error-Eigenschaft
 
-Ruft zusätzliche Fehlerinformationen, die sich in einem XML-Stream befinden, für den vorhergehenden Aufrufe einer [**WSMAN**](wsman.md) -Methode ab, wenn Windows-Remoteverwaltung Dienst kein [**Sitzungs**](session.md) Objekt, kein [**ConnectionOptions**](connectionoptions.md) -Objekt oder [**ResourceLocator**](resourcelocator.md) -Objekt erstellen konnte.
+Ruft zusätzliche Fehlerinformationen in einem XML-Stream für den vorherigen Aufruf einer [**WSMan-Methode**](wsman.md) ab, wenn Windows Remoteverwaltungsdienst kein [**Session-Objekt,**](session.md) ein [**ConnectionOptions-Objekt**](connectionoptions.md) oder ein [**ResourceLocator-Objekt**](resourcelocator.md) erstellen konnte.
 
 Diese Eigenschaft ist schreibgeschützt.
 
@@ -51,18 +51,18 @@ Die XML-Darstellung der Fehlerinformationen.
 |-------------------------------------|------------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows Vista<br/>                                                                 |
 | Unterstützte Mindestversion (Server)<br/> | Windows Server 2008<br/>                                                           |
-| Header<br/>                   | <dl> <dt>WSManDisp. h</dt> </dl>   |
-| IDL<br/>                      | <dl> <dt>WSManDisp. idl</dt> </dl> |
-| Bibliothek<br/>                  | <dl> <dt>WSManDisp. tlb</dt> </dl> |
+| Header<br/>                   | <dl> <dt>WSManDisp.h</dt> </dl>   |
+| Idl<br/>                      | <dl> <dt>WSManDisp.idl</dt> </dl> |
+| Bibliothek<br/>                  | <dl> <dt>WSManDisp.tlb</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>WSMAuto.dll</dt> </dl>   |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**WSMAN**](wsman.md)
+[**Wsman**](wsman.md)
 </dt> </dl>
 
  

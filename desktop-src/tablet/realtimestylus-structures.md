@@ -13,15 +13,15 @@ ms.locfileid: "118449320"
 ---
 # <a name="realtimestylus-structures"></a>RealTimeStylus-Strukturen
 
-Dieser Abschnitt enthält Strukturen, die zur [**RealTimeStylus-Klasse**](realtimestylus-class.md)gehören.
+Dieser Abschnitt enthält Strukturen, die zur [**RealTimeStylus-Klasse gehören.**](realtimestylus-class.md)
 
 ## <a name="in-this-section"></a>In diesem Abschnitt
 
 
 
-| Struktur                                        | Beschreibung                                                           |
+| Struktur                                        | BESCHREIBUNG                                                           |
 |--------------------------------------------------|-----------------------------------------------------------------------|
-| [**StylusInfo-Struktur**](/windows/desktop/api/RTSCom/ns-rtscom-stylusinfo)       | Stellt Informationen zu den Strichen bereit, die eine Geste definieren.<br/> |
+| [**StylusInfo-Struktur**](/windows/desktop/api/RTSCom/ns-rtscom-stylusinfo)       | Stellt Informationen zu den Strichen zur Verfügung, die eine Geste definieren.<br/> |
 | [**\_ \_ SYSTEMEREIGNISDATEN**](/windows/win32/api/tpcshrd/ns-tpcshrd-system_event_data) | Enthält Informationen zu einem Tablet-Systemereignis.<br/>          |
 
 

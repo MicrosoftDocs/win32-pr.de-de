@@ -1,29 +1,29 @@
 ---
 description: Die Location-API stellt die folgenden COM-Schnittstellen bereit.
 ms.assetid: f49f886b-971a-469d-a3fb-057f88d8ae43
-title: COM-Schnittstellen (Location-API)
+title: COM-Schnittstellen (Standort-API)
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 02017e4e34c0fcc61f279a2151dc550658a31936
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 2e5fad40f0102789dc9739ff8b8d6ffb6675ec944d4bf0cceca0f96389824363
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106352366"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118387385"
 ---
-# <a name="com-interfaces-location-api"></a>COM-Schnittstellen (Location-API)
+# <a name="com-interfaces-location-api"></a>COM-Schnittstellen (Standort-API)
 
-\[Die Win32-Location-API ist für die Verwendung in den Betriebssystemen verfügbar, die im Abschnitt "Anforderungen" angegeben sind. Es kann in nachfolgenden Versionen geändert oder entfernt werden. Verwenden Sie stattdessen die [**Windows. Devices. Geolokation**](/uwp/api/Windows.Devices.Geolocation) -API. \]
+\[Die Win32-Speicherort-API ist für die Verwendung in den Betriebssystemen verfügbar, die im Abschnitt Anforderungen angegeben sind. Es kann in nachfolgenden Versionen geändert oder entfernt werden. Verwenden Sie stattdessen die [**Windows. Devices.Geolocation-API.**](/uwp/api/Windows.Devices.Geolocation) \]
 
 Die Location-API stellt die folgenden COM-Schnittstellen bereit.
 
--   [**Icivicaddressreport**](/windows/desktop/api/LocationApi/nn-locationapi-icivicaddressreport)
--   [**Idefehlerlocation**](/windows/desktop/api/LocationApi/nn-locationapi-idefaultlocation)
--   [**Ilatlongreport**](/windows/desktop/api/LocationApi/nn-locationapi-ilatlongreport)
--   [**Ilocation**](/windows/desktop/api/LocationApi/nn-locationapi-ilocation)
--   [**Ilocationevents**](/windows/desktop/api/LocationApi/nn-locationapi-ilocationevents)
--   [**Ilocationpower**](/windows/desktop/api/LocationApi/nn-locationapi-ilocationpower)
--   [**Ilocationreport**](/windows/desktop/api/LocationApi/nn-locationapi-ilocationreport)
+-   [**ICivicAddressReport**](/windows/desktop/api/LocationApi/nn-locationapi-icivicaddressreport)
+-   [**IDefaultLocation**](/windows/desktop/api/LocationApi/nn-locationapi-idefaultlocation)
+-   [**ILatLongReport**](/windows/desktop/api/LocationApi/nn-locationapi-ilatlongreport)
+-   [**ILocation**](/windows/desktop/api/LocationApi/nn-locationapi-ilocation)
+-   [**ILocationEvents**](/windows/desktop/api/LocationApi/nn-locationapi-ilocationevents)
+-   [**ILocationPower**](/windows/desktop/api/LocationApi/nn-locationapi-ilocationpower)
+-   [**ILocationReport**](/windows/desktop/api/LocationApi/nn-locationapi-ilocationreport)
 
  
 

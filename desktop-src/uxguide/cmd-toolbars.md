@@ -22,7 +22,7 @@ Symbolleisten sind eine Möglichkeit, Befehle für effizienten Zugriff zu gruppi
 
 Einige typische Symbolleisten.
 
-**Verwenden Sie Zusätzlich zu oder statt Menüleisten Symbolleisten.** Symbolleisten können effizienter als Menüleisten sein, da sie direkt sind (immer angezeigt, anstatt per Mausklick angezeigt zu werden), sofort (anstatt zusätzliche Eingaben zu erfordern) und die am häufigsten verwendeten Befehle enthalten (anstelle einer umfassenden Liste). Im Gegensatz zu Menüleisten müssen Symbolleisten nicht umfassend oder selbsterklärend sein, sondern nur schnell, bequem und effizient sein.
+**Verwenden Sie Zusätzlich zu oder statt Menüleisten Symbolleisten.** Symbolleisten können effizienter als Menüleisten sein, da sie direkt (immer angezeigt statt per Mausklick angezeigt) und direkt (anstatt zusätzlicher Eingaben) sind und die am häufigsten verwendeten Befehle enthalten (anstelle einer umfassenden Liste). Im Gegensatz zu Menüleisten müssen Symbolleisten nicht umfassend oder selbsterklärend sein, sondern nur schnell, bequem und effizient sein.
 
 Einige Symbolleisten sind anpassbar, sodass Benutzer Symbolleisten hinzufügen oder entfernen, ihre Größe und Position ändern und sogar ihre Inhalte ändern können. Einige Arten von Symbolleisten können rückgängig gemacht werden, was zu einem Palettenfenster führt. Weitere Informationen zu Symbolleistenvarianten finden Sie unter [Verwendungsmuster](#usage-patterns) in diesem Artikel.
 
@@ -35,17 +35,17 @@ Einige Symbolleisten sind anpassbar, sodass Benutzer Symbolleisten hinzufügen o
 
 Orientieren Sie sich an folgenden Fragen:
 
--   **Ist das Fenster ein primäres Fenster?** Symbolleisten funktionieren gut für primäre Fenster, sind aber in der Regel für sekundäre Fenster überfordert. Verwenden Sie für sekundäre Fenster [stattdessen Befehlsschaltflächen,](ctrl-command-buttons.md) [Menüschaltflächen](ctrl-command-buttons.md) [und](ctrl-command-links.md) Links.
+-   **Ist das Fenster ein primäres Fenster?** Symbolleisten funktionieren gut für primäre Fenster, sind aber in der Regel für sekundäre Fenster überfordernd. Verwenden Sie für sekundäre Fenster [stattdessen Befehlsschaltflächen,](ctrl-command-buttons.md) [Menüschaltflächen](ctrl-command-buttons.md) [und](ctrl-command-links.md) Links.
 -   **Gibt es eine kleine Anzahl häufig verwendeter Befehle?** Symbolleisten können nicht so viele Befehle verarbeiten wie Menüleisten, daher funktionieren sie am besten als Möglichkeit, effizient auf eine kleine Anzahl häufig verwendeter Befehle zu zugreifen.
--   **Sind die meisten Befehle sofort?** Das heißt, sind sie größtenteils Befehle, die keine zusätzliche Eingabe erfordern? Um effizient zu sein, müssen Symbolleisten ein direktes und sofortiges Gefühl haben. Wenn nicht, eignen sich Menüleisten besser für Befehle, die zusätzliche Eingaben erfordern.
--   **Können die meisten Befehle direkt angezeigt werden?** Das heißt, benutzer interagieren mit ihnen mit einem einzigen Klick? Einige Befehle können zwar mithilfe von Menüschaltflächen angezeigt werden, aber die meisten Befehle auf diese Weise zu präsentieren, beeinträchtigt die Effizienz der Symbolleiste, wodurch eine Menüleiste eine bessere Wahl ist.
+-   **Sind die meisten Befehle sofort verfügbar?** Das heißt, sind sie größtenteils Befehle, die keine zusätzliche Eingabe erfordern? Um effizient zu sein, müssen Symbolleisten ein direktes und unmittelbares Gefühl haben. Wenn nicht, eignen sich Menüleisten besser für Befehle, die zusätzliche Eingaben erfordern.
+-   **Können die meisten Befehle direkt angezeigt werden?** Das heißt, benutzer interagieren mit ihnen mit einem einzigen Klick? Während einige Befehle mithilfe von Menüschaltflächen angezeigt werden können, beeinträchtigt die Präsentation der meisten Befehle auf diese Weise die Effizienz der Symbolleiste, wodurch eine Menüleiste eine bessere Wahl ist.
 -   **Werden die Befehle gut durch Symbole dargestellt?** Symbolleistenschaltflächen werden in der Regel durch Symbole anstelle von Textbezeichnungen dargestellt (obwohl einige Symbolleistenschaltflächen beide verwenden), während Menübefehle durch ihren Text dargestellt werden. Wenn die Befehlssymbole keine hohe Qualität haben und nicht selbsterklärend sind, ist eine Menüleiste möglicherweise die bessere Wahl.
 
 Wenn Ihr Programm über eine Symbolleiste ohne Menüleiste verfügt und die meisten Befehle indirekt über Menüschaltflächen und geteilte Schaltflächen zugänglich [sind,](ctrl-command-buttons.md)ist diese Symbolleiste im Wesentlichen eine Menüleiste. Wenden Sie [stattdessen das Symbolleistenmenümuster](cmd-menus.md) in den Menürichtlinien an.
 
 ## <a name="design-concepts"></a>Entwurfskonzepte
 
-Eine gute Menüleiste ist ein umfassender Katalog aller verfügbaren Befehle der obersten Ebene, während eine gute Symbolleiste schnellen und komfortablen Zugriff auf häufig verwendete Befehle bietet. Eine Symbolleiste versucht nicht, Benutzer zu trainieren, um sie nur produktiv zu machen. Sobald Benutzer erfahren, wie sie auf einen Befehl auf einer Symbolleiste zugreifen, greifen sie selten weiterhin über die Menüleiste auf den Befehl zu. Aus diesen Gründen müssen die Menüleiste und die Symbolleiste eines Programms nicht direkt übereinstimmen.
+Eine gute Menüleiste ist ein umfassender Katalog aller verfügbaren Befehle der obersten Ebene, während eine gute Symbolleiste einen schnellen und komfortablen Zugriff auf häufig verwendete Befehle bietet. Eine Symbolleiste versucht nicht, Benutzer zu trainieren, um sie nur produktiv zu machen. Sobald Benutzer erfahren, wie sie auf einen Befehl auf einer Symbolleiste zugreifen, greifen sie selten weiterhin über die Menüleiste auf den Befehl zu. Aus diesen Gründen müssen die Menüleiste und die Symbolleiste eines Programms nicht direkt übereinstimmen.
 
 ### <a name="toolbars-vs-menu-bars"></a>Symbolleisten im Vergleich zu Menüleisten
 
@@ -94,14 +94,14 @@ Stellen Sie sicher, dass Ihre Symbolleisten in erster Linie auf Effizienz ausgel
 
 Im Allgemeinen funktionieren Symbolleisten gut zusammen mit Menüleisten: Gute Symbolleisten bieten Effizienz, und gute Menüleisten bieten Umfassendes. **Sowohl Menüleisten als auch Symbolleisten ermöglichen es jedem, sich ohne Kompromittierung auf seine Stärken zu konzentrieren.**
 
-Es ist überraschend, dass dieses Modell mit einfachen Programmen unterbricht. Für Programme mit nur wenigen Befehlen ist es nicht sinnvoll, sowohl eine Menüleiste als auch eine Symbolleiste zu verwenden, da die Menüleiste eine redundante, ineffiziente Version der Symbolleiste ist.
+Es ist überraschend, dass dieses Modell mit einfachen Programmen unterbricht. Bei Programmen mit nur wenigen Befehlen ist es nicht sinnvoll, sowohl eine Menüleiste als auch eine Symbolleiste zu verwenden, da die Menüleiste eine redundante, ineffiziente Version der Symbolleiste ist.
 
 Um diese Redundanz zu vermeiden, konzentrieren sich viele einfache Programme in Windows Vista darauf, Befehle ausschließlich über die Symbolleiste zur Verfügung zu stellen und die Menüleiste standardmäßig zu verbergen. Zu diesen Programmen gehören Windows Explorer, Windows Internet Explorer, Windows Media Player und Windows Fotogalerie.
 
-Dies ist keine kleine Änderung. Das Entfernen der Menüleiste ändert die Art der Symbolleisten grundlegend, da solche Symbolleisten umfassend sein müssen und sich auf folgende Weise ändern müssen:
+Dies ist keine kleine Änderung. Wenn Sie die Menüleiste entfernen, ändert sich die Art der Symbolleisten grundlegend, da solche Symbolleisten umfassend sein müssen und sich wie folgt ändern müssen:
 
 -   **Frequenz.** Das Entfernen der Menüleiste bedeutet, dass auf alle Befehle, die nicht direkt in einem Fenster oder in den Kontextmenüs verfügbar sind, unabhängig von ihrer Verwendungshäufigkeit über die Symbolleiste zugegriffen werden muss.
--   **Unmittelbarkeit.** Wenn Sie die Menüleiste entfernen, ist die Symbolleiste der einzige sichtbare Zugriffspunkt für Befehle, der erfordert, dass die Symbolleiste über voll funktionsfähige Versionen verfügt. Wenn beispielsweise keine Menüleiste verfügbar ist, muss der Befehl Drucken auf einer Symbolleiste das Dialogfeld Drucken anzeigen, anstatt sofort zu drucken. (Obwohl die Verwendung einer geteilten Schaltfläche in diesem Fall ein hervorragender Kompromiss ist. Weitere Informationen [finden Sie unter Standardmenü und Teilungsschaltflächen](#standard-menu-and-split-buttons) für die Standardschaltfläche "Drucken teilen".)
+-   **Unmittelbarkeit.** Wenn Sie die Menüleiste entfernen, ist die Symbolleiste der einzige sichtbare Zugriffspunkt für Befehle, und die Symbolleiste muss über voll funktionsfähige Versionen verfügen. Wenn beispielsweise keine Menüleiste verfügbar ist, muss der Befehl Drucken auf einer Symbolleiste das Dialogfeld Drucken anzeigen, anstatt sofort zu drucken. (Obwohl die Verwendung einer geteilten Schaltfläche in diesem Fall ein hervorragender Kompromiss ist. Weitere Informationen [finden Sie unter Standardmenü und Teilungsschaltflächen](#standard-menu-and-split-buttons) für die Standardschaltfläche "Drucken teilen".)
 
     ![Screenshot der Optionen der Symbolleiste und des Druckbefehls ](images/cmd-toolbars-image7.png)
 
@@ -109,65 +109,65 @@ Dies ist keine kleine Änderung. Das Entfernen der Menüleiste ändert die Art d
 
 -   **Direktheit.** Um Platz zu sparen und unübersichtlich zu vermeiden, werden weniger häufig verwendete Befehle möglicherweise in Menüschaltflächen verschoben, wodurch sie weniger direkt sind.
 
-Symbolleisten, die zum Ergänzen einer Menüleiste verwendet werden, sind anders als Symbolleisten für die Verwendung mit einer entfernten oder ausgeblendeten Menüleiste konzipiert. Und da Sie nicht davon ausgehen können, dass Benutzer eine ausgeblendete Menüleiste anzeigen, um einen einzelnen Befehl auszuführen, sollte das Ausblenden einer Menüleiste genauso behandelt werden wie das entfernen, wenn Entwurfsentscheidungen getroffen werden. (Wenn Sie die Menüleiste standardmäßig ausblenden, gehen Sie nicht davon aus, dass Benutzer die Menüleiste anzeigen möchten, um nach einem Befehl zu suchen oder sogar herauszufinden, wie sie angezeigt wird.)
+Symbolleisten, die zum Ergänzen einer Menüleiste verwendet werden, sind anders als Symbolleisten für die Verwendung mit einer entfernten oder ausgeblendeten Menüleiste konzipiert. Da Sie nicht davon ausgehen können, dass Benutzer eine ausgeblendete Menüleiste anzeigen, um einen einzelnen Befehl auszuführen, sollte das Ausblenden einer Menüleiste genauso behandelt werden wie das entfernen, wenn Entwurfsentscheidungen getroffen werden. (Wenn Sie die Menüleiste standardmäßig ausblenden, gehen Sie nicht davon aus, dass Benutzer an die Anzeige der Menüleiste denken, um einen Befehl zu finden, oder sogar herausfinden, wie er angezeigt wird.)
 
-Das Entwerfen einer Symbolleiste, die ohne Menüleiste funktioniert, umfasst häufig einige Kompromittierung. Aus Effizienzgründen sollte jedoch nicht zu viel kompromitt werden. Wenn das Ausblenden der Menüleiste zu einer ineffizienten Symbolleiste führt, blenden Sie die Menüleiste nicht aus!
+Das Entwerfen einer Symbolleiste für die Arbeit ohne Menüleiste bringt häufig einige Kompromisse mit sich. Um die Effizienz zu erhöhen, sollten Sie jedoch nicht zu viele Kompromisse eingehen. Wenn das Ausblenden der Menüleiste zu einer ineffizienten Symbolleiste führt, blenden Sie die Menüleiste nicht aus!
 
 ### <a name="keyboard-accessibility"></a>Barrierefreiheit der Tastaturnavigation
 
-Über die Tastatur unterscheidet sich der Zugriff auf Symbolleisten stark vom Zugriff auf Menüleisten. Menüleisten erhalten den Eingabefokus, wenn Benutzer die ALT-TASTE drücken und den Eingabefokus mit der ESC-TASTE verlieren. Sobald eine Menüleiste den Eingabefokus besitzt, wird sie unabhängig vom Rest des Fensters navigiert, wobei alle Pfeiltasten, Start-, End- und Tabulatortasten verarbeitet werden. Im Gegensatz dazu erhalten Symbolleisten den Eingabefokus, wenn Benutzer die TAB-TASTE durch den gesamten Inhalt des Fensters drücken. Da Symbolleisten zuletzt in der Aktivierreihenfolge angezeigt werden, kann die Aktivierung auf einer ausgelasteten Seite einen erheblichen Aufwand in Anspruch nehmen (es sei denn, Benutzer wissen, dass sie UMSCHALT+TAB verwenden, um rückwärts zu wechseln).
+Der Zugriff auf Symbolleisten über die Tastatur ist ein ganz anderer als der Zugriff auf Menüleisten. Menüleisten erhalten den Eingabefokus, wenn Benutzer die ALT-TASTE drücken und sie den Eingabefokus mit der ESC-Taste verlieren. Sobald eine Menüleiste den Eingabefokus besitzt, wird sie unabhängig vom Rest des Fensters navigiert, und alle Pfeiltasten sowie die Tasten Start, Ende und TAB werden verwendet. Im Gegensatz dazu erhalten Symbolleisten den Eingabefokus, wenn Benutzer die TAB-TASTE durch den gesamten Inhalt des Fensters drücken. Da Symbolleisten zuletzt in der Aktiva-Reihenfolge angezeigt werden, kann die Aktivierung auf einer ausgelastet seite erheblich sein (es sei denn, Benutzer wissen, dass sie UMSCHALT+TAB verwenden, um sich rückwärts zu bewegen).
 
-Die Barrierefreiheit stellt hier ein Problem dar: Obwohl Symbolleisten für Mausbenutzer einfacher sind, sind sie für Tastaturbenutzer weniger zugänglich. Dies ist kein Problem, wenn sowohl eine Menüleiste als auch eine Symbolleiste vorhanden sind, aber wenn die Menüleiste entfernt oder ausgeblendet wird.
+Die Barrierefreiheit ist hier ein Großes: Während Symbolleisten für Mausbenutzer einfacher sind, sind sie für Tastaturbenutzer weniger zugänglich. Dies ist kein Problem, wenn es sowohl eine Menüleiste als auch eine Symbolleiste gibt, aber wenn die Menüleiste entfernt oder ausgeblendet wird.
 
-Aus Gründen der Barrierefreiheit bevorzugen Sie es, die Menüleiste beizubehalten, anstatt sie zugunsten einer Symbolleiste vollständig zu entfernen. Wenn Sie zwischen dem Entfernen der Menüleiste und dem einfachen Ausblenden wählen müssen, sollten Sie sie ausblenden.
+Aus Gründen der Barrierefreiheit sollten Sie die Menüleiste beibehalten, anstatt sie vollständig zugunsten einer Symbolleiste zu entfernen. Wenn Sie zwischen dem Entfernen der Menüleiste und dem einfachen Ausblenden wählen müssen, sollten Sie sie lieber ausblenden.
 
 ## <a name="usage-patterns"></a>Verwendungsmuster
 
-Symbolleisten weisen mehrere Verwendungsmuster auf:
+Symbolleisten verfügen über mehrere Verwendungsmuster:
 
 
 
 |     Verwendung                                                                                                                 |     Beispiel                                                                                                                                                                                                                                                                                                                                          |
 |----------------------------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| **Primäre Symbolleisten**<br/> Eine Symbolleiste, die ohne eine Ausgeblendete oder entfernte Menüleiste funktioniert. <br/> | Primäre Symbolleisten müssen den Bedarf an Effizienz und Vollständigkeit ausgleichen, damit sie am besten für einfache Programme funktionieren. <br/> ![Screenshot der Windows-Explorer-Symbolleiste ](images/cmd-toolbars-image8.png)<br/> Eine primäre Symbolleiste aus Windows Explorer.<br/>                                                                        |
-| **Zusätzliche Symbolleisten**<br/> eine Symbolleiste, die für die Arbeit mit einer Menüleiste konzipiert ist. <br/>                         | Zusätzliche Symbolleisten können sich auf Effizienz konzentrieren, ohne kompromittiert zu werden. <br/> ![Screenshot einer Menüleiste über einer Symbolleiste ](images/cmd-toolbars-image9.png)<br/> Eine zusätzliche Symbolleiste aus Windows Movie Maker.<br/>                                                                                                                  |
-| **Symbolleistenmenüs**<br/> eine Menüleiste, die als Symbolleiste implementiert ist. <br/>                                        | Symbolleistenmenüs sind Symbolleisten, die in erster Linie aus Befehlen in [Menüschaltflächen](ctrl-command-buttons.md) und geteilten Schaltflächen bestehen, wobei ggf. nur wenige direkte Befehle vorhanden sind. <br/> ![Screenshot der Menüleiste mit Symbolen und Befehlen ](images/cmd-toolbars-image10.png)<br/> Ein Symbolleistenmenü in Windows Fotogalerie.<br/> |
-| **Anpassbare Symbolleisten**<br/> eine Symbolleiste, die von Benutzern angepasst werden kann. <br/>                          | Anpassbare Symbolleisten ermöglichen Es Benutzern, Symbolleisten hinzuzufügen oder zu entfernen, ihre Größe und Position zu ändern und sogar ihren Inhalt zu ändern. <br/> ![Screenshot einer Symbolleiste mit Dutzenden von Symbolen ](images/cmd-toolbars-image11.png)<br/> Eine anpassbare Symbolleiste aus Microsoft Visual Studio.<br/>                                             |
-| **Palettenfenster**<br/> ein modusloses Dialogfeld, das ein Array von Befehlen darstellt. <br/>                 | Palettenfenster sind abgedockte Symbolleisten. <br/> ![Screenshot eines Dialogfelds "Farben" ](images/cmd-toolbars-image12.png)<br/> ![Screenshot eines Schriftartdialogfelds ](images/cmd-toolbars-image13.png)<br/> Palettenfenster aus Windows Paint.<br/>                                                                             |
+| **Primäre Symbolleisten**<br/> Eine Symbolleiste, die für die Arbeit ohne Menüleiste konzipiert ist, entweder ausgeblendet oder entfernt. <br/> | Primäre Symbolleisten müssen den Bedarf an Effizienz und Umfassendem ausgleichen, damit sie am besten für einfache Programme funktionieren. <br/> ![Screenshot der Windows-Explorer-Symbolleiste ](images/cmd-toolbars-image8.png)<br/> Eine primäre Symbolleiste aus Windows Explorer.<br/>                                                                        |
+| **Zusätzliche Symbolleisten**<br/> Eine Symbolleiste, die für die Arbeit mit einer Menüleiste konzipiert ist. <br/>                         | Zusätzliche Symbolleisten können sich ohne Kompromittierung auf Effizienz konzentrieren. <br/> ![Screenshot einer Menüleiste über einer Symbolleiste ](images/cmd-toolbars-image9.png)<br/> Eine zusätzliche Symbolleiste aus Windows Movie Maker.<br/>                                                                                                                  |
+| **Symbolleistenmenüs**<br/> eine Als Symbolleiste implementierte Menüleiste. <br/>                                        | Symbolleistenmenüs sind Symbolleisten, die in erster Linie aus Befehlen [in](ctrl-command-buttons.md) Menüschaltflächen und geteilten Schaltflächen bestehen, mit nur wenigen direkten Befehlen(sofern verfügbar). <br/> ![Screenshot der Menüleiste mit Symbolen und Befehlen ](images/cmd-toolbars-image10.png)<br/> Ein Symbolleistenmenü in Windows Fotogalerie.<br/> |
+| **Anpassbare Symbolleisten**<br/> eine Symbolleiste, die von Benutzern angepasst werden kann. <br/>                          | Anpassbare Symbolleisten ermöglichen Es Benutzern, Symbolleisten hinzuzufügen oder zu entfernen, ihre Größe und Position zu ändern und sogar ihre Inhalte zu ändern. <br/> ![Screenshot einer Symbolleiste mit Dutzenden von Symbolen ](images/cmd-toolbars-image11.png)<br/> Eine anpassbare Symbolleiste Microsoft Visual Studio.<br/>                                             |
+| **Palettenfenster**<br/> ein modusloses Dialogfeld, in dem ein Array von Befehlen angezeigt wird. <br/>                 | Palettenfenster sind ungedoppelte Symbolleisten. <br/> ![Screenshot eines Dialogfelds "Farben" ](images/cmd-toolbars-image12.png)<br/> ![Screenshot eines Schriftartdialogfelds ](images/cmd-toolbars-image13.png)<br/> Palettenfenster aus Windows Paint.<br/>                                                                             |
 
 
 
  
 
-Symbolleisten weisen diese Stile auf:
+Symbolleisten verfügen über die folgenden Stile:
 
 
 
 |   Style                                                                                                                                     | Beispiel                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 |
 |----------------------------------------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| **Symbole ohne Bezeichnung**<br/> eine oder mehrere Zeilen mit kleinen Symbolschaltflächen ohne Bezeichnung. <br/>                                           | Verwenden Sie diesen Stil, wenn zu viele Schaltflächen für die Bezeichnung vorhanden sind oder das Programm häufig verwendet wird. Mit diesem Stil können Programme mit komplexer Funktionalität mehrere Zeilen enthalten. Daher ist dies der einzige Stil, der angepasst werden muss. mit diesem Stil können einige Befehlsschaltflächen bezeichnet werden, wenn sie häufig verwendet werden. <br/> ![Screenshot der Symbolleiste mit kleinen Symbolen ohne Bezeichnung ](images/cmd-toolbars-image14.png)<br/> Eine Symbolleiste mit nicht bezeichneten Symbolen aus WordPad.<br/> |
-| **Große Symbole ohne Bezeichnung**<br/> eine einzelne Zeile mit großen Symbolschaltflächen ohne Bezeichnung. <br/>                                         | Verwenden Sie diesen Stil für einfache Hilfsprogramme, die leicht erkennbare Symbole aufweisen und in der Regel in kleinen Fenstern ausgeführt werden. <br/> ![Screenshot der Symbolleiste mit großen Symbolen ohne Bezeichnung ](images/cmd-toolbars-image15.png)<br/> ![Screenshot der Symbolleiste mit großen Symbolen ](images/cmd-toolbars-image16.png)<br/> Große Symbolleisten ohne Bezeichnungen aus Windows Live Messenger und der Windows Snipping Tool.<br/>                                                                       |
-| **Beschriftete Symbole**<br/> eine einzelne Zeile mit kleinen Beschriftungssymbolen. <br/>                                                          | Verwenden Sie diesen Stil, wenn nur wenige Befehle vorhanden sind oder das Programm nicht häufig verwendet wird. dieser Stil verfügt immer über eine einzelne Zeile. <br/> ![Screenshot der Symbolleiste mit beschrifteten Symbolen ](images/cmd-toolbars-image8.png)<br/> Eine symbolleiste mit Bezeichnungen aus Windows Explorer.<br/>                                                                                                                                                                                                               |
-| **Partielle Symbolleisten**<br/> eine Teilzeile mit kleinen Symbolen, die verwendet wird, um Speicherplatz zu sparen, wenn keine vollständige Symbolleiste erforderlich ist. <br/>       | Verwenden Sie diesen Stil für Fenster mit Navigationsschaltflächen, einem Suchfeld oder Registerkarten, um unnötige Gewichtung am oberen Rand des Fensters zu vermeiden. <br/> ![Screenshot der Menüleiste, Symbolleiste und Favoritenleiste ](images/cmd-toolbars-image17.png)<br/> Teilsymbolleisten können mit Navigationsschaltflächen, einem Suchfeld oder Registerkarten kombiniert werden.<br/>                                                                                                                                                  |
-| **Große Teilsymbolleisten**<br/> eine Teilzeile mit großen Symbolen, die verwendet wird, um Speicherplatz zu sparen, wenn keine vollständige Symbolleiste erforderlich ist. <br/> | Verwenden Sie diesen Stil für einfache Hilfsprogramme mit Navigationsschaltflächen oder einem Suchfeld, um unnötige Gewichtung am oberen Rand des Fensters zu vermeiden. <br/> ![Screenshot einer großen Teilsymbolleiste ](images/cmd-toolbars-image18.png)<br/> Eine große Teilsymbolleiste aus Windows Defender.<br/>                                                                                                                                                                                         |
+| **Nicht gekennzeichnete Symbole**<br/> eine oder mehrere Zeilen mit kleinen Symbolschaltflächen ohne Beschriftung. <br/>                                           | verwenden Sie diesen Stil, wenn zu viele Schaltflächen zum Beschriften enthalten sind oder das Programm häufig verwendet wird. Bei diesem Stil können Programme mit komplexer Funktionalität mehrere Zeilen enthalten. Daher ist dies der einzige Stil, der angepasst werden muss. Mit diesem Stil können einige Befehlsschaltflächen beschriftet werden, wenn sie häufig verwendet werden. <br/> ![Screenshot der Symbolleiste mit kleinen, nicht gekennzeichneten Symbolen ](images/cmd-toolbars-image14.png)<br/> Eine Symbolleiste ohne Beschriftung von WordPad.<br/> |
+| **Große Symbole ohne Beschriftung**<br/> eine einzelne Zeile mit großen Symbolschaltflächen ohne Beschriftung. <br/>                                         | Verwenden Sie diesen Stil für einfache Hilfsprogramme, die leicht erkennbare Symbole haben und in der Regel in kleinen Fenstern ausgeführt werden. <br/> ![Screenshot der Symbolleiste mit großen Symbolen ohne Beschriftung ](images/cmd-toolbars-image15.png)<br/> ![Screenshot der Symbolleiste mit großen Symbolen ](images/cmd-toolbars-image16.png)<br/> Große Symbolleisten ohne Beschriftung von Windows Live Messenger und Windows Snipping Tool.<br/>                                                                       |
+| **Bezeichnete Symbole**<br/> eine einzelne Zeile mit kleinen Symbolen mit Bezeichnungen. <br/>                                                          | verwenden Sie diesen Stil, wenn es nur wenige Befehle gibt oder das Programm nicht häufig verwendet wird. dieses Format hat immer eine einzelne Zeile. <br/> ![Screenshot der Symbolleiste mit bezeichneten Symbolen ](images/cmd-toolbars-image8.png)<br/> Eine Symbolleiste mit Bezeichnungen aus Windows Explorer.<br/>                                                                                                                                                                                                               |
+| **Teilsymbolleisten**<br/> eine teilielle Zeile mit kleinen Symbolen, die verwendet wird, um Speicherplatz zu sparen, wenn keine vollständige Symbolleiste erforderlich ist. <br/>       | Verwenden Sie diesen Stil für Fenster mit Navigationsschaltflächen, einem Suchfeld oder Registerkarten, um unnötige Gewichtung am oberen Fensterrand zu vermeiden. <br/> ![Screenshot von Menüleiste, Symbolleiste und Favoritenleiste ](images/cmd-toolbars-image17.png)<br/> Teilsymbolleisten können mit Navigationsschaltflächen, einem Suchfeld oder Registerkarten kombiniert werden.<br/>                                                                                                                                                  |
+| **Große Teilsymbolleisten**<br/> eine Teilzeile großer Symbole, die verwendet wird, um Speicherplatz zu sparen, wenn keine vollständige Symbolleiste erforderlich ist. <br/> | Verwenden Sie diesen Stil für einfache Hilfsprogramme, die über Navigationsschaltflächen oder ein Suchfeld verfügen, um unnötige Gewichtung am oberen Fensterrand zu vermeiden. <br/> ![Screenshot einer großen teiliellen Symbolleiste ](images/cmd-toolbars-image18.png)<br/> Eine große Teilsymbolleiste aus Windows Defender.<br/>                                                                                                                                                                                         |
 
 
 
  
 
-Schließlich weisen Symbolleistensteuerelemente mehrere Verwendungsmuster auf:
+Schließlich haben Symbolleisten-Steuerelemente mehrere Verwendungsmuster:
 
 
 
 |     Verwendung                                                                                                                 |     Beispiel                                                                                                                                                                                                                                                                                                                                          |
 |----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| **Befehlssymbolschaltflächen**<br/> Durch Klicken auf eine Befehlsschaltfläche wird eine sofortige Aktion initiiert. <br/>                                                                                                 | ![Screenshot einer Symbolleiste mit Beschriftungssymbolen ](images/cmd-toolbars-image19.png)<br/> Beispiele für Symbolbefehlsschaltflächen aus Windows Fax und Scan.<br/>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        |
-| **Schaltflächen des Modussymbols**<br/> Wenn Sie auf eine Modusschaltfläche klicken, wird der ausgewählte Modus angezeigt. <br/>                                                                                                            | ![Screenshot einer vertikalen Symbolleiste ](images/cmd-toolbars-image20.png)<br/> Beispiele für Modusschaltflächen aus Windows Paint.<br/>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            |
-| **Schaltflächen für Eigenschaftensymbole**<br/> Der Zustand einer Eigenschaftenschaltfläche spiegelt ggf. den Zustand der aktuell ausgewählten Objekte wider. Durch Klicken auf die Schaltfläche wird die Änderung auf die ausgewählten Objekte angewendet. <br/> | ![Screenshot der Formatierungssymbole und des ausgewählten Texts ](images/cmd-toolbars-image21.png)<br/> Beispiele für Eigenschaftenschaltflächen aus Microsoft Word.<br/>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       |
-| **Beschriftete Symbolschaltflächen**<br/> eine Befehls- oder Eigenschaftenschaltfläche mit einem Symbol und einer Textbezeichnung. <br/>                                                                               | Diese Schaltflächen werden für häufig verwendete Symbolleistenschaltflächen verwendet, deren Symbol nicht ausreichend selbsterklärend ist. Sie werden auch in Symbolleisten mit so wenigen Schaltflächen verwendet, dass jede Schaltfläche eine Textbezeichnung aufweisen kann. <br/> ![Screenshot: Symbolleiste mit Symbolen, die für die am häufigsten verwendeten Schaltflächen gekennzeichnet sind ](images/cmd-toolbars-image22.png)<br/> Eine Symbolleiste mit den am häufigsten verwendeten Schaltflächen.<br/>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            |
-| **Menüschaltflächen**<br/> eine Befehlsschaltfläche, die verwendet wird, um einen kleinen Satz verwandter Befehle darzustellen. <br/>                                                                                                | Ein einzelnes nach unten zeigende Dreieck gibt an, dass durch Klicken auf die Schaltfläche ein Menü angezeigt wird. <br/> ![Screenshot der Symbolleiste und Dropdown-Befehlsliste ](images/cmd-toolbars-image23.png)<br/> Eine Menüschaltfläche mit einem kleinen Satz verwandter Befehle.<br/>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    |
-| **Aufteilen von Schaltflächen**<br/> Eine Befehlsschaltfläche, die verwendet wird, um Variationen eines Befehls zu konsolidieren, insbesondere, wenn einer der Befehle die meiste Zeit verwendet wird. <br/>                                     | ![Screenshot der geteilten Druckschaltfläche ](images/cmd-toolbars-image24.png)<br/> eine geteilte Schaltfläche im normalen Zustand.<br/> Wie bei einer Menüschaltfläche gibt ein einzelnes nach unten zeigende Dreieck an, dass durch Klicken auf den äußersten rechten Teil der Schaltfläche ein Menü angezeigt wird. <br/> ![Screenshot der Befehle für geteilte Druckschaltfläche ](images/cmd-toolbars-image25.png)<br/> eine verworfene geteilte Schaltfläche.<br/> in diesem Beispiel wird eine geteilte Schaltfläche verwendet, um alle druckbezogenen Befehle zu konsolidieren. Der Befehl für den sofortigen Druck wird in den meisten Jahren verwendet, sodass Benutzer die anderen Befehle normalerweise nicht sehen müssen. <br/> Im Gegensatz zu einer Menüschaltfläche führt das Klicken auf den linken Teil der Schaltfläche die Aktion direkt auf der Bezeichnung aus. Teilungsschaltflächen sind in Situationen wirksam, in denen der nächste Befehl wahrscheinlich mit dem letzten Befehl identisch ist. In diesem Fall wird die Bezeichnung in den letzten Befehl geändert, wie bei einer Farbauswahl:<br/> ![Screenshot des Bucketsymbols mit Farbe ](images/cmd-toolbars-image26.png)<br/> In diesem Beispiel wird die Bezeichnung in den letzten Befehl geändert.<br/> |
-| **Dropdownlisten**<br/> eine Dropdownliste (bearbeitbar oder schreibgeschützt), die zum Anzeigen oder Ändern einer Eigenschaft verwendet wird. <br/>                                                                                   | ![Screenshot der Dropdownliste mit Schriftarten ](images/cmd-toolbars-image27.png)<br/> In diesem Beispiel werden Dropdownlisten zum Anzeigen und Festlegen von Schriftartattributen verwendet.<br/> Eine Dropdownliste in einer Symbolleiste gibt den Status des aktuell ausgewählten Objekts an (sofern verfügbar). Wenn Sie die Liste ändern, ändert sich der Zustand des ausgewählten Objekts. <br/>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           |
+| **Schaltflächen des Befehlssymbols**<br/> Durch Klicken auf eine Befehlsschaltfläche wird eine sofortige Aktion initiiert. <br/>                                                                                                 | ![Screenshot einer Symbolleiste mit Beschriftung ](images/cmd-toolbars-image19.png)<br/> Beispiele für Symbolbefehlsschaltflächen von Windows Fax und Scan.<br/>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        |
+| **Schaltflächen des Modussymbols**<br/> Wenn Sie auf eine Modusschaltfläche klicken, wird der ausgewählte Modus aktiviert. <br/>                                                                                                            | ![Screenshot einer vertikalen Symbolleiste ](images/cmd-toolbars-image20.png)<br/> Beispiele für Modusschaltflächen aus Windows Paint.<br/>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            |
+| **Schaltflächen des Eigenschaftensymbols**<br/> Der Zustand einer Eigenschaftenschaltfläche spiegelt den Zustand der aktuell ausgewählten Objekte wider( sofern verfügbar). Durch Klicken auf die Schaltfläche wird die Änderung auf die ausgewählten Objekte angewendet. <br/> | ![Screenshot von Formatierungssymbolen und ausgewähltem Text ](images/cmd-toolbars-image21.png)<br/> Beispiele für Eigenschaftenschaltflächen aus Microsoft Word.<br/>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       |
+| **Beschriftete Symbolschaltflächen**<br/> eine Befehlsschaltfläche oder Eigenschaftenschaltfläche, die mit einem Symbol und einer Textbezeichnung gekennzeichnet ist. <br/>                                                                               | diese Schaltflächen werden für häufig verwendete Symbolleistenschaltflächen verwendet, deren Symbol nicht ausreichend selbsterklärend ist. Sie werden auch in Symbolleisten verwendet, die so wenige Schaltflächen enthalten, dass jede Schaltfläche eine Textbezeichnung haben kann. <br/> ![Screenshot: Symbolleiste mit Symbolen, die für die am häufigsten verwendeten Schaltflächen bezeichnet sind ](images/cmd-toolbars-image22.png)<br/> Eine Symbolleiste mit den am häufigsten verwendeten Schaltflächen.<br/>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            |
+| **Menüschaltflächen**<br/> Eine Befehlsschaltfläche, die verwendet wird, um einen kleinen Satz verwandter Befehle anzuzeigen. <br/>                                                                                                | Ein einzelnes nach unten zeigende Dreieck gibt an, dass durch Klicken auf die Schaltfläche ein Menü angezeigt wird. <br/> ![Screenshot der Symbolleiste und Dropdown-Befehlsliste ](images/cmd-toolbars-image23.png)<br/> Eine Menüschaltfläche mit einem kleinen Satz verwandter Befehle.<br/>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    |
+| **Aufteilen von Schaltflächen**<br/> Eine Befehlsschaltfläche, die verwendet wird, um Variationen eines Befehls zu konsolidieren, insbesondere, wenn einer der Befehle in den meisten Jahren verwendet wird. <br/>                                     | ![Screenshot der geteilten Druckschaltfläche ](images/cmd-toolbars-image24.png)<br/> eine geteilte Schaltfläche im normalen Zustand.<br/> Wie bei einer Menüschaltfläche gibt ein einzelnes nach unten zeigende Dreieck an, dass durch Klicken auf den äußersten rechten Teil der Schaltfläche ein Menü angezeigt wird. <br/> ![Screenshot der Befehle für geteilte Druckschaltfläche ](images/cmd-toolbars-image25.png)<br/> eine verworfene geteilte Schaltfläche.<br/> in diesem Beispiel wird eine geteilte Schaltfläche verwendet, um alle druckbezogenen Befehle zu konsolidieren. Der Befehl für den sofortigen Druck wird in den meisten Jahren verwendet, sodass Benutzer die anderen Befehle normalerweise nicht sehen müssen. <br/> Im Gegensatz zu einer Menüschaltfläche führt das Klicken auf den linken Teil der Schaltfläche die Aktion direkt auf der Bezeichnung aus. Teilungsschaltflächen sind in Situationen wirksam, in denen der nächste Befehl wahrscheinlich mit dem letzten Befehl identisch ist. In diesem Fall wird die Bezeichnung in den letzten Befehl geändert, wie bei einer Farbauswahl:<br/> ![Screenshot des Bucketsymbols mit Farbe ](images/cmd-toolbars-image26.png)<br/> In diesem Beispiel wird die Bezeichnung in den letzten Befehl geändert.<br/> |
+| **Dropdownlisten**<br/> eine Dropdownliste (bearbeitbar oder schreibgeschützt), die zum Anzeigen oder Ändern einer Eigenschaft verwendet wird. <br/>                                                                                   | ![Screenshot der Dropdownliste mit Schriftarten ](images/cmd-toolbars-image27.png)<br/> In diesem Beispiel werden Dropdownlisten zum Anzeigen und Festlegen von Schriftartattributen verwendet.<br/> Eine Dropdownliste in einer Symbolleiste spiegelt den Status des aktuell ausgewählten Objekts wider( sofern verfügbar). Wenn Sie die Liste ändern, ändert sich der Zustand des ausgewählten Objekts. <br/>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           |
 
 
 
@@ -177,7 +177,7 @@ Schließlich weisen Symbolleistensteuerelemente mehrere Verwendungsmuster auf:
 
 ### <a name="presentation"></a>Präsentation
 
--   **Wählen Sie einen geeigneten Symbolleistenstil basierend auf der Anzahl der Befehle und ihrer Verwendung aus.** Eine Anleitung zur Auswahl finden Sie in der vorherigen Tabelle zum Symbolleistenformat. Vermeiden Sie die Verwendung einer Symbolleistenkonfiguration, die zu viel Speicherplatz im Programmarbeitsbereich benötigt.
+-   **Wählen Sie ein geeignetes Symbolleistenformat basierend auf der Anzahl der Befehle und ihrer Verwendung aus.** Eine Anleitung zur Auswahl finden Sie in der vorherigen Tabelle zum Symbolleistenformat. Vermeiden Sie die Verwendung einer Symbolleistenkonfiguration, die zu viel Speicherplatz aus dem Programmarbeitsbereich benötigt.
 -   **Platzieren Sie Symbolleisten direkt über dem Inhaltsbereich unterhalb** der Menüleiste und adressleiste, falls vorhanden.
 -   **Wenn der Speicherplatz premium ist, sparen Sie Speicherplatz, indem Sie:**
 
@@ -189,9 +189,9 @@ Schließlich weisen Symbolleistensteuerelemente mehrere Verwendungsmuster auf:
 
     ![Screenshot der häufigen Symbole der Symbolleiste, die nicht gekennzeichnet sind ](images/cmd-toolbars-image28.png)
 
-    Die Windows Internet Explorer-Symbolleiste spart Platz, indem Bezeichnungen bekannter Symbole weglassen, eine partielle Symbolleiste verwendet wird und ein Überlauf-Chevron für weniger häufig verwendete Befehle verwendet wird.
+    Die Windows Internet Explorer-Symbolleiste spart Platz, indem Bezeichnungen bekannter Symbole weglassen, eine Teilsymbolleiste verwendet wird und ein Überlauf-Chevron für weniger häufig verwendete Befehle verwendet wird.
 
--   **Verwenden Sie für das Symbolleistenmuster ohne Beschriftung eine Standardkonfiguration mit nicht mehr als zwei Zeilen symbolleisten.** Wenn mehr als zwei Zeilen nützlich sein können, können Sie die Symbolleisten anpassen. Beginnend mit mehr als zwei Zeilen können Benutzer überlastet werden und zu viel Speicherplatz aus dem Programmarbeitsbereich nehmen.
+-   **Verwenden Sie für das Symbolleistenmuster ohne Beschriftung eine Standardkonfiguration mit nicht mehr als zwei Zeilen symbolleisten.** Wenn mehr als zwei Zeilen nützlich sein können, können Sie die Symbolleisten anpassen. Ab mehr als zwei Zeilen können Benutzer überlastet werden und zu viel Speicherplatz aus dem Programmarbeitsbereich nehmen.
 
     **Falsch:**
 
@@ -200,20 +200,20 @@ Schließlich weisen Symbolleistensteuerelemente mehrere Verwendungsmuster auf:
     Eine Standardkonfiguration mit mehr als zwei Zeilen symbolleisten führt zu viel visueller Übersichtlichkeit.
 
 -   **Deaktivieren Sie einzelne Symbolleistenschaltflächen, die nicht für den aktuellen** Kontext gelten, anstatt sie zu entfernen. Dadurch wird der Inhalt der Symbolleiste stabil und leichter zu finden.
--   **Deaktivieren Sie einzelne Symbolleistenschaltflächen, wenn das Klicken darauf direkt zu einem Fehler führen würde.** Dies ist erforderlich, um ein direktes Gefühl zu bewahren.
+-   **Deaktivieren Sie einzelne Symbolleistenschaltflächen, wenn das Klicken darauf direkt zu einem Fehler führen würde.** Dies ist erforderlich, um ein direktes Gefühl zu erhalten.
 -   **Entfernen Sie für das Symbolleistenmuster ohne Beschriftung ganze Symbolleisten, wenn sie nicht für den aktuellen Kontext gelten.** Zeigen Sie sie nur in den entsprechenden Modi an.
 
     ![Screenshot der Debugsymbolleiste ](images/cmd-toolbars-image30.png)
 
     In diesem Beispiel wird die Symbolleiste Debuggen nur angezeigt, wenn das Programm ausgeführt wird.
 
--   **Symbolleistenschaltflächen linksbündig anzeigen.** Das Hilfesymbol (falls vorhanden) ist rechtsbündig ausgerichtet.
+-   **Symbolleistenschaltflächen linksbündig anzeigen.** Das Hilfesymbol (sofern vorhanden) ist rechtsbündig ausgerichtet.
 
     ![Screenshot der Symbolleiste, Hilfesymbol rechtsbündig ausgerichtet ](images/cmd-toolbars-image31.png)
 
-    Alle Symbolleistenschaltflächen werden mit Ausnahme der Hilfe linksbündig ausgerichtet.
+    Alle Symbolleistenschaltflächen werden mit Ausnahme der Hilfe ausgerichtet.
 
-    **Ausnahme:** Windows symbolleisten im 7-Stil programmspezifische Befehle nach links ausrichten, aber rechts richten Standardbefehle aus, bekannte Befehle wie Optionen, Ansicht und Hilfe.
+    **Ausnahme:** Windows symbolleisten im 7-Stil programmspezifische Befehle nach links ausrichten, aber rechts ausgerichtete, bekannte Standardbefehle wie Optionen, Ansicht und Hilfe.
 
 -   **Ändern Sie die Bezeichnungen der Symbolleistenschaltfläche nicht dynamisch.** Dies ist verwirrend und unerwartet. Sie können das Symbol jedoch ändern, um den aktuellen Zustand widerzubilden.
 
@@ -235,21 +235,21 @@ Schließlich weisen Symbolleistensteuerelemente mehrere Verwendungsmuster auf:
     -   **Schaltfläche "Teilen".** Direkt für den gängigsten Befehl, behandelt jedoch Befehlsvarianten.
     -   **Menüschaltfläche.** Indirekt, stellt aber viele Befehle vor.
 -   **Direkte Befehle bevorzugen.** Für Befehle, die entweder direkt sein können oder zusätzliche Eingaben zur Flexibilität haben können:
-    -   Verwenden Sie für primäre Symbolleisten die flexiblen Versionen von Befehlen (z.B. Drucken...).
+    -   Verwenden Sie für primäre Symbolleisten die flexiblen Versionen von Befehlen (z. B. Drucken...).
     -   Verwenden Sie für zusätzliche Symbolleisten die unmittelbaren Versionen in der Symbolleiste (z. B. Drucken), und verwenden Sie flexible Versionen in der Menüleiste (z. B. Drucken...).
--   **Stellen Sie Bezeichnungen für häufig verwendete Befehle zur Verfügung,** insbesondere, wenn es sich bei ihren Symbolen nicht um bekannte Symbole handelt.
+-   **Stellen Sie Bezeichnungen für häufig verwendete Befehle zur Verfügung,** insbesondere wenn es sich bei ihren Symbolen nicht um bekannte Symbole handelt.
 
     **Annehmbar:**
 
-    ![Screenshot der Symbolleiste ohne Beschriftung von Symbolen ](images/cmd-toolbars-image32.png)
+    ![Screenshot der Symbolleiste ohne gekennzeichnete Symbole ](images/cmd-toolbars-image32.png)
 
     **Besser:**
 
     ![Screenshot der Symbolleiste mit einigen bezeichneten Symbolen ](images/cmd-toolbars-image33.png)
 
-    Die Windows Fax- und Scansymbolleiste verfügt über wenige Befehle, sodass die bessere Version die wichtigsten bezeichnet.
+    Die symbolleiste Windows Fax und Scan verfügt über wenige Befehle, sodass die bessere Version die wichtigsten bezeichnet.
 
--   Legen Sie Befehle nicht in Symbolleistenmenüs ab, die sich auch direkt auf der Symbolleiste befinden.
+-   Verwenden Sie keine Befehle in Symbolleistenmenüs, die sich auch direkt auf der Symbolleiste befinden.
 
     **Falsch:**
 
@@ -379,14 +379,14 @@ Gehe zu... STRG+G
 </dl> </dd> <dd>Print(split button) <dl> Drucken... STRG+P  
 Seitenansicht <separator>  
 Seiteneinrichtung
-</dl> </dd> Ansicht (Menüschaltfläche) <dl> Menüleiste (Überprüfen, ob sichtbar)  
-Detailbereich (Überprüfen, ob sichtbar)  
-Vorschaubereich (Überprüfen, ob sichtbar)  
-Statusleiste (Überprüfen, ob sichtbar) <separator>  
+</dl> </dd> Ansicht (Menüschaltfläche) <dl> Menüleiste (überprüfen, ob sichtbar)  
+Detailbereich (überprüfen, ob sichtbar)  
+Vorschaubereich (überprüfen, ob sichtbar)  
+Statusleiste (überprüfen, ob sichtbar) <separator>  
 Zoom  
-Zoom inCtrl++  
+VergrößernCtrl++  
 VerkleinernCtrl+- <separator>  
-Textgröße (ausgewählte Einstellung enthält Aufzählungszeichen) <dl> Größte  
+Textgröße (ausgewählte Einstellung hat Aufzählungszeichen) <dl> Größte  
 Größer  
 Medium  
 Kleiner  
@@ -401,112 +401,112 @@ Optionen
 
 **Zusätzliche Symbolleisten**
 
-Diese Befehle ergänzen Standardmenüleisten. Diese Liste zeigt die Schaltflächenbezeichnungen (und typ) mit ihrer Reihenfolge und Trennzeichen, Tastenkombinationen und Ausellipsen an. **Beachten Sie, dass sich der Befehl zum Anzeigen und Ausblenden der Menüleiste im Menü Extras befindet.**
+Diese Befehle ergänzen Standardmenüleisten. Diese Liste zeigt die Schaltflächenbezeichnungen (und den Typ) mit deren Reihenfolge und Trennzeichen, Tastenkombinationen und Ellipsen an. **Beachten Sie, dass sich der Befehl zum Anzeigen und Ausblenden der Menüleiste im Menü Extras befindet.**
 
-Die zusätzlichen Kategorienamen der Symbolleiste unterscheiden sich von den Standardmenükategorienamen, da sie umfassender sein müssen. Beispielsweise wird die Kategorie Organisieren anstelle von Bearbeiten verwendet, da sie Befehle enthält, die sich nicht auf die Bearbeitung bezieht. **Um die Konsistenz zwischen Menüleisten und Symbolleisten zu gewährleisten, verwenden Sie die Standardmenükategorienamen, wenn dies nicht irreführend wäre.**
+Die zusätzlichen Symbolleistenkategorienamen unterscheiden sich von den Standardmenükategorienamen, da sie umfassender sein müssen. Beispielsweise wird die Kategorie Organisieren anstelle von Bearbeiten verwendet, da sie Befehle enthält, die sich nicht auf die Bearbeitung beziehen. **Um die Konsistenz zwischen Menüleisten und Symbolleisten zu gewährleisten, verwenden Sie die Standardnamen der Menükategorie, wenn dies nicht irreführend wäre.**
 
 **Falsch:**
 
 ![Screenshot der gleichen Optionen für verschiedene Befehle ](images/cmd-toolbars-image44.png)
 
-In diesem Beispiel sollte die Symbolleiste aus Konsistenz-Grund bearbeiten anstelle von Organisieren verwenden, da sie über die Standardbefehle des Menüs Bearbeiten verfügt.
+In diesem Beispiel sollte die Symbolleiste aus Konsistenzgründen Bearbeiten anstelle von Organisieren verwenden, da sie über die Standardbefehle im Menü Bearbeiten verfügt.
 
 ### <a name="palette-windows"></a>Palettenfenster
 
--   **Palettenfenster verwenden kürzere Titelleisten, um ihren Bildschirmbereich zu minimieren.** Legen Sie auf der Titelleiste die Schaltfläche Schließen ab.
--   **Legen Sie den Text der Titelleiste auf den Befehl fest, der das Palettenfenster angezeigt hat.**
--   **Verwenden Sie die Groß-/Groß-/Formatvorlage, ohne die Interpunktion zu beenden.**
--   **Geben Sie ein Kontextmenü für Fensterverwaltungsbefehle an.** Zeigen Sie dieses Kontextmenü an, wenn Benutzer mit der rechten Maustaste auf die Titelleiste klicken.
+-   **Palettenfenster verwenden kürzere Titelleisten, um den Bildschirmbereich zu minimieren.** Klicken Sie auf der Titelleiste auf die Schaltfläche Schließen.
+-   **Legen Sie den Titelleistentext auf den Befehl fest, der das Palettenfenster angezeigt hat.**
+-   **Verwenden Sie die Groß-/Großschreibung im Satzformat, ohne die Interpunktion zu beenden.**
+-   **Geben Sie ein Kontextmenü für Fensterverwaltungsbefehle an.** Dieses Kontextmenü wird angezeigt, wenn Benutzer mit der rechten Maustaste auf die Titelleiste klicken.
 
     ![Screenshot der Toolbox mit Kontextmenü ](images/cmd-toolbars-image45.png)
 
     In diesem Beispiel können Benutzer mit der rechten Maustaste auf die Titelleiste klicken, um das Kontextmenü anzuzeigen.
 
--   **Wenn möglich und nützlich, können Sie die Größe von Palettenfenstern ändern.** Geben Sie an, dass die Größe des Fensters mithilfe von Zeigern zur Größenvergrößerung über dem Fensterrahmen geändert werden kann.
--   **Wenn ein Palettenfenster erneut angezeigt wird, zeigen Sie es mit demselben Zustand wie beim letzten Zugriff an.** Speichern Sie beim Schließen die Fenstergröße und -position. Stellen Sie bei der erneuten Anzeige die Größe und Position des gespeicherten Fensters wieder wieder auf. Erwägen Sie außerdem, diese Attribute pro Benutzer über Programminstanzen hinweg persistent zu machen.
+-   **Machen Sie die Größenänderung von Palettenfenstern nach Möglichkeit und nützlich.** Geben Sie an, dass die Größe des Fensters mithilfe von Größenänderungszeigern über dem Fensterrahmen geändert werden kann.
+-   **Wenn ein Palettenfenster erneut angezeigt wird, zeigen Sie es im gleichen Zustand an wie beim letzten Zugriff.** Speichern Sie beim Schließen die Fenstergröße und den Speicherort. Stellen Sie beim erneuten Anzeigen die gespeicherte Fenstergröße und den Speicherort wieder her. Erwägen Sie außerdem, diese Attribute pro Benutzer über Programminstanzen hinweg persistent zu machen.
 
 ### <a name="customization"></a>Anpassung
 
--   **Bereitstellen von Anpassungen für Symbolleisten, die aus zwei oder mehr Zeilen bestehen.** Nur das Symbolformat ohne Beschriftung muss angepasst werden. Einfache Symbolleisten mit wenigen Befehlen müssen nicht anpassen werden.
--   **Stellen Sie eine gute Standardkonfiguration zur Verfügung.** Benutzer sollten ihre Symbolleisten nicht für gängige Szenarien anpassen müssen. Verlassen Sie sich nicht darauf, dass Benutzer ihren Weg aus einer fehlerhaften Erstkonfiguration anpassen. Angenommen, die meisten Benutzer passen ihre Symbolleisten nicht an.
--   **Stellen Sie ein Kontextmenü mit den folgenden Befehlen zur Verfügung:**
+-   **Stellen Sie Anpassungen für Symbolleisten bereit, die aus mindestens zwei Zeilen bestehen.** Nur der Stil mit nicht bezeichneten Symbolen muss angepasst werden. Einfache Symbolleisten mit wenigen Befehlen müssen nicht angepasst werden.
+-   **Stellen Sie eine gute Standardkonfiguration bereit.** Benutzer sollten ihre Symbolleisten nicht für gängige Szenarien anpassen müssen. Verlassen Sie sich nicht darauf, dass Benutzer ihren Weg aus einer fehlerhaften Anfangskonfiguration anpassen. Angenommen, die meisten Benutzer passen ihre Symbolleisten nicht an.
+-   **Geben Sie ein Kontextmenü mit den folgenden Befehlen an:**
     -   Eine Kontrollkästchenliste zum Anzeigen der verfügbaren Symbolleisten
     -   Symbolleisten zum Sperren/Entsperren
     -   Anpassen...
 -   **Sperren Sie anpassbare Symbolleisten standardmäßig,** um versehentliche Änderungen zu verhindern.
--   **Zeigen Sie für den Befehl Anpassen ein** Dialogfeld mit Optionen an, in dem Sie auswählen können, welche Symbolleisten und welche Befehle auf den einzelnen Symbolleisten angezeigt werden.
+-   **Zeigen Sie für den Befehl Anpassen ein Optionsdialogfeld an,** in dem Sie auswählen können, welche Symbolleisten angezeigt werden und welche Befehle auf jeder Symbolleiste angezeigt werden.
 
     ![Screenshot des Dialogfelds "Anpassen" und der Optionen ](images/cmd-toolbars-image46.png)
 
-    In diesem Beispiel stellt Visual Studio Ein Optionsdialogfeld zum Anpassen der Symbolleisten zur Verfügung.
+    In diesem Beispiel stellt Visual Studio ein Optionsdialogfeld zum Anpassen der Symbolleisten bereit.
 
--   Geben Sie im Dialogfeld Optionen anpassen den Befehl Zurücksetzen an, um zur ursprünglichen Symbolleistenkonfiguration zurückzukehren.
+-   Geben Sie einen Reset-Befehl an, um zur ursprünglichen Symbolleistenkonfiguration im Dialogfeld Optionen anpassen zurückzukehren.
 -   **Provide the ability to customize the toolbars using drag-and-drop in the following ways:**
 
     -   Legen Sie die Reihenfolge und Positionen der Symbolleiste fest.
     -   Legen Sie Symbolleistenlängen fest, und zeigen Sie alle Symbolleisten an, die zu klein sind, um ihren Inhalt mit einem Überlauf-Chevron anzuzeigen.
-    -   Falls unterstützt, werden Symbolleisten zu Palettenfenstern und umgekehrt.
+    -   Wenn dies unterstützt wird, können Sie Symbolleisten abdocken, um Palettenfenster zu werden und umgekehrt.
 
     Wenn das Dialogfeld Optionen anpassen angezeigt wird:
 
     -   Legen Sie den Inhalt der Symbolleiste fest.
-    -   Legen Sie die Reihenfolge der Symbolleisteninhalte fest.
+    -   Legen Sie die Reihenfolge des Symbolleisteninhalts fest.
 
     Auf diese Weise können Benutzer Änderungen direkt und effizienter vornehmen.
 
--   **Speichern Sie alle Symbolleistenanpassungen** pro Benutzer.
+-   **Speichern Sie alle Anpassungen** der Symbolleiste pro Benutzer.
 
-### <a name="using-ellipses"></a>Verwenden von Ausellipsen
+### <a name="using-ellipses"></a>Verwenden von Ellipsen
 
-Während Symbolleistenbefehle für sofortige Aktionen verwendet werden, sind manchmal mehr Informationen erforderlich, um die Aktion auszuführen. Verwenden Sie Auslassungsellipsen, um anzugeben, dass ein Befehl weitere Informationen erfordert, bevor er wirksam werden kann. Legen Sie die Auslassungszeichen am Ende der QuickInfo und der Bezeichnung ab, falls eins verfügbar ist.
+Während Symbolleistenbefehle für sofortige Aktionen verwendet werden, sind manchmal weitere Informationen erforderlich, um die Aktion auszuführen. Verwenden Sie eine Auslassungszeichen, um anzugeben, dass ein Befehl weitere Informationen erfordert, bevor er wirksam werden kann. Setzen Sie die Auslassungszeichen am Ende der QuickInfo und der Bezeichnung, sofern vorhanden.
 
-![Screenshot des Druckens von QuickInfo-Text mit Auslassungsellipsen ](images/cmd-toolbars-image47.png)
+![Screenshot des QuickInfo-Drucktexts mit Auslassungszeichen ](images/cmd-toolbars-image47.png)
 
-In diesem Beispiel wird die Druck-... -Befehl zeigt ein Dialogfeld Drucken an, um weitere Informationen zu sammeln.
+In diesem Beispiel wird der Druck... -Befehl zeigt ein Dialogfeld Drucken an, um weitere Informationen zu sammeln.
 
-Wenn ein Befehl jedoch nicht sofort wirksam werden kann, sind keine Auslassungsellipsen erforderlich. Freigabeeinstellungen haben also beispielsweise keine Auslassungsellipse, obwohl sie zusätzliche Informationen benötigt, da der Befehl möglicherweise nicht sofort wirksam werden kann.
+Wenn ein Befehl jedoch nicht sofort wirksam werden kann, sind keine Auslassungszeichen erforderlich. Freigabeeinstellungen haben also beispielsweise keine Auslassungszeichen, obwohl sie zusätzliche Informationen benötigen, da der Befehl möglicherweise nicht sofort wirksam wird.
 
 ![Screenshot der Symbolleiste, des Befehls und der QuickInfo ](images/cmd-toolbars-image48.png)
 
-Der Befehl Einstellungen freigaben hat keine Auslassungsellipse, da er nicht sofort wirksam werden kann.
+Der Befehl Freigabe Einstellungen hat keine Auslassungszeichen, da er nicht sofort wirksam werden kann.
 
-Da Symbolleisten ständig angezeigt werden und der Platz in einem Premium-Bereich liegt, sollten **Ellipsen selten verwendet werden.**
+Da Symbolleisten ständig angezeigt werden und der Speicherplatz premium ist, **sollten Ellipsen selten verwendet werden.**
 
 > [!Note]  
-> Wenden Sie für Menüs, die auf einer Symbolleiste angezeigt werden, die Richtlinien [für Menüellipsen an.](cmd-menus.md)
+> Wenden Sie für Menüs, die auf einer Symbolleiste angezeigt werden, die Richtlinien für [die Menüausellipse](cmd-menus.md)an.
 
  
 
-## <a name="recommended-sizing-and-spacing"></a>Empfohlene Größe und Abstand
+## <a name="recommended-sizing-and-spacing"></a>Empfohlene Größen- und Abstände
 
 ![Screenshot von Symbolleisten mit Abstandsinformationen ](images/cmd-toolbars-image49.png)
 
-Empfohlene Größe und Abstand für Standardsymbolleisten.
+Empfohlene Größen- und Abstandstaste für Standardsymbolleisten.
 
 ## <a name="labels"></a>Bezeichnungen
 
 ### <a name="general"></a>Allgemein
 
 -   **Verwenden Sie für Überschriften die Standardgroß- und kleinschreibung.**
-    -   **Ausnahme:** Bei älteren Anwendungen können Sie bei Bedarf die Groß-/Formatvorlagen verwenden, um das Mischen von Groß-/Formatvorlagen zu vermeiden.
+    -   **Ausnahme:** Bei älteren Anwendungen können Sie bei Bedarf großgeschriebene Titel verwenden, um die Kombination von Groß-/Großschreibungsstilen zu vermeiden.
 
-### <a name="unlabeled-icon-buttons"></a>Symbolschaltflächen ohne Beschriftung
+### <a name="unlabeled-icon-buttons"></a>Schaltflächen für nicht gekennzeichnete Symbole
 
--   **Verwenden Sie eine QuickInfo, um den Befehl zu beschriften.** Verwenden Sie für den QuickInfo-Text, wie die Bezeichnung wäre, wenn die Schaltfläche beschriftet wäre, aber schließen Sie die Tastenkombination ein, falls eine beschriftet wäre.
+-   **Verwenden Sie eine QuickInfo, um den Befehl zu bezeichnen.** Verwenden Sie für den QuickInfo-Text die Bezeichnung, wenn die Schaltfläche beschriftet wäre, aber schließen Sie die Tastenkombination ein, falls vorhanden.
 
     ![Screenshot der Symbolleiste, des Druckersymbols und der QuickInfo ](images/cmd-toolbars-image50.png)
 
-    Ein Beispiel für eine QuickInfo für symbolschaltfläche.
+    Ein Beispiel für eine Symbolschaltflächen-QuickInfo.
 
 ### <a name="labeled-icon-buttons"></a>Beschriftete Symbolschaltflächen
 
 -   **Verwenden Sie eine präzise Bezeichnung.** Verwenden Sie nach Möglichkeit ein einzelnes Wort, maximal vier Wörter.
 -   **Platzieren Sie die Bezeichnung rechts neben dem Symbol.**
--   **Verwenden Sie einen Infotip, um den Befehl zu beschreiben.** Da die Schaltflächen beschriftet sind, wäre die Verwendung einer QuickInfo anstelle einer Infotip redundant.
+-   **Verwenden Sie eine Infotip, um den Befehl zu beschreiben.** Da die Schaltflächen beschriftet sind, wäre die Verwendung einer QuickInfo anstelle einer Infotip redundant.
 
-    ![Screenshot der bezeichneten Schaltfläche mit Infotip ](images/cmd-toolbars-image51.png)
+    ![Screenshot der beschrifteten Schaltfläche mit Infotip ](images/cmd-toolbars-image51.png)
 
-    Ein Beispiel für eine Infotip für eine Schaltfläche mit bezeichnungsbeschrifteter Schaltfläche.
+    Ein Beispiel für eine symbolbeschriftete Symbol-Infoinfo.
 
 ### <a name="drop-down-lists"></a>Dropdownlisten
 
@@ -522,16 +522,16 @@ Empfohlene Größe und Abstand für Standardsymbolleisten.
 
     In diesem Beispiel wird eine Eingabeaufforderung für die Bezeichnung der Dropdownliste verwendet.
 
-### <a name="menu-buttons-and-split-buttons"></a>Menüschaltflächen und geteilte Schaltflächen
+### <a name="menu-buttons-and-split-buttons"></a>Menüschaltflächen und unterteilte Schaltflächen
 
--   **Bevorzugen Sie verbbasierte Menüschaltflächennamen.** Lässt das Verb jedoch weg, wenn es "Create", "Show", "View" oder "Manage" ist. Die **Menüschaltflächen Extras** **und** Seite enthalten beispielsweise keine Verben.
--   **Verwenden Sie ein einzelnes, spezifisches Wort, das den Menüinhalt eindeutig und genau beschreibt.** Obwohl die Namen nicht so allgemein sein müssen, dass sie alles im Menü beschreiben, sollten sie vorhersagbar genug sein, damit Benutzer nicht von dem, was sie im Menü finden, nicht überraschend sind.
--   **Geben Sie zwar keine Infotipbeschreibungen an, wenn sie hilfreich sind.**
+-   **Verbbasierte Menüschaltflächennamen bevorzugen.** Lassen Sie das Verb jedoch aus, wenn es "Erstellen", "Anzeigen", "Anzeigen" oder "Verwalten" lautet. Beispielsweise verfügen die Menüschaltflächen **Extras** und **Seite** nicht über Verben.
+-   **Verwenden Sie ein einzelnes, spezifisches Wort, das den Menüinhalt klar und genau beschreibt.** Obwohl die Namen nicht so allgemein sein müssen, dass sie alles im Menü beschreiben, sollten sie vorhersagbar genug sein, damit Benutzer nicht von dem, was sie im Menü finden, überrascht werden.
+-   **Wenngleich dies nicht erforderlich ist, geben Sie Infotip-Beschreibungen an, wenn sie hilfreich sind.**
 
 ### <a name="menu-items"></a>Menüelemente
 
--   **Verwenden Sie Menüelementnamen, die mit einem Verb, Nomen oder Nomenphrasen beginnen.**
--   **Bevorzugen Sie verbbasierte Menünamen.** Lässt das Verb jedoch weg, wenn es "Create", "Show", "View" oder "Manage" ist. Die folgenden Befehle verwenden beispielsweise keine Verben:
+-   **Verwenden Sie Menüelementnamen, die mit einem Verb,Nomen oder Nomen-Ausdruck beginnen.**
+-   **Verbbasierte Menünamen bevorzugen.** Lassen Sie das Verb jedoch aus, wenn es "Erstellen", "Anzeigen", "Anzeigen" oder "Verwalten" lautet. Die folgenden Befehle verwenden z. B. keine Verben:
     -   Info
     -   Fortgeschrittene
     -   Vollbildmodus
@@ -539,38 +539,38 @@ Empfohlene Größe und Abstand für Standardsymbolleisten.
     -   Optionen
     -   Eigenschaften
 -   **Verwenden Sie bestimmte Verben.** Vermeiden Sie generische, nicht hilfreiche Verben wie Change und Manage.
--   **Verwenden Sie singulare Nomen für Befehle, die für ein einzelnes Objekt gelten, andernfalls** Pluralnunen.
--   **Wählen Sie für Paare von ergänzenden Befehlen eindeutig ergänzende Namen aus.** Beispiele: Hinzufügen, Entfernen; Anzeigen, Ausblenden; Einfügen, Löschen.
--   **Wählen Sie Menüelementnamen basierend auf Benutzerzielen und Aufgaben und nicht nach Technologie aus.**
+-   **Verwenden Sie singulare Nomen für Befehle, die für ein einzelnes Objekt gelten,** andernfalls Plural nomen.
+-   **Wählen Sie für Paare ergänzender Befehle eindeutig ergänzende Namen aus.** Beispiele: Hinzufügen, Entfernen; Einblenden, Ausblenden; Einfügen, Löschen.
+-   **Wählen Sie Die Namen von Menüelements basierend auf Benutzerzielen und -aufgaben aus, nicht basierend auf der Technologie.**
 -   Verwenden Sie die folgenden Menüelementnamen für den angegebenen Zweck:
-    -   **Optionen:** So zeigen Sie Programmoptionen an.
-    -   **Anpassen:** So zeigen Sie die Programmoptionen an, die sich speziell auf die Konfiguration der maschinellen Benutzeroberfläche bezieht.
-    -   **Personalisieren:** So zeigen Sie eine Zusammenfassung der häufig verwendeten [Personalisierungseinstellungen](glossary.md) an.
+    -   **Optionen:** So zeigen Sie Programmoptionen an
+    -   **Anpassen:** Um die Programmoptionen anzuzeigen, die sich speziell auf die Konfiguration der maschinellen Benutzeroberfläche beziehen.
+    -   **Personalisieren:** So zeigen Sie eine Zusammenfassung der häufig [verwendeten Personalisierungseinstellungen](glossary.md) an.
     -   **Einstellungen:** Verwenden Sie nicht. Verwenden Sie stattdessen Optionen.
     -   **Eigenschaften:** So zeigen Sie das Eigenschaftenfenster eines Objekts an.
     -   **Einstellungen:** Verwenden Sie nicht als Menübezeichnung. Verwenden Sie stattdessen Optionen.
--   **Menüelemente, die Untermenüs anzeigen, haben nie auslassungszeichen auf ihrer Bezeichnung.** Der Untermenüpfeil gibt an, dass eine weitere Auswahl erforderlich ist.
+-   **Menüelemente, die Untermenüs anzeigen, verfügen nie über Auslassungspunkte in ihrer Bezeichnung.** Der Untermenüpfeil gibt an, dass eine andere Auswahl erforderlich ist.
 
 ## <a name="documentation"></a>Dokumentation
 
 Beim Verweisen auf Symbolleisten:
 
--   Wenn nur eine Symbolleiste verfügbar ist, verweisen Sie darauf als Symbolleiste.
--   Wenn mehrere Symbolleisten verfügbar sind, verweisen Sie auf diese nach Namen, gefolgt von der Wortsymbolleiste. Verwenden Sie die Standardmäßig aktivierte Hauptsymbolleiste, die Schaltflächen für grundlegende Aufgaben wie das Öffnen und Drucken einer Datei als Standardsymbolleiste enthält.
+-   Wenn nur eine Symbolleiste vorhanden ist, verweisen Sie darauf als Symbolleiste.
+-   Wenn mehrere Symbolleisten vorhanden sind, verweisen Sie auf diese nach Namen, gefolgt von der Wortsymbolleiste. Lesen Sie die Standardmäßig aktivierte Hauptsymbolleiste, die Schaltflächen für grundlegende Aufgaben wie das Öffnen und Drucken einer Datei als Standardsymbolleiste enthält.
 -   Die Symbolleiste ist ein einzelnes, nicht lokalisiertes Wort. (Im Gegensatz dazu besteht die Menüleiste aus zwei Wörtern.)
--   Verweisen Sie auf Symbolleistenschaltflächen über ihre QuickInfo-Bezeichnungen. Verwenden Sie den genauen Bezeichnungstext, einschließlich der Groß-/Unterschrift, aber schließen Sie keine Auslassungszeichen ein.
--   Verweisen Sie auf Symbolleistenmenüschaltflächen nach ihren Bezeichnungen und dem Wortmenü. Verwenden Sie den genauen Bezeichnungstext, einschließlich der Groß-/Groß-/Groß-/A-
--   Symbolleisten-Steuerelemente werden im Allgemeinen als Symbolleistenschaltflächen bezeichnet.
--   Klicken Sie zum Beschreiben der Benutzerinteraktion für Symbolleistenschaltflächen und schreibgeschützte Dropdownlisten, und geben Sie für bearbeitbare Dropdownlisten ein. Verwenden Sie nicht auswählen, auswählen oder auswählen.
--   Verwenden Sie keine Cascading-, Pull-Down-, Dropdown- oder Popupmenüs, um Menüschaltflächen zu beschreiben, außer in der Programmierdokumentation.
--   Verweisen Sie auf nicht verfügbare Elemente als nicht verfügbar, nicht als abgeblendet, deaktiviert oder abgeblendet. Verwenden Sie deaktiviert in der Programmierdokumentation.
--   Formatieren Sie die Bezeichnungen nach Möglichkeit mit fett formatiertem Text. Andernfalls setzen Sie die Bezeichnungen nur dann in Anführungszeichen, wenn dies erforderlich ist, um Verwirrung zu vermeiden.
+-   Verweisen Sie anhand ihrer QuickInfo-Bezeichnungen auf Symbolleistenschaltflächen. Verwenden Sie den genauen Bezeichnungstext, einschließlich der Groß-/Großschreibung, aber keine Auslassungszeichen.
+-   Weitere Informationen finden Sie in den Symbolleistenmenü-Schaltflächen anhand ihrer Bezeichnungen und des Wortmenüs. Verwenden Sie den genauen Bezeichnungstext, einschließlich der Groß-/Großschreibung.
+-   Symbolleistensteuerelemente werden im Allgemeinen als Symbolleistenschaltflächen bezeichnet.
+-   Verwenden Sie zum Beschreiben der Benutzerinteraktion Klicks für Symbolleistenschaltflächen und schreibgeschützte Dropdownlisten, und geben Sie für bearbeitbare Dropdownlisten ein. Verwenden Sie nicht "Auswählen", "Auswählen" oder "Auswählen".
+-   Verwenden Sie keine Cascading-, Pull-Down-, Dropdown- oder Popupmenüschaltflächen, außer in der Programmierdokumentation.
+-   Nicht verfügbare Elemente werden als nicht verfügbar, nicht als abgeblendet, deaktiviert oder grau bezeichnet. Verwenden Sie disabled in der Programmierdokumentation.
+-   Formatieren Sie die Bezeichnungen nach Möglichkeit mit fett formatiertem Text. Andernfalls setzen Sie die Bezeichnungen nur in Anführungszeichen, wenn dies erforderlich ist, um Verwechslungen zu vermeiden.
 
 Beispiele:
 
--   Klicken Sie **im Menü** Seite auf der Symbolleiste auf Seite **per E-Mail senden.**
--   Geben Sie **im Feld** Schriftarten auf der Symbolleiste "Segoe UI" ein.
--   Zeigen Sie **auf der Symbolleiste** Formatierung auf **Anzeigen,** und klicken Sie dann auf **Kommentare.**
+-   Klicken Sie im Menü **Seite** auf der Symbolleiste auf **Seite per E-Mail senden.**
+-   Geben Sie in das Feld **Schriftarten** auf der Symbolleiste "Segoe UI" ein.
+-   Zeigen Sie auf der **Symbolleiste Formatierung** auf **Anzeigen**, und klicken Sie dann auf **Kommentare**.
 
  
 

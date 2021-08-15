@@ -1,10 +1,10 @@
 ---
-title: MPSTATUS_INFO Struktur (mpclient. h)
-description: Status Informationen für den Malware Schutz-Manager.
+title: MPSTATUS_INFO-Struktur (MpClient.h)
+description: Statusinformationen für den Schadsoftwareschutz-Manager.
 ms.assetid: 614F14EC-64CC-4E3F-8A89-42AA1E0DC95D
 keywords:
-- MPSTATUS_INFO Struktur Funktionen der Legacy-Windows-Umgebung
-- PMPSTATUS_INFO Struktur Zeiger Legacy-Windows-Umgebungs Features
+- MPSTATUS_INFO struktur legacy Windows Environment Features (Legacy-Windows-Umgebungsfeatures)
+- PMPSTATUS_INFO Strukturzeiger Legacy Windows Umgebungsfeatures
 topic_type:
 - apiref
 api_name:
@@ -15,16 +15,16 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: efe31981f819d85d13457553beb1ce3c869b98bd
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 8cb93bd15fe05955c9e8d87828d4b94b08e3d577659c629b52b3f908cb045ba3
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "103740129"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117883301"
 ---
-# <a name="mpstatus_info-structure"></a>Mpstatus- \_ Informationsstruktur
+# <a name="mpstatus_info-structure"></a>MPSTATUS \_ INFO-Struktur
 
-Status Informationen für den Malware Schutz-Manager.
+Statusinformationen für den Schadsoftwareschutz-Manager.
 
 ## <a name="syntax"></a>Syntax
 
@@ -47,80 +47,80 @@ typedef struct tagMPSTATUS_INFO {
 
 <dl> <dt>
 
-**Productstatus**
+**ProductStatus**
 </dt> <dd>
 
 Typ: **DWORD**
 
 </dd> <dd>
 
-Gesamtprodukt Status. Dies ist eine Kombination von Bitflags aus dem [**mpstatus- \_ Flag**](mpstatus-flag.md).
+Gesamter Produktstatus. Dies ist eine Kombination von Bitflags aus [**MPSTATUS \_ FLAG**](mpstatus-flag.md).
 
 </dd> <dt>
 
-**Lastquickscan**
+**LastQuickScan**
 </dt> <dd>
 
-Typ: **[ **mpscan- \_ Ergebnis**](mpscan-result.md)**
+Typ: **[ **MPSCAN \_ RESULT**](mpscan-result.md)**
 
 </dd> <dd>
 
-Ergebnisse der letzten Überprüfung durch den Malware Schutz-Manager. Siehe [**mpscan- \_ Ergebnis**](mpscan-result.md).
+Ergebnisse der letzten Überprüfung durch den Malwareschutz-Manager. Siehe [**\_ MPSCAN-ERGEBNIS.**](mpscan-result.md)
 
 </dd> <dt>
 
-**Lastfullscan**
+**LastFullScan**
 </dt> <dd>
 
-Typ: **[ **mpscan- \_ Ergebnis**](mpscan-result.md)**
+Typ: **[ **MPSCAN \_ RESULT**](mpscan-result.md)**
 
 </dd> <dd>
 
-Ergebnisse der letzten vollständigen Überprüfung durch den Malware Schutz-Manager. Siehe [**mpscan- \_ Ergebnis**](mpscan-result.md).
+Ergebnisse der letzten vollständigen Überprüfung durch den Malwareschutz-Manager. Siehe [**\_ MPSCAN-ERGEBNIS.**](mpscan-result.md)
 
 </dd> <dt>
 
-**Bedrohlich stats**
+**ThreatStats**
 </dt> <dd>
 
-Typ: **[ **mpthreat- \_ Statistik**](mpthreat-stats.md)**
+Typ: **[ **MPTHREAT \_ STATS**](mpthreat-stats.md)**
 
 </dd> <dd>
 
-Aktive Bedrohungs Statistiken. Siehe [**mpthreat \_ Stats**](mpthreat-stats.md).
+Statistiken zu aktiven Bedrohungen. Siehe [**MPTHREAT \_ STATS**](mpthreat-stats.md).
 
 </dd> <dt>
 
-**Status**
+**ThreatState**
 </dt> <dd>
 
-Typ: **[**mpthreat \_ Stats \_ Data**](mpthreat-stats-data.md) \[ MP \_ Threat \_ stat \_ maximal \_ Wert + 1\]**
+Typ: **[**MPTHREAT \_ STATS \_ DATA**](mpthreat-stats-data.md) \[ MP THREAT \_ \_ STAT MAX \_ \_ VALUE+1\]**
 
 </dd> <dd>
 
-Zusätzliche Bedrohungs Statistikdaten, z. b. die Anzahl der Bedrohungen. Siehe [**mpthreat \_ Stats- \_ Daten**](mpthreat-stats-data.md).
+Zusätzliche Daten zu Bedrohungsstatistiken, z. B. die Anzahl der Bedrohungen. Siehe [**MPTHREAT \_ STATS \_ DATA**](mpthreat-stats-data.md).
 
 </dd> <dt>
 
 **Komponente**
 </dt> <dd>
 
-Typ: **[**mpcomponent- \_ Status**](mpcomponent-status.md) \[ mpcomponent \_ MaxValue + 1\]**
+Typ: **[**MPCOMPONENT \_ STATUS**](mpcomponent-status.md) \[ MPCOMPONENT \_ MAXVALUE+1\]**
 
 </dd> <dd>
 
-Ein Array von Status für mehrere Komponenten. Verwenden Sie einen Wert aus der [**mpcomponent- \_ ID**](mpcomponent-id.md) -Enumeration als Index in das Array.
+Ein Array von Status für mehrere Komponenten. Verwenden Sie einen Wert aus der [**MPCOMPONENT-ID-Enumeration \_**](mpcomponent-id.md) als Index für das Array.
 
 </dd> <dt>
 
-**Productexpirationtime**
+**ProductExpirationTime**
 </dt> <dd>
 
-Typ: **ularge \_ Integer**
+Typ: **ULARGE \_ INTEGER**
 
 </dd> <dd>
 
-Zeitstempel für den Produktablauf in UNC. Dies ist nur gültig, wenn der Ablauf Status auf festgelegt ist.
+Produktablaufzeitstempel in UNC. Dies ist nur gültig, wenn der Ablaufstatus festgelegt ist.
 
 </dd> </dl>
 
@@ -130,32 +130,32 @@ Zeitstempel für den Produktablauf in UNC. Dies ist nur gültig, wenn der Ablauf
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows 8 \[ -Desktop-Apps\]<br/>                                            |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2012 \[ -Desktop-Apps\]<br/>                                  |
-| Header<br/>                   | <dl> <dt>Mpclient. h</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | \[Windows 8 Nur Desktop-Apps\]<br/>                                            |
+| Unterstützte Mindestversion (Server)<br/> | \[Windows Server 2012 Nur Desktop-Apps\]<br/>                                  |
+| Header<br/>                   | <dl> <dt>MpClient.h</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**mpcomponent- \_ ID**](mpcomponent-id.md)
+[**MPCOMPONENT-ID \_**](mpcomponent-id.md)
 </dt> <dt>
 
-[**mpcomponent- \_ Status**](mpcomponent-status.md)
+[**MPCOMPONENT-STATUS \_**](mpcomponent-status.md)
 </dt> <dt>
 
-[**mpscan- \_ Ergebnis**](mpscan-result.md)
+[**\_MPSCAN-ERGEBNIS**](mpscan-result.md)
 </dt> <dt>
 
-[**\_mpstatusflag**](mpstatus-flag.md)
+[**\_MPSTATUS-FLAG**](mpstatus-flag.md)
 </dt> <dt>
 
-[**mpthreat- \_ Statistik**](mpthreat-stats.md)
+[**\_MPTHREAT-STATISTIKEN**](mpthreat-stats.md)
 </dt> <dt>
 
-[**mpthreat- \_ Statistik \_ Daten**](mpthreat-stats-data.md)
+[**\_MPTHREAT-STATISTIKDATEN \_**](mpthreat-stats-data.md)
 </dt> </dl>
 
  

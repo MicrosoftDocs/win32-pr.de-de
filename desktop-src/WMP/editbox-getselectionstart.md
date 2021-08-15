@@ -1,6 +1,6 @@
 ---
 title: EDITBOX.getSelectionStart
-description: Die getSelectionStart-Methode ruft die Anfangsposition des ausgewählten Texts im Editbox-Steuerelement ab.
+description: Die getSelectionStart-Methode ruft die Anfangsposition des ausgewählten Texts im Bearbeitungsfeld-Steuerelement ab.
 ms.assetid: 2d7efe14-549c-4f73-96a7-b8ce88b881ad
 keywords:
 - EDITBOX.getSelectionStart Windows Media Player
@@ -22,7 +22,7 @@ ms.locfileid: "118340031"
 ---
 # <a name="editboxgetselectionstart"></a>EDITBOX.getSelectionStart
 
-Die **getSelectionStart-Methode** ruft die Anfangsposition des ausgewählten Texts im Editbox-Steuerelement ab.
+Die **getSelectionStart-Methode** ruft die Anfangsposition des ausgewählten Texts im Bearbeitungsfeld-Steuerelement ab.
 
 ``` syntax
         elementID.getSelectionStart()
@@ -34,15 +34,15 @@ Diese Methode hat keine Parameter.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Diese Methode gibt eine **Zahl** **(long) zurück.**
+Diese Methode gibt eine **Zahl** (**long**) zurück.
 
 ## <a name="remarks"></a>Hinweise
 
 Wenn kein Text ausgewählt ist, gibt diese Methode die Position der Einfügemarke zurück.
 
-Wenn das Steuerelement mehrzeilenweise ist, gibt diese Methode den Zeichenindex im -Steuerelement zurück, nicht den Zeilenindex.
+Wenn das Steuerelement mehrzeiligen Ist, gibt diese Methode den Zeichenindex im Steuerelement zurück, nicht den Zeilenindex.
 
-Diese Methode kann erst aufgerufen werden, nachdem das Steuerelement sichtbar wird.
+Diese Methode kann nur aufgerufen werden, nachdem das Steuerelement sichtbar wird.
 
 ## <a name="requirements"></a>Anforderungen
 

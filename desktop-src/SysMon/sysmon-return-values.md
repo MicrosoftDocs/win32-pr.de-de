@@ -1,37 +1,37 @@
 ---
-title: Sysmon-Rückgabewerte
-description: Im folgenden finden Sie eine Liste der System Monitor-Rückgabewerte, die in smonmsg. h definiert sind.
+title: SYSMON-Rückgabewerte
+description: Im Folgenden finden Sie eine Liste der Rückgabewerte des Systemmonitors, die in Smonmsg.h definiert sind.
 ms.assetid: f1cc7668-4a6f-4b70-9591-62bd447fe8fb
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 13ce5678c20a1ab8df825a5e3bc5f725d255e459
-ms.sourcegitcommit: 592c9bbd22ba69802dc353bcb5eb30699f9e9403
+ms.openlocfilehash: 3ce526a64132cef51338a83b387aa8e9bfd58ce0ef0b99a1fb7db0dce4c15ef7
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "104390732"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117956446"
 ---
-# <a name="sysmon-return-values"></a>Sysmon-Rückgabewerte
+# <a name="sysmon-return-values"></a>SYSMON-Rückgabewerte
 
-Im folgenden finden Sie eine Liste der System Monitor-Rückgabewerte, die in smonmsg. h definiert sind.
+Im Folgenden finden Sie eine Liste der Rückgabewerte des Systemmonitors, die in Smonmsg.h definiert sind.
 
 
 
 | Rückgabewert                                       | BESCHREIBUNG                                                                                                                                                                                                                                  |
 |----------------------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Smon- \_ Status- \_ Dupl-Counter- \_ \_ Pfad (0xc0001388)     | Die zählungssammlung enthält bereits den angegebenen Zählers.                                                                                                                                                                               |
-| Smon- \_ Status \_ kein \_ Sysmon- \_ Objekt (0xc0001389)      | Die Einstellungen enthalten keine kompletten System Monitor-HTML-Objekte.                                                                                                                                                                        |
-| Smon- \_ Status \_ zu \_ wenige \_ Beispiele (0xc000138a)       | Die angegebene Protokolldatei enthält weniger als zwei Daten Stichproben.                                                                                                                                                                                 |
-| Größenbeschränkung für smon- \_ Status \_ Protokoll \_ Datei \_ \_ (0xc000138b)  | Die angegebene Protokolldatei überschreitet die Größenbeschränkungen des System Monitor-Steuer Elements. Wenn zurzeit eine Protokolldatei ausgewählt ist, wählen Sie aktuelle Aktivität als Datenquelle aus, um die aktuelle Protokolldatei zu entladen, und wählen Sie dann die angegebene Protokolldatei erneut aus. |
-| Datenquelle für smon- \_ Status \_ Protokoll \_ Datei \_ \_ (0xc000138c) | Um der Datenquelle eine neue Protokolldatei hinzuzufügen, muss der Daten Quellentyp in einen anderen Typ als sysmonlogfiles geändert werden.                                                                                                                          |
-| Pfad für den smon- \_ Status der \_ \_ Protokoll \_ Datei \_ (0xc000138d)   | Die Protokolldatei Sammlung enthält bereits die angegebene Protokolldatei.                                                                                                                                                                             |
+| SMON \_ STATUS \_ DUPL COUNTER PATH \_ \_ (0XC0001388)     | Die Indikatorsammlung enthält bereits den angegebenen Zähler.                                                                                                                                                                               |
+| SMON \_ STATUS \_ NO \_ SYSMON OBJECT \_ (0xC0001389)      | Die Einstellungen enthalten keine vollständigen HTML-Objekte des Systemmonitors.                                                                                                                                                                        |
+| SMON \_ STATUS TOO FEW SAMPLES \_ \_ \_ (0XC000138A)       | Die angegebene Protokolldatei enthält weniger als zwei Datenbeispiele.                                                                                                                                                                                 |
+| SMON \_ STATUS LOG FILE SIZE LIMIT \_ \_ \_ \_ (0XC000138B)  | Die angegebene Protokolldatei überschreitet die Größenbeschränkungen des Systemmonitor-Steuerelements. Wenn derzeit eine Protokolldatei ausgewählt ist, wählen Sie die aktuelle Aktivität als Datenquelle aus, um die aktuelle Protokolldatei zu entladen, und wählen Sie dann die angegebene Protokolldatei erneut aus. |
+| SMON \_ STATUS LOG FILE DATA SOURCE \_ \_ \_ \_ (0XC000138C) | Um der Datenquelle eine neue Protokolldatei hinzuzufügen, muss der Datenquellentyp in einen anderen Typ als sysmonLogFiles geändert werden.                                                                                                                          |
+| SMON \_ STATUS \_ DUPL LOG FILE PATH \_ \_ \_ (0XC000138D)   | Die Protokolldateisammlung enthält bereits die angegebene Protokolldatei.                                                                                                                                                                             |
 
 
 
- 
+ 
 
-Eine Beschreibung der zusätzlichen Rückgabewerte, die vom System Monitor zurückgegeben werden, finden Sie unter [System Fehlercodes](/windows/desktop/Debug/system-error-codes) und [Fehlercodes für Leistungsdaten](/windows/desktop/PerfCtrs/checking-pdh-interface-return-values).
+Eine Beschreibung zusätzlicher Rückgabewerte, die vom Systemmonitor zurückgegeben werden, finden Sie unter [Systemfehlercodes](/windows/desktop/Debug/system-error-codes) und Fehlercodes des [Leistungsdaten-Hilfssystems.](/windows/desktop/PerfCtrs/checking-pdh-interface-return-values)
 
- 
+ 
 
- 
+ 

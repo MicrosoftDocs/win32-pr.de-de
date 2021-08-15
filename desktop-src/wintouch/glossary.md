@@ -1,22 +1,22 @@
 ---
-title: Windows-Fingereingabe Glossar
-description: Dieses Thema enthält die Definitionen der Begriffe, die von Windows-Finger Eingaben verwendet werden.
+title: Windows Touchglossar
+description: Dieses Thema enthält die Definitionen von Begriffen, die von touch Windows werden.
 ROBOTS: NOINDEX, NOFOLLOW
 ms.assetid: 25341532-c431-41a5-ad16-c88e31fd60b1
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: ebc0c4b426bf43bf011b2011dc987753ec2fe542
-ms.sourcegitcommit: 622d149edf775af5a9633c2d12ccfddf7000b8fd
+ms.openlocfilehash: d23ef834622dc4c0925a1dd315c3394ec9a5a27c6f471297fe640c777db114f6
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/31/2020
-ms.locfileid: "104038644"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118435975"
 ---
-# <a name="windows-touch-glossary"></a>Windows-Fingereingabe Glossar
+# <a name="windows-touch-glossary"></a>Windows Touchglossar
 
 <dl> <dt>
 
-<span id="wintouch.windows_touch_glossary_application_gesture"></span><span id="WINTOUCH.WINDOWS_TOUCH_GLOSSARY_APPLICATION_GESTURE"></span>**Anwendungs Geste**
+<span id="wintouch.windows_touch_glossary_application_gesture"></span><span id="WINTOUCH.WINDOWS_TOUCH_GLOSSARY_APPLICATION_GESTURE"></span>**Anwendungsgeste**
 </dt> <dd>
 
 Eine Geste, die von einer bestimmten Anwendung unterstützt wird.
@@ -26,34 +26,34 @@ Eine Geste, die von einer bestimmten Anwendung unterstützt wird.
 <span id="wintouch.windows_touch_glossary_digitizer"></span><span id="WINTOUCH.WINDOWS_TOUCH_GLOSSARY_DIGITIZER"></span>**Digitizer**
 </dt> <dd>
 
-Ein hochauflösende Hardware Gerät, das Eingaben von einem Stift oder Finger erkennt.
+Ein hochauflösendes Hardwaregerät, das Eingaben von einem Stift oder Finger erkennt.
 
 </dd> <dt>
 
-<span id="wintouch.windows_touch_glossary_gesture"></span><span id="WINTOUCH.WINDOWS_TOUCH_GLOSSARY_GESTURE"></span>**Gestaltungs**
+<span id="wintouch.windows_touch_glossary_gesture"></span><span id="WINTOUCH.WINDOWS_TOUCH_GLOSSARY_GESTURE"></span>**Geste**
 </dt> <dd>
 
-Eine Bewegung eines Stifts oder Fingers auf einem Bildschirm, der vom Computer als Befehl interpretiert wird.
+Eine Bewegung eines Stifts oder fingers auf einem Bildschirm, die der Computer als Befehl interpretiert.
 
 </dd> <dt>
 
-<span id="wintouch.windows_touch_glossary_manipulation"></span><span id="WINTOUCH.WINDOWS_TOUCH_GLOSSARY_MANIPULATION"></span>**Bearbeitung**
+<span id="wintouch.windows_touch_glossary_manipulation"></span><span id="WINTOUCH.WINDOWS_TOUCH_GLOSSARY_MANIPULATION"></span>**Manipulation**
 </dt> <dd>
 
-Eine physische Aktion (z. b. Drehung), die auf ein Objekt angewendet wird.
+Eine physische Aktion, z. B. Drehung, die auf ein Objekt angewendet wird.
 
 </dd> <dt>
 
 <span id="wintouch.windows_touch_glossary_multitouch"></span><span id="WINTOUCH.WINDOWS_TOUCH_GLOSSARY_MULTITOUCH"></span>**Multitouch**
 </dt> <dd>
 
-Eine physische Echt Zeit Aktion, die auf ein Objekt auf einem Bildschirm angewendet wird, auf dem mehrere Kontaktpunkte gleichzeitig verwendet werden.
+Eine physische Echtzeitaktion, die auf ein Objekt auf einem Bildschirm angewendet wird, auf dem mehrere Kontaktpunkte gleichzeitig verwendet werden.
 
 </dd> <dt>
 
-<span id="wintouch.windows_touch_glossary_system_gesture"></span><span id="WINTOUCH.WINDOWS_TOUCH_GLOSSARY_SYSTEM_GESTURE"></span>**System Geste**
+<span id="wintouch.windows_touch_glossary_system_gesture"></span><span id="WINTOUCH.WINDOWS_TOUCH_GLOSSARY_SYSTEM_GESTURE"></span>**Systemgeste**
 </dt> <dd>
 
-Eine Stift Entsprechung einer herkömmlichen Maus Nachricht, z. b. durch Klicken mit der linken Maustaste oder Doppelklick.
+Ein Stift, der einer herkömmlichen Mausmeldung entspricht, z. B. Ein Linkklick oder Doppelklick.
 
 </dd> </dl>
