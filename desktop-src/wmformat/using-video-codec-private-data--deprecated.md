@@ -1,9 +1,9 @@
 ---
-title: Verwenden von privaten Videocodec-Daten (Windows Media Format 11 SDK)
-description: Aktuelle Dokumentation zu Windows Media Codecs und digitalen Signalprozessoren finden Sie unter Windows Media Audio-und Videocodec-und DSP-APIs. | Verwenden von privaten Videocodec-Daten (Windows Media Format 11 SDK)
+title: Verwenden privater Videocodec-Daten (Windows Media Format 11 SDK)
+description: Die aktuelle Dokumentation zu Windows Mediencodecs und digitalen Signalprozessoren finden Sie unter Windows Media Audio and Video Codec and DSP APIs (Medienaudio- und Videocodec und DSP-APIs). | Verwenden privater Videocodec-Daten (Windows Media Format 11 SDK)
 ms.assetid: 75dda656-8f5e-4677-9a9b-a80b34aea507
 keywords:
-- Verwenden des Windows Media-Formats für private Daten von Video Codecs
+- Verwenden des Medienformats für private Videocodec-Datenfenster
 topic_type:
 - apiref
 api_name:
@@ -12,16 +12,16 @@ api_type:
 - NA
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: ca52dda07e0658e6287ece54f22ff9ce162bbd18
-ms.sourcegitcommit: 92e74c99f8f4d097676959d0c317f533c2400a80
+ms.openlocfilehash: 8e58ce52b0700aa9c16f0c529deabed952eed6cff078df1c6e3135ac0ae296e8
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/09/2021
-ms.locfileid: "106367312"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118963899"
 ---
-# <a name="using-video-codec-private-data-windows-media-format-11-sdk"></a>Verwenden von privaten Videocodec-Daten (Windows Media Format 11 SDK)
+# <a name="using-video-codec-private-data-windows-media-format-11-sdk"></a>Verwenden privater Videocodec-Daten (Windows Media Format 11 SDK)
 
-Aktuelle Dokumentation zu Windows Media Codecs und digitalen Signalprozessoren finden Sie unter [Windows Media Audio-und Videocodec-und DSP-APIs.](/previous-versions//dd464626(v=vs.85))
+Die aktuelle Dokumentation zu Windows Mediencodecs und Digitalsignalprozessoren finden Sie unter Windows Media Audio and Video Codec and DSP APIs (Medienaudio- und Videocodec und [DSP-APIs).](/previous-versions//dd464626(v=vs.85))
 
  
 

@@ -1,23 +1,23 @@
 ---
-description: Gibt die Logik an, die der Codec zum Erkennen von Zeilen Sprung-Quellvideos verwendet.
+description: Gibt die Logik an, die der Codec verwendet, um verschachtelte Quellvideos zu erkennen.
 ms.assetid: 29c7fc1c-2047-4562-ba14-48f9cfbfe68c
-title: MFPKEY_VTYPE-Eigenschaft (wmcodecdsp. h)
+title: MFPKEY_VTYPE-Eigenschaft (Wmcodecdsp.h)
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 6e95bab3120e60a2faa1a3be47c6459205f5f34d
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 5f406f0bc91e3431672c2b7f92cc544273e2a64403017a22eb4567054cef0155
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "103863440"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118973339"
 ---
-# <a name="mfpkey_vtype-property"></a>Mfpkey- \_ VType (Eigenschaft)
+# <a name="mfpkey_vtype-property"></a>\_MFPKEY-VTYPE-Eigenschaft
 
-Gibt die Logik an, die der Codec zum Erkennen von Zeilen Sprung-Quellvideos verwendet.
+Gibt die Logik an, die der Codec verwendet, um verschachtelte Quellvideos zu erkennen.
 
 ## <a name="constant-for-ipropertybag"></a>Konstante für IPropertyBag
 
-g \_ wszwmvcvtype
+g \_ wszWMVCVType
 
 ## <a name="data-type"></a>Datentyp
 
@@ -27,7 +27,7 @@ VT \_ I4
 
 0
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
 Diese Eigenschaft kann auf einen der folgenden Werte festgelegt werden.
 
@@ -35,28 +35,28 @@ Diese Eigenschaft kann auf einen der folgenden Werte festgelegt werden.
 
 | Wert | BESCHREIBUNG                                                                                                                                 |
 |-------|---------------------------------------------------------------------------------------------------------------------------------------------|
-| 0     | Der Codec verwendet die standardmäßige Erkennungs Logik für Frame Typen.                                                                                 |
-| 1     | Der Codec behandelt alle Quellvideo Frames als Zeilen Sprung Rahmen.                                                                          |
-| 2     | Der Codec behandelt alle Quellvideo Frames als Felder mit Zeilen Sprung Video.                                                                 |
-| 3     | Der Codec ermittelt automatisch, ob Eingabe Videorahmen Zeilen Sprung Rahmen oder Felder mit Zeilen Sprung Video sind.                      |
-| 4     | Der Codec ermittelt automatisch, ob eingabevideoframes progressive Frames, Zeilen Sprung Rahmen oder Felder mit Zeilen Sprung Videos sind. |
+| 0     | Der Codec verwendet die standardmäßige Frametyperkennungslogik.                                                                                 |
+| 1     | Der Codec behandelt alle Quellvideoframes als Interlacingframes.                                                                          |
+| 2     | Der Codec behandelt alle Quellvideoframes als Felder für Interlacingvideos.                                                                 |
+| 3     | Der Codec bestimmt automatisch, ob es sich bei Eingabevideoframes um Interlacingframes oder Felder von videoverschachtelten Videos handelt.                      |
+| 4     | Der Codec bestimmt automatisch, ob es sich bei Eingabevideoframes um progressive Frames, Interlacingframes oder Felder von Videointerlacing handelt. |
 
 
 
  
 
-Diese Eigenschaft bestimmt die Bild Codierungsmethode, die für die Progressive oder Zeilen Sprung Videocodierung verwendet wird.
+Diese Eigenschaft bestimmt die Bildcodierungsmethode, die für die progressive oder interlaced-Videocodierung verwendet wird.
 
-Wenn kein Videotyp angegeben wird, verwendet der Codec die Progressive Frame Codierung für Progressive Codierungs Sitzungen und die Feld Zeilen Sprung-Codierung für Zeilen Sprung-Codierungs Sitzungen. Der Typ der Video Codierungs Sitzung (progressiv oder Zeilen Sprung) wird mithilfe der [mfpkey \_ interlacedcodingenabled](mfpkey-interlacedcodingenabledproperty.md) -Eigenschaft festgelegt.
+Wenn kein Videotyp angegeben wird, verwendet der Codec progressive Framecodierung für Sitzungen mit progressiver Codierung und feldübergreifende Codierung für Interlacing-Codierungssitzungen. Der Typ der Videocodierungssitzung (progressiv oder interlaced) wird mithilfe der [MFPKEY \_ INTERLACEDCODINGENABLED-Eigenschaft](mfpkey-interlacedcodingenabledproperty.md) festgelegt.
 
 > [!Note]  
-> Die [mfpkey \_ interlacedcodingenabled](mfpkey-interlacedcodingenabledproperty.md) -Eigenschaft muss auf Variant true festgelegt werden, um eine Zeilen Sprung \_ Ausgabe zu erzielen. andernfalls hat das Festlegen der "mpfkey"- \_ Eigenschaft "VType" keine Auswirkung.
+> Die [MFPKEY \_ INTERLACEDCODINGENABLED-Eigenschaft](mfpkey-interlacedcodingenabledproperty.md) muss auf VARIANT TRUE festgelegt werden, um eine \_ Ausgabe mit Zeilensprung zu erzeugen. Andernfalls hat das Festlegen der MPFKEY \_ VTYPE-Eigenschaft keine Auswirkungen.
 
  
 
-Wenn das Zeilen Sprung Video codiert wird, können mehrere Bild Codierungs Methoden angegeben werden. In der Regel die effizienteste Methode zum Codieren von Zeilen Sprung Videos ist die Verwendung der Methode "Field interschnür" (2). Wenn das Quellvideo sehr wenig Bewegung enthält, kann die Frame-interschnür Methode (1) oder die automatische Frame-/Feldmethode (2) besser geeignet sein.
+Wenn videoverschachtelte Videos codiert werden, können mehrere Bildcodierungsmethoden angegeben werden. In der Regel ist die effizienteste Methode zum Codieren von videoverschachtelten Videos die Verwendung der Feld-Interlaced-Methode (2). Wenn das Quellvideo nur sehr wenig Bewegung enthält, ist die Frame-Interlaced-Methode (1) oder die Autoframe/Field-Methode (2) möglicherweise besser geeignet.
 
-Beim Codieren gemischter Inhalte (die sowohl Progressive als auch Zeilen Sprung Rahmen enthalten) ist es am besten, den Wert Auto-Frame/Feld/Progressive-Methode (4) zu verwenden.
+Beim Codieren gemischter Inhalte (die sowohl progressive als auch Interlacingframes enthalten) ist es am besten, den Wert auto frame/field/progressive method (4) zu verwenden.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -64,17 +64,17 @@ Beim Codieren gemischter Inhalte (die sowohl Progressive als auch Zeilen Sprung 
 
 | Anforderung | Wert |
 |-------------------------------------|-----------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows XP \[ -Desktop-Apps\]<br/>                                             |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2003 \[ -Desktop-Apps\]<br/>                                    |
-| Header<br/>                   | <dl> <dt>Wmcodecdsp. h</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows \[Nur XP-Desktop-Apps\]<br/>                                             |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2003-Desktop-Apps\]<br/>                                    |
+| Header<br/>                   | <dl> <dt>Wmcodecdsp.h</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[Eigenschaften von Media Foundation](media-foundation-properties.md)
+[Media Foundation-Eigenschaften](media-foundation-properties.md)
 </dt> </dl>
 
  

@@ -1,6 +1,6 @@
 ---
-description: Weitere Informationen finden Sie in der seekgrbit-Enumeration.
-title: Seekgrbit-Enumeration
+description: Weitere Informationen finden Sie unter SeekGrbit-Enumeration.
+title: SeekGrbit-Enumeration
 TOCTitle: SeekGrbit enumeration
 ms:assetid: T:Microsoft.Isam.Esent.Interop.SeekGrbit
 ms:mtpsurl: https://msdn.microsoft.com/library/microsoft.isam.esent.interop.seekgrbit(v=EXCHG.10)
@@ -36,21 +36,21 @@ api_type:
 api_location:
 - Microsoft.Isam.Esent.Interop.dll
 ROBOTS: INDEX,FOLLOW
-ms.openlocfilehash: 9e59072055710676f5f7647130f42ad5acf50527
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 12a65021d8c224d2a0ed50082b3120c94fc8c83f25c9aaf3eaf6e71d3f3f45f9
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106356202"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118978590"
 ---
-# <a name="seekgrbit-enumeration"></a>Seekgrbit-Enumeration
+# <a name="seekgrbit-enumeration"></a>SeekGrbit-Enumeration
 
 Optionen für JetSeek.
 
 Diese Enumeration enthält ein [FlagsAttribute](/dotnet/api/system.flagsattribute)-Attribut, das eine bitweise Kombination der Memberwerte zulässt.
 
-**Namespace:**  [Microsoft. ISAM. ESENT. Interop](./microsoft.isam.esent.interop-namespace.md)  
-**Assembly:**  Microsoft. ISAM. ESENT. Interop (in Microsoft.Isam.Esent.Interop.dll)
+**Namespace:**  [Microsoft.Isam.Esent.Interop](./microsoft.isam.esent.interop-namespace.md)  
+**Assembly:**  Microsoft.Isam.Esent.Interop (in Microsoft.Isam.Esent.Interop.dll)
 
 ## <a name="syntax"></a>Syntax
 
@@ -80,40 +80,40 @@ public enum SeekGrbit
 <tbody>
 <tr class="odd">
 <td></td>
-<td>Seekeq</td>
-<td>Der Cursor wird am Index Eintrag positioniert, der am nächsten am Anfang des Indexes liegt, der exakt mit dem Suchschlüssel übereinstimmt.</td>
+<td>SeekEQ</td>
+<td>Der Cursor wird an dem Indexeintrag positioniert, der dem Anfang des Indexes am nächsten ist, der genau mit dem Suchschlüssel entspricht.</td>
 </tr>
 <tr class="even">
 <td></td>
-<td>Seeklt</td>
-<td>Der Cursor wird am Index Eintrag positioniert, der am nächsten am Ende des Indexes liegt, der kleiner als ein Index Eintrag ist, der genau mit den Suchkriterien übereinstimmt.</td>
+<td>SeekLT</td>
+<td>Der Cursor wird an dem Indexeintrag positioniert, der dem Ende des Indexes am nächsten liegt, der kleiner als ein Indexeintrag ist, der genau mit den Suchkriterien übereinstimmen würde.</td>
 </tr>
 <tr class="odd">
 <td></td>
 <td>SeekLE</td>
-<td>Der Cursor wird am Index Eintrag positioniert, der am nächsten am Ende des Indexes liegt, der kleiner oder gleich einem Index Eintrag ist, der genau mit den Suchkriterien übereinstimmt.</td>
+<td>Der Cursor wird an dem Indexeintrag positioniert, der dem Ende des Indexes am nächsten liegt, der kleiner oder gleich einem Indexeintrag ist, der genau den Suchkriterien entspricht.</td>
 </tr>
 <tr class="even">
 <td></td>
 <td>SeekGE</td>
-<td>Der Cursor wird am Index Eintrag positioniert, der dem Anfang des Indexes am nächsten liegt, der größer als oder gleich einem Index Eintrag ist, der genau mit den Suchkriterien übereinstimmt.</td>
+<td>Der Cursor wird an dem Indexeintrag positioniert, der dem Indexanfang am nächsten liegt, der größer oder gleich einem Indexeintrag ist, der genau mit den Suchkriterien übereinstimmen würde.</td>
 </tr>
 <tr class="odd">
 <td></td>
-<td>Seekgt</td>
-<td>Der Cursor wird am Index Eintrag positioniert, der dem Anfang des Indexes am nächsten liegt, der größer als ein Index Eintrag ist, der genau mit den Suchkriterien übereinstimmt.</td>
+<td>SeekGT</td>
+<td>Der Cursor wird an dem Indexeintrag positioniert, der dem Indexanfang am nächsten liegt, der größer als ein Indexeintrag ist, der genau den Suchkriterien entspricht.</td>
 </tr>
 <tr class="even">
 <td></td>
-<td>Setindexrange</td>
-<td>Ein Index Bereich wird automatisch für alle Schlüssel eingerichtet, die exakt mit dem Suchschlüssel übereinstimmen.</td>
+<td>SetIndexRange</td>
+<td>Ein Indexbereich wird automatisch für alle Schlüssel eingerichtet, die genau mit dem Suchschlüssel übereinstimmen.</td>
 </tr>
 </tbody>
 </table>
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
-#### <a name="reference"></a>Referenz
+#### <a name="reference"></a>Verweis
 
-[Microsoft. ISAM. ESENT. Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)
+[Microsoft.Isam.Esent.Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)

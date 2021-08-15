@@ -1,6 +1,6 @@
 ---
-description: Weitere Informationen finden Sie in der JET_DBINFOMISC. ulbadchecksumold-Eigenschaft.
-title: JET_DBINFOMISC. ulbadchecksumold (Eigenschaft)
+description: 'Weitere Informationen zu: JET_DBINFOMISC.ulBadChecksumOld-Eigenschaft'
+title: JET_DBINFOMISC.ulBadChecksumOld-Eigenschaft
 TOCTitle: 'ulBadChecksumOld property '
 ms:assetid: P:Microsoft.Isam.Esent.Interop.JET_DBINFOMISC.ulBadChecksumOld
 ms:mtpsurl: https://msdn.microsoft.com/library/microsoft.isam.esent.interop.jet_dbinfomisc.ulbadchecksumold(v=EXCHG.10)
@@ -26,19 +26,19 @@ api_type:
 api_location:
 - Microsoft.Isam.Esent.Interop.dll
 ROBOTS: INDEX,FOLLOW
-ms.openlocfilehash: 03708d6bbc3f91c5202c92e4626f5946678da04d
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 3c90e8cb0f747b191a504676be7a9f32ac75cde299676c6ba839747d48cae2d1
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106359827"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118766164"
 ---
-# <a name="jet_dbinfomisculbadchecksumold-property"></a>JET_DBINFOMISC. ulbadchecksumold (Eigenschaft)
+# <a name="jet_dbinfomisculbadchecksumold-property"></a>JET_DBINFOMISC.ulBadChecksumOld-Eigenschaft
 
-Ruft ab, wie oft ein nicht korrigier barer Prüfsummen Fehler vor der letzten Reparatur gefunden wurde.
+Ruft ab, wie oft vor der letzten Reparatur ein nicht behebbarer Prüfsummenfehler gefunden wurde.
 
-**Namespace:**  [Microsoft. ISAM. ESENT. Interop](./microsoft.isam.esent.interop-namespace.md)  
-**Assembly:**  Microsoft. ISAM. ESENT. Interop (in Microsoft.Isam.Esent.Interop.dll)
+**Namespace:**  [Microsoft.Isam.Esent.Interop](./microsoft.isam.esent.interop-namespace.md)  
+**Assembly:**  Microsoft.Isam.Esent.Interop (in Microsoft.Isam.Esent.Interop.dll)
 
 ## <a name="syntax"></a>Syntax
 
@@ -60,14 +60,14 @@ public int ulBadChecksumOld { get; internal set; }
 
 #### <a name="property-value"></a>Eigenschaftswert
 
-Typ: [System. Int32](/dotnet/api/system.int32)  
+Typ: [System.Int32](/dotnet/api/system.int32)  
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
-#### <a name="reference"></a>Referenz
+#### <a name="reference"></a>Verweis
 
 [JET_DBINFOMISC-Klasse](./jet-dbinfomisc-class.md)
 
-[Mitglieder JET_DBINFOMISC](./jet-dbinfomisc-members.md)
+[JET_DBINFOMISC-Member](./jet-dbinfomisc-members.md)
 
-[Microsoft. ISAM. ESENT. Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)
+[Microsoft.Isam.Esent.Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)

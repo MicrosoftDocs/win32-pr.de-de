@@ -1,18 +1,18 @@
 ---
-description: Eine Liste der qualifizierten XSD-Namen.
+description: Eine Liste von qualifizierten XSD-Namen.
 title: Types-Element
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 0c29a94f7ad4816f7b737261bf52b064a5dd68f9
-ms.sourcegitcommit: b6fe9acffad983c14864b8fe0296f6025cb1f961
+ms.openlocfilehash: 97c58cb0e70c2e59816ff827e7b2e1fdecc4adf6563892d592ee75565e8ed108
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2021
-ms.locfileid: "107994118"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118991540"
 ---
 # <a name="types-element"></a>Types-Element
 
-Eine Liste der qualifizierten XSD-Namen.
+Eine Liste von qualifizierten XSD-Namen.
 
 ## <a name="usage"></a>Verbrauch
 

@@ -1,10 +1,10 @@
 ---
-title: Iadssyntax-Eigenschaften Methoden (IADs. h)
-description: Mit den Eigenschafts Methoden der iadssyntax-Schnittstelle werden die in der folgenden Tabelle aufgeführten Eigenschaften festgelegt oder festgelegt. Weitere Informationen zu Eigenschafts Methoden finden Sie unter Interface Property Methods.
+title: IADsSyntax-Eigenschaftsmethoden (Iads.h)
+description: Die Eigenschaftenmethoden der IADsSyntax-Schnittstelle erhalten oder legen die in der folgenden Tabelle aufgeführten Eigenschaften fest. Weitere Informationen zu Eigenschaftsmethoden finden Sie unter Schnittstelleneigenschaftenmethoden.
 ms.assetid: a216a55d-63eb-4fdf-a67f-8d4b5eb74262
 ms.tgt_platform: multiple
 keywords:
-- Iadssyntax-Eigenschaften Methoden ADSI
+- IADsSyntax-Eigenschaftsmethoden ADSI
 topic_type:
 - apiref
 api_name:
@@ -18,47 +18,47 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: a7a41c84efb4f48171913156823e18a301236290
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: c193bba78bfe215d37bdfdedf5d45bd73f1a85606b3dab6e5a3c233cece8db18
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104517657"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118961899"
 ---
-# <a name="iadssyntax-property-methods"></a>Iadssyntax-Eigenschaften Methoden
+# <a name="iadssyntax-property-methods"></a>IADsSyntax-Eigenschaftsmethoden
 
-Mit den Eigenschafts Methoden der [**iadssyntax**](/windows/desktop/api/Iads/nn-iads-iadssyntax) -Schnittstelle werden die in der folgenden Tabelle aufgeführten Eigenschaften festgelegt oder festgelegt. Weitere Informationen zu Eigenschafts Methoden finden Sie unter [Interface Property Methods](interface-property-methods.md).
+Die Eigenschaftenmethoden der [**IADsSyntax-Schnittstelle**](/windows/desktop/api/Iads/nn-iads-iadssyntax) erhalten oder legen die in der folgenden Tabelle aufgeführten Eigenschaften fest. Weitere Informationen zu Eigenschaftsmethoden finden Sie unter [Schnittstelleneigenschaftsmethoden.](interface-property-methods.md)
 
 ## <a name="properties"></a>Eigenschaften
 
 <dl> <dt>
 
-**Oleautodatatype**
+**OleAutoDataType**
 </dt> <dd> <dl>
 
-Ruft eine **Länge** ab und legt Sie fest, die den Wert der **VT \_ xxx** -Konstante für den Automatisierungs Datentyp enthält, der diese Syntax darstellt.
+Ruft einen **LONG-Wert** ab, der den Wert der **VT \_ xxx-Konstante** für den Automation-Datentyp enthält, der diese Syntax darstellt, und legt diesen fest.
 
-Active Directory unterstützt die folgenden **VT \_ xxx** -Konstanten für den Automatisierungs Datentyp, der diese Syntax darstellt:
+Active Directory unterstützt die folgenden **VT \_ xxx-Konstanten** für den Automation-Datentyp, der diese Syntax darstellt:
 
--   **VT \_ Boolescher** bool
+-   **VT \_ BOOL** BOOL
 -   **VT \_ BSTR** BSTR
--   **VT \_ bstraut** (bstraut)
--   **VT \_ CY** -Währung
--   **VT \_ Datums** Datum
--   **VT \_ leere** **null**
--   **VT \_ Fehler** ist ungültig.
--   **VT \_ I2** Short
--   **VT \_ I4** Long
--   **VT \_ R4** Real
--   **VT \_ R8** Double
--   **VT \_ UI1** Byte
+-   **VT \_ BSTRT** BSTRT
+-   **VT \_ CY** CURRENCY
+-   **VT \_ DATE** Date
+-   **VT \_ EMPTY** **NULL**
+-   **VT \_ ERROR** Ungültig
+-   **VT \_ I2** short
+-   **VT \_ I4** long
+-   **VT \_ R4** real
+-   **VT \_ R8** double
+-   **VT \_ UI1** BYTE
 
 <dt>
 
 Zugriffstyp: Lesen/Schreiben
 </dt> <dt>
 
-Skript Datentyp: **Long**
+Skriptdatentyp: **LONG**
 </dt> <dt>
 
 
@@ -78,13 +78,13 @@ HRESULT put_OleAutoDataType(
 
  
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Ein Array von Bytes ohne Vorzeichen, **VT \_ UI1** \| **VT \_ Array** , könnte bedeuten, dass der Anbieter eine Syntax zugeordnet hat, die keinem virtuellen Automatisierungs Typ zugeordnet werden kann.
+Ein Array von nicht signierten Bytes, **VT \_ UI1** \| **VT \_ ARRAY,** kann bedeuten, dass der Anbieter eine Syntax zugeordnet hat, die keinem virtuellen Automation-Typ zugeordnet werden kann.
 
 ## <a name="examples"></a>Beispiele
 
-Im folgenden Codebeispiel wird die Syntax des **operatingsystemversion** -Attributs eines Computers in einem Netzwerk über den WinNT-Anbieter untersucht. Die Ergebnis Syntax ist eine Zeichenfolge.
+Im folgenden Codebeispiel wird die Syntax des **OperatingSystemVersion-Attributs** eines Computers in einem Netzwerk über den WinNT-Anbieter untersucht. Die Ergebnissyntax ist eine Zeichenfolge.
 
 
 ```VB
@@ -116,7 +116,7 @@ Cleanup:
 
 
 
-Im folgenden Codebeispiel wird die Syntax des **operatingsystemversion** -Attributs eines Computers in einem Netzwerk über den WinNT-Anbieter untersucht. Die Ergebnis Syntax ist eine Zeichenfolge. Aus Gründen der Übersichtlichkeit wird die Fehlerüberprüfung ausgelassen.
+Im folgenden Codebeispiel wird die Syntax des **OperatingSystemVersion-Attributs** eines Computers in einem Netzwerk über den WinNT-Anbieter untersucht. Die Ergebnissyntax ist eine Zeichenfolge. Aus Gründen der Kürze wird die Fehlerüberprüfung ausgelassen.
 
 
 ```C++
@@ -202,23 +202,23 @@ Cleanup:
 |-------------------------------------|-----------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows Vista<br/>                                                                |
 | Unterstützte Mindestversion (Server)<br/> | Windows Server 2008<br/>                                                          |
-| Header<br/>                   | <dl> <dt>IADs. h</dt> </dl>       |
+| Header<br/>                   | <dl> <dt>Iads.h</dt> </dl>       |
 | DLL<br/>                      | <dl> <dt>Activeds.dll</dt> </dl> |
-| IID<br/>                      | IID \_ iadssyntax ist als C8F93DD2-4AE0-11CF-9E73-00AA004A5691 definiert.<br/>           |
+| IID<br/>                      | \_IID-IADsSyntax ist als C8F93DD2-4AE0-11CF-9E73-00AA004A5691 definiert.<br/>           |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Iadsclass**](/windows/desktop/api/Iads/nn-iads-iadsclass)
+[**IADsClass**](/windows/desktop/api/Iads/nn-iads-iadsclass)
 </dt> <dt>
 
-[**Iadsproperty**](/windows/desktop/api/Iads/nn-iads-iadsproperty)
+[**IADsProperty**](/windows/desktop/api/Iads/nn-iads-iadsproperty)
 </dt> <dt>
 
-[**Iadssyntax**](/windows/desktop/api/Iads/nn-iads-iadssyntax)
+[**IADsSyntax**](/windows/desktop/api/Iads/nn-iads-iadssyntax)
 </dt> </dl>
 
  

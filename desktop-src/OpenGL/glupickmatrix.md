@@ -1,9 +1,9 @@
 ---
-title: glupickmatrix-Funktion (glu. h)
-description: Die Funktion "glupickmatrix" definiert einen Auswahlbereich.
+title: gluPickMatrix-Funktion (Glu.h)
+description: Die gluPickMatrix-Funktion definiert einen Auswahlbereich.
 ms.assetid: 2f57345c-17a0-4716-8ab8-170aaed2b4f9
 keywords:
-- glupickmatrix-Funktion OpenGL
+- OpenGL-Funktion "gluPickMatrix"
 topic_type:
 - apiref
 api_name:
@@ -14,16 +14,16 @@ api_type:
 - DllExport
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: c54e62f82f52fedc7de7c7c4af1cd3ed1ccdf149
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 394e10c460b406e510b1423f299b4a8724492f5a5b180212ff121f4ad593041e
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "103949391"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119061578"
 ---
-# <a name="glupickmatrix-function"></a>glupickmatrix-Funktion
+# <a name="glupickmatrix-function"></a>gluPickMatrix-Funktion
 
-Die Funktion " **glupickmatrix** " definiert einen Auswahlbereich.
+Die **gluPickMatrix-Funktion** definiert einen Auswahlbereich.
 
 ## <a name="syntax"></a>Syntax
 
@@ -47,35 +47,35 @@ void WINAPI gluPickMatrix(
 *x* 
 </dt> <dd>
 
-Die x-Fenster Koordinate eines Auswahl Bereichs.
+Die x-Fensterkoordinate eines Auswahlbereichs.
 
 </dd> <dt>
 
 *y* 
 </dt> <dd>
 
-Die y-Fenster Koordinate eines Auswahl Bereichs.
+Die y-Fensterkoordinate eines Auswahlbereichs.
 
 </dd> <dt>
 
 *height* 
 </dt> <dd>
 
-Die Höhe des Auswahl Bereichs in Fenster Koordinaten.
+Die Höhe des Auswahlbereichs in Fensterkoordinaten.
 
 </dd> <dt>
 
 *width* 
 </dt> <dd>
 
-Die Breite des Auswahl Bereichs in Fenster Koordinaten.
+Die Breite des Auswahlbereichs in Fensterkoordinaten.
 
 </dd> <dt>
 
-*Viewport* 
+*Ansichtsfenster* 
 </dt> <dd>
 
-Der aktuelle Viewport (wie bei einem [**glgetintegerv**](glgetintegerv.md) -Befehl).
+Der aktuelle Viewport (wie bei einem [**glGetIntegerv-Aufruf).**](glgetintegerv.md)
 
 </dd> </dl>
 
@@ -83,22 +83,22 @@ Der aktuelle Viewport (wie bei einem [**glgetintegerv**](glgetintegerv.md) -Befe
 
 Diese Funktion gibt keinen Wert zurück.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Die Funktion " **glupickmatrix** " erstellt eine Projektions Matrix, die Sie verwenden können, um das Zeichnen auf einen kleinen Bereich des Viewports einzuschränken.
+Die **gluPickMatrix-Funktion** erstellt eine Projektionsmatrix, mit der Sie das Zeichnen auf einen kleinen Bereich des Viewports beschränken können.
 
-1.  Verwenden Sie " **glupickmatrix** ", um das Zeichnen auf einen kleinen Bereich um den Cursor einzuschränken.
-2.  Geben Sie den Auswahlmodus (mit [**glrendermode**](glrendermode.md)) ein, und führen Sie dann die Szene erneut aus.
+1.  Verwenden **Sie gluPickMatrix,** um das Zeichnen auf einen kleinen Bereich um den Cursor zu beschränken.
+2.  Wechseln Sie in den Auswahlmodus [**(mit glRenderMode),**](glrendermode.md)und rerendern Sie die Szene erneut.
 
-    Alle primitiven, die in der Nähe des Cursors gezeichnet wurden, werden im Auswahl Puffer identifiziert und gespeichert.
+    Alle Primitive, die in der Nähe des Cursors gezeichnet worden wären, werden identifiziert und im Auswahlpuffer gespeichert.
 
-Die von " **glupickmatrix** " erstellte Matrix wird mit der aktuellen Matrix so multipliziert, als wäre " [**glmultmatrix**](glmultmatrix.md) " mit der generierten Matrix aufgerufen worden.
+Die von **gluPickMatrix** erstellte Matrix wird mit der aktuellen Matrix multipliziert, als ob [**glMultMatrix**](glmultmatrix.md) mit der generierten Matrix aufgerufen würde.
 
-1.  Ruft [**glLoadIdentity**](glloadidentity.md) auf, um eine Identitätsmatrix auf den Perspektiven Matrix Stapel zu laden.
-2.  Nennen Sie " **glupickmatrix**".
-3.  Ruft eine Funktion (z. b. " [**gluperspective**](gluperspective.md)") auf, um die Perspektiven Matrix anhand der Auswahl Matrix zu multiplizieren.
+1.  Rufen [**Sie glLoadIdentity auf,**](glloadidentity.md) um eine Identitätsmatrix in den Perspektivenmatrixstapel zu laden.
+2.  Rufen Sie **gluPickMatrix auf.**
+3.  Rufen Sie eine Funktion (z. B. [**gluPerspective**](gluperspective.md)) auf, um die Perspektivmatrix mit der Auswahlmatrix zu multiplizieren.
 
-Wenn Sie " **glupickmatrix** " verwenden, um nicht einheitliche rationelle B-Spline ([NURBS](using-nurbs-curves-and-surfaces.md)) auszuwählen, achten Sie darauf, die NURBS-Eigenschaft zu deaktivieren \_ \_ \_ . Wenn \_ \_ \_ die Matrix für die automatische Lastenausgleich nicht deaktiviert ist, wird jede gerenderte nursb-Oberfläche anders unterteilt, und die Auswahl Matrix wird ohne die Auswahl Matrix unterteilt.
+Wenn Sie **gluPickMatrix** zum Auswählen einer nicht einheitlichen rationalen B-Spline [(NURBS)](using-nurbs-curves-and-surfaces.md)verwenden, deaktivieren Sie die NURBS-Eigenschaft GLU \_ AUTO LOAD \_ \_ MATRIX. Wenn GLU AUTO LOAD MATRIX nicht deaktiviert ist, wird jede \_ \_ gerenderte NURBS-Oberfläche anders mit der Auswahlmatrix von der Unterteilung ohne die Auswahlmatrix \_ unterteilt.
 
 ## <a name="examples"></a>Beispiele
 
@@ -115,7 +115,7 @@ glMatrixMode(GL_MODELVIEW);
 
 
 
-mit dem folgenden Code wird ein Teil des Viewports ausgewählt:
+Der folgende Code wählt einen Teil des Viewports aus:
 
 
 ```
@@ -137,29 +137,29 @@ glMatrixMode(GL_MODELVIEW);
 |-------------------------------------|--------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional \[nur Desktop-Apps\]<br/>                           |
 | Unterstützte Mindestversion (Server)<br/> | Windows 2000 Server \[nur Desktop-Apps\]<br/>                                 |
-| Header<br/>                   | <dl> <dt>Glu. h</dt> </dl>     |
-| Bibliothek<br/>                  | <dl> <dt>Glu32. lib</dt> </dl> |
+| Header<br/>                   | <dl> <dt>Glu.h</dt> </dl>     |
+| Bibliothek<br/>                  | <dl> <dt>Glu32.lib</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>Glu32.dll</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**glgetintegerv**](glgetintegerv.md)
+[**glGetIntegerv**](glgetintegerv.md)
 </dt> <dt>
 
 [**glLoadIdentity**](glloadidentity.md)
 </dt> <dt>
 
-[**glmultmatrix**](glmultmatrix.md)
+[**glMultMatrix**](glmultmatrix.md)
 </dt> <dt>
 
-[**glrendermode**](glrendermode.md)
+[**glRenderMode**](glrendermode.md)
 </dt> <dt>
 
-[**gluperspective**](gluperspective.md)
+[**gluPerspective**](gluperspective.md)
 </dt> </dl>
 
  

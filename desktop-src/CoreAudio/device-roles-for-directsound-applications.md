@@ -1,26 +1,26 @@
 ---
-description: Geräte Rollen für DirectSound-Anwendungen
+description: Geräterollen für DirectSound-Anwendungen
 ms.assetid: 7d82d67f-aad8-4e5b-ac65-87d75774e613
-title: Geräte Rollen für DirectSound-Anwendungen
+title: Geräterollen für DirectSound-Anwendungen
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 3829817f8b00c7288aceb8d0b6d418d5793ae580
-ms.sourcegitcommit: c7add10d695482e1ceb72d62b8a4ebd84ea050f7
+ms.openlocfilehash: 3037b767d7ddfb96d892c789608f23523efed465535258c336496f3f23d82f19
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "103958144"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118957329"
 ---
-# <a name="device-roles-for-directsound-applications"></a>Geräte Rollen für DirectSound-Anwendungen
+# <a name="device-roles-for-directsound-applications"></a>Geräterollen für DirectSound-Anwendungen
 
 > [!Note]  
-> Die [mmdevice-API](mmdevice-api.md) unterstützt Geräte Rollen. Die Benutzeroberfläche in Windows Vista implementiert jedoch keine Unterstützung für dieses Feature. Die Unterstützung von Benutzeroberflächen für Geräte Rollen kann in einer zukünftigen Version von Windows implementiert werden. Weitere Informationen finden Sie unter [Geräte Rollen in Windows Vista](device-roles-in-windows-vista.md).
+> Die [MMDevice-API unterstützt](mmdevice-api.md) Geräterollen. Die Benutzeroberfläche in Windows Vista implementiert jedoch keine Unterstützung für dieses Feature. Die Benutzeroberflächenunterstützung für Geräterollen wird möglicherweise in einer zukünftigen Version von Windows. Weitere Informationen finden Sie unter [Geräterollen in Windows Vista](device-roles-in-windows-vista.md).
 
  
 
-Die DirectSound-API bietet keine Möglichkeit für eine Anwendung, das [audioendpunktgerät](audio-endpoint-devices.md) auszuwählen, das dem Benutzer einer bestimmten [Geräte Rolle](device-roles.md)zugewiesen wurde. In Windows Vista können die kernaudio-APIs jedoch in Verbindung mit einer DirectSound-Anwendung verwendet werden, um die Geräteauswahl basierend auf der Geräte Rolle zu aktivieren. Mithilfe der kernaudio-APIs kann die Anwendung das audioendpunktgerät identifizieren, das einer bestimmten Rolle zugewiesen ist, die DirectSound-Geräte-GUID für das Endpunktgerät abrufen und die Funktion **directsoundcreate** oder **directsoundcaptucreate** aufrufen, um eine **idirectsound** -oder **idirectsoundcapture** -Schnittstellen Instanz zu erstellen, die das Endpunkt Gerät kapselt Weitere Informationen zu DirectSound finden Sie in der Windows SDK-Dokumentation.
+Die DirectSound-API bietet einer Anwendung keine [](audio-endpoint-devices.md) Möglichkeit, das Audioendpunktgerät auszuwählen, das der Benutzer einer bestimmten [Geräterolle zugewiesen hat.](device-roles.md) In Windows Vista können die Kernaudio-APIs jedoch in Verbindung mit einer DirectSound-Anwendung verwendet werden, um die Geräteauswahl basierend auf der Geräterolle zu aktivieren. Mithilfe der Kernaudio-APIs kann die Anwendung das Audioendpunktgerät identifizieren, das einer bestimmten Rolle zugewiesen ist, die DirectSound-Geräte-GUID für das Endpunktgerät erhalten und die **DirectSoundCreate-** oder **DirectSoundCaptureCreate-Funktion** aufrufen, um eine **IDirectSound-** oder **IDirectSoundCapture-Schnittstelleninstanz** zu erstellen, die das Endpunktgerät kapselt. Weitere Informationen zu DirectSound finden Sie in der dokumentation Windows SDK.
 
-Das folgende Codebeispiel zeigt, wie Sie die DirectSound-Geräte-GUID für das Rendering-oder Aufzeichnungsgerät abrufen, das zurzeit einer bestimmten Geräte Rolle zugewiesen ist:
+Das folgende Codebeispiel zeigt, wie Sie die DirectSound-Geräte-GUID für das Rendering- oder Erfassungsgerät abrufen, das derzeit einer bestimmten Geräterolle zugewiesen ist:
 
 
 ```C++
@@ -90,26 +90,26 @@ Exit:
 
 
 
-Im vorangehenden Codebeispiel akzeptiert die getdirectsoundguid-Funktion eine Datenfluss Richtung (eRender oder ecapture) und eine Geräte Rolle (econsole, emultimedia oder eCommunications) als Eingabeparameter. Der dritte Parameter ist ein Zeiger, über den die-Funktion eine Geräte-GUID schreibt, die die Anwendung als Eingabeparameter für die **directsoundcreate** -oder **directsoundcaptuup** -Funktion bereitstellen kann.
+Im vorherigen Codebeispiel akzeptiert die GetDirectSoundGuid-Funktion eine Datenflussrichtung (eRender oder eCapture) und eine Geräterolle (eConsole, eMultimedia oder eCommunications) als Eingabeparameter. Der dritte Parameter ist ein Zeiger, über den die Funktion eine Geräte-GUID schreibt, die die Anwendung als Eingabeparameter für die **DirectSoundCreate-** oder **DirectSoundCaptureCreate-Funktion angeben** kann.
 
-Im vorangehenden Codebeispiel wird die DirectSound-Geräte-GUID wie folgt abgerufen:
+Im vorangehenden Codebeispiel wird die DirectSound-Geräte-GUID durch Folgendes erhalten:
 
--   Erstellen einer [**immdevice**](/windows/desktop/api/Mmdeviceapi/nn-mmdeviceapi-immdevice) -Schnittstellen Instanz, die das audioendpunktgerät darstellt, das über die angegebene Datenfluss Richtung und die angegebene Geräte Rolle verfügt.
--   Öffnen des Eigenschaften Speicher des audioendpunktgeräts.
--   Die [**pkey \_ audioendpoint- \_ GUID**](pkey-audioendpoint-guid.md) -Eigenschaft wird aus dem Eigenschaften Speicher erhalten. Der Eigenschafts Wert ist eine Zeichen folgen Darstellung der DirectSound-Geräte-GUID für das audioendpunktgerät.
--   Aufrufen der [**CLSIDFromString**](https://www.bing.com/search?q=**CLSIDFromString**) -Funktion zum Konvertieren der Zeichen folgen Darstellung der Geräte-GUID in eine GUID-Struktur. Weitere Informationen zu **CLSIDFromString** finden Sie in der Windows SDK-Dokumentation.
+-   Erstellen einer [**IMMDevice-Schnittstelleninstanz,**](/windows/desktop/api/Mmdeviceapi/nn-mmdeviceapi-immdevice) die das Audioendpunktgerät darstellt, das über die angegebene Datenflussrichtung und Geräterolle verfügt.
+-   Öffnen des Eigenschaftenspeichers des Audioendpunktgeräts.
+-   Abrufen der [**PKEY \_ AudioEndpoint \_ GUID-Eigenschaft**](pkey-audioendpoint-guid.md) aus dem Eigenschaftenspeicher. Der Eigenschaftswert ist eine Zeichenfolgendarstellung der DirectSound-Geräte-GUID für das Audioendpunktgerät.
+-   Aufrufen der [**CLSIDFromString-Funktion,**](https://www.bing.com/search?q=**CLSIDFromString**) um die Zeichenfolgendarstellung der Geräte-GUID in eine GUID-Struktur zu konvertieren. Weitere Informationen zu **CLSIDFromString finden** Sie in der Windows SDK-Dokumentation.
 
-Nachdem Sie eine Geräte-GUID von der getdirectsoundguid-Funktion erhalten haben, kann die Anwendung **directsoundcreate** oder **directsoundcaptuneu** mit dieser GUID aufrufen, um das DirectSound-Rendering oder das Erfassungsgerät zu erstellen, das das audioendpunktgerät kapselt. Wenn DirectSound ein Gerät auf diese Weise erstellt, wird der Audiostream des Geräts immer der Standard Sitzung zugewiesen – der prozessspezifischen Audiositzung, die durch den Sitzungs-GUID-Wert GUID NULL identifiziert wird \_ .
+Nach dem Abrufen einer Geräte-GUID aus der GetDirectSoundGuid-Funktion kann die Anwendung **DirectSoundCreate** oder **DirectSoundCaptureCreate** mit dieser GUID aufrufen, um das DirectSound-Rendering- oder -Erfassungsgerät zu erstellen, das das Audioendpunktgerät kapselt. Wenn DirectSound auf diese Weise ein Gerät erstellt, wird der Audiodatenstrom des Geräts immer der Standardsitzung zugewiesen– der prozessspezifischen Audiositzung, die durch den GUID-Wert GUID NULL der Sitzung identifiziert \_ wird.
 
-Wenn die Anwendung DirectSound erfordert, um den Stream einer prozessübergreifenden Audiositzung oder einer Sitzung mit einer Sitzungs-GUID ungleich **null** zuzuweisen, sollte die Methode " [**immdevice:: Aktivierungs**](/windows/desktop/api/Mmdeviceapi/nf-mmdeviceapi-immdevice-activate) " aufgerufen werden, um ein **idirectsound** -oder **idirectsoundcapture** -Objekt zu erstellen, anstatt die im vorangehenden Codebeispiel gezeigte Technik zu verwenden. Ein Codebeispiel, in dem veranschaulicht wird, wie Sie die Methode " **aktivieren** " verwenden, um eine prozessübergreifende Audiositzung oder eine Sitzungs-GUID ungleich **null** für einen Stream anzugeben, finden Sie unter [Geräte Rollen für DirectShow-Anwendungen](device-roles-for-directshow-applications.md). Das Codebeispiel in diesem Abschnitt zeigt, wie ein DirectShow-Filter erstellt wird, aber mit geringfügigen Änderungen kann der Code angepasst werden, um ein DirectSound-Gerät zu erstellen.
+Wenn die Anwendung erfordert, dass DirectSound den Stream einer prozessübergreifenden Audiositzung oder einer Sitzung mit einer Nicht-NULL-Sitzungs-GUID zuweisst, sollte sie die [**IMMDevice::Activate-Methode**](/windows/desktop/api/Mmdeviceapi/nf-mmdeviceapi-immdevice-activate) aufrufen, um ein **IDirectSound-** oder **IDirectSoundCapture-Objekt** zu erstellen, anstatt die im vorherigen Codebeispiel gezeigte Technik zu verwenden. Ein Codebeispiel, das zeigt, wie die **Activate-Methode** zum Angeben einer prozessübergreifenden Audiositzung oder einer Sitzungs-GUID ohne NULL für einen Stream verwendet wird, finden Sie unter Geräterollen für [DirectShow-Anwendungen.](device-roles-for-directshow-applications.md) Das Codebeispiel in diesem Abschnitt zeigt, wie Sie einen DirectShow-Filter erstellen, aber mit geringfügigen Änderungen kann der Code angepasst werden, um ein DirectSound-Gerät zu erstellen.
 
-Die Funktion "getdirectsoundguid" im vorangehenden Codebeispiel ruft die [**cokreatinstance**](/windows/desktop/api/combaseapi/nf-combaseapi-cocreateinstance) -Funktion auf, um einen Enumerator für die audioendpunktgeräte im System zu erstellen. Wenn das aufrufende Programm die [**CoInitialize**](/windows/desktop/api/objbase/nf-objbase-coinitialize) -Funktion oder die [**CoInitializeEx**](/windows/desktop/api/combaseapi/nf-combaseapi-coinitializeex) -Funktion nicht zum Initialisieren der com-Bibliothek aufgerufen hat, tritt beim **CoCreateInstance** -Aufruf ein Fehler auf. Weitere Informationen zu **cokreateinstance**, **CoInitialize** und **CoInitializeEx** finden Sie in der Windows SDK-Dokumentation.
+Die GetDirectSoundGuid-Funktion im vorherigen Codebeispiel ruft die [**CoCreateInstance-Funktion**](/windows/desktop/api/combaseapi/nf-combaseapi-cocreateinstance) auf, um einen Enumerator für die Audioendpunktgeräte im System zu erstellen. Sofern das aufrufende Programm zuvor weder die [**CoInitialize-**](/windows/desktop/api/objbase/nf-objbase-coinitialize) noch [**die CoInitializeEx-Funktion**](/windows/desktop/api/combaseapi/nf-combaseapi-coinitializeex) aufgerufen hat, um die COM-Bibliothek zu initialisieren, ist der **CoCreateInstance-Aufruf** nicht fehlgeschlagen. Weitere Informationen zu **CoCreateInstance,** **CoInitialize** und **CoInitializeEx** finden Sie in der Windows SDK-Dokumentation.
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
 <dl> <dt>
 
-[Interoperabilität mit Legacy-audioapis](interoperability-with-legacy-audio-apis.md)
+[Interoperabilität mit Legacyaudio-APIs](interoperability-with-legacy-audio-apis.md)
 </dt> </dl>
 
  

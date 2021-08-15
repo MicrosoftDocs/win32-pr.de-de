@@ -1,38 +1,38 @@
 ---
-title: Ausschalten der Sicherheit
-description: Ausschalten der Sicherheit
+title: Deaktivieren der Sicherheit
+description: Deaktivieren der Sicherheit
 ms.assetid: 31dbf140-474d-4304-bcbf-13d6a6ce9175
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 646dc97e0d74230f9a555fec96d8ce37d2c1a92d
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: 1617c65cc3984f50d381e1f6fb90a708e89ac7d7727e9ba9083e7794868681d3
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "104036453"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118991370"
 ---
-# <a name="turning-off-security"></a>Ausschalten der Sicherheit
+# <a name="turning-off-security"></a>Deaktivieren der Sicherheit
 
-Es gibt mehrere Gründe, warum Sie entscheiden können, die von com bereitgestellte Sicherheit zu deaktivieren. Beim Entwickeln von Anwendungen ist es möglicherweise hilfreich, die Sicherheit anfänglich zu deaktivieren, damit Sie sich auf andere Funktionen in Ihrer Anwendung konzentrieren können. Anschließend können Sie dem Entwurf Sicherheitsfunktionen hinzufügen, wenn Sie bereit sind. Um das Debuggen zu vereinfachen, können Sie die Sicherheit deaktivieren und dann nacheinander Sicherheitsfunktionen hinzufügen. Schließlich benötigen einige Anwendungen keine Sicherheit und werden möglicherweise schneller ausgeführt, wenn keine Sicherheitsüberprüfungen durchgeführt werden.
+Es gibt mehrere Gründe, warum Sie sich entscheiden können, die Sicherheit von COM zu deaktivieren. Bei der Entwicklung von Anwendungen kann es hilfreich sein, die Sicherheit anfänglich zu deaktivieren, damit Sie sich auf andere Funktionen in Ihrer Anwendung konzentrieren können. Anschließend können Sie Ihrem Entwurf Sicherheitsfeatures hinzufügen, wenn Sie bereit sind. Um das Debuggen zu vereinfachen, sollten Sie die Sicherheit deaktivieren und dann nach und nach Sicherheitsfeatures hinzufügen. Schließlich benötigen einige Anwendungen keine Sicherheit und werden möglicherweise schneller ausgeführt, wenn keine Sicherheitsüberprüfungen durchgeführt werden.
 
-Die folgenden Themen enthalten Schritt-für-Schritt-Anleitungen:
+Die folgenden Themen enthalten schritt-für-Schritt-Verfahren:
 
--   [Deaktivieren der Aktivierungs Sicherheit](turning-off-activation-security.md)
--   [Ausschalten der Rückruf Sicherheit](turning-off-call-security.md)
+-   [Deaktivieren der Aktivierungssicherheit](turning-off-activation-security.md)
+-   [Deaktivieren der Anrufsicherheit](turning-off-call-security.md)
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
 <dl> <dt>
 
-[Aktivieren der com-Sicherheit mithilfe von DCOMCNFG](enabling-com-security-using-dcomcnfg.md)
+[Aktivieren der COM-Sicherheit mithilfe von DCOMCNFG](enabling-com-security-using-dcomcnfg.md)
 </dt> <dt>
 
-[Sicherheit in com](security-in-com.md)
+[Sicherheit in COM](security-in-com.md)
 </dt> </dl>
 
- 
+ 
 
- 
+ 
 
 
 

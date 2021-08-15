@@ -1,10 +1,10 @@
 ---
-title: Apply-Group-Policy erweitert rechts
-description: Erweiterte Rechte, die von Gruppenrichtlinie-Engine verwendet werden, um zu bestimmen, ob ein GPO für einen Benutzer oder Computer gilt.
+title: Erweitertes Recht "Apply-Group-Policy"
+description: Erweitertes Recht, das von Gruppenrichtlinie Engine verwendet wird, um zu bestimmen, ob ein Gruppenrichtlinienobjekt für einen Benutzer oder Computer gilt.
 ms.assetid: f6b09ecc-0fcd-409b-adeb-a8744f811427
 ms.tgt_platform: multiple
 keywords:
-- AD-Schema für erweiterte Rechte für Apply-Group-Policy
+- AD-Schema mit erweiterten rechten Rechten für Apply-Group-Policy
 topic_type:
 - apiref
 api_name:
@@ -13,31 +13,31 @@ api_type:
 - Schema
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 9e7ee574b10a9bb4579cd3ac0f9366aeb28ed5a1
-ms.sourcegitcommit: b77ace27b0432e7cd3863191b11926be032fbe2f
+ms.openlocfilehash: 08d93d77253f9bb0e45ab40acdd91efecc286d94bb982cb350f99161a5f5fb1a
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "106346176"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118959509"
 ---
-# <a name="apply-group-policy-extended-right"></a>Apply-Group-Policy erweitert rechts
+# <a name="apply-group-policy-extended-right"></a>Erweitertes Recht "Apply-Group-Policy"
 
-Erweiterte Rechte, die von Gruppenrichtlinie-Engine verwendet werden, um zu bestimmen, ob ein GPO für einen Benutzer oder Computer gilt.
+Erweitertes Recht, das von Gruppenrichtlinie Engine verwendet wird, um zu bestimmen, ob ein Gruppenrichtlinienobjekt für einen Benutzer oder Computer gilt.
 
 
 
 | Eingabe | Wert |
 |--------------|--------------------------------------|
 | CN           | Apply-Group-Policy                   |
-| Anzeigename | Gruppenrichtlinie anwenden                   |
-| Rights-GUID  | edacfd8f-ffb3-11d1-b41d-00a0c968f939 |
+| Anzeigename | Anwenden Gruppenrichtlinie                   |
+| Rechte-GUID  | edacfd8f-ffb3-11d1-b41d-00a0c968f939 |
 
 
 
 ## <a name="implementations"></a>Implementierungen
 
 -   [**Windows 2000 Server**](#windows-2000-server)
--   [**Windows Server 2003**](#windows-server-2003)
+-   [**Windows Server 2003**](#windows-server-2003)
 -   [**Windows Server 2003 R2**](#windows-server-2003-r2)
 -   [**Windows Server 2008**](#windows-server-2008)
 -   [**Windows Server 2008 R2**](#windows-server-2008-r2)
@@ -49,19 +49,19 @@ Erweiterte Rechte, die von Gruppenrichtlinie-Engine verwendet werden, um zu best
 
 | Eingabe | Wert |
 |-------------------------|---------------------------------------------------------------------|
-| Applies-To              | [**Gruppenrichtlinien Container**](c-grouppolicycontainer.md)<br/> |
-| Lokalisierung-Display-ID | 47                                                                  |
+| Applies-To              | [**Gruppenrichtliniencontainer**](c-grouppolicycontainer.md)<br/> |
+| Lokalisierungsanzeige-ID | 47                                                                  |
 
 
 
-## <a name="windows-server-2003"></a>Windows Server 2003
+## <a name="windows-server-2003"></a>Windows Server 2003
 
 
 
 | Eingabe | Wert |
 |-------------------------|---------------------------------------------------------------------|
-| Applies-To              | [**Gruppenrichtlinien Container**](c-grouppolicycontainer.md)<br/> |
-| Lokalisierung-Display-ID | 47                                                                  |
+| Applies-To              | [**Gruppenrichtliniencontainer**](c-grouppolicycontainer.md)<br/> |
+| Lokalisierungsanzeige-ID | 47                                                                  |
 
 
 
@@ -71,8 +71,8 @@ Erweiterte Rechte, die von Gruppenrichtlinie-Engine verwendet werden, um zu best
 
 | Eingabe | Wert |
 |-------------------------|---------------------------------------------------------------------|
-| Applies-To              | [**Gruppenrichtlinien Container**](c-grouppolicycontainer.md)<br/> |
-| Lokalisierung-Display-ID | 47                                                                  |
+| Applies-To              | [**Gruppenrichtliniencontainer**](c-grouppolicycontainer.md)<br/> |
+| Lokalisierungsanzeige-ID | 47                                                                  |
 
 
 
@@ -82,8 +82,8 @@ Erweiterte Rechte, die von Gruppenrichtlinie-Engine verwendet werden, um zu best
 
 | Eingabe | Wert |
 |-------------------------|---------------------------------------------------------------------|
-| Applies-To              | [**Gruppenrichtlinien Container**](c-grouppolicycontainer.md)<br/> |
-| Lokalisierung-Display-ID | 47                                                                  |
+| Applies-To              | [**Gruppenrichtliniencontainer**](c-grouppolicycontainer.md)<br/> |
+| Lokalisierungsanzeige-ID | 47                                                                  |
 
 
 
@@ -93,8 +93,8 @@ Erweiterte Rechte, die von Gruppenrichtlinie-Engine verwendet werden, um zu best
 
 | Eingabe | Wert |
 |-------------------------|---------------------------------------------------------------------|
-| Applies-To              | [**Gruppenrichtlinien Container**](c-grouppolicycontainer.md)<br/> |
-| Lokalisierung-Display-ID | 47                                                                  |
+| Applies-To              | [**Gruppenrichtliniencontainer**](c-grouppolicycontainer.md)<br/> |
+| Lokalisierungsanzeige-ID | 47                                                                  |
 
 
 
@@ -104,8 +104,8 @@ Erweiterte Rechte, die von Gruppenrichtlinie-Engine verwendet werden, um zu best
 
 | Eingabe | Wert |
 |-------------------------|---------------------------------------------------------------------|
-| Applies-To              | [**Gruppenrichtlinien Container**](c-grouppolicycontainer.md)<br/> |
-| Lokalisierung-Display-ID | 47                                                                  |
+| Applies-To              | [**Gruppenrichtliniencontainer**](c-grouppolicycontainer.md)<br/> |
+| Lokalisierungsanzeige-ID | 47                                                                  |
 
 
 

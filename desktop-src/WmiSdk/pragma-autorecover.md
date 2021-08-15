@@ -1,8 +1,8 @@
 ---
-description: Fügt eine MOF-Datei zur Liste der Dateien hinzu, die während der Wiederherstellung des Repository kompiliert wurden.
+description: Fügt der Liste der Dateien, die während der Repositorywiederherstellung kompiliert wurden, eine MOF-Datei hinzu.
 ms.assetid: 8901c04e-f8c1-45b0-b69d-e2ebc948f088
 ms.tgt_platform: multiple
-title: pragma-Auto Wiederherstellen
+title: pragma autorecover
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,22 +13,22 @@ api_name:
 api_type:
 - NA
 api_location: ''
-ms.openlocfilehash: 9bb1cfca44e0bc5437d05d721ffcd57203e5aa9d
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: cc36191482731e77d0f82c4e3734350da2f6ed2fbd3faad7b2972dca4e0e6bd2
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "103960436"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118992700"
 ---
-# <a name="pragma-autorecover"></a>pragma-Auto Wiederherstellen
+# <a name="pragma-autorecover"></a>pragma autorecover
 
-Der Präprozessorbefehl **pragma Auto Wiederherstellen** fügt eine MOF-Datei zur Liste der Dateien hinzu, die während der Wiederherstellung des Repository kompiliert wurden. Die Liste der **Auto Wiederherstellen** -MOF-Dateien wird in diesem Registrierungsschlüssel gespeichert:
+Der **Präprozessorbefehl pragma autorecover** fügt der Liste der Dateien, die während der Repositorywiederherstellung kompiliert wurden, eine MOF-Datei hinzu. Die Liste der **MOF-Dateien zum automatischen Wiederherstellen** wird in diesem Registrierungsschlüssel gespeichert:
 
-**HKEY \_ Lokale \_ Computer** \\ **Software** \\ **Microsoft** \\ **WBEM** \\ **CIMOM** \\ **Auto Wiederherstellen-mufs**
+**HKEY \_ LOCAL \_ MACHINE** \\ **SOFTWARE** \\ **Microsoft** \\ **WBEM** \\ **CIMOM** \\ **autorecover mofs**
 
-WMI prüft die Integrität des WMI-Repository, wenn das Betriebssystem WMI startet. Wenn das Repository beschädigt ist, erstellt WMI das Repository automatisch neu und kompiliert alle MOF-Dateien, die in diesem Schlüssel in der Registrierung aufgeführt sind.
+WMI überprüft die Integrität des WMI-Repositorys, wenn das Betriebssystem WMI startet. Wenn das Repository beschädigt ist, erstellt WMI das Repository automatisch neu und kompiliert alle MOF-Dateien, die in diesem Schlüssel in der Registrierung aufgeführt sind, neu.
 
-Im folgenden wird die Syntax für den Pragma Auto Wiederherstellen-Befehl beschrieben:
+Im Folgenden wird die Syntax für den Pragma autorecover-Befehl beschrieben:
 
 
 ```mof
@@ -37,17 +37,17 @@ Im folgenden wird die Syntax für den Pragma Auto Wiederherstellen-Befehl beschr
 
 
 
-Beachten Sie jedoch die folgenden Einschränkungen, wenn Sie diesen Befehl verwenden:
+Sie müssen jedoch die folgenden Einschränkungen beachten, wenn Sie diesen Befehl verwenden:
 
--   WMI kann keine MOF-Dateien wiederherstellen, die sich auf einem Remote Computer befinden.
+-   WMI kann MOF-Dateien, die sich auf einem Remotecomputer befinden, nicht wiederherstellen.
 
-    Daher müssen sich die MOF-Dateien, die in diesem Registrierungsschlüssel aufgelistet sind, auf dem lokalen Computer befinden.
+    Daher müssen sich die in diesem Registrierungsschlüssel aufgeführten MOF-Dateien auf dem lokalen Computer befinden.
 
--   Sie können nicht die Befehls Zeilenschalter angeben, die der MOF-Compiler verwendet, wenn eine MOF-Datei von WMI wieder hergestellt wird.
+-   Sie können die Befehlszeilenschalter nicht angeben, die der MOF-Compiler verwendet, wenn WMI eine MOF-Datei wiederhergestellt.
 
-    Daher sollten Sie [pragma](-pragma.md) -Befehle in die MOF-Datei einschließen, die Befehls Zeilenschalter unnötig machen. Im folgenden Beispiel wird ein allgemeiner Befehls Zeilenschalter beschrieben, der von WMI nicht verwendet wird, wenn eine MOF-Datei aus diesem Registrierungsschlüssel wieder hergestellt wird: " **mufcomp-n:root \\ Test mymof. mof".**
+    Daher sollten Sie [Pragmabefehle](-pragma.md) in Ihre MOF-Datei einschließen, die Befehlszeilenschalter überflüssig machen. Im folgenden Beispiel wird ein gängiger Befehlszeilenschalter beschrieben, den WMI beim Wiederherstellen einer MOF-Datei aus diesem Registrierungsschlüssel nicht verwendet: **mofcomp -N:Root \\ Test mymof.mof**
 
-    Sie können den Namespace jedoch mit einem [pragma](-pragma.md) -Befehl in der MOF-Datei angeben.
+    Sie können den Namespace jedoch mithilfe eines [Pragmabefehls](-pragma.md) in der MOF-Datei angeben.
 
     ```mof
     #pragma namespace ("\\\\.\\Root\\test")
@@ -66,7 +66,7 @@ Beachten Sie jedoch die folgenden Einschränkungen, wenn Sie diesen Befehl verwe
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 

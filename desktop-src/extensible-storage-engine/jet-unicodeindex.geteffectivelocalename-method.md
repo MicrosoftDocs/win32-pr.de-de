@@ -1,6 +1,6 @@
 ---
-description: 'Weitere Informationen finden Sie hier: JET_UNICODEINDEX. Geteffectivelocalename-Methode'
-title: JET_UNICODEINDEX. Geteffectivelocalename-Methode
+description: 'Erfahren Sie mehr über: JET_UNICODEINDEX. GetEffectiveLocaleName-Methode'
+title: JET_UNICODEINDEX. GetEffectiveLocaleName-Methode
 TOCTitle: 'GetEffectiveLocaleName method '
 ms:assetid: M:Microsoft.Isam.Esent.Interop.JET_UNICODEINDEX.GetEffectiveLocaleName
 ms:mtpsurl: https://msdn.microsoft.com/library/microsoft.isam.esent.interop.jet_unicodeindex.geteffectivelocalename(v=EXCHG.10)
@@ -24,19 +24,19 @@ api_type:
 api_location:
 - Microsoft.Isam.Esent.Interop.dll
 ROBOTS: INDEX,FOLLOW
-ms.openlocfilehash: 012ed93015705454efdf5e329d4b385924f1a343
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 10932398e022701b76be19c3ea7949ce4cfd45b5a159ae5362e7f0e6a0e427bd
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106344653"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118979080"
 ---
-# <a name="jet_unicodeindexgeteffectivelocalename-method"></a>JET_UNICODEINDEX. Geteffectivelocalename-Methode
+# <a name="jet_unicodeindexgeteffectivelocalename-method"></a>JET_UNICODEINDEX. GetEffectiveLocaleName-Methode
 
-Als Problem Umgehung für Systeme ohne LCID-Unterstützung konvertieren wir eine sehr begrenzte Anzahl von LCIDs in Gebiets Schema Namen.
+Als Problemumgehung für Systeme ohne LCID-Unterstützung konvertieren wir eine sehr begrenzte Anzahl von LCIDs in Gebietsschemanamen.
 
-**Namespace:**  [Microsoft. ISAM. ESENT. Interop](./microsoft.isam.esent.interop-namespace.md)  
-**Assembly:**  Microsoft. ISAM. ESENT. Interop (in Microsoft.Isam.Esent.Interop.dll)
+**Namespace:**  [Microsoft.Isam.Esent.Interop](./microsoft.isam.esent.interop-namespace.md)  
+**Assembly:**  Microsoft.Isam.Esent.Interop (in Microsoft.Isam.Esent.Interop.dll)
 
 ## <a name="syntax"></a>Syntax
 
@@ -56,15 +56,15 @@ public string GetEffectiveLocaleName()
 
 #### <a name="return-value"></a>Rückgabewert
 
-Typ: [System. String](/dotnet/api/system.string)  
-Ein Gebiets Schema Name im BCP-47-Format.  
+Typ: [System.String](/dotnet/api/system.string)  
+Ein Gebietsschemaname im BCP-47-Format.  
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
-#### <a name="reference"></a>Referenz
+#### <a name="reference"></a>Verweis
 
 [JET_UNICODEINDEX-Klasse](./jet-unicodeindex-class.md)
 
-[Mitglieder JET_UNICODEINDEX](./jet-unicodeindex-members.md)
+[JET_UNICODEINDEX-Member](./jet-unicodeindex-members.md)
 
-[Microsoft. ISAM. ESENT. Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)
+[Microsoft.Isam.Esent.Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)

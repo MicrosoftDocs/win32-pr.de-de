@@ -1,19 +1,19 @@
 ---
-title: Iagentcommand setconficetext
-description: Iagentcommand setconficetext
+title: IAgentCommand SetConfidenceText
+description: IAgentCommand SetConfidenceText
 ms.assetid: e776a2ba-3592-4f26-a3e3-2c044eed7f0c
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 4cff1ae34c03f8ff67da61bea1834c25d6844ab2
-ms.sourcegitcommit: ebd3ce6908ff865f1ef66f2fc96769be0aad82e1
+ms.openlocfilehash: 9bae8889c8c8c52f392a368c38a91510e112adbeeca42c611cdc0adcadad94f1
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/19/2020
-ms.locfileid: "104390155"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118976340"
 ---
-# <a name="iagentcommandsetconfidencetext"></a>Iagentcommand:: setconficetext
+# <a name="iagentcommandsetconfidencetext"></a>IAgentCommand::SetConfidenceText
 
-\[Der Microsoft-Agent ist ab Windows 7 veraltet und in nachfolgenden Versionen von Windows möglicherweise nicht verfügbar.\]
+\[Der Microsoft-Agent ist ab Windows 7 veraltet und in nachfolgenden Versionen von Windows möglicherweise nicht mehr verfügbar.\]
 
 ``` syntax
 HRESULT SetConfidenceText(
@@ -21,26 +21,26 @@ HRESULT SetConfidenceText(
 );
 ```
 
-Legt den Wert des lauschtexttexts für einen [**Befehl**](/windows/desktop/lwef/the-command-object)fest.
+Legt den Wert des Texts "Lauschende Trinkgeld" für einen [**Befehl**](/windows/desktop/lwef/the-command-object)fest.
 
 -   Gibt S \_ OK zurück, um anzugeben, dass der Vorgang erfolgreich war.
 
 <dl> <dt>
 
-<span id="bszTipText"></span><span id="bsztiptext"></span><span id="BSZTIPTEXT"></span>*bsztiptext*
+<span id="bszTipText"></span><span id="bsztiptext"></span><span id="BSZTIPTEXT"></span>*bszTipText*
 </dt> <dd>
 
-Ein BSTR, der den Text für die [**conficetext**](confidencetext-property.md) -Eigenschaft eines [**Befehls**](/windows/desktop/lwef/the-command-object)angibt.
+Ein BSTR, der den Text für die [**ConfidenceText-Eigenschaft**](confidencetext-property.md) eines [**Befehls**](/windows/desktop/lwef/the-command-object)angibt.
 
 </dd> </dl>
 
-Wenn der von der am besten zurückgegebene Wert zurückgegebene Vertrauens Wert den Wert, der [**für die Eigenschaft**](/windows/desktop/lwef/the-command-object) [**conficethreshold**](/windows/desktop/lwef/confidence-property) zurückgegeben wurde, nicht überschreitet, wird der in *bsztiptext* angegebene Text in der lausch Info angezeigt.
+Wenn der Konfidenzwert, der von der besten Übereinstimmung zurückgegeben wird, die im [**Command-Ereignis**](/windows/desktop/lwef/the-command-object) zurückgegeben wird, den für die [**ConfidenceThreshold-Eigenschaft**](/windows/desktop/lwef/confidence-property) festgelegten Wert nicht überschreitet, wird der in *bszTipText* angegebene Text im Lauschenden Tipp angezeigt.
 
 ## <a name="see-also"></a>Weitere Informationen
 
-[**Iagentcommand:: setconficethreshold**](iagentcommand--setconfidencethreshold.md), [**iagentcommand:: getconficethreshold**](iagentcommand--getconfidencethreshold.md), [**iagentcommand:: getconficetext**](iagentcommand--getconfidencetext.md), [**iagentuserinput:: getitemconfidence**](iagentuserinput--getitemconfidence.md)
+[**IAgentCommand::SetConfidenceThreshold**](iagentcommand--setconfidencethreshold.md), [**IAgentCommand::GetConfidenceThreshold**](iagentcommand--getconfidencethreshold.md), [**IAgentCommand::GetConfidenceText**](iagentcommand--getconfidencetext.md), [**IAgentUserInput::GetItemConfidence**](iagentuserinput--getitemconfidence.md)
 
 
- 
+ 
 
- 
+ 

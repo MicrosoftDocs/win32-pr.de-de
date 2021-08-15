@@ -1,7 +1,7 @@
 ---
-description: Definiert den Typ, der Positions-und Begrenzungen-Informationen für den Titel in einer Notiz enthält.
+description: Definiert den Typ, der Positions- und Begrenzungsinformationen für den Titel in einer Notiz enthält.
 ms.assetid: 45beca78-b88d-414b-90d5-8e7a0ee9cbed
-title: Komplexer titleareatype-Typ
+title: Komplexer TitleAreaType-Typ
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -12,16 +12,16 @@ api_name:
 api_type:
 - Schema
 api_location: ''
-ms.openlocfilehash: 4def6948860e11673970986925d2b665da2efe25
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 2602339c9285eaac5da806fa0a08f498c0f8f631db30626f342a5bead7cc79ee
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106352569"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118966739"
 ---
-# <a name="titleareatype-complex-type"></a>Komplexer titleareatype-Typ
+# <a name="titleareatype-complex-type"></a>Komplexer TitleAreaType-Typ
 
-Definiert den Typ, der Positions-und Begrenzungen-Informationen für den Titel in einer Notiz enthält.
+Definiert den Typ, der Positions- und Begrenzungsinformationen für den Titel in einer Notiz enthält.
 
 ``` syntax
 <xs:complexType name="TitleAreaType" />
@@ -33,7 +33,7 @@ Definiert den Typ, der Positions-und Begrenzungen-Informationen für den Titel i
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows XP Tablet PC Edition \[ Desktop-Apps\]<br/> |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur Desktop-Apps der XP Tablet PC Edition \[\]<br/> |
 | Unterstützte Mindestversion (Server)<br/> | Nicht unterstützt<br/>                                     |
 
 

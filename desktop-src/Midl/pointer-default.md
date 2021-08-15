@@ -1,9 +1,9 @@
 ---
 title: pointer_default-Attribut
-description: Das Attribut \ Zeiger \_ default \ gibt das Standard Zeiger Attribut für alle Zeiger außer der Spitze der obersten Ebene an, die in Parameterlisten angezeigt werden.
+description: Das Attribut \pointer \_ default\ gibt das Standardzeigerattribut für alle Zeiger mit Ausnahme von Zeigern der obersten Ebene an, die in Parameterlisten angezeigt werden.
 ms.assetid: a6e83034-8adb-483d-8d1e-432a1aed22c6
 keywords:
-- Pointer_default Attribut-Mittel l
+- pointer_default-Attribut MIDL
 topic_type:
 - apiref
 api_name:
@@ -12,16 +12,16 @@ api_type:
 - NA
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 08555358eb0abd42957d60527e18a4fd4f49165a
-ms.sourcegitcommit: ebd3ce6908ff865f1ef66f2fc96769be0aad82e1
+ms.openlocfilehash: d246da98db6d3f98aa8c64e1316ee56648016402d1070ae571284148b8caf390
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/19/2020
-ms.locfileid: "104038844"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119013768"
 ---
-# <a name="pointer_default-attribute"></a>Zeiger- \_ Standard Attribut
+# <a name="pointer_default-attribute"></a>\_Zeigerstandardattribut
 
-Das **\[ \_ Default \] -Zeiger** Attribut gibt das Standard Zeiger Attribut für alle Zeiger außer der Spitze der obersten Ebene an, die in Parameterlisten angezeigt werden.
+Das **\[ \_ \] Zeigerstandardattribut** gibt das Standardzeigerattribut für alle Zeiger mit Ausnahme von Zeigern der obersten Ebene an, die in Parameterlisten angezeigt werden.
 
 ``` syntax
 pointer_default ( ptr | ref | unique )
@@ -29,7 +29,7 @@ pointer_default ( ptr | ref | unique )
 
 ## <a name="parameters"></a>Parameter
 
-Dieses Attribut hat keine Parameter.
+Dieses Attribut verfügt über keine Parameter.
 
 ## <a name="examples"></a>Beispiele
 
@@ -49,30 +49,30 @@ interface dictionary
 
 <dl> <dt>
 
-[**berfläche**](interface.md)
+[**Schnittstelle**](interface.md)
 </dt> <dt>
 
-[Array-und Sized-Pointer Attribute](array-and-sized-pointer-attributes.md)
+[Array- und Sized-Pointer attribute](array-and-sized-pointer-attributes.md)
 </dt> <dt>
 
-[**Mikro**](arrays-1.md)
+[**Arrays**](arrays-1.md)
 </dt> <dt>
 
 [Arrays und Zeiger](/windows/desktop/Rpc/arrays-and-pointers)
 </dt> <dt>
 
-[**ptr**](ptr.md)
+[**Ptr**](ptr.md)
 </dt> <dt>
 
 [**ref**](ref.md)
 </dt> <dt>
 
-[**gem**](unique.md)
+[**Einzigartige**](unique.md)
 </dt> <dt>
 
-[Standard Zeiger Typen](/windows/desktop/Rpc/default-pointer-types)
+[Standardzeigertypen](/windows/desktop/Rpc/default-pointer-types)
 </dt> </dl>
 
- 
+ 
 
- 
+ 

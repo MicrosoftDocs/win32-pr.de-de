@@ -4,171 +4,171 @@ ms.assetid: 1564F6F2-844F-4392-9EB5-AA46059D514C
 title: Viewports und Inhalt
 ms.topic: article
 ms.date: 02/03/2020
-ms.openlocfilehash: 9cda367067ea860ce6a42a16e81d38393937276a
-ms.sourcegitcommit: a47bd86f517de76374e4fff33cfeb613eb259a7e
+ms.openlocfilehash: a103df916e5880380064250d05806169ff4187e6a8be0b22d2dd72d92343f38f
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/06/2021
-ms.locfileid: "104568554"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118787074"
 ---
 # <a name="viewports-and-content"></a>Viewports und Inhalt
 
-Die [direkte Bearbeitung](direct-manipulation-portal.md) verwendet *Viewports*, *Inhalte* und *Kontakte* , um die interaktiven Elemente der Benutzeroberfläche zu beschreiben.
+[Die direkte Bearbeitung](direct-manipulation-portal.md) verwendet *Viewports,* *Inhalte* und *Kontakte,* um die interaktiven Elemente der Benutzeroberfläche zu beschreiben.
 
 - [Konfigurieren eines Viewports](#configuring-a-viewport)
-- [Andockpunkte und-Begrenzungen](#snap-points-and-boundaries)
-- [Snap-in-Offset und RTL-Szenarios](#snap-point-offset-and-rtl-scenarios)
+- [Ausrichtungspunkte und Grenzen](#snap-points-and-boundaries)
+- [Andockpunktoffset und RTL-Szenarien](#snap-point-offset-and-rtl-scenarios)
 - [Verhalten](#behaviors)
 - [Koordinatensystem](#coordinate-system)
 - [Transformationen](#transforms)
-- [Status des Viewports](#viewport-state)
+- [Viewportzustand](#viewport-state)
 - [Zugehörige Themen](#related-topics)
 
-Bei einem *Viewport* handelt es sich um eine Region innerhalb eines Fensters, die Eingaben von Benutzerinteraktionen empfangen und verarbeiten kann. Der Viewport stellt den Bereich des Inhalts dar, der für den Endbenutzer zu einem bestimmten Zeitpunkt (auch als inhaltsclip bezeichnet) angezeigt werden kann. Der Viewport verfügt über mehrere Funktionen:
+Ein *Viewport* ist ein Bereich innerhalb eines Fensters, der Eingaben von Benutzerinteraktionen empfangen und verarbeiten kann. Der Viewport stellt den Bereich des Inhalts dar, der dem Endbenutzer zu einem bestimmten Zeitpunkt angezeigt werden kann (auch als Inhaltsclip bezeichnet). Der Viewport verfügt über mehrere Funktionen:
 
-- Er verwaltet den Interaktions Zustand (z. b., wenn der Inhalt für die Bearbeitung bereit ist, wenn der Inhalt bearbeitet wird, wenn sich der Inhalt in der Trägheit-Animation befindet) und Eingaben in Ausgabe Transformationen zuordnet.
-- Sie enthält Inhalte, die als Reaktion auf die Benutzerinteraktion verschoben werden. Dabei kann es sich um ein HTML-div-Element (Scrollen), eine Aufzähl Bare Liste (der Start Bildschirm von Windows 8) oder das Popup Menü für ein Select-Steuerelement handeln.
+- Sie verwaltet den Interaktionszustand (z. B. wenn der Inhalt bearbeitet werden kann, wenn Inhalt bearbeitet wird, wenn inhalt sich in Trägheitsanimation befindet) und ordnet Eingaben Ausgabetransformationen zu.
+- Sie enthält Inhalt, der als Reaktion auf die Benutzerinteraktion bewegt wird. Dies kann ein HTML-Div-Element (Scrollen), eine schwenkbar-Liste (die Windows 8 Startbildschirm) oder das Popupmenü für ein Auswahlsteuerelement sein.
 
-Ein Viewport wird durch Aufrufen von [**createviewport**](/windows/win32/api/DirectManipulation/nf-directmanipulation-idirectmanipulationmanager-createviewport)erstellt. Es können mehrere Viewports in einem einzelnen Fenster erstellt werden, um eine umfangreiche Benutzeroberfläche zu erstellen.
+Ein Viewport wird durch Aufrufen von [**CreateViewport erstellt.**](/windows/win32/api/DirectManipulation/nf-directmanipulation-idirectmanipulationmanager-createviewport) Mehrere Viewports können in einem einzelnen Fenster erstellt werden, um eine umfassende Benutzeroberfläche zu erzeugen.
 
-Der *Inhalt* stellt das Element dar, das als Reaktion auf eine Interaktion transformiert wird. Mit anderen Worten: der Inhalt ist das, was bewegt oder skaliert wird, wenn der Benutzer sich anrichtet oder pingt. Es gibt zwei Arten von Inhalten:
+*Inhalt* stellt das Element dar, das als Reaktion auf eine Interaktion transformiert wird. Anders ausgedrückt: Der Inhalt wird bewegt oder skaliert, wenn der Benutzer schwenkt oder drückt. Es gibt zwei Arten von Inhalten:
 
-- *Primärer Inhalt* ist das einzelne, systeminterne Element innerhalb eines Viewports, das auf Eingabe Manipulationen und Trägheit antwortet. Primärer Inhalt wird zur gleichen Zeit wie der Viewport erstellt und kann nicht zu einem Viewport hinzugefügt oder daraus entfernt werden. Sie können das Verhalten von primärem Inhalt mithilfe von Andock Punkten (später erläutert) anpassen.
-- Der *sekundäre Inhalt* wird relativ zur Bewegung des primären Inhalts verschoben. Sekundär Inhalte werden getrennt vom Viewport erstellt und können einem Viewport hinzugefügt oder daraus entfernt werden. Alle sekundären Inhalts Transformationen werden basierend auf der Transformation des primären Inhalts berechnet. Bestimmte Regeln können angewendet werden, um zu ändern, wie die Transformation basierend auf dem beabsichtigten Zweck des Elements berechnet wird, das durch die CLSID während der Erstellung identifiziert wird.
+- *Primärer Inhalt* ist das einzelne systeminterne Element innerhalb eines Viewports, das auf Eingabemanipulationen und Trägheit reagiert. Primärer Inhalt wird gleichzeitig mit dem Viewport erstellt und kann nicht zu einem Viewport hinzugefügt oder daraus entfernt werden. Sie können das Verhalten des primären Inhalts mithilfe von Andockpunkten anpassen (siehe weiter oben).
+- *Sekundärer Inhalt* wird relativ zur Bewegung des primären Inhalts bewegt. Sekundärer Inhalt wird getrennt vom Viewport erstellt und kann einem Viewport hinzugefügt oder daraus entfernt werden. Alle sekundären Inhaltstransformationen werden basierend auf der Transformation des primären Inhalts berechnet. Bestimmte Regeln können angewendet werden, um zu ändern, wie die Transformation basierend auf dem beabsichtigten Zweck des Elements berechnet wird, das während der Erstellung durch seine CLSID identifiziert wird.
 
-In diesem Diagramm, das vor und nach einer schwenken angezeigt wird, wurde ein einzelner Kontakt zum Schwenken des primär Inhalts verwendet. Obwohl der Benutzer nicht direkt mit dem Schwenk Indikator (sekundärer Inhalt) interagiert, wird der sekundäre Inhalt verschoben, wenn der primäre Inhalt in den primär Inhalt wechselt. Auf diese Weise werden visuelle Hinweise dazu bereitstellen, wie weit sich der Benutzer befindet.
+In diesem Diagramm, das vor und nach einer Schwenkung zeigt, wurde ein einzelner Kontakt verwendet, um den primären Inhalt zu schwenken. Obwohl der Benutzer nicht direkt mit dem Schwenkindikator (sekundärer Inhalt) interagiert, wird der sekundäre Inhalt beim Schwenken des primären Inhalts bewegt. Dadurch erhalten Sie visuelle Hinweise dazu, wie weit der Benutzer geschwenken hat.
 
-![Diagramm, das vor/nach einer schwenken angezeigt wird](images/dm-art-2.png)
+![Diagramm, das vor/nach einer Schwenkung zeigt](images/dm-art-2.png)
 
 ## <a name="configuring-a-viewport"></a>Konfigurieren eines Viewports
 
-Nachdem Sie den Viewport erstellt haben. Konfigurieren Sie das Verhalten mithilfe einer *Interaktions Konfiguration*. Die Interaktions Konfiguration gibt an, welche Manipulationen, wie z. b. Schwenken, unterstützt werden.
+Nachdem Sie den Viewport erstellt haben. Konfigurieren Sie das Verhalten mithilfe einer *Interaktionskonfiguration.* Die Interaktionskonfiguration gibt an, welche Manipulationen, z. B. Schwenken, unterstützt werden.
 
-Durch *Schwenken* wird die Position des Inhalts auf der horizontalen oder vertikalen Achse oder beides als Benutzer-Pans geändert. Wenn Sie die Übersetzung auf beiden Achsen konfigurieren, wechselt der Inhalt in beliebiger Richtung frei.
+*Das Schwenken* ändert die Position des Inhalts auf der horizontalen oder vertikalen Achse oder beidem, während ein Benutzer schwenkt. Wenn Sie die Übersetzung auf beiden Achsen konfigurieren, bewegt sich der Inhalt frei in beliebige Richtung.
 
-Um die Inhalts Bewegung einzuschränken, konfigurieren Sie *Rails*, in der Regel auf der horizontalen und vertikalen Achse. Wenn sich die Interaktion eines Benutzers hauptsächlich entlang einer einzelnen Achse (dargestellt durch die blauen Bereiche im nächsten Diagramm) befindet, wird die *Pan-Achse* entfernt, und der Inhalt wird nur entlang der Raster Achse verschoben. Wenn der Benutzer einen Flatter hat und aktuell eine zweite schwenken ausführt, während sich der Inhalt in Trägheit befindet, wird die neue Pan-Komponente weiter entfernt.
+Um die Bewegung des Inhalts zu beschränken, konfigurieren Sie *Schienen*, in der Regel sowohl auf der horizontalen als auch auf der vertikalen Achse. Wenn sich die Interaktion eines Benutzers hauptsächlich entlang einer einzelnen Achse befindet (dargestellt  durch die blauen Bereiche im nächsten Diagramm), wird die Schwenke geschienen, und der Inhalt bewegt sich nur entlang der geschiedenen Achse. Wenn der Benutzer schwenkt und derzeit geschienen ist und eine zweite Schwenkung ausführt, während der Inhalt träg ist, wird die neue Schwenkung weiterhin geschienen.
 
-![Diagramm, das Inhalte in einem Viewport in einer Raten schwenken anzeigt](images/dm-art-3.png)
+![Diagramm mit Inhalt in einem Viewport in einer geschiedenen Schwenke](images/dm-art-3.png)
 
-Beispiel: ein Viewport ist für horizontales und vertikales schwenken konfiguriert. Im ersten Frame kommt der Kontakt ins Spiel. In der zweiten wird eine vertikale schwenken initiiert, und der Kontakt wird an die vertikale Schiene gebunden. Schließlich wird nach dem Schwenken der Pan nur die vertikale Komponente einer Diagonalen schwenken zum Verschieben des Inhalts verwendet.
+Beispiel: Ein Viewport ist für horizontales und vertikales Schwenken konfiguriert. Im ersten Frame wird der Kontakt heruntergefahren. In der zweiten wird eine vertikale Schwenkung initiiert, und der Kontakt ist an der vertikalen Schiene gesperrt. Nachdem die Schwenkung geschienen wurde, wird nur die vertikale Komponente einer diagonalen Schwenke verwendet, um den Inhalt zu verschieben.
 
-Wenn der Benutzer diagonal in eine Weise umzieht, dass Sie sich nicht in den Rails-Erkennungs Bereichen befinden (die weißen Bereiche), wird die schwenken *entrachtet* , und der Inhalt wird auf beiden Achsen frei verschoben.
+Wenn der Benutzer diagonal so schwenkt, dass er sich nicht in den Schienenerkennungsregionen (den weißen Regionen) befindet, wird die Schwenke nicht geschwenken, und der Inhalt wird auf beiden Achsen frei bewegt. 
 
-![Diagramm mit Inhalten, die sich in eine ungerentete schwenken bewegen](images/dm-art-4.png)
+![Diagramm mit Inhalt, der in einer nicht geschwenken Schwenkung bewegt wird](images/dm-art-4.png)
 
-Beim *Zoomen* wird der Skalierungsfaktor des Inhalts geändert, wenn ein Benutzer pingt oder gestreckt wird. Der Punkt, um den der Inhalt skaliert wird (Zoom Center genannt), befindet sich in der Mitte der Kontakte. Wenn Sie die horizontale oder vertikale Ausrichtung festgelegt haben, ändert sich das Zoom Center, um die Ausrichtung beizubehalten.
+*Beim Zoomen* wird der Skalierungsfaktor des Inhalts geändert, wenn ein Benutzer heften oder strecken muss. Der Punkt, um den der Inhalt skaliert wird (als Zoomcenter bezeichnet), befindet sich in der Mitte der Kontakte. Wenn Sie die horizontale oder vertikale Ausrichtung festgelegt haben, ändert sich das Zoomcenter, um die Ausrichtung zu erhalten.
 
-![Diagramm, das das Zoomen von Inhalten mit angegebener Ausrichtung anzeigt](images/dm-art-5.png)
+![Diagramm, das das Zoomen von Inhalten mit einer angegebenen Ausrichtung zeigt](images/dm-art-5.png)
 
-Sie können dieses Verhalten überschreiben, indem Sie Unlock Center angeben, das das Zoom Center in der Mitte der Kontakte festlegt.
+Sie können dieses Verhalten überschreiben, indem Sie das Entsperren des Mittelpunkts angeben, wodurch das Zoomcenter in der Mitte der Kontakte festgelegt wird.
 
-![Diagramm, das das Zoomen von Inhalten mit entsperrtem Zoom Center anzeigt](images/dm-art-6.png)
+![Diagramm, das das Zoomen des Inhalts mit dem entsperrten Zoomcenter zeigt](images/dm-art-6.png)
 
-*Trägheit* ist die schrittweise Verlangsamung der Bearbeitung, sowohl schwenken als auch zoomen, nachdem alle Kontakte (im Fall von Finger Eingaben) oder nach der Tastatur-/MoU-Eingabe (z. b. durch Klicken auf eine Schiebe Leiste oder durch Drücken der Pfeiltasten) angehoben wurden. Wenn ein Benutzer den Inhalt manipuliert, wird die Manipulation nicht sofort beendet, nachdem der Kontakt aufgehoben wurde. Stattdessen wird der Inhalt in der aktuellen Richtung und Geschwindigkeit fortgesetzt und langsam zu einem Ende verlangsamt.
+*Trägheit* ist die allmähliche Verlangsamung einer Manipulation, sowohl schwenkend als auch zoomend, nachdem alle Kontakte (bei Toucheingabe) oder nach der Tastatur-/Mauseingabe (z. B. Klicken auf eine Bildlaufleiste oder Drücken der Pfeiltasten) aufgehoben wurden. Wenn ein Benutzer den Inhalt bearbeitet, wird die Bearbeitung nicht sofort nach dem Heben des Kontakts aufgehoben. Stattdessen wird der Inhalt in der aktuellen Richtung und Geschwindigkeit fortgesetzt und langsam bis zum Ende verlangsamt.
 
-## <a name="snap-points-and-boundaries"></a>Andockpunkte und-Begrenzungen
+## <a name="snap-points-and-boundaries"></a>Ausrichtungspunkte und Grenzen
 
-Eine Trägheits Animation findet statt, nachdem die Bearbeitung beendet wurde, weil ein Finger vom Bildschirm entfernt wurde (im Fall von Touch), oder als Ergebnis einer Tastatur-und Maus Aktion (z. b. Pfeiltasten, Bild-auf-ab, Mausrad Scrollen usw.).
+Eine Trägheitsanimation findet statt, nachdem die Bearbeitung beendet wurde, weil ein Finger (bei Toucheingabe) vom Bildschirm bzw. als Ergebnis einer Tastatur-/Mausaktion (z. B. Pfeiltasten, Bildlauf nach oben/unten, Scrollen mit dem Mausrad usw.) gedrückt wird.
 
-Es gibt zwei Informationen, die die Trägheit-Animation definieren:
+Es gibt zwei Informationen, die die Trägheitsanimation definieren:
 
-- Der Rest-Punkt der Animation – die endgültige Endposition der jeweiligen Transformations Komponente.
-- Die Dauer der Animation, die Kurve, die Geschwindigkeit – diese werden durch den Typ des Rest-Punkts bestimmt.
+- Der Restpunkt der Animation – die endgültige Endposition der jeweiligen Transformationskomponente.
+- Animationsdauer, Kurve, Geschwindigkeit– diese werden durch den Typ des Restpunkts bestimmt.
 
-Die Trägheit-Animation wirkt sich auf die-Snap-Ins und-Grenzen aus. Grenzen geben den maximalen und den minimalen Rest für den Inhalt an. Wenn der Inhalt während der Trägheit eine Grenze erreicht, wird eine Begrenzungs Animation angewendet. Andockpunkte werden auf dem primären Inhalt definiert, um den Rest-Punkt zu ändern und die Animations Animations Kurve selbst zu ändern.
+Die Trägheitsanimation wird von Andockpunkten und Begrenzungen beeinflusst. Grenzen geben die maximalen und minimalen Restpunkte für Inhalt an. Wenn Inhalt während der Trägheit eine Grenze erreicht, wird eine Begrenzungsanimation angewendet. Ausrichtungspunkte werden für den primären Inhalt definiert, um den Restpunkt zu ändern und die Trägheitsanimationkurve selbst zu ändern.
 
-Sie definieren Andockpunkte mit " [**sintsnapinterval**](/windows/win32/api/DirectManipulation/nf-directmanipulation-idirectmanipulationprimarycontent-setsnapinterval) ", wenn der Inhalt regelmäßig entfernt wird, [**oder mit "**](/windows/win32/api/DirectManipulation/nf-directmanipulation-idirectmanipulationprimarycontent-setsnappoints) ", wenn der Inhalt nicht gleichmäßig verteilt ist. Im folgenden finden Sie ein Beispiel für Andockpunkte:
+Sie definieren Andockpunkte mit [**SetSnapInterval,**](/windows/win32/api/DirectManipulation/nf-directmanipulation-idirectmanipulationprimarycontent-setsnapinterval) wenn sich der Inhalt regelmäßig in einem Abstand befindet, oder mit [**SetSnapPoints,**](/windows/win32/api/DirectManipulation/nf-directmanipulation-idirectmanipulationprimarycontent-setsnappoints) wenn der Inhalt ungleichmäßig verteilt ist. Hier ist ein Beispiel für Andockpunkte:
 
-![Diagramm, das zeigt, wie die in den Inhalten festgelegten Ausrichtungs Punkte sich](images/dm-snappoint-states-3.png)
+![Diagramm, das zeigt, wie sich ausrichtungspunkte, die im Inhalt festgelegt sind, auf das Schwenken auswirken](images/dm-snappoint-states-3.png)
 
-Im Diagramm finden Sie einen Inhalt mit einer Reihe von unter Inhalts Blöcken – News Items in einer Newsreader-APP oder Elemente in einer Rasteransicht. Die Absicht besteht darin, den linken Rand eines Elements nach dem Ende der Trägheit an den linken Rand des Viewports zu andocken.
+Das Diagramm enthält einen Inhalt mit einer Reihe von Unterinhaltsblöcken– Nachrichtenelemente in einer News-Reader-App oder Elemente in einer Rasteransicht. Die Absicht besteht im Ausrichten des linken Rands eines Elements am linken Rand des Viewports, nachdem die Trägheit beendet wurde.
 
-Es gibt zwei Gruppen von andockpunkt Typen:
+Es gibt zwei Gruppen von Ausrichtungspunkttypen:
 
-- *Optional oder obligatorisch*: ein optionaler andockpunkt dostet die Trägheit-Animation nur dann, wenn sich der Trägheit-Rest-Punkt in der Nähe des Andock Punkts befindet Ein obligatorischer andockpunkt dostet die Trägheit-Animation immer an einen angegebenen andockpunkt.
-- *Single vs. Multiple*: ein Multiple-Snap-pointtyp ermöglicht dem Inhalt das Verschieben von über vielen Andock Punkten vor dem Erreichen eines Rests an einem andockpunkt in der Nähe des natürlichen Rest Punkts. Mit einem einzelnen Andock Punkttyp wird der nächste nächste Punkt als Rest Punkt für die Trägheit-Animation ausgewählt.
+- *Optional im Vergleich zu Obligatorisch:* Ein optionaler Andockpunkt zeigt die Trägheitsanimation nur an, wenn sich der Trägheits-Restpunkt in der Nähe des Andockpunkts befindet. Ein obligatorischer Andockpunkt zeigt die Trägheitsanimation immer an einem angegebenen Andockpunkt an.
+- *Einzelne oder mehrere:* Ein Typ mit mehreren Ausrichtungspunkten ermöglicht es dem Inhalt, sich über viele Andockpunkte hinweg zu bewegen, bevor er an einem Andockpunkt in der Nähe seines natürlichen Restpunkts zur Ruhe kommt. Ein einzelner Ausrichtungspunkttyp wählt den nächsten Andockpunkt als Restpunkt für die Trägheitsanimation aus.
 
-Im nächsten Diagramm wird veranschaulicht, wie andockpunkt Typen die Rest Position der Trägheit-Animation ändern.
+Das nächste Diagramm zeigt, wie Ausrichtungspunkttypen die Restposition der Trägheitsanimation ändern.
 
 ![Diagramm, das zeigt, wie Trägheit und Andockpunkte interagieren](images/dm-snappoint-states-1.png)
 
-In diesem Diagramm ist der Startpunkt der Trägheit als "Start" gekennzeichnet und die Endposition der natürlichen Trägheit, wenn keine Andockpunkte als "End" vorhanden sind. Die vertikalen Linien markieren die verschiedenen Andockpunkte. In dieser Tabelle wird beschrieben, wie sich die einzelnen Arten von Andock Punkten auf die Endposition der Animation auswirken.
+In diesem Diagramm wird der Trägheitsstartpunkt als "Start" und die natürliche Endposition der Trägheit ohne Andockpunkte als "Ende" bezeichnet. Die vertikalen Linien markieren die verschiedenen Ausrichtungspunkte. In dieser Tabelle wird beschrieben, wie sich die einzelnen Ausrichtungspunkttypen auf die Endposition der Animation auswirken.
 
 | Punkttyp         | BESCHREIBUNG                                                                                |
 |--------------------|--------------------------------------------------------------------------------------------|
-| Obligatorischer einzelner   | Der Endpunkt P1 wird ausgewählt, da er der erste andockpunkt in der Richtung der Trägheit ist.     |
-| Obligatorisch (mehrmals) | Der andockpunkt P2 wird ausgewählt, da er am nächsten am Endpunkt in der Richtung der Trägheit liegt. |
-| Optionales einzelnes    | Der Snap-in P1 wird ausgewählt, weil es sich um den ersten während der Trägheit gefundenen Punkt handelt.      |
-| Optional mehrfach  | Der andockpunkt P2 wird ausgewählt, da er sich in der Nähe des natürlichen Endpunkts befindet                           |
+| Obligatorisches Single   | Der Ausrichtungspunkt P1 wird ausgewählt, da er der erste Andockpunkt in Richtung Trägheit ist.     |
+| Obligatorisches Vielfaches | Der Ausrichtungspunkt P2 wird ausgewählt, da er dem Endpunkt in Richtung Trägheit am nächsten liegt. |
+| Optional single    | Der Ausrichtungspunkt P1 wird ausgewählt, da er der erste Andockpunkt ist, der während der Trägheit auftritt.      |
+| Optionales Vielfaches  | Der Ausrichtungspunkt P2 wird ausgewählt, da er sich in der Nähe des natürlichen Endpunkts befindet.                           |
 
-## <a name="snap-point-offset-and-rtl-scenarios"></a>Snap-in-Offset und RTL-Szenarios
+## <a name="snap-point-offset-and-rtl-scenarios"></a>Andockpunktoffset und RTL-Szenarien
 
-![Diagramm mit der Verwendung des RTL-Snap-Ins](images/dm-snappoint-states-2.png)
+![Diagramm, das die Verwendung des Rtl-Andockpunkts zeigt](images/dm-snappoint-states-2.png)
 
-Sie wenden den Endpunkt Offset und das Koordinatensystem mithilfe der [**setsnapkoordinate**](/windows/win32/api/DirectManipulation/nf-directmanipulation-idirectmanipulationprimarycontent-setsnapcoordinate) -API an – die alle Andockpunkte oder Snap-Ins mithilfe des angegebenen Offset-/Koordinaten Systems Offsets.
+Sie wenden den Andockpunktoffset und das Koordinatensystem mithilfe der [**SetSnapCoordinate-API**](/windows/win32/api/DirectManipulation/nf-directmanipulation-idirectmanipulationprimarycontent-setsnapcoordinate) an, die alle Ausrichtungspunkte oder Ausrichtungsintervalle mithilfe des angegebenen Offset-/Koordinatensystems versetzt.
 
-Das Koordinatensystem ist in RTL-Szenarien sehr nützlich, in denen Sie Snap-Points vom linken Rand des Inhalts in umgekehrter Richtung beschreiben möchten. Im vorherigen Diagramm wird [**setsnapkoordinate**](/windows/win32/api/DirectManipulation/nf-directmanipulation-idirectmanipulationprimarycontent-setsnapcoordinate) mit dem Flag **directmanipulation \_ Motion \_ TranslateX** und **directmanipulation \_ Koordinaten \_ gespiegelt** verwendet, das automatisch die Punkt Punkte vom linken Rand des Inhalts ablegt und Sie in der Reihenfolge von rechts nach links angibt: S1 liegt bei 0px, S2 bei 50 px (usw.). Jeder Offset, der mit **setsnapkoordinate** festgelegt wird, wird von dieser linken Kante des Inhalts automatisch versetzt, einschließlich des richtigen Skalierungsfaktors.
+Das Koordinatensystem ist sehr nützlich in RTL-Szenarien, in denen Sie Ausrichtungspunkte vom linken Rand des Inhalts in umgekehrter Richtung beschreiben möchten. Im vorherigen Diagramm wird [**SetSnapCoordinate**](/windows/win32/api/DirectManipulation/nf-directmanipulation-idirectmanipulationprimarycontent-setsnapcoordinate) mit dem **Flag DIRECTMANIPULATION \_ MOTION \_ TRANSLATEX** und **DIRECTMANIPULATION \_ COORDINATE \_ MIRRORED** verwendet, das die Ausrichtungspunkte automatisch vom linken Rand des Inhalts versetzt und in der Reihenfolge von rechts nach links liefert: S1 ist bei 0px, S2 bei 50px (und so weiter). Alle Offsets, die **setSnapCoordinate** verwenden, werden automatisch von diesem linken Rand des Inhalts versetzt, einschließlich des richtigen Skalierungsfaktors.
 
-Sie verwenden fast immer [**setsnapkoordinate**](/windows/win32/api/DirectManipulation/nf-directmanipulation-idirectmanipulationprimarycontent-setsnapcoordinate) mit dem *Origin* -Parametersatz, um zu vermeiden, dass Snap-Points außerhalb des Inhalts Bereichs festgelegt werden.
+Sie verwenden fast immer [**SetSnapCoordinate**](/windows/win32/api/DirectManipulation/nf-directmanipulation-idirectmanipulationprimarycontent-setsnapcoordinate) mit dem *festgelegten* Origin-Parameter, um das Festlegen von Andockpunkten außerhalb des Inhaltsbereichs zu vermeiden.
 
-Wenn der Viewport beispielsweise 200 x 200 beträgt und der Inhalt 1000 x 200 beträgt und die Schnittstelle RTL ist, erhält der Viewport den linken Rand bei x = 800, wenn der Viewport zum ersten Mal angezeigt wird. Geben Sie "" in " [**" mit der**](/windows/win32/api/DirectManipulation/nf-directmanipulation-idirectmanipulationprimarycontent-setsnapcoordinate) `SetSnapCoordinate(DIRECTMANIPULATION_MOTION_TRANSLATEX, DIRECTMANIPULATION_COORDINATE_MIRRORED, 1000.0)` rechten Kante des Inhalts an, um anzugeben, dass die Andockpunkte von rechts nach links berechnet werden sollen.
+Wenn der Viewport beispielsweise 200x200 und der Inhalt 1000x200 und die Schnittstelle RTL ist, hat der Viewport den linken Rand bei x=800, wenn der Viewport zum ersten Mal angezeigt wird. Rufen [**Sie SetSnapCoordinate**](/windows/win32/api/DirectManipulation/nf-directmanipulation-idirectmanipulationprimarycontent-setsnapcoordinate) mit `SetSnapCoordinate(DIRECTMANIPULATION_MOTION_TRANSLATEX, DIRECTMANIPULATION_COORDINATE_MIRRORED, 1000.0)` auf, um anzugeben, dass die Ausrichtungspunkte von rechts nach links ab dem rechten Rand des Inhalts berechnet werden sollen.
 
 ## <a name="behaviors"></a>Verhalten
 
-Ein *Verhalten* ist ein Objekt, das an einen Viewport angefügt werden kann, um zu ändern, wie die [direkte Bearbeitung](direct-manipulation-portal.md) die Ausgabe Transformation des primären oder sekundären Inhalts eines Viewports behandelt. Ein Verhaltens Objekt wirkt sich möglicherweise auf einen oder mehrere Aspekte einer Manipulation aus, z. b. wie Eingaben verarbeitet werden oder wie die Trägheit-Animation angewendet wird. Beispielsweise wirkt sich ein Auto Scroll-Verhalten auf die Trägheit-Animation aus, indem eine Bildlauf-Animation an einem Ende des primären Inhalts durchgeführt wird. Ein Kreuz Folie-Konfigurations Verhalten wirkt sich auf die Eingabe Verarbeitung direkter Manipulationen aus, die erkennt, wenn eine Kreuz Folie ausgeführt wird.
+Ein *Verhalten* ist ein Objekt, das an einen Viewport angefügt werden kann, um zu ändern, wie [direct Manipulation](direct-manipulation-portal.md) die Ausgabetransformation des primären oder sekundären Inhalts eines Viewports behandelt. Ein Verhaltensobjekt kann einen oder mehrere Aspekte einer Bearbeitung beeinflussen, z. B. die Verarbeitung der Eingabe oder die Anwendung der Trägheitsanimation. Beispielsweise wirkt sich ein Automatisches Rollingverhalten auf die Trägheitsanimation aus, indem eine Bildlaufanimation an ein Ende des primären Inhalts ausgeführt wird. Ein schiebeübergreifendes Konfigurationsverhalten wirkt sich auf die Direkte Bearbeitungseingabeverarbeitung aus, die erkennt, wenn eine schiebeübergreifende Aktion ausgeführt wird.
 
-Ein Verhaltens Objekt wird durch Aufrufen von [**CreateBehavior**](/windows/win32/api/DirectManipulation/nf-directmanipulation-idirectmanipulationmanager2-createbehavior)erstellt, zu einem Viewport hinzugefügt, und das zugehörige Verhalten wird asynchron konfiguriert. Wenn Sie das Verhalten aus dem Viewport entfernen, werden seine Auswirkungen entfernt.
+Ein Verhaltensobjekt wird erstellt, indem [**CreateBehavior**](/windows/win32/api/DirectManipulation/nf-directmanipulation-idirectmanipulationmanager2-createbehavior)aufgerufen wird, einem Viewport hinzugefügt wird und dann sein Verhalten asynchron konfiguriert wird. Wenn Sie das Verhalten aus dem Viewport entfernen, werden seine Auswirkungen entfernt.
 
 ## <a name="coordinate-system"></a>Koordinatensystem
 
-Es gibt drei Haupt Koordinatensysteme, die bei [direkter Bearbeitung](direct-manipulation-portal.md)eingesetzt werden:
+Es gibt drei Hauptkoordinatensysteme, die von [direct manipulation](direct-manipulation-portal.md)verwendet werden:
 
-- Client Koordinatensystem: Beschreibt das Rechteck des Client Fensters. Die Einheiten sind in Pixel.
-- Viewport-Koordinatensystem: Beschreibt das Rechteck eines Bereichs innerhalb des Clients, der Eingaben verarbeiten kann. Einheiten sind Anwendungs definiert (mithilfe von [**setviewportrect**](/windows/win32/api/DirectManipulation/nf-directmanipulation-idirectmanipulationviewport-setviewportrect)).
-- Inhalts Koordinatensystem: Beschreibt das Rechteck oder die Größe von primärem Inhalt. Einheiten sind Anwendungs definiert (mithilfe von [**setcontentrect**](/windows/win32/api/DirectManipulation/nf-directmanipulation-idirectmanipulationcontent-setcontentrect)).
+- Clientkoordinatensystem: Beschreibt das Rechteck des Clientfensters. Einheiten sind in Pixel.
+- Viewportkoordinatensystem: Beschreibt das Rechteck eines Bereichs innerhalb des Clients, der Eingaben verarbeiten kann. Einheiten sind anwendungsdefiniert (mit [**SetViewportRect**](/windows/win32/api/DirectManipulation/nf-directmanipulation-idirectmanipulationviewport-setviewportrect)).
+- Inhaltskoordinatensystem: Beschreibt das Rechteck oder die Größe des primären Inhalts. Einheiten sind anwendungsdefiniert (mit [**SetContentRect**](/windows/win32/api/DirectManipulation/nf-directmanipulation-idirectmanipulationcontent-setcontentrect)).
 
-Für alle drei Systeme werden die Koordinaten relativ zum jeweiligen oberen linken Ursprung definiert und sind positiv rechts und nach unten. Diese Koordinatensysteme werden im nächsten Diagramm veranschaulicht. Nur der Abschnitt des Inhalts innerhalb des Viewportrechtecks kann vom Endbenutzer angezeigt oder bearbeitet werden.
+Für alle drei Systeme werden Koordinaten relativ zu ihrem jeweiligen linken oberen Ursprung definiert und positiv nach rechts und unten erhöht. Diese Koordinatensysteme werden im nächsten Diagramm veranschaulicht. Nur der Abschnitt des Inhalts innerhalb des Viewportrechtecks kann vom Endbenutzer angezeigt oder bearbeitet werden.
 
-![Diagramm, das zeigt, wie Inhalts-, Client-und viewportkoordinaten interagieren](images/dm-art-7.png)
+![Diagramm, das zeigt, wie Inhalt, Client und Viewportkoordinaten interagieren](images/dm-art-7.png)
 
 ## <a name="transforms"></a>Transformationen
 
-[Direkte Manipulation](direct-manipulation-portal.md) verwaltet mehrere verschiedene Transformationen, die zur Gesamtzahl der angezeigten Ausgaben beitragen.
+[Die direkte Bearbeitung](direct-manipulation-portal.md) verwaltet mehrere verschiedene Transformationen, die zur angezeigten Gesamtausgabe beitragen.
 
-- *Inhalts Transformation* – die anfängliche Transformation, die durch [direkte Bearbeitung](direct-manipulation-portal.md) basierend auf einer Manipulation oder Trägheit berechnet wird. Es erfasst die Auswirkungen von Andock Punkten, das Geländer, das Standard Überschreitungen (Manipulation), den Standard overbounce (Trägheit) und zoomtoriect-Animationen.
-- *Output Transform* : die endgültige Visualisierung oder Ausgabe Transformation. Dabei handelt es sich um die Kombination aus dem Inhalt und den Synchronisierungs Transformationen.
-- *Synchronisierungs Transformation* – wird berechnet, wenn [**synccontenttransform**](/windows/win32/api/DirectManipulation/nf-directmanipulation-idirectmanipulationcontent-synccontenttransform)aufgerufen wird. Sie hilft bei der [direkten Bearbeitung](direct-manipulation-portal.md) einer neuen Inhalts Transformation, die von der Anwendung bereitgestellt wird, während gleichzeitig die vorhandene Ausgabe Transformation beibehalten wird.
-- *Anzeige Transformation* – wird von der Anwendung im Rahmen der Nachbearbeitung angewendet. Weitere Informationen finden Sie unter [**syncdisplaytransform**](/windows/win32/api/DirectManipulation/nf-directmanipulation-idirectmanipulationviewport-syncdisplaytransform) .
+- *Inhaltstransformation:* die anfängliche Transformation, die von [der direkten Bearbeitung](direct-manipulation-portal.md) basierend auf einer Manipulation oder Trägheit berechnet wird. Sie erfasst die Auswirkungen von Andockpunkten, Railing, Standardüberlauf (Manipulation), Standardüberlauf (Trägheit) und ZoomToRect-Animationen.
+- *Ausgabetransformation:* die endgültige Visual- oder Ausgabetransformation. Dies ist die Kombination aus Inhalt und Synchronisierungstransformationen.
+- *Synchronisierungstransformation:* Wird berechnet, wenn Sie [**SyncContentTransform**](/windows/win32/api/DirectManipulation/nf-directmanipulation-idirectmanipulationcontent-synccontenttransform)aufrufen. Sie unterstützt [die direkte Bearbeitung](direct-manipulation-portal.md) beim Anwenden einer neuen Inhaltstransformation, die von der Anwendung bereitgestellt wird, während gleichzeitig die vorhandene Ausgabetransformation beibehalten wird.
+- *Anzeigetransformation:* Wird von der Anwendung im Rahmen der Nachverarbeitung angewendet. Weitere Informationen finden Sie unter [**SyncDisplayTransform.**](/windows/win32/api/DirectManipulation/nf-directmanipulation-idirectmanipulationviewport-syncdisplaytransform)
 
-Da die Ausgabe Transformation dazu gedacht ist, eine Oberfläche visuell auf dem Bildschirm zu versetzen, führt die [direkte Manipulation](direct-manipulation-portal.md) die erforderliche Rundung der Ausgabe Transformations Komponenten durch, sodass Text und andere Inhalte immer an einer ganzzahligen Pixel Grenze gerendert/zusammengesetzt werden. Der Rundungs Mechanismus hängt von mehreren Faktoren ab, einschließlich der Geschwindigkeit der Bewegung und der Anwesenheit Remotedesktop. Der Rundungs Mechanismus für Sekundär Inhalt stimmt mit dem des primären Inhalts überein, während der Unterschied zwischen den beiden Bewegungen berücksichtigt wird. Clients von [**getoutputtransform**](/windows/win32/api/DirectManipulation/nf-directmanipulation-idirectmanipulationcontent-getoutputtransform) sollten nicht von der exakten Rundungs Methode der Ausgabe Transformation abhängig sein, da Sie durch verschiedene Faktoren beeinflusst wird.
+Da die Ausgabetransformation eine Oberfläche visuell auf dem Bildschirm versetzen soll, führt [direct Manipulation](direct-manipulation-portal.md) die erforderliche Rundung der Ausgabetransformationskomponenten durch, sodass Text und andere Inhalte immer an einer ganzzahligen Pixelgrenze gerendert/zusammengesetzt werden. Der Rundungsmechanismus hängt von mehreren Faktoren ab, einschließlich der Geschwindigkeit der Bewegung und des Vorhandenseins von Remotedesktop. Der Rundungsmechanismus für sekundären Inhalt stimmt mit dem des primären Inhalts überein, wobei der Unterschied in der Bewegung zwischen den beiden berücksichtigt wird. Clients von [**GetOutputTransform**](/windows/win32/api/DirectManipulation/nf-directmanipulation-idirectmanipulationcontent-getoutputtransform) sollten nicht vom genauen Rundungsmechanismus der Ausgabetransformation abhängig sein, da verschiedene Faktoren dies beeinflussen.
 
 > [!Note]
 >
-> Dies bedeutet, dass die Komponenten einer Inhalts Transformation nicht ganzzahlig sein können und auch unter Pixel Offsets enthalten können. Clients, die [direkte Manipulation](direct-manipulation-portal.md) verwenden, wird empfohlen, [**getoutputtransform**](/windows/win32/api/DirectManipulation/nf-directmanipulation-idirectmanipulationcontent-getoutputtransform) zu verwenden, um die richtige visuelle Transformation zu berechnen, die auf den Inhalt angewendet werden soll, wenn der manuelle Update Modus verwendet wird. Wenn Sie den automatischen Aktualisierungs Modus mit dem integrierten Compositor verwenden, wendet die direkte Bearbeitung diese Transformation automatisch auf den Namen des Clients an. Diese Transformation wird durch direkte Bearbeitung generiert, um bei der Komposition der visuellen Ausgabe visuell ansprechende Ergebnisse sicherzustellen.
+> Dies bedeutet, dass die Komponenten einer Inhaltstransformation möglicherweise nicht ganzzahlig sind und Subpixeloffsets enthalten können. Clients, die [die direkte Bearbeitung](direct-manipulation-portal.md) verwenden, wird empfohlen, [**getOutputTransform**](/windows/win32/api/DirectManipulation/nf-directmanipulation-idirectmanipulationcontent-getoutputtransform) zu verwenden, um die richtige visuelle Transformation zu berechnen, die bei Verwendung des manuellen Updatemodus auf den Inhalt angewendet werden soll. Bei Verwendung des automatischen Updatemodus mit dem integrierten Compositor wendet direct Manipulation diese Transformation automatisch im Auftrag des Clients an. Diese Transformation wird durch direkte Bearbeitung generiert, um beim Erstellen der visuellen Ausgabe visuell ansprechende Ergebnisse sicherzustellen.
 
-## <a name="viewport-state"></a>Status des Viewports
+## <a name="viewport-state"></a>Viewportzustand
 
-Während der Eingabe verarbeitet der Viewport den Interaktions Status und die Zuordnung von Eingaben zu Ausgabe Transformationen. Überprüfen Sie den Interaktions Zustand des Viewports durch Aufrufen von [**GetStatus**](/windows/win32/api/DirectManipulation/nf-directmanipulation-idirectmanipulationviewport-getstatus).
+Während die Eingabe verarbeitet wird, verwaltet der Viewport den Interaktionszustand und die Zuordnung der Eingabe zu Ausgabetransformationen. Überprüfen Sie den Interaktionsstatus des Viewports, indem [**Sie GetStatus**](/windows/win32/api/DirectManipulation/nf-directmanipulation-idirectmanipulationviewport-getstatus)aufrufen.
 
-![Diagramm mit directmanipulation-Interaktions Zuständen](images/dm-states-diagram.png)
+![Diagramm mit direktenManipulationsinteraktionszuständen](images/dm-states-diagram.png)
 
-- Erstellung – der Viewport wird erstellt und kann die Eingabe noch nicht verarbeiten. Um die Eingabe zu verarbeiten, nennen Sie [**idirectmanipulationviewport:: enable**](/windows/win32/api/DirectManipulation/nf-directmanipulation-idirectmanipulationviewport-enable). Wenn **enable** nicht aufgerufen wird, wechselt der Viewport in den deaktivierten Zustand.
+- Erstellen: Der Viewport wird erstellt und kann noch keine Eingaben verarbeiten. Rufen Sie [**IDirectManipulationViewport::Enable**](/windows/win32/api/DirectManipulation/nf-directmanipulation-idirectmanipulationviewport-enable)auf, um Eingaben zu verarbeiten. Wenn **Enable** nicht aufgerufen wird, wechselt der Viewport in den Status Deaktiviert.
 
     > [!Note]  
-    > Dies ist der anfängliche Zustand der Interaktion.
+    > Dies ist der Anfängliche Zustand der Interaktion.
 
-- Aktiviert – der Viewport ist bereit für die Verarbeitung von Eingaben. Wenn ein Kontakt angezeigt wird ([**SetContact**](/windows/win32/api/DirectManipulation/nf-directmanipulation-idirectmanipulationviewport-setcontact) wird aufgerufen) und eine Manipulation erkannt wird, wechselt der Viewport in "wird ausgeführt".
+- Aktiviert: Der Viewport kann Eingaben verarbeiten. Wenn ein Kontakt ausgeht [**(SetContact**](/windows/win32/api/DirectManipulation/nf-directmanipulation-idirectmanipulationviewport-setcontact) wird aufgerufen), und eine Manipulation erkannt wird, geht der Viewport in Wird ausgeführt über.
 
-- Wird ausgeführt – der Viewport verarbeitet momentan Eingaben und aktualisiert Inhalt. Wenn der Kontakt angehoben wird, wechselt der Viewport zu Trägheit, wenn er konfiguriert ist.
+- Wird ausgeführt: Der Viewport verarbeitet derzeit Eingaben und aktualisiert Inhalte. Wenn der Kontakt entfernt wird, geht der Viewport in Trägheit über, sofern konfiguriert.
 
-- Trägheit – der Inhalt bewegt sich in einer Trägheit-Animation. Sobald die Trägheit abgeschlossen ist, wird der Viewport in bereit angezeigt. Wenn die automatische Deaktivierung für den Viewport festgelegt wurde, wird der Wechsel von Trägheit in bereit und dann zu deaktiviert.
+- Trägheit: Der Inhalt bewegt sich in einer Trägheitsanimation. Sobald die Trägheit abgeschlossen ist, wechselt der Viewport zu Bereit. Wenn die automatische Deaktivierung für den Viewport festgelegt wurde, wechselt sie von Trägheit zu Bereit und dann zu Deaktiviert.
 
-- Bereit – der Viewport ist bereit für die Verarbeitung von Eingaben. Wenn ein Kontakt angezeigt wird ([**SetContact**](/windows/win32/api/DirectManipulation/nf-directmanipulation-idirectmanipulationviewport-setcontact) wird aufgerufen) und eine Manipulation erkannt wird, wechselt der Viewport in "wird ausgeführt".
+- Bereit: Der Viewport kann Eingaben verarbeiten. Wenn ein Kontakt ausgeht [**(SetContact**](/windows/win32/api/DirectManipulation/nf-directmanipulation-idirectmanipulationviewport-setcontact) wird aufgerufen), und eine Manipulation erkannt wird, geht der Viewport in Wird ausgeführt über.
 
-- Angehalten – der Viewport wird möglicherweise angehalten, wenn seine Eingabe zu einem übergeordneten Element in der [**SetContact**](/windows/win32/api/DirectManipulation/nf-directmanipulation-idirectmanipulationviewport-setcontact) -Kette herauf gestuft wurde. Dies wird in [mehreren Viewports ausführlicher erläutert: Treffer Tests und viewporthierarchie](directmanipulation-multiple-vieports.md).
+- Angehalten: Der Viewport wird möglicherweise angehalten, wenn seine Eingabe zu einem übergeordneten Element in der [**SetContact-Kette**](/windows/win32/api/DirectManipulation/nf-directmanipulation-idirectmanipulationviewport-setcontact) heraufgestuft wurde. Dies wird unter [Mehrere Viewports: Treffertests und Viewporthierarchie](directmanipulation-multiple-vieports.md)ausführlicher erläutert.
 
-- Deaktiviert – der Viewport verarbeitet keine Eingaben und führt keine Rückrufe aus. Ein Viewport kann durch Aufrufen von [**idirectmanipulationviewport::D isable**](/windows/win32/api/DirectManipulation/nf-directmanipulation-idirectmanipulationviewport-disable)aus verschiedenen Zuständen deaktiviert werden. Wenn die automatische Deaktivierung für den Viewport festgelegt wurde, wird der Übergang nach der Verarbeitung einer Bearbeitung automatisch in deaktiviert. Um einen deaktivierten Viewport erneut zu aktivieren, nennen Sie [**idirectmanipulationviewport:: enable**](/windows/win32/api/DirectManipulation/nf-directmanipulation-idirectmanipulationviewport-enable).
+- Deaktiviert: Der Viewport verarbeitet keine Eingaben und führt keine Rückrufe durch. Ein Viewport kann aus verschiedenen Zuständen deaktiviert werden, indem [**IDirectManipulationViewport::D isable**](/windows/win32/api/DirectManipulation/nf-directmanipulation-idirectmanipulationviewport-disable)aufgerufen wird. Wenn die automatische Deaktivierung für den Viewport festgelegt wurde, wechselt sie automatisch zu Deaktiviert, nachdem eine Bearbeitung verarbeitet wurde. Um einen deaktivierten Viewport erneut zu aktivieren, rufen [**Sie IDirectManipulationViewport::Enable**](/windows/win32/api/DirectManipulation/nf-directmanipulation-idirectmanipulationviewport-enable)auf.
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
-[Mehrere Viewports: Treffer Tests und viewporthierarchie](directmanipulation-multiple-vieports.md), [**activateconfiguration**](/windows/win32/api/DirectManipulation/nf-directmanipulation-idirectmanipulationviewport-activateconfiguration), [**getoutputtransform**](/windows/win32/api/DirectManipulation/nf-directmanipulation-idirectmanipulationcontent-getoutputtransform), [**syncdisplaytransform**](/windows/win32/api/DirectManipulation/nf-directmanipulation-idirectmanipulationviewport-syncdisplaytransform)
+[Mehrere Viewports: Treffertests und Viewporthierarchie,](directmanipulation-multiple-vieports.md) [**ActivateConfiguration,**](/windows/win32/api/DirectManipulation/nf-directmanipulation-idirectmanipulationviewport-activateconfiguration) [**GetOutputTransform,**](/windows/win32/api/DirectManipulation/nf-directmanipulation-idirectmanipulationcontent-getoutputtransform) [**SyncDisplayTransform**](/windows/win32/api/DirectManipulation/nf-directmanipulation-idirectmanipulationviewport-syncdisplaytransform)

@@ -1,9 +1,9 @@
 ---
-title: Komplexer certselection-Typ
-description: Erfahren Sie mehr über den komplexen certselection-Typ. Dieser Typ bestimmt, wie der Benutzer ein Zertifikat auswählt.
+title: Komplexer CertSelection-Typ
+description: Erfahren Sie mehr über den komplexen CertSelection-Typ. Dieser Typ bestimmt, wie der Benutzer ein Zertifikat auswählt.
 ms.assetid: f5a37258-8ab0-4736-9721-6c2800769c74
 keywords:
-- Komplexer certselection-Typ EAPHost
+- Komplexer CertSelection-Typ EAPHost
 topic_type:
 - apiref
 api_name:
@@ -14,16 +14,16 @@ ms.topic: reference
 ms.date: 05/31/2018
 api_location: ''
 ROBOTS: INDEX,FOLLOW
-ms.openlocfilehash: ba22df8dca61696f214e495542319168183dd2bf
-ms.sourcegitcommit: b0ebdefc3dcd5c04bede94091833aa1015a2f95c
+ms.openlocfilehash: 375ea26fddf07f8d775617c0a2167ed02aa8160de8cc5dde49a92f37f57a335e
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/21/2020
-ms.locfileid: "104316473"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118984130"
 ---
-# <a name="certselection-complex-type"></a>Komplexer certselection-Typ
+# <a name="certselection-complex-type"></a>Komplexer CertSelection-Typ
 
-Der komplexe Typ " **certselection** " legt fest, wie der Benutzer ein Zertifikat auswählt.
+Der **komplexe Typ CertSelection** bestimmt, wie der Benutzer ein Zertifikat auswählt.
 
 ``` syntax
 <xs:complexType name="CertSelection">
@@ -42,7 +42,7 @@ Der komplexe Typ " **certselection** " legt fest, wie der Benutzer ein Zertifika
 
 | Element                                                                                                     | type    | BESCHREIBUNG                                                                                                                                                                                                                                                                                                                                                                      |
 |-------------------------------------------------------------------------------------------------------------|---------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| [**Simplecertselection**](eaptlsconnectionpropertiesv1schema-simplecertselection-certselection-element.md) | boolean | Ist standardmäßig "true". Wenn [**simplecertselection**](eaptlsconnectionpropertiesv1schema-simplecertselection-certselection-element.md) auf true festgelegt ist, führt EAP-TLS eine einfache Zertifikat Suche ohne Dropdown Listen für die Auswahl der Zertifikate durch. Wenn **simplecertselection** den Wert false hat, veranschaulicht EAP-TLS dem Benutzer das geeignete Zertifikat, das ausgewählt werden soll.<br/> |
+| [**SimpleCertSelection**](eaptlsconnectionpropertiesv1schema-simplecertselection-certselection-element.md) | boolean | Ist standardmäßig TRUE. Wenn [**SimpleCertSelection**](eaptlsconnectionpropertiesv1schema-simplecertselection-certselection-element.md) auf TRUE festgelegt ist, führt EAP-TLS eine einfache Zertifikatssuche ohne Dropdownlisten für die Auswahl von Zertifikaten durch. Wenn **SimpleCertSelection** false ist, veranschaulicht EAP-TLS dem Benutzer das geeignete Zertifikat, das ausgewählt werden soll.<br/> |
 
 
 
@@ -50,24 +50,24 @@ Der komplexe Typ " **certselection** " legt fest, wie der Benutzer ein Zertifika
 
 
 
-| Role | Mindestens unterstützte Betriebssystemversion |
+| Role | Unterstützte Mindestversion des Betriebssystems |
 |------|------------------------------|
-| Client<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>       |
-| Server<br/> | Nur Windows Server 2008 \[ -Desktop-Apps\]<br/> |
+| Client<br/> | Windows Nur \[ Vista-Desktop-Apps\]<br/>       |
+| Server<br/> | Windows Nur Server \[ 2008-Desktop-Apps\]<br/> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[EAPHost und Legacy Schema](eaphost-schemas.md)
+[EAPHost und Legacyschema](eaphost-schemas.md)
 </dt> <dt>
 
 [eaptlsconnectionpropertiesv1-Schema](eaptlsconnectionpropertiesv1schema-schema.md)
 </dt> <dt>
 
-[komplexe eaptlsconnectionpropertiesv1-Schema Typen](eaptlsconnectionpropertiesv1schema-complex-types.md)
+[eaptlsconnectionpropertiesv1 Schema Complex Types](eaptlsconnectionpropertiesv1schema-complex-types.md)
 </dt> </dl>
 
  

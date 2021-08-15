@@ -1,5 +1,5 @@
 ---
-description: Erfahren Sie mehr über die IShellDispatch.RefreshMenu-Methode, die den Inhalt der Startmenü aktualisiert. Wird nur mit Systemen vor Windows XP verwendet.
+description: Erfahren Sie mehr über die IShellDispatch.RefreshMenu-Methode, die den Inhalt des Startmenü. Wird nur mit Systemen vor Windows XP verwendet.
 ms.assetid: D36FA5A0-AF03-4627-86E0-869BF1440958
 title: IShellDispatch.RefreshMenu-Methode (Shldisp.h)
 ms.topic: reference
@@ -13,16 +13,16 @@ api_type:
 - COM
 api_location:
 - Shell32.dll
-ms.openlocfilehash: d9e1a3c326cfa79c7b754cc8a364e649cf2c9931
-ms.sourcegitcommit: 5d4e99f4c8f42f5f543e52cb9beb9fb13ec56c5f
+ms.openlocfilehash: ac5bb37f5880011fcabcfcc0e923196857694012a547b0391326a9fe5d8424f0
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2021
-ms.locfileid: "112404673"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118969059"
 ---
 # <a name="ishelldispatchrefreshmenu-method"></a>IShellDispatch.RefreshMenu-Methode
 
-Aktualisiert den Inhalt  des Startmenüs. Wird nur mit Systemen vor Windows XP verwendet.
+Aktualisiert den Inhalt des **Startmenüs.** Wird nur mit Systemen vor Windows XP verwendet.
 
 ## <a name="syntax"></a>Syntax
 
@@ -55,17 +55,17 @@ Diese Methode gibt keinen Wert zurück.
 
 Diese Methode gibt keinen Wert zurück.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Diese Methode wird implementiert und über die [**Shell.TrayProperties-Methode**](shell-trayproperties.md) aufgerufen.
+Diese Methode wird implementiert und über die [**Shell.TrayProperties-Methode aufgerufen.**](shell-trayproperties.md)
 
-Die funktionen, die **RefreshMenu** bereitstellt, werden automatisch unter Windows XP oder höher verarbeitet. Rufen Sie diese Methode nicht unter Windows XP oder höher auf.
+Die funktionalität, die **RefreshMenu** bietet, wird automatisch unter xp Windows höher behandelt. Rufen Sie diese Methode nicht auf Windows XP oder höher auf.
 
 ## <a name="examples"></a>Beispiele
 
 Die folgenden Beispiele zeigen die Verwendung von **RefreshMenu** in JScript, VBScript und Visual Basic.
 
-Jscript:
+JScript:
 
 
 ```JScript
@@ -115,7 +115,7 @@ End Sub
 
 
 
-## <a name="requirements"></a>Requirements (Anforderungen)
+## <a name="requirements"></a>Anforderungen
 
 
 

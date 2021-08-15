@@ -1,23 +1,23 @@
 ---
-description: 'Die folgende Struktur wird mit Network DDE verwendet:'
+description: 'Die folgende Struktur wird mit Netzwerk-DDE verwendet:'
 ms.assetid: 1cbfd363-4fe4-452a-950d-637e9b96ca16
 title: Netzwerk-DDE-Strukturen
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 81780ad389e2e18c28afd88b7056067861667483
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 25b7a44a3b2c4fe153b15566b41b9a8f22a4d95e488697db1423396349a6c886
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106350981"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118756052"
 ---
 # <a name="network-dde-structures"></a>Netzwerk-DDE-Strukturen
 
-\[Network DDE wird nicht mehr unterstützt. Nddeapi.dll ist unter Windows Vista vorhanden, aber alle Funktionsaufrufe geben "ndde" \_ nicht \_ implementiert zurück.\]
+\[Netzwerk-DDE wird nicht mehr unterstützt. Nddeapi.dll ist auf Windows Vista vorhanden, aber alle Funktionsaufrufe geben NDDE \_ NOT \_ IMPLEMENTED zurück.\]
 
-Die folgende Struktur wird mit Network DDE verwendet:
+Die folgende Struktur wird mit Netzwerk-DDE verwendet:
 
--   [**Nddebug-Info**](nddeshareinfo-str.md)
+-   [**NDDESHAREINFO**](nddeshareinfo-str.md)
 
  
 

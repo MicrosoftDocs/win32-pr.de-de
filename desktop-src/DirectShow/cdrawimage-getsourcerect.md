@@ -1,7 +1,7 @@
 ---
-description: Die getsourcerect-Methode ruft das aktuelle Quell Rechteck ab.
+description: Die GetSourceRect-Methode ruft das aktuelle Quellrechteck ab.
 ms.assetid: e9ca091f-3fd7-4e42-90e9-b7831dd488a9
-title: Cdrawimage. getsourcerect-Methode (winutil. h)
+title: CDrawImage.GetSourceRect-Methode (Winutil.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -16,16 +16,16 @@ api_location:
 - Strmbase.dll
 - Strmbasd.lib
 - Strmbasd.dll
-ms.openlocfilehash: 8a2188a183794b94a5d6d05ac237f91dbcb5d6dd
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 81d7de629ec89fe31296a9efd10df3d4895f53a7dc67db58bfde77be8a75a82f
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106366735"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119697886"
 ---
-# <a name="cdrawimagegetsourcerect-method"></a>Cdrawimage. getsourcerect-Methode
+# <a name="cdrawimagegetsourcerect-method"></a>CDrawImage.GetSourceRect-Methode
 
-Die- `GetSourceRect` Methode ruft das aktuelle Quell Rechteck ab.
+Die `GetSourceRect` -Methode ruft das aktuelle Quellrechteck ab.
 
 ## <a name="syntax"></a>Syntax
 
@@ -42,10 +42,10 @@ void GetSourceRect(
 
 <dl> <dt>
 
-*psourcerect* 
+*pSourceRect* 
 </dt> <dd>
 
-Ein Zeiger auf eine **Rect** -Struktur, die das Quell Rechteck empfängt.
+Zeiger auf eine **RECT-Struktur,** die das Quellrechteck empfängt.
 
 </dd> </dl>
 
@@ -59,16 +59,16 @@ Diese Methode gibt keinen Wert zurück.
 
 | Anforderung | Wert |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>Winutil. h (Include Streams. h)</dt> </dl>                                                                                   |
-| Bibliothek<br/> | <dl> " <dt>Straumbase. lib" (Einzelhandels Builds);</dt> " <dt>Straumbasd. lib" (Debugbuilds)</dt> </dl> |
+| Header<br/>  | <dl> <dt>Winutil.h (include Streams.h)</dt> </dl>                                                                                   |
+| Bibliothek<br/> | <dl> <dt>Strmbase.lib (Verkaufsbuilds); </dt> <dt>Strmbasd.lib (Debugbuilds)</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Cdrawimage-Klasse**](cdrawimage.md)
+[**CDrawImage-Klasse**](cdrawimage.md)
 </dt> </dl>
 
  

@@ -1,6 +1,6 @@
 ---
-description: Weitere Informationen finden Sie in der JET_DBINFOMISC. bkinfodiffprev-Eigenschaft.
-title: JET_DBINFOMISC. bkinfodiffprev-Eigenschaft
+description: 'Weitere Informationen finden Sie unter: JET_DBINFOMISC.bkinfoDiffPrev-Eigenschaft'
+title: JET_DBINFOMISC.bkinfoDiffPrev-Eigenschaft
 TOCTitle: 'bkinfoDiffPrev property '
 ms:assetid: P:Microsoft.Isam.Esent.Interop.JET_DBINFOMISC.bkinfoDiffPrev
 ms:mtpsurl: https://msdn.microsoft.com/library/microsoft.isam.esent.interop.jet_dbinfomisc.bkinfodiffprev(v=EXCHG.10)
@@ -26,19 +26,19 @@ api_type:
 api_location:
 - Microsoft.Isam.Esent.Interop.dll
 ROBOTS: INDEX,FOLLOW
-ms.openlocfilehash: bd152d1dffbc4cf956129dfd886186dda0b33084
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: fec2a5a00ebeb805085daba3b3a707bbe739eba6dbaca3c5945fb49152c7e6c2
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106343290"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118980400"
 ---
-# <a name="jet_dbinfomiscbkinfodiffprev-property"></a>JET_DBINFOMISC. bkinfodiffprev-Eigenschaft
+# <a name="jet_dbinfomiscbkinfodiffprev-property"></a>JET_DBINFOMISC.bkinfoDiffPrev-Eigenschaft
 
-Ruft Informationen zur letzten erfolgreichen differenziellen Sicherung ab. Wird zurückgesetzt, wenn [bkinfofullprev](./jet-dbinfomisc.bkinfofullprev-property.md) festgelegt ist.
+Ruft Informationen zur letzten erfolgreichen differenziellen Sicherung ab. Zurücksetzen, [wenn bkinfoFullPrev](./jet-dbinfomisc.bkinfofullprev-property.md) festgelegt ist.
 
-**Namespace:**  [Microsoft. ISAM. ESENT. Interop](./microsoft.isam.esent.interop-namespace.md)  
-**Assembly:**  Microsoft. ISAM. ESENT. Interop (in Microsoft.Isam.Esent.Interop.dll)
+**Namespace:**  [Microsoft.Isam.Esent.Interop](./microsoft.isam.esent.interop-namespace.md)  
+**Assembly:**  Microsoft.Isam.Esent.Interop (in Microsoft.Isam.Esent.Interop.dll)
 
 ## <a name="syntax"></a>Syntax
 
@@ -60,14 +60,14 @@ public JET_BKINFO bkinfoDiffPrev { get; internal set; }
 
 #### <a name="property-value"></a>Eigenschaftswert
 
-Typ: [Microsoft.ISAM.ESENT.Interop.JET_BKINFO](./jet-bkinfo-structure2.md)  
+Typ: [Microsoft.Isam.Esent.Interop.JET_BKINFO](./jet-bkinfo-structure2.md)  
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
-#### <a name="reference"></a>Referenz
+#### <a name="reference"></a>Verweis
 
 [JET_DBINFOMISC-Klasse](./jet-dbinfomisc-class.md)
 
-[Mitglieder JET_DBINFOMISC](./jet-dbinfomisc-members.md)
+[JET_DBINFOMISC Member](./jet-dbinfomisc-members.md)
 
-[Microsoft. ISAM. ESENT. Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)
+[Microsoft.Isam.Esent.Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)

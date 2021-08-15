@@ -1,29 +1,29 @@
 ---
-description: Die Bild Integritäts Funktionen verwalten den Satz von Zertifikaten in einer Bilddatei.
+description: Die Imageintegritätsfunktionen verwalten den Satz von Zertifikaten in einer Imagedatei.
 ms.assetid: db77b8af-3c36-4e01-88e0-4c44ef8504ff
-title: Bild Integritäts Funktionen
+title: Bildintegritätsfunktionen
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: a11678dbb12bcb9f29950589b60a84e00960b183
-ms.sourcegitcommit: c7add10d695482e1ceb72d62b8a4ebd84ea050f7
+ms.openlocfilehash: 47a2311ccfc59fb228a8f71c380205dc754452ba4a9d0a7e1dcb3c9edcd92a14
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104041410"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118957099"
 ---
-# <a name="image-integrity-functions"></a>Bild Integritäts Funktionen
+# <a name="image-integrity-functions"></a>Bildintegritätsfunktionen
 
-Die Bild Integritäts Funktionen verwalten den Satz von Zertifikaten in einer Bilddatei. Routinen werden bereitgestellt, um Zertifikate hinzuzufügen, zu entfernen und abzufragen. Es ist auch eine Funktion zum Abrufen des Bytestreams einer Bilddatei verfügbar, die zum Berechnen eines Nachrichten Digest der Bilddatei erforderlich ist. Dies ist zum Erstellen von Signatur Zertifikaten erforderlich.
+Die Imageintegritätsfunktionen verwalten den Satz von Zertifikaten in einer Imagedatei. Routinen werden zum Hinzufügen, Entfernen und Abfragen von Zertifikaten bereitgestellt. Es ist auch eine Funktion zum Abrufen des Bytestreams einer Bilddatei verfügbar, die zum Berechnen eines Nachrichtenh digest der Bilddatei erforderlich ist. Dies ist erforderlich, um Signaturzertifikate zu erstellen.
 
-Jedes Zertifikat in einer Datei verfügt über einen Index, der sich ändern kann, wenn Zertifikate entfernt werden. Neue Zertifikate werden immer am Ende der Liste vorhandener Zertifikate hinzugefügt. Das heißt, es werden Indizes zugewiesen, die größer sind als alle derzeit verwendeten Indizes. Im Allgemeinen sollte eine Anwendung nicht davon ausgehen, dass ein bestimmtes Zertifikat denselben Index wie das letzte Mal referenziert hat.
+Jedes Zertifikat in einer Datei verfügt über einen Index, der sich ändern kann, wenn Zertifikate entfernt werden. Neue Zertifikate werden immer "am Ende" der Liste der vorhandenen Zertifikate hinzugefügt. Das heißt, ihnen werden Indizes zugewiesen, die größer sind als alle derzeit in Gebrauchenen Indizes. Im Allgemeinen sollte eine Anwendung nicht davon ausgehen, dass ein bestimmtes Zertifikat über denselben Index verfügt, den sie beim letzten Verweis auf das Zertifikat hatte.
 
--   [**Digestfunction**](/windows/desktop/api/Imagehlp/nc-imagehlp-digest_function)
--   [**Imageaddcertificate**](/windows/desktop/api/Imagehlp/nf-imagehlp-imageaddcertificate)
--   [**Imageenumeratecertificates**](/windows/desktop/api/Imagehlp/nf-imagehlp-imageenumeratecertificates)
--   [**Imagegetcertificatedata**](/windows/desktop/api/Imagehlp/nf-imagehlp-imagegetcertificatedata)
--   [**Imagegetcertifialisieheader**](/windows/desktop/api/Imagehlp/nf-imagehlp-imagegetcertificateheader)
--   [**Imagegetdigeststream**](/windows/desktop/api/Imagehlp/nf-imagehlp-imagegetdigeststream)
--   [**Imageremovecertificate**](/windows/desktop/api/Imagehlp/nf-imagehlp-imageremovecertificate)
+-   [**DigestFunction**](/windows/desktop/api/Imagehlp/nc-imagehlp-digest_function)
+-   [**ImageAddCertificate**](/windows/desktop/api/Imagehlp/nf-imagehlp-imageaddcertificate)
+-   [**ImageEnumerateCertificates**](/windows/desktop/api/Imagehlp/nf-imagehlp-imageenumeratecertificates)
+-   [**ImageGetCertificateData**](/windows/desktop/api/Imagehlp/nf-imagehlp-imagegetcertificatedata)
+-   [**ImageGetCertificateHeader**](/windows/desktop/api/Imagehlp/nf-imagehlp-imagegetcertificateheader)
+-   [**ImageGetDigestStream**](/windows/desktop/api/Imagehlp/nf-imagehlp-imagegetdigeststream)
+-   [**ImageRemoveCertificate**](/windows/desktop/api/Imagehlp/nf-imagehlp-imageremovecertificate)
 
  
 

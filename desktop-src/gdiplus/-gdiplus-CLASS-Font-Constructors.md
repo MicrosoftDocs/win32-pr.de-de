@@ -1,19 +1,19 @@
 ---
-description: In diesem Thema werden die Konstruktoren der Font-Klasse aufgelistet. Eine komplette Klassen Auflistung finden Sie unter Font-Klasse.
+description: In diesem Thema werden die Konstruktoren der Font-Klasse aufgelistet. Eine vollständige Klassenauflistung finden Sie unter Schriftartklasse.
 ms.assetid: a0169751-50f6-41d9-bd59-3c85aec1bb78
-title: Font. Font-Konstruktoren
+title: Font.Font-Konstruktoren
 ms.date: 07/02/2019
 ms.topic: reference
-ms.openlocfilehash: bdf533e292734956c02d3f8a424ca619cb722c71
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: ff876120655adcf58318a471ed66ddfa4502d625305d9fda37f01c966e19e0cb
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "104218245"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118977900"
 ---
-# <a name="fontfont-constructors"></a>Font. Font-Konstruktoren
+# <a name="fontfont-constructors"></a>Font.Font-Konstruktoren
 
-In diesem Thema werden die Konstruktoren der [**Font**](/windows/win32/api/gdiplusheaders/nl-gdiplusheaders-font) -Klasse aufgelistet. Eine komplette Klassen Auflistung finden Sie unter **Font-Klasse**.
+In diesem Thema werden die Konstruktoren der [**Font-Klasse**](/windows/win32/api/gdiplusheaders/nl-gdiplusheaders-font) aufgelistet. Eine vollständige Klassenauflistung finden Sie unter **Schriftartklasse**.
 
 ### <a name="overload-list"></a>Überladeliste
 
@@ -21,12 +21,12 @@ In diesem Thema werden die Konstruktoren der [**Font**](/windows/win32/api/gdipl
 
 | Konstruktor                                                                                                                   | BESCHREIBUNG                                                                                                                                                                                                                                                                                                  |
 |:------------------------------------------------------------------------------------------------------------------------------|:-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| [**Schriftart (hdc, hFont)**](/windows/win32/api/gdiplusheaders/nf-gdiplusheaders-font-font(inhdc_inconsthfont))                                                                | Erstellt ein [**Schriftart:: Font**](/windows/win32/api/gdiplusheaders/nf-gdiplusheaders-font-font(inhdc_inconsthfont)) -Objekt indirekt aus einer logischen GDI-Schriftart mithilfe eines Handles für eine GDI- **LOGFONT** -Struktur.<br/>                                                                                                                                   |
-| [**Schriftart (hdc, logfonta \* )**](/windows/win32/api/gdiplusheaders/nf-gdiplusheaders-font-font(inhdc_inconstlogfonta))                                            | Erstellt ein [**Schriftart:: Font**](/windows/win32/api/gdiplusheaders/nf-gdiplusheaders-font-font(inhdc_inconstlogfonta)) -Objekt direkt aus einer logischen GDI-Schriftart. Die logische GDI-Schriftart ist eine **logfonta** -Struktur, bei der es sich um die 1-Byte-Zeichen Version einer logischen Schriftart handelt. Dieser Konstruktor wird für die Kompatibilität mit GDI bereitgestellt.<br/> |
-| [**Schriftart (hdc, logfontw \* )**](/windows/win32/api/gdiplusheaders/nf-gdiplusheaders-font-font(inhdc_inconstlogfontw))                                            | Erstellt ein [**Schriftart:: Font**](/windows/win32/api/gdiplusheaders/nf-gdiplusheaders-font-font(inhdc_inconstlogfontw)) -Objekt direkt aus einer logischen GDI-Schriftart. Die logische GDI-Schriftart ist eine **logfontw** -Struktur, die die breit Zeichen Version einer logischen Schriftart ist. Dieser Konstruktor wird für die Kompatibilität mit GDI bereitgestellt.<br/>     |
-| [**Font (FontFamily \* , Real, int, Unit)**](/windows/win32/api/gdiplusheaders/nf-gdiplusheaders-font-font(inconstfontfamily_inreal_inint_inunit))                                | Erstellt ein [**Schriftart:: Font**](/windows/win32/api/gdiplusheaders/nf-gdiplusheaders-font-font(inconstfontfamily_inreal_inint_inunit)) -Objekt auf Grundlage eines [**FontFamily**](/windows/win32/api/gdiplusheaders/nl-gdiplusheaders-fontfamily) -Objekts, einer Größe, eines Schrift Stils und einer Maßeinheit.<br/>                                                                               |
-| [**Schriftart (WChar \* , Real, int, Unit, FontCollection \* )**](/windows/win32/api/gdiplusheaders/nf-gdiplusheaders-font-font(inconstwchar_inreal_inint_inunit_inconstfontcollection)) | Erstellt ein [**Schriftart:: Font**](/windows/win32/api/gdiplusheaders/nf-gdiplusheaders-font-font(inconstwchar_inreal_inint_inunit_inconstfontcollection)) -Objekt auf Grundlage einer Schriftfamilie, einer Größe, eines Schrift Stils, einer Maßeinheit und eines [**FontCollection**](/windows/win32/api/gdiplusheaders/nl-gdiplusheaders-fontcollection) -Objekts.<br/>                                     |
-| [**Schriftart (HDC)**](/windows/win32/api/gdiplusheaders/nf-gdiplusheaders-font-font(inhdc))                                                                            | Erstellt ein [**Schriftart:: Font**](/windows/win32/api/gdiplusheaders/nf-gdiplusheaders-font-font(inhdc)) -Objekt, das auf dem GDI-Schriftart Objekt basiert, das momentan in einem angegebenen Gerätekontext ausgewählt ist. Dieser Konstruktor wird für die Kompatibilität mit GDI bereitgestellt. <br/>                                                                           |
+| [**Font(HDC,HFONT)**](/windows/win32/api/gdiplusheaders/nf-gdiplusheaders-font-font(inhdc_inconsthfont))                                                                | Erstellt indirekt ein [**Font::Font-Objekt**](/windows/win32/api/gdiplusheaders/nf-gdiplusheaders-font-font(inhdc_inconsthfont)) aus einer logischen GDI-Schriftart, indem ein Handle für eine GDI **LOGFONT-Struktur** verwendet wird.<br/>                                                                                                                                   |
+| [**Font(HDC,LOGFONTA \* )**](/windows/win32/api/gdiplusheaders/nf-gdiplusheaders-font-font(inhdc_inconstlogfonta))                                            | Erstellt ein [**Font::Font-Objekt**](/windows/win32/api/gdiplusheaders/nf-gdiplusheaders-font-font(inhdc_inconstlogfonta)) direkt aus einer logischen GDI-Schriftart. Die logische GDI-Schriftart ist eine **LOGFONTA-Struktur,** bei der es sich um die 1-Byte-Zeichenversion einer logischen Schriftart handelt. Dieser Konstruktor wird für die Kompatibilität mit GDI bereitgestellt.<br/> |
+| [**Font(HDC,LOGFONTW \* )**](/windows/win32/api/gdiplusheaders/nf-gdiplusheaders-font-font(inhdc_inconstlogfontw))                                            | Erstellt ein [**Font::Font-Objekt**](/windows/win32/api/gdiplusheaders/nf-gdiplusheaders-font-font(inhdc_inconstlogfontw)) direkt aus einer logischen GDI-Schriftart. Die logische GDI-Schriftart ist eine **LOGFONTW-Struktur,** bei der es sich um die Breitzeichenversion einer logischen Schriftart handelt. Dieser Konstruktor wird für die Kompatibilität mit GDI bereitgestellt.<br/>     |
+| [**Font(FontFamily \* , REAL, INT, Unit)**](/windows/win32/api/gdiplusheaders/nf-gdiplusheaders-font-font(inconstfontfamily_inreal_inint_inunit))                                | Erstellt ein [**Font::Font-Objekt**](/windows/win32/api/gdiplusheaders/nf-gdiplusheaders-font-font(inconstfontfamily_inreal_inint_inunit)) basierend auf einem [**FontFamily-Objekt,**](/windows/win32/api/gdiplusheaders/nl-gdiplusheaders-fontfamily) einem Schriftgrad, einem Schriftschnitt und einer Maßeinheit.<br/>                                                                               |
+| [**Font(WCHAR \* , REAL, INT, Unit, FontCollection \* )**](/windows/win32/api/gdiplusheaders/nf-gdiplusheaders-font-font(inconstwchar_inreal_inint_inunit_inconstfontcollection)) | Erstellt ein [**Font::Font-Objekt**](/windows/win32/api/gdiplusheaders/nf-gdiplusheaders-font-font(inconstwchar_inreal_inint_inunit_inconstfontcollection)) basierend auf einer Schriftfamilie, einem Schriftgrad, einem Schriftschnitt, einer Maßeinheit und einem [**FontCollection-Objekt.**](/windows/win32/api/gdiplusheaders/nl-gdiplusheaders-fontcollection)<br/>                                     |
+| [**Schriftart (HDC)**](/windows/win32/api/gdiplusheaders/nf-gdiplusheaders-font-font(inhdc))                                                                            | Erstellt ein [**Font::Font-Objekt**](/windows/win32/api/gdiplusheaders/nf-gdiplusheaders-font-font(inhdc)) basierend auf dem GDI-Schriftartobjekt, das derzeit in einem angegebenen Gerätekontext ausgewählt ist. Dieser Konstruktor wird für die Kompatibilität mit GDI bereitgestellt. <br/>                                                                           |
 
 
 

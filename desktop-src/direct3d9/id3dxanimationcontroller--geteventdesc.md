@@ -1,7 +1,7 @@
 ---
-description: Ruft eine Beschreibung eines angegebenen Animations Ereignisses ab.
+description: Ruft eine Beschreibung eines angegebenen Animationsereignisses ab.
 ms.assetid: 7fb3def5-8df2-458d-b68e-5d540fd0a738
-title: 'ID3DXAnimationController:: GetEventDesc-Methode (D3dx9anim. h)'
+title: ID3DXAnimationController::GetEventDesc-Methode (D3dx9anim.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -14,16 +14,16 @@ api_type:
 api_location:
 - d3dx9.lib
 - d3dx9.dll
-ms.openlocfilehash: 9f717c032358dd921be2df1c8a84d1aa02a7a93a
-ms.sourcegitcommit: 14010c34b35fa268046c7683f021f86de08ddd0a
+ms.openlocfilehash: bc113788a8eb6b64accfcba8c58dd3a3512e17601ec02ce5dd33349628c69212
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "106357278"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118987940"
 ---
-# <a name="id3dxanimationcontrollergeteventdesc-method"></a>ID3DXAnimationController:: GetEventDesc-Methode
+# <a name="id3dxanimationcontrollergeteventdesc-method"></a>ID3DXAnimationController::GetEventDesc-Methode
 
-Ruft eine Beschreibung eines angegebenen Animations Ereignisses ab.
+Ruft eine Beschreibung eines angegebenen Animationsereignisses ab.
 
 ## <a name="syntax"></a>Syntax
 
@@ -41,21 +41,21 @@ HRESULT GetEventDesc(
 
 <dl> <dt>
 
-*hevent* \[ in\]
+*hEvent* \[ In\]
 </dt> <dd>
 
 Typ: **[ **D3DXEVENTHANDLE**](id3dxanimationcontroller.md)**
 
-Ereignis Handle für ein Animations Ereignis, das beschrieben werden soll.
+Ereignishandle für ein zu beschreibende Animationsereignis.
 
 </dd> <dt>
 
-*PDE SC* \[ vorgenommen\]
+*pDesc* \[ out\]
 </dt> <dd>
 
 Typ: **[ **LPD3DXEVENT \_ DESC**](d3dxevent-desc.md)**
 
-Zeiger auf eine [**D3DXEVENT- \_ decoderstruktur**](d3dxevent-desc.md) , die eine Beschreibung des Animations Ereignisses enthält.
+Zeiger auf eine [**D3DXEVENT \_ DESC-Struktur,**](d3dxevent-desc.md) die eine Beschreibung des Animationsereignisses enthält.
 
 </dd> </dl>
 
@@ -63,7 +63,7 @@ Zeiger auf eine [**D3DXEVENT- \_ decoderstruktur**](d3dxevent-desc.md) , die ein
 
 Typ: **[ **HRESULT**](https://msdn.microsoft.com/library/Bb401631(v=MSDN.10).aspx)**
 
-Wenn die Methode erfolgreich ausgeführt wird, ist der Rückgabewert S \_ OK. Wenn die Methode fehlschlägt, wird der folgende Wert zurückgegeben: D3DERR \_ invalidcall.
+Wenn die Methode erfolgreich ist, lautet der Rückgabewert S \_ OK. Wenn die Methode fehlschlägt, wird der folgende Wert zurückgegeben: D3DERR \_ INVALIDCALL.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -71,12 +71,12 @@ Wenn die Methode erfolgreich ausgeführt wird, ist der Rückgabewert S \_ OK. We
 
 | Anforderung | Wert |
 |--------------------|----------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>D3dx9anim. h</dt> </dl> |
-| Bibliothek<br/> | <dl> <dt>D3dx9. lib</dt> </dl>   |
+| Header<br/>  | <dl> <dt>D3dx9anim.h</dt> </dl> |
+| Bibliothek<br/> | <dl> <dt>D3dx9.lib</dt> </dl>   |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 

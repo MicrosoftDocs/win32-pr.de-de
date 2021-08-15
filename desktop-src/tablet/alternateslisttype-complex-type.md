@@ -1,7 +1,7 @@
 ---
-description: Definiert den Typ, der die Liste der Erkennungs Alternativen für ein frei Hand Wort enthält.
+description: Definiert den Typ, der die Liste der Erkennungs alternativen Typen für ein Ink-Wort enthält.
 ms.assetid: 3e9e2af3-b8a1-4ef0-ab04-b4b44255d5c3
-title: Komplexer Typ von "Alternative ListType"
+title: AlternatesListType Complex Type
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -12,16 +12,16 @@ api_name:
 api_type:
 - Schema
 api_location: ''
-ms.openlocfilehash: 1e785d9425e003e5550b2b025fc73367b8e30b3f
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 9f0b501b83a2877006543687bdc1d29ba3db8cc06af362422af0990cae4f0c72
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "103958639"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118967799"
 ---
-# <a name="alternateslisttype-complex-type"></a>Komplexer Typ von "Alternative ListType"
+# <a name="alternateslisttype-complex-type"></a>AlternatesListType Complex Type
 
-Definiert den Typ, der die Liste der Erkennungs Alternativen für ein frei Hand Wort enthält.
+Definiert den Typ, der die Liste der Erkennungs alternativen Typen für ein Ink-Wort enthält.
 
 ``` syntax
 <xs:complexType name="AlternatesListType" />
@@ -33,7 +33,7 @@ Definiert den Typ, der die Liste der Erkennungs Alternativen für ein frei Hand 
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows XP Tablet PC Edition \[ Desktop-Apps\]<br/> |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur Desktop-Apps der XP Tablet PC Edition \[\]<br/> |
 | Unterstützte Mindestversion (Server)<br/> | Nicht unterstützt<br/>                                     |
 
 

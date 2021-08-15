@@ -1,6 +1,6 @@
 ---
-description: Weitere Informationen finden Sie in der API. jetclosefilinput Stance-Methode.
-title: API. jetclosefilinput Stance-Methode
+description: 'Weitere Informationen finden Sie unter: Api.JetCloseFileInstance-Methode'
+title: Api.JetCloseFileInstance-Methode
 TOCTitle: 'JetCloseFileInstance method '
 ms:assetid: M:Microsoft.Isam.Esent.Interop.Api.JetCloseFileInstance(Microsoft.Isam.Esent.Interop.JET_INSTANCE,Microsoft.Isam.Esent.Interop.JET_HANDLE)
 ms:mtpsurl: https://msdn.microsoft.com/library/microsoft.isam.esent.interop.api.jetclosefileinstance(v=EXCHG.10)
@@ -24,19 +24,19 @@ api_type:
 api_location:
 - Microsoft.Isam.Esent.Interop.dll
 ROBOTS: INDEX,FOLLOW
-ms.openlocfilehash: 8ac29dec4032d83197a57746789afc770d84ec30
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 04ca76f5c96a34c6cd552eefc6ff383e6ca31634b03f33637674fa7b347b22d2
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106343026"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118983520"
 ---
-# <a name="apijetclosefileinstance-method"></a>API. jetclosefilinput Stance-Methode
+# <a name="apijetclosefileinstance-method"></a>Api.JetCloseFileInstance-Methode
 
-Schließt eine Datei, die mit jetopenfileinstance geöffnet wurde, nachdem die Daten aus dieser Datei mit jetreadfileinstance extrahiert wurden.
+Schließt eine Datei, die mit JetOpenFileInstance geöffnet wurde, nachdem die Daten aus dieser Datei mit JetReadFileInstance extrahiert wurden.
 
-**Namespace:**  [Microsoft. ISAM. ESENT. Interop](./microsoft.isam.esent.interop-namespace.md)  
-**Assembly:**  Microsoft. ISAM. ESENT. Interop (in Microsoft.Isam.Esent.Interop.dll)
+**Namespace:**  [Microsoft.Isam.Esent.Interop](./microsoft.isam.esent.interop-namespace.md)  
+**Assembly:**  Microsoft.Isam.Esent.Interop (in Microsoft.Isam.Esent.Interop.dll)
 
 ## <a name="syntax"></a>Syntax
 
@@ -62,23 +62,23 @@ public static void JetCloseFileInstance(
 #### <a name="parameters"></a>Parameter
 
   - instance  
-    Typ: [Microsoft.ISAM.ESENT.Interop.JET_INSTANCE](./jet-instance-structure.md)  
+    Typ: [Microsoft.Isam.Esent.Interop.JET_INSTANCE](./jet-instance-structure.md)  
     
-    Die zu verwendende-Instanz.
+    Die zu verwendende -Instanz.
 
 <!-- end list -->
 
   - Handlebezeichner  
-    Typ: [Microsoft.ISAM.ESENT.Interop.JET_HANDLE](./jet-handle-structure.md)  
+    Typ: [Microsoft.Isam.Esent.Interop.JET_HANDLE](./jet-handle-structure.md)  
     
-    Das Handle, das geschlossen werden soll.
+    Das zu schließende Handle.
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
-#### <a name="reference"></a>Referenz
+#### <a name="reference"></a>Verweis
 
 [API-Klasse](./api-class.md)
 
-[API-Mitglieder](./api-members.md)
+[API-Member](./api-members.md)
 
-[Microsoft. ISAM. ESENT. Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)
+[Microsoft.Isam.Esent.Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)

@@ -1,8 +1,8 @@
 ---
-description: Konvertiert ein Datum im VT- \_ Datumsformat in das CIM-DateTime-Format.
+description: Konvertiert ein Datum im VT \_ DATE-Format in das CIM-DateTime-Format.
 ms.assetid: 24c39d44-22ac-44ac-9e05-72a5b666ab19
 ms.tgt_platform: multiple
-title: "' Slibemdatetime. SetVarDate '-Methode (wbemdisp. h)"
+title: SWbemDateTime.SetVarDate-Methode (Wbemdisp.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -15,20 +15,20 @@ api_type:
 - COM
 api_location:
 - Wbemdisp.dll
-ms.openlocfilehash: 8641bad2c59f100b689c74e23faf727bc80d2f49
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 56d193bd2faffd51507ec4a913c7ee068b055dcf45ca756e801431659768c47d
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "104348888"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119050098"
 ---
-# <a name="swbemdatetimesetvardate-method"></a>Slibemdatetime. SetVarDate-Methode
+# <a name="swbemdatetimesetvardate-method"></a>SWbemDateTime.SetVarDate-Methode
 
-Die **SetVarDate** -Methode des [**"slibemdatetime**](swbemdatetime.md) "-Objekts konvertiert ein Datum im Format " **VT \_ Date** " in das [CIM-DateTime](date-and-time-format.md) -Format.
+Die **SetVarDate-Methode** des [**SWbemDateTime-Objekts**](swbemdatetime.md) konvertiert ein Datum im **VT \_ DATE-Format** in das [CIM datetime-Format.](date-and-time-format.md)
 
-Ein **VT- \_ Datums** Wert ist ein Variant-DateTime-Wert, der von Visual Basic und ActiveX verwendet wird.
+Ein **VT \_ DATE-Wert** ist ein variant datetime-Wert, der Visual Basic und ActiveX wird.
 
-Eine Erläuterung dieser Syntax finden Sie unter [Dokument Konventionen für die Skript-API](document-conventions-for-the-scripting-api.md).
+Eine Erläuterung dieser Syntax finden Sie unter [Dokumentkonventionen für die Skripterstellungs-API.](document-conventions-for-the-scripting-api.md)
 
 ## <a name="syntax"></a>Syntax
 
@@ -46,17 +46,17 @@ SWbemDateTime.SetVarDate( _
 
 <dl> <dt>
 
-*vdate* \[ in\]
+*vdate* \[ In\]
 </dt> <dd>
 
-Der Variant-Datumswert zum Festlegen des-Objekts. Dieser Parameter muss das **VT \_ Date** -Format aufweisen.
+Der Variant-Datumswert zum Festlegen des -Objekts. Dieser Parameter muss im **VT \_ DATE-Format** vorliegen.
 
 </dd> <dt>
 
-*bislocal* \[ in, optional\]
+*bIsLocal* \[ in, optional\]
 </dt> <dd>
 
-Wenn **true**, wird *vdate* als Ortszeit interpretiert, und die koordinierte Weltzeit (UTC)-Eigenschaft enthält die Ortszeit, die in den korrekten UTC-Offset konvertiert wird. Wenn *bislocal den* Wert **false** aufweist, wird *vdate* direkt in einen UTC-Wert mit einem Offset von 0 (null) konvertiert.
+True **gibt an,** *dass vdate* als lokale Zeit interpretiert wird, und die koordinierte Weltzeit (UTC)-Eigenschaft enthält die Ortszeit, die in den richtigen UTC-Offset konvertiert wird. Wenn *bIsLocal* **FALSE ist,** wird *vdate* direkt in einen UTC-Wert mit einem Offset von 0 (null) konvertiert.
 
 </dd> </dl>
 
@@ -66,28 +66,28 @@ Diese Methode gibt keinen Wert zurück.
 
 ## <a name="error-codes"></a>Fehlercodes
 
-Nach Abschluss der **SetVarDate** -Methode kann das [Err](/previous-versions//sbf5ze0e(v=vs.85)) -Objekt den Fehlercode in der folgenden Liste enthalten.
+Nach Abschluss der **SetVarDate-Methode** enthält das [Err-Objekt](/previous-versions//sbf5ze0e(v=vs.85)) möglicherweise den Fehlercode in der folgenden Liste.
 
 <dl> <dt>
 
-**wbemErrInvalidSyntax** -2147749921 (0x80041021)
+**wbemErrInvalidSyntax** – 2147749921 (0x80041021)
 </dt> <dd>
 
-Das Format von *vdate* ist ungültig.
+Das Format *von vdate* ist ungültig.
 
 </dd> </dl>
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Nach einem erfolgreichen Aufruf von **SetVarDate** wird der [**DateTime**](datetime.md) -Wert als absoluter DateTime-Wert anstelle eines Intervalls interpretiert, und die [**isinterval**](swbemdatetime-isinterval.md) -Eigenschaft ist auf **false** festgelegt.
+Nach einem erfolgreichen Aufruf von **SetVarDate** wird der [**DATETIME-Wert**](datetime.md) als absoluter datetime-Wert anstelle eines Intervalls interpretiert, und die [**IsInterval-Eigenschaft**](swbemdatetime-isinterval.md) wird auf **FALSE festgelegt.**
 
-Die intrinsische Visual Basic-oder VBScript-Funktion [CDate](/previous-versions//2dt118h2(v=vs.85)) stellt einen [**DateTime**](datetime.md) -Wert im **VT- \_ Datums** Format für die Eingabe in **SetVarDate** bereit.
+Die systeminterne Visual Basic- oder VBScript-Funktion [CDate](/previous-versions//2dt118h2(v=vs.85)) stellt einen [**datetime-Wert**](datetime.md) im **VT \_ DATE-Format** für die Eingabe in **SetVarDate zur Verfügung.**
 
 ## <a name="examples"></a>Beispiele
 
-Beispiele für die Verwendung des Objekts " [**slibemdatetime**](swbemdatetime.md) " zum Konvertieren von CIM- [**DateTime**](datetime.md) -Werten in das bzw. aus dem **DateTime** -oder **VT \_ Date** -Format finden Sie unter [WMI-Tasks: Datums-und Uhrzeitangaben](wmi-tasks--dates-and-times.md). Eine Beschreibung des CIM- **DateTime** -Formats finden Sie unter [Datums-und Uhrzeit Format](date-and-time-format.md).
+Beispiele für die Verwendung des [**SWbemDateTime-Objekts**](swbemdatetime.md) zum Konvertieren von CIM [**DATETIME-Werten**](datetime.md) in und aus dem **FILETIME-Format** oder dem **VT \_ DATE-Format** finden Sie unter [WMI Tasks: Dates and Times](wmi-tasks--dates-and-times.md). Eine Beschreibung des CIM **DATETIME-Formats** finden Sie unter [Datums- und Uhrzeitformat.](date-and-time-format.md)
 
-Im Codebeispiel [Convert Date to WMI Date-Time Format](https://Gallery.TechNet.Microsoft.Com/33beff76-1b5f-4ba1-a8ea-5e124eb74306) VBScript in der TechNet Gallery wird SetVarDate verwendet, um einen regulären Datums-/Uhrzeitwert in das UTC-Datums-/Uhrzeitformat zu konvertieren.
+Im Codebeispiel Convert [Date to WMI Date-Time Format](https://Gallery.TechNet.Microsoft.Com/33beff76-1b5f-4ba1-a8ea-5e124eb74306) VBScript im TechNet Gallery wird SetVarDate verwendet, um einen regulären Datums-/Uhrzeitwert in das UTC-Format für Datum und Uhrzeit zu konvertieren.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -97,25 +97,25 @@ Im Codebeispiel [Convert Date to WMI Date-Time Format](https://Gallery.TechNet.M
 |-------------------------------------|-----------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows Vista<br/>                                                                |
 | Unterstützte Mindestversion (Server)<br/> | Windows Server 2008<br/>                                                          |
-| Header<br/>                   | <dl> <dt>Wbemdisp. h</dt> </dl>   |
-| Typbibliothek<br/>             | <dl> <dt>Wbemdisp. tlb</dt> </dl> |
+| Header<br/>                   | <dl> <dt>Wbemdisp.h</dt> </dl>   |
+| Typbibliothek<br/>             | <dl> <dt>Wbemdisp.tlb</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>Wbemdisp.dll</dt> </dl> |
-| CLSID<br/>                    | CLSID- \_ Swap-DateTime<br/>                                                         |
-| IID<br/>                      | IID \_ iswbemdatetime<br/>                                                          |
+| CLSID<br/>                    | CLSID \_ SWbemDateTime<br/>                                                         |
+| IID<br/>                      | IID \_ ISWbemDateTime<br/>                                                          |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**' Swap DateTime. SetFileTime '**](swbemdatetime-setfiletime.md)
+[**SWbemDateTime.SetFileTime**](swbemdatetime-setfiletime.md)
 </dt> <dt>
 
-[**Swap-DateTime**](swbemdatetime.md)
+[**SWbemDateTime**](swbemdatetime.md)
 </dt> <dt>
 
-[**DateTime**](datetime.md)
+[**Datetime**](datetime.md)
 </dt> </dl>
 
  

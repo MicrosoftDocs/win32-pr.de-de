@@ -1,27 +1,27 @@
 ---
 title: AsyncAdd3ImplicitExample
-description: In diesem Beispiel wird die Implementierung einer komplexen asynchronen Funktion mit wsasyncexecute veranschaulicht.
+description: Dieses Beispiel veranschaulicht die Implementierung einer komplexen asynchronen Funktion mithilfe von WsAsyncExecute.
 ms.assetid: f84de03f-ecfb-494e-9a1d-a96d399a41c0
 keywords:
 - AsyncAdd3ImplicitExample-Webdienste für Windows
-- Wwsapi
+- WWSAPI
 - WWS
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 20f6654d1db938d6b52ea4e3c02b307bd29d7277
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: 16c833f7120cf357c88ebe8a3c6d0e1cb1d45899125f6df5d66ab4b96fd52d0f
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "103711591"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118963439"
 ---
 # <a name="asyncadd3implicitexample"></a>AsyncAdd3ImplicitExample
 
-In diesem Beispiel wird die Implementierung einer komplexen asynchronen Funktion mit [**wsasyncexecute**](/windows/desktop/api/WebServices/nf-webservices-wsasyncexecute)veranschaulicht.
+In diesem Beispiel wird die Implementierung einer komplexen asynchronen Funktion mit [**WsAsyncExecute**](/windows/desktop/api/WebServices/nf-webservices-wsasyncexecute)veranschaulicht.
 
-Im Beispiel wird eine asynchrone Funktion "addthree" implementiert, die drei ganze Zahlen addiert, indem Sie auf einer vorhandenen Add-Funktion aufbaut, die zwei ganze Zahlen asynchron hinzufügen kann.
+Im Beispiel wird eine asynchrone Funktion "AddThree" implementiert, die drei ganze Zahlen addiert, indem sie auf einer vorhandenen Add-Funktion aufbaut, die zwei ganze Zahlen asynchron hinzufügen kann.
 
-## <a name="asyncadd3implicitcpp"></a>AsyncAdd3Implicit. cpp
+## <a name="asyncadd3implicitcpp"></a>AsyncAdd3Implicit.cpp
 
 
 ```C++
@@ -328,9 +328,9 @@ int __cdecl wmain(int argc, __in_ecount(argc) wchar_t **argv)
 
 
 
- 
+ 
 
- 
+ 
 
 
 

@@ -1,5 +1,5 @@
 ---
-description: Proxy Funktion für die Methode "kreatebitmap".
+description: Proxyfunktion für die CreateBitmap-Methode.
 ms.assetid: 5647521b-231d-4819-97ab-4dfb5f796211
 title: IWICImagingFactory_CreateBitmap_Proxy-Funktion
 ms.topic: reference
@@ -14,16 +14,16 @@ api_type:
 api_location:
 - Windowscodecs.dll
 - Wincodec.lib
-ms.openlocfilehash: 56684de0280ae27bf2ec1e900bd718faec4733fe
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 978946b5c22d8e4cb3427dbf27e5bb745efde259b48811a2b2a82e3721108184
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106373250"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118965199"
 ---
-# <a name="iwicimagingfactory_createbitmap_proxy-function"></a>IWICImagingFactory-Funktion zum Generieren von \_ \_ Funktionen
+# <a name="iwicimagingfactory_createbitmap_proxy-function"></a>IWICImagingFactory-Funktion \_ \_ "CreateBitmap-Proxy"
 
-Proxy Funktion für die Methode " [**kreatebitmap**](/windows/desktop/api/Wincodec/nf-wincodec-iwicimagingfactory-createbitmap) ".
+Proxyfunktion für die [**CreateBitmap-Methode.**](/windows/desktop/api/Wincodec/nf-wincodec-iwicimagingfactory-createbitmap)
 
 ## <a name="syntax"></a>Syntax
 
@@ -45,50 +45,50 @@ HRESULT IWICImagingFactory_CreateBitmap_Proxy(
 
 <dl> <dt>
 
-*pfactory* \[ in\]
+*pFactory* \[ In\]
 </dt> <dd>
 
-Typ: **[**IWICImagingFactory**](/windows/desktop/api/Wincodec/nn-wincodec-iwicimagingfactory) \** _
+Typ: **[ **IWICImagingFactory**](/windows/desktop/api/Wincodec/nn-wincodec-iwicimagingfactory)\***
 
 </dd> <dt>
 
-_uiWidth * \[ in\]
+*uiWidth* \[ In\]
 </dt> <dd>
 
-Typ: **uint**
+Typ: **UINT**
 
 Die Breite der neuen Bitmap.
 
 </dd> <dt>
 
-*uiheight* \[ in\]
+*uiHeight* \[ In\]
 </dt> <dd>
 
-Typ: **uint**
+Typ: **UINT**
 
 Die Höhe der neuen Bitmap.
 
 </dd> <dt>
 
-*Pixel Format* \[ in\]
+*pixelFormat* \[ In\]
 </dt> <dd>
 
-Typ: **reberwicpixelformatguid**
+Typ: **REFWICPixelFormatGUID**
 
-Das Pixel Format der neuen Bitmap.
+Das Pixelformat der neuen Bitmap.
 
 </dd> <dt>
 
-*Option* \[ in\]
+*Option* \[ In\]
 </dt> <dd>
 
-Typ: **[ **wicbitmapkreatecacheoption**](/windows/desktop/api/Wincodec/ne-wincodec-wicbitmapcreatecacheoption)**
+Typ: **[ **WICBitmapCreateCacheOption**](/windows/desktop/api/Wincodec/ne-wincodec-wicbitmapcreatecacheoption)**
 
-Die Cache Erstellungs Optionen der neuen Bitmap.
+Die Optionen für die Cacheerstellung der neuen Bitmap.
 
 </dd> <dt>
 
-*ppibitmap* \[ vorgenommen\]
+*ppIBitmap* \[ out\]
 </dt> <dd>
 
 Typ: **[ **IWICBitmap**](/windows/desktop/api/Wincodec/nn-wincodec-iwicbitmap)\*\***
@@ -101,7 +101,7 @@ Ein Zeiger, der einen Zeiger auf die neue Bitmap empfängt.
 
 Typ: **HRESULT**
 
-Wenn diese Funktion erfolgreich ausgeführt wird, gibt Sie **S \_ OK** zurück. Andernfalls wird ein **HRESULT** -Fehlercode zurückgegeben.
+Wenn diese Funktion erfolgreich ausgeführt wird, wird **S \_ OK** zurückgegeben. Andernfalls wird ein **HRESULT-Fehlercode** zurückgegeben.
 
 ## <a name="remarks"></a>Bemerkungen
 
@@ -111,9 +111,9 @@ Wenn diese Funktion erfolgreich ausgeführt wird, gibt Sie **S \_ OK** zurück. 
 
 | Anforderung | Wert |
 |-------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Windows XP mit SP2, nur Windows Vista \[ -Desktop-Apps\]<br/>                                                                                              |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2008 \[ -Desktop-Apps\]<br/>                                                                                                             |
-| DLL<br/>                      | <dl> <dt>Windowscodecs.dll; </dt> <dt>Wincodec. lib</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows NUR XP mit SP2, Windows \[ Vista-Desktop-Apps\]<br/>                                                                                              |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2008-Desktop-Apps\]<br/>                                                                                                             |
+| DLL<br/>                      | <dl> <dt>Windowscodecs.dll; </dt> <dt>Wincodec.lib</dt> </dl> |
 
 
 

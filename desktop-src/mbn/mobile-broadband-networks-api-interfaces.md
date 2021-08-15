@@ -1,60 +1,60 @@
 ---
-description: Die mobile Breitband-API definiert und verwendet die folgenden Schnittstellen.
+description: Die Mobile Breitband-API definiert und verwendet die folgenden Schnittstellen.
 ms.assetid: db6c9635-16f9-4266-9d0e-daeb58fac588
 title: Mobile Breitband-API-Schnittstellen
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: d822fbbe095b31fac5bc3cdfc881c929e73ca33f
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: f620ad34b0b1af953f0e387ebddd41987d38696f5c17ddac82b3528ce031bd23
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106353103"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118975290"
 ---
 # <a name="mobile-broadband-api-interfaces"></a>Mobile Breitband-API-Schnittstellen
 
-Die mobile Breitband-API definiert und verwendet die folgenden Schnittstellen.
+Die Mobile Breitband-API definiert und verwendet die folgenden Schnittstellen.
 
--   [**Imbnconnection**](/windows/desktop/api/mbnapi/nn-mbnapi-imbnconnection)
--   [**Imbnconnectioncontext**](/windows/desktop/api/mbnapi/nn-mbnapi-imbnconnectioncontext)
--   [**Imbnconnectioncontextevents**](/windows/desktop/api/mbnapi/nn-mbnapi-imbnconnectioncontextevents)
--   [**Imbnconnectionevents**](/windows/desktop/api/mbnapi/nn-mbnapi-imbnconnectionevents)
--   [**Imbnconnectionmanager**](/windows/desktop/api/mbnapi/nn-mbnapi-imbnconnectionmanager)
--   [**Imbnconnectionmanagerevents**](/windows/desktop/api/mbnapi/nn-mbnapi-imbnconnectionmanagerevents)
--   [**Imbnconnectionprofile**](/windows/desktop/api/mbnapi/nn-mbnapi-imbnconnectionprofile)
--   [**Imbnconnectionprofileevents**](/windows/desktop/api/mbnapi/nn-mbnapi-imbnconnectionprofileevents)
--   [**Imbnconnectionprofilemanager**](/windows/desktop/api/mbnapi/nn-mbnapi-imbnconnectionprofilemanager)
--   [**Imbnconnectionprofilemanagerevents**](/windows/desktop/api/mbnapi/nn-mbnapi-imbnconnectionprofilemanagerevents)
--   [**Imbndecoeservice**](/windows/desktop/api/mbnapi/nn-mbnapi-imbndeviceservice)
--   [**Imbndeviceservicescontext**](/windows/desktop/api/mbnapi/nn-mbnapi-imbndeviceservicescontext)
--   [**Imbndeviceservicesevents**](/windows/desktop/api/mbnapi/nn-mbnapi-imbndeviceservicesevents)
--   [**Imbndebug Service Manager**](/windows/desktop/api/mbnapi/nn-mbnapi-imbndeviceservicesmanager)
--   [**Imbninterface**](/windows/desktop/api/mbnapi/nn-mbnapi-imbninterface)
--   [**Imbninterfaceevents**](/windows/desktop/api/mbnapi/nn-mbnapi-imbninterfaceevents)
--   [**Imbninterfakemanager**](/windows/desktop/api/mbnapi/nn-mbnapi-imbninterfacemanager)
--   [**Imbninterfakemanagerevents**](/windows/desktop/api/mbnapi/nn-mbnapi-imbninterfacemanagerevents)
--   [**Imbnmulticarrier**](/windows/desktop/api/mbnapi/nn-mbnapi-imbnmulticarrier)
--   [**Imbnmulticarrierevents**](/windows/desktop/api/mbnapi/nn-mbnapi-imbnmulticarrierevents)
--   [**Imbnpin**](/windows/desktop/api/mbnapi/nn-mbnapi-imbnpin)
--   [**Imbnpinevents**](/windows/desktop/api/mbnapi/nn-mbnapi-imbnpinevents)
--   [**Imbnpinmanager**](/windows/desktop/api/mbnapi/nn-mbnapi-imbnpinmanager)
--   [**Imbnpinmanagerevents**](/windows/desktop/api/mbnapi/nn-mbnapi-imbnpinmanagerevents)
--   [**Imbnradio**](/windows/desktop/api/mbnapi/nn-mbnapi-imbnradio)
--   [**Imbnradioevents**](/windows/desktop/api/mbnapi/nn-mbnapi-imbnradioevents)
--   [**Imbnregistration**](/windows/desktop/api/mbnapi/nn-mbnapi-imbnregistration)
--   [**Imbnregistrationevents**](/windows/desktop/api/mbnapi/nn-mbnapi-imbnregistrationevents)
--   [**Imbnserviceactivation**](/windows/desktop/api/mbnapi/nn-mbnapi-imbnserviceactivation)
--   [**Imbnserviceactivationevents**](/windows/desktop/api/mbnapi/nn-mbnapi-imbnserviceactivationevents)
--   [**Imbnsignal**](/windows/desktop/api/mbnapi/nn-mbnapi-imbnsignal)
--   [**Imbnsignalevents**](/windows/desktop/api/mbnapi/nn-mbnapi-imbnsignalevents)
--   [**Imbnsms**](/windows/desktop/api/mbnapi/nn-mbnapi-imbnsms)
--   [**Imbnsmsconfiguration**](/windows/desktop/api/mbnapi/nn-mbnapi-imbnsmsconfiguration)
--   [**Imbnsmabvents**](/windows/desktop/api/mbnapi/nn-mbnapi-imbnsmsevents)
--   [**Imbnsmslesmsgpdu**](/windows/desktop/api/mbnapi/nn-mbnapi-imbnsmsreadmsgpdu)
--   [**Imbnsmslesmsgtextcdma**](/windows/desktop/api/mbnapi/nn-mbnapi-imbnsmsreadmsgtextcdma)
--   [**Imbnabonnezinformationen**](/windows/desktop/api/mbnapi/nn-mbnapi-imbnsubscriberinformation)
--   [**Imbnvendorspecificevents**](/windows/desktop/api/mbnapi/nn-mbnapi-imbnvendorspecificevents)
--   [**Imbnvendorspecificoperation**](/windows/desktop/api/mbnapi/nn-mbnapi-imbnvendorspecificoperation)
+-   [**IMbnConnection**](/windows/desktop/api/mbnapi/nn-mbnapi-imbnconnection)
+-   [**IMbnConnectionContext**](/windows/desktop/api/mbnapi/nn-mbnapi-imbnconnectioncontext)
+-   [**IMbnConnectionContextEvents**](/windows/desktop/api/mbnapi/nn-mbnapi-imbnconnectioncontextevents)
+-   [**IMbnConnectionEvents**](/windows/desktop/api/mbnapi/nn-mbnapi-imbnconnectionevents)
+-   [**IMbnConnectionManager**](/windows/desktop/api/mbnapi/nn-mbnapi-imbnconnectionmanager)
+-   [**IMbnConnectionManagerEvents**](/windows/desktop/api/mbnapi/nn-mbnapi-imbnconnectionmanagerevents)
+-   [**IMbnConnectionProfile**](/windows/desktop/api/mbnapi/nn-mbnapi-imbnconnectionprofile)
+-   [**IMbnConnectionProfileEvents**](/windows/desktop/api/mbnapi/nn-mbnapi-imbnconnectionprofileevents)
+-   [**IMbnConnectionProfileManager**](/windows/desktop/api/mbnapi/nn-mbnapi-imbnconnectionprofilemanager)
+-   [**IMbnConnectionProfileManagerEvents**](/windows/desktop/api/mbnapi/nn-mbnapi-imbnconnectionprofilemanagerevents)
+-   [**IMbnDeviceService**](/windows/desktop/api/mbnapi/nn-mbnapi-imbndeviceservice)
+-   [**IMbnDeviceServicesContext**](/windows/desktop/api/mbnapi/nn-mbnapi-imbndeviceservicescontext)
+-   [**IMbnDeviceServicesEvents**](/windows/desktop/api/mbnapi/nn-mbnapi-imbndeviceservicesevents)
+-   [**IMbnDeviceServicesManager**](/windows/desktop/api/mbnapi/nn-mbnapi-imbndeviceservicesmanager)
+-   [**IMbnInterface**](/windows/desktop/api/mbnapi/nn-mbnapi-imbninterface)
+-   [**IMbnInterfaceEvents**](/windows/desktop/api/mbnapi/nn-mbnapi-imbninterfaceevents)
+-   [**IMbnInterfaceManager**](/windows/desktop/api/mbnapi/nn-mbnapi-imbninterfacemanager)
+-   [**IMbnInterfaceManagerEvents**](/windows/desktop/api/mbnapi/nn-mbnapi-imbninterfacemanagerevents)
+-   [**IMbnMultiCarrier**](/windows/desktop/api/mbnapi/nn-mbnapi-imbnmulticarrier)
+-   [**IMbnMultiCarrierEvents**](/windows/desktop/api/mbnapi/nn-mbnapi-imbnmulticarrierevents)
+-   [**IMbnPin**](/windows/desktop/api/mbnapi/nn-mbnapi-imbnpin)
+-   [**IMbnPinEvents**](/windows/desktop/api/mbnapi/nn-mbnapi-imbnpinevents)
+-   [**IMbnPinManager**](/windows/desktop/api/mbnapi/nn-mbnapi-imbnpinmanager)
+-   [**IMbnPinManagerEvents**](/windows/desktop/api/mbnapi/nn-mbnapi-imbnpinmanagerevents)
+-   [**IMbnRadio**](/windows/desktop/api/mbnapi/nn-mbnapi-imbnradio)
+-   [**IMbn EnumerationEvents**](/windows/desktop/api/mbnapi/nn-mbnapi-imbnradioevents)
+-   [**IMbnRegistration**](/windows/desktop/api/mbnapi/nn-mbnapi-imbnregistration)
+-   [**IMbnRegistrationEvents**](/windows/desktop/api/mbnapi/nn-mbnapi-imbnregistrationevents)
+-   [**IMbnServiceActivation**](/windows/desktop/api/mbnapi/nn-mbnapi-imbnserviceactivation)
+-   [**IMbnServiceActivationEvents**](/windows/desktop/api/mbnapi/nn-mbnapi-imbnserviceactivationevents)
+-   [**IMbnSignal**](/windows/desktop/api/mbnapi/nn-mbnapi-imbnsignal)
+-   [**IMbnSignalEvents**](/windows/desktop/api/mbnapi/nn-mbnapi-imbnsignalevents)
+-   [**IMbnSms**](/windows/desktop/api/mbnapi/nn-mbnapi-imbnsms)
+-   [**IMbnSmsConfiguration**](/windows/desktop/api/mbnapi/nn-mbnapi-imbnsmsconfiguration)
+-   [**IMbnSmsEvents**](/windows/desktop/api/mbnapi/nn-mbnapi-imbnsmsevents)
+-   [**IMbnSmsReadMsgPdu**](/windows/desktop/api/mbnapi/nn-mbnapi-imbnsmsreadmsgpdu)
+-   [**IMbnSmsReadMsgTextCdma**](/windows/desktop/api/mbnapi/nn-mbnapi-imbnsmsreadmsgtextcdma)
+-   [**IMbnSubscriberInformation**](/windows/desktop/api/mbnapi/nn-mbnapi-imbnsubscriberinformation)
+-   [**IMbnVendorSpecificEvents**](/windows/desktop/api/mbnapi/nn-mbnapi-imbnvendorspecificevents)
+-   [**IMbnVendorSpecificOperation**](/windows/desktop/api/mbnapi/nn-mbnapi-imbnvendorspecificoperation)
 
  
 

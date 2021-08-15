@@ -1,28 +1,28 @@
 ---
-description: Sie können statische Eigenschaften mithilfe von partiellen Wert Maps lokalisieren.
+description: Sie können statische Eigenschaften mithilfe von Teilwertzuordnungen lokalisieren.
 ms.assetid: 67e91454-c065-4ab2-a373-245c9392c71c
 ms.tgt_platform: multiple
 title: Lokalisieren statischer Eigenschaften
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: ecaba200b7880991d349c6e0c0196c88ffa54b11
-ms.sourcegitcommit: 168d11879cb9fd89d26f826482725c0a626be00f
+ms.openlocfilehash: 4c51999c68a05e8d7b8cf3fd8c5218bc171931303d86a50c04f32c5d80efb308
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/16/2021
-ms.locfileid: "104356166"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119050728"
 ---
 # <a name="localizing-static-properties"></a>Lokalisieren statischer Eigenschaften
 
-Sie können statische Eigenschaften mithilfe von partiellen Wert Maps lokalisieren.
+Sie können statische Eigenschaften mithilfe von Teilwertzuordnungen lokalisieren.
 
-Im folgenden Verfahren wird beschrieben, wie statische Eigenschaften mithilfe von partiellen Wert Maps mit regulären Ausdrücken lokalisiert werden können.
+Im folgenden Verfahren wird beschrieben, wie statische Eigenschaften mithilfe von Teilwertzuordnungen mit regulären Ausdrücken lokalisiert werden können.
 
-**So verwenden Sie Werte Zuordnungen zum Lokalisieren statischer Eigenschaften**
+**So verwenden Sie Wertzuordnungen zum Lokalisieren statischer Eigenschaften**
 
-1.  Erstellen Sie eine MOF-Master Datei (mastervm. MOF).
+1.  Erstellen Sie eine MOF-Masterdatei (Mastervm.mof).
 
-    Das folgende Codebeispiel kann verwendet werden, um eine MOF-Master Datei (mastervm. MOF) zu erstellen.
+    Das folgende Codebeispiel kann verwendet werden, um eine MOF-Masterdatei (Mastervm.mof) zu erstellen.
 
     ```syntax
     [Locale(0x409)]
@@ -36,17 +36,17 @@ Im folgenden Verfahren wird beschrieben, wie statische Eigenschaften mithilfe vo
     };
     ```
 
-2.  Erstellen Sie sprachneutrale und sprachspezifische Versionen der MOF-Datei.
+2.  Erstellen Sie die sprachneutralen und sprachspezifischen Versionen der MOF-Datei.
 
-    Geben Sie den folgenden Befehl an einer Eingabeaufforderung ein, um die sprach neutralen und sprachspezifischen Versionen der MOF-Datei zu erstellen.
+    Geben Sie den folgenden Befehl an einer Eingabeaufforderung ein, um die sprachneutrale und sprachspezifische Version der MOF-Datei zu erstellen.
 
     ```syntax
     mofcomp -MOF:LnVm.mof -MFL:LsVm.mfl -Amendment:MS_409 MasterVm.mof
     ```
 
-    Der MOF-Compiler generiert die sprachspezifischen und sprach neutralen MOF-Dateien lnvm. mof und lsvm. MFL. Die American English-Werte für die [Numbers](numbers.md) -Eigenschaft befinden sich in der MFL-Datei für den American English-Namespace.
+    Der MOF-Compiler generiert die sprachspezifischen und sprachneutralen MOF-Dateien LnVm.mof und LsVm.mfl. Die Amerikanischen Englisch-Werte für die [Numbers-Eigenschaft](numbers.md) werden in der MFL-Datei für den Namespace "American English" platziert.
 
-    Im folgenden Codebeispiel wird der Inhalt der Datei "lsvm. MFL" veranschaulicht.
+    Das folgende Codebeispiel zeigt den Inhalt der Datei LsVm.mfl.
 
     ```syntax
     #pragma namespace("\\\\.\\root\\default")
@@ -62,7 +62,7 @@ Im folgenden Verfahren wird beschrieben, wie statische Eigenschaften mithilfe vo
     };
     ```
 
-3.  Kompilieren Sie die beiden MOF-Dateien, und speichern Sie die Klassen Informationen im CIM-Repository.
+3.  Kompilieren Sie die beiden MOF-Dateien, und speichern Sie die Klasseninformationen im CIM-Repository.
 
     Geben Sie den folgenden Befehl an einer Eingabeaufforderung ein, um die beiden MOF-Dateien zu kompilieren.
 
@@ -71,7 +71,7 @@ Im folgenden Verfahren wird beschrieben, wie statische Eigenschaften mithilfe vo
     Mofcomp LsVm.mfl
     ```
 
-4.  Lokalisieren Sie die MFL-Datei für andere Gebiets Schemas.
+4.  Lokalisieren Sie die MFL-Datei für andere Länder.
 
     Das folgende Codebeispiel zeigt den Inhalt einer MFL-Datei für den französischen Namespace.
 
@@ -90,12 +90,12 @@ Im folgenden Verfahren wird beschrieben, wie statische Eigenschaften mithilfe vo
     };
     ```
 
-Das Ergebnis ist, dass sowohl der Anzeige Name als auch der Wert der [Numbers](numbers.md) -Eigenschaft vom Gebiets Schema des angemeldeten Benutzers abhängig sind. Wenn der Benutzer ein nicht bereitgestelltes Gebiets Schema angibt, stammen die Standard qualifiziererdaten aus dem englischen \_ Namespace (MS 409).
+Das Ergebnis ist, dass sowohl der Anzeigename als auch der Wert der [Numbers-Eigenschaft](numbers.md) vom Locale des angemeldeten Benutzers abhängen. Wenn der Benutzer ein nicht bereitgestelltes Locale angibt, stammen die Standardqualifiziererdaten aus dem englischen Namespace (ms \_ 409).
 
-Die Auswirkung dieses Entwurfs ist, dass jeder Zeichen folgen Wert als Such Bezeichner verwendet wird, der nicht lokalisiert werden kann. Wenn Sie dieses Schema definieren, müssen Sie sicherstellen, dass der Wert, den der Anbieter einfügt, Gebiets Schema unabhängig ist.
+Die Folge dieses Entwurfs ist, dass jeder Zeichenfolgenwert als Suchbezeichner verwendet wird, der nicht lokalisiert werden kann. Beim Definieren dieses Schemas müssen Sie sicherstellen, dass der Wert, den der Anbieter einrückt, vom Lokalen unabhängig ist.
 
 > [!Note]  
-> WMI bietet derzeit keine Laufzeitunterstützung für die Zuordnung von Werten zu Zeichen folgen, die von Qualifizierern definiert werden. Die Interpretation der empfohlenen Syntax ist die Zuständigkeit der Anwendung.
+> WMI bietet derzeit keine Laufzeitunterstützung für die Zuordnung von Werten zu Zeichenfolgen, die von Qualifizierern definiert werden. Die Interpretation der vorgeschlagenen Syntax liegt in der Verantwortung der Anwendung.
 
  
 

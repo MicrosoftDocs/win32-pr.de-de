@@ -6,16 +6,16 @@
     - name: Informationen zur Netzwerkverwaltung
       href: about-network-management.md
       items:
-        - name: Netzwerk Verwaltungs Funktionsgruppen
+        - name: Netzwerkverwaltungsfunktionengruppen
           href: network-management-function-groups.md
           items:
-            - name: Benachrichtigungsfunktionen
+            - name: Warnungsfunktionen
               href: alert-functions.md
-            - name: Apibuffer-Funktionen
+            - name: ApiBuffer-Funktionen
               href: apibuffer-functions.md
-            - name: Verzeichnisdienst Funktionen
+            - name: Verzeichnisdienstfunktionen
               href: directory-service-functions.md
-            - name: Get-Funktionen
+            - name: Get Functions
               href: get-functions.md
             - name: Gruppenfunktionen
               href: group-functions.md
@@ -23,169 +23,169 @@
               href: local-group-functions.md
             - name: Nachrichtenfunktionen
               href: message-functions.md
-            - name: Netfile-Funktionen
+            - name: NetFile-Funktionen
               href: netfile-functions.md
-            - name: Remote Utility-Funktionen
+            - name: Remotehilfsprogrammfunktionen
               href: remote-utility-functions.md
-            - name: Zeit Plan Funktionen
+            - name: Schedule Functions
               href: schedule-functions.md
-            - name: Server Funktionen
+            - name: Serverfunktionen
               href: server-functions.md
-            - name: Server-und Arbeitsstations Transport-Funktionen
+            - name: Server- und Arbeitsstationstransportfunktionen
               href: server-and-workstation-transport-functions.md
-            - name: Sitzungs Funktionen
+            - name: Sitzungsfunktionen
               href: session-functions.md
-            - name: Freigabe Funktionen
+            - name: Freigeben von Funktionen
               href: share-functions.md
             - name: Verwenden von Funktionen
               href: use-functions.md
-            - name: Benutzer Funktionen
+            - name: Benutzerfunktionen
               href: user-functions.md
-            - name: Modale Benutzer Funktionen
+            - name: Modale Benutzerfunktionen
               href: user-modal-functions.md
-            - name: Benutzer Funktionen für Arbeitsstationen und Arbeitsstationen
+            - name: Benutzerfunktionen für Arbeitsstationen und Arbeitsstationen
               href: workstation-and-workstation-user-functions.md
-        - name: Sicherheitsanforderungen für die Netzwerk Verwaltungsfunktion
+        - name: Sicherheitsanforderungen für Netzwerkverwaltungsfunktionen
           href: security-requirements-for-the-network-management-functions.md
           items:
-            - name: Anforderungen an die Netzwerk Verwaltungsfunktionen auf Active Directory-Domäne Controllern
+            - name: Anforderungen für Netzwerkverwaltungsfunktionen auf Active Directory-Domäne Controllern
               href: requirements-for-network-management-functions-on-active-directory-domain-controllers.md
-            - name: Anforderungen an Netzwerk Verwaltungsfunktionen auf Servern und Arbeitsstationen
+            - name: Anforderungen für Netzwerkverwaltungsfunktionen auf Servern und Arbeitsstationen
               href: requirements-for-network-management-functions-on-servers-and-workstations.md
-        - name: Zuordnung von ADSI-Schnittstellen zu den Netzwerk Verwaltungsfunktionen
+        - name: Zuordnen von ADSI-Schnittstellen zu den Netzwerkverwaltungsfunktionen
           href: mapping-adsi-interfaces-to-the-network-management-functions.md
-        - name: Netzwerk Verwaltungsdaten
+        - name: Netzwerkverwaltungsdaten
           href: network-management-data.md
           items:
-            - name: Puffer der Netzwerk Verwaltungsfunktion
+            - name: Netzwerkverwaltungsfunktionspuffer
               href: network-management-function-buffers.md
-            - name: Puffer Längen der Netzwerk Verwaltungsfunktion
+            - name: Pufferlängen der Netzwerkverwaltungsfunktion
               href: network-management-function-buffer-lengths.md
-            - name: API-Daten Ausrichtung
+            - name: API-Datenausrichtung
               href: api-data-alignment.md
-            - name: Eingebettete Zeichen folgen
+            - name: Eingebettete Zeichenfolgen
               href: embedded-strings.md
-            - name: Enumerationshandles wieder aufnehmen
+            - name: Enumeration Resume Handles
               href: enumeration-resume-handles.md
-            - name: Funktions Status
+            - name: Funktionsstatus
               href: function-status.md
             - name: NLS-Unterstützung
               href: nls-support.md
-            - name: Parameter Fehlerberichterstattung
+            - name: Parameterfehlerberichterstattung
               href: parameter-error-reporting.md
-            - name: RPC-Puffer Zuordnungs Fehler
+            - name: RPC-Pufferzuordnungsfehler
               href: rpc-buffer-allocation-errors.md
             - name: Veraltete Informationsfelder
               href: obsolete-information-fields.md
     - name: Verwenden der Netzwerkverwaltung
       href: using-network-management.md
       items:
-        - name: Suchen des vollständigen Namens eines Benutzers
+        - name: Suchen nach dem vollständigen Namen eines Benutzers
           href: looking-up-a-users-full-name.md
-        - name: 'Erzwingen, dass ein Benutzer das Anmelde Kennwort ändert'
+        - name: Erzwingen eines Benutzers zum Ändern des Anmeldekennworts
           href: forcing-a-user-to-change-the-logon-password.md
         - name: Ändern von Elementen von Benutzerinformationen
           href: changing-elements-of-user-information.md
-        - name: Erstellen eines neuen Computer Kontos
+        - name: Erstellen eines neuen Computerkontos
           href: creating-a-new-computer-account.md
         - name: Erstellen einer lokalen Gruppe und Hinzufügen eines Benutzers
           href: creating-a-local-group-and-adding-a-user.md
-        - name: Suchen von Text nach Fehler Code Nummern
+        - name: Suchen von Text nach Fehlercodenummern
           href: looking-up-text-for-error-code-numbers.md
     - name: Referenz zur Netzwerkverwaltung
       href: network-management-reference.md
       items:
-        - name: Netzwerkverwaltungs-Enumerationen
+        - name: Netzwerkverwaltungsenumerationen
           href: network-management-enumerations.md
           items:
             - name: DSREG_JOIN_TYPE
               href: /windows/win32/api/lmjoin/ne-lmjoin-dsreg_join_type
-        - name: Netzwerk Verwaltungsfunktionen
+        - name: Netzwerkverwaltungsfunktionen
           href: network-management-functions.md
           items:
-            - name: Getnetscheduleaccountinformation
+            - name: GetNetScheduleAccountInformation
               href: /windows/desktop/api/AtAcct/nf-atacct-getnetscheduleaccountinformation
-            - name: Netaccessadd
+            - name: NetAccessAdd
               href: /windows/desktop/api/lmaccess/nf-lmaccess-netaccessadd
-            - name: Network Access Check
+            - name: NetAccessCheck
               href: /previous-versions/windows/desktop/legacy/aa370291(v=vs.85)
-            - name: Netaccessdel
+            - name: NetAccessDel
               href: /windows/desktop/api/lmaccess/nf-lmaccess-netaccessdel
-            - name: Netaccessenum
+            - name: NetAccessEnum
               href: /windows/desktop/api/lmaccess/nf-lmaccess-netaccessenum
-            - name: Netaccessgetinfo
+            - name: NetAccessGetInfo
               href: /windows/desktop/api/lmaccess/nf-lmaccess-netaccessgetinfo
-            - name: Netaccessgetuserperms
+            - name: NetAccessGetUserPerms
               href: /windows/desktop/api/lmaccess/nf-lmaccess-netaccessgetuserperms
-            - name: Netaccesseintinfo
+            - name: NetAccessSetInfo
               href: /windows/desktop/api/lmaccess/nf-lmaccess-netaccesssetinfo
-            - name: Netaddalternativen Computername
+            - name: NetAddAlternateComputerName
               href: /windows/desktop/api/Lmjoin/nf-lmjoin-netaddalternatecomputername
-            - name: Netzwerkertraise
+            - name: NetAlertRais
               href: /windows/desktop/api/Lmalert/nf-lmalert-netalertraise
-            - name: '"Ntalertraiseex"'
+            - name: NetAlertR generationsex
               href: /windows/desktop/api/Lmalert/nf-lmalert-netalertraiseex
-            - name: '"Ntapibuffer" zuordnen'
+            - name: NetApiBufferAllocate
               href: /windows/desktop/api/Lmapibuf/nf-lmapibuf-netapibufferallocate
-            - name: '"Nettapibufferfree"'
+            - name: NetApiBufferFree
               href: /windows/desktop/api/Lmapibuf/nf-lmapibuf-netapibufferfree
-            - name: '"Nettapibufferrezuordnen"'
+            - name: NetApiBufferReallocate
               href: /windows/desktop/api/Lmapibuf/nf-lmapibuf-netapibufferreallocate
-            - name: '"Nettapibuffersize"'
+            - name: NetApiBufferSize
               href: /windows/desktop/api/Lmapibuf/nf-lmapibuf-netapibuffersize
-            - name: Netauditclear
+            - name: NetAuditClear
               href: netauditclear.md
-            - name: Netauditread
+            - name: NetAuditRead
               href: netauditread.md
-            - name: Netauditwrite
+            - name: NetAuditWrite
               href: netauditwrite.md
-            - name: Netconfigget
+            - name: NetConfigGet
               href: netconfigget.md
-            - name: Netconfiggetall
+            - name: NetConfigGetAll
               href: netconfiggetall.md
-            - name: Netconfigset
+            - name: NetConfigSet
               href: netconfigset.md
-            - name: Netkreateprovisioningpackage
+            - name: NetCreateProvisioningPackage
               href: /windows/desktop/api/Lmjoin/nf-lmjoin-netcreateprovisioningpackage
-            - name: '"Nettenreeratecomputernames"'
+            - name: NetEnumerateComputerNames
               href: /windows/desktop/api/Lmjoin/nf-lmjoin-netenumeratecomputernames
-            - name: '"Nterrorlogclear"'
+            - name: NetErrorLogClear
               href: neterrorlogclear.md
-            - name: '"Netterrorlogread"'
+            - name: NetErrorLogRead
               href: neterrorlogread.md
-            - name: '"Netterrorlogwrite"'
+            - name: NetErrorLogWrite
               href: neterrorlogwrite.md
-            - name: Netfreeaadjoininformation
+            - name: NetFreeAadJoinInformation
               href: /windows/desktop/api/lmjoin/nf-lmjoin-netfreeaadjoininformation
-            - name: Netgetaadjoininformation
+            - name: NetGetAadJoinInformation
               href: /windows/desktop/api/lmjoin/nf-lmjoin-netgetaadjoininformation
-            - name: Netgetanydcname
+            - name: NetGetAnyDCName
               href: /windows/desktop/api/Lmaccess/nf-lmaccess-netgetanydcname
             - name: NetGetDCName
               href: /windows/desktop/api/Lmaccess/nf-lmaccess-netgetdcname
-            - name: Netgetdisplayinformationindex
+            - name: NetGetDisplayInformationIndex
               href: /windows/desktop/api/Lmaccess/nf-lmaccess-netgetdisplayinformationindex
-            - name: Netgetjoinableous
+            - name: NetGetJoinableOUs
               href: /windows/desktop/api/Lmjoin/nf-lmjoin-netgetjoinableous
-            - name: Netgetjoininformation
+            - name: NetGetJoinInformation
               href: /windows/desktop/api/Lmjoin/nf-lmjoin-netgetjoininformation
-            - name: '"NetGroupAdd"'
+            - name: NetGroupAdd
               href: /windows/desktop/api/Lmaccess/nf-lmaccess-netgroupadd
-            - name: Netgroupadduser
+            - name: NetGroupAddUser
               href: /windows/desktop/api/Lmaccess/nf-lmaccess-netgroupadduser
-            - name: Netgroupdel
+            - name: NetGroupDel
               href: /windows/desktop/api/Lmaccess/nf-lmaccess-netgroupdel
-            - name: Netgroupdelta User
+            - name: NetGroupDelUser
               href: /windows/desktop/api/Lmaccess/nf-lmaccess-netgroupdeluser
-            - name: Netgroupum
+            - name: NetGroupEnum
               href: /windows/desktop/api/Lmaccess/nf-lmaccess-netgroupenum
-            - name: Netgroupgetinfo
+            - name: NetGroupGetInfo
               href: /windows/desktop/api/Lmaccess/nf-lmaccess-netgroupgetinfo
-            - name: Netgroupgetusers
+            - name: NetGroupGetUsers
               href: /windows/desktop/api/Lmaccess/nf-lmaccess-netgroupgetusers
-            - name: Netgroupeintinfo
+            - name: NetGroupSetInfo
               href: /windows/desktop/api/Lmaccess/nf-lmaccess-netgroupsetinfo
-            - name: Netgroupsetusers
+            - name: NetGroupSetUsers
               href: /windows/desktop/api/Lmaccess/nf-lmaccess-netgroupsetusers
             - name: NetJoinDomain
               href: /windows/desktop/api/Lmjoin/nf-lmjoin-netjoindomain
@@ -197,141 +197,141 @@
               href: /windows/desktop/api/Lmaccess/nf-lmaccess-netlocalgroupaddmembers
             - name: NetLocalGroupDel
               href: /windows/desktop/api/Lmaccess/nf-lmaccess-netlocalgroupdel
-            - name: Netlocalgroupdelta Member
+            - name: NetLocalGroupDelMember
               href: /windows/desktop/api/lmaccess/nf-lmaccess-netlocalgroupdelmember
-            - name: Netlocalgroupdelta Members
+            - name: NetLocalGroupDelMembers
               href: /windows/desktop/api/Lmaccess/nf-lmaccess-netlocalgroupdelmembers
-            - name: Netlocalgroupum
+            - name: NetLocalGroupEnum
               href: /windows/desktop/api/Lmaccess/nf-lmaccess-netlocalgroupenum
-            - name: Netlocalgroupgetinfo
+            - name: NetLocalGroupGetInfo
               href: /windows/desktop/api/Lmaccess/nf-lmaccess-netlocalgroupgetinfo
-            - name: Netlocalgroupgetmembers
+            - name: NetLocalGroupGetMembers
               href: /windows/desktop/api/Lmaccess/nf-lmaccess-netlocalgroupgetmembers
-            - name: Netlocalgroupeintinfo
+            - name: NetLocalGroupSetInfo
               href: /windows/desktop/api/Lmaccess/nf-lmaccess-netlocalgroupsetinfo
-            - name: Netlocalgroupsetmembers
+            - name: NetLocalGroupSetMembers
               href: /windows/desktop/api/Lmaccess/nf-lmaccess-netlocalgroupsetmembers
-            - name: Netmessagebuffersend
+            - name: NetMessageBufferSend
               href: /windows/desktop/api/Lmmsg/nf-lmmsg-netmessagebuffersend
-            - name: Netmessagenameadd
+            - name: NetMessageNameAdd
               href: /windows/desktop/api/Lmmsg/nf-lmmsg-netmessagenameadd
-            - name: Netmessagenamedel
+            - name: NetMessageNameDel
               href: /windows/desktop/api/Lmmsg/nf-lmmsg-netmessagenamedel
-            - name: Netmessagenameenum
+            - name: NetMessageNameEnum
               href: /windows/desktop/api/Lmmsg/nf-lmmsg-netmessagenameenum
-            - name: Netmessagenamegetinfo
+            - name: NetMessageNameGetInfo
               href: /windows/desktop/api/Lmmsg/nf-lmmsg-netmessagenamegetinfo
             - name: NetProvisionComputerAccount
               href: /windows/desktop/api/Lmjoin/nf-lmjoin-netprovisioncomputeraccount
             - name: NetQueryDisplayInformation
               href: /windows/desktop/api/Lmaccess/nf-lmaccess-netquerydisplayinformation
-            - name: '"Nettremuvealternativen Computername"'
+            - name: NetRemoveAlternateComputerName
               href: /windows/desktop/api/Lmjoin/nf-lmjoin-netremovealternatecomputername
-            - name: '"Nettremotecomputerunter stützt"'
+            - name: NetRemoteComputerSupports
               href: /windows/desktop/api/Lmremutl/nf-lmremutl-netremotecomputersupports
-            - name: '"Nettremotetod"'
+            - name: NetRemoteTOD
               href: /windows/desktop/api/Lmremutl/nf-lmremutl-netremotetod
-            - name: '"Nettrenamemachineindomain"'
+            - name: NetRenameMachineInDomain
               href: /windows/desktop/api/Lmjoin/nf-lmjoin-netrenamemachineindomain
-            - name: '"Nettrequestofflinedomainjoin"'
+            - name: NetRequestOfflineDomainJoin
               href: /windows/desktop/api/Lmjoin/nf-lmjoin-netrequestofflinedomainjoin
-            - name: '"Nettrequestprovisioningpackagein Stall"'
+            - name: NetRequestProvisioningPackageInstall
               href: /windows/desktop/api/Lmjoin/nf-lmjoin-netrequestprovisioningpackageinstall
             - name: NetScheduleJobAdd
               href: /windows/desktop/api/Lmat/nf-lmat-netschedulejobadd
             - name: NetScheduleJobDel
               href: /windows/desktop/api/Lmat/nf-lmat-netschedulejobdel
-            - name: Netschedulejobenum
+            - name: NetScheduleJobEnum
               href: /windows/desktop/api/Lmat/nf-lmat-netschedulejobenum
-            - name: Netschedulejobgetinfo
+            - name: NetScheduleJobGetInfo
               href: /windows/desktop/api/Lmat/nf-lmat-netschedulejobgetinfo
-            - name: Netservercomputernameadd
+            - name: NetServerComputerNameAdd
               href: /windows/desktop/api/Lmserver/nf-lmserver-netservercomputernameadd
-            - name: Netservercomputernamedel
+            - name: NetServerComputerNameDel
               href: /windows/desktop/api/Lmserver/nf-lmserver-netservercomputernamedel
-            - name: Netserverdiskerum
+            - name: NetServerDiskEnum
               href: /windows/desktop/api/Lmserver/nf-lmserver-netserverdiskenum
             - name: NetServerEnum
               href: /windows/desktop/api/Lmserver/nf-lmserver-netserverenum
             - name: NetServerGetInfo
               href: /windows/desktop/api/Lmserver/nf-lmserver-netservergetinfo
-            - name: Netserverabfo
+            - name: NetServerSetInfo
               href: /windows/desktop/api/Lmserver/nf-lmserver-netserversetinfo
-            - name: Netservertransportadd
+            - name: NetServerTransportAdd
               href: /windows/desktop/api/Lmserver/nf-lmserver-netservertransportadd
-            - name: Netservertransportaddex
+            - name: NetServerTransportAddEx
               href: /windows/desktop/api/Lmserver/nf-lmserver-netservertransportaddex
-            - name: Netservertransportdel
+            - name: NetServerTransportDel
               href: /windows/desktop/api/Lmserver/nf-lmserver-netservertransportdel
-            - name: Netservertransportenum
+            - name: NetServerTransportEnum
               href: /windows/desktop/api/Lmserver/nf-lmserver-netservertransportenum
             - name: NetServiceControl
               href: netservicecontrol.md
-            - name: Netserviceaufumum
+            - name: NetServiceEnum
               href: netserviceenum.md
-            - name: Netservicegetinfo
+            - name: NetServiceGetInfo
               href: netservicegetinfo.md
-            - name: Netserviceingestall
+            - name: NetServiceInstall
               href: netserviceinstall.md
-            - name: Netsetprimarycomputername
+            - name: NetSetPrimaryComputerName
               href: /windows/desktop/api/Lmjoin/nf-lmjoin-netsetprimarycomputername
-            - name: Netunjoindomain
+            - name: NetUnjoinDomain
               href: /windows/desktop/api/Lmjoin/nf-lmjoin-netunjoindomain
-            - name: '"Nettuseadd"'
+            - name: NetUseAdd
               href: /windows/desktop/api/Lmuse/nf-lmuse-netuseadd
-            - name: '"Nettusedel"'
+            - name: NetUseDel
               href: /windows/desktop/api/Lmuse/nf-lmuse-netusedel
-            - name: '"Nettuseenum"'
+            - name: NetUseEnum
               href: /windows/desktop/api/Lmuse/nf-lmuse-netuseenum
-            - name: '"Nettusegetinfo"'
+            - name: NetUseGetInfo
               href: /windows/desktop/api/Lmuse/nf-lmuse-netusegetinfo
-            - name: '"Nettuseradd"'
+            - name: NetUserAdd
               href: /windows/desktop/api/Lmaccess/nf-lmaccess-netuseradd
-            - name: '"Nettuserchangepassword"'
+            - name: NetUserChangePassword
               href: /windows/desktop/api/Lmaccess/nf-lmaccess-netuserchangepassword
-            - name: '"Nettuserdel"'
+            - name: NetUserDel
               href: /windows/desktop/api/Lmaccess/nf-lmaccess-netuserdel
-            - name: '"Nettuserenum"'
+            - name: NetUserEnum
               href: /windows/desktop/api/Lmaccess/nf-lmaccess-netuserenum
-            - name: '"Nettusergetgroups"'
+            - name: NetUserGetGroups
               href: /windows/desktop/api/Lmaccess/nf-lmaccess-netusergetgroups
-            - name: '"Nettusergetinfo"'
+            - name: NetUserGetInfo
               href: /windows/desktop/api/Lmaccess/nf-lmaccess-netusergetinfo
-            - name: '"Nettusergetlocalgroups"'
+            - name: NetUserGetLocalGroups
               href: /windows/desktop/api/Lmaccess/nf-lmaccess-netusergetlocalgroups
-            - name: '"Nettusermodalsget"'
+            - name: NetUserModalsGet
               href: /windows/desktop/api/Lmaccess/nf-lmaccess-netusermodalsget
-            - name: '"Nettusermodalsset"'
+            - name: NetUserModalsSet
               href: /windows/desktop/api/Lmaccess/nf-lmaccess-netusermodalsset
-            - name: '"Nettusersetgroups"'
+            - name: NetUserSetGroups
               href: /windows/desktop/api/Lmaccess/nf-lmaccess-netusersetgroups
-            - name: '"Nettusersetinfo"'
+            - name: NetUserSetInfo
               href: /windows/desktop/api/Lmaccess/nf-lmaccess-netusersetinfo
-            - name: Netvalidatename
+            - name: NetValidateName
               href: /windows/desktop/api/Lmjoin/nf-lmjoin-netvalidatename
-            - name: Netvalidatepasswordpolicyfree
+            - name: NetValidatePasswordPolicyFree
               href: /windows/desktop/api/Lmaccess/nf-lmaccess-netvalidatepasswordpolicyfree
             - name: NetValidatePasswordPolicy
               href: /windows/desktop/api/Lmaccess/nf-lmaccess-netvalidatepasswordpolicy
-            - name: Netwkstagetinfo
+            - name: NetWkstaGetInfo
               href: /windows/desktop/api/Lmwksta/nf-lmwksta-netwkstagetinfo
-            - name: Netwkstasetinfo
+            - name: NetWkstaSetInfo
               href: /windows/desktop/api/Lmwksta/nf-lmwksta-netwkstasetinfo
-            - name: Netwkstaturansport
+            - name: NetWkstaTransportAdd
               href: /windows/desktop/api/lmwksta/nf-lmwksta-netwkstatransportadd
-            - name: Netwkstaturansport
+            - name: NetWkstaTransportDel
               href: /windows/desktop/api/lmwksta/nf-lmwksta-netwkstatransportdel
-            - name: Netwkstatus-Sportenum
+            - name: NetWkstaTransportEnum
               href: /windows/desktop/api/Lmwksta/nf-lmwksta-netwkstatransportenum
-            - name: Netwkstauserereration
+            - name: NetWkstaUserEnum
               href: /windows/desktop/api/Lmwksta/nf-lmwksta-netwkstauserenum
             - name: NetWkstaUserGetInfo
               href: /windows/desktop/api/Lmwksta/nf-lmwksta-netwkstausergetinfo
-            - name: Netwkstauserot
+            - name: NetWkstaUserSetInfo
               href: /windows/desktop/api/Lmwksta/nf-lmwksta-netwkstausersetinfo
-            - name: Setnetscheduleaccountinformation
+            - name: SetNetScheduleAccountInformation
               href: /windows/desktop/api/AtAcct/nf-atacct-setnetscheduleaccountinformation
-        - name: Netzwerk Verwaltungsstrukturen
+        - name: Netzwerkverwaltungsstrukturen
           href: network-management-structures.md
           items:
             - name: ADMIN_OTHER_INFO
@@ -402,7 +402,7 @@
               href: /windows/win32/api/Lmaccess/ns-lmaccess-net_validate_persisted_fields
             - name: NETSETUP_PROVISIONING_PARAMS
               href: /windows/win32/api/Lmjoin/ns-lmjoin-netsetup_provisioning_params
-            - name: IDL-Definitionen im Offline-Domänen Beitritt
+            - name: IDL-Definitionen für Den Offlinedomänen join
               href: ./odj-idl.md
             - name: ODJ_BLOB
               href: ./odj-odj_blob.md
@@ -646,12 +646,12 @@
               href: /windows/win32/api/Lmwksta/ns-lmwksta-wksta_user_info_1
             - name: WKSTA_USER_INFO_1101
               href: /windows/win32/api/Lmwksta/ns-lmwksta-wksta_user_info_1101
-        - name: Netzwerk Verwaltungs Makros
+        - name: Netzwerkverwaltungsmakros
           href: network-management-macros.md
           items:
             - name: ALERT_OTHER_INFO
               href: /windows/desktop/api/Lmalert/nf-lmalert-alert_other_info
             - name: ALERT_VAR_DATA
               href: /windows/desktop/api/Lmalert/nf-lmalert-alert_var_data
-        - name: Fehler Codes der Netzwerkverwaltung
+        - name: Fehlercodes für die Netzwerkverwaltung
           href: network-management-error-codes.md

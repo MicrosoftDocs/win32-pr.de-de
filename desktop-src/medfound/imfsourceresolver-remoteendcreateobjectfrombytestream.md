@@ -1,19 +1,19 @@
 ---
-description: 'Remotable-Version der imfsourceresolver:: endkreateobjectfromb-Methode.'
+description: Remotable-Version der METHODE 1.011111111771111222222222222222222222222222222222222222222
 ms.assetid: 6e4e9ace-e18a-45df-b20c-28e352fcdee7
-title: Remoteendkreateobjectfromb testream (mfobjects. h)
+title: RemoteEndCreateObjectFromByteStream (Mfobjects.h)
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 5ba53b7d22ed79cb97edba034dc4c61d9aa27fa8
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 8ce7e04368e099f00f0bd9d3f87141b5f8224f9c935f258ec9b4f7018cb7f364
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104130149"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118974299"
 ---
-# <a name="remoteendcreateobjectfrombytestream"></a>Remoteendkreateobjectfromb testream
+# <a name="remoteendcreateobjectfrombytestream"></a>RemoteEndCreateObjectFromByteStream
 
-Remotable-Version der [**imfsourceresolver:: endkreateobjectfromb**](/windows/desktop/api/mfidl/nf-mfidl-imfsourceresolver-endcreateobjectfrombytestream) -Methode.
+Remotable-Version der METHODE 1.011111111771111222222222222222222222222222222222222222222 [](/windows/desktop/api/mfidl/nf-mfidl-imfsourceresolver-endcreateobjectfrombytestream)
 
 ``` syntax
 [call_as(EndCreateObjectFromByteStream)]
@@ -24,9 +24,9 @@ HRESULT RemoteEndCreateObjectFromByteStream(
 );
 ```
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Anwendungen können diese Methode nicht direkt aufzurufen, und-Objekte implementieren diese Methode nicht. Die-Methode wird nicht in der vtable für die-Schnittstelle angezeigt. Wenn [**endkreateobjectfromb-testream**](/windows/desktop/api/mfidl/nf-mfidl-imfsourceresolver-endcreateobjectfrombytestream) über Prozess Grenzen hinweg aufgerufen wird, übersetzt der Media Foundation Proxy/Stub-DLL den Aufruf in einen Aufruf der Remote Methode und übersetzt ihn anschließend wieder.
+Anwendungen können diese Methode nicht direkt aufrufen, und Objekte implementieren diese Methode nicht. Die -Methode wird nicht in der vtable für die -Schnittstelle angezeigt. Wenn [**EndCreateObjectFromByteStream**](/windows/desktop/api/mfidl/nf-mfidl-imfsourceresolver-endcreateobjectfrombytestream) prozessübergreifend aufgerufen wird, übersetzt die Media Foundation-Proxy-/Stub-DLL den Aufruf in einen Aufruf der Remotemethode und übersetzt ihn dann zurück.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -34,18 +34,18 @@ Anwendungen können diese Methode nicht direkt aufzurufen, und-Objekte implement
 
 | Anforderung | Wert |
 |-------------------------------------|----------------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Windows Vista \[ -Desktop-Apps \| UWP-apps\]<br/>                                                    |
-| Unterstützte Mindestversion (Server)<br/> | Windows Server 2008 \[ -Desktop-Apps \| UWP-apps\]<br/>                                              |
-| Header<br/>                   | <dl> <dt>Mfobjects. h (Include mfdl. h)</dt> </dl> |
-| Bibliothek<br/>                  | <dl> <dt>Mfuuid. lib</dt> </dl>                    |
+| Unterstützte Mindestversion (Client)<br/> | Windows \[Vista-Desktop-Apps \| UWP-Apps\]<br/>                                                    |
+| Unterstützte Mindestversion (Server)<br/> | Windows UWP-Apps für Server \[ 2008-Desktop-Apps \|\]<br/>                                              |
+| Header<br/>                   | <dl> <dt>Mfobjects.h (einschließlich Mfidl.h)</dt> </dl> |
+| Bibliothek<br/>                  | <dl> <dt>Mfuuid.lib</dt> </dl>                    |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**IMF sourceresolver**](/windows/desktop/api/mfidl/nn-mfidl-imfsourceresolver)
+[**VERERBUNGQuelleResolver**](/windows/desktop/api/mfidl/nn-mfidl-imfsourceresolver)
 </dt> </dl>
 
  

@@ -1,29 +1,29 @@
 ---
-title: Untypedserviceexample
-description: Dieses Beispiel zeigt, wie ein nicht typisierter Dienst mit dem Dienstmodell implementiert wird. Das Dienstmodell in diesem Fall stellt die Infrastruktur für die kesselplatte bereit.
+title: UnTypedServiceExample
+description: In diesem Beispiel wird gezeigt, wie ein nicht typischer Dienst mit dem Dienstmodell implementiert wird. Das Dienstmodell stellt in diesem Fall die Infrastruktur für Bausteine bereit.
 ms.assetid: 4235554e-19a8-4df7-97a5-2f7544a3c830
 keywords:
-- 'Untypedserviceexample: Native Webdienste'
-- Wwsapi
+- UnTypedServiceExample Native-Web-Services
+- WWSAPI
 - WWS
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: c69b5a70c6ed7ea00450092a6b34362426aaab38
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: b4c202c2fac54413294a7802d75b780128d3e7f2dc2916f67308a4c608e9a713
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "104036637"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119083104"
 ---
-# <a name="untypedserviceexample"></a>Untypedserviceexample
+# <a name="untypedserviceexample"></a>UnTypedServiceExample
 
-Dieses Beispiel zeigt, wie ein nicht typisierter Dienst mit dem Dienstmodell implementiert wird. Das Dienstmodell in diesem Fall stellt die Infrastruktur für die kesselplatte bereit.
+In diesem Beispiel wird gezeigt, wie ein nicht typischer Dienst mit dem Dienstmodell implementiert wird. Das Dienstmodell stellt in diesem Fall die Infrastruktur für Bausteine bereit.
 
--   [Untypedservice. cpp](#untypedservicecpp)
--   [PurchaseOrder. WSDL](#purchaseorderwsdl)
+-   [UnTypedService.cpp](#untypedservicecpp)
+-   [PurchaseOrder.wsdl](#purchaseorderwsdl)
 -   [Makefile](#makefile)
 
-## <a name="untypedservicecpp"></a>Untypedservice. cpp
+## <a name="untypedservicecpp"></a>UnTypedService.cpp
 
 
 ```C++
@@ -360,7 +360,7 @@ Exit:
 
 
 
-## <a name="purchaseorderwsdl"></a>PurchaseOrder. WSDL
+## <a name="purchaseorderwsdl"></a>PurchaseOrder.wsdl
 
 ``` syntax
 <wsdl:definitions 
@@ -504,9 +504,9 @@ clean:
     $(CLEANUP)
 ```
 
- 
+ 
 
- 
+ 
 
 
 

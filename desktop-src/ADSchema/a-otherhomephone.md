@@ -1,11 +1,11 @@
 ---
-title: Phone-Home-Sonstiges-Attribut
-description: Eine Liste der alternativen Telefonnummern für privat.
+title: Telefon-Home-Other-Attribut
+description: Eine Liste alternativer Telefonnummern zu Hause.
 ms.assetid: 502e0a9d-301c-4c2e-98c3-8efe75c8b0cf
 ms.tgt_platform: multiple
 keywords:
-- "\"Phone-Home-Other\"-Attribut AD-Schema"
-- Schema des OtherHomePhone-Attributs AD
+- Telefon-Home-Other-Attribut-AD-Schema
+- otherHomePhone-Attribut AD-Schema
 topic_type:
 - apiref
 api_name:
@@ -14,26 +14,26 @@ api_type:
 - Schema
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: e2ed3aa026a1e60bb644ddab81293921ac9b8271
-ms.sourcegitcommit: b77ace27b0432e7cd3863191b11926be032fbe2f
+ms.openlocfilehash: ecf4037d3ec3f77db0092833973b6b5b72143fec1bb65ba5fd3ab7f3ddf4b1b4
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "103859593"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118960149"
 ---
-# <a name="phone-home-other-attribute"></a>Phone-Home-Sonstiges-Attribut
+# <a name="phone-home-other-attribute"></a>Telefon-Home-Other-Attribut
 
-Eine Liste der alternativen Telefonnummern für privat.
+Eine Liste alternativer Telefonnummern zu Hause.
 
 
 
 | Eingabe | Wert |
 |-------------------|----------------------------------------------------------------------------------|
-| CN                | Telefon-privat (Sonstiges)                                                                 |
-| LDAP-Display-Name | otherHomePhone                                                                   |
+| CN                | Telefon-Home-Other                                                                 |
+| Ldap-Anzeigename | otherHomePhone                                                                   |
 | Size              | \-                                                                               |
-| Berechtigung aktualisieren  | Domänen Administrator oder Konto Besitzer.                                           |
-| Aktualisierungshäufigkeit  | Wenn der Benutzerdaten Satz erstellt und die Telefonnummer geändert werden muss. |
+| Aktualisieren von Berechtigungen  | Domänenadministrator oder Kontobesitzer.                                           |
+| Updatehäufigkeit  | Wenn der Datensatz des Benutzers erstellt wird und die Telefonnummer geändert werden muss. |
 | Attribute-Id      | 1.2.840.113556.1.2.277                                                           |
 | System-ID-GUID    | f0f8ffa2-1191-11d0-a060-00aa006c33ed                                             |
 | Syntax            | [**String(Unicode)**](s-string-unicode.md)                                      |
@@ -43,7 +43,7 @@ Eine Liste der alternativen Telefonnummern für privat.
 ## <a name="implementations"></a>Implementierungen
 
 -   [**Windows 2000 Server**](#windows-2000-server)
--   [**Windows Server 2003**](#windows-server-2003)
+-   [**Windows Server 2003**](#windows-server-2003)
 -   [**Windows Server 2003 R2**](#windows-server-2003-r2)
 -   [**Windows Server 2008**](#windows-server-2008)
 -   [**Windows Server 2008 R2**](#windows-server-2008-r2)
@@ -56,12 +56,12 @@ Eine Liste der alternativen Telefonnummern für privat.
 | Eingabe | Wert |
 |------------------------|--------------------------------------------------------------------|
 | Link-ID                | \-                                                                 |
-| MAPI-Id                | 0x3a2f                                                             |
+| MAPI-Id                | 0x3A2F                                                             |
 | System-Only            | False                                                              |
-| Ist-einwertig       | False                                                              |
+| Ist einwertig       | False                                                              |
 | Ist indiziert             | False                                                              |
 | Im globalen Katalog      | False                                                              |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                                       |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                                       |
 | Range-Lower            | 1                                                                  |
 | Range-Upper            | 64                                                                 |
 | Search-Flags           | 0x00000000                                                         |
@@ -70,19 +70,19 @@ Eine Liste der alternativen Telefonnummern für privat.
 
 
 
-## <a name="windows-server-2003"></a>Windows Server 2003
+## <a name="windows-server-2003"></a>Windows Server 2003
 
 
 
 | Eingabe | Wert |
 |------------------------|--------------------------------------------------------------------|
 | Link-ID                | \-                                                                 |
-| MAPI-Id                | 0x3a2f                                                             |
+| MAPI-Id                | 0x3A2F                                                             |
 | System-Only            | False                                                              |
-| Ist-einwertig       | False                                                              |
+| Ist einwertig       | False                                                              |
 | Ist indiziert             | False                                                              |
 | Im globalen Katalog      | False                                                              |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                                       |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                                       |
 | Range-Lower            | 1                                                                  |
 | Range-Upper            | 64                                                                 |
 | Search-Flags           | 0x00000000                                                         |
@@ -98,12 +98,12 @@ Eine Liste der alternativen Telefonnummern für privat.
 | Eingabe | Wert |
 |------------------------|--------------------------------------------------------------------|
 | Link-ID                | \-                                                                 |
-| MAPI-Id                | 0x3a2f                                                             |
+| MAPI-Id                | 0x3A2F                                                             |
 | System-Only            | False                                                              |
-| Ist-einwertig       | False                                                              |
+| Ist einwertig       | False                                                              |
 | Ist indiziert             | False                                                              |
 | Im globalen Katalog      | False                                                              |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                                       |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                                       |
 | Range-Lower            | 1                                                                  |
 | Range-Upper            | 64                                                                 |
 | Search-Flags           | 0x00000000                                                         |
@@ -119,12 +119,12 @@ Eine Liste der alternativen Telefonnummern für privat.
 | Eingabe | Wert |
 |------------------------|--------------------------------------------------------------------|
 | Link-ID                | \-                                                                 |
-| MAPI-Id                | 0x3a2f                                                             |
+| MAPI-Id                | 0x3A2F                                                             |
 | System-Only            | False                                                              |
-| Ist-einwertig       | False                                                              |
+| Ist einwertig       | False                                                              |
 | Ist indiziert             | False                                                              |
 | Im globalen Katalog      | False                                                              |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                                       |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                                       |
 | Range-Lower            | 1                                                                  |
 | Range-Upper            | 64                                                                 |
 | Search-Flags           | 0x00000000                                                         |
@@ -140,12 +140,12 @@ Eine Liste der alternativen Telefonnummern für privat.
 | Eingabe | Wert |
 |------------------------|--------------------------------------------------------------------|
 | Link-ID                | \-                                                                 |
-| MAPI-Id                | 0x3a2f                                                             |
+| MAPI-Id                | 0x3A2F                                                             |
 | System-Only            | False                                                              |
-| Ist-einwertig       | False                                                              |
+| Ist einwertig       | False                                                              |
 | Ist indiziert             | False                                                              |
 | Im globalen Katalog      | False                                                              |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                                       |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                                       |
 | Range-Lower            | 1                                                                  |
 | Range-Upper            | 64                                                                 |
 | Search-Flags           | 0x00000000                                                         |
@@ -161,12 +161,12 @@ Eine Liste der alternativen Telefonnummern für privat.
 | Eingabe | Wert |
 |------------------------|--------------------------------------------------------------------|
 | Link-ID                | \-                                                                 |
-| MAPI-Id                | 0x3a2f                                                             |
+| MAPI-Id                | 0x3A2F                                                             |
 | System-Only            | False                                                              |
-| Ist-einwertig       | False                                                              |
+| Ist einwertig       | False                                                              |
 | Ist indiziert             | False                                                              |
 | Im globalen Katalog      | False                                                              |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                                       |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                                       |
 | Range-Lower            | 1                                                                  |
 | Range-Upper            | 64                                                                 |
 | Search-Flags           | 0x00000000                                                         |

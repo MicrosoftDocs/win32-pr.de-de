@@ -1,30 +1,30 @@
 ---
-title: Sequenz Komprimierung
-description: Sequenz Komprimierung
+title: Sequenzkomprimierung
+description: Sequenzkomprimierung
 ms.assetid: ea24088d-6a52-4d4e-8496-5b6a6616f684
 keywords:
-- Videokomprimierungs-Manager (VCM), Sequenz Komprimierung
-- VCM (Videokomprimierungs-Manager), Sequenz Komprimierung
+- Videokomprimierungs-Manager (VCM), Sequenzkomprimierung
+- VCM (Videokomprimierungs-Manager),Sequenzkomprimierung
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 8485c31361540ae0e0e9569453bc610d10d88d3d
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: 5c930c1f2a3e73e21e63195129221aaa28017e5a8d59122be9d8cbf956b828bd
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "103947664"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119688870"
 ---
-# <a name="sequence-compression"></a>Sequenz Komprimierung
+# <a name="sequence-compression"></a>Sequenzkomprimierung
 
-Die Anwendung kann die Funktionen " [**icseqcompressframe**](/windows/desktop/api/Vfw/nf-vfw-icseqcompressframe)", " [**icseqcompressframestart**](/windows/desktop/api/Vfw/nf-vfw-icseqcompressframestart)" und " [**icseqcompressframeend**](/windows/desktop/api/Vfw/nf-vfw-icseqcompressframeend) " verwenden, um eine Sequenz von Frames zu komprimieren. Diese Funktionen verwenden die in der [**compvars**](/windows/desktop/api/Vfw/ns-vfw-compvars) -Struktur gespeicherten Daten. Anwendungen verwenden die Funktion [**iccompressorchoose**](/windows/desktop/api/Vfw/nf-vfw-iccompressorchoose) , um dem Benutzer zu ermöglichen, einen Kompressor auszuwählen, zu öffnen und die Komprimierungs Parameter in der **compvars** -Struktur festzulegen. Anwendungen können die Parameter in der Struktur jedoch manuell festlegen.
+Ihre Anwendung kann die Funktionen [**ICSeqCompressFrame,**](/windows/desktop/api/Vfw/nf-vfw-icseqcompressframe) [**ICSeqCompressFrameStart**](/windows/desktop/api/Vfw/nf-vfw-icseqcompressframestart)und [**ICSeqCompressFrameEnd**](/windows/desktop/api/Vfw/nf-vfw-icseqcompressframeend) verwenden, um eine Sequenz von Frames zu komprimieren. Diese Funktionen verwenden die in der [**COMPVARS-Struktur**](/windows/desktop/api/Vfw/ns-vfw-compvars) gespeicherten Daten. Anwendungen verwenden die [**ICCompressorChoose-Funktion,**](/windows/desktop/api/Vfw/nf-vfw-iccompressorchoose) um dem Benutzer zu ermöglichen, eine Kugel auszuwählen, zu öffnen und die Komprimierungsparameter in der **COMPVARS-Struktur** festzulegen. Anwendungen können die Parameter in der Struktur jedoch manuell festlegen.
 
-Bevor eine Anwendung damit beginnen kann, eine Sequenz von Frames zu komprimieren, muss Sie **icseqcompressframestart** verwenden, um die erforderlichen Ressourcen zuzuordnen. Nachdem die Ressourcen zugewiesen wurden, kann die Anwendung **icseqcompressframe** verwenden, um jeden Frame einzeln zu komprimieren. Die bei der Komprimierung der Sequenz verwendete Framerate und die Keyframe-Frequenz werden in Elementen der **compvars** -Struktur angegeben. Der Rückgabewert für **iccqcompressframe** verweist auf die komprimierten Daten.
+Bevor eine Anwendung mit der Komprimierung einer Sequenz von Frames beginnen kann, muss sie **ICSeqCompressFrameStart** verwenden, um die erforderlichen Ressourcen zuzuordnen. Nachdem die Ressourcen zugeordnet wurden, kann die Anwendung **ICSeqCompressFrame** verwenden, um jeden Frame einzeln zu komprimieren. Die Bildfrequenz und die Keyframefrequenz, die beim Komprimieren der Sequenz verwendet werden, werden in Membern der **COMPVARS-Struktur** angegeben. Der Rückgabewert für **ICSeqCompressFrame** zeigt auf die komprimierten Daten.
 
-Wenn eine Anwendung das Komprimieren einer Sequenz abgeschlossen hat, kann **icseqcompressframeend** verwendet werden, um Systemressourcen freizugeben, die für **icseqcompressframestart** reserviert wurden. Um die Ressourcen freizugeben, die für die **compvars** -Struktur reserviert werden, kann die Anwendung die [**iccompressorfree**](/windows/desktop/api/Vfw/nf-vfw-iccompressorfree) -Funktion verwenden.
+Wenn eine Anwendung die Komprimierung einer Sequenz abgeschlossen hat, kann sie **ICSeqCompressFrameEnd** verwenden, um Systemressourcen freizubekommen, die **ICSeqCompressFrameStart** zugeordnet sind. Um die für die **COMPVARS-Struktur** zugeordneten Ressourcen frei zu machen, kann die Anwendung die [**ICCompressorFree-Funktion**](/windows/desktop/api/Vfw/nf-vfw-iccompressorfree) verwenden.
 
- 
+ 
 
- 
+ 
 
 
 

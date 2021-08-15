@@ -1,9 +1,9 @@
 ---
-title: NM_RCLICK (Symbolleisten-) Benachrichtigungs Code (kommstrg. h)
-description: Wird von einem ToolBar-Steuerelement gesendet, wenn der Benutzer mit der rechten Maustaste auf die Symbolleiste klickt. Dieser Benachrichtigungs Code wird in Form einer WM-Benachrichtigungs \_ Meldung gesendet.
+title: NM_RCLICK (Symbolleiste) Benachrichtigungscode (Commctrl.h)
+description: Wird von einem Symbolleisten-Steuerelement gesendet, wenn der Benutzer mit der rechten Maustaste auf die Symbolleiste klickt. Dieser Benachrichtigungscode wird in Form einer WM \_ NOTIFY-Nachricht gesendet.
 ms.assetid: e9d2d871-e922-444d-a76c-e73f249ed410
 keywords:
-- NM_RCLICK (Symbolleiste) Benachrichtigungs Code Windows-Steuerelemente
+- NM_RCLICK -Benachrichtigungscode (Symbolleiste) Windows-Steuerelemente
 topic_type:
 - apiref
 api_name:
@@ -14,16 +14,16 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 6464c30a031aa55aef94bccd3ab852720fb14403
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 52fde315a3c68712c58b7e9466c351c6ac9a9117710ee6f285bd9ba9521ba56f
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "106343071"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118958069"
 ---
-# <a name="nm_rclick-toolbar-notification-code"></a>NM \_ rclick-Benachrichtigungs Code (Symbolleiste)
+# <a name="nm_rclick-toolbar-notification-code"></a>NM \_ RCLICK-Benachrichtigungscode (Symbolleiste)
 
-Wird von einem ToolBar-Steuerelement gesendet, wenn der Benutzer mit der rechten Maustaste auf die Symbolleiste klickt. Dieser Benachrichtigungs Code wird in Form einer WM- [**\_ Benachrichtigungs**](wm-notify.md) Meldung gesendet.
+Wird von einem Symbolleisten-Steuerelement gesendet, wenn der Benutzer mit der rechten Maustaste auf die Symbolleiste klickt. Dieser Benachrichtigungscode wird in Form einer [**WM \_ NOTIFY-Nachricht**](wm-notify.md) gesendet.
 
 
 ```C++
@@ -41,13 +41,13 @@ NM_RCLICK
 *lParam* 
 </dt> <dd>
 
-Zeiger auf eine [**nmmouse**](/windows/win32/api/commctrl/ns-commctrl-nmmouse) -Struktur, die Informationen zu diesem Benachrichtigungs Code enthält. Wenn auf ein Symbolleisten Element auf die Maus geklickt wurde, enthält das Element **dwitemspec** den Element Bezeichner, und der **dwitemdata** -Member enthält die Elementdaten. Wenn die Maus auf ein Trennzeichen oder Leerraum auf der Symbolleiste geklickt wurde, enthält das Element **dwitemspec** -1.
+Zeiger auf eine [**NMMOUSE-Struktur,**](/windows/win32/api/commctrl/ns-commctrl-nmmouse) die Informationen zu diesem Benachrichtigungscode enthält. Wenn mit der Maus auf ein Symbolleistenelement geklickt wurde, enthält das **dwItemSpec-Element** den Elementbezeichner und **das dwItemData-Element** die Elementdaten. Wenn mit der Maus auf ein Trennzeichen oder Leerzeichen in der Symbolleiste geklickt wurde, enthält **das dwItemSpec-Member** -1.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt **false** zurück, damit das Symbolleisten-Steuerelement die Standard Verarbeitung des Ereignisses ausführen kann, oder **true** , um zu verhindern, dass das Steuerelement das Ereignis verarbeitet.
+Gibt **FALSE zurück,** damit das Symbolleisten-Steuerelement die Standardverarbeitung des Ereignisses durchführen kann, oder **TRUE,** um zu verhindern, dass das Steuerelement das Ereignis verarbeitet.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -55,9 +55,9 @@ Gibt **false** zurück, damit das Symbolleisten-Steuerelement die Standard Verar
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>                                        |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2003 \[ -Desktop-Apps\]<br/>                                  |
-| Header<br/>                   | <dl> <dt>Kommstrg. h</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur \[ Vista-Desktop-Apps\]<br/>                                        |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2003-Desktop-Apps\]<br/>                                  |
+| Header<br/>                   | <dl> <dt>Commctrl.h</dt> </dl> |
 
 
 

@@ -1,5 +1,5 @@
 ---
-description: '<span id="vspixengine.istatuscallback"></span>IStatusCallback-Schnittstelle: Wird nicht verwendet.'
+description: '<span id="vspixengine.istatuscallback"></span>IStatusCallback-Schnittstelle: Nicht verwendet.'
 MS-HAID: vspixengine.IStatusCallback
 MSHAttr:
 - PreferredSiteName:MSDN
@@ -17,20 +17,20 @@ api_location:
 topic_type:
 - APIRef
 - kbSyntax
-ms.openlocfilehash: d58c1f1e9b33d664c49fda6a52bf16d90ca3e2a1
-ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
+ms.openlocfilehash: 59cb2c07859666cd3a68fc4ff438d87781112f7e35a54f786b9fe9e6ed1dcbe6
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2021
-ms.locfileid: "108087848"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118985620"
 ---
 # <a name="span-idvspixengineistatuscallbackspanistatuscallback-interface"></a><span id="vspixengine.istatuscallback"></span>IStatusCallback-Schnittstelle
 
-Nicht verwendet.
+Wird nicht verwendet.
 
 ## <a name="members"></a>Member
 
-Die **IStatusCallback-Schnittstelle** erbt von der [**IUnknown-Schnittstelle.**](/windows/desktop/api/unknwn/nn-unknwn-iunknown) **IStatusCallback** verfügt auch über diese Typen von Membern:
+Die **IStatusCallback-Schnittstelle** erbt von der [**IUnknown-Schnittstelle.**](/windows/desktop/api/unknwn/nn-unknwn-iunknown) **IStatusCallback** verfügt auch über die folgenden Typen von Membern:
 
 -   [Methoden](#methods)
 
@@ -38,7 +38,7 @@ Die **IStatusCallback-Schnittstelle** erbt von der [**IUnknown-Schnittstelle.**]
 
 Die **IStatusCallback-Schnittstelle** verfügt über diese Methoden.
 
-<table><colgroup><col style="width: 50%" /><col style="width: 50%" /></colgroup><thead><tr class="header"><th style="text-align: left;">Methode</th><th style="text-align: left;">BESCHREIBUNG</th></tr></thead><tbody><tr class="odd"><td style="text-align: left;"><a href="/windows/desktop/direct3dtools/istatuscallback-status-dword-dword-dword"><strong>Status</strong></a></td><td style="text-align: left;"><p>Eine Rückruffunktion, die verwendet wird, um den Host über den Fortschritt der Engine zu benachrichtigen. Dies dient auch als Möglichkeit für den Host, zu bestimmen, ob die Engine noch ausgeführt wird.</p></td></tr></tbody></table>
+<table><colgroup><col style="width: 50%" /><col style="width: 50%" /></colgroup><thead><tr class="header"><th style="text-align: left;">Methode</th><th style="text-align: left;">BESCHREIBUNG</th></tr></thead><tbody><tr class="odd"><td style="text-align: left;"><a href="/windows/desktop/direct3dtools/istatuscallback-status-dword-dword-dword"><strong>Status</strong></a></td><td style="text-align: left;"><p>Eine Rückruffunktion, die verwendet wird, um den Host über den Fortschritt der Engine zu benachrichtigen. Dies dient auch als Möglichkeit für den Host, zu ermitteln, ob die Engine noch ausgeführt wird.</p></td></tr></tbody></table>
 
  
 

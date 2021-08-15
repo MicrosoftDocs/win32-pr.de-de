@@ -1,9 +1,9 @@
 ---
-title: glsskalierte Funktion (GL. h)
-description: Die Funktionen "glScalef" und "glScalef" multiplizieren die aktuelle Matrix mit einer allgemeinen Skalierungs Matrix. | glsskalierte Funktion (GL. h)
+title: glScaled-Funktion (Gl.h)
+description: Die Funktionen glScaled und glScalef multiplizieren die aktuelle Matrix mit einer allgemeinen Skalierungsmatrix. | glScaled-Funktion (Gl.h)
 ms.assetid: 3846289f-5c7b-4bb6-95a8-90a58dd8b9d9
 keywords:
-- glskalierte Funktion OpenGL
+- glScaled-Funktion OpenGL
 topic_type:
 - apiref
 api_name:
@@ -14,16 +14,16 @@ api_type:
 - DllExport
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: ba2655924f5716e142832882441066d4772d0e63
-ms.sourcegitcommit: 92e74c99f8f4d097676959d0c317f533c2400a80
+ms.openlocfilehash: 46742831eaa0a014de0f6ae50271b28c922893133588758119cbf5bff7ba628b
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/09/2021
-ms.locfileid: "104558956"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119491790"
 ---
-# <a name="glscaled-function"></a>glsskalierte Funktion
+# <a name="glscaled-function"></a>glScaled-Funktion
 
-Die Funktionen " **glScalef** " und " [**glScalef**](glscalef.md) " multiplizieren die aktuelle Matrix mit einer allgemeinen Skalierungs Matrix.
+Die Funktionen **glScaled** und [**glScalef**](glscalef.md) multiplizieren die aktuelle Matrix mit einer allgemeinen Skalierungsmatrix.
 
 ## <a name="syntax"></a>Syntax
 
@@ -45,21 +45,21 @@ void WINAPI glScaled(
 *x* 
 </dt> <dd>
 
-Skalierungsfaktoren entlang der *x* -Achse.
+Skalierungsfaktoren  entlang der x-Achse.
 
 </dd> <dt>
 
 *y* 
 </dt> <dd>
 
-Skalierungsfaktoren entlang der *y* -Achse.
+Skalierungsfaktoren entlang der *y-Achse.*
 
 </dd> <dt>
 
-*z* 
+*Z* 
 </dt> <dd>
 
-Skalierungsfaktoren entlang der *z* -Achse.
+Skalierungsfaktoren  entlang der Z-Achse.
 
 </dd> </dl>
 
@@ -69,37 +69,37 @@ Diese Funktion gibt keinen Wert zurück.
 
 ## <a name="error-codes"></a>Fehlercodes
 
-Der folgende Fehlercode kann von der Funktion " [**glgeterror**](glgeterror.md) " abgerufen werden.
+Der folgende Fehlercode kann von der [**glGetError-Funktion**](glgeterror.md) abgerufen werden.
 
 
 
 | Name                                                                                                  | Bedeutung                                                                                                                               |
 |-------------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------|
-| <dl> <dt>**\_ungültiger \_ Vorgang**</dt> </dl> | Die Funktion wurde zwischen einem Aufruf von [**glBegin**](glbegin.md) und dem entsprechenden Aufruf von [**glEnd**](glend.md)aufgerufen.<br/> |
+| <dl> <dt>**GL \_ INVALID \_ OPERATION**</dt> </dl> | Die Funktion wurde zwischen einem Aufruf von [**glBegin**](glbegin.md) und dem entsprechenden Aufruf von [**glEnd**](glend.md)aufgerufen.<br/> |
 
 
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Die Funktion " **glscaling** " erzeugt eine allgemeine Skalierung entlang der *x*-, *y*-und *z* -Achse. Die drei Argumente geben die gewünschten Skalierungsfaktoren entlang der drei Achsen an. Die resultierende Matrix ist
+Die **glScaled-Funktion** erzeugt eine allgemeine Skalierung entlang der *x-,* *y-* und *z-Achse.* Die drei Argumente geben die gewünschten Skalierungsfaktoren entlang jeder der drei Achsen an. Die resultierende Matrix ist
 
-![Das Diagramm zeigt die Matrix der Skalierungsfaktoren entlang der x-, y-und z-Achse an.](images/scale01.png)
+![Diagramm, das die Matrix der Skalierungsfaktoren entlang der x-, y- und z-Achse zeigt.](images/scale01.png)
 
-Die aktuelle Matrix (siehe [**glMatrixMode**](glmatrixmode.md)) wird mit dieser Skalierungs Matrix multipliziert, und das Produkt ersetzt die aktuelle Matrix. Das heißt, wenn m die aktuelle Matrix und S die Skalierungs Matrix ist, wird m durch m S ersetzt.
+Die aktuelle Matrix (siehe [**glMatrixMode**](glmatrixmode.md)) wird mit dieser Skalierungsmatrix multipliziert, wobei das Produkt die aktuelle Matrix ersetzt. Das heißt, wenn M die aktuelle Matrix und S die Skalierungsmatrix ist, wird M durch M S ersetzt.
 
-Wenn der Matrix Modus "GL \_ Modelview" oder "GL" ist \_ , werden alle Objekte skaliert, die nach dem Aufruf von " **glbricks** " gezeichnet werden. Verwenden Sie [**glPushMatrix**](glpushmatrix.md) und [**glPopMatrix**](glpopmatrix.md) , um das nicht skalierte Koordinatensystem zu speichern und wiederherzustellen.
+Wenn der Matrixmodus entweder GL \_ MODELVIEW oder GL \_ PROJECTION ist, werden alle Objekte skaliert, die nach dem Aufruf von **glScaled** gezeichnet wurden. Verwenden Sie [**glPushMatrix**](glpushmatrix.md) und [**glPopMatrix,**](glpopmatrix.md) um das nicht skalierte Koordinatensystem zu speichern und wiederherzustellen.
 
-Wenn für die Modelview-Matrix andere Skalierungsfaktoren als 1,0 übernommen werden und Beleuchtung aktiviert ist, sollte die automatische Normalisierung von normalen wahrscheinlich auch aktiviert werden ([**glEnable**](glenable.md) und [**gldeaktiviert**](gldisable.md) mit dem Argument GL \_ normalize).
+Wenn andere Skalierungsfaktoren als 1.0 auf die Modellansichtsmatrix angewendet werden und die Beleuchtung aktiviert ist, sollte wahrscheinlich auch die automatische Normalisierung von Normalwerten aktiviert werden ([**glEnable**](glenable.md) und [**glDisable**](gldisable.md) mit dem Argument GL \_ NORMALIZE).
 
-Mit den folgenden Funktionen werden Informationen im Zusammenhang mit **glskaliert** abgerufen:
+Die folgenden Funktionen rufen Informationen im Zusammenhang mit **glScaled ab:**
 
-[**glget**](glgetbooleanv--glgetdoublev--glgetfloatv--glgetintegerv.md) mit dem-Argument des GL- \_ Matrix \_ Modus
+[**glGet**](glgetbooleanv--glgetdoublev--glgetfloatv--glgetintegerv.md) mit argument GL \_ MATRIX \_ MODE
 
-[**glget**](glgetbooleanv--glgetdoublev--glgetfloatv--glgetintegerv.md) mit dem Argument GL \_ Modelview \_ Matrix
+[**glGet**](glgetbooleanv--glgetdoublev--glgetfloatv--glgetintegerv.md) mit argument GL \_ MODELVIEW \_ MATRIX
 
-[**glget**](glgetbooleanv--glgetdoublev--glgetfloatv--glgetintegerv.md) mit dem Argument GL- \_ Projektions \_ Matrix
+[**glGet**](glgetbooleanv--glgetdoublev--glgetfloatv--glgetintegerv.md) mit argument GL \_ PROJECTION \_ MATRIX
 
-[**glget**](glgetbooleanv--glgetdoublev--glgetfloatv--glgetintegerv.md) mit Argument GL- \_ Textur \_ Matrix
+[**glGet**](glgetbooleanv--glgetdoublev--glgetfloatv--glgetintegerv.md) mit argument GL \_ TEXTURE \_ MATRIX
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -109,13 +109,13 @@ Mit den folgenden Funktionen werden Informationen im Zusammenhang mit **glskalie
 |-------------------------------------|-----------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional \[nur Desktop-Apps\]<br/>                              |
 | Unterstützte Mindestversion (Server)<br/> | Windows 2000 Server \[nur Desktop-Apps\]<br/>                                    |
-| Header<br/>                   | <dl> <dt>GL. h</dt> </dl>         |
-| Bibliothek<br/>                  | <dl> <dt>Opengl32. lib</dt> </dl> |
+| Header<br/>                   | <dl> <dt>Gl.h</dt> </dl>         |
+| Bibliothek<br/>                  | <dl> <dt>Opengl32.lib</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>Opengl32.dll</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
@@ -128,7 +128,7 @@ Mit den folgenden Funktionen werden Informationen im Zusammenhang mit **glskalie
 [**glMatrixMode**](glmatrixmode.md)
 </dt> <dt>
 
-[**glmultmatrix**](glmultmatrix.md)
+[**glMultMatrix**](glmultmatrix.md)
 </dt> <dt>
 
 [**glPopMatrix**](glpopmatrix.md)
@@ -137,13 +137,13 @@ Mit den folgenden Funktionen werden Informationen im Zusammenhang mit **glskalie
 [**glPushMatrix**](glpushmatrix.md)
 </dt> <dt>
 
-[**glrotiert**](glrotated.md)
+[**glRotated**](glrotated.md)
 </dt> <dt>
 
-[**glrotatef**](glrotatef.md)
+[**glRotatef**](glrotatef.md)
 </dt> <dt>
 
-[**gltranslate**](gltranslate.md)
+[**glTranslate**](gltranslate.md)
 </dt> </dl>
 
  

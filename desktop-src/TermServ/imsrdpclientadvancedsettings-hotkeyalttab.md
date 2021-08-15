@@ -1,26 +1,26 @@
 ---
-title: Imsrdpclientadvancedsettings-hotkeyalttab (Eigenschaft)
-description: Gibt den Code des virtuellen Schlüssels an, der alt addiert werden soll, um die Hotkey-Ersetzung für Alt + Tab zu bestimmen.
+title: IMsRdpClientAdvancedSettings HotKeyAltTab-Eigenschaft
+description: Gibt den Virtuellen Schlüsselcode an, der ALT hinzugefügt werden soll, um den Hotkeyaustausch für ALT+TAB zu bestimmen.
 ms.assetid: d7066fb4-f53f-4e55-ba12-fb4078ece144
 ms.tgt_platform: multiple
 keywords:
-- Hotkeyalttab-Eigenschaft Remotedesktopdienste
-- Hotkeyalttab-Eigenschaft Remotedesktopdienste, imsrdpclientadvancedsettings-Schnittstelle
-- Imsrdpclientadvancedsettings-Schnittstelle Remotedesktopdienste, hotkeyalttab-Eigenschaft
-- Hotkeyalttab-Eigenschaft Remotedesktopdienste, IMsRdpClientAdvancedSettings2-Schnittstelle
-- IMsRdpClientAdvancedSettings2 Interface Remotedesktopdienste, hotkeyalttab-Eigenschaft
-- Hotkeyalttab-Eigenschaft Remotedesktopdienste, IMsRdpClientAdvancedSettings3-Schnittstelle
-- IMsRdpClientAdvancedSettings3 Interface Remotedesktopdienste, hotkeyalttab-Eigenschaft
-- Hotkeyalttab-Eigenschaft Remotedesktopdienste, IMsRdpClientAdvancedSettings4-Schnittstelle
-- IMsRdpClientAdvancedSettings4 Interface Remotedesktopdienste, hotkeyalttab-Eigenschaft
-- Hotkeyalttab-Eigenschaft Remotedesktopdienste, IMsRdpClientAdvancedSettings5-Schnittstelle
-- IMsRdpClientAdvancedSettings5 Interface Remotedesktopdienste, hotkeyalttab-Eigenschaft
-- Hotkeyalttab-Eigenschaft Remotedesktopdienste, IMsRdpClientAdvancedSettings6-Schnittstelle
-- IMsRdpClientAdvancedSettings6 Interface Remotedesktopdienste, hotkeyalttab-Eigenschaft
-- Hotkeyalttab-Eigenschaft Remotedesktopdienste, IMsRdpClientAdvancedSettings7-Schnittstelle
-- IMsRdpClientAdvancedSettings7 Interface Remotedesktopdienste, hotkeyalttab-Eigenschaft
-- Hotkeyalttab-Eigenschaft Remotedesktopdienste, IMsRdpClientAdvancedSettings8-Schnittstelle
-- IMsRdpClientAdvancedSettings8 Interface Remotedesktopdienste, hotkeyalttab-Eigenschaft
+- HotKeyAltTab-Eigenschaft Remotedesktopdienste
+- HotKeyAltTab-Eigenschaft Remotedesktopdienste , IMsRdpClientAdvancedSettings-Schnittstelle
+- IMsRdpClientAdvancedSettings-Schnittstelle Remotedesktopdienste , HotKeyAltTab-Eigenschaft
+- HotKeyAltTab-Eigenschaft Remotedesktopdienste , IMsRdpClientAdvancedSettings2-Schnittstelle
+- IMsRdpClientAdvancedSettings2-Schnittstelle Remotedesktopdienste , HotKeyAltTab-Eigenschaft
+- HotKeyAltTab-Eigenschaft Remotedesktopdienste , IMsRdpClientAdvancedSettings3-Schnittstelle
+- IMsRdpClientAdvancedSettings3-Schnittstelle Remotedesktopdienste , HotKeyAltTab-Eigenschaft
+- HotKeyAltTab-Eigenschaft Remotedesktopdienste , IMsRdpClientAdvancedSettings4-Schnittstelle
+- IMsRdpClientAdvancedSettings4-Schnittstelle Remotedesktopdienste , HotKeyAltTab-Eigenschaft
+- HotKeyAltTab-Eigenschaft Remotedesktopdienste , IMsRdpClientAdvancedSettings5-Schnittstelle
+- IMsRdpClientAdvancedSettings5-Schnittstelle Remotedesktopdienste , HotKeyAltTab-Eigenschaft
+- HotKeyAltTab-Eigenschaft Remotedesktopdienste , IMsRdpClientAdvancedSettings6-Schnittstelle
+- IMsRdpClientAdvancedSettings6-Schnittstelle Remotedesktopdienste , HotKeyAltTab-Eigenschaft
+- HotKeyAltTab-Eigenschaft Remotedesktopdienste , IMsRdpClientAdvancedSettings7-Schnittstelle
+- IMsRdpClientAdvancedSettings7-Schnittstelle Remotedesktopdienste , HotKeyAltTab-Eigenschaft
+- HotKeyAltTab-Eigenschaft Remotedesktopdienste , IMsRdpClientAdvancedSettings8-Schnittstelle
+- IMsRdpClientAdvancedSettings8-Schnittstelle Remotedesktopdienste , HotKeyAltTab-Eigenschaft
 topic_type:
 - apiref
 api_name:
@@ -54,18 +54,18 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: eec7834a95b83ec43553d0ced1e056860cfb5abe
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: e22b50679b98bb57f40108287a303de3097cfe0bb3dc2fd552a957dae6479b1f
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104391739"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120009890"
 ---
-# <a name="imsrdpclientadvancedsettingshotkeyalttab-property"></a>Imsrdpclientadvancedsettings:: hotkeyalttab-Eigenschaft
+# <a name="imsrdpclientadvancedsettingshotkeyalttab-property"></a>IMsRdpClientAdvancedSettings::HotKeyAltTab-Eigenschaft
 
-Gibt den Code des virtuellen Schlüssels an, der alt addiert werden soll, um die Hotkey-Ersetzung für Alt + Tab zu bestimmen.
+Gibt den Virtuellen Schlüsselcode an, der ALT hinzugefügt werden soll, um den Hotkeyaustausch für ALT+TAB zu bestimmen.
 
-Diese Eigenschaft ist nur gültig, wenn die [**keyboardhuokmode**](imsrdpclientsecuredsettings-keyboardhookmode.md) -Eigenschaft nicht aktiviert ist.
+Diese Eigenschaft ist nur gültig, wenn die [**KeyboardHookMode-Eigenschaft**](imsrdpclientsecuredsettings-keyboardhookmode.md) nicht aktiviert ist.
 
 Dies ist eine Eigenschaft mit Lese- und Schreibzugriff.
 
@@ -86,13 +86,13 @@ HRESULT get_HotKeyAltTab(
 
 ## <a name="property-value"></a>Eigenschaftswert
 
-Der neue Code des virtuellen Schlüssels. **VK \_ "Prior** " ist der Standardwert, wobei Alt + Bild-auf als resultierende Sequenz angezeigt wird.
+Der neue Code für virtuelle Schlüssel. **VK \_ PRIOR** ist der Standardwert, wobei ALT+PAGE UP als resultierende Sequenz verwendet wird.
 
 ## <a name="error-codes"></a>Fehlercodes
 
 Gibt bei Erfolg **S \_ OK** zurück.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
 Weitere Informationen zu Remotedesktop-Webverbindung finden Sie unter [Anforderungen für Remotedesktop-Webverbindung](requirements-for-remote-desktop-web-connection.md).
 
@@ -106,11 +106,11 @@ Weitere Informationen zu Remotedesktop-Webverbindung finden Sie unter [Anforderu
 | Unterstützte Mindestversion (Server)<br/> | Windows Server 2008<br/>                                                                  |
 | Typbibliothek<br/>             | <dl> <dt>MsTscAx.dll</dt> </dl>          |
 | DLL<br/>                      | <dl> <dt>MsTscAx.dll</dt> </dl>          |
-| IID<br/>                      | IID \_ imsrdpclientadvancedsettings ist als 3c65b4ab-12b3-465b-acd4-b8dad3bff9e2 definiert.<br/> |
+| IID<br/>                      | IID \_ IMsRdpClientAdvancedSettings ist als 3c65b4ab-12b3-465b-acd4-b8dad3bff9e2 definiert.<br/> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
@@ -135,7 +135,7 @@ Weitere Informationen zu Remotedesktop-Webverbindung finden Sie unter [Anforderu
 [**IMsRdpClientAdvancedSettings8**](imsrdpclientadvancedsettings8.md)
 </dt> <dt>
 
-[**Imsrdpclientadvancedsettings**](imsrdpclientadvancedsettings-interface.md)
+[**IMsRdpClientAdvancedSettings**](imsrdpclientadvancedsettings-interface.md)
 </dt> </dl>
 
  

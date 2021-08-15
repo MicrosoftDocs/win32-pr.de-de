@@ -1,23 +1,23 @@
 ---
-description: Eine Anwendung empfängt ein DBT \_ DeviceQueryRemove-Geräte Ereignis, wenn eine Funktion im System beschlossen hat, ein bestimmtes Gerät zu entfernen.
+description: Eine Anwendung empfängt ein DBT \_ DEVICEQUERYREMOVE-Geräteereignis, wenn ein Feature im System entschieden hat, ein angegebenes Gerät zu entfernen.
 ms.assetid: 66f6c9f4-93fa-4ee8-adf8-cde4e63f9fb7
 title: Verarbeiten einer Anforderung zum Entfernen eines Geräts
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 03f6f1089cae0e4c9db964e3877cac8f8f8d8da4
-ms.sourcegitcommit: c7add10d695482e1ceb72d62b8a4ebd84ea050f7
+ms.openlocfilehash: 6432ba2709dd05589acd5f8e0a2d1de6547216c9d24d4c9d742b9ad6dcc838e9
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104126781"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118956779"
 ---
 # <a name="processing-a-request-to-remove-a-device"></a>Verarbeiten einer Anforderung zum Entfernen eines Geräts
 
-Eine Anwendung empfängt ein [DBT \_ DeviceQueryRemove](dbt-devicequeryremove.md) -Geräte Ereignis, wenn eine Funktion im System beschlossen hat, ein bestimmtes Gerät zu entfernen. Wenn die Anwendung dieses Ereignis empfängt, sollte Sie ermitteln, ob Sie das angegebene Gerät verwendet, und entweder abbrechen oder die Entfernung vorbereiten.
+Eine Anwendung empfängt ein [DBT \_ DEVICEQUERYREMOVE-Geräteereignis,](dbt-devicequeryremove.md) wenn ein Feature im System entschieden hat, ein angegebenes Gerät zu entfernen. Wenn die Anwendung dieses Ereignis empfängt, sollte sie bestimmen, ob sie das angegebene Gerät verwendet, und entweder abbrechen oder die Entfernung vorbereiten.
 
-Im folgenden Beispiel verwaltet eine Anwendung ein geöffnetes Handle (hFile) für die Datei oder das Gerät, dargestellt durch filename. Die Anwendung wird für die Geräte Ereignis Benachrichtigung auf dem zugrunde liegenden Gerät registriert, indem die [**registerdevicenotifi-**](/windows/desktop/api/Winuser/nf-winuser-registerdevicenotificationa) Funktion aufgerufen wird, ein **DBT \_ devtype \_** -Benachrichtigungs Filter verwendet und die hFile-Variable im **dbch- \_ handle** -Member des Filters angegeben wird.
+Im folgenden Beispiel verwaltet eine Anwendung ein geöffnetes Handle hFile für die Datei oder das Gerät, das durch FileName dargestellt wird. Die Anwendung registriert sich für die Geräteereignisbenachrichtigung auf dem zugrunde liegenden Gerät, indem sie die [**RegisterDeviceNotification-Funktion**](/windows/desktop/api/Winuser/nf-winuser-registerdevicenotificationa) **aufruft, einen DBT \_ DEVTYP \_ HANDLE-Typbenachrichtigungsfilter** verwendet und die Variable hFile im **\_ dbch-Handlemember** des Filters angibt.
 
-Die Anwendung verarbeitet das [DBT \_ DeviceQueryRemove](dbt-devicequeryremove.md) -Geräte Ereignis, indem das geöffnete Datei Handle für das zu entfernende Gerät geschlossen wird. Wenn das Entfernen dieses Geräts abgebrochen wird, verarbeitet die Anwendung das [DBT \_ devicequeryremovefailed](dbt-devicequeryremovefailed.md) -Geräte Ereignis, um das Handle für das Gerät erneut zu öffnen. Nachdem das Gerät aus dem System entfernt wurde, verarbeitet die Anwendung die Geräte Ereignisse [DBT \_ deviceremovecomplete](dbt-deviceremovecomplete.md) und [DBT \_ deviceremovepend](dbt-deviceremovepending.md) , indem die Registrierung des Benachrichtigungs Handles für das Gerät aufgehoben und alle Handles geschlossen werden, die noch für das Gerät geöffnet sind.
+Die Anwendung verarbeitet das [DBT \_ DEVICEQUERYREMOVE-Geräteereignis,](dbt-devicequeryremove.md) indem das geöffnete Dateihandle für das Gerät geschlossen wird, das entfernt werden soll. Wenn das Entfernen dieses Geräts abgebrochen wird, verarbeitet die Anwendung das [DBT \_ DEVICEQUERYREMOVEFAILED-Geräteereignis,](dbt-devicequeryremovefailed.md) um das Handle für das Gerät erneut zu öffnen. Nachdem das Gerät aus dem System entfernt wurde, verarbeitet die Anwendung die [Geräteereignisse DBT \_ DEVICEREMOVECOMPLETE](dbt-deviceremovecomplete.md) und [DBT \_ DEVICEREMOVEPENDING,](dbt-deviceremovepending.md) indem die Registrierung des Benachrichtigungshandles für das Gerät aufgehoben und alle Handles geschlossen werden, die noch für das Gerät geöffnet sind.
 
 
 ```C++
@@ -144,7 +144,7 @@ INT_PTR WINAPI WinProcCallback( HWND hWnd,
 
 <dl> <dt>
 
-[Geräte Ereignis Typen](device-event-types.md)
+[Geräteereignistypen](device-event-types.md)
 </dt> </dl>
 
  

@@ -1,9 +1,9 @@
 ---
-title: Info-Befehl
-description: Der Befehl "Info" Ruft eine Hardware Beschreibung von einem Gerät ab. Dieser Befehl wird von allen MCI-Geräten erkannt.
+title: Befehl "info"
+description: Der Befehl info ruft eine Hardwarebeschreibung von einem Gerät ab. Dieser Befehl wird von allen MCI-Geräten erkannt.
 ms.assetid: cdd6628b-bff8-4a0d-9dad-a63321f584ea
 keywords:
-- Info-Befehl Windows-Multimedia
+- Infobefehl Windows Multimedia
 topic_type:
 - apiref
 api_name:
@@ -12,18 +12,18 @@ api_type:
 - NA
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: c6d401efca6a59d1ed3cbf433d7c33311678705d
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: f15675923f37a80ce694a400f18113f5178a54a3f75664008644919c6d9fc128
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104392153"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119690470"
 ---
-# <a name="info-command"></a>Info-Befehl
+# <a name="info-command"></a>Befehl "info"
 
-Der Befehl "Info" Ruft eine Hardware Beschreibung von einem Gerät ab. Dieser Befehl wird von allen MCI-Geräten erkannt.
+Der Befehl info ruft eine Hardwarebeschreibung von einem Gerät ab. Dieser Befehl wird von allen MCI-Geräten erkannt.
 
-Um diesen Befehl zu senden, wenden Sie die [**mciSendString**](/previous-versions//dd757161(v=vs.85)) -Funktion mit dem festgelegten *lpszcommand* -Parameter wie folgt an.
+Um diesen Befehl zu senden, rufen Sie die [**mciSendString-Funktion**](/previous-versions//dd757161(v=vs.85)) mit dem *lpszCommand-Parameter* auf, der wie folgt festgelegt ist.
 
 ``` syntax
 _stprintf_s(
@@ -39,57 +39,57 @@ _stprintf_s(
 
 <dl> <dt>
 
-<span id="lpszDeviceID"></span><span id="lpszdeviceid"></span><span id="LPSZDEVICEID"></span>*lpszde viceid*
+<span id="lpszDeviceID"></span><span id="lpszdeviceid"></span><span id="LPSZDEVICEID"></span>*lpszDeviceID*
 </dt> <dd>
 
-Der Bezeichner eines MCI-Geräts. Dieser Bezeichner oder Alias wird zugewiesen, wenn das Gerät geöffnet wird.
+Bezeichner eines MCI-Geräts. Dieser Bezeichner oder Alias wird zugewiesen, wenn das Gerät geöffnet wird.
 
 </dd> <dt>
 
-<span id="lpszInfoType"></span><span id="lpszinfotype"></span><span id="LPSZINFOTYPE"></span>*lpszinfotype*
+<span id="lpszInfoType"></span><span id="lpszinfotype"></span><span id="LPSZINFOTYPE"></span>*lpszInfoType*
 </dt> <dd>
 
-Flag, das den Typ der erforderlichen Informationen identifiziert. In der folgenden Tabelle werden die Gerätetypen aufgelistet, die den **Info** -Befehl und die von den einzelnen Typen verwendeten Flags erkennen.
+Flag, das den Typ der erforderlichen Informationen identifiziert. In der folgenden Tabelle sind Gerätetypen aufgeführt, die den **Befehl info** und die von den einzelnen Typen verwendeten Flags erkennen.
 
 
 
 | Wert        | Bedeutung                                                             | Bedeutung                                             |
 |--------------|---------------------------------------------------------------------|-----------------------------------------------------|
-| CDAudio      | Informationen identityinfo UPC                                               | product                                             |
-| Digitalvideo | audioalgorithmaudioqualityfileproductimmer noch algorithmimmer Qualität | usageversionvideo algorithmvideo qualitywindow-Text |
-| overlay      | file Product                                                         | Fenster Text                                         |
+| cdaudio      | info identityinfo upc                                               | product                                             |
+| digitalvideo | audio algorithmaudio qualityfileproduct algorithm quality | usageversionvideo algorithmvideo qualitywindow text |
+| overlay      | fileproduct                                                         | Fenstertext                                         |
 | sequencer    | copyrightfile                                                       | nameproduct                                         |
-| VCR          | product                                                             | version                                             |
-| Videodisk    | product                                                             |                                                     |
-| waveaudiodatei    | FileInput                                                           | outputproduct                                       |
+| Vcr          | product                                                             | version                                             |
+| videodisk    | product                                                             |                                                     |
+| Waveaudio    | fileinput                                                           | outputproduct                                       |
 
 
 
  
 
-In der folgenden Tabelle werden die Flags aufgelistet, die im **lpszinfotype** -Parameter und deren Bedeutung angegeben werden können.
+In der folgenden Tabelle sind die Flags, die im **lpszInfoType-Parameter** angegeben werden können, und ihre Bedeutungen aufgeführt.
 
 
 
 | Wert           | Bedeutung                                                                                                                                                                                            |
 |-----------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| audioalgorithmus | Gibt den Namen des aktuellen Audiokomprimierungs Algorithmus zurück.                                                                                                                                       |
-| Audioqualität   | Gibt den Namen für den aktuellen audioqualitätsdeskriptor zurück. Dadurch wird möglicherweise "unknown" zurückgegeben, wenn die Anwendung Parameter auf bestimmte Werte festgelegt hat, die nicht definierten Qualitäten entsprechen.       |
-| Copyright       | Ruft den Urheberrechts Hinweis der MIDI-Datei aus dem Copyright-Meta-Ereignis ab.                                                                                                                            |
-| file            | Ruft den Namen der Datei ab, die vom Verbund Gerät verwendet wird. Wenn das Gerät ohne eine Datei geöffnet wird und der [Load](load.md) -Befehl nicht verwendet wurde, wird eine NULL-Zeichenfolge zurückgegeben.                  |
-| Informations Identität   | Erzeugt einen eindeutigen Bezeichner für die AudioCD, die derzeit in dem abgefragten Player geladen wird.                                                                                                        |
-| Info-UPC        | Erzeugt den universellen Produkt Code (Universal Product Code, UPC), der auf einer AudioCD codiert ist. Der UPC ist eine Zeichenfolge mit Ziffern. Sie ist möglicherweise nicht für alle CDs verfügbar.                                                    |
-| input           | Ruft die Beschreibung des aktuellen Eingabe Geräts ab. Gibt "None" zurück, wenn ein Eingabegerät nicht festgelegt ist.                                                                                               |
-| name            | Ruft den Sequenznamen aus dem Meta-Ereignis Sequence/Track Name ab.                                                                                                                               |
-| output          | Ruft die Beschreibung des aktuellen Ausgabegeräts ab. Gibt "None" zurück, wenn kein Ausgabegerät festgelegt ist.                                                                                             |
-| product         | Ruft eine Beschreibung des Geräts ab. Diese Informationen enthalten häufig den Produktnamen und das Modell. Die Länge der Zeichenfolge beträgt höchstens 31 Zeichen.                                               |
-| immer noch Algorithmus | Gibt den Namen des aktuellen immer noch Bild Komprimierungs Algorithmus zurück.                                                                                                                                 |
-| immer noch Qualität   | Gibt den Namen für den aktuellen immer noch Bild Qualitäts Deskriptor zurück. Dadurch wird möglicherweise "unknown" zurückgegeben, wenn die Anwendung Parameter auf bestimmte Werte festgelegt hat, die nicht definierten Qualitäten entsprechen. |
-| Nutzung           | Gibt eine Zeichenfolge zurück, in der Nutzungseinschränkungen beschrieben werden, die möglicherweise vom Besitzer der visuellen oder Audiodaten im Arbeitsbereich auferlegt werden.                                                                    |
-| version         | Gibt die releaseebene des Gerätetreibers und der Hardware zurück.                                                                                                                                       |
-| Video Algorithmus | Gibt den Namen des aktuellen Video Komprimierungs Algorithmus zurück.                                                                                                                                       |
-| Videoqualität   | Gibt den Namen für den aktuellen Video Qualitäts Deskriptor zurück. Dadurch wird möglicherweise "unknown" zurückgegeben, wenn die Anwendung Parameter auf bestimmte Werte festgelegt hat, die nicht definierten Qualitäten entsprechen.       |
-| Fenster Text     | Ruft die Beschriftung des Fensters ab, das vom Gerät verwendet wird.                                                                                                                                            |
+| Audioalgorithmus | Gibt den Namen des aktuellen Audiokomprimierungsalgorithmus zurück.                                                                                                                                       |
+| Audioqualität   | Gibt den Namen für den aktuellen Audioqualitätsdeskriptor zurück. Dies kann "unbekannt" zurückgeben, wenn die Anwendung Parameter auf bestimmte Werte festgelegt hat, die nicht den definierten Qualitäten entsprechen.       |
+| Copyright       | Ruft den COPYRIGHT-Hinweis für die TEXTDATEI-Datei aus dem Copyrightmetaereignis ab.                                                                                                                            |
+| file            | Ruft den Namen der Datei ab, die vom Verbundgerät verwendet wird. Wenn das Gerät ohne Datei geöffnet wird und der [Ladebefehl](load.md) nicht verwendet wurde, wird eine NULL-Zeichenfolge zurückgegeben.                  |
+| Infoidentität   | Erzeugt einen eindeutigen Bezeichner für die Audio-CD, die derzeit in den abgefragten Player geladen wird.                                                                                                        |
+| info upc        | Erzeugt den Universal Product Code (UPC), der auf einer Audio-CD codiert ist. Der UPC ist eine Zeichenfolge von Ziffern. Es ist möglicherweise nicht für alle CDs verfügbar.                                                    |
+| input           | Ruft die Beschreibung des aktuellen Eingabegeräts ab. Gibt "none" zurück, wenn kein Eingabegerät festgelegt ist.                                                                                               |
+| name            | Ruft den Sequenznamen aus dem Sequenz-/Nachverfolgungsnamen-Metaereignis ab.                                                                                                                               |
+| output          | Ruft die Beschreibung des aktuellen Ausgabegeräts ab. Gibt "none" zurück, wenn kein Ausgabegerät festgelegt ist.                                                                                             |
+| product         | Ruft eine Beschreibung des Geräts ab. Diese Informationen umfassen häufig den Produktnamen und das Modell. Die Zeichenfolgenlänge beträgt 31 Zeichen oder weniger.                                               |
+| still-Algorithmus | Gibt den Namen des aktuellen Bildkomprimierungsalgorithmus zurück.                                                                                                                                 |
+| noch qualität   | Gibt den Namen für den aktuellen Imagequalitätsdeskriptor zurück. Dies kann "unbekannt" zurückgeben, wenn die Anwendung Parameter auf bestimmte Werte festgelegt hat, die nicht den definierten Qualitäten entsprechen. |
+| Nutzung           | Gibt eine Zeichenfolge zurück, die Nutzungseinschränkungen beschreibt, die möglicherweise vom Besitzer der Visuellen oder Audiodaten im Arbeitsbereich gelten.                                                                    |
+| version         | Gibt die Releaseebene des Gerätetreibers und der Hardware zurück.                                                                                                                                       |
+| Videoalgorithmus | Gibt den Namen des aktuellen Videokomprimierungsalgorithmus zurück.                                                                                                                                       |
+| Videoqualität   | Gibt den Namen für den aktuellen Videoqualitätsdeskriptor zurück. Dies kann "unbekannt" zurückgeben, wenn die Anwendung Parameter auf bestimmte Werte festgelegt hat, die nicht den definierten Qualitäten entsprechen.       |
+| Fenstertext     | Ruft die Beschriftung des Fensters ab, das vom Gerät verwendet wird.                                                                                                                                            |
 
 
 
@@ -97,16 +97,16 @@ In der folgenden Tabelle werden die Flags aufgelistet, die im **lpszinfotype** -
 
 </dd> <dt>
 
-<span id="lpszFlags"></span><span id="lpszflags"></span><span id="LPSZFLAGS"></span>*lpszflags*
+<span id="lpszFlags"></span><span id="lpszflags"></span><span id="LPSZFLAGS"></span>*lpszFlags*
 </dt> <dd>
 
-Kann "wait", "notify" oder beides sein. Für Digital Video-und VCR-Geräte kann auch "Test" angegeben werden. Weitere Informationen zu diesen Flags finden Sie [unter warte-, Benachrichtigungs-und testflags](the-wait-notify-and-test-flags.md).
+Kann "wait", "notify" oder beides sein. Für digital-video- und VCR-Geräte kann auch "test" angegeben werden. Weitere Informationen zu diesen Flags finden Sie unter [Die Warte-, Benachrichtigungs- und Testflags](the-wait-notify-and-test-flags.md).
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt 0 (null) zurück, wenn erfolgreich, andernfalls einen Fehler.
+Gibt 0 (null) zurück, wenn erfolgreich, andernfalls ein Fehler.
 
 ## <a name="examples"></a>Beispiele
 
@@ -127,14 +127,14 @@ info mysound product
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[MCI](mci.md)
+[Mci](mci.md)
 </dt> <dt>
 
-[MCI-Befehls Zeichenfolgen](mci-command-strings.md)
+[MCI-Befehlszeichenfolgen](mci-command-strings.md)
 </dt> <dt>
 
 [Laden](load.md)

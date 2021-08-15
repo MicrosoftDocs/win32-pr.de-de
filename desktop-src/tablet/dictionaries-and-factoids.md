@@ -1,23 +1,23 @@
 ---
-description: Ein Wörterbuch ist ein internes Lexikon, das eine Erkennung verwendet, um Wort Übereinstimmungen und-Alternativen zu bestimmen. Ein Faktoid erhöht die Erkennungsgenauigkeit, indem ein bestimmter Kontext für ein bestimmtes Feld ausgewählt wird.
+description: Ein Wörterbuch ist ein internes Lexikon, das von einer -Erkannten verwendet wird, um Übereinstimmungen und Alternativen von Wörtern zu bestimmen. Ein Factoid erhöht die Erkennungsgenauigkeit, indem ein bestimmter Kontext für ein bestimmtes Feld ausgewählt wird.
 ms.assetid: 9e90182b-5069-4895-9ef3-b6677705eb0b
-title: Wörterbücher und Faktoide
+title: Wörterbücher und Factoide
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: cacd6bd8d5c0a8b187e95030a7ebb1b7bbe44a1d
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 3e071a263bf4397498d4358846a04905532b179058b426260cd149c21c30907c
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106356982"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118967689"
 ---
-# <a name="dictionaries-and-factoids"></a>Wörterbücher und Faktoide
+# <a name="dictionaries-and-factoids"></a>Wörterbücher und Factoide
 
-Ein Wörterbuch ist ein internes Lexikon, das eine Erkennung verwendet, um Wort Übereinstimmungen und-Alternativen zu bestimmen. Ein Faktoid erhöht die Erkennungsgenauigkeit, indem ein bestimmter Kontext für ein bestimmtes Feld ausgewählt wird.
+Ein Wörterbuch ist ein internes Lexikon, das von einer -Erkannten verwendet wird, um Übereinstimmungen und Alternativen von Wörtern zu bestimmen. Ein Factoid erhöht die Erkennungsgenauigkeit, indem ein bestimmter Kontext für ein bestimmtes Feld ausgewählt wird.
 
-Weitere Informationen zu Wörterbüchern finden [Sie unter Verwenden von Anwendungs Wörterbüchern](using-application-dictionaries.md).
+Weitere Informationen zu Wörterbüchern finden Sie unter [Verwenden von Anwendungswörterbüchern.](using-application-dictionaries.md)
 
-Weitere Informationen zu Faktoiden finden Sie unter [Verwenden von Kontext zur Verbesserung der Genauigkeit](using-context-to-improve-accuracy.md).
+Weitere Informationen zu Factoiden finden Sie unter [Using Context to Improve Accuracy](using-context-to-improve-accuracy.md).
 
  
 

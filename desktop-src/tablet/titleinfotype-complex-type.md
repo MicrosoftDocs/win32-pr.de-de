@@ -1,7 +1,7 @@
 ---
-description: Definiert den Typ, der Informationen über den Titel in einer Journal Notiz enthält.
+description: Definiert den Typ, der Informationen zum Titel in einer Journalnotiz enthält.
 ms.assetid: 8289456b-c969-4079-bcb5-36949faa65e0
-title: Komplexer titleinfotype-Typ
+title: Komplexer TitleInfoType-Typ
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -12,16 +12,16 @@ api_name:
 api_type:
 - Schema
 api_location: ''
-ms.openlocfilehash: f358f0e9282914dc202297c8e3bf2fed1ab588a9
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: d001b8bbae1b52b7ec168b0438be4eae3313b231f34869ca37d528ed8e2e958a
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "104218350"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118966749"
 ---
-# <a name="titleinfotype-complex-type"></a>Komplexer titleinfotype-Typ
+# <a name="titleinfotype-complex-type"></a>Komplexer TitleInfoType-Typ
 
-Definiert den Typ, der Informationen über den Titel in einer Journal Notiz enthält.
+Definiert den Typ, der Informationen zum Titel in einer Journalnotiz enthält.
 
 ``` syntax
 <xs:complexType name="TitleInfoType" />
@@ -33,7 +33,7 @@ Definiert den Typ, der Informationen über den Titel in einer Journal Notiz enth
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows XP Tablet PC Edition \[ Desktop-Apps\]<br/> |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur Desktop-Apps der XP Tablet PC Edition \[\]<br/> |
 | Unterstützte Mindestversion (Server)<br/> | Nicht unterstützt<br/>                                     |
 
 

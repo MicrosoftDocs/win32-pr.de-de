@@ -1,28 +1,28 @@
 ---
-description: Windows GDI+ macht eine flache API verfügbar, die aus etwa 600 Funktionen besteht. Microsoft .NET Framework stellt eine Reihe von Wrapperklassen mit verwaltetem Code für GDI+ bereit.
+description: Windows GDI+ macht eine flache API verfügbar, die aus etwa 600 Funktionen besteht. Microsoft .NET Framework stellt eine Reihe von Wrapperklassen für verwalteten Code für GDI+ bereit.
 ms.assetid: afd8cf81-8a20-4592-bd0a-46341742cc9b
 title: GDI+ Flat-API
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 65f91c3c925b7de31f27e91c70cbd1bf0cbbb2a4
-ms.sourcegitcommit: 91530c19d26ba4c57a6af1f37b57f211f580464e
+ms.openlocfilehash: 37dee1288bdbbf86c39d201d5ccc066c1eab16cb600950edd5e848cd250e0ed8
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2021
-ms.locfileid: "112394985"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118977550"
 ---
 # <a name="gdi-flat-api"></a>GDI+ Flat-API
 
-Windows GDI+ macht eine flache API verfügbar, die aus etwa 600 Funktionen besteht, die in Gdiplus.dll implementiert und in Gdiplusflat.h deklariert werden. Die Funktionen in der flachen GDI+-API werden von einer Sammlung von etwa 40 C++-Klassen umschlossen. Es wird empfohlen, die Funktionen in der flachen API nicht direkt aufzurufen. Wenn Sie GDI+ aufrufen, sollten Sie dazu die Methoden und Funktionen aufrufen, die von den C++-Wrappern bereitgestellt werden. Microsoft Product Support Services bietet keine Unterstützung für Code, der die flache API direkt aufruft.
+Windows GDI+ macht eine flache API verfügbar, die aus etwa 600 Funktionen besteht, die in Gdiplus.dll implementiert und in Gdiplusflat.h deklariert werden. Die Funktionen in der GDI+ flachen API werden von einer Sammlung von etwa 40 C++-Klassen umschlossen. Es wird empfohlen, die Funktionen in der flachen API nicht direkt aufzurufen. Wenn Sie aufruft, GDI+, sollten Sie dazu die Methoden und Funktionen aufrufen, die von den C++-Wrappern bereitgestellt werden. Microsoft Product Support Services bietet keine Unterstützung für Code, der die flache API direkt aufruft.
 
-Als Alternative zu den C++-Wrappern stellt das Microsoft .NET Framework eine Reihe von Wrapperklassen mit verwaltetem Code für GDI+ bereit. Die Wrapper für verwalteten Code für GDI+ gehören zu den folgenden Namespaces.
+Als Alternative zu den C++-Wrappern stellt microsoft .NET Framework eine Reihe von Wrapperklassen mit verwaltetem Code für GDI+ bereit. Die Wrapper für verwalteten Code für GDI+ zu den folgenden Namespaces gehören.
 
 -   [System.Drawing](/dotnet/api/system.drawing?view=dotnet-plat-ext-3.1&preserve-view=true)
 -   [System.Drawing.Drawing2D](/dotnet/api/system.drawing.drawing2d?view=dotnet-plat-ext-3.1&preserve-view=true)
 -   [System.drawing.imaging](/dotnet/api/system.drawing.imaging?view=dotnet-plat-ext-3.1&preserve-view=true)
 -   [System.drawing.text](/dotnet/api/system.drawing.text?view=dotnet-plat-ext-3.1&preserve-view=true)
 
-Beide Wrappersätze (C++ und verwalteter Code) verwenden einen objektorientierten Ansatz, sodass es einige Unterschiede zwischen der Art und Weise gibt, wie Parameter an die Wrappermethoden übergeben werden, und der Art und Weise, wie Parameter an Funktionen in der flachen API übergeben werden. Beispielsweise ist einer der C++-Wrapper die [**Matrix-Klasse.**](/windows/win32/api/gdiplusmatrix/nl-gdiplusmatrix-matrix) Jedes **Matrixobjekt** verfügt über das Feld **nativeMatrix,** das auf eine interne Variable vom Typ **GpMatrix** verweist. Wenn Sie Parameter an eine Methode eines **Matrixobjekts** übergeben, übergibt diese Methode diese Parameter (oder einen Satz verwandter Parameter) zusammen an eine der Funktionen in der flachen GDI+-API. Diese Methode übergibt jedoch auch das **nativeMatrix-Feld** (als Eingabeparameter) an die flache API-Funktion. Der folgende Code zeigt, wie die [**Matrix::Shear-Methode**](/windows/win32/api/Gdiplusmatrix/nf-gdiplusmatrix-matrix-shear) die **GdipShearMatrix(GpMatrix \* matrix, REAL shearX, REAL shearY, GpMatrixOrder order)-Funktion** aufruft.
+Beide Wrappersätze (C++ und verwalteter Code) verwenden einen objektorientierten Ansatz, sodass es einige Unterschiede zwischen der Art und Weise gibt, wie Parameter an die Wrappermethoden übergeben werden, und der Art und Weise, wie Parameter an Funktionen in der flachen API übergeben werden. Beispielsweise ist einer der C++-Wrapper die [**Matrix-Klasse.**](/windows/win32/api/gdiplusmatrix/nl-gdiplusmatrix-matrix) Jedes **Matrixobjekt** verfügt über das Feld **nativeMatrix,** das auf eine interne Variable vom Typ **GpMatrix** verweist. Wenn Sie Parameter an eine Methode eines **Matrixobjekts** übergeben, übergibt diese Methode diese Parameter (oder einen Satz verwandter Parameter) zusammen an eine der Funktionen in der GDI+ flachen API. Diese Methode übergibt jedoch auch das **nativeMatrix-Feld** (als Eingabeparameter) an die flache API-Funktion. Der folgende Code zeigt, wie die [**Matrix::Shear-Methode**](/windows/win32/api/Gdiplusmatrix/nf-gdiplusmatrix-matrix-shear) die **GdipShearMatrix(GpMatrix \* matrix, REAL shearX, REAL shearY, GpMatrixOrder order)-Funktion** aufruft.
 
 
 ```
@@ -58,7 +58,7 @@ VOID SetNativeMatrix(GpMatrix *nativeMatrix)
 
 
 
-Klonmethoden in den Wrapperklassen erhalten keine Parameter, übergeben jedoch häufig zwei Parameter an die zugrunde liegende Funktion in der flachen GDI+-API. Beispielsweise übergibt die [**Matrix::Clone-Methode**](/windows/win32/api/Gdiplusmatrix/nf-gdiplusmatrix-matrix-clone) **nativeMatrix** (als Eingabeparameter) und die Adresse einer GpMatrix-Zeigervariablen (als Ausgabeparameter) an die  **GdipCloneMatrix-Funktion.** Der folgende Code zeigt, wie die **Matrix::Clone-Methode** die **GdipCloneMatrix(GpMatrix \* matrix, GpMatrix \* \* cloneMatrix)-Funktion** aufruft.
+Klonmethoden in den Wrapperklassen erhalten keine Parameter, übergeben jedoch häufig zwei Parameter an die zugrunde liegende Funktion in der GDI+ flachen API. Beispielsweise übergibt die [**Matrix::Clone-Methode**](/windows/win32/api/Gdiplusmatrix/nf-gdiplusmatrix-matrix-clone) **nativeMatrix** (als Eingabeparameter) und die Adresse einer GpMatrix-Zeigervariablen (als Ausgabeparameter) an die  **GdipCloneMatrix-Funktion.** Der folgende Code zeigt, wie die **Matrix::Clone-Methode** die **GdipCloneMatrix(GpMatrix \* matrix, GpMatrix \* \* cloneMatrix)-Funktion** aufruft.
 
 
 ```
@@ -78,7 +78,7 @@ Die Funktionen in der flachen API geben einen Wert vom Typ GpStatus zurück. Die
 
 `typedef Status GpStatus;`
 
-Die meisten Methoden in den Wrapperklassen geben einen Statuswert zurück, der angibt, ob die Methode erfolgreich war. Einige der Wrappermethoden geben jedoch Zustandswerte zurück. Wenn Sie eine Wrappermethode aufrufen, die einen Zustandswert zurückgibt, übergibt die Wrappermethode die entsprechenden Parameter an die zugrunde liegende Funktion in der flachen GDI+-API. Die [**Matrix-Klasse**](/windows/win32/api/gdiplusmatrix/nl-gdiplusmatrix-matrix) verfügt beispielsweise über eine [**Matrix::IsInvertible-Methode,**](/windows/win32/api/Gdiplusmatrix/nf-gdiplusmatrix-matrix-isinvertible) die das **nativeMatrix-Feld** und die Adresse einer **BOOL-Variablen** (als Ausgabeparameter) an die **GdipIsMatrixInvertible-Funktion** übergibt. Der folgende Code zeigt, wie die **Matrix::IsInvertible-Methode** die **GdipIsMatrixInvertible(GDIPCONST GpMatrix \* matrix, BOOL \* result)-Funktion** aufruft.
+Die meisten Methoden in den Wrapperklassen geben einen Statuswert zurück, der angibt, ob die Methode erfolgreich war. Einige der Wrappermethoden geben jedoch Zustandswerte zurück. Wenn Sie eine Wrappermethode aufrufen, die einen Zustandswert zurückgibt, übergibt die Wrappermethode die entsprechenden Parameter an die zugrunde liegende Funktion in der GDI+ flachen API. Die [**Matrix-Klasse**](/windows/win32/api/gdiplusmatrix/nl-gdiplusmatrix-matrix) verfügt beispielsweise über eine [**Matrix::IsInvertible-Methode,**](/windows/win32/api/Gdiplusmatrix/nf-gdiplusmatrix-matrix-isinvertible) die das **nativeMatrix-Feld** und die Adresse einer **BOOL-Variablen** (als Ausgabeparameter) an die **GdipIsMatrixInvertible-Funktion** übergibt. Der folgende Code zeigt, wie die **Matrix::IsInvertible-Methode** die **GdipIsMatrixInvertible(GDIPCONST GpMatrix \* matrix, BOOL \* result)-Funktion** aufruft.
 
 
 ```
@@ -93,7 +93,7 @@ BOOL IsInvertible() const
 
 
 
-Ein weiterer Wrapper ist die [**Color-Klasse.**](/windows/win32/api/gdipluscolor/nl-gdipluscolor-color) Ein **Color-Objekt** verfügt über ein einzelnes Feld vom Typ **ARGB**, das als **DWORD** definiert ist. Wenn Sie ein **Color-Objekt** an eine der Wrappermethoden übergeben, übergibt diese Methode das **ARGB-Feld** zusammen an die zugrunde liegende Funktion in der flachen GDI+-API. Der folgende Code zeigt, wie die [**Pen::SetColor-Methode**](/windows/win32/api/Gdipluspen/nf-gdipluspen-pen-setcolor) die **GdipSetPenColor(GpPen \* pen, ARGB argb)-Funktion** aufruft. Die [**Color::GetValue-Methode**](/windows/win32/api/Gdipluscolor/nf-gdipluscolor-color-getvalue) gibt den Wert des **ARGB-Felds** zurück.
+Ein weiterer Wrapper ist die [**Color-Klasse.**](/windows/win32/api/gdipluscolor/nl-gdipluscolor-color) Ein **Color-Objekt** verfügt über ein einzelnes Feld vom Typ **ARGB**, das als **DWORD** definiert ist. Wenn Sie ein **Color-Objekt** an eine der Wrappermethoden übergeben, übergibt diese Methode das **ARGB-Feld** zusammen an die zugrunde liegende Funktion in der GDI+ flachen API. Der folgende Code zeigt, wie die [**Pen::SetColor-Methode**](/windows/win32/api/Gdipluspen/nf-gdipluspen-pen-setcolor) die **GdipSetPenColor(GpPen \* pen, ARGB argb)-Funktion** aufruft. Die [**Color::GetValue-Methode**](/windows/win32/api/Gdipluscolor/nf-gdipluscolor-color-getvalue) gibt den Wert des **ARGB-Felds** zurück.
 
 
 ```
@@ -106,7 +106,7 @@ Status SetColor(IN const Color& color)
 
 
 
-Die folgenden Themen zeigen die Beziehung zwischen der GDI+-Flat-API und den C++-Wrappermethoden.
+Die folgenden Themen zeigen die Beziehung zwischen der GDI+ flachen API und den C++-Wrappermethoden.
 
 -   [AdjustableArrowCap-Funktionen](-gdiplus-adjustablearrowcap-flat.md)
 -   [Bitmapfunktionen](-gdiplus-bitmap-flat.md)

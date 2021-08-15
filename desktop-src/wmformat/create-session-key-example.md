@@ -1,42 +1,42 @@
 ---
-title: Beispiel für das Erstellen eines Sitzungsschlüssels
-description: Beispiel für das Erstellen eines Sitzungsschlüssels
+title: Beispiel zum Erstellen eines Sitzungsschlüssels
+description: Beispiel zum Erstellen eines Sitzungsschlüssels
 ms.assetid: 4347502b-3900-4306-b58c-16d151200e6c
 keywords:
-- Windows Media-Format-SDK, Sitzungsschlüssel
-- Windows Media-Format-SDK, Inhalts Schlüssel
-- Windows Media-Format-SDK, Beispielcode
-- Windows Media-Format-SDK, Codebeispiele
+- Windows Medienformat-SDK, Sitzungsschlüssel
+- Windows Medienformat-SDK, Inhaltsschlüssel
+- Windows Medienformat-SDK, Beispielcode
+- Windows Medienformat-SDK, Codebeispiele
 - Digital Rights Management (DRM), Sitzungsschlüssel
 - DRM (Digital Rights Management), Sitzungsschlüssel
-- Digital Rights Management (DRM), Inhalts Schlüssel
-- DRM (Digital Rights Management), Inhalts Schlüssel
+- Digital Rights Management (DRM), Inhaltsschlüssel
+- DRM (Digital Rights Management), Inhaltsschlüssel
 - Digital Rights Management (DRM), Beispielcode
 - DRM (Digital Rights Management), Beispielcode
 - Digital Rights Management (DRM), Codebeispiele
 - DRM (Digital Rights Management), Codebeispiele
-- Erweiterte APIs für den DRM-Client, Sitzungsschlüssel
+- ERWEITERTE APIs des DRM-Clients, Sitzungsschlüssel
 - Erweiterte Client-APIs, Sitzungsschlüssel
-- Erweiterte APIs für den DRM-Client, Inhalts Schlüssel
-- Erweiterte Client-APIs, Inhalts Schlüssel
-- Erweiterte APIs für den DRM-Client, Beispielcode
+- ERWEITERTE APIs für DEN DRM-Client, Inhaltsschlüssel
+- Erweiterte Client-APIs, Inhaltsschlüssel
+- ERWEITERTE APIs für DEN DRM-Client, Beispielcode
 - Erweiterte Client-APIs, Beispielcode
-- Erweiterte APIs für den DRM-Client, Codebeispiele
+- ERWEITERTE APIs für DEN DRM-Client, Codebeispiele
 - Erweiterte Client-APIs, Codebeispiele
 - Sitzungsschlüssel
-- Inhalts Schlüssel
+- Inhaltsschlüssel
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: b757f5d67df0aea1dd70ee45ad2d1b0732040be2
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: cef4a9c673b0aef24e010bff0f9a84beaf6321a81fe4ac8a8a9935c126983eb5
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "104037583"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118964139"
 ---
-# <a name="create-session-key-example"></a>Beispiel für das Erstellen eines Sitzungsschlüssels
+# <a name="create-session-key-example"></a>Beispiel zum Erstellen eines Sitzungsschlüssels
 
-Der Sitzungsschlüssel wird verwendet, um den Inhalts Schlüssel zu schützen. Der folgende Code veranschaulicht, wie ein Sitzungsschlüssel erstellt wird, aber die Details der Zufallsschlüssel Generierung weggelassen werden.
+Der Sitzungsschlüssel wird verwendet, um den Inhaltsschlüssel zu schützen. Der folgende Code veranschaulicht das Erstellen eines Sitzungsschlüssels, lässt aber die Details der Zufälligschlüsselgenerierung aus.
 
 
 ```C++
@@ -98,12 +98,12 @@ EXIT:
 
 <dl> <dt>
 
-[**DRM-Import Beispiele**](drm-import-examples.md)
+[**BEISPIELE FÜR DRM-Importe**](drm-import-examples.md)
 </dt> </dl>
 
- 
+ 
 
- 
+ 
 
 
 

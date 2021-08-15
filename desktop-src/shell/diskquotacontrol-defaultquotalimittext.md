@@ -1,6 +1,6 @@
 ---
 description: Ruft die Standardkontingentgrenze als Textzeichenfolge ab.
-title: DiskQuotaControl.DefaultQuotaLimitText -Eigenschaft
+title: DiskQuotaControl.DefaultQuotaLimitText-Eigenschaft
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,14 +13,14 @@ api_type:
 api_location:
 - Shell32.dll
 ms.assetid: ea1b02e0-c480-4ef1-b6e0-1ec202d5f3c5
-ms.openlocfilehash: 14a5b5a0cc42bda17f922020a8485430797875e1
-ms.sourcegitcommit: 3caaa3c92dcb1ef12f84464d14ce6262e65e988e
+ms.openlocfilehash: 378d06286a0334cf6ca3056038f45be3a5919b4fd2aa88934957122bc751c141
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/12/2021
-ms.locfileid: "109841541"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119094227"
 ---
-# <a name="diskquotacontroldefaultquotalimittext-property"></a>DiskQuotaControl.DefaultQuotaLimitText -Eigenschaft
+# <a name="diskquotacontroldefaultquotalimittext-property"></a>DiskQuotaControl.DefaultQuotaLimitText-Eigenschaft
 
 Ruft die Standardkontingentgrenze als Textzeichenfolge ab.
 
@@ -37,7 +37,7 @@ DefaultQuotaLimitText = DiskQuotaControl.DefaultQuotaLimitText
 
 ## <a name="property-value"></a>Eigenschaftswert
 
-Ein Zeichenfolgenwert, der die Standardkontingentgrenze für neue Benutzer des Volumes enthält. Wenn das Standardkontingent beispielsweise 10,5 MB beträgt, ist der Wert der -Eigenschaft "10,5 MB". Wenn das Volume über kein Standardkontingent verfügt, wird die -Eigenschaft auf "No Limit" oder die lokalisierte Entsprechung festgelegt.
+Ein Zeichenfolgenwert, der die Standardkontingentgrenze für neue Benutzer des Volumes enthält. Wenn das Standardkontingent beispielsweise 10,5 MB beträgt, ist der Wert der Eigenschaft "10,5 MB". Wenn das Volume über kein Standardkontingent verfügt, wird die -Eigenschaft auf "No Limit" oder die lokalisierte Entsprechung festgelegt.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -51,7 +51,7 @@ Ein Zeichenfolgenwert, der die Standardkontingentgrenze für neue Benutzer des V
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 

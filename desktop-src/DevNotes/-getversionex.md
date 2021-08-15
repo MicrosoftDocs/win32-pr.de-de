@@ -14,16 +14,16 @@ api_type:
 api_location:
 - Msmdun80.dll
 - Sqlunirl.dll
-ms.openlocfilehash: dd4b33bee4a5f1c2a72ef7494176fe2979b4a7cd
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 2e3047edfaf2dabe591172dd3ca292f41aeefa90774231b417f5405e3aeb18c9
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106372269"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118956289"
 ---
 # <a name="_getversionex-function"></a>\_GetVersionEx-Funktion
 
-\[Diese Funktion ist ein Wrapper über die **GetVersionEx** -Funktion. Diese Funktion kann in Zukunft geändert oder nicht mehr verfügbar sein. Anwendungen sollten **GetVersionEx** direkt aufrufen.\]
+\[Diese Funktion ist ein Wrapper für die **GetVersionEx-Funktion.** Diese Funktion kann in Zukunft geändert oder nicht mehr verfügbar sein. Anwendungen sollten **GetVersionEx** direkt aufrufen.\]
 
 Ruft Informationen zur Betriebssystemversion ab. Siehe [**GetVersionEx**](/windows/win32/api/sysinfoapi/nf-sysinfoapi-getversionexa).
 
@@ -55,11 +55,11 @@ BOOL _GetVersionEx(
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**GetVersionEx**](/windows/win32/api/sysinfoapi/nf-sysinfoapi-getversionexa)
+[**Getversionex**](/windows/win32/api/sysinfoapi/nf-sysinfoapi-getversionexa)
 </dt> </dl>
 
  

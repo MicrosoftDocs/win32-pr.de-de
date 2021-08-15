@@ -1,11 +1,11 @@
 ---
-title: DHCP-Unique-Key-Attribut
-description: Das DHCP-Unique-Key-Attribut wird derzeit nicht verwendet.
+title: dhcp-Unique-Key-Attribut
+description: Das dhcp-Unique-Key-Attribut wird derzeit nicht verwendet.
 ms.assetid: 5b627db8-cdda-4fd4-9c21-a996df51ddac
 ms.tgt_platform: multiple
 keywords:
-- AD-Schema für DHCP-Unique-Key-Attribut
-- dhcpuniquekey-Attribut, AD-Schema
+- DHCP-Unique-Key-Attribut AD-Schema
+- DHCPUniqueKey-Attribut AD-Schema
 topic_type:
 - apiref
 api_name:
@@ -14,28 +14,28 @@ api_type:
 - Schema
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: a23f43393efc19042861ea6a680d91581d73959e
-ms.sourcegitcommit: b77ace27b0432e7cd3863191b11926be032fbe2f
+ms.openlocfilehash: 6ea9400c4f156cc67120f8862e7f0a3aa48b8857c4ce7e3b7027492482d39bad
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "106342926"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118961709"
 ---
-# <a name="dhcp-unique-key-attribute"></a>DHCP-Unique-Key-Attribut
+# <a name="dhcp-unique-key-attribute"></a>dhcp-Unique-Key-Attribut
 
-Das **DHCP-Unique-Key-** Attribut wird derzeit nicht verwendet.
+Das **dhcp-Unique-Key-Attribut** wird derzeit nicht verwendet.
 
 
 
 | Eingabe | Wert |
 |-------------------|--------------------------------------|
-| CN                | DHCP-Unique-Key                      |
-| LDAP-Display-Name | dhcpuniquekey                        |
+| CN                | dhcp-Unique-Key                      |
+| Ldap-Anzeigename | dhcpUniqueKey                        |
 | Size              | \-                                   |
-| Berechtigung aktualisieren  | \-                                   |
-| Aktualisierungshäufigkeit  | \-                                   |
+| Aktualisieren von Berechtigungen  | \-                                   |
+| Updatehäufigkeit  | \-                                   |
 | Attribute-Id      | 1.2.840.113556.1.4.698               |
-| System-ID-GUID    | 963d273a-48be-11d1-a9c3-0000f 80367c1 |
+| System-Id-Guid    | 963d273a-48be-11d1-a9c3-0000f80367c1 |
 | Syntax            | [**Intervall**](s-interval.md)       |
 
 
@@ -43,7 +43,7 @@ Das **DHCP-Unique-Key-** Attribut wird derzeit nicht verwendet.
 ## <a name="implementations"></a>Implementierungen
 
 -   [**Windows 2000 Server**](#windows-2000-server)
--   [**Windows Server 2003**](#windows-server-2003)
+-   [**Windows Server 2003**](#windows-server-2003)
 -   [**Windows Server 2003 R2**](#windows-server-2003-r2)
 -   [**Windows Server 2008**](#windows-server-2008)
 -   [**Windows Server 2008 R2**](#windows-server-2008-r2)
@@ -58,10 +58,10 @@ Das **DHCP-Unique-Key-** Attribut wird derzeit nicht verwendet.
 | Link-ID                | \-                                           |
 | MAPI-Id                | \-                                           |
 | System-Only            | False                                        |
-| Ist-einwertig       | Richtig                                         |
+| Is-Single-Valued       | True                                         |
 | Ist indiziert             | False                                        |
 | Im globalen Katalog      | False                                        |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                 |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                 |
 | Range-Lower            | \-                                           |
 | Range-Upper            | \-                                           |
 | Search-Flags           | 0x00000000                                   |
@@ -70,7 +70,7 @@ Das **DHCP-Unique-Key-** Attribut wird derzeit nicht verwendet.
 
 
 
-## <a name="windows-server-2003"></a>Windows Server 2003
+## <a name="windows-server-2003"></a>Windows Server 2003
 
 
 
@@ -79,10 +79,10 @@ Das **DHCP-Unique-Key-** Attribut wird derzeit nicht verwendet.
 | Link-ID                | \-                                           |
 | MAPI-Id                | \-                                           |
 | System-Only            | False                                        |
-| Ist-einwertig       | Richtig                                         |
+| Is-Single-Valued       | True                                         |
 | Ist indiziert             | False                                        |
 | Im globalen Katalog      | False                                        |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                 |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                 |
 | Range-Lower            | \-                                           |
 | Range-Upper            | \-                                           |
 | Search-Flags           | 0x00000000                                   |
@@ -100,10 +100,10 @@ Das **DHCP-Unique-Key-** Attribut wird derzeit nicht verwendet.
 | Link-ID                | \-                                           |
 | MAPI-Id                | \-                                           |
 | System-Only            | False                                        |
-| Ist-einwertig       | Richtig                                         |
+| Is-Single-Valued       | True                                         |
 | Ist indiziert             | False                                        |
 | Im globalen Katalog      | False                                        |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                 |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                 |
 | Range-Lower            | \-                                           |
 | Range-Upper            | \-                                           |
 | Search-Flags           | 0x00000000                                   |
@@ -121,10 +121,10 @@ Das **DHCP-Unique-Key-** Attribut wird derzeit nicht verwendet.
 | Link-ID                | \-                                           |
 | MAPI-Id                | \-                                           |
 | System-Only            | False                                        |
-| Ist-einwertig       | Richtig                                         |
+| Ist einwertig       | True                                         |
 | Ist indiziert             | False                                        |
 | Im globalen Katalog      | False                                        |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                 |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                 |
 | Range-Lower            | \-                                           |
 | Range-Upper            | \-                                           |
 | Search-Flags           | 0x00000000                                   |
@@ -142,10 +142,10 @@ Das **DHCP-Unique-Key-** Attribut wird derzeit nicht verwendet.
 | Link-ID                | \-                                           |
 | MAPI-Id                | \-                                           |
 | System-Only            | False                                        |
-| Ist-einwertig       | Richtig                                         |
+| Ist einwertig       | True                                         |
 | Ist indiziert             | False                                        |
 | Im globalen Katalog      | False                                        |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                 |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                 |
 | Range-Lower            | \-                                           |
 | Range-Upper            | \-                                           |
 | Search-Flags           | 0x00000000                                   |
@@ -163,10 +163,10 @@ Das **DHCP-Unique-Key-** Attribut wird derzeit nicht verwendet.
 | Link-ID                | \-                                           |
 | MAPI-Id                | \-                                           |
 | System-Only            | False                                        |
-| Ist-einwertig       | Richtig                                         |
+| Ist einwertig       | True                                         |
 | Ist indiziert             | False                                        |
 | Im globalen Katalog      | False                                        |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                 |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                 |
 | Range-Lower            | \-                                           |
 | Range-Upper            | \-                                           |
 | Search-Flags           | 0x00000000                                   |

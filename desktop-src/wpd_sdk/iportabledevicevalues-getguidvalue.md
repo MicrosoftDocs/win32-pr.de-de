@@ -1,7 +1,7 @@
 ---
-description: Die getguidvalue-Methode ruft einen GUID-Wert (Type VT \_ CLSID) ab, der von einem Schlüssel angegeben wird.
+description: Die GetGuidValue-Methode ruft einen GUID-Wert (Typ VT \_ CLSID) ab, der durch einen Schlüssel angegeben wird.
 ms.assetid: 1cfa75e8-2c3b-4893-954e-dae25a6b8220
-title: 'Iportabledevicevalues:: getguidvalue-Methode (portabledevicetypes. h)'
+title: IPortableDeviceValues::GetGuidValue-Methode (PortableDeviceTypes.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -14,16 +14,16 @@ api_type:
 api_location:
 - PortableDeviceGUIDs.lib
 - PortableDeviceGUIDs.dll
-ms.openlocfilehash: 362672daad835a2e843edeaf6dc517884c25f1ad
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: d6389b426aca52f20b082ed4730778432bdbe56c4a6a1e0a4495060f13dbb5d9
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106358731"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118963679"
 ---
-# <a name="iportabledevicevaluesgetguidvalue-method"></a>Iportabledevicevalues:: getguidvalue-Methode
+# <a name="iportabledevicevaluesgetguidvalue-method"></a>IPortableDeviceValues::GetGuidValue-Methode
 
-Die **getguidvalue** -Methode ruft einen **GUID** -Wert (Type VT \_ CLSID) ab, der von einem Schlüssel angegeben wird.
+Die **GetGuidValue-Methode** ruft einen **GUID-Wert** (Typ VT \_ CLSID) ab, der durch einen Schlüssel angegeben wird.
 
 ## <a name="syntax"></a>Syntax
 
@@ -41,31 +41,31 @@ HRESULT GetGuidValue(
 
 <dl> <dt>
 
-*Schlüssel* \[ in\]
+*key* \[ In\]
 </dt> <dd>
 
-Ein **refpropertykey** -Schlüssel, der das abzurufende Element angibt.
+Ein **REFPROPERTYKEY-Schlüssel,** der das abzurufende Element angibt.
 
 </dd> <dt>
 
-*pValue* \[ vorgenommen\]
+*pValue* \[ out\]
 </dt> <dd>
 
-Zeiger auf den abgerufenen **GUID** -Wert.
+Zeiger auf den abgerufenen **GUID-Wert.**
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Die-Methode gibt ein **HRESULT** zurück. Mögliches Werte (aber nicht die Einzigen) sind die in der folgenden Tabelle.
+Die Methode gibt ein **HRESULT** zurück. Mögliches Werte (aber nicht die Einzigen) sind die in der folgenden Tabelle.
 
 
 
 | Rückgabecode                                                                                                            | Beschreibung                                                          |
 |------------------------------------------------------------------------------------------------------------------------|----------------------------------------------------------------------|
 | <dl> <dt>**S \_ OK**</dt> </dl>                                   | Die Methode wurde erfolgreich ausgeführt.<br/>                                     |
-| <dl> <dt>**DISP \_ E \_ typemismatch**</dt> </dl>                   | Die von *Key* angegebene Eigenschaft ist kein **GUID** -Typ.<br/>   |
-| <dl> <dt>**HRESULT \_ von \_ Win32 (Fehler \_ nicht \_ gefunden)**</dt> </dl> | Die von *Key* angegebene Eigenschaft ist nicht in der Auflistung.<br/> |
+| <dl> <dt>**DISP \_ E \_ TYPEMISMATCH**</dt> </dl>                   | Die vom *Schlüssel* angegebene Eigenschaft ist kein **GUID-Typ.**<br/>   |
+| <dl> <dt>**HRESULT \_ AUS \_ WIN32 (FEHLER \_ NICHT \_ GEFUNDEN)**</dt> </dl> | Die vom *Schlüssel* angegebene Eigenschaft befindet sich nicht in der Auflistung.<br/> |
 
 
 
@@ -73,7 +73,7 @@ Die-Methode gibt ein **HRESULT** zurück. Mögliches Werte (aber nicht die Einzi
 
 ## <a name="examples"></a>Beispiele
 
-Ein Beispiel für die Verwendung dieser Methode finden Sie [unter Abrufen unterstützter Dienst Methoden](retrieving-supported-methods.md).
+Ein Beispiel für die Verwendung dieser Methode finden Sie unter [Abrufen unterstützter Dienstmethoden.](retrieving-supported-methods.md)
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -81,22 +81,22 @@ Ein Beispiel für die Verwendung dieser Methode finden Sie [unter Abrufen unters
 
 | Anforderung | Wert |
 |--------------------|----------------------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>Portablede vicetypes. h</dt> </dl>   |
-| Bibliothek<br/> | <dl> <dt>Portabledeviceguids. lib</dt> </dl> |
+| Header<br/>  | <dl> <dt>PortableDeviceTypes.h</dt> </dl>   |
+| Bibliothek<br/> | <dl> <dt>PortableDeviceGUIDs.lib</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Iportabledebug-Schnittstelle**](iportabledevicevalues.md)
+[**IPortableDeviceValues-Schnittstelle**](iportabledevicevalues.md)
 </dt> <dt>
 
-[**Iportabledebug:: setguidvalue**](iportabledevicevalues-setguidvalue.md)
+[**IPortableDeviceValues::SetGuidValue**](iportabledevicevalues-setguidvalue.md)
 </dt> <dt>
 
-[Abrufen unterstützter Dienst Methoden](retrieving-supported-methods.md)
+[Abrufen unterstützter Dienstmethoden](retrieving-supported-methods.md)
 </dt> <dt>
 
 [Abrufen der von einem Gerät unterstützten Renderingfunktionen](retrieving-the-rendering-capabilities-supported-by-a-device.md)

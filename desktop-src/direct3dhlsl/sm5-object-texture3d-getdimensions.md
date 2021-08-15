@@ -1,6 +1,6 @@
 ---
-title: 'Texture3D:: GetDimensions-Funktion'
-description: 'Gibt die Dimensionen der Ressource zurück. | Texture3D:: GetDimensions-Funktion'
+title: Texture3D::GetDimensions-Funktion
+description: Gibt die Dimensionen der Ressource zurück. | Texture3D::GetDimensions-Funktion
 ms.assetid: 4a08f14f-7489-4ed1-bf94-4f63f1002eab
 keywords:
 - GetDimensions-Funktion HLSL
@@ -13,14 +13,14 @@ api_type:
 ms.topic: reference
 ms.date: 05/31/2018
 api_location: ''
-ms.openlocfilehash: 7a700e0ff065e5f4758241ee0c8252965209a21f
-ms.sourcegitcommit: 92e74c99f8f4d097676959d0c317f533c2400a80
+ms.openlocfilehash: 8a7dd6248b7b6effc08e510ea56da6426c41dc54418bf7ee5da8cdc3c9ad965a
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/09/2021
-ms.locfileid: "104995752"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118985710"
 ---
-# <a name="texture3dgetdimensions-function"></a>Texture3D:: GetDimensions-Funktion
+# <a name="texture3dgetdimensions-function"></a>Texture3D::GetDimensions-Funktion
 
 Gibt die Dimensionen der Ressource zurück.
 
@@ -40,48 +40,48 @@ void GetDimensions(
 
 <dl> <dt>
 
-*Miplevel* \[ in\]
+*MipLevel* \[ In\]
 </dt> <dd>
 
-Typ: **[ **uint**](/windows/desktop/WinProg/windows-data-types)**
+Typ: **[ **UINT**](/windows/desktop/WinProg/windows-data-types)**
 
-Optional. MipMap-Ebene (muss angegeben werden, wenn " *numoflevels* " verwendet wird).
+Optional. Mipmapebene (muss angegeben werden, wenn *NumberOfLevels* verwendet wird).
 
 </dd> <dt>
 
-*Breite* \[ vorgenommen\]
+*Breite* \[ out\]
 </dt> <dd>
 
-Typ: **[ **uint**](/windows/desktop/WinProg/windows-data-types)**
+Typ: **[ **UINT**](/windows/desktop/WinProg/windows-data-types)**
 
-Die Ressourcen Breite in Texels.
+Die Ressourcenbreite in Texel.
 
 </dd> <dt>
 
-*Höhe* \[ vorgenommen\]
+*Höhe* \[ out\]
 </dt> <dd>
 
-Typ: **[ **uint**](/windows/desktop/WinProg/windows-data-types)**
+Typ: **[ **UINT**](/windows/desktop/WinProg/windows-data-types)**
 
-Die Ressourcen Höhe in Texels.
+Die Ressourcenhöhe in Texel.
 
 </dd> <dt>
 
-*Tiefe* \[ vorgenommen\]
+*Tiefe* \[ out\]
 </dt> <dd>
 
-Typ: **[ **uint**](/windows/desktop/WinProg/windows-data-types)**
+Typ: **[ **UINT**](/windows/desktop/WinProg/windows-data-types)**
 
-Die Ressourcen Tiefe in Texels.
+Die Ressourcentiefe in Texel.
 
 </dd> <dt>
 
-*Nummerige* \[ vorgenommen\]
+*NumberOfLevels* \[ out\]
 </dt> <dd>
 
-Typ: **[ **uint**](/windows/desktop/WinProg/windows-data-types)**
+Typ: **[ **UINT**](/windows/desktop/WinProg/windows-data-types)**
 
-Die Anzahl von MipMap-Ebenen (erfordert auch *miplevel* ).
+Die Anzahl der Mipmap-Ebenen (erfordert auch *MipLevel).*
 
 </dd> </dl>
 
@@ -89,7 +89,7 @@ Die Anzahl von MipMap-Ebenen (erfordert auch *miplevel* ).
 
 Nichts
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
 Dies ist eine Liste der überladenen Versionen dieser Methode.
 
@@ -118,11 +118,11 @@ void GetDimensions(out float Width,
 
 
 
-Diese Funktion wird für die folgenden Typen von Shadern unterstützt:
+Diese Funktion wird für die folgenden Shadertypen unterstützt:
 
 
 
-| Scheitelpunkt | Hülle | Domain | Geometrie | Pixel | Compute |
+| Scheitelpunkt | Rumpf | Domain | Geometrie | Pixel | Compute |
 |--------|------|--------|----------|-------|---------|
 |        |      |        |          | x     | x       |
 
@@ -137,7 +137,7 @@ Diese Funktion wird für die folgenden Typen von Shadern unterstützt:
 [Texture3D](sm5-object-texture3d.md)
 </dt> <dt>
 
-[Shader-Modell 5](d3d11-graphics-reference-sm5.md)
+[Shadermodell 5](d3d11-graphics-reference-sm5.md)
 </dt> </dl>
 
  

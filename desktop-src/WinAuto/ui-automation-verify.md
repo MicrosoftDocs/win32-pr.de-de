@@ -1,41 +1,41 @@
 ---
-title: UI-Automatisierungs Überprüfung (UIA-Überprüfung)
-description: UI Automation Verify (UIA Verify) ist ein Test Framework für manuelles und automatisiertes Testen der Implementierung von Microsoft UI Automation eines Steuer Elements oder einer Anwendung.
+title: Benutzeroberflächenautomatisierung Überprüfen (UIA-Überprüfung)
+description: Benutzeroberflächenautomatisierung Verify (UIA Verify) ist ein Testframework zum manuellen und automatisierten Testen der Implementierung eines Steuerelements oder einer Anwendung von Microsoft Benutzeroberflächenautomatisierung.
 ms.assetid: C66AF411-2746-4695-A893-1552B3ED1066
 keywords:
 - Benutzeroberflächenautomatisierungs-Überprüfung
 - UIA-Überprüfung
-- Implementierung der Benutzeroberflächen Automatisierung, testen
-- Testen der Benutzeroberflächen Automatisierung
-- UIA-TestTools
-- Benutzeroberflächenautomatisierungs-TestTools
+- Benutzeroberflächenautomatisierung Implementierung,Testen
+- Testen Benutzeroberflächenautomatisierung
+- UIA-Testtools
+- Benutzeroberflächenautomatisierung Von Testtools
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: b794e5d191c07a9c0db602ebac0f908bbdf960bf
-ms.sourcegitcommit: 3e70ae762629e244028b437420ed50b5850db4e3
+ms.openlocfilehash: 00f8c97d6522e353445ededff47a9a7cf123998b94f1323f1df59b7a380ac1d8
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/20/2020
-ms.locfileid: "104389956"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119052388"
 ---
-# <a name="accessibility-tools---ui-automation-verify-uia-verify"></a>Barrierefreiheits Tools-UI Automation Verify (UIA Verify)
+# <a name="accessibility-tools---ui-automation-verify-uia-verify"></a>Barrierefreiheitstools – Benutzeroberflächenautomatisierung Überprüfen (UIA-Überprüfung)
 
-**UI Automation Verify (UIA Verify)** ist ein Test Framework für manuelles und automatisiertes Testen der Implementierung von Microsoft UI Automation eines Steuer Elements oder einer Anwendung. Die meisten Funktionen des Test Frameworks stammen aus einer DLL mit dem Namen WUIATestLibrary.dll. Diese DLL enthält den Code zum Testen spezifischer Benutzeroberflächenautomatisierungs-Funktionen und unterstützt auch die Protokollierung der Testergebnisse. Sie können Ihre Anwendung in den Testcode integrieren und regelmäßige, automatisierte Tests oder Überprüfungen der Benutzeroberflächenautomatisierungs-Szenarios durchführen.
+**Benutzeroberflächenautomatisierung Verify (UIA Verify)** ist ein Testframework zum manuellen und automatisierten Testen der Implementierung eines Steuerelements oder einer Anwendung von Microsoft Benutzeroberflächenautomatisierung. Die meisten Funktionen des Testframeworks stammen aus einer DLL namens WUIATestLibrary.dll. Diese DLL enthält den Code zum Testen bestimmter Benutzeroberflächenautomatisierung Funktionen und unterstützt auch die Protokollierung der Testergebnisse. Sie können Ihre Anwendung in den Testcode integrieren und regelmäßige, automatisierte Tests oder Spot-Überprüfungen Ihrer Benutzeroberflächenautomatisierung Szenarien durchführen.
 
-Die **UIA-Überprüfung** wird mit dem Windows Software Development Kit (SDK) installiert. Sie befindet sich im \\ Ordner "bin \\ < *Version* > \\ < *Platform* > \\ uiaverify" des SDK-Installations Pfads (VisualUIAVerifyNative.exe).
+**Die UIA-Überprüfung** wird mit dem Windows Software Development Kit (SDK) installiert. Sie befindet sich im \\ Ordner bin \\ < *version* > \\ < *platform* > \\ UIAVerify des SDK-Installationspfads (VisualUIAVerifyNative.exe).
 
-Die **UIA-Überprüfung** besteht aus einer API namens Benutzeroberflächenautomatisierungs-Test Bibliothek und einer GUI-Schnittstelle namens Visual **UI Automation Verify**. Diese werden in den folgenden Themen beschrieben.
+**UIA Verify** besteht aus einer API namens Benutzeroberflächenautomatisierung Test Library und einer GUI-Schnittstelle namens Visual **Benutzeroberflächenautomatisierung Verify**. Diese werden in den folgenden Themen beschrieben.
 
 > [!NOTE]
-> **Benutzeroberflächenautomatisierungs-Überprüfung** ist ein Legacy Tool. Stattdessen wird die [](https://accessibilityinsights.io/) Verwendung von eingabeinsights empfohlen.
+> **Benutzeroberflächenautomatisierung Verify** ist ein Legacytool. Es wird empfohlen, stattdessen [Barrierefreiheit Insights](https://accessibilityinsights.io/) zu verwenden.
 
 ## <a name="requirements"></a>Anforderungen
 
-Die Benutzeroberflächen Automatisierung muss auf dem System vorhanden sein. Weitere Informationen finden Sie im Abschnitt "Anforderungen" unter [UI Automation](entry-uiauto-win32.md).
+Benutzeroberflächenautomatisierung müssen auf dem System vorhanden sein. Weitere Informationen finden Sie im Abschnitt "Anforderungen" [Benutzeroberflächenautomatisierung](entry-uiauto-win32.md).
 
-**UIA Verify** wird als Teil der Gesamtmenge der Tools im Windows SDK installiert, nicht als separater Download. Die Windows SDK umfasst alle Tools für die Barrierefreiheit, die in diesem Abschnitt dokumentiert sind. [Holen Sie sich den Windows SDK.](https://developer.microsoft.com/) (Es gibt auch ein SDK-Download Archiv, das von dieser Seite verknüpft ist, wenn Sie eine vorherige Version benötigen.)
+**UIA Verify** wird als Teil des gesamten Toolssatzes im Windows SDK installiert und nicht als separater Download verteilt. Das Windows SDK enthält alle tools im Zusammenhang mit der Barrierefreiheit, die in diesem Abschnitt dokumentiert sind. [Abrufen des Windows SDK.](https://developer.microsoft.com/) (Es gibt auch ein SDK-Downloadarchiv, das von dieser Seite verknüpft ist, wenn Sie eine frühere Version benötigen.)
 
-Um die **UIA-Überprüfung** als visuelles Tool auszuführen, suchen Sie VisualUIAVerifyNative.exe im \\ Ordner "bin \\ < *Platform* > \\ uiaverify", und führen Sie Sie aus (Sie müssen in der Regel nicht als Administrator ausgeführt werden). Weitere Informationen finden Sie unter [Überprüfen der Visual UI-Automatisierung](visual-ui-automation-verify.md). Informationen zur Verwendung der Bibliotheken finden Sie unter [UI Automation Test Library](ui-automation-test-library.md).
+Um **UIA Verify** als visuelles Tool auszuführen, suchen Sie VisualUIAVerifyNative.exe im \\ Ordner \\ < "bin *platform* > \\ UIAVerify", und führen Sie ihn aus (sie müssen in der Regel nicht als Administrator ausgeführt werden). Weitere Informationen finden Sie unter [Visual Benutzeroberflächenautomatisierung Verify](visual-ui-automation-verify.md). Informationen zur Verwendung der Bibliotheken finden Sie unter [Benutzeroberflächenautomatisierung Testbibliothek.](ui-automation-test-library.md)
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
@@ -47,15 +47,15 @@ Um die **UIA-Überprüfung** als visuelles Tool auszuführen, suchen Sie VisualU
 [Überprüfen](inspect-objects.md)
 </dt> <dt>
 
-[TestTools](testing-tools.md)
+[Testtools](testing-tools.md)
 </dt> <dt>
 
 [UI Accessibility Checker](ui-accessibility-checker.md)
 </dt> </dl>
 
- 
+ 
 
- 
+ 
 
 
 

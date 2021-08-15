@@ -1,7 +1,7 @@
 ---
 description: Handle für das Fenster des Objekts.
 ms.assetid: f1797d24-c17c-41fb-a7bf-ad5c7fbfa01e
-title: 'Cbasewindow:: m_hWnd Member (winutil. h)'
+title: CBaseWindow::m_hwnd-Member (Winutil.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -16,14 +16,14 @@ api_location:
 - Strmbase.dll
 - Strmbasd.lib
 - Strmbasd.dll
-ms.openlocfilehash: 88caa794f5fbfde2ac51ba369689c1d1f8c88217
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: e78e0abe5b9afe8cf8f2baa137b2d194c9bd509384dbf370da835bbd25e684a9
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106352883"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119999640"
 ---
-# <a name="cbasewindowm_hwnd-member"></a>Cbasewindow:: m- \_ HWND-Member
+# <a name="cbasewindowm_hwnd-member"></a>CBaseWindow::m \_ hwnd-Member
 
 Handle für das Fenster des Objekts.
 
@@ -42,16 +42,16 @@ HWND m_hwnd;
 
 | Anforderung | Wert |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>Winutil. h (Include Streams. h)</dt> </dl>                                                                                   |
-| Bibliothek<br/> | <dl> " <dt>Straumbase. lib" (Einzelhandels Builds);</dt> " <dt>Straumbasd. lib" (Debugbuilds)</dt> </dl> |
+| Header<br/>  | <dl> <dt>Winutil.h (include Streams.h)</dt> </dl>                                                                                   |
+| Bibliothek<br/> | <dl> <dt>Strmbase.lib (Verkaufsbuilds); </dt> <dt>Strmbasd.lib (Debugbuilds)</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Cbasewindow-Klasse**](cbasewindow.md)
+[**CBaseWindow-Klasse**](cbasewindow.md)
 </dt> </dl>
 
  

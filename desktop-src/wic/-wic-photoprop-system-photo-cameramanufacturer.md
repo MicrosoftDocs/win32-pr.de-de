@@ -1,23 +1,23 @@
 ---
-description: Die fotometadatenrichtlinie für die System. Photo. cameramanufakturer-Eigenschaft.
+description: Die Fotometadatenrichtlinie für die System.Photo.CameraManufacturer-Eigenschaft.
 ms.assetid: 6710161c-4835-4385-9d4c-566acc000925
-title: System. Photo. cameramanufakturer Photo Metadata-Richtlinie
+title: System.Photo.CameraManufacturer-Richtlinie für Fotometadaten
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: fd1d2765b6c787b7d7ad421300f1c3492669830b
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 37744420babedf6b398cdf3ab9007c3895c09d33b9254221b5ba4760ab917a0f
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106364192"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119087086"
 ---
-# <a name="systemphotocameramanufacturer-photo-metadata-policy"></a>System. Photo. cameramanufakturer Photo Metadata-Richtlinie
+# <a name="systemphotocameramanufacturer-photo-metadata-policy"></a>System.Photo.CameraManufacturer-Richtlinie für Fotometadaten
 
-Die fotometadatenrichtlinie für die [System. Photo. cameramanufakturer](../properties/props-system-photo-cameramanufacturer.md) -Eigenschaft.
+Die Fotometadatenrichtlinie für die [System.Photo.CameraManufacturer-Eigenschaft.](../properties/props-system-photo-cameramanufacturer.md)
 
-### <a name="pkey"></a>Pkey
+### <a name="pkey"></a>PKEY
 
-Pkey- \_ Foto \_ cameramanufakturer
+\_ \_ PKEY-FotokameraManufacturer
 
 ### <a name="containers"></a>Container
 
@@ -27,7 +27,7 @@ JPEG, TIFF
 
 Nein
 
-### <a name="output-propvariant-type"></a>Ausgabe-PROPVARIANT-Typ
+### <a name="output-propvariant-type"></a>PROPVARIANT-Ausgabetyp
 
 VT \_ LPWSTR
 
@@ -35,49 +35,49 @@ VT \_ LPWSTR
 
 Eine Zeichenfolge.
 
-### <a name="conflict-resolution-policy"></a>Richtlinie zur Konfliktlösung
+### <a name="conflict-resolution-policy"></a>Konfliktlösungsrichtlinie
 
-Werte aus unterschiedlichen Schemas sind abgestimmt.
+Werte aus unterschiedlichen Schemas werden abgestimmt.
 
 ### <a name="jpeg-policy"></a>JPEG-Richtlinie
 
-### <a name="read-paths"></a>Pfade lesen
+### <a name="read-paths"></a>Lesepfade
 
 
 
-| Auftrag | Pfad                   | Datenträger Format |
+| Auftrag | Pfad                   | Datenträgerformat |
 |-------|------------------------|-------------|
-| 1     | /App1/IFD/{ushort = 271} | ascii       |
-| 2     | /XMP/TIFF: Erstellen         | Unicode     |
-| 3     | /XMP/TIFF: Erstellen         | Unicode     |
+| 1     | /app1/ifd/{ushort=271} | ascii       |
+| 2     | /xmp/tiff:Make         | Unicode     |
+| 3     | /xmp/tiff:make         | Unicode     |
 
 
 
  
 
-### <a name="write-paths"></a>Schreib Pfade
+### <a name="write-paths"></a>Schreibpfade
 
 
 
-| Auftrag | Pfad                   | Datenträger Format |
+| Auftrag | Pfad                   | Datenträgerformat |
 |-------|------------------------|-------------|
-| 1     | /App1/IFD/{ushort = 271} | ascii       |
-| 2     | /XMP/TIFF: Erstellen         | Unicode     |
-| 3     | /XMP/TIFF: Erstellen         | Unicode     |
+| 1     | /app1/ifd/{ushort=271} | ascii       |
+| 2     | /xmp/tiff:Make         | Unicode     |
+| 3     | /xmp/tiff:make         | Unicode     |
 
 
 
  
 
-### <a name="remove-paths"></a>Pfade entfernen
+### <a name="remove-paths"></a>Entfernen von Pfaden
 
 
 
 | Auftrag | Pfad                   |
 |-------|------------------------|
-| 1     | /App1/IFD/{ushort = 271} |
-| 2     | /XMP/TIFF: Erstellen         |
-| 3     | /XMP/TIFF: Erstellen         |
+| 1     | /app1/ifd/{ushort=271} |
+| 2     | /xmp/tiff:Make         |
+| 3     | /xmp/tiff:make         |
 
 
 
@@ -85,55 +85,55 @@ Werte aus unterschiedlichen Schemas sind abgestimmt.
 
 ### <a name="tiff-policy"></a>TIFF-Richtlinie
 
-### <a name="read-paths"></a>Pfade lesen
+### <a name="read-paths"></a>Lesepfade
 
 
 
-| Auftrag | Pfad               | Datenträger Format |
+| Auftrag | Pfad               | Datenträgerformat |
 |-------|--------------------|-------------|
-| 1     | /IFD/{ushort = 271}  | ascii       |
-| 2     | /IFD/XMP/TIFF: Erstellen | Unicode     |
-| 3     | /IFD/XMP/TIFF: Erstellen | Unicode     |
+| 1     | /ifd/{ushort=271}  | ascii       |
+| 2     | /ifd/xmp/tiff:Make | Unicode     |
+| 3     | /ifd/xmp/tiff:make | Unicode     |
 
 
 
  
 
-### <a name="write-paths"></a>Schreib Pfade
+### <a name="write-paths"></a>Schreibpfade
 
 
 
-| Auftrag | Pfad               | Datenträger Format |
+| Auftrag | Pfad               | Datenträgerformat |
 |-------|--------------------|-------------|
-| 1     | /IFD/{ushort = 271}  | ascii       |
-| 2     | /IFD/XMP/TIFF: Erstellen | Unicode     |
-| 3     | /IFD/XMP/TIFF: Erstellen | Unicode     |
+| 1     | /ifd/{ushort=271}  | ascii       |
+| 2     | /ifd/xmp/tiff:Make | Unicode     |
+| 3     | /ifd/xmp/tiff:make | Unicode     |
 
 
 
  
 
-### <a name="remove-paths"></a>Pfade entfernen
+### <a name="remove-paths"></a>Entfernen von Pfaden
 
 
 
 | Auftrag | Pfad               |
 |-------|--------------------|
-| 1     | /IFD/{ushort = 271}  |
-| 2     | /IFD/XMP/TIFF: Erstellen |
-| 3     | /IFD/XMP/TIFF: Erstellen |
+| 1     | /ifd/{ushort=271}  |
+| 2     | /ifd/xmp/tiff:Make |
+| 3     | /ifd/xmp/tiff:make |
 
 
 
  
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
 <dl> <dt>
 
-[System. Photo. cameramanufakturer](../properties/props-system-photo-cameramanufacturer.md)
+[System.Photo.CameraManufacturer](../properties/props-system-photo-cameramanufacturer.md)
 </dt> </dl>
 
  

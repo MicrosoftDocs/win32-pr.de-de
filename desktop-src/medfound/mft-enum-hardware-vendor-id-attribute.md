@@ -1,33 +1,33 @@
 ---
-description: Gibt die Hersteller-ID für ein Hardware basiertes Microsoft Media Foundation an.
+description: Gibt die Hersteller-ID für eine hardwarebasierte Microsoft Media Foundation an.
 ms.assetid: AA31639F-EF70-4454-AC61-60755CAA684A
 title: MFT_ENUM_HARDWARE_VENDOR_ID_Attribute-Attribut
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 7c4d92585936e52cbb0b9b65201a5de0d3a02b9a
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: cff3a93abed968a26f8eead5be6a7d1872b9d4556b0d163632992cbcc21b1acd
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106353174"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118973099"
 ---
-# <a name="mft_enum_hardware_vendor_id_attribute-attribute"></a>Attribut Attribut-ID des MFT-Aufzählungs \_ \_ Hardware \_ Herstellers \_ \_
+# <a name="mft_enum_hardware_vendor_id_attribute-attribute"></a>Attribut "MFT \_ ENUM \_ HARDWARE VENDOR ID \_ \_ \_ Attribute"
 
-Gibt die Anbieter-ID für eine hardwarebasierte Microsoft Media Foundation Transformation (MFT) an.
+Gibt die Hersteller-ID für eine hardwarebasierte Microsoft Media Foundation Transformation (MFT) an.
 
 ## <a name="data-type"></a>Datentyp
 
-**WCHAR \** _
+**Wchar\***
 
 ## <a name="getset"></a>Abrufen/Festlegen
 
-Um dieses Attribut abzurufen, nennen Sie [_ *imfattributes:: GetString* *](/windows/desktop/api/mfobjects/nf-mfobjects-imfattributes-getstring).
+Rufen Sie ZUM Abrufen dieses [**Attributs DIE ATTRIBUTEAttributes::GetString**](/windows/desktop/api/mfobjects/nf-mfobjects-imfattributes-getstring)auf.
 
-Um dieses Attribut festzulegen, müssen Sie [**imfattributes:: SetString**](/windows/desktop/api/mfobjects/nf-mfobjects-imfattributes-setstring)aufrufen.
+Um dieses Attribut festzulegen, rufen Sie [**DIE ATTRIBUTEAttributes::SetString**](/windows/desktop/api/mfobjects/nf-mfobjects-imfattributes-setstring)auf.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Dieses Attribut ist informativ und optional.
+Dieses Attribut ist informationshalber und optional.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -35,13 +35,13 @@ Dieses Attribut ist informativ und optional.
 
 | Anforderung | Wert |
 |-------------------------------------|--------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Windows 8 \[ -Desktop-Apps \| UWP-apps\]<br/>                                          |
-| Unterstützte Mindestversion (Server)<br/> | Windows Server 2012 \[ -Desktop-Apps \| UWP-apps\]<br/>                                |
-| Header<br/>                   | <dl> <dt>"MF Transform. idl"</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | \[Windows 8 \|Desktop-Apps UWP-Apps\]<br/>                                          |
+| Unterstützte Mindestversion (Server)<br/> | \[Windows Server 2012 \|Desktop-Apps UWP-Apps\]<br/>                                |
+| Header<br/>                   | <dl> <dt>Mftransform.idl</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
@@ -51,7 +51,7 @@ Dieses Attribut ist informativ und optional.
 [Hardware-MFTs](hardware-mfts.md)
 </dt> <dt>
 
-[Transformations Attribute](transform-attributes.md)
+[Transformieren von Attributen](transform-attributes.md)
 </dt> </dl>
 
  

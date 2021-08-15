@@ -1,19 +1,19 @@
 ---
-description: Diese Windows Installer Eigenschaft gibt an, wann die interne Benutzeroberflächen Ebene festgelegt wurde, um die Schaltfläche "Abbrechen" auszublenden.
+description: Diese Windows Installer-Eigenschaft gibt an, wann die interne Benutzeroberflächesebene festgelegt wurde, um die Schaltfläche "Abbrechen" auszublenden.
 ms.assetid: 0e842bee-32c2-41ae-97f3-bc8b34960a44
-title: Msiuihidecancel (Eigenschaft)
+title: MsiUIHideCancel-Eigenschaft
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 7a25a940921dd4b0d91155765ee6768ec0d6d2bb
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 6da3c0888ea760e7e8627710b061112d350f94af569697b7ad0616d1dbacbbf0
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106359702"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118943988"
 ---
-# <a name="msiuihidecancel-property"></a>Msiuihidecancel (Eigenschaft)
+# <a name="msiuihidecancel-property"></a>MsiUIHideCancel-Eigenschaft
 
-Der Installer legt die **msiuihidecancel** -Eigenschaft auf 1 fest, wenn die interne Benutzeroberflächen Ebene so festgelegt wurde, dass Sie installuilevel \_ hidecancel mit der [**MsiSetInternalUI**](/windows/desktop/api/Msi/nf-msi-msisetinternalui) -Funktion oder die [uilevel](installer-uilevel.md)-Eigenschaft des [**Installer**](installer-object.md) -Objekts oder mithilfe von [Befehlszeilenoptionen](command-line-options.md)einschließt.
+Das Installationsprogramm legt die **MsiUIHideCancel-Eigenschaft** auf 1 fest, wenn die interne Benutzeroberflächesebene so festgelegt wurde, dass INSTALLUILEVEL \_ HIDECANCEL mit der [**MsiSetInternalUI-Funktion**](/windows/desktop/api/Msi/nf-msi-msisetinternalui) oder der [UILevel-Eigenschaft](installer-uilevel.md)des [**Installer-Objekts**](installer-object.md) oder mithilfe von [Befehlszeilenoptionen](command-line-options.md)eingeschlossen wird.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -21,7 +21,7 @@ Der Installer legt die **msiuihidecancel** -Eigenschaft auf 1 fest, wenn die int
 
 | Anforderung | Wert |
 |--------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Version<br/> | Windows Installer 5,0 unter Windows Server 2012, Windows 8, Windows Server 2008 R2 oder Windows 7. Windows Installer 4,0 oder Windows Installer 4,5 unter Windows Server 2008 oder Windows Vista. Windows Installer 3,0 oder höher unter Windows Server 2003 oder Windows XP. Informationen zu den minimalen Windows-Service Pack, die für eine Windows Installer Version erforderlich sind, finden Sie in den [Windows Installer Run-Time Anforderungen](windows-installer-portal.md) .<br/> |
+| Version<br/> | Windows Installationsprogramm 5.0 auf Windows Server 2012, Windows 8, Windows Server 2008 R2 oder Windows 7. Windows Installer 4.0 oder Windows Installer 4.5 auf Windows Server 2008 oder Windows Vista. Windows Installationsprogramm 3.0 oder höher auf Windows Server 2003 oder Windows XP. Unter [Windows Installer Run-Time Requirements (Anforderungen für](windows-installer-portal.md) Windows Installer) finden Sie Informationen zu den mindestens erforderlichen Windows Service Packs, die für eine Windows Installer-Version erforderlich sind.<br/> |
 
 
 
@@ -32,7 +32,7 @@ Der Installer legt die **msiuihidecancel** -Eigenschaft auf 1 fest, wenn die int
 [Eigenschaften](properties.md)
 </dt> <dt>
 
-[Wird in Windows Installer 2,0 und früher nicht unterstützt.](not-supported-in-windows-installer-version-2-0.md)
+[Nicht unterstützt in Windows Installer 2.0 und früher](not-supported-in-windows-installer-version-2-0.md)
 </dt> </dl>
 
  

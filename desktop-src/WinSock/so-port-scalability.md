@@ -1,23 +1,23 @@
 ---
-description: Aktiviert die Skalierbarkeit des lokalen Ports für einen Socket.
+description: Aktiviert die Skalierbarkeit lokaler Ports für einen Socket.
 ms.assetid: c5142baf-9e2d-4c06-8719-9090fd2d9487
-title: SO_PORT_SCALABILITY (Ws2def. h)
+title: SO_PORT_SCALABILITY (Ws2def.h)
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 565caeb472ac5cb15061d32b47a048a9a210885e
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 925d6337bc5b9d4633117fc1d8e1b8db2657f31b91a9cce602702ceb67e7e92e
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104129120"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118993370"
 ---
-# <a name="so_port_scalability"></a>\_Port \_ Skalierbarkeit
+# <a name="so_port_scalability"></a>ALSO \_ \_ PORTSKALIERBARKEIT
 
-Die **Option \_ Port \_ Skalierbarkeits** Socket ermöglicht die lokale Port Skalierbarkeit für einen Socket.
+Die **Option SO PORT \_ \_ SCALABILITY** socket ermöglicht die Skalierbarkeit lokaler Ports für einen Socket.
 
 <dl> <dt>
 
-<span id="SO_PORT_SCALABILITY"></span><span id="so_port_scalability"></span>**\_Port \_ Skalierbarkeit**
+<span id="SO_PORT_SCALABILITY"></span><span id="so_port_scalability"></span>**ALSO \_ \_ PORTSKALIERBARKEIT**
 </dt> <dd> <dl> <dt>
 
 0x3006
@@ -25,31 +25,31 @@ Die **Option \_ Port \_ Skalierbarkeits** Socket ermöglicht die lokale Port Ska
 
 
 
-Die **Option \_ Port \_ Skalierbarkeits** -Socket ermöglicht die lokale Port Skalierbarkeit, indem die Zuordnung von Port Belegungen für unterschiedliche lokale Adress Port Paare auf einem lokalen Computer mehrfach zugelassen wird.
+Die **Option SO PORT \_ \_ SCALABILITY** socket ermöglicht die Skalierbarkeit lokaler Ports, da die Portzuordnung maximiert werden kann, indem Platzhalterports für verschiedene lokale Adressportpaare auf einem lokalen Computer mehrmals zugewiesen werden.
 
 
 </dt> </dl> </dd> </dl>
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Hinweis: auf Plattformen, auf denen sowohl \_ \_ die Port Skalierbarkeit als auch \_ die Wiederverwendung von \_ unicastport unterstützt werden, bevorzugen Sie die Verwendung von " \_ \_ unicastport".
+Hinweis: Verwenden Sie auf Plattformen, auf denen sowohl SO \_ PORT \_ SCALABILITY als auch SO \_ REUSE \_ UNICASTPORT unterstützt werden, die Verwendung von SO \_ REUSE \_ UNICASTPORT.
 
-Proxy Serverumgebungen haben aufgrund eingeschränkter lokaler Port Verfügbarkeit Skalierbarkeits Probleme. Eine Möglichkeit, dieses Problem zu umgehen, besteht darin, dem Computer weitere IP-Adressen hinzuzufügen. Standardmäßig sind für die [**Bind**](/windows/desktop/api/winsock/nf-winsock-bind) -Funktion verwendete Platzhalter Anschlüsse jedoch auf die Größe des dynamischen Port Bereichs auf dem lokalen Computer beschränkt (bis zu 64K Ports, aber in der Regel weniger), unabhängig von der Anzahl der IP-Adressen auf dem lokalen Computer. Um dies zu umgehen, muss die Anwendung ihren eigenen Port Pool entweder mit Port Reservierung oder mithilfe von Heuristik verwalten.
+Proxyserverumgebungen weisen aufgrund der eingeschränkten lokalen Portverfügbarkeit Skalierbarkeitsprobleme auf. Eine Möglichkeit, dies zu umgehen, besteht darin, dem Computer weitere IP-Adressen hinzuzufügen. Platzhalterports, die mit der [**Bind-Funktion**](/windows/desktop/api/winsock/nf-winsock-bind) verwendet werden, sind jedoch standardmäßig auf die Größe des dynamischen Portbereichs auf dem lokalen Computer beschränkt (bis zu 64.000 Ports, aber in der Regel weniger), unabhängig von der Anzahl der IP-Adressen auf dem lokalen Computer. Um dies zu umgehen, muss die Anwendung ihren eigenen Portpool entweder mit Portreservierung oder mit Heuristik verwalten.
 
-Um zu vermeiden, dass jede Anwendung, die Skalierbarkeit erfordert, einen eigenen Port Pool verwaltet und eine größere Skalierbarkeit ermöglicht, während die Anwendungs Kompatibilität gewahrt bleibt, wurde mit Windows Server 2008 die Socketoption " **\_ Port \_ Skalierbarkeit** " eingeführt, um die Platz Zuweisung von Platzhaltern zu maximieren Die Port Zuordnung wird maximiert, indem es einer Anwendung ermöglicht, Platzhalter Anschlüsse für jede eindeutige lokale Adresse und jedes einzelne Port Paar zuzuordnen. Wenn ein lokaler Computer also über vier IP-Adressen verfügt, können bis zu 256 k Platzhalter Anschlüsse (64 K-Ports × 4 IP-Adressen) durch Platzhalter [**Bindungs**](/windows/desktop/api/winsock/nf-winsock-bind) Funktionsanforderungen zugeordnet werden.
+Um zu vermeiden, dass jede Anwendung, die Skalierbarkeit erfordert, ihren eigenen Portpool verwaltet und eine höhere Skalierbarkeit bei gleichzeitiger Aufrechterhaltung der Anwendungskompatibilität ermöglicht, hat Windows Server 2008 die Option **SO \_ PORT \_ SCALABILITY** Socket eingeführt, um die Platzhalterportzuordnung zu maximieren. Die Portzuordnung wird maximiert, indem eine Anwendung Platzhalterports für jedes eindeutige lokale Adress- und Portpaar zuordnen kann. Wenn ein lokaler Computer also über vier IP-Adressen verfügt, können bis zu 256.000 Platzhalterports (64.000 Ports × 4 IP-Adressen) durch [**Platzhalterbindungsfunktionen**](/windows/desktop/api/winsock/nf-winsock-bind) zugewiesen werden.
 
-Wenn die **Option \_ Port \_ Skalierbarkeits** -Socket für einen Socket festgelegt ist und ein Aufrufen der [**Bind**](/windows/desktop/api/winsock/nf-winsock-bind) -Funktion für eine angegebene Adresse und einen Platzhalter Anschluss erfolgt (der *Name* -Parameter wird mit einer bestimmten Adresse und dem Port 0 festgelegt), wird von Winsock ein Port für die angegebene Adresse zugeteilt. Diese Zuordnung basiert auf allen möglichen IP-Adressen und Ports/pro Adresse auf dem lokalen Computer. Wenn ein Platzhalter Anschluss mithilfe der Option **" \_ Port \_ Skalierbarkeit** " abgerufen wird, kann dieser Port nicht von einem anderen Socket zugeordnet werden, ohne dass die Option " **\_ Port \_ Skalierbarkeit** " verwendet wird. Diese Einschränkung ist vorhanden, um Probleme mit der Abwärtskompatibilität bei Anwendungen zu vermeiden, die davon ausgehen, dass ein Platzhalter lokaler Port nicht wieder verwendet werden kann. Dies bedeutet, dass Anwendungen, die eine große Anzahl von Ports mithilfe der **\_ Port \_ Skalierbarkeit** abrufen, ältere Anwendungen von Ports verhungern können. Wenn alle verfügbaren kurzlebigen Ports für mindestens eine Adresse mit der **\_ Port \_ Skalierbarkeit** abgerufen wurden, sind keine weiteren Platzhalter Port Zuordnungen ohne die Socketoption möglich.
+Wenn die **OPTION SO \_ PORT \_ SCALABILITY** socket für einen Socket festgelegt ist und ein Aufruf der [**Bindungsfunktion**](/windows/desktop/api/winsock/nf-winsock-bind) für eine angegebene Adresse und einen Platzhalterport erfolgt (der *Name-Parameter* wird mit einer bestimmten Adresse und einem Port 0 festgelegt), ordnet Winsock einen Port für die angegebene Adresse zu. Diese Zuordnung basiert auf allen möglichen IP-Adressen und Ports/pro Adresse auf dem lokalen Computer. Wenn ein Platzhalterport mithilfe der OPTION **SO \_ PORT \_ SCALABILITY** bezogen wird, kann dieser Port nicht von einem anderen Socket ohne die OPTION **SO PORT \_ \_ SCALABILITY** zugeordnet werden. Diese Einschränkung ist vorhanden, um Abwärtskompatibilitätsprobleme mit Anwendungen zu vermeiden, die davon ausgehen, dass ein lokaler Platzhalterport nicht wiederverwendet werden kann. Beachten Sie, dass dies bedeutet, dass Anwendungen, die mithilfe von **SO \_ PORT \_ SCALABILITY** eine große Anzahl von Ports abrufen, ältere Anwendungen von Ports verhungern können. Wenn alle verfügbaren kurzlebigen Ports für mindestens eine Adresse mit **SO \_ PORT \_ SCALABILITY** abgerufen wurden, sind ohne die Socketoption keine weiteren Platzhalterportzuordnungen möglich.
 
-Um einen Effekt zu haben, muss die Option **\_ Port \_ Skalierbarkeit** festgelegt werden, bevor die [**Bind**](/windows/desktop/api/winsock/nf-winsock-bind) -Funktion aufgerufen wird. Ein Beispiel dafür, wie dies auf einem Computer mit zwei Adressen verwendet wird, ist im folgenden aufgeführt:
+Um Auswirkungen zu haben, muss die OPTION **SO \_ PORT \_ SCALABILITY** festgelegt werden, bevor die [**Bindungsfunktion**](/windows/desktop/api/winsock/nf-winsock-bind) aufgerufen wird. Ein Beispiel dafür, wie dies auf einem Computer mit zwei Adressen verwendet wird, wird unten beschrieben:
 
--   Die [**Socket**](/windows/desktop/api/Winsock2/nf-winsock2-socket) -Funktion wird von einem Prozess aufgerufen, um einen Socket zu erstellen.
--   Die [**setsockopt**](/windows/desktop/api/winsock/nf-winsock-setsockopt) -Funktion wird aufgerufen, um die Option " **\_ Port \_ Skalierbarkeit** " für den neu erstellten Socket zu aktivieren.
--   Die [**Bind**](/windows/desktop/api/winsock/nf-winsock-bind) -Funktion wird aufgerufen, um eine Bindung für eine der IP-Adressen des lokalen Computers und Port 0 durchzuführen.
--   Die [**Connect**](/windows/desktop/api/Winsock2/nf-winsock2-connect) -Funktion wird dann aufgerufen, um eine Verbindung mit einer Remote-IP-Adresse herzustellen. Der Socket wird von der Anwendung nach Bedarf verwendet.
+-   Die [**Socketfunktion**](/windows/desktop/api/Winsock2/nf-winsock2-socket) wird von einem Prozess zum Erstellen eines Sockets aufgerufen.
+-   Die [**setsockopt-Funktion**](/windows/desktop/api/winsock/nf-winsock-setsockopt) wird aufgerufen, um die **OPTION SO PORT \_ \_ SCALABILITY** Socket für den neu erstellten Socket zu aktivieren.
+-   Die [**Bind-Funktion**](/windows/desktop/api/winsock/nf-winsock-bind) wird aufgerufen, um eine Bindung an eine der IP-Adressen und Port 0 des lokalen Computers zu übertragen.
+-   Die [**Connect-Funktion**](/windows/desktop/api/Winsock2/nf-winsock2-connect) wird dann aufgerufen, um eine Verbindung mit einer Remote-IP-Adresse herzustellen. Der Socket wird von der Anwendung nach Bedarf verwendet.
 -   Eine [**Socketfunktion**](/windows/desktop/api/Winsock2/nf-winsock2-socket) wird vom gleichen Prozess (möglicherweise einem anderen Thread) aufgerufen, um einen zweiten Socket zu erstellen.
--   Die [**setsockopt**](/windows/desktop/api/winsock/nf-winsock-setsockopt) -Funktion wird aufgerufen, um die Option " **\_ Port \_ Skalierbarkeits** -Socket" für den neu erstellten zweiten Socket zu aktivieren.
--   Die [**Bind**](/windows/desktop/api/winsock/nf-winsock-bind) -Funktion wird mit der zweiten IP-Adresse des lokalen Computers und Port 0 aufgerufen. Auch wenn alle Ports zuvor zugeordnet wurden, ist dieser Vorgang erfolgreich, da auf dem lokalen Computer mehrere IP-Adressen verfügbar sind und die Option **\_ Port \_ Skalierbarkeits** -Socket für beide Sockets im gleichen Prozess festgelegt wurde.
--   Die [**Connect**](/windows/desktop/api/Winsock2/nf-winsock2-connect) -Funktion wird dann aufgerufen, um eine Verbindung mit einer Remote-IP-Adresse herzustellen. Der zweite Socket wird von der Anwendung nach Bedarf verwendet.
+-   Die [**setsockopt-Funktion**](/windows/desktop/api/winsock/nf-winsock-setsockopt) wird aufgerufen, um die OPTION **SO PORT \_ \_ SCALABILITY** Socket für den neu erstellten zweiten Socket zu aktivieren.
+-   Die [**Bind-Funktion**](/windows/desktop/api/winsock/nf-winsock-bind) wird mit der zweiten IP-Adresse des lokalen Computers und Port 0 aufgerufen. Selbst wenn alle Ports zuvor zugeordnet wurden, ist dieser Aufruf erfolgreich, da auf dem lokalen Computer mehrere IP-Adressen verfügbar sind und die **OPTION SO \_ PORT \_ SCALABILITY** Socket für beide Sockets im selben Prozess festgelegt wurde.
+-   Die [**Connect-Funktion**](/windows/desktop/api/Winsock2/nf-winsock2-connect) wird dann aufgerufen, um eine Verbindung mit einer Remote-IP-Adresse herzustellen. Der zweite Socket wird von der Anwendung nach Bedarf verwendet.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -58,12 +58,12 @@ Um einen Effekt zu haben, muss die Option **\_ Port \_ Skalierbarkeit** festgele
 | Anforderung | Wert |
 |-------------------------------------|-------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Nicht unterstützt<br/>                                                           |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2008 \[ -Desktop-Apps\]<br/>                                |
-| Header<br/>                   | <dl> <dt>Ws2def. h</dt> </dl> |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2008-Desktop-Apps\]<br/>                                |
+| Header<br/>                   | <dl> <dt>Ws2def.h</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
@@ -73,7 +73,7 @@ Um einen Effekt zu haben, muss die Option **\_ Port \_ Skalierbarkeit** festgele
 [**setsockopt**](/windows/desktop/api/winsock/nf-winsock-setsockopt)
 </dt> <dt>
 
-[**Optionen des Sol- \_ socketsockets**](sol-socket-socket-options.md)
+[**SOL SOCKET Socket Options (SOL \_ SOCKET-Socketoptionen)**](sol-socket-socket-options.md)
 </dt> <dt>
 
 [**Socketoptionen**](socket-options.md)

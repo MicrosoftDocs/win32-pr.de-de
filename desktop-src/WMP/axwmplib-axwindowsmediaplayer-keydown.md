@@ -76,7 +76,7 @@ Werte für die Hauptschlüssel.
 | SPACE                   | 32      |
 | RÜCKTASTE               | 8       |
 | EINGABETASTE                   | 13      |
-| Windows Logo-TASTE, links  | 91      |
+| Windows Logo-Taste links  | 91      |
 | Windows Logo-Taste rechts | 92      |
 | Anwendungsschlüssel         | 93      |
 

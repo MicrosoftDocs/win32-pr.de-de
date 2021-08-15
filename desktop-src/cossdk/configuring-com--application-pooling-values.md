@@ -1,38 +1,38 @@
 ---
-description: Verwenden Sie die folgenden Anweisungen, um com+-anwendungspoolingwerte für Ihre COM+-Anwendung zu konfigurieren.
+description: Sie können die folgenden Anweisungen verwenden, um COM+-Anwendungspoolingwerte für Ihre COM+-Anwendung zu konfigurieren.
 ms.assetid: faba5cb7-745e-4fdf-a3e0-62132da4a843
-title: Konfigurieren von com+-Anwendungs Pooling-Werten
+title: Konfigurieren von COM+-Anwendungspoolingwerten
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 98922699fff7af7146250bdb504a1f46be08718e
-ms.sourcegitcommit: c7add10d695482e1ceb72d62b8a4ebd84ea050f7
+ms.openlocfilehash: 25d3407cd644b68cfc3ef279a9e67603aa1dc2db85302b22dbf0c6ae7219fd3b
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104214089"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119128972"
 ---
-# <a name="configuring-com-application-pooling-values"></a>Konfigurieren von com+-Anwendungs Pooling-Werten
+# <a name="configuring-com-application-pooling-values"></a>Konfigurieren von COM+-Anwendungspoolingwerten
 
-Verwenden Sie die folgenden Anweisungen, um com+-anwendungspoolingwerte für Ihre COM+-Anwendung zu konfigurieren.
+Sie können die folgenden Anweisungen verwenden, um COM+-Anwendungspoolingwerte für Ihre COM+-Anwendung zu konfigurieren.
 
 > [!Note]  
-> Bibliotheksanwendungen verfügen über die Eigenschaften zum wieder verwenden und zum Pooling Ihres Host Prozesses.
+> Bibliotheksanwendungen verfügen über die Wiederverwendungs- und Poolingeigenschaften ihres Hostprozesses.
 
  
 
-## <a name="component-services-administrative-tool"></a>Verwaltungs Tool für Komponenten Dienste
+## <a name="component-services-administrative-tool"></a>Verwaltungstool für Komponentendienste
 
-Führen Sie die folgenden Schritte aus, um das com+-Anwendungs Pooling für eine COM+-Anwendung zu konfigurieren:
+Führen Sie zum Konfigurieren des COM+-Anwendungspoolings für eine COM+-Anwendung die folgenden Schritte aus:
 
-1.  Klicken Sie in der Konsolen Struktur des Verwaltungs Programms Komponenten Dienste mit der rechten Maustaste auf die COM+-Anwendung, die Sie in einem Pool zusammenfassen möchten, und klicken Sie dann auf **Eigenschaften**.
+1.  Klicken Sie in der Konsolenstruktur des Komponentendienste-Verwaltungstools mit der rechten Maustaste auf die COM+-Anwendung, die Sie in einen Pool einpoolen möchten, und klicken Sie dann auf **Eigenschaften.**
 
-2.  Geben Sie auf der Registerkarte **Pooling &** wieder **Verwendung unter Anwendungs Pooling** einen Wert für die **Poolgröße** ein, je nach Anzahl der Instanzen der Anwendung, die Sie ausführen möchten.
+2.  Geben Sie auf der Registerkarte **Pooling &** Wiederverwendung unter **Anwendungspooling** einen Wert für **Poolgröße** ein, abhängig von der Anzahl der Instanzen Ihrer Anwendung, die ausgeführt werden soll.
 
 3.  Klicken Sie auf **OK**.
 
 ## <a name="visual-basic"></a>Visual Basic
 
-Die folgende Funktion in Visual Basic veranschaulicht, wie Sie den com+-anwendungspoolwert für jede ausgewählte COM+-Serveranwendung festlegen können (dargestellt durch die concurrentapps-Eigenschaft). Um es aus Visual Basic zu verwenden, fügen Sie einen Verweis auf die com+-admin-Typbibliothek hinzu.
+Die folgende Funktion in Visual Basic veranschaulicht, wie Sie den COM+-Anwendungspoolingwert (dargestellt durch die ConcurrentApps-Eigenschaft) für jede com+-Serveranwendung festlegen können, die Sie auswählen. Fügen Sie einen Verweis auf die COM+-Administratortypbibliothek hinzu, um sie über Visual Basic verwenden zu können.
 
 
 ```VB
@@ -78,7 +78,7 @@ End Function
 
 
 
-Um die Funktion zu verwenden, geben Sie einen Zeichen folgen Wert für den com+-Server Anwendungsnamen und einen ganzzahligen Wert für die gewünschte Einstellung für das Anwendungs Pooling an. Der folgende Visual Basic Code zeigt, wie der Anwendungs Pooling-Wert für die Anwendung "MyApplication" auf 15 festgelegt wird:
+Um die Funktion zu verwenden, geben Sie einen Zeichenfolgenwert für den COM+-Serveranwendungsnamen und einen ganzzahligen Wert für die gewünschte Anwendungspooleinstellung an. Der folgende Visual Basic zeigt, wie Der Wert des Anwendungspoolings für die Anwendung mit dem Namen "MyApplication" auf 15 festgelegt wird:
 
 
 ```VB
@@ -94,7 +94,7 @@ End Sub
 
 ## <a name="cc"></a>C/C++
 
-Die folgende Funktion in C++ veranschaulicht, wie Sie den com+-anwendungspoolwert (dargestellt durch die concurrentapps-Eigenschaft) für eine beliebige COM+-Serveranwendung, die Sie auswählen, festlegen können. Die ErrorDescription-Methode wird unter [Interpretieren von Fehler Codes](interpreting-error-codes.md)beschrieben.
+Die folgende Funktion in C++ veranschaulicht, wie Sie den COM+-Anwendungspoolingwert (dargestellt durch die ConcurrentApps-Eigenschaft) für jede com+-Serveranwendung festlegen können, die Sie auswählen. Die ErrorDescription-Methode wird unter [Interpretieren von Fehlercodes beschrieben.](interpreting-error-codes.md)
 
 
 ```C++
@@ -214,7 +214,7 @@ catch(HRESULT hr) {  // Replace with specific error handling.
 
 
 
-Um die Funktion zu verwenden, geben Sie einen Zeichen folgen Wert für den com+-Server Anwendungsnamen und einen ganzzahligen Wert für die gewünschte Einstellung für das Anwendungs Pooling an. Der folgende C++-Code zeigt, wie der Wert für den Anwendungs Pooling für die Anwendung mit dem Namen "MyApplication" auf 15 festgelegt wird:
+Um die Funktion zu verwenden, geben Sie einen Zeichenfolgenwert für den COM+-Serveranwendungsnamen und einen ganzzahligen Wert für die gewünschte Anwendungspooleinstellung an. Der folgende C++-Code zeigt, wie Der Wert des Anwendungspoolings für die Anwendung namens "MyApplication" auf 15 festgelegt wird:
 
 ``` syntax
 #define _WIN32_DCOM  // To use CoInitializeEx()
@@ -234,7 +234,7 @@ void main() {
 
 <dl> <dt>
 
-[Konzepte für das com+-Anwendungs Pooling](com--application-pooling-concepts.md)
+[COM+-Anwendungspoolingkonzepte](com--application-pooling-concepts.md)
 </dt> </dl>
 
  

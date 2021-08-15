@@ -1,6 +1,6 @@
 ---
 title: MDM_ActiveSync_User_Accounts01_01-Klasse
-description: Die MDM \_ ActiveSync \_ User \_ Accounts01 \_ 01-Klasse definiert alle verfügbaren ActiveSync-Konten.
+description: Die MDM \_ \_ ActiveSync-Klasse \_ Benutzerkonten01 \_ 01 definiert alle verfügbaren ActiveSync-Konten.
 ms.assetid: bcd1fdcb-675a-4833-9d3c-0509e68f7b00
 keywords:
 - MDM_ActiveSync_User_Accounts01_01-Klasse
@@ -17,18 +17,18 @@ api_type:
 - DllExport
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 3a065fb3f33e69b636a35fc848e5d717898f1fa3
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 59532fed7b8ff5a866a438040a3d7f78d75f262d6ef5ffb20dd632a7adfd7dc9
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104476287"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119077406"
 ---
-# <a name="mdm_activesync_user_accounts01_01-class"></a>MDM \_ ActiveSync- \_ Benutzer \_ Accounts01 01- \_ Klasse
+# <a name="mdm_activesync_user_accounts01_01-class"></a>MDM \_ \_ ActiveSync-Benutzerkonten01 \_ \_ 01-Klasse
 
 \[Einige Informationen beziehen sich auf Vorabversionen, die vor der kommerziellen Freigabe grundlegend geändert werden können. Microsoft übernimmt keine Garantie, weder ausdrücklich noch stillschweigend, für die hier bereitgestellten Informationen.\]
 
-Die **MDM \_ ActiveSync \_ User \_ Accounts01 \_ 01** -Klasse definiert alle verfügbaren ActiveSync-Konten.
+Die **MDM \_ \_ ActiveSync-Klasse \_ Benutzerkonten01 \_ 01** definiert alle verfügbaren ActiveSync-Konten.
 
 Die folgende Syntax enthält vereinfachten MOF-Code und schließt alle geerbten Eigenschaften ein.
 
@@ -53,20 +53,20 @@ class MDM_ActiveSync_User_Accounts01_01
 
 ## <a name="members"></a>Member
 
-Die **MDM \_ ActiveSync \_ User \_ Accounts01 \_ 01** -Klasse verfügt über diese Typen von Membern:
+Die **MDM \_ \_ ActiveSync-Klasse \_ Benutzerkonten01 \_ 01** verfügt über die folgenden Membertypen:
 
 -   [Eigenschaften](#properties)
 
 ### <a name="properties"></a>Eigenschaften
 
-Die **MDM \_ ActiveSync \_ User \_ Accounts01 \_ 01** -Klasse verfügt über diese Eigenschaften.
+Die **MDM \_ \_ ActiveSync-Benutzerkonten01 \_ \_ 01-Klasse** verfügt über diese Eigenschaften.
 
 <dl> <dt>
 
-[Accounticon](/windows/client-management/mdm/activesync-csp#account-guid-accounticon)
+[AccountIcon](/windows/client-management/mdm/activesync-csp#account-guid-accounticon)
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Lesen/Schreiben
@@ -77,7 +77,7 @@ Zugriffstyp: Lesen/Schreiben
 [AccountName](/windows/client-management/mdm/activesync-csp#account-guid-accountname)
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Lesen/Schreiben
@@ -88,7 +88,7 @@ Zugriffstyp: Lesen/Schreiben
 [AccountType](/windows/client-management/mdm/activesync-csp#account-guid-accounttype)
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Lesen/Schreiben
@@ -96,10 +96,10 @@ Zugriffstyp: Lesen/Schreiben
 
 </dd> <dt>
 
-[Domäne](/windows/client-management/mdm/activesync-csp#account-guid-domain)
+[Domain](/windows/client-management/mdm/activesync-csp#account-guid-domain)
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Lesen/Schreiben
@@ -110,7 +110,7 @@ Zugriffstyp: Lesen/Schreiben
 [EmailAddress](/windows/client-management/mdm/activesync-csp#account-guid-emailaddress)
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Lesen/Schreiben
@@ -121,7 +121,7 @@ Zugriffstyp: Lesen/Schreiben
 **InstanceID**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
@@ -130,14 +130,14 @@ Zugriffstyp: Schreibgeschützt
 Qualifizierer: [ **Schlüssel**](/windows/desktop/WmiSdk/key-qualifier)
 </dt> </dl>
 
-Gibt den Namen des übergeordneten Knotens an.
+Identifiziert den Namen des übergeordneten Knotens.
 
 </dd> <dt>
 
-**ParentID**
+**Parentid**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
@@ -153,7 +153,7 @@ Beschreibt den vollständigen Pfad zum übergeordneten Knoten. Für diese Klasse
 [Kennwort](/windows/client-management/mdm/activesync-csp#account-guid-password)
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Lesen/Schreiben
@@ -164,7 +164,7 @@ Zugriffstyp: Lesen/Schreiben
 [ServerName](/windows/client-management/mdm/activesync-csp#account-guid-servername)
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Lesen/Schreiben
@@ -175,7 +175,7 @@ Zugriffstyp: Lesen/Schreiben
 [UserName](/windows/client-management/mdm/activesync-csp#account-guid-username)
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Lesen/Schreiben
@@ -189,19 +189,19 @@ Zugriffstyp: Lesen/Schreiben
 
 | Anforderung | Wert |
 |-------------------------------------|------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows 10 \[ -Desktop-Apps\]<br/>                                                    |
+| Unterstützte Mindestversion (Client)<br/> | \[Windows 10 Nur Desktop-Apps\]<br/>                                                    |
 | Unterstützte Mindestversion (Server)<br/> | Nicht unterstützt<br/>                                                                      |
-| Namespace<br/>                | Root \\ CIMV2 \\ MDM- \\ dmmap<br/>                                                             |
-| MOF<br/>                      | <dl> <dt>Dmwmibridgeprov. MOF</dt> </dl> |
+| Namespace<br/>                | Root \\ cimv2 \\ mdm \\ dmmap<br/>                                                             |
+| MOF<br/>                      | <dl> <dt>DMWmiBridgeProv.mof</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>DMWmiBridgeProv.dll</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[Verwenden von PowerShell-Skripts mit dem WMI-Bridge Anbieter](/windows/client-management/mdm/using-powershell-scripting-with-the-wmi-bridge-provider)
+[Verwenden von PowerShell-Skripts mit dem WMI-Bridge-Anbieter](/windows/client-management/mdm/using-powershell-scripting-with-the-wmi-bridge-provider)
 </dt> </dl>
 
  

@@ -1,6 +1,6 @@
 ---
-title: vs
-description: Verschieben Sie Daten aus einer Gleit Komma Registrierung in das Adressregister a0.
+title: mova im Vergleich zu
+description: Verschieben Sie Daten aus einem Gleitkommaregister in das Adressregister, a0.
 ms.assetid: 929a0670-f337-4d6d-a7e7-d285e7dc8ae1
 ms.topic: reference
 ms.date: 05/31/2018
@@ -9,50 +9,50 @@ topic_type:
 api_name: ''
 api_type: ''
 api_location: ''
-ms.openlocfilehash: 9ac29bf0d74b4eb2cb6cb86bdf6b070cf56823eb
-ms.sourcegitcommit: fe03c5d92ca6a0d66a114b2303e99c0a19241ffb
+ms.openlocfilehash: dec849009ee47b4aaef1bc3766e2b141a8a6ccf5e17b16a370c6ea8284eaf957
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/20/2019
-ms.locfileid: "104976473"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118986330"
 ---
-# <a name="mova---vs"></a>vs
+# <a name="mova---vs"></a>mova im Vergleich zu
 
-Verschieben Sie Daten aus einer Gleit Komma Registrierung in das [Adressregister](dx9-graphics-reference-asm-vs-registers-address.md)a0.
+Verschieben Sie Daten aus einem Gleitkommaregister in [das Adressregister](dx9-graphics-reference-asm-vs-registers-address.md), a0.
 
 ## <a name="syntax"></a>Syntax
 
 
 
-| MUVA DST, src |
+| mova dst, src |
 |---------------|
 
 
 
- 
+ 
 
 where
 
--   DST muss das [Adress Register](dx9-graphics-reference-asm-vs-registers-address.md)(a0) sein.
--   src ist ein Quell Register.
+-   dst muss das [Adressregister](dx9-graphics-reference-asm-vs-registers-address.md), a0 sein.
+-   src ist ein Quellregister.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
 
 
-| Vertex-Shader-Versionen | 1\_1 | 2 \_ 0 | 2 \_ x | 2 \_ SW | 3 \_ 0 | 3 \_ SW |
+| Vertex-Shaderversionen | 1\_1 | 2 \_ 0 | 2 \_ x | 2 \_ sw | 3 \_ 0 | 3 \_ sw |
 |------------------------|------|------|------|-------|------|-------|
-| der ANWA                   |      | x    | x    | x     | x    | x     |
+| Mova                   |      | x    | x    | x     | x    | x     |
 
 
 
- 
+ 
 
-Verschiebt Gleit Komma Daten in ein ganzzahliges Register. Die Werte werden von Gleit Komma Zahlen mit Rundung zum nächsten konvertiert.
+Verschiebt Gleitkommadaten in ein Ganzzahlregister. Die Werte werden von Gleitkommawerten mithilfe einer Rundung in die nächste konvertiert.
 
-Das Adressregister ist das einzige zulässige Ziel Register.
+Das Adressregister ist das einzige zulässige Zielregister.
 
-Das folgende Code Fragment zeigt die ausgeführten Vorgänge.
+Das folgende Codefragment zeigt die ausgeführten Vorgänge.
 
 
 ```
@@ -69,7 +69,7 @@ else
 
 
 
-Bei den Versionen 2 \_ x und höher ist das Adressregister ein Komponenten Vektor. Daher ist jede Schreib Maske zulässig.
+Für Die Versionen 2 \_ x und höher ist das Adressregister ein Komponentenvektor. Daher ist jede Schreibmaske zulässig.
 
 
 ```
@@ -82,12 +82,12 @@ mova a0.xz, r0
 
 <dl> <dt>
 
-[Vertex-shaderanweisungen](dx9-graphics-reference-asm-vs-instructions.md)
+[Vertex-Shader-Anweisungen](dx9-graphics-reference-asm-vs-instructions.md)
 </dt> </dl>
 
- 
+ 
 
- 
+ 
 
 
 

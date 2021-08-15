@@ -1,11 +1,11 @@
 ---
 title: ID3DX11EffectPass Apply-Methode (D3dx11effect.h)
-description: Legen Sie den Zustand fest, der in einer Übergabe an das Gerät enthalten ist.
+description: Legen Sie den Zustand fest, der in einem Pass an das Gerät enthalten ist.
 ms.assetid: d67fe968-bfb2-4f3a-b393-3f72f680211f
 keywords:
-- Anwenden der Methode Direct3D 11
-- Anwenden der Methode Direct3D 11 , ID3DX11EffectPass-Schnittstelle
-- ID3DX11EffectPass-Schnittstelle Direct3D 11, Apply-Methode
+- Anwenden der Direct3D 11-Methode
+- Apply method Direct3D 11 , ID3DX11EffectPass interface (Methode anwenden Direct3D 11, ID3DX11EffectPass-Schnittstelle)
+- ID3DX11EffectPass-Schnittstelle Direct3D 11 , Methode anwenden
 topic_type:
 - apiref
 api_name:
@@ -26,7 +26,7 @@ ms.locfileid: "119046048"
 ---
 # <a name="id3dx11effectpassapply-method"></a>ID3DX11EffectPass::Apply-Methode
 
-Legen Sie den Zustand fest, der in einer Übergabe an das Gerät enthalten ist.
+Legen Sie den Zustand fest, der in einem Pass an das Gerät enthalten ist.
 
 ## <a name="syntax"></a>Syntax
 
@@ -71,7 +71,7 @@ Gibt einen der folgenden [Direct3D 11-Rückgabecodes zurück.](d3d11-graphics-re
 ## <a name="remarks"></a>Hinweise
 
 > [!Note]  
-> Das DirectX SDK stellt keine kompilierten Binärdateien für Effekte zur Verfügung. Sie müssen die Effects 11-Quelle verwenden, um ihre Effekte-Typ-Anwendung zu erstellen. Weitere Informationen zur Verwendung der Quelle Effects 11 finden Sie unter [Unterschiede zwischen Effekten 10 und Effekten 11.](d3d11-graphics-programming-guide-effects-differences.md)
+> Das DirectX SDK stellt keine kompilierten Binärdateien für Effekte bereit. Sie müssen die Quelle Effects 11 verwenden, um Ihre Effekttypanwendung zu erstellen. Weitere Informationen zur Verwendung der Quelle Effects 11 finden Sie unter [Unterschiede zwischen Effekten 10 und Effekten 11.](d3d11-graphics-programming-guide-effects-differences.md)
 
  
 
@@ -82,7 +82,7 @@ Gibt einen der folgenden [Direct3D 11-Rückgabecodes zurück.](d3d11-graphics-re
 | Anforderung | Wert |
 |--------------------|----------------------------------------------------------------------------------------------------------------------------------------------|
 | Header<br/>  | <dl> <dt>D3dx11effect.h</dt> </dl>                                                    |
-| Bibliothek<br/> | <dl> <dt>N/A (Eine Effects 11-Bibliothek ist online als freigegebene Quelle verfügbar.)</dt> </dl> |
+| Bibliothek<br/> | <dl> <dt>Nicht verfügbar (eine Effects 11-Bibliothek ist online als freigegebene Quelle verfügbar.)</dt> </dl> |
 
 
 

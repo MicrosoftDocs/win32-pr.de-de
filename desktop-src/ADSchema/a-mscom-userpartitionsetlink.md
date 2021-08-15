@@ -1,11 +1,11 @@
 ---
-title: MS-com-userpartitionsetlink-Attribut
-description: Ein Link, der verwendet wird, um einen Benutzer einem com+-partitionsatz zuzuordnen.
+title: ms-COM-UserPartitionSetLink-Attribut
+description: Ein Link zum Zuordnen eines Benutzers zu einem COM+-Partitionssatz.
 ms.assetid: 7abd1274-0352-45c1-91e9-27ed8687208c
 ms.tgt_platform: multiple
 keywords:
-- "\"MS-com-userpartitionsetlink\"-Attribut, AD-Schema"
-- AD-Schema für das Attribut "MScom-userpartitionsetlink"
+- AD-Schema des ms-COM-UserPartitionSetLink-Attributs
+- AD-Schema des msCOM-UserPartitionSetLink-Attributs
 topic_type:
 - apiref
 api_name:
@@ -14,41 +14,41 @@ api_type:
 - Schema
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 4da547f257bf3a4fa472c6b48ccbcb47a1f2b984
-ms.sourcegitcommit: b77ace27b0432e7cd3863191b11926be032fbe2f
+ms.openlocfilehash: 97ab8caf90a7b689b5822fb768d3478ca26944478c3429372f0797f89fb3df27
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "104392320"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118961089"
 ---
-# <a name="ms-com-userpartitionsetlink-attribute"></a>MS-com-userpartitionsetlink-Attribut
+# <a name="ms-com-userpartitionsetlink-attribute"></a>ms-COM-UserPartitionSetLink-Attribut
 
-Ein Link, der verwendet wird, um einen Benutzer einem com+-partitionsatz zuzuordnen.
+Ein Link zum Zuordnen eines Benutzers zu einem COM+-Partitionssatz.
 
 
 
 | Eingabe | Wert |
 |-------------------|-----------------------------------------|
-| CN                | MS-com-userpartitionsetlink             |
-| LDAP-Display-Name | MScom-userpartitionsetlink              |
+| CN                | ms-COM-UserPartitionSetLink             |
+| Ldap-Anzeigename | msCOM-UserPartitionSetLink              |
 | Size              | \-                                      |
-| Berechtigung aktualisieren  | \-                                      |
-| Aktualisierungshäufigkeit  | \-                                      |
+| Aktualisieren von Berechtigungen  | \-                                      |
+| Updatehäufigkeit  | \-                                      |
 | Attribute-Id      | 1.2.840.113556.1.4.1426                 |
-| System-ID-GUID    | 8e940c8a-e477-4367-b08d-ff2ff942dcd7    |
+| System-Id-Guid    | 8e940c8a-e477-4367-b08d-ff2ff942dcd7    |
 | Syntax            | [**Object(DS-DN)**](s-object-ds-dn.md) |
 
 
 
 ## <a name="implementations"></a>Implementierungen
 
--   [**Windows Server 2003**](#windows-server-2003)
+-   [**Windows Server 2003**](#windows-server-2003)
 -   [**Windows Server 2003 R2**](#windows-server-2003-r2)
 -   [**Windows Server 2008**](#windows-server-2008)
 -   [**Windows Server 2008 R2**](#windows-server-2008-r2)
 -   [**Windows Server 2012**](#windows-server-2012)
 
-## <a name="windows-server-2003"></a>Windows Server 2003
+## <a name="windows-server-2003"></a>Windows Server 2003
 
 
 
@@ -57,10 +57,10 @@ Ein Link, der verwendet wird, um einen Benutzer einem com+-partitionsatz zuzuord
 | Link-ID                | 1048                                                                                             |
 | MAPI-Id                | \-                                                                                               |
 | System-Only            | False                                                                                            |
-| Ist-einwertig       | Richtig                                                                                             |
+| Is-Single-Valued       | True                                                                                             |
 | Ist indiziert             | False                                                                                            |
 | Im globalen Katalog      | False                                                                                            |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                                                                     |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                                                                     |
 | Range-Lower            | \-                                                                                               |
 | Range-Upper            | \-                                                                                               |
 | Search-Flags           | 0x00000000                                                                                       |
@@ -78,10 +78,10 @@ Ein Link, der verwendet wird, um einen Benutzer einem com+-partitionsatz zuzuord
 | Link-ID                | 1048                                                                                             |
 | MAPI-Id                | \-                                                                                               |
 | System-Only            | False                                                                                            |
-| Ist-einwertig       | Richtig                                                                                             |
+| Is-Single-Valued       | True                                                                                             |
 | Ist indiziert             | False                                                                                            |
 | Im globalen Katalog      | False                                                                                            |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                                                                     |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                                                                     |
 | Range-Lower            | \-                                                                                               |
 | Range-Upper            | \-                                                                                               |
 | Search-Flags           | 0x00000000                                                                                       |
@@ -99,10 +99,10 @@ Ein Link, der verwendet wird, um einen Benutzer einem com+-partitionsatz zuzuord
 | Link-ID                | 1048                                                                                             |
 | MAPI-Id                | \-                                                                                               |
 | System-Only            | False                                                                                            |
-| Ist-einwertig       | Richtig                                                                                             |
+| Is-Single-Valued       | True                                                                                             |
 | Ist indiziert             | False                                                                                            |
 | Im globalen Katalog      | False                                                                                            |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                                                                     |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                                                                     |
 | Range-Lower            | \-                                                                                               |
 | Range-Upper            | \-                                                                                               |
 | Search-Flags           | 0x00000000                                                                                       |
@@ -120,10 +120,10 @@ Ein Link, der verwendet wird, um einen Benutzer einem com+-partitionsatz zuzuord
 | Link-ID                | 1048                                                                                             |
 | MAPI-Id                | \-                                                                                               |
 | System-Only            | False                                                                                            |
-| Ist-einwertig       | Richtig                                                                                             |
+| Ist einwertig       | True                                                                                             |
 | Ist indiziert             | False                                                                                            |
 | Im globalen Katalog      | False                                                                                            |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                                                                     |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                                                                     |
 | Range-Lower            | \-                                                                                               |
 | Range-Upper            | \-                                                                                               |
 | Search-Flags           | 0x00000000                                                                                       |
@@ -141,10 +141,10 @@ Ein Link, der verwendet wird, um einen Benutzer einem com+-partitionsatz zuzuord
 | Link-ID                | 1048                                                                                             |
 | MAPI-Id                | \-                                                                                               |
 | System-Only            | False                                                                                            |
-| Ist-einwertig       | Richtig                                                                                             |
+| Ist einwertig       | True                                                                                             |
 | Ist indiziert             | False                                                                                            |
 | Im globalen Katalog      | False                                                                                            |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                                                                     |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                                                                     |
 | Range-Lower            | \-                                                                                               |
 | Range-Upper            | \-                                                                                               |
 | Search-Flags           | 0x00000000                                                                                       |

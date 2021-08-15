@@ -1,9 +1,9 @@
 ---
 title: ncadg_ipx-Attribut
-description: Das ncadg- \_ IPX-Schlüsselwort identifiziert IPX als Protokollfamilie für den Endpunkt. Diese Protokollfamilie ist veraltet und sollte in neuen Anwendungen nicht verwendet werden.
+description: Das Schlüsselwort ncadg \_ ipx identifiziert IPX als Protokollfamilie für den Endpunkt. Diese Protokollfamilie ist veraltet und sollte nicht in neuen Anwendungen verwendet werden.
 ms.assetid: 6b136eb9-4e18-43ff-993b-a2ad005273f1
 keywords:
-- ncadg_ipx Attribut-Mittel l
+- ncadg_ipx MIDL-Attribut
 topic_type:
 - apiref
 api_name:
@@ -12,16 +12,16 @@ api_type:
 - NA
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 1fa206902ae80e5218e1d5249da8a8fb1b9dfc04
-ms.sourcegitcommit: ebd3ce6908ff865f1ef66f2fc96769be0aad82e1
+ms.openlocfilehash: dbca1ef3cb5f51e54fe8b95aa16326c6438903ff9717258edea9fac491eebafa
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/19/2020
-ms.locfileid: "103725377"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119067050"
 ---
-# <a name="ncadg_ipx-attribute"></a>ncadg- \_ IPX-Attribut
+# <a name="ncadg_ipx-attribute"></a>ncadg \_ ipx-Attribut
 
-Das **ncadg- \_ IPX** -Schlüsselwort identifiziert IPX als Protokollfamilie für den Endpunkt. Diese Protokollfamilie ist veraltet und sollte in neuen Anwendungen nicht verwendet werden.
+Das **Schlüsselwort ncadg \_ ipx** identifiziert IPX als Protokollfamilie für den Endpunkt. Diese Protokollfamilie ist veraltet und sollte nicht in neuen Anwendungen verwendet werden.
 
 ``` syntax
 endpoint("ncadg_ipx:link-address[port-name]")
@@ -34,40 +34,40 @@ endpoint("ncadg_ipx:link-address[port-name]")
 *Linkadresse* 
 </dt> <dd>
 
-Gibt den Host Server an. Dies kann entweder eine Zeichenfolge (der Servername) oder eine 20-stellige hexadezimal Zahl sein, die aus der Netzwerkadresse des Host Servers (8 Ziffern) besteht, die mit der Knotenadresse (12 Ziffern) verkettet ist. Anweisungen zum Abrufen der Netzwerkadresse und der Knotenadresse finden Sie unter "Hinweise". Eine **null** -Zeichenfolge gibt den lokalen Computer an.
+Gibt den Hostserver an. Dies kann entweder eine Zeichenfolge (der Servername) oder eine 20-stellige Hexadezimalzahl sein, die aus der Netzwerkadresse (8 Ziffern) des Hostservers besteht, die mit der Knotenadresse (12 Ziffern) verkettet ist. Anweisungen zum Abrufen der Netzwerkadresse und Knotenadresse finden Sie unter Hinweise. Eine **NULL-Zeichenfolge** gibt den lokalen Computer an.
 
 </dd> <dt>
 
 *Portname* 
 </dt> <dd>
 
-Gibt eine optionale 16-Bit-Zahl an, die die Socketadresse darstellt. Die Werte können zwischen 1 und 65535 liegen. Wenn kein Wert angegeben wird, wählt der Endpunkt Zuordnung einen gültigen *Portnamen* Wert aus.
+Gibt eine optionale 16-Bit-Zahl an, die die Socketadresse darstellt. Die Werte können zwischen 1 und 65535 liegen. Wenn kein Wert angegeben wird, wählt der Endpunktzuordnungsdienst einen *gültigen Portnamenwert* aus.
 
 </dd> </dl>
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Die folgenden Einschränkungen gelten für die Datagramm-Protokolle **ncadg \_ IPX** und [**ncadg \_ IP \_ UDP**](ncadg-ip-udp.md):
+Die folgenden Einschränkungen gelten für die Datagrammprotokolle **ncadg \_ ipx** und [**ncadg \_ ip \_ udp:**](ncadg-ip-udp.md)
 
--   Rückrufe werden nicht unterstützt. Alle Funktionen, die das **\[** [**Rückruf**](callback.md) **\]** Attribut verwenden, schlagen fehl.
--   Die [**Verwendung des pipetypkonstruktors**](pipe.md) wird nicht unterstützt.
+-   Rückrufe werden nicht unterstützt. Alle Funktionen, die das **\[** [**Rückrufattribut**](callback.md) **\]** verwenden, führen zu einem Fehler.
+-   Die Verwendung des Pipetypkonstruktors [**wird**](pipe.md) nicht unterstützt.
 
-Wenn Sie den **ncadg- \_ IPX** -Transport verwenden, ist der Servername genau mit dem 32-Bit-Windows-Servernamen identisch. Da die Namen jedoch mithilfe von Novell-Protokollen verteilt werden, müssen Sie den Novell-Benennungs Konventionen entsprechen. Wenn ein Servername kein gültiger Novell-Name ist, können Server mit dem **ncadg- \_ IPX** -Transport keine Endpunkte erstellen. Im folgenden finden Sie eine unvollständige Liste von Zeichen, die in Novell-Servernamen nicht zulässig sind:
+Bei Verwendung des **ncadg \_ ipx-Transports** ist der Servername genau derselbe wie der 32-Bit-Windows Servername. Da die Namen jedoch mithilfe von Protokollen von Werden verteilt werden, müssen sie den Benennungskonventionen von Bein entsprechen. Wenn es sich bei einem Servernamen nicht um einen gültigen Namen handelt, können Server keine Endpunkte mit dem **ncadg \_ ipx-Transport** erstellen. Im Folgenden finden Sie eine partielle Liste von Zeichen, die in Den-Servernamen unzulässig sind:
 
-" \* + . / : ; < = >? \[ \] \\ \|
+" \* + . / : ; < = > ? \[ \] \\ \|
 
-Der **ncadg \_ IPX** -Transport wird von der Version von NWLink unterstützt, die mit MS Client 3,0 bereitgestellt wird.
+Der **ncadg \_ ipx-Transport** wird von der version of NWLink unterstützt, die mit MS Client 3.0 bereitgestellt wird.
 
-für 16-Bit-Windows-Client Anwendungen, die den **ncadg- \_ IPX** -Transport verwenden, muss die Datei Nwipxspx.dll installiert werden, damit Sie im WOW-Subsystem ausgeführt werden können. Wenden Sie sich an Novell, um diese Datei zu erhalten.
+16-Bit-Windows-Clientanwendungen, die den **ncadg \_ ipx-Transport** verwenden, erfordern, dass die Datei Nwipxspx.dll installiert wird, um unter dem WOW-Subsystem ausgeführt zu werden. Wenden Sie sich an Den, um diese Datei zu erhalten.
 
-Verwenden Sie zum Abrufen der Netzwerk-und Knoten Adressen das **com** -Hilfsprogramm von Novell oder die Novell-definierte API **ipxgetinternetaddress**. Unter Windows können Sie diese Adressen auch mit dem Befehl " **ipxroute config** " abrufen.
+Um die Netzwerk- und Knotenadressen zu erhalten, verwenden Sie das **Comcheck-Hilfsprogramm** von Perl oder die von DerTegetInternetAddress definierte **API.** Auf Windows können Sie diese Adressen auch mit dem **Befehl ipxroute config** abrufen.
 
-Die Syntax der TCP/IP-Transport Port Zeichenfolge, wie alle Port Zeichenfolgen, wird unabhängig von der IDL-Spezifikation definiert. Der Compiler führt einige Syntax Überprüfungen durch, gewährleistet jedoch nicht, dass die Endpunkt Spezifikation korrekt ist. Einige Fehler werden möglicherweise zur Laufzeit und nicht zur Kompilierzeit gemeldet.
+Die Syntax der TCP/IP-Transportportzeichenfolge wird wie alle Portzeichenfolgen unabhängig von der IDL-Spezifikation definiert. Der Compiler führt einige Syntaxüberprüfungen durch, garantiert jedoch nicht, dass die Endpunktspezifikation korrekt ist. Einige Fehler werden möglicherweise zur Laufzeit und nicht zur Kompilierzeit gemeldet.
 
 > [!Note]  
 > Diese Protokollfamilie wird in Windows XP nicht unterstützt.
 
- 
+ 
 
 ## <a name="examples"></a>Beispiele
 
@@ -87,48 +87,48 @@ interface iface
 
 <dl> <dt>
 
-[**Dreher**](endpoint.md)
+[**Endpunkt**](endpoint.md)
 </dt> <dt>
 
-[Schnittstellen Definitionsdatei (IDL)](interface-definition-idl-file.md)
+[IDL-Datei (Interface Definition)](interface-definition-idl-file.md)
 </dt> <dt>
 
-[**ncacn \_ bei \_ DSP**](ncacn-at-dsp.md)
+[**ncacn \_ bei \_ dsp**](ncacn-at-dsp.md)
 </dt> <dt>
 
-[**ncacn \_ dnet \_ NSP**](ncacn-dnet-nsp.md)
+[**ncacn \_ dnet \_ nsp**](ncacn-dnet-nsp.md)
 </dt> <dt>
 
-[**ncacn \_ IP \_ TCP**](ncacn-ip-tcp.md)
+[**ncacn \_ ip \_ tcp**](ncacn-ip-tcp.md)
 </dt> <dt>
 
-[**ncacn \_ NB \_ IPX**](ncacn-nb-ipx.md)
+[**ncacn \_ nb \_ ipx**](ncacn-nb-ipx.md)
 </dt> <dt>
 
-[**ncacn- \_ SPX**](ncacn-spx.md)
+[**ncacn \_ spx**](ncacn-spx.md)
 </dt> <dt>
 
-[**ncacn \_ NB \_ NB**](ncacn-nb-nb.md)
+[**ncacn \_ nb \_ nb**](ncacn-nb-nb.md)
 </dt> <dt>
 
-[**ncacn \_ NB \_ TCP**](ncacn-nb-tcp.md)
+[**ncacn \_ nb \_ tcp**](ncacn-nb-tcp.md)
 </dt> <dt>
 
-[**ncacn \_ NP**](ncacn-np.md)
+[**ncacn \_ np**](ncacn-np.md)
 </dt> <dt>
 
-[**ncacn \_ VNS- \_ spp**](ncacn-vns-spp.md)
+[**ncacn \_ vns \_ spp**](ncacn-vns-spp.md)
 </dt> <dt>
 
-[**Ncalrpc**](ncalrpc.md)
+[**ncalrpc**](ncalrpc.md)
 </dt> <dt>
 
-[**ncadg \_ -IP- \_ UDP**](ncadg-ip-udp.md)
+[**ncadg \_ ip \_ udp**](ncadg-ip-udp.md)
 </dt> <dt>
 
-[Zeichen folgen Bindung](/windows/desktop/Rpc/string-binding)
+[Zeichenfolgenbindung](/windows/desktop/Rpc/string-binding)
 </dt> </dl>
 
- 
+ 
 
- 
+ 

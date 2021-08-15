@@ -1,6 +1,6 @@
 ---
 title: MDM_Policy_Config01_InternetExplorer02-Klasse
-description: Die MDM- \_ Richtlinie \_ Config01 \_ InternetExplorer02-Klasse konfiguriert die Internet Explorer-Richtlinien.
+description: Die MDM \_ Policy \_ Config01 \_ InternetExplorer02-Klasse konfiguriert die Internet Explorer Richtlinien.
 ms.assetid: 32cc6a64-3008-4add-96e8-33b31beb207f
 keywords:
 - MDM_Policy_Config01_InternetExplorer02-Klasse
@@ -17,18 +17,18 @@ api_type:
 - DllExport
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 48a448b0034e3f4658f1c13b238abf455bf413a3
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 5ce4471c465261ca27f24e2b16becc310849ba160a51da7c8007fed3926648ca
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104476617"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119077208"
 ---
-# <a name="mdm_policy_config01_internetexplorer02-class"></a>MDM- \_ Richtlinie \_ Config01 \_ InternetExplorer02-Klasse
+# <a name="mdm_policy_config01_internetexplorer02-class"></a>MDM \_ Policy \_ Config01 \_ InternetExplorer02-Klasse
 
 \[Einige Informationen beziehen sich auf Vorabversionen, die vor der kommerziellen Freigabe grundlegend geändert werden können. Microsoft übernimmt keine Garantie, weder ausdrücklich noch stillschweigend, für die hier bereitgestellten Informationen.\]
 
-Die MDM- \_ Richtlinie \_ Config01 \_ InternetExplorer02-Klasse konfiguriert die Internet Explorer-Richtlinien.
+Die MDM \_ Policy \_ Config01 \_ InternetExplorer02-Klasse konfiguriert die Internet Explorer Richtlinien.
 
 Die folgende Syntax enthält vereinfachten MOF-Code und schließt alle geerbten Eigenschaften ein.
 
@@ -294,20 +294,20 @@ class MDM_Policy_Config01_InternetExplorer02
 
 ## <a name="members"></a>Member
 
-Die **MDM- \_ Richtlinie \_ Config01 \_ InternetExplorer02** -Klasse verfügt über diese Typen von Membern:
+Die **MDM \_ Policy \_ Config01 \_ InternetExplorer02-Klasse** verfügt über diese Typen von Membern:
 
 -   [Eigenschaften](#properties)
 
 ### <a name="properties"></a>Eigenschaften
 
-Die **MDM- \_ Richtlinie \_ Config01 \_ InternetExplorer02** -Klasse verfügt über diese Eigenschaften.
+Die **MDM \_ Policy \_ Config01 \_ InternetExplorer02-Klasse** verfügt über diese Eigenschaften.
 
 <dl> <dt>
 
 [AddSearchProvider](/windows/client-management/mdm/policy-csp-internetexplorer#internetexplorer-addsearchprovider)
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Lesen/Schreiben
@@ -315,10 +315,10 @@ Zugriffstyp: Lesen/Schreiben
 
 </dd> <dt>
 
-[Allowactivexfiltering](/windows/client-management/mdm/policy-csp-internetexplorer#internetexplorer-allowactivexfiltering)
+[AllowActiveXFiltering](/windows/client-management/mdm/policy-csp-internetexplorer#internetexplorer-allowactivexfiltering)
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Lesen/Schreiben
@@ -326,10 +326,10 @@ Zugriffstyp: Lesen/Schreiben
 
 </dd> <dt>
 
-[Allowaddonlist](/windows/client-management/mdm/policy-csp-internetexplorer#internetexplorer-allowaddonlist)
+[AllowAddOnList](/windows/client-management/mdm/policy-csp-internetexplorer#internetexplorer-allowaddonlist)
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Lesen/Schreiben
@@ -337,10 +337,10 @@ Zugriffstyp: Lesen/Schreiben
 
 </dd> <dt>
 
-[Allowcertificateaddressmismatchwarning](/windows/client-management/mdm/policy-csp-internetexplorer#internetexplorer-allowcertificateaddressmismatchwarning)
+[AllowCertificateAddressMismatchWarning](/windows/client-management/mdm/policy-csp-internetexplorer#internetexplorer-allowcertificateaddressmismatchwarning)
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Lesen/Schreiben
@@ -348,10 +348,10 @@ Zugriffstyp: Lesen/Schreiben
 
 </dd> <dt>
 
-[Allowdelta etingbrowsinghistoryonexit](/windows/client-management/mdm/policy-csp-internetexplorer#internetexplorer-allowdeletingbrowsinghistoryonexit)
+[AllowDeletingBrowsingHistoryOnExit](/windows/client-management/mdm/policy-csp-internetexplorer#internetexplorer-allowdeletingbrowsinghistoryonexit)
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Lesen/Schreiben
@@ -359,10 +359,10 @@ Zugriffstyp: Lesen/Schreiben
 
 </dd> <dt>
 
-[Zuordnung von "Zuweisung"](/windows/client-management/mdm/policy-csp-internetexplorer#internetexplorer-allowenhancedprotectedmode)
+[AllowEnhancedProtectedMode](/windows/client-management/mdm/policy-csp-internetexplorer#internetexplorer-allowenhancedprotectedmode)
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Lesen/Schreiben
@@ -370,10 +370,10 @@ Zugriffstyp: Lesen/Schreiben
 
 </dd> <dt>
 
-["Zuweisung von" "" "".](/windows/client-management/mdm/policy-csp-internetexplorer#internetexplorer-allowenterprisemodefromtoolsmenu)
+[AllowEnterpriseModeFromToolsMenu](/windows/client-management/mdm/policy-csp-internetexplorer#internetexplorer-allowenterprisemodefromtoolsmenu)
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Lesen/Schreiben
@@ -381,10 +381,10 @@ Zugriffstyp: Lesen/Schreiben
 
 </dd> <dt>
 
-[Zuordnung von "Zuweisung"](/windows/client-management/mdm/policy-csp-internetexplorer#internetexplorer-allowenterprisemodesitelist)
+[AllowEnterpriseModeSiteList](/windows/client-management/mdm/policy-csp-internetexplorer#internetexplorer-allowenterprisemodesitelist)
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Lesen/Schreiben
@@ -395,7 +395,7 @@ Zugriffstyp: Lesen/Schreiben
 [AllowFallbackToSSL3](/windows/client-management/mdm/policy-csp-internetexplorer#internetexplorer-allowfallbacktossl3)
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Lesen/Schreiben
@@ -406,7 +406,7 @@ Zugriffstyp: Lesen/Schreiben
 [AllowInternetExplorer7PolicyList](/windows/client-management/mdm/policy-csp-internetexplorer#internetexplorer-allowinternetexplorer7policylist)
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Lesen/Schreiben
@@ -414,10 +414,10 @@ Zugriffstyp: Lesen/Schreiben
 
 </dd> <dt>
 
-["Expwinternetexplorerstandardsmode"](/windows/client-management/mdm/policy-csp-internetexplorer#internetexplorer-allowinternetexplorerstandardsmode)
+[AllowInternetExplorerStandardsMode](/windows/client-management/mdm/policy-csp-internetexplorer#internetexplorer-allowinternetexplorerstandardsmode)
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Lesen/Schreiben
@@ -425,10 +425,10 @@ Zugriffstyp: Lesen/Schreiben
 
 </dd> <dt>
 
-[Zuordnung von "Zuweisung"](/windows/client-management/mdm/policy-csp-internetexplorer#internetexplorer-allowinternetzonetemplate)
+[AllowInternetZoneTemplate](/windows/client-management/mdm/policy-csp-internetexplorer#internetexplorer-allowinternetzonetemplate)
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Lesen/Schreiben
@@ -436,10 +436,10 @@ Zugriffstyp: Lesen/Schreiben
 
 </dd> <dt>
 
-[Zuordnung von "Zuweisung"](/windows/client-management/mdm/policy-csp-internetexplorer#internetexplorer-allowintranetzonetemplate)
+[AllowIntranetZoneTemplate](/windows/client-management/mdm/policy-csp-internetexplorer#internetexplorer-allowintranetzonetemplate)
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Lesen/Schreiben
@@ -447,10 +447,10 @@ Zugriffstyp: Lesen/Schreiben
 
 </dd> <dt>
 
-[Allowlocalmachinezonetemplate](/windows/client-management/mdm/policy-csp-internetexplorer#internetexplorer-allowlocalmachinezonetemplate)
+[AllowLocalMachineZoneTemplate](/windows/client-management/mdm/policy-csp-internetexplorer#internetexplorer-allowlocalmachinezonetemplate)
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Lesen/Schreiben
@@ -458,10 +458,10 @@ Zugriffstyp: Lesen/Schreiben
 
 </dd> <dt>
 
-[Allowlockeddowninternetzonetemplate](/windows/client-management/mdm/policy-csp-internetexplorer#internetexplorer-allowlockeddowninternetzonetemplate)
+[AllowLockedDownInternetZoneTemplate](/windows/client-management/mdm/policy-csp-internetexplorer#internetexplorer-allowlockeddowninternetzonetemplate)
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Lesen/Schreiben
@@ -469,10 +469,10 @@ Zugriffstyp: Lesen/Schreiben
 
 </dd> <dt>
 
-[Allowlockeddownintranetzonetemplate](/windows/client-management/mdm/policy-csp-internetexplorer#internetexplorer-allowlockeddownintranetzonetemplate)
+[AllowLockedDownIntranetZoneTemplate](/windows/client-management/mdm/policy-csp-internetexplorer#internetexplorer-allowlockeddownintranetzonetemplate)
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Lesen/Schreiben
@@ -480,10 +480,10 @@ Zugriffstyp: Lesen/Schreiben
 
 </dd> <dt>
 
-[Allowlockeddownloader calmachinezonetemplate](/windows/client-management/mdm/policy-csp-internetexplorer#internetexplorer-allowlockeddownlocalmachinezonetemplate)
+[AllowLockedDownLocalMachineZoneTemplate](/windows/client-management/mdm/policy-csp-internetexplorer#internetexplorer-allowlockeddownlocalmachinezonetemplate)
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Lesen/Schreiben
@@ -491,10 +491,10 @@ Zugriffstyp: Lesen/Schreiben
 
 </dd> <dt>
 
-[Allowlockeddownrestrictedsiteszonetemplate](/windows/client-management/mdm/policy-csp-internetexplorer#internetexplorer-allowlockeddownrestrictedsiteszonetemplate)
+[AllowLockedDownRestrictedSitesZoneTemplate](/windows/client-management/mdm/policy-csp-internetexplorer#internetexplorer-allowlockeddownrestrictedsiteszonetemplate)
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Lesen/Schreiben
@@ -502,10 +502,10 @@ Zugriffstyp: Lesen/Schreiben
 
 </dd> <dt>
 
-[' Zugwonewordentry '](/windows/client-management/mdm/policy-csp-internetexplorer#internetexplorer-allowonewordentry)
+[AllowOneWordEntry](/windows/client-management/mdm/policy-csp-internetexplorer#internetexplorer-allowonewordentry)
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Lesen/Schreiben
@@ -513,10 +513,10 @@ Zugriffstyp: Lesen/Schreiben
 
 </dd> <dt>
 
-[Allowsiteononezuzuzustandliste](/windows/client-management/mdm/policy-csp-internetexplorer#internetexplorer-allowsitetozoneassignmentlist)
+[AllowSiteToZoneAssignmentList](/windows/client-management/mdm/policy-csp-internetexplorer#internetexplorer-allowsitetozoneassignmentlist)
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Lesen/Schreiben
@@ -524,10 +524,10 @@ Zugriffstyp: Lesen/Schreiben
 
 </dd> <dt>
 
-[Allowslockeddowntreuhändsiteszonetemplate](/windows/client-management/mdm/policy-csp-internetexplorer#internetexplorer-allowslockeddowntrustedsiteszonetemplate)
+[AllowsLockedDownTrustedSitesZoneTemplate](/windows/client-management/mdm/policy-csp-internetexplorer#internetexplorer-allowslockeddowntrustedsiteszonetemplate)
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Lesen/Schreiben
@@ -535,10 +535,10 @@ Zugriffstyp: Lesen/Schreiben
 
 </dd> <dt>
 
-[Allowsoftware\signatureisinvalid](/windows/client-management/mdm/policy-csp-internetexplorer#internetexplorer-allowsoftwarewhensignatureisinvalid)
+[AllowSoftwareWhenSignatureIsInvalid](/windows/client-management/mdm/policy-csp-internetexplorer#internetexplorer-allowsoftwarewhensignatureisinvalid)
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Lesen/Schreiben
@@ -546,10 +546,10 @@ Zugriffstyp: Lesen/Schreiben
 
 </dd> <dt>
 
-[Allowsrestrictedsiteszonetemplate](/windows/client-management/mdm/policy-csp-internetexplorer#internetexplorer-allowsrestrictedsiteszonetemplate)
+[AllowsRestrictedSitesZoneTemplate](/windows/client-management/mdm/policy-csp-internetexplorer#internetexplorer-allowsrestrictedsiteszonetemplate)
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Lesen/Schreiben
@@ -557,10 +557,10 @@ Zugriffstyp: Lesen/Schreiben
 
 </dd> <dt>
 
-[Allowvorschlags stedsites](/windows/client-management/mdm/policy-csp-internetexplorer#internetexplorer-allowsuggestedsites)
+[AllowSuggestedSites](/windows/client-management/mdm/policy-csp-internetexplorer#internetexplorer-allowsuggestedsites)
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Lesen/Schreiben
@@ -568,10 +568,10 @@ Zugriffstyp: Lesen/Schreiben
 
 </dd> <dt>
 
-[Allowtreuhändsiteszonetemplate](/windows/client-management/mdm/policy-csp-internetexplorer#internetexplorer-allowtrustedsiteszonetemplate)
+[AllowTrustedSitesZoneTemplate](/windows/client-management/mdm/policy-csp-internetexplorer#internetexplorer-allowtrustedsiteszonetemplate)
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Lesen/Schreiben
@@ -579,10 +579,10 @@ Zugriffstyp: Lesen/Schreiben
 
 </dd> <dt>
 
-[Checkservercertificaterevozierung](/windows/client-management/mdm/policy-csp-internetexplorer#internetexplorer-checkservercertificaterevocation)
+[CheckServerCertificateRevocation](/windows/client-management/mdm/policy-csp-internetexplorer#internetexplorer-checkservercertificaterevocation)
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Lesen/Schreiben
@@ -590,10 +590,10 @@ Zugriffstyp: Lesen/Schreiben
 
 </dd> <dt>
 
-[Checksignaturesondownloader-dprogramme](/windows/client-management/mdm/policy-csp-internetexplorer#internetexplorer-checksignaturesondownloadedprograms)
+[CheckSignaturesOnDownloadedPrograms](/windows/client-management/mdm/policy-csp-internetexplorer#internetexplorer-checksignaturesondownloadedprograms)
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Lesen/Schreiben
@@ -601,10 +601,10 @@ Zugriffstyp: Lesen/Schreiben
 
 </dd> <dt>
 
-["Konsistentmimehandlinginternetexplorerprocesses"](/windows/client-management/mdm/policy-csp-internetexplorer#internetexplorer-consistentmimehandlinginternetexplorerprocesses)
+[ConsistentMimeHandlingInternetExplorerProcesses](/windows/client-management/mdm/policy-csp-internetexplorer#internetexplorer-consistentmimehandlinginternetexplorerprocesses)
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Lesen/Schreiben
@@ -612,10 +612,10 @@ Zugriffstyp: Lesen/Schreiben
 
 </dd> <dt>
 
-[Disableadobeflash](/windows/client-management/mdm/policy-csp-internetexplorer#internetexplorer-disableadobeflash)
+[DisableAdobeFlash](/windows/client-management/mdm/policy-csp-internetexplorer#internetexplorer-disableadobeflash)
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Lesen/Schreiben
@@ -623,10 +623,10 @@ Zugriffstyp: Lesen/Schreiben
 
 </dd> <dt>
 
-Disableblockingof outdatedactivexcontrols
+DisableBlockingOfOutdatedActiveXControls
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Lesen/Schreiben
@@ -634,10 +634,10 @@ Zugriffstyp: Lesen/Schreiben
 
 </dd> <dt>
 
-[Disablebypassofsmartscreenwarning](/windows/client-management/mdm/policy-csp-internetexplorer#internetexplorer-disablebypassofsmartscreenwarnings)
+[DisableBypassOfSmartScreenWarnings](/windows/client-management/mdm/policy-csp-internetexplorer#internetexplorer-disablebypassofsmartscreenwarnings)
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Lesen/Schreiben
@@ -645,10 +645,10 @@ Zugriffstyp: Lesen/Schreiben
 
 </dd> <dt>
 
-[Disablebypassofsmartscreenwarningsaboutuncommonfiles](/windows/client-management/mdm/policy-csp-internetexplorer#internetexplorer-disablebypassofsmartscreenwarningsaboutuncommonfiles)
+[DisableBypassOfSmartScreenWarningsAboutUncommonFiles](/windows/client-management/mdm/policy-csp-internetexplorer#internetexplorer-disablebypassofsmartscreenwarningsaboutuncommonfiles)
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Lesen/Schreiben
@@ -656,10 +656,10 @@ Zugriffstyp: Lesen/Schreiben
 
 </dd> <dt>
 
-[Disableconfiguringhistory](/windows/client-management/mdm/policy-csp-internetexplorer#internetexplorer-disableconfiguringhistory)
+[DisableConfiguringHistory](/windows/client-management/mdm/policy-csp-internetexplorer#internetexplorer-disableconfiguringhistory)
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Lesen/Schreiben
@@ -667,10 +667,10 @@ Zugriffstyp: Lesen/Schreiben
 
 </dd> <dt>
 
-[Disablecrash-Erkennung](/windows/client-management/mdm/policy-csp-internetexplorer#internetexplorer-disablecrashdetection)
+[DisableCrashDetection](/windows/client-management/mdm/policy-csp-internetexplorer#internetexplorer-disablecrashdetection)
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Lesen/Schreiben
@@ -678,10 +678,10 @@ Zugriffstyp: Lesen/Schreiben
 
 </dd> <dt>
 
-[Disablecustomerexperiendceimprovementprogramparticipation](/windows/client-management/mdm/policy-csp-internetexplorer#internetexplorer-disablecustomerexperienceimprovementprogramparticipation)
+[DisableCustomerExperienceImprovementProgramParticipation](/windows/client-management/mdm/policy-csp-internetexplorer#internetexplorer-disablecustomerexperienceimprovementprogramparticipation)
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Lesen/Schreiben
@@ -689,10 +689,10 @@ Zugriffstyp: Lesen/Schreiben
 
 </dd> <dt>
 
-[Disabledelta etinguservisitedwebsites](/windows/client-management/mdm/policy-csp-internetexplorer#internetexplorer-disabledeletinguservisitedwebsites)
+[DisableDeletingUserVisitedWebsites](/windows/client-management/mdm/policy-csp-internetexplorer#internetexplorer-disabledeletinguservisitedwebsites)
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Lesen/Schreiben
@@ -700,10 +700,10 @@ Zugriffstyp: Lesen/Schreiben
 
 </dd> <dt>
 
-[Disablereclosuredownload](/windows/client-management/mdm/policy-csp-internetexplorer#internetexplorer-disableenclosuredownloading)
+[DisableEnclosureDownloading](/windows/client-management/mdm/policy-csp-internetexplorer#internetexplorer-disableenclosuredownloading)
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Lesen/Schreiben
@@ -711,10 +711,10 @@ Zugriffstyp: Lesen/Schreiben
 
 </dd> <dt>
 
-[Disableverschlüsseltionsupport](/windows/client-management/mdm/policy-csp-internetexplorer#internetexplorer-disableencryptionsupport)
+[DisableEncryptionSupport](/windows/client-management/mdm/policy-csp-internetexplorer#internetexplorer-disableencryptionsupport)
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Lesen/Schreiben
@@ -725,7 +725,7 @@ Zugriffstyp: Lesen/Schreiben
 [DisableFirstRunWizard](/windows/client-management/mdm/policy-csp-internetexplorer#internetexplorer-disablefirstrunwizard)
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Lesen/Schreiben
@@ -733,10 +733,10 @@ Zugriffstyp: Lesen/Schreiben
 
 </dd> <dt>
 
-[Disableflipheadfeature](/windows/client-management/mdm/policy-csp-internetexplorer#internetexplorer-disableflipaheadfeature)
+[DisableFlipAheadFeature](/windows/client-management/mdm/policy-csp-internetexplorer#internetexplorer-disableflipaheadfeature)
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Lesen/Schreiben
@@ -744,10 +744,10 @@ Zugriffstyp: Lesen/Schreiben
 
 </dd> <dt>
 
-[Disableignoringcertificateerrors](/windows/client-management/mdm/policy-csp-internetexplorer#internetexplorer-disableignoringcertificateerrors)
+[DisableIgnoringCertificateErrors](/windows/client-management/mdm/policy-csp-internetexplorer#internetexplorer-disableignoringcertificateerrors)
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Lesen/Schreiben
@@ -755,10 +755,10 @@ Zugriffstyp: Lesen/Schreiben
 
 </dd> <dt>
 
-[Disableinprivatebrowsing](/windows/client-management/mdm/policy-csp-internetexplorer#internetexplorer-disableinprivatebrowsing)
+[DisableInPrivateBrowsing](/windows/client-management/mdm/policy-csp-internetexplorer#internetexplorer-disableinprivatebrowsing)
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Lesen/Schreiben
@@ -766,10 +766,10 @@ Zugriffstyp: Lesen/Schreiben
 
 </dd> <dt>
 
-[Disableprocessesinenhancedprotectedmode](/windows/client-management/mdm/policy-csp-internetexplorer#internetexplorer-disableprocessesinenhancedprotectedmode)
+[DisableProcessesInEnhancedProtectedMode](/windows/client-management/mdm/policy-csp-internetexplorer#internetexplorer-disableprocessesinenhancedprotectedmode)
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Lesen/Schreiben
@@ -777,10 +777,10 @@ Zugriffstyp: Lesen/Schreiben
 
 </dd> <dt>
 
-[Disableproxychange](/windows/client-management/mdm/policy-csp-internetexplorer#internetexplorer-disableproxychange)
+[DisableProxyChange](/windows/client-management/mdm/policy-csp-internetexplorer#internetexplorer-disableproxychange)
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Lesen/Schreiben
@@ -788,10 +788,10 @@ Zugriffstyp: Lesen/Schreiben
 
 </dd> <dt>
 
-[Disablesearchproviderchange](/windows/client-management/mdm/policy-csp-internetexplorer#internetexplorer-disablesearchproviderchange)
+[DisableSearchProviderChange](/windows/client-management/mdm/policy-csp-internetexplorer#internetexplorer-disablesearchproviderchange)
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Lesen/Schreiben
@@ -799,10 +799,10 @@ Zugriffstyp: Lesen/Schreiben
 
 </dd> <dt>
 
-[Disablesecondaryhomepagechange](/windows/client-management/mdm/policy-csp-internetexplorer#internetexplorer-disablesecondaryhomepagechange)
+[DisableSecondaryHomePageChange](/windows/client-management/mdm/policy-csp-internetexplorer#internetexplorer-disablesecondaryhomepagechange)
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Lesen/Schreiben
@@ -810,10 +810,10 @@ Zugriffstyp: Lesen/Schreiben
 
 </dd> <dt>
 
-[Disablesecuritysettingscheck](/windows/client-management/mdm/policy-csp-internetexplorer#internetexplorer-disablesecuritysettingscheck)
+[DisableSecuritySettingsCheck](/windows/client-management/mdm/policy-csp-internetexplorer#internetexplorer-disablesecuritysettingscheck)
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Lesen/Schreiben
@@ -821,10 +821,10 @@ Zugriffstyp: Lesen/Schreiben
 
 </dd> <dt>
 
-[Disableupdatecheck](/windows/client-management/mdm/policy-csp-internetexplorer#internetexplorer-disableupdatecheck)
+[DisableUpdateCheck](/windows/client-management/mdm/policy-csp-internetexplorer#internetexplorer-disableupdatecheck)
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Lesen/Schreiben
@@ -832,10 +832,10 @@ Zugriffstyp: Lesen/Schreiben
 
 </dd> <dt>
 
-[Donotallowactivexcontrolsinprotectedmode](/windows/client-management/mdm/policy-csp-internetexplorer#internetexplorer-donotallowactivexcontrolsinprotectedmode)
+[DoNotAllowActiveXControlsInProtectedMode](/windows/client-management/mdm/policy-csp-internetexplorer#internetexplorer-donotallowactivexcontrolsinprotectedmode)
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Lesen/Schreiben
@@ -843,10 +843,10 @@ Zugriffstyp: Lesen/Schreiben
 
 </dd> <dt>
 
-[Donotallowuserstoaddsites](/windows/client-management/mdm/policy-csp-internetexplorer#internetexplorer-donotallowuserstoaddsites)
+[DoNotAllowUsersToAddSites](/windows/client-management/mdm/policy-csp-internetexplorer#internetexplorer-donotallowuserstoaddsites)
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Lesen/Schreiben
@@ -854,10 +854,10 @@ Zugriffstyp: Lesen/Schreiben
 
 </dd> <dt>
 
-[Donotallowuserstochangepolicies](/windows/client-management/mdm/policy-csp-internetexplorer#internetexplorer-donotallowuserstochangepolicies)
+[DoNotAllowUsersToChangePolicies](/windows/client-management/mdm/policy-csp-internetexplorer#internetexplorer-donotallowuserstochangepolicies)
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Lesen/Schreiben
@@ -865,10 +865,10 @@ Zugriffstyp: Lesen/Schreiben
 
 </dd> <dt>
 
-[Donotblockoutdatedactivexcontrols](/windows/client-management/mdm/policy-csp-internetexplorer#internetexplorer-donotblockoutdatedactivexcontrols)
+[DoNotBlockOutdatedActiveXControls](/windows/client-management/mdm/policy-csp-internetexplorer#internetexplorer-donotblockoutdatedactivexcontrols)
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Lesen/Schreiben
@@ -876,10 +876,10 @@ Zugriffstyp: Lesen/Schreiben
 
 </dd> <dt>
 
-[Donotblockoutdatedactivexcontrolsonspecificdomains](/windows/client-management/mdm/policy-csp-internetexplorer#internetexplorer-donotblockoutdatedactivexcontrolsonspecificdomains)
+[DoNotBlockOutdatedActiveXControlsOnSpecificDomains](/windows/client-management/mdm/policy-csp-internetexplorer#internetexplorer-donotblockoutdatedactivexcontrolsonspecificdomains)
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Lesen/Schreiben
@@ -887,10 +887,10 @@ Zugriffstyp: Lesen/Schreiben
 
 </dd> <dt>
 
-[Includezalllocalsites](/windows/client-management/mdm/policy-csp-internetexplorer#internetexplorer-includealllocalsites)
+[IncludeAllLocalSites](/windows/client-management/mdm/policy-csp-internetexplorer#internetexplorer-includealllocalsites)
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Lesen/Schreiben
@@ -898,10 +898,10 @@ Zugriffstyp: Lesen/Schreiben
 
 </dd> <dt>
 
-[Includepallnetworkpath](/windows/client-management/mdm/policy-csp-internetexplorer#internetexplorer-includeallnetworkpaths)
+[IncludeAllNetworkPaths](/windows/client-management/mdm/policy-csp-internetexplorer#internetexplorer-includeallnetworkpaths)
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Lesen/Schreiben
@@ -912,7 +912,7 @@ Zugriffstyp: Lesen/Schreiben
 **InstanceID**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
@@ -923,10 +923,10 @@ Qualifizierer: [ **Schlüssel**](/windows/desktop/WmiSdk/key-qualifier)
 
 </dd> <dt>
 
-[Internetzoneallowaccesstodatasources](/windows/client-management/mdm/policy-csp-internetexplorer#internetexplorer-internetzoneallowaccesstodatasources)
+[InternetZoneAllowAccessToDataSources](/windows/client-management/mdm/policy-csp-internetexplorer#internetexplorer-internetzoneallowaccesstodatasources)
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Lesen/Schreiben
@@ -934,10 +934,10 @@ Zugriffstyp: Lesen/Schreiben
 
 </dd> <dt>
 
-[Internetzoneallowautomaticpromptingforactivexcontrols](/windows/client-management/mdm/policy-csp-internetexplorer#internetexplorer-internetzoneallowautomaticpromptingforactivexcontrols)
+[InternetZoneAllowAutomaticPromptingForActiveXControls](/windows/client-management/mdm/policy-csp-internetexplorer#internetexplorer-internetzoneallowautomaticpromptingforactivexcontrols)
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Lesen/Schreiben
@@ -945,10 +945,10 @@ Zugriffstyp: Lesen/Schreiben
 
 </dd> <dt>
 
-[Internetzoneallowautomaticpromptingforfiledownloads](/windows/client-management/mdm/policy-csp-internetexplorer#internetexplorer-internetzoneallowautomaticpromptingforfiledownloads)
+[InternetZoneAllowAutomaticPromptingForFileDownloads](/windows/client-management/mdm/policy-csp-internetexplorer#internetexplorer-internetzoneallowautomaticpromptingforfiledownloads)
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Lesen/Schreiben
@@ -956,10 +956,10 @@ Zugriffstyp: Lesen/Schreiben
 
 </dd> <dt>
 
-[Internetzoneallowcopypasteviascript](/windows/client-management/mdm/policy-csp-internetexplorer#internetexplorer-internetzoneallowcopypasteviascript)
+[InternetZoneAllowCopyPasteViaScript](/windows/client-management/mdm/policy-csp-internetexplorer#internetexplorer-internetzoneallowcopypasteviascript)
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Lesen/Schreiben
@@ -967,10 +967,10 @@ Zugriffstyp: Lesen/Schreiben
 
 </dd> <dt>
 
-[Internetzoneallowdraganddropcopyandpastefiles](/windows/client-management/mdm/policy-csp-internetexplorer#internetexplorer-internetzoneallowdraganddropcopyandpastefiles)
+[InternetZoneAllowDragAndDropCopyAndPasteFiles](/windows/client-management/mdm/policy-csp-internetexplorer#internetexplorer-internetzoneallowdraganddropcopyandpastefiles)
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Lesen/Schreiben
@@ -978,7 +978,7 @@ Zugriffstyp: Lesen/Schreiben
 
 </dd> <dt>
 
-[Internetzoneallowfontdownloads](/windows/client-management/mdm/policy-csp-internetexplorer#internetexplorer-internetzoneallowfontdownloads)
+[InternetZoneAllowFontDownloads](/windows/client-management/mdm/policy-csp-internetexplorer#internetexplorer-internetzoneallowfontdownloads)
 </dt> <dd> <dl> <dt>
 
 Datentyp: **Zeichenfolge**
@@ -989,7 +989,7 @@ Zugriffstyp: Lesen/Schreiben
 
 </dd> <dt>
 
-[Internetzonezuweisung-ssprivilegedsites](/windows/client-management/mdm/policy-csp-internetexplorer#internetexplorer-internetzoneallowlessprivilegedsites)
+[InternetZoneAllowLessPrivilegedSites](/windows/client-management/mdm/policy-csp-internetexplorer#internetexplorer-internetzoneallowlessprivilegedsites)
 </dt> <dd> <dl> <dt>
 
 Datentyp: **Zeichenfolge**
@@ -1000,7 +1000,7 @@ Zugriffstyp: Lesen/Schreiben
 
 </dd> <dt>
 
-[Internetzoneallowloadingofxamlfiles](/windows/client-management/mdm/policy-csp-internetexplorer#internetexplorer-internetzoneallowloadingofxamlfiles)
+[InternetZoneAllowLoadingOfXAMLFiles](/windows/client-management/mdm/policy-csp-internetexplorer#internetexplorer-internetzoneallowloadingofxamlfiles)
 </dt> <dd> <dl> <dt>
 
 Datentyp: **Zeichenfolge**
@@ -1011,7 +1011,7 @@ Zugriffstyp: Lesen/Schreiben
 
 </dd> <dt>
 
-[Internetzoneallownetframeworkreliantcomponents](/windows/client-management/mdm/policy-csp-internetexplorer#internetexplorer-internetzoneallownetframeworkreliantcomponents)
+[InternetZoneAllowNETFrameworkReliantComponents](/windows/client-management/mdm/policy-csp-internetexplorer#internetexplorer-internetzoneallownetframeworkreliantcomponents)
 </dt> <dd> <dl> <dt>
 
 Datentyp: **Zeichenfolge**
@@ -1022,7 +1022,7 @@ Zugriffstyp: Lesen/Schreiben
 
 </dd> <dt>
 
-[Internetzonezuweiwonlyapproveddomainstoulactivexcontrols](/windows/client-management/mdm/policy-csp-internetexplorer#internetexplorer-internetzoneallowonlyapproveddomainstouseactivexcontrols)
+[InternetZoneAllowOnlyApprovedDomainsToUseActiveXControls](/windows/client-management/mdm/policy-csp-internetexplorer#internetexplorer-internetzoneallowonlyapproveddomainstouseactivexcontrols)
 </dt> <dd> <dl> <dt>
 
 Datentyp: **Zeichenfolge**
@@ -1033,7 +1033,7 @@ Zugriffstyp: Lesen/Schreiben
 
 </dd> <dt>
 
-[Internetzonezugewonlyapproveddomainstousetdcactivexcontrol](/windows/client-management/mdm/policy-csp-internetexplorer#internetexplorer-internetzoneallowonlyapproveddomainstousetdcactivexcontrol)
+[InternetZoneAllowOnlyApprovedDomainsToUseTDCActiveXControl](/windows/client-management/mdm/policy-csp-internetexplorer#internetexplorer-internetzoneallowonlyapproveddomainstousetdcactivexcontrol)
 </dt> <dd> <dl> <dt>
 
 Datentyp: **Zeichenfolge**
@@ -1044,7 +1044,7 @@ Zugriffstyp: Lesen/Schreiben
 
 </dd> <dt>
 
-[Internetzoneallowscriptingofinternetexplorerwebbrowsercontrols](/windows/client-management/mdm/policy-csp-internetexplorer#internetexplorer-internetzoneallowscriptingofinternetexplorerwebbrowsercontrols)
+[InternetZoneAllowScriptingOfInternetExplorerWebBrowserControls](/windows/client-management/mdm/policy-csp-internetexplorer#internetexplorer-internetzoneallowscriptingofinternetexplorerwebbrowsercontrols)
 </dt> <dd> <dl> <dt>
 
 Datentyp: **Zeichenfolge**
@@ -1055,7 +1055,7 @@ Zugriffstyp: Lesen/Schreiben
 
 </dd> <dt>
 
-[Internetzoneallowscriptinitiatedwindows](/windows/client-management/mdm/policy-csp-internetexplorer#internetexplorer-internetzoneallowscriptinitiatedwindows)
+[InternetZoneAllowScriptInitiatedWindows](/windows/client-management/mdm/policy-csp-internetexplorer#internetexplorer-internetzoneallowscriptinitiatedwindows)
 </dt> <dd> <dl> <dt>
 
 Datentyp: **Zeichenfolge**
@@ -1066,7 +1066,7 @@ Zugriffstyp: Lesen/Schreiben
 
 </dd> <dt>
 
-[Internetzoneallowscriptlets](/windows/client-management/mdm/policy-csp-internetexplorer#internetexplorer-internetzoneallowscriptlets)
+[InternetZoneAllowScriptlets](/windows/client-management/mdm/policy-csp-internetexplorer#internetexplorer-internetzoneallowscriptlets)
 </dt> <dd> <dl> <dt>
 
 Datentyp: **Zeichenfolge**
@@ -1077,7 +1077,7 @@ Zugriffstyp: Lesen/Schreiben
 
 </dd> <dt>
 
-[Internetzoneallowsmartscreenie](/windows/client-management/mdm/policy-csp-internetexplorer#internetexplorer-internetzoneallowsmartscreenie)
+[InternetZoneAllowSmartScreenIE](/windows/client-management/mdm/policy-csp-internetexplorer#internetexplorer-internetzoneallowsmartscreenie)
 </dt> <dd> <dl> <dt>
 
 Datentyp: **Zeichenfolge**
@@ -1088,7 +1088,7 @@ Zugriffstyp: Lesen/Schreiben
 
 </dd> <dt>
 
-[Internetzoneallowupdatestostatus barviascript](/windows/client-management/mdm/policy-csp-internetexplorer#internetexplorer-internetzoneallowupdatestostatusbarviascript)
+[InternetZoneAllowUpdatesToStatusBarViaScript](/windows/client-management/mdm/policy-csp-internetexplorer#internetexplorer-internetzoneallowupdatestostatusbarviascript)
 </dt> <dd> <dl> <dt>
 
 Datentyp: **Zeichenfolge**
@@ -1099,7 +1099,7 @@ Zugriffstyp: Lesen/Schreiben
 
 </dd> <dt>
 
-[Internetzonezugewiesene wuserdatapersistenz](/windows/client-management/mdm/policy-csp-internetexplorer#internetexplorer-internetzoneallowuserdatapersistence)
+[InternetZoneAllowUserDataPersistence](/windows/client-management/mdm/policy-csp-internetexplorer#internetexplorer-internetzoneallowuserdatapersistence)
 </dt> <dd> <dl> <dt>
 
 Datentyp: **Zeichenfolge**
@@ -1110,7 +1110,7 @@ Zugriffstyp: Lesen/Schreiben
 
 </dd> <dt>
 
-[Internetzonedonotrunantimalwareagainstactivexcontrols](/windows/client-management/mdm/policy-csp-internetexplorer#internetexplorer-internetzonedonotrunantimalwareagainstactivexcontrols)
+[InternetZoneDoNotRunAntimalwareSteuerungsstActiveXControls](/windows/client-management/mdm/policy-csp-internetexplorer#internetexplorer-internetzonedonotrunantimalwareagainstactivexcontrols)
 </dt> <dd> <dl> <dt>
 
 Datentyp: **Zeichenfolge**
@@ -1121,7 +1121,7 @@ Zugriffstyp: Lesen/Schreiben
 
 </dd> <dt>
 
-[Internetzonedownloadsignedactivexcontrols](/windows/client-management/mdm/policy-csp-internetexplorer#internetexplorer-internetzonedownloadsignedactivexcontrols)
+[InternetZoneDownloadSignedActiveXControls](/windows/client-management/mdm/policy-csp-internetexplorer#internetexplorer-internetzonedownloadsignedactivexcontrols)
 </dt> <dd> <dl> <dt>
 
 Datentyp: **Zeichenfolge**
@@ -1132,7 +1132,7 @@ Zugriffstyp: Lesen/Schreiben
 
 </dd> <dt>
 
-[Internetzonedownloadunsignedactivexcontrols](/windows/client-management/mdm/policy-csp-internetexplorer#internetexplorer-internetzonedownloadunsignedactivexcontrols)
+[InternetZoneDownloadUnsignedActiveXControls](/windows/client-management/mdm/policy-csp-internetexplorer#internetexplorer-internetzonedownloadunsignedactivexcontrols)
 </dt> <dd> <dl> <dt>
 
 Datentyp: **Zeichenfolge**
@@ -1143,7 +1143,7 @@ Zugriffstyp: Lesen/Schreiben
 
 </dd> <dt>
 
-[Internetzoneenablecrosssitescriptingfilter](/windows/client-management/mdm/policy-csp-internetexplorer#internetexplorer-internetzoneenablecrosssitescriptingfilter)
+[InternetZoneEnableCrossSiteScriptingFilter](/windows/client-management/mdm/policy-csp-internetexplorer#internetexplorer-internetzoneenablecrosssitescriptingfilter)
 </dt> <dd> <dl> <dt>
 
 Datentyp: **Zeichenfolge**
@@ -1154,7 +1154,7 @@ Zugriffstyp: Lesen/Schreiben
 
 </dd> <dt>
 
-[Internetzoneenabledraggingof contentfromdifferenentdomainsacrosswindows](/windows/client-management/mdm/policy-csp-internetexplorer#internetexplorer-internetzoneenabledraggingofcontentfromdifferentdomainsacrosswindows)
+[InternetZoneEnableDraggingOfContentFromDifferentDomainsAcrossWindows](/windows/client-management/mdm/policy-csp-internetexplorer#internetexplorer-internetzoneenabledraggingofcontentfromdifferentdomainsacrosswindows)
 </dt> <dd> <dl> <dt>
 
 Datentyp: **Zeichenfolge**
@@ -1165,7 +1165,7 @@ Zugriffstyp: Lesen/Schreiben
 
 </dd> <dt>
 
-[Internetzoneenabledraggingof contentfromdifferenentdomainswithinwindows](/windows/client-management/mdm/policy-csp-internetexplorer#internetexplorer-internetzoneenabledraggingofcontentfromdifferentdomainswithinwindows)
+[InternetZoneEnableDraggingOfContentFromDifferentDomainsWithinWindows](/windows/client-management/mdm/policy-csp-internetexplorer#internetexplorer-internetzoneenabledraggingofcontentfromdifferentdomainswithinwindows)
 </dt> <dd> <dl> <dt>
 
 Datentyp: **Zeichenfolge**
@@ -1176,7 +1176,7 @@ Zugriffstyp: Lesen/Schreiben
 
 </dd> <dt>
 
-[Internetzoneenablemimesniffing](/windows/client-management/mdm/policy-csp-internetexplorer#internetexplorer-internetzoneenablemimesniffing)
+[InternetZoneEnableMIMESniffing](/windows/client-management/mdm/policy-csp-internetexplorer#internetexplorer-internetzoneenablemimesniffing)
 </dt> <dd> <dl> <dt>
 
 Datentyp: **Zeichenfolge**
@@ -1187,7 +1187,7 @@ Zugriffstyp: Lesen/Schreiben
 
 </dd> <dt>
 
-[Internetzoneenableprotectedmode](/windows/client-management/mdm/policy-csp-internetexplorer#internetexplorer-internetzoneenableprotectedmode)
+[InternetZoneEnableProtectedMode](/windows/client-management/mdm/policy-csp-internetexplorer#internetexplorer-internetzoneenableprotectedmode)
 </dt> <dd> <dl> <dt>
 
 Datentyp: **Zeichenfolge**
@@ -1198,7 +1198,7 @@ Zugriffstyp: Lesen/Schreiben
 
 </dd> <dt>
 
-[Internetzoneincludelta Update Server-Datei](/windows/client-management/mdm/policy-csp-internetexplorer#internetexplorer-internetzoneincludelocalpathwhenuploadingfilestoserver)
+[InternetZoneIncludeLocalPathWhenUploadingFilesToServer](/windows/client-management/mdm/policy-csp-internetexplorer#internetexplorer-internetzoneincludelocalpathwhenuploadingfilestoserver)
 </dt> <dd> <dl> <dt>
 
 Datentyp: **Zeichenfolge**
@@ -1209,7 +1209,7 @@ Zugriffstyp: Lesen/Schreiben
 
 </dd> <dt>
 
-[Internetzoneinitializeandscriptactivexcontrols](/windows/client-management/mdm/policy-csp-internetexplorer#internetexplorer-internetzoneinitializeandscriptactivexcontrols)
+[InternetZoneInitializeAndScriptActiveXControls](/windows/client-management/mdm/policy-csp-internetexplorer#internetexplorer-internetzoneinitializeandscriptactivexcontrols)
 </dt> <dd> <dl> <dt>
 
 Datentyp: **Zeichenfolge**
@@ -1220,7 +1220,7 @@ Zugriffstyp: Lesen/Schreiben
 
 </dd> <dt>
 
-[Internetzonejavaberechtigungen](/windows/client-management/mdm/policy-csp-internetexplorer#internetexplorer-internetzonejavapermissions)
+[InternetZoneJavaPermissions](/windows/client-management/mdm/policy-csp-internetexplorer#internetexplorer-internetzonejavapermissions)
 </dt> <dd> <dl> <dt>
 
 Datentyp: **Zeichenfolge**
@@ -1231,7 +1231,7 @@ Zugriffstyp: Lesen/Schreiben
 
 </dd> <dt>
 
-[Internetzonelaunchingapplicationsandfilesiniframe](/windows/client-management/mdm/policy-csp-internetexplorer#internetexplorer-internetzonelaunchingapplicationsandfilesiniframe)
+[InternetZoneLaunchingApplicationsAndFilesInIFRAME](/windows/client-management/mdm/policy-csp-internetexplorer#internetexplorer-internetzonelaunchingapplicationsandfilesiniframe)
 </dt> <dd> <dl> <dt>
 
 Datentyp: **Zeichenfolge**
@@ -1242,7 +1242,7 @@ Zugriffstyp: Lesen/Schreiben
 
 </dd> <dt>
 
-[Internetzonelogonoptions](/windows/client-management/mdm/policy-csp-internetexplorer#internetexplorer-internetzonelogonoptions)
+[InternetZoneLogonOptions](/windows/client-management/mdm/policy-csp-internetexplorer#internetexplorer-internetzonelogonoptions)
 </dt> <dd> <dl> <dt>
 
 Datentyp: **Zeichenfolge**
@@ -1253,7 +1253,7 @@ Zugriffstyp: Lesen/Schreiben
 
 </dd> <dt>
 
-[Internetzoneinavigatewindowsandframes](/windows/client-management/mdm/policy-csp-internetexplorer#internetexplorer-internetzonenavigatewindowsandframes)
+[InternetZoneNavigateWindowsAndFrames](/windows/client-management/mdm/policy-csp-internetexplorer#internetexplorer-internetzonenavigatewindowsandframes)
 </dt> <dd> <dl> <dt>
 
 Datentyp: **Zeichenfolge**
@@ -1264,7 +1264,7 @@ Zugriffstyp: Lesen/Schreiben
 
 </dd> <dt>
 
-Internetzonerunnetframeworkreliantcomponentsnotsignedwithauthenticode
+InternetZoneRunNETFrameworkReliantComponentsNotSignedWithAuthenticode
 </dt> <dd> <dl> <dt>
 
 Datentyp: **Zeichenfolge**
@@ -1275,7 +1275,7 @@ Zugriffstyp: Lesen/Schreiben
 
 </dd> <dt>
 
-[Internetzonerunnetframeworkreliantcomponentssignedwithauthenticode](/windows/client-management/mdm/policy-csp-internetexplorer#internetexplorer-internetzonerunnetframeworkreliantcomponentssignedwithauthenticode)
+[InternetZoneRunNETFrameworkReliantComponentsSignedWithAuthenticode](/windows/client-management/mdm/policy-csp-internetexplorer#internetexplorer-internetzonerunnetframeworkreliantcomponentssignedwithauthenticode)
 </dt> <dd> <dl> <dt>
 
 Datentyp: **Zeichenfolge**
@@ -1286,7 +1286,7 @@ Zugriffstyp: Lesen/Schreiben
 
 </dd> <dt>
 
-[Internetzoneshowsecuritywarningforpotenallyunsafefiles](/windows/client-management/mdm/policy-csp-internetexplorer#internetexplorer-internetzoneshowsecuritywarningforpotentiallyunsafefiles)
+[InternetZoneShowSecurityWarningForShowlyUnsafeFiles](/windows/client-management/mdm/policy-csp-internetexplorer#internetexplorer-internetzoneshowsecuritywarningforpotentiallyunsafefiles)
 </dt> <dd> <dl> <dt>
 
 Datentyp: **Zeichenfolge**
@@ -1297,7 +1297,7 @@ Zugriffstyp: Lesen/Schreiben
 
 </dd> <dt>
 
-[Internetzoneuonpopupblocker](/windows/client-management/mdm/policy-csp-internetexplorer#internetexplorer-internetzoneusepopupblocker)
+[InternetZoneUsePopupBlocker](/windows/client-management/mdm/policy-csp-internetexplorer#internetexplorer-internetzoneusepopupblocker)
 </dt> <dd> <dl> <dt>
 
 Datentyp: **Zeichenfolge**
@@ -1308,7 +1308,7 @@ Zugriffstyp: Lesen/Schreiben
 
 </dd> <dt>
 
-Internetzonewebsitesinlessprivilegedzonescannavigateinonthiszone
+InternetZoneWebsitesInLessPrivilegedZonesCanNavigateIntoThisZone
 </dt> <dd> <dl> <dt>
 
 Datentyp: **Zeichenfolge**
@@ -1319,7 +1319,7 @@ Zugriffstyp: Lesen/Schreiben
 
 </dd> <dt>
 
-[Intranetzoneallowaccesstodatasources](/windows/client-management/mdm/policy-csp-internetexplorer#internetexplorer-intranetzoneallowaccesstodatasources)
+[IntranetZoneAllowAccessToDataSources](/windows/client-management/mdm/policy-csp-internetexplorer#internetexplorer-intranetzoneallowaccesstodatasources)
 </dt> <dd> <dl> <dt>
 
 Datentyp: **Zeichenfolge**
@@ -1330,7 +1330,7 @@ Zugriffstyp: Lesen/Schreiben
 
 </dd> <dt>
 
-[Intranetzoneallowautomaticpromptingforactivexcontrols](/windows/client-management/mdm/policy-csp-internetexplorer#internetexplorer-intranetzoneallowautomaticpromptingforactivexcontrols)
+[IntranetZoneAllowAutomaticPromptingForActiveXControls](/windows/client-management/mdm/policy-csp-internetexplorer#internetexplorer-intranetzoneallowautomaticpromptingforactivexcontrols)
 </dt> <dd> <dl> <dt>
 
 Datentyp: **Zeichenfolge**
@@ -1341,7 +1341,7 @@ Zugriffstyp: Lesen/Schreiben
 
 </dd> <dt>
 
-[Intranetzoneallowautomaticpromptingforfiledownloads](/windows/client-management/mdm/policy-csp-internetexplorer#internetexplorer-intranetzoneallowautomaticpromptingforfiledownloads)
+[IntranetZoneAllowAutomaticPromptingForFileDownloads](/windows/client-management/mdm/policy-csp-internetexplorer#internetexplorer-intranetzoneallowautomaticpromptingforfiledownloads)
 </dt> <dd> <dl> <dt>
 
 Datentyp: **Zeichenfolge**
@@ -1352,10 +1352,10 @@ Zugriffstyp: Lesen/Schreiben
 
 </dd> <dt>
 
-[Intranetzoneallowfontdownloads](/windows/client-management/mdm/policy-csp-internetexplorer#internetexplorer-intranetzoneallowfontdownloads)
+[IntranetZoneAllowFontDownloads](/windows/client-management/mdm/policy-csp-internetexplorer#internetexplorer-intranetzoneallowfontdownloads)
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Lesen/Schreiben
@@ -1363,10 +1363,10 @@ Zugriffstyp: Lesen/Schreiben
 
 </dd> <dt>
 
-[Intranetzonezuweisung-ssprivilegedsites](/windows/client-management/mdm/policy-csp-internetexplorer#internetexplorer-intranetzoneallowlessprivilegedsites)
+[IntranetZoneAllowLessPrivilegedSites](/windows/client-management/mdm/policy-csp-internetexplorer#internetexplorer-intranetzoneallowlessprivilegedsites)
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Lesen/Schreiben
@@ -1374,10 +1374,10 @@ Zugriffstyp: Lesen/Schreiben
 
 </dd> <dt>
 
-[Intranetzoneallownetframeworkreliantcomponents](/windows/client-management/mdm/policy-csp-internetexplorer#internetexplorer-intranetzoneallownetframeworkreliantcomponents)
+[IntranetZoneAllowNETFrameworkRelantComponents](/windows/client-management/mdm/policy-csp-internetexplorer#internetexplorer-intranetzoneallownetframeworkreliantcomponents)
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Lesen/Schreiben
@@ -1385,10 +1385,10 @@ Zugriffstyp: Lesen/Schreiben
 
 </dd> <dt>
 
-[Intranetzoneallowscriptlets](/windows/client-management/mdm/policy-csp-internetexplorer#internetexplorer-intranetzoneallowscriptlets)
+[IntranetZoneAllowScriptlets](/windows/client-management/mdm/policy-csp-internetexplorer#internetexplorer-intranetzoneallowscriptlets)
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Lesen/Schreiben
@@ -1396,10 +1396,10 @@ Zugriffstyp: Lesen/Schreiben
 
 </dd> <dt>
 
-[Intranetzoneallowsmartscreenie](/windows/client-management/mdm/policy-csp-internetexplorer#internetexplorer-intranetzoneallowsmartscreenie)
+[IntranetZoneAllowSmartScreenIE](/windows/client-management/mdm/policy-csp-internetexplorer#internetexplorer-intranetzoneallowsmartscreenie)
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Lesen/Schreiben
@@ -1407,10 +1407,10 @@ Zugriffstyp: Lesen/Schreiben
 
 </dd> <dt>
 
-[Intranetzonezugewiesene wuserdatapersistenz](/windows/client-management/mdm/policy-csp-internetexplorer#internetexplorer-intranetzoneallowuserdatapersistence)
+[IntranetZoneAllowUserDataPersistence](/windows/client-management/mdm/policy-csp-internetexplorer#internetexplorer-intranetzoneallowuserdatapersistence)
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Lesen/Schreiben
@@ -1418,10 +1418,10 @@ Zugriffstyp: Lesen/Schreiben
 
 </dd> <dt>
 
-[Intranetzonedonotrunantimalwareagainstactivexcontrols](/windows/client-management/mdm/policy-csp-internetexplorer#internetexplorer-intranetzonedonotrunantimalwareagainstactivexcontrols)
+[IntranetZoneDoNotRunAntimalwareOnlineinstActiveXControls](/windows/client-management/mdm/policy-csp-internetexplorer#internetexplorer-intranetzonedonotrunantimalwareagainstactivexcontrols)
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Lesen/Schreiben
@@ -1429,10 +1429,10 @@ Zugriffstyp: Lesen/Schreiben
 
 </dd> <dt>
 
-[Intranetzoneinitializeandscriptactivexcontrols](/windows/client-management/mdm/policy-csp-internetexplorer#internetexplorer-intranetzoneinitializeandscriptactivexcontrols)
+[IntranetZoneInitializeAndScriptActiveXControls](/windows/client-management/mdm/policy-csp-internetexplorer#internetexplorer-intranetzoneinitializeandscriptactivexcontrols)
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Lesen/Schreiben
@@ -1440,10 +1440,10 @@ Zugriffstyp: Lesen/Schreiben
 
 </dd> <dt>
 
-Intranetzoneinitializeandscriptactivexcontrolsnotmarkedsafe
+IntranetZoneInitializeAndScriptActiveXControlsNotMarkedSafe
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Lesen/Schreiben
@@ -1451,10 +1451,10 @@ Zugriffstyp: Lesen/Schreiben
 
 </dd> <dt>
 
-[Intranetzonejava-Berechtigungen](/windows/client-management/mdm/policy-csp-internetexplorer#internetexplorer-intranetzonejavapermissions)
+[IntranetZoneJavaPermissions](/windows/client-management/mdm/policy-csp-internetexplorer#internetexplorer-intranetzonejavapermissions)
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Lesen/Schreiben
@@ -1462,10 +1462,10 @@ Zugriffstyp: Lesen/Schreiben
 
 </dd> <dt>
 
-[Intranetzoneinavigatewindowsandframes](/windows/client-management/mdm/policy-csp-internetexplorer#internetexplorer-intranetzonenavigatewindowsandframes)
+[IntranetZoneNavigateWindowsAndFrames](/windows/client-management/mdm/policy-csp-internetexplorer#internetexplorer-intranetzonenavigatewindowsandframes)
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Lesen/Schreiben
@@ -1473,10 +1473,10 @@ Zugriffstyp: Lesen/Schreiben
 
 </dd> <dt>
 
-[Localmachinezoneallowaccesstodatasources](/windows/client-management/mdm/policy-csp-internetexplorer#internetexplorer-localmachinezoneallowaccesstodatasources)
+[LocalMachineZoneAllowAccessToDataSources](/windows/client-management/mdm/policy-csp-internetexplorer#internetexplorer-localmachinezoneallowaccesstodatasources)
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Lesen/Schreiben
@@ -1484,10 +1484,10 @@ Zugriffstyp: Lesen/Schreiben
 
 </dd> <dt>
 
-[Localmachinezoneallowautomaticpromptingforactivexcontrols](/windows/client-management/mdm/policy-csp-internetexplorer#internetexplorer-localmachinezoneallowautomaticpromptingforactivexcontrols)
+[LocalMachineZoneAllowAutomaticPromptingForActiveXControls](/windows/client-management/mdm/policy-csp-internetexplorer#internetexplorer-localmachinezoneallowautomaticpromptingforactivexcontrols)
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Lesen/Schreiben
@@ -1495,10 +1495,10 @@ Zugriffstyp: Lesen/Schreiben
 
 </dd> <dt>
 
-[Localmachinezoneallowautomaticpromptingforfiledownloads](/windows/client-management/mdm/policy-csp-internetexplorer#internetexplorer-localmachinezoneallowautomaticpromptingforfiledownloads)
+[LocalMachineZoneAllowAutomaticPromptingForFileDownloads](/windows/client-management/mdm/policy-csp-internetexplorer#internetexplorer-localmachinezoneallowautomaticpromptingforfiledownloads)
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Lesen/Schreiben
@@ -1506,10 +1506,10 @@ Zugriffstyp: Lesen/Schreiben
 
 </dd> <dt>
 
-[Localmachinezoneallowfontdownloads](/windows/client-management/mdm/policy-csp-internetexplorer#internetexplorer-localmachinezoneallowfontdownloads)
+[LocalMachineZoneAllowFontDownloads](/windows/client-management/mdm/policy-csp-internetexplorer#internetexplorer-localmachinezoneallowfontdownloads)
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Lesen/Schreiben
@@ -1517,10 +1517,10 @@ Zugriffstyp: Lesen/Schreiben
 
 </dd> <dt>
 
-[Localmachinezonezuweisung-ssprivilegedsites](/windows/client-management/mdm/policy-csp-internetexplorer#internetexplorer-localmachinezoneallowlessprivilegedsites)
+[LocalMachineZoneAllowLessPrivilegedSites](/windows/client-management/mdm/policy-csp-internetexplorer#internetexplorer-localmachinezoneallowlessprivilegedsites)
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Lesen/Schreiben
@@ -1528,10 +1528,10 @@ Zugriffstyp: Lesen/Schreiben
 
 </dd> <dt>
 
-[Localmachinezoneallownetframeworkreliantcomponents](/windows/client-management/mdm/policy-csp-internetexplorer#internetexplorer-localmachinezoneallownetframeworkreliantcomponents)
+[LocalMachineZoneAllowNETFrameworkRelantComponents](/windows/client-management/mdm/policy-csp-internetexplorer#internetexplorer-localmachinezoneallownetframeworkreliantcomponents)
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Lesen/Schreiben
@@ -1539,10 +1539,10 @@ Zugriffstyp: Lesen/Schreiben
 
 </dd> <dt>
 
-[Localmachinezoneallowscriptlets](/windows/client-management/mdm/policy-csp-internetexplorer#internetexplorer-localmachinezoneallowscriptlets)
+[LocalMachineZoneAllowScriptlets](/windows/client-management/mdm/policy-csp-internetexplorer#internetexplorer-localmachinezoneallowscriptlets)
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Lesen/Schreiben
@@ -1550,10 +1550,10 @@ Zugriffstyp: Lesen/Schreiben
 
 </dd> <dt>
 
-[Localmachinezoneallowsmartscreenie](/windows/client-management/mdm/policy-csp-internetexplorer#internetexplorer-localmachinezoneallowsmartscreenie)
+[LocalMachineZoneAllowSmartScreenIE](/windows/client-management/mdm/policy-csp-internetexplorer#internetexplorer-localmachinezoneallowsmartscreenie)
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Lesen/Schreiben
@@ -1561,10 +1561,10 @@ Zugriffstyp: Lesen/Schreiben
 
 </dd> <dt>
 
-[Localmachinezonezugewiesene wuserdatapersistenz](/windows/client-management/mdm/policy-csp-internetexplorer#internetexplorer-localmachinezoneallowuserdatapersistence)
+[LocalMachineZoneAllowUserDataPersistence](/windows/client-management/mdm/policy-csp-internetexplorer#internetexplorer-localmachinezoneallowuserdatapersistence)
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Lesen/Schreiben
@@ -1572,10 +1572,10 @@ Zugriffstyp: Lesen/Schreiben
 
 </dd> <dt>
 
-[Localmachinezonedonotrunantimalwareagainstactivexcontrols](/windows/client-management/mdm/policy-csp-internetexplorer#internetexplorer-localmachinezonedonotrunantimalwareagainstactivexcontrols)
+[LocalMachineZoneDoNotRunAntimalwareOnlineinstActiveXControls](/windows/client-management/mdm/policy-csp-internetexplorer#internetexplorer-localmachinezonedonotrunantimalwareagainstactivexcontrols)
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Lesen/Schreiben
@@ -1583,10 +1583,10 @@ Zugriffstyp: Lesen/Schreiben
 
 </dd> <dt>
 
-[Localmachinezoneinitializeandscriptactivexcontrols](/windows/client-management/mdm/policy-csp-internetexplorer#internetexplorer-localmachinezoneinitializeandscriptactivexcontrols)
+[LocalMachineZoneInitializeAndScriptActiveXControls](/windows/client-management/mdm/policy-csp-internetexplorer#internetexplorer-localmachinezoneinitializeandscriptactivexcontrols)
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Lesen/Schreiben
@@ -1594,10 +1594,10 @@ Zugriffstyp: Lesen/Schreiben
 
 </dd> <dt>
 
-[Localmachinezonejava-Berechtigungen](/windows/client-management/mdm/policy-csp-internetexplorer#internetexplorer-localmachinezonejavapermissions)
+[LocalMachineZoneJavaPermissions](/windows/client-management/mdm/policy-csp-internetexplorer#internetexplorer-localmachinezonejavapermissions)
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Lesen/Schreiben
@@ -1605,10 +1605,10 @@ Zugriffstyp: Lesen/Schreiben
 
 </dd> <dt>
 
-[Localmachinezonesavigatewindowsandframes](/windows/client-management/mdm/policy-csp-internetexplorer#internetexplorer-localmachinezonenavigatewindowsandframes)
+[LocalMachineZoneNavigateWindowsAndFrames](/windows/client-management/mdm/policy-csp-internetexplorer#internetexplorer-localmachinezonenavigatewindowsandframes)
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Lesen/Schreiben
@@ -1616,10 +1616,10 @@ Zugriffstyp: Lesen/Schreiben
 
 </dd> <dt>
 
-[Lockeddowninternetzoneallowaccesstodatasources](/windows/client-management/mdm/policy-csp-internetexplorer#internetexplorer-lockeddowninternetzoneallowaccesstodatasources)
+[LockedDownInternetZoneAllowAccessToDataSources](/windows/client-management/mdm/policy-csp-internetexplorer#internetexplorer-lockeddowninternetzoneallowaccesstodatasources)
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Lesen/Schreiben
@@ -1627,10 +1627,10 @@ Zugriffstyp: Lesen/Schreiben
 
 </dd> <dt>
 
-[Lockeddowninternetzoneallowautomaticpromptingforactivexcontrols](/windows/client-management/mdm/policy-csp-internetexplorer#internetexplorer-lockeddowninternetzoneallowautomaticpromptingforactivexcontrols)
+[LockedDownInternetZoneAllowAutomaticPromptingForActiveXControls](/windows/client-management/mdm/policy-csp-internetexplorer#internetexplorer-lockeddowninternetzoneallowautomaticpromptingforactivexcontrols)
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Lesen/Schreiben
@@ -1638,10 +1638,10 @@ Zugriffstyp: Lesen/Schreiben
 
 </dd> <dt>
 
-[Lockeddowninternetzoneallowautomaticpromptingforfiledownloads](/windows/client-management/mdm/policy-csp-internetexplorer#internetexplorer-lockeddowninternetzoneallowautomaticpromptingforfiledownloads)
+[LockedDownInternetZoneAllowAutomaticPromptingForFileDownloads](/windows/client-management/mdm/policy-csp-internetexplorer#internetexplorer-lockeddowninternetzoneallowautomaticpromptingforfiledownloads)
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Lesen/Schreiben
@@ -1649,10 +1649,10 @@ Zugriffstyp: Lesen/Schreiben
 
 </dd> <dt>
 
-[Lockeddowninternetzoneallowfontdownloads](/windows/client-management/mdm/policy-csp-internetexplorer#internetexplorer-lockeddowninternetzoneallowfontdownloads)
+[LockedDownInternetZoneAllowFontDownloads](/windows/client-management/mdm/policy-csp-internetexplorer#internetexplorer-lockeddowninternetzoneallowfontdownloads)
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Lesen/Schreiben
@@ -1660,10 +1660,10 @@ Zugriffstyp: Lesen/Schreiben
 
 </dd> <dt>
 
-[Lockeddowninternetzonezuzuweisung](/windows/client-management/mdm/policy-csp-internetexplorer#internetexplorer-lockeddowninternetzoneallowlessprivilegedsites)
+[LockedDownInternetZoneAllowLessPrivilegedSites](/windows/client-management/mdm/policy-csp-internetexplorer#internetexplorer-lockeddowninternetzoneallowlessprivilegedsites)
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Lesen/Schreiben
@@ -1671,10 +1671,10 @@ Zugriffstyp: Lesen/Schreiben
 
 </dd> <dt>
 
-[Lockeddowninternetzoneallownetframeworkreliantcomponents](/windows/client-management/mdm/policy-csp-internetexplorer#internetexplorer-lockeddowninternetzoneallownetframeworkreliantcomponents)
+[LockedDownInternetZoneAllowNETFrameworkRelantComponents](/windows/client-management/mdm/policy-csp-internetexplorer#internetexplorer-lockeddowninternetzoneallownetframeworkreliantcomponents)
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Lesen/Schreiben
@@ -1682,10 +1682,10 @@ Zugriffstyp: Lesen/Schreiben
 
 </dd> <dt>
 
-[Lockeddowninternetzoneallowscriptlets](/windows/client-management/mdm/policy-csp-internetexplorer#internetexplorer-lockeddowninternetzoneallowscriptlets)
+[LockedDownInternetZoneAllowScriptlets](/windows/client-management/mdm/policy-csp-internetexplorer#internetexplorer-lockeddowninternetzoneallowscriptlets)
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Lesen/Schreiben
@@ -1693,10 +1693,10 @@ Zugriffstyp: Lesen/Schreiben
 
 </dd> <dt>
 
-[Lockeddowninternetzoneallowsmartscreenie](/windows/client-management/mdm/policy-csp-internetexplorer#internetexplorer-lockeddowninternetzoneallowsmartscreenie)
+[LockedDownInternetZoneAllowSmartScreenIE](/windows/client-management/mdm/policy-csp-internetexplorer#internetexplorer-lockeddowninternetzoneallowsmartscreenie)
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Lesen/Schreiben
@@ -1704,10 +1704,10 @@ Zugriffstyp: Lesen/Schreiben
 
 </dd> <dt>
 
-[Lockeddowninternetzonezuzuserdatapersistenz](/windows/client-management/mdm/policy-csp-internetexplorer#internetexplorer-lockeddowninternetzoneallowuserdatapersistence)
+[LockedDownInternetZoneAllowUserDataPersistence](/windows/client-management/mdm/policy-csp-internetexplorer#internetexplorer-lockeddowninternetzoneallowuserdatapersistence)
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Lesen/Schreiben
@@ -1715,7 +1715,7 @@ Zugriffstyp: Lesen/Schreiben
 
 </dd> <dt>
 
-[Lockeddowninternetzoneinitializeandscriptactivexcontrols](/windows/client-management/mdm/policy-csp-internetexplorer#internetexplorer-lockeddowninternetzoneinitializeandscriptactivexcontrols)
+[LockedDownInternetZoneInitializeAndScriptActiveXControls](/windows/client-management/mdm/policy-csp-internetexplorer#internetexplorer-lockeddowninternetzoneinitializeandscriptactivexcontrols)
 </dt> <dd> <dl> <dt>
 
 Datentyp: **Zeichenfolge**
@@ -1726,7 +1726,7 @@ Zugriffstyp: Lesen/Schreiben
 
 </dd> <dt>
 
-[Lockeddowninternetzonejava-Berechtigungen](/windows/client-management/mdm/policy-csp-internetexplorer#internetexplorer-lockeddowninternetzonejavapermissions)
+[LockedDownInternetZoneJavaPermissions](/windows/client-management/mdm/policy-csp-internetexplorer#internetexplorer-lockeddowninternetzonejavapermissions)
 </dt> <dd> <dl> <dt>
 
 Datentyp: **Zeichenfolge**
@@ -1737,7 +1737,7 @@ Zugriffstyp: Lesen/Schreiben
 
 </dd> <dt>
 
-[Lockeddowninternetzonendavigatewindowsandframes](/windows/client-management/mdm/policy-csp-internetexplorer#internetexplorer-lockeddowninternetzonenavigatewindowsandframes)
+[LockedDownInternetZoneNavigateWindowsAndFrames](/windows/client-management/mdm/policy-csp-internetexplorer#internetexplorer-lockeddowninternetzonenavigatewindowsandframes)
 </dt> <dd> <dl> <dt>
 
 Datentyp: **Zeichenfolge**
@@ -1748,7 +1748,7 @@ Zugriffstyp: Lesen/Schreiben
 
 </dd> <dt>
 
-[Lockeddownintranetzoneallowaccesstodatasources](/windows/client-management/mdm/policy-csp-internetexplorer#internetexplorer-lockeddownintranetzoneallowaccesstodatasources)
+[LockedDownIntranetZoneAllowAccessToDataSources](/windows/client-management/mdm/policy-csp-internetexplorer#internetexplorer-lockeddownintranetzoneallowaccesstodatasources)
 </dt> <dd> <dl> <dt>
 
 Datentyp: **Zeichenfolge**
@@ -1759,7 +1759,7 @@ Zugriffstyp: Lesen/Schreiben
 
 </dd> <dt>
 
-[Lockeddownintranetzoneallowautomaticpromptingforactivexcontrols](/windows/client-management/mdm/policy-csp-internetexplorer#internetexplorer-lockeddownintranetzoneallowautomaticpromptingforactivexcontrols)
+[LockedDownIntranetZoneAllowAutomaticPromptingForActiveXControls](/windows/client-management/mdm/policy-csp-internetexplorer#internetexplorer-lockeddownintranetzoneallowautomaticpromptingforactivexcontrols)
 </dt> <dd> <dl> <dt>
 
 Datentyp: **Zeichenfolge**
@@ -1770,7 +1770,7 @@ Zugriffstyp: Lesen/Schreiben
 
 </dd> <dt>
 
-[Lockeddownintranetzoneallowautomaticpromptingforfiledownloads](/windows/client-management/mdm/policy-csp-internetexplorer#internetexplorer-lockeddownintranetzoneallowautomaticpromptingforfiledownloads)
+[LockedDownIntranetZoneAllowAutomaticPromptingForFileDownloads](/windows/client-management/mdm/policy-csp-internetexplorer#internetexplorer-lockeddownintranetzoneallowautomaticpromptingforfiledownloads)
 </dt> <dd> <dl> <dt>
 
 Datentyp: **Zeichenfolge**
@@ -1781,7 +1781,7 @@ Zugriffstyp: Lesen/Schreiben
 
 </dd> <dt>
 
-[Lockeddownintranetzoneallowfontdownloads](/windows/client-management/mdm/policy-csp-internetexplorer#internetexplorer-lockeddownintranetzoneallowfontdownloads)
+[LockedDownIntranetZoneAllowFontDownloads](/windows/client-management/mdm/policy-csp-internetexplorer#internetexplorer-lockeddownintranetzoneallowfontdownloads)
 </dt> <dd> <dl> <dt>
 
 Datentyp: **Zeichenfolge**
@@ -1792,7 +1792,7 @@ Zugriffstyp: Lesen/Schreiben
 
 </dd> <dt>
 
-[Lockeddownintranetzonezuden ssprivilegedsites](/windows/client-management/mdm/policy-csp-internetexplorer#internetexplorer-lockeddownintranetzoneallowlessprivilegedsites)
+[LockedDownIntranetZoneAllowLessPrivilegedSites](/windows/client-management/mdm/policy-csp-internetexplorer#internetexplorer-lockeddownintranetzoneallowlessprivilegedsites)
 </dt> <dd> <dl> <dt>
 
 Datentyp: **Zeichenfolge**
@@ -1803,7 +1803,7 @@ Zugriffstyp: Lesen/Schreiben
 
 </dd> <dt>
 
-[Lockeddownintranetzoneallownetframeworkreliantcomponents](/windows/client-management/mdm/policy-csp-internetexplorer#internetexplorer-lockeddownintranetzoneallownetframeworkreliantcomponents)
+[LockedDownIntranetZoneAllowNETFrameworkReliantComponents](/windows/client-management/mdm/policy-csp-internetexplorer#internetexplorer-lockeddownintranetzoneallownetframeworkreliantcomponents)
 </dt> <dd> <dl> <dt>
 
 Datentyp: **Zeichenfolge**
@@ -1814,7 +1814,7 @@ Zugriffstyp: Lesen/Schreiben
 
 </dd> <dt>
 
-[Lockeddownintranetzoneallowscriptlets](/windows/client-management/mdm/policy-csp-internetexplorer#internetexplorer-lockeddownintranetzoneallowscriptlets)
+[LockedDownIntranetZoneAllowScriptlets](/windows/client-management/mdm/policy-csp-internetexplorer#internetexplorer-lockeddownintranetzoneallowscriptlets)
 </dt> <dd> <dl> <dt>
 
 Datentyp: **Zeichenfolge**
@@ -1825,7 +1825,7 @@ Zugriffstyp: Lesen/Schreiben
 
 </dd> <dt>
 
-[Lockeddownintranetzoneallowsmartscreenie](/windows/client-management/mdm/policy-csp-internetexplorer#internetexplorer-lockeddownintranetzoneallowsmartscreenie)
+[LockedDownIntranetZoneAllowSmartScreenIE](/windows/client-management/mdm/policy-csp-internetexplorer#internetexplorer-lockeddownintranetzoneallowsmartscreenie)
 </dt> <dd> <dl> <dt>
 
 Datentyp: **Zeichenfolge**
@@ -1836,7 +1836,7 @@ Zugriffstyp: Lesen/Schreiben
 
 </dd> <dt>
 
-[Lockeddownintranetzonezuzuserdatapersistenz](/windows/client-management/mdm/policy-csp-internetexplorer#internetexplorer-lockeddownintranetzoneallowuserdatapersistence)
+[LockedDownIntranetZoneAllowUserDataPersistence](/windows/client-management/mdm/policy-csp-internetexplorer#internetexplorer-lockeddownintranetzoneallowuserdatapersistence)
 </dt> <dd> <dl> <dt>
 
 Datentyp: **Zeichenfolge**
@@ -1847,7 +1847,7 @@ Zugriffstyp: Lesen/Schreiben
 
 </dd> <dt>
 
-[Lockeddownintranetzoneinitializeandscriptactivexcontrols](/windows/client-management/mdm/policy-csp-internetexplorer#internetexplorer-lockeddownintranetzoneinitializeandscriptactivexcontrols)
+[LockedDownIntranetZoneInitializeAndScriptActiveXControls](/windows/client-management/mdm/policy-csp-internetexplorer#internetexplorer-lockeddownintranetzoneinitializeandscriptactivexcontrols)
 </dt> <dd> <dl> <dt>
 
 Datentyp: **Zeichenfolge**
@@ -1858,7 +1858,7 @@ Zugriffstyp: Lesen/Schreiben
 
 </dd> <dt>
 
-[Lockeddownintranetzoneinavigatewindowsandframes](/windows/client-management/mdm/policy-csp-internetexplorer#internetexplorer-lockeddownintranetzonenavigatewindowsandframes)
+[LockedDownIntranetZoneNavigateWindowsAndFrames](/windows/client-management/mdm/policy-csp-internetexplorer#internetexplorer-lockeddownintranetzonenavigatewindowsandframes)
 </dt> <dd> <dl> <dt>
 
 Datentyp: **Zeichenfolge**
@@ -1869,7 +1869,7 @@ Zugriffstyp: Lesen/Schreiben
 
 </dd> <dt>
 
-[Lockeddownloader calmachinezoneallowaccesstodatasources](/windows/client-management/mdm/policy-csp-internetexplorer#internetexplorer-lockeddownlocalmachinezoneallowaccesstodatasources)
+[LockedDownLocalMachineZoneAllowAccessToDataSources](/windows/client-management/mdm/policy-csp-internetexplorer#internetexplorer-lockeddownlocalmachinezoneallowaccesstodatasources)
 </dt> <dd> <dl> <dt>
 
 Datentyp: **Zeichenfolge**
@@ -1880,7 +1880,7 @@ Zugriffstyp: Lesen/Schreiben
 
 </dd> <dt>
 
-[Lockeddownloader calmachinezoneallowautomaticpromptingforactivexcontrols](/windows/client-management/mdm/policy-csp-internetexplorer#internetexplorer-lockeddownlocalmachinezoneallowautomaticpromptingforactivexcontrols)
+[LockedDownLocalMachineZoneAllowAutomaticPromptingForActiveXControls](/windows/client-management/mdm/policy-csp-internetexplorer#internetexplorer-lockeddownlocalmachinezoneallowautomaticpromptingforactivexcontrols)
 </dt> <dd> <dl> <dt>
 
 Datentyp: **Zeichenfolge**
@@ -1891,7 +1891,7 @@ Zugriffstyp: Lesen/Schreiben
 
 </dd> <dt>
 
-[Lockeddownloader calmachinezoneallowautomaticpromptingforfiledownloads](/windows/client-management/mdm/policy-csp-internetexplorer#internetexplorer-lockeddownlocalmachinezoneallowautomaticpromptingforfiledownloads)
+[LockedDownLocalMachineZoneAllowAutomaticPromptingForFileDownloads](/windows/client-management/mdm/policy-csp-internetexplorer#internetexplorer-lockeddownlocalmachinezoneallowautomaticpromptingforfiledownloads)
 </dt> <dd> <dl> <dt>
 
 Datentyp: **Zeichenfolge**
@@ -1902,7 +1902,7 @@ Zugriffstyp: Lesen/Schreiben
 
 </dd> <dt>
 
-[Lockeddownloader calmachinezoneallowfontdownloads](/windows/client-management/mdm/policy-csp-internetexplorer#internetexplorer-lockeddownlocalmachinezoneallowfontdownloads)
+[LockedDownLocalMachineZoneAllowFontDownloads](/windows/client-management/mdm/policy-csp-internetexplorer#internetexplorer-lockeddownlocalmachinezoneallowfontdownloads)
 </dt> <dd> <dl> <dt>
 
 Datentyp: **Zeichenfolge**
@@ -1913,7 +1913,7 @@ Zugriffstyp: Lesen/Schreiben
 
 </dd> <dt>
 
-[Lockeddownloader calmachinezonezuzugessprivilegedsites](/windows/client-management/mdm/policy-csp-internetexplorer#internetexplorer-lockeddownlocalmachinezoneallowlessprivilegedsites)
+[LockedDownLocalMachineZoneAllowLessPrivilegedSites](/windows/client-management/mdm/policy-csp-internetexplorer#internetexplorer-lockeddownlocalmachinezoneallowlessprivilegedsites)
 </dt> <dd> <dl> <dt>
 
 Datentyp: **Zeichenfolge**
@@ -1924,7 +1924,7 @@ Zugriffstyp: Lesen/Schreiben
 
 </dd> <dt>
 
-[Lockeddownloader calmachinezoneallownetframeworkreliantcomponents](/windows/client-management/mdm/policy-csp-internetexplorer#internetexplorer-lockeddownlocalmachinezoneallownetframeworkreliantcomponents)
+[LockedDownLocalMachineZoneAllowNETFrameworkReliantComponents](/windows/client-management/mdm/policy-csp-internetexplorer#internetexplorer-lockeddownlocalmachinezoneallownetframeworkreliantcomponents)
 </dt> <dd> <dl> <dt>
 
 Datentyp: **Zeichenfolge**
@@ -1935,7 +1935,7 @@ Zugriffstyp: Lesen/Schreiben
 
 </dd> <dt>
 
-[Lockeddownloader calmachinezoneallowscriptlets](/windows/client-management/mdm/policy-csp-internetexplorer#internetexplorer-lockeddownlocalmachinezoneallowscriptlets)
+[LockedDownLocalMachineZoneAllowScriptlets](/windows/client-management/mdm/policy-csp-internetexplorer#internetexplorer-lockeddownlocalmachinezoneallowscriptlets)
 </dt> <dd> <dl> <dt>
 
 Datentyp: **Zeichenfolge**
@@ -1946,7 +1946,7 @@ Zugriffstyp: Lesen/Schreiben
 
 </dd> <dt>
 
-[Lockeddownloader calmachinezoneallowsmartscreenie](/windows/client-management/mdm/policy-csp-internetexplorer#internetexplorer-lockeddownlocalmachinezoneallowsmartscreenie)
+[LockedDownLocalMachineZoneAllowSmartScreenIE](/windows/client-management/mdm/policy-csp-internetexplorer#internetexplorer-lockeddownlocalmachinezoneallowsmartscreenie)
 </dt> <dd> <dl> <dt>
 
 Datentyp: **Zeichenfolge**
@@ -1957,7 +1957,7 @@ Zugriffstyp: Lesen/Schreiben
 
 </dd> <dt>
 
-[Lockeddownloader calmachinezonezuzugegenserdatapersistenz](/windows/client-management/mdm/policy-csp-internetexplorer#internetexplorer-lockeddownlocalmachinezoneallowuserdatapersistence)
+[LockedDownLocalMachineZoneAllowUserDataPersistence](/windows/client-management/mdm/policy-csp-internetexplorer#internetexplorer-lockeddownlocalmachinezoneallowuserdatapersistence)
 </dt> <dd> <dl> <dt>
 
 Datentyp: **Zeichenfolge**
@@ -1968,7 +1968,7 @@ Zugriffstyp: Lesen/Schreiben
 
 </dd> <dt>
 
-[Lockeddownloader calmachinezoneinitializeandscriptactivexcontrols](/windows/client-management/mdm/policy-csp-internetexplorer#internetexplorer-lockeddownlocalmachinezoneinitializeandscriptactivexcontrols)
+[LockedDownLocalMachineZoneInitializeAndScriptActiveXControls](/windows/client-management/mdm/policy-csp-internetexplorer#internetexplorer-lockeddownlocalmachinezoneinitializeandscriptactivexcontrols)
 </dt> <dd> <dl> <dt>
 
 Datentyp: **Zeichenfolge**
@@ -1979,7 +1979,7 @@ Zugriffstyp: Lesen/Schreiben
 
 </dd> <dt>
 
-[Lockeddownloader calmachinezonejavaberechtigungen](/windows/client-management/mdm/policy-csp-internetexplorer#internetexplorer-lockeddownlocalmachinezonejavapermissions)
+[LockedDownLocalMachineZoneJavaPermissions](/windows/client-management/mdm/policy-csp-internetexplorer#internetexplorer-lockeddownlocalmachinezonejavapermissions)
 </dt> <dd> <dl> <dt>
 
 Datentyp: **Zeichenfolge**
@@ -1990,7 +1990,7 @@ Zugriffstyp: Lesen/Schreiben
 
 </dd> <dt>
 
-[Lockeddownloader calmachinezonesavigatewindowsandframes](/windows/client-management/mdm/policy-csp-internetexplorer#internetexplorer-lockeddownlocalmachinezonenavigatewindowsandframes)
+[LockedDownLocalMachineZoneNavigateWindowsAndFrames](/windows/client-management/mdm/policy-csp-internetexplorer#internetexplorer-lockeddownlocalmachinezonenavigatewindowsandframes)
 </dt> <dd> <dl> <dt>
 
 Datentyp: **Zeichenfolge**
@@ -2001,7 +2001,7 @@ Zugriffstyp: Lesen/Schreiben
 
 </dd> <dt>
 
-[Lockeddownrestrictedsiteszoneallowaccesstodatasources](/windows/client-management/mdm/policy-csp-internetexplorer#internetexplorer-lockeddownrestrictedsiteszoneallowaccesstodatasources)
+[LockedDownRestrictedSitesZoneAllowAccessToDataSources](/windows/client-management/mdm/policy-csp-internetexplorer#internetexplorer-lockeddownrestrictedsiteszoneallowaccesstodatasources)
 </dt> <dd> <dl> <dt>
 
 Datentyp: **Zeichenfolge**
@@ -2012,7 +2012,7 @@ Zugriffstyp: Lesen/Schreiben
 
 </dd> <dt>
 
-[Lockeddownrestrictedsiteszoneallowautomaticpromptingforactivexcontrols](/windows/client-management/mdm/policy-csp-internetexplorer#internetexplorer-lockeddownrestrictedsiteszoneallowautomaticpromptingforactivexcontrols)
+[LockedDownRestrictedSitesZoneAllowAutomaticPromptingForActiveXControls](/windows/client-management/mdm/policy-csp-internetexplorer#internetexplorer-lockeddownrestrictedsiteszoneallowautomaticpromptingforactivexcontrols)
 </dt> <dd> <dl> <dt>
 
 Datentyp: **Zeichenfolge**
@@ -2023,7 +2023,7 @@ Zugriffstyp: Lesen/Schreiben
 
 </dd> <dt>
 
-[Lockeddownrestrictedsiteszoneallowautomaticpromptingforfiledownloads](/windows/client-management/mdm/policy-csp-internetexplorer#internetexplorer-lockeddownrestrictedsiteszoneallowautomaticpromptingforfiledownloads)
+[LockedDownRestrictedSitesZoneAllowAutomaticPromptingForFileDownloads](/windows/client-management/mdm/policy-csp-internetexplorer#internetexplorer-lockeddownrestrictedsiteszoneallowautomaticpromptingforfiledownloads)
 </dt> <dd> <dl> <dt>
 
 Datentyp: **Zeichenfolge**
@@ -2034,7 +2034,7 @@ Zugriffstyp: Lesen/Schreiben
 
 </dd> <dt>
 
-[Lockeddownrestrictedsiteszoneallowfontdownloads](/windows/client-management/mdm/policy-csp-internetexplorer#internetexplorer-lockeddownrestrictedsiteszoneallowfontdownloads)
+[LockedDownRestrictedSitesZoneAllowFontDownloads](/windows/client-management/mdm/policy-csp-internetexplorer#internetexplorer-lockeddownrestrictedsiteszoneallowfontdownloads)
 </dt> <dd> <dl> <dt>
 
 Datentyp: **Zeichenfolge**
@@ -2045,7 +2045,7 @@ Zugriffstyp: Lesen/Schreiben
 
 </dd> <dt>
 
-[Lockeddownrestrictedsiteszonezuzussprivilegedsites](/windows/client-management/mdm/policy-csp-internetexplorer#internetexplorer-lockeddownrestrictedsiteszoneallowlessprivilegedsites)
+[LockedDownRestrictedSitesZoneAllowLessPrivilegedSites](/windows/client-management/mdm/policy-csp-internetexplorer#internetexplorer-lockeddownrestrictedsiteszoneallowlessprivilegedsites)
 </dt> <dd> <dl> <dt>
 
 Datentyp: **Zeichenfolge**
@@ -2056,7 +2056,7 @@ Zugriffstyp: Lesen/Schreiben
 
 </dd> <dt>
 
-[Lockeddownrestrictedsiteszoneallownetframeworkreliantcomponents](/windows/client-management/mdm/policy-csp-internetexplorer#internetexplorer-lockeddownrestrictedsiteszoneallownetframeworkreliantcomponents)
+[LockedDownRestrictedSitesZoneAllowNETFrameworkReliantComponents](/windows/client-management/mdm/policy-csp-internetexplorer#internetexplorer-lockeddownrestrictedsiteszoneallownetframeworkreliantcomponents)
 </dt> <dd> <dl> <dt>
 
 Datentyp: **Zeichenfolge**
@@ -2067,7 +2067,7 @@ Zugriffstyp: Lesen/Schreiben
 
 </dd> <dt>
 
-[Lockeddownrestrictedsiteszoneallowscriptlets](/windows/client-management/mdm/policy-csp-internetexplorer#internetexplorer-lockeddownrestrictedsiteszoneallowscriptlets)
+[LockedDownRestrictedSitesZoneAllowScriptlets](/windows/client-management/mdm/policy-csp-internetexplorer#internetexplorer-lockeddownrestrictedsiteszoneallowscriptlets)
 </dt> <dd> <dl> <dt>
 
 Datentyp: **Zeichenfolge**
@@ -2078,10 +2078,10 @@ Zugriffstyp: Lesen/Schreiben
 
 </dd> <dt>
 
-[Lockeddownrestrictedsiteszoneallowsmartscreenie](/windows/client-management/mdm/policy-csp-internetexplorer#internetexplorer-lockeddownrestrictedsiteszoneallowsmartscreenie)
+[LockedDownRestrictedSitesZoneAllowSmartScreenIE](/windows/client-management/mdm/policy-csp-internetexplorer#internetexplorer-lockeddownrestrictedsiteszoneallowsmartscreenie)
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Lesen/Schreiben
@@ -2089,10 +2089,10 @@ Zugriffstyp: Lesen/Schreiben
 
 </dd> <dt>
 
-[Lockeddownrestrictedsiteszonezuzustuserdatapersistenz](/windows/client-management/mdm/policy-csp-internetexplorer#internetexplorer-lockeddownrestrictedsiteszoneallowuserdatapersistence)
+[LockedDownRestrictedSitesZoneAllowUserDataPersistence](/windows/client-management/mdm/policy-csp-internetexplorer#internetexplorer-lockeddownrestrictedsiteszoneallowuserdatapersistence)
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Lesen/Schreiben
@@ -2100,10 +2100,10 @@ Zugriffstyp: Lesen/Schreiben
 
 </dd> <dt>
 
-[Lockeddownrestrictedsiteszoneinitializeandscriptactivexcontrols](/windows/client-management/mdm/policy-csp-internetexplorer#internetexplorer-lockeddownrestrictedsiteszoneinitializeandscriptactivexcontrols)
+[LockedDownRestrictedSitesZoneInitializeAndScriptActiveXControls](/windows/client-management/mdm/policy-csp-internetexplorer#internetexplorer-lockeddownrestrictedsiteszoneinitializeandscriptactivexcontrols)
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Lesen/Schreiben
@@ -2111,10 +2111,10 @@ Zugriffstyp: Lesen/Schreiben
 
 </dd> <dt>
 
-[Lockeddownrestrictedsiteszonejava-Berechtigungen](/windows/client-management/mdm/policy-csp-internetexplorer#internetexplorer-lockeddownrestrictedsiteszonejavapermissions)
+[LockedDownRestrictedSitesZoneJavaPermissions](/windows/client-management/mdm/policy-csp-internetexplorer#internetexplorer-lockeddownrestrictedsiteszonejavapermissions)
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Lesen/Schreiben
@@ -2122,10 +2122,10 @@ Zugriffstyp: Lesen/Schreiben
 
 </dd> <dt>
 
-[Lockeddownrestrictedsiteszonumavigatewindowsandframes](/windows/client-management/mdm/policy-csp-internetexplorer#internetexplorer-lockeddownrestrictedsiteszonenavigatewindowsandframes)
+[LockedDownRestrictedSitesZoneNavigateWindowsAndFrames](/windows/client-management/mdm/policy-csp-internetexplorer#internetexplorer-lockeddownrestrictedsiteszonenavigatewindowsandframes)
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Lesen/Schreiben
@@ -2133,10 +2133,10 @@ Zugriffstyp: Lesen/Schreiben
 
 </dd> <dt>
 
-[Lockeddowntreuhänder dsiteszoneallowaccesstodatasources](/windows/client-management/mdm/policy-csp-internetexplorer#internetexplorer-lockeddowntrustedsiteszoneallowaccesstodatasources)
+[LockedDownTrustedSitesZoneAllowAccessToDataSources](/windows/client-management/mdm/policy-csp-internetexplorer#internetexplorer-lockeddowntrustedsiteszoneallowaccesstodatasources)
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Lesen/Schreiben
@@ -2144,10 +2144,10 @@ Zugriffstyp: Lesen/Schreiben
 
 </dd> <dt>
 
-[Lockeddowntreuhänder dsiteszoneallowautomaticpromptingforactivexcontrols](/windows/client-management/mdm/policy-csp-internetexplorer#internetexplorer-lockeddowntrustedsiteszoneallowautomaticpromptingforactivexcontrols)
+[LockedDownTrustedSitesZoneAllowAutomaticPromptingForActiveXControls](/windows/client-management/mdm/policy-csp-internetexplorer#internetexplorer-lockeddowntrustedsiteszoneallowautomaticpromptingforactivexcontrols)
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Lesen/Schreiben
@@ -2155,10 +2155,10 @@ Zugriffstyp: Lesen/Schreiben
 
 </dd> <dt>
 
-[Lockeddowntreuhänder dsiteszoneallowautomaticpromptingforfiledownloads](/windows/client-management/mdm/policy-csp-internetexplorer#internetexplorer-lockeddowntrustedsiteszoneallowautomaticpromptingforfiledownloads)
+[LockedDownTrustedSitesZoneAllowAutomaticPromptingForFileDownloads](/windows/client-management/mdm/policy-csp-internetexplorer#internetexplorer-lockeddowntrustedsiteszoneallowautomaticpromptingforfiledownloads)
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Lesen/Schreiben
@@ -2166,10 +2166,10 @@ Zugriffstyp: Lesen/Schreiben
 
 </dd> <dt>
 
-[Lockeddowntreuhänder dsiteszoneallowfontdownloads](/windows/client-management/mdm/policy-csp-internetexplorer#internetexplorer-lockeddowntrustedsiteszoneallowfontdownloads)
+[LockedDownTrustedSitesZoneAllowFontDownloads](/windows/client-management/mdm/policy-csp-internetexplorer#internetexplorer-lockeddowntrustedsiteszoneallowfontdownloads)
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Lesen/Schreiben
@@ -2177,10 +2177,10 @@ Zugriffstyp: Lesen/Schreiben
 
 </dd> <dt>
 
-[Lockeddowntreuhänder dsiteszonezuzussprivilegedsites](/windows/client-management/mdm/policy-csp-internetexplorer#internetexplorer-lockeddowntrustedsiteszoneallowlessprivilegedsites)
+[LockedDownTrustedSitesZoneAllowLessPrivilegedSites](/windows/client-management/mdm/policy-csp-internetexplorer#internetexplorer-lockeddowntrustedsiteszoneallowlessprivilegedsites)
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Lesen/Schreiben
@@ -2188,10 +2188,10 @@ Zugriffstyp: Lesen/Schreiben
 
 </dd> <dt>
 
-[Lockeddowntreuhänder dsiteszoneallownetframeworkreliantcomponents](/windows/client-management/mdm/policy-csp-internetexplorer#internetexplorer-lockeddowntrustedsiteszoneallownetframeworkreliantcomponents)
+[LockedDownTrustedSitesZoneAllowNETFrameworkReliantComponents](/windows/client-management/mdm/policy-csp-internetexplorer#internetexplorer-lockeddowntrustedsiteszoneallownetframeworkreliantcomponents)
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Lesen/Schreiben
@@ -2199,10 +2199,10 @@ Zugriffstyp: Lesen/Schreiben
 
 </dd> <dt>
 
-[Lockeddowntreuhänder dsiteszoneallowscriptlets](/windows/client-management/mdm/policy-csp-internetexplorer#internetexplorer-lockeddowntrustedsiteszoneallowscriptlets)
+[LockedDownTrustedSitesZoneAllowScriptlets](/windows/client-management/mdm/policy-csp-internetexplorer#internetexplorer-lockeddowntrustedsiteszoneallowscriptlets)
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Lesen/Schreiben
@@ -2210,10 +2210,10 @@ Zugriffstyp: Lesen/Schreiben
 
 </dd> <dt>
 
-[Lockeddowntreuhänder dsiteszoneallowsmartscreenie](/windows/client-management/mdm/policy-csp-internetexplorer#internetexplorer-lockeddowntrustedsiteszoneallowsmartscreenie)
+[LockedDownTrustedSitesZoneAllowSmartScreenIE](/windows/client-management/mdm/policy-csp-internetexplorer#internetexplorer-lockeddowntrustedsiteszoneallowsmartscreenie)
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Lesen/Schreiben
@@ -2221,10 +2221,10 @@ Zugriffstyp: Lesen/Schreiben
 
 </dd> <dt>
 
-[Lockeddowntreuhänder dsiteszonezugserdatapersistenz](/windows/client-management/mdm/policy-csp-internetexplorer#internetexplorer-lockeddowntrustedsiteszoneallowuserdatapersistence)
+[LockedDownTrustedSitesZoneAllowUserDataPersistence](/windows/client-management/mdm/policy-csp-internetexplorer#internetexplorer-lockeddowntrustedsiteszoneallowuserdatapersistence)
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Lesen/Schreiben
@@ -2232,10 +2232,10 @@ Zugriffstyp: Lesen/Schreiben
 
 </dd> <dt>
 
-[Lockeddowntreuhänder dsiteszoneinitializeandscriptactivexcontrols](/windows/client-management/mdm/policy-csp-internetexplorer#internetexplorer-lockeddowntrustedsiteszoneinitializeandscriptactivexcontrols)
+[LockedDownTrustedSitesZoneInitializeAndScriptActiveXControls](/windows/client-management/mdm/policy-csp-internetexplorer#internetexplorer-lockeddowntrustedsiteszoneinitializeandscriptactivexcontrols)
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Lesen/Schreiben
@@ -2243,10 +2243,10 @@ Zugriffstyp: Lesen/Schreiben
 
 </dd> <dt>
 
-[Lockeddowntreudsiteszonejava-Berechtigungen](/windows/client-management/mdm/policy-csp-internetexplorer#internetexplorer-lockeddowntrustedsiteszonejavapermissions)
+[LockedDownTrustedSitesZoneJavaPermissions](/windows/client-management/mdm/policy-csp-internetexplorer#internetexplorer-lockeddowntrustedsiteszonejavapermissions)
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Lesen/Schreiben
@@ -2254,10 +2254,10 @@ Zugriffstyp: Lesen/Schreiben
 
 </dd> <dt>
 
-[Lockeddowntreuhänder dsiteszoneinavigatewindowsandframes](/windows/client-management/mdm/policy-csp-internetexplorer#internetexplorer-lockeddowntrustedsiteszonenavigatewindowsandframes)
+[LockedDownTrustedSitesZoneNavigateWindowsAndFrames](/windows/client-management/mdm/policy-csp-internetexplorer#internetexplorer-lockeddowntrustedsiteszonenavigatewindowsandframes)
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Lesen/Schreiben
@@ -2265,10 +2265,10 @@ Zugriffstyp: Lesen/Schreiben
 
 </dd> <dt>
 
-[Mimesniffingsafetyfeatureinternetexplorerprocesses](/windows/client-management/mdm/policy-csp-internetexplorer#internetexplorer-mimesniffingsafetyfeatureinternetexplorerprocesses)
+[MimeSniffingSafetyFeatureInternetExplorerProcesses](/windows/client-management/mdm/policy-csp-internetexplorer#internetexplorer-mimesniffingsafetyfeatureinternetexplorerprocesses)
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Lesen/Schreiben
@@ -2276,10 +2276,10 @@ Zugriffstyp: Lesen/Schreiben
 
 </dd> <dt>
 
-[Mkprotocolsecurityrestrictioninternetexplorerprocesses](/windows/client-management/mdm/policy-csp-internetexplorer#internetexplorer-mkprotocolsecurityrestrictioninternetexplorerprocesses)
+[MKProtocolSecurityRestrictionInternetExplorerProcesses](/windows/client-management/mdm/policy-csp-internetexplorer#internetexplorer-mkprotocolsecurityrestrictioninternetexplorerprocesses)
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Lesen/Schreiben
@@ -2287,10 +2287,10 @@ Zugriffstyp: Lesen/Schreiben
 
 </dd> <dt>
 
-[Notificationbarinternetexplorerprocesses](/windows/client-management/mdm/policy-csp-internetexplorer#internetexplorer-notificationbarinternetexplorerprocesses)
+[NotificationBarInternetExplorerProcesses](/windows/client-management/mdm/policy-csp-internetexplorer#internetexplorer-notificationbarinternetexplorerprocesses)
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Lesen/Schreiben
@@ -2298,10 +2298,10 @@ Zugriffstyp: Lesen/Schreiben
 
 </dd> <dt>
 
-**ParentID**
+**Parentid**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
@@ -2312,10 +2312,10 @@ Qualifizierer: [ **Schlüssel**](/windows/desktop/WmiSdk/key-qualifier)
 
 </dd> <dt>
 
-[Preventmanagingsmartscreenfilter](/windows/client-management/mdm/policy-csp-internetexplorer#internetexplorer-preventmanagingsmartscreenfilter)
+[PreventManagingSmartScreenFilter](/windows/client-management/mdm/policy-csp-internetexplorer#internetexplorer-preventmanagingsmartscreenfilter)
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Lesen/Schreiben
@@ -2323,10 +2323,10 @@ Zugriffstyp: Lesen/Schreiben
 
 </dd> <dt>
 
-[Preventperuserinstallationofaktivexcontrols](/windows/client-management/mdm/policy-csp-internetexplorer#internetexplorer-preventperuserinstallationofactivexcontrols)
+[PreventPerUserInstallationOfActiveXControls](/windows/client-management/mdm/policy-csp-internetexplorer#internetexplorer-preventperuserinstallationofactivexcontrols)
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Lesen/Schreiben
@@ -2334,10 +2334,10 @@ Zugriffstyp: Lesen/Schreiben
 
 </dd> <dt>
 
-[Schutzfromzoneelevationinternetexplorerprocesses](/windows/client-management/mdm/policy-csp-internetexplorer#internetexplorer-protectionfromzoneelevationinternetexplorerprocesses)
+[ProtectionFromZoneElevationInternetExplorerProcesses](/windows/client-management/mdm/policy-csp-internetexplorer#internetexplorer-protectionfromzoneelevationinternetexplorerprocesses)
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Lesen/Schreiben
@@ -2345,10 +2345,10 @@ Zugriffstyp: Lesen/Schreiben
 
 </dd> <dt>
 
-[Removerunthistimebuttonforoutdatedactivexcontrols](/windows/client-management/mdm/policy-csp-internetexplorer#internetexplorer-removerunthistimebuttonforoutdatedactivexcontrols)
+[RemoveRunThisTimeButtonForOutdatedActiveXControls](/windows/client-management/mdm/policy-csp-internetexplorer#internetexplorer-removerunthistimebuttonforoutdatedactivexcontrols)
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Lesen/Schreiben
@@ -2356,10 +2356,10 @@ Zugriffstyp: Lesen/Schreiben
 
 </dd> <dt>
 
-[Restrictactivexinstallinternetexplorerprocesses](/windows/client-management/mdm/policy-csp-internetexplorer#internetexplorer-restrictactivexinstallinternetexplorerprocesses)
+[RestrictActiveXInstallInternetExplorerProcesses](/windows/client-management/mdm/policy-csp-internetexplorer#internetexplorer-restrictactivexinstallinternetexplorerprocesses)
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Lesen/Schreiben
@@ -2367,10 +2367,10 @@ Zugriffstyp: Lesen/Schreiben
 
 </dd> <dt>
 
-[Restrictedsiteszoneallowaccesstodatasources](/windows/client-management/mdm/policy-csp-internetexplorer#internetexplorer-restrictedsiteszoneallowaccesstodatasources)
+[RestrictedSitesZoneAllowAccessToDataSources](/windows/client-management/mdm/policy-csp-internetexplorer#internetexplorer-restrictedsiteszoneallowaccesstodatasources)
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Lesen/Schreiben
@@ -2378,10 +2378,10 @@ Zugriffstyp: Lesen/Schreiben
 
 </dd> <dt>
 
-[Restrictedsiteszoneallowactivescripting](/windows/client-management/mdm/policy-csp-internetexplorer#internetexplorer-restrictedsiteszoneallowactivescripting)
+[RestrictedSitesZoneAllowActiveScripting](/windows/client-management/mdm/policy-csp-internetexplorer#internetexplorer-restrictedsiteszoneallowactivescripting)
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Lesen/Schreiben
@@ -2389,10 +2389,10 @@ Zugriffstyp: Lesen/Schreiben
 
 </dd> <dt>
 
-[Restrictedsiteszoneallowautomaticpromptingforactivexcontrols](/windows/client-management/mdm/policy-csp-internetexplorer#internetexplorer-restrictedsiteszoneallowautomaticpromptingforactivexcontrols)
+[RestrictedSitesZoneAllowAutomaticPromptingForActiveXControls](/windows/client-management/mdm/policy-csp-internetexplorer#internetexplorer-restrictedsiteszoneallowautomaticpromptingforactivexcontrols)
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Lesen/Schreiben
@@ -2400,10 +2400,10 @@ Zugriffstyp: Lesen/Schreiben
 
 </dd> <dt>
 
-[Restrictedsiteszoneallowautomaticpromptingforfiledownloads](/windows/client-management/mdm/policy-csp-internetexplorer#internetexplorer-restrictedsiteszoneallowautomaticpromptingforfiledownloads)
+[RestrictedSitesZoneAllowAutomaticPromptingForFileDownloads](/windows/client-management/mdm/policy-csp-internetexplorer#internetexplorer-restrictedsiteszoneallowautomaticpromptingforfiledownloads)
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Lesen/Schreiben
@@ -2411,10 +2411,10 @@ Zugriffstyp: Lesen/Schreiben
 
 </dd> <dt>
 
-[Restrictedsiteszoneallowbinaryandscriptverhaltensweisen](/windows/client-management/mdm/policy-csp-internetexplorer#internetexplorer-restrictedsiteszoneallowbinaryandscriptbehaviors)
+[RestrictedSitesZoneAllowBinaryAndScriptBehaviors](/windows/client-management/mdm/policy-csp-internetexplorer#internetexplorer-restrictedsiteszoneallowbinaryandscriptbehaviors)
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Lesen/Schreiben
@@ -2422,10 +2422,10 @@ Zugriffstyp: Lesen/Schreiben
 
 </dd> <dt>
 
-[Restrictedsiteszoneallowcopypasteviascript](/windows/client-management/mdm/policy-csp-internetexplorer#internetexplorer-restrictedsiteszoneallowcopypasteviascript)
+[RestrictedSitesZoneAllowCopyPasteViaScript](/windows/client-management/mdm/policy-csp-internetexplorer#internetexplorer-restrictedsiteszoneallowcopypasteviascript)
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Lesen/Schreiben
@@ -2433,10 +2433,10 @@ Zugriffstyp: Lesen/Schreiben
 
 </dd> <dt>
 
-[Restrictedsiteszoneallowdraganddropcopyandpastefiles](/windows/client-management/mdm/policy-csp-internetexplorer#internetexplorer-restrictedsiteszoneallowdraganddropcopyandpastefiles)
+[RestrictedSitesZoneAllowDragAndDropCopyAndPasteFiles](/windows/client-management/mdm/policy-csp-internetexplorer#internetexplorer-restrictedsiteszoneallowdraganddropcopyandpastefiles)
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Lesen/Schreiben
@@ -2444,10 +2444,10 @@ Zugriffstyp: Lesen/Schreiben
 
 </dd> <dt>
 
-[Restrictedsiteszoneallowfiledownloads](/windows/client-management/mdm/policy-csp-internetexplorer#internetexplorer-restrictedsiteszoneallowfiledownloads)
+[RestrictedSitesZoneAllowFileDownloads](/windows/client-management/mdm/policy-csp-internetexplorer#internetexplorer-restrictedsiteszoneallowfiledownloads)
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Lesen/Schreiben
@@ -2455,10 +2455,10 @@ Zugriffstyp: Lesen/Schreiben
 
 </dd> <dt>
 
-[Restrictedsiteszoneallowfontdownloads](/windows/client-management/mdm/policy-csp-internetexplorer#internetexplorer-restrictedsiteszoneallowfontdownloads)
+[RestrictedSitesZoneAllowFontDownloads](/windows/client-management/mdm/policy-csp-internetexplorer#internetexplorer-restrictedsiteszoneallowfontdownloads)
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Lesen/Schreiben
@@ -2466,10 +2466,10 @@ Zugriffstyp: Lesen/Schreiben
 
 </dd> <dt>
 
-[Restrictedsiteszonezuzuweisung](/windows/client-management/mdm/policy-csp-internetexplorer#internetexplorer-restrictedsiteszoneallowlessprivilegedsites)
+[RestrictedSitesZoneAllowLessPrivilegedSites](/windows/client-management/mdm/policy-csp-internetexplorer#internetexplorer-restrictedsiteszoneallowlessprivilegedsites)
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Lesen/Schreiben
@@ -2477,10 +2477,10 @@ Zugriffstyp: Lesen/Schreiben
 
 </dd> <dt>
 
-[Restrictedsiteszoneallowloadingofxamlfiles](/windows/client-management/mdm/policy-csp-internetexplorer#internetexplorer-restrictedsiteszoneallowloadingofxamlfiles)
+[RestrictedSitesZoneAllowLoadingOfXAMLFiles](/windows/client-management/mdm/policy-csp-internetexplorer#internetexplorer-restrictedsiteszoneallowloadingofxamlfiles)
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Lesen/Schreiben
@@ -2488,10 +2488,10 @@ Zugriffstyp: Lesen/Schreiben
 
 </dd> <dt>
 
-[Restrictedsiteszoneallowmetarefresh](/windows/client-management/mdm/policy-csp-internetexplorer#internetexplorer-restrictedsiteszoneallowmetarefresh)
+[RestrictedSitesZoneAllowMETAREFRESH](/windows/client-management/mdm/policy-csp-internetexplorer#internetexplorer-restrictedsiteszoneallowmetarefresh)
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Lesen/Schreiben
@@ -2499,10 +2499,10 @@ Zugriffstyp: Lesen/Schreiben
 
 </dd> <dt>
 
-[Restrictedsiteszoneallownetframeworkreliantcomponents](/windows/client-management/mdm/policy-csp-internetexplorer#internetexplorer-restrictedsiteszoneallownetframeworkreliantcomponents)
+[RestrictedSitesZoneAllowNETFrameworkRelantComponents](/windows/client-management/mdm/policy-csp-internetexplorer#internetexplorer-restrictedsiteszoneallownetframeworkreliantcomponents)
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Lesen/Schreiben
@@ -2510,10 +2510,10 @@ Zugriffstyp: Lesen/Schreiben
 
 </dd> <dt>
 
-[Restrictedsiteszonezuweiwonlyapproveddomainstoulactivexcontrols](/windows/client-management/mdm/policy-csp-internetexplorer#internetexplorer-restrictedsiteszoneallowonlyapproveddomainstouseactivexcontrols)
+[RestrictedSitesZoneAllowOnlyApprovedDomainsToUseActiveXControls](/windows/client-management/mdm/policy-csp-internetexplorer#internetexplorer-restrictedsiteszoneallowonlyapproveddomainstouseactivexcontrols)
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Lesen/Schreiben
@@ -2521,10 +2521,10 @@ Zugriffstyp: Lesen/Schreiben
 
 </dd> <dt>
 
-[Restrictedsiteszonezuzugwonlyapproveddomainstousetdcactivexcontrol](/windows/client-management/mdm/policy-csp-internetexplorer#internetexplorer-restrictedsiteszoneallowonlyapproveddomainstousetdcactivexcontrol)
+[RestrictedSitesZoneAllowOnlyApprovedDomainsToUseTDCActiveXControl](/windows/client-management/mdm/policy-csp-internetexplorer#internetexplorer-restrictedsiteszoneallowonlyapproveddomainstousetdcactivexcontrol)
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Lesen/Schreiben
@@ -2532,10 +2532,10 @@ Zugriffstyp: Lesen/Schreiben
 
 </dd> <dt>
 
-[Restrictedsiteszoneallowscriptingofinternetexplorerwebbrowsercontrols](/windows/client-management/mdm/policy-csp-internetexplorer#internetexplorer-restrictedsiteszoneallowscriptingofinternetexplorerwebbrowsercontrols)
+[RestrictedSitesZoneAllowScriptingOfInternetExplorerWebBrowserControls](/windows/client-management/mdm/policy-csp-internetexplorer#internetexplorer-restrictedsiteszoneallowscriptingofinternetexplorerwebbrowsercontrols)
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Lesen/Schreiben
@@ -2543,10 +2543,10 @@ Zugriffstyp: Lesen/Schreiben
 
 </dd> <dt>
 
-[Restrictedsiteszoneallowscriptinitiatedwindows](/windows/client-management/mdm/policy-csp-internetexplorer#internetexplorer-restrictedsiteszoneallowscriptinitiatedwindows)
+[RestrictedSitesZoneAllowScriptInitiatedWindows](/windows/client-management/mdm/policy-csp-internetexplorer#internetexplorer-restrictedsiteszoneallowscriptinitiatedwindows)
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Lesen/Schreiben
@@ -2554,10 +2554,10 @@ Zugriffstyp: Lesen/Schreiben
 
 </dd> <dt>
 
-[Restrictedsiteszoneallowscriptlets](/windows/client-management/mdm/policy-csp-internetexplorer#internetexplorer-restrictedsiteszoneallowscriptlets)
+[RestrictedSitesZoneAllowScriptlets](/windows/client-management/mdm/policy-csp-internetexplorer#internetexplorer-restrictedsiteszoneallowscriptlets)
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Lesen/Schreiben
@@ -2565,10 +2565,10 @@ Zugriffstyp: Lesen/Schreiben
 
 </dd> <dt>
 
-[Restrictedsiteszoneallowsmartscreenie](/windows/client-management/mdm/policy-csp-internetexplorer#internetexplorer-restrictedsiteszoneallowsmartscreenie)
+[RestrictedSitesZoneAllowSmartScreenIE](/windows/client-management/mdm/policy-csp-internetexplorer#internetexplorer-restrictedsiteszoneallowsmartscreenie)
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Lesen/Schreiben
@@ -2576,10 +2576,10 @@ Zugriffstyp: Lesen/Schreiben
 
 </dd> <dt>
 
-[Restrictedsiteszoneallowupdatestostatobarviascript](/windows/client-management/mdm/policy-csp-internetexplorer#internetexplorer-restrictedsiteszoneallowupdatestostatusbarviascript)
+[RestrictedSitesZoneAllowUpdatesToStatusBarViaScript](/windows/client-management/mdm/policy-csp-internetexplorer#internetexplorer-restrictedsiteszoneallowupdatestostatusbarviascript)
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Lesen/Schreiben
@@ -2587,10 +2587,10 @@ Zugriffstyp: Lesen/Schreiben
 
 </dd> <dt>
 
-[Restrictedsiteszonezuzustandserdatapersistenz](/windows/client-management/mdm/policy-csp-internetexplorer#internetexplorer-restrictedsiteszoneallowuserdatapersistence)
+[RestrictedSitesZoneAllowUserDataPersistence](/windows/client-management/mdm/policy-csp-internetexplorer#internetexplorer-restrictedsiteszoneallowuserdatapersistence)
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Lesen/Schreiben
@@ -2598,10 +2598,10 @@ Zugriffstyp: Lesen/Schreiben
 
 </dd> <dt>
 
-[Restrictedsiteszonedonotrunantimalwareagainstactivexcontrols](/windows/client-management/mdm/policy-csp-internetexplorer#internetexplorer-restrictedsiteszonedonotrunantimalwareagainstactivexcontrols)
+[RestrictedSitesZoneDoNotRunAntimalware HexainstActiveXControls](/windows/client-management/mdm/policy-csp-internetexplorer#internetexplorer-restrictedsiteszonedonotrunantimalwareagainstactivexcontrols)
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Lesen/Schreiben
@@ -2609,10 +2609,10 @@ Zugriffstyp: Lesen/Schreiben
 
 </dd> <dt>
 
-[Restrictedsiteszonedownloadsignedactivexcontrols](/windows/client-management/mdm/policy-csp-internetexplorer#internetexplorer-restrictedsiteszonedownloadsignedactivexcontrols)
+[RestrictedSitesZoneDownloadSignedActiveXControls](/windows/client-management/mdm/policy-csp-internetexplorer#internetexplorer-restrictedsiteszonedownloadsignedactivexcontrols)
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Lesen/Schreiben
@@ -2620,10 +2620,10 @@ Zugriffstyp: Lesen/Schreiben
 
 </dd> <dt>
 
-[Restrictedsiteszonedownloadunsignedactivexcontrols](/windows/client-management/mdm/policy-csp-internetexplorer#internetexplorer-restrictedsiteszonedownloadunsignedactivexcontrols)
+[RestrictedSitesZoneDownloadUnsignedActiveXControls](/windows/client-management/mdm/policy-csp-internetexplorer#internetexplorer-restrictedsiteszonedownloadunsignedactivexcontrols)
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Lesen/Schreiben
@@ -2631,10 +2631,10 @@ Zugriffstyp: Lesen/Schreiben
 
 </dd> <dt>
 
-[Restrictedsiteszoneenablecrosssitescriptingfilter](/windows/client-management/mdm/policy-csp-internetexplorer#internetexplorer-restrictedsiteszoneenablecrosssitescriptingfilter)
+[RestrictedSitesZoneEnableCrossSiteScriptingFilter](/windows/client-management/mdm/policy-csp-internetexplorer#internetexplorer-restrictedsiteszoneenablecrosssitescriptingfilter)
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Lesen/Schreiben
@@ -2642,10 +2642,10 @@ Zugriffstyp: Lesen/Schreiben
 
 </dd> <dt>
 
-[Restrictedsiteszoneenabledraggingof contentfromdifferenentdomainsacrosswindows](/windows/client-management/mdm/policy-csp-internetexplorer#internetexplorer-restrictedsiteszoneenabledraggingofcontentfromdifferentdomainsacrosswindows)
+[RestrictedSitesZoneEnableDraggingOfContentFromDifferentDomainsAcrossWindows](/windows/client-management/mdm/policy-csp-internetexplorer#internetexplorer-restrictedsiteszoneenabledraggingofcontentfromdifferentdomainsacrosswindows)
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Lesen/Schreiben
@@ -2653,10 +2653,10 @@ Zugriffstyp: Lesen/Schreiben
 
 </dd> <dt>
 
-[Restrictedsiteszoneenabledraggingof contentfromdifferenentdomainswithinwindows](/windows/client-management/mdm/policy-csp-internetexplorer#internetexplorer-restrictedsiteszoneenabledraggingofcontentfromdifferentdomainswithinwindows)
+[RestrictedSitesZoneEnableDraggingOfContentFromDifferentDomainsWithinWindows](/windows/client-management/mdm/policy-csp-internetexplorer#internetexplorer-restrictedsiteszoneenabledraggingofcontentfromdifferentdomainswithinwindows)
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Lesen/Schreiben
@@ -2664,10 +2664,10 @@ Zugriffstyp: Lesen/Schreiben
 
 </dd> <dt>
 
-[Restrictedsiteszoneenablemimesniffing](/windows/client-management/mdm/policy-csp-internetexplorer#internetexplorer-restrictedsiteszoneenablemimesniffing)
+[RestrictedSitesZoneEnableMIMESniffing](/windows/client-management/mdm/policy-csp-internetexplorer#internetexplorer-restrictedsiteszoneenablemimesniffing)
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Lesen/Schreiben
@@ -2675,10 +2675,10 @@ Zugriffstyp: Lesen/Schreiben
 
 </dd> <dt>
 
-[Restrictedsiteszoneincluschocalpatheincluminguploadingfilestoserver](/windows/client-management/mdm/policy-csp-internetexplorer#internetexplorer-restrictedsiteszoneincludelocalpathwhenuploadingfilestoserver)
+[RestrictedSitesZoneIncludeLocalPathWhenUploadingFilesToServer](/windows/client-management/mdm/policy-csp-internetexplorer#internetexplorer-restrictedsiteszoneincludelocalpathwhenuploadingfilestoserver)
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Lesen/Schreiben
@@ -2686,10 +2686,10 @@ Zugriffstyp: Lesen/Schreiben
 
 </dd> <dt>
 
-[Restrictedsiteszoneinitializeandscriptactivexcontrols](/windows/client-management/mdm/policy-csp-internetexplorer#internetexplorer-restrictedsiteszoneinitializeandscriptactivexcontrols)
+[RestrictedSitesZoneInitializeAndScriptActiveXControls](/windows/client-management/mdm/policy-csp-internetexplorer#internetexplorer-restrictedsiteszoneinitializeandscriptactivexcontrols)
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Lesen/Schreiben
@@ -2697,10 +2697,10 @@ Zugriffstyp: Lesen/Schreiben
 
 </dd> <dt>
 
-[Restrictedsiteszonejavaberechtigungen](/windows/client-management/mdm/policy-csp-internetexplorer#internetexplorer-restrictedsiteszonejavapermissions)
+[RestrictedSitesZoneJavaPermissions](/windows/client-management/mdm/policy-csp-internetexplorer#internetexplorer-restrictedsiteszonejavapermissions)
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Lesen/Schreiben
@@ -2708,10 +2708,10 @@ Zugriffstyp: Lesen/Schreiben
 
 </dd> <dt>
 
-[Einschränktedsiteszonelaunchingapplicationsandfilesiniframe](/windows/client-management/mdm/policy-csp-internetexplorer#internetexplorer-restrictedsiteszonelaunchingapplicationsandfilesiniframe)
+[RestrictedSitesZoneLaunchingApplicationsAndFilesInIFRAME](/windows/client-management/mdm/policy-csp-internetexplorer#internetexplorer-restrictedsiteszonelaunchingapplicationsandfilesiniframe)
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Lesen/Schreiben
@@ -2719,10 +2719,10 @@ Zugriffstyp: Lesen/Schreiben
 
 </dd> <dt>
 
-[Restrictedsiteszonelogonoptions](/windows/client-management/mdm/policy-csp-internetexplorer#internetexplorer-restrictedsiteszonelogonoptions)
+[RestrictedSitesZoneLogonOptions](/windows/client-management/mdm/policy-csp-internetexplorer#internetexplorer-restrictedsiteszonelogonoptions)
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Lesen/Schreiben
@@ -2730,10 +2730,10 @@ Zugriffstyp: Lesen/Schreiben
 
 </dd> <dt>
 
-[Restrictedsiteszonumavigatewindowsandframes](/windows/client-management/mdm/policy-csp-internetexplorer#internetexplorer-restrictedsiteszonenavigatewindowsandframes)
+[RestrictedSitesZoneNavigateWindowsAndFrames](/windows/client-management/mdm/policy-csp-internetexplorer#internetexplorer-restrictedsiteszonenavigatewindowsandframes)
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Lesen/Schreiben
@@ -2741,10 +2741,10 @@ Zugriffstyp: Lesen/Schreiben
 
 </dd> <dt>
 
-Restrictedsiteszonumavigatewindowsandframesacrossdomains
+RestrictedSitesZoneNavigateWindowsAndFramesAcrossDomains
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Lesen/Schreiben
@@ -2752,10 +2752,10 @@ Zugriffstyp: Lesen/Schreiben
 
 </dd> <dt>
 
-[Restrictedsiteszonerunactivexcontrolsandplugins](/windows/client-management/mdm/policy-csp-internetexplorer#internetexplorer-restrictedsiteszonerunactivexcontrolsandplugins)
+[RestrictedSitesZoneRunActiveXControlsAndPlugins](/windows/client-management/mdm/policy-csp-internetexplorer#internetexplorer-restrictedsiteszonerunactivexcontrolsandplugins)
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Lesen/Schreiben
@@ -2763,10 +2763,10 @@ Zugriffstyp: Lesen/Schreiben
 
 </dd> <dt>
 
-[Restrictedsiteszonerunnetframeworkreliantcomponentssignedwithauthenticode](/windows/client-management/mdm/policy-csp-internetexplorer#internetexplorer-restrictedsiteszonerunnetframeworkreliantcomponentssignedwithauthenticode)
+[RestrictedSitesZoneRunNETFrameworkRelantComponentsSignedWithAuthenticode](/windows/client-management/mdm/policy-csp-internetexplorer#internetexplorer-restrictedsiteszonerunnetframeworkreliantcomponentssignedwithauthenticode)
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Lesen/Schreiben
@@ -2774,10 +2774,10 @@ Zugriffstyp: Lesen/Schreiben
 
 </dd> <dt>
 
-[Restrictedsiteszonescriptactivexcontrolsmarkedsafeforscripting](/windows/client-management/mdm/policy-csp-internetexplorer#internetexplorer-restrictedsiteszonescriptactivexcontrolsmarkedsafeforscripting)
+[RestrictedSitesZoneScriptActiveXControlsMarkedSafeForScripting](/windows/client-management/mdm/policy-csp-internetexplorer#internetexplorer-restrictedsiteszonescriptactivexcontrolsmarkedsafeforscripting)
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Lesen/Schreiben
@@ -2785,10 +2785,10 @@ Zugriffstyp: Lesen/Schreiben
 
 </dd> <dt>
 
-[Restrictedsiteszonescriptingof JavaApplets](/windows/client-management/mdm/policy-csp-internetexplorer#internetexplorer-restrictedsiteszonescriptingofjavaapplets)
+[RestrictedSitesZoneScriptingOfJavaApplets](/windows/client-management/mdm/policy-csp-internetexplorer#internetexplorer-restrictedsiteszonescriptingofjavaapplets)
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Lesen/Schreiben
@@ -2796,10 +2796,10 @@ Zugriffstyp: Lesen/Schreiben
 
 </dd> <dt>
 
-[Restrictedsiteszoneshowsecuritywarningforpotenallyunsafefiles](/windows/client-management/mdm/policy-csp-internetexplorer#internetexplorer-restrictedsiteszoneshowsecuritywarningforpotentiallyunsafefiles)
+[RestrictedSitesZoneShowSecurityWarningForOalyUnsafeFiles](/windows/client-management/mdm/policy-csp-internetexplorer#internetexplorer-restrictedsiteszoneshowsecuritywarningforpotentiallyunsafefiles)
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Lesen/Schreiben
@@ -2807,10 +2807,10 @@ Zugriffstyp: Lesen/Schreiben
 
 </dd> <dt>
 
-Restrictedsiteszonzname der crosssitescriptingfilter
+RestrictedSitesZoneTurnOnCrossSiteScriptingFilter
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Lesen/Schreiben
@@ -2818,10 +2818,10 @@ Zugriffstyp: Lesen/Schreiben
 
 </dd> <dt>
 
-[Restrictedsiteszuniturnonprotectedmode](/windows/client-management/mdm/policy-csp-internetexplorer#internetexplorer-restrictedsiteszoneturnonprotectedmode)
+[RestrictedSitesZoneTurnOnProtectedMode](/windows/client-management/mdm/policy-csp-internetexplorer#internetexplorer-restrictedsiteszoneturnonprotectedmode)
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Lesen/Schreiben
@@ -2829,10 +2829,10 @@ Zugriffstyp: Lesen/Schreiben
 
 </dd> <dt>
 
-[Restrictedsiteszoneul Popupblocker](/windows/client-management/mdm/policy-csp-internetexplorer#internetexplorer-restrictedsiteszoneusepopupblocker)
+[RestrictedSitesZoneUsePopupBlocker](/windows/client-management/mdm/policy-csp-internetexplorer#internetexplorer-restrictedsiteszoneusepopupblocker)
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Lesen/Schreiben
@@ -2840,10 +2840,10 @@ Zugriffstyp: Lesen/Schreiben
 
 </dd> <dt>
 
-[Restrictfiledownloadinternetexplorerprocesses](/windows/client-management/mdm/policy-csp-internetexplorer#internetexplorer-restrictfiledownloadinternetexplorerprocesses)
+[RestrictFileDownloadInternetExplorerProcesses](/windows/client-management/mdm/policy-csp-internetexplorer#internetexplorer-restrictfiledownloadinternetexplorerprocesses)
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Lesen/Schreiben
@@ -2851,10 +2851,10 @@ Zugriffstyp: Lesen/Schreiben
 
 </dd> <dt>
 
-[Scriptedwindowsecurityrestrictionsinternetexplorerprocesses](/windows/client-management/mdm/policy-csp-internetexplorer#internetexplorer-scriptedwindowsecurityrestrictionsinternetexplorerprocesses)
+[ScriptedWindowSecurityRestrictionsInternetExplorerProcesses](/windows/client-management/mdm/policy-csp-internetexplorer#internetexplorer-scriptedwindowsecurityrestrictionsinternetexplorerprocesses)
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Lesen/Schreiben
@@ -2862,10 +2862,10 @@ Zugriffstyp: Lesen/Schreiben
 
 </dd> <dt>
 
-[Searchproviderlist](/windows/client-management/mdm/policy-csp-internetexplorer#internetexplorer-searchproviderlist)
+[SearchProviderList](/windows/client-management/mdm/policy-csp-internetexplorer#internetexplorer-searchproviderlist)
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Lesen/Schreiben
@@ -2873,10 +2873,10 @@ Zugriffstyp: Lesen/Schreiben
 
 </dd> <dt>
 
-[Securityzonesuseonlymachinesettings](/windows/client-management/mdm/policy-csp-internetexplorer#internetexplorer-securityzonesuseonlymachinesettings)
+[SecurityZonesUseOnlyMachineSettings](/windows/client-management/mdm/policy-csp-internetexplorer#internetexplorer-securityzonesuseonlymachinesettings)
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Lesen/Schreiben
@@ -2884,10 +2884,10 @@ Zugriffstyp: Lesen/Schreiben
 
 </dd> <dt>
 
-[Specifyuseofaktivexinstallerservice](/windows/client-management/mdm/policy-csp-internetexplorer#internetexplorer-specifyuseofactivexinstallerservice)
+[SpecifyUseOfActiveXInstallerService](/windows/client-management/mdm/policy-csp-internetexplorer#internetexplorer-specifyuseofactivexinstallerservice)
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Lesen/Schreiben
@@ -2895,10 +2895,10 @@ Zugriffstyp: Lesen/Schreiben
 
 </dd> <dt>
 
-[Treuhändsiteszoneallowaccesstodatasources](/windows/client-management/mdm/policy-csp-internetexplorer#internetexplorer-trustedsiteszoneallowaccesstodatasources)
+[TrustedSitesZoneAllowAccessToDataSources](/windows/client-management/mdm/policy-csp-internetexplorer#internetexplorer-trustedsiteszoneallowaccesstodatasources)
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Lesen/Schreiben
@@ -2906,10 +2906,10 @@ Zugriffstyp: Lesen/Schreiben
 
 </dd> <dt>
 
-[Treudsiteszoneallowautomaticpromptingforactivexcontrols](/windows/client-management/mdm/policy-csp-internetexplorer#internetexplorer-trustedsiteszoneallowautomaticpromptingforactivexcontrols)
+[TrustedSitesZoneAllowAutomaticPromptingForActiveXControls](/windows/client-management/mdm/policy-csp-internetexplorer#internetexplorer-trustedsiteszoneallowautomaticpromptingforactivexcontrols)
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Lesen/Schreiben
@@ -2917,10 +2917,10 @@ Zugriffstyp: Lesen/Schreiben
 
 </dd> <dt>
 
-[Treuhändsiteszoneallowautomaticpromptingforfiledownloads](/windows/client-management/mdm/policy-csp-internetexplorer#internetexplorer-trustedsiteszoneallowautomaticpromptingforfiledownloads)
+[TrustedSitesZoneAllowAutomaticPromptingForFileDownloads](/windows/client-management/mdm/policy-csp-internetexplorer#internetexplorer-trustedsiteszoneallowautomaticpromptingforfiledownloads)
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Lesen/Schreiben
@@ -2928,10 +2928,10 @@ Zugriffstyp: Lesen/Schreiben
 
 </dd> <dt>
 
-[Treuhändsiteszoneallowfontdownloads](/windows/client-management/mdm/policy-csp-internetexplorer#internetexplorer-trustedsiteszoneallowfontdownloads)
+[TrustedSitesZoneAllowFontDownloads](/windows/client-management/mdm/policy-csp-internetexplorer#internetexplorer-trustedsiteszoneallowfontdownloads)
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Lesen/Schreiben
@@ -2939,10 +2939,10 @@ Zugriffstyp: Lesen/Schreiben
 
 </dd> <dt>
 
-[Treuhänder-siteszonezuzugssprivilegedsites](/windows/client-management/mdm/policy-csp-internetexplorer#internetexplorer-trustedsiteszoneallowlessprivilegedsites)
+[TrustedSitesZoneAllowLessPrivilegedSites](/windows/client-management/mdm/policy-csp-internetexplorer#internetexplorer-trustedsiteszoneallowlessprivilegedsites)
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Lesen/Schreiben
@@ -2950,10 +2950,10 @@ Zugriffstyp: Lesen/Schreiben
 
 </dd> <dt>
 
-[Treuhändsiteszoneallownetframeworkreliantcomponents](/windows/client-management/mdm/policy-csp-internetexplorer#internetexplorer-trustedsiteszoneallownetframeworkreliantcomponents)
+[TrustedSitesZoneAllowNETFrameworkRelantComponents](/windows/client-management/mdm/policy-csp-internetexplorer#internetexplorer-trustedsiteszoneallownetframeworkreliantcomponents)
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Lesen/Schreiben
@@ -2961,10 +2961,10 @@ Zugriffstyp: Lesen/Schreiben
 
 </dd> <dt>
 
-[Treuhändsiteszoneallowscriptlets](/windows/client-management/mdm/policy-csp-internetexplorer#internetexplorer-trustedsiteszoneallowscriptlets)
+[TrustedSitesZoneAllowScriptlets](/windows/client-management/mdm/policy-csp-internetexplorer#internetexplorer-trustedsiteszoneallowscriptlets)
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Lesen/Schreiben
@@ -2972,10 +2972,10 @@ Zugriffstyp: Lesen/Schreiben
 
 </dd> <dt>
 
-[Treuhändsiteszoneallowsmartscreenie](/windows/client-management/mdm/policy-csp-internetexplorer#internetexplorer-trustedsiteszoneallowsmartscreenie)
+[TrustedSitesZoneAllowSmartScreenIE](/windows/client-management/mdm/policy-csp-internetexplorer#internetexplorer-trustedsiteszoneallowsmartscreenie)
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Lesen/Schreiben
@@ -2983,10 +2983,10 @@ Zugriffstyp: Lesen/Schreiben
 
 </dd> <dt>
 
-[Treuhändsiteszonezuzugserdatapersistenz](/windows/client-management/mdm/policy-csp-internetexplorer#internetexplorer-trustedsiteszoneallowuserdatapersistence)
+[TrustedSitesZoneAllowUserDataPersistence](/windows/client-management/mdm/policy-csp-internetexplorer#internetexplorer-trustedsiteszoneallowuserdatapersistence)
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Lesen/Schreiben
@@ -2994,10 +2994,10 @@ Zugriffstyp: Lesen/Schreiben
 
 </dd> <dt>
 
-[Treuhändsiteszonedonotrunantimalwareagainstactivexcontrols](/windows/client-management/mdm/policy-csp-internetexplorer#internetexplorer-trustedsiteszonedonotrunantimalwareagainstactivexcontrols)
+[TrustedSitesZoneDoNotRunAntimalware HexainstActiveXControls](/windows/client-management/mdm/policy-csp-internetexplorer#internetexplorer-trustedsiteszonedonotrunantimalwareagainstactivexcontrols)
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Lesen/Schreiben
@@ -3005,10 +3005,10 @@ Zugriffstyp: Lesen/Schreiben
 
 </dd> <dt>
 
-Treuhändsiteszonedontrunantimalwareprogramsagainstactivexcontrols
+TrustedSitesZoneDontRunAntimalwareProgramsOnlineinstActiveXControls
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Lesen/Schreiben
@@ -3016,10 +3016,10 @@ Zugriffstyp: Lesen/Schreiben
 
 </dd> <dt>
 
-[Treuhändsiteszoneinitializeandscriptactivexcontrols](/windows/client-management/mdm/policy-csp-internetexplorer#internetexplorer-trustedsiteszoneinitializeandscriptactivexcontrols)
+[TrustedSitesZoneInitializeAndScriptActiveXControls](/windows/client-management/mdm/policy-csp-internetexplorer#internetexplorer-trustedsiteszoneinitializeandscriptactivexcontrols)
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Lesen/Schreiben
@@ -3027,10 +3027,10 @@ Zugriffstyp: Lesen/Schreiben
 
 </dd> <dt>
 
-Treuhändsiteszoneinitializeandscriptactivexcontrolsnotmarkedassafe
+TrustedSitesZoneInitializeAndScriptActiveXControlsNotMarkedAsSafe
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Lesen/Schreiben
@@ -3038,10 +3038,10 @@ Zugriffstyp: Lesen/Schreiben
 
 </dd> <dt>
 
-Treuhändsiteszoneinitializeandscriptactivexcontrolsnotmarkedsafe
+TrustedSitesZoneInitializeAndScriptActiveXControlsNotMarkedSafe
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Lesen/Schreiben
@@ -3049,10 +3049,10 @@ Zugriffstyp: Lesen/Schreiben
 
 </dd> <dt>
 
-[Treudsiteszonejava-Berechtigungen](/windows/client-management/mdm/policy-csp-internetexplorer#internetexplorer-trustedsiteszonejavapermissions)
+[TrustedSitesZoneJavaPermissions](/windows/client-management/mdm/policy-csp-internetexplorer#internetexplorer-trustedsiteszonejavapermissions)
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Lesen/Schreiben
@@ -3060,10 +3060,10 @@ Zugriffstyp: Lesen/Schreiben
 
 </dd> <dt>
 
-[Treuhändsiteszonumavigatewindowsandframes](/windows/client-management/mdm/policy-csp-internetexplorer#internetexplorer-trustedsiteszonenavigatewindowsandframes)
+[TrustedSitesZoneNavigateWindowsAndFrames](/windows/client-management/mdm/policy-csp-internetexplorer#internetexplorer-trustedsiteszonenavigatewindowsandframes)
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Lesen/Schreiben
@@ -3077,10 +3077,10 @@ Zugriffstyp: Lesen/Schreiben
 
 | Anforderung | Wert |
 |-------------------------------------|------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows 10 \[ -Desktop-Apps\]<br/>                                                    |
+| Unterstützte Mindestversion (Client)<br/> | \[Windows 10 Nur Desktop-Apps\]<br/>                                                    |
 | Unterstützte Mindestversion (Server)<br/> | Nicht unterstützt<br/>                                                                      |
-| Namespace<br/>                | Root \\ CIMV2 \\ MDM- \\ dmmap<br/>                                                             |
-| MOF<br/>                      | <dl> <dt>Dmwmibridgeprov. MOF</dt> </dl> |
+| Namespace<br/>                | Root \\ cimv2 \\ mdm \\ dmmap<br/>                                                             |
+| MOF<br/>                      | <dl> <dt>DMWmiBridgeProv.mof</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>DMWmiBridgeProv.dll</dt> </dl> |
 
 

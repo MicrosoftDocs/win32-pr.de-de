@@ -1,9 +1,9 @@
 ---
-title: 'Samplegrad:: samplegrad (S, float, float, float, int, float)-Funktion für Texture2DArray'
-description: Erfahren Sie, wie diese Funktion eine Textur Abtast, wobei ein Farbverlauf verwendet wird, um die Art und Weise zu beeinflussen, in der der Beispiel Speicherort berechnet wird Für Texture2DArray.
+title: SampleGrad::SampleGrad(S,float,float,float,int,float)-Funktion für Texture2DArray
+description: Erfahren Sie, wie diese Funktion eine Textur abtast und dabei einen Farbverlauf verwendet, um die Berechnung des Stichprobenspeicherorts zu beeinflussen, wobei ein optionaler Wert zum Zusammenbinden von LOD-Werten (Sample Level of Detail) verwendet wird. Für Texture2DArray.
 ms.assetid: CBC940D5-FC09-498D-9C7A-3CBAB2EC2D4D
 keywords:
-- Samplegrad-Funktion HLSL
+- SampleGrad-Funktion HLSL
 topic_type:
 - apiref
 api_name:
@@ -13,16 +13,16 @@ api_type:
 ms.topic: reference
 ms.date: 05/31/2018
 api_location: ''
-ms.openlocfilehash: 032d2b228800ffca654704c85a72d5ada76e65ef
-ms.sourcegitcommit: 168d11879cb9fd89d26f826482725c0a626be00f
+ms.openlocfilehash: abb3b714622550315a714b314772f7002872ee71863e12db234db4b6794aeadc
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/16/2021
-ms.locfileid: "104982764"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119043438"
 ---
-# <a name="samplegradsamplegradsfloatfloatfloatintfloat-function-for-texture2darray"></a>Samplegrad:: samplegrad (S, float, float, float, int, float)-Funktion für Texture2DArray
+# <a name="samplegradsamplegradsfloatfloatfloatintfloat-function-for-texture2darray"></a>SampleGrad::SampleGrad(S,float,float,float,int,float)-Funktion für Texture2DArray
 
-Verwendet einen Farbverlauf, um die Art und Weise zu beeinflussen, wie der Beispiel Speicherort berechnet wird, mit einem optionalen Wert, mit dem Samplingrate-Werte (LOD-Werte) fixiert werden.
+Stichproben einer Textur, wobei ein Farbverlauf verwendet wird, um die Berechnung der Stichprobenposition zu beeinflussen, mit einem optionalen Wert zum Zusammenbinden von LOD-Werten (Sample Level of Detail).
 
 ## <a name="syntax"></a>Syntax
 
@@ -47,18 +47,18 @@ DXGI_FORMAT SampleGrad(
 *S* \[ in\]
 </dt> <dd>
 
-Typ: **samplerstate**
+Typ: **SamplerState**
 
-Ein [samplerzustand](dx-graphics-hlsl-sampler.md). Dies ist ein Objekt, das in einer Effekt Datei deklariert wurde, die Zustands Zuweisungen enthält.
+Ein [Samplerzustand.](dx-graphics-hlsl-sampler.md) Dies ist ein Objekt, das in einer Effektdatei deklariert ist, die Zustandszuweisungen enthält.
 
 </dd> <dt>
 
-*Speicherort* \[ in\]
+*Standort* \[ In\]
 </dt> <dd>
 
 Typ: **float**
 
-Texturkoordinaten Der Argumenttyp ist vom Textur Objekttyp abhängig.
+Texturkoordinaten Der Argumenttyp ist vom Texturobjekttyp abhängig.
 
 
 
@@ -66,8 +66,8 @@ Texturkoordinaten Der Argumenttyp ist vom Textur Objekttyp abhängig.
 |----------------------------------------|----------------|
 | Texture1D                              | float          |
 | Texture1DArray, Texture2D              | float2         |
-| Texture2DArray, Texture3D, texturecube | float3         |
-| Texturecubearray                       | float4         |
+| Texture2DArray, Texture3D, TextureCube | float3         |
+| TextureCubeArray                       | float4         |
 
 
 
@@ -80,7 +80,7 @@ Texturkoordinaten Der Argumenttyp ist vom Textur Objekttyp abhängig.
 
 Typ: **float**
 
-Die Änderungs Rate der Oberflächengeometrie in der x-Richtung. Der Argumenttyp ist vom Textur Objekttyp abhängig.
+Die Änderungsrate der Oberflächengeometrie in x Richtung. Der Argumenttyp ist vom Texturobjekttyp abhängig.
 
 
 
@@ -88,7 +88,7 @@ Die Änderungs Rate der Oberflächengeometrie in der x-Richtung. Der Argumenttyp
 |------------------------------------------|----------------|
 | Texture1D, Texture1DArray                | float          |
 | Texture2D, Texture2DArray                | float2         |
-| Texture3D, texturecube, texturecubearray | float3         |
+| Texture3D, TextureCube, TextureCubeArray | float3         |
 | Texture2DMS, Texture2DMSArray            | Nicht unterstützt  |
 
 
@@ -97,12 +97,12 @@ Die Änderungs Rate der Oberflächengeometrie in der x-Richtung. Der Argumenttyp
 
 </dd> <dt>
 
-Nicht mehr  \[ in\]
+*DDY* \[ In\]
 </dt> <dd>
 
 Typ: **float**
 
-Die Änderungs Rate der Oberflächengeometrie in der y-Richtung. Der Argumenttyp ist vom Textur Objekttyp abhängig.
+Die Änderungsrate der Oberflächengeometrie in y-Richtung. Der Argumenttyp ist vom Texturobjekttyp abhängig.
 
 
 
@@ -110,7 +110,7 @@ Die Änderungs Rate der Oberflächengeometrie in der y-Richtung. Der Argumenttyp
 |------------------------------------------|----------------|
 | Texture1D, Texture1DArray                | float          |
 | Texture2D, Texture2DArray                | float2         |
-| Texture3D, texturecube, texturecubearray | float3         |
+| Texture3D, TextureCube, TextureCubeArray | float3         |
 | Texture2DMS, Texture2DMSArray            | Nicht unterstützt  |
 
 
@@ -119,12 +119,12 @@ Die Änderungs Rate der Oberflächengeometrie in der y-Richtung. Der Argumenttyp
 
 </dd> <dt>
 
-*Offset* \[ in\]
+*Offset* \[ In\]
 </dt> <dd>
 
 Typ: **int**
 
-Ein optionaler Offset der Textur Koordinate, der für jeden Textur Objekttyp verwendet werden kann. der Offset wird vor der Stichprobenentnahme auf den Speicherort angewendet. Verwenden Sie einen Offset nur bei einer ganzzahligen miplevel. Andernfalls erhalten Sie möglicherweise Ergebnisse, die nicht gut in Hardware übersetzt werden. Der Argumenttyp ist vom Textur Objekttyp abhängig. Weitere Informationen finden Sie unter [Anwenden von ganzzahligen Offsets](dx-graphics-hlsl-to-sample.md).
+Ein optionaler Texturkoordinatenoffset, der für jeden Texturobjekttyp verwendet werden kann. Der Offset wird vor der Stichprobenentnahme auf den Speicherort angewendet. Verwenden Sie einen Offset nur auf einem ganzzahligen Miplevel. Andernfalls erhalten Sie möglicherweise Ergebnisse, die sich nicht gut in die Hardware übersetzen lassen. Der Argumenttyp ist vom Texturobjekttyp abhängig. Weitere Informationen finden Sie unter [Anwenden von ganzzahligen Offsets.](dx-graphics-hlsl-to-sample.md)
 
 
 
@@ -133,7 +133,7 @@ Ein optionaler Offset der Textur Koordinate, der für jeden Textur Objekttyp ver
 | Texture1D, Texture1DArray     | INT            |
 | Texture2D, Texture2DArray     | int2           |
 | Texture3D                     | int3           |
-| Texturecube, texturecubearray | Nicht unterstützt  |
+| TextureCube, TextureCubeArray | Nicht unterstützt  |
 
 
 
@@ -141,26 +141,26 @@ Ein optionaler Offset der Textur Koordinate, der für jeden Textur Objekttyp ver
 
 </dd> <dt>
 
-*Klammer* \[ in\]
+*Klammer* \[ In\]
 </dt> <dd>
 
 Typ: **float**
 
-Ein optionaler Wert zum Einspannen von Sample-Lod-Werten. Wenn Sie beispielsweise 2.0 f als Klammer Wert übergeben, stellen Sie sicher, dass kein einzelnes Beispiel auf eine MIP-Ebene kleiner als 2.0 f zugreift.
+Ein optionaler Wert zum Klammern von LOD-Beispielwerten. Wenn Sie beispielsweise 2,0f für den Klammerwert übergeben, stellen Sie sicher, dass keine einzelne Stichprobe auf eine Mip-Ebene kleiner als 2,0f zugreift.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Typ: **[ **DXGI- \_ Format**](/windows/desktop/api/dxgiformat/ne-dxgiformat-dxgi_format)**
+Typ: **[ **DXGI \_ FORMAT**](/windows/desktop/api/dxgiformat/ne-dxgiformat-dxgi_format)**
 
-Das Textur Format, bei dem es sich um einen der im [**DXGI- \_ Format**](/windows/desktop/api/dxgiformat/ne-dxgiformat-dxgi_format)aufgelisteten typisierten Werte handelt.
+Das Texturformat, bei dem es sich um einen der typisierten Werte handelt, die in [**DXGI \_ FORMAT**](/windows/desktop/api/dxgiformat/ne-dxgiformat-dxgi_format)aufgeführt sind.
 
 ## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[Samplegrad-Methoden](texture2darray-samplegrad.md)
+[SampleGrad-Methoden](texture2darray-samplegrad.md)
 </dt> <dt>
 
 [**Texture2DArray**](sm5-object-texture2darray.md)

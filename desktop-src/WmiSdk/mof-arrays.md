@@ -1,24 +1,24 @@
 ---
-description: Ein Array ist eine indizierte Liste mit Datenwerten desselben Datentyps, auf die Sie verweisen können. Zusätzlich zu Zeichen folgen-und numerischen Arrays unterstützt MOF auch Arrays von eingebetteten Objekten und verweisen.
+description: Ein Array ist eine indizierte Liste von Datenwerten, die denselben Datentyp aufweisen, auf den Sie verweisen können. Zusätzlich zu Zeichenfolgen- und numerischen Arrays unterstützt MOF Arrays eingebetteter Objekte und Verweise.
 ms.assetid: f63c222f-499d-4776-8901-65cb8b142d2b
 ms.tgt_platform: multiple
 title: MOF-Arrays
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 0443f2ef3b3fe8fca398e281de71b0927a4f06f6
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 1231b89302e15d5a7467ab7ff99d23b200badd67e6c5c95054c90b84554548d9
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104214982"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118992800"
 ---
 # <a name="mof-arrays"></a>MOF-Arrays
 
-Ein Array ist eine indizierte Liste mit Datenwerten desselben Datentyps, auf die Sie verweisen können. Zusätzlich zu Zeichen folgen-und numerischen Arrays unterstützt MOF auch Arrays von eingebetteten Objekten und verweisen.
+Ein Array ist eine indizierte Liste von Datenwerten, die denselben Datentyp aufweisen, auf den Sie verweisen können. Zusätzlich zu Zeichenfolgen- und numerischen Arrays unterstützt MOF Arrays eingebetteter Objekte und Verweise.
 
 Die folgenden Regeln definieren ein MOF-Array:
 
--   Die nach dem Eigenschaften Bezeichner verwendeten Klammern geben ein Array in einer Klassendefinition an.
+-   Klammern, die nach dem Eigenschaftenbezeichner verwendet werden, geben ein Array in einer Klassendefinition an.
 
     ``` syntax
     Class ArrayDataSample1
@@ -28,7 +28,7 @@ Die folgenden Regeln definieren ein MOF-Array:
     ```
 
 -   Alle Arrays müssen eindimensional sein.
--   Arrays können unbegrenzt sein oder eine explizite Größe aufweisen.
+-   Arrays können ungebunden sein oder eine explizite Größe aufweisen.
 
     ``` syntax
     Class MyClass
@@ -38,7 +38,7 @@ Die folgenden Regeln definieren ein MOF-Array:
     };
     ```
 
-    WMI implementiert begrenzte und ungebundene Arrays als **SAFEARRAY** -Strukturen, sodass WMI die Array Dimensionen zur Laufzeit variieren kann. Wenn Sie ein Array mit einer expliziten Größe deklarieren, wird die Größe von WMI als Qualifizierer gespeichert, und die Größe wird als vorgeschlagene maximale Größe behandelt. Allerdings kann WMI die Größe ggf. erweitern. Das Ändern der expliziten Größe hat keine Auswirkung auf die eigentlichen Daten.
+    WMI implementiert umgrenzte und ungebundene Arrays als **SAFEARRAY-Strukturen,** die es WMI ermöglichen, Arraydimensionen zur Laufzeit zu variieren. Wenn Sie ein Array mit einer expliziten Größe deklarieren, speichert WMI die Größe als Qualifizierer und behandelt die Größe als vorgeschlagene maximale Größe. WMI kann die Größe jedoch bei Bedarf erweitern. Das Ändern der expliziten Größe hat keine Auswirkungen auf die tatsächlichen Daten.
 
 -   Arrays werden initialisiert, indem Werte des entsprechenden Typs in einer durch Trennzeichen getrennten Liste angegeben werden.
 
@@ -51,9 +51,9 @@ Die folgenden Regeln definieren ein MOF-Array:
     };
     ```
 
--   Ein Array von verweisen wird als Array von Objekt Pfad Zeichenfolgen deklariert.
+-   Ein Array von Verweisen wird als Array von Objektpfadzeichenfolgen deklariert.
 
-    Wenn Sie eine Objekt Pfad Zeichenfolge deklarieren, dürfen Sie keinen Leerraum zwischen den Elementen des Objekt Pfads platzieren. Im folgenden Beispiel wird beschrieben, wie Sie einen Objekt Pfad Verweis deklarieren.
+    Wenn Sie eine Objektpfadzeichenfolge deklarieren, sollten Sie zwischen den Elementen des Objektpfads keinen Leerraum platzieren. Im folgenden Beispiel wird beschrieben, wie ein Objektpfadverweis deklariert wird.
 
     ``` syntax
     Class ClassWithRefArray
@@ -69,10 +69,10 @@ Die folgenden Regeln definieren ein MOF-Array:
         };
     ```
 
--   Sie können ein Array als Parameter für eine Methode verwenden, aber nicht als Rückgabewert für einen Eingabe-oder Eingabe-/Ausgabeparameter.
+-   Sie können ein Array als Parameter für eine Methode verwenden, jedoch nicht als Rückgabewert für einen Eingabe- oder Eingabe-/Ausgabeparameter.
 -   Alle Elemente in einem Array werden als Werte desselben Typs erstellt.
 
-    Wenn die Elemente eines Arrays den **Objekttyp** haben, können Sie alle Arten von Objekten im Array platzieren. Wenn Sie dagegen einen bestimmten Objekttyp deklarieren, lässt WMI nur Objekte dieser Klasse oder Unterklasse im Array zu. In den folgenden Beispielen werden Array Deklarationen veranschaulicht,  die den-Objekttyp verwenden.
+    Wenn die Elemente eines Arrays vom **Objekttyp** sind, können Sie jede Art von Objekt im Array platzieren. Wenn Sie dagegen einen bestimmten Objekttyp deklarieren, lässt WMI nur Objekte dieser Klasse oder Unterklasse im Array zu. Die folgenden Beispiele zeigen Arraydeklarationen, die die Verwendung des **Objekttyps** enthalten.
 
     ``` syntax
     Class EmbedClass

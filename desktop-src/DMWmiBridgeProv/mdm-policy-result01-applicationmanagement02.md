@@ -1,6 +1,6 @@
 ---
 title: MDM_Policy_Result01_ApplicationManagement02-Klasse
-description: Die MDM \_ Policy \_ Result01 \_ ApplicationManagement02-Klasse stellt die verfügbaren Richtlinien zur Anwendungs Verwaltung dar. MDM \_ Policy \_ Result01 \_ ApplicationManagement02-Klasse stellt die verfügbaren Richtlinien zur Anwendungs Verwaltung dar.
+description: Die Mdm \_ Policy \_ Result01 \_ ApplicationManagement02-Klasse stellt die verfügbaren Anwendungsverwaltungsrichtlinien dar. Die Mdm \_ Policy \_ Result01 \_ ApplicationManagement02-Klasse stellt die verfügbaren Anwendungsverwaltungsrichtlinien dar.
 ms.assetid: 141614e4-b2b1-49d9-879c-f6f86bee070c
 keywords:
 - MDM_Policy_Result01_ApplicationManagement02-Klasse
@@ -17,18 +17,18 @@ api_type:
 - DllExport
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 477e4e58216c912aa14ec17b8e5879643e3de83f
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 85f9794e52cd0969855c1e7e9be64ff0849e05fb6e0bc2667a9cfa4196963fbf
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104103880"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119587950"
 ---
-# <a name="mdm_policy_result01_applicationmanagement02-class"></a>MDM- \_ Richtlinie \_ Result01 \_ ApplicationManagement02-Klasse
+# <a name="mdm_policy_result01_applicationmanagement02-class"></a>MDM \_ Policy \_ Result01 \_ ApplicationManagement02-Klasse
 
 \[Einige Informationen beziehen sich auf Vorabversionen, die vor der kommerziellen Freigabe grundlegend geändert werden können. Microsoft übernimmt keine Garantie, weder ausdrücklich noch stillschweigend, für die hier bereitgestellten Informationen.\]
 
-Die **MDM \_ Policy \_ Result01 \_ ApplicationManagement02** -Klasse stellt die verfügbaren Richtlinien zur Anwendungs Verwaltung dar.
+Die **Mdm \_ Policy \_ Result01 \_ ApplicationManagement02-Klasse** stellt die verfügbaren Anwendungsverwaltungsrichtlinien dar.
 
 Die folgende Syntax enthält vereinfachten MOF-Code und schließt alle geerbten Eigenschaften ein.
 
@@ -53,13 +53,13 @@ class MDM_Policy_Result01_ApplicationManagement02
 
 ## <a name="members"></a>Member
 
-Die **MDM- \_ Richtlinie \_ Result01 \_ ApplicationManagement02** -Klasse verfügt über diese Typen von Membern:
+Die **MDM \_ Policy \_ Result01 \_ ApplicationManagement02-Klasse** verfügt über die folgenden Membertypen:
 
 -   [Eigenschaften](#properties)
 
 ### <a name="properties"></a>Eigenschaften
 
-Die **MDM- \_ Richtlinie \_ Result01 \_ ApplicationManagement02** -Klasse verfügt über diese Eigenschaften.
+Die **MDM \_ Policy \_ Result01 \_ ApplicationManagement02-Klasse** verfügt über diese Eigenschaften.
 
 <dl> <dt>
 
@@ -74,7 +74,7 @@ Zugriffstyp: Lesen/Schreiben
 
 </dd> <dt>
 
-[Allowappstoreautoupdate](/windows/client-management/mdm/policy-csp-applicationmanagement#applicationmanagement-allowappstoreautoupdate)
+[AllowAppStoreAutoUpdate](/windows/client-management/mdm/policy-csp-applicationmanagement#applicationmanagement-allowappstoreautoupdate)
 </dt> <dd> <dl> <dt>
 
 Datentyp: **sint32**
@@ -85,7 +85,7 @@ Zugriffstyp: Lesen/Schreiben
 
 </dd> <dt>
 
-[Allowdeveloperunlock](/windows/client-management/mdm/policy-csp-applicationmanagement#applicationmanagement-allowdeveloperunlock)
+[AllowDeveloperUnlock](/windows/client-management/mdm/policy-csp-applicationmanagement#applicationmanagement-allowdeveloperunlock)
 </dt> <dd> <dl> <dt>
 
 Datentyp: **sint32**
@@ -96,7 +96,7 @@ Zugriffstyp: Lesen/Schreiben
 
 </dd> <dt>
 
-[Allowgamedvr](/windows/client-management/mdm/policy-csp-applicationmanagement#applicationmanagement-allowgamedvr)
+[AllowGameDVR](/windows/client-management/mdm/policy-csp-applicationmanagement#applicationmanagement-allowgamedvr)
 </dt> <dd> <dl> <dt>
 
 Datentyp: **sint32**
@@ -107,7 +107,7 @@ Zugriffstyp: Lesen/Schreiben
 
 </dd> <dt>
 
-[Allowshareduserappdata](/windows/client-management/mdm/policy-csp-applicationmanagement#applicationmanagement-allowshareduserappdata)
+[AllowSharedUserAppData](/windows/client-management/mdm/policy-csp-applicationmanagement#applicationmanagement-allowshareduserappdata)
 </dt> <dd> <dl> <dt>
 
 Datentyp: **sint32**
@@ -118,7 +118,7 @@ Zugriffstyp: Lesen/Schreiben
 
 </dd> <dt>
 
-[Disablestoreoriginatedapps](/windows/client-management/mdm/policy-csp-applicationmanagement#applicationmanagement-disablestoreoriginatedapps)
+[DisableStoreOriginatedApps](/windows/client-management/mdm/policy-csp-applicationmanagement#applicationmanagement-disablestoreoriginatedapps)
 </dt> <dd> <dl> <dt>
 
 Datentyp: **sint32**
@@ -132,7 +132,7 @@ Zugriffstyp: Lesen/Schreiben
 **InstanceID**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
@@ -141,14 +141,14 @@ Zugriffstyp: Schreibgeschützt
 Qualifizierer: [ **Schlüssel**](/windows/desktop/WmiSdk/key-qualifier)
 </dt> </dl>
 
-Gibt den Namen des übergeordneten Knotens an. Für diese Klasse ist die Zeichenfolge "ApplicationManagement".
+Identifiziert den Namen des übergeordneten Knotens. Für diese Klasse ist die Zeichenfolge "ApplicationManagement".
 
 </dd> <dt>
 
-**ParentID**
+**Parentid**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
@@ -157,11 +157,11 @@ Zugriffstyp: Schreibgeschützt
 Qualifizierer: [ **Schlüssel**](/windows/desktop/WmiSdk/key-qualifier)
 </dt> </dl>
 
-Beschreibt den vollständigen Pfad zum übergeordneten Knoten. Für diese Klasse ist die Zeichenfolge "./Vendor/MSFT/Policy/result".
+Beschreibt den vollständigen Pfad zum übergeordneten Knoten. Für diese Klasse ist die Zeichenfolge "./Vendor/MSFT/Policy/Result".
 
 </dd> <dt>
 
-[Restrictappdatatosystemvolume](/windows/client-management/mdm/policy-csp-applicationmanagement#applicationmanagement-restrictappdatatosystemvolume)
+[RestrictAppDataToSystemVolume](/windows/client-management/mdm/policy-csp-applicationmanagement#applicationmanagement-restrictappdatatosystemvolume)
 </dt> <dd> <dl> <dt>
 
 Datentyp: **sint32**
@@ -172,7 +172,7 @@ Zugriffstyp: Lesen/Schreiben
 
 </dd> <dt>
 
-[Restrictappdesystemvolume](/windows/client-management/mdm/policy-csp-applicationmanagement#applicationmanagement-restrictapptosystemvolume)
+[RestrictAppToSystemVolume](/windows/client-management/mdm/policy-csp-applicationmanagement#applicationmanagement-restrictapptosystemvolume)
 </dt> <dd> <dl> <dt>
 
 Datentyp: **sint32**
@@ -189,19 +189,19 @@ Zugriffstyp: Lesen/Schreiben
 
 | Anforderung | Wert |
 |-------------------------------------|------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows 10 \[ -Desktop-Apps\]<br/>                                                    |
+| Unterstützte Mindestversion (Client)<br/> | \[Windows 10 Nur Desktop-Apps\]<br/>                                                    |
 | Unterstützte Mindestversion (Server)<br/> | Nicht unterstützt<br/>                                                                      |
-| Namespace<br/>                | Root \\ CIMv2 \\ MDM- \\ dmmap<br/>                                                             |
-| MOF<br/>                      | <dl> <dt>Dmwmibridgeprov. MOF</dt> </dl> |
+| Namespace<br/>                | \\Stamm-CIMv2 \\ MDM \\ DMMap<br/>                                                             |
+| MOF<br/>                      | <dl> <dt>DMWmiBridgeProv.mof</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>DMWmiBridgeProv.dll</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[Verwenden von PowerShell-Skripts mit dem WMI-Bridge Anbieter](/windows/client-management/mdm/using-powershell-scripting-with-the-wmi-bridge-provider)
+[Verwenden von PowerShell-Skripts mit dem WMI-Bridge-Anbieter](/windows/client-management/mdm/using-powershell-scripting-with-the-wmi-bridge-provider)
 </dt> </dl>
 
  
