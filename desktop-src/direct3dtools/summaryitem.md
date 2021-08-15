@@ -1,10 +1,10 @@
 ---
-description: Stellt Zusammenfassungs Informationen zu einem Ereignis dar.
+description: Stellt zusammenfassende Informationen zu einem Ereignis dar.
 MS-HAID: vspixengine.SummaryItem
 MSHAttr:
 - PreferredSiteName:MSDN
 - PreferredLib:/library/windows/desktop
-title: Summaryitem-Struktur
+title: SummaryItem-Struktur
 ms.topic: reference
 ms.date: 05/31/2018
 ms.assetid: 5070AD81-804B-48DF-A4D8-7AF1AAC83363
@@ -17,16 +17,16 @@ api_location:
 topic_type:
 - APIRef
 - kbSyntax
-ms.openlocfilehash: 609b0c12512de1f942de3dda9b46496627527f80
-ms.sourcegitcommit: a47bd86f517de76374e4fff33cfeb613eb259a7e
+ms.openlocfilehash: b0ad0c468d2a9ec2c1f4f0c5ec8c7844e80ab2b1d2655781ae0dc6fa11d0ae05
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/06/2021
-ms.locfileid: "104392678"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118985440"
 ---
-# <a name="span-idvspixenginesummaryitemspansummaryitem-structure"></a><span id="vspixengine.summaryitem"></span>Summaryitem-Struktur
+# <a name="span-idvspixenginesummaryitemspansummaryitem-structure"></a><span id="vspixengine.summaryitem"></span>SummaryItem-Struktur
 
-Stellt Zusammenfassungs Informationen zu einem Ereignis dar.
+Stellt zusammenfassende Informationen zu einem Ereignis dar.
 
 ## <a name="syntax"></a>Syntax
 
@@ -38,20 +38,20 @@ Stellt Zusammenfassungs Informationen zu einem Ereignis dar.
 ## <a name="members"></a>Member
 
 **Name**  
-Eine com-Zeichenfolge mit dem Namen des zusammengefassten Ereignisses.
+Eine COM-Zeichenfolge, die den Namen des zusammengefassten Ereignisses enthält.
 
 **Wert**  
-Eine com-Zeichenfolge mit einem Wert, der mit dem Ereignis verknüpft ist.
+Eine COM-Zeichenfolge, die einen Wert enthält, der mit dem Ereignis verknüpft ist.
 
 **ID**  
 Die ID des Ereignisses.
 
-**ParentID**  
-Die ID des übergeordneten Ereignisses, falls vorhanden.
+**Parentid**  
+Die ID des Übergeordneten Ereignisses, falls eine davon ist.
 
 ## <a name="requirements"></a>Anforderungen
 
-<table><colgroup><col style="width: 50%" /><col style="width: 50%" /></colgroup><tbody><tr class="odd"><td><p>Header</p></td><td>Vspixengine. h</td></tr></tbody></table>
+<table><colgroup><col style="width: 50%" /><col style="width: 50%" /></colgroup><tbody><tr class="odd"><td><p>Header</p></td><td>Vspixengine.h</td></tr></tbody></table>
 
  
 

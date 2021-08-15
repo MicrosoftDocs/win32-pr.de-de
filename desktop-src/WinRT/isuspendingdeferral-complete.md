@@ -1,7 +1,7 @@
 ---
-description: Benachrichtigt das System, dass die APP Ihre Daten gespeichert hat und bereit ist, angehalten zu werden.
+description: Benachrichtigt das System, dass die App ihre Daten gespeichert hat und angehalten werden kann.
 ms.assetid: 5C79AFBA-34E6-4C0B-95A0-731E10D8A17A
-title: 'Isuspendingdeferral:: Complete-Methode (Windows. applicationmodel. h)'
+title: ISuspendingDeferral::Complete-Methode (Windows. ApplicationModel.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,16 +13,16 @@ api_type:
 - COM
 api_location:
 - Windows.ApplicationModel.h
-ms.openlocfilehash: 62febd5fac6aab4a0c5ddd7e6a70fa0e3c3f78ca
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 8fb16ae67ad5dcd9324c176a39a0dc9e566638ed960443496a0d556990bd8717
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106356764"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119464400"
 ---
-# <a name="isuspendingdeferralcomplete-method"></a>Isuspendingdeferral:: Complete-Methode
+# <a name="isuspendingdeferralcomplete-method"></a>ISuspendingDeferral::Complete-Methode
 
-Benachrichtigt das System, dass die APP Ihre Daten gespeichert hat und bereit ist, angehalten zu werden.
+Benachrichtigt das System, dass die App ihre Daten gespeichert hat und angehalten werden kann.
 
 ## <a name="syntax"></a>Syntax
 
@@ -39,7 +39,7 @@ Diese Methode hat keine Parameter.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Wenn diese Methode erfolgreich ausgeführt wird, gibt Sie **S \_ OK** zurück. Andernfalls wird ein **HRESULT** -Fehlercode zurückgegeben.
+Wenn diese Methode erfolgreich ist, wird **S \_ OK zurückgegeben.** Andernfalls wird ein **HRESULT-Fehlercode** zurückgegeben.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -49,16 +49,16 @@ Wenn diese Methode erfolgreich ausgeführt wird, gibt Sie **S \_ OK** zurück. A
 |-------------------------------------|---------------------------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows 8<br/>                                                                                    |
 | Unterstützte Mindestversion (Server)<br/> | Windows Server 2012<br/>                                                                          |
-| Header<br/>                   | <dl> <dt>Windows. applicationmodel. h</dt> </dl>   |
-| IDL<br/>                      | <dl> <dt>Windows. applicationmodel. idl</dt> </dl> |
+| Header<br/>                   | <dl> <dt>Windows. ApplicationModel.h</dt> </dl>   |
+| Idl<br/>                      | <dl> <dt>Windows. ApplicationModel.idl</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Isuspendingdeferral**](isuspendingdeferral.md)
+[**ISuspendingDeferral**](isuspendingdeferral.md)
 </dt> </dl>
 
  

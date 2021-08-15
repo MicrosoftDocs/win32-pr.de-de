@@ -1,31 +1,31 @@
 ---
-description: Die Administrator Aktion ist eine Aktion der obersten Ebene, mit der administrative Installationen durchgeführt werden.
+description: Die ADMIN-Aktion ist eine Aktion der obersten Ebene, die zum Ausführen von Administratorinstallationen verwendet wird.
 ms.assetid: 9925a645-5909-42c7-9de8-f908a5e42be9
-title: Administrator Aktion
+title: ADMIN-Aktion
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 00106c9ab7877918e122f1ec9bd201fe30bb68b1
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 785bd69a8de7da1df9a812f7e89d589b6e939b3eedd6b3cecb66bf86407636cc
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "103864508"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119145933"
 ---
-# <a name="admin-action"></a>Administrator Aktion
+# <a name="admin-action"></a>ADMIN-Aktion
 
-Die Administrator Aktion ist eine Aktion der obersten Ebene, mit der [administrative Installationen](administrative-installation.md)durchgeführt werden.
+Die ADMIN-Aktion ist eine Aktion der obersten Ebene, die zum Ausführen [von Administratorinstallationen](administrative-installation.md)verwendet wird.
 
-## <a name="sequence-restrictions"></a>Sequenz Einschränkungen
+## <a name="sequence-restrictions"></a>Sequenzeinschränkungen
 
-Es gibt keine Sequenz Einschränkungen.
+Es gibt keine Sequenzeinschränkungen.
 
-## <a name="actiondata-messages"></a>Aktions Daten Meldungen
+## <a name="actiondata-messages"></a>ActionData-Nachrichten
 
-Es sind keine Aktions Daten Meldungen vorhanden.
+Es sind keine ActionData-Meldungen vorhanden.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Die admin-Aktion wird nicht innerhalb der Aktions Tabellen Sequenz aufgerufen, Windows Installer diese Aktion ausführt, wenn [**msiinstallproduct**](/windows/desktop/api/Msi/nf-msi-msiinstallproducta) mit dem Parameter " *szcommandline* " aufgerufen wird, der auf "action = admin" festgelegt ist, oder die ausführbare Befehlszeilen Datei Msiexec.exe mit dem Befehls Zeilenschalter "/a" aufgerufen wird.
+Die ADMIN-Aktion wird nicht innerhalb der Aktionstabellensequenz aufgerufen, Windows Installer diese Aktion ausführt, wenn [**MsiInstallProduct**](/windows/desktop/api/Msi/nf-msi-msiinstallproducta) aufgerufen wird, wobei der *szCommandLine-Parameter* auf "ACTION=ADMIN" festgelegt ist oder die ausführbare Befehlszeilendatei Msiexec.exe mit dem Befehlszeilenschalter "/a" aufgerufen wird.
 
 ## <a name="related-topics"></a>Zugehörige Themen
 

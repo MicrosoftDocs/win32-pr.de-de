@@ -1,9 +1,9 @@
 ---
-title: LVM_SETOUTLINECOLOR Meldung (kommstrg. h)
-description: Legt die Farbe des Rahmens eines Listenansicht-Steuer Elements fest, wenn der \_ \_ Erweiterte Fenster Stil LVS Ex borderselect festgelegt ist.
+title: LVM_SETOUTLINECOLOR (Commctrl.h)
+description: Legt die Farbe des Rahmens eines Listenansicht-Steuerelements fest, wenn der erweiterte Fensterstil LVS \_ EX \_ BORDERSELECT festgelegt ist.
 ms.assetid: c2b606fa-8d47-4192-94b7-d01c3cfdc514
 keywords:
-- Windows-Steuerelemente für LVM_SETOUTLINECOLOR Meldung
+- LVM_SETOUTLINECOLOR der Windows Steuerelemente
 topic_type:
 - apiref
 api_name:
@@ -14,16 +14,16 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 776cb13479e4d091d394941844691c117a4ebbef
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 5db9f5d53339ecec19fd6f06fcabd3a0471b1c3a569e8856571a98a99675a232
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "103858653"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119217390"
 ---
-# <a name="lvm_setoutlinecolor-message"></a>LVM- \_ setoutlinecolor-Meldung
+# <a name="lvm_setoutlinecolor-message"></a>LVM \_ SETOUTLINECOLOR-Meldung
 
-Legt die Farbe des Rahmens eines Listenansicht-Steuer Elements fest, wenn der erweiterte Fenster Stil [**LVS \_ Ex \_ borderselect**](extended-list-view-styles.md) festgelegt ist.
+Legt die Farbe des Rahmens eines Listenansicht-Steuerelements fest, wenn der [**erweiterte Fensterstil LVS \_ EX \_ BORDERSELECT**](extended-list-view-styles.md) festgelegt ist.
 
 ## <a name="parameters"></a>Parameter
 
@@ -33,16 +33,16 @@ Legt die Farbe des Rahmens eines Listenansicht-Steuer Elements fest, wenn der er
 </dt> <dd>Muss Null sein.</dd> <dt>
 
 *lParam* 
-</dt> <dd>**COLORREF** -Struktur, die die Farbe zum Festlegen des Rahmens angibt.</dd> </dl>
+</dt> <dd>**COLORREF-Struktur,** die die Farbe zum Festlegen des Rahmens angibt.</dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt eine **COLORREF** -Struktur zurück, die die Kontur Farbe enthält.
+Gibt **die COLORREF-Struktur** zurück, die die Konturfarbe enthält.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
 > [!Note]  
-> Um diese Meldung zu verwenden, müssen Sie ein Manifest bereitstellen, das Comclt32.dll Version 6,0 angibt. Weitere Informationen zu Manifesten finden Sie unter [Aktivieren von visuellen Stilen](cookbook-overview.md).
+> Um diese Meldung zu verwenden, müssen Sie ein Manifest angeben, das Comclt32.dll 6.0 an. Weitere Informationen zu Manifesten finden Sie unter [Aktivieren von visuellen Stilen.](cookbook-overview.md)
 
  
 
@@ -52,9 +52,9 @@ Gibt eine **COLORREF** -Struktur zurück, die die Kontur Farbe enthält.
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>                                        |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2003 \[ -Desktop-Apps\]<br/>                                  |
-| Header<br/>                   | <dl> <dt>Kommstrg. h</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur \[ Vista-Desktop-Apps\]<br/>                                        |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2003-Desktop-Apps\]<br/>                                  |
+| Header<br/>                   | <dl> <dt>Commctrl.h</dt> </dl> |
 
 
 

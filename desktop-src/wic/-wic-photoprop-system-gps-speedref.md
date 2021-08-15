@@ -1,23 +1,23 @@
 ---
-description: Die fotometadatenrichtlinie für die System. GPS. speedref-Eigenschaft.
+description: Die Fotometadatenrichtlinie für die System.GPS.SpeedRef-Eigenschaft.
 ms.assetid: 45fea6be-1e63-4244-a93d-d446e315ddd4
-title: System. GPS. speedref-fotometadatenrichtlinie
+title: System.GPS.SpeedRef-Fotometadatenrichtlinie
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 3c454a016dd77345c0a85e0ca3df1ae52694bd81
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 6c7b60a0c8decaf5ecc30f9017a0aadc61bb9fe4814240fb7ab2e022d6a2873f
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106363636"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119549490"
 ---
-# <a name="systemgpsspeedref-photo-metadata-policy"></a>System. GPS. speedref-fotometadatenrichtlinie
+# <a name="systemgpsspeedref-photo-metadata-policy"></a>System.GPS.SpeedRef-Fotometadatenrichtlinie
 
-Die fotometadatenrichtlinie für die [System. GPS. speedref](../properties/props-system-gps-speedref.md) -Eigenschaft.
+Die Fotometadatenrichtlinie für die [System.GPS.SpeedRef-Eigenschaft.](../properties/props-system-gps-speedref.md)
 
-### <a name="pkey"></a>Pkey
+### <a name="pkey"></a>PKEY
 
-Pkey \_ GPS- \_ speedref
+PKEY \_ GPS \_ SpeedRef
 
 ### <a name="containers"></a>Container
 
@@ -27,54 +27,54 @@ JPEG, TIFF
 
 Nein
 
-### <a name="output-propvariant-type"></a>Ausgabe-PROPVARIANT-Typ
+### <a name="output-propvariant-type"></a>PROPVARIANT-Ausgabetyp
 
 VT \_ LPWSTR
 
-### <a name="input-propvariant-type"></a>Eingabe-PROPVARIANT-Typ
+### <a name="input-propvariant-type"></a>Propvariant-Eingabetyp
 
-VT \_ LPWSTR wird bevorzugt, aber VT \_ LPSTR wird ebenfalls akzeptiert.
+VT \_ LPWSTR wird bevorzugt, aber auch VT \_ LPSTR wird akzeptiert.
 
-### <a name="conflict-resolution-policy"></a>Richtlinie zur Konfliktlösung
+### <a name="conflict-resolution-policy"></a>Konfliktlösungsrichtlinie
 
-Werte aus unterschiedlichen Schemas sind abgestimmt.
+Werte aus unterschiedlichen Schemas werden abgestimmt.
 
 ### <a name="jpeg-policies"></a>JPEG-Richtlinien
 
-### <a name="read-paths"></a>Pfade lesen
-
-
-
-| Auftrag | Pfad                      | Datenträger Format |
-|-------|---------------------------|-------------|
-| 1     | /App1/IFD/GPS/{ushort = 12} | ascii       |
-| 2     | /XMP/EXIF: gpsspeedref     | Unicode     |
-
-
-
- 
-
-### <a name="write-paths"></a>Schreib Pfade
-
-
-
-| Auftrag | Pfad                      | Datenträger Format |
-|-------|---------------------------|-------------|
-| 1     | /App1/IFD/GPS/{ushort = 12} | ascii       |
-| 2     | /XMP/EXIF: gpsspeedref     | Unicode     |
-
-
-
- 
-
-### <a name="remove-paths"></a>Pfade entfernen
+### <a name="read-paths"></a>Lesepfade
 
 
 
 | Auftrag | Pfad                      | Datenträgerformat |
 |-------|---------------------------|-------------|
-| 1     | /App1/IFD/GPS/{ushort = 12} |             |
-| 2     | /XMP/EXIF: gpsspeedref     |             |
+| 1     | /app1/ifd/gps/{ushort=12} | ascii       |
+| 2     | /xmp/exif:GPSSpeedRef     | Unicode     |
+
+
+
+ 
+
+### <a name="write-paths"></a>Schreibpfade
+
+
+
+| Auftrag | Pfad                      | Datenträgerformat |
+|-------|---------------------------|-------------|
+| 1     | /app1/ifd/gps/{ushort=12} | ascii       |
+| 2     | /xmp/exif:GPSSpeedRef     | Unicode     |
+
+
+
+ 
+
+### <a name="remove-paths"></a>Entfernen von Pfaden
+
+
+
+| Auftrag | Pfad                      | Datenträgerformat |
+|-------|---------------------------|-------------|
+| 1     | /app1/ifd/gps/{ushort=12} |             |
+| 2     | /xmp/exif:gpsspeedref     |             |
 
 
 
@@ -82,52 +82,52 @@ Werte aus unterschiedlichen Schemas sind abgestimmt.
 
 ### <a name="tiff-policies"></a>TIFF-Richtlinien
 
-### <a name="read-paths"></a>Pfade lesen
+### <a name="read-paths"></a>Lesepfade
 
 
 
 | Auftrag | Pfad                      |         |
 |-------|---------------------------|---------|
-| 1     | /IFD/GPS/{ushort = 12}      | ascii   |
-| 2     | /IFD/XMP/EXIF: gpsspeedref | Unicode |
+| 1     | /ifd/gps/{ushort=12}      | ascii   |
+| 2     | /ifd/xmp/exif:GPSSpeedRef | Unicode |
 
 
 
  
 
-### <a name="write-paths"></a>Schreib Pfade
+### <a name="write-paths"></a>Schreibpfade
 
 
 
-| Auftrag | Pfad                      | Datenträger Format |
+| Auftrag | Pfad                      | Datenträgerformat |
 |-------|---------------------------|-------------|
-| 1     | /IFD/GPS/{ushort = 12}      | ascii       |
-| 2     | /IFD/XMP/EXIF: gpsspeedref | Unicode     |
+| 1     | /ifd/gps/{ushort=12}      | ascii       |
+| 2     | /ifd/xmp/exif:GPSSpeedRef | Unicode     |
 
 
 
  
 
-### <a name="remove-paths"></a>Pfade entfernen
+### <a name="remove-paths"></a>Entfernen von Pfaden
 
 
 
 | Auftrag | Pfad                      |
 |-------|---------------------------|
-| 1     | /IFD/GPS/{ushort = 12}      |
-| 2     | /IFD/XMP/EXIF: gpsspeedref |
+| 1     | /ifd/gps/{ushort=12}      |
+| 2     | /ifd/xmp/exif:gpsspeedref |
 
 
 
  
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
 <dl> <dt>
 
-[System. GPS. speedref](../properties/props-system-gps-speedref.md)
+[System.GPS.SpeedRef](../properties/props-system-gps-speedref.md)
 </dt> </dl>
 
  

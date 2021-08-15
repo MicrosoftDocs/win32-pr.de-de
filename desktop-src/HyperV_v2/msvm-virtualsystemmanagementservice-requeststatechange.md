@@ -1,5 +1,5 @@
 ---
-description: 'RequestStateChange-Methode der Msvm_VirtualSystemManagementService Klasse : Fordert eine Zustandsänderung an.'
+description: 'RequestStateChange-Methode der Msvm_VirtualSystemManagementService-Klasse: Fordert eine Zustandsänderung an.'
 ms.assetid: 3dafc143-4033-4137-9e90-2965c59d9a79
 title: RequestStateChange-Methode der Msvm_VirtualSystemManagementService-Klasse
 ms.topic: reference
@@ -13,12 +13,12 @@ api_type:
 - COM
 api_location:
 - vmms.exe
-ms.openlocfilehash: 27658d49f64473ff28471ba0bc968235a0258d5e
-ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
+ms.openlocfilehash: 908641d431ba67218c7c14b800ffff18299a878d7b0365987a2b938842b90977
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2021
-ms.locfileid: "108118658"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119426220"
 ---
 # <a name="requeststatechange-method-of-the-msvm_virtualsystemmanagementservice-class"></a>RequestStateChange-Methode der Msvm \_ VirtualSystemManagementService-Klasse
 
@@ -44,7 +44,7 @@ uint32 RequestStateChange(
 *RequestedState* \[ In\]
 </dt> <dd>
 
-Der neue Zustand. Die Informationen werden in der **RequestedState-Eigenschaft** der -Instanz platziert, wenn der Rückgabecode der **RequestStateChange-Methode** 0 oder 4096 ist. Weitere Informationen finden Sie in der Beschreibung der **Eigenschaften EnabledState** und **RequestedState** für das Element. Dies muss einer der folgenden Werte sein.
+Der neue Zustand. Die Informationen werden in die **RequestedState-Eigenschaft** der -Instanz platziert, wenn der Rückgabecode der **RequestStateChange-Methode** 0 oder 4096 ist. Weitere Informationen finden Sie in der Beschreibung der **Eigenschaften EnabledState** und **RequestedState** für das -Element. Dies muss einer der folgenden Werte sein.
 
 <dt>
 
@@ -85,14 +85,14 @@ Der neue Zustand. Die Informationen werden in der **RequestedState-Eigenschaft**
 
 <span id="Defer"></span><span id="defer"></span><span id="DEFER"></span>
 
-**Zurückern** (8)
+**Zurückstellen** (8)
 
 
 </dt> <dd></dd> <dt>
 
 <span id="Quiesce"></span><span id="quiesce"></span><span id="QUIESCE"></span>
 
-**Ruhe** (9)
+**Stille** (9)
 
 
 </dt> <dd></dd> <dt>
@@ -155,7 +155,7 @@ Diese Methode gibt einen der folgenden Werte zurück:
 
 
 
-| Anforderungen | Wert |
+| Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows 8.1<br/>                                                                                  |
 | Unterstützte Mindestversion (Server)<br/> | Windows Server 2012 R2<br/>                                                                       |
@@ -165,7 +165,7 @@ Diese Methode gibt einen der folgenden Werte zurück:
 
 
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Weitere Informationen:
 
 <dl> <dt>
 

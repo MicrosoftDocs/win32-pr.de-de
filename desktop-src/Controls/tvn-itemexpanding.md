@@ -1,9 +1,9 @@
 ---
-title: TVN_ITEMEXPANDING Benachrichtigungs Code (kommctrl. h)
-description: Benachrichtigt das übergeordnete Fenster eines Strukturansicht-Steuer Elements, dass die Liste der untergeordneten Elemente eines übergeordneten Elements gerade erweitert oder reduziert wird. Dieser Benachrichtigungs Code wird in Form einer WM-Benachrichtigungs \_ Meldung gesendet.
+title: TVN_ITEMEXPANDING Benachrichtigungscode (Commctrl.h)
+description: Benachrichtigt das übergeordnete Fenster eines Strukturansicht-Steuerelements, dass die Liste der untergeordneten Elemente eines übergeordneten Elements erweitert oder reduziert werden soll. Dieser Benachrichtigungscode wird in Form einer WM \_ NOTIFY-Nachricht gesendet.
 ms.assetid: 5ce256df-49e5-4fbf-9cdc-79dd2edbd8ec
 keywords:
-- Windows-Steuerelemente für TVN_ITEMEXPANDING Benachrichtigungs
+- TVN_ITEMEXPANDING Benachrichtigungscode Windows Steuerelementen
 topic_type:
 - apiref
 api_name:
@@ -16,16 +16,16 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 2c9ed93eacb6d5b492d509b40cc789a803d04623
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 7f4403b41682590d305b527d6445c208011b368b2d2474d66720ed32d29c80ca
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "103957091"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118957789"
 ---
-# <a name="tvn_itemexpanding-notification-code"></a>TVN \_ itemexpandingbenachrichtigungs Code
+# <a name="tvn_itemexpanding-notification-code"></a>TVN \_ ITEMEXPANDING-Benachrichtigungscode
 
-Benachrichtigt das übergeordnete Fenster eines Strukturansicht-Steuer Elements, dass die Liste der untergeordneten Elemente eines übergeordneten Elements gerade erweitert oder reduziert wird. Dieser Benachrichtigungs Code wird in Form einer WM- [**\_ Benachrichtigungs**](wm-notify.md) Meldung gesendet.
+Benachrichtigt das übergeordnete Fenster eines Strukturansicht-Steuerelements, dass die Liste der untergeordneten Elemente eines übergeordneten Elements erweitert oder reduziert werden soll. Dieser Benachrichtigungscode wird in Form einer [**WM \_ NOTIFY-Nachricht**](wm-notify.md) gesendet.
 
 
 ```C++
@@ -43,13 +43,13 @@ TVN_ITEMEXPANDING
 *lParam* 
 </dt> <dd>
 
-Zeiger auf eine [**nmtreeview**](/windows/win32/api/commctrl/ns-commctrl-nmtreeviewa) -Struktur. Der **itemnew** -Member ist eine [**tvitem**](/windows/win32/api/commctrl/ns-commctrl-tvitema) -Struktur, die gültige Informationen über das übergeordnete Element in den Elementen " **Hitem**", " **State**" und " **LPARAM** " enthält. Der **Aktionsmember** gibt an, ob die Liste erweitert oder reduziert werden soll. Eine Liste möglicher Werte finden Sie in der Beschreibung der [**TVM \_ Expand**](tvm-expand.md) Message.
+Zeiger auf eine [**NMTREEVIEW-Struktur.**](/windows/win32/api/commctrl/ns-commctrl-nmtreeviewa) Das **itemNew-Element** ist eine [**TVITEM-Struktur,**](/windows/win32/api/commctrl/ns-commctrl-tvitema) die gültige Informationen über das übergeordnete Element in den **Membern hItem**, **state** und **lParam** enthält. Das **Aktionsmitglied** gibt an, ob die Liste erweitert oder reduziert werden soll. Eine Liste der möglichen Werte finden Sie in der Beschreibung der [**MELDUNG TVM \_ EXPAND.**](tvm-expand.md)
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt **true** zurück, um zu verhindern, dass die Liste erweitert oder reduziert wird.
+Gibt **TRUE zurück,** um zu verhindern, dass die Liste erweitert oder verklappt wird.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -57,18 +57,18 @@ Gibt **true** zurück, um zu verhindern, dass die Liste erweitert oder reduziert
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>                                        |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2003 \[ -Desktop-Apps\]<br/>                                  |
-| Header<br/>                   | <dl> <dt>Kommstrg. h</dt> </dl> |
-| Unicode- und ANSI-Name<br/>   | **TVN \_ Itemexpandingw** (Unicode) und **TVN \_ itemexpandinga** (ANSI)<br/>       |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur \[ Vista-Desktop-Apps\]<br/>                                        |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2003-Desktop-Apps\]<br/>                                  |
+| Header<br/>                   | <dl> <dt>Commctrl.h</dt> </dl> |
+| Unicode- und ANSI-Name<br/>   | **TVN \_ ITEMEXPANDINGW** (Unicode) und **TVN \_ ITEMEXPANDINGA** (ANSI)<br/>       |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[TVN \_ itemexpanded](tvn-itemexpanded.md)
+[TVN \_ ITEMEXPANDED](tvn-itemexpanded.md)
 </dt> </dl>
 
  

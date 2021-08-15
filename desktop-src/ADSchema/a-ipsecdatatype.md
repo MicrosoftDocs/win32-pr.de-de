@@ -1,11 +1,11 @@
 ---
-title: IPSec-Datentyp Attribut
-description: Das Attribut "IPSec-Datentyp" ist nur für die interne Verwendung vorgesehen.
+title: Ipsec-Data-Type-Attribut
+description: Das Attribut Ipsec-Data-Type dient nur zur internen Verwendung.
 ms.assetid: 1e03c13d-6d8d-42c2-bba4-9c86e5aba5e1
 ms.tgt_platform: multiple
 keywords:
-- IPSec-Datentyp-Attribut AD-Schema
-- AD-Schema des ipsecdatatype-Attributs
+- IPsec-Data-Type-Attribut AD-Schema
+- IPSECDataType-Attribut AD-Schema
 topic_type:
 - apiref
 api_name:
@@ -14,26 +14,26 @@ api_type:
 - Schema
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 91b39c28e36e14c2dc4026361527dccbc479617d
-ms.sourcegitcommit: b77ace27b0432e7cd3863191b11926be032fbe2f
+ms.openlocfilehash: e55e66561811adceece14f6a975ac5fad6807ac71e826a67910b6420346efee3
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "106340041"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119322600"
 ---
-# <a name="ipsec-data-type-attribute"></a>IPSec-Datentyp Attribut
+# <a name="ipsec-data-type-attribute"></a>Ipsec-Data-Type-Attribut
 
-Das Attribut " **IPSec-Datentyp** " ist nur für die interne Verwendung vorgesehen.
+Das **Attribut Ipsec-Data-Type** dient nur zur internen Verwendung.
 
 
 
 | Eingabe | Wert |
 |-------------------|--------------------------------------|
-| CN                | IPSec-Datentyp                      |
-| LDAP-Display-Name | ipsecdatatype                        |
+| CN                | Ipsec-Datentyp                      |
+| Ldap-Anzeigename | ipsecDataType                        |
 | Size              | \-                                   |
-| Berechtigung aktualisieren  | \-                                   |
-| Aktualisierungshäufigkeit  | \-                                   |
+| Aktualisieren von Berechtigungen  | \-                                   |
+| Updatehäufigkeit  | \-                                   |
 | Attribute-Id      | 1.2.840.113556.1.4.622               |
 | System-ID-GUID    | b40ff81e-427a-11d1-a9c2-0000f80367c1 |
 | Syntax            | [**Enumeration**](s-enumeration.md) |
@@ -43,7 +43,7 @@ Das Attribut " **IPSec-Datentyp** " ist nur für die interne Verwendung vorgeseh
 ## <a name="implementations"></a>Implementierungen
 
 -   [**Windows 2000 Server**](#windows-2000-server)
--   [**Windows Server 2003**](#windows-server-2003)
+-   [**Windows Server 2003**](#windows-server-2003)
 -   [**Windows Server 2003 R2**](#windows-server-2003-r2)
 -   [**Windows Server 2008**](#windows-server-2008)
 -   [**Windows Server 2008 R2**](#windows-server-2008-r2)
@@ -58,19 +58,19 @@ Das Attribut " **IPSec-Datentyp** " ist nur für die interne Verwendung vorgeseh
 | Link-ID                | \-                                           |
 | MAPI-Id                | \-                                           |
 | System-Only            | False                                        |
-| Ist-einwertig       | Richtig                                         |
+| Ist einwertig       | True                                         |
 | Ist indiziert             | False                                        |
 | Im globalen Katalog      | False                                        |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                 |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                 |
 | Range-Lower            | \-                                           |
 | Range-Upper            | \-                                           |
 | Search-Flags           | 0x00000000                                   |
 | System-Flags           | 0x00000010                                   |
-| In verwendete Klassen        | [**IPSec-Basis**](c-ipsecbase.md)<br/> |
+| In verwendete Klassen        | [**Ipsec-Basis**](c-ipsecbase.md)<br/> |
 
 
 
-## <a name="windows-server-2003"></a>Windows Server 2003
+## <a name="windows-server-2003"></a>Windows Server 2003
 
 
 
@@ -79,15 +79,15 @@ Das Attribut " **IPSec-Datentyp** " ist nur für die interne Verwendung vorgeseh
 | Link-ID                | \-                                           |
 | MAPI-Id                | \-                                           |
 | System-Only            | False                                        |
-| Ist-einwertig       | Richtig                                         |
+| Ist einwertig       | True                                         |
 | Ist indiziert             | False                                        |
 | Im globalen Katalog      | False                                        |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                 |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                 |
 | Range-Lower            | \-                                           |
 | Range-Upper            | \-                                           |
 | Search-Flags           | 0x00000000                                   |
 | System-Flags           | 0x00000010                                   |
-| In verwendete Klassen        | [**IPSec-Basis**](c-ipsecbase.md)<br/> |
+| In verwendete Klassen        | [**Ipsec-Basis**](c-ipsecbase.md)<br/> |
 
 
 
@@ -100,15 +100,15 @@ Das Attribut " **IPSec-Datentyp** " ist nur für die interne Verwendung vorgeseh
 | Link-ID                | \-                                           |
 | MAPI-Id                | \-                                           |
 | System-Only            | False                                        |
-| Ist-einwertig       | Richtig                                         |
+| Ist einwertig       | True                                         |
 | Ist indiziert             | False                                        |
 | Im globalen Katalog      | False                                        |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                 |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                 |
 | Range-Lower            | \-                                           |
 | Range-Upper            | \-                                           |
 | Search-Flags           | 0x00000000                                   |
 | System-Flags           | 0x00000010                                   |
-| In verwendete Klassen        | [**IPSec-Basis**](c-ipsecbase.md)<br/> |
+| In verwendete Klassen        | [**Ipsec-Basis**](c-ipsecbase.md)<br/> |
 
 
 
@@ -121,15 +121,15 @@ Das Attribut " **IPSec-Datentyp** " ist nur für die interne Verwendung vorgeseh
 | Link-ID                | \-                                           |
 | MAPI-Id                | \-                                           |
 | System-Only            | False                                        |
-| Ist-einwertig       | Richtig                                         |
+| Is-Single-Valued       | True                                         |
 | Ist indiziert             | False                                        |
 | Im globalen Katalog      | False                                        |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                 |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                 |
 | Range-Lower            | \-                                           |
 | Range-Upper            | \-                                           |
 | Search-Flags           | 0x00000000                                   |
 | System-Flags           | 0x00000010                                   |
-| In verwendete Klassen        | [**IPSec-Basis**](c-ipsecbase.md)<br/> |
+| In verwendete Klassen        | [**Ipsec-Base**](c-ipsecbase.md)<br/> |
 
 
 
@@ -142,15 +142,15 @@ Das Attribut " **IPSec-Datentyp** " ist nur für die interne Verwendung vorgeseh
 | Link-ID                | \-                                           |
 | MAPI-Id                | \-                                           |
 | System-Only            | False                                        |
-| Ist-einwertig       | Richtig                                         |
+| Is-Single-Valued       | True                                         |
 | Ist indiziert             | False                                        |
 | Im globalen Katalog      | False                                        |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                 |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                 |
 | Range-Lower            | \-                                           |
 | Range-Upper            | \-                                           |
 | Search-Flags           | 0x00000000                                   |
 | System-Flags           | 0x00000010                                   |
-| In verwendete Klassen        | [**IPSec-Basis**](c-ipsecbase.md)<br/> |
+| In verwendete Klassen        | [**Ipsec-Base**](c-ipsecbase.md)<br/> |
 
 
 
@@ -163,15 +163,15 @@ Das Attribut " **IPSec-Datentyp** " ist nur für die interne Verwendung vorgeseh
 | Link-ID                | \-                                           |
 | MAPI-Id                | \-                                           |
 | System-Only            | False                                        |
-| Ist-einwertig       | Richtig                                         |
+| Is-Single-Valued       | True                                         |
 | Ist indiziert             | False                                        |
 | Im globalen Katalog      | False                                        |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                 |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                 |
 | Range-Lower            | \-                                           |
 | Range-Upper            | \-                                           |
 | Search-Flags           | 0x00000000                                   |
 | System-Flags           | 0x00000010                                   |
-| In verwendete Klassen        | [**IPSec-Basis**](c-ipsecbase.md)<br/> |
+| In verwendete Klassen        | [**Ipsec-Base**](c-ipsecbase.md)<br/> |
 
 
 

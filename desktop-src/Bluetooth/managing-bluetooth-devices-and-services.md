@@ -1,41 +1,41 @@
 ---
-title: Verwalten von Bluetooth-Geräten und-Diensten
-description: Zwei primäre Bluetooth-Programmier Ansätze für die Windows-Programmierung mit der Windows Sockets-Schnittstelle und die direkte Verwaltung von Geräten mit nicht Socket-Bluetooth-Schnittstellen
+title: Verwalten von Bluetooth Geräten und Diensten
+description: Zwei primäre Bluetooth Programmieransätze für die Windows Programmierung mit der Windows Sockets-Schnittstelle und die direkte Verwaltung von Geräten mit Nicht-Ocket-Bluetooth-Schnittstellen.
 ms.assetid: 0eb7d339-6d23-4313-b1ed-7ab403a5a81d
 keywords:
-- Verwalten von Bluetooth-Geräten und-Diensten
-- Bluetooth-Geräte und-Dienste, verwalten
+- Verwalten von Bluetooth Geräten und Diensten
+- Bluetooth Geräte und Dienste, Verwalten
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 61cf3657dff2091eda4b26d14f6504b74f943983
-ms.sourcegitcommit: 592c9bbd22ba69802dc353bcb5eb30699f9e9403
+ms.openlocfilehash: 74979fe0a604204e777f0daabe07a4531d9974c9fef55231ce98b7ee7fe9c3ed
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "104101698"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118959179"
 ---
-# <a name="managing-bluetooth-devices-and-services"></a>Verwalten von Bluetooth-Geräten und-Diensten
+# <a name="managing-bluetooth-devices-and-services"></a>Verwalten von Bluetooth Geräten und Diensten
 
-In diesem Abschnitt wird beschrieben, wie Sie mit der Bluetooth-API Bluetooth-Geräte und-Dienste direkt steuern können.
+In diesem Abschnitt wird beschrieben, wie Sie die Bluetooth-API verwenden, um Bluetooth Geräte und Dienste direkt zu steuern.
 
-Informationen zur Verwendung der Windows Sockets-Schnittstelle zum Programmieren von Bluetooth unter Windows finden Sie [unter Windows Sockets-Unterstützung für Bluetooth](windows-sockets-support-for-bluetooth.md).
+Informationen zur Verwendung der Windows Sockets-Schnittstelle zum Programmieren Bluetooth auf Windows finden Sie unter [Windows Sockets-Unterstützung für Bluetooth](windows-sockets-support-for-bluetooth.md).
 
 > [!Note]  
-> Bluetooth hindert keine Energie Verwaltungsfunktionen daran, Bluetooth-Übertragungen zu unterbrechen. Für Bluetooth aktivierte Anwendungen können Strom Meldungen überwachen, um eine solche Unterbrechung zu verhindern. Weitere Informationen finden Sie unter [Verwenden der Energie Verwaltung](/windows/desktop/Power/using-power-management).
+> Bluetooth verhindert nicht, dass Energieverwaltungsfeatures Bluetooth Übertragungen unterbrechen. Bluetooth-fähige Anwendungen können Energiemeldungen überwachen, um eine solche Unterbrechung zu verhindern. Weitere Informationen finden Sie unter [Verwenden von Power Management.](/windows/desktop/Power/using-power-management)
 
- 
+ 
 
 In diesem Abschnitt werden die folgenden Themen behandelt:
 
-| `Section`                                                                               | Inhalt                                                                       |
+| `Section`                                                                               | Content                                                                       |
 |---------------------------------------------------------------------------------------|-------------------------------------------------------------------------------|
-| [Auswählen eines Bluetooth-Geräts](selecting-a-bluetooth-device.md)                      | Hier wird beschrieben, wie ein Bluetooth-Gerät ausgewählt wird.                                   |
-| [Bluetooth-und WM- \_ devicechange-Meldungen](bluetooth-and-wm-devicechange-messages.md) | Erläutert die Interaktion zwischen Bluetooth-und **WM \_ devicechange** -Meldungen. |
+| [Auswählen eines Bluetooth Geräts](selecting-a-bluetooth-device.md)                      | Beschreibt, wie ein Bluetooth Gerät ausgewählt wird.                                   |
+| [Bluetooth und WM \_ DEVICECHANGE-Nachrichten](bluetooth-and-wm-devicechange-messages.md) | Erläutert die Interaktion zwischen Bluetooth- und **WM \_ DEVICECHANGE-Nachrichten.** |
 
 
 
- 
+ 
 
- 
+ 
 
- 
+ 

@@ -1,7 +1,7 @@
 ---
-description: Die setguidvalue-Methode fügt einen neuen GUID-Wert (Type VT \_ CLSID) hinzu oder überschreibt einen vorhandenen GUID-Wert.
+description: Die SetGuidValue-Methode fügt einen neuen GUID-Wert (Typ VT \_ CLSID) hinzu oder überschreibt einen vorhandenen.
 ms.assetid: 429a83c0-59b6-4e2f-a657-cbec1dfb9070
-title: 'Iportabledevicevalues:: setguidvalue-Methode (portabledevicetypes. h)'
+title: IPortableDeviceValues::SetGuidValue-Methode (PortableDeviceTypes.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -14,16 +14,16 @@ api_type:
 api_location:
 - PortableDeviceGUIDs.lib
 - PortableDeviceGUIDs.dll
-ms.openlocfilehash: 9d9f85def6ba487163f7c4c7d7441a89e0747ed6
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: de2554422ca9df16a1a1df98a5f4888e4914909885c6661818b0692b33b66763
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106351332"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118963589"
 ---
-# <a name="iportabledevicevaluessetguidvalue-method"></a>Iportabledevicevalues:: setguidvalue-Methode
+# <a name="iportabledevicevaluessetguidvalue-method"></a>IPortableDeviceValues::SetGuidValue-Methode
 
-Die **setguidvalue** -Methode fügt einen neuen **GUID** -Wert (Type VT \_ CLSID) hinzu oder überschreibt einen vorhandenen GUID-Wert.
+Die **SetGuidValue-Methode** fügt einen neuen **GUID-Wert** (Typ VT \_ CLSID) hinzu oder überschreibt einen vorhandenen.
 
 ## <a name="syntax"></a>Syntax
 
@@ -41,23 +41,23 @@ HRESULT SetGuidValue(
 
 <dl> <dt>
 
-*Schlüssel* \[ in\]
+*key* \[ In\]
 </dt> <dd>
 
-Ein **refpropertykey** , der das Element angibt, das erstellt oder überschrieben werden soll.
+Ein **REFPROPERTYKEY,** der das zu erstellende oder zu überschreibende Element angibt.
 
 </dd> <dt>
 
-*Wert* \[ in\]
+*Wert* \[ In\]
 </dt> <dd>
 
-Eine **reguid** , die den neuen Wert enthält.
+Eine **REFGUID,** die den neuen Wert enthält.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Die-Methode gibt ein **HRESULT** zurück. Mögliches Werte (aber nicht die Einzigen) sind die in der folgenden Tabelle.
+Die Methode gibt ein **HRESULT** zurück. Mögliches Werte (aber nicht die Einzigen) sind die in der folgenden Tabelle.
 
 
 
@@ -69,9 +69,9 @@ Die-Methode gibt ein **HRESULT** zurück. Mögliches Werte (aber nicht die Einzi
 
  
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Wenn ein vorhandener Wert über denselben Schlüssel verfügt, der durch den *Schlüssel* Parameter angegeben wird, wird der vorhandene Wert ohne Warnung überschrieben.
+Wenn ein vorhandener Wert über denselben Schlüssel verfügt, der vom *Schlüsselparameter* angegeben wird, wird der vorhandene Wert ohne Warnung überschrieben.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -79,22 +79,22 @@ Wenn ein vorhandener Wert über denselben Schlüssel verfügt, der durch den *Sc
 
 | Anforderung | Wert |
 |--------------------|----------------------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>Portablede vicetypes. h</dt> </dl>   |
-| Bibliothek<br/> | <dl> <dt>Portabledeviceguids. lib</dt> </dl> |
+| Header<br/>  | <dl> <dt>PortableDeviceTypes.h</dt> </dl>   |
+| Bibliothek<br/> | <dl> <dt>PortableDeviceGUIDs.lib</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
 [Hinzufügen einer Ressource zu einem Objekt](adding-a-resource-to-an-object.md)
 </dt> <dt>
 
-[**Iportabledebug-Schnittstelle**](iportabledevicevalues.md)
+[**IPortableDeviceValues-Schnittstelle**](iportabledevicevalues.md)
 </dt> <dt>
 
-[**Iportablede vicevalues:: getguidvalue**](iportabledevicevalues-getguidvalue.md)
+[**IPortableDeviceValues::GetGuidValue**](iportabledevicevalues-getguidvalue.md)
 </dt> </dl>
 
  

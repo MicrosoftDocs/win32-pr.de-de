@@ -1,21 +1,21 @@
 ---
-title: TSB-Referenz
-description: 'Die TPM-API (Trusted Platform Module) unterstützt die folgenden Elemente:'
+title: TBS-Referenz
+description: Die Trusted Platform Module (TPM) Base Services (TBS)-API unterstützt die folgenden Elemente.
 ms.assetid: 616ffc43-b8a1-44a0-95ba-8d723c8464e2
 keywords:
-- Basisdienste-TSB für TPM, Referenz
+- TPM Base Services TBS , Referenz
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: ed6a091a75a67a1ef5eb2803dccc8bd3a2f15a8e
-ms.sourcegitcommit: 57758ecb246c84d65e6e0e4bd5570d9176fa39cd
+ms.openlocfilehash: eaccce85c46706c60c3d95467ce264efd5bb28d091b6aa7c22bd0c689e953337
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "103857507"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118880656"
 ---
-# <a name="tbs-reference"></a>TSB-Referenz
+# <a name="tbs-reference"></a>TBS-Referenz
 
-Die TPM-API (Trusted Platform Module) unterstützt die folgenden Elemente:
+Die Trusted Platform Module (TPM) Base Services (TBS)-API unterstützt die folgenden Elemente.
 
 ## <a name="in-this-section"></a>In diesem Abschnitt
 
@@ -23,10 +23,10 @@ Die TPM-API (Trusted Platform Module) unterstützt die folgenden Elemente:
 
 | Thema                                                   | BESCHREIBUNG                                                                        |
 |---------------------------------------------------------|------------------------------------------------------------------------------------|
-| [**TSB-Datentypen**](tbs-data-types.md)<br/>     | TSB definiert die folgenden Datentypen.<br/>                                   |
-| [TSB-Funktionen](tbs-functions.md)<br/>           | TSB bietet die folgenden Funktionen.<br/>                                   |
-| [**TSB-Rückgabe Codes**](tbs-return-codes.md)<br/> | TSB verwendet die folgenden Codes, um das Ergebnis eines Funktions Aufrufes anzuzeigen.<br/> |
-| [TSB-Strukturen](tbs-structures.md)<br/>         | TSB unterstützt die folgenden Strukturen.<br/>                                  |
+| [**TBS-Datentypen**](tbs-data-types.md)<br/>     | TBS definiert die folgenden Datentypen.<br/>                                   |
+| [TBS-Funktionen](tbs-functions.md)<br/>           | TBS stellt die folgenden Funktionen zur Verfügung.<br/>                                   |
+| [**TBS-Rückgabecodes**](tbs-return-codes.md)<br/> | TBS verwendet die folgenden Codes, um das Ergebnis eines Funktionsaufrufs anzugeben.<br/> |
+| [TBS-Strukturen](tbs-structures.md)<br/>         | TBS unterstützt die folgenden Strukturen.<br/>                                  |
 
 
 

@@ -1,9 +1,9 @@
 ---
-title: MCIWNDM_GET_SOURCE Meldung (VFW. h)
-description: Die mciwndm \_ get- \_ Quell Nachricht Ruft die Koordinaten des Quell Rechtecks ab, das zum Zuschneiden der Bilder einer AVI-Datei während der Wiedergabe verwendet wird. Sie können diese Nachricht explizit oder mit dem mciwndgetsource-Makro senden.
+title: MCIWNDM_GET_SOURCE Meldung (Vfw.h)
+description: Die MCIWNDM \_ GET \_ SOURCE-Nachricht ruft die Koordinaten des Quellrechtecks ab, das zum Zuschneiden der Bilder einer AVI-Datei während der Wiedergabe verwendet wird. Sie können diese Nachricht explizit oder mithilfe des MCIWndGetSource-Makros senden.
 ms.assetid: d5f25926-5a3d-412e-8248-fbf307583757
 keywords:
-- MCIWNDM_GET_SOURCE-Nachricht (Multimedia)
+- MCIWNDM_GET_SOURCE nachricht Windows Multimedia
 topic_type:
 - apiref
 api_name:
@@ -14,16 +14,16 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 85147182d06386efed73229fcdd6c75372244fd6
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 4ef8bcbaf0909adeae5345448769c68e726456a4bbf4375f08d874e3502ab6a2
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104392095"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119429400"
 ---
-# <a name="mciwndm_get_source-message"></a>Mciwndm \_ - \_ Quell Nachricht
+# <a name="mciwndm_get_source-message"></a>MCIWNDM \_ GET \_ SOURCE-Nachricht
 
-Die **mciwndm \_ get- \_ Quell** Nachricht Ruft die Koordinaten des Quell Rechtecks ab, das zum Zuschneiden der Bilder einer AVI-Datei während der Wiedergabe verwendet wird. Sie können diese Nachricht explizit oder mit dem [**mciwndgetsource**](/windows/desktop/api/Vfw/nf-vfw-mciwndgetsource) -Makro senden.
+Die **MCIWNDM \_ GET \_ SOURCE-Nachricht** ruft die Koordinaten des Quellrechtecks ab, das zum Zuschneiden der Bilder einer AVI-Datei während der Wiedergabe verwendet wird. Sie können diese Nachricht explizit oder mithilfe des [**MCIWndGetSource-Makros**](/windows/desktop/api/Vfw/nf-vfw-mciwndgetsource) senden.
 
 
 ```C++
@@ -38,16 +38,16 @@ lParam = (LPARAM) (LPRECT) prc;
 
 <dl> <dt>
 
-<span id="prc"></span><span id="PRC"></span>*PRC*
+<span id="prc"></span><span id="PRC"></span>*Vr china*
 </dt> <dd>
 
-Ein Zeiger auf eine [**Rect**](/previous-versions//dd162897(v=vs.85)) -Struktur, die die Koordinaten des Quell Rechtecks enthalten soll.
+Zeiger auf eine [**RECT-Struktur,**](/previous-versions//dd162897(v=vs.85)) die die Koordinaten des Quellrechtecks enthalten soll.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt 0 (null) zurück, wenn erfolgreich, andernfalls einen Fehler.
+Gibt 0 (null) zurück, wenn der Fehler erfolgreich war, oder andernfalls ein Fehler.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -57,15 +57,15 @@ Gibt 0 (null) zurück, wenn erfolgreich, andernfalls einen Fehler.
 |-------------------------------------|----------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional \[nur Desktop-Apps\]<br/>                       |
 | Unterstützte Mindestversion (Server)<br/> | Windows 2000 Server \[nur Desktop-Apps\]<br/>                             |
-| Header<br/>                   | <dl> <dt>VFW. h</dt> </dl> |
+| Header<br/>                   | <dl> <dt>Vfw.h</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen:
 
 <dl> <dt>
 
-[**Mciwndgetsource**](/windows/desktop/api/Vfw/nf-vfw-mciwndgetsource)
+[**MCIWndGetSource**](/windows/desktop/api/Vfw/nf-vfw-mciwndgetsource)
 </dt> </dl>
 
  

@@ -1,11 +1,11 @@
 ---
-title: Resetsecon-Replikats-Methode der MicrosoftDNS_Zone-Klasse
-description: Die resetsecon-Methode setzt die IP-Adressen für sekundäre DNS-Server in der Zone zurück.
+title: ResetSecondaries-Methode der MicrosoftDNS_Zone-Klasse
+description: Die ResetSecondaries-Methode setzt die IP-Adressen für sekundäre DNS-Server in der Zone zurück.
 ms.assetid: b9a47714-f180-40cf-831a-f59e804a4ca2
 keywords:
-- Resetsecon-Methode (DNS)
-- Resetsecon-Methode (DNS), MicrosoftDNS_Zone-Klasse
-- DNS-MicrosoftDNS_Zone Klasse, resetseconreplikat-Methode
+- RESETSecondaries-Methode DNS
+- ResetSecondaries-Methode DNS , MicrosoftDNS_Zone-Klasse
+- MicrosoftDNS_Zone DNS-Klasse, ResetSecondaries-Methode
 topic_type:
 - apiref
 api_name:
@@ -16,16 +16,16 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 3a78d65b2153782c38d6d91d34f642860e896ed1
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 5ab3737bc8143f712560e5ea253237c97da4e2401b98886428642210805ca586
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "103956787"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118957289"
 ---
-# <a name="resetsecondaries-method-of-the-microsoftdns_zone-class"></a>Resetsecon-Replikats-Methode der MicrosoftDNS- \_ Zonen Klasse
+# <a name="resetsecondaries-method-of-the-microsoftdns_zone-class"></a>ResetSecondaries-Methode der \_ MicrosoftDNS-Zonenklasse
 
-Die **resetsecon-** Methode setzt die IP-Adressen für sekundäre DNS-Server in der Zone zurück.
+Die **ResetSecondaries-Methode** setzt die IP-Adressen für sekundäre DNS-Server in der Zone zurück.
 
 ## <a name="syntax"></a>Syntax
 
@@ -46,44 +46,44 @@ void ResetSecondaries(
 
 <dl> <dt>
 
-*Secondaryservers* \[ in\]
+*SecondaryServers* \[ In\]
 </dt> <dd>
 
 Array von IP-Adressen für sekundäre DNS-Server.
 
 </dd> <dt>
 
-*Securesecon-* \[ Replikate in\]
+*SecureSecondaries* \[ In\]
 </dt> <dd>
 
-Gibt die anzuwendende Sicherheit an und muss eine der folgenden sein:
+Gibt die sicherheit an, die angewendet werden soll, und muss eine der folgenden Sein:
 
--   Zone \_ secsecure \_ No \_ Security
--   \_nur Zonen secsecure \_ NS \_
--   nur Zonen- \_ secsecure- \_ Liste \_
--   Zone \_ secsecure \_ No \_ XFR
+-   ZONE \_ SECSECURE \_ NO \_ SECURITY
+-   ZONE \_ SECSECURE \_ NS \_ ONLY
+-   ZONE \_ SECSECURE \_ LIST \_ ONLY
+-   ZONE \_ SECSECURE \_ NO \_ XFR
 
 </dd> <dt>
 
-*Notifyservers* \[ in\]
+*NotifyServers* \[ In\]
 </dt> <dd>
 
-IP-Adresse der DNS-Server, die benachrichtigt werden sollen, wenn die Zone geändert wird.
+IP-Adresse der DNS-Server, die benachrichtigt werden sollen, wenn sich die Zone ändert.
 
 </dd> <dt>
 
-*Benachrichtigen* \[ in\]
+*Benachrichtigen* \[ In\]
 </dt> <dd>
 
-Benachrichtigungs Einstellung und muss eine der folgenden sein:
+Die Benachrichtigungseinstellung und muss eine der folgenden sein:
 
--   Benachrichtigung über Zonen \_ Benachrichtigung \_
--   Zonen \_ Benachrichtigung für \_ alle \_ sekundären Datenbanken
--   \_nur Zonen Benachrichtigungs \_ Liste \_
+-   ZONE \_ NOTIFY \_ OFF
+-   ZONE \_ NOTIFY \_ ALL \_ SECONDARIES
+-   NUR \_ \_ ZONENBENACHRICHTIGUNGSLISTE \_
 
 </dd> <dt>
 
-*RR* \[ Out, Ref\]
+*RR* \[ out, ref\]
 </dt> <dd>
 
 RR vom Typ [**MicrosoftDNS \_ Zone**](microsoftdns-zone.md).
@@ -103,45 +103,45 @@ Diese Methode gibt keinen Wert zurück.
 | Unterstützte Mindestversion (Client)<br/> | Nicht unterstützt<br/>                                                              |
 | Unterstützte Mindestversion (Server)<br/> | Windows 2000 Server \[nur Desktop-Apps\]<br/>                                   |
 | Namespace<br/>                | \\MicrosoftDNS-Stamm<br/>                                                          |
-| MOF<br/>                      | <dl> <dt>Dnsprov. MOF</dt> </dl> |
+| MOF<br/>                      | <dl> <dt>Dnsprov.mof</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**MicrosoftDNS- \_ Zone**](microsoftdns-zone.md)
+[**MicrosoftDNS-Zone \_**](microsoftdns-zone.md)
 </dt> <dt>
 
-[**AgeAllRecords-Methode der MicrosoftDNS- \_ Zonen Klasse**](microsoftdns-zone-ageallrecords.md)
+[**AgeAllRecords-Methode der \_ MicrosoftDNS-Zonenklasse**](microsoftdns-zone-ageallrecords.md)
 </dt> <dt>
 
-[**Changezonetype-Methode der MicrosoftDNS- \_ Zonen Klasse**](microsoftdns-zone-changezonetype.md)
+[**ChangeZoneType-Methode der \_ MicrosoftDNS-Zonenklasse**](microsoftdns-zone-changezonetype.md)
 </dt> <dt>
 
-[**Die Methode "kreatezone" der MicrosoftDNS- \_ Zonen Klasse**](microsoftdns-zone-createzone.md)
+[**CreateZone-Methode der \_ MicrosoftDNS-Zonenklasse**](microsoftdns-zone-createzone.md)
 </dt> <dt>
 
-[**ForceRefresh-Methode der MicrosoftDNS- \_ Zonen Klasse**](microsoftdns-zone-forcerefresh.md)
+[**ForceRefresh-Methode der \_ MicrosoftDNS-Zonenklasse**](microsoftdns-zone-forcerefresh.md)
 </dt> <dt>
 
-[**Geterkennbar shedname-Methode der MicrosoftDNS- \_ Zonen Klasse**](microsoftdns-zone-getdistinguishedname.md)
+[**GetDistinguishedName-Methode der \_ MicrosoftDNS-Zonenklasse**](microsoftdns-zone-getdistinguishedname.md)
 </dt> <dt>
 
-[**Pauzzone-Methode der MicrosoftDNS- \_ Zonen Klasse**](microsoftdns-zone-pausezone.md)
+[**PauseZone-Methode der \_ MicrosoftDNS-Zonenklasse**](microsoftdns-zone-pausezone.md)
 </dt> <dt>
 
-[**Reloadzone-Methode der MicrosoftDNS- \_ Zonen Klasse**](microsoftdns-zone-reloadzone.md)
+[**ReloadZone-Methode der \_ MicrosoftDNS-Zonenklasse**](microsoftdns-zone-reloadzone.md)
 </dt> <dt>
 
-[**Resumezone-Methode der MicrosoftDNS- \_ Zonen Klasse**](microsoftdns-zone-resumezone.md)
+[**ResumeZone-Methode der \_ MicrosoftDNS-Zonenklasse**](microsoftdns-zone-resumezone.md)
 </dt> <dt>
 
-[**Updatefromds-Methode der MicrosoftDNS- \_ Zonen Klasse**](microsoftdns-zone-updatefromds.md)
+[**UpdateFromDS-Methode der \_ MicrosoftDNS-Zonenklasse**](microsoftdns-zone-updatefromds.md)
 </dt> <dt>
 
-[**"Write Backzone"-Methode der MicrosoftDNS- \_ Zonen Klasse**](microsoftdns-zone-writebackzone.md)
+[**WriteBackZone-Methode der \_ MicrosoftDNS-Zonenklasse**](microsoftdns-zone-writebackzone.md)
 </dt> </dl>
 
  

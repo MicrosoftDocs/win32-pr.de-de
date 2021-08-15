@@ -1,21 +1,21 @@
 ---
-description: 'Die audiosettingsproperty-Enumeration wird von den Methoden itaudiosettings:: GetRange, itaudiosettings:: Get und itaudiosettings:: Set verwendet, um anzugeben, welche audioeinstellungs Eigenschaft adressiert wird.'
+description: Die AudioSettingsProperty-Enum wird von den Methoden ITAudioSettings::GetRange, ITAudioSettings::Get und ITAudioSettings::Set verwendet, um die adressierte Audioeinstellungseigenschaft anzugeben.
 ms.assetid: b91c8213-f102-4ebb-ad8a-e43709b3daad
-title: Audiosettingsproperty-Enumeration (ipmsp. h)
+title: AudioSettingsProperty-Enumeration (Ipmsp.h)
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 759e3ca9d9559c35c64c117b9b84b1cee4a1fad1
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 3b15cfb5a0211f02ac333ba75e47b5e4cbd5c44865b4a18c2f19ea3a8769dde3
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106368448"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118871530"
 ---
-# <a name="audiosettingsproperty-enumeration"></a>Audiosettingsproperty-Enumeration
+# <a name="audiosettingsproperty-enumeration"></a>AudioSettingsProperty-Enumeration
 
-\[ Diese Enumeration ist nicht für die Verwendung in Windows Vista, Windows Server 2008 und nachfolgenden Versionen des Betriebssystems verfügbar. Die RTC-Client-API bietet eine ähnliche Funktionalität.\]
+\[Diese Enumeration ist nicht für die Verwendung in Windows Vista, Windows Server 2008 und nachfolgenden Versionen des Betriebssystems verfügbar. Die RTC-Client-API bietet ähnliche Funktionen.\]
 
-Die **audiosettingsproperty** -Enumeration wird von den Methoden [**itaudiosettings:: GetRange**](itaudiosettings-getrange.md), [**itaudiosettings:: Get**](itaudiosettings-get.md)und [**itaudiosettings:: Set**](itaudiosettings-set.md) verwendet, um anzugeben, welche audioeinstellungs Eigenschaft adressiert wird.
+Die **AudioSettingsProperty-Enum** wird von den [**Methoden ITAudioSettings::GetRange,**](itaudiosettings-getrange.md) [**ITAudioSettings::Get**](itaudiosettings-get.md)und [**ITAudioSettings::Set**](itaudiosettings-set.md) verwendet, um die adressierte Audioeinstellungseigenschaft anzugeben.
 
 ## <a name="syntax"></a>Syntax
 
@@ -30,59 +30,59 @@ Die **audiosettingsproperty** -Enumeration wird von den Methoden [**itaudiosetti
 
 <dl> <dt>
 
-<span id="AudioSettings_SignalLevel"></span><span id="audiosettings_signallevel"></span><span id="AUDIOSETTINGS_SIGNALLEVEL"></span>**Audiosettings \_ Signallevel**
+<span id="AudioSettings_SignalLevel"></span><span id="audiosettings_signallevel"></span><span id="AUDIOSETTINGS_SIGNALLEVEL"></span>**AudioSettings \_ SignalLevel**
 </dt> <dd>
 
-Signsettings-Eigenschaft.
+Signaleinstellungseigenschaft.
 
 </dd> <dt>
 
-<span id="AudioSettings_SilenceThreshold"></span><span id="audiosettings_silencethreshold"></span><span id="AUDIOSETTINGS_SILENCETHRESHOLD"></span>**Audiosettings- \_ silencethreshold**
+<span id="AudioSettings_SilenceThreshold"></span><span id="audiosettings_silencethreshold"></span><span id="AUDIOSETTINGS_SILENCETHRESHOLD"></span>**AudioSettings \_ SilenceThreshold**
 </dt> <dd>
 
-Eigenschaft für den Ruhe Schwellenwert.
+Eigenschaft für Ruheschwellenwert.
 
 </dd> <dt>
 
-<span id="AudioSettings_Volume"></span><span id="audiosettings_volume"></span><span id="AUDIOSETTINGS_VOLUME"></span>**Audiosettings- \_ Volume**
+<span id="AudioSettings_Volume"></span><span id="audiosettings_volume"></span><span id="AUDIOSETTINGS_VOLUME"></span>**AudioSettings-Volume \_**
 </dt> <dd>
 
-Volume-Eigenschaft.
+Volumeeigenschaft.
 
 </dd> <dt>
 
-<span id="AudioSettings_Balance"></span><span id="audiosettings_balance"></span><span id="AUDIOSETTINGS_BALANCE"></span>**Audiosettings- \_ Saldo**
+<span id="AudioSettings_Balance"></span><span id="audiosettings_balance"></span><span id="AUDIOSETTINGS_BALANCE"></span>**AudioSettings \_ Balance**
 </dt> <dd>
 
 Balance-Eigenschaft.
 
 </dd> <dt>
 
-<span id="AudioSettings_Loudness"></span><span id="audiosettings_loudness"></span><span id="AUDIOSETTINGS_LOUDNESS"></span>**Audiosettings- \_ Lautstärke**
+<span id="AudioSettings_Loudness"></span><span id="audiosettings_loudness"></span><span id="AUDIOSETTINGS_LOUDNESS"></span>**\_AudioSettings-Lautheit**
 </dt> <dd>
 
-Lautstärke-Eigenschaft.
+Lautheitseigenschaft.
 
 </dd> <dt>
 
-<span id="AudioSettings_Treble"></span><span id="audiosettings_treble"></span><span id="AUDIOSETTINGS_TREBLE"></span>**Audiosettings- \_ Treble**
+<span id="AudioSettings_Treble"></span><span id="audiosettings_treble"></span><span id="AUDIOSETTINGS_TREBLE"></span>**AudioSettings \_ Treble**
 </dt> <dd>
 
 Treble-Eigenschaft.
 
 </dd> <dt>
 
-<span id="AudioSettings_Bass"></span><span id="audiosettings_bass"></span><span id="AUDIOSETTINGS_BASS"></span>**Audiosettings- \_ Bass**
+<span id="AudioSettings_Bass"></span><span id="audiosettings_bass"></span><span id="AUDIOSETTINGS_BASS"></span>**\_AudioSettings(AudioSettings)**
 </dt> <dd>
 
-Bass-Eigenschaft.
+Eigenschaft "Eigenschaften".
 
 </dd> <dt>
 
-<span id="AudioSettings_Mono"></span><span id="audiosettings_mono"></span><span id="AUDIOSETTINGS_MONO"></span>**Audiosettings \_ Mono**
+<span id="AudioSettings_Mono"></span><span id="audiosettings_mono"></span><span id="AUDIOSETTINGS_MONO"></span>**AudioSettings \_ Mono**
 </dt> <dd>
 
-Die monaural-Eigenschaft.
+Aturural-Eigenschaft.
 
 </dd> </dl>
 
@@ -92,22 +92,22 @@ Die monaural-Eigenschaft.
 
 | Anforderung | Wert |
 |-------------------------|------------------------------------------------------------------------------------|
-| TAPI-Version<br/> | Erfordert TAPI 3,1<br/>                                                       |
-| Header<br/>       | <dl> <dt>Ipmsp. h</dt> </dl> |
+| TAPI-Version<br/> | Erfordert TAPI 3.1<br/>                                                       |
+| Header<br/>       | <dl> <dt>Ipmsp.h</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Itaudiosettings:: GetRange**](itaudiosettings-getrange.md)
+[**ITAudioSettings::GetRange**](itaudiosettings-getrange.md)
 </dt> <dt>
 
-[**Itaudiosettings:: Get**](itaudiosettings-get.md)
+[**ITAudioSettings::Get**](itaudiosettings-get.md)
 </dt> <dt>
 
-[**Itaudiosettings:: Set**](itaudiosettings-set.md)
+[**ITAudioSettings::Set**](itaudiosettings-set.md)
 </dt> </dl>
 
  

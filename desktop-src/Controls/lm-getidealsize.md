@@ -3,7 +3,7 @@ title: LM_GETIDEALSIZE (Commctrl.h)
 description: 'LM_GETIDEALSIZE Meldung: Ruft die bevorzugte Höhe eines Links für die aktuelle Breite des Steuerelements ab.'
 ms.assetid: 63aad7eb-26ee-41d2-90d4-65fdcf0f182a
 keywords:
-- LM_GETIDEALSIZE Meldung Windows-Steuerelemente
+- LM_GETIDEALSIZE meldungssteuerelemente Windows
 topic_type:
 - apiref
 api_name:
@@ -14,12 +14,12 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 761fb5f6e5f7a2e2e9b1b9cc862b9a8f2c0fcd1f
-ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
+ms.openlocfilehash: 035a919aabeb5d07587c7d9e4fc97e5edc728de4ec8fc476448dca62658f1ce3
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2021
-ms.locfileid: "108112388"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118958373"
 ---
 # <a name="lm_getidealsize-message"></a>LM \_ GETIDEALSIZE-Nachricht
 
@@ -39,7 +39,7 @@ Ruft die bevorzugte Höhe eines Links für die aktuelle Breite des Steuerelement
 
 Eine ganze Zahl, die die bevorzugte Höhe des Linktexts in Pixel darstellt.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
 > [!Note]  
 > Um diese API verwenden zu können, müssen Sie ein Manifest bereitstellen, das Comclt32.dll 6.0 angibt. Weitere Informationen zu Manifesten finden Sie unter [Aktivieren von visuellen Stilen.](cookbook-overview.md)
@@ -50,10 +50,10 @@ Eine ganze Zahl, die die bevorzugte Höhe des Linktexts in Pixel darstellt.
 
 
 
-| Anforderungen | Wert |
+| Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows \[ Vista-Desktop-Apps\]<br/>                                        |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server \[ 2008-Desktop-Apps\]<br/>                                  |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur \[ Vista-Desktop-Apps\]<br/>                                        |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2008-Desktop-Apps\]<br/>                                  |
 | Header<br/>                   | <dl> <dt>Commctrl.h</dt> </dl> |
 
 

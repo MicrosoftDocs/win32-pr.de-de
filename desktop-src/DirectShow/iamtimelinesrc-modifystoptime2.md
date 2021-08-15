@@ -1,7 +1,7 @@
 ---
-description: 'Die ModifyStopTime2-Methode legt die Endzeit fest. Diese Methode entspricht iamtimelinesrc:: modifystoptime, aber nimmt einen reftime-Wert an.'
+description: Die ModifyStopTime2-Methode legt die Beendigungszeit fest. Diese Methode entspricht IAMTimelineSrc::ModifyStopTime, verwendet jedoch einen REFTIME-Wert.
 ms.assetid: 8bebda47-3e52-42a2-870c-acc14561fa25
-title: 'Iamtimelinesrc:: ModifyStopTime2-Methode (qedit. h)'
+title: IAMTimelineSrc::ModifyStopTime2-Methode (Qedit.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -14,21 +14,21 @@ api_type:
 api_location:
 - strmiids.lib
 - strmiids.dll
-ms.openlocfilehash: 42ca3c9c1f8fa47abc7a9c21a44458540007939f
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: fa2ec7a019200f91c9fb2a894c978ce93896926024f55efb229c7e5fde6fbe85
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106370819"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118952809"
 ---
-# <a name="iamtimelinesrcmodifystoptime2-method"></a>Iamtimelinesrc:: ModifyStopTime2-Methode
+# <a name="iamtimelinesrcmodifystoptime2-method"></a>IAMTimelineSrc::ModifyStopTime2-Methode
 
 > [!Note]  
-> \[Veraltet. Diese API kann aus zukünftigen Versionen von Windows entfernt werden.\]
+> \[Veraltet. Diese API kann aus zukünftigen Releases von Windows entfernt werden.\]
 
  
 
-Die- `ModifyStopTime2` Methode legt die Endzeit fest. Diese Methode entspricht [**iamtimelinesrc:: modifystoptime**](iamtimelinesrc-modifystoptime.md), aber nimmt einen [**reftime**](reftime.md) -Wert an.
+Die `ModifyStopTime2` -Methode legt die Beendigungszeit fest. Diese Methode entspricht [**IAMTimelineSrc::ModifyStopTime,**](iamtimelinesrc-modifystoptime.md)verwendet jedoch einen [**REFTIME-Wert.**](reftime.md)
 
 ## <a name="syntax"></a>Syntax
 
@@ -48,23 +48,23 @@ HRESULT ModifyStopTime2(
 *Beenden* 
 </dt> <dd>
 
-Neue Endzeit in Sekunden.
+Neue Beendigungszeit in Sekunden.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt \_ bei Erfolg S OK oder E \_ invalidArg zurück, wenn die angegebene Zeit nicht gültig ist.
+Gibt S \_ OK zurück, wenn erfolgreich, oder E \_ INVALIDARG, wenn die angegebene Zeit ungültig ist.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
 > [!Note]  
-> Die Header Datei "qedit. h" ist nicht mit Direct3D-Headern nach Version 7 kompatibel.
+> Die Headerdatei Qedit.h ist nicht mit Direct3D-Headern kompatibel, die höher als Version 7 sind.
 
  
 
 > [!Note]  
-> Zum Abrufen von "qedit. h" Laden Sie das [Microsoft Windows SDK Update für Windows Vista und .NET Framework 3,0](https://msdn.microsoft.com/windowsvista/bb980924.aspx)herunter. "Qedit. h" ist im Microsoft Windows SDK für Windows 7 und .NET Framework 3,5 Service Pack 1 nicht verfügbar.
+> Laden Sie zum Abrufen von Qedit.h das [Microsoft Windows SDK-Update für Windows Vista und .NET Framework 3.0](https://msdn.microsoft.com/windowsvista/bb980924.aspx)herunter. Qedit.h ist im Microsoft Windows SDK für Windows 7 und .NET Framework 3.5 Service Pack 1 nicht verfügbar.
 
  
 
@@ -74,19 +74,19 @@ Gibt \_ bei Erfolg S OK oder E \_ invalidArg zurück, wenn die angegebene Zeit n
 
 | Anforderung | Wert |
 |--------------------|-----------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>"Qedit. h"</dt> </dl>      |
-| Bibliothek<br/> | <dl> <dt>"" "" ". Lib"</dt> </dl> |
+| Header<br/>  | <dl> <dt>Qedit.h</dt> </dl>      |
+| Bibliothek<br/> | <dl> <dt>Strmiids.lib</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Iamtimelinesrc-Schnittstelle**](iamtimelinesrc.md)
+[**IAMTimelineSrc-Schnittstelle**](iamtimelinesrc.md)
 </dt> <dt>
 
-[Fehler-und Erfolgs Codes](error-and-success-codes.md)
+[Fehler- und Erfolgscodes](error-and-success-codes.md)
 </dt> </dl>
 
  

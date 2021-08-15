@@ -1,33 +1,33 @@
 ---
-description: Gibt an, ob der Encoder Bild Erweiterungs Header generiert. Diese Eigenschaft gilt für MPEG-Video Encoder.
+description: Gibt an, ob der Encoder Bilderweiterungsheader generiert. Diese Eigenschaft gilt für MPEG-Videoencoder.
 ms.assetid: fea39283-53b1-4af1-b048-18fad6d56ec7
-title: Avencmpvgenerateheaderpicext-Eigenschaft (codecapi. h)
+title: AVEncMPVGenerateHeaderPicExt-Eigenschaft (Codecapi.h)
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 9b599663a89e65f371c6020e83babcd4f6f17387
-ms.sourcegitcommit: a47bd86f517de76374e4fff33cfeb613eb259a7e
+ms.openlocfilehash: cd0aa1c2713586770f6f5f1cf40799fcea260194f61a60b3e16f3226dabd729f
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/06/2021
-ms.locfileid: "106345576"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119540870"
 ---
-# <a name="avencmpvgenerateheaderpicext-property"></a>Avencmpvgenerateheaderpicext (Eigenschaft)
+# <a name="avencmpvgenerateheaderpicext-property"></a>AVEncMPVGenerateHeaderPicExt (Eigenschaft)
 
-Gibt an, ob der Encoder Bild Erweiterungs Header generiert. Diese Eigenschaft gilt für MPEG-Video Encoder.
+Gibt an, ob der Encoder Bilderweiterungsheader generiert. Diese Eigenschaft gilt für MPEG-Videoencoder.
 
 Dies ist eine Eigenschaft mit Lese- und Schreibzugriff.
 
 ## <a name="data-type"></a>Datentyp
 
-**Variant \_ bool** (**VT \_ bool**)
+**VARIANT \_ BOOL** (**VT \_ BOOL**)
 
 ## <a name="property-guid"></a>Eigenschaften-GUID
 
-**Codecapi \_ avencmpvgenerateheaderpicext**
+**CODECAPI \_ AVEncMPVGenerateHeaderPicExt**
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Wenn der Wert **Variant \_ true** ist, generiert der Encoder Bild Erweiterungs Header.
+Wenn der Wert **VARIANT \_ TRUE ist,** generiert der Encoder Bilderweiterungsheader.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -35,20 +35,20 @@ Wenn der Wert **Variant \_ true** ist, generiert der Encoder Bild Erweiterungs H
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional \[ Desktop Apps \| UWP-apps\]<br/>                     |
-| Unterstützte Mindestversion (Server)<br/> | Windows 2000 Server \[ Desktop Apps \| UWP-apps\]<br/>                           |
-| Header<br/>                   | <dl> <dt>Codecapi. h</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional \[ Desktop-Apps \| UWP-Apps\]<br/>                     |
+| Unterstützte Mindestversion (Server)<br/> | Windows 2000 \[ Server-Desktop-Apps \| UWP-Apps\]<br/>                           |
+| Header<br/>                   | <dl> <dt>Codecapi.h</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[Eigenschaften der Codec-API](codec-api-properties.md)
+[Codec-API-Eigenschaften](codec-api-properties.md)
 </dt> <dt>
 
-[**Icodecapi-Schnittstelle**](/windows/desktop/api/Strmif/nn-strmif-icodecapi)
+[**ICodecAPI-Schnittstelle**](/windows/desktop/api/Strmif/nn-strmif-icodecapi)
 </dt> </dl>
 
  

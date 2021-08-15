@@ -1,72 +1,72 @@
 ---
-title: Implementieren von Rendering
-description: Implementieren von Rendering
+title: Implementieren von Rendern
+description: Implementieren von Rendern
 ms.assetid: 9b3a64f6-6803-457c-8e63-e8a799089e18
 keywords:
-- Visualisierungen, zeitgesteuerte Ereignisse
-- benutzerdefinierte Visualisierungen, zeitgesteuerte Ereignisse
-- Visualisierungen, Rendering-Funktion
-- benutzerdefinierte Visualisierungen, Rendering-Funktion
-- Visualisierungen, renderwindow-Funktion
-- benutzerdefinierte Visualisierungen, renderwindow-Funktion
-- Funktion "Rendering", Parameter
-- Renderwindow-Funktion
+- Visualisierungen, Zeitereignisse
+- Benutzerdefinierte Visualisierungen, Zeitereignisse
+- Visualisierungen, Renderfunktion
+- Benutzerdefinierte Visualisierungen, Renderfunktion
+- Visualisierungen,RenderWindow-Funktion
+- Benutzerdefinierte Visualisierungen, RenderWindow-Funktion
+- Renderfunktion, Parameter
+- RenderWindow-Funktion
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 99db0a96a07c361d18de579fb0235befa11838c8
-ms.sourcegitcommit: 48d1c892045445bcbd0f22bafa2fd3861ffaa6e7
+ms.openlocfilehash: 5af44299c8a8e34c8f63844dc7d2c143f1d85e0b622c50dd246ea12571d94af8
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/19/2020
-ms.locfileid: "104038561"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119390690"
 ---
-# <a name="implementing-render"></a>Implementieren von Rendering
+# <a name="implementing-render"></a>Implementieren von Rendern
 
-Die einfachste Möglichkeit, die Visualisierungs Programmierung vorzustellen, besteht darin, dass Sie einen Handler für ein Zeit gesteuerter Ereignis erstellen. In bestimmten Intervallen nimmt Windows Media Player eine Momentaufnahme der Audiodaten, die Sie wiedergeben, und stellt die Moment Aufnahmedaten für die aktuell geladene Visualisierung bereit. Dies ähnelt der ereignisgesteuerten Programmierung und ist Teil des Programmiermodells von Microsoft Windows. Sie schreiben Code und warten darauf, dass er von einem bestimmten Ereignis aufgerufen wird.
+Die einfachste Möglichkeit zur Visualisierungsprogrammierung besteht darin, dass Sie einen Handler für ein Zeitereignis erstellen. In bestimmten Intervallen erstellt Windows Media Player eine Momentaufnahme der Audiodaten, die wiedergegeben werden, und stellt die Momentaufnahmedaten für die aktuell geladene Visualisierung bereit. Dies ähnelt der ereignisgesteuerten Programmierung und ist Teil des Programmiermodells von Microsoft Windows. Sie schreiben Code und warten, bis er von einem bestimmten Ereignis aufgerufen wird.
 
-Wenn Ihr Code eine Implementierung der [iwmpeffects::](/previous-versions/windows/desktop/api/effects/nf-effects-iwmpeffects-render) Rendering-Funktion für das Rendering im fensterlosen Modus ist, empfängt er die folgenden Parameter:
+Wenn Ihr Code eine Implementierung der [IWMPEffects::Render-Funktion](/previous-versions/windows/desktop/api/effects/nf-effects-iwmpeffects-render) zum Rendern im fensterlosen Modus ist, erhält er die folgenden Parameter:
 
-*Timedlevel*
+*TimedLevel*
 
-Dies ist eine Struktur, die die Audiodaten definiert, die vom Code analysiert werden. Die Struktur besteht aus zwei Arrays. Das erste Array basiert auf Häufigkeits Informationen und enthält eine Momentaufnahme des Audiospektrums, das in 1024 Teile aufgeteilt ist. Jede Zelle des Arrays enthält einen Wert zwischen 0 und 255. Die erste Zelle beginnt bei 20 Hz und der letzte bei 22050 Hz. Das Array ist zweidimensional, um Stereo-Audiodaten darzustellen. Das zweite Array basiert auf Wellenform-Informationen und entspricht der Audioleistung. je stärker die Welle ist, desto größer ist der Wert. Das Wellenform-Array ist eine präzise Momentaufnahme der letzten 1024 Slices von audiostromdaten, die in sehr kleinen Zeitintervallen entnommen wurden. Dieses Array ist auch zweidimensional, um Stereo-Audiodaten darzustellen.
+Dies ist eine Struktur, die die Audiodaten definiert, die Ihr Code analysiert. Die -Struktur besteht aus zwei Arrays. Das erste Array basiert auf Frequency-Informationen und enthält eine Momentaufnahme des Audiospektrums, unterteilt in 1024 Teile. Jede Zelle des Arrays enthält einen Wert zwischen 0 und 255. Die erste Zelle beginnt bei 20 Hz und die letzte bei 22050 Hz. Das Array ist zweidimensional, um Stereoaudio darzustellen. Das zweite Array basiert auf Wellenforminformationen und entspricht der Audioleistung, wobei je stärker die Welle ist, desto größer der Wert. Das Wellenformarray ist eine präzise Momentaufnahme der letzten 1024 Slices der Audioleistung, die in sehr kleinen Zeitintervallen aufgenommen wurden. Dieses Array ist auch zweidimensional, um Stereoaudio darzustellen.
 
-*HDC*
+*Hdc*
 
-Dies ist ein Microsoft Windows-Handle für einen Gerätekontext. Dies bietet eine Möglichkeit, die Zeichen Oberfläche für Windows zu identifizieren. Sie müssen Sie nicht erstellen, sondern nur für bestimmte Zeichnungs Funktionsaufrufe verwenden.
+Dies ist ein Microsoft Windows Handle für einen Gerätekontext. Dies bietet eine Möglichkeit, die zu Windows Zeichnungsoberfläche zu identifizieren. Sie müssen sie nicht erstellen, sie müssen sie nur für bestimmte Zeichnungsfunktionsaufrufe verwenden.
 
 *Rect*
 
-Dies ist ein Microsoft Windows-Rechteck, das die Größe einer Zeichen Oberfläche definiert. Dabei handelt es sich um ein einfaches Rechteck mit vier Eigenschaften: **Links**, **Rechts**, **oben** und **unten**. Die tatsächlichen Werte werden von Windows Media Player bereitgestellt, damit Sie bestimmen können, wie der Benutzer oder der Skin-Entwickler das Fenster, das Sie zeichnen, skaliert hat. Außerdem wird die Position auf dem HDC festgelegt, in der der Effekt dargestellt werden soll.
+Dies ist ein Microsoft Windows Rechteck, das die Größe einer Zeichnungsoberfläche definiert. Dies ist ein einfaches Rechteck mit vier Eigenschaften: **links,** **rechts,** **oben** und **unten.** Die tatsächlichen Werte werden von Windows Media Player bereitgestellt, sodass Sie bestimmen können, wie der Benutzer oder Der Skinentwickler die Größe des Fensters festgelegt hat, auf das Sie zeichnen möchten. Außerdem wird die Position auf dem HDC bestimmt, auf der der Effekt gerendert werden soll.
 
-Wenn Ihr Code eine Implementierung der **IWMPEffects2:: renderwindowed** -Funktion für das Rendering in einem Fenster ist, empfängt er die folgenden Parameter:
+Wenn Ihr Code eine Implementierung der **IWMPEffects2::RenderWindowed-Funktion** zum Rendern in einem Fenster ist, empfängt er die folgenden Parameter:
 
-*Timedlevel*
+*TimedLevel*
 
-Dies sind die gleichen Informationen, die von der Funktion " **Rendering** " empfangen werden.
+Dies sind die gleichen Informationen, die die **Render-Funktion** empfängt.
 
-*frequiredrender*
+*fRequiredRender*
 
-Der Parameter " *frequiredrender* " informiert Sie darüber, dass sich ihre Visualisierung selbst neu zeichnen muss, z. –. Wenn ein anderes Fenster darauf gezogen wird. Wenn dieser Wert false ist, können Sie den Renderingcode gefahrlos überspringen, wenn das aktuelle Medien Element beendet oder angehalten wurde. So können Sie unnötige CPU-Zyklen vermeiden.
+Der *Parameter fRequiredRender* informiert Sie darüber, dass ihre Visualisierung sich selbst neu malen muss, z. B. wenn ein anderes Fenster darüber gezogen wird. Wenn dieser Wert false ist, können Sie den Renderingcode problemlos überspringen, wenn das aktuelle Medienelement beendet oder angehalten wird. Dadurch können Sie vermeiden, dass CPU-Zyklen unnötig verbraucht werden.
 
-Das Beispiel-Plug-in, das vom Plug-in-Assistenten generiert wurde, stellt keine benutzerdefinierte Implementierung für **renderwindowed** bereit. Stattdessen ruft der Beispiel-Plug-in-Code den Gerätekontext aus dem übergeordneten Fenster ab, das von der Windows-Media Player in [IWMPEffects2:: Create](/previous-versions/windows/desktop/api/effects/nf-effects-iwmpeffects2-create)bereitgestellt wird. Anschließend wird die Dimension des übergeordneten Fensters als Rect-Struktur abgerufen, und dann wird aufgerufen **, um mithilfe** des Geräte Kontexts, des Rect und des Zeigers auf der Zeitüberschreitung von **renderwindowed** geren
+Das vom Plug-In-Assistenten generierte Beispiel-Plug-In stellt keine benutzerdefinierte Implementierung für **RenderWindowed** bereit. Stattdessen ruft der Beispiel-Plug-In-Code den Gerätekontext aus dem übergeordneten Fenster ab, das von Windows Media Player in [IWMPEffects2::Create](/previous-versions/windows/desktop/api/effects/nf-effects-iwmpeffects2-create)bereitgestellt wird, ruft dann die Dimensionen des übergeordneten Fensters als RECT-Struktur ab und ruft dann mithilfe des Gerätekontexts, des RECT und des Zeigers auf Zeitebene von **RenderWindowed** auf **Rendern** auf.
 
-In den folgenden Abschnitten finden Sie weitere Informationen zur Implementierung von " **Rendering**":
+Die folgenden Abschnitte enthalten weitere Informationen zum Implementieren von **Render:**
 
--   [Verwenden von zeitgesteuerten Ebenen](using-timed-levels.md)
--   [Verwenden von Geräte Kontexten](using-device-contexts.md)
+-   [Verwenden von zeitierten Ebenen](using-timed-levels.md)
+-   [Verwenden von Gerätekontexten](using-device-contexts.md)
 -   [Verwenden von Rechtecke](using-rectangles.md)
--   [Beispiel-Rendering-Code](sample-render-code.md)
+-   [Beispiel für Rendercode](sample-render-code.md)
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
 <dl> <dt>
 
-[**Implementieren des Codes**](implementing-your-code.md)
+[**Implementieren ihres Codes**](implementing-your-code.md)
 </dt> </dl>
 
- 
+ 
 
- 
+ 
 
 
 

@@ -1,9 +1,9 @@
 ---
-title: WM_CTLCOLORSTATIC Meldung (Winuser. h)
-description: Ein statisches Steuerelement oder ein Schreib geschütztes oder deaktiviertes Bearbeitungs Steuerelement sendet die WM \_ ctlcolorstatic-Meldung an das übergeordnete Fenster, wenn das Steuerelement gezeichnet werden soll.
+title: WM_CTLCOLORSTATIC Meldung (Winuser.h)
+description: Ein statisches Steuerelement oder ein Bearbeitungssteuerelement, das schreibgeschützt oder deaktiviert ist, sendet die WM \_ CTLCOLORSTATIC-Meldung an das übergeordnete Fenster, wenn das Steuerelement gezeichnet werden soll.
 ms.assetid: a171a1e8-6845-4a8e-8394-44cea99d2b0d
 keywords:
-- Windows-Steuerelemente für WM_CTLCOLORSTATIC Meldung
+- WM_CTLCOLORSTATIC Windows-Steuerelemente für Nachrichten
 topic_type:
 - apiref
 api_name:
@@ -14,18 +14,18 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 851879eeb65a00f95f8cb81cef1b6c23ece8028d
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 2df23b86539d07c9e1551d64f59e60e54df24ae2d48b316996542fb80c92ae8c
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "103741368"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119539930"
 ---
-# <a name="wm_ctlcolorstatic-message"></a>WM \_ ctlcolorstatic-Meldung
+# <a name="wm_ctlcolorstatic-message"></a>WM \_ CTLCOLORSTATIC-Meldung
 
-Ein statisches Steuerelement oder ein Schreib geschütztes oder deaktiviertes Bearbeitungs Steuerelement sendet die **WM \_ ctlcolorstatic** -Meldung an das übergeordnete Fenster, wenn das Steuerelement gezeichnet werden soll. Wenn Sie auf diese Meldung reagieren, kann das übergeordnete Fenster den angegebenen Gerätekontext Handle verwenden, um die Text Vordergrund-und Hintergrundfarben des statischen Steuer Elements festzulegen.
+Ein statisches Steuerelement oder ein Bearbeitungssteuerelement, das schreibgeschützt oder deaktiviert ist, sendet die **WM \_ CTLCOLORSTATIC-Meldung** an das übergeordnete Fenster, wenn das Steuerelement gezeichnet werden soll. Durch Reagieren auf diese Meldung kann das übergeordnete Fenster das angegebene Gerätekontexthandle verwenden, um die Textvordergrund- und Hintergrundfarben des statischen Steuerelements festzulegen.
 
-Ein Fenster empfängt diese Meldung über seine [*WindowProc*](/previous-versions/windows/desktop/legacy/ms633573(v=vs.85)) -Funktion.
+Ein Fenster empfängt diese Meldung über seine [*WindowProc-Funktion.*](/previous-versions/windows/desktop/legacy/ms633573(v=vs.85))
 
 
 ```C++
@@ -44,7 +44,7 @@ WM_CTLCOLORSTATIC
 *wParam* 
 </dt> <dd>
 
-Handle für den Gerätekontext für das statische Steuerelement Fenster.
+Verarbeiten Sie den Gerätekontext für das statische Steuerungsfenster.
 
 </dd> <dt>
 
@@ -57,25 +57,25 @@ Handle für das statische Steuerelement.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Wenn eine Anwendung diese Nachricht verarbeitet, ist der Rückgabewert ein Handle für einen Pinsel, den das System zum Zeichnen des Hintergrunds des statischen Steuer Elements verwendet.
+Wenn eine Anwendung diese Nachricht verarbeitet, ist der Rückgabewert ein Handle für einen Pinsel, den das System verwendet, um den Hintergrund des statischen Steuerelements zu zeichnen.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Wenn die Anwendung einen Pinsel zurückgibt, den Sie erstellt hat (z. b. durch die Verwendung [**der Funktion "**](/windows/desktop/api/wingdi/nf-wingdi-createbrushindirect) [**kreatesolidbrush**](/windows/desktop/api/wingdi/nf-wingdi-createsolidbrush) " oder "-Funktion"), muss die Anwendung den Pinsel freigeben. Wenn die Anwendung einen System Pinsel zurückgibt (z. b. einen, der von der [**GetStockObject**](/windows/desktop/api/wingdi/nf-wingdi-getstockobject) -Funktion oder der [**getsyscolorbrush**](/windows/desktop/api/winuser/nf-winuser-getsyscolorbrush) -Funktion abgerufen wurde), muss die Anwendung den Pinsel nicht freigeben.
+Wenn die Anwendung einen Pinsel zurückgibt, den sie erstellt hat (z. B. mithilfe der [**Funktion CreateSolidBrush**](/windows/desktop/api/wingdi/nf-wingdi-createsolidbrush) oder [**CreateBrushIndirect),**](/windows/desktop/api/wingdi/nf-wingdi-createbrushindirect) muss die Anwendung den Pinsel freigeben. Wenn die Anwendung einen Systempinsel zurückgibt (z. B. einen, der von der [**GetStockObject-**](/windows/desktop/api/wingdi/nf-wingdi-getstockobject) oder [**GetSysColorBrush-Funktion**](/windows/desktop/api/winuser/nf-winuser-getsyscolorbrush) abgerufen wurde), muss die Anwendung den Pinsel nicht freigeben.
 
-Standardmäßig wählt die [**defwindowproc**](/windows/desktop/api/winuser/nf-winuser-defwindowproca) -Funktion die Standardsystem Farben für das statische Steuerelement aus.
+Standardmäßig wählt die [**DefWindowProc-Funktion**](/windows/desktop/api/winuser/nf-winuser-defwindowproca) die Standardsystemfarben für das statische Steuerelement aus.
 
-Sie können die Text Hintergrundfarbe eines deaktivierten Bearbeitungs Steuer Elements festlegen, aber Sie können die textvorder Grundfarbe nicht festlegen. Das System verwendet immer Color \_ GrayText.
+Sie können die Texthintergrundfarbe eines deaktivierten Bearbeitungssteuerelements festlegen, aber Sie können die Textvordergrundfarbe nicht festlegen. Das System verwendet immer COLOR \_ GRAYTEXT.
 
-Wenn Sie Steuerelemente bearbeiten, die nicht schreibgeschützt oder deaktiviert sind, wird die " **WM \_ ctlcolorstatic** "-Nachricht nicht gesendet; stattdessen wird die [**WM- \_ ctlcoloredit**](wm-ctlcoloredit.md) -Nachricht gesendet.
+Bearbeitungssteuerelemente, die nicht schreibgeschützt oder deaktiviert sind, senden die **WM \_ CTLCOLORSTATIC-Nachricht** nicht. Stattdessen senden sie die [**WM \_ CTLCOLOREDIT-Nachricht.**](wm-ctlcoloredit.md)
 
-Die " **WM \_ ctlcolorstatic** "-Meldung wird nie zwischen Threads gesendet, sondern nur innerhalb desselben Threads.
+Die **WM \_ CTLCOLORSTATIC-Nachricht** wird nie zwischen Threads gesendet. Sie wird nur innerhalb desselben Threads gesendet.
 
-Wenn eine Dialogfeld Prozedur diese Nachricht behandelt, sollte Sie den gewünschten Rückgabewert in ein **int- \_ ptr** umwandeln und den Wert direkt zurückgeben. Wenn die Dialogfeld Prozedur **false** zurückgibt, wird die standardmäßige Nachrichtenverarbeitung ausgeführt. Der \_ von der [**SetWindowLong**](/windows/desktop/api/winuser/nf-winuser-setwindowlonga) -Funktion festgelegte DWL-msgresult-Wert wird ignoriert.
+Wenn eine Dialogfeldprozedur diese Nachricht verarbeitet, sollte sie den gewünschten Rückgabewert in einen **INT \_ PTR-Wert** konvertieren und den Wert direkt zurückgeben. Wenn die Dialogfeldprozedur **FALSE** zurückgibt, wird die Standardmäßige Nachrichtenverarbeitung ausgeführt. Der \_ von der [**SetWindowLong-Funktion**](/windows/desktop/api/winuser/nf-winuser-setwindowlonga) festgelegte DWL-MSGRESULT-Wert wird ignoriert.
 
 ## <a name="examples"></a>Beispiele
 
-Im folgenden C++-Beispiel wird gezeigt, wie die Text Vordergrund-und Hintergrundfarben eines statischen-Steuer Elements als Reaktion auf die **WM \_ ctlcolorstatic** -Nachricht festgelegt werden. Die `hbrBkgnd` Variable ist eine statische **hBrush** -Variable, die mit NULL initialisiert wird, und speichert den Hintergrund Pinsel zwischen den Aufrufen von **WM \_ ctlcolorstatic**. Der Pinsel muss durch einen Aufrufen der [**DeleteObject**](/windows/desktop/api/wingdi/nf-wingdi-deleteobject) -Funktion zerstört werden, wenn er nicht mehr benötigt wird, in der Regel, wenn das zugehörige Dialogfeld zerstört wird.
+Das folgende C++-Beispiel zeigt, wie die Textvorder- und Hintergrundfarben eines statischen Steuerelements als Reaktion auf die **WM \_ CTLCOLORSTATIC-Nachricht** festgelegt werden. Die `hbrBkgnd` Variable ist eine statische **HBRUSH-Variable,** die mit NULL initialisiert wird und den Hintergrundpinsel zwischen Aufrufen von **WM \_ CTLCOLORSTATIC** speichert. Der Pinsel muss durch einen Aufruf der [**DeleteObject-Funktion**](/windows/desktop/api/wingdi/nf-wingdi-deleteobject) zerstört werden, wenn er nicht mehr benötigt wird, in der Regel, wenn das zugeordnete Dialogfeld zerstört wird.
 
 
 ```C++
@@ -101,29 +101,29 @@ Im folgenden C++-Beispiel wird gezeigt, wie die Text Vordergrund-und Hintergrund
 
 | Anforderung | Wert |
 |-------------------------------------|----------------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>                                                           |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2003 \[ -Desktop-Apps\]<br/>                                                     |
-| Header<br/>                   | <dl> <dt>Winuser. h (Windows. h einschließen)</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows \[Nur Vista-Desktop-Apps\]<br/>                                                           |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2003-Desktop-Apps\]<br/>                                                     |
+| Header<br/>                   | <dl> <dt>Winuser.h (include Windows.h)</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-**Verweis**
+**Referenz**
 </dt> <dt>
 
-[**WM \_ ctlcolorbtn**](wm-ctlcolorbtn.md)
+[**WM \_ CTLCOLORBTN**](wm-ctlcolorbtn.md)
 </dt> <dt>
 
-[**WM \_ ctlcoloredit**](wm-ctlcoloredit.md)
+[**WM \_ CTLCOLOREDIT**](wm-ctlcoloredit.md)
 </dt> <dt>
 
-[**WM \_ ctlcolorlistbox**](wm-ctlcolorlistbox.md)
+[**WM \_ CTLCOLORLISTBOX**](wm-ctlcolorlistbox.md)
 </dt> <dt>
 
-[**WM \_ ctlcolorscrollbar**](wm-ctlcolorscrollbar.md)
+[**WM \_ CTLCOLORSCROLLBAR**](wm-ctlcolorscrollbar.md)
 </dt> <dt>
 
 **Andere Ressourcen**
@@ -135,10 +135,10 @@ Im folgenden C++-Beispiel wird gezeigt, wie die Text Vordergrund-und Hintergrund
 [**RealizePalette**](/windows/desktop/api/wingdi/nf-wingdi-realizepalette)
 </dt> <dt>
 
-[**SelectPalette**](/windows/desktop/api/wingdi/nf-wingdi-selectpalette)
+[**Wählen SiePalette aus.**](/windows/desktop/api/wingdi/nf-wingdi-selectpalette)
 </dt> <dt>
 
-[**WM \_ ctlcolordlg**](/windows/desktop/dlgbox/wm-ctlcolordlg)
+[**WM \_ CTLCOLORDLG**](/windows/desktop/dlgbox/wm-ctlcolordlg)
 </dt> </dl>
 
  

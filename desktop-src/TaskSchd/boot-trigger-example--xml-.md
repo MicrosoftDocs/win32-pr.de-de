@@ -1,6 +1,6 @@
 ---
-title: Beispiel für einen Start Auslösers (XML)
-description: Der XML-Code in diesem Beispiel definiert einen Task, der den Editor startet, wenn das System gestartet wird.
+title: Beispiel für Starttrigger (XML)
+description: Der XML-Code in diesem Beispiel definiert eine Aufgabe, die Editor startet, wenn das System gestartet wird.
 ms.assetid: 6dd7155c-6163-4408-9cef-c313134beeb0
 ms.topic: article
 ms.date: 05/31/2018
@@ -9,22 +9,22 @@ topic_type:
 api_name: ''
 api_type: ''
 api_location: ''
-ms.openlocfilehash: a8f9f5ea10f92979b0798b12a6225f8ba74a38ee
-ms.sourcegitcommit: 40dd8501397fc79a643deb528c6c57ac2e9726ce
+ms.openlocfilehash: 75b4c9628da5ef56ec006faf9d7301661dfd0f76894ebb4f5f37cc1035d40f75
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "104314058"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118860319"
 ---
-# <a name="boot-trigger-example-xml"></a>Beispiel für einen Start Auslösers (XML)
+# <a name="boot-trigger-example-xml"></a>Beispiel für Starttrigger (XML)
 
-Der XML-Code in diesem Beispiel definiert einen Task, der den Editor startet, wenn das System gestartet wird.
+Der XML-Code in diesem Beispiel definiert eine Aufgabe, die Editor startet, wenn das System gestartet wird.
 
-Zum Registrieren einer Aufgabe, die in XML definiert ist, können Sie entweder die [**ITaskFolder:: RegisterTask**](/windows/desktop/api/taskschd/nf-taskschd-itaskfolder-registertask) -Funktion ([**taskfolder. RegisterTask**](taskfolder-registertask.md) für die Skripterstellung) oder das Befehlszeilen Tool Schtasks.exe verwenden. Wenn Sie das Schtasks.exe Tool (das sich im Verzeichnis "C: \\ Windows System32" befindet \\ ) verwenden, können Sie den folgenden Befehl verwenden, um den Task zu registrieren: **Schtasks/CREATE/XML** *<path to the XML file containing the task definition>* **/TN** *<task name>* .
+Zum Registrieren einer aufgabe, die in XML definiert ist, können Sie entweder die [**ITaskFolder::RegisterTask-Funktion**](/windows/desktop/api/taskschd/nf-taskschd-itaskfolder-registertask) ([**TaskFolder.RegisterTask**](taskfolder-registertask.md) für Skripterstellung) oder das Schtasks.exe-Befehlszeilentool verwenden. Wenn Sie das Schtasks.exe-Tool (im Verzeichnis C: Windows System32) verwenden, können Sie den folgenden Befehl verwenden, um die Aufgabe zu \\ \\ registrieren: **schtasks /create /XML** *<path to the XML file containing the task definition>* **/tn** *<task name>* .
 
-## <a name="to-define-a-task-to-start-notepad-on-system-boot"></a>So definieren Sie einen Task zum Starten von Notepad beim Systemstart
+## <a name="to-define-a-task-to-start-notepad-on-system-boot"></a>So definieren Sie eine Aufgabe zum Starten Editor beim Systemstart
 
-Das folgende XML-Beispiel zeigt, wie Sie eine Aufgabe mit einer einzelnen Ausführungs Aktion (Starten von Editor), einem einzelnen Start-Triggern, der die Aufgabe startet, wenn das System gestartet wird, und mehreren anderen Task Einstellungen definieren, die sich darauf auswirken, wie die Aufgabe vom Taskplaner behandelt wird.
+Das folgende XML-Beispiel zeigt, wie sie einen Task mit einer einzelnen Ausführungsaktion (ab Editor), einem einzelnen Starttrigger, der die Aufgabe startet, wenn das System gestartet wird, und mehreren anderen Aufgabeneinstellungen definieren, die sich darauf auswirken, wie der Task vom -Taskplaner.
 
 
 ```XML
@@ -69,27 +69,27 @@ the system is booted.
 
 
 
-## <a name="taskscheduler-schema-elements"></a>TaskScheduler-Schema Elemente
+## <a name="taskscheduler-schema-elements"></a>TaskScheduler-Schemaelemente
 
-Im folgenden finden Sie einige wichtige Elemente, die Sie beachten sollten, wenn Sie dieses Beispiel verwenden.
+Im Folgenden finden Sie einige wichtige Elemente, die Sie bei der Verwendung dieses Beispiels beachten sollten.
 
--   [**RegistrationInfo**](taskschedulerschema-registrationinfo-tasktype-element.md): enthält Registrierungsinformationen zum Task.
--   [**Trigger**](taskschedulerschema-triggers-tasktype-element.md): definiert den Trigger, der den Task startet.
--   [**Boottrigger**](taskschedulerschema-boottrigger-triggergroup-element.md): definiert den Start--Debugger. In diesem Fall werden nur zwei untergeordnete Elemente verwendet: die Start-und endgrenzen, die angeben, wann der Auslöse Zeitpunkt aktiviert und deaktiviert wird.
--   [**Prinzipal**](taskschedulerschema-principal-principaltype-element.md): definiert den Sicherheitskontext, unter dem eine Aufgabe ausgeführt wird.
--   [**Einstellungen**](taskschedulerschema-settings-tasktype-element.md): definiert die Aufgaben Einstellungen, die der Taskplaner verwendet, um die Aufgabe auszuführen.
--   [**Aktionen**](taskschedulerschema-actions-tasktype-element.md): definiert die Aktionen, die von der Aufgabe durchführt werden. In diesem Fall wird der Editor ausgeführt.
+-   [**RegistrationInfo:**](taskschedulerschema-registrationinfo-tasktype-element.md)Enthält Registrierungsinformationen zum Task.
+-   [**Trigger:**](taskschedulerschema-triggers-tasktype-element.md)Definiert den Trigger, der die Aufgabe startet.
+-   [**BootTrigger:**](taskschedulerschema-boottrigger-triggergroup-element.md)Definiert den Starttrigger. In diesem Fall werden nur zwei untergeordnete Elemente verwendet: die Start- und Endgrenzen, die angeben, wann der Trigger aktiviert und deaktiviert wird.
+-   [**Prinzipal:**](taskschedulerschema-principal-principaltype-element.md)Definiert den Sicherheitskontext, unter dem ein Task ausgeführt wird.
+-   [**Einstellungen**](taskschedulerschema-settings-tasktype-element.md): Definiert die Aufgabeneinstellungen, die der Taskplaner zum Ausführen der Aufgabe verwendet.
+-   [**Aktionen:**](taskschedulerschema-actions-tasktype-element.md)Definiert die Aktionen, die der Task ausführt. In diesem Fall wird Editor.
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
 <dl> <dt>
 
-[Verwenden des Taskplaner](using-the-task-scheduler.md)
+[Verwenden der Taskplaner](using-the-task-scheduler.md)
 </dt> </dl>
 
- 
+ 
 
- 
+ 
 
 
 

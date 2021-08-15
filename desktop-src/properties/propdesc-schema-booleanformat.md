@@ -4,12 +4,12 @@ ms.assetid: f6384910-4411-4ac2-884d-3476c1b6ff96
 title: booleanFormat
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 528458d9c31d54ef43eca8325b1daeef4eee1195
-ms.sourcegitcommit: 5d4e99f4c8f42f5f543e52cb9beb9fb13ec56c5f
+ms.openlocfilehash: 9df8c7d2a72f7229c99fb13244aae2b6bc1d4ec63c272f10aa2d35a81740f5d3
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2021
-ms.locfileid: "112405963"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119460050"
 ---
 # <a name="booleanformat"></a>booleanFormat
 
@@ -63,13 +63,13 @@ Wenn mehrere Elemente vorhanden sind, wird das letzte Element verwendet. Wenn ke
 <thead>
 <tr class="header">
 <th>attribute</th>
-<th>Beschreibung</th>
+<th>BESCHREIBUNG</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
 <td>formatAs</td>
-<td>Öffentlich. Dies ist optional. Der Standardwert ist &quot; &quot; YesNo. Die folgenden Werte sind gültig. 
+<td>Öffentlich. Optional. Der Standardwert ist &quot; &quot; YesNo. Die folgenden Werte sind gültig. 
 <table>
 <thead>
 <tr class="header">

@@ -1,37 +1,37 @@
 ---
-description: Dieser Abschnitt ist eine alphabetische Auflistung für TAPI-Callcenter-Strukturen.
+description: Dieser Abschnitt ist eine alphabetische Auflistung für TAPI-Callcenterstrukturen.
 ms.assetid: 657008b1-2352-40c8-a38b-6bfffeb47cc0
-title: Callcenter-Strukturen
+title: Callcenterstrukturen
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 0397244e504a5c5884f235c0e662e383fd6e44f3
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 7d955deb2c56607980504601abad2f143525f4ccb3dd7e9a90d246356944c6f6
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104528526"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118870752"
 ---
-# <a name="call-center-structures"></a>Callcenter-Strukturen
+# <a name="call-center-structures"></a>Callcenterstrukturen
 
-Dieser Abschnitt ist eine alphabetische Auflistung für TAPI-Callcenter-Strukturen.
+Dieser Abschnitt ist eine alphabetische Auflistung für TAPI-Callcenterstrukturen.
 
--   [**Lineagentactivityentry**](/windows/desktop/api/Tapi/ns-tapi-lineagentactivityentry)
--   [**Lineagentactivitylist**](/windows/desktop/api/Tapi/ns-tapi-lineagentactivitylist)
--   [**Lineagentcaps**](/windows/desktop/api/Tapi/ns-tapi-lineagentcaps)
--   [**Lineagententry**](/windows/desktop/api/Tapi/ns-tapi-lineagententry)
--   [**Lineagentgroupentry**](/windows/desktop/api/Tapi/ns-tapi-lineagentgroupentry)
--   [**Lineagentgrouplist**](/windows/desktop/api/Tapi/ns-tapi-lineagentgrouplist)
--   [**Lineagentinfo**](/windows/desktop/api/Tapi/ns-tapi-lineagentinfo)
--   [**Lineagentlist**](/windows/desktop/api/Tapi/ns-tapi-lineagentlist)
--   [**Lineagentsessionentry**](/windows/win32/api/tapi/ns-tapi-lineagentsessionentry)
--   [**Lineagentsessioninfo**](/windows/desktop/api/Tapi/ns-tapi-lineagentsessioninfo)
--   [**Lineagentsessionlist**](/windows/desktop/api/Tapi/ns-tapi-lineagentsessionlist)
--   [**Lineagentstatus**](/windows/desktop/api/Tapi/ns-tapi-lineagentstatus)
--   [**Lineproxyrequest**](/windows/desktop/api/Tapi/ns-tapi-lineproxyrequest)
--   [**Lineproxyrequestlist**](/windows/desktop/api/Tapi/ns-tapi-lineproxyrequestlist)
--   [**Linequeueentry**](/windows/desktop/api/Tapi/ns-tapi-linequeueentry)
--   [**Linequeueingefo**](/windows/desktop/api/Tapi/ns-tapi-linequeueinfo)
--   [**Linequeuelist**](/windows/desktop/api/Tapi/ns-tapi-linequeuelist)
+-   [**LINEAGENTACTIVITYENTRY**](/windows/desktop/api/Tapi/ns-tapi-lineagentactivityentry)
+-   [**LINEAGENTACTIVITYLIST**](/windows/desktop/api/Tapi/ns-tapi-lineagentactivitylist)
+-   [**LINEAGENTCAPS**](/windows/desktop/api/Tapi/ns-tapi-lineagentcaps)
+-   [**LINEAGENTENTRY**](/windows/desktop/api/Tapi/ns-tapi-lineagententry)
+-   [**LINEAGENTGROUPENTRY**](/windows/desktop/api/Tapi/ns-tapi-lineagentgroupentry)
+-   [**LINEAGENTGROUPLIST**](/windows/desktop/api/Tapi/ns-tapi-lineagentgrouplist)
+-   [**LINEAGENTINFO**](/windows/desktop/api/Tapi/ns-tapi-lineagentinfo)
+-   [**LINEAGENTLIST**](/windows/desktop/api/Tapi/ns-tapi-lineagentlist)
+-   [**LINEAGENTSESSIONENTRY**](/windows/win32/api/tapi/ns-tapi-lineagentsessionentry)
+-   [**LINEAGENTSESSIONINFO**](/windows/desktop/api/Tapi/ns-tapi-lineagentsessioninfo)
+-   [**LINEAGENTSESSIONLIST**](/windows/desktop/api/Tapi/ns-tapi-lineagentsessionlist)
+-   [**LINEAGENTSTATUS**](/windows/desktop/api/Tapi/ns-tapi-lineagentstatus)
+-   [**LINEPROXYREQUEST**](/windows/desktop/api/Tapi/ns-tapi-lineproxyrequest)
+-   [**LINEPROXYREQUESTLIST**](/windows/desktop/api/Tapi/ns-tapi-lineproxyrequestlist)
+-   [**LINEQUEUEENTRY**](/windows/desktop/api/Tapi/ns-tapi-linequeueentry)
+-   [**LINEQUEUEINFO**](/windows/desktop/api/Tapi/ns-tapi-linequeueinfo)
+-   [**LINEQUE WIESNIST**](/windows/desktop/api/Tapi/ns-tapi-linequeuelist)
 
  
 

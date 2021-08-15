@@ -1,36 +1,36 @@
 ---
-title: Verarbeiten von TrackBar-Benachrichtigungs Meldungen
-description: Trackbars Benachrichtigen das übergeordnete Fenster von Benutzeraktionen, indem das übergeordnete Element eine WM \_ HScroll-oder WM- \_ VScroll-Nachricht sendet.
+title: Verarbeiten von Trackbar-Benachrichtigungsmeldungen
+description: Trackleisten benachrichtigen das übergeordnete Fenster über Benutzeraktionen, indem sie dem übergeordneten Element eine WM \_ HSCROLL- oder WM \_ VSCROLL-Nachricht senden.
 ms.assetid: 83F47A3E-E607-49C2-A8B5-BC8A321D90BB
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: c723ad1bebb5c9f3ec8c4e7aefdc658e0881aef6
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: e211a468c5c107a96fc6b28d12feed219799450828db07be87cd8887b5816bd1
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "103709006"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119540320"
 ---
-# <a name="how-to-process-trackbar-notification-messages"></a>Verarbeiten von TrackBar-Benachrichtigungs Meldungen
+# <a name="how-to-process-trackbar-notification-messages"></a>Verarbeiten von Trackbar-Benachrichtigungsmeldungen
 
-Trackbars Benachrichtigen das übergeordnete Fenster von Benutzeraktionen, indem das übergeordnete Element eine [**WM \_ HScroll**](wm-hscroll.md) -oder [**WM- \_ VScroll**](wm-vscroll.md) -Nachricht sendet.
+Trackleisten benachrichtigen das übergeordnete Fenster über Benutzeraktionen, indem sie dem übergeordneten Element eine [**WM \_ HSCROLL-**](wm-hscroll.md) oder [**WM \_ VSCROLL-Nachricht**](wm-vscroll.md) senden.
 
-## <a name="what-you-need-to-know"></a>Was Sie wissen müssen
+## <a name="what-you-need-to-know"></a>Wichtige Informationen
 
 ### <a name="technologies"></a>Technologien
 
--   [Windows-Steuerelemente](window-controls.md)
+-   [Windows Steuerelemente](window-controls.md)
 
 ### <a name="prerequisites"></a>Voraussetzungen
 
 -   C/C++
--   Programmieren der Windows-Benutzeroberfläche
+-   Windows Benutzeroberfläche-Programmierung
 
 ## <a name="instructions"></a>Anweisungen
 
-### <a name="process-trackbar-notification-messages"></a>Verarbeiten von TrackBar-Benachrichtigungs Meldungen
+### <a name="process-trackbar-notification-messages"></a>Verarbeiten von Trackbar-Benachrichtigungsmeldungen
 
-Das folgende Codebeispiel ist eine Funktion, die aufgerufen wird, wenn das übergeordnete Fenster der TrackBar eine [**WM- \_ HScroll**](wm-hscroll.md) -Nachricht empfängt. Die TrackBar in diesem Beispiel hat den [**TSB-Stil " \_ enableselrange**](trackbar-control-styles.md) ". Die Position des Schiebereglers wird mit dem Auswahlbereich verglichen, und der Schieberegler wird bei Bedarf an die Anfangs-oder Endposition des Auswahl Bereichs verschoben.
+Das folgende Codebeispiel ist eine Funktion, die aufgerufen wird, wenn das übergeordnete Fenster der Trackleiste eine [**WM \_ HSCROLL-Nachricht**](wm-hscroll.md) empfängt. Die Trackleiste in diesem Beispiel hat den [**TBS \_ ENABLESELRANGE-Stil.**](trackbar-control-styles.md) Die Position des Schiebereglers wird mit dem Auswahlbereich verglichen, und der Schieberegler wird bei Bedarf an die Anfangs- oder Endposition des Auswahlbereichs verschoben.
 
 
 ```
@@ -73,20 +73,20 @@ VOID WINAPI TBNotifications(
 
 
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Ein Dialogfeld, das eine TrackBar im TSB-Format " [**\_ Vert**](trackbar-control-styles.md) " enthält, kann diese Funktion verwenden, wenn Sie eine [**WM- \_ VScroll**](wm-vscroll.md) -Nachricht empfängt.
+Ein Dialogfeld, das eine [**TBS \_ VERT-Trackleiste**](trackbar-control-styles.md) enthält, kann diese Funktion verwenden, wenn es eine [**WM \_ VSCROLL-Nachricht**](wm-vscroll.md) empfängt.
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
 <dl> <dt>
 
-[Verwenden von TrackBar-Steuerelementen](using-trackbar-controls.md)
+[Verwenden von Trackbar-Steuerelementen](using-trackbar-controls.md)
 </dt> </dl>
 
- 
+ 
 
- 
+ 
 
 
 

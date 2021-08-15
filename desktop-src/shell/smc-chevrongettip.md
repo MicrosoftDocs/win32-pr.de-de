@@ -1,19 +1,19 @@
 ---
-description: Fordert den Titel und den Text für ein Chevron-Infotipp für das von der zugehörigen smdata-Struktur angegebene Element an.
+description: Fordert den Titel und text für eine Chevron-Infotip für das Element an, das von der zugehörigen SMDATA-Struktur angegeben wird.
 ms.assetid: 7bce4079-994c-4eb0-ab86-9044701d85a1
-title: SMC_CHEVRONGETTIP Meldung (shobjidl. h)
+title: SMC_CHEVRONGETTIP (Shobjidl.h)
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 118056627d19990648e81b69aa355f3df99ec286
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 9e64636994743d4b13a96fe75947fb515c4dbd3edcc94e6dee0fa85efb8bc9d1
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "104980176"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118968239"
 ---
-# <a name="smc_chevrongettip-message"></a>SMC \_ chevrongettip-Nachricht
+# <a name="smc_chevrongettip-message"></a>\_SMC-CHEVRONGETTIP-Nachricht
 
-Fordert den Titel und den Text für ein Chevron-Infotipp für das von der zugehörigen [**smdata**](/windows/win32/api/shobjidl_core/ns-shobjidl_core-smdata) -Struktur angegebene Element an.
+Fordert den Titel und text für eine Chevron-Infotip für das Element an, das von der zugehörigen [**SMDATA-Struktur angegeben**](/windows/win32/api/shobjidl_core/ns-shobjidl_core-smdata) wird.
 
 
 ```C++
@@ -29,29 +29,29 @@ SMC_CHEVRONGETTIP
 
 <dl> <dt>
 
-*pwsztiptitle* 
+*pwszTipTitle* 
 </dt> <dd>
 
-Ein Zeiger auf einen Puffer, der eine **null**-terminierte Unicode-Zeichenfolge mit dem Titel des infotip empfängt. Diese Zeichenfolge darf nicht länger sein als \_ die maximale Länge von Pfad Zeichen, einschließlich des abschließenden **null** -Zeichens.
+Ein Zeiger auf einen Puffer, der eine **mit NULL** beendete Unicode-Zeichenfolge empfängt, die den Titel des Infotips enthält. Diese Zeichenfolge darf nicht länger als MAX \_ PATH-Zeichen lang sein, einschließlich des beendenden **NULL-Zeichens.**
 
 </dd> <dt>
 
-*pwsztiptext* 
+*pwszTipText* 
 </dt> <dd>
 
-Ein Zeiger auf einen Puffer, der eine **null**-terminierte Unicode-Zeichenfolge empfängt, die den Text des infotip enthält. Diese Zeichenfolge darf nicht länger sein als \_ die maximale Länge von Pfad Zeichen, einschließlich des abschließenden **null** -Zeichens.
+Ein Zeiger auf einen Puffer, der eine mit **NULL** beendete Unicode-Zeichenfolge empfängt, die den Text der Infotip enthält. Diese Zeichenfolge darf nicht länger als MAX \_ PATH-Zeichen lang sein, einschließlich des beendenden **NULL-Zeichens.**
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt "S OK" zurück \_ .
+Geben Sie S \_ OK zurück.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Diese Benachrichtigung wird von der [**ishellmenucallback:: callbacksm**](/windows/desktop/api/shobjidl_core/nf-shobjidl_core-ishellmenucallback-callbacksm) -Methode empfangen.
+Diese Benachrichtigung wird von der [**IShellMenuCallback::CallbackSM-Methode**](/windows/desktop/api/shobjidl_core/nf-shobjidl_core-ishellmenucallback-callbacksm) empfangen.
 
-## <a name="requirements"></a>Requirements (Anforderungen)
+## <a name="requirements"></a>Anforderungen
 
 
 
@@ -59,8 +59,8 @@ Diese Benachrichtigung wird von der [**ishellmenucallback:: callbacksm**](/windo
 |-------------------------------------|-----------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional \[nur Desktop-Apps\]<br/>                              |
 | Unterstützte Mindestversion (Server)<br/> | Windows 2000 Server \[nur Desktop-Apps\]<br/>                                    |
-| Header<br/>                   | <dl> <dt>Shobjidl. h</dt> </dl>   |
-| IDL<br/>                      | <dl> <dt>Shobjidl. idl</dt> </dl> |
+| Header<br/>                   | <dl> <dt>Shobjidl.h</dt> </dl>   |
+| Idl<br/>                      | <dl> <dt>Shobjidl.idl</dt> </dl> |
 
 
 

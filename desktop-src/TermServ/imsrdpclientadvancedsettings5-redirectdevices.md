@@ -1,18 +1,18 @@
 ---
-title: IMsRdpClientAdvancedSettings5 redirectdevices (Eigenschaft)
-description: Legt die Konfiguration für die Geräte Umleitung fest oder ruft Sie ab.
+title: IMsRdpClientAdvancedSettings5 RedirectDevices (Eigenschaft)
+description: Legt die Konfiguration für die Geräteumleitung fest oder ruft sie ab.
 ms.assetid: bf989ca0-5c79-4a73-a32b-51ef97ca0dff
 ms.tgt_platform: multiple
 keywords:
-- Redirectdevices-Eigenschaft Remotedesktopdienste
-- Redirectdevices-Eigenschaft Remotedesktopdienste, IMsRdpClientAdvancedSettings5-Schnittstelle
-- IMsRdpClientAdvancedSettings5 Interface Remotedesktopdienste, redirectdevices (Eigenschaft)
-- Redirectdevices-Eigenschaft Remotedesktopdienste, IMsRdpClientAdvancedSettings6-Schnittstelle
-- IMsRdpClientAdvancedSettings6 Interface Remotedesktopdienste, redirectdevices (Eigenschaft)
-- Redirectdevices-Eigenschaft Remotedesktopdienste, IMsRdpClientAdvancedSettings7-Schnittstelle
-- IMsRdpClientAdvancedSettings7 Interface Remotedesktopdienste, redirectdevices (Eigenschaft)
-- Redirectdevices-Eigenschaft Remotedesktopdienste, IMsRdpClientAdvancedSettings8-Schnittstelle
-- IMsRdpClientAdvancedSettings8 Interface Remotedesktopdienste, redirectdevices (Eigenschaft)
+- RedirectDevices-Remotedesktopdienste
+- RedirectDevices-Remotedesktopdienste , IMsRdpClientAdvancedSettings5-Schnittstelle
+- IMsRdpClientAdvancedSettings5-Schnittstelle Remotedesktopdienste , RedirectDevices-Eigenschaft
+- RedirectDevices-Eigenschaft Remotedesktopdienste , IMsRdpClientAdvancedSettings6-Schnittstelle
+- IMsRdpClientAdvancedSettings6-Schnittstelle Remotedesktopdienste , RedirectDevices-Eigenschaft
+- RedirectDevices-Remotedesktopdienste , IMsRdpClientAdvancedSettings7-Schnittstelle
+- IMsRdpClientAdvancedSettings7-Schnittstelle Remotedesktopdienste , RedirectDevices-Eigenschaft
+- RedirectDevices-Eigenschaft Remotedesktopdienste , IMsRdpClientAdvancedSettings8-Schnittstelle
+- IMsRdpClientAdvancedSettings8-Schnittstelle Remotedesktopdienste , RedirectDevices-Eigenschaft
 topic_type:
 - apiref
 api_name:
@@ -34,16 +34,16 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: ab1eec96b5d4fde20add891cc742c76c14ebe7ed
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: be6e72c5441b7eaa79b7bfeceb4e910b09041b72fb90dc58a54abda73baf9109
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "106341372"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118855328"
 ---
-# <a name="imsrdpclientadvancedsettings5redirectdevices-property"></a>IMsRdpClientAdvancedSettings5:: redirectdevices (Eigenschaft)
+# <a name="imsrdpclientadvancedsettings5redirectdevices-property"></a>IMsRdpClientAdvancedSettings5::RedirectDevices (Eigenschaft)
 
-Legt die Konfiguration für die Geräte Umleitung fest oder ruft Sie ab.
+Legt die Konfiguration für die Geräteumleitung fest oder ruft sie ab.
 
 Dies ist eine Eigenschaft mit Lese- und Schreibzugriff.
 
@@ -64,7 +64,7 @@ HRESULT get_RedirectDevices(
 
 ## <a name="property-value"></a>Eigenschaftswert
 
-Legt den Geräte Umleitungs Modus auf **true** oder **false** fest. Wenn dieser Wert auf **true** festgelegt ist, ist der Geräte Umleitungs Modus aktiviert
+Legt den Geräteumleitungsmodus auf **TRUE oder** **FALSE fest.** Wenn diese Option auf **TRUE festgelegt** ist, ist der Geräteumleitungsmodus aktiviert.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -80,7 +80,7 @@ Legt den Geräte Umleitungs Modus auf **true** oder **false** fest. Wenn dieser 
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 

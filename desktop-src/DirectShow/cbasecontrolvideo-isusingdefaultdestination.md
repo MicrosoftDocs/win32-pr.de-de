@@ -1,7 +1,7 @@
 ---
-description: Die isusingdefaultdestination-Methode bestimmt, ob der Renderer das Standardziel Fenster verwendet.
+description: Die IsUsingDefaultDestination-Methode bestimmt, ob der Renderer das Standardzielfenster verwendet.
 ms.assetid: 0b956575-4cf0-4f1f-9223-bb1ec3ae8b10
-title: Cbasecontrolvideo. isusingdefaultdestination-Methode (ctlutil. h)
+title: CBaseControlVideo.IsUsingDefaultDestination-Methode (Ctlutil.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -16,16 +16,16 @@ api_location:
 - Strmbase.dll
 - Strmbasd.lib
 - Strmbasd.dll
-ms.openlocfilehash: 88168442cf741e5997c2b66fc4b83bf8205e694f
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: cf254ec89cc6804af86c98abaaa0c53ae5f76a25766391529ca4de85bee7d084
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106361591"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118955219"
 ---
-# <a name="cbasecontrolvideoisusingdefaultdestination-method"></a>Cbasecontrolvideo. isusingdefaultdestination-Methode
+# <a name="cbasecontrolvideoisusingdefaultdestination-method"></a>CBaseControlVideo.IsUsingDefaultDestination-Methode
 
-Die- `IsUsingDefaultDestination` Methode bestimmt, ob der Renderer das Standardziel Fenster verwendet.
+Die `IsUsingDefaultDestination` -Methode bestimmt, ob der Renderer das Standardzielfenster verwendet.
 
 ## <a name="syntax"></a>Syntax
 
@@ -42,7 +42,7 @@ Diese Methode hat keine Parameter.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt " \_ OK" zurück, wenn das Standardziel verwendet wird; andernfalls wird "false" zurückgegeben \_ .
+Gibt S \_ OK zurück, wenn das Standardziel verwendet wird. Andernfalls wird S \_ FALSE zurückgegeben.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -50,16 +50,16 @@ Gibt " \_ OK" zurück, wenn das Standardziel verwendet wird; andernfalls wird "f
 
 | Anforderung | Wert |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>Ctlutil. h (Include Streams. h)</dt> </dl>                                                                                   |
-| Bibliothek<br/> | <dl> " <dt>Straumbase. lib" (Einzelhandels Builds);</dt> " <dt>Straumbasd. lib" (Debugbuilds)</dt> </dl> |
+| Header<br/>  | <dl> <dt>Ctlutil.h (include Streams.h)</dt> </dl>                                                                                   |
+| Bibliothek<br/> | <dl> <dt>Strmbase.lib (Einzelhandels-Builds); </dt> <dt>Strmbasd.lib (Debugbuilds)</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Cbasecontrolvideo-Klasse**](cbasecontrolvideo.md)
+[**CBaseControlVideo-Klasse**](cbasecontrolvideo.md)
 </dt> </dl>
 
  

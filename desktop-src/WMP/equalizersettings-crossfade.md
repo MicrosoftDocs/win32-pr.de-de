@@ -1,9 +1,9 @@
 ---
-title: Equalizersettings. Crossfade
-description: Mit dem Crossfade-Attribut wird ein Wert angegeben oder abgerufen, der angibt, ob das Kreuz ausblenden aktiviert ist.
+title: EQUALIZERSETTINGS.crossFade
+description: Das crossFade-Attribut gibt einen Wert an, der angibt, ob Das Überblenden aktiviert ist, oder ruft einen Wert ab.
 ms.assetid: 6c5a31f3-982e-4660-80ff-30b7a4290a15
 keywords:
-- Equalizersettings. Crossfade-Windows-Media Player
+- EQUALIZERSETTINGS.crossFade Windows Media Player
 topic_type:
 - apiref
 api_name:
@@ -12,16 +12,16 @@ api_type:
 - NA
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 0472f90f94b5c4ba56948848476b6585502427c7
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 1ff38ee7634f31da7717bfca015ebaacd88796d9c8186faef155704a449bbb07
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106367121"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118838625"
 ---
-# <a name="equalizersettingscrossfade"></a>Equalizersettings. Crossfade
+# <a name="equalizersettingscrossfade"></a>EQUALIZERSETTINGS.crossFade
 
-Mit dem **Crossfade** -Attribut wird ein Wert angegeben oder abgerufen, der angibt, ob das Kreuz ausblenden aktiviert ist.
+Das **crossFade-Attribut** gibt einen Wert an, der angibt, ob Das Überblenden aktiviert ist, oder ruft einen Wert ab.
 
 ``` syntax
         elementID.crossFade
@@ -29,22 +29,22 @@ Mit dem **Crossfade** -Attribut wird ein Wert angegeben oder abgerufen, der angi
 
 ## <a name="possible-values"></a>Mögliche Werte
 
-Dieses Attribut ist ein **boolescher** Wert mit Lese-/Schreibzugriff.
+Dieses Attribut ist ein **boolescher** Lese-/Schreib-Wert.
 
 
 
 | Wert | BESCHREIBUNG                      |
 |-------|----------------------------------|
-| true  | Cross-Fade ist aktiviert.           |
-| false | Standard. Cross-Fade ist deaktiviert. |
+| true  | Das Überblenden ist aktiviert.           |
+| false | Standard. Kreuzblenden ist deaktiviert. |
 
 
 
  
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Cross-Fade ist eine Funktion zur Audioverarbeitung, bei der das Volumen eines Medien Elements nach dem Ende der Wiedergabe allmählich verringert wird, während gleichzeitig die Wiedergabe des nächsten Medien Elements auf dem minimalen Volume gestartet wird und die Daten allmählich auf das normale Volume erhöht werden. Die Überlappung zwischen dem Start des zweiten Medien Elements und dem Ende des ersten Medien Elements wird durch das **crossfadewindow** -Attribut angegeben.
+Das Überblenden ist ein Audioverarbeitungsfeature, das die Lautstärke eines Medienelements am Ende der Wiedergabe schrittweise verringert, während gleichzeitig die Wiedergabe des nächsten Medienelements bei minimaler Lautstärke gestartet und schrittweise auf die normale Lautstärke erhöht wird. Die Überlappung zwischen dem Anfang des zweiten Medienelements und dem Ende des ersten Medienelements wird durch das **crossFadeWindow-Attribut** angegeben.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -52,18 +52,18 @@ Cross-Fade ist eine Funktion zur Audioverarbeitung, bei der das Volumen eines Me
 
 | Anforderung | Wert |
 |--------------------|---------------------------------------------------|
-| Version<br/> | Windows Media Player 9-Serie oder höher<br/> |
+| Version<br/> | Windows Media Player 9er Serie oder höher<br/> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Equalizersettings-Element**](equalizersettings-element.md)
+[**EQUALIZERSETTINGS-Element**](equalizersettings-element.md)
 </dt> <dt>
 
-[**Equalizersettings. crossfadewindow**](equalizersettings-crossfadewindow.md)
+[**EQUALIZERSETTINGS.crossFadeWindow**](equalizersettings-crossfadewindow.md)
 </dt> </dl>
 
  

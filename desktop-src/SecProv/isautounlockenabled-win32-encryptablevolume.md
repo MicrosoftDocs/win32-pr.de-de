@@ -1,7 +1,7 @@
 ---
-description: Gibt an, ob das Volume bei der Bereitstellung automatisch entsperrt wird.
+description: Gibt an, ob das Volume automatisch entsperrt wird, wenn es bereitgestellt wird.
 ms.assetid: cba04d77-1e7c-4191-8eb7-b8c43694193f
-title: Isautounlockaktivierte Methode der Win32_EncryptableVolume-Klasse
+title: IsAutoUnlockEnabled-Methode der Win32_EncryptableVolume Klasse
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,16 +13,16 @@ api_type:
 - COM
 api_location:
 - Root\CIMV2\Security\MicrosoftVolumeEncryption
-ms.openlocfilehash: 2a144d54ff4564fa322efadd521e44c2fa9a8173
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 19437bf40d27bea87103beecfbe8bee71e404c054ace46cb9728f7ac992b5c85
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106340177"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118891911"
 ---
-# <a name="isautounlockenabled-method-of-the-win32_encryptablevolume-class"></a>Isautounlockaktivierte Methode der Win32- \_ Klasse "verschlüsseltablevolume"
+# <a name="isautounlockenabled-method-of-the-win32_encryptablevolume-class"></a>IsAutoUnlockEnabled-Methode der Win32 \_ EncryptableVolume-Klasse
 
-Die **isautounlockaktivierte** -Methode der Win32-Klasse " [**\_ verschlüsseltablevolume**](win32-encryptablevolume.md) " gibt an, ob das Volume bei der Bereitstellung automatisch entsperrt wird (z. b. Wenn Wechselmedien mit dem Computer verbunden sind).
+Die **IsAutoUnlockEnabled-Methode** der [**Win32 \_ EncryptableVolume-Klasse**](win32-encryptablevolume.md) gibt an, ob das Volume automatisch entsperrt wird, wenn es bereitgestellt wird (z. B. wenn Wechseldatenträger mit dem Computer verbunden sind).
 
 ## <a name="syntax"></a>Syntax
 
@@ -40,29 +40,29 @@ uint32 IsAutoUnlockEnabled(
 
 <dl> <dt>
 
-*Isautounlockaktivierte* \[ vorgenommen\]
+*IsAutoUnlockEnabled* \[ out\]
 </dt> <dd>
 
-Typ: **booleschen**
+Typ: **boolescher Wert**
 
-Ein boolescher Wert, der true ist, wenn der zum automatischen Entsperren des Volumes verwendete externe Schlüssel vorhanden ist und auf dem momentan laufenden Betriebssystem Volume gespeichert ist, andernfalls false.
+Ein boolescher Wert, der true ist, wenn der externe Schlüssel, der zum automatischen Entsperren des Volumes verwendet wird, vorhanden ist und auf dem aktuell ausgeführten Betriebssystem-Volume gespeichert wurde, andernfalls false.
 
 </dd> <dt>
 
-*Volumekeyprotectorid* \[ vorgenommen\]
+*VolumeKeyProtectorID* \[ out\]
 </dt> <dd>
 
 Typ: **Zeichenfolge**
 
-Ein eindeutiger Zeichen folgen Bezeichner, der die zugeordnete verschlüsselte volumeschlüsselschutzkennung enthält, wenn *isautounlockaktiviaktiviert* ist.
+Ein eindeutiger Zeichenfolgenbezeichner, der die zugeordnete verschlüsselte Volumeschlüsselschutz-ID enthält, wenn *IsAutoUnlockEnabled* true ist.
 
-Wenn *isautounlockaktivierte* den Wert false hat, ist *volumekeyprotectorid* eine leere Zeichenfolge.
+Wenn *IsAutoUnlockEnabled* false ist, *ist VolumeKeyProtectorID* eine leere Zeichenfolge.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Typ: **UInt32**
+Typ: **uint32**
 
 Diese Methode gibt einen der folgenden Codes oder einen anderen Fehlercode zurück, wenn ein Fehler auftritt.
 
@@ -71,16 +71,16 @@ Diese Methode gibt einen der folgenden Codes oder einen anderen Fehlercode zurü
 | Rückgabecode/-wert                                                                                                                                                                     | BESCHREIBUNG                                                                                 |
 |---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------|
 | <dl> <dt>**S \_ OK**</dt> <dt>0 (0x0)</dt> </dl>                                     | Die Methode war erfolgreich.<br/>                                                       |
-| <dl> <dt>**F \_ E \_ nicht \_ aktiviert**</dt> <dt>2150694920 (0x80310008)</dt> </dl>    | BitLocker ist auf dem Volume nicht aktiviert. Fügen Sie eine Schlüssel Schutzvorrichtung zum Aktivieren von BitLocker hinzu.<br/> |
-| <dl> <dt>**F \_ E \_ Not \_ Data \_ Volume**</dt> <dt>2150694937 (0x80310019)</dt> </dl> | Die Methode kann nicht für das aktuell laufende Betriebssystem Volume ausgeführt werden.<br/>      |
+| <dl> <dt>**FVE \_ E \_ NOT \_ ACTIVATED**</dt> <dt>2150694920 (0x80310008)</dt> </dl>    | BitLocker ist auf dem Volume nicht aktiviert. Fügen Sie eine Schlüsselschutzvorrichtung hinzu, um BitLocker zu aktivieren.<br/> |
+| <dl> <dt>**FVE \_ E \_ NOT \_ DATA \_ VOLUME**</dt> <dt>2150694937 (0x80310019)</dt> </dl> | Die -Methode kann nicht für das derzeit ausgeführte Betriebssystem-Volume ausgeführt werden.<br/>      |
 
 
 
  
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Managed Object Format-Dateien (MOF) enthalten die Definitionen für Windows-Verwaltungsinstrumentation (WMI)-Klassen. MOF-Dateien werden nicht als Teil des Windows SDK installiert. Sie werden auf dem Server installiert, wenn Sie die zugehörige Rolle mithilfe der Server-Manager hinzufügen. Weitere Informationen zu MOF-Dateien finden Sie unter [Managed Object Format (MOF)](../wmisdk/managed-object-format--mof-.md).
+Managed Object Format -Dateien (MOF) enthalten die Definitionen für Windows WMI-Klassen (Management Instrumentation). MOF-Dateien werden nicht als Teil des Windows SDK installiert. Sie werden auf dem Server installiert, wenn Sie die zugeordnete Rolle mithilfe der Server-Manager. Weitere Informationen zu MOF-Dateien finden Sie unter [Managed Object Format (MOF).](../wmisdk/managed-object-format--mof-.md)
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -88,18 +88,18 @@ Managed Object Format-Dateien (MOF) enthalten die Definitionen für Windows-Verw
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista Enterprise, Windows Vista Ultimate \[ Desktop-Apps\]<br/>                       |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2008 \[ -Desktop-Apps\]<br/>                                                    |
-| Namespace<br/>                | Root \\ CIMV2 \\ Sicherheit ( \\ microsoftvolumeencryption)<br/>                                             |
-| MOF<br/>                      | <dl> <dt>Win32 \_ verschlüsseltablevolume. MOF</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows Vista Enterprise, Windows Vista \[ Ultimate-Desktop-Apps\]<br/>                       |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2008-Desktop-Apps\]<br/>                                                    |
+| Namespace<br/>                | \\CimV2-Stammsicherheit \\ \\ MicrosoftVolumeEncryption<br/>                                             |
+| MOF<br/>                      | <dl> <dt>Win32 \_ encryptablevolume.mof</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Win32- \_ verschlüsseltablevolume**](win32-encryptablevolume.md)
+[**Win32 \_ EncryptableVolume**](win32-encryptablevolume.md)
 </dt> </dl>
 
  

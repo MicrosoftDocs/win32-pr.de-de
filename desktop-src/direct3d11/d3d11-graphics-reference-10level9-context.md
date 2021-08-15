@@ -1,86 +1,86 @@
 ---
-title: 10level9 Verknüpfung id3d11devicecontext aus Methoden
-description: In diesem Abschnitt werden die Unterschiede zwischen den einzelnen 10level9-featureebenen und der D3D \_ \_ Featureebene \_ 11 \_ 0 und höher für die Verknüpfung id3d11devicecontext aus-Methoden aufgeführt.
+title: 10Level9 ID3D11DeviceContext-Methoden
+description: In diesem Abschnitt werden die Unterschiede zwischen jeder 10Level9-Featureebene und der Featureebene D3D \_ FEATURE \_ LEVEL \_ 11 \_ 0 und höher für die ID3D11DeviceContext-Methoden aufgelistet.
 ms.assetid: 84478b56-0306-491a-9545-0849b06d8342
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: fb3dc46aeeb5d629c4bf50492083d09b34de1b08
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: 3d5cb055e6a290a9500f65ad2d64cdd69b0eaa224e6a81359595688ba1aca657
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "104036498"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118990070"
 ---
-# <a name="10level9-id3d11devicecontext-methods"></a>10level9 Verknüpfung id3d11devicecontext aus Methoden
+# <a name="10level9-id3d11devicecontext-methods"></a>10Level9 ID3D11DeviceContext-Methoden
 
-In diesem Abschnitt werden die Unterschiede zwischen den einzelnen 10level9-featureebenen und der D3D \_ \_ Featureebene \_ 11 \_ 0 und höher für die [**Verknüpfung id3d11devicecontext aus**](/windows/desktop/api/D3D11/nn-d3d11-id3d11devicecontext) -Methoden aufgeführt.
+In diesem Abschnitt werden die Unterschiede zwischen jeder 10Level9-Featureebene und der Featureebene D3D \_ FEATURE \_ LEVEL \_ 11 \_ 0 und höher für die [**ID3D11DeviceContext-Methoden**](/windows/desktop/api/D3D11/nn-d3d11-id3d11devicecontext) aufgelistet.
 
--   [Verknüpfung id3d11devicecontext aus:: copysubresourceregion](#id3d11devicecontextcopysubresourceregion)
--   [Verknüpfung id3d11devicecontext aus:: copyresource](#id3d11devicecontextcopyresource)
--   [Verknüpfung id3d11devicecontext aus:: copystructurecount](#id3d11devicecontextcopystructurecount)
--   [Verknüpfung id3d11devicecontext aus:: clearunorderedaccessviewfloat](#id3d11devicecontextclearunorderedaccessviewfloat)
--   [Verknüpfung id3d11devicecontext aus:: clearunorderedaccessviewuint](#id3d11devicecontextclearunorderedaccessviewuint)
--   [Verknüpfung id3d11devicecontext aus:: clearrendertargetview](#id3d11devicecontextclearrendertargetview)
--   [Verknüpfung id3d11devicecontext aus:: cssetconstantbuffers](#id3d11devicecontextcssetconstantbuffers)
--   [Verknüpfung id3d11devicecontext aus:: cssetsamplers](#id3d11devicecontextcssetsamplers)
--   [Verknüpfung id3d11devicecontext aus:: cssetshader](#id3d11devicecontextcssetshader)
--   [Verknüpfung id3d11devicecontext aus:: cssetshaderresources](#id3d11devicecontextcssetshaderresources)
--   [Verknüpfung id3d11devicecontext aus:: cssetunorderedaccessviews](#id3d11devicecontextcssetunorderedaccessviews)
--   [Verknüpfung id3d11devicecontext aus::D ispatch](#id3d11devicecontextdispatch)
--   [Verknüpfung id3d11devicecontext aus::D ispatchindirekte](#id3d11devicecontextdispatchindirect)
--   [Verknüpfung id3d11devicecontext aus::D RAW](#id3d11devicecontextdraw)
--   [Verknüpfung id3d11devicecontext aus::D rawauto](#id3d11devicecontextdrawauto)
--   [Verknüpfung id3d11devicecontext aus::D rawindebug](#id3d11devicecontextdrawindexed)
--   [Verknüpfung id3d11devicecontext aus::D rawindexedinstangeleitet](#id3d11devicecontextdrawindexedinstanced)
--   [Verknüpfung id3d11devicecontext aus::D rawindexedinstancedindirect](#id3d11devicecontextdrawindexedinstancedindirect)
--   [Verknüpfung id3d11devicecontext aus::D rawinstanzierte](#id3d11devicecontextdrawinstanced)
--   [Verknüpfung id3d11devicecontext aus::D rawinstancedindirect](#id3d11devicecontextdrawinstancedindirect)
--   [Verknüpfung id3d11devicecontext aus::D ssetconstantbuffers](#id3d11devicecontextdssetconstantbuffers)
--   [Verknüpfung id3d11devicecontext aus::D ssetsamplers](#id3d11devicecontextdssetsamplers)
--   [Verknüpfung id3d11devicecontext aus::D ssetshader](#id3d11devicecontextdssetshader)
--   [Verknüpfung id3d11devicecontext aus::D ssetshaderresources](#id3d11devicecontextdssetshaderresources)
--   [Verknüpfung id3d11devicecontext aus:: gssetconstantbuffers](#id3d11devicecontextgssetconstantbuffers)
--   [Verknüpfung id3d11devicecontext aus:: gssetsamplers](#id3d11devicecontextgssetsamplers)
--   [Verknüpfung id3d11devicecontext aus:: gssetshader](#id3d11devicecontextgssetshader)
--   [Verknüpfung id3d11devicecontext aus:: gssetshaderresources](#id3d11devicecontextgssetshaderresources)
--   [Verknüpfung id3d11devicecontext aus:: hssetconstantbuffers](#id3d11devicecontexthssetconstantbuffers)
--   [Verknüpfung id3d11devicecontext aus:: hssetsamplers](#id3d11devicecontexthssetsamplers)
--   [Verknüpfung id3d11devicecontext aus:: hssetshader](#id3d11devicecontexthssetshader)
--   [Verknüpfung id3d11devicecontext aus:: hssetshaderresources](#id3d11devicecontexthssetshaderresources)
+-   [ID3D11DeviceContext::CopySubresourceRegion](#id3d11devicecontextcopysubresourceregion)
+-   [ID3D11DeviceContext::CopyResource](#id3d11devicecontextcopyresource)
+-   [ID3D11DeviceContext::CopyStructureCount](#id3d11devicecontextcopystructurecount)
+-   [ID3D11DeviceContext::ClearUnorderedAccessViewFloat](#id3d11devicecontextclearunorderedaccessviewfloat)
+-   [ID3D11DeviceContext::ClearUnorderedAccessViewUint](#id3d11devicecontextclearunorderedaccessviewuint)
+-   [ID3D11DeviceContext::ClearRenderTargetView](#id3d11devicecontextclearrendertargetview)
+-   [ID3D11DeviceContext::CSSetConstantBuffers](#id3d11devicecontextcssetconstantbuffers)
+-   [ID3D11DeviceContext::CSSetSamplers](#id3d11devicecontextcssetsamplers)
+-   [ID3D11DeviceContext::CSSetShader](#id3d11devicecontextcssetshader)
+-   [ID3D11DeviceContext::CSSetShaderResources](#id3d11devicecontextcssetshaderresources)
+-   [ID3D11DeviceContext::CSSetUnorderedAccessViews](#id3d11devicecontextcssetunorderedaccessviews)
+-   [ID3D11DeviceContext::D ispatch](#id3d11devicecontextdispatch)
+-   [ID3D11DeviceContext::D ispatchIndirect](#id3d11devicecontextdispatchindirect)
+-   [ID3D11DeviceContext::D raw](#id3d11devicecontextdraw)
+-   [ID3D11DeviceContext::D rawAuto](#id3d11devicecontextdrawauto)
+-   [ID3D11DeviceContext::D rawIndexed](#id3d11devicecontextdrawindexed)
+-   [ID3D11DeviceContext::D rawIndexedInstanced](#id3d11devicecontextdrawindexedinstanced)
+-   [ID3D11DeviceContext::D rawIndexedInstancedIndirect](#id3d11devicecontextdrawindexedinstancedindirect)
+-   [ID3D11DeviceContext::D rawInstanced](#id3d11devicecontextdrawinstanced)
+-   [ID3D11DeviceContext::D rawInstancedIndirect](#id3d11devicecontextdrawinstancedindirect)
+-   [ID3D11DeviceContext::D SSetConstantBuffers](#id3d11devicecontextdssetconstantbuffers)
+-   [ID3D11DeviceContext::D SSetSamplers](#id3d11devicecontextdssetsamplers)
+-   [ID3D11DeviceContext::D SSetShader](#id3d11devicecontextdssetshader)
+-   [ID3D11DeviceContext::D SSetShaderResources](#id3d11devicecontextdssetshaderresources)
+-   [ID3D11DeviceContext::GSSetConstantBuffers](#id3d11devicecontextgssetconstantbuffers)
+-   [ID3D11DeviceContext::GSSetSamplers](#id3d11devicecontextgssetsamplers)
+-   [ID3D11DeviceContext::GSSetShader](#id3d11devicecontextgssetshader)
+-   [ID3D11DeviceContext::GSSetShaderResources](#id3d11devicecontextgssetshaderresources)
+-   [ID3D11DeviceContext::HSSetConstantBuffers](#id3d11devicecontexthssetconstantbuffers)
+-   [ID3D11DeviceContext::HSSetSamplers](#id3d11devicecontexthssetsamplers)
+-   [ID3D11DeviceContext::HSSetShader](#id3d11devicecontexthssetshader)
+-   [ID3D11DeviceContext::HSSetShaderResources](#id3d11devicecontexthssetshaderresources)
 -   [ID3D11DeviceContext::IASetIndexBuffer](#id3d11devicecontextiasetindexbuffer)
--   [Verknüpfung id3d11devicecontext aus:: iasetprimitivetopology](#id3d11devicecontextiasetprimitivetopology)
--   [Verknüpfung id3d11devicecontext aus:: omsetblendstate](#id3d11devicecontextomsetblendstate)
--   [Verknüpfung id3d11devicecontext aus:: omgtrendertargets](#id3d11devicecontextomsetrendertargets)
--   [Verknüpfung id3d11devicecontext aus:: omabtrendertargesorandunorderedaccessviews](#id3d11devicecontextomsetrendertargetsandunorderedaccessviews)
--   [Verknüpfung id3d11devicecontext aus::P ssetconstantbuffers](#id3d11devicecontextpssetconstantbuffers)
--   [Verknüpfung id3d11devicecontext aus::P ssetsamplers](#id3d11devicecontextpssetsamplers)
--   [Verknüpfung id3d11devicecontext aus::P ssetshader](#id3d11devicecontextpssetshader)
--   [Verknüpfung id3d11devicecontext aus::P ssetshaderresources](#id3d11devicecontextpssetshaderresources)
--   [Verknüpfung id3d11devicecontext aus:: rssezcissorrects](#id3d11devicecontextrssetscissorrects)
--   [Verknüpfung id3d11devicecontext aus:: rssetviewports](#id3d11devicecontextrssetviewports)
--   [Verknüpfung id3d11devicecontext aus:: setprediation](#id3d11devicecontextsetpredication)
--   [Verknüpfung id3d11devicecontext aus:: sosettargets](#id3d11devicecontextsosettargets)
--   [Verknüpfung id3d11devicecontext aus:: vssetconstantbuffers](#id3d11devicecontextvssetconstantbuffers)
--   [Verknüpfung id3d11devicecontext aus:: vssetsamplers](#id3d11devicecontextvssetsamplers)
--   [Verknüpfung id3d11devicecontext aus:: vssetshader](#id3d11devicecontextvssetshader)
--   [Verknüpfung id3d11devicecontext aus:: vssetshaderresources](#id3d11devicecontextvssetshaderresources)
+-   [ID3D11DeviceContext::IASetPrimitiveTopology](#id3d11devicecontextiasetprimitivetopology)
+-   [ID3D11DeviceContext::OMSetBlendState](#id3d11devicecontextomsetblendstate)
+-   [ID3D11DeviceContext::OMSetRenderTargets](#id3d11devicecontextomsetrendertargets)
+-   [ID3D11DeviceContext::OMSetRenderTargetsAndUnorderedAccessViews](#id3d11devicecontextomsetrendertargetsandunorderedaccessviews)
+-   [ID3D11DeviceContext::P SSetConstantBuffers](#id3d11devicecontextpssetconstantbuffers)
+-   [ID3D11DeviceContext::P SSetSamplers](#id3d11devicecontextpssetsamplers)
+-   [ID3D11DeviceContext::P SSetShader](#id3d11devicecontextpssetshader)
+-   [ID3D11DeviceContext::P SSetShaderResources](#id3d11devicecontextpssetshaderresources)
+-   [ID3D11DeviceContext::RSSetScissorRects](#id3d11devicecontextrssetscissorrects)
+-   [ID3D11DeviceContext::RSSetViewports](#id3d11devicecontextrssetviewports)
+-   [ID3D11DeviceContext::SetPredication](#id3d11devicecontextsetpredication)
+-   [ID3D11DeviceContext::SOSetTargets](#id3d11devicecontextsosettargets)
+-   [ID3D11DeviceContext::VSSetConstantBuffers](#id3d11devicecontextvssetconstantbuffers)
+-   [ID3D11DeviceContext::VSSetSamplers](#id3d11devicecontextvssetsamplers)
+-   [ID3D11DeviceContext::VSSetShader](#id3d11devicecontextvssetshader)
+-   [ID3D11DeviceContext::VSSetShaderResources](#id3d11devicecontextvssetshaderresources)
 -   [Zugehörige Themen](#related-topics)
 
-## <a name="id3d11devicecontextcopysubresourceregion"></a>Verknüpfung id3d11devicecontext aus:: copysubresourceregion
+## <a name="id3d11devicecontextcopysubresourceregion"></a>ID3D11DeviceContext::CopySubresourceRegion
 
 
 
 <table>
 <thead>
 <tr class="header">
-<th>Funktionsebene</th>
+<th>Featureebene</th>
 <th>Verhaltensunterschiede</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
 <td>D3D_FEATURE_LEVEL_9_1</td>
-<td rowspan="3"> Nur Texture2D und Puffer können im Speicher, auf den GPU zugreifen kann, kopiert werden.<br/> Texture3D kann nicht aus dem Speicher mit GPU-Zugriff auf den CPU-Zugriff kopiert werden.<br/> Jede Ressource, die nur über D3D10_BIND_SHADER_RESOURCE verfügt, kann nicht aus dem Speicher mit GPU-Zugriff auf den CPU-Speicherplatz kopiert werden.<br/> Sie können keine mipzugeordneten volumetexturen kopieren. <br/> $ {Remove} $<br />
+<td rowspan="3"> Nur Texture2D und Puffer dürfen innerhalb des gpu-zugänglichen Speichers kopiert werden.<br/> Texture3D kann nicht aus gpu-zugänglichem Speicher in CPU-zugänglichen Arbeitsspeicher kopiert werden.<br/> Ressourcen, die nur über D3D10_BIND_SHADER_RESOURCE verfügen, können nicht aus dem GPU-zugänglichen Speicher in den CPU-zugänglichen Arbeitsspeicher kopiert werden.<br/> Sie können keine Mipmappenvolumetexturen kopieren. <br/> ${REMOVE}$<br />
 </td>
 </tr>
 <tr class="even">
@@ -98,21 +98,21 @@ In diesem Abschnitt werden die Unterschiede zwischen den einzelnen 10level9-feat
 
  
 
-## <a name="id3d11devicecontextcopyresource"></a>Verknüpfung id3d11devicecontext aus:: copyresource
+## <a name="id3d11devicecontextcopyresource"></a>ID3D11DeviceContext::CopyResource
 
 
 
 <table>
 <thead>
 <tr class="header">
-<th>Funktionsebene</th>
+<th>Featureebene</th>
 <th>Verhaltensunterschiede</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
 <td>D3D_FEATURE_LEVEL_9_1</td>
-<td rowspan="3"> Nur Texture2D und Puffer können im Speicher, auf den GPU zugreifen kann, kopiert werden.<br/> Texture3D kann nicht aus dem Speicher mit GPU-Zugriff auf den CPU-Zugriff kopiert werden.<br/> Jede Ressource, die nur über D3D10_BIND_SHADER_RESOURCE verfügt, kann nicht aus dem Speicher mit GPU-Zugriff auf den CPU-Speicherplatz kopiert werden.<br/> $ {Remove} $<br />
+<td rowspan="3"> Nur Texture2D und Puffer dürfen innerhalb des gpu-zugänglichen Speichers kopiert werden.<br/> Texture3D kann nicht aus gpu-zugänglichem Speicher in CPU-zugänglichen Arbeitsspeicher kopiert werden.<br/> Ressourcen, die nur über D3D10_BIND_SHADER_RESOURCE verfügen, können nicht aus dem GPU-zugänglichen Speicher in den CPU-zugänglichen Arbeitsspeicher kopiert werden.<br/> ${REMOVE}$<br />
 </td>
 </tr>
 <tr class="even">
@@ -130,21 +130,21 @@ In diesem Abschnitt werden die Unterschiede zwischen den einzelnen 10level9-feat
 
  
 
-## <a name="id3d11devicecontextcopystructurecount"></a>Verknüpfung id3d11devicecontext aus:: copystructurecount
+## <a name="id3d11devicecontextcopystructurecount"></a>ID3D11DeviceContext::CopyStructureCount
 
 
 
 <table>
 <thead>
 <tr class="header">
-<th>Funktionsebene</th>
+<th>Featureebene</th>
 <th>Verhaltensunterschiede</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
 <td>D3D_FEATURE_LEVEL_9_1</td>
-<td rowspan="3">Wird auf keiner 9. *-Funktionsebene unterstützt. $ {Remove} $<br />
+<td rowspan="3">Wird auf 9.*-Featureebene nicht unterstützt.${REMOVE}$<br />
 </td>
 </tr>
 <tr class="even">
@@ -162,21 +162,21 @@ In diesem Abschnitt werden die Unterschiede zwischen den einzelnen 10level9-feat
 
  
 
-## <a name="id3d11devicecontextclearunorderedaccessviewfloat"></a>Verknüpfung id3d11devicecontext aus:: clearunorderedaccessviewfloat
+## <a name="id3d11devicecontextclearunorderedaccessviewfloat"></a>ID3D11DeviceContext::ClearUnorderedAccessViewFloat
 
 
 
 <table>
 <thead>
 <tr class="header">
-<th>Funktionsebene</th>
+<th>Featureebene</th>
 <th>Verhaltensunterschiede</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
 <td>D3D_FEATURE_LEVEL_9_1</td>
-<td rowspan="3">Wird auf keiner 9. *-Funktionsebene unterstützt. $ {Remove} $<br />
+<td rowspan="3">Wird auf 9.*-Featureebene nicht unterstützt.${REMOVE}$<br />
 </td>
 </tr>
 <tr class="even">
@@ -194,21 +194,21 @@ In diesem Abschnitt werden die Unterschiede zwischen den einzelnen 10level9-feat
 
  
 
-## <a name="id3d11devicecontextclearunorderedaccessviewuint"></a>Verknüpfung id3d11devicecontext aus:: clearunorderedaccessviewuint
+## <a name="id3d11devicecontextclearunorderedaccessviewuint"></a>ID3D11DeviceContext::ClearUnorderedAccessViewUint
 
 
 
 <table>
 <thead>
 <tr class="header">
-<th>Funktionsebene</th>
+<th>Featureebene</th>
 <th>Verhaltensunterschiede</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
 <td>D3D_FEATURE_LEVEL_9_1</td>
-<td rowspan="3">Wird auf keiner 9. *-Funktionsebene unterstützt. $ {Remove} $<br />
+<td rowspan="3">Wird auf 9.*-Featureebene nicht unterstützt.${REMOVE}$<br />
 </td>
 </tr>
 <tr class="even">
@@ -226,21 +226,21 @@ In diesem Abschnitt werden die Unterschiede zwischen den einzelnen 10level9-feat
 
  
 
-## <a name="id3d11devicecontextclearrendertargetview"></a>Verknüpfung id3d11devicecontext aus:: clearrendertargetview
+## <a name="id3d11devicecontextclearrendertargetview"></a>ID3D11DeviceContext::ClearRenderTargetView
 
 
 
 <table>
 <thead>
 <tr class="header">
-<th>Funktionsebene</th>
+<th>Featureebene</th>
 <th>Verhaltensunterschiede</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
 <td>D3D_FEATURE_LEVEL_9_1</td>
-<td rowspan="3">Nur der erste Array Slice wird gelöscht. Anwendungen sollten eine renderzielansicht für jedes Gesicht oder jeden Array Slice erstellen und dann jede Ansicht einzeln löschen. $ {Remove} $<br />
+<td rowspan="3">Nur der erste Arrayslice wird wieder löschen. Anwendungen sollten eine Renderzielansicht für jedes Gesichts- oder Arrayslice erstellen und dann jede Ansicht einzeln löschen.${REMOVE}$<br />
 </td>
 </tr>
 <tr class="even">
@@ -258,21 +258,21 @@ In diesem Abschnitt werden die Unterschiede zwischen den einzelnen 10level9-feat
 
  
 
-## <a name="id3d11devicecontextcssetconstantbuffers"></a>Verknüpfung id3d11devicecontext aus:: cssetconstantbuffers
+## <a name="id3d11devicecontextcssetconstantbuffers"></a>ID3D11DeviceContext::CSSetConstantBuffers
 
 
 
 <table>
 <thead>
 <tr class="header">
-<th>Funktionsebene</th>
+<th>Featureebene</th>
 <th>Verhaltensunterschiede</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
 <td>D3D_FEATURE_LEVEL_9_1</td>
-<td rowspan="3">Wird auf keiner 9. *-Funktionsebene unterstützt. $ {Remove} $<br />
+<td rowspan="3">Wird auf 9.*-Featureebene nicht unterstützt.${REMOVE}$<br />
 </td>
 </tr>
 <tr class="even">
@@ -290,21 +290,21 @@ In diesem Abschnitt werden die Unterschiede zwischen den einzelnen 10level9-feat
 
  
 
-## <a name="id3d11devicecontextcssetsamplers"></a>Verknüpfung id3d11devicecontext aus:: cssetsamplers
+## <a name="id3d11devicecontextcssetsamplers"></a>ID3D11DeviceContext::CSSetSamplers
 
 
 
 <table>
 <thead>
 <tr class="header">
-<th>Funktionsebene</th>
+<th>Featureebene</th>
 <th>Verhaltensunterschiede</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
 <td>D3D_FEATURE_LEVEL_9_1</td>
-<td rowspan="3">Wird auf keiner 9. *-Funktionsebene unterstützt. $ {Remove} $<br />
+<td rowspan="3">Wird auf 9.*-Featureebene nicht unterstützt.${REMOVE}$<br />
 </td>
 </tr>
 <tr class="even">
@@ -322,21 +322,21 @@ In diesem Abschnitt werden die Unterschiede zwischen den einzelnen 10level9-feat
 
  
 
-## <a name="id3d11devicecontextcssetshader"></a>Verknüpfung id3d11devicecontext aus:: cssetshader
+## <a name="id3d11devicecontextcssetshader"></a>ID3D11DeviceContext::CSSetShader
 
 
 
 <table>
 <thead>
 <tr class="header">
-<th>Funktionsebene</th>
+<th>Featureebene</th>
 <th>Verhaltensunterschiede</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
 <td>D3D_FEATURE_LEVEL_9_1</td>
-<td rowspan="3">Wird auf keiner 9. *-Funktionsebene unterstützt. $ {Remove} $<br />
+<td rowspan="3">Wird auf 9.*-Featureebene nicht unterstützt.${REMOVE}$<br />
 </td>
 </tr>
 <tr class="even">
@@ -354,21 +354,21 @@ In diesem Abschnitt werden die Unterschiede zwischen den einzelnen 10level9-feat
 
  
 
-## <a name="id3d11devicecontextcssetshaderresources"></a>Verknüpfung id3d11devicecontext aus:: cssetshaderresources
+## <a name="id3d11devicecontextcssetshaderresources"></a>ID3D11DeviceContext::CSSetShaderResources
 
 
 
 <table>
 <thead>
 <tr class="header">
-<th>Funktionsebene</th>
+<th>Featureebene</th>
 <th>Verhaltensunterschiede</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
 <td>D3D_FEATURE_LEVEL_9_1</td>
-<td rowspan="3">Wird auf keiner 9. *-Funktionsebene unterstützt. $ {Remove} $<br />
+<td rowspan="3">Wird auf 9.*-Featureebene nicht unterstützt.${REMOVE}$<br />
 </td>
 </tr>
 <tr class="even">
@@ -386,21 +386,21 @@ In diesem Abschnitt werden die Unterschiede zwischen den einzelnen 10level9-feat
 
  
 
-## <a name="id3d11devicecontextcssetunorderedaccessviews"></a>Verknüpfung id3d11devicecontext aus:: cssetunorderedaccessviews
+## <a name="id3d11devicecontextcssetunorderedaccessviews"></a>ID3D11DeviceContext::CSSetUnorderedAccessViews
 
 
 
 <table>
 <thead>
 <tr class="header">
-<th>Funktionsebene</th>
+<th>Featureebene</th>
 <th>Verhaltensunterschiede</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
 <td>D3D_FEATURE_LEVEL_9_1</td>
-<td rowspan="3">Wird auf keiner 9. *-Funktionsebene unterstützt. $ {Remove} $<br />
+<td rowspan="3">Wird auf 9.*-Featureebene nicht unterstützt.${REMOVE}$<br />
 </td>
 </tr>
 <tr class="even">
@@ -418,21 +418,21 @@ In diesem Abschnitt werden die Unterschiede zwischen den einzelnen 10level9-feat
 
  
 
-## <a name="id3d11devicecontextdispatch"></a>Verknüpfung id3d11devicecontext aus::D ispatch
+## <a name="id3d11devicecontextdispatch"></a>ID3D11DeviceContext::D ispatch
 
 
 
 <table>
 <thead>
 <tr class="header">
-<th>Funktionsebene</th>
+<th>Featureebene</th>
 <th>Verhaltensunterschiede</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
 <td>D3D_FEATURE_LEVEL_9_1</td>
-<td rowspan="3">Wird auf keiner 9. *-Funktionsebene unterstützt. $ {Remove} $<br />
+<td rowspan="3">Wird auf 9.*-Featureebene nicht unterstützt.${REMOVE}$<br />
 </td>
 </tr>
 <tr class="even">
@@ -450,21 +450,21 @@ In diesem Abschnitt werden die Unterschiede zwischen den einzelnen 10level9-feat
 
  
 
-## <a name="id3d11devicecontextdispatchindirect"></a>Verknüpfung id3d11devicecontext aus::D ispatchindirekte
+## <a name="id3d11devicecontextdispatchindirect"></a>ID3D11DeviceContext::D ispatchIndirect
 
 
 
 <table>
 <thead>
 <tr class="header">
-<th>Funktionsebene</th>
+<th>Featureebene</th>
 <th>Verhaltensunterschiede</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
 <td>D3D_FEATURE_LEVEL_9_1</td>
-<td rowspan="3">Wird auf keiner 9. *-Funktionsebene unterstützt. $ {Remove} $<br />
+<td rowspan="3">Wird auf 9.*-Featureebene nicht unterstützt.${REMOVE}$<br />
 </td>
 </tr>
 <tr class="even">
@@ -482,35 +482,35 @@ In diesem Abschnitt werden die Unterschiede zwischen den einzelnen 10level9-feat
 
  
 
-## <a name="id3d11devicecontextdraw"></a>Verknüpfung id3d11devicecontext aus::D RAW
+## <a name="id3d11devicecontextdraw"></a>ID3D11DeviceContext::D raw
 
 
 
-| Funktionsebene             | Verhaltensunterschiede                                                                                                               |
+| Featureebene             | Verhaltensunterschiede                                                                                                               |
 |---------------------------|------------------------------------------------------------------------------------------------------------------------------------|
-| D3D \_ \_ Featureebene \_ 9 \_ 1 | Die Anzahl der primitiven darf 65535 nicht überschreiten.<br/> Texturen können nicht mehr als 128 mal über ein primitiv wiederholt werden.<br/>    |
-| D3D \_ \_ Featureebene \_ 9 \_ 2 | Die Anzahl der primitiven darf 1048575 nicht überschreiten.<br/> Texturen können nicht mehr als 2048 mal über ein primitiv wiederholt werden.<br/> |
-| D3D \_ \_ Featureebene \_ 9 \_ 3 | Die Anzahl der primitiven darf 1048575 nicht überschreiten.<br/> Texturen können nicht mehr als 8192 Mal über ein primitiv wiederholt werden.<br/> |
+| D3D \_ FEATURE \_ LEVEL \_ 9 \_ 1 | Die Anzahl der Primitive darf 65535 nicht überschreiten.<br/> Texturen können sich nicht mehr als 128 Mal über einen primitiven Typ wiederholen.<br/>    |
+| D3D \_ FEATURE \_ LEVEL \_ 9 \_ 2 | Die Anzahl von Primitiven darf den Wert 1048575.<br/> Texturen können nicht mehr als 2048 Mal pro Primitive wiederholt werden.<br/> |
+| D3D \_ FEATURE \_ LEVEL \_ 9 \_ 3 | Die Anzahl von Primitiven darf den Wert 1048575.<br/> Texturen können sich nicht mehr als 8192 Mal über einen primitiven Typ wiederholen.<br/> |
 
 
 
  
 
-## <a name="id3d11devicecontextdrawauto"></a>Verknüpfung id3d11devicecontext aus::D rawauto
+## <a name="id3d11devicecontextdrawauto"></a>ID3D11DeviceContext::D rawAuto
 
 
 
 <table>
 <thead>
 <tr class="header">
-<th>Funktionsebene</th>
+<th>Featureebene</th>
 <th>Verhaltensunterschiede</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
 <td>D3D_FEATURE_LEVEL_9_1</td>
-<td rowspan="3">Wird auf keiner 9. *-Funktionsebene unterstützt. $ {Remove} $<br />
+<td rowspan="3">Wird auf 9.*-Featureebene nicht unterstützt.${REMOVE}$<br />
 </td>
 </tr>
 <tr class="even">
@@ -528,21 +528,21 @@ In diesem Abschnitt werden die Unterschiede zwischen den einzelnen 10level9-feat
 
  
 
-## <a name="id3d11devicecontextdrawindexed"></a>Verknüpfung id3d11devicecontext aus::D rawindebug
+## <a name="id3d11devicecontextdrawindexed"></a>ID3D11DeviceContext::D rawIndexed
 
 
 
-| Funktionsebene             | Verhaltensunterschiede                                                                                                                                                                                                            |
+| Featureebene             | Verhaltensunterschiede                                                                                                                                                                                                            |
 |---------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| D3D \_ \_ Featureebene \_ 9 \_ 1 | Die Anzahl der primitiven darf 65535 nicht überschreiten.<br/> Texturen können nicht mehr als 128 mal über ein primitiv wiederholt werden.<br/> Index Werte dürfen nicht größer sein als 65534.<br/> Indizierte Punkt Listen werden nicht unterstützt.<br/>      |
-| D3D \_ \_ Featureebene \_ 9 \_ 2 | Die Anzahl der primitiven darf 1048575 nicht überschreiten.<br/> Texturen können nicht mehr als 2048 mal über ein primitiv wiederholt werden.<br/> Index Werte dürfen nicht größer sein als 1048575.<br/> Indizierte Punkt Listen werden nicht unterstützt.<br/> |
-| D3D \_ \_ Featureebene \_ 9 \_ 3 | Die Anzahl der primitiven darf 1048575 nicht überschreiten.<br/> Texturen können nicht mehr als 8192 Mal über ein primitiv wiederholt werden.<br/> Index Werte dürfen nicht größer sein als 1048575.<br/> Indizierte Punkt Listen werden nicht unterstützt.<br/> |
+| D3D \_ FEATURE \_ LEVEL \_ 9 \_ 1 | Die Anzahl der Primitive darf 65535 nicht überschreiten.<br/> Texturen können sich nicht mehr als 128 Mal über einen primitiven Typ wiederholen.<br/> Indexwerte dürfen 65534 nicht überschreiten.<br/> Indizierte Punktlisten werden nicht unterstützt.<br/>      |
+| D3D \_ FEATURE \_ LEVEL \_ 9 \_ 2 | Die Anzahl von Primitiven darf den Wert 1048575.<br/> Texturen können nicht mehr als 2048 Mal pro Primitive wiederholt werden.<br/> Indexwerte dürfen den Wert 1048575.<br/> Indizierte Punktlisten werden nicht unterstützt.<br/> |
+| D3D \_ FEATURE \_ LEVEL \_ 9 \_ 3 | Die Anzahl von Primitiven darf den Wert 1048575.<br/> Texturen können sich nicht mehr als 8192 Mal über einen primitiven Typ wiederholen.<br/> Indexwerte dürfen den Wert 1048575.<br/> Indizierte Punktlisten werden nicht unterstützt.<br/> |
 
 
 
  
 
-## <a name="id3d11devicecontextdrawindexedinstanced"></a>Verknüpfung id3d11devicecontext aus::D rawindexedinstangeleitet
+## <a name="id3d11devicecontextdrawindexedinstanced"></a>ID3D11DeviceContext::D rawIndexedInstanced
 
 
 
@@ -553,14 +553,14 @@ In diesem Abschnitt werden die Unterschiede zwischen den einzelnen 10level9-feat
 </colgroup>
 <thead>
 <tr class="header">
-<th>Funktionsebene</th>
+<th>Featureebene</th>
 <th>Verhaltensunterschiede</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
 <td>D3D_FEATURE_LEVEL_9_1</td>
-<td rowspan="2">Nicht unterstützt $ {Remove} $<br />
+<td rowspan="2">Nicht unterstützt${REMOVE}$<br />
 </td>
 </tr>
 <tr class="even">
@@ -569,10 +569,10 @@ In diesem Abschnitt werden die Unterschiede zwischen den einzelnen 10level9-feat
 </tr>
 <tr class="odd">
 <td>D3D_FEATURE_LEVEL_9_3</td>
-<td>Die Anzahl der primitiven darf 1048575 nicht überschreiten.<br/> Texturen können nicht mehr als 8192 Mal über ein primitiv wiederholt werden.<br/> Index Werte dürfen nicht größer sein als 1048575.<br/>
+<td>Die Anzahl von Primitiven darf den Wert 1048575.<br/> Texturen können sich nicht mehr als 8192 Mal über einen primitiven Typ wiederholen.<br/> Indexwerte dürfen den Wert 1048575.<br/>
 <blockquote>
 [!Note]<br />
-Wenn Sie die <a href="/windows/desktop/api/D3D11/nf-d3d11-id3d11devicecontext-drawindexedinstanced"><strong>drawindexedinstanbound</strong></a> -Methode mit einem Vertex-Shader aufrufen, der an die Pipeline gebunden ist und keine instanzbezogenen Daten importiert, zeichnet einige Direct3D 9-Grafikhardware möglicherweise nichts. Insbesondere wenn der Vertex-Shader keine instanzbezogenen Daten verwendet, entspricht das Aufrufen von <strong>drawindexedinstanreceimit</strong> 1 Instance nicht dem aufrufenden <a href="/windows/desktop/api/D3D11/nf-d3d11-id3d11devicecontext-draw"><strong>Zeichnen</strong></a>.
+Wenn Sie die <a href="/windows/desktop/api/D3D11/nf-d3d11-id3d11devicecontext-drawindexedinstanced"><strong>DrawIndexedInstanced-Methode</strong></a> mit einem Vertex-Shader aufrufen, der an die Pipeline gebunden ist und keine Daten pro Instanz importiert, zeichnen einige Direct3D 9-Grafikhardware möglicherweise nichts. Insbesondere wenn der Vertex-Shader keine Instanzdaten verwendet, entspricht der Aufruf von <strong>DrawIndexedInstanced</strong> mit einer Instanz nicht dem Aufruf von <a href="/windows/desktop/api/D3D11/nf-d3d11-id3d11devicecontext-draw"><strong>Draw.</strong></a>
 </blockquote>
 <br/></td>
 </tr>
@@ -583,21 +583,21 @@ Wenn Sie die <a href="/windows/desktop/api/D3D11/nf-d3d11-id3d11devicecontext-dr
 
  
 
-## <a name="id3d11devicecontextdrawindexedinstancedindirect"></a>Verknüpfung id3d11devicecontext aus::D rawindexedinstancedindirect
+## <a name="id3d11devicecontextdrawindexedinstancedindirect"></a>ID3D11DeviceContext::D rawIndexedInstancedIndirect
 
 
 
 <table>
 <thead>
 <tr class="header">
-<th>Funktionsebene</th>
+<th>Featureebene</th>
 <th>Verhaltensunterschiede</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
 <td>D3D_FEATURE_LEVEL_9_1</td>
-<td rowspan="5">Wird auf keiner 9. *-oder 10. *-Funktionsebene unterstützt. $ {Remove} $<br />
+<td rowspan="5">Wird auf 9.* oder 10.* Featureebene nicht unterstützt.${REMOVE}$<br />
 </td>
 </tr>
 <tr class="even">
@@ -623,21 +623,21 @@ Wenn Sie die <a href="/windows/desktop/api/D3D11/nf-d3d11-id3d11devicecontext-dr
 
  
 
-## <a name="id3d11devicecontextdrawinstanced"></a>Verknüpfung id3d11devicecontext aus::D rawinstanzierte
+## <a name="id3d11devicecontextdrawinstanced"></a>ID3D11DeviceContext::D rawInstanced
 
 
 
 <table>
 <thead>
 <tr class="header">
-<th>Funktionsebene</th>
+<th>Featureebene</th>
 <th>Verhaltensunterschiede</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
 <td>D3D_FEATURE_LEVEL_9_1</td>
-<td rowspan="3">Wird auf keiner 9. *-Funktionsebene unterstützt. $ {Remove} $<br />
+<td rowspan="3">Wird auf 9.*-Featureebene nicht unterstützt.${REMOVE}$<br />
 </td>
 </tr>
 <tr class="even">
@@ -655,61 +655,21 @@ Wenn Sie die <a href="/windows/desktop/api/D3D11/nf-d3d11-id3d11devicecontext-dr
 
  
 
-## <a name="id3d11devicecontextdrawinstancedindirect"></a>Verknüpfung id3d11devicecontext aus::D rawinstancedindirect
+## <a name="id3d11devicecontextdrawinstancedindirect"></a>ID3D11DeviceContext::D rawInstancedIndirect
 
 
 
 <table>
 <thead>
 <tr class="header">
-<th>Funktionsebene</th>
+<th>Featureebene</th>
 <th>Verhaltensunterschiede</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
 <td>D3D_FEATURE_LEVEL_9_1</td>
-<td rowspan="5">Wird auf keiner 9. *-oder 10. *-Funktionsebene unterstützt. $ {Remove} $<br />
-</td>
-</tr>
-<tr class="even">
-<td>D3D_FEATURE_LEVEL_9_2</td>
-
-</tr>
-<tr class="odd">
-<td>D3D_FEATURE_LEVEL_9_3</td>
-
-</tr>
-<tr class="even">
-<td>D3D_FEATURE_LEVEL_10_0</td>
-
-</tr>
-<tr class="odd">
-<td>D3D_FEATURE_LEVEL_10_1</td>
-
-</tr>
-</tbody>
-</table>
-
-
-
- 
-
-## <a name="id3d11devicecontextdssetconstantbuffers"></a>Verknüpfung id3d11devicecontext aus::D ssetconstantbuffers
-
-
-
-<table>
-<thead>
-<tr class="header">
-<th>Funktionsebene</th>
-<th>Verhaltensunterschiede</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>D3D_FEATURE_LEVEL_9_1</td>
-<td rowspan="5">Wird auf keiner 9. *-oder 10. *-Funktionsebene unterstützt. $ {Remove} $<br />
+<td rowspan="5">Wird auf 9.* oder 10.* Featureebene nicht unterstützt.${REMOVE}$<br />
 </td>
 </tr>
 <tr class="even">
@@ -735,21 +695,21 @@ Wenn Sie die <a href="/windows/desktop/api/D3D11/nf-d3d11-id3d11devicecontext-dr
 
  
 
-## <a name="id3d11devicecontextdssetsamplers"></a>Verknüpfung id3d11devicecontext aus::D ssetsamplers
+## <a name="id3d11devicecontextdssetconstantbuffers"></a>ID3D11DeviceContext::D SSetConstantBuffers
 
 
 
 <table>
 <thead>
 <tr class="header">
-<th>Funktionsebene</th>
+<th>Featureebene</th>
 <th>Verhaltensunterschiede</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
 <td>D3D_FEATURE_LEVEL_9_1</td>
-<td rowspan="5">Wird auf keiner 9. *-oder 10. *-Funktionsebene unterstützt. $ {Remove} $<br />
+<td rowspan="5">Wird auf 9.* oder 10.* Featureebene nicht unterstützt.${REMOVE}$<br />
 </td>
 </tr>
 <tr class="even">
@@ -775,21 +735,21 @@ Wenn Sie die <a href="/windows/desktop/api/D3D11/nf-d3d11-id3d11devicecontext-dr
 
  
 
-## <a name="id3d11devicecontextdssetshader"></a>Verknüpfung id3d11devicecontext aus::D ssetshader
+## <a name="id3d11devicecontextdssetsamplers"></a>ID3D11DeviceContext::D SSetSamplers
 
 
 
 <table>
 <thead>
 <tr class="header">
-<th>Funktionsebene</th>
+<th>Featureebene</th>
 <th>Verhaltensunterschiede</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
 <td>D3D_FEATURE_LEVEL_9_1</td>
-<td rowspan="5">Wird auf keiner 9. *-oder 10. *-Funktionsebene unterstützt. $ {Remove} $<br />
+<td rowspan="5">Wird auf 9.* oder 10.* Featureebene nicht unterstützt.${REMOVE}$<br />
 </td>
 </tr>
 <tr class="even">
@@ -815,21 +775,21 @@ Wenn Sie die <a href="/windows/desktop/api/D3D11/nf-d3d11-id3d11devicecontext-dr
 
  
 
-## <a name="id3d11devicecontextdssetshaderresources"></a>Verknüpfung id3d11devicecontext aus::D ssetshaderresources
+## <a name="id3d11devicecontextdssetshader"></a>ID3D11DeviceContext::D SSetShader
 
 
 
 <table>
 <thead>
 <tr class="header">
-<th>Funktionsebene</th>
+<th>Featureebene</th>
 <th>Verhaltensunterschiede</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
 <td>D3D_FEATURE_LEVEL_9_1</td>
-<td rowspan="5">Wird auf keiner 9. *-oder 10. *-Funktionsebene unterstützt. $ {Remove} $<br />
+<td rowspan="5">Wird auf 9.* oder 10.* Featureebene nicht unterstützt.${REMOVE}$<br />
 </td>
 </tr>
 <tr class="even">
@@ -855,149 +815,21 @@ Wenn Sie die <a href="/windows/desktop/api/D3D11/nf-d3d11-id3d11devicecontext-dr
 
  
 
-## <a name="id3d11devicecontextgssetconstantbuffers"></a>Verknüpfung id3d11devicecontext aus:: gssetconstantbuffers
+## <a name="id3d11devicecontextdssetshaderresources"></a>ID3D11DeviceContext::D SSetShaderResources
 
 
 
 <table>
 <thead>
 <tr class="header">
-<th>Funktionsebene</th>
+<th>Featureebene</th>
 <th>Verhaltensunterschiede</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
 <td>D3D_FEATURE_LEVEL_9_1</td>
-<td rowspan="3">Wird auf keiner 9. *-Funktionsebene unterstützt. $ {Remove} $<br />
-</td>
-</tr>
-<tr class="even">
-<td>D3D_FEATURE_LEVEL_9_2</td>
-
-</tr>
-<tr class="odd">
-<td>D3D_FEATURE_LEVEL_9_3</td>
-
-</tr>
-</tbody>
-</table>
-
-
-
- 
-
-## <a name="id3d11devicecontextgssetsamplers"></a>Verknüpfung id3d11devicecontext aus:: gssetsamplers
-
-
-
-<table>
-<thead>
-<tr class="header">
-<th>Funktionsebene</th>
-<th>Verhaltensunterschiede</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>D3D_FEATURE_LEVEL_9_1</td>
-<td rowspan="3">Wird auf keiner 9. *-Funktionsebene unterstützt. $ {Remove} $<br />
-</td>
-</tr>
-<tr class="even">
-<td>D3D_FEATURE_LEVEL_9_2</td>
-
-</tr>
-<tr class="odd">
-<td>D3D_FEATURE_LEVEL_9_3</td>
-
-</tr>
-</tbody>
-</table>
-
-
-
- 
-
-## <a name="id3d11devicecontextgssetshader"></a>Verknüpfung id3d11devicecontext aus:: gssetshader
-
-
-
-<table>
-<thead>
-<tr class="header">
-<th>Funktionsebene</th>
-<th>Verhaltensunterschiede</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>D3D_FEATURE_LEVEL_9_1</td>
-<td rowspan="3">Wird auf keiner 9. *-Funktionsebene unterstützt. $ {Remove} $<br />
-</td>
-</tr>
-<tr class="even">
-<td>D3D_FEATURE_LEVEL_9_2</td>
-
-</tr>
-<tr class="odd">
-<td>D3D_FEATURE_LEVEL_9_3</td>
-
-</tr>
-</tbody>
-</table>
-
-
-
- 
-
-## <a name="id3d11devicecontextgssetshaderresources"></a>Verknüpfung id3d11devicecontext aus:: gssetshaderresources
-
-
-
-<table>
-<thead>
-<tr class="header">
-<th>Funktionsebene</th>
-<th>Verhaltensunterschiede</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>D3D_FEATURE_LEVEL_9_1</td>
-<td rowspan="3">Wird auf keiner 9. *-Funktionsebene unterstützt. $ {Remove} $<br />
-</td>
-</tr>
-<tr class="even">
-<td>D3D_FEATURE_LEVEL_9_2</td>
-
-</tr>
-<tr class="odd">
-<td>D3D_FEATURE_LEVEL_9_3</td>
-
-</tr>
-</tbody>
-</table>
-
-
-
- 
-
-## <a name="id3d11devicecontexthssetconstantbuffers"></a>Verknüpfung id3d11devicecontext aus:: hssetconstantbuffers
-
-
-
-<table>
-<thead>
-<tr class="header">
-<th>Funktionsebene</th>
-<th>Verhaltensunterschiede</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>D3D_FEATURE_LEVEL_9_1</td>
-<td rowspan="5">Wird auf keiner 9. *-oder 10. *-Funktionsebene unterstützt. $ {Remove} $<br />
+<td rowspan="5">Wird auf 9.* oder 10.* Featureebene nicht unterstützt.${REMOVE}$<br />
 </td>
 </tr>
 <tr class="even">
@@ -1023,21 +855,149 @@ Wenn Sie die <a href="/windows/desktop/api/D3D11/nf-d3d11-id3d11devicecontext-dr
 
  
 
-## <a name="id3d11devicecontexthssetsamplers"></a>Verknüpfung id3d11devicecontext aus:: hssetsamplers
+## <a name="id3d11devicecontextgssetconstantbuffers"></a>ID3D11DeviceContext::GSSetConstantBuffers
 
 
 
 <table>
 <thead>
 <tr class="header">
-<th>Funktionsebene</th>
+<th>Featureebene</th>
 <th>Verhaltensunterschiede</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
 <td>D3D_FEATURE_LEVEL_9_1</td>
-<td rowspan="5">Wird auf keiner 9. *-oder 10. *-Funktionsebene unterstützt. $ {Remove} $<br />
+<td rowspan="3">Wird auf 9.*-Featureebene nicht unterstützt.${REMOVE}$<br />
+</td>
+</tr>
+<tr class="even">
+<td>D3D_FEATURE_LEVEL_9_2</td>
+
+</tr>
+<tr class="odd">
+<td>D3D_FEATURE_LEVEL_9_3</td>
+
+</tr>
+</tbody>
+</table>
+
+
+
+ 
+
+## <a name="id3d11devicecontextgssetsamplers"></a>ID3D11DeviceContext::GSSetSamplers
+
+
+
+<table>
+<thead>
+<tr class="header">
+<th>Featureebene</th>
+<th>Verhaltensunterschiede</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>D3D_FEATURE_LEVEL_9_1</td>
+<td rowspan="3">Wird auf 9.*-Featureebene nicht unterstützt.${REMOVE}$<br />
+</td>
+</tr>
+<tr class="even">
+<td>D3D_FEATURE_LEVEL_9_2</td>
+
+</tr>
+<tr class="odd">
+<td>D3D_FEATURE_LEVEL_9_3</td>
+
+</tr>
+</tbody>
+</table>
+
+
+
+ 
+
+## <a name="id3d11devicecontextgssetshader"></a>ID3D11DeviceContext::GSSetShader
+
+
+
+<table>
+<thead>
+<tr class="header">
+<th>Featureebene</th>
+<th>Verhaltensunterschiede</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>D3D_FEATURE_LEVEL_9_1</td>
+<td rowspan="3">Wird auf 9.*-Featureebene nicht unterstützt.${REMOVE}$<br />
+</td>
+</tr>
+<tr class="even">
+<td>D3D_FEATURE_LEVEL_9_2</td>
+
+</tr>
+<tr class="odd">
+<td>D3D_FEATURE_LEVEL_9_3</td>
+
+</tr>
+</tbody>
+</table>
+
+
+
+ 
+
+## <a name="id3d11devicecontextgssetshaderresources"></a>ID3D11DeviceContext::GSSetShaderResources
+
+
+
+<table>
+<thead>
+<tr class="header">
+<th>Featureebene</th>
+<th>Verhaltensunterschiede</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>D3D_FEATURE_LEVEL_9_1</td>
+<td rowspan="3">Wird auf 9.*-Featureebene nicht unterstützt.${REMOVE}$<br />
+</td>
+</tr>
+<tr class="even">
+<td>D3D_FEATURE_LEVEL_9_2</td>
+
+</tr>
+<tr class="odd">
+<td>D3D_FEATURE_LEVEL_9_3</td>
+
+</tr>
+</tbody>
+</table>
+
+
+
+ 
+
+## <a name="id3d11devicecontexthssetconstantbuffers"></a>ID3D11DeviceContext::HSSetConstantBuffers
+
+
+
+<table>
+<thead>
+<tr class="header">
+<th>Featureebene</th>
+<th>Verhaltensunterschiede</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>D3D_FEATURE_LEVEL_9_1</td>
+<td rowspan="5">Wird auf 9.* oder 10.* Featureebene nicht unterstützt.${REMOVE}$<br />
 </td>
 </tr>
 <tr class="even">
@@ -1063,21 +1023,21 @@ Wenn Sie die <a href="/windows/desktop/api/D3D11/nf-d3d11-id3d11devicecontext-dr
 
  
 
-## <a name="id3d11devicecontexthssetshader"></a>Verknüpfung id3d11devicecontext aus:: hssetshader
+## <a name="id3d11devicecontexthssetsamplers"></a>ID3D11DeviceContext::HSSetSamplers
 
 
 
 <table>
 <thead>
 <tr class="header">
-<th>Funktionsebene</th>
+<th>Featureebene</th>
 <th>Verhaltensunterschiede</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
 <td>D3D_FEATURE_LEVEL_9_1</td>
-<td rowspan="5">Wird auf keiner 9. *-oder 10. *-Funktionsebene unterstützt. $ {Remove} $<br />
+<td rowspan="5">Wird auf 9.* oder 10.* Featureebene nicht unterstützt.${REMOVE}$<br />
 </td>
 </tr>
 <tr class="even">
@@ -1103,21 +1063,61 @@ Wenn Sie die <a href="/windows/desktop/api/D3D11/nf-d3d11-id3d11devicecontext-dr
 
  
 
-## <a name="id3d11devicecontexthssetshaderresources"></a>Verknüpfung id3d11devicecontext aus:: hssetshaderresources
+## <a name="id3d11devicecontexthssetshader"></a>ID3D11DeviceContext::HSSetShader
 
 
 
 <table>
 <thead>
 <tr class="header">
-<th>Funktionsebene</th>
+<th>Featureebene</th>
 <th>Verhaltensunterschiede</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
 <td>D3D_FEATURE_LEVEL_9_1</td>
-<td rowspan="5">Wird auf keiner 9. *-oder 10. *-Funktionsebene unterstützt. $ {Remove} $<br />
+<td rowspan="5">Wird auf 9.* oder 10.* Featureebene nicht unterstützt.${REMOVE}$<br />
+</td>
+</tr>
+<tr class="even">
+<td>D3D_FEATURE_LEVEL_9_2</td>
+
+</tr>
+<tr class="odd">
+<td>D3D_FEATURE_LEVEL_9_3</td>
+
+</tr>
+<tr class="even">
+<td>D3D_FEATURE_LEVEL_10_0</td>
+
+</tr>
+<tr class="odd">
+<td>D3D_FEATURE_LEVEL_10_1</td>
+
+</tr>
+</tbody>
+</table>
+
+
+
+ 
+
+## <a name="id3d11devicecontexthssetshaderresources"></a>ID3D11DeviceContext::HSSetShaderResources
+
+
+
+<table>
+<thead>
+<tr class="header">
+<th>Featureebene</th>
+<th>Verhaltensunterschiede</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>D3D_FEATURE_LEVEL_9_1</td>
+<td rowspan="5">Wird auf 9.* oder 10.* Featureebene nicht unterstützt.${REMOVE}$<br />
 </td>
 </tr>
 <tr class="even">
@@ -1150,18 +1150,18 @@ Wenn Sie die <a href="/windows/desktop/api/D3D11/nf-d3d11-id3d11devicecontext-dr
 <table>
 <thead>
 <tr class="header">
-<th>Funktionsebene</th>
+<th>Featureebene</th>
 <th>Verhaltensunterschiede</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
 <td>D3D_FEATURE_LEVEL_9_1</td>
-<td>Das Format darf sich von dem bei der Puffer Erstellung angegebenen unterscheiden, es wird jedoch eine teure Übersetzung entstehen.<br/> Ermöglicht nur Index Puffer mit dem DXGI_FORMAT_R16_UINT-Format. <br/></td>
+<td>Das Format darf sich von dem beim Erstellen des Puffers angegebenen Format unterscheiden, es wird jedoch eine teure Übersetzung anfällt.<br/> Lässt nur Indexpuffer mit dem DXGI_FORMAT_R16_UINT-Format zu. <br/></td>
 </tr>
 <tr class="even">
 <td>D3D_FEATURE_LEVEL_9_2</td>
-<td rowspan="2"> Das Format darf sich von dem bei der Puffer Erstellung angegebenen unterscheiden, es wird jedoch eine teure Übersetzung entstehen.<br/> Ermöglicht Index Puffer mit den DXGI_FORMAT_R16_UINT-und DXGI_FORMAT_R32_UINT Formaten wie D3D_FEATURE_LEVEL_10_0 und höher. <br/> $ {Remove} $<br />
+<td rowspan="2"> Das Format darf sich von dem beim Erstellen des Puffers angegebenen Format unterscheiden, es wird jedoch eine teure Übersetzung anfällt.<br/> Ermöglicht Indexpuffer mit DXGI_FORMAT_R16_UINT und DXGI_FORMAT_R32_UINT Formaten wie D3D_FEATURE_LEVEL_10_0 und höher. <br/> ${REMOVE}$<br />
 </td>
 </tr>
 <tr class="odd">
@@ -1175,53 +1175,21 @@ Wenn Sie die <a href="/windows/desktop/api/D3D11/nf-d3d11-id3d11devicecontext-dr
 
  
 
-## <a name="id3d11devicecontextiasetprimitivetopology"></a>Verknüpfung id3d11devicecontext aus:: iasetprimitivetopology
+## <a name="id3d11devicecontextiasetprimitivetopology"></a>ID3D11DeviceContext::IASetPrimitiveTopology
 
 
 
 <table>
 <thead>
 <tr class="header">
-<th>Funktionsebene</th>
+<th>Featureebene</th>
 <th>Verhaltensunterschiede</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
 <td>D3D_FEATURE_LEVEL_9_1</td>
-<td rowspan="3">Primitive Topologien mit Unterstützung werden nicht unterstützt $ {Remove} $<br />
-</td>
-</tr>
-<tr class="even">
-<td>D3D_FEATURE_LEVEL_9_2</td>
-
-</tr>
-<tr class="odd">
-<td>D3D_FEATURE_LEVEL_9_3</td>
-
-</tr>
-</tbody>
-</table>
-
-
-
- 
-
-## <a name="id3d11devicecontextomsetblendstate"></a>Verknüpfung id3d11devicecontext aus:: omsetblendstate
-
-
-
-<table>
-<thead>
-<tr class="header">
-<th>Funktionsebene</th>
-<th>Verhaltensunterschiede</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>D3D_FEATURE_LEVEL_9_1</td>
-<td rowspan="3">Samplemask darf nicht NULL $ {Remove} $ sein.<br />
+<td rowspan="3">Primitive Topologien mit Adjazenz werden nicht unterstützt${REMOVE}$<br />
 </td>
 </tr>
 <tr class="even">
@@ -1239,53 +1207,21 @@ Wenn Sie die <a href="/windows/desktop/api/D3D11/nf-d3d11-id3d11devicecontext-dr
 
  
 
-## <a name="id3d11devicecontextomsetrendertargets"></a>Verknüpfung id3d11devicecontext aus:: omgtrendertargets
+## <a name="id3d11devicecontextomsetblendstate"></a>ID3D11DeviceContext::OMSetBlendState
 
 
 
 <table>
 <thead>
 <tr class="header">
-<th>Funktionsebene</th>
+<th>Featureebene</th>
 <th>Verhaltensunterschiede</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
 <td>D3D_FEATURE_LEVEL_9_1</td>
-<td rowspan="2">Nur ein Renderziel unterstützt $ {Remove} $.<br />
-</td>
-</tr>
-<tr class="even">
-<td>D3D_FEATURE_LEVEL_9_2</td>
-
-</tr>
-<tr class="odd">
-<td>D3D_FEATURE_LEVEL_9_3</td>
-<td>Es werden nur vier Renderziele unterstützt, und alle gebundenen Ressourcen müssen über die gleiche Bittiefe verfügen.</td>
-</tr>
-</tbody>
-</table>
-
-
-
- 
-
-## <a name="id3d11devicecontextomsetrendertargetsandunorderedaccessviews"></a>Verknüpfung id3d11devicecontext aus:: omabtrendertargesorandunorderedaccessviews
-
-
-
-<table>
-<thead>
-<tr class="header">
-<th>Funktionsebene</th>
-<th>Verhaltensunterschiede</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>D3D_FEATURE_LEVEL_9_1</td>
-<td rowspan="3">Wird auf keiner 9. *-Funktionsebene unterstützt. $ {Remove} $<br />
+<td rowspan="3">SampleMask darf nicht 0 (null) ${REMOVE}$ sein.<br />
 </td>
 </tr>
 <tr class="even">
@@ -1303,21 +1239,53 @@ Wenn Sie die <a href="/windows/desktop/api/D3D11/nf-d3d11-id3d11devicecontext-dr
 
  
 
-## <a name="id3d11devicecontextpssetconstantbuffers"></a>Verknüpfung id3d11devicecontext aus::P ssetconstantbuffers
+## <a name="id3d11devicecontextomsetrendertargets"></a>ID3D11DeviceContext::OMSetRenderTargets
 
 
 
 <table>
 <thead>
 <tr class="header">
-<th>Funktionsebene</th>
+<th>Featureebene</th>
 <th>Verhaltensunterschiede</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
 <td>D3D_FEATURE_LEVEL_9_1</td>
-<td rowspan="3">Siehe Featureebene 10,0, aber die Gesamtzahl der vom Shader verwendeten Konstanten darf 32 $ {Remove} $ nicht überschreiten.<br />
+<td rowspan="2">Nur ein Renderziel wird unterstützt${REMOVE}$<br />
+</td>
+</tr>
+<tr class="even">
+<td>D3D_FEATURE_LEVEL_9_2</td>
+
+</tr>
+<tr class="odd">
+<td>D3D_FEATURE_LEVEL_9_3</td>
+<td>Es werden nur vier Renderziele unterstützt, und alle gebundenen Ressourcen müssen dieselbe Bittiefe aufweisen.</td>
+</tr>
+</tbody>
+</table>
+
+
+
+ 
+
+## <a name="id3d11devicecontextomsetrendertargetsandunorderedaccessviews"></a>ID3D11DeviceContext::OMSetRenderTargetsAndUnorderedAccessViews
+
+
+
+<table>
+<thead>
+<tr class="header">
+<th>Featureebene</th>
+<th>Verhaltensunterschiede</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>D3D_FEATURE_LEVEL_9_1</td>
+<td rowspan="3">Wird auf 9.*-Featureebene nicht unterstützt.${REMOVE}$<br />
 </td>
 </tr>
 <tr class="even">
@@ -1335,21 +1303,21 @@ Wenn Sie die <a href="/windows/desktop/api/D3D11/nf-d3d11-id3d11devicecontext-dr
 
  
 
-## <a name="id3d11devicecontextpssetsamplers"></a>Verknüpfung id3d11devicecontext aus::P ssetsamplers
+## <a name="id3d11devicecontextpssetconstantbuffers"></a>ID3D11DeviceContext::P SSetConstantBuffers
 
 
 
 <table>
 <thead>
 <tr class="header">
-<th>Funktionsebene</th>
+<th>Featureebene</th>
 <th>Verhaltensunterschiede</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
 <td>D3D_FEATURE_LEVEL_9_1</td>
-<td rowspan="3">Maximal 16 Samplern können an $ {Remove} $ gebunden werden.<br />
+<td rowspan="3">Siehe Featureebene 10.0, aber die Gesamtzahl der vom Shader verwendeten Konstanten darf 32${REMOVE}$ nicht überschreiten.<br />
 </td>
 </tr>
 <tr class="even">
@@ -1367,21 +1335,53 @@ Wenn Sie die <a href="/windows/desktop/api/D3D11/nf-d3d11-id3d11devicecontext-dr
 
  
 
-## <a name="id3d11devicecontextpssetshader"></a>Verknüpfung id3d11devicecontext aus::P ssetshader
+## <a name="id3d11devicecontextpssetsamplers"></a>ID3D11DeviceContext::P SSetSamplers
 
 
 
 <table>
 <thead>
 <tr class="header">
-<th>Funktionsebene</th>
+<th>Featureebene</th>
 <th>Verhaltensunterschiede</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
 <td>D3D_FEATURE_LEVEL_9_1</td>
-<td rowspan="2">Nur ps_4_0_level_9_1 $ {Remove} $<br />
+<td rowspan="3">Es können nicht mehr als 16 Sampler gebunden werden${REMOVE}$<br />
+</td>
+</tr>
+<tr class="even">
+<td>D3D_FEATURE_LEVEL_9_2</td>
+
+</tr>
+<tr class="odd">
+<td>D3D_FEATURE_LEVEL_9_3</td>
+
+</tr>
+</tbody>
+</table>
+
+
+
+ 
+
+## <a name="id3d11devicecontextpssetshader"></a>ID3D11DeviceContext::P SSetShader
+
+
+
+<table>
+<thead>
+<tr class="header">
+<th>Featureebene</th>
+<th>Verhaltensunterschiede</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>D3D_FEATURE_LEVEL_9_1</td>
+<td rowspan="2">Nur ps_4_0_level_9_1${REMOVE}$<br />
 </td>
 </tr>
 <tr class="even">
@@ -1399,21 +1399,21 @@ Wenn Sie die <a href="/windows/desktop/api/D3D11/nf-d3d11-id3d11devicecontext-dr
 
  
 
-## <a name="id3d11devicecontextpssetshaderresources"></a>Verknüpfung id3d11devicecontext aus::P ssetshaderresources
+## <a name="id3d11devicecontextpssetshaderresources"></a>ID3D11DeviceContext::P SSetShaderResources
 
 
 
 <table>
 <thead>
 <tr class="header">
-<th>Funktionsebene</th>
+<th>Featureebene</th>
 <th>Verhaltensunterschiede</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
 <td>D3D_FEATURE_LEVEL_9_1</td>
-<td rowspan="3">Nicht mehr als 8 gleichzeitig gebundene Shaderressourcen $ {Remove} $<br />
+<td rowspan="3">Nicht mehr als 8 gleichzeitig gebundene Shaderressourcen${REMOVE}$<br />
 </td>
 </tr>
 <tr class="even">
@@ -1431,21 +1431,21 @@ Wenn Sie die <a href="/windows/desktop/api/D3D11/nf-d3d11-id3d11devicecontext-dr
 
  
 
-## <a name="id3d11devicecontextrssetscissorrects"></a>Verknüpfung id3d11devicecontext aus:: rssezcissorrects
+## <a name="id3d11devicecontextrssetscissorrects"></a>ID3D11DeviceContext::RSSetScissorRects
 
 
 
 <table>
 <thead>
 <tr class="header">
-<th>Funktionsebene</th>
+<th>Featureebene</th>
 <th>Verhaltensunterschiede</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
 <td>D3D_FEATURE_LEVEL_9_1</td>
-<td rowspan="3">Es ist nur das NULL "nullte Scheren" verfügbar: $ {Remove} $<br />
+<td rowspan="3">Nur der nullte Scissor rect ist verfügbar${REMOVE}$<br />
 </td>
 </tr>
 <tr class="even">
@@ -1463,21 +1463,21 @@ Wenn Sie die <a href="/windows/desktop/api/D3D11/nf-d3d11-id3d11devicecontext-dr
 
  
 
-## <a name="id3d11devicecontextrssetviewports"></a>Verknüpfung id3d11devicecontext aus:: rssetviewports
+## <a name="id3d11devicecontextrssetviewports"></a>ID3D11DeviceContext::RSSetViewports
 
 
 
 <table>
 <thead>
 <tr class="header">
-<th>Funktionsebene</th>
+<th>Featureebene</th>
 <th>Verhaltensunterschiede</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
 <td>D3D_FEATURE_LEVEL_9_1</td>
-<td rowspan="3">Nur der nullten nullten ist verfügbar $ {Remove} $.<br />
+<td rowspan="3">Nur der nullte Viewport ist verfügbar${REMOVE}$<br />
 </td>
 </tr>
 <tr class="even">
@@ -1495,25 +1495,25 @@ Wenn Sie die <a href="/windows/desktop/api/D3D11/nf-d3d11-id3d11devicecontext-dr
 
  
 
-Obwohl Sie Gleit Komma Werte für die Elemente der [**D3D11 \_ Viewport**](/windows/desktop/api/D3D11/ns-d3d11-d3d11_viewport) -Struktur für das *pviewports* -Array in einem-Aufrufe [**Verknüpfung id3d11devicecontext aus:: rssetviewports**](/windows/desktop/api/D3D11/nf-d3d11-id3d11devicecontext-rssetviewports) für die Featureebene 9 x angeben [](overviews-direct3d-11-devices-downlevel-intro.md) \_ , verwendet **rssetviewports** intern DWORDs. Aufgrund dieses Verhaltens schlägt der Aufrufe von **rssetviewports** für featureebenen 9 x fehl, wenn Sie für den Viewport eine negative obere linke Ecke verwenden \_ . Dieser Fehler tritt auf, weil **rssetviewports** für 9 \_ x die Gleit Komma Werte ohne Validierung in ganze Zahlen ohne Vorzeichen umwandelt, was zu einem ganzzahligen Überlauf führt.
+Obwohl Sie float-Werte für die Member der [**D3D11 \_ VIEWPORT-Struktur**](/windows/desktop/api/D3D11/ns-d3d11-d3d11_viewport) für das *pViewports-Array* in einem Aufruf von [**ID3D11DeviceContext::RSSetViewports**](/windows/desktop/api/D3D11/nf-d3d11-id3d11devicecontext-rssetviewports) für [Featureebenen](overviews-direct3d-11-devices-downlevel-intro.md) 9 \_ x angeben, verwendet **RSSetViewports** intern DWORDs. Wenn Sie aufgrund dieses Verhaltens eine negative linke obere Ecke für den Viewport verwenden, schlägt der Aufruf von **RSSetViewports** für Featureebenen 9 \_ x fehl. Dieser Fehler tritt auf, weil **RSSetViewports** für 9 \_ x die Gleitkommawerte ohne Validierung in ganze Zahlen ohne Vorzeichen umsetzt, was zu einem Ganzzahlüberlauf führt.
 
-Der [**Verknüpfung id3d11devicecontext aus:: rssetviewports**](/windows/desktop/api/D3D11/nf-d3d11-id3d11devicecontext-rssetviewports) -Befehl für die featureebenen 10 [](overviews-direct3d-11-devices-downlevel-intro.md) \_ x und 11 \_ x funktioniert erwartungsgemäß, auch wenn Sie für den Viewport eine negative obere linke Ecke verwenden.
+Der Aufruf von [**ID3D11DeviceContext::RSSetViewports**](/windows/desktop/api/D3D11/nf-d3d11-id3d11devicecontext-rssetviewports) für [die Featureebenen](overviews-direct3d-11-devices-downlevel-intro.md) 10 \_ x und 11 \_ x funktioniert wie erwartet, auch wenn Sie eine negative linke obere Ecke für den Viewport verwenden.
 
-## <a name="id3d11devicecontextsetpredication"></a>Verknüpfung id3d11devicecontext aus:: setprediation
+## <a name="id3d11devicecontextsetpredication"></a>ID3D11DeviceContext::SetPredication
 
 
 
 <table>
 <thead>
 <tr class="header">
-<th>Funktionsebene</th>
+<th>Featureebene</th>
 <th>Verhaltensunterschiede</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
 <td>D3D_FEATURE_LEVEL_9_1</td>
-<td rowspan="3">Wird auf keiner 9. *-Funktionsebene unterstützt. $ {Remove} $<br />
+<td rowspan="3">Wird auf 9.*-Featureebene nicht unterstützt.${REMOVE}$<br />
 </td>
 </tr>
 <tr class="even">
@@ -1531,21 +1531,21 @@ Der [**Verknüpfung id3d11devicecontext aus:: rssetviewports**](/windows/desktop
 
  
 
-## <a name="id3d11devicecontextsosettargets"></a>Verknüpfung id3d11devicecontext aus:: sosettargets
+## <a name="id3d11devicecontextsosettargets"></a>ID3D11DeviceContext::SOSetTargets
 
 
 
 <table>
 <thead>
 <tr class="header">
-<th>Funktionsebene</th>
+<th>Featureebene</th>
 <th>Verhaltensunterschiede</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
 <td>D3D_FEATURE_LEVEL_9_1</td>
-<td rowspan="3">Wird auf keiner 9. *-Funktionsebene unterstützt. $ {Remove} $<br />
+<td rowspan="3">Wird auf 9.*-Featureebene nicht unterstützt.${REMOVE}$<br />
 </td>
 </tr>
 <tr class="even">
@@ -1563,21 +1563,21 @@ Der [**Verknüpfung id3d11devicecontext aus:: rssetviewports**](/windows/desktop
 
  
 
-## <a name="id3d11devicecontextvssetconstantbuffers"></a>Verknüpfung id3d11devicecontext aus:: vssetconstantbuffers
+## <a name="id3d11devicecontextvssetconstantbuffers"></a>ID3D11DeviceContext::VSSetConstantBuffers
 
 
 
 <table>
 <thead>
 <tr class="header">
-<th>Funktionsebene</th>
+<th>Featureebene</th>
 <th>Verhaltensunterschiede</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
 <td>D3D_FEATURE_LEVEL_9_1</td>
-<td rowspan="3">Siehe Featureebene 10,0, aber die Gesamtzahl der vom Shader verwendeten Konstanten darf 255 $ {Remove} $ nicht überschreiten.<br />
+<td rowspan="3">Siehe Featureebene 10.0, aber die Gesamtzahl der vom Shader verwendeten Konstanten darf 255${REMOVE}$ nicht überschreiten.<br />
 </td>
 </tr>
 <tr class="even">
@@ -1595,21 +1595,21 @@ Der [**Verknüpfung id3d11devicecontext aus:: rssetviewports**](/windows/desktop
 
  
 
-## <a name="id3d11devicecontextvssetsamplers"></a>Verknüpfung id3d11devicecontext aus:: vssetsamplers
+## <a name="id3d11devicecontextvssetsamplers"></a>ID3D11DeviceContext::VSSetSamplers
 
 
 
 <table>
 <thead>
 <tr class="header">
-<th>Funktionsebene</th>
+<th>Featureebene</th>
 <th>Verhaltensunterschiede</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
 <td>D3D_FEATURE_LEVEL_9_1</td>
-<td rowspan="3">Wird auf keiner 9. *-Funktionsebene unterstützt. $ {Remove} $<br />
+<td rowspan="3">Wird auf 9.*-Featureebene nicht unterstützt.${REMOVE}$<br />
 </td>
 </tr>
 <tr class="even">
@@ -1627,21 +1627,21 @@ Der [**Verknüpfung id3d11devicecontext aus:: rssetviewports**](/windows/desktop
 
  
 
-## <a name="id3d11devicecontextvssetshader"></a>Verknüpfung id3d11devicecontext aus:: vssetshader
+## <a name="id3d11devicecontextvssetshader"></a>ID3D11DeviceContext::VSSetShader
 
 
 
 <table>
 <thead>
 <tr class="header">
-<th>Funktionsebene</th>
+<th>Featureebene</th>
 <th>Verhaltensunterschiede</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
 <td>D3D_FEATURE_LEVEL_9_1</td>
-<td rowspan="2">Nur vs_4_0_level_9_1 $ {Remove} $<br />
+<td rowspan="2">Nur vs_4_0_level_9_1${REMOVE}$<br />
 </td>
 </tr>
 <tr class="even">
@@ -1659,21 +1659,21 @@ Der [**Verknüpfung id3d11devicecontext aus:: rssetviewports**](/windows/desktop
 
  
 
-## <a name="id3d11devicecontextvssetshaderresources"></a>Verknüpfung id3d11devicecontext aus:: vssetshaderresources
+## <a name="id3d11devicecontextvssetshaderresources"></a>ID3D11DeviceContext::VSSetShaderResources
 
 
 
 <table>
 <thead>
 <tr class="header">
-<th>Funktionsebene</th>
+<th>Featureebene</th>
 <th>Verhaltensunterschiede</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
 <td>D3D_FEATURE_LEVEL_9_1</td>
-<td rowspan="3">Wird auf keiner 9. *-Funktionsebene unterstützt. $ {Remove} $<br />
+<td rowspan="3">Wird auf 9.*-Featureebene nicht unterstützt.${REMOVE}$<br />
 </td>
 </tr>
 <tr class="even">
@@ -1695,7 +1695,7 @@ Der [**Verknüpfung id3d11devicecontext aus:: rssetviewports**](/windows/desktop
 
 <dl> <dt>
 
-[10level9-Referenz](d3d11-graphics-reference-10level9.md)
+[10Level9-Referenz](d3d11-graphics-reference-10level9.md)
 </dt> </dl>
 
  

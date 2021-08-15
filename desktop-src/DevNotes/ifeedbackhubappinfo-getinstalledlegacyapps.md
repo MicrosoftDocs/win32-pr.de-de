@@ -1,5 +1,5 @@
 ---
-description: 'IFeedbackHubAppInfo::GetInstalledLegacyApps-Methode: Diese API ist nicht für alle Apps verfügbar. Sofern Ihre App nicht speziell von Microsoft bereitgestellt wird, schlagen Aufrufe dieser APIs zur Laufzeit fehl.'
+description: 'IFeedbackHubAppInfo::GetInstalledLegacyApps-Methode: Diese API ist nicht für alle Apps verfügbar. Sofern Ihre App nicht speziell von Microsoft bereitgestellt wird, können Aufrufe dieser APIs zur Laufzeit nicht ausgeführt werden.'
 ms.assetid: 84135D6F-8232-4CE5-AD38-D18823F0E174
 title: IFeedbackHubAppInfo::GetInstalledLegacyApps-Methode
 ms.topic: reference
@@ -12,16 +12,16 @@ api_name:
 api_type:
 - COM
 api_location: ''
-ms.openlocfilehash: 167be3846322a1b3aacdf752374b9b0089220963
-ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
+ms.openlocfilehash: 553ea59c2da86f6d75777087554208ae1a6dbbcd70c8f2a9b6f1830836e3b1ef
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2021
-ms.locfileid: "108096698"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118955949"
 ---
 # <a name="ifeedbackhubappinfogetinstalledlegacyapps-method"></a>IFeedbackHubAppInfo::GetInstalledLegacyApps-Methode
 
-Diese API ist nicht für alle Apps verfügbar. Sofern Ihre App nicht speziell von Microsoft bereitgestellt wird, schlagen Aufrufe dieser APIs zur Laufzeit fehl.
+Diese API ist nicht für alle Apps verfügbar. Sofern Ihre App nicht speziell von Microsoft bereitgestellt wird, können Aufrufe dieser APIs zur Laufzeit nicht ausgeführt werden.
 
 ## <a name="syntax"></a>Syntax
 
@@ -38,10 +38,10 @@ virtual void GetInstalledLegacyApps(
 
 <dl> <dt>
 
-*Ergebnis* \[ out, optional\]
+*result* \[ out, optional\]
 </dt> <dd>
 
-Diese API ist nicht für alle Apps verfügbar. Sofern Ihre App nicht speziell von Microsoft bereitgestellt wird, schlagen Aufrufe dieser APIs zur Laufzeit fehl.
+Diese API ist nicht für alle Apps verfügbar. Sofern Ihre App nicht speziell von Microsoft bereitgestellt wird, können Aufrufe dieser APIs zur Laufzeit nicht ausgeführt werden.
 
 </dd> </dl>
 
@@ -53,10 +53,10 @@ Diese Methode gibt keinen Wert zurück.
 
 
 
-| Anforderungen | Wert |
+| Anforderung | Wert |
 |-------------------------------------|------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | nur Windows 10 \[ Desktop-Apps\]<br/>          |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server \[ 2016-Desktop-Apps\]<br/> |
+| Unterstützte Mindestversion (Client)<br/> | \[Windows 10 Nur Desktop-Apps\]<br/>          |
+| Unterstützte Mindestversion (Server)<br/> | \[Windows Server 2016 Nur Desktop-Apps\]<br/> |
 
 
 

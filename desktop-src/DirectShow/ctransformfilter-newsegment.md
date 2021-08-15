@@ -1,7 +1,7 @@
 ---
-description: Die newsegment-Methode benachrichtigt den Filter, dass nach diesem-Befehl empfangene Medien Beispiele als Segment gruppiert werden.
+description: Die NewSegment-Methode benachrichtigt den Filter, dass medienbeispiele, die nach diesem Aufruf empfangen wurden, als Segment gruppiert werden.
 ms.assetid: 78ddaac7-9c1f-47b6-835d-dd16b1f5b01f
-title: Ctransformfilter. newsegment-Methode (Transfrm. h)
+title: CTransformFilter.NewSegment-Methode (Transfrm.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -16,16 +16,16 @@ api_location:
 - Strmbase.dll
 - Strmbasd.lib
 - Strmbasd.dll
-ms.openlocfilehash: 0fd046288886d3e7619419dd591dd94310f56020
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: a2cb83c376b012ae3474f87b0f8d26c7fb5560812c1d8ddcbb3ea62293797bb9
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106359705"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118953549"
 ---
-# <a name="ctransformfilternewsegment-method"></a>Ctransformfilter. newsegment-Methode
+# <a name="ctransformfilternewsegment-method"></a>CTransformFilter.NewSegment-Methode
 
-Die- `NewSegment` Methode benachrichtigt den Filter, dass nach diesem-Befehl empfangene Medien Beispiele als Segment gruppiert werden.
+Die -Methode benachrichtigt den Filter, dass medienbeispiele, die nach diesem Aufruf empfangen `NewSegment` wurden, als Segment gruppiert werden.
 
 ## <a name="syntax"></a>Syntax
 
@@ -44,21 +44,21 @@ virtual HRESULT NewSegment(
 
 <dl> <dt>
 
-*tSTART* 
+*tStart* 
 </dt> <dd>
 
-Die Startzeit des Segments, relativ zur ursprünglichen Quelle.
+Startzeit des Segments relativ zur ursprünglichen Quelle.
 
 </dd> <dt>
 
-*tstopps* 
+*tStop* 
 </dt> <dd>
 
-Die Endzeit des Segments, relativ zur ursprünglichen Quelle.
+Die Stoppzeit des Segments relativ zur ursprünglichen Quelle.
 
 </dd> <dt>
 
-*drate* 
+*dRate* 
 </dt> <dd>
 
 Rate, mit der das Segment verarbeitet werden soll.
@@ -69,9 +69,9 @@ Rate, mit der das Segment verarbeitet werden soll.
 
 Gibt S \_ OK zurück.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Die [**ctransforminputpin:: newsegment**](ctransforminputpin-newsegment.md) -Methode der Eingabe-PIN ruft diese Methode auf. Diese Methode stellt den-Befehl `NewSegment` an die downstreameingabepin bereit.
+Die [**CTransformInputPin::NewSegment-Methode**](ctransforminputpin-newsegment.md) des Eingabepins ruft diese Methode auf. Diese Methode übergibt den `NewSegment` Aufruf an den Downstreameingabepin.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -79,16 +79,16 @@ Die [**ctransforminputpin:: newsegment**](ctransforminputpin-newsegment.md) -Met
 
 | Anforderung | Wert |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>Transfrm. h (Include Streams. h)</dt> </dl>                                                                                  |
-| Bibliothek<br/> | <dl> " <dt>Straumbase. lib" (Einzelhandels Builds);</dt> " <dt>Straumbasd. lib" (Debugbuilds)</dt> </dl> |
+| Header<br/>  | <dl> <dt>Transfrm.h (include Streams.h)</dt> </dl>                                                                                  |
+| Bibliothek<br/> | <dl> <dt>Strmbase.lib (Einzelhandels-Builds); </dt> <dt>Strmbasd.lib (Debugbuilds)</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Ctransformfilter-Klasse**](ctransformfilter.md)
+[**CTransformFilter-Klasse**](ctransformfilter.md)
 </dt> </dl>
 
  

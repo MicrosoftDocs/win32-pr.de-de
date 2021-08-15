@@ -1,27 +1,27 @@
 ---
-description: 'Weitere Informationen finden Sie hier: vistacolttmember'
-title: Vistacolyp-Member (Microsoft. ISAM. ESENT. Interop. Vista)
+description: Weitere Informationen zu VistaColtyp-Membern
+title: VistaColtyp-Member (Microsoft.Isam.Esent.Interop.Vista)
 TOCTitle: VistaColtyp members
 ms:assetid: AllMembers.T:Microsoft.Isam.Esent.Interop.Vista.VistaColtyp
 ms:mtpsurl: https://msdn.microsoft.com/library/microsoft.isam.esent.interop.vista.vistacoltyp_members(v=EXCHG.10)
 ms:contentKeyID: 55104310
 ms.date: 07/30/2014
 ms.topic: article
-ms.openlocfilehash: fd15e9f2848656ca1aa4ae95db2cc190eea53575
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 143467dd3c1ccf705a0a32c083a2541798f5800335ee69cd3f46f378d5aac965
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "104217713"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119356330"
 ---
-# <a name="vistacoltyp-members"></a>Vistacolyp-Member
+# <a name="vistacoltyp-members"></a>VistaColtyp-Member
 
-Geschützte Member einschließen  
-Geerbte Member einschließen  
+Einschließen geschützter Member  
+Einschließen geerbter Member  
 
 Spaltentypen, die der Vista-Version von ESENT hinzugefügt wurden.
 
-Der [vistacolyp](./vistacoltyp-class.md) -Typ macht die folgenden Member verfügbar.
+Der [VistaColtyp-Typ](./vistacoltyp-class.md) macht die folgenden Member verfügbar.
 
 ## <a name="fields"></a>Felder
 
@@ -30,7 +30,7 @@ Der [vistacolyp](./vistacoltyp-class.md) -Typ macht die folgenden Member verfüg
 <tr class="header">
 <th> </th>
 <th>Name</th>
-<th>BESCHREIBUNG</th>
+<th>Beschreibung</th>
 </tr>
 </thead>
 <tbody>
@@ -42,16 +42,16 @@ Der [vistacolyp](./vistacoltyp-class.md) -Typ macht die folgenden Member verfüg
 <tr class="even">
 <td><img src="../images/hh596466.pubfield(exchg.10).gif" title="Öffentliches Feld" alt="Public field" /><img src="../images/dn292146.static(exchg.10).gif" title="Statischer Member" alt="Static member" /></td>
 <td><a href="dn351276(v=exchg.10).md">LongLong</a></td>
-<td>Signierte 64-Bit-Nummer.</td>
+<td>64-Bit-Zahl mit Vorzeichen.</td>
 </tr>
 <tr class="odd">
 <td><img src="../images/hh596466.pubfield(exchg.10).gif" title="Öffentliches Feld" alt="Public field" /><img src="../images/dn292146.static(exchg.10).gif" title="Statischer Member" alt="Static member" /></td>
 <td><a href="dn335348(v=exchg.10).md">UnsignedLong</a></td>
-<td>32-Bit-Ganzzahl ohne Vorzeichen.</td>
+<td>32-Bit-Zahl ohne Vorzeichen.</td>
 </tr>
 <tr class="even">
 <td><img src="../images/hh596466.pubfield(exchg.10).gif" title="Öffentliches Feld" alt="Public field" /><img src="../images/dn292146.static(exchg.10).gif" title="Statischer Member" alt="Static member" /></td>
-<td><a href="dn351278(v=exchg.10).md">Unsignedshort</a></td>
+<td><a href="dn351278(v=exchg.10).md">UnsignedShort</a></td>
 <td>16-Bit-Zahl ohne Vorzeichen.</td>
 </tr>
 </tbody>
@@ -60,10 +60,10 @@ Der [vistacolyp](./vistacoltyp-class.md) -Typ macht die folgenden Member verfüg
 
 Oben
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen:
 
-#### <a name="reference"></a>Referenz
+#### <a name="reference"></a>Verweis
 
-[Vistacoltyp-Klasse](./vistacoltyp-class.md)
+[VistaColtyp-Klasse](./vistacoltyp-class.md)
 
-[Microsoft. ISAM. ESENT. Interop. Vista-Namespace](./microsoft.isam.esent.interop.vista-namespace.md)
+[Microsoft.Isam.Esent.Interop.Vista-Namespace](./microsoft.isam.esent.interop.vista-namespace.md)

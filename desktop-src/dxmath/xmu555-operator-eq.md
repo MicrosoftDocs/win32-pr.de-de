@@ -1,7 +1,7 @@
 ---
-description: Weist der aktuellen Instanz von XMU555 Vektor Komponenten Daten zu.
+description: Weist der aktuellen Instanz von XMU555 Vektorkomponentendaten zu.
 ms.assetid: 'overload:microsoft.directx_sdk.reference.xmu555.operator = '
-title: XMU555 Operator =-Operatoren
+title: XMU555-Operator = Operatoren
 ms.topic: reference
 ms.date: 12/06/2018
 topic_type:
@@ -11,18 +11,18 @@ api_name: ''
 api_type:
 - NA
 api_location: ''
-ms.openlocfilehash: 84a0f96c56c7c7748e87b52bb54f5e512dbbb23e
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 5ec53b3c49c7ade0f8be22f507768bd1c2e084de40d4812168b7ff760bf349b6
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106368185"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118984610"
 ---
-# <a name="xmu555-operator--operators"></a>XMU555 Operator =-Operatoren
+# <a name="xmu555-operator--operators"></a>XMU555-Operator = Operatoren
 
-Weist der aktuellen Instanz von Vektor Komponenten Daten zu `XMU555` .
+Weist der aktuellen Instanz von Vektorkomponentendaten `XMU555` zu.
 
-Weist der aktuellen Instanz von [**XMU555**](/windows/win32/api/directxpackedvector/ns-directxpackedvector-xmu555)Vektor Komponenten Daten zu.
+Weist der aktuellen Instanz von [**XMU555**](/windows/win32/api/directxpackedvector/ns-directxpackedvector-xmu555)Vektorkomponentendaten zu.
 
 ### <a name="overload-list"></a>Überladeliste
 
@@ -41,12 +41,12 @@ Weist der aktuellen Instanz von [**XMU555**](/windows/win32/api/directxpackedvec
 </thead>
 <tbody>
 <tr class="odd">
-<td style="text-align: left;"><a href="/windows/desktop/api//rrascfg/nn-rrascfg-ieapproviderconfig"><strong>XMU555:: Operator = (konstant XMU555&)</strong></a></td>
-<td style="text-align: left;">Weist die Vektor Komponenten Daten einer Instanz von <code>XMU555</code> der aktuellen Instanz von zu <code>XMU555</code> . <br/> Dieser Operator weist die Vektor Komponenten Daten von einer Instanz von <a href="/windows/desktop/api/directxpackedvector/ns-directxpackedvector-xmu555"><strong>XMU555</strong></a> der aktuellen Instanz von zu <code>XMU555</code> . <br/></td>
+<td style="text-align: left;"><a href="/windows/desktop/api//rrascfg/nn-rrascfg-ieapproviderconfig"><strong>XMU555::operator = (const XMU555&)</strong></a></td>
+<td style="text-align: left;">Weist die Vektorkomponentendaten aus einer Instanz von <code>XMU555</code> der aktuellen Instanz von <code>XMU555</code> zu. <br/> Dieser Operator weist die Vektorkomponentendaten aus einer Instanz von <a href="/windows/desktop/api/directxpackedvector/ns-directxpackedvector-xmu555"><strong>XMU555</strong></a> der aktuellen Instanz von <code>XMU555</code> zu. <br/></td>
 </tr>
 <tr class="even">
-<td style="text-align: left;"><a href="/windows/desktop/api/directxpackedvector/nf-directxpackedvector-xmu555-operator-assign(uint16_t)"><strong>XMU555:: Operator = (Konstante uint16_t)</strong></a></td>
-<td style="text-align: left;">Weist die Vektor Komponenten Daten, die in einer Instanz von verpackt sind <code>uint16_t</code> , der aktuellen Instanz von zu <code>XMU555</code> . <br/> Weist die Vektor Komponenten Daten, die in einer Instanz von verpackt sind <code>uint16_t</code> , der aktuellen Instanz von <a href="/windows/desktop/api/directxpackedvector/ns-directxpackedvector-xmu555"><strong>XMU555</strong></a>zu. <br/>
+<td style="text-align: left;"><a href="/windows/desktop/api/directxpackedvector/nf-directxpackedvector-xmu555-operator-assign(uint16_t)"><strong>XMU555::operator = (const uint16_t)</strong></a></td>
+<td style="text-align: left;">Weist die in einer Instanz von gepackten Vektorkomponentendaten <code>uint16_t</code> der aktuellen Instanz von <code>XMU555</code> zu. <br/> Weist die in einer Instanz von gepackten Vektorkomponentendaten <code>uint16_t</code> der aktuellen Instanz von <a href="/windows/desktop/api/directxpackedvector/ns-directxpackedvector-xmu555"><strong>XMU555</strong></a>zu. <br/>
 <blockquote>
 [!Note]<br />
 Dieser Operator ist nur unter C++ verfügbar.
@@ -58,14 +58,14 @@ Dieser Operator ist nur unter C++ verfügbar.
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
 [XMU555-Operatoren](ovw-xmu555-operators.md)
 </dt> <dt>
 
-**Verweis**
+**Referenz**
 </dt> <dt>
 
 [**XMU555**](/windows/win32/api/directxpackedvector/ns-directxpackedvector-xmu555)

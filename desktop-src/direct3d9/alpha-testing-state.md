@@ -1,21 +1,21 @@
 ---
-description: C++-Anwendungen können Alpha Tests verwenden, um zu steuern, wann Pixel auf die renderzieloberfläche geschrieben werden.
+description: C++-Anwendungen können Alphatests verwenden, um zu steuern, wann Pixel auf die Renderzieloberfläche geschrieben werden.
 ms.assetid: 368c3d12-2c8b-43e3-94c3-bccfe6c73e66
-title: Alpha Test Status (Direct3D 9)
+title: Alphatestzustand (Direct3D 9)
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 020322ee31bc08352dbb2796ea5e7141d03c77c3
-ms.sourcegitcommit: c7add10d695482e1ceb72d62b8a4ebd84ea050f7
+ms.openlocfilehash: b853eb779860d5fc490f4061fde03c852a9c3d9f7bda48baa8e5a84ebd43173c
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106346449"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118989440"
 ---
-# <a name="alpha-testing-state-direct3d-9"></a>Alpha Test Status (Direct3D 9)
+# <a name="alpha-testing-state-direct3d-9"></a>Alphatestzustand (Direct3D 9)
 
-C++-Anwendungen können Alpha Tests verwenden, um zu steuern, wann Pixel auf die renderzieloberfläche geschrieben werden. Wenn Sie den renderzustand [**D3DRS \_ Alpha atestenable**](./d3drenderstatetype.md) verwenden, legt ihre Anwendung das aktuelle Direct3D-Gerät so fest, dass jedes Pixel gemäß einer Alpha-Testfunktion getestet wird. Wenn der Test erfolgreich ist, wird das Pixel auf die-Oberfläche geschrieben. Wenn dies nicht der Fall ist, wird das Pixel von Direct3D ignoriert. Wählen Sie die Alpha-Testfunktion mit dem **D3DRS \_ alphafunc** -gerengerzustand aus. Die Anwendung kann einen Referenz-Alpha-Wert für alle Pixel festlegen, mit denen der **D3DRS- \_ Alpha Aref** -Rendering-Zustand verglichen werden soll.
+C++-Anwendungen können Alphatests verwenden, um zu steuern, wann Pixel auf die Renderzieloberfläche geschrieben werden. Mithilfe des [**D3DRS \_ ALPHATESTENABLE-Renderzustands**](./d3drenderstatetype.md) legt Ihre Anwendung das aktuelle Direct3D-Gerät so fest, dass es jedes Pixel gemäß einer Alphatestfunktion testet. Wenn der Test erfolgreich ist, wird das Pixel auf die Oberfläche geschrieben. Wenn dies nicht dere ist, ignoriert Direct3D das Pixel. Wählen Sie die Alphatestfunktion mit dem **D3DRS \_ ALPHAFUNC-Renderzustand** aus. Ihre Anwendung kann mithilfe des **D3DRS \_ ALPHAREF-Renderzustands** einen Alpha-Verweiswert für alle Pixel festlegen, mit dem verglichen werden soll.
 
-Die häufigste Verwendung für Alpha Tests ist die Verbesserung der Leistung bei der fast transparenten rasterisierung von Objekten. Wenn die zu ragenden Farbdaten transparenter sind als die Farbe an einem bestimmten Pixel (D3DPCMPCAPS \_ greaterequal), wird das Pixel geschrieben. Andernfalls ignoriert der Raster das Pixel vollständig und speichert die Verarbeitung, die zum Mischen der beiden Farben erforderlich ist. Im folgenden Codebeispiel wird überprüft, ob eine angegebene Vergleichsfunktion unterstützt wird, und wenn dies der Fall ist, werden die Vergleichs Funktionsparameter festgelegt, die zum Verbessern der Leistung beim Rendern
+Die gängigste Verwendung für Alphatests ist die Verbesserung der Leistung beim Rastern von Objekten, die nahezu transparent sind. Wenn die Rasterung der Farbdaten nicht transparent ist als die Farbe in einem bestimmten Pixel (D3DPCMPCAPS \_ GREATEREQUAL), wird das Pixel geschrieben. Andernfalls ignoriert der Rasterizer das Pixel vollständig und speichert die Verarbeitung, die zum Mischen der beiden Farben erforderlich ist. Im folgenden Codebeispiel wird überprüft, ob eine bestimmte Vergleichsfunktion unterstützt wird, und wenn ja, werden die Vergleichsfunktionsparameter festgelegt, die zur Verbesserung der Leistung während des Renderings erforderlich sind.
 
 
 ```
@@ -36,13 +36,13 @@ if (pCaps.AlphaCmpCaps & D3DPCMPCAPS_GREATEREQUAL)
 
 
 
-Nicht alle Hardware unterstützt alle Alpha Test Features. Sie können die Gerätefunktionen überprüfen, indem Sie die [**IDirect3D9:: GetDeviceCaps**](/windows/desktop/api) -Methode aufrufen. Überprüfen Sie nach dem Abrufen der Gerätefunktionen den Alpha acmpcaps-Member der zugeordneten [**D3DCAPS9**](/windows/desktop/api/D3D9Caps/ns-d3d9caps-d3dcaps9) -Struktur auf die gewünschte Vergleichsfunktion. Wenn das Alpha acmpcaps-Element nur die Funktion "D3DPCMPCAPS \_ Always" oder nur die Funktion "D3DPCMPCAPS Never" enthält \_ , unterstützt der Treiber keine Alpha Tests.
+Nicht die gesamte Hardware unterstützt alle Alphatestfeatures. Sie können die Gerätefunktionen überprüfen, indem Sie die [**IDirect3D9::GetDeviceCaps-Methode**](/windows/desktop/api) aufrufen. Überprüfen Sie nach dem Abrufen der Gerätefunktionen den AlphaCmpCaps-Member der zugeordneten [**D3DCAPS9-Struktur**](/windows/desktop/api/D3D9Caps/ns-d3d9caps-d3dcaps9) auf die gewünschte Vergleichsfunktion. Wenn der AlphaCmpCaps-Member nur die D3DPCMPCAPS \_ ALWAYS-Funktion oder nur die D3DPCMPCAPS \_ NEVER-Funktion enthält, unterstützt der Treiber keine Alphatests.
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
 <dl> <dt>
 
-[Rendering-Zustände](render-states.md)
+[Renderzustände](render-states.md)
 </dt> </dl>
 
  

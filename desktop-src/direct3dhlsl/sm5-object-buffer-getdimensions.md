@@ -1,6 +1,6 @@
 ---
-title: 'Buffer:: GetDimensions-Funktion'
-description: 'Ruft die Länge des Puffers ab. | Buffer:: GetDimensions-Funktion'
+title: Buffer::GetDimensions-Funktion
+description: Ruft die Länge des Puffers ab. | Buffer::GetDimensions-Funktion
 ms.assetid: 704890e8-43e4-4e72-b7e2-eeef331bef1c
 keywords:
 - GetDimensions-Funktion HLSL
@@ -13,14 +13,14 @@ api_type:
 ms.topic: reference
 ms.date: 05/31/2018
 api_location: ''
-ms.openlocfilehash: c7f1ad1da7600e65d7442c1b2431535e2fdcf38c
-ms.sourcegitcommit: 92e74c99f8f4d097676959d0c317f533c2400a80
+ms.openlocfilehash: d7c56d673e533b4626a57669cf884d80da63d7848cfc7a3e248762f6c4f42088
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/09/2021
-ms.locfileid: "104981089"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118986100"
 ---
-# <a name="buffergetdimensions-function"></a>Buffer:: GetDimensions-Funktion
+# <a name="buffergetdimensions-function"></a>Buffer::GetDimensions-Funktion
 
 Ruft die Länge des Puffers ab.
 
@@ -36,7 +36,7 @@ void GetDimensions(
 
 <dl> <dt>
 
- \[ Abblenden\]
+*Dim* \[ out\]
 </dt> <dd>
 
 Typ: **uint**
@@ -49,13 +49,13 @@ Die Länge des Puffers in Bytes.
 
 Diese Funktion gibt keinen Wert zurück.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Diese Funktion wird für die folgenden Typen von Shadern unterstützt:
+Diese Funktion wird für die folgenden Shadertypen unterstützt:
 
 
 
-| Scheitelpunkt | Hülle | Domain | Geometrie | Pixel | Compute |
+| Scheitelpunkt | Rumpf | Domain | Geometrie | Pixel | Compute |
 |--------|------|--------|----------|-------|---------|
 | x      | x    | x      | x        | x     | x       |
 
@@ -70,7 +70,7 @@ Diese Funktion wird für die folgenden Typen von Shadern unterstützt:
 [Buffer](sm5-object-buffer.md)
 </dt> <dt>
 
-[Shader-Modell 5](d3d11-graphics-reference-sm5.md)
+[Shadermodell 5](d3d11-graphics-reference-sm5.md)
 </dt> </dl>
 
  

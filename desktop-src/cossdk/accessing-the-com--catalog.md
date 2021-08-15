@@ -1,27 +1,27 @@
 ---
-description: Zugreifen auf den com+-Katalog
+description: Zugreifen auf den COM+-Katalog
 ms.assetid: 1322a3fe-faee-4971-949f-5e0d2dfe469b
-title: Zugreifen auf den com+-Katalog
+title: Zugreifen auf den COM+-Katalog
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 8f2de7c87da1744e23b384199dce68628fd77d5d
-ms.sourcegitcommit: c7add10d695482e1ceb72d62b8a4ebd84ea050f7
+ms.openlocfilehash: 9f05d85526cb6d82916aa48a49c7f97e581c01b7410530878a7f6e0fc69dac20
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106344837"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119129411"
 ---
-# <a name="accessing-the-com-catalog"></a>Zugreifen auf den com+-Katalog
+# <a name="accessing-the-com-catalog"></a>Zugreifen auf den COM+-Katalog
 
-Der com+-Katalog ist der zugrunde liegende Datenspeicher, der alle com+-Konfigurationsdaten enthält. Jedes Mal, wenn Sie eine com+-Verwaltung durchführen, lesen und schreiben Sie Daten, die im Katalog gespeichert sind. Die einzige Möglichkeit, auf den Katalog zuzugreifen, ist das Verwaltungs Programmkomponenten Dienste oder die COMAdmin-Bibliothek.
+Der COM+-Katalog ist der zugrunde liegende Datenspeicher, der alle COM+-Konfigurationsdaten enthält. Bei jeder Art von COM+-Verwaltung lesen und schreiben Sie im Katalog gespeicherte Daten. Die einzige Möglichkeit, auf den Katalog zu zugreifen, ist das Verwaltungstool Komponentendienste oder die COMAdmin-Bibliothek.
 
-Der com+-Katalog bietet eine Abstraktions Ebene über die tatsächlichen Details, wo und wie com+-Konfigurationsdaten gespeichert werden. Ein Großteil der Daten wird in der COM+-Registrierungsdatenbank (oder RegDB) gespeichert, die Daten für alle in com+-Anwendungen installierten, konfigurierten Komponenten enthält. Diese Datenbank wird zur Laufzeit der Anwendung verwendet, um Konfigurationsdaten für com+ bereitzustellen, um Objekte ordnungsgemäß in einem geeigneten Kontext zu aktivieren, sodass Dienste für Objekte gemäß ihrer Konfiguration bereitgestellt werden können. Die RegDB selbst ist ein transaktiver Ressourcen-Manager, der DTC-Transaktionen über den [kompensierenden Ressourcen-Manager](com--compensating-resource-manager.md)verwendet. Wenn Sie beibehaltene Konfigurationsänderungen vornehmen, wird für die Transaktion ein Commit ausgeführt. Die einzige Möglichkeit, auf die RegDB zuzugreifen, ist der com+-Katalog mit den COMAdmin-Objekten oder dem Verwaltungs Programmkomponenten Dienste.
+Der COM+-Katalog bietet eine Abstraktionsebene über die tatsächlichen Details dazu, wo und wie COM+-Konfigurationsdaten gespeichert werden. Ein Teil der Daten wird in der COM+-Registrierungsdatenbank (oder RegDB) gespeichert, die Daten für alle konfigurierten Komponenten enthält, die in COM+-Anwendungen installiert sind. Diese Datenbank wird zur Laufzeit der Anwendung verwendet, um Konfigurationsdaten für COM+ zur ordnungsgemäßen Aktivierung von Objekten in einem geeigneten Kontext zur Verfügung zu stellen, sodass Dienste für Objekte entsprechend ihrer Konfiguration bereitgestellt werden können. Die RegDB selbst ist ein transaktiver Ressourcen-Manager, der DTC-Transaktionen über den [kompensierenden Ressourcen-Manager verwendet.](com--compensating-resource-manager.md) Wenn Sie persistente Konfigurationsänderungen vornehmen, wird für diese transaktional ein Committed ausgeführt. Sie können nur über den COM+-Katalog auf regDB zugreifen, indem Sie die COMAdmin-Objekte oder das Verwaltungstool Komponentendienste verwenden.
 
-Auf jedem Computer wird ein com+-Katalogserver als Komponente in der Systemanwendung ausgeführt. Der Katalogserver steuert den Zugriff auf die auf seinem Computer gespeicherten Katalogdaten. der Katalogserver ist in der Tat eine Abfrage-Engine, mit der Sie Daten im Katalog auf diesem Computer lesen und schreiben können. Wenn Sie die programmgesteuerte Verwaltung durch Instanziieren eines [**comadmincatalog**](comadmincatalog.md) -Objekts initiieren, öffnet dieses Objekt eine Sitzung mit dem lokalen Katalogserver. Anforderungen für Sammlungen oder Sammel Elemente im lokalen Katalog werden vom lokalen Katalogserver verarbeitet. Wenn Sie eine Verbindung mit einem Remote Computer herstellen, kommunizieren Sie mit dem Katalogserver auf diesem Computer.
+Auf jedem Computer wird ein COM+-Katalogserver als Komponente in der Systemanwendung ausgeführt. Der Katalogserver steuert den Zugriff auf die Katalogdaten, die auf seinem Computer gespeichert sind. Tatsächlich ist der Katalogserver eine Abfrage-Engine, mit der Sie Daten im Katalog auf diesem Computer lesen und schreiben können. Wenn Sie die programmgesteuerte Verwaltung durch Instanziieren eines [**COMAdminCatalog-Objekts**](comadmincatalog.md) initiieren, öffnet dieses Objekt eine Sitzung mit dem lokalen Katalogserver. Anforderungen für Sammlungen oder Sammlungselemente im lokalen Katalog werden vom lokalen Katalogserver verarbeitet. Wenn Sie eine Verbindung mit einem Remotecomputer herstellen, kommunizieren Sie mit dem Katalogserver auf diesem Computer.
 
-## <a name="security-considerations-in-administration"></a>Sicherheitsüberlegungen für die Verwaltung
+## <a name="security-considerations-in-administration"></a>Sicherheitsüberlegungen in der Verwaltung
 
-Um Daten im com+-Katalog zu ändern, müssen Sie über eine Autorität als Administrator verfügen. Wenn Sie Konfigurationsdaten mithilfe des Verwaltungs Programms Komponenten Dienste ändern möchten, müssen Sie Mitglied der Rolle "-Administratoren" sein, die der Systemanwendung auf dem Computer zugewiesen ist, den Sie verwalten möchten. Ebenso muss der Code mit Administrator Berechtigungen ausgeführt werden, um Daten mithilfe der COMAdmin-Objekte zu ändern. Das heißt, eine Anwendung oder ein Skript, das die COMAdmin-Objekte verwendet, muss unter einem Benutzerkonto ausgeführt werden, das der Rolle "Administratoren" in der Systemanwendung auf dem Computer zugewiesen ist, den Sie zu verwalten versucht. Die Anwendung kann nur dann auf Informationen im Katalog zugreifen und diese ändern, wenn das Konto, unter dem Sie ausgeführt wird, über diese Berechtigung verfügt.
+Um Daten im COM+-Katalog zu ändern, müssen Sie über eine Autorität als Administrator verfügen. Um das Verwaltungstool komponentendienste zum Ändern von Konfigurationsdaten zu verwenden, müssen Sie Mitglied der Administratorrolle sein, die der Systemanwendung auf dem Computer zugewiesen ist, den Sie verwalten möchten. Um Daten mithilfe der COMAdmin-Objekte zu ändern, muss Ihr Code mit Administratorberechtigung ausgeführt werden. Das heißt, eine Anwendung oder ein Skript, die die COMAdmin-Objekte verwendet, muss unter einem Benutzerkonto ausgeführt werden, das der Administratorrolle auf der Systemanwendung auf dem Computer zugewiesen ist, den sie verwalten soll. Die Anwendung kann nur dann auf Informationen im Katalog zugreifen und diese ändern, wenn das Konto, unter dem sie ausgeführt wird, über diese Autorität verfügt.
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
@@ -30,7 +30,7 @@ Um Daten im com+-Katalog zu ändern, müssen Sie über eine Autorität als Admin
 [Übersicht über die COMAdmin-Objekte](overview-of-the-comadmin-objects.md)
 </dt> <dt>
 
-[Zusammenfassungs Beschreibung der COMAdmin-Klassen](summary-description-of-the-comadmin-classes.md)
+[Zusammenfassungsbeschreibung der COMAdmin-Klassen](summary-description-of-the-comadmin-classes.md)
 </dt> </dl>
 
  

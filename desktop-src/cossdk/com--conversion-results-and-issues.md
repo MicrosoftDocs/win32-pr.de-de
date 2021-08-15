@@ -1,38 +1,38 @@
 ---
-description: Unabhängig davon, ob Sie Ihre MTS-Pakete manuell in com+-Anwendungen konvertieren oder Sie vom Microsoft Windows Setup-Prozess automatisch ausführen lassen, sollten Sie sich über die Ergebnisse der Konvertierung und die Probleme informieren.
+description: Unabhängig davon, ob Sie Ihre MTS-Pakete manuell in COM+-Anwendungen konvertieren oder den Setupprozess von Microsoft Windows automatisch ausführen lassen, sollten Sie die Ergebnisse der Konvertierung sowie die Probleme kennen.
 ms.assetid: 5b85aa5c-0409-4802-9335-04217ef5ddb9
-title: Ergebnisse und Probleme bei der com+-Konvertierung
+title: COM+-Konvertierungsergebnisse und -Probleme
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 0ded68e8e81d2c59c90607747c5f343dac364424
-ms.sourcegitcommit: c7add10d695482e1ceb72d62b8a4ebd84ea050f7
+ms.openlocfilehash: a347df5f0ad0b16aee509c9c1b2c2c848372d0df2ccbc376814b0d14eb61d138
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104393234"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119129212"
 ---
-# <a name="com-conversion-results-and-issues"></a>Ergebnisse und Probleme bei der com+-Konvertierung
+# <a name="com-conversion-results-and-issues"></a>COM+-Konvertierungsergebnisse und -Probleme
 
-Unabhängig davon, ob Sie Ihre MTS-Pakete manuell in com+-Anwendungen konvertieren oder Sie vom Microsoft Windows Setup-Prozess automatisch ausführen lassen, sollten Sie sich über die Ergebnisse der Konvertierung und die Probleme informieren.
+Unabhängig davon, ob Sie Ihre MTS-Pakete manuell in COM+-Anwendungen konvertieren oder den Setupprozess von Microsoft Windows automatisch ausführen lassen, sollten Sie die Ergebnisse der Konvertierung sowie die Probleme kennen.
 
-## <a name="what-is-converted"></a>Was konvertiert wird
+## <a name="what-is-converted"></a>Was wird konvertiert?
 
-Während der Konvertierung konvertiert das Dienstprogramm mtstocom Rollen, Rollenzuweisungen, Schnittstellen, Methoden, Benutzer, die Computer Liste und die meisten Computereinstellungen. Das Dienstprogramm mtstocom konvertiert außerdem die Identität und das Kennwort für ein MTS-Paket.
+Während der Konvertierung konvertiert das MTSTOCOM-Hilfsprogramm Rollen, Rollenzuweisungen, Schnittstellen, Methoden, Benutzer, die Computerliste und die meisten Computereinstellungen. Das MTSTOCOM-Hilfsprogramm konvertiert auch die Identität und das Kennwort für ein MTS-Paket.
 
-Die neuen com+-Attribute, die in MTS nicht verfügbar waren, werden automatisch auf die folgenden Standardwerte für alle konvertierten MTS-Komponenten festgelegt. Diese Standardeinstellungen können entweder mit dem Verwaltungs Programmkomponenten Dienste oder mit den administrativen Verwaltungs Schnittstellen von com+ geändert werden.
+Die neuen COM+-Attribute, die in MTS nicht verfügbar waren, werden automatisch auf die folgenden Standardwerte für alle konvertierten MTS-Komponenten festgelegt. Diese Standardwerte können entweder mit dem Verwaltungstool Komponentendienste oder mithilfe der COM+-Verwaltungsschnittstellen geändert werden.
 
--   Die JIT-Aktivierung ist aktiviert.
--   Objekt Pooling deaktiviert.
--   Synchronisierung identisch mit der Transaktions Einstellung.
+-   JIT-Aktivierung aktiviert.
+-   Objektpooling deaktiviert.
+-   Synchronisierung entspricht der Transaktionseinstellung.
 
 ## <a name="conversion-issues"></a>Konvertierungsprobleme
 
-Com+ wird automatisch installiert, wenn Sie Windows installieren. Es ist nicht möglich, com+ zu deinstallieren. Probleme im Zusammenhang mit Upgrades vorhandener MTS-und com+-Installationen umfassen Folgendes:
+COM+ wird automatisch installiert, wenn Sie Windows installieren. COM+ kann nicht deinstalliert werden. Probleme im Zusammenhang mit Upgrades vorhandener MTS- und COM+-Installationen umfassen Folgendes:
 
--   Wenn Sie zurzeit MTS 1,0 verwenden, wird MTS automatisch auf com+ aktualisiert. Benutzerdefinierte Pakete gehen jedoch verloren und müssen neu erstellt werden.
--   Wenn Sie zurzeit MTS 2,0 verwenden, wird MTS automatisch auf com+ aktualisiert. Alle benutzerdefinierten Pakete werden auf COM+-Anwendungen aktualisiert. Alle Komponenten sollten wie unter MTS 2,0 funktionieren.
--   Wenn Sie die Optionen MTS 1,0 und MTS 2,0 verwenden und die SDK-Option installiert haben, werden die SDK-Dateien entfernt. Sie können das aktuelle com+-SDK über die Microsoft Windows SDK installieren.
--   Sie können einen Remote Computer mit dem Computer nicht von einem com+-Computer aus verwalten.
+-   Wenn Sie derzeit MTS 1.0 verwenden, wird MTS automatisch auf COM+ aktualisiert. Allerdings geht benutzerdefinierte Pakete verloren, und Sie müssen sie neu erstellen.
+-   Wenn Sie derzeit MTS 2.0 verwenden, wird MTS automatisch auf COM+ aktualisiert. Alle benutzerdefinierten Pakete werden auf COM+-Anwendungen aktualisiert. Alle Komponenten sollten wie unter MTS 2.0 funktionieren.
+-   Wenn Sie MTS 1.0 und MTS 2.0 verwenden und die SDK-Option installiert haben, werden die SDK-Dateien entfernt. Sie können das neueste COM+-SDK über das Microsoft Windows SDK installieren.
+-   Sie können einen MTS-Remotecomputer nicht über einen COM+-Computer verwalten.
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
@@ -44,7 +44,7 @@ Com+ wird automatisch installiert, wenn Sie Windows installieren. Es ist nicht m
 [Manuelle Konvertierung von MTS](manual-conversion-from-mts.md)
 </dt> <dt>
 
-[MTS-Verwaltungs Bibliothek](mts-administration-library.md)
+[MTS-Verwaltungsbibliothek](mts-administration-library.md)
 </dt> </dl>
 
  

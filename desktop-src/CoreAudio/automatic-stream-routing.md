@@ -1,25 +1,25 @@
 ---
-description: In diesem Artikel wird beschrieben, wie Sie eine WASAPI-Implementierung aktualisieren, um das automatische streamrouting zu nutzen.
+description: In diesem Artikel wird beschrieben, wie Sie eine WASAPI-Implementierung aktualisieren, um das automatische Streamrouting zu nutzen.
 ms.assetid: 718CBEB9-A7A0-4898-81B7-CBD76AFA3A06
-title: Automatisches streamrouting
+title: Automatisches Streamrouting
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 87a9848c5fd764ee49e485fc112c35c347a0f84d
-ms.sourcegitcommit: c7add10d695482e1ceb72d62b8a4ebd84ea050f7
+ms.openlocfilehash: bd152db35c580d93cf76ccfaffd66b37225f2be7fae11f217a6895b289a58e12
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "103958587"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118957389"
 ---
-# <a name="automatic-stream-routing"></a>Automatisches streamrouting
+# <a name="automatic-stream-routing"></a>Automatisches Streamrouting
 
-In diesem Artikel wird beschrieben, wie Sie eine WASAPI-Implementierung aktualisieren, um das automatische streamrouting zu nutzen.
+In diesem Artikel wird beschrieben, wie Sie eine WASAPI-Implementierung aktualisieren, um das automatische Streamrouting zu nutzen.
 
-Ab Windows 7 wird der Audiowiedergabe-Stream einer APP nahtlos vom vorherigen Standardaudiogerät auf das neue Standardaudiogerät übertragen, wenn sich das Standardaudiogerät ändert. Diese Übertragung erfolgt automatisch ohne zusätzlichen Anwendungscode. Vor Windows 10, Version 1607, konnten apps, die die Low-Level-API für die Audiositzung (WASAPI) verwendeten, nicht an dieser automatisierten streamweiterleitungs-Funktion teilnehmen. Apps, die WASAPI verwenden, mussten ihre eigene Form des Stream-Routings implementieren, indem Sie zusätzlichen Code hinzufügen, um das eintreffen und Entfernen von Audiogeräten zu erkennen und den Stream entsprechend zu wechseln. Anwendungen, die WASAPI verwenden, die nicht Ihren eigenen Stream-Routing Mechanismus beim Eintreffen oder Entfernen von Geräten implementiert haben, riskieren eine geringere Benutzer Funktionalität.
+Ab Windows 7 wird bei jeder Änderung des Standardaudiogeräts der Audiowiedergabedatenstrom einer App nahtlos vom vorherigen Standardaudiogerät auf das neue Standardaudiogerät übertragen. Diese Übertragung erfolgt automatisch ohne zusätzlichen Anwendungscode. Vor Windows 10 Version 1607 konnten Apps, die die low-level Windows Audio Session API (WASAPI) verwendet haben, jedoch nicht an dieser automatisierten Streamroutingfunktion teilnehmen. Apps, die WASAPI verwenden, mussten ihre eigene Form des Streamroutings implementieren, indem sie zusätzlichen Code hinzufügen, um das Ein- und Entfernen von Audiogeräten zu erkennen und den Stream nach Bedarf auf diese Geräte umzustellen. Anwendungen, die WASAPI verwendeten, die keinen eigenen Streamroutingmechanismus beim Ein- oder Entfernen von Geräten implementierten, riskierten eine weniger als ideale Benutzererfahrung.
 
-Ab Windows 10, Version 1607, können apps, die WASAPI verwenden, das automatische streamrouting nutzen. Wenn Ihre Anwendung WASAPI verwendet, wird dringend empfohlen, dass Sie Ihre Anwendung aktualisieren, um diese neue Funktion mithilfe der folgenden Schritte nutzen zu können:
+Ab der Windows 10 Version 1607 können Apps, die WASAPI verwenden, das automatische Streamrouting nutzen. Wenn Ihre Anwendung WASAPI verwendet, wird dringend empfohlen, die Anwendung mit den folgenden Schritten zu aktualisieren, um diese neue Funktion zu nutzen:
 
-1.  In Windows 10, Version 1607, werden zwei neue GUIDs definiert, mit denen ein audiorendering oder eine Aufzeichnungs Schnittstelle mit automatischem streamrouting, [devinterface \_ - \_ audiorendering](/windows/desktop/CoreAudio/devinterface-xxx-guids) und [devinterface \_ - \_ Audioerfassung](/windows/desktop/CoreAudio/devinterface-xxx-guids)aktiviert werden kann. Sie erhalten eine Zeichen folgen Darstellung dieser GUIDs, indem Sie [**stringfromiid**](/windows/desktop/api/combaseapi/nf-combaseapi-stringfromiid)aufrufen. Das folgende Beispiel zeigt diesen-Befehl für die Audio-Rendering-GUID.
+1.  Windows 10, Version 1607, definiert zwei neue GUIDs, mit denen eine Audiorendering- oder Erfassungsschnittstelle mit automatischem Streamrouting aktiviert werden kann: [DEVINTERFACE \_ AUDIO \_ RENDER](/windows/desktop/CoreAudio/devinterface-xxx-guids) und [DEVINTERFACE \_ AUDIO \_ CAPTURE.](/windows/desktop/CoreAudio/devinterface-xxx-guids) Rufen Sie [**stringFromIID**](/windows/desktop/api/combaseapi/nf-combaseapi-stringfromiid)auf, um eine Zeichenfolgendarstellung dieser GUIDs abzurufen. Das folgende Beispiel zeigt diesen Aufruf für die Audiorender-GUID.
 
     ```C++
     PWSTR audioRenderGuidString;
@@ -28,7 +28,7 @@ Ab Windows 10, Version 1607, können apps, die WASAPI verwenden, das automatisch
 
     
 
-2.  Aktivieren Sie den audioendpunkt, indem Sie die Bezeichnerzeichenfolge an die WASAPI [**activateaudiointerfaceasync**](/windows/desktop/api/mmdeviceapi/nf-mmdeviceapi-activateaudiointerfaceasync) -Funktion übergeben. Das folgende Beispiel übergibt den audiorendering-Bezeichner, der in Schritt 1 abgerufen wurde:
+2.  Aktivieren Sie den Audioendpunkt, indem Sie die Bezeichnerzeichenfolge an die FUNKTION WASAPI [**ActivateAudioInterfaceAsync**](/windows/desktop/api/mmdeviceapi/nf-mmdeviceapi-activateaudiointerfaceasync) übergeben. Im folgenden Beispiel wird der in Schritt 1 abgerufene Audiorenderbezeichner übergeben:
 
     ```C++
     //Activate the default audio interface
@@ -41,7 +41,7 @@ Ab Windows 10, Version 1607, können apps, die WASAPI verwenden, das automatisch
 
     
 
-3.  Freigeben des zugeordneten Arbeitsspeichers zum Speichern des Endpunkt Bezeichners:
+3.  Freigeben des arbeitsspeichergebundenen Speichers für die Speicherung des Endpunktbezeichners:
 
     ```C++
     CoTaskMemFree(audioRenderGuidString);  //free the string memory
@@ -49,9 +49,9 @@ Ab Windows 10, Version 1607, können apps, die WASAPI verwenden, das automatisch
 
     
 
-Nachdem Sie die APP so geändert haben, dass Sie die Audioschnittstelle in der oben beschriebenen Weise aktiviert, wird Sie an der Funktion für automatisches streamrouting beteiligt.
+Nachdem Sie Ihre App so geändert haben, dass die Audioschnittstelle auf die oben beschriebene Weise aktiviert wird, wird sie an der Funktion für automatisches Streamrouting beteiligt.
 
-Um das automatische Streamen von Datenströmen zu veranschaulichen, verwenden Sie einen Laptop oder Tablet, der mit internen Referenten ausgestattet ist Sie sollten das Audiomaterial durch die internen Redner des Geräts hören. Wenn Audioinhalte wiedergegeben werden, verbinden Sie ein paar von Kopfhörern. Sie sollten jetzt Audioinhalte über die Kopfhörer hören. Entfernen Sie dann die Kopfhörer, und Audiodaten sollten automatisch an die internen Referenten zurückgeleitet werden.
+Um das automatische Streamrouting zu veranschaulichen, verwenden Sie einen Laptop oder ein Tablet, das mit internen Lautsprechern ausgestattet ist, um Audio wiederzuspielen. Sie sollten die Audiowiedergabe über die internen Lautsprecher des Geräts hören. Verbinden Sie während der Wiedergabe von Audiodaten ein Paar Mitwirkender. Sie sollten nun Audio hören, das durch die 160er-Jahre wiedergegeben wird. Trennen Sie dann die Stecknaps, und die Audiodaten sollten automatisch zurück an die internen Lautsprecher weitergeleitet werden.
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
@@ -60,13 +60,13 @@ Um das automatische Streamen von Datenströmen zu veranschaulichen, verwenden Si
 [Streamrouting](stream-routing.md)
 </dt> <dt>
 
-[**Mediadevice. getdefaultaudiorenderid**](/uwp/api/windows.media.devices.mediadevice.getdefaultaudiorenderid)
+[**MediaDevice.GetDefaultAudioRenderId**](/uwp/api/windows.media.devices.mediadevice.getdefaultaudiorenderid)
 </dt> <dt>
 
-[**Mediadevice. getdefaultaudiocaptureid**](/uwp/api/windows.media.devices.mediadevice.getdefaultaudiocaptureid)
+[**MediaDevice.GetDefaultAudioCaptureId**](/uwp/api/windows.media.devices.mediadevice.getdefaultaudiocaptureid)
 </dt> <dt>
 
-[**Activateaudiointerfaceasync**](/windows/desktop/api/mmdeviceapi/nf-mmdeviceapi-activateaudiointerfaceasync)
+[**ActivateAudioInterfaceAsync**](/windows/desktop/api/mmdeviceapi/nf-mmdeviceapi-activateaudiointerfaceasync)
 </dt> </dl>
 
  

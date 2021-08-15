@@ -1,9 +1,9 @@
 ---
-title: Mediacollectionchange-Ereignis des AxWindowsMediaPlayer-Objekts
-description: Das mediacollectionchange-Ereignis tritt auf, wenn die Mediensammlung geändert wird. | Mediacollectionchange-Ereignis des AxWindowsMediaPlayer-Objekts
+title: MediaCollectionChange-Ereignis des AxWindowsMediaPlayer-Objekts
+description: Das MediaCollectionChange-Ereignis tritt auf, wenn sich die Mediensammlung ändert. | MediaCollectionChange-Ereignis des AxWindowsMediaPlayer-Objekts
 ms.assetid: 99a6d512-ed8e-4f1b-856a-22ca8092741d
 keywords:
-- Mediacollectionchange-Ereignis der AxWindowsMediaPlayer-Objekt Fenster Media Player
+- MediaCollectionChange-Ereignis des AxWindowsMediaPlayer-Windows Media Player
 topic_type:
 - apiref
 api_name:
@@ -14,16 +14,16 @@ api_type:
 - Assembly
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 720207de3475544074b87c56686d0a47da97785c
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 8a3019bab6f71c54688b2c47fec8e8bf94dfd5809797cbe1b875d7f7c23818c7
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106369222"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119378290"
 ---
-# <a name="mediacollectionchange-event-of-the-axwindowsmediaplayer-object"></a>Mediacollectionchange-Ereignis des AxWindowsMediaPlayer-Objekts
+# <a name="mediacollectionchange-event-of-the-axwindowsmediaplayer-object"></a>MediaCollectionChange-Ereignis des AxWindowsMediaPlayer-Objekts
 
-Das mediacollectionchange-Ereignis tritt auf, wenn die Mediensammlung geändert wird.
+Das MediaCollectionChange-Ereignis tritt auf, wenn sich die Mediensammlung ändert.
 
 ``` syntax
 [C#]
@@ -49,23 +49,23 @@ Dieses Ereignis enthält keine Daten.
 
 | Anforderung | Wert |
 |----------------------|----------------------------------------------------------------------------------------------------------------------------|
-| Version<br/>   | Windows Media Player 9-Serie oder höher<br/>                                                                          |
+| Version<br/>   | Windows Media Player 9er Serie oder höher<br/>                                                                          |
 | Namespace<br/> | **AxWMPLib**<br/>                                                                                                    |
 | Assembly<br/>  | <dl> <dt>AxInterop.WMPLib.dll (AxInterop.WMPLib.dll.dll)</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**AxWindowsMediaPlayer-Objekt (VB und c#)**](axwindowsmediaplayer-object--vb-and-c.md)
+[**AxWindowsMediaPlayer-Objekt (VB und C#)**](axwindowsmediaplayer-object--vb-and-c.md)
 </dt> <dt>
 
-[**AxWindowsMediaPlayer. mediacollection (VB und c#)**](axwmplib-axwindowsmediaplayer-mediacollection--vb-and-c.md)
+[**AxWindowsMediaPlayer.mediaCollection (VB und C#)**](axwmplib-axwindowsmediaplayer-mediacollection--vb-and-c.md)
 </dt> <dt>
 
-[**Iwmpmediacollection-Schnittstelle (VB und c#)**](iwmpmediacollection--vb-and-c.md)
+[**IWMPMediaCollection-Schnittstelle (VB und C#)**](iwmpmediacollection--vb-and-c.md)
 </dt> </dl>
 
  

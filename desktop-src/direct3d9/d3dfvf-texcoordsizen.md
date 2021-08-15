@@ -1,7 +1,7 @@
 ---
-description: Konstruiert Bitmuster, die zum Identifizieren von Texturkoordinaten Formaten innerhalb einer FVF-Beschreibung verwendet werden. Die Ergebnisse dieser Makros können mithilfe des OR-Operators in einer Beschreibung des "or" kombiniert werden.
+description: Erstellt Bitmuster, die verwendet werden, um Texturkoordinatenformate innerhalb einer FVF-Beschreibung zu identifizieren. Die Ergebnisse dieser Makros können mithilfe des OR-Operators in einer FVF-Beschreibung kombiniert werden.
 ms.assetid: c3076d7c-7935-40ee-b513-7ff6551a535f
-title: D3DFVF_TEXCOORDSIZEN (D3d9types. h)
+title: D3DFVF_TEXCOORDSIZEN (D3d9types.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,16 +13,16 @@ api_type:
 - HeaderDef
 api_location:
 - D3d9types.h
-ms.openlocfilehash: 58288667954e3414aa3d8ae1550e02e7216ffb4e
-ms.sourcegitcommit: 14010c34b35fa268046c7683f021f86de08ddd0a
+ms.openlocfilehash: f5a39827f94f0415d6235797489f6e18c5fb515a5e5c36c0f26153b7ba8303ca
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "106355205"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118988910"
 ---
-# <a name="d3dfvf_texcoordsizen"></a>D3DFVF \_ texcoordsizen
+# <a name="d3dfvf_texcoordsizen"></a>D3DFVF \_ TEXCOORDSIZEN
 
-Konstruiert Bitmuster, die zum Identifizieren von Texturkoordinaten Formaten innerhalb einer FVF-Beschreibung verwendet werden. Die Ergebnisse dieser Makros können mithilfe des OR-Operators in einer Beschreibung des "or" kombiniert werden.
+Erstellt Bitmuster, die verwendet werden, um Texturkoordinatenformate innerhalb einer FVF-Beschreibung zu identifizieren. Die Ergebnisse dieser Makros können mithilfe des OR-Operators in einer FVF-Beschreibung kombiniert werden.
 
 ``` syntax
 #define D3DFVF_TEXCOORDSIZEN(CoordIndex) 
@@ -38,15 +38,15 @@ Konstruiert Bitmuster, die zum Identifizieren von Texturkoordinaten Formaten inn
 
 | Parameter                                                                                                    | BESCHREIBUNG                                                                                                                              |
 |--------------------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------|
-| <span id="CoordIndex"></span><span id="coordindex"></span><span id="COORDINDEX"></span>Coordindex<br/> | Ein Wert, der den Texturkoordinaten Satz identifiziert, bei dem die Texturkoordinaten Größe (1-, 2-, 3-oder 4dimensional) angewendet wird. <br/> |
+| <span id="CoordIndex"></span><span id="coordindex"></span><span id="COORDINDEX"></span>CoordIndex<br/> | Wert, der den Texturkoordinatensatz identifiziert, bei dem die Texturkoordinatengröße (1-, 2-, 3- oder 4Dimensional) gilt. <br/> |
 
 
 
  
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Die **D3DFVF \_ texcoordsizen** -Makros verwenden die folgenden Konstanten.
+Die **D3DFVF \_ TEXCOORDSIZEN-Makros** verwenden die folgenden Konstanten.
 
 
 ```C++
@@ -58,7 +58,7 @@ Die **D3DFVF \_ texcoordsizen** -Makros verwenden die folgenden Konstanten.
 
 
 
-In der folgenden Beschreibung von "f" wird ein Scheitelpunkt Format identifiziert, das über eine Position verfügt. normal; diffuse und Glanz Farben; und zwei Sätze von Texturkoordinaten. Der erste Satz von Texturkoordinaten umfasst ein einzelnes-Element, und der zweite Satz enthält zwei Elemente:
+Die folgende FVF-Beschreibung identifiziert ein Scheitelpunktformat mit einer Position. ein normaler ; diffuse und Glanzfarben; und zwei Sätze von Texturkoordinaten. Der erste Satz von Texturkoordinaten enthält ein einzelnes Element, und die zweite Gruppe enthält zwei Elemente:
 
 
 ```C++
@@ -78,11 +78,11 @@ DWORD dwFVF = D3DFVF_XYZ | D3DFVF_NORMAL | D3DFVF_DIFFUSE |
 
 | Anforderung | Wert |
 |-------------------|----------------------------------------------------------------------------------------|
-| Header<br/> | <dl> <dt>D3d9types. h</dt> </dl> |
+| Header<br/> | <dl> <dt>D3d9types.h</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 

@@ -1,21 +1,21 @@
 ---
-title: Vorbereitung auf 64-Bit-Windows
-description: Ein wichtiges Ziel der 64-Bit-Version von Windows besteht darin, Entwicklern die Verwendung einer einzelnen Quell Code Basis für Ihre 32-Bit-und 64-Bit-Anwendungen zu erleichtern.
+title: Vorbereiten auf 64-Bit-Windows
+description: Ein wichtiges Ziel der 64-Bit-Version von Windows ist es, Entwicklern die Verwendung einer einzelnen Quellcodebasis für ihre 32-Bit- und 64-Bit-Anwendungen zu erleichtern.
 ms.assetid: 62101e20-13bb-46d5-9542-2afd414ad224
 keywords:
-- 64-Bit-Windows-Programmier Handbuch 64-Bit Windows-Programmierung, Vorbereitung
+- 64-Bit-Windows Programmierhandbuch 64-Bit-Windows Programmieren, vorbereitung
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: b585f2798650f84930e6aa2e5d6e19cb9aa5e8e1
-ms.sourcegitcommit: 592c9bbd22ba69802dc353bcb5eb30699f9e9403
+ms.openlocfilehash: c3e3735f92f964cc0c691b0153c12eaa34806f2b5800e29bcf49b6be72c0cc71
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "104390819"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119412870"
 ---
-# <a name="getting-ready-for-64-bit-windows"></a>Vorbereitung auf 64-Bit-Windows
+# <a name="getting-ready-for-64-bit-windows"></a>Vorbereiten auf 64-Bit-Windows
 
-Ein wichtiges Ziel der 64-Bit-Version von Windows besteht darin, Entwicklern die Verwendung einer einzelnen Quell Code Basis für Ihre 32-Bit-und 64-Bit-Anwendungen zu erleichtern. In dieser Übersicht wird beschrieben, wie der Quellcode sowohl 32-Bit-als auch 64-Bit-Computing unterstützt. Das Vertrautheit mit vorhandenen [Windows-Datentypen](/windows/desktop/WinProg/windows-data-types) ist hilfreich.
+Ein wichtiges Ziel der 64-Bit-Version von Windows ist es, Entwicklern die Verwendung einer einzelnen Quellcodebasis für ihre 32-Bit- und 64-Bit-Anwendungen zu erleichtern. In dieser Übersicht wird beschrieben, wie Sie ihren Quellcode sowohl 32-Bit- als auch 64-Bit-Computing unterstützen. Kenntnisse über vorhandene [Windows Datentypen](/windows/desktop/WinProg/windows-data-types) sind hilfreich.
 
 ## <a name="in-this-section"></a>In diesem Abschnitt
 
@@ -26,9 +26,9 @@ Ein wichtiges Ziel der 64-Bit-Version von Windows besteht darin, Entwicklern die
 -   [Regeln für die Verwendung von Zeigern](rules-for-using-pointers.md)
 -   [Virtueller Adressraum](virtual-address-space.md)
 -   [Ausrichtungsfehler](fault-alignments.md)
--   [Prozess Interoperabilität](process-interoperability.md)
+-   [Prozessinteroperabilität](process-interoperability.md)
 -   [Treiber](drivers.md)
 
- 
+ 
 
- 
+ 

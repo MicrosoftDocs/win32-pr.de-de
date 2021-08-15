@@ -1,43 +1,43 @@
 ---
-description: Die Windows-Abbild Erfassungs Schnittstelle (WIA) ist sowohl eine API als auch eine Gerätetreiber Schnittstelle (DDI).
+description: Die Windows WiA-Schnittstelle (Image Acquisition) ist sowohl eine API als auch eine Gerätetreiberschnittstelle (Device Driver Interface, DDI).
 ms.assetid: 725543f8-6e33-4e22-904c-95cbec0388c8
-title: Informationen zur Windows-Abbild Erfassung
+title: Informationen Windows Bilderfassung
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 80eed6289f7a30476ea6889c947577ad003b656e
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: d73662083e568a109760a052994bfcbebdfcbe53f858e50a89728a01bba344d4
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106360554"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119451300"
 ---
-# <a name="about-windows-image-acquisition"></a>Informationen zur Windows-Abbild Erfassung
+# <a name="about-windows-image-acquisition"></a>Informationen Windows Bilderfassung
 
-Die Windows-Abbild Erfassungs Schnittstelle (WIA) ist sowohl eine API als auch eine Gerätetreiber Schnittstelle (DDI). Die WIA-API ist so konzipiert, dass Anwendungen:
+Die Windows WiA-Schnittstelle (Image Acquisition) ist sowohl eine API als auch eine Gerätetreiberschnittstelle (Device Driver Interface, DDI). Die WIA-API ist so konzipiert, dass Anwendungen:
 
--   Führen Sie in einer robusten und stabilen Umgebung aus.
--   Minimieren von Interoperabilitätsproblemen
--   Listet die verfügbaren Abbild Erwerbs Geräte auf.
--   Gleichzeitiges Erstellen von Verbindungen mit mehreren Geräten.
--   Abfragen von Eigenschaften von Geräten in einer standardmäßigen und erweiterbaren Weise.
--   Beschaffen von Gerätedaten mithilfe von Standard-und Hochleistungs Übertragungsmechanismen
--   Behalten Sie Bildeigenschaften über Datenübertragungen hinweg bei.
--   Sie werden über eine Vielzahl von Geräte Ereignissen benachrichtigt.
+-   Ausführung in einer robusten und stabilen Umgebung.
+-   Minimieren sie Interoperabilitätsprobleme.
+-   Aufzählen der verfügbaren Geräte für die Bilderfassung
+-   Erstellen Sie verbindungen mit mehreren Geräten gleichzeitig.
+-   Abfragen von Eigenschaften von Geräten auf standardmäßige und erweiterbare Weise.
+-   Erwerben von Gerätedaten mithilfe von Standard- und Hochleistungsübertragungsmechanismen.
+-   Verwalten von Bildeigenschaften bei Datenübertragungen.
+-   Benachrichtigung über eine Vielzahl von Geräteereignissen.
 
-Der wiaddi ist so konzipiert, dass die Menge an Code minimiert wird, die ein Hardwarehersteller schreiben muss, und gleichzeitig die Flexibilität, individuelle Lösungen zu erstellen. Dies wird durch Folgendes erreicht:
+Wiaddi ist so konzipiert, dass die Menge an Code minimiert wird, den ein Hardwareanbieter schreiben muss, während gleichzeitig die Flexibilität beim Erstellen einzelner Lösungen erhalten ist. Dies wird erreicht durch:
 
--   Bereitstellen einer Standard-Geräte Dienst Bibliothek, mit der die meisten Treiber Vorgänge durchführt werden
--   Herauf Stufen von Kommunikationsstandards für Industriegeräte, sodass ein WIA-Treiber die meisten WIA-Geräte unterstützt. Beispielsweise PTP (Picture Transfer Protocol).
--   Zulassen, dass der Gerätetreiber benutzerdefinierte Schnittstellen unterstützt, ohne dass die standardmäßige Geräte Dienst Bibliothek verwendet werden muss. Allerdings müssen die Treiber weiterhin die standardmäßigen WIA-Schnittstellen implementieren.
+-   Bereitstellen einer Standardgerätedienstbibliothek, die die meisten Treibervorgänge ausführt.
+-   Förderung von Branchenstandards für die Gerätekommunikation, sodass ein WIA-Treiber die meisten WIA-Geräte unterstützt. Beispiel: Picture Transfer Protocol (PTP).
+-   Zulassen, dass der Gerätetreiber benutzerdefinierte Schnittstellen unterstützt, ohne dass die Standardgerätedienstbibliothek verwendet werden muss. Treiber müssen jedoch weiterhin die WIA-Standardschnittstellen implementieren.
 
-Dieser Abschnitt enthält eine kurze Übersicht über die WIA-Schnittstelle in den folgenden Bereichen:
+Dieser Abschnitt bietet eine kurze Übersicht über die WIA-Schnittstelle in den folgenden Bereichen:
 
 -   [WIA-Architektur](-wia-wia-architecture.md)
 -   [STI-Kompatibilität](-wia-sti-compatibility.md)
 -   [TWAIN-Kompatibilität](-wia-twain-compatibility.md)
--   [WIA-Device Manager](-wia-wia-device-manager.md)
--   [WIA-Mini Treiber-Dienst Bibliothek](-wia-wia-minidriver-service-library.md)
--   [WIA-Mini Treiber](-wia-wia-minidriver.md)
+-   [WIA-Geräte-Manager](-wia-wia-device-manager.md)
+-   [WIA Minidriver-Dienstbibliothek](-wia-wia-minidriver-service-library.md)
+-   [WIA Minidriver](-wia-wia-minidriver.md)
 
  
 

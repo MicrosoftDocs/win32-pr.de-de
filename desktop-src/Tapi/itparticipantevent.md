@@ -1,44 +1,44 @@
 ---
-description: Die itparticipvorgänger Vent-Schnittstelle enthält Methoden, mit denen die Beschreibung der Teilnehmer Ereignisse abgerufen wird.
+description: Die ITParticipantEvent-Schnittstelle enthält Methoden, die die Beschreibung von Teilnehmerereignissen abrufen.
 ms.assetid: 1199ec91-ee06-4e6c-8d8f-1585a3da3db0
-title: Itparticipvorgänger Vent-Schnittstelle (confpriv. h)
+title: ITParticipantEvent-Schnittstelle (Confpriv.h)
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 2ac6e2b43a528bc041a71962e84b4e1be62152a4
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 1d4f47e57bf1698a97be6811316409e596c9dfb03181e50b5f487798463c5cb9
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106355909"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118864460"
 ---
-# <a name="itparticipantevent-interface"></a>Itparticipvorgänger Vent-Schnittstelle
+# <a name="itparticipantevent-interface"></a>ITParticipantEvent-Schnittstelle
 
-\[**Itparticipvorgänger Vent** ist nicht für die Verwendung in Windows Vista, Windows Server 2008 und nachfolgenden Versionen des Betriebssystems verfügbar. Die RTC-Client-API bietet eine ähnliche Funktionalität.\]
+\[**ITParticipantEvent** ist nicht für die Verwendung in Windows Vista, Windows Server 2008 und nachfolgenden Versionen des Betriebssystems verfügbar. Die RTC-Client-API bietet ähnliche Funktionen.\]
 
-Die **itparticipvorgänger Vent** -Schnittstelle enthält Methoden, mit denen die Beschreibung der Teilnehmer Ereignisse abgerufen wird. Wenn die Implementierung der [**ittapieventnotification:: Event**](/windows/desktop/api/Tapi3if/nf-tapi3if-ittapieventnotification-event) -Methode der Anwendung ein [**TAPI- \_ Ereignis**](/windows/desktop/api/Tapi3if/ne-tapi3if-tapi_event) angibt, das gleich " **te \_ private**" ist, ist der " *Peer* Event"-Parameter der Methode ein **IDispatch** -Zeiger für die **itparticipvorgänger Vent** -Schnittstelle. Die Methoden dieser Schnittstelle können zum Abrufen von Informationen über eine geänderte Teilnehmer Änderung verwendet werden.
+Die **ITParticipantEvent-Schnittstelle** enthält Methoden, die die Beschreibung von Teilnehmerereignissen abrufen. Wenn die Implementierung der [**ITTAPIEventNotification::Event-Methode**](/windows/desktop/api/Tapi3if/nf-tapi3if-ittapieventnotification-event) der Anwendung ein [**\_ TAPI-EREIGNIS**](/windows/desktop/api/Tapi3if/ne-tapi3if-tapi_event) gleich **TE \_ PRIVATE** angibt, ist der *pEvent-Parameter* der Methode ein **IDispatch-Zeiger** für die **ITParticipantEvent-Schnittstelle.** Die Methoden dieser Schnittstelle können verwendet werden, um Informationen zu einer änderung des Teilnehmers abzurufen, die aufgetreten ist.
 
 > [!Note]  
-> Sie müssen die Ereignis [**\_ Filter-Methode ittapi::p UT**](/windows/desktop/api/tapi3if/nf-tapi3if-ittapi-put_eventfilter) und eine Ereignis Filtermaske mit dem privaten Ereignis **te \_** festlegen, um den Empfang von Teilnehmer Ereignissen zu ermöglichen. Wenn Sie **ittapi::p UT \_ EventFilter** nicht anrufen, empfängt Ihre Anwendung keine Ereignisse. Weitere Informationen finden Sie in der Übersicht über [Ereignisse](events.md) .
+> Sie müssen die [**ITTAPI::p ut \_ EventFilter-Methode**](/windows/desktop/api/tapi3if/nf-tapi3if-ittapi-put_eventfilter) aufrufen und eine Ereignisfiltermaske festlegen, die das **TE \_ PRIVATE-Ereignis** enthält, um den Empfang von Teilnehmerereignissen zu ermöglichen. Wenn Sie **ITTAPI::p ut \_ EventFilter** nicht aufrufen, erhält Ihre Anwendung keine Ereignisse. Weitere Informationen finden Sie in der [Übersicht über](events.md) Ereignisse.
 
  
 
 ## <a name="members"></a>Member
 
-Die **itparticipvorgänger Vent** -Schnittstelle erbt von der [**IUnknown**](/windows/desktop/api/unknwn/nn-unknwn-iunknown) -Schnittstelle. **Itparticipvorgänger Vent** verfügt auch über diese Typen von Membern:
+Die **ITParticipantEvent-Schnittstelle** erbt von der [**IUnknown-Schnittstelle.**](/windows/desktop/api/unknwn/nn-unknwn-iunknown) **ITParticipantEvent** verfügt auch über diese Typen von Membern:
 
 -   [Methoden](#methods)
 
 ### <a name="methods"></a>Methoden
 
-Die **itparticipvorgänger Vent** -Schnittstelle verfügt über diese Methoden.
+Die **ITParticipantEvent-Schnittstelle** verfügt über diese Methoden.
 
 
 
 | Methode                                                         | BESCHREIBUNG                                                                                                                                     |
 |:---------------------------------------------------------------|:------------------------------------------------------------------------------------------------------------------------------------------------|
-| [**get- \_ Ereignis**](itparticipantevent-get-event.md)             | Ruft den [**Teilnehmer \_ Ereignis**](participant-event.md) Deskriptor des Ereignisses ab.<br/>                                                    |
-| [**\_Teilnehmer erhalten**](itparticipantevent-get-participant.md) | Ruft einen Zeiger auf ein Array von [**itteilnehmer**](itparticipant.md) -Schnittstellen ab, die die am Ereignis beteiligten Teilnehmer darstellen.<br/> |
-| [**\_substream erhalten**](itparticipantevent-get-substream.md)     | Ruft einen Zeiger auf ein Array von [**itsubstream**](/windows/win32/api/tapi3if/nn-tapi3if-itsubstream) -Schnittstellen ab, die die untergeordneten Datenströme darstellen.<br/>       |
+| [**\_get-Ereignis**](itparticipantevent-get-event.md)             | Ruft den [**PARTICIPANT EVENT-Deskriptor \_**](participant-event.md) des Ereignisses ab.<br/>                                                    |
+| [**\_Get-Teilnehmer**](itparticipantevent-get-participant.md) | Ruft einen Zeiger auf ein Array von [**ITParticipant-Schnittstellen**](itparticipant.md) ab, die die am Ereignis beteiligten Teilnehmer darstellen.<br/> |
+| [**get \_ SubStream**](itparticipantevent-get-substream.md)     | Ruft einen Zeiger auf ein Array von [**ITSubStream-Schnittstellen**](/windows/win32/api/tapi3if/nn-tapi3if-itsubstream) ab, die die am Ereignis beteiligten Unterstreams darstellen.<br/>       |
 
 
 
@@ -50,36 +50,36 @@ Die **itparticipvorgänger Vent** -Schnittstelle verfügt über diese Methoden.
 
 | Anforderung | Wert |
 |-------------------------|---------------------------------------------------------------------------------------|
-| TAPI-Version<br/> | Erfordert TAPI 3,0 oder höher<br/>                                                 |
-| Header<br/>       | <dl> <dt>"Confpriv. h"</dt> </dl> |
-| Bibliothek<br/>      | <dl> <dt>UUID. lib</dt> </dl>   |
+| TAPI-Version<br/> | Erfordert TAPI 3.0 oder höher<br/>                                                 |
+| Header<br/>       | <dl> <dt>Confpriv.h</dt> </dl> |
+| Bibliothek<br/>      | <dl> <dt>Uuid.lib</dt> </dl>   |
 | DLL<br/>          | <dl> <dt>Tapi3.dll</dt> </dl>  |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Itteilnehmer**](itparticipant.md)
+[**ITParticipant**](itparticipant.md)
 </dt> <dt>
 
-[**Itsubstream**](/windows/win32/api/tapi3if/nn-tapi3if-itsubstream)
+[**ITSubStream**](/windows/win32/api/tapi3if/nn-tapi3if-itsubstream)
 </dt> <dt>
 
-[**Itcallinfo**](/windows/desktop/api/tapi3if/nn-tapi3if-itcallinfo)
+[**ITCallInfo**](/windows/desktop/api/tapi3if/nn-tapi3if-itcallinfo)
 </dt> <dt>
 
-[**Teilnehmer \_ Ereignis**](participant-event.md)
+[**\_TEILNEHMEREREIGNIS**](participant-event.md)
 </dt> <dt>
 
-[**Ittapieventnotification:: Event**](/windows/desktop/api/Tapi3if/nf-tapi3if-ittapieventnotification-event)
+[**ITTAPIEventNotification::Event**](/windows/desktop/api/Tapi3if/nf-tapi3if-ittapieventnotification-event)
 </dt> <dt>
 
-[**TAPI- \_ Ereignis**](/windows/desktop/api/Tapi3if/ne-tapi3if-tapi_event)
+[**\_TAPI-EREIGNIS**](/windows/desktop/api/Tapi3if/ne-tapi3if-tapi_event)
 </dt> <dt>
 
-[Code Ausschnitt für das Registrieren von Ereignissen](register-events.md)
+[Registrieren des Ereigniscodeausschnitts](register-events.md)
 </dt> </dl>
 
  

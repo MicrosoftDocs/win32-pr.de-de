@@ -1,7 +1,7 @@
 ---
-description: Registriert eine laufende Anwendung für die Windows-Image Erfassung (WIA) 2,0-Ereignis Benachrichtigung.
+description: Registriert eine ausgeführte Anwendung für Windows Image Acquisition (WIA) 2.0-Ereignisbenachrichtigung.
 ms.assetid: 978dcd41-d63b-421d-b7e1-8e9368b36180
-title: 'IWiaDevMgr2:: registereventcallbackinterface-Methode (WIA. h)'
+title: IWiaDevMgr2::RegisterEventCallbackInterface-Methode (Wia.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,16 +13,16 @@ api_type:
 - COM
 api_location:
 - Wia.h
-ms.openlocfilehash: 7cd3a7e00cff56bc5d91bfc843ab79fe71aa1123
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: e2658654254257c707d12f4e676aee3371f0ad491dfedeb0637508ca3f33a057
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104216049"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118965640"
 ---
-# <a name="iwiadevmgr2registereventcallbackinterface-method"></a>IWiaDevMgr2:: registereventcallbackinterface-Methode
+# <a name="iwiadevmgr2registereventcallbackinterface-method"></a>IWiaDevMgr2::RegisterEventCallbackInterface-Methode
 
-Registriert eine laufende Anwendung für die Windows-Image Erfassung (WIA) 2,0-Ereignis Benachrichtigung.
+Registriert eine ausgeführte Anwendung für Windows Image Acquisition (WIA) 2.0-Ereignisbenachrichtigung.
 
 ## <a name="syntax"></a>Syntax
 
@@ -43,48 +43,48 @@ HRESULT RegisterEventCallbackInterface(
 
 <dl> <dt>
 
-*lFlags* \[ in\]
+*lFlags* \[ In\]
 </dt> <dd>
 
-Type: **Long**
+Typ: **LONG**
 
 Derzeit nicht verwendet. Sollte auf Null festgelegt werden.
 
 </dd> <dt>
 
-*bstraude viceid* \[ in\]
+*bstrDeviceID* \[ In\]
 </dt> <dd>
 
 Typ: **BSTR**
 
-Gibt den eindeutigen Bezeichner eines WIA 2,0-Geräts an. Legen Sie diesen Parameter auf **null** fest, um für das Ereignis auf allen WIA 2,0-Geräten zu registrieren.
+Gibt den eindeutigen Bezeichner eines WIA 2.0-Geräts an. Legen Sie diesen Parameter auf **NULL** fest, um sich für das Ereignis auf allen WIA 2.0-Geräten zu registrieren.
 
 </dd> <dt>
 
-" *Peer-GUID* \[ " in\]
+*pEventGUID* \[ In\]
 </dt> <dd>
 
-Geben Sie Folgendes ein: * Konstante *GUID \** _
+Typ: **const \* GUID**
 
-Gibt einen Zeiger auf den Ereignis Bezeichner an, für den die Anwendung registriert wird. Weitere Informationen finden Sie unter [WIA-Ereignis](-wia-wia-event-identifiers.md) Bezeichner für Standard Ereignis Bezeichner.
+Gibt einen Zeiger auf den Ereignisbezeichner an, für den die Anwendung registriert wird. Informationen zu [Standardereignisbezeichnern](-wia-wia-event-identifiers.md) finden Sie unter WIA-Ereignisbezeichner.
 
 </dd> <dt>
 
-_pIWiaEventCallback * \[ in\]
+*pIWiaEventCallback* \[ In\]
 </dt> <dd>
 
-Typ: **[**iwiaeventcallback**](/windows/desktop/api/wia_xp/nn-wia_xp-iwiaeventcallback) \** _
+Typ: **[ **IWiaEventCallback**](/windows/desktop/api/wia_xp/nn-wia_xp-iwiaeventcallback)\***
 
-Gibt einen Zeiger auf die [_ *iwiaeventcallback* *](/windows/desktop/api/wia_xp/nn-wia_xp-iwiaeventcallback) -Schnittstelle an, die von WIA 2,0 zum Senden der Ereignis Benachrichtigung verwendet wird.
+Gibt einen Zeiger auf die [**IWiaEventCallback-Schnittstelle**](/windows/desktop/api/wia_xp/nn-wia_xp-iwiaeventcallback) an, die von WIA 2.0 zum Senden von Ereignisbenachrichtigungen verwendet wird.
 
 </dd> <dt>
 
-" *Peer-Object* \[ " vorgenommen\]
+*pEventObject* \[ out\]
 </dt> <dd>
 
 Typ: **[IUnknown](/windows/win32/api/unknwn/nn-unknwn-iunknown)\*\***
 
-Empfängt die Adresse eines Zeigers auf die [IUnknown](/windows/win32/api/unknwn/nn-unknwn-iunknown) -Schnittstelle.
+Empfängt die Adresse eines Zeigers auf die [IUnknown-Schnittstelle.](/windows/win32/api/unknwn/nn-unknwn-iunknown)
 
 </dd> </dl>
 
@@ -92,31 +92,31 @@ Empfängt die Adresse eines Zeigers auf die [IUnknown](/windows/win32/api/unknwn
 
 Typ: **HRESULT**
 
-Gibt die Standard-COM-Fehlercodes oder die folgenden zurück.
+Gibt die standardmäßigen COM-Fehlercodes oder Folgendes zurück.
 
 
 
 | Rückgabecode                                                                               | Beschreibung                                                            |
 |-------------------------------------------------------------------------------------------|------------------------------------------------------------------------|
-| <dl> <dt>**E \_ notimpl**</dt> </dl> | Die [IUnknown](/windows/win32/api/unknwn/nn-unknwn-iunknown) -Schnittstelle kann nicht zurückgegeben werden. <br/> |
+| <dl> <dt>**E \_ NOTIMPL**</dt> </dl> | Die [IUnknown-Schnittstelle](/windows/win32/api/unknwn/nn-unknwn-iunknown) kann nicht zurückgegeben werden. <br/> |
 
 
 
  
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
 > [!WARNING]
-> Das Verwenden der [**iwiadevmgr:: registereventcallbackinterface**](/windows/desktop/api/wia_xp/nf-wia_xp-iwiadevmgr-registereventcallbackinterface)-Methode, der **IWiaDevMgr2:: registereventcallbackinterface**-Methode und der [**DeviceManager. registerevent**](/previous-versions/windows/desktop/wiaaut/-wiaaut-idevicemanager-registerevent) -Methode aus demselben Prozess, nachdem der weiterhin Image Dienst neu gestartet wurde, kann zu einer Zugriffsverletzung führen, wenn die Funktionen vor dem Beenden des Dienstes verwendet wurden.
+> Wenn Sie die Methoden [**IWiaDevMgr::RegisterEventCallbackInterface**](/windows/desktop/api/wia_xp/nf-wia_xp-iwiadevmgr-registereventcallbackinterface), **IWiaDevMgr2::RegisterEventCallbackInterface** und [**DeviceManager.RegisterEvent**](/previous-versions/windows/desktop/wiaaut/-wiaaut-idevicemanager-registerevent) aus dem gleichen Prozess nach dem Neustart des Still Image Service verwenden, kann dies zu einer Zugriffsverletzung führen, wenn die Funktionen vor dem Anhalten des Diensts verwendet wurden.
 
  
 
-Wenn WIA 2,0-Anwendungen mit der Ausführung beginnen, wird diese Methode verwendet, um sich für den Empfang von Hardware Geräte Ereignissen zu registrieren. Dadurch wird verhindert, dass die Anwendung neu gestartet wird, wenn ein anderes Ereignis registriert wird. Sobald eine Anwendung **IWiaDevMgr2:: registereventcallbackinterface** aufruft, um sich für das Empfangen von WIA 2,0-Ereignissen von einem Gerät zu registrieren, werden die registrierten Ereignisse von WIA 2,0 an das Programm weitergeleitet.
+Wenn WIA 2.0-Anwendungen mit der Ausführung beginnen, verwenden sie diese Methode, um sich für den Empfang von Hardwaregeräteereignissen zu registrieren. Dadurch wird verhindert, dass die Anwendung neu gestartet wird, wenn ein anderes Ereignis auftritt, für das sie registriert ist. Sobald eine Anwendung **IWiaDevMgr2::RegisterEventCallbackInterface** aufruft, um sich selbst zu registrieren, um WIA 2.0-Ereignisse von einem Gerät zu empfangen, werden die registrierten Ereignisse von WIA 2.0 an das Programm weitergeleitet.
 
-Anwendungen müssen die [IUnknown:: Release](/windows/win32/api/unknwn/nf-unknwn-iunknown-release) -Methode für die Schnittstellen Zeiger aufrufen, die Sie über den Parameter " *Peer-Object* " empfangen.
+Anwendungen müssen die [IUnknown::Release-Methode](/windows/win32/api/unknwn/nf-unknwn-iunknown-release) für die Schnittstellenzeiger aufrufen, die sie über den *pEventObject-Parameter* empfangen.
 
 > [!Note]  
-> In einer Multithreadanwendung kann der Ereignis Benachrichtigungs Rückruf in einem anderen Thread als dem auftreten, der den Rückruf registriert hat.
+> In einer Multithreadanwendung kann der Ereignisbenachrichtigungsrückruf in einem anderen Thread als dem, der den Rückruf registriert hat, eintreten.
 
  
 
@@ -126,10 +126,10 @@ Anwendungen müssen die [IUnknown:: Release](/windows/win32/api/unknwn/nf-unknwn
 
 | Anforderung | Wert |
 |-------------------------------------|------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>                                     |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2008 \[ -Desktop-Apps\]<br/>                               |
-| Header<br/>                   | <dl> <dt>WIA. h</dt> </dl>   |
-| IDL<br/>                      | <dl> <dt>WIA. idl</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows \[Nur Vista-Desktop-Apps\]<br/>                                     |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2008-Desktop-Apps\]<br/>                               |
+| Header<br/>                   | <dl> <dt>Wia.h</dt> </dl>   |
+| Idl<br/>                      | <dl> <dt>Wia.idl</dt> </dl> |
 
 
 

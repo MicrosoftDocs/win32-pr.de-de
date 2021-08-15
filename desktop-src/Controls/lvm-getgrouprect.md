@@ -1,9 +1,9 @@
 ---
-title: LVM_GETGROUPRECT Meldung (kommstrg. h)
-description: Ruft das Rechteck für eine angegebene Gruppe ab. Senden Sie diese Nachricht explizit oder mithilfe des ListView \_ getgrouprect-Makros.
+title: LVM_GETGROUPRECT Meldung (Commctrl.h)
+description: Ruft das Rechteck für eine angegebene Gruppe ab. Senden Sie diese Nachricht explizit oder mithilfe des ListView \_ GetGroupRect-Makros.
 ms.assetid: 9441a6c5-11d8-4f52-80dd-1b60befd9b9d
 keywords:
-- Windows-Steuerelemente für LVM_GETGROUPRECT Meldung
+- LVM_GETGROUPRECT Windows-Steuerelemente für Nachrichten
 topic_type:
 - apiref
 api_name:
@@ -14,43 +14,43 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: ab2cbdfb1ec6e670e7b5d333694f3a1ca56d287b
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 89340015972799b059e4568b5e87be511b7fc3718e7e7494d1bf46296886f030
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "103949463"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119540920"
 ---
-# <a name="lvm_getgrouprect-message"></a>LVM \_ getgrouprect-Nachricht
+# <a name="lvm_getgrouprect-message"></a>LVM \_ GETGROUPRECT-Nachricht
 
-Ruft das Rechteck für eine angegebene Gruppe ab. Senden Sie diese Nachricht explizit oder mithilfe des [**ListView \_ getgrouprect**](/windows/desktop/api/Commctrl/nf-commctrl-listview_getgrouprect) -Makros.
+Ruft das Rechteck für eine angegebene Gruppe ab. Senden Sie diese Nachricht explizit oder mithilfe des [**ListView \_ GetGroupRect-Makros.**](/windows/desktop/api/Commctrl/nf-commctrl-listview_getgrouprect)
 
 ## <a name="parameters"></a>Parameter
 
 <dl> <dt>
 
-*wParam* \[ in\]
+*wParam* \[ In\]
 </dt> <dd>
 
-Gibt die Group by **igroupid** an (siehe Struktur von " [**LVGROUP**](/windows/win32/api/commctrl/ns-commctrl-lvgroup) ").
+Gibt die Gruppe nach **iGroupId** an (siehe [**LVGROUP-Struktur).**](/windows/win32/api/commctrl/ns-commctrl-lvgroup)
 
 </dd> <dt>
 
-*LPARAM* \[ in, out\]
+*lParam* \[ in, out\]
 </dt> <dd>
 
-Ein Zeiger auf eine [**Rect**](/previous-versions//dd162897(v=vs.85)) -Struktur, die Informationen über die von *wParam* angegebene Gruppe empfangen soll. Der Nachrichtenempfänger ist dafür verantwortlich, die Strukturmember mit Informationen für die von *wParam* angegebene Gruppe festzulegen.
+Ein Zeiger auf eine [**RECT-Struktur,**](/previous-versions//dd162897(v=vs.85)) um Informationen zu der von *wParam* angegebenen Gruppe zu empfangen. Der Nachrichtenempfänger ist für das Festlegen der Strukturmember mit Informationen für die von *wParam* angegebene Gruppe verantwortlich.
 
-Der Aufrufprozess ist für die Zuordnung von Arbeitsspeicher für die Struktur verantwortlich. Legen Sie den **obersten** Member des [**Rect**](/previous-versions//dd162897(v=vs.85)) auf eines der folgenden Flags fest, um die Koordinaten des Rechtecks anzugeben, das Sie erhalten möchten.
+Der aufrufende Prozess ist für die Zuweisung von Arbeitsspeicher für die Struktur verantwortlich. Legen Sie das **oberste** Element des [**RECT**](/previous-versions//dd162897(v=vs.85)) auf eines der folgenden Flags fest, um die Koordinaten des abzurufenden Rechtecks anzugeben.
 
 
 
 | Wert                                                                                                                                                                  | Bedeutung                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        |
 |------------------------------------------------------------------------------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| <span id="LVGGR_GROUP"></span><span id="lvggr_group"></span><dl> <dt>**Gruppe "lvggr" \_**</dt> </dl>                | Koordinaten der gesamten erweiterten Gruppe.<br/>                                                                                                                                                                                                                                                                                                                                                                                                                                           |
-| <span id="LVGGR_HEADER"></span><span id="lvggr_header"></span><dl> <dt>**lvggr- \_ Header**</dt> </dl>             | Nur Koordinaten des Headers (reduzierte Gruppe).<br/>                                                                                                                                                                                                                                                                                                                                                                                                                                   |
-| <span id="LVGGR_LABEL"></span><span id="lvggr_label"></span><dl> <dt>**Bezeichnung "lvggr" \_**</dt> </dl>                | Nur Koordinaten der Bezeichnung.<br/>                                                                                                                                                                                                                                                                                                                                                                                                                                                      |
-| <span id="LVGGR_SUBSETLINK"></span><span id="lvggr_subsetlink"></span><dl> <dt>**subsetlink für "lvggr" \_**</dt> </dl> | Nur Koordinaten der Teilmenge (Markup Teilmenge). Ein Listenansicht-Steuerelement kann die Anzahl der sichtbaren Elemente einschränken, die in jeder Gruppe angezeigt werden. Dem Benutzer wird ein Link angezeigt, mit dem der Benutzer die Gruppe erweitern kann. Dieses Flag gibt das umgebende Rechteck der Teilmenge zurück, wenn es sich bei der Gruppe um eine Teilmenge handelt (Gruppenstatus der \_ untergeordneten Gruppen. [](/windows/win32/api/commctrl/ns-commctrl-lvgroup)  Dieses Flag wird bereitgestellt, damit Barrierefreiheits Anwendungen den Link finden können.<br/> |
+| <span id="LVGGR_GROUP"></span><span id="lvggr_group"></span><dl> <dt>**\_LVGGR-GRUPPE**</dt> </dl>                | Koordinaten der gesamten erweiterten Gruppe.<br/>                                                                                                                                                                                                                                                                                                                                                                                                                                           |
+| <span id="LVGGR_HEADER"></span><span id="lvggr_header"></span><dl> <dt>**\_LVGGR-HEADER**</dt> </dl>             | Nur Koordinaten des Headers (reduzierte Gruppe).<br/>                                                                                                                                                                                                                                                                                                                                                                                                                                   |
+| <span id="LVGGR_LABEL"></span><span id="lvggr_label"></span><dl> <dt>**\_LVGGR-BEZEICHNUNG**</dt> </dl>                | Nur Koordinaten der Bezeichnung.<br/>                                                                                                                                                                                                                                                                                                                                                                                                                                                      |
+| <span id="LVGGR_SUBSETLINK"></span><span id="lvggr_subsetlink"></span><dl> <dt>**LVGGR \_ SUBSETLINK**</dt> </dl> | Koordinaten des Teilmengenlinks (Markupteilmenge). Ein Listenansichtssteuerelement kann die Anzahl der sichtbaren Elemente begrenzen, die in jeder Gruppe angezeigt werden. Dem Benutzer wird ein Link angezeigt, der es dem Benutzer ermöglicht, die Gruppe zu erweitern. Dieses Flag gibt das umgrenzende Rechteck des Teilmengenlinks zurück, wenn die Gruppe eine Teilmenge ist (Gruppenstatus von LVGS \_ SUBSETED, siehe Struktur [**LVGROUP**](/windows/win32/api/commctrl/ns-commctrl-lvgroup), **Memberzustand**). Dieses Flag wird bereitgestellt, damit Barrierefreiheitsanwendungen den Link finden können.<br/> |
 
 
 
@@ -60,7 +60,7 @@ Der Aufrufprozess ist für die Zuordnung von Arbeitsspeicher für die Struktur v
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt **true** zurück, wenn erfolgreich, andernfalls **false** .
+Gibt **TRUE** zurück, wenn erfolgreich, **andernfalls FALSE.**
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -68,9 +68,9 @@ Gibt **true** zurück, wenn erfolgreich, andernfalls **false** .
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>                                        |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2008 \[ -Desktop-Apps\]<br/>                                  |
-| Header<br/>                   | <dl> <dt>Kommstrg. h</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows \[Nur Vista-Desktop-Apps\]<br/>                                        |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2008-Desktop-Apps\]<br/>                                  |
+| Header<br/>                   | <dl> <dt>Commctrl.h</dt> </dl> |
 
 
 

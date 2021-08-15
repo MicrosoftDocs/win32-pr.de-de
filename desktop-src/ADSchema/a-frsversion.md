@@ -4,8 +4,8 @@ description: Die Versionsnummer und das Builddatum.
 ms.assetid: 13109bfc-ac34-461e-a649-c4811c8fc488
 ms.tgt_platform: multiple
 keywords:
-- AD-Schema für FRS-Version-Attribut
-- Schema des frsversion-Attributs AD
+- FRS-Version AD-Schema des Attributs
+- AD-Schema des fRSVersion-Attributs
 topic_type:
 - apiref
 api_name:
@@ -14,12 +14,12 @@ api_type:
 - Schema
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: e33c0081de5d8be2ef6fc68f089a789ca8879028
-ms.sourcegitcommit: b77ace27b0432e7cd3863191b11926be032fbe2f
+ms.openlocfilehash: 122dcb90f895f98dd42c6f2db2638cdbc495297b09c31a1a50aa0683ca4b6925
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "106341049"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119323350"
 ---
 # <a name="frs-version-attribute"></a>FRS-Version-Attribut
 
@@ -30,12 +30,12 @@ Die Versionsnummer und das Builddatum.
 | Eingabe | Wert |
 |-------------------|---------------------------------------------|
 | CN                | FRS-Version                                 |
-| LDAP-Display-Name | frsversion                                  |
+| Ldap-Anzeigename | fRSVersion                                  |
 | Size              | \-                                          |
-| Berechtigung aktualisieren  | \-                                          |
-| Aktualisierungshäufigkeit  | \-                                          |
+| Aktualisieren von Berechtigungen  | \-                                          |
+| Updatehäufigkeit  | \-                                          |
 | Attribute-Id      | 1.2.840.113556.1.4.882                      |
-| System-ID-GUID    | 2a132585-9373-11d1-AEbc-0000 C1        |
+| System-Id-Guid    | 2a132585-9373-11d1-aebc-0000f80367c1        |
 | Syntax            | [**String(Unicode)**](s-string-unicode.md) |
 
 
@@ -43,7 +43,7 @@ Die Versionsnummer und das Builddatum.
 ## <a name="implementations"></a>Implementierungen
 
 -   [**Windows 2000 Server**](#windows-2000-server)
--   [**Windows Server 2003**](#windows-server-2003)
+-   [**Windows Server 2003**](#windows-server-2003)
 -   [**Windows Server 2003 R2**](#windows-server-2003-r2)
 -   [**Windows Server 2008**](#windows-server-2008)
 -   [**Windows Server 2008 R2**](#windows-server-2008-r2)
@@ -58,19 +58,19 @@ Die Versionsnummer und das Builddatum.
 | Link-ID                | \-                                                             |
 | MAPI-Id                | \-                                                             |
 | System-Only            | False                                                          |
-| Ist-einwertig       | Richtig                                                           |
+| Is-Single-Valued       | True                                                           |
 | Ist indiziert             | False                                                          |
 | Im globalen Katalog      | False                                                          |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                                   |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                                   |
 | Range-Lower            | 0                                                              |
 | Range-Upper            | 32                                                             |
 | Search-Flags           | 0x00000000                                                     |
 | System-Flags           | 0x00000010                                                     |
-| In verwendete Klassen        | [**NTFRS-Abonnements**](c-ntfrssubscriptions.md)<br/> |
+| In verwendete Klassen        | [**NTFRS-Subscriptions**](c-ntfrssubscriptions.md)<br/> |
 
 
 
-## <a name="windows-server-2003"></a>Windows Server 2003
+## <a name="windows-server-2003"></a>Windows Server 2003
 
 
 
@@ -79,15 +79,15 @@ Die Versionsnummer und das Builddatum.
 | Link-ID                | \-                                                             |
 | MAPI-Id                | \-                                                             |
 | System-Only            | False                                                          |
-| Ist-einwertig       | Richtig                                                           |
+| Is-Single-Valued       | True                                                           |
 | Ist indiziert             | False                                                          |
 | Im globalen Katalog      | False                                                          |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                                   |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                                   |
 | Range-Lower            | 0                                                              |
 | Range-Upper            | 32                                                             |
 | Search-Flags           | 0x00000000                                                     |
 | System-Flags           | 0x00000010                                                     |
-| In verwendete Klassen        | [**NTFRS-Abonnements**](c-ntfrssubscriptions.md)<br/> |
+| In verwendete Klassen        | [**NTFRS-Subscriptions**](c-ntfrssubscriptions.md)<br/> |
 
 
 
@@ -100,15 +100,15 @@ Die Versionsnummer und das Builddatum.
 | Link-ID                | \-                                                             |
 | MAPI-Id                | \-                                                             |
 | System-Only            | False                                                          |
-| Ist-einwertig       | Richtig                                                           |
+| Is-Single-Valued       | True                                                           |
 | Ist indiziert             | False                                                          |
 | Im globalen Katalog      | False                                                          |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                                   |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                                   |
 | Range-Lower            | 0                                                              |
 | Range-Upper            | 32                                                             |
 | Search-Flags           | 0x00000000                                                     |
 | System-Flags           | 0x00000010                                                     |
-| In verwendete Klassen        | [**NTFRS-Abonnements**](c-ntfrssubscriptions.md)<br/> |
+| In verwendete Klassen        | [**NTFRS-Subscriptions**](c-ntfrssubscriptions.md)<br/> |
 
 
 
@@ -121,15 +121,15 @@ Die Versionsnummer und das Builddatum.
 | Link-ID                | \-                                                             |
 | MAPI-Id                | \-                                                             |
 | System-Only            | False                                                          |
-| Ist-einwertig       | Richtig                                                           |
+| Ist einwertig       | True                                                           |
 | Ist indiziert             | False                                                          |
 | Im globalen Katalog      | False                                                          |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                                   |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                                   |
 | Range-Lower            | 0                                                              |
 | Range-Upper            | 32                                                             |
 | Search-Flags           | 0x00000000                                                     |
 | System-Flags           | 0x00000010                                                     |
-| In verwendete Klassen        | [**NTFRS-Abonnements**](c-ntfrssubscriptions.md)<br/> |
+| In verwendete Klassen        | [**NTFRS-Subscriptions**](c-ntfrssubscriptions.md)<br/> |
 
 
 
@@ -142,15 +142,15 @@ Die Versionsnummer und das Builddatum.
 | Link-ID                | \-                                                             |
 | MAPI-Id                | \-                                                             |
 | System-Only            | False                                                          |
-| Ist-einwertig       | Richtig                                                           |
+| Ist einwertig       | True                                                           |
 | Ist indiziert             | False                                                          |
 | Im globalen Katalog      | False                                                          |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                                   |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                                   |
 | Range-Lower            | 0                                                              |
 | Range-Upper            | 32                                                             |
 | Search-Flags           | 0x00000000                                                     |
 | System-Flags           | 0x00000010                                                     |
-| In verwendete Klassen        | [**NTFRS-Abonnements**](c-ntfrssubscriptions.md)<br/> |
+| In verwendete Klassen        | [**NTFRS-Subscriptions**](c-ntfrssubscriptions.md)<br/> |
 
 
 
@@ -163,15 +163,15 @@ Die Versionsnummer und das Builddatum.
 | Link-ID                | \-                                                             |
 | MAPI-Id                | \-                                                             |
 | System-Only            | False                                                          |
-| Ist-einwertig       | Richtig                                                           |
+| Ist einwertig       | True                                                           |
 | Ist indiziert             | False                                                          |
 | Im globalen Katalog      | False                                                          |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                                   |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                                   |
 | Range-Lower            | 0                                                              |
 | Range-Upper            | 32                                                             |
 | Search-Flags           | 0x00000000                                                     |
 | System-Flags           | 0x00000010                                                     |
-| In verwendete Klassen        | [**NTFRS-Abonnements**](c-ntfrssubscriptions.md)<br/> |
+| In verwendete Klassen        | [**NTFRS-Subscriptions**](c-ntfrssubscriptions.md)<br/> |
 
 
 

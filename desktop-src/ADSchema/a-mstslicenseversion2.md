@@ -1,11 +1,11 @@
 ---
 title: MS-TS-LicenseVersion2-Attribut
-description: Die Version des zweiten Terminal Servers pro Benutzer-CAL.
+description: Version des zweiten Terminalservers pro Benutzer-CAL.
 ms.assetid: 9e4bc586-365a-4a46-a623-e686d305a159
 ms.tgt_platform: multiple
 keywords:
-- AD-Schema für MS-TS-LicenseVersion2-Attribut
-- msTSLicenseVersion2-Attribut AD-Schema
+- AD-Schema des MS-TS-LicenseVersion2-Attributs
+- AD-Schema des msTSLicenseVersion2-Attributs
 topic_type:
 - apiref
 api_name:
@@ -14,28 +14,28 @@ api_type:
 - Schema
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 8a8119a070173b85a7674771d6df4beb6ae74cc3
-ms.sourcegitcommit: b77ace27b0432e7cd3863191b11926be032fbe2f
+ms.openlocfilehash: e54437fc9de7e622b147abe7855fdbe658f0b453dbf8eb7ca9fde255171c5466
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "103859621"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118960159"
 ---
 # <a name="ms-ts-licenseversion2-attribute"></a>MS-TS-LicenseVersion2-Attribut
 
-Die Version des zweiten Terminal Servers pro Benutzer-CAL.
+Version des zweiten Terminalservers pro Benutzer-CAL.
 
 
 
 | Eingabe | Wert |
 |-------------------|---------------------------------------------|
 | CN                | MS-TS-LicenseVersion2                       |
-| LDAP-Display-Name | msTSLicenseVersion2                         |
+| Ldap-Anzeigename | msTSLicenseVersion2                         |
 | Size              | \-                                          |
-| Berechtigung aktualisieren  | \-                                          |
-| Aktualisierungshäufigkeit  | \-                                          |
+| Aktualisieren von Berechtigungen  | \-                                          |
+| Updatehäufigkeit  | \-                                          |
 | Attribute-Id      | 1.2.840.113556.1.4.2001                     |
-| System-ID-GUID    | 4b0df103-8d97-45d9-ad69-85c3080ba4e7        |
+| System-Id-Guid    | 4b0df103-8d97-45d9-ad69-85c3080ba4e7        |
 | Syntax            | [**String(Unicode)**](s-string-unicode.md) |
 
 
@@ -55,10 +55,10 @@ Die Version des zweiten Terminal Servers pro Benutzer-CAL.
 | Link-ID                | \-           |
 | MAPI-Id                | \-           |
 | System-Only            | False        |
-| Ist-einwertig       | Richtig         |
-| Ist indiziert             | Richtig         |
+| Is-Single-Valued       | True         |
+| Ist indiziert             | True         |
 | Im globalen Katalog      | False        |
-| NT-Security-Descriptor | o:Bag: schlecht: S: |
+| NT-Security-Descriptor | O:BAG:BAD:S: |
 | Range-Lower            | 0            |
 | Range-Upper            | 255          |
 | Search-Flags           | 0x00000001   |
@@ -76,10 +76,10 @@ Die Version des zweiten Terminal Servers pro Benutzer-CAL.
 | Link-ID                | \-           |
 | MAPI-Id                | \-           |
 | System-Only            | False        |
-| Ist-einwertig       | Richtig         |
-| Ist indiziert             | Richtig         |
+| Is-Single-Valued       | True         |
+| Ist indiziert             | True         |
 | Im globalen Katalog      | False        |
-| NT-Security-Descriptor | o:Bag: schlecht: S: |
+| NT-Security-Descriptor | O:BAG:BAD:S: |
 | Range-Lower            | 0            |
 | Range-Upper            | 255          |
 | Search-Flags           | 0x00000001   |
@@ -97,10 +97,10 @@ Die Version des zweiten Terminal Servers pro Benutzer-CAL.
 | Link-ID                | \-           |
 | MAPI-Id                | \-           |
 | System-Only            | False        |
-| Ist-einwertig       | Richtig         |
-| Ist indiziert             | Richtig         |
+| Is-Single-Valued       | True         |
+| Ist indiziert             | True         |
 | Im globalen Katalog      | False        |
-| NT-Security-Descriptor | o:Bag: schlecht: S: |
+| NT-Security-Descriptor | O:BAG:BAD:S: |
 | Range-Lower            | 0            |
 | Range-Upper            | 255          |
 | Search-Flags           | 0x00000001   |

@@ -1,11 +1,11 @@
 ---
-title: Ipropertyfiltercollection Count-Eigenschaft (wdssharedidl. h)
+title: IPropertyFilterCollection Count-Eigenschaft (WdsSharedIDL.h)
 description: Anzahl der Filter in der Auflistung.
 ms.assetid: 9d656f06-eb1d-4cc6-9096-252f0fc65ae2
 keywords:
-- Count-Eigenschaft Legacy-Windows-Umgebungs Features
-- Count-Eigenschaft Legacy-Windows-Umgebungs Features, ipropertyfiltercollection-Schnittstelle
-- Ipropertyfiltercollection-Schnittstelle Legacy Windows-Umgebungs Features, Count-Eigenschaft
+- Count-Eigenschaft Legacy Windows Umgebungsfeatures
+- Count-Eigenschaft Legacy Windows Environment Features , IPropertyFilterCollection-Schnittstelle
+- IPropertyFilterCollection-Schnittstelle Legacy Windows Environment Features , Count-Eigenschaft
 topic_type:
 - apiref
 api_name:
@@ -17,17 +17,17 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: f258a2ca8089cecb8e2e15fbe7e9e92ce1ed3468
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: fb24af3aaa73034d2685de35974989bf371aaae79284cbb8120ccffbe41a76cc
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "103741048"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119451070"
 ---
-# <a name="ipropertyfiltercollectioncount-property"></a>Ipropertyfiltercollection:: Count-Eigenschaft
+# <a name="ipropertyfiltercollectioncount-property"></a>IPropertyFilterCollection::Count-Eigenschaft
 
 > [!NOTE]
-> Windows-Desktop Suche 2. x ist eine veraltete Technologie, die ursprünglich als Add-in für Windows XP und Windows Server 2003 verfügbar war. Verwenden Sie in späteren Versionen stattdessen die [Windows Search-API](../search/-search-reference-entry-page.md) . 
+> Windows Desktop Search 2.x ist eine veraltete Technologie, die ursprünglich als Add-In für Windows XP und Windows Server 2003 verfügbar war. Verwenden Sie in späteren Versionen stattdessen die [Windows Search-API.](../search/-search-reference-entry-page.md) 
 
 Anzahl der Filter in der Auflistung.
 
@@ -46,7 +46,7 @@ HRESULT get_Count(
 
 ## <a name="property-value"></a>Eigenschaftswert
 
-Gibt einen Zeiger auf die Anzahl der Filter in der Auflistung zurück.
+gibt einen Zeiger auf die Anzahl der Filter in der Auflistung zurück.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -54,10 +54,10 @@ Gibt einen Zeiger auf die Anzahl der Filter in der Auflistung zurück.
 
 | Anforderung | Wert |
 |-------------------------------------|-------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows XP mit SP2 \[ Desktop-Apps\]<br/>                                      |
-| Unterstützte Mindestversion (Server)<br/> | Windows Server 2003 mit SP1 \[ Desktop-Apps\]<br/>                             |
-| Verteilbare Komponente<br/>          | Windows-Desktop Suche (WDS) 2.6.5<br/>                                             |
-| Header<br/>                   | <dl> <dt>Wdssharedidl. h</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur XP mit \[ SP2-Desktop-Apps\]<br/>                                      |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server 2003 mit \[ SP1-Desktop-Apps\]<br/>                             |
+| Verteilbare Komponente<br/>          | Windows Desktopsuche (WDS) 2.6.5<br/>                                             |
+| Header<br/>                   | <dl> <dt>WdsSharedIDL.h</dt> </dl> |
 
 
 

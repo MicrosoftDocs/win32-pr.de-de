@@ -1,7 +1,7 @@
 ---
-description: Ruft eine Pass Beschreibung ab.
+description: Ruft eine Passbeschreibung ab.
 ms.assetid: 44c65a82-bcf4-49f5-9312-8320e133bb2f
-title: 'ID3DXBaseEffect:: getpassdesc-Methode (D3DX9Effect. h)'
+title: ID3DXBaseEffect::GetPassDesc-Methode (D3DX9Effect.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -14,16 +14,16 @@ api_type:
 api_location:
 - D3dx9.lib
 - D3dx9.dll
-ms.openlocfilehash: 15a997470fddf5056b7191fcc3226ad210724041
-ms.sourcegitcommit: 14010c34b35fa268046c7683f021f86de08ddd0a
+ms.openlocfilehash: 74106bc38367e13cd70af94d0ad12016165aaae24693f19386e69ebe1d7a5cb2
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "106363185"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118987750"
 ---
-# <a name="id3dxbaseeffectgetpassdesc-method"></a>ID3DXBaseEffect:: getpassdesc-Methode
+# <a name="id3dxbaseeffectgetpassdesc-method"></a>ID3DXBaseEffect::GetPassDesc-Methode
 
-Ruft eine Pass Beschreibung ab.
+Ruft eine Passbeschreibung ab.
 
 ## <a name="syntax"></a>Syntax
 
@@ -41,21 +41,21 @@ HRESULT GetPassDesc(
 
 <dl> <dt>
 
-*hpass* \[ in\]
+*hPass* \[ In\]
 </dt> <dd>
 
 Typ: **[D3DXHANDLE](dx9-graphics-reference-effects-constants.md)**
 
-Pass-handle. Weitere Informationen finden Sie unter [Handles (Direct3D 9)](handles.md).
+Passhand handle. Siehe [Handles (Direct3D 9).](handles.md)
 
 </dd> <dt>
 
-*PDE SC* \[ vorgenommen\]
+*pDesc* \[ out\]
 </dt> <dd>
 
 Typ: **[ **D3DXPASS \_ DESC**](d3dxpass-desc.md)\***
 
-Gibt eine Beschreibung des angegebenen Pass zurück. Weitere Informationen finden Sie unter [**D3DXPASS \_**](d3dxpass-desc.md).
+Gibt eine Beschreibung des angegebenen Durchgangs zurück. Siehe [**D3DXPASS \_ DESC**](d3dxpass-desc.md).
 
 </dd> </dl>
 
@@ -63,12 +63,12 @@ Gibt eine Beschreibung des angegebenen Pass zurück. Weitere Informationen finde
 
 Typ: **[ **HRESULT**](https://msdn.microsoft.com/library/Bb401631(v=MSDN.10).aspx)**
 
-Wenn die Methode erfolgreich ausgeführt wird, ist der Rückgabewert S \_ OK. Wenn die Methode fehlschlägt, kann der Rückgabewert "D3DERR \_ invalidcall" lauten.
+Wenn die Methode erfolgreich ist, ist der Rückgabewert S \_ OK. Wenn bei der Methode ein Fehler auftritt, kann der Rückgabewert D3DERR \_ INVALIDCALL sein.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
 > [!Note]  
-> Wenn ein Effekt mit [D3DXFX \_ Not \_ cloneable](d3dxfx.md)erstellt wird, gibt diese Methode **null** -Zeiger (in [**D3DXPASS \_ DESC**](d3dxpass-desc.md)) an die Shader-Funktionen zurück.
+> Wenn ein Effekt mit [D3DXFX \_ NOT \_ CLONEABLE](d3dxfx.md)erstellt wird, gibt diese Methode **NULL-Zeiger** (in [**D3DXPASS \_ DESC)**](d3dxpass-desc.md)an die Shaderfunktionen zurück.
 
  
 
@@ -78,12 +78,12 @@ Wenn die Methode erfolgreich ausgeführt wird, ist der Rückgabewert S \_ OK. We
 
 | Anforderung | Wert |
 |--------------------|------------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>D3DX9Effect. h</dt> </dl> |
-| Bibliothek<br/> | <dl> <dt>D3dx9. lib</dt> </dl>     |
+| Header<br/>  | <dl> <dt>D3DX9Effect.h</dt> </dl> |
+| Bibliothek<br/> | <dl> <dt>D3dx9.lib</dt> </dl>     |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 

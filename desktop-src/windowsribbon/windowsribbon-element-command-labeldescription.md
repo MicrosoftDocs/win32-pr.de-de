@@ -1,9 +1,9 @@
 ---
-title: Command. labeldescription (Eigenschaft)
-description: Stellt eine Bezeichnungs Beschreibung dar.
+title: Command.LabelDescription-Eigenschaft
+description: Stellt eine Bezeichnungsbeschreibung dar.
 ms.assetid: 6c683e9e-0742-466e-9fdd-3d29f8ccb9ff
 keywords:
-- Command. labeldescription-Eigenschaft (Windows-Menüband)
+- Command.LabelDescription-Eigenschaft Windows Menüband
 topic_type:
 - apiref
 api_name:
@@ -12,16 +12,16 @@ api_type:
 - NA
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: f748425b4c8363feee737d18c750b3a1d91121b5
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 9051b4f645744416f290906559e054405726f36f9616e8f38f3cfbae357137dc
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "103957017"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118964209"
 ---
-# <a name="commandlabeldescription-property"></a>Command. labeldescription (Eigenschaft)
+# <a name="commandlabeldescription-property"></a>Command.LabelDescription-Eigenschaft
 
-Stellt eine Bezeichnungs Beschreibung dar.
+Stellt eine Bezeichnungsbeschreibung dar.
 
 ## <a name="usage"></a>Verbrauch
 
@@ -41,7 +41,7 @@ Es gibt keine Attribute.
 
 | Element                                                   | BESCHREIBUNG                                   |
 |-----------------------------------------------------------|-----------------------------------------------|
-| [**Schnür**](windowsribbon-element-string.md)<br/> | Kann höchstens einmal vorkommen<br/> <br/> |
+| [**String**](windowsribbon-element-string.md)<br/> | Kann höchstens einmal auftreten.<br/> <br/> |
 
 
 
@@ -51,37 +51,37 @@ Es gibt keine Attribute.
 
 | Element                                                     |
 |-------------------------------------------------------------|
-| [**Get-Help**](windowsribbon-element-command.md)<br/> |
+| [**Befehl**](windowsribbon-element-command.md)<br/> |
 
 
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Dies ist optional.
+Optional.
 
 Kann höchstens einmal für jeden [**Befehl**](windowsribbon-element-command.md)auftreten.
 
-**Command. labeldescription** kann einen Wert vom *Typ xs: String* enthalten, der auf eine beliebige Sequenz von Zeichen beschränkt ist, einschließlich Leerzeichen und Zeilenumbruch Zeichen.
+**Command.LabelDescription** kann einen Wert vom *Typ xs:string* enthalten, der auf eine beliebige Zeichensequenz beschränkt ist, einschließlich Leerzeichen und Zeilenunterbrechungszeichen.
 
 > [!Note]  
-> Verwenden Sie den XML-Zeichen Verweis Universal Character Set (UCS) `&#xA;` , um einen Zeilenumbruch anzugeben.
+> Verwenden Sie den UCS-XML-Zeichenverweis (Universal Character Set), `&#xA;` um einen Zeilenbreak anzugeben.
 
  
 
-Die maximale Länge ist unbegrenzt.
+Die maximale Länge ist ungebunden.
 
-Wenn für **Command. labeldescription** kein Wert angegeben wird, ist das untergeordnete [**Zeichen**](windowsribbon-element-string.md) folgen Element erforderlich.
+Wenn kein Wert für **Command.LabelDescription** angegeben wird, ist das untergeordnete [**String-Element**](windowsribbon-element-string.md) erforderlich.
 
 > [!Note]  
-> Wenn **Command. labeldescription** sowohl einen Wert als auch ein untergeordnetes [**Zeichen**](windowsribbon-element-string.md) folgen Element enthält, hat die **Zeichenfolge** Vorrang.
+> Wenn **Command.LabelDescription** sowohl einen Wert als auch ein untergeordnetes [**String-Element**](windowsribbon-element-string.md) enthält, hat **String** Vorrang.
 
  
 
-**Command. labeldescription** unterstützt nur die linke Ausrichtung.
+**Command.LabelDescription** unterstützt nur die linke Ausrichtung.
 
 ## <a name="examples"></a>Beispiele
 
-Das folgende Beispiel zeigt ein Manifest von Zwischenablage Befehlen mit verschiedenen **Command. labeldescription** -Deklarationen.
+Das folgende Beispiel zeigt ein Manifest von Zwischenablagebefehlen mit verschiedenen **Command.LabelDescription-Deklarationen.**
 
 
 ```XML
@@ -155,16 +155,16 @@ Das folgende Beispiel zeigt ein Manifest von Zwischenablage Befehlen mit verschi
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows 7 \[ -Desktop-Apps\]<br/>              |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2008 R2 \[ -Desktop-Apps\]<br/> |
+| Unterstützte Mindestversion (Client)<br/> | nur Windows 7 \[ Desktop-Apps\]<br/>              |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server 2008 \[ R2-Desktop-Apps\]<br/> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[UI \_ pkey \_ labeldescription](windowsribbon-reference-properties-uipkey-labeldescription.md)
+[UI \_ PKEY \_ LabelDescription](windowsribbon-reference-properties-uipkey-labeldescription.md)
 </dt> </dl>
 
  

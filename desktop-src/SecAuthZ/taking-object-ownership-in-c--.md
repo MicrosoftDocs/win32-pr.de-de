@@ -1,21 +1,21 @@
 ---
-description: Im folgenden Beispiel wird versucht, die DACL eines File-Objekts zu ändern, indem der Besitz dieses Objekts übernommen wird.
+description: Im folgenden Beispiel wird versucht, die DACL eines Dateiobjekts zu ändern, indem der Besitz dieses Objekts übernimmt.
 ms.assetid: 0b309ac9-177d-425f-8b78-71fe73e41979
-title: Übernehmen des Objekt Besitzes in C++
+title: Übernehmen des Objektbesitzes in C++
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: ae43c28cb55193d43a15ed08f5905defded3dc2b
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: f0fba581c449309dcfbfaeba6ca207b58f26f966088e43b99717bbd4fb89323f
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106347227"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119413300"
 ---
-# <a name="taking-object-ownership-in-c"></a>Übernehmen des Objekt Besitzes in C++
+# <a name="taking-object-ownership-in-c"></a>Übernehmen des Objektbesitzes in C++
 
-Im folgenden Beispiel wird versucht, die DACL eines File-Objekts zu ändern, indem der Besitz dieses Objekts übernommen wird. Dies ist nur erfolgreich, wenn der Aufrufer über Schreib \_ Zugriff auf das Objekt verfügt oder der Besitzer des Objekts ist. Wenn der anfängliche Versuch, die DACL zu ändern, fehlschlägt, kann ein Administrator den Besitz des Objekts übernehmen. Um dem Administrator den Besitz zu geben, aktiviert das Beispiel die \_ Berechtigung zum übernehmen \_ \_ von Besitz Namen in das [*Zugriffs Token*](/windows/desktop/SecGloss/a-gly)des Aufrufers und macht die Administratoren des lokalen Systems zum Besitzer des Objekts. Wenn der Aufrufer Mitglied der Gruppe "Administratoren" ist, kann der Code die DACL des Objekts ändern.
+Im folgenden Beispiel wird versucht, die DACL eines Dateiobjekts zu ändern, indem der Besitz dieses Objekts übernimmt. Dies ist nur erfolgreich, wenn der Aufrufer write-DAC-Zugriff auf das Objekt hat oder der \_ Besitzer des Objekts ist. Wenn beim ersten Versuch, die DACL zu ändern, ein Fehler auftritt, kann ein Administrator den Besitz des Objekts übernehmen. Um dem Administrator den Besitz zu geben, aktiviert das Beispiel die SE TAKE OWNERSHIP NAME-Berechtigung im Zugriffstoken des Aufrufers und macht die Administratorengruppe des lokalen Systems zum Besitzer des \_ \_ \_ Objekts. [](/windows/desktop/SecGloss/a-gly) Wenn der Aufrufer Mitglied der Gruppe Administratoren ist, kann der Code dann die DACL des Objekts ändern.
 
-Zum Aktivieren und Deaktivieren von Berechtigungen wird in diesem Beispiel die unter [aktivieren und Deaktivieren von Berechtigungen in C++](enabling-and-disabling-privileges-in-c--.md)beschriebene setprivilege-Beispiel Funktion verwendet.
+Zum Aktivieren und Deaktivieren von Berechtigungen wird in diesem Beispiel die Beispielfunktion SetPrivilege verwendet, die unter Aktivieren und Deaktivieren von [Berechtigungen in C++ beschrieben wird.](enabling-and-disabling-privileges-in-c--.md)
 
 
 ```C++

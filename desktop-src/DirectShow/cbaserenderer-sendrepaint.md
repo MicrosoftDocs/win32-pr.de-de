@@ -1,7 +1,7 @@
 ---
-description: Die sendrepaint-Methode sendet ein Repaint-Ereignis an den Filter Graph-Manager.
+description: Die SendRepaint-Methode sendet ein Repaint-Ereignis an den Filterdiagramm-Manager.
 ms.assetid: 78e5c46c-ca5d-4c5d-9dfc-992ce6b150ad
-title: Cbaserderderer. sendrepaint-Methode (renbase. h)
+title: CBaseRenderer.SendRepaint-Methode (Renbase.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -16,16 +16,16 @@ api_location:
 - Strmbase.dll
 - Strmbasd.lib
 - Strmbasd.dll
-ms.openlocfilehash: b3a88f0c1dae54cb5d9be1e4e9ad3e9677bdd958
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 9057d1ff733c30da3b3b0d7e960607eadd033dcee0b26994478c6da9156a183e
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106365495"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118954789"
 ---
-# <a name="cbaserenderersendrepaint-method"></a>Cbaserderderer. sendrepaint-Methode
+# <a name="cbaserenderersendrepaint-method"></a>CBaseRenderer.SendRepaint-Methode
 
-Die- `SendRepaint` Methode sendet ein Repaint-Ereignis an den Filter Graph-Manager.
+Die `SendRepaint` -Methode sendet ein repaint-Ereignis an den Filterdiagramm-Manager.
 
 ## <a name="syntax"></a>Syntax
 
@@ -44,17 +44,17 @@ Diese Methode hat keine Parameter.
 
 Diese Methode gibt keinen Wert zurück.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Diese Methode sendet ein [**EC \_ Repaint**](ec-repaint.md) -Ereignis an den Filter Graph-Manager, wenn die folgenden Bedingungen zutreffen:
+Diese Methode sendet ein [**EC \_ REPAINT-Ereignis**](ec-repaint.md) an den Filterdiagramm-Manager, wenn die folgenden Bedingungen erfüllt sind:
 
--   Die eingabepin ist verbunden.
--   Der Filter gibt keine Daten aus.
+-   Der Eingabepin ist verbunden.
+-   Der Filter leert keine Daten.
 -   Das Ende des Streams wurde nicht erreicht.
--   Das [**cbaserderderer:: m \_ babort**](cbaserenderer-m-babort.md) -Flag ist **false**.
--   Das Flag " [**cbaserderderer:: m \_ brepaintstatus**](cbaserenderer-m-brepaintstatus.md) " ist " **true**".
+-   Das [**Flag CBaseRenderer::m \_ bAbort**](cbaserenderer-m-babort.md) ist **FALSE.**
+-   Das [**CBaseRenderer::m \_ bRepaintStatus-Flag**](cbaserenderer-m-brepaintstatus.md) ist **TRUE.**
 
-Abhängig vom Status des Diagramms kann das EC \_ Repaint-Ereignis bewirken, dass der upstreamfilter eine Stichprobe erneut sendet, das Filter Diagramm, um den aktuellen Speicherort zu suchen, oder den Filter-Graph-Manager, um vorübergehend anzuhalten. (Siehe [**EC \_ Repaint**](ec-repaint.md).) Dieses Ereignis ist potenziell ineffizient und sollte daher sparsam verwendet werden. Videorenderer müssen jedoch manchmal die Anzeige aktualisieren.
+Abhängig vom Zustand des Diagramms kann das EC REPAINT-Ereignis dazu führen, dass der Upstreamfilter ein Beispiel erneut sendet, das Filterdiagramm an seine aktuelle Position sucht oder dass der Filterdiagramm-Manager kurz angehalten \_ wird. (Siehe [**EC \_ REPAINT**](ec-repaint.md).) Dieses Ereignis ist möglicherweise ineffizient, daher sollte es nur wenig verwendet werden. Videorenderer müssen die Anzeige jedoch manchmal aktualisieren.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -62,16 +62,16 @@ Abhängig vom Status des Diagramms kann das EC \_ Repaint-Ereignis bewirken, das
 
 | Anforderung | Wert |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>Renbase. h (Include Streams. h)</dt> </dl>                                                                                   |
-| Bibliothek<br/> | <dl> " <dt>Straumbase. lib" (Einzelhandels Builds);</dt> " <dt>Straumbasd. lib" (Debugbuilds)</dt> </dl> |
+| Header<br/>  | <dl> <dt>Renbase.h (include Streams.h)</dt> </dl>                                                                                   |
+| Bibliothek<br/> | <dl> <dt>Strmbase.lib (Einzelhandels-Builds); </dt> <dt>Strmbasd.lib (Debugbuilds)</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Cbaserderderer-Klasse**](cbaserenderer.md)
+[**CBaseRenderer-Klasse**](cbaserenderer.md)
 </dt> </dl>
 
  

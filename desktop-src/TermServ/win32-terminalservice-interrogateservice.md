@@ -1,6 +1,6 @@
 ---
 title: InterrogateService-Methode der Win32_Service -Klasse (Remotedesktopdienste)
-description: 'InterrogateService-Methode der Win32_Service -Klasse (Remotedesktopdienste): Fordert an, dass der Dienst, auf den verwiesen wird, seinen Zustand an den Service Manager aktualisiert.'
+description: 'InterrogateService-Methode der Win32_Service -Klasse (Remotedesktopdienste): Fordert an, dass der Dienst, auf den verwiesen wird, seinen Zustand an den Dienst-Manager aktualisiert.'
 ms.assetid: 7B572049-416E-4429-BD53-119FF570B2D8
 ms.tgt_platform: multiple
 keywords:
@@ -17,18 +17,18 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 850953b210ea11b9dd1000326d6793e3651ce538
-ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
+ms.openlocfilehash: 012229ccb8cd259db6ec649717aaea5ef6c4ba94880dd01b24b6be91d7b9bfc9
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2021
-ms.locfileid: "108090658"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119422180"
 ---
 # <a name="interrogateservice-method-of-the-win32_service-class-remote-desktop-services"></a>InterrogateService-Methode der Win32_Service -Klasse (Remotedesktopdienste)
 
 Die [WMI-Klassenmethode](/windows/desktop/WmiSdk/retrieving-a-class) **InterrogateService** fordert an, dass der Dienst, auf den verwiesen wird, seinen Zustand auf den Dienst-Manager aktualisiert.
 
-In diesem Thema wird Managed Object Format -Syntax (MOF) verwendet. Weitere Informationen zur Verwendung dieser Methode finden Sie unter [Aufrufen einer Methode.](/windows/desktop/WmiSdk/calling-a-method)
+In diesem Thema wird Managed Object Format (MOF)-Syntax verwendet. Weitere Informationen zur Verwendung dieser Methode finden Sie unter [Aufrufen einer Methode.](/windows/desktop/WmiSdk/calling-a-method)
 
 ## <a name="syntax"></a>Syntax
 
@@ -45,7 +45,7 @@ Diese Methode hat keine Parameter.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt einen der in der folgenden Liste aufgeführten Werte oder einen anderen Wert zurück, um auf einen Fehler hindeuten zu können. Weitere Fehlercodes finden Sie unter [**WMI-Fehlerkonstistenzen**](/windows/desktop/WmiSdk/wmi-error-constants) oder [**WbemErrorEnum**](/windows/desktop/api/wbemdisp/ne-wbemdisp-wbemerrorenum). Allgemeine **HRESULT-Werte** finden Sie unter [Systemfehlercodes](/windows/desktop/Debug/system-error-codes).
+Gibt einen der in der folgenden Liste aufgeführten Werte oder einen anderen Wert zurück, um einen Fehler anzugeben. Weitere Fehlercodes finden Sie unter [**WMI-Fehlerkonstistenzen**](/windows/desktop/WmiSdk/wmi-error-constants) oder [**WbemErrorEnum**](/windows/desktop/api/wbemdisp/ne-wbemdisp-wbemerrorenum). Allgemeine **HRESULT-Werte** finden Sie unter [Systemfehlercodes](/windows/desktop/Debug/system-error-codes).
 
 <dl> <dt>
 
@@ -178,7 +178,7 @@ Der Dienst verfügt über keinen Ausführungsthread.
 **18**
 </dt> <dd>
 
-Der Dienst weist beim Start zirkuläre Abhängigkeiten auf.
+Der Dienst verfügt beim Starten über zirkuläre Abhängigkeiten.
 
 </dd> <dt>
 
@@ -192,7 +192,7 @@ Ein Dienst wird unter demselben Namen ausgeführt.
 **20**
 </dt> <dd>
 
-Der Dienstname weist ungültige Zeichen auf.
+Der Dienstname enthält ungültige Zeichen.
 
 </dd> <dt>
 
@@ -228,21 +228,21 @@ Der Dienst ist im System derzeitig angehalten.
 
 
 
-| Anforderungen | Wert |
+| Anforderung | Wert |
 |-------------------------------------|-----------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows Vista<br/>                                                                |
 | Unterstützte Mindestversion (Server)<br/> | Windows Server 2008<br/>                                                          |
-| Namespace<br/>                | Root \\ CIMv2 \\ TerminalServices<br/>                                                |
+| Namespace<br/>                | \\ \\ CiMv2-Stammterminaldienste<br/>                                                |
 | MOF<br/>                      | <dl> <dt>TSCfgWmi.mof</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>TSCfgWmi.dll</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Weitere Informationen:
 
 <dl> <dt>
 
-[**\_Win32-Dienst**](/windows/desktop/CIMWin32Prov/win32-service)
+[**Win32-Dienst \_**](/windows/desktop/CIMWin32Prov/win32-service)
 </dt> <dt>
 
 [Betriebssystemklassen](/windows/desktop/CIMWin32Prov/operating-system-classes)

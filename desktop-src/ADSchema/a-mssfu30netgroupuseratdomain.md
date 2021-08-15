@@ -1,10 +1,10 @@
 ---
-title: msSFU-30-netgroup-User-at-Domain-Attribut
-description: Enthält einen Teil der Netzgruppen Herkunft-Zuordnung, der berechnete Zeichen folgen darstellt, z. b. \ 0034; Benutzer Domäne \ 0034;.
+title: msSFU-30-Netgroup-User-At-Domain-Attribut
+description: Enthält einen Teil der Netgroupzuordnung, der berechnete Zeichenfolgen darstellt, z.B. \ 0034;Benutzerdomäne \ 0034;.
 ms.assetid: a43f9c88-eb95-4096-9085-b6af044eeb04
 ms.tgt_platform: multiple
 keywords:
-- msSFU-30-netgroup-User-at-Domain-Attribut AD-Schema
+- msSFU-30-Netgroup-User-At-Domain-Attribut AD-Schema
 - msSFU30NetgroupUserAtDomain-Attribut AD-Schema
 topic_type:
 - apiref
@@ -14,26 +14,26 @@ api_type:
 - Schema
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 9f0239464fb6262ae8778f00af165c928d4dfe6f
-ms.sourcegitcommit: b77ace27b0432e7cd3863191b11926be032fbe2f
+ms.openlocfilehash: a9ab6f81ca24977291a9f2326ab07afc9710f2e079af08eed9a306d82aebb08c
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "103957610"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119542359"
 ---
-# <a name="mssfu-30-netgroup-user-at-domain-attribute"></a>msSFU-30-netgroup-User-at-Domain-Attribut
+# <a name="mssfu-30-netgroup-user-at-domain-attribute"></a>msSFU-30-Netgroup-User-At-Domain-Attribut
 
-Enthält einen Teil der Netzgruppen Herkunft-Zuordnung, der berechnete Zeichen folgen darstellt, z user@domain . b. "".
+Enthält einen Teil der Netgroup-Zuordnung, der berechnete Zeichenfolgen darstellt, z. user@domain B. " ".
 
 
 
 | Eingabe | Wert |
 |-------------------|--------------------------------------|
-| CN                | msSFU-30-netgroup-User-at-Domain     |
-| LDAP-Display-Name | msSFU30NetgroupUserAtDomain          |
+| CN                | msSFU-30-Netgroup-User-At-Domain     |
+| Ldap-Anzeigename | msSFU30NetgroupUserAtDomain          |
 | Size              | \-                                   |
-| Berechtigung aktualisieren  | \-                                   |
-| Aktualisierungshäufigkeit  | \-                                   |
+| Aktualisieren von Berechtigungen  | \-                                   |
+| Updatehäufigkeit  | \-                                   |
 | Attribute-Id      | 1.2.840.113556.1.6.18.1.349          |
 | System-ID-GUID    | a9e84eed-e630-4b67-b4b3-cad2a82d345e |
 | Syntax            | [**String(IA5)**](s-string-ia5.md)  |
@@ -56,15 +56,15 @@ Enthält einen Teil der Netzgruppen Herkunft-Zuordnung, der berechnete Zeichen f
 | Link-ID                | \-                                              |
 | MAPI-Id                | \-                                              |
 | System-Only            | False                                           |
-| Ist-einwertig       | False                                           |
-| Ist indiziert             | Richtig                                            |
+| Ist einwertig       | False                                           |
+| Ist indiziert             | True                                            |
 | Im globalen Katalog      | False                                           |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                    |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                    |
 | Range-Lower            | \-                                              |
 | Range-Upper            | \-                                              |
 | Search-Flags           | 0x00000001                                      |
 | System-Flags           | 0x00000000                                      |
-| In verwendete Klassen        | [**Netzwerkgruppe**](c-nisnetgroup.md)<br/> |
+| In verwendete Klassen        | [**nisNetgroup**](c-nisnetgroup.md)<br/> |
 
 
 
@@ -77,15 +77,15 @@ Enthält einen Teil der Netzgruppen Herkunft-Zuordnung, der berechnete Zeichen f
 | Link-ID                | \-                                              |
 | MAPI-Id                | \-                                              |
 | System-Only            | False                                           |
-| Ist-einwertig       | False                                           |
-| Ist indiziert             | Richtig                                            |
+| Ist einwertig       | False                                           |
+| Ist indiziert             | True                                            |
 | Im globalen Katalog      | False                                           |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                    |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                    |
 | Range-Lower            | \-                                              |
 | Range-Upper            | \-                                              |
 | Search-Flags           | 0x00000001                                      |
 | System-Flags           | 0x00000000                                      |
-| In verwendete Klassen        | [**Netzwerkgruppe**](c-nisnetgroup.md)<br/> |
+| In verwendete Klassen        | [**nisNetgroup**](c-nisnetgroup.md)<br/> |
 
 
 
@@ -98,15 +98,15 @@ Enthält einen Teil der Netzgruppen Herkunft-Zuordnung, der berechnete Zeichen f
 | Link-ID                | \-                                              |
 | MAPI-Id                | \-                                              |
 | System-Only            | False                                           |
-| Ist-einwertig       | False                                           |
-| Ist indiziert             | Richtig                                            |
+| Ist einwertig       | False                                           |
+| Ist indiziert             | True                                            |
 | Im globalen Katalog      | False                                           |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                    |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                    |
 | Range-Lower            | \-                                              |
 | Range-Upper            | \-                                              |
 | Search-Flags           | 0x00000001                                      |
 | System-Flags           | 0x00000000                                      |
-| In verwendete Klassen        | [**Netzwerkgruppe**](c-nisnetgroup.md)<br/> |
+| In verwendete Klassen        | [**nisNetgroup**](c-nisnetgroup.md)<br/> |
 
 
 
@@ -119,15 +119,15 @@ Enthält einen Teil der Netzgruppen Herkunft-Zuordnung, der berechnete Zeichen f
 | Link-ID                | \-                                              |
 | MAPI-Id                | \-                                              |
 | System-Only            | False                                           |
-| Ist-einwertig       | False                                           |
-| Ist indiziert             | Richtig                                            |
+| Is-Single-Valued       | False                                           |
+| Ist indiziert             | True                                            |
 | Im globalen Katalog      | False                                           |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                    |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                    |
 | Range-Lower            | \-                                              |
 | Range-Upper            | \-                                              |
 | Search-Flags           | 0x00000001                                      |
 | System-Flags           | 0x00000000                                      |
-| In verwendete Klassen        | [**Netzwerkgruppe**](c-nisnetgroup.md)<br/> |
+| In verwendete Klassen        | [**nisNetgroup**](c-nisnetgroup.md)<br/> |
 
 
 

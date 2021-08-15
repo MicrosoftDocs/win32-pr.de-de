@@ -1,7 +1,7 @@
 ---
 description: Ruft Analyseergebnisse aus dem InkDivider-Objekt ab.
 ms.assetid: 7fc2bb5a-172f-4f4e-84dd-e31925f86982
-title: Calldivideresults-Funktion
+title: CallDivideResults-Funktion
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -14,18 +14,18 @@ api_type:
 api_location:
 - InkDiv.dll
 - InkDiv.dll.dll
-ms.openlocfilehash: 11878e6a0ac953b9b7eb27ce21bb67001f9d88d4
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 2e5f3060f261ba84b70272ed358a7c544f2b0e1582de310ed759b4ea40714359
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104127820"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118967759"
 ---
-# <a name="calldivideresults-function"></a>Calldivideresults-Funktion
+# <a name="calldivideresults-function"></a>CallDivideResults-Funktion
 
-Ruft Analyseergebnisse aus dem [**InkDivider**](inkdivider-class.md) -Objekt ab.
+Ruft Analyseergebnisse aus dem [**InkDivider-Objekt**](inkdivider-class.md) ab.
 
-Diese Funktion ist nicht für die Verwendung durch den Anwendungscode vorgesehen.
+Diese Funktion ist nicht für die Verwendung durch Anwendungscode vorgesehen.
 
 ## <a name="syntax"></a>Syntax
 
@@ -55,101 +55,101 @@ HRESULT WINAPI CallDivideResults(
 
 <dl> <dt>
 
-*hdivider* \[ in\]
+*hDivider* \[ In\]
 </dt> <dd>
 
-Ein Handle für das [**InkDivider**](inkdivider-class.md) -Objekt.
+Ein Handle für das [**InkDivider-Objekt.**](inkdivider-class.md)
 
 </dd> <dt>
 
-*awordstrokeids* \[ vorgenommen\]
+*aWordStrokeIds* \[ out\]
 </dt> <dd>
 
-Ein Array von Bezeichner, die dem Wort zugeordnet sind, das an die [**InkDivider**](inkdivider-class.md) -Klasse weitergeleitet wird.
+Ein Array von Bezeichnern, die dem Wort zugeordnet sind, das an die [**InkDivider-Klasse**](inkdivider-class.md) übergeben wird.
 
 </dd> <dt>
 
-*alinestrokeids* \[ vorgenommen\]
+*aLineStrokeIds* \[ out\]
 </dt> <dd>
 
-Ein Array von [**ID**](/windows/desktop/api/msinkaut/nf-msinkaut-iinkstrokedisp-get_id) -Eigenschaften für die [**IInkStrokeDisp**](/windows/desktop/api/msinkaut/nn-msinkaut-iinkstrokedisp) -Objekte, die der Zeile zugeordnet sind, die an die [**InkDivider**](inkdivider-class.md) -Klasse weitergeleitet wird.
+Ein Array von [**ID-Eigenschaften**](/windows/desktop/api/msinkaut/nf-msinkaut-iinkstrokedisp-get_id) für die [**IInkStrokeDisp-Objekte,**](/windows/desktop/api/msinkaut/nn-msinkaut-iinkstrokedisp) die der Zeile zugeordnet sind, die an die [**InkDivider-Klasse**](inkdivider-class.md) übergeben wird.
 
 </dd> <dt>
 
-*aparagphstrokeids* \[ vorgenommen\]
+*aParagraphStrokeIds* \[ out\]
 </dt> <dd>
 
-Ein Array der [**ID**](/windows/desktop/api/msinkaut/nf-msinkaut-iinkstrokedisp-get_id) -Eigenschaften für die [**IInkStrokeDisp**](/windows/desktop/api/msinkaut/nn-msinkaut-iinkstrokedisp) -Objekte, die dem Absatz der [**InkDivider**](inkdivider-class.md) -Klasse zugeordnet sind.
+Ein Array der [**ID-Eigenschaften**](/windows/desktop/api/msinkaut/nf-msinkaut-iinkstrokedisp-get_id) für die [**IInkStrokeDisp-Objekte,**](/windows/desktop/api/msinkaut/nn-msinkaut-iinkstrokedisp) die dem Absatz aus der [**InkDivider-Klasse**](inkdivider-class.md) zugeordnet sind.
 
 </dd> <dt>
 
-*adrawingstrokeids* \[ vorgenommen\]
+*aDrawingStrokeIds* \[ out\]
 </dt> <dd>
 
-Ein Array von [**ID**](/windows/desktop/api/msinkaut/nf-msinkaut-iinkstrokedisp-get_id) -Eigenschaften für die [**IInkStrokeDisp**](/windows/desktop/api/msinkaut/nn-msinkaut-iinkstrokedisp) -Objekte, die der Zeichnung aus der [**InkDivider**](inkdivider-class.md) -Klasse zugeordnet sind.
+Ein Array von [**ID-Eigenschaften**](/windows/desktop/api/msinkaut/nf-msinkaut-iinkstrokedisp-get_id) für die [**IInkStrokeDisp-Objekte,**](/windows/desktop/api/msinkaut/nn-msinkaut-iinkstrokedisp) die der Zeichnung aus der [**InkDivider-Klasse**](inkdivider-class.md) zugeordnet sind.
 
 </dd> <dt>
 
-*paarwörter* \[ vorgenommen\]
+*pastrWords* \[ out\]
 </dt> <dd>
 
-Ein Array von Wörtern, das von der Ink-Analyse zurückgegeben wird
+Ein Array von Wörtern, die von der Ink-Analyse zurückgegeben werden.
 
 </dd> <dt>
 
-*Paare* \[ vorgenommen\]
+*pastrLines* \[ out\]
 </dt> <dd>
 
-Ein Array von Zeilen, die von der Ink-Analyse zurückgegeben werden
+Ein Array von Zeilen, die von der Ink-Analyse zurückgegeben werden.
 
 </dd> <dt>
 
-*Paare* \[ vorgenommen\]
+*pastrParagraphs* \[ out\]
 </dt> <dd>
 
-Ein Array von Absätzen, die von der Ink-Analyse zurückgegeben werden
+Ein Array von Absätzen, die von der Ink-Analyse zurückgegeben werden.
 
 </dd> <dt>
 
-*awordrotationcenterx* \[ vorgenommen\]
+*aWordRotationCenterX* \[ out\]
 </dt> <dd>
 
-Ein Array von den Mittelpunkten der Wörter entlang der x-Achse aus der Ink-Analyse.
+Ein Array der Mittelpunkte der Wörter entlang der X-Achse aus der Ink-Analyse.
 
 </dd> <dt>
 
-*awordrotationcentery* \[ vorgenommen\]
+*aWordRotationCenterY* \[ out\]
 </dt> <dd>
 
-Ein Array von den Mittelpunkten der Wörter entlang der y-Achse aus der Ink-Analyse.
+Ein Array der Mittelpunkte der Wörter entlang der y-Achse aus der Ink-Analyse.
 
 </dd> <dt>
 
-*awordangle* \[ vorgenommen\]
+*aWordAngle* \[ out\]
 </dt> <dd>
 
-Ein Array mit den Winkeln, nach denen die Wörter für optimale Analyseergebnisse gedreht werden.
+Ein Array mit den Winkeln, um die die Wörter gedreht werden sollen, um optimale Analyseergebnisse zu erzielen.
 
 </dd> <dt>
 
-*alinerotationcenterx* \[ vorgenommen\]
+*aLineRotationCenterX* \[ out\]
 </dt> <dd>
 
 Ein Array, das die Mittelpunkte der Linien entlang der x-Achse enthält.
 
 </dd> <dt>
 
-*alinerotationcentery* \[ vorgenommen\]
+*aLineRotationCenterY* \[ out\]
 </dt> <dd>
 
 Ein Array, das die Mittelpunkte der Linien entlang der y-Achse enthält.
 
 </dd> <dt>
 
-*alineangle* \[ vorgenommen\]
+*aLineAngle* \[ out\]
 </dt> <dd>
 
-Ein Array, das die Winkel enthält, nach denen die Linien für optimale Analyseergebnisse gedreht werden.
+Ein Array mit den Winkeln, um die die Linien gedreht werden sollen, um optimale Analyseergebnisse zu erzielen.
 
 </dd> </dl>
 
@@ -162,16 +162,16 @@ Diese Funktion kann einen dieser Werte zurückgeben.
 | Rückgabecode                                                                                   | Beschreibung                                                       |
 |-----------------------------------------------------------------------------------------------|-------------------------------------------------------------------|
 | <dl> <dt>**S \_ OK**</dt> </dl>          | Die Funktion wurde erfolgreich ausgeführt.<br/>                                |
-| <dl> <dt>**E \_ invalidArg**</dt> </dl>  | Der *hdivider* -Parameter ist ungültig.<br/>                   |
-| <dl> <dt>**E \_ outo-Memory**</dt> </dl> | Es konnte nicht genügend Arbeitsspeicher belegt werden, um die Ergebnisse zu speichern.<br/> |
+| <dl> <dt>**E \_ INVALIDARG**</dt> </dl>  | Der *hDivider-Parameter* ist ungültig.<br/>                   |
+| <dl> <dt>**E \_ OUTOFMEMORY**</dt> </dl> | Es konnte nicht genügend Arbeitsspeicher zum Speichern der Ergebnisse belegt werden.<br/> |
 
 
 
  
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Um Speicher Verluste zu vermeiden, müssen Sie die Ressourcen für " *paarweise*", " *paarweise*" und " *paarweise*" freigeben.
+Um Speicherverluste zu vermeiden, müssen Sie die Ressourcen für *pastrWords,* *pastrLines* und *pastrParagraphs* freigeben.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -179,7 +179,7 @@ Um Speicher Verluste zu vermeiden, müssen Sie die Ressourcen für " *paarweise*
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows XP Tablet PC Edition \[ Desktop-Apps\]<br/>                         |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur Desktop-Apps der XP Tablet PC Edition \[\]<br/>                         |
 | Unterstützte Mindestversion (Server)<br/> | Nicht unterstützt<br/>                                                             |
 | Bibliothek<br/>                  | <dl> <dt>InkDiv.dll</dt> </dl> |
 

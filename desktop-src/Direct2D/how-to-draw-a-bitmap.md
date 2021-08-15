@@ -1,23 +1,23 @@
 ---
 title: Zeichnen einer Bitmap
-description: Zeigt, wie Bitmaps mit Direct2D dargestellt werden.
+description: Zeigt, wie Bitmaps mit Direct2D gerendert werden.
 ms.assetid: 9c6fc8b1-47ba-46fa-b812-2636cd8ff2b4
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: cbfa13b75b4fe34ce6ff2b80598fac35f8483a2f
-ms.sourcegitcommit: 592c9bbd22ba69802dc353bcb5eb30699f9e9403
+ms.openlocfilehash: 6c76fb3a956d20f83f4de8beb8431295c86b84cf7e6908fb311ed16ea1ceefa0
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "103858298"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119259224"
 ---
 # <a name="how-to-draw-a-bitmap"></a>Zeichnen einer Bitmap
 
-Verwenden Sie zum Rendering einer Bitmap die [**ID2D1RenderTarget::D rawbitmap**](id2d1rendertarget-drawbitmap.md) -Methode. Im folgenden Beispiel wird gezeigt, wie mit der **drawbitmap** -Methode ein [**ID2D1Bitmap**](/windows/win32/api/d2d1/nn-d2d1-id2d1bitmap)gezeichnet wird. Er erstellt die in der folgenden Abbildung gezeigte Ausgabe.
+Verwenden Sie zum Rendern einer Bitmap die [**ID2D1RenderTarget::D rawBitmap-Methode.**](id2d1rendertarget-drawbitmap.md) Das folgende Beispiel zeigt, wie sie die **DrawBitmap-Methode** verwenden, um eine [**ID2D1Bitmap zu zeichnen.**](/windows/win32/api/d2d1/nn-d2d1-id2d1bitmap) Die in der folgenden Abbildung gezeigte Ausgabe wird erstellt.
 
-![Abbildung einer ursprünglichen Bitmap und resultierenden Bitmaps mit unterschiedlichen Deckkraft Einstellungen und Transformationen](images/drawbitmapexample.png)
+![Abbildung einer ursprünglichen Bitmap und resultierenden Bitmaps mit unterschiedlichen Durchlässigkeitseinstellungen und Transformationen](images/drawbitmapexample.png)
 
-Erstellen Sie zuerst eine [**ID2D1Bitmap**](/windows/win32/api/d2d1/nn-d2d1-id2d1bitmap). Im folgenden Beispiel wird eine Bitmap aus der Ressourcen Datei der Anwendung geladen und als *m \_ pbitmap* gespeichert. (Informationen zur Implementierung der-Methode finden Sie `LoadResourceBitmap` unter Gewusst [wie: Laden einer Bitmap aus einer Ressource](how-to-load-a-bitmap-from-a-resource.md).)
+Erstellen Sie zunächst eine [**ID2D1Bitmap.**](/windows/win32/api/d2d1/nn-d2d1-id2d1bitmap) Im folgenden Beispiel wird eine Bitmap aus der Ressourcendatei der Anwendung geladen und als *m \_ pBitmap gespeichert.* (Informationen dazu, wie die Methode implementiert wird, finden Sie unter Laden einer `LoadResourceBitmap` [Bitmap aus einer Ressource.)](how-to-load-a-bitmap-from-a-resource.md)
 
 
 ```C++
@@ -35,9 +35,9 @@ hr = LoadResourceBitmap(
 
 
 
-Erstellen Sie die [**ID2D1Bitmap**](/windows/win32/api/d2d1/nn-d2d1-id2d1bitmap) in derselben Methode, in der Sie das Renderziel erstellt haben, das Sie zum Zeichnen der Bitmap verwenden, und geben Sie die Bitmap frei, wenn das Renderziel freigegeben wird.
+Erstellen Sie [**die ID2D1Bitmap**](/windows/win32/api/d2d1/nn-d2d1-id2d1bitmap) in derselben Methode, in der Sie das Renderziel erstellt haben, das Sie zum Zeichnen der Bitmap verwenden, und geben Sie die Bitmap frei, wenn das Renderziel freigegeben wird.
 
-Nachdem die Bitmap erstellt wurde, können Sie Sie darstellen. Im folgenden Beispiel wird die [**drawbitmap**](/windows/win32/api/d2d1/nf-d2d1-id2d1rendertarget-drawbitmap(id2d1bitmap_constd2d1_rect_f_float_d2d1_bitmap_interpolation_mode_constd2d1_rect_f)) -Methode verwendet, um eine Bitmap mehrmals mit unterschiedlichen Größen-und Deckkraft Einstellungen zu Rendering.
+Nachdem die Bitmap erstellt wurde, rendern Sie sie. Im folgenden Beispiel wird die [**DrawBitmap-Methode**](/windows/win32/api/d2d1/nf-d2d1-id2d1rendertarget-drawbitmap(id2d1bitmap_constd2d1_rect_f_float_d2d1_bitmap_interpolation_mode_constd2d1_rect_f)) verwendet, um eine Bitmap mehrmals mit unterschiedlichen Größen- und Deckkrafteinstellungen zu rendern.
 
 
 ```C++
@@ -175,7 +175,7 @@ HRESULT DrawBitmapExample::OnRender()
 
 
 
-Die [**drawbitmap**](id2d1rendertarget-drawbitmap.md) -Methode gibt keinen Fehlercode zurück, wenn ein Fehler auftritt. Um zu ermitteln, ob ein Zeichnungs Vorgang (z. b. **drawbitmap**) fehlgeschlagen ist, überprüfen Sie das von der [**ID2D1RenderTarget:: EndDraw**](/windows/win32/api/d2d1/nf-d2d1-id2d1rendertarget-enddraw) -Methode zurückgegebene Ergebnis, wie im folgenden Beispiel gezeigt.
+Die [**DrawBitmap-Methode**](id2d1rendertarget-drawbitmap.md) gibt bei einem Fehler keinen Fehlercode zurück. Um zu bestimmen, ob ein Zeichnungsvorgang (z. B. **DrawBitmap)** fehlgeschlagen ist, überprüfen Sie das von der [**ID2D1RenderTarget::EndDraw-Methode**](/windows/win32/api/d2d1/nf-d2d1-id2d1rendertarget-enddraw) zurückgegebene Ergebnis, wie im folgenden Beispiel gezeigt.
 
 
 ```C++
@@ -190,7 +190,7 @@ Code wurde in diesem Beispiel ausgelassen.
 
 <dl> <dt>
 
-[**Drawbitmap**](id2d1rendertarget-drawbitmap.md)
+[**DrawBitmap**](id2d1rendertarget-drawbitmap.md)
 </dt> <dt>
 
 [**ID2D1Bitmap**](/windows/win32/api/d2d1/nn-d2d1-id2d1bitmap)
@@ -199,6 +199,6 @@ Code wurde in diesem Beispiel ausgelassen.
 [Laden einer Bitmap aus einer Ressource](how-to-load-a-bitmap-from-a-resource.md)
 </dt> </dl>
 
- 
+ 
 
- 
+ 

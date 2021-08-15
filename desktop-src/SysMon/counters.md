@@ -1,10 +1,10 @@
 ---
-title: Zähler Sammlung (isysmon. h)
-description: Verwenden Sie diese Klasse, um die Auflistung der "count"-Objekte zu verwalten. Um dieses Objekt abzurufen, rufen Sie Systemmonitor. Counters auf.
+title: Counters-Auflistung (Isysmon.h)
+description: Verwenden Sie diese Klasse, um die Auflistung von CounterItem-Objekten zu verwalten. Um dieses Objekt abzurufen, rufen Sie SystemMonitor.Counters auf.
 ms.assetid: 01542569-3fee-440a-8722-db377380b73c
 keywords:
-- Leistungsindikator Sammlung (Sysmon)
-- Leistungsindikator Sammlung (Sysmon), beschrieben
+- Counters collection SysMon
+- Counters collection SysMon , beschrieben
 topic_type:
 - apiref
 api_name:
@@ -15,36 +15,36 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: dbcbf8da93f13dce2ce2a290adeab9394ee8addb
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: f8349c1425450491c3fc658f6ac1ac3c5fcf75d3e617a92f6e34b91f2f5802e5
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "106345501"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118883337"
 ---
-# <a name="counters-collection"></a>Zähler Sammlung
+# <a name="counters-collection"></a>Counters-Auflistung
 
-Verwenden Sie diese Klasse, um die Auflistung der " [**count**](counteritem.md) "-Objekte zu verwalten.
+Verwenden Sie diese Klasse, um die Auflistung von [**CounterItem-Objekten zu**](counteritem.md) verwalten.
 
-Um dieses Objekt abzurufen, rufen Sie [**Systemmonitor. Counters**](systemmonitor-counters.md)auf.
+Um dieses Objekt abzurufen, rufen Sie [**SystemMonitor.Counters auf.**](systemmonitor-counters.md)
 
 ## <a name="members"></a>Member
 
-Die  indikatorenauflistung enthält diese Typen von Membern:
+Die **Counters-Auflistung** verfügt über die folgenden Membertypen:
 
 -   [Methoden](#methods)
 -   [Eigenschaften](#properties)
 
 ### <a name="methods"></a>Methoden
 
-Die  indikatorenauflistung verfügt über diese Methoden.
+Die **Counters-Auflistung** verfügt über diese Methoden.
 
 
 
 | Methode                            | BESCHREIBUNG                                                                           |
 |:----------------------------------|:--------------------------------------------------------------------------------------|
-| [**Eren**](counters-add.md)       | Fügt der [**Auflistung eine-**](counteritem.md) Instanz hinzu.<br/>      |
-| [**Aufgeh**](counters-remove.md) | Entfernt eine [**-**](counteritem.md) Instanz aus der Auflistung.<br/> |
+| [**Hinzufügen**](counters-add.md)       | Fügt der [**Auflistung eine CounterItem-Instanz**](counteritem.md) hinzu.<br/>      |
+| [**Entfernen**](counters-remove.md) | Entfernt eine [**CounterItem-Instanz**](counteritem.md) aus der Auflistung.<br/> |
 
 
 
@@ -52,24 +52,24 @@ Die  indikatorenauflistung verfügt über diese Methoden.
 
 ### <a name="properties"></a>Eigenschaften
 
-Die **Zähler** Sammlung verfügt über diese Eigenschaften.
+Die **Counters-Auflistung** verfügt über diese Eigenschaften.
 
 
 
 | Eigenschaft                                   | BESCHREIBUNG                                                                                         |
 |:-------------------------------------------|:----------------------------------------------------------------------------------------------------|
-| [**Countdown**](counters-count.md)<br/> | Ruft die [**Anzahl von Instanzen in der-**](counteritem.md) Auflistung ab.<br/>  |
-| [**Element**](counters-item.md)<br/>   | Ruft [**die angegebene-**](counteritem.md) Instanz aus der Auflistung ab.<br/> |
+| [**Anzahl**](counters-count.md)<br/> | Ruft die Anzahl der [**CounterItem-Instanzen**](counteritem.md) in der Auflistung ab.<br/>  |
+| [**Element**](counters-item.md)<br/>   | Ruft die angegebene [**CounterItem-Instanz**](counteritem.md) aus der Auflistung ab.<br/> |
 
 
 
  
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Das **Counters** -Objekt ist die Standard Eigenschaft des [**Systemmonitor**](systemmonitor.md) -Objekts.
+Das **Counters-Objekt** ist die Standardeigenschaft des [**SystemMonitor-Objekts.**](systemmonitor.md)
 
-Fügen Sie dieser Sammlung die Leistungsindikatoren hinzu, die Sie grafisch abbilden möchten. Sysmon Ruft die Werte des Zählers entweder aus dem System oder aus einer Protokolldatei ab, abhängig von der von Ihnen angegebenen [**Datenquelle**](systemmonitor-datasourcetype.md) .
+Fügen Sie dieser Auflistung die Leistungsindikatoren hinzu, die Sie grafisch erstellen möchten. SYSMON ruft die Leistungsindikatorwerte abhängig von der angegebenen Datenquelle entweder aus dem System oder aus einer [**Protokolldatei**](systemmonitor-datasourcetype.md) ab.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -79,8 +79,8 @@ Fügen Sie dieser Sammlung die Leistungsindikatoren hinzu, die Sie grafisch abbi
 |-------------------------------------|---------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional \[nur Desktop-Apps\]<br/>                            |
 | Unterstützte Mindestversion (Server)<br/> | Windows 2000 Server \[nur Desktop-Apps\]<br/>                                  |
-| Header<br/>                   | <dl> <dt>Isysmon. h</dt> </dl>  |
-| DLL<br/>                      | <dl> <dt>Sysmon. ocx</dt> </dl> |
+| Header<br/>                   | <dl> <dt>Isysmon.h</dt> </dl>  |
+| DLL<br/>                      | <dl> <dt>Sysmon.ocx</dt> </dl> |
 
 
 

@@ -1,31 +1,31 @@
 ---
-description: Decoder-Schnittstellen und Spezifikationen
+description: Decoderschnittstellen und Spezifikationen
 ms.assetid: 51e00392-8557-4c79-a687-434ba993c1cb
-title: Decoder-Schnittstellen und Spezifikationen
+title: Decoderschnittstellen und Spezifikationen
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 995659b9689a1498bbf0dbf8fb7961f2e1bd8907
-ms.sourcegitcommit: a47bd86f517de76374e4fff33cfeb613eb259a7e
+ms.openlocfilehash: 9c0a98d0dec2cfa05e4888c5dedcdd556ee9f0c98487613a51140c71db5b4733
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/06/2021
-ms.locfileid: "103958078"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118953169"
 ---
-# <a name="decoder-interfaces-and-specifications"></a>Decoder-Schnittstellen und Spezifikationen
+# <a name="decoder-interfaces-and-specifications"></a>Decoderschnittstellen und Spezifikationen
 
-Dieser Abschnitt enthält die folgenden Themen, die für Entwickler von Hardware-und Software-Video Decodern relevant sind.
+Dieser Abschnitt enthält die folgenden Themen, die für Entwickler von Hardware- und Softwarevideodecodern relevant sind.
 
 -   [Verwenden von IAMVideoAccelerator durch Decoder](how-decoders-use-iamvideoaccelerator.md)
--   [Informationen zur DirectX-Video Beschleunigung](about-directx-video-acceleration.md)
--   [Zuordnung von DirectX-Video Beschleunigung zu iamvideoaccelerator](mapping-directx-video-acceleration-to-iamvideoaccelerator.md)
--   [Entwicklung von DVD-Decodern in DirectShow](dvd-decoder-development-in-directshow.md)
--   [Decodersteuerelement](decoder-volume-control.md)
+-   [Informationen zur DirectX-Videobeschleunigung](about-directx-video-acceleration.md)
+-   [Zuordnen der DirectX-Videobeschleunigung zu IAMVideoAccelerator](mapping-directx-video-acceleration-to-iamvideoaccelerator.md)
+-   [DVD-Decoderentwicklung in DirectShow](dvd-decoder-development-in-directshow.md)
+-   [Decodervolumesteuerung](decoder-volume-control.md)
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
 <dl> <dt>
 
-[Encoder-und decoderentwicklung](encoder-and-decoder-development.md)
+[Encoder- und Decoderentwicklung](encoder-and-decoder-development.md)
 </dt> </dl>
 
  

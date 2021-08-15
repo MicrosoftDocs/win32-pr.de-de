@@ -1,6 +1,6 @@
 ---
-description: 'Weitere Informationen zu den folgenden Eigenschaften finden Sie: JET_DBINFOMISC.'
-title: JET_DBINFOMISC. tshadowingdeaktiviert (Eigenschaft)
+description: 'Weitere Informationen finden Sie unter: JET_DBINFOMISC.fShadowingDisabled-Eigenschaft'
+title: JET_DBINFOMISC.fShadowingDisabled-Eigenschaft
 TOCTitle: 'fShadowingDisabled property '
 ms:assetid: P:Microsoft.Isam.Esent.Interop.JET_DBINFOMISC.fShadowingDisabled
 ms:mtpsurl: https://msdn.microsoft.com/library/microsoft.isam.esent.interop.jet_dbinfomisc.fshadowingdisabled(v=EXCHG.10)
@@ -26,19 +26,19 @@ api_type:
 api_location:
 - Microsoft.Isam.Esent.Interop.dll
 ROBOTS: INDEX,FOLLOW
-ms.openlocfilehash: 2a15e7328140c8b7ce34e3ed79b257f697e3f1b9
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 439fb176fef423bcb38947bbfc068bce6ebccd47e6dc0e70e7a0cf2cd0cb3b7d
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106345712"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119453980"
 ---
-# <a name="jet_dbinfomiscfshadowingdisabled-property"></a>JET_DBINFOMISC. tshadowingdeaktiviert (Eigenschaft)
+# <a name="jet_dbinfomiscfshadowingdisabled-property"></a>JET_DBINFOMISC.fShadowingDisabled-Eigenschaft
 
-Ruft einen Wert ab, der angibt, ob die Katalog schattung aktiviert ist. Dieser Wert ist nur für die interne Verwendung vorgesehen.
+Ruft einen Wert ab, der angibt, ob der Katalogschatten aktiviert ist. Dieser Wert ist nur für die interne Verwendung.
 
-**Namespace:**  [Microsoft. ISAM. ESENT. Interop](./microsoft.isam.esent.interop-namespace.md)  
-**Assembly:**  Microsoft. ISAM. ESENT. Interop (in Microsoft.Isam.Esent.Interop.dll)
+**Namespace:**  [Microsoft.Isam.Esent.Interop](./microsoft.isam.esent.interop-namespace.md)  
+**Assembly:**  Microsoft.Isam.Esent.Interop (in Microsoft.Isam.Esent.Interop.dll)
 
 ## <a name="syntax"></a>Syntax
 
@@ -60,14 +60,14 @@ public bool fShadowingDisabled { get; internal set; }
 
 #### <a name="property-value"></a>Eigenschaftswert
 
-Typ: [System. Boolean](/dotnet/api/system.boolean)  
+Typ: [System.Boolean](/dotnet/api/system.boolean)  
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
-#### <a name="reference"></a>Referenz
+#### <a name="reference"></a>Verweis
 
 [JET_DBINFOMISC-Klasse](./jet-dbinfomisc-class.md)
 
-[Mitglieder JET_DBINFOMISC](./jet-dbinfomisc-members.md)
+[JET_DBINFOMISC Member](./jet-dbinfomisc-members.md)
 
-[Microsoft. ISAM. ESENT. Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)
+[Microsoft.Isam.Esent.Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)

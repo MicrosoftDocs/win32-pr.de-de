@@ -4,12 +4,12 @@ ms.assetid: ad67a6fb-4bb6-4550-a9e9-f5219f3868c6
 title: layerNumber-Element
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 33c33ee4468ab81f030bfd8b49dfe104bbe76248
-ms.sourcegitcommit: b6fe9acffad983c14864b8fe0296f6025cb1f961
+ms.openlocfilehash: 603815fc178cb02df0eeb33e6ad856076b99b8ea582574703078323b36ba1cbf
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2021
-ms.locfileid: "107995487"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119130772"
 ---
 # <a name="layernumber-element"></a>layerNumber-Element
 

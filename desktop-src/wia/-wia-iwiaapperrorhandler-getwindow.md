@@ -1,7 +1,7 @@
 ---
-description: Ruft ein Handle für das Dialogfeld ab, das Fehlermeldungen anzeigt und eine oder mehrere Schaltflächen zum Fortfahren, Abbrechen oder Abbrechen der Anwendung bereitstellt.
+description: Ruft ein Handle für das Dialogfeld ab, das Fehlermeldungen anzeigt und mindestens eine Schaltfläche zum Fortsetzen, Abbrechen oder Abbrechen der Anwendung bereitstellt.
 ms.assetid: 54deac2e-a395-45dc-b9f9-ecf8140fd9d7
-title: 'Iwiaapperrorhandler:: GetWindow-Methode (WIA. h)'
+title: IWiaAppErrorHandler::GetWindow-Methode (Wia.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -14,16 +14,16 @@ api_type:
 api_location:
 - Wiaguid.lib
 - Wiaguid.dll
-ms.openlocfilehash: 89a3b2bf87d99c767ab3bea46a27c8a53fab7825
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 1bac7ba2f2f9d394218d851f9bbe7939168c2abbc7df5fb8c57a52f29fa6e2b1
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106349428"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118965759"
 ---
-# <a name="iwiaapperrorhandlergetwindow-method"></a>Iwiaapperrorhandler:: GetWindow-Methode
+# <a name="iwiaapperrorhandlergetwindow-method"></a>IWiaAppErrorHandler::GetWindow-Methode
 
-Ruft ein Handle für das Dialogfeld ab, das Fehlermeldungen anzeigt und eine oder mehrere Schaltflächen zum Fortfahren, Abbrechen oder Abbrechen der Anwendung bereitstellt.
+Ruft ein Handle für das Dialogfeld ab, das Fehlermeldungen anzeigt und mindestens eine Schaltfläche zum Fortsetzen, Abbrechen oder Abbrechen der Anwendung bereitstellt.
 
 ## <a name="syntax"></a>Syntax
 
@@ -40,12 +40,12 @@ HRESULT GetWindow(
 
 <dl> <dt>
 
-*phwnd* \[ vorgenommen\]
+*phwnd* \[ out\]
 </dt> <dd>
 
-Geben Sie Folgendes ein: **HWND \** _
+Typ: **HWND\***
 
-HWND, das vom Anwendungsfehler Handler, dem Treiber Fehlerhandler und dem Standardfehler Handler für Geräte Meldungs Dialogfelder (Fehler und Information) verwendet wird. Der Ausgabewert ist möglicherweise _ * NULL * *.
+HWND, das vom Anwendungsfehlerhandler, vom Treiberfehlerhandler und vom Standardfehlerhandler für Gerätemeldungsdialogfelder (Fehler und Information) verwendet wird. Der Ausgabewert kann **NULL** sein.
 
 </dd> </dl>
 
@@ -53,11 +53,11 @@ HWND, das vom Anwendungsfehler Handler, dem Treiber Fehlerhandler und dem Standa
 
 Typ: **HRESULT**
 
-Wenn diese Methode erfolgreich ausgeführt wird, gibt Sie **S \_ OK** zurück. Andernfalls wird ein **HRESULT** -Fehlercode zurückgegeben.
+Wenn diese Methode erfolgreich ist, wird **S \_ OK** zurückgegeben. Andernfalls wird ein **HRESULT-Fehlercode** zurückgegeben.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-*phwnd* zeigt auf das Fenster, das vom Windows-Abbild Erfassungs Proxy (WIA) 2,0 an [**Report Status**](-wia-iwiaerrorhandler-reportstatus.md) weitergeleitet wird. Dieses Fenster muss für die Dauer der Datenübertragung gültig bleiben.
+*phwnd* zeigt auf das Fenster, das vom WIA 2.0-Proxy (Windows Image Acquisition) an [**ReportStatus**](-wia-iwiaerrorhandler-reportstatus.md) übergeben wird. Dieses Fenster muss für die Dauer der Datenübertragung gültig bleiben.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -65,11 +65,11 @@ Wenn diese Methode erfolgreich ausgeführt wird, gibt Sie **S \_ OK** zurück. A
 
 | Anforderung | Wert |
 |-------------------------------------|----------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>                                         |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2008 \[ -Desktop-Apps\]<br/>                                   |
-| Header<br/>                   | <dl> <dt>WIA. h</dt> </dl>       |
-| IDL<br/>                      | <dl> <dt>WIA. idl</dt> </dl>     |
-| Bibliothek<br/>                  | <dl> <dt>Wiaguid. lib</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows \[Nur Vista-Desktop-Apps\]<br/>                                         |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2008-Desktop-Apps\]<br/>                                   |
+| Header<br/>                   | <dl> <dt>Wia.h</dt> </dl>       |
+| Idl<br/>                      | <dl> <dt>Wia.idl</dt> </dl>     |
+| Bibliothek<br/>                  | <dl> <dt>Wiaguid.lib</dt> </dl> |
 
 
 

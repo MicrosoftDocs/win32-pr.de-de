@@ -1,47 +1,47 @@
 ---
-title: Aufzeichnen und Anzeigen von tracelogging-Ereignissen
-description: Aufzeichnen von tracelogging-Ereignissen mit Windows Performance Recorder (WPR) und Anzeigen dieser Ereignisse mit Windows Performance Analyzer (WPA).
+title: Aufzeichnen und Anzeigen von TraceLogging-Ereignissen
+description: Zeichnen Sie TraceLogging-Ereignisse mit dem Windows Performance Recorder (WPR) auf, und zeigen Sie sie mit dem Windows Leistungsanalyse (WPA) an.
 ms.assetid: 906589FA-F48D-4105-9E56-1EC8B86542FB
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 09be054d274fc2c2c62635cc7bf12e8cf8acdef3
-ms.sourcegitcommit: 592c9bbd22ba69802dc353bcb5eb30699f9e9403
+ms.openlocfilehash: 25c77c1a1759988252f57c1ec54dca77cffaa21832878ead6ba8a827df3329fa
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "103858450"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118966541"
 ---
-# <a name="record-and-view-tracelogging-events"></a>Aufzeichnen und Anzeigen von tracelogging-Ereignissen
+# <a name="record-and-view-tracelogging-events"></a>Aufzeichnen und Anzeigen von TraceLogging-Ereignissen
 
-Aufzeichnen von tracelogging-Ereignissen mit Windows Performance Recorder (WPR) und Anzeigen dieser Ereignisse mit Windows Performance Analyzer (WPA).
+Zeichnen Sie TraceLogging-Ereignisse mit dem Windows Performance Recorder (WPR) auf, und zeigen Sie sie mit dem Windows Leistungsanalyse (WPA) an.
 
 ## <a name="prerequisites"></a>Voraussetzungen
 
 -   Windows 10
--   Die Windows 10-Version von Windows Performance Recorder (WPR) und die Windows 10-Version von Windows Performance Analyzer (WPA), die Bestandteil des Windows® Assessment and Deployment Kit (Windows ADK) ist.
+-   Die Windows 10 Version von Windows Performance Recorder (WPR) und die Windows 10-Version von Windows Leistungsanalyse (WPA), die Teil des Windows® Assessment and Deployment Kit (Windows ADK) ist.
 
 > [!IMPORTANT]
-> Mit tracelogging erfasste Ablauf Verfolgungen müssen mit der Windows 10-Version von Windows Performance Recorder aufgezeichnet und mit der Windows 10-Version von Windows Performance Analyzer angezeigt werden. Wenn Sie Ihre Ereignisse nicht erfassen oder decodieren können, vergewissern Sie sich, dass Sie die Windows 10-Version der Tools verwenden.
+> Mit TraceLogging erfasste Ablaufverfolgungen müssen mit der Windows 10 Version von Windows Performance Recorder erfasst und mit der Windows 10 Version von Windows Leistungsanalyse angezeigt werden. Wenn Sie Ihre Ereignisse nicht erfassen oder decodieren können, überprüfen Sie, ob Sie die Windows 10 Version der Tools verwenden.
 
- 
+ 
 
-### <a name="1-capture-trace-data-with-wpr"></a>1. Erfassen von Ablauf Verfolgungs Daten mit WPR
+### <a name="1-capture-trace-data-with-wpr"></a>1. Erfassen von Ablaufverfolgungsdaten mit WPR
 
-Informationen zum Aufzeichnen einer Ablauf Verfolgung auf Windows Phone finden Sie unten unter Erfassen von tracelogging-Ereignissen auf Windows phone.
+Informationen zum Erfassen einer Ablaufverfolgung auf Windows Phone finden Sie unter Erfassen von TraceLogging-Ereignissen auf Windows Phone weiter unten.
 
-Erstellen Sie ein Windows Performance Recorder-Profil (. wprp), damit Sie die tracelogging-Ereignisse mithilfe von WPR erfassen können.
+Erstellen Sie ein Windows Performance Recorder-Profil (WPRP), damit Sie WPR zum Erfassen Ihrer Tracelogging-Ereignisse verwenden können.
 
-**Erstellen Sie eine. Wprp-Datei**
+**Erstellen Sie eine . WPRP-Datei**
 
-1.  Verwenden Sie das folgende wprp-Beispiel mit dem systemeigenen Codebeispiel in der [tracelogging-C/C++-Schnellstart](tracelogging-native-quick-start.md) oder dem verwalteten Beispiel im [verwalteten Schnellstart tracelogging](tracelogging-managed-quick-start.md). Wenn Sie Ereignisse von Ihrem eigenen Anbieter protokollieren, ersetzen Sie die `TODO` Abschnitte durch die entsprechenden Werte für Ihren Anbieter.
+1.  Verwenden Sie das folgende WPRP-Beispiel mit dem nativen Codebeispiel im [TraceLogging C/C++-Schnellstart](tracelogging-native-quick-start.md) oder dem verwalteten Beispiel im [traceLogging Managed Schnellstart](tracelogging-managed-quick-start.md). Wenn Sie Ereignisse von Ihrem eigenen Anbieter protokollieren, ersetzen Sie die `TODO` Abschnitte durch die entsprechenden Werte für Ihren Anbieter.
 
     > \[! Wichtig\]  
 
-     
+     
 
-    Wenn Sie den Schnellstart tracelogging C/C++ verwenden, geben Sie die Anbieter-GUID im- `Name` Attribut des- `<EventProvider>` Elements an. Beispiel: `<EventProvider Id="EventProvider_SimpleTraceLoggingProvider" Name="3970F9cf-2c0c-4f11-b1cc-e3a1e9958833" />`. Wenn Sie den Schnellstart Managed tracelogging verwenden, geben Sie im-Attribut des-Elements den Anbieter Namen an, dem "" vorangestellt ist \* `Name` `<EventProvider />` . Beispiel: `<EventProvider Name="*SimpleTraceLoggingProvider" />`.
+    Wenn Sie den TraceLogging C/C++-Schnellstart verwenden, geben Sie die Anbieter-GUID im `Name` -Attribut des `<EventProvider>` -Elements an. Beispiel: `<EventProvider Id="EventProvider_SimpleTraceLoggingProvider" Name="3970F9cf-2c0c-4f11-b1cc-e3a1e9958833" />`. Wenn Sie den verwalteten TraceLogging-Schnellstart verwenden, geben Sie den Anbieternamen vor " \* " im `Name` -Attribut des `<EventProvider />` -Elements an. Beispiel: `<EventProvider Name="*SimpleTraceLoggingProvider" />`.
 
-    Wprp-Beispieldatei.
+    WPRP-Beispieldatei.
 
     ```XML
     <?xml version="1.0" encoding="utf-8"?>
@@ -89,83 +89,83 @@ Erstellen Sie ein Windows Performance Recorder-Profil (. wprp), damit Sie die tr
 
     
 
-2.  Speichern Sie die Datei mit einem. Wprp-Dateinamenerweiterung.
-3.  Starten Sie die Erfassung mithilfe von WPR von einem Eingabe Aufforderungs Fenster mit erhöhten Rechten (als Administrator ausführen).
+2.  Speichern Sie die Datei mit einem . WPRP-Dateinamenerweiterung.
+3.  Starten Sie die Erfassung mit WPR in einem Eingabeaufforderungsfenster mit erhöhten Rechten (als Administrator ausführen).
 
-    **<path to wpr>\\wpr.exe-Start generalprofile-Start traceloggingprovider. wprp**
+    **<path to wpr>\\wpr.exe -start GeneralProfile -start TraceLoggingProvider.wprp**
 
-    > \[! PP\]  
-    > Für allgemeine profilerstellungszwecke können Sie auch **– Start generalprofile** zur wpr.exe Befehlszeile hinzufügen, um Systemereignisse zusammen mit den Ereignissen des Anbieters zu erfassen. Wenn Sie nur Ihre Ereignisse erfassen möchten, lassen Sie das **-Start-generalprofile** aus.
+    > \[! Tipp\]  
+    > Für allgemeine Profilerstellungszwecke können Sie auch **–start GeneralProfile** zur wpr.exe Befehlszeile hinzufügen, um Systemereignisse zusammen mit den Ereignissen ihres Anbieters zu erfassen. Wenn Sie nur Ihre Ereignisse erfassen möchten, lassen Sie **-start GeneralProfile aus.**
 
-     
+     
 
 4.  Führen Sie die Anwendung aus, die Ihre Ereignisse enthält.
-5.  Stoppt die Erfassung der Ablauf Verfolgung.
+5.  Beenden Sie die Ablaufverfolgungserfassung.
 
-    **<path to wpr>\\wpr.exe-Beschreibung der tracecapturefile. ETL-Beschreibung**
+    **<path to wpr>\\wpr.exe -stop TraceCaptureFile.etl description**
 
-    > \[! PP\]  
-    > Wenn Sie " **– Start generalprofile** " zum Erfassen von System Ereignissen hinzugefügt haben, fügen Sie " **generalprofile** " in der obigen **wpr.exe** Befehlszeile hinzu.
+    > \[! Tipp\]  
+    > Wenn Sie **–start GeneralProfile** hinzugefügt haben, um Systemereignisse zu sammeln, fügen Sie der **obigenwpr.exe** Befehlszeile **-stop GeneralProfile** hinzu.
 
-     
+     
 
-### <a name="2-capture-tracelogging-events-on-windows-phone"></a>2. Erfassen von tracelogging-Ereignissen auf Windows Phone
+### <a name="2-capture-tracelogging-events-on-windows-phone"></a>2. Erfassen von TraceLogging-Ereignissen auf Windows Phone
 
 <span id="capturephone"></span><span id="CAPTUREPHONE"></span>
 
-1.  Starten Sie tracelog, um Ereignisse von Ihrem Anbieter zu erfassen.
+1.  Starten Sie das Ablaufverfolgungsprotokoll, um Ereignisse von Ihrem Anbieter zu erfassen.
 
-    **cmdd tracelog-Start Test-f c: \\ Test. ETL-GUID \# ProviderGUID**
+    **cmdd tracelog -start test -f c: \\ test.etl -guid \# providerguid**
 
-2.  Führen Sie das Testszenario zum Protokollieren von Ereignissen aus.
-3.  Ablauf Verfolgungs Erfassung abbrechen.
+2.  Führen Sie Ihr Testszenario aus, um Ereignisse zu protokollieren.
+3.  Beenden Sie die Ablaufverfolgungserfassung.
 
-    **cmdd tracelog-Test abbrechen**
+    **cmdd tracelog -stop test**
 
-4.  Zusammenführen der Ergebnisse der System Ablauf Verfolgung mit den Ablauf Verfolgungs Ergebnissen.
+4.  Führen Sie die Ergebnisse der Systemablaufverfolgung mit ihren Ablaufverfolgungsergebnissen zusammen.
 
-    **cmdd XPerf-Merge c: \\ Test. ETL c: \\ testgemergt. ETL**
+    **cmdd xperf -merge c: \\ test.etl c: \\ testmerged.etl**
 
 5.  Rufen Sie die zusammengeführte Protokolldatei ab.
 
-    **getd c: \\ testgemergt. ETL**
+    **getd c: \\ testmerged.etl**
 
-### <a name="3-view-tracelogging-data-using-windows-performance-analyzer"></a>3. Anzeigen von Ablauf Verfolgungs Daten mithilfe von Windows Performance Analyzer.
+### <a name="3-view-tracelogging-data-using-windows-performance-analyzer"></a>3. Anzeigen von TraceLogging-Daten mit Windows Leistungsanalyse.
 
-WPA ist zurzeit der einzige Viewer, den Sie zum Anzeigen von tracelogging-Ablauf Verfolgungs Dateien (ETL-Dateien) verwenden können.
+WPA ist derzeit der einzige Viewer, den Sie zum Anzeigen von TraceLogging-Ablaufverfolgungsdateien (.etl) verwenden können.
 
 1.  Starten Sie WPA.
 
-    **<path to wpr>\\wpa.exe traceloggingresults. ETL**
+    **<path to wpr>\\wpa.exe traceLoggingResults.etl**
 
-2.  Laden Sie die Ablauf Verfolgungs Datei (. ETL), die Sie im obigen wpa.exe Befehl angegeben haben, z. b. traceloggingresults. ETL.
-3.  Sehen Sie sich die Anbieter Ereignisse an. Erweitern Sie im WPA Graph-Explorer die Option **System Aktivität**.
-4.  Doppelklicken Sie auf den Bereich **generische Ereignisse** , um die Ereignisse im Bereich **Analyse** anzuzeigen.
+2.  Laden Sie die Ablaufverfolgungsdatei (.etl), die Sie im obigen wpa.exe Befehl angegeben haben, z. B. traceLoggingResults.etl.
+3.  Zeigen Sie Die Anbieterereignisse an. Erweitern Sie im WPA Graph Explorer die Option **Systemaktivität**.
+4.  Doppelklicken Sie auf den Bereich **Generische Ereignisse,** um die Ereignisse im **Analysebereich** anzuzeigen.
 
-    ![generische Ereignisse erweitern](images/expandsystemactivity.png)
+    ![Generische Ereignisse erweitern](images/expandsystemactivity.png)
 
-5.  Suchen Sie im Analysebereich nach den Ereignissen des Anbieters, um zu überprüfen, ob tracelogging funktioniert.
+5.  Suchen Sie im Analysebereich nach den Ereignissen ihres Anbieters, um zu überprüfen, ob TraceLogging funktioniert.
 
-    Suchen Sie in der Spalte **Anbieter Name** der Tabelle **generische Ereignisse** die Zeile mit dem Anbieter Namen, und wählen Sie Sie aus.
+    Suchen Sie in der Spalte **Anbietername** der Tabelle **Generische Ereignisse** die Zeile mit ihrem Anbieternamen, und wählen Sie sie aus.
 
-    Wenn Sie über mehrere zu sortierende Anbieter verfügen, klicken Sie auf die Spaltenüberschrift, um nach Spaltennamen zu sortieren. Dies erleichtert die Suche nach Ihrem Anbieter.
+    Wenn Mehrere Anbieter sortiert werden müssen, klicken Sie auf die Spaltenüberschrift, um nach Spaltenname zu sortieren, was die Suche nach Ihrem Anbieter erleichtern kann.
 
-    Wenn Sie Ihren Anbieter gefunden haben, klicken Sie mit der rechten Maustaste auf den Namen, und wählen Sie **zur Auswahl Filtern**.
+    Wenn Sie Ihren Anbieter finden, klicken Sie mit der rechten Maustaste auf den Namen, und wählen **Sie Nach Auswahl filtern** aus.
 
-    ![Auswahl an Anbieter Filtern](images/filtertoselection.png)
+    ![Filterauswahl zum Anbieter](images/filtertoselection.png)
 
-    Das-Ereignis für simpletraceloggingprovider und dessen Wert werden im unteren Bereich des Analyse Fensters angezeigt. Erweitern Sie den Anbieter Namen, um die Ereignisse anzuzeigen.
+    Das Ereignis für SimpleTraceLoggingProvider und seinen Wert wird im unteren Bereich des Analysefensters angezeigt. Erweitern Sie den Anbieternamen, um die Ereignisse anzuzeigen.
 
-    ![Anzeigen des Ereignisses von simpletraceloggingprovider](images/eventview.png)
+    ![Anzeigen des Ereignisses aus simpletraceloggingprovider](images/eventview.png)
 
-    Weitere Informationen zur Verwendung von WPA finden Sie unter [Windows Performance Analyzer](/previous-versions/windows/it-pro/windows-8.1-and-8/hh448170(v=win.10)).
+    Weitere Informationen zur Verwendung von WPA finden Sie unter [Windows Leistungsanalyse](/previous-versions/windows/it-pro/windows-8.1-and-8/hh448170(v=win.10)).
 
 ## <a name="summary-and-next-steps"></a>Zusammenfassung und nächste Schritte
 
-Der Prozess zum Aufzeichnen und Anzeigen von ETW-Ereignissen mithilfe von WPR und WPA gilt auch für tracelogging-Ereignisse.
+Der Prozess zum Aufzeichnen und Anzeigen von ETW-Ereignissen mit WPR und WPA gilt ebenso gut für TraceLogging-Ereignisse.
 
-Weitere Beispiele für tracelogging finden Sie unter [C/C++ tracelogging-Beispiele](tracelogging-c-cpp-tracelogging-examples.md) .
+Weitere TraceLogging-Beispiele finden Sie unter [C/C++-Beispiele](tracelogging-c-cpp-tracelogging-examples.md) für die Ablaufverfolgung.
 
- 
+ 
 
- 
+ 
