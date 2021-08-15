@@ -1,9 +1,9 @@
 ---
-title: Runonlyifnetworkavailable (settingstype)-Element
-description: Gibt an, dass der Taskplaner die Aufgabe nur dann ausgeführt wird, wenn ein Netzwerk verfügbar ist.
+title: RunOnlyIfNetworkAvailable -Element (settingsType)
+description: Gibt an, dass die Taskplaner den Task nur dann ausführen, wenn ein Netzwerk verfügbar ist.
 ms.assetid: b7b804d3-b31a-4d70-9ba5-805a285e278e
 keywords:
-- Runonlyifnetworkavailable-Element Taskplaner
+- RunOnlyIfNetworkAvailable-Element Taskplaner
 topic_type:
 - apiref
 api_name:
@@ -13,16 +13,16 @@ api_type:
 ms.topic: reference
 ms.date: 05/31/2018
 api_location: ''
-ms.openlocfilehash: 7ff1e7c838c142e30b75eb4abb935c0de352d9f7
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: a3680ba3c29dc0d258a48aa16ae7923e3761eda30f198384fecfbf238e2933cb
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "103956959"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119991030"
 ---
-# <a name="runonlyifnetworkavailable-settingstype-element"></a>Runonlyifnetworkavailable (settingstype)-Element
+# <a name="runonlyifnetworkavailable-settingstype-element"></a>RunOnlyIfNetworkAvailable -Element (settingsType)
 
-Gibt an, dass der Taskplaner die Aufgabe nur dann ausgeführt wird, wenn ein Netzwerk verfügbar ist.
+Gibt an, dass die Taskplaner den Task nur dann ausführen, wenn ein Netzwerk verfügbar ist.
 
 ``` syntax
 <xs:element name="RunOnlyIfNetworkAvailable"
@@ -32,7 +32,7 @@ Gibt an, dass der Taskplaner die Aufgabe nur dann ausgeführt wird, wenn ein Net
  />
 ```
 
-Das **runonlyifnetworkavailable** -Element wird durch den komplexen [**settingstype**](taskschedulerschema-settingstype-complextype.md) -Typ definiert.
+Das **RunOnlyIfNetworkAvailable-Element** wird durch den komplexen [**SettingsType-Typ**](taskschedulerschema-settingstype-complextype.md) definiert.
 
 ## <a name="parent-element"></a>Übergeordnetes Element
 
@@ -40,19 +40,19 @@ Das **runonlyifnetworkavailable** -Element wird durch den komplexen [**settingst
 
 | Element                                                           | Abgeleitet von                                                         | BESCHREIBUNG                                                                        |
 |-------------------------------------------------------------------|----------------------------------------------------------------------|------------------------------------------------------------------------------------|
-| [**Einstellungen**](taskschedulerschema-settings-tasktype-element.md) | [**settingstype**](taskschedulerschema-settingstype-complextype.md) | Enthält die Einstellungen, die der Taskplaner verwendet, um die Aufgabe auszuführen.<br/> |
+| [**Einstellungen**](taskschedulerschema-settings-tasktype-element.md) | [**settingsType**](taskschedulerschema-settingstype-complextype.md) | Enthält die Einstellungen, die der Taskplaner zum Ausführen der Aufgabe verwendet.<br/> |
 
 
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Informationen zur C++-Entwicklung finden Sie unter [**der runonlyifnetworkavailable-Eigenschaft von itasksettings**](/windows/desktop/api/taskschd/nf-taskschd-itasksettings-get_runonlyifnetworkavailable).
+Informationen zur C++-Entwicklung finden Sie unter [**RunOnlyIfNetworkAvailable-Eigenschaft von ITaskSettings.**](/windows/desktop/api/taskschd/nf-taskschd-itasksettings-get_runonlyifnetworkavailable)
 
-Informationen zur Skript Entwicklung finden Sie unter [**tasksettings. runonlyifnetworkavailable**](tasksettings-runonlyifnetworkavailable.md).
+Informationen zur Skriptentwicklung finden Sie unter [**TaskSettings.RunOnlyIfNetworkAvailable**](tasksettings-runonlyifnetworkavailable.md).
 
 ## <a name="examples"></a>Beispiele
 
-Der folgende XML-Code definiert ein settings-Element, das es ermöglicht, dass der Task nur gestartet wird, wenn ein Netzwerk verfügbar ist.
+Der folgende XML-Code definiert ein Einstellungselement, mit dem der Task nur gestartet werden kann, wenn ein Netzwerk verfügbar ist.
 
 
 ```XML
@@ -69,16 +69,16 @@ Der folgende XML-Code definiert ein settings-Element, das es ermöglicht, dass d
 
 | Anforderung | Wert |
 |-------------------------------------|------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>       |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2008 \[ -Desktop-Apps\]<br/> |
+| Unterstützte Mindestversion (Client)<br/> | Windows \[Nur Vista-Desktop-Apps\]<br/>       |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2008-Desktop-Apps\]<br/> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[Schema Elemente Taskplaner](task-scheduler-schema-elements.md)
+[Taskplaner Schemaelemente](task-scheduler-schema-elements.md)
 </dt> </dl>
 
  

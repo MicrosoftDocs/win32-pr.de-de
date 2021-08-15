@@ -1,10 +1,10 @@
 ---
-title: Ivmmouse-Schnittstelle (vpccominterfaces. h)
-description: Steuert das Mausgerät innerhalb einer VM.
+title: IVMMouse-Schnittstelle (VPCCOMInterfaces.h)
+description: Steuert das Mausgerät innerhalb eines virtuellen Computers.
 ms.assetid: 13bbf980-aafd-4c63-b1cb-60f00b738d1f
 keywords:
-- Ivmmouse Interface Virtual PC
-- Virtueller Computer für ivmmouse Interface, beschrieben
+- IVMMouse-Schnittstelle Virtueller PC
+- IVMMouse-Schnittstelle Virtueller PC , beschrieben
 topic_type:
 - apiref
 api_name:
@@ -15,37 +15,37 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 7041b8a28b924ffedc8ff23edd2b04afdaa78be2
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 912365065b639f3c970390746c8e23ae1fc33648ecdf14278365290c503da26d
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "103859182"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118998850"
 ---
-# <a name="ivmmouse-interface"></a>Ivmmouse-Schnittstelle
+# <a name="ivmmouse-interface"></a>IVMMouse-Schnittstelle
 
-\[Windows Virtual PC ist nicht mehr für die Verwendung ab Windows 8 verfügbar. Verwenden Sie stattdessen den [Hyper-V-WMI-Anbieter (v2)](/windows/desktop/HyperV_v2/windows-virtualization-portal).\]
+\[Windows Der virtuelle PC ist ab diesem Zeitraum nicht mehr Windows 8. Verwenden Sie stattdessen den [Hyper-V-WMI-Anbieter (V2).](/windows/desktop/HyperV_v2/windows-virtualization-portal)\]
 
-Steuert das Mausgerät innerhalb eines virtuellen Computers (VM). Das **ivmmouse** für eine virtuelle Maschine kann mithilfe der [**ivmvirtualmachine:: Mouse**](ivmvirtualmachine-mouse.md) -Eigenschaft abgerufen werden. Koordinaten für das Mausgerät können entweder in absoluten Koordinaten oder in Delta Koordinaten dargestellt werden. Verwenden Sie die [**usingabsolutekoordinaten**](ivmmouse-usingabsolutecoordinates.md) -Eigenschaft, um zwischen den beiden Methoden der Koordinaten Darstellung zu unterscheiden. Beachten Sie, dass das Abrufen der aktuellen Cursorposition und der Verwendung absoluter Koordinaten nur unterstützt wird, wenn auf dem Gast Betriebssystem die-Integrations Komponenten installiert sind.
+Steuert das Mausgerät innerhalb eines virtuellen Computers (VM). Die **IVMMouse** für einen virtuellen Computer kann mithilfe der [**IVMVirtualMachine::Mouse-Eigenschaft abgerufen**](ivmvirtualmachine-mouse.md) werden. Koordinaten für das Mausgerät können entweder in absoluten Koordinaten oder in Deltakoordinaten dargestellt werden. Verwenden Sie [**die UsingAbsoluteCoordinates-Eigenschaft,**](ivmmouse-usingabsolutecoordinates.md) um zwischen den beiden Methoden der Koordinatendarstellung zu unterscheiden. Beachten Sie, dass das Abrufen der aktuellen Cursorposition und die Verwendung absoluter Koordinaten nur unterstützt werden, wenn auf dem Gastbetriebssystem die Integrationskomponenten installiert sind.
 
 ## <a name="members"></a>Member
 
-Die **ivmmouse** -Schnittstelle erbt von der [**IDispatch**](/windows/win32/api/oaidl/nn-oaidl-idispatch) -Schnittstelle. **Ivmmouse** verfügt auch über die folgenden Typen von Membern:
+Die **IVMMouse-Schnittstelle** erbt von der [**IDispatch-Schnittstelle.**](/windows/win32/api/oaidl/nn-oaidl-idispatch) **IVMMouse** verfügt auch über diese Typen von Membern:
 
 -   [Methoden](#methods)
 -   [Eigenschaften](#properties)
 
 ### <a name="methods"></a>Methoden
 
-Die **ivmmouse** -Schnittstelle verfügt über diese Methoden.
+Die **IVMMouse-Schnittstelle** verfügt über diese Methoden.
 
 
 
 | Methode                                  | BESCHREIBUNG                                                                        |
 |:----------------------------------------|:-----------------------------------------------------------------------------------|
-| [**Sie**](ivmmouse-click.md)         | Simuliert das Klicken auf die Maustaste.<br/>                                         |
-| [**Getbutton**](ivmmouse-getbutton.md) | Ruft den aktuellen Zustand (nach oben oder unten) der angegebenen Maustaste ab.<br/> |
-| [**Setbutton**](ivmmouse-setbutton.md) | Legt den aktuellen Zustand (nach oben oder unten) der angegebenen Maustaste fest.<br/>      |
+| [**Klicken**](ivmmouse-click.md)         | Simuliert einen Mausklick.<br/>                                         |
+| [**GetButton**](ivmmouse-getbutton.md) | Ruft den aktuellen Zustand (nach oben oder unten) der angegebenen Maustaste ab.<br/> |
+| [**SetButton**](ivmmouse-setbutton.md) | Legt den aktuellen Zustand (nach oben oder unten) der angegebenen Maustaste fest.<br/>      |
 
 
 
@@ -53,15 +53,15 @@ Die **ivmmouse** -Schnittstelle verfügt über diese Methoden.
 
 ### <a name="properties"></a>Eigenschaften
 
-Die **ivmmouse** -Schnittstelle verfügt über diese Eigenschaften.
+Die **IVMMouse-Schnittstelle** verfügt über diese Eigenschaften.
 
 
 
 | Eigenschaft                                                                         | Zugriffstyp           | BESCHREIBUNG                                                                                |
 |:---------------------------------------------------------------------------------|:----------------------|:-------------------------------------------------------------------------------------------|
 | [**HorizontalPosition**](ivmmouse-horizontalposition.md)<br/>             | Lesen/Schreiben<br/> | Die absolute x-Koordinate der Maus.<br/>                                         |
-| [**Scrollwheelposition**](ivmmouse-scrollwheelposition.md)<br/>           | Lesegeschützt<br/> | Die z-Koordinate der Maus (nur relativ).<br/>                                  |
-| [**Usingabsolutekoordinaten**](ivmmouse-usingabsolutecoordinates.md)<br/> | Lesen/Schreiben<br/> | Gibt an, ob Maus Koordinaten absolute oder relative Koordinaten darstellen.<br/> |
+| [**ScrollWheelPosition**](ivmmouse-scrollwheelposition.md)<br/>           | Lesegeschützt<br/> | Die Z-Koordinate der Maus (nur relativ).<br/>                                  |
+| [**UsingAbsoluteCoordinates**](ivmmouse-usingabsolutecoordinates.md)<br/> | Lesen/Schreiben<br/> | Gibt an, ob Mauskoordinaten absolute oder relative Koordinaten darstellen.<br/> |
 | [**VerticalPosition**](ivmmouse-verticalposition.md)<br/>                 | Lesen/Schreiben<br/> | Die absolute y-Koordinate der Maus.<br/>                                         |
 
 
@@ -74,12 +74,12 @@ Die **ivmmouse** -Schnittstelle verfügt über diese Eigenschaften.
 
 | Anforderung | Wert |
 |-------------------------------------|-----------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows 7 \[ -Desktop-Apps\]<br/>                                                    |
+| Unterstützte Mindestversion (Client)<br/> | Windows 7 \[ Desktop-Apps\]<br/>                                                    |
 | Unterstützte Mindestversion (Server)<br/> | Nicht unterstützt<br/>                                                                     |
 | Ende des Supports (Client)<br/>    | Windows 7<br/>                                                                          |
-| Produkt<br/>                  | Windows Virtual PC<br/>                                                                 |
-| Header<br/>                   | <dl> <dt>Vpccominterfaces. h</dt> </dl> |
-| IID<br/>                      | IID \_ ivmmouse ist als ac903f6d-6346-4f29-8875-5d511a13895e definiert.<br/>                   |
+| Product (Produkt)<br/>                  | Windows Virtual PC<br/>                                                                 |
+| Header<br/>                   | <dl> <dt>VPCCOMInterfaces.h</dt> </dl> |
+| IID<br/>                      | IID \_ IVMmouse ist als ac903f6d-6346-4f29-8875-5d511a13895e definiert.<br/>                   |
 
 
 

@@ -1,5 +1,5 @@
 ---
-description: Die benutzerfreundliche Form von System.Photo.GainControl. Nicht vorgesehen, programmgesteuert analysiert zu werden.
+description: Die benutzerfreundliche Form von System.Photo.GainControl. Nicht beabsichtigt, programmgesteuert analysiert zu werden.
 ms.assetid: 18fd47dc-b428-4ada-aee5-e696e23c1f26
 title: System.Photo.GainControlText
 ms.topic: article
@@ -13,7 +13,7 @@ ms.locfileid: "118228724"
 ---
 # <a name="systemphotogaincontroltext"></a>System.Photo.GainControlText
 
-Die benutzerfreundliche Form von [System.Photo.GainControl](./props-system-photo-gaincontrol.md). Nicht vorgesehen, programmgesteuert analysiert zu werden.
+Die benutzerfreundliche Form von [System.Photo.GainControl.](./props-system-photo-gaincontrol.md) Nicht beabsichtigt, programmgesteuert analysiert zu werden.
 
 ## <a name="windows-10-version-1703-windows-10-version-1607-windows-10-version-1511-windows-10-version-1507-windows-81-windows-8-windows-7-windows-vista"></a>Windows 10, Version 1703, Windows 10, Version 1607, Windows 10, Version 1511, Windows 10, Version 1507, Windows 8.1, Windows 8, Windows 7, Windows Vista
 

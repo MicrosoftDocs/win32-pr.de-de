@@ -1,5 +1,5 @@
 ---
-description: Die GetTransAtTime-Methode ruft den Übergang ab, der der angegebenen Zeit entsprechend den angegebenen Begrenzungsbedingungen am nächsten ist.
+description: Die GetTransAtTime-Methode ruft den Übergang ab, der der angegebenen Zeit am nächsten liegt, gemäß den angegebenen Begrenzungsbedingungen.
 ms.assetid: 33b3686b-5a9d-4eb2-bd40-4d6f569e7d89
 title: IAMTimelineTransable::GetTransAtTime-Methode (Qedit.h)
 ms.topic: reference
@@ -24,11 +24,11 @@ ms.locfileid: "118399207"
 # <a name="iamtimelinetransablegettransattime-method"></a>IAMTimelineTransable::GetTransAtTime-Methode
 
 > [!Note]  
-> \[Veraltet. Diese API kann aus zukünftigen Releases von Windows entfernt werden.\]
+> \[Veraltet. Diese API wird möglicherweise aus zukünftigen Releases von Windows.\]
 
  
 
-Die `GetTransAtTime` -Methode ruft den Übergang ab, der der angegebenen Zeit am nächsten ist, entsprechend den angegebenen Begrenzungsbedingungen.
+Die -Methode ruft den Übergang ab, der der angegebenen Zeit am nächsten `GetTransAtTime` liegt, entsprechend den angegebenen Begrenzungsbedingungen.
 
 ## <a name="syntax"></a>Syntax
 
@@ -50,7 +50,7 @@ HRESULT GetTransAtTime(
 *ppObj* \[ out\]
 </dt> <dd>
 
-Empfängt einen Zeiger auf die [**IAMTimelineObj-Schnittstelle**](iamtimelineobj.md) des Übergangs.
+Empfängt einen Zeiger auf die [**IAMTimelineObj-Schnittstelle des**](iamtimelineobj.md) Übergangs.
 
 </dd> <dt>
 
@@ -64,7 +64,7 @@ Die Zeit, ab der mit der Suche begonnen werden soll, in Einheiten von 100 Nanose
 *SearchDirection* 
 </dt> <dd>
 
-Member des [**DEXTERF \_ TRACK SEARCH \_ \_ FLAGS-Enumerationstyps,**](dexterf-track-search-flags.md) der die Begrenzungsbedingungen für die Suche angibt.
+Member des [**aufzählten DEXTERF \_ TRACK SEARCH \_ \_ FLAGS-Typs,**](dexterf-track-search-flags.md) der die Begrenzungsbedingungen für die Suche angibt.
 
 </dd> </dl>
 
@@ -79,7 +79,7 @@ Gibt einen der folgenden **HRESULT-Werte** zurück:
 | <dl> <dt>**S \_ FALSE**</dt> </dl>      | Es wurde kein Übergang gefunden.<br/>   |
 | <dl> <dt>**S \_ OK**</dt> </dl>         | Der Übergang wurde gefunden.<br/>      |
 | <dl> <dt>**E \_ INVALIDARG**</dt> </dl> | Ungültiges Argument.<br/>          |
-| <dl> <dt>**E \_ POINTER**</dt> </dl>    | **NULL-Zeigerargument.**<br/> |
+| <dl> <dt>**\_E-ZEIGER**</dt> </dl>    |  NULL-Zeigerargument.<br/> |
 
 
 
@@ -87,15 +87,15 @@ Gibt einen der folgenden **HRESULT-Werte** zurück:
 
 ## <a name="remarks"></a>Hinweise
 
-Wenn die Methode S \_ OK zurückgibt, verfügt die **zurückgegebene IAMTimelineObj-Schnittstelle** über einen ausstehenden Verweiszähler. Stellen Sie sicher, dass Sie die Schnittstelle freigeben, wenn Sie sie nicht mehr verwenden.
+Wenn die Methode S \_ OK zurückgibt, verfügt **die IAMTimelineObj-Schnittstelle,** die sie zurückgibt, über eine ausstehende Verweisanzahl. Stellen Sie sicher, dass Sie die -Schnittstelle wieder frei geben, wenn Sie sie nicht mehr verwenden.
 
 > [!Note]  
-> Die Headerdatei Qedit.h ist nicht mit Direct3D-Headern kompatibel, die höher als Version 7 sind.
+> Die Headerdatei Qedit.h ist nicht mit Direct3D-Headern nach Version 7 kompatibel.
 
  
 
 > [!Note]  
-> Laden Sie zum Abrufen von Qedit.h das [Microsoft Windows SDK-Update für Windows Vista und .NET Framework 3.0](https://msdn.microsoft.com/windowsvista/bb980924.aspx)herunter. Qedit.h ist im Microsoft Windows SDK für Windows 7 und .NET Framework 3.5 Service Pack 1 nicht verfügbar.
+> Um Qedit.h zu erhalten, laden Sie das [Microsoft Windows SDK-Update für Windows Vista und .NET Framework 3.0 herunter.](https://msdn.microsoft.com/windowsvista/bb980924.aspx) Qedit.h ist im Microsoft Windows SDK für Windows 7 und .NET Framework 3.5 Service Pack 1 nicht verfügbar.
 
  
 

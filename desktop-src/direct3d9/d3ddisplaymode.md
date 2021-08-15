@@ -1,7 +1,7 @@
 ---
 description: Beschreibt den Anzeigemodus.
 ms.assetid: e83c03ee-2067-45c9-8fd8-8c4db5558df4
-title: D3DDISPLAYMODE-Struktur (D3D9Types. h)
+title: D3DDISPLAYMODE-Struktur (D3D9Types.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,12 +13,12 @@ api_type:
 - HeaderDef
 api_location:
 - D3D9Types.h
-ms.openlocfilehash: 8bf73899742f02a9682a3a27319768db894fd682
-ms.sourcegitcommit: 14010c34b35fa268046c7683f021f86de08ddd0a
+ms.openlocfilehash: 9879a9711466d3fb5f6aa4117a9aaf3b8a10fe13886cffa8d7ee9b81c00b0b00
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "104132309"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119987480"
 ---
 # <a name="d3ddisplaymode-structure"></a>D3DDISPLAYMODE-Struktur
 
@@ -45,7 +45,7 @@ typedef struct D3DDISPLAYMODE {
 **Width**
 </dt> <dd>
 
-Typ: **[ **uint**](../winprog/windows-data-types.md)**
+Typ: **[ **UINT**](../winprog/windows-data-types.md)**
 
 </dd> <dd>
 
@@ -56,7 +56,7 @@ Bildschirmbreite in Pixel.
 **Height**
 </dt> <dd>
 
-Typ: **[ **uint**](../winprog/windows-data-types.md)**
+Typ: **[ **UINT**](../winprog/windows-data-types.md)**
 
 </dd> <dd>
 
@@ -67,11 +67,11 @@ Bildschirmhöhe in Pixel.
 **RefreshRate**
 </dt> <dd>
 
-Typ: **[ **uint**](../winprog/windows-data-types.md)**
+Typ: **[ **UINT**](../winprog/windows-data-types.md)**
 
 </dd> <dd>
 
-Aktualisierungsrate. Der Wert 0 gibt einen Adapter Standard an.
+Bildwiederholrate. Der Wert 0 gibt einen Adapterstandard an.
 
 </dd> <dt>
 
@@ -82,7 +82,7 @@ Typ: **[D3DFORMAT](d3dformat.md)**
 
 </dd> <dd>
 
-Member des [D3DFORMAT](d3dformat.md) -Enumerationstyps, der das Oberflächen Format des Anzeigemodus beschreibt.
+Member des [D3DFORMAT-Enumerationstyps,](d3dformat.md) der das Oberflächenformat des Anzeigemodus beschreibt.
 
 </dd> </dl>
 
@@ -92,24 +92,24 @@ Member des [D3DFORMAT](d3dformat.md) -Enumerationstyps, der das Oberflächen For
 
 | Anforderung | Wert |
 |-------------------|----------------------------------------------------------------------------------------|
-| Header<br/> | <dl> <dt>D3D9Types. h</dt> </dl> |
+| Header<br/> | <dl> <dt>D3D9Types.h</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
 [Direct3D-Strukturen](dx9-graphics-reference-d3d-structures.md)
 </dt> <dt>
 
-[**Enumadaptermodes**](/windows/win32/api/d3d9/nf-d3d9-idirect3d9-enumadaptermodes)
+[**EnumAdapterModes**](/windows/win32/api/d3d9/nf-d3d9-idirect3d9-enumadaptermodes)
 </dt> <dt>
 
-[**Getadapterdisplaymode**](/windows/win32/api/d3d9/nf-d3d9-idirect3d9-getadapterdisplaymode)
+[**GetAdapterDisplayMode**](/windows/win32/api/d3d9/nf-d3d9-idirect3d9-getadapterdisplaymode)
 </dt> <dt>
 
-[**Getdisplaymode**](/windows/win32/api/d3d9helper/nf-d3d9helper-idirect3ddevice9-getdisplaymode)
+[**GetDisplayMode**](/windows/win32/api/d3d9helper/nf-d3d9helper-idirect3ddevice9-getdisplaymode)
 </dt> </dl>
 
  

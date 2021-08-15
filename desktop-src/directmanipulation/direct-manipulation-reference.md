@@ -1,28 +1,28 @@
 ---
-description: Die Themen in diesem Abschnitt enthalten die Referenz Spezifikationen für die direkte Bearbeitung.
+description: Die Themen in diesem Abschnitt enthalten die Referenzspezifikationen für die direkte Bearbeitung.
 ms.assetid: D9AEDA9D-D6EB-4567-8C12-362DA0F17667
-title: Verweis auf direkte Manipulation
+title: Referenz zur direkten Bearbeitung
 ms.topic: article
 ms.date: 02/03/2020
-ms.openlocfilehash: a9845d030fdb577b5c5f959207224c2636560263
-ms.sourcegitcommit: a47bd86f517de76374e4fff33cfeb613eb259a7e
+ms.openlocfilehash: c0780677c213a57dcf3abac6dbfb2be8fb5aa7f6ad73eb334b82a93eedcea635
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/06/2021
-ms.locfileid: "106343554"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118504305"
 ---
-# <a name="direct-manipulation-reference"></a>Verweis auf direkte Manipulation
+# <a name="direct-manipulation-reference"></a>Referenz zur direkten Bearbeitung
 
-Die Themen in diesem Abschnitt enthalten die Referenz Spezifikationen für die [direkte Bearbeitung](direct-manipulation-portal.md).
+Die Themen in diesem Abschnitt enthalten die Referenzspezifikationen für [direkte Manipulation.](direct-manipulation-portal.md)
 
 ## <a name="in-this-section"></a>In diesem Abschnitt
 
 | Thema                                                                               | BESCHREIBUNG                                                                                                                                                  |
 |-------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| [**Direkte Manipulations Konstanten**](direct-manipulation-constants.md)<br/>   | Dieser Abschnitt enthält die Referenz Spezifikationen für [direkte Manipulations](direct-manipulation-portal.md) Konstanten.<br/>                           |
-| [GUIDs für direkte Manipulation](direct-manipulation-guids.md)<br/>               | Die folgenden GUIDs der [direkten Manipulations](direct-manipulation-portal.md) Klasse sind in "directmanipulation. idl" definiert.<br/>                            |
-| [Direkte Manipulations Enumerationen](direct-manipulation-enumerations.md)<br/> | Die in diesem Abschnitt enthaltenen Themen enthalten die Referenz Spezifikationen für Enumerationen von [direkten Manipulationen](direct-manipulation-portal.md) .<br/> |
-| [Schnittstellen für direkte Manipulation](direct-manipulation-interfaces.md)<br/>     | Die Themen in diesem Abschnitt enthalten die Referenz Spezifikationen für [direkte Manipulations](direct-manipulation-portal.md) Schnittstellen. <br/>  |
+| [**Direkte Manipulationskonstanten**](direct-manipulation-constants.md)<br/>   | Dieser Abschnitt enthält die Referenzspezifikationen für Direkte Manipulationskonstanten. [](direct-manipulation-portal.md)<br/>                           |
+| [GUIDs für die direkte Bearbeitung](direct-manipulation-guids.md)<br/>               | Die folgenden GUIDs der [Direct Manipulation-Klasse](direct-manipulation-portal.md) sind in DirectManipulation.idl definiert.<br/>                            |
+| [Direkte Manipulationsenumerationen](direct-manipulation-enumerations.md)<br/> | Die in diesem Abschnitt enthaltenen Themen enthalten die Referenzspezifikationen für Direkte Manipulationsenumerationen. [](direct-manipulation-portal.md)<br/> |
+| [Schnittstellen für die direkte Bearbeitung](direct-manipulation-interfaces.md)<br/>     | Die in diesem Abschnitt enthaltenen Themen enthalten die Referenzspezifikationen für Schnittstellen für [die direkte Bearbeitung.](direct-manipulation-portal.md) <br/>  |
 
 ## <a name="related-topics"></a>Zugehörige Themen
 

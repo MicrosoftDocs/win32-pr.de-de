@@ -13,7 +13,7 @@ ms.locfileid: "118538004"
 ---
 # <a name="cloning-an-effect"></a>Klonen eines Effekts
 
-Beim Klonen eines Effekts wird eine zweite, fast identische Kopie des Effekts erstellt. Im folgenden einzelnen Qualifizierer finden Sie eine Erklärung, warum er nicht genau ist. Eine zweite Kopie eines Effekts ist nützlich, wenn das Effektframework auf mehreren Threads verwendet werden soll, da die Effektlaufzeit nicht threadsicher ist, um eine hohe Leistung zu gewährleisten.
+Beim Klonen eines Effekts wird eine zweite, fast identische Kopie des Effekts erstellt. Im folgenden einzelnen Qualifizierer finden Sie eine Erklärung, warum er nicht genau ist. Eine zweite Kopie eines Effekts ist nützlich, wenn das Effektframework für mehrere Threads verwendet werden soll, da die Effektlaufzeit nicht threadsicher ist, um eine hohe Leistung zu gewährleisten.
 
 Da Gerätekontexte auch nicht threadsicher sind, sollten verschiedene Threads unterschiedliche Gerätekontexte an die ID3DX11EffectPass::Apply-Methode übergeben.
 
@@ -49,7 +49,7 @@ Die folgenden Direct3D 11-Geräteobjekte sind sowohl unveränderlich als auch vo
 
 ## <a name="single-constant-buffers-and-texture-buffers"></a>Einzelne Konstantenpuffer und Texturpuffer
 
-Beachten Sie, dass diese Diskussion sowohl für konstante Puffer als auch für Texturen gilt, aber es wird davon ausgegangen, dass konstanten Puffern das Lesen erleichtert.
+Beachten Sie, dass diese Diskussion sowohl für konstante Puffer als auch für Texturen gilt, aber es wird davon ausgegangen, dass konstante Puffer das Lesen erleichtern.
 
 Es kann Fälle geben, in denen ein konstanter Puffer nur von einem Thread aktualisiert wird, aber der durch geklonte Effekte festgelegte Gerätezustand diese Daten verwendet. Der Haupteffekt kann z. B. die Welt- und Ansichtsmatrizen aktualisieren, auf die von Shadern in geklonten Effekten verwiesen wird, die die Welt- und Ansichtsmatrizen nicht ändern. In diesen Fällen müssen die geklonten Effekte auf den aktuellen konstanten Puffer verweisen, anstatt einen neu zu erstellen.
 
@@ -76,7 +76,7 @@ single cbuffer ViewData
 
 
 
-Beim Klonen erstellt der geklonte Effekt einen neuen ID3D11Buffer für ObjectData und füllt seinen Inhalt auf Anwenden aus, verweist aber auf den ursprünglichen ID3D11Buffer für ViewData. Der einzelne Qualifizierer kann beim Klonen ignoriert werden, indem das Flag D3DX11 EFFECT CLONE FORCE NONSINGLE (D3DX11 \_ EFFECT CLONE FORCE \_ \_ \_ NONSINGLE) festlegen.
+Beim Klonen erstellt der geklonte Effekt einen neuen ID3D11Buffer für ObjectData und füllt seinen Inhalt auf Anwenden aus, verweist aber auf den ursprünglichen ID3D11Buffer für ViewData. Der einzelne Qualifizierer kann beim Klonen ignoriert werden, indem das Flag D3DX11 \_ EFFECT \_ CLONE FORCE \_ \_ NONSINGLE festlegen.
 
 ## <a name="related-topics"></a>Zugehörige Themen
 

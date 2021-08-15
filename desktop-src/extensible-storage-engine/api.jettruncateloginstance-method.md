@@ -1,6 +1,6 @@
 ---
-description: 'Weitere Informationen finden Sie hier: API. jettruneureloginstance-Methode'
-title: API. jettruneureloginstance-Methode
+description: 'Weitere Informationen finden Sie unter: Api.JetTruncateLogInstance-Methode'
+title: Api.JetTruncateLogInstance-Methode
 TOCTitle: 'JetTruncateLogInstance method '
 ms:assetid: M:Microsoft.Isam.Esent.Interop.Api.JetTruncateLogInstance(Microsoft.Isam.Esent.Interop.JET_INSTANCE)
 ms:mtpsurl: https://msdn.microsoft.com/library/microsoft.isam.esent.interop.api.jettruncateloginstance(v=EXCHG.10)
@@ -24,19 +24,19 @@ api_type:
 api_location:
 - Microsoft.Isam.Esent.Interop.dll
 ROBOTS: INDEX,FOLLOW
-ms.openlocfilehash: fc1693b3f84cd594bfeca81a8e854e49e28d955f
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 2d2e040a9bda9a6e0d5f491190a41bda3e1f76f645fe5ec3870ab83aeb200965
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "103960788"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118497781"
 ---
-# <a name="apijettruncateloginstance-method"></a>API. jettruneureloginstance-Methode
+# <a name="apijettruncateloginstance-method"></a>Api.JetTruncateLogInstance-Methode
 
-Wird bei einer von jetbeginexternalbackup initiierten Sicherung verwendet, um Transaktionsprotokoll Dateien zu löschen, die nicht mehr benötigt werden, nachdem die aktuelle Sicherung erfolgreich abgeschlossen wurde.
+Wird während einer von JetBeginExternalBackup initiierten Sicherung verwendet, um alle Transaktionsprotokolldateien zu löschen, die nach erfolgreichem Abschluss der aktuellen Sicherung nicht mehr benötigt werden.
 
-**Namespace:**  [Microsoft. ISAM. ESENT. Interop](./microsoft.isam.esent.interop-namespace.md)  
-**Assembly:**  Microsoft. ISAM. ESENT. Interop (in Microsoft.Isam.Esent.Interop.dll)
+**Namespace:**  [Microsoft.Isam.Esent.Interop](./microsoft.isam.esent.interop-namespace.md)  
+**Assembly:**  Microsoft.Isam.Esent.Interop (in Microsoft.Isam.Esent.Interop.dll)
 
 ## <a name="syntax"></a>Syntax
 
@@ -58,16 +58,16 @@ public static void JetTruncateLogInstance(
 #### <a name="parameters"></a>Parameter
 
   - instance  
-    Typ: [Microsoft.ISAM.ESENT.Interop.JET_INSTANCE](./jet-instance-structure.md)  
+    Typ: [Microsoft.Isam.Esent.Interop.JET_INSTANCE](./jet-instance-structure.md)  
     
-    Die-Instanz, die abgeschnitten werden soll.
+    Die abgeschnittene -Instanz.
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
-#### <a name="reference"></a>Referenz
+#### <a name="reference"></a>Verweis
 
 [API-Klasse](./api-class.md)
 
-[API-Mitglieder](./api-members.md)
+[API-Member](./api-members.md)
 
-[Microsoft. ISAM. ESENT. Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)
+[Microsoft.Isam.Esent.Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)

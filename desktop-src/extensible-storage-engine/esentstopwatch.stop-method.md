@@ -1,5 +1,5 @@
 ---
-description: 'Weitere Informationen zu: EsentStopwatch.Stop-Methode'
+description: 'Weitere Informationen finden Sie unter: EsentStopwatch.Stop-Methode'
 title: EsentStopwatch.Stop-Methode
 TOCTitle: 'Stop method '
 ms:assetid: M:Microsoft.Isam.Esent.Interop.EsentStopwatch.Stop
@@ -59,6 +59,6 @@ public void Stop()
 
 [EsentStopwatch-Klasse](./esentstopwatch-class.md)
 
-[EsentStopwatch-Elemente](./esentstopwatch-members.md)
+[EsentStopwatch-Member](./esentstopwatch-members.md)
 
 [Microsoft.Isam.Esent.Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)

@@ -1,5 +1,5 @@
 ---
-description: Greifen Sie auf die Scheitelpunktbeschreibung zu, die an D3DX10CreateMesh übergeben wird. Die Scheitelpunktbeschreibung beschreibt das Layout der Scheitelpunktpuffer des Gitters.
+description: Greifen Sie auf die an D3DX10CreateMesh übergebene Scheitelpunktbeschreibung zu. Die Vertexbeschreibung beschreibt das Layout der Scheitelpunktpuffer des Gitters.
 ms.assetid: e4a4a98a-e131-414c-ad98-21288ff0c61b
 title: ID3DX10Mesh::GetVertexDescription-Methode (D3DX10.h)
 ms.topic: reference
@@ -23,7 +23,7 @@ ms.locfileid: "118540226"
 ---
 # <a name="id3dx10meshgetvertexdescription-method"></a>ID3DX10Mesh::GetVertexDescription-Methode
 
-Greifen Sie auf die Scheitelpunktbeschreibung zu, die [**an D3DX10CreateMesh übergeben wird.**](d3d10-d3dx10createmesh.md) Die Scheitelpunktbeschreibung beschreibt das Layout der Scheitelpunktpuffer des Gitters.
+Greifen Sie auf die an [**D3DX10CreateMesh**](d3d10-d3dx10createmesh.md)übergebene Scheitelpunktbeschreibung zu. Die Vertexbeschreibung beschreibt das Layout der Scheitelpunktpuffer des Gitters.
 
 ## <a name="syntax"></a>Syntax
 
@@ -46,7 +46,7 @@ HRESULT GetVertexDescription(
 
 Typ: **const [**D3D10 \_ INPUT ELEMENT \_ \_ DESC**](/windows/desktop/api/D3D10/ns-d3d10-d3d10_input_element_desc) \* \***
 
-Ein Array von Eingabeelementen, die das Layout der Scheitelpunktpuffer des Gitters beschreiben. Siehe [**D3D10 \_ INPUT ELEMENT \_ \_ DESC**](/windows/desktop/api/D3D10/ns-d3d10-d3d10_input_element_desc).
+Array von Eingabeelementen, die das Layout der Scheitelpunktpuffer des Gitters beschreiben. Siehe [**D3D10 \_ INPUT ELEMENT \_ \_ DESC**](/windows/desktop/api/D3D10/ns-d3d10-d3d10_input_element_desc).
 
 </dd> <dt>
 
@@ -63,7 +63,7 @@ Die Anzahl der Eingabeelemente in ppDesc.
 
 Typ: **[ **HRESULT**](https://msdn.microsoft.com/library/Bb401631(v=MSDN.10).aspx)**
 
-Der Rückgabewert ist einer der Unter [Direct3D 10-Rückgabecodes aufgeführten Werte.](d3d10-graphics-reference-returnvalues.md)
+Der Rückgabewert ist einer der In [Direct3D 10-Rückgabecodes aufgeführten](d3d10-graphics-reference-returnvalues.md)Werte.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -76,7 +76,7 @@ Der Rückgabewert ist einer der Unter [Direct3D 10-Rückgabecodes aufgeführten 
 
 
 
-## <a name="see-also"></a>Weitere Informationen:
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 

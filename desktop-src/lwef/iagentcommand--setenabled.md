@@ -1,19 +1,19 @@
 ---
-title: Iagentcommand-abgeleitete
-description: Iagentcommand-abgeleitete
+title: IAgentCommand SetEnabled
+description: IAgentCommand SetEnabled
 ms.assetid: e0a724b4-3613-400f-a801-efc8bf66e355
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 8377307d66257f7a9b74ac82512edc6e4ec64034
-ms.sourcegitcommit: ebd3ce6908ff865f1ef66f2fc96769be0aad82e1
+ms.openlocfilehash: da164b6603d93496e3381ccc6938a3b6d8f520bcea887cfd11f031cec7d845a7
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/19/2020
-ms.locfileid: "104038864"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118976310"
 ---
-# <a name="iagentcommandsetenabled"></a>Iagentcommand:: stenabled
+# <a name="iagentcommandsetenabled"></a>IAgentCommand::SetEnabled
 
-\[Der Microsoft-Agent ist ab Windows 7 veraltet und in nachfolgenden Versionen von Windows möglicherweise nicht verfügbar.\]
+\[Microsoft Agent ist ab Version Windows 7 veraltet und in nachfolgenden Versionen von Windows.\]
 
 ``` syntax
 HRESULT SetEnabled(
@@ -21,26 +21,26 @@ HRESULT SetEnabled(
 );
 ```
 
-Legt die [**aktivierte**](enabled-property.md) Eigenschaft für einen [**Befehl**](/windows/desktop/lwef/the-command-object)fest.
+Legt die [**Enabled-Eigenschaft**](enabled-property.md) für einen [**Befehl fest.**](/windows/desktop/lwef/the-command-object)
 
 -   Gibt S \_ OK zurück, um anzugeben, dass der Vorgang erfolgreich war.
 
 <dl> <dt>
 
-<span id="bEnabled"></span><span id="benabled"></span><span id="BENABLED"></span>*benabled*
+<span id="bEnabled"></span><span id="benabled"></span><span id="BENABLED"></span>*bEnabled*
 </dt> <dd>
 
-Ein boolescher Wert, der den Wert der [**aktivierten**](enabled-property.md) Einstellung eines [**Befehls**](/windows/desktop/lwef/the-command-object)festlegt. **True** aktiviert den **Befehl**. **False** deaktiviert es. Ein deaktivierter **Befehl** kann nicht ausgewählt werden.
+Ein boolescher Wert, der den Wert der [**Einstellung Aktiviert**](enabled-property.md) eines Befehls [**fest legt.**](/windows/desktop/lwef/the-command-object) **True** aktiviert den **Befehl**; **False** deaktiviert sie. Ein **deaktivierter Befehl** kann nicht ausgewählt werden.
 
 </dd> </dl>
 
-Für einen [**Befehl**](/windows/desktop/lwef/the-command-object) muss die [**aktivierte**](enabled-property.md) Eigenschaft auf **true** festgelegt sein, damit Sie ausgewählt werden können. Außerdem muss die [**Beschriftung**](caption-property.md) -Eigenschaft festgelegt sein, und die [**Visible**](visible-property.md) -Eigenschaft muss auf **true** festgelegt sein, damit Sie im Popup Menü des Zeichens angezeigt wird. Damit der **Befehl** im **Fenster "Sprachbefehle**" angezeigt wird, müssen Sie die [**Voice**](voice-property.md)-Eigenschaft festlegen.
+Für [**einen Befehl**](/windows/desktop/lwef/the-command-object) muss die [**Enabled-Eigenschaft**](enabled-property.md) auf **True festgelegt sein,** um ausgewählt werden zu können. Außerdem muss die [**Caption-Eigenschaft**](caption-property.md) und die [**Visible-Eigenschaft**](visible-property.md) auf **True** festgelegt sein, damit sie im Popupmenü des Zeichens angezeigt wird. Damit der **Befehl im Fenster** Sprachbefehle **angezeigt** wird, müssen Sie dessen [**Voice-Eigenschaft**](voice-property.md)festlegen.
 
 ## <a name="see-also"></a>Weitere Informationen
 
-[**Iagentcommand:: getcaption**](iagentcommand--getcaption.md), [**iagentcommand:: setvoice**](iagentcommand--setvoice.md), [**iagentcommands:: Add**](iagentcommands--add.md), [**iagentcommands:: Insert**](iagentcommands--insert.md)
+[**IAgentCommand::GetCaption**](iagentcommand--getcaption.md), [**IAgentCommand::SetVoice**](iagentcommand--setvoice.md), [**IAgentCommands::Add**](iagentcommands--add.md), [**IAgentCommands::Insert**](iagentcommands--insert.md)
 
 
- 
+ 
 
- 
+ 

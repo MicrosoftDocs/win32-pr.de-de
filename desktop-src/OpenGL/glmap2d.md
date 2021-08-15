@@ -191,9 +191,9 @@ und
 
 Der *Zielparameter* ist eine symbolische Konstante, die angibt, welche Art von Kontrollpunkten *in* Punkten bereitgestellt werden und welche Ausgabe generiert wird, wenn die Karte ausgewertet wird.
 
-Die *Parameter ustride,* *uorder,* *vstride,* *vorder* und *points* definieren die Arrayadrierung für den Zugriff auf die Kontrollpunkte. Der *Points-Parameter* ist die Position des ersten Kontrollpunkts, der je nachdem, welche Zuordnung definiert wird, einen, zwei, drei oder vier zusammenhängende Speicherorte einnimmt. Das Array *enthält uorder* x *vordere* Kontrollpunkte. Der *ustride-Parameter* gibt an, wie viele Gleitkomma- oder double-Positionen übersprungen werden, um den internen Speicherzeiger vom Steuerungspunkt **R** *ij* auf den Steuerungspunkt **R** <sub>(\ i+1\ )j</sub>zu bringen. Der *vstride-Parameter* gibt an, wie viele float- oder double-Positionen übersprungen werden, um den internen Speicherzeiger vom Steuerungspunkt **R** *ij* auf den Kontrollpunkt **R**<sub>i(j\ +1\ )</sub>zu verbessern.
+Die *Parameter ustride,* *uorder,* *vstride,* *vorder* und *points* definieren die Arrayadrierung für den Zugriff auf die Kontrollpunkte. Der *Points-Parameter* ist die Position des ersten Kontrollpunkts, der je nachdem, welche Zuordnung definiert wird, einen, zwei, drei oder vier zusammenhängende Speicherorte einnimmt. Das Array *enthält uorder* x *vordere* Kontrollpunkte. Der *ustride-Parameter* gibt an, wie viele Gleitkomma- oder Double-Positionen übersprungen werden, um den internen Speicherzeiger vom Steuerungspunkt **R** *ij* auf den Steuerungspunkt **R** <sub>(\ i+1\ )j</sub>zu verbessern. Der *vstride-Parameter* gibt an, wie viele float- oder double-Positionen übersprungen werden, um den internen Speicherzeiger vom Steuerungspunkt **R** *ij* auf den Kontrollpunkt **R**<sub>i(j\ +1\ )</sub>zu verbessern.
 
-Wie bei allen OpenGL-Befehlen, die Zeiger auf Daten akzeptieren,  ist dies so, als ob der Inhalt der Punkte vor der Rückkehr von **glMap2** kopiert worden wäre. Änderungen am Inhalt von Punkten *haben* keine Auswirkungen, nachdem **glMap2** aufgerufen wurde.
+Wie bei allen OpenGL-Befehlen, die Zeiger auf Daten akzeptieren,  ist dies so, als ob der Inhalt der Punkte von **glMap2** kopiert wurde, bevor er zurückgegeben wurde. Änderungen am Inhalt von Punkten *haben* keine Auswirkungen, nachdem **glMap2** aufgerufen wurde.
 
 Die folgenden Funktionen rufen Informationen im Zusammenhang mit **glMap2 ab:**
 
@@ -207,7 +207,7 @@ Die folgenden Funktionen rufen Informationen im Zusammenhang mit **glMap2 ab:**
 
 **glIsEnabled mit** Argument GL \_ MAP2 \_ INDEX
 
-**glIsEnabled mit** Argument GL \_ MAP2 \_ COLOR \_ 4
+**glIsEnabled mit Argument** GL \_ MAP2 COLOR \_ \_ 4
 
 **glIsEnabled mit Argument** GL \_ MAP2 \_ NORMAL
 

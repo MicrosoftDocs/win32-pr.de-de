@@ -1,11 +1,11 @@
 ---
 title: msSFU-30-Aliases-Attribut
-description: Enthält einen Teil der NIS-Mailzuordnung.
+description: Enthält einen Teil der NIS-E-Mail-Zuordnung.
 ms.assetid: 8562d872-3447-45cb-bb8a-250ac57d7add
 ms.tgt_platform: multiple
 keywords:
-- AD-Schema des msSFU-30-Aliases-Attributs
-- AD-Schema des msSFU30Aliases-Attributs
+- msSFU-30-Aliases-Attribut AD-Schema
+- MSSFU30Aliases-Attribut AD-Schema
 topic_type:
 - apiref
 api_name:
@@ -23,7 +23,7 @@ ms.locfileid: "118424980"
 ---
 # <a name="mssfu-30-aliases-attribute"></a>msSFU-30-Aliases-Attribut
 
-Enthält einen Teil der NIS-Mailzuordnung.
+Enthält einen Teil der NIS-E-Mail-Zuordnung.
 
 
 
@@ -35,7 +35,7 @@ Enthält einen Teil der NIS-Mailzuordnung.
 | Aktualisieren von Berechtigungen  | \-                                   |
 | Updatehäufigkeit  | \-                                   |
 | Attribute-Id      | 1.2.840.113556.1.6.18.1.323          |
-| System-Id-Guid    | 20ebf171-c69a-4c31-b29d-dcb837d8912d |
+| System-ID-GUID    | 20ebf171-c69a-4c31-b29d-dcb837d8912d |
 | Syntax            | [**String(IA5)**](s-string-ia5.md)  |
 
 
@@ -56,7 +56,7 @@ Enthält einen Teil der NIS-Mailzuordnung.
 | Link-ID                | \-                                                                                                                                                                                                                                                                                                                           |
 | MAPI-Id                | \-                                                                                                                                                                                                                                                                                                                           |
 | System-Only            | False                                                                                                                                                                                                                                                                                                                        |
-| Is-Single-Valued       | False                                                                                                                                                                                                                                                                                                                        |
+| Ist einwertig       | False                                                                                                                                                                                                                                                                                                                        |
 | Ist indiziert             | False                                                                                                                                                                                                                                                                                                                        |
 | Im globalen Katalog      | False                                                                                                                                                                                                                                                                                                                        |
 | NT-Security-Descriptor | O:BAG:BAD:S:                                                                                                                                                                                                                                                                                                                 |
@@ -64,7 +64,7 @@ Enthält einen Teil der NIS-Mailzuordnung.
 | Range-Upper            | \-                                                                                                                                                                                                                                                                                                                           |
 | Search-Flags           | 0x00000000                                                                                                                                                                                                                                                                                                                   |
 | System-Flags           | 0x00000000                                                                                                                                                                                                                                                                                                                   |
-| In verwendete Klassen        | [**Computer**](c-computer.md)<br/> [**Gerät**](c-device.md)<br/> [**ipService**](c-ipservice.md)<br/> [**ipProtocol**](c-ipprotocol.md)<br/> [**oncRpc**](c-oncrpc.md)<br/> [**ipNetwork**](c-ipnetwork.md)<br/> [**msSFU-30-Mail-Aliase**](c-mssfu30mailaliases.md)<br/> |
+| In verwendete Klassen        | [**Computer**](c-computer.md)<br/> [**Gerät**](c-device.md)<br/> [**ipService**](c-ipservice.md)<br/> [**ipProtocol**](c-ipprotocol.md)<br/> [**oncRpc**](c-oncrpc.md)<br/> [**ipNetwork**](c-ipnetwork.md)<br/> [**msSFU-30-Mail-Aliases**](c-mssfu30mailaliases.md)<br/> |
 
 
 
@@ -77,7 +77,7 @@ Enthält einen Teil der NIS-Mailzuordnung.
 | Link-ID                | \-                                                                                                                                                                                                                                                                                                                           |
 | MAPI-Id                | \-                                                                                                                                                                                                                                                                                                                           |
 | System-Only            | False                                                                                                                                                                                                                                                                                                                        |
-| Is-Single-Valued       | False                                                                                                                                                                                                                                                                                                                        |
+| Ist einwertig       | False                                                                                                                                                                                                                                                                                                                        |
 | Ist indiziert             | False                                                                                                                                                                                                                                                                                                                        |
 | Im globalen Katalog      | False                                                                                                                                                                                                                                                                                                                        |
 | NT-Security-Descriptor | O:BAG:BAD:S:                                                                                                                                                                                                                                                                                                                 |
@@ -85,7 +85,7 @@ Enthält einen Teil der NIS-Mailzuordnung.
 | Range-Upper            | \-                                                                                                                                                                                                                                                                                                                           |
 | Search-Flags           | 0x00000000                                                                                                                                                                                                                                                                                                                   |
 | System-Flags           | 0x00000000                                                                                                                                                                                                                                                                                                                   |
-| In verwendete Klassen        | [**Computer**](c-computer.md)<br/> [**Gerät**](c-device.md)<br/> [**ipService**](c-ipservice.md)<br/> [**ipProtocol**](c-ipprotocol.md)<br/> [**oncRpc**](c-oncrpc.md)<br/> [**ipNetwork**](c-ipnetwork.md)<br/> [**msSFU-30-Mail-Aliase**](c-mssfu30mailaliases.md)<br/> |
+| In verwendete Klassen        | [**Computer**](c-computer.md)<br/> [**Gerät**](c-device.md)<br/> [**ipService**](c-ipservice.md)<br/> [**ipProtocol**](c-ipprotocol.md)<br/> [**oncRpc**](c-oncrpc.md)<br/> [**ipNetwork**](c-ipnetwork.md)<br/> [**msSFU-30-Mail-Aliases**](c-mssfu30mailaliases.md)<br/> |
 
 
 
@@ -98,7 +98,7 @@ Enthält einen Teil der NIS-Mailzuordnung.
 | Link-ID                | \-                                                                                                                                                                                                                                                                                                                           |
 | MAPI-Id                | \-                                                                                                                                                                                                                                                                                                                           |
 | System-Only            | False                                                                                                                                                                                                                                                                                                                        |
-| Is-Single-Valued       | False                                                                                                                                                                                                                                                                                                                        |
+| Ist einwertig       | False                                                                                                                                                                                                                                                                                                                        |
 | Ist indiziert             | False                                                                                                                                                                                                                                                                                                                        |
 | Im globalen Katalog      | False                                                                                                                                                                                                                                                                                                                        |
 | NT-Security-Descriptor | O:BAG:BAD:S:                                                                                                                                                                                                                                                                                                                 |

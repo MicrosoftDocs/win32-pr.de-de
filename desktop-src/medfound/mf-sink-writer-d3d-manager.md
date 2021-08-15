@@ -1,34 +1,34 @@
 ---
-description: Enthält einen Zeiger auf den DXGI-Device Manager für den Senke-Writer.
+description: Enthält einen Zeiger auf die DXGI-Geräte-Manager sink Writer.
 ms.assetid: 0328FC02-2D32-480B-BB03-9C78BF317AF5
-title: MF_SINK_WRITER_D3D_MANAGER-Attribut (mfreadwrite. h)
+title: MF_SINK_WRITER_D3D_MANAGER -Attribut (Mfreadwrite.h)
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 23dea964be1a0ff726a974deaf1949863331df1f
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 706287b6001ba52c8bf5ba8a19326948afcf4f7f7569c606507115f484c46f10
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106352542"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119714310"
 ---
-# <a name="mf_sink_writer_d3d_manager-attribute"></a>MF \_ Sink \_ Writer \_ D3D \_ Manager-Attribut
+# <a name="mf_sink_writer_d3d_manager-attribute"></a>MF \_ SINK \_ WRITER \_ D3D \_ MANAGER-Attribut
 
-Enthält einen Zeiger auf den DXGI-Device Manager für den [Senke-Writer](sink-writer.md).
+Enthält einen Zeiger auf die DXGI-Geräte-Manager sink [Writer.](sink-writer.md)
 
 ## <a name="data-type"></a>Datentyp
 
-**IMF dxgidebug Manager \** _ als " _*IUnknown \** " gespeichert_
+**DURCHDXGIDeviceManager \* *_ gespeichert als _* IUnknown\***
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Der Wert dieses Attributs ist ein Zeiger auf die [_ *imfdxgidebug Manager* *](/windows/desktop/api/mfobjects/nn-mfobjects-imfdxgidevicemanager) -Schnittstelle.
+Der Wert dieses Attributs ist ein Zeiger auf die [**BENUTZERDEFINIERTEGIDeviceManager-Schnittstelle.**](/windows/desktop/api/mfobjects/nn-mfobjects-imfdxgidevicemanager)
 
-Verwenden Sie dieses Attribut, um ein Direct3D-Gerät für alle Video Encoder oder Medien senken bereitzustellen, die vom senkenwriter geladen werden.
+Verwenden Sie dieses Attribut, um ein Direct3D-Gerät für alle Videoencoder oder Mediensenken zur Verfügung zu stellen, die vom Sink Writer geladen werden.
 
 Verwenden Sie dieses Attribut mit den folgenden Funktionen:
 
--   [**Mfkreatesinkschreiterfrommediasink**](/windows/desktop/api/mfreadwrite/nf-mfreadwrite-mfcreatesinkwriterfrommediasink)
--   [**MF | atesinkschreiterfromurl**](/windows/desktop/api/mfreadwrite/nf-mfreadwrite-mfcreatesinkwriterfromurl)
+-   [**MFCreateSinkWriterFromMediaSink**](/windows/desktop/api/mfreadwrite/nf-mfreadwrite-mfcreatesinkwriterfrommediasink)
+-   [**MFCreateSinkWriterFromURL**](/windows/desktop/api/mfreadwrite/nf-mfreadwrite-mfcreatesinkwriterfromurl)
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -36,20 +36,20 @@ Verwenden Sie dieses Attribut mit den folgenden Funktionen:
 
 | Anforderung | Wert |
 |-------------------------------------|------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Windows 8 \[ -Desktop-Apps \| UWP-apps\]<br/>                                        |
-| Unterstützte Mindestversion (Server)<br/> | Windows Server 2012 \[ -Desktop-Apps \| UWP-apps\]<br/>                              |
-| Header<br/>                   | <dl> <dt>"Mfreadwrite. h"</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | \[Windows 8 Desktop-Apps \| UWP-Apps\]<br/>                                        |
+| Unterstützte Mindestversion (Server)<br/> | \[Windows Server 2012 Desktop-Apps \| UWP-Apps\]<br/>                              |
+| Header<br/>                   | <dl> <dt>Mfreadwrite.h</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[Alphabetische Liste der Media Foundation Attribute](alphabetical-list-of-media-foundation-attributes.md)
+[Alphabetische Liste Media Foundation Attribute](alphabetical-list-of-media-foundation-attributes.md)
 </dt> <dt>
 
-[Senke-Writer](sink-writer.md)
+[Sink Writer](sink-writer.md)
 </dt> </dl>
 
  

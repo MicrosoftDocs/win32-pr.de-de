@@ -1,25 +1,25 @@
 ---
-title: Beispiel Text Abschnitt
-description: Beispiel Text Abschnitt
+title: Abschnitt "Beispieltext"
+description: Abschnitt "Beispieltext"
 ms.assetid: 7e59ec56-dedc-46c5-8302-11a7d7c38911
 keywords:
 - Windows Media Player Mobile Skins, Text
 - Skins, Text
-- Verweis für Skins, Text
-- Text in Skins, Text section
-- Skin-Definitions Dateien, Text Abschnitt
+- Referenz für Skins, Text
+- Text in Skins,Abschnitt "Text"
+- Skindefinitionsdateien,Textabschnitt
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 0ac87e65b4eb909b16a8a200a5f5f6d6cadc5df8
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: 182fa28f774f023ccccd7234fd4e8d4eb6a6c4cf22841efbd800ae313a15b50d
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "104207194"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118995470"
 ---
-# <a name="sample-text-section"></a>Beispiel Text Abschnitt
+# <a name="sample-text-section"></a>Abschnitt "Beispieltext"
 
-Die folgenden Zeilen zeigen einen typischen Text Abschnitt einer Skin-Definitionsdatei:
+Die folgenden Zeilen zeigen einen typischen Textabschnitt einer Skindefinitionsdatei:
 
 
 ```C++
@@ -37,7 +37,7 @@ Die folgenden Zeilen zeigen einen typischen Text Abschnitt einer Skin-Definition
 
 
 
-Das vorangehende Beispiel definiert drei Textanzeige Felder, die die aktuelle Uhrzeit innerhalb des Medien Elements, der aktuellen Wiedergabeliste und der aktuellen Nachverfolgung anzeigen.
+Im vorherigen Beispiel werden drei Textanzeigefelder definiert, die die aktuelle Zeit innerhalb des Medienelements, die aktuelle Wiedergabeliste und die aktuelle Titelnummer anzeigen.
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
@@ -46,9 +46,9 @@ Das vorangehende Beispiel definiert drei Textanzeige Felder, die die aktuelle Uh
 [**Text**](text.md)
 </dt> </dl>
 
- 
+ 
 
- 
+ 
 
 
 

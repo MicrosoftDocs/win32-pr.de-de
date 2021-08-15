@@ -1,19 +1,19 @@
 ---
-description: LOCALE \_ snegativesign
+description: LOCALE \_ SNEGATIVESIGN
 ms.assetid: fc685b9a-b65a-491c-8c45-a8021e785910
 title: LOCALE_SNEGATIVESIGN
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 74b1956c5e512f9143d7d2da44bfaabfea2dc875
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: d7a4d5dfe989eddbb165f76f5b65556f9c2b9c5ccebf37a9dd71cf62331bf107
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106352554"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118391150"
 ---
-# <a name="locale_snegativesign"></a>LOCALE \_ snegativesign
+# <a name="locale_snegativesign"></a>LOCALE \_ SNEGATIVESIGN
 
-Der Zeichen folgen Wert für das negative Vorzeichen, z. b. "-" für das englische Gebiets Schema (USA). Die maximal zulässige Anzahl von Zeichen für diese Zeichenfolge ist fünf, einschließlich eines abschließenden NULL-Zeichens.
+Zeichenfolgenwert für das negative Vorzeichen, z. B. "-" für das gebietsschema "englisch" (USA). Die maximale Anzahl von Zeichen, die für diese Zeichenfolge zulässig sind, beträgt fünf, einschließlich eines abschließenden NULL-Zeichens.
 
  
 

@@ -1,26 +1,26 @@
 ---
-description: Richten Sie den Resource Manager-Kontext ein, der von den Datenbankabfrage-und Daten Bank Verwaltungsfunktionen verwendet wird.
+description: Richten Sie den Ressourcen-Manager-Kontext ein, der von den Datenbankabfrage- und Datenbankverwaltungsfunktionen verwendet wird, und geben Sie diesen frei.
 ms.assetid: 2947fb20-94b9-4a92-96a9-f45d2316cb2c
-title: Ressourcen-Manager Kontextfunktionen
+title: Resource Manager Kontextfunktionen
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 0ed4c6d62533a84b7efa562e5d7db091209cbf7c
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 8285589ce3ba8a455bd73c2b6784aa624b65333033721c257988775ac18c78f6
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104215878"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118919379"
 ---
-# <a name="resource-manager-context-functions"></a>Ressourcen-Manager Kontextfunktionen
+# <a name="resource-manager-context-functions"></a>Resource Manager Kontextfunktionen
 
-Mit den folgenden Funktionen wird der [*Resource Manager-Kontext*](../secgloss/r-gly.md) eingerichtet und freigegeben, der von den Datenbankabfrage-und Daten Bank Verwaltungsfunktionen verwendet wird.
+Mit den folgenden Funktionen wird der [*Ressourcen-Manager-Kontext*](../secgloss/r-gly.md) eingerichtet und veröffentlicht, der von den Datenbankabfrage- und Datenbankverwaltungsfunktionen verwendet wird.
 
 
 
 | Thema                                                  | BESCHREIBUNG                                                                                                                                          |
 |--------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------|
-| [**SCardEstablishContext**](/windows/desktop/api/Winscard/nf-winscard-scardestablishcontext) | Legt einen Kontext für den Zugriff auf die [*Smartcard-Datenbank*](../secgloss/s-gly.md)fest. |
-| [**Scardreleasecontext**](/windows/desktop/api/Winscard/nf-winscard-scardreleasecontext)     | Schließt einen eingerichteten Kontext.                                                                                                                       |
+| [**SCardEstablishContext**](/windows/desktop/api/Winscard/nf-winscard-scardestablishcontext) | Richtet einen Kontext für den Zugriff auf die [*Smartcard-Datenbank*](../secgloss/s-gly.md)ein. |
+| [**SCardReleaseContext**](/windows/desktop/api/Winscard/nf-winscard-scardreleasecontext)     | Schließt einen eingerichteten Kontext.                                                                                                                       |
 
 
 

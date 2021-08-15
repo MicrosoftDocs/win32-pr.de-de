@@ -1,11 +1,11 @@
 ---
-title: Systemmonitor. getlogviewrange-Methode
-description: Ruft das Startdatum ab, das zum Abrufen von Counter-Werten aus den Protokolldateien verwendet wird.
+title: SystemMonitor.GetLogViewRange-Methode
+description: Ruft das Startdatum ab, das zum Abrufen von Indikatorwerten aus den Protokolldateien verwendet wird.
 ms.assetid: c74c3a5b-d2ec-43d8-b715-e399f42e8ae5
 keywords:
-- Getlogviewrange-Methode (Sysmon)
-- Getlogviewrange-Methode (Sysmon), Systemmonitor-Objekt
-- Systemmonitor-Objekt "sysmon", getlogviewrange-Methode
+- GetLogViewRange-Methode SysMon
+- GetLogViewRange-Methode SysMon, SystemMonitor-Objekt
+- SystemMonitor-Objekt SysMon , GetLogViewRange-Methode
 topic_type:
 - apiref
 api_name:
@@ -16,16 +16,16 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: d494a5861ff9c0d2c076abe2bdad749d21653500
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 3233dd57327734669631fc57b31bfb85578621991f34c1b1c414a69697b82048
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104517798"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118882426"
 ---
-# <a name="systemmonitorgetlogviewrange-method"></a>Systemmonitor. getlogviewrange-Methode
+# <a name="systemmonitorgetlogviewrange-method"></a>SystemMonitor.GetLogViewRange-Methode
 
-Ruft das Startdatum ab, das zum Abrufen von Counter-Werten aus den Protokolldateien verwendet wird.
+Ruft das Startdatum ab, das zum Abrufen von Indikatorwerten aus den Protokolldateien verwendet wird.
 
 ## <a name="syntax"></a>Syntax
 
@@ -43,17 +43,17 @@ SystemMonitor.GetLogViewRange( _
 
 <dl> <dt>
 
-*StartTime* \[ vorgenommen\]
+*StartTime* \[ out\]
 </dt> <dd>
 
-Das Startdatum, das verwendet wird, um die Werte aus den Protokolldateien abzurufen.
+Startdatum, das zum Abrufen von Indikatorwerten aus den Protokolldateien verwendet wird.
 
 </dd> <dt>
 
-*Stoppzeit* \[ vorgenommen\]
+*StopTime* \[ out\]
 </dt> <dd>
 
-Das Enddatum, das verwendet wird, um die Werte aus den Protokolldateien abzurufen.
+Enddatum, das zum Abrufen von Indikatorwerten aus den Protokolldateien verwendet wird.
 
 </dd> </dl>
 
@@ -61,11 +61,11 @@ Das Enddatum, das verwendet wird, um die Werte aus den Protokolldateien abzurufe
 
 Diese Methode gibt keinen Wert zurück.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Sysmon Ruft Werte aus den Protokolldateien ab, die in den Anfangs-und Enddatums Angaben (einschließlich) fallen.
+SYSMON ruft Indikatorwerte aus den Protokolldateien ab, die einschließlich des Start- und Beendigungsdatums liegen.
 
-Die Verwendung dieser Methode ist mit dem Zugriff auf die Eigenschaften [**Systemmonitor. logviewstart**](systemmonitor-logviewstart.md) und [**Systemmonitor. logviewstoppt**](systemmonitor-logviewstop.md) identisch.
+Die Verwendung dieser Methode entspricht dem Zugriff auf die Eigenschaften [**SystemMonitor.LogViewStart**](systemmonitor-logviewstart.md) und [**SystemMonitor.LogViewStop.**](systemmonitor-logviewstop.md)
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -73,20 +73,20 @@ Die Verwendung dieser Methode ist mit dem Zugriff auf die Eigenschaften [**Syste
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>                                        |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2008 \[ -Desktop-Apps\]<br/>                                  |
-| DLL<br/>                      | <dl> <dt>Sysmon. ocx</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows \[Nur Vista-Desktop-Apps\]<br/>                                        |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2008-Desktop-Apps\]<br/>                                  |
+| DLL<br/>                      | <dl> <dt>Sysmon.ocx</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**System Monitor**](systemmonitor.md)
+[**SystemMonitor**](systemmonitor.md)
 </dt> <dt>
 
-[**Systemmonitor. setlogviewrange**](systemmonitor-setlogviewrange.md)
+[**SystemMonitor.SetLogViewRange**](systemmonitor-setlogviewrange.md)
 </dt> </dl>
 
  

@@ -1,9 +1,9 @@
 ---
-title: 'Texture1D:: Texture1D-Beispiel Methoden'
-description: Beispiele für eine Texture1D.
+title: Texture1D::Texture1D Sample-Methoden
+description: Probieren Sie eine Textur1D aus.
 ms.assetid: 852BC190-E370-4B55-AB64-F0771B1D2D19
 keywords:
-- Beispiel Methoden HLSL
+- HLSL-Beispielmethoden
 topic_type:
 - apiref
 api_type:
@@ -12,16 +12,16 @@ ms.topic: reference
 ms.date: 05/31/2018
 api_name: ''
 api_location: ''
-ms.openlocfilehash: dcdc481b5fae76cb733f69b1f23caf467fb96440
-ms.sourcegitcommit: 476861130ea63675206d1f06e517059705b930ed
+ms.openlocfilehash: 0555ba2ebe152484dcf1692623d410ecf2047bb14b72aa75481d2f42d938b33b
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/06/2019
-ms.locfileid: "104976240"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118505720"
 ---
-# <a name="texture1dsample-methods"></a>Texture1D:: Sample-Methoden
+# <a name="texture1dsample-methods"></a>Texture1D::Sample-Methoden
 
-Beispiele für eine [**Texture1D**](sm5-object-texture1d.md).
+Probieren Sie eine [**Texture1D aus.**](sm5-object-texture1d.md)
 
 ### <a name="overload-list"></a>Überladeliste
 
@@ -29,15 +29,15 @@ Beispiele für eine [**Texture1D**](sm5-object-texture1d.md).
 
 | Methode                                                                       | BESCHREIBUNG                                                                                                                                  |
 |:-----------------------------------------------------------------------------|:---------------------------------------------------------------------------------------------------------------------------------------------|
-| [**Sample (S, float, int)**](dx-graphics-hlsl-to-sample.md)                    | Stichproben eine Textur.<br/>                                                                                                                |
-| [**Sample (S, float, int, float)**](t1d-sample-s-float-int-float-.md)           | Gibt eine Textur mit einem optionalen Wert aus, mit dem die Werte der Sample-Ebene (LOD) an eine Klammer angezeigt werden.<br/>                                         |
-| [**Sample (S, float, int, float, uint)**](t1d-sample-s-float-int-float-uint-.md) | Führt eine Stichprobe für eine Textur mit einem optionalen Wert aus, um die Samplingrate-Werte (LOD) zu binden, und gibt den Status des Vorgangs zurück.<br/> |
+| [**Sample(S,float,int)**](dx-graphics-hlsl-to-sample.md)                    | Probieren Sie eine Textur aus.<br/>                                                                                                                |
+| [**Sample(S,float,int,float)**](t1d-sample-s-float-int-float-.md)           | Stichproben einer Textur mit einem optionalen Wert zum Zusammenschnaufen von LOD-Werten (Sample Level of Detail).<br/>                                         |
+| [**Sample(S,float,int,float,uint)**](t1d-sample-s-float-int-float-uint-.md) | Probieren Sie eine Textur mit einem optionalen Wert aus, um LoD-Werte (Sample Level of Detail) zu klammern, und gibt den Status des Vorgangs zurück.<br/> |
 
 
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Siehe [Texture-Object](dx-graphics-hlsl-to-type.md).
+Weitere Informationen finden Sie unter [Texture-Object](dx-graphics-hlsl-to-type.md).
 
 ## <a name="see-also"></a>Weitere Informationen
 

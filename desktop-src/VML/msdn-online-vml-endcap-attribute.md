@@ -28,7 +28,7 @@ Definiert die Strichobergrenze für das Ende eines Strichs. Lese-/Schreibzugriff
 
 **Tagsyntax**
 
-<v: endcap="-Elementausdruck ">  
+<v:  endcap="-Elementausdruck "> 
 
 **Skriptsyntax**
 

@@ -1,131 +1,131 @@
-- name: 'Kryptografieapi: nächste Generation'
+- name: 'Kryptografie-API: Nächste Generation'
   href: cng-portal.md
   items:
-    - name: Informationen über CNG
+    - name: Informationen zu CNG
       href: about-cng.md
       items:
-        - name: CNG-Features
+        - name: CNG-Funktionen
           href: cng-features.md
         - name: Kryptografische Grundelemente
           href: cryptographic-primitives.md
-        - name: Schlüssel Speicherung und-Abruf
+        - name: Schlüssel Storage und Abrufen
           href: key-storage-and-retrieval.md
-        - name: Schlüssel Import und-Export
+        - name: Schlüsselimport und -export
           href: key-import-and-export.md
-        - name: CNG-DPAPI
+        - name: CNG DPAPI
           href: cng-dpapi.md
           items:
-            - name: Schutz Anbieter
+            - name: Schutzanbieter
               href: protection-providers.md
-            - name: Schutz Deskriptoren
+            - name: Schutzdeskriptoren
               href: protection-descriptors.md
-            - name: Geschütztes Daten Format
+            - name: Geschütztes Datenformat
               href: protected-data-format.md
     - name: Verwenden von CNG
       href: using-cng.md
       items:
-        - name: Verwenden der kryptografiekonfigurationsfeatures von CNG
+        - name: Verwenden der Kryptografiekonfigurationsfunktionen von CNG
           href: using-the-cryptography-configuration-features-of-cng.md
         - name: Typische CNG-Programmierung
           href: typical-cng-programming.md
           items:
-            - name: Erstellen eines Hash mit CNG
+            - name: Erstellen eines Hashs mit CNG
               href: creating-a-hash-with-cng.md
             - name: Signieren von Daten mit CNG
               href: signing-data-with-cng.md
             - name: Verschlüsseln von Daten mit CNG
               href: encrypting-data-with-cng.md
-    - name: CNG-Verweis
+    - name: CNG-Referenz
       href: cng-reference.md
       items:
         - name: CNG-Konstanten
           href: cng-constants.md
           items:
-            - name: CNG benannte elliptische Kurven
+            - name: Benannte elliptische CNG-Kurven
               href: cng-named-elliptic-curves.md
-            - name: CNG-Algorithmus-Pseudo Handles
+            - name: Pseudohandles des CNG-Algorithmus
               href: cng-algorithm-pseudo-handles.md
             - name: CNG-Algorithmusbezeichner
               href: cng-algorithm-identifiers.md
-            - name: CNG-DPAPI-Konstanten
+            - name: CNG DPAPI-Konstanten
               href: cng-dpapi-constants.md
-            - name: CNG-Schnittstellen Bezeichner
+            - name: CNG-Schnittstellenbezeichner
               href: cng-interface-identifiers.md
-            - name: Kryptografieprimitive-Eigenschaften Bezeichner
+            - name: Primitive Kryptografieeigenschaftsbezeichner
               href: cng-property-identifiers.md
-            - name: Schlüsselspeicher-Eigenschaften Bezeichner
+            - name: Schlüssel- Storage-Eigenschaftsbezeichner
               href: key-storage-property-identifiers.md
-        - name: CNG-kryptografiekonfigurationsfunktionen
+        - name: CNG-Kryptografiekonfigurationsfunktionen
           href: cng-cryptographic-configuration-functions.md
           items:
-            - name: Bcryptaddcontextfunction
+            - name: BCryptAddContextFunction
               href: /windows/desktop/api/Bcrypt/nf-bcrypt-bcryptaddcontextfunction
-            - name: Bcryptkonfigurirecontext
+            - name: BCryptConfigureContext
               href: /windows/desktop/api/Bcrypt/nf-bcrypt-bcryptconfigurecontext
-            - name: Bcryptkonfigurirecontextfunction
+            - name: BCryptConfigureContextFunction
               href: /windows/desktop/api/Bcrypt/nf-bcrypt-bcryptconfigurecontextfunction
-            - name: Bcryptkreatecontext
+            - name: BCryptCreateContext
               href: /windows/desktop/api/Bcrypt/nf-bcrypt-bcryptcreatecontext
-            - name: Bcryptdeletecontext
+            - name: BCryptDeleteContext
               href: /windows/desktop/api/Bcrypt/nf-bcrypt-bcryptdeletecontext
-            - name: Bcryptenumschlag-Algorithmen
+            - name: BCryptEnumAlgorithms
               href: /windows/desktop/api/Bcrypt/nf-bcrypt-bcryptenumalgorithms
-            - name: Bcryptenumschlag Provider
+            - name: BCryptEnumContextFunctionProviders
               href: /windows/desktop/api/Bcrypt/nf-bcrypt-bcryptenumcontextfunctionproviders
-            - name: Bcryptenumschlag-Funktionen
+            - name: BCryptEnumContextFunctions
               href: /windows/desktop/api/Bcrypt/nf-bcrypt-bcryptenumcontextfunctions
-            - name: Bcryptenumschlag
+            - name: BCryptEnumContexts
               href: /windows/desktop/api/Bcrypt/nf-bcrypt-bcryptenumcontexts
-            - name: Bcryptenumschlag-Anbieter
+            - name: BCryptEnumProviders
               href: /windows/desktop/api/Bcrypt/nf-bcrypt-bcryptenumproviders
-            - name: Bcryptenbiregisteredproviders
+            - name: BCryptEnumRegisteredProviders
               href: /windows/desktop/api/Bcrypt/nf-bcrypt-bcryptenumregisteredproviders
-            - name: Bcryptgetfpsalgorithmmode
+            - name: BCryptGetFipsAlgorithmMode
               href: /windows/desktop/api/Bcrypt/nf-bcrypt-bcryptgetfipsalgorithmmode
-            - name: Bcryptquerycontextconfiguration
+            - name: BCryptQueryContextConfiguration
               href: /windows/desktop/api/Bcrypt/nf-bcrypt-bcryptquerycontextconfiguration
-            - name: Bcryptquerycontextfunctionconfiguration
+            - name: BCryptQueryContextFunctionConfiguration
               href: /windows/desktop/api/Bcrypt/nf-bcrypt-bcryptquerycontextfunctionconfiguration
-            - name: Bcryptquerycontextfunctionproperty
+            - name: BCryptQueryContextFunctionProperty
               href: /windows/desktop/api/Bcrypt/nf-bcrypt-bcryptquerycontextfunctionproperty
-            - name: Bcryptqueryproviderregistration
+            - name: BCryptQueryProviderRegistration
               href: /windows/desktop/api/Bcrypt/nf-bcrypt-bcryptqueryproviderregistration
-            - name: Bcryptregisterconfigchangenotify (handle *)
+            - name: BCryptRegisterConfigChangeNotify(HANDLE*)
               href: /windows/desktop/api/Bcrypt/nf-bcrypt-bcryptregisterconfigchangenotify
-            - name: Bcryptregisterconfigchangenotify (prkevent)
+            - name: BCryptRegisterConfigChangeNotify(PRKEVENT)
               href: /windows/desktop/api/bcrypt/nf-bcrypt-bcryptregisterconfigchangenotify
-            - name: Bcryptremuvecontextfunction
+            - name: BCryptRemoveContextFunction
               href: /windows/desktop/api/Bcrypt/nf-bcrypt-bcryptremovecontextfunction
-            - name: Bcryptresolveproviders
+            - name: BCryptResolveProviders
               href: /windows/desktop/api/Bcrypt/nf-bcrypt-bcryptresolveproviders
-            - name: Bcryptsetcontextfunctionproperty
+            - name: BCryptSetContextFunctionProperty
               href: /windows/desktop/api/Bcrypt/nf-bcrypt-bcryptsetcontextfunctionproperty
-            - name: Bcryptunregisterconfigchangenotifi(handle)
+            - name: BCryptUnregisterConfigChangeNotify(HANDLE)
               href: /windows/desktop/api/Bcrypt/nf-bcrypt-bcryptunregisterconfigchangenotify
-            - name: Bcryptunregisterconfigchangenotify (prkevent)
+            - name: BCryptUnregisterConfigChangeNotify(PRKEVENT)
               href: /windows/desktop/api/bcrypt/nf-bcrypt-bcryptunregisterconfigchangenotify
-        - name: Kryptografische CNG-Funktionen
+        - name: Kryptografische primitive CNG-Funktionen
           href: cng-cryptographic-primitive-functions.md
           items:
-            - name: Bcryptclosealgorithmprovider
+            - name: BCryptCloseAlgorithmProvider
               href: /windows/desktop/api/Bcrypt/nf-bcrypt-bcryptclosealgorithmprovider
-            - name: Bcryptkreatehash
+            - name: BCryptCreateHash
               href: /windows/desktop/api/Bcrypt/nf-bcrypt-bcryptcreatehash
-            - name: Bcryptkreatemultihash
+            - name: BCryptCreateMultiHash
               href: /windows/desktop/api/Bcrypt/nf-bcrypt-bcryptcreatemultihash
-            - name: '"BCryptDecrypt"'
+            - name: BCryptDecrypt
               href: /windows/desktop/api/Bcrypt/nf-bcrypt-bcryptdecrypt
-            - name: Bcryptderivekey
+            - name: BCryptDeriveKey
               href: /windows/desktop/api/Bcrypt/nf-bcrypt-bcryptderivekey
             - name: BCryptDestroyHash
               href: /windows/desktop/api/Bcrypt/nf-bcrypt-bcryptdestroyhash
             - name: BCryptDestroyKey
               href: /windows/desktop/api/Bcrypt/nf-bcrypt-bcryptdestroykey
-            - name: Bcryptdestroysecret
+            - name: BCryptDestroySecret
               href: /windows/desktop/api/Bcrypt/nf-bcrypt-bcryptdestroysecret
-            - name: Bcryptduplialisiehash
+            - name: BCryptDuplicateHash
               href: /windows/desktop/api/Bcrypt/nf-bcrypt-bcryptduplicatehash
-            - name: Bcryptduplicatekey
+            - name: BCryptDuplicateKey
               href: /windows/desktop/api/Bcrypt/nf-bcrypt-bcryptduplicatekey
             - name: BCryptEncrypt
               href: /windows/desktop/api/Bcrypt/nf-bcrypt-bcryptencrypt
@@ -135,7 +135,7 @@
               href: /windows/desktop/api/Bcrypt/nf-bcrypt-bcryptfinalizekeypair
             - name: BCryptFinishHash
               href: /windows/desktop/api/Bcrypt/nf-bcrypt-bcryptfinishhash
-            - name: Bcryptfrebuffer
+            - name: BCryptFreeBuffer
               href: /windows/desktop/api/Bcrypt/nf-bcrypt-bcryptfreebuffer
             - name: BCryptGenerateKeyPair
               href: /windows/desktop/api/Bcrypt/nf-bcrypt-bcryptgeneratekeypair
@@ -145,7 +145,7 @@
               href: /windows/desktop/api/Bcrypt/nf-bcrypt-bcryptgenrandom
             - name: BCryptGetProperty
               href: /windows/desktop/api/Bcrypt/nf-bcrypt-bcryptgetproperty
-            - name: Bcrypthash
+            - name: BCryptHash
               href: /windows/desktop/api/bcrypt/nf-bcrypt-bcrypthash
             - name: BCryptHashData
               href: /windows/desktop/api/Bcrypt/nf-bcrypt-bcrypthashdata
@@ -153,13 +153,13 @@
               href: /windows/desktop/api/Bcrypt/nf-bcrypt-bcryptimportkey
             - name: BCryptImportKeyPair
               href: /windows/desktop/api/Bcrypt/nf-bcrypt-bcryptimportkeypair
-            - name: Bcryptkeyderivations
+            - name: BCryptKeyDerivation
               href: /windows/desktop/api/Bcrypt/nf-bcrypt-bcryptkeyderivation
             - name: BCryptOpenAlgorithmProvider
               href: /windows/desktop/api/Bcrypt/nf-bcrypt-bcryptopenalgorithmprovider
-            - name: Bcryptprocessmultioperations
+            - name: BCryptProcessMultiOperations
               href: /windows/desktop/api/Bcrypt/nf-bcrypt-bcryptprocessmultioperations
-            - name: Bcryptsecretagreement
+            - name: BCryptSecretAgreement
               href: /windows/desktop/api/Bcrypt/nf-bcrypt-bcryptsecretagreement
             - name: BCryptSetProperty
               href: /windows/desktop/api/Bcrypt/nf-bcrypt-bcryptsetproperty
@@ -167,39 +167,39 @@
               href: /windows/desktop/api/Bcrypt/nf-bcrypt-bcryptsignhash
             - name: BCryptVerifySignature
               href: /windows/desktop/api/Bcrypt/nf-bcrypt-bcryptverifysignature
-        - name: CNG-DPAPI-Funktionen
+        - name: CNG DPAPI-Funktionen
           href: cng-dpapi-functions.md
           items:
-            - name: Ncryptkreateschutzdescriptor
+            - name: NCryptCreateProtectionDescriptor
               href: /windows/desktop/api/NCryptprotect/nf-ncryptprotect-ncryptcreateprotectiondescriptor
-            - name: Ncryptcloseschutzdescriptor
+            - name: NCryptCloseProtectionDescriptor
               href: /windows/desktop/api/NCryptprotect/nf-ncryptprotect-ncryptcloseprotectiondescriptor
-            - name: Ncryptgetschutzdescriptor Info
+            - name: NCryptGetProtectionDescriptorInfo
               href: /windows/desktop/api/NCryptprotect/nf-ncryptprotect-ncryptgetprotectiondescriptorinfo
-            - name: Ncryptprotectsecret
+            - name: NCryptProtectSecret
               href: /windows/desktop/api/NCryptprotect/nf-ncryptprotect-ncryptprotectsecret
-            - name: Ncryptqueryschutzdescriptor Name
+            - name: NCryptQueryProtectionDescriptorName
               href: /windows/desktop/api/NCryptprotect/nf-ncryptprotect-ncryptqueryprotectiondescriptorname
-            - name: Ncryptregisterschutzdescriptor Name
+            - name: NCryptRegisterProtectionDescriptorName
               href: /windows/desktop/api/NCryptprotect/nf-ncryptprotect-ncryptregisterprotectiondescriptorname
-            - name: Ncryptstreamclose
+            - name: NCryptStreamClose
               href: /windows/desktop/api/NCryptprotect/nf-ncryptprotect-ncryptstreamclose
-            - name: Ncryptstreamopentoprotect
+            - name: NCryptStreamOpenToProtect
               href: /windows/desktop/api/NCryptprotect/nf-ncryptprotect-ncryptstreamopentoprotect
-            - name: Ncryptstreamopentounprotectex
+            - name: NCryptStreamOpenToUnprotectEx
               href: /windows/desktop/api/ncryptprotect/nf-ncryptprotect-ncryptstreamopentounprotectex
-            - name: Ncryptstreamopentounprotect
+            - name: NCryptStreamOpenToUnprotect
               href: /windows/desktop/api/NCryptprotect/nf-ncryptprotect-ncryptstreamopentounprotect
-            - name: Ncryptstreamupdate
+            - name: NCryptStreamUpdate
               href: /windows/desktop/api/NCryptprotect/nf-ncryptprotect-ncryptstreamupdate
-            - name: Ncryptunprotectsecret
+            - name: NCryptUnprotectSecret
               href: /windows/desktop/api/NCryptprotect/nf-ncryptprotect-ncryptunprotectsecret
-            - name: Pfncryptstreamoutputcallback
+            - name: PFNCryptStreamOutputCallback
               href: /windows/desktop/api/NCryptprotect/nc-ncryptprotect-pfncryptstreamoutputcallback
         - name: CNG-Hilfsfunktionen
           href: cng-helper-functions.md
           items:
-            - name: Bcryptderivekeycapi
+            - name: BCryptDeriveKeyCapi
               href: /windows/desktop/api/Bcrypt/nf-bcrypt-bcryptderivekeycapi
             - name: BCryptDeriveKeyPBKDF2
               href: /windows/desktop/api/Bcrypt/nf-bcrypt-bcryptderivekeypbkdf2
@@ -207,146 +207,146 @@
               href: /windows/desktop/api/Bcrypt/nf-bcrypt-bcrypt_init_auth_mode_info
             - name: SystemPrng
               href: systemprng.md
-        - name: CNG-Schlüsselspeicher Funktionen
+        - name: CNG-Storage Funktionen
           href: cng-key-storage-functions.md
           items:
-            - name: Ncryptkreateclaim
+            - name: NCryptCreateClaim
               href: /windows/desktop/api/ncrypt/nf-ncrypt-ncryptcreateclaim
-            - name: Ncryptkreatepersistedkey
+            - name: NCryptCreatePersistedKey
               href: /windows/desktop/api/Ncrypt/nf-ncrypt-ncryptcreatepersistedkey
-            - name: Ncryptentschlüsseln
+            - name: NCryptDecrypt
               href: /windows/desktop/api/Ncrypt/nf-ncrypt-ncryptdecrypt
-            - name: Ncryptdeletekey
+            - name: NCryptDeleteKey
               href: /windows/desktop/api/Ncrypt/nf-ncrypt-ncryptdeletekey
-            - name: Ncryptderivekey
+            - name: NCryptDeriveKey
               href: /windows/desktop/api/Ncrypt/nf-ncrypt-ncryptderivekey
-            - name: Ncryptencrypt
+            - name: NCryptEncrypt
               href: /windows/desktop/api/Ncrypt/nf-ncrypt-ncryptencrypt
-            - name: Ncryptenumschlag-Algorithmen
+            - name: NCryptEnumAlgorithms
               href: /windows/desktop/api/Ncrypt/nf-ncrypt-ncryptenumalgorithms
-            - name: Ncryptenumschlag
+            - name: NCryptEnumKeys
               href: /windows/desktop/api/Ncrypt/nf-ncrypt-ncryptenumkeys
-            - name: Ncryptenrestorageproviders
+            - name: NCryptEnumStorageProviders
               href: /windows/desktop/api/Ncrypt/nf-ncrypt-ncryptenumstorageproviders
-            - name: Ncryptexportkey
+            - name: NCryptExportKey
               href: /windows/desktop/api/Ncrypt/nf-ncrypt-ncryptexportkey
-            - name: Ncryptfinalizekey
+            - name: NCryptFinalizeKey
               href: /windows/desktop/api/Ncrypt/nf-ncrypt-ncryptfinalizekey
-            - name: Ncryptfrebuffer
+            - name: NCryptFreeBuffer
               href: /windows/desktop/api/Ncrypt/nf-ncrypt-ncryptfreebuffer
-            - name: Ncryptfreobject
+            - name: NCryptFreeObject
               href: /windows/desktop/api/Ncrypt/nf-ncrypt-ncryptfreeobject
-            - name: Ncryptgetproperty
+            - name: NCryptGetProperty
               href: /windows/desktop/api/Ncrypt/nf-ncrypt-ncryptgetproperty
-            - name: Ncryptimportkey
+            - name: NCryptImportKey
               href: /windows/desktop/api/Ncrypt/nf-ncrypt-ncryptimportkey
-            - name: Ncryptisalgsupported
+            - name: NCryptIsAlgSupported
               href: /windows/desktop/api/Ncrypt/nf-ncrypt-ncryptisalgsupported
-            - name: Ncryptiskeyhandle
+            - name: NCryptIsKeyHandle
               href: /windows/desktop/api/Ncrypt/nf-ncrypt-ncryptiskeyhandle
-            - name: Ncryptkeyderivation
+            - name: NCryptKeyDerivation
               href: /windows/desktop/api/Ncrypt/nf-ncrypt-ncryptkeyderivation
-            - name: Ncryptnotifychangekey
+            - name: NCryptNotifyChangeKey
               href: /windows/desktop/api/Ncrypt/nf-ncrypt-ncryptnotifychangekey
-            - name: Ncryptopenkey
+            - name: NCryptOpenKey
               href: /windows/desktop/api/Ncrypt/nf-ncrypt-ncryptopenkey
-            - name: Ncryptopenstorageprovider
+            - name: NCryptOpenStorageProvider
               href: /windows/desktop/api/Ncrypt/nf-ncrypt-ncryptopenstorageprovider
-            - name: Ncryptsecretagreement
+            - name: NCryptSecretAgreement
               href: /windows/desktop/api/Ncrypt/nf-ncrypt-ncryptsecretagreement
-            - name: Ncryptsetproperty
+            - name: NCryptSetProperty
               href: /windows/desktop/api/Ncrypt/nf-ncrypt-ncryptsetproperty
-            - name: Ncryptsignhash
+            - name: NCryptSignHash
               href: /windows/desktop/api/Ncrypt/nf-ncrypt-ncryptsignhash
-            - name: Ncrypttranslatehandle
+            - name: NCryptTranslateHandle
               href: /windows/desktop/api/Ncrypt/nf-ncrypt-ncrypttranslatehandle
-            - name: Ncryptverifyclaim
+            - name: NCryptVerifyClaim
               href: /windows/desktop/api/ncrypt/nf-ncrypt-ncryptverifyclaim
-            - name: Ncryptverifysignature
+            - name: NCryptVerifySignature
               href: /windows/desktop/api/Ncrypt/nf-ncrypt-ncryptverifysignature
-        - name: CNG-SSL-Anbieter Funktionen
+        - name: CNG-SSL-Anbieterfunktionen
           href: cng-ssl-provider-functions.md
           items:
-            - name: Sslchangenotify
+            - name: SslChangeNotify
               href: sslchangenotify.md
-            - name: Sslcomputeclientauthhash
+            - name: SslComputeClientAuthHash
               href: sslcomputeclientauthhash.md
-            - name: Sslcomputeeapkeyblock
+            - name: SslComputeEapKeyBlock
               href: sslcomputeeapkeyblock.md
-            - name: Sslcomputefinishedhash
+            - name: SslComputeFinishedHash
               href: sslcomputefinishedhash.md
-            - name: Sslkreateclientauthhash
+            - name: SslCreateClientAuthHash
               href: sslcreateclientauthhash.md
-            - name: Sslkreatekurzlealkey
+            - name: SslCreateEphemeralKey
               href: sslcreateephemeralkey.md
-            - name: Sslkreatehandshakehash
+            - name: SslCreateHandshakeHash
               href: sslcreatehandshakehash.md
-            - name: Ssldecrementproviderreferencecount
+            - name: SslDecrementProviderReferenceCount
               href: ssldecrementproviderreferencecount.md
-            - name: Ssldecryptpacket
+            - name: SslDecryptPacket
               href: ssldecryptpacket.md
-            - name: Sslencryptpacket
+            - name: SslEncryptPacket
               href: sslencryptpacket.md
-            - name: Sslenenciphersuites
+            - name: SslEnumCipherSuites
               href: sslenumciphersuites.md
-            - name: Sslenenprotocolproviders
+            - name: SslEnumProtocolProviders
               href: sslenumprotocolproviders.md
-            - name: Sslexportkey
+            - name: SslExportKey
               href: sslexportkey.md
-            - name: Sslexportkeyingmaterial
+            - name: SslExportKeyingMaterial
               href: sslexportkeyingmaterial.md
-            - name: Sslfrebuffer
+            - name: SslFreeBuffer
               href: sslfreebuffer.md
-            - name: Sslfreobject
+            - name: SslFreeObject
               href: sslfreeobject.md
-            - name: Sslgeneratemasterkey
+            - name: SslGenerateMasterKey
               href: sslgeneratemasterkey.md
-            - name: Sslgeneratesessionkeys
+            - name: SslGenerateSessionKeys
               href: sslgeneratesessionkeys.md
-            - name: Sslgetciphersuiteprf HashAlgorithm
+            - name: SslGetCipherSuitePRFHashAlgorithm
               href: sslgetciphersuiteprfhashalgorithm.md
-            - name: Sslgetkeyproperty
+            - name: SslGetKeyProperty
               href: sslgetkeyproperty.md
-            - name: Sslgetproviderproperty
+            - name: SslGetProviderProperty
               href: sslgetproviderproperty.md
-            - name: Sslhashhandshake
+            - name: SslHashHandshake
               href: sslhashhandshake.md
-            - name: Sslimportkey
+            - name: SslImportKey
               href: sslimportkey.md
-            - name: Sslimportmasterkey
+            - name: SslImportMasterKey
               href: sslimportmasterkey.md
-            - name: Sslinkrementproviderreferencecount
+            - name: SslIncrementProviderReferenceCount
               href: sslincrementproviderreferencecount.md
-            - name: Ssllookupcipherlängen
+            - name: SslLookupCipherLengths
               href: ssllookupcipherlengths.md
-            - name: Ssllookupciphersuiteinfo
+            - name: SslLookupCipherSuiteInfo
               href: ssllookupciphersuiteinfo.md
-            - name: Sslopenprivatekey
+            - name: SslOpenPrivateKey
               href: sslopenprivatekey.md
-            - name: Sslopenprovider
+            - name: SslOpenProvider
               href: sslopenprovider.md
-            - name: Sslsignhash
+            - name: SslSignHash
               href: sslsignhash.md
-            - name: Sslverifysignature
+            - name: SslVerifySignature
               href: sslverifysignature.md
-        - name: CNG-tokenbindungsfunktionen
+        - name: CNG-Tokenbindungsfunktionen
           href: cng-token-binding-functions.md
           items:
-            - name: Tokenbindingdeleteallbindungen
+            - name: TokenBindingDeleteAllBindings
               href: /windows/desktop/api/tokenbinding/nf-tokenbinding-tokenbindingdeleteallbindings
-            - name: Tokenbindingdeletebinding
+            - name: TokenBindingDeleteBinding
               href: /windows/desktop/api/tokenbinding/nf-tokenbinding-tokenbindingdeletebinding
-            - name: Tokenbindinggeneratebinding
+            - name: TokenBindingGenerateBinding
               href: /windows/desktop/api/tokenbinding/nf-tokenbinding-tokenbindinggeneratebinding
-            - name: '"Dekenbindinggenerateid"'
+            - name: TokenBindingGenerateID
               href: /windows/desktop/api/tokenbinding/nf-tokenbinding-tokenbindinggenerateid
-            - name: '"Dekenbindinggeneratemage"'
+            - name: TokenBindingGenerateMessage
               href: /windows/desktop/api/tokenbinding/nf-tokenbinding-tokenbindinggeneratemessage
-            - name: '"Dekenbindinggetkeytypesclient"'
+            - name: TokenBindingGetKeyTypesClient
               href: /windows/desktop/api/tokenbinding/nf-tokenbinding-tokenbindinggetkeytypesclient
-            - name: '"Dekenbindinggetkeytypesserver"'
+            - name: TokenBindingGetKeyTypesServer
               href: /windows/desktop/api/tokenbinding/nf-tokenbinding-tokenbindinggetkeytypesserver
-            - name: '"Dekenbindingveribymess"'
+            - name: TokenBindingVerifyMessage
               href: /windows/desktop/api/tokenbinding/nf-tokenbinding-tokenbindingverifymessage
         - name: CNG-Strukturen
           href: cng-structures.md
@@ -433,15 +433,15 @@
               href: /windows/win32/api/ncrypt/ns-ncrypt-ncrypt_ui_policy
             - name: NCRYPT_UI_POLICY_BLOB
               href: ncrypt-ui-policy-blob.md
-            - name: Ncryptalgorithmname
+            - name: NCryptAlgorithmName
               href: /windows/win32/api/Ncrypt/ns-ncrypt-ncryptalgorithmname
-            - name: Ncryptbuffer
+            - name: NCryptBuffer
               href: /windows/desktop/api/bcrypt/ns-bcrypt-_bcryptbuffer
-            - name: Ncryptbufferdebug
+            - name: NCryptBufferDesc
               href: /windows/desktop/api/bcrypt/ns-bcrypt-_bcryptbufferdesc
-            - name: Ncryptkeyname
+            - name: NCryptKeyName
               href: /windows/desktop/api/Ncrypt/ns-ncrypt-ncryptkeyname
-            - name: Ncryptprovidername
+            - name: NCryptProviderName
               href: /windows/desktop/api/Ncrypt/ns-ncrypt-ncryptprovidername
             - name: TOKENBINDING_IDENTIFIER
               href: /windows/desktop/api/tokenbinding/ns-tokenbinding-tokenbinding_identifier

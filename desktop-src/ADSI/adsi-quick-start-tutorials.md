@@ -1,10 +1,10 @@
 ---
 title: Schnellstarttutorials für Active Directory-Dienstschnittstellen
-description: Die Schnellstarttutorials für Active Directory-Dienstschnittstellen (ADSI) sind eine Reihe von ADSI-Beispielen und unterstützenden Dokumentationen, die Sie mit den Programmiermodellen vertraut machen, die für den Zugriff auf Active Directory verwendet werden.
+description: Die Schnellstarttutorials für Active Directory-Dienstschnittstellen (ACTIVE Directory Service Interfaces, ADSI) sind eine Reihe von ADSI-Beispielen und unterstützenden Dokumentationen, die Sie mit den Programmiermodellen vertraut machen sollen, die für den Zugriff auf Active Directory verwendet werden.
 ms.assetid: cb3c00a2-3255-4afc-a7b9-b1454d160c62
 ms.tgt_platform: multiple
 keywords:
-- Schnellstarttutorials für Active Directory-Dienstschnittstellen ADSI
+- Active Directory-Dienstschnittstellen – Schnellstarttutorials ADSI
 ms.topic: article
 ms.date: 05/31/2018
 ms.openlocfilehash: b57039cc88df147dd48da970feb81145734974a2123f18eee3e544022f961f5e
@@ -16,11 +16,11 @@ ms.locfileid: "118429118"
 ---
 # <a name="active-directory-service-interfaces-quick-start-tutorials"></a>Schnellstarttutorials für Active Directory-Dienstschnittstellen
 
-Die Schnellstarttutorials für Active Directory-Dienstschnittstellen (ADSI) sind eine Reihe von ADSI-Beispielen und unterstützenden Dokumentationen, die Sie mit den Programmiermodellen vertraut machen, die für den Zugriff auf Active Directory verwendet werden. Jedes Beispiel ist kurz und baut auf den vorherigen Beispielen auf. Die Tutorials umfassen Folgendes:
+Die Schnellstarttutorials für Active Directory-Dienstschnittstellen (ACTIVE Directory Service Interfaces, ADSI) sind eine Reihe von ADSI-Beispielen und unterstützenden Dokumentationen, die Sie mit den Programmiermodellen vertraut machen sollen, die für den Zugriff auf Active Directory verwendet werden. Jedes Beispiel ist kurz und baut auf den vorherigen Beispielen auf. Die Tutorials umfassen Folgendes:
 
 -   [Einrichten Ihrer Entwicklungsumgebung](setting-up-your-development-environment.md)
--   [Zugreifen auf Active Directory mit Visual Basic](accessing-active-directory-using-visual-basic.md)
--   [ADSI-Skripttutorial](adsi-scripting-tutorial.md)
+-   [Zugreifen auf Active Directory mithilfe von Visual Basic](accessing-active-directory-using-visual-basic.md)
+-   [TUTORIAL zur ADSI-Skripterstellung](adsi-scripting-tutorial.md)
 
  
 

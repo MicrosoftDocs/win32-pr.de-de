@@ -1,5 +1,5 @@
 ---
-description: Stellt ein Tablet dar, das mit dem Computer verbunden ist.
+description: Stellt ein Tablet dar, das an den Computer angefügt ist.
 ms.assetid: 31e11f7d-5610-4c49-9203-2dc322fbef95
 title: ITablet-Schnittstelle
 ms.topic: reference
@@ -14,50 +14,50 @@ api_type:
 api_location:
 - wisptis.exe
 - wisptis.exe.dll
-ms.openlocfilehash: 76fa7baea2713e5a2e5eaae562b6dac29e002fff
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: a0cb98a74758d701e7ab6322567d2a20606380a58fc43676ad5edb136cec999b
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106356289"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119712250"
 ---
 # <a name="itablet-interface"></a>ITablet-Schnittstelle
 
-Stellt ein Tablet dar, das mit dem Computer verbunden ist.
+Stellt ein Tablet dar, das an den Computer angefügt ist.
 
 ## <a name="members"></a>Member
 
-Die **iTablet** -Schnittstelle erbt von der [**IUnknown**](/windows/desktop/api/unknwn/nn-unknwn-iunknown) -Schnittstelle. **Außerdem gibt** es die folgenden Typen von Membern:
+Die **ITablet-Schnittstelle** erbt von der [**IUnknown-Schnittstelle.**](/windows/desktop/api/unknwn/nn-unknwn-iunknown) **ITablet** verfügt auch über diese Typen von Membern:
 
 -   [Methoden](#methods)
 
 ### <a name="methods"></a>Methoden
 
-Die **iTablet** -Schnittstelle verfügt über diese Methoden.
+Die **ITablet-Schnittstelle** verfügt über diese Methoden.
 
 
 
 | Methode                                                                 | BESCHREIBUNG                                                                           |
 |:-----------------------------------------------------------------------|:--------------------------------------------------------------------------------------|
-| [**CreateContext**](itablet-createcontext.md)                         | Erstellt ein Kontext Objekt, das das angegebene Tablet-Gerät beschreibt.<br/>       |
-| [**GetCursor**](/previous-versions/windows/desktop/legacy/aa373535(v=vs.85))                                 | Ruft das angegebene [**itabletcursor**](itabletcursor.md) -Objekt ab.<br/>     |
-| [**Getcurrsorcount**](itablet-getcursorcount.md)                       | Ruft die Anzahl der dem Tablet zugeordneten Cursor Objekte ab.<br/>         |
-| [**Getdefaultcontextsettings**](itablet-getdefaultcontextsettings.md) | Ruft die Standardkontext Einstellungen für das Tablet ab.<br/>                     |
-| [**Gethardwarecaps**](itablet-gethardwarecaps.md)                     | Ruft einen Wert ab, der die Funktionen der Tablet-Hardware darstellt.<br/> |
-| [**Getmaxinputrect**](itablet-getmaxinputrect.md)                     | Ruft ein Rechteck ab, das den maximalen Eingabebereich des Tablets darstellt.<br/>    |
+| [**CreateContext**](itablet-createcontext.md)                         | Erstellt ein Kontextobjekt, das das angegebene Tablettgerät beschreibt.<br/>       |
+| [**GetCursor**](/previous-versions/windows/desktop/legacy/aa373535(v=vs.85))                                 | Ruft das angegebene [**ITabletCursor-Objekt**](itabletcursor.md) ab.<br/>     |
+| [**GetCursorCount**](itablet-getcursorcount.md)                       | Ruft die Anzahl der Cursorobjekte ab, die dem Tablet zugeordnet sind.<br/>         |
+| [**GetDefaultContextSettings**](itablet-getdefaultcontextsettings.md) | Ruft die Standardkontexteinstellungen für das Tablet ab.<br/>                     |
+| [**GetHardwareCaps**](itablet-gethardwarecaps.md)                     | Ruft einen Wert ab, der die Funktionen der Tabletthardware darstellt.<br/> |
+| [**GetMaxInputRect**](itablet-getmaxinputrect.md)                     | Ruft ein Rechteck ab, das den maximalen Eingabebereich des Tablets darstellt.<br/>    |
 | [**GetName**](itablet-getname.md)                                     | Ruft eine Zeichenfolge ab, die den Namen des Tablettgeräts enthält.<br/>               |
-| [**Getplugandplayid**](itablet-getplugandplayid.md)                   | Ruft eine Zeichenfolge ab, die die Plug & Play ID für das Tablet-Gerät enthält.<br/>  |
+| [**GetPlugAndPlayId**](itablet-getplugandplayid.md)                   | Ruft eine Zeichenfolge ab, die die Plug & Play-ID für das Tablettgerät enthält.<br/>  |
 | [**GetPropertyMetrics**](/previous-versions/windows/desktop/legacy/aa367722(v=vs.85))               | Ruft die Metrikdaten für eine angegebene Eigenschaft ab.<br/>                       |
 
 
 
  
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
 Entwickler sollten diese Schnittstelle nicht verwenden.
 
-Im folgenden Code wird beschrieben, wie die **iTablet** -Schnittstelle definiert wird.
+Der folgende Code beschreibt, wie die **ITablet-Schnittstelle** definiert wird.
 
 ``` syntax
 [
@@ -112,7 +112,7 @@ interface ITablet : IUnknown
 
 | Anforderung | Wert |
 |-------------------------------------|----------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows XP Tablet PC Edition \[ Desktop-Apps\]<br/>                          |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur Desktop-Apps der XP Tablet PC Edition \[\]<br/>                          |
 | Unterstützte Mindestversion (Server)<br/> | Nicht unterstützt<br/>                                                              |
 | Bibliothek<br/>                  | <dl> <dt>Wisptis.exe</dt> </dl> |
 

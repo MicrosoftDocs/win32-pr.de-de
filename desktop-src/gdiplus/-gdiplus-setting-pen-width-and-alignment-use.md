@@ -1,21 +1,21 @@
 ---
-description: Wenn Sie ein Pen-Objekt erstellen, können Sie die Stift Breite als eines der Argumente für den Konstruktor angeben. Sie können auch die Stift Breite mithilfe der Methode Pen::-Methode ändern.
+description: Wenn Sie ein Stiftobjekt erstellen, können Sie die Stiftbreite als eines der Argumente für den Konstruktor bereitstellen. Sie können die Stiftbreite auch mithilfe der Pen::SetWidth-Methode ändern.
 ms.assetid: b529ba0b-1786-4925-88bd-1a8369fc368c
-title: Festlegen der Stift Breite und-Ausrichtung
+title: Festlegen der Stiftbreite und -ausrichtung
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: ca59895cc73480b054302091342c8f8f4f410b34
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: fe2a6bd5be00fde0f27657cef558365d857775a5b55f9f108074884906916b8f
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104567349"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117885013"
 ---
-# <a name="setting-pen-width-and-alignment"></a>Festlegen der Stift Breite und-Ausrichtung
+# <a name="setting-pen-width-and-alignment"></a>Festlegen der Stiftbreite und -ausrichtung
 
-Wenn Sie ein [**Pen**](/windows/desktop/api/gdipluspen/nl-gdipluspen-pen) -Objekt erstellen, können Sie die Stift Breite als eines der Argumente für den Konstruktor angeben. Sie können auch die Stift Breite mithilfe der Methode [**Pen::**](/windows/desktop/api/Gdipluspen/nf-gdipluspen-pen-setwidth) -Methode ändern.
+Wenn Sie ein [**Stiftobjekt**](/windows/desktop/api/gdipluspen/nl-gdipluspen-pen) erstellen, können Sie die Stiftbreite als eines der Argumente für den Konstruktor bereitstellen. Sie können die Stiftbreite auch mithilfe der [**Pen::SetWidth-Methode**](/windows/desktop/api/Gdipluspen/nf-gdipluspen-pen-setwidth) ändern.
 
-Eine theoretische Linie weist eine Breite von 0 (null) auf. Wenn Sie eine Linie zeichnen, werden die Pixel auf der theoretischen Linie zentriert. Im folgenden Beispiel wird eine angegebene Zeile zweimal gezeichnet: einmal mit einem schwarzen Stift der Breite 1 und einmal mit einem grünen Stift der Breite 10.
+Eine theoretische Linie hat eine Breite von 0 (null). Wenn Sie eine Linie zeichnen, werden die Pixel auf der theoretischen Linie zentriert. Im folgenden Beispiel wird eine angegebene Zeile zweimal zeichnet: einmal mit einem schwarzen Stift der Breite 1 und einmal mit einem grünen Stift der Breite 10.
 
 
 ```
@@ -32,11 +32,11 @@ stat = graphics.DrawLine(&blackPen, 10, 100, 100, 50);
 
 
 
-Die folgende Abbildung zeigt die Ausgabe des vorangehenden Codes. Die grünen Pixel und die schwarzen Pixel werden auf der theoretischen Linie zentriert.
+Die folgende Abbildung zeigt die Ausgabe des vorangehenden Codes. Die grünen und schwarzen Pixel werden auf der theoretischen Linie zentriert.
 
-![Abbildung: eine schlanke, Diagonale, schwarze Linie, die durch eine Breite, grüne Linie umgeben ist ](images/pens1a.png)
+![Abbildung, die eine schlanke, diagonale, schwarze Linie zeigt, die von einer breiten, grünen Linie umgeben ist ](images/pens1a.png)
 
-Im folgenden Beispiel wird ein angegebenes Rechteck zweimal gezeichnet: einmal mit einem schwarzen Stift der Breite 1 und einmal mit einem grünen Stift der Breite 10. Der Code übergibt den Wert **penalignmentcenter** (ein Element der [**PenAlignment**](/windows/desktop/api/Gdiplusenums/ne-gdiplusenums-penalignment) -Enumeration) an die [**Pen:: SetAlignment**](/windows/desktop/api/Gdipluspen/nf-gdipluspen-pen-setalignment) -Methode, um anzugeben, dass die mit dem grünen Stift gezeichneten Pixel auf der Grenze des Rechtecks zentriert werden.
+Das folgende Beispiel zeichnet ein angegebenes Rechteck zweimal: einmal mit einem schwarzen Stift der Breite 1 und einmal mit einem grünen Stift der Breite 10. Der Code übergibt den Wert **PenAlignmentCenter** (ein Element der [**PenAlignment-Enumeration)**](/windows/desktop/api/Gdiplusenums/ne-gdiplusenums-penalignment) an die [**Pen::SetAlignment-Methode,**](/windows/desktop/api/Gdipluspen/nf-gdipluspen-pen-setalignment) um anzugeben, dass die mit dem grünen Stift gezeichneten Pixel an der Begrenzung des Rechtecks zentriert sind.
 
 
 ```
@@ -53,11 +53,11 @@ stat = graphics.DrawRectangle(&blackPen, 10, 100, 50, 50);
 
 
 
-Die folgende Abbildung zeigt die Ausgabe des vorangehenden Codes. Die grünen Pixel werden auf das theoretische Rechteck zentriert, das durch die schwarzen Pixel dargestellt wird.
+Die folgende Abbildung zeigt die Ausgabe des vorangehenden Codes. Die grünen Pixel werden auf dem theoretischen Rechteck zentriert, das durch die schwarzen Pixel dargestellt wird.
 
-![Abbildung, die eine schlanke schwarze Linie in der Form eines Rechtecks anzeigt, das von einer breiteren grünen Linie umgeben ist](images/pens2.png)
+![Abbildung einer schlanken schwarzen Linie in Form eines Rechtecks, umschlossen von einer breiteren grünen Linie](images/pens2.png)
 
-Sie können die Ausrichtung des grünen Stifts ändern, indem Sie die dritte Anweisung im vorangehenden Beispiel wie folgt ändern:
+Sie können die Ausrichtung des grünen Stifts ändern, indem Sie die dritte Anweisung im vorherigen Beispiel wie folgt ändern:
 
 
 ```
@@ -66,9 +66,9 @@ stat = greenPen.SetAlignment(PenAlignmentInset);
 
 
 
-Nun werden die Pixel in der Breite grünen Linie im Inneren des Rechtecks angezeigt, wie in der folgenden Abbildung dargestellt.
+Nun werden die Pixel in der breiten grünen Linie im Inneren des Rechtecks angezeigt, wie in der folgenden Abbildung dargestellt.
 
-![die Abbildung zeigt eine schlanke schwarze Linie in der Form einer Rechnung, die eine breite grüne Linie derselben Form einschließt.](images/pens3.png)
+![Abbildung, die eine schlanke schwarze Linie in der Form einer Rectange zeigt, die eine breite grüne Linie der gleichen Form umschließt](images/pens3.png)
 
  
 

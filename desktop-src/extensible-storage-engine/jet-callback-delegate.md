@@ -1,5 +1,5 @@
 ---
-description: 'Weitere Informationen finden Sie hier: JET_CALLBACK-Delegaten'
+description: 'Weitere Informationen finden Sie unter: JET_CALLBACK Delegat'
 title: JET_CALLBACK Delegat
 TOCTitle: JET_CALLBACK delegate
 ms:assetid: T:Microsoft.Isam.Esent.Interop.JET_CALLBACK
@@ -28,19 +28,19 @@ api_type:
 api_location:
 - Microsoft.Isam.Esent.Interop.dll
 ROBOTS: INDEX,FOLLOW
-ms.openlocfilehash: 617cbefba047f822b338627a782be7e016c2a16f
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 30ba54414bcc7043edb06300b7bda31e40b838cbc6f78f32171f26c1e37684c5
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106373287"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118487306"
 ---
 # <a name="jet_callback-delegate"></a>JET_CALLBACK Delegat
 
-Eine multizweck-Rückruffunktion, die von der Datenbank-Engine verwendet wird, um die Anwendung über ein Ereignis mit Online Defragmentierung und Cursor Zustands Benachrichtigungen zu informieren.
+Eine mehrzweckige Rückruffunktion, die von der Datenbank-Engine verwendet wird, um die Anwendung eines Ereignisses mit Onlinedefragmentierung und Cursorzustandsbenachrichtigungen zu informieren.
 
-**Namespace:**  [Microsoft. ISAM. ESENT. Interop](./microsoft.isam.esent.interop-namespace.md)  
-**Assembly:**  Microsoft. ISAM. ESENT. Interop (in Microsoft.Isam.Esent.Interop.dll)
+**Namespace:**  [Microsoft.Isam.Esent.Interop](./microsoft.isam.esent.interop-namespace.md)  
+**Assembly:**  Microsoft.Isam.Esent.Interop (in Microsoft.Isam.Esent.Interop.dll)
 
 ## <a name="syntax"></a>Syntax
 
@@ -75,66 +75,66 @@ public delegate JET_err JET_CALLBACK(
 
 #### <a name="parameters"></a>Parameter
 
-  - -sid  
-    Typ: [Microsoft.ISAM.ESENT.Interop.JET_SESID](./jet-sesid-structure.md)  
+  - sesid  
+    Typ: [Microsoft.Isam.Esent.Interop.JET_SESID](./jet-sesid-structure.md)  
     
-    Die Sitzung, für die der Rückruf erstellt wird.
+    Die Sitzung, für die der Rückruf erfolgt.
 
 <!-- end list -->
 
   - dbid  
-    Typ: [Microsoft.ISAM.ESENT.Interop.JET_DBID](./jet-dbid-structure.md)  
+    Typ: [Microsoft.Isam.Esent.Interop.JET_DBID](./jet-dbid-structure.md)  
     
-    Die Datenbank, für die der Rückruf erstellt wird.
+    Die Datenbank, für die der Rückruf erfolgt.
 
 <!-- end list -->
 
-  - TableID  
-    Typ: [Microsoft.ISAM.ESENT.Interop.JET_TABLEID](./jet-tableid-structure.md)  
+  - tableid  
+    Typ: [Microsoft.Isam.Esent.Interop.JET_TABLEID](./jet-tableid-structure.md)  
     
-    Der Cursor, für den der Rückruf erstellt wird.
+    Der Cursor, für den der Rückruf erfolgt.
 
 <!-- end list -->
 
-  - cbyp  
-    Typ: [Microsoft.ISAM.ESENT.Interop.JET_cbtyp](./jet-cbtyp-enumeration.md)  
+  - cbtyp  
+    Typ: [Microsoft.Isam.Esent.Interop.JET_cbtyp](./jet-cbtyp-enumeration.md)  
     
     Der Vorgang, für den der Rückruf durchgeführt wird.
 
 <!-- end list -->
 
   - arg1  
-    Type: [System. Object](/dotnet/api/system.object)  
+    Typ: [System.Object](/dotnet/api/system.object)  
     
-    Das erste Rückruf spezifische Argument.
+    Erstes rückrufspezifisches Argument.
 
 <!-- end list -->
 
   - arg2  
-    Type: [System. Object](/dotnet/api/system.object)  
+    Typ: [System.Object](/dotnet/api/system.object)  
     
-    Zweites Rückruf spezifisches Argument.
+    Zweites rückrufspezifisches Argument.
 
 <!-- end list -->
 
   - context  
-    Typ: [System. IntPtr](/dotnet/api/system.intptr)  
+    Typ: [System.IntPtr](/dotnet/api/system.intptr)  
     
-    Rückruf Kontext.
+    Rückrufkontext.
 
 <!-- end list -->
 
   - unused  
-    Typ: [System. IntPtr](/dotnet/api/system.intptr)  
+    Typ: [System.IntPtr](/dotnet/api/system.intptr)  
     
     Dieser Parameter wird nicht verwendet.
 
 #### <a name="return-value"></a>Rückgabewert
 
-Typ: [Microsoft.ISAM.ESENT.Interop.JET_err](./jet-err-enumeration.md)  
+Typ: [Microsoft.Isam.Esent.Interop.JET_err](./jet-err-enumeration.md)  
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
-#### <a name="reference"></a>Referenz
+#### <a name="reference"></a>Verweis
 
-[Microsoft. ISAM. ESENT. Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)
+[Microsoft.Isam.Esent.Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)

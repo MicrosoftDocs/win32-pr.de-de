@@ -15,7 +15,7 @@ ms.locfileid: "118382763"
 ---
 # <a name="verifying-preprocessor-options"></a>Überprüfen von Präprozessoroptionen
 
-Der MIDL-Compiler ruft implizit den Präprozessor auf und zeigt seine Präprozessorschalter nicht an. Wenn der MIDL-Schalter [**/cpp \_ opt**](-cpp-opt.md) fehlt, besteht die Präprozessorbefehlszeile aus allen Schaltern [**/I,**](-i.md) [**/D**](-d.md) und [**/U,**](-u.md) die in der MIDL-Befehlszeile verwendet werden, sowie aus den Schaltern **/E** und [**/nologo.**](-nologo.md) Verwenden Sie den Schalter [**/confirm**](-confirm.md) des Compilers, um die an den Präprozessor übergebenen Schalter zu sehen.
+Der MIDL-Compiler ruft implizit den Präprozessor auf und zeigt seine Präprozessorschalter nicht an. Wenn der MIDL-Schalter [**/cpp \_ opt**](-cpp-opt.md) fehlt, besteht die Präprozessorbefehlszeile aus allen Schaltern [**/I,**](-i.md) [**/D**](-d.md) und [**/U,**](-u.md) die in der MIDL-Befehlszeile verwendet werden, sowie aus den Schaltern **/E** und [**/nologo.**](-nologo.md) Um die an den Präprozessor übergebenen Schalter zu sehen, verwenden Sie den [**/confirm-Schalter des**](-confirm.md) Compilers.
 
 Beispiel: Die folgende Zeile
 

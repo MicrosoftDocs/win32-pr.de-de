@@ -66,7 +66,7 @@ Gibt **S \_ OK zurück,** wenn die Funktion erfolgreich ist, andernfalls ein Feh
 
 <dl> <dt>
 
-**FEHLERZUGRIFF \_ \_ VERWEIGERT**
+**FEHLER \_ BEIM \_ ZUGRIFF VERWEIGERT**
 </dt> <dd>
 
 Der Aufrufer verfügt nicht über die richtigen Zugriffsberechtigungen zum Aufrufen dieser Funktion. Mit [**der DsSetAuthIdentity-Funktion**](dssetauthidentity.md) können die Anmeldeinformationen festgelegt werden, die für die Sicherungs- und Wiederherstellungsfunktionen verwendet werden sollen.

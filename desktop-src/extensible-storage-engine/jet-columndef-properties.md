@@ -28,14 +28,14 @@ Der [JET_COLUMNDEF](./jet-columndef-class.md) macht die folgenden Member verfüg
 <tr class="header">
 <th> </th>
 <th>Name</th>
-<th>Beschreibung</th>
+<th>BESCHREIBUNG</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
 <td><img src="../images/dn292128.pubproperty(exchg.10).gif" title="Öffentliche Eigenschaft" alt="Public property" /></td>
 <td><a href="dn335080(v=exchg.10).md">cbMax</a></td>
-<td>Ruft die maximale Länge der Spalte ab oder legt diese fest. Dies ist nur für Spalten vom Typ <a href="hh577895(v=exchg.10).md">Text,</a> <a href="hh577895(v=exchg.10).md">LongText,</a> <a href="hh577895(v=exchg.10).md">Binary</a> und <a href="hh577895(v=exchg.10).md">LongBinary sinnvoll.</a></td>
+<td>Ruft die maximale Länge der Spalte ab oder legt diese fest. Dies ist nur für Spalten vom Typ <a href="hh577895(v=exchg.10).md">Text</a>, <a href="hh577895(v=exchg.10).md">LongText</a>, <a href="hh577895(v=exchg.10).md">Binary</a> und <a href="hh577895(v=exchg.10).md">LongBinary sinnvoll.</a></td>
 </tr>
 <tr class="even">
 <td><img src="../images/dn292128.pubproperty(exchg.10).gif" title="Öffentliche Eigenschaft" alt="Public property" /></td>

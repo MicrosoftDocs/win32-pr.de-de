@@ -1,6 +1,6 @@
 ---
 title: Interlaced Video Encoding (Windows Media Format 11 SDK)
-description: Die aktuelle Dokumentation zu Windows Mediencodecs und digitalen Signalprozessoren finden Sie unter Windows Medienaudio- und Videocodec und DSP-APIs. | Interlaced Video Encoding (Windows Media Format 11 SDK)
+description: Die aktuelle Dokumentation zu Windows Mediencodecs und digitalen Signalprozessoren finden Sie unter Windows Media Audio and Video Codec and DSP APIs (Medienaudio- und Videocodec und DSP-APIs). | Interlaced Video Encoding (Windows Media Format 11 SDK)
 ms.assetid: f9015e77-02b1-494f-af54-e27901511236
 keywords:
 - Interlaced Video Encoding windows Media Format
@@ -21,7 +21,7 @@ ms.locfileid: "118433649"
 ---
 # <a name="interlaced-video-encoding-windows-media-format-11-sdk"></a>Interlaced Video Encoding (Windows Media Format 11 SDK)
 
-Die aktuelle Dokumentation zu Windows Mediencodecs und digitalen Signalprozessoren finden Sie unter [Windows Medienaudio- und Videocodec und DSP-APIs.](/previous-versions//dd464626(v=vs.85))
+Die aktuelle Dokumentation zu Windows Mediencodecs und Digitalsignalprozessoren finden Sie unter Windows Media Audio and Video Codec and DSP APIs (Medienaudio- und Videocodec und [DSP-APIs).](/previous-versions//dd464626(v=vs.85))
 
  
 

@@ -3,7 +3,7 @@ title: ID3D12CommandQueueDownlevel::P resent-Methode
 description: Kopiert Inhalte aus einer Direct3D 12 Texture2D-Ressource in ein Fenster. | ID3D12CommandQueueDownlevel::P resent-Methode
 keywords:
 - Present-Methode
-- Aktuelle Methode, ID3D12CommandQueueDownlevel-Schnittstelle
+- Present-Methode, ID3D12CommandQueueDownlevel-Schnittstelle
 - ID3D12CommandQueueDownlevel-Schnittstelle, Present-Methode
 topic_type:
 - apiref
@@ -44,13 +44,13 @@ HRESULT Present
 
 Typ: **[ID3D12GraphicsCommandList](/windows/win32/api/d3d12/nn-d3d12-id3d12graphicscommandlist)\***
 
-Eine geöffnete Befehlsliste, in die Direct3D 12 einen Present-Befehl einträgt und dann schließt und für Sie übermittelt.
+Eine geöffnete Befehlsliste, in der Direct3D 12 einen Present-Befehl in die Queue einschließt und dann schließt und für Sie übermittelt.
 
 `pSourceTex2D`
 
 Typ: **[ID3D12Resource](/windows/win32/api/d3d12/nn-d3d12-id3d12resource)\***
 
-Eine Ressource, die den gewünschten Anzuzeigenden Inhalt mit der Dimension [**D3D12 \_ RESOURCE \_ DIMENSION \_ TEXTURE2D**](/windows/win32/api/d3d12/ne-d3d12-d3d12_resource_dimension)und einem der folgenden Formate enthält.
+Eine Ressource, die den anzuzeigenden gewünschten Inhalt mit der Dimension [**D3D12 \_ RESOURCE \_ DIMENSION \_ TEXTURE2D**](/windows/win32/api/d3d12/ne-d3d12-d3d12_resource_dimension)und einem der folgenden Formate enthält.
 
 * DXGI_FORMAT_R16G16B16A16_FLOAT
 * DXGI_FORMAT_R10G10B10A2_UNORM
@@ -75,7 +75,7 @@ Flags zum Ändern des **Present-Vorgangs.**
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt **S_OK** bei Erfolg oder einem fehlerhaften HRESULT zurück.
+Gibt **S_OK** bei Erfolg oder andernfalls ein fehlerhaftes HRESULT zurück.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -84,8 +84,8 @@ Gibt **S_OK** bei Erfolg oder einem fehlerhaften HRESULT zurück.
 | Header | d3d12downlevel.h |
 | DLL    | D3D12.dll (nur Windows 7) |
 
-## <a name="see-also"></a>Weitere Informationen:
+## <a name="see-also"></a>Weitere Informationen
 * [ID3D12CommandQueueDownlevel](id3d12commandqueuedownlevel.md)
 * [Direct3D 12 auf Windows 7-Schnittstellen](direct3d-12on7-interfaces.md)
-* [Referenz zu Direct3D 12 Windows 7 (d3d12downlevel.h)](direct3d-12on7-reference.md)
+* [Direct3D 12 auf Windows 7-Referenz (d3d12downlevel.h)](direct3d-12on7-reference.md)
 * [Direct3D 12 unter Windows 7](https://devblogs.microsoft.com/directx/porting-directx-12-games-to-windows-7/)

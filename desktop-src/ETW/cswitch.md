@@ -1,7 +1,7 @@
 ---
-description: Diese Klasse ist die Ereignistyp Klasse für Kontextwechsel Ereignisse. Die folgende Syntax wird durch den MOF-Code vereinfacht.
+description: Diese Klasse ist die Ereignistypklasse für Kontextwechselereignisse. Die folgende Syntax wird durch einen MOF-Code vereinfacht.
 ms.assetid: 3f9f84d0-18a9-493c-b104-8236b2bd8404
-title: Cswitch-Klasse
+title: CSwitch-Klasse
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -24,18 +24,18 @@ api_name:
 api_type:
 - NA
 api_location: ''
-ms.openlocfilehash: 91004ca276140271e8d73c3fc226e83c4e03d1fc
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 09efeac38babb057621cb6f25d14d3a631c12242e91982ae3ab9e79570416be5
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104214867"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118395346"
 ---
-# <a name="cswitch-class"></a>Cswitch-Klasse
+# <a name="cswitch-class"></a>CSwitch-Klasse
 
-Diese Klasse ist die Ereignistyp Klasse für Kontextwechsel Ereignisse.
+Diese Klasse ist die Ereignistypklasse für Kontextwechselereignisse.
 
-Die folgende Syntax wird durch den MOF-Code vereinfacht.
+Die folgende Syntax wird durch einen MOF-Code vereinfacht.
 
 ## <a name="syntax"></a>Syntax
 
@@ -60,33 +60,33 @@ class CSwitch : Thread_V2
 
 ## <a name="members"></a>Member
 
-Die **cswitch** -Klasse verfügt über diese Typen von Membern:
+Die **CSwitch-Klasse** verfügt über diese Typen von Membern:
 
 -   [Eigenschaften](#properties)
 
 ### <a name="properties"></a>Eigenschaften
 
-Die **cswitch** -Klasse verfügt über diese Eigenschaften.
+Die **CSwitch-Klasse** verfügt über diese Eigenschaften.
 
 <dl> <dt>
 
-**Newthreadid**
+**NewThreadId**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt32**
+Datentyp: **uint32**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: wmidataid (1), Format ("x")
+Qualifizierer: WmiDataId(1), Format("x")
 </dt> </dl>
 
 Neue Thread-ID nach dem Switch.
 
 </dd> <dt>
 
-**Newthreadpriority**
+**NewThreadPriority**
 </dt> <dd> <dl> <dt>
 
 Datentyp: **sint8**
@@ -95,46 +95,46 @@ Datentyp: **sint8**
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: wmidataid (3)
+Qualifizierer: WmiDataId(3)
 </dt> </dl>
 
-Thread Priorität des neuen Threads.
+Threadpriorität des neuen Threads.
 
 </dd> <dt>
 
-**Newthreadwaittime**
+**NewThreadWaitTime**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt32**
+Datentyp: **uint32**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: wmidataid (11), Format ("x")
+Qualifizierer: WmiDataId(11), Format("x")
 </dt> </dl>
 
-Die Wartezeit für den neuen Thread.
+Wartezeit für den neuen Thread.
 
 </dd> <dt>
 
-**Oldthreadid**
+**OldThreadId**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt32**
+Datentyp: **uint32**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: wmidataid (2), Format ("x")
+Qualifizierer: WmiDataId(2), Format("x")
 </dt> </dl>
 
 Vorherige Thread-ID.
 
 </dd> <dt>
 
-**Oldthreadpriority**
+**OldThreadPriority**
 </dt> <dd> <dl> <dt>
 
 Datentyp: **sint8**
@@ -143,14 +143,14 @@ Datentyp: **sint8**
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: wmidataid (4)
+Qualifizierer: WmiDataId(4)
 </dt> </dl>
 
-Thread Priorität des vorherigen Threads.
+Threadpriorität des vorherigen Threads.
 
 </dd> <dt>
 
-**Oldthreadstate**
+**OldThreadState**
 </dt> <dd> <dl> <dt>
 
 Datentyp: **sint8**
@@ -159,10 +159,10 @@ Datentyp: **sint8**
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: wmidataid (9)
+Qualifizierer: WmiDataId(9)
 </dt> </dl>
 
-Zustand des vorherigen Threads. Im folgenden sind die möglichen Zustands Werte aufgeführt:
+Status des vorherigen Threads. Im Folgenden sind die möglichen Zustandswerte angegeben:
 
 | State | BESCHREIBUNG                                   |
 |-------|-----------------------------------------------|
@@ -171,9 +171,9 @@ Zustand des vorherigen Threads. Im folgenden sind die möglichen Zustands Werte 
 | 2     | Wird ausgeführt                                       |
 | 3     | Standby                                       |
 | 4     | Beendet                                    |
-| 5     | Warten                                       |
+| 5     | Wartend                                       |
 | 6     | Übergang                                    |
-| 7     | Deferredready (für Windows Server 2003 hinzugefügt) |
+| 7     | DeferredReady (hinzugefügt für Windows Server 2003) |
 
 
 
@@ -181,7 +181,7 @@ Zustand des vorherigen Threads. Im folgenden sind die möglichen Zustands Werte 
 
 </dd> <dt>
 
-**Oldthreadwaitidealprocessor**
+**OldThreadWaitIdealProcessor**
 </dt> <dd> <dl> <dt>
 
 Datentyp: **sint8**
@@ -190,14 +190,14 @@ Datentyp: **sint8**
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: wmidataid (10), Format ("x")
+Qualifizierer: WmiDataId(10), Format("x")
 </dt> </dl>
 
-Die ideale Wartezeit für den vorherigen Thread.
+Ideale Wartezeit des vorherigen Threads.
 
 </dd> <dt>
 
-**Oldthreadwaitmode**
+**OldThreadWaitMode**
 </dt> <dd> <dl> <dt>
 
 Datentyp: **sint8**
@@ -206,15 +206,15 @@ Datentyp: **sint8**
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: wmidataid (8)
+Qualifizierer: WmiDataId(8)
 </dt> </dl>
 
-Der Wartemodus für den vorherigen Thread. Folgende Werte sind möglich:
+Wartemodus für den vorherigen Thread. Folgende Werte sind möglich:
 
 | State | BESCHREIBUNG |
 |-------|-------------|
-| 0     | Kernel Mode  |
-| 1     | UserMode    |
+| 0     | KernelMode  |
+| 1     | Usermode    |
 
 
 
@@ -222,7 +222,7 @@ Der Wartemodus für den vorherigen Thread. Folgende Werte sind möglich:
 
 </dd> <dt>
 
-**Oldthreadwaitreason**
+**OldThreadWaitReason**
 </dt> <dd> <dl> <dt>
 
 Datentyp: **sint8**
@@ -231,51 +231,51 @@ Datentyp: **sint8**
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: wmidataid (7)
+Qualifizierer: WmiDataId(7)
 </dt> </dl>
 
-Der Warte Grund für den vorherigen Thread. Folgende Werte sind möglich:
+Wartegrund für den vorherigen Thread. Folgende Werte sind möglich:
 
 | State | BESCHREIBUNG       |
 |-------|-------------------|
 | 0     | Executive         |
-| 1     | Freepage          |
+| 1     | FreePage          |
 | 2     | PageIn            |
-| 3     | Poolallocation    |
-| 4     | Delta Execution    |
+| 3     | PoolAllocation    |
+| 4     | DelayExecution    |
 | 5     | Ausgesetzt         |
-| 6     | Userrequest       |
-| 7     | Wrexecutive       |
-| 8     | Wrfreepage        |
-| 9     | Wrpagein          |
-| 10    | Wrpoolallocation  |
-| 11    | Wrdelta-Ausführungszeit  |
-| 12    | Wrangeh alten       |
-| 13    | Wruserrequest     |
-| 14    | Wreventpair       |
-| 15    | Wrqueue           |
-| 16    | Wrlpcreceive      |
-| 17    | Wrlpkreply        |
-| 18    | Wrvirtualmemory   |
-| 19    | Wrpageout         |
-| 20    | Wrrendezvous      |
-| 21    | Wrkeyedebug      |
-| 22    | Wrterminiert      |
-| 23    | Wrprocessinswap   |
-| 24    | Wrcpuratecontrol  |
-| 25    | Wrcalloutstack    |
-| 26    | Wrkernel          |
-| 27    | Wrresource        |
-| 28    | Wrpushlock        |
-| 29    | Wrmutex           |
-| 30    | Wrquantenend      |
-| 31    | Wrdispatchint     |
-| 32    | Wrpreempted       |
-| 33    | Wryieldexecution  |
-| 34    | Wrfastmutex       |
-| 35    | Wrguardecodmutex    |
-| 36    | Wrrundown         |
-| 37    | Maximumwaitreason |
+| 6     | UserRequest       |
+| 7     | WrExecutive       |
+| 8     | WrFreePage        |
+| 9     | WrPageIn          |
+| 10    | WrPoolAllocation  |
+| 11    | WrDelayExecution  |
+| 12    | WrSuspended       |
+| 13    | WrUserRequest     |
+| 14    | WrEventPair       |
+| 15    | WrQueue           |
+| 16    | WrLpcReceive      |
+| 17    | WrLpcReply        |
+| 18    | WrVirtualMemory   |
+| 19    | WrPageOut         |
+| 20    | WrRendezvous      |
+| 21    | WrKeyedEvent      |
+| 22    | WrTerminated      |
+| 23    | WrProcessInSwap   |
+| 24    | WrCpuRateControl  |
+| 25    | WrCalloutStack    |
+| 26    | WrKernel          |
+| 27    | WrResource        |
+| 28    | WrPushLock        |
+| 29    | WrMutex           |
+| 30    | WrQuantumEnd      |
+| 31    | WrDispatchInt     |
+| 32    | WrPreempted       |
+| 33    | WrYieldExecution  |
+| 34    | WrFastMutex       |
+| 35    | WrGuardedMutex    |
+| 36    | WrRundown         |
+| 37    | MaximumWaitReason |
 
 
 
@@ -283,39 +283,39 @@ Der Warte Grund für den vorherigen Thread. Folgende Werte sind möglich:
 
 </dd> <dt>
 
-**Previouscstate**
+**PreviousCState**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Uint8**
+Datentyp: **uint8**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: wmidataid (5)
+Qualifizierer: WmiDataId(5)
 </dt> </dl>
 
-Der Index des C-Zustands, der zuletzt vom Prozessor verwendet wurde. Der Wert 0 steht für den leichteren Leerlaufzustand mit höheren Werten, die tiefere C-Zustände darstellen.
+Der Index des C-Zustands, der zuletzt vom Prozessor verwendet wurde. Der Wert 0 stellt den hellsten Leerlaufzustand mit höheren Werten dar, die tiefere C-Zustände darstellen.
 
 </dd> <dt>
 
 **Reserved**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt32**
+Datentyp: **uint32**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: wmidataid (12)
+Qualifizierer: WmiDataId(12)
 </dt> </dl>
 
 Reserviert.
 
 </dd> <dt>
 
-**Sparebyte**
+**SpareByte**
 </dt> <dd> <dl> <dt>
 
 Datentyp: **sint8**
@@ -324,25 +324,25 @@ Datentyp: **sint8**
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: wmidataid (6)
+Qualifizierer: WmiDataId(6)
 </dt> </dl>
 
-Nicht verwendet.
+Wird nicht verwendet.
 
 </dd> </dl>
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Diese Ereignisse führen zu einer hohen Anzahl von Ereignissen.
+Diese Ereignisse erzeugen eine große Menge von Ereignissen.
 
-## <a name="requirements"></a>Requirements (Anforderungen)
+## <a name="requirements"></a>Anforderungen
 
 
 
 | Anforderung | Wert |
 |-------------------------------------|------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>       |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2008 \[ -Desktop-Apps\]<br/> |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur \[ Vista-Desktop-Apps\]<br/>       |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2008-Desktop-Apps\]<br/> |
 
 
 
@@ -350,10 +350,10 @@ Diese Ereignisse führen zu einer hohen Anzahl von Ereignissen.
 
 <dl> <dt>
 
-[**Aden**](thread.md)
+[**Thread**](thread.md)
 </dt> <dt>
 
-[**Thread \_ v2**](thread-v2.md)
+[**Thread \_ V2**](thread-v2.md)
 </dt> </dl>
 
  

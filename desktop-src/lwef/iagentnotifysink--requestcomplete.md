@@ -1,19 +1,19 @@
 ---
-title: Iagentnotifysink requestcomplete
-description: Iagentnotifysink requestcomplete
+title: IAgentNotifySink RequestComplete
+description: IAgentNotifySink RequestComplete
 ms.assetid: 995bc961-f175-4429-94a4-91962161298b
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 0265a7111369dec687fd74b9c66c27275a40e164
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: 7c797232ca968261c5857bec8953c6c76375bafc849b17ebe21bc8f353698f02
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "104311040"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118976170"
 ---
-# <a name="iagentnotifysinkrequestcomplete"></a>Iagentnotifysink:: requestcomplete
+# <a name="iagentnotifysinkrequestcomplete"></a>IAgentNotifySink::RequestComplete
 
-\[Der Microsoft-Agent ist ab Windows 7 veraltet und in nachfolgenden Versionen von Windows möglicherweise nicht verfügbar.\]
+\[Microsoft Agent ist ab Version Windows 7 veraltet und in nachfolgenden Versionen von Windows.\]
 
 ``` syntax
 HRESULT RequestComplete(
@@ -22,16 +22,16 @@ HRESULT RequestComplete(
 );                          
 ```
 
-Benachrichtigt eine Client Anwendung, wenn eine Anforderung abgeschlossen ist.
+Benachrichtigt eine Clientanwendung, wenn eine Anforderung abgeschlossen wird.
 
 -   Kein Rückgabewert.
 
 <dl> <dt>
 
-<span id="dwRequestID"></span><span id="dwrequestid"></span><span id="DWREQUESTID"></span>*dwrequestid*
+<span id="dwRequestID"></span><span id="dwrequestid"></span><span id="DWREQUESTID"></span>*dwRequestID*
 </dt> <dd>
 
-Der Bezeichner der Anforderung, die gestartet wurde.
+Bezeichner der gestarteten Anforderung.
 
 </dd> <dt>
 
@@ -42,16 +42,16 @@ Statuscode. Dieser Parameter gibt den Statuscode für die Anforderung zurück.
 
 </dd> </dl>
 
-Mithilfe dieses Ereignisses können Sie nachverfolgen, wann eine in der Warteschlange stehende Methode mithilfe ihrer Anforderungs-ID abgeschlossen wird.
+Mit diesem Ereignis können Sie nachverfolgen, wann eine Methode in der Warteschlange mithilfe ihrer Anforderungs-ID abgeschlossen wird.
 
 ## <a name="see-also"></a>Weitere Informationen
 
-[**Iagentnotifysink:: requeststart**](iagentnotifysink--requeststart.md), [**iagent:: Load**](iagent--load.md), [**iagentcharacter:: gestureat**](iagentcharacter--gestureat.md), [**iagentcharacter:: Hide**](iagentcharacter--hide.md), [**iagentcharacter:: Interrupt**](iagentcharacter--interrupt.md), [**iagentcharacter:: muveto**](iagentcharacter--moveto.md), [**iagentcharacter::P repare**](iagentcharacter--prepare.md), [**iagentcharacter::P Lay**](iagentcharacter--play.md), [**iagentcharacter:: Show**](iagentcharacter--show.md), [**iagentcharacter:: Speak**](iagentcharacter--speak.md), [**iagentcharacter:: Wait**](iagentcharacter--wait.md)
+[**IAgentNotifySink::RequestStart**](iagentnotifysink--requeststart.md), [**IAgent::Load**](iagent--load.md), [**IAgentCharacter::GestureAt**](iagentcharacter--gestureat.md), [**IAgentCharacter::Hide**](iagentcharacter--hide.md), [**IAgentCharacter::Interrupt**](iagentcharacter--interrupt.md), [**IAgentCharacter::MoveTo**](iagentcharacter--moveto.md), [**IAgentCharacter::P repare**](iagentcharacter--prepare.md), [**IAgentCharacter::P lay**](iagentcharacter--play.md), [**IAgentCharacter::Show**](iagentcharacter--show.md), [**IAgentCharacter::Speak**](iagentcharacter--speak.md), [**IAgentCharacter::Wait**](iagentcharacter--wait.md)
 
 
- 
+ 
 
- 
+ 
 
 
 

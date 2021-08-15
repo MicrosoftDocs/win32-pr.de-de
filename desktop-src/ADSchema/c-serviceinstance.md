@@ -1,11 +1,11 @@
 ---
 title: Service-Instance-Klasse
-description: Ein Verbindungspunktobjekt, das vom Windows Sockets Registration and Resolution (RnR)-Namensdienst verwendet wird, auf den über die Windows Sockets WSA\-APIs zugegriffen wird.
+description: Ein Verbindungspunktobjekt, das vom Namensdienst Windows Sockets Registration and Resolution (RnR) verwendet wird, auf das über die Windows Sockets WSA\-APIs zugegriffen wird.
 ms.assetid: a9dfe942-c42d-4494-a1e6-ab03df5daecd
 ms.tgt_platform: multiple
 keywords:
-- Service-Instance AD-Schema der Klasse
-- 'serviceInstance-Klasse : AD-Schema'
+- Service-Instance Ad-Schema der Klasse
+- serviceInstance-Klasse AD-Schema
 topic_type:
 - apiref
 api_name:
@@ -23,7 +23,7 @@ ms.locfileid: "118959529"
 ---
 # <a name="service-instance-class"></a>Service-Instance-Klasse
 
-Ein Verbindungspunktobjekt, das vom Windows Sockets Registration and Resolution (RnR)-Namensdienst verwendet wird, auf den über die Windows Sockets-WSA-APIs \* zugegriffen wird.
+Ein Verbindungspunktobjekt, das vom Namensdienst Windows Sockets Registration and Resolution (RnR) verwendet wird, auf das über die WSA-APIs für Windows Sockets zugegriffen \* wird.
 
 
 
@@ -59,9 +59,9 @@ Ein Verbindungspunktobjekt, das vom Windows Sockets Registration and Resolution 
 | Default-Object-Category     | \-                                                                                           |
 | Governs-Id                  | 1.2.840.113556.1.5.30                                                                        |
 | Default-Hiding-Value        | 1                                                                                            |
-| Rdn-Att-Id                  | [**Common-Name**](a-cn.md)<br/>                                                       |
+| Rdn-Att-Id                  | [**Allgemeiner Name**](a-cn.md)<br/>                                                       |
 | Unterklasse von                 | [**Verbindungspunkt**](c-connectionpoint.md)<br/>                                     |
-| Mögliche Vorgesetzte          | [**Container**](c-container.md)                                                             |
+| Mögliche Übergeordnete          | [**Container**](c-container.md)                                                             |
 | Zusätzlich           | \-                                                                                           |
 | NT-Security-Descriptor      | O:BAG:BAD:S:                                                                                 |
 | Standardsicherheitsdeskriptor | D:(A;; RPWPCRCCDCLCLORCWOWDSDDTSW;;;D A)(A;; RPWPCRCCDCLCLORCWOWDSDDTSW;;; SY)(A;; RPLCLORC;;; AU) |
@@ -69,27 +69,27 @@ Ein Verbindungspunktobjekt, das vom Windows Sockets Registration and Resolution 
 
 
 
-## <a name="windows-2000-server-attributes"></a>Windows 2000-Serverattribute
+## <a name="windows-2000-server-attributes"></a>Windows 2000 Serverattribute
 
-Diese Klasse enthält die folgenden Attribute für Windows 2000-Server:
+Diese Klasse enthält die folgenden Attribute für Windows Server 2000:
 
 
 
 | attribute                                                                 | Obligatorisch. | Abgeleitet von                                                                             |
 |---------------------------------------------------------------------------|-----------|------------------------------------------------------------------------------------------|
-| [**Admin-Description**](a-admindescription.md)                           | False     | [**Nach oben**](c-top.md)<br/>                                                          |
-| [**Administratoranzeigename**](a-admindisplayname.md)                          | False     | [**Nach oben**](c-top.md)<br/>                                                          |
+| [**Administratorbeschreibung**](a-admindescription.md)                           | False     | [**Nach oben**](c-top.md)<br/>                                                          |
+| [**Admin-Display-Name**](a-admindisplayname.md)                          | False     | [**Nach oben**](c-top.md)<br/>                                                          |
 | [**Allowed-Attributes**](a-allowedattributes.md)                         | False     | [**Nach oben**](c-top.md)<br/>                                                          |
 | [**Allowed-Attributes-Effective**](a-allowedattributeseffective.md)      | False     | [**Nach oben**](c-top.md)<br/>                                                          |
 | [**Allowed-Child-Classes**](a-allowedchildclasses.md)                    | False     | [**Nach oben**](c-top.md)<br/>                                                          |
 | [**Allowed-Child-Classes-Effective**](a-allowedchildclasseseffective.md) | False     | [**Nach oben**](c-top.md)<br/>                                                          |
 | [**Bridgehead-Server-List-BL**](a-bridgeheadserverlistbl.md)             | False     | [**Nach oben**](c-top.md)<br/>                                                          |
 | [**Kanonischer Name**](a-canonicalname.md)                                 | False     | [**Nach oben**](c-top.md)<br/>                                                          |
-| [**Common-Name**](a-cn.md)                                               | True      | [**Verbindungspunkt**](c-connectionpoint.md)<br/> [**Nach oben**](c-top.md)<br/> |
-| [**Create-Time-Stamp**](a-createtimestamp.md)                            | False     | [**Nach oben**](c-top.md)<br/>                                                          |
+| [**Allgemeiner Name**](a-cn.md)                                               | True      | [**Verbindungspunkt**](c-connectionpoint.md)<br/> [**Nach oben**](c-top.md)<br/> |
+| [**Erstellen eines Zeitstempels**](a-createtimestamp.md)                            | False     | [**Nach oben**](c-top.md)<br/>                                                          |
 | [**Beschreibung**](a-description.md)                                      | False     | [**Nach oben**](c-top.md)<br/>                                                          |
-| [**Anzeigename**](a-displayname.md)                                     | True      | **Dienstinstanz** [ **oben**](c-top.md)<br/>                                     |
-| [**Display-Name-Printable**](a-displaynameprintable.md)                  | False     | [**Nach oben**](c-top.md)<br/>                                                          |
+| [**Anzeigename**](a-displayname.md)                                     | True      | **Service-Instance** [ **Top**](c-top.md)<br/>                                     |
+| [**Anzeigename– druckbar**](a-displaynameprintable.md)                  | False     | [**Nach oben**](c-top.md)<br/>                                                          |
 | [**DSA-Signature**](a-dsasignature.md)                                   | False     | [**Nach oben**](c-top.md)<br/>                                                          |
 | [**DS-Core-Propagierungsdaten**](a-dscorepropagationdata.md)               | False     | [**Nach oben**](c-top.md)<br/>                                                          |
 | [**Erweiterungsname**](a-extensionname.md)                                 | False     | [**Nach oben**](c-top.md)<br/>                                                          |
@@ -171,137 +171,6 @@ Diese Klasse enthält die folgenden Attribute für Windows 2000-Server:
 | Default-Object-Category     | \-                                                                                           |
 | Governs-Id                  | 1.2.840.113556.1.5.30                                                                        |
 | Default-Hiding-Value        | 1                                                                                            |
-| Rdn-Att-Id                  | [**Allgemeiner Name**](a-cn.md)<br/>                                                       |
-| Unterklasse von                 | [**Verbindungspunkt**](c-connectionpoint.md)<br/>                                     |
-| Mögliche Übergeordnete          | [**Container**](c-container.md)                                                             |
-| Zusätzlich           | \-                                                                                           |
-| NT-Security-Descriptor      | O:BAG:BAD:S:                                                                                 |
-| Standardsicherheitsdeskriptor | D:(A;; RPWPCRCCDCLCLORCWOWDSDDTSW;;;D A)(A;; RPWPCRCCDCLCLORCWOWDSDDTSW;;; SY)(A;; RPLCLORC;;; AU) |
-| System-Flags                | 0x00000010                                                                                   |
-
-
-
-## <a name="windows-server-2003-attributes"></a>Windows Server 2003-Attribute
-
-Diese Klasse enthält die folgenden Attribute für Windows Server 2003:
-
-
-
-| attribute                                                                   | Obligatorisch. | Abgeleitet von                                                                             |
-|-----------------------------------------------------------------------------|-----------|------------------------------------------------------------------------------------------|
-| [**Administratorbeschreibung**](a-admindescription.md)                             | False     | [**Nach oben**](c-top.md)<br/>                                                          |
-| [**Admin-Display-Name**](a-admindisplayname.md)                            | False     | [**Nach oben**](c-top.md)<br/>                                                          |
-| [**Allowed-Attributes**](a-allowedattributes.md)                           | False     | [**Nach oben**](c-top.md)<br/>                                                          |
-| [**Allowed-Attributes-Effective**](a-allowedattributeseffective.md)        | False     | [**Nach oben**](c-top.md)<br/>                                                          |
-| [**Allowed-Child-Classes**](a-allowedchildclasses.md)                      | False     | [**Nach oben**](c-top.md)<br/>                                                          |
-| [**Allowed-Child-Classes-Effective**](a-allowedchildclasseseffective.md)   | False     | [**Nach oben**](c-top.md)<br/>                                                          |
-| [**Bridgehead-Server-List-BL**](a-bridgeheadserverlistbl.md)               | False     | [**Nach oben**](c-top.md)<br/>                                                          |
-| [**Kanonischer Name**](a-canonicalname.md)                                   | False     | [**Nach oben**](c-top.md)<br/>                                                          |
-| [**Allgemeiner Name**](a-cn.md)                                                 | True      | [**Verbindungspunkt**](c-connectionpoint.md)<br/> [**Nach oben**](c-top.md)<br/> |
-| [**Erstellen eines Zeitstempels**](a-createtimestamp.md)                              | False     | [**Nach oben**](c-top.md)<br/>                                                          |
-| [**Beschreibung**](a-description.md)                                        | False     | [**Nach oben**](c-top.md)<br/>                                                          |
-| [**Anzeigename**](a-displayname.md)                                       | True      | **Service-Instance** [ **Top**](c-top.md)<br/>                                     |
-| [**Anzeigename– druckbar**](a-displaynameprintable.md)                    | False     | [**Nach oben**](c-top.md)<br/>                                                          |
-| [**DSA-Signature**](a-dsasignature.md)                                     | False     | [**Nach oben**](c-top.md)<br/>                                                          |
-| [**DS-Core-Propagierungsdaten**](a-dscorepropagationdata.md)                 | False     | [**Nach oben**](c-top.md)<br/>                                                          |
-| [**Erweiterungsname**](a-extensionname.md)                                   | False     | [**Nach oben**](c-top.md)<br/>                                                          |
-| [**Flaggen**](a-flags.md)                                                    | False     | [**Nach oben**](c-top.md)<br/>                                                          |
-| [**From-Entry**](a-fromentry.md)                                           | False     | [**Nach oben**](c-top.md)<br/>                                                          |
-| [**Frs-Computer-Reference-BL**](a-frscomputerreferencebl.md)               | False     | [**Nach oben**](c-top.md)<br/>                                                          |
-| [**FRS-Member-Reference-BL**](a-frsmemberreferencebl.md)                   | False     | [**Nach oben**](c-top.md)<br/>                                                          |
-| [**FSMO-Role-Owner**](a-fsmoroleowner.md)                                  | False     | [**Nach oben**](c-top.md)<br/>                                                          |
-| [**Instanztyp**](a-instancetype.md)                                     | True      | [**Nach oben**](c-top.md)<br/>                                                          |
-| [**Is-Critical-System-Object**](a-iscriticalsystemobject.md)               | False     | [**Nach oben**](c-top.md)<br/>                                                          |
-| [**Is-Deleted**](a-isdeleted.md)                                           | False     | [**Nach oben**](c-top.md)<br/>                                                          |
-| [**Is-Member-of-DL**](a-memberof.md)                                       | False     | [**Nach oben**](c-top.md)<br/>                                                          |
-| [**Is-Privilege-Holder**](a-isprivilegeholder.md)                          | False     | [**Nach oben**](c-top.md)<br/>                                                          |
-| [**Keywords**](a-keywords.md)                                              | False     | [**Verbindungspunkt**](c-connectionpoint.md)<br/>                                 |
-| [**Last-Known-Parent**](a-lastknownparent.md)                              | False     | [**Nach oben**](c-top.md)<br/>                                                          |
-| [**Verwaltet von**](a-managedby.md)                                           | False     | [**Verbindungspunkt**](c-connectionpoint.md)<br/>                                 |
-| [**Verwaltete Objekte**](a-managedobjects.md)                                 | False     | [**Nach oben**](c-top.md)<br/>                                                          |
-| [**Mastered-By**](a-masteredby.md)                                         | False     | [**Nach oben**](c-top.md)<br/>                                                          |
-| [**Modify-Time-Stamp**](a-modifytimestamp.md)                              | False     | [**Nach oben**](c-top.md)<br/>                                                          |
-| [**ms-COM-PartitionSetLink**](a-mscom-partitionsetlink.md)                 | False     | [**Nach oben**](c-top.md)<br/>                                                          |
-| [**ms-COM-UserLink**](a-mscom-userlink.md)                                 | False     | [**Nach oben**](c-top.md)<br/>                                                          |
-| [**ms-DS-Approx-Immed-Subordinates**](a-msds-approx-immed-subordinates.md) | False     | [**Nach oben**](c-top.md)<br/>                                                          |
-| [**MS-DS-Consistency-Child-Count**](a-ms-ds-consistencychildcount.md)      | False     | [**Nach oben**](c-top.md)<br/>                                                          |
-| [**MS-DS-Consistency-Guid**](a-ms-ds-consistencyguid.md)                   | False     | [**Nach oben**](c-top.md)<br/>                                                          |
-| [**ms-DS-Mastered-By**](a-msds-masteredby.md)                              | False     | [**Nach oben**](c-top.md)<br/>                                                          |
-| [**ms-DS-Members-for-Az-Role-BL**](a-msds-membersforazrolebl.md)           | False     | [**Nach oben**](c-top.md)<br/>                                                          |
-| [**ms-DS-NC-Repl-Cursors**](a-msds-ncreplcursors.md)                       | False     | [**Nach oben**](c-top.md)<br/>                                                          |
-| [**ms-DS-NC-Repl-Inbound-Neighbors**](a-msds-ncreplinboundneighbors.md)    | False     | [**Nach oben**](c-top.md)<br/>                                                          |
-| [**ms-DS-NC-Repl-Outbound-Neighbors**](a-msds-ncreploutboundneighbors.md)  | False     | [**Nach oben**](c-top.md)<br/>                                                          |
-| [**ms-DS-Non-Members-BL**](a-msds-nonmembersbl.md)                         | False     | [**Nach oben**](c-top.md)<br/>                                                          |
-| [**ms-DS-Object-Reference-BL**](a-msds-objectreferencebl.md)               | False     | [**Nach oben**](c-top.md)<br/>                                                          |
-| [**ms-DS-Operations-for-Az-Role-BL**](a-msds-operationsforazrolebl.md)     | False     | [**Nach oben**](c-top.md)<br/>                                                          |
-| [**ms-DS-Operations-for-Az-Task-BL**](a-msds-operationsforaztaskbl.md)     | False     | [**Nach oben**](c-top.md)<br/>                                                          |
-| [**ms-DS-Repl-Attribute-Meta-Data**](a-msds-replattributemetadata.md)      | False     | [**Nach oben**](c-top.md)<br/>                                                          |
-| [**ms-DS-Repl-Value-Meta-Data**](a-msds-replvaluemetadata.md)              | False     | [**Nach oben**](c-top.md)<br/>                                                          |
-| [**ms-DS-Einstellungen**](a-msds-settings.md)                                   | False     | [**Verbindungspunkt**](c-connectionpoint.md)<br/>                                 |
-| [**ms-DS-Tasks-for-Az-Role-BL**](a-msds-tasksforazrolebl.md)               | False     | [**Nach oben**](c-top.md)<br/>                                                          |
-| [**ms-DS-Tasks-for-Az-Task-BL**](a-msds-tasksforaztaskbl.md)               | False     | [**Nach oben**](c-top.md)<br/>                                                          |
-| [**ms-Exch-Owner-BL**](a-ownerbl.md)                                       | False     | [**Nach oben**](c-top.md)<br/>                                                          |
-| [**netboot-SCP-BL**](a-netbootscpbl.md)                                    | False     | [**Nach oben**](c-top.md)<br/>                                                          |
-| [**Non-Security-Member-BL**](a-nonsecuritymemberbl.md)                     | False     | [**Nach oben**](c-top.md)<br/>                                                          |
-| [**NT-Security-Descriptor**](a-ntsecuritydescriptor.md)                    | True      | [**Nach oben**](c-top.md)<br/>                                                          |
-| [**Obj-Dist-Name**](a-distinguishedname.md)                                | False     | [**Nach oben**](c-top.md)<br/>                                                          |
-| [**Objektkategorie**](a-objectcategory.md)                                 | True      | [**Nach oben**](c-top.md)<br/>                                                          |
-| [**Objektklasse**](a-objectclass.md)                                       | True      | [**Nach oben**](c-top.md)<br/>                                                          |
-| [**Objekt-GUID**](a-objectguid.md)                                         | False     | [**Nach oben**](c-top.md)<br/>                                                          |
-| [**Objektversion**](a-objectversion.md)                                   | False     | [**Nach oben**](c-top.md)<br/>                                                          |
-| [**Andere bekannte Objekte**](a-otherwellknownobjects.md)                 | False     | [**Nach oben**](c-top.md)<br/>                                                          |
-| [**Partial-Attribute-Deletion-List**](a-partialattributedeletionlist.md)   | False     | [**Nach oben**](c-top.md)<br/>                                                          |
-| [**Partial-Attribute-Set**](a-partialattributeset.md)                      | False     | [**Nach oben**](c-top.md)<br/>                                                          |
-| [**Mögliche 100000000000**](a-possibleinferiors.md)                           | False     | [**Nach oben**](c-top.md)<br/>                                                          |
-| [**Proxied-Object-Name**](a-proxiedobjectname.md)                          | False     | [**Nach oben**](c-top.md)<br/>                                                          |
-| [**Proxyadressen**](a-proxyaddresses.md)                                 | False     | [**Nach oben**](c-top.md)<br/>                                                          |
-| [**Query-Policy-BL**](a-querypolicybl.md)                                  | False     | [**Nach oben**](c-top.md)<br/>                                                          |
-| [**Rdn**](a-name.md)                                                       | False     | [**Nach oben**](c-top.md)<br/>                                                          |
-| [**Repl-Property-Meta-Data**](a-replpropertymetadata.md)                   | False     | [**Nach oben**](c-top.md)<br/>                                                          |
-| [**Repl-UpToDate-Vector**](a-repluptodatevector.md)                        | False     | [**Nach oben**](c-top.md)<br/>                                                          |
-| [**Berichte**](a-directreports.md)                                          | False     | [**Nach oben**](c-top.md)<br/>                                                          |
-| [**Reps-From**](a-repsfrom.md)                                             | False     | [**Nach oben**](c-top.md)<br/>                                                          |
-| [**Reps-To**](a-repsto.md)                                                 | False     | [**Nach oben**](c-top.md)<br/>                                                          |
-| [**Revision**](a-revision.md)                                              | False     | [**Nach oben**](c-top.md)<br/>                                                          |
-| [**SD-Rights-Effective**](a-sdrightseffective.md)                          | False     | [**Nach oben**](c-top.md)<br/>                                                          |
-| [**Server-Reference-BL**](a-serverreferencebl.md)                          | False     | [**Nach oben**](c-top.md)<br/>                                                          |
-| [**Service-Class-ID**](a-serviceclassid.md)                                | True      | **Dienstinstanz**                                                                     |
-| [**Dienstinstanzversion**](a-serviceinstanceversion.md)                | False     | **Dienstinstanz**                                                                     |
-| [**Show-In-Advanced-View-Only**](a-showinadvancedviewonly.md)              | False     | [**Nach oben**](c-top.md)<br/>                                                          |
-| [**Site-Object-BL**](a-siteobjectbl.md)                                    | False     | [**Nach oben**](c-top.md)<br/>                                                          |
-| [**Structural-Object-Class**](a-structuralobjectclass.md)                  | False     | [**Nach oben**](c-top.md)<br/>                                                          |
-| [**Sub-Refs**](a-subrefs.md)                                               | False     | [**Nach oben**](c-top.md)<br/>                                                          |
-| [**SubSchemaSubEntry**](a-subschemasubentry.md)                            | False     | [**Nach oben**](c-top.md)<br/>                                                          |
-| [**Systemflags**](a-systemflags.md)                                       | False     | [**Nach oben**](c-top.md)<br/>                                                          |
-| [**USN-Changed**](a-usnchanged.md)                                         | False     | [**Nach oben**](c-top.md)<br/>                                                          |
-| [**VON USN erstellt**](a-usncreated.md)                                         | False     | [**Nach oben**](c-top.md)<br/>                                                          |
-| [**USN-DSA-Last-Obj-Removed**](a-usndsalastobjremoved.md)                  | False     | [**Nach oben**](c-top.md)<br/>                                                          |
-| [**USN-Intersite**](a-usnintersite.md)                                     | False     | [**Nach oben**](c-top.md)<br/>                                                          |
-| [**USN-Last-Obj-Rem**](a-usnlastobjrem.md)                                 | False     | [**Nach oben**](c-top.md)<br/>                                                          |
-| [**USN-Quelle**](a-usnsource.md)                                           | False     | [**Nach oben**](c-top.md)<br/>                                                          |
-| [**Wbem-Path**](a-wbempath.md)                                             | False     | [**Nach oben**](c-top.md)<br/>                                                          |
-| [**Bekannte Objekte**](a-wellknownobjects.md)                            | False     | [**Nach oben**](c-top.md)<br/>                                                          |
-| [**Wenn geändert**](a-whenchanged.md)                                       | False     | [**Nach oben**](c-top.md)<br/>                                                          |
-| [**Wenn erstellt**](a-whencreated.md)                                       | False     | [**Nach oben**](c-top.md)<br/>                                                          |
-| [**Winsock-Addresses**](a-winsockaddresses.md)                             | False     | **Dienstinstanz**                                                                     |
-| [**WWW-Homepage**](a-wwwhomepage.md)                                      | False     | [**Nach oben**](c-top.md)<br/>                                                          |
-| [**WWW-Page-Other**](a-url.md)                                             | False     | [**Nach oben**](c-top.md)<br/>                                                          |
-
-
-
-## <a name="windows-server-2003-r2"></a>Windows Server 2003 R2
-
--   [Attribute](#windows-server-2003-r2-attributes)
-
-
-
-| Eingabe | Wert |
-|-----------------------------|----------------------------------------------------------------------------------------------|
-| System-Only                 | False                                                                                        |
-| Object-Category             | 1                                                                                            |
-| Default-Object-Category     | \-                                                                                           |
-| Governs-Id                  | 1.2.840.113556.1.5.30                                                                        |
-| Default-Hiding-Value        | 1                                                                                            |
 | Rdn-Att-Id                  | [**Common-Name**](a-cn.md)<br/>                                                       |
 | Unterklasse von                 | [**Verbindungspunkt**](c-connectionpoint.md)<br/>                                     |
 | Mögliche Vorgesetzte          | [**Container**](c-container.md)                                                             |
@@ -312,9 +181,9 @@ Diese Klasse enthält die folgenden Attribute für Windows Server 2003:
 
 
 
-## <a name="windows-server-2003-r2-attributes"></a>Windows Server 2003 R2-Attribute
+## <a name="windows-server-2003-attributes"></a>Windows Server 2003-Attribute
 
-Diese Klasse enthält die folgenden Attribute für Windows Server 2003 R2:
+Diese Klasse enthält die folgenden Attribute für Windows Server 2003:
 
 
 
@@ -333,6 +202,137 @@ Diese Klasse enthält die folgenden Attribute für Windows Server 2003 R2:
 | [**Beschreibung**](a-description.md)                                        | False     | [**Nach oben**](c-top.md)<br/>                                                          |
 | [**Anzeigename**](a-displayname.md)                                       | True      | **Dienstinstanz** [ **oben**](c-top.md)<br/>                                     |
 | [**Display-Name-Printable**](a-displaynameprintable.md)                    | False     | [**Nach oben**](c-top.md)<br/>                                                          |
+| [**DSA-Signature**](a-dsasignature.md)                                     | False     | [**Nach oben**](c-top.md)<br/>                                                          |
+| [**DS-Core-Propagierungsdaten**](a-dscorepropagationdata.md)                 | False     | [**Nach oben**](c-top.md)<br/>                                                          |
+| [**Extension-Name**](a-extensionname.md)                                   | False     | [**Nach oben**](c-top.md)<br/>                                                          |
+| [**Flaggen**](a-flags.md)                                                    | False     | [**Nach oben**](c-top.md)<br/>                                                          |
+| [**From-Entry**](a-fromentry.md)                                           | False     | [**Nach oben**](c-top.md)<br/>                                                          |
+| [**Frs-Computer-Reference-BL**](a-frscomputerreferencebl.md)               | False     | [**Nach oben**](c-top.md)<br/>                                                          |
+| [**FRS-Member-Reference-BL**](a-frsmemberreferencebl.md)                   | False     | [**Nach oben**](c-top.md)<br/>                                                          |
+| [**FSMO-Role-Owner**](a-fsmoroleowner.md)                                  | False     | [**Nach oben**](c-top.md)<br/>                                                          |
+| [**Instanztyp**](a-instancetype.md)                                     | True      | [**Nach oben**](c-top.md)<br/>                                                          |
+| [**Is-Critical-System-Object**](a-iscriticalsystemobject.md)               | False     | [**Nach oben**](c-top.md)<br/>                                                          |
+| [**Is-Deleted**](a-isdeleted.md)                                           | False     | [**Nach oben**](c-top.md)<br/>                                                          |
+| [**Is-Member-of-DL**](a-memberof.md)                                       | False     | [**Nach oben**](c-top.md)<br/>                                                          |
+| [**Is-Privilege-Holder**](a-isprivilegeholder.md)                          | False     | [**Nach oben**](c-top.md)<br/>                                                          |
+| [**Keywords**](a-keywords.md)                                              | False     | [**Verbindungspunkt**](c-connectionpoint.md)<br/>                                 |
+| [**Letztes bekanntes übergeordnetes Element**](a-lastknownparent.md)                              | False     | [**Nach oben**](c-top.md)<br/>                                                          |
+| [**Verwaltet von**](a-managedby.md)                                           | False     | [**Verbindungspunkt**](c-connectionpoint.md)<br/>                                 |
+| [**Verwaltete Objekte**](a-managedobjects.md)                                 | False     | [**Nach oben**](c-top.md)<br/>                                                          |
+| [**Mastered By**](a-masteredby.md)                                         | False     | [**Nach oben**](c-top.md)<br/>                                                          |
+| [**Modify-Time-Stamp**](a-modifytimestamp.md)                              | False     | [**Nach oben**](c-top.md)<br/>                                                          |
+| [**ms-COM-PartitionSetLink**](a-mscom-partitionsetlink.md)                 | False     | [**Nach oben**](c-top.md)<br/>                                                          |
+| [**ms-COM-UserLink**](a-mscom-userlink.md)                                 | False     | [**Nach oben**](c-top.md)<br/>                                                          |
+| [**ms-DS-Approx-Immed-Subordinates**](a-msds-approx-immed-subordinates.md) | False     | [**Nach oben**](c-top.md)<br/>                                                          |
+| [**MS-DS-Consistency-Child-Count**](a-ms-ds-consistencychildcount.md)      | False     | [**Nach oben**](c-top.md)<br/>                                                          |
+| [**MS-DS-Consistency-Guid**](a-ms-ds-consistencyguid.md)                   | False     | [**Nach oben**](c-top.md)<br/>                                                          |
+| [**ms-DS-Mastered-By**](a-msds-masteredby.md)                              | False     | [**Nach oben**](c-top.md)<br/>                                                          |
+| [**ms-DS-Members-For-Az-Role-BL**](a-msds-membersforazrolebl.md)           | False     | [**Nach oben**](c-top.md)<br/>                                                          |
+| [**ms-DS-NC-Repl-Cursors**](a-msds-ncreplcursors.md)                       | False     | [**Nach oben**](c-top.md)<br/>                                                          |
+| [**ms-DS-NC-Repl-Inbound-Neighbors**](a-msds-ncreplinboundneighbors.md)    | False     | [**Nach oben**](c-top.md)<br/>                                                          |
+| [**ms-DS-NC-Repl-Outbound-Neighbors**](a-msds-ncreploutboundneighbors.md)  | False     | [**Nach oben**](c-top.md)<br/>                                                          |
+| [**ms-DS-Non-Members-BL**](a-msds-nonmembersbl.md)                         | False     | [**Nach oben**](c-top.md)<br/>                                                          |
+| [**ms-DS-Object-Reference-BL**](a-msds-objectreferencebl.md)               | False     | [**Nach oben**](c-top.md)<br/>                                                          |
+| [**ms-DS-Operations-For-Az-Role-BL**](a-msds-operationsforazrolebl.md)     | False     | [**Nach oben**](c-top.md)<br/>                                                          |
+| [**ms-DS-Operations-For-Az-Task-BL**](a-msds-operationsforaztaskbl.md)     | False     | [**Nach oben**](c-top.md)<br/>                                                          |
+| [**ms-DS-Repl-Attribute-Meta-Data**](a-msds-replattributemetadata.md)      | False     | [**Nach oben**](c-top.md)<br/>                                                          |
+| [**ms-DS-Repl-Value-Meta-Data**](a-msds-replvaluemetadata.md)              | False     | [**Nach oben**](c-top.md)<br/>                                                          |
+| [**ms-DS-Einstellungen**](a-msds-settings.md)                                   | False     | [**Verbindungspunkt**](c-connectionpoint.md)<br/>                                 |
+| [**ms-DS-Tasks-For-Az-Role-BL**](a-msds-tasksforazrolebl.md)               | False     | [**Nach oben**](c-top.md)<br/>                                                          |
+| [**ms-DS-Tasks-For-Az-Task-BL**](a-msds-tasksforaztaskbl.md)               | False     | [**Nach oben**](c-top.md)<br/>                                                          |
+| [**ms-Exch-Owner-BL**](a-ownerbl.md)                                       | False     | [**Nach oben**](c-top.md)<br/>                                                          |
+| [**netboot-SCP-BL**](a-netbootscpbl.md)                                    | False     | [**Nach oben**](c-top.md)<br/>                                                          |
+| [**Non-Security-Member-BL**](a-nonsecuritymemberbl.md)                     | False     | [**Nach oben**](c-top.md)<br/>                                                          |
+| [**NT-Security-Descriptor**](a-ntsecuritydescriptor.md)                    | True      | [**Nach oben**](c-top.md)<br/>                                                          |
+| [**Obj-Dist-Name**](a-distinguishedname.md)                                | False     | [**Nach oben**](c-top.md)<br/>                                                          |
+| [**Objektkategorie**](a-objectcategory.md)                                 | True      | [**Nach oben**](c-top.md)<br/>                                                          |
+| [**Object-Class**](a-objectclass.md)                                       | True      | [**Nach oben**](c-top.md)<br/>                                                          |
+| [**Objekt-GUID**](a-objectguid.md)                                         | False     | [**Nach oben**](c-top.md)<br/>                                                          |
+| [**Object-Version**](a-objectversion.md)                                   | False     | [**Nach oben**](c-top.md)<br/>                                                          |
+| [**Andere bekannte Objekte**](a-otherwellknownobjects.md)                 | False     | [**Nach oben**](c-top.md)<br/>                                                          |
+| [**Teilattributlöschungsliste**](a-partialattributedeletionlist.md)   | False     | [**Nach oben**](c-top.md)<br/>                                                          |
+| [**Teilattributsatz**](a-partialattributeset.md)                      | False     | [**Nach oben**](c-top.md)<br/>                                                          |
+| [**Mögliche Hindernisse**](a-possibleinferiors.md)                           | False     | [**Nach oben**](c-top.md)<br/>                                                          |
+| [**Proxied-Object-Name**](a-proxiedobjectname.md)                          | False     | [**Nach oben**](c-top.md)<br/>                                                          |
+| [**Proxyadressen**](a-proxyaddresses.md)                                 | False     | [**Nach oben**](c-top.md)<br/>                                                          |
+| [**Query-Policy-BL**](a-querypolicybl.md)                                  | False     | [**Nach oben**](c-top.md)<br/>                                                          |
+| [**Rdn**](a-name.md)                                                       | False     | [**Nach oben**](c-top.md)<br/>                                                          |
+| [**Repl-Property-Meta-Data**](a-replpropertymetadata.md)                   | False     | [**Nach oben**](c-top.md)<br/>                                                          |
+| [**Repl-UpToDate-Vector**](a-repluptodatevector.md)                        | False     | [**Nach oben**](c-top.md)<br/>                                                          |
+| [**Berichte**](a-directreports.md)                                          | False     | [**Nach oben**](c-top.md)<br/>                                                          |
+| [**Reps-From**](a-repsfrom.md)                                             | False     | [**Nach oben**](c-top.md)<br/>                                                          |
+| [**Reps-To**](a-repsto.md)                                                 | False     | [**Nach oben**](c-top.md)<br/>                                                          |
+| [**Revision**](a-revision.md)                                              | False     | [**Nach oben**](c-top.md)<br/>                                                          |
+| [**SD-Rights-Effective**](a-sdrightseffective.md)                          | False     | [**Nach oben**](c-top.md)<br/>                                                          |
+| [**Server-Reference-BL**](a-serverreferencebl.md)                          | False     | [**Nach oben**](c-top.md)<br/>                                                          |
+| [**Dienstklassen-ID**](a-serviceclassid.md)                                | True      | **Dienstinstanz**                                                                     |
+| [**Dienstinstanzversion**](a-serviceinstanceversion.md)                | False     | **Dienstinstanz**                                                                     |
+| [**Nur in erweiterter Ansicht anzeigen**](a-showinadvancedviewonly.md)              | False     | [**Nach oben**](c-top.md)<br/>                                                          |
+| [**Site-Object-BL**](a-siteobjectbl.md)                                    | False     | [**Nach oben**](c-top.md)<br/>                                                          |
+| [**Structural-Object-Class**](a-structuralobjectclass.md)                  | False     | [**Nach oben**](c-top.md)<br/>                                                          |
+| [**Sub-Refs**](a-subrefs.md)                                               | False     | [**Nach oben**](c-top.md)<br/>                                                          |
+| [**SubSchemaSubEntry**](a-subschemasubentry.md)                            | False     | [**Nach oben**](c-top.md)<br/>                                                          |
+| [**Systemflags**](a-systemflags.md)                                       | False     | [**Nach oben**](c-top.md)<br/>                                                          |
+| [**USN geändert**](a-usnchanged.md)                                         | False     | [**Nach oben**](c-top.md)<br/>                                                          |
+| [**USN-erstellt**](a-usncreated.md)                                         | False     | [**Nach oben**](c-top.md)<br/>                                                          |
+| [**USN-DSA-last-obj-removed**](a-usndsalastobjremoved.md)                  | False     | [**Nach oben**](c-top.md)<br/>                                                          |
+| [**USN-Intersite**](a-usnintersite.md)                                     | False     | [**Nach oben**](c-top.md)<br/>                                                          |
+| [**USN-Last-Obj-Rem**](a-usnlastobjrem.md)                                 | False     | [**Nach oben**](c-top.md)<br/>                                                          |
+| [**USN-Quelle**](a-usnsource.md)                                           | False     | [**Nach oben**](c-top.md)<br/>                                                          |
+| [**Wbem-Pfad**](a-wbempath.md)                                             | False     | [**Nach oben**](c-top.md)<br/>                                                          |
+| [**Bekannte Objekte**](a-wellknownobjects.md)                            | False     | [**Nach oben**](c-top.md)<br/>                                                          |
+| [**Bei Änderung**](a-whenchanged.md)                                       | False     | [**Nach oben**](c-top.md)<br/>                                                          |
+| [**Bei der Erstellung**](a-whencreated.md)                                       | False     | [**Nach oben**](c-top.md)<br/>                                                          |
+| [**Winsock-Addresses**](a-winsockaddresses.md)                             | False     | **Dienstinstanz**                                                                     |
+| [**WWW-Startseite**](a-wwwhomepage.md)                                      | False     | [**Nach oben**](c-top.md)<br/>                                                          |
+| [**WWW-Page-Other**](a-url.md)                                             | False     | [**Nach oben**](c-top.md)<br/>                                                          |
+
+
+
+## <a name="windows-server-2003-r2"></a>Windows Server 2003 R2
+
+-   [Attribute](#windows-server-2003-r2-attributes)
+
+
+
+| Eingabe | Wert |
+|-----------------------------|----------------------------------------------------------------------------------------------|
+| System-Only                 | False                                                                                        |
+| Object-Category             | 1                                                                                            |
+| Default-Object-Category     | \-                                                                                           |
+| Governs-Id                  | 1.2.840.113556.1.5.30                                                                        |
+| Default-Hiding-Value        | 1                                                                                            |
+| Rdn-Att-Id                  | [**Allgemeiner Name**](a-cn.md)<br/>                                                       |
+| Unterklasse von                 | [**Verbindungspunkt**](c-connectionpoint.md)<br/>                                     |
+| Mögliche Übergeordnete          | [**Container**](c-container.md)                                                             |
+| Zusätzlich           | \-                                                                                           |
+| NT-Security-Descriptor      | O:BAG:BAD:S:                                                                                 |
+| Standardsicherheitsdeskriptor | D:(A;; RPWPCRCCDCLCLORCWOWDSDDTSW;;;D A)(A;; RPWPCRCCDCLCLORCWOWDSDDTSW;;; SY)(A;; RPLCLORC;;; AU) |
+| System-Flags                | 0x00000010                                                                                   |
+
+
+
+## <a name="windows-server-2003-r2-attributes"></a>Windows Server 2003 R2-Attribute
+
+Diese Klasse enthält die folgenden Attribute für Windows Server 2003 R2:
+
+
+
+| attribute                                                                   | Obligatorisch. | Abgeleitet von                                                                             |
+|-----------------------------------------------------------------------------|-----------|------------------------------------------------------------------------------------------|
+| [**Administratorbeschreibung**](a-admindescription.md)                             | False     | [**Nach oben**](c-top.md)<br/>                                                          |
+| [**Admin-Display-Name**](a-admindisplayname.md)                            | False     | [**Nach oben**](c-top.md)<br/>                                                          |
+| [**Allowed-Attributes**](a-allowedattributes.md)                           | False     | [**Nach oben**](c-top.md)<br/>                                                          |
+| [**Allowed-Attributes-Effective**](a-allowedattributeseffective.md)        | False     | [**Nach oben**](c-top.md)<br/>                                                          |
+| [**Allowed-Child-Classes**](a-allowedchildclasses.md)                      | False     | [**Nach oben**](c-top.md)<br/>                                                          |
+| [**Allowed-Child-Classes-Effective**](a-allowedchildclasseseffective.md)   | False     | [**Nach oben**](c-top.md)<br/>                                                          |
+| [**Bridgehead-Server-List-BL**](a-bridgeheadserverlistbl.md)               | False     | [**Nach oben**](c-top.md)<br/>                                                          |
+| [**Kanonischer Name**](a-canonicalname.md)                                   | False     | [**Nach oben**](c-top.md)<br/>                                                          |
+| [**Allgemeiner Name**](a-cn.md)                                                 | True      | [**Verbindungspunkt**](c-connectionpoint.md)<br/> [**Nach oben**](c-top.md)<br/> |
+| [**Erstellen eines Zeitstempels**](a-createtimestamp.md)                              | False     | [**Nach oben**](c-top.md)<br/>                                                          |
+| [**Beschreibung**](a-description.md)                                        | False     | [**Nach oben**](c-top.md)<br/>                                                          |
+| [**Anzeigename**](a-displayname.md)                                       | True      | **Service-Instance** [ **Top**](c-top.md)<br/>                                     |
+| [**Anzeigename– druckbar**](a-displaynameprintable.md)                    | False     | [**Nach oben**](c-top.md)<br/>                                                          |
 | [**DSA-Signature**](a-dsasignature.md)                                     | False     | [**Nach oben**](c-top.md)<br/>                                                          |
 | [**DS-Core-Propagierungsdaten**](a-dscorepropagationdata.md)                 | False     | [**Nach oben**](c-top.md)<br/>                                                          |
 | [**Erweiterungsname**](a-extensionname.md)                                   | False     | [**Nach oben**](c-top.md)<br/>                                                          |
@@ -407,18 +407,18 @@ Diese Klasse enthält die folgenden Attribute für Windows Server 2003 R2:
 | [**Sub-Refs**](a-subrefs.md)                                               | False     | [**Nach oben**](c-top.md)<br/>                                                          |
 | [**SubSchemaSubEntry**](a-subschemasubentry.md)                            | False     | [**Nach oben**](c-top.md)<br/>                                                          |
 | [**Systemflags**](a-systemflags.md)                                       | False     | [**Nach oben**](c-top.md)<br/>                                                          |
-| [**USN-Changed**](a-usnchanged.md)                                         | False     | [**Nach oben**](c-top.md)<br/>                                                          |
-| [**VON USN erstellt**](a-usncreated.md)                                         | False     | [**Nach oben**](c-top.md)<br/>                                                          |
-| [**USN-DSA-Last-Obj-Removed**](a-usndsalastobjremoved.md)                  | False     | [**Nach oben**](c-top.md)<br/>                                                          |
+| [**USN geändert**](a-usnchanged.md)                                         | False     | [**Nach oben**](c-top.md)<br/>                                                          |
+| [**USN-erstellt**](a-usncreated.md)                                         | False     | [**Nach oben**](c-top.md)<br/>                                                          |
+| [**USN-DSA-last-obj-removed**](a-usndsalastobjremoved.md)                  | False     | [**Nach oben**](c-top.md)<br/>                                                          |
 | [**USN-Intersite**](a-usnintersite.md)                                     | False     | [**Nach oben**](c-top.md)<br/>                                                          |
 | [**USN-Last-Obj-Rem**](a-usnlastobjrem.md)                                 | False     | [**Nach oben**](c-top.md)<br/>                                                          |
 | [**USN-Quelle**](a-usnsource.md)                                           | False     | [**Nach oben**](c-top.md)<br/>                                                          |
-| [**Wbem-Path**](a-wbempath.md)                                             | False     | [**Nach oben**](c-top.md)<br/>                                                          |
+| [**Wbem-Pfad**](a-wbempath.md)                                             | False     | [**Nach oben**](c-top.md)<br/>                                                          |
 | [**Bekannte Objekte**](a-wellknownobjects.md)                            | False     | [**Nach oben**](c-top.md)<br/>                                                          |
-| [**Wenn geändert**](a-whenchanged.md)                                       | False     | [**Nach oben**](c-top.md)<br/>                                                          |
-| [**Wenn erstellt**](a-whencreated.md)                                       | False     | [**Nach oben**](c-top.md)<br/>                                                          |
+| [**Bei Änderung**](a-whenchanged.md)                                       | False     | [**Nach oben**](c-top.md)<br/>                                                          |
+| [**Bei der Erstellung**](a-whencreated.md)                                       | False     | [**Nach oben**](c-top.md)<br/>                                                          |
 | [**Winsock-Addresses**](a-winsockaddresses.md)                             | False     | **Dienstinstanz**                                                                     |
-| [**WWW-Homepage**](a-wwwhomepage.md)                                      | False     | [**Nach oben**](c-top.md)<br/>                                                          |
+| [**WWW-Startseite**](a-wwwhomepage.md)                                      | False     | [**Nach oben**](c-top.md)<br/>                                                          |
 | [**WWW-Page-Other**](a-url.md)                                             | False     | [**Nach oben**](c-top.md)<br/>                                                          |
 
 
@@ -436,9 +436,9 @@ Diese Klasse enthält die folgenden Attribute für Windows Server 2003 R2:
 | Default-Object-Category     | \-                                                                                           |
 | Governs-Id                  | 1.2.840.113556.1.5.30                                                                        |
 | Default-Hiding-Value        | 1                                                                                            |
-| Rdn-Att-Id                  | [**Common-Name**](a-cn.md)<br/>                                                       |
+| Rdn-Att-Id                  | [**Allgemeiner Name**](a-cn.md)<br/>                                                       |
 | Unterklasse von                 | [**Verbindungspunkt**](c-connectionpoint.md)<br/>                                     |
-| Mögliche Vorgesetzte          | [**Container**](c-container.md)                                                             |
+| Mögliche Übergeordnete          | [**Container**](c-container.md)                                                             |
 | Zusätzlich           | \-                                                                                           |
 | NT-Security-Descriptor      | O:BAG:BAD:S:                                                                                 |
 | Standardsicherheitsdeskriptor | D:(A;; RPWPCRCCDCLCLORCWOWDSDDTSW;;;D A)(A;; RPWPCRCCDCLCLORCWOWDSDDTSW;;; SY)(A;; RPLCLORC;;; AU) |
@@ -454,22 +454,22 @@ Diese Klasse enthält die folgenden Attribute für Windows Server 2008:
 
 | attribute                                                                      | Obligatorisch. | Abgeleitet von                                                                             |
 |--------------------------------------------------------------------------------|-----------|------------------------------------------------------------------------------------------|
-| [**Admin-Description**](a-admindescription.md)                                | False     | [**Nach oben**](c-top.md)<br/>                                                          |
-| [**Administratoranzeigename**](a-admindisplayname.md)                               | False     | [**Nach oben**](c-top.md)<br/>                                                          |
+| [**Administratorbeschreibung**](a-admindescription.md)                                | False     | [**Nach oben**](c-top.md)<br/>                                                          |
+| [**Admin-Display-Name**](a-admindisplayname.md)                               | False     | [**Nach oben**](c-top.md)<br/>                                                          |
 | [**Allowed-Attributes**](a-allowedattributes.md)                              | False     | [**Nach oben**](c-top.md)<br/>                                                          |
 | [**Allowed-Attributes-Effective**](a-allowedattributeseffective.md)           | False     | [**Nach oben**](c-top.md)<br/>                                                          |
 | [**Allowed-Child-Classes**](a-allowedchildclasses.md)                         | False     | [**Nach oben**](c-top.md)<br/>                                                          |
 | [**Allowed-Child-Classes-Effective**](a-allowedchildclasseseffective.md)      | False     | [**Nach oben**](c-top.md)<br/>                                                          |
 | [**Bridgehead-Server-List-BL**](a-bridgeheadserverlistbl.md)                  | False     | [**Nach oben**](c-top.md)<br/>                                                          |
 | [**Kanonischer Name**](a-canonicalname.md)                                      | False     | [**Nach oben**](c-top.md)<br/>                                                          |
-| [**Common-Name**](a-cn.md)                                                    | True      | [**Verbindungspunkt**](c-connectionpoint.md)<br/> [**Nach oben**](c-top.md)<br/> |
+| [**Allgemeiner Name**](a-cn.md)                                                    | True      | [**Verbindungspunkt**](c-connectionpoint.md)<br/> [**Nach oben**](c-top.md)<br/> |
 | [**Create-Time-Stamp**](a-createtimestamp.md)                                 | False     | [**Nach oben**](c-top.md)<br/>                                                          |
 | [**Beschreibung**](a-description.md)                                           | False     | [**Nach oben**](c-top.md)<br/>                                                          |
 | [**Anzeigename**](a-displayname.md)                                          | True      | **Dienstinstanz** [ **oben**](c-top.md)<br/>                                     |
 | [**Display-Name-Printable**](a-displaynameprintable.md)                       | False     | [**Nach oben**](c-top.md)<br/>                                                          |
 | [**DSA-Signature**](a-dsasignature.md)                                        | False     | [**Nach oben**](c-top.md)<br/>                                                          |
 | [**DS-Core-Propagierungsdaten**](a-dscorepropagationdata.md)                    | False     | [**Nach oben**](c-top.md)<br/>                                                          |
-| [**Erweiterungsname**](a-extensionname.md)                                      | False     | [**Nach oben**](c-top.md)<br/>                                                          |
+| [**Extension-Name**](a-extensionname.md)                                      | False     | [**Nach oben**](c-top.md)<br/>                                                          |
 | [**Flaggen**](a-flags.md)                                                       | False     | [**Nach oben**](c-top.md)<br/>                                                          |
 | [**From-Entry**](a-fromentry.md)                                              | False     | [**Nach oben**](c-top.md)<br/>                                                          |
 | [**Frs-Computer-Reference-BL**](a-frscomputerreferencebl.md)                  | False     | [**Nach oben**](c-top.md)<br/>                                                          |
@@ -563,7 +563,7 @@ Diese Klasse enthält die folgenden Attribute für Windows Server 2008:
 | [**Bei Änderung**](a-whenchanged.md)                                          | False     | [**Nach oben**](c-top.md)<br/>                                                          |
 | [**Bei der Erstellung**](a-whencreated.md)                                          | False     | [**Nach oben**](c-top.md)<br/>                                                          |
 | [**Winsock-Addresses**](a-winsockaddresses.md)                                | False     | **Dienstinstanz**                                                                     |
-| [**WWW-Homepage**](a-wwwhomepage.md)                                         | False     | [**Nach oben**](c-top.md)<br/>                                                          |
+| [**WWW-Startseite**](a-wwwhomepage.md)                                         | False     | [**Nach oben**](c-top.md)<br/>                                                          |
 | [**WWW-Page-Other**](a-url.md)                                                | False     | [**Nach oben**](c-top.md)<br/>                                                          |
 
 
@@ -581,9 +581,9 @@ Diese Klasse enthält die folgenden Attribute für Windows Server 2008:
 | Default-Object-Category     | \-                                                                                           |
 | Governs-Id                  | 1.2.840.113556.1.5.30                                                                        |
 | Default-Hiding-Value        | 1                                                                                            |
-| Rdn-Att-Id                  | [**Common-Name**](a-cn.md)<br/>                                                       |
+| Rdn-Att-Id                  | [**Allgemeiner Name**](a-cn.md)<br/>                                                       |
 | Unterklasse von                 | [**Verbindungspunkt**](c-connectionpoint.md)<br/>                                     |
-| Mögliche Vorgesetzte          | [**Container**](c-container.md)                                                             |
+| Mögliche Übergeordnete          | [**Container**](c-container.md)                                                             |
 | Zusätzlich           | \-                                                                                           |
 | NT-Security-Descriptor      | O:BAG:BAD:S:                                                                                 |
 | Standardsicherheitsdeskriptor | D:(A;; RPWPCRCCDCLCLORCWOWDSDDTSW;;;D A)(A;; RPWPCRCCDCLCLORCWOWDSDDTSW;;; SY)(A;; RPLCLORC;;; AU) |
@@ -599,22 +599,22 @@ Diese Klasse enthält die folgenden Attribute für Windows Server 2008 R2:
 
 | attribute                                                                        | Obligatorisch. | Abgeleitet von                                                                             |
 |----------------------------------------------------------------------------------|-----------|------------------------------------------------------------------------------------------|
-| [**Admin-Description**](a-admindescription.md)                                  | False     | [**Nach oben**](c-top.md)<br/>                                                          |
-| [**Administratoranzeigename**](a-admindisplayname.md)                                 | False     | [**Nach oben**](c-top.md)<br/>                                                          |
+| [**Administratorbeschreibung**](a-admindescription.md)                                  | False     | [**Nach oben**](c-top.md)<br/>                                                          |
+| [**Admin-Display-Name**](a-admindisplayname.md)                                 | False     | [**Nach oben**](c-top.md)<br/>                                                          |
 | [**Allowed-Attributes**](a-allowedattributes.md)                                | False     | [**Nach oben**](c-top.md)<br/>                                                          |
 | [**Allowed-Attributes-Effective**](a-allowedattributeseffective.md)             | False     | [**Nach oben**](c-top.md)<br/>                                                          |
 | [**Allowed-Child-Classes**](a-allowedchildclasses.md)                           | False     | [**Nach oben**](c-top.md)<br/>                                                          |
 | [**Allowed-Child-Classes-Effective**](a-allowedchildclasseseffective.md)        | False     | [**Nach oben**](c-top.md)<br/>                                                          |
 | [**Bridgehead-Server-List-BL**](a-bridgeheadserverlistbl.md)                    | False     | [**Nach oben**](c-top.md)<br/>                                                          |
 | [**Kanonischer Name**](a-canonicalname.md)                                        | False     | [**Nach oben**](c-top.md)<br/>                                                          |
-| [**Common-Name**](a-cn.md)                                                      | True      | [**Verbindungspunkt**](c-connectionpoint.md)<br/> [**Nach oben**](c-top.md)<br/> |
-| [**Create-Time-Stamp**](a-createtimestamp.md)                                   | False     | [**Nach oben**](c-top.md)<br/>                                                          |
+| [**Allgemeiner Name**](a-cn.md)                                                      | True      | [**Verbindungspunkt**](c-connectionpoint.md)<br/> [**Nach oben**](c-top.md)<br/> |
+| [**Erstellen eines Zeitstempels**](a-createtimestamp.md)                                   | False     | [**Nach oben**](c-top.md)<br/>                                                          |
 | [**Beschreibung**](a-description.md)                                             | False     | [**Nach oben**](c-top.md)<br/>                                                          |
-| [**Anzeigename**](a-displayname.md)                                            | True      | **Dienstinstanz** [ **oben**](c-top.md)<br/>                                     |
-| [**Display-Name-Printable**](a-displaynameprintable.md)                         | False     | [**Nach oben**](c-top.md)<br/>                                                          |
+| [**Anzeigename**](a-displayname.md)                                            | True      | **Service-Instance** [ **Top**](c-top.md)<br/>                                     |
+| [**Anzeigename– druckbar**](a-displaynameprintable.md)                         | False     | [**Nach oben**](c-top.md)<br/>                                                          |
 | [**DSA-Signature**](a-dsasignature.md)                                          | False     | [**Nach oben**](c-top.md)<br/>                                                          |
 | [**DS-Core-Propagierungsdaten**](a-dscorepropagationdata.md)                      | False     | [**Nach oben**](c-top.md)<br/>                                                          |
-| [**Extension-Name**](a-extensionname.md)                                        | False     | [**Nach oben**](c-top.md)<br/>                                                          |
+| [**Erweiterungsname**](a-extensionname.md)                                        | False     | [**Nach oben**](c-top.md)<br/>                                                          |
 | [**Flaggen**](a-flags.md)                                                         | False     | [**Nach oben**](c-top.md)<br/>                                                          |
 | [**From-Entry**](a-fromentry.md)                                                | False     | [**Nach oben**](c-top.md)<br/>                                                          |
 | [**Frs-Computer-Reference-BL**](a-frscomputerreferencebl.md)                    | False     | [**Nach oben**](c-top.md)<br/>                                                          |
@@ -650,7 +650,7 @@ Diese Klasse enthält die folgenden Attribute für Windows Server 2008 R2:
 | [**ms-DS-local-Effective-Deletion-Time**](a-msds-localeffectivedeletiontime.md) | False     | [**Nach oben**](c-top.md)<br/>                                                          |
 | [**ms-DS-local-Effective-Recycle-Time**](a-msds-localeffectiverecycletime.md)   | False     | [**Nach oben**](c-top.md)<br/>                                                          |
 | [**ms-DS-Mastered-By**](a-msds-masteredby.md)                                   | False     | [**Nach oben**](c-top.md)<br/>                                                          |
-| [**ms-DS-Members-for-Az-Role-BL**](a-msds-membersforazrolebl.md)                | False     | [**Nach oben**](c-top.md)<br/>                                                          |
+| [**ms-DS-Members-For-Az-Role-BL**](a-msds-membersforazrolebl.md)                | False     | [**Nach oben**](c-top.md)<br/>                                                          |
 | [**ms-DS-NC-Repl-Cursors**](a-msds-ncreplcursors.md)                            | False     | [**Nach oben**](c-top.md)<br/>                                                          |
 | [**ms-DS-NC-Repl-Inbound-Neighbors**](a-msds-ncreplinboundneighbors.md)         | False     | [**Nach oben**](c-top.md)<br/>                                                          |
 | [**ms-DS-NC-Repl-Outbound-Neighbors**](a-msds-ncreploutboundneighbors.md)       | False     | [**Nach oben**](c-top.md)<br/>                                                          |
@@ -696,26 +696,26 @@ Diese Klasse enthält die folgenden Attribute für Windows Server 2008 R2:
 | [**Revision**](a-revision.md)                                                   | False     | [**Nach oben**](c-top.md)<br/>                                                          |
 | [**SD-Rights-Effective**](a-sdrightseffective.md)                               | False     | [**Nach oben**](c-top.md)<br/>                                                          |
 | [**Server-Reference-BL**](a-serverreferencebl.md)                               | False     | [**Nach oben**](c-top.md)<br/>                                                          |
-| [**Dienstklassen-ID**](a-serviceclassid.md)                                     | True      | **Dienstinstanz**                                                                     |
+| [**Service-Class-ID**](a-serviceclassid.md)                                     | True      | **Dienstinstanz**                                                                     |
 | [**Dienstinstanzversion**](a-serviceinstanceversion.md)                     | False     | **Dienstinstanz**                                                                     |
-| [**Nur in erweiterter Ansicht anzeigen**](a-showinadvancedviewonly.md)                   | False     | [**Nach oben**](c-top.md)<br/>                                                          |
+| [**Show-In-Advanced-View-Only**](a-showinadvancedviewonly.md)                   | False     | [**Nach oben**](c-top.md)<br/>                                                          |
 | [**Site-Object-BL**](a-siteobjectbl.md)                                         | False     | [**Nach oben**](c-top.md)<br/>                                                          |
 | [**Structural-Object-Class**](a-structuralobjectclass.md)                       | False     | [**Nach oben**](c-top.md)<br/>                                                          |
 | [**Sub-Refs**](a-subrefs.md)                                                    | False     | [**Nach oben**](c-top.md)<br/>                                                          |
 | [**SubSchemaSubEntry**](a-subschemasubentry.md)                                 | False     | [**Nach oben**](c-top.md)<br/>                                                          |
 | [**Systemflags**](a-systemflags.md)                                            | False     | [**Nach oben**](c-top.md)<br/>                                                          |
-| [**USN geändert**](a-usnchanged.md)                                              | False     | [**Nach oben**](c-top.md)<br/>                                                          |
-| [**USN-erstellt**](a-usncreated.md)                                              | False     | [**Nach oben**](c-top.md)<br/>                                                          |
-| [**USN-DSA-last-obj-removed**](a-usndsalastobjremoved.md)                       | False     | [**Nach oben**](c-top.md)<br/>                                                          |
+| [**USN-Changed**](a-usnchanged.md)                                              | False     | [**Nach oben**](c-top.md)<br/>                                                          |
+| [**VON USN erstellt**](a-usncreated.md)                                              | False     | [**Nach oben**](c-top.md)<br/>                                                          |
+| [**USN-DSA-Last-Obj-Removed**](a-usndsalastobjremoved.md)                       | False     | [**Nach oben**](c-top.md)<br/>                                                          |
 | [**USN-Intersite**](a-usnintersite.md)                                          | False     | [**Nach oben**](c-top.md)<br/>                                                          |
 | [**USN-Last-Obj-Rem**](a-usnlastobjrem.md)                                      | False     | [**Nach oben**](c-top.md)<br/>                                                          |
 | [**USN-Quelle**](a-usnsource.md)                                                | False     | [**Nach oben**](c-top.md)<br/>                                                          |
-| [**Wbem-Pfad**](a-wbempath.md)                                                  | False     | [**Nach oben**](c-top.md)<br/>                                                          |
+| [**Wbem-Path**](a-wbempath.md)                                                  | False     | [**Nach oben**](c-top.md)<br/>                                                          |
 | [**Bekannte Objekte**](a-wellknownobjects.md)                                 | False     | [**Nach oben**](c-top.md)<br/>                                                          |
-| [**Bei Änderung**](a-whenchanged.md)                                            | False     | [**Nach oben**](c-top.md)<br/>                                                          |
-| [**Bei der Erstellung**](a-whencreated.md)                                            | False     | [**Nach oben**](c-top.md)<br/>                                                          |
+| [**Wenn geändert**](a-whenchanged.md)                                            | False     | [**Nach oben**](c-top.md)<br/>                                                          |
+| [**Wenn erstellt**](a-whencreated.md)                                            | False     | [**Nach oben**](c-top.md)<br/>                                                          |
 | [**Winsock-Addresses**](a-winsockaddresses.md)                                  | False     | **Dienstinstanz**                                                                     |
-| [**WWW-Startseite**](a-wwwhomepage.md)                                           | False     | [**Nach oben**](c-top.md)<br/>                                                          |
+| [**WWW-Homepage**](a-wwwhomepage.md)                                           | False     | [**Nach oben**](c-top.md)<br/>                                                          |
 | [**WWW-Page-Other**](a-url.md)                                                  | False     | [**Nach oben**](c-top.md)<br/>                                                          |
 
 
@@ -733,9 +733,9 @@ Diese Klasse enthält die folgenden Attribute für Windows Server 2008 R2:
 | Default-Object-Category     | \-                                                                                           |
 | Governs-Id                  | 1.2.840.113556.1.5.30                                                                        |
 | Default-Hiding-Value        | 1                                                                                            |
-| Rdn-Att-Id                  | [**Common-Name**](a-cn.md)<br/>                                                       |
+| Rdn-Att-Id                  | [**Allgemeiner Name**](a-cn.md)<br/>                                                       |
 | Unterklasse von                 | [**Verbindungspunkt**](c-connectionpoint.md)<br/>                                     |
-| Mögliche Vorgesetzte          | [**Container**](c-container.md)                                                             |
+| Mögliche Übergeordnete          | [**Container**](c-container.md)                                                             |
 | Zusätzlich           | \-                                                                                           |
 | NT-Security-Descriptor      | O:BAG:BAD:S:                                                                                 |
 | Standardsicherheitsdeskriptor | D:(A;; RPWPCRCCDCLCLORCWOWDSDDTSW;;;D A)(A;; RPWPCRCCDCLCLORCWOWDSDDTSW;;; SY)(A;; RPLCLORC;;; AU) |
@@ -751,19 +751,19 @@ Diese Klasse enthält die folgenden Attribute für Windows Server 2012:
 
 | attribute                                                                                    | Obligatorisch. | Abgeleitet von                                                                             |
 |----------------------------------------------------------------------------------------------|-----------|------------------------------------------------------------------------------------------|
-| [**Admin-Description**](a-admindescription.md)                                              | False     | [**Nach oben**](c-top.md)<br/>                                                          |
-| [**Administratoranzeigename**](a-admindisplayname.md)                                             | False     | [**Nach oben**](c-top.md)<br/>                                                          |
+| [**Administratorbeschreibung**](a-admindescription.md)                                              | False     | [**Nach oben**](c-top.md)<br/>                                                          |
+| [**Admin-Display-Name**](a-admindisplayname.md)                                             | False     | [**Nach oben**](c-top.md)<br/>                                                          |
 | [**Allowed-Attributes**](a-allowedattributes.md)                                            | False     | [**Nach oben**](c-top.md)<br/>                                                          |
 | [**Allowed-Attributes-Effective**](a-allowedattributeseffective.md)                         | False     | [**Nach oben**](c-top.md)<br/>                                                          |
 | [**Allowed-Child-Classes**](a-allowedchildclasses.md)                                       | False     | [**Nach oben**](c-top.md)<br/>                                                          |
 | [**Allowed-Child-Classes-Effective**](a-allowedchildclasseseffective.md)                    | False     | [**Nach oben**](c-top.md)<br/>                                                          |
 | [**Bridgehead-Server-List-BL**](a-bridgeheadserverlistbl.md)                                | False     | [**Nach oben**](c-top.md)<br/>                                                          |
 | [**Kanonischer Name**](a-canonicalname.md)                                                    | False     | [**Nach oben**](c-top.md)<br/>                                                          |
-| [**Common-Name**](a-cn.md)                                                                  | True      | [**Verbindungspunkt**](c-connectionpoint.md)<br/> [**Nach oben**](c-top.md)<br/> |
-| [**Create-Time-Stamp**](a-createtimestamp.md)                                               | False     | [**Nach oben**](c-top.md)<br/>                                                          |
+| [**Allgemeiner Name**](a-cn.md)                                                                  | True      | [**Verbindungspunkt**](c-connectionpoint.md)<br/> [**Nach oben**](c-top.md)<br/> |
+| [**Erstellen eines Zeitstempels**](a-createtimestamp.md)                                               | False     | [**Nach oben**](c-top.md)<br/>                                                          |
 | [**Beschreibung**](a-description.md)                                                         | False     | [**Nach oben**](c-top.md)<br/>                                                          |
-| [**Anzeigename**](a-displayname.md)                                                        | True      | **Dienstinstanz** [ **oben**](c-top.md)<br/>                                     |
-| [**Display-Name-Printable**](a-displaynameprintable.md)                                     | False     | [**Nach oben**](c-top.md)<br/>                                                          |
+| [**Anzeigename**](a-displayname.md)                                                        | True      | **Service-Instance** [ **Top**](c-top.md)<br/>                                     |
+| [**Anzeigename– druckbar**](a-displaynameprintable.md)                                     | False     | [**Nach oben**](c-top.md)<br/>                                                          |
 | [**DSA-Signature**](a-dsasignature.md)                                                      | False     | [**Nach oben**](c-top.md)<br/>                                                          |
 | [**DS-Core-Propagierungsdaten**](a-dscorepropagationdata.md)                                  | False     | [**Nach oben**](c-top.md)<br/>                                                          |
 | [**Erweiterungsname**](a-extensionname.md)                                                    | False     | [**Nach oben**](c-top.md)<br/>                                                          |
@@ -804,7 +804,7 @@ Diese Klasse enthält die folgenden Attribute für Windows Server 2012:
 | [**ms-DS-local-Effective-Deletion-Time**](a-msds-localeffectivedeletiontime.md)             | False     | [**Nach oben**](c-top.md)<br/>                                                          |
 | [**ms-DS-local-Effective-Recycle-Time**](a-msds-localeffectiverecycletime.md)               | False     | [**Nach oben**](c-top.md)<br/>                                                          |
 | [**ms-DS-Mastered-By**](a-msds-masteredby.md)                                               | False     | [**Nach oben**](c-top.md)<br/>                                                          |
-| [**ms-DS-Members-for-Az-Role-BL**](a-msds-membersforazrolebl.md)                            | False     | [**Nach oben**](c-top.md)<br/>                                                          |
+| [**ms-DS-Members-For-Az-Role-BL**](a-msds-membersforazrolebl.md)                            | False     | [**Nach oben**](c-top.md)<br/>                                                          |
 | [**ms-DS-Members-of-Resource-Property-List-BL**](a-msds-membersofresourcepropertylistbl.md) | False     | [**Nach oben**](c-top.md)<br/>                                                          |
 | [**ms-DS-NC-Repl-Cursors**](a-msds-ncreplcursors.md)                                        | False     | [**Nach oben**](c-top.md)<br/>                                                          |
 | [**ms-DS-NC-Repl-Inbound-Neighbors**](a-msds-ncreplinboundneighbors.md)                     | False     | [**Nach oben**](c-top.md)<br/>                                                          |
@@ -814,8 +814,8 @@ Diese Klasse enthält die folgenden Attribute für Windows Server 2012:
 | [**ms-DS-Non-Members-BL**](a-msds-nonmembersbl.md)                                          | False     | [**Nach oben**](c-top.md)<br/>                                                          |
 | [**ms-DS-Object-Reference-BL**](a-msds-objectreferencebl.md)                                | False     | [**Nach oben**](c-top.md)<br/>                                                          |
 | [**ms-DS-OIDToGroup-Link-BL**](a-msds-oidtogrouplinkbl.md)                                  | False     | [**Nach oben**](c-top.md)<br/>                                                          |
-| [**ms-DS-Operations-For-Az-Role-BL**](a-msds-operationsforazrolebl.md)                      | False     | [**Nach oben**](c-top.md)<br/>                                                          |
-| [**ms-DS-Operations-For-Az-Task-BL**](a-msds-operationsforaztaskbl.md)                      | False     | [**Nach oben**](c-top.md)<br/>                                                          |
+| [**ms-DS-Operations-for-Az-Role-BL**](a-msds-operationsforazrolebl.md)                      | False     | [**Nach oben**](c-top.md)<br/>                                                          |
+| [**ms-DS-Operations-for-Az-Task-BL**](a-msds-operationsforaztaskbl.md)                      | False     | [**Nach oben**](c-top.md)<br/>                                                          |
 | [**ms-DS-Principal-Name**](a-msds-principalname.md)                                         | False     | [**Nach oben**](c-top.md)<br/>                                                          |
 | [**ms-DS-PSO-Applied**](a-msds-psoapplied.md)                                               | False     | [**Nach oben**](c-top.md)<br/>                                                          |
 | [**ms-DS-Repl-Attribute-Meta-Data**](a-msds-replattributemetadata.md)                       | False     | [**Nach oben**](c-top.md)<br/>                                                          |
@@ -823,8 +823,8 @@ Diese Klasse enthält die folgenden Attribute für Windows Server 2012:
 | [**ms-DS-Revealed-DSAs**](a-msds-revealeddsas.md)                                           | False     | [**Nach oben**](c-top.md)<br/>                                                          |
 | [**ms-DS-Revealed-List-BL**](a-msds-revealedlistbl.md)                                      | False     | [**Nach oben**](c-top.md)<br/>                                                          |
 | [**ms-DS-Einstellungen**](a-msds-settings.md)                                                    | False     | [**Verbindungspunkt**](c-connectionpoint.md)<br/>                                 |
-| [**ms-DS-Tasks-For-Az-Role-BL**](a-msds-tasksforazrolebl.md)                                | False     | [**Nach oben**](c-top.md)<br/>                                                          |
-| [**ms-DS-Tasks-For-Az-Task-BL**](a-msds-tasksforaztaskbl.md)                                | False     | [**Nach oben**](c-top.md)<br/>                                                          |
+| [**ms-DS-Tasks-for-Az-Role-BL**](a-msds-tasksforazrolebl.md)                                | False     | [**Nach oben**](c-top.md)<br/>                                                          |
+| [**ms-DS-Tasks-for-Az-Task-BL**](a-msds-tasksforaztaskbl.md)                                | False     | [**Nach oben**](c-top.md)<br/>                                                          |
 | [**ms-DS-TDO-Egress-BL**](a-msds-tdoegressbl.md)                                            | False     | [**Nach oben**](c-top.md)<br/>                                                          |
 | [**ms-DS-TDO-Ingress-BL**](a-msds-tdoingressbl.md)                                          | False     | [**Nach oben**](c-top.md)<br/>                                                          |
 | [**ms-DS-Value-Type-Reference-BL**](a-msds-valuetypereferencebl.md)                         | False     | [**Nach oben**](c-top.md)<br/>                                                          |
@@ -835,13 +835,13 @@ Diese Klasse enthält die folgenden Attribute für Windows Server 2012:
 | [**NT-Security-Descriptor**](a-ntsecuritydescriptor.md)                                     | True      | [**Nach oben**](c-top.md)<br/>                                                          |
 | [**Obj-Dist-Name**](a-distinguishedname.md)                                                 | False     | [**Nach oben**](c-top.md)<br/>                                                          |
 | [**Objektkategorie**](a-objectcategory.md)                                                  | True      | [**Nach oben**](c-top.md)<br/>                                                          |
-| [**Object-Class**](a-objectclass.md)                                                        | True      | [**Nach oben**](c-top.md)<br/>                                                          |
+| [**Objektklasse**](a-objectclass.md)                                                        | True      | [**Nach oben**](c-top.md)<br/>                                                          |
 | [**Objekt-GUID**](a-objectguid.md)                                                          | False     | [**Nach oben**](c-top.md)<br/>                                                          |
-| [**Object-Version**](a-objectversion.md)                                                    | False     | [**Nach oben**](c-top.md)<br/>                                                          |
+| [**Objektversion**](a-objectversion.md)                                                    | False     | [**Nach oben**](c-top.md)<br/>                                                          |
 | [**Andere bekannte Objekte**](a-otherwellknownobjects.md)                                  | False     | [**Nach oben**](c-top.md)<br/>                                                          |
-| [**Partial-Attribute-Deletion-List**](a-partialattributedeletionlist.md)                    | False     | [**Nach oben**](c-top.md)<br/>                                                          |
-| [**Partial-Attribute-Set**](a-partialattributeset.md)                                       | False     | [**Nach oben**](c-top.md)<br/>                                                          |
-| [**Mögliche 100000000000**](a-possibleinferiors.md)                                            | False     | [**Nach oben**](c-top.md)<br/>                                                          |
+| [**Teilattributlöschungsliste**](a-partialattributedeletionlist.md)                    | False     | [**Nach oben**](c-top.md)<br/>                                                          |
+| [**Teilattributsatz**](a-partialattributeset.md)                                       | False     | [**Nach oben**](c-top.md)<br/>                                                          |
+| [**Mögliche Hindernisse**](a-possibleinferiors.md)                                            | False     | [**Nach oben**](c-top.md)<br/>                                                          |
 | [**Proxied-Object-Name**](a-proxiedobjectname.md)                                           | False     | [**Nach oben**](c-top.md)<br/>                                                          |
 | [**Proxyadressen**](a-proxyaddresses.md)                                                  | False     | [**Nach oben**](c-top.md)<br/>                                                          |
 | [**Query-Policy-BL**](a-querypolicybl.md)                                                   | False     | [**Nach oben**](c-top.md)<br/>                                                          |

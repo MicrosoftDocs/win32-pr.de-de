@@ -101,7 +101,7 @@ public static void JetSetCurrentIndex3(
   - itagSequence  
     Typ: [System.Int32](/dotnet/api/system.int32)  
     
-    Sequenznummer des mehrwertigen Spaltenwerts, der verwendet wird, um den Cursor auf dem neuen Index zu positionieren. Dieser Parameter wird nur in Verbindung mit [NoMove verwendet.](./setcurrentindexgrbit-enumeration.md) Wenn dieser Parameter nicht vorhanden oder auf 0 (null) festgelegt ist, wird davon ausgegangen, dass sein Wert 1 ist.
+    Sequenznummer des mehrwertigen Spaltenwerts, der verwendet wird, um den Cursor auf dem neuen Index zu positionieren. Dieser Parameter wird nur in Verbindung mit [NoMove verwendet.](./setcurrentindexgrbit-enumeration.md) Wenn dieser Parameter nicht vorhanden ist oder auf 0 (null) festgelegt ist, wird davon ausgegangen, dass sein Wert 1 ist.
 
 ## <a name="see-also"></a>Weitere Informationen
 

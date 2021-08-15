@@ -1,5 +1,5 @@
 ---
-description: Die CIM ProductSupport-Klasse stellt eine Zuordnung zwischen Produkt- und Supportzugriff dar, die vermittelt, \_ wie Support für das Produkt erhalten wird.
+description: Die CIM ProductSupport-Klasse stellt eine Zuordnung zwischen Produkt- und Supportzugriff dar, die vermittelt, wie Support für \_ das Produkt erhalten wird.
 ms.assetid: 61c62556-0cf3-438c-b9c7-152505bf7ed6
 ms.tgt_platform: multiple
 title: CIM_ProductSupport-Klasse
@@ -32,7 +32,7 @@ Die **CIM \_ ProductSupport-Klasse** stellt eine Zuordnung zwischen Produkt- und
 
  
 
-Die folgende Syntax wird durch Managed Object Format (MOF)-Code vereinfacht und enthält alle geerbten Eigenschaften. Eigenschaften werden in alphabetischer Reihenfolge und nicht in MOF-Reihenfolge aufgelistet.
+Die folgende Syntax wird durch Managed Object Format (MOF)-Code vereinfacht und enthält alle geerbten Eigenschaften. Eigenschaften werden in alphabetischer Reihenfolge und nicht in MOF-Reihenfolge aufgeführt.
 
 ## <a name="syntax"></a>Syntax
 
@@ -47,7 +47,7 @@ class CIM_ProductSupport
 
 ## <a name="members"></a>Member
 
-Die **CIM \_ ProductSupport-Klasse** verfügt über die folgenden Membertypen:
+Die **CIM \_ ProductSupport-Klasse** verfügt über diese Membertypen:
 
 -   [Eigenschaften](#properties)
 

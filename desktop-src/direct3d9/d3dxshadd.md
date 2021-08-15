@@ -1,5 +1,5 @@
 ---
-description: 'D3DXSHAdd-Funktion (D3dx9math.h) – Fügt zwei SH-Vektoren (Spherical Vector) hinzu. mit anderen Worten: pOut \[ i \] = pA i + \[ \] pB i \[ \] .'
+description: 'D3DXSHAdd-Funktion (D3dx9math.h) – Fügt zwei SH-Vektoren (PhericalIcal, Pherical- Rumpf) hinzu; anders ausgedrückt: pOut \[ i \] = pA i + \[ \] pB i \[ \] .'
 ms.assetid: 12775c90-ed9d-4931-a449-2571816dd079
 title: D3DXSHAdd-Funktion (D3dx9math.h)
 ms.topic: reference
@@ -23,7 +23,7 @@ ms.locfileid: "118524223"
 ---
 # <a name="d3dxshadd-function-d3dx9mathh"></a>D3DXSHAdd-Funktion (D3dx9math.h)
 
-Fügt zwei SH-Vektoren (Spherical Vector) hinzu. mit anderen Worten: pOut \[ i \] = pA i + \[ \] pB i \[ \] .
+Fügt zwei SH-Vektoren (PhericalIcal) hinzu. anders ausgedrückt: pOut \[ i \] = pA i + \[ \] pB i \[ \] .
 
 ## <a name="syntax"></a>Syntax
 
@@ -48,7 +48,7 @@ FLOAT* D3DXSHAdd(
 
 Typ: **[ **FLOAT**](../winprog/windows-data-types.md)\***
 
-Zeiger auf SH-Ausgabekoeffizienten. Die Auswertung generiert Order²-Koeffizienten. Siehe Hinweise.
+Zeiger auf SH-Ausgabekoeffizienten. Die Auswertung generiert Order Koeffizienten. Siehe Hinweise.
 
 </dd> <dt>
 
@@ -57,7 +57,7 @@ Zeiger auf SH-Ausgabekoeffizienten. Die Auswertung generiert Order²-Koeffizient
 
 Typ: **[ **UINT**](../winprog/windows-data-types.md)**
 
-Reihenfolge der SH-Auswertung. Muss im Bereich von [D3DXSH \_ MINORDER](other-d3dx-constants.md) bis D3DXSH \_ MAXORDER (einschließlich) liegen. Die Auswertung generiert Order²-Koeffizienten. Der Grad der Auswertung ist "Order - 1".
+Reihenfolge der SH-Auswertung. Muss im Bereich von [D3DXSH \_ MINORDER](other-d3dx-constants.md) bis D3DXSH \_ MAXORDER (einschließlich) liegen. Die Auswertung generiert Order Koeffizienten. Der Grad der Auswertung ist Order - 1.
 
 </dd> <dt>
 
@@ -87,10 +87,10 @@ Zeiger auf SH-Ausgabekoeffizienten.
 
 ## <a name="remarks"></a>Hinweise
 
-Jeder Koeffizient der Basisfunktion "Ylm" wird an der Speicherposition ljs + m + l gespeichert, wobei Folgendes gilt:
+Jeder Koeffizient der Basisfunktion "Ylm" wird an der Speicherposition "l): + m + l" gespeichert, wobei:
 
 -   l ist der Grad der Basisfunktion.
--   m ist der Basisfunktionsindex für den angegebenen l-Wert und reicht von -l bis l einschließlich.
+-   m ist der Basisfunktionsindex für den angegebenen l-Wert und reicht von -l bis einschließlich l.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -110,7 +110,7 @@ Jeder Koeffizient der Basisfunktion "Ylm" wird an der Speicherposition ljs + m +
 [Mathematische Funktionen](dx9-graphics-reference-d3dx-functions-math.md)
 </dt> <dt>
 
-[Vorausberechnen der Übertragungsstärke (Direct3D 9)](precomputed-radiance-transfer.md)
+[Vorausberechnungsübertragung der Radiance (Direct3D 9)](precomputed-radiance-transfer.md)
 </dt> </dl>
 
  

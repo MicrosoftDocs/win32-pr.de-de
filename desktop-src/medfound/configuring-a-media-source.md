@@ -4,18 +4,18 @@ ms.assetid: 1378bbe6-be94-4be1-b428-5ec58dabd1fa
 title: Konfigurieren einer Medienquelle
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: ea741e3c04282af445fbea7be07854bf517ec44f
-ms.sourcegitcommit: c16214e53680dc71d1c07111b51f72b82a4512d8
+ms.openlocfilehash: 69e6737d643db2ee473214586cd7ded4f9596133dac5f4fb177df4d7b6b19757
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/03/2021
-ms.locfileid: "106361767"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117880591"
 ---
 # <a name="configuring-a-media-source"></a>Konfigurieren einer Medienquelle
 
-Wenn Sie den [quellresolver](source-resolver.md) zum Erstellen einer Medienquelle verwenden, können Sie einen Eigenschaften Speicher angeben, der Konfigurations Eigenschaften enthält. Diese Eigenschaften werden verwendet, um die Medienquelle zu initialisieren. Der Satz unterstützter Eigenschaften hängt von der Implementierung der Medienquelle ab. Nicht jede Medienquelle definiert Konfigurations Eigenschaften.
+Wenn Sie den [Quellre konfliktlöser verwenden,](source-resolver.md) um eine Medienquelle zu erstellen, können Sie einen Eigenschaftenspeicher angeben, der Konfigurationseigenschaften enthält. Diese Eigenschaften werden verwendet, um die Medienquelle zu initialisieren. Der Satz unterstützter Eigenschaften hängt von der Implementierung der Medienquelle ab. Nicht jede Medienquelle definiert Konfigurationseigenschaften.
 
-In der folgenden Tabelle sind die Konfigurations Eigenschaften für die Medienquellen aufgeführt, die in Media Foundation bereitgestellt werden. Medienquellen von Drittanbietern können eigene benutzerdefinierte Eigenschaften definieren.
+In der folgenden Tabelle sind die Konfigurationseigenschaften für die Medienquellen aufgeführt, die in der Media Foundation. Medienquellen von Drittanbietern können eigene benutzerdefinierte Eigenschaften definieren.
 
 
 
@@ -33,7 +33,7 @@ In der folgenden Tabelle sind die Konfigurations Eigenschaften für die Medienqu
 <tbody>
 <tr class="odd">
 <td>Netzwerkquelle</td>
-<td>Siehe <a href="network-source-features.md">Netzwerk Quell Features</a>.</td>
+<td>Weitere Informationen <a href="network-source-features.md">finden Sie unter Netzwerkquellenfeatures.</a></td>
 </tr>
 <tr class="even">
 <td>ASF-Medienquelle</td>
@@ -51,11 +51,11 @@ In der folgenden Tabelle sind die Konfigurations Eigenschaften für die Medienqu
 
  
 
-Führen Sie die folgenden Schritte aus, um eine Quelle zu konfigurieren.
+Führen Sie zum Konfigurieren einer Quelle die folgenden Schritte aus.
 
-1.  Rufen Sie **pscreatememorypropertystore** auf, um einen neuen Eigenschaften Speicher zu erstellen. Diese Funktion gibt einen **IPropertyStore** -Zeiger zurück.
-2.  Aufrufen von **IPropertyStore:: SetValue** , um eine oder mehrere Konfigurations Eigenschaften festzulegen.
-3.  Aufrufen einer der Erstellungs Funktionen des Quell Resolvers, wie z. b. [**imfsourceresolver:: forateobjectfromurl**](/windows/desktop/api/mfidl/nf-mfidl-imfsourceresolver-createobjectfromurl), und übergeben des **IPropertyStore** -Zeigers im *prequicparameter* .
+1.  Rufen **Sie PSCreateMemoryPropertyStore auf,** um einen neuen Eigenschaftenspeicher zu erstellen. Diese Funktion gibt einen **IPropertyStore-Zeiger** zurück.
+2.  Rufen **Sie IPropertyStore::SetValue auf,** um eine oder mehrere Konfigurationseigenschaften festlegen.
+3.  Rufen Sie eine der Erstellungsfunktionen des Quellresolvers auf, wie z.B. [**DIE QUELLQUELLEResolver::CreateObjectFromURL,**](/windows/desktop/api/mfidl/nf-mfidl-imfsourceresolver-createobjectfromurl)und übergeben Sie den **IPropertyStore-Zeiger** im *pProps-Parameter.*
 
 
 ```C++
@@ -105,15 +105,15 @@ HRESULT CreateMediaSource(
 
 
 
-Der quellresolver übergibt den **IPropertyStore** -Zeiger direkt an den Schema Handler oder den Byte Datenstrom Handler, der die Quelle erstellt. Der quellresolver versucht nicht, die Eigenschaften zu überprüfen.
+Der Quellre resolver übergibt den **IPropertyStore-Zeiger** direkt an den Schemahandler oder bytestream-Handler, der die Quelle erstellt. Der Quellre resolver versucht nicht, die Eigenschaften zu überprüfen.
 
-Im Allgemeinen werden diese Eigenschaften für erweiterte Einstellungen verwendet. Wenn Sie keinen Eigenschaften Speicher bereitstellen, sollte die Medienquelle weiterhin ordnungsgemäß mit den Standardeinstellungen funktionieren.
+Im Allgemeinen werden diese Eigenschaften für erweiterte Einstellungen verwendet. Wenn Sie keinen Eigenschaftenspeicher bereitstellen, sollte die Medienquelle weiterhin ordnungsgemäß mit Standardeinstellungen funktionieren.
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
 <dl> <dt>
 
-[Quellresolver](source-resolver.md)
+[Quellre resolver](source-resolver.md)
 </dt> </dl>
 
  

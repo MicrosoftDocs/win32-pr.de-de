@@ -15,7 +15,7 @@ ms.locfileid: "118378252"
 
 Dieses Ereignis benachrichtigt das Installationsprogramm, ein modales Dialogfeld zu entfernen. In allen Fällen entfernt das Installationsprogramm das aktuelle Dialogfeld.
 
-Dieses Ereignis kann von einem [PushButton-Steuerelement](pushbutton-control.md)oder einem [SelectionTree-Steuerelement veröffentlicht werden.](selectiontree-control.md) Dieses Ereignis sollte in der [ControlEvent-Tabelle verfasst werden.](controlevent-table.md)
+Dieses Ereignis kann von einem [PushButton-Steuerelement oder einem](pushbutton-control.md) [SelectionTree-Steuerelement veröffentlicht werden.](selectiontree-control.md) Dieses Ereignis sollte in der [ControlEvent-Tabelle verfasst werden.](controlevent-table.md)
 
 Für dieses ControlEvent muss die Benutzeroberfläche auf der vollständigen [*Benutzeroberflächenebene ausgeführt*](f-gly.md) werden. Dieses Ereignis funktioniert nicht mit einer reduzierten [*Benutzeroberfläche oder*](r-gly.md) einer [*einfachen Benutzeroberfläche.*](b-gly.md) Weitere Informationen finden Sie unter [Benutzeroberfläche Levels](user-interface-levels.md).
 

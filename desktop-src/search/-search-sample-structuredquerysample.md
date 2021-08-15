@@ -1,5 +1,5 @@
 ---
-description: Im Codebeispiel StructuredQuerySample wird veranschaulicht, wie Zeilen aus der Konsole gelesen, mithilfe des Systemschemas analysiert und die resultierenden Bedingungsstrukturen angezeigt werden.
+description: Das Codebeispiel StructuredQuerySample veranschaulicht, wie Zeilen aus der Konsole gelesen, mithilfe des Systemschemas analysiert und die resultierenden Bedingungsstrukturen angezeigt werden.
 ms.assetid: 9bb56d80-670e-4b2b-bf3f-40d0a75a89b6
 title: StructuredQuerySample
 ms.topic: article
@@ -13,7 +13,7 @@ ms.locfileid: "118462575"
 ---
 # <a name="structuredquerysample"></a>StructuredQuerySample
 
-Im Codebeispiel StructuredQuerySample wird veranschaulicht, wie Zeilen aus der Konsole gelesen, mithilfe des Systemschemas analysiert und die resultierenden Bedingungsstrukturen angezeigt werden.
+Das Codebeispiel StructuredQuerySample veranschaulicht, wie Zeilen aus der Konsole gelesen, mithilfe des Systemschemas analysiert und die resultierenden Bedingungsstrukturen angezeigt werden.
 
 Dieses Thema enthält folgende Abschnitte:
 
@@ -39,12 +39,12 @@ Dieses Beispiel ist an folgendem Speicherort verfügbar.
 | GitHub        | [StructuredQuerySample](https://github.com/Microsoft/Windows-classic-samples/tree/master/Samples/Win7Samples/winui/WindowsSearch/StructuredQuerySample)  |
 
 > [!NOTE]  
-> Für alle Versionen von Windows, einschließlich Windows 7, wird empfohlen, die Beispiele direkt aus GitHub herunterzuladen, um die aktuellste Version zu erhalten.
+> Für alle Versionen von Windows, einschließlich Windows 7, wird empfohlen, die Beispiele für die aktuelle Version direkt von GitHub herunterzuladen.
 
 ## <a name="building-the-sample"></a>Erstellen des Beispiels
 
-1. Öffnen Sie Windows Explorer, und navigieren Sie zum Projektverzeichnis **StructuredQuerySample.**
-2. Doppelklicken Sie auf das Symbol für die Datei StructuredQuerySample.sln, um das Projekt in Visual Studio zu öffnen.
+1. Öffnen Windows Explorer, und navigieren Sie zum **Projektverzeichnis StructuredQuerySample.**
+2. Doppelklicken Sie auf das Symbol für die Datei StructuredQuerySample.sln, um das Projekt in der Visual Studio.
 
     > [!NOTE]  
     > Die SLN-Datei wurde unter einer älteren Version von Visual Studio erstellt. Daher ist ein Upgrade erforderlich, wenn Sie Visual Studio 2012 oder höher ausführen. Dies wirkt sich nicht auf das Verhalten des Beispiels aus.
@@ -53,8 +53,8 @@ Dieses Beispiel ist an folgendem Speicherort verfügbar.
 
 ## <a name="running-the-sample"></a>Ausführen des Beispiels
 
-1. Navigieren Sie mithilfe des Eingabeaufforderungsfensters oder Windows Explorer zu dem Verzeichnis, das die neue ausführbare Datei enthält.
-2. Geben Sie an der Eingabeaufforderung `StructuredQuerySample.exe` ein, oder doppelklicken Sie in Windows Explorer auf das Symbol für StructuredQuerySample.exe.
+1. Navigieren Sie zum Verzeichnis, das die neue ausführbare Datei enthält, indem Sie das Eingabeaufforderungsfenster oder den Windows verwenden.
+2. Geben Sie an der Eingabeaufforderung ein, oder doppelklicken Sie im Windows Explorer auf das Symbol `StructuredQuerySample.exe` für StructuredQuerySample.exe.
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
@@ -78,4 +78,4 @@ Dieses Beispiel ist an folgendem Speicherort verfügbar.
 
 ### <a name="other-samples"></a>Weitere Beispiele
 
-[Suchen von Codebeispielen](-search-samples-ovw.md)
+[Suchcodebeispiele](-search-samples-ovw.md)

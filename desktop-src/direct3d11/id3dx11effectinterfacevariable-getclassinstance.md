@@ -1,11 +1,11 @@
 ---
-title: ID3DX11EffectInterfaceVariable getclassinstance-Methode (D3dx11effect. h)
-description: Eine Klasseninstanz erhalten.
+title: ID3DX11EffectInterfaceVariable GetClassInstance-Methode (D3dx11effect.h)
+description: Hier erhalten Sie eine Klasseninstanz.
 ms.assetid: a965f4e7-1761-45f1-a72e-7ad0ed1ad671
 keywords:
-- Getclassinstance-Methode Direct3D 11
-- Getclassinstance-Methode Direct3D 11, ID3DX11EffectInterfaceVariable-Schnittstelle
-- ID3DX11EffectInterfaceVariable-Schnittstelle Direct3D 11, getclassinstance-Methode
+- GetClassInstance-Methode Direct3D 11
+- GetClassInstance-Methode Direct3D 11, ID3DX11EffectInterfaceVariable-Schnittstelle
+- ID3DX11EffectInterfaceVariable-Schnittstelle Direct3D 11 , GetClassInstance-Methode
 topic_type:
 - apiref
 api_name:
@@ -17,16 +17,16 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: f729da6ee84d76dd37a40a7946438e367c1a4cbd
-ms.sourcegitcommit: 14010c34b35fa268046c7683f021f86de08ddd0a
+ms.openlocfilehash: fa6fb05473b2671e0224fe36214fa7d8be93dc3bea17ceb90b0b8f0a871cc755
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "103961667"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119988460"
 ---
-# <a name="id3dx11effectinterfacevariablegetclassinstance-method"></a>ID3DX11EffectInterfaceVariable:: getclassinstance-Methode
+# <a name="id3dx11effectinterfacevariablegetclassinstance-method"></a>ID3DX11EffectInterfaceVariable::GetClassInstance-Methode
 
-Eine Klasseninstanz erhalten.
+Hier erhalten Sie eine Klasseninstanz.
 
 ## <a name="syntax"></a>Syntax
 
@@ -43,12 +43,12 @@ HRESULT GetClassInstance(
 
 <dl> <dt>
 
-*ppeer-ectclassinstance* 
+*ppEffectClassInstance* 
 </dt> <dd>
 
 Typ: **[ **ID3DX11EffectClassInstanceVariable**](id3dx11effectclassinstancevariable.md)\*\***
 
-Zeiger auf einen [**ID3DX11EffectClassInstanceVariable**](id3dx11effectclassinstancevariable.md) -Zeiger, der auf die-Klasseninstanz festgelegt wird.
+Zeiger auf einen [**ID3DX11EffectClassInstanceVariable-Zeiger,**](id3dx11effectclassinstancevariable.md) der auf die Klasseninstanz festgelegt wird.
 
 </dd> </dl>
 
@@ -56,23 +56,23 @@ Zeiger auf einen [**ID3DX11EffectClassInstanceVariable**](id3dx11effectclassinst
 
 Typ: **[ **HRESULT**](https://msdn.microsoft.com/library/Bb401631(v=MSDN.10).aspx)**
 
-Gibt einen der folgenden [Direct3D 11-Rückgabe Codes](d3d11-graphics-reference-returnvalues.md)zurück.
+Gibt einen der folgenden [Direct3D 11-Rückgabecodes zurück.](d3d11-graphics-reference-returnvalues.md)
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
 > [!Note]  
-> Das DirectX SDK stellt keine kompilierten Binärdateien für Effekte bereit. Sie müssen die Effekte 11-Quelle verwenden, um die Effekte-Anwendung zu erstellen. Weitere Informationen zum Verwenden der Effekte 11-Quelle finden Sie [unter Unterschiede zwischen den Effekten 10 und Effekte 11](d3d11-graphics-programming-guide-effects-differences.md).
+> Das DirectX SDK stellt keine kompilierten Binärdateien für Effekte bereit. Sie müssen die Quelle Effects 11 verwenden, um Ihre Effekttypanwendung zu erstellen. Weitere Informationen zur Verwendung der Quelle Effects 11 finden Sie unter [Unterschiede zwischen Effekten 10 und Effekten 11.](d3d11-graphics-programming-guide-effects-differences.md)
 
  
 
-## <a name="requirements"></a>Requirements (Anforderungen)
+## <a name="requirements"></a>Anforderungen
 
 
 
 | Anforderung | Wert |
 |--------------------|----------------------------------------------------------------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>D3dx11effect. h</dt> </dl>                                                    |
-| Bibliothek<br/> | <dl> <dt>N/v (die "Effects 11"-Bibliothek ist online als freigegebene Quelle verfügbar.)</dt> </dl> |
+| Header<br/>  | <dl> <dt>D3dx11effect.h</dt> </dl>                                                    |
+| Bibliothek<br/> | <dl> <dt>Nicht verfügbar (eine Effects 11-Bibliothek ist online als freigegebene Quelle verfügbar.)</dt> </dl> |
 
 
 

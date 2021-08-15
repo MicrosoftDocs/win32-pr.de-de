@@ -1,5 +1,5 @@
 ---
-description: In einer relationalen Datenbank müssen Zeilen, die von einer Suchabfrage zurückgegeben werden, alle von der Abfrage aufgerufenen Bedingungen erfüllen. Im Gegensatz dazu kann eine Windows Search-Abfrage Dokumente zurückgeben, die die Suchbedingungen in unterschiedlichem Maß erfüllen.
+description: In einer relationalen Datenbank müssen Zeilen, die von einer Suchabfrage zurückgegeben werden, alle von der Abfrage aufgerufenen Bedingungen erfüllen. Im Gegensatz dazu kann eine Windows Search-Abfrage Dokumente zurückgeben, die die Suchbedingungen in unterschiedlichem Maße erfüllen.
 ms.assetid: 9f37b494-9b7a-45a6-9ee4-6d582742cbd7
 title: Grundlegendes zu Relevanzwerten
 ms.topic: article
@@ -13,7 +13,7 @@ ms.locfileid: "118226805"
 ---
 # <a name="understanding-relevance-values"></a>Grundlegendes zu Relevanzwerten
 
-In einer relationalen Datenbank müssen Zeilen, die von einer Suchabfrage zurückgegeben werden, alle von der Abfrage aufgerufenen Bedingungen erfüllen. Im Gegensatz dazu kann eine Windows Search-Abfrage Dokumente zurückgeben, die die Suchbedingungen in unterschiedlichem Maß erfüllen.
+In einer relationalen Datenbank müssen Zeilen, die von einer Suchabfrage zurückgegeben werden, alle von der Abfrage aufgerufenen Bedingungen erfüllen. Im Gegensatz dazu kann eine Windows Search-Abfrage Dokumente zurückgeben, die die Suchbedingungen in unterschiedlichem Maße erfüllen.
 
 Beispielsweise erzeugt eine Suche nach dem Begriff "Program" in einer relationalen Datenbank Datensätze, die diese spezifische Schreibweise des Worts enthalten. Ob ein Datensatz eine oder 100 Instanzen des Worts enthält, hat keine Auswirkungen auf die Ergebnisse. Im Gegensatz dazu gibt Windows Search einen Relevanzwert zurück, der den übereinstimmenden Dokumenten zugeordnet ist. Die Relevanz von Dokumenten mit "Program" im Titel ist höher als diejenigen, die das Wort nur im letzten Absatz enthalten. Ebenso stimmen Dokumente, die Variationen des Suchbegriffs enthalten, z. B. "Programme" und "Programmierung", ebenfalls überein und werden von der Abfrage zurückgegeben.
 

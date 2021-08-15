@@ -1,45 +1,45 @@
 ---
-title: Leitfaden zum Erstellen von Skin
-description: Leitfaden zum Erstellen von Skin
+title: Leitfaden zur Skinerstellung
+description: Leitfaden zur Skinerstellung
 ms.assetid: 86c77764-5c8c-4493-ac2d-15268c1ba564
 keywords:
-- Windows-Media Player, Skins
-- Windows Media Player Skins, Erstellungs Handbuch
-- Skins, Erstellungs Handbuch
-- Erstellen von Skins, Informationen zu
+- Windows Media Player, Skins
+- Windows Media Player Skins, Leitfaden zur Erstellung
+- skins,Erstellungshandbuch
+- Erstellen von Skins, Informationen
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 7214accedf24bd80449bf8952bc9268f9b9bf49d
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: cf24520bf76bd3e78803b05de90bb3aba4c6663c4648224124ad9a76f82a00c6
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "106341444"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118995272"
 ---
-# <a name="skin-creation-guide"></a>Leitfaden zum Erstellen von Skin
+# <a name="skin-creation-guide"></a>Leitfaden zur Skinerstellung
 
-Dieses Handbuch stellt eine Reihe ausführlicher Erläuterungen zum Erstellen verschiedener Arten von Skins dar. Weitere allgemeine Informationen zu Skins finden Sie unter [about Skins](about-skins.md)(Informationen zu Skins). Spezifische Details zu allen Attributen, Methoden und Ereignissen, die in Skins verwendet werden, finden Sie in der Referenz zur Design- [Programmierung](skin-programming-reference.md). Wenn Sie mehr an der Programmierung ihrer Skin interessiert sind, möchten Sie möglicherweise den Teil dieses SDK lesen, der das [Windows Media Player-Objektmodell](windows-media-player-object-model.md)abdeckt.
+Dieser Leitfaden ist eine Reihe ausführlicher Erläuterungen zum Erstellen verschiedener Arten von Skins. Weitere allgemeine Informationen zu Skins finden Sie unter Informationen zu [Skins.](about-skins.md) Spezifische Details zu jedem Attribut, jeder Methode und jedem Ereignis, das in Skins verwendet wird, finden Sie in der Referenz zur [Skinprogrammierung.](skin-programming-reference.md) Wenn Sie mehr an der Programmierung Ihrer Skin beteiligt sind, können Sie den Teil dieses SDK lesen, der die [Windows Media Player Object Model](windows-media-player-object-model.md)abdeckt.
 
-In diesem Handbuch erhalten Sie eine Anleitung zum Erstellen der Kunst für Adobe Photoshop 5,5, ein gängiges Programm zur Bearbeitung von Grafiken. Die speziellen Anweisungen können sich unterscheiden, wenn Sie über ein ähnliches Kunstprogramm wie z. b. "Jasc Paint-Pro" oder "sonfoundry" verfügen, aber die Konzepte sind identisch. Photoshop wurde aus zwei Gründen gewählt: Es ist ein beliebtes Kunstprogramm für kommerzielle Künstler und funktioniert mit Ebenen. Wie Sie in den Tutorials sehen werden, sind Ebenen für die Erstellung von Skin sehr nützlich.
+In diesem Leitfaden erhalten Sie Anweisungen zum Erstellen der Grafik für Adobe Acrobat 5.5, ein beliebtes Programm zur Bearbeitung von Bildern. Die spezifischen Anweisungen können sich unterscheiden, wenn Sie über ein ähnliches Grafikprogramm wie Jasc Paint Shop Pro oder Sonic Foundry Decryptioy verfügen, die Konzepte jedoch identisch sind. Es gibt zwei Gründe für die Auswahl von Albums: Es handelt sich um ein beliebtes Grafikprogramm für kommerzielle Interpreten, das mit Schichten arbeitet. Wie Sie in den Tutorials sehen werden, sind Ebenen sehr nützlich für die Skinerstellung.
 
-In diesem Handbuch werden die folgenden Aufgaben behandelt.
+In diesem Leitfaden werden die folgenden Aufgaben behandelt.
 
 
 
 | Aufgabe                                                     | BESCHREIBUNG                                                                                     |
 |----------------------------------------------------------|-------------------------------------------------------------------------------------------------|
-| [Aufbauen Ihrer ersten Skin](building-your-first-skin.md) | Eine exemplarische Vorgehensweise für eine einfache Skin, mit der Windows Media Player gestartet und beendet wird.                     |
+| [Erstellen Ihrer ersten Skin](building-your-first-skin.md) | Eine exemplarische Durchdingung einer einfachen Skin, die Windows Media Player beginnt und beendet.                     |
 | [Hinzufügen einer Wiedergabeliste](adding-a-playlist.md)               | Verwenden einer einfachen Wiedergabeliste                                                                   |
-| [Auswählen von Dateien](choosing-files.md)                     | Gewusst wie: Auswählen von Dateien mit dem Dialogfeld "Datei öffnen"                                                 |
-| [Hinzufügen von Videos](adding-video.md)                         | Gewusst wie: Platzieren eines Videofensters in der Skin                                                       |
-| [Hinzufügen von Visualisierungen](adding-visualizations.md)       | Vorgehensweise beim Hinzufügen von Visualisierungen                                                                      |
-| [Fügen eines Schiebereglers](adding-a-slider.md)                   | So verwenden Sie einen Schieberegler, um den Fortschritt des Medien Inhalts zu verfolgen... und lassen Sie den Benutzer die Änderungen ändern! |
-| [Erstellen benutzerdefinierter Schieberegler](creating-custom-sliders.md)   | Steuern des Volumes mit einem benutzerdefinierten Schieberegler.                                                 |
-| [Weitere Skin-Beispiele](other-skin-samples.md)             | Weitere Informationen finden Sie im Abschnitt mit den Beispielen des SDK.                                                             |
+| [Auswählen von Dateien](choosing-files.md)                     | Auswählen von Dateien mit einem dialogfeld "Datei öffnen".                                                 |
+| [Hinzufügen von Videos](adding-video.md)                         | Hier erfahren Sie, wie Sie ein Videofenster in Ihre Skin integrieren.                                                       |
+| [Hinzufügen von Visualisierungen](adding-visualizations.md)       | Hinzufügen von Visualisierungen.                                                                      |
+| [Hinzufügen eines Schiebereglers](adding-a-slider.md)                   | Verwenden eines Schiebereglers zum Nachverfolgen des Fortschritts Ihrer Medieninhalte ... und lassen Sie es vom Benutzer ändern! |
+| [Erstellen von benutzerdefinierten Schiebereglern](creating-custom-sliders.md)   | Steuern des Volumes mit einem benutzerdefinierten Schieberegler                                                 |
+| [Andere Skinbeispiele](other-skin-samples.md)             | Weitere Informationen finden Sie im Abschnitt mit den Beispielen des SDK.                                                             |
 
 
 
- 
+ 
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
@@ -48,9 +48,9 @@ In diesem Handbuch werden die folgenden Aufgaben behandelt.
 [**Windows Media Player Skins**](windows-media-player-skins.md)
 </dt> </dl>
 
- 
+ 
 
- 
+ 
 
 
 

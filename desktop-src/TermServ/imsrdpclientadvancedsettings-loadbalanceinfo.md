@@ -7,15 +7,15 @@ keywords:
 - LoadBalanceInfo-Remotedesktopdienste
 - LoadBalanceInfo-Eigenschaft Remotedesktopdienste , IMsRdpClientAdvancedSettings-Schnittstelle
 - IMsRdpClientAdvancedSettings-Schnittstelle Remotedesktopdienste , LoadBalanceInfo-Eigenschaft
-- LoadBalanceInfo-Eigenschaft Remotedesktopdienste , IMsRdpClientAdvancedSettings2-Schnittstelle
+- LoadBalanceInfo-Remotedesktopdienste , IMsRdpClientAdvancedSettings2-Schnittstelle
 - IMsRdpClientAdvancedSettings2-Schnittstelle Remotedesktopdienste , LoadBalanceInfo-Eigenschaft
 - LoadBalanceInfo-Eigenschaft Remotedesktopdienste , IMsRdpClientAdvancedSettings3-Schnittstelle
 - IMsRdpClientAdvancedSettings3-Schnittstelle Remotedesktopdienste , LoadBalanceInfo-Eigenschaft
 - LoadBalanceInfo-Eigenschaft Remotedesktopdienste , IMsRdpClientAdvancedSettings4-Schnittstelle
 - IMsRdpClientAdvancedSettings4-Schnittstelle Remotedesktopdienste , LoadBalanceInfo-Eigenschaft
-- LoadBalanceInfo-Remotedesktopdienste , IMsRdpClientAdvancedSettings5-Schnittstelle
+- LoadBalanceInfo-Eigenschaft Remotedesktopdienste , IMsRdpClientAdvancedSettings5-Schnittstelle
 - IMsRdpClientAdvancedSettings5-Schnittstelle Remotedesktopdienste , LoadBalanceInfo-Eigenschaft
-- LoadBalanceInfo-Eigenschaft Remotedesktopdienste , IMsRdpClientAdvancedSettings6-Schnittstelle
+- LoadBalanceInfo-Remotedesktopdienste , IMsRdpClientAdvancedSettings6-Schnittstelle
 - IMsRdpClientAdvancedSettings6-Schnittstelle Remotedesktopdienste , LoadBalanceInfo-Eigenschaft
 - LoadBalanceInfo-Eigenschaft Remotedesktopdienste , IMsRdpClientAdvancedSettings7-Schnittstelle
 - IMsRdpClientAdvancedSettings7-Schnittstelle Remotedesktopdienste , LoadBalanceInfo-Eigenschaft
@@ -94,21 +94,21 @@ Gibt **S \_ OK zurück,** wenn erfolgreich.
 
 Die Lastenausgleichsinformationen werden von Lastenausgleichsroutern verwendet, um den besten Server für den Client zu wählen, wenn Farmen von RD-Sitzungshost werden. Der RD-Sitzungshost server selbst verwendet diese Informationen nicht und verwirft sie.
 
-Das Cookie verwendet die folgende Syntax, bei der die Zwischenschreibung beachtet wird:
+Das Cookie verwendet die folgende Syntax, bei der die Kleinschreibung beachtet wird:
 
 **Cookie: msts=**_IpAddressAndPortNumber_*_\\ r \\ n_*
 
-Dabei *ist IpAddressAndPortNumber* die IP-Adresse und Portnummer in Netzwerk-Byte-Reihenfolge.
+Dabei *ist IpAddressAndPortNumber* die IP-Adresse und Portnummer in Der Netzwerk-Byte-Reihenfolge.
 
 Beispielsweise lautet das Cookie für den Zugriff auf die IP-Adresse 172.31.249.216, Portnummer 3389, wie folgt:
 
 **Cookie: msts=3640205228.15629.0000 \\ r \\ n**
 
-Die letzten vier Nullen sind optional und reserviert. Das letzte Dezimaltrennzeichen ist erforderlich, ebenso wie der nachstellende Wagenrücklauf und der Zeilenumlauf. Die Länge der Zeichenfolge in Zeichen muss ein gleichmäßiges Vielfaches von 2 sein. Fügen Sie daher bei Bedarf ein Leerzeichen hinzu.
+Die letzten vier Nullen sind optional und reserviert. Das letzte Dezimaltrennzeichen ist erforderlich, ebenso wie der nachstellende Wagenrücklauf und das Zeilenfeed. Die Länge der Zeichenfolge in Zeichen muss ein gleichmäßiges Vielfaches von 2 sein. Fügen Sie daher bei Bedarf ein Leerzeichen hinzu.
 
 Wenn kein Cookie angegeben wird, ist der Standardwert **Cookie: mstshash=**_UserName_*_\\ r \\ n_*.
 
-Weitere Informationen zu Remotedesktop-Webverbindung finden Sie unter [Requirements for Remotedesktop-Webverbindung](requirements-for-remote-desktop-web-connection.md).
+Weitere Informationen zu Remotedesktop-Webverbindung finden Sie unter [Anforderungen für Remotedesktop-Webverbindung](requirements-for-remote-desktop-web-connection.md).
 
 ## <a name="requirements"></a>Anforderungen
 

@@ -140,7 +140,7 @@ Flag zum Einrichten von Steuerelementeinstellungen. In der folgenden Tabelle sin
 <li><em>Offsetzeit</em></li>
 <li>Portzuordnung</li>
 <li>Port "None"</li>
-<li>Port <em>port_number</em></li>
+<li>port <em>port_number</em></li>
 <li>Untergeordnete Datei</li>
 <li>Slave-NSDR</li>
 <li>Slave None</li>
@@ -300,32 +300,32 @@ In der folgenden Tabelle sind die Flags, die im **lpszSetting-Parameter** angege
 <td>Legt die durchschnittliche Anzahl der pro Sekunde abgespielten oder aufgezeichneten Bytes fest. Die Datei wird in diesem Format gespeichert.</td>
 </tr>
 <tr class="odd">
-<td>kanäle <em>channel_count</em></td>
-<td>Legt die Kanäle für Wiedergabe und Aufzeichnung fest. Die Datei wird in diesem Format gespeichert.</td>
+<td>Kanäle <em>channel_count</em></td>
+<td>Legt die Kanäle für die Wiedergabe und Aufzeichnung fest. Die Datei wird in diesem Format gespeichert.</td>
 </tr>
 <tr class="even">
-<td><em>Uhrzeit</em></td>
-<td>Legt die Zeit für die externe Uhr auf <em>time fest.</em> Das Format wird als long-Ganzzahl ohne Vorzeichen angegeben.</td>
+<td>Uhrzeit <em></em></td>
+<td>Legt die Zeit für die externe Uhr auf die Uhrzeit <em>fest.</em> Das Format wird als lange ganze Zahl ohne Vorzeichen angegeben.</td>
 </tr>
 <tr class="odd">
 <td>Indikatorformat</td>
-<td>Legen Sie das Zeitformat für den Leistungsindikator fest, wie vom <a href="status.md">Statusindikator</a> &quot; &quot; zurückgegeben. Informationen zu anwendbaren Typen finden Sie unter dem Befehl set time format ( <strong>Festlegen</strong> des &quot; &quot; Zeitformats).</td>
+<td>Legen Sie das Zeitformat für den Zähler fest, wie vom <a href="status.md">Statusindikator</a> &quot; &quot; zurückgegeben. Informationen zu anwendbaren Typen finden Sie im Befehl <strong>zum Festlegen des</strong> &quot; &quot; Zeitformats.</td>
 </tr>
 <tr class="even">
-<td><em>Indikatorwert</em></td>
-<td>Legt den VCR-Indikator auf den angegebenen Wert fest. Der Wert muss im aktuellen Indikatorformat angegeben werden. Weitere Informationen finden Sie unter dem Befehl <strong>set</strong> &quot; counter format &quot; .</td>
+<td><em>Zählerwert</em></td>
+<td>Legt den VCR-Indikator auf den angegebenen Wert fest. Der Wert muss im aktuellen Indikatorformat angegeben werden. Weitere Informationen finden Sie im Befehl <strong>set</strong> &quot; counter &quot; format.</td>
 </tr>
 <tr class="odd">
 <td>Tür geschlossen</td>
-<td>Zieht die Taskleiste zurück und schließt die Tür, wenn möglich. Bei VCRs lädt das Band automatisch.</td>
+<td>Entfernt die Taskleiste und schließt nach Möglichkeit die Tür. Bei VCRs lädt das Band automatisch.</td>
 </tr>
 <tr class="even">
-<td>Door Open</td>
-<td>Öffnet die Tür und wirft nach Möglichkeit die Taskleiste oder das Band aus.</td>
+<td>Tür geöffnet</td>
+<td>Öffnet die Tür und wirft nach Möglichkeit die Leiste oder das Band aus.</td>
 </tr>
 <tr class="odd">
-<td><em>Dateiformat</em></td>
-<td>Gibt ein Dateiformat an, das für <a href="save.md">Speicher-</a> oder <a href="capture.md">Erfassungsbefehle</a> verwendet wird. Wenn dies nicht angegeben wird, wird möglicherweise standardmäßig ein vom Gerätetreiber definiertes Format verwendet. Wenn das angegebene Dateiformat mit dem aktuell ausgewählten Algorithmus und der Qualität in Konflikt steht, werden sie in die Standardwerte für das Dateiformat geändert. Die folgenden Dateiformate werden definiert:
+<td>Dateiformatformat <em></em></td>
+<td>Gibt ein Dateiformat an, das für Speicher- <a href="save.md">oder</a> <a href="capture.md">Erfassungsbefehle verwendet</a> wird. Wenn dies nicht angegeben wird, wird möglicherweise standardmäßig ein vom Gerätetreiber definiertes Format verwendet. Wenn das angegebene Dateiformat mit dem aktuell ausgewählten Algorithmus und der Qualität in Konflikt steht, werden sie in die Standardwerte für das Dateiformat geändert. Die folgenden Dateiformate sind definiert:
 <ul>
 <li>avi: Gibt das AVI-Format an.</li>
 <li>avss: Gibt das AVSS-Format an.</li>
@@ -333,17 +333,17 @@ In der folgenden Tabelle sind die Flags, die im **lpszSetting-Parameter** angege
 <li>jfif: Gibt das JFIF-Format an.</li>
 <li>jpeg: Gibt das JPEG-Format an.</li>
 <li>mpeg: Gibt das MPEG-Format an.</li>
-<li>rdib: Gibt das RLE DIB-Format an.</li>
+<li>rdib: Gibt das RLE-DIB-Format an.</li>
 <li>rjpeg: Gibt das RJPEG-Format an.</li>
 </ul></td>
 </tr>
 <tr class="even">
-<td>format tag pcm</td>
-<td>Legt den Formattyp zum Wiedergeben und Aufzeichnen auf PCM fest. Die Datei wird in diesem Format gespeichert.</td>
+<td>Formattag pcm</td>
+<td>Legt den Formattyp für die Wiedergabe und Aufzeichnung auf PCM fest. Die Datei wird in diesem Format gespeichert.</td>
 </tr>
 <tr class="odd">
-<td><em>Formattagtag</em></td>
-<td>Legt den Formattyp für Wiedergabe und Aufzeichnung fest. Die Datei wird in diesem Format gespeichert.</td>
+<td>Tagtag <em>formatieren</em></td>
+<td>Legt den Formattyp für die Wiedergabe und Aufzeichnung fest. Die Datei wird in diesem Format gespeichert.</td>
 </tr>
 <tr class="even">
 <td>Indexzeitcode <br/> Indexzähler <br/> Indexdatum <br/> Indexzeit <br/></td>
@@ -351,119 +351,119 @@ In der folgenden Tabelle sind die Flags, die im **lpszSetting-Parameter** angege
 </tr>
 <tr class="odd">
 <td><em>Eingabe-Ganzzahl</em></td>
-<td>Legt den als Eingabe verwendeten Audiokanal fest.</td>
+<td>Legt den Audiokanal fest, der als Eingabe verwendet wird.</td>
 </tr>
 <tr class="even">
 <td><em>Längendauer</em></td>
-<td>Legt die vom Benutzer angegebene Länge des Bandes im VCR fest. Diese Länge wird vom <a href="status.md">Befehl status</a> length zurückgegeben und für die Kompatibilität mit &quot; Anwendungen &quot; bereitgestellt, für die dieser Befehl eine gültige Länge zurückgeben muss.</td>
+<td>Legt die vom Benutzer angegebene Länge des Bandes im VCR fest. Diese Länge wird vom Befehl <a href="status.md">status</a> length zurückgegeben und wird aus Kompatibilitäts- und Kompatibilitätsgelangen mit Anwendungen bereitgestellt, für die dieser Befehl &quot; eine gültige Länge zurückgeben &quot; muss.</td>
 </tr>
 <tr class="odd">
-<td>master masters</td>
-<td>Legt den SEQUENCER als Synchronisierungsquelle fest. Die Synchronisierungsdaten werden im FORMAT FORMAT DER Synchronisierung gesendet. Der MCISEQ-Sequencer unterstützt dieses Flag nicht.</td>
+<td>master-</td>
+<td>Legt denSKRIPT-Sequencer als Synchronisierungsquelle fest. Synchronisierungsdaten werden im FORMAT DEST-Formats gesendet. Der MCISEQ-Sequencer unterstützt dieses Flag nicht.</td>
 </tr>
 <tr class="even">
 <td>master none</td>
-<td>Verhindert das Senden von Synchronisierungsdaten durch den CSV-Sequencer. Der MCISEQ-Sequencer unterstützt dieses Flag nicht.</td>
+<td>Verhindert, dass derENDE-Sequencer Synchronisierungsdaten sendet. Der MCISEQ-Sequencer unterstützt dieses Flag nicht.</td>
 </tr>
 <tr class="odd">
 <td>master smpte</td>
-<td>Legt den SEQUENCER als Synchronisierungsquelle fest. Synchronisierungsdaten werden im SMPTE-Format (Society of Motion Picture and Tv Engineers) gesendet. Der MCISEQ-Sequencer unterstützt dieses Flag nicht.</td>
+<td>Legt denSKRIPT-Sequencer als Synchronisierungsquelle fest. Synchronisierungsdaten werden im SMPTE-Format (Society of Motion Picture and Tv Engineers) gesendet. Der MCISEQ-Sequencer unterstützt dieses Flag nicht.</td>
 </tr>
 <tr class="even">
 <td><em>Offsetzeit</em></td>
-<td>Legt die SMPTE-Offsetzeit fest. <em></em> Der Offset ist die Anfangszeit einer SMPTE-basierten Sequenz. Die <em>Zeit</em> wird als <em>hh</em>ausgedrückt: <em>mm</em>: <em>ss</em>: <em>ff</em>, wobei <em>hh</em> Stunden, <em>mm</em> Minuten, <em>ss</em> Sekunden und <em>ff</em> Frames ist.</td>
+<td>Legt die SMPTE-Offsetzeit <em>fest.</em> Der Offset ist die Anfangszeit einer SMPTE-basierten Sequenz. Die <em>Zeit</em> wird als <em>hh</em>ausgedrückt: <em>mm</em>: <em>ss</em>: <em>ff</em>, wobei <em>hh</em> stunden, <em>mm minuten,</em> <em>ss</em> sekunden und <em>ff</em> Frames sind.</td>
 </tr>
 <tr class="odd">
-<td><em>Ausgabe ganze Zahl</em></td>
-<td>Legt den als Ausgabe verwendeten Audiokanal fest.</td>
+<td>Ganzzahlige <em>Ausgabe</em></td>
+<td>Legt den Audiokanal fest, der als Ausgabe verwendet wird.</td>
 </tr>
 <tr class="even">
-<td><em>Timeout</em> anhalten</td>
-<td>Legt die maximale Dauer eines <a href="pause.md">Pausenbefehls</a> in Millisekunden fest. Der <em>Timeoutwert</em> 0 gibt an, dass kein Timeout auftritt.</td>
+<td><em>Pausen-Timeout</em></td>
+<td>Legt die maximale Dauer eines Pausenbefehls in <a href="pause.md">Millisekunden</a> fest. Der <em>Timeoutwert</em> 0 (null) gibt an, dass kein Timeout auftritt.</td>
 </tr>
 <tr class="odd">
-<td><em>Dauer</em> der Postrolls</td>
-<td>Legt die Länge im aktuellen Zeitformat fest, die benötigt wird, um den VCR-Transport zu unterbrechen, wenn ein <a href="stop.md">Befehl zum Beenden</a> oder <strong>Anhalten</strong> ausgegeben wird.</td>
+<td>Dauer des <em>Postrolls</em></td>
+<td>Legt die Länge im aktuellen Zeitformat fest, die erforderlich ist, um den VCR-Transport zu unterbrechen, wenn ein Befehl <a href="stop.md">zum</a> Beenden oder Anhalten ausgegeben wird. <strong></strong></td>
 </tr>
 <tr class="even">
 <td>Portzuordnung</td>
-<td>Legt die MAPPER-Schnittstelle als Port fest, der die MELDUNGEN empfängt. Dieser Befehl schlägt fehl, wenn der MAPPer oder ein benötigter Port von einer anderen Anwendung verwendet wird.</td>
+<td>Legt die MAPPer-Funktion für die DANN-Zuordnung als Port fest, der die DANN-Nachrichten empfängt. Dieser Befehl schlägt fehl, wenn die MAPPer-Datei oder ein port, den sie benötigt, von einer anderen Anwendung verwendet wird.</td>
 </tr>
 <tr class="odd">
-<td>Port "None"</td>
-<td>Deaktiviert das Senden von SMS-Nachrichten. Mit diesem Befehl wird auch ein PORTS geschlossen.</td>
+<td>port none</td>
+<td>Deaktiviert das Senden vonBENACHRICHTIGUNG-Nachrichten. Mit diesem Befehl wird auch ein DANN-Port geschlossen.</td>
 </tr>
 <tr class="even">
-<td>port <em>port_number</em></td>
-<td>Legt den PORTS FEST, der die MELDUNGEN empfängt. Dieser Befehl schlägt fehl, wenn der Port, den Sie öffnen möchten, von einer anderen Anwendung verwendet wird.</td>
+<td>Port <em>port_number</em></td>
+<td>Legt den DANN-Port fest, der die FEHLERMELDUNG-Nachrichten empfängt. Dieser Befehl schlägt fehl, wenn der Port, den Sie öffnen möchten, von einer anderen Anwendung verwendet wird.</td>
 </tr>
 <tr class="odd">
 <td>Einschalten <br/> Ausschalten <br/></td>
 <td>Legt die Ein- oder Ausschalten des Geräts fest.</td>
 </tr>
 <tr class="even">
-<td><em>Dauer</em> des Vorabrollings</td>
-<td>Legt die Länge im aktuellen Zeitformat fest, die zur Stabilisierung der VCR-Ausgabe erforderlich ist.</td>
+<td>Dauer der <em>Vorabrolldauer</em></td>
+<td>Legt die Länge im aktuellen Zeitformat fest, die zum Stabilieren der VCR-Ausgabe erforderlich ist.</td>
 </tr>
 <tr class="odd">
 <td>Datensatzformat SP <br/> Datensatzformat LP <br/> Datensatzformat EP <br/></td>
-<td>Legt den Aufzeichnungsmodus für den VCR auf SP für die Standardwiedergabe, EP für erweiterte Wiedergabe oder LP für lange Wiedergabe fest. Diese Werte sind nicht VHS-spezifisch. Sie werden drei geeigneten Modi mit anderen Bandformaten zugeordnet. Beispielsweise wird SP der schnellsten Aufzeichnung mit der höchsten Qualität zugeordnet.</td>
+<td>Legt den Aufzeichnungsmodus für den VCR auf SP für standard play, EP für erweiterte Wiedergabe oder LP für lange Wiedergabe fest. Diese Werte sind nicht als VHS-spezifisch gedacht. Sie sind drei geeigneten Modi mit anderen Bandformaten zuordnen. Sp wird z. B. der schnellsten Aufzeichnung mit der höchsten Qualität angezeigt.</td>
 </tr>
 <tr class="even">
 <td>samplespersec <em>integer</em></td>
 <td>Legt die Abtastrate für Wiedergabe und Aufzeichnung fest. Die Datei wird in diesem Format gespeichert.</td>
 </tr>
 <tr class="odd">
-<td>Suchen sie genau nach<br/> Suchen sie genau aus <br/></td>
-<td>Wählt einen von zwei Suchmodi aus. Wenn &quot; seek genau auf festgelegt &quot; ist, wird seek immer in den angegebenen Frame verschoben. Wenn &quot; seek genau deaktiviert &quot; ist, wechselt seek zum nächstgelegenen Keyframe vor dem angegebenen Frame.</td>
+<td>Suchen nach genau am<br/> Genau aussuchen <br/></td>
+<td>Wählt einen von zwei Suchmodi aus. Wenn &quot; seek genau auf festgelegt &quot; ist, wird seek immer zum angegebenen Frame bewegt. Wenn &quot; seek genau deaktiviert &quot; ist, wird seek zum nächstgelegenen Keyframe vor dem angegebenen Frame bewegt.</td>
 </tr>
 <tr class="even">
-<td>Untergeordnete Datei</td>
-<td>Legt fest, dass der SEQUENCEr Dateidaten als Synchronisierungsquelle verwendet. Dies ist die Standardeinstellung.</td>
+<td>Slave-Datei</td>
+<td>Legt fest, dass der SEQUENCER Dateidaten als Synchronisierungsquelle verwendet. Dies ist die Standardeinstellung.</td>
 </tr>
 <tr class="odd">
-<td>Slave Slave Slave</td>
-<td>Legt den SEQUENCEr für die Verwendung eingehenderSKRIPT-Daten für die Synchronisierungsquelle fest. Der Sequencer erkennt Synchronisierungsdaten im formatierten formatiert. Der MCISEQ-Sequencer unterstützt dieses Flag nicht.</td>
+<td>Slave-Manding</td>
+<td>Legt fest, dass derSYNCHRONISIERUNGssequenzer eingehende DATENVERKEHRsdaten für die Synchronisierungsquelle verwendet. Der Sequencer erkennt Synchronisierungsdaten mit dem FORMAT CSV. Der MCISEQ-Sequencer unterstützt dieses Flag nicht.</td>
 </tr>
 <tr class="even">
-<td>Slave none</td>
-<td>Legt fest, dass der SEQUENCEr die Synchronisierung ignoriert.</td>
+<td>Slave None</td>
+<td>Legt fest, dass derSYNCHRONISIERUNGssequenzer die Synchronisierung ignoriert.</td>
 </tr>
 <tr class="odd">
 <td>slave smpte</td>
-<td>Legt den SEQUENCEr für die Verwendung eingehenderSKRIPT-Daten für die Synchronisierungsquelle fest. Der Sequencer erkennt Synchronisierungsdaten im SMPTE-Format. Der MCISEQ-Sequencer unterstützt dieses Flag nicht.</td>
+<td>Legt fest, dass derSYNCHRONISIERUNGssequenzer eingehende DATENVERKEHRsdaten für die Synchronisierungsquelle verwendet. Der Sequencer erkennt Synchronisierungsdaten im SMPTE-Format. Der MCISEQ-Sequencer unterstützt dieses Flag nicht.</td>
 </tr>
 <tr class="even">
 <td>Geschwindigkeitsfaktor</td>
-<td>Legt die relative Geschwindigkeit der Video- und Audiowiedergabe aus dem Arbeitsbereich fest. Faktor ist das Verhältnis zwischen der nominalen Bildfrequenz und der gewünschten Bildfrequenz, wobei die nominale Bildfrequenz als 1000 festgelegt ist. (Eine Rate von 500 ist halb normale Geschwindigkeit, 2000 ist doppelt normale Geschwindigkeit und so weiter.) Wenn Die Geschwindigkeit auf 0 (null) gesetzt wird, wird das Video so schnell wie möglich abspielt, ohne Frames und ohne Audio zu löschen.</td>
+<td>Legt die relative Geschwindigkeit der Video- und Audiowiedergabe aus dem Arbeitsbereich fest. Der Faktor ist das Verhältnis zwischen der nominalen Bildfrequenz und der gewünschten Bildfrequenz, wobei die nominale Bildfrequenz als 1000 festgelegt ist. (Eine Rate von 500 entspricht halb normaler Geschwindigkeit, 2000 doppelt normaler Geschwindigkeit usw.) Wenn Sie die Geschwindigkeit auf Null festlegen, wird das Video so schnell wie möglich wiedergegeben, ohne Frames und Audiodaten zu löschen.</td>
 </tr>
 <tr class="odd">
-<td>Format des Dateiformats <em>"still"</em></td>
-<td>Gibt das Dateiformat an, das für Erfassungsbefehle verwendet wird.</td>
+<td><em>Format</em> des Dateiformats "still"</td>
+<td>Gibt das Dateiformat an, das für Aufzeichnungsbefehle verwendet wird.</td>
 </tr>
 <tr class="even">
-<td>Tempo tempo_value</td>
-<td>Legt das Tempo der Sequenz gemäß dem aktuellen Zeitformat fest. Bei einer PPQN-basierten Datei wird die tempo_value als Takte pro Minute interpretiert. Bei einer SMPTE-basierten Datei wird die tempo_value als Frames pro Sekunde interpretiert.</td>
+<td>tempo tempo_value</td>
+<td>Legt das Tempo der Sequenz entsprechend dem aktuellen Zeitformat fest. Bei einer PPQN-basierten Datei wird die tempo_value als Takte pro Minute interpretiert. Bei einer SMPTE-basierten Datei wird die tempo_value als Frames pro Sekunde interpretiert.</td>
 </tr>
 <tr class="odd">
-<td>Bytes im Zeitformat</td>
-<td>In einem PCM-Dateiformat legt das Zeitformat auf Bytes fest. Alle Positionsinformationen werden nach diesem Befehl als Bytes angegeben.</td>
+<td>Zeitformat byte</td>
+<td>Legt das Zeitformat in einem PCM-Dateiformat auf Bytes fest. Alle Positionsinformationen werden nach diesem Befehl als Bytes angegeben.</td>
 </tr>
 <tr class="even">
 <td>Zeitformatrahmen</td>
-<td>Legt das Zeitformat auf Frames fest. Alle Befehle, die Positionswerte verwenden, setzen Frames voraus. Wenn das Gerät geöffnet wird, ist Frames der Standardmodus. Wird von Videodiscs im CAV-Format unterstützt.</td>
+<td>Legt das Zeitformat auf Frames fest. Alle Befehle, die Positionswerte verwenden, gehen von Frames aus. Wenn das Gerät geöffnet wird, sind Frames der Standardmodus. Wird von Videodiscs im CAV-Format unterstützt.</td>
 </tr>
 <tr class="odd">
 <td>Zeitformat hms</td>
-<td>Legt das Zeitformat auf Stunden, Minuten und Sekunden fest. Alle Befehle, die Positionswerte verwenden, setzen HMS voraus. HMS ist das Standardformat für CLV-Videodiscs. Geben Sie einen HMS-Wert als hh:mm:ss an, wobei hh stunden, mm minuten und ss Sekunden ist. Sie können ein Feld weglassen, wenn es und alle folgenden Felder 0 (null) sind. Beispielsweise sind 3, 3:0 und 3:0:0 alle gültige Möglichkeiten, drei Stunden auszudrücken. <br/></td>
+<td>Legt das Zeitformat auf Stunden, Minuten und Sekunden fest. Alle Befehle, die Positionswerte verwenden, gehen von HMS aus. HMS ist das Standardformat für CLV-Videodiscs. Geben Sie einen HMS-Wert als hh:mm:ss an, wobei hh stunden, mm minuten und ss Sekunden ist. Sie können ein Feld weglassen, wenn es und alle folgenden Felder 0 (null) sind. Beispielsweise sind 3, 3:0 und 3:0:0 gültige Möglichkeiten, 3 Stunden auszudrücken. <br/></td>
 </tr>
 <tr class="even">
-<td>Zeitformat millisekunden</td>
-<td>Legt das Zeitformat auf Millisekunden fest. Alle Befehle, die Positionswerte verwenden, nehmen Millisekunden an. Sie können Millisekunden als &quot; ms abkürzen. &quot; Für Sequencergeräte legt die Sequenzdatei das Standardformat auf PPQN oder SMPTE fest. Videoüberlagerungsgeräte unterstützen dieses Flag nicht.<br/></td>
+<td>Zeitformat (Millisekunden)</td>
+<td>Legt das Zeitformat auf Millisekunden fest. Alle Befehle, die Positionswerte verwenden, gehen von Millisekunden aus. Sie können Millisekunden als ms abkürzen. &quot; &quot; Für Sequencergeräte legt die Sequenzdatei das Standardformat auf PPQN oder SMPTE fest. Videoüberlagerungsgeräte unterstützen dieses Flag nicht.<br/></td>
 </tr>
 <tr class="odd">
 <td>zeitformat msf</td>
-<td>Legt das Zeitformat auf Minuten, Sekunden und Frames fest. Alle Befehle, die Positionswerte verwenden, setzen MSF voraus (das Standardformat für CD-Audio). Geben Sie einen MSF-Wert als mm:ss:ff an, wobei mm Minuten, ss Sekunden und ff Frames ist. Sie können ein Feld weglassen, wenn es und alle folgenden Felder 0 (null) sind. Beispielsweise sind 3, 3:0 und 3:0:0 gültige Möglichkeiten, 3 Minuten auszudrücken.<br/> Die MSF-Felder haben die folgenden maximalen Werte:<br/>
+<td>Legt das Zeitformat auf Minuten, Sekunden und Frames fest. Für alle Befehle, die Positionswerte verwenden, wird MSF (das Standardformat für CD-Audio) angenommen. Geben Sie einen MSF-Wert als mm:ss:ff an, wobei mm minuten, ss sekunden und ff Frames ist. Sie können ein Feld weglassen, wenn es und alle folgenden Felder 0 (null) sind. Beispielsweise sind 3, 3:0 und 3:0:0 gültige Möglichkeiten, 3 Minuten auszudrücken.<br/> Die MSF-Felder weisen die folgenden maximalen Werte auf:<br/>
 <ul>
 <li>Minuten 99</li>
 <li>Sekunden 59</li>
@@ -472,25 +472,25 @@ In der folgenden Tabelle sind die Flags, die im **lpszSetting-Parameter** angege
 </tr>
 <tr class="even">
 <td>Zeitformatbeispiele</td>
-<td>Legt das Zeitformat auf Beispiele fest. Alle Positionsinformationen werden als Beispiele nach diesem Befehl angegeben.</td>
+<td>Legt das Zeitformat auf Beispiele fest. Alle Positionsinformationen werden als Beispiele angegeben, die diesem Befehl folgen.</td>
 </tr>
 <tr class="odd">
 <td>Zeitformat smpte 24<br/> Zeitformat smpte 25<br/> Zeitformat smpte 30<br/></td>
-<td>Legt das Zeitformat auf eine SMPTE-Framerate fest. Legt für VCRs das Zeitformat auf hh:mm:ss:ff fest, wobei die rechtlichen Werte 00:00:00:00 bis 23:59:59:xx sind und xx eins kleiner als die Frames pro Sekunde ist, wie durch die Zahl 24, 25 oder 30 angegeben, wie im Flag angegeben. Bei der Eingabe werden Doppelpunkte (:) sind erforderlich, um die Komponenten zu trennen. Die am wenigsten signifikanten Einheiten können weggelassen werden, wenn sie 00 sind. Beispielsweise ist 02:00 identisch mit 02:00:00:00. Alle Befehle, die Positionswerte verwenden, nehmen das SMPTE-Format an.<br/> Die Sequenzdatei legt das Standardformat auf PPQN oder SMPTE fest.<br/></td>
+<td>Legt das Zeitformat auf eine SMPTE-Framerate fest. Legt für VCRs das Zeitformat auf hh:mm:ss:ff fest, wobei die rechtlichen Werte 00:00:00:00 bis 23:59:59:xx und xx eins kleiner als die Frames pro Sekunde sind, wie in der Zahl 24, 25 oder 30 angegeben, wie im Flag angegeben. Bei Eingabe Doppelpunkte (:) sind erforderlich, um die Komponenten zu trennen. Die am wenigsten signifikanten Einheiten können weggelassen werden, wenn sie 00 sind. beispielsweise ist 02:00 identisch mit 02:00:00:00. Alle Befehle, die Positionswerte verwenden, übernehmen das SMPTE-Format.<br/> Die Sequenzdatei legt das Standardformat auf PPQN oder SMPTE fest.<br/></td>
 </tr>
 <tr class="even">
 <td>Zeitformat smpte 30 drop</td>
-<td>Legt das Zeitformat auf SMPTE 30 Drop Frame Rate fest. Bei VCRs ist dies mit SMPTE 30 identisch, mit der Ausnahme, dass bestimmte Zeitcodepositionen aus dem Format gelöscht werden, damit die aufgezeichneten Zeitcodepositionen für jeden Frame (bei der NTSC-Framerate von 29,97 FPS) der Echtzeit (bei 30 Fps) entsprechen. Die gelöschten Zeitcodepositionen lauten wie folgt: zwei pro Minute für die ersten neun der zehn Minuten aufgezeichneten Inhalte. Um 01:04:59:29 wäre die nächste Timecodeposition beispielsweise 01:05:00:02 und nicht 01:05:00:00. Alle Befehle, die Positionswerte verwenden, nehmen das SMPTE-Format an.<br/> Die Sequenzdatei legt das Standardformat auf PPQN oder SMPTE fest.<br/></td>
+<td>Legt das Zeitformat auf die SMPTE 30-Ablagebildrate fest. Für VCRs, identisch mit SMPTE 30, mit der Ausnahme, dass bestimmte Zeitcodepositionen aus dem Format gelöscht werden, damit die aufgezeichneten Zeitcodepositionen für jeden Frame (mit der NTSC-Framerate von 29,97 fps) der Echtzeit (bei 30 FPS) entsprechen. Zeitcodepositionen, die gelöscht werden, sind wie folgt: zwei minutengenau für die ersten neun von zehn Minuten aufgezeichneter Inhalte. Bei 01:04:59:29 wäre beispielsweise die nächste Zeitcodeposition 01:05:00:02, nicht 01:05:00:00. Alle Befehle, die Positionswerte verwenden, übernehmen das SMPTE-Format.<br/> Die Sequenzdatei legt das Standardformat auf PPQN oder SMPTE fest.<br/></td>
 </tr>
 <tr class="odd">
-<td>Musikzeiger im Zeitformat</td>
-<td>Legt das Zeitformat auf einen Songzeiger fest (16 Notizen). Alle Befehle, die Positionswerte verwenden, setzen Songzeigereinheiten voraus. Dieses Flag ist nur für eine Sequenz vom Divisionstyp PPQN gültig.</td>
+<td>Zeitformattitelzeiger</td>
+<td>Legt das Zeitformat auf den Titelzeiger (16. Notizen) fest. Alle Befehle, die Positionswerte verwenden, gehen von Songzeigereinheiten aus. Dieses Flag ist nur für eine Sequenz des Divisionstyps PPQN gültig.</td>
 </tr>
 <tr class="even">
-<td>Zeitformat tmsf</td>
-<td>Legt das Zeitformat auf Spuren, Minuten, Sekunden und Frames fest. Alle Befehle, die Positionswerte verwenden, setzen TMSF voraus. Geben Sie einen TMSF-Wert als tt:mm:ss:ff an, wobei tt für tracks, mm für minutes, ss für seconds und ff für frames steht. Sie können ein Feld weglassen, wenn es und alle folgenden Felder 0 (null) sind. Beispielsweise sind 3, 3:0, 3:0:0 und 3:0:0:0 alle gültige Möglichkeiten zum Ausdrücken von Track 3. <br/> Die TMSF-Felder haben die folgenden maximalen Werte:<br/>
+<td>zeitformat tmsf</td>
+<td>Legt das Zeitformat auf Spuren, Minuten, Sekunden und Frames fest. Alle Befehle, die Positionswerte verwenden, gehen von TMSF aus. Geben Sie einen TMSF-Wert als tt:mm:ss:ff an, wobei tt tracks, mm minuten, ss sekunden und ff Frames ist. Sie können ein Feld weglassen, wenn es und alle folgenden Felder 0 (null) sind. Beispielsweise sind 3, 3:0, 3:0:0 und 3:0:0:0 gültige Möglichkeiten, Track 3 auszudrücken. <br/> Die TMSF-Felder haben die folgenden Maximalen Werte:<br/>
 <ul>
-<li>Tracks 99</li>
+<li>Verfolgt 99 nach</li>
 <li>Minuten 90</li>
 <li>Sekunden 59</li>
 <li>Frames 74</li>
@@ -498,19 +498,19 @@ In der folgenden Tabelle sind die Flags, die im **lpszSetting-Parameter** angege
 </tr>
 <tr class="odd">
 <td>Zeitformatspur</td>
-<td>Legt das Positionsformat auf Tracks fest. Alle Befehle, die Positionswerte verwenden, nehmen Spuren an.</td>
+<td>Legt das Positionsformat auf tracks fest. Alle Befehle, die Positionswerte verwenden, gehen von Spuren aus.</td>
 </tr>
 <tr class="even">
 <td>Zeitmoduszähler</td>
-<td>Legt den Positionsinformationsmodus für die Verwendung der VCR-Leistungsindikatoren fest.</td>
+<td>Legt den Positionsinformationsmodus für die Verwendung der VCR-Indikatoren fest.</td>
 </tr>
 <tr class="odd">
-<td>Erkennung im Zeitmodus</td>
-<td>Legt den Positionsinformationsmodus basierend auf der Erkennung von Zeitcodeinformationen auf dem Band fest. Wenn Zeitcodeinformationen erkannt werden, wird der Zeittyp auf timecode festgelegt. Andernfalls wird der Zeittyp &quot; &quot; auf counter &quot; &quot; festgelegt. &quot;Erkennen &quot; ist ein spezieller Modus. Wenn der Treiber geöffnet wird, ein neues Band eingefügt oder der Zeitmodusbefehl ausgegeben wird, überprüft der Treiber den auf dem Band verfügbaren aktuellen Zeitmodus und legt den Zeittyp entweder auf den Zeitcode oder den Zähler &quot; &quot; &quot; &quot; &quot; &quot; &quot; &quot; fest. Sobald &quot; der Zeittyp festgelegt ist, ändert der Treiber ihn erst, wenn eine der oben genannten &quot; Bedingungen erneut auftritt.<br/></td>
+<td>Zeitmoduserkennung</td>
+<td>Legt den Positionsinformationsmodus basierend auf der Erkennung von Zeitcodeinformationen auf dem Band fest. Wenn Timecodeinformationen erkannt werden, wird der Zeittyp auf &quot; timecode &quot; festgelegt. Andernfalls wird der Zeittyp auf &quot; den Indikator &quot; festgelegt. &quot;Detect &quot; ist ein spezieller Modus. Wenn der Treiber geöffnet wird, ein neues Band eingefügt wird oder der &quot; &quot; Zeitmodusbefehl ausgegeben wird, überprüft der Treiber den auf dem Band verfügbaren aktuellen Zeitmodus und legt den &quot; Zeittyp &quot; auf &quot; timecode &quot; oder counter &quot; &quot; fest. Sobald &quot; der Zeittyp &quot; festgelegt ist, ändert der Treiber ihn erst, wenn eine der oben genannten Bedingungen erneut auftritt.<br/></td>
 </tr>
 <tr class="even">
-<td>Zeitmodus-Zeitcode</td>
-<td>Legt den Positionsinformationsmodus fest, um &quot; &quot; Zeitcodeinformationen auf dem Band zu verwenden.</td>
+<td>Timecode im Zeitmodus</td>
+<td>Legt den Positionsinformationsmodus so fest, &quot; dass Zeitcodeinformationen auf dem Band verwendet &quot; werden.</td>
 </tr>
 <tr class="odd">
 <td>Nachverfolgung plus <br/> Nachverfolgungs-Minus <br/> Nachverfolgungsrücksetzung <br/></td>

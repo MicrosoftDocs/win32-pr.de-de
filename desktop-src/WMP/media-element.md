@@ -1,9 +1,9 @@
 ---
-title: Media-Element
-description: Das Media-Element gibt eines der Medienelemente in einer Wiedergabeliste an.
+title: media-Element
+description: Das Medienelement gibt eines der Medienelemente in einer Wiedergabeliste an.
 ms.assetid: 7329bf48-3b23-4bc6-8488-506efca284bb
 keywords:
-- Windows-Media Player für Medien Element
+- media-Element Windows Media Player
 topic_type:
 - apiref
 api_name:
@@ -13,16 +13,16 @@ api_type:
 ms.topic: reference
 ms.date: 05/31/2018
 api_location: ''
-ms.openlocfilehash: 2e693c8b17345d3ba7875d48b83b5e3e90d682dc
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: c67f4321d85ec52babbc6f24c2cd9e3512f7c970eb3360ba2ddfd7ba53f82152
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106361263"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118996320"
 ---
-# <a name="media-element"></a>Media-Element
+# <a name="media-element"></a>media-Element
 
-Das **Media** -Element gibt eines der Medienelemente in einer Wiedergabeliste an.
+Das **Medienelement** gibt eines der Medienelemente in einer Wiedergabeliste an.
 
 ``` syntax
 <media
@@ -39,15 +39,15 @@ Das **Media** -Element gibt eines der Medienelemente in einer Wiedergabeliste an
 
 | Begriff                                                                                                                       | BESCHREIBUNG                                                                                      |
 |----------------------------------------------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------|
-| <span id="src__required______________"></span><span id="SRC__REQUIRED______________"></span>**src** (erforderlich) <br/> | Die URL eines Medien Elements.<br/>                                                              |
-| <span id="cid"></span><span id="CID"></span>**zid**<br/>                                                             | Die Inhalts-ID, die für dieses Medien Element eindeutig ist.<br/>                                     |
-| <span id="tid"></span><span id="TID"></span>**Drüse**<br/>                                                             | Die Nachverfolgungs-ID, die verwendet werden kann, um das Datei System Objekt für dieses Medien Element nachzuverfolgen.<br/> |
+| <span id="src__required______________"></span><span id="SRC__REQUIRED______________"></span>**src** (erforderlich) <br/> | Die URL eines Medienelements.<br/>                                                              |
+| <span id="cid"></span><span id="CID"></span>**Cid**<br/>                                                             | Die Inhalts-ID, die für dieses Medienelement eindeutig ist.<br/>                                     |
+| <span id="tid"></span><span id="TID"></span>**Tid**<br/>                                                             | Die Nachverfolgungs-ID, die zum Nachverfolgen des Dateisystemobjekts für dieses Medienelement verwendet werden kann.<br/> |
 
 
 
  
 
-## <a name="parentchild-elements"></a>Über-/unterordnungselemente
+## <a name="parentchild-elements"></a>Übergeordnete/untergeordnete Elemente
 
 
 
@@ -62,7 +62,7 @@ Das **Media** -Element gibt eines der Medienelemente in einer Wiedergabeliste an
 
 ## <a name="remarks"></a>Bemerkungen
 
-Das **CID** -Attribut (die Inhalts-ID) wird durch den Windows-Media Player als Möglichkeit zum eindeutigen Identifizieren eines Medien Inhalts aufgefüllt, auch wenn seine Metadatenattribute geändert wurden. Dies ermöglicht die gemeinsame Nutzung von Wiedergabelisten auf allen Computern, da der Inhalt auf einem anderen Computer identifiziert werden kann und der Pfad zu ihm von der Windows Media-Wiedergabeliste automatisch repariert werden kann. Das **TID** -Attribut (die Überwachungs-ID) verwendet das Windows-Dateisystem, um den Pfad zu den Medien automatisch zu reparieren, wenn der Name oder Speicherort der Datei geändert wird.
+Das **cid-Attribut** (die Inhalts-ID) wird vom Windows Media Player aufgefüllt, um einen Medieninhalt eindeutig zu identifizieren, auch wenn seine Metadatenattribute geändert wurden. Dies ermöglicht die computerübergreifende Freigabe von Wiedergabelisten, da der Inhalt auf einem anderen Computer identifiziert werden kann und der Pfad zu dieser Wiedergabeliste von der Windows Medienwiedergabeliste automatisch repariert werden kann. Das **tid-Attribut** (die Nachverfolgungs-ID) verwendet das Windows Dateisystem, um den Pfad zu den Medien automatisch zu reparieren, wenn der Name oder Speicherort der Datei geändert wird.
 
 ## <a name="examples"></a>Beispiele
 
@@ -84,18 +84,18 @@ Das **CID** -Attribut (die Inhalts-ID) wird durch den Windows-Media Player als M
 
 | Anforderung | Wert |
 |--------------------|----------------------------------------------------|
-| Version<br/> | Windows Media Player 9 oder höher.<br/> |
+| Version<br/> | Windows Media Player serie 9 oder höher.<br/> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**ENQ-Element**](seq-element.md)
+[**seq-Element**](seq-element.md)
 </dt> <dt>
 
-[**Referenz zu Windows Media-Wiedergabelisten Elementen**](windows-media-playlist-elements-reference.md)
+[**Windows Referenz zu Medienwiedergabelistenelementen**](windows-media-playlist-elements-reference.md)
 </dt> </dl>
 
  

@@ -1,6 +1,6 @@
 ---
 title: IADsLocality-Eigenschaftsmethoden (Iads.h)
-description: Die Methoden der IADsLocality-Schnittstelle lesen und schreiben die in diesem Thema beschriebenen Eigenschaften. Weitere Informationen finden Sie unter Schnittstelleneigenschaftenmethoden.
+description: Die Methoden der IADsLocality-Schnittstelle lesen und schreiben die in diesem Thema beschriebenen Eigenschaften. Weitere Informationen finden Sie unter Schnittstelleneigenschaftsmethoden.
 ms.assetid: 5d1cea40-62fb-49d4-857f-4563e9db7f51
 ms.tgt_platform: multiple
 keywords:
@@ -34,7 +34,7 @@ ms.contentlocale: de-DE
 ms.lasthandoff: 08/11/2021
 ms.locfileid: "118428037"
 ---
-# <a name="iadslocality-property-methods"></a>IADsLocality-Eigenschaftsmethoden
+# <a name="iadslocality-property-methods"></a>IADsLocality-Eigenschaftenmethoden
 
 Die Methoden der [**IADsLocality-Schnittstelle**](/windows/desktop/api/Iads/nn-iads-iadslocality) lesen und schreiben die in diesem Thema beschriebenen Eigenschaften. Weitere Informationen finden Sie unter [Schnittstelleneigenschaftsmethoden.](interface-property-methods.md)
 
@@ -73,7 +73,7 @@ HRESULT put_Description(
 **LocalityName**
 </dt> <dd> <dl>
 
-Gibt den Namen der geografischen Region an, die durch dieses Gebietsschemaobjekt dargestellt wird.
+Gibt den Namen der geografischen Region an, wie durch dieses Lokalitätsobjekt dargestellt.
 
 <dt>
 
@@ -126,7 +126,7 @@ HRESULT put_PostalAddress(
 
 </dt> </dl> </dd> <dt>
 
-**SieheAlso**
+**SeeAlso**
 </dt> <dd> <dl>
 
 Gibt ein Array von ADsPath-Namen von Verzeichnisobjekten an, die für dieses Objekt relevant sind.
@@ -194,7 +194,7 @@ Cleanup:
 | Unterstützte Mindestversion (Server)<br/> | Windows Server 2008<br/>                                                          |
 | Header<br/>                   | <dl> <dt>Iads.h</dt> </dl>       |
 | DLL<br/>                      | <dl> <dt>Activeds.dll</dt> </dl> |
-| IID<br/>                      | IID \_ IADsLocality ist als A05E03A2-WADE-11CF-8ABC-00C04FD8D503 definiert.<br/>         |
+| IID<br/>                      | IID \_ IADsLocality ist als A05E03A2-OKE-11CF-8ABC-00C04FD8D503 definiert.<br/>         |
 
 
 

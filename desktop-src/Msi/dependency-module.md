@@ -1,5 +1,5 @@
 ---
-description: Die schreibgeschützte Module-Eigenschaft des Abhängigkeitsobjekts gibt die ModuleID des Moduls zurück, die für die aktuelle Zeichenfolge in Form eines BSTR erforderlich ist. Die ModuleID entspricht der Form, die in der Tabelle ModuleSignature verwendet wird.
+description: Die schreibgeschützte Module-Eigenschaft des Abhängigkeitsobjekts gibt die ModuleID des Moduls zurück, die für die aktuelle Zeichenfolge in Form eines BSTR erforderlich ist. Die ModuleID ist das gleiche Formular, das in der ModuleSignature-Tabelle verwendet wird.
 ms.assetid: 22aae1b6-59b6-4842-9523-d1e064511380
 title: Dependency.Module-Eigenschaft (Mergemod.h)
 ms.topic: reference
@@ -23,7 +23,7 @@ ms.locfileid: "118378880"
 ---
 # <a name="dependencymodule-property"></a>Dependency.Module-Eigenschaft
 
-Die schreibgeschützte **Module-Eigenschaft** des [**Abhängigkeitsobjekts**](dependency-object.md) gibt die ModuleID des Moduls zurück, die für die aktuelle Zeichenfolge in Form eines **BSTR** erforderlich ist. Die ModuleID entspricht der Form, die in der [Tabelle ModuleSignature](modulesignature-table.md)verwendet wird.
+Die schreibgeschützte **Module-Eigenschaft** des [**Abhängigkeitsobjekts**](dependency-object.md) gibt die ModuleID des Moduls zurück, die für die aktuelle Zeichenfolge in Form eines **BSTR erforderlich ist.** Die ModuleID ist das gleiche Formular, das in der [ModuleSignature-Tabelle verwendet wird.](modulesignature-table.md)
 
 Diese Eigenschaft ist schreibgeschützt.
 
@@ -40,7 +40,7 @@ propVal = Dependency.Module
 
 ## <a name="c"></a>C++
 
-Weitere Informationen finden Sie unter [**der IMsmDependency \_ get \_ Module-Methode.**](/windows/win32/api/mergemod/nf-mergemod-imsmdependency-get_module)
+Weitere Informationen finden Sie [**unter der IMsmDependency \_ get \_ Module-Methode.**](/windows/win32/api/mergemod/nf-mergemod-imsmdependency-get_module)
 
 ## <a name="requirements"></a>Anforderungen
 

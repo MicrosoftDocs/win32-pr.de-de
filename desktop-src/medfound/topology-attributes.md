@@ -4,12 +4,12 @@ ms.assetid: 50102096-a29f-4c00-a685-179ba5d71089
 title: Topologieattribute
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 286b6dbfe922461083b49d77ad2351e98d562d3b
-ms.sourcegitcommit: 6515eef99ca0d1bbe3e27d4575e9986f5255f277
+ms.openlocfilehash: 1db599a9d55e960bbb38043aa8932cd66ae0cbb6d9b376f403c1886faf3155c1
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/10/2021
-ms.locfileid: "106371874"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118972849"
 ---
 # <a name="topology-attributes"></a>Topologieattribute
 
@@ -17,22 +17,22 @@ Die folgenden Attribute gelten für Topologien.
 
 
 
-| Attribut                                                                                                | BESCHREIBUNG                                                                                                                                                                                                                        |
+| attribute                                                                                                | BESCHREIBUNG                                                                                                                                                                                                                        |
 |----------------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| [\_ \_ DXVA-Modus für MF-Topologie \_](mf-topology-dxva-mode.md)                                                    | Gibt an, ob der topologielader die Microsoft DirectX Video Acceleration (DXVA) in der Topologie aktiviert.                                                                                                                         |
-| [dynamische Änderung der MF- \_ Topologie \_ \_ \_ nicht \_ zulässig](mf-topology-dynamic-change-not-allowed.md)                | Gibt an, ob die Medien Sitzung versucht, die Topologie zu ändern, wenn das Format eines Datenstroms geändert wird.                                                                                                                           |
-| [MF- \_ Topologie \_ \_ xvp \_ für \_ Wiedergabe aktivieren](mf-topology-enable-xvp-for-playback.md)                | Gibt an, ob der topologielader den Transcode-Video Prozessor (xvp) aktiviert. für Konvertierungen, Aktivieren der Hardware beschleunigten Farbkonvertierung.                                                                                        |
-| [MF- \_ Topologie \_ Aufzählen von \_ Quell \_ Typen](mf-topology-enumerate-source-types.md)                         | Gibt an, ob der topologielader die Medientypen auflistet, die von der Medienquelle bereitgestellt werden.                                                                                                                                     |
-| [MF- \_ topologiehardware- \_ \_ Modus](mf-topology-hardware-mode.md)                                            | Gibt an, ob hardwarebasierte Transformationen in die Topologie eingeschlossen werden sollen.                                                                                                                                                            |
-| [**MF- \_ Topologie \_ ohne \_ Markin \_ markout**](mf-topology-no-markin-markout-attribute.md)                     | Gibt an, ob die Pipeline nur Stichproben Abtastungen                                                                                                                                                                                      |
-| [MF- \_ \_ topologiewiedergabe \_ Framerate](mf-topology-playback-framerate.md)                                  | Gibt die Aktualisierungsrate des Monitors an.                                                                                                                                                                                                |
-| [maximal zulässige Anzahl von MF- \_ \_ topologiewiedergabe \_ \_](mf-topology-playback-max-dims.md)                                   | Gibt die Größe des Zielfensters für die Videowiedergabe an.                                                                                                                                                                   |
-| [**MF- \_ Topologie \_ ProjectStart**](mf-topology-projectstart-attribute.md)                                 | Gibt die Startzeit der Topologie innerhalb des aktuellen Segments in 100-Nanosecond-Einheiten an.                                                                                                                                             |
-| [**MF- \_ Topologie \_ projectstoppt**](mf-topology-projectstop-attribute.md)                                   | Gibt die Endzeit der topologieendzeit innerhalb des aktuellen Segments in 100-Nanosecond-Einheiten an.                                                                                                                                              |
-| [**Status der MF- \_ topologieauflösung \_ \_**](mf-topology-resolution-status-attribute.md)                      | Gibt den Status eines Versuchs zum Auflösen einer Topologie an.                                                                                                                                                                          |
-| [\_Start Zeit der MF-Topologie \_ \_ \_ bei \_ Präsentations \_ Schalter](mf-topology-start-time-on-presentation-switch.md) | Gibt die Startzeit für Präsentationen an, die nach der ersten Präsentation in die Warteschlange eingereiht werden.                                                                                                                                           |
-| [\_Optimierungen der statischen \_ topologiewiedergabe \_ \_](mf-topology-static-playback-optimizations.md)           | Aktiviert statische Optimierungen in der Video Pipeline.                                                                                                                                                                                |
-| [MFT \_ fieldofuse \_ Unlock- \_ Attribut](mft-fieldofuse-unlock-attribute.md)                                | Enthält einen [**imffieldofusemftunlock**](/windows/desktop/api/mfidl/nn-mfidl-imffieldofusemftunlock) -Zeiger, der verwendet wird, um ein MFT mit Einschränkungen für das Feld zu entsperren. Weitere Informationen finden Sie unter [Einschränkungen](field-of-use-restrictions.md)für das Feld "Verwendung". |
+| [\_MF-TOPOLOGIE \_ – \_ DXVA-MODUS](mf-topology-dxva-mode.md)                                                    | Gibt an, ob das Topologieladeprogramm die Microsoft DirectX-Videobeschleunigung (DXVA) in der Topologie aktiviert.                                                                                                                         |
+| [DYNAMISCHE \_ ÄNDERUNG DER MF-TOPOLOGIE \_ NICHT \_ \_ \_ ZULÄSSIG](mf-topology-dynamic-change-not-allowed.md)                | Gibt an, ob die Mediensitzung versucht, die Topologie zu ändern, wenn sich das Format eines Streams ändert.                                                                                                                           |
+| [MF \_ TOPOLOGY ENABLE XVP FOR PLAYBACK (MF-TOPOLOGIE \_ AKTIVIEREN VON \_ XVP FÜR DIE \_ \_ WIEDERGABE)](mf-topology-enable-xvp-for-playback.md)                | Gibt an, ob das Topologieladeprogramm den Transcode Video Processor (XVP) aktiviert. für Konvertierungen, wodurch die hardwarebeschleunigte Farbkonvertierung aktiviert wird.                                                                                        |
+| [\_MF-TOPOLOGIE \_ ENUMERIEREN \_ VON \_ QUELLTYPEN](mf-topology-enumerate-source-types.md)                         | Gibt an, ob das Topologieladeprogramm die von der Medienquelle bereitgestellten Medientypen aufzählt.                                                                                                                                     |
+| [MF \_ TOPOLOGY HARDWARE MODE (MF-TOPOLOGIE-HARDWAREMODUS) \_ \_](mf-topology-hardware-mode.md)                                            | Gibt an, ob hardwarebasierte Transformationen in die Topologie eingeschlossen werden sollen.                                                                                                                                                            |
+| [**\_MF-TOPOLOGIE \_ OHNE \_ MARKIN \_ MARKOUT**](mf-topology-no-markin-markout-attribute.md)                     | Gibt an, ob die Pipeline Stichproben abschneiden soll.                                                                                                                                                                                      |
+| [\_MF-TOPOLOGIE \_ – \_ WIEDERGABEFRAMERATE](mf-topology-playback-framerate.md)                                  | Gibt die Aktualisierungsrate des Monitors an.                                                                                                                                                                                                |
+| [\_MF-TOPOLOGIE \_ – WIEDERGABE \_ \_ MAX. DIMS](mf-topology-playback-max-dims.md)                                   | Gibt die Größe des Zielfensters für die Videowiedergabe an.                                                                                                                                                                   |
+| [**\_ \_ MF-TOPOLOGIEPROJEKTSTART**](mf-topology-projectstart-attribute.md)                                 | Gibt die Startzeit der Topologie innerhalb des aktuellen Segments in Einheiten von 100 Nanosekunden an.                                                                                                                                             |
+| [**\_ \_ MF-TOPOLOGIEPROJEKTETOP**](mf-topology-projectstop-attribute.md)                                   | Gibt die Topologiestoppzeit innerhalb des aktuellen Segments in Einheiten von 100 Nanosekunden an.                                                                                                                                              |
+| [**AUFLÖSUNGSSTATUS DER \_ MF-TOPOLOGIE \_ \_**](mf-topology-resolution-status-attribute.md)                      | Gibt den Status eines Versuchs an, eine Topologie aufzulösen.                                                                                                                                                                          |
+| [STARTZEIT \_ DER MF-TOPOLOGIE \_ BEI \_ \_ \_ \_ PRÄSENTATIONSSCHALTER](mf-topology-start-time-on-presentation-switch.md) | Gibt die Startzeit für Präsentationen an, die nach der ersten Präsentation in die Warteschlange eingereiht werden.                                                                                                                                           |
+| [\_MF-TOPOLOGIE \_ – STATISCHE \_ \_ WIEDERGABEOPTIMIERUNGEN](mf-topology-static-playback-optimizations.md)           | Aktiviert statische Optimierungen in der Videopipeline.                                                                                                                                                                                |
+| [MFT \_ FIELDOFUSE \_ \_ UNLOCK-Attribut](mft-fieldofuse-unlock-attribute.md)                                | Enthält einen [**POINTERFieldOfUseMFTUnlock-Zeiger,**](/windows/desktop/api/mfidl/nn-mfidl-imffieldofusemftunlock) der zum Entsperren eines MFT mit Verwendungsfeldeinschränkungen verwendet wird. Weitere Informationen finden Sie unter [Field of Use Restrictions](field-of-use-restrictions.md). |
 
 
 
@@ -42,7 +42,7 @@ Die folgenden Attribute gelten für Topologien.
 
 <dl> <dt>
 
-[**Imftopology**](/windows/desktop/api/mfidl/nn-mfidl-imftopology)
+[**TOPOLOGIE**](/windows/desktop/api/mfidl/nn-mfidl-imftopology)
 </dt> <dt>
 
 [Media Foundation Attribute](media-foundation-attributes.md)

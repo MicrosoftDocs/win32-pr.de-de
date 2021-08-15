@@ -84,7 +84,7 @@ Die oben aufgeführten untergeordneten Elemente werden durch die [**komplexen Tr
 
 ## <a name="examples"></a>Beispiele
 
-Ein vollständiges Beispiel für den XML-Code für eine Aufgabe, die einen Zeittrigger angibt, finden Sie unter [Time Trigger Example (XML) (Beispiel für Zeittrigger (XML)).](time-trigger-example--xml-.md)
+Ein vollständiges Beispiel für den XML-Code für einen Task, der einen Zeittrigger angibt, finden Sie unter [Time Trigger Example (XML) (Beispiel für Zeittrigger (XML)).](time-trigger-example--xml-.md)
 
 ## <a name="requirements"></a>Anforderungen
 

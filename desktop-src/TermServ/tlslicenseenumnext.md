@@ -1,10 +1,10 @@
 ---
-title: Tlslicensenumnext-Funktion
-description: Wird von einem vorherigen aufrufsvorgang der tlslicenseenumbegin-Funktion fortgesetzt und gibt die nächste Lizenz zurück, die auf einem Remotedesktop Lizenzserver installiert ist, der den Suchkriterien entspricht.
+title: TLSLicenseEnumNext-Funktion
+description: Setzt einen vorherigen Aufruf der TLSLicenseEnumBegin-Funktion fort und gibt die nächste Lizenz zurück, die auf einem Remotedesktop-Lizenzserver installiert ist, der den Suchkriterien entspricht.
 ms.assetid: 6932289b-b59c-493c-8dbc-03c0662e921e
 ms.tgt_platform: multiple
 keywords:
-- Tlslicensenumnext-Funktion Remotedesktopdienste
+- TLSLicenseEnumNext-Remotedesktopdienste
 topic_type:
 - apiref
 api_name:
@@ -15,19 +15,19 @@ api_type:
 - DllExport
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 5c13b0a3137258015fe311c49b2cc9b999e3a13f
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 945c0afb931770a36049342f32c71613bd8fb1a0a9b16142c1ffbc6a67ccc288
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104392210"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119986800"
 ---
-# <a name="tlslicenseenumnext-function"></a>Tlslicensenumnext-Funktion
+# <a name="tlslicenseenumnext-function"></a>TLSLicenseEnumNext-Funktion
 
-Wird von einem vorherigen aufrufsvorgang der [**tlslicenseenumbegin**](tlslicenseenumbegin.md) -Funktion fortgesetzt und gibt die nächste Lizenz zurück, die auf einem Remotedesktop Lizenzserver installiert ist, der den Suchkriterien entspricht.
+Setzt einen vorherigen Aufruf der [**TLSLicenseEnumBegin-Funktion**](tlslicenseenumbegin.md) fort und gibt die nächste Lizenz zurück, die auf einem Remotedesktop-Lizenzserver installiert ist, der den Suchkriterien entspricht.
 
 > [!Note]  
-> Diese Funktion verfügt über keine zugeordnete Header Datei oder Import Bibliothek. Um diese Funktion aufzurufen, müssen Sie eine benutzerdefinierte Header Datei erstellen und die [**LoadLibrary**](/windows/desktop/api/libloaderapi/nf-libloaderapi-loadlibrarya) -Funktion und die [**GetProcAddress**](/windows/desktop/api/libloaderapi/nf-libloaderapi-getprocaddress) -Funktion verwenden, um dynamisch mit Mstlsapi.dll zu verknüpfen.
+> Dieser Funktion ist keine Headerdatei oder Importbibliothek zugeordnet. Zum Aufrufen dieser Funktion müssen Sie eine benutzerdefinierte Headerdatei erstellen und die [**Funktionen LoadLibrary**](/windows/desktop/api/libloaderapi/nf-libloaderapi-loadlibrarya) und [**GetProcAddress**](/windows/desktop/api/libloaderapi/nf-libloaderapi-getprocaddress) verwenden, um eine dynamische Verknüpfung mit Mstlsapi.dll.
 
  
 
@@ -48,52 +48,52 @@ DWORD WINAPI TLSLicenseEnumNext(
 
 <dl> <dt>
 
-*hHandle* \[ in\]
+*hHandle* \[ In\]
 </dt> <dd>
 
-Handle für einen Remotedesktop-Lizenzserver. Geben Sie ein Handle an, das von der [**tlsconnecttolsserver**](tlsconnecttolsserver.md) -Funktion geöffnet wird.
+Handle für einen Remotedesktop Lizenzserver. Geben Sie ein Handle an, das von der [**TLSConnectToLsServer-Funktion geöffnet**](tlsconnecttolsserver.md) wird.
 
 </dd> <dt>
 
-*lplicense* \[ in\]
+*lpLicense* \[ In\]
 </dt> <dd>
 
-Ein Zeiger auf eine [**lslicense**](lslicense.md) -Struktur, die die nächste Lizenz empfängt, die den Suchkriterien entspricht.
+Zeiger auf eine [**LSLicense-Struktur,**](lslicense.md) die die nächste Lizenz erhält, die den Suchkriterien entspricht.
 
 </dd> <dt>
 
-*pdwerrcode* \[ vorgenommen\]
+*pdwErrCode* \[ out\]
 </dt> <dd>
 
-Ein Zeiger auf eine Variable, die bei der Rückgabe einen der folgenden Fehlercodes empfängt.
+Zeiger auf eine Variable, die bei der Rückgabe einen der folgenden Fehlercodes empfängt.
 
 <dt>
 
 <span id="LSERVER_S_SUCCESS"></span><span id="lserver_s_success"></span>
 
-<span id="LSERVER_S_SUCCESS"></span><span id="lserver_s_success"></span>**Lserver \_ S \_ erfolgreich** (0)
+<span id="LSERVER_S_SUCCESS"></span><span id="lserver_s_success"></span>**LSERVER \_ S \_ SUCCESS** (0)
 
 
 </dt> <dd>
 
-Der-Vorgang wurde erfolgreich ausgeführt.
+Der Aufruf ist erfolgreich.
 
 </dd> <dt>
 
 <span id="LSERVER_I_NO_MORE_DATA"></span><span id="lserver_i_no_more_data"></span>
 
-<span id="LSERVER_I_NO_MORE_DATA"></span><span id="lserver_i_no_more_data"></span>**Lserver \_ \_Keine \_ weiteren \_ Daten** (4001)
+<span id="LSERVER_I_NO_MORE_DATA"></span><span id="lserver_i_no_more_data"></span>**LSERVER \_ ICH \_ HABE KEINE DATEN \_ \_ MEHR** (4001)
 
 
 </dt> <dd>
 
-Keine weiteren Lizenzen stimmen mit den Suchkriterien überein.
+Keine Lizenzen mehr entsprechen den Suchkriterien.
 
 </dd> <dt>
 
 <span id="LSERVER_E_INTERNAL_ERROR"></span><span id="lserver_e_internal_error"></span>
 
-<span id="LSERVER_E_INTERNAL_ERROR"></span><span id="lserver_e_internal_error"></span>**Lserver \_ Interner E- \_ \_ Fehler** (5001)
+<span id="LSERVER_E_INTERNAL_ERROR"></span><span id="lserver_e_internal_error"></span>**LSERVER \_ INTERNER \_ \_ E-FEHLER** (5001)
 
 
 </dt> <dd>
@@ -104,29 +104,29 @@ Interner Fehler auf dem Lizenzserver.
 
 <span id="LSERVER_E_INVALID_SEQUENCE"></span><span id="lserver_e_invalid_sequence"></span>
 
-<span id="LSERVER_E_INVALID_SEQUENCE"></span><span id="lserver_e_invalid_sequence"></span>**Lserver \_ E \_ ungültige \_ Reihenfolge** (5006)
+<span id="LSERVER_E_INVALID_SEQUENCE"></span><span id="lserver_e_invalid_sequence"></span>**LSERVER \_ E \_ \_ UNGÜLTIGE SEQUENZ** (5006)
 
 
 </dt> <dd>
 
-Die Aufruf Sequenz war nicht gültig. Vor diesem muss die [**tlslicenseenumbegin ()**](tlslicenseenumbegin.md) -Funktion aufgerufen werden.
+Die aufrufende Sequenz war ungültig. Muss die [**TLSLicenseEnumBegin()-Funktion**](tlslicenseenumbegin.md) vor diesem aufrufen.
 
 </dd> <dt>
 
 <span id="LSERVER_E_SERVER_BUSY"></span><span id="lserver_e_server_busy"></span>
 
-<span id="LSERVER_E_SERVER_BUSY"></span><span id="lserver_e_server_busy"></span>**Lserver \_ E- \_ Server \_ ausgelastet** (5007)
+<span id="LSERVER_E_SERVER_BUSY"></span><span id="lserver_e_server_busy"></span>**LSERVER \_ E \_ SERVER \_ AUSGELASTET** (5007)
 
 
 </dt> <dd>
 
-Der Lizenzserver ist zu stark ausgelastet, um die Anforderung zu verarbeiten.
+Der Lizenzserver ist zu ausgelastet, um die Anforderung zu verarbeiten.
 
 </dd> <dt>
 
 <span id="LSERVER_E_OUTOFMEMORY"></span><span id="lserver_e_outofmemory"></span>
 
-<span id="LSERVER_E_OUTOFMEMORY"></span><span id="lserver_e_outofmemory"></span>**Lserver \_ E \_ outo-Memory** (5008)
+<span id="LSERVER_E_OUTOFMEMORY"></span><span id="lserver_e_outofmemory"></span>**LSERVER \_ E \_ OUTOFMEMORY** (5008)
 
 
 </dt> <dd>
@@ -144,11 +144,11 @@ Diese Funktion gibt die folgenden möglichen Rückgabewerte zurück.
 **RPC \_ S \_ OK**
 </dt> <dd>
 
-Der-Befehl wurde erfolgreich ausgeführt. Überprüfen Sie den Wert des Parameters " *pdwerrcode* ", um den Rückgabecode für den-Befehl abzurufen.
+Der Aufruf war erfolgreich. Überprüfen Sie den Wert des *pdwErrCode-Parameters,* um den Rückgabecode für den Aufruf zu erhalten.
 
 </dd> <dt>
 
-**RPC \_ S \_ ungültig \_**
+**RPC \_ S \_ INVALID \_ ARG**
 </dt> <dd>
 
 Das Argument war ungültig.
@@ -167,20 +167,20 @@ Das Argument war ungültig.
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Lslicense**](lslicense.md)
+[**LSLicense**](lslicense.md)
 </dt> <dt>
 
-[**Tlsconnecttolsserver**](tlsconnecttolsserver.md)
+[**TLSConnectToLsServer**](tlsconnecttolsserver.md)
 </dt> <dt>
 
-[**Tlslicenseenumbegin**](tlslicenseenumbegin.md)
+[**TLSLicenseEnumBegin**](tlslicenseenumbegin.md)
 </dt> <dt>
 
-[**Tlslicenabenumend**](tlslicenseenumend.md)
+[**TLSLicenseEnumEnd**](tlslicenseenumend.md)
 </dt> </dl>
 
  

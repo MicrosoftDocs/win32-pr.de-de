@@ -13,9 +13,9 @@ ms.locfileid: "118518918"
 ---
 # <a name="working-with-mouse-cursors-direct3d-9"></a>Arbeiten mit Mauscursorn (Direct3D 9)
 
-Mit den Mauszeigermethoden kann die Anwendung einen Farbcursor angeben, indem eine Oberfläche mit einem Bild angegeben wird. Das System stellt sicher, dass dieser Cursor mit der Hälfte der Anzeigerate oder mehr aktualisiert wird, wenn die Bildfrequenz der Anwendung langsam ist. Der Cursor wird jedoch nie häufiger aktualisiert als die Anzeigeaktualisierungsrate.
+Mit den Mauszeigermethoden kann die Anwendung einen Farbcursor angeben, indem eine Oberfläche mit einem Bild angegeben wird. Das System stellt sicher, dass dieser Cursor bei halber Anzeigerate oder mehr aktualisiert wird, wenn die Bildfrequenz der Anwendung langsam ist. Der Cursor wird jedoch nie häufiger aktualisiert als die Aktualisierungsrate der Anzeige.
 
-Die Position des Mauszeigers ist an den Systemcursor gebunden und entsprechend für die aktuelle räumliche Auflösung des Anzeigemodus skaliert, kann jedoch explizit von der Anwendung verschoben werden. Dies entspricht dem Verhalten der Win32-API – unterstützter Systemmauscursor. Weitere Informationen zur Verwendung eines Mauszeigers in Ihrer Direct3D-Anwendung finden Sie in den folgenden Referenzthemen.
+Die Position des Mauszeigers ist an den Systemcursor gebunden und entsprechend für die aktuelle räumliche Auflösung des Anzeigemodus skaliert, kann jedoch explizit von der Anwendung verschoben werden. Dies entspricht dem Verhalten der Win32-API– unterstützter Systemmauscursor. Weitere Informationen zur Verwendung eines Mauszeigers in Ihrer Direct3D-Anwendung finden Sie in den folgenden Referenzthemen.
 
 -   [**IDirect3DDevice9::ShowCursor**](/windows/win32/api/d3d9helper/nf-d3d9helper-idirect3ddevice9-showcursor)
 -   [**IDirect3DDevice9::SetCursorPosition**](/windows/win32/api/d3d9helper/nf-d3d9helper-idirect3ddevice9-setcursorposition)

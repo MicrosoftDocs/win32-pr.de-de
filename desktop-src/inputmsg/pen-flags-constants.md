@@ -1,6 +1,6 @@
 ---
 title: Stiftflags
-description: Werte, die im PenFlags-Feld der -Struktur POINTER_PEN_INFO werden können.
+description: Werte, die im feld penFlags der POINTER_PEN_INFO-Struktur angezeigt werden können.
 ms.assetid: BC3CE568-4090-4451-B780-18530C988305
 topic_type:
 - apiref
@@ -24,7 +24,7 @@ ms.locfileid: "118482405"
 ---
 # <a name="pen-flags"></a>Stiftflags
 
-Werte, die im **PenFlags-Feld** der -Struktur POINTER_PEN_INFO [**werden**](/previous-versions/windows/desktop/api) können.
+Werte, die im **feld penFlags** der [**POINTER_PEN_INFO-Struktur**](/previous-versions/windows/desktop/api) angezeigt werden können.
 
 <dl> <dt>
 
@@ -49,7 +49,7 @@ Es gibt kein Stiftflag. Dies ist die Standardoption.
 
 
 
-Die Schaltfläche "Knopf" wird gedrückt.
+Die Schaltfläche "Fass" wird gedrückt.
 
 
 </dt> </dl> </dd> <dt>
@@ -62,7 +62,7 @@ Die Schaltfläche "Knopf" wird gedrückt.
 
 
 
-Der Stift ist invertiert.
+Der Stift wird invertiert.
 
 
 </dt> </dl> </dd> <dt>

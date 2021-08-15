@@ -1,19 +1,19 @@
 ---
-description: Gibt die Höhe der minimalen Anzeige Öffnung in Pixel an.
+description: Gibt die Höhe der minimalen Anzeigeaufblendung in Pixel an.
 ms.assetid: dddae10f-3ed2-4444-af5b-f2cf46c52e7c
-title: MFPKEY_RESIZE_MINAPHEIGHT-Eigenschaft (wmcodecdsp. h)
+title: MFPKEY_RESIZE_MINAPHEIGHT-Eigenschaft (Wmcodecdsp.h)
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 3f2f7ddafc73562a24b1e68a0969ac0a545c0a61
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 6fb061fc1b1ba2a041f1689e8129eae7cbda4e45ff84407781ef4b693e33b1f2
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106348316"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118973429"
 ---
-# <a name="mfpkey_resize_minapheight-property"></a>Mfpkey- \_ \_ Eigenschaft ' minapheight ' ändern
+# <a name="mfpkey_resize_minapheight-property"></a>MFPKEY-Eigenschaft ZUM ÄNDERN DER GRÖßE VON \_ \_ PERSONALISIERUNGPHEIGHT
 
-Gibt die Höhe der minimalen Anzeige Öffnung in Pixel an.
+Gibt die Höhe der minimalen Anzeigeaufblendung in Pixel an.
 
 ## <a name="constant-for-ipropertybag"></a>Konstante für IPropertyBag
 
@@ -33,17 +33,17 @@ VT \_ I4
 
 | Anforderung | Wert |
 |-------------------------------------|-----------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows XP \[ -Desktop-Apps\]<br/>                                             |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2003 \[ -Desktop-Apps\]<br/>                                    |
-| Header<br/>                   | <dl> <dt>Wmcodecdsp. h</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows \[Nur XP-Desktop-Apps\]<br/>                                             |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2003-Desktop-Apps\]<br/>                                    |
+| Header<br/>                   | <dl> <dt>Wmcodecdsp.h</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[Eigenschaften von Media Foundation](media-foundation-properties.md)
+[Media Foundation-Eigenschaften](media-foundation-properties.md)
 </dt> </dl>
 
  

@@ -1,5 +1,5 @@
 ---
-description: Wi-Fi Kanalliste des Direct-Geräts.
+description: Wi-Fi Sie die Kanalliste des Direct-Geräts.
 ms.assetid: 57875502-e6ac-4b2a-9c51-b467d5feab9d
 title: System.Devices.WiFiDirect.SupportedChannelList
 ms.topic: article
@@ -13,7 +13,7 @@ ms.locfileid: "118466971"
 ---
 # <a name="systemdeviceswifidirectsupportedchannellist"></a>System.Devices.WiFiDirect.SupportedChannelList
 
-Kanalliste Wi-Fi Direct-Geräts
+Wi-Fi der Kanalliste des Direct-Geräts
 
 ## <a name="windows-10-version-1703-windows-10-version-1607-windows-10-version-1511-windows-10-version-1507"></a>Windows 10, Version 1703, Windows 10, Version 1607, Windows 10, Version 1511, Windows 10, Version 1507
 

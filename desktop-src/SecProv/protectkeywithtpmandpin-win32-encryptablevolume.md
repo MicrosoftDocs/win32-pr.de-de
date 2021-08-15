@@ -1,7 +1,7 @@
 ---
-description: Wenn die Trusted Platform Module (TPM) verfügbar ist, sichert diese Methode den Verschlüsselungsschlüssel des Volumes, der durch eine benutzerspezifische Identifikationsnummer erweitert wurde.
+description: Wenn die Trusted Platform Module (TPM) verfügbar ist, schützt diese Methode den Verschlüsselungsschlüssel des Volumes, der durch eine vom Benutzer angegebene persönliche ID erweitert wurde.
 ms.assetid: 8c4c434a-dd60-491a-a983-b3fa78c91c0d
-title: Protectkeywithtpmandpin-Methode der Win32_EncryptableVolume-Klasse
+title: ProtectKeyWithTPMAndPIN-Methode der Win32_EncryptableVolume-Klasse
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,22 +13,22 @@ api_type:
 - COM
 api_location:
 - Root\CIMV2\Security\MicrosoftVolumeEncryption
-ms.openlocfilehash: e5a0a7a253723bec84df7a86fa94ab182bd192dc
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 0eab283a0eaec97d7f7c9e03cf8d8064e08e0e25bea606b393fb35a38143f7fe
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "103862279"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118891405"
 ---
-# <a name="protectkeywithtpmandpin-method-of-the-win32_encryptablevolume-class"></a>Protectkeywithtpmandpin-Methode der Win32- \_ Klasse "verschlüsseltablevolume"
+# <a name="protectkeywithtpmandpin-method-of-the-win32_encryptablevolume-class"></a>ProtectKeyWithTPMAndPIN-Methode der Win32 \_ EncryptableVolume-Klasse
 
-Die **protectkeywithtpmandpin** -Methode der Win32-Klasse " [**\_ verschlüsseltablevolume**](win32-encryptablevolume.md) " sichert den Verschlüsselungsschlüssel des Volumes mithilfe der TPM-Sicherheits Hardware (Trusted Platform Module) auf dem Computer, sofern verfügbar, erweitert durch eine benutzerdefinierte ID (Personal Identification Number, PIN), die dem Computer beim startbereit gestellt werden muss.
+Die **ProtectKeyWithTPMAndPIN-Methode** der [**Win32 \_ EncryptableVolume-Klasse**](win32-encryptablevolume.md) schützt den Verschlüsselungsschlüssel des Volumes mithilfe der Trusted Platform Module -Sicherheitshardware (TPM) auf dem Computer, sofern verfügbar, erweitert durch eine vom Benutzer angegebene persönliche ID (PIN), die dem Computer beim Start bereitgestellt werden muss.
 
-Sowohl die Validierung durch das TPM als auch die Eingabe der persönlichen Identifikations Zeichenfolge sind erforderlich, um auf den Verschlüsselungsschlüssel des Volumes zuzugreifen und den volumeinhalt zu entsperren.
+Sowohl die Überprüfung durch das TPM als auch die Eingabe der persönlichen Identifikationszeichenfolge sind erforderlich, um auf den Verschlüsselungsschlüssel des Volumes zuzugreifen und Volumeinhalte zu entsperren.
 
-Diese Methode ist nur für das Volume anwendbar, das das aktuell laufende Betriebssystem enthält.
+Diese Methode gilt nur für das Volume, das das derzeit ausgeführte Betriebssystem enthält.
 
-Eine Schlüssel Schutzvorrichtung vom Typ "TPM und PIN" wird für das Volume erstellt, sofern nicht bereits vorhanden.
+Eine Schlüsselschutzvorrichtung vom Typ "TPM und PIN" wird für das Volume erstellt, sofern noch keine vorhanden ist.
 
 ## <a name="syntax"></a>Syntax
 
@@ -53,61 +53,61 @@ uint32 ProtectKeyWithTPMAndPIN(
 
 Typ: **Zeichenfolge**
 
-Ein vom Benutzer zugewiesener Zeichen folgen Bezeichner für diese Schlüssel Schutzvorrichtung. Wenn dieser Parameter nicht angegeben wird, wird ein leerer Wert verwendet.
+Ein vom Benutzer zugewiesener Zeichenfolgenbezeichner für diese Schlüsselschutzvorrichtung. Wenn dieser Parameter nicht angegeben ist, wird ein leerer Wert verwendet.
 
 </dd> <dt>
 
-*Platformvalidationprofile* \[ in, optional\]
+*PlatformValidationProfile* \[ in, optional\]
 </dt> <dd>
 
-Typ: **Uint8 \[ \]**
+Typ: **uint8 \[ \]**
 
-Ein Array von ganzen Zahlen, das angibt, wie die Sicherheits Hardware des Computers Trusted Platform Module (TPM) den Verschlüsselungsschlüssel des festplattenvolumens sichert.
+Ein Array von ganzen Zahlen, das angibt, wie der Verschlüsselungsschlüssel des Datenträgervolumes durch die TPM-Sicherheitshardware (Trusted Platform Module) des Datenträgervolumes geschützt wird.
 
-Ein Platt Form Validierungs Profil besteht aus einem Satz von Platt Form Konfigurations Register Indizes (PCR), der zwischen 0 und 23 (einschließlich) liegt. Wiederholungswerte im-Parameter werden ignoriert. Jeder PCR-Index ist mit Diensten verknüpft, die beim Starten des Betriebssystems ausgeführt werden. Jedes Mal, wenn der Computer gestartet wird, prüft das TPM, ob die Dienste, die Sie im Platt Form Validierungs Profil angegeben haben, nicht geändert wurden. Wenn sich einer dieser Dienste ändert, während BitLocker-Laufwerkverschlüsselung (BDE)-Schutz beibehalten wird, gibt das TPM den Verschlüsselungsschlüssel nicht frei, um das Datenträger Volume zu entsperren, und der Computer wechselt in den Wiederherstellungs Modus.
+Ein Plattformvalidierungsprofil besteht aus einer Reihe von PCR-Indizes (Platform Configuration Register) im Bereich von 0 bis einschließlich 23. Wiederholungswerte im -Parameter werden ignoriert. Jeder PCR-Index ist Diensten zugeordnet, die beim Starten des Betriebssystems ausgeführt werden. Bei jedem Start des Computers überprüft das TPM, ob sich die dienste, die Sie im Plattformvalidierungsprofil angegeben haben, nicht geändert haben. Wenn sich einer dieser Dienste ändert, während BitLocker-Laufwerkverschlüsselung Schutz (BDE) aktiviert bleibt, gibt das TPM den Verschlüsselungsschlüssel nicht frei, um das Datenträgervolume zu entsperren, und der Computer wechselt in den Wiederherstellungsmodus.
 
-Wenn dieser Parameter angegeben wird, während die entsprechende Gruppenrichtlinie Einstellung aktiviert ist, muss er mit der Gruppenrichtlinie Einstellung übereinstimmen.
+Wenn dieser Parameter angegeben wird, während die entsprechende Gruppenrichtlinie Einstellung aktiviert wurde, muss er mit der einstellung Gruppenrichtlinie übereinstimmen.
 
-Wenn dieser Parameter nicht angegeben wird, wird der Standardwert 0, 2, 4, 5, 8, 9, 10 und 11 verwendet. Das standardmäßige Platt Form Validierungs Profil sichert den Verschlüsselungsschlüssel vor Änderungen an den folgenden Elementen:
+Wenn dieser Parameter nicht angegeben ist, wird der Standardwert 0, 2, 4, 5, 8, 9, 10 und 11 verwendet. Das Standardmäßige Plattformvalidierungsprofil schützt den Verschlüsselungsschlüssel vor Änderungen an den folgenden Elementen:
 
--   Kern Stamm der Messgeräte Vertrauensstellung (CRTM)
+-   Core Root of Trust of Measurement (CRTM)
 -   BIOS
--   Platt Form Erweiterungen (PCR 0)
+-   Plattformerweiterungen (PCR 0)
 -   Options-ROM-Code (PCR 2)
 -   Master Boot Record (MBR)-Code (PCR 4)
--   MBR-Partitionstabelle (Master Boot Record) (PCR 5)
+-   Master Boot Record (MBR)-Partitionstabelle (PCR 5)
 -   NTFS-Startsektor (PCR 8)
 -   NTFS-Startblock (PCR 9)
 -   Start-Manager (PCR 10)
 -   BitLocker-Zugriffssteuerung (PCR 11)
 
-Für die Sicherheit Ihres Computers wird das Standardprofil empfohlen. Um zusätzlichen Schutz vor Änderungen der frühen Startkonfiguration zu erhalten, verwenden Sie ein Profil von PCRs 0, 1, 2, 3, 4, 5, 8, 9, 10, 11. Unified Extensible Firmware Interface (UEFI) – Computer verwenden standardmäßig nicht PCR 5.
+Für die Sicherheit Ihres Computers wird das Standardprofil empfohlen. Verwenden Sie ein Profil der PCRs 0, 1, 2, 3, 4, 5, 8, 9, 10, 11, um zusätzlichen Schutz vor Änderungen an der Frühen Startkonfiguration zu bieten. UEFI-basierte Computer (Unified Extensible Firmware Interface) verwenden pcr 5 standardmäßig nicht.
 
-Das Ändern des Standard Profils wirkt sich auf die Sicherheit und Verwaltbarkeit Ihres Computers aus. Die Vertraulichkeit von BitLocker zu Platt Formänderungen (bösartig oder autorisiert) wird abhängig vom Inklusions-oder Ausschluss Wert des PCRs angehoben oder verringert. Damit der BitLocker-Schutz aktiviert werden kann, muss das Platt Form Validierungs Profil PCR 11 enthalten.
+Das Ändern des Standardprofils wirkt sich auf die Sicherheit und Verwaltbarkeit Ihres Computers aus. Die Empfindlichkeit von BitLocker gegenüber Plattformänderungen (schädlich oder autorisiert) wird je nach Ein- bzw. Ausschluss der PCRs erhöht oder verringert. Damit der BitLocker-Schutz aktiviert wird, muss das Plattformvalidierungsprofil PCR 11 enthalten.
 
 
 
 | Wert                                                                         | Bedeutung                                                                            |
 |-------------------------------------------------------------------------------|------------------------------------------------------------------------------------|
-| <dl> <dt>0</dt> </dl>  | Kern Stamm der Vertrauens Stellungen von Messgeräten (CRTM), BIOS und Plattformen<br/> |
-| <dl> <dt>1</dt> </dl>  | Konfiguration und Daten von Plattform und Motherboard<br/>                         |
-| <dl> <dt>2</dt> </dl>  | Option-ROM-Code<br/>                                                         |
-| <dl> <dt>3</dt> </dl>  | Option ROM-Konfiguration und-Daten<br/>                                       |
+| <dl> <dt>0</dt> </dl>  | Core Root of Trust of Measurement (CRTM), BIOS und Plattformerweiterungen<br/> |
+| <dl> <dt>1</dt> </dl>  | Plattform- und Hauptplatinenkonfiguration und Daten<br/>                         |
+| <dl> <dt>2</dt> </dl>  | Option ROM-Code<br/>                                                         |
+| <dl> <dt>3</dt> </dl>  | Option ROM-Konfiguration und -Daten<br/>                                       |
 | <dl> <dt>4</dt> </dl>  | MBR-Code (Master Boot Record)<br/>                                           |
 | <dl> <dt>5</dt> </dl>  | MBR-Partitionstabelle (Master Boot Record)<br/>                                |
-| <dl> <dt>6</dt> </dl>  | Zustandsübergänge und Aktivierungs Ereignisse<br/>                                        |
+| <dl> <dt>6</dt> </dl>  | Zustandsübergangs- und Aktivierungsereignisse<br/>                                        |
 | <dl> <dt>7</dt> </dl>  | Computer Manufacturer-Specific<br/>                                          |
 | <dl> <dt>8</dt> </dl>  | NTFS-Startsektor<br/>                                                        |
-| <dl> <dt>9</dt> </dl>  | NTFS-Start Block<br/>                                                         |
+| <dl> <dt>9</dt> </dl>  | NTFS-Startblock<br/>                                                         |
 | <dl> <dt>10</dt> </dl> | Start-Manager<br/>                                                            |
 | <dl> <dt>11</dt> </dl> | BitLocker-Access Control<br/>                                                |
 | <dl> <dt>12</dt> </dl> | Definiert für die Verwendung durch das statische Betriebssystem<br/>                          |
 | <dl> <dt>13</dt> </dl> | Definiert für die Verwendung durch das statische Betriebssystem<br/>                          |
 | <dl> <dt>14</dt> </dl> | Definiert für die Verwendung durch das statische Betriebssystem<br/>                          |
 | <dl> <dt>15</dt> </dl> | Definiert für die Verwendung durch das statische Betriebssystem<br/>                          |
-| <dl> <dt>16</dt> </dl> | Zum Debuggen verwendet<br/>                                                      |
+| <dl> <dt>16</dt> </dl> | Wird zum Debuggen verwendet<br/>                                                      |
 | <dl> <dt>17</dt> </dl> | Dynamische CRTM<br/>                                                            |
-| <dl> <dt>Jahren</dt> </dl> | Plattform definiert<br/>                                                        |
+| <dl> <dt>18</dt> </dl> | Plattformdefiniert<br/>                                                        |
 | <dl> <dt>19</dt> </dl> | Wird von einem vertrauenswürdigen Betriebssystem verwendet<br/>                                      |
 | <dl> <dt>20</dt> </dl> | Wird von einem vertrauenswürdigen Betriebssystem verwendet<br/>                                      |
 | <dl> <dt>21</dt> </dl> | Wird von einem vertrauenswürdigen Betriebssystem verwendet<br/>                                      |
@@ -120,29 +120,29 @@ Das Ändern des Standard Profils wirkt sich auf die Sicherheit und Verwaltbarkei
 
 </dd> <dt>
 
-*Pin* \[ in\]
+*PIN* \[ In\]
 </dt> <dd>
 
 Typ: **Zeichenfolge**
 
-Eine vom Benutzer angegebene persönliche Identifikations Zeichenfolge. Diese Zeichenfolge muss aus einer Sequenz von 6 bis 20 Ziffern bestehen, oder, wenn die Gruppenrichtlinie "Erweiterte Pins für den Start zulassen" aktiviert ist, 6 bis 20 Buchstaben, Symbole, Leerzeichen oder Ziffern.
+Eine benutzerdefinierte persönliche Identifikationszeichenfolge. Diese Zeichenfolge muss aus einer Sequenz von 6 bis 20 Ziffern bestehen, oder, wenn die Gruppenrichtlinie "Erweiterte PINs für Start zulassen" aktiviert ist, 6 bis 20 Buchstaben, Symbole, Leerzeichen oder Zahlen.
 
 </dd> <dt>
 
-*Volumekeyprotectorid* \[ vorgenommen\]
+*VolumeKeyProtectorID* \[ out\]
 </dt> <dd>
 
 Typ: **Zeichenfolge**
 
-Der aktualisierte eindeutige Zeichen folgen Bezeichner zum Verwalten einer verschlüsselten volumeschlüsselschutzvorrichtung.
+Der aktualisierte eindeutige Zeichenfolgenbezeichner, der zum Verwalten einer verschlüsselten Volumeschlüsselschutzvorrichtung verwendet wird.
 
-Wenn das Laufwerk die Hardware Verschlüsselung unterstützt und BitLocker keinen bandbesitz hat, wird die ID-Zeichenfolge auf "BitLocker" festgelegt, und die Schlüssel Schutzvorrichtung wird in die pro-Band-Metadaten geschrieben.
+Wenn das Laufwerk Hardwareverschlüsselung unterstützt und BitLocker keinen Bandbesitz übernommen hat, wird die ID-Zeichenfolge auf "BitLocker" festgelegt, und die Schlüsselschutzvorrichtung wird pro Bandmetadaten in geschrieben.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Typ: **UInt32**
+Typ: **uint32**
 
 Diese Methode gibt einen der folgenden Codes oder einen anderen Fehlercode zurück, wenn ein Fehler auftritt.
 
@@ -151,14 +151,14 @@ Diese Methode gibt einen der folgenden Codes oder einen anderen Fehlercode zurü
 | Rückgabecode/-wert                                                                                                                                                                                | BESCHREIBUNG                                                                                                                                                                         |
 |--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | <dl> <dt>**S \_ OK**</dt> <dt>0 (0x0)</dt> </dl>                                                | Die Methode war erfolgreich.<br/>                                                                                                                                               |
-| <dl> <dt>**E \_ InvalidArg**</dt> <dt>2147942487 (0x80070057)</dt> </dl>                        | Der *platformvalidationprofile* -Parameter wird bereitgestellt, seine Werte befinden sich jedoch nicht innerhalb des bekannten Bereichs oder stimmen nicht mit der derzeit gültigen Gruppenrichtlinie Einstellung identisch.<br/> |
-| <dl> <dt>**F \_ E \_ Bootable \_ CDDVD**</dt> <dt>2150694960 (0x80310030)</dt> </dl>              | Auf diesem Computer wurde eine Start fähige CD/DVD gefunden. Entfernen Sie die CD/DVD, und starten Sie den Computer neu.<br/>                                                                                 |
-| <dl> <dt>**F \_ E- \_ Fremd \_ Volume**</dt> <dt>2150694947 (0x80310023)</dt> </dl>              | Das TPM kann den Verschlüsselungsschlüssel des Volumes nicht sichern, da das Volume nicht das aktuell Betriebssystem enthält.<br/>                                            |
-| <dl> <dt>**F \_ E \_ ungültige \_ Pin \_**</dt> -Zeichen <dt>2150695066 (0x8031009a)</dt> </dl>          | Der *newpin* -Parameter enthält ungültige Zeichen. Wenn der Gruppenrichtlinie "Erweiterte Pins für den Start zulassen" deaktiviert ist, werden nur Ziffern unterstützt.<br/>          |
-| <dl> <dt>**F \_ E \_ gesperrt \_ Volume**</dt> <dt>2150694912 (0x80310000)</dt> </dl>               | Das Volume ist gesperrt.<br/>                                                                                                                                                    |
-| <dl> <dt>**F \_ E \_ Richtlinie \_ ungültige \_ Pin- \_ Länge**</dt> <dt>2150695016 (0x80310068)</dt> </dl> | Der angegebene *newpin* -Parameter ist entweder länger als 20 Zeichen, kürzer als 6 Zeichen oder kürzer als die durch Gruppenrichtlinie angegebene Mindestlänge.<br/>            |
-| <dl> <dt>**F \_ E \_ Protector \_ vorhanden**</dt> <dt>2150694961 (0x80310031)</dt> </dl>            | Eine Schlüssel Schutzvorrichtung dieses Typs ist bereits vorhanden.<br/>                                                                                                                             |
-| <dl> <dt>**TSB \_ E- \_ Dienst wird \_ nicht \_ ausgeführt**</dt> <dt>2150121480 (0x80284008)</dt> </dl>        | Auf diesem Computer wurde kein kompatibles TPM gefunden.<br/>                                                                                                                             |
+| <dl> <dt>**E \_ INVALIDARG**</dt> <dt>2147942487 (0x80070057)</dt> </dl>                        | Der *PlatformValidationProfile-Parameter* wird bereitgestellt, aber seine Werte liegen nicht innerhalb des bekannten Bereichs oder stimmen nicht mit der Gruppenrichtlinie derzeit in Kraft.<br/> |
+| <dl> <dt>**FVE \_ E \_ BOOTABLE \_ CDDVD**</dt> <dt>2150694960 (0x80310030)</dt> </dl>              | Auf diesem Computer befindet sich eine startbare CD/DVD. Entfernen Sie die CD/DVD, und starten Sie den Computer neu.<br/>                                                                                 |
+| <dl> <dt>**FVE \_ E \_ FOREIGN \_ VOLUME**</dt> <dt>2150694947 (0x80310023)</dt> </dl>              | Das TPM kann den Verschlüsselungsschlüssel des Volumes nicht sichern, da das Volume nicht das derzeit ausgeführte Betriebssystem enthält.<br/>                                            |
+| <dl> <dt>**FVE \_ E \_ INVALID \_ PIN \_ CHARS**</dt> <dt>2150695066 (0x8031009A)</dt> </dl>          | Der *NewPIN-Parameter* enthält ungültige Zeichen. Wenn die "Erweiterte PINs für den Start zulassen" Gruppenrichtlinie deaktiviert ist, werden nur Zahlen unterstützt.<br/>          |
+| <dl> <dt>**FVE \_ E \_ LOCKED \_ VOLUME**</dt> <dt>2150694912 (0x80310000)</dt> </dl>               | Das Volume ist gesperrt.<br/>                                                                                                                                                    |
+| <dl> <dt>**FVE \_ E \_ POLICY INVALID PIN LENGTH \_ \_ \_ 2150695016**</dt> <dt>(0x80310068)</dt> </dl> | Der *angegebene NewPIN-Parameter* ist entweder länger als 20 Zeichen, kürzer als 6 Zeichen oder kürzer als die von Gruppenrichtlinie.<br/>            |
+| <dl> <dt>**FVE \_ E \_ PROTECTOR \_ EXISTS**</dt> <dt>2150694961 (0x80310031)</dt> </dl>            | Eine Schlüsselschutzvorrichtung dieses Typs ist bereits vorhanden.<br/>                                                                                                                             |
+| <dl> <dt>**TBS \_ E \_ SERVICE NOT RUNNING \_ \_ 2150121480**</dt> <dt>(0x80284008)</dt> </dl>        | Auf diesem Computer wurde kein kompatibles TPM gefunden.<br/>                                                                                                                             |
 
 
 
@@ -166,21 +166,21 @@ Diese Methode gibt einen der folgenden Codes oder einen anderen Fehlercode zurü
 
 ## <a name="security-considerations"></a>Überlegungen zur Sicherheit
 
-Für die Sicherheit Ihres Computers wird das Standardprofil empfohlen. Verwenden Sie ein Profil von PCRs 0, 2, 4, 5, 8, 9, 10 und 11, um zusätzlichen Schutz vor den Änderungen am Anfang des Start Codes zu erhalten. Um zusätzlichen Schutz vor Änderungen der frühen Startkonfiguration zu erhalten, verwenden Sie ein Profil von PCRs 0, 1, 2, 3, 4, 5, 8, 9, 10, 11.
+Aus Sicherheitsgründen wird das Standardprofil empfohlen. Verwenden Sie ein Profil der PCRs 0, 2, 4, 5, 8, 9, 10 und 11, um zusätzlichen Schutz vor frühen Codeänderungen zu erhalten. Verwenden Sie ein Profil der PCRs 0, 1, 2, 3, 4, 5, 8, 9, 10, 11, um zusätzlichen Schutz vor frühen Startkonfigurationsänderungen zu erhalten.
 
-Das Ändern des Standard Profils wirkt sich auf die Sicherheit oder Nutzbarkeit Ihres Computers aus.
+Das Ändern des Standardprofils wirkt sich auf die Sicherheit oder Nutzbarkeit Ihres Computers aus.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Es kann höchstens eine Schlüssel Schutzvorrichtung vom Typ "TPM und PIN" für ein Volume vorhanden sein. Wenn Sie den anzeigen Amen oder das Platt Form Validierungs Profil ändern möchten, das von einer vorhandenen TPM-und PIN-Schlüssel Schutzvorrichtung verwendet wird, müssen Sie zuerst die vorhandene Schlüssel Schutzvorrichtung entfernen und dann **protectkeywithtpmandpin** aufrufen, um eine neue zu erstellen.
+Für ein Volume kann jederzeit mindestens eine Schlüsselschutzvorrichtung vom Typ "TPM und PIN" vorhanden sein. Wenn Sie den Anzeigenamen oder das Plattformvalidierungsprofil ändern möchten, das von einer vorhandenen Schlüsselschutzvorrichtung "TPM und PIN" verwendet wird, müssen Sie zuerst die vorhandene Schlüsselschutzvorrichtung entfernen und dann **ProtectKeyWithTPMAndPIN** aufrufen, um eine neue zu erstellen.
 
-Zum Entsperren des Volumes in Wiederherstellungs Szenarien, in denen der Zugriff auf den Verschlüsselungsschlüssel des Volumes nicht abgerufen werden kann, müssen zusätzliche Schlüssel Schutzvorrichtungen angegeben werden. Dies ist z. b. der Fall, wenn das TPM nicht mit dem Platt Form Validierungs Profil überprüft werden kann oder wenn die PIN verloren geht.
+Es sollten zusätzliche Schlüsselschutzvorrichtungen angegeben werden, um das Volume in Wiederherstellungsszenarien zu entsperren, in denen kein Zugriff auf den Verschlüsselungsschlüssel des Volumes möglich ist. Beispielsweise, wenn das TPM nicht erfolgreich anhand des Plattformvalidierungsprofils überprüft werden kann oder wenn die PIN verloren geht.
 
-Verwenden Sie [**protectkeywithexternalkey**](protectkeywithexternalkey-win32-encryptablevolume.md) oder [**protectkeywithnumericalpassword**](protectkeywithnumericalpassword-win32-encryptablevolume.md) , um eine oder mehrere Schlüssel Schutzvorrichtungen für die Wiederherstellung eines anderweitig gesperrten Volumes zu erstellen.
+Verwenden [**Sie ProtectKeyWithExternalKey**](protectkeywithexternalkey-win32-encryptablevolume.md) oder [**ProtectKeyWithNumericalPassword,**](protectkeywithnumericalpassword-win32-encryptablevolume.md) um eine oder mehrere Schlüsselschutzvorrichtungen zum Wiederherstellen eines ansonsten gesperrten Volumes zu erstellen.
 
-Obwohl es möglich ist, sowohl eine Schlüssel Schutzvorrichtung vom Typ "TPM" als auch eine andere vom Typ "TPM und PIN" zu haben, negiert das vorhanden sein des schlüsselschutzschutztyps "TPM" die Auswirkungen anderer TPM-basierter Schlüssel Schutzvorrichtungen.
+Es ist zwar möglich, sowohl eine Schlüsselschutzvorrichtung vom Typ "TPM" als auch eine andere des Typs "TPM und PIN" zu verwenden, aber das Vorhandensein des Schlüsselschutzvorrichtungstyps "TPM" negiert die Auswirkungen anderer TPM-basierter Schlüsselschutzvorrichtungen.
 
-Managed Object Format-Dateien (MOF) enthalten die Definitionen für Windows-Verwaltungsinstrumentation (WMI)-Klassen. MOF-Dateien werden nicht als Teil des Windows SDK installiert. Sie werden auf dem Server installiert, wenn Sie die zugehörige Rolle mithilfe der Server-Manager hinzufügen. Weitere Informationen zu MOF-Dateien finden Sie unter [Managed Object Format (MOF)](../wmisdk/managed-object-format--mof-.md).
+Managed Object Format -Dateien (MOF) enthalten die Definitionen für Windows WMI-Klassen (Management Instrumentation). MOF-Dateien werden nicht als Teil des Windows SDK installiert. Sie werden auf dem Server installiert, wenn Sie die zugeordnete Rolle mithilfe der Server-Manager. Weitere Informationen zu MOF-Dateien finden Sie unter [Managed Object Format (MOF).](../wmisdk/managed-object-format--mof-.md)
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -188,21 +188,21 @@ Managed Object Format-Dateien (MOF) enthalten die Definitionen für Windows-Verw
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista Enterprise, Windows Vista Ultimate \[ Desktop-Apps\]<br/>                       |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2008 \[ -Desktop-Apps\]<br/>                                                    |
-| Namespace<br/>                | Root \\ CIMV2 \\ Sicherheit ( \\ microsoftvolumeencryption)<br/>                                             |
-| MOF<br/>                      | <dl> <dt>Win32 \_ verschlüsseltablevolume. MOF</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows Vista Enterprise, Windows Vista \[ Ultimate-Desktop-Apps\]<br/>                       |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2008-Desktop-Apps\]<br/>                                                    |
+| Namespace<br/>                | \\CimV2-Stammsicherheit \\ \\ MicrosoftVolumeEncryption<br/>                                             |
+| MOF<br/>                      | <dl> <dt>Win32 \_ encryptablevolume.mof</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Win32- \_ verschlüsseltablevolume**](win32-encryptablevolume.md)
+[**Win32 \_ EncryptableVolume**](win32-encryptablevolume.md)
 </dt> <dt>
 
-[**Win32- \_ TPM**](win32-tpm.md)
+[**Win32 \_ Tpm**](win32-tpm.md)
 </dt> </dl>
 
  

@@ -31,7 +31,7 @@ In der folgenden Abbildung erstellt eine Anwendung ein Fensterobjekt. Die [**Cre
 
 Nachdem das Fensterobjekt erstellt wurde, kann die Anwendung das Fensterhand handle verwenden, um das Fenster anzuzeigen oder zu ändern. Das Handle bleibt gültig, bis das Fensterobjekt zerstört wird.
 
-In der nächsten Abbildung zerstört die Anwendung das Fensterobjekt. Die [**DestroyWindow-Funktion**](/windows/win32/api/winuser/nf-winuser-destroywindow) entfernt das Fensterobjekt aus dem Arbeitsspeicher, wodurch das Fensterhandy ungültig wird.
+In der nächsten Abbildung zerstört die Anwendung das Fensterobjekt. Die [**DestroyWindow-Funktion**](/windows/win32/api/winuser/nf-winuser-destroywindow) entfernt das Fensterobjekt aus dem Arbeitsspeicher, wodurch das Fensterhand handle ungültig wird.
 
 ![Zerstören eines Fensterobjekts](images/cshob-02.png)
 

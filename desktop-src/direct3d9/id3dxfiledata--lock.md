@@ -1,5 +1,5 @@
 ---
-description: Greifen Sie auf die X-Dateidaten zu.
+description: Greift auf die X-Dateidaten zu.
 ms.assetid: 0e92914b-47b3-4a88-87ba-ce3c14282dbb
 title: ID3DXFileData::Lock-Methode (D3DX9Xof.h)
 ms.topic: reference
@@ -23,7 +23,7 @@ ms.locfileid: "118520707"
 ---
 # <a name="id3dxfiledatalock-method"></a>ID3DXFileData::Lock-Methode
 
-Greifen Sie auf die X-Dateidaten zu.
+Greift auf die X-Dateidaten zu.
 
 ## <a name="syntax"></a>Syntax
 
@@ -55,7 +55,7 @@ Zeiger auf die Größe der X-Dateidaten.
 
 Typ: **const \* \* VOID**
 
-Adresse eines Zeigers zum Empfangen des Schnittstellenzeigers des [**Id3DXFileData-Dateidatenobjekts.**](id3dxfiledata.md) Siehe Hinweise.
+Adresse eines Zeigers, der den Schnittstellenzeiger des [**ID3DXFileData-Dateidatenobjekts**](id3dxfiledata.md) empfangen soll. Siehe Hinweise.
 
 </dd> </dl>
 
@@ -63,15 +63,15 @@ Adresse eines Zeigers zum Empfangen des Schnittstellenzeigers des [**Id3DXFileDa
 
 Typ: **[ **HRESULT**](https://msdn.microsoft.com/library/Bb401631(v=MSDN.10).aspx)**
 
-Wenn die Methode erfolgreich ist, ist der Rückgabewert S \_ OK. Wenn bei der Methode ein Fehler auftritt, wird der folgende Wert zurückgegeben: D3DXFERR \_ BADVALUE.
+Wenn die Methode erfolgreich ist, lautet der Rückgabewert S \_ OK. Wenn die Methode fehlschlägt, wird der folgende Wert zurückgegeben: D3DXFERR \_ BADVALUE.
 
 ## <a name="remarks"></a>Hinweise
 
-Der *ppData-Zeiger* ist nur während einer **ID3DXFileData::Lock ...** [**ID3DXFileData::Unlock-Sequenz.**](id3dxfiledata--unlock.md) Sie können mehrere Sperraufrufe tätigen. Sie müssen jedoch sicherstellen, dass die Anzahl der Sperraufrufe der Anzahl der Entsperraufrufe entspricht.
+Der *ppData-Zeiger* ist nur während einer **ID3DXFileData::Lock** ... gültig. [**ID3DXFileData::Unlock-Sequenz.**](id3dxfiledata--unlock.md) Sie können mehrere Sperraufrufe vornehmen. Sie müssen jedoch sicherstellen, dass die Anzahl der Sperraufrufe mit der Anzahl der Entsperraufrufe übereinstimmt.
 
 Da dateidaten nicht garantiert ordnungsgemäß an Bytegrenzen ausgerichtet sind, sollten Sie mit UNALIGNED-Zeigern auf *ppData* zugreifen.
 
-Es wird nicht garantiert, dass zurückgegebene Parameterwerte aufgrund einer möglichen Dateibeschädigung gültig sind. Daher sollte Ihr Code die zurückgegebenen Parameterwerte überprüfen.
+Es ist nicht garantiert, dass zurückgegebene Parameterwerte aufgrund einer möglichen Dateibeschädigung gültig sind. Daher sollte Ihr Code die zurückgegebenen Parameterwerte überprüfen.
 
 ## <a name="requirements"></a>Anforderungen
 

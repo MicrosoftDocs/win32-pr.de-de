@@ -13,29 +13,29 @@ ms.locfileid: "118475410"
 ---
 # <a name="pitch-property"></a>Pitch-Eigenschaft
 
-\[Microsoft Agent ist ab Version Windows 7 veraltet und möglicherweise in nachfolgenden Versionen von Windows.\]
+\[Der Microsoft-Agent ist ab Windows 7 veraltet und in nachfolgenden Versionen von Windows möglicherweise nicht mehr verfügbar.\]
 
 <dl> <dt>
 
 <span id="Description_"></span><span id="description_"></span><span id="DESCRIPTION_"></span>**Beschreibung** 
 </dt> <dd>
 
-Gibt eine lange ganze Zahl für die Tonhöheneinstellung des angegebenen Zeichens (Speech Output, TTS) zurück.
+Gibt eine Long-Ganzzahl für die Tonhöheneinstellung der Sprachausgabe (Speech Output, TTS) des angegebenen Zeichens zurück.
 
 </dd> <dt>
 
 <span id="Syntax"></span><span id="syntax"></span><span id="SYNTAX"></span>**Syntax**
 </dt> <dd>
 
-*agent***. Zeichen ("**_CharacterID_*_"). Pitch_*
+*agent***. Zeichen ("**_CharacterID_*_"). Tonhöhe_*
 
 </dd> </dl>
 
 ## <a name="remarks"></a>Hinweise
 
-Diese Eigenschaft gilt nur für Zeichen, die für die TTS-Ausgabe konfiguriert sind. Wenn das Zeichen keine TTS-Ausgabe unterstützt, gibt diese Eigenschaft null (0) zurück.
+Diese Eigenschaft gilt nur für Zeichen, die für die TTS-Ausgabe konfiguriert sind. Wenn das Zeichen keine TTS-Ausgabe unterstützt, gibt diese Eigenschaft 0 (null) zurück.
 
-Obwohl Ihre Anwendung diesen Wert nicht schreiben kann, können Sie **Pit-Tags** (Pitch) in Ihren Ausgabetext hinzufügen, die die Tonhöhe für eine bestimmte Äußerung vorübergehend erhöhen. Wenn Sie jedoch das **Pit-Tag** verwenden, um die Tonhöhe zu ändern, wird die **Einstellung der Pitch-Eigenschaft** nicht geändert. Weitere Informationen finden Sie unter [Sprachausgabetags](pit-tag.md).
+Obwohl Ihre Anwendung diesen Wert nicht schreiben kann, können Sie **Pit-Tags** (Tonhöhe) in Ihren Ausgabetext einschließen, der die Tonhöhe für eine bestimmte Äußerung vorübergehend erhöht. Die Verwendung des **Pit-Tags** zum Ändern der Tonhöhe ändert jedoch nicht die Einstellung der **Pitch-Eigenschaft.** Weitere Informationen finden Sie unter [Sprachausgabetags.](pit-tag.md)
 
  
 

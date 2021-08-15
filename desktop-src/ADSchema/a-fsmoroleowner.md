@@ -1,11 +1,11 @@
 ---
-title: Attribut "tsmo-Role-Owner"
-description: Flexibler Single-Master Vorgang der Distinguished Name des Domänen Controllers, auf dem das Schema geändert werden kann.
+title: FSMO-Role-Owner-Attribut
+description: Flexible Single-Master Operation Der Distinguished Name des Domänencontrollers, in dem das Schema geändert werden kann.
 ms.assetid: 8eb28524-4bbf-453c-89ab-864ef94b0781
 ms.tgt_platform: multiple
 keywords:
-- Schema für die Active Directory-Rollen Besitzer
-- AD-Schema des fSMORoleOwner-Attributs
+- AD-Schema des FSMO-Role-Owner-Attributs
+- fSMORoleOwner-Attribut-AD-Schema
 topic_type:
 - apiref
 api_name:
@@ -14,28 +14,28 @@ api_type:
 - Schema
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 56d4439e5ee10fba11db831024d6b1958b75cd81
-ms.sourcegitcommit: b77ace27b0432e7cd3863191b11926be032fbe2f
+ms.openlocfilehash: 546e6f0fe88cb379ec3b4623a7223c6f88a17421766d5a5be2b24adf146972a1
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "103859736"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118961379"
 ---
-# <a name="fsmo-role-owner-attribute"></a>Attribut "tsmo-Role-Owner"
+# <a name="fsmo-role-owner-attribute"></a>FSMO-Role-Owner-Attribut
 
-Flexibler Single-Master Vorgang: der Distinguished Name des Domänen Controllers, auf dem das Schema geändert werden kann.
+Flexible Single-Master Operation: Der Distinguished Name des Domänencontrollers, in dem das Schema geändert werden kann.
 
 
 
 | Eingabe | Wert |
 |-------------------|-----------------------------------------|
-| CN                | "F"-Rollen Besitzer                         |
-| LDAP-Display-Name | fSMORoleOwner                           |
+| CN                | FSMO-Role-Owner                         |
+| Ldap-Anzeigename | fSMORoleOwner                           |
 | Size              | \-                                      |
-| Berechtigung aktualisieren  | Schema Administrator                    |
-| Aktualisierungshäufigkeit  | \-                                      |
+| Aktualisieren von Berechtigungen  | Schemaadministrator                    |
+| Updatehäufigkeit  | \-                                      |
 | Attribute-Id      | 1.2.840.113556.1.4.369                  |
-| System-ID-GUID    | 66171887-8F -11D0-AFDA-00c04f-930c9    |
+| System-ID-GUID    | 66171887-8f3c-11d0-afda-00c04fd930c9    |
 | Syntax            | [**Object(DS-DN)**](s-object-ds-dn.md) |
 
 
@@ -43,7 +43,7 @@ Flexibler Single-Master Vorgang: der Distinguished Name des Domänen Controllers
 ## <a name="implementations"></a>Implementierungen
 
 -   [**Windows 2000 Server**](#windows-2000-server)
--   [**Windows Server 2003**](#windows-server-2003)
+-   [**Windows Server 2003**](#windows-server-2003)
 -   [**Adam**](#adam)
 -   [**Windows Server 2003 R2**](#windows-server-2003-r2)
 -   [**Windows Server 2008**](#windows-server-2008)
@@ -59,10 +59,10 @@ Flexibler Single-Master Vorgang: der Distinguished Name des Domänen Controllers
 | Link-ID                | \-                              |
 | MAPI-Id                | \-                              |
 | System-Only            | False                           |
-| Ist-einwertig       | Richtig                            |
-| Ist indiziert             | Richtig                            |
+| Ist einwertig       | True                            |
+| Ist indiziert             | True                            |
 | Im globalen Katalog      | False                           |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                    |
+| NT-Security-Descriptor | O:BAG:BAD:S:                    |
 | Range-Lower            | \-                              |
 | Range-Upper            | \-                              |
 | Search-Flags           | 0x00000001                      |
@@ -71,7 +71,7 @@ Flexibler Single-Master Vorgang: der Distinguished Name des Domänen Controllers
 
 
 
-## <a name="windows-server-2003"></a>Windows Server 2003
+## <a name="windows-server-2003"></a>Windows Server 2003
 
 
 
@@ -80,10 +80,10 @@ Flexibler Single-Master Vorgang: der Distinguished Name des Domänen Controllers
 | Link-ID                | \-                              |
 | MAPI-Id                | \-                              |
 | System-Only            | False                           |
-| Ist-einwertig       | Richtig                            |
-| Ist indiziert             | Richtig                            |
+| Ist einwertig       | True                            |
+| Ist indiziert             | True                            |
 | Im globalen Katalog      | False                           |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                    |
+| NT-Security-Descriptor | O:BAG:BAD:S:                    |
 | Range-Lower            | \-                              |
 | Range-Upper            | \-                              |
 | Search-Flags           | 0x00000001                      |
@@ -101,10 +101,10 @@ Flexibler Single-Master Vorgang: der Distinguished Name des Domänen Controllers
 | Link-ID                | \-                              |
 | MAPI-Id                | \-                              |
 | System-Only            | False                           |
-| Ist-einwertig       | Richtig                            |
-| Ist indiziert             | Richtig                            |
+| Ist einwertig       | True                            |
+| Ist indiziert             | True                            |
 | Im globalen Katalog      | False                           |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                    |
+| NT-Security-Descriptor | O:BAG:BAD:S:                    |
 | Range-Lower            | \-                              |
 | Range-Upper            | \-                              |
 | Search-Flags           | 0x00000001                      |
@@ -122,10 +122,10 @@ Flexibler Single-Master Vorgang: der Distinguished Name des Domänen Controllers
 | Link-ID                | \-                              |
 | MAPI-Id                | \-                              |
 | System-Only            | False                           |
-| Ist-einwertig       | Richtig                            |
-| Ist indiziert             | Richtig                            |
+| Ist einwertig       | True                            |
+| Ist indiziert             | True                            |
 | Im globalen Katalog      | False                           |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                    |
+| NT-Security-Descriptor | O:BAG:BAD:S:                    |
 | Range-Lower            | \-                              |
 | Range-Upper            | \-                              |
 | Search-Flags           | 0x00000001                      |
@@ -143,10 +143,10 @@ Flexibler Single-Master Vorgang: der Distinguished Name des Domänen Controllers
 | Link-ID                | \-                              |
 | MAPI-Id                | \-                              |
 | System-Only            | False                           |
-| Ist-einwertig       | Richtig                            |
-| Ist indiziert             | Richtig                            |
+| Ist einwertig       | True                            |
+| Ist indiziert             | True                            |
 | Im globalen Katalog      | False                           |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                    |
+| NT-Security-Descriptor | O:BAG:BAD:S:                    |
 | Range-Lower            | \-                              |
 | Range-Upper            | \-                              |
 | Search-Flags           | 0x00000001                      |
@@ -164,10 +164,10 @@ Flexibler Single-Master Vorgang: der Distinguished Name des Domänen Controllers
 | Link-ID                | \-                              |
 | MAPI-Id                | \-                              |
 | System-Only            | False                           |
-| Ist-einwertig       | Richtig                            |
-| Ist indiziert             | Richtig                            |
+| Ist einwertig       | True                            |
+| Ist indiziert             | True                            |
 | Im globalen Katalog      | False                           |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                    |
+| NT-Security-Descriptor | O:BAG:BAD:S:                    |
 | Range-Lower            | \-                              |
 | Range-Upper            | \-                              |
 | Search-Flags           | 0x00000001                      |
@@ -185,10 +185,10 @@ Flexibler Single-Master Vorgang: der Distinguished Name des Domänen Controllers
 | Link-ID                | \-                              |
 | MAPI-Id                | \-                              |
 | System-Only            | False                           |
-| Ist-einwertig       | Richtig                            |
-| Ist indiziert             | Richtig                            |
+| Ist einwertig       | True                            |
+| Ist indiziert             | True                            |
 | Im globalen Katalog      | False                           |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                    |
+| NT-Security-Descriptor | O:BAG:BAD:S:                    |
 | Range-Lower            | \-                              |
 | Range-Upper            | \-                              |
 | Search-Flags           | 0x00000001                      |

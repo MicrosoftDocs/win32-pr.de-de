@@ -1,7 +1,7 @@
 ---
-description: Erstellt eine Instanz von boundingfrustum.
+description: Erstellt eine Instanz von BoundingFrustum.
 ms.assetid: 678a06c5-1d6d-422d-83e0-f6eec18fe50d
-title: Boundingfrustum-Konstruktoren
+title: BoundingFrustum-Konstruktoren
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -11,16 +11,16 @@ api_name: ''
 api_type:
 - NA
 api_location: ''
-ms.openlocfilehash: fedefdb61a6881036fb04b045306844d704d211b
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 09eec1f03ab8290e48014b9582514d62e51878c05c6583e6dcc6c6aebd7ddbf7
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106347875"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118502445"
 ---
-# <a name="boundingfrustum-constructors"></a>Boundingfrustum-Konstruktoren
+# <a name="boundingfrustum-constructors"></a>BoundingFrustum-Konstruktoren
 
-Erstellt eine Instanz von [**boundingfrustum**](/windows/win32/api/directxcollision/ns-directxcollision-boundingfrustum).
+Erstellt eine Instanz von [**BoundingFrustum**](/windows/win32/api/directxcollision/ns-directxcollision-boundingfrustum).
 
 ### <a name="overload-list"></a>Überladeliste
 
@@ -28,21 +28,21 @@ Erstellt eine Instanz von [**boundingfrustum**](/windows/win32/api/directxcollis
 
 | Konstruktor                                                                                                             | BESCHREIBUNG                                                                   |
 |:------------------------------------------------------------------------------------------------------------------------|:------------------------------------------------------------------------------|
-| [**Boundingfrustum ()**](/windows/win32/api/directxcollision/nf-directxcollision-boundingfrustum-boundingfrustum(boundingfrustum__))                                                                    | Erstellt eine Instanz von [**boundingfrustum**](/windows/win32/api/directxcollision/ns-directxcollision-boundingfrustum).<br/> |
-| [**Boundingfrustum (xmmatrix)**](/windows/win32/api/directxcollision/nf-directxcollision-boundingfrustum-boundingfrustum(cxmmatrix))                                                            | Erstellt eine Instanz von [**boundingfrustum**](/windows/win32/api/directxcollision/ns-directxcollision-boundingfrustum).<br/> |
-| [**Boundingfrustum (const boundingfrustum-&)**](/windows/win32/api/directxcollision/nf-directxcollision-boundingfrustum-boundingfrustum(constboundingfrustum_))                                              | Erstellt eine Instanz von [**boundingfrustum**](/windows/win32/api/directxcollision/ns-directxcollision-boundingfrustum).<br/> |
-| [**Boundingfrustum (const XMFLOAT3&, const XMFLOAT4&, float, float, float, float, float, float)**](/windows/win32/api/directxcollision/nf-directxcollision-boundingfrustum-boundingfrustum(constxmfloat3__constxmfloat4__float_float_float_float_float_float)) | Erstellt eine Instanz von [**boundingfrustum**](/windows/win32/api/directxcollision/ns-directxcollision-boundingfrustum).<br/> |
+| [**BoundingFrustum ()**](/windows/win32/api/directxcollision/nf-directxcollision-boundingfrustum-boundingfrustum(boundingfrustum__))                                                                    | Erstellt eine Instanz von [**BoundingFrustum**](/windows/win32/api/directxcollision/ns-directxcollision-boundingfrustum).<br/> |
+| [**BoundingFrustum (XMMATRIX)**](/windows/win32/api/directxcollision/nf-directxcollision-boundingfrustum-boundingfrustum(cxmmatrix))                                                            | Erstellt eine Instanz von [**BoundingFrustum**](/windows/win32/api/directxcollision/ns-directxcollision-boundingfrustum).<br/> |
+| [**BoundingFrustum (const BoundingFrustum&)**](/windows/win32/api/directxcollision/nf-directxcollision-boundingfrustum-boundingfrustum(constboundingfrustum_))                                              | Erstellt eine Instanz von [**BoundingFrustum**](/windows/win32/api/directxcollision/ns-directxcollision-boundingfrustum).<br/> |
+| [**BoundingFrustum (const XMFLOAT3&,const XMFLOAT4&,float,float,float,float,float,float)**](/windows/win32/api/directxcollision/nf-directxcollision-boundingfrustum-boundingfrustum(constxmfloat3__constxmfloat4__float_float_float_float_float_float)) | Erstellt eine Instanz von [**BoundingFrustum**](/windows/win32/api/directxcollision/ns-directxcollision-boundingfrustum).<br/> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-**Verweis**
+**Referenz**
 </dt> <dt>
 
-[**Boundingfrustum**](/windows/win32/api/directxcollision/ns-directxcollision-boundingfrustum)
+[**BoundingFrustum**](/windows/win32/api/directxcollision/ns-directxcollision-boundingfrustum)
 </dt> </dl>
 
  

@@ -1,7 +1,7 @@
 ---
-description: Die Richtlinie für Fotometadaten für die System.Image.ColorSpace-Eigenschaft.
+description: Die Fotometadatenrichtlinie für die System.Image.ColorSpace-Eigenschaft.
 ms.assetid: 10770f16-8db2-4719-bce3-452f578002ec
-title: System.Image.ColorSpace-Richtlinie für Fotometadaten
+title: System.Image.ColorSpace-Fotometadatenrichtlinie
 ms.topic: article
 ms.date: 05/31/2018
 ms.openlocfilehash: 85c7d7c9134a8bd93a12ba6cfb6bd8605e228cb6b745ad4401a94f91a2ba9ff9
@@ -11,9 +11,9 @@ ms.contentlocale: de-DE
 ms.lasthandoff: 08/11/2021
 ms.locfileid: "118710420"
 ---
-# <a name="systemimagecolorspace-photo-metadata-policy"></a>System.Image.ColorSpace-Richtlinie für Fotometadaten
+# <a name="systemimagecolorspace-photo-metadata-policy"></a>System.Image.ColorSpace-Fotometadatenrichtlinie
 
-Die Richtlinie für Fotometadaten für die [System.Image.ColorSpace-Eigenschaft.](../properties/props-system-image-colorspace.md)
+Die Fotometadatenrichtlinie für die [System.Image.ColorSpace-Eigenschaft.](../properties/props-system-image-colorspace.md)
 
 ### <a name="pkey"></a>PKEY
 
@@ -37,7 +37,7 @@ UShort
 
 ### <a name="conflict-resolution-policy"></a>Konfliktlösungsrichtlinie
 
-Werte aus verschiedenen Schemas werden abgestimmt.
+Werte aus unterschiedlichen Schemas werden abgestimmt.
 
 ### <a name="jpeg-policy"></a>JPEG-Richtlinie
 

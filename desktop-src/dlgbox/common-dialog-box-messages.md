@@ -1,31 +1,31 @@
 ---
-title: Allgemeine Dialog Feld Meldungen
-description: . | Allgemeine Dialog Feld Meldungen
+title: Allgemeine Dialogfeldmeldungen
+description: . | Allgemeine Dialogfeldmeldungen
 ms.assetid: f08c19f8-c18d-4094-b8b6-161b0ceea239
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: e724e48b199bcb98691ad4ae4eb7bb8029b565de
-ms.sourcegitcommit: 92e74c99f8f4d097676959d0c317f533c2400a80
+ms.openlocfilehash: 511f76d7da4f071e2f3a6766a10cf0486d3a969907f41959e8d617dbb51cb3c3
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/09/2021
-ms.locfileid: "103870019"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118503597"
 ---
-# <a name="common-dialog-box-messages"></a>Allgemeine Dialog Feld Meldungen
+# <a name="common-dialog-box-messages"></a>Allgemeine Dialogfeldmeldungen
 
 ## <a name="in-this-section"></a>In diesem Abschnitt
 
--   [**CDM \_ GetFilePath**](cdm-getfilepath.md)
--   [**CDM \_ getfolderidlist**](cdm-getfolderidlist.md)
--   [**CDM \_ GetFolderPath**](cdm-getfolderpath.md)
--   [**CDM \_ getSpec**](cdm-getspec.md)
--   [**CDM- \_ hidecontrol**](cdm-hidecontrol.md)
--   [**CDM \_ setcontroltext**](cdm-setcontroltext.md)
--   [**CDM- \_ setdefext**](cdm-setdefext.md)
--   [**"Sstrgbstring"**](setrgbstring.md)
--   [**WM- \_ Auswahl Schriftart \_ getlogfont**](wm-choosefont-getlogfont.md)
--   [**WM \_ choosefont- \_ setFlags**](wm-choosefont-setflags.md)
--   [**WM \_ choosefont \_ setlogfont**](wm-choosefont-setlogfont.md)
+-   [**CDM \_ GETFILEPATH**](cdm-getfilepath.md)
+-   [**CDM \_ GETFOLDERIDLIST**](cdm-getfolderidlist.md)
+-   [**CDM \_ GETFOLDERPATH**](cdm-getfolderpath.md)
+-   [**CDM \_ GETSPEC**](cdm-getspec.md)
+-   [**CDM \_ HIDECONTROL**](cdm-hidecontrol.md)
+-   [**CDM \_ SETCONTROLTEXT**](cdm-setcontroltext.md)
+-   [**CDM \_ SETDEFEXT**](cdm-setdefext.md)
+-   [**SETRGBSTRING**](setrgbstring.md)
+-   [**WM \_ CHOOSEFONT \_ GETLOGFONT**](wm-choosefont-getlogfont.md)
+-   [**WM \_ CHOOSEFONT \_ SETFLAGS**](wm-choosefont-setflags.md)
+-   [**WM \_ CHOOSEFONT \_ SETLOGFONT**](wm-choosefont-setlogfont.md)
 
  
 

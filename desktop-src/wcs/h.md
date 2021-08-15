@@ -3,58 +3,58 @@ title: H
 description: H
 ms.assetid: ef592c79-52cd-4a61-a8f3-ca7f1433cf47
 keywords:
-- Windows Color System (WCS), Glossar
+- Windows Farbsystem (WCS), Glossar
 - WCS (Windows Color System), Glossar
-- Bildfarben Verwaltung, Glossar
-- Farbverwaltung, Glossar
+- Bildfarbverwaltung, Glossar
+- Farbverwaltung,Glossar
 - Farben, Glossar
-- Windows Color System (WCS), Definitionen
+- Windows Farbsystem (WCS), Definitionen
 - WCS (Windows Color System), Definitionen
-- Bild Farbverwaltung, Definitionen
-- Farbverwaltung, Definitionen
+- Bildfarbverwaltung,Definitionen
+- Farbverwaltung,Definitionen
 - Farben, Definitionen
-- Windows Color System (WCS), Begriffe
+- Windows Farbsystem (WCS), Begriffe
 - WCS (Windows Color System), Begriffe
-- Bildfarben Verwaltung, Begriffe
+- Bildfarbverwaltung,Begriffe
 - Farbverwaltung, Begriffe
 - Farben, Begriffe
-- harte Absicherung
-- HLS-Farbbereiche
-- Hue-Helligkeit (HLS)
-- HLS (Hue Helligkeit Sättigung)
-- Farbbereiche, HLS
-- Farbbereiche, HSV
-- HSV-Farbbereiche
+- Harter Proofing
+- HLS-Farbräume
+- Farbton-Helligkeitssättigung (HLS)
+- HLS (Farbton-Helligkeitssättigung)
+- Farbräume, HLS
+- Farbräume, HSV
+- HSV-Farbräume
 - hue
-- Hue-Sättigungswert (HSV)
-- HSV (Hue-Sättigungswert)
+- Farbtonsättigungswert (HSV)
+- HSV (Farbtonsättigungswert)
 ms.localizationpriority: high
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 45c0b57b972f5cecfb26bc25c69a766a84b168bb
-ms.sourcegitcommit: 38954f8f0d70f44bff4a943784f468ebd7ef691a
+ms.openlocfilehash: 846b60e728396134c04328add7cd4930e806ff62af73f6b47c22d8b8afe4eb0c
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/26/2021
-ms.locfileid: "106351817"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119711010"
 ---
 # <a name="h"></a>H
 
-## <a name="hard-proofing"></a>harte Absicherung
+## <a name="hard-proofing"></a>Harter Proofing
 
-Anzeigen einer Vorschau oder eines Abbilds eines Images durch Drucken einer festen Kopie.
+Anzeigen einer Vorschau oder Prüfen eines Bilds durch Drucken einer Hartkopie des Bilds.
 
 ## <a name="hls"></a>HLS
 
-Ein farbiger Farbraum, der häufig von Künstlern verwendet wird Die Komponenten sind Hue, Helligkeit und Sättigung (Chroma).
+Ein Farbraum, der häufig von Interpreten verwendet wird. Seine Komponenten sind Hue, Lightness und Saturation (Sättigung).
 
-## <a name="hsv"></a>Beim
+## <a name="hsv"></a>Hsv
 
-Ein farbiger Farbraum, der häufig von Künstlern verwendet wird Die Komponenten sind Hue, Sättigung (Chroma) und Value (Helligkeit).
+Ein Farbraum, der häufig von Interpreten verwendet wird. Seine Komponenten sind Farbton, Sättigung (Sättigung) und Wert (Helligkeit).
 
 ## <a name="hue"></a>hue
 
-Eine reine Farbe. Ein Farbton ist eine bestimmte Position auf dem sichtbaren Teil des elektromagnetischen Spektrums.
+Eine reine Farbe. Ein Farbton ist eine bestimmte Position auf dem sichtbaren Teil des Spektrums.
 
  
 

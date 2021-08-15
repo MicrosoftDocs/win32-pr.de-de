@@ -1,9 +1,9 @@
 ---
-title: Download Collection. Count
-description: In diesem Abschnitt werden die Funktionen beschrieben, die für die Verwendung durch Online Stores entwickelt wurden. Die Verwendung dieser Funktion außerhalb des Kontexts eines Online Stores wird nicht unterstützt. Die Count-Eigenschaft ruft die Anzahl der ausstehenden Downloads in der Sammlung ab.
+title: DownloadCollection.count
+description: Hinweis In diesem Abschnitt werden Funktionen beschrieben, die für die Verwendung durch Onlineshops entwickelt wurden. Die Verwendung dieser Funktionalität außerhalb des Kontexts eines Onlineshops wird nicht unterstützt. Die count-Eigenschaft ruft die Anzahl der ausstehenden Downloads in der Auflistung ab.
 ms.assetid: 8f9245aa-6d92-4dd3-9b45-97ee37de680d
 keywords:
-- Download Collection. count Windows Media Player
+- DownloadCollection.count Windows Media Player
 topic_type:
 - apiref
 api_name:
@@ -14,21 +14,21 @@ api_type:
 - DllExport
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 95f161143cf599dcfbc71b2e55764009ec5d4e67
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 7d563ea49629c2ae4eee517c503f866672c3bd18d9d75bd4602e5bb70ed78a5a
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106352907"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118997090"
 ---
-# <a name="downloadcollectioncount"></a>Download Collection. Count
+# <a name="downloadcollectioncount"></a>DownloadCollection.count
 
 > [!Note]  
-> In diesem Abschnitt werden die-Funktionen beschrieben, die für die Verwendung durch Online Stores Die Verwendung dieser Funktion außerhalb des Kontexts eines Online Stores wird nicht unterstützt.
+> In diesem Abschnitt werden Funktionen beschrieben, die für die Verwendung durch Onlineshops entwickelt wurden. Die Verwendung dieser Funktionalität außerhalb des Kontexts eines Onlineshops wird nicht unterstützt.
 
  
 
-Die **count** -Eigenschaft ruft die Anzahl der ausstehenden Downloads in der Sammlung ab.
+Die **count-Eigenschaft** ruft die Anzahl der ausstehenden Downloads in der Auflistung ab.
 
 ## <a name="syntax"></a>Syntax
 
@@ -41,7 +41,7 @@ DownloadManager.getDownloadCollection(
 
 ## <a name="possible-values"></a>Mögliche Werte
 
-Diese Eigenschaft ist eine schreibgeschützte **Zahl** (**Long**).
+Diese Eigenschaft ist eine schreibgeschützte **Zahl** (**long**).
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -49,16 +49,16 @@ Diese Eigenschaft ist eine schreibgeschützte **Zahl** (**Long**).
 
 | Anforderung | Wert |
 |--------------------|------------------------------------------------------------------------------------|
-| Version<br/> | Windows Media Player 9-Serie oder höher<br/>                                  |
+| Version<br/> | Windows Media Player 9er Serie oder höher<br/>                                  |
 | DLL<br/>     | <dl> <dt>Wmp.dll</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Download Collection-Objekt**](downloadcollection-object.md)
+[**DownloadCollection-Objekt**](downloadcollection-object.md)
 </dt> </dl>
 
  

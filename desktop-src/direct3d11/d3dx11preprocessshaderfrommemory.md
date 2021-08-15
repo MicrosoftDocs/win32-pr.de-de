@@ -1,6 +1,6 @@
 ---
 title: D3DX11PreprocessShaderFromMemory-Funktion (D3DX11async.h)
-description: 'Hinweis: Die Hilfsprogrammbibliothek D3DX (D3DX 9, D3DX 10 und D3DX 11) ist für Windows 8 veraltet und wird für Windows Store-Apps nicht unterstützt. Hinweis Anstelle dieser Funktion wird empfohlen, die D3DPreprocess-API zu verwenden. Erstellen Sie einen Shader aus dem Arbeitsspeicher, ohne ihn zu kompilieren.'
+description: Hinweis Die Hilfsprogrammbibliothek D3DX (D3DX 9, D3DX 10 und D3DX 11) ist für Windows 8 veraltet und wird für Windows Store Apps nicht unterstützt. Hinweis Anstatt diese Funktion zu verwenden, wird empfohlen, die D3DPreprocess-API zu verwenden. Erstellen Sie einen Shader aus dem Arbeitsspeicher, ohne ihn zu kompilieren.
 ms.assetid: 3c646914-9334-44fe-a8a0-b84d0dc1a16e
 keywords:
 - D3DX11PreprocessShaderFromMemory-Funktion Direct3D 11
@@ -25,12 +25,12 @@ ms.locfileid: "118535985"
 # <a name="d3dx11preprocessshaderfrommemory-function"></a>D3DX11PreprocessShaderFromMemory-Funktion
 
 > [!Note]  
-> Die Hilfsprogrammbibliothek D3DX (D3DX 9, D3DX 10 und D3DX 11) ist für Windows 8 veraltet und wird für Windows Store-Apps nicht unterstützt.
+> Die Hilfsprogrammbibliothek D3DX (D3DX 9, D3DX 10 und D3DX 11) ist für Windows 8 veraltet und wird für Windows Store Apps nicht unterstützt.
 
  
 
 > [!Note]  
-> Anstatt diese Funktion zu verwenden, wird empfohlen, die [**D3DPreprocess-API zu**](/windows/desktop/direct3dhlsl/d3dpreprocess) verwenden.
+> Anstatt diese Funktion zu verwenden, wird empfohlen, die [**D3DPreprocess-API**](/windows/desktop/direct3dhlsl/d3dpreprocess) zu verwenden.
 
  
 
@@ -64,7 +64,7 @@ HRESULT D3DX11PreprocessShaderFromMemory(
 
 Typ: **[ **LPCSTR**](/windows/desktop/WinProg/windows-data-types)**
 
-Zeiger auf den Speicher, der den Shader enthält.
+Zeiger auf den Arbeitsspeicher, der den Shader enthält.
 
 </dd> <dt>
 
@@ -86,12 +86,12 @@ Name des Shaders.
 
 </dd> <dt>
 
-*pDefdefine* \[ In\]
+*pDefine* \[ In\]
 </dt> <dd>
 
 Typ: **const D3D11 \_ SHADER \_ MACRO \***
 
-Ein NULL-terminiertes Array von Shadermakros; Legen Sie dies auf **NULL fest,** um keine Makros anzugeben.
+Ein NULL-endendes Array von Shadermakros; Legen Sie diesen Wert auf **NULL** fest, um keine Makros anzugeben.
 
 </dd> <dt>
 
@@ -100,7 +100,7 @@ Ein NULL-terminiertes Array von Shadermakros; Legen Sie dies auf **NULL fest,** 
 
 Typ: **[ **LPD3D10INCLUDE**](/previous-versions/windows/desktop/legacy/bb173775(v=vs.85))**
 
-Ein Zeiger auf eine Includeschnittstelle; Legen Sie dies auf **NULL** fest, um anzugeben, dass keine Includedatei enthalten ist.
+Ein Zeiger auf eine Includeschnittstelle; Legen Sie diesen Wert auf **NULL** fest, um anzugeben, dass keine Includedatei vorhanden ist.
 
 </dd> <dt>
 
@@ -109,7 +109,7 @@ Ein Zeiger auf eine Includeschnittstelle; Legen Sie dies auf **NULL** fest, um a
 
 Typ: **[ **ID3DX11ThreadPump**](id3dx11threadpump.md)\***
 
-Ein Zeiger auf eine Threadpumpschnittstelle (siehe [**ID3DX11ThreadPump-Schnittstelle**](id3dx11threadpump.md)). Verwenden **Sie NULL,** um anzugeben, dass diese Funktion erst zurückgegeben werden soll, wenn sie abgeschlossen ist.
+Ein Zeiger auf eine Threadpumpschnittstelle (siehe [**ID3DX11ThreadPump-Schnittstelle).**](id3dx11threadpump.md) Geben Sie mit **NULL** an, dass diese Funktion erst zurückgegeben werden soll, wenn sie abgeschlossen ist.
 
 </dd> <dt>
 
@@ -127,7 +127,7 @@ Ein Zeiger auf den Arbeitsspeicher, der den nicht kompilierten Shader enthält.
 
 Typ: **[ **ID3D10Blob**](/windows/desktop/api/d3dcommon/nn-d3dcommon-id3d10blob)\*\***
 
-Die Adresse eines Zeigers auf den Arbeitsspeicher, der Fehler bei der Erstellung von Effekten enthält, sofern ein Fehler aufgetreten ist.
+Die Adresse eines Zeigers auf den Arbeitsspeicher, der Ggf. Fehler bei der Effekterstellung enthält.
 
 </dd> <dt>
 
@@ -136,7 +136,7 @@ Die Adresse eines Zeigers auf den Arbeitsspeicher, der Fehler bei der Erstellung
 
 Typ: **[ **HRESULT**](https://msdn.microsoft.com/library/Bb401631(v=MSDN.10).aspx)\***
 
-Ein Zeiger auf den Rückgabewert. Kann NULL **sein.** Wenn *pPump* nicht **NULL ist,** muss *pHResult* ein gültiger Speicherort sein, bis die asynchrone Ausführung abgeschlossen ist.
+Ein Zeiger auf den Rückgabewert. Kann **NULL** sein. Wenn *pPump* nicht **NULL** ist, muss *pHResult* ein gültiger Speicherort sein, bis die asynchrone Ausführung abgeschlossen ist.
 
 </dd> </dl>
 
@@ -144,7 +144,7 @@ Ein Zeiger auf den Rückgabewert. Kann NULL **sein.** Wenn *pPump* nicht **NULL 
 
 Typ: **[ **HRESULT**](https://msdn.microsoft.com/library/Bb401631(v=MSDN.10).aspx)**
 
-Der Rückgabewert ist einer der Unter [Direct3D 11-Rückgabecodes aufgeführten Werte.](d3d11-graphics-reference-returnvalues.md)
+Der Rückgabewert ist einer der In [Direct3D 11-Rückgabecodes aufgeführten](d3d11-graphics-reference-returnvalues.md)Werte.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -157,7 +157,7 @@ Der Rückgabewert ist einer der Unter [Direct3D 11-Rückgabecodes aufgeführten 
 
 
 
-## <a name="see-also"></a>Weitere Informationen:
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 

@@ -1,9 +1,9 @@
 ---
-title: PGM_GETBKCOLOR Meldung (kommstrg. h)
-description: Ruft die aktuelle Hintergrundfarbe für das Pager-Steuerelement ab. Sie können diese Nachricht explizit senden oder das Pager- \_ GetBkColor-Makro verwenden.
+title: PGM_GETBKCOLOR Nachricht (Commctrl.h)
+description: Ruft die aktuelle Hintergrundfarbe für das Pagersteuerelement ab. Sie können diese Nachricht explizit senden oder das Pager-Makro \_ GetBkColor verwenden.
 ms.assetid: c39ad721-fe39-44e9-8305-67444acc5d65
 keywords:
-- Windows-Steuerelemente für PGM_GETBKCOLOR Meldung
+- PGM_GETBKCOLOR Meldung Windows-Steuerelementen
 topic_type:
 - apiref
 api_name:
@@ -14,16 +14,16 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 4b58b139dd1caafcdefc6893e2b8a5e3312d3e28
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: ff3ee3a4be09a948654d337a47eecdd2a7b15d16b0602016aa99500cd1c3728c
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "103742528"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119985940"
 ---
-# <a name="pgm_getbkcolor-message"></a>PGM \_ GetBkColor-Nachricht
+# <a name="pgm_getbkcolor-message"></a>PGM \_ GETBKCOLOR-Nachricht
 
-Ruft die aktuelle Hintergrundfarbe für das Pager-Steuerelement ab. Sie können diese Nachricht explizit senden oder das [**Pager- \_ GetBkColor**](/windows/desktop/api/Commctrl/nf-commctrl-pager_getbkcolor) -Makro verwenden.
+Ruft die aktuelle Hintergrundfarbe für das Pagersteuerelement ab. Sie können diese Nachricht explizit senden oder das [**Pager-Makro \_ GetBkColor**](/windows/desktop/api/Commctrl/nf-commctrl-pager_getbkcolor) verwenden.
 
 ## <a name="parameters"></a>Parameter
 
@@ -37,11 +37,11 @@ Ruft die aktuelle Hintergrundfarbe für das Pager-Steuerelement ab. Sie können 
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt einen **COLORREF** -Wert zurück, der die aktuelle Hintergrundfarbe enthält.
+Gibt einen **COLORREF-Wert** zurück, der die aktuelle Hintergrundfarbe enthält.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Standardmäßig verwendet das Pager-Steuerelement die Vordergrundfarbe der System Schaltfläche als Hintergrundfarbe. Dies ist die gleiche Farbe, die durch den Aufruf von [**getsyscolorbrush**](/windows/desktop/api/winuser/nf-winuser-getsyscolorbrush) mit Color \_ btnface abgerufen werden kann.
+Standardmäßig verwendet das Pager-Steuerelement die Gesichtsfarbe der Systemschaltfläche als Hintergrundfarbe. Dies ist die gleiche Farbe, die durch Aufrufen von [**GetSysColorBrush**](/windows/desktop/api/winuser/nf-winuser-getsyscolorbrush) mit COLOR BTNFACE abgerufen werden \_ kann.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -49,9 +49,9 @@ Standardmäßig verwendet das Pager-Steuerelement die Vordergrundfarbe der Syste
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>                                        |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2003 \[ -Desktop-Apps\]<br/>                                  |
-| Header<br/>                   | <dl> <dt>Kommstrg. h</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows \[Nur Vista-Desktop-Apps\]<br/>                                        |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2003-Desktop-Apps\]<br/>                                  |
+| Header<br/>                   | <dl> <dt>Commctrl.h</dt> </dl> |
 
 
 

@@ -1,32 +1,32 @@
 ---
-title: Veröffentlichen unter einem Computer Objekt
-description: In der Regel erstellen Host basierte Dienste SCPs unter dem Computer Objekt für den Host Computer. Host basierte Dienste sind Dienste, die eng an einen einzelnen Host Computer gebunden sind.
+title: Veröffentlichen unter einem Computerobjekt
+description: In der Regel erstellen hostbasierte Dienste SCPs unter dem Computerobjekt für den Hostcomputer. Hostbasierte Dienste sind Dienste, die eng an einen einzelnen Hostcomputer gebunden sind.
 ms.assetid: ecd7d8bc-4714-408a-856c-7cab8360bf81
 ms.tgt_platform: multiple
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 77fe382001910f3b78b4461c622e94b14c54fb59
-ms.sourcegitcommit: 803f3ccd65bdefe36bd851b9c6e7280be9489016
+ms.openlocfilehash: aac659ab2bf482ee6d6c57dd1481e487d6e2af95dfd85a092f48f4928499b102
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "103858127"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119025358"
 ---
-# <a name="publishing-under-a-computer-object"></a>Veröffentlichen unter einem Computer Objekt
+# <a name="publishing-under-a-computer-object"></a>Veröffentlichen unter einem Computerobjekt
 
-In der Regel erstellen Host basierte Dienste SCPs unter dem Computer Objekt für den Host Computer. Host basierte Dienste sind Dienste, die eng an einen einzelnen Host Computer gebunden sind.
+In der Regel erstellen hostbasierte Dienste SCPs unter dem Computerobjekt für den Hostcomputer. Hostbasierte Dienste sind Dienste, die eng an einen einzelnen Hostcomputer gebunden sind.
 
-**So erstellen Sie SCPs unter einem Computer Objekt**
+**So erstellen Sie SCPs unter einem Computerobjekt**
 
-1.  Aufrufen der Funktion [**getcomputerobjectname**](/windows/desktop/api/secext/nf-secext-getcomputerobjectnamea) , um den Distinguished Name (DN) im Verzeichnis des Computer Objekts für den lokalen Computer abzurufen.
-2.  Verwenden Sie diesen DN zum Binden an das Computer Objekt und zum Erstellen des Dienst Verbindungs Punkts.
+1.  Rufen Sie die [**GetComputerObjectName-Funktion**](/windows/desktop/api/secext/nf-secext-getcomputerobjectnamea) auf, um den Distinguished Name (DN) im Verzeichnis des Computerobjekts für den lokalen Computer abzurufen.
+2.  Verwenden Sie diesen DN, um eine Bindung an das Computerobjekt herzustellen und den SCP zu erstellen.
 
-Weitere Informationen und ein Codebeispiel finden Sie unter Gewusst wie: Suchen [und Verwenden eines Dienst Verbindungs Punkts durch Clients](how-clients-find-and-use-a-service-connection-point.md).
+Weitere Informationen und ein Codebeispiel finden Sie unter [Suchen und Verwenden eines Dienstverbindungspunkts](how-clients-find-and-use-a-service-connection-point.md)durch Clients.
 
-Beachten Sie, dass nur Domänen Mitglieds Computer über gültige Computer Objekte im Verzeichnis verfügen.
+Beachten Sie, dass nur Computer, die Mitglied der Domäne sind, über gültige Computerobjekte im Verzeichnis verfügen.
 
-Um den DNS-oder NetBIOS-Namen des lokalen Computers abzurufen, müssen Sie die Funktion [**GetComputerNameEx**](/windows/desktop/api/sysinfoapi/nf-sysinfoapi-getcomputernameexa) aufrufen.
+Rufen Sie die [**GetComputerNameEx-Funktion**](/windows/desktop/api/sysinfoapi/nf-sysinfoapi-getcomputernameexa) auf, um den DNS- oder NetBIOS-Namen des lokalen Computers abzurufen.
 
- 
+ 
 
- 
+ 

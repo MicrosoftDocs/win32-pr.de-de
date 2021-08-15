@@ -1,5 +1,5 @@
 ---
-description: Gibt den Grad der Gesamtanpassung des Bildgewinns an. Berechnet aus PKEY \_ Photo \_ GainControlNumerator und PKEY \_ Photo \_ GainControlDenominator.
+description: Gibt den Grad der Anpassung des Gesamtbildgewinns an. Berechnet aus PKEY \_ Photo \_ GainControlNumerator und PKEY \_ Photo \_ GainControlDenominator.
 ms.assetid: 5076e03b-2c8a-4ef4-93d6-271a4bd697a6
 title: System.Photo.GainControl
 ms.topic: article
@@ -13,7 +13,7 @@ ms.locfileid: "118228991"
 ---
 # <a name="systemphotogaincontrol"></a>System.Photo.GainControl
 
-Gibt den Grad der Gesamtanpassung des Bildgewinns an. Berechnet aus PKEY \_ Photo \_ GainControlNumerator und PKEY \_ Photo \_ GainControlDenominator.
+Gibt den Grad der Anpassung des Gesamtbildgewinns an. Berechnet aus PKEY \_ Photo \_ GainControlNumerator und PKEY \_ Photo \_ GainControlDenominator.
 
 ## <a name="windows-10-version-1703-windows-10-version-1607-windows-10-version-1511-windows-10-version-1507-windows-81-windows-8-windows-7"></a>Windows 10, Version 1703, Windows 10, Version 1607, Windows 10, Version 1511, Windows 10, Version 1507, Windows 8.1, Windows 8, Windows 7
 

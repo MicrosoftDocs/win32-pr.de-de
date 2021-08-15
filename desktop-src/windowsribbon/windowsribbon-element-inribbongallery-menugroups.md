@@ -1,9 +1,9 @@
 ---
-title: Inribbongallery. menugroups (Eigenschaft)
-description: Stellt einen Container für die Dropdown Menü Elemente eines In-Ribbon-Katalog Steuer Elements dar.
+title: InRibbonGallery.MenuGroups-Eigenschaft
+description: Stellt einen Container für die Dropdownmenüelemente eines In-Ribbon Gallery-Steuerelements dar.
 ms.assetid: 6b9ded25-4e8e-4e30-a349-f7c091dbfe7a
 keywords:
-- Inribbongallery. menugroups-Eigenschaften Fenster (Menüband)
+- InRibbonGallery.MenuGroups-Eigenschaft Windows Menüband
 topic_type:
 - apiref
 api_name:
@@ -12,16 +12,16 @@ api_type:
 - NA
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: cd447b66dada74b1a9b909b3030e080198143b12
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 1722c8963b57256cf74f5911c8273539e10b5c6a6fef96dcfa1f0fec591bca04
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104040668"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119710480"
 ---
-# <a name="inribbongallerymenugroups-property"></a>Inribbongallery. menugroups (Eigenschaft)
+# <a name="inribbongallerymenugroups-property"></a>InRibbonGallery.MenuGroups-Eigenschaft
 
-Stellt einen Container für den Satz von Dropdown-Menü Elementen eines [in-Ribbon Gallery-](windowsribbon-controls-inribbongallery.md) Steuer Elements dar.
+Stellt einen Container für die Dropdownmenüelemente eines [Menüband-Katalog-Steuerelements](windowsribbon-controls-inribbongallery.md) dar.
 
 ## <a name="usage"></a>Verbrauch
 
@@ -41,7 +41,7 @@ Es gibt keine Attribute.
 
 | Element                                                         | BESCHREIBUNG                                     |
 |-----------------------------------------------------------------|-------------------------------------------------|
-| [**MenuGroup**](windowsribbon-element-menugroup.md)<br/> | Muss mindestens einmal vorkommen<br/> <br/> |
+| [**Menugroup**](windowsribbon-element-menugroup.md)<br/> | Muss mindestens einmal auftreten.<br/> <br/> |
 
 
 
@@ -51,21 +51,21 @@ Es gibt keine Attribute.
 
 | Element                                                                     |
 |-----------------------------------------------------------------------------|
-| [**Inribbongallery**](windowsribbon-element-inribbongallery.md)<br/> |
+| [**InRibbonGallery**](windowsribbon-element-inribbongallery.md)<br/> |
 
 
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Dies ist optional.
+Optional.
 
-Kann höchstens einmal für jedes [**inribbongallery**](windowsribbon-element-inribbongallery.md) -Element auftreten.
+Kann höchstens einmal für jedes [**InRibbonGallery-Element**](windowsribbon-element-inribbongallery.md) auftreten.
 
 ## <a name="examples"></a>Beispiele
 
-Im folgenden Beispiel wird das grundlegende Markup für ein [in-Ribbon-](windowsribbon-controls-inribbongallery.md) Katalog Steuerelement veranschaulicht.
+Im folgenden Beispiel wird das grundlegende Markup für ein [In-Ribbon Gallery-Steuerelement](windowsribbon-controls-inribbongallery.md) veranschaulicht.
 
-In diesem Code Abschnitt wird die Deklaration des **inribbongallery. menugroups** -Steuer Elements veranschaulicht.
+Dieser Codeabschnitt zeigt die **Steuerelementdeklaration InRibbonGallery.MenuGroups.**
 
 
 ```XML
@@ -102,22 +102,22 @@ In diesem Code Abschnitt wird die Deklaration des **inribbongallery. menugroups*
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows 7 \[ -Desktop-Apps\]<br/>              |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2008 R2 \[ -Desktop-Apps\]<br/> |
+| Unterstützte Mindestversion (Client)<br/> | nur Windows 7 \[ Desktop-Apps\]<br/>              |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server 2008 \[ R2-Desktop-Apps\]<br/> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[In-Ribbon Gallery-Steuerelement](windowsribbon-controls-inribbongallery.md)
+[Katalogsteuerelement im Menüband](windowsribbon-controls-inribbongallery.md)
 </dt> <dt>
 
-[Arbeiten mit Galerien](ribbon-controls-galleries.md)
+[Arbeiten mit Katalogen](ribbon-controls-galleries.md)
 </dt> <dt>
 
-[Anpassen eines Menübands durch Größen Definitionen und Skalierungs Richtlinien](windowsribbon-templates.md)
+[Anpassen eines Menübands durch Größendefinitionen und Skalierungsrichtlinien](windowsribbon-templates.md)
 </dt> </dl>
 
  

@@ -1,30 +1,30 @@
 ---
-title: Iworkspace-Methoden
-description: Die iworkspace-Schnittstelle stellt die folgenden Methoden zur Verfügung.
+title: IWorkspace-Methoden
+description: Die IWorkspace-Schnittstelle macht die folgenden Methoden verfügbar.
 ms.assetid: 10189F81-84BF-45EF-B43F-9F19A2DEF1AB
 ms.tgt_platform: multiple
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: e83595b682e1737c236aa9e068491929518b33bf
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: 0b99fa1e7b0184e0e2aec871377e568d240b6822e67f6c8643c769d32269407b
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "106339221"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119989600"
 ---
-# <a name="iworkspace-methods"></a>Iworkspace-Methoden
+# <a name="iworkspace-methods"></a>IWorkspace-Methoden
 
-Die [**iworkspace**](/windows/desktop/api/workspaceruntime/nn-workspaceruntime-iworkspace) -Schnittstelle stellt die folgenden Methoden zur Verfügung.
+Die [**IWorkspace-Schnittstelle**](/windows/desktop/api/workspaceruntime/nn-workspaceruntime-iworkspace) macht die folgenden Methoden verfügbar.
 
 ## <a name="in-this-section"></a>In diesem Abschnitt
 
--   [**GetProcessID-Methode**](/windows/desktop/api/workspaceruntime/nf-workspaceruntime-iworkspace-getprocessid)
--   [**Getworkspacumames-Methode**](/windows/desktop/api/workspaceruntime/nf-workspaceruntime-iworkspace-getworkspacenames)
--   [**Startremoteapplication-Methode**](/windows/desktop/api/workspaceruntime/nf-workspaceruntime-iworkspace-startremoteapplication)
+-   [**GetProcessId-Methode**](/windows/desktop/api/workspaceruntime/nf-workspaceruntime-iworkspace-getprocessid)
+-   [**GetWorkspaceNames-Methode**](/windows/desktop/api/workspaceruntime/nf-workspaceruntime-iworkspace-getworkspacenames)
+-   [**StartRemoteApplication-Methode**](/windows/desktop/api/workspaceruntime/nf-workspaceruntime-iworkspace-startremoteapplication)
 
- 
+ 
 
- 
+ 
 
 
 

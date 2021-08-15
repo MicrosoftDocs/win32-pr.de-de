@@ -4,8 +4,8 @@ description: Gibt an, ob das Kennwort für das Konto, auf das dieses Attribut ve
 ms.assetid: cab4a2e8-b440-45d2-8da8-9f020ffee08c
 ms.tgt_platform: multiple
 keywords:
-- ms-DS-User-Password-Expired attribute AD Schema
-- msDS-UserPasswordExpired-Attribut AD-Schema
+- AD-Schema des ms-DS-User-Password-Expired-Attributs
+- AD-Schema des msDS-UserPasswordExpired-Attributs
 topic_type:
 - apiref
 api_name:
@@ -23,7 +23,7 @@ ms.locfileid: "118425356"
 ---
 # <a name="ms-ds-user-password-expired-attribute"></a>ms-DS-User-Password-Expired-Attribut
 
-Gibt an, ob das Kennwort für das Konto, auf das dieses Attribut verweist, abgelaufen ist. TRUE, wenn das Kennwort abgelaufen ist; Andernfalls False.
+Gibt an, ob das Kennwort für das Konto, auf das dieses Attribut verweist, abgelaufen ist. TRUE, wenn das Kennwort abgelaufen ist; andernfalls False.
 
 
 
@@ -35,7 +35,7 @@ Gibt an, ob das Kennwort für das Konto, auf das dieses Attribut verweist, abgel
 | Aktualisieren von Berechtigungen  | \-                                   |
 | Updatehäufigkeit  | \-                                   |
 | Attribute-Id      | 1.2.840.113556.1.4.1858              |
-| System-ID-GUID    | 565c7ab5-e13e-47f6-abb5-de741806f125 |
+| System-Id-Guid    | 565c7ab5-e13e-47f6-abb5-de741806f125 |
 | Syntax            | [**Boolean**](s-boolean.md)         |
 
 
@@ -53,7 +53,7 @@ Gibt an, ob das Kennwort für das Konto, auf das dieses Attribut verweist, abgel
 | Link-ID                | \-                                                                |
 | MAPI-Id                | \-                                                                |
 | System-Only            | False                                                             |
-| Ist einwertig       | True                                                              |
+| Is-Single-Valued       | True                                                              |
 | Ist indiziert             | False                                                             |
 | Im globalen Katalog      | False                                                             |
 | NT-Security-Descriptor | O:BAG:BAD:S:                                                      |

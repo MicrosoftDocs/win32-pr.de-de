@@ -1,5 +1,5 @@
 ---
-description: Tritt ein, bevor das Ink-Analyseprogramm ein IContextLink-Objekt zwischen zwei IContextNode-Objekten hinzufügt.
+description: Tritt ein, bevor das Ink Analyzer ein IContextLink-Objekt zwischen zwei IContextNode-Objekten hinzufügt.
 ms.assetid: ec56cb8e-5154-45ee-911d-e2a240d19dc3
 title: _IAnalysisProxyEvents::ContextNodeLinkAdding-Ereignis (IACom.h)
 ms.topic: reference
@@ -22,7 +22,7 @@ ms.locfileid: "118452155"
 ---
 # <a name="_ianalysisproxyeventscontextnodelinkadding-event"></a>\_IAnalysisProxyEvents::ContextNodeLinkAdding-Ereignis
 
-Tritt ein, bevor das Ink-Analyseprogramm ein [**IContextLink-Objekt**](icontextlink.md) zwischen zwei [**IContextNode-Objekten**](icontextnode.md) hinzufügt.
+Tritt ein, bevor das Ink Analyzer ein [**IContextLink-Objekt**](icontextlink.md) zwischen zwei [**IContextNode-Objekten hinzufügt.**](icontextnode.md)
 
 ## <a name="syntax"></a>Syntax
 
@@ -43,26 +43,26 @@ HRESULT ContextNodeLinkAdding(
 *pInkAnalyzer* \[ In\]
 </dt> <dd>
 
-Der [**IInkAnalyzer,**](iinkanalyzer.md) der den Link hinzufügt.
+Der [**IInkAnalyzer, der**](iinkanalyzer.md) den Link hinzufügung.
 
 </dd> <dt>
 
 *pContextLinkToBeAdded* \[ In\]
 </dt> <dd>
 
-Das [**hinzuzufügende IContextLink-Objekt.**](icontextlink.md)
+Das [**IContextLink-Objekt,**](icontextlink.md) das hinzugefügt werden soll.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Eine Beschreibung der Rückgabewerte finden Sie unter Klassen und Schnittstellen – [Ink-Analyse.](classes-and-interfaces---ink-analysis.md)
+Eine Beschreibung der Rückgabewerte finden Sie unter [Klassen und Schnittstellen – Ink-Analyse](classes-and-interfaces---ink-analysis.md).
 
 ## <a name="remarks"></a>Hinweise
 
-Verwenden Sie dieses Ereignis, wenn Ihre Anwendung ihre eigene Datenstruktur verwaltet, die mit der des [**IInkAnalyzer**](iinkanalyzer.md)synchronisiert wird. Dieses Ereignis tritt während der Abstimmungsphase der Ink-Analyse oder als Reaktion auf eine Ink-Analysemethode auf, die einem [**IContextNode**](icontextnode.md)einen neuen [**IContextLink**](icontextlink.md) hinzufügt.
+Verwenden Sie dieses Ereignis, wenn Ihre Anwendung ihre eigene Datenstruktur bei behält, die mit der von [**IInkAnalyzer synchronisiert wird.**](iinkanalyzer.md) Dieses Ereignis tritt während der Abstimmungsphase der Ink-Analyse oder als Reaktion auf eine Ink Analyzer-Methode auf, die einem IContextNode einen neuen [**IContextLink**](icontextlink.md) [**hinzufügt.**](icontextnode.md)
 
-Weitere Informationen zum Synchronisieren Ihrer Anwendungsdaten mit [**IInkAnalyzer**](iinkanalyzer.md)finden Sie unter [Datenproxy mit Freihandanalyse.](data-proxy-with-ink-analysis.md)
+Weitere Informationen zum Synchronisieren Ihrer Anwendungsdaten mit [**IInkAnalyzer**](iinkanalyzer.md)finden Sie unter [Datenproxy mit Ink-Analyse.](data-proxy-with-ink-analysis.md)
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -77,7 +77,7 @@ Weitere Informationen zum Synchronisieren Ihrer Anwendungsdaten mit [**IInkAnaly
 
 
 
-## <a name="see-also"></a>Weitere Informationen:
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 

@@ -22,7 +22,7 @@ Der Synchronisierungs-Manager enthält Benutzeroberflächenkomponenten, z. B. di
 
 Der Benutzer wählt eine Anwendung aus und gibt die Elemente in der Anwendung an, die synchronisiert werden sollen, und legt ein Triggerereignis fest. Beispielsweise kann der Posteingang, der Posteingang oder ein anderer Ordner, der Nachrichten enthält, in einer E-Mail-Anwendung ein separates Element für die Anwendung sein.
 
-SyncMgr enthält auch eine Programmierschnittstelle, sodass Anwendungen sich registrieren können, um Synchronisierungsfunktionen zu verwenden, Fehler verarbeiten und während des Synchronisierungsprozesses Statusinformationen und Benachrichtigungen empfangen können.
+SyncMgr enthält auch eine Programmierschnittstelle, damit Anwendungen sich registrieren können, um Synchronisierungsfunktionen zu verwenden, Fehler verarbeiten und während des Synchronisierungsprozesses Statusinformationen und Benachrichtigungen empfangen können.
 
  
 

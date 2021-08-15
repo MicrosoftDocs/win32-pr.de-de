@@ -1,9 +1,9 @@
 - name: Designgrundlagen
   href: designprinciples.md
   items:
-    - name: Entwerfen einer sehr großen Benutzeroberfläche
+    - name: Entwerfen einer hervorragenden Benutzererfahrung
       href: how-to-design-desktop-ux.md
-    - name: UX-Checkliste
+    - name: Checkliste für die Benutzererfahrung
       href: top-violations.md
 - name: Richtlinien
   href: guidelines.md
@@ -19,7 +19,7 @@
           href: ctrl-command-buttons.md
         - name: Befehlsverknüpfungen
           href: ctrl-command-links.md
-        - name: Dropdown Listen & Kombinations Feldern
+        - name: Dropdownlisten & Kombinationsfelder
           href: ctrl-drop.md
         - name: Gruppenfelder
           href: ctrl-group-boxes.md
@@ -27,29 +27,29 @@
           href: ctrl-links.md
         - name: Listenfelder
           href: ctrl-list-boxes.md
-        - name: Auflisten von Ansichten
+        - name: Listenansichten
           href: ctrl-list-views.md
-        - name: Status anzeigen
+        - name: Statusleisten
           href: progress-bars.md
-        - name: Progressive Offenlegungs Steuerelemente
+        - name: Steuerung der progressiven Offenlegung
           href: ctrl-progressive-disclosure-controls.md
-        - name: Options Felder
+        - name: Optionsfelder
           href: ctrl-radio-buttons.md
         - name: Suchfelder
           href: ctrl-search-boxes.md
         - name: Schieberegler
           href: ctrl-sliders.md
-        - name: Dreh Steuerelemente
+        - name: Drehsteuerelemente
           href: ctrl-spin-controls.md
         - name: Statusleisten
           href: ctrl-status-bars.md
         - name: Registerkarten
           href: ctrl-tabs.md
-        - name: Text Felder
+        - name: Textfelder
           href: ctrl-text-boxes.md
-        - name: Quick Infos und infotips
+        - name: QuickInfos und Infotips
           href: ctrl-tooltips-and-infotips.md
-        - name: Struktur Ansichten
+        - name: Strukturansichten
           href: ctrl-tree-views.md
     - name: Befehle
       href: commands.md
@@ -63,11 +63,11 @@
     - name: Text
       href: text.md
       items:
-        - name: Text der Benutzeroberfläche
+        - name: Benutzeroberfläche Text
           href: text-ui.md
         - name: Stil und Ton
           href: text-style-tone.md
-    - name: Nachrichten
+    - name: Meldungen
       href: messages.md
       items:
         - name: Fehlermeldungen
@@ -100,11 +100,11 @@
           href: win-window-frames.md
         - name: Dialogfelder
           href: win-dialog-box.md
-        - name: Allgemeine Dialogfelder
+        - name: Allgemeine Dialoge
           href: win-common-dlg.md
         - name: Assistenten
           href: win-wizards.md
-        - name: Eigenschaften Fenster
+        - name: Eigenschaften-Windows
           href: win-property-win.md
     - name: Visuals
       href: visuals.md
@@ -113,7 +113,7 @@
           href: vis-layout.md
         - name: Schriftarten
           href: vis-fonts.md
-        - name: Farbe
+        - name: Color
           href: vis-color.md
         - name: Symbole
           href: vis-icons.md
@@ -128,11 +128,11 @@
     - name: Erfahrungen
       href: experiences.md
       items:
-        - name: Software Branding
+        - name: Softwarebranding
           href: exper-branding.md
         - name: Einrichten
           href: exper-setup.md
-        - name: Erst malig
+        - name: Erste Erfahrung
           href: exper-first-exper.md
         - name: Drucken
           href: exper-printing.md
@@ -145,7 +145,7 @@
           href: winenv-taskbar.md
         - name: Infobereich
           href: winenv-notification.md
-        - name: Steuerelemente
+        - name: Steuerungspanels
           href: winenv-ctrl-panels.md
         - name: Hilfe
           href: winenv-help.md

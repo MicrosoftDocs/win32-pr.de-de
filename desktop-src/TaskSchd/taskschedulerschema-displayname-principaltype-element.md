@@ -1,6 +1,6 @@
 ---
 title: DisplayName-Element (principalType)
-description: Gibt den Namen des Prinzipals an, der auf der Taskplaner Ui angezeigt wird.
+description: Gibt den Namen des Prinzipals an, der auf der benutzeroberfläche Taskplaner wird.
 ms.assetid: a8640cc9-fc16-4e73-9f0c-1ebff338fb84
 keywords:
 - DisplayName-Element Taskplaner
@@ -22,7 +22,7 @@ ms.locfileid: "118356913"
 ---
 # <a name="displayname-principaltype-element"></a>DisplayName-Element (principalType)
 
-Gibt den Namen des Prinzipals an, der auf der Taskplaner Ui angezeigt wird.
+Gibt den Namen des Prinzipals an, der auf der benutzeroberfläche Taskplaner wird.
 
 ``` syntax
 <xs:element name="DisplayName"
@@ -50,7 +50,7 @@ Für die C++-Entwicklung wird der Anzeigename des Prinzipals mithilfe der [**IPr
 
 ## <a name="examples"></a>Beispiele
 
-Im folgenden XML-Code wird ein mithilfe eines Gruppenbezeichners und eines Anzeigenamens definiert.
+Der folgende XML-Code definiert einen mithilfe eines Gruppenbezeichners und eines Anzeigenamens.
 
 
 ```XML
@@ -62,7 +62,7 @@ Im folgenden XML-Code wird ein mithilfe eines Gruppenbezeichners und eines Anzei
 
 
 
-Der folgende XML-Code definiert einen Prinzipal mit einem Benutzerbezeichner und einem Anzeigenamen.
+Der folgende XML-Code definiert einen Prinzipal unter Verwendung eines Benutzerbezeichners und eines Anzeigenamens.
 
 
 ```XML
@@ -81,7 +81,7 @@ Der folgende XML-Code definiert einen Prinzipal mit einem Benutzerbezeichner und
 
 | Anforderung | Wert |
 |-------------------------------------|------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Windows \[Nur Vista-Desktop-Apps\]<br/>       |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur \[ Vista-Desktop-Apps\]<br/>       |
 | Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2008-Desktop-Apps\]<br/> |
 
 

@@ -1,11 +1,11 @@
 ---
-title: Logfileitem-Pfad (Eigenschaft)
+title: LogFileItem-Pfadeigenschaft
 description: Ruft den Pfad der Protokolldatei ab.
 ms.assetid: 948d28d6-0445-4452-ad39-9981f99d3bf6
 keywords:
-- Pfadeigenschaft (Sysmon)
-- Pfadeigenschaft (Sysmon), logfileitem-Schnittstelle
-- Logfileitem-Schnittstelle (Sysmon), Path-Eigenschaft
+- Path-Eigenschaft SysMon
+- Path-Eigenschaft SysMon , LogFileItem-Schnittstelle
+- LogFileItem-Schnittstelle SysMon, Path-Eigenschaft
 topic_type:
 - apiref
 api_name:
@@ -17,14 +17,14 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: d503df9f3c992e66ee822690bf417ee54fdda3f6
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: fca514cb88f60aef7b04605e6d6c2177c7fd3f89ce354cb2e530ec57398a6bd1
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "106338782"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118883231"
 ---
-# <a name="logfileitempath-property"></a>Logfileitem::P ATH-Eigenschaft
+# <a name="logfileitempath-property"></a>LogFileItem::P ath-Eigenschaft
 
 Ruft den Pfad der Protokolldatei ab.
 
@@ -41,7 +41,7 @@ Property Path As String
 
 ## <a name="property-value"></a>Eigenschaftswert
 
-Der Pfad der Protokolldatei.
+Pfad der Protokolldatei.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -49,20 +49,20 @@ Der Pfad der Protokolldatei.
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows XP \[ -Desktop-Apps\]<br/>                                           |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2003 \[ -Desktop-Apps\]<br/>                                  |
-| DLL<br/>                      | <dl> <dt>Sysmon. ocx</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows \[Nur XP-Desktop-Apps\]<br/>                                           |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2003-Desktop-Apps\]<br/>                                  |
+| DLL<br/>                      | <dl> <dt>Sysmon.ocx</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Logfileitem**](logfileitem.md)
+[**LogFileItem**](logfileitem.md)
 </dt> <dt>
 
-Logfiles. Add
+LogFiles.Add
 </dt> </dl>
 
  
