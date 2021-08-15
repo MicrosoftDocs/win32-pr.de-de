@@ -1,9 +1,9 @@
 ---
-title: WM_UNINITMENUPOPUP Meldung (Winuser. h)
-description: Wird gesendet, wenn ein Dropdown Menü oder ein Untermenü zerstört wurde.
+title: WM_UNINITMENUPOPUP (Winuser.h)
+description: Wird gesendet, wenn ein Dropdownmenü oder Untermenü zerstört wurde.
 ms.assetid: 06129d88-6cf9-4d55-b8eb-6f78994bc87a
 keywords:
-- WM_UNINITMENUPOPUP von Meldungs Menüs und anderen Ressourcen
+- WM_UNINITMENUPOPUP von Nachrichtenmenüs und anderen Ressourcen
 topic_type:
 - apiref
 api_name:
@@ -14,16 +14,16 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: c6cb3484ec9ebcd0f62a8c06eb4c23bf5355f1d5
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 7356c0aa4aa62521d2ab998773d07b8aa1a107c92b541c556756a567d31a09a2
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104519191"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118971789"
 ---
-# <a name="wm_uninitmenupopup-message"></a>\_Uninitmenupopup-Meldung der WM
+# <a name="wm_uninitmenupopup-message"></a>WM \_ UNINITMENUPOPUP-Meldung
 
-Wird gesendet, wenn ein Dropdown Menü oder ein Untermenü zerstört wurde.
+Wird gesendet, wenn ein Dropdownmenü oder Untermenü zerstört wurde.
 
 
 ```C++
@@ -39,20 +39,20 @@ Wird gesendet, wenn ein Dropdown Menü oder ein Untermenü zerstört wurde.
 *wParam* 
 </dt> <dd>
 
-Ein Handle für das Menü.
+Ein Handle für das Menü
 
 </dd> <dt>
 
 *lParam* 
 </dt> <dd>
 
-Das hochwertige Wort identifiziert das Menü, das zerstört wurde. Dieser Parameter kann derzeit nur als **MF- \_ sysmenu** (Menü Fenster) angegeben werden.
+Das obere Wort identifiziert das Menü, das zerstört wurde. Derzeit kann dieser Parameter nur **\_ MF-SYSMENU** (das Fenstermenü) sein.
 
 </dd> </dl>
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Wenn eine Anwendung eine " [**WM \_ initmenupopup**](wm-initmenupopup.md) "-Meldung empfängt, wird eine " **WM \_ uninitmenupopup** "-Meldung empfangen.
+Wenn eine Anwendung eine [**WM \_ INITMENUPOPUP-Nachricht**](wm-initmenupopup.md) empfängt, wird eine **WM \_ UNINITMENUPOPUP-Nachricht** empfangen.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -62,21 +62,21 @@ Wenn eine Anwendung eine " [**WM \_ initmenupopup**](wm-initmenupopup.md) "-Meld
 |-------------------------------------|----------------------------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional \[nur Desktop-Apps\]<br/>                                               |
 | Unterstützte Mindestversion (Server)<br/> | Windows 2000 Server \[nur Desktop-Apps\]<br/>                                                     |
-| Header<br/>                   | <dl> <dt>Winuser. h (Windows. h einschließen)</dt> </dl> |
+| Header<br/>                   | <dl> <dt>Winuser.h (include Windows.h)</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-**Verweis**
+**Referenz**
 </dt> <dt>
 
 [**HIWORD**](/previous-versions/windows/desktop/legacy/ms632657(v=vs.85))
 </dt> <dt>
 
-**Licher**
+**Konzeptionellen**
 </dt> <dt>
 
 [Menüs](menus.md)

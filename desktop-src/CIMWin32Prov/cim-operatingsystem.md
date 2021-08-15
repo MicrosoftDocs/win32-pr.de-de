@@ -1,5 +1,5 @@
 ---
-description: Die CIM \_ OperatingSystem-Klasse stellt ein Computerbetriebssystem dar, das aus Software und Firmware besteht, mit denen die Hardware eines Computer Systems verwendbar ist.
+description: Die CIM \_ OperatingSystem-Klasse stellt ein Computerbetriebssystem dar, das aus Software und Firmware besteht, die die Hardware eines Computersystems nutzbar machen.
 ms.assetid: 014d2553-e1ac-4394-84ae-307af3658f6e
 ms.tgt_platform: multiple
 title: CIM_OperatingSystem-Klasse
@@ -41,23 +41,23 @@ api_type:
 - DllExport
 api_location:
 - CIMWin32.dll
-ms.openlocfilehash: 5b4af54a0f086bee4b743b083c27a67777786bc4
-ms.sourcegitcommit: c7add10d695482e1ceb72d62b8a4ebd84ea050f7
+ms.openlocfilehash: 76dc59331d3e4fed7c2b79dd95de4ecef02d67d26ab4c9aa66df5d9d7d5a7215
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104523744"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119020988"
 ---
-# <a name="cim_operatingsystem-class"></a>CIM- \_ OperatingSystem-Klasse
+# <a name="cim_operatingsystem-class"></a>CIM \_ OperatingSystem-Klasse
 
-Die **CIM \_ OperatingSystem** -Klasse stellt ein Computerbetriebssystem dar, das aus Software und Firmware besteht, mit denen die Hardware eines Computer Systems verwendbar ist.
+Die **CIM \_ OperatingSystem-Klasse** stellt ein Computerbetriebssystem dar, das aus Software und Firmware besteht, die die Hardware eines Computersystems nutzbar machen.
 
 > [!IMPORTANT]
-> Die Klassen der DMTF-CIM (Common Information Model) sind die übergeordneten Klassen, auf denen WMI-Klassen erstellt werden. WMI unterstützt zurzeit nur die [CIM 2. x-Versions Schemas](https://dmtf.org/standards/cim/schemas).
+> Die CIM-Klassen (Distributed Management Task Force) (DMTF (Distributed Management Task Force) (Common Information Model) sind die übergeordneten Klassen, auf denen WMI-Klassen erstellt werden. WMI unterstützt derzeit nur die [CIM 2.x-Versionsschemas.](https://dmtf.org/standards/cim/schemas)
 
  
 
-Die folgende Syntax wird durch MOF-Code (Managed Object Format) vereinfacht und schließt alle geerbten Eigenschaften ein. Eigenschaften werden in alphabetischer Reihenfolge und nicht in der MOF-Reihenfolge aufgelistet.
+Die folgende Syntax wird durch MOF-Code (Managed Object Format) vereinfacht und schließt alle geerbten Eigenschaften ein. Eigenschaften werden in alphabetischer Reihenfolge und nicht in MOF-Reihenfolge aufgeführt.
 
 ## <a name="syntax"></a>Syntax
 
@@ -97,21 +97,21 @@ class CIM_OperatingSystem : CIM_LogicalElement
 
 ## <a name="members"></a>Member
 
-Die **CIM \_ OperatingSystem** -Klasse verfügt über diese Typen von Membern:
+Die **CIM \_ OperatingSystem-Klasse** verfügt über folgende Typen von Membern:
 
 -   [Methoden](#methods)
 -   [Eigenschaften](#properties)
 
 ### <a name="methods"></a>Methoden
 
-Die **CIM \_ OperatingSystem** -Klasse verfügt über diese Methoden.
+Die **CIM \_ OperatingSystem-Klasse** verfügt über diese Methoden.
 
 
 
 | Methode                                                           | BESCHREIBUNG                                                                                                                            |
 |:-----------------------------------------------------------------|:---------------------------------------------------------------------------------------------------------------------------------------|
-| [**Reboot**](reboot-method-in-class-cim-operatingsystem.md)     | Klassenmethode, die das Computersystem herunterfährt und dann neu startet. Wird nicht von WMI implementiert.<br/>                                 |
-| [**Abschlusses**](shutdown-method-in-class-cim-operatingsystem.md) | Klassenmethode, mit der Programme und DLLs an den Punkt entladen werden, an dem Sie den Computer nicht ausschalten können. Wird nicht von WMI implementiert.<br/> |
+| [**Neustart**](reboot-method-in-class-cim-operatingsystem.md)     | Klassenmethode, die das Computersystem herunterfährt und dann neu startet. Nicht von WMI implementiert.<br/>                                 |
+| [**Herunterfahren**](shutdown-method-in-class-cim-operatingsystem.md) | Klassenmethode, die Programme und DLLs an den Punkt entlädt, an dem es sicher ist, den Computer zu deaktivieren. Nicht von WMI implementiert.<br/> |
 
 
 
@@ -119,73 +119,73 @@ Die **CIM \_ OperatingSystem** -Klasse verfügt über diese Methoden.
 
 ### <a name="properties"></a>Eigenschaften
 
-Die **CIM \_ OperatingSystem** -Klasse verfügt über diese Eigenschaften.
+Die **CIM \_ OperatingSystem-Klasse** verfügt über diese Eigenschaften.
 
 <dl> <dt>
 
 **Caption**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**maxlen**](/windows/desktop/WmiSdk/standard-qualifiers) (64), [**Display Name**](/windows/desktop/WmiSdk/standard-qualifiers) ("Caption")
+Qualifizierer: [**MaxLen**](/windows/desktop/WmiSdk/standard-qualifiers) (64), [**DisplayName**](/windows/desktop/WmiSdk/standard-qualifiers) ("Caption")
 </dt> </dl>
 
-Kurze Textbeschreibung des-Objekts.
+Kurze Textbeschreibung des Objekts.
 
 Diese Eigenschaft wird von [**CIM \_ ManagedSystemElement**](cim-managedsystemelement.md)geerbt.
 
 </dd> <dt>
 
-**"Name der Klassenname"**
+**CreationClassName**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**CIM- \_ Taste**](/windows/desktop/WmiSdk/standard-wmi-qualifiers), [**maxlen**](/windows/desktop/WmiSdk/standard-qualifiers) (256)
+Qualifizierer: [**\_ CIM-Schlüssel,**](/windows/desktop/WmiSdk/standard-wmi-qualifiers) [**MaxLen**](/windows/desktop/WmiSdk/standard-qualifiers) (256)
 </dt> </dl>
 
-Der Name der Klasse oder Unterklasse, die bei der Erstellung einer Instanz verwendet wird. Wenn diese Eigenschaft mit anderen Schlüsseleigenschaften der-Klasse verwendet wird, können alle Instanzen der-Klasse und deren Unterklassen eindeutig identifiziert werden.
+Name der Klasse oder Unterklasse, die bei der Erstellung einer Instanz verwendet wird. Bei Verwendung mit anderen Schlüsseleigenschaften der -Klasse ermöglicht diese Eigenschaft die eindeutige Identifizierung aller Instanzen der -Klasse und ihrer Unterklassen.
 
 </dd> <dt>
 
 **CSCreationClassName**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: weiter [**gegeben ("**](/windows/desktop/WmiSdk/standard-qualifiers) [**CIM \_ Computersystem**](cim-computersystem.md).**"Kreationclassname**"), [**CIM- \_ Taste**](/windows/desktop/WmiSdk/standard-wmi-qualifiers), [**maxlen**](/windows/desktop/WmiSdk/standard-qualifiers) (256)
+Qualifizierer: [**Weitergegeben**](/windows/desktop/WmiSdk/standard-qualifiers) ("[**CIM \_ ComputerSystem**](cim-computersystem.md).**CreationClassName**"), [**\_ CIM-Schlüssel,**](/windows/desktop/WmiSdk/standard-wmi-qualifiers) [**MaxLen**](/windows/desktop/WmiSdk/standard-qualifiers) (256)
 </dt> </dl>
 
-Der Name der Erstellungs Klasse des Computer Systems.
+Bereichsname der Erstellungsklasse des Computersystems.
 
 </dd> <dt>
 
 **CSName**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: weiter [**gegeben ("**](/windows/desktop/WmiSdk/standard-qualifiers) [**CIM \_ Computersystem**](cim-computersystem.md).**Name**"), [**CIM- \_ Taste**](/windows/desktop/WmiSdk/standard-wmi-qualifiers), [**maxlen**](/windows/desktop/WmiSdk/standard-qualifiers) (256)
+Qualifizierer: [**Weitergegeben**](/windows/desktop/WmiSdk/standard-qualifiers) ("[**CIM \_ ComputerSystem**](cim-computersystem.md).**Name**), [**\_ CIM-Schlüssel,**](/windows/desktop/WmiSdk/standard-wmi-qualifiers) [**MaxLen**](/windows/desktop/WmiSdk/standard-qualifiers) (256)
 </dt> </dl>
 
-Der Name des Computer Systems wird festgelegt.
+Geben Sie den Namen des Computersystems ein.
 
 </dd> <dt>
 
@@ -201,108 +201,108 @@ Zugriffstyp: Schreibgeschützt
 Qualifizierer: [**Einheiten**](/windows/desktop/WmiSdk/standard-qualifiers) ("Minuten")
 </dt> </dl>
 
-Die Anzahl der Minuten, für die das Betriebssystem von der Ortszeit (GMT) versetzt wird. Die Zahl ist positiv, negativ oder 0 (null).
+Anzahl der Minuten, für die das Betriebssystem von Greenwich Mean Time (GMT) versetzt wird. Die Zahl ist positiv, negativ oder null.
 
 </dd> <dt>
 
 **Beschreibung**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**Display Name**](/windows/desktop/WmiSdk/standard-qualifiers) ("Description")
+Qualifizierer: [**DisplayName**](/windows/desktop/WmiSdk/standard-qualifiers) ("Beschreibung")
 </dt> </dl>
 
-Die Textbeschreibung des Objekts.
+Textbeschreibung des Objekts.
 
 Diese Eigenschaft wird von [**CIM \_ ManagedSystemElement**](cim-managedsystemelement.md)geerbt.
 
 </dd> <dt>
 
-**Distri**
+**Verteilt**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **boolescher** Wert
+Datentyp: **boolescher Wert**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-**True** gibt an, dass das Betriebssystem auf mehrere Computersystem Knoten verteilt ist, die als Cluster gruppiert werden sollen.
+True gibt an, dass das Betriebssystem auf mehrere Computersystemknoten verteilt ist, die als Cluster gruppiert werden sollten.
 
 </dd> <dt>
 
 **FreePhysicalMemory**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt64**
+Datentyp: **uint64**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**Einheiten**](/windows/desktop/WmiSdk/standard-qualifiers) ("Kilobyte")
+Qualifizierer: [**Einheiten**](/windows/desktop/WmiSdk/standard-qualifiers) ("Kilobytes")
 </dt> </dl>
 
-Die Anzahl der derzeit nicht verwendeten und verfügbaren physischen Speicher in Kilobyte.
+Anzahl der kilobytes physischen Arbeitsspeichers, der derzeit nicht verwendet wird und verfügbar ist.
 
-Weitere Informationen zur Verwendung von **UInt64** -Werten in Skripts finden Sie unter [Scripting in WMI](/windows/desktop/WmiSdk/creating-a-wmi-script).
+Weitere Informationen zur Verwendung von **uint64-Werten** in Skripts finden Sie unter [Skripterstellung in WMI.](/windows/desktop/WmiSdk/creating-a-wmi-script)
 
 </dd> <dt>
 
-**Freespaceinpagingfiles**
+**FreeSpaceInPagingFiles**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt64**
+Datentyp: **uint64**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**mappingstrings**](/windows/desktop/WmiSdk/standard-qualifiers) ("MIF". DMTF- \| System Arbeitsspeicher-Einstellungen \| 001,4 "), [**Einheiten**](/windows/desktop/WmiSdk/standard-qualifiers) (" Kilobyte ")
+Qualifizierer: [**MappingStrings**](/windows/desktop/WmiSdk/standard-qualifiers) ("MIF. \|DMTF-Systemspeicher Einstellungen \| 001.4"), [**Einheiten**](/windows/desktop/WmiSdk/standard-qualifiers) ("Kilobytes")
 </dt> </dl>
 
-Anzahl von Kilobyte, die in den Auslagerungs Dateien des Betriebssystems zugeordnet werden können, ohne dass andere Seiten ausgetauscht werden müssen. Der Wert 0 gibt an, dass keine Auslagerungs Dateien vorhanden sind.
+Anzahl der Kilobytes, die den Auslagerungsdateien des Betriebssystems zugeordnet werden können, ohne dass andere Seiten ausgetauscht werden. Der Wert 0 gibt an, dass keine Auslagerungsdateien vorhanden sind.
 
-Weitere Informationen zur Verwendung von **UInt64** -Werten in Skripts finden Sie unter [Scripting in WMI](/windows/desktop/WmiSdk/creating-a-wmi-script).
+Weitere Informationen zur Verwendung von **uint64-Werten** in Skripts finden Sie unter [Skripterstellung in WMI.](/windows/desktop/WmiSdk/creating-a-wmi-script)
 
 </dd> <dt>
 
 **FreeVirtualMemory**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt64**
+Datentyp: **uint64**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**Einheiten**](/windows/desktop/WmiSdk/standard-qualifiers) ("Kilobyte")
+Qualifizierer: [**Einheiten**](/windows/desktop/WmiSdk/standard-qualifiers) ("Kilobytes")
 </dt> </dl>
 
-Anzahl von Kilobyte des virtuellen Speichers, der derzeit nicht verwendet wird und verfügbar ist. Dies kann z. b. durch Hinzufügen der Menge an freiem RAM zum Umfang des freien Speicherplatzes berechnet werden (d. h. durch das Hinzufügen der Eigenschaften **FreePhysicalMemory** und **freespaceinpagingfiles** ).
+Anzahl der Kilobytes des virtuellen Arbeitsspeichers, der derzeit nicht verwendet wird und verfügbar ist. Dies kann z. B. berechnet werden, indem die Menge an freiem RAM dem freien Auslagerungsspeicherplatz hinzugefügt wird **(d.amp;quot;FreePhysicalMemory%%amp;quot;** und **%%amp;quot;FreeSpaceInPagingFiles%%amp;quot;).**
 
-Weitere Informationen zur Verwendung von **UInt64** -Werten in Skripts finden Sie unter [Scripting in WMI](/windows/desktop/WmiSdk/creating-a-wmi-script).
+Weitere Informationen zur Verwendung von **uint64-Werten** in Skripts finden Sie unter [Skripterstellung in WMI.](/windows/desktop/WmiSdk/creating-a-wmi-script)
 
 </dd> <dt>
 
 **InstallDate**
 </dt> <dd> <dl> <dt>
 
-**Datentyp: DateTime**
+Datentyp: **datetime**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**mappingstrings**](/windows/desktop/WmiSdk/standard-qualifiers) ("MIF". DMTF \| ComponentID \| 001,5 "), [**Display Name**](/windows/desktop/WmiSdk/standard-qualifiers) (" Install Date ")
+Qualifizierer: [**MappingStrings**](/windows/desktop/WmiSdk/standard-qualifiers) ("MIF. DMTF \| ComponentID \| 001.5"), [**DisplayName**](/windows/desktop/WmiSdk/standard-qualifiers) ("Installationsdatum")
 </dt> </dl>
 
-Datum und Uhrzeit der Installation des-Objekts. Diese Eigenschaft erfordert keinen Wert, um anzugeben, dass das-Objekt installiert ist.
+Datum und Uhrzeit der Installation des Objekts. Diese Eigenschaft erfordert keinen Wert, um anzugeben, dass das Objekt installiert ist.
 
 Diese Eigenschaft wird von [**CIM \_ ManagedSystemElement**](cim-managedsystemelement.md)geerbt.
 
@@ -311,123 +311,123 @@ Diese Eigenschaft wird von [**CIM \_ ManagedSystemElement**](cim-managedsystemel
 **LastBootUpTime**
 </dt> <dd> <dl> <dt>
 
-**Datentyp: DateTime**
+Datentyp: **datetime**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Uhrzeit, zu der das Betriebssystem zuletzt gestartet wurde.
+Zeitpunkt, zu dem das Betriebssystem zuletzt gestartet wurde.
 
 </dd> <dt>
 
 **LocalDateTime**
 </dt> <dd> <dl> <dt>
 
-**Datentyp: DateTime**
+Datentyp: **datetime**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**mappingstrings**](/windows/desktop/WmiSdk/standard-qualifiers) ("MIB. IETF \| Host-Resources-MIB. hrsystemdate "," MIF. Allgemeine Informationen zu DMTF \| \| 001,6 ")
+Qualifizierer: [**MappingStrings**](/windows/desktop/WmiSdk/standard-qualifiers) ("MIB. IETF \| HOST-RESOURCES-MIB.hrSystemDate", "MIF. \|DMTF General Information \| 001.6")
 </dt> </dl>
 
-Das Betriebssystem Konzept für das lokale Datum und die Uhrzeit des Tages.
+Das Konzept des lokalen Datums und der Uhrzeit des Betriebssystems.
 
 </dd> <dt>
 
-**Maxnumofprocesses**
+**MaxNumberOfProcesses**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt32**
+Datentyp: **uint32**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**mappingstrings**](/windows/desktop/WmiSdk/standard-qualifiers) ("MIB. IETF \| Host-Resources-MIB. hrsystemmaxprocesses ")
+Qualifizierer: [**MappingStrings**](/windows/desktop/WmiSdk/standard-qualifiers) ("MIB. IETF \| HOST-RESOURCES-MIB.hrSystemMaxProcesses")
 </dt> </dl>
 
-Maximale Anzahl von Prozess Kontexten, die vom Betriebssystem unterstützt werden können. Wenn kein festes Maximum vorhanden ist, sollte der Wert 0 (null) sein. Auf Systemen mit einem maximalen Höchstwert kann dieses Objekt bei der Diagnose von Fehlern helfen, die auftreten, wenn der Höchstwert erreicht ist. Wenn unbekannt, geben Sie-1 ein.
+Maximale Anzahl von Prozesskontexten, die das Betriebssystem unterstützen kann. Wenn kein fester Maximalwert vorhanden ist, sollte der Wert 0 (null) sein. Auf Systemen mit einem festen Höchstwert kann dieses Objekt helfen, Fehler zu diagnostizieren, die auftreten, wenn der Höchstwert erreicht wird. Falls unbekannt, geben Sie -1 ein.
 
 </dd> <dt>
 
 **MaxProcessMemorySize**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt64**
+Datentyp: **uint64**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**Einheiten**](/windows/desktop/WmiSdk/standard-qualifiers) ("Kilobyte")
+Qualifizierer: [**Einheiten**](/windows/desktop/WmiSdk/standard-qualifiers) ("Kilobytes")
 </dt> </dl>
 
-Maximale Anzahl von KB Arbeitsspeicher, die einem Prozess zugeordnet werden können. Bei Betriebssystemen ohne virtuellen Arbeitsspeicher entspricht dieser Wert in der Regel der Gesamtmenge an physischem Arbeitsspeicher (abzüglich des vom BIOS und dem Betriebssystem genutzten Speichers). Bei einigen Betriebssystemen kann dieser Wert unendlich sein. in diesem Fall sollte 0 eingegeben werden. In anderen Fällen kann dieser Wert eine Konstante sein, z. b. 2 GB oder 4 GB.
+Maximale Anzahl von Kilobyte Arbeitsspeicher, die einem Prozess zugeordnet werden können. Bei Betriebssystemen ohne virtuellen Arbeitsspeicher entspricht dieser Wert in der Regel der Gesamtmenge des physischen Arbeitsspeichers abzüglich des vom BIOS und dem Betriebssystem verwendeten Arbeitsspeichers. Bei einigen Betriebssystemen kann dieser Wert unendlich sein. In diesem Fall sollte 0 eingegeben werden. In anderen Fällen kann dieser Wert eine Konstante sein, z. B. 2 GB oder 4 GB.
 
-Weitere Informationen zur Verwendung von **UInt64** -Werten in Skripts finden Sie unter [Scripting in WMI](/windows/desktop/WmiSdk/creating-a-wmi-script).
+Weitere Informationen zur Verwendung von **uint64-Werten** in Skripts finden Sie unter [Skripterstellung in WMI.](/windows/desktop/WmiSdk/creating-a-wmi-script)
 
 </dd> <dt>
 
 **Name**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**außer Kraft**](/windows/desktop/WmiSdk/standard-qualifiers) Setzung ("Name")
+Qualifizierer: [**Außerkraftsetzung**](/windows/desktop/WmiSdk/standard-qualifiers) ("Name")
 </dt> </dl>
 
-Der Schlüssel einer Betriebssystem Instanz innerhalb eines Computer Systems.
+Schlüssel einer Betriebssysteminstanz innerhalb eines Computersystems.
 
 Diese Eigenschaft wird von [**CIM \_ ManagedSystemElement**](cim-managedsystemelement.md)geerbt.
 
 </dd> <dt>
 
-**"Numoflicensedusers"**
+**NumberOfLicensedUsers**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt32**
+Datentyp: **uint32**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Anzahl der Benutzerlizenzen für das Betriebssystem. Wenn unbegrenzt, geben Sie 0 (falls unbekannt) ein, geben Sie-1 ein.
+Anzahl der Benutzerlizenzen für das Betriebssystem. Wenn unbegrenzt, geben Sie 0 ein, falls unbekannt, geben Sie -1 ein.
 
 </dd> <dt>
 
-**Anzahlungsprozesse**
+**NumberOfProcesses**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt32**
+Datentyp: **uint32**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**mappingstrings**](/windows/desktop/WmiSdk/standard-qualifiers) ("MIB. IETF \| Host-Resources-MIB. hrsystemprocesses ")
+Qualifizierer: [**MappingStrings**](/windows/desktop/WmiSdk/standard-qualifiers) ("MIB. IETF \| HOST-RESOURCES-MIB.hrSystemProcesses")
 </dt> </dl>
 
-Anzahl von Prozess Kontexten, die derzeit auf dem Betriebssystem geladen oder ausgeführt werden.
+Anzahl der Prozesskontexte, die derzeit auf dem Betriebssystem geladen oder ausgeführt werden.
 
 </dd> <dt>
 
-**Numofusers**
+**NumberOfUsers**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt32**
+Datentyp: **uint32**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**mappingstrings**](/windows/desktop/WmiSdk/standard-qualifiers) ("MIB. IETF \| Host-Resources-MIB. hrsystemnumusers ")
+Qualifizierer: [**MappingStrings**](/windows/desktop/WmiSdk/standard-qualifiers) ("MIB. IETF \| HOST-RESOURCES-MIB.hrSystemNumUsers")
 </dt> </dl>
 
 Anzahl der Benutzersitzungen, für die das Betriebssystem derzeit Zustandsinformationen speichert.
@@ -437,13 +437,13 @@ Anzahl der Benutzersitzungen, für die das Betriebssystem derzeit Zustandsinform
 **OSType**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt16**
+Datentyp: **uint16**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**modelcorrespondence**](/windows/desktop/WmiSdk/standard-qualifiers) ("**CIM \_ OperatingSystem**".**OtherTypeDescription**")
+Qualifizierer: [**ModelCorrespondence**](/windows/desktop/WmiSdk/standard-qualifiers) ("**CIM \_ OperatingSystem**.**OtherTypeDescription**")
 </dt> </dl>
 
 Typ des Betriebssystems.
@@ -459,14 +459,14 @@ Typ des Betriebssystems.
 
 <span id="Other"></span><span id="other"></span><span id="OTHER"></span>
 
-<span id="Other"></span><span id="other"></span><span id="OTHER"></span>**Sonstige** (1)
+<span id="Other"></span><span id="other"></span><span id="OTHER"></span>**Andere** (1)
 
 
 </dt> <dd></dd> <dt>
 
 <span id="MACOS"></span><span id="macos"></span>
 
-<span id="MACOS"></span><span id="macos"></span>**MacOS** (2)
+<span id="MACOS"></span><span id="macos"></span>**MACOS** (2)
 
 
 </dt> <dd>
@@ -477,7 +477,7 @@ Mac OS
 
 <span id="ATTUNIX"></span><span id="attunix"></span>
 
-<span id="ATTUNIX"></span><span id="attunix"></span>**Attunix** (3)
+<span id="ATTUNIX"></span><span id="attunix"></span>**ATTUNIX** (3)
 
 
 </dt> <dd>
@@ -488,21 +488,21 @@ ATT UNIX
 
 <span id="DGUX"></span><span id="dgux"></span>
 
-<span id="DGUX"></span><span id="dgux"></span>**Dgux** (4)
+<span id="DGUX"></span><span id="dgux"></span>**DGUX** (4)
 
 
 </dt> <dd></dd> <dt>
 
 <span id="DECNT"></span><span id="decnt"></span>
 
-<span id="DECNT"></span><span id="decnt"></span>**Decnt** (5)
+<span id="DECNT"></span><span id="decnt"></span>**DECNT** (5)
 
 
 </dt> <dd></dd> <dt>
 
 <span id="Digital_Unix"></span><span id="digital_unix"></span><span id="DIGITAL_UNIX"></span>
 
-<span id="Digital_Unix"></span><span id="digital_unix"></span><span id="DIGITAL_UNIX"></span>**Digital UNIX** (6)
+<span id="Digital_Unix"></span><span id="digital_unix"></span><span id="DIGITAL_UNIX"></span>**Digital Unix** (6)
 
 
 </dt> <dd></dd> <dt>
@@ -514,7 +514,7 @@ ATT UNIX
 
 </dt> <dd>
 
-Öffnen von VMS
+Öffnen von VMs
 
 </dd> <dt>
 
@@ -582,13 +582,13 @@ Microsoft Virtual Machine (VM) für Java
 
 </dt> <dd>
 
-Windows 3. x
+Windows 3.x
 
 </dd> <dt>
 
 <span id="WIN95"></span><span id="win95"></span>
 
-<span id="WIN95"></span><span id="win95"></span>**Win95** (16)
+<span id="WIN95"></span><span id="win95"></span>**WIN95** (16)
 
 
 </dt> <dd>
@@ -599,7 +599,7 @@ Windows 95
 
 <span id="WIN98"></span><span id="win98"></span>
 
-<span id="WIN98"></span><span id="win98"></span>**Win98** (17)
+<span id="WIN98"></span><span id="win98"></span>**WIN98** (17)
 
 
 </dt> <dd>
@@ -610,7 +610,7 @@ Windows 98
 
 <span id="WINNT"></span><span id="winnt"></span>
 
-<span id="WINNT"></span><span id="winnt"></span>**Winnt** (18)
+<span id="WINNT"></span><span id="winnt"></span>**WINNT** (18)
 
 
 </dt> <dd>
@@ -621,7 +621,7 @@ Windows NT
 
 <span id="WINCE"></span><span id="wince"></span>
 
-<span id="WINCE"></span><span id="wince"></span>**WinCE** (19)
+<span id="WINCE"></span><span id="wince"></span>**WINCE** (19)
 
 
 </dt> <dd>
@@ -664,7 +664,7 @@ NCR 3000
 
 <span id="Reliant_UNIX"></span><span id="reliant_unix"></span><span id="RELIANT_UNIX"></span>
 
-<span id="Reliant_UNIX"></span><span id="reliant_unix"></span><span id="RELIANT_UNIX"></span>**Abhängige UNIX** -(24)
+<span id="Reliant_UNIX"></span><span id="reliant_unix"></span><span id="RELIANT_UNIX"></span>**Reliant UNIX** (24)
 
 
 </dt> <dd></dd> <dt>
@@ -685,7 +685,7 @@ NCR 3000
 
 <span id="Sequent"></span><span id="sequent"></span><span id="SEQUENT"></span>
 
-<span id="Sequent"></span><span id="sequent"></span><span id="SEQUENT"></span>**Sequenent** (27)
+<span id="Sequent"></span><span id="sequent"></span><span id="SEQUENT"></span>**Sequent** (27)
 
 
 </dt> <dd></dd> <dt>
@@ -706,7 +706,7 @@ NCR 3000
 
 <span id="SunOS"></span><span id="sunos"></span><span id="SUNOS"></span>
 
-<span id="SunOS"></span><span id="sunos"></span><span id="SUNOS"></span>**Sonnen Betriebssystem** (30)
+<span id="SunOS"></span><span id="sunos"></span><span id="SUNOS"></span>**SunOS** (30)
 
 
 </dt> <dd></dd> <dt>
@@ -720,34 +720,34 @@ NCR 3000
 
 <span id="ASERIES"></span><span id="aseries"></span>
 
-<span id="ASERIES"></span><span id="aseries"></span>**Aseries** (32)
+<span id="ASERIES"></span><span id="aseries"></span>**ASERIES** (32)
 
 
 </dt> <dd>
 
-Eine Reihe
+A-Serie
 
 </dd> <dt>
 
 <span id="TandemNSK"></span><span id="tandemnsk"></span><span id="TANDEMNSK"></span>
 
-<span id="TandemNSK"></span><span id="tandemnsk"></span><span id="TANDEMNSK"></span>**Tandemnsk** (33)
+<span id="TandemNSK"></span><span id="tandemnsk"></span><span id="TANDEMNSK"></span>**TandemNSK** (33)
 
 
 </dt> <dd>
 
-Tandem NSK
+Verbund-NSK
 
 </dd> <dt>
 
 <span id="TandemNT"></span><span id="tandemnt"></span><span id="TANDEMNT"></span>
 
-<span id="TandemNT"></span><span id="tandemnt"></span><span id="TANDEMNT"></span>**Tandemnt** (34)
+<span id="TandemNT"></span><span id="tandemnt"></span><span id="TANDEMNT"></span>**TandemNT** (34)
 
 
 </dt> <dd>
 
-Tandem NT
+Nt-Verbund
 
 </dd> <dt>
 
@@ -764,7 +764,7 @@ BS2000/OSD
 
 <span id="LINUX"></span><span id="linux"></span>
 
-<span id="LINUX"></span><span id="linux"></span>**Linux** (36)
+<span id="LINUX"></span><span id="linux"></span>**LINUX** (36)
 
 
 </dt> <dd></dd> <dt>
@@ -785,21 +785,21 @@ BS2000/OSD
 
 <span id="VM_ESA"></span><span id="vm_esa"></span>
 
-<span id="VM_ESA"></span><span id="vm_esa"></span>**VM/ESA** (39)
+<span id="VM_ESA"></span><span id="vm_esa"></span>**VM/MARS** (39)
 
 
 </dt> <dd></dd> <dt>
 
 <span id="Interactive_UNIX"></span><span id="interactive_unix"></span><span id="INTERACTIVE_UNIX"></span>
 
-<span id="Interactive_UNIX"></span><span id="interactive_unix"></span><span id="INTERACTIVE_UNIX"></span>**Interaktives UNIX** (40)
+<span id="Interactive_UNIX"></span><span id="interactive_unix"></span><span id="INTERACTIVE_UNIX"></span>**Interactive UNIX** (40)
 
 
 </dt> <dd></dd> <dt>
 
 <span id="BSDUNIX"></span><span id="bsdunix"></span>
 
-<span id="BSDUNIX"></span><span id="bsdunix"></span>**Bsdunix** (41)
+<span id="BSDUNIX"></span><span id="bsdunix"></span>**BSDUNIX** (41)
 
 
 </dt> <dd>
@@ -824,7 +824,7 @@ BSD UNIX
 
 <span id="GNU_Hurd"></span><span id="gnu_hurd"></span><span id="GNU_HURD"></span>
 
-<span id="GNU_Hurd"></span><span id="gnu_hurd"></span><span id="GNU_HURD"></span>**GNU Hurd** (44)
+<span id="GNU_Hurd"></span><span id="gnu_hurd"></span><span id="GNU_HURD"></span>**GNU Gnud** (44)
 
 
 </dt> <dd></dd> <dt>
@@ -842,7 +842,7 @@ Mac OS 9
 
 <span id="MACH_Kernel"></span><span id="mach_kernel"></span><span id="MACH_KERNEL"></span>
 
-<span id="MACH_Kernel"></span><span id="mach_kernel"></span><span id="MACH_KERNEL"></span>**Mach-Kernel** (46)
+<span id="MACH_Kernel"></span><span id="mach_kernel"></span><span id="MACH_KERNEL"></span>**MACH-Kernel** (46)
 
 
 </dt> <dd></dd> <dt>
@@ -863,14 +863,14 @@ Mac OS 9
 
 <span id="EPOC"></span><span id="epoc"></span>
 
-<span id="EPOC"></span><span id="epoc"></span>**EPOC** (49)
+<span id="EPOC"></span><span id="epoc"></span>**ESAC** (49)
 
 
 </dt> <dd></dd> <dt>
 
 <span id="IxWorks"></span><span id="ixworks"></span><span id="IXWORKS"></span>
 
-<span id="IxWorks"></span><span id="ixworks"></span><span id="IXWORKS"></span>**Ixworks** (50)
+<span id="IxWorks"></span><span id="ixworks"></span><span id="IXWORKS"></span>**IxWorks** (50)
 
 
 </dt> <dd></dd> <dt>
@@ -884,7 +884,7 @@ Mac OS 9
 
 <span id="MiNT"></span><span id="mint"></span><span id="MINT"></span>
 
-<span id="MiNT"></span><span id="mint"></span><span id="MINT"></span>**Mint** (52)
+<span id="MiNT"></span><span id="mint"></span><span id="MINT"></span>**MiNT** (52)
 
 
 </dt> <dd></dd> <dt>
@@ -905,7 +905,7 @@ Mac OS 9
 
 <span id="NextStep"></span><span id="nextstep"></span><span id="NEXTSTEP"></span>
 
-<span id="NextStep"></span><span id="nextstep"></span><span id="NEXTSTEP"></span>**NeXTStep** (55)
+<span id="NextStep"></span><span id="nextstep"></span><span id="NEXTSTEP"></span>**NextStep** (55)
 
 
 </dt> <dd></dd> <dt>
@@ -917,7 +917,7 @@ Mac OS 9
 
 </dt> <dd>
 
-Palm OS
+Handflächenbetriebssystem
 
 </dd> <dt>
 
@@ -937,14 +937,14 @@ Palm OS
 
 <span id="Dedicated"></span><span id="dedicated"></span><span id="DEDICATED"></span>
 
-<span id="Dedicated"></span><span id="dedicated"></span><span id="DEDICATED"></span>**Dediziert** (59)
+<span id="Dedicated"></span><span id="dedicated"></span><span id="DEDICATED"></span>**Dedizierend** (59)
 
 
 </dt> <dd></dd> <dt>
 
 <span id="OS_390"></span><span id="os_390"></span>
 
-<span id="OS_390"></span><span id="os_390"></span>**Betriebssystem/390** (60)
+<span id="OS_390"></span><span id="os_390"></span>**OS/390** (60)
 
 
 </dt> <dd></dd> <dt>
@@ -968,47 +968,47 @@ Palm OS
 **OtherTypeDescription**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**maxlen**](/windows/desktop/WmiSdk/standard-qualifiers) (64), [**modelcorrespondence**](/windows/desktop/WmiSdk/standard-qualifiers) ("**CIM \_ OperatingSystem**.**OSType**")
+Qualifizierer: [**MaxLen**](/windows/desktop/WmiSdk/standard-qualifiers) (64), [**ModelCorrespondence**](/windows/desktop/WmiSdk/standard-qualifiers) ("**CIM \_ OperatingSystem**.**OSType**")
 </dt> </dl>
 
-Beschreibt den Hersteller und den Betriebs Systemtyp, wenn die Eigenschaft " **OSType** " auf 1 ("Other") festgelegt ist. Das Format der Zeichenfolge, die in **OtherTypeDescription** eingefügt wurde, sollte ähnlich wie die für **OSType** definierten **Werte** Zeichenfolgen sein. Diese Eigenschaft sollte auf NULL festgelegt werden, wenn **OSType** ein anderer Wert als 1 (eins) ist.
+Beschreibt den Hersteller- und Betriebssystemtyp, wenn die **OSType-Eigenschaft** auf 1 ("Other") festgelegt ist. Das Format der in **OtherTypeDescription** eingefügten Zeichenfolge sollte den für **OSType** definierten **Wertezeichenfolgen** ähneln. Diese Eigenschaft sollte auf NULL festgelegt werden, wenn **OSType** ein anderer Wert als 1 (eins) ist.
 
 </dd> <dt>
 
 **SizeStoredInPagingFiles**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt64**
+Datentyp: **uint64**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**mappingstrings**](/windows/desktop/WmiSdk/standard-qualifiers) ("MIF". DMTF- \| System Arbeitsspeicher-Einstellungen \| 001,3 "), [**Einheiten**](/windows/desktop/WmiSdk/standard-qualifiers) (" Kilobyte ")
+Qualifizierer: [**MappingStrings**](/windows/desktop/WmiSdk/standard-qualifiers) ("MIF. \|DMTF-Systemspeicher Einstellungen \| 001.3"), [**Einheiten**](/windows/desktop/WmiSdk/standard-qualifiers) ("Kilobytes")
 </dt> </dl>
 
-Die Anzahl der Kilobyte, die in den Auslagerungs Dateien des Betriebssystems gespeichert werden können. Diese Zahl stellt nicht die tatsächliche physische Größe der Auslagerungs Datei auf dem Datenträger dar. Der Wert 0 (null) gibt an, dass keine Auslagerungs Dateien vorhanden sind.
+Anzahl der Kilobytes, die in den Auslagerungsdateien des Betriebssystems gespeichert werden können. Diese Zahl stellt nicht die tatsächliche physische Größe der Auslagerungsdatei auf dem Datenträger dar. Der Wert 0 (null) gibt an, dass keine Auslagerungsdateien vorhanden sind.
 
-Weitere Informationen zur Verwendung von **UInt64** -Werten in Skripts finden Sie unter [Scripting in WMI](/windows/desktop/WmiSdk/creating-a-wmi-script).
+Weitere Informationen zur Verwendung von **uint64-Werten** in Skripts finden Sie unter [Skripterstellung in WMI.](/windows/desktop/WmiSdk/creating-a-wmi-script)
 
 </dd> <dt>
 
 **Status**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**maxlen**](/windows/desktop/WmiSdk/standard-qualifiers) (10), [**Display Name**](/windows/desktop/WmiSdk/standard-qualifiers) ("Status")
+Qualifizierer: [**MaxLen**](/windows/desktop/WmiSdk/standard-qualifiers) (10), [**DisplayName**](/windows/desktop/WmiSdk/standard-qualifiers) ("Status")
 </dt> </dl>
 
 Aktueller Status des Objekts.
@@ -1035,35 +1035,35 @@ Folgende Werte sind gültig:
 
 <span id="Degraded"></span><span id="degraded"></span><span id="DEGRADED"></span>
 
-Herunter **gestuft ("** heruntergestuft")
+**Heruntergestuft** ("Heruntergestuft")
 
 
 </dt> <dd></dd> <dt>
 
 <span id="Unknown"></span><span id="unknown"></span><span id="UNKNOWN"></span>
 
-**Unbekannt** ("unbekannt")
+**Unbekannt** ("Unbekannt")
 
 
 </dt> <dd></dd> <dt>
 
 <span id="Pred_Fail"></span><span id="pred_fail"></span><span id="PRED_FAIL"></span>
 
-**Pred-** Fehler ("pred Fail")
+**Pred Fail** ("Pred Fail")
 
 
 </dt> <dd></dd> <dt>
 
 <span id="Starting"></span><span id="starting"></span><span id="STARTING"></span>
 
-Wird **gestartet** ("wird gestartet")
+**Wird gestartet** ("Wird gestartet")
 
 
 </dt> <dd></dd> <dt>
 
 <span id="Stopping"></span><span id="stopping"></span><span id="STOPPING"></span>
 
-Wird **beendet ("wird angehalten** ")
+**Beenden** ("Wird beendet")
 
 
 </dt> <dd></dd> <dt>
@@ -1077,116 +1077,116 @@ Wird **beendet ("wird angehalten** ")
 
 <span id="Stressed"></span><span id="stressed"></span><span id="STRESSED"></span>
 
-**Betont** ("gestresst")
+**Mannslast** ("1000")
 
 
 </dt> <dd></dd> <dt>
 
 <span id="NonRecover"></span><span id="nonrecover"></span><span id="NONRECOVER"></span>
 
-**Nicht wiederherstellen** ("nicht wiederherstellen")
+**NonRecover** ("NonRecover")
 
 
 </dt> <dd></dd> <dt>
 
 <span id="No_Contact"></span><span id="no_contact"></span><span id="NO_CONTACT"></span>
 
-**Kein Kontakt** ("kein Kontakt")
+**Kein Kontakt** ("Kein Kontakt")
 
 
 </dt> <dd></dd> <dt>
 
 <span id="Lost_Comm"></span><span id="lost_comm"></span><span id="LOST_COMM"></span>
 
-**Verlorene** Kommunikations ("verlorene Kommunikations-")
+**Verlorenes Komma** ("Verlorenes Komma")
 
 
 </dt> <dd></dd> </dl>
 
 </dd> <dt>
 
-**Totaltauapspacesize**
+**TotalSwapSpaceSize**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt64**
+Datentyp: **uint64**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**Einheiten**](/windows/desktop/WmiSdk/standard-qualifiers) ("Kilobyte")
+Qualifizierer: [**Einheiten**](/windows/desktop/WmiSdk/standard-qualifiers) ("Kilobytes")
 </dt> </dl>
 
-Gesamter Auslagerungs Bereich in Kilobyte. Dieser Wert kann NULL (nicht angegeben) sein, wenn der Auslagerungs Bereich nicht von den Auslagerungs Dateien unterschieden wird. Allerdings unterscheiden einige Betriebssysteme diese Konzepte. Beispielsweise können gesamte Prozesse in UNIX "ausgetauscht" werden, wenn die freie Seitenliste sinkt und unter dem angegebenen Betrag liegt.
+Gesamter Auslagerungsspeicherplatz in Kilobyte. Dieser Wert kann NULL (nicht angegeben) sein, wenn der Auslagerungsbereich nicht von Seitendateien unterschieden wird. Einige Betriebssysteme unterscheiden diese Konzepte jedoch. Beispielsweise können ganze Prozesse in UNIX "ausgetauscht" werden, wenn die Liste der kostenlosen Seiten unter einen angegebenen Wert fällt und bleibt.
 
-Weitere Informationen zur Verwendung von **UInt64** -Werten in Skripts finden Sie unter [Scripting in WMI](/windows/desktop/WmiSdk/creating-a-wmi-script).
+Weitere Informationen zur Verwendung von **uint64-Werten** in Skripts finden Sie unter [Skripterstellung in WMI.](/windows/desktop/WmiSdk/creating-a-wmi-script)
 
 </dd> <dt>
 
-**Totalvirtualmemorysize**
+**TotalVirtualMemorySize**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt64**
+Datentyp: **uint64**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**Einheiten**](/windows/desktop/WmiSdk/standard-qualifiers) ("Kilobyte")
+Qualifizierer: [**Einheiten**](/windows/desktop/WmiSdk/standard-qualifiers) ("Kilobytes")
 </dt> </dl>
 
-Anzahl der Kilobyte des virtuellen Arbeitsspeichers. Berechnen Sie diese z. b., indem Sie die Menge an Gesamt RAM der Größe des Auslagerungs Raums hinzufügen (d. h. die Menge an Arbeitsspeicher in der **SizeStoredInPagingFiles** -Eigenschaft hinzufügen oder durch das Computersystem aggregiert).
+Anzahl der Kilobytes des virtuellen Arbeitsspeichers. Berechnen Sie dies beispielsweise, indem Sie die Gesamtgröße des RAM zur Menge des Auslagerungsspeichers hinzufügen (d. h. die Menge an Arbeitsspeicher in der **SizeStoredInPagingFiles-Eigenschaft** hinzufügen oder vom Computersystem aggregiert).
 
-Weitere Informationen zur Verwendung von **UInt64** -Werten in Skripts finden Sie unter [Scripting in WMI](/windows/desktop/WmiSdk/creating-a-wmi-script).
+Weitere Informationen zur Verwendung von **uint64-Werten** in Skripts finden Sie unter [Skripterstellung in WMI.](/windows/desktop/WmiSdk/creating-a-wmi-script)
 
 </dd> <dt>
 
 **TotalVisibleMemorySize**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt64**
+Datentyp: **uint64**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**Einheiten**](/windows/desktop/WmiSdk/standard-qualifiers) ("Kilobyte")
+Qualifizierer: [**Einheiten**](/windows/desktop/WmiSdk/standard-qualifiers) ("Kilobytes")
 </dt> </dl>
 
-Gesamtmenge an physischem Arbeitsspeicher (in Kilobyte), die für das Betriebssystem verfügbar ist. Dieser Wert gibt nicht notwendigerweise die tatsächliche Menge an physischem Speicher an, sondern dem Betriebssystem als verfügbar gemeldet wird.
+Gesamtmenge des physischen Arbeitsspeichers in Kilobyte, der für das Betriebssystem verfügbar ist. Dieser Wert gibt nicht unbedingt die tatsächliche Menge an physischem Arbeitsspeicher an, sondern gibt an, was dem Betriebssystem als verfügbar gemeldet wird.
 
-Weitere Informationen zur Verwendung von **UInt64** -Werten in Skripts finden Sie unter [Scripting in WMI](/windows/desktop/WmiSdk/creating-a-wmi-script).
+Weitere Informationen zur Verwendung von **uint64-Werten** in Skripts finden Sie unter [Skripterstellung in WMI.](/windows/desktop/WmiSdk/creating-a-wmi-script)
 
 </dd> <dt>
 
 **Version**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**mappingstrings**](/windows/desktop/WmiSdk/standard-qualifiers) ("MIF". DMTF- \| Betriebs System \| 001,3 ")
+Qualifizierer: [**MappingStrings**](/windows/desktop/WmiSdk/standard-qualifiers) ("MIF. \|DMTF-Betriebssystem \| 001.3")
 </dt> </dl>
 
 Version des Vorgangs.
 
-Die Version des Vorgangs sollte eine der folgenden Formen aufweisen:
+Die Version des Vorgangs sollte eine der folgenden Formen haben:
 
 -   <major>.<minor>.<revision>
 -   <major>.<minor><letter><revision>
 
 </dd> </dl>
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Die **CIM- \_ OperatingSystem** -Klasse wird von [**CIM \_ LogicalElement**](cim-logicalelement.md)abgeleitet.
+Die **CIM \_ OperatingSystem-Klasse** wird von [**CIM \_ LogicalElement**](cim-logicalelement.md)abgeleitet.
 
-Diese Klasse wird von WMI nicht implementiert. Informationen zu WMI-Klassen, die vom **CIM- \_ OperatingSystem** abgeleitet sind, finden Sie unter [Win32-Klassen](win32-provider.md).
+WMI implementiert diese Klasse nicht. Informationen zu WMI-Klassen, die von **CIM \_ OperatingSystem** abgeleitet sind, finden Sie unter [Win32-Klassen.](win32-provider.md)
 
-Diese Dokumentation wird von den von der DMTF veröffentlichten CIM-Klassen Beschreibungen abgeleitet. Microsoft hat möglicherweise Änderungen an den korrekten geringfügigen Fehlern vorgenommen, den Microsoft SDK-Dokumentations Standards entsprechen oder weitere Informationen bereitstellen.
+Diese Dokumentation wird von den CIM-Klassenbeschreibungen abgeleitet, die von dmtf veröffentlicht wurden. Möglicherweise hat Microsoft Änderungen vorgenommen, um kleinere Fehler zu korrigieren, den Dokumentationsstandards des Microsoft SDK zu entsprechen oder weitere Informationen bereitzustellen.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -1196,13 +1196,13 @@ Diese Dokumentation wird von den von der DMTF veröffentlichten CIM-Klassen Besc
 |-------------------------------------|-----------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows Vista<br/>                                                                |
 | Unterstützte Mindestversion (Server)<br/> | Windows Server 2008<br/>                                                          |
-| Namespace<br/>                | Root \\ CIMV2<br/>                                                                  |
-| MOF<br/>                      | <dl> <dt>Cimwin32. MOF</dt> </dl> |
+| Namespace<br/>                | \\Stamm-CIMV2<br/>                                                                  |
+| MOF<br/>                      | <dl> <dt>CIMWin32.mof</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>CIMWin32.dll</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 

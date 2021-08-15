@@ -23,7 +23,7 @@ ms.locfileid: "118498786"
 ---
 # <a name="eaptype-element-v1-schema-connection-property"></a>EapType-Element (v1-Schemaverbindungseigenschaft)
 
-Das **EapType-Element** erfasst eine methodenspezifische Konfiguration innerhalb des Eap-Elements.
+Das **EapType-Element** erfasst die methodenspezifische Konfiguration innerhalb des Eap-Elements.
 
 ``` syntax
 <xs:element name="EapType"
@@ -41,7 +41,7 @@ Das **EapType-Element** ist abstrakt. Jede Methode muss ein abgeleitetes Element
 
 | Role | Unterstützte Mindestversion des Betriebssystems |
 |------|------------------------------|
-| Client<br/> | Windows Nur \[ Vista-Desktop-Apps\]<br/>       |
+| Client<br/> | Windows \[Nur Vista-Desktop-Apps\]<br/>       |
 | Server<br/> | Windows Nur Server \[ 2008-Desktop-Apps\]<br/> |
 
 

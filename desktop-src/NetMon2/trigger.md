@@ -1,5 +1,5 @@
 ---
-description: Die TRIGGER-Struktur gibt eine Aktion an, die vom Treiber zu einem bestimmten Zeitpunkt ausgeführt werden soll.
+description: Die TRIGGER-Struktur gibt eine Aktion an, die vom Treiber zu einem bestimmten Zeitpunkt ergriffen werden soll.
 ms.assetid: 63541796-b0d8-456c-8544-697fedbe05f7
 title: TRIGGER-Struktur (Netmon.h)
 ms.topic: reference
@@ -22,7 +22,7 @@ ms.locfileid: "118363018"
 ---
 # <a name="trigger-structure"></a>TRIGGER-Struktur
 
-Die **TRIGGER-Struktur** gibt eine Aktion an, die vom Treiber zu einem bestimmten Zeitpunkt ausgeführt werden soll.
+Die **TRIGGER-Struktur** gibt eine Aktion an, die vom Treiber zu einem bestimmten Zeitpunkt ergriffen werden soll.
 
 ## <a name="syntax"></a>Syntax
 
@@ -48,7 +48,7 @@ typedef struct _TRIGGER {
 **TriggerActive**
 </dt> <dd>
 
-Ein boolescher Wert, der bestimmt, ob der Trigger vom Treiber beachtet werden soll.
+Ein boolescher Wert, der bestimmt, ob der Treiber auf den Trigger achten soll.
 
 </dd> <dt>
 
@@ -62,7 +62,7 @@ Der Op-Code des Triggers.
 **Triggeraction**
 </dt> <dd>
 
-Aktion, die der Trigger ergreifen soll, wenn er ausgelöst wird.
+Aktion, die der Trigger bei Auslösung ergreifen soll.
 
 </dd> <dt>
 
@@ -76,7 +76,7 @@ Triggerflags.
 **TriggerPatternMatch**
 </dt> <dd>
 
-Die Triggermuster-Übereinstimmung.
+Die Übereinstimmung mit dem Triggermuster.
 
 </dd> <dt>
 

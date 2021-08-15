@@ -26,7 +26,7 @@ Die [**XMHALF4-Struktur**](/windows/desktop/api/DirectXPackedVector/ns-directxpa
 
 | Methoden                                              | BESCHREIBUNG                                                                                                        |
 |------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------|
-| [**operator =**](/windows/win32/api/directxpackedvector/nf-directxpackedvector-xmhalf4-operator-assign)<br/> | Weist die Vektorkomponentendaten aus einer Instanz von `XMHALF4` der aktuellen Instanz von `XMHALF4` zu. <br/> |
+| [**operator =**](/windows/win32/api/directxpackedvector/nf-directxpackedvector-xmhalf4-operator-assign)<br/> | Weist der aktuellen Instanz von die Vektorkomponentendaten von `XMHALF4` einer Instanz von `XMHALF4` zu. <br/> |
 
 
 

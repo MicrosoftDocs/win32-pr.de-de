@@ -1,23 +1,23 @@
 ---
-description: Die CIM \_ Diskpartition-Klasse stellt die folgenden Methoden zur Verfügung.
+description: Die CIM \_ DiskPartition-Klasse macht die folgenden Methoden verfügbar.
 ms.assetid: 3168CA9C-5A74-4AF0-8C08-002C8DB87199
 ms.tgt_platform: multiple
-title: CIM_DiskPartition Methoden
+title: CIM_DiskPartition-Methoden
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 6ba7887f86f215634674b0bd5c5ae3a90658b5be
-ms.sourcegitcommit: c7add10d695482e1ceb72d62b8a4ebd84ea050f7
+ms.openlocfilehash: c26d2cd0baa54b63c07eb551cc2543c9c789ed3149361fc2bbbe1b8abe614dba
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "103958475"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119080694"
 ---
-# <a name="cim_diskpartition-methods"></a>CIM \_ Diskpartition-Methoden
+# <a name="cim_diskpartition-methods"></a>CIM \_ DiskPartition-Methoden
 
-Die [**CIM \_ Diskpartition**](cim-diskpartition.md) -Klasse stellt die folgenden Methoden zur Verfügung.
+Die [**CIM \_ DiskPartition-Klasse**](cim-diskpartition.md) macht die folgenden Methoden verfügbar.
 
 > [!IMPORTANT]
-> Die Klassen der DMTF-CIM (Common Information Model) sind die übergeordneten Klassen, auf denen WMI-Klassen erstellt werden. WMI unterstützt zurzeit nur die [CIM 2. x-Versions Schemas](https://dmtf.org/standards/cim/schemas).
+> Die CIM-Klassen (Distributed Management Task Force) (DMTF) (Common Information Model) sind die übergeordneten Klassen, auf denen WMI-Klassen erstellt werden. WMI unterstützt derzeit nur die [CIM 2.x-Versionsschemas.](https://dmtf.org/standards/cim/schemas)
 
  
 

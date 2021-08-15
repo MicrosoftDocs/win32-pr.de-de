@@ -26,7 +26,7 @@ Windows Portable Geräte unterstützen die folgenden allgemeinen Informationseig
 
 
 
-| Eigenschaft                                      | VarType        | Beschreibung                                                                                              |
+| Eigenschaft                                      | VarType        | BESCHREIBUNG                                                                                              |
 |-----------------------------------------------|----------------|----------------------------------------------------------------------------------------------------------|
 | **WPD \_ – ALLGEMEINE INFORMATIONEN \_ \_ HINWEISE**           | **VT \_ LPWSTR** | Bei Terminen, Aufgaben und ähnlichen Objekten enthält diese Eigenschaft alle Hinweise für das gegebene Objekt.     |
 | **WPD \_ COMMON \_ INFORMATION \_ SUBJECT**         | **VT \_ LPWSTR** | Ein -Wert, der das Betrefffeld dieses Objekts angibt.                                                 |

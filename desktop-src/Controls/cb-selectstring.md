@@ -1,9 +1,9 @@
 ---
-title: CB_SELECTSTRING Meldung (Winuser. h)
-description: Durchsucht die Liste eines Kombinations Felds nach einem Element, das mit den Zeichen in einer angegebenen Zeichenfolge beginnt. Wenn ein übereinstimmendes Element gefunden wird, wird es ausgewählt und in das Bearbeitungs Steuerelement kopiert.
+title: CB_SELECTSTRING-Nachricht (Winuser.h)
+description: Durchsucht die Liste eines Kombinationsfelds nach einem Element, das mit den Zeichen in einer angegebenen Zeichenfolge beginnt. Wenn ein übereinstimmendes Element gefunden wird, wird es ausgewählt und in das Bearbeitungssteuerelement kopiert.
 ms.assetid: c08dff72-7e44-40ed-8b64-513359292829
 keywords:
-- Windows-Steuerelemente für CB_SELECTSTRING Meldung
+- CB_SELECTSTRING Windows-Steuerelemente für Nachrichten
 topic_type:
 - apiref
 api_name:
@@ -14,16 +14,16 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 2913b95c02cdfd3c7a9c96a8652038a04d8fde8f
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 4bedef20646664e37405c97a97f9e49147cad8acc08c05e33172e44a34298f5f
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104040593"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119019968"
 ---
-# <a name="cb_selectstring-message"></a>CB- \_ SelectString-Nachricht
+# <a name="cb_selectstring-message"></a>CB \_ SELECTSTRING-Nachricht
 
-Durchsucht die Liste eines Kombinations Felds nach einem Element, das mit den Zeichen in einer angegebenen Zeichenfolge beginnt. Wenn ein übereinstimmendes Element gefunden wird, wird es ausgewählt und in das Bearbeitungs Steuerelement kopiert.
+Durchsucht die Liste eines Kombinationsfelds nach einem Element, das mit den Zeichen in einer angegebenen Zeichenfolge beginnt. Wenn ein übereinstimmendes Element gefunden wird, wird es ausgewählt und in das Bearbeitungssteuerelement kopiert.
 
 ## <a name="parameters"></a>Parameter
 
@@ -32,26 +32,26 @@ Durchsucht die Liste eines Kombinations Felds nach einem Element, das mit den Ze
 *wParam* 
 </dt> <dd>
 
-Der null basierte Index des Elements vor dem ersten zu durchsuchenden Element. Wenn die Suche das Ende der Liste erreicht, wird Sie von der Spitze der Liste zurück zu dem durch den *wParam* -Parameter angegebenen Element weiter angezeigt. Wenn *wParam* den Wert-1 hat, wird die gesamte Liste von Anfang an durchsucht.
+Der nullbasierte Index des Elements vor dem ersten zu durchsuchenden Element. Wenn die Suche den unteren Rand der Liste erreicht, wird sie vom Anfang der Liste zurück zu dem element fortgesetzt, das durch den *wParam-Parameter* angegeben wird. Wenn *wParam* -1 ist, wird die gesamte Liste von Anfang an durchsucht.
 
 </dd> <dt>
 
 *lParam* 
 </dt> <dd>
 
-Ein Zeiger auf die NULL-terminierte Zeichenfolge, die die zu durchsuchenden Zeichen enthält. Bei der Suche wird die Groß-/Kleinschreibung nicht beachtet, sodass diese Zeichenfolge eine beliebige Kombination von Groß-und Kleinbuchstaben enthalten kann.
+Ein Zeiger auf die auf NULL endende Zeichenfolge, die die Zeichen enthält, nach denen gesucht werden soll. Bei der Suche wird die Groß-/Kleinschreibung nicht beachtet, sodass diese Zeichenfolge eine beliebige Kombination aus Groß- und Kleinbuchstaben enthalten kann.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Wenn die Zeichenfolge gefunden wird, ist der Rückgabewert der Index des ausgewählten Elements. Wenn die Suche nicht erfolgreich ist, ist der Rückgabewert CB \_ Err, und die aktuelle Auswahl wird nicht geändert.
+Wenn die Zeichenfolge gefunden wird, ist der Rückgabewert der Index des ausgewählten Elements. Wenn die Suche nicht erfolgreich ist, lautet der Rückgabewert CB \_ ERR, und die aktuelle Auswahl wird nicht geändert.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Eine Zeichenfolge wird nur ausgewählt, wenn die Zeichen vom Startpunkt den Zeichen in der Präfix Zeichenfolge entsprechen.
+Eine Zeichenfolge wird nur ausgewählt, wenn die Zeichen vom Anfangspunkt mit den Zeichen in der Präfixzeichenfolge übereinstimmen.
 
-Wenn Sie das Kombinations Feld mit einem vom Besitzer gezeichneten Stil, aber ohne den [**CBS \_ hasstrings**](combo-box-styles.md) -Stil erstellen, hängt die **CB- \_ SelectString** -Nachricht davon ab, ob Sie das CBS- [**\_ Sortier**](combo-box-styles.md) Format verwenden. Wenn der **CBS- \_ Sortier** Stil verwendet wird, sendet das System [**WM \_ compareitem**](wm-compareitem.md) -Nachrichten an den Besitzer des Kombinations Felds, um zu bestimmen, welches Element mit der angegebenen Zeichenfolge übereinstimmt. Wenn Sie den **sortierungstil \_ CBS** nicht verwenden, versucht **CB \_ SelectString** , den **DWORD** -Wert mit dem Wert des *LPARAM* -Parameters abzugleichen.
+Wenn Sie das Kombinationsfeld mit einem vom Besitzer gezeichneten Stil, aber ohne den [**CBS \_ HASSTRINGS-Stil**](combo-box-styles.md) erstellen, hängt die **CB \_ SELECTSTRING-Nachricht** davon ab, ob Sie den [**CBS \_ SORT-Stil**](combo-box-styles.md) verwenden. Wenn der **CBS \_ SORT-Stil** verwendet wird, sendet das System [**WM \_ COMPAREITEM-Nachrichten**](wm-compareitem.md) an den Besitzer des Kombinationsfelds, um zu bestimmen, welches Element mit der angegebenen Zeichenfolge übereinstimmt. Wenn Sie den **CBS \_ SORT-Stil** nicht verwenden, versucht **CB \_ SELECTSTRING,** den **DWORD-Wert** mit dem Wert des *lParam-Parameters* abzugleichen.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -59,29 +59,29 @@ Wenn Sie das Kombinations Feld mit einem vom Besitzer gezeichneten Stil, aber oh
 
 | Anforderung | Wert |
 |-------------------------------------|----------------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>                                                           |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2003 \[ -Desktop-Apps\]<br/>                                                     |
-| Header<br/>                   | <dl> <dt>Winuser. h (Windows. h einschließen)</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows \[Nur Vista-Desktop-Apps\]<br/>                                                           |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2003-Desktop-Apps\]<br/>                                                     |
+| Header<br/>                   | <dl> <dt>Winuser.h (include Windows.h)</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-**Verweis**
+**Referenz**
 </dt> <dt>
 
-[**CB- \_ FindString**](cb-findstring.md)
+[**CB \_ FINDSTRING**](cb-findstring.md)
 </dt> <dt>
 
-[**CB- \_ FindStringExact**](cb-findstringexact.md)
+[**CB \_ FINDSTRINGEXACT**](cb-findstringexact.md)
 </dt> <dt>
 
-[**CB \_ setcurrsel**](cb-setcursel.md)
+[**CB \_ SETCURSEL**](cb-setcursel.md)
 </dt> <dt>
 
-[**WM- \_ compareitem**](wm-compareitem.md)
+[**WM \_ COMPAREITEM**](wm-compareitem.md)
 </dt> </dl>
 
  

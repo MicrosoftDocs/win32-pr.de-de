@@ -1,10 +1,10 @@
 ---
 title: GetStreamPropertiesOperation-Klasse
-description: Registriert einen Ereignishandler, der aufgerufen wird, wenn der von GetStreamPropertiesAsync gestartete asynchrone Vorgang abgeschlossen wird, und stellt eine Methode bereit, die die Ergebnisse des Vorgangs zurückgibt.
+description: Registriert einen Ereignishandler, der aufgerufen wird, wenn der von GetStreamPropertiesAsync gestartete asynchrone Vorgang abgeschlossen wird, und stellt eine Methode zur Rückgabe der Ergebnisse des Vorgangs zur Anwendung.
 ms.assetid: 1D1C9B73-9D7B-4886-AFA4-D35DF10367CD
 keywords:
-- Media Streaming-API der GetStreamPropertiesOperation-Klasse
-- Beschreibung der GetStreamPropertiesOperation-Klasse für die Medienstreaming-API
+- GetStreamPropertiesOperation-Klasse Media Streaming-API
+- GetStreamPropertiesOperation-Klasse Media Streaming-API , beschrieben
 topic_type:
 - apiref
 api_name:
@@ -23,9 +23,9 @@ ms.locfileid: "118473442"
 ---
 # <a name="getstreampropertiesoperation-class"></a>GetStreamPropertiesOperation-Klasse
 
-Registriert einen Ereignishandler, der aufgerufen wird, wenn der von [**GetStreamPropertiesAsync**](/previous-versions/windows/desktop/legacy/hh829001(v=vs.85)) gestartete asynchrone Vorgang abgeschlossen wird, und stellt eine Methode bereit, die die Ergebnisse des Vorgangs zurückgibt.
+Registriert einen Ereignishandler, der aufgerufen wird, wenn der von [**GetStreamPropertiesAsync**](/previous-versions/windows/desktop/legacy/hh829001(v=vs.85)) gestartete asynchrone Vorgang abgeschlossen wird, und stellt eine Methode zur Rückgabe der Ergebnisse des Vorgangs zur Anwendung.
 
-**GetStreamPropertiesOperation** verfügt über diese Typen von Membern:
+**GetStreamPropertiesOperation verfügt** über die folgenden Membertypen:
 
 -   [Methoden](#methods)
 -   [Eigenschaften](#getstreampropertiesoperation-class)
@@ -38,7 +38,7 @@ Die **GetStreamPropertiesOperation-Klasse** verfügt über diese Methoden.
 
 | Methode                                                        | BESCHREIBUNG                                                                                                                                          |
 |:--------------------------------------------------------------|:-----------------------------------------------------------------------------------------------------------------------------------------------------|
-| [**GetResults**](getstreampropertiesoperation-getresults.md) | Gibt die Ergebnisse des asynchronen Vorgangs zurück, der von [**GetStreamPropertiesAsync**](/previous-versions/windows/desktop/legacy/hh829001(v=vs.85))gestartet wurde.<br/> |
+| [**GetResults**](getstreampropertiesoperation-getresults.md) | Gibt die Ergebnisse des asynchronen Vorgangs zurück, der von [**GetStreamPropertiesAsync gestartet wurde.**](/previous-versions/windows/desktop/legacy/hh829001(v=vs.85))<br/> |
 
 
 

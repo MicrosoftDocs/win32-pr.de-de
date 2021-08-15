@@ -1,9 +1,9 @@
 ---
-title: Switch-Attribut
-description: Das Schlüsselwort Switch wählt die Diskriminante für eine gekapselte \_ Union aus.
+title: switch-Attribut
+description: Das switch-Schlüsselwort wählt die Diskriminanz für eine gekapselte \_ Union aus.
 ms.assetid: 66179b68-852f-4943-9105-e9fb310f3c2e
 keywords:
-- Attribut-Mittel l wechseln
+- switch-Attribut MIDL
 topic_type:
 - apiref
 api_name:
@@ -12,16 +12,16 @@ api_type:
 - NA
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 9cdf9342789d5603a3b64d778bd60364eebde50e
-ms.sourcegitcommit: 57758ecb246c84d65e6e0e4bd5570d9176fa39cd
+ms.openlocfilehash: 422b52a339a83cbaf59a9d65c0ed0e4e7e41533dcbf0be962147327145588a7b
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "103948221"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119013548"
 ---
-# <a name="switch-attribute"></a>Switch-Attribut
+# <a name="switch-attribute"></a>switch-Attribut
 
-Das Schlüsselwort **Switch** wählt die Diskriminante für eine [**gekapselte \_ Union**](encapsulated-unions.md)aus.
+Das **switch-Schlüsselwort** wählt die Diskriminanz für eine [**gekapselte \_ Union**](encapsulated-unions.md)aus.
 
 ``` syntax
 switch (switch-type switch-name)
@@ -31,17 +31,17 @@ switch (switch-type switch-name)
 
 <dl> <dt>
 
-*Switch-Type* 
+*switch-type* 
 </dt> <dd>
 
-Gibt einen [**int**](int.md)-, [**char**](-char.md)-, [**Enumeration**](enum.md) -Typ oder einen Bezeichner an, der zu einem dieser Typen aufgelöst wird.
+Gibt einen [**int-,**](int.md) [**char-,**](-char.md) [**enum-Typ**](enum.md) oder einen Bezeichner an, der in einen dieser Typen aufgelöst wird.
 
 </dd> <dt>
 
-*SwitchName* 
+*switch-name* 
 </dt> <dd>
 
-Gibt den Namen der Variablen vom Typ *Switch-Type* an, der als Union-diskriminant fungiert.
+Gibt den Namen der Variablen vom Typ *switch-type* an, die als union-diskriminant fungiert.
 
 </dd> </dl>
 
@@ -72,24 +72,24 @@ typedef struct _S1_TYPE
 
 <dl> <dt>
 
-[Schnittstellen Definitionsdatei (IDL)](interface-definition-idl-file.md)
+[IDL-Datei (Interface Definition)](interface-definition-idl-file.md)
 </dt> <dt>
 
-[Nicht gekapselt Unions](nonencapsulated-unions.md)
+[Nicht gekapselte Unions](nonencapsulated-unions.md)
 </dt> <dt>
 
-[**Switch \_ ist**](switch-is.md)
+[**switch \_ ist**](switch-is.md)
 </dt> <dt>
 
-[**\_Switchtyp**](switch-type.md)
+[**\_switch-Typ**](switch-type.md)
 </dt> <dt>
 
 [**Union**](union.md)
 </dt> </dl>
 
- 
+ 
 
- 
+ 
 
 
 

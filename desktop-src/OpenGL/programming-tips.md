@@ -15,7 +15,7 @@ ms.locfileid: "118358290"
 ---
 # <a name="programming-tips"></a>Programmiertipps
 
-In diesem Abschnitt werden einige nützliche Programmierrichtlinien aufgeführt. Diese Tipps basieren auf den Absichten der Designer von OpenGL, nicht auf Erfahrungen mit tatsächlichen Anwendungen und Implementierungen. Dieser Abschnitt enthält die folgenden Themen:
+In diesem Abschnitt werden einige nützliche Programmierrichtlinien aufgeführt. Diese Tipps basieren auf den Absichten der Designer von OpenGL und nicht auf der Erfahrung mit tatsächlichen Anwendungen und Implementierungen. Dieser Abschnitt enthält die folgenden Themen:
 
 -   [OpenGL Correctness Tipps](opengl-correctness-tips.md)
 -   [OpenGL Performance Tipps](opengl-performance-tips.md)

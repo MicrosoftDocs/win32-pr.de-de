@@ -13,7 +13,7 @@ ms.locfileid: "118478707"
 ---
 # <a name="helpcontextid-property-command-object"></a>HelpContextID-Eigenschaft (Befehlsobjekt)
 
-\[Microsoft Agent ist ab Version Windows 7 veraltet und möglicherweise in nachfolgenden Versionen von Windows.\]
+\[Microsoft Agent ist ab Version Windows 7 veraltet und in nachfolgenden Versionen von Windows.\]
 
 <dl> <dt>
 

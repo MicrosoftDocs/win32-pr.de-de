@@ -1,9 +1,9 @@
 ---
-title: TBM_GETTOOLTIPS Meldung (kommstrg. h)
-description: Ruft das Handle für das QuickInfo-Steuerelement ab, das der TrackBar zugewiesen ist, sofern vorhanden.
+title: TBM_GETTOOLTIPS (Commctrl.h)
+description: Ruft das Handle für das QuickInfo-Steuerelement ab, das der Trackleiste zugewiesen ist(sofern verfügbar).
 ms.assetid: 30efef12-1aec-4635-94a7-1843db404c4f
 keywords:
-- Windows-Steuerelemente für TBM_GETTOOLTIPS Meldung
+- TBM_GETTOOLTIPS meldungssteuerelemente Windows
 topic_type:
 - apiref
 api_name:
@@ -14,16 +14,16 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: e02b0b757b1aabfef2c9df2e80ca9f96542ba4a1
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 4c97c94ab3a696f5967f724e76d2d8702a01275bedc06ad7c13907d57710a078
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "103858908"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119078064"
 ---
-# <a name="tbm_gettooltips-message"></a>TBM \_ gettooltips-Meldung
+# <a name="tbm_gettooltips-message"></a>TBM \_ GETTOOLTIPS-Nachricht
 
-Ruft das Handle für das QuickInfo-Steuerelement ab, das der TrackBar zugewiesen ist, sofern vorhanden.
+Ruft das Handle für das QuickInfo-Steuerelement ab, das der Trackleiste zugewiesen ist(sofern verfügbar).
 
 ## <a name="parameters"></a>Parameter
 
@@ -37,7 +37,7 @@ Ruft das Handle für das QuickInfo-Steuerelement ab, das der TrackBar zugewiesen
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt das Handle für das QuickInfo-Steuerelement zurück, das der TrackBar zugewiesen ist, oder **null** , wenn Quick Infos nicht verwendet werden. Wenn das TrackBar-Steuerelement den [**TSB- \_ Tooltips**](trackbar-control-styles.md) -Stil nicht verwendet, ist der Rückgabewert **null**.
+Gibt das Handle an das QuickInfo-Steuerelement zurück, das der Trackleiste zugewiesen ist, oder **NULL,** wenn QuickInfos nicht verwendet werden. Wenn das Trackbar-Steuerelement nicht das [**\_ TBS-TOOLTIPS-Format**](trackbar-control-styles.md) verwendet, ist der Rückgabewert **NULL.**
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -45,9 +45,9 @@ Gibt das Handle für das QuickInfo-Steuerelement zurück, das der TrackBar zugew
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>                                        |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2003 \[ -Desktop-Apps\]<br/>                                  |
-| Header<br/>                   | <dl> <dt>Kommstrg. h</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur \[ Vista-Desktop-Apps\]<br/>                                        |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2003-Desktop-Apps\]<br/>                                  |
+| Header<br/>                   | <dl> <dt>Commctrl.h</dt> </dl> |
 
 
 

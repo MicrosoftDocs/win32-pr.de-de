@@ -1,5 +1,5 @@
 ---
-description: 'Weitere Informationen zu: EsentTableNotEmptyException-Klasse'
+description: 'Weitere Informationen finden Sie unter: EsentTableNotEmptyException-Klasse'
 title: EsentTableNotEmptyException-Klasse
 TOCTitle: EsentTableNotEmptyException class
 ms:assetid: T:Microsoft.Isam.Esent.Interop.EsentTableNotEmptyException

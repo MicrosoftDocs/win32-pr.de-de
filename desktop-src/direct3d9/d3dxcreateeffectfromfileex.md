@@ -1,7 +1,7 @@
 ---
-description: Erstellen eines Effekts aus einer Beschreibung des ASCII-oder binären Effekts. Diese Funktion ist eine erweiterte Version von D3DXCreateEffectFromFile, mit der eine Anwendung steuern kann, welche Parameter vom Effects-System ignoriert werden.
+description: Erstellen Sie einen Effekt aus einer ASCII- oder binären Effektbeschreibung. Diese Funktion ist eine erweiterte Version von D3DXCreateEffectFromFile, mit der eine Anwendung steuern kann, welche Parameter vom Effektsystem ignoriert werden.
 ms.assetid: 963caa1e-bc1a-4d4b-bdb1-50b17d8b4132
-title: D3DXCreateEffectFromFileEx-Funktion (D3DX9Effect. h)
+title: D3DXCreateEffectFromFileEx-Funktion (D3DX9Effect.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -14,16 +14,16 @@ api_type:
 api_location:
 - D3dx9.lib
 - D3dx9.dll
-ms.openlocfilehash: b3d97c5aa23dd0711cfb00585e5b8ba7d410fc02
-ms.sourcegitcommit: 14010c34b35fa268046c7683f021f86de08ddd0a
+ms.openlocfilehash: 5f0b329502e6b5e957e1d8c0761fe19fa6bc1e8420269a6329435ba27a53f44c
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "106355218"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118526554"
 ---
 # <a name="d3dxcreateeffectfromfileex-function"></a>D3DXCreateEffectFromFileEx-Funktion
 
-Erstellen eines Effekts aus einer Beschreibung des ASCII-oder binären Effekts. Diese Funktion ist eine erweiterte Version von [**D3DXCreateEffectFromFile**](d3dxcreateeffectfromfile.md) , mit der eine Anwendung steuern kann, welche Parameter vom Effects-System ignoriert werden.
+Erstellen Sie einen Effekt aus einer ASCII- oder binären Effektbeschreibung. Diese Funktion ist eine erweiterte Version von [**D3DXCreateEffectFromFile,**](d3dxcreateeffectfromfile.md) mit der eine Anwendung steuern kann, welche Parameter vom Effektsystem ignoriert werden.
 
 ## <a name="syntax"></a>Syntax
 
@@ -48,70 +48,70 @@ HRESULT D3DXCreateEffectFromFileEx(
 
 <dl> <dt>
 
-*pdevice* \[ in\]
+*pDevice* \[ In\]
 </dt> <dd>
 
 Typ: **[ **LPDIRECT3DDEVICE9**](/windows/win32/api/d3d9helper/nn-d3d9helper-idirect3ddevice9)**
 
-Zeiger auf das Gerät, das den Effekt erzeugt. Siehe [**IDirect3DDevice9**](/windows/win32/api/d3d9helper/nn-d3d9helper-idirect3ddevice9).
+Zeiger auf das Gerät, das den Effekt erstellt. Siehe [**IDirect3DDevice9**](/windows/win32/api/d3d9helper/nn-d3d9helper-idirect3ddevice9).
 
 </dd> <dt>
 
-*psrcfile* \[ in\]
+*pSrcFile* \[ In\]
 </dt> <dd>
 
 Typ: **[ **LPCTSTR**](../winprog/windows-data-types.md)**
 
-Zeiger auf den Dateinamen. Dieser Parameter unterstützt Unicode-und ANSI-Zeichen folgen. Siehe Hinweise.
+Zeiger auf den Dateinamen. Dieser Parameter unterstützt sowohl Unicode- als auch ANSI-Zeichenfolgen. Siehe Hinweise.
 
 </dd> <dt>
 
-*pdefinitionen* \[ in\]
+*pDefine* \[ In\]
 </dt> <dd>
 
-Typ: **Konstanten [**D3DXMACRO**](d3dxmacro.md) \***
+Typ: **const [**D3DXMACRO**](d3dxmacro.md) \***
 
-Optionales, auf Null endendes Array von Präprozessormakro-Definitionen. Siehe [**D3DXMACRO**](d3dxmacro.md).
+Optionales NULL-terminiertes Array von Präprozessormakrodefinitionen. Siehe [**D3DXMACRO**](d3dxmacro.md).
 
 </dd> <dt>
 
-*pinclude* \[ in\]
+*pInclude* \[ In\]
 </dt> <dd>
 
 Typ: **[ **LPD3DXINCLUDE**](id3dxinclude.md)**
 
-Optionaler Schnittstellen Zeiger, [**ID3DXInclude**](id3dxinclude.md), der zum Verarbeiten von include-Direktiven verwendet werden soll \# . Wenn dieser Wert **null** ist, \# wird includes bei der Kompilierung aus einer Datei berücksichtigt, oder es wird ein Fehler ausgelöst, wenn eine Kompilierung aus einer Ressource oder einem Arbeitsspeicher erfolgt.
+Optionaler Schnittstellenzeiger [**ID3DXInclude**](id3dxinclude.md), der für die Behandlung von \# Includedirektiven verwendet werden soll. Wenn dieser Wert **NULL** ist, \# wird includes entweder beim Kompilieren aus einer Datei berücksichtigt oder verursacht bei der Kompilierung aus einer Ressource oder aus dem Arbeitsspeicher einen Fehler.
 
 </dd> <dt>
 
-*pskipkonstanten* \[ in\]
+*pSkipConstants* \[ In\]
 </dt> <dd>
 
 Typ: **[ **LPCSTR**](../winprog/windows-data-types.md)**
 
-Eine Zeichenfolge von Effekt Parametern, die vom Effektsystem ignoriert werden. Die Zeichenfolge muss **null** sein und muss den Namen jeder von der Anwendung verwalteten Konstante enthalten, die durch ein Semikolon getrennt ist.
+Eine Zeichenfolge von Effektparametern, die vom Effektsystem ignoriert werden. Die Zeichenfolge  muss NULL-terminiert sein und den Namen jeder von der Anwendung verwalteten Konstante enthalten, die durch ein Semikolon getrennt ist.
 
 </dd> <dt>
 
-*Flags* \[in\]
+*Flags* \[ In\]
 </dt> <dd>
 
 Typ: **[ **DWORD**](../winprog/windows-data-types.md)**
 
-Wenn *psrcfile* einen Text Effekt enthält, können Flags eine Kombination aus [D3DXSHADER-Flags](d3dxshader-flags.md) und [D3DXFX](d3dxfx.md) -Flags sein. Andernfalls enthält *psrcfile* einen binären Effekt, und die einzigen Flags, die berücksichtigt werden, sind D3DXFX-Flags. Der Direct3D 10 HLSL-Compiler ist nun der Standard. Ausführliche Informationen finden Sie unter [Effect-Compiler-Tool](../direct3dtools/fxc.md) .
+Wenn *pSrcFile* einen Texteffekt enthält, können Flags eine Kombination aus [D3DXSHADER-Flags](d3dxshader-flags.md) und [D3DXFX-Flags](d3dxfx.md) sein. Andernfalls enthält *pSrcFile* einen binären Effekt, und die einzigen berücksichtigten Flags sind D3DXFX-Flags. Der Direct3D 10 HLSL-Compiler ist jetzt die Standardeinstellung. Weitere Informationen finden Sie [unter Effektcompilertool.](../direct3dtools/fxc.md)
 
 </dd> <dt>
 
-*ppool* \[ in\]
+*pPool* \[ In\]
 </dt> <dd>
 
 Typ: **[ **LPD3DXEFFECTPOOL**](id3dxeffectpool.md)**
 
-Zeiger auf ein [**ID3DXEffectPool**](id3dxeffectpool.md) -Objekt, das für freigegebene Parameter verwendet werden soll. Wenn dieser Wert **null** ist, werden keine Parameter freigegeben.
+Zeiger auf ein [**ID3DXEffectPool-Objekt,**](id3dxeffectpool.md) das für freigegebene Parameter verwendet werden soll. Wenn dieser Wert **NULL** ist, werden keine Parameter freigegeben.
 
 </dd> <dt>
 
-*ppeer-ect* \[ vorgenommen\]
+*ppEffect* \[ out\]
 </dt> <dd>
 
 Typ: **[ **LPD3DXEFFECT**](id3dxeffect.md)\***
@@ -120,12 +120,12 @@ Gibt einen Zeiger auf einen Puffer zurück, der den kompilierten Effekt enthält
 
 </dd> <dt>
 
-*ppcompilationerrors* \[ vorgenommen\]
+*ppCompilationErrors* \[ out\]
 </dt> <dd>
 
 Typ: **[ **LPD3DXBUFFER**](id3dxbuffer.md)\***
 
-Gibt einen Zeiger auf einen Puffer zurück, der eine Auflistung der Kompilierungsfehler enthält. Siehe [**ID3DXBuffer**](id3dxbuffer.md).
+Gibt einen Zeiger auf einen Puffer zurück, der eine Auflistung von Kompilierungsfehlern enthält. Siehe [**ID3DXBuffer**](id3dxbuffer.md).
 
 </dd> </dl>
 
@@ -133,22 +133,22 @@ Gibt einen Zeiger auf einen Puffer zurück, der eine Auflistung der Kompilierung
 
 Typ: **[ **HRESULT**](https://msdn.microsoft.com/library/Bb401631(v=MSDN.10).aspx)**
 
-Wenn die Funktion erfolgreich ausgeführt wird, ist der Rückgabewert D3D \_ OK. Wenn die Funktion fehlschlägt, kann der Rückgabewert einer der folgenden sein: D3DERR \_ invalidcall, D3DXERR \_ InvalidData, E \_ oudefmemory.
+Wenn die Funktion erfolgreich ausgeführt wird, lautet der Rückgabewert D3D \_ OK. Wenn die Funktion fehlschlägt, kann der Rückgabewert einer der folgenden Werte sein: D3DERR \_ INVALIDCALL, D3DXERR \_ INVALIDDATA, E \_ OUTOFMEMORY.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Diese Funktion ist eine erweiterte Version von [**D3DXCreateEffectFromFile**](d3dxcreateeffectfromfile.md) , mit der eine Anwendung angeben kann, welche Effekt Konstanten von der Anwendung verwaltet werden. Eine Konstante, die von der Anwendung verwaltet wird, wird vom Effects-System ignoriert. Das heißt, die Anwendung ist dafür verantwortlich, die Konstante zu initialisieren und ihren Zustand zu speichern und wiederherzustellen, wenn dies angemessen ist.
+Diese Funktion ist eine erweiterte Version von [**D3DXCreateEffectFromFile,**](d3dxcreateeffectfromfile.md) mit der eine Anwendung angeben kann, welche Effektkonstanten von der Anwendung verwaltet werden. Eine Konstante, die von der Anwendung verwaltet wird, wird vom Effektsystem ignoriert. Das heißt, die Anwendung ist für die Initialisierung der Konstante sowie für das Speichern und Wiederherstellen ihres Zustands verantwortlich, sofern dies angemessen ist.
 
-Diese Funktion überprüft jede Konstante in pskipkonstanten, um Folgendes anzuzeigen:
+Diese Funktion überprüft jede Konstante in pSkipConstants, um Dies zu überprüfen:
 
--   Er ist an ein konstantes Register gebunden.
--   Sie wird nur im HLSL-Shader-Code verwendet.
+-   Sie ist an ein Konstantenregister gebunden.
+-   Sie wird nur im HLSL-Shadercode verwendet.
 
-Wenn eine Konstante in der Zeichenfolge benannt wird, die nicht in der Auswirkung vorhanden ist, wird Sie ignoriert.
+Wenn eine Konstante in der Zeichenfolge benannt wird, die im Effekt nicht vorhanden ist, wird sie ignoriert.
 
 Wenn die Compilereinstellungen Unicode erfordern, wird der Datentyp LPCTSTR in LPCWSTR aufgelöst. Andernfalls wird der LPCTSTR-Datentyp in LPCSTR aufgelöst.
 
-Die Compilereinstellung bestimmt auch die Funktions Version. Wenn Unicode definiert ist, wird der Funktions aufrufin D3DXCreateEffectFromFileW aufgelöst. Andernfalls wird der Funktions Aufruhe in D3DXCreateEffectFromFileA aufgelöst, da ANSI-Zeichen folgen verwendet werden.
+Die Compilereinstellung bestimmt auch die Funktionsversion. Wenn Unicode definiert ist, wird der Funktionsaufruf in D3DXCreateEffectFromFileW aufgelöst. Andernfalls wird der Funktionsaufruf in D3DXCreateEffectFromFileA aufgelöst, da ANSI-Zeichenfolgen verwendet werden.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -156,16 +156,16 @@ Die Compilereinstellung bestimmt auch die Funktions Version. Wenn Unicode defini
 
 | Anforderung | Wert |
 |--------------------|------------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>D3DX9Effect. h</dt> </dl> |
-| Bibliothek<br/> | <dl> <dt>D3dx9. lib</dt> </dl>     |
+| Header<br/>  | <dl> <dt>D3DX9Effect.h</dt> </dl> |
+| Bibliothek<br/> | <dl> <dt>D3dx9.lib</dt> </dl>     |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[Effekt Funktionen](dx9-graphics-reference-effects-functions.md)
+[Effect-Funktionen](dx9-graphics-reference-effects-functions.md)
 </dt> <dt>
 
 [**D3DXCreateEffectEx**](d3dxcreateeffectex.md)

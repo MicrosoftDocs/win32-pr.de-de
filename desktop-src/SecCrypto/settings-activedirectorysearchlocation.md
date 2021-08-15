@@ -1,7 +1,7 @@
 ---
-description: Legt den Active Directory Suchspeicherort fest oder ruft ihn ab.
+description: Legt den Active Directory-Suchspeicherort fest oder ruft diese ab.
 ms.assetid: 43320799-1c01-4e09-bed9-f3576baadcce
-title: Settings. activedirectoriysearchlocation (Eigenschaft)
+title: Einstellungen. ActiveDirectorySearchLocation (Eigenschaft)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,18 +13,18 @@ api_type:
 - COM
 api_location:
 - Capicom.dll
-ms.openlocfilehash: d218b3d589b76980d468395a39452613aa57ada5
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 884866fd5ff6a3e3ff483a255bf2b77063ca81e51141108c9f58fd45629cc036
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106364768"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118900320"
 ---
-# <a name="settingsactivedirectorysearchlocation-property"></a>Settings. activedirectoriysearchlocation (Eigenschaft)
+# <a name="settingsactivedirectorysearchlocation-property"></a>Einstellungen. ActiveDirectorySearchLocation (Eigenschaft)
 
-\[Die **activedirector ysearchlocation** -Eigenschaft ist für die Verwendung in den Betriebssystemen verfügbar, die im Abschnitt "Anforderungen" angegeben sind.\]
+\[Die **ActiveDirectorySearchLocation-Eigenschaft** ist für die Verwendung in den Betriebssystemen verfügbar, die im Abschnitt Anforderungen angegeben sind.\]
 
-Die **activedirector ysearchlocation** -Eigenschaft legt den Active Directory Suchspeicherort fest oder ruft ihn ab.
+Die **ActiveDirectorySearchLocation-Eigenschaft** legt den Active Directory-Suchspeicherort fest oder ruft den Suchspeicherort ab.
 
 ## <a name="syntax"></a>Syntax
 
@@ -37,15 +37,15 @@ Settings.ActiveDirectorySearchLocation As CAPICOM_ACTIVE_DIRECTORY_SEARCH_LOCATI
 
 ## <a name="property-value"></a>Eigenschaftswert
 
-Ein Wert der CAPICOM-Enumeration für den [**\_ Active \_ Directory- \_ \_ Suchort**](capicom-active-directory-search-location.md) , der den Such Speicherort angibt. Der Standardwert ist CAPICOM \_ Search \_ any. In der folgenden Tabelle sind die möglichen Werte aufgeführt.
+Ein Wert der [**CAPICOM \_ ACTIVE DIRECTORY SEARCH \_ \_ \_ LOCATION-Enumeration,**](capicom-active-directory-search-location.md) der den Suchspeicherort angibt. Der Standardwert ist CAPICOM \_ SEARCH \_ ANY. In der folgenden Tabelle sind die möglichen Werte aufgeführt.
 
 
 
 | Wert                                                                                                                                                                                                           | Bedeutung                                    |
 |-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|--------------------------------------------|
-| <span id="CAPICOM_SEARCH_ANY"></span><span id="capicom_search_any"></span><dl> <dt>**CAPICOM- \_ Suche \_ Any**</dt> </dl>                                   | Suchen Sie alle verfügbaren Speicherorte.<br/> |
-| <span id="CAPICOM_SEARCH_DEFAULT_DOMAIN"></span><span id="capicom_search_default_domain"></span><dl> <dt>**\_ \_ Standard \_ Domäne für CAPICOM-Suche**</dt> </dl> | Nur die Standard Domäne suchen.<br/> |
-| <span id="CAPICOM_SEARCH_GLOBAL_CATALOG"></span><span id="capicom_search_global_catalog"></span><dl> <dt>**CAPICOM- \_ Suche ( \_ globaler \_ Katalog)**</dt> </dl> | Durchsuchen Sie nur den globalen Katalog.<br/> |
+| <span id="CAPICOM_SEARCH_ANY"></span><span id="capicom_search_any"></span><dl> <dt>**CAPICOM \_ SEARCH \_ ANY**</dt> </dl>                                   | Durchsuchen Sie alle verfügbaren Standorte.<br/> |
+| <span id="CAPICOM_SEARCH_DEFAULT_DOMAIN"></span><span id="capicom_search_default_domain"></span><dl> <dt>**CAPICOM \_ \_ SEARCH-STANDARDDOMÄNE \_**</dt> </dl> | Durchsuchen Sie nur die Standarddomäne.<br/> |
+| <span id="CAPICOM_SEARCH_GLOBAL_CATALOG"></span><span id="capicom_search_global_catalog"></span><dl> <dt>**CAPICOM \_ SEARCH \_ GLOBAL \_ CATALOG**</dt> </dl> | Durchsuchen Sie nur den globalen Katalog.<br/> |
 
 
 
@@ -57,12 +57,12 @@ Ein Wert der CAPICOM-Enumeration für den [**\_ Active \_ Directory- \_ \_ Sucho
 
 | Anforderung | Wert |
 |----------------------------|----------------------------------------------------------------------------------------|
-| Verteilbare Komponente<br/> | CAPICOM 2,0 oder höher unter Windows Server 2003 und Windows XP<br/>                  |
+| Verteilbare Komponente<br/> | CAPICOM 2.0 oder höher auf Windows Server 2003 und Windows XP<br/>                  |
 | DLL<br/>             | <dl> <dt>Capicom.dll</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 

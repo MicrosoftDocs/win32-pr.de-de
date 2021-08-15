@@ -1,90 +1,90 @@
 ---
-description: In der folgenden Tabelle werden die vier Komponenten Typen beschrieben, die an einem Sicherungs Vorgang beteiligt sein können.
+description: In der folgenden Tabelle werden die vier Komponententypen beschrieben, die an einem Sicherungsvorgang beteiligt sein können.
 ms.assetid: d94e015b-6735-4a88-9d24-b73f0b5f6542
-title: Arbeiten mit selekabilität für die Sicherung
+title: Arbeiten mit Der Auswählbarkeit für die Sicherung
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: e4bd20bd0c9139f8ed1c9f56cc8f499f1b6aaf14
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 82081bb9cef51572afc2a8b5c08cf845ee22736dd8fdc20edf60fa0082ce8c9b
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104485011"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118842314"
 ---
-# <a name="working-with-selectability-for-backup"></a>Arbeiten mit selekabilität für die Sicherung
+# <a name="working-with-selectability-for-backup"></a>Arbeiten mit Der Auswählbarkeit für die Sicherung
 
-In der folgenden Tabelle werden die vier Komponenten Typen beschrieben, die an einem Sicherungs Vorgang beteiligt sein können.
+In der folgenden Tabelle werden die vier Komponententypen beschrieben, die an einem Sicherungsvorgang beteiligt sein können.
 
 
 
 | Komponententyp                                                                                                                                                                                                               | BESCHREIBUNG                                                                                        |
 |------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------|
-| <span id="Nonselectable-for-backup_components"></span><span id="nonselectable-for-backup_components"></span><span id="NONSELECTABLE-FOR-BACKUP_COMPONENTS"></span>Nicht auswählbare-for-Backup-Komponenten<br/>             | In ihren logischen Pfaden sind keine auswählbaren Vorgänger vorhanden.<br/>                              |
-| <span id="Selectable-for-backup_components"></span><span id="selectable-for-backup_components"></span><span id="SELECTABLE-FOR-BACKUP_COMPONENTS"></span>Auswählbare Sicherungs Komponenten<br/>                         | In ihren logischen Pfaden sind keine auswählbaren Vorgänger vorhanden.<br/>                              |
-| <span id="Nonselectable-for-backup_subcomponents"></span><span id="nonselectable-for-backup_subcomponents"></span><span id="NONSELECTABLE-FOR-BACKUP_SUBCOMPONENTS"></span>Nicht auswählbare unter Komponenten für die Sicherung<br/> | Nicht auswählbare-for-Backup-Komponenten mit auswählbaren Vorgängerversionen in Ihrem Pfad.<br/> |
-| <span id="Selectable-for-backup_subcomponents"></span><span id="selectable-for-backup_subcomponents"></span><span id="SELECTABLE-FOR-BACKUP_SUBCOMPONENTS"></span>Auswählbare for-Backup-unter Komponenten<br/>             | Wählbare-for-Backup-Komponenten mit auswählbaren als Sicherungs Elementen in Ihrem Pfad.<br/>    |
+| <span id="Nonselectable-for-backup_components"></span><span id="nonselectable-for-backup_components"></span><span id="NONSELECTABLE-FOR-BACKUP_COMPONENTS"></span>Nicht auswählbare Sicherungskomponenten<br/>             | Keine auswählbaren Für-Sicherung-Vorgänger in ihren logischen Pfaden.<br/>                              |
+| <span id="Selectable-for-backup_components"></span><span id="selectable-for-backup_components"></span><span id="SELECTABLE-FOR-BACKUP_COMPONENTS"></span>Auswählbare Sicherungskomponenten<br/>                         | Keine auswählbaren Für-Sicherung-Vorgänger in ihren logischen Pfaden.<br/>                              |
+| <span id="Nonselectable-for-backup_subcomponents"></span><span id="nonselectable-for-backup_subcomponents"></span><span id="NONSELECTABLE-FOR-BACKUP_SUBCOMPONENTS"></span>Nicht auswählbare Unterkomponenten für Sicherungen<br/> | Nicht auswählbare Sicherungskomponenten mit auswählbaren Vorgängern für Sicherungen in ihrem Pfad.<br/> |
+| <span id="Selectable-for-backup_subcomponents"></span><span id="selectable-for-backup_subcomponents"></span><span id="SELECTABLE-FOR-BACKUP_SUBCOMPONENTS"></span>Auswählbare Unterkomponenten für Sicherungen<br/>             | Auswählbare Sicherungskomponenten mit auswählbaren Vorgängern für Sicherungen in ihrem Pfad.<br/>    |
 
 
 
  
 
-Außerdem wird für jede auswählbare Komponente – unabhängig davon, ob Sie über auswählbare/Sicherungs-Vorgänger oder nicht – verfügt, ein [*Komponenten Satz*](vssgloss-c.md) definiert, wenn Sie von anderen Komponenten als Vorgänger in ihren logischen Pfaden vorhanden sind.
+Darüber hinaus definiert jede auswählbare Sicherungskomponente – unabhängig davon, ob sie über auswählbare Für-Sicherung-Vorgänger verfügt oder nicht – einen [*Komponentensatz,*](vssgloss-c.md) wenn andere Komponenten sie als Vorgänger in ihren logischen Pfaden haben.
 
 Die Regeln für die Auswahl von Komponenten für die Sicherung können wie folgt zusammengefasst werden:
 
--   Wenn eine Komponente ohne einen auswählbaren Vorgänger in ihrem logischen Pfad – ob die Komponente auswählbar ist, für die Sicherung oder nicht auswählbar – in einer Sicherung enthalten ist, muss Sie [*explizit eingeschlossen*](vssgloss-e.md)werden. Dies bedeutet, dass Metadaten für diese Komponenten dem Dokument mit den Sicherungs Komponenten hinzugefügt werden.
+-   Wenn eine Komponente ohne einen auswählbaren Für-Sicherung-Vorgänger in ihrem logischen Pfad – unabhängig davon, ob die Komponente auswählbar für die Sicherung oder nicht selectable-for-backup ist – in einer Sicherung enthalten ist, muss sie [*explizit eingeschlossen*](vssgloss-e.md)werden. Dies bedeutet, dass Metadaten für diese Komponenten dem Sicherungskomponentendokument hinzugefügt werden.
 
-    Anforderer fügen diese Komponenten explizit mithilfe der [**IVssBackupComponents:: addComponent**](/windows/desktop/api/VsBackup/nf-vsbackup-ivssbackupcomponents-addcomponent) -Methode hinzu.
+    Anforderer fügen diese Komponenten explizit mithilfe der [**IVssBackupComponents::AddComponent-Methode**](/windows/desktop/api/VsBackup/nf-vsbackup-ivssbackupcomponents-addcomponent) hinzu.
 
--   Nicht auswählbare unter Komponenten für Sicherungen sind immer [*implizit*](vssgloss-i.md) in die Sicherung eingeschlossen. Dies bedeutet, dass die Metadaten für diese Komponenten nicht Teil des Dokuments mit den Sicherungs Komponenten sind.
--   Auswählbare unter Komponenten für Sicherungen werden implizit eingeschlossen, wenn dieser Vorgänger explizit in der Sicherung enthalten ist. In diesem Fall werden Metadaten für diese Komponenten nicht zum Dokument mit den Sicherungs Komponenten hinzugefügt. Wenn eine implizit auswählbare für Backup-Unterkomponente einen Komponenten Satz definiert, werden die Elemente dieses Komponenten Satzes ebenfalls implizit ausgewählt.
--   Auswählbare-for-Backup-unter Komponenten, deren Vorgänger für die Sicherung nicht explizit in der Sicherung enthalten sind, können nach wie vor explizit von der anfordernden Person mithilfe der [**IVssBackupComponents:: addComponent**](/windows/desktop/api/VsBackup/nf-vsbackup-ivssbackupcomponents-addcomponent) -Methode eingeschlossen werden. Die Metadaten für die Komponente werden dann dem Dokument mit den Sicherungs Komponenten hinzugefügt. Wenn außerdem eine auswählbare untergeordnete Komponente einen Komponenten Satz definiert, werden die Mitglieder dieser Komponente implizit in die Sicherung eingeschlossen.
+-   Nicht auswählbare Unterkomponenten für Sicherungen sind immer implizit in der Sicherung [*enthalten.*](vssgloss-i.md) Dies bedeutet, dass Metadaten für diese Komponenten nicht Teil des Sicherungskomponentendokuments sind.
+-   Selectable-for-backup-Unterkomponenten werden implizit eingeschlossen, wenn dieser Vorgänger explizit in der Sicherung enthalten ist. In diesem Fall werden dem Sicherungskomponentendokument keine Metadaten für diese Komponenten hinzugefügt. Wenn eine implizit für die Sicherungsunterkomponente auswählbare einen Komponentensatz definiert, werden die Member dieses Komponentensatzes ebenfalls implizit ausgewählt.
+-   Selectable-for-backup-Unterkomponenten, deren Vorgänger auswählbar für Sicherung nicht explizit in die Sicherung eingeschlossen ist, können vom Anfordernden weiterhin explizit mithilfe der [**IVssBackupComponents::AddComponent-Methode**](/windows/desktop/api/VsBackup/nf-vsbackup-ivssbackupcomponents-addcomponent) eingeschlossen werden. Die Metadaten für die Komponente werden dann dem Sicherungskomponentendokument hinzugefügt. Wenn eine auswählbare Für-Sicherung-Unterkomponente einen Komponentensatz definiert, werden die Member dieses Komponentensatzes implizit in die Sicherung eingeschlossen.
 
-Der Fall "myWriter", der in [logischen Komponenten von Komponenten](logical-pathing-of-components.md) erläutert wird, kann als Beispiel verwendet werden, um die Auswahlmöglichkeiten für die Sicherung zu veranschaulichen.
+Der fall "MyWriter", der unter [Logisches Pfading von Komponenten](logical-pathing-of-components.md) erläutert wird, kann als Beispiel verwendet werden, um die Auswählbarkeit für die Sicherung zu veranschaulichen.
 
 
 
-| Komponentenname | Logischer Pfad            | Für Sicherung auswählbar |
+| Komponentenname | Logischer Pfad            | Für die Sicherung auswählbar |
 |----------------|-------------------------|-----------------------|
-| Ausführbare Dateien  | ""                      | N                     |
-| "Configfiles"  | Ausführbare Dateien           | N                     |
-| "Licenseingefo"  | ""                      | J                     |
+| "Ausführbare Dateien"  | ""                      | N                     |
+| "ConfigFiles"  | "Ausführbare Dateien"           | N                     |
+| "LicenseInfo"  | ""                      | J                     |
 | "Security"     | ""                      | J                     |
-| UserInfo     | "Security"              | N                     |
-| Abschluss | "Security"              | N                     |
-| "beschreibdaten"   | ""                      | J                     |
-| Set1         | "beschreibdaten"            | N                     |
-| Jan          | "Schreibdaten \\ set1"      | N                     |
-| 31.12.2012          | "Schreibdaten \\ set1"      | N                     |
-| Set2         | "beschreibdaten"            | N                     |
-| Jan          | "Schreibdaten \\ set2"      | N                     |
-| 31.12.2012          | "Schreibdaten \\ set2"      | N                     |
-| Such        | "Write Data \\ querylogs" | N                     |
-| Ungs        | "beschreibdaten"            | J                     |
-| Jan          | "Verwendung von" Schreib Daten \\ "     | N                     |
-| 31.12.2012          | "Verwendung von" Schreib Daten \\ "     | N                     |
+| "UserInfo"     | "Security"              | N                     |
+| "Zertifikate" | "Security"              | N                     |
+| "writerData"   | ""                      | J                     |
+| "Set1"         | "writerData"            | N                     |
+| "Jan"          | "writerData \\ Set1"      | N                     |
+| "Dec"          | "writerData \\ Set1"      | N                     |
+| "Set2"         | "writerData"            | N                     |
+| "Jan"          | "writerData \\ Set2"      | N                     |
+| "Dec"          | "writerData \\ Set2"      | N                     |
+| "Abfrage"        | "writerData \\ QueryLogs" | N                     |
+| "Nutzung"        | "writerData"            | J                     |
+| "Jan"          | "writerData \\ Usage"     | N                     |
+| "Dec"          | "writerData \\ Usage"     | N                     |
 
 
 
  
 
-Jedes Mal, wenn "myWriter" gesichert ist, wird die Komponente "configfiles" durch explizites einschließen der "Executables"-Komponente mithilfe der [**IVssBackupComponents:: addComponent**](/windows/desktop/api/VsBackup/nf-vsbackup-ivssbackupcomponents-addcomponent) -Methode implizit eingeschlossen.
+Wenn "MyWriter" gesichert wird, schließt das explizite Einschließen der Komponente "Executables" mithilfe der [**IVssBackupComponents::AddComponent-Methode**](/windows/desktop/api/VsBackup/nf-vsbackup-ivssbackupcomponents-addcomponent) implizit die Komponente "ConfigFiles" ein.
 
-Die Komponente "LicenseInfo" ist eine eigenständige auswählbare Komponente für die Sicherung. Sie kann mithilfe der [**IVssBackupComponents:: addComponent**](/windows/desktop/api/VsBackup/nf-vsbackup-ivssbackupcomponents-addcomponent) -Methode nach dem Ermessen der anfordernden Person ausgewählt werden, aber bei Ihrer Auswahl werden keine weiteren Komponenten ausgewählt.
+Die Komponente "LicenseInfo" ist eine eigenständige auswählbare Komponente für die Sicherung. Sie kann mithilfe der [**IVssBackupComponents::AddComponent-Methode**](/windows/desktop/api/VsBackup/nf-vsbackup-ivssbackupcomponents-addcomponent) im Ermessen des Anfordernden ausgewählt werden, aber die Auswahl wählt keine anderen Komponenten aus.
 
-Die auswählbare-for-Backup-Komponente "Sicherheit" definiert einen einfachen Komponenten Satz mit zwei nicht auswählbaren unter Komponenten für die Sicherung, "UserInfo" und "Zertifikate". Wenn "Security" explizit für die Sicherung eingeschlossen wird, werden "UserInfo" und "Zertifikate" immer implizit eingeschlossen. Es gibt keine Möglichkeit, die unter Komponenten "UserInfo" oder "Zertifikate" in einen Sicherungs Vorgang aufzunehmen, es sei denn, "Security" ist enthalten.
+Die komponente "Security" (Für Sicherung auswählbar) definiert einen einfachen Komponentensatz, der zwei nicht auswählbare Unterkomponenten für Sicherungen enthält: "UserInfo" und "Certificates". Wenn "Sicherheit" explizit für die Sicherung enthalten ist, sind "UserInfo" und "Certificates" immer ebenfalls implizit enthalten. Es gibt keine Möglichkeit, die Unterkomponenten "UserInfo" oder "Certificates" in einen Sicherungsvorgang einzubetten, es sei denn, "Sicherheit" ist enthalten.
 
-Wenn die Komponente "Schreib Daten" ausgewählt ist, werden die nicht auswählbaren Komponenten "set1", "set2" und "Query" und die auswählbare Komponente "Verwendung" implizit ausgewählt. Jede dieser Komponenten verfügt über unter Komponenten, die implizit für die Sicherung ausgewählt werden. Keine ihrer Metadaten wird dem Dokument mit den Sicherungs Komponenten hinzugefügt.
+Wenn die Komponente "writerData" ausgewählt ist, werden die nicht auswählbaren Sicherungskomponenten "Set1", "Set2" und "Query" sowie die auswählbare Für-Sicherung-Komponente "Usage" implizit ausgewählt. Jede dieser Komponenten verfügt über Unterkomponenten, die implizit für die Sicherung ausgewählt werden. Dem Sicherungskomponentendokument werden keine metadaten hinzugefügt.
 
-Wenn die Komponente "Schreib Daten" nicht ausgewählt ist, sind die nicht auswählbaren Komponenten "set1", "set2" und "Query" nicht für die Sicherung enthalten.
+Wenn die Komponente "writerData" nicht ausgewählt ist, sind die nicht auswählbaren Sicherungskomponenten "Set1", "Set2" und "Query" nicht für die Sicherung enthalten.
 
-Allerdings können anfordernde Personen explizit die auswählbare für die Sicherungs Komponente "Usage" einschließen. Metadaten für diese Komponente werden dem Dokument mit den Sicherungs Komponenten hinzugefügt. "Usage"-unter Komponenten "Jan" und "Dec" werden der Sicherung implizit hinzugefügt, werden jedoch nicht zum Sicherungs Komponenten Dokument hinzugefügt.
+Anforderer können jedoch die für die Sicherungskomponente "Verwendung" auswählbare explizit einschließen. Metadaten für diese Komponente werden dem Dokument sicherungskomponenten hinzugefügt. Die Unterkomponenten "Jan" und "Dec" von "Usage" werden der Sicherung implizit hinzugefügt, aber ihre Informationen werden dem Sicherungskomponentendokument nicht hinzugefügt.
 
-Wenn Sie explizit eine Komponente für die Sicherung einschließen, wird im Dokument mit den Sicherungs Komponenten eine entsprechende [**IVssComponent**](/windows/desktop/api/VsWriter/nl-vswriter-ivsscomponent) -Instanz erstellt.
+Durch das explizite Einschließen einer Komponente für die Sicherung wird eine entsprechende [**IVssComponent-Instanz**](/windows/desktop/api/VsWriter/nl-vswriter-ivsscomponent) im Sicherungskomponentendokument erstellt.
 
-Ein Anforderer Ruft Informationen zu explizit enthaltenen Komponenten aus seinem Sicherungs Komponenten Dokument ab, indem er diese Writer (mithilfe von [**IVssBackupComponents:: getwritercomponents**](/windows/desktop/api/VsBackup/nf-vsbackup-ivssbackupcomponents-getwritercomponents)) untersucht, die in seinem Dokument enthalten sind, und die gespeicherten [**IVssComponent**](/windows/desktop/api/VsWriter/nl-vswriter-ivsscomponent) -Objekte abruft.
+Ein Anforderer ruft Informationen zu explizit eingeschlossenen Komponenten aus seinem Sicherungskomponentendokument ab, indem er diese Writer untersucht (mit [**IVssBackupComponents::GetWriterComponents),**](/windows/desktop/api/VsBackup/nf-vsbackup-ivssbackupcomponents-getwritercomponents)die in seinem Dokument enthalten sind, und die [**gespeicherten IVssComponent-Objekte abruft.**](/windows/desktop/api/VsWriter/nl-vswriter-ivsscomponent)
 
-Da weder die Datei Satz Informationen (Datei Angabe, Pfad und Rekursions Kennzeichen) der im Sicherungs Komponenten Dokument vorhandenen Komponenten noch Informationen zu implizit hinzugefügten Komponenten vorhanden sind, müssen anfordernde Personen Writer-Metadatendokumente Abfragen, um vollständige Informationen zu allen Komponenten zu erhalten, die im Dokument mit den Sicherungs Komponenten enthalten sind.
+Da weder die Dateisatzinformationen (Dateispezifikation, Pfad und Rekursionsflag) der im Sicherungskomponentendokument vorhandenen Komponenten noch Informationen zu implizit hinzugefügten Komponenten vorhanden sind, müssen anfordernde Benutzer Writer Metadata Documents abfragen, um vollständige Informationen zu allen Komponenten zu erhalten, die im Sicherungskomponentendokument enthalten sind.
 
  
 

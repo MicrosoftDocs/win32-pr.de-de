@@ -1,11 +1,11 @@
 ---
-title: Inapsystemhealthvalidationrequest getstringcorrelationid-Methode (napsystemhealthvalidator. h)
-description: Wird von System Integritätsprüfungen (SHVs) verwendet, von denen diese Informationen protokolliert werden müssen.
+title: INapSystemHealthValidationRequest GetStringCorrelationId-Methode (NapSystemHealthValidator.h)
+description: Wird von System Health Validators (SHVs) verwendet, die diese Informationen protokollieren müssen.
 ms.assetid: c3e45857-463b-4048-a178-ec26a318b63b
 keywords:
-- Getstringcorrelationid-Methode NAP
-- Getstringcorrelationid-Methode NAP, inapsystemhealthvalidationrequest-Schnittstelle
-- Inapsystemhealthvalidationrequest-Schnittstelle NAP, getstringcorrelationid-Methode
+- NAP-Methode "GetStringCorrelationId"
+- GetStringCorrelationId-Methode NAP, INapSystemHealthValidationRequest-Schnittstelle
+- INapSystemHealthValidationRequest-Schnittstelle NAP , GetStringCorrelationId-Methode
 topic_type:
 - apiref
 api_name:
@@ -16,21 +16,21 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 554a5a31f0aa46f6bcbd7a750662d47ab2c78040
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 5818ebd219dd38633da92a269e63d5641f393371cfa67b6910844523c37929ee
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104519167"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118939361"
 ---
-# <a name="inapsystemhealthvalidationrequestgetstringcorrelationid-method"></a>Inapsystemhealthvalidationrequest:: getstringcorrelationid-Methode
+# <a name="inapsystemhealthvalidationrequestgetstringcorrelationid-method"></a>INapSystemHealthValidationRequest::GetStringCorrelationId-Methode
 
 > [!Note]  
-> Die Netzwerk Zugriffsschutz-Plattform ist ab Windows 10 nicht verfügbar.
+> Die Netzwerkzugriffsschutz-Plattform ist ab Windows 10 nicht verfügbar.
 
  
 
-Die **inapsystemhealthvalidationrequest:: getstringcorrelationid** -Methode wird von System Integritätsprüfungen (SHVs) verwendet, von denen diese Informationen protokolliert werden müssen.
+Die **INapSystemHealthValidationRequest::GetStringCorrelationId-Methode** wird von System Health Validators (SHVs) verwendet, die diese Informationen protokollieren müssen.
 
 ## <a name="syntax"></a>Syntax
 
@@ -47,24 +47,24 @@ HRESULT GetStringCorrelationId(
 
 <dl> <dt>
 
-*correlationId* \[ vorgenommen\]
+*correlationId* \[ out\]
 </dt> <dd>
 
-Ein Zeiger auf einen Zeiger auf eine eindeutige [**stringcorrelationid**](nap-type-constants.md) für den SoH-Austausch.
+Ein Zeiger auf einen Zeiger auf eine eindeutige [**StringCorrelationId**](nap-type-constants.md) für den SoH-Austausch.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Es können auch andere com-spezifische Fehlercodes zurückgegeben werden.
+Andere COM-spezifische Fehlercodes können ebenfalls zurückgegeben werden.
 
 
 
 | Rückgabecode                                                                                     | Beschreibung                                                        |
 |-------------------------------------------------------------------------------------------------|--------------------------------------------------------------------|
 | <dl> <dt>**S \_ OK**</dt> </dl>           | Vorgang erfolgreich.<br/>                                    |
-| <dl> <dt>**E \_ Access verweigert**</dt> </dl> | Berechtigungs Fehler, Zugriff verweigert.<br/>                       |
-| <dl> <dt>**E \_ Outo-Memory**</dt> </dl>  | System Ressourcen Limit, der Vorgang konnte nicht durchgeführt werden.<br/> |
+| <dl> <dt>**E \_ ACCESSDENIED**</dt> </dl> | Berechtigungsfehler, Zugriff verweigert.<br/>                       |
+| <dl> <dt>**E \_ OUTOFMEMORY**</dt> </dl>  | Systemressourcenlimit, konnte den Vorgang nicht ausführen.<br/> |
 
 
 
@@ -77,18 +77,18 @@ Es können auch andere com-spezifische Fehlercodes zurückgegeben werden.
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Nicht unterstützt<br/>                                                                               |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2008 \[ -Desktop-Apps\]<br/>                                                    |
-| Header<br/>                   | <dl> <dt>Napsystemhealthvalidator. h</dt> </dl>   |
-| IDL<br/>                      | <dl> <dt>Napsystemhealthvalidator. idl</dt> </dl> |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2008-Desktop-Apps\]<br/>                                                    |
+| Header<br/>                   | <dl> <dt>NapSystemHealthValidator.h</dt> </dl>   |
+| Idl<br/>                      | <dl> <dt>NapSystemHealthValidator.idl</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>Qshvhost.dll</dt> </dl>                 |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Inapsystemhealthvalidationrequest**](inapsystemhealthvalidationrequest.md)
+[**INapSystemHealthValidationRequest**](inapsystemhealthvalidationrequest.md)
 </dt> </dl>
 
  

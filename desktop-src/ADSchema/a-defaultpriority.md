@@ -1,11 +1,11 @@
 ---
 title: Default-Priority-Attribut
-description: Die Standardpriorität (eines Prozesses, eines Druckauftrags usw.).
+description: Die Standardpriorität (eines Prozesses, eines Druckauftrags und so weiter).
 ms.assetid: d3945224-33fb-481c-b352-6bb28ee04d60
 ms.tgt_platform: multiple
 keywords:
-- AD-Schema für Default-Priority-Attribut
-- DefaultPriority-Attribut, AD-Schema
+- Default-Priority AD-Schema des Attributs
+- AD-Schema des defaultPriority-Attributs
 topic_type:
 - apiref
 api_name:
@@ -14,28 +14,28 @@ api_type:
 - Schema
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 3d564d1a3351644e0631cc621742512fa7e7b468
-ms.sourcegitcommit: b77ace27b0432e7cd3863191b11926be032fbe2f
+ms.openlocfilehash: 941daeb8526793a414112d27df2832637c31567948ea9c1896c52a533ba4efb5
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "104479738"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119326747"
 ---
 # <a name="default-priority-attribute"></a>Default-Priority-Attribut
 
-Die Standardpriorität (eines Prozesses, eines Druckauftrags usw.).
+Die Standardpriorität (eines Prozesses, eines Druckauftrags und so weiter).
 
 
 
 | Eingabe | Wert |
 |-------------------|--------------------------------------|
 | CN                | Default-Priority                     |
-| LDAP-Display-Name | defaultPriority                      |
+| Ldap-Anzeigename | defaultPriority                      |
 | Size              | \-                                   |
-| Berechtigung aktualisieren  | \-                                   |
-| Aktualisierungshäufigkeit  | \-                                   |
+| Aktualisieren von Berechtigungen  | \-                                   |
+| Updatehäufigkeit  | \-                                   |
 | Attribute-Id      | 1.2.840.113556.1.4.232               |
-| System-ID-GUID    | 281416c8-1968-11D0-a28f -00aa003049e2 |
+| System-Id-Guid    | 281416c8-1968-11d0-a28f-00aa003049e2 |
 | Syntax            | [**Enumeration**](s-enumeration.md) |
 
 
@@ -43,7 +43,7 @@ Die Standardpriorität (eines Prozesses, eines Druckauftrags usw.).
 ## <a name="implementations"></a>Implementierungen
 
 -   [**Windows 2000 Server**](#windows-2000-server)
--   [**Windows Server 2003**](#windows-server-2003)
+-   [**Windows Server 2003**](#windows-server-2003)
 -   [**Windows Server 2003 R2**](#windows-server-2003-r2)
 -   [**Windows Server 2008**](#windows-server-2008)
 -   [**Windows Server 2008 R2**](#windows-server-2008-r2)
@@ -58,19 +58,19 @@ Die Standardpriorität (eines Prozesses, eines Druckauftrags usw.).
 | Link-ID                | \-                                             |
 | MAPI-Id                | \-                                             |
 | System-Only            | False                                          |
-| Ist-einwertig       | Richtig                                           |
+| Is-Single-Valued       | True                                           |
 | Ist indiziert             | False                                          |
 | Im globalen Katalog      | False                                          |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                   |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                   |
 | Range-Lower            | \-                                             |
 | Range-Upper            | \-                                             |
 | Search-Flags           | 0x00000000                                     |
 | System-Flags           | 0x00000010                                     |
-| In verwendete Klassen        | [**Druck Warteschlange**](c-printqueue.md)<br/> |
+| In verwendete Klassen        | [**Druckwarteschlange**](c-printqueue.md)<br/> |
 
 
 
-## <a name="windows-server-2003"></a>Windows Server 2003
+## <a name="windows-server-2003"></a>Windows Server 2003
 
 
 
@@ -79,15 +79,15 @@ Die Standardpriorität (eines Prozesses, eines Druckauftrags usw.).
 | Link-ID                | \-                                             |
 | MAPI-Id                | \-                                             |
 | System-Only            | False                                          |
-| Ist-einwertig       | Richtig                                           |
+| Is-Single-Valued       | True                                           |
 | Ist indiziert             | False                                          |
 | Im globalen Katalog      | False                                          |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                   |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                   |
 | Range-Lower            | \-                                             |
 | Range-Upper            | \-                                             |
 | Search-Flags           | 0x00000000                                     |
 | System-Flags           | 0x00000010                                     |
-| In verwendete Klassen        | [**Druck Warteschlange**](c-printqueue.md)<br/> |
+| In verwendete Klassen        | [**Druckwarteschlange**](c-printqueue.md)<br/> |
 
 
 
@@ -100,15 +100,15 @@ Die Standardpriorität (eines Prozesses, eines Druckauftrags usw.).
 | Link-ID                | \-                                             |
 | MAPI-Id                | \-                                             |
 | System-Only            | False                                          |
-| Ist-einwertig       | Richtig                                           |
+| Is-Single-Valued       | True                                           |
 | Ist indiziert             | False                                          |
 | Im globalen Katalog      | False                                          |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                   |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                   |
 | Range-Lower            | \-                                             |
 | Range-Upper            | \-                                             |
 | Search-Flags           | 0x00000000                                     |
 | System-Flags           | 0x00000010                                     |
-| In verwendete Klassen        | [**Druck Warteschlange**](c-printqueue.md)<br/> |
+| In verwendete Klassen        | [**Druckwarteschlange**](c-printqueue.md)<br/> |
 
 
 
@@ -121,15 +121,15 @@ Die Standardpriorität (eines Prozesses, eines Druckauftrags usw.).
 | Link-ID                | \-                                             |
 | MAPI-Id                | \-                                             |
 | System-Only            | False                                          |
-| Ist-einwertig       | Richtig                                           |
+| Ist einwertig       | True                                           |
 | Ist indiziert             | False                                          |
 | Im globalen Katalog      | False                                          |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                   |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                   |
 | Range-Lower            | \-                                             |
 | Range-Upper            | \-                                             |
 | Search-Flags           | 0x00000000                                     |
 | System-Flags           | 0x00000010                                     |
-| In verwendete Klassen        | [**Druck Warteschlange**](c-printqueue.md)<br/> |
+| In verwendete Klassen        | [**Druckwarteschlange**](c-printqueue.md)<br/> |
 
 
 
@@ -142,15 +142,15 @@ Die Standardpriorität (eines Prozesses, eines Druckauftrags usw.).
 | Link-ID                | \-                                             |
 | MAPI-Id                | \-                                             |
 | System-Only            | False                                          |
-| Ist-einwertig       | Richtig                                           |
+| Ist einwertig       | True                                           |
 | Ist indiziert             | False                                          |
 | Im globalen Katalog      | False                                          |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                   |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                   |
 | Range-Lower            | \-                                             |
 | Range-Upper            | \-                                             |
 | Search-Flags           | 0x00000000                                     |
 | System-Flags           | 0x00000010                                     |
-| In verwendete Klassen        | [**Druck Warteschlange**](c-printqueue.md)<br/> |
+| In verwendete Klassen        | [**Druckwarteschlange**](c-printqueue.md)<br/> |
 
 
 
@@ -163,15 +163,15 @@ Die Standardpriorität (eines Prozesses, eines Druckauftrags usw.).
 | Link-ID                | \-                                             |
 | MAPI-Id                | \-                                             |
 | System-Only            | False                                          |
-| Ist-einwertig       | Richtig                                           |
+| Ist einwertig       | True                                           |
 | Ist indiziert             | False                                          |
 | Im globalen Katalog      | False                                          |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                   |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                   |
 | Range-Lower            | \-                                             |
 | Range-Upper            | \-                                             |
 | Search-Flags           | 0x00000000                                     |
 | System-Flags           | 0x00000010                                     |
-| In verwendete Klassen        | [**Druck Warteschlange**](c-printqueue.md)<br/> |
+| In verwendete Klassen        | [**Druckwarteschlange**](c-printqueue.md)<br/> |
 
 
 

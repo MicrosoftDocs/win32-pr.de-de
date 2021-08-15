@@ -1,11 +1,11 @@
 ---
-title: Systemmonitor. BackColor (Eigenschaft)
-description: Ruft die Hintergrundfarbe des Diagramms und der Berichts Ansichten ab oder legt Sie fest.
+title: SystemMonitor.BackColor-Eigenschaft
+description: Ruft die Hintergrundfarbe des Diagramms und der Berichtsansichten ab oder legt diese fest.
 ms.assetid: bc6bd2c0-8114-4525-ae4a-f0a508affa1e
 keywords:
-- BackColor-Eigenschaft (Sysmon)
-- BackColor-Eigenschaft (Sysmon), Systemmonitor-Klasse
-- Systemmonitor-Klasse (Sysmon), BackColor-Eigenschaft
+- BackColor-Eigenschaft SysMon
+- BackColor-Eigenschaft SysMon , SystemMonitor-Klasse
+- SystemMonitor-Klasse SysMon , BackColor-Eigenschaft
 topic_type:
 - apiref
 api_name:
@@ -16,16 +16,16 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: eecbdf6ceaf9938a1b5a607a67410ddc6d05438b
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: cb01c28b7e8eebe476416934a4d89dee461e0ed5c2ccf6e968b4db0c38178e1d
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104475477"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118882956"
 ---
-# <a name="systemmonitorbackcolor-property"></a>Systemmonitor. BackColor (Eigenschaft)
+# <a name="systemmonitorbackcolor-property"></a>SystemMonitor.BackColor-Eigenschaft
 
-Ruft die Hintergrundfarbe des Diagramms und der Berichts Ansichten ab oder legt Sie fest.
+Ruft die Hintergrundfarbe des Diagramms und der Berichtsansichten ab oder legt diese fest.
 
 Diese Eigenschaft ist schreibgeschützt.
 
@@ -40,11 +40,11 @@ Property BackColor As stdole.OLE_COLOR
 
 ## <a name="property-value"></a>Eigenschaftswert
 
-Hintergrundfarbe des Diagramms und der Berichts Ansichten.
+Hintergrundfarbe des Diagramms und der Berichtsansichten.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Dies ist eine Ambient-Eigenschaft. Der Wert dieser Eigenschaft wird vom Container bestimmt. Das Festlegen des Werts dieser Eigenschaft kann sich auf die Illusion des Steuer Elements und Containers auswirken, die eine einzelne Anwendung sind.
+Dies ist eine Ambient-Eigenschaft. Der Wert dieser Eigenschaft wird vom Container bestimmt. Das Festlegen des Werts dieser Eigenschaft kann sich darauf auswirken, dass das Steuerelement und der Container eine einzelne Anwendung sind.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -54,21 +54,21 @@ Dies ist eine Ambient-Eigenschaft. Der Wert dieser Eigenschaft wird vom Containe
 |-------------------------------------|---------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional \[nur Desktop-Apps\]<br/>                            |
 | Unterstützte Mindestversion (Server)<br/> | Windows 2000 Server \[nur Desktop-Apps\]<br/>                                  |
-| DLL<br/>                      | <dl> <dt>Sysmon. ocx</dt> </dl> |
+| DLL<br/>                      | <dl> <dt>Sysmon.ocx</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**System Monitor**](systemmonitor.md)
+[**SystemMonitor**](systemmonitor.md)
 </dt> <dt>
 
-[**Systemmonitor. backcolorctl**](systemmonitor-backcolorctl.md)
+[**SystemMonitor.BackColorCtl**](systemmonitor-backcolorctl.md)
 </dt> <dt>
 
-[**Systemmonitor. ForeColor**](systemmonitor-forecolor.md)
+[**SystemMonitor.ForeColor**](systemmonitor-forecolor.md)
 </dt> </dl>
 
  

@@ -1,6 +1,6 @@
 ---
-title: komplexe Typen von baseeapmethodconfig-Schemas
-description: Erfahren Sie mehr über das baseeapmethodconfig-Schema. Dieses Schema definiert den komplexen Basistyp baseeapmethodconfig.
+title: baseeapmethodconfig Schema Complex Types
+description: Erfahren Sie mehr über das Baseeapmethodconfig-Schema. Dieses Schema definiert den komplexen BaseEapMethodConfig-Typ.
 ms.assetid: dd3361db-f54c-4879-b656-414d9cbaf1f2
 ms.topic: article
 ms.date: 05/31/2018
@@ -9,32 +9,32 @@ topic_type:
 api_name: ''
 api_type: ''
 api_location: ''
-ms.openlocfilehash: 517be3d72fa0711d2c814b960ea14f15c2b04fd6
-ms.sourcegitcommit: b0ebdefc3dcd5c04bede94091833aa1015a2f95c
+ms.openlocfilehash: ff5149e3ca9c7ba71695acfe994728df52119e966e858d484904ac24ff4ecbde
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/21/2020
-ms.locfileid: "103730289"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118498702"
 ---
-# <a name="baseeapmethodconfig-schema-complex-types"></a>komplexe Typen von baseeapmethodconfig-Schemas
+# <a name="baseeapmethodconfig-schema-complex-types"></a>baseeapmethodconfig Schema Complex Types
 
-Das [baseeapmethodconfig](baseeapmethodconfigschema-schema.md) -Schema definiert den folgenden komplexen Typ.
+Das [baseeapmethodconfig-Schema](baseeapmethodconfigschema-schema.md) definiert den folgenden komplexen Typ.
 
--   [**Baseeapmethodconfig**](baseeapmethodconfigschema-baseeapmethodconfig-complextype.md)
+-   [**BaseEapMethodConfig**](baseeapmethodconfigschema-baseeapmethodconfig-complextype.md)
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
 <dl> <dt>
 
-[EAPHost und Legacy Schema](eaphost-schemas.md)
+[EAPHost und Legacyschema](eaphost-schemas.md)
 </dt> <dt>
 
 [baseeapmethodconfig-Schema](baseeapmethodconfigschema-schema.md)
 </dt> </dl>
 
- 
+ 
 
- 
+ 
 
 
 

@@ -1,7 +1,7 @@
 ---
-description: Entfernt die angegebenen Striche aus iinkanalyzer.
+description: Entfernt die angegebenen Striche aus dem IInkAnalyzer.
 ms.assetid: ea7c8a9f-a427-4781-b5ba-97ffd983dbe5
-title: 'Iinkanalyzer:: RemoveStrokes-Methode (iacom. h)'
+title: IInkAnalyzer::RemoveStrokes-Methode (IACom.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,16 +13,16 @@ api_type:
 - COM
 api_location:
 - IACom.dll
-ms.openlocfilehash: 00f065e01f9a4ff1459988d76fc9393ba24aa894
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: e6d53d21df9734ee43cdda618c5221fd83300598d46b51bd366c50fedf5cec45
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104129449"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119092020"
 ---
-# <a name="iinkanalyzerremovestrokes-method"></a>Iinkanalyzer:: RemoveStrokes-Methode
+# <a name="iinkanalyzerremovestrokes-method"></a>IInkAnalyzer::RemoveStrokes-Methode
 
-Entfernt die angegebenen Striche aus [**iinkanalyzer**](iinkanalyzer.md).
+Entfernt die angegebenen Striche aus dem [**IInkAnalyzer**](iinkanalyzer.md).
 
 ## <a name="syntax"></a>Syntax
 
@@ -40,37 +40,37 @@ HRESULT RemoveStrokes(
 
 <dl> <dt>
 
-*ulstrokeidcount* \[ in\]
+*ulStrokeIdCount* \[ In\]
 </dt> <dd>
 
-Die Anzahl der Stroke-IDs in *plstrokes*.
+Die Anzahl der Strichbezeichner in *plStrokes*.
 
 </dd> <dt>
 
-*pltakte* \[ in\]
+*plStrokes* \[ In\]
 </dt> <dd>
 
-Die Bezeichner für die Striche, die entfernt werden sollen.
+Die Bezeichner für die zu entfernenden Striche.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Eine Beschreibung der Rückgabewerte finden Sie unter [Klassen und Schnittstellen-Ink-Analyse](classes-and-interfaces---ink-analysis.md).
+Eine Beschreibung der Rückgabewerte finden Sie unter Klassen und Schnittstellen – [Ink-Analyse.](classes-and-interfaces---ink-analysis.md)
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Diese Methode entfernt die Paketdaten für-und-Verweise auf die angegebenen Striche aus [**iinkanalyzer**](iinkanalyzer.md).
+Diese Methode entfernt die Paketdaten für und Verweise auf die angegebenen Striche aus dem [**IInkAnalyzer**](iinkanalyzer.md).
 
-Diese Methode entfernt die Striche aus dem Blatt Kontext Knoten, der auf die Striche verweist. Wenn ein [**icontextnode**](icontextnode.md) nicht mehr auf Striche verweist, löscht diese Methode den **icontextnode** -und alle Vorgänger- **icontextnode** -Objekte, die keine untergeordneten Knoten mehr aufweisen.
+Diese Methode entfernt die Striche aus dem Blattkontextknoten, der auf die Striche verweist. Wenn ein [**IContextNode**](icontextnode.md) nicht mehr auf Striche verweist, löscht diese Methode die **IContextNode-Objekte** und alle übergeordneten **IContextNode-Objekte,** die keine untergeordneten Knoten mehr haben.
 
-Nachdem diese Methode die Striche aus dem [**icontextnode**](icontextnode.md)entfernt hat, aktualisiert Sie den geänderten Bereich des [**iinkanalyzer**](iinkanalyzer.md) -Objekts (siehe [**iinkanalyzer:: getdirtyregion-Methode**](iinkanalyzer-getdirtyregion.md)), um das umgebende Feld der entfernten Striche einzubeziehen.
+Nachdem diese Methode die Striche aus dem [**IContextNode**](icontextnode.md)entfernt hat, aktualisiert sie den geänderten Bereich des [**IInkAnalyzer-Objekts**](iinkanalyzer.md) (siehe [**IInkAnalyzer::GetDirtyRegion-Methode),**](iinkanalyzer-getdirtyregion.md)um den Begrenzungsfeld der entfernten Striche einzuschließen.
 
-Wenn ein in *plstrokes* identifizierter Strich nicht mit [**iinkanalyzer**](iinkanalyzer.md)verknüpft ist, ignoriert diese Methode den Bezeichner.
+Wenn ein in *plStrokes* identifizierter Strich nicht dem [**IInkAnalyzer**](iinkanalyzer.md)zugeordnet ist, ignoriert diese Methode den Bezeichner.
 
-Wenn keiner der in *plstrokes* identifizierten Striche mit der Ink Analyzer verknüpft ist, gibt diese Methode zurück, ohne [**iinkanalyzer**](iinkanalyzer.md)zu aktualisieren.
+Wenn dem Freihandanalyseprogramm keiner der in *plStrokes identifizierten Striche* zugeordnet ist, gibt diese Methode zurück, ohne den [**IInkAnalyzer**](iinkanalyzer.md)zu aktualisieren.
 
-Diese Methode gibt den Fehlercode zurück, wenn *plstrokes* NULL ist.
+Diese Methode gibt den Fehlercode und zurück, wenn *plStrokes* NULL ist.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -78,39 +78,39 @@ Diese Methode gibt den Fehlercode zurück, wenn *plstrokes* NULL ist.
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows XP Tablet PC Edition \[ Desktop-Apps\]<br/>                                                 |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur Desktop-Apps der XP Tablet PC Edition \[\]<br/>                                                 |
 | Unterstützte Mindestversion (Server)<br/> | Nicht unterstützt<br/>                                                                                     |
-| Header<br/>                   | <dl> <dt>Iacom. h (erfordert auch iacom \_ i. c)</dt> </dl> |
+| Header<br/>                   | <dl> <dt>IACom.h (erfordert auch IACom \_ i.c)</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>IACom.dll</dt> </dl>                          |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Iinkanalyzer**](iinkanalyzer.md)
+[**IInkAnalyzer**](iinkanalyzer.md)
 </dt> <dt>
 
-[**Iinkanalyzer:: AddStroke-Methode**](iinkanalyzer-addstroke.md)
+[**IInkAnalyzer::AddStroke-Methode**](iinkanalyzer-addstroke.md)
 </dt> <dt>
 
-[**Iinkanalyzer:: addstrokeforlanguage-Methode**](iinkanalyzer-addstrokeforlanguage.md)
+[**IInkAnalyzer::AddStrokeForLanguage-Methode**](iinkanalyzer-addstrokeforlanguage.md)
 </dt> <dt>
 
-[**Iinkanalyzer:: AddStrokes-Methode**](iinkanalyzer-addstrokes.md)
+[**IInkAnalyzer::AddStrokes-Methode**](iinkanalyzer-addstrokes.md)
 </dt> <dt>
 
-[**Iinkanalyzer:: addstrokesforlanguage-Methode**](iinkanalyzer-addstrokesforlanguage.md)
+[**IInkAnalyzer::AddStrokesForLanguage-Methode**](iinkanalyzer-addstrokesforlanguage.md)
 </dt> <dt>
 
-[**Iinkanalyzer:: RemoveStroke-Methode**](iinkanalyzer-removestroke.md)
+[**IInkAnalyzer::RemoveStroke-Methode**](iinkanalyzer-removestroke.md)
 </dt> <dt>
 
-[**Iinkanalyzer:: getdirtyregion-Methode**](iinkanalyzer-getdirtyregion.md)
+[**IInkAnalyzer::GetDirtyRegion-Methode**](iinkanalyzer-getdirtyregion.md)
 </dt> <dt>
 
-[Ink-Analyse Referenz](ink-analysis-reference.md)
+[Referenz zur Ink-Analyse](ink-analysis-reference.md)
 </dt> </dl>
 
  

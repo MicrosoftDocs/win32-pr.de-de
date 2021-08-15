@@ -1,7 +1,7 @@
 ---
-description: Die Write-Methode schreibt Daten in eine aktuelle geöffnete Datei.
+description: Die Write-Methode schreibt Daten in eine aktuell geöffnete Datei.
 ms.assetid: 0c92af34-a9db-4242-8b6e-d1010a0d7afa
-title: 'Iscardfileaccess:: Write-Methode'
+title: ISCardFileAccess::Write-Methode
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -12,18 +12,18 @@ api_name:
 api_type:
 - COM
 api_location: ''
-ms.openlocfilehash: 48091d39fff49e54d57f5a26fb7d033bfd8e5952
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: c48f900ad5026af61cfc5b4f68c7908bd77881a637082a3fe1d05bc7c72f4b51
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104131453"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118923179"
 ---
-# <a name="iscardfileaccesswrite-method"></a>Iscardfileaccess:: Write-Methode
+# <a name="iscardfileaccesswrite-method"></a>ISCardFileAccess::Write-Methode
 
-\[Die **Write** -Methode ist für die Verwendung in den Betriebssystemen verfügbar, die im Abschnitt "Anforderungen" angegeben sind. Es ist nicht für die Verwendung in Windows Server 2003 mit Service Pack 1 (SP1) und höher, Windows Vista, Windows Server 2008 und nachfolgenden Versionen des Betriebssystems verfügbar. Die [Smartcard-Module](/previous-versions/windows/desktop/secsmart/smart-card-modules) bieten eine ähnliche Funktionalität.\]
+\[Die **Write-Methode** ist für die Verwendung in den Betriebssystemen verfügbar, die im Abschnitt Anforderungen angegeben sind. Es ist nicht für die Verwendung in Windows Server 2003 mit Service Pack 1 (SP1) und höher, Windows Vista, Windows Server 2008 und nachfolgenden Versionen des Betriebssystems verfügbar. Die [Smartcardmodule](/previous-versions/windows/desktop/secsmart/smart-card-modules) bieten ähnliche Funktionen.\]
 
-Die **Write** -Methode schreibt Daten in eine aktuelle geöffnete Datei.
+Die **Write-Methode** schreibt Daten in eine aktuell geöffnete Datei.
 
 ## <a name="syntax"></a>Syntax
 
@@ -42,54 +42,54 @@ HRESULT Write(
 
 <dl> <dt>
 
-*hFile* \[ in\]
+*hFile* \[ In\]
 </dt> <dd>
 
 Ein Handle für eine geöffnete Datei.
 
 </dd> <dt>
 
-*pData* \[ in\]
+*pData* \[ In\]
 </dt> <dd>
 
-Objekt/Daten, die geschrieben werden sollen.
+Zu schreibende Objekte/Daten.
 
 </dd> <dt>
 
-*Flags* \[ in\]
+*Flags* \[ In\]
 </dt> <dd>
 
 Gibt an, ob sicheres Messaging verwendet werden soll.
 
 <dl><span id="SC_FL_SECURE_MESSAGING"></span><span id="sc_fl_secure_messaging"></span><dt>
 
-**SC \_ FL \_ Secure \_ Messaging**
+**SC \_ FL \_ SECURE \_ MESSAGING**
 </dt> </dl> </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Die-Methode gibt einen der folgenden möglichen Werte zurück.
+Die -Methode gibt einen der folgenden möglichen Werte zurück.
 
 
 
 | Rückgabecode                                                                                   | Beschreibung                                  |
 |-----------------------------------------------------------------------------------------------|----------------------------------------------|
 | <dl> <dt>**S \_ OK**</dt> </dl>          | Operation erfolgreich abgeschlossen.<br/> |
-| <dl> <dt>**E \_ invalidArg**</dt> </dl>  | Ungültiger Parameter.<br/>                |
-| <dl> <dt>**E- \_ Zeiger**</dt> </dl>     | Es wurde ein fehlerhafter Zeiger übermittelt.<br/>      |
-| <dl> <dt>**E \_ outo-Memory**</dt> </dl> | Nicht genügend Arbeitsspeicher.<br/>                    |
+| <dl> <dt>**E \_ INVALIDARG**</dt> </dl>  | Ungültiger Parameter.<br/>                |
+| <dl> <dt>**E \_ POINTER**</dt> </dl>     | Ein ungültiger Zeiger wurde übergeben.<br/>      |
+| <dl> <dt>**E \_ OUTOFMEMORY**</dt> </dl> | Nicht genügend Arbeitsspeicher.<br/>                    |
 
 
 
  
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Um eine Datei zu öffnen oder zu schließen, öffnen Sie " [**Öffnen**](iscardfileaccess-open.md) " oder " [**Schließen**](iscardfileaccess-close.md)".
+Um eine Datei zu öffnen oder zu schließen, rufen [**Sie Öffnen**](iscardfileaccess-open.md) bzw. [**Schließen**](iscardfileaccess-close.md)auf.
 
-Eine Liste aller Methoden, die durch diese Schnittstelle definiert werden, finden Sie unter [**iscardfileaccess**](iscardfileaccess.md).
+Eine Liste aller von dieser Schnittstelle definierten Methoden finden Sie unter [**ISCardFileAccess.**](iscardfileaccess.md)
 
-Zusätzlich zu den oben aufgeführten com-Fehlercodes gibt diese Schnittstelle möglicherweise einen Fehlercode für die [*Smartcard*](../secgloss/s-gly.md) zurück, wenn eine smartcardfunktion aufgerufen wurde, um die Anforderung abzuschließen. Weitere Informationen finden Sie unter [Smartcard-Rückgabewerte](authentication-return-values.md).
+Zusätzlich zu den oben aufgeführten COM-Fehlercodes kann diese Schnittstelle einen [*Smartcardfehlercode*](../secgloss/s-gly.md) zurückgeben, wenn eine Smartcardfunktion aufgerufen wurde, um die Anforderung abzuschließen. Weitere Informationen finden Sie unter [Smartcard-Rückgabewerte.](authentication-return-values.md)
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -97,24 +97,24 @@ Zusätzlich zu den oben aufgeführten com-Fehlercodes gibt diese Schnittstelle m
 
 | Anforderung | Wert |
 |-------------------------------------|------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows XP \[ -Desktop-Apps\]<br/>          |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2003 \[ -Desktop-Apps\]<br/> |
+| Unterstützte Mindestversion (Client)<br/> | Windows \[Nur XP-Desktop-Apps\]<br/>          |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2003-Desktop-Apps\]<br/> |
 | Ende des Supports (Client)<br/>    | Windows XP<br/>                                |
-| Ende des Supports (Server)<br/>    | Windows Server 2003<br/>                       |
+| Ende des Supports (Server)<br/>    | Windows Server 2003<br/>                       |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
 [**Schließen**](iscardfileaccess-close.md)
 </dt> <dt>
 
-[**Iscardfileaccess**](iscardfileaccess.md)
+[**ISCardFileAccess**](iscardfileaccess.md)
 </dt> <dt>
 
-[**Eren**](iscardfileaccess-open.md)
+[**Öffnen**](iscardfileaccess-open.md)
 </dt> </dl>
 
  

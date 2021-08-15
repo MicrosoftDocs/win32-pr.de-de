@@ -1,27 +1,27 @@
 ---
-description: Eine Synchronisierungs Barriere ermöglicht es mehreren Threads zu warten, bis alle Threads einen bestimmten Ausführungs Zeitpunkt erreicht haben, bevor ein Thread fortgesetzt wird.
+description: Eine Synchronisierungsbarriere ermöglicht es mehreren Threads, zu warten, bis alle Threads einen bestimmten Ausführungspunkt erreicht haben, bevor ein Thread fortgesetzt wird.
 ms.assetid: 3A76E6F7-C38B-4843-9496-36F3C78B700C
-title: Synchronisierungs Barrieren
+title: Synchronisierungsbarrieren
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 4276f0bbc5a10eef391c12cc51ebd475e563bd44
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 1247d7ab3b20d4fe89763aea0429d742e8ce1c4d11030088316d4e9f3272556b
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "104217984"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118885982"
 ---
-# <a name="synchronization-barriers"></a>Synchronisierungs Barrieren
+# <a name="synchronization-barriers"></a>Synchronisierungsbarrieren
 
-Eine Synchronisierungs Barriere ermöglicht es mehreren Threads zu warten, bis alle Threads einen bestimmten Ausführungs Zeitpunkt erreicht haben, bevor ein Thread fortgesetzt wird. Synchronisierungs Barrieren können nicht Prozess übergreifend gemeinsam genutzt werden.
+Eine Synchronisierungsbarriere ermöglicht es mehreren Threads, zu warten, bis alle Threads einen bestimmten Ausführungspunkt erreicht haben, bevor ein Thread fortgesetzt wird. Synchronisierungsbarrieren können nicht prozessübergreifend gemeinsam genutzt werden.
 
-Synchronisierungs Barrieren sind für Berechnungen in Phasen nützlich, bei denen Threads, die denselben Code parallel ausführen, eine Phase ausführen müssen, bevor Sie mit der nächsten fortfahren.
+Synchronisierungsbarrieren sind nützlich für stufenweise Berechnungen, bei denen Threads, die denselben Code parallel ausführen, alle eine Phase abschließen müssen, bevor sie mit der nächsten fortfahren.
 
-Rufen Sie zum Erstellen einer Synchronisierungs Barriere die [**initializesynchronizationbarrier**](/windows/desktop/api/SynchAPI/nf-synchapi-initializesynchronizationbarrier) -Funktion auf, und geben Sie eine maximale Anzahl von Threads und die Häufigkeit an, mit der ein Thread vor dem blockieren gedreht werden soll. Starten Sie dann die Threads, die die Barriere verwenden werden. Nachdem jeder Thread seine Arbeit beendet hat, ruft er [**entersynchronizationbarrier**](/windows/desktop/api/synchapi/nf-synchapi-entersynchronizationbarrier) auf, um auf die Barriere zu warten. Die **entersynchronizationbarrier** -Funktion blockiert jeden Thread so lange, bis die Anzahl der Threads, die in der Barriere blockiert werden, die maximale Thread Anzahl für die Barriere erreicht. zu diesem Zeitpunkt werden von **entersynchronizationbarrier** alle Threads blockiert. Die Funktion " **entersynchronizationbarrier** " gibt für genau einen der Threads, die in die Barriere eingetreten sind, **true** zurück und gibt für alle anderen Threads **false** zurück.
+Um eine Synchronisierungsbarriere zu erstellen, rufen Sie die [**InitializeSynchronizationBarrier-Funktion**](/windows/desktop/api/SynchAPI/nf-synchapi-initializesynchronizationbarrier) auf, und geben Sie eine maximale Anzahl von Threads und die Anzahl an, die ein Thread drehen soll, bevor er blockiert wird. Starten Sie dann die Threads, die die Barriere verwenden. Nachdem jeder Thread seine Arbeit abgeschlossen hat, ruft er [**EnterSynchronizationBarrier**](/windows/desktop/api/synchapi/nf-synchapi-entersynchronizationbarrier) auf, um an der Barriere zu warten. Die **EnterSynchronizationBarrier-Funktion** blockiert jeden Thread, bis die Anzahl der in der Barriere blockierten Threads die maximale Threadanzahl für die Barriere erreicht. An diesem Punkt entsperrt **EnterSynchronizationBarrier** alle Threads. Die **EnterSynchronizationBarrier-Funktion** gibt **TRUE** für genau einen der Threads zurück, der in die Barriere gelangt ist, und **gibt FALSE** für alle anderen Threads zurück.
 
-Um eine Synchronisierungs Barriere freizugeben, wenn Sie nicht mehr benötigt wird, wenden Sie sich an das [**Delta-cetesynchronizationbarrier**](/windows/desktop/api/SynchAPI/nf-synchapi-deletesynchronizationbarrier) Es ist sicher, dass diese Funktion sofort nach dem Aufrufen von " [**entersynchronizationbarrier**](/windows/desktop/api/synchapi/nf-synchapi-entersynchronizationbarrier) " aufgerufen wird, da diese Funktion sicherstellt, dass alle Threads die Barriere vor der Freigabe nicht mehr verwenden.
+Um eine Synchronisierungsbarriere freizugeben, wenn sie nicht mehr benötigt wird, rufen [**Sie DeleteSynchronizationBarrier**](/windows/desktop/api/SynchAPI/nf-synchapi-deletesynchronizationbarrier)auf. Es ist sicher, diese Funktion sofort nach dem Aufruf von [**EnterSynchronizationBarrier**](/windows/desktop/api/synchapi/nf-synchapi-entersynchronizationbarrier) aufzurufen, da diese Funktion sicherstellt, dass alle Threads die Barriere nicht mehr verwenden, bevor sie freigegeben wird.
 
-Wenn eine Synchronisierungs Barriere nie gelöscht wird, können Threads das Flag für **Synchronisierungs \_ Barriere \_ \_ ohne \_ Löschung** angeben, wenn Sie die Grenze erreichen. Alle Threads, die die Barriere verwenden, müssen dieses Flag angeben. Wenn kein Thread vorhanden ist, wird das Flag ignoriert. Dieses Flag bewirkt, dass die Funktion die zusätzliche Arbeit überspringt, die für die Lösch Sicherheit erforderlich ist, wodurch die Leistung verbessert werden kann. Beachten Sie, dass das Löschen einer Barriere, während dieses Flag wirksam ist, zu einem ungültigen Handle-Zugriff und einem oder mehreren dauerhaft blockierten Threads führen kann.
+Wenn eine Synchronisierungsbarriere nie gelöscht wird, können Threads das **FLAG SYNCHRONIZATION \_ BARRIER \_ FLAGS NO \_ \_ DELETE** angeben, wenn sie die Barriere erreichen. Alle Threads, die die Barriere verwenden, müssen dieses Flag angeben. Wenn dies für einen Thread nicht der Fall ist, wird das Flag ignoriert. Dieses Flag bewirkt, dass die Funktion die zusätzliche Arbeit überspringt, die für die Löschsicherheit erforderlich ist, was die Leistung verbessern kann. Beachten Sie, dass das Löschen einer Barriere während dieses Flags zu einem ungültigen Handlezugriff und einem oder mehreren dauerhaft blockierten Threads führen kann.
 
  
 

@@ -1,62 +1,62 @@
 ---
 title: C (RPC)
-description: Wörter, die mit C im Glossar für Remote Prozedur Aufrufe (RPC) beginnen.
+description: Wörter, die mit C im RPC-Glossar (Remote Procedure Call) beginnen.
 ROBOTS: NOINDEX, NOFOLLOW
 ms.assetid: da1ee843-c33e-42a1-bcaf-6cdb4834e70b
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: f15eb37af87fd36dd31f3e9e106904b4ce734c15
-ms.sourcegitcommit: 8fa6614b715bddf14648cce36d2df22e5232801a
+ms.openlocfilehash: 014aa77aac01be89656859f5d2b05ee352e08ab5b086fef768fc0e187880532f
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/10/2020
-ms.locfileid: "103949354"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118932284"
 ---
 # <a name="c-rpc"></a>C (RPC)
 
-[a](a-glos.md) [B](b-glos.md) C [D](d-glos.md) [E](e-glos.md) [F](f-glos.md) G H [I](i-glos.md) J K [L](l-glos.md) [M](m-glos.md) [N](n-glos.md) [O](o-glos.md) [P](p-glos.md) [Q](q.md) [R](r-glos.md) [S](s-glos.md) [T](t-glos.md) [U](u-glos.md) [V](v-glos.md) [W](w-glos.md) X Y Z
+[A](a-glos.md) [B](b-glos.md) C [D](d-glos.md) [E](e-glos.md) [F](f-glos.md) G H [I](i-glos.md) J K [L](l-glos.md) [M](m-glos.md) [N](n-glos.md) [O](o-glos.md) [P](p-glos.md) [Q](q.md) [R](r-glos.md) [S](s-glos.md) [T](t-glos.md) [U](u-glos.md) [V](v-glos.md) [W](w-glos.md) X Y Z
 
 <dl> <dt>
 
-<span id="_rpc_cds_glos"></span><span id="_RPC_CDS_GLOS"></span>**Zell Verzeichnisdienst (CDs)**
+<span id="_rpc_cds_glos"></span><span id="_RPC_CDS_GLOS"></span>**Cell Directory Service (CDS)**
 </dt> <dd>
 
-Name: Dienstanbieter für die verteilte Computerumgebung von Open Software Foundation.
+Name-Service-Anbieter für die Distributed Computing-Umgebung der Open Software Foundation.
 
 </dd> <dt>
 
 <span id="_rpc_client_stub_glos"></span><span id="_RPC_CLIENT_STUB_GLOS"></span>**Clientstub**
 </dt> <dd>
 
-Mittlerer l-generierter Quellcode der Programmiersprache C. Sie enthält alle Funktionen, die für die Client Anwendung erforderlich sind, um Remote Prozedur Aufrufe mithilfe des Modells eines herkömmlichen Funktionsaufrufs in einer eigenständigen Anwendung auszuführen. Der Clientstub ist verantwortlich für das Mars Hallen von Eingabe Parametern und das Entsperren von Ausgabeparametern. Siehe auch [*Serverstub*](s-glos.md), [*ProxyStub*](p-glos.md).
+MIDL-generierter C-Sprachquellcode. Sie enthält alle Funktionen, die für die Clientanwendung erforderlich sind, um Remoteprozeduraufrufe mithilfe des Modells eines herkömmlichen Funktionsaufrufs in einer eigenständigen Anwendung durchzuführen. Der Clientstub ist für das Marshallen von Eingabeparametern und das Aufheben des Marshallings von Ausgabeparametern zuständig. Siehe auch [*Serverstub*](s-glos.md), [*Proxystub*](p-glos.md).
 
 </dd> <dt>
 
 <span id="_rpc_conformant_array_glos"></span><span id="_RPC_CONFORMANT_ARRAY_GLOS"></span>**konformes Array**
 </dt> <dd>
 
-Ein Array, dessen Größe zur Laufzeit durch einen anderen Parameter, ein anderes Strukturfeld oder einen Ausdruck bestimmt wird.
+Array, dessen Größe zur Laufzeit durch einen anderen Parameter, ein anderes Strukturfeld oder einen anderen Ausdruck bestimmt wird.
 
 </dd> <dt>
 
 <span id="_rpc_connection_oriented_glos"></span><span id="_RPC_CONNECTION_ORIENTED_GLOS"></span>**verbindungsorientiert**
 </dt> <dd>
 
-Kommunikationsprotokoll oder Transport, das eine virtuelle Verbindung bereitstellt, über die Datenpakete in derselben Reihenfolge empfangen werden, in der Sie übertragen wurden. Wenn die Verbindung zwischen Computern fehlschlägt, wird die Anwendung benachrichtigt. [*TCP*](t-glos.md) und [*SPX*](s-glos.md) sind Beispiele für Verbindungs orientierte Protokolle. Siehe auch [*Datagramm*](d-glos.md).
+Kommunikationsprotokoll oder -transport, das eine virtuelle Verbindung bereitstellt, über die Datenpakete in der gleichen Reihenfolge empfangen werden, in der sie übertragen wurden. Wenn die Verbindung zwischen Computern fehlschlägt, wird die Anwendung benachrichtigt. [*TCP*](t-glos.md) und [*SPX*](s-glos.md) sind Beispiele für verbindungsorientierte Protokolle. Siehe auch [*Datagramm*](d-glos.md).
 
 </dd> <dt>
 
-<span id="_rpc_connectionless_glos"></span><span id="_RPC_CONNECTIONLESS_GLOS"></span>**verbindungsloses**
+<span id="_rpc_connectionless_glos"></span><span id="_RPC_CONNECTIONLESS_GLOS"></span>**Verbindungsloses**
 </dt> <dd>
 
-Siehe [*Datagramm*](d-glos.md).
+Weitere Informationen finden Sie [*unter Datagramm*](d-glos.md).
 
 </dd> <dt>
 
 <span id="_rpc_context_rundown_glos"></span><span id="_RPC_CONTEXT_RUNDOWN_GLOS"></span>**Kontext-Rundown**
 </dt> <dd>
 
-Server Benachrichtigung, die sich aus einer unerwarteten Beendigung der Bindung zwischen Client-und Server Anwendungen ergibt.
+Serverbenachrichtigung, die sich aus einer unerwarteten Beendigung der Bindung zwischen Client- und Serveranwendungen ergibt.
 
 </dd> </dl>
 

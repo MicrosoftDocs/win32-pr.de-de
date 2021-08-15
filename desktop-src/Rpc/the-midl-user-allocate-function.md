@@ -1,35 +1,35 @@
 ---
 title: Die midl_user_allocate-Funktion
-description: Die Funktion "Mittel l- \_ Benutzer \_ zuweisen" ist ein Verfahren, das von Entwicklern von RPC-Anwendungen bereitgestellt werden muss.
+description: Die \_ Midl-Benutzer-Zuordnungsfunktion ist eine Prozedur, die \_ von Entwicklern von RPC-Anwendungen bereitgestellt werden muss.
 ms.assetid: 3def405c-da05-4cce-9dc4-499864a0de6e
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 12b2e3196de79992f5856b7117b25f05ad782d26
-ms.sourcegitcommit: 592c9bbd22ba69802dc353bcb5eb30699f9e9403
+ms.openlocfilehash: eb8e064fc16a303660be96a4a3c47aa361c4616f54a8cb825c1fce5334543fc5
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "104102006"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118924249"
 ---
-# <a name="the-midl_user_allocate-function"></a>Die Funktion "Mittel l- \_ Benutzer \_ zuweisen"
+# <a name="the-midl_user_allocate-function"></a>Die \_ Midl-Benutzerfunktion \_ "allocate"
 
-Die Funktion " **Mittel l- \_ Benutzer \_ zuweisen** " ist ein Verfahren, das von Entwicklern von RPC-Anwendungen bereitgestellt werden muss. Dadurch wird Arbeitsspeicher für die RPC-stubspeicher und Bibliotheks Routinen zugewiesen. Die Funktion " **Mittel l- \_ Benutzer \_ Zuordnung** " muss dem folgenden Prototyp entsprechen:
+Die **\_ Midl-Benutzer-Zuordnungsfunktion \_** ist eine Prozedur, die von Entwicklern von RPC-Anwendungen bereitgestellt werden muss. Sie weist Arbeitsspeicher für die RPC-Stubs und Bibliotheksroutinen zu. Ihre **\_ Midl-Benutzer-Zuordnungsfunktion \_** muss mit dem folgenden Prototyp übereinstimmen:
 
 ``` syntax
 void __RPC_FAR * __RPC_USER midl_user_allocate (size_t cBytes);
 ```
 
-Der *cbytes* -Parameter gibt die Anzahl der zuzuordnenden Bytes an. Sowohl Client Anwendungen als auch Server Anwendungen müssen die Funktion " **Mittell- \_ Benutzer \_ zuweisen** " implementieren, es sei denn, Sie kompilieren ihn im OSF-Kompatibilitätsmodus (/OSF). Von Anwendungen und generierten stubjekten wird die **\_ \_ Zuordnung von Benutzer** Zuordnungen direkt oder indirekt zum Verwalten zugewiesener Objekte aufgerufen. Beispiel:
+Der *cBytes-Parameter* gibt die Anzahl der zu reservierenden Bytes an. Sowohl Clientanwendungen als auch Serveranwendungen müssen die Midl-Benutzer-Zuordnungsfunktion implementieren, es sei denn, Sie kompilieren im OSF-Kompatibilitätsmodus (/osf). **\_ \_** Anwendungen und generierte Stubs rufen **midl \_ user allocate \_ direkt** oder indirekt auf, um zugeordnete Objekte zu verwalten. Beispiel:
 
--   Die Client-und Server Anwendungen wenden die Benutzer Zuordnungen für den **\_ Benutzer \_** an, um Arbeitsspeicher für die Anwendung zuzuweisen, z. b. Wenn ein neuer Knoten in einer Struktur oder verknüpften Liste erstellt wird
--   Der Serverstub Ruft beim Marshalling von Daten in den Server Adressraum die **mittlere \_ Benutzer \_** Zuordnungen auf.
--   Der Clientstub Ruft bei der Aufhebung des Marshalling von Daten von dem Server, auf den von einem out-Zeiger verwiesen wird, die Benutzer Zuordnungen für **mittlere \_ Benutzer \_** auf \[ \] Beachten Sie, \[ dass \] \[ \] der Client-Stub bei in-, out-und \[ Unique \] -Zeigern nur dann die **\_ Benutzer \_** Zuordnungen aufruft, wenn der \[ eindeutige \] Zeiger Wert bei Eingabe NULL war und während des Aufrufs zu einem Wert ungleich NULL wechselt. Wenn der \[ eindeutige \] Zeiger bei Eingabe ungleich Null war, schreibt der Clientstub die zugeordneten Daten in den vorhandenen Arbeitsspeicher.
+-   Die Client- und Serveranwendungen rufen **midl \_ user \_ allocate** auf, um Arbeitsspeicher für die Anwendung zu reservieren, z. B. beim Erstellen eines neuen Knotens in einer Struktur oder verknüpften Liste.
+-   Der Serverstub ruft **midl \_ user allocate \_ auf,** wenn die Zuordnung von Daten im Serveradressenbereich entmardt wird.
+-   Der Clientstub ruft **midl \_ user allocate \_ auf,** wenn daten vom Server, auf den von einem Out-Zeiger verwiesen wird, nicht imShashaling \[ gespeichert \] werden. Beachten Sie, dass der Clientstub für in , out und eindeutige Zeiger nur dann midl user allocate aufruft, wenn der eindeutige Zeigerwert bei der Eingabe NULL war und sich während des Aufrufs in einen Wert ändert, der nicht \[ \] NULL \[ \] \[ \] **\_ \_** \[ \] ist. Wenn der eindeutige Zeiger bei der Eingabe nicht NULL war, schreibt der \[ \] Clientstub die zugeordneten Daten in den vorhandenen Arbeitsspeicher.
 
-Wenn die Benutzer Zuordnungen von **\_ Benutzer \_** Zuordnungen keinen Arbeitsspeicher zuordnen können, sollte ein NULL-Zeiger zurückgegeben werden.
+Wenn **bei der \_ Midl-Benutzerbeteilung \_** kein Arbeitsspeicher reserviert werden kann, sollte ein NULL-Zeiger zurückgegeben werden.
 
-Die **\_ Benutzer \_** Zuordnungs Funktion "Mittel l" sollte einen 8-Byte-ausgerichteten Zeiger zurückgeben.
+Die **\_ midl-Benutzerfunktion \_ allocate** sollte einen 8-Byte-ausgerichteten Zeiger zurückgeben.
 
-Beispielsweise implementieren die Beispiel Programme, die mit dem Platform Software Development Kit (SDK) bereitgestellt werden, eine **mittlere \_ Benutzer \_** Zuordnungen im Hinblick auf die C-Funktion [**malloc**](pointers-and-memory-allocation.md):
+Beispielsweise implementieren die mit dem Platform Software Development Kit (SDK) bereitgestellten Beispielprogramme **midl \_ user \_ allocate** in Bezug auf die C-Funktion [**malloc:**](pointers-and-memory-allocation.md)
 
 
 ```C++
@@ -42,10 +42,10 @@ void __RPC_FAR * __RPC_USER midl_user_allocate(size_t cBytes)
 
 
 > [!Note]  
-> Wenn das RPCSS-Paket aktiviert ist (z. b. als Ergebnis der Verwendung des \[ Attributs " [**\_ zuordnen**](/windows/desktop/Midl/enable-allocate) " \] ), verwenden Sie " [**rpcsmallo"**](/windows/desktop/api/Rpcndr/nf-rpcndr-rpcsmallocate) , um Arbeitsspeicher auf der Serverseite zuzuweisen. Weitere Informationen zum Aktivieren von " \[ **\_ zuordnen**" \] finden Sie unter " [Mittel l Reference](/windows/desktop/Midl/midl-language-reference)".
+> Wenn das RpcSs-Paket aktiviert ist (z. B. als Ergebnis der Verwendung des Attributs \[ [**enable \_ allocate),**](/windows/desktop/Midl/enable-allocate) verwenden Sie \] [**RpcSmAllocate,**](/windows/desktop/api/Rpcndr/nf-rpcndr-rpcsmallocate) um Arbeitsspeicher auf serverseitiger Seite zu reservieren. Weitere Informationen zum Aktivieren der \[ **Zuordnung finden \_ Sie** \] in der [MIDL-Referenz.](/windows/desktop/Midl/midl-language-reference)
 
- 
+ 
 
- 
+ 
 
- 
+ 

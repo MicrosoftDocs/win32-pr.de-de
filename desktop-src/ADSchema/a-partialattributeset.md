@@ -1,11 +1,11 @@
 ---
-title: Attribut "Partial-Attribute-Set"
-description: Verfolgt den internen Replikations Status von partiellen Replikaten (d. h. auf GCS). Attribut des partiellen Replikat-NC-Objekts. Definiert den Satz von Attributen, die auf einem bestimmten partiellen Replikat-NC vorhanden sind
+title: Partial-Attribute-Set-Attribut
+description: Verfolgt den internen Replikationsstatus von Teilreplikaten (d. h. auf GCs) nach. Attribut des PART-REPLIKAT-NC-Objekts. Definiert den Satz von Attributen, die in einem bestimmten nc-Teilreplikat vorhanden sind.
 ms.assetid: 2840d2b7-e186-4ef2-9107-f1e5c0c2f760
 ms.tgt_platform: multiple
 keywords:
-- AD-Schema für partielle Attribut Attribut Satz
-- AD-Schema des partialattributeset-Attributs
+- AD-Schema für partielles Attributsatzattribut
+- partialAttributeSet-Attribut AD-Schema
 topic_type:
 - apiref
 api_name:
@@ -14,28 +14,28 @@ api_type:
 - Schema
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: e932c07b0d4a8e3ea8f30f504194093d61912b7b
-ms.sourcegitcommit: b77ace27b0432e7cd3863191b11926be032fbe2f
+ms.openlocfilehash: 51428002781c811da539a8e7c7b5871990a89543da098d177f6d3062a729ffce
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "106343100"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119325450"
 ---
-# <a name="partial-attribute-set-attribute"></a>Attribut "Partial-Attribute-Set"
+# <a name="partial-attribute-set-attribute"></a>Partial-Attribute-Set-Attribut
 
-Verfolgt den internen Replikations Status von partiellen Replikaten (d. h. auf GCS). Attribut des partiellen Replikat-NC-Objekts. Definiert den Satz von Attributen, die auf einem bestimmten partiellen Replikat-NC vorhanden sind
+Verfolgt den internen Replikationsstatus von Teilreplikaten (d. h. auf GCs) nach. Attribut des PART-REPLIKAT-NC-Objekts. Definiert den Satz von Attributen, die in einem bestimmten nc-Teilreplikat vorhanden sind.
 
 
 
 | Eingabe | Wert |
 |-------------------|-------------------------------------------------------|
-| CN                | Partiell-Attribut Satz                                 |
-| LDAP-Display-Name | partialattributeset                                   |
+| CN                | Partial-Attribute-Set                                 |
+| Ldap-Anzeigename | partialAttributeSet                                   |
 | Size              | \-                                                    |
-| Berechtigung aktualisieren  | Dieser Wert wird vom System festgelegt.                      |
-| Aktualisierungshäufigkeit  | Während der Replikation                                    |
+| Aktualisieren von Berechtigungen  | Dieser Wert wird vom System festgelegt.                      |
+| Updatehäufigkeit  | Während der Replikation                                    |
 | Attribute-Id      | 1.2.840.113556.1.4.640                                |
-| System-ID-GUID    | 19405b9e-3cfa-11d1-a9c0-0000f 80367c1                  |
+| System-Id-Guid    | 19405b9e-3cfa-11d1-a9c0-0000f80367c1                  |
 | Syntax            | [**Object(Replica-Link)**](s-object-replica-link.md) |
 
 
@@ -43,7 +43,7 @@ Verfolgt den internen Replikations Status von partiellen Replikaten (d. h. auf G
 ## <a name="implementations"></a>Implementierungen
 
 -   [**Windows 2000 Server**](#windows-2000-server)
--   [**Windows Server 2003**](#windows-server-2003)
+-   [**Windows Server 2003**](#windows-server-2003)
 -   [**Adam**](#adam)
 -   [**Windows Server 2003 R2**](#windows-server-2003-r2)
 -   [**Windows Server 2008**](#windows-server-2008)
@@ -58,11 +58,11 @@ Verfolgt den internen Replikations Status von partiellen Replikaten (d. h. auf G
 |------------------------|---------------------------------|
 | Link-ID                | \-                              |
 | MAPI-Id                | \-                              |
-| System-Only            | Richtig                            |
-| Ist-einwertig       | Richtig                            |
+| System-Only            | True                            |
+| Is-Single-Valued       | True                            |
 | Ist indiziert             | False                           |
-| Im globalen Katalog      | Richtig                            |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                    |
+| Im globalen Katalog      | True                            |
+| NT-Security-Descriptor | O:BAG:BAD:S:                    |
 | Range-Lower            | \-                              |
 | Range-Upper            | \-                              |
 | Search-Flags           | 0x00000000                      |
@@ -71,7 +71,7 @@ Verfolgt den internen Replikations Status von partiellen Replikaten (d. h. auf G
 
 
 
-## <a name="windows-server-2003"></a>Windows Server 2003
+## <a name="windows-server-2003"></a>Windows Server 2003
 
 
 
@@ -79,11 +79,11 @@ Verfolgt den internen Replikations Status von partiellen Replikaten (d. h. auf G
 |------------------------|---------------------------------|
 | Link-ID                | \-                              |
 | MAPI-Id                | \-                              |
-| System-Only            | Richtig                            |
-| Ist-einwertig       | Richtig                            |
+| System-Only            | True                            |
+| Is-Single-Valued       | True                            |
 | Ist indiziert             | False                           |
-| Im globalen Katalog      | Richtig                            |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                    |
+| Im globalen Katalog      | True                            |
+| NT-Security-Descriptor | O:BAG:BAD:S:                    |
 | Range-Lower            | \-                              |
 | Range-Upper            | \-                              |
 | Search-Flags           | 0x00000000                      |
@@ -100,11 +100,11 @@ Verfolgt den internen Replikations Status von partiellen Replikaten (d. h. auf G
 |------------------------|---------------------------------|
 | Link-ID                | \-                              |
 | MAPI-Id                | \-                              |
-| System-Only            | Richtig                            |
-| Ist-einwertig       | Richtig                            |
+| System-Only            | True                            |
+| Is-Single-Valued       | True                            |
 | Ist indiziert             | False                           |
-| Im globalen Katalog      | Richtig                            |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                    |
+| Im globalen Katalog      | True                            |
+| NT-Security-Descriptor | O:BAG:BAD:S:                    |
 | Range-Lower            | \-                              |
 | Range-Upper            | \-                              |
 | Search-Flags           | 0x00000000                      |
@@ -121,11 +121,11 @@ Verfolgt den internen Replikations Status von partiellen Replikaten (d. h. auf G
 |------------------------|---------------------------------|
 | Link-ID                | \-                              |
 | MAPI-Id                | \-                              |
-| System-Only            | Richtig                            |
-| Ist-einwertig       | Richtig                            |
+| System-Only            | True                            |
+| Ist einwertig       | True                            |
 | Ist indiziert             | False                           |
-| Im globalen Katalog      | Richtig                            |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                    |
+| Im globalen Katalog      | True                            |
+| NT-Security-Descriptor | O:BAG:BAD:S:                    |
 | Range-Lower            | \-                              |
 | Range-Upper            | \-                              |
 | Search-Flags           | 0x00000000                      |
@@ -142,11 +142,11 @@ Verfolgt den internen Replikations Status von partiellen Replikaten (d. h. auf G
 |------------------------|---------------------------------|
 | Link-ID                | \-                              |
 | MAPI-Id                | \-                              |
-| System-Only            | Richtig                            |
-| Ist-einwertig       | Richtig                            |
+| System-Only            | True                            |
+| Ist einwertig       | True                            |
 | Ist indiziert             | False                           |
-| Im globalen Katalog      | Richtig                            |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                    |
+| Im globalen Katalog      | True                            |
+| NT-Security-Descriptor | O:BAG:BAD:S:                    |
 | Range-Lower            | \-                              |
 | Range-Upper            | \-                              |
 | Search-Flags           | 0x00000000                      |
@@ -163,11 +163,11 @@ Verfolgt den internen Replikations Status von partiellen Replikaten (d. h. auf G
 |------------------------|---------------------------------|
 | Link-ID                | \-                              |
 | MAPI-Id                | \-                              |
-| System-Only            | Richtig                            |
-| Ist-einwertig       | Richtig                            |
+| System-Only            | True                            |
+| Ist einwertig       | True                            |
 | Ist indiziert             | False                           |
-| Im globalen Katalog      | Richtig                            |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                    |
+| Im globalen Katalog      | True                            |
+| NT-Security-Descriptor | O:BAG:BAD:S:                    |
 | Range-Lower            | \-                              |
 | Range-Upper            | \-                              |
 | Search-Flags           | 0x00000000                      |
@@ -184,11 +184,11 @@ Verfolgt den internen Replikations Status von partiellen Replikaten (d. h. auf G
 |------------------------|---------------------------------|
 | Link-ID                | \-                              |
 | MAPI-Id                | \-                              |
-| System-Only            | Richtig                            |
-| Ist-einwertig       | Richtig                            |
+| System-Only            | True                            |
+| Ist einwertig       | True                            |
 | Ist indiziert             | False                           |
-| Im globalen Katalog      | Richtig                            |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                    |
+| Im globalen Katalog      | True                            |
+| NT-Security-Descriptor | O:BAG:BAD:S:                    |
 | Range-Lower            | \-                              |
 | Range-Upper            | \-                              |
 | Search-Flags           | 0x00000000                      |

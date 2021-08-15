@@ -1,30 +1,30 @@
 ---
-description: Überlegungen zu linguistischer und Unicode
+description: Linguistische und Unicode-Überlegungen
 ms.assetid: a210bffc-fe71-4909-bc5c-d440890265c9
-title: Überlegungen zu linguistischer und Unicode
+title: Linguistische und Unicode-Überlegungen
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 6fa189f0772b65b0746e31bd90b89a4c62a4c42f
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 16d160d90c93d009af55bf8acb79a08a1963ea446018b8a920d27a8f3fe3ac60
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104041623"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118462392"
 ---
-# <a name="linguistic-and-unicode-considerations"></a>Überlegungen zu linguistischer und Unicode
+# <a name="linguistic-and-unicode-considerations"></a>Linguistische und Unicode-Überlegungen
 
-Dieser Abschnitt enthält eine Liste der linguistischen und Unicode-Überlegungen, die sich auf die Implementierung von Wörter Trennung und Wort Stamm Erkennung auswirken können Die Liste ist nicht vollständig.
+Dieser Abschnitt enthält eine Liste linguistischer und Unicode-Aspekte, die sich auf die Implementierung von Wörtern und Wortstammzeichen auswirken können. Die Liste ist nicht vollständig.
 
 Dieser Abschnitt schließt folgende Themen ein:
 
--   [Normalisierung des Oberflächen Formulars](surface-form-normalization.md)
+-   [Normalisierung von Oberflächenformularen](surface-form-normalization.md)
 -   [Verschiedene linguistische und Unicode-Überlegungen](miscellaneous-linguistic-and-unicode-considerations.md)
 
 ## <a name="additional-resources"></a>Weitere Ressourcen
 
--   Eine Liste der von der Wörter Trennung unterstützten lanuages finden Sie unter [von Windows Search unterstützte Sprachen](-search-3x-wds-language-support.md).
--   Wenn Sie die Sprache eines Texts identifizieren müssen, können Sie die automatische Erkennung von Sprachen (LAD) verwenden, die in Windows 7 und höher verfügbar ist. Weitere Informationen finden Sie unter [Erweiterte linguistische Dienste](../intl/extended-linguistic-services.md) (STS).
--   Die entsprechende Referenz Dokumentation finden [Sie unter Daten-Add-in-Schnittstellen](-search-data-addins-interfaces-entry-page.md).
+-   Eine Liste der von Wörterumbrüchen unterstützten Sprachen finden Sie unter Von der Windows [unterstützte Sprachen.](-search-3x-wds-language-support.md)
+-   Wenn Sie die Sprache eines Texts identifizieren müssen, können Sie die automatische Spracherkennung (Language Auto-Detection, LAD) verwenden, die in Windows 7 und höher verfügbar ist. Weitere Informationen finden Sie unter [Erweiterte linguistische Dienste](../intl/extended-linguistic-services.md) (ELS).
+-   Eine zutreffende Referenzdokumentation finden Sie unter [Daten-Add-In-Schnittstellen](-search-data-addins-interfaces-entry-page.md).
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
@@ -33,13 +33,13 @@ Dieser Abschnitt schließt folgende Themen ein:
 [Erweitern von Sprachressourcen](extending-language-resources-in-windows-search.md)
 </dt> <dt>
 
-[Grundlegendes zu Sprachressourcen Komponenten](understanding-language-resource-components.md)
+[Grundlegendes zu Sprachressourcenkomponenten](understanding-language-resource-components.md)
 </dt> <dt>
 
-[Implementieren von Wörter Trennungen und Wort Stamm Erkennungen](implementing-a-word-breaker-and-stemmer.md)
+[Implementieren einer Wörterbruch- und Wortstammnotung](implementing-a-word-breaker-and-stemmer.md)
 </dt> <dt>
 
-[Problembehandlung bei Sprachressourcen und bewährten Methoden](troubleshooting-language-resources.md)
+[Problembehandlung für Sprachressourcen und bewährte Methoden](troubleshooting-language-resources.md)
 </dt> </dl>
 
  

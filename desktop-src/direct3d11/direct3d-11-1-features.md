@@ -69,7 +69,7 @@ Die Shader-Ablaufverfolgungs-API und die Verbesserungen am HLSL-Compiler bestehe
 Die Bibliothek D3dcompiler.lib erfordert D3dcompiler \_nn.dll. Diese DLL ist nicht Teil Windows 8. er befindet sich im \\ Ordner bin des Windows SDK für Windows 8 zusammen mit der Fxc.exe Befehlszeilenversion des HLSL-Compilers.
 
 > [!Note]  
-> Obwohl Sie diese Bibliotheks- und DLL-Kombination für die Entwicklung verwenden können, können Sie nicht Windows Store Apps bereitstellen, die diese Kombination verwenden. Daher müssen Sie stattdessen HLSL-Shader kompilieren, bevor Sie Ihre Windows Store-App versenden. Sie können Binärdateien für die HLSL-Kompilierung auf den Datenträger schreiben, oder der Compiler kann Header mit statischen Bytearrays generieren, die die Shaderblobdaten enthalten. Sie verwenden die [**ID3DBlob-Schnittstelle,**](/previous-versions/windows/desktop/legacy/ff728743(v=vs.85)) um auf die Blobdaten zuzugreifen. Rufen Sie zum Entwickeln Ihrer Windows Store-App [**D3DCompile2**](/windows/desktop/direct3dhlsl/d3dcompile2) oder [**D3DCompileFromFile**](/windows/desktop/direct3dhlsl/d3dcompilefromfile) auf, um die HLSL-Rohdatenquelle zu kompilieren, und übertragen Sie die resultierenden Blobdaten dann an Direct3D.
+> Obwohl Sie diese Bibliotheks- und DLL-Kombination für die Entwicklung verwenden können, können Sie nicht Windows Store Apps bereitstellen, die diese Kombination verwenden. Daher müssen Sie stattdessen HLSL-Shader kompilieren, bevor Sie Ihre Windows Store-App versenden. Sie können Binärdateien für die HLSL-Kompilierung auf den Datenträger schreiben, oder der Compiler kann Header mit statischen Bytearrays generieren, die die Shaderblobdaten enthalten. Sie verwenden die [**ID3DBlob-Schnittstelle,**](/previous-versions/windows/desktop/legacy/ff728743(v=vs.85)) um auf die Blobdaten zuzugreifen. Um Ihre Windows Store-App zu entwickeln, rufen Sie [**D3DCompile2**](/windows/desktop/direct3dhlsl/d3dcompile2) oder [**D3DCompileFromFile**](/windows/desktop/direct3dhlsl/d3dcompilefromfile) auf, um die HLSL-Rohdatenquelle zu kompilieren, und übertragen Sie die resultierenden Blobdaten dann an Direct3D.
 
  
 
@@ -135,7 +135,7 @@ Dieses Direct3D 11.1-Feature besteht aus der folgenden API.
 > -   Binden Sie keine Tiefenschablonenansichten.
 > -   Deaktivieren Sie Tiefentests.
 > -   Stellen Sie sicher, dass der Shader keine Ausgabetiefe auft.
-> -   Wenn Sie Renderzielansichten gebunden haben ([**D3D11 \_ BIND \_ RENDER \_ TARGET**](/windows/desktop/api/D3D11/ne-d3d11-d3d11_bind_flag)), und Sie die Anzahl der Stichproben auf größer als 1 erzwungen haben, stellen Sie sicher, dass jedes Renderziel nur ein einzelnes Beispiel hat.
+> -   Wenn Sie Renderzielansichten gebunden haben ([**D3D11 \_ BIND \_ RENDER \_ TARGET**](/windows/desktop/api/D3D11/ne-d3d11-d3d11_bind_flag)), und Sie die Anzahl der Stichproben auf größer als 1 erzwungen haben, stellen Sie sicher, dass jedes Renderziel nur über ein einzelnes Beispiel verfügt.
 > -   Betreiben Sie den Shader nicht mit der Stichprobenhäufigkeit. Daher gibt [**ID3D11ShaderReflection::IsSampleFrequencyShader**](/windows/desktop/api/D3D11Shader/nf-d3d11shader-id3d11shaderreflection-issamplefrequencyshader) **FALSE zurück.**
 >
 > Andernfalls ist das Renderingverhalten nicht definiert. Informationen zum Konfigurieren der Tiefen-Schablone finden Sie unter [Configuring Depth-Stencil Functionality](d3d10-graphics-programming-guide-depth-stencil.md)(Konfigurieren Depth-Stencil Funktionalität).
@@ -154,9 +154,9 @@ Direct3D 11.1 aktualisiert die folgenden Methoden für dieses Feature.
 
 ## <a name="extended-support-for-shared-texture2d-resources"></a>Erweiterte Unterstützung für freigegebene Texture2D-Ressourcen
 
-Direct3D 11.1 garantiert, dass Sie texture2D-Ressourcen, die Sie erstellt haben, für bestimmte Ressourcentypen und Formate freigeben können. Verwenden Sie zum Freigeben von Texture2D-Ressourcen die [**Flags D3D11 \_ RESOURCE \_ MISC \_ SHARED,**](/windows/desktop/api/D3D11/ne-d3d11-d3d11_resource_misc_flag) [**D3D11 \_ RESOURCE \_ MISC SHARED \_ \_ KEYEDMUTEX**](/windows/desktop/api/D3D11/ne-d3d11-d3d11_resource_misc_flag)oder eine Kombination der FLAGs **D3D11 \_ RESOURCE \_ MISC SHARED \_ \_ KEYEDMUTEX** und [**D3D11 \_ RESOURCE \_ MISC SHARED \_ \_ NTHANDLE**](/windows/desktop/api/D3D11/ne-d3d11-d3d11_resource_misc_flag) (neu für Windows 8), wenn Sie diese Ressourcen erstellen.
+Direct3D 11.1 garantiert, dass Sie Texture2D-Ressourcen, die Sie erstellt haben, für bestimmte Ressourcentypen und Formate freigeben können. Verwenden Sie zum Freigeben von Texture2D-Ressourcen die [**Flags D3D11 \_ RESOURCE \_ MISC \_ SHARED**](/windows/desktop/api/D3D11/ne-d3d11-d3d11_resource_misc_flag), [**D3D11 \_ RESOURCE \_ MISC SHARED \_ \_ KEYEDMUTEX**](/windows/desktop/api/D3D11/ne-d3d11-d3d11_resource_misc_flag)oder eine Kombination der Flags **D3D11 \_ RESOURCE \_ MISC SHARED \_ \_ KEYEDMUTEX** und [**D3D11 \_ RESOURCE \_ MISC SHARED \_ \_ NTHANDLE**](/windows/desktop/api/D3D11/ne-d3d11-d3d11_resource_misc_flag) (neu für Windows 8), wenn Sie diese Ressourcen erstellen.
 
-Direct3D 11.1 garantiert, dass Sie texture2D-Ressourcen, die Sie erstellt haben, mit den [**folgenden DXGI \_ FORMAT-Werten teilen**](/windows/desktop/api/dxgiformat/ne-dxgiformat-dxgi_format) können:
+Direct3D 11.1 garantiert, dass Sie texture2D-Ressourcen, die Sie erstellt haben, mit den folgenden [**DXGI \_ FORMAT-Werten teilen**](/windows/desktop/api/dxgiformat/ne-dxgiformat-dxgi_format) können:
 
 -   DXGI \_ FORMAT \_ R8G8B8A8 \_ UNORM
 -   DXGI \_ FORMAT \_ R8G8B8A8 \_ UNORM \_ SRGB
@@ -176,7 +176,7 @@ Darüber hinaus garantiert Direct3D 11.1, dass Sie Texture2D-Ressourcen, die Sie
 
 Mit Direct3D 11.1 können Sie eine größere Vielfalt von Texture2D-Ressourcentypen und -Formaten freigeben. Sie können abfragen, ob der Grafiktreiber und die Hardware die erweiterte Texture2D-Ressourcenfreigabe unterstützen, indem Sie [**ID3D11Device::CheckFeatureSupport**](/windows/desktop/api/D3D11/nf-d3d11-id3d11device-checkfeaturesupport) mit dem [**Wert D3D11 \_ FEATURE \_ D3D11 \_ OPTIONS**](/windows/desktop/api/D3D11/ne-d3d11-d3d11_feature) aufrufen. Übergeben Sie in diesem **ID3D11Device::CheckFeatureSupport-Aufruf** einen Zeiger auf eine [**D3D11 \_ FEATURE DATA \_ \_ D3D11 \_ OPTIONS-Struktur.**](/windows/desktop/api/D3D11/ns-d3d11-d3d11_feature_data_d3d11_options) **ID3D11Device::CheckFeatureSupport** legt das **ExtendedResourceSharing-Mitglied** von **D3D11 \_ FEATURE DATA \_ \_ D3D11 \_ OPTIONS** auf **TRUE** fest, wenn die Hardware und der Treiber die erweiterte Texture2D-Ressourcenfreigabe unterstützen.
 
-Wenn [**ID3D11Device::CheckFeatureSupport**](/windows/desktop/api/D3D11/nf-d3d11-id3d11device-checkfeaturesupport) **true** in **ExtendedResourceSharing** zurückgibt, können Sie ressourcen, die Sie erstellt haben, mit den folgenden [**DXGI \_ FORMAT-Werten**](/windows/desktop/api/dxgiformat/ne-dxgiformat-dxgi_format) freigeben:
+Wenn [**ID3D11Device::CheckFeatureSupport**](/windows/desktop/api/D3D11/nf-d3d11-id3d11device-checkfeaturesupport) **true** in **ExtendedResourceSharing** zurückgibt, können Sie ressourcen, die Sie erstellt haben, mit den folgenden [**DXGI \_ FORMAT-Werten**](/windows/desktop/api/dxgiformat/ne-dxgiformat-dxgi_format) teilen:
 
 -   \_DXGI-FORMAT \_ R32G32B32A32 \_ TYPLOS
 -   DXGI \_ FORMAT \_ R32G32B32A32 \_ FLOAT
@@ -231,13 +231,13 @@ Wenn [**ID3D11Device::CheckFeatureSupport**](/windows/desktop/api/D3D11/nf-d3d11
 
 Wenn [**ID3D11Device::CheckFeatureSupport**](/windows/desktop/api/D3D11/nf-d3d11-id3d11device-checkfeaturesupport) **true** in **ExtendedResourceSharing** zurückgibt, können Sie Ressourcen, die Sie erstellt haben, mit diesen Features und Flags freigeben:
 
--   [**D3D11 \_ – \_ NUTZUNGSEINSTELLUNG**](/windows/desktop/api/D3D11/ne-d3d11-d3d11_usage)
+-   [**D3D11 \_ – \_ VERWENDUNGSEINSTELLUNG**](/windows/desktop/api/D3D11/ne-d3d11-d3d11_usage)
 -   [**D3D11 BIND \_ \_ \_ SHADER-RESSOURCE**](/windows/desktop/api/D3D11/ne-d3d11-d3d11_bind_flag)
 -   [**D3D11 \_ BIND \_ RENDER \_ TARGET**](/windows/desktop/api/D3D11/ne-d3d11-d3d11_bind_flag)
 -   [**D3D11 \_ RESOURCE \_ MISC \_ GENERATE \_ MIPS**](/windows/desktop/api/D3D11/ne-d3d11-d3d11_resource_misc_flag)
--   [**D3D11: \_ \_ UNGEORDNETEN ZUGRIFF \_ BINDEN**](/windows/desktop/api/D3D11/ne-d3d11-d3d11_bind_flag)
+-   [**D3D11 BINDEN \_ \_ UNGEORDNETEN \_ ZUGRIFF**](/windows/desktop/api/D3D11/ne-d3d11-d3d11_bind_flag)
 -   Mipmap-Ebenen (mindestens eine Ebene) in den 2D-Texturressourcen (angegeben im **MipLevels-Member** von [**D3D11 \_ TEXTURE2D \_ DESC**](/windows/desktop/api/D3D11/ns-d3d11-d3d11_texture2d_desc))
--   Arrays von 2D-Texturressourcen (eine oder mehrere Texturen) (angegeben im **ArraySize-Member** von [**D3D11 \_ TEXTURE2D \_ DESC**](/windows/desktop/api/D3D11/ns-d3d11-d3d11_texture2d_desc))
+-   Arrays von 2D-Texturressourcen (mindestens eine Textur) (angegeben im **ArraySize-Member** von [**D3D11 \_ TEXTURE2D \_ DESC**](/windows/desktop/api/D3D11/ns-d3d11-d3d11_texture2d_desc))
 -   [**\_D3D11-BINDUNGSDECODER \_**](/windows/desktop/api/D3D11/ne-d3d11-d3d11_bind_flag)
 -   [**D3D11 \_ RESOURCE \_ MISC \_ RESTRICTED \_ CONTENT**](/windows/desktop/api/D3D11/ne-d3d11-d3d11_resource_misc_flag)
 -   [**D3D11 \_ RESOURCE \_ MISC \_ RESTRICT \_ SHARED \_ RESOURCE**](/windows/desktop/api/D3D11/ne-d3d11-d3d11_resource_misc_flag)
@@ -395,19 +395,19 @@ Ab Windows 8 und Windows Server 2012 können Sie die meisten Direct3D-APIs in Si
 > -   [**D3D10CreateDeviceAndSwapChain1**](/windows/desktop/api/d3d10_1/nf-d3d10_1-d3d10createdeviceandswapchain1)
 > -   [**D3D11CreateDeviceAndSwapChain**](/windows/desktop/api/D3D11/nf-d3d11-d3d11createdeviceandswapchain)
 >
-> Wenn Sie eine der oben genannten APIs in einem Sitzung 0-Prozess aufrufen, wird [**DXGI \_ ERROR NOT CURRENTLY AVAILABLE \_ \_ \_ zurückgegeben.**](/windows/desktop/direct3ddxgi/dxgi-error)
+> Wenn Sie eine der vorherigen APIs in einem Sitzung 0-Prozess aufrufen, wird [**DXGI \_ ERROR NOT CURRENTLY AVAILABLE \_ \_ \_ zurückgegeben.**](/windows/desktop/direct3ddxgi/dxgi-error)
 
  
 
 ## <a name="support-for-shadow-buffer-on-feature-level-9"></a>Unterstützung für Schattenpuffer auf Featureebene 9
 
-Verwenden Sie eine Teilmenge der Direct3D 10 0+-Schattenpufferfeatures, um Schatteneffekte auf Featureebene \_ 9 x zu [](overviews-direct3d-11-devices-downlevel-intro.md) \_ implementieren. Informationen dazu, was Sie tun müssen, um Schatteneffekte auf Featureebene 9 x zu implementieren, finden Sie unter Implementieren von Schattenpuffern für \_ [Direct3D-Funktionsebene 9.](/previous-versions/windows/apps/jj262110(v=win.10))
+Verwenden Sie eine Teilmenge der Direct3D 10 \_ 0+ Schattenpufferfeatures, um Schatteneffekte auf [Featureebene](overviews-direct3d-11-devices-downlevel-intro.md) 9 x zu \_ implementieren. Informationen dazu, was Sie tun müssen, um Schatteneffekte auf Featureebene 9 x zu \_ implementieren, finden Sie unter [Implementieren von Schattenpuffern für Direct3D-Featureebene 9.](/previous-versions/windows/apps/jj262110(v=win.10))
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
 <dl> <dt>
 
-[Neues in Direct3D 11](dx-graphics-overviews-introduction.md)
+[Neuerungen in Direct3D 11](dx-graphics-overviews-introduction.md)
 </dt> </dl>
 
  

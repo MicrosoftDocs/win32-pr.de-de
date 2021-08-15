@@ -1,28 +1,28 @@
 ---
 title: Senden der asynchronen Antwort
-description: Wenn der asynchrone Aufruf abgeschlossen ist, sendet der Server eine Antwort an den Client, indem er die Funktion RpcAsyncCompleteCall aufruft und das asynchrone handle übergibt.
+description: Wenn der asynchrone Aufruf abgeschlossen ist, sendet der Server eine Antwort an den Client, indem er die RpcAsyncCompleteCall-Funktion aufruft und ihr das asynchrone Handle über gibt.
 ms.assetid: 458bc476-963e-4812-b4c2-9074ff0a8284
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 06f861c3f2a1befdb85435f5275176c82e23bb06
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: bdcaf4db4a27a49a8025596668893518c6b6c577a0d81d91189a44ec81df4de6
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "104037413"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118925578"
 ---
 # <a name="sending-the-asynchronous-reply"></a>Senden der asynchronen Antwort
 
-Wenn der asynchrone Aufruf abgeschlossen ist, sendet der Server eine Antwort an den Client, indem er die Funktion [**RpcAsyncCompleteCall**](/windows/desktop/api/Rpcasync/nf-rpcasync-rpcasynccompletecall) aufruft und das asynchrone handle übergibt. Dieser-Befehl ist auch dann erforderlich, wenn der asynchrone-Aufrufwert einen void-Rückgabewert und keine \[ out- \] Parameter aufweist. Wenn die Funktion über einen Rückgabewert verfügt, wird Sie als Verweis an **rpcasynccompletecallübergeben**.
+Wenn der asynchrone Aufruf abgeschlossen ist, sendet der Server eine Antwort an den Client, indem er die [**RpcAsyncCompleteCall-Funktion**](/windows/desktop/api/Rpcasync/nf-rpcasync-rpcasynccompletecall) aufruft und ihr das asynchrone Handle über gibt. Dieser Aufruf ist auch dann erforderlich, wenn der asynchrone Aufruf über einen void-Rückgabewert und keine \[ out-Parameter \] verfügt. Wenn die Funktion über einen Rückgabewert verfügt, wird sie als Verweis an **RpcAsyncCompleteCall übergeben.**
 
-Wenn der Server [**rpcasynccompletecallor**](/windows/desktop/api/Rpcasync/nf-rpcasync-rpcasynccompletecall) **rpcasyncabortcallaufruft** oder ein Aufruf abgeschlossen ist, weil eine Ausnahme in der Server-Manager-Routine ausgelöst wurde, zerstört die RPC-Lauf Zeit Bibliothek automatisch das asynchrone Handle des Servers.
+Wenn der Server [**RpcAsyncCompleteCall**](/windows/desktop/api/Rpcasync/nf-rpcasync-rpcasynccompletecall) oder **RpcAsyncAbortCall** aufruft oder ein Aufruf abgeschlossen wird, weil eine Ausnahme in der Server-Manager-Routine ausgelöst wurde, zerstört die RPC-Laufzeitbibliothek automatisch das asynchrone Handle des Servers.
 
 > [!Note]  
-> Der Server muss die Aktualisierung der \[ in-, out \] -und out-Parameter abschließen, \[ \] bevor **RpcAsyncCompleteCall** aufgerufen wird. An diesen Parametern oder dem asynchronen Handle können nach dem Aufrufen von **RpcAsyncCompleteCall** keine Änderungen vorgenommen werden. Wenn der **RpcAsyncCompleteCall-Funktionsaufruf** fehlschlägt, gibt die RPC-Laufzeit die Parameter frei.
+> Der Server muss die Aktualisierung der \[ Parameter in, out und out beenden, \] bevor \[ \] **RpcAsyncCompleteCall aufgerufen wird.** Nach dem Aufruf von **RpcAsyncCompleteCall** können keine Änderungen an diesen Parametern oder am asynchronen Handle vorgenommen werden. Wenn der **RpcAsyncCompleteCall-Funktionsaufruf** fehlschlägt, gibt die RPC-Laufzeit die Parameter frei.
 
- 
+ 
 
-Im folgenden Beispiel wird ein einfacher asynchroner Prozedur aufrufsvorgang veranschaulicht.
+Im folgenden Beispiel wird ein einfacher asynchroner Prozeduraufruf veranschaulicht.
 
 
 ```C++
@@ -88,32 +88,32 @@ void AsyncFunc(IN PRPC_ASYNC_STATE pAsync,
 
 
 
-Der Einfachheit halber verarbeitet diese asynchrone Server Routine keine tatsächlichen Daten. Es ist einfach, sich für eine Weile in den Ruhezustand zu versetzen.
+Der Einfachheit halber werden von dieser asynchronen Serverroutine keine tatsächlichen Daten verarbeiten. Sie versetzt sich einfach eine Weile in den Ruhezustand.
 
 > [!Note]  
-> Die **rpcasynccompletecallsfunktion** kann entweder auf dem Thread aufgerufen werden, der den Aufruf empfangen hat, oder auf einem beliebigen anderen Thread im Prozess. Wenn alle Daten, die zum Durchführen des Aufrufes erforderlich sind, sofort verfügbar sind, kann der Server Sie in demselben Thread auffüllen und **rpcasynccompletecallin** demselben Thread aufzurufen. Dieser Ansatz spart Kontextwechsel und verbessert die Leistung. Solche Aufrufe werden opportunistisch asynchron aufgerufen.
+> Die **RpcAsyncCompleteCall-Funktion** kann entweder für den Thread, der den Aufruf empfangen hat, oder für einen anderen Thread im Prozess aufgerufen werden. Wenn alle daten, die zum Abschließen des Aufrufs erforderlich sind, sofort verfügbar sind, kann der Server sie im selben Thread ausfüllen und **rpcAsyncCompleteCall** im gleichen Thread aufrufen. Dieser Ansatz spart Kontextwechsel und verbessert die Leistung. Solche Aufrufe werden als "asynchron" bezeichnet.
 
- 
+ 
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
 <dl> <dt>
 
-[**asynchroner RPC- \_ \_ Status**](/windows/desktop/api/Rpcasync/ns-rpcasync-rpc_async_state)
+[**\_RPC-ASYNCHRONER \_ ZUSTAND**](/windows/desktop/api/Rpcasync/ns-rpcasync-rpc_async_state)
 </dt> <dt>
 
-[**Rpcasynccompletecallcenter**](/windows/desktop/api/Rpcasync/nf-rpcasync-rpcasynccompletecall)
+[**RpcAsyncCompleteCall**](/windows/desktop/api/Rpcasync/nf-rpcasync-rpcasynccompletecall)
 </dt> <dt>
 
-[**Rpcasyncabortcallcenter**](/windows/desktop/api/Rpcasync/nf-rpcasync-rpcasyncabortcall)
+[**RpcAsyncAbortCall**](/windows/desktop/api/Rpcasync/nf-rpcasync-rpcasyncabortcall)
 </dt> <dt>
 
-[**Rpcservertestcancel**](/windows/desktop/api/Rpcdce/nf-rpcdce-rpcservertestcancel)
+[**RpcServerTestCancel**](/windows/desktop/api/Rpcdce/nf-rpcdce-rpcservertestcancel)
 </dt> </dl>
 
- 
+ 
 
- 
+ 
 
 
 

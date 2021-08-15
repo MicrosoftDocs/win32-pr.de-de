@@ -1,5 +1,5 @@
 ---
-description: Die vorgeschlagenen Aktionssequenzen für eine einfache IninstallUISequence-Tabelle in Windows Installer-Datenbank.
+description: Die vorgeschlagenen Aktionssequenzen für eine einfache InstalUISequence-Tabelle in einer Windows Installer-Datenbank.
 ms.assetid: f1ddad1e-c075-4054-aa24-f1acdc72da96
 title: Empfohlene InstallationUISequence
 ms.topic: article
@@ -18,8 +18,8 @@ ms.locfileid: "118624332"
 | Aktion                                          | Bedingung                                                                                                  | Sequenz |
 |-------------------------------------------------|------------------------------------------------------------------------------------------------------------|----------|
 | FatalErrorDlg                                   |                                                                                                            | -3       |
-| UserExitDlg                                     |                                                                                                            | -2       |
-| ExitDlg                                         |                                                                                                            | -1       |
+| UserExitDlg                                     |                                                                                                            | –2       |
+| ExitDlg                                         |                                                                                                            | –1       |
 | [LaunchConditions](launchconditions-action.md) |                                                                                                            | 100      |
 | PrepareDlg                                      |                                                                                                            | 140      |
 | [AppSearch](appsearch-action.md)               |                                                                                                            | 400      |

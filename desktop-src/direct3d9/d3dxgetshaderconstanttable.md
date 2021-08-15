@@ -14,12 +14,12 @@ api_type:
 api_location:
 - d3dx9.lib
 - d3dx9.dll
-ms.openlocfilehash: b397901578a1e6ce6fecc01ed25c99d4681d1c40
-ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
+ms.openlocfilehash: a1375dfcf1bc75d6f2dee6f9923360b1b90fef01df5489f9f710175e7e1c2652
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2021
-ms.locfileid: "108114418"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119045008"
 ---
 # <a name="d3dxgetshaderconstanttable-function"></a>D3DXGetShaderConstantTable-Funktion
 
@@ -65,7 +65,7 @@ Typ: **[ **HRESULT**](https://msdn.microsoft.com/library/Bb401631(v=MSDN.10).asp
 
 Wenn die Funktion erfolgreich ausgeführt wird, lautet der Rückgabewert D3D \_ OK. Wenn die Funktion fehlschlägt, kann der Rückgabewert einer der folgenden Werte sein: D3DERR \_ INVALIDCALL, D3DXERR \_ INVALIDDATA, E \_ OUTOFMEMORY.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
 Eine konstante Tabelle wird von [**D3DXCompileShader**](d3dxcompileshader.md) generiert und in den Shadertext eingebettet. Wenn Sie zusätzlichen virtuellen Adressraum benötigen, finden Sie weitere Informationen unter [**D3DXGetShaderConstantTableEx.**](d3dxgetshaderconstanttableex.md)
 
@@ -73,7 +73,7 @@ Eine konstante Tabelle wird von [**D3DXCompileShader**](d3dxcompileshader.md) ge
 
 
 
-| Anforderungen | Wert |
+| Anforderung | Wert |
 |--------------------|------------------------------------------------------------------------------------------|
 | Header<br/>  | <dl> <dt>D3DX9Shader.h</dt> </dl> |
 | Bibliothek<br/> | <dl> <dt>D3dx9.lib</dt> </dl>     |

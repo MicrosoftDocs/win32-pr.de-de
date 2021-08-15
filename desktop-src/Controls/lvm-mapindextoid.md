@@ -1,9 +1,9 @@
 ---
-title: LVM_MAPINDEXTOID Meldung (kommstrg. h)
-description: Ordnet den Index eines Elements einer eindeutigen ID zu.
+title: LVM_MAPINDEXTOID (Commctrl.h)
+description: Karten index eines Elements in eine eindeutige ID.
 ms.assetid: d0486e21-2703-4289-abb0-f5f9c7b60b40
 keywords:
-- Windows-Steuerelemente für LVM_MAPINDEXTOID Meldung
+- LVM_MAPINDEXTOID meldungssteuerelemente Windows
 topic_type:
 - apiref
 api_name:
@@ -14,16 +14,16 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: f6a2a5de558b025e61bef26fd20278f125372769
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 254bfff0ee1598b0657b44a967b9e1331b076a462c8703855c5dd23109a8835d
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104476089"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118958149"
 ---
-# <a name="lvm_mapindextoid-message"></a>LVM \_ mapindextoid-Meldung
+# <a name="lvm_mapindextoid-message"></a>LVM \_ MAPINDEXTOID-Nachricht
 
-Ordnet den Index eines Elements einer eindeutigen ID zu.
+Karten index eines Elements in eine eindeutige ID.
 
 ## <a name="parameters"></a>Parameter
 
@@ -47,21 +47,21 @@ Muss Null sein.
 
 Gibt eine eindeutige ID zurück.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Listenansicht-Steuerelemente nachverfolgen Elemente intern nach Index. Dies kann Probleme darstellen, da Indizes sich während der Lebensdauer des Steuer Elements ändern können.
+Listenansichtssteuerelemente verfolgen Elemente intern nach Index nach. Dies kann zu Problemen führen, da sich Indizes während der Lebensdauer des Steuerelements ändern können.
 
-Das Listenansicht-Steuerelement kann ein Element mit einer ID markieren, wenn das Element erstellt wird. Sie können diese ID verwenden, um die Eindeutigkeit während der Lebensdauer des Listenansicht-Steuer Elements sicherzustellen.
+Das Listenansicht-Steuerelement kann ein Element mit einer ID markieren, wenn das Element erstellt wird. Sie können diese ID verwenden, um die Eindeutigkeit während der Lebensdauer des Listenansicht-Steuerelements zu gewährleisten.
 
-Wenn Sie ein Element eindeutig identifizieren möchten, nehmen Sie den Index an, der von einem-Befehl wie [**IComponent:: GetDisplayInfo**](/windows/desktop/api/mmc/nf-mmc-icomponent-getdisplayinfo) zurückgegeben wird, und nennen Sie **LVM \_ mapindextoid**. Der Rückgabewert ist eine eindeutige ID.
+Um ein Element eindeutig zu identifizieren, nehmen Sie den Index, der von einem Aufruf wie [**IComponent::GetDisplayInfo**](/windows/desktop/api/mmc/nf-mmc-icomponent-getdisplayinfo) zurückgegeben wird, und rufen **LVM \_ MAPINDEXTOID auf.** Der Rückgabewert ist eine eindeutige ID.
 
 > [!Note]  
-> In einer Multithreadumgebung wird der Index nur für den Thread garantiert, der das Listenansicht-Steuerelement hostet, nicht für Hintergrundthreads.
+> In einer Multithreadumgebung ist der Index nur für den Thread garantiert, der das Listenansicht-Steuerelement hostet, nicht für Hintergrundthreads.
 
  
 
 > [!Note]  
-> Um diese Meldung zu verwenden, müssen Sie ein Manifest bereitstellen, das Comclt32.dll Version 6,0 angibt. Weitere Informationen zu Manifesten finden Sie unter [Aktivieren von visuellen Stilen](cookbook-overview.md).
+> Um diese Meldung zu verwenden, müssen Sie ein Manifest angeben, das Comclt32.dll 6.0 an. Weitere Informationen zu Manifesten finden Sie unter [Aktivieren von visuellen Stilen.](cookbook-overview.md)
 
  
 
@@ -71,9 +71,9 @@ Wenn Sie ein Element eindeutig identifizieren möchten, nehmen Sie den Index an,
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>                                        |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2003 \[ -Desktop-Apps\]<br/>                                  |
-| Header<br/>                   | <dl> <dt>Kommstrg. h</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur \[ Vista-Desktop-Apps\]<br/>                                        |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2003-Desktop-Apps\]<br/>                                  |
+| Header<br/>                   | <dl> <dt>Commctrl.h</dt> </dl> |
 
 
 

@@ -1,9 +1,9 @@
 ---
-title: WM_SETHOTKEY Meldung (Winuser. h)
-description: Wird an ein Fenster gesendet, um dem Fenster einen Hot-Schlüssel zuzuordnen. Wenn der Benutzer die Taste "heiß" drückt, aktiviert das System das Fenster.
+title: WM_SETHOTKEY (Winuser.h)
+description: Wird an ein Fenster gesendet, um dem Fenster einen heißen Schlüssel zu zuordnen. Wenn der Benutzer die hot-Taste drückt, aktiviert das System das Fenster.
 ms.assetid: b2c7e6ca-da71-440b-a05e-17f2da419d18
 keywords:
-- Tastatur-und Maus Eingaben für WM_SETHOTKEY Nachricht
+- WM_SETHOTKEY der Tastatur- und Mauseingabe
 topic_type:
 - apiref
 api_name:
@@ -14,16 +14,16 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: f7ed27a91ddf9506cd12b988db4bd141a988c13e
-ms.sourcegitcommit: 3d9dce1bd6c84e2b51759e940aa95aa9b459cd20
+ms.openlocfilehash: 4b6c9d4bdb4a59181fe3a413cca6861bc3663367cca9e7b34e0647de88978b0b
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/04/2021
-ms.locfileid: "103761514"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118482517"
 ---
-# <a name="wm_sethotkey-message"></a>WM- \_ Nachricht "abkthotkey"
+# <a name="wm_sethotkey-message"></a>WM \_ SETHOTKEY-Meldung
 
-Wird an ein Fenster gesendet, um dem Fenster einen Hot-Schlüssel zuzuordnen. Wenn der Benutzer die Taste "heiß" drückt, aktiviert das System das Fenster.
+Wird an ein Fenster gesendet, um dem Fenster einen heißen Schlüssel zu zuordnen. Wenn der Benutzer die hot-Taste drückt, aktiviert das System das Fenster.
 
 
 ```C++
@@ -39,20 +39,20 @@ Wird an ein Fenster gesendet, um dem Fenster einen Hot-Schlüssel zuzuordnen. We
 *wParam* 
 </dt> <dd>
 
-Das nieder wertige Wort gibt den Code des virtuellen Schlüssels an, der dem Fenster zugeordnet werden soll.
+Das Wort in niedriger Reihenfolge gibt den virtuellen Schlüsselcode an, der dem Fenster zugeordnet werden soll.
 
-Bei dem höchst wertigen Wort kann es sich um einen oder mehrere der folgenden Werte aus "kommctrl. h" handeln.
+Das obere Wort kann einer oder mehrere der folgenden Werte aus CommCtrl.h sein.
 
-Wenn Sie *wParam* auf **null** festlegen, wird der einem Fenster zugeordnete "Hot Key" entfernt.
+Wenn *wParam auf* **NULL festgelegt wird,** wird der einem Fenster zugeordnete hot-Schlüssel entfernt.
 
 
 
 | Wert                                                                                                                                                                                                                         | Bedeutung                 |
 |-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-------------------------|
-| <span id="HOTKEYF_ALT"></span><span id="hotkeyf_alt"></span><dl> <dt>**Hotkeyf \_ ALT**</dt> <dt>0x04</dt> </dl>             | ALT-TASTE<br/>      |
-| <span id="HOTKEYF_CONTROL"></span><span id="hotkeyf_control"></span><dl> <dt>**Hotkeyf \_ Steuer**</dt> Element <dt>0x02</dt> </dl> | STRG-Taste<br/>     |
-| <span id="HOTKEYF_EXT"></span><span id="hotkeyf_ext"></span><dl> <dt>**Hotkeyf \_ EXT**</dt> <dt>0x08</dt> </dl>             | Erweiterter Schlüssel<br/> |
-| <span id="HOTKEYF_SHIFT"></span><span id="hotkeyf_shift"></span><dl> <dt>**Hotkeyf \_ UMSCHALT**</dt> <dt>0x01</dt> </dl>       | Umschalttaste<br/>    |
+| <span id="HOTKEYF_ALT"></span><span id="hotkeyf_alt"></span><dl> <dt>**HOTKEYF \_ ALT-0x04**</dt> <dt></dt> </dl>             | ALT-TASTE<br/>      |
+| <span id="HOTKEYF_CONTROL"></span><span id="hotkeyf_control"></span><dl> <dt>**HOTKEYF \_ CONTROL**</dt> <dt>0x02</dt> </dl> | STRG-TASTE<br/>     |
+| <span id="HOTKEYF_EXT"></span><span id="hotkeyf_ext"></span><dl> <dt>**HOTKEYF \_ EXT**</dt> <dt>0x08</dt> </dl>             | Erweiterter Schlüssel<br/> |
+| <span id="HOTKEYF_SHIFT"></span><span id="hotkeyf_shift"></span><dl> <dt>**HOTKEYF \_ UMSCHALT 0X01**</dt> <dt></dt> </dl>       | Umschalttaste<br/>    |
 
 
 
@@ -69,32 +69,32 @@ Dieser Parameter wird nicht verwendet.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Der Rückgabewert ist einer der folgenden Werte.
+Der Rückgabewert ist einer der folgenden.
 
 
 
 | Rückgabewert                                                                  | BESCHREIBUNG                                                                             |
 |-------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------|
-| <dl> <dt>-1</dt> </dl> | Die Funktion ist nicht erfolgreich. die Hot-Taste ist ungültig.<br/>                        |
-| <dl> <dt>0</dt> </dl>  | Die Funktion ist nicht erfolgreich. Das Fenster ist ungültig.<br/>                         |
-| <dl> <dt>1</dt> </dl>  | Die Funktion ist erfolgreich, und kein anderes Fenster hat dieselbe heiße Taste.<br/>        |
-| <dl> <dt>2</dt> </dl>  | Die Funktion ist erfolgreich, aber ein anderes Fenster hat bereits dieselbe heiße Taste.<br/> |
+| <dl> <dt>-1</dt> </dl> | Die Funktion ist nicht erfolgreich. Der hot-Schlüssel ist ungültig.<br/>                        |
+| <dl> <dt>0</dt> </dl>  | Die Funktion ist nicht erfolgreich. das Fenster ist ungültig.<br/>                         |
+| <dl> <dt>1</dt> </dl>  | Die Funktion ist erfolgreich, und kein anderes Fenster verfügt über den gleichen heißen Schlüssel.<br/>        |
+| <dl> <dt>2</dt> </dl>  | Die Funktion ist erfolgreich, aber ein anderes Fenster verfügt bereits über den gleichen heißen Schlüssel.<br/> |
 
 
 
  
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Ein "Hot"-Schlüssel kann keinem untergeordneten Fenster zugeordnet werden.
+Ein hot-Schlüssel kann nicht einem untergeordneten Fenster zugeordnet werden.
 
-**VK \_ Escape**, **VK \_ Space** und die **\_ Registerkarte VK** sind ungültige heiße Schlüssel.
+**VK \_ ESCAPE,** **VK \_ SPACE** und **VK \_ TAB** sind ungültige Hot Keys.
 
-Wenn der Benutzer die Taste "heiß" drückt, generiert das System eine [**WM- \_ syscommand**](/windows/desktop/menurc/wm-syscommand) -Nachricht mit *wParam* -Wert **SC \_ Hotkey** und *LPARAM* gleich dem Handle des Fensters. Wenn diese Nachricht an [**defwindowproc**](/windows/desktop/api/winuser/nf-winuser-defwindowproca)weitergegeben wird, führt das System das letzte aktive Popup Fenster (sofern vorhanden) oder das Fenster selbst (wenn es kein Popup Fenster gibt) im Vordergrund aus.
+Wenn der Benutzer die hot-Taste drückt, generiert das System eine [**WM \_ SYSCOMMAND-Nachricht**](/windows/desktop/menurc/wm-syscommand) mit *wParam* gleich **SC \_ HOTKEY** und *lParam* gleich dem Handle des Fensters. Wenn diese Meldung an [**DefWindowProc**](/windows/desktop/api/winuser/nf-winuser-defwindowproca)übergeben wird, bringt das System das letzte aktive Popupfenster des Fensters (sofern vorhanden) oder das Fenster selbst (wenn kein Popupfenster vorhanden ist) in den Vordergrund.
 
-Ein Fenster kann nur über eine heiße Taste verfügen. Wenn dem Fenster bereits ein Abkürzungs Schlüssel zugeordnet ist, ersetzt die neue heiße Taste die alte. Wenn mehr als ein Fenster die gleiche Abkürzungs Taste hat, ist das Fenster, das von der Hot-Taste aktiviert wird, zufällig.
+Ein Fenster kann nur einen hot-Schlüssel haben. Wenn dem Fenster bereits ein hot-Schlüssel zugeordnet ist, ersetzt der neue hot-Schlüssel den alten. Wenn mehr als ein Fenster über den gleichen heißen Schlüssel verfügt, ist das Fenster, das durch den heißen Schlüssel aktiviert wird, zufällig.
 
-Diese Hotkeys sind nicht mit den von [**RegisterHotKey**](/windows/win32/api/winuser/nf-winuser-registerhotkey)festgelegten Hotkeys verknüpft.
+Diese heißen Schlüssel stehen nicht mit den hot-Schlüsseln in Zusammenhang, die von [**RegisterHotKey festgelegt werden.**](/windows/win32/api/winuser/nf-winuser-registerhotkey)
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -104,30 +104,30 @@ Diese Hotkeys sind nicht mit den von [**RegisterHotKey**](/windows/win32/api/win
 |-------------------------------------|----------------------------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional \[nur Desktop-Apps\]<br/>                                               |
 | Unterstützte Mindestversion (Server)<br/> | Windows 2000 Server \[nur Desktop-Apps\]<br/>                                                     |
-| Header<br/>                   | <dl> <dt>Winuser. h (Windows. h einschließen)</dt> </dl> |
+| Header<br/>                   | <dl> <dt>Winuser.h (include Windows.h)</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-**Verweis**
+**Referenz**
 </dt> <dt>
 
 [**RegisterHotKey**](/windows/win32/api/winuser/nf-winuser-registerhotkey)
 </dt> <dt>
 
-[**WM- \_ GetHotKey**](wm-gethotkey.md)
+[**WM \_ GETHOTKEY**](wm-gethotkey.md)
 </dt> <dt>
 
-[**WM ( \_ syscommand)**](/windows/desktop/menurc/wm-syscommand)
+[**WM \_ SYSCOMMAND**](/windows/desktop/menurc/wm-syscommand)
 </dt> <dt>
 
-**Licher**
+**Konzeptionellen**
 </dt> <dt>
 
-[Tastatureingabe](keyboard-input.md)
+[Tastatureingaben](keyboard-input.md)
 </dt> </dl>
 
  

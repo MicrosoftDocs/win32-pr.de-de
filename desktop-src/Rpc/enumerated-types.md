@@ -1,19 +1,19 @@
 ---
-title: Enumerierte Typen (RPC)
-description: Die Enumeration-Deklaration wird nicht in \ define-Anweisungen übersetzt, wie dies bei einigen DCE-Compilern der Fall ist. Sie wird jedoch als Enumeration-Deklaration der C-Sprache in der generierten Header Datei reproduziert.
+title: Enumerated Types (RPC) (Aufzählen von Typen (RPC))
+description: Die Enum-Deklaration wird nicht wie von einigen DCE-Compilern in \define-Anweisungen übersetzt, sondern als C-Enum-Deklaration in der generierten Headerdatei reproduziert.
 ms.assetid: dc38d3a2-cc6a-467f-a497-2a7abec07573
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: a0dee1d9a5415867f252c1738a638b602ebd91fa
-ms.sourcegitcommit: 8fa6614b715bddf14648cce36d2df22e5232801a
+ms.openlocfilehash: f6844f7d84f2b2ff7b5925429fa751979accb73cc711265a2cc44046607ff5ca
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/10/2020
-ms.locfileid: "104474778"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118930397"
 ---
-# <a name="enumerated-types-rpc"></a>Enumerierte Typen (RPC)
+# <a name="enumerated-types-rpc"></a>Enumerated Types (RPC) (Aufzählen von Typen (RPC))
 
-Die [**Enumeration**](/windows/desktop/Midl/enum) -Deklaration wird nicht in **\# define** -Anweisungen übersetzt, wie dies bei einigen DCE-Compilern der Fall ist. Sie wird jedoch als **Enumeration** -Deklaration der C-Sprache in der generierten Header Datei reproduziert.
+Die [**Enum-Deklaration**](/windows/desktop/Midl/enum) wird **\#** nicht wie von einigen DCE-Compilern in define-Anweisungen übersetzt, sondern als C-Enum-Deklaration in der generierten Headerdatei reproduziert. 
 
  
 

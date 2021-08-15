@@ -1,9 +1,9 @@
 ---
-title: WM_CTLCOLORLISTBOX Meldung (Winuser. h)
-description: Wird an das übergeordnete Fenster eines Listen Felds gesendet, bevor das System das Listenfeld zeichnet. Wenn Sie auf diese Meldung reagieren, kann das übergeordnete Fenster die Text-und Hintergrundfarben des Listen Felds mit dem angegebenen Kontext Handle für den Anzeigegerät festlegen.
+title: WM_CTLCOLORLISTBOX Meldung (Winuser.h)
+description: Wird an das übergeordnete Fenster eines Listenfelds gesendet, bevor das System das Listenfeld zeichnet. Durch Reagieren auf diese Meldung kann das übergeordnete Fenster den Text und die Hintergrundfarben des Listenfelds mithilfe des angegebenen Anzeigegerätekontexthandle festlegen.
 ms.assetid: e128e77f-e966-44c4-9f0e-efcf421b6c82
 keywords:
-- Windows-Steuerelemente für WM_CTLCOLORLISTBOX Meldung
+- WM_CTLCOLORLISTBOX Windows-Steuerelemente für Nachrichten
 topic_type:
 - apiref
 api_name:
@@ -14,16 +14,16 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 8e949af76bd05aa9ad3a3e720c89be33cfe76ed8
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 1713c7251dfe837d5796b708fa5b77f0aa5e372c031c251199cb871dbd7c5608
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104103547"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119077664"
 ---
-# <a name="wm_ctlcolorlistbox-message"></a>\_Ctlcolorlistbox-Nachricht für WM
+# <a name="wm_ctlcolorlistbox-message"></a>WM \_ CTLCOLORLISTBOX-Meldung
 
-Wird an das übergeordnete Fenster eines Listen Felds gesendet, bevor das System das Listenfeld zeichnet. Wenn Sie auf diese Meldung reagieren, kann das übergeordnete Fenster die Text-und Hintergrundfarben des Listen Felds mit dem angegebenen Kontext Handle für den Anzeigegerät festlegen.
+Wird an das übergeordnete Fenster eines Listenfelds gesendet, bevor das System das Listenfeld zeichnet. Durch Reagieren auf diese Meldung kann das übergeordnete Fenster den Text und die Hintergrundfarben des Listenfelds mithilfe des angegebenen Anzeigegerätekontexthandle festlegen.
 
 
 ```C++
@@ -42,7 +42,7 @@ WM_CTLCOLORLISTBOX
 *wParam* 
 </dt> <dd>
 
-Handle für den Gerätekontext für das Listenfeld.
+Behandeln Sie den Gerätekontext für das Listenfeld.
 
 </dd> <dt>
 
@@ -55,15 +55,15 @@ Handle für das Listenfeld.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Wenn eine Anwendung diese Nachricht verarbeitet, muss Sie ein Handle für einen Pinsel zurückgeben. Das System verwendet den Pinsel zum Zeichnen des Hintergrunds des Listen Felds.
+Wenn eine Anwendung diese Nachricht verarbeitet, muss sie ein Handle an einen Pinsel zurückgeben. Das System verwendet den Pinsel, um den Hintergrund des Listenfelds zu zeichnen.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Standardmäßig wählt die [**defwindowproc**](/windows/desktop/api/winuser/nf-winuser-defwindowproca) -Funktion die Standardsystem Farben für das Listenfeld aus.
+Standardmäßig wählt die [**DefWindowProc-Funktion**](/windows/desktop/api/winuser/nf-winuser-defwindowproca) die Standardsystemfarben für das Listenfeld aus.
 
-Die " **WM \_ ctlcolorlistbox** "-Meldung wird nie zwischen Threads gesendet. Sie wird nur innerhalb eines Threads gesendet.
+Die **WM \_ CTLCOLORLISTBOX-Nachricht** wird nie zwischen Threads gesendet. Er wird nur innerhalb eines Threads gesendet.
 
-Wenn eine Dialogfeld Prozedur diese Nachricht behandelt, sollte Sie den gewünschten Rückgabewert in ein **int- \_ ptr** umwandeln und den Wert direkt zurückgeben. Wenn die Dialogfeld Prozedur **false** zurückgibt, wird die standardmäßige Nachrichtenverarbeitung ausgeführt. Der von der [**SetWindowLong**](/windows/desktop/api/winuser/nf-winuser-setwindowlonga) -Funktion festgelegte **DWL- \_ msgresult** -Wert wird ignoriert.
+Wenn eine Dialogfeldprozedur diese Nachricht verarbeitet, sollte sie den gewünschten Rückgabewert in einen **INT \_ PTR-Wert** konvertieren und den Wert direkt zurückgeben. Wenn die Dialogfeldprozedur **FALSE** zurückgibt, wird die Standardmäßige Nachrichtenverarbeitung ausgeführt. Der von der [**SetWindowLong-Funktion**](/windows/desktop/api/winuser/nf-winuser-setwindowlonga) festgelegte **\_ DWL-MSGRESULT-Wert** wird ignoriert.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -71,13 +71,13 @@ Wenn eine Dialogfeld Prozedur diese Nachricht behandelt, sollte Sie den gewünsc
 
 | Anforderung | Wert |
 |-------------------------------------|----------------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>                                                           |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2003 \[ -Desktop-Apps\]<br/>                                                     |
-| Header<br/>                   | <dl> <dt>Winuser. h (Windows. h einschließen)</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows \[Nur Vista-Desktop-Apps\]<br/>                                                           |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2003-Desktop-Apps\]<br/>                                                     |
+| Header<br/>                   | <dl> <dt>Winuser.h (include Windows.h)</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
@@ -87,7 +87,7 @@ Wenn eine Dialogfeld Prozedur diese Nachricht behandelt, sollte Sie den gewünsc
 [**RealizePalette**](/windows/desktop/api/wingdi/nf-wingdi-realizepalette)
 </dt> <dt>
 
-[**SelectPalette**](/windows/desktop/api/wingdi/nf-wingdi-selectpalette)
+[**Wählen SiePalette aus.**](/windows/desktop/api/wingdi/nf-wingdi-selectpalette)
 </dt> <dt>
 
 [**DefWindowProc**](/windows/desktop/api/winuser/nf-winuser-defwindowproca)

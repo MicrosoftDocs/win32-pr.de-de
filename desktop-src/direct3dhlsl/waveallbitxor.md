@@ -1,6 +1,6 @@
 ---
 title: WaveActiveBitXor-Funktion
-description: Gibt den bitweise XOR aller Werte des Ausdrucks auf allen aktiven Spuren in der aktuellen Welle zurück und repliziert ihn zurück an alle aktiven Lanes.
+description: Gibt den bitweisen XOR aller Werte des Ausdrucks über alle aktiven Lanes in der aktuellen Welle zurück und repliziert ihn wieder auf alle aktiven Lanes.
 ms.assetid: A6807D17-1E6E-4997-AB52-32FAB5857219
 keywords:
 - WaveActiveBitXor-Funktion HLSL
@@ -22,7 +22,7 @@ ms.locfileid: "118504880"
 ---
 # <a name="waveactivebitxor-function"></a>WaveActiveBitXor-Funktion
 
-Gibt den bitweise XOR aller Werte des Ausdrucks auf allen aktiven Spuren in der aktuellen Welle zurück und repliziert ihn zurück an alle aktiven Lanes.
+Gibt den bitweisen XOR aller Werte des Ausdrucks über alle aktiven Lanes in der aktuellen Welle zurück und repliziert ihn wieder auf alle aktiven Lanes.
 
 ## <a name="syntax"></a>Syntax
 
@@ -49,7 +49,7 @@ Der bitweise XOR-Wert.
 
 ## <a name="remarks"></a>Hinweise
 
-Diese Funktion wird von Shadermodell 6.0 in allen Shaderstufen unterstützt. 
+Diese Funktion wird vom Shadermodell 6.0 in allen Shaderstufen unterstützt. 
 
 
 

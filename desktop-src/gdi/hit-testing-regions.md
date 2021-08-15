@@ -1,19 +1,19 @@
 ---
-description: Eine Anwendung führt Treffer Tests für Regionen durch, um die Koordinaten der aktuellen Cursorposition zu bestimmen.
+description: Eine Anwendung führt Treffertests für Bereiche durch, um die Koordinaten der aktuellen Cursorposition zu bestimmen.
 ms.assetid: 861a2558-0967-43f6-be3f-580992da05ff
-title: Treffer Testregionen
+title: Treffertestbereiche
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: fe136c3ba9ab4babfc1150ae4c3eee878cb42327
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 5734ffb886bd2978d3ee0b49773d752d4abf43a4d98dc060f3dfaf2956e3084a
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104215197"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118760976"
 ---
-# <a name="hit-testing-regions"></a>Treffer Testregionen
+# <a name="hit-testing-regions"></a>Treffertestbereiche
 
-Eine Anwendung führt Treffer Tests für Regionen durch, um die Koordinaten der aktuellen Cursorposition zu bestimmen. Anschließend übergibt Sie diese Koordinaten sowie ein Handle, das den Bereich an die [**PtInRegion**](/windows/desktop/api/Wingdi/nf-wingdi-ptinregion) -Funktion identifiziert. Die Cursor Koordinaten können abgerufen werden, indem die verschiedenen Maus Meldungen verarbeitet werden, z. b. [**WM \_ lbuttondown**](../inputdev/wm-lbuttondown.md) , [**WM \_ lbuttonup**](../inputdev/wm-lbuttonup.md) , [**WM \_ rbuttondown**](../inputdev/wm-rbuttondown.md) und [**WM \_ rbuttonup**](../inputdev/wm-rbuttonup.md). Der Rückgabewert für PtInRegion gibt an, ob die Cursorposition innerhalb des angegebenen Bereichs liegt.
+Eine Anwendung führt Treffertests für Bereiche durch, um die Koordinaten der aktuellen Cursorposition zu bestimmen. Anschließend werden diese Koordinaten sowie ein Handle zur Identifizierung des Bereichs an die [**PtInRegion-Funktion**](/windows/desktop/api/Wingdi/nf-wingdi-ptinregion) übergeben. Die Cursorkoordinaten können abgerufen werden, indem die verschiedenen Mausmeldungen wie [**WM \_ LBUTTONDOWN,**](../inputdev/wm-lbuttondown.md) [**WM \_ LBUTTONUP,**](../inputdev/wm-lbuttonup.md) [**WM \_ RBUTTONDOWN**](../inputdev/wm-rbuttondown.md) und [**WM \_ RBUTTONUP**](../inputdev/wm-rbuttonup.md)verarbeitet werden. Der Rückgabewert für PtInRegion gibt an, ob sich die Cursorposition innerhalb des angegebenen Bereichs befindet.
 
  
 

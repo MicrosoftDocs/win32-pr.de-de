@@ -1,9 +1,9 @@
 ---
-title: Eaptype-Element (mschapv2connectionpropertiesv1schema)
-description: Ist ein abgeleiteter Typ des eaptype-Elements aus dem baseeapconnectionpropertiesv1-Schema. Dies ist das oberste Element, das im config-Element des eaphostconfig-Schemas angezeigt wird.
+title: EapType-Element (mschapv2connectionpropertiesv1schema)
+description: Ein abgeleiteter Typ des EapType-Elements aus dem baseeapconnectionpropertiesv1-Schema. Dies ist das oberste Element, das im Config-Element des EapHostConfig-Schemas angezeigt wird.
 ms.assetid: dbd63387-f8ed-4308-903f-7a555f3410f7
 keywords:
-- Eaptype-Element EAPHost
+- EapType-Element EAPHost
 topic_type:
 - apiref
 api_name:
@@ -14,16 +14,16 @@ ms.topic: reference
 ms.date: 05/31/2018
 api_location: ''
 ROBOTS: INDEX,FOLLOW
-ms.openlocfilehash: 3e9b7db3d3e3ab1ba90427a65a5544b87939ca88
-ms.sourcegitcommit: 0e611cdff84ff9f897c59e4e1d2b2d134bc4e133
+ms.openlocfilehash: 18d3296dfab4a28ba818199d0b9329888c692f55831bced2af5abedfd1f205e5
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/02/2021
-ms.locfileid: "106367176"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118984060"
 ---
-# <a name="eaptype-element-mschapv2connectionpropertiesv1schema"></a>Eaptype-Element (mschapv2connectionpropertiesv1schema)
+# <a name="eaptype-element-mschapv2connectionpropertiesv1schema"></a>EapType-Element (mschapv2connectionpropertiesv1schema)
 
-Das **eaptype** -Element ist ein abgeleiteter Typ des [eaptype](baseeapconnectionpropertiesv1schema-eaptype-element.md) -Elements aus dem [baseeapconnectionpropertiesv1](baseeapconnectionpropertiesv1schema-schema.md) -Schema. Dies ist das oberste Element, das im config-Element des [eaphostconfig](eaphostconfigschema-elements.md) -Schemas angezeigt wird.
+Das **EapType-Element** ist ein abgeleiteter Typ des [EapType-Elements](baseeapconnectionpropertiesv1schema-eaptype-element.md) aus dem [baseeapconnectionpropertiesv1-Schema.](baseeapconnectionpropertiesv1schema-schema.md) Dies ist das oberste Element, das im Config-Element des [EapHostConfig-Schemas](eaphostconfigschema-elements.md) angezeigt wird.
 
 ``` syntax
 <xs:element name="EapType"
@@ -59,13 +59,13 @@ Das **eaptype** -Element ist ein abgeleiteter Typ des [eaptype](baseeapconnectio
 
 | Element                                                                                                       | type    | BESCHREIBUNG                                                                                                                                                                                                                                                                                                                                      |
 |---------------------------------------------------------------------------------------------------------------|---------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| [**UseWinLogonCredentials**](mschapv2connectionpropertiesv1schema-usewinlogoncredentials-eaptype-element.md) | boolean | Steuert die Verwendung der winlogin-Anmelde Informationen. Wenn der Wert true ist, erhält der EAP-MS-CHAPv2 Anmelde Informationen von Winlogon. Wenn der Wert false ist, erhält EAP MS-CHAPv2 Anmelde Informationen vom Benutzer. <br/> Das [**usewinlogon-Anmelde Informationen-Element (eaptype)**](mschapv2connectionpropertiesv1schema-usewinlogoncredentials-eaptype-element.md) ist optional.<br/> |
+| [**UseWinLogonCredentials**](mschapv2connectionpropertiesv1schema-usewinlogoncredentials-eaptype-element.md) | boolean | Steuert die Verwendung der Winlogin-Anmeldeinformationen. True gibt an, dass EAP MS-CHAPv2 Anmeldeinformationen von winlogon erhält. False gibt an, dass EAP MS-CHAPv2 Anmeldeinformationen vom Benutzer erhält. <br/> Das [**UseWinLogonCredentials -Element (EapType)**](mschapv2connectionpropertiesv1schema-usewinlogoncredentials-eaptype-element.md) ist optional.<br/> |
 
 
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Das Element **processContents** ermöglicht zukünftige Erweiterungen des Schemas. Das **processContents** -Element ist optional.
+Das **processContents-Element** ermöglicht zukünftige Erweiterungen des Schemas. Das **processContents-Element** ist optional.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -73,16 +73,16 @@ Das Element **processContents** ermöglicht zukünftige Erweiterungen des Schema
 
 | Anforderung | Wert |
 |-------------------------------------|------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>       |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2008 \[ -Desktop-Apps\]<br/> |
+| Unterstützte Mindestversion (Client)<br/> | Windows \[Nur Vista-Desktop-Apps\]<br/>       |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2008-Desktop-Apps\]<br/> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[EAPHost und Legacy Schema](eaphost-schemas.md)
+[EAPHost und Legacyschema](eaphost-schemas.md)
 </dt> <dt>
 
 [mschapv2connectionpropertiesv1-Schema](mschapv2connectionpropertiesv1schema-schema.md)

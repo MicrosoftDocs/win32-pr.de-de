@@ -1,7 +1,7 @@
 ---
-description: Diese Enumeration ist nur für die interne Verwendung vorgesehen.
+description: Diese Enumeration ist nur für die interne Verwendung.
 ms.assetid: 316C5E9D-A566-45CD-A62F-54251DF25360
-title: DisplayState-Enumeration
+title: DISPLAYSTATE-Enumeration
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -9,14 +9,14 @@ topic_type:
 api_name: ''
 api_type: ''
 api_location: ''
-ms.openlocfilehash: 030511a6715b52629189ac6b09e11286a2efb866
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: bd91c3b6f594d00e1d1d94fd78908ad8898735208287bdb4ab245b0311e4ae24
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106343262"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118969579"
 ---
-# <a name="displaystate-enumeration"></a>DisplayState-Enumeration
+# <a name="displaystate-enumeration"></a>DISPLAYSTATE-Enumeration
 
 Diese Enumeration wird nicht unterstützt.
 

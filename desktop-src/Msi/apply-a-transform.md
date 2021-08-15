@@ -1,5 +1,5 @@
 ---
-description: Die VBScript-WiUseXfm.vbs wird in den Windows SDK-Komponenten für Windows Installer-Entwickler bereitgestellt. In diesem Beispiel wird gezeigt, wie sie mit einem Skript eine Transformation auf eine Windows Installer-Datenbank anwenden können.
+description: Die VBScript-WiUseXfm.vbs wird in den sdk-Komponenten Windows für Windows Installer-Entwickler bereitgestellt. In diesem Beispiel wird gezeigt, wie mit dem Skript eine Transformation auf eine Datenbank Windows Installer angewendet werden kann.
 ms.assetid: e647388e-5211-463d-9e3e-b502af01fc0c
 title: Anwenden einer Transformation
 ms.topic: article
@@ -13,16 +13,16 @@ ms.locfileid: "118381609"
 ---
 # <a name="apply-a-transform"></a>Anwenden einer Transformation
 
-Die VBScript-WiUseXfm.vbs wird in den Windows [SDK-Komponenten für Windows Installer-Entwickler bereitgestellt.](platform-sdk-components-for-windows-installer-developers.md) In diesem Beispiel wird gezeigt, wie sie mit einem Skript eine Transformation auf eine Windows Installer-Datenbank anwenden können.
+Die VBScript-WiUseXfm.vbs wird in den Windows [SDK-Komponenten für Windows Installer-Entwickler bereitgestellt.](platform-sdk-components-for-windows-installer-developers.md) In diesem Beispiel wird gezeigt, wie mit dem Skript eine Transformation auf eine Datenbank Windows Installer angewendet werden kann.
 
 Das Beispiel veranschaulicht die Verwendung von
 
 -   [**OpenDatabase-Methode (Installer-Objekt)**](installer-opendatabase.md)
 -   [**LastErrorRecord-Methode**](installer-lasterrorrecord.md) des [ **Installer-Objekts**](installer-object.md)
 -   [**ApplyTransform-Methode**](database-applytransform.md)
--   [**Commit-Methode**](database-commit.md) des [ **Datenbankobjekts**](database-object.md)
+-   [**Commit-Methode**](database-commit.md) des [ **Database-Objekts**](database-object.md)
 
-Sie benötigen die CScript.exe oder WScript.exe von Windows Script Host, um dieses Beispiel verwenden zu können. Um dieses CScript.exe auszuführen, geben Sie an der Eingabeaufforderung eine Befehlszeile mit der folgenden Syntax ein. Hilfe wird angezeigt, wenn das erste Argument /? ist. oder , wenn zu wenige Argumente angegeben werden. Um die Ausgabe an eine Datei umzuleiten, beenden Sie die Befehlszeile mit VBS > \[ *Pfad zur Datei* \] . Das Beispiel gibt den Wert 0 für den Erfolg zurück, 1, wenn Hilfe aufgerufen wird, und 2, wenn das Skript fehlschlägt.
+Sie benötigen die CScript.exe oder WScript.exe version of Windows Script Host (Skripthost), um dieses Beispiel verwenden zu können. Um dieses CScript.exe ausführen zu können, geben Sie an der Eingabeaufforderung eine Befehlszeile mit der folgenden Syntax ein. Hilfe wird angezeigt, wenn das erste Argument /? ist. oder , wenn zu wenige Argumente angegeben werden. Um die Ausgabe an eine Datei umzuleiten, beenden Sie die Befehlszeile mit VBS > \[ *Pfad zur Datei* \] . Das Beispiel gibt den Wert 0 für den Erfolg zurück, 1, wenn Hilfe aufgerufen wird, und 2, wenn das Skript fehlschlägt.
 
 **cscript WiUseXfm.vbs \[ pfad zum ursprünglichen Datenbankpfad \] \[ zum Transformieren von \] \[ Dateioptionen\]**
 

@@ -1,11 +1,11 @@
 ---
 title: IMsRdpClientNonScriptable2-Schnittstelle
-description: Ermöglicht den Zugriff auf die nicht beschreibbaren Eigenschaften der Remotesitzung eines Clients auf dem Remotedesktop ActiveX-Steuerelement. Wird von der IMsRdpClientNonScriptable-Schnittstelle abgeleitet.
+description: Ermöglicht den Zugriff auf die nicht feststellbaren Eigenschaften der Remotesitzung eines Clients auf dem Remotedesktop ActiveX Steuerelement. Wird von der IMsRdpClientNonScriptable-Schnittstelle ableiten.
 ms.assetid: 06a5ffc9-3c9e-44d6-a5b5-9ccb7488deff
 ms.tgt_platform: multiple
 keywords:
-- IMsRdpClientNonScriptable2-Schnittstelle Remotedesktopdienste
-- IMsRdpClientNonScriptable2-Schnittstelle Remotedesktopdienste beschrieben
+- IMsRdpClientNonScriptable2-Remotedesktopdienste
+- IMsRdpClientNonScriptable2-Schnittstelle Remotedesktopdienste , beschrieben
 topic_type:
 - apiref
 api_name:
@@ -25,11 +25,11 @@ ms.locfileid: "118352137"
 ---
 # <a name="imsrdpclientnonscriptable2-interface"></a>IMsRdpClientNonScriptable2-Schnittstelle
 
-Ermöglicht den Zugriff auf die nicht beschreibbaren Eigenschaften der Remotesitzung eines Clients auf dem Remotedesktop ActiveX-Steuerelement. Wird von der [**IMsRdpClientNonScriptable-Schnittstelle**](imsrdpclientnonscriptable-interface.md) abgeleitet. Auf Methoden dieser Schnittstelle kann nur über die vtable zugegriffen werden. Sie sind nicht für die Verwendung für skriptfähige Clients verfügbar.
+Ermöglicht den Zugriff auf die nicht feststellbaren Eigenschaften der Remotesitzung eines Clients auf dem Remotedesktop ActiveX Steuerelement. Wird von der [**IMsRdpClientNonScriptable-Schnittstelle**](imsrdpclientnonscriptable-interface.md) ableiten. Auf Methoden dieser Schnittstelle kann nur über die vtable zugegriffen werden. Sie sind nicht für skriptfähige Clients verfügbar.
 
 ## <a name="members"></a>Member
 
-Die **IMsRdpClientNonScriptable2-Schnittstelle** erbt von [**IMsRdpClientNonScriptable**](imsrdpclientnonscriptable-interface.md). **IMsRdpClientNonScriptable2** verfügt auch über diese Typen von Membern:
+Die **IMsRdpClientNonScriptable2-Schnittstelle** erbt von [**IMsRdpClientNonScriptable**](imsrdpclientnonscriptable-interface.md). **IMsRdpClientNonScriptable2** verfügt auch über diese Membertypen:
 
 -   [Eigenschaften](#properties)
 
@@ -41,7 +41,7 @@ Die **IMsRdpClientNonScriptable2-Schnittstelle** verfügt über diese Eigenschaf
 
 | Eigenschaft                                                                                   | Zugriffstyp           | BESCHREIBUNG                                                                                                                                                                                                  |
 |:-------------------------------------------------------------------------------------------|:----------------------|:-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| [**UIParentWindowHandle**](imsrdpclientnonscriptable2-uiparentwindowhandle.md)<br/> | Lesen/Schreiben<br/> | Das Fensterhandle, das das übergeordnete Fenster für das Steuerelement sein soll. Dadurch können alle vom Steuerelement angezeigten Fenster in Bezug auf alle Fenster, die von der übergeordneten Anwendung angezeigt werden, ordnungsgemäß modal sein.<br/> |
+| [**UIParentWindowHandle**](imsrdpclientnonscriptable2-uiparentwindowhandle.md)<br/> | Lesen/Schreiben<br/> | Das Fensterhand handle, das als übergeordnetes Fenster für das Steuerelement verwendet werden soll. Dadurch können alle fenster, die vom -Steuerelement angezeigt werden, in Bezug auf alle fenster, die von der übergeordneten Anwendung angezeigt werden, ordnungsgemäß modal sein.<br/> |
 
 
 
@@ -49,13 +49,13 @@ Die **IMsRdpClientNonScriptable2-Schnittstelle** verfügt über diese Eigenschaf
 
 ## <a name="remarks"></a>Hinweise
 
-Diese Schnittstelle wurde durch die folgenden Schnittstellen erweitert, wobei jede neue Schnittstelle alle Methoden und Eigenschaften der vorherigen Schnittstellen erbt:
+Diese Schnittstelle wurde durch die folgenden Schnittstellen erweitert, und jede neue Schnittstelle erbt alle Methoden und Eigenschaften der vorherigen Schnittstellen:
 
 -   [**IMsRdpClientNonScriptable3**](imsrdpclientnonscriptable3.md)
 -   [**IMsRdpClientNonScriptable4**](imsrdpclientnonscriptable4.md)
 -   [**IMsRdpClientNonScriptable5**](imsrdpclientnonscriptable5.md)
 
-Weitere Informationen zu Remotedesktop-Webverbindung finden Sie unter [Anforderungen für Remotedesktop-Webverbindung](requirements-for-remote-desktop-web-connection.md).
+Weitere Informationen zu Remotedesktop-Webverbindung finden Sie unter [Requirements for Remotedesktop-Webverbindung](requirements-for-remote-desktop-web-connection.md).
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -82,7 +82,7 @@ Weitere Informationen zu Remotedesktop-Webverbindung finden Sie unter [Anforderu
 [**IMsTscNonScriptable**](imstscnonscriptable-interface.md)
 </dt> <dt>
 
-[Remotedesktop-Webverbindung-Referenz](remote-desktop-web-connection-reference.md)
+[Remotedesktop-Webverbindung Referenz](remote-desktop-web-connection-reference.md)
 </dt> </dl>
 
  

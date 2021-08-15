@@ -1,6 +1,6 @@
 ---
-description: Weitere Informationen finden Sie in der JET_DBINFOMISC. fupgraentdb-Eigenschaft.
-title: JET_DBINFOMISC. fupgraentdb (Eigenschaft)
+description: 'Weitere Informationen finden Sie unter: JET_DBINFOMISC.fUpgradeDb-Eigenschaft'
+title: JET_DBINFOMISC.fUpgradeDb-Eigenschaft
 TOCTitle: 'fUpgradeDb property '
 ms:assetid: P:Microsoft.Isam.Esent.Interop.JET_DBINFOMISC.fUpgradeDb
 ms:mtpsurl: https://msdn.microsoft.com/library/microsoft.isam.esent.interop.jet_dbinfomisc.fupgradedb(v=EXCHG.10)
@@ -26,19 +26,19 @@ api_type:
 api_location:
 - Microsoft.Isam.Esent.Interop.dll
 ROBOTS: INDEX,FOLLOW
-ms.openlocfilehash: 702f66afe13a0355744477d23e79eb147a463328
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 50c2d6ee59ead89c9da6c8a628b029e65ea78110442828bbeef4735f5ef76609
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104484275"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118766392"
 ---
-# <a name="jet_dbinfomiscfupgradedb-property"></a>JET_DBINFOMISC. fupgraentdb (Eigenschaft)
+# <a name="jet_dbinfomiscfupgradedb-property"></a>JET_DBINFOMISC.fUpgradeDb-Eigenschaft
 
-Ruft einen Wert ab, der angibt, ob die Datenbank aktualisiert wird. Dieser Wert ist nur für die interne Verwendung vorgesehen.
+Ruft einen Wert ab, der angibt, ob die Datenbank aktualisiert wird. Dieser Wert ist nur für die interne Verwendung.
 
-**Namespace:**  [Microsoft. ISAM. ESENT. Interop](./microsoft.isam.esent.interop-namespace.md)  
-**Assembly:**  Microsoft. ISAM. ESENT. Interop (in Microsoft.Isam.Esent.Interop.dll)
+**Namespace:**  [Microsoft.Isam.Esent.Interop](./microsoft.isam.esent.interop-namespace.md)  
+**Assembly:**  Microsoft.Isam.Esent.Interop (in Microsoft.Isam.Esent.Interop.dll)
 
 ## <a name="syntax"></a>Syntax
 
@@ -60,14 +60,14 @@ public bool fUpgradeDb { get; internal set; }
 
 #### <a name="property-value"></a>Eigenschaftswert
 
-Typ: [System. Boolean](/dotnet/api/system.boolean)  
+Typ: [System.Boolean](/dotnet/api/system.boolean)  
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
-#### <a name="reference"></a>Referenz
+#### <a name="reference"></a>Verweis
 
 [JET_DBINFOMISC-Klasse](./jet-dbinfomisc-class.md)
 
-[Mitglieder JET_DBINFOMISC](./jet-dbinfomisc-members.md)
+[JET_DBINFOMISC Mitglieder](./jet-dbinfomisc-members.md)
 
-[Microsoft. ISAM. ESENT. Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)
+[Microsoft.Isam.Esent.Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)

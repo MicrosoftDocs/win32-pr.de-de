@@ -1,81 +1,81 @@
 ---
-description: Die Unterstützung für Punkt Sprites in Direct3D 9 ermöglicht das Hochleistungs Rendering von Punkten (Partikelsysteme). Punkt Sprite sind verallgemeinungen von generischen Punkten, die es ermöglichen, dass beliebige Formen wie von Texturen definiert gerendert werden.
+description: Die Unterstützung für Punkt-Sprites in Direct3D 9 ermöglicht das Hochleistungsrendering von Punkten (Partikelsystemen). Punkt-Sprites sind Generalisierungen generischer Punkte, die das Rendern beliebiger Formen gemäß der Definition durch Texturen ermöglichen.
 ms.assetid: a9046c7e-779c-4f33-b8ff-f189da3dcfc5
-title: Punkt Sprites (Direct3D 9)
+title: Punkt-Sprites (Direct3D 9)
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: c988a104eb65b5e2d7e56ff2444e8d422c422df2
-ms.sourcegitcommit: a47bd86f517de76374e4fff33cfeb613eb259a7e
+ms.openlocfilehash: 90abd21207d9b3866ff93bd6c73069b655056f1c28811689762b0ce669183793
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/06/2021
-ms.locfileid: "104521707"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118520468"
 ---
-# <a name="point-sprites-direct3d-9"></a>Punkt Sprites (Direct3D 9)
+# <a name="point-sprites-direct3d-9"></a>Punkt-Sprites (Direct3D 9)
 
-Die Unterstützung für Punkt Sprites in Direct3D 9 ermöglicht das Hochleistungs Rendering von Punkten (Partikelsysteme). Punkt Sprite sind verallgemeinungen von generischen Punkten, die es ermöglichen, dass beliebige Formen wie von Texturen definiert gerendert werden.
+Die Unterstützung für Punkt-Sprites in Direct3D 9 ermöglicht das Hochleistungsrendering von Punkten (Partikelsystemen). Punkt-Sprites sind Generalisierungen generischer Punkte, die das Rendern beliebiger Formen gemäß der Definition durch Texturen ermöglichen.
 
--   [Primitive renderingsteuerelemente](#point-primitive-rendering-controls)
--   [Punktgrößen Berechnungen](#point-size-computations)
--   [Punkt Rendering](#point-rendering)
+-   [Point Primitive Rendering-Steuerelemente](#point-primitive-rendering-controls)
+-   [Berechnungen der Punktgröße](#point-size-computations)
+-   [Point Rendering](#point-rendering)
 
-## <a name="point-primitive-rendering-controls"></a>Primitive renderingsteuerelemente
+## <a name="point-primitive-rendering-controls"></a>Point Primitive Rendering-Steuerelemente
 
-Direct3D 9 unterstützt zusätzliche Parameter, um das Rendering von Punkt Sprites (Punkt primitiven) zu steuern. Mit diesen Parametern können Punkte variabler Größe aufweisen und eine vollständige Textur Zuordnung angewendet werden. Die Größe jedes Punkts wird durch eine von der Anwendung angegebene Größe in Kombination mit einer von Direct3D berechneten Entfernungs basierten Funktion bestimmt. Die Anwendung kann die Punktgröße entweder als pro-Scheitelpunkt oder durch Festlegen von D3DRS \_ pointsize angeben, die für Punkte ohne pro-Vertex-Größe gilt. Die Punktgröße wird in Kamera Raumeinheiten ausgedrückt, mit der Ausnahme, dass die Anwendung nach dem transformierten FVF (Flexible Vertex Format)-Vertices übergibt. In diesem Fall wird die Entfernungs basierte Funktion nicht angewendet, und die Punktgröße wird in Pixel Einheiten für das Renderziel ausgedrückt.
+Direct3D 9 unterstützt zusätzliche Parameter, um das Rendering von Punkt-Sprites (Punktprimitiven) zu steuern. Mit diesen Parametern können Punkte eine variable Größe aufweisen und eine vollständige Texturzuordnung angewendet werden. Die Größe der einzelnen Punkte wird durch eine von der Anwendung angegebene Größe in Kombination mit einer von Direct3D berechneten entfernungsbasierten Funktion bestimmt. Die Anwendung kann die Punktgröße entweder pro Scheitelpunkt oder durch Festlegen von D3DRS POINTSIZE angeben, was für Punkte ohne Scheitelpunktgröße \_ gilt. Die Punktgröße wird in Kameraraumeinheiten ausgedrückt, mit Ausnahme, wenn die Anwendung nach transformierte Vertex-Scheitelpunkte (FVF) über gibt. In diesem Fall wird die entfernungsbasierte Funktion nicht angewendet, und die Punktgröße wird auf dem Renderziel in Pixeleinheiten ausgedrückt.
 
-Welche Texturkoordinaten berechnet und verwendet werden, wenn renderingpunkte verwendet werden, hängt von der Einstellung von D3DRS \_ pointspriteenable ab. Wenn dieser Wert auf **true** festgelegt ist, werden die Texturkoordinaten so festgelegt, dass jeder Punkt die vollständige Textur anzeigt. Im Allgemeinen ist dies nur nützlich, wenn Punkte erheblich größer als ein Pixel sind. Wenn D3DRS \_ pointspriteenable auf **false** festgelegt ist, wird die Vertex-Textur Koordinate jedes Punkts für den gesamten Punkt verwendet.
+Die Texturkoordinaten, die beim Rendern von Punkten berechnet und verwendet werden, hängen von der Einstellung von D3DRS \_ POINTSPRITEENABLE ab. Wenn dieser Wert auf **TRUE festgelegt ist,** werden die Texturkoordinaten so festgelegt, dass jeder Punkt die vollständige Textur anzeigt. Im Allgemeinen ist dies nur nützlich, wenn Punkte deutlich größer als ein Pixel sind. Wenn D3DRS POINTSPRITEENABLE auf FALSE festgelegt ist, wird die Scheitelpunkttexturkoordinate jedes Punkts \_ für den gesamten Punkt verwendet. 
 
-## <a name="point-size-computations"></a>Punktgrößen Berechnungen
+## <a name="point-size-computations"></a>Berechnungen der Punktgröße
 
-Die Punktgröße wird durch D3DRS \_ pointscaleenable bestimmt. Wenn dieser Wert auf **false** festgelegt ist, wird die von der Anwendung angegebene Punktgröße als Bildschirmraum (posttransformiert) verwendet. Für Scheitel Punkte, die im Bildschirmbereich an Direct3D übermittelt werden, sind keine Punktgrößen berechnet. die angegebene Punktgröße wird als Größe des Bildschirm Raums interpretiert.
+Die Punktgröße wird durch D3DRS \_ POINTSCALEENABLE bestimmt. Wenn dieser Wert auf **FALSE** festgelegt ist, wird die von der Anwendung angegebene Punktgröße als Bildschirmbereichsgröße (nach dem Transformierten) verwendet. Für Scheitelräume, die im Bildschirmbereich an Direct3D übergeben werden, werden keine Punktgrößen berechnet. die angegebene Punktgröße wird als Bildschirmbereichsgröße interpretiert.
 
-Wenn D3DRS \_ pointscaleenable den Wert **true** hat, berechnet Direct3D die Größe des Bildschirm Leerraums gemäß der folgenden Formel. Die von der Anwendung angegebene Punktgröße wird in Kamera Raumeinheiten ausgedrückt.
+Wenn D3DRS \_ POINTSCALEENABLE **true ist,** berechnet Direct3D die Größe des Bildschirmbereichspunkts gemäß der folgenden Formel. Die von der Anwendung angegebene Punktgröße wird in Kameraraumeinheiten ausgedrückt.
 
-S = VH \* s <sub>i</sub> \* sqrt (1/(A + B \* D ₑ + C \* (D ₑ ²)))
+S s = Vh \* S <sub>i</sub> \* sqrt(1/(A + B D ₑ + C ( D \* \* ₑ 2 )))
 
-In dieser Formel ist die Eingabe Punktgröße, S <sub>i</sub>, entweder pro Scheitelpunkt oder der Wert des D3DRS \_ pointsize-Rendering-Zustands. Die Punkt Skalierungsfaktoren D3DRS \_ pointscale \_ a, D3DRS \_ pointscale \_ B und D3DRS \_ pointscale \_ C werden durch die Punkte A, B und c dargestellt. Die Höhe des Viewports, V h, ist der Height-Member der [**D3DVIEWPORT9**](d3dviewport9.md) -Struktur, der den Viewport darstellt. D ₑ die Entfernung von der Perspektive bis zur Position (das Auge am Ursprung) wird berechnet, indem die Augen Raum Position des Punkts (x ₑ, y ₑ, z ₑ) übernommen und der folgende Vorgang durchgeführt wird.
+In dieser Formel ist die Größe des Eingabepunkts S <sub>i</sub>entweder pro Scheitelpunkt oder der Wert des D3DRS \_ POINTSIZE-Renderzustands. Die Punktskalafaktoren D3DRS \_ POINTSCALE \_ A, D3DRS POINTSCALE B und \_ \_ D3DRS \_ POINTSCALE C werden \_ durch die Punkte A, B und C dargestellt. Die Höhe des Viewports V h ist der Height-Member der [**D3DVIEWPORT9-Struktur,**](d3dviewport9.md) der den Viewport darstellt. D ₑ der Abstand vom Auge zur Position (das Auge am Ursprung) wird berechnet, indem die Position des Augenraums des Punkts (Xₑ, Yₑ, Zₑ) und der folgende Vorgang durchgeführt wird.
 
-D ₑ = sqrt (x ₑ ² + Y ₑ ² + Z ₑ ²)
+D ₑ = sqrt (Xₑ): + Y ₑ): + Z ₑ 2)
 
-Die maximale Punktgröße, pm ₐ ₓ, wird bestimmt, indem der kleinere des maxpointsize-Members der [**D3DCAPS9**](/windows/desktop/api/D3D9Caps/ns-d3d9caps-d3dcaps9) -Struktur oder der D3DRS \_ pointsize-maximale Rendering-Zustand verwendet wird \_ . Die minimale Punktgröße (P<sub>Min</sub>) wird durch Abfragen des Werts von D3DRS \_ pointsize min bestimmt \_ . Daher wird die endgültige Größe des Bildschirmraum Punkts wie folgt bestimmt.
+Die maximale Punktgröße ( Pmₐₓ) wird bestimmt, indem der kleinere der MaxPointSize-Member der [**D3DCAPS9-Struktur**](/windows/desktop/api/D3D9Caps/ns-d3d9caps-d3dcaps9) oder der D3DRS \_ POINTSIZE \_ MAX-Renderzustand verwendet wird. Die minimale Punktgröße P<sub>min</sub>wird durch Abfragen des Werts von D3DRS \_ POINTSIZE \_ MIN bestimmt. Daher wird die endgültige Bildschirmbereichspunktgröße S wie folgt bestimmt.
 
--   Wenn SS > pm ₐ ₓ, dann S = P m ₐ ₓ
--   Wenn s < P<sub>Min</sub>, dann s = p <sub>Min</sub> .
--   Andernfalls s = s
+-   Wenn Ss > Pmₐₓ, dann S = P mₐₓ
+-   Wenn S < P<sub>min,</sub>dann S = P <sub>min</sub>
+-   Andernfalls S = S s
 
-## <a name="point-rendering"></a>Punkt Rendering
+## <a name="point-rendering"></a>Point Rendering
 
-Ein Bildschirmraum Punkt (P = (X, Y, Z, W) der Bildschirmgröße S wird als viereckig der folgenden vier Vertices gerengt.
+Ein Bildschirmbereichspunkt( P = ( X, Y, Z, W) der Bildschirmbereichsgröße S wird als Viereck der folgenden vier Scheitelungen rastert.
 
-((X + s/2, y + s/2, z, w), (x + s/2, y-s/2, z, w), (x-s/2, y-s/2, z, w), (x-s/2, y + S/2, z, w))
+(( X + S/2, Y + S/2, Z, W), ( X + S/2, Y - S/2, Z, W), ( X - S/2, Y- S/2, Z, W), ( X - S/2, Y + S/2, Z, W))
 
-Die Vertex-Farb Attribute werden bei jedem Scheitelpunkt dupliziert. Daher wird jeder Punkt immer mit Konstanten Farben gerendert.
+Die Scheitelpunktfarbattribute werden an jedem Scheitelpunkt dupliziert. daher wird jeder Punkt immer mit konstanten Farben gerendert.
 
-Die Zuweisung von Textur Indizes wird von der D3DRS \_ pointspriteenable-Rendering-Statuseinstellung gesteuert. Wenn D3DRS \_ pointspriteenable auf **false** festgelegt ist, werden die Scheitelpunkt Texturkoordinaten bei jedem Scheitelpunkt dupliziert. Wenn D3DRS \_ pointspriteenable auf **true** festgelegt ist, werden die Texturkoordinaten an den vier Vertices auf die folgenden Werte festgelegt.
+Die Zuweisung von Texturindizes wird durch die D3DRS \_ POINTSPRITEENABLE-Renderzustandseinstellung gesteuert. Wenn D3DRS POINTSPRITEENABLE auf FALSE festgelegt ist, werden die Scheitelpunkttexturkoordinaten an \_ jedem Scheitelpunkt dupliziert.  Wenn D3DRS POINTSPRITEENABLE auf TRUE festgelegt ist, werden die Texturkoordinaten an den vier Scheitelpunkten auf \_ die folgenden Werte festgelegt. 
 
-(0. f, 0. f), (0. f, 1. f), (1. f, 0. f), (1. f, 1. f)
+(0.F, 0.F), (0.F, 1.F), (1.F, 0.F), (1.F, 1.F)
 
 Dies wird im folgenden Diagramm veranschaulicht:
 
-![Diagramm eines Quadrats mit beschrifteten Vertices für (u, v) und (x, y)-Koordinaten Werte](images/spritepoint.png)
+![Diagramm eines Quadrats mit bezeichneten Scheitelwerten für (u,v) und (x,y) Koordinatenwerte](images/spritepoint.png)
 
-Wenn Clipping aktiviert ist, werden Punkte wie folgt abgeschnitten. Wenn der Scheitelpunkt den Bereich von tiefen Werten (Minz und MaxZ) der [**D3DVIEWPORT9**](d3dviewport9.md) -Struktur überschreitet, in die eine Szene gerendert werden soll, ist der Punkt außerhalb der Ansicht Frustum vorhanden und wird nicht gerendert. Wenn der Punkt, der die Punktgröße berücksichtigt, vollständig außerhalb des Viewports in X und Y liegt, wird der Punkt nicht gerendert. die verbleibenden Punkte werden gerendert. Es ist möglich, dass die Punktposition außerhalb des Viewports in X oder Y liegt und noch teilweise sichtbar ist.
+Wenn die Beschneidung aktiviert ist, werden Punkte wie folgt abgeschnitten. Wenn der Scheitelpunkt den Bereich der Tiefenwerte (MinZ und MaxZ der [**D3DVIEWPORT9-Struktur)**](d3dviewport9.md) überschreitet, in den eine Szene gerendert werden soll, befindet sich der Punkt außerhalb des Ansichtsfrustums und wird nicht gerendert. Wenn sich der Punkt unter Berücksichtigung der Punktgröße vollständig außerhalb des Viewports in X und Y befindet, wird der Punkt nicht gerendert. Die verbleibenden Punkte werden gerendert. Es ist möglich, dass sich die Punktposition außerhalb des Viewports in X oder Y befindet und immer noch teilweise sichtbar ist.
 
-Punkte werden möglicherweise nicht ordnungsgemäß auf benutzerdefinierte Clip-Flächen zugeschnitten. Wenn D3DPMISCCAPS \_ clipplanescaledpoints nicht im primitivefehlcaps-Member der [**D3DCAPS9**](/windows/desktop/api/D3D9Caps/ns-d3d9caps-d3dcaps9) -Struktur festgelegt ist, werden die Punkte nur auf der Scheitelpunkt Position auf benutzerdefinierte Clip Flächen zugeschnitten, wobei die Punktgröße ignoriert wird. In diesem Fall werden skalierte Punkte vollständig gerendert, wenn sich die Scheitelpunkt Position innerhalb der Clip Flächen befindet, und verworfen, wenn die Scheitelpunkt Position außerhalb der Ausschneide Ebene liegt. Anwendungen können potenzielle Artefakte vermeiden, indem Sie eine Rahmengeometrie zu Clip-Flächen hinzufügen, die so groß wie die maximale Punktgröße ist.
+Punkte werden möglicherweise ordnungsgemäß auf benutzerdefinierte Clipebenen abgeschnitten. Wenn D3DPMISCCAPS \_ CLIPPLANESCALEDPOINTS nicht im PrimitiveMiscCaps-Member der [**D3DCAPS9-Struktur**](/windows/desktop/api/D3D9Caps/ns-d3d9caps-d3dcaps9) festgelegt ist, werden Punkte nur basierend auf der Scheitelpunktposition auf benutzerdefinierte Clipebenen abgeschnitten, und die Punktgröße wird ignoriert. In diesem Fall werden skalierte Punkte vollständig gerendert, wenn sich die Scheitelpunktposition innerhalb der Clipebenen befindet, und verworfen, wenn sich die Scheitelpunktposition außerhalb einer Clipebene befindet. Anwendungen können potenzielle Artefakte verhindern, indem sie eine Rahmengeometrie zu Clipebenen hinzufügen, die so groß wie die maximale Punktgröße ist.
 
-Wenn das D3DPMISCCAPS \_ clipplanescaledpoints-Bit festgelegt ist, werden die skalierten Punkte korrekt auf benutzerdefinierte Clip Flächen zugeschnitten.
+Wenn das D3DPMISCCAPS CLIPPLANESCALEDPOINTS-Bit festgelegt ist, werden die skalierten Punkte ordnungsgemäß auf benutzerdefinierte \_ Clipebenen abgeschnitten.
 
-Die Verarbeitung von Hardware Scheitel Punkten kann die Punktgröße unterstützen. Wenn z. b. ein Gerät mit D3DCREATE \_ Hardware \_ vertexprocessing auf einem Hardware Abstraktionsschicht (HAL)-Gerät (D3DDEVTYPE \_ HAL) erstellt wird, das den maxpointsize-Member der [**D3DCAPS9**](/windows/desktop/api/D3D9Caps/ns-d3d9caps-d3dcaps9) -Struktur auf 1,0 oder 0,0 festgelegt hat, sind alle Punkte ein einzelnes Pixel. Zum Rendern von Pixeln, die kleiner als 1,0 sind, müssen Sie entweder FVF TL-Vertices (transformiert und lit) oder die Verarbeitung von Software Scheitel Punkten (D3DCREATE \_ Software \_ vertexprocessing) verwenden. in diesem Fall emuliert die Direct3D-Laufzeit das Punkt Sprite-Rendering.
+Die Hardwarevertexverarbeitung unterstützt möglicherweise die Punktgröße. Wenn beispielsweise ein Gerät mit D3DCREATE HARDWARE VERTEXPROCESSING auf einem Hardwareabstraktionsschichtgerät (Hardware Abstraction Layer, D3DDEVTYPE MPI) erstellt wird, für das das \_ \_ \_ MaxPointSize-Member der [**D3DCAPS9-Struktur**](/windows/desktop/api/D3D9Caps/ns-d3d9caps-d3dcaps9) auf 1,0 oder 0,0 festgelegt ist, sind alle Punkte ein einzelnes Pixel. Um Pixelpunkt-Sprites kleiner als 1,0 zu rendern, müssen Sie entweder FVF-TL-Scheitelpunkte (transformiert und beleuchtet) oder Softwarevertex processing (D3DCREATE SOFTWARE VERTEXPROCESSING) verwenden. In diesem Fall \_ emuliert die Direct3D-Laufzeit das Punkt-Sprite-Rendering. \_
 
-Ein Hardware Gerät, das die Scheitelpunkt Verarbeitung verarbeitet und Punkt Sprite unterstützt. maxpointsize ist auf einen Wert größer als 1,0 f festgelegt. ist erforderlich, um die Größen Berechnung für nicht transformierte Sprites auszuführen, und muss die pro-Vertex-oder D3DRS \_ POINTSIZED3DRS pointsize für TL-Scheitel Punkte ordnungsgemäß festgelegt werden \_ .
+Ein Hardwaregerät, das Scheitelpunktverarbeitung übernimmt und Punkt-Sprites unterstützt – MaxPointSize auf größer als 1,0f festgelegt – ist erforderlich, um die Größenberechnung für nicht übersetzte Sprites durchzuführen, und ist erforderlich, um den Pro-Scheitelpunkt oder D3DRS \_ POINTSIZED3DRS POINTSIZE für TL-Scheitelpunkte ordnungsgemäß festlegen zu \_ können.
 
-Informationen zu Renderingerweiterungen für Punkte, Linien und Dreiecke finden Sie unter [rasterization Rules (Direct3D 9)](rasterization-rules.md).
+Informationen zu Renderingregeln für Punkte, Linien und Dreiecke finden Sie unter [Rasterregeln (Direct3D 9).](rasterization-rules.md)
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
 <dl> <dt>
 
-[Scheitelpunkt Pipeline](vertex-pipeline.md)
+[Vertexpipeline](vertex-pipeline.md)
 </dt> </dl>
 
  

@@ -1,6 +1,6 @@
 ---
-title: 'RWTexture1DArray:: GetDimensions-Funktion'
-description: 'Gibt die Dimensionen der Ressource zurück. | RWTexture1DArray:: GetDimensions-Funktion'
+title: RWTexture1DArray::GetDimensions-Funktion
+description: Gibt die Dimensionen der Ressource zurück. | RWTexture1DArray::GetDimensions-Funktion
 ms.assetid: 64f2757e-c03c-4f72-b081-1c57656d6e95
 keywords:
 - GetDimensions-Funktion HLSL
@@ -13,14 +13,14 @@ api_type:
 ms.topic: reference
 ms.date: 05/31/2018
 api_location: ''
-ms.openlocfilehash: d31d04ccf62b42fede209589a5e4a6760a3091d9
-ms.sourcegitcommit: 92e74c99f8f4d097676959d0c317f533c2400a80
+ms.openlocfilehash: 7a522fe31a62619134e86b2ed98da54570d693d1360ede1a8c0d41d28975b367
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/09/2021
-ms.locfileid: "104219274"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118986020"
 ---
-# <a name="rwtexture1darraygetdimensions-function"></a>RWTexture1DArray:: GetDimensions-Funktion
+# <a name="rwtexture1darraygetdimensions-function"></a>RWTexture1DArray::GetDimensions-Funktion
 
 Gibt die Dimensionen der Ressource zurück.
 
@@ -37,19 +37,19 @@ void GetDimensions(
 
 <dl> <dt>
 
-*Breite* \[ vorgenommen\]
+*Breite* \[ out\]
 </dt> <dd>
 
-Typ: **[ **uint**](/windows/desktop/WinProg/windows-data-types)**
+Typ: **[ **UINT**](/windows/desktop/WinProg/windows-data-types)**
 
-Die Ressourcen Breite in Texels.
+Die Ressourcenbreite in Texeln.
 
 </dd> <dt>
 
-*Elemente* \[ vorgenommen\]
+*Elemente* \[ out\]
 </dt> <dd>
 
-Typ: **[ **uint**](/windows/desktop/WinProg/windows-data-types)**
+Typ: **[ **UINT**](/windows/desktop/WinProg/windows-data-types)**
 
 Die Anzahl der Elemente im Array.
 
@@ -59,7 +59,7 @@ Die Anzahl der Elemente im Array.
 
 Diese Funktion gibt keinen Wert zurück.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
 Dies ist eine Liste der überladenen Versionen dieser Methode.
 
@@ -74,11 +74,11 @@ void GetDimensions(out float Width,
 
 
 
-Diese Funktion wird für die folgenden Typen von Shadern unterstützt:
+Diese Funktion wird für die folgenden Shadertypen unterstützt:
 
 
 
-| Scheitelpunkt | Hülle | Domain | Geometrie | Pixel | Compute |
+| Scheitelpunkt | Rumpf | Domain | Geometrie | Pixel | Compute |
 |--------|------|--------|----------|-------|---------|
 |        |      |        |          | x     | x       |
 
@@ -93,7 +93,7 @@ Diese Funktion wird für die folgenden Typen von Shadern unterstützt:
 [RWTexture1DArray](sm5-object-rwtexture1darray.md)
 </dt> <dt>
 
-[Shader-Modell 5](d3d11-graphics-reference-sm5.md)
+[Shadermodell 5](d3d11-graphics-reference-sm5.md)
 </dt> </dl>
 
  

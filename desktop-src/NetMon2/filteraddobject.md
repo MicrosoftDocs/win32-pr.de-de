@@ -1,7 +1,7 @@
 ---
-description: Die Funktion FilterAddObject fügt einem Anzeige Filter ein einzelnes Objekt hinzu.
+description: Die FilterAddObject-Funktion fügt einem Anzeigefilter ein einzelnes Objekt hinzu.
 ms.assetid: 796216f4-a407-4a8c-98b3-8c3761d91913
-title: FilterAddObject-Funktion (Netmon. h)
+title: FilterAddObject-Funktion (Netmon.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,16 +13,16 @@ api_type:
 - DllExport
 api_location:
 - Nmapi.dll
-ms.openlocfilehash: 7fc6c41a675bfe560c060e271e4f9f48f88cd58c
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 2c7d814efbbc77816836d437161390b1e2af60e8bbf4932322dcbd606920be5c
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104484331"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118938733"
 ---
 # <a name="filteraddobject-function"></a>FilterAddObject-Funktion
 
-Die Funktion **FilterAddObject** fügt einem [*Anzeige Filter*](d.md)ein einzelnes Objekt hinzu.
+Die **FilterAddObject-Funktion** fügt einem [*Anzeigefilter*](d.md)ein einzelnes -Objekt hinzu.
 
 ## <a name="syntax"></a>Syntax
 
@@ -40,23 +40,23 @@ DWORD WINAPI FilterAddObject(
 
 <dl> <dt>
 
-*hfilter* \[ in\]
+*hFilter* \[ In\]
 </dt> <dd>
 
-Handle für den Anzeige Filter.
+Handle für den Anzeigefilter.
 
 </dd> <dt>
 
-*lpfilterobject* \[ vorgenommen\]
+*lpFilterObject* \[ out\]
 </dt> <dd>
 
-Ein Zeiger auf eine [filterobject](filterobject.md) -Struktur, die das Objekt definiert, das dem Filter hinzugefügt werden soll. Jedes Objekt kann ein Operator, ein Wert oder eine Eigenschaft sein.
+Zeiger auf eine [FILTEROBJECT-Struktur,](filterobject.md) die das Objekt definiert, das dem Filter hinzugefügt werden soll. Jedes Objekt kann ein Operator, ein Wert oder eine Eigenschaft sein.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Wenn die Funktion erfolgreich ist, ist der Rückgabewert nmerr \_ Success.
+Wenn die Funktion erfolgreich ist, lautet der Rückgabewert NMERR \_ SUCCESS.
 
 Wenn die Funktion nicht erfolgreich ist, ist der Rückgabewert ein Fehlercode.
 
@@ -64,18 +64,18 @@ Wenn die Funktion nicht erfolgreich ist, ist der Rückgabewert ein Fehlercode.
 
 | Rückgabecode                                                                                              | Beschreibung                                                                  |
 |----------------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------|
-| <dl> <dt>**Ungültiger nmerr- \_ \_ Parameter**</dt> </dl> | Der *hfilter* -Parameter weist einen ungültigen Wert auf.<br/>                     |
-| <dl> <dt>**nicht genügend Arbeits \_ \_ Speicher für nmerr \_**</dt> </dl>    | Netzwerkmonitor verfügt nicht über genügend Arbeitsspeicher, um das Objekt zu erstellen.<br/> |
+| <dl> <dt>**NMERR \_ – UNGÜLTIGER \_ PARAMETER**</dt> </dl> | Der *hFilter-Parameter* weist einen ungültigen Wert auf.<br/>                     |
+| <dl> <dt>**NMERR \_ NICHT \_ GENÜGEND \_ ARBEITSSPEICHER**</dt> </dl>    | Netzwerkmonitor verfügt nicht über genügend Arbeitsspeicher, um das Objekt zu erstellen.<br/> |
 
 
 
  
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-[*Experten*](e.md) und [*Parser*](p.md) können die Funktion **FilterAddObject** aufzurufen.
+[*Experten*](e.md) und [*Parser*](p.md) können die **FilterAddObject-Funktion** aufrufen.
 
-Die **FilterAddObject** -Funktion wird jedes Mal aufgerufen, wenn dem Anzeige Filter ein Filter Objekt hinzugefügt wird. Der Anzeige Filter ist ein postfix Stapel von Objekten, bei denen es sich um einen Operator, einen Wert oder eine Eigenschaft handeln kann.
+Die **FilterAddObject-Funktion** wird jedes Mal aufgerufen, wenn dem Anzeigefilter ein Filterobjekt hinzugefügt wird. Der Anzeigefilter ist ein Postfixstapel von Objekten, bei denen es sich um einen Operator, einen Wert oder eine Eigenschaft handelt.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -85,17 +85,17 @@ Die **FilterAddObject** -Funktion wird jedes Mal aufgerufen, wenn dem Anzeige Fi
 |-------------------------------------|--------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional \[nur Desktop-Apps\]<br/>                           |
 | Unterstützte Mindestversion (Server)<br/> | Windows 2000 Server \[nur Desktop-Apps\]<br/>                                 |
-| Header<br/>                   | <dl> <dt>Netmon. h</dt> </dl>  |
-| Bibliothek<br/>                  | <dl> <dt>Nmapi. lib</dt> </dl> |
+| Header<br/>                   | <dl> <dt>Netmon.h</dt> </dl>  |
+| Bibliothek<br/>                  | <dl> <dt>Nmapi.lib</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>Nmapi.dll</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[Filter Object](filterobject.md)
+[FILTEROBJECT](filterobject.md)
 </dt> </dl>
 
  

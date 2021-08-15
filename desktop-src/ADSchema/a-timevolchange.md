@@ -1,11 +1,11 @@
 ---
 title: Time-Vol-Change-Attribut
-description: Dieses Attribut gibt den Zeitpunkt an, zu dem die Datei zuletzt geändert wurde.
+description: Dieses Attribut gibt an, zu welchem Zeitpunkt eine Datei im Remotespeichervolumen zuletzt geändert wurde.
 ms.assetid: e0a985fb-1b50-457e-80db-e71ab5570c51
 ms.tgt_platform: multiple
 keywords:
-- AD-Schema für Time-Vol-Change-Attribut
-- AD-Schema für das timevolchange-Attribut
+- Ad-Schema des Time-Vol-Change-Attributs
+- ad-Schema des timeVolChange-Attributs
 topic_type:
 - apiref
 api_name:
@@ -14,28 +14,28 @@ api_type:
 - Schema
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 315715996e685949f35f7088fff5368b95c5ba54
-ms.sourcegitcommit: b77ace27b0432e7cd3863191b11926be032fbe2f
+ms.openlocfilehash: c4db9a1eb7a7c42d72557368a88353a5fb36c073fbc41136bb83c5546f3fb527
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "103859560"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119081344"
 ---
 # <a name="time-vol-change-attribute"></a>Time-Vol-Change-Attribut
 
-Dieses Attribut gibt den Zeitpunkt an, zu dem die Datei zuletzt geändert wurde.
+Dieses Attribut gibt an, zu welchem Zeitpunkt eine Datei im Remotespeichervolumen zuletzt geändert wurde.
 
 
 
 | Eingabe | Wert |
 |-------------------|--------------------------------------|
-| CN                | Zeit-Vol-Änderung                      |
-| LDAP-Display-Name | timevolchange                        |
+| CN                | Time-Vol-Change                      |
+| Ldap-Anzeigename | timeVolChange                        |
 | Size              | \-                                   |
-| Berechtigung aktualisieren  | \-                                   |
-| Aktualisierungshäufigkeit  | \-                                   |
+| Aktualisieren von Berechtigungen  | \-                                   |
+| Updatehäufigkeit  | \-                                   |
 | Attribute-Id      | 1.2.840.113556.1.4.502               |
-| System-ID-GUID    | ddac0cf0-af8f-11d0-afeb-00c04fd930c9 |
+| System-Id-Guid    | ddac0cf0-af8f-11d0-afeb-00c04fd930c9 |
 | Syntax            | [**Intervall**](s-interval.md)       |
 
 
@@ -43,7 +43,7 @@ Dieses Attribut gibt den Zeitpunkt an, zu dem die Datei zuletzt geändert wurde.
 ## <a name="implementations"></a>Implementierungen
 
 -   [**Windows 2000 Server**](#windows-2000-server)
--   [**Windows Server 2003**](#windows-server-2003)
+-   [**Windows Server 2003**](#windows-server-2003)
 -   [**Windows Server 2003 R2**](#windows-server-2003-r2)
 -   [**Windows Server 2008**](#windows-server-2008)
 -   [**Windows Server 2008 R2**](#windows-server-2008-r2)
@@ -58,10 +58,10 @@ Dieses Attribut gibt den Zeitpunkt an, zu dem die Datei zuletzt geändert wurde.
 | Link-ID                | \-                                                             |
 | MAPI-Id                | \-                                                             |
 | System-Only            | False                                                          |
-| Ist-einwertig       | Richtig                                                           |
-| Ist indiziert             | Richtig                                                           |
+| Is-Single-Valued       | True                                                           |
+| Ist indiziert             | True                                                           |
 | Im globalen Katalog      | False                                                          |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                                   |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                                   |
 | Range-Lower            | \-                                                             |
 | Range-Upper            | \-                                                             |
 | Search-Flags           | 0x00000001                                                     |
@@ -70,7 +70,7 @@ Dieses Attribut gibt den Zeitpunkt an, zu dem die Datei zuletzt geändert wurde.
 
 
 
-## <a name="windows-server-2003"></a>Windows Server 2003
+## <a name="windows-server-2003"></a>Windows Server 2003
 
 
 
@@ -79,10 +79,10 @@ Dieses Attribut gibt den Zeitpunkt an, zu dem die Datei zuletzt geändert wurde.
 | Link-ID                | \-                                                             |
 | MAPI-Id                | \-                                                             |
 | System-Only            | False                                                          |
-| Ist-einwertig       | Richtig                                                           |
-| Ist indiziert             | Richtig                                                           |
+| Is-Single-Valued       | True                                                           |
+| Ist indiziert             | True                                                           |
 | Im globalen Katalog      | False                                                          |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                                   |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                                   |
 | Range-Lower            | \-                                                             |
 | Range-Upper            | \-                                                             |
 | Search-Flags           | 0x00000001                                                     |
@@ -100,10 +100,10 @@ Dieses Attribut gibt den Zeitpunkt an, zu dem die Datei zuletzt geändert wurde.
 | Link-ID                | \-                                                             |
 | MAPI-Id                | \-                                                             |
 | System-Only            | False                                                          |
-| Ist-einwertig       | Richtig                                                           |
-| Ist indiziert             | Richtig                                                           |
+| Is-Single-Valued       | True                                                           |
+| Ist indiziert             | True                                                           |
 | Im globalen Katalog      | False                                                          |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                                   |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                                   |
 | Range-Lower            | \-                                                             |
 | Range-Upper            | \-                                                             |
 | Search-Flags           | 0x00000001                                                     |
@@ -121,10 +121,10 @@ Dieses Attribut gibt den Zeitpunkt an, zu dem die Datei zuletzt geändert wurde.
 | Link-ID                | \-                                                             |
 | MAPI-Id                | \-                                                             |
 | System-Only            | False                                                          |
-| Ist-einwertig       | Richtig                                                           |
-| Ist indiziert             | Richtig                                                           |
+| Ist einwertig       | True                                                           |
+| Ist indiziert             | True                                                           |
 | Im globalen Katalog      | False                                                          |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                                   |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                                   |
 | Range-Lower            | \-                                                             |
 | Range-Upper            | \-                                                             |
 | Search-Flags           | 0x00000001                                                     |
@@ -142,10 +142,10 @@ Dieses Attribut gibt den Zeitpunkt an, zu dem die Datei zuletzt geändert wurde.
 | Link-ID                | \-                                                             |
 | MAPI-Id                | \-                                                             |
 | System-Only            | False                                                          |
-| Ist-einwertig       | Richtig                                                           |
-| Ist indiziert             | Richtig                                                           |
+| Ist einwertig       | True                                                           |
+| Ist indiziert             | True                                                           |
 | Im globalen Katalog      | False                                                          |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                                   |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                                   |
 | Range-Lower            | \-                                                             |
 | Range-Upper            | \-                                                             |
 | Search-Flags           | 0x00000001                                                     |
@@ -163,10 +163,10 @@ Dieses Attribut gibt den Zeitpunkt an, zu dem die Datei zuletzt geändert wurde.
 | Link-ID                | \-                                                             |
 | MAPI-Id                | \-                                                             |
 | System-Only            | False                                                          |
-| Ist-einwertig       | Richtig                                                           |
-| Ist indiziert             | Richtig                                                           |
+| Ist einwertig       | True                                                           |
+| Ist indiziert             | True                                                           |
 | Im globalen Katalog      | False                                                          |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                                   |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                                   |
 | Range-Lower            | \-                                                             |
 | Range-Upper            | \-                                                             |
 | Search-Flags           | 0x00000001                                                     |

@@ -28,15 +28,15 @@ Dieses Thema enthält folgende Abschnitte:
 -   [Erstellen des Beispiels](#building-the-sample)
 -   [Ausführen des Beispiels](#running-the-sample)
 
-## <a name="description"></a>Beschreibung
+## <a name="description"></a>BESCHREIBUNG
 
-In diesem Beispiel wird gezeigt, wie Ein Shell-Verb mithilfe der DropTarget-Methode implementiert wird. Diese Methode wird für Verbimplementierungen bevorzugt, die auf Windows XP funktionieren müssen. Dieses Beispiel implementiert einen eigenständigen lokalen Server Component Object Model -Objekt (COM), es wird jedoch erwartet, dass die Verbimplementierungen in vorhandene Anwendungen integriert werden. Zu diesem Zweck registriert Ihr Hauptanwendungsobjekt eine Klassenfactory für sich selbst. Dieses Objekt implementiert [**IDropTarget**](/windows/win32/api/oleidl/nn-oleidl-idroptarget) für die Verben Ihrer Anwendung. Beachten Sie, dass COM Ihre Anwendung startet, wenn sie nicht bereits ausgeführt wird, aber eine Verbindung mit einer ausgeführten Instanz Ihrer Anwendung herstellt, sofern vorhanden.
+In diesem Beispiel wird gezeigt, wie ein Shellverb mithilfe der DropTarget-Methode implementiert wird. Diese Methode wird für Verbimplementierungen bevorzugt, die auf Windows XP funktionieren müssen. In diesem Beispiel wird ein eigenständiges lokales Server-Component Object Model (COM)-Objekt implementiert. Es wird jedoch erwartet, dass die Verbimplementierung in vorhandene Anwendungen integriert wird. Zu diesem Grund registriert Ihr Hauptanwendungsobjekt eine Klassen factory für sich selbst. Dieses Objekt implementiert [**IDropTarget**](/windows/win32/api/oleidl/nn-oleidl-idroptarget) für die Verben Ihrer Anwendung. Beachten Sie, dass COM Ihre Anwendung startet, wenn sie noch nicht ausgeführt wird, aber eine Verbindung mit einer ausgeführten Instanz Ihrer Anwendung herstellt, sofern vorhanden.
 
 ## <a name="requirements"></a>Anforderungen
 
 
 
-| Product (Produkt)                                | Mindestversion des Produkts |
+| Product (Produkt)                                | Mindestproduktversion |
 |----------------------------------------|-------------------------|
 | Windows                                | Windows Vista           |
 | Windows Software Development Kit (SDK) | 7.0                     |
@@ -55,19 +55,19 @@ In diesem Beispiel wird gezeigt, wie Ein Shell-Verb mithilfe der DropTarget-Meth
 
 So erstellen Sie das Beispiel über die Eingabeaufforderung:
 
-1.  Öffnen Sie das Eingabeaufforderungsfenster, und navigieren Sie zum Projektverzeichnis **DropTargetVerb.**
+1.  Öffnen Sie das Eingabeaufforderungsfenster, und navigieren Sie zum **Projektverzeichnis DropTargetVerb.**
 2.  Geben Sie `msbuild DropTargetVerb.sln` ein.
 
 So erstellen Sie das Beispiel mit Microsoft Visual Studio (bevorzugt):
 
-1.  Öffnen Sie Windows Explorer, und navigieren Sie zum Projektverzeichnis **DropTargetVerb.**
-2.  Doppelklicken Sie auf das Symbol für die Datei DropTargetVerb.sln, um das Projekt in Visual Studio zu öffnen.
+1.  Öffnen Windows Explorer, und navigieren Sie zum **Projektverzeichnis DropTargetVerb.**
+2.  Doppelklicken Sie auf das Symbol für die Datei DropTargetVerb.sln, um das Projekt in Visual Studio.
 3.  Klicken Sie im Menü **Build** (Erstellen) auf **Build Solution** (Projektmappe erstellen).
 
 ## <a name="running-the-sample"></a>Ausführen des Beispiels
 
-1.  Navigieren Sie über die Eingabeaufforderung oder Windows Explorer zu dem Verzeichnis, das die neue ausführbare Datei enthält.
-2.  Geben Sie in der Befehlszeile `DropTargetVerb.exe` ein. Alternativ können Sie in Windows Explorer auf das Symbol für DropTargetVerb.exe doppelklicken.
+1.  Navigieren Sie über die Eingabeaufforderung oder den Explorer zu dem Verzeichnis, das die neue ausführbare Windows enthält.
+2.  Geben Sie in der Befehlszeile `DropTargetVerb.exe` ein. Doppelklicken Sie alternativ Windows Explorer auf das Symbol für DropTargetVerb.exe.
 3.  Befolgen Sie die Anweisungen im angezeigten Dialogfeld.
 
  

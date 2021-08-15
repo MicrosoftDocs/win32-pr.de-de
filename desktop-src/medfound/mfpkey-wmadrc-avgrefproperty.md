@@ -1,33 +1,33 @@
 ---
-description: Gibt die durchschnittliche Volumeebene von Audioinhalten an.
+description: Gibt die durchschnittliche Lautstärke des Audioinhalts an.
 ms.assetid: eabb36ff-300f-4ed1-aca3-9415627ac1a7
-title: MFPKEY_WMADRC_AVGREF-Eigenschaft (wmcodecdsp. h)
+title: MFPKEY_WMADRC_AVGREF-Eigenschaft (Wmcodecdsp.h)
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: cf18c37b00f84cc3ae3fdf1f44b2fbefcc56d9f8
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: cf7d3575b81ca878c610aed95ca25f73fa94c292ec16f9245a72a3a9515198c7
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106354572"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118973239"
 ---
-# <a name="mfpkey_wmadrc_avgref-property"></a>Eigenschaft "mfpkey \_ wmadrc \_ avgref"
+# <a name="mfpkey_wmadrc_avgref-property"></a>MFPKEY \_ WMADRC \_ AVGREF-Eigenschaft
 
-Gibt die durchschnittliche Volumeebene von Audioinhalten an.
+Gibt die durchschnittliche Lautstärke des Audioinhalts an.
 
 ## <a name="constant-for-ipropertybag"></a>Konstante für IPropertyBag
 
-g \_ wszwmadrcaveragereferenzierung
+g \_ wszWMADRCAverageReference
 
 ## <a name="data-type"></a>Datentyp
 
 VT \_ I4
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Sie können diesen Wert aus dem Encoder nach der Verarbeitung des Inhalts erhalten. Dieser Wert kann auch für den Decoder für das dynamische Bereichs Steuerelement festgelegt werden, aber er wirkt sich nur dann aus, wenn die Eigenschaft " [mfpkey \_ wmadec \_ drcmode](mfpkey-wmadec-drcmodeproperty.md) " festgelegt ist.
+Sie können diesen Wert vom Encoder abrufen, nachdem der Inhalt verarbeitet wurde. Dieser Wert kann auch für den Decoder für die Steuerung des dynamischen Bereichs festgelegt werden. Er hat jedoch nur dann Auswirkungen, wenn die [MFPKEY \_ W CSVC \_ DRCMODE-Eigenschaft](mfpkey-wmadec-drcmodeproperty.md) festgelegt ist.
 
-Weitere Informationen zum dynamischen Bereichs Steuerelement finden Sie im Webartikel [Windows Media Audio Professional-Codec-Features](/previous-versions/ms867218(v=msdn.10)).
+Weitere Informationen zum Dynamischen Bereichssteuerelement finden Sie im Webartikel [Windows Media Audio Professional Codec Features](/previous-versions/ms867218(v=msdn.10)).
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -35,17 +35,17 @@ Weitere Informationen zum dynamischen Bereichs Steuerelement finden Sie im Webar
 
 | Anforderung | Wert |
 |-------------------------------------|-----------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows XP \[ -Desktop-Apps\]<br/>                                             |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2003 \[ -Desktop-Apps\]<br/>                                    |
-| Header<br/>                   | <dl> <dt>Wmcodecdsp. h</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows \[Nur XP-Desktop-Apps\]<br/>                                             |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2003-Desktop-Apps\]<br/>                                    |
+| Header<br/>                   | <dl> <dt>Wmcodecdsp.h</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[Eigenschaften von Media Foundation](media-foundation-properties.md)
+[Media Foundation-Eigenschaften](media-foundation-properties.md)
 </dt> </dl>
 
  

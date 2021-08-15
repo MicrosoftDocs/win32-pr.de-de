@@ -1,6 +1,6 @@
 ---
-description: 'Weitere Informationen finden Sie unter: JET_INDEXRANGE Struktur'
-title: JET_INDEXRANGE Struktur
+description: 'Weitere Informationen zu: JET_INDEXRANGE-Struktur'
+title: JET_INDEXRANGE-Struktur
 TOCTitle: JET_INDEXRANGE Structure
 ms:assetid: 8e437f7d-1e21-4a0b-a5a5-1c78235a4f80
 ms:mtpsurl: https://msdn.microsoft.com/library/Gg269335(v=EXCHG.10)
@@ -22,14 +22,14 @@ ms.contentlocale: de-DE
 ms.lasthandoff: 08/11/2021
 ms.locfileid: "118485598"
 ---
-# <a name="jet_indexrange-structure"></a>JET_INDEXRANGE Struktur
+# <a name="jet_indexrange-structure"></a>JET_INDEXRANGE-Struktur
 
 
 _**Gilt für:** Windows | Windows Server_
 
-## <a name="jet_indexrange-structure"></a>JET_INDEXRANGE Struktur
+## <a name="jet_indexrange-structure"></a>JET_INDEXRANGE-Struktur
 
-Die **JET_INDEXRANGE** identifiziert einen Indexbereich, wenn er mit der [JetIntersectIndexes-Funktion verwendet](./jetintersectindexes-function.md) wird.
+Die **JET_INDEXRANGE-Struktur** identifiziert einen Indexbereich, wenn er mit der [JetIntersectIndexes-Funktion](./jetintersectindexes-function.md) verwendet wird.
 
 ```cpp
     typedef struct {
@@ -43,15 +43,15 @@ Die **JET_INDEXRANGE** identifiziert einen Indexbereich, wenn er mit der [JetInt
 
 **cbStruct**
 
-Die Größe des -JET_INDEXRANGE **.**
+Die Größe des **JET_INDEXRANGE** in Bytes.
 
 **tableid**
 
-Ein Cursor, für den zuvor ein Indexbereich mit [JetSetIndexRange festgelegt wurde.](./jetsetindexrange-function.md)
+Ein Cursor, für den zuvor ein Indexbereich mit [JetSetIndexRange](./jetsetindexrange-function.md)festgelegt wurde.
 
 **grbit**
 
-Eine Bitmaske, die aus genau einer der folgenden Punkte besteht.
+Eine Bitmaske, die aus genau einer der folgenden Besteht.
 
 <table>
 <colgroup>
@@ -79,7 +79,7 @@ Eine Bitmaske, die aus genau einer der folgenden Punkte besteht.
 
 ### <a name="remarks"></a>Hinweise
 
-Jede **JET_INDEXRANGE,** die an [JetIntersectIndexes](./jetintersectindexes-function.md) übergeben wird, stellt einen Indexbereich dar, der durch den API-Aufruf schneidet. Für den **Cursor,** der in JET_INDEXRANGE angegeben wird, muss bereits ein gültiger Indexbereich festgelegt sein, mit einem erfolgreichen Aufruf von [JetSetIndexRange.](./jetsetindexrange-function.md)
+Jede **JET_INDEXRANGE** Struktur, die an [JetIntersectIndexes](./jetintersectindexes-function.md) übergeben wird, stellt einen Indexbereich dar, der durch den API-Aufruf überschneidet wird. Für den Cursor, der in **JET_INDEXRANGE** angegeben wird, muss bereits ein gültiger Indexbereich mit einem erfolgreichen Aufruf von [JetSetIndexRange](./jetsetindexrange-function.md)festgelegt sein.
 
 ### <a name="requirements"></a>Anforderungen
 
@@ -99,7 +99,7 @@ Jede **JET_INDEXRANGE,** die an [JetIntersectIndexes](./jetintersectindexes-func
 </tr>
 <tr class="odd">
 <td><p><strong>Header</strong></p></td>
-<td><p>In Esent.h deklariert.</p></td>
+<td><p>Deklariert in Esent.h.</p></td>
 </tr>
 </tbody>
 </table>

@@ -4,7 +4,7 @@ description: Übertragungen von ASF-Daten
 ms.assetid: 1b04f361-8147-4f6a-8c9d-d8eeed28550a
 keywords:
 - Windows Medienformat-SDK, Übertragen von ASF-Daten
-- Advanced Systems Format (ASF), Broadcasting Data
+- Advanced Systems Format (ASF), Übertragen von Daten
 - ASF (Advanced Systems Format), Broadcasting data
 - Windows Medienformat-SDK, Senden von ASF-Daten
 - Advanced Systems Format (ASF), Senden von Daten
@@ -22,7 +22,7 @@ ms.locfileid: "118434464"
 
 In diesem Thema wird beschrieben, wie ASF-Daten über ein Netzwerk mithilfe des HTTP-Protokolls gesendet werden. Das Senden von Dateien über ein Netzwerk erfordert die Verwendung des Writer-Objekts. Daher sollten Sie dieses Objekt vor dem Lesen dieses Themas allgemein verstehen. Weitere Informationen finden Sie unter [Schreiben von ASF-Dateien.](writing-asf-files.md)
 
-Wenn Sie mit nicht komprimierten Daten beginnen, gehen Sie wie folgt vor:
+Wenn Sie mit unkomprimierten Daten beginnen, gehen Sie wie folgt vor:
 
 1.  Erstellen Sie das Writer-Objekt, indem Sie die [**WMCreateWriter-Funktion**](/previous-versions/windows/desktop/api/Wmsdkidl/nf-wmsdkidl-wmcreatewriter) aufrufen. Diese Funktion gibt einen **IWMWriter-Zeiger** zurück.
     ```C++
@@ -61,7 +61,7 @@ Wenn Sie mit nicht komprimierten Daten beginnen, gehen Sie wie folgt vor:
     
 
 5.  Legen Sie das ASF-Profil fest, indem Sie die [**IWMWriter::SetProfile-Methode**](/previous-versions/windows/desktop/api/Wmsdkidl/nf-wmsdkidl-iwmwriter-setprofile) für das Writer-Objekt mit einem [**IWMProfile-Zeiger**](iwmprofile.md) aufrufen. Informationen zum Erstellen eines Profils finden Sie unter [Arbeiten mit Profilen.](working-with-profiles.md)
-6.  Geben Sie optional Metadaten mithilfe der [**IWMHeaderInfo-Schnittstelle**](/previous-versions/windows/desktop/api/wmsdkidl/nn-wmsdkidl-iwmheaderinfo) auf dem Writer an.
+6.  Geben Sie optional Metadaten mithilfe der [**IWMHeaderInfo-Schnittstelle**](/previous-versions/windows/desktop/api/wmsdkidl/nn-wmsdkidl-iwmheaderinfo) für den Writer an.
 7.  Rufen [**Sie IWMWriter::BeginWriting für**](/previous-versions/windows/desktop/api/Wmsdkidl/nf-wmsdkidl-iwmwriter-beginwriting) den Writer auf.
     ```C++
     hr = pWriter->BeginWriting();
@@ -100,8 +100,8 @@ Eine weitere Möglichkeit zum Streamen von ASF-Inhalten über ein Netzwerk ist d
 
     Sie müssen Codecinformationen für jeden Stream abrufen, den Sie unkomprimiert lesen, und sie dem Header vor der Übertragung hinzufügen. Um die Codecinformationen zu erhalten, rufen Sie [**IWMHeaderInfo2::GetCodecInfoCount**](/previous-versions/windows/desktop/api/wmsdkidl/nf-wmsdkidl-iwmheaderinfo2-getcodecinfocount) und [**IWMHeaderInfo2::GetCodecInfo**](/previous-versions/windows/desktop/api/Wmsdkidl/nf-wmsdkidl-iwmheaderinfo2-getcodecinfo) auf, um die Codecs zu aufzählen, die der Datei im Reader zugeordnet sind. Wählen Sie die Codecinformationen aus, die der Streamkonfiguration entspricht. Legen Sie dann die Codecinformationen im Writer fest, indem [**Sie IWMHeaderInfo3::AddCodecInfo**](/previous-versions/windows/desktop/api/Wmsdkidl/nf-wmsdkidl-iwmheaderinfo3-addcodecinfo)aufrufen und die vom Reader erhaltenen Informationen übergeben.
 
-5.  Nachdem Sie das Profil für den Writer festgelegt haben, rufen Sie [**IWMWriter::GetInputCount**](/previous-versions/windows/desktop/api/Wmsdkidl/nf-wmsdkidl-iwmwriter-getinputcount) für den Writer auf, um die Anzahl der Eingaben zu erhalten. Rufen Sie für jede Eingabe [**IWMWriter::SetInputProps mit**](/previous-versions/windows/desktop/api/Wmsdkidl/nf-wmsdkidl-iwmwriter-setinputprops) dem Wert **NULL auf.** Dies gibt dem Writer-Objekt an, dass die Anwendung komprimierte Stichproben liefert, sodass der Writer keine Codecs verwenden muss, um die Daten zu komprimieren. Stellen Sie sicher, dass **Sie SetInputProps aufrufen,** bevor **Sie BeginWriting aufrufen.**
-6.  Kopieren Sie optional die Metadatenattribute vom Reader in den Writer.
+5.  Nachdem Sie das Profil für den Writer festgelegt haben, rufen Sie [**IWMWriter::GetInputCount**](/previous-versions/windows/desktop/api/Wmsdkidl/nf-wmsdkidl-iwmwriter-getinputcount) für den Writer auf, um die Anzahl der Eingaben zu erhalten. Rufen Sie für jede Eingabe [**IWMWriter::SetInputProps mit**](/previous-versions/windows/desktop/api/Wmsdkidl/nf-wmsdkidl-iwmwriter-setinputprops) dem Wert **NULL auf.** Dies gibt dem Writerobjekt an, dass die Anwendung komprimierte Stichproben liefert, sodass der Writer keine Codecs verwenden muss, um die Daten zu komprimieren. Stellen Sie sicher, dass **Sie SetInputProps aufrufen,** bevor **Sie BeginWriting aufrufen.**
+6.  Kopieren Sie optional die Metadatenattribute aus dem Reader in den Writer.
 7.  Da die Beispiele aus dem Reader bereits komprimiert sind, verwenden Sie anstelle der **WriteSample-Methode** die [**IWMWriterAdvanced::WriteStreamSample-Methode,**](/previous-versions/windows/desktop/api/Wmsdkidl/nf-wmsdkidl-iwmwriteradvanced-writestreamsample) um die Beispiele zu schreiben. Die **WriteStreamSample-Methode** umgeht die üblichen Komprimierungsvorgänge des Writerobjekts.
 8.  Wenn der Reader das Ende der Datei erreicht, sendet er eine WMT \_ EOF-Benachrichtigung an die Anwendung.
 

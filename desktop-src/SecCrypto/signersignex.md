@@ -1,7 +1,7 @@
 ---
 description: Signiert die angegebene Datei und gibt einen Zeiger auf die signierten Daten zurück.
 ms.assetid: 9921ffae-2299-4bf2-b76d-77f7f6afb663
-title: Signersignetx-Funktion
+title: SignerSignEx-Funktion
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,19 +13,19 @@ api_type:
 - DllExport
 api_location:
 - Mssign32.dll
-ms.openlocfilehash: 9944a09459219ccac74f5fafc9424e9f85a01112
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 0b880cc02053d5a90089cffc721b057c6fce9f34b8be6517c12ef59fef9e0ed4
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "103755561"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118898323"
 ---
-# <a name="signersignex-function"></a>Signersignetx-Funktion
+# <a name="signersignex-function"></a>SignerSignEx-Funktion
 
-Die **signersignetx** -Funktion signiert die angegebene Datei und gibt einen Zeiger auf die signierten Daten zurück.
+Die **SignerSignEx-Funktion** signiert die angegebene Datei und gibt einen Zeiger auf die signierten Daten zurück.
 
 > [!Note]  
-> Diese Funktion verfügt über keine zugeordnete Header Datei oder Import Bibliothek. Um diese Funktion aufzurufen, müssen Sie eine benutzerdefinierte Header Datei erstellen und die [**LoadLibrary**](/windows/win32/api/libloaderapi/nf-libloaderapi-loadlibrarya) -Funktion und die [**GetProcAddress**](/windows/win32/api/libloaderapi/nf-libloaderapi-getprocaddress) -Funktion verwenden, um dynamisch mit Mssign32.dll zu verknüpfen.
+> Dieser Funktion ist keine Headerdatei oder Importbibliothek zugeordnet. Um diese Funktion aufzurufen, müssen Sie eine benutzerdefinierte Headerdatei erstellen und die [**Funktionen LoadLibrary**](/windows/win32/api/libloaderapi/nf-libloaderapi-loadlibrarya) und [**GetProcAddress**](/windows/win32/api/libloaderapi/nf-libloaderapi-getprocaddress) verwenden, um dynamisch eine Verknüpfung mit Mssign32.dll herzustellen.
 
  
 
@@ -52,22 +52,22 @@ HRESULT WINAPI SignerSignEx(
 
 <dl> <dt>
 
-*dwFlags* \[ in\]
+*dwFlags* \[ In\]
 </dt> <dd>
 
 Ändert das Verhalten dieser Funktion.
 
-Wenn es sich bei der zu Signier enden Datei um eine portable ausführbare Datei (PE) handelt, kann diese 0 (null) oder eine Kombination aus einem oder mehreren der folgenden Werte sein. Diese Bezeichner sind in "mssip. h" definiert.
+Wenn es sich bei der zu signierten Datei um eine portierbare ausführbare Datei (Portable Executable, PE) handelt, kann dies 0 (null) oder eine Kombination aus einem oder mehreren der folgenden Werte sein. Diese Bezeichner werden in Mssip.h definiert.
 
 
 
 | Wert                                                                                                                                                                                                                                                                                    | Bedeutung                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            |
 |------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| <span id="SPC_EXC_PE_PAGE_HASHES_FLAG"></span><span id="spc_exc_pe_page_hashes_flag"></span><dl> <dt>**SPC \_ Exkl \_ PE \_ \_ Seitenhashes, \_ Flag**</dt> <dt>0x10</dt> </dl>                    | Ausschließen von Seitenhashes beim Erstellen von SIP-indirekten Daten für die PE-Datei. Dieses Flag hat Vorrang vor dem **Flag "SPC \_ Inc \_ PE \_ \_ Seitenhashes \_** ".<br/> Wenn weder der Befehl " **SPC \_ EXC \_ PE \_ Page \_ Hashes \_** " noch das Flag " **SPC \_ Inc \_ PE \_ Page \_ Hashes \_** Flag Flag" angegeben ist, wird der mit der [**wintrustsetdefaultincludegpgehashes**](/windows/desktop/api/Wintrust/nf-wintrust-wintrustsetdefaultincludepepagehashes) -Funktion festgelegte Wert für diese Einstellung verwendet. Der Standardwert für diese Einstellung besteht darin, Seitenhashes auszuschließen, wenn indirekte SIP-Daten für PE-Dateien erstellt werden.<br/> **Windows Server 2003 und Windows XP:** Dieser Wert wird nicht unterstützt.<br/> |
-| <span id="SPC_INC_PE_IMPORT_ADDR_TABLE_FLAG"></span><span id="spc_inc_pe_import_addr_table_flag"></span><dl> <dt>**SPC \_ Inkl \_ PE \_ Import \_ addr \_ - \_ Tabellenflag**</dt> <dt>0x20</dt> </dl> | Dieser Wert wird nicht unterstützt.<br/>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            |
-| <span id="SPC_INC_PE_DEBUG_INFO_FLAG"></span><span id="spc_inc_pe_debug_info_flag"></span><dl> <dt>**SPC \_ Inc \_ PE \_ - \_ debuginfoflag \_**</dt> <dt>0x40</dt> </dl>                       | Dieser Wert wird nicht unterstützt.<br/>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            |
-| <span id="SPC_INC_PE_RESOURCES_FLAG"></span><span id="spc_inc_pe_resources_flag"></span><dl> <dt>**SPC \_ Inkl \_ PE \_ Resources- \_ Flag**</dt> <dt>0x80</dt> </dl>                           | Dieser Wert wird nicht unterstützt.<br/>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            |
-| <span id="SPC_INC_PE_PAGE_HASHES_FLAG"></span><span id="spc_inc_pe_page_hashes_flag"></span><dl> <dt>**SPC \_ Inkl \_ . \_ \_ Seitenhashes- \_ Flag**</dt> <dt>0x100</dt> </dl>                   | Einschließen von Seitenhashes beim Erstellen von SIP-indirekten Daten für die PE-Datei.<br/> **Windows Server 2003 und Windows XP:** Dieser Wert wird nicht unterstützt.<br/>                                                                                                                                                                                                                                                                                                                                                                                                                                                                    |
+| <span id="SPC_EXC_PE_PAGE_HASHES_FLAG"></span><span id="spc_exc_pe_page_hashes_flag"></span><dl> <dt>**SPC \_ EXC \_ PE \_ PAGE \_ HASHES \_ FLAG**</dt> <dt>0x10</dt> </dl>                    | Schließen Sie Seitenhashes beim Erstellen indirekter SIP-Daten für die PE-Datei aus. Dieses Flag hat Vorrang vor dem **FLAG SPC \_ INC PE \_ PAGE \_ \_ HASHES \_ FLAG.**<br/> Wenn weder das **SPC \_ EXC \_ PE PAGE \_ \_ HASHES \_ FLAG** noch das **SPC INC PE PAGE \_ \_ \_ \_ HASHES FLAG \_ Flag** angegeben ist, wird der mit der [**WintrustSetDefaultIncludePEPageHashes-Funktion**](/windows/desktop/api/Wintrust/nf-wintrust-wintrustsetdefaultincludepepagehashes) festgelegte Wert für diese Einstellung verwendet. Die Standardeinstellung für diese Einstellung ist das Ausschließen von Seitenhashes beim Erstellen indirekter SIP-Daten für PE-Dateien.<br/> **Windows Server 2003 und Windows XP:** Dieser Wert wird nicht unterstützt.<br/> |
+| <span id="SPC_INC_PE_IMPORT_ADDR_TABLE_FLAG"></span><span id="spc_inc_pe_import_addr_table_flag"></span><dl> <dt>**SPC \_ INC \_ PE \_ IMPORT \_ ADDR TABLE \_ \_ FLAG**</dt> <dt>0x20</dt> </dl> | Dieser Wert wird nicht unterstützt.<br/>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            |
+| <span id="SPC_INC_PE_DEBUG_INFO_FLAG"></span><span id="spc_inc_pe_debug_info_flag"></span><dl> <dt>**SPC \_ INC \_ PE DEBUG INFO \_ \_ \_ FLAG**</dt> <dt>0x40</dt> </dl>                       | Dieser Wert wird nicht unterstützt.<br/>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            |
+| <span id="SPC_INC_PE_RESOURCES_FLAG"></span><span id="spc_inc_pe_resources_flag"></span><dl> <dt>**SPC \_ INC \_ PE \_ RESOURCES \_ FLAG**</dt> <dt>0x80</dt> </dl>                           | Dieser Wert wird nicht unterstützt.<br/>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            |
+| <span id="SPC_INC_PE_PAGE_HASHES_FLAG"></span><span id="spc_inc_pe_page_hashes_flag"></span><dl> <dt>**SPC \_ INC \_ PE \_ PAGE \_ HASHES \_ FLAG**</dt> <dt>0x100</dt> </dl>                   | Einschließen von Seitenhashes beim Erstellen indirekter SIP-Daten für die PE-Datei.<br/> **Windows Server 2003 und Windows XP:** Dieser Wert wird nicht unterstützt.<br/>                                                                                                                                                                                                                                                                                                                                                                                                                                                                    |
 
 
 
@@ -75,69 +75,69 @@ Wenn es sich bei der zu Signier enden Datei um eine portable ausführbare Datei 
 
 </dd> <dt>
 
-*psubjetinfo* \[ in\]
+*pSubjectInfo* \[ In\]
 </dt> <dd>
 
-Ein Zeiger auf die [**\_ \_ Info**](signer-subject-info.md) -Struktur des Signatur Gebers, die den Betreff angibt, der signiert werden soll.
+Ein Zeiger auf eine [**SIGNER \_ SUBJECT \_ INFO-Struktur,**](signer-subject-info.md) die das zu signierende Subjekt angibt.
 
 </dd> <dt>
 
-*psignercert* \[ in\]
+*pSignerCert* \[ In\]
 </dt> <dd>
 
-Ein Zeiger auf eine [**Signatur Geber \_**](signer-cert.md) -Zertifikat Struktur, die das Zertifikat angibt, das zum Erstellen der digitalen Signatur verwendet werden soll.
+Ein Zeiger auf eine [**SIGNER \_ CERT-Struktur,**](signer-cert.md) die das Zertifikat angibt, das zum Erstellen der digitalen Signatur verwendet werden soll.
 
 </dd> <dt>
 
-*psignatureinfo* \[ in\]
+*pSignatureInfo* \[ In\]
 </dt> <dd>
 
-Ein Zeiger auf eine [**\_ Signatur \_**](signer-signature-info.md) Informationsstruktur, die Informationen zur digitalen Signatur enthält.
+Ein Zeiger auf eine [**SIGNER \_ SIGNATURE \_ INFO-Struktur,**](signer-signature-info.md) die Informationen über die digitale Signatur enthält.
 
 </dd> <dt>
 
-*pproviderinfo* \[ in, optional\]
+*pProviderInfo* \[ in, optional\]
 </dt> <dd>
 
-Ein Zeiger auf eine Informationsstruktur des [**Signatur Gebers \_ Anbieters \_**](signer-provider-info.md) , die die Informationen zum [*Kryptografiedienstanbieter*](../secgloss/c-gly.md) (CSP) und zum privaten Schlüssel angibt, die zum Erstellen der digitalen Signatur verwendet werden.
+Ein Zeiger auf eine [**SIGNER \_ PROVIDER \_ INFO-Struktur,**](signer-provider-info.md) die die Informationen des [*Kryptografiedienstanbieters (Cryptographic Service Provider,*](../secgloss/c-gly.md) CSP) und des privaten Schlüssels angibt, die zum Erstellen der digitalen Signatur verwendet werden.
 
-Wenn der Wert dieses Parameters **null** ist, muss der Wert des *psignercert* -Parameters ein Zertifikat angeben, das einem CSP zugeordnet ist.
+Wenn der Wert dieses Parameters **NULL** ist, muss der Wert des *pSignerCert-Parameters* ein Zertifikat angeben, das einem CSP zugeordnet ist.
 
 </dd> <dt>
 
-*pwszhttptimestamp* \[ in, optional\]
+*pwszHttpTimeStamp* \[ in, optional\]
 </dt> <dd>
 
-Die URL eines Zeitstempel Servers.
+Die URL eines Zeitstempelservers.
 
 </dd> <dt>
 
-*psrequest* \[ in, optional\]
+*psRequest* \[ in, optional\]
 </dt> <dd>
 
-Ein Zeiger auf ein Array von [**crypt- \_ Attribut**](/windows/desktop/api/Wincrypt/ns-wincrypt-crypt_attribute) Strukturen, die einer Signierungs Anforderung hinzugefügt werden. Dieser Parameter wird ignoriert, wenn der *pwszhttptimestamp* -Parameter keinen gültigen Wert enthält, der nicht **null** ist.
+Ein Zeiger auf ein Array von [**CRYPT \_ ATTRIBUTE-Strukturen,**](/windows/desktop/api/Wincrypt/ns-wincrypt-crypt_attribute) die einer Sign-Anforderung hinzugefügt werden. Dieser Parameter wird ignoriert, wenn der *pwszHttpTimeStamp-Parameter* keinen gültigen Wert enthält, der nicht **NULL** ist.
 
 </dd> <dt>
 
-*psipdata* \[ in, optional\]
+*pSipData* \[ in, optional\]
 </dt> <dd>
 
-Ein 32-Bit-Wert, der als zusätzliche Daten an SIP-Funktionen weitergeleitet wird. Das Format und der Inhalt dieser werden vom SIP-Anbieter definiert.
+Ein 32-Bit-Wert, der als zusätzliche Daten an DIE SIP-Funktionen übergeben wird. Das Format und der Inhalt dieser werden vom SIP-Anbieter definiert.
 
 </dd> <dt>
 
-*ppsignercontext* \[ vorgenommen\]
+*ppSignerContext* \[ out\]
 </dt> <dd>
 
-Die Adresse eines Zeigers auf die [**Signatur Geber- \_ Kontext**](signer-context.md) Struktur, die das signierte [*BLOB*](../secgloss/b-gly.md)enthält. Wenn Sie mit der Verwendung der **Signatur Geber- \_ Kontext** Struktur fertig sind, können Sie die Signatur Geber- **\_ Kontext** Struktur durch Aufrufen der [**signerfreesignercontext**](signerfreesignercontext.md) -Funktion freigeben.
+Die Adresse eines Zeigers auf die [**SIGNER \_ CONTEXT-Struktur,**](signer-context.md) die das signierte [*BLOB*](../secgloss/b-gly.md)enthält. Wenn Sie die **SIGNER \_ CONTEXT-Struktur** nicht mehr verwenden, können Sie die **SIGNER \_ CONTEXT-Struktur** freigeben, indem Sie die [**SignerFreeSignerContext-Funktion**](signerfreesignercontext.md) aufrufen.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Wenn die Funktion erfolgreich ausgeführt wird, gibt die Funktion S \_ OK zurück.
+Wenn die Funktion erfolgreich ist, gibt die Funktion S \_ OK zurück.
 
-Wenn die Funktion fehlschlägt, wird ein **HRESULT** -Wert zurückgegeben, der den Fehler angibt. Eine Liste der allgemeinen Fehlercodes finden Sie unter [Allgemeine HRESULT-Werte](common-hresult-values.md).
+Wenn die Funktion fehlschlägt, wird ein **HRESULT-Wert** zurückgegeben, der den Fehler angibt. Eine Liste der allgemeinen Fehlercodes finden Sie unter [Allgemeine HRESULT-Werte.](common-hresult-values.md)
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -145,20 +145,20 @@ Wenn die Funktion fehlschlägt, wird ein **HRESULT** -Wert zurückgegeben, der d
 
 | Anforderung | Wert |
 |-------------------------------------|-----------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows XP \[ -Desktop-Apps\]<br/>                                             |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2003 \[ -Desktop-Apps\]<br/>                                    |
+| Unterstützte Mindestversion (Client)<br/> | Windows \[Nur XP-Desktop-Apps\]<br/>                                             |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2003-Desktop-Apps\]<br/>                                    |
 | DLL<br/>                      | <dl> <dt>Mssign32.dll</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Signersign**](signersign.md)
+[**SignerSign**](signersign.md)
 </dt> <dt>
 
-[**Signerfresignercontext**](signerfreesignercontext.md)
+[**SignerFreeSignerContext**](signerfreesignercontext.md)
 </dt> </dl>
 
  

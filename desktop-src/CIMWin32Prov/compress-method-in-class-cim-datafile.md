@@ -14,12 +14,12 @@ api_type:
 - COM
 api_location:
 - CIMWin32.dll
-ms.openlocfilehash: 3cc63ed3cafd676a0d865953c52a14e6247d4b70
-ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
+ms.openlocfilehash: 61da18a85935c2c7e7b9ff246347c7a52059f78900b5a7b7b51c76f09780b955
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2021
-ms.locfileid: "108089778"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118420320"
 ---
 # <a name="compress-method-of-the-cim_datafile-class"></a>Compress-Methode der CIM \_ DataFile-Klasse
 
@@ -30,7 +30,7 @@ Die **Compress-Methode** verwendet die NTFS-Komprimierung, um die logische Datei
 
  
 
-In diesem Thema wird Managed Object Format -Syntax (MOF) verwendet. Weitere Informationen zur Verwendung dieser Methode finden Sie unter [Aufrufen einer Methode.](/windows/desktop/WmiSdk/calling-a-method)
+In diesem Thema wird Managed Object Format (MOF)-Syntax verwendet. Weitere Informationen zur Verwendung dieser Methode finden Sie unter [Aufrufen einer Methode.](/windows/desktop/WmiSdk/calling-a-method)
 
 ## <a name="syntax"></a>Syntax
 
@@ -61,7 +61,7 @@ Erfolg.
 **2**
 </dt> <dd>
 
-Der Zugriff wurde verweigert.
+Zugriff verweigert:
 
 </dd> <dt>
 
@@ -96,7 +96,7 @@ Dateisystem, nicht NTFS.
 **12**
 </dt> <dd>
 
-Plattform, nicht Windows.
+Plattform nicht Windows.
 
 </dd> <dt>
 
@@ -142,7 +142,7 @@ Ungültiger Parameter.
 
 </dd> </dl>
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
 Die **Compress-Methode** in [**CIM \_ DataFile**](cim-datafile.md) wird von WMI implementiert.
 
@@ -152,7 +152,7 @@ Diese Dokumentation wird von den CIM-Klassenbeschreibungen abgeleitet, die von D
 
 
 
-| Anforderungen | Wert |
+| Anforderung | Wert |
 |-------------------------------------|-----------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows Vista<br/>                                                                |
 | Unterstützte Mindestversion (Server)<br/> | Windows Server 2008<br/>                                                          |

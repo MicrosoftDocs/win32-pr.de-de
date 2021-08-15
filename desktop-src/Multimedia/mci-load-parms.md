@@ -1,9 +1,9 @@
 ---
-title: MCI_LOAD_PARMS-Struktur (Mmsystem.h)
-description: Die MCI \_ LOAD \_ PARMS-Struktur enthält den Dateinamen, der für den MCI LOAD-Befehl geladen werden \_ soll.
+title: MCI_LOAD_PARMS -Struktur (Mmsystem.h)
+description: Die MCI \_ LOAD \_ PARMS-Struktur enthält den Dateinamen, der für den MCI LOAD-Befehl \_ geladen werden soll.
 ms.assetid: 371d11cc-44db-496b-b51a-66d7b919b794
 keywords:
-- MCI_LOAD_PARMS Struktur Windows Multimedia
+- MCI_LOAD_PARMS-Struktur Windows Multimedia
 topic_type:
 - apiref
 api_name:
@@ -23,7 +23,7 @@ ms.locfileid: "118375005"
 ---
 # <a name="mci_load_parms-structure"></a>MCI \_ LOAD \_ PARMS-Struktur
 
-Die **MCI \_ LOAD \_ PARMS-Struktur** enthält den Dateinamen, der für den [**MCI \_ LOAD-Befehl**](mci-load.md) geladen werden soll.
+Die **MCI \_ LOAD \_ PARMS-Struktur** enthält den Dateinamen, der für den [**MCI LOAD-Befehl \_ geladen werden**](mci-load.md) soll.
 
 ## <a name="syntax"></a>Syntax
 
@@ -44,14 +44,14 @@ typedef struct {
 **dwCallback**
 </dt> <dd>
 
-Das Wort mit niedriger Reihenfolge gibt ein Fensterhandle an, das für das MCI \_ NOTIFY-Flag verwendet wird.
+Das Wort mit niedriger Reihenfolge gibt ein Fensterhand handle an, das für das MCI \_ NOTIFY-Flag verwendet wird.
 
 </dd> <dt>
 
 **lpfilename**
 </dt> <dd>
 
-Name der datei, die geladen werden soll.
+Name der zu ladenden Datei.
 
 </dd> </dl>
 

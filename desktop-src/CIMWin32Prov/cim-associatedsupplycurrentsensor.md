@@ -1,5 +1,5 @@
 ---
-description: Die CIM \_ associatedsupplycurrentsensor-Klasse ordnet eine Stromversorgung einem aktuellen (AMPERAGE) Sensor zu, der die Eingabe Häufigkeit überwacht.
+description: Die CIM AssociatedSupplyCurrentSensor-Klasse ordnet eine Stromversorgung einem aktuellen Sensor (Amperage) zu, der \_ die Eingangsfrequenz überwacht.
 ms.assetid: bed4714f-ecf4-4c53-b231-c8fac673371f
 ms.tgt_platform: multiple
 title: CIM_AssociatedSupplyCurrentSensor-Klasse
@@ -17,23 +17,23 @@ api_type:
 - DllExport
 api_location:
 - CIMWin32.dll
-ms.openlocfilehash: 70a88d87c68b36db5bd44413e3c68940db44f29b
-ms.sourcegitcommit: c7add10d695482e1ceb72d62b8a4ebd84ea050f7
+ms.openlocfilehash: 1b20b519c0ec89243aefd9c87aba235548f11f93984a45702f7670a27bf073cb
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104214231"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119080934"
 ---
-# <a name="cim_associatedsupplycurrentsensor-class"></a>CIM \_ associatedsupplycurrentsensor-Klasse
+# <a name="cim_associatedsupplycurrentsensor-class"></a>CIM \_ AssociatedSupplyCurrentSensor-Klasse
 
-Die **CIM \_ associatedsupplycurrentsensor** -Klasse ordnet eine Stromversorgung einem aktuellen (AMPERAGE) Sensor zu, der die Eingabe Häufigkeit überwacht.
+Die **CIM \_ AssociatedSupplyCurrentSensor-Klasse** ordnet eine Stromversorgung einem aktuellen Sensor (Amperage) zu, der die Eingangsfrequenz überwacht.
 
 > [!IMPORTANT]
-> Die Klassen der DMTF-CIM (Common Information Model) sind die übergeordneten Klassen, auf denen WMI-Klassen erstellt werden. WMI unterstützt zurzeit nur die [CIM 2. x-Versions Schemas](https://dmtf.org/standards/cim/schemas).
+> Die CIM-Klassen (Distributed Management Task Force) (DMTF) (Common Information Model) sind die übergeordneten Klassen, auf denen WMI-Klassen erstellt werden. WMI unterstützt derzeit nur die [CIM 2.x-Versionsschemas.](https://dmtf.org/standards/cim/schemas)
 
  
 
-Die folgende Syntax wird durch MOF-Code (Managed Object Format) vereinfacht und schließt alle geerbten Eigenschaften ein. Eigenschaften werden in alphabetischer Reihenfolge und nicht in der MOF-Reihenfolge aufgelistet.
+Die folgende Syntax wird durch MOF-Code (Managed Object Format) vereinfacht und schließt alle geerbten Eigenschaften ein. Eigenschaften werden in alphabetischer Reihenfolge und nicht in MOF-Reihenfolge aufgeführt.
 
 ## <a name="syntax"></a>Syntax
 
@@ -49,17 +49,17 @@ class CIM_AssociatedSupplyCurrentSensor : CIM_AssociatedSensor
 
 ## <a name="members"></a>Member
 
-Die **CIM \_ associatedsupplycurrentsensor** -Klasse verfügt über diese Typen von Membern:
+Die **CIM \_ AssociatedSupplyCurrentSensor-Klasse** verfügt über die folgenden Membertypen:
 
 -   [Eigenschaften](#properties)
 
 ### <a name="properties"></a>Eigenschaften
 
-Die **CIM \_ associatedsupplycurrentsensor** -Klasse verfügt über diese Eigenschaften.
+Die **CIM \_ AssociatedSupplyCurrentSensor-Klasse** verfügt über diese Eigenschaften.
 
 <dl> <dt>
 
-**Vorgänger**
+**Vorläufer**
 </dt> <dd> <dl> <dt>
 
 Datentyp: **CIM \_ CurrentSensor**
@@ -68,39 +68,39 @@ Datentyp: **CIM \_ CurrentSensor**
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**außer Kraft**](/windows/desktop/WmiSdk/standard-qualifiers) Setzung ("Vorgänger")
+Qualifizierer: [**Override**](/windows/desktop/WmiSdk/standard-qualifiers) ("Antecedent")
 </dt> </dl>
 
-Ein [**CIM \_ CurrentSensor**](cim-currentsensor.md) , der den aktuellen Sensor beschreibt.
+Ein [**CIM \_ CurrentSensor,**](cim-currentsensor.md) der den aktuellen Sensor beschreibt.
 
 </dd> <dt>
 
-**Dependent**
+**Abhängigen**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **CIM- \_ Netzteil**
+Datentyp: **CIM \_ PowerSupply**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**außer Kraft**](/windows/desktop/WmiSdk/standard-qualifiers) Setzung ("abhängig")
+Qualifizierer: [**Überschreiben**](/windows/desktop/WmiSdk/standard-qualifiers) ("Abhängig")
 </dt> </dl>
 
-Ein [**CIM- \_ Netzteil**](cim-powersupply.md) , der die dem aktuellen Sensor zugeordnete Stromversorgung beschreibt.
+Ein [**\_ CIM-PowerSupply-Wert,**](cim-powersupply.md) der die dem aktuellen Sensor zugeordnete Stromversorgung beschreibt.
 
 </dd> <dt>
 
-**Monitoringrange**
+**MonitoringRange**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt16**
+Datentyp: **uint16**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Gibt den Bereich für den Eingabe Frequenzbereich der Stromversorgung an, gemessen nach dem zugeordneten Sensor
+Gibt den Vom zugeordneten Sensor gemessenen Eingangsfrequenzbereich der Stromversorgung an.
 
 <dt>
 
@@ -145,13 +145,13 @@ Bereich 1 und 2
 
 </dd> </dl>
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Die **CIM \_ associatedsupplycurrentsensor** -Klasse wird von [**CIM \_ associatedsensor**](cim-associatedsensor.md)abgeleitet.
+Die **CIM \_ AssociatedSupplyCurrentSensor-Klasse** wird von [**CIM \_ AssociatedSensor abgeleitet.**](cim-associatedsensor.md)
 
-Diese Klasse wird von WMI nicht implementiert.
+WMI implementiert diese Klasse nicht.
 
-Diese Dokumentation wird von den von der DMTF veröffentlichten CIM-Klassen Beschreibungen abgeleitet. Microsoft hat möglicherweise Änderungen an den korrekten geringfügigen Fehlern vorgenommen, den Microsoft SDK-Dokumentations Standards entsprechen oder weitere Informationen bereitstellen.
+Diese Dokumentation wird von den CIM-Klassenbeschreibungen abgeleitet, die von DMTF veröffentlicht wurden. Microsoft hat möglicherweise Änderungen vorgenommen, um kleinere Fehler zu beheben, die Dokumentationsstandards des Microsoft SDK zu erfüllen oder weitere Informationen zur Verfügung zu stellen.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -161,17 +161,17 @@ Diese Dokumentation wird von den von der DMTF veröffentlichten CIM-Klassen Besc
 |-------------------------------------|-----------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows Vista<br/>                                                                |
 | Unterstützte Mindestversion (Server)<br/> | Windows Server 2008<br/>                                                          |
-| Namespace<br/>                | Root \\ CIMV2<br/>                                                                  |
-| MOF<br/>                      | <dl> <dt>Cimwin32. MOF</dt> </dl> |
+| Namespace<br/>                | \\Stamm-CIMV2<br/>                                                                  |
+| MOF<br/>                      | <dl> <dt>CIMWin32.mof</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>CIMWin32.dll</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**CIM \_ associatedsensor**](cim-associatedsensor.md)
+[**CIM \_ AssociatedSensor**](cim-associatedsensor.md)
 </dt> </dl>
 
  

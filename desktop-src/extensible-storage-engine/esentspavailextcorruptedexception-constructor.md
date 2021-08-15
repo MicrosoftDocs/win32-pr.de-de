@@ -1,5 +1,5 @@
 ---
-description: 'Weitere Informationen zu: EsentSPAvailExtCorruptedException-Konstruktor'
+description: 'Weitere Informationen finden Sie unter: EsentSPAvailExtCorruptedException-Konstruktor'
 title: EsentSPAvailExtCorruptedException-Konstruktor
 TOCTitle: 'EsentSPAvailExtCorruptedException constructor '
 ms:assetid: M:Microsoft.Isam.Esent.Interop.EsentSPAvailExtCorruptedException.#ctor

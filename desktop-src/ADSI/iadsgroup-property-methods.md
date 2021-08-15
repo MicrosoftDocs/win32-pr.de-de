@@ -1,10 +1,10 @@
 ---
-title: IADsGroup-Eigenschaften Methoden (IADs. h)
-description: Eigenschaften Methoden der IADsGroup-Schnittstelle.
+title: IADsGroup-Eigenschaftenmethoden (Iads.h)
+description: Eigenschaftsmethoden der IADsGroup-Schnittstelle.
 ms.assetid: a8aa88d4-4695-47bc-bf7f-a17236a5671c
 ms.tgt_platform: multiple
 keywords:
-- IADsGroup-Eigenschaften Methoden ADSI
+- IADsGroup-Eigenschaftenmethoden ADSI
 topic_type:
 - apiref
 api_name:
@@ -18,16 +18,16 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 665cb91a55298012e4e906c2972da5371e3960be
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: f15a55765a10afef10087e7b28d04304ab0cc2668915a6e6ffa71fc770eb54a0
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "106346320"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119082404"
 ---
-# <a name="iadsgroup-property-methods"></a>IADsGroup-Eigenschaften Methoden
+# <a name="iadsgroup-property-methods"></a>IADsGroup-Eigenschaftenmethoden
 
-Mit den Eigenschafts Methoden der [**IADsGroup**](/windows/desktop/api/Iads/nn-iads-iadsgroup) -Schnittstelle werden die folgenden Eigenschaften gelesen und geschrieben. Weitere Informationen finden Sie unter [Interface Property Methods](interface-property-methods.md).
+Die Eigenschaftenmethoden der [**IADsGroup-Schnittstelle**](/windows/desktop/api/Iads/nn-iads-iadsgroup) lesen und schreiben die folgenden Eigenschaften. Weitere Informationen finden Sie unter [Schnittstelleneigenschaftsmethoden.](interface-property-methods.md)
 
 ## <a name="properties"></a>Eigenschaften
 
@@ -43,7 +43,7 @@ Gibt die Textbeschreibung der Gruppenmitgliedschaft an.
 Zugriffstyp: Lesen/Schreiben
 </dt> <dt>
 
-Skript Datentyp: **BSTR**
+Skriptdatentyp: **BSTR**
 </dt> <dt>
 
 
@@ -63,15 +63,15 @@ HRESULT put_Description(
 
  
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
 ### <a name="using-iadsgroup-to-retrieve-descriptions-of-built-in-groups"></a>Verwenden von IADsGroup zum Abrufen von Beschreibungen integrierter Gruppen
 
-In den folgenden Beispielen wird gezeigt, wie Informationen zu Windows-Gruppen Objekten nach Namen abgerufen werden. In einer mehrsprachigen Umgebung sind integrierte Gruppen manchmal durch unterschiedliche lokalisierte Namen bekannt. Dies bedeutet, dass Sie nicht direkt mithilfe von Zeichen folgen Bezeichnerzeichen (z. b. "Winnt://Microsoft/Administrators") abgerufen werden können. In diesem Fall kann der Benutzer an das bekannte SID-Objekt für die Gruppe binden, den lokalisierten Gruppennamen abrufen und ihn für die GetObject-Methode bereitstellen. Weitere Informationen finden Sie unter [Bekannte SIDs](/windows/desktop/SecAuthZ/well-known-sids).
+In den folgenden Beispielen wird gezeigt, wie Sie Informationen zu Windows Nach Namen gruppieren. In einer mehrsprachigen Umgebung sind integrierte Gruppen manchmal durch verschiedene lokalisierte Namen bekannt, was bedeutet, dass sie nicht direkt mithilfe von Zeichenfolgenbezeichnern wie "WinNT://Microsoft/Administrators" abgerufen werden können. In diesem Fall kann der Benutzer eine Bindung an das bekannte SID-Objekt für die Gruppe erstellen, den lokalisierten Gruppennamen abrufen und an die GetObject-Methode angeben. Weitere Informationen finden Sie unter [Bekannte SIDs.](/windows/desktop/SecAuthZ/well-known-sids)
 
 ## <a name="examples"></a>Beispiele
 
-Im folgenden Visual Basic Beispiel wird gezeigt, wie eine Bindung an ein Gruppen Objekt und die Beschreibung der Gruppe angezeigt wird.
+Im folgenden Visual Basic wird veranschaulicht, wie eine Bindung an ein Gruppenobjekt erstellt und die Beschreibung der Gruppe angezeigt wird.
 
 
 ```VB
@@ -90,7 +90,7 @@ Cleanup
 
 
 
-Im folgenden C++-Beispiel wird gezeigt, wie eine Bindung an ein Gruppen Objekt erfolgen und die Beschreibung der Gruppe angezeigt wird.
+Im folgenden C++-Beispiel wird veranschaulicht, wie eine Bindung an ein Gruppenobjekt erstellt und die Beschreibung der Gruppe angezeigt wird.
 
 
 ```C++
@@ -126,23 +126,23 @@ Cleanup:
 |-------------------------------------|-----------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows Vista<br/>                                                                |
 | Unterstützte Mindestversion (Server)<br/> | Windows Server 2008<br/>                                                          |
-| Header<br/>                   | <dl> <dt>IADs. h</dt> </dl>       |
+| Header<br/>                   | <dl> <dt>Iads.h</dt> </dl>       |
 | DLL<br/>                      | <dl> <dt>Activeds.dll</dt> </dl> |
-| IID<br/>                      | IID \_ IADsGroup ist als 27636b00-410f-11CF-B1FF-02608c9e7553 definiert.<br/>            |
+| IID<br/>                      | IID \_ IADsGroup ist als 27636B00-410F-11CF-B1FF-02608C9E7553 definiert.<br/>            |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**IADs**](/windows/desktop/api/Iads/nn-iads-iads)
+[**Iads**](/windows/desktop/api/Iads/nn-iads-iads)
 </dt> <dt>
 
 [**IADsGroup**](/windows/desktop/api/Iads/nn-iads-iadsgroup)
 </dt> <dt>
 
-[Schnittstelleneigenschaften Methoden](interface-property-methods.md)
+[Schnittstelleneigenschaftsmethoden](interface-property-methods.md)
 </dt> </dl>
 
  

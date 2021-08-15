@@ -1,23 +1,23 @@
 ---
-title: Implementieren von Eingabe Pipes auf dem Client
-description: Wenn Sie eine Eingabe Pipe zum Übertragen von Daten vom Client auf den-Server verwenden, müssen Sie eine Pull-Prozedur implementieren.
+title: Implementieren von Eingabepipes auf dem Client
+description: Wenn Sie eine Eingabepipe verwenden, um Daten vom Client auf den Server zu übertragen, müssen Sie eine Pullprozedur implementieren.
 ms.assetid: e941a6be-ca91-42b1-9323-ffc63d521f6c
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 2810caa31c4932294797a5ed502c6f93d8613ea0
-ms.sourcegitcommit: 592c9bbd22ba69802dc353bcb5eb30699f9e9403
+ms.openlocfilehash: f0301fc7324a982db81b6c728131762361cfce185f3d432f238ca2cf8d715546
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "103858382"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118929119"
 ---
-# <a name="implementing-input-pipes-on-the-client"></a>Implementieren von Eingabe Pipes auf dem Client
+# <a name="implementing-input-pipes-on-the-client"></a>Implementieren von Eingabepipes auf dem Client
 
-Wenn Sie eine Eingabe Pipe zum Übertragen von Daten vom Client auf den-Server verwenden, müssen Sie eine Pull-Prozedur implementieren. Die Pull-Prozedur muss die zu übertragenden Daten finden, die Daten in den Puffer einlesen und die Anzahl der zu sendenden Elemente festlegen. Nicht alle Daten müssen sich im Puffer befinden, wenn der Server mit dem Abrufen von Daten an sich selbst beginnt. Mit der Pull-Prozedur kann der Puffer inkrementell aufgefüllt werden.
+Wenn Sie eine Eingabepipe verwenden, um Daten vom Client auf den Server zu übertragen, müssen Sie eine Pullprozedur implementieren. Die Pullprozedur muss die zu übertragenden Daten finden, die Daten in den Puffer einlesen und die Anzahl der zu sendenden Elemente festlegen. Nicht alle Daten müssen sich im Puffer befinden, wenn der Server beginnt, Daten an sich selbst zu pullen. Die Pullprozedur kann den Puffer inkrementell füllen.
 
-Wenn keine weiteren Daten zum Senden vorhanden sind, legt die Prozedur das letzte Argument auf NULL fest. Wenn alle Daten gesendet werden, sollte die Pull-Prozedur vor der Rückgabe alle benötigten Bereinigungs Vorgänge ausführen. Bei einem Parameter, bei dem es sich um eine \[ in-, out- \] Pipe handelt, muss die Pull-Prozedur die Zustands Variable des Clients zurücksetzen, nachdem alle Daten übertragen wurden, sodass Sie von der Push-Prozedur zum Empfangen von Daten verwendet werden kann.
+Wenn keine daten mehr gesendet werden müssen, legt die Prozedur ihr letztes Argument auf 0 (null) fest. Wenn alle Daten gesendet werden, sollte der Pullvorgang alle erforderlichen Bereinigungen durchführen, bevor zurückgegeben wird. Bei einem Parameter, der ein \[ In-Out-Pipe \] ist, muss die Pullprozedur die Zustandsvariable des Clients zurücksetzen, nachdem alle Daten übertragen wurden, damit die Pushprozedur sie zum Empfangen von Daten verwenden kann.
 
-Das folgende Beispiel wird aus dem pipedemo-Programm extrahiert, das im Platform Software Development Kit (SDK) enthalten ist.
+Das folgende Beispiel wird aus dem Pipedemo-Programm extrahiert, das im Platform Software Development Kit (SDK) enthalten ist.
 
 
 ```C++
@@ -104,28 +104,28 @@ void PipePull( rpc_ss_pipe_state_t stateInfo,
 
 
 
-Dieses Beispiel enthält die Header Datei, die vom-Mittell-Compiler generiert wurde. Weitere Informationen finden Sie [unter Definieren von Pipes in IDL-Dateien](defining-pipes-in-idl-files.md). Außerdem wird eine Variable deklariert, die Sie als Datenquelle namens globalpipedata verwendet. Die Variable globalbuffer ist ein Puffer, den die Pull-Prozedur verwendet, um die Datenblöcke zu senden, die Sie von globalpipedata abruft.
+Dieses Beispiel enthält die vom MIDL-Compiler generierte Headerdatei. Weitere Informationen finden Sie unter [Definieren von Pipes in IDL-Dateien.](defining-pipes-in-idl-files.md) Außerdem wird eine Variable deklariert, die als Datenquelle namens globalPipeData verwendet wird. Die Variable globalBuffer ist ein Puffer, den die Pullprozedur verwendet, um die Datenblöcke zu senden, die sie aus globalPipeData abruft.
 
-Die sendlongs-Funktion deklariert die Eingabe Pipe und ordnet Speicher für die Datenquellen Variable globalpipedata zu. In Ihrem Client/Server-Programm kann es sich bei der Datenquelle um eine Datei oder Struktur handeln, die vom Client erstellt wird. Sie können das Client Programm auch zum Abrufen von Daten vom Server, zum Verarbeiten und zum Zurückgeben des Servers mithilfe einer Eingabe Pipe verwenden. In diesem einfachen Beispiel ist die Datenquelle ein dynamisch zugewiesener Puffer mit langen ganzen Zahlen.
+Die SendLongs-Funktion deklariert die Eingabepipe und belegt Speicher für die Datenquellenvariable globalPipeData. In Ihrem Client-/Serverprogramm kann die Datenquelle eine Datei oder Struktur sein, die der Client erstellt. Sie können das Clientprogramm auch dazu bringen, Daten vom Server abzurufen, zu verarbeiten und mithilfe einer Eingabepipe an den Server zurückzugeben. In diesem einfachen Beispiel ist die Datenquelle ein dynamisch zugeordneter Puffer langer ganzzahliger Zahlen.
 
-Bevor die Übertragung beginnen kann, muss der Client Zeiger auf die Zustands Variable, die Pull-Prozedur und die zuordnungsprozedur festlegen. Diese Zeiger werden in der Pipe-Variablen aufbewahrt, die der Client deklariert. In diesem Fall deklariert sendlongs inpipe. Sie können einen beliebigen entsprechenden Datentyp für die Zustands Variable verwenden.
+Bevor die Übertragung beginnen kann, muss der Client Zeiger auf die Zustandsvariable, die Pullprozedur und die Alloc-Prozedur festlegen. Diese Zeiger werden in der vom Client deklarierten Pipevariablen beibehalten. In diesem Fall deklariert SendLongs inPipe. Sie können einen beliebigen geeigneten Datentyp für Ihre Zustandsvariable verwenden.
 
-Clients initiieren Datenübertragungen über eine Pipe, indem Sie eine Remote Prozedur auf dem Server aufrufen. Durch den Aufruf der Remote Prozedur wird dem Serverprogramm mitgeteilt, dass der Client zur Übertragung bereit ist. Der Server kann die Daten dann in sich selbst abrufen. In diesem Beispiel wird eine Remote Prozedur mit dem Namen inpipe aufgerufen. Nachdem die Daten an den Server übertragen wurden, gibt die sendlongs-Funktion den dynamisch zugewiesenen Puffer frei.
+Clients initiieren Datenübertragungen über eine Pipe, indem sie eine Remoteprozedur auf dem Server aufrufen. Durch Aufrufen der Remoteprozedur wird dem Serverprogramm mitgeteilt, dass der Client für die Übertragung bereit ist. Der Server kann dann die Daten an sich selbst übertragen. In diesem Beispiel wird eine Remoteprozedur namens InPipe aufgerufen. Nachdem die Daten an den Server übertragen wurden, gibt die SendLongs-Funktion den dynamisch zugeordneten Puffer frei.
 
-Anstatt Arbeitsspeicher jedes Mal zuzuweisen, wenn ein Puffer benötigt wird. die "Zuweisung"-Prozedur in diesem Beispiel legt einfach einen Zeiger auf die Variable "globalbuffer" fest. Der Puffer wird von der Pull-Prozedur jedes Mal wieder verwendet, wenn Daten übertragen werden. Komplexere Client Programme müssen möglicherweise jedes Mal einen neuen Puffer zuordnen, wenn der Serverdaten vom Client abruft.
+Anstatt jedes Mal Arbeitsspeicher zu belegen, wenn ein Puffer benötigt wird. Die Alloc-Prozedur in diesem Beispiel legt einfach einen Zeiger auf die Variable globalBuffer fest. Der Pullprozedur verwendet diesen Puffer bei jeder Übertragung von Daten wieder. Komplexere Clientprogramme müssen möglicherweise jedes Mal, wenn der Server Daten vom Client abruft, einen neuen Puffer zuordnen.
 
-Der Clientstub Ruft die Pull-Prozedur auf. Die Pull-Prozedur in diesem Beispiel verwendet die State-Variable, um die nächste Position im globalen Datenquellen Puffer zu verfolgen, aus dem gelesen werden soll. Er liest Daten aus dem Quell Puffer in den Pipepuffer. Der Client-Stub überträgt die Daten an den Server. Wenn alle Daten gesendet wurden, wird die Puffergröße von der Pull-Prozedur auf 0 (null) festgelegt. Dies weist den Server an, das Abrufen von Daten zu verhindern.
+Der Clientstub ruft die Pullprozedur auf. Die Pullprozedur in diesem Beispiel verwendet die Zustandsvariable, um die nächste Position im globalen Datenquellenpuffer nachzuverfolgen, aus der gelesen werden soll. Sie liest Daten aus dem Quellpuffer in den Pipepuffer. Der Clientstub überträgt die Daten an den Server. Wenn alle Daten gesendet wurden, legt die Pullprozedur die Puffergröße auf 0 (null) fest. Dadurch wird der Server angewiesen, das Abrufen von Daten zu beenden.
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
 <dl> <dt>
 
-[Kanal](/windows/desktop/Midl/pipe)
+[Rohr](/windows/desktop/Midl/pipe)
 </dt> <dt>
 
 [**/Oi**](/windows/desktop/Midl/-oi)
 </dt> </dl>
 
- 
+ 
 
- 
+ 

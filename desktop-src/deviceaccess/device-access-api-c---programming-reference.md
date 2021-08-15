@@ -1,6 +1,6 @@
 ---
 title: Gerätezugriffs-API C++-Programmierreferenz
-description: Stellt Referenzseiten für die Funktionen und Schnittstellen in der Gerätezugriffs-API.
+description: Stellt Verweisseiten für die Funktionen und Schnittstellen im Gerätezugriffs-API bereit.
 ms.assetid: 8B2DD325-53D6-4221-A175-88754242D7A3
 ms.topic: article
 ms.date: 02/11/2020
@@ -13,7 +13,7 @@ ms.locfileid: "118541935"
 ---
 # <a name="device-access-api-c-programming-reference"></a>Gerätezugriffs-API C++-Programmierreferenz
 
-Stellt Referenzseiten für die Funktionen und Schnittstellen in der Gerätezugriffs-API.
+Stellt Verweisseiten für die Funktionen und Schnittstellen im Gerätezugriffs-API bereit.
 
 ## <a name="in-this-section"></a>In diesem Abschnitt
 
@@ -24,4 +24,4 @@ Stellt Referenzseiten für die Funktionen und Schnittstellen in der Gerätezugri
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
-[Beispiel für benutzerdefinierten Treiberzugriff,](https://github.com/microsoftarchive/msdn-code-gallery-microsoft/tree/411c271e537727d737a53fa2cbe99eaecac00cc0/Official%20Windows%20Platform%20Sample/Custom%20driver%20access%20sample) [UWP-Geräte-Apps für interne Geräte,](/windows-hardware/drivers/devapps/uwp-device-apps-for-specialized-devices) [Hardware Dev Center](/windows-hardware/drivers/)
+Beispiel für [benutzerdefinierten Treiberzugriff,](https://github.com/microsoftarchive/msdn-code-gallery-microsoft/tree/411c271e537727d737a53fa2cbe99eaecac00cc0/Official%20Windows%20Platform%20Sample/Custom%20driver%20access%20sample) [UWP-Geräte-Apps für interne Geräte](/windows-hardware/drivers/devapps/uwp-device-apps-for-specialized-devices) [Hardware Dev Center](/windows-hardware/drivers/)

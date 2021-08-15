@@ -13,7 +13,7 @@ ms.locfileid: "118391563"
 ---
 # <a name="locale_scountry"></a>LOCALE \_ SCOUNTRY
 
-Veraltet für Windows 7 und höher. Vollständiger lokalisierter Name des Landes/der Region. Siehe [LOCALE \_ SLOCALIZEDCOUNTRYNAME](locale-slocalized-constants.md).
+Veraltet für Windows 7 und höher. Vollständiger lokalisierter Name des Landes bzw. der Region. Siehe [LOCALE \_ SLOCALIZEDCOUNTRYNAME](locale-slocalized-constants.md).
 
  
 

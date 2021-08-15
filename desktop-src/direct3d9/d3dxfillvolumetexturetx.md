@@ -1,5 +1,5 @@
 ---
-description: 'D3DXFillVolumeTextureTX-Funktion: Verwendet eine kompilierte HLSL-Funktion (High-Level Shader Language), um jeden Texel jeder Mipmapebene einer Textur aufzufüllen.'
+description: 'D3DXFillVolumeTextureTX-Funktion: Verwendet eine kompilierte HLSL-Funktion (High-Level Shader Language), um jedes Texel jeder Mipmapebene einer Textur zu füllen.'
 ms.assetid: f082e1d2-c433-482c-9288-58e5c558cdc5
 title: D3DXFillVolumeTextureTX-Funktion (D3dx9tex.h)
 ms.topic: reference
@@ -14,16 +14,16 @@ api_type:
 api_location:
 - d3dx9.lib
 - d3dx9.dll
-ms.openlocfilehash: 30aac53aa6451885bbd4ae2cac63050b01157974
-ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
+ms.openlocfilehash: ead11a9febce994d729eab83a3906c4d6dcd4db6b1193ba49ea1a0e172dc5e6d
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2021
-ms.locfileid: "108107628"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118988490"
 ---
 # <a name="d3dxfillvolumetexturetx-function"></a>D3DXFillVolumeTextureTX-Funktion
 
-Verwendet eine kompilierte HLSL-Funktion (High-Level Shader Language), um jeden Texel jeder Mipmapebene einer Textur zu füllen.
+Verwendet eine kompilierte HLSL-Funktion (High-Level Shader Language), um jedes Texel jeder Mipmapebene einer Textur zu füllen.
 
 ## <a name="syntax"></a>Syntax
 
@@ -63,9 +63,9 @@ Zeiger auf ein [**ID3DXTextureShader-Texturshaderobjekt.**](id3dxtextureshader.m
 
 Typ: **[ **HRESULT**](https://msdn.microsoft.com/library/Bb401631(v=MSDN.10).aspx)**
 
-Wenn die Funktion erfolgreich ist, ist der Rückgabewert D3D \_ OK. Wenn die Funktion fehlschlägt, kann der Rückgabewert einer der folgenden Sein: D3DERR \_ NOTAVAILABLE, D3DERR \_ INVALIDCALL.
+Wenn die Funktion erfolgreich ausgeführt wird, lautet der Rückgabewert D3D \_ OK. Wenn die Funktion fehlschlägt, kann der Rückgabewert einer der folgenden Werte sein: D3DERR \_ NOTAVAILABLE, D3DERR \_ INVALIDCALL.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
 Das Texturziel muss eine HLSL-Funktion sein, die die folgende Semantik enthält:
 
@@ -73,13 +73,13 @@ Das Texturziel muss eine HLSL-Funktion sein, die die folgende Semantik enthält:
 -   Ein Eingabeparameter muss eine PSIZE-Semantik verwenden.
 -   Die Funktion muss einen Parameter zurückgeben, der die COLOR-Semantik verwendet.
 
-Die Eingabeparameter können in beliebiger Reihenfolge angegeben werden. Ein Beispiel finden Sie unter [ **D3DXFillTextureTX.**](d3dxfilltexturetx.md)
+Die Eingabeparameter können in beliebiger Reihenfolge sein. Ein Beispiel finden Sie unter [ **D3DXFillTextureTX.**](d3dxfilltexturetx.md)
 
 ## <a name="requirements"></a>Anforderungen
 
 
 
-| Anforderungen | Wert |
+| Anforderung | Wert |
 |--------------------|---------------------------------------------------------------------------------------|
 | Header<br/>  | <dl> <dt>D3dx9tex.h</dt> </dl> |
 | Bibliothek<br/> | <dl> <dt>D3dx9.lib</dt> </dl>  |

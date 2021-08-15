@@ -1,19 +1,19 @@
 ---
-description: Registrieren des Eigenschaften Blatt Handlers
+description: Registrieren des Eigenschaftenblatthandlers
 ms.assetid: 6621529c-717b-4f36-8d9e-769d6b720b8a
-title: Registrieren des Eigenschaften Blatt Handlers
+title: Registrieren des Eigenschaftenblatthandlers
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: a6a59a03ebd13f5a541674012da7b07045e0a510
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 91f1642c03a068a24b37cd5647bcdef63222ed2dbe5d78832daeea31e8abd67d
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106358575"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119083534"
 ---
-# <a name="registering-your-property-sheet-handler"></a>Registrieren des Eigenschaften Blatt Handlers
+# <a name="registering-your-property-sheet-handler"></a>Registrieren des Eigenschaftenblatthandlers
 
-Damit der Eigenschaften Blatt Handler vom WPD-Namespace erkannt werden kann, müssen Sie ihn ordnungsgemäß in der Windows-Registrierung registrieren. Die Registrierungseinträge für einen WPD-Eigenschaften Blatt Handler ähneln denen für die Shell, aber Sie werden als spezielle Dateitypen registriert. WPD-Eigenschaften Blatt Handler werden gemäß dem Inhaltstyp, den Sie darstellen, registriert. Im folgenden finden Sie eine Beispiel Registrierungs Struktur für einen WPD-Kontextmenü Handler:
+Damit ihr Eigenschaftenblatthandler vom WPD-Namespace erkannt wird, müssen Sie ihn ordnungsgemäß in der Windows-Registrierung registrieren. Die Registrierungseinträge für einen WPD-Eigenschaftenblatthandler ähneln denen für die Shell, werden jedoch als spezielle Dateitypen registriert. WPD-Eigenschaftenblatthandler werden entsprechend dem inhaltstyp registriert, den sie darstellen. Im Folgenden finden Sie eine Beispielregistrierungsstruktur für einen WPD-Kontextmenühandler:
 
 
 ```C++
@@ -27,30 +27,30 @@ HKEY_CLASSES_ROOT
 
 
 
-Im obigen Beispiel wird ein benutzerdefinierter Handler beim WPD-Namespace registriert. Wenn ein Benutzer mit der rechten Maustaste auf eine Bilddatei auf einem Gerät über die Windows-Shell klickt und Eigenschaften auswählt, wird dieser **Eigenschaften** Blatt Handler aufgerufen. Der WPD-Namespace verwendet den WPD- \_ \_ Inhaltstyp, um zu bestimmen, welche Eigenschaften Blatt Handler geladen werden sollen. Wenn der Inhaltstyp keine nützliche Klassifizierung bietet, lädt der Namespace die Eigenschaften Blatt Handler unter dem Registrierungsschlüssel " **wpdpropsheet. Generic** ". In der folgenden Tabelle sind alle Datei Klassen aufgelistet, die für einen Kontextmenü Handler verfügbar sind, und welche Inhaltstypen und Dateierweiterungen Sie darstellen.
+Im obigen Beispiel wird ein benutzerdefinierter Handler beim WPD-Namespace registriert. Wenn ein Benutzer über die Windows Shell mit der rechten Maustaste auf eine Bilddatei auf einem Gerät klickt und **Eigenschaften** auswählt, wird dieser Eigenschaftenblatthandler aufgerufen. Der WPD-Namespace verwendet den WPD \_ CONTENT \_ TYPE, um zu bestimmen, welche Eigenschaftenblatthandler geladen werden sollen. Wenn der Inhaltstyp keine nützliche Klassifizierung bereitstellt, lädt der Namespace die Eigenschaftenblatthandler unter dem **Registrierungsschlüssel WPDPropSheet.Generic.** In der folgenden Tabelle sind alle Dateiklassen aufgeführt, die einem Kontextmenühandler zur Verfügung stehen, und welche Inhaltstypen und Dateierweiterungen sie darstellen.
 
 
 
 | Registrierungsschlüssel                   | WPD-Inhaltstyp                                                                                                               |
 |--------------------------------|--------------------------------------------------------------------------------------------------------------------------------|
-| **Wpdcontextmenu. Device**      | Durch die Registrierung unter diesem Schlüssel wird der Kontextmenü Handler auf Geräteebene aktiviert. (Klicken Sie mit der rechten Maustaste auf ein Gerät.)                   |
-| **Wpdcontextmenu. Storage**     | Wenn Sie unter diesem Schlüssel registrieren, wird der Kontextmenü Handler auf der Speicher Ebene aktiviert. (Klicken Sie mit der rechten Maustaste auf einen Speicher.)                 |
-| **Wpdcontextmenu. Folder**      | Ordner für WPD- \_ \_ Inhaltstyp \_                                                                                                     |
-| **Wpdcontextmenu. Image**       | Bild für WPD- \_ \_ Inhaltstyp \_                                                                                                      |
-| **Wpdcontextmenu. Audiodatei**       | WPD \_ \_ -Inhaltstyp \_ Audiodatei                                                                                                      |
-| **Wpdcontextmenu. Video**       | Video zum WPD- \_ \_ Inhaltstyp \_                                                                                                      |
-| **Wpdcontextmenu. Wiedergabeliste**    | WPD \_ - \_ Inhaltstyp \_ Wiedergabeliste                                                                                                   |
-| **WPDContextMenu.Doc-übergeordneten**    | Dokument für WPD- \_ \_ Inhaltstyp \_                                                                                                   |
-| **Wpdcontextmenu. Contact**     | Kontakt zum WPD- \_ \_ Inhaltstyp \_                                                                                                    |
-| **WPDContextMenu.Email**       | e-Mail zum WPD \_ \_ -Inhaltstyp \_                                                                                                      |
-| **Wpdcontextmenu. Termin** | WPD \_ - \_ Inhaltstyp \_ Termin                                                                                                |
-| **Wpdcontextmenu. Task**        | WPD \_ - \_ Inhaltstyp \_ Aufgabe                                                                                                       |
-| **Wpdcontextmenu. Memo**        | WPD \_ - \_ Inhaltstyp \_ Memo                                                                                                       |
-| **Wpdcontextmenu. imagealbum**  | Bild-Album für WPD- \_ \_ Inhaltstyp \_ \_                                                                                               |
-| **Wpdcontextmenu. Audioalbum**  | Audioalbum für WPD \_ \_ -Inhaltstyp \_ \_                                                                                               |
-| **Wpdcontextmenu. Videoalbum**  | Video zum WPD- \_ \_ Inhaltstyp \_ \_                                                                                               |
-| **Wpdcontextmenu. mixedalbum**  | WPD \_ - \_ Inhaltstyp \_ gemischtes \_ Inhalts \_ Album                                                                                      |
-| **Wpdcontextmenu. Generic**     | WPD \_ - \_ Inhaltstyp \_ nicht angegeben<br/> generische Datei für WPD- \_ \_ Inhaltstyp \_ \_<br/> WPD \_ - \_ Inhaltstyp \_ Programm<br/> |
+| **WPDContextMenu.Device**      | Die Registrierung unter diesem Schlüssel aktiviert den Kontextmenühandler auf Geräteebene. (Klicken Sie mit der rechten Maustaste auf ein Gerät.)                   |
+| **WPDContextMenu. Storage**     | Die Registrierung unter diesem Schlüssel aktiviert den Kontextmenühandler auf Speicherebene. (Klicken Sie mit der rechten Maustaste auf einen Speicher.)                 |
+| **WPDContextMenu.Folder**      | \_ \_ \_ WPD-INHALTSTYPORDNER                                                                                                     |
+| **WPDContextMenu.Image**       | BILD \_ DES WPD-INHALTSTYPS \_ \_                                                                                                      |
+| **WPDContextMenu.Audio**       | \_WPD-INHALTSTYP \_ \_ AUDIO                                                                                                      |
+| **WPDContextMenu.Video**       | VIDEO \_ ZUM WPD-INHALTSTYP \_ \_                                                                                                      |
+| **WPDContextMenu.Playlist**    | \_WIEDERGABELISTE DES WPD-INHALTSTYPS \_ \_                                                                                                   |
+| **WPDContextMenu.Document**    | \_ \_ \_ WPD-INHALTSTYPDOKUMENT                                                                                                   |
+| **WPDContextMenu.Contact**     | \_WPD-INHALTSTYP \_ \_ KONTAKT                                                                                                    |
+| **WPDContextMenu.Email**       | \_WPD-INHALTSTYP \_ \_ E-MAIL                                                                                                      |
+| **WPDContextMenu.Appointment** | WPD \_ CONTENT \_ TYPE \_ APPOINTMENT                                                                                                |
+| **WPDContextMenu.Task**        | \_ \_ WPD-INHALTSTYPTASK \_                                                                                                       |
+| **WPDContextMenu.Memo**        | WPD \_ CONTENT \_ TYPE \_ MEMO                                                                                                       |
+| **WPDContextMenu.ImageDaten**  | WPD \_ CONTENT \_ TYPE \_ IMAGE \_ ALBUM                                                                                               |
+| **WPDContextMenu.AudioDaten**  | WPD \_ CONTENT \_ TYPE \_ AUDIO \_ ALBUM                                                                                               |
+| **WPDContextMenu.VideoDatenträger**  | WPD \_ CONTENT \_ TYPE \_ VIDEO \_ ALBUM                                                                                               |
+| **WPDContextMenu.MixedEinander**  | WPD \_ CONTENT \_ TYPE \_ MIXED \_ CONTENT \_ ALBUM                                                                                      |
+| **WPDContextMenu.Generic**     | \_WPD-INHALTSTYP \_ \_ NICHT ANGEGEBEN<br/> GENERISCHE \_ \_ \_ WPD-INHALTSTYPDATEI \_<br/> \_ \_ WPD-INHALTSTYPPROGRAMM \_<br/> |
 
 
 
