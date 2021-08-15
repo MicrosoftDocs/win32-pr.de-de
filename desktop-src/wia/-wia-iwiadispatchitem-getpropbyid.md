@@ -1,7 +1,7 @@
 ---
-description: Die getpropbyid-Methode des Item-Objekts verwendet die ID einer Item-Eigenschaft, um ihren Wert zurückzugeben.
+description: Die GetPropById-Methode des Item-Objekts verwendet die ID einer Elementeigenschaft, um ihren Wert zurück zu geben.
 ms.assetid: 00f7a91c-fd55-4016-a932-f710045a14b8
-title: Item. getpropbyid-Methode
+title: Item.GetPropById-Methode
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,16 +13,16 @@ api_type:
 - COM
 api_location:
 - Wiascr.dll
-ms.openlocfilehash: 54eb329d51005893b89a9fd28f160ff616e682df
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 5c8d5f68114f74505fce11ca8872370a802e31400159146d7030ec34339c7d19
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106353473"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118208374"
 ---
-# <a name="itemgetpropbyid-method"></a>Item. getpropbyid-Methode
+# <a name="itemgetpropbyid-method"></a>Item.GetPropById-Methode
 
-Die **getpropbyid** -Methode des [**Item**](-wia-item.md) -Objekts verwendet die ID einer Item-Eigenschaft, um ihren Wert zurückzugeben.
+Die **GetPropById-Methode** des [**Item-Objekts**](-wia-item.md) verwendet die ID einer Elementeigenschaft, um ihren Wert zurück zu geben.
 
 ## <a name="syntax"></a>Syntax
 
@@ -42,7 +42,7 @@ retVal = Item.GetPropById(
 *ID* \[ in\]
 </dt> <dd>
 
-Typ: **[wiaitempropertyid](-wia-wiaitempropertyid.md)**
+Typ: **[WiaItemPropertyId](-wia-wiaitempropertyid.md)**
 
 Gibt die ID der Eigenschaft an.
 
@@ -50,15 +50,15 @@ Gibt die ID der Eigenschaft an.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Typ: **Variant**
+Typ: **VARIANT**
 
-Diese Methode gibt den Wert der Eigenschaft zurück, die durch *ID* angegeben wird.
+Diese Methode gibt den Wert der durch id angegebenen *Eigenschaft zurück.*
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Verwenden Sie diese Methode, um den Wert einer Element Eigenschaft aus der ID zu suchen. Eine Liste der Eigenschaften-IDs finden Sie unter [Eigenschaften konstanter Definitionen von WIA](-wia-wia-property-constant-definitions.md). Weitere Informationen zu den Eigenschaften selbst finden Sie unter [WIA Property Konstanten](-wia-wia-property-constants.md).
+Verwenden Sie diese Methode, um den Wert einer Elementeigenschaft aus ihrer ID zu suchen. Eine Liste der Eigenschaften-IDs finden Sie unter [WIA Property Constant Definitions](-wia-wia-property-constant-definitions.md). Informationen zu den Eigenschaften selbst finden Sie unter [WIA-Eigenschaftenkonst constants](-wia-wia-property-constants.md).
 
-Fügen Sie für Microsoft Visual Basic-Anwendungen einen Verweis auf die Typbibliothek "Windows-Abbild Erfassung 1,01" hinzu. Die folgenden Konstanten, die in dieser Datei definiert sind, sind nur für Stamm Elemente (Geräte Elemente) gültig:
+Fügen Sie Visual Basic Microsoft-Anwendungen einen Verweis auf "Windows Image Acquisition 1.01 Type Library" hinzu. Die folgenden Konstanten, die in dieser Datei definiert sind, sind nur für Stammelemente (Geräteelemente) gültig:
 
 ``` syntax
 const FirmwareVersion = 1026
@@ -114,7 +114,7 @@ const TransparecnyAdapterSelect = 3102
 
 ## <a name="examples"></a>Beispiele
 
-Im folgenden Beispiel wird veranschaulicht, wie die **getpropbyid** -Methode verwendet wird, um einen Eigenschafts Wert abzurufen.
+Im folgenden Beispiel wird die Verwendung der **GetPropById-Methode** zum Abrufen eines Eigenschaftswerts veranschaulicht.
 
 
 ```JScript
@@ -150,9 +150,9 @@ Next
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional, Windows XP \[ Desktop-Apps\]<br/>                                        |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2003 \[ -Desktop-Apps\]<br/>                                                          |
-| DLL<br/>                      | <dl> <dt>Wiascr.dll (Version 4,90 oder höher)</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional, nur Windows \[ XP-Desktop-Apps\]<br/>                                        |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2003-Desktop-Apps\]<br/>                                                          |
+| DLL<br/>                      | <dl> <dt>Wiascr.dll (Version 4.90 oder höher)</dt> </dl> |
 
 
 

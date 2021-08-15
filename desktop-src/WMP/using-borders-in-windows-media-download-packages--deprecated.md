@@ -1,14 +1,14 @@
 ---
-title: Verwenden von Rahmen in Windows-Medien Download Paketen (veraltet)
-description: Verwenden von Rahmen in Windows-Medien Download Paketen (veraltet)
+title: Verwenden von Rahmen in Windows Mediendownloadpaketen (veraltet)
+description: Verwenden von Rahmen in Windows Mediendownloadpaketen (veraltet)
 ms.assetid: d3961c5f-8cce-439d-9a13-41be2f45d92c
 keywords:
-- Windows Media-Metadatendateien, Windows-Medien Download Pakete
-- Windows Media Player, Windows Media-Download Pakete
-- Metafiles, Windows Media Download Packages
-- Windows Media, Windows Media Download Packages
-- Rahmen, Informationen
-- Windows Media Download Packages, Rahmen
+- Windows Medienmetadateien Windows Mediendownloadpakete
+- Windows Media Player,Windows Mediendownloadpakete
+- Metafiles,Windows Mediendownloadpakete
+- Windows Medien,Windows Mediendownloadpakete
+- Rahmen,about
+- Windows Mediendownloadpakete,Rahmen
 ms.topic: article
 ms.date: 05/31/2018
 topic_type:
@@ -16,45 +16,45 @@ topic_type:
 api_name: ''
 api_type: ''
 api_location: ''
-ms.openlocfilehash: 87f7d0fec341bb79bfe9b8dd739b63a9ba3a66ee
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: 851edf0d2291d41212cf44829219235426463733ce95a99c3d59187eba490ca4
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "104388398"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117931808"
 ---
-# <a name="using-borders-in-windows-media-download-packages-deprecated"></a>Verwenden von Rahmen in Windows-Medien Download Paketen (veraltet)
+# <a name="using-borders-in-windows-media-download-packages-deprecated"></a>Verwenden von Rahmen in Windows Mediendownloadpaketen (veraltet)
 
-Diese Seite dokumentiert eine Funktion, die in zukünftigen Versionen von Windows Media Player und dem Windows Media Player SDK möglicherweise nicht verfügbar ist.
+Auf dieser Seite wird ein Feature dokumentiert, das in zukünftigen Versionen von Windows Media Player und des Windows Media Player SDK möglicherweise nicht verfügbar ist.
 
-Rahmen ermöglichen es Ihnen, eine angepasste grafische Benutzeroberfläche für Ihren verpackten Inhalt zu erstellen. Der Rahmen kann Elemente enthalten, wie z. b. Bilder, interaktive Steuerelemente und Links zu Websites. Sie können Rahmen in Fällen verwenden, in denen Sie Ihren gepackten Inhalt, z. b. Branding oder Werbung, zusätzlichen Wert hinzufügen möchten. Nachdem Benutzer Ihr Windows Media-Downloadpaket heruntergeladen und geöffnet haben, zeigt Windows Media Player automatisch Ihren benutzerdefinierten Rahmen an, wenn der gepackte Inhalt wiedergegeben wird.
+Mit Rahmen können Sie eine benutzerdefinierte grafische Benutzeroberfläche für Ihre gepackten Inhalte erstellen. Der Rahmen kann Elemente wie Bilder, interaktive Steuerelemente und Links zu Websites enthalten. Sie können Rahmen in Fällen verwenden, in denen Sie Ihren gepackten Inhalten einen zusätzlichen Wert hinzufügen möchten, z. B. für Branding oder Werbung. Nachdem Benutzer Ihr Downloadpaket für Windows Medien heruntergeladen und geöffnet haben, zeigt Windows Media Player automatisch Ihren benutzerdefinierten Rahmen an, wenn der gepackte Inhalt wiedergeknüht wird.
 
-Im Gegensatz zu einem Skin, das es Benutzern ermöglicht, die Benutzeroberfläche von Windows Media Player vollständig zu ersetzen, wird ein Rahmen nur im Fenster " **jetzt** wiedergegeben" des vollmodusplayers angezeigt. Die gleichen Tools und Technologien, die Sie zum Erstellen von Skins verwenden, werden jedoch auch zum Erstellen von Rahmen verwendet. Die folgende Abbildung zeigt einen Rahmen.
+Im Gegensatz zu einer Skin, die es Benutzern ermöglicht, die Windows Media Player-Benutzeroberfläche  vollständig zu ersetzen, wird ein Rahmen nur im Bereich Jetzt wieder verwendet des Vollmodusplayers angezeigt. Die gleichen Tools und Technologien, die Sie zum Erstellen von Skins verwenden, werden jedoch auch zum Erstellen von Rahmen verwendet. Die folgende Abbildung zeigt einen Rahmen.
 
-![ein Rahmen, der in Windows Media Player 10 angezeigt wird.](images/border-v10.png)
+![Ein Rahmen, der inwindows Media Player 10 angezeigt wird](images/border-v10.png)
 
-Es ist wichtig, sich mit den grundlegenden Techniken zum Erstellen einer Skin vertraut zu machen, bevor Sie versuchen, einen Rahmen zu erstellen. Die Rahmen Programmierung erfolgt mithilfe von zwei Programmiersprachen: Extensible Markup Language (XML) und Microsoft JScript. XML wird zum Definieren von Schnittstellen Elementen verwendet, z. b. Schaltflächen, Schieberegler und Textfelder. Sie müssen nicht alle XML-Details verstehen, da Sie keine neuen XML-Code Elemente schreiben müssen. Sie können einfach die von Windows Media Player bereitgestellten verwenden. Obwohl JScript zum Erstellen von Rahmen nicht erforderlich ist, kann es verwendet werden, um zusätzliche Funktionalität bereitzustellen.
+Es ist wichtig, die grundlegenden Techniken zum Erstellen einer Skin zu verstehen, bevor Sie versuchen, einen Rahmen zu erstellen. Die Border-Programmierung erfolgt mithilfe von zwei Programmiersprachen: Extensible Markup Language (XML) und Microsoft JScript. XML wird verwendet, um Schnittstellenelemente wie Schaltflächen, Schieberegler und Textfelder zu definieren. Sie müssen nicht alle Xml-Details verstehen, da Sie keine neuen XML-Codeelemente schreiben müssen. Sie können einfach diejenigen verwenden, die von Windows Media Player. Obwohl JScript zum Erstellen von Rahmen nicht erforderlich ist, können sie verwendet werden, um zusätzliche Funktionen zur Verfügung zu stellen.
 
-Eine komprimierte Rahmen Datei mit der Dateinamenerweiterung. WMZ enthält eine Rahmen Definitionsdatei mit der Dateinamenerweiterung. WMS und alle Bilddateien, die innerhalb des Rahmens verwendet werden.
+Eine komprimierte Rahmendatei mit der Dateinamenerweiterung WMZ enthält eine Rahmendefinitionsdatei mit der Dateierweiterung WMS und alle image-Dateien, die innerhalb des Rahmens verwendet werden.
 
-Wenn Sie einen Rahmen in ein Windows Media Download-Paket einschließen möchten, erstellen Sie einfach einen Rahmen, und verweisen Sie auf diesen Rahmen in einer Windows Media Metadatei-Wiedergabeliste. Die Rahmen Datei wird in Windows Media Player geladen, nachdem der Player die Metadatendatei analysiert und das **Skin** -Element interpretiert hat, das auf den Rahmen verweist. Das **Skin** -Element wird nur für Rahmen verwendet, und das href-Attribut des **Skin** -Elements kann nur auf ein Skin für jedes Paket verweisen.
+Um einen Rahmen in ein Mediendownloadpaket Windows, erstellen Sie einfach einen Rahmen und einen Verweis auf diesen Rahmen in einer Wiedergabeliste Windows Medienmetadatei. Die Rahmendatei wird in Windows Media Player, nachdem der Player die Metadatei analysiert und das **SKIN-Element** interpretiert, das auf den Rahmen verweist. Das **SKIN-Element** wird nur für Rahmen verwendet, und das HREF-Attribut des **SKIN-Elements** kann für jedes Paket nur auf eine Skin verweisen.
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
 <dl> <dt>
 
-[**Rahmen für Windows-Media Player (veraltet)**](borders-for-windows-media-player--deprecated.md)
+[**Rahmen für Windows Media Player (veraltet)**](borders-for-windows-media-player--deprecated.md)
 </dt> <dt>
 
-[**Windows Media-Download Pakete (veraltet)**](windows-media-download-packages--deprecated.md)
+[**Windows Mediendownloadpakete (veraltet)**](windows-media-download-packages--deprecated.md)
 </dt> <dt>
 
 [**Windows Media Player Skins**](windows-media-player-skins.md)
 </dt> </dl>
 
- 
+ 
 
- 
+ 
 
 
 

@@ -1,65 +1,65 @@
 ---
-description: In dieser Tabelle werden die Basis Datentypen aufgelistet, die vom Windows-Runtime unterstützt werden, und es wird der entsprechende Typ in C \# , Visual Basic und C++ angegeben.
+description: In dieser Tabelle sind die Basisdatentypen aufgeführt, die von der Windows Runtime unterstützt werden, und gibt den entsprechenden Typ in \# C, Visual Basic und C++ an.
 ms.assetid: B5735851-EC07-48C1-92B4-CA9F768096F6
-title: Windows-Runtime Basis Datentypen
+title: Windows Laufzeitbasisdatentypen
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 9c9c75d257194d5684d66cdf9b96abebd2b51ac8
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 24b9b7b088c99bf64cceff531882d5331d79e26a1d44ee0e33278ab5db7e606a
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106343301"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117741654"
 ---
-# <a name="windows-runtime-base-data-types"></a>Windows-Runtime Basis Datentypen
+# <a name="windows-runtime-base-data-types"></a>Windows Laufzeitbasisdatentypen
 
-In dieser Tabelle werden die Basis Datentypen aufgelistet, die vom Windows-Runtime unterstützt werden, und es wird der entsprechende Typ in C \# , Visual Basic und C++ angegeben.
+In dieser Tabelle sind die Basisdatentypen aufgeführt, die von der Windows Runtime unterstützt werden, und gibt den entsprechenden Typ in \# C, Visual Basic und C++ an.
 
 
 
 | Datentyp    | JavaScript    | C\#                | VB                 | C++                    |
 |--------------|---------------|--------------------|--------------------|------------------------|
-| **Boolescher Wert**  | **Boolescher Wert**   | **bool**           | **Boolean**        | **bool**               |
-| **Byte**     | **Number**    | **byte**           | **Byte**           | **unsigned char**      |
+| **Boolescher Wert**  | **Boolean**   | **bool**           | **Boolean**        | **bool**               |
+| **Byte**     | **Number**    | **Byte**           | **Byte**           | **unsigned char**      |
 | **Char**     | **String**    | **char**           | **Char**           | **unsigned char**      |
-| **Char16**   | **String**    | **char**           | **Char**           | **WCHAR \_ t**           |
+| **Char16**   | **String**    | **char**           | **Char**           | **wchar \_ t**           |
 | **DateTime** | **Datum**      | **DateTimeOffset** | **DateTimeOffset** | **DateTime**           |
 | **Double**   | **Number**    | **double**         | **Double**         | **double**             |
-| **GUID**     | **String**    | **GUID**           | **GUID**           | **GUID**               |
+| **Guid**     | **String**    | **Guid**           | **Guid**           | **Guid**               |
 | **Int16**    | **Number**    | **short**          | **Short**          | **short**              |
 | **Int32**    | **Number**    | **int**            | **Integer**        | **int**                |
-| **Int64**    | **Number**    | **long**           | **Long**           | **\_\_Int64**          |
-| **Object**   | **Objekt**    | **object**         | **Object**         | **Object^**            |
+| **Int64**    | **Number**    | **long**           | **Long**           | **\_\_int64**          |
+| **Object**   | **Object**    | **object**         | **Object**         | **Object^**            |
 | **Point**    | **Point**     | **Point**          | **Point**          | **Point**              |
 | **Rect**     | **Rect**      | **Rect**           | **Rect**           | **Rect**               |
 | **Single**   | **Number**    | **float**          | **Single**         | **float**              |
 | **Größe**     | **Größe**      | **Größe**           | **Größe**           | **Größe**               |
 | **String**   | **String**    | **string**         | **String**         | **String^**            |
 | **TimeSpan** | **Number**    | **TimeSpan**       | **TimeSpan**       | **TimeSpan**           |
-| **UInt8**    | **Number**    | **byte**           | **Byte**           | **unsigned char**      |
+| **UInt8**    | **Number**    | **Byte**           | **Byte**           | **unsigned char**      |
 | **UInt16**   | **Number**    | **ushort**         | **UShort**         | **unsigned short**     |
 | **UInt32**   | **Number**    | **uint**           | **UInteger**       | **unsigned int**       |
-| **UInt64**   | **Number**    | **ulong**          | **ULong**          | **nicht signiertes \_ \_ Int64** |
-| **URI**      | **URI**       | **URI**            | **URI**            | **URI ^**               |
-| **Blutung**     | **Undefiniert** | **void**           | **Blutung**           | **void**               |
+| **UInt64**   | **Number**    | **ulong**          | **ULong**          | **unsigned \_ \_ int64** |
+| **URI**      | **URI**       | **URI**            | **URI**            | **Uri^**               |
+| **Leere**     | **Undefiniert** | **void**           | **Leere**           | **void**               |
 
 
 
  
 
-In der folgenden Tabelle sind die .NET-Typen angegeben, die den Windows-Runtime-Datentypen entsprechen.
+Die folgende Tabelle gibt die .NET-Typen an, die den Windows Runtime-Datentypen entsprechen.
 
 
 
 | Windows-Runtime | .NET                      |
 |-----------------|---------------------------|
-| **Boolescher Wert**     | **System.Boolean**        |
+| **Boolean**     | **System.Boolean**        |
 | **Byte**        | **System.Byte**           |
 | **Char**        | **System.Char**           |
 | **Char16**      | **System.Char**           |
 | **DateTime**    | **System.DateTimeOffset** |
 | **Double**      | **System.Double**         |
-| **GUID**        | **System.Guid**           |
+| **Guid**        | **System.Guid**           |
 | **Int16**       | **System.Int16**          |
 | **Int32**       | **System.Int32**          |
 | **Int64**       | **System.Int64**          |
@@ -72,7 +72,7 @@ In der folgenden Tabelle sind die .NET-Typen angegeben, die den Windows-Runtime-
 | **UInt32**      | **System.UInt32**         |
 | **UInt64**      | **System.UInt64**         |
 | **URI**         | **System.Uri**            |
-| **Blutung**        | **System.Void**           |
+| **Leere**        | **System.Void**           |
 
 
 

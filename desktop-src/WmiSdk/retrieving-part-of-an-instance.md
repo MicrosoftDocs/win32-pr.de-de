@@ -1,26 +1,26 @@
 ---
-description: Das Abrufen einer partiellen Instanz erfolgt, wenn WMI nur eine Teilmenge der Eigenschaften einer Instanz abruft.
+description: Ein Teilweiser Instanzabruf ist , wenn WMI nur eine Teilmenge der Eigenschaften einer Instanz abruft.
 ms.assetid: 6cc26b26-adc9-4a8a-b51e-9db94eb4295f
 ms.tgt_platform: multiple
 title: Abrufen eines Teils einer WMI-Instanz
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 4d9d547ec2bbb7e3b53e22177cc0c48794dff22a
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 7f8cce9d809e5203b7c00f2b2297403f835d98f37ff86641e297673ee50e579f
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104215337"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118316214"
 ---
 # <a name="retrieving-part-of-a-wmi-instance"></a>Abrufen eines Teils einer WMI-Instanz
 
-Das Abrufen einer partiellen Instanz erfolgt, wenn WMI nur eine Teilmenge der Eigenschaften einer Instanz abruft. WMI könnte z. b. nur die Eigenschaften **Name** und **Schlüssel** abrufen. Die häufigste Verwendung des Abrufs einer partiellen Instanz ist die Verwendung von großen Enumerationen mit mehreren Eigenschaften.
+Ein Teilweiser Instanzabruf ist , wenn WMI nur eine Teilmenge der Eigenschaften einer Instanz abruft. WMI kann z. B. nur die **Eigenschaften Name** und **Schlüssel** abrufen. Die häufigste Verwendung des teilweisen Instanzabrufs ist bei großen Enumerationen mit mehreren Eigenschaften.
 
 ## <a name="retrieving-part-of-a-wmi-instance-using-powershell"></a>Abrufen eines Teils einer WMI-Instanz mithilfe von PowerShell
 
-Sie können eine einzelne Eigenschaft einer Instanz mithilfe von [Get-WMIObject](https://technet.microsoft.com/library/dd315379.aspx); abrufen. die Eigenschaft selbst kann auf verschiedene Arten abgerufen und angezeigt werden. Wie beim Abrufen einer Instanz gibt PowerShell standardmäßig alle Instanzen einer bestimmten Klasse zurück. Sie müssen einen bestimmten Wert angeben, wenn Sie nur eine einzelne Instanz abrufen möchten.
+Sie können eine einzelne Eigenschaft einer Instanz abrufen, indem Sie [Get-WmiObject verwenden.](https://technet.microsoft.com/library/dd315379.aspx) Die Eigenschaft selbst kann auf verschiedene Weise abgerufen und angezeigt werden. Wie beim Abrufen einer Instanz gibt PowerShell standardmäßig alle Instanzen einer bestimmten Klasse zurück. Sie müssen einen bestimmten Wert angeben, wenn Sie nur eine einzelne Instanz abrufen möchten.
 
-Im folgenden Codebeispiel wird die Seriennummer des Volumes für eine Instanz der [**Win32 \_ LogicalDisk**](/windows/desktop/CIMWin32Prov/win32-logicaldisk) -Klasse angezeigt.
+Im folgenden Codebeispiel wird die Seriennummer des Volumes für eine Instanz der [**Win32 \_ LogicalDisk-Klasse**](/windows/desktop/CIMWin32Prov/win32-logicaldisk) angezeigt.
 
 
 ```PowerShell
@@ -38,16 +38,16 @@ $myDisk.DeviceID
 
 
 
-## <a name="retrieving-part-of-a-wmi-instance-using-c-systemmanagement"></a>Abrufen eines Teils einer WMI-Instanz mit c# (System. Management)
+## <a name="retrieving-part-of-a-wmi-instance-using-c-systemmanagement"></a>Abrufen eines Teils einer WMI-Instanz mithilfe von C# (System.Management)
 
-Sie können eine einzelne Eigenschaft einer-Instanz abrufen, indem Sie ein neues [Management Object](/dotnet/api/system.management.managementobject) mithilfe der Details einer bestimmten-Instanz erstellen. Sie können dann implizit eine oder mehrere Eigenschaften der Instanz mit der [GetPropertyValue](/dotnet/api/system.management.managementbaseobject.getpropertyvalue#System_Management_ManagementBaseObject_GetPropertyValue_System_String_) -Methode abrufen.
+Sie können eine einzelne Eigenschaft einer Instanz abrufen, indem Sie ein neues [ManagementObject mithilfe](/dotnet/api/system.management.managementobject) der Details einer bestimmten Instanz erstellen. Sie können dann implizit eine oder mehrere Eigenschaften der -Instanz mit der [GetPropertyValue-Methode](/dotnet/api/system.management.managementbaseobject.getpropertyvalue#System_Management_ManagementBaseObject_GetPropertyValue_System_String_) abrufen.
 
 > [!Note]  
-> **System. Management** war der ursprüngliche .NET-Namespace, der für den Zugriff auf WMI verwendet wurde. die APIs in diesem Namespace sind jedoch in der Regel langsamer und werden relativ zu ihren moderneren **Microsoft. Management. Infrastructure** -Entsprechungen nicht auch skaliert.
+> **System.Management war** der ursprüngliche .NET-Namespace, der für den Zugriff auf WMI verwendet wurde. Die APIs in diesem Namespace sind jedoch im Allgemeinen langsamer und werden im Vergleich zu ihren moderneren **Microsoft.Management.Infrastructure-Entsprechungen** nicht so gut skaliert.
 
  
 
-Im folgenden Codebeispiel wird die Seriennummer des Volumes für eine Instanz der [**Win32 \_ LogicalDisk**](/windows/desktop/CIMWin32Prov/win32-logicaldisk) -Klasse angezeigt.
+Im folgenden Codebeispiel wird die Seriennummer des Volumes für eine Instanz der [**Win32 \_ LogicalDisk-Klasse**](/windows/desktop/CIMWin32Prov/win32-logicaldisk) angezeigt.
 
 
 ```CSharp
@@ -60,11 +60,11 @@ Console.WriteLine(myProperty);
 
 
 
-## <a name="retrieving-part-of-a-wmi-instance-using-vbscript"></a>Abrufen eines Teils einer WMI-Instanz mithilfe von VBScript
+## <a name="retrieving-part-of-a-wmi-instance-using-vbscript"></a>Abrufen eines Teils einer WMI-Instanz mit VBScript
 
-Sie können eine einzelne Eigenschaft einer Instanz mithilfe von [**GetObject**](/windows/desktop/api/WbemCli/nf-wbemcli-iwbemservices-getobject)abrufen.
+Sie können eine einzelne Eigenschaft einer Instanz abrufen, indem Sie [**GetObject verwenden.**](/windows/desktop/api/WbemCli/nf-wbemcli-iwbemservices-getobject)
 
-Im folgenden Codebeispiel wird die Seriennummer des Volumes für eine Instanz der [**Win32 \_ LogicalDisk**](/windows/desktop/CIMWin32Prov/win32-logicaldisk) -Klasse angezeigt.
+Im folgenden Codebeispiel wird die Seriennummer des Volumes für eine Instanz der [**Win32 \_ LogicalDisk-Klasse**](/windows/desktop/CIMWin32Prov/win32-logicaldisk) angezeigt.
 
 
 ```VB
@@ -73,40 +73,40 @@ MsgBox (GetObject("WinMgmts:Win32_LogicalDisk='C:'").VolumeSerialNumber)
 
 
 
-## <a name="retrieving-part-of-a-wmi-instance-using-c"></a>Abrufen eines Teils einer WMI-Instanz mithilfe von C++
+## <a name="retrieving-part-of-a-wmi-instance-using-c"></a>Abrufen eines Teils einer WMI-Instanz mit C++
 
-Das folgende Verfahren wird verwendet, um einen Teil Instanzen Abruf mithilfe von C++ anzufordern.
+Das folgende Verfahren wird verwendet, um einen teilweisen Instanzabruf mithilfe von C++ an fordern.
 
-**So fordern Sie einen Teil Instanzen Abruf mithilfe von C++ an**
+**So fordern Sie einen Teilabruf einer Instanz mit C++ an**
 
-1.  Erstellen Sie ein [**IWbemContext**](/windows/desktop/api/WbemCli/nn-wbemcli-iwbemcontext) -Objekt mit einem Aufrufen von [**cokreateinstance**](/windows/win32/api/combaseapi/nf-combaseapi-cocreateinstance).
+1.  Erstellen Sie [**ein IWbemContext-Objekt**](/windows/desktop/api/WbemCli/nn-wbemcli-iwbemcontext) mit einem Aufruf von [**CoCreateInstance**](/windows/win32/api/combaseapi/nf-combaseapi-cocreateinstance).
 
-    Ein Kontext Objekt ist ein Objekt, das WMI verwendet, um weitere Informationen an einen WMI-Anbieter zu übergeben. In diesem Fall verwenden Sie das [**IWbemContext**](/windows/desktop/api/WbemCli/nn-wbemcli-iwbemcontext) -Objekt, um den Anbieter anzuweisen, einen Teil Instanzen Abruf zu verarbeiten.
+    Ein Kontextobjekt ist ein Objekt, das WMI verwendet, um weitere Informationen an einen WMI-Anbieter zu übergeben. In diesem Fall verwenden Sie das [**IWbemContext-Objekt,**](/windows/desktop/api/WbemCli/nn-wbemcli-iwbemcontext) um den Anbieter anweisen, einen abrufweisen Teil der Instanz zu verarbeiten.
 
-2.  Fügen Sie \_ \_ get \_ Extensions, \_ \_ get \_ Ext \_ Client \_ Request und alle anderen benannten Werte hinzu, die die Eigenschaften beschreiben, die Sie an das [**IWbemContext**](/windows/desktop/api/WbemCli/nn-wbemcli-iwbemcontext) -Objekt abrufen möchten.
+2.  Fügen Sie GET EXTENSIONS, GET EXT CLIENT REQUEST und alle anderen benannten Werte hinzu, die die Eigenschaften beschreiben, die Sie für das \_ \_ \_ \_ \_ \_ \_ \_ [**IWbemContext-Objekt abrufen**](/windows/desktop/api/WbemCli/nn-wbemcli-iwbemcontext) möchten.
 
-    In der folgenden Tabelle sind die unterschiedlichen benannten Werte aufgelistet, die im Abruf Befehl verwendet werden.
+    In der folgenden Tabelle sind die verschiedenen benannten Werte aufgeführt, die in Ihrem Abrufaufruf verwendet werden.
 
     
 
     | Benannter Wert                              | BESCHREIBUNG                                                                                                                                                                                                                                                                 |
     |------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-    | \_\_\_Erweiterungen erhalten<br/>           | **VT \_ Bool** auf **Variant \_ true** festgelegt. Wird verwendet, um zu signalisieren, dass Vorgänge zum Abrufen von Teil Instanzen verwendet werden. Dies ermöglicht eine schnelle, einmalige Überprüfung, ohne das gesamte Kontext Objekt aufzuzählen. Wenn einer der anderen Werte verwendet wird, muss dieser Wert lauten.<br/> |
-    | \_\_\_Ext- \_ Eigenschaften erhalten<br/>      | [**SAFEARRAY**](/windows/win32/api/oaidl/ns-oaidl-safearray) von Zeichen folgen, die die abzurufenden Eigenschaften auflisten. Kann nicht gleichzeitig mit \_ \_ Get ext-Schlüsseln angegeben werden \_ \_ \_ .<br/> Ein Sternchen " \* " ist ein ungültiger Eigenschaftsname für \_ \_ get \_ Ext- \_ Eigenschaften.<br/>                    |
-    | \_\_\_nur ext- \_ Schlüssel \_ erhalten<br/>      | **VT \_ Bool** auf **Variant \_ true** festgelegt. Gibt an, dass nur Schlüssel im zurückgegebenen-Objekt bereitgestellt werden sollen. Kann nicht gleichzeitig mit \_ \_ get \_ ext-Eigenschaften angegeben werden \_ . Stattdessen hat Vorrang vor den Eigenschaften von " \_ \_ get \_ ext" \_ .<br/>                            |
-    | \_\_\_Ext- \_ Client \_ Anforderung anfordern<br/> | **VT \_ Bool** auf **Variant \_ true** festgelegt. Gibt an, dass der Aufrufer der Wert ist, der den Wert in das Kontext Objekt geschrieben hat, und dass er nicht von einem anderen abhängigen Vorgang weitergegeben wurde.<br/>                                                                        |
+    | \_\_ERWEITERUNGEN \_ ERHALTEN<br/>           | **VT \_ BOOL auf** **VARIANT TRUE \_ festgelegt.** Wird verwendet, um zu signalisieren, dass Abrufvorgänge für partielle Instanzen verwendet werden. Dies ermöglicht eine schnelle, einzelne Überprüfung, ohne das gesamte Kontextobjekt aufzählen zu müssen. Wenn einer der anderen Werte verwendet wird, muss dieser sein.<br/> |
+    | \_\_GET \_ EXT PROPERTIES (EXT-EIGENSCHAFTEN \_ ERHALTEN)<br/>      | [**SAFEARRAY von**](/windows/win32/api/oaidl/ns-oaidl-safearray) Zeichenfolgen, die die abzurufenden Eigenschaften auflisten. Kann nicht gleichzeitig mit \_ \_ GET EXT KEYS ONLY \_ angegeben \_ \_ werden.<br/> Ein Sternchen " \* " ist ein ungültiger Eigenschaftenname für \_ \_ GET EXT \_ \_ PROPERTIES.<br/>                    |
+    | \_\_NUR \_ \_ EXT-SCHLÜSSEL \_ ERHALTEN<br/>      | **VT \_ BOOL auf** **VARIANT TRUE \_ festgelegt.** Gibt an, dass nur Schlüssel im zurückgegebenen -Objekt bereitgestellt werden sollen. Kann nicht gleichzeitig mit \_ \_ GET EXT PROPERTIES \_ angegeben \_ werden. Stattdessen hat Vorrang vor \_ \_ GET EXT \_ \_ PROPERTIES.<br/>                            |
+    | \_\_GET \_ EXT \_ CLIENT \_ REQUEST<br/> | **VT \_ BOOL auf** **VARIANT TRUE \_ festgelegt.** Gibt an, dass der Aufrufer der Aufrufer war, der den Wert in das Kontextobjekt geschrieben hat und nicht von einem anderen abhängigen Vorgang übertragen wurde.<br/>                                                                        |
 
     
 
      
 
-3.  Übergeben *Sie das* [**IWbemContext**](/windows/desktop/api/WbemCli/nn-wbemcli-iwbemcontext) -Kontext Objekt an alle Aufrufe von [**IWbemServices:: GetObject**](/windows/desktop/api/WbemCli/nf-wbemcli-iwbemservices-getobject), [**IWbemServices:: GetObjectAsync**](/windows/desktop/api/WbemCli/nf-wbemcli-iwbemservices-getobjectasync), [**IWbemServices:: | ateinstanceenum**](/windows/desktop/api/WbemCli/nf-wbemcli-iwbemservices-createinstanceenum)oder [**IWbemServices::**](/windows/desktop/api/WbemCli/nf-wbemcli-iwbemservices-createinstanceenumasync) "".
+3.  Übergeben Sie das [**IWbemContext-Kontextobjekt**](/windows/desktop/api/WbemCli/nn-wbemcli-iwbemcontext) über den *pCtx-Parameter* an alle Aufrufe von [**IWbemServices::GetObject,**](/windows/desktop/api/WbemCli/nf-wbemcli-iwbemservices-getobject) [**IWbemServices::GetObjectAsync,**](/windows/desktop/api/WbemCli/nf-wbemcli-iwbemservices-getobjectasync) [**IWbemServices::CreateInstanceEnum**](/windows/desktop/api/WbemCli/nf-wbemcli-iwbemservices-createinstanceenum)oder [**IWbemServices::CreateInstanceEnumAsync.**](/windows/desktop/api/WbemCli/nf-wbemcli-iwbemservices-createinstanceenumasync)
 
-    Durch das Übergeben des [**IWbemContext**](/windows/desktop/api/WbemCli/nn-wbemcli-iwbemcontext) -Objekts wird der Anbieter angewiesen, partielle Instanzabruf zuzulassen. Bei einem vollständigen Instanzabruf würden Sie *pctX* auf einen **null** -Wert festlegen. Wenn der Anbieter das Abrufen einer partiellen Instanz nicht unterstützt, erhalten Sie eine Fehlermeldung.
+    Durch Übergeben [**des IWbemContext-Objekts**](/windows/desktop/api/WbemCli/nn-wbemcli-iwbemcontext) wird der Anbieter angewiesen, teilweise Instanzabrufe zu ermöglichen. Bei einem vollständigen Instanzabruf würden Sie *pCtx* auf einen **NULL-Wert** festlegen. Wenn der Anbieter den Abruf von Teilinstanzen nicht unterstützt, erhalten Sie eine Fehlermeldung.
 
-Wenn der Anbieter den partiellen Instanzvorgang nicht einhalten kann, fährt der Anbieter entweder so fort, als ob Sie das Kontext Objekt nicht eingegeben haben, oder gibt andernfalls den **\_ \_ nicht unterstützten \_ WBEM E-Parameter** zurück.
+Wenn der Anbieter dem Teilinstanzvorgang nicht entsprechen kann, geht der Anbieter entweder so vor, als ob Sie das Kontextobjekt nicht eingeben würden, oder gibt **WBEM \_ E \_ UNSUPPORTED \_ PARAMETER zurück.**
 
-Im folgenden Beispiel wird beschrieben, wie Sie einen vollständigen Instanzabruf von [**Win32 \_ LogicalDisk**](/windows/desktop/CIMWin32Prov/win32-logicaldisk)ausführen und dann einen Teil Instanzen Abruf der **Win32 \_ LogicalDisk. Caption** -Eigenschaft ausführen.
+Im folgenden Beispiel wird beschrieben, wie sie einen vollständigen Instanzabruf von [**Win32 \_ LogicalDisk**](/windows/desktop/CIMWin32Prov/win32-logicaldisk)ausführen und dann einen teilinstanzenbasierten Abruf der **Win32 \_ LogicalDisk.Caption-Eigenschaft** ausführen.
 
 
 ```C++
@@ -300,7 +300,7 @@ void main(void)
 
 
 
-Bei der Ausführung werden im vorangehenden Codebeispiel die folgenden Informationen geschrieben. Die erste Objektbeschreibung ist vom Abruf der vollständigen Instanz. Die zweite Objektbeschreibung basiert auf dem Abrufen von Teil Instanzen. Der letzte Abschnitt zeigt, dass Sie einen **null** -Wert erhalten, wenn Sie eine Eigenschaft anfordern, die im ursprünglichen [**GetObject**](/windows/desktop/api/WbemCli/nf-wbemcli-iwbemservices-getobject) -Befehl nicht angefordert wurde.
+Bei der Ausführung schreibt das vorherige Codebeispiel die folgenden Informationen. Die erste Objektbeschreibung wird aus dem vollständigen Instanzabruf erstellt. Die zweite Objektbeschreibung wird aus dem Abruf der partiellen Instanz erstellt. Der letzte Abschnitt zeigt, dass Sie einen **NULL-Wert** erhalten, wenn Sie eine Eigenschaft anfordern, die im ursprünglichen [**GetObject-Aufruf nicht angefordert**](/windows/desktop/api/WbemCli/nf-wbemcli-iwbemservices-getobject) wurde.
 
 ``` syntax
 Successfully connected to namespace
@@ -340,7 +340,7 @@ instance of Win32_LogicalDisk
 };
 ```
 
-Im vorherigen Beispiel wird die folgende Ausgabe generiert.
+Die folgende Ausgabe wird im vorherigen Beispiel generiert.
 
 ``` syntax
 file system variable is null - expected

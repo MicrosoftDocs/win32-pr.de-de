@@ -1,48 +1,48 @@
 ---
-description: Mit diesen Schritten wird die Signatur der signierten Daten überprüft.
+description: Mit diesen Schritten wird die Signatur von signierten Daten überprüft.
 ms.assetid: 18246cc1-d3c4-4426-a342-ce3864cc412e
 title: Überprüfen einer signierten Nachricht
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 1e8f85a5bcde56df7bb41bb92276123bcd26024e
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: de7bfdac1b16351d51197a84c15688b0724340af34681312b9cb9865900b8dfc
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106366165"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117970978"
 ---
 # <a name="verifying-a-signed-message"></a>Überprüfen einer signierten Nachricht
 
-Mit diesen Schritten wird die Signatur der signierten Daten überprüft. In der folgenden Abbildung werden die einzelnen Aufgaben dargestellt, die durchgeführt werden müssen, wie in der nachfolgenden Liste gezeigt.
+Mit diesen Schritten wird die Signatur von signierten Daten überprüft. Die folgende Abbildung zeigt die einzelnen Aufgaben, die ausgeführt werden müssen, wie in der darauf folgenden Liste dargestellt.
 
 ![Überprüfen einer signierten Nachricht](images/verifmsg.png)
 
 **So überprüfen Sie die Signatur einer signierten Nachricht**
 
-1.  Einen Zeiger auf die signierte Nachricht erhalten.
-2.  Öffnen Sie einen [*Zertifikat Speicher*](../secgloss/c-gly.md).
-3.  Verwenden Sie die in der Nachricht enthaltene Signatur Geber-ID, um das Zertifikat des Absenders zu erhalten und ein Handle für seinen [*öffentlichen Schlüssel*](../secgloss/p-gly.md)zu erhalten.
+1.  Abrufen eines Zeigers auf die signierte Nachricht.
+2.  Öffnen Sie einen [*Zertifikatspeicher.*](../secgloss/c-gly.md)
+3.  Verwenden Sie die in der Nachricht enthaltene Signer-ID, um das Zertifikat des Absenders abzurufen und ein Handle für seinen [*öffentlichen Schlüssel*](../secgloss/p-gly.md)abzurufen.
 
-    Als Alternative zu den Schritten 2 und 3 können Sie das in der Nachricht enthaltene Zertifikat verwenden, um den öffentlichen Schlüssel des Signatur Gebers abzurufen.
+    Als Alternative zu den Schritten 2 und 3 können Sie das in der Nachricht enthaltene Zertifikat verwenden, um den öffentlichen Schlüssel des Signierers abzurufen.
 
-4.  Entschlüsseln Sie die digitale Signatur mithilfe des öffentlichen Schlüssels des Signatur Gebers, und erzeugen Sie den ursprünglichen Digest der Daten in der Nachricht.
-5.  Verwenden Sie den in der Nachricht enthaltenen Hash Algorithmus, um einen [*Hashwert*](../secgloss/h-gly.md) für die in der Nachricht enthaltenen Daten zu erhalten, wodurch ein neuer Digest ergibt.
-6.  Vergleichen Sie den Digest, der aus der Nachricht abgerufen wurde, mit dem neuen soeben erstellten Digest.
-7.  Wenn die beiden Digests Stimmen, wird die Signatur überprüft. Dies bedeutet, dass der [*private Schlüssel*](../secgloss/p-gly.md) , der zum Signieren der Daten verwendet wurde, mit dem öffentlichen Schlüssel übereinstimmt, der nur zum Entschlüsseln der Signatur verwendet wurde, und dass die Daten seit der Signierung der Daten nicht geändert wurden.
+4.  Entschlüsseln Sie mithilfe des öffentlichen Schlüssels des Signaturgebers die digitale Signatur, und erzeugen Sie den ursprünglichen Digest der Daten in der Nachricht.
+5.  Verwenden Sie den in der Nachricht enthaltenen Hashalgorithmus, [*und hashen*](../secgloss/h-gly.md) Sie die in der Nachricht enthaltenen Daten, und erhalten Sie einen neuen Digest.
+6.  Vergleichen Sie den aus der Nachricht abgerufenen Digest mit dem soeben erstellten neuen Digest.
+7.  Wenn die beiden Digests übereinstimmen, wird die Signatur überprüft. Dies bedeutet, dass der [*private Schlüssel,*](../secgloss/p-gly.md) der zum Signieren der Daten verwendet wurde, mit dem öffentlichen Schlüssel übereinstimmt, der soeben zum Entschlüsseln der Signatur verwendet wurde, und dass sich die Daten seit dem Signieren der Daten nicht geändert haben.
 
-    Wenn die beiden Digests nicht stimmen, wird die Signatur nicht überprüft, und entweder Stimmen die privaten/öffentlichen Schlüssel nicht ab, oder die Daten wurden seit der Signierung der Daten geändert.
+    Wenn die beiden Digests nicht übereinstimmen, wird die Signatur nicht überprüft, und entweder stimmen die privaten/öffentlichen Schlüssel nicht überein, oder die Daten wurden geändert, seit die Daten signiert wurden, oder beides.
 
-Eine einzelne Funktion ( [**cryptverifymessagesignature**](/windows/desktop/api/Wincrypt/nf-wincrypt-cryptverifymessagesignature)) kann zum Überprüfen einer Signatur verwendet werden, wie im folgenden Verfahren gezeigt.
+Eine einzelne Funktion, [**CryptVerifyMessageSignature,**](/windows/desktop/api/Wincrypt/nf-wincrypt-cryptverifymessagesignature)kann verwendet werden, um eine Signatur zu überprüfen, wie im folgenden Verfahren gezeigt.
 
 **So überprüfen Sie eine signierte Nachricht**
 
-1.  Einen Zeiger auf die signierte Nachricht erhalten.
-2.  Gibt die Größe der signierten Nachricht an.
-3.  Erhalten Sie ein Handle für einen Kryptografieanbieter.
-4.  Initialisieren Sie die " [**crypt \_ Verify \_ Message \_**](/windows/desktop/api/Wincrypt/ns-wincrypt-crypt_verify_message_para) "-Struktur.
-5.  Um die Signatur zu überprüfen, können Sie [**cryptverifymessagesignature**](/windows/desktop/api/Wincrypt/nf-wincrypt-cryptverifymessagesignature) aufrufen.
+1.  Abrufen eines Zeigers auf die signierte Nachricht.
+2.  Abrufen der Größe der signierten Nachricht.
+3.  Abrufen eines Handles für einen Kryptografieanbieter.
+4.  Initialisieren Sie die [**CRYPT \_ VERIFY MESSAGE \_ \_ PARA-Struktur.**](/windows/desktop/api/Wincrypt/ns-wincrypt-crypt_verify_message_para)
+5.  Rufen Sie [**CryptVerifyMessageSignature**](/windows/desktop/api/Wincrypt/nf-wincrypt-cryptverifymessagesignature) auf, um die Signatur zu überprüfen.
 
-Code, der diese Prozedur implementiert, ist im [Beispiel C-Programm: Signieren einer Nachricht und Überprüfen einer Nachrichten Signatur](example-c-program-signing-a-message-and-verifying-a-message-signature.md)enthalten.
+Code, der diese Prozedur implementiert, ist im [C-Beispielprogramm: Signieren einer Nachricht und Überprüfen einer Nachrichtensignatur](example-c-program-signing-a-message-and-verifying-a-message-signature.md)enthalten.
 
  
 

@@ -1,23 +1,23 @@
 ---
-title: Benutzer Zustand des Dienst Hosts
-description: Der Dienst Host ermöglicht einer Anwendung das Zuordnen von Zustandsdaten, deren Gültigkeitsbereich auf Dienst-Host Ebene liegt.
+title: Benutzerstatus des Diensthosts
+description: Der Diensthost ermöglicht einer Anwendung das Zuordnen von Zustandsdaten, die auf Diensthostebene zugeordnet sind.
 ms.assetid: e18c6c0c-3205-4f88-9a9b-2515a7cfc462
 keywords:
-- Benutzerhoststatus-Webdienste für Windows
-- Wwsapi
+- Webdienste für den Benutzerhostzustand für Windows
+- WWSAPI
 - WWS
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 56f43942f7743d28534e0286a45203dc01e0e7b6
-ms.sourcegitcommit: a716ca2a6a22a400f02c6b31699cf4da83ee3619
+ms.openlocfilehash: 04530b74ef1ab0125b31e56751cdd6cec8109711f603c909f3afeb66970f081a
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/04/2020
-ms.locfileid: "106341755"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118192430"
 ---
-# <a name="service-host-user-state"></a>Benutzer Zustand des Dienst Hosts
+# <a name="service-host-user-state"></a>Benutzerstatus des Diensthosts
 
-Der [Dienst Host](service-host.md) ermöglicht einer Anwendung das Zuordnen von Zustandsdaten, deren Gültigkeitsbereich auf Dienst-Host Ebene liegt. Dieser Status wird durch eine WS- [**\_ Dienst \_ Eigenschafts**](/windows/desktop/api/WebServices/ns-webservices-ws_service_property) Struktur angegeben, die an die [**wscreateservicehost**](/windows/desktop/api/WebServices/nf-webservices-wscreateservicehost) -Funktion übergeben wird, wenn die Anwendung einen [Dienst Host](service-host.md)erstellt, wie im folgenden Beispiel veranschaulicht.
+Der [Diensthost](service-host.md) ermöglicht einer Anwendung das Zuordnen von Zustandsdaten, die auf Diensthostebene zugeordnet sind. Dieser Zustand wird durch eine [**WS \_ SERVICE \_ PROPERTY-Struktur**](/windows/desktop/api/WebServices/ns-webservices-ws_service_property) angegeben, die an die [**WsCreateServiceHost-Funktion**](/windows/desktop/api/WebServices/nf-webservices-wscreateservicehost) übergeben wird, wenn die Anwendung einen [Diensthost](service-host.md)erstellt, wie im folgenden Beispiel veranschaulicht.
 
 ``` syntax
 void* quotePtr = (void*) quotes;
@@ -28,7 +28,7 @@ serviceProperties[0].valueSize = sizeof(quotePtr);
 ```
 
 
-Die Zustandsdaten sind für alle Dienst Host Rückrufe und [Dienst Vorgänge](service-operation.md)verfügbar. Rückrufe und Dienst Vorgänge rufen die Informationen ab, indem Sie die [**wsgetoperationcontextproperty**](/windows/desktop/api/WebServices/nf-webservices-wsgetoperationcontextproperty) -Funktion aufrufen und den Kontext, auf den von der [WS- \_ Vorgangs \_ Kontext](ws-operation-context.md) Struktur verwiesen wird, und die Context-Eigenschaft als einen der Werte der [**WS- \_ Vorgangs \_ Kontext \_ Eigenschaft \_ Host \_ User \_ State**](/windows/desktop/api/WebServices/ne-webservices-ws_operation_context_property_id) eunumeration, wie im folgenden Beispiel gezeigt, angeben.
+Die Zustandsdaten sind für alle Diensthostrückrufe und [Dienstvorgänge](service-operation.md)verfügbar. Rückrufe und Dienstvorgänge rufen die Informationen ab, indem sie die [**WsGetOperationContextProperty-Funktion**](/windows/desktop/api/WebServices/nf-webservices-wsgetoperationcontextproperty) aufrufen und den Kontext angeben, auf den von der [WS \_ OPERATION \_ CONTEXT-Struktur](ws-operation-context.md) verwiesen wird, sowie die Kontexteigenschaft als einen der Werte der [**WS \_ OPERATION CONTEXT PROPERTY HOST USER \_ \_ \_ \_ STATE-Eunumeration, \_**](/windows/desktop/api/WebServices/ne-webservices-ws_operation_context_property_id) wie im folgenden Beispiel veranschaulicht.
 
 ``` syntax
 QuoteTable* table = NULL;

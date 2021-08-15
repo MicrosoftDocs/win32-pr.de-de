@@ -1,9 +1,9 @@
 ---
-title: MCI_SPIN Befehl (MMSYSTEM. h)
-description: Der Befehl "MCI \_ Spin" startet das Gerät nach oben oder unten. Videodisk-Geräte erkennen diesen Befehl.
+title: MCI_SPIN Befehl (Mmsystem.h)
+description: Der MCI \_ SPIN-Befehl startet das Hoch- oder Herunterspinnen des Geräts. Videodisc-Geräte erkennen diesen Befehl.
 ms.assetid: 9e491455-d06d-44c6-8aca-6360384ec266
 keywords:
-- MCI_SPIN Befehl Windows-Multimedia
+- MCI_SPIN-Befehl Windows Multimedia
 topic_type:
 - apiref
 api_name:
@@ -14,18 +14,18 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: f0b154d9a2f54248ac6174e71a24d4afe74918d4
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 41457cbd04de7ffc85248912224819f9c7549c8aebd34d60c4a7efcd70bbcada
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104391820"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118374592"
 ---
-# <a name="mci_spin-command"></a>Befehl "MCI- \_ Spin"
+# <a name="mci_spin-command"></a>MCI \_ SPIN-Befehl
 
-Der Befehl "MCI \_ Spin" startet das Gerät nach oben oder unten. Videodisk-Geräte erkennen diesen Befehl.
+Der MCI \_ SPIN-Befehl startet das Hoch- oder Herunterspinnen des Geräts. Videodisc-Geräte erkennen diesen Befehl.
 
-Um diesen Befehl zu senden, wenden Sie die [**mciSendCommand**](/previous-versions//dd757160(v=vs.85)) -Funktion mit den folgenden Parametern an.
+Um diesen Befehl zu senden, rufen Sie die [**mciSendCommand-Funktion**](/previous-versions//dd757160(v=vs.85)) mit den folgenden Parametern auf.
 
 
 ```C++
@@ -43,48 +43,48 @@ MCIERROR mciSendCommand(
 
 <dl> <dt>
 
-<span id="wDeviceID"></span><span id="wdeviceid"></span><span id="WDEVICEID"></span>*WDE viceid*
+<span id="wDeviceID"></span><span id="wdeviceid"></span><span id="WDEVICEID"></span>*wDeviceID*
 </dt> <dd>
 
-Geräte Bezeichner des MCI-Geräts, das die Befehls Meldung empfangen soll.
+Gerätebezeichner des MCI-Geräts, das die Befehlsnachricht empfangen soll.
 
 </dd> <dt>
 
-<span id="dwFlags"></span><span id="dwflags"></span><span id="DWFLAGS"></span>*dwFlags*
+<span id="dwFlags"></span><span id="dwflags"></span><span id="DWFLAGS"></span>*Dwflags*
 </dt> <dd>
 
-MCI- \_ Benachrichtigung oder MCI- \_ Wartezeit. Weitere Informationen zu diesen Flags finden Sie [unter Wait-, notify-und testflags](the-wait-notify-and-test-flags.md).
+MCI \_ NOTIFY oder MCI \_ WAIT. Informationen zu diesen Flags finden Sie unter [Die Warte-, Benachrichtigungs- und Testflags](the-wait-notify-and-test-flags.md).
 
 </dd> <dt>
 
-<span id="lpSpin"></span><span id="lpspin"></span><span id="LPSPIN"></span>*lpspin*
+<span id="lpSpin"></span><span id="lpspin"></span><span id="LPSPIN"></span>*lpSpin*
 </dt> <dd>
 
-Zeiger auf eine [**generische MCI-Struktur von \_ \_ Parametern**](mci-generic-parms.md) . (Geräte mit erweiterten Befehlssätzen können diese Struktur durch eine gerätespezifische Struktur ersetzen.)
+Zeiger auf eine [**MCI \_ GENERIC \_ PARMS-Struktur.**](mci-generic-parms.md) (Geräte mit erweiterten Befehlssätzen ersetzen diese Struktur möglicherweise durch eine gerätespezifische Struktur.)
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt 0 (null) zurück, wenn erfolgreich, andernfalls einen Fehler.
+Gibt 0 (null) zurück, wenn erfolgreich, andernfalls ein Fehler.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Die folgenden zusätzlichen Flags gelten für Videodisk-Geräte:
+Die folgenden zusätzlichen Flags gelten für videodisc-Geräte:
 
 <dl> <dt>
 
-<span id="MCI_VD_SPIN_DOWN"></span><span id="mci_vd_spin_down"></span>MCI- \_ VD- \_ Spin- \_ Down
+<span id="MCI_VD_SPIN_DOWN"></span><span id="mci_vd_spin_down"></span>MCI \_ VD \_ SPIN \_ DOWN
 </dt> <dd>
 
-Beendet das Drehen der CD.
+Beendet das Drehen des Datenträgers.
 
 </dd> <dt>
 
-<span id="MCI_VD_SPIN_UP"></span><span id="mci_vd_spin_up"></span>MCI- \_ VD- \_ \_ Einrichtung
+<span id="MCI_VD_SPIN_UP"></span><span id="mci_vd_spin_up"></span>MCI \_ VD \_ SPIN \_ UP
 </dt> <dd>
 
-Startet das Drehen der CD.
+Startet das Drehen des Datenträgers.
 
 </dd> </dl>
 
@@ -96,15 +96,15 @@ Startet das Drehen der CD.
 |-------------------------------------|-----------------------------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional \[nur Desktop-Apps\]<br/>                                                |
 | Unterstützte Mindestversion (Server)<br/> | Windows 2000 Server \[nur Desktop-Apps\]<br/>                                                      |
-| Header<br/>                   | <dl> <dt>MMSYSTEM. h (Include Windows. h)</dt> </dl> |
+| Header<br/>                   | <dl> <dt>Mmsystem.h (include Windows.h)</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[MCI](mci.md)
+[Mci](mci.md)
 </dt> <dt>
 
 [MCI-Befehle](mci-commands.md)

@@ -1,31 +1,31 @@
 ---
-description: Es gibt mehrere Funktionen, die von einer Anwendung aufgerufen werden müssen, um Features anzufordern.
+description: Es gibt mehrere Funktionen, die eine Anwendung aufrufen muss, um Features an fordern zu können.
 ms.assetid: 5253c6f0-316f-4f24-b0c0-951db8d16745
-title: Anfordern einer Funktion
+title: Anfordern eines Features
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 0e5261aac69ad2dd604a072e4b02e3bcde76a2e7
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 7288804168f6adf936550fee0ac0c542bd68f4d468d6aedd6372071744b9fec8
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "104042496"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117990559"
 ---
-# <a name="requesting-a-feature"></a>Anfordern einer Funktion
+# <a name="requesting-a-feature"></a>Anfordern eines Features
 
-Es gibt mehrere Funktionen, die von einer Anwendung aufgerufen werden müssen, um Features anzufordern. Bevor eine Funktion angefordert wird, muss die Anwendung sicherstellen, dass die Funktion installiert ist. Wenn die Anwendung [**msiusefeature**](/windows/desktop/api/Msi/nf-msi-msiusefeaturea) aufruft, bevor die Anwendung auf eine Funktion zugreift, kann die Anwendung die zurückgegebenen Informationen verwenden, um nutzungsmetriken beizubehalten.
+Es gibt mehrere Funktionen, die eine Anwendung aufrufen muss, um Features an fordern zu können. Vor dem Anfordern eines Features muss die Anwendung sicherstellen, dass das Feature installiert ist. Wenn die Anwendung [**MsiUseFeature aufruft,**](/windows/desktop/api/Msi/nf-msi-msiusefeaturea) bevor die Anwendung auf ein Feature zutritt, kann die Anwendung die zurückgegebenen Informationen verwenden, um Nutzungsmetriken zu verwalten.
 
-**So fordern Sie eine Funktion an**
+**So fordern Sie ein Feature an**
 
-1.  Wenn Sie die Verfügbarkeit eines Features ohne Erhöhung der Verwendungs Anzahl ermitteln möchten, können Sie die [**msienüberfeatures**](/windows/desktop/api/Msi/nf-msi-msienumfeaturesa) -oder [**MsiQueryFeatureState**](/windows/desktop/api/Msi/nf-msi-msiqueryfeaturestatea) -Funktion aufzurufen.
-2.  Geben Sie an, dass die Anwendung eine Funktion verwenden soll, indem Sie die [**msiusefeature**](/windows/desktop/api/Msi/nf-msi-msiusefeaturea) -Funktion aufrufen.
-3.  Bestimmen Sie die Speicherorte durch Aufrufen der [**MsiGetComponentPath**](/windows/desktop/api/Msi/nf-msi-msigetcomponentpatha) -Funktion.
-4.  Konfigurieren Sie die Funktion, indem Sie die Funktion [**msikonfigurirefeature**](/windows/desktop/api/Msi/nf-msi-msiconfigurefeaturea) aufrufen.
-5.  Rufen Sie nutzungsmetriken ab, die Ihre Anwendung verwenden kann, indem Sie die [**msigetfeatureusage**](/windows/desktop/api/Msi/nf-msi-msigetfeatureusagea) -Funktion aufrufen.
+1.  Rufen Sie [**die MsiEnumFeatures-**](/windows/desktop/api/Msi/nf-msi-msienumfeaturesa) oder [**MsiQueryFeatureState-Funktion**](/windows/desktop/api/Msi/nf-msi-msiqueryfeaturestatea) auf, wenn Sie die Verfügbarkeit eines Features bestimmen möchten, ohne die Nutzungsanzahl zu erhöhen.
+2.  Geben Sie die Absicht Ihrer Anwendung an, ein Feature zu verwenden, indem Sie die [**MsiUseFeature-Funktion**](/windows/desktop/api/Msi/nf-msi-msiusefeaturea) aufrufen.
+3.  Ermitteln Sie Dateipfade, indem Sie die [**MsiGetComponentPath-Funktion**](/windows/desktop/api/Msi/nf-msi-msigetcomponentpatha) aufrufen.
+4.  Konfigurieren Sie das Feature, indem Sie die [**MsiConfigureFeature-Funktion**](/windows/desktop/api/Msi/nf-msi-msiconfigurefeaturea) aufrufen.
+5.  Rufen Sie Nutzungsmetriken ab, die Ihre Anwendung verwenden kann, indem Sie die [**MsiGetFeatureUsage-Funktion**](/windows/desktop/api/Msi/nf-msi-msigetfeatureusagea) aufrufen.
 
-Das folgende Diagramm veranschaulicht das Funktions Anforderungsmodell.
+Das folgende Diagramm veranschaulicht das Featureanforderungsmodell.
 
-![Funktions Anforderungsmodell. ](images/over2.png)
+![Featureanforderungsmodell. ](images/over2.png)
 
  
 

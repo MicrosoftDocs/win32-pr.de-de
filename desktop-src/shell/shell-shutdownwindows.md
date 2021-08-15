@@ -1,5 +1,5 @@
 ---
-description: 'Shell.ShutdownWindows-Methode: Zeigt das Dialogfeld Windows herunterfahren an. Dies entspricht dem Klicken auf den Startmenü und dem Auswählen von Herunterfahren.'
+description: 'Shell.ShutdownWindows-Methode: Zeigt das Dialogfeld Herunterfahren Windows an. Dies entspricht dem Klicken auf den Startmenü und dem Auswählen von Herunterfahren.'
 ms.assetid: 6fa8e2e0-a58f-4837-89f5-898cece2d80a
 title: Shell.ShutdownWindows-Methode (Shldisp.h)
 ms.topic: reference
@@ -13,16 +13,16 @@ api_type:
 - COM
 api_location:
 - Shell32.dll
-ms.openlocfilehash: 2a3c0746caccb360f6f7f0156b72a57ed0a2d2b8
-ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
+ms.openlocfilehash: 1e9149e42710541ef82d02ba4d55f1d9519741e078e06c60ab0d47c1209fa19f
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2021
-ms.locfileid: "108083668"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117857729"
 ---
 # <a name="shellshutdownwindows-method"></a>Shell.ShutdownWindows-Methode
 
-Zeigt das Dialogfeld **Windows herunterfahren** an. Dies entspricht dem Klicken auf das **Menü Start** und der Auswahl von **Herunterfahren.**
+Zeigt das Dialogfeld **Herunterfahren Windows** an. Dies entspricht dem Klicken auf das **Menü Start** und dem Auswählen von **Herunterfahren.**
 
 ## <a name="syntax"></a>Syntax
 
@@ -49,7 +49,7 @@ Diese Methode hat keine Parameter.
 
 Im folgenden Beispiel **wird ShutdownWindows** verwendet. Die richtige Verwendung wird für JScript, VBScript und Visual Basic angezeigt.
 
-Jscript:
+JScript:
 
 
 ```JScript
@@ -102,7 +102,7 @@ End Sub
 
 
 
-| Anforderungen | Wert |
+| Anforderung | Wert |
 |-------------------------------------|----------------------------------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional, nur Windows \[ XP-Desktop-Apps\]<br/>                                         |
 | Unterstützte Mindestversion (Server)<br/> | Windows 2000 Server \[nur Desktop-Apps\]<br/>                                                           |

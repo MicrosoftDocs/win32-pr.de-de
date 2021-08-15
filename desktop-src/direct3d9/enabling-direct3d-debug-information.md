@@ -1,23 +1,23 @@
 ---
-description: Versuchen Sie, während des Debuggens Weitere Informationen über Direct3D-Objekte zu erhalten? Der folgende Screenshot zeigt beispielsweise, was Sie in der Regel sehen, wenn Sie eine Direct3D-Schnittstelle im Überwachungs Fenster sehen.
+description: Versuchen Sie, während des Debuggens weitere Informationen zu Direct3D-Objekten zu erhalten? Der folgende Screenshot zeigt beispielsweise, was in der Regel angezeigt wird, wenn Sie sich eine Direct3D-Schnittstelle im Überwachungsfenster ansehen.
 ms.assetid: 365451f8-e93e-4cc4-b688-2e668518c245
 title: Aktivieren von Direct3D-Debuginformationen (Direct3D 9)
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 17bb46cf8658d0417d021faa6bdbefd10822d1dd
-ms.sourcegitcommit: a47bd86f517de76374e4fff33cfeb613eb259a7e
+ms.openlocfilehash: 88851c144c2e651e920d870618f66a38028207bc5503f513f45fb053e16bd2e6
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/06/2021
-ms.locfileid: "104123355"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117730161"
 ---
 # <a name="enabling-direct3d-debug-information-direct3d-9"></a>Aktivieren von Direct3D-Debuginformationen (Direct3D 9)
 
-Versuchen Sie, während des Debuggens Weitere Informationen über Direct3D-Objekte zu erhalten? Der folgende Screenshot zeigt beispielsweise, was Sie in der Regel sehen, wenn Sie eine Direct3D-Schnittstelle im Überwachungs Fenster sehen.
+Versuchen Sie, während des Debuggens weitere Informationen zu Direct3D-Objekten zu erhalten? Der folgende Screenshot zeigt beispielsweise, was in der Regel angezeigt wird, wenn Sie sich eine Direct3D-Schnittstelle im Überwachungsfenster ansehen.
 
-![Screenshot einer Direct3D-Schnittstelle im Fenster "überwachen"](images/d3d-debug-info1.png)
+![Screenshot einer direct3d-Schnittstelle im Überwachungsfenster](images/d3d-debug-info1.png)
 
-Sie können die kerndebugobjekte aktivieren, sodass ein gespiegeltes Objekt, das alle Eigenschaften des-Objekts enthält, im Überwachungs Fenster angezeigt werden kann. Fügen Sie einfach die folgende \# Definition in Ihren Code vor der Datei d3d9. h ein:
+Sie können die Hauptdebuggingobjekte aktivieren, sodass ein gespiegeltes Objekt, das alle Eigenschaften des Objekts enthält, im Überwachungsfenster angezeigt werden kann. Fügen Sie einfach den folgenden \# Define-Code vor der Datei D3D9.h in Ihren Code ein:
 
 
 ```
@@ -26,28 +26,28 @@ Sie können die kerndebugobjekte aktivieren, sodass ein gespiegeltes Objekt, das
 
 
 
-Um Debuginformationen zu aktivieren, \# muss die Definition vor der Datei d3d9. h erstellt werden (jedes Programm, das dxut verwendet, aktiviert automatisch D3D- \_ Debuginformationen, \_ Wenn das Programm für das Debuggen kompiliert wird). Wenn Sie ein SDK-Beispiel ausführen, können Sie dies in "dxstdafx. h" sehen (was sich auf alle C++-Beispiele auswirkt). Sie müssen auch die Debug Direct3D Runtime ausführen (die bei Bedarf über die Systemsteuerung aktiviert werden kann).
+Um Debuginformationen zu aktivieren, muss die \# Definition vor der Datei D3D9.h erstellt werden (jedes Programm, das DXUT verwendet, aktiviert automatisch D3D DEBUG \_ \_ INFO, wenn das Programm für das Debuggen kompiliert wird). Wenn Sie ein SDK-Beispiel ausführen, sehen Sie dies in DXStdAfx.h (was sich auf alle C++-Beispiele auswirkt). Sie müssen auch die Direct3D-Debuglaufzeit ausführen (die bei Bedarf über die Systemsteuerung aktiviert werden kann).
 
-Im folgenden finden Sie ein Beispiel für die Verwendung des [basichlsl](https://msdn.microsoft.com/library/Ee416223(v=VS.85).aspx)-Beispiels.
+Hier ist ein Beispiel mit dem [BasicHLSL-Beispiel](https://msdn.microsoft.com/library/Ee416223(v=VS.85).aspx).
 
-1.  Fügen Sie die \# Definition der Datei "dxstdafx. h" vor Zeile 37 hinzu.
-2.  Erstellen Sie ein debugprojekt.
-3.  Festlegen eines Breakpoints in Zeile 307 in basichlsl. cpp
+1.  Fügen Sie der \# Datei Dxstdafx.h vor Zeile 37 den Define hinzu.
+2.  Erstellen sie ein Debugprojekt.
+3.  Festlegen eines Haltepunkts in Zeile 307 in BasicHLSL.cpp
 4.  Führen Sie den Debugger aus.
 
-Der folgende Screenshot zeigt die Art detaillierter Informationen, die Sie über ein Direct3D-Textur Objekt aus dem Fenster Überwachen erhalten können.
+Der folgende Screenshot zeigt die Art detaillierter Informationen, die Sie über ein Direct3D-Texturobjekt aus dem Überwachungsfenster abrufen können.
 
-![Screenshot eines Direct3D-Textur Objekts im Fenster "überwachen"](images/d3d-debug-info2.png)
+![Screenshot eines direct3d-Texturobjekts im Überwachungsfenster](images/d3d-debug-info2.png)
 
 > [!Note]
 >
-> Die Objekt Eigenschaftsnamen sind sichtbar, und die Werte sind nur dann korrekt, wenn die Debug-Laufzeit aktiviert ist. Bei der Ausführung für die Einzelhandels Laufzeit sind die Werte ungültig.
+> Die Objekteigenschaftennamen sind sichtbar, und die Werte sind nur richtig, wenn die Debuglaufzeit aktiviert ist. Wenn die Ausführung für die Einzelhandelslaufzeit erfolgt, sind die Werte ungültig.
 
  
 
-## <a name="use-the-call-stack-for-extended-debug"></a>Verwenden der aufrufsstapel für erweitertes Debuggen
+## <a name="use-the-call-stack-for-extended-debug"></a>Verwenden der Aufrufliste für erweitertes Debuggen
 
-Wenn Direct3D Debug aktiviert ist, können Sie sich auch bei jeder Erstellung eines Objekts einen Aufruf Stapel ansehen. Dadurch wird die Anwendung sehr langsam, kann jedoch verwendet werden, um nach Ressourcenverlusten zu suchen. Legen Sie den folgenden Registrierungsschlüssel auf 1 fest, um die-aufrufsstapel zu schreiben:
+Wenn Das Direct3D-Debuggen aktiviert ist, können Sie bei jeder Erstellung eines Objekts auch eine Aufrufliste betrachten. Dadurch wird Ihre Anwendung sehr langsam, kann aber verwendet werden, um nach Ressourcenverlusten zu suchen. Legen Sie den folgenden Registrierungsschlüssel auf 1 fest, um die Aufrufliste zu schreiben:
 
 
 ```
@@ -57,7 +57,7 @@ D3D9Debugging\\EnableCreationStack
 
 
 
-Wenn Sie Ihre Anwendung mit aktiviertem Debuggen entwickeln, erhalten Sie Zugriff auf diese zusätzliche Variable:
+Wenn Sie Ihre Anwendung mit aktivierten Debuggen erstellen, erhalten Sie Zugriff auf diese zusätzliche Variable:
 
 
 ```
@@ -66,13 +66,13 @@ Wenn Sie Ihre Anwendung mit aktiviertem Debuggen entwickeln, erhalten Sie Zugrif
 
 
 
-Diese Variable speichert die Aufruf Stapel jedes Mal, wenn ein Objekt erstellt wird. Dadurch wird die Anwendung sehr langsam, kann jedoch zum Debuggen von Ressourcenverlusten verwendet werden.
+Diese Variable speichert die Aufrufliste jedes Mal, wenn ein Objekt erstellt wird. Dadurch wird Ihre Anwendung sehr langsam, kann aber zum Debuggen von Ressourcenverlusten verwendet werden.
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
 <dl> <dt>
 
-[Programmiertipps](programming-tips.md)
+[Programmieren Tipps](programming-tips.md)
 </dt> </dl>
 
  

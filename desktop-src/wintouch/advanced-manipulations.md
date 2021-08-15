@@ -3,19 +3,19 @@ title: Erweiterte Bearbeitungen
 description: Zeigen Sie die Landing Page für erweiterte Bearbeitungen für Anwendungen an. Links zu den Seiten "Übersicht", "Erweiterung", "Rotation" und "Übersetzung" finden Sie hier.
 ms.assetid: 8a1cff27-b2c0-4e72-9f4c-df656059953f
 keywords:
-- Windows Touch,Manipulationen
-- Windows Touch, erweiterte Bearbeitungen
-- Windows Touch, komplexe Manipulationen
+- Windows Toucheingabe, Bearbeitungen
+- Windows Toucheingabe, erweiterte Bearbeitungen
+- Windows Toucheingabe, komplexe Manipulationen
 - Manipulationen, erweitert
 - Manipulationen, komplex
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 48c059ad30a338fe5d413ff6c7e6e7f2e9383dc9
-ms.sourcegitcommit: 5d4e99f4c8f42f5f543e52cb9beb9fb13ec56c5f
+ms.openlocfilehash: 2489e86247287331880d338ff1ddf9383656be07bf3834dfc23ef68e38c63ae8
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2021
-ms.locfileid: "112406323"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118199643"
 ---
 # <a name="advanced-manipulations"></a>Erweiterte Bearbeitungen
 

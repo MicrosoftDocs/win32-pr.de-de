@@ -4,18 +4,18 @@ description: Webanwendungsproxy
 ms.assetid: DE47843C-D58B-4C71-99C2-D54073CBA531
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 220ac5f52a8f5130cdb6fb21649ff302e6693b1b
-ms.sourcegitcommit: ea4baf9953a78d2d6bd530b680601e39f3884541
+ms.openlocfilehash: 3a346297dca0a81d8c2269b61e8a5d581f03f95fab56e044bedce7513882535f
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/01/2020
-ms.locfileid: "104102466"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118211325"
 ---
 # <a name="web-application-proxy"></a>Webanwendungsproxy
 
 ## <a name="platform"></a>Plattform
 
-**Server:** Windows Server 2012 R2  
+**Server –** Windows Server 2012 R2  
 
 
 
@@ -24,22 +24,22 @@ ms.locfileid: "104102466"
 
 ## <a name="description"></a>BESCHREIBUNG
 
-In Windows Server 2012 R2 haben wir einen neuen Dienst mit dem Namen "webanwendungsproxy" unter der Remote Zugriffs Rolle hinzugefügt, mit dem Administratoren Anwendungen für den externen Zugriff veröffentlichen können. Dieser Dienst fungiert als Reverseproxy und als Active Directory-Verbunddienste (AD FS)-Proxy (AD FS). Tatsächlich ersetzt dieser Dienst den AD FS Proxy Dienst, wie er in Windows Server 2012 bekannt war.
+In Windows Server 2012 R2 wurde unter der Remotezugriffsrolle ein neuer Dienst namens Web Anwendungsproxy hinzugefügt, mit dem Administratoren Anwendungen für den externen Zugriff veröffentlichen können. Dieser Dienst fungiert als Reverseproxy und als Active Directory-Verbunddienste (AD FS) (AD FS Proxy). Tatsächlich ersetzt dieser Dienst den AD FS Proxydienst, wie er in diesem Beispiel Windows Server 2012.
 
-Mit dem webanwendungsproxy kann eine Organisation lokale Webressourcen für den externen Zugriff verfügbar machen, während gleichzeitig das Risiko dieses Zugriffs durch Steuern der Authentifizierungs-und Autorisierungs Richtlinien auf dem AD FS verwaltet wird.
+Mit dem Web Anwendungsproxy kann eine Organisation lokale Webressourcen für den externen Zugriff zur Verfügung stellen und gleichzeitig das Risiko dieses Zugriffs verwalten, indem die Authentifizierungs- und Autorisierungsrichtlinien auf dem AD FS.
 
-## <a name="manifestation"></a>Ausstrahlung
+## <a name="manifestation"></a>Manifestation
 
-Der AD FS Proxy Dienst befindet sich nicht mehr in der Active Directory-Verbunddienste (AD FS)-Rolle (AD FS), sondern wurde durch den webanwendungsproxy unter der Remote Zugriffs Rolle ersetzt. Dies stellt eine Erweiterung des AD FS Proxy Dienstanbieter durch Einschließen von Reverseproxyfunktionen für die Anwendungs Veröffentlichung dar.
+Der AD FS-Proxydienst befindet sich nicht mehr unter der Active Directory-Verbunddienste (AD FS)-Rolle (AD FS), sondern wurde durch den Web-Anwendungsproxy unter der Remotezugriffsrolle ersetzt. Dies stellt eine Erweiterung des AD FS-Proxydiensts dar, indem Reverseproxyfunktionen für die Anwendungsveröffentlichung verwendet werden.
 
 ## <a name="solution"></a>Lösung
 
-Für den Zugriff auf den webanwendungsproxy können Administratoren zu Server-Manager wechseln und eine neue Rolle/einen neuen Rollen Dienst hinzufügen. Der Administrator findet den webanwendungsproxy unter der Remote Zugriffs Rolle.
+Um auf das Web-Anwendungsproxy zugreifen zu können, können Administratoren zu Server-Manager und einen neuen Rollen-/Rollendienst hinzufügen. Der Administrator findet die Web-Anwendungsproxy unter der Remotezugriffsrolle.
 
 ## <a name="resources"></a>Ressourcen
 
 -   [Lösungsanleitung](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/dn280942(v=ws.11))
 
- 
+ 
 
- 
+ 

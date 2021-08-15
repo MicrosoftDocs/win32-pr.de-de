@@ -1,19 +1,19 @@
 ---
-description: Wird vom WM-ASF-Reader-Filter gesendet, wenn die von Digital Rights Management (DRM) geschützten ASF-Dateien gelesen werden.
+description: Wird vom WM-ASF-Readerfilter gesendet, wenn er DURCH DRM (Digital Rights Management) geschützte ASF-Dateien liest.
 ms.assetid: ac6ea7a1-238e-42ae-9f10-e1db60381357
-title: EC_WMT_EVENT (DShow. h)
+title: EC_WMT_EVENT (Dshow.h)
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: a8ce974cd83a404242fb51486f0889ac9b79e044
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: ad2ae2659c26d170bef14a76c0528eb5159e92ef3598fb999215e1fbd848ea90
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106358265"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117819923"
 ---
-# <a name="ec_wmt_event-dshowh"></a>EC_WMT_EVENT (DShow. h)
+# <a name="ec_wmt_event-dshowh"></a>EC_WMT_EVENT (Dshow.h)
 
-Wird vom [WM-ASF-Reader](wm-asf-reader-filter.md) -Filter gesendet, wenn die von Digital Rights Management (DRM) geschützten ASF-Dateien gelesen werden.
+Wird vom [WM-ASF-Readerfilter](wm-asf-reader-filter.md) gesendet, wenn er DURCH DRM (Digital Rights Management) geschützte ASF-Dateien liest.
 
 ## <a name="parameters"></a>Parameter
 
@@ -22,17 +22,17 @@ Wird vom [WM-ASF-Reader](wm-asf-reader-filter.md) -Filter gesendet, wenn die von
 <span id="lParam1"></span><span id="lparam1"></span><span id="LPARAM1"></span>*lParam1*
 </dt> <dd>
 
-Einer der folgenden **WMT- \_ Status** Werte:
+Einer der folgenden **WMT \_ STATUS-Werte:**
 
 
 
 | Wert                         | BESCHREIBUNG                                                                                                       |
 |-------------------------------|-------------------------------------------------------------------------------------------------------------------|
-| WMT-Abruf \_ \_ Lizenz         | Wird gesendet, wenn der Lizenz Erwerbsprozess von der DRM-Komponente erfolgreich oder erfolglos abgeschlossen wurde. |
-| WMT \_ Individual            | Der Sicherheits Upgradevorgang wurde entweder erfolgreich oder erfolglos abgeschlossen.                                |
-| WMT \_ erfordert \_ Individualisierung | Die Datei erfordert, dass eine Anwendung vor dem Ausführen der angeforderten Aktion ein Sicherheits Upgrade erhält.          |
-| WMT \_ keine \_ Rechte               | Die Anwendung verfügt nicht über die Berechtigung, die angeforderte Aktion für eine Datei auszuführen, die von DRM-Version 1 geschützt wird.                |
-| WMT \_ keine \_ Rechte \_ Ex           | Die Anwendung verfügt nicht über die Berechtigung, die angeforderte Aktion für eine Datei auszuführen, die von DRM-Version 7 geschützt wird.                |
+| WMT \_ ERWERBEN \_ EINER LIZENZ         | Wird gesendet, wenn die DRM-Komponente den Lizenzerwerb entweder erfolgreich oder nicht erfolgreich abgeschlossen hat. |
+| WMT \_ INDIVIDUALIZE            | Der Sicherheitsupgradeprozess wurde entweder erfolgreich oder nicht erfolgreich abgeschlossen.                                |
+| WMT \_ BENÖTIGT \_ INDIVIDUALISIERUNG | Die Datei erfordert, dass eine Anwendung ein Sicherheitsupgrade erhält, bevor die angeforderte Aktion ausgeführt wird.          |
+| WMT \_ KEINE \_ RECHTE               | Die Anwendung hat keine Rechte, die angeforderte Aktion für eine durch DRM-Version 1 geschützte Datei auszuführen.                |
+| WMT \_ NO \_ RIGHTS \_ EX           | Die Anwendung hat keine Rechte, die angeforderte Aktion für eine durch DRM-Version 7 geschützte Datei auszuführen.                |
 
 
 
@@ -43,29 +43,29 @@ Einer der folgenden **WMT- \_ Status** Werte:
 <span id="lParam2"></span><span id="lparam2"></span><span id="LPARAM2"></span>*lParam2*
 </dt> <dd>
 
-Zeiger auf eine [**am \_ WMT- \_ Ereignis \_ Daten**](/previous-versions/windows/desktop/api/evcode/ns-evcode-am_wmt_event_data) Struktur, die Informationen über das Ereignis enthält, oder **null**. Der **pData** -Member dieser Struktur verweist auf zusätzliche Daten, deren Typ von dem Wert von **lParam1** abhängt, wie in der folgenden Tabelle dargestellt.
+Zeiger auf eine [**AM \_ WMT \_ EVENT \_ DATA-Struktur,**](/previous-versions/windows/desktop/api/evcode/ns-evcode-am_wmt_event_data) die Informationen über das Ereignis enthält, oder **NULL**. Der **pData-Member** dieser Struktur zeigt auf zusätzliche Daten, deren Typ vom Wert von **lParam1** abhängt, wie in der folgenden Tabelle dargestellt.
 
 
 
-| lParam1                       | AM \_ WMT- \_ Ereignis \_ Daten. pdata                                                                                                                       |
+| lParam1                       | AM \_ WMT \_ EVENT \_ DATA.pData                                                                                                                       |
 |-------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------|
-| WMT-Abruf \_ \_ Lizenz         | Zeiger auf eine [**WM- \_ get- \_ Lizenz \_ Daten**](/windows/desktop/wmformat/wm-get-license-data) Struktur. Diese Struktur ist im Windows Media-Format-SDK dokumentiert. |
-| WMT \_ Individual            | Zeiger auf eine [**WM- \_ Individualisierungs \_ Status**](/windows/desktop/wmformat/wm-individualize-status) -Struktur.                                                        |
-| WMT \_ erfordert \_ Individualisierung | **Null**.                                                                                                                                        |
-| WMT \_ keine \_ Rechte               | Zeiger auf eine breit Zeichen-Zeichenfolge, die eine Challenge-URL enthält.                                                                                   |
-| WMT \_ keine \_ Rechte \_ Ex           | Zeiger auf eine [**WM- \_ get- \_ Lizenz \_ Daten**](/windows/desktop/wmformat/wm-get-license-data) Struktur.                                                               |
+| WMT \_ ERWERBEN \_ EINER LIZENZ         | Zeiger auf eine [**WM \_ GET LICENSE \_ \_ DATA-Struktur.**](/windows/desktop/wmformat/wm-get-license-data) Diese Struktur ist im Windows Media Format SDK dokumentiert. |
+| WMT \_ INDIVIDUALIZE            | Zeiger auf eine [**WM \_ INDIVIDUALIZE \_ STATUS-Struktur.**](/windows/desktop/wmformat/wm-individualize-status)                                                        |
+| WMT \_ BENÖTIGT \_ INDIVIDUALISIERUNG | **NULL**.                                                                                                                                        |
+| WMT \_ KEINE \_ RECHTE               | Zeiger auf eine Breitzeichenzeichenfolge, die eine Abfrage-URL enthält.                                                                                   |
+| WMT \_ NO \_ RIGHTS \_ EX           | Zeiger auf eine [**WM \_ GET LICENSE \_ \_ DATA-Struktur.**](/windows/desktop/wmformat/wm-get-license-data)                                                               |
 
 
 
  
 
-Der Wert von *lParam2* kann **null** sein. Überprüfen Sie den Wert, bevor Sie den Zeiger dereferenzieren.
+Der Wert von *lParam2* kann **NULL** sein. Überprüfen Sie den Wert, bevor Sie den Zeiger dereferenzieren.
 
 </dd> </dl>
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Weitere Informationen zum Aktivieren der Wiedergabe von DRM-geschützten Dateien finden Sie in der Dokumentation zum Windows Media-Format SDK.
+Weitere Informationen zum Aktivieren der Wiedergabe von DURCH DRM geschützten Dateien finden Sie in der Dokumentation Windows Media Format SDK.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -73,18 +73,18 @@ Weitere Informationen zum Aktivieren der Wiedergabe von DRM-geschützten Dateien
 
 | Anforderung | Wert |
 |-------------------|------------------------------------------------------------------------------------|
-| Header<br/> | <dl> <dt>DShow. h</dt> </dl> |
+| Header<br/> | <dl> <dt>Dshow.h</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[Ereignis Benachrichtigungs Codes](event-notification-codes.md)
+[Ereignisbenachrichtigungscodes](event-notification-codes.md)
 </dt> <dt>
 
-[Ereignis Benachrichtigung in DirectShow](event-notification-in-directshow.md)
+[Ereignisbenachrichtigung in DirectShow](event-notification-in-directshow.md)
 </dt> </dl>
 
  

@@ -1,11 +1,11 @@
 ---
-title: Iwmpmediacollection getAttributeStringCollection-Methode
-description: Die getAttributeStringCollection-Methode gibt eine iwmpstringcollection-Schnittstelle zurück, die den Satz aller Werte für ein angegebenes Attribut innerhalb eines Medientyps darstellt.
+title: IWMPMediaCollection getAttributeStringCollection-Methode
+description: Die getAttributeStringCollection-Methode gibt eine IWMPStringCollection-Schnittstelle zurück, die den Satz aller Werte für ein angegebenes Attribut innerhalb eines Medientyps darstellt.
 ms.assetid: 5ac19c04-75db-4618-9c4e-b20e2f709024
 keywords:
-- getAttributeStringCollection-Methode, Windows Media Player
-- getAttributeStringCollection-Methode, Windows Media Player, iwmpmediacollection-Schnittstelle
-- Iwmpmediacollection-Schnittstelle Windows Media Player, getAttributeStringCollection-Methode
+- getAttributeStringCollection-Methode Windows Media Player
+- getAttributeStringCollection-Methode Windows Media Player , IWMPMediaCollection-Schnittstelle
+- IWMPMediaCollection-Schnittstelle Windows Media Player , getAttributeStringCollection-Methode
 topic_type:
 - apiref
 api_name:
@@ -16,16 +16,16 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: bef25cd811890e82273fd5d634633e25e7ec460c
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 508630ee8a377e1542f823c1afb21521206369aa3ce489c58afae47efa268880
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106365838"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118331942"
 ---
-# <a name="iwmpmediacollectiongetattributestringcollection-method"></a>Iwmpmediacollection:: getAttributeStringCollection-Methode
+# <a name="iwmpmediacollectiongetattributestringcollection-method"></a>IWMPMediaCollection::getAttributeStringCollection-Methode
 
-Die **getAttributeStringCollection** -Methode gibt eine **iwmpstringcollection** -Schnittstelle zurück, die den Satz aller Werte für ein angegebenes Attribut innerhalb eines Medientyps darstellt.
+Die **getAttributeStringCollection-Methode** gibt eine **IWMPStringCollection-Schnittstelle** zurück, die den Satz aller Werte für ein angegebenes Attribut innerhalb eines Medientyps darstellt.
 
 ## <a name="syntax"></a>Syntax
 
@@ -55,33 +55,33 @@ Implements IWMPMediaCollection.getAttributeStringCollection
 
 <dl> <dt>
 
-*bstrattribute* \[ in\]
+*bstrAttribute* \[ In\]
 </dt> <dd>
 
-Ein **System. String** -Attribut, das das Attribut ist, für das die Werte abgerufen werden.
+Eine **System.String,** die das Attribut ist, für das die Werte abgerufen werden.
 
 </dd> <dt>
 
-*bstraumediatype* \[ in\]
+*bstrMediaType* \[ In\]
 </dt> <dd>
 
-Eine **System. String** , bei der es sich um den Medientyp handelt, für den die Werte abgerufen werden.
+Eine **System.String-Datei,** bei der es sich um den Medientyp handelt, für den die Werte abgerufen werden.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Eine **WMPLib. iwmpstringcollection** -Schnittstelle für die abgerufenen Werte.
+Eine **WMPLib.IWMPStringCollection-Schnittstelle** für die abgerufenen Werte.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Vor dem Aufrufen dieser Methode müssen Sie über Lesezugriff auf die Bibliothek verfügen. Weitere Informationen finden Sie unter [Bibliotheks Zugriff](library-access.md).
+Vor dem Aufrufen dieser Methode benötigen Sie Lesezugriff auf die Bibliothek. Weitere Informationen finden Sie unter [Bibliothekszugriff.](library-access.md)
 
-Informationen zu den Attributen, die von Windows Media Player unterstützt werden, finden Sie in der [Attribut Referenz](attribute-reference.md).
+Informationen zu den attributen, die von Windows Media Player unterstützt werden, finden Sie unter [Attributverweis.](attribute-reference.md)
 
 ## <a name="examples"></a>Beispiele
 
-Im folgenden Beispiel wird mit **getAttributeStringCollection** eine Liste von Werten angezeigt, die einem bestimmten Attribut für Audioelemente in der Mediensammlung entsprechen. Ein Listenfeld ermöglicht dem Benutzer das Auswählen eines Attributs, z. b. "Artist", "Genre" oder "Album", und ein mehrzeilige Textfeld zeigt das Ergebnis an. Das **AxWMPLib. AxWindowsMediaPlayer** -Objekt wird durch die Variable mit dem Namen "Player" dargestellt.
+Im folgenden Beispiel wird **getAttributeStringCollection** verwendet, um eine Liste von Werten anzuzeigen, die einem bestimmten Attribut für Audioelemente in der Medienauflistung entsprechen. Mit einem Listenfeld kann der Benutzer ein Attribut auswählen, z. B. Interpret, Genre oder Album, und ein mehrzeiliges Textfeld zeigt das Ergebnis an. Das **AxWMPLib.AxWindowsMediaPlayer-Objekt** wird durch die Variable player dargestellt.
 
 
 ```CSharp
@@ -159,20 +159,20 @@ End Sub
 
 | Anforderung | Wert |
 |----------------------|------------------------------------------------------------------------------------------------------------------------|
-| Version<br/>   | Windows Media Player 9-Serie oder höher<br/>                                                                      |
+| Version<br/>   | Windows Media Player 9er Serie oder höher<br/>                                                                      |
 | Namespace<br/> | **WMPLib**<br/>                                                                                                  |
 | Assembly<br/>  | <dl> <dt>Interop.WMPLib.dll (Interop.WMPLib.dll.dll)</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Iwmpmediacollection-Schnittstelle (VB und c#)**](iwmpmediacollection--vb-and-c.md)
+[**IWMPMediaCollection-Schnittstelle (VB und C#)**](iwmpmediacollection--vb-and-c.md)
 </dt> <dt>
 
-[**Iwmpstringcollection-Schnittstelle (VB und c#)**](iwmpstringcollection--vb-and-c.md)
+[**IWMPStringCollection-Schnittstelle (VB und C#)**](iwmpstringcollection--vb-and-c.md)
 </dt> </dl>
 
  

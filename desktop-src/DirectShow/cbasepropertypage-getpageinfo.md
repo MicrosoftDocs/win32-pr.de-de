@@ -1,7 +1,7 @@
 ---
-description: 'Die GetPageInfo-Methode ruft Informationen zur Eigenschaften Seite ab. Diese Methode implementiert die IPropertyPage:: getpagumfo-Methode.'
+description: Die GetPageInfo-Methode ruft Informationen zur Eigenschaftenseite ab. Diese Methode implementiert die IPropertyPage::GetPageInfo-Methode.
 ms.assetid: f2e04652-7c71-48b2-b964-4e07ac98d367
-title: Cbasepropertypage. getpagumfo-Methode (cprop. h)
+title: CBasePropertyPage.GetPageInfo-Methode (Cprop.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -16,16 +16,16 @@ api_location:
 - Strmbase.dll
 - Strmbasd.lib
 - Strmbasd.dll
-ms.openlocfilehash: 27faecf50381b098dfcbee34d1494e37c77a36ea
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: badb0678faa85b70dfa848bba7538319b905feea440339e24285f3d64b59d61c
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106369173"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117823160"
 ---
-# <a name="cbasepropertypagegetpageinfo-method"></a>Cbasepropertypage. getpagumfo-Methode
+# <a name="cbasepropertypagegetpageinfo-method"></a>CBasePropertyPage.GetPageInfo-Methode
 
-Die- `GetPageInfo` Methode ruft Informationen zur Eigenschaften Seite ab. Diese Methode implementiert die **IPropertyPage:: getpagumfo** -Methode.
+Die `GetPageInfo` -Methode ruft Informationen zur Eigenschaftenseite ab. Diese Methode implementiert die **IPropertyPage::GetPageInfo-Methode.**
 
 ## <a name="syntax"></a>Syntax
 
@@ -45,20 +45,20 @@ HRESULT GetPageInfo(
 *pPageInfo* 
 </dt> <dd>
 
-Zeiger auf eine vom Aufrufer zugewiesene **PROPPAGEINFO** -Struktur.
+Zeiger auf eine **proppageinfo-Struktur,** die dem Aufrufer zugeordnet ist.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt einen **HRESULT** -Wert zurück. Die folgenden Werte sind möglich.
+Gibt einen **HRESULT-Wert** zurück. Die folgenden Werte sind möglich.
 
 
 
 | Rückgabecode                                                                                   | Beschreibung                     |
 |-----------------------------------------------------------------------------------------------|---------------------------------|
 | <dl> <dt>**S \_ OK**</dt> </dl>          | Erfolg.<br/>             |
-| <dl> <dt>**E \_ outo-Memory**</dt> </dl> | Nicht genügend Arbeitsspeicher.<br/> |
+| <dl> <dt>**E \_ OUTOFMEMORY**</dt> </dl> | Nicht genügend Arbeitsspeicher.<br/> |
 
 
 
@@ -70,16 +70,16 @@ Gibt einen **HRESULT** -Wert zurück. Die folgenden Werte sind möglich.
 
 | Anforderung | Wert |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>Cprop. h (Include Streams. h)</dt> </dl>                                                                                     |
-| Bibliothek<br/> | <dl> " <dt>Straumbase. lib" (Einzelhandels Builds);</dt> " <dt>Straumbasd. lib" (Debugbuilds)</dt> </dl> |
+| Header<br/>  | <dl> <dt>Cprop.h (include Streams.h)</dt> </dl>                                                                                     |
+| Bibliothek<br/> | <dl> <dt>Strmbase.lib (Verkaufsbuilds); </dt> <dt>Strmbasd.lib (Debugbuilds)</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Cbasepropertypage-Klasse**](cbasepropertypage.md)
+[**CBasePropertyPage-Klasse**](cbasepropertypage.md)
 </dt> </dl>
 
  

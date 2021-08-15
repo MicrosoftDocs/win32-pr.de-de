@@ -1,6 +1,6 @@
 ---
-title: Password (eaptype)-Element
-description: Erfahren Sie mehr über das Password (eaptype)-Element. Dieses Element identifiziert das Kennwort für den Benutzer oder Computer, der authentifiziert wird.
+title: Password (EapType)-Element
+description: Erfahren Sie mehr über das Password -Element (EapType). Dieses Element identifiziert das Kennwort des Benutzers oder Computers, der authentifiziert wird.
 ms.assetid: d3ad95b8-2d98-420f-a680-a83b49ae2992
 keywords:
 - Password-Element EAPHost
@@ -14,16 +14,16 @@ ms.topic: reference
 ms.date: 05/31/2018
 api_location: ''
 ROBOTS: INDEX,FOLLOW
-ms.openlocfilehash: 6da29146be7ed2f0c17d7311f79921b44cd0929e
-ms.sourcegitcommit: b0ebdefc3dcd5c04bede94091833aa1015a2f95c
+ms.openlocfilehash: cbbcb7b0acd372bbe71ee6d22f44a736948b145378f62f40820e3de53d77b875
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/21/2020
-ms.locfileid: "104039624"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118273199"
 ---
-# <a name="password-eaptype-element"></a>Password (eaptype)-Element
+# <a name="password-eaptype-element"></a>Password (EapType)-Element
 
-Das **Kennwort-Element (eaptype)** identifiziert das Kennwort des Benutzers oder Computers, der authentifiziert wird.
+Das **Password -Element (EapType)** identifiziert das Kennwort des Benutzers oder Computers, der authentifiziert wird.
 
 ``` syntax
 <xs:element name="Password"
@@ -31,20 +31,20 @@ Das **Kennwort-Element (eaptype)** identifiziert das Kennwort des Benutzers oder
  />
 ```
 
-Das **Password** -Element wird durch das [**eaptype**](mschapv2userpropertiesv1schema-eaptype-element.md) -Element definiert.
+Das **Password-Element** wird durch das [**EapType-Element**](mschapv2userpropertiesv1schema-eaptype-element.md) definiert.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Wenn das **Password-Element (eaptype)** nicht vorhanden ist, wird der Kenn Wort Hash von Winlogon abgerufen. Dieses Element ist optional.
+Wenn das **Password -Element (EapType)** nicht vorhanden ist, wird der Kennworthash von winlogon erhalten. Dieses Element ist optional.
 
 ## <a name="requirements"></a>Anforderungen
 
 
 
-| Role | Mindestens unterstützte Betriebssystemversion |
+| Role | Unterstützte Mindestversion des Betriebssystems |
 |------|------------------------------|
-| Client<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>       |
-| Server<br/> | Nur Windows Server 2008 \[ -Desktop-Apps\]<br/> |
+| Client<br/> | Windows Nur \[ Vista-Desktop-Apps\]<br/>       |
+| Server<br/> | Windows Nur Server \[ 2008-Desktop-Apps\]<br/> |
 
 
 
@@ -52,19 +52,19 @@ Wenn das **Password-Element (eaptype)** nicht vorhanden ist, wird der Kenn Wort 
 
 <dl> <dt>
 
-**Definitions Kontext des Elements im Schema**
+**Definitionskontext des Elements im Schema**
 </dt> <dt>
 
-[**Eaptype**](mschapv2userpropertiesv1schema-eaptype-element.md)
+[**EapType**](mschapv2userpropertiesv1schema-eaptype-element.md)
 </dt> <dt>
 
-**Mögliches unmittelbar übergeordnetes Element in der Schema Instanz**
+**Mögliches unmittelbar übergeordnetes Element in der Schemainstanz**
 </dt> <dt>
 
-[**Eaptype**](mschapv2userpropertiesv1schema-eaptype-element.md)
+[**EapType**](mschapv2userpropertiesv1schema-eaptype-element.md)
 </dt> <dt>
 
-[EAPHost und Legacy Schema](eaphost-schemas.md)
+[EAPHost und Legacyschema](eaphost-schemas.md)
 </dt> <dt>
 
 [mschapv2userpropertiesv1-Schema](mschapv2userpropertiesv1schema-schema.md)

@@ -1,15 +1,15 @@
 ---
-description: Erfahren Sie mehr über den Shellnamespace und seine Datenquellenobjekte. Dieser Namespace bietet Erweiterbarkeitsoptionen auf der Windows Shell-Benutzeroberfläche.
+description: Erfahren Sie mehr über den Shellnamespace und seine Datenquellenobjekte. Dieser Namespace bietet Erweiterbarkeitsoptionen in der Windows Shell-Benutzeroberfläche.
 ms.assetid: 539c4455-e1c7-45a0-b3c3-781f2b7a1617
 title: Einführung in den Shellnamespace
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 6e1be0187094ffe7cf7b56b724c5990fe18321fa
-ms.sourcegitcommit: 5d4e99f4c8f42f5f543e52cb9beb9fb13ec56c5f
+ms.openlocfilehash: c758f95934e70abdb525547fda3940cd75ebc9b455fbca2cfdbd38ff962c3b0b
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2021
-ms.locfileid: "112404293"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118219900"
 ---
 # <a name="introduction-to-the-shell-namespace"></a>Einführung in den Shellnamespace
 
@@ -31,11 +31,11 @@ Eine der Hauptaufgaben der Shell ist das Verwalten und Bereitstellen des Zugriff
 -   Systemsteuerung von Anwendungen
 -   Die Papierkorb
 
-Einige virtuelle Objekte enthalten überhaupt keinen physischen Speicher. Das Druckerobjekt enthält beispielsweise eine Sammlung von Links zu Druckern im Netzwerk. Andere virtuelle Objekte, z. B. die Papierkorb, können Daten enthalten, die auf einem Laufwerk gespeichert sind, aber anders als normale Dateien behandelt werden müssen. Beispielsweise kann ein virtuelles Objekt verwendet werden, um in einer Datenbank gespeicherte Daten zu darstellen. Im Hinblick auf den Namespace können die verschiedenen Elemente in der Datenbank in der Windows-Explorer als separate Objekte angezeigt werden, obwohl sie alle in einer einzelnen Datenträgerdatei gespeichert sind.
+Einige virtuelle Objekte enthalten überhaupt keinen physischen Speicher. Das Druckerobjekt enthält beispielsweise eine Sammlung von Links zu Druckern im Netzwerk. Andere virtuelle Objekte, z. B. die Papierkorb, können Daten enthalten, die auf einem Laufwerk gespeichert sind, aber anders als normale Dateien behandelt werden müssen. Beispielsweise kann ein virtuelles Objekt verwendet werden, um in einer Datenbank gespeicherte Daten zu darstellen. Im Hinblick auf den Namespace können die verschiedenen Elemente in der Datenbank im Windows-Explorer als separate Objekte angezeigt werden, obwohl sie alle in einer einzelnen Datenträgerdatei gespeichert sind.
 
 Virtuelle Objekte können sich sogar auf Remotecomputern befinden. Um beispielsweise das Roaming zu erleichtern, können die Dokumentdateien eines Benutzers auf einem Server gespeichert werden. Damit Benutzer von mehreren Desktop-PCs aus auf ihre Dateien zugreifen können, wird der ordner Eigene Dokumente auf dem Desktop-PC, den sie derzeit verwenden, auf den Server und nicht auf die Festplatte des Desktop-PCs verweisen. Der Pfad enthält entweder ein zugeordnetes Netzwerklaufwerk oder einen UNC-Pfadnamen.
 
-Wie das Dateisystem enthält der Namespace zwei grundlegende Objekttypen: Ordner und Dateien. Ordnerobjekte sind *die Knoten* der Struktur. sie sind Container für Dateiobjekte und andere Ordner. Dateiobjekte sind die *Blätter* der Struktur. sie sind entweder normale Datenträgerdateien oder virtuelle Objekte, z. B. Druckerverbindungen. Ordner, die nicht Teil des Dateisystems sind, werden manchmal als virtuelle *Ordner bezeichnet.*
+Wie das Dateisystem enthält der Namespace zwei grundlegende Objekttypen: Ordner und Dateien. Ordnerobjekte sind die *Knoten* der Struktur. sie sind Container für Dateiobjekte und andere Ordner. Dateiobjekte sind die *Blätter* der Struktur. sie sind entweder normale Datenträgerdateien oder virtuelle Objekte, z. B. Druckerverbindungen. Ordner, die nicht Teil des Dateisystems sind, werden manchmal als virtuelle *Ordner bezeichnet.*
 
 Wie Dateisystemordner variiert auch die Sammlung virtueller Ordner in der Regel von System zu System. Es gibt drei Klassen virtueller Ordner:
 
@@ -43,19 +43,19 @@ Wie Dateisystemordner variiert auch die Sammlung virtueller Ordner in der Regel 
 -   Optionale virtuelle Ordner, die Standardnamen und -funktionen haben, aber möglicherweise nicht auf allen Systemen vorhanden sind.
 -   Nicht standardmäßige Ordner, die vom Benutzer installiert werden.
 
-Im Gegensatz zu Dateisystemordnern können Benutzer selbst keine neuen virtuellen Ordner erstellen. Sie können nur diejenigen installieren, die von Nicht-Microsoft-Entwicklern erstellt wurden. Die Anzahl der virtuellen Ordner ist daher normalerweise deutlich geringer als die Anzahl der Dateisystemordner. Eine Erörterung der Implementierung virtueller Ordner finden Sie unter [Namespaceerweiterungen](nse-works.md).
+Im Gegensatz zu Dateisystemordnern können Benutzer selbst keine neuen virtuellen Ordner erstellen. Sie können nur Diejenigen installieren, die von Nicht-Microsoft-Entwicklern erstellt wurden. Die Anzahl der virtuellen Ordner ist daher normalerweise deutlich geringer als die Anzahl der Dateisystemordner. Eine Erörterung der Implementierung virtueller Ordner finden Sie unter [Namespaceerweiterungen](nse-works.md).
 
-Sie können eine visuelle Darstellung der Struktur des Namespace in der Explorer-Leiste des Windows-Explorer. Der folgende Screenshot von Windows-Explorer zeigt einen relativ einfachen Namespace.
+Eine visuelle Darstellung der Struktur des Namespaces wird in der Explorer-Leiste des Windows angezeigt. Der folgende Screenshot von Windows Explorer zeigt beispielsweise einen relativ einfachen Namespace.
 
 ![eine Ansicht des Shellnamespace](images/prog1.png)
 
-Der endgültige Stamm der Namespacehierarchie ist der Desktop. Direkt unterhalb des Stamms befinden sich mehrere virtuelle Ordner wie Arbeitsplatz und Papierkorb.
+Der endgültige Stamm der Namespacehierarchie ist der Desktop. Direkt unterhalb des Stammordners befinden sich mehrere virtuelle Ordner wie Arbeitsplatz und Papierkorb.
 
 Die Dateisysteme der verschiedenen Laufwerke können als Teilmengen der größeren Namespacehierarchie angesehen werden. Die Stämme dieser Dateisysteme sind Unterordner des Arbeitsplatz Ordners. Arbeitsplatz enthält auch die Stämme aller zugeordneten Netzwerklaufwerke. Andere Knoten in der Struktur, z. B. Eigene Dokumente, sind virtuelle Ordner.
 
 ## <a name="identifying-namespace-objects"></a>Identifizieren von Namespaceobjekten
 
-Bevor Sie ein Namespaceobjekt verwenden können, müssen Sie es zunächst identifizieren können. Ein Objekt im Dateisystem kann einen Namen wie MyFile.htm. Da es möglicherweise andere Dateien mit diesem Namen an anderer Stelle im System gibt, erfordert die eindeutige Identifizierung einer Datei oder eines Ordners einen vollqualifizierten Pfad wie "C: \\ MyDocs \\MyFile.htm". Dieser Pfad ist im Grunde eine geordnete Liste aller Ordner in einem Pfad aus dem Dateisystemstamm C: , der \\ mit der Datei endet.
+Bevor Sie ein Namespaceobjekt verwenden können, müssen Sie es zunächst identifizieren können. Ein Objekt im Dateisystem kann einen Namen haben, z. B. MyFile.htm. Da es möglicherweise andere Dateien mit diesem Namen an anderer Stelle im System gibt, erfordert die eindeutige Identifizierung einer Datei oder eines Ordners einen vollqualifizierten Pfad wie "C: \\ MyDocs \\MyFile.htm". Dieser Pfad ist im Grunde eine geordnete Liste aller Ordner in einem Pfad aus dem Dateisystemstamm C: \\ , der mit der Datei endet.
 
 Im Kontext des Namespace sind Pfade immer noch sehr nützlich, um Objekte zu identifizieren, die sich im Dateisystemteil des Namespace befinden. Sie können jedoch nicht für virtuelle Objekte verwendet werden. Stattdessen bietet die Shell eine alternative Möglichkeit zur Identifizierung, die mit jedem Namespaceobjekt verwendet werden kann.
 
@@ -73,9 +73,9 @@ typedef struct _SHITEMID {
 
 
 
-Der **abID-Member** ist der Bezeichner des Objekts. Die Länge von **abID** ist nicht definiert, und sein Wert wird durch den Ordner bestimmt, der das -Objekt enthält. Da es keine Standarddefinition dafür gibt, wie **abID-Werte** von Ordnern zugewiesen werden, sind sie nur für das zugeordnete Ordnerobjekt aussagekräftig. Anwendungen sollten sie einfach als Token behandeln, das ein Objekt in einem bestimmten Ordner identifiziert. Da die Länge von **abID** variiert, enthält **der cb-Member** die Größe der [**SHITEMID-Struktur**](/windows/desktop/api/Shtypes/ns-shtypes-shitemid) in Bytes.
+Der **abID-Member** ist der Bezeichner des Objekts. Die Länge von **abID** ist nicht definiert, und der Wert wird durch den Ordner bestimmt, der das -Objekt enthält. Da es keine Standarddefinition dafür gibt, **wie abID-Werte** von Ordnern zugewiesen werden, sind sie nur für das zugeordnete Ordnerobjekt aussagekräftig. Anwendungen sollten sie einfach als Token behandeln, das ein Objekt in einem bestimmten Ordner identifiziert. Da die Länge von **abID** variiert, enthält **der cb-Member** die Größe der [**SHITEMID-Struktur**](/windows/desktop/api/Shtypes/ns-shtypes-shitemid) in Bytes.
 
-Da Element-IDs nicht zu Anzeigezwecken nützlich sind, weist der Ordner, der das Objekt enthält, normalerweise einen Anzeigenamen zu. Dies ist der Name, der von Windows-Explorer, wenn der Inhalt eines Ordners angezeigt wird. Weitere Informationen zur Handhabung von Anzeigenamen finden Sie unter [Abrufen von Informationen aus einem Ordner.](folder-info.md)
+Da Element-IDs nicht zu Anzeigezwecken nützlich sind, weist der Ordner, der das Objekt enthält, normalerweise einen Anzeigenamen zu. Dies ist der Name, der vom Windows Explorer verwendet wird, wenn der Inhalt eines Ordners angezeigt wird. Weitere Informationen zur Handhabung von Anzeigenamen finden Sie unter [Abrufen von Informationen aus einem Ordner.](folder-info.md)
 
 ### <a name="item-id-lists"></a>Element-ID-Listen
 
@@ -91,11 +91,11 @@ Für die Shell-API werden Namespaceobjekte in der Regel durch einen Zeiger auf i
 
 Die in der obigen Abbildung gezeigte PIDL wird als vollständige *oder* *absolute* PIDL bezeichnet. Eine vollständige PIDL beginnt auf dem Desktop und enthält die Element-IDs aller Zwischenordner im Pfad. Er endet mit der Element-ID des Objekts, gefolgt von einem beendenden **Zwei-Byte-NULL-Wert.** Eine vollständige PIDL ähnelt einem vollqualifizierten Pfad und identifiziert das Objekt eindeutig im Shellnamespace.
 
-Vollständige PIDLs werden selten verwendet. Viele Funktionen und Methoden erwarten eine *relative PIDL.* Der Stamm einer relativen PIDL ist ein Ordner, nicht der Desktop. Wie bei relativen Pfaden definieren die Element-IDs der Struktur einen Pfad im Namespace zwischen zwei Objekten. Obwohl sie das Objekt nicht eindeutig identifizieren, sind sie in der Regel kleiner als eine vollständige PIDL und für viele Zwecke ausreichend.
+Vollständige PIDLs werden selten verwendet. Viele Funktionen und Methoden erwarten eine *relative PIDL.* Der Stamm einer relativen PIDL ist ein Ordner, nicht der Desktop. Wie bei relativen Pfaden definiert die Reihe von Element-IDs, aus denen die Struktur aufgebaut ist, einen Pfad im Namespace zwischen zwei Objekten. Obwohl sie das Objekt nicht eindeutig identifizieren, sind sie in der Regel kleiner als eine vollständige PIDL und für viele Zwecke ausreichend.
 
-Die am häufigsten verwendeten relativen PIDLs, *PIDLs* auf einer Ebene, sind relativ zum übergeordneten Ordner des Objekts. Sie enthalten nur die Element-ID des Objekts und einen beendenden **NULL-Wert.** PiDLs mit mehreren Ebene werden auch für viele Zwecke verwendet. Sie enthalten mindestens zwei Element-IDs und definieren in der Regel einen Pfad von einem übergeordneten Ordner zu einem Objekt über eine Reihe von Unterordnern. Beachten Sie, dass eine PIDL auf einer ebene weiterhin eine vollqualifizierte PIDL sein kann. Insbesondere desktopobjekte sind dem Desktop untere Elemente, sodass ihre vollqualifizierten PIDLs nur eine Element-ID enthalten.
+Die am häufigsten verwendeten relativen PIDLs, *PIDLs* auf einer Ebene, sind relativ zum übergeordneten Ordner des Objekts. Sie enthalten nur die Element-ID des Objekts und einen beendenden **NULL-Wert.** PiDLs mit mehreren Ebene werden auch für viele Zwecke verwendet. Sie enthalten mindestens zwei Element-IDs und definieren in der Regel einen Pfad von einem übergeordneten Ordner zu einem Objekt über eine Reihe von Unterordnern. Beachten Sie, dass eine PIDL auf einer ebene weiterhin eine vollqualifizierte PIDL sein kann. Insbesondere Desktopobjekte sind dem Desktop unteren Elemente, sodass ihre vollqualifizierten PIDLs nur eine Element-ID enthalten.
 
-Wie unter [Abrufen der ORDNER-ID](folder-id.md)erläutert, bietet die Shell-API eine Reihe von Möglichkeiten zum Abrufen der PIDL eines Objekts. Sobald Sie es haben, verwenden Sie es häufig nur, um das Objekt zu identifizieren, wenn Sie andere Shell-API-Funktionen und -Methoden aufrufen. In diesem Kontext sind die internen Inhalte einer PIDL nicht transparent und irrelevant. Stellen Sie sich für diese Diskussion PIDLs als Token vor, die bestimmte Namespaceobjekte darstellen, und konzentrieren Sie sich darauf, wie sie für allgemeine Aufgaben verwendet werden.
+Wie unter [Abrufen der ORDNER-ID](folder-id.md)erläutert, bietet die Shell-API eine Reihe von Möglichkeiten zum Abrufen der PIDL eines Objekts. Sobald Sie es haben, verwenden Sie es in der Regel nur, um das Objekt zu identifizieren, wenn Sie andere Shell-API-Funktionen und -Methoden aufrufen. In diesem Kontext sind die internen Inhalte einer PIDL nicht transparent und irrelevant. Stellen Sie sich für diese Diskussion PIDLs als Token vor, die bestimmte Namespaceobjekte darstellen, und konzentrieren Sie sich darauf, wie sie für allgemeine Aufgaben verwendet werden.
 
 ### <a name="allocating-pidls"></a>Zuordnen von PIDLs
 

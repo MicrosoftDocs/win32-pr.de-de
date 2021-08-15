@@ -1,11 +1,11 @@
 ---
-title: Playlistcollection. Remove-Methode
-description: Mit der Remove-Methode wird eine Wiedergabeliste aus der Bibliothek entfernt. | Playlistcollection. Remove-Methode
+title: PlaylistCollection.remove-Methode
+description: Die remove-Methode entfernt eine Wiedergabeliste aus der Bibliothek. | PlaylistCollection.remove-Methode
 ms.assetid: 3327ba59-5f46-4df0-ba95-c338b019277d
 keywords:
-- Methode "Windows Media Player entfernen"
-- Remove-Methode, Windows Media Player, playlistcollection-Klasse
-- Playlistcollection-Klasse, Windows Media Player, Remove-Methode
+- Remove-Windows Media Player
+- remove method Windows Media Player , PlaylistCollection class
+- PlaylistCollection-Klasse Windows Media Player , remove-Methode
 topic_type:
 - apiref
 api_name:
@@ -16,16 +16,16 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 5a1a7d223bb6262fdd06c873bde027a89e49c246
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: bb5e1f53446a080727ceb4a23c5ef8be2721e2adc83dec43d95a6ea516af80ca
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106352906"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118334567"
 ---
-# <a name="playlistcollectionremove-method"></a>Playlistcollection. Remove-Methode
+# <a name="playlistcollectionremove-method"></a>PlaylistCollection.remove-Methode
 
-Mit der **Remove** -Methode wird eine Wiedergabeliste aus der Bibliothek entfernt.
+Die **remove-Methode** entfernt eine Wiedergabeliste aus der Bibliothek.
 
 ## <a name="syntax"></a>Syntax
 
@@ -42,10 +42,10 @@ PlaylistCollection.remove(
 
 <dl> <dt>
 
-*Wiedergabeliste* \[ in\]
+*Wiedergabeliste* \[ In\]
 </dt> <dd>
 
-Das zu entfernende **Wiedergabe** Listen Objekt.
+Das **zu** entfernende Playlist-Objekt.
 
 </dd> </dl>
 
@@ -53,9 +53,9 @@ Das zu entfernende **Wiedergabe** Listen Objekt.
 
 Diese Methode gibt keinen Wert zurück.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Um diese Methode verwenden zu können, ist der vollständige Zugriff auf die Bibliothek erforderlich. Weitere Informationen finden Sie unter [Bibliotheks Zugriff](library-access.md).
+Um diese Methode verwenden zu können, ist Vollzugriff auf die Bibliothek erforderlich. Weitere Informationen finden Sie unter [Bibliothekszugriff.](library-access.md)
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -63,28 +63,28 @@ Um diese Methode verwenden zu können, ist der vollständige Zugriff auf die Bib
 
 | Anforderung | Wert |
 |--------------------|------------------------------------------------------------------------------------|
-| Version<br/> | Windows Media Player Version 7,0 oder höher.<br/>                              |
+| Version<br/> | Windows Media Player Version 7.0 oder höher.<br/>                              |
 | DLL<br/>     | <dl> <dt>Wmp.dll</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Playlistcollection-Objekt**](playlistcollection-object.md)
+[**PlaylistCollection-Objekt**](playlistcollection-object.md)
 </dt> <dt>
 
-[**Playlistcollection. importwiedergabe**](playlistcollection-importplaylist.md)
+[**PlaylistCollection.importPlaylist**](playlistcollection-importplaylist.md)
 </dt> <dt>
 
-[**Playlistcollection. newwiedergabe**](playlistcollection-newplaylist.md)
+[**PlaylistCollection.newPlaylist**](playlistcollection-newplaylist.md)
 </dt> <dt>
 
-[**Settings. mediaaccessrights**](settings-mediaaccessrights.md)
+[**Einstellungen.mediaAccessRights**](settings-mediaaccessrights.md)
 </dt> <dt>
 
-[**Settings. requestmediaaccessrights**](settings-requestmediaaccessrights.md)
+[**Einstellungen.requestMediaAccessRights**](settings-requestmediaaccessrights.md)
 </dt> </dl>
 
  

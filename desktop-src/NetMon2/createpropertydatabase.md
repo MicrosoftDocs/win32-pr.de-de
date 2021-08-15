@@ -1,7 +1,7 @@
 ---
-description: Die Funktion "-Funktion" erstellt eine Eigenschaften Datenbank, in der die Eigenschaften eines Protokolls gespeichert werden.
+description: Die CreatePropertyDatabase-Funktion erstellt eine Eigenschaftendatenbank, in der die Eigenschaften eines Protokolls gespeichert werden.
 ms.assetid: 0a3be6ae-d7ce-4315-b4f2-b46bcfa25b69
-title: Funktion "up propertydatabase" (Netmon. h)
+title: CreatePropertyDatabase-Funktion (Netmon.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,16 +13,16 @@ api_type:
 - DllExport
 api_location:
 - Nmapi.dll
-ms.openlocfilehash: 2955aa3367648c4e9e23fd748fa27d6343ef78a1
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 7c07f6f3e4569c06f0b3890e3ef3a26bca10b3272849fc005dfb3be6cbc2836b
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106348591"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118367217"
 ---
-# <a name="createpropertydatabase-function"></a>Funktion "up propertydatabase"
+# <a name="createpropertydatabase-function"></a>CreatePropertyDatabase-Funktion
 
-Die **Funktion "** -Funktion" erstellt eine Eigenschaften Datenbank, in der die Eigenschaften eines Protokolls gespeichert werden.
+Die **CreatePropertyDatabase-Funktion** erstellt eine Eigenschaftendatenbank, in der die Eigenschaften eines Protokolls gespeichert werden.
 
 ## <a name="syntax"></a>Syntax
 
@@ -40,14 +40,14 @@ DWORD WINAPI CreatePropertyDatabase(
 
 <dl> <dt>
 
-*hprotocol* \[ in\]
+*hProtocol* \[ In\]
 </dt> <dd>
 
-Handle des Protokolls, das der Datenbank zugeordnet ist. Wenn Netzwerkmonitor die [Register](register-parser.md) -Funktion aufruft, übergibt Netzwerkmonitor das Protokoll Handle an die Parser-DLL.
+Handle des Protokolls, das der Datenbank zugeordnet ist. Wenn Netzwerkmonitor die [Register-Funktion](register-parser.md) aufruft, übergibt Netzwerkmonitor das Protokollhandle an die Parser-DLL.
 
 </dd> <dt>
 
-*nproperties* \[ in\]
+*nProperties* \[ In\]
 </dt> <dd>
 
 Anzahl der in der Datenbank gespeicherten Eigenschaften. Legen Sie diesen Parameter auf die Anzahl der Eigenschaften fest, die das Protokoll unterstützt.
@@ -56,7 +56,7 @@ Anzahl der in der Datenbank gespeicherten Eigenschaften. Legen Sie diesen Parame
 
 ## <a name="return-value"></a>Rückgabewert
 
-Wenn die Funktion erfolgreich ist, ist der Rückgabewert nmerr \_ Success.
+Wenn die Funktion erfolgreich ist, lautet der Rückgabewert NMERR \_ SUCCESS.
 
 Wenn die Funktion nicht erfolgreich ist, ist der Rückgabewert ein Fehlercode.
 
@@ -64,19 +64,19 @@ Wenn die Funktion nicht erfolgreich ist, ist der Rückgabewert ein Fehlercode.
 
 | Rückgabecode                                                                                             | Beschreibung                                                                    |
 |---------------------------------------------------------------------------------------------------------|--------------------------------------------------------------------------------|
-| <dl> <dt>**Interner nmerr- \_ \_ Fehler**</dt> </dl>   | Ein interner Fehler ist aufgetreten.<br/>                                     |
-| <dl> <dt>**nmerr \_ ungültige \_ hpotocol.**</dt> </dl> | Das Handle für das in *hprotocol* angegebene Protokoll ist ungültig.<br/>     |
-| <dl> <dt>**nicht genügend Arbeits \_ \_ Speicher für nmerr \_**</dt> </dl>   | Netzwerkmonitor verfügt nicht über genügend Arbeitsspeicher, um die Datenbank zu erstellen.<br/> |
+| <dl> <dt>**\_INTERNER \_ NMERR-FEHLER**</dt> </dl>   | Ein interner Fehler ist aufgetreten.<br/>                                     |
+| <dl> <dt>**NMERR \_ INVALID \_ HPCOL**</dt> </dl> | Das Handle für das in *hProtocol* angegebene Protokoll ist ungültig.<br/>     |
+| <dl> <dt>**NMERR \_ NICHT \_ GENÜGEND \_ ARBEITSSPEICHER**</dt> </dl>   | Netzwerkmonitor verfügt nicht über genügend Arbeitsspeicher, um die Datenbank zu erstellen.<br/> |
 
 
 
  
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Die Funktion " **deatepropertydatabase** " sollte nur aufgerufen werden, wenn die [Register](register-parser.md) Funktion implementiert wird. Der Parser erstellt mithilfe von " **kreatepropertydatabase** " eine Eigenschaften Datenbank, in der die Eigenschaften eines Protokolls beschrieben werden. Netzwerkmonitor verwendet die Datenbank, um die Informationen innerhalb des Protokolls zu interpretieren.
+Die **CreatePropertyDatabase-Funktion** sollte nur beim Implementieren der [Register-Funktion](register-parser.md) aufgerufen werden. Der Parser verwendet **CreatePropertyDatabase,** um eine Eigenschaftendatenbank zu erstellen, die die Eigenschaften eines Protokolls beschreibt. Netzwerkmonitor verwendet die Datenbank, um die Informationen innerhalb des Protokolls zu interpretieren.
 
-Die Funktion " **kreatepropertydatabase** " ordnet die Strukturen zu, die Netzwerkmonitor für die Wartung einer Eigenschaften Datenbank benötigt.
+Die **CreatePropertyDatabase-Funktion** ordnet die Strukturen zu, die Netzwerkmonitor zum Verwalten einer Eigenschaftendatenbank benötigt.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -86,13 +86,13 @@ Die Funktion " **kreatepropertydatabase** " ordnet die Strukturen zu, die Netzwe
 |-------------------------------------|--------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional \[nur Desktop-Apps\]<br/>                           |
 | Unterstützte Mindestversion (Server)<br/> | Windows 2000 Server \[nur Desktop-Apps\]<br/>                                 |
-| Header<br/>                   | <dl> <dt>Netmon. h</dt> </dl>  |
-| Bibliothek<br/>                  | <dl> <dt>Nmapi. lib</dt> </dl> |
+| Header<br/>                   | <dl> <dt>Netmon.h</dt> </dl>  |
+| Bibliothek<br/>                  | <dl> <dt>Nmapi.lib</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>Nmapi.dll</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 

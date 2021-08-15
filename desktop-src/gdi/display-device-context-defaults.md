@@ -1,53 +1,53 @@
 ---
-description: Beim ersten Erstellen eines Anzeigegeräte Kontexts weist das System Standardwerte für die Attribute (d. h. das Zeichnen von Objekten, Farben und Modi) zu, die den Gerätekontext bilden.
+description: Beim ersten Erstellen eines Anzeigegerätekontexts weist das System Standardwerte für die Attribute (d. h. Zeichnungsobjekte, Farben und Modi) zu, aus denen der Gerätekontext besteht.
 ms.assetid: 1a9244e6-2773-435a-8569-806df3a0cd39
-title: Gerätekontext Standardwerte anzeigen
+title: Anzeigen von Gerätekontextstandardeinstellungen
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: e8abcf79339d4f1cc158253d46cc3eb02ec41311
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 366c4ecb861b64d2b69836832259e6820e0f8809e4aa478d074220d133ccec55
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "103863659"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117887277"
 ---
-# <a name="display-device-context-defaults"></a>Gerätekontext Standardwerte anzeigen
+# <a name="display-device-context-defaults"></a>Anzeigen von Gerätekontextstandardeinstellungen
 
-Beim ersten Erstellen eines Anzeigegeräte Kontexts weist das System Standardwerte für die Attribute (d. h. das Zeichnen von Objekten, Farben und Modi) zu, die den Gerätekontext bilden. In der folgenden Tabelle werden die Standardwerte für die Attribute eines Anzeigegeräte Kontexts angezeigt.
+Beim ersten Erstellen eines Anzeigegerätekontexts weist das System Standardwerte für die Attribute (d. h. Zeichnungsobjekte, Farben und Modi) zu, aus denen der Gerätekontext besteht. Die folgende Tabelle zeigt die Standardwerte für die Attribute eines Anzeigegerätekontexts.
 
 
 
 | attribute                             | Standardwert                                                                                                                                 |
 |---------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------|
-| Hintergrundfarbe                      | Einstellung für die Hintergrundfarbe in der Systemsteuerung (in der Regel weiß).                                                                               |
-| Hintergrundmodus                       | Lässige                                                                                                                                        |
+| Hintergrundfarbe                      | Einstellung der Hintergrundfarbe aus Systemsteuerung (in der Regel weiß).                                                                               |
+| Hintergrundmodus                       | Undurchsichtig                                                                                                                                        |
 | Bitmap                                | Keine                                                                                                                                          |
-| Brush                                 | weißer \_ Pinsel                                                                                                                                  |
-| Pinsel Ursprung                          | (0,0)                                                                                                                                         |
-| Clippingbereich                       | Das gesamte Fenster oder der Client Bereich mit dem ausgeschnittenen Aktualisierungs Bereich. Untergeordnete und Popup Fenster im Client Bereich können ebenfalls abgeschnitten werden. |
-| Palette                               | Standard \_ Palette                                                                                                                              |
-| Aktuelle Stift Position                  | (0,0)                                                                                                                                         |
-| Geräte Ursprung                         | Obere linke Ecke des Fensters oder des Client Bereichs.                                                                                           |
-| Zeichnungsmodus                          | R2- \_ CopyPen                                                                                                                                   |
-| Schriftart                                  | System \_ Schriftart                                                                                                                                  |
+| Brush                                 | WEIßER \_ PINSEL                                                                                                                                  |
+| Pinselursprung                          | (0,0)                                                                                                                                         |
+| Beschneidungsregion                       | Das gesamte Fenster oder der gesamte Clientbereich, in dem der Updatebereich nach Bedarf abgeschnitten ist. Untergeordnete und Popupfenster im Clientbereich können ebenfalls abgeschnitten werden. |
+| Palette                               | \_STANDARDPALETTE                                                                                                                              |
+| Aktuelle Stiftposition                  | (0,0)                                                                                                                                         |
+| Geräteursprung                         | Obere linke Ecke des Fensters oder des Clientbereichs.                                                                                           |
+| Zeichnungsmodus                          | R2 \_ COPYPEN                                                                                                                                   |
+| Schriftart                                  | \_SYSTEMSCHRIFTART                                                                                                                                  |
 | Intercharacter-Abstand                | 0                                                                                                                                             |
-| Mapping-Modus                          | MM- \_ Text                                                                                                                                      |
-| Stift                                   | Schwarzer \_ Stift                                                                                                                                    |
-| [**Polygon**](/windows/desktop/api/Wingdi/nf-wingdi-polygon) Füll Modus | Nder                                                                                                                                     |
-| Streckungs Modus                          | Blackonwhite                                                                                                                                  |
-| Textfarbe                            | Textfarb Einstellung in der Systemsteuerung (in der Regel Schwarz).                                                                                     |
-| Viewportblock                       | (1, 1)                                                                                                                                         |
-| Der Viewportursprung                       | (0,0)                                                                                                                                         |
-| Fensterblock                         | (1, 1)                                                                                                                                         |
-| Fenster Ursprung                         | (0,0)                                                                                                                                         |
+| Zuordnungsmodus                          | MM \_ TEXT                                                                                                                                      |
+| Stift                                   | BLACK \_ PEN                                                                                                                                    |
+| [](/windows/desktop/api/Wingdi/nf-wingdi-polygon) Polygon-Füllmodus | Alternative                                                                                                                                     |
+| Stretchmodus                          | BLACKONWHITE                                                                                                                                  |
+| Textfarbe                            | Einstellung der Textfarbe aus Systemsteuerung (in der Regel Schwarz).                                                                                     |
+| Viewport-Erweiterung                       | (1,1)                                                                                                                                         |
+| Viewportursprung                       | (0,0)                                                                                                                                         |
+| Fensterumfang                         | (1,1)                                                                                                                                         |
+| Fensterursprung                         | (0,0)                                                                                                                                         |
 
 
 
  
 
-Eine Anwendung kann die Werte der Anzeigegeräte Kontext Attribute mithilfe von Auswahl-und Attribut Funktionen ändern, wie z. b. [**SelectObject**](/windows/desktop/api/Wingdi/nf-wingdi-selectobject), [**setmapmode**](/windows/desktop/api/Wingdi/nf-wingdi-setmapmode)und [**SetTextColor**](/windows/desktop/api/Wingdi/nf-wingdi-settextcolor). Beispielsweise kann eine Anwendung die Standard Maßeinheiten im Koordinatensystem ändern, indem **setmapmode** verwendet wird, um den Zustellungs Modus zu ändern.
+Eine Anwendung kann die Werte der Anzeigegerätekontextattribute mithilfe von Auswahl- und Attributfunktionen wie [**SelectObject,**](/windows/desktop/api/Wingdi/nf-wingdi-selectobject) [**SetMapMode**](/windows/desktop/api/Wingdi/nf-wingdi-setmapmode)und [**SetTextColor**](/windows/desktop/api/Wingdi/nf-wingdi-settextcolor)ändern. Beispielsweise kann eine Anwendung die Standardmaßeinheiten im Koordinatensystem ändern, indem **Sie SetMapMode** verwenden, um den Zuordnungsmodus zu ändern.
 
-Änderungen an den Attributwerten eines gemeinsamen, übergeordneten oder Fenster Geräte Kontexts sind nicht permanent. Wenn eine Anwendung diese Geräte Kontexte freigibt, gehen die aktuellen Auswahlen (z. b. Zustellungs Modus und Clippingbereich) verloren, wenn der Kontext an den Cache zurückgegeben wird. Änderungen an Klassen-oder privaten Geräte Kontexten bleiben unbegrenzt erhalten. Um die ursprünglichen Standardwerte wiederherzustellen, muss eine Anwendung jedes Attribut explizit festlegen.
+Änderungen an den Attributwerten eines allgemeinen, übergeordneten oder Fenstergerätekontexts sind nicht dauerhaft. Wenn eine Anwendung diese Gerätekontexte freigibt, gehen die aktuellen Auswahlen, z. B. Zuordnungsmodus und Clippingbereich, verloren, wenn der Kontext an den Cache zurückgegeben wird. Änderungen an einem Klassen- oder privaten Gerätekontext bleiben unbegrenzt erhalten. Um sie auf die ursprünglichen Standardwerte wiederherzustellen, muss eine Anwendung jedes Attribut explizit festlegen.
 
  
 

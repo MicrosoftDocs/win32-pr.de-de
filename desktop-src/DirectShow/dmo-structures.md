@@ -1,29 +1,29 @@
 ---
-description: DMO-Strukturen
+description: DMO Strukturen
 ms.assetid: 82c8ea74-1c5e-4370-9075-6db2ed6b2c91
-title: DMO-Strukturen
+title: DMO Strukturen
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 46871c8202e6a150686a001b150fe06f645de59e
-ms.sourcegitcommit: a47bd86f517de76374e4fff33cfeb613eb259a7e
+ms.openlocfilehash: cc36bbae0db5aacffa593a1f79545f549900ff9605c757fb76c612939ec4021d
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/06/2021
-ms.locfileid: "103860341"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117821064"
 ---
-# <a name="dmo-structures"></a>DMO-Strukturen
+# <a name="dmo-structures"></a>DMO Strukturen
 
-In diesem Abschnitt werden die DirectX Media Object (DMO)-Strukturen beschrieben.
+In diesem Abschnitt werden die DirectX-Medienobjektstrukturen (DMO) beschrieben.
 
 
 
 | Struktur                                                   | BESCHREIBUNG                                                 |
 |-------------------------------------------------------------|-------------------------------------------------------------|
-| [**DMO \_ - \_ Medientyp**](/previous-versions/windows/desktop/api/mediaobj/ns-mediaobj-dmo_media_type)                  | Beschreibt das Format der Daten, die von einem Datenstrom in einem DMO verwendet werden. |
-| [**DMO- \_ Ausgabe \_ Daten \_ Puffer**](/previous-versions/windows/desktop/api/Mediaobj/ns-mediaobj-dmo_output_data_buffer) | Beschreibt einen von einem DMO verwendeten Ausgabepuffer.                   |
-| [**teilweiser DMO- \_ \_ mediaType**](/previous-versions/windows/desktop/api/Dmoreg/ns-dmoreg-dmo_partial_mediatype)    | Beschreibt einen von einem DMO verwendeten Medientyp teilweise.             |
-| [**MP- \_ Umschlag \_ Segment**](/previous-versions/windows/desktop/api/Medparam/ns-medparam-mp_envelope_segment)        | Definiert ein Umschlag Segment, das von einem Medien Parameter verwendet wird.      |
-| [**MP- \_ paramInfo**](/previous-versions/windows/desktop/api/Medparam/ns-medparam-mp_paraminfo)                       | Enthält Informationen zu einem Medien Parameter.               |
+| [**\_DMO \_MEDIENTYP**](/previous-versions/windows/desktop/api/mediaobj/ns-mediaobj-dmo_media_type)                  | Beschreibt das Format der Daten, die von einem Stream in einem DMO verwendet werden. |
+| [**\_DMO \_ \_ AUSGABEDATENPUFFER**](/previous-versions/windows/desktop/api/Mediaobj/ns-mediaobj-dmo_output_data_buffer) | Beschreibt einen Ausgabepuffer, der von einem DMO verwendet wird.                   |
+| [**\_DMO PARTIAL \_ MEDIATYPE**](/previous-versions/windows/desktop/api/Dmoreg/ns-dmoreg-dmo_partial_mediatype)    | Beschreibt teilweise einen Medientyp, der von einem DMO verwendet wird.             |
+| [**\_MP-UMSCHLAGSEGMENT \_**](/previous-versions/windows/desktop/api/Medparam/ns-medparam-mp_envelope_segment)        | Definiert ein Umschlagsegment, das von einem Medienparameter verwendet wird.      |
+| [**MP \_ PARAMINFO**](/previous-versions/windows/desktop/api/Medparam/ns-medparam-mp_paraminfo)                       | Enthält Informationen zu einem Medienparameter.               |
 
 
 
@@ -33,7 +33,7 @@ In diesem Abschnitt werden die DirectX Media Object (DMO)-Strukturen beschrieben
 
 <dl> <dt>
 
-[DMO-Referenz](dmo-reference.md)
+[DMO Verweis](dmo-reference.md)
 </dt> </dl>
 
  

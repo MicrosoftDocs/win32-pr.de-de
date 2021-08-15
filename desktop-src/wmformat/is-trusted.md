@@ -1,9 +1,9 @@
 ---
 title: Is_Trusted
-description: Das is \_ Trusted-Attribut ist ein Attribut auf Dateiebene, das angibt, ob die Lizenz Erwerbs-URL in der Datei vertrauenswürdig ist.
+description: Das Attribut Is Trusted ist ein Attribut auf Dateiebene, das an gibt, ob die \_ Lizenzerwerbs-URL in der Datei vertrauenswürdig ist.
 ms.assetid: 7b383b45-e992-4a07-af0b-9ef220ddd9af
 keywords:
-- Is_Trusted Windows Media-Format
+- Is_Trusted des Windows-Medienformats
 topic_type:
 - apiref
 api_name:
@@ -12,43 +12,43 @@ api_type:
 - NA
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: d7e8dd4fdd638bad0908bb1bbf50135cde5bad6c
-ms.sourcegitcommit: 57758ecb246c84d65e6e0e4bd5570d9176fa39cd
+ms.openlocfilehash: a3e255c91c5779eb44da8e587601fdfd9264f10888a46a7f216ae2af619ff9f7
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "103948264"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118198276"
 ---
 # <a name="is_trusted"></a>Ist \_ vertrauenswürdig
 
-Das **is \_ Trusted** -Attribut ist ein Attribut auf Dateiebene, das angibt, ob die Lizenz Erwerbs-URL in der Datei vertrauenswürdig ist.
+Das **Attribut Is \_ Trusted** ist ein Attribut auf Dateiebene, das an gibt, ob die Lizenzerwerbs-URL in der Datei vertrauenswürdig ist.
 
 ## <a name="global-constant"></a>Globale Konstante
 
-g \_ wszwmtrusted
+g \_ wszWMTrusted
 
 ## <a name="data-type"></a>Datentyp
 
-**WMT- \_ Typ \_ bool**
+**\_WMT-TYP \_ BOOL**
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
 Dies ist ein codiertes Attribut.
 
-Bevor Sie zu einer Lizenz Erwerbs-URL navigieren, die in einer DRM-geschützten Datei enthalten ist, muss eine Anwendung zunächst überprüfen, ob diese Eigenschaft true ist. Wenn der Wert false ist, sollte die Anwendung den Benutzer benachrichtigen, dass die URL möglicherweise manipuliert wurde.
+Vor dem Navigieren zu einer Lizenzerwerbs-URL, die in einer DRM-geschützten Datei enthalten ist, sollte eine Anwendung zunächst überprüfen, ob diese Eigenschaft true ist. Wenn der Wert FALSE ist, sollte die Anwendung den Benutzer benachrichtigen, dass die URL möglicherweise manipuliert wurde.
 
-Dieses Attribut kann nicht auf Dateiebene dupliziert werden. Wenn dieses Attribut für einen einzelnen Stream verwendet wird, wird es als benutzerdefinierte Metadaten behandelt und gibt seine normale Bedeutung nicht an die Objekte des Windows Media Format SDK aus.
+Dieses Attribut kann nicht auf Dateiebene dupliziert werden. Wenn dieses Attribut für einen einzelnen Stream verwendet wird, wird es als benutzerdefinierte Metadaten behandelt und vermittelt den Objekten des Windows Media Format SDK nicht seine normale Bedeutung.
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
 [**Attributliste**](attribute-list.md)
 </dt> </dl>
 
- 
+ 
 
- 
+ 
 
 
 

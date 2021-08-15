@@ -1,7 +1,7 @@
 ---
-description: 'Die SetObjects-Methode stellt IUnknown-Zeiger für die Objekte bereit, die der Eigenschaften Seite zugeordnet sind. Diese Methode implementiert die IPropertyPage:: abtobjects-Methode.'
+description: Die SetObjects-Methode stellt IUnknown-Zeiger für die Objekte bereit, die der Eigenschaftenseite zugeordnet sind. Diese Methode implementiert die IPropertyPage::SetObjects-Methode.
 ms.assetid: 11ca1e70-772c-414e-9647-7e4c4084c0d3
-title: Cbasepropertypage. * tobjects-Methode (cprop. h)
+title: CBasePropertyPage.SetObjects-Methode (Cprop.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -16,16 +16,16 @@ api_location:
 - Strmbase.dll
 - Strmbasd.lib
 - Strmbasd.dll
-ms.openlocfilehash: 197c5eb82de76fb5a5f606d8a161e853b0c1e8f7
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 9e5c29d1ddc646ef05faad2bc283887265e8b85109fcb679924d9a5641ef13fa
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106368647"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117823025"
 ---
-# <a name="cbasepropertypagesetobjects-method"></a>Cbasepropertypage. * tobjects-Methode
+# <a name="cbasepropertypagesetobjects-method"></a>CBasePropertyPage.SetObjects-Methode
 
-Die- `SetObjects` Methode stellt **IUnknown** -Zeiger für die Objekte bereit, die der Eigenschaften Seite zugeordnet sind. Diese Methode implementiert die **IPropertyPage:: abtobjects** -Methode.
+Die `SetObjects` -Methode stellt **IUnknown-Zeiger** für die Objekte bereit, die der Eigenschaftenseite zugeordnet sind. Diese Methode implementiert die **IPropertyPage::SetObjects-Methode.**
 
 ## <a name="syntax"></a>Syntax
 
@@ -43,41 +43,41 @@ HRESULT SetObjects(
 
 <dl> <dt>
 
-*eines CObject* 
+*cObjects* 
 </dt> <dd>
 
-Gibt die Anzahl der **IUnknown** -Zeiger in dem Array an, das von *ppUnk* angegeben wird.
+Gibt die Anzahl der **IUnknown-Zeiger** im array an, das von *ppUnk* angegeben wird.
 
 </dd> <dt>
 
 *ppUnk* 
 </dt> <dd>
 
-Gibt ein Array von **IUnknown** -Zeigern an.
+Gibt ein Array von **IUnknown-Zeigern** an.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt einen **HRESULT** -Wert zurück. Die folgenden Werte sind möglich.
+Gibt einen **HRESULT-Wert** zurück. Die folgenden Werte sind möglich.
 
 
 
 | Rückgabecode                                                                                  | Beschreibung                           |
 |----------------------------------------------------------------------------------------------|---------------------------------------|
 | <dl> <dt>**S \_ OK**</dt> </dl>         | Erfolg.<br/>                   |
-| <dl> <dt>**E- \_ Zeiger**</dt> </dl>    | **Null** -Zeigerargument.<br/> |
-| <dl> <dt>**E \_ unerwartet**</dt> </dl> | Unerwarteter Fehler.<br/>        |
+| <dl> <dt>**E \_ POINTER**</dt> </dl>    | **NULL-Zeigerargument.**<br/> |
+| <dl> <dt>**E \_ UNEXPECTED**</dt> </dl> | Unerwarteter Fehler.<br/>        |
 
 
 
  
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Obwohl *ppUnk* ein Array von **IUnknown** -Zeigern angibt, ist die **cbasepropertypage** -Klasse nur für die Unterstützung eines zugeordneten Objekts vorgesehen. Wenn *CObjects* größer als 1 ist, gibt die Methode E \_ unerwartet zurück.
+Obwohl *ppUnk* ein Array von **IUnknown-Zeigern** angibt, ist die **CBasePropertyPage-Klasse** nur für die Unterstützung eines zugeordneten Objekts konzipiert. Wenn *cObjects* größer als 1 ist, gibt die Methode E \_ UNEXPECTED zurück.
 
-Wenn *CObjects* 1 ist, ruft diese Methode die [**cbasepropertypage:: OnConnect**](cbasepropertypage-onconnect.md) -Methode auf. Wenn *CObjects* 0 (null) ist, ruft diese Methode die [**cbasepropertypage:: OnDisconnect**](cbasepropertypage-ondisconnect.md) -Methode auf. Die abgeleitete Klasse sollte beide Methoden überschreiben. Weitere Informationen finden Sie in den Hinweisen zu diesen Methoden.
+Wenn *cObjects* gleich 1 ist, ruft diese Methode die [**CBasePropertyPage::OnConnect-Methode auf.**](cbasepropertypage-onconnect.md) Wenn *cObjects* gleich 0 ist, ruft diese Methode die [**CBasePropertyPage::OnDisconnect-Methode auf.**](cbasepropertypage-ondisconnect.md) Die abgeleitete Klasse sollte beide Methoden überschreiben. Weitere Informationen finden Sie in den Hinweisen zu diesen Methoden.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -85,16 +85,16 @@ Wenn *CObjects* 1 ist, ruft diese Methode die [**cbasepropertypage:: OnConnect**
 
 | Anforderung | Wert |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>Cprop. h (Include Streams. h)</dt> </dl>                                                                                     |
-| Bibliothek<br/> | <dl> " <dt>Straumbase. lib" (Einzelhandels Builds);</dt> " <dt>Straumbasd. lib" (Debugbuilds)</dt> </dl> |
+| Header<br/>  | <dl> <dt>Cprop.h (include Streams.h)</dt> </dl>                                                                                     |
+| Bibliothek<br/> | <dl> <dt>Strmbase.lib (Verkaufsbuilds); </dt> <dt>Strmbasd.lib (Debugbuilds)</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Cbasepropertypage-Klasse**](cbasepropertypage.md)
+[**CBasePropertyPage-Klasse**](cbasepropertypage.md)
 </dt> </dl>
 
  

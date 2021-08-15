@@ -4,16 +4,16 @@ ms.assetid: b705b8bc-dc2c-4cee-8306-f494b0f96cbf
 title: FORMSOF-Begriff
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 20504a7a36c7f0cb9c69b9513f33446501641bc7
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: c1ffcbd832833a506db99236bf26921a4b0145ffe5bfccaed8fff59103370291
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106345015"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117863443"
 ---
 # <a name="formsof-term"></a>FORMSOF-Begriff
 
-Der FORMSOF-Begriff führt Übereinstimmungen mit anderen linguistischen Formen des Worts aus. Im folgenden finden Sie die Begriffs Syntax für FORMSOF:
+Der FORMSOF-Begriff führt Übereinstimmungen mit anderen linguistischen Formen des Worts aus. Im Folgenden finden Sie die FORMSOF-Begriffssyntax:
 
 
 ```
@@ -22,13 +22,13 @@ FORMSOF (<generation_type>,<match_words>)
 
 
 
-Der generierungstyp gibt an, wie Microsoft Windows Search die alternativen Word-Formulare auswählt. Der Flexions Wert wählt Alternative Wende-Formulare für die **Übereinstimmungs** Wörter aus. Wenn das Wort ein Verb ist, werden alternative Mandanten verwendet. Wenn es sich bei dem Wort um ein Substantiv handelt, werden die Formen Singular, Plural und possessiv verwendet, um Übereinstimmungen zu erkennen.
+Der Generierungstyp gibt an, wie Microsoft Windows Search die alternativen Wortformen auswählt. Der **WERT INFLECTIONAL** wählt alternative Inflection-Formen für die Übereinstimmungswörter aus. Wenn das Wort ein Verb ist, werden alternative Tenses verwendet. Wenn das Wort ein Nomen ist, werden die Singular-, Plural- und Possessivformen verwendet, um Übereinstimmungen zu erkennen.
 
-Der \_ Wert für die Übereinstimmungs Wörter ist ein oder mehrere Wörter, die durch Kommas getrennt sind.
+Der Wert \_ der Übereinstimmungswörter ist mindestens ein Wort, getrennt durch Kommas.
 
 ## <a name="examples"></a>Beispiele
 
-Im folgenden Beispiel wird nach Flexions Übereinstimmungen für das Wort "Run" gesucht. Dieses Beispiel entspricht Dokumenten, die "Run", "Running" oder "ran" enthalten.
+Im folgenden Beispiel wird nach Inflectional-Übereinstimmungen für das Wort "run" gesucht. Dieses Beispiel entspricht Dokumenten, die "run", "running" oder "ran" enthalten.
 
 
 ```
@@ -44,7 +44,7 @@ Im folgenden Beispiel wird nach Flexions Übereinstimmungen für das Wort "Run" 
 **Referenz**
 </dt> <dt>
 
-[Frei Text Prädikat](-search-sql-freetext.md)
+[FREETEXT-Prädikat](-search-sql-freetext.md)
 </dt> <dt>
 
 [WHERE-Klausel](-search-sql-where.md)

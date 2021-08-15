@@ -5,16 +5,16 @@ ms.assetid: c215c793-5fad-4baa-97c0-c809040dda1e
 ms.topic: reference
 ms.date: 10/12/2020
 ms.reviewer: jsimmons
-ms.openlocfilehash: fab6df11be3bf719f787c40a41a50d948a865474
-ms.sourcegitcommit: 1e64562147b11f90de802c2431173582d066fae6
+ms.openlocfilehash: 757df1549d1bdb0a9a87ee22373a1903a034a1e267d087d51dac46bb6bc5a762
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "104391173"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117796890"
 ---
-# <a name="op_blob-structure"></a>OP_BLOB Struktur
+# <a name="op_blob-structure"></a>OP_BLOB-Struktur
 
-Enthält einen nicht transparenten Byte Puffer.
+Enthält einen nicht transparenten Bytepuffer.
 
 ## <a name="syntax"></a>Syntax
 
@@ -28,14 +28,14 @@ typedef struct _OP_BLOB
 
 ## <a name="members"></a>Member
 
-### <a name="cbblob"></a>cbblob
+### <a name="cbblob"></a>cbBlob
 
-Gibt die Größe des pBlob in Bytes an.
+Gibt die Größe von pBlob in Bytes an.
 
 ### <a name="pblob"></a>pBlob
 
-Verweist auf einen Byte Puffer.
+Zeigt auf einen Bytepuffer.
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
-[**IDL-Definitionen im Offline-Domänen Beitritt**](odj-idl.md)
+[**IDL-Definitionen für den Offlinedomänen-Join**](odj-idl.md)

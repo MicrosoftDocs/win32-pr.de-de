@@ -1,28 +1,28 @@
 ---
-title: Implementieren von Cecho FinalConstruct
-description: Implementieren von Cecho FinalConstruct
+title: Implementieren von CEcho FinalConstruct
+description: Implementieren von CEcho FinalConstruct
 ms.assetid: 149e99c5-9f57-4447-b520-39a6dd39fc86
 keywords:
-- Windows Media Player-Plug-ins, Echo Sample-Eigenschaften Seiten
-- Plug-ins, Echo Sample-Eigenschaften Seiten
-- Plug-Ins für die digitale Signalverarbeitung, Echo Sample-Eigenschaften Seiten
-- DSP-Plug-ins, Echo Sample-Eigenschaften Seiten
-- Echo DSP-Plug-in-Beispiel, Eigenschaften Seiten
-- Echo DSP-Plug-in-Beispiel, Cecho FinalConstruct-Methode
+- Windows Media Player Plug-Ins,Echo-Beispieleigenschaftsseiten
+- Plug-Ins, Echo-Beispieleigenschaftsseiten
+- Plug-Ins für die digitale Signalverarbeitung, Echo-Beispiel-Eigenschaftenseiten
+- DSP-Plug-Ins, Echo-Beispieleigenschaftsseiten
+- Echo DSP-Plug-In-Beispiel, Eigenschaftenseiten
+- Echo DSP-Plug-In-Beispiel, CEcho FinalConstruct-Methode
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 876db9f2479644800c42354a041ad3b1909b526b
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: bbeceeb9c0a7622ada62e98000ad4bfbc2e3faf08c22439039160810771cde8e
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "104100690"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117748145"
 ---
-# <a name="implementing-cechofinalconstruct"></a>Implementieren von Cecho:: FinalConstruct
+# <a name="implementing-cechofinalconstruct"></a>Implementieren von CEcho::FinalConstruct
 
-Die Cecho:: FinalConstruct-Methode ist in Echo. cpp implementiert. Es enthält Code zum Lesen der Eigenschaftswerte aus der Registrierung, wenn Windows Media Player das DSP-Plug-in-Objekt instanziiert. Dies ist wichtig, da die Benutzereinstellungen zwischen Instanzen des Objekts und zwischen Sitzungen beibehalten werden können. Der Beispielcode des Plug-in-Assistenten bietet eine Implementierung zum Lesen einer einzelnen Eigenschaft aus der Registrierung. Sie können diesen Code ändern, um die Eigenschaft Verzögerungszeit zu verarbeiten, und dann Code hinzufügen, um den Eigenschafts Wert für die nasse Mischung zu lesen.
+Die CEcho::FinalConstruct-Methode wird in Echo.cpp implementiert. Sie enthält Code zum Lesen der Eigenschaftswerte aus der Registrierung, wenn Windows Media Player DSP-Plug-In-Objekt instanziiert. Dies ist wichtig, da die Benutzereinstellungen zwischen Instanzen des Objekts sowie zwischen Sitzungen beibehalten werden können. Der Beispielcode des Plug-In-Assistenten bietet implementierungsbasierte Informationen zum Lesen einer einzelnen Eigenschaft aus der Registrierung. Sie können diesen Code ändern, um die Delay Time-Eigenschaft zu behandeln, und dann Code hinzufügen, um den Vermischungsmischungs-Eigenschaftswert zu lesen.
 
-Im folgenden Beispielcode wird jeder Eigenschafts Wert aus der Registrierung gelesen und in der richtigen Element Variablen gespeichert:
+Der folgende Beispielcode liest jeden Eigenschaftswert aus der Registrierung und speichert jeden in der richtigen Membervariablen:
 
 
 ```CSharp
@@ -57,18 +57,18 @@ return S_OK;
 
 
 
-Beachten Sie, dass der DWORD-Wert für die nasse Mischung in einen Gleit Komma Wert konvertiert wird. Beachten Sie auch, dass der Code den korrekten Wert für m-"sssmix" berechnet \_ .
+Beachten Sie, dass der DWORD-Wert für die Vermischung in einen Gleitkommawert konvertiert wird. Beachten Sie auch, dass der Code den richtigen Wert für m \_ fDryMix berechnet.
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
 <dl> <dt>
 
-[**Ändern der Eigenschaften Seite Echo Sample**](modifying-the-echo-sample-property-page.md)
+[**Ändern der Eigenschaftenseite des Echobeispiels**](modifying-the-echo-sample-property-page.md)
 </dt> </dl>
 
- 
+ 
 
- 
+ 
 
 
 

@@ -1,9 +1,9 @@
 ---
-title: Frefixupinfo-Funktion (naputil. h)
-description: Gibt eine fixupinfo-Datenstruktur frei.
+title: FreeFixupInfo-Funktion (NapUtil.h)
+description: Gibt eine FixupInfo-Datenstruktur frei.
 ms.assetid: 6bf71ccf-2618-46a3-8a04-9f83a5b7b429
 keywords:
-- Funktion "frefixupinfo" NAP
+- FreeFixupInfo-Funktion NAP
 topic_type:
 - apiref
 api_name:
@@ -14,21 +14,21 @@ api_type:
 - DllExport
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 3abf1fe07557ac786a9f0cb8e8e06a30408f6d41
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 67c869123aadd5310a346dcf8e7a2184ec84f7e40500744cbaf610cbfc54db42
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "106343869"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118368870"
 ---
-# <a name="freefixupinfo-function"></a>Frefixupinfo-Funktion
+# <a name="freefixupinfo-function"></a>FreeFixupInfo-Funktion
 
 > [!Note]  
-> Die Netzwerk Zugriffsschutz-Plattform ist ab Windows 10 nicht verfügbar.
+> Die Netzwerkzugriffsschutz-Plattform ist ab dem Windows 10
 
  
 
-Die Funktion " **frefixupinfo** " gibt eine [**fixupinfo**](/windows/win32/api/naptypes/ns-naptypes-fixupinfo) -Datenstruktur frei.
+Die **FreeFixupInfo-Funktion** gibt eine [**FixupInfo-Datenstruktur**](/windows/win32/api/naptypes/ns-naptypes-fixupinfo) frei.
 
 ## <a name="syntax"></a>Syntax
 
@@ -45,22 +45,22 @@ NAPAPI VOID WINAPI FreeFixupInfo(
 
 <dl> <dt>
 
-*fixupinfo* \[ in\]
+*fixupInfo* \[ In\]
 </dt> <dd>
 
-Ein Zeiger auf die Datenstruktur " [**fixupinfo**](/windows/win32/api/naptypes/ns-naptypes-fixupinfo) ", die freigegeben werden soll.
+Ein Zeiger auf die frei zu gebende [**FixupInfo-Datenstruktur.**](/windows/win32/api/naptypes/ns-naptypes-fixupinfo)
 
 </dd> </dl>
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Alle vom NAP-System unterstützten com-Schnittstellen verwenden Standard-com-Speicher Verwaltungsregeln und die com-Speicher Belegungs Funktion (**cotaskmembelegc** und **CoTaskMemFree**):
+Alle vom NAP-System unterstützten COM-Schnittstellen verwenden standardmäßige COM-Speicherverwaltungsregeln und die COM-Speicherzuweisungen (**CoTaskMemAlloc** und **CoTaskMemFree**):
 
--   **In** -Parameter werden vom Aufrufer zugeordnet und freigegeben.
--   Out-Parameter werden vom **aufgerufenen** zugeordnet und vom Aufrufer mithilfe von **cotaskmem** freigegeben.
--   **In/out-** Parameter werden vom Aufrufer zugeordnet, vom aufgerufenen freigegeben und neu zugeordnet und schließlich mit **cotaskmem** vom Aufrufer freigegeben.
+-   **In** werden Parameter vom Aufrufer zugeordnet und frei.
+-   **Out-Parameter** werden vom Aufrufer zugeordnet und vom Aufrufer mithilfe von **CoTaskMem frei.**
+-   **Ein-/Aus-Parameter** werden vom Aufrufer zugeordnet, vom Aufrufer frei und neu zugeordnet und schließlich vom Aufrufer mithilfe von **CoTaskMem frei.**
 
-Alle NAP-Funktionen zum Freigeben von Speicher freigeben auch alle eingebetteten Zeiger.
+Alle NAP-Funktionen zum Freien von Arbeitsspeicher geben auch alle eingebetteten Zeiger frei.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -68,18 +68,18 @@ Alle NAP-Funktionen zum Freigeben von Speicher freigeben auch alle eingebetteten
 
 | Anforderung | Wert |
 |-------------------------------------|--------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>                                       |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2008 \[ -Desktop-Apps\]<br/>                                 |
-| Header<br/>                   | <dl> <dt>Naputil. h</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur \[ Vista-Desktop-Apps\]<br/>                                       |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2008-Desktop-Apps\]<br/>                                 |
+| Header<br/>                   | <dl> <dt>NapUtil.h</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>Qutil.dll</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Zuordnung von "Zuweisung"**](allocfixupinfo-func.md)
+[**AllocFixupInfo**](allocfixupinfo-func.md)
 </dt> </dl>
 
  

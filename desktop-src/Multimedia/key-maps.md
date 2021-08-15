@@ -1,32 +1,32 @@
 ---
-title: Schlüssel Zuordnungen
-description: Schlüssel Zuordnungen
+title: Schlüssel Karten
+description: Schlüssel Karten
 ms.assetid: 5d0367b0-bbf1-4a4b-98b2-dbca6f2f8b0c
 keywords:
-- Digital Instrumentation Digital Interface (MIDI), MIDI-Mapper
-- MIDI (Digital Instrumentation Digital Interface), MIDI-Mapper
-- MIDI-Mapper, Schlüssel Zuordnungen
-- Schlüssel Zuordnungen
+- Instruments Instrument Digital Interface (MAPPer)
+- KEYBOARD (Instrument Digital Interface), MAPPER
+- MAPPer, Schlüsselzuordnungen
+- Schlüsselzuordnungen
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: ffafd99e6d813f12c388b633997980b7a58d62dc
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: 72197de28a6596efa951b302f0ca351ac187532cd28d431cf1d954b53d841064
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "103947567"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118140223"
 ---
-# <a name="key-maps"></a>Schlüssel Zuordnungen
+# <a name="key-maps"></a>Schlüssel Karten
 
-Jedem Eintrag in der patchzuordnungs-Übersetzungstabelle ist eine zugeordnete Schlüssel Zuordnung zugeordnet. Schlüssel Zuordnungen betreffen die Nachrichten "Note-on", "Note-Off" und "Polyphonic-after-afternote". Eine Schlüssel Zuordnung verfügt über eine Übersetzungstabelle mit einem Eintrag für jeden der 128-Schlüsselwerte. Wenn der Eintrag für den Schlüsselwert 60 z. b. 72 ist, ändert der MIDI-Mapper die Informationen zu "MIDI Note-on", wie in der folgenden Abbildung dargestellt.
+Jedem Eintrag in der Tabelle für die Patchzuordnungsübersetzung kann eine Zugeordnete Schlüsselzuordnung zugeordnet sein. Schlüsselzuordnungen wirken sich auf Note-On-, Note-Off- und polyphone key-aftertouch-Meldungen aus. Eine Schlüsselzuordnung verfügt über eine Übersetzungstabelle mit einem Eintrag für jeden der 128 TASTEN-Schlüsselwerte. Wenn der Eintrag für den Schlüsselwert 60 z. B. 72 ist, ändert der MAPPer DEST-Mappers DIE NOTE-On-Meldungen, wie in der folgenden Abbildung dargestellt.
 
-![Bild von MIDI-Mapper](images/mmap-a06.gif)
+![Abbildung des Mappers "mapper"](images/mmap-a06.gif)
 
-Schlüssel Zuordnungen sind bei Synthesizern nützlich, die über Schlüssel basierte Percussion-Instrumente verfügen, denen jeweils ein bestimmter Percussion-Sound zugewiesen ist. Schlüssel Zuordnungen werden in der Regel dem ersten Patch in den patchmaps auf den Percussion-Kanälen (10 und 16) zugewiesen.
+Schlüsselzuordnungen sind bei Synthesizern nützlich, die über schlüsselbasierte Musikinstrumenten verfügen, denen jeweils ein bestimmter Ton zugewiesen ist. Schlüsselzuordnungen werden in der Regel dem ersten Patch in den Patch maps auf den Kanälen "10" und "16" zugewiesen.
 
- 
+ 
 
- 
+ 
 
 
 

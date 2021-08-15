@@ -1,30 +1,30 @@
 ---
-title: Festlegen der Sicherheit bei der Namespace Erstellung
-description: Die Managed Object Format (MOF)-Datei, die einen Namespace erstellt, kann auch die Sicherheits Deskriptoren für den Namespace definieren, indem der namespacesecuritysddl-Qualifizierer mit der Sicherheits Beschreibung im SDDL-Format (Security Deskriptor Definition Language) eingeschlossen wird.
+title: Festlegen der Sicherheit bei der Namespaceerstellung
+description: Die MOF-Datei (Managed Object Format), die einen Namespace erstellt, kann auch die Sicherheitsbeschreibungen für den Namespace definieren, indem der Qualifizierer NamespaceSecuritySDDL mit dem Sicherheitsdeskriptor im SDDL-Format (Security Descriptor Definition Language) enthalten ist.
 ms.assetid: eeda3351-11ec-4064-90dd-f67ccf5c8cb6
 ms.tgt_platform: multiple
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 461b23dbac3984ffdd49311cbe340ae2b0c5b022
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 004e1897553ef2ec0bd57067b17d714f6aaf8b17059c1078a2fc0da8a060a40f
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "104530137"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118315637"
 ---
-# <a name="setting-security-on-namespace-creation"></a>Festlegen der Sicherheit bei der Namespace Erstellung
+# <a name="setting-security-on-namespace-creation"></a>Festlegen der Sicherheit bei der Namespaceerstellung
 
-Die Managed Object Format (MOF)-Datei, die einen Namespace erstellt, kann auch die [*Sicherheits Deskriptoren*](/windows/desktop/SecGloss/s-gly) für den Namespace definieren, indem der **namespacesecuritysddl** -Qualifizierer mit der Sicherheits Beschreibung im [SDDL-Format (Security Deskriptor Definition Language)](/windows/desktop/SecAuthZ/security-descriptor-definition-language) eingeschlossen wird.
+Die MOF-Datei (Managed Object Format), die einen Namespace erstellt, kann auch die Sicherheitsbeschreibungen für den Namespace definieren, indem der Qualifizierer **NamespaceSecuritySDDL** mit dem Sicherheitsdeskriptor im [SDDL-Format (Security Descriptor Definition Language)](/windows/desktop/SecAuthZ/security-descriptor-definition-language) enthalten ist. [](/windows/desktop/SecGloss/s-gly)
 
-Sie können **namespacesecuritysddl** zum Sichern beliebiger Namespaces verwenden. Sie können diesen Qualifizierer auch in einer einfachen MOF-Datei verwenden, um die Sicherheits Beschreibung für einen vorhandenen Namespace zu ändern. Die SDDL-Zeichenfolge wird von WMI verarbeitet, um die Namespace Sicherheit festzulegen, wird jedoch nicht als Zeichenfolge gespeichert. Wenn kein Sicherheits Deskriptor angegeben wird, wird die Standard Sicherheit verwendet. Weitere Informationen finden Sie unter [Festlegen von namepace-Sicherheits Deskriptoren](setting-namespace-security-descriptors.md).
+Sie können **NamespaceSecuritySDDL verwenden,** um beliebige Namespaces zu schützen. Sie können diesen Qualifizierer auch in einer einfachen MOF-Datei verwenden, um den Sicherheitsdeskriptor für einen vorhandenen Namespace zu ändern. Die SDDL-Zeichenfolge wird von WMI verarbeitet, um die Namespacesicherheit zu gewährleisten, wird jedoch nicht als Zeichenfolge gespeichert. Wenn kein Sicherheitsdeskriptor angegeben ist, wird die Standardsicherheit verwendet. Weitere Informationen finden Sie unter [Festlegen von Namepace-Sicherheitsdeskriptoren.](setting-namespace-security-descriptors.md)
 
-Mit der folgenden Prozedur wird die Sicherheits Beschreibung für den Namespace " *\\ MyNamespace* " des Stamm Verzeichnisses festgelegt. Die SDDL-Zeichenfolge legt den Besitzer und die Gruppe auf authentifizierte Benutzer fest und gibt eine freigegebene [*Zugriffs Steuerungs Liste (DACL)*](/windows/desktop/SecGloss/d-gly) an, die von untergeordneten Namespaces geerbt wird. Die DACL ermöglicht dem Benutzer das Recht, Daten zu lesen, Methoden auszuführen, Daten in Anbieter Klassen zu schreiben und Remote Zugriff zu verwenden: **WBEM \_ enable**, **WBEM \_ method \_ Execute**, **WBEM \_ Write \_ Provider**, **WBEM \_ Remote \_ Access**. Weitere Informationen finden Sie unter [zugreifen auf WMI-Namespaces](access-to-wmi-namespaces.md).
+Mit dem folgenden Verfahren wird der Sicherheitsdeskriptor für den *\\ MyNamespace-Stammnamespace* festgelegt. Die SDDL-Zeichenfolge legt den Besitzer und die Gruppe auf authentifizierte Benutzer fest und gibt eine [*DACL (Discretionary Access Control List)*](/windows/desktop/SecGloss/d-gly) an, die von untergeordneten Namespaces geerbt wird. Die DACL ermöglicht dem Benutzer das Lesen von Daten, Ausführen von Methoden, Schreiben von Daten in Anbieterklassen und Verwenden des Remotezugriffs: **WBEM \_ ENABLE,** **WBEM \_ METHOD \_ EXECUTE,** **WBEM \_ WRITE \_ PROVIDER,** **WBEM \_ REMOTE \_ ACCESS**. Weitere Informationen finden Sie unter [Zugriff auf WMI-Namespaces.](access-to-wmi-namespaces.md)
 
 **So legen Sie eine Namespace-DACL fest**
 
-1.  Erstellen Sie eine MOF-Datei (Managed Object Format), oder ändern Sie die vorhandene MOF-Datei, die den Namespace definiert, um den **namespacesecuritysddl** -Qualifizierer der SDDL-Zeichenfolge hinzuzufügen.
+1.  Erstellen Sie eine Managed Object Format(MOF)-Datei, oder ändern Sie Die vorhandene MOF-Datei, die den Namespace definiert, um den **NamespaceSecuritySDDL-Qualifizierer** mit der SDDL-Zeichenfolge hinzuzufügen.
 
-    Im folgenden Codebeispiel wird gezeigt, wie der Namespace, der geändert werden soll, der Stamm \\ MyNamespace und die Datei den Namen MyNamespace \_ Security. MOF hat.
+    Das folgende Codebeispiel zeigt, dass der zu ändernde Namespace root MyNamespace und die Datei den Namen \\ MyNamespace \_ security.mof hat.
 
     ```mof
     #pragma autorecover
@@ -38,9 +38,9 @@ Mit der folgenden Prozedur wird die Sicherheits Beschreibung für den Namespace 
 
     
 
-2.  Beachten Sie, dass bei der SDDL-Zeichenfolge die Groß-/Kleinschreibung beachtet wird: die Buchstaben müssen groß geschrieben werden
+2.  Beachten Sie, dass bei der SDDL-Zeichenfolge die Groß-/Kleinschreibung beachtet wird: Die Buchstaben müssen groß geschrieben werden.
 
-    Das folgende Codebeispiel zeigt die Buchstaben "o" und "g" in der SDDL-Zeichenfolge in Kleinbuchstaben und bewirkt, dass Mofcomp.exe einen Fehler zurückgibt.
+    Das folgende Codebeispiel zeigt die Buchstaben "o" und "g" in der SDDL-Zeichenfolge als Kleinbuchstaben und verursacht, dass Mofcomp.exe Fehler zurückgibt.
 
     ```mof
     #pragma autorecover
@@ -54,20 +54,20 @@ Mit der folgenden Prozedur wird die Sicherheits Beschreibung für den Namespace 
 
     
 
-3.  Führen Sie [**Mofcomp.exe**](mofcomp.md) aus, um die MOF-Datei zu kompilieren.
+3.  Führen [**Mofcomp.exe**](mofcomp.md) aus, um die MOF-Datei zu kompilieren.
 
-    **c: " \\ mynamespace" " \_ Security. mof"**
+    **c: \\ mofcomp MyNamespace \_ security.mof**
 
-    Verwenden Sie in C++ die [**imuf Compiler**](/windows/desktop/api/Wbemcli/nn-wbemcli-imofcompiler) -Methoden.
+    Verwenden Sie in C++ die [**IMoFCompiler-Methoden.**](/windows/desktop/api/Wbemcli/nn-wbemcli-imofcompiler)
 
-4.  Wenn Sie versuchen, die Namespace-DACL festzulegen, sollten Sie die folgenden Fehlermeldungen beachten:
+4.  Wenn beim Festlegen der Namespace-DACL ein Fehler auftritt, beachten Sie die folgenden Fehlermeldungen:
 
     
 
     | Fehler                           | BESCHREIBUNG                                                                                                  |
     |---------------------------------|--------------------------------------------------------------------------------------------------------------|
-    | **\_Ungültiger WBEM E- \_ \_ Parameter** | Es ist keine geerbte DACL vorhanden. Alternativ hat der Aufrufer die DACL oder die SD im übergeordneten Namespace verletzt. |
-    | **WBEM \_ E- \_ Zugriff \_ verweigert**     | Der Aufrufer verfügt nicht über die Berechtigung zum Aktualisieren der SDDL in MOF.                                               |
+    | **WBEM \_ E \_ INVALID \_ PARAMETER** | Es gibt keine geerbte DACL. Alternativ hat der Aufrufer gegen die DACL oder die SD im übergeordneten Namespace verstoßen. |
+    | **WBEM \_ E \_ ACCESS \_ DENIED**     | Der Aufrufer verfügt nicht über die Berechtigung zum Aktualisieren der SDDL in MOF.                                               |
 
     
 
@@ -77,16 +77,16 @@ Mit der folgenden Prozedur wird die Sicherheits Beschreibung für den Namespace 
 
 <dl> <dt>
 
-[Festlegen von Namespace-Sicherheits Deskriptoren](setting-namespace-security-descriptors.md)
+[Festlegen von Namespacesicherheitsdeskriptoren](setting-namespace-security-descriptors.md)
 </dt> <dt>
 
-[**Namespace-Zugriffsrechte Konstanten**](namespace-access-rights-constants.md)
+[**Namespacezugriffsrechte-Konstanten**](namespace-access-rights-constants.md)
 </dt> <dt>
 
-[**Namespace-ACE-Flag-Konstanten**](namespace-ace-flag-constants.md)
+[**Namespace-ACE-Flagkonst constants**](namespace-ace-flag-constants.md)
 </dt> <dt>
 
-[Ändern der Zugriffssicherheit für Sicherungs fähige Objekte](changing-access-security-on-securable-objects.md)
+[Ändern der Zugriffssicherheit für sicherungsfähige Objekte](changing-access-security-on-securable-objects.md)
 </dt> </dl>
 
  

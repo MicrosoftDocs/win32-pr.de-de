@@ -1,5 +1,5 @@
 ---
-description: Proxy Funktion für die getauthor-Methode.
+description: Proxyfunktion für die GetAuthor-Methode.
 ms.assetid: fb76009e-cc01-4dec-9403-04bf6b53db80
 title: IWICComponentInfo_GetAuthor_Proxy-Funktion
 ms.topic: reference
@@ -14,16 +14,16 @@ api_type:
 api_location:
 - Windowscodecs.dll
 - Wincodec.lib
-ms.openlocfilehash: f181a567ae4089870d324c7a7e0d67a34b965b5a
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: c83d42f499c8f821f5b342f08749a2167aac9cc61334fe2fc2d9e9134b5e2b49
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106364195"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118206671"
 ---
-# <a name="iwiccomponentinfo_getauthor_proxy-function"></a>Iwiccomponentinfo \_ getauthor- \_ Proxy Funktion
+# <a name="iwiccomponentinfo_getauthor_proxy-function"></a>IWICComponentInfo \_ \_ GetAuthor-Proxyfunktion
 
-Proxy Funktion für die [**getauthor**](/windows/desktop/api/Wincodec/nf-wincodec-iwiccomponentinfo-getauthor) -Methode.
+Proxyfunktion für die [**GetAuthor-Methode.**](/windows/desktop/api/Wincodec/nf-wincodec-iwiccomponentinfo-getauthor)
 
 ## <a name="syntax"></a>Syntax
 
@@ -43,49 +43,49 @@ HRESULT IWICComponentInfo_GetAuthor_Proxy(
 
 <dl> <dt>
 
-*Dies \_ PTR* \[ in\]
+*THIS \_ PTR* \[ in\]
 </dt> <dd>
 
-Typ: **[**iwiccomponentinfo**](/windows/desktop/api/Wincodec/nn-wincodec-iwiccomponentinfo) \** _
+Typ: **[ **IWICComponentInfo**](/windows/desktop/api/Wincodec/nn-wincodec-iwiccomponentinfo)\***
 
-Zeiger auf dieses [_ *iwiccomponentinfo* *](/windows/desktop/api/Wincodec/nn-wincodec-iwiccomponentinfo) -Objekt.
+Zeiger auf dieses [**IWICComponentInfo-Objekt.**](/windows/desktop/api/Wincodec/nn-wincodec-iwiccomponentinfo)
 
 </dd> <dt>
 
-*cchauthor* \[ in\]
+*cchAuthor* \[ In\]
 </dt> <dd>
 
-Typ: **uint**
+Typ: **UINT**
 
-Die Größe des *wzauthor* -Puffers.
+Die Größe des *wzAuthor-Puffers.*
 
 </dd> <dt>
 
-*wzauthor* \[ in, out\]
+*wzAuthor* \[ in, out\]
 </dt> <dd>
 
-Typ: **WCHAR \** _
+Typ: **WCHAR \***
 
 Ein Zeiger, der den Namen des Autors der Komponente empfängt.
 
-Die zurückgegebene Zeichenfolge ist Gebiets Schema spezifisch, 1033 standardmäßig.
+Die zurückgegebene Zeichenfolge ist locale-spezifisch und standardmäßig 1033.
 
 </dd> <dt>
 
-_pcchActual * \[ out\]
+*pcchActual* \[ out\]
 </dt> <dd>
 
-Typ: **uint \** _
+Typ: **UINT \***
 
-Ein Zeiger, der die tatsächliche Länge des Autoren namens der Komponente empfängt.
+Ein Zeiger, der die tatsächliche Länge des Autorennamens der Komponente empfängt.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Type: _ *HRESULT**
+Typ: **HRESULT**
 
-Wenn diese Funktion erfolgreich ausgeführt wird, gibt Sie **S \_ OK** zurück. Andernfalls wird ein **HRESULT** -Fehlercode zurückgegeben.
+Wenn diese Funktion erfolgreich ist, wird **S \_ OK zurückgegeben.** Andernfalls wird ein **HRESULT-Fehlercode** zurückgegeben.
 
 ## <a name="remarks"></a>Bemerkungen
 
@@ -95,9 +95,9 @@ Wenn diese Funktion erfolgreich ausgeführt wird, gibt Sie **S \_ OK** zurück. 
 
 | Anforderung | Wert |
 |-------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Windows XP mit SP2, nur Windows Vista \[ -Desktop-Apps\]<br/>                                                                                              |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2008 \[ -Desktop-Apps\]<br/>                                                                                                             |
-| DLL<br/>                      | <dl> <dt>Windowscodecs.dll; </dt> <dt>Wincodec. lib</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows XP mit SP2, nur Windows \[ Vista-Desktop-Apps\]<br/>                                                                                              |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2008-Desktop-Apps\]<br/>                                                                                                             |
+| DLL<br/>                      | <dl> <dt>Windowscodecs.dll; </dt> <dt>Wincodec.lib</dt> </dl> |
 
 
 

@@ -1,19 +1,19 @@
 ---
-description: Das- <url> Element gibt eine URL für den Speicherort für diesen Suchconnector an.
+description: Das <url> -Element gibt eine URL für den Speicherort für diesen Suchconnector an.
 ms.assetid: fdc9e138-2e98-4f01-ab7b-0c3dfad5a4dd
-title: simpleloation-URL-Element (Suchconnector-Schema)
+title: simpleLocation url-Element (Connectorschema suchen)
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 7c40f45ccecb9a1fb81a64f6d749c5050ed1958a
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: fce95943017f4905414f65b75086d4babdf3750505fece0b73255e0e63623e9b
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106345670"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118226325"
 ---
-# <a name="simplelocation-url-element-search-connector-schema"></a>simpleloation-URL-Element (Suchconnector-Schema)
+# <a name="simplelocation-url-element-search-connector-schema"></a>simpleLocation url-Element (Connectorschema suchen)
 
-Das- <url> Element gibt eine URL für den Speicherort für diesen Suchconnector an. Bei diesem Wert kann es sich um eine reguläre file://-URL handeln, die in RFC 1738 definiert ist ( https://www.ietf.org/rfc/rfc1738.txt) Dokument oder oder eine URL, die das KnownFolders:-Protokoll verwendet. Dieses Element hat keine untergeordneten Elemente und keine Attribute.
+Das <url> -Element gibt eine URL für den Speicherort für diesen Suchconnector an. Bei diesem Wert kann es sich um eine reguläre file:// URL handeln, wie im RFC 1738 definiert ( https://www.ietf.org/rfc/rfc1738.txt) Dokument oder eine URL, die das Protokoll knownfolders: verwendet. Dieses Element weist keine untergeordneten Elemente und keine Attribute auf.
 
 ## <a name="syntax"></a>Syntax
 
@@ -45,15 +45,15 @@ Das- <url> Element gibt eine URL für den Speicherort für diesen Suchconnector 
 
 | Übergeordnetes Element                                                                             | Untergeordnete Elemente |
 |--------------------------------------------------------------------------------------------|----------------|
-| [simpleloation-Element (Suchconnector-Schema)](search-schema-sconn-simplelocation.md) |                |
+| [simpleLocation-Element (Search Connector Schema)](search-schema-sconn-simplelocation.md) |                |
 
 
 
  
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Eine Liste bekannter Ordner-GUIDs finden Sie unter [KNOWNFOLDERID](/windows/desktop/shell/knownfolderid) . Verwenden Sie das folgende Format für den Wert dieses Elements, wenn Sie das knownfolder:-Protokoll verwenden.
+Eine Liste bekannter Ordner-GUIDs finden Sie unter [KNOWNFOLDERID.](/windows/desktop/shell/knownfolderid) Verwenden Sie das folgende Format für den Wert dieses Elements, wenn Sie das protokoll knownfolder: verwenden.
 
 
 ```
@@ -62,111 +62,111 @@ Eine Liste bekannter Ordner-GUIDs finden Sie unter [KNOWNFOLDERID](/windows/desk
 
 
 
-In der folgenden Tabelle werden die Windows 7-GUIDs für bekannte Ordner angezeigt.
+Die folgende Tabelle zeigt die Windows 7 bekannten Ordner-GUIDs.
 
 
 
 | Bekannter Ordner                     | GUID                                         |
 |----------------------------------|----------------------------------------------|
-| Folderid \_ admintools             | {724ef170-A42D-4fef-9F-26-B6-0E-84-6f-BA-4f} |
-| Folderid \_ appupdates             | {a305ce99-F527-492b-8B-1a-7e-76-FA-98-D6-E4} |
-| Folderid \_ addnewprograms         | {de61d971-5ebc-4f 02-a3-A9-6C-82-89-5E-5C-04} |
-| Folderid \_ cdburning              | {9e52ab10-F80D-49df-AC-B8-43 00-F5-68-78-55} |
-| Folderid \_ changeremuveprograms   | {df7266ac-9274-4867-8D-55-3B-D6-61-de-87-2D} |
-| Folderid \_ commonadmintools       | {D0384E7D-BAC3-4797-8F-14-CB-a2-29-B3-92-B5} |
-| Folderid \_ commonoemlinks         | {C1BAE2D0-10df-4334-be-DD-7a-a2-0B-22-7a-9d} |
-| Folderid \_ commonprograms         | {0139d44e-6afe-49F 2-86-90-3D-AF-ca-E6-FF-B8} |
-| Folderid \_ commonstartmenu        | {A4115719-D62E-491d-AA-7C-E7-4B-8B-E3-B0-67} |
-| Folderid \_ commonstartup          | {82a5ea35-D9CD-47c5-96 -29-E1-5D-2F-71-4E-6E} |
-| Folderid \_ commontemplates        | {B94237E7-57ac-4347-91-51-B0-8c-6C-32-D1-F7} |
-| Ordner "folderid \_ Computer"         | {0ac0837c-BBF8-452A-85-0d-79-D0-8E-66-7C-A7} |
-| Ordner-ID \_ conflictfolder         | {4bfef B45-347d-4006-A5-be-AC-0C-B0-56-71-92} |
-| \_Ordnerid ConnectionsFolder      | {6f 0cd92b-2e97-45D1-88-FF-B0-D1-86-B8-de-DD} |
-| Folderid- \_ Kontakte               | {56784854-C6CB-462b-81-69-88-E3-50-AC-B8-82} |
-| Folderid \_ ControlPanelFolder     | {82a74aeb-AEB4-465c-a0-14-D0-97-EE-34-6D-63} |
-| Folderid- \_ Cookies                | {2b0f 765D-C0E9-4171-90-8E-08-A6-11-B8-4f-F6} |
-| Folderid \_ Desktop                | {B4BFCC3A-DB2C-424C-B0-29-7F-E9-9a-87-C6-41} |
-| Folderid \_ DeviceMetadataStore    | {5ce4a5e9-e4eb-479d-B8-9F-13-0C-02-88-61-55} |
-| Folderid- \_ Dokumente              | {FDD39AD0-238f-46af-AD-B4-6C-85-48-03-69-C7} |
-| Folderid \_ documentslibrary       | {7b0db17d-9cd2-4A93-97-33 -46-CC-89-02-2E-7C} |
-| Folderid- \_ Downloads              | {374de 290-123f-4565-91-64-39-C4-92-5E-46-7B} |
-| Folderid- \_ Favoriten              | {1777f-68-68AD-4D8A-87-Bd-30-B7-59-FA-33-DD} |
-| Folderid- \_ Schriftarten                  | {FD228CB7-AE11-4AE3-86-4C-16-F3-91-0A-B8-FE} |
-| Folderid- \_ Spiele                  | {cac52c1a-b53d-4edc-92-T7-6B-2E-8a-C1-94-34} |
-| Folderid- \_ gametasks              | {54fae61-4dd8-4787 -80-B6-9-2 -20-C4-B7-0}     |
-| Folderid- \_ Verlauf                | {D9DC8A3B-B784-432e-A7-81-5A-11-30-A7-59-63} |
-| Folderid- \_ Heim Netzgruppe              | {52528a6b-b9e3-4ADD-B6-d-58-8c-2D-BA-84-2D}  |
-| Folderid \_ implicitappconnections   | {bcb5256f-79F 6-4cee-B7-25-DC-34-E4-2-FD-46}  |
-| Folderid \_ Internetcache          | {352481e8-33be-4251-BA-85-60-07-ca-Ed-CF-9d} |
-| Ordner-ID \_ Internetordner         | {4d9f 7874-4e0c-4904-96-7B-40-B0-D2-0C-3E-4B} |
-| Folderid- \_ Bibliotheken              | {1b3ea5dc-B587-4786-B4-EF-BD-1D-C3-32-AE-AE} |
-| Folderid- \_ Links                  | {bfb9d5e0-c6a9-404C-B2-B2-AE-6D-B6-AF-49-68} |
-| Folderid \_ LocalAppData           | {F1B32785-6f-4bcf-9d-55-7B-8E-7F-15-70-91} |
-| Folderid \_ LocalAppDataLow        | {A520A1A4-1780-4ff6-BD-18-16-73-43-C5-AF-16} |
-| Folderid \_ LocalizedResourcesDir  | {2a00375e-224c-49DE-B8-D1-44-0d-F7-EF-3D-DC} |
-| Folderid- \_ Musik                  | {4bd8d571-6d19-48d3-be-97-42-22-20-08-0E-43} |
-| Folderid \_ musiclibrary           | {2112ab0a-c86a-4ffe-a3-68-d-E9-6E-47-1-2E}   |
-| Folderid- \_ nthood                | {C5ABBF53-E17F-4121-89-00-86-62-6f-C2-C9-73} |
-| Folderid \_ networkfolder          | {D20BEEC4-5ca8-4905-AE-3B-BF-25-1E-a0-9B-53} |
-| Folderid \_ originalimages         | {2c36c0aa-5812-4b87-BF-D0-4C-D0-DF-B1-9B-39} |
-| Folderid- \_ Photoalben            | {69d2cf90-FC33-4fb7-9a-0C-EB-B0-F0-FC-B4-3C} |
-| Folderid- \_ Bilder               | {33E28130-4E1E-4676-83-5A-98-39-5C-3B-C3-BB} |
-| Folderid \_ pictureslibrary        | {a990ae9f-a03b-4e80-94-BC-99-12-T7-50-41-4}  |
-| Folderid- \_ Wiedergabelisten              | {DE92C1C7-837f-4f 69-a3-BB-86-E6-31-20-4a-23} |
-| Ordner-ID ( \_ Ordner)         | {76fc4e2d-D6AD-4519-A6-63 -37-Bd-56-06-81-85} |
-| Folderid- \_ printhood              | {9274bd8d-CFD1-41c3-B3-5E-B1-3F-55-A7-58-F4} |
-| Folderid- \_ Profil                | {5e6c858f-0E22-4760-9a-FE-EA-33-17-B6-71-73} |
-| Folderid- \_ programmdata            | {62ab5d82-FDC1-4dc3-A9-DD-07-0d-1D-49-5D-97} |
-| Folderid \_ ProgramFilesX86        | {7c5a40ef-A0FB-4bfc-87-4a-C0-F2-E0-B9-FA-8E} |
-| Folderid \_ ProgramFilesCommonX86  | {DE974D24-D9C6-4d3e-BF-91-F4-45-51 -20-B9-17} |
-| Folderid \_ ProgramFilesX64        | {6d809377-6af0-444b-89-57-a3-77-3F-02-20-0E} |
-| Folderid \_ ProgramFilesCommonX64  | {6365d5a7-f0d-45e5-87-F6-d-A5-6B-6a-4f-7D}   |
-| Folderid- \_ Programmdateien           | {905E63B6-C1BF-494E-B2-9c-65-B7-32-D3-D2-1a} |
-| Folderid \_ programfilescommon     | {F7F1ED05-9F 6D-47a2-AA-AE-29-D3-17-C6-F0-66} |
-| Folderid- \_ Programme               | {A77F5D77-2e2b-44c3-A6-a2-ab-A6-01-05-4a-51} |
-| Folderid \_ Public                 | {DFDF76A2-C82A-4d63-90-6a-56-44-AC-45-73-85} |
-| Folderid \_ publicdesktop          | {C4AA340D-F20F-4863-AF-EF-F8-7e-F2-E6-BA-25} |
-| Folderid \_ publicdocuments        | {ED4824AF-DCE4-45a8-81-E2-FC-79-65-08-36-34} |
-| Ordner-ID \_ publicdownloads        | {3d644c9b-1sb8-4f 30-9B-45-F6-70-23-5F-79-C0} |
-| Folderid \_ PublicGameTasks        | {debf2536-e1a8-4c59-B6-a2-41-45-86-47-6a-EA} |
-| Folderid \_ publicmusic            | {3214fab5-9757 -4298-BB-61-92-A9-de-AA-44-ff} |
-| Folderid \_ publicpictures         | {B6EBFB86-6907-413c-9a-F7-4f-C2-ab-F0-7C-C5} |
-| Folderid \_ publicringtones        | {E555AB60-153b-4d17-9F-04-A5-FE-99-FC-15-EC} |
-| Folderid \_ publicvideos           | {2400183a-6185-49fb-a2-D8-4a-39-2a-60-2B-a3} |
-| Folderid- \_ Schnellstart            | {52a4b021-7b75-48a9-9F-6B-4B-87-a2-10-BC-8F} |
-| Folderid \_ aktuell                 | {AE50C081-EBD2-438a-86-55-8a-09-2E-34-98-7a} |
-| Folderid \_ recordedtvlibrary      | {1a6f dba2-f42d-4358-A7-98-B7-4D-74-59-26-C5} |
-| Folderid \_ recyclebinfolder       | {B7534046-3ecb-4c18-be-4E-64-CD-4C-B7-D6-AC} |
-| Folderid \_ resourceDir            | {8ad10c31-2adb-4296-A8-F7-E4-70-12 -32-C9-72} |
-| Folderid- \_ Klingeltöne              | {C870044B-F49E-4126-A9-C3-B5-2a-1F-F4-11-E8} |
-| Folderid \_ roamingappdata         | {3EB685DB-65F9-4CF6-a0-3a-E3-EF-65-72-9F-3D} |
-| Folderid \_ sampleplaylists        | {15ca69b3-30ee-49c1-AC-E1-6B-5E-C3-72-AF-B5} |
-| Folderid \_ samplemusic            | {B250C668-F57D-4ee1-A6-3C-29-0E-E7-D1-AA-1F} |
-| Folderid \_ samplepictures         | {C4900540-2379-4c75-84-4B-64-E6-FA-F8-71-6B} |
-| Folderid \_ samplevideos           | {859ead94-2e85-48ad-A7-1a-09-69-CB-56-A6-CD} |
-| Folderid \_ savedgames             | {4c5c32ff-bb9d-43b0-B5-B4-2D-72-E5-4E-AA-A4} |
-| Folderid \_ savedsuchen          | {7d1d3a04-Debb-4115-95-CF-2F-29-da-29-20-da} |
-| folderid- \_ Suche \_ csc            | {ee32e446-31ca-4aba-81-4f-A5-EB-D2-FD-6D-5E} |
-| folderid \_ - \_ suchmapi           | {98ec0e18-2098-4d44-86-44-66-97-93 -15-a2-81} |
-| Folderid \_ searchhome             | {190337d1-b8ca-4121-A6-39-6D-47-2D-16-97-2a} |
-| Folderid \_ SendTo                 | {8983036c-27c0-404b-8F-08-10-2D-10-DC-FD-74} |
-| Folderid \_ Startmenü              | {625b53c3-AB48-4ec1-BA-1F-a1-EF-41-46-FC-19} |
-| Folderid- \_ Start                | {B97D20BB-F46A-4c97-BA-10-5E-36-08-43-08-54} |
-| Folderid \_ syncmanagerfolder      | {43668bf-C14E-49b2-97-C9-74-77 -84-T7-84-B7} |
-| \_Ordnerid synkresultorfolder      | {289a9a43-be44-4057-A4-1B-58-7a-76-T7-E7-F9} |
-| Folderid \_ SyncSetupFolder        | {f214138-b1d3-4a90-BB-A9-27-CB-C0-C5-38-9a}  |
-| Folderid- \_ System                 | {1ac14e77-02e7-4e5d-B7-44-2E-B1-AE-51-98-B7} |
-| Folderid \_ SystemX86              | {D65231B0-B2F1-4857-A4-CE-A8-E7-C6-EA-7D-27} |
-| Folderid- \_ Vorlagen              | {A63293E8-664E-48dB-a0-79-DF-75-9E-05-09-F7} |
-| Folderid \_ Benutzer festgelegt             | {9e3995ab-1F 9c-4b13-B8-27 -48-B2-4B-6C-71-74} |
-| Folderid \_ usersfiles             | {f3ce0f7c-4901-4acc-86-48-D5-D4-4B-04-EF-8F} |
-| Folderid \_ userslibraries         | {a302545d-definitiv-464b-ab-E8-61-C8-64-8D-93-9B} |
-| Folderid \_ User Profiles           | {0762d272-C50A-4bb0-a3-82-69-7D-CD-72-9B-80} |
-| Folderid \_ userprogramfiles       | {5cd7aee2-2219-4a67-B8-5D-6C-9c-E1-56 -60-CB} |
-| Folderid \_ userprogramfilescommon | {bcbd3057-ca5c-4622-B4-2D-BC-56-dB-0A-E5-16} |
-| Folderid- \_ Videos                 | {18989b1d-99 B5-455b-84-1C-ab-7C-74-E4-DD-FC} |
-| Folderid \_ videoslibrary {        | 491e922f-5643-4af4-A7-EB-4E-7a-13-8D-81-74}  |
-| Folderid \_ Windows {              | F38BF404-1d43-42f2-93-05 -67-de-0B-28-FC-23}  |
+| FOLDERID \_ AdminTools             | {724EF170-A42D-4FEF-9F-26-B6-0E-84-6F-BA-4F} |
+| FOLDERID \_ AppUpdates             | {a305ce99-f527-492b-8b-1a-7e-76-fa-98-d6-e4} |
+| FOLDERID \_ AddNewPrograms         | {de61d971-5ebc-4f02-a3-a9-6c-82-89-5e-5c-04} |
+| FOLDERID \_ CDAftering              | {9E52AB10-F80D-49DF-AC-B8-43-30-F5-68-78-55} |
+| FOLDERID \_ ChangeRemovePrograms   | {df7266ac-9274-4867-8d-55-3b-d6-61-de-87-2d} |
+| FOLDERID \_ CommonAdminTools       | {D0384E7D-BAC3-4797-8F-14-CB-A2-29-B3-92-B5} |
+| FOLDERID \_ CommonOEMLinks         | {C1BAE2D0-10DF-4334-BE-DD-7A-A2-0B-22-7A-9D} |
+| FOLDERID \_ CommonPrograms         | {0139D44E-6AFE-49F2-86-90-3D-AF-CA-E6-FF-B8} |
+| FOLDERID \_ CommonStartMenu        | {A4115719-D62E-491D-AA-7C-E7-4B-8B-E3-B0-67} |
+| FOLDERID \_ CommonStartup          | {82A5EA35-D9CD-47C5-96-29-E1-5D-2F-71-4E-6E} |
+| FOLDERID \_ CommonTemplates        | {B94237E7-57AC-4347-91-51-B0-8C-6C-32-D1-F7} |
+| FOLDERID \_ ComputerFolder         | {0AC0837C-BBF8-452A-85-0D-79-D0-8E-66-7C-A7} |
+| FOLDERID \_ ConflictFolder         | {4bfefb45-347d-4006-a5-be-ac-0c-b0-56-71-92} |
+| FOLDERID \_ ConnectionsFolder      | {6F0CD92B-2E97-45D1-88-FF-B0-D1-86-B8-DE-DD} |
+| \_FOLDERID-Kontakte               | {56784854-c6cb-462b-81-69-88-e3-50-ac-b8-82} |
+| FOLDERID \_ ControlPanelFolder     | {82A74AEB-AEB4-465C-A0-14-D0-97-EE-34-6D-63} |
+| \_FOLDERID-Cookies                | {2B0F765D-C0E9-4171-90-8E-08-A6-11-B8-4F-F6} |
+| FOLDERID \_ Desktop                | {B4BFCC3A-DB2C-424C-B0-29-7F-E9-9A-87-C6-41} |
+| FOLDERID \_ DeviceMetadataStore    | {5ce4a5e9-e4eb-479d-b8-9f-13-0c-02-88-61-55} |
+| \_FOLDERID-Dokumente              | {FDD39AD0-238F-46AF-AD-B4-6C-85-48-03-69-C7} |
+| FOLDERID \_ DocumentsLibrary       | {7b0db17d-9cd2-4a93-97-33-46-cc-89-02-2e-7c} |
+| \_FOLDERID-Downloads              | {374de290-123f-4565-91-64-39-c4-92-5e-46-7b} |
+| \_FOLDERID-Favoriten              | {1777F761-68AD-4D8A-87-BD-30-B7-59-FA-33-DD} |
+| \_FOLDERID-Schriftarten                  | {FD228CB7-AE11-4AE3-86-4C-16-F3-91-0A-B8-FE} |
+| \_FOLDERID-Spiele                  | {cac52c1a-b53d-4edc-92-d7-6b-2e-8a-c1-94-34} |
+| FOLDERID \_ GameTasks              | {54fae61-4dd8-4787-80-b6-9-2-20-c4-b7-0}     |
+| \_FOLDERID-Verlauf                | {D9DC8A3B-B784-432E-A7-81-5A-11-30-A7-59-63} |
+| FOLDERID \_ HomeGroup              | {52528a6b-b9e3-4add-b6-d-58-8c-2d-ba-84-2d}  |
+| FOLDERID \_ ImplicitAppShortcuts   | {bcb5256f-79f6-4cee-b7-25-dc-34-e4-2-fd-46}  |
+| FOLDERID \_ InternetCache          | {352481E8-33BE-4251-BA-85-60-07-CA-ED-CF-9D} |
+| FOLDERID \_ InternetFolder         | {4D9F7874-4E0C-4904-96-7B-40-B0-D2-0C-3E-4B} |
+| \_FOLDERID-Bibliotheken              | {1b3ea5dc-b587-4786-b4-ef-bd-1d-c3-32-ae-ae} |
+| \_FOLDERID-Links                  | {bfb9d5e0-c6a9-404c-b2-b2-ae-6d-b6-af-49-68} |
+| FOLDERID \_ LocalAppData           | {F1B32785-6FBA-4FCF-9D-55-7B-8E-7F-15-70-91} |
+| FOLDERID \_ LocalAppDataLow        | {A520A1A4-1780-4FF6-BD-18-16-73-43-C5-AF-16} |
+| FOLDERID \_ LocalizedResourcesDir  | {2A00375E-224C-49DE-B8-D1-44-0D-F7-EF-3D-DC} |
+| FOLDERID \_ Musik                  | {4BD8D571-6D19-48D3-BE-97-42-22-20-08-0E-43} |
+| FOLDERID \_ MusicLibrary           | {2112ab0a-c86a-4ffe-a3-68-d-e9-6e-47-1-2e}   |
+| FOLDERID \_ NetHood                | {C5ABBF53-E17F-4121-89-00-86-62-6F-C2-C9-73} |
+| FOLDERID \_ NetworkFolder          | {D20BEEC4-5CA8-4905-AE-3B-BF-25-1E-A0-9B-53} |
+| FOLDERID \_ OriginalImages         | {2C36C0AA-5812-4b87-bf-d0-4c-d0-df-b1-9b-39} |
+| FOLDERID \_ PhotoKopies            | {69D2CF90-FC33-4FB7-9A-0C-EB-B0-F0-FC-B4-3C} |
+| FOLDERID \_ Pictures               | {33E28130-4E1E-4676-83-5A-98-39-5C-3B-C3-BB} |
+| FOLDERID \_ PicturesLibrary        | {a990ae9f-a03b-4e80-94-bc-99-12-d7-50-41-4}  |
+| \_FOLDERID-Wiedergabelisten              | {DE92C1C7-837F-4F69-A3-BB-86-E6-31-20-4A-23} |
+| \_FOLDERID-DruckerOrdner         | {76FC4E2D-D6AD-4519-A6-63-37-BD-56-06-81-85} |
+| FOLDERID \_ PrintHood              | {9274BD8D-CFD1-41C3-B3-5E-B1-3F-55-A7-58-F4} |
+| \_FOLDERID-Profil                | {5E6C858F-0E22-4760-9A-FE-EA-33-17-B6-71-73} |
+| FOLDERID \_ ProgramData            | {62AB5D82-FDC1-4DC3-A9-DD-07-0D-1D-49-5D-97} |
+| FOLDERID \_ ProgramFilesX86        | {7C5A40EF-A0FB-4BFC-87-4A-C0-F2-E0-B9-FA-8E} |
+| FOLDERID \_ ProgramFilesCommonX86  | {DE974D24-D9C6-4D3E-BF-91-F4-45-51-20-B9-17} |
+| FOLDERID \_ ProgramFilesX64        | {6d809377-6af0-444b-89-57-a3-77-3f-02-20-0e} |
+| FOLDERID \_ ProgramFilesCommonX64  | {6365d5a7-f0d-45e5-87-f6-d-a5-6b-6a-4f-7d}   |
+| FOLDERID \_ ProgramFiles           | {905e63b6-c1bf-494e-b2-9c-65-b7-32-d3-d2-1a} |
+| FOLDERID \_ ProgramFilesCommon     | {F7F1ED05-9F6D-47A2-AA-AE-29-D3-17-C6-F0-66} |
+| \_FOLDERID-Programme               | {A77F5D77-2E2B-44C3-A6-A2-AB-A6-01-05-4A-51} |
+| FOLDERID \_ Public                 | {DFDF76A2-C82A-4D63-90-6A-56-44-AC-45-73-85} |
+| FOLDERID \_ PublicDesktop          | {C4AA340D-F20F-4863-AF-EF-F8-7E-F2-E6-BA-25} |
+| FOLDERID \_ PublicDocuments        | {ED4824AF-DCE4-45A8-81-E2-FC-79-65-08-36-34} |
+| FOLDERID \_ PublicDownloads        | {3d644c9b-1fb8-4f30-9b-45-f6-70-23-5f-79-c0} |
+| FOLDERID \_ PublicGameTasks        | {debf2536-e1a8-4c59-b6-a2-41-45-86-47-6a-ea} |
+| FOLDERID \_ PublicAfter            | {3214FAB5-9757-4298-BB-61-92-A9-DE-AA-44-FF} |
+| FOLDERID \_ PublicPictures         | {B6EBFB86-6907-413C-9A-F7-4F-C2-AB-F0-7C-C5} |
+| FOLDERID \_ PublicRafteres        | {E555AB60-153B-4D17-9F-04-A5-FE-99-FC-15-EC} |
+| FOLDERID \_ PublicVideos           | {2400183A-6185-49FB-A2-D8-4A-39-2A-60-2B-A3} |
+| FOLDERID \_ QuickLaunch            | {52a4f021-7b75-48a9-9f-6b-4b-87-a2-10-bc-8f} |
+| FOLDERID \_ Recent                 | {AE50C081-EBD2-438A-86-55-8A-09-2E-34-98-7A} |
+| FOLDERID \_ RecordedTVLibrary      | {1a6fdba2-f42d-4358-a7-98-b7-4d-74-59-26-c5} |
+| FOLDERID \_ RecycleBinFolder       | {B7534046-3ECB-4C18-BE-4E-64-CD-4C-B7-D6-AC} |
+| FOLDERID \_ ResourceDir            | {8AD10C31-2ADB-4296-A8-F7-E4-70-12-32-C9-72} |
+| FOLDERID \_ Ringtones              | {C870044B-F49E-4126-A9-C3-B5-2A-1F-F4-11-E8} |
+| FOLDERID \_ RoamingAppData         | {3EB685DB-65F9-4CF6-A0-3A-E3-EF-65-72-9F-3D} |
+| FOLDERID \_ SamplePlaylists        | {15CA69B3-30EE-49C1-AC-E1-6B-5E-C3-72-AF-B5} |
+| FOLDERID \_ SampleSpeicher            | {B250C668-F57D-4EE1-A6-3C-29-0E-E7-D1-AA-1F} |
+| FOLDERID \_ SamplePictures         | {C4900540-2379-4C75-84-4B-64-E6-FA-F8-71-6B} |
+| FOLDERID \_ SampleVideos           | {859EAD94-2E85-48AD-A7-1A-09-69-CB-56-A6-CD} |
+| FOLDERID \_ SavedGames             | {4c5c32ff-bb9d-43b0-b5-b4-2d-72-e5-4e-aa-a4} |
+| FOLDERID \_ SavedSearches          | {7d1d3a04-debb-4115-95-cf-2f-29-da-29-20-da} |
+| FOLDERID \_ SEARCH \_ CSC            | {ee32e446-31ca-4aba-81-4f-a5-eb-d2-fd-6d-5e} |
+| FOLDERID \_ SEARCH \_ MAPI           | {98ec0e18-2098-4d44-86-44-66-97-93-15-a2-81} |
+| FOLDERID \_ SearchHome             | {190337d1-b8ca-4121-a6-39-6d-47-2d-16-97-2a} |
+| FOLDERID \_ SendTo                 | {8983036C-27C0-404B-8F-08-10-2D-10-DC-FD-74} |
+| FOLDERID \_ StartMenu              | {625B53C3-AB48-4EC1-BA-1F-A1-EF-41-46-FC-19} |
+| \_FOLDERID-Start                | {B97D20BB-F46A-4C97-BA-10-5E-36-08-43-08-54} |
+| FOLDERID \_ SyncManagerFolder      | {43668BF8-C14E-49B2-97-C9-74-77-84-D7-84-B7} |
+| FOLDERID \_ SyncResultsFolder      | {289a9a43-be44-4057-a4-1b-58-7a-76-d7-e7-f9} |
+| FOLDERID \_ SyncSetupFolder        | {f214138-b1d3-4a90-bb-a9-27-cb-c0-c5-38-9a}  |
+| \_FOLDERID-System                 | {1AC14E77-02E7-4E5D-B7-44-2E-B1-AE-51-98-B7} |
+| FOLDERID \_ SystemX86              | {D65231B0-B2F1-4857-A4-CE-A8-E7-C6-EA-7D-27} |
+| \_FOLDERID-Vorlagen              | {A63293E8-664E-48DB-A0-79-DF-75-9E-05-09-F7} |
+| FOLDERID \_ UserPinned             | {9e3995ab-1f9c-4f13-b8-27-48-b2-4b-6c-71-74} |
+| FOLDERID \_ UsersFiles             | {f3ce0f7c-4901-4acc-86-48-d5-d4-4b-04-ef-8f} |
+| FOLDERID \_ UsersLibraries         | {a302545d-definitely-464b-ab-e8-61-c8-64-8d-93-9b} |
+| FOLDERID \_ UserProfiles           | {0762D272-C50A-4BB0-A3-82-69-7D-CD-72-9B-80} |
+| FOLDERID \_ UserProgramFiles       | {5cd7aee2-2219-4a67-b8-5d-6c-9c-e1-56-60-cb} |
+| FOLDERID \_ UserProgramFilesCommon | {bcbd3057-ca5c-4622-b4-2d-bc-56-db-0a-e5-16} |
+| \_FOLDERID-Videos                 | {18989B1D-99B5-455B-84-1C-AB-7C-74-E4-DD-FC} |
+| FOLDERID \_ VideosLibrary {        | 491e922f-5643-4af4-a7-eb-4e-7a-13-8d-81-74}  |
+| FOLDERID \_ Windows {              | F38BF404-1D43-42F2-93-05-67-DE-0B-28-FC-23}  |
 
 
 

@@ -1,28 +1,28 @@
 ---
 title: Einschränkungen der gegenseitigen Authentifizierung mit Kerberos
-description: Sowohl das Konto des Clients als auch das Konto des Diensts müssen sich in Domänen mit Windows 2000-oder gemischtem Modus befinden, da Kerberos-Dienste nicht in Domänen mit unterer Ebene verfügbar sind.
+description: Sowohl das Clientkonto als auch das Dienstkonto müssen sich in Windows 2000-Domänen im nativ oder gemischten Modus befinden, da Kerberos-Dienste in Downleveldomänen nicht verfügbar sind.
 ms.assetid: 54685e88-b289-4db9-b4cb-f5c22a216a0d
 ms.tgt_platform: multiple
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 290bd93050c9cb4c89052ce644b4c588f638f312
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: 77bdc2f8cfe87d3cece32987ee0958000b1186775257013ce27f5950c6ac8f89
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "104470860"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118187064"
 ---
 # <a name="limitations-of-mutual-authentication-with-kerberos"></a>Einschränkungen der gegenseitigen Authentifizierung mit Kerberos
 
-Sowohl das Konto des Clients als auch das Konto des Diensts müssen sich in Domänen mit Windows 2000-oder gemischtem Modus befinden, da Kerberos-Dienste nicht in Domänen mit unterer Ebene verfügbar sind. Außerdem müssen sich sowohl Client-als auch Dienst Konten in derselben Gesamtstruktur befinden, weil der Client-KDC den globalen Katalog verwendet, um nach dem Dienst Prinzipal Namen zu suchen.
+Sowohl das Clientkonto als auch das Dienstkonto müssen sich in Windows 2000-Domänen im nativ oder gemischten Modus befinden, da Kerberos-Dienste in Downleveldomänen nicht verfügbar sind. Darüber hinaus müssen sich sowohl Client- als auch Dienstkonten in derselben Gesamtstruktur enthalten, da das KDC des Clients den globalen Katalog verwendet, um nach dem Dienstprinzipalnamen zu suchen.
 
-Sowohl der Dienst als auch der Client müssen unter Windows 2000 ausgeführt werden. andernfalls schlägt die gegenseitige Authentifizierung mit Kerberos fehl, da frühere Versionen von Windows Kerberos nicht unterstützen.
+Sowohl der Dienst als auch der Client müssen auf Windows 2000 ausgeführt werden. Andernfalls kann die gegenseitige Authentifizierung mit Kerberos nicht ausgeführt werden, da frühere Versionen von Windows Kerberos nicht unterstützen.
 
-Dienst Prinzipal Namen müssen den DNS-Namen des Host Servers enthalten, auf dem der Dienst ausgeführt wird. Sie müssen den DNS-Namen verwenden.
+Dienstprinzipalnamen müssen den DNS-Namen des Hostservers enthalten, auf dem der Dienst ausgeführt wird. Sie müssen den DNS-Namen verwenden.
 
- 
+ 
 
- 
+ 
 
 
 

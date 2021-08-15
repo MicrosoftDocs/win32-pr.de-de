@@ -1,5 +1,5 @@
 ---
-description: Von XMUSHORT4 verfügbar gemachte Konstruktoren.
+description: Konstruktoren, die von XMUSHORT4 verfügbar gemacht werden.
 ms.assetid: 7f822c43-69a6-442a-bb30-adfafe5399ff
 title: XMUSHORT4-Konstruktoren
 ms.topic: reference
@@ -11,18 +11,18 @@ api_name: ''
 api_type:
 - NA
 api_location: ''
-ms.openlocfilehash: bdf73cbd353138237f59344b575b63624802df8e
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 5801a098cb691fabc5c877dd3cbe69fbb923608d0fdcb3cba150cf0b744faf9b
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "103959256"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118276176"
 ---
 # <a name="xmushort4-constructors"></a>XMUSHORT4-Konstruktoren
 
-Von verfügbar gemachte Konstruktoren `XMUSHORT4` .
+Konstruktoren, die von verfügbar gemacht `XMUSHORT4` werden.
 
-Erstellt Instanzen der [**XMUSHORT4**](/windows/desktop/api/DirectXPackedVector/ns-directxpackedvector-xmushort4) -Struktur.
+Erstellt Instanzen der [**XMUSHORT4-Struktur.**](/windows/desktop/api/DirectXPackedVector/ns-directxpackedvector-xmushort4)
 
 > [!Note]  
 > Die hier aufgeführten Konstruktoren sind nur unter C++ verfügbar.
@@ -55,8 +55,8 @@ Dieser Konstruktor ist nur unter C++ verfügbar.
 <br/></td>
 </tr>
 <tr class="even">
-<td style="text-align: left;"><a href="/windows/desktop/api/directxpackedvector/nf-directxpackedvector-xmushort4-xmushort4(constfloat)"><strong>XMUSHORT4 (konstant float *)</strong></a></td>
-<td style="text-align: left;">Initialisiert eine neue Instanz von <code>XMUSHORT4</code> aus einem Array Argument mit vier Elementen <code>float</code> . <br/> Dieser Konstruktor initialisiert eine neue Instanz von <a href="/windows/desktop/api/DirectXPackedVector/ns-directxpackedvector-xmushort4"><strong>XMUSHORT4</strong></a> aus einem Array Argument mit vier Elementen <code>float</code> . <br/>
+<td style="text-align: left;"><a href="/windows/desktop/api/directxpackedvector/nf-directxpackedvector-xmushort4-xmushort4(constfloat)"><strong>XMUSHORT4 (const float*)</strong></a></td>
+<td style="text-align: left;">Initialisiert eine neue Instanz von aus <code>XMUSHORT4</code> einem Arrayargument mit <code>float</code> vier Element. <br/> Dieser Konstruktor initialisiert eine neue Instanz von <a href="/windows/desktop/api/DirectXPackedVector/ns-directxpackedvector-xmushort4"><strong>XMUSHORT4 aus</strong></a> einem Arrayargument mit <code>float</code> vier Elemente. <br/>
 <blockquote>
 [!Note]<br />
 Dieser Konstruktor ist nur unter C++ verfügbar.
@@ -64,8 +64,8 @@ Dieser Konstruktor ist nur unter C++ verfügbar.
 <br/></td>
 </tr>
 <tr class="odd">
-<td style="text-align: left;"><a href="/windows/desktop/api/directxpackedvector/nf-directxpackedvector-xmushort4-xmushort4(constuint16_t)"><strong>XMUSHORT4 (konstant uint16_t *)</strong></a></td>
-<td style="text-align: left;">Initialisiert eine neue Instanz von <code>XMUSHORT4</code> aus einem Array Argument mit vier Elementen <code>uint16_t</code> . <br/> Dieser Konstruktor initialisiert eine neue Instanz von <a href="/windows/desktop/api/DirectXPackedVector/ns-directxpackedvector-xmushort4"><strong>XMUSHORT4</strong></a> aus einem Array Argument mit vier Elementen <code>uint16_t</code> . <br/>
+<td style="text-align: left;"><a href="/windows/desktop/api/directxpackedvector/nf-directxpackedvector-xmushort4-xmushort4(constuint16_t)"><strong>XMUSHORT4 (const uint16_t*)</strong></a></td>
+<td style="text-align: left;">Initialisiert eine neue Instanz von aus <code>XMUSHORT4</code> einem Arrayargument mit <code>uint16_t</code> vier Element. <br/> Dieser Konstruktor initialisiert eine neue Instanz von <a href="/windows/desktop/api/DirectXPackedVector/ns-directxpackedvector-xmushort4"><strong>XMUSHORT4</strong></a> aus einem aus einem Arrayargument mit <code>uint16_t</code> vier Element. <br/>
 <blockquote>
 [!Note]<br />
 Dieser Konstruktor ist nur unter C++ verfügbar.
@@ -73,8 +73,8 @@ Dieser Konstruktor ist nur unter C++ verfügbar.
 <br/></td>
 </tr>
 <tr class="even">
-<td style="text-align: left;"><a href="/windows/desktop/api/directxpackedvector/nf-directxpackedvector-xmushort4-xmushort4(float_float_float_float)"><strong>XMUSHORT4 (float, float, float, float)</strong></a></td>
-<td style="text-align: left;">Initialisiert eine neue Instanz von <code>XMUSHORT4</code> aus vier <code>float</code> Argumenten. <br/> Dieser Konstruktor initialisiert eine neue Instanz von <a href="/windows/desktop/api/DirectXPackedVector/ns-directxpackedvector-xmushort4"><strong>XMUSHORT4</strong></a> aus vier <code>float</code> Argumenten. <br/>
+<td style="text-align: left;"><a href="/windows/desktop/api/directxpackedvector/nf-directxpackedvector-xmushort4-xmushort4(float_float_float_float)"><strong>XMUSHORT4 (float,float,float,float)</strong></a></td>
+<td style="text-align: left;">Initialisiert eine neue Instanz von <code>XMUSHORT4</code> aus vier <code>float</code> Argumenten. <br/> Dieser Konstruktor initialisiert eine neue Instanz von <a href="/windows/desktop/api/DirectXPackedVector/ns-directxpackedvector-xmushort4"><strong>XMUSHORT4 aus</strong></a> vier <code>float</code> Argumenten. <br/>
 <blockquote>
 [!Note]<br />
 Dieser Konstruktor ist nur unter C++ verfügbar.
@@ -82,8 +82,8 @@ Dieser Konstruktor ist nur unter C++ verfügbar.
 <br/></td>
 </tr>
 <tr class="odd">
-<td style="text-align: left;"><a href="/windows/desktop/api/directxpackedvector/nf-directxpackedvector-xmushort4-xmushort4(uint16_t_uint16_t_uint16_t_uint16_t)"><strong>XMUSHORT4 (uint16_t, uint16_t, uint16_t, uint16_t)</strong></a></td>
-<td style="text-align: left;">Initialisiert eine neue Instanz von <code>XMUSHORT4</code> aus vier <code>uint16_t</code> Argumenten. <br/> Dieser Konstruktor initialisiert eine neue Instanz von <a href="/windows/desktop/api/DirectXPackedVector/ns-directxpackedvector-xmushort4"><strong>XMUSHORT4</strong></a> aus vier <code>uint16_t</code> Argumenten. <br/>
+<td style="text-align: left;"><a href="/windows/desktop/api/directxpackedvector/nf-directxpackedvector-xmushort4-xmushort4(uint16_t_uint16_t_uint16_t_uint16_t)"><strong>XMUSHORT4 (uint16_t,uint16_t,uint16_t,uint16_t)</strong></a></td>
+<td style="text-align: left;">Initialisiert eine neue Instanz von <code>XMUSHORT4</code> aus vier <code>uint16_t</code> Argumenten. <br/> Dieser Konstruktor initialisiert eine neue Instanz von <a href="/windows/desktop/api/DirectXPackedVector/ns-directxpackedvector-xmushort4"><strong>XMUSHORT4 aus</strong></a> vier <code>uint16_t</code> Argumenten. <br/>
 <blockquote>
 [!Note]<br />
 Dieser Konstruktor ist nur unter C++ verfügbar.
@@ -102,7 +102,7 @@ Dieser Konstruktor ist nur unter C++ verfügbar.
 [XMUSHORT4-Erweiterungen](ovw-xmushort4-extensions.md)
 </dt> <dt>
 
-**Verweis**
+**Referenz**
 </dt> <dt>
 
 [**XMUSHORT4**](/windows/desktop/api/DirectXPackedVector/ns-directxpackedvector-xmushort4)

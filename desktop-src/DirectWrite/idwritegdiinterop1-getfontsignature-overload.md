@@ -1,9 +1,9 @@
 ---
-title: IDWriteGdiInterop1 getfontsignature-Methoden (dwrite \_ 3. h)
-description: Ruft eine Schriftart Signatur ab.
+title: IDWriteGdiInterop1 GetFontSignature-Methoden (Dwrite \_ 3.h)
+description: Ruft eine Schriftartsignatur ab.
 ms.assetid: 83967afd-8309-74b7-da76-1caee04a4990
 keywords:
-- Getfontsignature-Methoden direktes Schreiben
+- GetFontSignature-Methoden Direct Write
 topic_type:
 - apiref
 api_location:
@@ -12,16 +12,16 @@ api_type:
 - HeaderDef
 ms.date: 07/02/2019
 ms.topic: reference
-ms.openlocfilehash: c73ef32356de0ed5e1cf0b722368c674606f2058
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 0ae65dc978fc6644248aa36dc72f215b4a39f2ad69fe167f08707bcb81f5636b
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106361353"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117816371"
 ---
-# <a name="idwritegdiinterop1getfontsignature-methods"></a>IDWriteGdiInterop1:: getfontsignature-Methoden
+# <a name="idwritegdiinterop1getfontsignature-methods"></a>IDWriteGdiInterop1::GetFontSignature-Methoden
 
-Ruft eine Schriftart Signatur ab.
+Ruft eine Schriftartsignatur ab.
 
 ### <a name="overload-list"></a>Überladeliste
 
@@ -29,8 +29,8 @@ Ruft eine Schriftart Signatur ab.
 
 | Methode                                                                                                 | BESCHREIBUNG                                                   |
 |:-------------------------------------------------------------------------------------------------------|:--------------------------------------------------------------|
-| [**Getfontsignature ( \* idschreiteschriftart, \* fontSignature)**](/windows/win32/api/dwrite_3/nf-dwrite_3-idwritegdiinterop1-getfontsignature(idwritefontface_fontsignature))       | Liest die Schriftart Signatur aus der angegebenen Schriftart.<br/>      |
-| [**Getfontsignature ( \* idschreitefontface, \* fontSignature)**](/windows/win32/api/dwrite_3/nf-dwrite_3-idwritegdiinterop1-getfontsignature(idwritefontface_fontsignature)) | Liest die Schriftart Signatur aus der angegebenen Schriftart.<br/> |
+| [**GetFontSignature ( \* IDWriteFont, \* FONTSIGNATURE)**](/windows/win32/api/dwrite_3/nf-dwrite_3-idwritegdiinterop1-getfontsignature(idwritefontface_fontsignature))       | Liest die Schriftartsignatur aus der angegebenen Schriftart.<br/>      |
+| [**GetFontSignature ( \* IDWriteFontFace, \* FONTSIGNATURE)**](/windows/win32/api/dwrite_3/nf-dwrite_3-idwritegdiinterop1-getfontsignature(idwritefontface_fontsignature)) | Liest die Schriftsignatur aus der angegebenen Schriftart.<br/> |
 
 
 
@@ -40,11 +40,11 @@ Ruft eine Schriftart Signatur ab.
 
 | Anforderung | Wert |
 |-------------------|----------------------------------------------------------------------------------------|
-| Header<br/> | <dl> <dt>Dwrite \_ 3. h</dt> </dl> |
+| Header<br/> | <dl> <dt>Dwrite \_ 3.h</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 

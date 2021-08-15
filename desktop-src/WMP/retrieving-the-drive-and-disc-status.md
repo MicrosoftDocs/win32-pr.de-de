@@ -1,29 +1,29 @@
 ---
-title: Abrufen des Laufwerks und des Festplatten Status
-description: Abrufen des Laufwerks und des Festplatten Status
+title: Abrufen des Laufwerk- und Datenträgerstatus
+description: Abrufen des Laufwerk- und Datenträgerstatus
 ms.assetid: 5e3e6107-d2bc-450c-a86e-5d3ef7b3092a
 keywords:
-- Windows Media Player, CD-brennen
-- Windows Media Player-Objektmodell, CD-brennen
-- Objektmodell, CD-brennen
-- Windows Media Player ActiveX-Steuerelement, CD-brennen
-- ActiveX-Steuerelement, CD-brennen
-- Windows Media Player Mobile ActiveX-Steuerelement, CD-brennen
-- Windows Media Player Mobile, CD-brennen
-- CD-brennen, Abrufen von Laufwerk-und Festplatten Status
-- Brennen von CDs, Abrufen von Laufwerks-und Festplatten Status
+- Windows Media Player,CD-1
+- Windows Media Player-Objektmodell,CD-1
+- Objektmodell, CD-1
+- Windows Media Player ActiveX,CD-1
+- ActiveX,CD-1
+- Windows Media Player Mobile ActiveX-Steuerelement, CD-Steuerung
+- Windows Media Player Mobil, CD-1
+- CD-10,Abrufen des Laufwerks- und Datenträgerstatus
+- '- CDs, Abrufen des Laufwerks- und Datenträgerstatus'
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 3eab66581c336f642fd53b22f81949847d0a1c89
-ms.sourcegitcommit: 48d1c892045445bcbd0f22bafa2fd3861ffaa6e7
+ms.openlocfilehash: 664315972158b4cf68e7f766f98be095a27d7fa8496f983305cc6baaafe784d6
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/19/2020
-ms.locfileid: "103858024"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117746272"
 ---
-# <a name="retrieving-the-drive-and-disc-status"></a>Abrufen des Laufwerks und des Festplatten Status
+# <a name="retrieving-the-drive-and-disc-status"></a>Abrufen des Laufwerk- und Datenträgerstatus
 
-Vor dem Starten eines CD-Brennvorgangs müssen Sie sicherstellen, dass das ausgewählte CD-ROM-Laufwerk den Vorgang unterstützt, den Sie ausführen möchten. Beispielsweise müssen Sie überprüfen, ob eine CD gelöscht werden kann, bevor Sie [iwmpcdromburn:: Erase](/previous-versions/windows/desktop/api/wmp/nf-wmp-iwmpcdromburn-erase)aufrufen. Der folgende Code zeigt ein Beispiel für die Verwendung von [iwmpcdromburn:: IsAvailable](/previous-versions/windows/desktop/api/wmp/nf-wmp-iwmpcdromburn-isavailable) , um zu bestimmen, ob ein Vorgang unterstützt wird:
+Bevor Sie einen CD-Vorgang starten, müssen Sie sicherstellen, dass das ausgewählte CD-ROM-Laufwerk den Vorgang unterstützt, den Sie ausführen möchten. Sie müssen z. B. überprüfen, ob eine CD gelöscht werden kann, bevor [Sie IWMPC datei::erase aufrufen.](/previous-versions/windows/desktop/api/wmp/nf-wmp-iwmpcdromburn-erase) Der folgende Code zeigt ein Beispiel für die Verwendung [von IWMPC wie folgt: :isAvailable,](/previous-versions/windows/desktop/api/wmp/nf-wmp-iwmpcdromburn-isavailable) um zu bestimmen, ob ein Vorgang unterstützt wird:
 
 
 ```C++
@@ -52,24 +52,24 @@ if (SUCCEEDED(hr))
 
 <dl> <dt>
 
-[**Brennen einer CD**](burning-a-cd.md)
+[**Erstellen einer CD**](burning-a-cd.md)
 </dt> <dt>
 
 [**Abrufen der Schnittstelle zum Brennen von CDs**](retrieving-the-cd-burning-interface.md)
 </dt> <dt>
 
-[**Der Verbrennungsprozess wird gestartet.**](starting-the-burn-process.md)
+[**Starten des Burn-Prozesses**](starting-the-burn-process.md)
 </dt> <dt>
 
 [**Löschen einer erneut beschreibbaren CD**](erasing-a-rewritable-cd.md)
 </dt> <dt>
 
-[**Abrufen des Verbrauchs Status**](retrieving-the-burn-status.md)
+[**Abrufen des Burn-Status**](retrieving-the-burn-status.md)
 </dt> </dl>
 
- 
+ 
 
- 
+ 
 
 
 

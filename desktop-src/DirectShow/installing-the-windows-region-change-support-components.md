@@ -1,27 +1,27 @@
 ---
-description: Installieren der Komponenten der Windows-Regions Änderungs Unterstützung
+description: Installieren der Unterstützungskomponenten für Windows Region Change
 ms.assetid: af0e5e19-f4de-4932-a42b-590a1131e0f6
-title: Installieren der Komponenten der Windows-Regions Änderungs Unterstützung
+title: Installieren der Unterstützungskomponenten für Windows Region Change
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 8affe2055485965198a46bdb748a25a295e2c71e
-ms.sourcegitcommit: a47bd86f517de76374e4fff33cfeb613eb259a7e
+ms.openlocfilehash: 36b56f8cc71298621f21b40b8b8d59764e4f6b9b6dfd17215c33a4a2f46ca4cb
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/06/2021
-ms.locfileid: "106346824"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118398008"
 ---
-# <a name="installing-the-windows-region-change-support-components"></a>Installieren der Komponenten der Windows-Regions Änderungs Unterstützung
+# <a name="installing-the-windows-region-change-support-components"></a>Installieren der Unterstützungskomponenten für Windows Region Change
 
-Anwendungsentwickler können die in Windows integrierte Unterstützung von DVD-Regions Änderungen verwenden, um die Region innerhalb der DVD-Wiedergabe Anwendungen zu ändern.
+Anwendungsentwickler können die in Windows integrierte Dvd-Regionsänderungsunterstützung verwenden, um die Region innerhalb der DVD-Wiedergabeanwendungen zu ändern.
 
-Unter Windows 2000 und höher befindet sich die Komponente, die die Unterstützung der DVD-Regions Änderung bereitstellt, in der dll-storprop.dll (verfügbar in% windir% \\ system32). Diese DLL wird standardmäßig installiert, und es sind keine weiteren Schritte erforderlich, um sicherzustellen, dass diese DLL verfügbar ist.
+Ab Windows 2000 befindet sich die Komponente, die die Unterstützung von DVD-Regionsänderungen bereitstellt, in der DLL-storprop.dll (verfügbar in %windir% \\ system32). Diese DLL wird standardmäßig installiert, und es sind keine zusätzlichen Schritte erforderlich, um sicherzustellen, dass diese DLL verfügbar ist.
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
 <dl> <dt>
 
-[Unterstützung der Änderung von DVD-Regionen in Windows](dvd-region-change-support-in-windows.md)
+[Unterstützung für DVD-Regionsänderungen in Windows](dvd-region-change-support-in-windows.md)
 </dt> </dl>
 
  

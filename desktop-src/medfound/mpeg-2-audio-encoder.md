@@ -1,29 +1,29 @@
 ---
-description: Der Microsoft Media Foundation MPEG-2-Audioencoder ist eine Media Foundation Transformation, die Mono-oder Stereo-Audiodaten in MPEG-1-Audiodaten (ISO/IEC 11172-3) oder MPEG-2-Audiodaten (ISO/IEC 13818-3) codiert.
+description: Der Microsoft Media Foundation MPEG-2-Audioencoder ist eine Media Foundation-Transformation, die Mono- oder Stereoaudio in MPEG-1-Audio (ISO/IEC 11172-3) oder MPEG-2-Audio (ISO/IEC 13818-3) codiert.
 ms.assetid: EBEFED1F-D0B8-4C7E-B1FB-CDE3BDFD99AA
 title: MPEG-2-Audioencoder
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 2454e542ba59f4955668bd1fcefbf5dbc0f11551
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 935b6438c79e9bf78a230f707f8930f859c3fa491dab0326208d5cf79b53f474
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "103863423"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118240009"
 ---
 # <a name="mpeg-2-audio-encoder"></a>MPEG-2-Audioencoder
 
-Der Microsoft Media Foundation MPEG-2-Audioencoder ist eine [Media Foundation Transformation](media-foundation-transforms.md) , die Mono-oder Stereo-Audiodaten in MPEG-1-Audiodaten (ISO/IEC 11172-3) oder MPEG-2-Audiodaten (ISO/IEC 13818-3) codiert.
+Der Microsoft Media Foundation MPEG-2-Audioencoder ist eine [Media Foundation-Transformation,](media-foundation-transforms.md) die Mono- oder Stereoaudio in MPEG-1-Audio (ISO/IEC 11172-3) oder MPEG-2-Audio (ISO/IEC 13818-3) codiert.
 
-Der Encoder unterstützt Layer 1-und Layer 2-Audiodaten. MPEG-Layer 3-Audiodatei (MP3) wird nicht unterstützt. Für MPEG-2 unterstützt der Encoder den LSF-Teil (Low Sampling Häufigkeits) von MPEG-2-Audiodaten. Die Multichannel-Erweiterungen werden nicht unterstützt. Der MFT gibt einen MPEG-elementaren Stream aus. Es können keine Legenden Datenströme, Programmstreams oder Transportdaten Ströme erstellt werden.
+Der Encoder unterstützt Layer 1- und Layer 2-Audio. MPEG-Layer 3-Audio (MP3) wird nicht unterstützt. Für MPEG-2 unterstützt der Encoder den Teil mit niedrigen Samplinghäufigkeiten (Low Sampling Frequencies, LSF) von MPEG-2-Audio. Multichannelerweiterungen werden nicht unterstützt. Der MFT gibt einen elementaren MPEG-Stream aus. Es können keine paketisierten elementaren Datenströme, Programmstreams oder Transportstreams generiert werden.
 
-## <a name="class-identifier"></a>Klassen Bezeichner
+## <a name="class-identifier"></a>Klassenbezeichner
 
-Der Klassen Bezeichner (CLSID) des mepg-2-Audioencoders ist **CLSID- \_ CMPEG2AudioEncoderMFT**, die in der Header Datei "wmcodecdsp. h" definiert ist.
+Der Klassenbezeichner (CLSID) des MEPG-2-Audioencoders ist **CLSID \_ CMPEG2AudioEncoderMFT,** definiert in der Headerdatei wmcodecdsp.h.
 
 ## <a name="output-types"></a>Ausgabetypen
 
-Der Ausgabetyp muss zuerst festgelegt werden, vor dem Eingabetyp. In der folgenden Tabelle sind die erforderlichen und optionalen Attribute für den Ausgabe Medientyp aufgeführt.
+Der Ausgabetyp muss zuerst vor dem Eingabetyp festgelegt werden. In der folgenden Tabelle sind die erforderlichen und optionalen Attribute für den Ausgabemedientyp aufgeführt.
 
 
 
@@ -35,7 +35,7 @@ Der Ausgabetyp muss zuerst festgelegt werden, vor dem Eingabetyp. In der folgend
 </colgroup>
 <thead>
 <tr class="header">
-<th>Attribut</th>
+<th>attribute</th>
 <th>BESCHREIBUNG</th>
 <th>Bemerkungen</th>
 </tr>
@@ -43,13 +43,13 @@ Der Ausgabetyp muss zuerst festgelegt werden, vor dem Eingabetyp. In der folgend
 <tbody>
 <tr class="odd">
 <td><a href="mf-mt-major-type-attribute.md">MF_MT_MAJOR_TYPE</a></td>
-<td>Der Haupttyp.</td>
-<td>Erforderlich. Muss <strong>MFMediaType_Audio</strong>werden.</td>
+<td>Haupttyp.</td>
+<td>Erforderlich. Muss <strong>MFMediaType_Audio</strong>sein.</td>
 </tr>
 <tr class="even">
 <td><a href="mf-mt-subtype-attribute.md">MF_MT_SUBTYPE</a></td>
 <td>Audiountertyp.</td>
-<td>Erforderlich. Muss <strong>MFAudioFormat_MPEG</strong>werden. Dieser Untertyp wird sowohl für MPEG-1-als auch für MPEG-2-Audiodaten verwendet.</td>
+<td>Erforderlich. Muss <strong>MFAudioFormat_MPEG</strong>sein. Dieser Untertyp wird sowohl für MPEG-1- als auch MPEG-2-Audio verwendet.</td>
 </tr>
 <tr class="odd">
 <td><a href="mf-mt-audio-samples-per-second-attribute.md">MF_MT_AUDIO_SAMPLES_PER_SECOND</a></td>
@@ -60,7 +60,7 @@ Der Ausgabetyp muss zuerst festgelegt werden, vor dem Eingabetyp. In der folgend
 <li>44100</li>
 <li>48000</li>
 </ul>
-Außerdem werden die folgenden Werte für MPEG-2 LSF unterstützt: <br/>
+Darüber hinaus werden die folgenden Werte für MPEG-2 LSF unterstützt: <br/>
 <ul>
 <li>16000</li>
 <li>22050</li>
@@ -74,19 +74,19 @@ Außerdem werden die folgenden Werte für MPEG-2 LSF unterstützt: <br/>
 </tr>
 <tr class="odd">
 <td><a href="mf-mt-audio-channel-mask-attribute.md">MF_MT_AUDIO_CHANNEL_MASK</a></td>
-<td>Gibt die Zuweisung von Audiokanälen zu Redner Positionen an.</td>
-<td>Dies ist optional. Wenn festgelegt, muss der Wert 0x3 für Stereo (Front Left und Right Channels) oder 0x4 für Mono (Front-Center-Kanal) lauten.</td>
+<td>Gibt die Zuweisung von Audiokanälen zu Sprecherpositionen an.</td>
+<td>Optional. Wenn diese Einstellung festgelegt ist, muss der Wert für Stereo (frontlinker und rechter Kanal) oder 0x4 für Mono (Front-Center-Kanal) 0x3 werden.</td>
 </tr>
 <tr class="even">
 <td><a href="mf-mt-audio-avg-bytes-per-second-attribute.md">MF_MT_AUDIO_AVG_BYTES_PER_SECOND</a></td>
-<td>Die Bitrate des codierten MPEG-Streams in Bytes pro Sekunde.</td>
-<td>Dies ist optional.<br/> Die Spezifikationen ISO/IEC 11172-3 und ISO/IEC 13818-3 (LSF) definieren verschiedene Bitraten, abhängig von der Abtastrate, der Anzahl der Kanäle und der Audioschicht (1 oder 2). <br/> Der Encoder verwendet standardmäßig Layer 2-Audiodaten. Wenn das <a href="mf-mt-audio-avg-bytes-per-second-attribute.md">MF_MT_AUDIO_AVG_BYTES_PER_SECOND</a> -Attribut nicht festgelegt ist, verwendet der Encoder die folgenden Standard Bitraten:<br/>
+<td>Bitrate des codierten MPEG-Streams in Bytes pro Sekunde.</td>
+<td>Optional.<br/> Die SPEZIFIKATIONEN ISO/IEC 11172-3 und ISO/IEC 13818-3 (LSF) definieren mehrere Bitraten, abhängig von der Samplingrate, der Anzahl der Kanäle und der Audioschicht (1 oder 2). <br/> Der Encoder verwendet standardmäßig Layer 2-Audio. Wenn das <a href="mf-mt-audio-avg-bytes-per-second-attribute.md">MF_MT_AUDIO_AVG_BYTES_PER_SECOND</a> Attribut nicht festgelegt ist, verwendet der Encoder die folgenden Standardbitraten:<br/>
 <ul>
-<li>MPEG-1 Stereo: 224.000 Bits pro Sekunde (Bit/s) = 28.000 Byte pro Sekunde.</li>
-<li>MPEG-1 Mono: 192.000 Bit/s = 24.000 Byte pro Sekunde.</li>
-<li>MPEG-2 LSF, Mono oder Stereo: 160.000 Bit/s = 20.000 Byte pro Sekunde.</li>
+<li>MPEG-1 stereo: 224.000 Bits pro Sekunde (bps) = 28.000 Bytes pro Sekunde.</li>
+<li>MPEG-1 mono: 192.000 bps = 24.000 Bytes pro Sekunde.</li>
+<li>MPEG-2 LSF, Mono oder Stereo: 160.000 Bps = 20.000 Bytes pro Sekunde.</li>
 </ul>
-Dieses Attribut kann auf andere Werte festgelegt werden. Wenn der Wert gemäß den MPEG-Spezifikationen ungültig ist, lehnt der MFT den Medientyp ab.<br/> Sie können auch die Bitrate mithilfe der <a href="/windows/desktop/api/strmif/nn-strmif-icodecapi"><strong>icodecapi</strong></a> -Schnittstelle festlegen. Weitere Informationen finden Sie unter Hinweise.<br/></td>
+Dieses Attribut kann auf andere Werte festgelegt werden. Wenn der Wert gemäß MPEG-Spezifikationen ungültig ist, lehnt der MFT den Medientyp ab.<br/> Sie können die Bitrate auch mithilfe der <a href="/windows/desktop/api/strmif/nn-strmif-icodecapi"><strong>ICodecAPI-Schnittstelle</strong></a> festlegen. Weitere Informationen finden Sie unter Hinweise.<br/></td>
 </tr>
 </tbody>
 </table>
@@ -95,11 +95,11 @@ Dieses Attribut kann auf andere Werte festgelegt werden. Wenn der Wert gemäß d
 
  
 
-Wenn die optionalen Attribute nicht festgelegt sind, fügt der Encoder Sie dem Medientyp hinzu, nachdem der Typ festgelegt wurde.
+Wenn die optionalen Attribute nicht festgelegt sind, fügt der Encoder sie dem Medientyp hinzu, nachdem der Typ festgelegt wurde.
 
 ## <a name="input-types"></a>Eingabetypen
 
-In der folgenden Tabelle sind die erforderlichen und optionalen Attribute für den Eingabe Medientyp aufgeführt.
+In der folgenden Tabelle sind die erforderlichen und optionalen Attribute für den Eingabemedientyp aufgeführt.
 
 
 
@@ -111,7 +111,7 @@ In der folgenden Tabelle sind die erforderlichen und optionalen Attribute für d
 </colgroup>
 <thead>
 <tr class="header">
-<th>Attribut</th>
+<th>attribute</th>
 <th>BESCHREIBUNG</th>
 <th>Bemerkungen</th>
 </tr>
@@ -119,8 +119,8 @@ In der folgenden Tabelle sind die erforderlichen und optionalen Attribute für d
 <tbody>
 <tr class="odd">
 <td><a href="mf-mt-major-type-attribute.md">MF_MT_MAJOR_TYPE</a></td>
-<td>Der Haupttyp.</td>
-<td>Erforderlich. Muss <strong>MFMediaType_Audio</strong>werden.</td>
+<td>Haupttyp.</td>
+<td>Erforderlich. Muss <strong>MFMediaType_Audio</strong>sein.</td>
 </tr>
 <tr class="even">
 <td><a href="mf-mt-subtype-attribute.md">MF_MT_SUBTYPE</a></td>
@@ -129,42 +129,42 @@ In der folgenden Tabelle sind die erforderlichen und optionalen Attribute für d
 </tr>
 <tr class="odd">
 <td><a href="mf-mt-audio-bits-per-sample-attribute.md">MF_MT_AUDIO_BITS_PER_SAMPLE</a></td>
-<td>Anzahl von Bits pro audiostich Probe.</td>
+<td>Anzahl von Bits pro Audiobeispiel.</td>
 <td>Erforderlich. Der Wert muss 16 sein, wenn der Untertyp <strong>MFAudioFormat_PCM</strong>ist, oder 32, wenn der Untertyp <strong>MFAudioFormat_Float</strong>ist.</td>
 </tr>
 <tr class="even">
 <td><a href="mf-mt-audio-samples-per-second-attribute.md">MF_MT_AUDIO_SAMPLES_PER_SECOND</a></td>
 <td>Stichproben pro Sekunde.</td>
-<td>Erforderlich. Muss mit dem Ausgabetyp identisch sein.</td>
+<td>Erforderlich. Muss mit dem Ausgabetyp übereinstimmen.</td>
 </tr>
 <tr class="odd">
 <td><a href="mf-mt-audio-num-channels-attribute.md">MF_MT_AUDIO_NUM_CHANNELS</a></td>
 <td>Anzahl der Kanäle.</td>
-<td>Erforderlich. Muss mit dem Ausgabetyp identisch sein.</td>
+<td>Erforderlich. Muss mit dem Ausgabetyp übereinstimmen.</td>
 </tr>
 <tr class="even">
 <td><a href="mf-mt-audio-block-alignment-attribute.md">MF_MT_AUDIO_BLOCK_ALIGNMENT</a></td>
-<td>Block Ausrichtung (in Bytes).</td>
+<td>Blockausrichtung in Bytes.</td>
 <td>Erforderlich. Berechnen Sie den Wert wie folgt:
 <ul>
-<li><strong>MFAudioFormat_PCM</strong>: Anzahl der Kanäle × 2.</li>
-<li><strong>MFAudioFormat_Float</strong>: Anzahl der Kanäle × 4.</li>
+<li><strong>MFAudioFormat_PCM:</strong>Anzahl der Kanäle × 2.</li>
+<li><strong>MFAudioFormat_Float:</strong>Anzahl der Kanäle × 4.</li>
 </ul></td>
 </tr>
 <tr class="odd">
 <td><a href="mf-mt-audio-avg-bytes-per-second-attribute.md">MF_MT_AUDIO_AVG_BYTES_PER_SECOND</a></td>
-<td>Die Bitrate des codierten AC3-Streams in Bytes pro Sekunde.</td>
-<td>Erforderlich. Muss die Block Ausrichtung × Samples pro Sekunde gleich sein.</td>
+<td>Bitrate des codierten AC3-Streams in Bytes pro Sekunde.</td>
+<td>Erforderlich. Muss der Blockausrichtung × Stichproben pro Sekunde entsprechen.</td>
 </tr>
 <tr class="even">
 <td><a href="mf-mt-audio-channel-mask-attribute.md">MF_MT_AUDIO_CHANNEL_MASK</a></td>
-<td>Gibt die Zuweisung von Audiokanälen zu Redner Positionen an.</td>
-<td>Dies ist optional. Wenn festgelegt, muss der Wert mit dem Ausgabetyp identisch sein.</td>
+<td>Gibt die Zuweisung von Audiokanälen zu Sprecherpositionen an.</td>
+<td>Optional. Wenn diese Einstellung festgelegt ist, muss der Wert mit dem Ausgabetyp übereinstimmen.</td>
 </tr>
 <tr class="odd">
 <td><a href="mf-mt-audio-valid-bits-per-sample-attribute.md">MF_MT_AUDIO_VALID_BITS_PER_SAMPLE</a></td>
-<td>Anzahl gültiger Bits von Audiodaten in jedem Audiobeispiel.</td>
-<td>Dies ist optional. Wenn dieser Wert festgelegt ist, muss der Wert mit <a href="mf-mt-audio-bits-per-sample-attribute.md">MF_MT_AUDIO_BITS_PER_SAMPLE</a>identisch sein.</td>
+<td>Anzahl der gültigen Bits von Audiodaten in jedem Audiobeispiel.</td>
+<td>Optional. Wenn festgelegt, muss der Wert mit dem <a href="mf-mt-audio-bits-per-sample-attribute.md">Wert</a>MF_MT_AUDIO_BITS_PER_SAMPLE.</td>
 </tr>
 </tbody>
 </table>
@@ -173,69 +173,69 @@ In der folgenden Tabelle sind die erforderlichen und optionalen Attribute für d
 
  
 
-Der Encoder unterstützt keine Stichproben Raten Konvertierung oder Stereo/Mono-Konvertierung. Wenn die optionalen Attribute nicht festgelegt sind, fügt der Encoder Sie dem Medientyp hinzu, nachdem der Typ festgelegt wurde.
+Der Encoder unterstützt keine Abtastratenkonvertierung oder Stereo-/Monokonvertierung. Wenn die optionalen Attribute nicht festgelegt sind, fügt der Encoder sie dem Medientyp hinzu, nachdem der Typ festgelegt wurde.
 
 ## <a name="codec-properties"></a>Codec-Eigenschaften
 
-Der Encoder unterstützt die folgenden Eigenschaften über die [**icodecapi**](/windows/win32/api/strmif/nn-strmif-icodecapi) -Schnittstelle.
+Der Encoder unterstützt die folgenden Eigenschaften über die [**ICodecAPI-Schnittstelle.**](/windows/win32/api/strmif/nn-strmif-icodecapi)
 
 
 
 | Eigenschaft                                                                                | BESCHREIBUNG                                                                                      | Standardwert                                                                                                                                                          |
 |-----------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| [Codecapi \_ avenccommonmeanbitrate](../directshow/avenccommonmeanbitrate-property.md)               | Gibt die durchschnittliche codierte Bitrate in Bits pro Sekunde an.                                      | Wie für das Attribut [MF \_ MT \_ -audiodurchschn \_ \_ Bytes \_ pro \_ Sekunde](mf-mt-audio-avg-bytes-per-second-attribute.md) im Ausgabe Medientyp beschrieben.                      |
-| [Codecapi \_ avencmpacodingmode](../directshow/avencmpacodingmode-property.md)                       | Gibt den MPEG-audiocodierungs Modus an.                                                          | Stereo für 2-Kanal-Audiodaten oder einzelner Kanal für 1-Kanal-Audiodaten.<br/> Für zweistufige Audiodaten unterstützt der Encoder auch Dual Kanäle und Joint Stereo.<br/> |
-| [Codecapi \_ avencmpacopyright](../directshow/avencmpacopyright-property.md)                         | Gibt an, ob das Copyright-Bit im MPEG-Audiostream festgelegt wird.                             | Kein Copyright.                                                                                                                                                          |
-| [Codecapi \_ avencmpbetonung sType](../directshow/avencmpaemphasistype-property.md)                   | Gibt den Typ des deduplizierungsfilters an, der verwendet werden soll, wenn der codierte Stream decodiert wird. | Es wurde kein Schwerpunkt angegeben.                                                                                                                                                 |
-| [Avencmpenableredundancyprotection](../directshow/avencmpaenableredundancyprotection-property.md) | Gibt an, ob dem Frame Header eine zyklische Redundanz Überprüfung (CRC) hinzugefügt werden soll.                    | Eine CRC-Prüfsumme wird in den Bitstream geschrieben.                                                                                                                           |
-| [Codecapi \_ avencmpalayer](../directshow/avencmpalayer-property.md)                                 | Gibt die MPEG-Audioschicht an.                                                                  | Layer 2-Audiodatei.                                                                                                                                                         |
-| [Codecapi \_ avencmporiginalbitstream](../directshow/avencmpaoriginalbitstream-property.md)         | Gibt an, ob für das ursprüngliche Bit im MPEG-Audiostream festgelegt werden soll.                          | "Ursprüngliches" Bit ist deaktiviert.                                                                                                                                                 |
-| [Codecapi \_ avencmpaprivateuserbit](../directshow/avencmpaprivateuserbit-property.md)               | Gibt an, ob für das private Benutzer Bit im MPEG-Audiostream festgelegt werden soll.                      | Privates Benutzer Bit ist deaktiviert.                                                                                                                                               |
+| [CODECAPI \_ AVEncCommonMeanBitRate](../directshow/avenccommonmeanbitrate-property.md)               | Gibt die durchschnittliche codierte Bitrate in Bits pro Sekunde an.                                      | Wie für das [MF \_ MT AUDIO \_ \_ AVG BYTES PER \_ \_ \_ SECOND-Attribut](mf-mt-audio-avg-bytes-per-second-attribute.md) im Ausgabemedientyp beschrieben.                      |
+| [CODECAPI \_ AVEncMPACodingMode](../directshow/avencmpacodingmode-property.md)                       | Gibt den MPEG-Audiocodierungsmodus an.                                                          | Stereo für 2-Kanal-Audio oder ein Kanal für 1-Kanal-Audio.<br/> Für 2-Kanal-Audio unterstützt der Encoder auch Dualkanal- und Gemeinsame Stereo.<br/> |
+| [CODECAPI \_ AVEncMPACopyright](../directshow/avencmpacopyright-property.md)                         | Gibt an, ob das Copyrightbit im MPEG-Audiostream festgelegt werden soll.                             | Kein Copyright.                                                                                                                                                          |
+| [CODECAPI \_ AVEncMPAEmphasisType](../directshow/avencmpaemphasistype-property.md)                   | Gibt den Typ des Filters zur De-Hervorhebung an, der beim Decodieren des codierten Streams verwendet werden soll. | Es wurde keine Hervorhebung angegeben.                                                                                                                                                 |
+| [AVEncMPAEnableRedundancyProtection](../directshow/avencmpaenableredundancyprotection-property.md) | Gibt an, ob dem Frameheader eine zyklische Redundanzprüfung (CRC) hinzugefügt werden soll.                    | Eine CRC-Prüfsumme wird in den Bitstream geschrieben.                                                                                                                           |
+| [CODECAPI \_ AVEncMPALayer](../directshow/avencmpalayer-property.md)                                 | Gibt die MPEG-Audioebene an.                                                                  | Layer 2-Audio.                                                                                                                                                         |
+| [CODECAPI \_ AVEncMPAOriginalBitstream](../directshow/avencmpaoriginalbitstream-property.md)         | Gibt an, ob für das ursprüngliche Bit im MPEG-Audiostream festgelegt werden soll.                          | Das "Original"-Bit ist deaktiviert.                                                                                                                                                 |
+| [CODECAPI \_ AVEncMPAPrivateUserBit](../directshow/avencmpaprivateuserbit-property.md)               | Gibt an, ob für das private Benutzerbit im MPEG-Audiostream festgelegt werden soll.                      | Privates Benutzerbit ist deaktiviert.                                                                                                                                               |
 
 
 
  
 
-Um einen Zeiger auf die [**icodecapi**](/windows/win32/api/strmif/nn-strmif-icodecapi) -Schnittstelle abzurufen, nennen Sie [**QueryInterface**](/windows/win32/api/unknwn/nf-unknwn-iunknown-queryinterface(q)) auf der MFT.
+Um einen Zeiger auf die [**ICodecAPI-Schnittstelle zu**](/windows/win32/api/strmif/nn-strmif-icodecapi) erhalten, rufen [**Sie QueryInterface auf**](/windows/win32/api/unknwn/nf-unknwn-iunknown-queryinterface(q)) dem MFT auf.
 
-Die MFT implementiert die folgenden [**icodecapi**](/windows/win32/api/strmif/nn-strmif-icodecapi) -Methoden:
+MFT implementiert die folgenden [**ICodecAPI-Methoden:**](/windows/win32/api/strmif/nn-strmif-icodecapi)
 
--   [**Getparameterrange**](/windows/win32/api/strmif/nf-strmif-icodecapi-getparameterrange)
+-   [**GetParameterRange**](/windows/win32/api/strmif/nf-strmif-icodecapi-getparameterrange)
 -   [**GetParameterValues**](/windows/win32/api/strmif/nf-strmif-icodecapi-getparametervalues)
 -   [**GetValue**](/windows/win32/api/strmif/nf-strmif-icodecapi-getvalue)
--   [**Ismodifizierbar**](/windows/win32/api/strmif/nf-strmif-icodecapi-ismodifiable)
--   [**IsSupported**](/windows/win32/api/strmif/nf-strmif-icodecapi-issupported)
+-   [**IsModifiable**](/windows/win32/api/strmif/nf-strmif-icodecapi-ismodifiable)
+-   [**Issupported**](/windows/win32/api/strmif/nf-strmif-icodecapi-issupported)
 -   [**SetValue**](/windows/win32/api/strmif/nf-strmif-icodecapi-setvalue)
 
-Alle anderen [**icodecapi**](/windows/win32/api/strmif/nn-strmif-icodecapi) -Methoden geben **E \_ notimpl** zurück.
+Alle anderen [**ICodecAPI-Methoden**](/windows/win32/api/strmif/nn-strmif-icodecapi) geben **E \_ NOTIMPL zurück.**
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Jeder MPEG-audioframe enthält entweder 384 (Layer 1)-oder 1152 (Layer 2)-Audiobeispiele pro Kanal. Jeder Eingabepuffer für den Encoder kann jedoch eine beliebige Anzahl von PCM-Stichproben enthalten. Die Größe jedes Eingabe Puffers muss ein Vielfaches der Block Ausrichtung sein. Der Encoder speichert Eingabe Beispiele zwischen, bis er für einen MPEG-audioframe ausreichend ist.
+Jeder MPEG-Audioframe enthält entweder 384 (Schicht 1) oder 1152 (Schicht 2) Audiobeispiele pro Kanal. Jeder Eingabepuffer für den Encoder kann jedoch eine beliebige Anzahl von PCM-Stichproben enthalten. Die Größe jedes Eingabepuffers muss ein Vielfaches der Blockausrichtung sein. Der Encoder speichert Eingabebeispiele zwischen, bis er genügend für einen MPEG-Audioframe hat.
 
-Jeder Ausgabepuffer enthält einen unformatierten MPEG-Frame. Die Größe jedes Ausgabepuffers hängt von der Bitrate und der Stichprobenrate ab.
+Jeder Ausgabepuffer enthält einen unformatten MPEG-Frame. Die Größe der einzelnen Ausgabepuffer hängt von der Bitrate und der Abtastrate ab.
 
 ### <a name="configuring-the-encoder"></a>Konfigurieren des Encoders
 
-Um die Standardeinstellungen für den Encoder zu ändern, führen Sie die folgenden Schritte aus:
+Führen Sie die folgenden Schritte aus, um die Standardeinstellungen für den Encoder zu ändern:
 
-1.  Erstellen Sie eine Instanz des MFT-Encoders.
-2.  Aufrufen von [**imftransform:: getoutputavailabletype**](/windows/desktop/api/mftransform/nf-mftransform-imftransform-getoutputavailabletype) , um die Liste der bevorzugten Ausgabetypen zu erhalten. Der Encoder listet alle Stichproben Raten für Mono und Stereo auf. Wählen Sie basierend auf der Samplingrate und der Anzahl der Kanäle einen der folgenden Medientypen aus. Das Attribut " [MF \_ MT \_ audiodurchschn \_ \_ Bytes \_ pro \_ Sekunde](mf-mt-audio-avg-bytes-per-second-attribute.md) " gibt die Standard Bitrate in Byte pro Sekunde an.
-3.  Optional: Sie können die standardbitrate überschreiben, indem Sie für den Ausgabe Medientyp einen neuen Wert für " [MF \_ MT \_ -audiodurchschn. \_ \_ Byte \_ pro \_ Sekunde](mf-mt-audio-avg-bytes-per-second-attribute.md) " festlegen. Gültige Bitraten sind abhängig von der Abtastrate, der Anzahl der Kanäle und der Audioschicht.
+1.  Erstellen Sie eine Instanz des Encoder-MFT.
+2.  Rufen [**Sie DEN TYP 1::GetOutputAvailableType**](/windows/desktop/api/mftransform/nf-mftransform-imftransform-getoutputavailabletype) auf, um die Liste der bevorzugten Ausgabetypen zu erhalten. Der Encoder aufzählt alle Abtastraten für Mono und Stereo. Wählen Sie basierend auf der Abtastrate und der Anzahl der Kanäle einen dieser Medientypen aus. Das [MF \_ MT AUDIO \_ \_ AVG BYTES PER \_ \_ \_ SECOND-Attribut](mf-mt-audio-avg-bytes-per-second-attribute.md) gibt die Standardbitrate in Bytes pro Sekunde an.
+3.  Optional: Sie können die Standardbitrate überschreiben, indem Sie einen neuen Wert für [MF \_ MT AUDIO \_ \_ AVG BYTES PER \_ \_ \_ SECOND](mf-mt-audio-avg-bytes-per-second-attribute.md) für den Ausgabemedientyp festlegen. Gültige Bitraten hängen von der Abtastrate, der Anzahl der Kanäle und der Audioebene ab.
     > [!Note]  
-    > An dieser Stelle im Konfigurationsprozess verwendet der Encoder standardmäßig Layer 2-Audiodaten und akzeptiert nur Layer 2-Bitraten. In einem späteren Schritt können Sie den Encoder auf Schicht 1 umstellen (siehe Schritt 7). Überlassen Sie in diesem Fall die Standard Bitrate für jetzt. Sie können Sie in Schritt 8 wieder ändern.
+    > An diesem Punkt des Konfigurationsprozesses verwendet der Encoder standardmäßig Layer 2-Audio und akzeptiert nur Layer-2-Bitraten. Sie können den Encoder in einem späteren Schritt auf Ebene 1 umschalten (siehe Schritt 7). Belasse in diesem Fall vorerst die Standardbitrate. Sie können ihn in Schritt 8 erneut ändern.
 
      
 
-4.  Aufrufen von [**imftransform:: setoutputtype**](/windows/desktop/api/mftransform/nf-mftransform-imftransform-setoutputtype) zum Festlegen des Ausgabemedien Typs. Wenn Sie einen eigenen Wert für " [MF \_ MT \_ -audiodurchschn. \_ \_ Byte \_ pro \_ Sekunde](mf-mt-audio-avg-bytes-per-second-attribute.md) " festlegen und der MFT den Ausgabe Medientyp ablehnt, liegt dies wahrscheinlich daran, dass Sie eine ungültige Bitrate angegeben haben.
-5.  Aufrufen von [**imftransform:: getinputavailabletype**](/windows/desktop/api/mftransform/nf-mftransform-imftransform-getinputavailabletype) zum Aufzählen des Eingabemedien Typs. Da die Stichprobenrate und die Anzahl der Kanäle mit dem Ausgabetyp identisch sein müssen, werden nur zwei Optionen aufgelistet: 32-Bit-Gleit Komma-PCM-Eingabe und 32-Bit-ganzzahlige PCM-Eingabe. Wählen Sie eine der folgenden aus.
-6.  Greifen Sie auf [**imftransform:: setinputtype**](/windows/desktop/api/mftransform/nf-mftransform-imftransform-setinputtype) zu, um den Eingabe Medientyp festzulegen.
-7.  Optional: Legen Sie zum Codieren von Layer-1-Audiodaten die [codecapi-Eigenschaft " \_ avencmpalayer](../directshow/avencmpalayer-property.md) " auf **eavencmpalayer \_ 1** fest.
-8.  Optional: um die Bitrate zu ändern, legen Sie die [codecapi-Eigenschaft " \_ avenccommonmeanbitrate](../directshow/avenccommonmeanbitrate-property.md) " fest. Die Bitrate muss eine der gültigen Bitraten sein, die in den LSF-Spezifikationen MPEG-1 oder MPEG-2 aufgeführt sind. Alternativ können Sie [**icodecapi:: getParameterValues**](/windows/win32/api/strmif/nf-strmif-icodecapi-getparametervalues) aufrufen, um eine Liste gültiger Bitraten basierend auf den aktuellen Einstellungen abzurufen.
-9.  Optional: mit der 2-Kanal-Audiodatei können Sie die [codecapi-Eigenschaft " \_ avencmpacodingmode](../directshow/avencmpacodingmode-property.md) " festlegen, um den Codierungs Modus in den dualen Kanal oder den gemeinsamen Stereo zu ändern. Sie können [**icodecapi:: getparameterrange**](/windows/win32/api/strmif/nf-strmif-icodecapi-getparameterrange) aufrufen, um die gültigen Optionen zu erhalten. (Für eine audioaudioschnittstelle ist die einzige Option Mono.)
-10. Optional: Legen Sie alle anderen zuvor aufgeführten [**icodecapi**](/windows/win32/api/strmif/nn-strmif-icodecapi) -Eigenschaften fest.
+4.  Rufen [**Sie ZUM Festlegen des Ausgabemedientyps DEN WERTTRANSFORM::SetOutputType**](/windows/desktop/api/mftransform/nf-mftransform-imftransform-setoutputtype) auf. Wenn Sie einen eigenen Wert für [MF \_ MT AUDIO \_ \_ AVG BYTES PER \_ \_ \_ SECOND](mf-mt-audio-avg-bytes-per-second-attribute.md) festlegen und der MFT den Ausgabemedientyp zurückweisen, liegt dies wahrscheinlich daran, dass Sie eine ungültige Bitrate angegeben haben.
+5.  Rufen [**Sie DEN TYP DER EINGABETRANSFORM::GetInputAvailableType**](/windows/desktop/api/mftransform/nf-mftransform-imftransform-getinputavailabletype) auf, um den Eingabemedientyp aufzählen. Da die Abtastrate und die Anzahl der Kanäle mit dem Ausgabetyp identisch sein müssen, werden nur zwei Optionen aufzählt: 32-Bit-PCM-Eingabe mit Gleitkomma und PCM-Eingabe mit 16-Bit-Ganzzahl. Wählen Sie eine dieser Beiden aus.
+6.  Rufen [**Sie ZUM Festlegen des Eingabemedientyps DEN WERTTRANSFORM::SetInputType**](/windows/desktop/api/mftransform/nf-mftransform-imftransform-setinputtype) auf.
+7.  Optional: Legen Sie zum Codieren von Layer 1-Audio die [ \_ CODECAPI-Eigenschaft AVEncMPALayer](../directshow/avencmpalayer-property.md) auf **eAVEncMPALayer \_ 1 fest.**
+8.  Optional: Legen Sie zum Ändern der Bitrate die [ \_ CODECAPI-Eigenschaft AVEncCommonMeanBitRate](../directshow/avenccommonmeanbitrate-property.md) fest. Die Bitrate muss eine der gültigen Bitraten sein, die in den MPEG-1- oder MPEG-2-LSF-Spezifikationen aufgeführt sind. Alternativ können Sie [**ICodecAPI::GetParameterValues**](/windows/win32/api/strmif/nf-strmif-icodecapi-getparametervalues) aufrufen, um basierend auf den aktuellen Einstellungen eine Liste gültiger Bitraten zu erhalten.
+9.  Optional: Mit 2-Kanal-Audio können Sie die [ \_ CODECAPI-Eigenschaft AVEncMPACodingMode](../directshow/avencmpacodingmode-property.md) festlegen, um den Codierungsmodus in Dual-Channel- oder Joint Stereo-Modus zu ändern. Sie können [**ICodecAPI::GetParameterRange aufrufen,**](/windows/win32/api/strmif/nf-strmif-icodecapi-getparameterrange) um die gültigen Optionen zu erhalten. (Für 1-Kanal-Audio ist mono die einzige Option.)
+10. Optional: Legen Sie eine der anderen zuvor aufgeführten [**ICodecAPI-Eigenschaften**](/windows/win32/api/strmif/nn-strmif-icodecapi) fest.
 
-Es ist wichtig, die Reihenfolge dieser Schritte zu befolgen. Legen Sie insbesondere den Ausgabe Medientyp vor dem Ändern von [**icodecapi**](/windows/win32/api/strmif/nn-strmif-icodecapi) -Eigenschaften fest. Außerdem müssen Sie die **icodecapi** -Eigenschaften festlegen, bevor das erste Eingabe Beispiel vom MFT empfangen wird. Nachdem die MFT Eingaben empfangen hat, sind die Codec-Eigenschaften schreibgeschützt, und [**icodecapi:: SetValue**](/windows/win32/api/strmif/nf-strmif-icodecapi-setvalue) gibt den Wert **S \_ false** zurück.
+Es ist wichtig, die Reihenfolge dieser Schritte zu befolgen. Legen Sie insbesondere den Ausgabemedientyp fest, bevor Sie [**ICodecAPI-Eigenschaften**](/windows/win32/api/strmif/nn-strmif-icodecapi) ändern. Außerdem müssen Sie **ICodecAPI-Eigenschaften** festlegen, bevor MFT das erste Eingabebeispiel empfängt. Nachdem MFT Eingaben empfangen hat, sind die Codeceigenschaften schreibgeschützt, und [**ICodecAPI::SetValue**](/windows/win32/api/strmif/nf-strmif-icodecapi-setvalue) gibt den Wert **S FALSE \_ zurück.**
 
 ### <a name="supported-bit-rates"></a>Unterstützte Bitraten
 
@@ -375,34 +375,34 @@ Layer 2-
 \*\* Nur Stereo  
 </dl>
 
-### <a name="example-media-types"></a>Beispiel Medientypen
+### <a name="example-media-types"></a>Beispielmedientypen
 
-Im folgenden finden Sie ein Beispiel für die Medientypen, die zum Codieren von ganzzahligen 16-Bit-PCM, 48-kHz-Stereo Audiodaten mit der Standard Bitrate benötigt werden.
+Hier sehen Sie ein Beispiel für die Medientypen, die zum Codieren von 16-Bit-Ganzzahl-PCM-Stereoaudio mit 48 kHz mit der Standardbitrate erforderlich sind.
 
-Ausgabe Medientyp:
+Ausgabemedientyp:
 
-| Attribut                                                                           | Wert                   |
+| attribute                                                                           | Wert                   |
 |-------------------------------------------------------------------------------------|-------------------------|
-| [Haupt-Typ des MF- \_ MT \_ \_](mf-mt-major-type-attribute.md)                               | **MF MediaType \_ -Audiodatei**  |
-| [MF- \_ MT- \_ Untertyp](mf-mt-subtype-attribute.md)                                      | **MF Audioformat \_ MPEG** |
-| [MF \_ \_ -MT- \_ Audiobeispiele \_ pro \_ Sekunde](mf-mt-audio-samples-per-second-attribute.md) | 48000                   |
-| [MF \_ \_ -MT- \_ audionum- \_ Kanäle](mf-mt-audio-num-channels-attribute.md)              | 2                       |
+| [MF \_ \_ MT-HAUPTTYP \_](mf-mt-major-type-attribute.md)                               | **MFMediaType \_ Audio**  |
+| [MF \_ \_ MT-UNTERTYP](mf-mt-subtype-attribute.md)                                      | **MFAudioFormat \_ MPEG** |
+| [MF \_ \_ MT-AUDIOBEISPIELE \_ \_ PRO \_ SEKUNDE](mf-mt-audio-samples-per-second-attribute.md) | 48000                   |
+| [MF \_ MT \_ AUDIO \_ NUM \_ CHANNELS](mf-mt-audio-num-channels-attribute.md)              | 2                       |
 
 
 
  
 
-Eingabe Medientyp:
+Eingabemedientyp:
 
-| Attribut                                                                                | Wert                  |
+| attribute                                                                                | Wert                  |
 |------------------------------------------------------------------------------------------|------------------------|
-| [Haupt-Typ des MF- \_ MT \_ \_](mf-mt-major-type-attribute.md)                                    | **MF MediaType \_ -Audiodatei** |
-| [MF- \_ MT- \_ Untertyp](mf-mt-subtype-attribute.md)                                           | **MF Audioformat \_ PCM** |
-| [MF \_ \_ -MT- \_ audiobits \_ pro \_ Beispiel](mf-mt-audio-bits-per-sample-attribute.md)            | 16                     |
-| [MF \_ \_ -MT- \_ Audiobeispiele \_ pro \_ Sekunde](mf-mt-audio-samples-per-second-attribute.md)      | 48000                  |
-| [MF \_ \_ -MT- \_ audionum- \_ Kanäle](mf-mt-audio-num-channels-attribute.md)                   | 2                      |
-| [MF \_ \_ -MT- \_ Audioblock \_ Ausrichtung](mf-mt-audio-block-alignment-attribute.md)             | 4                      |
-| [MF \_ \_ -MT-audiodurchschn. \_ \_ Byte \_ pro \_ Sekunde](mf-mt-audio-avg-bytes-per-second-attribute.md) | 192000                 |
+| [MF \_ \_ MT-HAUPTTYP \_](mf-mt-major-type-attribute.md)                                    | **MFMediaType \_ Audio** |
+| [MF \_ \_ MT-UNTERTYP](mf-mt-subtype-attribute.md)                                           | **MFAudioFormat \_ PCM** |
+| [MF \_ \_ MT-AUDIOBITS \_ \_ PRO \_ BEISPIEL](mf-mt-audio-bits-per-sample-attribute.md)            | 16                     |
+| [MF \_ \_ MT-AUDIOBEISPIELE \_ \_ PRO \_ SEKUNDE](mf-mt-audio-samples-per-second-attribute.md)      | 48000                  |
+| [MF \_ MT \_ AUDIO \_ NUM \_ CHANNELS](mf-mt-audio-num-channels-attribute.md)                   | 2                      |
+| [MF \_ MT \_ AUDIO \_ BLOCK \_ ALIGNMENT](mf-mt-audio-block-alignment-attribute.md)             | 4                      |
+| [MF \_ MT \_ AUDIO \_ AVG \_ BYTES \_ PER \_ SECOND](mf-mt-audio-avg-bytes-per-second-attribute.md) | 192000                 |
 
 
 
@@ -414,7 +414,7 @@ Eingabe Medientyp:
 
 | Anforderung | Wert |
 |-------------------------------------|-------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows 8 \[ -Desktop-Apps\]<br/>                                                |
+| Unterstützte Mindestversion (Client)<br/> | \[Windows 8 Nur Desktop-Apps\]<br/>                                                |
 | Unterstützte Mindestversion (Server)<br/> | Nicht unterstützt<br/>                                                                 |
 | DLL<br/>                      | <dl> <dt>Msmpeg2enc.dll</dt> </dl> |
 

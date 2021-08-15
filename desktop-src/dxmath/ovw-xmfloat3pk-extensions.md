@@ -1,19 +1,19 @@
 ---
-description: Ein 3D-Vektor mit X-und Y-Komponenten, die als 11-Bit-Gleit Komma Zahl gespeichert sind, und Z-Komponente als 10-Bit-Gleit Komma Wert.
+description: Ein 3D-Vektor mit X- und Y-Komponenten, die als 11-Bit-Gleitkommazahl gespeichert sind, und einer Z-Komponente, die als 10-Bit-Gleitkommawert gespeichert ist.
 ms.assetid: cca32fd6-9f41-49c2-8e2a-247bbf78edca
 title: XMFLOAT3PK-Erweiterungen
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: a5afc12c7e481253363da599c53e993d8a3f6584
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 855f78541d815391ad6e20c5256f4d98beedec9fb04b090e9ac3c09a4d2eabfb
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104215094"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118277925"
 ---
 # <a name="xmfloat3pk-extensions"></a>XMFLOAT3PK-Erweiterungen
 
-Ein 3D-Vektor mit X-und Y-Komponenten, die als 11-Bit-Gleit Komma Zahl gespeichert sind, und Z-Komponente als 10-Bit-Gleit Komma Wert.
+Ein 3D-Vektor mit X- und Y-Komponenten, die als 11-Bit-Gleitkommazahl gespeichert sind, und einer Z-Komponente, die als 10-Bit-Gleitkommawert gespeichert ist.
 
 > [!Note]  
 > Die hier aufgeführten Features sind nur bei der Entwicklung mit C++ verfügbar.
@@ -24,10 +24,10 @@ Ein 3D-Vektor mit X-und Y-Komponenten, die als 11-Bit-Gleit Komma Zahl gespeiche
 
 
 
-| Thema                                                           | BESCHREIBUNG                                      |
+| Thema                                                           | Beschreibung                                      |
 |-----------------------------------------------------------------|--------------------------------------------------|
-| [**XMFLOAT3PK-Konstruktoren**](xmfloat3pk-ctor.md)<br/>   | Von verfügbar gemachte Konstruktoren `XMFLOAT3PK` .<br/> |
-| [XMFLOAT3PK-Operatoren](ovw-xmfloat3pk-operators.md)<br/> | Von verfügbar gemachte Operatoren `XMFLOAT3PK` .<br/>    |
+| [**XMFLOAT3PK-Konstruktoren**](xmfloat3pk-ctor.md)<br/>   | Konstruktoren, die von verfügbar gemacht `XMFLOAT3PK` werden.<br/> |
+| [XMFLOAT3PK-Operatoren](ovw-xmfloat3pk-operators.md)<br/> | Operatoren, die von verfügbar gemacht `XMFLOAT3PK` werden.<br/>    |
 
 
 

@@ -1,9 +1,9 @@
 ---
-title: Customslider. Image
-description: Das Image-Attribut gibt den Namen der Datei an oder Ruft den Namen der Datei ab, die den verschiedenen Zuständen des benutzerdefinierten Schiebereglers entspricht.
+title: LIDER.image
+description: Das Imageattribut gibt den Namen der Datei an, die die Bilder enthält, die den verschiedenen Zustände des benutzerdefinierten Schiebereglers entspricht, oder ruft diesen ab.
 ms.assetid: 7db4f924-76af-4451-831c-1ed8ab1315ee
 keywords:
-- Windows-Media Player "customslider. Image"
+- LIDER.image-Windows Media Player
 topic_type:
 - apiref
 api_name:
@@ -12,16 +12,16 @@ api_type:
 - NA
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: f425ce138b2a11d2be834f39603ecc295c52c706
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: f3b169bbdcac0e251a161c8e09f352caf460280b23e0198167a641721caa6c64
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106352005"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117936248"
 ---
-# <a name="customsliderimage"></a>Customslider. Image
+# <a name="customsliderimage"></a>LIDER.image
 
-Das **Image** -Attribut gibt den Namen der Datei an oder Ruft den Namen der Datei ab, die den verschiedenen Zuständen des benutzerdefinierten Schiebereglers entspricht.
+Das  Imageattribut gibt den Namen der Datei an, die die Bilder enthält, die den verschiedenen Zustände des benutzerdefinierten Schiebereglers entspricht, oder ruft diesen ab.
 
 ``` syntax
         elementID.image
@@ -29,21 +29,21 @@ Das **Image** -Attribut gibt den Namen der Datei an oder Ruft den Namen der Date
 
 ## <a name="possible-values"></a>Mögliche Werte
 
-Dieses Attribut ist eine Lese- **/schreibzeichenfolge** , die den Namen einer Bilddatei enthält.
+Dieses Attribut ist eine  Zeichenfolge mit Lese-/Schreibzugriff, die den Namen einer Bilddatei enthält.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Das **Image** -Attribut ist erforderlich. Es gibt eine Bilddatei an, die aus mindestens einem untergeordneten Bild besteht, das entweder horizontal oder vertikal angeordnet ist und die verschiedenen Zustände des benutzerdefinierten Schiebereglers darstellt. Jedes untergeordnete Image muss die gleichen Dimensionen wie das **positionImage** aufweisen, oder der benutzerdefinierte Schieberegler funktioniert nicht ordnungsgemäß. Die Höhe oder Breite des gesamten Bilds muss daher ein gleich Vielfaches der Höhe oder Breite des **positionbilds** sein.
+Das  Imageattribut ist erforderlich. Sie gibt eine Bilddatei an, die aus einem oder mehreren untergeordneten Bildern besteht, die entweder horizontal oder vertikal angeordnet sind und die verschiedenen Zustände des benutzerdefinierten Schiebereglers darstellen. Jedes Unterbild muss die gleichen Dimensionen wie **das positionImage** haben, oder der benutzerdefinierte Schieberegler funktioniert nicht ordnungsgemäß. Die Höhe oder Breite des Gesamtbilds muss daher ein gleichmäßiges Vielfaches der Höhe oder Breite von **positionImage sein.**
 
-Die unterstützten Bild Dateitypen sind BMP, JPG, PNG und GIF (keine animierten GIFs).
+Die unterstützten Bilddateitypen sind BMP, JPG, PNG und GIF (ohne animierte GIFs).
 
 ## <a name="examples"></a>Beispiele
 
-Im folgenden finden Sie ein Beispiel für ein benutzerdefiniertes Schieberegler-Image. Das entsprechende **positionImage** wird im Beispiel Abschnitt der **positionImage** -Eigenschaft angezeigt.
+Im Folgenden finden Sie ein Beispiel für ein benutzerdefiniertes Schiebereglerbild. Das entsprechende **positionImage** wird im Beispielabschnitt der **positionImage-Eigenschaft** angezeigt.
 
-![Beispiel eines customslider-Bilds](images/dial.png)
+![Beispielbild eines Liders](images/dial.png)
 
-Das **positionImage** -Attribut enthält auch ein Codebeispiel, das veranschaulicht, wie die Attribute des **customslider** -Elements verwendet werden.
+Das **attribut positionImage** enthält auch ein Codebeispiel, das veranschaulicht, wie die Attribute des **ELEMENTS VERDRLIDER** verwendet werden.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -51,18 +51,18 @@ Das **positionImage** -Attribut enthält auch ein Codebeispiel, das veranschauli
 
 | Anforderung | Wert |
 |--------------------|------------------------------------------------------|
-| Version<br/> | Windows Media Player, Version 7,0 oder höher<br/> |
+| Version<br/> | Windows Media Player Version 7.0 oder höher<br/> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Customslider-Element**](customslider-element.md)
+[**LIDER-Element**](customslider-element.md)
 </dt> <dt>
 
-[**Customslider. positionImage**](customslider-positionimage.md)
+[**LIDER.positionImage**](customslider-positionimage.md)
 </dt> </dl>
 
  

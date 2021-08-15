@@ -1,34 +1,34 @@
 ---
-title: Verwenden eines Ereignis Rückrufs zum Verwalten der gepufferten Wiedergabe
-description: Verwenden eines Ereignis Rückrufs zum Verwalten der gepufferten Wiedergabe
+title: Verwenden eines Ereignisrückrufs zum Verwalten der gepufferten Wiedergabe
+description: Verwenden eines Ereignisrückrufs zum Verwalten der gepufferten Wiedergabe
 ms.assetid: 3b60daea-574d-430b-b14e-1fefceb69dfb
 keywords:
-- Digital Instrumentation Digital Interface (MIDI), gepufferte Wiedergabe
-- MIDI (Digital Instrumentation Digital Interface), gepufferte Wiedergabe
-- Abspielen von MIDI-Dateien, gepufferte Wiedergabe
-- gepufferte Wiedergabe
-- Funktion "kreateevent"
-- Digital Instrumentation Digital Interface (MIDI), Ereignis Rückruf
-- MIDI (Digital Interface Digital Interface), Ereignis Rückruf
-- Abspielen von MIDI-Dateien, Ereignis Rückruf
-- Ereignis Rückruf
+- Keyboard Instrument Digital Interface (KEYBOARD), gepufferte Wiedergabe
+- KEYBOARD (Keyboard Instrument Digital Interface), gepufferte Wiedergabe
+- Wiedergeben vonSCHALT-Dateien, gepufferte Wiedergabe
+- Gepufferte Wiedergabe
+- CreateEvent-Funktion
+- Instrument Digital Interface (KEYBOARD), Ereignisrückruf
+- KEYBOARD (Instrument Digital Interface), Ereignisrückruf
+- Wiedergeben von DANN-Dateien,Ereignisrückruf
+- Ereignisrückruf
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 2fc6f6cc7bec7971c117cb81b2f823d7184bc2fd
-ms.sourcegitcommit: ebd3ce6908ff865f1ef66f2fc96769be0aad82e1
+ms.openlocfilehash: 747652c10471662daacfe433a8fc22d5248bf2fe2365b6b314e76d0b91ced127
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/19/2020
-ms.locfileid: "103725417"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118370266"
 ---
-# <a name="using-an-event-callback-to-manage-buffered-playback"></a>Verwenden eines Ereignis Rückrufs zum Verwalten der gepufferten Wiedergabe
+# <a name="using-an-event-callback-to-manage-buffered-playback"></a>Verwenden eines Ereignisrückrufs zum Verwalten der gepufferten Wiedergabe
 
-Um einen Ereignis Rückruf zu verwenden, verwenden Sie die Funktion "-Funktion", [um das Handle](/windows/win32/api/synchapi/nf-synchapi-createeventa) eines Ereignisses abzurufen. Geben Sie in einem Aufrufen der [**midioutopen**](/windows/win32/api/mmeapi/nf-mmeapi-midioutopen) -Funktion \_ das Rückruf Ereignis für den *dwFlags* -Parameter an. Nachdem Sie die [**midioutprepareheader**](/windows/win32/api/mmeapi/nf-mmeapi-midioutprepareheader) -Funktion verwendet haben, aber vor dem Senden von MIDI-Ereignissen an das Gerät, erstellen Sie ein nicht signalisiertes Ereignis, indem Sie die [resettevent](/windows/win32/api/synchapi/nf-synchapi-resetevent) -Funktion aufrufen und das von **CreateEvent** abgerufene Ereignis Handle angeben. Verwenden Sie dann in einer Schleife, die überprüft, ob das MHDR \_ done-Bit im **dwFlags** -Member der [**midihdr**](/windows/win32/api/mmeapi/ns-mmeapi-midihdr) -Struktur festgelegt ist, die [WaitForSingleObject](/windows/win32/api/synchapi/nf-synchapi-waitforsingleobject) -Funktion, wobei das Ereignis Handle und der Timeout Wert Infinite als Parameter angegeben werden.
+Um einen Ereignisrückruf zu verwenden, verwenden Sie die [CreateEvent-Funktion,](/windows/win32/api/synchapi/nf-synchapi-createeventa) um das Handle eines Ereignisses abzurufen. Geben Sie in einem Aufruf der [**funktion "keyboardOutOpen"**](/windows/win32/api/mmeapi/nf-mmeapi-midioutopen) CALLBACK \_ EVENT für den *dwFlags-Parameter* an. Erstellen Sie nach der Verwendung der [**Funktion "resetOutPrepareHeader",**](/windows/win32/api/mmeapi/nf-mmeapi-midioutprepareheader) aber vor dem Senden von ENUMERATION-Ereignissen an das Gerät ein nicht signalisiertes Ereignis, indem Sie die [ResetEvent-Funktion](/windows/win32/api/synchapi/nf-synchapi-resetevent) aufrufen und das von **CreateEvent** abgerufene Ereignishand handle angeben. Verwenden Sie dann in einer Schleife, die überprüft, ob das MHDR \_ DONE-Bit im **dwFlags-Member** der [**EIGENSCHAFTHDR-Struktur festgelegt**](/windows/win32/api/mmeapi/ns-mmeapi-midihdr) ist, die [WaitForSingleObject-Funktion,](/windows/win32/api/synchapi/nf-synchapi-waitforsingleobject) und geben Sie das Ereignishandle und den Time out-Wert INFINITE als Parameter an.
 
-Ein Ereignis Rückruf wird durch alle Elemente festgelegt, die einen Funktions Rückruf verursachen könnten.
+Ein Ereignisrückruf wird von allem festgelegt, was einen Funktionsrückruf verursachen kann.
 
-Da Ereignis Rückrufe keine bestimmten Close-, done-oder Open-Benachrichtigungen empfangen, muss eine Anwendung möglicherweise den Status des Prozesses überprüfen, auf den Sie wartet, nachdem das Ereignis aufgetreten ist. Möglicherweise kann eine Reihe von Aufgaben durch die Rückgabe von **WaitForSingleObject** abgeschlossen werden.
+Da Ereignisrückrufe keine spezifischen Benachrichtigungen zum Schließen, Fertig- oder Öffnen empfangen, muss eine Anwendung möglicherweise den Status des Prozesses überprüfen, auf den sie nach dem Auftreten des Ereignisses wartet. Es ist möglich, dass eine Reihe von Aufgaben bis zur Rückgabe von **WaitForSingleObject abgeschlossen** werden kann.
 
- 
+ 
 
- 
+ 

@@ -1,31 +1,31 @@
 ---
-description: Wird von der Medien Sitzung ausgelöst, wenn eine Bereinigungs Anforderung abgeschlossen ist.
+description: Wird von der Mediensitzung ausgelöst, wenn eine Bereinigungsanforderung abgeschlossen wird.
 ms.assetid: 1ae97022-3fb2-4c5e-9262-d5bdc2a62bee
-title: Mesessionscrubsamplecomplete-Ereignis (mfobjects. h)
+title: MESessionScrubSampleComplete-Ereignis (Mfobjects.h)
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: b076c2f2978831cc30521fcf49d71c04620c4dee
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: ca2fdaa6ffe9693fc6a033fd0c33ff519a73dcda3a32c303844da04e6af01404
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "103863611"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118974173"
 ---
-# <a name="mesessionscrubsamplecomplete-event"></a>Mesessionscrubsamplecomplete-Ereignis
+# <a name="mesessionscrubsamplecomplete-event"></a>MESessionScrubSampleComplete-Ereignis
 
-Wird von der Medien Sitzung ausgelöst, wenn eine Bereinigungs Anforderung abgeschlossen ist.
+Wird von der Mediensitzung ausgelöst, wenn eine Bereinigungsanforderung abgeschlossen wird.
 
-Ein Scrubbing tritt auf, wenn die Wiedergabe Rate 0 (null) ist und die Anwendung [**imfmediasession:: Start**](/windows/desktop/api/mfidl/nf-mfidl-imfmediasession-start)aufruft. Dieses Ereignis wird ausgelöst, nachdem jede streamsenke die Bereinigungs Anforderung abgeschlossen hat.
+Die Bereinigung erfolgt, wenn die Wiedergaberate 0 (null) ist und die Anwendung [**DEN AUFRUF ANSTMediaSession::Start auf aufruft.**](/windows/desktop/api/mfidl/nf-mfidl-imfmediasession-start) Dieses Ereignis wird ausgelöst, nachdem jede Streamsenke die Bereinigungsanforderung abgeschlossen hat.
 
 ## <a name="event-values"></a>Ereigniswerte
 
-Mögliche Werte, die von [**imfmediaevent:: GetValue**](/windows/desktop/api/mfobjects/nf-mfobjects-imfmediaevent-getvalue) abgerufen werden, sind folgende.
+Mögliche Werte, die von [**DERMEDIAEVENT::GetValue abgerufen werden,**](/windows/desktop/api/mfobjects/nf-mfobjects-imfmediaevent-getvalue) sind:
 
 
 
 | VARTYPE              | BESCHREIBUNG                           |
 |----------------------|---------------------------------------|
-| VT \_ leer<br/> | Keine Ereignisdaten.<br/> <br/> |
+| VT \_ EMPTY<br/> | Keine Ereignisdaten.<br/> <br/> |
 
 
 
@@ -35,20 +35,20 @@ Mögliche Werte, die von [**imfmediaevent:: GetValue**](/windows/desktop/api/mfo
 
 | Anforderung | Wert |
 |-------------------------------------|----------------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>                                                           |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2008 \[ -Desktop-Apps\]<br/>                                                     |
-| Header<br/>                   | <dl> <dt>Mfobjects. h (Include mfdl. h)</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur \[ Vista-Desktop-Apps\]<br/>                                                           |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2008-Desktop-Apps\]<br/>                                                     |
+| Header<br/>                   | <dl> <dt>Mfobjects.h (einschließlich Mfidl.h)</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[Ereignisse Media Foundation](media-foundation-events.md)
+[Media Foundation Ereignisse](media-foundation-events.md)
 </dt> <dt>
 
-[Mestreamsinkscrubsamplecomplete](mestreamsinkscrubsamplecomplete.md)
+[MEStreamSinkScrubSampleComplete](mestreamsinkscrubsamplecomplete.md)
 </dt> </dl>
 
  

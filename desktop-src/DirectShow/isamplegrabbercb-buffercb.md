@@ -1,7 +1,7 @@
 ---
-description: Die buffercb-Methode ist eine Rückruf Methode, die einen Zeiger auf den Beispiel Puffer empfängt.
+description: Die BufferCB-Methode ist eine Rückrufmethode, die einen Zeiger auf den Beispielpuffer empfängt.
 ms.assetid: 9ee16dd6-8d05-4a9a-84c3-1b3bb95eaa04
-title: 'Isamplegrabbercb:: buffercb-Methode (qedit. h)'
+title: ISampleGrabberCB::BufferCB-Methode (Qedit.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -14,21 +14,21 @@ api_type:
 api_location:
 - strmiids.lib
 - strmiids.dll
-ms.openlocfilehash: 8af11545db1a3ed839f409deb141e5d910abe198
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: c92e83c8daf5bf129a9aa8330bcc53caa88537f2395aeceebd8b5da2037c5b18
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106359790"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117817590"
 ---
-# <a name="isamplegrabbercbbuffercb-method"></a>Isamplegrabbercb:: buffercb-Methode
+# <a name="isamplegrabbercbbuffercb-method"></a>ISampleGrabberCB::BufferCB-Methode
 
 > [!Note]  
-> \[Veraltet. Diese API kann aus zukünftigen Versionen von Windows entfernt werden.\]
+> \[Veraltet. Diese API wird möglicherweise aus zukünftigen Releases von Windows.\]
 
  
 
-Die **buffercb** -Methode ist eine Rückruf Methode, die einen Zeiger auf den Beispiel Puffer empfängt.
+Die **BufferCB-Methode** ist eine Rückrufmethode, die einen Zeiger auf den Beispielpuffer empfängt.
 
 ## <a name="syntax"></a>Syntax
 
@@ -47,7 +47,7 @@ HRESULT BufferCB(
 
 <dl> <dt>
 
-*Sampletime* 
+*SampleTime* 
 </dt> <dd>
 
 Startzeit des Beispiels in Sekunden.
@@ -57,39 +57,39 @@ Startzeit des Beispiels in Sekunden.
 *pBuffer* 
 </dt> <dd>
 
-Zeiger auf einen Puffer, der die Beispiel Daten enthält. Das Format der Daten hängt vom Medientyp der Eingabe-PIN des beispielgrabers ab. Um den Medientyp abzurufen, nennen Sie [**isamplegrabber:: getconnectedmediatype**](isamplegrabber-getconnectedmediatype.md).
+Zeiger auf einen Puffer, der die Beispieldaten enthält. Das Format der Daten hängt vom Medientyp des Eingabepins des Beispielgrabbers ab. Um den Medientyp zu erhalten, rufen Sie [**ISampleGrabber::GetConnectedMediaType auf.**](isamplegrabber-getconnectedmediatype.md)
 
 </dd> <dt>
 
-*Bufferlen* 
+*BufferLen* 
 </dt> <dd>
 
-Länge des Puffers, auf den *pbuffer* zeigt (in Bytes).
+Länge des Puffers, auf den *pBuffer zeigt,* in Bytes.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt \_ bei Erfolg S OK oder andernfalls einen **HRESULT** -Fehlercode zurück.
+Gibt S \_ OK zurück, wenn erfolgreich, andernfalls ein **HRESULT-Fehlercode.**
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Diese Rückruf Methode erhält einen Zeiger auf die Daten im neuesten Medien Beispiel.
+Diese Rückrufmethode empfängt einen Zeiger auf die Daten im letzten Medienbeispiel.
 
 > [!Note]  
-> Diese Methode erhält einen Zeiger auf die ursprünglichen Beispiel Daten, nicht auf eine Kopie. In der ursprünglichen Dokumentation wurde fälschlicherweise angegeben, dass *pbuffer* eine Kopie der Daten enthält.
+> Diese Methode empfängt einen Zeiger auf die ursprünglichen Beispieldaten, keine Kopie. In der ursprünglichen Dokumentation wurde fälschlicherweise angegeben, *dass pBuffer* eine Kopie der Daten enthält.
 
  
 
-Rufen Sie zum Einrichten des Rückrufs [**isamplegrabber:: SetCallback**](isamplegrabber-setcallback.md)auf.
+Rufen Sie zum Einrichten des Rückrufs [**ISampleGrabber::SetCallback auf.**](isamplegrabber-setcallback.md)
 
 > [!Note]  
-> Die Header Datei "qedit. h" ist nicht mit Direct3D-Headern nach Version 7 kompatibel.
+> Die Headerdatei Qedit.h ist nicht mit Direct3D-Headern nach Version 7 kompatibel.
 
  
 
 > [!Note]  
-> Zum Abrufen von "qedit. h" Laden Sie das [Microsoft Windows SDK Update für Windows Vista und .NET Framework 3,0](https://msdn.microsoft.com/windowsvista/bb980924.aspx)herunter. "Qedit. h" ist im Microsoft Windows SDK für Windows 7 und .NET Framework 3,5 Service Pack 1 nicht verfügbar.
+> Um Qedit.h zu erhalten, laden Sie das [Microsoft Windows SDK-Update für Windows Vista und .NET Framework 3.0 herunter.](https://msdn.microsoft.com/windowsvista/bb980924.aspx) Qedit.h ist im Microsoft Windows SDK für Windows 7 und .NET Framework 3.5 Service Pack 1 nicht verfügbar.
 
  
 
@@ -99,19 +99,19 @@ Rufen Sie zum Einrichten des Rückrufs [**isamplegrabber:: SetCallback**](isampl
 
 | Anforderung | Wert |
 |--------------------|-----------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>"Qedit. h"</dt> </dl>      |
-| Bibliothek<br/> | <dl> <dt>"" "" ". Lib"</dt> </dl> |
+| Header<br/>  | <dl> <dt>Qedit.h</dt> </dl>      |
+| Bibliothek<br/> | <dl> <dt>Strmiids.lib</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[Fehler-und Erfolgs Codes](error-and-success-codes.md)
+[Fehler- und Erfolgscodes](error-and-success-codes.md)
 </dt> <dt>
 
-[**Isamplegrabbercb-Schnittstelle**](isamplegrabbercb.md)
+[**ISampleGrabberCB-Schnittstelle**](isamplegrabbercb.md)
 </dt> </dl>
 
  

@@ -1,10 +1,10 @@
 ---
-title: MPCALLBACK_DATA Struktur (mpclient. h)
-description: An die Rückruffunktion über gegebene Daten.
+title: MPCALLBACK_DATA -Struktur (MpClient.h)
+description: An die Rückruffunktion übergebene Daten.
 ms.assetid: EA8E6C1E-F80B-4247-B073-C78D49A354CF
 keywords:
-- MPCALLBACK_DATA Struktur Funktionen der Legacy-Windows-Umgebung
-- PMPCALLBACK_DATA Struktur Zeiger Legacy-Windows-Umgebungs Features
+- MPCALLBACK_DATA struktur Legacy Windows Umgebungsfeatures
+- PMPCALLBACK_DATA strukturzeiger Legacy-Windows-Umgebungsfeatures
 topic_type:
 - apiref
 api_name:
@@ -15,16 +15,16 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 9741ca479eeb9770a3ae8c2aedbc51a8a2643033
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 1d1eb129101c341485a1e6b5763a0325cbf586a6e51e5e2875b4465696c39df8
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104103567"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117883652"
 ---
-# <a name="mpcallback_data-structure"></a>Mpcallback- \_ Datenstruktur
+# <a name="mpcallback_data-structure"></a>\_MPCALLBACK-DATENstruktur
 
-An die Rückruffunktion über gegebene Daten.
+An die Rückruffunktion übergebene Daten.
 
 ## <a name="syntax"></a>Syntax
 
@@ -64,15 +64,15 @@ typedef struct tagMPCALLBACK_DATA {
 **Benachrichtigen**
 </dt> <dd>
 
-Typ: **[ **mpnotify**](mpnotify.md)**
+Typ: **[ **MPNOTIFY**](mpnotify.md)**
 
 </dd> <dd>
 
-Ändern Sie die Benachrichtigung in den Bericht.
+Ändern Sie die Benachrichtigung in bericht.
 
 </dd> <dt>
 
-**HRESULT**
+**Hresult**
 </dt> <dd>
 
 Typ: **HRESULT**
@@ -83,10 +83,10 @@ Fehlercode im Falle eines internen Fehlers.
 
 </dd> <dt>
 
-**Zeitstempel**
+**Timestamp**
 </dt> <dd>
 
-Typ: **ularge \_ Integer**
+Typ: **ULARGE \_ INTEGER**
 
 </dd> <dd>
 
@@ -94,186 +94,186 @@ Aktueller Zeitstempel.
 
 </dd> <dt>
 
-**Type**
+**Typ**
 </dt> <dd>
 
-Typ: **[ **mpcallback- \_ Typ**](mpcallback-type.md)**
+Typ: **[ **MPCALLBACK-TYP \_**](mpcallback-type.md)**
 
 </dd> <dd>
 
-Spezieller Rückruf Datentyp.
+Besonderer Rückrufdatentyp.
 
 </dd> <dt>
 
 **Daten**
 </dt> <dd>
 
-Rückruf-Sonderdaten. Der Zeiger auf die entsprechende-Struktur hängt vom Wert des **Typs** ab.
+Rückruf von speziellen Daten. Der Zeiger auf die entsprechende Struktur hängt vom Wert des Typs **ab.**
 
 <dl> <dt>
 
-**pstatus Data**
+**pStatusData**
 </dt> <dd>
 
-Typ: **pmpstatus- \_ Daten**
+Typ: **PMPSTATUS \_ DATA**
 
 </dd> <dd>
 
-Wenn Sie  ==  **mpcallback- \_ Status** eingeben. Siehe [**mpstatus- \_ Daten**](mpstatus-data.md).
+Wenn **Sie**  ==  **MPCALLBACK \_ STATUS eingeben.** Weitere Informationen [**finden Sie unter MPSTATUS \_ DATA**](mpstatus-data.md).
 
 </dd> <dt>
 
-**pscandata**
+**pScanData**
 </dt> <dd>
 
-Typ: **pmpscan- \_ Daten**
+Typ: **PMPSCAN \_ DATA**
 
 </dd> <dd>
 
-Beim **Typ**  ==  **mpcallback \_ Scan**. Siehe [**mpscan- \_ Daten**](mpscan-data.md).
+Wenn Sie  ==  **MPCALLBACK \_ SCAN eingeben.** Weitere Informationen [**finden Sie unter MPSCAN \_ DATA**](mpscan-data.md).
 
 </dd> <dt>
 
-**pcleandata**
+**pCleanData**
 </dt> <dd>
 
-Typ: **pmpclean- \_ Daten**
+Typ: **PMPCLEAN \_ DATA**
 
 </dd> <dd>
 
-Wenn **Sie**  ==  **mpcallback \_ Bereinigen**. Siehe [**mpclean \_ Data**](mpclean-data.md).
+Wenn Sie  ==  **MPCALLBACK \_ CLEAN eingeben.** Weitere Informationen [**finden Sie unter MPCLEAN \_ DATA**](mpclean-data.md).
 
 </dd> <dt>
 
-**pprecheckdata**
+**pPrecheckData**
 </dt> <dd>
 
-Type: **pmpclean \_ Precheck- \_ Daten**
+Typ: **PMPCLEAN \_ PRECHECK \_ DATA**
 
 </dd> <dd>
 
-Beim **Typ**  ==  **mpcallback \_ Precheck**. Siehe [**mpclean \_ Precheck \_ Data**](mpclean-precheck-data.md).
+Wenn Sie  ==  **MPCALLBACK \_ PRECHECK eingeben.** Weitere Informationen [**finden Sie unter MPCLEAN \_ PRECHECK \_ DATA**](mpclean-precheck-data.md).
 
 </dd> <dt>
 
-**p-Data**
+**pThreatData**
 </dt> <dd>
 
-Typ: **pmpthreat- \_ Daten**
+Typ: **PMPTHREAT \_ DATA**
 
 </dd> <dd>
 
-Beim **Typ**  ==  **mpcallback \_ Threat**. Siehe [**mpthreat- \_ Daten**](mpthreat-data.md).
+Wenn Sie  ==  **MPCALLBACK \_ THREAT eingeben.** Weitere Informationen [**finden Sie unter MPTHREAT \_ DATA**](mpthreat-data.md).
 
 </dd> <dt>
 
-**psigupdatedata**
+**pSigUpdateData**
 </dt> <dd>
 
-Typ: **pmpsigupdate- \_ Daten**
+Typ: **PMPSIGUPDATE \_ DATA**
 
 </dd> <dd>
 
-Wenn Sie  ==  **mpcallback \_ sigupdate** eingeben. Siehe [**mpsigupdate- \_ Daten**](mpsigupdate-data.md).
+Wenn Sie  ==  **MPCALLBACK \_ SIGUPDATE eingeben.** Weitere Informationen [**finden Sie unter MPSIGUPDATE \_ DATA**](mpsigupdate-data.md).
 
 </dd> <dt>
 
-**psampledata**
+**pSampleData**
 </dt> <dd>
 
-Type: **pmpsample \_ Data**
+Typ: **PMPSAMPLE \_ DATA**
 
 </dd> <dd>
 
-Wenn Sie  ==  **mpcallback- \_ Beispiel** eingeben. Siehe [**mpsample \_ Data**](mpsample-data.md).
+Wenn Sie  ==  **MPCALLBACK \_ SAMPLE eingeben.** Weitere Informationen [**finden Sie unter MPSAMPLE \_ DATA**](mpsample-data.md).
 
 </dd> <dt>
 
-**preserveddata**
+**pReservedData**
 </dt> <dd>
 
-Typ: **pmbeibehaltene \_ Daten**
+Typ: **PMPRESERVED \_ DATA**
 
 </dd> <dd>
 
-Wenn der **Typ**  ==  **mpcallback \_ reserviert** ist. Siehe [**mbeibehaltene \_ Daten**](mpreserved-data.md).
+Wenn Sie  ==  **MPCALLBACK \_ RESERVED eingeben.** Weitere Informationen [**finden Sie unter MPRESERVED \_ DATA**](mpreserved-data.md).
 
 </dd> <dt>
 
-**pconfigurationdata**
+**pConfigurationData**
 </dt> <dd>
 
-Typ: **pmpconfiguration- \_ Daten**
+Typ: **PMPCONFIGURATION \_ DATA**
 
 </dd> <dd>
 
-Wenn Sie  ==  **mpcallback- \_ Konfigurations \_ Benachrichtigung** eingeben. Siehe [**mpconfiguration \_ Data**](mpconfiguration-data.md).
+Wenn Sie  ==  **MPCALLBACK \_ CONFIGURATION NOTIFICATION \_ eingeben.** Weitere Informationen [**finden Sie unter MPCONFIGURATION \_ DATA**](mpconfiguration-data.md).
 
 </dd> <dt>
 
-**pfastpathdata**
+**pFastPathData**
 </dt> <dd>
 
-Typ: **pmpfastpath- \_ Daten**
+Typ: **PMPFASTPATH \_ DATA**
 
 </dd> <dd>
 
-Wenn Sie  ==  **mpcallback \_ FastPath** eingeben. Siehe [**mpfastpath- \_ Daten**](mpfastpath-data.md).
+Wenn Sie  ==  **MPCALLBACK \_ FASTPATH eingeben.** Weitere Informationen [**finden Sie unter MPFASTPATH \_ DATA**](mpfastpath-data.md).
 
 </dd> <dt>
 
-**pexpirationdata**
+**pExpirationData**
 </dt> <dd>
 
-Typ: **\_ pmpabgelaufdaten**
+Typ: **PMPEXPIRATION \_ DATA**
 
 </dd> <dd>
 
-Wenn Sie  ==  **mpcallback- \_ Produkt \_ Ablauf** eingeben. Siehe [**mpablauf- \_ Daten**](mpexpiration-data.md).
+Wenn Sie  ==  **MPCALLBACK PRODUCT \_ EXPIRATION \_ eingeben.** Weitere Informationen [**finden Sie unter MPEXPIRATION \_ DATA**](mpexpiration-data.md).
 
 </dd> <dt>
 
-**pnisprivatedata**
+**pNISPrivateData**
 </dt> <dd>
 
-Typ: **pmpnis \_ private \_ Daten**
+Typ: **PMPNIS \_ PRIVATE \_ DATA**
 
 </dd> <dd>
 
-Wenn Sie  ==  **mpcallback \_ NIS \_ private** eingeben. Weitere Informationen finden Sie unter [**mpnis \_ private \_ Data**](mpnis-private-data.md).
+Wenn Sie  ==  **MPCALLBACK \_ NIS PRIVATE \_ eingeben.** Weitere Informationen [**finden Sie unter PRIVATE \_ \_ MPNIS-DATEN.**](mpnis-private-data.md)
 
 </dd> <dt>
 
-**phealthdata**
+**pHealthData**
 </dt> <dd>
 
-Typ: **pmphealth- \_ Daten**
+Typ: **PMPHEALTH \_ DATA**
 
 </dd> <dd>
 
-Beim **Typ**  ==  **mpcallback \_ Health**. Siehe [**mphealth- \_ Daten**](mphealth-data.md).
+Wenn Sie  ==  **MPCALLBACK \_ HEALTH eingeben.** Weitere Informationen [**finden Sie unter MPHEALTH \_ DATA**](mphealth-data.md).
 
 </dd> <dt>
 
-**"pdoflifedata"**
+**pEndOfLifeData**
 </dt> <dd>
 
-Typ: **\_ pmpendomelife-Daten**
+Typ: **PMPENDOFLIFE \_ DATA**
 
 </dd> <dd>
 
-Wenn Sie  ==  **mpcallback \_ endoentlife** eingeben. Weitere Informationen finden Sie unter [**\_ mpendomelife-Daten**](mpendoflife-data.md).
+Wenn **Sie**  ==  **MPCALLBACK \_ ENDOFLIFE eingeben.** Weitere Informationen [**finden Sie unter MPENDOFLIFE \_ DATA**](mpendoflife-data.md).
 
 </dd> <dt>
 
-**pmalwaretoastdata**
+**pMalwareToastData**
 </dt> <dd>
 
-Typ: **pmpmalwarepopup- \_ Daten**
+Typ: **PMPMALWARETOAST \_ DATA**
 
 </dd> <dd>
 
-Wenn Sie  ==  **mpcallback \_ malwaretoast** eingeben. Siehe [**mpmalwarepopup- \_ Daten**](mpmalwaretoast-data.md).
+Wenn Sie  ==  **MPCALLBACK \_ MALWARETOAST eingeben.** Weitere Informationen [**finden Sie unter MPMALWARETOAST \_ DATA**](mpmalwaretoast-data.md).
 
 </dd> </dl> </dd> </dl>
 
@@ -283,65 +283,65 @@ Wenn Sie  ==  **mpcallback \_ malwaretoast** eingeben. Siehe [**mpmalwarepopup- 
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows 8 \[ -Desktop-Apps\]<br/>                                            |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2012 \[ -Desktop-Apps\]<br/>                                  |
-| Header<br/>                   | <dl> <dt>Mpclient. h</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | \[Windows 8 Nur Desktop-Apps\]<br/>                                            |
+| Unterstützte Mindestversion (Server)<br/> | \[Windows Server 2012 Nur Desktop-Apps\]<br/>                                  |
+| Header<br/>                   | <dl> <dt>MpClient.h</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**mpcallback- \_ Typ**](mpcallback-type.md)
+[**MPCALLBACK-TYP \_**](mpcallback-type.md)
 </dt> <dt>
 
-[**mpclean- \_ Daten**](mpclean-data.md)
+[**MPCLEAN \_ DATA**](mpclean-data.md)
 </dt> <dt>
 
-[**mpclean- \_ vorprüf \_ Daten**](mpclean-precheck-data.md)
+[**MPCLEAN \_ PRECHECK \_ DATA**](mpclean-precheck-data.md)
 </dt> <dt>
 
-[**mpconfiguration- \_ Daten**](mpconfiguration-data.md)
+[**MPCONFIGURATION-DATEN \_**](mpconfiguration-data.md)
 </dt> <dt>
 
-[**\_mpendomelife-Daten**](mpendoflife-data.md)
+[**MPENDOFLIFE-DATEN \_**](mpendoflife-data.md)
 </dt> <dt>
 
-[**mpablauf- \_ Daten**](mpexpiration-data.md)
+[**\_MPEXPIRATION-DATEN**](mpexpiration-data.md)
 </dt> <dt>
 
-[**mpfastpath- \_ Daten**](mpfastpath-data.md)
+[**MPFASTPATH-DATEN \_**](mpfastpath-data.md)
 </dt> <dt>
 
-[**mphealth- \_ Daten**](mphealth-data.md)
+[**\_MPHEALTH-DATEN**](mphealth-data.md)
 </dt> <dt>
 
-[**mpmalwarepopup- \_ Daten**](mpmalwaretoast-data.md)
+[**MPMALWARETOAST-DATEN \_**](mpmalwaretoast-data.md)
 </dt> <dt>
 
-[**Private mpnis- \_ \_ Daten**](mpnis-private-data.md)
+[**PRIVATE \_ \_ MPNIS-DATEN**](mpnis-private-data.md)
 </dt> <dt>
 
-[**Mpnotify**](mpnotify.md)
+[**MPNOTIFY**](mpnotify.md)
 </dt> <dt>
 
-[**mbeibehaltene \_ Daten**](mpreserved-data.md)
+[**M BEIBEHALTENE \_ DATEN**](mpreserved-data.md)
 </dt> <dt>
 
-[**mpsample- \_ Daten**](mpsample-data.md)
+[**\_MPSAMPLE-DATEN**](mpsample-data.md)
 </dt> <dt>
 
-[**mpscan- \_ Daten**](mpscan-data.md)
+[**\_MPSCAN-DATEN**](mpscan-data.md)
 </dt> <dt>
 
-[**mpsigupdate- \_ Daten**](mpsigupdate-data.md)
+[**\_MPSIGUPDATE-DATEN**](mpsigupdate-data.md)
 </dt> <dt>
 
-[**mpstatus- \_ Daten**](mpstatus-data.md)
+[**\_MPSTATUS-DATEN**](mpstatus-data.md)
 </dt> <dt>
 
-[**mpthreat- \_ Daten**](mpthreat-data.md)
+[**\_MPTHREAT-DATEN**](mpthreat-data.md)
 </dt> </dl>
 
  

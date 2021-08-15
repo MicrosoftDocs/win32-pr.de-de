@@ -1,9 +1,9 @@
 ---
-title: Komplexer metadataType-Typ
+title: Komplexer MetadataType-Typ
 description: Definiert die Metadatentypen, die Sie im Metadatenabschnitt des Manifests definieren können.
 ms.assetid: 602bafe7-940e-4313-9da5-54c6aa7f60a2
 keywords:
-- MetadataType komplexer Typ (Ereignisprotokoll)
+- Komplexer MetadataType-Typ EventLog
 topic_type:
 - apiref
 api_name:
@@ -13,14 +13,14 @@ api_type:
 ms.topic: reference
 ms.date: 05/31/2018
 api_location: ''
-ms.openlocfilehash: 69b140a2b65d47d563fd88f49d6818efc13613f4
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 392e0bb2940c36b541f63f55dac418312489f231d785f82014ade82c20602fbd
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104040965"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118343602"
 ---
-# <a name="metadatatype-complex-type"></a>Komplexer metadataType-Typ
+# <a name="metadatatype-complex-type"></a>Komplexer MetadataType-Typ
 
 Definiert die Metadatentypen, die Sie im Metadatenabschnitt des Manifests definieren können.
 
@@ -107,15 +107,15 @@ Definiert die Metadatentypen, die Sie im Metadatenabschnitt des Manifests defini
 
 | Element                                                                       | type                                                                       | BESCHREIBUNG                                                                                                                                                      |
 |-------------------------------------------------------------------------------|----------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| [**channels**](eventmanifestschema-channels-metadatatype-element.md)         | [**Channelellisttype**](eventmanifestschema-channellisttype-complextype.md) | Definiert eine Liste von Kanälen, zu denen Anbieter Ereignisse protokollieren können. Ein Anbieter kann dann einen oder mehrere der Kanäle in seinem Manifest importieren.<br/>               |
-| [**Keywords**](eventmanifestschema-keywords-metadatatype-element.md)         | [**Keywordlisttype**](eventmanifestschema-keywordlisttype-complextype.md) | Definiert eine Liste von Schlüsselwörtern, die die Kategorie der vom Anbieter schreibenden Ereignisse bestimmen.<br/>                                                            |
-| [**Grad**](eventmanifestschema-levels-metadatatype-element.md)             | [**Levellisttype**](eventmanifestschema-levellisttype-complextype.md)     | Definiert eine Liste von Ebenen, die den Schweregrad eines Ereignisses angeben.<br/>                                                                                       |
-| **Nachricht**                                                                   |                                                                            | Definiert eine Meldungs Zeichenfolge.<br/>                                                                                                                             |
-| **messagetable**                                                              |                                                                            | Definiert eine Liste von Meldungs Zeichenfolgen.<br/>                                                                                                                    |
-| [**namedqueries**](eventmanifestschema-namedqueries-metadatatype-element.md) | [**Namedquerytype**](eventmanifestschema-namedquerytype-complextype.md)   | Definiert eine Liste benannter Abfragen, die reguläre Ausdrücke verwenden, um Aktionen zum Suchen und ersetzen in der Meldungs Zeichenfolge eines Ereignisses auszuführen.<br/>                        |
-| [**OpCodes**](eventmanifestschema-opcodes-metadatatype-element.md)           | [**Opcodelisttype**](eventmanifestschema-opcodelisttype-complextype.md)   | Definiert eine Liste von Opcodes, die Sie zum Gruppieren von Ereignissen innerhalb einer Aufgabe verwenden können.<br/>                                                                             |
-| **tasks**                                                                     | [**Tasklisttype**](eventmanifestschema-tasklisttype-complextype.md)       | Definiert eine Liste von Aufgaben, die ein Anbieter zum Gruppieren von Ereignissen verwenden kann. In der Regel verwenden Sie Aufgaben, um Ereignisse für ein Feature oder eine Komponente des Anbieters zu gruppieren.<br/> |
-| [**solche**](eventmanifestschema-types-metadatatype-element.md)               | [**Typelisttype**](eventmanifestschema-typelisttype-complextype.md)       | Definiert eine Liste von XML-Typen.<br/>                                                                                                                          |
+| [**Kanäle**](eventmanifestschema-channels-metadatatype-element.md)         | [**ChannelListType**](eventmanifestschema-channellisttype-complextype.md) | Definiert eine Liste von Kanälen, in denen Anbieter Ereignisse protokollieren können. Ein Anbieter kann dann einen oder mehrere Kanäle in sein Manifest importieren.<br/>               |
+| [**Schlüsselwörter**](eventmanifestschema-keywords-metadatatype-element.md)         | [**KeywordListType**](eventmanifestschema-keywordlisttype-complextype.md) | Definiert eine Liste von Schlüsselwörtern, die die Kategorie der Ereignisse bestimmen, die der Anbieter schreibt.<br/>                                                            |
+| [**Ebenen**](eventmanifestschema-levels-metadatatype-element.md)             | [**LevelListType**](eventmanifestschema-levellisttype-complextype.md)     | Definiert eine Liste von Ebenen, die den Schweregrad eines Ereignisses angeben.<br/>                                                                                       |
+| **Nachricht**                                                                   |                                                                            | Definiert eine Meldungszeichenfolge.<br/>                                                                                                                             |
+| **messageTable**                                                              |                                                                            | Definiert eine Liste von Meldungszeichenfolgen.<br/>                                                                                                                    |
+| [**namedQueries**](eventmanifestschema-namedqueries-metadatatype-element.md) | [**NamedQueryType**](eventmanifestschema-namedquerytype-complextype.md)   | Definiert eine Liste benannter Abfragen, die reguläre Ausdrücke verwenden, um Aktionen zum Suchen und Ersetzen für die Meldungszeichenfolge eines Ereignisses durchzuführen.<br/>                        |
+| [**Opcodes**](eventmanifestschema-opcodes-metadatatype-element.md)           | [**OpcodeListType**](eventmanifestschema-opcodelisttype-complextype.md)   | Definiert eine Liste von Opcodes, die Sie zum Gruppieren von Ereignissen innerhalb einer Aufgabe verwenden können.<br/>                                                                             |
+| **tasks**                                                                     | [**TaskListType**](eventmanifestschema-tasklisttype-complextype.md)       | Definiert eine Liste von Aufgaben, die ein Anbieter zum Gruppen von Ereignissen verwenden kann. In der Regel verwenden Sie Aufgaben, um Ereignisse für ein Feature oder eine Komponente des Anbieters zu gruppen.<br/> |
+| [**Typen**](eventmanifestschema-types-metadatatype-element.md)               | [**TypeListType**](eventmanifestschema-typelisttype-complextype.md)       | Definiert eine Liste von XML-Typen.<br/>                                                                                                                          |
 
 
 
@@ -125,17 +125,17 @@ Definiert die Metadatentypen, die Sie im Metadatenabschnitt des Manifests defini
 
 | Name    | type                                                              | BESCHREIBUNG                                                                                        |
 |---------|-------------------------------------------------------------------|----------------------------------------------------------------------------------------------------|
-| message | [**"Strauch"**](eventmanifestschema-strtableref-simpletype.md) | Ein Verweis auf die lokalisierte Zeichenfolge in der Zeichen folgen Tabelle.<br/>                                |
-| mId     | xs:string                                                         | Nicht verwendet.<br/>                                                                               |
-| name    | anyURI                                                            | Der URI der Metadatendatei. <br/>                                                              |
-| Symbol  | [**Csymboltype**](eventmanifestschema-csymboltype-simpletype.md) | Der symbolische Name, den der Nachrichten Compiler für diese Meldungs Zeichenfolge erstellen soll.<br/> |
-| value   | [**UInt32Type**](eventmanifestschema-hexint32type-simpletype.md) | Die Zahl, die als Nachrichten-ID für diese Nachricht verwendet werden soll.<br/>                           |
+| message | [**strTableRef**](eventmanifestschema-strtableref-simpletype.md) | Ein Verweis auf die lokalisierte Zeichenfolge in der Zeichenfolgentabelle.<br/>                                |
+| mId     | xs:string                                                         | Wird nicht verwendet.<br/>                                                                               |
+| name    | anyURI                                                            | Der URI der Metadatei. <br/>                                                              |
+| Symbol  | [**CSymbolType**](eventmanifestschema-csymboltype-simpletype.md) | Der symbolische Name, den der Nachrichtencompiler für diese Meldungszeichenfolge erstellen soll.<br/> |
+| value   | [**UInt32Type**](eventmanifestschema-hexint32type-simpletype.md) | Die Zahl, die als Nachrichtenbezeichner für diese Nachricht verwendet werden soll.<br/>                           |
 
 
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Obwohl Sie ein Manifest erstellen können, das einen Metadatenabschnitt enthält, wird es vom Dienst nicht verwendet. die einzigen Metadaten, die der Dienst erkennt, sind die Metadaten, die in der Winmeta.xml-Datei gefunden werden.
+Obwohl Sie ein Manifest erstellen können, das einen Metadatenabschnitt enthält, verwendet der Dienst es nicht. Die einzigen Metadaten, die der Dienst erkennt, sind die Metadaten, die in der Winmeta.xml sind.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -143,8 +143,8 @@ Obwohl Sie ein Manifest erstellen können, das einen Metadatenabschnitt enthält
 
 | Anforderung | Wert |
 |-------------------------------------|------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>       |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2008 \[ -Desktop-Apps\]<br/> |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur \[ Vista-Desktop-Apps\]<br/>       |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2008-Desktop-Apps\]<br/> |
 
 
 

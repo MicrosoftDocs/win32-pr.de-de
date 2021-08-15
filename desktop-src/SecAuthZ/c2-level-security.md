@@ -1,25 +1,25 @@
 ---
-description: In der folgenden Liste sind einige der wichtigsten Anforderungen der Sicherheit auf C2-Ebene aufgeführt, die vom US-amerikanischen
+description: Die folgende Liste enthält einige der wichtigsten Anforderungen an die Sicherheit auf C2-Ebene, die von den USA definiert werden.
 ms.assetid: e81f31bb-6314-4493-844a-65032e3cf90b
 title: Sicherheit auf C2-Ebene
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 1653221b30d6556e4b0c6c1fd2eec194b46d7bf1
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 55e6b3ec6070c681ab5b4db2214656dbf3e1f9bbd2a8798e0edc9d29cf72b9bc
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106354870"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117783616"
 ---
 # <a name="c2-level-security"></a>Sicherheit auf C2-Ebene
 
-Die folgende Liste enthält einige der wichtigsten Anforderungen der Sicherheit auf C2-Ebene, wie vom US-Verteidigungsministerium definiert:
+Die folgende Liste enthält einige der wichtigsten Anforderungen an die Sicherheit auf C2-Ebene, die vom US-Verteidigungsministerium definiert werden:
 
--   Es muss möglich sein, den Zugriff auf eine Ressource zu steuern, indem Sie den Zugriff für einzelne Benutzer oder benannte Gruppen von Benutzern gewähren oder verweigern.
--   Der Arbeitsspeicher muss geschützt sein, damit der Inhalt nicht gelesen werden kann, nachdem er von einem [*Prozess*](/windows/desktop/SecGloss/p-gly) freigegeben wurde. Ebenso muss ein sicheres Dateisystem, wie z. b. NTFS, das Lesen von gelöschten Dateien schützen.
--   Benutzer müssen sich bei der Anmeldung auf eindeutige Weise identifizieren, z. b. nach Kennwort. Alle überprüfbaren Aktionen müssen den Benutzer identifizieren, der die Aktion ausführt.
--   System Administratoren müssen sicherheitsrelevante Ereignisse überwachen können. Der Zugriff auf die Überwachungsdaten der sicherheitsbezogenen Ereignisse muss jedoch auf autorisierte Administratoren beschränkt sein.
--   Das System muss vor externen Störungen oder Manipulationen geschützt werden, wie z. b. Änderungen des laufenden Systems oder Systemdateien, die auf dem Datenträger gespeichert sind.
+-   Es muss möglich sein, den Zugriff auf eine Ressource durch Gewähren oder Verweigern des Zugriffs für einzelne Benutzer oder benannte Benutzergruppen zu steuern.
+-   Der Arbeitsspeicher muss geschützt werden, damit sein Inhalt nicht gelesen werden kann, nachdem er von einem [*Prozess*](/windows/desktop/SecGloss/p-gly) freigegeben wurde. Ebenso muss ein sicheres Dateisystem wie NTFS gelöschte Dateien vor dem Lesen schützen.
+-   Benutzer müssen sich bei der Anmeldung eindeutig identifizieren, z. B. anhand eines Kennworts. Alle überprüfbaren Aktionen müssen den Benutzer identifizieren, der die Aktion ausführt.
+-   Systemadministratoren müssen in der Lage sein, sicherheitsrelevante Ereignisse zu überwachen. Der Zugriff auf die Überwachungsdaten für sicherheitsbezogene Ereignisse muss jedoch auf autorisierte Administratoren beschränkt sein.
+-   Das System muss vor externen Störungen oder Manipulationen geschützt werden, z. B. vor Änderungen am ausgeführten System oder an Systemdateien, die auf dem Datenträger gespeichert sind.
 
  
 

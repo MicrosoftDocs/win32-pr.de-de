@@ -1,5 +1,5 @@
 ---
-description: Das System erstellt automatisch ein lokales Benutzerprofil für jeden Benutzer, wenn sich der Benutzer zum ersten Mal beim Computer anmeldet. Das System verwaltet automatisch die Einstellungen für die Arbeitsumgebung der einzelnen Benutzer in einem Benutzerprofil auf dem lokalen Computer.
+description: Das System erstellt automatisch ein lokales Benutzerprofil für jeden Benutzer, wenn sich der Benutzer zum ersten Mal am Computer anmeldet. Das System verwaltet automatisch die Einstellungen für die Arbeitsbereiche jedes Benutzers in einem Benutzerprofil auf dem lokalen Computer.
 title: Lokale Benutzerprofile
 ms.topic: article
 ms.date: 05/31/2018
@@ -9,22 +9,22 @@ api_type: ''
 api_location: ''
 topic_type:
 - kbArticle
-ms.openlocfilehash: ba330189b11875198ce40ffdb9dd34925e3adc4b
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 713adc7db522ff473de42a3ecaa2a1a0671f95ee5f4039f0039a196304c7aa4e
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "104980016"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118220155"
 ---
 # <a name="local-user-profiles"></a>Lokale Benutzerprofile
 
-Für die Windows-Sicherheit ist ein Benutzerprofil für jedes Benutzerkonto auf einem Computer erforderlich. Das System erstellt automatisch ein *Lokales Benutzerprofil* für jeden Benutzer, wenn sich der Benutzer zum ersten Mal beim Computer anmeldet. Das System verwaltet automatisch die Einstellungen für die Arbeitsumgebung der einzelnen Benutzer in einem Benutzerprofil auf dem lokalen Computer.
+Windows Sicherheit erfordert ein Benutzerprofil für jedes Benutzerkonto auf einem Computer. Das System erstellt automatisch ein *lokales Benutzerprofil* für jeden Benutzer, wenn sich der Benutzer zum ersten Mal am Computer anmeldet. Das System verwaltet automatisch die Einstellungen für die Arbeitsbereiche jedes Benutzers in einem Benutzerprofil auf dem lokalen Computer.
 
-Windows Vista und höher: Benutzerprofile werden über das System Steuerungselement **Benutzerkonten** verwaltet.
+Windows Vista und höher: Benutzerprofile werden über das Systemsteuerungselement **Benutzerkonten** verwaltet.
 
-Windows 2000 und Windows XP: um ein Benutzerprofil zu kopieren oder zu löschen, wählen Sie in der Systemsteuerung die Option **System** , dann die Registerkarte **erweitert** und dann im Bereich **Benutzerprofil** die Schaltfläche **Einstellungen** .
+Windows 2000 und Windows XP: Um ein Benutzerprofil zu kopieren oder zu löschen, wählen Sie auf der Systemsteuerung die Option **System** und dann im Bereich **Benutzerprofil** die Schaltfläche **Erweitert** und dann die Schaltfläche **Einstellungen** aus.
 
-Das Profil des Benutzers wird nicht automatisch geladen, wenn der Benutzer mit der [**LogonUser**](/windows/win32/api/winbase/nf-winbase-logonusera) -Funktion angemeldet ist. Wenn Sie ein Benutzerprofil Programm gesteuert laden möchten, verwenden Sie die [**LoadUserProfile**](/windows/desktop/api/Userenv/nf-userenv-loaduserprofilea) -Funktion. Um ein von **LoadUserProfile** geladenes Benutzerprofil zu entladen, nennen Sie die [**UnloadUserProfile**](/windows/desktop/api/Userenv/nf-userenv-unloaduserprofile) -Funktion.
+Das Profil des Benutzers wird nicht automatisch geladen, wenn der Benutzer mit der [**LogonUser-Funktion**](/windows/win32/api/winbase/nf-winbase-logonusera) angemeldet ist. Verwenden Sie die [**LoadUserProfile-Funktion,**](/windows/desktop/api/Userenv/nf-userenv-loaduserprofilea) um ein Benutzerprofil programmgesteuert zu laden. Um ein von **LoadUserProfile** geladenes Benutzerprofil zu entladen, rufen Sie die [**Funktion UnloadUserProfile**](/windows/desktop/api/Userenv/nf-userenv-unloaduserprofile) auf.
 
  
 

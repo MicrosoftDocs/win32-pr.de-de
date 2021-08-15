@@ -1,9 +1,9 @@
 ---
-title: Put-Befehl
-description: Der Put-Befehl definiert den Bereich des Quell Bilds und des Zielfensters, das für die Anzeige verwendet wird. Dieser Befehl wird von Digital Video-und Video Überlagerungs Geräten erkannt.
+title: put-Befehl
+description: Der Befehl put definiert den Bereich des Quellbilds und des Zielfensters, die für die Anzeige verwendet werden. Digital-Video- und Videoüberlagerungsgeräte erkennen diesen Befehl.
 ms.assetid: 55fb7192-2083-45e7-a0bf-0d72a6320f91
 keywords:
-- Put-Befehl Windows Multimedia
+- put-Befehl Windows Multimedia
 topic_type:
 - apiref
 api_name:
@@ -12,18 +12,18 @@ api_type:
 - NA
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 5d22fb7c74c1ed469e609e7dcfdd3d36ba355cc5
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 08732b0ed55464fa1a288cc13a9ac19609b480644ffa4c9dfbeb140cedbbd3c5
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104105705"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118372379"
 ---
-# <a name="put-command"></a>Put-Befehl
+# <a name="put-command"></a>put-Befehl
 
-Der Put-Befehl definiert den Bereich des Quell Bilds und des Zielfensters, das für die Anzeige verwendet wird. Dieser Befehl wird von Digital Video-und Video Überlagerungs Geräten erkannt.
+Der Befehl put definiert den Bereich des Quellbilds und des Zielfensters, die für die Anzeige verwendet werden. Digital-Video- und Videoüberlagerungsgeräte erkennen diesen Befehl.
 
-Um diesen Befehl zu senden, wenden Sie die [**mciSendString**](/previous-versions//dd757161(v=vs.85)) -Funktion mit dem festgelegten *lpszcommand* -Parameter wie folgt an.
+Um diesen Befehl zu senden, rufen Sie die [**mciSendString-Funktion**](/previous-versions//dd757161(v=vs.85)) mit dem *lpszCommand-Parameter* auf, der wie folgt festgelegt ist.
 
 ``` syntax
 _stprintf_s(
@@ -39,89 +39,89 @@ _stprintf_s(
 
 <dl> <dt>
 
-<span id="lpszDeviceID"></span><span id="lpszdeviceid"></span><span id="LPSZDEVICEID"></span>*lpszde viceid*
+<span id="lpszDeviceID"></span><span id="lpszdeviceid"></span><span id="LPSZDEVICEID"></span>*lpszDeviceID*
 </dt> <dd>
 
-Der Bezeichner eines MCI-Geräts. Dieser Bezeichner oder Alias wird zugewiesen, wenn das Gerät geöffnet wird.
+Bezeichner eines MCI-Geräts. Dieser Bezeichner oder Alias wird zugewiesen, wenn das Gerät geöffnet wird.
 
 </dd> <dt>
 
-<span id="lpszRegions"></span><span id="lpszregions"></span><span id="LPSZREGIONS"></span>*lpszregions*
+<span id="lpszRegions"></span><span id="lpszregions"></span><span id="LPSZREGIONS"></span>*lpszRegions*
 </dt> <dd>
 
-Flag zum Definieren des Bereichs. In der folgenden Tabelle werden die Gerätetypen aufgelistet, die den Put-Befehl und die von den einzelnen Typen verwendeten Flags erkennen.
+Flag zum Definieren des Bereichs. In der folgenden Tabelle sind Gerätetypen aufgeführt, die den Put-Befehl und die von den einzelnen Typen verwendeten Flags erkennen.
 
 
 
 | Wert        | Bedeutung                                                                                      | Bedeutung                                                                                          |
 |--------------|----------------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------|
-| Digitalvideo | Zielziel bei *rechtedem Frame Rahmen* bei *Rechteck Quell Quelle* bei *Rechteck* | Video *Video* in *Rechteck Fenster im* Fenster Client Fenster Client *im Rechteck* |
-| overlay      | Zielziel bei *Rechteck Rahmen Rahmen* bei *Rechteck*                             | Quell Quelle bei *Rechteck* Video Video bei *Rechteck*                                           |
+| digitalvideo | Zielziel am *Rechteckrahmenrahmen* an *der Quelle des* Rechtecks am *Rechteck* | Videovideo zum *Rechteckfensterfenster* *beim* Clientfensterclient im *Rechteckfenster* |
+| overlay      | Zielziel am *Rechteckrahmenrahmen* am *Rechteck*                             | Quellquelle im *Videovideo zum Rechteck* am *Rechteck*                                           |
 
 
 
  
 
-In der folgenden Tabelle werden die Flags aufgelistet, die im **lpszregions** -Parameter und deren Bedeutung angegeben werden können.
+In der folgenden Tabelle sind die Flags, die im **lpszRegions-Parameter angegeben** werden können, und ihre Bedeutungen aufgeführt.
 
 
 
 | Wert                        | Bedeutung                                                                                                                                                                                                                                                                                                                                               |
 |------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| destination                  | Wählt den gesamten Client Bereich des Zielfensters aus, um die Daten anzuzeigen.                                                                                                                                                                                                                                                                         |
-| Ziel bei *Rechteck*   | Wählt einen Teil des Client Bereichs des Zielfensters aus, in dem das Bild angezeigt wird. Wenn ein Bereich des Anzeige Fensters angegeben wird und das Gerät die Streckung unterstützt, wird das Quellbild auf den Ziel Offset und-Block gestreckt.                                                                                                     |
-| frame                        | Wählt den gesamten Frame Puffer zum Empfangen der eingehenden Videobilder aus.                                                                                                                                                                                                                                                                                 |
-| Rahmen bei *Rechteck*         | Wählt einen Teil des Frame Puffers zum Empfangen der eingehenden Videobilder aus.                                                                                                                                                                                                                                                                           |
-| source                       | Wählt das gesamte Bild aus, das im Zielfenster angezeigt werden soll.                                                                                                                                                                                                                                                                                       |
-| Quelle beim *Rechteck*        | Wählt einen Teil des Bilds aus, der im Zielfenster angezeigt werden soll. Wenn ein Bereich des Quell Bilds angegeben wird und das Gerät die Streckung unterstützt, wird das Quell Abbild auf den Ziel Offset und-Block gestreckt.                                                                                                                           |
-| video                        | Wählt das gesamte eingehende Videobild aus, das im Frame Puffer erfasst werden soll.                                                                                                                                                                                                                                                                               |
-| Video mit *Rechteck*         | Wählt einen Teil des eingehenden Video Bilds aus, der im Frame Puffer erfasst werden soll.                                                                                                                                                                                                                                                                         |
-| Fenster                       | Stellt die anfängliche Fenstergröße auf der Anzeige wieder her. Mit diesem Befehl wird auch das-Fenster angezeigt.                                                                                                                                                                                                                                                               |
-| Fenster mit *Rechteck*        | Ändert die Größe und Position des Anzeige Fensters. Das angegebene Rechteck ist relativ zum übergeordneten Fenster des Anzeige Fensters (normalerweise der Desktop), wenn das Flag "Style Child" für den Befehl " [Öffnen](open.md) " verwendet wurde. Um die Position des Fensters zu ändern, ohne die Höhe oder Breite zu ändern, geben Sie 0 für Höhe und Breite an. |
-| Fenster Client                | Stellt den Client Bereich des Fensters wieder her.                                                                                                                                                                                                                                                                                                               |
-| Fenster Client bei *Rechteck* | Ändert die Größe und Position des Client Bereichs des Fensters. Das angegebene Rechteck ist relativ zum übergeordneten Fenster des Client Fensters. Um die Position des Fensters zu ändern, ohne die Höhe oder Breite zu ändern, geben Sie 0 für Höhe und Breite an.                                                                                      |
+| destination                  | Wählt den gesamten Clientbereich des Zielfensters aus, um die Daten anzuzeigen.                                                                                                                                                                                                                                                                         |
+| Ziel am *Rechteck*   | Wählt einen Teil des Clientbereichs des Zielfensters aus, der zum Anzeigen des Bilds verwendet wird. Wenn ein Bereich des Anzeigefensters angegeben wird und das Gerät Stretching unterstützt, wird das Quellbild auf den Zieloffset und -umfang gestreckt.                                                                                                     |
+| frame                        | Wählt den gesamten Framepuffer aus, um die eingehenden Videobilder zu empfangen.                                                                                                                                                                                                                                                                                 |
+| Frame am *Rechteck*         | Wählt einen Teil des Framepuffers aus, um die eingehenden Videobilder zu empfangen.                                                                                                                                                                                                                                                                           |
+| source                       | Wählt das gesamte Bild für die Anzeige im Zielfenster aus.                                                                                                                                                                                                                                                                                       |
+| Quelle am *Rechteck*        | Wählt einen Teil des Bilds aus, der im Zielfenster angezeigt werden soll. Wenn ein Bereich des Quellbilds angegeben wird und das Gerät Stretching unterstützt, wird das Quellbild auf den Zieloffset und -umfang gestreckt.                                                                                                                           |
+| video                        | Wählt das gesamte eingehende Videobild aus, das im Framepuffer erfasst werden soll.                                                                                                                                                                                                                                                                               |
+| Video am *Rechteck*         | Wählt einen Teil des eingehenden Videobilds aus, das im Framepuffer erfasst werden soll.                                                                                                                                                                                                                                                                         |
+| Fenster                       | Stellt die Anfangsfenstergröße auf der Anzeige wieder auf. Mit diesem Befehl wird auch das Fenster angezeigt.                                                                                                                                                                                                                                                               |
+| Fenster am *Rechteck*        | Ändert die Größe und Position des Anzeigefensters. Das angegebene Rechteck ist relativ zum übergeordneten Fenster des Anzeigefensters (in der Regel der Desktop), wenn das Flag "style child" für den geöffneten [Befehl verwendet](open.md) wurde. Um die Position des Fensters zu ändern, ohne dessen Höhe oder Breite zu ändern, geben Sie 0 (null) für die Höhe und Breite an. |
+| Window-Client                | Stellt den Clientbereich des Fensters wieder auf.                                                                                                                                                                                                                                                                                                               |
+| Fensterclient beim *Rechteck* | Ändert die Größe und Position des Clientbereichs des Fensters. Das angegebene Rechteck ist relativ zum übergeordneten Fenster des Clientfensters. Um die Position des Fensters zu ändern, ohne dessen Höhe oder Breite zu ändern, geben Sie 0 (null) für die Höhe und Breite an.                                                                                      |
 
 
 
  
 
-Wenn ein Flag ein Rechteck enthält, sind die Rechteck Koordinaten relativ zum Fenster Ursprung oder dem Bild Ursprung, wenn dies erforderlich ist, und werden als **x1 y1 x2 Y2** angegeben. Die Koordinaten **X1Y1** geben die linke obere Ecke an, und die Koordinaten **X2Y2** geben die Breite und Höhe des Rechtecks an.
+Wenn ein Flag ein Rechteck enthält, sind die Rechteckkoordinaten relativ zum Fenster- oder Bildersprung und werden **als X1 Y1 X2 Y2 angegeben.** Die Koordinaten **X1Y1 geben** die obere linke Ecke an, und die **Koordinaten X2Y2** geben die Breite und Höhe des Rechtecks an.
 
 </dd> <dt>
 
-<span id="lpszFlags"></span><span id="lpszflags"></span><span id="LPSZFLAGS"></span>*lpszflags*
+<span id="lpszFlags"></span><span id="lpszflags"></span><span id="LPSZFLAGS"></span>*lpszFlags*
 </dt> <dd>
 
-Kann "wait", "notify" oder beides sein. Für Digital Video-Geräte kann auch "Test" angegeben werden. Weitere Informationen zu diesen Flags finden Sie [unter warte-, Benachrichtigungs-und testflags](the-wait-notify-and-test-flags.md).
+Kann "wait", "notify" oder beides sein. Für Digitalvideogeräte kann auch "test" angegeben werden. Weitere Informationen zu diesen Flags finden Sie unter [Die Warte-, Benachrichtigungs- und Testflags](the-wait-notify-and-test-flags.md).
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt 0 (null) zurück, wenn erfolgreich, andernfalls einen Fehler.
+Gibt 0 (null) zurück, wenn erfolgreich, andernfalls ein Fehler.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Der Put-Befehl definiert bei der Arbeit mit Video Überlagerungs Geräten mindestens eine der folgenden Rechtecke:
+Der Befehl put definiert mindestens eines der folgenden Rechtecke bei der Arbeit mit Videoüberlagerungsgeräten:
 
--   Das Video Rechteck definiert den Bereich des zu erfassenden eingehenden Video Bilds.
--   Das Rahmen Rechteck definiert den Bereich des Frame Puffers, der das eingehende Video Bild empfängt.
--   Das Quell Rechteck definiert, welcher Bereich des Frame Puffers in das Ziel Rechteck kopiert wird.
--   Das Ziel Rechteck definiert den Bereich des Client Bereichs des Anzeige Fensters, der das Video Bild empfängt.
+-   Das Videorechteck definiert den Bereich des eingehenden Videobilds, das erfasst werden soll.
+-   Das Rahmenrechteck definiert den Bereich des Framepuffers, der das eingehende Videobild empfängt.
+-   Das Quellrechteck definiert, welcher Bereich des Framepuffers in das Zielrechteck kopiert wird.
+-   Das Zielrechteck definiert den Bereich des Clientbereichs des Anzeigefensters, der das Videobild empfängt.
 
-Das Video Rechteck ist mit dem Frame Rechteck identisch, ebenso wie das Quell Rechteck mit dem Ziel Rechteck verknüpft ist. Die Streckung kann vom Video Rechteck bis zum Frame Rechteck und vom Quell Rechteck bis zum Ziel Rechteck erfolgen. Nicht alle Geräte unterstützen die Streckung, und die Streckung muss aktiviert sein (mit dem [Set](set.md) -Befehl).
+Das Videorechteck ist auf die gleiche Weise mit dem Framerechteck verknüpft wie das Quellrechteck mit dem Zielrechteck. Eine Streckung kann vom Videorechteck zum Rahmenrechteck und vom Quellrechteck zum Zielrechteck erfolgen. Nicht alle Geräte unterstützen Stretching, und Stretching muss aktiviert sein (mithilfe des [Set-Befehls).](set.md)
 
-Mit dem folgenden Befehl werden drei Bereiche für das Video, den Frame und die Quelle definiert.
+Der folgende Befehl definiert drei Regionen für das Video, den Frame und die Quelle.
 
 ``` syntax
 put vboard video 120 120 200 200 frame 0 0 200 200 source 0 0 200 200
 ```
 
-Die Regionen in diesem Beispiel werden wie folgt definiert:
+Die Regionen in diesem Beispiel sind wie folgt definiert:
 
--   Ein Bereich von 200 bis 200 Pixel der eingehenden Videodaten, beginnend bei einem Ursprung 120 Pixel von der oberen linken Ecke, wird im Frame Puffer aufgezeichnet.
--   Die Videodaten werden in einem Bereich von 200 bis 200 Pixel in der oberen linken Ecke des Frame Puffers platziert.
--   Übertragungen werden vom Bereich 200 bis 200 Pixel in der linken oberen Ecke des Frame Puffers zum Zielfenster durchgeführt.
+-   Ein Bereich von 200 x 200 Pixeln der eingehenden Videodaten, beginnend mit einem Ursprung von 120 Pixeln von der oberen linken Ecke, wird im Framepuffer erfasst.
+-   Die Videodaten werden in einem Bereich von 200 bis 200 Pixeln in der oberen linken Ecke des Framepuffers platziert.
+-   Übertragungen werden vom 200- bis 200-Pixel-Bereich in der oberen linken Ecke des Framepuffers zum Zielfenster vorgenommen.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -134,14 +134,14 @@ Die Regionen in diesem Beispiel werden wie folgt definiert:
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[MCI](mci.md)
+[Mci](mci.md)
 </dt> <dt>
 
-[MCI-Befehls Zeichenfolgen](mci-command-strings.md)
+[MCI-Befehlszeichenfolgen](mci-command-strings.md)
 </dt> <dt>
 
 [open](open.md)

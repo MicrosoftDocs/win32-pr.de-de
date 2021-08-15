@@ -1,11 +1,11 @@
 ---
-title: Iwmpmedia AttributeCount (Eigenschaft)
-description: Die AttributeCount-Eigenschaft ruft die Anzahl der Attribute ab, die abgefragt und/oder für das Medien Element festgelegt werden können.
+title: IWMPMedia attributeCount-Eigenschaft
+description: Die attributeCount-Eigenschaft ruft die Anzahl der Attribute ab, die für das Medienelement abgefragt und/oder festgelegt werden können.
 ms.assetid: 527298ff-365d-41b0-90dd-e236d6adf6fa
 keywords:
-- AttributeCount-Eigenschaft, Windows-Media Player
-- AttributeCount-Eigenschaft, Windows Media Player, iwmpmedia-Schnittstelle
-- Iwmpmedia Interface, Windows Media Player, AttributeCount (Eigenschaft)
+- attributeCount-Windows Media Player
+- attributeCount-Windows Media Player , IWMPMedia-Schnittstelle
+- IWMPMedia-Schnittstelle Windows Media Player , attributeCount-Eigenschaft
 topic_type:
 - apiref
 api_name:
@@ -17,16 +17,16 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: ec5a56d06a54590afd315f04a90aa582f3a364db
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 73c3139d076fd7d1cd1bad784e325c67da25b3e7dedf530a9634a2878fe3011a
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106370313"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117746069"
 ---
-# <a name="iwmpmediaattributecount-property"></a>Iwmpmedia:: AttributeCount (Eigenschaft)
+# <a name="iwmpmediaattributecount-property"></a>IWMPMedia::attributeCount-Eigenschaft
 
-Die **AttributeCount** -Eigenschaft ruft die Anzahl der Attribute ab, die abgefragt und/oder für das Medien Element festgelegt werden können.
+Die **attributeCount-Eigenschaft** ruft die Anzahl der Attribute ab, die für das Medienelement abgefragt und/oder festgelegt werden können.
 
 Diese Eigenschaft ist schreibgeschützt.
 
@@ -49,17 +49,17 @@ Public ReadOnly Property attributeCount As System.Int32
 
 ## <a name="property-value"></a>Eigenschaftswert
 
-Ein **System. Int32** -Wert, der die Anzahl ist.
+Ein **System.Int32,** das die Anzahl ist.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Vor der Verwendung dieser Eigenschaft müssen Sie über Lesezugriff auf die Bibliothek verfügen. Weitere Informationen finden Sie unter [Bibliotheks Zugriff](library-access.md).
+Bevor Sie diese Eigenschaft verwenden können, müssen Sie über Lesezugriff auf die Bibliothek verfügen. Weitere Informationen finden Sie unter [Bibliothekszugriff.](library-access.md)
 
-Informationen zu den Attributen, die von Windows Media Player unterstützt werden, finden Sie in der [Attribut Referenz](attribute-reference.md).
+Informationen zu den Attributen, die von Windows Media Player unterstützt werden, finden Sie in der [Attributreferenz.](attribute-reference.md)
 
 ## <a name="examples"></a>Beispiele
 
-Im folgenden Beispiel wird **AttributeCount** verwendet, um die Anzahl der Attribute zu bestimmen, die im aktuellen Medien Element verfügbar sind. Der Code verwendet diesen Wert, um eine Liste von Attributnamen und Werten in einem Textfeld anzuzeigen. Das **AxWMPLib. AxWindowsMediaPlayer** -Objekt wird durch die Variable mit dem Namen "Player" dargestellt.
+Im folgenden Beispiel wird **attributeCount verwendet,** um die Anzahl der attributes zu bestimmen, die im aktuellen Medienelement verfügbar sind. Der Code verwendet diesen Wert, um eine Liste von Attributnamen und -werten in einem Textfeld anzuzeigen. Das **AxWMPLib.AxWindowsMediaPlayer-Objekt** wird durch die Variable player dargestellt.
 
 
 ```CSharp
@@ -133,17 +133,17 @@ attributeList.Lines = atList
 
 | Anforderung | Wert |
 |----------------------|------------------------------------------------------------------------------------------------------------------------|
-| Version<br/>   | Windows Media Player 9-Serie oder höher<br/>                                                                      |
+| Version<br/>   | Windows Media Player 9er Serie oder höher<br/>                                                                      |
 | Namespace<br/> | **WMPLib**<br/>                                                                                                  |
 | Assembly<br/>  | <dl> <dt>Interop.WMPLib.dll (Interop.WMPLib.dll.dll)</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Iwmpmedia-Schnittstelle (VB und c#)**](iwmpmedia--vb-and-c.md)
+[**IWMPMedia-Schnittstelle (VB und C#)**](iwmpmedia--vb-and-c.md)
 </dt> </dl>
 
  

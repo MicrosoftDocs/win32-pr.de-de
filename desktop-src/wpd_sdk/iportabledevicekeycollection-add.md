@@ -1,7 +1,7 @@
 ---
-description: Die Add-Methode fügt der Auflistung einen Eigenschafts Schlüssel hinzu.
+description: Die Add-Methode fügt der Auflistung einen Eigenschaftsschlüssel hinzu.
 ms.assetid: 640ef1c4-2843-48dd-a30a-9a2ef9de35b9
-title: 'Iportabledevicekeycollection:: Add-Methode (portabledevicetypes. h)'
+title: IPortableDeviceKeyCollection::Add-Methode (PortableDeviceTypes.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -14,16 +14,16 @@ api_type:
 api_location:
 - PortableDeviceGUIDs.lib
 - PortableDeviceGUIDs.dll
-ms.openlocfilehash: e43fea25a08969b2ae8169884d51ddc46f8c7136
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 6aa28a7a8a6439f27a095033d35e8b066c1488af13d1ade921f16c4143843adf
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106370782"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118194720"
 ---
-# <a name="iportabledevicekeycollectionadd-method"></a>Iportabledevicekeycollection:: Add-Methode
+# <a name="iportabledevicekeycollectionadd-method"></a>IPortableDeviceKeyCollection::Add-Methode
 
-Die **Add** -Methode fügt der Auflistung einen Eigenschafts Schlüssel hinzu.
+Die **Add-Methode** fügt der Auflistung einen Eigenschaftsschlüssel hinzu.
 
 ## <a name="syntax"></a>Syntax
 
@@ -40,23 +40,23 @@ HRESULT Add(
 
 <dl> <dt>
 
-*Schlüssel* \[ in\]
+*Schlüssel* \[ In\]
 </dt> <dd>
 
-Ein **refpropertykey** , der der Auflistung hinzugefügt werden soll. Diese Methode kopiert den Schlüssel in die Auflistung, sodass Sie die lokale Variable freigeben können, nachdem Sie diese Methode aufgerufen haben.
+Ein **REFPROPERTYKEY,** der der Auflistung hinzugefügt werden soll. Diese Methode kopiert den Schlüssel in die Auflistung, sodass Sie die lokale Variable nach dem Aufruf dieser Methode wieder frei geben können.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Die-Methode gibt ein **HRESULT** zurück. Mögliches Werte (aber nicht die Einzigen) sind die in der folgenden Tabelle.
+Die Methode gibt ein **HRESULT** zurück. Mögliches Werte (aber nicht die Einzigen) sind die in der folgenden Tabelle.
 
 
 
 | Rückgabecode                                                                                   | Beschreibung                                                                       |
 |-----------------------------------------------------------------------------------------------|-----------------------------------------------------------------------------------|
 | <dl> <dt>**S \_ OK**</dt> </dl>          | Die Methode wurde erfolgreich ausgeführt.<br/>                                                  |
-| <dl> <dt>**E \_ outo-Memory**</dt> </dl> | Es ist nicht genügend Arbeitsspeicher verfügbar, um der Sammlung den Schlüssel hinzuzufügen.<br/> |
+| <dl> <dt>**E \_ OUTOFMEMORY**</dt> </dl> | Es ist nicht genügend Arbeitsspeicher verfügbar, um den Schlüssel zur Auflistung hinzuzufügen.<br/> |
 
 
 
@@ -64,7 +64,7 @@ Die-Methode gibt ein **HRESULT** zurück. Mögliches Werte (aber nicht die Einzi
 
 ## <a name="examples"></a>Beispiele
 
-Ein Beispiel für die Verwendung dieser Methode finden Sie unter [Abrufen von Eigenschaften für ein einzelnes Objekt](retrieving-properties-for-a-single-object.md).
+Ein Beispiel für die Verwendung dieser Methode finden Sie unter [Abrufen von Eigenschaften für ein einzelnes Objekt.](retrieving-properties-for-a-single-object.md)
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -72,19 +72,19 @@ Ein Beispiel für die Verwendung dieser Methode finden Sie unter [Abrufen von Ei
 
 | Anforderung | Wert |
 |--------------------|----------------------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>Portablede vicetypes. h</dt> </dl>   |
-| Bibliothek<br/> | <dl> <dt>Portabledeviceguids. lib</dt> </dl> |
+| Header<br/>  | <dl> <dt>PortableDeviceTypes.h</dt> </dl>   |
+| Bibliothek<br/> | <dl> <dt>PortableDeviceGUIDs.lib</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Iportabledevicekeycollection-Schnittstelle**](iportabledevicekeycollection.md)
+[**IPortableDeviceKeyCollection-Schnittstelle**](iportabledevicekeycollection.md)
 </dt> <dt>
 
-[Abrufen von Content-Object-Eigenschaften](retrieving-content-object-properties.md)
+[Abrufen von Inhaltsobjekteigenschaften](retrieving-content-object-properties.md)
 </dt> <dt>
 
 [Abrufen von Eigenschaften für ein einzelnes Objekt](retrieving-properties-for-a-single-object.md)

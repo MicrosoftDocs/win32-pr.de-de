@@ -1,73 +1,73 @@
 ---
-title: Die Direct3D-Transformations Pipeline
-description: Dieser Artikel bietet eine technische Erläuterung für Direct3D-Anwendungsentwickler, wie die Parameter der Direct3D-Transformations Pipeline durch direkte Bearbeitung von Direct3D Matrizen festgelegt werden.
+title: Die Direct3D-Transformationspipeline
+description: Dieser Artikel enthält eine technische Erläuterung für Direct3D-Anwendungsentwickler zum Festlegen der Parameter der Direct3D-Transformationspipeline durch die direkte Bearbeitung von Direct3D-Matrizen.
 ms.assetid: 48ae49f0-1162-c292-4bd4-34da5aadd2df
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: a2b97a87293a840ccd9641b1418c2005cf73a855
-ms.sourcegitcommit: 37f276b5d887a3aad04b1ba86e390dea9d87e591
+ms.openlocfilehash: b6377e3b17cfb4ceb6eda1f4cf59a93c12fd3e6b2f7e43f29f622ed6ee12c271
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/04/2021
-ms.locfileid: "103869324"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118152334"
 ---
-# <a name="the-direct3d-transformation-pipeline"></a>Die Direct3D-Transformations Pipeline
+# <a name="the-direct3d-transformation-pipeline"></a>Die Direct3D-Transformationspipeline
 
-Dieser Artikel bietet eine technische Erläuterung für Direct3D-Anwendungsentwickler, wie die Parameter der Direct3D-Transformations Pipeline durch direkte Bearbeitung von Direct3D Matrizen festgelegt werden.
+Dieser Artikel enthält eine technische Erläuterung für Direct3D-Anwendungsentwickler zum Festlegen der Parameter der Direct3D-Transformationspipeline durch die direkte Bearbeitung von Direct3D-Matrizen.
 
 -   [Übersicht](#overview)
--   [Transformations Pipeline](#the-transformation-pipeline)
--   [Verwendungs Tipps](#usage-tips)
+-   [Die Transformationspipeline](#the-transformation-pipeline)
+-   [Nutzungs-Tipps](#usage-tips)
 
 ## <a name="overview"></a>Übersicht
 
-Direct3D verwendet drei Transformationen, um die 3D-Modell Koordinaten in Pixelkoordinaten (Bildschirmraum) zu ändern. Diese Transformationen sind Welt Transformation, Ansichts Transformation und Projektions Transformation.
+Direct3D verwendet drei Transformationen, um Ihre 3D-Modellkoordinaten in Pixelkoordinaten (Bildschirmraum) zu ändern. Diese Transformationen sind Welttransformation, Ansichtstransformation und Projektionstransformation.
 
-Mit der Welt Transformation wird gesteuert, wie Modell Koordinaten in globale Koordinaten transformiert werden. Die globale Transformation kann Übersetzungen, Drehungen und Skalierungen enthalten, aber Sie gilt nicht für Leuchten. Weitere Informationen zum Arbeiten mit weltweiten Transformationen finden Sie unter [Welt Transformation](/windows/desktop/direct3d9/world-transform).
+World Transform steuert, wie Modellkoordinaten in Weltkoordinaten transformiert werden. Die Welttransformation kann Übersetzungen, Drehungen und Skalierungen umfassen, gilt jedoch nicht für Licht. Weitere Informationen zum Arbeiten mit Welttransformationen finden Sie unter [World Transform](/windows/desktop/direct3d9/world-transform).
 
-View Transform steuert den Übergang von den Weltkoordinaten in den "Kamera Raum", um die Kameraposition weltweit zu bestimmen. Ein Beispiel für das Arbeiten mit Ansichts Transformationen finden Sie unter [View Transform (View Transform](/windows/desktop/direct3d9/view-transform)).
+Die Ansichtstransformation steuert den Übergang von Weltkoordinaten in "Kameraraum", um die Kameraposition in der Welt zu bestimmen. Ein Beispiel für das Arbeiten mit Ansichtstransformationen finden Sie unter [View Transform](/windows/desktop/direct3d9/view-transform).
 
-Die Projektions Transformation ändert die Geometrie von Kamerabereich in "Clip Space" und wendet perspektivische Verzerrung an. Der Begriff "Clip Space" bezieht sich darauf, wie die Geometrie während dieser Transformation auf das Ansichts Volume zugeschnitten wird. Ein Beispiel für das Arbeiten mit Projektions Transformationen finden Sie unter [Projektions Transformation](/windows/desktop/direct3d9/projection-transform).
+Die Projektionstransformation ändert die Geometrie aus dem Kameraraum in "Clip Space" und wendet perspektivische Verzerrung an. Der Begriff "Clip space" bezieht sich darauf, wie die Geometrie während dieser Transformation auf das Ansichtsvolumen abgeschnitten wird. Ein Beispiel für die Arbeit mit Projektionstransformationen finden Sie unter [Projektionstransformation.](/windows/desktop/direct3d9/projection-transform)
 
-Schließlich wird die Geometrie im Clip Bereich in Pixelkoordinaten (Bildschirmraum) transformiert. Diese Transformation wird durch die viewporteinstellungen gesteuert.
+Schließlich wird die Geometrie im Clipspace in Pixelkoordinaten (Bildschirmraum) transformiert. Diese Transformation wird durch die Viewporteinstellungen gesteuert.
 
-Clipping-und transformierende Scheitel Punkte müssen in einem homogenen Raum stattfinden (einfach Leerstellen, in dem das Koordinatensystem ein viertes Element enthält). das Endergebnis für die meisten Anwendungen muss jedoch nicht homogene dreidimensionale (3D-) Koordinaten sein, die im "Bildschirmbereich" definiert sind. Dies bedeutet, dass sowohl die Eingabe Scheitel Punkte als auch das clippingvolume in homogenen Raum übersetzt werden müssen, um das Clipping auszuführen, und dann wieder in nicht homogenen Bereich übersetzt werden, um angezeigt zu werden.
+Das Ausschneiden und Transformieren von Scheitelpunkten muss im homogenen Raum erfolgen (einfach ausgedrückt: Im Raum, in dem das Koordinatensystem ein viertes Element enthält), aber das Endergebnis für die meisten Anwendungen müssen nicht homogene dreidimensionale Koordinaten (3D) sein, die im Bildschirmbereich definiert sind. Dies bedeutet, dass sowohl die Eingabevertices als auch das Clippingvolume in einen homogenen Raum übersetzt werden müssen, um den Clipping auszuführen, und dann wieder in einen nicht homogenen Raum übersetzt werden müssen, um angezeigt zu werden.
 
-Die drei Transformationen "Direct3D Transformationen-World", "View" und "Projection" werden durch Direct3D Matrices definiert. Eine Direct3D-Matrix ist eine homogene 4 x 4-Matrix, die durch eine [**D3DMATRIX**](/windows/desktop/direct3d9/d3dmatrix) -Struktur definiert ist. Obwohl Direct3D Matrizen keine Standardobjekte sind, werden Sie nicht durch eine COM-Schnittstelle dargestellt. Sie können Sie genauso wie jedes andere Direct3D-Objekt erstellen und festlegen. Weitere Informationen zu Direct3D Matrizen finden Sie unter [Transformationen](/windows/desktop/direct3d9/transforms).
+Die drei Direct3D-Transformationen –Welt-, Ansichts- und Projektionstransformationen – werden durch Direct3D-Matrizen definiert. Eine Direct3D-Matrix ist eine homogene 4x4-Matrix, die durch eine [**D3DMATRIX-Struktur**](/windows/desktop/direct3d9/d3dmatrix) definiert wird. Obwohl Direct3D-Matrizen keine Standardobjekte sind, die nicht durch eine COM-Schnittstelle dargestellt werden, können Sie sie wie jedes andere Direct3D-Objekt erstellen und festlegen. Weitere Informationen zu Direct3D-Matrizen finden Sie unter [Transformationen.](/windows/desktop/direct3d9/transforms)
 
-## <a name="the-transformation-pipeline"></a>Transformations Pipeline
+## <a name="the-transformation-pipeline"></a>Die Transformationspipeline
 
-Wenn ein Scheitelpunkt in der Modell Koordinate von pm = (XM, YM, ZM, 1) angegeben wird, werden die in der folgenden Abbildung gezeigten Transformationen auf die Compute-Bildschirm Koordinaten PS = (XS, ys, ZS, WS) angewendet.
+Wenn ein Scheitelpunkt in der Modellkoordinate von Pm = (Xm, Ym, Zm, 1) angegeben wird, werden die in der folgenden Abbildung gezeigten Transformationen auf die Computebildschirmkoordinaten Ps = (Xs, Ys, Zs, Ws) angewendet.
 
-![Transformation für Modellraum zu Bildschirmraum](images/d3dxfrm61.gif)
+![Transformation von Modellraum zu Bildschirmbereich](images/d3dxfrm61.gif)
 
-Im folgenden finden Sie Beschreibungen der Stufen, die in der obigen Abbildung dargestellt werden:
+Hier finden Sie Beschreibungen der Phasen, die in der vorherigen Abbildung dargestellt werden:
 
-1.  World Matrix mworld wandelt Scheitel Punkte vom Modellraum in den Raum um. Diese Matrix wird durch Folgendes festgelegt:
+1.  Die Weltmatrix Mworld transformiert Scheitelpunkte aus dem Modellraum in den Weltraum. Diese Matrix wird wie folgt festgelegt:
 
     ``` syntax
         d3dDevice->SetTransform (D3DTRANSFORMSTATE_WORLD, matrix address) 
     ```
 
-    Die Direct3D-Implementierung geht davon aus, dass die letzte Spalte dieser Matrix (0,0) ist (0, 0, 0, 1). Wenn der Benutzer eine Matrix mit einer anderen letzten Spalte angibt, wird kein Fehler zurückgegeben, aber die Beleuchtung und der Nebel sind falsch.
+    Bei der Direct3D-Implementierung wird davon ausgegangen, dass die letzte Spalte dieser Matrix (0, 0, 0, 1) ist. Es wird kein Fehler zurückgegeben, wenn der Benutzer eine Matrix mit einer anderen letzten Spalte angibt, die Beleuchtung und die Beleuchtung jedoch falsch sind.
 
-2.  Anzeigen von Matrix-MVIEW Transformationen Scheitel Punkte aus dem Raum in der Kamera. Diese Matrix wird durch Folgendes festgelegt:
+2.  Die MView-Ansicht der Ansichtsmatrix transformiert Scheitelpunkte aus dem Weltraum in den Kameraraum. Diese Matrix wird wie folgt festgelegt:
 
     ``` syntax
         d3dDevice->SetTransform (D3DTRANSFORMSTATE_VIEW, matrix address) 
     ```
 
-    Die Direct3D-Implementierung geht davon aus, dass die letzte Spalte dieser Matrix (0,0) ist (0, 0, 0, 1). Es wird kein Fehler zurückgegeben, wenn der Benutzer eine Matrix mit unterschiedlichen letzten Spalten angibt, aber die Beleuchtung und der Nebel sind falsch.
+    Bei der Direct3D-Implementierung wird davon ausgegangen, dass die letzte Spalte dieser Matrix (0, 0, 0, 1) ist. Es wird kein Fehler zurückgegeben, wenn der Benutzer eine Matrix mit einer anderen letzten Spalte angibt, die Beleuchtung und die Beleuchtung jedoch falsch sind.
 
-3.  Projektions Matrix mproj wandelt Scheitel Punkte vom Kamerabereich in den Projektions Bereich um. Diese Matrix wird durch Folgendes festgelegt:
+3.  Die Projektionsmatrix Mproj transformiert Scheitelpunkte aus dem Kameraraum in den Projektionsbereich. Diese Matrix wird wie folgt festgelegt:
 
     ``` syntax
         d3dDevice->SetTransform (D3DTRANSFORMSTATE_PROJECTION, matrix address) 
     ```
 
-    Die letzte Spalte der Projektions Matrix sollte (0, 0, 1, 0) oder (0, 0, a, 0) für korrekte Nebel-und Beleuchtungseffekte lauten. das Formular (0,0) ist bevorzugt.
+    Die letzte Spalte der Projektionsmatrix sollte (0, 0, 1, 0) oder (0, 0, a, 0) sein, um korrekte Licht- und Lichteffekte zu erzielen. (0, 0, 1, 0) Form wird bevorzugt.
 
-    Das clippingvolume für alle Punkte XP = (XP, YP, ZP, WP) im Projektions Bereich wird wie folgt definiert:
+    Clipping volume for all points Xp = (Xp, Yp, Zp, Wp) in the projection space is defined as:
 
     ``` syntax
         -Wp < Xp <= Wp 
@@ -77,36 +77,36 @@ Im folgenden finden Sie Beschreibungen der Stufen, die in der obigen Abbildung d
 
     Alle Punkte, die diese Gleichungen nicht erfüllen, werden abgeschnitten.
 
-    Wenn ein Ansichts Volume wie folgt definiert ist:
+    Wenn ein Ansichtsvolume wie folgt definiert ist:
 
-    -   SW-Bildschirmfenster Breite im Kamerabereich in der Nähe der Clipping-Ebene
-    -   Höhe des SH-Screen-Fensters im Kamerabereich in der Nähe der Clipping-Ebene
-    -   HLS-Entfernung zur Near Clipping-Ebene entlang Z-Achsen im Kamerabereich
-    -   ZF-Entfernung zur weit entfernten Clipping-Ebene entlang Z-Achsen im Kamerabereich
+    -   Breite des Sw-Bildschirmfensters im Kameraraum in der Nähe der Clippingebene
+    -   Sh-Screen-Fensterhöhe im Kameraraum in der Nähe der Clippingebene
+    -   Zn-Entfernung zur mittleren Clippingebene entlang der Z-Achsen im Kameraraum
+    -   Abstand zur weit entfernten Clippingebene entlang der Z-Achsen im Kameraraum
 
-    Anschließend könnte eine perspektivische Projektions Matrix wie folgt geschrieben werden:
+    dann könnte eine perspektivische Projektionsmatrix wie folgt geschrieben werden:
 
-    ![Zeigt eine perspektivische Projektions Matrix an.](images/d3dxfrm62.gif)
+    ![Zeigt eine perspektivische Projektionsmatrix an.](images/d3dxfrm62.gif)
 
-    Dabei sind mij Mitglieder von mproj.
+    , wobei Mij Mitglieder von Mproj sind.
 
     Für die orthogonale Projektion haben wir Folgendes:
 
-    ![orthogonale Projektion](images/d3dxfrm63.gif)
+    ![Orthogonale Projektion](images/d3dxfrm63.gif)
 
-    Direct3D geht davon aus, dass die Perspektiven Projektions Matrix folgendes Format aufweist:
+    Direct3D geht davon aus, dass die perspektivische Projektionsmatrix die folgende Form hat:
 
-    ![Perspektiven Projektions Matrix](images/d3dxfrm64.gif)
+    ![Perspektivische Projektionsmatrix](images/d3dxfrm64.gif)
 
-    Wenn die perspektivische Projektions Matrix nicht über dieses Formular verfügt, werden einige Artefakte angezeigt. Beispielsweise kann der Tabellen Nebel nicht verwendet werden.
+    Wenn die perspektivische Projektionsmatrix nicht über diese Form verfügt, gibt es einige Artefakte. Tabellen werden beispielsweise nicht funktionieren.
 
-4.  Direct3D ermöglicht dem Benutzer, das Clip Volume wie folgt zu ändern:
+4.  Direct3D ermöglicht es dem Benutzer, das Clipvolume wie folgt zu ändern:
 
-    ![Ändern des clippvolumes](images/d3dxfrm65.gif)
+    ![Ändern des Clipvolumes](images/d3dxfrm65.gif)
 
-    Dies kann wie folgt umgeschrieben werden:
+    Dies kann wie hier beschrieben umgeschrieben werden:
 
-    ![umgeschriebene Clip Volume ändern](images/d3dxfrm66.gif)
+    ![Ändern des neu geschriebenen Clipvolumes](images/d3dxfrm66.gif)
 
     Dabei gilt:
 
@@ -116,13 +116,13 @@ Im folgenden finden Sie Beschreibungen der Stufen, die in der obigen Abbildung d
         Zmin, Zmax - dvMinZ, dvMaxZ from D3DVIEWPORT9  
     ```
 
-    Diese Transformation kann eine größere Genauigkeit bieten und entspricht der Skalierung und Verschiebung des clippingvolumes.
+    Diese Transformation kann eine höhere Genauigkeit bieten und entspricht der Skalierung und Verschiebung des Clippingvolumes.
 
-    Die entsprechende MCLIP-Matrix lautet:
+    Die entsprechende Mclipmatrix lautet:
 
-    ![MCLIP-Matrix](images/d3dxfrm67.gif)
+    ![mclip matrix](images/d3dxfrm67.gif)
 
-    Ein Scheitelpunkt wird transformiert durch:
+    Ein Scheitelpunkt wird wie folgt transformiert:
 
     ``` syntax
         dvClipWidth = 2   
@@ -133,16 +133,16 @@ Im folgenden finden Sie Beschreibungen der Stufen, die in der obigen Abbildung d
         dvMaxZ = 1   
     ```
 
-    Wenn Sie das Clip Volume nicht skalieren möchten, können Sie Viewport-Parameter auf Standardwerte festlegen:
+    Wenn Sie das Clipvolume nicht skalieren möchten, können Sie Viewportparameter auf Standardwerte festlegen:
 
     ``` syntax
         (Xc, Yc, Zc, Wc) = (Xp, Yp, Zp, Wp) * Mclip   
     ```
 
-5.  Die clippingphase ist optional, wenn der Benutzer das D3DDP \_ DoNotClip-Flag in einem drawprimitiven-Befehl angibt. In diesem Fall können alle Matrizen (einschließlich MVS) kombiniert werden.
-6.  Die viewportskalierungsmatrix-MVS skaliert die Koordinaten so, dass Sie innerhalb des viewportfensters liegen, und kippt die Y-Achse von oben nach unten:
+5.  Die Clippingphase ist optional, wenn der Benutzer das D3DDP \_ DONOTCLIP-Flag in einem DrawPrimitive-Aufruf angibt. In diesem Fall können alle Matrizen (einschließlich Mvs) kombiniert werden.
+6.  Die Viewport-Skalierungsmatrix Mvs skaliert Koordinaten so, dass sie sich innerhalb des Viewportfensters befindet, und dreht die Y-Achse von oben nach unten:
 
-    ![Viewport-Skalierungs Matrix-MVS](images/d3dxfrm68.gif)
+    ![Viewport-Skalierungsmatrix mvs](images/d3dxfrm68.gif)
 
     Dabei gilt:
 
@@ -151,16 +151,16 @@ Im folgenden finden Sie Beschreibungen der Stufen, die in der obigen Abbildung d
         dwWidth, dwHeight - viewport width and height in pixels from D3DVIEWPORT9    
     ```
 
-7.  Zum Schluss werden Bildschirm Koordinaten berechnet und an den Rasterizer übermittelt:
+7.  Schließlich werden Bildschirmkoordinaten berechnet und an den Rasterizer übergeben:
 
-    ![Bildschirm Koordinaten berechnet und an den Raster übermittelt](images/d3dxfrm69.gif)
+    ![Berechnete und an den Rasterizer übergebene Bildschirmkoordinaten](images/d3dxfrm69.gif)
 
-## <a name="usage-tips"></a>Verwendungs Tipps
+## <a name="usage-tips"></a>Nutzungs-Tipps
 
-Im folgenden finden Sie einige Tipps zur Verwendung der Direct3D-Transformations Pipeline:
+Im Folgenden finden Sie einige Tipps zur Verwendung der Direct3D-Transformationspipeline:
 
--   Die letzte Spalte der Welt-und Ansichts Matrizen sollte (0, 0, 0, 1) sein, oder die Beleuchtung ist falsch.
--   Legen Sie die Viewport-Parameter fest, um eine MCLIP-Identitätsmatrix zu erstellen, es sei denn, Sie wissen genau, wofür Sie benötigt wird.
+-   Die letzte Spalte der Welt- und Ansichtsmatrizen sollte (0, 0, 0, 1) sein, andernfalls ist die Beleuchtung falsch.
+-   Legen Sie die Viewportparameter fest, um eine Mclip-Identitätsmatrix zu erstellen, es sei denn, Sie wissen genau, wofür sie benötigt wird.
 
     ``` syntax
         dvClipWidth = 2 

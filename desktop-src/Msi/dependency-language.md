@@ -1,7 +1,7 @@
 ---
-description: Die schreibgeschützte Language-Eigenschaft gibt die langid des erforderlichen Moduls zurück.
+description: Die schreibgeschützte Language-Eigenschaft gibt die LANGID des erforderlichen Moduls zurück.
 ms.assetid: 9b0608d1-b6e8-4cf9-8119-3c2909156516
-title: Abhängigkeit. Language-Eigenschaft (Mergemod. h)
+title: Dependency.Language-Eigenschaft (Mergemod.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -14,16 +14,16 @@ api_type:
 - COM
 api_location:
 - Mergemod.dll
-ms.openlocfilehash: fd1d6aad071879b6559ed1472c0463f8f87dd4cc
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 3d41bf7b6cd0d6da360804159d6d81435175cfba15752b2ad87599abf79f3374
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106371121"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118378870"
 ---
-# <a name="dependencylanguage-property"></a>Abhängigkeit. Language (Eigenschaft)
+# <a name="dependencylanguage-property"></a>Dependency.Language-Eigenschaft
 
-Die schreibgeschützte **Language** -Eigenschaft gibt die **LangID** des erforderlichen Moduls zurück.
+Die schreibgeschützte **Language-Eigenschaft** gibt die **LANGID** des erforderlichen Moduls zurück.
 
 Diese Eigenschaft ist schreibgeschützt.
 
@@ -40,7 +40,7 @@ propVal = Dependency.Language
 
 ## <a name="c"></a>C++
 
-Weitere Informationen finden [**Sie unter Get \_ Language Function (Abhängigkeits Objekt)**](/windows/win32/api/mergemod/nf-mergemod-imsmdependency-get_language).
+Siehe [**get Language Function \_ (Dependency Object)**](/windows/win32/api/mergemod/nf-mergemod-imsmdependency-get_language).
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -48,8 +48,8 @@ Weitere Informationen finden [**Sie unter Get \_ Language Function (Abhängigkei
 
 | Anforderung | Wert |
 |--------------------|-----------------------------------------------------------------------------------------|
-| Version<br/> | Mergemod.dll 1,0 oder höher<br/>                                                    |
-| Header<br/>  | <dl> <dt>Mergemod. h</dt> </dl>   |
+| Version<br/> | Mergemod.dll 1.0 oder höher<br/>                                                    |
+| Header<br/>  | <dl> <dt>Mergemod.h</dt> </dl>   |
 | DLL<br/>     | <dl> <dt>Mergemod.dll</dt> </dl> |
 
 

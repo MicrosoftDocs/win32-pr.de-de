@@ -1,20 +1,20 @@
 ---
-title: Übersicht über QuickInfo
-description: Übersicht über QuickInfo
+title: Übersicht über das QuickInfo-Steuerelement
+description: Übersicht über das QuickInfo-Steuerelement
 ms.assetid: 686455f6-9c72-433e-a1ee-60a83c49ee6e
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: a40f58680a86fa411dfce1c1bfa7a27c9f4edb03
-ms.sourcegitcommit: 92e74c99f8f4d097676959d0c317f533c2400a80
+ms.openlocfilehash: 7b9117b09d16be06476ae961424f7ef382cb9b442b08d68dbad46319afa5aae9
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/09/2021
-ms.locfileid: "104353749"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118414972"
 ---
-# <a name="tooltip-control-overview"></a>Übersicht über QuickInfo
+# <a name="tooltip-control-overview"></a>Übersicht über das QuickInfo-Steuerelement
 
--   [Info-Steuerelemente](tooltip-controls.md)
--   [Verwenden von Quick Infos](using-tooltip-contro.md)
+-   [Informationen zu QuickInfo-Steuerelementen](tooltip-controls.md)
+-   [Verwenden von QuickInfo-Steuerelementen](using-tooltip-contro.md)
 
  
 

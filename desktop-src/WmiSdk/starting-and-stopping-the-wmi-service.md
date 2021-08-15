@@ -1,8 +1,8 @@
 ---
-description: WMI wird als Dienst mit dem anzeigen Amen &\# 0034; ausgeführt. Windows-Verwaltungsinstrumentation&\# 0034; und der Dienst Name &\# 0034; WinMgmt&\# 0034;.
+description: WMI wird als Dienst mit dem Anzeigenamen &\# 0034;Windows-Verwaltungsinstrumentation&0034; und dem Dienstnamen \# &\# 0034;winmgmt&\# 0034; ausgeführt.
 ms.assetid: 8dff43bf-71d0-4d5a-91bc-6f474186d4ba
 ms.tgt_platform: multiple
-title: Starten und Beenden des WMI-Dienstanbieter
+title: Starten und Beenden des WMI-Diensts
 ms.topic: article
 ms.date: 05/31/2018
 topic_type:
@@ -10,44 +10,44 @@ topic_type:
 api_name: ''
 api_type: ''
 api_location: ''
-ms.openlocfilehash: 54b820283aac089ad6191ee587e6beadea6dc030
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: b22524d356bad5f23f4ca1cc8a3e7c68e69fd83f0dc38e64eba70bc1812436f7
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104215325"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118315008"
 ---
-# <a name="starting-and-stopping-the-wmi-service"></a>Starten und Beenden des WMI-Dienstanbieter
+# <a name="starting-and-stopping-the-wmi-service"></a>Starten und Beenden des WMI-Diensts
 
-WMI wird als Dienst mit dem anzeigen Amen "Windows-Verwaltungsinstrumentation" und dem Dienstnamen "winmgmt" ausgeführt. WMI wird automatisch beim Systemstart unter dem Konto "LocalSystem" ausgeführt. Wenn WMI nicht ausgeführt wird, wird es automatisch gestartet, wenn die erste Verwaltungs Anwendung oder das erste Skript eine Verbindung mit einem WMI-Namespace anfordert.
+WMI wird als Dienst mit dem Anzeigenamen "Windows Verwaltungsinstrumentation" und dem Dienstnamen "winmgmt" ausgeführt. WMI wird automatisch beim Systemstart unter dem Konto LocalSystem ausgeführt. Wenn WMI nicht ausgeführt wird, wird es automatisch gestartet, wenn die erste Verwaltungsanwendung oder das erste Skript eine Verbindung mit einem WMI-Namespace an fordert.
 
-Abhängig von der Betriebssystemversion, die auf dem System ausgeführt wird, sind mehrere andere Dienste abhängig von der Betriebssystemversion, die auf dem WMI-Dienst
+Abhängig von der Betriebssystemversion, unter der das System ausgeführt wird, sind mehrere andere Dienste vom WMI-Dienst abhängig.
 
-## <a name="starting-winmgmt-service"></a>WinMgmt-Dienst wird gestartet
+## <a name="starting-winmgmt-service"></a>Starten des Winmgmt-Diensts
 
-Im folgenden Verfahren wird beschrieben, wie der WMI-Dienst gestartet wird.
+Im folgenden Verfahren wird das Starten des WMI-Diensts beschrieben.
 
-**So starten Sie den WinMgmt-Dienst**
+**So starten Sie den Winmgmt-Dienst**
 
-1.  Geben Sie an einer Eingabeaufforderung **net** **Start** **WinMgmt** ein \[ */<switch>* \] .
+1.  Geben Sie an einer Eingabeaufforderung **net** **start** **winmgmt** \[ */<switch>* \] ein.
 
-    Weitere Informationen zu den verfügbaren Switches finden Sie unter [WinMgmt](winmgmt.md). Verwenden Sie das integrierte Administrator Konto oder ein Konto in der Gruppe Administratoren, die mit erhöhten Rechten ausgeführt wird, um den WMI-Dienst zu starten. Weitere Informationen finden Sie unter [Benutzerkontensteuerung und WMI](user-account-control-and-wmi.md).
+    Weitere Informationen zu den verfügbaren Switches finden Sie unter [winmgmt](winmgmt.md). Sie verwenden das integrierte Administratorkonto oder ein Konto in der Gruppe Administratoren, das mit erhöhten Rechten ausgeführt wird, um den WMI-Dienst zu starten. Weitere Informationen finden Sie unter [Benutzerkontensteuerung und WMI.](user-account-control-and-wmi.md)
 
-2.  Andere Dienste, die vom WMI-Dienst abhängig sind, z. b. der SMS-Agent-Host oder die Windows-Firewall, werden nicht automatisch neu gestartet.
+2.  Andere Dienste, die vom WMI-Dienst abhängig sind, z. B. sms agent host oder Windows Firewall, werden nicht automatisch neu gestartet.
 
-## <a name="stopping-winmgmt-service"></a>WinMgmt-Dienst wird beendet.
+## <a name="stopping-winmgmt-service"></a>Beenden des Winmgmt-Diensts
 
-Im folgenden Verfahren wird beschrieben, wie der WMI-Dienst beendet wird.
+Im folgenden Verfahren wird beschrieben, wie sie den WMI-Dienst beenden.
 
-**So verhindern Sie den WinMgmt-Dienst**
+**So beenden Sie den Winmgmt-Dienst**
 
-1.  Geben Sie an einer Eingabeaufforderung **net stoppt WinMgmt** ein.
+1.  Geben Sie an einer Eingabeaufforderung **net stop winmgmt ein.**
 
-2.  Andere Dienste, die vom WMI-Dienst abhängig sind, werden ebenfalls angehalten, z. b. SMS-Agent-Host oder Windows-Firewall
+2.  Andere Dienste, die vom WMI-Dienst abhängig sind, werden ebenfalls anhalten, z. B. SMS-Agent-Host oder Windows Firewall.
 
 ## <a name="examples"></a>Beispiele
 
-Die TechNet Gallery enthält das [WMI-Service Watchdog-Skript](https://Gallery.TechNet.Microsoft.Com/WMI-service-watchdog-script-4fab1282), das beschreibt, wie der WinMgmt-Dienst mit PowerShell Programm gesteuert heruntergefahren und neu gestartet wird.
+Der TechNet-Katalog enthält das [Watchdogskript](https://Gallery.TechNet.Microsoft.Com/WMI-service-watchdog-script-4fab1282)für den WMI-Dienst, das beschreibt, wie der winmgmt-Dienst mit PowerShell programmgesteuert heruntergefahren und neu gestartet wird.
 
 ## <a name="related-topics"></a>Zugehörige Themen
 

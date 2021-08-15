@@ -1,37 +1,37 @@
 ---
-description: Gibt an, ob der Codec versuchen soll, laute Rahmen Ränder zu erkennen und zu entfernen.
+description: Gibt an, ob der Codec versuchen soll, laute Rahmenränder zu erkennen und zu entfernen.
 ms.assetid: fdb4f3a8-1447-4e1e-a208-0f9b717f7626
-title: MFPKEY_NOISEEDGEREMOVAL-Eigenschaft (wmcodecdsp. h)
+title: MFPKEY_NOISEEDGEREMOVAL-Eigenschaft (Wmcodecdsp.h)
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 30acd92bae7693d0714e42d6b4f832a521557bf2
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 128ab89cd12c31186cf99e0c01454986bfe950a3d0a68b6196db6df205dea02a
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104215508"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118242557"
 ---
-# <a name="mfpkey_noiseedgeremoval-property"></a>Mfpkey \_ noiseedgeremuval-Eigenschaft
+# <a name="mfpkey_noiseedgeremoval-property"></a>MFPKEY \_ NOISEEDGEREMOVAL-Eigenschaft
 
-Gibt an, ob der Codec versuchen soll, laute Rahmen Ränder zu erkennen und zu entfernen.
+Gibt an, ob der Codec versuchen soll, laute Rahmenränder zu erkennen und zu entfernen.
 
 ## <a name="constant-for-ipropertybag"></a>Konstante für IPropertyBag
 
-g \_ wszwmvcnoiseedgeremuval
+g \_ wszWMVCNoiseEdgeRemoval
 
 ## <a name="data-type"></a>Datentyp
 
-VT \_ bool
+VT \_ BOOL
 
 ## <a name="default-value"></a>Standardwert
 
-false
+FALSE
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Eine laute Rahmen Kante ist normalerweise die VBI-Daten (Vertical Blank Interval) aus einem Broadcast-TV-Rahmen. VBI stellt die ersten 21 Überprüfungs Linien des Fernseh Rahmens dar. Diese Scan Zeilen enthalten keine Videodaten – Sie enthalten Daten über den Broadcast. Wenn ein Fernsehsignal von einer aufzeichnungskarte aufgezeichnet wird, wird die VBI normalerweise aus dem Frame entfernt. Die vom Codec ausgeführte Erkennung und Korrektur von Noisy Edge kann nur einen Rand korrigieren, der drei oder weniger Rauschen enthält. Wenn das erfasste Video mehr als drei Laute Zeilen enthält, besteht ein Problem mit der Hardware, die zum Erfassen des Videos verwendet wird.
+Bei einem lauten Rahmenrand handelt es sich in der Regel um die Daten des vertikalen Leerungsintervalls (Vertical Blanking Interval, VBI) aus einem Frame von Fernsehsendungen. Die VBI ist die ersten 21 Scanzeilen des Fernsehrahmens. Diese Scanzeilen enthalten keine Videodaten– sie enthalten Daten über die Übertragung. Wenn ein Fernsehsignal von einer Erfassungskarte aufgezeichnet wird, wird die VBI in der Regel aus dem Frame entfernt. Die laute Edgeerkennung und -korrektur, die vom Codec durchgeführt wird, kann nur einen Rand korrigieren, der über drei oder weniger Rauschlinien verfügt. Wenn das erfasste Video mehr als drei laute Zeilen enthält, liegt ein Problem mit der Hardware vor, die zum Erfassen des Videos verwendet wird.
 
-Wenn der Codec darauf festgelegt ist, laute Ränder zu entfernen, werden die Linien, die sich neben dem lärmenden Rand befinden, zum Auffüllen des Frames dupliziert.
+Wenn der Codec so festgelegt ist, dass verrauschte Kanten entfernt werden, dupliziert er Zeilen, die an den lauten Rand angrenzen, um den Rahmen auszufüllen.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -39,9 +39,9 @@ Wenn der Codec darauf festgelegt ist, laute Ränder zu entfernen, werden die Lin
 
 | Anforderung | Wert |
 |-------------------------------------|-----------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows XP \[ -Desktop-Apps\]<br/>                                             |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2003 \[ -Desktop-Apps\]<br/>                                    |
-| Header<br/>                   | <dl> <dt>Wmcodecdsp. h</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows \[Nur XP-Desktop-Apps\]<br/>                                             |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2003-Desktop-Apps\]<br/>                                    |
+| Header<br/>                   | <dl> <dt>Wmcodecdsp.h</dt> </dl> |
 
 
 
@@ -49,7 +49,7 @@ Wenn der Codec darauf festgelegt ist, laute Ränder zu entfernen, werden die Lin
 
 <dl> <dt>
 
-[Eigenschaften von Media Foundation](media-foundation-properties.md)
+[Media Foundation-Eigenschaften](media-foundation-properties.md)
 </dt> </dl>
 
  

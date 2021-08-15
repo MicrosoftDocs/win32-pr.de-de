@@ -1,7 +1,7 @@
 ---
-description: Die "get \_ MediaType"-Methode gibt den aktuellen Ausgabe Medientyp des resizerfilterfilters zurück.
+description: Die get \_ MediaType-Methode gibt den aktuellen Ausgabemedientyp des Resizerfilters zurück.
 ms.assetid: b9900f7c-05f6-47e4-9cb0-683df2aea404
-title: 'Iresize:: get_MediaType-Methode (qedit. h)'
+title: IResize::get_MediaType-Methode (Qedit.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -14,21 +14,21 @@ api_type:
 api_location:
 - strmiids.lib
 - strmiids.dll
-ms.openlocfilehash: b03bad7f8686fd580f7dd5fc347c347ade1c1c97
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: d9e23c78a25f1cda141cb0c3ce55688c12bdf3aab447aca596326e01544b4e8c
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106370317"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117818231"
 ---
-# <a name="iresizeget_mediatype-method"></a>Iresize:: get \_ mediaType-Methode
+# <a name="iresizeget_mediatype-method"></a>IResize::get \_ MediaType-Methode
 
 > [!Note]  
-> \[Veraltet. Diese API kann aus zukünftigen Versionen von Windows entfernt werden.\]
+> \[Veraltet. Diese API wird möglicherweise aus zukünftigen Releases von Windows.\]
 
  
 
-Die `get_MediaType` -Methode gibt den aktuellen Ausgabe Medientyp des resizerfilterfilters zurück.
+Die `get_MediaType` -Methode gibt den aktuellen Ausgabemedientyp des Größenfilters zurück.
 
 ## <a name="syntax"></a>Syntax
 
@@ -45,28 +45,28 @@ HRESULT get_MediaType(
 
 <dl> <dt>
 
-*PMT* \[ vorgenommen\]
+*pmt* \[ out\]
 </dt> <dd>
 
-Zeiger auf eine vom Aufrufer zugeordnete Objekt- [**\_ \_ Medientyp**](/windows/win32/api/strmif/ns-strmif-am_media_type) Struktur. Die-Methode füllt diese-Struktur mit dem Medientyp. Der Aufrufer muss ggf. den Format Block freigeben.
+Zeiger auf eine [**AM \_ MEDIA \_ TYPE-Struktur,**](/windows/win32/api/strmif/ns-strmif-am_media_type) die vom Aufrufer zugeordnet wird. Die -Methode füllt diese Struktur mit dem Medientyp auf. Der Aufrufer muss den Formatblock (sofern verfügbar) frei geben.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Wenn diese Methode erfolgreich ausgeführt wird, gibt Sie **S \_ OK** zurück. Andernfalls wird ein **HRESULT** -Fehlercode zurückgegeben.
+Wenn diese Methode erfolgreich ist, wird **S \_ OK zurückgegeben.** Andernfalls wird ein **HRESULT-Fehlercode** zurückgegeben.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Wenn der Ausgabe Medientyp nicht festgelegt wurde, wird ein Standard Medientyp zurückgegeben. Der Filter muss seinen Ausgabe Medientyp aktualisieren, wenn die Methoden **Put \_ mediaType** oder **Put \_ size** aufgerufen werden. der von zurückgegebene Medientyp `get_MediaType` muss diese Änderungen widerspiegeln.
+Wenn der Ausgabemedientyp nicht festgelegt wurde, geben Sie einen Standardmedientyp zurück. Der Filter muss seinen Ausgabemedientyp aktualisieren, wenn die **Put \_ MediaType-** oder **put \_ Size-Methoden** aufgerufen werden. Der von zurückgegebene Medientyp muss `get_MediaType` diese Änderungen widerspiegeln.
 
 > [!Note]  
-> Die Header Datei "qedit. h" ist nicht mit Direct3D-Headern nach Version 7 kompatibel.
+> Die Headerdatei Qedit.h ist nicht mit Direct3D-Headern nach Version 7 kompatibel.
 
  
 
 > [!Note]  
-> Zum Abrufen von "qedit. h" Laden Sie das [Microsoft Windows SDK Update für Windows Vista und .NET Framework 3,0](https://msdn.microsoft.com/windowsvista/bb980924.aspx)herunter. "Qedit. h" ist im Microsoft Windows SDK für Windows 7 und .NET Framework 3,5 Service Pack 1 nicht verfügbar.
+> Um Qedit.h zu erhalten, laden Sie das [Microsoft Windows SDK-Update für Windows Vista und .NET Framework 3.0 herunter.](https://msdn.microsoft.com/windowsvista/bb980924.aspx) Qedit.h ist im Microsoft Windows SDK für Windows 7 und .NET Framework 3.5 Service Pack 1 nicht verfügbar.
 
  
 
@@ -76,20 +76,20 @@ Wenn der Ausgabe Medientyp nicht festgelegt wurde, wird ein Standard Medientyp z
 
 | Anforderung | Wert |
 |--------------------|-----------------------------------------------------------------------------------------|
-| Version<br/> | DirectX 9,0 oder höher<br/>                                                         |
-| Header<br/>  | <dl> <dt>"Qedit. h"</dt> </dl>      |
-| Bibliothek<br/> | <dl> <dt>"" "" ". Lib"</dt> </dl> |
+| Version<br/> | DirectX 9.0 oder höher<br/>                                                         |
+| Header<br/>  | <dl> <dt>Qedit.h</dt> </dl>      |
+| Bibliothek<br/> | <dl> <dt>Strmiids.lib</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[Fehler-und Erfolgs Codes](error-and-success-codes.md)
+[Fehler- und Erfolgscodes](error-and-success-codes.md)
 </dt> <dt>
 
-[**Iresize-Schnittstelle**](iresize.md)
+[**IResize-Schnittstelle**](iresize.md)
 </dt> </dl>
 
  

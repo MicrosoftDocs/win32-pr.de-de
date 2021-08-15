@@ -1,7 +1,7 @@
 ---
-description: Definiert Algorithmen für den Videoprozessor, der von dem MF- \_ Video \_ Prozessor Algorithmus verwendet wird \_ .
+description: Definiert Algorithmen für den Videoprozessor, der vom \_ MF-VIDEOPROZESSORALGORITHMUS \_ verwendet \_ wird.
 ms.assetid: 3BB0836E-39E6-40FA-9BA0-C986EB587CF1
-title: MF_VIDEO_PROCESSOR_ALGORITHM_TYPE-Enumeration
+title: MF_VIDEO_PROCESSOR_ALGORITHM_TYPE Enumeration
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,16 +13,16 @@ api_type:
 - HeaderDef
 api_location:
 - mfidl.h
-ms.openlocfilehash: 604fee61ae4b6a34d876de8c2863ee6dddad73d0
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 885c3e9c34fa787a6877fd37eef81f470be395225594b90b2f5516a8e773eb88
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106345170"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118244138"
 ---
-# <a name="mf_video_processor_algorithm_type-enumeration"></a>\_Typ- \_ \_ \_ Enumeration des MF-Video Prozessors
+# <a name="mf_video_processor_algorithm_type-enumeration"></a>TYPE-Enumeration des \_ MF-VIDEOPROZESSORALGORITHMUS \_ \_ \_
 
-Definiert Algorithmen für den Videoprozessor, der von dem [MF- \_ Video \_ Prozessor \_ Algorithmus](mf-video-processor-algorithm.md)verwendet wird.
+Definiert Algorithmen für den Videoprozessor, der vom [ \_ MF-VIDEOPROZESSORALGORITHMUS \_ \_ verwendet wird.](mf-video-processor-algorithm.md)
 
 ## <a name="syntax"></a>Syntax
 
@@ -40,17 +40,17 @@ typedef enum _MF_VIDEO_PROCESSOR_ALGORITHM_TYPE {
 
 <dl> <dt>
 
-<span id="MF_VIDEO_PROCESSOR_ALGORITHM_DEFAULT"></span><span id="mf_video_processor_algorithm_default"></span>**Standard für den MF- \_ Video \_ Prozessor \_ Algorithmus \_**
+<span id="MF_VIDEO_PROCESSOR_ALGORITHM_DEFAULT"></span><span id="mf_video_processor_algorithm_default"></span>**STANDARDEINSTELLUNG FÜR \_ MF-VIDEOPROZESSORALGORITHMUS \_ \_ \_**
 </dt> <dd>
 
-der Standardmodus begünstigt eine Ausgewogenheit der Qualität und Geschwindigkeit.
+Standardmodus bevorzugt ein ausgewogenes Verhältnis von Qualität und Geschwindigkeit
 
 </dd> <dt>
 
-<span id="MF_VIDEO_PROCESSOR_ALGORITHM_MRF_CRF_444"></span><span id="mf_video_processor_algorithm_mrf_crf_444"></span>**MF- \_ Video \_ Prozessor \_ Algorithmus \_ MRF \_ CRF \_ 444**
+<span id="MF_VIDEO_PROCESSOR_ALGORITHM_MRF_CRF_444"></span><span id="mf_video_processor_algorithm_mrf_crf_444"></span>**\_MF-VIDEOPROZESSORALGORITHMUS \_ \_ \_ MRF \_ CRF \_ 444**
 </dt> <dd>
 
-Der Videoprozessor wird immer intern in ayuv verarbeitet und verwendet hochwertige Filter.
+Der Videoprozessor wird immer intern in AYUV verarbeiten und hochwertige Filter verwenden.
 
 </dd> </dl>
 
@@ -60,9 +60,9 @@ Der Videoprozessor wird immer intern in ayuv verarbeitet und verwendet hochwerti
 
 | Anforderung | Wert |
 |-------------------------------------|--------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | \[Nur Desktop-Apps Windows 8.1\]<br/>                                         |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2012 R2 \[ -Desktop-Apps\]<br/>                              |
-| IDL<br/>                      | <dl> <dt>MFI. idl</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | \[Windows 8.1 Nur Desktop-Apps\]<br/>                                         |
+| Unterstützte Mindestversion (Server)<br/> | Windows Server 2012 Nur \[ R2-Desktop-Apps\]<br/>                              |
+| Idl<br/>                      | <dl> <dt>Mfidl.idl</dt> </dl> |
 
 
 

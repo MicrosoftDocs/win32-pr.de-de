@@ -1,27 +1,27 @@
 ---
-description: Stellt eine Instanz von imfmuxstreammediatypemanager bereit, die verwendet werden kann, um die Medientypen der unter Ströme einer multiplext-Medienquelle zu erhalten und die Kombination von unter strömen zu steuern, die von der Quelle als multiplext bezeichnet werden.
+description: Stellt eine Instanz von VORMuxStreamMediaTypeManager zur Verwendung zum Erhalten der Medientypen der Unterstreams einer multiplexierten Medienquelle sowie zum Steuern der Kombination von Teilstreams, die von der Quelle multiplexiert werden, verwendet werden kann.
 ms.assetid: 5C36956D-336A-4956-8793-D86DC792E906
-title: MF_MEDIATYPE_MULTIPLEXED_MANAGER-Attribut (mspdl. h)
+title: MF_MEDIATYPE_MULTIPLEXED_MANAGER -Attribut (Mfidl.h)
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: aa96c74bbff8f4858c8467fcd13253cfedf2f5dc
-ms.sourcegitcommit: c16214e53680dc71d1c07111b51f72b82a4512d8
+ms.openlocfilehash: fe00e8824997a0af89099c7fbaad4a2378b44c3360bad0d4b8808023355da2d5
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/03/2021
-ms.locfileid: "104218984"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118973689"
 ---
-# <a name="mf_mediatype_multiplexed_manager-attribute"></a>MF \_ mediaType \_ multiplexed \_ Manager-Attribut
+# <a name="mf_mediatype_multiplexed_manager-attribute"></a>MF \_ MEDIATYPE \_ MULTIPLEXED \_ MANAGER-Attribut
 
-Stellt eine Instanz von [**imfmuxstreammediatypemanager**](/windows/desktop/api/mfobjects/nn-mfobjects-imfmuxstreammediatypemanager) bereit, die verwendet werden kann, um die Medientypen der unter Ströme einer multiplext-Medienquelle zu erhalten und die Kombination von unter strömen zu steuern, die von der Quelle als multiplext bezeichnet werden.
+Stellt eine Instanz von [**VORMuxStreamMediaTypeManager**](/windows/desktop/api/mfobjects/nn-mfobjects-imfmuxstreammediatypemanager) zur Verwendung zum Erhalten der Medientypen der Unterstreams einer multiplexierten Medienquelle sowie zum Steuern der Kombination von Teilstreams, die von der Quelle multiplexiert werden, verwendet werden kann.
 
 ## <a name="data-type"></a>Datentyp
 
 **[**IUnknown**](/windows/win32/api/unknwn/nn-unknwn-iunknown)**
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Übergeben Sie diesen Wert an [**imfattributes:: getunknown**](/windows/desktop/api/mfobjects/nf-mfobjects-imfattributes-getunknown) , um eine Instanz von [**imfmuxstreammediatypemanager**](/windows/desktop/api/mfobjects/nn-mfobjects-imfmuxstreammediatypemanager)zu erhalten.
+Übergeben Sie diesen Wert an [**DIE ATTRIBUTEAttributes::GetUnknown,**](/windows/desktop/api/mfobjects/nf-mfobjects-imfattributes-getunknown) um eine Instanz von [**DURCHMuxStreamMediaTypeManager abzurufen.**](/windows/desktop/api/mfobjects/nn-mfobjects-imfmuxstreammediatypemanager)
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -29,9 +29,9 @@ Stellt eine Instanz von [**imfmuxstreammediatypemanager**](/windows/desktop/api/
 
 | Anforderung | Wert |
 |-------------------------------------|------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Windows 10, Version 1703, \[ nur Desktop-Apps\]<br/>                          |
+| Unterstützte Mindestversion (Client)<br/> | Windows 10, version 1703 desktop apps only (Nur \[ Desktop-Apps der Version 1703)\]<br/>                          |
 | Unterstützte Mindestversion (Server)<br/> | Nicht unterstützt<br/>                                                          |
-| Header<br/>                   | <dl> <dt>Mspdl. h</dt> </dl> |
+| Header<br/>                   | <dl> <dt>Mfidl.h</dt> </dl> |
 
 
 

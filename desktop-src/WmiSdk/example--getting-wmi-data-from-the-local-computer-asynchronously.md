@@ -1,52 +1,52 @@
 ---
-description: Mithilfe der Prozeduren und Codebeispiele in diesem Thema können Sie eine vollständige WMI-Client Anwendung erstellen, die COM-Initialisierung ausführt, eine Verbindung mit WMI auf dem lokalen Computer herstellt, Daten asynchron abruft und dann bereinigt.
+description: Sie können die Prozeduren und Codebeispiele in diesem Thema verwenden, um eine vollständige WMI-Clientanwendung zu erstellen, die die COM-Initialisierung ausführt, eine Verbindung mit WMI auf dem lokalen Computer herstellt, Daten asynchron abruft und dann bereinigt.
 ms.assetid: 1e11ca27-e67d-486c-8fc5-a10382edfff3
 ms.tgt_platform: multiple
-title: 'Beispiel: Asynchrones erhalten von WMI-Daten vom lokalen Computer'
+title: 'Beispiel: Asynchrones Abrufen von WMI-Daten vom lokalen Computer'
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: a5acf8df91b5ff279d70a9f76f0a353df90e8ff3
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 67eb71247816319553389c451dd2e7ad268c49ee7aadeaddc118a3f08448171b
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "104131977"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118319428"
 ---
-# <a name="example-getting-wmi-data-from-the-local-computer-asynchronously"></a>Beispiel: Asynchrones erhalten von WMI-Daten vom lokalen Computer
+# <a name="example-getting-wmi-data-from-the-local-computer-asynchronously"></a>Beispiel: Asynchrones Abrufen von WMI-Daten vom lokalen Computer
 
-Mithilfe der Prozeduren und Codebeispiele in diesem Thema können Sie eine vollständige WMI-Client Anwendung erstellen, die COM-Initialisierung ausführt, eine Verbindung mit WMI auf dem lokalen Computer herstellt, Daten asynchron abruft und dann bereinigt. In diesem Beispiel wird der Name des Betriebssystems auf dem lokalen Computer abgerufen und angezeigt.
+Sie können die Prozeduren und Codebeispiele in diesem Thema verwenden, um eine vollständige WMI-Clientanwendung zu erstellen, die die COM-Initialisierung ausführt, eine Verbindung mit WMI auf dem lokalen Computer herstellt, Daten asynchron abruft und dann bereinigt. Dieses Beispiel ruft den Namen des Betriebssystems auf dem lokalen Computer ab und zeigt ihn an.
 
-Das folgende Verfahren wird verwendet, um die WMI-Anwendung auszuführen. Die Schritte 1 bis 5 enthalten alle Schritte, die für die Einrichtung und Verbindung mit WMI erforderlich sind, und in den Schritten 6 und 7 wird der Name des Betriebssystems asynchron abgerufen.
+Mit dem folgenden Verfahren wird die WMI-Anwendung ausgeführt. Die Schritte 1 bis 5 enthalten alle erforderlichen Schritte zum Einrichten und Herstellen einer Verbindung mit WMI. Die Schritte 6 und 7 enthalten die Schritte 6 und 7, in denen der Betriebssystemname asynchron abgerufen wird.
 
-**So erhalten Sie WMI-Daten asynchron vom lokalen Computer**
+**So erhalten Sie AsynchronE WMI-Daten vom lokalen Computer**
 
-1.  Initialisieren von com-Parametern mit einem [**CoInitializeEx**](/windows/win32/api/combaseapi/nf-combaseapi-coinitializeex)-Rückruf.
+1.  Initialisieren Sie COM-Parameter mit einem Aufruf von [**CoInitializeEx**](/windows/win32/api/combaseapi/nf-combaseapi-coinitializeex).
 
-    Weitere Informationen finden Sie unter [Initialisieren von com für eine WMI-Anwendung](initializing-com-for-a-wmi-application.md).
+    Weitere Informationen finden Sie unter [Initialisieren von COM für eine WMI-Anwendung.](initializing-com-for-a-wmi-application.md)
 
-2.  Initialisieren Sie die com-Prozesssicherheit durch Aufrufen von [**CoInitializeSecurity**](/windows/win32/api/combaseapi/nf-combaseapi-coinitializesecurity).
+2.  Initialisieren Sie die COM-Prozesssicherheit, indem [**Sie CoInitializeSecurity aufrufen.**](/windows/win32/api/combaseapi/nf-combaseapi-coinitializesecurity)
 
-    Weitere Informationen finden Sie unter [Festlegen der standardmäßigen Prozess Sicherheitsstufe mithilfe von C++](setting-the-default-process-security-level-using-c-.md).
+    Weitere Informationen finden Sie unter [Festlegen der Standardprozesssicherheitsebene mithilfe von C++.](setting-the-default-process-security-level-using-c-.md)
 
-3.  Rufen Sie den anfänglichen Serverlocatorpunkt in WMI durch Aufrufen von [**CoCreateInstance**](/windows/win32/api/combaseapi/nf-combaseapi-cocreateinstance)ab.
+3.  Rufen Sie den ersten Locator für WMI ab, indem Sie [**CoCreateInstance aufrufen.**](/windows/win32/api/combaseapi/nf-combaseapi-cocreateinstance)
 
-    Weitere Informationen finden Sie unter [Erstellen einer Verbindung mit einem WMI-Namespace](creating-a-connection-to-a-wmi-namespace.md).
+    Weitere Informationen finden Sie unter [Erstellen einer Verbindung mit einem WMI-Namespace.](creating-a-connection-to-a-wmi-namespace.md)
 
-4.  Rufen Sie mithilfe [](/windows/desktop/api/WbemCli/nn-wbemcli-iwbemservices) \\ von [**IWBEMLocator:: ConnectServer**](/windows/desktop/api/Wbemcli/nf-wbemcli-iwbemlocator-connectserver)einen Zeiger auf IWbemServices für den Stamm-CIMV2-Namespace auf dem lokalen Computer ab. Weitere Informationen zum Herstellen einer Verbindung mit einem Remote Computer finden Sie unter [Beispiel: erhalten von WMI-Daten von einem Remote Computer aus](example--getting-wmi-data-from-a-remote-computer.md).
+4.  Rufen Sie einen Zeiger auf [**IWbemServices für**](/windows/desktop/api/WbemCli/nn-wbemcli-iwbemservices) den cimv2-Stammnamespace auf dem lokalen Computer ab, indem Sie \\ [**IWbemLocator::ConnectServer aufrufen.**](/windows/desktop/api/Wbemcli/nf-wbemcli-iwbemlocator-connectserver) Weitere Informationen zum Herstellen einer Verbindung mit einem Remotecomputer finden Sie unter Beispiel: Abrufen von [WMI-Daten von einem Remotecomputer.](example--getting-wmi-data-from-a-remote-computer.md)
 
-    Weitere Informationen finden Sie unter [Erstellen einer Verbindung mit einem WMI-Namespace](creating-a-connection-to-a-wmi-namespace.md).
+    Weitere Informationen finden Sie unter [Erstellen einer Verbindung mit einem WMI-Namespace.](creating-a-connection-to-a-wmi-namespace.md)
 
-5.  Legen Sie die [**IWbemServices**](/windows/desktop/api/WbemCli/nn-wbemcli-iwbemservices) -Proxy Sicherheit fest, damit der WMI-Dienst die Identität des Clients durch Aufrufen von [**CoSetProxyBlanket**](/windows/win32/api/combaseapi/nf-combaseapi-cosetproxyblanket)annehmen kann.
+5.  Legen [**Sie die IWbemServices-Proxysicherheit**](/windows/desktop/api/WbemCli/nn-wbemcli-iwbemservices) fest, damit der WMI-Dienst die Identität des Clients durch Aufrufen von [**CoSetProxyBlanket angenommen werden kann.**](/windows/win32/api/combaseapi/nf-combaseapi-cosetproxyblanket)
 
-    Weitere Informationen finden Sie unter [Festlegen der Sicherheitsstufen für eine WMI-Verbindung](setting-the-security-levels-on-a-wmi-connection.md).
+    Weitere Informationen finden Sie unter [Festlegen der Sicherheitsebenen für eine WMI-Verbindung.](setting-the-security-levels-on-a-wmi-connection.md)
 
-6.  Verwenden Sie den [**IWbemServices**](/windows/desktop/api/WbemCli/nn-wbemcli-iwbemservices) -Zeiger, um WMI-Anforderungen zu stellen. In diesem Beispiel wird die [**IWbemServices:: ExecQueryAsync**](/windows/desktop/api/WbemCli/nf-wbemcli-iwbemservices-execqueryasync) -Methode verwendet, um die Daten asynchron zu empfangen. Jedes Mal, wenn Sie Daten asynchron empfangen, müssen Sie eine Implementierung von [**iwbemjebjectsink**](iwbemobjectsink.md)bereitstellen. In diesem Beispiel wird die-Implementierung in der querysink-Klasse bereitstellt. Der Implementierungs Code und der Header Datei Code für diese Klasse werden nach dem Hauptbeispiel bereitgestellt. Die **IWbemServices:: ExecQueryAsync** -Methode ruft die querysink:: Display-Methode immer dann auf, wenn die Daten empfangen werden.
+6.  Verwenden Sie [**den IWbemServices-Zeiger,**](/windows/desktop/api/WbemCli/nn-wbemcli-iwbemservices) um Anforderungen an WMI zu senden. In diesem Beispiel wird die [**IWbemServices::ExecQueryAsync-Methode**](/windows/desktop/api/WbemCli/nf-wbemcli-iwbemservices-execqueryasync) verwendet, um die Daten asynchron zu empfangen. Wenn Sie Daten asynchron empfangen, müssen Sie eine Implementierung von [**IWbemObjectSink bereitstellen.**](iwbemobjectsink.md) In diesem Beispiel wird die Implementierung in der QuerySink-Klasse angegeben. Der Implementierungscode und der Headerdateicode für diese Klasse werden im Anschluss an das Hauptbeispiel bereitgestellt. Die **IWbemServices::ExecQueryAsync-Methode** ruft die QuerySink::Indicate-Methode auf, wenn die Daten empfangen werden.
 
-    Weitere Informationen zum Erstellen einer WMI-Anforderung finden Sie unter Bearbeiten von [Klassen-und Instanzinformationen](manipulating-class-and-instance-information.md) und [Aufrufen einer Methode](calling-a-method.md).
+    Weitere Informationen zum Erstellen einer WMI-Anforderung finden Sie unter Manipulating Class and Instance Information (Bearbeiten von Klassen- und [Instanzinformationen)](manipulating-class-and-instance-information.md) und [Calling a Method (Aufrufen einer Methode).](calling-a-method.md)
 
-7.  Warten Sie, bis die Daten asynchron abgerufen werden. Verwenden Sie die [**IWbemServices:: cancelasynccall**](/windows/desktop/api/WbemCli/nf-wbemcli-iwbemservices-cancelasynccall) -Methode, um den asynchronen-Befehl manuell anzuhalten.
+7.  Warten Sie, bis die Daten asynchron abgerufen werden. Verwenden Sie [**die IWbemServices::CancelAsyncCall-Methode,**](/windows/desktop/api/WbemCli/nf-wbemcli-iwbemservices-cancelasynccall) um den asynchronen Aufruf manuell zu beenden.
 
-Im folgenden Codebeispiel werden WMI-Daten asynchron vom lokalen Computer abgerufen.
+Das folgende Codebeispiel ruft WMI-Daten asynchron vom lokalen Computer ab.
 
 
 ```C++
@@ -205,7 +205,7 @@ int main(int argc, char **argv)
 
 
 
-Die folgende Header Datei wird für die querysink-Klasse verwendet. Die querysink-Klasse wird im vorherigen Codebeispiel verwendet.
+Die folgende Headerdatei wird für die QuerySink-Klasse verwendet. Die QuerySink-Klasse wird im vorherigen Codebeispiel verwendet.
 
 
 ```C++
@@ -258,7 +258,7 @@ public:
 
 
 
-Das folgende Codebeispiel ist eine Implementierung der querysink-Klasse.
+Das folgende Codebeispiel ist eine Implementierung der QuerySink-Klasse.
 
 
 ```C++

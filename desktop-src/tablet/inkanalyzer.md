@@ -1,7 +1,7 @@
 ---
-description: Implementiert die iinkanalyzer-Schnittstelle.
+description: Implementiert die IInkAnalyzer-Schnittstelle.
 ms.assetid: f17de375-a0fe-4024-bf2a-60f8de8b0345
-title: InkAnalyzer-Klasse (iacom. h)
+title: InkAnalyzer-Klasse (IACom.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,24 +13,24 @@ api_type:
 - COM
 api_location:
 - IACom.dll
-ms.openlocfilehash: 49eeb04b1568bbef785f7d750315e0ea39491d92
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: db556faf5cba75fe74af6c46f5c0f0a72fa34f279135e33381892812b3cf4735
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106344879"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118220744"
 ---
 # <a name="inkanalyzer-class"></a>InkAnalyzer-Klasse
 
-Implementiert die [**iinkanalyzer**](iinkanalyzer.md) -Schnittstelle.
+Implementiert die [**IInkAnalyzer-Schnittstelle.**](iinkanalyzer.md)
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Diese Klasse implementiert die [**iinkanalyzer**](iinkanalyzer.md) -com-Schnittstelle.
+Diese Klasse implementiert die [**IInkAnalyzer-COM-Schnittstelle.**](iinkanalyzer.md)
 
-[ \_ Ianalysitsvents](-ianalysisevents.md) ist die Standard Quelle für Ereignisse und stellt Standard Ereignisse für [**iinkanalyzer**](iinkanalyzer.md)bereit.
+[ \_ IAnalysisEvents](-ianalysisevents.md) ist die Standardquelle von Ereignissen und stellt Standardereignisse für [**IInkAnalyzer**](iinkanalyzer.md)bereit.
 
-[**\_ Ianalysisproxyevents**](-ianalysisproxyevents.md) stellt die Daten Proxy Ereignisse für [**iinkanalyzer**](iinkanalyzer.md)bereit. Weitere Informationen finden Sie unter [Daten Proxy mit Ink-Analyse](data-proxy-with-ink-analysis.md).
+[**\_ IAnalysisProxyEvents**](-ianalysisproxyevents.md) stellt die Datenproxyereignisse für [**IInkAnalyzer**](iinkanalyzer.md)bereit. Weitere Informationen finden Sie unter [Datenproxy mit Ink-Analyse.](data-proxy-with-ink-analysis.md)
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -38,33 +38,33 @@ Diese Klasse implementiert die [**iinkanalyzer**](iinkanalyzer.md) -com-Schnitts
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows XP Tablet PC Edition \[ Desktop-Apps\]<br/>                                                 |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur Desktop-Apps der XP Tablet PC Edition \[\]<br/>                                                 |
 | Unterstützte Mindestversion (Server)<br/> | Nicht unterstützt<br/>                                                                                     |
-| Header<br/>                   | <dl> <dt>Iacom. h (erfordert auch iacom \_ i. c)</dt> </dl> |
+| Header<br/>                   | <dl> <dt>IACom.h (erfordert auch IACom \_ i.c)</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>IACom.dll</dt> </dl>                          |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**AnalysisModes**](analysismodes.md)
+[**Analysismodes**](analysismodes.md)
 </dt> <dt>
 
-[**Ianalysisalternate**](ianalysisalternate.md)
+[**IAnalysisAlternate**](ianalysisalternate.md)
 </dt> <dt>
 
-[**Ianalysisstatus**](ianalysisstatus.md)
+[**IAnalysisStatus**](ianalysisstatus.md)
 </dt> <dt>
 
-[**Icontextlink**](icontextlink.md)
+[**IContextLink**](icontextlink.md)
 </dt> <dt>
 
-[**Icontextnode**](icontextnode.md)
+[**IContextNode**](icontextnode.md)
 </dt> <dt>
 
-[Ink-Analyse Referenz](ink-analysis-reference.md)
+[Referenz zur Ink-Analyse](ink-analysis-reference.md)
 </dt> </dl>
 
  

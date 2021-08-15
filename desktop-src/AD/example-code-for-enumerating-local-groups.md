@@ -1,24 +1,24 @@
 ---
-title: Beispiel Code für das Auflisten von lokalen Gruppen
-description: Dieses Thema enthält ein Codebeispiel, das alle Objekte einer angegebenen Klasse auflistet.
+title: Beispielcode zum Aufzählen lokaler Gruppen
+description: Dieses Thema enthält ein Codebeispiel, das alle Objekte einer angegebenen Klasse aufzählt.
 ms.assetid: d113d132-24cf-4319-826b-0d3d10e432f6
 ms.tgt_platform: multiple
 keywords:
-- Active Directory Beispiele Active Directory, Auflisten von lokalen Gruppen
+- 'Active Directory-Beispiele: Active Directory, Aufzählen von lokalen Gruppen'
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 62b830c1c3ec60d393606e282ff4408647ec8d62
-ms.sourcegitcommit: 803f3ccd65bdefe36bd851b9c6e7280be9489016
+ms.openlocfilehash: 241c89bfdb491c7bee0d0876a4b9bf17e6cc836c98a2f80e6734ad6cdc6420ab
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "103724529"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118190655"
 ---
-# <a name="example-code-for-enumerating-local-groups"></a>Beispiel Code für das Auflisten von lokalen Gruppen
+# <a name="example-code-for-enumerating-local-groups"></a>Beispielcode zum Aufzählen lokaler Gruppen
 
-Dieses Thema enthält ein Codebeispiel, das alle Objekte einer angegebenen Klasse auflistet.
+Dieses Thema enthält ein Codebeispiel, das alle Objekte einer angegebenen Klasse aufzählt.
 
-Im folgenden C++-Codebeispiel werden alle Objekte einer angegebenen Klasse mithilfe von ADSI aufgelistet.
+Im folgenden C++-Codebeispiel werden alle Objekte einer angegebenen Klasse mit ADSI aufzählt.
 
 
 ```C++
@@ -145,7 +145,7 @@ HRESULT ListMembersWithWinNtProvider(LPWSTR pwszComputer,LPWSTR pwszClass, LPWST
 
 
 
-Im folgenden Visual Basic Codebeispiel werden lokale Gruppen mithilfe der [**IADsContainer**](/windows/desktop/api/iads/nn-iads-iadscontainer) -Schnittstelle und der [**IADsGroup**](/windows/desktop/api/iads/nn-iads-iadsgroup) -Schnittstelle aufgelistet.
+Im folgenden Visual Basic Codebeispiel werden lokale Gruppen mithilfe der [**Schnittstellen IADsContainer**](/windows/desktop/api/iads/nn-iads-iadscontainer) und [**IADsGroup**](/windows/desktop/api/iads/nn-iads-iadsgroup) aufzählt.
 
 
 ```VB
@@ -247,6 +247,6 @@ End Sub
 
 
 
- 
+ 
 
- 
+ 

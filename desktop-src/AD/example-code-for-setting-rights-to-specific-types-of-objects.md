@@ -1,22 +1,22 @@
 ---
-title: Beispiel Code für das Festlegen von Rechten für bestimmte Objekttypen
-description: Im folgenden C/C++-Codebeispiel wird ein ACE erstellt, der Rechte zuweist, die vom angegebenen Objekttyp geerbt werden, aber nicht für das aktuelle Objekt gültig sind.
+title: Beispielcode zum Festlegen von Rechten auf bestimmte Objekttypen
+description: Im folgenden C/C++-Codebeispiel wird ein ACE erstellt, der Rechte zu weist, die vom angegebenen Objekttyp geerbt werden, aber für das aktuelle Objekt nicht wirksam sind.
 ms.assetid: c36ae0c8-40ad-4afd-8552-4de77f4463e2
 ms.tgt_platform: multiple
 keywords:
-- Active Directory Beispiele Active Directory, Festlegen von Rechten für bestimmte Objekttypen
+- 'Active Directory-Beispiele: Active Directory, Festlegen von Rechten für bestimmte Objekttypen'
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 2ff598c8db6a48e07f48a3e846f54b75b2d39255
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: 3505751394adffe5b6d7ee6b689afada07e258af9128a95815ed46144d447ad8
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "103707632"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118189801"
 ---
-# <a name="example-code-for-setting-rights-to-specific-types-of-objects"></a>Beispiel Code für das Festlegen von Rechten für bestimmte Objekttypen
+# <a name="example-code-for-setting-rights-to-specific-types-of-objects"></a>Beispielcode zum Festlegen von Rechten auf bestimmte Objekttypen
 
-Im folgenden C/C++-Codebeispiel wird ein ACE erstellt, der Rechte zuweist, die vom angegebenen Objekttyp geerbt werden, aber nicht für das aktuelle Objekt gültig sind.
+Im folgenden C/C++-Codebeispiel wird ein ACE erstellt, der Rechte zu weist, die vom angegebenen Objekttyp geerbt werden, aber für das aktuelle Objekt nicht wirksam sind.
 
 
 ```C++
@@ -100,9 +100,9 @@ HRESULT CreateAceNoEffectiveInheritObject(
 
 
 
- 
+ 
 
- 
+ 
 
 
 

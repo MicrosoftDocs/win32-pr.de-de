@@ -1,11 +1,11 @@
 ---
-title: Ibasicdevice uniquedevicename-Methode
-description: Ruft den eindeutigen Gerätenamen (User Name, udn) des Geräts ab.
+title: IBasicDevice UniqueDeviceName-Methode
+description: Ruft den eindeutigen Gerätenamen (UDN) des Geräts ab.
 ms.assetid: 393EFF96-69E1-4081-905D-D8CC47B5FC4A
 keywords:
-- Uniquedevicename-Methode Medien Streaming-API
-- Uniquedevicename-Methode Medien Streaming-API, ibasicdevice-Schnittstelle
-- Ibasicdevice-Schnittstelle Medien Streaming-API, uniquedevicename-Methode
+- UniqueDeviceName-Methode Media Streaming-API
+- UniqueDeviceName-Methode Media Streaming API , IBasicDevice-Schnittstelle
+- IBasicDevice-Schnittstelle Medienstreaming-API , UniqueDeviceName-Methode
 topic_type:
 - apiref
 api_name:
@@ -15,16 +15,16 @@ api_type:
 ms.topic: reference
 ms.date: 05/31/2018
 api_location: ''
-ms.openlocfilehash: 4b3103640fd49880dc5ae5ca881618ac1091de62
-ms.sourcegitcommit: 57758ecb246c84d65e6e0e4bd5570d9176fa39cd
+ms.openlocfilehash: 7b70fbc2021cf717cdb49d8a222aa33ad4e9213f297364b81af065c3bbeaed99
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "104389107"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118972319"
 ---
-# <a name="ibasicdeviceuniquedevicename-method"></a>Ibasicdevice:: uniquedevicename-Methode
+# <a name="ibasicdeviceuniquedevicename-method"></a>IBasicDevice::UniqueDeviceName-Methode
 
-Ruft den eindeutigen Gerätenamen (User Name, udn) des Geräts ab.
+Ruft den eindeutigen Gerätenamen (UDN) des Geräts ab.
 
 ## <a name="syntax"></a>Syntax
 
@@ -41,16 +41,16 @@ HRESULT UniqueDeviceName(
 
 <dl> <dt>
 
-*Wert* \[ vorgenommen\]
+*wert* \[ out\]
 </dt> <dd>
 
-Empfängt einen Zeiger auf das Modell-udn des Geräts.
+Empfängt einen Zeiger auf den Modell-UDN des Geräts.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Die-Methode gibt ein **HRESULT** zurück. Mögliches Werte (aber nicht die Einzigen) sind die in der folgenden Tabelle.
+Die Methode gibt ein **HRESULT** zurück. Mögliches Werte (aber nicht die Einzigen) sind die in der folgenden Tabelle.
 
 
 
@@ -62,11 +62,11 @@ Die-Methode gibt ein **HRESULT** zurück. Mögliches Werte (aber nicht die Einzi
 
  
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Ibasicdevice**](ibasicdevice.md)
+[**IBasicDevice**](ibasicdevice.md)
 </dt> </dl>
 
  

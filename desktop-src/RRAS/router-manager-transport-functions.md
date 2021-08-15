@@ -1,38 +1,38 @@
 ---
 title: Router-Manager-Funktionen (Transport)
-description: Verwenden Sie die folgenden Funktionen, um die Router-Manager zu verwalten. Diese Funktionen ermöglichen es Entwicklern auch, die globalen Informationen für die routermanager und die globalen Informationen für routerclients (z. b. Routing Protokolle) zu lesen und zu schreiben.
+description: Verwenden Sie die folgenden Funktionen, um die Router-Manager zu verwalten. Diese Funktionen ermöglichen es Entwicklern auch, die globalen Informationen für die Router-Manager und die globalen Informationen für Routerclients (z. B. Routingprotokolle) zu lesen und zu schreiben.
 ms.assetid: c1093241-604d-498d-a358-f8e8585b95cd
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: a94ccc97f3f2dce90cde57853cfbed97f870e01b
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: 1780f980972943f796c635a58829d9363a0ccd4e36d371306665f5d4d7ba8b5b
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "103857031"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117787620"
 ---
 # <a name="router-manager-transport-functions"></a>Router-Manager-Funktionen (Transport)
 
-Verwenden Sie die folgenden Funktionen, um die Router-Manager zu verwalten. Diese Funktionen ermöglichen es Entwicklern auch, die globalen Informationen für die routermanager und die globalen Informationen für routerclients (z. b. Routing Protokolle) zu lesen und zu schreiben.
+Verwenden Sie die folgenden Funktionen, um die Router-Manager zu verwalten. Diese Funktionen ermöglichen es Entwicklern auch, die globalen Informationen für die Router-Manager und die globalen Informationen für Routerclients (z. B. Routingprotokolle) zu lesen und zu schreiben.
 
 
 
 | Verwaltungsfunktion                                      | Konfigurationsfunktion                                             |
 |--------------------------------------------------------------|--------------------------------------------------------------------|
-| [**Mpradmintransportcreate**](/windows/desktop/api/Mprapi/nf-mprapi-mpradmintransportcreate)   | [**Mprconfigtransportcreate**](/windows/desktop/api/Mprapi/nf-mprapi-mprconfigtransportcreate)       |
-| Keine Verwaltungsfunktion                                   | [**Mprconfigtransportdelete**](/windows/desktop/api/Mprapi/nf-mprapi-mprconfigtransportdelete)       |
-| [**Mpradmintransportgetinfo**](/windows/desktop/api/Mprapi/nf-mprapi-mpradmintransportgetinfo) | [**Mprconfigtransportgetinfo**](/windows/desktop/api/Mprapi/nf-mprapi-mprconfigtransportgetinfo)     |
-| [**Mpradmintransporteintinfo**](/windows/desktop/api/Mprapi/nf-mprapi-mpradmintransportsetinfo) | [**Mprconfigtransporteintinfo**](/windows/desktop/api/Mprapi/nf-mprapi-mprconfigtransportsetinfo)     |
-| Keine Verwaltungsfunktion                                   | [**Mprconfigtransportenum**](/windows/desktop/api/Mprapi/nf-mprapi-mprconfigtransportenum)           |
-| Keine Verwaltungsfunktion                                   | [**Mprconfigtransportgethandle**](/windows/desktop/api/Mprapi/nf-mprapi-mprconfigtransportgethandle) |
+| [**MprAdminTransportCreate**](/windows/desktop/api/Mprapi/nf-mprapi-mpradmintransportcreate)   | [**MprConfigTransportCreate**](/windows/desktop/api/Mprapi/nf-mprapi-mprconfigtransportcreate)       |
+| Keine Verwaltungsfunktion                                   | [**MprConfigTransportDelete**](/windows/desktop/api/Mprapi/nf-mprapi-mprconfigtransportdelete)       |
+| [**MprAdminTransportGetInfo**](/windows/desktop/api/Mprapi/nf-mprapi-mpradmintransportgetinfo) | [**MprConfigTransportGetInfo**](/windows/desktop/api/Mprapi/nf-mprapi-mprconfigtransportgetinfo)     |
+| [**MprAdminTransportSetInfo**](/windows/desktop/api/Mprapi/nf-mprapi-mpradmintransportsetinfo) | [**MprConfigTransportSetInfo**](/windows/desktop/api/Mprapi/nf-mprapi-mprconfigtransportsetinfo)     |
+| Keine Verwaltungsfunktion                                   | [**MprConfigTransportEnum**](/windows/desktop/api/Mprapi/nf-mprapi-mprconfigtransportenum)           |
+| Keine Verwaltungsfunktion                                   | [**MprConfigTransportGetHandle**](/windows/desktop/api/Mprapi/nf-mprapi-mprconfigtransportgethandle) |
 
 
 
- 
+ 
 
- 
+ 
 
- 
+ 
 
 
 

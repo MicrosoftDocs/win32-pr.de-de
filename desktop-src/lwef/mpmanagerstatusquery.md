@@ -1,9 +1,9 @@
 ---
-title: Mpmanagerstatus Query-Funktion (mpclient. h)
-description: Gibt Statusinformationen zu verschiedenen Komponenten des Malware Schutz-Managers zurück. | Mpmanagerstatus Query-Funktion (mpclient. h)
+title: MpManagerStatusQuery-Funktion (MpClient.h)
+description: Gibt Statusinformationen zu verschiedenen Komponenten des Schadsoftwareschutz-Managers zurück. | MpManagerStatusQuery-Funktion (MpClient.h)
 ms.assetid: E993FD8B-A35D-41C1-9522-1B9F0BC10B3D
 keywords:
-- Mpmanagerstatus Query-Funktion Legacy Funktionen der Windows-Umgebung
+- Funktionen der MpManagerStatusQuery-Legacy Windows umgebung
 topic_type:
 - apiref
 api_name:
@@ -14,18 +14,18 @@ api_type:
 - DllExport
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: ad2e28bab1794b53695872310a3a7cf5d088f1a1
-ms.sourcegitcommit: 92e74c99f8f4d097676959d0c317f533c2400a80
+ms.openlocfilehash: 9d05751f30e1579ef8b12e31a4f858469b1c997cf9c29d7643c0600a133840fd
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/09/2021
-ms.locfileid: "104352249"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117883375"
 ---
-# <a name="mpmanagerstatusquery-function"></a>Mpmanagerstatus Query-Funktion
+# <a name="mpmanagerstatusquery-function"></a>MpManagerStatusQuery-Funktion
 
-\[**Mpmanagerstatus Query** wird nicht unterstützt und kann in Zukunft geändert oder nicht verfügbar sein. Verwenden Sie stattdessen [**mpmanagerstatus-QUERYEX**](mpmanagerstatusqueryex.md).\]
+\[**MpManagerStatusQuery** wird nicht unterstützt und kann in Zukunft geändert oder nicht mehr verfügbar sein. Verwenden Sie stattdessen [**MpManagerStatusQueryEx.**](mpmanagerstatusqueryex.md)\]
 
-Gibt Statusinformationen zu verschiedenen Komponenten des Malware Schutz-Managers zurück.
+Gibt Statusinformationen zu verschiedenen Komponenten des Schadsoftwareschutz-Managers zurück.
 
 ## <a name="syntax"></a>Syntax
 
@@ -43,21 +43,21 @@ HRESULT WINAPI MpManagerStatusQuery(
 
 <dl> <dt>
 
-*hmphandle* \[ in\]
+*hMpHandle* \[ In\]
 </dt> <dd>
 
-Typ: **mphandle**
+Typ: **MPHANDLE**
 
-Handle für die Malware Protection Manager-Schnittstelle. Dieses Handle wird von der [**mpmanageropen**](mpmanageropen.md) -Funktion zurückgegeben.
+Handle für die Benutzeroberfläche des Schadsoftwareschutz-Managers. Dieses Handle wird von der [**MpManagerOpen-Funktion**](mpmanageropen.md) zurückgegeben.
 
 </dd> <dt>
 
-*pstatusinfo* \[ vorgenommen\]
+*pStatusInfo* \[ out\]
 </dt> <dd>
 
-Typ: **pmpstatus- \_ Informationen**
+Typ: **PMPSTATUS \_ INFO**
 
-Zeiger auf eine-Struktur, die Statusinformationen zu den letzten Scans, aktiven Bedrohungen und verschiedenen Komponenten Status zurückgibt. Siehe [**mpstatus- \_ Informationen**](mpstatus-info.md).
+Zeiger auf eine -Struktur, die Statusinformationen zu letzten Scans, aktiven Bedrohungen und verschiedenen Komponentenstatus zurückgibt. Weitere Informationen [**finden Sie unter MPSTATUS \_ INFO**](mpstatus-info.md).
 
 </dd> </dl>
 
@@ -65,9 +65,9 @@ Zeiger auf eine-Struktur, die Statusinformationen zu den letzten Scans, aktiven 
 
 Typ: **HRESULT**
 
-Wenn die Funktion erfolgreich ausgeführt wird, ist der Rückgabewert **S \_ OK**. Dieser Funktions Aufrufvorgang ist garantiert auch dann erfolgreich, wenn kein antischadsoftwaredienst ausgeführt wird.
+Wenn die Funktion erfolgreich ist, ist der Rückgabewert **S \_ OK.** Dieser Funktionsaufruf ist auch dann erfolgreich, wenn kein AntiMalware-Dienst ausgeführt wird.
 
-Wenn die Funktion fehlschlägt, ist der Rückgabewert ein fehlerhafter **HRESULT** -Code. Der Aufrufer kann die [**mperrormessageformat**](mperrormessageformat.md) -Funktion verwenden, um eine generische Beschreibung der Fehlermeldung zu erhalten.
+Wenn die Funktion fehlschlägt, ist der Rückgabewert ein fehlerhafter **HRESULT-Code.** Der Aufrufer kann die [**MpErrorMessageFormat-Funktion**](mperrormessageformat.md) verwenden, um eine generische Beschreibung der Fehlermeldung zu erhalten.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -75,27 +75,27 @@ Wenn die Funktion fehlschlägt, ist der Rückgabewert ein fehlerhafter **HRESULT
 
 | Anforderung | Wert |
 |-------------------------------------|-----------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows 8 \[ -Desktop-Apps\]<br/>                                              |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2012 \[ -Desktop-Apps\]<br/>                                    |
-| Header<br/>                   | <dl> <dt>Mpclient. h</dt> </dl>   |
+| Unterstützte Mindestversion (Client)<br/> | \[Windows 8 Nur Desktop-Apps\]<br/>                                              |
+| Unterstützte Mindestversion (Server)<br/> | \[Windows Server 2012 Nur Desktop-Apps\]<br/>                                    |
+| Header<br/>                   | <dl> <dt>MpClient.h</dt> </dl>   |
 | DLL<br/>                      | <dl> <dt>MpClient.dll</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Mperrormessageformat**](mperrormessageformat.md)
+[**MpErrorMessageFormat**](mperrormessageformat.md)
 </dt> <dt>
 
-[**Mpmanageropen**](mpmanageropen.md)
+[**MpManagerOpen**](mpmanageropen.md)
 </dt> <dt>
 
-[**Mpmanagerstatus-QUERYEX**](mpmanagerstatusqueryex.md)
+[**MpManagerStatusQueryEx**](mpmanagerstatusqueryex.md)
 </dt> <dt>
 
-[**mpstatus- \_ Informationen**](mpstatus-info.md)
+[**\_MPSTATUS-INFORMATIONEN**](mpstatus-info.md)
 </dt> </dl>
 
  

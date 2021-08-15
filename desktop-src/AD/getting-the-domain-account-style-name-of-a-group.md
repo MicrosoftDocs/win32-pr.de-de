@@ -1,22 +1,22 @@
 ---
-title: Der Domänen Account-Style Name einer Gruppe wird erhalten.
-description: Benutzer, Gruppen, Computer und andere Sicherheits Prinzipale können im Domänen Kontoformular dargestellt werden.
+title: Abrufen des Domänennamens Account-Style einer Gruppe
+description: Benutzer, Gruppen, Computer und andere Sicherheitsprinzipale können in Domänenkontoform dargestellt werden.
 ms.assetid: 85627d2d-2845-4998-9957-ce0c8b6473bd
 ms.tgt_platform: multiple
 keywords:
-- gruppiert Active Directory und erhält den Namen einer Gruppe im Domänen Konto.
+- Gruppen-AD, Abrufen des Namens einer Gruppe im Domänenkontostil
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 8758e61072b862f7c4cd1581b8d54dafb38915be
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: 1cc1b5a076ab3e63059fb79fa784039a8fb2ffb0b1c6396392140b64fa36e16f
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "103855435"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118189089"
 ---
-# <a name="getting-the-domain-account-style-name-of-a-group"></a>Der Domänen Account-Style Name einer Gruppe wird erhalten.
+# <a name="getting-the-domain-account-style-name-of-a-group"></a>Abrufen des Domänennamens Account-Style einer Gruppe
 
-Benutzer, Gruppen, Computer und andere Sicherheits Prinzipale können im Domänen Kontoformular dargestellt werden. Das Domänen Konto (der in früheren Versionen von Windows NT verwendete Anmelde Name) weist die folgende Form auf:
+Benutzer, Gruppen, Computer und andere Sicherheitsprinzipale können in Domänenkontoform dargestellt werden. Das Domänenkonto (der anmeldename, der in früheren Versionen von Windows NT verwendet wurde) hat das folgende Formular:
 
 
 ```C++
@@ -25,9 +25,9 @@ Benutzer, Gruppen, Computer und andere Sicherheits Prinzipale können im Domäne
 
 
 
-Dabei <domain> ist "" der Name der Windows NT-Domäne, die den Benutzer enthält, und " <account> " ist die **sAMAccountName** -Eigenschaft des angegebenen Benutzers. Beispiel: "Fabrikam \\ JeffSmith".
+Wobei " " der Name der nt Windows domäne ist, die den Benutzer enthält, und " " ist die <domain> <account> **samAccountName-Eigenschaft** des angegebenen Benutzers. Beispiel: "Fabrikam \\ jeffsmith".
 
-Das Formular für das Domänen Konto kann den Vertrauens nehmer in einem ACE in einer Sicherheits Beschreibung angeben. Sie wird auch für den Anmelde Namen auf Computern verwendet, auf denen Windows Version NT 4,0 und früher ausgeführt wird.
+Das Domänenkontoformular kann den Vertrauenshänder in einem ACE in einer Sicherheitsbeschreibung angeben. Er wird auch für den Anmeldenamen auf Computern verwendet, auf denen Windows NT 4.0 und früher ausgeführt wird.
 
 
 ```C++
@@ -126,9 +126,9 @@ return hr;
 
 
 
- 
+ 
 
- 
+ 
 
 
 
