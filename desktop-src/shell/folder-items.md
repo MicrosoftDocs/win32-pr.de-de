@@ -1,7 +1,7 @@
 ---
-description: Ruft ein folderitems-Objekt ab, das die Auflistung der Elemente im Ordner darstellt.
+description: Ruft ein FolderItems-Objekt ab, das die Auflistung von Elementen im Ordner darstellt.
 ms.assetid: ef2965ec-c8ab-4108-8e5e-b4fd5370521a
-title: Folder. Items-Methode (Shldisp. h)
+title: Folder.Items-Methode (Shldisp.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,16 +13,16 @@ api_type:
 - COM
 api_location:
 - Shell32.dll
-ms.openlocfilehash: c3cfa0fcd2d8e2e51a67a362b33af34abf5b1427
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: e698c74cd8cc04265ef75e01062f8aa05171f660f5cf5eb7253d04d3397ed984
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104345408"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119093134"
 ---
-# <a name="folderitems-method"></a>Folder. Items-Methode
+# <a name="folderitems-method"></a>Folder.Items-Methode
 
-Ruft ein [**folderitems**](folderitems.md) -Objekt ab, das die Auflistung der Elemente im Ordner darstellt.
+Ruft ein [**FolderItems-Objekt**](folderitems.md) ab, das die Auflistung von Elementen im Ordner darstellt.
 
 ## <a name="syntax"></a>Syntax
 
@@ -39,22 +39,22 @@ Diese Methode hat keine Parameter.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Type: **[ **folderitems**](folderitems.md)\*\***
+Typ: **[ **FolderItems**](folderitems.md)\*\***
 
-Ein Objekt Verweis auf das [**folderitems**](folderitems.md) -Objekt.
+Ein Objektverweis auf das [**FolderItems-Objekt.**](folderitems.md)
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
 > [!Note]  
-> Nicht alle Methoden werden für alle Ordner implementiert. Beispielsweise ist die Methode " [**Parser Name**](folder-parsename.md) " nicht für den System Steuerungs Ordner (CSIDL-Steuer \_ Elemente) implementiert. Wenn Sie versuchen, eine nicht implementierte Methode aufzurufen, wird ein 0x800a01bd (Decimal 445)-Fehler ausgelöst.
+> Nicht alle Methoden werden für alle Ordner implementiert. Beispielsweise ist die [**ParseName-Methode**](folder-parsename.md) nicht für den ordner Systemsteuerung (CSIDL \_ CONTROLS) implementiert. Wenn Sie versuchen, eine nichtimplementierte Methode auf 0x800A01BD fehler (dezimal 445) wird ausgelöst.
 
  
 
 ## <a name="examples"></a>Beispiele
 
-Im folgenden Beispiel werden **Elemente** verwendet, um die Anzahl der Elemente im Ordner "C: Windows" zu bestimmen \\ . Die richtige Verwendung wird für JScript, VBScript und Visual Basic angezeigt.
+Im folgenden Beispiel wird **Items verwendet,** um die Anzahl der Elemente im Ordner C: Windows \\ zu bestimmen. Die richtige Verwendung wird für JScript, VBScript und Visual Basic.
 
-JScript
+JScript:
 
 
 ```JScript
@@ -81,7 +81,7 @@ JScript
 
 
 
-VBScript
+Vbscript:
 
 
 ```VB
@@ -145,17 +145,17 @@ End Sub
 
 
 
-## <a name="requirements"></a>Requirements (Anforderungen)
+## <a name="requirements"></a>Anforderungen
 
 
 
 | Anforderung | Wert |
 |-------------------------------------|----------------------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional, Windows XP \[ Desktop-Apps\]<br/>                                         |
+| Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional nur Windows \[ XP-Desktop-Apps\]<br/>                                         |
 | Unterstützte Mindestversion (Server)<br/> | Windows 2000 Server \[nur Desktop-Apps\]<br/>                                                           |
-| Header<br/>                   | <dl> <dt>Shldisp. h</dt> </dl>                           |
-| IDL<br/>                      | <dl> <dt>Shldisp. idl</dt> </dl>                         |
-| DLL<br/>                      | <dl> <dt>Shell32.dll (Version 4,71 oder höher)</dt> </dl> |
+| Header<br/>                   | <dl> <dt>Shldisp.h</dt> </dl>                           |
+| Idl<br/>                      | <dl> <dt>Shldisp.idl</dt> </dl>                         |
+| DLL<br/>                      | <dl> <dt>Shell32.dll (Version 4.71 oder höher)</dt> </dl> |
 
 
 

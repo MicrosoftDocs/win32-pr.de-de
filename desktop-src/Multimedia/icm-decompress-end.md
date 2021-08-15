@@ -1,9 +1,9 @@
 ---
-title: ICM_DECOMPRESS_END Meldung (VFW. h)
-description: Die ICM \_ -Dekomprimierungs \_ Nachricht benachrichtigt einen Video-Dekomprimierungs Treiber, um die Dekomprimierung und die für die Dekomprimierung zugeordneten Ressourcen freizugeben. Sie können diese Nachricht explizit oder mithilfe des icdecompressend-Makros senden.
+title: ICM_DECOMPRESS_END Meldung (Vfw.h)
+description: Die ICM \_ DECOMPRESS \_ END-Nachricht benachrichtigt einen Videodekomprimierungstreiber, um die Dekomprimierung zu beenden und Ressourcen frei zu machen, die für die Dekomprimierung zugeordnet sind. Sie können diese Nachricht explizit oder mithilfe des IcDecompressEnd-Makros senden.
 ms.assetid: 16ce2424-9606-455f-afbd-84326457538e
 keywords:
-- ICM_DECOMPRESS_END-Nachricht (Multimedia)
+- ICM_DECOMPRESS_END Nachricht Windows Multimedia
 topic_type:
 - apiref
 api_name:
@@ -14,16 +14,16 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: e25155755b6bfbb893905e6facad890dbf98f175
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: a0c877afac3db0e4cf4d7c476ca3806d2acd15bdf72764549b2958490574a4f6
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "103742969"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119691160"
 ---
-# <a name="icm_decompress_end-message"></a>ICM- \_ Dekomprimierungs \_ Nachricht beenden
+# <a name="icm_decompress_end-message"></a>\_ICM DECOMPRESS \_ END-Nachricht
 
-Die **ICM- \_ Dekomprimierungs \_** Nachricht benachrichtigt einen Video-Dekomprimierungs Treiber, um die Dekomprimierung und die für die Dekomprimierung zugeordneten Ressourcen freizugeben. Sie können diese Nachricht explizit oder mithilfe des [**icdecompressend**](/windows/desktop/api/Vfw/nf-vfw-icdecompressend) -Makros senden.
+Die **ICM \_ DECOMPRESS \_ END-Nachricht** benachrichtigt einen Videodekomprimierungstreiber über die Enddekomprimierung und kostenlose Ressourcen, die für die Dekomprimierung zugeordnet sind. Sie können diese Nachricht explizit oder mithilfe des [**IcDecompressEnd-Makros**](/windows/desktop/api/Vfw/nf-vfw-icdecompressend) senden.
 
 
 ```C++
@@ -36,13 +36,13 @@ lParam = 0;
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt bei erfolgreicher Ausführung von ICERR \_ OK oder andernfalls einen Fehler zurück.
+Gibt ICERR \_ OK zurück, wenn erfolgreich, oder andernfalls ein Fehler.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Der Treiber sollte alle Ressourcen freigeben, die für die [**ICM- \_ Dekomprimierungs- \_ Begin**](icm-decompress-begin.md) -Nachricht reserviert wurden.
+Der Treiber sollte alle Ressourcen freigeben, die für die [**ICM \_ DECOMPRESS \_ BEGIN-Nachricht**](icm-decompress-begin.md) zugeordnet sind.
 
-[**ICM \_ \_**](icm-decompress-begin.md) Das **\_ \_ Beenden** der BEGIN-und ICM-Debug wird nicht geschachtelt. Wenn der Treiber **ICM \_ Decompress \_** vor dem Beenden der Dekomprimierung mit **ICM \_ Decompress \_ Beenden** empfängt, sollte die Dekomprimierung mit neuen Parametern neu gestartet werden.
+[**ICM \_ DECOMPRESS \_ BEGIN**](icm-decompress-begin.md) und **ICM \_ DECOMPRESS \_ END** werden nicht geschachtelt. Wenn Ihr Treiber **ICM \_ DECOMPRESS \_ BEGIN** empfängt, bevor die Dekomprimierung mit **ICM \_ DECOMPRESS \_ END** beendet wird, sollte die Dekomprimierung mit neuen Parametern neu gestartet werden.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -52,18 +52,18 @@ Der Treiber sollte alle Ressourcen freigeben, die für die [**ICM- \_ Dekomprimi
 |-------------------------------------|----------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional \[nur Desktop-Apps\]<br/>                       |
 | Unterstützte Mindestversion (Server)<br/> | Windows 2000 Server \[nur Desktop-Apps\]<br/>                             |
-| Header<br/>                   | <dl> <dt>VFW. h</dt> </dl> |
+| Header<br/>                   | <dl> <dt>Vfw.h</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
 [Videokomprimierungs-Manager](video-compression-manager.md)
 </dt> <dt>
 
-[Video Komprimierungs Meldungen](video-compression-messages.md)
+[Videokomprimierungsmeldungen](video-compression-messages.md)
 </dt> </dl>
 
  

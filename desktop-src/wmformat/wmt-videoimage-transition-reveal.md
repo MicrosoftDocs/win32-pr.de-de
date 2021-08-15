@@ -1,9 +1,9 @@
 ---
-title: WMT_VIDEOIMAGE_TRANSITION_REVEAL (wmsdkidl. h)
-description: Der übereinungs Übergang zeigt das neue Bild entlang einer geraden Linie an, die von einer Seite des Frames stammt.
+title: WMT_VIDEOIMAGE_TRANSITION_REVEAL (Wmsdkidl.h)
+description: Der Reveal-Übergang zeigt das neue Bild entlang einer geraden Linie, die von einer Seite des Frames stammt.
 ms.assetid: 75ff6155-6b28-474a-b5d1-c3f1b3873b8e
 keywords:
-- WMT_VIDEOIMAGE_TRANSITION_REVEAL Windows Media-Format
+- WMT_VIDEOIMAGE_TRANSITION_REVEAL Windows-Medienformat
 topic_type:
 - apiref
 api_name:
@@ -14,20 +14,20 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: a9aa385912cf106955dd33e06824d0b3668fcd97
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: b916a5142f09628852a016754f9fb3ad691882731466d802b8367e03837b9699
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106365602"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119083734"
 ---
-# <a name="wmt_videoimage_transition_reveal"></a>WMT \_ Videoimage- \_ Übergang \_ offenlegen
+# <a name="wmt_videoimage_transition_reveal"></a>WMT \_ VIDEOIMAGE \_ TRANSITION \_ REVEAL
 
-Der übereinungs Übergang zeigt das neue Bild entlang einer geraden Linie an, die von einer Seite des Frames stammt.
+Der Reveal-Übergang zeigt das neue Bild entlang einer geraden Linie, die von einer Seite des Frames stammt.
 
 ## <a name="parameters"></a>Parameter
 
-In der folgenden Tabelle werden die Parameter beschrieben, die von diesem Übergang verwendet werden, und es werden die Elemente der [**WMT \_ Videoimage \_ SAMPLE2**](/previous-versions/windows/desktop/api/Wmsdkidl/ns-wmsdkidl-wmt_videoimage_sample2) -Struktur aufgelistet, der Sie zugewiesen sind.
+In der folgenden Tabelle werden die von diesem Übergang verwendeten Parameter beschrieben und die Elemente der [**WMT \_ VIDEOIMAGE \_ SAMPLE2-Struktur**](/previous-versions/windows/desktop/api/Wmsdkidl/ns-wmsdkidl-wmt_videoimage_sample2) aufgelistet, der sie zugewiesen sind.
 
 
 
@@ -48,26 +48,26 @@ In der folgenden Tabelle werden die Parameter beschrieben, die von diesem Überg
 <tr class="odd">
 <td>Entfernung</td>
 <td><strong>fEffectPara0</strong></td>
-<td>Der Umfang des neuen Bilds in Pixel. Dieser Wert ist relativ zur Ursprungsseite des Frames.</td>
+<td>Die Menge des angezeigten neuen Bilds in Pixel. Dieser Wert ist relativ zur Ursprungsseite des Frames.</td>
 </tr>
 <tr class="even">
-<td>Richtung</td>
+<td>Direction</td>
 <td><strong>fEffectPara1</strong></td>
-<td>Die Richtung der Offenlegung. Legen Sie einen der folgenden Werte fest:<br/>
+<td>Richtung des aufschlussenden . Legen Sie auf einen der folgenden Werte fest:<br/>
 <ul>
-<li>0-offenlegen rechts; von der linken Seite des Frames ausgehen.</li>
-<li>1-offen Links anzeigen; von der rechten Seite des Frames ausgehen.</li>
-<li>2-nach oben anzeigen vom unteren Rand des Frames ausgehen.</li>
-<li>3: nach unten anzeigen vom oberen Rand des Frames ausgehen.</li>
+<li>0 – Rechts zeigen; stammen von der linken Seite des Frames.</li>
+<li>1 – Links zeigen; stammen von der rechten Seite des Frames.</li>
+<li>2 – Aufwärts zeigen; stammen vom unteren Rand des Frames.</li>
+<li>3– Nach unten zeigen; stammen aus dem oberen Rand des Frames.</li>
 </ul></td>
 </tr>
 <tr class="odd">
 <td>Aufbau</td>
 <td><strong>fEffectPara2</strong></td>
-<td>Legen Sie einen der folgenden Werte fest:
+<td>Legen Sie auf einen der folgenden Werte fest:
 <ul>
-<li>0-gibt die normale Komposition an, in der das vorherige Bild den Hintergrund ist, und das aktuelle Bild ist der Vordergrund.</li>
-<li>1: gibt die umgekehrte Komposition an, in der das aktuelle Bild das Hintergrundbild ist, und das vorherige Bild der Vordergrund.</li>
+<li>0 : Gibt die normale Komposition an, bei der das vorherige Bild den Hintergrund und das aktuelle Bild den Vordergrund darstellt.</li>
+<li>1 – Gibt die umgekehrte Komposition an, bei der das aktuelle Bild das Hintergrundbild und das vorherige Bild der Vordergrund ist.</li>
 </ul></td>
 </tr>
 </tbody>
@@ -83,15 +83,15 @@ In der folgenden Tabelle werden die Parameter beschrieben, die von diesem Überg
 
 | Anforderung | Wert |
 |-------------------|---------------------------------------------------------------------------------------|
-| Header<br/> | <dl> <dt>Wmsdkidl. h</dt> </dl> |
+| Header<br/> | <dl> <dt>Wmsdkidl.h</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Video Bild Übergänge**](video-image-transitions.md)
+[**Videobildübergänge**](video-image-transitions.md)
 </dt> </dl>
 
  

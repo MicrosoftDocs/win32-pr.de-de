@@ -1,6 +1,6 @@
 ---
 title: MDM_AppLocker_ApplicationLaunchRestrictions01_EXE03-Klasse
-description: Mit der MDM \_ AppLocker \_ ApplicationLaunchRestrictions01 \_ EXE03-Klasse können Sie angeben, welche exe-Anwendungen gestartet werden dürfen.
+description: Mit der MDM \_ AppLocker \_ ApplicationLaunchRestrictions01 EXE03-Klasse können Sie angeben, welche \_ EXE-Anwendungen gestartet werden dürfen.
 ms.assetid: 27f10b5c-bc3b-4344-afcf-5718ea13e909
 keywords:
 - MDM_AppLocker_ApplicationLaunchRestrictions01_EXE03-Klasse
@@ -17,18 +17,18 @@ api_type:
 - DllExport
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 58aeb86edc21fec974c099fd8d25bd2e3fb244ca
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: bdaea9e1d1987e329b16f5dd8842a331b50ab9208feef7d48b609872961ad634
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "103858818"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119575322"
 ---
 # <a name="mdm_applocker_applicationlaunchrestrictions01_exe03-class"></a>MDM \_ AppLocker \_ ApplicationLaunchRestrictions01 \_ EXE03-Klasse
 
 \[Einige Informationen beziehen sich auf Vorabversionen, die vor der kommerziellen Freigabe grundlegend geändert werden können. Microsoft übernimmt keine Garantie, weder ausdrücklich noch stillschweigend, für die hier bereitgestellten Informationen.\]
 
-Mit der **MDM \_ AppLocker \_ ApplicationLaunchRestrictions01 \_ EXE03** -Klasse können Sie angeben, welche exe-Anwendungen gestartet werden dürfen.
+Mit **der MDM \_ AppLocker \_ ApplicationLaunchRestrictions01 \_ EXE03-Klasse** können Sie angeben, welche EXE-Anwendungen gestartet werden dürfen.
 
 Die folgende Syntax wird durch MOF-Code (Managed Object Format) vereinfacht und schließt alle geerbten Eigenschaften ein.
 
@@ -48,20 +48,20 @@ class MDM_AppLocker_ApplicationLaunchRestrictions01_EXE03
 
 ## <a name="members"></a>Member
 
-Die **MDM \_ AppLocker \_ ApplicationLaunchRestrictions01 \_ EXE03** -Klasse verfügt über diese Typen von Membern:
+Die **MDM \_ AppLocker \_ ApplicationLaunchRestrictions01 \_ EXE03-Klasse** verfügt über die folgenden Membertypen:
 
 -   [Eigenschaften](#properties)
 
 ### <a name="properties"></a>Eigenschaften
 
-Die **MDM \_ AppLocker \_ ApplicationLaunchRestrictions01 \_ EXE03** -Klasse verfügt über diese Eigenschaften.
+Die **MDM \_ AppLocker \_ ApplicationLaunchRestrictions01 \_ EXE03-Klasse** verfügt über diese Eigenschaften.
 
 <dl> <dt>
 
-[**Enforcementmode**](/windows/client-management/mdm/applocker-csp)
+[**EnforcementMode**](/windows/client-management/mdm/applocker-csp)
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Lesen/Schreiben
@@ -72,7 +72,7 @@ Zugriffstyp: Lesen/Schreiben
 **InstanceID**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
@@ -85,10 +85,10 @@ Definiert Einschränkungen für das Starten ausführbarer Anwendungen.
 
 </dd> <dt>
 
-[**Noninteractiveprocessenforcement**](/windows/client-management/mdm/applocker-csp)
+[**NonInteractiveProcessEnforcement**](/windows/client-management/mdm/applocker-csp)
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Lesen/Schreiben
@@ -96,10 +96,10 @@ Zugriffstyp: Lesen/Schreiben
 
 </dd> <dt>
 
-**ParentID**
+**Parentid**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
@@ -108,14 +108,14 @@ Zugriffstyp: Schreibgeschützt
 Qualifizierer: [ **Schlüssel**](/windows/desktop/WmiSdk/key-qualifier)
 </dt> </dl>
 
-Beschreibt den vollständigen Pfad zum übergeordneten Knoten. Für diese Klasse ist die Zeichenfolge "./Vendor/MSFT/AppLocker/ApplicationLaunchRestrictions/*Gruppierung*".
+Beschreibt den vollständigen Pfad zum übergeordneten Knoten. Für diese Klasse ist die Zeichenfolge "./Vendor/MSFT/AppLocker/ApplicationLaunchRestrictions/*Grouping*"
 
 </dd> <dt>
 
-[**Policy**](/windows/client-management/mdm/applocker-csp)
+[**Richtlinie**](/windows/client-management/mdm/applocker-csp)
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Lesen/Schreiben
@@ -129,19 +129,19 @@ Zugriffstyp: Lesen/Schreiben
 
 | Anforderung | Wert |
 |-------------------------------------|------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows 10 \[ -Desktop-Apps\]<br/>                                                    |
+| Unterstützte Mindestversion (Client)<br/> | \[Windows 10 Nur Desktop-Apps\]<br/>                                                    |
 | Unterstützte Mindestversion (Server)<br/> | Nicht unterstützt<br/>                                                                      |
-| Namespace<br/>                | Root \\ CIMv2 \\ MDM- \\ dmmap<br/>                                                             |
-| MOF<br/>                      | <dl> <dt>Dmwmibridgeprov. MOF</dt> </dl> |
+| Namespace<br/>                | \\Stamm-CIMv2 \\ MDM \\ DMMap<br/>                                                             |
+| MOF<br/>                      | <dl> <dt>DMWmiBridgeProv.mof</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>DMWmiBridgeProv.dll</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[Verwenden von PowerShell-Skripts mit dem WMI-Bridge Anbieter](/windows/client-management/mdm/using-powershell-scripting-with-the-wmi-bridge-provider)
+[Verwenden von PowerShell-Skripts mit dem WMI-Bridge-Anbieter](/windows/client-management/mdm/using-powershell-scripting-with-the-wmi-bridge-provider)
 </dt> </dl>
 
  

@@ -1,6 +1,6 @@
 ---
-description: Weitere Informationen finden Sie in der API. gettableindexes-Methode.
-title: API. gettableindexes-Methode
+description: Weitere Informationen finden Sie unter Api.GetTableIndexes-Methode.
+title: Api.GetTableIndexes-Methode
 TOCTitle: 'GetTableIndexes method '
 ms:assetid: Overload:Microsoft.Isam.Esent.Interop.Api.GetTableIndexes
 ms:mtpsurl: https://msdn.microsoft.com/library/microsoft.isam.esent.interop.api.gettableindexes(v=EXCHG.10)
@@ -14,17 +14,17 @@ dev_langs:
 - JScript
 - VB
 - other
-ms.openlocfilehash: 32a3587b23766345417ecb23b37e6d6daccb7f81
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: c9cf1a72f6aee03c559ac97c5722908d6426b86ffb93789d14d860c8c5c373ea
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104560256"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118983820"
 ---
-# <a name="apigettableindexes-method"></a>API. gettableindexes-Methode
+# <a name="apigettableindexes-method"></a>Api.GetTableIndexes-Methode
 
-Geschützte Member einschließen  
-Geerbte Member einschließen  
+Einschließen geschützter Member  
+Einschließen geerbter Member  
 
 ## <a name="overload-list"></a>Überladeliste
 
@@ -39,13 +39,13 @@ Geerbte Member einschließen
 <tbody>
 <tr class="odd">
 <td><img src="../images/dn292146.pubmethod(exchg.10).gif" title="Öffentliche Methode" alt="Public method" /><img src="../images/dn292146.static(exchg.10).gif" title="Statischer Member" alt="Static member" /></td>
-<td><a href="dn292093(v=exchg.10).md">Gettableindexes (JET_SESID JET_TABLEID)</a></td>
-<td>Durchläuft alle Indizes in der Tabelle, wobei Informationen zu den einzelnen Indizes zurückgegeben werden.</td>
+<td><a href="dn292093(v=exchg.10).md">GetTableIndexes(JET_SESID, JET_TABLEID)</a></td>
+<td>Durchläuft alle Indizes in der Tabelle und gibt Informationen zu jedem Index zurück.</td>
 </tr>
 <tr class="even">
 <td><img src="../images/dn292146.pubmethod(exchg.10).gif" title="Öffentliche Methode" alt="Public method" /><img src="../images/dn292146.static(exchg.10).gif" title="Statischer Member" alt="Static member" /></td>
-<td><a href="dn292092(v=exchg.10).md">Gettableindexes (JET_SESID, JET_DBID, Zeichenfolge)</a></td>
-<td>Durchläuft alle Index in der Tabelle, wobei Informationen zu den einzelnen Indizes zurückgegeben werden.</td>
+<td><a href="dn292092(v=exchg.10).md">GetTableIndexes(JET_SESID, JET_DBID, String)</a></td>
+<td>Durchläuft alle Indizes in der Tabelle und gibt Informationen zu jedem Index zurück.</td>
 </tr>
 </tbody>
 </table>
@@ -53,12 +53,12 @@ Geerbte Member einschließen
 
 Oben
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
-#### <a name="reference"></a>Referenz
+#### <a name="reference"></a>Verweis
 
 [API-Klasse](./api-class.md)
 
-[API-Mitglieder](./api-members.md)
+[API-Member](./api-members.md)
 
-[Microsoft. ISAM. ESENT. Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)
+[Microsoft.Isam.Esent.Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)

@@ -1,6 +1,6 @@
 ---
-description: 'Weitere Informationen finden Sie unter: esentslvealistzerozuzusorcationexception-Konstruktor'
-title: Esentslvealistzerozucationexception-Konstruktor
+description: 'Weitere Informationen zu: EsentSLVEAListZeroAllocationException-Konstruktor'
+title: EsentSLVEAListZeroAllocationException-Konstruktor
 TOCTitle: 'EsentSLVEAListZeroAllocationException constructor '
 ms:assetid: M:Microsoft.Isam.Esent.Interop.EsentSLVEAListZeroAllocationException.#ctor
 ms:mtpsurl: https://msdn.microsoft.com/library/microsoft.isam.esent.interop.esentslvealistzeroallocationexception.esentslvealistzeroallocationexception(v=EXCHG.10)
@@ -24,17 +24,17 @@ api_type:
 api_location:
 - Microsoft.Isam.Esent.Interop.dll
 ROBOTS: INDEX,FOLLOW
-ms.openlocfilehash: e45775fe922fa1498b42f749e88c6ef18177d247
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: fbf7cb19eae4e259fd7ddedbcee4683a4513319dd4fe33fd76ad5134d5df1afd
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "104217890"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118981430"
 ---
-# <a name="esentslvealistzeroallocationexception-constructor"></a>Esentslvealistzerozucationexception-Konstruktor
+# <a name="esentslvealistzeroallocationexception-constructor"></a>EsentSLVEAListZeroAllocationException-Konstruktor
 
-**Namespace:**  [Microsoft. ISAM. ESENT. Interop](./microsoft.isam.esent.interop-namespace.md)  
-**Assembly:**  Microsoft. ISAM. ESENT. Interop (in Microsoft.Isam.Esent.Interop.dll)
+**Namespace:**  [Microsoft.Isam.Esent.Interop](./microsoft.isam.esent.interop-namespace.md)  
+**Assembly:**  Microsoft.Isam.Esent.Interop (in Microsoft.Isam.Esent.Interop.dll)
 
 ## <a name="syntax"></a>Syntax
 
@@ -50,12 +50,12 @@ Dim instance As New EsentSLVEAListZeroAllocationException()
 public EsentSLVEAListZeroAllocationException()
 ```
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
-#### <a name="reference"></a>Referenz
+#### <a name="reference"></a>Verweis
 
-[Esentslvealistzerozucationexception-Klasse](./esentslvealistzeroallocationexception-class.md)
+[EsentSLVEAListZeroAllocationException-Klasse](./esentslvealistzeroallocationexception-class.md)
 
-[Esentslvealistzerozuzusorcationexception-Member](./esentslvealistzeroallocationexception-members.md)
+[EsentSLVEAListZeroAllocationException-Member](./esentslvealistzeroallocationexception-members.md)
 
-[Microsoft. ISAM. ESENT. Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)
+[Microsoft.Isam.Esent.Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)

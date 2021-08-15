@@ -1,9 +1,9 @@
 ---
-title: EM_GETOPTIONS Meldung (RichEdit. h)
-description: Ruft Optionen für Rich-Edit-Steuerelemente ab.
+title: EM_GETOPTIONS Nachricht (Richedit.h)
+description: Ruft Rich Edit-Steuerelementoptionen ab.
 ms.assetid: 183f0fed-8666-4ed5-ac48-362c818378d2
 keywords:
-- Windows-Steuerelemente für EM_GETOPTIONS Meldung
+- EM_GETOPTIONS Windows-Steuerelemente für Nachrichten
 topic_type:
 - apiref
 api_name:
@@ -14,16 +14,16 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 6b31af3663331b63553fc262fc9bdbd5613c5768
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: cba85b5fe3ffd47763d25b9ca13bf10f6202a6876e25d300f66d9af3852edd5c
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "103956821"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119019518"
 ---
-# <a name="em_getoptions-message"></a>EM \_ GetOptions-Meldung
+# <a name="em_getoptions-message"></a>EM \_ GETOPTIONS-Nachricht
 
-Ruft Optionen für Rich-Edit-Steuerelemente ab.
+Ruft Rich Edit-Steuerelementoptionen ab.
 
 ## <a name="parameters"></a>Parameter
 
@@ -45,7 +45,7 @@ Nicht verwendet; muss 0 (null) sein.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Diese Meldung gibt eine Kombination der aktuellen optionsflagwerte zurück, die in der [**EM- \_ SetOptions**](em-setoptions.md) -Nachricht beschrieben werden.
+Diese Meldung gibt eine Kombination der aktuellen Optionsflagswerte zurück, die in der [**EM \_ SETOPTIONS-Nachricht**](em-setoptions.md) beschrieben sind.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -53,17 +53,17 @@ Diese Meldung gibt eine Kombination der aktuellen optionsflagwerte zurück, die 
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>                                        |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2003 \[ -Desktop-Apps\]<br/>                                  |
-| Header<br/>                   | <dl> <dt>RichEdit. h</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows \[Nur Vista-Desktop-Apps\]<br/>                                        |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2003-Desktop-Apps\]<br/>                                  |
+| Header<br/>                   | <dl> <dt>Richedit.h</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**EM- \_ toptions**](em-setoptions.md)
+[**EM \_ SETOPTIONS**](em-setoptions.md)
 </dt> </dl>
 
  

@@ -1,6 +1,6 @@
 ---
-description: 'Erfahren Sie mehr über: esentcolumnduplicateexception-Konstruktor'
-title: Esentcolumnduplicateexception-Konstruktor
+description: 'Weitere Informationen finden Sie unter: EsentColumnDuplicateException-Konstruktor'
+title: EsentColumnDuplicateException-Konstruktor
 TOCTitle: 'EsentColumnDuplicateException constructor '
 ms:assetid: M:Microsoft.Isam.Esent.Interop.EsentColumnDuplicateException.#ctor
 ms:mtpsurl: https://msdn.microsoft.com/library/microsoft.isam.esent.interop.esentcolumnduplicateexception.esentcolumnduplicateexception(v=EXCHG.10)
@@ -24,19 +24,19 @@ api_type:
 api_location:
 - Microsoft.Isam.Esent.Interop.dll
 ROBOTS: INDEX,FOLLOW
-ms.openlocfilehash: 08153ae79a67e8af08c5d5a8586afe96c5e83e05
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 508aba47ca13303e7dc4cdf3e03cc498007cd5159967b7f533db8f6fd6bd5612
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104214523"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120094220"
 ---
-# <a name="esentcolumnduplicateexception-constructor"></a>Esentcolumnduplicateexception-Konstruktor
+# <a name="esentcolumnduplicateexception-constructor"></a>EsentColumnDuplicateException-Konstruktor
 
-Initialisiert eine neue Instanz der esentcolumnduplicateexception-Klasse.
+Initialisiert eine neue Instanz der EsentColumnDuplicateException-Klasse.
 
-**Namespace:**  [Microsoft. ISAM. ESENT. Interop](./microsoft.isam.esent.interop-namespace.md)  
-**Assembly:**  Microsoft. ISAM. ESENT. Interop (in Microsoft.Isam.Esent.Interop.dll)
+**Namespace:**  [Microsoft.Isam.Esent.Interop](./microsoft.isam.esent.interop-namespace.md)  
+**Assembly:**  Microsoft.Isam.Esent.Interop (in Microsoft.Isam.Esent.Interop.dll)
 
 ## <a name="syntax"></a>Syntax
 
@@ -52,12 +52,12 @@ Dim instance As New EsentColumnDuplicateException()
 public EsentColumnDuplicateException()
 ```
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
-#### <a name="reference"></a>Referenz
+#### <a name="reference"></a>Verweis
 
-[Esentcolumnduplicateexception-Klasse](./esentcolumnduplicateexception-class.md)
+[EsentColumnDuplicateException-Klasse](./esentcolumnduplicateexception-class.md)
 
-[Esentcolumnduplicateexception-Member](./esentcolumnduplicateexception-members.md)
+[EsentColumnDuplicateException-Member](./esentcolumnduplicateexception-members.md)
 
-[Microsoft. ISAM. ESENT. Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)
+[Microsoft.Isam.Esent.Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)

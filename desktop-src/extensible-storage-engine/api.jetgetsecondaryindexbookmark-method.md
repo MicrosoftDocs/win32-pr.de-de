@@ -1,6 +1,6 @@
 ---
-description: 'Weitere Informationen finden Sie hier: API. jetgetsecondaryindexbookmark-Methode'
-title: API. jetgetsecondaryindexbookmark-Methode
+description: 'Weitere Informationen finden Sie unter: Api.JetGetSecondaryIndexBookmark-Methode'
+title: Api.JetGetSecondaryIndexBookmark-Methode
 TOCTitle: 'JetGetSecondaryIndexBookmark method '
 ms:assetid: M:Microsoft.Isam.Esent.Interop.Api.JetGetSecondaryIndexBookmark(Microsoft.Isam.Esent.Interop.JET_SESID,Microsoft.Isam.Esent.Interop.JET_TABLEID,System.Byte[],System.Int32,System.Int32@,System.Byte[],System.Int32,System.Int32@,Microsoft.Isam.Esent.Interop.GetSecondaryIndexBookmarkGrbit)
 ms:mtpsurl: https://msdn.microsoft.com/library/microsoft.isam.esent.interop.api.jetgetsecondaryindexbookmark(v=EXCHG.10)
@@ -24,19 +24,19 @@ api_type:
 api_location:
 - Microsoft.Isam.Esent.Interop.dll
 ROBOTS: INDEX,FOLLOW
-ms.openlocfilehash: b0a25e78ca291271a96d06e5c0bf61c691acd4de
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 9a1ca2430ae188b256fb1c6d026db7b6d78e45fdbfeaec158242019b7795d910
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104041656"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119042528"
 ---
-# <a name="apijetgetsecondaryindexbookmark-method"></a>API. jetgetsecondaryindexbookmark-Methode
+# <a name="apijetgetsecondaryindexbookmark-method"></a>Api.JetGetSecondaryIndexBookmark-Methode
 
-Ruft ein spezielles Lesezeichen für den sekundären Index Eintrag an der aktuellen Position eines Cursors ab. Dieses Lesezeichen kann dann verwendet werden, um den Cursor mithilfe von jetgoysecondaryindexbookmark effizient wieder in denselben Index Eintrag zu positionieren. Dies ist besonders nützlich, wenn Sie einen sekundären Index neu positionieren, der doppelte Schlüssel enthält oder mehrere Indexeinträge für denselben Datensatz enthält.
+Ruft ein spezielles Lesezeichen für den sekundären Indexeintrag an der aktuellen Position eines Cursors ab. Dieses Lesezeichen kann dann verwendet werden, um den Cursor mit JetGotoSecondaryIndexBookmark effizient auf denselben Indexeintrag zurückzuordnen. Dies ist besonders nützlich, wenn die Neupositionierung auf einem sekundären Index mit doppelten Schlüsseln oder mehreren Indexeinträgen für denselben Datensatz verwendet wird.
 
-**Namespace:**  [Microsoft. ISAM. ESENT. Interop](./microsoft.isam.esent.interop-namespace.md)  
-**Assembly:**  Microsoft. ISAM. ESENT. Interop (in Microsoft.Isam.Esent.Interop.dll)
+**Namespace:**  [Microsoft.Isam.Esent.Interop](./microsoft.isam.esent.interop-namespace.md)  
+**Assembly:**  Microsoft.Isam.Esent.Interop (in Microsoft.Isam.Esent.Interop.dll)
 
 ## <a name="syntax"></a>Syntax
 
@@ -85,73 +85,73 @@ public static void JetGetSecondaryIndexBookmark(
 
 #### <a name="parameters"></a>Parameter
 
-  - -sid  
-    Typ: [Microsoft.ISAM.ESENT.Interop.JET_SESID](./jet-sesid-structure.md)  
+  - sesid  
+    Typ: [Microsoft.Isam.Esent.Interop.JET_SESID](./jet-sesid-structure.md)  
     
     Die zu verwendende Sitzung.
 
 <!-- end list -->
 
-  - TableID  
-    Typ: [Microsoft.ISAM.ESENT.Interop.JET_TABLEID](./jet-tableid-structure.md)  
+  - tableid  
+    Typ: [Microsoft.Isam.Esent.Interop.JET_TABLEID](./jet-tableid-structure.md)  
     
-    Der Cursor, von dem das Lesezeichen abgerufen werden soll.
+    Der Cursor, aus dem das Lesezeichen abgerufen werden soll.
 
 <!-- end list -->
 
   - secondaryKey  
-    Sorte \[\]  
+    Typ: \[\]  
     
     Ausgabepuffer für den sekundären Schlüssel.
 
 <!-- end list -->
 
-  - secondarykeysize  
-    Typ: [System. Int32](/dotnet/api/system.int32)  
+  - secondaryKeySize  
+    Typ: [System.Int32](/dotnet/api/system.int32)  
     
-    Größe des sekundären Schlüssel Puffers.
+    Größe des sekundären Schlüsselpuffers.
 
 <!-- end list -->
 
-  - actualsecondarykeysize  
-    Typ: [System. Int32](/dotnet/api/system.int32)  
+  - actualSecondaryKeySize  
+    Typ: [System.Int32](/dotnet/api/system.int32)  
     
     Gibt die Größe des sekundären Schlüssels zurück.
 
 <!-- end list -->
 
   - primaryKey  
-    Sorte \[\]  
+    Typ: \[\]  
     
     Ausgabepuffer für den Primärschlüssel.
 
 <!-- end list -->
 
-  - primarykeysize  
-    Typ: [System. Int32](/dotnet/api/system.int32)  
+  - primaryKeySize  
+    Typ: [System.Int32](/dotnet/api/system.int32)  
     
-    Größe des Primärschlüssel Puffers.
+    Größe des Primärschlüsselpuffers.
 
 <!-- end list -->
 
-  - actualprimarykeysize  
-    Typ: [System. Int32](/dotnet/api/system.int32)  
+  - actualPrimaryKeySize  
+    Typ: [System.Int32](/dotnet/api/system.int32)  
     
     Gibt die Größe des Primärschlüssels zurück.
 
 <!-- end list -->
 
   - grbit  
-    Typ: [Microsoft. ISAM. ESENT. Interop. getsecondaryindexbookmarkgrbit](./getsecondaryindexbookmarkgrbit-enumeration.md)  
+    Typ: [Microsoft.Isam.Esent.Interop.GetSecondaryIndexBookmarkGrbit](./getsecondaryindexbookmarkgrbit-enumeration.md)  
     
-    Optionen für den-Befehl.
+    Optionen für den Aufruf.
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
-#### <a name="reference"></a>Referenz
+#### <a name="reference"></a>Verweis
 
 [API-Klasse](./api-class.md)
 
-[API-Mitglieder](./api-members.md)
+[API-Member](./api-members.md)
 
-[Microsoft. ISAM. ESENT. Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)
+[Microsoft.Isam.Esent.Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)

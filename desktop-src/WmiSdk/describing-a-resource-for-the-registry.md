@@ -5,16 +5,16 @@ ms.tgt_platform: multiple
 title: Beschreiben einer Ressource für die Registrierung
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 3ba175120b5abec238d1b9078010359effef8ba2
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 30be25eed569f212e435827023eed132cf1c6ead49be37eabb6fe4ac30e8e3b8
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106373207"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120097270"
 ---
 # <a name="describing-a-resource-for-the-registry"></a>Beschreiben einer Ressource für die Registrierung
 
-Die Systemregistrierung enthält ressourcenbezogene Daten. Diese Daten befinden sich unter dem folgenden Registrierungsschlüssel und werden in einem speziellen Registrierungs Datentyp namens " **reg \_ Resource \_ List**" gespeichert. Anwendungen können die ressourcenbezogenen Daten über den System Registrierungs Anbieter abrufen. Sie können Systemressourcen in der Registrierung hinzufügen und ändern.
+Die Systemregistrierung enthält ressourcenbezogene Daten. Diese Daten befinden sich unter dem folgenden Registrierungsschlüssel und werden in einem speziellen Registrierungsdatentyp mit dem Namen **REG \_ RESOURCE \_ LIST** gespeichert. Anwendungen können die ressourcenbezogenen Daten über den Systemregistrierungsanbieter abrufen. Sie können Systemressourcen in der Registrierung hinzufügen und ändern.
 
 ```
 HKEY_LOCAL_MACHINE
@@ -41,44 +41,44 @@ Im folgenden Verfahren wird beschrieben, wie ressourcenbezogene Informationen in
     <tr class="odd">
     <td>Schnittstellentyp</td>
     <td>Einer der folgenden Werte:<br/> <dl> Intern<br />
-    ISA<br />
-    EISA<br />
-    Mikrochannel<br />
-    TURBOchannel<br />
+    Isa<br />
+    Eisa<br />
+    MicroChannel<br />
+    Turbochannel<br />
     PCIBus<br />
-    VMEbus<br />
+    Vmebus<br />
     NuBus<br />
     PCMCIABus<br />
-    CBUS<br />
-    Mpibus<br />
-    Mpsabus<br />
+    CBus<br />
+    MPIBus<br />
+    MPSABus<br />
     </dl></td>
     </tr>
     <tr class="even">
     <td>Busnummer</td>
-    <td>Eine ganze Zahl, die die Busnummer angibt.</td>
+    <td>Ganze Zahl, die die Busnummer angibt.</td>
     </tr>
     <tr class="odd">
-    <td>Partielle deskriptornummer</td>
-    <td>Eine ganze Zahl, die die deskriptornummer angibt.</td>
+    <td>Partielle Deskriptornummer</td>
+    <td>Ganze Zahl, die die Deskriptornummer angibt.</td>
     </tr>
     <tr class="even">
-    <td>Offset-oder Union-Typ</td>
-    <td>Einer der folgenden Werte:<br/> <dl> Port. Start<br />
-    Port. PhysicalAddress<br />
-    Port. length<br />
-    Interrupt. Level<br />
-    Interrupt. Vector<br />
-    Interrupt. Affinität<br />
-    Arbeitsspeicher. Start<br />
-    "Memory. PhysicalAddress"<br />
-    Arbeitsspeicher. Länge<br />
-    DMA. Channel<br />
-    DMA. Port<br />
-    DMA. "reserved1"<br />
-    "De vicespecificdata. DataSize"<br />
-    "De vicespecificdata." reserved1 ""<br />
-    "De vicespecificdata." reserved2 ""<br />
+    <td>Offset- oder Union-Typ</td>
+    <td>Einer der folgenden Werte:<br/> <dl> Port.Start<br />
+    Port.PhysicalAddress<br />
+    Port.Length<br />
+    Interrupt.Level<br />
+    Interrupt.Vector<br />
+    Interrupt.Affinity<br />
+    Memory.Start<br />
+    Memory.PhysicalAddress<br />
+    Memory.Length<br />
+    Dma.Channel<br />
+    Dma.Port<br />
+    Dma.Reserved1<br />
+    DeviceSpecificData.DataSize<br />
+    DeviceSpecificData.Reserved1<br />
+    DeviceSpecificData.Reserved2<br />
     </dl></td>
     </tr>
     </tbody>
@@ -96,7 +96,7 @@ Im folgenden Verfahren wird beschrieben, wie ressourcenbezogene Informationen in
           ResourceMap
     ```
 
-Im folgenden Codebeispiel wird ein gültiger Ressourcen Deskriptor beschrieben.
+Im folgenden Codebeispiel wird ein gültiger Ressourcendeskriptor beschrieben.
 
 ``` syntax
 local|hkey_local_machine\hardware\resourcemap\
@@ -104,7 +104,7 @@ local|hkey_local_machine\hardware\resourcemap\
   pc compatible eisa/isa HAL|.raw("eisa",0,0,"interrupt.affinity")
 ```
 
-Das folgende Codebeispiel zeigt die gültige MOF-Syntax zum Abrufen eines Ressourcen Deskriptors.
+Das folgende Codebeispiel zeigt eine gültige MOF-Syntax zum Abrufen eines Ressourcendeskriptors.
 
 ``` syntax
 [DYNPROPS] 

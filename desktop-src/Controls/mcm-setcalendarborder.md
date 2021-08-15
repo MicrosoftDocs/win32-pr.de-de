@@ -1,9 +1,9 @@
 ---
-title: MCM_SETCALENDARBORDER (Commctrl.h)
-description: Legt die Größe des Rahmens in Pixel fest. Sie können diese Nachricht explizit oder mithilfe des MonthCal \_ SetCalendarBorder-Makros senden.
+title: MCM_SETCALENDARBORDER Meldung (Commctrl.h)
+description: Legt die Größe des Rahmens in Pixel fest. Sie können diese Nachricht explizit oder mithilfe des \_ MonthCal SetCalendarBorder-Makros senden.
 ms.assetid: 2a64a08f-a1fb-47a8-8f09-725807e87a03
 keywords:
-- MCM_SETCALENDARBORDER von Windows Steuerelementen
+- MCM_SETCALENDARBORDER Windows-Steuerelemente für Nachrichten
 topic_type:
 - apiref
 api_name:
@@ -23,7 +23,7 @@ ms.locfileid: "119697200"
 ---
 # <a name="mcm_setcalendarborder-message"></a>MCM \_ SETCALENDARBORDER-Meldung
 
-Legt die Größe des Rahmens in Pixel fest. Sie können diese Nachricht explizit oder mithilfe des [**\_ MonthCal-Makros SetCalendarBorder**](/windows/desktop/api/Commctrl/nf-commctrl-monthcal_setcalendarborder) senden.
+Legt die Größe des Rahmens in Pixel fest. Sie können diese Nachricht explizit oder mithilfe des [**MonthCal \_ SetCalendarBorder-Makros**](/windows/desktop/api/Commctrl/nf-commctrl-monthcal_setcalendarborder) senden.
 
 ## <a name="parameters"></a>Parameter
 
@@ -32,7 +32,7 @@ Legt die Größe des Rahmens in Pixel fest. Sie können diese Nachricht explizit
 *wParam* 
 </dt> <dd>
 
-True **gibt** an, dass die Rahmengröße auf die Anzahl von Pixeln festgelegt wird, die *lParam* angibt. False **gibt** an, dass die Rahmengröße auf den vom Design angegebenen Standardwert zurückgesetzt wird, oder null, wenn keine Designs verwendet werden.
+True gibt an, dass die Rahmengröße auf die Anzahl von Pixeln festgelegt wird, die *lParam* angibt. False gibt an, dass die Rahmengröße auf den standardwert zurückgesetzt wird, der vom Design angegeben wird, oder 0 (null), wenn designs nicht verwendet werden.
 
 </dd> <dt>
 
@@ -53,7 +53,7 @@ Wird nicht verwendet.
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Windows Nur \[ Vista-Desktop-Apps\]<br/>                                        |
+| Unterstützte Mindestversion (Client)<br/> | Windows \[Nur Vista-Desktop-Apps\]<br/>                                        |
 | Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2008-Desktop-Apps\]<br/>                                  |
 | Header<br/>                   | <dl> <dt>Commctrl.h</dt> </dl> |
 

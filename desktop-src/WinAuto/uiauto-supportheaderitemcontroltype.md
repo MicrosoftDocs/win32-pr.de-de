@@ -1,52 +1,52 @@
 ---
-title: Header Item-Steuer Elementtyp
-description: Dieses Thema enthält Informationen zur Unterstützung der Microsoft-Benutzeroberflächen Automatisierung für den Header Item-Steuer Elementtyp.
+title: HeaderItem-Steuerelementtyp
+description: Dieses Thema enthält Informationen zu Microsoft Benutzeroberflächenautomatisierung Unterstützung für den HeaderItem-Steuerelementtyp.
 ms.assetid: c70420d6-d9f3-47c8-a09f-35ed170f815f
 keywords:
-- Benutzeroberflächenautomatisierungs, Unterstützung für den Header Item-Steuer Elementtyp
-- Benutzeroberflächenautomatisierungs, Header Item-Steuer Elementtyp
-- Benutzeroberflächenautomatisierungs-, Baumstruktur für Header Item-Steuer Elementtyp
-- Benutzeroberflächenautomatisierungs, Eigenschaften für den Header Item-Steuer Elementtyp
-- Benutzeroberflächenautomatisierungs, Steuerelement Muster für den Header Item-Steuer Elementtyp
-- Benutzeroberflächenautomatisierungs, Ereignisse für Header Item-Steuer Elementtyp
-- Struktur Strukturen, Header Item-Steuer Elementtyp
-- Eigenschaften, Header Item-Steuer Elementtyp
-- Steuerelement Muster, Header Item-Steuer Elementtyp
-- Ereignisse, Header Item-Steuer Elementtyp
-- Unterstützung für den Header Item-Steuer Elementtyp
-- Header Item-Steuer Elementtyp
-- Steuerelement Typen, Baumstruktur für Header Item-Steuer Elementtyp
-- Steuerelement Typen, Steuerelement Muster für den Header Item-Steuer Elementtyp
-- Steuerelement Typen, Unterstützung für Header Item
-- Steuerelement Typen, Header Item
+- Benutzeroberflächenautomatisierung,Unterstützung für headerItem-Steuerelementtyp
+- Benutzeroberflächenautomatisierung,HeaderItem-Steuerelementtyp
+- Benutzeroberflächenautomatisierung,Struktur für headerItem-Steuerelementtyp
+- Benutzeroberflächenautomatisierung,Eigenschaften für headerItem-Steuerelementtyp
+- Benutzeroberflächenautomatisierung,Steuerelementmuster für headerItem-Steuerelementtyp
+- Benutzeroberflächenautomatisierung,Ereignisse für headerItem-Steuerelementtyp
+- Strukturstrukturen, HeaderItem-Steuerelementtyp
+- properties,HeaderItem-Steuerelementtyp
+- Steuerelementmuster,HeaderItem-Steuerelementtyp
+- events,HeaderItem-Steuerelementtyp
+- Unterstützung für headerItem-Steuerelementtyp
+- HeaderItem-Steuerelementtyp
+- Steuerelementtypen, Struktur für HeaderItem-Steuerelementtyp
+- Steuerelementtypen,Steuerelementmuster für HeaderItem-Steuerelementtyp
+- Steuerelementtypen,Unterstützung für HeaderItem
+- Steuerelementtypen,HeaderItem
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 1bab61f92a6ab4db221810f9f083279ade4bf353
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: b6bbcd6d86e7401c3fa98d162e3aa273613dfd3a32705da891fc89d1f4ea003f
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "106342263"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120098210"
 ---
-# <a name="headeritem-control-type"></a>Header Item-Steuer Elementtyp
+# <a name="headeritem-control-type"></a>HeaderItem-Steuerelementtyp
 
-Dieses Thema enthält Informationen zur Unterstützung der Microsoft-Benutzeroberflächen Automatisierung für den **Header** Item-Steuer Elementtyp.
+Dieses Thema enthält Informationen zur Unterstützung von Microsoft Benutzeroberflächenautomatisierung für den **HeaderItem-Steuerelementtyp.**
 
-Der **Header** Item-Steuer Elementtyp stellt eine visuelle Bezeichnung für eine Zeile oder Spalte mit Informationen bereit.
+Der **HeaderItem-Steuerelementtyp** stellt eine visuelle Bezeichnung für eine Zeile oder Spalte mit Informationen bereit.
 
-In den folgenden Abschnitten werden die erforderliche Benutzeroberflächenautomatisierungs-Struktur, Eigenschaften, Steuerelement Muster und Ereignisse für den **Header** Item-Steuer Elementtyp definiert. Die Benutzeroberflächenautomatisierungs-Anforderungen gelten für alle Header Element-Steuerelemente, bei denen Benutzeroberflächen-Framework/Plattform die Unterstützung für die Benutzeroberflächen Automatisierung für Steuerelement Typen
+In den folgenden Abschnitten werden die erforderlichen Benutzeroberflächenautomatisierung Struktur, Eigenschaften, Steuerelementmuster und Ereignisse für den **HeaderItem-Steuerelementtyp** definiert. Die Benutzeroberflächenautomatisierung Anforderungen gelten für alle Headerelementsteuerelemente, bei denen das Benutzeroberflächenframework bzw. die Plattform Benutzeroberflächenautomatisierung Unterstützung für Steuerelementtypen und Steuerelementmuster integriert.
 
 Dieses Thema enthält folgende Abschnitte:
 
--   [Typische Baumstruktur](#typical-tree-structure)
+-   [Typische Struktur](#typical-tree-structure)
 -   [Relevante Eigenschaften](#relevant-properties)
--   [Erforderliche Steuerelement Muster](#required-control-patterns)
+-   [Erforderliche Steuerelementmuster](#required-control-patterns)
 -   [Erforderliche Ereignisse](#required-events)
 -   [Zugehörige Themen](#related-topics)
 
-## <a name="typical-tree-structure"></a>Typische Baumstruktur
+## <a name="typical-tree-structure"></a>Typische Struktur
 
-In der folgenden Tabelle wird eine typische Steuerelement-und Inhaltsansicht der Benutzeroberflächenautomatisierungs-Struktur für Header Element-Steuerelemente sowie die möglichen Inhalte der Ansichten beschrieben. Weitere Informationen zur Benutzeroberflächenautomatisierungs-Struktur finden Sie unter [UI Automation Tree Overview](uiauto-treeoverview.md).
+Die folgende Tabelle zeigt eine typische Steuerelement- und Inhaltsansicht der Benutzeroberflächenautomatisierung Struktur, die sich auf Headerelementsteuerelemente bezieht, und beschreibt, was in jeder Ansicht enthalten sein kann. Weitere Informationen zur Benutzeroberflächenautomatisierung-Struktur finden Sie unter [Benutzeroberflächenautomatisierung Tree Overview](uiauto-treeoverview.md).
 
 
 
@@ -73,71 +73,71 @@ In der folgenden Tabelle wird eine typische Steuerelement-und Inhaltsansicht der
 
 
 
- 
+ 
 
 ## <a name="relevant-properties"></a>Relevante Eigenschaften
 
-In der folgenden Tabelle sind die Benutzeroberflächenautomatisierungs-Eigenschaften aufgelistet, deren Wert oder Definition für den **Header** Item-Steuer Elementtyp besonders relevant ist. Weitere Informationen zu Eigenschaften von Benutzeroberflächen Automatisierung finden Sie unter [Abrufen von Eigenschaften aus Benutzeroberflächenautomatisierungs-Elementen](uiauto-propertiesforclients.md).
+In der folgenden Tabelle sind die Benutzeroberflächenautomatisierung Eigenschaften aufgeführt, deren Wert oder Definition für den **HeaderItem-Steuerelementtyp** besonders relevant ist. Weitere Informationen zu Benutzeroberflächenautomatisierung Eigenschaften finden Sie unter [Abrufen von Eigenschaften aus Benutzeroberflächenautomatisierung Elements](uiauto-propertiesforclients.md).
 
 
 
-| Benutzeroberflächenautomatisierungs-Eigenschaft                                                                                              | Wert          | Notizen                                                                                                                                                                                                |
+| Benutzeroberflächenautomatisierungs-Eigenschaft                                                                                              | Wert          | Hinweise                                                                                                                                                                                                |
 |---------------------------------------------------------------------------------------------------------------------|----------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| [**UIA \_ automationidpropertyid**](uiauto-automation-element-propids.md)                 | Siehe Hinweise.     | Der Wert dieser Eigenschaft muss für alle Peer Elemente in der unformatierten Ansicht der Benutzeroberflächenautomatisierungs-Struktur eindeutig sein.                                                                                         |
-| [**UIA \_ boundingrechglepropertyid**](uiauto-automation-element-propids.md)       | Siehe Hinweise.     | Das äußere Rechteck, das das gesamte Steuerelement enthält.                                                                                                                                             |
-| [**UIA \_ clickablepointpropertyid**](uiauto-automation-element-propids.md)             | Siehe Hinweise.     | Unterstützt, wenn es ein umschließendes Rechteck gibt. Wenn nicht jeder Punkt innerhalb des umgebenden Rechtecks klickbar ist und das Element spezialisierte Treffer Tests durchführt, überschreiben und einen durch Klicken aktivierbaren Punkt bereitstellen. |
-| [**UIA \_ controltypepropertyid**](uiauto-automation-element-propids.md)                   | **HeaderItem** | Dieser Wert ist für alle Benutzeroberflächen-Frameworks gleich.                                                                                                                                                        |
-| [**UIA \_ iscontentelementpropertyid**](uiauto-automation-element-propids.md)         | false          | Das Header Element-Steuerelement ist in der Inhaltsansicht der Benutzeroberflächenautomatisierungs-Struktur nicht enthalten.                                                                                                               |
-| [**UIA \_ iscontrolelementpropertyid**](uiauto-automation-element-propids.md)         | TRUE           | Das Header Element-Steuerelement ist immer in der Steuerelement Ansicht der Benutzeroberflächenautomatisierungs-Struktur enthalten.                                                                                                            |
-| [**UIA \_ iskeyboardfocus ablepropertyid**](uiauto-automation-element-propids.md)   | Siehe Hinweise.     | Wenn das Steuerelement den Tastaturfokus erhalten kann, muss es diese Eigenschaft unterstützen.                                                                                                                            |
-| [**UIA \_ itemstatuspropertyid**](uiauto-automation-element-propids.md)                     | Siehe Hinweise      | Diese Eigenschaft stellt Informationen für Sortierreihenfolgen nach Headerelement bereit.                                                                                                                               |
-| [**UIA \_ labeledbypropertyid**](uiauto-automation-element-propids.md)                       | NULL           | Header Element-Steuerelemente verfügen nicht über eine statische Text Bezeichnung.                                                                                                                                                |
-| [**UIA \_ localizedcontroltypepropertyid**](uiauto-automation-element-propids.md) | Siehe Hinweise.     | Lokalisierte Zeichenfolge für den Steuer Elementtyp " **Header** Item". Der Standardwert ist "Header Element" für en-US oder Englisch (USA).                                                          |
-| [**UIA- \_ namepropertyid**](uiauto-automation-element-propids.md)                                 | Siehe Hinweise.     | Das Headerelement-Steuerelement ist immer selbstbezeichnend.                                                                                                                                                     |
+| [**UIA \_ AutomationIdPropertyId**](uiauto-automation-element-propids.md)                 | Siehe Hinweise.     | Der Wert dieser Eigenschaft muss für alle Peerelemente in der Rohansicht der Benutzeroberflächenautomatisierung-Struktur eindeutig sein.                                                                                         |
+| [**UIA \_ BoundingRectanglePropertyId**](uiauto-automation-element-propids.md)       | Siehe Hinweise.     | Das äußere Rechteck, das das gesamte Steuerelement enthält.                                                                                                                                             |
+| [**UIA \_ ClickablePointPropertyId**](uiauto-automation-element-propids.md)             | Siehe Hinweise.     | Unterstützt, wenn es ein umschließendes Rechteck gibt. Wenn nicht jeder Punkt innerhalb des umschließenden Rechtecks klickbar ist und das Element spezielle Treffertests durchführt, überschreibt und stellt einen klickbaren Punkt bereit. |
+| [**UIA \_ ControlTypePropertyId**](uiauto-automation-element-propids.md)                   | **HeaderItem** | Dieser Wert ist für alle Benutzeroberflächen-Frameworks gleich.                                                                                                                                                        |
+| [**UIA \_ IsContentElementPropertyId**](uiauto-automation-element-propids.md)         | FALSE          | Das Headerelement-Steuerelement ist nicht in der Inhaltsansicht der Benutzeroberflächenautomatisierung-Struktur enthalten.                                                                                                               |
+| [**UIA \_ IsControlElementPropertyId**](uiauto-automation-element-propids.md)         | TRUE           | Das Headerelement-Steuerelement ist immer in der Steuerelementansicht der Benutzeroberflächenautomatisierung-Struktur enthalten.                                                                                                            |
+| [**UIA \_ IsKeyboardFocusablePropertyId**](uiauto-automation-element-propids.md)   | Siehe Hinweise.     | Wenn das Steuerelement den Tastaturfokus erhalten kann, muss es diese Eigenschaft unterstützen.                                                                                                                            |
+| [**UIA \_ ItemStatusPropertyId**](uiauto-automation-element-propids.md)                     | Siehe Hinweise      | Diese Eigenschaft stellt Informationen für Sortierreihenfolgen nach Headerelement bereit.                                                                                                                               |
+| [**UIA \_ LabeledByPropertyId**](uiauto-automation-element-propids.md)                       | NULL           | Headerelementsteuerelemente verfügen nicht über eine statische Textbezeichnung.                                                                                                                                                |
+| [**UIA \_ LocalizedControlTypePropertyId**](uiauto-automation-element-propids.md) | Siehe Hinweise.     | Lokalisierte Zeichenfolge, die dem **HeaderItem-Steuerelementtyp entspricht.** Der Standardwert ist "header item" für en-US oder Englisch (USA).                                                          |
+| [**\_UIA-NamePropertyId**](uiauto-automation-element-propids.md)                                 | Siehe Hinweise.     | Das Headerelement-Steuerelement ist immer selbstbezeichnend.                                                                                                                                                     |
 
 
 
- 
+ 
 
-## <a name="required-control-patterns"></a>Erforderliche Steuerelement Muster
+## <a name="required-control-patterns"></a>Erforderliche Steuerelementmuster
 
-In der folgenden Tabelle werden die Steuerelement Muster für die Benutzeroberflächen Automatisierung aufgelistet, die von allen Header Element-Steuerelementen unterstützt werden Weitere Informationen zu Steuerelementmustern finden Sie unter [UI Automation Control Patterns Overview](uiauto-controlpatternsoverview.md).
+In der folgenden Tabelle sind die Benutzeroberflächenautomatisierung Steuerelementmuster aufgeführt, die von allen Headerelementsteuerelementen unterstützt werden müssen. Weitere Informationen zu Steuerelementmustern finden Sie unter [UI Automation Control Patterns Overview](uiauto-controlpatternsoverview.md).
 
 
 
 | Steuerelementmuster                                         | Support | Notizen                                                                                                                             |
 |---------------------------------------------------------|---------|-----------------------------------------------------------------------------------------------------------------------------------|
-| [**IInvokeProvider**](/windows/desktop/api/UIAutomationCore/nn-uiautomationcore-iinvokeprovider)       | Depends (Abhängig) | Implementieren Sie das [Aufruf](uiauto-implementinginvoke.md) Steuerelement Muster, wenn zum Sortieren der Daten auf das Header Element-Steuerelement geklickt werden kann. |
-| [**ITransformProvider**](/windows/desktop/api/UIAutomationCore/nn-uiautomationcore-itransformprovider) | Depends (Abhängig) | Implementieren Sie das [Transform](uiauto-implementingtransform.md) -Steuerelement Muster, wenn die Größe des Header Element-Steuer Elements geändert werden kann.            |
+| [**IInvokeProvider**](/windows/desktop/api/UIAutomationCore/nn-uiautomationcore-iinvokeprovider)       | Depends (Abhängig) | Implementieren [](uiauto-implementinginvoke.md) Sie das Invoke-Steuerelementmuster, wenn auf das Headerelement-Steuerelement geklickt werden kann, um die Daten zu sortieren. |
+| [**ITransformProvider**](/windows/desktop/api/UIAutomationCore/nn-uiautomationcore-itransformprovider) | Depends (Abhängig) | Implementieren [](uiauto-implementingtransform.md) Sie das Transformationssteuerelementmuster, wenn die Größe des Headerelementsteuerelements geändert werden kann.            |
 
 
 
- 
+ 
 
 ## <a name="required-events"></a>Erforderliche Ereignisse
 
-In der folgenden Tabelle sind die Benutzeroberflächenautomatisierungs-Ereignisse aufgeführt, die von Header Element-Steuerelementen unterstützt werden Weitere Informationen zu Ereignissen finden Sie unter [UI Automation Events Overview](uiauto-eventsoverview.md).
+In der folgenden Tabelle sind die Benutzeroberflächenautomatisierung Ereignisse aufgeführt, die von Headerelementsteuerelementen unterstützt werden müssen. Weitere Informationen zu Ereignissen finden Sie unter [UI Automation Events Overview](uiauto-eventsoverview.md).
 
 
 
-| Benutzeroberflächen-Automatisierungs Ereignis                                                                                                                   | Notizen                                                                                                                      |
+| Benutzeroberflächenautomatisierung-Ereignis                                                                                                                   | Hinweise                                                                                                                      |
 |---------------------------------------------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------------|
-| [**UIA \_ automationfocuschangedebug-ID**](uiauto-event-ids.md)                                      |                                                                                                                            |
-| [**UIA \_ Boundingrechglepropertyid**](uiauto-automation-element-propids.md) -Eigenschaft-geändertes Ereignis. |                                                                                                                            |
-| [**UIA \_ aufrufen \_ invokedebug-ID**](uiauto-event-ids.md)                                                     | Wenn das Steuerelement das [Aufruf](uiauto-implementinginvoke.md) Steuerungs Muster unterstützt, muss es dieses Ereignis unterstützen.           |
-| [**UIA \_ Isenabledpropertyid**](uiauto-automation-element-propids.md) -Eigenschaft-geändertes Ereignis.                 | Wenn das Steuerelement die [**isaktivierte**](uiauto-automation-element-propids.md) Eigenschaft unterstützt, muss es dieses Ereignis unterstützen.   |
-| [**UIA \_ Isoffscreenpropertyid**](uiauto-automation-element-propids.md) -Eigenschaft-geändertes Ereignis.             | Wenn das Steuerelement die [**IsOffscreen**](uiauto-automation-element-propids.md) -Eigenschaft unterstützt, muss es dieses Ereignis unterstützen. |
-| [**UIA \_ structurechangedebug**](uiauto-event-ids.md)                                                  |                                                                                                                            |
+| [**UIA \_ AutomationFocusChangedEventId**](uiauto-event-ids.md)                                      |                                                                                                                            |
+| [**UIA \_ Das BoundingRectanglePropertyId-Eigenschaftswechselereignis.**](uiauto-automation-element-propids.md) |                                                                                                                            |
+| [**UIA \_ Invoke \_ InvokedEventId**](uiauto-event-ids.md)                                                     | Wenn das Steuerelement [](uiauto-implementinginvoke.md) das Invoke-Steuerelementmuster unterstützt, muss es dieses Ereignis unterstützen.           |
+| [**UIA \_ Das IsEnabledPropertyId-Eigenschaftswechselereignis.**](uiauto-automation-element-propids.md)                 | Wenn das Steuerelement die [**IsEnabled-Eigenschaft**](uiauto-automation-element-propids.md) unterstützt, muss es dieses Ereignis unterstützen.   |
+| [**UIA \_ IsOffscreenPropertyId-Eigenschaftswechselereignis.**](uiauto-automation-element-propids.md)             | Wenn das Steuerelement die [**IsOffscreen-Eigenschaft**](uiauto-automation-element-propids.md) unterstützt, muss es dieses Ereignis unterstützen. |
+| [**UIA \_ StructureChangedEventId**](uiauto-event-ids.md)                                                  |                                                                                                                            |
 
 
 
- 
+ 
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
 <dl> <dt>
 
-**Licher**
+**Konzeptionellen**
 </dt> <dt>
 
 [Übersicht über Steuerelementtypen für Benutzeroberflächenautomatisierung](uiauto-controltypesoverview.md)
@@ -146,9 +146,9 @@ In der folgenden Tabelle sind die Benutzeroberflächenautomatisierungs-Ereigniss
 [Übersicht über die Benutzeroberflächenautomatisierung](uiauto-uiautomationoverview.md)
 </dt> </dl>
 
- 
+ 
 
- 
+ 
 
 
 

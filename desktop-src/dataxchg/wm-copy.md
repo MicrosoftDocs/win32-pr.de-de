@@ -1,9 +1,9 @@
 ---
-title: WM_COPY Meldung (Winuser. h)
-description: Eine Anwendung sendet die WM- \_ Kopier Nachricht an ein Bearbeitungs Steuerelement oder ein Kombinations Feld, um die aktuelle Auswahl im CF-Text Format in die Zwischenablage zu kopieren \_ .
+title: WM_COPY (Winuser.h)
+description: Eine Anwendung sendet die WM COPY-Nachricht an ein Bearbeitungssteuerfeld oder Kombinationsfeld, um die aktuelle Auswahl im \_ \_ CF-TEXT-Format in die Zwischenablage zu kopieren.
 ms.assetid: dcac3ad3-1e70-4b71-accd-261587224e60
 keywords:
-- WM_COPY Nachrichten Datenaustausch
+- WM_COPY der Exchange
 topic_type:
 - apiref
 api_name:
@@ -14,16 +14,16 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: b298248d75b1d25d1bfef8347347fe2f1a6c7916
-ms.sourcegitcommit: 3d9dce1bd6c84e2b51759e940aa95aa9b459cd20
+ms.openlocfilehash: 2d7774b1e2d52cbe21b8636bcaa1c695f9f49b319280ebc89c74fd652533066b
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/04/2021
-ms.locfileid: "106363895"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120096750"
 ---
-# <a name="wm_copy-message"></a>WM- \_ Kopier Nachricht
+# <a name="wm_copy-message"></a>WM \_ COPY-Nachricht
 
-Eine Anwendung sendet die **WM- \_ Kopier** Nachricht an ein Bearbeitungs Steuerelement oder ein Kombinations Feld, um die aktuelle Auswahl im [**CF- \_ Text**](standard-clipboard-formats.md) Format in die Zwischenablage zu kopieren.
+Eine Anwendung sendet die **WM \_ COPY-Nachricht** an ein Bearbeitungssteuerfeld oder Kombinationsfeld, um die aktuelle Auswahl im [**\_ CF-TEXT-Format**](standard-clipboard-formats.md) in die Zwischenablage zu kopieren.
 
 
 ```C++
@@ -39,24 +39,24 @@ Eine Anwendung sendet die **WM- \_ Kopier** Nachricht an ein Bearbeitungs Steuer
 *wParam* 
 </dt> <dd>
 
-Dieser Parameter wird nicht verwendet und muss NULL sein.
+Dieser Parameter wird nicht verwendet und muss 0 (null) sein.
 
 </dd> <dt>
 
 *lParam* 
 </dt> <dd>
 
-Dieser Parameter wird nicht verwendet und muss NULL sein.
+Dieser Parameter wird nicht verwendet und muss 0 (null) sein.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt bei Erfolg einen Wert ungleich 0 (null) zurück, andernfalls NULL.
+Gibt bei Erfolg einen Wert ungleich 0 (null) zurück, sonst 0 (null).
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Beim Senden an ein Kombinations Feld wird die **WM- \_ Kopier** Nachricht durch das Bearbeitungs Steuerelement behandelt. Diese Meldung hat keine Auswirkung, wenn Sie mit dem " [**CBS \_ DropDownList**](../controls/combo-box-styles.md) "-Stil an ein Kombinations Feld gesendet wird.
+Wenn die WM COPY-Nachricht an ein Kombinationsfeld gesendet wird, wird sie vom Bearbeitungssteuerfeld verarbeitet. **\_** Diese Meldung hat keine Auswirkungen, wenn sie an ein Kombinationsfeld mit dem [**CBS \_ DROPDOWNLIST-Format gesendet**](../controls/combo-box-styles.md) wird.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -66,30 +66,30 @@ Beim Senden an ein Kombinations Feld wird die **WM- \_ Kopier** Nachricht durch 
 |-------------------------------------|----------------------------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional \[nur Desktop-Apps\]<br/>                                               |
 | Unterstützte Mindestversion (Server)<br/> | Windows 2000 Server \[nur Desktop-Apps\]<br/>                                                     |
-| Header<br/>                   | <dl> <dt>Winuser. h (Windows. h einschließen)</dt> </dl> |
+| Header<br/>                   | <dl> <dt>Winuser.h (include Windows.h)</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-**Verweis**
+**Referenz**
 </dt> <dt>
 
-[**WM \_ Clear**](wm-clear.md)
+[**WM \_ CLEAR**](wm-clear.md)
 </dt> <dt>
 
-[**WM \_ Ausschneiden**](wm-cut.md)
+[**WM \_ CUT**](wm-cut.md)
 </dt> <dt>
 
-[**WM \_ Einfügen**](wm-paste.md)
+[**WM \_ PASTE**](wm-paste.md)
 </dt> <dt>
 
-[**WM \_ rückgängig machen**](/windows/desktop/Controls/wm-undo)
+[**WM \_ UNDO**](/windows/desktop/Controls/wm-undo)
 </dt> <dt>
 
-**Licher**
+**Konzeptionellen**
 </dt> <dt>
 
 [Zwischenablage](clipboard.md)

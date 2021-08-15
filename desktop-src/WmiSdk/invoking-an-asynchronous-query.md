@@ -1,27 +1,27 @@
 ---
-description: Eine asynchrone Abfrage, die etwas komplexer zu schreiben ist, ist die bevorzugte Art von Abfrage, wenn die System-oder Netzwerkleistung durch Abfragen einer großen Gruppe von Daten beeinträchtigt wird.
+description: Eine asynchrone Abfrage ist zwar etwas komplexer zu schreiben, ist jedoch der bevorzugte Abfragetyp, wenn die System- oder Netzwerkleistung durch Abfragen einer großen Datengruppe beeinträchtigt wird.
 ms.assetid: b382610a-dac9-4d31-b756-aa84d16f0234
 ms.tgt_platform: multiple
 title: Aufrufen einer asynchronen Abfrage
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 14a0e297c6a1955d0006d888fc95f5e827f5cb75
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 52ae188e3826562b1de68357db34dca6cea60a40e4be07c16946b13ed3eb3007
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "103868747"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118993070"
 ---
 # <a name="invoking-an-asynchronous-query"></a>Aufrufen einer asynchronen Abfrage
 
-Eine asynchrone Abfrage, die etwas komplexer zu schreiben ist, ist die bevorzugte Art von Abfrage, wenn die System-oder Netzwerkleistung durch Abfragen einer großen Gruppe von Daten beeinträchtigt wird. In Skripts sind das Erstellen eines [**Austausch**](swbemsink.md) baren Objekts und der Unterroutinen zum Behandeln der Ereignisse, die die Senke empfangen könnte, die einzigen zusätzlichen Tasks, die über die grundlegende Abfrage hinausgehen.
+Eine asynchrone Abfrage ist zwar etwas komplexer zu schreiben, ist jedoch der bevorzugte Abfragetyp, wenn die System- oder Netzwerkleistung durch Abfragen einer großen Datengruppe beeinträchtigt wird. Im Skript sind das Erstellen eines [**SWbemSink-Objekts**](swbemsink.md) und von Unterroutinen zur Verarbeitung der Ereignisse, die die Senke empfangen könnte, die einzigen zusätzlichen Aufgaben, die über die grundlegende Abfrage hinausgehen.
 
 > [!Note]  
-> Da der Rückruf für die Senke möglicherweise nicht auf derselben Authentifizierungs Ebene wie der Client zurückgegeben wird, wird empfohlen, semisynchrone anstelle der asynchronen Kommunikation zu verwenden. Weitere Informationen finden Sie unter [Aufrufen einer Methode](calling-a-method.md).
+> Da der Rückruf an die Senke möglicherweise nicht auf derselben Authentifizierungsebene zurückgegeben wird, wie der Client erfordert, wird empfohlen, anstelle der asynchronen Kommunikation semisynchrone zu verwenden. Weitere Informationen finden Sie unter [Aufrufen einer Methode.](calling-a-method.md)
 
  
 
-Das folgende abgekürzte Skript fragt alle Datendateien auf dem lokalen Computer ab. Diese Abfrage kann übermäßig viel Zeit in Anspruch nehmen, wenn Sie für alle Computer in einem Netzwerk ausgeführt wird. Ein " [**slibemsink**](swbemsink.md) "-Objekt ist eingerichtet, und das einzige Ereignis, das behandelt wird, ist das onabgeschlossene-Ereignis.
+Das folgende abgekürzte Skript fragt alle Datendateien auf dem lokalen Computer ab. Diese Abfrage kann übermäßig lange dauern, wenn sie für alle Computer in einem Netzwerk ausgeführt wird. Ein [**SWbemSink-Objekt**](swbemsink.md) wird eingerichtet, und das einzige Ereignis, das behandelt wird, ist das OnCompleted-Ereignis.
 
 
 ```VB
@@ -39,27 +39,27 @@ set sink= Nothing
 
 
 
-Ausführliche Informationen zum Erstellen von asynchronen Methoden aufrufen in Skripts finden Sie unter [Aufrufen einer Methode](calling-a-method.md).
+Ausführliche Informationen zum Erstellen von asynchronen Methodenaufrufen im Skript finden Sie unter [Aufrufen einer Methode.](calling-a-method.md)
 
-In C++-Anwendungen erzeugt eine asynchrone Abfrage einen separaten Prozess zum Empfangen von Abfrage Daten. Eine asynchrone Abfrage ist komplexer als eine synchrone Abfrage, da Sie eine Multithread-Anwendung codieren müssen. Bei einer asynchronen Abfrage wird jedoch nicht der Hauptthread der Anwendung monopolisiert.
+In C++-Anwendungen erstellt eine asynchrone Abfrage einen separaten Prozess zum Empfangen von Abfragedaten. Eine asynchrone Abfrage ist komplexer als eine synchrone Abfrage, da Sie eine Multithreadanwendung codiert werden müssen. Eine asynchrone Abfrage führt jedoch nicht zu einer Vergrößerung des Hauptthreads Ihrer Anwendung.
 
-Im folgenden Verfahren wird beschrieben, wie eine asynchrone Abfrage in C++ durchgeführt wird.
+Im folgenden Verfahren wird beschrieben, wie Eine asynchrone Abfrage in C++ ausgeführt wird.
 
 **So führen Sie eine asynchrone Abfrage in C++ aus**
 
-1.  Implementieren Sie ein **iwbemsink** -Objekt.
+1.  Implementieren Sie **ein IWbemSink-Objekt.**
 
-    Ein **iwbemsink** -Objekt empfängt Informationen zu einem asynchronen Vorgang.
+    Ein **IWbemSink-Objekt** empfängt Informationen zu einem asynchronen Vorgang.
 
-2.  Beschreiben Sie Ihre Abfrage in einem [**callbemservices:: ExecQueryAsync**](/windows/desktop/api/WbemCli/nf-wbemcli-iwbemservices-execqueryasync)-Befehl.
+2.  Beschreiben Sie Ihre Abfrage in einem Aufruf von [**IWbemServices::ExecQueryAsync**](/windows/desktop/api/WbemCli/nf-wbemcli-iwbemservices-execqueryasync).
 
-    WMI verschiebt den Prozess, der den CIM abfragt, sofort in einen anderen Thread und gibt den Thread frei, der die Abfrage für eine andere Aufgabe ausgeführt hat.
+    WMI verschiebt den Prozess, der cim abfragt, sofort in einen anderen Thread und gibt den Thread frei, der die Abfrage für eine andere Aufgabe ausgeführt hat.
 
-3.  Warten Sie, bis WMI die [**iwbemubjectsink::**](/windows/desktop/api/Wbemcli/nf-wbemcli-iwbemobjectsink-indicate) Expression-Methode aufruft.
+3.  Warten Sie, bis WMI die [**IWbemObjectSink::Indicate-Methode**](/windows/desktop/api/Wbemcli/nf-wbemcli-iwbemobjectsink-indicate) aufruft.
 
-    Wenn der Vorgang abgeschlossen ist, [**zeigen**](/windows/desktop/api/Wbemcli/nf-wbemcli-iwbemobjectsink-indicate) WMI-Aufrufe an, dass die Abfrage abgeschlossen ist. WMI gibt auch Ergebnisse der Abfrage an die Senke als Zeiger auf einen [**ienumwbemclassobject**](/windows/desktop/api/Wbemcli/nn-wbemcli-ienumwbemclassobject) -Schnittstellen Zeiger zurück. Verwenden Sie wie bei einer synchronen Abfrage den-Zeiger, um auf die Objekte zuzugreifen, die das Ergebnis der Abfrage bilden.
+    Wenn Sie fertig sind, ruft WMI [**Indicate auf,**](/windows/desktop/api/Wbemcli/nf-wbemcli-iwbemobjectsink-indicate) um Ihrer Anwendung zu signalisieren, dass die Abfrage abgeschlossen ist. WMI gibt auch Ergebnisse der Abfrage als Zeiger auf einen [**IEnumWbemClassObject-Schnittstellenzeiger**](/windows/desktop/api/Wbemcli/nn-wbemcli-ienumwbemclassobject) an die Senke zurück. Verwenden Sie wie bei einer synchronen Abfrage den -Zeiger, um auf die Objekte zu zugreifen, aus denen das Ergebnis der Abfrage resultiert.
 
-Das folgende Codebeispiel wird nicht ohne Fehler kompiliert, weil die Klasse "querysink" nicht definiert wurde. Die Definition der querysink-Klasse finden Sie unter [**iwbemubjectsink**](iwbemobjectsink.md). Für das Codebeispiel sind auch die folgenden Referenz-und \# include-Anweisungen erforderlich.
+Das folgende Codebeispiel wird nicht ohne Fehler kompiliert, da die QuerySink-Klasse nicht definiert wurde. Die Definition der QuerySink-Klasse finden Sie unter [**IWbemObjectSink**](iwbemobjectsink.md). Das Codebeispiel erfordert auch den folgenden Verweis und \# include-Anweisungen.
 
 
 ```C++
@@ -70,7 +70,7 @@ using namespace std;
 
 
 
-Im folgenden Codebeispiel wird gezeigt, wie Sie einen asynchronen-Befehl zum Ausgeben einer Abfrage ausführen.
+Im folgenden Codebeispiel wird veranschaulicht, wie sie einen asynchronen Aufruf zum Ausführen einer Abfrage ausführen.
 
 
 ```C++
@@ -103,7 +103,7 @@ void ExecQuery(IWbemServices *pSvc)
 
 
 
-Weitere Informationen finden Sie unter [Aufrufen einer Methode](calling-a-method.md).
+Weitere Informationen finden Sie unter [Aufrufen einer Methode.](calling-a-method.md)
 
  
 

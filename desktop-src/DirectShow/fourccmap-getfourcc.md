@@ -1,7 +1,7 @@
 ---
-description: Ruft das FourCC&\# 160; DWORD aus dem fourccmap-Objekt ab.
+description: Ruft die FOURCC-&\# 160;DWORD aus dem FOURCCMap-Objekt ab.
 ms.assetid: bb382a57-8499-44c0-b287-2d31f5f5d1d0
-title: 'Fourccmap:: getfourcc-Methode (FourCC. h)'
+title: FOURCCMap::GetFOURCC-Methode (Fourcc.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -16,16 +16,16 @@ api_location:
 - Strmbase.dll
 - Strmbasd.lib
 - Strmbasd.dll
-ms.openlocfilehash: c76493ff172f7a5611367fd50aa3b7957cf5441b
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 381625f5d0a585f212c8f7b076d1cd58ea5215958bf09025e1db864ce2f624b5
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106369448"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119015718"
 ---
-# <a name="fourccmapgetfourcc-method"></a>Fourccmap:: getfourcc-Methode
+# <a name="fourccmapgetfourcc-method"></a>FOURCCMap::GetFOURCC-Methode
 
-Ruft das **FourCC** **DWORD** aus dem [**fourccmap**](fourccmap.md) -Objekt ab.
+Ruft das **FOURCC** **DWORD aus** dem [**FOURCCMap-Objekt**](fourccmap.md) ab.
 
 ## <a name="syntax"></a>Syntax
 
@@ -42,7 +42,7 @@ Diese Methode hat keine Parameter.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt den **FourCC** **DWORD** -Wert zurück. Beachten Sie Folgendes: Wenn Sie eine **GUID** erstellen, die ursprünglich nicht von einem **FourCC** abgeleitet wurde, ist der Rückgabewert im Grunde zufällig.
+Gibt den **FOURCC** **DWORD-Wert** zurück. Beachten Sie, dass der Rückgabewert im Wesentlichen zufällig ist, wenn Sie eine **GUID** erstellen, die ursprünglich nicht von **einer FOURCC** abgeleitet wurde.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -50,16 +50,16 @@ Gibt den **FourCC** **DWORD** -Wert zurück. Beachten Sie Folgendes: Wenn Sie ei
 
 | Anforderung | Wert |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>FourCC. h (Include Streams. h)</dt> </dl>                                                                                    |
-| Bibliothek<br/> | <dl> " <dt>Straumbase. lib" (Einzelhandels Builds);</dt> " <dt>Straumbasd. lib" (Debugbuilds)</dt> </dl> |
+| Header<br/>  | <dl> <dt>Fourcc.h (include Streams.h)</dt> </dl>                                                                                    |
+| Bibliothek<br/> | <dl> <dt>Strmbase.lib (Einzelhandels-Builds); </dt> <dt>Strmbasd.lib (Debugbuilds)</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Fourccmap-Klasse**](fourccmap.md)
+[**FOURCCMap-Klasse**](fourccmap.md)
 </dt> </dl>
 
  

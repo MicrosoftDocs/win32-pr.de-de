@@ -1,7 +1,7 @@
 ---
-description: Die Exit-Methode signalisiert dem streamingthread, den Vorgang zu beenden.
+description: Die Exit-Methode signalisiert dem Streamingthread das Beenden.
 ms.assetid: 1bb59848-e405-40f9-87ec-33de8754e2dd
-title: Csourcestream. Exit-Methode (Source. h)
+title: CSourceStream.Exit-Methode (Source.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -16,16 +16,16 @@ api_location:
 - Strmbase.dll
 - Strmbasd.lib
 - Strmbasd.dll
-ms.openlocfilehash: 1ede6cf2318fa9226b8e220ff526f411def9b0f6
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: b2c1c0de67eaa1067a4c72f3500674dddef65ddbb11af1b520973120d2df3c00
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106351372"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119687430"
 ---
-# <a name="csourcestreamexit-method"></a>Csourcestream. Exit-Methode
+# <a name="csourcestreamexit-method"></a>CSourceStream.Exit-Methode
 
-Die- `Exit` Methode signalisiert dem streamingthread, zu beenden.
+Die `Exit` -Methode signalisiert dem Streamingthread, dass er beendet wird.
 
 ## <a name="syntax"></a>Syntax
 
@@ -42,11 +42,11 @@ Diese Methode hat keine Parameter.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt \_ OK oder E \_ unerwartet zurück.
+Gibt S \_ OK oder E UNEXPECTED \_ zurück.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Die [**csourcestream:: inaktive**](csourcestream-inactive.md) -Methode ruft diese Methode auf.
+Die [**CSourceStream::Inactive-Methode**](csourcestream-inactive.md) ruft diese Methode auf.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -54,16 +54,16 @@ Die [**csourcestream:: inaktive**](csourcestream-inactive.md) -Methode ruft dies
 
 | Anforderung | Wert |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>Source. h (Include Streams. h)</dt> </dl>                                                                                    |
-| Bibliothek<br/> | <dl> " <dt>Straumbase. lib" (Einzelhandels Builds);</dt> " <dt>Straumbasd. lib" (Debugbuilds)</dt> </dl> |
+| Header<br/>  | <dl> <dt>Source.h (include Streams.h)</dt> </dl>                                                                                    |
+| Bibliothek<br/> | <dl> <dt>Strmbase.lib (Verkaufsbuilds); </dt> <dt>Strmbasd.lib (Debugbuilds)</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Csourcestream-Klasse**](csourcestream.md)
+[**CSourceStream-Klasse**](csourcestream.md)
 </dt> </dl>
 
  

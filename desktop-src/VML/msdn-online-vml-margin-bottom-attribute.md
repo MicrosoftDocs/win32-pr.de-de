@@ -1,46 +1,46 @@
 ---
-title: VML-Margin-Bottom Attribut
-description: VML-Margin-Bottom Attribut
+title: VMLMargin-Bottom Attribut
+description: VMLMargin-Bottom Attribut
 ms.assetid: c1101430-f4fc-4fa5-8e02-7cee126c2c1c
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 35712733179a3c03dc291c4d5efcf4fee68c2865
-ms.sourcegitcommit: 592c9bbd22ba69802dc353bcb5eb30699f9e9403
+ms.openlocfilehash: 551cf9cba00901e07998f2de38465cba1cb45bb8f563c04d1adf25f75d1852bc
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "103728824"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119057818"
 ---
-# <a name="vml-margin-bottom-attribute"></a>VML-Margin-Bottom Attribut
+# <a name="vml-margin-bottom-attribute"></a>VMLMargin-Bottom Attribut
 
-In diesem Thema wird VML beschrieben, eine Funktion, die ab Windows Internet Explorer 9 veraltet ist. Webseiten und Anwendungen, die auf VML basieren, sollten zu SVG oder anderen allgemein unterstützten Standards migriert werden.
+In diesem Thema wird VML beschrieben, ein Feature, das ab Version 9 Windows Internet Explorer ist. Webseiten und Anwendungen, die auf VML basieren, sollten zu SVG oder anderen weit verbreiteten Standards migriert werden.
 
 > [!Note]  
-> Ab Dezember 2011 wurde dieses Thema archiviert. Daher wird er nicht mehr aktiv verwaltet. Weitere Informationen finden Sie unter [archivierte Inhalte](/previous-versions/windows/internet-explorer/ie-developer/). Informationen, Empfehlungen und Anleitungen zur aktuellen Version von Windows Internet Explorer finden Sie im [Internet Explorer Developer Center](https://msdn.microsoft.com/ie/).
+> Seit Dezember 2011 wurde dieses Thema archiviert. Daher wird sie nicht mehr aktiv verwaltet. Weitere Informationen finden Sie unter [Archivierter Inhalt.](/previous-versions/windows/internet-explorer/ie-developer/) Informationen, Empfehlungen und Anleitungen zur aktuellen Version von Windows Internet Explorer finden Sie im [Internet Explorer Developer Center.](https://msdn.microsoft.com/ie/)
 
- 
+ 
 
-Gibt den unteren Rand des enthaltenden Rechtecks der Form an, das relativ zum Shape-Anker ist. Lese-/Schreibzugriff. **Zeichenfolge**.
+Gibt den unteren Rand des Rechtecks der Form an, das relativ zum Formanker enthält. Lese-/Schreibzugriff. **Zeichenfolge.**
 
 **Gilt für**
 
-[Form](shape-element--vml.md)
+[Formen](shape-element--vml.md)
 
 **Tagsyntax**
 
-<v: *Element* margin-bottom = " *Ausdruck* " >
+<v: *element* margin-bottom="-Ausdruck "> 
 
-**Skript Syntax**
+**Skriptsyntax**
 
-*Element* . MarginBottom = "*Ausdruck*"
+*element* .marginbottom="*expression*"
 
-*Ausdruck* = *Element*. MarginBottom
+*expression* = *Element*.marginbottom
 
 **Anmerkungen**
 
-Das Attribut " **margin-bottom** " ähnelt dem standardmäßigen HTML-Attribut " **margin-bottom** ", das mit Stylesheets verwendet wird.
+Das **Margin-Bottom-Attribut** ähnelt dem html-Standardattribut **Margin-Bottom,** das mit Stylesheets verwendet wird.
 
-Beachten Sie, dass **MarginBottom** anstelle von **margin-bottom** für die Skripterstellung verwendet wird. Beachten Sie auch, dass der Rand nicht geändert werden kann, wenn die **Position** **absolut** ist.
+Beachten Sie, **dass marginbottom** anstelle von **margin-bottom für skriptbasierte** Skripts verwendet wird. Beachten Sie auch, dass **sich der Rand** nicht zu ändern scheint, wenn die Position **absolut** ist.
 
 Mögliche Werte:
 
@@ -48,15 +48,15 @@ Mögliche Werte:
 
 | Wert      | BESCHREIBUNG                                                                                                                                                                                       |
 |------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Auto       | Die Standardposition eines Elements im Fluss der Seite.                                                                                                                                           |
-| units      | Standard. Eine Zahl mit einem absoluten Einheiten Kenn Zeichner (cm, mm, in, PT, PC oder px) oder einem relativen Einheiten Kenn Zeichner (em oder Ex). Wenn keine Einheiten angegeben werden, wird die Pixel (px) angenommen. Der Standardwert ist 0. |
-| Prozentwert | Wert, ausgedrückt als Prozentsatz der Höhe des übergeordneten Objekts.                                                                                                                                    |
+| Automatisch       | Standardposition eines Elements im Fluss der Seite.                                                                                                                                           |
+| units      | Standard. Eine Zahl mit einem absoluten Einheiten-Designator (cm, mm, in, pt, pc oder px) oder einem relativen Einheiten-Designator (em oder ex). Wenn keine Einheiten angegeben werden, wird von Pixeln (px) ausgegangen. Der Standardwert ist 0. |
+| Prozentwert | Wert, der als Prozentsatz der Höhe des übergeordneten Objekts ausgedrückt wird.                                                                                                                                    |
 
 
 
- 
+ 
 
-*VML-Standard Attribut*
+*VML-Standardattribut*
 
 **Siehe auch**
 
@@ -75,8 +75,8 @@ Der untere Rand ist auf 25 Pixel festgelegt.
 
 
 
-[Beispiel für das margin-bottom-Attribut](/previous-versions/bb229675(v=vs.85)). (Erfordert Microsoft Internet Explorer 5 oder höher.)
+[Beispiel für das Margin-Bottom-Attribut.](/previous-versions/bb229675(v=vs.85)) (Erfordert Microsoft Internet Explorer 5 oder höher.)
 
- 
+ 
 
- 
+ 

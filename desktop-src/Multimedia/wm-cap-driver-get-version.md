@@ -1,9 +1,9 @@
 ---
-title: WM_CAP_DRIVER_GET_VERSION Meldung (VFW. h)
-description: Die Meldung "WM \_ Cap \_ Driver \_ get \_ Version" gibt die Versionsinformationen des Aufzeichnungs Treibers zurück, der mit einem Aufzeichnungs Fenster verbunden ist. Sie können diese Nachricht explizit oder mithilfe des capdrivergetversion-Makros senden.
+title: WM_CAP_DRIVER_GET_VERSION (Vfw.h)
+description: Die Meldung WM CAP DRIVER GET VERSION gibt die Versionsinformationen des Erfassungstreibers zurück, der \_ \_ mit einem \_ \_ Erfassungsfenster verbunden ist. Sie können diese Nachricht explizit oder mithilfe des Makros capDriverGetVersion senden.
 ms.assetid: 762ebe7e-0d09-46ea-ab17-86061f0bd8f9
 keywords:
-- WM_CAP_DRIVER_GET_VERSION-Nachricht (Multimedia)
+- WM_CAP_DRIVER_GET_VERSION-Nachricht Windows Multimedia
 topic_type:
 - apiref
 api_name:
@@ -14,16 +14,16 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: ced70f2d0159ef4bbad3f2d7a8027c30b2c71a5f
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 49f6bed4513383c5dd889639a78e9f00e409fe347bfd6b64b112ea830571ae55
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "106345923"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119687090"
 ---
-# <a name="wm_cap_driver_get_version-message"></a>WM- \_ Cap- \_ Treiber Version der \_ \_ Nachricht erhalten
+# <a name="wm_cap_driver_get_version-message"></a>WM CAP DRIVER GET VERSION message (WM \_ CAP \_ DRIVER GET \_ \_ VERSION-Meldung)
 
-Die Meldung " **WM \_ Cap \_ Driver \_ get \_ Version** " gibt die Versionsinformationen des Aufzeichnungs Treibers zurück, der mit einem Aufzeichnungs Fenster verbunden ist. Sie können diese Nachricht explizit oder mithilfe des [**capdrivergetversion**](/windows/desktop/api/Vfw/nf-vfw-capdrivergetversion) -Makros senden.
+Die **Meldung WM CAP DRIVER GET VERSION \_ \_ \_ \_ gibt** die Versionsinformationen des Erfassungstreibers zurück, der mit einem Erfassungsfenster verbunden ist. Sie können diese Nachricht explizit oder mithilfe des [**Makros capDriverGetVersion**](/windows/desktop/api/Vfw/nf-vfw-capdrivergetversion) senden.
 
 
 ```C++
@@ -38,27 +38,27 @@ lParam = (LPARAM) (LPVOID) (LPSTR) (szVer);
 
 <dl> <dt>
 
-<span id="wSize"></span><span id="wsize"></span><span id="WSIZE"></span>*wsize*
+<span id="wSize"></span><span id="wsize"></span><span id="WSIZE"></span>*wSize*
 </dt> <dd>
 
-Größe (in Bytes) des Anwendungs definierten Puffers, auf den von **szver** verwiesen wird.
+Größe des anwendungsdefinierten Puffers in Bytes, auf den **szVer verweist.**
 
 </dd> <dt>
 
-<span id="szVer"></span><span id="szver"></span><span id="SZVER"></span>*szver*
+<span id="szVer"></span><span id="szver"></span><span id="SZVER"></span>*szVer*
 </dt> <dd>
 
-Ein Zeiger auf einen Anwendungs definierten Puffer, der verwendet wird, um die Versionsinformationen als NULL-terminierte Zeichenfolge zurückzugeben.
+Zeiger auf einen anwendungsdefinierten Puffer, der verwendet wird, um die Versionsinformationen als auf NULL beendete Zeichenfolge zurückgibt.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt **true** zurück, wenn erfolgreich oder **false** , wenn das Aufzeichnungs Fenster nicht mit einem Aufzeichnungs Treiber verbunden ist.
+Gibt **TRUE zurück,** wenn erfolgreich, oder **FALSE,** wenn das Erfassungsfenster nicht mit einem Erfassungstreiber verbunden ist.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Die Versionsinformationen sind eine Text Zeichenfolge, die aus dem Ressourcenbereich des Treibers abgerufen wird. Anwendungen sollten für diese Zeichenfolge ungefähr 40 Byte zuordnen. Wenn keine Versionsinformationen verfügbar sind, wird eine **null** -Zeichenfolge zurückgegeben.
+Die Versionsinformationen sind eine Textzeichenfolge, die aus dem Ressourcenbereich des Treibers abgerufen wird. Anwendungen sollten für diese Zeichenfolge ungefähr 40 Bytes zuordnen. Wenn keine Versionsinformationen verfügbar sind, wird eine **NULL-Zeichenfolge** zurückgegeben.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -68,18 +68,18 @@ Die Versionsinformationen sind eine Text Zeichenfolge, die aus dem Ressourcenber
 |-------------------------------------|----------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional \[nur Desktop-Apps\]<br/>                       |
 | Unterstützte Mindestversion (Server)<br/> | Windows 2000 Server \[nur Desktop-Apps\]<br/>                             |
-| Header<br/>                   | <dl> <dt>VFW. h</dt> </dl> |
+| Header<br/>                   | <dl> <dt>Vfw.h</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[Video Erfassung](video-capture.md)
+[Videoaufnahme](video-capture.md)
 </dt> <dt>
 
-[Video Erfassungs Meldungen](video-capture-messages.md)
+[Videoaufnahmenachrichten](video-capture-messages.md)
 </dt> </dl>
 
  

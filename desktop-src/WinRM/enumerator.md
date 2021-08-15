@@ -1,11 +1,11 @@
 ---
-title: Enumeratorobjekt (WSManDisp. h)
-description: Stellt einen Stream von Ergebnissen dar, die von Vorgängen zurückgegeben werden, z. b. ein Pull
+title: Enumeratorobjekt (WSManDisp.h)
+description: Stellt einen Datenstrom von Ergebnissen dar, die von Vorgängen zurückgegeben werden, z. B. ein Pullvorgang.
 ms.assetid: 8d8b461d-06a7-4600-8b68-2faf741a394b
 ms.tgt_platform: multiple
 keywords:
-- EnumeratorobjektWindows-Remoteverwaltung
-- EnumeratorobjektWindows-Remoteverwaltung, beschrieben
+- Enumeratorobjekt Windows Remoteverwaltung
+- Enumeratorobjekt Windows Remoteverwaltung beschrieben
 topic_type:
 - apiref
 api_name:
@@ -16,20 +16,20 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 6ad2395ae0ba17b1f221cd0a6dc0f7517a89db71
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 83799c4c67ad0b0f7c1ad89c77c3abab5989f1231508757c47dfe4c1705d7e20
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104040926"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119051828"
 ---
 # <a name="enumerator-object"></a>Enumerator-Objekt
 
-Stellt einen Stream von Ergebnissen dar, die von Vorgängen zurückgegeben werden, z. b. ein Pull Beispielsweise gibt die [**Session. Enumerate**](session-enumerate.md) -Methode mehrere Ergebnisse zurück.
+Stellt einen Datenstrom von Ergebnissen dar, die von Vorgängen zurückgegeben werden, z. B. ein Pullvorgang. Beispielsweise gibt die [**Session.Enumerate-Methode**](session-enumerate.md) mehrere Ergebnisse zurück.
 
 ## <a name="members"></a>Member
 
-Das **Enumeratorobjekt** verfügt über diese Typen von Membern:
+Das **Enumeratorobjekt** verfügt über folgende Typen von Membern:
 
 -   [Methoden](#methods)
 -   [Eigenschaften](#properties)
@@ -42,7 +42,7 @@ Das **Enumeratorobjekt** verfügt über diese Methoden.
 
 | Methode                                  | BESCHREIBUNG                                                                                   |
 |:----------------------------------------|:----------------------------------------------------------------------------------------------|
-| [**"ReadItem"**](enumerator-readitem.md) | Ruft ein Element aus der Ressource ab und gibt eine XML-Darstellung des Elements zurück.<br/> |
+| [**Readitem**](enumerator-readitem.md) | Ruft ein Element aus der Ressource ab und gibt eine XML-Darstellung des Elements zurück.<br/> |
 
 
 
@@ -56,22 +56,22 @@ Das **Enumeratorobjekt** verfügt über diese Eigenschaften.
 
 | Eigenschaft                                                     | BESCHREIBUNG                                                                                    |
 |:-------------------------------------------------------------|:-----------------------------------------------------------------------------------------------|
-| [**Atendof-Stream**](enumerator-atendofstream.md)<br/> | Ruft einen booleschen Wert ab, der angibt, ob in der Auflistung weitere Elemente vorhanden sind.<br/> |
+| [**AtEndOfStream**](enumerator-atendofstream.md)<br/> | Ruft einen booleschen Wert ab, der angibt, ob mehr Elemente in der Auflistung vorhanden sind.<br/> |
 | [**Fehler**](enumerator-error.md)<br/>                 | Ruft eine XML-Darstellung zusätzlicher Fehlerinformationen ab.<br/>                         |
 
 
 
  
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Verwenden Sie zum Starten einer Enumeration [**Session. Enumerate**](session-enumerate.md). Verwenden Sie zum Ausführen eines [*WS-Enumeration:*](windows-remote-management-glossary.md)[*Pull*](windows-remote-management-glossary.md) -Vorgangs, der weiterhin Elemente in der-Enumeration liest, [**Enumerator. ReadItem**](enumerator-readitem.md).
+Verwenden Sie [**Session.Enumerate,**](session-enumerate.md)um eine Enumeration zu starten. Verwenden Sie [**Enumerator.ReadItem,**](enumerator-readitem.md)um eine [*WS-Enumeration*](windows-remote-management-glossary.md)zu verwenden:[*Pullvorgang,*](windows-remote-management-glossary.md) der das Lesen von Elementen in der Enumeration fortsetzt.
 
-Das **Enumeratorobjekt** entspricht der [**iwsmanenumerator**](/windows/desktop/api/WSManDisp/nn-wsmandisp-iwsmanenumerator) -Schnittstelle.
+Das **Enumeratorobjekt** entspricht der [**IWSManEnumerator-Schnittstelle.**](/windows/desktop/api/WSManDisp/nn-wsmandisp-iwsmanenumerator)
 
 ## <a name="examples"></a>Beispiele
 
-Im folgenden VBScript-Codebeispiel werden alle Datenträger auf einem Remote Computer aufgelistet, die durch den voll qualifizierten Domänen Namen (Servername.Domain.com) angegeben werden. Die DisplayOutput-Unterroutine formatiert die Datenausgabe auf die gleiche Weise wie das WinRM. cmd-Tool.
+Im folgenden VBScript-Codebeispiel werden alle Datenträger auf einem Remotecomputer aufgeführt, die durch den vollqualifizierten Domänennamen (servername.domain.com) angegeben werden. Die DisplayOutput-Unterroutine formatiert die Datenausgabe auf die gleiche Weise wie das Tool WinRM.cmd.
 
 
 ```VB
@@ -120,14 +120,14 @@ End Sub
 |-------------------------------------|------------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows Vista<br/>                                                                 |
 | Unterstützte Mindestversion (Server)<br/> | Windows Server 2008<br/>                                                           |
-| Header<br/>                   | <dl> <dt>WSManDisp. h</dt> </dl>   |
-| IDL<br/>                      | <dl> <dt>WSManDisp. idl</dt> </dl> |
-| Bibliothek<br/>                  | <dl> <dt>WSManDisp. tlb</dt> </dl> |
+| Header<br/>                   | <dl> <dt>WSManDisp.h</dt> </dl>   |
+| Idl<br/>                      | <dl> <dt>WSManDisp.idl</dt> </dl> |
+| Bibliothek<br/>                  | <dl> <dt>WSManDisp.tlb</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>WSMAuto.dll</dt> </dl>   |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
@@ -137,7 +137,7 @@ End Sub
 [Auflisten oder Auflisten aller Instanzen einer Ressource](enumerating-or-listing-all-instances-of-a-resource.md)
 </dt> <dt>
 
-[Skripterstellung in Windows-Remoteverwaltung](scripting-in-windows-remote-management.md)
+[Skripterstellung in Windows Remoteverwaltung](scripting-in-windows-remote-management.md)
 </dt> </dl>
 
  

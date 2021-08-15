@@ -1,7 +1,7 @@
 ---
-description: Die get \_ messagedrain-Methode ruft die aktuelle Nachrichten Ableitung ab.
+description: Die get \_ MessageDrain-Methode ruft den aktuellen Nachrichtenabfluss ab.
 ms.assetid: d679e7f7-4628-479b-b722-843cdd91ffe6
-title: CBaseControlWindow.get_MessageDrain-Methode (ctlutil. h)
+title: CBaseControlWindow.get_MessageDrain -Methode (Ctlutil.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -16,16 +16,16 @@ api_location:
 - Strmbase.dll
 - Strmbasd.lib
 - Strmbasd.dll
-ms.openlocfilehash: aaf51c3f4297f238e51bbe8677303730c04b89d3
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 9a1e63e96950093bb7cc5760032d0b1f622c5df93a6f31673c595f54e5ea8e70
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106369601"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119017398"
 ---
-# <a name="cbasecontrolwindowget_messagedrain-method"></a>Cbasecontrolwindow. get \_ messagedrain-Methode
+# <a name="cbasecontrolwindowget_messagedrain-method"></a>CBaseControlWindow.get \_ MessageDrain-Methode
 
-Die- `get_MessageDrain` Methode ruft den aktuellen Nachrichten Ausgleich ab.
+Die `get_MessageDrain` -Methode ruft den aktuellen Nachrichtenabfluss ab.
 
 ## <a name="syntax"></a>Syntax
 
@@ -45,17 +45,17 @@ HRESULT get_MessageDrain(
 *Entladen* 
 </dt> <dd>
 
-Zeiger auf das aktuelle Fenster, das Fenster Meldungen empfängt.
+Zeiger auf das aktuelle Fenster, das Fenstermeldungen empfängt.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt einen **HRESULT** -Wert zurück.
+Gibt einen **HRESULT-Wert** zurück.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Nachrichten, die an den Videorenderer-Filter gesendet werden, können in einem anderen Fenster gepostet werden. Das Fenster, das für den Empfang dieser Meldungen registriert ist (mithilfe der **cbasecontrolwindow:: get \_ messagedrain** -Member-Funktion), ist der aktuelle Nachrichten Ausgleich.
+Nachrichten, die an den Videorendererfilter gesendet werden, können in einem anderen Fenster veröffentlicht werden. Das fenster, das für den Empfang dieser Nachrichten registriert ist (mithilfe der **CBaseControlWindow::get \_ MessageDrain-Memberfunktion),** ist der aktuelle Nachrichtenabfluss.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -63,16 +63,16 @@ Nachrichten, die an den Videorenderer-Filter gesendet werden, können in einem a
 
 | Anforderung | Wert |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>Ctlutil. h (Include Streams. h)</dt> </dl>                                                                                   |
-| Bibliothek<br/> | <dl> " <dt>Straumbase. lib" (Einzelhandels Builds);</dt> " <dt>Straumbasd. lib" (Debugbuilds)</dt> </dl> |
+| Header<br/>  | <dl> <dt>Ctlutil.h (include Streams.h)</dt> </dl>                                                                                   |
+| Bibliothek<br/> | <dl> <dt>Strmbase.lib (Einzelhandels-Builds); </dt> <dt>Strmbasd.lib (Debugbuilds)</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Cbasecontrolwindow-Klasse**](cbasecontrolwindow.md)
+[**CBaseControlWindow-Klasse**](cbasecontrolwindow.md)
 </dt> </dl>
 
  

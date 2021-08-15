@@ -1,6 +1,6 @@
 ---
-description: 'Weitere Informationen finden Sie unter: cimmufdeserializer. schemavalidationoption-Eigenschaft'
-title: Cimmufdeserializer. schemavalidationoption-Eigenschaft (Microsoft. Management. Infrastructure. Serialization)
+description: 'Weitere Informationen zu: CimMofDeserializer.SchemaValidationOption-Eigenschaft'
+title: CimMofDeserializer.SchemaValidationOption-Eigenschaft (Microsoft.Management.Infrastructure.Serialization)
 TOCTitle: CimMofDeserializer.SchemaValidationOption property (Microsoft.Management.Infrastructure.Serialization)
 ms:assetid: P:Microsoft.Management.Infrastructure.Serialization.CimMofDeserializer.SchemaValidationOption
 ms.date: 11/14/2019
@@ -25,19 +25,19 @@ topic_type:
 - apiref
 product_family_name: VS
 ms.topic: reference
-ms.openlocfilehash: e392933397900e4ecfaa0a1e3b2a83cdbe9264f7
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 83b110dad79097d7df27d2348d84db403826ee5edac390d7a6e75a7bbda519d9
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106340140"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120097200"
 ---
-# <a name="cimmofdeserializerschemavalidationoption-property"></a>Cimmufdeserializer. schemavalidationoption (Eigenschaft)
+# <a name="cimmofdeserializerschemavalidationoption-property"></a>CimMofDeserializer.SchemaValidationOption-Eigenschaft
 
-Ruft die Schema Validierungs Option für die Deserialisierung ab oder legt Sie fest.
+Ruft die Schemavalidierungsoption für die Deserialisierung ab oder legt sie fest.
 
-**Namespace:**   [Microsoft. Management. Infrastructure. Serialization](/previous-versions/windows/desktop/wmi_v2/mi-managed-api/hh832966(v=vs.85))  
-**Assembly:**  Microsoft. Management. Infrastructure (in Microsoft.Management.Infrastructure.dll)  
+**Namespace:**   [Microsoft.Management.Infrastructure.Serialization](/previous-versions/windows/desktop/wmi_v2/mi-managed-api/hh832966(v=vs.85))  
+**Assembly:**  Microsoft.Management.Infrastructure (in Microsoft.Management.Infrastructure.dll)  
 
 ## <a name="syntax"></a>Syntax
 
@@ -63,11 +63,11 @@ Public Property SchemaValidationOption As MofDeserializerSchemaValidationOption
 
 #### <a name="property-value"></a>Eigenschaftswert
 
-Typ: " [musdeserializerschemavalidationoption](microsoft.management.infrastructure.serialization.mofdeserializerschemavalidationoption.md) "
+Typ: [MofDeserializerSchemaValidationOption](microsoft.management.infrastructure.serialization.mofdeserializerschemavalidationoption.md)
 
-Die Schema Validierungs Option für die Deserialisierung.
+Die Schemavalidierungsoption für die Deserialisierung.
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
-[Cimmufdeserializer-Klasse](microsoft.management.infrastructure.serialization.cimmofdeserializer.md) 
- [Microsoft. Management. Infrastructure. Serialization-Namespace](/previous-versions/windows/desktop/wmi_v2/mi-managed-api/hh832966(v=vs.85))
+[CimMofDeserializer-Klasse](microsoft.management.infrastructure.serialization.cimmofdeserializer.md) 
+ [Microsoft.Management.Infrastructure.Serialization-Namespace](/previous-versions/windows/desktop/wmi_v2/mi-managed-api/hh832966(v=vs.85))

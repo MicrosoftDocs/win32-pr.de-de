@@ -1,5 +1,5 @@
 ---
-description: 'ID3DXMATRIXStack::LoadMatrix-Methode (D3dx9math.h): Lädt die angegebene Matrix in die aktuelle Matrix.'
+description: 'ID3DXMATRIXStack::LoadMatrix-Methode (D3dx9math.h): Lädt die gegebene Matrix in die aktuelle Matrix.'
 ms.assetid: c4c5ac50-238f-4b41-8ea9-7e48ffd03fc5
 title: ID3DXMATRIXStack::LoadMatrix-Methode (D3dx9math.h)
 ms.topic: reference
@@ -14,16 +14,16 @@ api_type:
 api_location:
 - d3dx9.lib
 - d3dx9.dll
-ms.openlocfilehash: f2ee7e5cae4d28b81b805faa4f113d0819f1eae9
-ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
+ms.openlocfilehash: 1d34a8feff249471363d1b22f94bcd71128e512ab4bb9d506a99c4d2741020bf
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2021
-ms.locfileid: "108093538"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120095890"
 ---
 # <a name="id3dxmatrixstackloadmatrix-method-d3dx9mathh"></a>ID3DXMATRIXStack::LoadMatrix-Methode (D3dx9math.h)
 
-Lädt die angegebene Matrix in die aktuelle Matrix.
+Lädt die gegebene Matrix in die aktuelle Matrix.
 
 ## <a name="syntax"></a>Syntax
 
@@ -45,7 +45,7 @@ HRESULT LoadMatrix(
 
 Typ: **const [**D3DXMATRIX**](d3dxmatrix.md) \***
 
-Zeiger auf die [**D3DXMATRIX-Struktur,**](d3dxmatrix.md) die in die aktuelle Matrix geladen wird.
+Zeiger auf die in die aktuelle Matrix geladene [**D3DXMATRIX-Struktur.**](d3dxmatrix.md)
 
 </dd> </dl>
 
@@ -53,9 +53,9 @@ Zeiger auf die [**D3DXMATRIX-Struktur,**](d3dxmatrix.md) die in die aktuelle Mat
 
 Typ: **[ **HRESULT**](https://msdn.microsoft.com/library/Bb401631(v=MSDN.10).aspx)**
 
-Wenn die Methode erfolgreich ist, lautet der Rückgabewert D3D \_ OK. Wenn die Methode fehlschlägt, kann der Rückgabewert D3DERR \_ INVALIDCALL sein.
+Wenn die Methode erfolgreich ist, ist der Rückgabewert D3D \_ OK. Wenn bei der Methode ein Fehler auftritt, kann der Rückgabewert D3DERR \_ INVALIDCALL sein.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
 Beachten Sie, dass diese Methode dem Stapel kein Element hinzufüge. stattdessen wird die aktuelle Matrix durch die angegebene Matrix ersetzt.
 
@@ -63,7 +63,7 @@ Beachten Sie, dass diese Methode dem Stapel kein Element hinzufüge. stattdessen
 
 
 
-| Anforderungen | Wert |
+| Anforderung | Wert |
 |--------------------|----------------------------------------------------------------------------------------|
 | Header<br/>  | <dl> <dt>D3dx9math.h</dt> </dl> |
 | Bibliothek<br/> | <dl> <dt>D3dx9.lib</dt> </dl>   |

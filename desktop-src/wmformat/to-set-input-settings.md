@@ -1,27 +1,27 @@
 ---
-title: So legen Sie Eingabeeinstellungen fest
-description: So legen Sie Eingabeeinstellungen fest
+title: So legen Sie die Einstellungen
+description: So legen Sie die Einstellungen
 ms.assetid: 288801a7-793f-43bd-9c5a-f9e1bd86ecc3
 keywords:
 - Advanced Systems Format (ASF), Eingabeeinstellungen
 - ASF (Advanced Systems Format), Eingabeeinstellungen
-- Profile, Eingabeeinstellungen
-- Codecs, Eingabeeinstellungen
+- Profile,Eingabeeinstellungen
+- Codecs,Eingabeeinstellungen
 - Streams, Eingabeeinstellungen
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 4e7b2db64a7346cc8b9d46c48f0add79dafcac95
-ms.sourcegitcommit: 48d1c892045445bcbd0f22bafa2fd3861ffaa6e7
+ms.openlocfilehash: 5df5b10ea6bd15ad083b26a61af037527f00576eaa6b7e1fa795ea1591417ac3
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/19/2020
-ms.locfileid: "103948443"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119447020"
 ---
-# <a name="to-set-input-settings"></a>So legen Sie Eingabeeinstellungen fest
+# <a name="to-set-input-settings"></a>So legen Sie die Einstellungen
 
-Die grundlegenden Eigenschaften von Eingabemedien und Streamingmedien werden durch die [**WM- \_ \_ Medientyp**](/previous-versions/windows/desktop/api/wmsdkidl/ns-wmsdkidl-wm_media_type) Struktur definiert. Bei Eingabe Formaten werden die Medientyp Informationen von der Anwendung festgelegt. Bei streamformaten werden die Medientyp Informationen in dem Profil festgelegt, das Sie dem Writer zuweisen. Einige Eigenschaften sind vom Medientyp unabhängig und müssen für eine Eingabe festgelegt werden, bevor der Schreibvorgang beginnt. Bei diesen Eigenschaften handelt es sich um Codec-und Writer-Funktionen, die vom Streamtyp unabhängig sind. Sie müssen festgelegt werden, nachdem das Profil im Writer zugewiesen wurde, aber bevor das Schreiben beginnt.
+Die grundlegenden Eigenschaften von Eingabe- und Streammedien werden durch die [**WM \_ MEDIA \_ TYPE-Struktur**](/previous-versions/windows/desktop/api/wmsdkidl/ns-wmsdkidl-wm_media_type) definiert. Für Eingabeformate werden die Medientypinformationen von Ihrer Anwendung festgelegt. Bei Streamformaten werden die Medientypinformationen in dem Profil festgelegt, das Sie dem Writer zuweisen. Einige Eigenschaften sind unabhängig vom Medientyp und müssen für eine Eingabe festgelegt werden, bevor mit dem Schreiben begonnen wird. Diese Eigenschaften sind Codec- und Writerfeatures, die unabhängig vom Streamtyp sind und festgelegt werden müssen, nachdem das Profil im Writer zugewiesen wurde, aber bevor mit dem Schreiben begonnen wird.
 
-Für das Festlegen einer Eingabe Einstellung ist ein aufrufsbefehl von [**IWMWriterAdvanced2:: * tinputsetting**](/previous-versions/windows/desktop/api/Wmsdkidl/nf-wmsdkidl-iwmwriteradvanced2-setinputsetting)erforderlich. Sie können auch den aktuellen Wert einer Einstellung mit einem Aufrufen von [**IWMWriterAdvanced2:: getinputsetting**](/previous-versions/windows/desktop/api/Wmsdkidl/nf-wmsdkidl-iwmwriteradvanced2-getinputsetting)überprüfen.
+Zum Festlegen einer Eingabeeinstellung ist ein Aufruf von [**IWMWriterAdvanced2::SetInputSetting erforderlich.**](/previous-versions/windows/desktop/api/Wmsdkidl/nf-wmsdkidl-iwmwriteradvanced2-setinputsetting) Sie können den aktuellen Wert einer Einstellung auch mit einem Aufruf von [**IWMWriterAdvanced2::GetInputSetting überprüfen.**](/previous-versions/windows/desktop/api/Wmsdkidl/nf-wmsdkidl-iwmwriteradvanced2-getinputsetting)
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
@@ -33,12 +33,12 @@ Für das Festlegen einer Eingabe Einstellung ist ein aufrufsbefehl von [**IWMWri
 [**Schreiben von ASF-Dateien**](writing-asf-files.md)
 </dt> <dt>
 
-[**Schreiben von bildstreams**](writing-image-streams.md)
+[**Schreiben von Streams**](writing-image-streams.md)
 </dt> </dl>
 
- 
+ 
 
- 
+ 
 
 
 

@@ -14,12 +14,12 @@ api_type:
 api_location:
 - D3DX10.lib
 - D3DX10.dll
-ms.openlocfilehash: e64350d4f54fef493ec7fe935474218a1b111503
-ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
+ms.openlocfilehash: 60e4aef5183e7c107b0853794b9e63c288916763daa4784e21241d55c1bfec89
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2021
-ms.locfileid: "108108378"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118990710"
 ---
 # <a name="d3dxvec2hermite-function-d3dx10mathh"></a>D3DXVec2Hermite-Funktion (D3DX10Math.h)
 
@@ -105,21 +105,21 @@ Typ: **[ **D3DXVECTOR2**](../direct3d9/d3dxvector2.md)\***
 
 Zeiger auf eine D3DXVECTOR2-Struktur, die das Ergebnis der Hermite-Splineinterpolation ist.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Die **D3DXVec2Hermite-Funktion** interpoliert mithilfe der Hermite-Splineinterpolation von (positionA, tangentA) in (positionB, tangentB).
+Die **D3DXVec2Hermite-Funktion** interpoliert mithilfe der Hermite-Splineinterpolation von (positionA, tangentA) nach (positionB, tangentB).
 
-Die Splineinterpolation ist eine Generalisierung der einfachen, einfachen Spline. Die Rampe ist eine Funktion von Q(s) mit den folgenden Eigenschaften.
+Die Splineinterpolation ist eine Verallgemeinerung des Splines mit einfacherEntschärfung. Die Rampe ist eine Funktion von Q(s) mit den folgenden Eigenschaften.
 
-Q(s) = As( + Bs) + Cs + D (und daher Q'(s) = 3As× + 2Bs + C)
+Q(s) = Assstelle + Bssstelle + Cs + D (und daher Q(s) = 3Aszept + 2Bs + C)
 
 a) Q(0) = v1, also Q'(0) = t1
 
 b) Q(1) = v2, also Q'(1) = t2
 
-v1 ist der Inhalt von pV1, v2 im Inhalt von pV2, t1 ist der Inhalt von pT1 und t2 der Inhalt von pT2.
+v1 ist der Inhalt von pV1, v2 im Inhalt von pV2, t1 ist der Inhalt von pT1 und t2 ist der Inhalt von pT2.
 
-Diese Eigenschaften werden zur Lösung für A, B, C, D verwendet.
+Diese Eigenschaften werden für A, B, C, D verwendet.
 
 
 ```
@@ -131,7 +131,7 @@ A + B = v2 - v1 - t1 (substituting for C and D)
 
 
 
-Schließen Sie die Lösungen für A, B, C und D ein, um Fragen zu generieren.
+Schließen Sie die Lösungen für A, B, C und D ein, um Q(s) zu generieren.
 
 
 ```
@@ -145,13 +145,13 @@ D = v1
 
 Dies ergibt:
 
-Q(s) = (2v1 - 2v2 + t2 + t1)s) + (3v2 - 3v1 - 2t1 - t2)s× t1s + v1
+Q(s) = (2v1 - 2v2 + t2 + t1)ssstelle + (3v2 - 3v1 - 2t1 - t2)ssstelle + t1s + v1
 
-Dies kann neu angeordnet werden wie:
+Dies kann wie hier angezeigt neu angeordnet werden:
 
-Q(s) = (2s, 3s) + 1)v1 + (-2s, + 3s) v2 + (s= - 2s): + s)t1 + (s) - s2)t2
+Q(s) = (2ssstelle – 3ssstelle + 1)v1 + (-2ssstelle + 3ssstelle)v2 + (ssstelle – 2ssstelle + s)t1 + (ssstelle – ssstelle)t2
 
-Einsemit-Splines sind nützlich, um Animationen zu steuern, da die Kurve alle Kontrollpunkte durchläuft. Da die Position und der Tangens explizit an den Enden jedes Segments angegeben werden, ist es außerdem einfach, eine kontinuierliche C2-Kurve zu erstellen, solange Sie sicherstellen, dass Ihre Anfangsposition und der Tangens mit den Endwerten des letzten Segments übereinstimmen.
+Hermite-Splines sind nützlich zum Steuern der Animation, da die Kurve alle Kontrollpunkte durchläuft. Da die Position und der Tangens explizit an den Enden jedes Segments angegeben werden, ist es außerdem einfach, eine kontinuierliche C2-Kurve zu erstellen, solange Sie sicherstellen, dass Ihre Anfangsposition und der Tangens mit den Endwerten des letzten Segments übereinstimmen.
 
 Der Rückgabewert für diese Funktion ist der gleiche Wert, der im pOut-Parameter zurückgegeben wird. Auf diese Weise kann die **D3DXVec2Hermite-Funktion** als Parameter für eine andere Funktion verwendet werden.
 
@@ -159,7 +159,7 @@ Der Rückgabewert für diese Funktion ist der gleiche Wert, der im pOut-Paramete
 
 
 
-| Anforderungen | Wert |
+| Anforderung | Wert |
 |--------------------|-----------------------------------------------------------------------------------------|
 | Header<br/>  | <dl> <dt>D3DX10Math.h</dt> </dl> |
 | Bibliothek<br/> | <dl> <dt>D3DX10.lib</dt> </dl>   |

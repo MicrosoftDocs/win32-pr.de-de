@@ -1,18 +1,18 @@
 ---
-title: Remotedesktopverbindung Broker-Client Schnittstellen
+title: Remotedesktopverbindung Broker-Clientschnittstellen
 description: Die Remotedesktopverbindung Broker-Client-API definiert die folgenden Schnittstellen.
 ms.assetid: BC7AF6B4-BA1B-464C-849C-40ACB2BC7E37
 ms.tgt_platform: multiple
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: b9b64adc33093c83f16984644194628309304194
-ms.sourcegitcommit: 57758ecb246c84d65e6e0e4bd5570d9176fa39cd
+ms.openlocfilehash: b65bec29c83d3f09bd233a65522f114588882f54bb2daf9b1036be2b4b74dfe8
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "104312534"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119308949"
 ---
-# <a name="remote-desktop-connection-broker-client-interfaces"></a>Remotedesktopverbindung Broker-Client Schnittstellen
+# <a name="remote-desktop-connection-broker-client-interfaces"></a>Remotedesktopverbindung Broker-Clientschnittstellen
 
 Die Remotedesktopverbindung Broker-Client-API definiert die folgenden Schnittstellen.
 
@@ -20,23 +20,23 @@ Die Remotedesktopverbindung Broker-Client-API definiert die folgenden Schnittste
 
 <dl> <dt>
 
-[**Iconnectionbrokerclient**](iconnectionbrokerclient.md)
+[**IConnectionBrokerClient**](iconnectionbrokerclient.md)
 </dt> <dd>
 
-Stellt die Methoden bereit, die zum Verwenden des Remotedesktopverbindung Broker-Clients erforderlich sind.
+Stellt die Methoden zur Verwendung des Remotedesktopverbindung Broker-Clients zur Anwendung.
 
 </dd> <dt>
 
-[**Iconnectionbrokerrequest**](iconnectionbrokerrequest.md)
+[**IConnectionBrokerRequest**](iconnectionbrokerrequest.md)
 </dt> <dd>
 
-Stellt die Methoden bereit, die zum Abrufen der Ergebnisse der asynchronen [**iconnectionbrokerclient:: gettargetinfo**](iconnectionbrokerclient-gettargetinfo.md) -Methode erforderlich sind.
+Stellt die Methoden zum Abrufen der Ergebnisse der asynchronen [**IConnectionBrokerClient::GetTargetInfo-Methode**](iconnectionbrokerclient-gettargetinfo.md) zur Wahl.
 
 </dd> </dl>
 
- 
+ 
 
- 
+ 
 
 
 

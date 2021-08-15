@@ -4,12 +4,12 @@ ms.assetid: 23ca463c-b305-496b-a1e3-58dbb793f17e
 title: events-Element
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 6883f1bcca9b62c3d8b60ca86f47b0e688d513c2
-ms.sourcegitcommit: b6fe9acffad983c14864b8fe0296f6025cb1f961
+ms.openlocfilehash: fea6d4d3c87ac15ee14864f7e12c419f13d97503eeab27d28c5bdec5dbcc1414
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2021
-ms.locfileid: "107995928"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119049688"
 ---
 # <a name="events-element"></a>events-Element
 

@@ -12,12 +12,12 @@ api_type:
 - COM
 api_location: ''
 ms.assetid: 7da6ebdf-dced-402f-a8ad-c10d78593f86
-ms.openlocfilehash: c303af68fe0e83fd8c1a5b20411445c8626987a6
-ms.sourcegitcommit: 3caaa3c92dcb1ef12f84464d14ce6262e65e988e
+ms.openlocfilehash: a581e046031e88c38ab2db45d5ac563abaec8e4ebfe9ae54b58dfdffdc946563
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/12/2021
-ms.locfileid: "109843391"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119444390"
 ---
 # <a name="cfolderitemsfdf-class"></a>CFolderItemsFDF-Klasse
 
@@ -33,7 +33,7 @@ FDF steht für *From Different Folders (Aus verschiedenen Ordnern).*
 
 Die [**CFolderItems-Klasse**](class-cfolderitems-class.md) listet Elemente aus mehreren Ordnern auf und verwendet die [**IInsertItem-Schnittstelle,**](/windows/desktop/api/Shobjidl/nn-shobjidl-iinsertitem) um die Elemente in die Auflistung einzufügen.
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen:
 
 <dl> <dt>
 

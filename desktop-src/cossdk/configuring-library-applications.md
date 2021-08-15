@@ -4,32 +4,32 @@ ms.assetid: db375e0f-74ca-44df-918a-b0e48742a594
 title: Konfigurieren von Bibliotheksanwendungen
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: e51e00626d42044797881ccb86553ddfda38a089
-ms.sourcegitcommit: c7add10d695482e1ceb72d62b8a4ebd84ea050f7
+ms.openlocfilehash: 3b8ea0018d74070828384db25d76c73e7b5b3dba8a7dfc7d091c94e38aa0c3bf
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104041383"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119047498"
 ---
 # <a name="configuring-library-applications"></a>Konfigurieren von Bibliotheksanwendungen
 
-Da com+-Bibliotheksanwendungen im Client Prozess ausgeführt werden, unterscheiden sich die konfigurierbaren Elemente für Bibliotheksanwendungen erheblich von der für Server Anwendungen. Es ist nicht möglich, einen Aspekt der Anwendung zu konfigurieren, der vom Hostingprozess bestimmt wird.
+Da COM+-Bibliotheksanwendungen im Clientprozess ausgeführt werden, unterscheiden sich die konfigurierbaren Elemente für Bibliotheksanwendungen erheblich von denen für Serveranwendungen. Sie können keinen Aspekt der Anwendung konfigurieren, der durch den Hostingprozess bestimmt wird.
 
 Auf Anwendungsebene sind mehrere Einstellungen für Bibliotheksanwendungen entweder eingeschränkt oder nicht verfügbar. Diese Einschränkungen werden in der folgenden Tabelle beschrieben:
 
 
 
-| Attribut                                       | BESCHREIBUNG                                                                                                                                                                                                                                   |
+| attribute                                       | BESCHREIBUNG                                                                                                                                                                                                                                   |
 |-------------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Sicherheitsstufe<br/>                       | Sie müssen Zugriffs Überprüfungen auf Komponentenebene auswählen. Die Bibliotheks Anwendung kann keine Zugriffs Überprüfungen auf Prozessebene beeinflussen. Weitere Informationen finden Sie unter [Festlegen einer Sicherheitsstufe für Zugriffs Überprüfungen](setting-a-security-level-for-access-checks.md).<br/>             |
-| Aktivieren oder Deaktivieren der Authentifizierung<br/> | Sie können angeben, ob die Bibliotheks Anwendung an der vom Host Prozess ausgeführten Authentifizierung beteiligt sein soll. Siehe [Aktivieren der Authentifizierung für eine Bibliotheks Anwendung](enabling-authentication-for-a-library-application.md).<br/> |
-| Ebene des Identitätswechsels<br/>                  | Vorübergehend. Die Einstellung des Host Prozesses wird verwendet. <br/>                                                                                                                                                                             |
-| Sicherheitsidentität<br/>                    | Vorübergehend. Die Anwendung wird mit der Identität des Host Prozesses ausgeführt.<br/>                                                                                                                                                          |
-| Server Prozess wird heruntergefahren<br/>              | Vorübergehend.<br/>                                                                                                                                                                                                                       |
-| Unterstützung für 3 GB aktivieren<br/>                  | Vorübergehend.<br/>                                                                                                                                                                                                                       |
-| Im Debugger starten<br/>                   | Vorübergehend.<br/>                                                                                                                                                                                                                       |
-| Aktivieren von CRM<br/>                           | Vorübergehend.<br/>                                                                                                                                                                                                                       |
-| Queuing<br/>                              | Vorübergehend.<br/>                                                                                                                                                                                                                       |
+| Sicherheitsstufe<br/>                       | Sie müssen Zugriffsüberprüfungen auf Komponentenebene auswählen. Die Bibliotheksanwendung kann keine Zugriffsüberprüfungen auf Prozessebene beeinflussen. Weitere Informationen finden Sie unter [Festlegen einer Sicherheitsstufe für Zugriffsüberprüfungen.](setting-a-security-level-for-access-checks.md)<br/>             |
+| Aktivieren oder Deaktivieren der Authentifizierung<br/> | Sie können angeben, ob die Bibliotheksanwendung an der vom Hostprozess durchgeführten Authentifizierung teilnimmt. Weitere Informationen finden Sie unter [Aktivieren der Authentifizierung für eine Bibliotheksanwendung.](enabling-authentication-for-a-library-application.md)<br/> |
+| Ebene des Identitätswechsels<br/>                  | Verfügbar. Die Einstellung des Hostprozesses wird verwendet. <br/>                                                                                                                                                                             |
+| Sicherheitsidentität<br/>                    | Verfügbar. Die Anwendung wird unter der Identität des Hostprozesses ausgeführt.<br/>                                                                                                                                                          |
+| Herunterfahren des Serverprozesses<br/>              | Verfügbar.<br/>                                                                                                                                                                                                                       |
+| Aktivieren der 3-GB-Unterstützung<br/>                  | Verfügbar.<br/>                                                                                                                                                                                                                       |
+| Starten im Debugger<br/>                   | Verfügbar.<br/>                                                                                                                                                                                                                       |
+| Aktivieren von CRM<br/>                           | Verfügbar.<br/>                                                                                                                                                                                                                       |
+| Queuing<br/>                              | Verfügbar.<br/>                                                                                                                                                                                                                       |
 
 
 
@@ -39,7 +39,7 @@ Auf Anwendungsebene sind mehrere Einstellungen für Bibliotheksanwendungen entwe
 
 <dl> <dt>
 
-[Übersicht über die COM+-Anwendung](com--application-overview.md)
+[Übersicht über COM+-Anwendungen](com--application-overview.md)
 </dt> </dl>
 
  

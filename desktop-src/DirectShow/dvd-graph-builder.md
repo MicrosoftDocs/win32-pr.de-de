@@ -4,16 +4,16 @@ ms.assetid: c74cf1d8-2560-4302-ba68-8a1693f7ca6f
 title: DVD Graph Builder
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 1f47c41494e82b69bfb5980b9c1b8ed65e981d30
-ms.sourcegitcommit: 63753fcfb0afbbe5ec283fb8316e62c2dc950f66
+ms.openlocfilehash: 656f77d23aa70c02bca94a6578ae84b791f54a208e3cbd01c3f16cd574d3eaca
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/22/2021
-ms.locfileid: "107909078"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119016058"
 ---
 # <a name="dvd-graph-builder"></a>DVD Graph Builder
 
-Der DVD Graph Builder ist ein Hilfsobjekt zum Erstellen von DVD-Wiedergabegraphen. Anwendungen können diese Komponente verwenden, um Filterdiagramme für die DVD-Wiedergabe und -Navigation zu erstellen. Erstellen Sie dieses Objekt, indem **Sie CoCreateInstance** aufrufen.
+Der DVD Graph Builder ist ein Hilfsobjekt zum Erstellen von DVD-Wiedergabediagrammen. Anwendungen können diese Komponente verwenden, um Filterdiagramme für dvd-Wiedergabe und -Navigation zu erstellen. Erstellen Sie dieses Objekt, indem Sie **CoCreateInstance aufrufen.**
 
 
 

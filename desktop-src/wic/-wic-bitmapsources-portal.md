@@ -1,19 +1,19 @@
 ---
-description: Dieser Abschnitt enthält konzeptionelle und Vorgehensweisen, in denen die bitmapquellen von Windows Imaging Component (WIC) beschrieben und deren Bearbeitung beschrieben wird.
+description: Dieser Abschnitt enthält konzeptionelle Und-Anleitungsthemen, in denen Windows WIC-Bitmapquellen (Imaging Component) und deren Bearbeitung beschrieben werden.
 ms.assetid: 7c1a0b67-5bb8-4436-8d47-335439d3ff59
 title: Bearbeiten von Bitmaps
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: f62da613f99577b59306e6fdeeb181d4c90b970b
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 15454766d33d028ec1237db09f34b7313bdd6f2c6ba6584eaee5dbae43881a93
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104214550"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119088361"
 ---
 # <a name="manipulating-bitmaps"></a>Bearbeiten von Bitmaps
 
-Dieser Abschnitt enthält konzeptionelle und Vorgehensweisen, in denen die bitmapquellen von Windows Imaging Component (WIC) beschrieben und deren Bearbeitung beschrieben wird.
+Dieser Abschnitt enthält konzeptionelle Und-Anleitungsthemen, in denen Windows WIC-Bitmapquellen (Imaging Component) und deren Bearbeitung beschrieben werden.
 
 ## <a name="in-this-section"></a>In diesem Abschnitt
 
@@ -21,8 +21,8 @@ Dieser Abschnitt enthält konzeptionelle und Vorgehensweisen, in denen die bitma
 
 | Thema                                                                          | BESCHREIBUNG                                                                                                                                 |
 |--------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------|
-| [Übersicht über Bitmap-Quellen](-wic-bitmapsources.md)<br/>                   | In diesem Thema werden bitmapquellen vorgestellt, eine zentrale WIC-Komponente, die die Bitmap-Pixel eines Bilds darstellt.<br/>                        |
-| [Gewusst-wie-Themen zu Bitmap-Quellen](-wic-bitmapsources-howto-portal.md)<br/> | Die Themen in diesem Abschnitt enthalten Beispiele zur Veranschaulichung von Aufgaben im Zusammenhang mit [**IWICBitmapSource**](/windows/desktop/api/Wincodec/nn-wincodec-iwicbitmapsource).<br/> |
+| [Übersicht über Bitmapquellen](-wic-bitmapsources.md)<br/>                   | In diesem Thema werden Bitmapquellen vorgestellt, eine WIC-Kernkomponente, die die Bitmappixel eines Bilds darstellt.<br/>                        |
+| [Themen zur Vorgehensweise zu Bitmapquellen](-wic-bitmapsources-howto-portal.md)<br/> | Die Themen in diesem Abschnitt enthalten Beispiele, die [**IWICBitmapSource-bezogene**](/windows/desktop/api/Wincodec/nn-wincodec-iwicbitmapsource)Aufgaben veranschaulichen.<br/> |
 
 
 
@@ -33,7 +33,7 @@ Dieser Abschnitt enthält konzeptionelle und Vorgehensweisen, in denen die bitma
 [Programmierhandbuch](-wic-programming-guide.md)
 
 
-[Verweis](-wic-codec-reference.md)
+[Referenz](-wic-codec-reference.md)
 
 
 [Beispiele](-wic-samples.md)

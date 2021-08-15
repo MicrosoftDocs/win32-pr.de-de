@@ -1,23 +1,23 @@
 ---
-description: Die CIM-Klasse "-Klasse" stellt \_ die folgenden Methoden zur Verfügung.
+description: Die CIM \_ USBController-Klasse macht die folgenden Methoden verfügbar.
 ms.assetid: CDB201A8-7521-4E4B-9B99-59277310ADC6
 ms.tgt_platform: multiple
-title: CIM_USBController Methoden
+title: CIM_USBController-Methoden
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 45910ce712cc410cf9c2ef00d3727890213c17c2
-ms.sourcegitcommit: c7add10d695482e1ceb72d62b8a4ebd84ea050f7
+ms.openlocfilehash: 28139125b9495b549bcafec5304f8b3ebbfb0b8e5a0a79c9be533ba5b6948807
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "103748457"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119080280"
 ---
-# <a name="cim_usbcontroller-methods"></a>CIM-Methode für den Start \_ Controller
+# <a name="cim_usbcontroller-methods"></a>\_CIM-USBController-Methoden
 
-Die [**CIM \_**](cim-usbcontroller.md) -Klasse "-Klasse" stellt die folgenden Methoden zur Verfügung.
+Die [**CIM \_ USBController-Klasse**](cim-usbcontroller.md) macht die folgenden Methoden verfügbar.
 
 > [!IMPORTANT]
-> Die Klassen der DMTF-CIM (Common Information Model) sind die übergeordneten Klassen, auf denen WMI-Klassen erstellt werden. WMI unterstützt zurzeit nur die [CIM 2. x-Versions Schemas](https://dmtf.org/standards/cim/schemas).
+> Die CIM-Klassen (Distributed Management Task Force) (DMTF) (Common Information Model) sind die übergeordneten Klassen, auf denen WMI-Klassen erstellt werden. WMI unterstützt derzeit nur die [CIM 2.x-Versionsschemas.](https://dmtf.org/standards/cim/schemas)
 
  
 

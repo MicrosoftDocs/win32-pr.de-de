@@ -1,23 +1,23 @@
 ---
-description: Die fotometadatenrichtlinie für die System. GPS. destbearingref-Eigenschaft.
+description: Die Richtlinie für Fotometadaten für die System.GPS.DestBearingRef-Eigenschaft.
 ms.assetid: d1c8b3cc-ed52-43ca-a0ba-045a2c5fe274
-title: System. GPS. destbearingref Photo Metadata-Richtlinie
+title: System.GPS.DestBearingRef-Richtlinie für Fotometadaten
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 2f00d3083459fe365fc54e81dc485ddd26887a46
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 26ee4b984d0a759769b80be76b53499690673c7ec630c759aa0371b53ea9368f
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "104216814"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119087851"
 ---
-# <a name="systemgpsdestbearingref-photo-metadata-policy"></a>System. GPS. destbearingref Photo Metadata-Richtlinie
+# <a name="systemgpsdestbearingref-photo-metadata-policy"></a>System.GPS.DestBearingRef-Richtlinie für Fotometadaten
 
-Die fotometadatenrichtlinie für die [System. GPS. destbearingref](../properties/props-system-gps-destbearingref.md) -Eigenschaft.
+Die Richtlinie für Fotometadaten für die [System.GPS.DestBearingRef-Eigenschaft.](../properties/props-system-gps-destbearingref.md)
 
-### <a name="pkey"></a>Pkey
+### <a name="pkey"></a>PKEY
 
-Pkey \_ GPS \_ destbearingref
+PKEY \_ GPS \_ DestBearingRef
 
 ### <a name="containers"></a>Container
 
@@ -27,7 +27,7 @@ JPEG, TIFF
 
 Nein
 
-### <a name="output-propvariant-type"></a>Ausgabe-PROPVARIANT-Typ
+### <a name="output-propvariant-type"></a>PROPVARIANT-Ausgabetyp
 
 VT \_ LPWSTR
 
@@ -35,46 +35,46 @@ VT \_ LPWSTR
 
 Eine Zeichenfolge.
 
-### <a name="conflict-resolution-policy"></a>Richtlinie zur Konfliktlösung
+### <a name="conflict-resolution-policy"></a>Konfliktlösungsrichtlinie
 
-Werte aus unterschiedlichen Schemas sind abgestimmt.
+Werte aus verschiedenen Schemas werden abgestimmt.
 
 ### <a name="jpeg-policies"></a>JPEG-Richtlinien
 
-### <a name="read-paths"></a>Pfade lesen
+### <a name="read-paths"></a>Lesepfade
 
 
 
-| Auftrag | Pfad                        | Datenträger Format |
+| Auftrag | Pfad                        | Datenträgerformat |
 |-------|-----------------------------|-------------|
-| 1     | /App1/IFD/GPS/{ushort = 23}   | ascii       |
-| 2     | /XMP/EXIF: gpsdestbearingref | Unicode     |
+| 1     | /app1/ifd/gps/{ushort=23}   | ascii       |
+| 2     | /xmp/exif:GPSDestBearingRef | Unicode     |
 
 
 
  
 
-### <a name="write-paths"></a>Schreib Pfade
+### <a name="write-paths"></a>Schreibpfade
 
 
 
-| Auftrag | Pfad                        | Datenträger Format |
+| Auftrag | Pfad                        | Datenträgerformat |
 |-------|-----------------------------|-------------|
-| 1     | /App1/IFD/GPS/{ushort = 23}   | ascii       |
-| 2     | /XMP/EXIF: gpsdestbearingref | Unicode     |
+| 1     | /app1/ifd/gps/{ushort=23}   | ascii       |
+| 2     | /xmp/exif:GPSDestBearingRef | Unicode     |
 
 
 
  
 
-### <a name="remove-paths"></a>Pfade entfernen
+### <a name="remove-paths"></a>Entfernen von Pfaden
 
 
 
 | Auftrag | Pfad                        |
 |-------|-----------------------------|
-| 1     | /App1/IFD/GPS/{ushort = 23}   |
-| 2     | /XMP/EXIF: gpsdestbearingref |
+| 1     | /app1/ifd/gps/{ushort=23}   |
+| 2     | /xmp/exif:gpsdestbearingref |
 
 
 
@@ -82,52 +82,52 @@ Werte aus unterschiedlichen Schemas sind abgestimmt.
 
 ### <a name="tiff-policies"></a>TIFF-Richtlinien
 
-### <a name="read-paths"></a>Pfade lesen
+### <a name="read-paths"></a>Lesepfade
 
 
 
-| Auftrag | Pfad                            | Datenträger Format |
+| Auftrag | Pfad                            | Datenträgerformat |
 |-------|---------------------------------|-------------|
-| 1     | /IFD/GPS/{ushort = 23}            | ascii       |
-| 2     | /IFD/XMP/EXIF: gpsdestbearingref | Unicode     |
+| 1     | /ifd/gps/{ushort=23}            | ascii       |
+| 2     | /ifd/xmp/exif:GPSDestBearingRef | Unicode     |
 
 
 
  
 
-### <a name="write-paths"></a>Schreib Pfade
+### <a name="write-paths"></a>Schreibpfade
 
 
 
-| Auftrag | Pfad                            | Datenträger Format |
+| Auftrag | Pfad                            | Datenträgerformat |
 |-------|---------------------------------|-------------|
-| 1     | /IFD/GPS/{ushort = 23}            | ascii       |
-| 2     | /IFD/XMP/EXIF: gpsdestbearingref | Unicode     |
+| 1     | /ifd/gps/{ushort=23}            | ascii       |
+| 2     | /ifd/xmp/exif:GPSDestBearingRef | Unicode     |
 
 
 
  
 
-### <a name="remove-paths"></a>Pfade entfernen
+### <a name="remove-paths"></a>Entfernen von Pfaden
 
 
 
 | order | path                            |
 |-------|---------------------------------|
-| 1     | /IFD/GPS/{ushort = 23}            |
-| 2     | /IFD/XMP/EXIF: gpsdestbearingref |
+| 1     | /ifd/gps/{ushort=23}            |
+| 2     | /ifd/xmp/exif:gpsdestbearingref |
 
 
 
  
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
 <dl> <dt>
 
-[System. GPS. destbearingref](../properties/props-system-gps-destbearingref.md)
+[System.GPS.DestBearingRef](../properties/props-system-gps-destbearingref.md)
 </dt> </dl>
 
  

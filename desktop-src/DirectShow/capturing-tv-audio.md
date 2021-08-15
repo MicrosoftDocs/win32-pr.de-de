@@ -1,21 +1,21 @@
 ---
-description: TV-Audiodatei
+description: Aufzeichnen von TV-Audio
 ms.assetid: c0c62a8e-ab16-4617-936c-b64e6e3865b4
-title: TV-Audiodatei
+title: Aufzeichnen von TV-Audio
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 138ce631aedf12ddfb52be92d08ffb47da0cbdec
-ms.sourcegitcommit: a47bd86f517de76374e4fff33cfeb613eb259a7e
+ms.openlocfilehash: 1d699533480bdeaaa528e362c0773e9df8100fda3dc2195a65c055ae7f7d5bb1
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/06/2021
-ms.locfileid: "106344791"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119641010"
 ---
-# <a name="capturing-tv-audio"></a>TV-Audiodatei
+# <a name="capturing-tv-audio"></a>Aufzeichnen von TV-Audio
 
-Verwenden Sie den [audioerfassungs Filter](audio-capture-filter.md), um Audiodaten aus dem analogen Fernsehgerät in einer Datei zu erfassen. Verwenden Sie den Enumerator "System Geräte", um den audioerfassungs Filter zu erstellen. Es gibt möglicherweise mehrere audioerfassungs Geräte auf dem System des Benutzers. der Benutzer muss das Gerät auswählen, das die Soundkarte darstellt.
+Verwenden Sie den [Audioaufnahmefilter](audio-capture-filter.md), um Audiodaten von analogem Fernsehgerät in einer Datei zu erfassen. Verwenden Sie den Systemgeräte-Enumerator, um den Audioaufnahmefilter zu erstellen. Es können mehrere Audioaufnahmegeräte auf dem System des Benutzers vorhanden sein. der Benutzer muss das Gerät auswählen, das die Soundkarte darstellt.
 
-Verbinden Sie die Ausgabe-PIN der Audioerfassung mit dem MUX-Filter:
+Verbinden den Audioaufnahme-Ausgabepin an den Mux-Filter an:
 
 
 ```C++
@@ -29,7 +29,7 @@ hr = pBuild->RenderStream(
 
 
 
-Die Eingabe Pins müssen mit nichts verbunden sein. Jede Eingabe-PIN stellt eine physische Eingabe auf dem audioerfassungs Gerät dar. Verwenden Sie die [**IAMAudioInputMixer**](/windows/desktop/api/Strmif/nn-strmif-iamaudioinputmixer) -Schnittstelle, um die Eingabe zu aktivieren, die den Audiostream vom Tuner empfängt. Die Eingabe Pins werden anhand des Namens identifiziert, z. b. "Zeile in" oder "CD-Audiodatei". Leider können sich die Namen von einem Gerät zur nächsten ändern. Außerdem verwenden verschiedene TV-Tuner-Karten andere Eingaben für die Soundkarte. Daher ist es dem Benutzer zu entnehmen, welche Eingabe verwendet werden soll.
+Die Eingabepins müssen nicht mit etwas verbunden werden. Jeder Eingabepin stellt eine physische Eingabe auf dem Audioaufnahmegerät dar. Verwenden Sie die [**IAMAudioInputMixer-Schnittstelle,**](/windows/desktop/api/Strmif/nn-strmif-iamaudioinputmixer) um die Eingabe zu aktivieren, die den Audiostream vom Tuner empfängt. Die Eingabepins werden anhand des Namens identifiziert, z. B. "Line In" oder "CD Audio". Leider können sich die Namen von einem Gerät zum nächsten ändern. Außerdem verwenden verschiedene TV-Tunerkarten unterschiedliche Eingaben für die Soundkarte. Daher muss der Benutzer selbst bestimmen, welche Eingabe verwendet werden soll.
 
 
 ```C++
@@ -66,10 +66,10 @@ pEnum->Release();
 
 <dl> <dt>
 
-[Analog zum Fernsehgerät](analog-television-audio.md)
+[Analoge Fernsehaudio](analog-television-audio.md)
 </dt> <dt>
 
-[Audioerfassung](audio-capture.md)
+[Audioaufnahme](audio-capture.md)
 </dt> </dl>
 
  

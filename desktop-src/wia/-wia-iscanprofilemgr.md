@@ -1,7 +1,7 @@
 ---
-description: Die iscanprofilemgr-Schnittstelle stellt Methoden zum Erstellen, öffnen, löschen und Verwalten von Scan Profilen bereit.
+description: Die IScanProfileMgr-Schnittstelle stellt Methoden zum Erstellen, Öffnen, Löschen und Verwalten von Scanprofilen bereit.
 ms.assetid: f57a71b7-750c-42a8-be73-229f0145d9d5
-title: Iscanprofilemgr-Schnittstelle (scanprofilemgr. h)
+title: IScanProfileMgr-Schnittstelle (Scanprofilemgr.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,57 +13,57 @@ api_type:
 - COM
 api_location:
 - Scanprofilemgr.h
-ms.openlocfilehash: 9f0762befdda272b91451dcca67c3f9560ad354e
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: d2d517143a55c2bd732bb8f9c642697a7d50151ddb72fcffd13d978caef597b9
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106348226"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119593090"
 ---
-# <a name="iscanprofilemgr-interface"></a>Iscanprofilemgr-Schnittstelle
+# <a name="iscanprofilemgr-interface"></a>IScanProfileMgr-Schnittstelle
 
-Die **iscanprofilemgr** -Schnittstelle stellt Methoden zum Erstellen, öffnen, löschen und Verwalten von Scan Profilen bereit.
+Die **IScanProfileMgr-Schnittstelle** stellt Methoden zum Erstellen, Öffnen, Löschen und Verwalten von Scanprofilen bereit.
 
 ## <a name="members"></a>Member
 
-Die **iscanprofilemgr** -Schnittstelle erbt von der [**IDispatch**](/windows/win32/api/oaidl/nn-oaidl-idispatch) -Schnittstelle. **Iscanprofilemgr** verfügt auch über die folgenden Typen von Membern:
+Die **IScanProfileMgr-Schnittstelle** erbt von der [**IDispatch-Schnittstelle.**](/windows/win32/api/oaidl/nn-oaidl-idispatch) **IScanProfileMgr** verfügt auch über diese Typen von Membern:
 
 -   [Methoden](#methods)
 
 ### <a name="methods"></a>Methoden
 
-Die **iscanprofilemgr** -Schnittstelle verfügt über diese Methoden.
+Die **IScanProfileMgr-Schnittstelle** verfügt über diese Methoden.
 
 
 
 | Methode                                                                              | BESCHREIBUNG                                                                                                            |
 |:------------------------------------------------------------------------------------|:-----------------------------------------------------------------------------------------------------------------------|
-| [**"Kreateprofile"**](-wia-iscanprofilemgr-createprofile.md)                         | Erstellt ein leeres Überprüfungs Profil und ordnet es einem Scanner oder einem anderen WIA-2,0-Element zu.<br/>                       |
-| [**Deleteallprofiles**](-wia-iscanprofilemgr-deleteallprofiles.md)                 | Löscht alle Überprüfungs Profile, die dem angegebenen Gerät zugeordnet sind.<br/>                                         |
-| [**Deleteallprofilesforuser**](-wia-iscanprofilemgr-deleteallprofilesforuser.md)   | Löscht alle Überprüfungs Profile, die für den Benutzer in dem System verfügbar sind, unter dem Ihre Anwendung ausgeführt wird. <br/> |
-| [**DeleteProfile**](-wia-iscanprofilemgr-deleteprofile.md)                         | Löscht das angegebene Überprüfungs Profil.<br/>                                                                         |
-| [**Getdefaultprofile**](-wia-iscanprofilemgr-getdefaultprofile.md)                 | Ruft das Standard Überprüfungs Profil ab.<br/>                                                                              |
-| [**Getnumprofiles**](-wia-iscanprofilemgr-getnumprofiles.md)                       | Ruft die Anzahl der Überprüfungs Profile ab, die für den Benutzer im System erstellt wurden, unter dem Ihre Anwendung ausgeführt wird.<br/> |
-| [**Getnumprofilesforde viceid**](-wia-iscanprofilemgr-getnumprofilesfordeviceid.md) | Ruft die Anzahl der Scan Profile für das Gerät ab.<br/>                                                            |
-| [**Getprofiles**](-wia-iscanprofilemgr-getprofiles.md)                             | Ruft alle Überprüfungs Profile ab, die für den Benutzer im System verfügbar sind, unter dem Ihre Anwendung ausgeführt wird.<br/>     |
-| [**Getprofilesforde viceid**](-wia-iscanprofilemgr-getprofilesfordeviceid.md)       | Ruft alle einem Gerät zugeordneten Scan Profile ab.<br/>                                                        |
-| [**Openprofile**](-wia-iscanprofilemgr-openprofile.md)                             | Öffnet ein Überprüfungs Profil, das als XML-Datei auf einem Datenträger gespeichert wurde.<br/>                                            |
-| [**Aktualisieren**](-wia-iscanprofilemgr-refresh.md)                                     | Listet alle Scan Profile im System erneut auf.<br/>                                                          |
-| [**SetDefault**](-wia-iscanprofilemgr-setdefault.md)                               | Legt das angegebene Überprüfungs Profil als Standardprofil fest.<br/>                                                     |
+| [**CreateProfile**](-wia-iscanprofilemgr-createprofile.md)                         | Erstellt ein leeres Scanprofil und ordnet es einem Scanner oder einem anderen WIA 2.0-Element zu.<br/>                       |
+| [**DeleteAllProfiles**](-wia-iscanprofilemgr-deleteallprofiles.md)                 | Löscht alle Scanprofile, die dem angegebenen Gerät zugeordnet sind.<br/>                                         |
+| [**DeleteAllProfilesForUser**](-wia-iscanprofilemgr-deleteallprofilesforuser.md)   | Löscht alle Scanprofile, die für den Benutzer in dem System verfügbar sind, unter dem Ihre Anwendung ausgeführt wird. <br/> |
+| [**DeleteProfile**](-wia-iscanprofilemgr-deleteprofile.md)                         | Löscht das angegebene Scanprofil.<br/>                                                                         |
+| [**GetDefaultProfile**](-wia-iscanprofilemgr-getdefaultprofile.md)                 | Ruft das Standardscanprofil ab.<br/>                                                                              |
+| [**GetNumProfiles**](-wia-iscanprofilemgr-getnumprofiles.md)                       | Ruft die Anzahl der Scanprofile ab, die für den Benutzer im System erstellt wurden, unter dem ihre Anwendung ausgeführt wird.<br/> |
+| [**GetNumProfilesforDeviceID**](-wia-iscanprofilemgr-getnumprofilesfordeviceid.md) | Ruft die Anzahl der Scanprofile für das Gerät ab.<br/>                                                            |
+| [**GetProfiles**](-wia-iscanprofilemgr-getprofiles.md)                             | Ruft alle Überprüfungsprofile ab, die für den Benutzer in dem System verfügbar sind, unter dem Ihre Anwendung ausgeführt wird.<br/>     |
+| [**GetProfilesforDeviceID**](-wia-iscanprofilemgr-getprofilesfordeviceid.md)       | Ruft alle einem Gerät zugeordneten Scanprofile ab.<br/>                                                        |
+| [**OpenProfile**](-wia-iscanprofilemgr-openprofile.md)                             | Öffnet ein Scanprofil, das als XML-Datei auf dem Datenträger gespeichert wurde.<br/>                                            |
+| [**Aktualisieren**](-wia-iscanprofilemgr-refresh.md)                                     | Listet alle Scanprofile im System erneut auf.<br/>                                                          |
+| [**SetDefault**](-wia-iscanprofilemgr-setdefault.md)                               | Legt das angegebene Scanprofil als Standardprofil fest.<br/>                                                     |
 
 
 
  
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Verwenden Sie zum Erstellen eines **iscanprofilemgr** -Objekts die [cokreateinstance](/windows/win32/api/combaseapi/nf-combaseapi-cocreateinstance) -Methode mit den folgenden Parametern:
+Verwenden Sie zum Erstellen eines **IScanProfileMgr-Objekts** die [CoCreateInstance-Methode](/windows/win32/api/combaseapi/nf-combaseapi-cocreateinstance) mit den folgenden Parametern:
 
 ``` syntax
 CoCreateInstance(CLSID_ScanProfileMgr, NULL, CLSCTX_LOCAL_SERVER, IID_IScanProfileMgr, ppv)
 ```
 
-Wenn ein Überprüfungs Profil mithilfe der [**iscanprofile:: Save**](-wia-iscanprofile-save.md) -Methode gespeichert wird, wird es als XML-Datei unter% User Profile% \\ Application Data \\ Microsoft \\ Document Center \\ userscanprofiles gespeichert.
+Wenn ein Scanprofil mit der [**IScanProfile::Save-Methode**](-wia-iscanprofile-save.md) gespeichert wird, wird es als XML-Datei unter %USERPROFILE% \\ Anwendungsdaten \\ Microsoft Document Center \\ \\ UserScanProfiles gespeichert.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -71,21 +71,21 @@ Wenn ein Überprüfungs Profil mithilfe der [**iscanprofile:: Save**](-wia-iscan
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>                                              |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2008 \[ -Desktop-Apps\]<br/>                                        |
-| Header<br/>                   | <dl> <dt>Scanprofilemgr. h</dt> </dl> |
-| IDL<br/>                      | <dl> <dt>Scanprofiles. idl</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows \[Nur Vista-Desktop-Apps\]<br/>                                              |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2008-Desktop-Apps\]<br/>                                        |
+| Header<br/>                   | <dl> <dt>Scanprofilemgr.h</dt> </dl> |
+| Idl<br/>                      | <dl> <dt>Scanprofiles.idl</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
 [**IDispatch**](/windows/win32/api/oaidl/nn-oaidl-idispatch)
 </dt> <dt>
 
-[Profil Schema überprüfen](-wia-scan-profile-schema.md)
+[Scanprofilschema](-wia-scan-profile-schema.md)
 </dt> </dl>
 
  

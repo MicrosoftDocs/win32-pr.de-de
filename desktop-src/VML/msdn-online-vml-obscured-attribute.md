@@ -1,26 +1,26 @@
 ---
-title: VML-Attribut "verdeckt"
-description: VML-Attribut "verdeckt"
+title: Verborgenes VML-Attribut
+description: Verborgenes VML-Attribut
 ms.assetid: b8cdb066-e4fc-4dd6-a55a-7c2488f89e61
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: f3e383061d3210c9c52dc8c89322bd617257555e
-ms.sourcegitcommit: 592c9bbd22ba69802dc353bcb5eb30699f9e9403
+ms.openlocfilehash: f9122b3a9828fde816684cb20035949628ef25e38d06fb188d8271f0d5384f1f
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "104039194"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119308280"
 ---
-# <a name="vml-obscured-attribute"></a>VML-Attribut "verdeckt"
+# <a name="vml-obscured-attribute"></a>Verborgenes VML-Attribut
 
-In diesem Thema wird VML beschrieben, eine Funktion, die ab Windows Internet Explorer 9 veraltet ist. Webseiten und Anwendungen, die auf VML basieren, sollten zu SVG oder anderen allgemein unterstützten Standards migriert werden.
+In diesem Thema wird VML beschrieben, ein Feature, das ab Windows Internet Explorer 9 als veraltet gilt. Webseiten und Anwendungen, die auf VML basieren, sollten zu SVG oder anderen allgemein unterstützten Standards migriert werden.
 
 > [!Note]  
-> Ab Dezember 2011 wurde dieses Thema archiviert. Daher wird er nicht mehr aktiv verwaltet. Weitere Informationen finden Sie unter [archivierte Inhalte](/previous-versions/windows/internet-explorer/ie-developer/). Informationen, Empfehlungen und Anleitungen zur aktuellen Version von Windows Internet Explorer finden Sie im [Internet Explorer Developer Center](https://msdn.microsoft.com/ie/).
+> Seit Dezember 2011 wurde dieses Thema archiviert. Daher wird sie nicht mehr aktiv verwaltet. Weitere Informationen finden Sie unter [Archivierter Inhalt.](/previous-versions/windows/internet-explorer/ie-developer/) Informationen, Empfehlungen und Anleitungen zur aktuellen Version von Windows Internet Explorer finden Sie unter [Internet Explorer Developer Center.](https://msdn.microsoft.com/ie/)
 
- 
+ 
 
-Bestimmt, ob ein Schatten transparent ist. Lese-/Schreibzugriff. **Vgder State**.
+Bestimmt, ob ein Schatten transparent ist. Lese-/Schreibzugriff. **VgTriState**.
 
 **Gilt für**
 
@@ -28,19 +28,19 @@ Bestimmt, ob ein Schatten transparent ist. Lese-/Schreibzugriff. **Vgder State**
 
 **Tagsyntax**
 
-<v: *Element* verdeckt = " *Ausdruck* " >
+<v: *element* obscured=" *ausdruck* ">
 
-**Skript Syntax**
+**Skriptsyntax**
 
-*Element* . verdeckt = "*Ausdruck*"
+*element* .obscured="*expression*"
 
-*Ausdruck* = *Element*. verdeckt
+*expression* = *.obscured-Element*
 
 **Anmerkungen**
 
-Wenn der Wert **true** ist, wird der Schatten angezeigt, wenn die Form nicht ausgefüllt ist. Der Standardwert ist **False**.
+**True** gibt an, dass Sie durch den Schatten sehen können, ob keine Füllung auf der Form vorhanden ist. Der Standardwert ist **False**.
 
-*VML-Standard Attribut*
+*VML-Standardattribut*
 
 **Beispiel**
 
@@ -59,6 +59,6 @@ Der Hintergrund wird durch den Schatten angezeigt.
 
 
 
- 
+ 
 
- 
+ 

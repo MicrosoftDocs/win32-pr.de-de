@@ -1,9 +1,9 @@
 ---
-title: MCI_OPEN Befehl (MMSYSTEM. h)
-description: Der Befehl MCI \_ Open Initialisiert ein Gerät oder eine Datei. Alle Geräte erkennen diesen Befehl.
+title: MCI_OPEN Befehl (Mmsystem.h)
+description: Der MCI \_ OPEN-Befehl initialisiert ein Gerät oder eine Datei. Dieser Befehl wird von allen Geräten erkannt.
 ms.assetid: e2ee92b5-b10b-4408-950e-3002fe775b25
 keywords:
-- MCI_OPEN Befehl Windows-Multimedia
+- MCI_OPEN Befehl Windows Multimedia
 topic_type:
 - apiref
 api_name:
@@ -14,18 +14,18 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 14d8b33e70a2e061b54260aeffc6e69432c469f5
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: a84c95df35ecd602c207daa716b62d90f6bdc79b0ede7f937d3a38e6d6a9373b
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "103858630"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119689980"
 ---
-# <a name="mci_open-command"></a>MCI- \_ Befehl "Öffnen"
+# <a name="mci_open-command"></a>MCI \_ OPEN-Befehl
 
-Der Befehl MCI \_ Open Initialisiert ein Gerät oder eine Datei. Alle Geräte erkennen diesen Befehl.
+Der MCI \_ OPEN-Befehl initialisiert ein Gerät oder eine Datei. Dieser Befehl wird von allen Geräten erkannt.
 
-Um diesen Befehl zu senden, wenden Sie die [**mciSendCommand**](/previous-versions//dd757160(v=vs.85)) -Funktion mit den folgenden Parametern an.
+Rufen Sie zum Senden dieses Befehls die [**mciSendCommand-Funktion**](/previous-versions//dd757160(v=vs.85)) mit den folgenden Parametern auf.
 
 
 ```C++
@@ -43,164 +43,164 @@ MCIERROR mciSendCommand(
 
 <dl> <dt>
 
-<span id="wDeviceID"></span><span id="wdeviceid"></span><span id="WDEVICEID"></span>*WDE viceid*
+<span id="wDeviceID"></span><span id="wdeviceid"></span><span id="WDEVICEID"></span>*wDeviceID*
 </dt> <dd>
 
-Geräte Bezeichner des MCI-Geräts, das die Befehls Meldung empfangen soll.
+Gerätebezeichner des MCI-Geräts, das die Befehlsmeldung empfangen soll.
 
 </dd> <dt>
 
-<span id="dwFlags"></span><span id="dwflags"></span><span id="DWFLAGS"></span>*dwFlags*
+<span id="dwFlags"></span><span id="dwflags"></span><span id="DWFLAGS"></span>*Dwflags*
 </dt> <dd>
 
-MCI- \_ Benachrichtigung oder MCI- \_ Wartezeit. Weitere Informationen zu diesen Flags finden Sie [unter Wait-, notify-und testflags](the-wait-notify-and-test-flags.md).
+MCI \_ NOTIFY oder MCI \_ WAIT. Informationen zu diesen Flags finden Sie unter [Die Warte-, Benachrichtigungs- und Testflags.](the-wait-notify-and-test-flags.md)
 
 </dd> <dt>
 
-<span id="lpOpen"></span><span id="lpopen"></span><span id="LPOPEN"></span>*lpopen*
+<span id="lpOpen"></span><span id="lpopen"></span><span id="LPOPEN"></span>*lpOpen*
 </dt> <dd>
 
-Zeiger auf eine [**MCI- \_ Open- \_ Parser**](mci-open-parms.md) -Struktur. (Geräte mit erweiterten Befehlssätzen können diese Struktur durch eine gerätespezifische Struktur ersetzen.)
+Zeiger auf eine [**MCI \_ OPEN \_ PARMS-Struktur.**](mci-open-parms.md) (Geräte mit erweiterten Befehlssätzen können diese Struktur durch eine gerätespezifische Struktur ersetzen.)
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt 0 (null) zurück, wenn erfolgreich, andernfalls einen Fehler.
+Gibt 0 (null) zurück, wenn der Fehler erfolgreich war, oder andernfalls ein Fehler.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Das MCI \_ - \_ Flag für Open Type muss immer verwendet werden, wenn ein Gerät in der [**mciSendCommand**](/previous-versions//dd757160(v=vs.85)) -Funktion angegeben wird. Wenn Sie ein Gerät öffnen, indem Sie eine gerätertyp Konstante angeben, müssen Sie \_ \_ \_ zusätzlich zum geöffneten MCI-Typ das MCI-Flag für das Open Type-ID-Flag angeben \_ \_ . Eine Liste der Gerätetyp Konstanten finden Sie unter [MCI-Gerätetypen](mci-device-types.md).
+Das MCI \_ OPEN \_ TYPE-Flag muss immer dann verwendet werden, wenn ein Gerät in der [**mciSendCommand-Funktion**](/previous-versions//dd757160(v=vs.85)) angegeben wird. Wenn Sie ein Gerät öffnen, indem Sie eine Gerätetypkonstante angeben, müssen Sie zusätzlich zu MCI OPEN TYPE das \_ \_ \_ ID-Flag MCI \_ OPEN TYPE \_ angeben. Eine Liste der Gerätetypkonstanten finden Sie unter [MCI-Gerätetypen.](mci-device-types.md)
 
-Wenn das MCI \_ - \_ Flag zum Öffnen von freistellbar beim ersten Öffnen eines Geräts oder einer Datei nicht angegeben wird, schlagen alle nachfolgenden MCI- \_ Befehle zum Öffnen des Geräts oder der Datei fehl. Wenn das Gerät oder die Datei bereits geöffnet ist und dieses Flag nicht angegeben ist, schlägt der Aufruf fehl, auch wenn der erste geöffnete Befehl, den MCI angegeben hat, \_ \_ share able geöffnet hat. Dateien, die für mciseq geöffnet wurden. DRV und MCIWave. DRV-Geräte sind nicht Sharable.
+Wenn das MCI \_ OPEN \_ SHAREABLE-Flag beim ersten Öffnen eines Geräts oder einer Datei nicht angegeben wird, schlagen alle nachfolgenden MCI \_ OPEN-Befehle für das Gerät oder die Datei fehl. Wenn das Gerät oder die Datei bereits geöffnet ist und dieses Flag nicht angegeben ist, schlägt der Aufruf fehl, auch wenn der erste geöffnete Befehl MCI OPEN SHAREABLE angegeben \_ \_ hat. Für MCISEQ geöffnete Dateien. DRV und MCIWAVE. DRV-Geräte sind nicht verfügbar.
 
-Der Fall wird im Gerätenamen ignoriert, es dürfen jedoch keine führenden oder nachfolgenden Leerzeichen vorhanden sein.
+Die Groß-/Schreibung wird im Gerätenamen ignoriert, aber es dürfen keine führenden oder nachgestellten Leerzeichen vorhanden sein.
 
-Wenn Sie die automatische Typauswahl (über die Einträge in der Registrierung) verwenden möchten, weisen Sie dem **lpstrelementname** -Member der von *lpopen* identifizierten Struktur den Dateinamen und die Dateierweiterung zu, legen Sie den **lpstrdevicetype** -Member auf **null** fest, und legen Sie das Flag für das MCI- \_ Open-Element fest \_ .
+Um die automatische Typauswahl (über die Einträge in der Registrierung) zu verwenden, weisen Sie den Dateinamen und die Dateierweiterung dem **lpstrElementName-Member** der durch *lpOpen identifizierten* Struktur zu, legen Sie den **lpstrDeviceType-Member** auf **NULL** fest, und legen Sie das MCI \_ OPEN \_ ELEMENT-Flag fest.
 
-Die folgenden zusätzlichen Flags gelten für alle Geräte, die MCI geöffnet unterstützen \_ :
-
-<dl> <dt>
-
-<span id="MCI_OPEN_ALIAS"></span><span id="mci_open_alias"></span>MCI- \_ Open- \_ Alias
-</dt> <dd>
-
-Ein Alias ist im **lpstralias** -Member der durch *lpopen* identifizierten Struktur enthalten.
-
-</dd> <dt>
-
-<span id="MCI_OPEN_SHAREABLE"></span><span id="mci_open_shareable"></span>MCI \_ Open \_ share able
-</dt> <dd>
-
-Das Gerät oder die Datei muss als Sharable geöffnet werden.
-
-</dd> <dt>
-
-<span id="MCI_OPEN_TYPE"></span><span id="mci_open_type"></span>MCI- \_ Open- \_ Typ
-</dt> <dd>
-
-Ein Gerätetyp Name oder eine Konstante ist im **lpstrdevicetype** -Member der durch *lpopen* identifizierten Struktur enthalten.
-
-</dd> <dt>
-
-<span id="MCI_OPEN_TYPE_ID"></span><span id="mci_open_type_id"></span>MCI- \_ öffnende \_ Typ- \_ ID
-</dt> <dd>
-
-Das nieder wertige Wort des **lpstrdevicetype** -Members der von *lpopen* identifizierten Struktur enthält einen Standard-MCI-Gerätetyp Bezeichner, und das höchst wertige Wort enthält optional den Ordinalindex für das Gerät. Verwenden Sie dieses Flag mit dem MCI- \_ \_ Flag Open Type.
-
-</dd> </dl>
-
-Die folgenden zusätzlichen Flags gelten für Verbund Geräte:
+Die folgenden zusätzlichen Flags gelten für alle Geräte, die MCI \_ OPEN unterstützen:
 
 <dl> <dt>
 
-<span id="MCI_OPEN_ELEMENT"></span><span id="mci_open_element"></span>geöffnetes MCI- \_ \_ Element
+<span id="MCI_OPEN_ALIAS"></span><span id="mci_open_alias"></span>MCI \_ OPEN \_ ALIAS
 </dt> <dd>
 
-Ein Dateiname ist im **lpstrelementname** -Member der durch *lpopen* identifizierten Struktur enthalten.
+Ein Alias ist im **lpstrAlias-Member** der durch *lpOpen identifizierten* Struktur enthalten.
 
 </dd> <dt>
 
-<span id="MCI_OPEN_ELEMENT_ID"></span><span id="mci_open_element_id"></span>MCI- \_ Open- \_ Element- \_ ID
+<span id="MCI_OPEN_SHAREABLE"></span><span id="mci_open_shareable"></span>MCI \_ OPEN \_ SHAREABLE
 </dt> <dd>
 
-Der **lpstrelementname** -Member der Struktur, die von *lpopen* identifiziert wird, wird als **DWORD** -Wert interpretiert und hat eine interne Bedeutung für das Gerät. Verwenden Sie dieses Flag mit dem MCI- \_ Flag "Open \_ Element".
+Das Gerät oder die Datei sollte als trennbar geöffnet werden.
+
+</dd> <dt>
+
+<span id="MCI_OPEN_TYPE"></span><span id="mci_open_type"></span>MCI \_ OPEN \_ TYPE
+</dt> <dd>
+
+Ein Gerätetypname oder eine Konstante ist im **lpstrDeviceType-Member** der durch *lpOpen identifizierten* Struktur enthalten.
+
+</dd> <dt>
+
+<span id="MCI_OPEN_TYPE_ID"></span><span id="mci_open_type_id"></span>MCI \_ OPEN \_ TYPE \_ ID
+</dt> <dd>
+
+Das Wort mit niedriger Reihenfolge des **lpstrDeviceType-Members** der durch *lpOpen identifizierten* Struktur enthält einen Standard-MCI-Gerätetypbezeichner, und das Wort in hoher Ordnung enthält optional den Ordnungsindex für das Gerät. Verwenden Sie dieses Flag mit dem MCI \_ OPEN \_ TYPE-Flag.
 
 </dd> </dl>
 
-Die folgenden zusätzlichen Flags werden mit dem **Digitalvideo** -Gerätetyp verwendet:
+Die folgenden zusätzlichen Flags gelten für Verbundgeräte:
 
 <dl> <dt>
 
-<span id="MCI_DGV_OPEN_NOSTATIC"></span><span id="mci_dgv_open_nostatic"></span>MCI \_ DGV \_ Open \_ nostatic
+<span id="MCI_OPEN_ELEMENT"></span><span id="mci_open_element"></span>MCI \_ \_ OPEN-ELEMENT
 </dt> <dd>
 
-Das Gerät sollte die Anzahl der statischen (System) Farben in der Palette reduzieren. Dadurch erhöht sich die Anzahl der zum Rendern des Videodaten Stroms verfügbaren Farben. Dieses Flag gilt nur für Geräte, die eine Palette mit Windows gemeinsam verwenden.
+Ein Dateiname ist im **lpstrElementName-Member** der durch *lpOpen identifizierten* Struktur enthalten.
 
 </dd> <dt>
 
-<span id="MCI_DGV_OPEN_PARENT"></span><span id="mci_dgv_open_parent"></span>übergeordnetes MCI- \_ DGV-Element \_ Öffnen \_
+<span id="MCI_OPEN_ELEMENT_ID"></span><span id="mci_open_element_id"></span>MCI \_ OPEN \_ ELEMENT \_ ID
 </dt> <dd>
 
-Das übergeordnete Fenster Handle wird im **hwndParent** -Member der durch *lpopen* identifizierten Struktur angegeben.
-
-</dd> <dt>
-
-<span id="MCI_DGV_OPEN_WS"></span><span id="mci_dgv_open_ws"></span>MCI \_ DGV \_ Open \_ WS
-</dt> <dd>
-
-Im **dwstyle** -Member der-Struktur, die von *lpopen* identifiziert wird, wird ein Fenster Stil angegeben.
-
-</dd> <dt>
-
-<span id="MCI_DGV_OPEN_16BIT"></span><span id="mci_dgv_open_16bit"></span>MCI \_ DGV, \_ geöffnet, \_ 16 Bit
-</dt> <dd>
-
-Gibt eine Einstellung für die Unterstützung von 16-Bit-MCI-Geräten an.
-
-</dd> <dt>
-
-<span id="MCI_DGV_OPEN_32BIT"></span><span id="mci_dgv_open_32bit"></span>MCI \_ DGV, \_ geöffnet, \_ 32-Bit
-</dt> <dd>
-
-Gibt eine Einstellung für die 32-Bit-MCI-Geräte Unterstützung an.
+Der **lpstrElementName-Member** der von *lpOpen identifizierten* Struktur wird als **DWORD-Wert** interpretiert und hat eine interne Bedeutung für das Gerät. Verwenden Sie dieses Flag mit dem MCI \_ OPEN \_ ELEMENT-Flag.
 
 </dd> </dl>
 
-Für Digital Video-Geräte verweist der *lpopen* -Parameter auf eine [**MCI-DGV-Struktur mit \_ \_ geöffneten \_ para**](/windows/desktop/api/Digitalv/ns-digitalv-mci_dgv_open_parmsa) Metern.
-
-Die folgenden zusätzlichen Flags werden mit dem **Überlagerungs** Gerätetyp verwendet:
+Die folgenden zusätzlichen Flags werden mit dem **Gerätetyp digitalvideo** verwendet:
 
 <dl> <dt>
 
-<span id="MCI_OVLY_OPEN_PARENT"></span><span id="mci_ovly_open_parent"></span>MCI \_ OVLY \_ über \_ geordnetes Element öffnen
+<span id="MCI_DGV_OPEN_NOSTATIC"></span><span id="mci_dgv_open_nostatic"></span>MCI \_ DGV \_ OPEN \_ NOSTATIC
 </dt> <dd>
 
-Das übergeordnete Fenster Handle wird im **hwndParent** -Member der durch *lpopen* identifizierten Struktur angegeben.
+Das Gerät sollte die Anzahl statischer Farben (Systemfarben) in der Palette reduzieren. Dies erhöht die Anzahl der Farben, die zum Rendern des Videostreams verfügbar sind. Dieses Flag gilt nur für Geräte, die eine Palette mit Windows gemeinsam nutzen.
 
 </dd> <dt>
 
-<span id="MCI_OVLY_OPEN_WS"></span><span id="mci_ovly_open_ws"></span>MCI \_ OVLY- \_ Open- \_ WS
+<span id="MCI_DGV_OPEN_PARENT"></span><span id="mci_dgv_open_parent"></span>MCI \_ DGV \_ OPEN \_ PARENT
 </dt> <dd>
 
-Im **dwstyle** -Member der-Struktur, die von *lpopen* identifiziert wird, wird ein Fenster Stil angegeben. Der **dwstyle** -Wert gibt den Stil des Fensters an, den der Treiber erstellt und anzeigt, wenn die Anwendung keinen bereitstellt. Der style-Parameter nimmt eine ganze Zahl an, die den Fenster Stil definiert. Diese Konstanten sind identisch mit den Standardfenster Stilen (z. b. WS \_ Child, WS \_ overlappedwindow oder WS \_ Popup).
+Das übergeordnete Fensterhandle wird im **hWndParent-Member** der durch *lpOpen identifizierten* Struktur angegeben.
+
+</dd> <dt>
+
+<span id="MCI_DGV_OPEN_WS"></span><span id="mci_dgv_open_ws"></span>MCI \_ DGV \_ OPEN \_ WS
+</dt> <dd>
+
+Ein Fensterstil wird im **dwStyle-Member** der durch *lpOpen identifizierten* Struktur angegeben.
+
+</dd> <dt>
+
+<span id="MCI_DGV_OPEN_16BIT"></span><span id="mci_dgv_open_16bit"></span>MCI \_ DGV \_ OPEN \_ 16 BIT
+</dt> <dd>
+
+Gibt eine Einstellung für die 16-Bit-MCI-Geräteunterstützung an.
+
+</dd> <dt>
+
+<span id="MCI_DGV_OPEN_32BIT"></span><span id="mci_dgv_open_32bit"></span>MCI \_ DGV \_ OPEN \_ 32 BIT
+</dt> <dd>
+
+Gibt eine Einstellung für die Unterstützung von 32-Bit-MCI-Geräten an.
 
 </dd> </dl>
 
-Bei Video Überlagerungs Geräten zeigt der *lpopen* -Parameter auf eine [**MCI \_ OVLY- \_ Open \_**](mci-ovly-open-parms.md) -Parameterstruktur.
+Bei Geräten mit digitalem Video zeigt der *lpOpen-Parameter* auf eine [**MCI \_ DGV \_ OPEN \_ PARMS-Struktur.**](/windows/desktop/api/Digitalv/ns-digitalv-mci_dgv_open_parmsa)
 
-Das folgende zusätzliche Flag wird mit dem **waveaudiogerätetyp** verwendet:
+Die folgenden zusätzlichen Flags werden mit dem **Überlagerungsgerätetyp** verwendet:
 
 <dl> <dt>
 
-<span id="MCI_WAVE_OPEN_BUFFER"></span><span id="mci_wave_open_buffer"></span>MCI- \_ Wellen \_ Öffnungs \_ Puffer
+<span id="MCI_OVLY_OPEN_PARENT"></span><span id="mci_ovly_open_parent"></span>MCI \_ OVLY \_ OPEN \_ PARENT
 </dt> <dd>
 
-Im **dwbufferseconds** -Member der Struktur, die von *lpopen* identifiziert wird, wird eine Pufferlänge angegeben.
+Das übergeordnete Fensterhandle wird im **hWndParent-Member** der durch *lpOpen identifizierten* Struktur angegeben.
+
+</dd> <dt>
+
+<span id="MCI_OVLY_OPEN_WS"></span><span id="mci_ovly_open_ws"></span>MCI \_ OVLY \_ OPEN \_ WS
+</dt> <dd>
+
+Ein Fensterstil wird im **dwStyle-Member** der durch *lpOpen identifizierten* Struktur angegeben. Der **dwStyle-Wert** gibt den Stil des Fensters an, das der Treiber erstellt und anzeigt, wenn die Anwendung keines bereitstellt. Der style-Parameter akzeptiert eine ganze Zahl, die den Fensterstil definiert. Diese Konstanten sind identisch mit den Standardfensterstilen (z. B. WS \_ CHILD, WS \_ OVERLAPPEDWINDOW oder WS \_ POPUP).
 
 </dd> </dl>
 
-Bei Waveform-Audiogeräten zeigt der *lpopen* -Parameter auf eine [**MCI \_ Wave \_ Open \_**](mci-wave-open-parms.md) -Parameter Struktur. Der MCIWave-Treiber erfordert ein asynchrones Waveform-Audiogerät.
+Bei Videoüberlagerungsgeräten zeigt der *lpOpen-Parameter* auf eine [**MCI \_ OVLY \_ OPEN \_ PARMS-Struktur.**](mci-ovly-open-parms.md)
+
+Das folgende zusätzliche Flag wird mit dem **Gerätetyp waveaudio** verwendet:
+
+<dl> <dt>
+
+<span id="MCI_WAVE_OPEN_BUFFER"></span><span id="mci_wave_open_buffer"></span>MCI \_ WAVE \_ OPEN \_ BUFFER
+</dt> <dd>
+
+Eine Pufferlänge wird im **dwBufferSeconds-Member** der -Struktur angegeben, die durch *lpOpen* identifiziert wird.
+
+</dd> </dl>
+
+Für Waveform-Audiogeräte zeigt der *lpOpen-Parameter* auf eine [**MCI \_ WAVE OPEN \_ \_ PARMS-Struktur.**](mci-wave-open-parms.md) Der MCIWAVE-Treiber erfordert ein asynchrones Waveform-Audiogerät.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -210,15 +210,15 @@ Bei Waveform-Audiogeräten zeigt der *lpopen* -Parameter auf eine [**MCI \_ Wave
 |-------------------------------------|-----------------------------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional \[nur Desktop-Apps\]<br/>                                                |
 | Unterstützte Mindestversion (Server)<br/> | Windows 2000 Server \[nur Desktop-Apps\]<br/>                                                      |
-| Header<br/>                   | <dl> <dt>MMSYSTEM. h (Include Windows. h)</dt> </dl> |
+| Header<br/>                   | <dl> <dt>Mmsystem.h (include Windows.h)</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[MCI](mci.md)
+[Mci](mci.md)
 </dt> <dt>
 
 [MCI-Befehle](mci-commands.md)

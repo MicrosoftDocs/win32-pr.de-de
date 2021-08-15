@@ -1,25 +1,25 @@
 ---
-description: Die Tabellen \_ Tabelle ist eine schreibgeschützte Systemtabelle, in der alle Tabellen in der Datenbank aufgelistet sind. Fragen Sie diese Tabelle ab, um herauszufinden, ob eine Tabelle vorhanden ist.
+description: Die \_ Tabelle Tabellen ist eine schreibgeschützte Systemtabelle, die alle Tabellen in der Datenbank auflistet. Fragen Sie diese Tabelle ab, um herauszufinden, ob eine Tabelle vorhanden ist.
 ms.assetid: d064855b-8c10-476e-9570-cc3ab48ae998
 title: _Tables Tabelle
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: d2dc3ebafd969a07676f64f674f76c3e16ebe059
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 10c251693d89bb23634b222518e98dba270856e672362bcdc9acddd3c0b86c56
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "103864544"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119013318"
 ---
-# <a name="_tables-table"></a>\_Tabelle Tabellen
+# <a name="_tables-table"></a>\_Tabellentabelle
 
-Die Tabellen \_ Tabelle ist eine schreibgeschützte Systemtabelle, in der alle Tabellen in der Datenbank aufgelistet sind. Fragen Sie diese Tabelle ab, um herauszufinden, ob eine Tabelle vorhanden ist.
+Die \_ Tabelle Tabellen ist eine schreibgeschützte Systemtabelle, die alle Tabellen in der Datenbank auflistet. Fragen Sie diese Tabelle ab, um herauszufinden, ob eine Tabelle vorhanden ist.
 
-Die \_ Tabelle Tabellen weist die folgende Spalte auf.
+Die \_ Tabelle Tabellen enthält die folgende Spalte.
 
 
 
-| Spalte | Typ             | Schlüssel | Nullwerte zulässig |
+| Spalte | Typ             | Key | Nullwerte zulässig |
 |--------|------------------|-----|----------|
 | Name   | [Text](text.md) | J   | N        |
 
@@ -31,16 +31,16 @@ Die \_ Tabelle Tabellen weist die folgende Spalte auf.
 
 <dl> <dt>
 
-<span id="Name"></span><span id="name"></span><span id="NAME"></span>Benennen
+<span id="Name"></span><span id="name"></span><span id="NAME"></span>Namen
 </dt> <dd>
 
-Der Name einer der Tabellen.
+Name einer der Tabellen.
 
 </dd> </dl>
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Da die \_ Tabellen Tabelle eine Systemtabelle ist, die nicht über SQL-Abfragen geändert werden kann, können Sie die Primärschlüssel nicht mit der [**msidatabasegetprimarykeys**](/windows/desktop/api/Msiquery/nf-msiquery-msidatabasegetprimarykeysa) -Funktion oder der [**primarykeys-Eigenschaft**](database-primarykeys.md)abrufen.
+Da die \_ Tabelle Tabellen eine Systemtabelle ist, die nicht durch SQL Abfragen geändert werden kann, können Sie die Primärschlüssel nicht mit der [**MsiDatabaseGetPrimaryKeys-Funktion**](/windows/desktop/api/Msiquery/nf-msiquery-msidatabasegetprimarykeysa) oder der [**PrimaryKeys-Eigenschaft**](database-primarykeys.md)abrufen.
 
  
 

@@ -1,148 +1,148 @@
 ---
-title: Wmformat-Glossar
-description: Um einen Begriff im Glossar zu finden, klicken Sie auf den Buchstaben des Alphabets, der der erste Buchstabe in dem Begriff ist, den Sie suchen möchten. Sie können auch Glossar Begriffe im Text der Hilfe lesen, indem Sie auf die unterstrichenen Glossar Begriffs Links klicken.
+title: WMFormat-Glossar
+description: Um einen Begriff im Glossar zu finden, klicken Sie auf den Buchstaben des Alphabets, das der erste Buchstabe des Begriffs ist, den Sie suchen möchten. Sie können Glossarbegriffe auch im Text der Hilfe lesen, indem Sie auf die unterstrichenen Glossarbegriffslinks klicken.
 ROBOTS: NOINDEX, NOFOLLOW
 ms.assetid: 7142163b-ee2c-43e3-9c17-3e039abbeeaf
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: ebf5623b1ed0b1ea312625f6682a0f35e31c2578
-ms.sourcegitcommit: 592c9bbd22ba69802dc353bcb5eb30699f9e9403
+ms.openlocfilehash: 2877c4b9000adf15fbef4cd43c48ab292a7f418c20b8a896f9ed08ffa88078bb
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "104390720"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119083774"
 ---
-# <a name="wmformat-glossary"></a>Wmformat-Glossar
+# <a name="wmformat-glossary"></a>WMFormat-Glossar
 
-Um einen Begriff im Glossar zu finden, klicken Sie auf den Buchstaben des Alphabets, der der erste Buchstabe in dem Begriff ist, den Sie suchen möchten.
+Um einen Begriff im Glossar zu finden, klicken Sie auf den Buchstaben des Alphabets, das der erste Buchstabe des Begriffs ist, den Sie suchen möchten.
 
-Sie können auch Glossar Begriffe im Text der Hilfe lesen, indem Sie auf die unterstrichenen Glossar Begriffs Links klicken. Nachdem Sie auf einen Glossar Link klicken, werden der Glossar Begriff und die Definition in einem Popup Fenster angezeigt. Um das Fenster zu schließen, klicken Sie auf eine beliebige Stelle im Bildschirm.
+Sie können Glossarbegriffe auch im Text der Hilfe lesen, indem Sie auf die unterstrichenen Glossarbegriffslinks klicken. Nachdem Sie auf einen Glossarlink geklickt haben, werden der Glossarbegriff und die Definition in einem Popupfenster angezeigt. Um das Fenster zu schließen, klicken Sie auf eine beliebige Stelle auf dem Bildschirm.
 
 <dl> <dt>
 
 <span id="wmformat.bandwidth"></span><span id="WMFORMAT.BANDWIDTH"></span>**Bandbreite**
 </dt> <dd>
 
-Die Datenübertragungs Kapazität eines Übertragungsmediums.
+Die Datenübertragungskapazität eines Übertragungsmediums.
 
 </dd> <dt>
 
 <span id="wmformat.bit_rate"></span><span id="WMFORMAT.BIT_RATE"></span>**Bitrate**
 </dt> <dd>
 
-Die Anzahl von Bits, die pro Zeiteinheit übertragen werden (in der Regel in Bits pro Sekunde ausgedrückt).
+Die Anzahl der pro Zeiteinheit übertragenen Bits, die in der Regel in Bits pro Sekunde ausgedrückt werden.
 
 </dd> <dt>
 
 <span id="wmformat.broadband"></span><span id="WMFORMAT.BROADBAND"></span>**Breitband**
 </dt> <dd>
 
-Ein Übertragungsmedium, das für Hochgeschwindigkeitsdaten Übertragungen über lange Entfernungen konzipiert ist. Kabelmodem Dienste und DSL sind Beispiele für Breitbandnetzwerke.
+Ein Übertragungsmedium, das für hochgeschwindigkeitsbasierte Datenübertragungen über lange Entfernungen konzipiert ist. Kabelmodemdienste und DSL sind Beispiele für Breitbandnetzwerke.
 
 </dd> <dt>
 
 <span id="wmformat.cleanpoint"></span><span id="WMFORMAT.CLEANPOINT"></span>**Cleanpoint**
 </dt> <dd>
 
-Eine komprimierte Stichprobe, die nicht von einer anderen Stichprobe für die Komprimierung abhängt. Es ist nur gültig, einen Cleanpoint zu suchen.
+Eine komprimierte Stichprobe, die nicht von anderen Stichproben für die Dekomprimierung abhängig ist. Es ist nur gültig, nach einem Cleanpoint zu suchen.
 
 </dd> <dt>
 
 <span id="wmformat.clear_content"></span><span id="WMFORMAT.CLEAR_CONTENT"></span>**Inhalt löschen**
 </dt> <dd>
 
-Eine nicht verschlüsselte Windows-Mediendatei.
+Eine Windows Mediendatei, die nicht verschlüsselt ist.
 
 </dd> <dt>
 
 <span id="wmformat.codec"></span><span id="WMFORMAT.CODEC"></span>**Codec**
 </dt> <dd>
 
-Eine Abkürzung für "Kompressor/Debug". Software oder Hardware zum Komprimieren und decoden von digitalen Medien.
+Eine Abkürzung für Bzw. dekomprimieren. Software oder Hardware, die zum Komprimieren und Dekomprimieren digitaler Medien verwendet wird.
 
 </dd> <dt>
 
 <span id="wmformat.content"></span><span id="WMFORMAT.CONTENT"></span>**Inhalt**
 </dt> <dd>
 
-Audioinformationen, Videos, Bilder, Text oder andere Informationen, die in einer digitalen Mediendatei oder einem Stream enthalten sind.
+Audio, Video, Bilder, Text oder andere Informationen, die in einer digitalen Mediendatei oder einem digitalen Datenstrom enthalten sind.
 
 </dd> <dt>
 
-<span id="wmformat.content_header"></span><span id="WMFORMAT.CONTENT_HEADER"></span>**Content-Header**
+<span id="wmformat.content_header"></span><span id="WMFORMAT.CONTENT_HEADER"></span>**Inhaltsheader**
 </dt> <dd>
 
-Teil der Dateistruktur einer Windows Media-Datei, die Informationen enthält, die ein Client Computer zum Dekomprimieren und Rendering der Inhaltsdaten benötigt. In einer Paketdatei ist ein zusätzlicher Inhalts Header vorhanden, der die Schlüssel-ID, die Inhalts-ID und die Lizenz Erwerbs-URL enthält. Diese Inhalts Kopfzeile kann auch eine erforderliche Individualisierungs Versionsnummer und Attribute enthalten, die vom Inhaltsanbieter definiert werden.
+Teil der Dateistruktur einer Windows-Mediendatei, die Informationen enthält, die ein Clientcomputer zum Dekomprimieren und Rendern der Inhaltsdaten benötigt. In einer gepackten Datei ist ein zusätzlicher Inhaltsheader vorhanden, der die Schlüssel-ID, Inhalts-ID und Lizenzerwerbs-URL enthält. Dieser Inhaltsheader kann auch eine erforderliche Individualisierungsversionsnummer und Attribute enthalten, die vom Inhaltsanbieter definiert werden.
 
 </dd> <dt>
 
-<span id="wmformat.content_owner"></span><span id="WMFORMAT.CONTENT_OWNER"></span>**Inhalts Besitzer**
+<span id="wmformat.content_owner"></span><span id="WMFORMAT.CONTENT_OWNER"></span>**Inhaltsbesitzer**
 </dt> <dd>
 
-Die Person oder Organisation, die Windows Media-Dateien erstellt, z. b. eine Daten Satz Bezeichnung, ein Movie Studio oder ein Maler.
+Die Person oder Organisation, die Windows Mediendateien erstellt, z. B. eine Datensatzbezeichnung, ein Filmstudio oder einen Interpreten.
 
 </dd> <dt>
 
 <span id="wmformat.cookie"></span><span id="WMFORMAT.COOKIE"></span>**Cookie**
 </dt> <dd>
 
-Eine kleine Datendatei, die auf dem lokalen Computer eines Benutzers gespeichert ist und Informationen über den Benutzer enthält, der für eine Website relevant ist (z. b. Benutzereinstellungen).
+Eine kleine Datendatei, die auf dem lokalen Computer eines Benutzers gespeichert ist und Informationen über den Benutzer enthält, die für eine Website relevant sind, z. B. Benutzereinstellungen.
 
 </dd> <dt>
 
-<span id="wmformat.custom_profile"></span><span id="WMFORMAT.CUSTOM_PROFILE"></span>**benutzerdefiniertes Profil**
+<span id="wmformat.custom_profile"></span><span id="WMFORMAT.CUSTOM_PROFILE"></span>**Benutzerdefiniertes Profil**
 </dt> <dd>
 
-Eine Gruppe von Einstellungen, die von einem Endbenutzer definiert werden, um die encoderausgabe zu konfigurieren.
+Eine Gruppe von Einstellungen, die von einem Endbenutzer zum Konfigurieren der Encoderausgabe definiert werden.
 
 </dd> <dt>
 
-<span id="wmformat.decrypt"></span><span id="WMFORMAT.DECRYPT"></span>**entschlüsseln**
+<span id="wmformat.decrypt"></span><span id="WMFORMAT.DECRYPT"></span>**decrypt**
 </dt> <dd>
 
-, Wenn verschlüsselter Inhalt wieder in seine ursprüngliche Form konvertiert werden soll.
+So konvertieren Sie verschlüsselten Inhalt wieder in die ursprüngliche Form.
 
 </dd> <dt>
 
-<span id="wmformat.deinterlace"></span><span id="WMFORMAT.DEINTERLACE"></span>**Deinterlacing**
+<span id="wmformat.deinterlace"></span><span id="WMFORMAT.DEINTERLACE"></span>**deinterlace**
 </dt> <dd>
 
-Zum Kombinieren der Zeilen Sprung Felder in einem Videoframe, damit die Linien des Video Rahmens während der Wiedergabe sequenziell gezeichnet werden.
+Um die Verschachtelungsfelder in einem Videoframe zu kombinieren, sodass die Zeilen des Videoframes während der Wiedergabe sequenziell gestrichen werden.
 
 </dd> <dt>
 
-<span id="wmformat.delta_frame"></span><span id="WMFORMAT.DELTA_FRAME"></span>**Delta Rahmen**
+<span id="wmformat.delta_frame"></span><span id="WMFORMAT.DELTA_FRAME"></span>**Deltaframe**
 </dt> <dd>
 
-Ein Videoframe, der nur die Änderungen aus dem vorherigen Frame enthält. Im Gegensatz dazu enthält ein Keyframe alle Daten, die erforderlich sind, um diesen Frame zu erstellen.
+Ein Videoframe, der nur die Änderungen aus dem vorherigen Frame enthält. Im Gegensatz dazu enthält ein Keyframe alle Daten, die zum Erstellen dieses Rahmens erforderlich sind.
 
 </dd> <dt>
 
 <span id="wmformat.digital_rights_management__drm_"></span><span id="WMFORMAT.DIGITAL_RIGHTS_MANAGEMENT__DRM_"></span>**Digital Rights Management (DRM)**
 </dt> <dd>
 
-Jede Technologie, mit der die Interessen von Besitzern digitaler Inhalte und Dienste (z. b. Urheberrechts Besitzer) geschützt werden. In der Regel müssen autorisierte Empfänger oder Benutzer eine Lizenz erwerben, damit der Inhalt verwendet werden kann.
+Jede Technologie, die verwendet wird, um die Interessen der Besitzer digitaler Inhalte und Dienste (z. B. Urheberrechtsinhaber) zu schützen. In der Regel müssen autorisierte Empfänger oder Benutzer eine Lizenz erwerben, um den Inhalt zu verwenden.
 
 </dd> <dt>
 
-<span id="wmformat.digital_rights_management__drm__component"></span><span id="WMFORMAT.DIGITAL_RIGHTS_MANAGEMENT__DRM__COMPONENT"></span>**Digital Rights Management (DRM)-Komponente**
+<span id="wmformat.digital_rights_management__drm__component"></span><span id="WMFORMAT.DIGITAL_RIGHTS_MANAGEMENT__DRM__COMPONENT"></span>**Digital Rights Management-Komponente (DRM)**
 </dt> <dd>
 
-Die Komponente eines Players, der alle Funktionen von Digital Rights Management behandelt, z. b. das Entschlüsseln von Paketdateien oder das Initiieren des Lizenz Erwerbs.
+Die Komponente eines Players, der alle Funktionen der Verwaltung digitaler Rechte verarbeitet, z. B. das Entschlüsseln von verpackten Dateien oder das Initiieren des Lizenzerwerbs.
 
 </dd> <dt>
 
 <span id="wmformat.directx_media_object__dmo_"></span><span id="WMFORMAT.DIRECTX_MEDIA_OBJECT__DMO_"></span>**DirectX-Medienobjekt (DMO)**
 </dt> <dd>
 
-Ein COM-Objekt, das multimediadatenstreams aus Puffern verarbeitet, die vom Client zugeordnet werden.
+Ein COM-Objekt, das Multimediadatenströme aus Puffern verarbeitet, die vom Client zugeordnet werden.
 
 </dd> <dt>
 
 <span id="wmformat.dmo"></span><span id="WMFORMAT.DMO"></span>**DMO**
 </dt> <dd>
 
-Siehe Definition für: [ *DirectX-Medienobjekt (DMO)*](/windows)
+Siehe Definition für: [ *DirectX Media Object (DMO)*](/windows)
 
 </dd> <dt>
 
@@ -153,31 +153,31 @@ Siehe Definition für: [ *Digital Rights Management (DRM)*](/windows)
 
 </dd> <dt>
 
-<span id="wmformat.encode"></span><span id="WMFORMAT.ENCODE"></span>**Codieren**
+<span id="wmformat.encode"></span><span id="WMFORMAT.ENCODE"></span>**codieren**
 </dt> <dd>
 
-, Um Audioinhalte und Videoinhalte in ein bestimmtes digitales Format zu konvertieren, in der Regel mit Komprimierungs Technologie oder Verschlüsselungstechnologie.
+Um Audio- und Videoinhalte in ein angegebenes digitales Format zu konvertieren, in der Regel mit Komprimierungstechnologie oder Verschlüsselungstechnologie.
 
 </dd> <dt>
 
-<span id="wmformat.encrypt"></span><span id="WMFORMAT.ENCRYPT"></span>**verschlüsseln**
+<span id="wmformat.encrypt"></span><span id="WMFORMAT.ENCRYPT"></span>**encrypt**
 </dt> <dd>
 
-, Um Inhalte Programm gesteuert zu verbergen, um deren Substanz auszublenden.
+Um Inhalte programmgesteuert zu verinern, um ihre Inhalte auszublenden.
 
 </dd> <dt>
 
 <span id="wmformat.frame"></span><span id="WMFORMAT.FRAME"></span>**Frame**
 </dt> <dd>
 
-Eines von vielen sequenziellen Bildern, die Videos bilden.
+Eines von vielen sequenziellen Bildern, aus denen Sichten von Videos machen.
 
 </dd> <dt>
 
 <span id="wmformat.frame_rate"></span><span id="WMFORMAT.FRAME_RATE"></span>**Framerate**
 </dt> <dd>
 
-Die Anzahl der pro Sekunde angezeigten Video Frames. Höhere Frameraten führen in der Regel zu einer glatteren Bewegung des Bilds.
+Die Anzahl der pro Sekunde angezeigten Videoframes. Höhere Bildraten erzeugen im Allgemeinen eine reibungslosere Bewegung im Bild.
 
 </dd> <dt>
 
@@ -191,49 +191,49 @@ Ein Standard zum Hinzufügen von Metadaten zu MP3-Dateien.
 <span id="wmformat.index"></span><span id="WMFORMAT.INDEX"></span>**Index**
 </dt> <dd>
 
-Ein Marker, der vom Windows Media-Format Software Development Kit (SDK) erstellt wird, um das Suchen in einer Videodatei zu ermöglichen.
+Ein Marker, der vom Windows Media Format Software Development Kit (SDK) erstellt wird, um das Suchen in einer Videodatei zu ermöglichen.
 
 </dd> <dt>
 
 <span id="wmformat.individualization"></span><span id="WMFORMAT.INDIVIDUALIZATION"></span>**Individualisierung**
 </dt> <dd>
 
-Der Prozess, bei dem die Digital Rights Management (DRM-Komponente) im Player des Consumers eindeutig ist. Durch diesen Prozess wird die Sicherheit erhöht, da es schwierig ist, mehr als einen Spieler gleichzeitig zu beschädigen. Dieser Prozess wird auch als Abrufen eines Sicherheits Upgrades bezeichnet.
+Der Prozess, bei dem die KOMPONENTE für die verwaltung digitaler Rechte (Digital Rights Management, DRM) im Player des Kunden eindeutig ist. Dieser Prozess erhöht die Sicherheit, da es schwierig ist, mehrere Spieler gleichzeitig zu beschädigten. Dieser Prozess wird auch als Abrufen eines Sicherheitsupgrades bezeichnet.
 
 </dd> <dt>
 
-<span id="wmformat.interlace"></span><span id="WMFORMAT.INTERLACE"></span>**interspitze**
+<span id="wmformat.interlace"></span><span id="WMFORMAT.INTERLACE"></span>**Interlace**
 </dt> <dd>
 
-, Um einen Videoframe in zwei Feldern anzuzeigen. Ein Feld enthält die geraden Linien des Frames, das andere Feld enthält die ungeraden Zeilen. Während der Wiedergabe werden die Zeilen in einem Feld zuerst angezeigt, dann werden die Zeilen im zweiten Feld angezeigt.
+So zeigen Sie einen Videoframe in zwei Feldern an. Ein Feld enthält die gleichmäßigen Linien des Rahmens, das andere die ungeraden Linien. Während der Wiedergabe werden zuerst die Zeilen in einem Feld und dann die Zeilen im zweiten Feld angezeigt.
 
 </dd> <dt>
 
 <span id="wmformat.inverse_telecine"></span><span id="WMFORMAT.INVERSE_TELECINE"></span>**Inverse Telecine**
 </dt> <dd>
 
-Der Prozess, durch den die Frames entfernt werden, die beim Konvertieren des 24-fps-Films in 30-fps-Videos hinzugefügt wurden.
+Der Prozess, der die Frames entfernt, die hinzugefügt wurden, als der 24-Fps-Film in ein 30-Fps-Video konvertiert wurde.
 
 </dd> <dt>
 
-<span id="wmformat.key"></span><span id="WMFORMAT.KEY"></span>**Schlüssel**
+<span id="wmformat.key"></span><span id="WMFORMAT.KEY"></span>**Key**
 </dt> <dd>
 
-Ein Datenelement, das zum Entsperren einer verpackten Windows-Mediendatei erforderlich ist. Dieser Schlüssel ist in einer separaten Lizenz enthalten.
+Ein Datenteil, der zum Entsperren einer gepackten Windows Mediendatei erforderlich ist. Dieser Schlüssel ist in einer separaten Lizenz enthalten.
 
 </dd> <dt>
 
 <span id="wmformat.key_frame"></span><span id="WMFORMAT.KEY_FRAME"></span>**Keyframe**
 </dt> <dd>
 
-Ein Videoframe, der alle Daten enthält, die zum Erstellen eines Bilds ohne Verweis auf vorherige Frames benötigt werden.
+Ein Videoframe mit allen Daten, die zum Erstellen eines Bilds ohne Verweis auf vorherige Frames erforderlich sind.
 
 </dd> <dt>
 
 <span id="wmformat.key_id"></span><span id="WMFORMAT.KEY_ID"></span>**Schlüssel-ID**
 </dt> <dd>
 
-Ein-Wert, der den Schlüssel für eine geschützte Windows-Mediendatei identifiziert.
+Ein -Wert, der den Schlüssel für eine geschützte Windows Identifiziert.
 
 </dd> <dt>
 
@@ -247,105 +247,105 @@ An geschützte Inhalte angefügte Daten, die beschreiben, wie der Inhalt verwend
 <span id="wmformat.license_acquisition"></span><span id="WMFORMAT.LICENSE_ACQUISITION"></span>**Lizenzerwerb**
 </dt> <dd>
 
-Der Vorgang zum Abrufen einer Lizenz zum Wiedergeben einer Windows Media-Paketdatei. Der Player versucht, eine Lizenz von einer Lizenz Erwerbs-URL zu erhalten, die in der Windows Media-Datei angegeben ist.
+Der Prozess des Abrufens einer Lizenz zum Wiederspielen einer gepackten Windows Mediendatei. Der Player versucht, eine Lizenz aus einer Lizenzerwerbs-URL zu erhalten, die in der Windows angegeben ist.
 
 </dd> <dt>
 
-<span id="wmformat.license_management_service"></span><span id="WMFORMAT.LICENSE_MANAGEMENT_SERVICE"></span>**Lizenz Verwaltungsdienst**
+<span id="wmformat.license_management_service"></span><span id="WMFORMAT.LICENSE_MANAGEMENT_SERVICE"></span>**Lizenzverwaltungsdienst**
 </dt> <dd>
 
-Der Microsoft-Dienst, der den Lizenz Verwaltungsprozess im Windows Media Rights Manager Software Development Kit (SDK) ausführt.
+Der Microsoft-Dienst, der den Lizenzverwaltungsprozess im Windows Media Rights Manager Software Development Kit (SDK) aus führt.
 
 </dd> <dt>
 
-<span id="wmformat.license_revocation"></span><span id="WMFORMAT.LICENSE_REVOCATION"></span>**Lizenz** Sperrung
+<span id="wmformat.license_revocation"></span><span id="WMFORMAT.LICENSE_REVOCATION"></span>**Lizenzsperrung**
 </dt> <dd>
 
-Der Prozess des Entfernens von Lizenzen vom Computer eines Benutzers.
+Der Vorgang zum Entfernen von Lizenzen vom Computer eines Benutzers.
 
 </dd> <dt>
 
-<span id="wmformat.license_revocation_acknowledgement"></span><span id="WMFORMAT.LICENSE_REVOCATION_ACKNOWLEDGEMENT"></span>**Lizenz Sperr Bestätigung**
+<span id="wmformat.license_revocation_acknowledgement"></span><span id="WMFORMAT.LICENSE_REVOCATION_ACKNOWLEDGEMENT"></span>**Lizenzsperrbestätigung**
 </dt> <dd>
 
-Eine signierte Bestätigung von einem Client Computer zu einem Lizenzierungs Server, der angibt, dass die Lizenzen widerrufen wurden.
+Eine signierte Bestätigung von einem Clientcomputer zu einem Lizenzierungsserver, die angibt, dass Lizenzen widerrufen wurden.
 
 </dd> <dt>
 
-<span id="wmformat.license_revocation_challenge"></span><span id="WMFORMAT.LICENSE_REVOCATION_CHALLENGE"></span>**Lizenz Sperr Aufforderung**
+<span id="wmformat.license_revocation_challenge"></span><span id="WMFORMAT.LICENSE_REVOCATION_CHALLENGE"></span>**Lizenzsperrungs-Challenge**
 </dt> <dd>
 
-Eine Anforderung von einem Client Computer an einen Lizenzierungs Server für den Lizenz Widerruf.
+Eine Anforderung von einem Clientcomputer an einen Lizenzierungsserver zur Lizenzsperrung.
 
 </dd> <dt>
 
-<span id="wmformat.license_revocation_response"></span><span id="WMFORMAT.LICENSE_REVOCATION_RESPONSE"></span>**Lizenz Sperr Antwort**
+<span id="wmformat.license_revocation_response"></span><span id="WMFORMAT.LICENSE_REVOCATION_RESPONSE"></span>**Antwort auf die Lizenzsperrung**
 </dt> <dd>
 
-Eine Antwort auf eine Lizenz Sperr Aufforderung, die angibt, welche Lizenzen vom Computer eines Benutzers entfernt werden sollen.
+Eine Antwort auf eine Lizenzsperrung, die angibt, welche Lizenzen vom Computer eines Benutzers entfernt werden müssen.
 
 </dd> <dt>
 
-<span id="wmformat.licensing_server"></span><span id="WMFORMAT.LICENSING_SERVER"></span>**Lizenzierungs Server**
+<span id="wmformat.licensing_server"></span><span id="WMFORMAT.LICENSING_SERVER"></span>**Lizenzierungsserver**
 </dt> <dd>
 
-Ein Computer, auf dem Windows Media License Service ausgeführt wird und Lizenzen ausgestellt werden.
+Ein Computer, auf dem Windows Media License Service ausgeführt wird und Lizenzen aushing.
 
 </dd> <dt>
 
 <span id="wmformat.marker"></span><span id="WMFORMAT.MARKER"></span>**Marker**
 </dt> <dd>
 
-Eine Text Zeichenfolge, die einer festgelegten Uhrzeit in Windows Media-basiertem Inhalt zugeordnet ist. Marker bezeichnen häufig praktische Punkte, um die Wiedergabe zu beginnen, z. b. den Anfang einer neuen Szene.
+Eine Textzeichenfolge, die einer bestimmten Zeit in Windows medienbasierten Inhalten zugeordnet ist. Marker bezeichnen häufig praktische Punkte, um mit der Wiedergabe zu beginnen, z. B. den Start einer neuen Szene.
 
 </dd> <dt>
 
 <span id="wmformat.mbr"></span><span id="WMFORMAT.MBR"></span>**MBR**
 </dt> <dd>
 
-Siehe Definition für: [ *mehrfache Bitrate (MBR)*](/windows)
+Siehe Definition für: [ *Multiple Bit Rate (MBR)*](/windows)
 
 </dd> <dt>
 
 <span id="wmformat.mime"></span><span id="WMFORMAT.MIME"></span>**MIME**
 </dt> <dd>
 
-Siehe Definition für: [ *Mehrzweck-Internet Mail Erweiterung (MIME)*](/windows)
+Siehe Definition für: [ *Multipurpose Internet Mail Extension (MIME)*](/windows)
 
 </dd> <dt>
 
-<span id="wmformat.multiple_bit_rate__mbr_"></span><span id="WMFORMAT.MULTIPLE_BIT_RATE__MBR_"></span>**mehrfache Bitrate (MBR)**
+<span id="wmformat.multiple_bit_rate__mbr_"></span><span id="WMFORMAT.MULTIPLE_BIT_RATE__MBR_"></span>**Multiple Bit Rate (MBR)**
 </dt> <dd>
 
-Ein Merkmal eines Datenstroms, in dem derselbe Inhalt mit verschiedenen Bitraten codiert wird, um die Inhalts Übermittlung zu optimieren.
+Ein Merkmal eines Datenstroms, in dem derselbe Inhalt mit mehreren unterschiedlichen Bitraten codiert wird, um die Inhaltsübermittlung zu optimieren.
 
 </dd> <dt>
 
-<span id="wmformat.multipurpose_internet_mail_extension__mime_"></span><span id="WMFORMAT.MULTIPURPOSE_INTERNET_MAIL_EXTENSION__MIME_"></span>**Mehrzweck-Internet Mail Erweiterung (MIME)**
+<span id="wmformat.multipurpose_internet_mail_extension__mime_"></span><span id="WMFORMAT.MULTIPURPOSE_INTERNET_MAIL_EXTENSION__MIME_"></span>**Multipurpose Internet Mail Extension (MIME)**
 </dt> <dd>
 
-Ein Standard, der SMTP (Simple Mail Transport Protocol) für die Codierung von nicht-ASCII-Datendateien, z. b. Video-, Audio-und Binärdateien, für die Anlage an Internet-e-Mails erweitert
+Ein Standard, der smtp (Simple Mail Transport Protocol) erweitert, um Nicht-ASCII-Datendateien wie Video-, Audio- und Binärdateien für die Anfügung an Internet-E-Mails zu codieren.
 
 </dd> <dt>
 
-<span id="wmformat.output_protection_level"></span><span id="WMFORMAT.OUTPUT_PROTECTION_LEVEL"></span>**Ausgabe Schutz Ebene**
+<span id="wmformat.output_protection_level"></span><span id="WMFORMAT.OUTPUT_PROTECTION_LEVEL"></span>**Ausgabeschutzebene**
 </dt> <dd>
 
-Eine Einstellung in einer Lizenz, die angibt, welche Technologien verwendet werden können, um geschützte digitale Medieninhalte wiederzugeben oder zu kopieren.
+Eine Einstellung in einer Lizenz, die angibt, welche Technologien zum Wiedergeben oder Kopieren geschützter digitaler Medieninhalte verwendet werden können.
 
 </dd> <dt>
 
-<span id="wmformat.packaged_windows_media_file"></span><span id="WMFORMAT.PACKAGED_WINDOWS_MEDIA_FILE"></span>**gepackte Windows-Mediendatei**
+<span id="wmformat.packaged_windows_media_file"></span><span id="WMFORMAT.PACKAGED_WINDOWS_MEDIA_FILE"></span>**gepackte Windows Mediendatei**
 </dt> <dd>
 
-Eine Windows Media-Datei, die mit einem Schlüssel verschlüsselt ist, den Consumer nicht wiedergeben können, wenn Sie nicht über einen Schlüssel verfügen, der von einer Lizenz Eine gepackte Windows-Mediendatei wird von erstellt und durch die Implementierung von Digital Rights Management mithilfe des Windows Media Rights Manager Software Development Kit (SDK) oder eines Programms, das auf dem Microsoft Windows Media Format SDK basiert, geschützt.
+Eine Windows Mediendatei, die mit einem Schlüssel verschlüsselt ist und von Consumern nur wiedergegeben werden kann, wenn sie über einen durch eine Lizenz bereitgestellten Schlüssel verfügen. Eine gepackte Windows Media-Datei wird von erstellt und durch die Implementierung der Verwaltung digitaler Rechte mithilfe des Windows Media Rights Manager Software Development Kit (SDK) oder eines Programms geschützt, das auf dem Microsoft Windows Media Format SDK basiert.
 
 </dd> <dt>
 
-<span id="wmformat.packaging"></span><span id="WMFORMAT.PACKAGING"></span>**Verpacken**
+<span id="wmformat.packaging"></span><span id="WMFORMAT.PACKAGING"></span>**Packen**
 </dt> <dd>
 
-Der Prozess, mit dem eine Windows Media-Datei geschützt und signiert wird, wodurch eine Windows Media-Paketdatei erzeugt wird. Der Paketierungs Prozess umfasst das Erstellen oder angeben eines Schlüssels, das Erstellen und Signieren des Inhalts Headers und das anschließende Verschlüsseln der Windows Media-Datei mit diesen Informationen.
+Der Prozess, der eine Windows Mediendatei schützt und signiert und eine gepackte Windows Mediendatei erzeugt. Der Paketerstellungsprozess umfasst das Generieren oder Angeben eines Schlüssels, das Generieren und Signieren des Inhaltsheaders und das anschließende Verschlüsseln der Windows Mediendatei mit diesen Informationen.
 
 </dd> <dt>
 
@@ -356,73 +356,73 @@ Eine Informationseinheit, die von einem Computer oder Gerät an einen anderen Co
 
 </dd> <dt>
 
-<span id="wmformat.plug_in"></span><span id="WMFORMAT.PLUG_IN"></span>**Plug-in**
+<span id="wmformat.plug_in"></span><span id="WMFORMAT.PLUG_IN"></span>**Plug-In**
 </dt> <dd>
 
-Eine zusätzliche Softwarekomponente, mit der die Features anderer Software erweitert oder erweitert werden.
+Eine zusätzliche Softwarekomponente, die die Funktionen anderer Software erweitert oder erweitert.
 
 </dd> <dt>
 
 <span id="wmformat.profile"></span><span id="WMFORMAT.PROFILE"></span>**Profil**
 </dt> <dd>
 
-Eine Gruppe von Einstellungen, die dem Inhaltstyp und der Bitrate mit den entsprechenden Audio-und Video Codecs entsprechen.
+Eine Gruppe von Einstellungen, die mit Inhaltstyp und Bitrate mit entsprechenden Audio- und Videocodecs übereinstimmen.
 
 </dd> <dt>
 
 <span id="wmformat.registration"></span><span id="WMFORMAT.REGISTRATION"></span>**Registrierung**
 </dt> <dd>
 
-Der Prozess, in dem ein Consumer Informationen zum Erwerb einer Lizenz eingibt, z. b. eine e-Mail-Adresse.
+Der Prozess, bei dem ein Consumer Informationen eingibt, um eine Lizenz zu erwerben, z. B. eine E-Mail-Adresse.
 
 </dd> <dt>
 
-<span id="wmformat.revocation_list"></span><span id="WMFORMAT.REVOCATION_LIST"></span>Sperr **Liste**
+<span id="wmformat.revocation_list"></span><span id="WMFORMAT.REVOCATION_LIST"></span>**Sperrliste**
 </dt> <dd>
 
-Eine Liste, die alle Anwendungs Zertifikate der Player Anwendungen enthält, die bekanntermaßen beschädigt oder beschädigt sind. Diese Liste ist in Lizenzen enthalten und wird dann von der Digital Rights Management (DRM)-Komponente der Player-Anwendung auf den Computern der Consumer gespeichert.
+Eine Liste, die alle Anwendungszertifikate dieser Playeranwendungen enthält, die bekanntermaßen beschädigt oder beschädigt sind. Diese Liste ist in Lizenzen enthalten und wird dann von der DRM-Komponente (Digital Rights Management) der Playeranwendung auf den Computern von Consumern gespeichert.
 
 </dd> <dt>
 
 <span id="wmformat.rgb"></span><span id="WMFORMAT.RGB"></span>**RGB**
 </dt> <dd>
 
-Ein Farbmodell, das Farbinformationen in Bezug auf die Farben rot (R), grün (G) und blau (B) beschreibt, die die Farbe bilden.
+Ein Farbmodell, das Farbinformationen in Bezug auf die Intensitäten Rot (R), Grün (G) und Blau (B) beschreibt, aus denen die Farbe besteht.
 
 </dd> <dt>
 
 <span id="wmformat.sdmi"></span><span id="WMFORMAT.SDMI"></span>**SDMI**
 </dt> <dd>
 
-Siehe Definition für: [ *Secure Digital Music Initiative (SDMI)*](/windows)
+Siehe Definition für: [ *Secure Digital Musik Initiative (SDMI)*](/windows)
 
 </dd> <dt>
 
-<span id="wmformat.secure_digital_music_initiative__sdmi_"></span><span id="WMFORMAT.SECURE_DIGITAL_MUSIC_INITIATIVE__SDMI_"></span>**Secure Digital Music Initiative (SDMI)**
+<span id="wmformat.secure_digital_music_initiative__sdmi_"></span><span id="WMFORMAT.SECURE_DIGITAL_MUSIC_INITIATIVE__SDMI_"></span>**Secure Digital Musik Initiative (SDMI)**
 </dt> <dd>
 
 Eine Organisation, die Standards für sichere digitale Musik festlegt. Eines der Hauptziele von SDMI ist die Erstellung eines Frameworks für die sichere Wiedergabe, Speicherung und Verteilung digitaler Musik.
 
 </dd> <dt>
 
-<span id="wmformat.security_upgrade"></span><span id="WMFORMAT.SECURITY_UPGRADE"></span>**Sicherheits Upgrade**
+<span id="wmformat.security_upgrade"></span><span id="WMFORMAT.SECURITY_UPGRADE"></span>**Sicherheitsupgrade**
 </dt> <dd>
 
-Der Prozess, bei dem die Digital Rights Management (DRM-Komponente) im Player des Consumers eindeutig ist. Durch diesen Prozess wird die Sicherheit erhöht, da es schwierig ist, mehr als einen Spieler gleichzeitig zu beschädigen. Dieser Prozess wird auch als "Individualisierung" bezeichnet.
+Der Prozess, durch den die KOMPONENTE für die Verwaltung digitaler Rechte (DIGITAL Rights Management, DRM) im Player des Kunden eindeutig wird. Dieser Prozess erhöht die Sicherheit, da es schwierig ist, mehrere Spieler gleichzeitig zu beschädigen. Dieser Prozess wird auch als Individualisierung bezeichnet.
 
 </dd> <dt>
 
 <span id="wmformat.streaming"></span><span id="WMFORMAT.STREAMING"></span>**Streaming**
 </dt> <dd>
 
-Eine Methode, mit der digitale Medien in einem Netzwerk in einem kontinuierlichen Flow bereitgestellt werden. Die digitalen Medien werden von der Client Software abgespielt, sobald Sie empfangen wird. In der Regel ist es für das Streaming unnötig, dass Benutzer eine Datei vor der Wiedergabe herunterladen.
+Eine Methode zum Bereitstellen digitaler Medien über ein Netzwerk in einem kontinuierlichen Fluss. Die digitalen Medien werden von Clientsoftware wiedergegeben, während sie empfangen werden. In der Regel ist es aufgrund des Streamings nicht erforderlich, dass Benutzer eine Datei herunterladen, bevor sie wiedergegeben wird.
 
 </dd> <dt>
 
 <span id="wmformat.system_profile"></span><span id="WMFORMAT.SYSTEM_PROFILE"></span>**Systemprofil**
 </dt> <dd>
 
-Die vordefinierten vordefinierten Vorlagen, die die erforderlichen technischen Details zum Codieren eines bestimmten Inhalts enthalten.
+Die vordefinierten Standardvorlagen, die die erforderlichen technischen Details zum Codieren eines bestimmten Inhalts enthalten.
 
 </dd> <dt>
 
@@ -433,17 +433,17 @@ Keine Definition verfügbar.
 
 </dd> <dt>
 
-<span id="wmformat.target_bandwidth"></span><span id="WMFORMAT.TARGET_BANDWIDTH"></span>**Ziel Bandbreite**
+<span id="wmformat.target_bandwidth"></span><span id="WMFORMAT.TARGET_BANDWIDTH"></span>**Zielbandbreite**
 </dt> <dd>
 
-Die Anzahl der Bits, die auf der Grundlage der Geschwindigkeit der Netzwerkverbindung an Benutzer übertragen werden.
+Die Anzahl der Bits, die basierend auf ihren Netzwerkverbindungsgeschwindigkeiten an Benutzer übertragen werden.
 
 </dd> <dt>
 
-<span id="wmformat.telecine"></span><span id="WMFORMAT.TELECINE"></span>**telecine**
+<span id="wmformat.telecine"></span><span id="WMFORMAT.TELECINE"></span>**Telekop**
 </dt> <dd>
 
-Das Konvertierungs System für Filme, das einem Video Frames hinzufügt, um die Unterschiede in den Frameraten zwischen Film und Video auszugleichen.
+Das Film-zu-Video-Konvertierungssystem, das Frames zu Videos hinzufügt, um die Unterschiede in den Bildraten zwischen Film und Video zu kompensieren.
 
 </dd> <dt>
 
@@ -454,17 +454,17 @@ Siehe Definition für: [ *User Datagram Protocol (UDP)*](/windows)
 
 </dd> <dt>
 
-<span id="wmformat.user_datagram_protocol__udp_"></span><span id="WMFORMAT.USER_DATAGRAM_PROTOCOL__UDP_"></span>**User Datagram-Protokoll (UDP)**
+<span id="wmformat.user_datagram_protocol__udp_"></span><span id="WMFORMAT.USER_DATAGRAM_PROTOCOL__UDP_"></span>**User Datagram Protocol (UDP)**
 </dt> <dd>
 
-Ein verbindungsloses Transportprotokoll im TCP/IP-Protokollstapel, das in Fällen verwendet wird, in denen ein bestimmter Paketverlust zulässig ist, z. b. mit digitalen Mediendaten strömen.
+Ein verbindungsloses Transportprotokoll im TCP/IP-Protokollstapel, das in Fällen verwendet wird, in denen ein Paketverlust akzeptabel ist, z. B. bei digitalen Medienstreams.
 
 </dd> <dt>
 
-<span id="wmformat.variable_bit_rate__vbr_"></span><span id="WMFORMAT.VARIABLE_BIT_RATE__VBR_"></span>**variablenbitrate (VBR)**
+<span id="wmformat.variable_bit_rate__vbr_"></span><span id="WMFORMAT.VARIABLE_BIT_RATE__VBR_"></span>**Variable Bitrate (VBR)**
 </dt> <dd>
 
-Ein Merkmal eines Datenstroms, in dem die Bitrate abhängig von der Komplexität der Daten schwankt.
+Ein Merkmal eines Datenstroms, in dem die Bitrate je nach Komplexität der Daten schwankt.
 
 </dd> <dt>
 
@@ -475,34 +475,34 @@ Siehe Definition für: [ *Variable Bitrate (VBR)*](/windows)
 
 </dd> <dt>
 
-<span id="wmformat.windows_media_file"></span><span id="WMFORMAT.WINDOWS_MEDIA_FILE"></span>**Windows-Mediendatei**
+<span id="wmformat.windows_media_file"></span><span id="WMFORMAT.WINDOWS_MEDIA_FILE"></span>**Windows Mediendatei**
 </dt> <dd>
 
-Eine Datei, die Audiodaten, Video-oder Skript Daten enthält. Der Inhalt der Datei wird mit einem der Windows Media-Codecs codiert.
+Eine Datei, die Audio-, Video- oder Skriptdaten enthält. Der Inhalt der Datei wird mit einem der Windows Mediencodecs codiert.
 
 </dd> <dt>
 
-<span id="wmformat.windows_media_format"></span><span id="WMFORMAT.WINDOWS_MEDIA_FORMAT"></span>**Windows Media-Format**
+<span id="wmformat.windows_media_format"></span><span id="WMFORMAT.WINDOWS_MEDIA_FORMAT"></span>**Windows Medienformat**
 </dt> <dd>
 
-Das Format einer digitalen Mediendatei oder eines Datenstroms, der mit Windows Media Codecs codiert wurde.
+Das Format einer digitalen Mediendatei oder eines Streams, die mit Windows Mediencodecs codiert wurde.
 
 </dd> <dt>
 
-<span id="wmformat.windows_media_license_service"></span><span id="WMFORMAT.WINDOWS_MEDIA_LICENSE_SERVICE"></span>**Windows Media-Lizenz Dienst**
+<span id="wmformat.windows_media_license_service"></span><span id="WMFORMAT.WINDOWS_MEDIA_LICENSE_SERVICE"></span>**Windows Media License Service**
 </dt> <dd>
 
-Eine Komponente des Windows Media Rights Manager SDK, das Lizenz Erwerbs Dienste bereitstellt.
+Eine Komponente des Windows Media Rights Manager SDK, die Lizenzerwerbsdienste bereitstellt.
 
 </dd> <dt>
 
 <span id="wmformat.yuv"></span><span id="WMFORMAT.YUV"></span>**YUV**
 </dt> <dd>
 
-Ein Farbmodell, das Farbinformationen in Bezug auf die Helligkeit (Leuchtkraft, Y) und die Farbe (Chrominance, Sie und V) beschreibt.
+Ein Farbmodell, das Farbinformationen in Bezug auf seine Helligkeit (Leuchtdichte oder Y) und Farbe (Chromeinance oder Sie und V) beschreibt.
 
 </dd> </dl>
 
- 
+ 
 
- 
+ 

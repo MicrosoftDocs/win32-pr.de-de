@@ -3,21 +3,21 @@ description: Die InsertAt-Methode fügt ein Element (oder mehrere Kopien eines E
 audience: developer
 ms.assetid: 1d6355bc-7df2-4aa3-8e47-0239d726ed7d
 ms.tgt_platform: multiple
-title: 'Chstringarray:: InsertAt-Methoden (chstrarr. h)'
+title: CHStringArray::InsertAt-Methoden (ChStrArr.h)
 ms.date: 07/02/2019
 ms.topic: reference
-ms.openlocfilehash: 4047b740778c8d0adf1f2b5981b2f3aac5ba9529
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 75332e300987233c0a6f3d6755d27fd7c305a7d86fb6cd9a6143c417222c0dcf
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106355426"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120097250"
 ---
-# <a name="chstringarrayinsertat-methods"></a>Chstringarray:: InsertAt-Methoden
+# <a name="chstringarrayinsertat-methods"></a>CHStringArray::InsertAt-Methoden
 
-\[Die [**chstringarray**](/windows/win32/api/chstrarr/nl-chstrarr-chstringarray) -Klasse ist Teil des WMI-Anbieter-Frameworks, das jetzt als Endzustand betrachtet wird, und keine weiteren Entwicklungen, Verbesserungen oder Updates werden für nicht sicherheitsrelevante Probleme verfügbar sein, die diese Bibliotheken betreffen. Die [Mi-APIs](/previous-versions/windows/desktop/wmi_v2/windows-management-infrastructure) sollten für alle neuen Entwicklungen verwendet werden.\]
+\[Die [**CHStringArray-Klasse**](/windows/win32/api/chstrarr/nl-chstrarr-chstringarray) ist Teil des WMI-Anbieterframeworks, das jetzt als endgültiger Zustand betrachtet wird. Für nicht sicherheitsrelevante Probleme, die sich auf diese Bibliotheken auswirken, sind keine weiteren Entwicklungen, Erweiterungen oder Updates verfügbar. Die [MI-APIs](/previous-versions/windows/desktop/wmi_v2/windows-management-infrastructure) sollten für alle Neuentwicklungen verwendet werden.\]
 
-Die **InsertAt** -Methode fügt ein Element (oder mehrere Kopien eines Elements) oder alle Elemente eines anderen Arrays an einem angegebenen Index ein.
+Die **InsertAt-Methode** fügt ein Element (oder mehrere Kopien eines Elements) oder alle Elemente eines anderen Arrays an einem angegebenen Index ein.
 
 ### <a name="overload-list"></a>Überladeliste
 
@@ -25,8 +25,8 @@ Die **InsertAt** -Methode fügt ein Element (oder mehrere Kopien eines Elements)
 
 | Methode                                                                               | BESCHREIBUNG                                                                                                             |
 |:-------------------------------------------------------------------------------------|:------------------------------------------------------------------------------------------------------------------------|
-| [**InsertAt (int, LPCWSTR, int)**](/previous-versions/windows/desktop/legacy/aa385383(v=vs.85))       | Fügt ein oder mehrere Elemente an einem angegebenen Index in ein Array ein.<br/>                                               |
-| [**InsertAt (int, chstringarray \* )**](/windows/win32/api/chstrarr/nf-chstrarr-chstringarray-insertat(int_chstringarray)) | Fügt alle Elemente eines anderen [**chstringarray**](/windows/win32/api/chstrarr/nl-chstrarr-chstringarray) an einem angegebenen Index in einem Array ein.<br/> |
+| [**InsertAt(int,LPCWSTR,int)**](/previous-versions/windows/desktop/legacy/aa385383(v=vs.85))       | Fügt ein oder mehrere Elemente an einem angegebenen Index in einem Array ein.<br/>                                               |
+| [**InsertAt(int,CHStringArray \* )**](/windows/win32/api/chstrarr/nf-chstrarr-chstringarray-insertat(int_chstringarray)) | Fügt alle Elemente eines anderen [**CHStringArray**](/windows/win32/api/chstrarr/nl-chstrarr-chstringarray) an einem angegebenen Index in einem Array ein.<br/> |
 
 
 
@@ -38,17 +38,17 @@ Die **InsertAt** -Methode fügt ein Element (oder mehrere Kopien eines Elements)
 |-------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows Vista<br/>                                                                                                                                      |
 | Unterstützte Mindestversion (Server)<br/> | Windows Server 2008<br/>                                                                                                                                |
-| Header<br/>                   | <dl> <dt>Chstrauarr. h (Include-Datei "f")</dt> </dl>                                                    |
-| Bibliothek<br/>                  | <dl> <dt>Framedyn. lib</dt> </dl>                                                                       |
+| Header<br/>                   | <dl> <dt>ChStrArr.h (include FwCommon.h)</dt> </dl>                                                    |
+| Bibliothek<br/>                  | <dl> <dt>FrameDyn.lib</dt> </dl>                                                                       |
 | DLL<br/>                      | <dl> <dt>FrameDynOS.dll; </dt> <dt>FrameDyn.dll</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Chstringarray**](/windows/win32/api/chstrarr/nl-chstrarr-chstringarray)
+[**CHStringArray**](/windows/win32/api/chstrarr/nl-chstrarr-chstringarray)
 </dt> </dl>
 
 �

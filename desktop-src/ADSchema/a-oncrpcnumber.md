@@ -1,10 +1,10 @@
 ---
-title: oncrpcnumber-Attribut
-description: Enthält einen Teil der RPC-Zuordnung und speichert die RPC-Nummer für UNIX-RPCs.
+title: oncRpcNumber-Attribut
+description: Enthält einen Teil der RPC-Zuordnung und speichert die RPC-Nummer für UNIX RPCs.
 ms.assetid: c824d740-5c68-4fce-93f3-01ac52b47e5b
 ms.tgt_platform: multiple
 keywords:
-- oncrpcnumber-Attribut, AD-Schema
+- oncRpcNumber-Attribut AD-Schema
 topic_type:
 - apiref
 api_name:
@@ -13,28 +13,28 @@ api_type:
 - Schema
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: b2394395f7be9a9f5f9dfe1fd312dcf4f8957c4d
-ms.sourcegitcommit: b77ace27b0432e7cd3863191b11926be032fbe2f
+ms.openlocfilehash: 0ea1416fb950a4b666be16f8848cc89d4c63bd4108e41a5e55a0450f8622d59e
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "104122738"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119442170"
 ---
-# <a name="oncrpcnumber-attribute"></a>oncrpcnumber-Attribut
+# <a name="oncrpcnumber-attribute"></a>oncRpcNumber-Attribut
 
-Enthält einen Teil der RPC-Zuordnung und speichert die RPC-Nummer für UNIX-RPCs.
+Enthält einen Teil der RPC-Zuordnung und speichert die RPC-Nummer für UNIX RPCs.
 
 
 
 | Eingabe | Wert |
 |-------------------|--------------------------------------|
-| CN                | oncrpcnumber                         |
-| LDAP-Display-Name | oncrpcnumber                         |
+| CN                | oncRpcNumber                         |
+| Ldap-Anzeigename | oncRpcNumber                         |
 | Size              | \-                                   |
-| Berechtigung aktualisieren  | \-                                   |
-| Aktualisierungshäufigkeit  | \-                                   |
+| Aktualisieren von Berechtigungen  | \-                                   |
+| Updatehäufigkeit  | \-                                   |
 | Attribute-Id      | 1.3.6.1.1.1.1.18                     |
-| System-ID-GUID    | 966825f 5-01d9-4A5C-A011-d15ae84efa55 |
+| System-ID-GUID    | 966825f5-01d9-4a5c-a011-d15ae84efa55 |
 | Syntax            | [**Enumeration**](s-enumeration.md) |
 
 
@@ -54,11 +54,11 @@ Enthält einen Teil der RPC-Zuordnung und speichert die RPC-Nummer für UNIX-RPC
 |------------------------|---------------------------------------|
 | Link-ID                | \-                                    |
 | MAPI-Id                | \-                                    |
-| System-Only            | False                                 |
-| Ist-einwertig       | Richtig                                  |
-| Ist indiziert             | False                                 |
-| Im globalen Katalog      | False                                 |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                          |
+| System-Only            | Falsch                                 |
+| Ist einwertig       | Richtig                                  |
+| Ist indiziert             | Falsch                                 |
+| Im globalen Katalog      | Falsch                                 |
+| NT-Security-Descriptor | O:BAG:BAD:S:                          |
 | Range-Lower            | \-                                    |
 | Range-Upper            | \-                                    |
 | Search-Flags           | 0x00000000                            |
@@ -75,11 +75,11 @@ Enthält einen Teil der RPC-Zuordnung und speichert die RPC-Nummer für UNIX-RPC
 |------------------------|---------------------------------------|
 | Link-ID                | \-                                    |
 | MAPI-Id                | \-                                    |
-| System-Only            | False                                 |
-| Ist-einwertig       | Richtig                                  |
-| Ist indiziert             | False                                 |
-| Im globalen Katalog      | False                                 |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                          |
+| System-Only            | Falsch                                 |
+| Ist einwertig       | Richtig                                  |
+| Ist indiziert             | Falsch                                 |
+| Im globalen Katalog      | Falsch                                 |
+| NT-Security-Descriptor | O:BAG:BAD:S:                          |
 | Range-Lower            | \-                                    |
 | Range-Upper            | \-                                    |
 | Search-Flags           | 0x00000000                            |
@@ -96,11 +96,11 @@ Enthält einen Teil der RPC-Zuordnung und speichert die RPC-Nummer für UNIX-RPC
 |------------------------|---------------------------------------|
 | Link-ID                | \-                                    |
 | MAPI-Id                | \-                                    |
-| System-Only            | False                                 |
-| Ist-einwertig       | Richtig                                  |
-| Ist indiziert             | False                                 |
-| Im globalen Katalog      | False                                 |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                          |
+| System-Only            | Falsch                                 |
+| Ist einwertig       | Richtig                                  |
+| Ist indiziert             | Falsch                                 |
+| Im globalen Katalog      | Falsch                                 |
+| NT-Security-Descriptor | O:BAG:BAD:S:                          |
 | Range-Lower            | \-                                    |
 | Range-Upper            | \-                                    |
 | Search-Flags           | 0x00000000                            |
@@ -117,11 +117,11 @@ Enthält einen Teil der RPC-Zuordnung und speichert die RPC-Nummer für UNIX-RPC
 |------------------------|---------------------------------------|
 | Link-ID                | \-                                    |
 | MAPI-Id                | \-                                    |
-| System-Only            | False                                 |
-| Ist-einwertig       | Richtig                                  |
-| Ist indiziert             | False                                 |
-| Im globalen Katalog      | False                                 |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                          |
+| System-Only            | Falsch                                 |
+| Is-Single-Valued       | Richtig                                  |
+| Ist indiziert             | Falsch                                 |
+| Im globalen Katalog      | Falsch                                 |
+| NT-Security-Descriptor | O:BAG:BAD:S:                          |
 | Range-Lower            | \-                                    |
 | Range-Upper            | \-                                    |
 | Search-Flags           | 0x00000000                            |
@@ -130,7 +130,7 @@ Enthält einen Teil der RPC-Zuordnung und speichert die RPC-Nummer für UNIX-RPC
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen:
 
 <dl> <dt>
 

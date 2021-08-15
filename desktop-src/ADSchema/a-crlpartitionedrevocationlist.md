@@ -1,11 +1,11 @@
 ---
 title: CRL-Partitioned-Revocation-List-Attribut
-description: Public Key Infrastructure \ 8211;Sperrlisten.
+description: Public Key-Infrastruktur \ 8211;Sperrlisten.
 ms.assetid: ecee7ee6-21e7-4861-a7f5-5e8e3579978a
 ms.tgt_platform: multiple
 keywords:
-- AD-Schema des CRL-Partitioned-Revocation-List-Attributs
-- AD-Schema des cRLPartitionedRevocationList-Attributs
+- AD-Schema für CRL-Partitioned-Revocation-List-Attribut
+- cRLPartitionedRevocationList-Attribut AD-Schema
 topic_type:
 - apiref
 api_name:
@@ -35,7 +35,7 @@ Sperrlisten für die Public Key-Infrastruktur.
 | Aktualisieren von Berechtigungen  | \-                                                    |
 | Updatehäufigkeit  | \-                                                    |
 | Attribute-Id      | 1.2.840.113556.1.4.683                                |
-| System-Id-Guid    | 963d2731-48be-11d1-a9c3-0000f80367c1                  |
+| System-ID-GUID    | 963d2731-48be-11d1-a9c3-0000f80367c1                  |
 | Syntax            | [**Object(Replica-Link)**](s-object-replica-link.md) |
 
 
@@ -58,7 +58,7 @@ Sperrlisten für die Public Key-Infrastruktur.
 | Link-ID                | \-                                                                  |
 | MAPI-Id                | \-                                                                  |
 | System-Only            | False                                                               |
-| Is-Single-Valued       | True                                                                |
+| Ist einwertig       | True                                                                |
 | Ist indiziert             | False                                                               |
 | Im globalen Katalog      | False                                                               |
 | NT-Security-Descriptor | O:BAG:BAD:S:                                                        |
@@ -79,7 +79,7 @@ Sperrlisten für die Public Key-Infrastruktur.
 | Link-ID                | \-                                                                  |
 | MAPI-Id                | \-                                                                  |
 | System-Only            | False                                                               |
-| Is-Single-Valued       | True                                                                |
+| Ist einwertig       | True                                                                |
 | Ist indiziert             | False                                                               |
 | Im globalen Katalog      | False                                                               |
 | NT-Security-Descriptor | O:BAG:BAD:S:                                                        |
@@ -100,7 +100,7 @@ Sperrlisten für die Public Key-Infrastruktur.
 | Link-ID                | \-                                                                  |
 | MAPI-Id                | \-                                                                  |
 | System-Only            | False                                                               |
-| Is-Single-Valued       | True                                                                |
+| Ist einwertig       | True                                                                |
 | Ist indiziert             | False                                                               |
 | Im globalen Katalog      | False                                                               |
 | NT-Security-Descriptor | O:BAG:BAD:S:                                                        |
@@ -121,7 +121,7 @@ Sperrlisten für die Public Key-Infrastruktur.
 | Link-ID                | \-                                                                  |
 | MAPI-Id                | \-                                                                  |
 | System-Only            | False                                                               |
-| Is-Single-Valued       | True                                                                |
+| Ist einwertig       | True                                                                |
 | Ist indiziert             | False                                                               |
 | Im globalen Katalog      | False                                                               |
 | NT-Security-Descriptor | O:BAG:BAD:S:                                                        |
@@ -142,7 +142,7 @@ Sperrlisten für die Public Key-Infrastruktur.
 | Link-ID                | \-                                                                  |
 | MAPI-Id                | \-                                                                  |
 | System-Only            | False                                                               |
-| Is-Single-Valued       | True                                                                |
+| Ist einwertig       | True                                                                |
 | Ist indiziert             | False                                                               |
 | Im globalen Katalog      | False                                                               |
 | NT-Security-Descriptor | O:BAG:BAD:S:                                                        |
@@ -163,7 +163,7 @@ Sperrlisten für die Public Key-Infrastruktur.
 | Link-ID                | \-                                                                  |
 | MAPI-Id                | \-                                                                  |
 | System-Only            | False                                                               |
-| Is-Single-Valued       | True                                                                |
+| Ist einwertig       | True                                                                |
 | Ist indiziert             | False                                                               |
 | Im globalen Katalog      | False                                                               |
 | NT-Security-Descriptor | O:BAG:BAD:S:                                                        |

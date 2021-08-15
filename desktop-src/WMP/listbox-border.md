@@ -1,9 +1,9 @@
 ---
-title: ListBox. Border
-description: Mit dem Border-Attribut wird ein Wert angegeben oder abgerufen, der angibt, ob das Listenfeld-Steuerelement über einen Rahmen verfügt.
+title: LISTBOX.border
+description: Das Border-Attribut gibt einen Wert an, der angibt, ob das Listenfeld-Steuerelement über einen Rahmen verfügt, oder ruft einen Wert ab.
 ms.assetid: a00e9290-2276-4b00-b07a-92770c3434b2
 keywords:
-- ListBox. Border-Fenster Media Player
+- LISTBOX.border-Windows Media Player
 topic_type:
 - apiref
 api_name:
@@ -12,16 +12,16 @@ api_type:
 - NA
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: a83f120fc7d21e4286ea467e477f1b16c1e44b04
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 3f8426b6d519bc370b45707bd66f48c5fdc1b24b87359d8c02cbd0ec7ab154a0
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106360424"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119617030"
 ---
-# <a name="listboxborder"></a>ListBox. Border
+# <a name="listboxborder"></a>LISTBOX.border
 
-Mit dem **Border** -Attribut wird ein Wert angegeben oder abgerufen, der angibt, ob das Listenfeld-Steuerelement über einen Rahmen verfügt.
+Das **Border-Attribut** gibt einen Wert an, der angibt, ob das Listenfeld-Steuerelement über einen Rahmen verfügt, oder ruft einen Wert ab.
 
 ``` syntax
         elementID.border
@@ -35,16 +35,16 @@ Dieses Attribut ist ein **boolescher** Wert.
 
 | Wert | BESCHREIBUNG                                  |
 |-------|----------------------------------------------|
-| true  | Standard. Das Listenfeld-Steuerelement hat einen Rahmen.  |
-| false | Das Listenfeld-Steuerelement verfügt über keinen Rahmen. |
+| true  | Standard. Das Listenfeld-Steuerelement verfügt über einen Rahmen.  |
+| false | Das Listenfeld-Steuerelement verfügt nicht über einen Rahmen. |
 
 
 
  
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Der Rahmen wird als zwei Pixel breiter abgesenkter Rahmen um das Listenfeld-Steuerelement mit Systemfarben angezeigt.
+Der Rahmen wird als zwei pixelweiter, eingesenkter Rahmen um das Listenfeld-Steuerelement mit Systemfarben angezeigt.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -56,11 +56,11 @@ Der Rahmen wird als zwei Pixel breiter abgesenkter Rahmen um das Listenfeld-Steu
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**ListBox-Element**](listbox-element.md)
+[**LISTBOX-Element**](listbox-element.md)
 </dt> </dl>
 
  

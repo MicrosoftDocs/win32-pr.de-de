@@ -60,7 +60,7 @@ Identifiziert eine Instanz von [**CIM \_ BaseMetricDefinition**](cim-basemetricd
 *DefinitionList* \[ out\]
 </dt> <dd>
 
-Bei Erfolg kann Verweise auf Instanzen von [**CIM \_ BaseMetricDefinition-Objekten**](cim-basemetricdefinition.md) enthalten, die Metriken definieren, die für die Sammlung für das [**cim \_ ManagedElement**](cim-managedelement.md) verfügbar sind, das durch den *Subject-Parameter identifiziert* wird.
+Bei Erfolg kann Verweise auf Instanzen von [**CIM \_ BaseMetricDefinition-Objekten**](cim-basemetricdefinition.md) enthalten, die Metriken definieren, die für die Sammlung für [**das cim \_ ManagedElement**](cim-managedelement.md) verfügbar sind, das durch den *Subject-Parameter identifiziert* wird.
 
 </dd> <dt>
 
@@ -108,7 +108,7 @@ Gibt an, ob eine Metrik für alle Instanzen einer Klasse verwalteter Elemente er
 
 <span id="Vendor_Reserved"></span><span id="vendor_reserved"></span><span id="VENDOR_RESERVED"></span>
 
-**Reservierter Anbieter** (32768..65535)
+**Anbieter reserviert** (32768..65535)
 
 
 </dt> <dd></dd> </dl> </dd> </dl>

@@ -1,6 +1,6 @@
 ---
 title: MDM_Policy_User_Result01_Education02-Klasse
-description: Die Benutzer Result01 Education02-Klasse der MDM- \_ Richtlinie \_ \_ \_ stellt die Bildungsrichtlinien dar.
+description: Die Mdm \_ Policy \_ User \_ Result01 \_ Education02-Klasse stellt die Bildungsrichtlinien dar.
 ms.assetid: 34dcc478-5f39-4e1a-908b-46cbbf2ff4fd
 keywords:
 - MDM_Policy_User_Result01_Education02-Klasse
@@ -17,18 +17,18 @@ api_type:
 - DllExport
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 8ce82ae1131287ec04c77e084e822609a0e0ab07
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: f5b9b71c66d53a2bbcc502102b1eec7c409c8525a61942d45145ce157ebe3e73
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104391943"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119077054"
 ---
-# <a name="mdm_policy_user_result01_education02-class"></a>MDM- \_ Richtlinien \_ Benutzer \_ Result01 \_ Education02-Klasse
+# <a name="mdm_policy_user_result01_education02-class"></a>MDM \_ Policy \_ User \_ Result01 \_ Education02-Klasse
 
 \[Einige Informationen beziehen sich auf Vorabversionen, die vor der kommerziellen Freigabe grundlegend geändert werden können. Microsoft übernimmt keine Garantie, weder ausdrücklich noch stillschweigend, für die hier bereitgestellten Informationen.\]
 
-Die Benutzer Result01 Education02-Klasse der MDM- \_ Richtlinie \_ \_ \_ stellt die Bildungsrichtlinien dar.
+Die Mdm \_ Policy \_ User \_ Result01 \_ Education02-Klasse stellt die Bildungsrichtlinien dar.
 
 Die folgende Syntax enthält vereinfachten MOF-Code und schließt alle geerbten Eigenschaften ein.
 
@@ -48,20 +48,20 @@ class MDM_Policy_User_Result01_Education02
 
 ## <a name="members"></a>Member
 
-Die **\_ \_ Benutzer \_ Result01 \_ Education02-Klasse der MDM-Richtlinie** verfügt über diese Typen von Membern:
+Die **MDM Policy User \_ \_ \_ Result01 \_ Education02-Klasse** verfügt über diese Typen von Membern:
 
 -   [Eigenschaften](#properties)
 
 ### <a name="properties"></a>Eigenschaften
 
-Die **\_ \_ Benutzer \_ Result01 \_ Education02-Klasse der MDM-Richtlinie** verfügt über diese Eigenschaften.
+Die **MDM Policy User \_ \_ \_ Result01 \_ Education02-Klasse** verfügt über diese Eigenschaften.
 
 <dl> <dt>
 
-[Defaultprintername](/windows/client-management/mdm/policy-csp-education#education-defaultprintername)
+[DefaultPrinterName](/windows/client-management/mdm/policy-csp-education#education-defaultprintername)
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Lesen/Schreiben
@@ -72,32 +72,32 @@ Zugriffstyp: Lesen/Schreiben
 **InstanceID**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [ **Schlüssel**](/windows/desktop/WmiSdk/key-qualifier)
+Qualifizierer: [ **key**](/windows/desktop/WmiSdk/key-qualifier)
 </dt> </dl>
 
 </dd> <dt>
 
-**ParentID**
+**Parentid**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [ **Schlüssel**](/windows/desktop/WmiSdk/key-qualifier)
+Qualifizierer: [ **key**](/windows/desktop/WmiSdk/key-qualifier)
 </dt> </dl>
 
 </dd> <dt>
 
-[Preventaddingnewprinter](/windows/client-management/mdm/policy-csp-education#education-preventaddingnewprinters)
+[PreventAddingNewPrinters](/windows/client-management/mdm/policy-csp-education#education-preventaddingnewprinters)
 </dt> <dd> <dl> <dt>
 
 Datentyp: **sint32**
@@ -108,10 +108,10 @@ Zugriffstyp: Lesen/Schreiben
 
 </dd> <dt>
 
-[Printernames](/windows/client-management/mdm/policy-csp-education#education-printernames)
+[PrinterNames](/windows/client-management/mdm/policy-csp-education#education-printernames)
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Lesen/Schreiben
@@ -125,10 +125,10 @@ Zugriffstyp: Lesen/Schreiben
 
 | Anforderung | Wert |
 |-------------------------------------|------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows 10 \[ -Desktop-Apps\]<br/>                                                    |
+| Unterstützte Mindestversion (Client)<br/> | \[Windows 10 Nur Desktop-Apps\]<br/>                                                    |
 | Unterstützte Mindestversion (Server)<br/> | Nicht unterstützt<br/>                                                                      |
-| Namespace<br/>                | Root \\ CIMV2 \\ MDM- \\ dmmap<br/>                                                             |
-| MOF<br/>                      | <dl> <dt>Dmwmibridgeprov. MOF</dt> </dl> |
+| Namespace<br/>                | Root \\ cimv2 \\ mdm \\ dmmap<br/>                                                             |
+| MOF<br/>                      | <dl> <dt>DMWmiBridgeProv.mof</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>DMWmiBridgeProv.dll</dt> </dl> |
 
 

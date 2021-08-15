@@ -4,7 +4,7 @@ description: Die Lokalisierungs-ID und der Anzeigename für ein Objekt.
 ms.assetid: 22c0df15-8245-49c6-b5ca-57ac48b57c3a
 ms.tgt_platform: multiple
 keywords:
-- Localized-Description AD-Schema
+- Localized-Description AD-Attributschema
 - localizedDescription-Attribut AD-Schema
 topic_type:
 - apiref
@@ -35,7 +35,7 @@ Die Lokalisierungs-ID und der Anzeigename für ein Objekt.
 | Aktualisieren von Berechtigungen  | \-                                          |
 | Updatehäufigkeit  | \-                                          |
 | Attribute-Id      | 1.2.840.113556.1.4.817                      |
-| System-Id-Guid    | d9e18316-8939-11d1-aebc-0000f80367c1        |
+| System-ID-GUID    | d9e18316-8939-11d1-aebc-0000f80367c1        |
 | Syntax            | [**String(Unicode)**](s-string-unicode.md) |
 
 
@@ -58,7 +58,7 @@ Die Lokalisierungs-ID und der Anzeigename für ein Objekt.
 | Link-ID                | \-                                                                 |
 | MAPI-Id                | \-                                                                 |
 | System-Only            | False                                                              |
-| Is-Single-Valued       | False                                                              |
+| Ist einwertig       | False                                                              |
 | Ist indiziert             | False                                                              |
 | Im globalen Katalog      | False                                                              |
 | NT-Security-Descriptor | O:BAG:BAD:S:                                                       |
@@ -79,7 +79,7 @@ Die Lokalisierungs-ID und der Anzeigename für ein Objekt.
 | Link-ID                | \-                                                                 |
 | MAPI-Id                | \-                                                                 |
 | System-Only            | False                                                              |
-| Is-Single-Valued       | False                                                              |
+| Ist einwertig       | False                                                              |
 | Ist indiziert             | False                                                              |
 | Im globalen Katalog      | False                                                              |
 | NT-Security-Descriptor | O:BAG:BAD:S:                                                       |
@@ -100,7 +100,7 @@ Die Lokalisierungs-ID und der Anzeigename für ein Objekt.
 | Link-ID                | \-                                                                 |
 | MAPI-Id                | \-                                                                 |
 | System-Only            | False                                                              |
-| Is-Single-Valued       | False                                                              |
+| Ist einwertig       | False                                                              |
 | Ist indiziert             | False                                                              |
 | Im globalen Katalog      | False                                                              |
 | NT-Security-Descriptor | O:BAG:BAD:S:                                                       |

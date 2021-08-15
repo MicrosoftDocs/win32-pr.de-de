@@ -1,6 +1,6 @@
 ---
-title: 'Texture2DMS:: GetDimensions-Funktion'
-description: 'Gibt die Dimensionen der Ressource zurück. | Texture2DMS:: GetDimensions-Funktion'
+title: Texture2DMS::GetDimensions-Funktion
+description: Gibt die Dimensionen der Ressource zurück. | Texture2DMS::GetDimensions-Funktion
 ms.assetid: badf4127-2498-4c2e-acc7-20507488fc6b
 keywords:
 - GetDimensions-Funktion HLSL
@@ -13,14 +13,14 @@ api_type:
 ms.topic: reference
 ms.date: 05/31/2018
 api_location: ''
-ms.openlocfilehash: f720a10ac73f48ce1f27c5676d706a75178aa8ee
-ms.sourcegitcommit: 92e74c99f8f4d097676959d0c317f533c2400a80
+ms.openlocfilehash: dbe034b6484b80efb58712196c4bd4d0aa67800c51f659c97b0d400e934eeecb
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/09/2021
-ms.locfileid: "103961383"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118985830"
 ---
-# <a name="texture2dmsgetdimensions-function"></a>Texture2DMS:: GetDimensions-Funktion
+# <a name="texture2dmsgetdimensions-function"></a>Texture2DMS::GetDimensions-Funktion
 
 Gibt die Dimensionen der Ressource zurück.
 
@@ -38,30 +38,30 @@ void GetDimensions(
 
 <dl> <dt>
 
-*Breite* \[ vorgenommen\]
+*Breite* \[ out\]
 </dt> <dd>
 
-Typ: **[ **uint**](/windows/desktop/WinProg/windows-data-types)**
+Typ: **[ **UINT**](/windows/desktop/WinProg/windows-data-types)**
 
-Die Ressourcen Breite in Texels.
+Die Ressourcenbreite in Texel.
 
 </dd> <dt>
 
-*Höhe* \[ vorgenommen\]
+*Höhe* \[ out\]
 </dt> <dd>
 
-Typ: **[ **uint**](/windows/desktop/WinProg/windows-data-types)**
+Typ: **[ **UINT**](/windows/desktop/WinProg/windows-data-types)**
 
-Die Ressourcen Höhe in Texels.
+Die Ressourcenhöhe in Texel.
 
 </dd> <dt>
 
-*Anzahl von Beispielen* \[ vorgenommen\]
+*NumberOfSamples* \[ out\]
 </dt> <dd>
 
-Typ: **[ **uint**](/windows/desktop/WinProg/windows-data-types)**
+Typ: **[ **UINT**](/windows/desktop/WinProg/windows-data-types)**
 
-Die Anzahl der Beispiel Speicherorte.
+Die Anzahl der Beispielspeicherorte.
 
 </dd> </dl>
 
@@ -69,7 +69,7 @@ Die Anzahl der Beispiel Speicherorte.
 
 Diese Funktion gibt keinen Wert zurück.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
 Dies ist eine Liste der überladenen Versionen dieser Methode.
 
@@ -82,11 +82,11 @@ void GetDimensions(out float Width,
 
 
 
-Diese Funktion wird für die folgenden Typen von Shadern unterstützt:
+Diese Funktion wird für die folgenden Shadertypen unterstützt:
 
 
 
-| Scheitelpunkt | Hülle | Domain | Geometrie | Pixel | Compute |
+| Scheitelpunkt | Rumpf | Domain | Geometrie | Pixel | Compute |
 |--------|------|--------|----------|-------|---------|
 |        |      |        |          | x     | x       |
 
@@ -101,7 +101,7 @@ Diese Funktion wird für die folgenden Typen von Shadern unterstützt:
 [Texture2DMS](sm5-object-texture2dms.md)
 </dt> <dt>
 
-[Shader-Modell 5](d3d11-graphics-reference-sm5.md)
+[Shadermodell 5](d3d11-graphics-reference-sm5.md)
 </dt> </dl>
 
  

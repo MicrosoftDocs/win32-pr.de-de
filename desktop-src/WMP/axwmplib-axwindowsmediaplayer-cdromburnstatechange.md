@@ -1,9 +1,9 @@
 ---
-title: Cdromburnstatechange-Ereignis des AxWindowsMediaPlayer-Objekts
-description: Das cdromburnstatechange-Ereignis tritt auf, wenn sich der Zustand eines CD-Brennvorgangs ändert.
+title: CbruStStateChange-Ereignis des AxWindowsMediaPlayer-Objekts
+description: Das CglühEndstateStateChange-Ereignis tritt auf, wenn ein CD-Vorgang den Zustand ändert.
 ms.assetid: fec8a8e5-e282-454e-9713-fd9bb131df6a
 keywords:
-- Cdromburnstatechange-Ereignis der AxWindowsMediaPlayer-Objekt Fenster Media Player
+- CbruStStateChange-Ereignis des AxWindowsMediaPlayer-Windows Media Player
 topic_type:
 - apiref
 api_name:
@@ -14,16 +14,16 @@ api_type:
 - Assembly
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: bc679a96600bff5aa4ca805018d364a6aeea8174
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: a28a8dfad6e5d9bc7bb603632e2eb08ceb5810f9bf02f395d825fc2d7ac64c24
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106355855"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119055038"
 ---
-# <a name="cdromburnstatechange-event-of-the-axwindowsmediaplayer-object"></a>Cdromburnstatechange-Ereignis des AxWindowsMediaPlayer-Objekts
+# <a name="cdromburnstatechange-event-of-the-axwindowsmediaplayer-object"></a>CbruStStateChange-Ereignis des AxWindowsMediaPlayer-Objekts
 
-Das cdromburnstatechange-Ereignis tritt auf, wenn sich der Zustand eines CD-Brennvorgangs ändert.
+Das CglühEndstateStateChange-Ereignis tritt auf, wenn ein CD-Vorgang den Zustand ändert.
 
 ``` syntax
 [C#]
@@ -41,14 +41,14 @@ Private Sub player_CdromBurnStateChange(
 
 ## <a name="event-data"></a>Ereignisdaten
 
-Der diesem Ereignis zugeordnete Handler ist vom Typ **AxWMPLib. \_ Wmpocxevents \_ cdromburnstatechangeeventhandler**. Dieser Handler empfängt ein Argument vom Typ **AxWMPLib. \_ Wmpocxevents \_ cdromburnstatechangeevent**, das die folgenden Eigenschaften enthält, die mit diesem Ereignis verknüpft sind.
+Der diesem Ereignis zugeordnete Handler ist vom Typ **AxWMPLib. \_ WMPOCXEvents \_ C enumerationStateChangeEventHandler**. Dieser Handler empfängt ein Argument vom Typ **AxWMPLib. \_ WMPOCXEvents \_ CladungsStateChangeEvent**, das die folgenden Eigenschaften im Zusammenhang mit diesem Ereignis enthält.
 
 
 
 | Eigenschaft   | BESCHREIBUNG                                                                                               |
 |------------|-----------------------------------------------------------------------------------------------------------|
-| pcdromburn | WMPLib. iwmpcdromburndie-Schnittstelle, die den Brennvorgang darstellt, der den Fehler ausgelöst hat.<br/> |
-| wmpsb      | WMPLib. wmpburnstateder Enumerationswert, der den neuen Zustand angibt.<br/>                         |
+| pC wies | WMPLib.IWMPC wie Die Schnittstelle, die den Vorgang darstellt, der den Fehler ausgelöst hat.<br/> |
+| wmpbs      | WMPLib.WMPMemberStateDer -Enumerationswert, der den neuen Zustand angibt.<br/>                         |
 
 
 
@@ -66,17 +66,17 @@ Der diesem Ereignis zugeordnete Handler ist vom Typ **AxWMPLib. \_ Wmpocxevents 
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**AxWindowsMediaPlayer-Objekt (VB und c#)**](axwindowsmediaplayer-object--vb-and-c.md)
+[**AxWindowsMediaPlayer-Objekt (VB und C#)**](axwindowsmediaplayer-object--vb-and-c.md)
 </dt> <dt>
 
-[**Iwmpcdromburn-Schnittstelle (VB und c#)**](iwmpcdromburn--vb-and-c.md)
+[**IWMPCführungsschnittstelle (VB und C#)**](iwmpcdromburn--vb-and-c.md)
 </dt> <dt>
 
-[**Wmpburnstate**](/previous-versions/windows/desktop/api/wmp/ne-wmp-wmpburnstate)
+[**WMP-Zustand**](/previous-versions/windows/desktop/api/wmp/ne-wmp-wmpburnstate)
 </dt> </dl>
 
  

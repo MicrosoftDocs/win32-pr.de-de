@@ -1,19 +1,19 @@
 ---
-description: Enthält die Bezeichner der Alben, in denen das Element Mitglied ist. Kann in Verbindung mit dem Album-Element in den Content Indexer-APIs verwendet werden, um andere apps über bildalben zu benachrichtigen, die vom Benutzer erstellt oder bereits erstellt wurden.
+description: Enthält die Bezeichner der Alben, denen das Element angehört. Kann in Verbindung mit dem Element "Album" in den Content Indexer-APIs verwendet werden, um andere Apps über Bilderalben zu benachrichtigen, die der Benutzer erstellt hat oder die Apps bereits erstellt haben.
 ms.assetid: c0b1bcf0-a2ea-4ec1-9ed8-892bfceec262
-title: System. Supplemental. albumId
+title: System.Supplemental.AlbumID
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: ad2b609d9d77d85f417d7274d1e5dcde06527c74
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: bc459297765fd9a4ea40efeecbfffab7c4d83bf9eb576032e836e209c2b19106
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106349289"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119095507"
 ---
-# <a name="systemsupplementalalbumid"></a>System. Supplemental. albumId
+# <a name="systemsupplementalalbumid"></a>System.Supplemental.AlbumID
 
-Enthält die Bezeichner der Alben, in denen das Element Mitglied ist. Kann in Verbindung mit dem Album-Element in den Content Indexer-APIs verwendet werden, um andere apps über bildalben zu benachrichtigen, die vom Benutzer erstellt oder bereits erstellt wurden.
+Enthält die Bezeichner der Alben, denen das Element angehört. Kann in Verbindung mit dem Element "Album" in den Content Indexer-APIs verwendet werden, um andere Apps über Bilderalben zu benachrichtigen, die der Benutzer erstellt hat oder die Apps bereits erstellt haben.
 
 ## <a name="windows-10-version-1703"></a>Windows 10, Version 1703
 
@@ -30,54 +30,54 @@ propertyDescription
       type = Multivalue String
 ```
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Pkey-Werte werden in "propkey. h" definiert.
+PKEY-Werte werden in Propkey.h definiert.
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
 <dl> <dt>
 
-[propertydescription](./propdesc-schema-propertydescription.md)
+[propertyDescription](./propdesc-schema-propertydescription.md)
 </dt> <dt>
 
-[SearchInfo](./propdesc-schema-searchinfo.md)
+[searchInfo](./propdesc-schema-searchinfo.md)
 </dt> <dt>
 
-[Labelinfo](./propdesc-schema-labelinfo.md)
+[labelInfo](./propdesc-schema-labelinfo.md)
 </dt> <dt>
 
-[TypeInfo](./propdesc-schema-typeinfo.md)
+[Typeinfo](./propdesc-schema-typeinfo.md)
 </dt> <dt>
 
-[Display Info](./propdesc-schema-displayinfo.md)
+[displayInfo](./propdesc-schema-displayinfo.md)
 </dt> <dt>
 
-[StringFormat](./propdesc-schema-stringformat.md)
+[Stringformat](./propdesc-schema-stringformat.md)
 </dt> <dt>
 
-[BooleanFormat](./propdesc-schema-booleanformat.md)
+[booleanFormat](./propdesc-schema-booleanformat.md)
 </dt> <dt>
 
-[NumberFormat](./propdesc-schema-numberformat.md)
+[Numberformat](./propdesc-schema-numberformat.md)
 </dt> <dt>
 
 [dateTimeFormat](./propdesc-schema-datetimeformat.md)
 </dt> <dt>
 
-[enumeratedlist](./propdesc-schema-enumeratedlist.md)
+[enumeratedList](./propdesc-schema-enumeratedlist.md)
 </dt> <dt>
 
-[DrawControl](./propdesc-schema-drawcontrol.md)
+[drawControl](./propdesc-schema-drawcontrol.md)
 </dt> <dt>
 
-[editcontrol](./propdesc-schema-editcontrol.md)
+[editControl](./propdesc-schema-editcontrol.md)
 </dt> <dt>
 
-[FilterControl](./propdesc-schema-filtercontrol.md)
+[Filtercontrol](./propdesc-schema-filtercontrol.md)
 </dt> <dt>
 
-[querycontrol](./propdesc-schema-querycontrol.md)
+[queryControl](./propdesc-schema-querycontrol.md)
 </dt> </dl>
 
  

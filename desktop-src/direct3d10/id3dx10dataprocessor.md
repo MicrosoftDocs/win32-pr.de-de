@@ -1,7 +1,7 @@
 ---
-description: Datenverarbeitungs Objekt, das von der ID3DX10ThreadPump-Schnittstelle zum asynchronen verarbeiten geladener Daten verwendet wird.
+description: Datenverarbeitungsobjekt, das von der ID3DX10ThreadPump-Schnittstelle für die asynchrone Verarbeitung geladener Daten verwendet wird.
 ms.assetid: c932f558-10da-45fc-a833-8ed86fa065ab
-title: ID3DX10DataProcessor-Schnittstelle (d3dx10. h)
+title: ID3DX10DataProcessor-Schnittstelle (D3DX10.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -14,40 +14,40 @@ api_type:
 api_location:
 - D3DX10.lib
 - D3DX10.dll
-ms.openlocfilehash: de573e50a1442396df78dd6a3c8f0bd09c1cbf6d
-ms.sourcegitcommit: 14010c34b35fa268046c7683f021f86de08ddd0a
+ms.openlocfilehash: ddb192a0591ce241e216b3bd0471212fc4801fbf1c901430c187f5370237049d
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "103870212"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119128370"
 ---
 # <a name="id3dx10dataprocessor-interface"></a>ID3DX10DataProcessor-Schnittstelle
 
-Datenverarbeitungs Objekt, das von der [**ID3DX10ThreadPump-Schnittstelle**](id3dx10threadpump.md) zum asynchronen verarbeiten geladener Daten verwendet wird.
+Datenverarbeitungsobjekt, das von [**der ID3DX10ThreadPump-Schnittstelle**](id3dx10threadpump.md) für die asynchrone Verarbeitung geladener Daten verwendet wird.
 
 ## <a name="members"></a>Member
 
-Die **ID3DX10DataProcessor** -Schnittstelle erbt von der [**IUnknown**](/windows/win32/api/unknwn/nn-unknwn-iunknown) -Schnittstelle. **ID3DX10DataProcessor** verfügt auch über die folgenden Typen von Membern:
+Die **ID3DX10DataProcessor-Schnittstelle** erbt von der [**IUnknown-Schnittstelle.**](/windows/win32/api/unknwn/nn-unknwn-iunknown) **ID3DX10DataProcessor** verfügt auch über diese Typen von Membern:
 
 -   [Methoden](#methods)
 
 ### <a name="methods"></a>Methoden
 
-Die **ID3DX10DataProcessor** -Schnittstelle verfügt über diese Methoden.
+Die **ID3DX10DataProcessor-Schnittstelle** verfügt über diese Methoden.
 
 
 
 | Methode                                                                | BESCHREIBUNG                                                                                                                         |
 |:----------------------------------------------------------------------|:------------------------------------------------------------------------------------------------------------------------------------|
-| [**"Kreatedeviceobject"**](id3dx10dataprocessor-createdeviceobject.md) | Erstellen Sie ein Geräte Objekt.<br/>                                                                                                  |
-| [**Zerstören**](id3dx10dataprocessor-destroy.md)                       | Wird von einer [**ID3DX10ThreadPump-Schnittstelle**](id3dx10threadpump.md) verwendet, um den Prozessor zu zerstören, nachdem ein Arbeits Element abgeschlossen wurde.<br/> |
+| [**CreateDeviceObject**](id3dx10dataprocessor-createdeviceobject.md) | Erstellen Sie ein Geräteobjekt.<br/>                                                                                                  |
+| [**Zerstören**](id3dx10dataprocessor-destroy.md)                       | Wird von einer [**ID3DX10ThreadPump-Schnittstelle**](id3dx10threadpump.md) verwendet, um den Prozessor nach Abschluss eines Arbeitselements zu zerstören.<br/> |
 | [**Prozess**](id3dx10dataprocessor-process.md)                       | Verarbeiten einiger Daten.<br/>                                                                                                       |
 
 
 
  
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
 Dieses Objekt kann geerbt und seine Member neu definiert werden. Auf diese Weise können Sie die API für die Verarbeitung Ihrer eigenen benutzerdefinierten Dateiformate anpassen.
 
@@ -57,12 +57,12 @@ Dieses Objekt kann geerbt und seine Member neu definiert werden. Auf diese Weise
 
 | Anforderung | Wert |
 |--------------------|---------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>D3dx10. h</dt> </dl>   |
-| Bibliothek<br/> | <dl> <dt>D3dx10. lib</dt> </dl> |
+| Header<br/>  | <dl> <dt>D3DX10.h</dt> </dl>   |
+| Bibliothek<br/> | <dl> <dt>D3DX10.lib</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 

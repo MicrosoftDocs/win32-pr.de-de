@@ -3,13 +3,13 @@
   items:
     - name: Übersicht über das Eigenschaftensystem
       href: property-system-overview.md
-    - name: Entwicklerhandbuch für Das Eigenschaftensystem
+    - name: Entwicklerhandbuch für das Eigenschaftensystem
       href: property-system-developer-s-guide.md
       items:
         - name: Erstellen von benutzerdefinierten Eigenschaften
           href: building-property-handlers-property-schemas.md
           items:
-            - name: Grundlegendes zum Eigenschaftenbeschreibungsschema
+            - name: Grundlegendes zum Schema der Eigenschaftenbeschreibung
               href: propdesc-schema-entry.md
         - name: Implementieren von Eigenschaftenhandlern
           href: building-property-handlers.md
@@ -55,7 +55,7 @@
                   href: props-system-audio-streamname.md
                 - name: System.Audio.StreamNumber
                   href: props-system-audio-streamnumber.md
-            - name: Calendar
+            - name: Kalender
               href: calendar-bumper.md
               items:
                 - name: System.Calendar.Duration
@@ -131,7 +131,7 @@
                   href: props-system-contact-assistantname.md
                 - name: System.Contact.AssistantTelephone
                   href: props-system-contact-assistanttelephone.md
-                - name: System.Contact.Wird
+                - name: System.Contact.Contact
                   href: props-system-contact-birthday.md
                 - name: System.Contact.BusinessAddress
                   href: props-system-contact-businessaddress.md
@@ -143,7 +143,7 @@
                   href: props-system-contact-businessaddress1postalcode.md
                 - name: System.Contact.BusinessAddress1Region
                   href: props-system-contact-businessaddress1region.md
-                - name: System.Contact.BusinessAddress1Person
+                - name: System.Contact.BusinessAddress13
                   href: props-system-contact-businessaddress1street.md
                 - name: System.Contact.BusinessAddress2Country
                   href: props-system-contact-businessaddress2country.md
@@ -153,7 +153,7 @@
                   href: props-system-contact-businessaddress2postalcode.md
                 - name: System.Contact.BusinessAddress2Region
                   href: props-system-contact-businessaddress2region.md
-                - name: System.Contact.BusinessAddress2Person
+                - name: System.Contact.BusinessAddress2 Durchschn.
                   href: props-system-contact-businessaddress2street.md
                 - name: System.Contact.BusinessAddress3Country
                   href: props-system-contact-businessaddress3country.md
@@ -163,7 +163,7 @@
                   href: props-system-contact-businessaddress3postalcode.md
                 - name: System.Contact.BusinessAddress3Region
                   href: props-system-contact-businessaddress3region.md
-                - name: System.Contact.BusinessAddress3Person
+                - name: System.Contact.BusinessAddress3 Aus
                   href: props-system-contact-businessaddress3street.md
                 - name: System.Contact.BusinessAddressCity
                   href: props-system-contact-businessaddresscity.md
@@ -175,7 +175,7 @@
                   href: props-system-contact-businessaddresspostofficebox.md
                 - name: System.Contact.BusinessAddressState
                   href: props-system-contact-businessaddressstate.md
-                - name: System.Contact.BusinessAddress Csv
+                - name: System.Contact.BusinessAddress Aus
                   href: props-system-contact-businessaddressstreet.md
                 - name: System.Contact.BusinessEmailAddresses
                   href: props-system-contact-businessemailaddresses.md
@@ -417,15 +417,15 @@
                   href: props-system-contact-primaryaddresspostofficebox.md
                 - name: System.Contact.PrimaryAddressState
                   href: props-system-contact-primaryaddressstate.md
-                - name: System.Contact.PrimaryAddress Aus
+                - name: System.Contact.PrimaryAddress Csv
                   href: props-system-contact-primaryaddressstreet.md
                 - name: System.Contact.PrimaryEmailAddress
                   href: props-system-contact-primaryemailaddress.md
                 - name: System.Contact.PrimaryTelephone
                   href: props-system-contact-primarytelephone.md
-                - name: System.Contact.Soll
+                - name: System.Contact.Zum
                   href: props-system-contact-profession.md
-                - name: System.Contact.Abername
+                - name: System.Contact.PositioningName
                   href: props-system-contact-spousename.md
                 - name: System.Contact.Suffix
                   href: props-system-contact-suffix.md
@@ -439,7 +439,7 @@
                   href: props-system-contact-webpage2.md
                 - name: System.Contact.Webpage3
                   href: props-system-contact-webpage3.md
-            - name: Kernspeicher
+            - name: Core
               href: core-bumper.md
               items:
                 - name: System.AcquisitionID
@@ -630,7 +630,7 @@
                   href: props-system-lowkeywords.md
                 - name: System.MediumKeywords
                   href: props-system-mediumkeywords.md
-                - name: System.Persistente Informationsinformationen
+                - name: System.Zusicherungsinformationen
                   href: props-system-mileageinformation.md
                 - name: System.MIMEType
                   href: props-system-mimetype.md
@@ -1432,7 +1432,7 @@
                   href: props-system-identityprovider-name.md
                 - name: System.IdentityProvider.Picture
                   href: props-system-identityprovider-picture.md
-            - name: Bild
+            - name: Image
               href: image-bumper.md
               items:
                 - name: System.Image.BitDepth
@@ -1563,7 +1563,7 @@
                   href: props-system-media-providerstyle.md
                 - name: System.Media. Publisher
                   href: props-system-media-publisher.md
-                - name: System.Media.SeasonNumber
+                - name: System.Media.Number
                   href: props-system-media-seasonnumber.md
                 - name: System.Media.SeriesName
                   href: props-system-media-seriesname.md
@@ -1657,7 +1657,7 @@
                   href: props-system-music-albumtitlesortoverride.md
                 - name: System. Musik. Künstler
                   href: props-system-music-artist.md
-                - name: System. Musik. InterpretsortOverride
+                - name: System. Musik. InterpretSortOverride
                   href: props-system-music-artistsortoverride.md
                 - name: System. Musik. BeatsPerMinute
                   href: props-system-music-beatsperminute.md
@@ -1759,11 +1759,11 @@
                   href: props-system-photo-exposuretimenumerator.md
                 - name: System.Photo.Flash
                   href: props-system-photo-flash.md
-                - name: System.Photo.FlashStopp
+                - name: System.Photo.FlashEnreal
                   href: props-system-photo-flashenergy.md
-                - name: System.Photo.Flash PersistentDenominator
+                - name: System.Photo.FlashEnoadenominator
                   href: props-system-photo-flashenergydenominator.md
-                - name: System.Photo.FlashWallNumerator
+                - name: System.Photo.FlashEn enumerationNumerator
                   href: props-system-photo-flashenergynumerator.md
                 - name: System.Photo.FlashManufacturer
                   href: props-system-photo-flashmanufacturer.md
@@ -1781,7 +1781,7 @@
                   href: props-system-photo-focallength.md
                 - name: System.Photo.FocalLengthDenominator
                   href: props-system-photo-focallengthdenominator.md
-                - name: System.Photo.FocalLengthInStopp
+                - name: System.Photo.FocalLengthInLauf
                   href: props-system-photo-focallengthinfilm.md
                 - name: System.Photo.FocalLengthNumerator
                   href: props-system-photo-focallengthnumerator.md
@@ -1851,11 +1851,11 @@
                   href: props-system-photo-sharpness.md
                 - name: System.Photo.SharpnessText
                   href: props-system-photo-sharpnesstext.md
-                - name: System.Photo.PhotoSpeed
+                - name: System.Photo.Speed
                   href: props-system-photo-shutterspeed.md
-                - name: System.Photo.CogspeedDenominator
+                - name: System.Photo.SpeedSpeedDenominator
                   href: props-system-photo-shutterspeeddenominator.md
-                - name: System.Photo.CogspeedNumerator
+                - name: System.Photo.SpeedNumerator
                   href: props-system-photo-shutterspeednumerator.md
                 - name: System.Photo.SubjectDistance
                   href: props-system-photo-subjectdistance.md
@@ -1898,7 +1898,7 @@
                   href: props-system-propgroup-image.md
                 - name: System.PropGroup.Media
                   href: props-system-propgroup-media.md
-                - name: System.PropGroup.MediaErweitert
+                - name: System.PropGroup.MediaAdvanced
                   href: props-system-propgroup-mediaadvanced.md
                 - name: System.PropGroup.Message
                   href: props-system-propgroup-message.md
@@ -1906,7 +1906,7 @@
                   href: props-system-propgroup-music.md
                 - name: System.PropGroup.Origin
                   href: props-system-propgroup-origin.md
-                - name: System.PropGroup.PhotoErweitert
+                - name: System.PropGroup.PhotoAdvanced
                   href: props-system-propgroup-photoadvanced.md
                 - name: System.PropGroup.RecordedTV
                   href: props-system-propgroup-recordedtv.md
@@ -1987,7 +1987,7 @@
                   href: props-system-security-encryptionowners.md
                 - name: System.Security.EncryptionOwnersDisplay
                   href: props-system-security-encryptionownersdisplay.md
-            - name: Suche
+            - name: 'Suchen,'
               href: search-bumper.md
               items:
                 - name: System.Search.AutoSummary
@@ -2058,9 +2058,9 @@
                   href: props-system-appusermodel-preventpinning.md
                 - name: System.AppUserModel.NeustartCommand
                   href: props-system-appusermodel-relaunchcommand.md
-                - name: System.AppUserModel.CsvDisplayNameResource
+                - name: System.AppUserModel.PersistentDisplayNameResource
                   href: props-system-appusermodel-relaunchdisplaynameresource.md
-                - name: System.AppUserModel.IconResource
+                - name: System.AppUserModel.NeustartIconResource
                   href: props-system-appusermodel-relaunchiconresource.md
                 - name: System.AppUserModel.StartPinOption
                   href: props-system-appusermodel-startpinoption.md
@@ -2165,7 +2165,7 @@
                   href: props-system-volume-ismappeddrive.md
                 - name: System.Volume.IsRoot
                   href: props-system-volume-isroot.md
-        - name: Eigenschaftenbeschreibungsschema
+        - name: Schema der Eigenschaftenbeschreibung
           href: property-description-schema.md
           items:
             - name: aliasInfo
@@ -2426,7 +2426,7 @@
         - name: Functions
           href: functions.md
           items:
-            - name: Eigenschaftenbehälterfunktionen
+            - name: Eigenschaften-Bag-Funktionen
               href: property-bag-functions.md
               items:
                 - name: PSPropertyBag_Delete

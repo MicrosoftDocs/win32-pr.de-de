@@ -1,24 +1,24 @@
 ---
-title: Video Speicherort
-description: Video Speicherort
+title: Videospeicherort
+description: Videospeicherort
 ms.assetid: d7785890-36a1-4077-b878-4845f2829101
 keywords:
-- Windows Media Player Mobile Skins, Video
-- Skins, Video
-- Referenz für Skins, Video
-- Video in Skins, Informationen zu
+- Windows Media Player Mobile Skins,Video
+- Skins,Video
+- Referenz für Skins,Video
+- Video in Skins, Informationen
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 6d12a21343e0eef035bd4ff860bb0a30c1db0f30
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: 2df310c1c439ac06317ff67c36bea340339233f93821fba059db642400f00e35
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "104206194"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119054158"
 ---
-# <a name="video-location"></a>Video Speicherort
+# <a name="video-location"></a>Videospeicherort
 
-Sie müssen den Speicherort des Videoanzeige Bereichs in der Skin definieren. Sie müssen vier positive ganze Zahlen (durch Kommas getrennt) eingeben, die die linke, obere, Breite und Höhe der Videoanzeige in Pixel relativ zum Hintergrundbild definieren.
+Sie müssen die Position des Videoanzeigebereichs in Ihrer Skin definieren. Sie müssen vier positive ganze Zahlen, getrennt durch Kommas, eingeben, die die linke, obere, Breite und Höhe der Videoanzeige in Pixel relativ zum Hintergrundbild definieren.
 
 
 ```C++
@@ -35,9 +35,9 @@ Sie müssen den Speicherort des Videoanzeige Bereichs in der Skin definieren. Si
 [**Video**](video.md)
 </dt> </dl>
 
- 
+ 
 
- 
+ 
 
 
 

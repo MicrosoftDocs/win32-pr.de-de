@@ -1,26 +1,26 @@
 ---
-description: Im folgenden Codebeispiel wird die Behandlung von neuen Rückruf Benachrichtigungen veranschaulicht, z. b. das Suchen oder erstellen geeigneter Terminals zum Rendering der Medien.
+description: Im folgenden Codebeispiel wird die Behandlung neuer Aufrufbenachrichtigungen veranschaulicht, z. B. das Suchen oder Erstellen geeigneter Terminals zum Rendern der Medien.
 ms.assetid: 77f6e1b5-b60e-4e8d-b747-7eceae8b0611
-title: Empfangen eines Aufrufes
+title: Empfangen eines Anrufs
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: a6a78ebf5b77569f8468a8b2c0a30217f4f7430e
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: b9e4ce02ec11a1373d16b9b9ebd0fba29313b1d532175894c6fd1b12a38e2bf3
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106352697"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119060468"
 ---
-# <a name="receive-a-call"></a>Empfangen eines Aufrufes
+# <a name="receive-a-call"></a>Empfangen eines Anrufs
 
-Im folgenden Codebeispiel wird die Behandlung von neuen Rückruf Benachrichtigungen veranschaulicht, z. b. das Suchen oder erstellen geeigneter Terminals zum Rendering der Medien. Dieses Beispiel ist ein Teil der Switch-Anweisung, die eine Anwendung für die Ereignis Behandlung implementieren muss. Der Code selbst kann in der Implementierung von [**ittapieventnotification:: Event**](/windows/desktop/api/Tapi3if/nf-tapi3if-ittapieventnotification-event)enthalten sein, oder die **Ereignis** Methode sendet eine Nachricht an einen Arbeits Thread, der den Schalter enthält.
+Im folgenden Codebeispiel wird die Behandlung neuer Aufrufbenachrichtigungen veranschaulicht, z. B. das Suchen oder Erstellen geeigneter Terminals zum Rendern der Medien. Dieses Beispiel ist ein Teil der switch-Anweisung, den eine Anwendung für die Ereignisbehandlung implementieren muss. Der Code selbst kann in der Implementierung von [**ITTAPIEventNotification::Event**](/windows/desktop/api/Tapi3if/nf-tapi3if-ittapieventnotification-event)enthalten sein, oder die **Event-Methode** kann eine Nachricht an einen Arbeitsthread senden, der den Schalter enthält.
 
-Bevor Sie dieses Codebeispiel verwenden, müssen Sie die Vorgänge in [Initialize TAPI](initialize-tapi.md)ausführen, [eine Adresse auswählen](select-an-address.md)und [Ereignisse registrieren](register-events.md).
+Bevor Sie dieses Codebeispiel verwenden können, müssen Sie die Vorgänge in Initialisieren von [TAPI,](initialize-tapi.md) [Auswählen einer Adresse](select-an-address.md)und Registrieren von Ereignissen [ausführen.](register-events.md)
 
-Außerdem müssen Sie die in [Auswählen eines Terminals](select-a-terminal.md) dargestellten Vorgänge nach dem Abrufen der Schnittstellen Zeiger [**itbasiccallcontrol**](/windows/desktop/api/tapi3if/nn-tapi3if-itbasiccallcontrol) und [**itaddress**](/windows/desktop/api/tapi3if/nn-tapi3if-itaddress) ausführen.
+Außerdem müssen Sie die vorgänge ausführen, die unter Auswählen eines [Terminals](select-a-terminal.md) nach dem Abrufen der [**Schnittstellenzeige ITBasicCallControl**](/windows/desktop/api/tapi3if/nn-tapi3if-itbasiccallcontrol) und [**ITAddress**](/windows/desktop/api/tapi3if/nn-tapi3if-itaddress) veranschaulicht werden.
 
 > [!Note]  
-> Dieses Beispiel enthält nicht die Fehlerüberprüfung und die Releases, die für Produktionscode geeignet sind.
+> In diesem Beispiel sind die Fehlerüberprüfung und die für Produktionscode geeigneten Releases nicht enthalten.
 
  
 
@@ -73,22 +73,22 @@ case TE_CALLNOTIFICATION:
 [Ereignisse](events.md)
 </dt> <dt>
 
-[**Ittapieventnotification**](/windows/desktop/api/Tapi3if/nn-tapi3if-ittapieventnotification)
+[**ITTAPIEventNotification**](/windows/desktop/api/Tapi3if/nn-tapi3if-ittapieventnotification)
 </dt> <dt>
 
-[**Ittapi:: registercallbenachrichtigungen**](/windows/desktop/api/tapi3if/nf-tapi3if-ittapi-registercallnotifications)
+[**ITTAPI::RegisterCallNotifications**](/windows/desktop/api/tapi3if/nf-tapi3if-ittapi-registercallnotifications)
 </dt> <dt>
 
-[**Itcallnotificationevent**](/windows/desktop/api/tapi3if/nn-tapi3if-itcallnotificationevent)
+[**ITCallNotificationEvent**](/windows/desktop/api/tapi3if/nn-tapi3if-itcallnotificationevent)
 </dt> <dt>
 
-[**Itcallinfo**](/windows/desktop/api/tapi3if/nn-tapi3if-itcallinfo)
+[**ITCallInfo**](/windows/desktop/api/tapi3if/nn-tapi3if-itcallinfo)
 </dt> <dt>
 
-[**Itbasiccallcontrol**](/windows/desktop/api/tapi3if/nn-tapi3if-itbasiccallcontrol)
+[**ITBasicCallControl**](/windows/desktop/api/tapi3if/nn-tapi3if-itbasiccallcontrol)
 </dt> <dt>
 
-[**Itterminalsupport**](/windows/win32/api/tapi3if/nn-tapi3if-itterminalsupport)
+[**ITTerminalSupport**](/windows/win32/api/tapi3if/nn-tapi3if-itterminalsupport)
 </dt> </dl>
 
  

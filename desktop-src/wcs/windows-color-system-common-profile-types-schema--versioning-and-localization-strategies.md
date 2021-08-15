@@ -3,55 +3,55 @@ title: 'Windows Color System: Schema gemeinsamer Profiltypen, Versionierung und 
 description: 'Windows Color System: Schema gemeinsamer Profiltypen, Versionierung und Lokalisierungsstrategien'
 ms.assetid: 295522c6-7c53-47f6-9b98-aeee2b0e34fc
 keywords:
-- Windows Color System (WCS), allgemeine Profiltypen
+- Windows Farbsystem (WCS), allgemeine Profiltypen
 - WCS (Windows Color System), allgemeine Profiltypen
-- Bild Farbverwaltung, allgemeine Profiltypen
-- Farbverwaltung, allgemeine Profiltypen
-- Farben, allgemeine Profiltypen
-- Windows Color System (WCS), profile
-- WCS (Windows Color System), profile
-- Bildfarben Verwaltung, profile
-- Farbverwaltung, profile
-- Farben, profile
-- Windows Color System (WCS), Versionierung
-- WCS (Windows Color System), Versionsverwaltung
-- Bild Farbverwaltung, Versionsverwaltung
+- Bildfarbverwaltung,allgemeine Profiltypen
+- Farbverwaltung,allgemeine Profiltypen
+- Farben,allgemeine Profiltypen
+- Windows Farbsystem (WCS), Profile
+- WCS (Windows Color System), Profiles
+- Bildfarbverwaltung,Profile
+- Farbverwaltung,Profile
+- Farben,Profile
+- Windows Farbsystem (WCS), Versionierung
+- WCS (Windows Color System), Versionierung
+- Bildfarbverwaltung, Versionsverwaltung
 - Farbverwaltung, Versionsverwaltung
-- Farben, Versionsverwaltung
-- Windows Color System (WCS), Lokalisierung
+- Farben, Versionierung
+- Windows Farbsystem (WCS), Lokalisierung
 - WCS (Windows Color System), Lokalisierung
-- Bild Farbverwaltung, Lokalisierung
+- Bildfarbverwaltung,Lokalisierung
 - Farbverwaltung, Lokalisierung
-- Farben, Lokalisierung
+- Farben,Lokalisierung
 - Allgemeine WCS-Profiltypen
-- Profil Consumer
+- Profilverbraucher
 - Allgemeine Profiltypen
-- Schemas, allgemeine Profiltypen
+- Schemas,allgemeine Profiltypen
 ms.localizationpriority: high
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 4814b652b654b6416b42a7a3484950273a93ea96
-ms.sourcegitcommit: 7b8f6151ebe247536304866459b2973276271d4d
+ms.openlocfilehash: 6c9df44fa7095d8cbcd3df6de00c92ba2d4ab2ddb7ef7d3565a820e925265ea0
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/06/2021
-ms.locfileid: "106351864"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119442290"
 ---
 # <a name="windows-color-system-common-profile-types-schema-versioning-and-localization-strategies"></a>Windows Color System: Schema gemeinsamer Profiltypen, Versionierung und Lokalisierungsstrategien
 
--   [Allgemeine WCS-Profiltypen Schema v1](#wcs-common-profile-types-schema-v1)
--   [Allgemeine WCS-Profiltypen Schema v2-Ergänzungen](#wcs-common-profile-types-schema-v2-additions)
--   [WCS-Profil Schema-Versionsverwaltung](#wcs-profile-schema-versioning)
--   [Lokalisierung von WCS-Profilen](#wcs-profile-localization)
-    -   [Ausdrücken Lokalisier barer Elemente](#expressing-localizable-elements)
-    -   [Schema Unterstützung](#schema-support)
+-   [WCS Common Profile Types Schema V1](#wcs-common-profile-types-schema-v1)
+-   [WCS Common Profile Types Schema V2 Additions](#wcs-common-profile-types-schema-v2-additions)
+-   [WCS-Profilschemaversionierung](#wcs-profile-schema-versioning)
+-   [WCS-Profillokalisierung](#wcs-profile-localization)
+    -   [Ausdrücken von lokalisierbaren Elementen](#expressing-localizable-elements)
+    -   [Schemaunterstützung](#schema-support)
     -   [Auswählen der Sprache](#selecting-the-language)
-    -   [Integrierte profile](#built-in-profiles)
+    -   [Integrierte Profile](#built-in-profiles)
 -   [Zugehörige Themen](#related-topics)
 
-## <a name="wcs-common-profile-types-schema-v1"></a>Allgemeine WCS-Profiltypen Schema v1
+## <a name="wcs-common-profile-types-schema-v1"></a>WCS Common Profile Types Schema V1
 
-Im folgenden finden Sie die v 1.0-Schema Definition für die allgemeinen WCS-Profiltypen.
+Im Folgenden finden Sie die v1.0-Schemadefinition für die allgemeinen WCS-Profiltypen.
 
 
 ```XML
@@ -112,11 +112,11 @@ Im folgenden finden Sie die v 1.0-Schema Definition für die allgemeinen WCS-Pro
 
 
 
-Nur UTF-8-oder UTF-16-Codierungen werden unterstützt. Für alle anderen XML-Codierungen wird dringend abgeraten, um eine optimale Interoperabilität zu gewährleisten.
+Es werden nur UTF-8- oder UTF-16-Codierungen unterstützt. Von allen anderen XML-Codierungen wird dringend abgeraten, um eine optimale Interoperabilität zu gewährleisten.
 
-## <a name="wcs-common-profile-types-schema-v2-additions"></a>Allgemeine WCS-Profiltypen Schema v2-Ergänzungen
+## <a name="wcs-common-profile-types-schema-v2-additions"></a>WCS Common Profile Types Schema V2 Additions
 
-In Windows 7 wurde das Schema der allgemeinen WCS-Profiltypen so aktualisiert, dass es Typen zur Unterstützung des [WCS-Kalibrierungs Schemas](wcs-calibration-schema.md)enthält.
+In Windows 7 wurde das SCHEMA für allgemeine WCS-Profiltypen aktualisiert, um Typen zur Unterstützung des [WCS-Kalibrierungsschemas zu enthalten.](wcs-calibration-schema.md)
 
 
 ```XML
@@ -166,19 +166,19 @@ In Windows 7 wurde das Schema der allgemeinen WCS-Profiltypen so aktualisiert, d
 
 
 
-## <a name="wcs-profile-schema-versioning"></a>WCS-Profil Schema-Versionsverwaltung
+## <a name="wcs-profile-schema-versioning"></a>WCS-Profilschemaversionierung
 
-In diesem Anhang bezieht sich der Begriff "profilconsumer" auf die WCS-Software oder auf eine Drittanbieter-Softwarekomponente, die WCS-Profile verwendet.
+In diesem Anhang bezieht sich der Begriff "Profilverbraucher" auf die WCS-Software oder auf eine Drittanbietersoftwarekomponente, die WCS-Profile verwendet.
 
-Neuere Versionen von Profil Verbrauchern können WCS-profile verarbeiten, die gemäß älteren Versionen der Schemas geschrieben wurden. Um die in der neuesten Version der Schemas definierten Features in vollem Umfang nutzen zu können, ist die neueste Version eines profilconsumers in der Regel erforderlich. Ältere Profil Consumer können jedoch Profile nutzen, die gemäß neueren Versionen der Schemas geschrieben wurden. Der profilconsumer kann XML-Elemente und-Attribute ignorieren, die er nicht versteht. Die Ergebnisse sind korrekt, aber die Leistung oder Genauigkeit kann im Vergleich zu den Ergebnissen, die mit der neuesten Version des profilconsumers erzielt werden, beeinträchtigt werden.
+Neuere Versionen von Profilverbrauchern können WCS-Profile nutzen, die gemäß älteren Versionen der Schemas geschrieben wurden. Um die in der neuesten Version der Schemas definierten Features voll zu nutzen, ist in der Regel die neueste Version eines Profilverbraucher erforderlich. Ältere Profilverbraucher können jedoch Profile nutzen, die gemäß neueren Versionen der Schemas geschrieben wurden. Der Profil-Consumer kann XML-Elemente und -Attribute ignorieren, die er nicht versteht. Die Ergebnisse sind korrekt, aber die Leistung oder Genauigkeit kann sich im Vergleich zu den Ergebnissen, die mit der neuesten Version des Profilverbraucher erzielt werden, beeinträchtigen.
 
-Im folgenden finden Sie Richtlinien für die Versionsverwaltung für profilconsumer:
+Im Folgenden finden Sie Versionsrichtlinien für Profilverbraucher:
 
--   Eine bestimmte Version eines profilconsumers muss entweder alle Elemente und Attribute aus einem versionsnamespace oder keines der Elemente erkennen.
--   Wenn ein profilconsumer ein Element oder Attribut aus einem Namespace erkennt, das nicht verstanden wird, muss dies als Fehlerbedingung behandelt werden, es sei denn, das Profil enthält eine explizite Anleitung zur Fall Back Verarbeitung.
--   Die [Open Packaging-Spezifikation](https://www.microsoft.com/whdc/xps/xpspkg.mspx) definiert einen zusätzlichen Namespace-URI, den Markup Kompatibilitäts Namespace, der Elemente und Attribute definiert, die diese Fall Back Verarbeitungsanleitung bereitstellen.
--   Alle-Versionen aller profilconsumer müssen alle Elemente und Attribute im Markup Compatibility-Namespace erkennen und berücksichtigen.
--   Profil Consumer, die auf einer neuen Version der Profil Schemas basieren, müssen alle zuvor definierten versionsnamespaces unterstützen.
+-   Eine bestimmte Version eines Profilverbraucher muss entweder alle Elemente und Attribute aus einem Versionsnamespace oder keines von ihnen erkennen.
+-   Wenn ein Profil-Consumer auf ein Element oder Attribut aus einem Namespace trifft, das er nicht versteht, muss er dies als Fehlerbedingung behandeln, es sei denn, das Profil enthält explizite Anweisungen zur Fallbackverarbeitung.
+-   Die [Open Packaging Specification definiert](https://www.microsoft.com/whdc/xps/xpspkg.mspx) einen zusätzlichen Namespace-URI, den Markupkompatibilitätsnamespace, der Elemente und Attribute definiert, die diese Anleitung zur Fallbackverarbeitung bereitstellen.
+-   Alle Versionen aller Profilverbraucher müssen alle Elemente und Attribute im Markupkompatibilitätsnamespace erkennen und achten.
+-   Profilverbraucher, die auf einer neuen Version der Profilschemas basieren, müssen alle zuvor definierten Versionsnamespaces unterstützen.
 
 In Version 1.0 erkennt WCS Elemente und Attribute aus den folgenden Namespaces:
 
@@ -187,7 +187,7 @@ In Version 1.0 erkennt WCS Elemente und Attribute aus den folgenden Namespaces:
 -   https://schemas.microsoft.com/windows/2005/02/color/ColorAppearanceModel
 -   https://schemas.microsoft.com/winfx/2005/06/markup-compatibility
 
-Im folgenden wird ein Beispiel für die Markup Kompatibilität veranschaulicht.
+Im Folgenden wird ein Beispiel für Markupkompatibilität veranschaulicht.
 
 
 ```XML
@@ -225,30 +225,30 @@ Im folgenden wird ein Beispiel für die Markup Kompatibilität veranschaulicht.
 
 
 
-## <a name="wcs-profile-localization"></a>Lokalisierung von WCS-Profilen
+## <a name="wcs-profile-localization"></a>WCS-Profillokalisierung
 
-**Anforderungen**
+**Requirements**
 
-WCS-Profile enthalten bestimmte Elemente wie "Profile Name" und "Description", die lesbaren Text enthalten. Dieser Text ist lokalisierbar.
+WCS-Profile enthalten bestimmte Elemente wie ProfileName und Description, die lesbaren Text enthalten. Dieser Text kann lokalisierbar sein.
 
-Im folgenden finden Sie Richtlinien für die Versionsverwaltung für Profil Ersteller:
+Im Folgenden finden Sie Versionsrichtlinien für Profilersteller:
 
--   Für Profile, die von Drittanbietern, z. b. Druckerherstellern, erstellt wurden, sollte der Autor des Profils beschreibenden Text in mehrere Sprachen einschließen.
+-   Für Profile, die von Dritten wie Druckerherstellern erstellt wurden, sollte der Autor des Profils beschreibenden Text in mehreren Sprachen enthalten.
 -   Die folgenden Elemente sollten lokalisierbar sein: 
 
-    | Element     | CDMP | GMMP | Camping |
+    | Element     | CDMP | GMMP | Camp |
     |-------------|------|------|------|
     | ProfileName | x    | x    | x    |
-    | BESCHREIBUNG | x    | x    | x    |
+    | Beschreibung | x    | x    | x    |
     | Autor      | x    | x    | x    |
 
     
 
      
 
-### <a name="expressing-localizable-elements"></a>Ausdrücken Lokalisier barer Elemente
+### <a name="expressing-localizable-elements"></a>Ausdrücken von lokalisierbaren Elementen
 
-Anstatt direkt Text zu enthalten, enthält jedes lokalisierbare Element mindestens ein WCS: Text-Unterelement, von dem jedes das XML: lang-Attribut angeben muss. Wie im Abschnitt zur [XML-Spezifikation](http://www.w3.org/TR/REC-xml/) 2,12 ("sprach Identifikation") beschrieben, muss der Wert des Attributs "XML: lang" ein IETF RFC 3066-sprach Bezeichner wie "en-US", "en" oder "fr-FR" sein. In WCS-Schemas darf der Wert des XML: lang-Attributs nicht die leere Zeichenfolge "" sein, auch wenn XML dies im allgemeinen Fall zulässt. Beispiel:
+Anstatt Text direkt zu enthalten, enthält jedes lokalisierbare Element mindestens ein wcs:Text-Unterelement, von denen jedes das xml:lang-Attribut angeben muss. Wie im [](http://www.w3.org/TR/REC-xml/) XML-Spezifikationsabschnitt 2.12 ("Sprachidentifikation") beschrieben, muss der Wert des xml:lang-Attributs ein IETF RFC 3066-Sprachbezeichner wie "en-US", "en" oder "fr-FR" sein. In WCS-Schemas darf der Wert des xml:lang-Attributs nicht die leere Zeichenfolge "" sein, obwohl XML dies im allgemeinen Fall zulässt. Beispiel:
 
 
 ```XML
@@ -263,11 +263,11 @@ Anstatt direkt Text zu enthalten, enthält jedes lokalisierbare Element mindeste
 
 
 
-Keine zwei WCs: Text Elemente können das gleiche XML: lang-Attribut aufweisen. Jedes WCS-Profil Schema muss diese Einschränkung für jedes lokalisierbare Element separat erzwingen. Nur UTF-8- und UTF-16-Codierungen werden unterstützt.
+Zwei wcs:Text-Elemente können nicht das gleiche xml:lang-Attribut haben. Jedes WCS-Profilschema muss diese Einschränkung für jedes lokalisierbare Element separat erzwingen. Nur UTF-8- und UTF-16-Codierungen werden unterstützt.
 
-### <a name="schema-support"></a>Schema Unterstützung
+### <a name="schema-support"></a>Schemaunterstützung
 
-Beim Entwurf werden die XSD-Typen WCS: LocalizedText und WCS: multilocalizedtype verwendet, die im allgemeinen WCS-Profiltyp Schema definiert sind:
+Der Entwurf verwendet die XSD-Typen wcs:LocalizedText und wcs:MultiLocalizedType, die im WCS Common Profile Type-Schema definiert sind:
 
 
 ```XML
@@ -286,7 +286,7 @@ Beim Entwurf werden die XSD-Typen WCS: LocalizedText und WCS: multilocalizedtype
 
 
 
-Jedes WCS-Profil Schema deklariert jedes lokalisierbare Element vom Typ multilocalizedtype, z. b.:
+Jedes WCS-Profilschema deklariert jedes lokalisierbare Element als MultiLocalizedType-Typ, z. B.:
 
 
 ```XML
@@ -313,21 +313,21 @@ Jedes WCS-Profil Schema deklariert jedes lokalisierbare Element vom Typ multiloc
 
 
 
-Das CDMP-Schema erzwingt die Einschränkung, dass jedes WCS: Text-Element des CDM: Description-Elements über ein eindeutiges XML: lang-Attribut verfügen muss. Sie erzwingt die gleiche Einschränkung für die anderen lokalisierbaren Elemente. Das Camp und GMMP-Schemas sind identisch.
+Das CDMP-Schema erzwingt die Einschränkung, dass jedes untergeordnete wcs:Text-Element des cdm:Description-Elements ein eindeutiges xml:lang-Attribut haben muss. Er erzwingt die gleiche Einschränkung für die anderen lokalisierbaren Elemente. Das gleiche gilt für die SCHEMAS FÜR DIE UND GMMP.
 
 ### <a name="selecting-the-language"></a>Auswählen der Sprache
 
-Wenn Sie entscheiden, welche Sprachversion eines lokalisierbaren Elements angezeigt werden soll, muss der Anwendungscode die "nächstgelegene Version" der "aktuellen Sprache" auswählen. Was "nächstgelegene Version" und "aktuelle Sprache" bedeuten, ist plattformabhängig. siehe unten. Wenn das Profil keine Sprachversion enthält, die der aktuellen Sprache entspricht, sollte die Anwendung die erste Version im Profil auswählen (das erste untergeordnete WCS: Text-Element des lokalisierbaren Elements).
+Bei der Entscheidung, welche Sprachversion eines lokalisierbaren Elements angezeigt werden soll, sollte der Anwendungscode die "version" auswählen, die der "aktuellen Sprache" am nächsten ist. Was "nächste Version" und "aktuelle Sprache" tatsächlich bedeuten, ist plattformabhängig. siehe unten. Wenn das Profil keine Sprachversion enthält, die der aktuellen Sprache entspricht, sollte die Anwendung die erste Version im Profil auswählen (das erste untergeordnete wcs:Text-Element des lokalisierbaren Elements).
 
-Unter Windows Vista erfolgt die Sprachauswahl wie folgt: jeder Thread verfügt über eine zugeordnete Liste von "bevorzugten Benutzeroberflächen Sprachen", die durch Aufrufen von " [**getthreadpreferreduilanguages**](/windows/win32/api/winnls/nf-winnls-getthreadpreferreduilanguages)" abgerufen werden kann. Die Liste wird in der Reihenfolge der Benutzereinstellung zurückgegeben. Auf einem System, das für Englisch (USA) eingerichtet ist, lautet die von **getthreadpreferreduilanguages** zurückgegebene Liste beispielsweise {"en-US", "en"}. Dies bedeutet: 1) US-Englisch, falls vorhanden. 2) verwenden Sie andernfalls eine beliebige regionale Variante von Englisch, z. b. "en-GB" oder einfach "en".
+Unter Windows Vista erfolgt die Sprachauswahl wie folgt: Jedem Thread ist eine Liste mit "bevorzugten Benutzeroberflächensprachen" zugeordnet, die durch Aufrufen von [**GetThreadPreferredUILanguages**](/windows/win32/api/winnls/nf-winnls-getthreadpreferreduilanguages)ermittelt werden kann. Die Liste wird in der Reihenfolge der Benutzereinstellungen zurückgegeben. Auf einem Für US-Englisch eingerichteten System ist die von **GetThreadPreferredUILanguages** zurückgegebene Liste { "en-US", "en" } . Dies bedeutet: 1) US-Englisch, falls vorhanden. 2) Verwenden Sie andernfalls jede regionale Variante des Englischen, z. B. "en-GB" oder einfach "en".
 
-Der UI-Code sucht für jede Sprache in dieser Liste in der Listen Reihenfolge nach einem WCS: Text-Element, dessen XML: lang-Attribut eine genaue Entsprechung ist. Die erste übereinstimmende Version wird verwendet. Wenn keine Version übereinstimmt, wird das erste WCS: Text-Element verwendet.
+Für jede Sprache in dieser Liste sucht der Benutzeroberflächencode in Listen reihenfolge nach einem wcs:Text-Element, dessen xml:lang-Attribut eine genaue Übereinstimmung ist. Die erste übereinstimmende Version wird verwendet. Wenn keine Version entspricht, wird das erste wcs:Text-Element verwendet.
 
-### <a name="built-in-profiles"></a>Integrierte profile
+### <a name="built-in-profiles"></a>Integrierte Profile
 
-Die standardmäßigen WCS-Profile, die mit Windows Vista ausgeliefert werden, wie z. b. sRGB. CDMP, haben dieselben lokalisierbaren Eigenschaften wie andere Profile.
+Die mit Windows Vista ausgelieferten STANDARD-WCS-Profile, z. B. sRGB.cdmp, verfügen über die gleichen lokalisierbaren Eigenschaften wie andere Profile.
 
-Die standardmäßige Windows-Lösung besteht darin, die lokalisierten Zeichen folgen in eine MUI-dll einzufügen und Sie wie folgt zu bezeichnen:
+Die standardmäßige Windows wäre, die lokalisierten Zeichenfolgen in eine DLL vom -Dll-Dateinamen (DLL) zu setzen und auf diese wie die folgenden zu verweisen:
 
 
 ```XML
@@ -338,9 +338,9 @@ Die standardmäßige Windows-Lösung besteht darin, die lokalisierten Zeichen fo
 
 
 
-In einem Windows-System würde der Beschreibungstext aus der Ressourcen-ID 101 in der entsprechenden lokalisierten Version der MUI-Ressourcen für mscms.dll extrahiert werden. Nicht-Windows-Systeme verwenden die untergeordneten Elemente "WCS: Text", wie oben beschrieben.
+In einem Windows wird der Beschreibungstext aus der Ressourcen-ID 101 in der entsprechenden lokalisierten Version der RESOURCES-Ressourcen für mscms.dll. Nicht-Windows verwenden die wcs:Text-Unterelemente wie oben beschrieben.
 
-Wir führen ein optionales, Global eindeutiges ID-Attribut für das Stamm Element jedes WCS-Profil Schemas ein. Das Standardprofil wcsrgb. CDMP könnte wie folgt aussehen:
+Wir führen ein optionales, global eindeutiges ID-Attribut für das Stammelement jedes WCS-Profilschemas ein. Das Standardprofil wcsRGB.cdmp könnte wie hier aussehen:
 
 
 ```XML
@@ -357,13 +357,13 @@ Wir führen ein optionales, Global eindeutiges ID-Attribut für das Stamm Elemen
 
 
 
-Bei WCS-Farbprofilen, die mit Windows ausgeliefert werden, werden in der Farb-cpl beschreibende Informationen aus den Ressourcen anstelle von WCS: Text-Elementen in den Profilen angezeigt. Dadurch können Windows lokalisierte Informationen für diese Profile in allen unterstützten Sprachen anzeigen, ohne dass die Profile beschreibende Informationen in allen Sprachen enthalten müssen.
+Für die mit Fenstern ausgelieferten WCS-Farbprofile zeigt die Farb-CPL beschreibende Informationen aus den Ressourcen anstelle der wcs:Text-Elemente in den Profilen an. Dadurch können Windows lokalisierte Informationen für diese Profile in allen unterstützten Sprachen anzeigen, ohne dass die Profile themlselves beschreibende Informationen in allen Sprachen enthalten müssen.
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
 <dl> <dt>
 
-[Konzepte der grundlegenden Farbverwaltung](basic-color-management-concepts.md)
+[Grundlegende Konzepte der Farbverwaltung](basic-color-management-concepts.md)
 </dt> <dt>
 
 [Windows Color System: Schemas und Algorithmen](windows-color-system-schemas-and-algorithms.md)

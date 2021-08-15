@@ -1,41 +1,41 @@
 ---
-title: Erstellungs Richtlinien für MIDI-Dateien
-description: Erstellungs Richtlinien für MIDI-Dateien
+title: Richtlinien für die Erstellung von DATEIEN
+description: Richtlinien für die Erstellung von DATEIEN
 ms.assetid: 57e3d260-d275-4b0c-9db0-d036dd12fdb8
 keywords:
-- Digital Instrumentation Digital Interface (MIDI), Richtlinien zum Erstellen von Dateien
-- MIDI (Digital Instrumentation Digital Interface), Richtlinien für die Dateierstellung
-- Erstellen von MIDI-Dateien, Richtlinien zum Erstellen von Dateien
-- standardmäßige MIDI-patchzuweisungen
-- Standard-MIDI-schlüsselzuweisungen
-- Digital Instrumentation Digital Interface (MIDI), Standard-patchzuweisungen
-- MIDI (Digital Instrumentation Digital Interface), Standard-patchzuweisungen
-- Digital Instrumentation Digital Interface (MIDI), Standardschlüssel Zuweisungen
-- MIDI (Digital Interface Digital Interface), Standardschlüssel Zuweisungen
-- Erstellen von MIDI-Dateien, Standard-patchzuweisungen
-- Erstellen von MIDI-Dateien, Standardschlüssel Zuweisungen
+- Music Instrument Digital Interface (DOSSIER), Richtlinien für die Dateierstellung
+- INSTRUMENTS (Music Instrument Digital Interface),Richtlinien für die Dateierstellung
+- Erstellen von DATEIEN, Richtlinien für die Dateierstellung
+- STANDARDMÄßIGE PATCH-Zuweisungen
+- STANDARDMÄßIGE ZUWEISUNGEN VON SCHLÜSSELN
+- Music Instrument Digital Interface (OPC), Standardpatchzuweisungen
+- INSTRUMENTS (Music Instrument Digital Interface), Standardpatchzuweisungen
+- Music Instrument Digital Interface (TASTE), Standardschlüsselzuweisungen
+- INSTRUMENTS (Music Instrument Digital Interface), Standardschlüsselzuweisungen
+- Erstellen von TEXTDATEI-Dateien, Standardpatchzuweisungen
+- Erstellen von DATEIEN, Standardschlüsselzuweisungen
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: d6fcfec1b5089fa3c58c18eb8990156df12db0ae
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: fe148c2fe1bb562aad994608a8c87c35e84bccb7d63ba1bc3ee3e5dd3bbc56a9
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "104037519"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119065640"
 ---
-# <a name="authoring-guidelines-for-midi-files"></a>Erstellungs Richtlinien für MIDI-Dateien
+# <a name="authoring-guidelines-for-midi-files"></a>Richtlinien für die Erstellung von DATEIEN
 
-Befolgen Sie diese Richtlinien, um geräteunabhängige MIDI-Dateien für Windows zu erstellen:
+Befolgen Sie diese Richtlinien, um geräteunabhängige DATEIEN für Windows zu erstellen:
 
--   Verwenden Sie die [standardmäßigen MIDI-patchzuweisungen](standard-midi-patch-assignments.md) und die [Standard-MIDI-schlüsselzuweisungen](standard-midi-key-assignments.md).
--   Senden Sie immer eine Programm Änderungs Meldung an einen Kanal, um einen Patch auszuwählen, bevor andere Nachrichten an diesen Kanal gesendet werden. Wählen Sie für die beiden Percussion-Kanäle (10 und 16) Programmnummer 0 aus.
--   Befolgen Sie immer eine Nachricht vom Typ "MIDI-Programm ändern" mit einer Nachricht vom Typ "MIDI Main-Volume Controller" (Controller Nummer 7), um das relative Volume des Patches festzulegen.
--   Verwenden Sie für den Haupt volumecontroller den Wert 80 (0x50) für die normalen Empfangs Ebenen. Bei ruhigeren oder lauter Ebenen können Sie niedrigere oder höhere Werte verwenden.
--   Verwenden Sie nur die folgenden MIDI-Meldungen: Note-on mit Velocity, Note-Off, Programmänderung, Pitch-Kurve, Haupt Volume (Controller 7) und Dämpferpedal (Controller 64). Interne Synthesizer sind erforderlich, um auf diese Nachrichten zu reagieren, und die meisten von den meisten der von Ihnen darauf antworten.
+-   Verwenden Sie die [Standard-PATCH-Zuweisungen UND](standard-midi-patch-assignments.md) [STANDARDMÄßIGE SCHLÜSSELZUWEISUNGEN](standard-midi-key-assignments.md).
+-   Senden Sie immer eine Programmänderungsnachricht an einen Kanal, um einen Patch auszuwählen, bevor Sie andere Nachrichten an diesen Kanal senden. Wählen Sie für die beiden Kanäle (10 und 16) programmnummer 0 aus.
+-   Folgen Sie immer einer MELDUNG zum Ändern des PROGRAMMS mit einer CONTROLLER-Hauptvolume-Controllermeldung (Controllernummer 7), um das relative Volume des Patches festzulegen.
+-   Verwenden Sie den Wert 80 (0x50) für den Hauptvolumecontroller für normale Überwachungsebenen. Für stillere oder lautere Ebenen können Sie niedrigere oder höhere Werte verwenden.
+-   Verwenden Sie nur die folgenden MELDUNGEN vom Folgenden: Note-On mit Geschwindigkeit, Hinweis, Programmänderung, Tonhöhenhöhe, Hauptvolumen (Controller 7) und Klappenband (Controller 64). Interne Synthesizer sind erforderlich, um auf diese Nachrichten zu reagieren, und die meisten INSTRUMENT-Instrumenten reagieren auch darauf.
 
- 
+ 
 
- 
+ 
 
 
 

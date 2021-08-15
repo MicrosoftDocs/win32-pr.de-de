@@ -1,6 +1,6 @@
 ---
-title: UI_ANIMATION_SECONDS_EVENTUALLY (uianimation. h)
-description: Gibt an, dass die Windows-Animation den geplanten Start eines Storyboards für so viel Zeit wie nötig verzögern kann, um Planungs Konflikte zu vermeiden.
+title: UI_ANIMATION_SECONDS_EVENTUALLY (UIAnimation.h)
+description: Gibt an, Windows Animation den geplanten Start eines Storyboards so lange wie nötig verzögern kann, um Planungskonflikte zu vermeiden.
 ms.assetid: 9971A612-69D7-49AB-8865-B8F29C4CD4C8
 topic_type:
 - apiref
@@ -12,22 +12,22 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 22448287599707b10de147224047525745b072c2
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 066bfdc879edf234209532080d23ca3fe813b9218cebc7fba99710bc1ca61acf
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "103743256"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119058158"
 ---
-# <a name="ui_animation_seconds_eventually"></a>Benutzeroberflächen \_ Animation ( \_ Sekunden) \_
+# <a name="ui_animation_seconds_eventually"></a>\_ \_ BENUTZEROBERFLÄCHENANIMATION IN SEKUNDEN \_
 
-Gibt an, dass die Windows-Animation den geplanten Start eines Storyboards für so viel Zeit wie nötig verzögern kann, um Planungs Konflikte zu vermeiden.
+Gibt an, Windows Animation den geplanten Start eines Storyboards so lange wie nötig verzögern kann, um Planungskonflikte zu vermeiden.
 
 
 
 | Konstante/Wert                                                                                                                                                                                                                                                                  | BESCHREIBUNG                       |
 |:--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|:----------------------------------|
-| <span id="UI_ANIMATION_SECONDS_EVENTUALLY"></span><span id="ui_animation_seconds_eventually"></span><dl> <dt>**Benutzeroberfläche \_ Animation \_ ( \_ Sekunden**</dt> ) <dt>-1,0</dt> </dl> | UI- \_ Animation in \_ Sekunden<br/> |
+| <span id="UI_ANIMATION_SECONDS_EVENTUALLY"></span><span id="ui_animation_seconds_eventually"></span><dl> <dt>**Benutzeroberfläche \_ ANIMATION \_ SECONDS \_ EVENTUALLY**</dt> <dt>-1.0</dt> </dl> | \_BENUTZEROBERFLÄCHENANIMATION \_ IN SEKUNDEN<br/> |
 
 
 
@@ -37,24 +37,24 @@ Gibt an, dass die Windows-Animation den geplanten Start eines Storyboards für s
 
 | Anforderung | Wert |
 |-------------------------------------|--------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Windows 8, Windows 7 und Platt Form Update für Windows 7 \[ -Desktop-Apps\]<br/>    |
+| Unterstützte Mindestversion (Client)<br/> | Windows 8, Windows 7 und Plattformupdate nur für Windows 7 \[ Desktop-Apps\]<br/>    |
 | Unterstützte Mindestversion (Server)<br/> | Nicht unterstützt<br/>                                                                  |
-| Header<br/>                   | <dl> <dt>Uianimation. h</dt> </dl>   |
-| IDL<br/>                      | <dl> <dt>Uianimation. idl</dt> </dl> |
+| Header<br/>                   | <dl> <dt>UIAnimation.h</dt> </dl>   |
+| Idl<br/>                      | <dl> <dt>UIAnimation.idl</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
 [Konstanten](constants.md)
 </dt> <dt>
 
-[**Iuianimationstoryboard:: setlongestaccept tabledelay**](/windows/desktop/api/UIAnimation/nf-uianimation-iuianimationstoryboard-setlongestacceptabledelay)
+[**IUIAnimationStoryboard::SetLongestAcceptableDelay**](/windows/desktop/api/UIAnimation/nf-uianimation-iuianimationstoryboard-setlongestacceptabledelay)
 </dt> <dt>
 
-[**Iuianimationmanager:: setdefaultlongestaccept tabledelay**](/windows/desktop/api/UIAnimation/nf-uianimation-iuianimationmanager-setdefaultlongestacceptabledelay)
+[**IUIAnimationManager::SetDefaultLongestAcceptableDelay**](/windows/desktop/api/UIAnimation/nf-uianimation-iuianimationmanager-setdefaultlongestacceptabledelay)
 </dt> </dl>
 
  

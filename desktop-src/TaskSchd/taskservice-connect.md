@@ -1,11 +1,11 @@
 ---
-title: TaskService. Connect-Methode
-description: Bei der Skripterstellung wird eine Verbindung mit einem Remote Computer hergestellt, und alle nachfolgenden Aufrufe dieser Schnittstelle werden einer Remote Sitzung zugeordnet.
+title: TaskService. Verbinden-Methode
+description: Für die Skripterstellung stellt eine Verbindung mit einem Remotecomputer her und ordnet alle nachfolgenden Aufrufe dieser Schnittstelle einer Remotesitzung zu.
 ms.assetid: 206087df-307c-4ba9-9e83-915f5287f281
 keywords:
-- Connect-Methode Taskplaner
-- Connect-Methode Taskplaner, Task Service-Objekt
-- Task Service-Objekt Taskplaner, Connect-Methode
+- Verbinden-Methode Taskplaner
+- Verbinden Methode Taskplaner , TaskService-Objekt
+- TaskService-Objekt Taskplaner , Verbinden-Methode
 topic_type:
 - apiref
 api_name:
@@ -16,16 +16,16 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 1db5f13e20da825cbdaf45ae399279687f6ff4aa
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: d4da8fb2aed018eab9880ab6c8a6bed310e6d89bb293d52efc5d6ac6d8baf190
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "103949641"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119059738"
 ---
-# <a name="taskserviceconnect-method"></a>TaskService. Connect-Methode
+# <a name="taskserviceconnect-method"></a>TaskService. Verbinden-Methode
 
-Bei der Skripterstellung wird eine Verbindung mit einem Remote Computer hergestellt, und alle nachfolgenden Aufrufe dieser Schnittstelle werden einer Remote Sitzung zugeordnet. Wenn der Servername-Parameter leer ist, wird diese Methode auf dem lokalen Computer ausgeführt. Wenn die UserID nicht angegeben ist, wird das aktuelle Token verwendet.
+Für die Skripterstellung stellt eine Verbindung mit einem Remotecomputer her und ordnet alle nachfolgenden Aufrufe dieser Schnittstelle einer Remotesitzung zu. Wenn der serverName-Parameter leer ist, wird diese Methode auf dem lokalen Computer ausgeführt. Wenn die userId nicht angegeben ist, wird das aktuelle Token verwendet.
 
 ## <a name="syntax"></a>Syntax
 
@@ -45,10 +45,10 @@ TaskService.Connect( _
 
 <dl> <dt>
 
-*Servername* \[ in, optional\]
+*serverName* \[ in, optional\]
 </dt> <dd>
 
-Der Name des Computers, mit dem Sie eine Verbindung herstellen möchten. Wenn der Servername-Parameter leer ist, wird diese Methode auf dem lokalen Computer ausgeführt.
+Der Name des Computers, mit dem Sie eine Verbindung herstellen möchten. Wenn der serverName-Parameter leer ist, wird diese Methode auf dem lokalen Computer ausgeführt.
 
 </dd> <dt>
 
@@ -62,14 +62,14 @@ Der Benutzername, der während der Verbindung mit dem Computer verwendet wird. W
 *Domäne* \[ in, optional\]
 </dt> <dd>
 
-Die Domäne des Benutzers, der im *Benutzer* Parameter angegeben ist.
+Die Domäne des Im Benutzerparameters angegebenen *Benutzers.*
 
 </dd> <dt>
 
 *Kennwort* \[ in, optional\]
 </dt> <dd>
 
-Das Kennwort, das zum Herstellen einer Verbindung mit dem Computer verwendet wird. Wenn der Benutzername und das Kennwort nicht angegeben sind, wird das aktuelle Token verwendet.
+Das Kennwort, das zum Herstellen einer Verbindung mit dem Computer verwendet wird. Wenn Benutzername und Kennwort nicht angegeben sind, wird das aktuelle Token verwendet.
 
 </dd> </dl>
 
@@ -77,11 +77,11 @@ Das Kennwort, das zum Herstellen einer Verbindung mit dem Computer verwendet wir
 
 Diese Methode gibt keinen Wert zurück.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Die **TaskService. Connect** -Methode sollte aufgerufen werden, bevor eine der anderen [**Task Service**](taskservice.md) -Methoden aufgerufen wird.
+Die **TaskService.Verbinden-Methode** sollte aufgerufen werden, bevor eine der anderen [**TaskService-Methoden**](taskservice.md) aufgerufen wird.
 
-Wenn die Verbindungsmethode fehlschlägt, können Sie den Fehler Bezeichner erfassen, um die Bedeutung des Fehlers zu ermitteln. In der folgenden Tabelle werden die Fehler Bezeichner und deren Beschreibungen aufgelistet.
+Wenn die Verbinden-Methode fehlschlägt, können Sie den Fehlerbezeichner erfassen, um die Bedeutung des Fehlers zu ermitteln. In der folgenden Tabelle sind die Fehlerbezeichner und deren Beschreibungen aufgeführt.
 
 
 
@@ -92,35 +92,35 @@ Wenn die Verbindungsmethode fehlschlägt, können Sie den Fehler Bezeichner erfa
 </colgroup>
 <thead>
 <tr class="header">
-<th>Fehler Bezeichner</th>
+<th>Fehlerbezeichner</th>
 <th>BESCHREIBUNG</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
 <td>0x80070005</td>
-<td>Der Zugriff auf die Verbindung mit dem Taskplaner-Dienst wird verweigert.</td>
+<td>Der Zugriff zum Herstellen einer Verbindung mit dem Taskplaner Dienst wird verweigert.</td>
 </tr>
 <tr class="even">
 <td>0x80041315</td>
-<td>Der Taskplaner-Dienst wird nicht ausgeführt.</td>
+<td>Der Taskplaner Dienst wird nicht ausgeführt.</td>
 </tr>
 <tr class="odd">
 <td>0x8007000e</td>
-<td>Die Anwendung verfügt nicht über genügend Arbeitsspeicher, um den Vorgang abzuschließen, oder der <em>Benutzer</em>, das <em>Kennwort</em>oder die <em>Domäne</em> hat mindestens einen NULL-Wert und einen nicht-NULL-Wert.</td>
+<td>Die Anwendung verfügt nicht über genügend Arbeitsspeicher, um den Vorgang abzuschließen, oder der <em>Benutzer,</em> <em>das Kennwort</em>oder die <em>Domäne</em> weist mindestens einen NULL- und einen Wert ungleich NULL auf.</td>
 </tr>
 <tr class="even">
 <td>53</td>
 <td>Dieser Fehler wird in den folgenden Situationen zurückgegeben:
 <ul>
-<li>Der im <em>Server</em> Name-Parameter angegebene Computername ist nicht vorhanden.</li>
-<li>Wenn Sie versuchen, eine Verbindung mit einem Windows Server 2003-oder Windows XP-Computer herzustellen, und auf dem Remote Computer die Firewallausnahme für Datei-und Druckerfreigabe nicht aktiviert ist oder der Remote Registrierungsdienst nicht ausgeführt wird.</li>
-<li>Wenn Sie versuchen, eine Verbindung mit einem Windows Vista-Computer herzustellen, und auf dem Remote Computer nicht die Firewallausnahme für die Remote Verwaltung geplanter Tasks aktiviert ist und die Firewallausnahme für die Datei-und Druckerfreigabe aktiviert ist oder der Remote Registrierungsdienst nicht ausgeführt wird.</li>
+<li>Der im <em>serverName-Parameter</em> angegebene Computername ist nicht vorhanden.</li>
+<li>Wenn Sie versuchen, eine Verbindung mit einem Windows Server 2003- oder Windows XP-Computer herzustellen, und auf dem Remotecomputer ist die Firewallausnahme Datei- und Druckerfreigabe nicht aktiviert, oder der Remoteregistrierungsdienst wird nicht ausgeführt.</li>
+<li>Wenn Sie versuchen, eine Verbindung mit einem Windows Vista-Computer herzustellen, und auf dem Remotecomputer ist die Firewallausnahme für die Verwaltung geplanter Remoteaufgaben nicht aktiviert und die Firewallausnahme datei- und druckerfreigabe aktiviert, oder der Remoteregistrierungsdienst wird nicht ausgeführt.</li>
 </ul></td>
 </tr>
 <tr class="odd">
 <td>50</td>
-<td>Die Parameter " <em>User</em>", " <em>Password</em>" und " <em>Domain</em> " können nicht angegeben werden, wenn eine Verbindung mit einem Windows XP-oder Windows Server 2003-Remote Computer von einem Computer mit Windows Vista</td>
+<td>Die <em>Benutzer-,</em> <em>Kennwort-</em>oder <em>Domänenparameter</em> können nicht angegeben werden, wenn eine Verbindung mit einem Remotecomputer Windows XP oder Windows Server 2003 von einem computer Windows Vista hergestellt wird.</td>
 </tr>
 </tbody>
 </table>
@@ -129,9 +129,9 @@ Wenn die Verbindungsmethode fehlschlägt, können Sie den Fehler Bezeichner erfa
 
  
 
-Wenn Sie von Windows Vista aus eine Verbindung mit einem Windows Vista-Remote Computer herstellen möchten, müssen Sie die Firewallausnahme für die Remote Verwaltung geplanter Tasks auf dem Remote Computer zulassen. Um diese Ausnahme zuzulassen, klicken Sie auf Start, Systemsteuerung, Sicherheit, Programm durch die Windows-Firewall zulassen, und aktivieren Sie dann das Kontrollkästchen Remote Verwaltung geplanter Aufgaben. Klicken Sie dann im Dialogfeld Windows-Firewall-Einstellungen auf die Schaltfläche OK.
+Wenn Sie von einem Windows Vista aus eine Verbindung mit einem Remotecomputer Windows Vista herstellen möchten, müssen Sie die Remote-Firewallausnahme für die Verwaltung geplanter Tasks auf dem Remotecomputer zulassen. Um diese Ausnahme zuzulassen, klicken Sie auf Start, Systemsteuerung, Sicherheit, Programm über Windows Firewall zulassen, und aktivieren Sie dann das Kontrollkästchen Verwaltung geplanter Remoteaufgaben. Klicken Sie dann im Dialogfeld Windows Firewall Einstellungen auf die Schaltfläche OK.
 
-Wenn Sie von einem Windows Vista-Computer aus eine Verbindung mit einem Remote Computer mit Windows XP oder Windows Server 2003 herstellen, müssen Sie die Firewallausnahme für die Datei-und Druckerfreigabe auf dem Remote Computer zulassen. Klicken Sie zum zulassen dieser Ausnahme auf Start und auf Systemsteuerung, doppelklicken Sie auf Windows-Firewall, wählen Sie die Registerkarte Ausnahmen, und wählen Sie dann die Datei-und Druckerfreigabe Firewall-Ausnahme aus. Klicken Sie dann im Dialogfeld Windows-Firewall auf die Schaltfläche OK. Der Remote Registrierungsdienst muss auch auf dem Remote Computer ausgeführt werden.
+Wenn Sie von einem computer Windows Vista eine Verbindung mit einem Remotecomputer Windows XP oder Windows Server 2003 herstellen, müssen Sie die Firewallausnahme datei- und druckerfreigabe auf dem Remotecomputer zulassen. Um diese Ausnahme zuzulassen, klicken Sie auf Start, Systemsteuerung doppelklicken Sie auf Windows Firewall, wählen Sie die Registerkarte Ausnahmen aus, und wählen Sie dann die Firewallausnahme Datei- und Druckerfreigabe aus. Klicken Sie dann im Dialogfeld Windows Firewall auf die Schaltfläche OK. Der Remoteregistrierungsdienst muss auch auf dem Remotecomputer ausgeführt werden.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -139,9 +139,9 @@ Wenn Sie von einem Windows Vista-Computer aus eine Verbindung mit einem Remote C
 
 | Anforderung | Wert |
 |-------------------------------------|-----------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>                                          |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2008 \[ -Desktop-Apps\]<br/>                                    |
-| Typbibliothek<br/>             | <dl> <dt>Taskschd. tlb</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows \[Nur Vista-Desktop-Apps\]<br/>                                          |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2008-Desktop-Apps\]<br/>                                    |
+| Typbibliothek<br/>             | <dl> <dt>Taskschd.tlb</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>Taskschd.dll</dt> </dl> |
 
 

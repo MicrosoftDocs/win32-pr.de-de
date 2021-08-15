@@ -1,9 +1,9 @@
 ---
-title: Events (ProviderType)-Element
+title: events (ProviderType)-Element
 description: Enthält eine Liste der Ereignisse, die der Anbieter definiert.
 ms.assetid: e6d0b70d-cd44-41f6-820b-b2f39577b282
 keywords:
-- Events-Element EventLog
+- events-Element EventLog
 topic_type:
 - apiref
 api_name:
@@ -13,14 +13,14 @@ api_type:
 ms.topic: reference
 ms.date: 05/31/2018
 api_location: ''
-ms.openlocfilehash: de830101452d610bd96c68494446f01fed9a835f
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: ec3dfbf469d41da2597c2635b3cb7c0442e103e75327f9c2d636d879519b961c
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104519071"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119055978"
 ---
-# <a name="events-providertype-element"></a>Events (ProviderType)-Element
+# <a name="events-providertype-element"></a>events (ProviderType)-Element
 
 Enthält eine Liste der Ereignisse, die der Anbieter definiert.
 
@@ -30,7 +30,7 @@ Enthält eine Liste der Ereignisse, die der Anbieter definiert.
  />
 ```
 
-Das **Events** -Element wird durch den komplexen [**ProviderType**](eventmanifestschema-providertype-complextype.md) -Typ definiert.
+Das **Ereigniselement** wird vom komplexen [**ProviderType-Typ**](eventmanifestschema-providertype-complextype.md) definiert.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -38,19 +38,19 @@ Das **Events** -Element wird durch den komplexen [**ProviderType**](eventmanifes
 
 | Anforderung | Wert |
 |-------------------------------------|------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>       |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2008 \[ -Desktop-Apps\]<br/> |
+| Unterstützte Mindestversion (Client)<br/> | Windows \[Nur Vista-Desktop-Apps\]<br/>       |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2008-Desktop-Apps\]<br/> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
 **Übergeordnetes Element**
 </dt> <dt>
 
-[**Anbieter (eventstype)**](eventmanifestschema-provider-eventstype-element.md)
+[**provider (EventsType)**](eventmanifestschema-provider-eventstype-element.md)
 </dt> </dl>
 
  

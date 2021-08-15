@@ -122,7 +122,7 @@ Das Datum, an dem dieses Objekt erstellt wurde. Dieser Wert wird repliziert und 
 | Link-ID                | \-                              |
 | MAPI-Id                | 0x3007                          |
 | System-Only            | True                            |
-| Ist einwertig       | True                            |
+| Is-Single-Valued       | True                            |
 | Ist indiziert             | False                           |
 | Im globalen Katalog      | True                            |
 | NT-Security-Descriptor | O:BAG:BAD:S:                    |
@@ -143,7 +143,7 @@ Das Datum, an dem dieses Objekt erstellt wurde. Dieser Wert wird repliziert und 
 | Link-ID                | \-                              |
 | MAPI-Id                | 0x3007                          |
 | System-Only            | True                            |
-| Ist einwertig       | True                            |
+| Is-Single-Valued       | True                            |
 | Ist indiziert             | False                           |
 | Im globalen Katalog      | True                            |
 | NT-Security-Descriptor | O:BAG:BAD:S:                    |
@@ -164,7 +164,7 @@ Das Datum, an dem dieses Objekt erstellt wurde. Dieser Wert wird repliziert und 
 | Link-ID                | \-                              |
 | MAPI-Id                | 0x3007                          |
 | System-Only            | True                            |
-| Ist einwertig       | True                            |
+| Is-Single-Valued       | True                            |
 | Ist indiziert             | False                           |
 | Im globalen Katalog      | True                            |
 | NT-Security-Descriptor | O:BAG:BAD:S:                    |
@@ -185,7 +185,7 @@ Das Datum, an dem dieses Objekt erstellt wurde. Dieser Wert wird repliziert und 
 | Link-ID                | \-                              |
 | MAPI-Id                | 0x3007                          |
 | System-Only            | True                            |
-| Ist einwertig       | True                            |
+| Is-Single-Valued       | True                            |
 | Ist indiziert             | False                           |
 | Im globalen Katalog      | True                            |
 | NT-Security-Descriptor | O:BAG:BAD:S:                    |

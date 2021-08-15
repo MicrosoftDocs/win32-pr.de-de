@@ -1,11 +1,11 @@
 ---
 title: Tombstone-Lifetime-Attribut
-description: Die Anzahl der Tage, bevor ein gelöschtes Objekt aus den Verzeichnisdiensten entfernt wird.
+description: Die Anzahl von Tagen, bevor ein gelöschtes Objekt aus den Verzeichnisdiensten entfernt wird.
 ms.assetid: 58898097-912b-4fe6-b6ea-91f49aaa2b1b
 ms.tgt_platform: multiple
 keywords:
-- AD-Schema für Tombstone-Lifetime-Attribut
-- tombstoneLifetime-Attribut, AD-Schema
+- Tombstone-Lifetime AD-Attributschema
+- tombstoneLifetime-Attribut AD-Schema
 topic_type:
 - apiref
 api_name:
@@ -14,28 +14,28 @@ api_type:
 - Schema
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: bb2bd0b7b970270c626437ee65288fd07bf48272
-ms.sourcegitcommit: b77ace27b0432e7cd3863191b11926be032fbe2f
+ms.openlocfilehash: c96d440b82f488e7968f787ae52d9f431350bee6050bd50b385f5751f51e76a6
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "103859747"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119644950"
 ---
 # <a name="tombstone-lifetime-attribute"></a>Tombstone-Lifetime-Attribut
 
-Die Anzahl der Tage, bevor ein gelöschtes Objekt aus den Verzeichnisdiensten entfernt wird. Dies hilft beim Entfernen von Objekten von replizierten Servern und verhindert, dass Wiederherstellungen ein gelöschtes Objekt erneut einführen. Dieser Wert befindet sich im Verzeichnisdienst Objekt in der Konfigurations-NIC.
+Die Anzahl von Tagen, bevor ein gelöschtes Objekt aus den Verzeichnisdiensten entfernt wird. Dies hilft beim Entfernen von Objekten von replizierten Servern und verhindert, dass Wiederherstellungen ein gelöschtes Objekt erneut einführen. Dieser Wert befindet sich im Verzeichnisdienstobjekt in der Konfigurations-NIC.
 
 
 
 | Eingabe | Wert |
 |-------------------|-----------------------------------------------------------|
 | CN                | Tombstone-Lifetime                                        |
-| LDAP-Display-Name | tombstoneLifetime                                         |
+| Ldap-Anzeigename | Tombstonelifetime                                         |
 | Size              | 4 Bytes. Der Standardwert ist 60 Tage, wenn kein Wert eingegeben wird. |
-| Berechtigung aktualisieren  | \-                                                        |
-| Aktualisierungshäufigkeit  | \-                                                        |
+| Aktualisieren von Berechtigungen  | \-                                                        |
+| Updatehäufigkeit  | \-                                                        |
 | Attribute-Id      | 1.2.840.113556.1.2.54                                     |
-| System-ID-GUID    | 16c3a860-1273-11D0-a060-00aa006c33ed                      |
+| System-ID-GUID    | 16c3a860-1273-11d0-a060-00aa006c33ed                      |
 | Syntax            | [**Enumeration**](s-enumeration.md)                      |
 
 
@@ -43,7 +43,7 @@ Die Anzahl der Tage, bevor ein gelöschtes Objekt aus den Verzeichnisdiensten en
 ## <a name="implementations"></a>Implementierungen
 
 -   [**Windows 2000 Server**](#windows-2000-server)
--   [**Windows Server 2003**](#windows-server-2003)
+-   [**Windows Server 2003**](#windows-server-2003)
 -   [**Adam**](#adam)
 -   [**Windows Server 2003 R2**](#windows-server-2003-r2)
 -   [**Windows Server 2008**](#windows-server-2008)
@@ -59,19 +59,19 @@ Die Anzahl der Tage, bevor ein gelöschtes Objekt aus den Verzeichnisdiensten en
 | Link-ID                | \-                                               |
 | MAPI-Id                | 0x8145                                           |
 | System-Only            | False                                            |
-| Ist-einwertig       | Richtig                                             |
+| Ist einwertig       | True                                             |
 | Ist indiziert             | False                                            |
 | Im globalen Katalog      | False                                            |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                     |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                     |
 | Range-Lower            | \-                                               |
 | Range-Upper            | \-                                               |
 | Search-Flags           | 0x00000000                                       |
 | System-Flags           | 0x00000010                                       |
-| In verwendete Klassen        | [**NTDS-Dienst**](c-ntdsservice.md)<br/> |
+| In verwendete Klassen        | [**NTDS-Service**](c-ntdsservice.md)<br/> |
 
 
 
-## <a name="windows-server-2003"></a>Windows Server 2003
+## <a name="windows-server-2003"></a>Windows Server 2003
 
 
 
@@ -80,15 +80,15 @@ Die Anzahl der Tage, bevor ein gelöschtes Objekt aus den Verzeichnisdiensten en
 | Link-ID                | \-                                               |
 | MAPI-Id                | 0x8145                                           |
 | System-Only            | False                                            |
-| Ist-einwertig       | Richtig                                             |
+| Ist einwertig       | True                                             |
 | Ist indiziert             | False                                            |
 | Im globalen Katalog      | False                                            |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                     |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                     |
 | Range-Lower            | \-                                               |
 | Range-Upper            | \-                                               |
 | Search-Flags           | 0x00000000                                       |
 | System-Flags           | 0x00000010                                       |
-| In verwendete Klassen        | [**NTDS-Dienst**](c-ntdsservice.md)<br/> |
+| In verwendete Klassen        | [**NTDS-Service**](c-ntdsservice.md)<br/> |
 
 
 
@@ -101,15 +101,15 @@ Die Anzahl der Tage, bevor ein gelöschtes Objekt aus den Verzeichnisdiensten en
 | Link-ID                | \-                                               |
 | MAPI-Id                | 0x8145                                           |
 | System-Only            | False                                            |
-| Ist-einwertig       | Richtig                                             |
+| Ist einwertig       | True                                             |
 | Ist indiziert             | False                                            |
 | Im globalen Katalog      | False                                            |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                     |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                     |
 | Range-Lower            | \-                                               |
 | Range-Upper            | \-                                               |
 | Search-Flags           | 0x00000000                                       |
 | System-Flags           | 0x00000010                                       |
-| In verwendete Klassen        | [**NTDS-Dienst**](c-ntdsservice.md)<br/> |
+| In verwendete Klassen        | [**NTDS-Service**](c-ntdsservice.md)<br/> |
 
 
 
@@ -122,15 +122,15 @@ Die Anzahl der Tage, bevor ein gelöschtes Objekt aus den Verzeichnisdiensten en
 | Link-ID                | \-                                               |
 | MAPI-Id                | 0x8145                                           |
 | System-Only            | False                                            |
-| Ist-einwertig       | Richtig                                             |
+| Ist einwertig       | True                                             |
 | Ist indiziert             | False                                            |
 | Im globalen Katalog      | False                                            |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                     |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                     |
 | Range-Lower            | \-                                               |
 | Range-Upper            | \-                                               |
 | Search-Flags           | 0x00000000                                       |
 | System-Flags           | 0x00000010                                       |
-| In verwendete Klassen        | [**NTDS-Dienst**](c-ntdsservice.md)<br/> |
+| In verwendete Klassen        | [**NTDS-Service**](c-ntdsservice.md)<br/> |
 
 
 
@@ -143,15 +143,15 @@ Die Anzahl der Tage, bevor ein gelöschtes Objekt aus den Verzeichnisdiensten en
 | Link-ID                | \-                                               |
 | MAPI-Id                | 0x8145                                           |
 | System-Only            | False                                            |
-| Ist-einwertig       | Richtig                                             |
+| Ist einwertig       | True                                             |
 | Ist indiziert             | False                                            |
 | Im globalen Katalog      | False                                            |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                     |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                     |
 | Range-Lower            | \-                                               |
 | Range-Upper            | \-                                               |
 | Search-Flags           | 0x00000000                                       |
 | System-Flags           | 0x00000010                                       |
-| In verwendete Klassen        | [**NTDS-Dienst**](c-ntdsservice.md)<br/> |
+| In verwendete Klassen        | [**NTDS-Service**](c-ntdsservice.md)<br/> |
 
 
 
@@ -164,15 +164,15 @@ Die Anzahl der Tage, bevor ein gelöschtes Objekt aus den Verzeichnisdiensten en
 | Link-ID                | \-                                               |
 | MAPI-Id                | 0x8145                                           |
 | System-Only            | False                                            |
-| Ist-einwertig       | Richtig                                             |
+| Ist einwertig       | True                                             |
 | Ist indiziert             | False                                            |
 | Im globalen Katalog      | False                                            |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                     |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                     |
 | Range-Lower            | \-                                               |
 | Range-Upper            | \-                                               |
 | Search-Flags           | 0x00000000                                       |
 | System-Flags           | 0x00000010                                       |
-| In verwendete Klassen        | [**NTDS-Dienst**](c-ntdsservice.md)<br/> |
+| In verwendete Klassen        | [**NTDS-Service**](c-ntdsservice.md)<br/> |
 
 
 
@@ -185,15 +185,15 @@ Die Anzahl der Tage, bevor ein gelöschtes Objekt aus den Verzeichnisdiensten en
 | Link-ID                | \-                                               |
 | MAPI-Id                | 0x8145                                           |
 | System-Only            | False                                            |
-| Ist-einwertig       | Richtig                                             |
+| Ist einwertig       | True                                             |
 | Ist indiziert             | False                                            |
 | Im globalen Katalog      | False                                            |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                     |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                     |
 | Range-Lower            | \-                                               |
 | Range-Upper            | \-                                               |
 | Search-Flags           | 0x00000000                                       |
 | System-Flags           | 0x00000010                                       |
-| In verwendete Klassen        | [**NTDS-Dienst**](c-ntdsservice.md)<br/> |
+| In verwendete Klassen        | [**NTDS-Service**](c-ntdsservice.md)<br/> |
 
 
 

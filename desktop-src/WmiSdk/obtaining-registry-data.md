@@ -1,5 +1,5 @@
 ---
-description: Sie können Registrierungsdaten abrufen oder ändern, indem Sie die WMI-Klasse "StdRegProv" und deren Methoden verwenden.
+description: Sie können Registrierungsdaten mithilfe der WMI-Klasse StdRegProv und deren Methoden abrufen oder ändern.
 ms.assetid: 7cba9dcb-741b-4118-9769-8830c6dc0752
 ms.tgt_platform: multiple
 title: Abrufen von Registrierungsdaten
@@ -10,43 +10,43 @@ topic_type:
 api_name: ''
 api_type: ''
 api_location: ''
-ms.openlocfilehash: f5468a577acedeccf4396607147428d9160b4d38
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: b904316809a6949c6897e32127f85569e3b2ac13cb769db4739e61c164aa19fc
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106346673"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119050638"
 ---
 # <a name="obtaining-registry-data"></a>Abrufen von Registrierungsdaten
 
-Sie können Registrierungsdaten abrufen oder ändern, indem Sie die WMI-Klasse " [**StdRegProv**](/previous-versions/windows/desktop/regprov/stdregprov) " und deren Methoden verwenden. Wenn Sie das Hilfsprogramm regedit verwenden, um Registrierungs Werte auf dem lokalen Computer anzuzeigen und zu ändern, können Sie mit **StdRegProv** ein Skript oder eine Anwendung verwenden, um solche Aktivitäten auf dem lokalen Computer und auf Remote Computern zu automatisieren.
+Sie können Registrierungsdaten mithilfe der [**WMI-Klasse StdRegProv**](/previous-versions/windows/desktop/regprov/stdregprov) und deren Methoden abrufen oder ändern. Während Sie das Regedit-Hilfsprogramm verwenden, um Registrierungswerte auf dem lokalen Computer anzuzeigen und zu ändern, ermöglicht **Ihnen StdRegProv** die Verwendung eines Skripts oder einer Anwendung, um solche Aktivitäten auf dem lokalen Computer und den Remotecomputern zu automatisieren.
 
-[**StdRegProv**](/previous-versions/windows/desktop/regprov/stdregprov) enthält Methoden für folgende Aufgaben:
+[**StdRegProv**](/previous-versions/windows/desktop/regprov/stdregprov) enthält Methoden für folgende Schritte:
 
 -   Überprüfen der Zugriffsberechtigungen für einen Benutzer
--   Erstellen, auflisten und Löschen von Registrierungs Schlüsseln
--   Erstellen, aufzählen und Löschen von unter Schlüsseln oder benannten Werten
--   Lesen, schreiben und Löschen von Datenwerten
+-   Erstellen, Aufzählen und Löschen von Registrierungsschlüsseln
+-   Erstellen, Aufzählen und Löschen von Unterschlüsseln oder benannten Werten
+-   Lesen, Schreiben und Löschen von Datenwerten
 
-Registrierungsdaten werden nach Teil Strukturen, Schlüsseln und unter Schlüsseln organisiert, die unter einem Schlüssel der obersten Ebene gruppiert sind. Die tatsächlichen Datenwerte werden als Einträge oder benannte Werte bezeichnet.
+Registrierungsdaten sind nach Unterstrukturen, Schlüsseln und Unterschlüsseln organisiert, die unter einem Schlüssel der obersten Ebene geschachtelt sind. Die tatsächlichen Datenwerte werden als Einträge oder benannte Werte bezeichnet.
 
 Die Unterstrukturen umfassen Folgendes:
 
--   **HKEY \_ Klassen \_** Stamm (abgekürzt als **HKCR**)
--   **HKEY \_ aktueller \_ Benutzer** (**HKCU**)
--   **HKEY \_ lokaler \_ Computer** (**HKLM**)
--   **HKEY- \_ Benutzer**
--   **aktuelle HKEY- \_ \_ Konfiguration**
+-   **HKEY \_ CLASSES \_ ROOT** (abgekürzt als **HKCR**)
+-   **HKEY \_ AKTUELLER \_ BENUTZER** (**HKCU**)
+-   **HKEY \_ LOKALER \_ COMPUTER** (**HKLM**)
+-   **\_HKEY-BENUTZER**
+-   **AKTUELLE \_ \_ HKEY-KONFIGURATION**
 
-Im Registrierungs Eintrag **HKEY** \\ **Software** \\ **Microsoft** \\ **DirectX** \\ **installedversion** lautet die HKEY-Unterstruktur beispielsweise **Software**. die Unterschlüssel sind **Microsoft** und **DirectX**, und der benannte Wert Eintrag ist **installedversion**.
+Im Registrierungseintrag **HKEY** \\ **SOFTWARE** \\ **Microsoft** \\ **DirectX** \\ **InstalledVersion** lautet die HKEY-Unterstruktur beispielsweise **SOFTWARE,** die Unterschlüssel **Sind Microsoft** und **DirectX,** und der benannte Werteintrag ist **InstalledVersion**.
 
-Ein [**RegistryKeyChangeEvent**](/previous-versions/windows/desktop/regprov/registrykeychangeevent) tritt auf, wenn eine Änderung an einem bestimmten Schlüssel auftritt, aber der Eintrag nicht identifiziert, wie sich die Werte ändern, und dass dieses Ereignis nicht durch Änderungen unter dem angegebenen Schlüssel ausgelöst wird. Um Änderungen an beliebiger Stelle in einer hierarchischen Schlüsselstruktur zu identifizieren, verwenden Sie das [**RegistryTreeChangeEvent**](/previous-versions/windows/desktop/regprov/registrytreechangeevent), das keine bestimmten Werte oder Schlüssel Änderungen zurückgibt, die auftreten. Um einen bestimmten Wert für den Einstiegs Wert zu erhalten, verwenden Sie das [**RegistryValueChangeEvent**](/previous-versions/windows/desktop/regprov/registryvaluechangeevent), und lesen Sie dann den Eintrag, um einen Baselinewert zu erhalten.
+Ein [**RegistryKeyChangeEvent**](/previous-versions/windows/desktop/regprov/registrykeychangeevent) tritt auf, wenn eine Änderung an einem bestimmten Schlüssel auftritt. Der Eintrag identifiziert jedoch weder, wie sich die Werte ändern, noch wird dieses Ereignis durch Änderungen unterhalb des angegebenen Schlüssels ausgelöst. Um Änderungen an einer beliebigen Stelle in einer hierarchischen Schlüsselstruktur zu identifizieren, verwenden Sie [**RegistryTreeChangeEvent**](/previous-versions/windows/desktop/regprov/registrytreechangeevent), das keine bestimmten Werte oder Schlüsseländerungen zurückgibt, die auftreten. Um eine bestimmte Änderung des Eintragswerts abzurufen, verwenden Sie [**RegistryValueChangeEvent**](/previous-versions/windows/desktop/regprov/registryvaluechangeevent), und lesen Sie dann den Eintrag, um einen Baselinewert abzurufen.
 
-[**StdRegProv**](/previous-versions/windows/desktop/regprov/stdregprov) verfügt nur über Methoden, die von C++ oder Skript aufgerufen werden können. Dies unterscheidet sich von der Win32-Klassenstruktur.
+[**StdRegProv**](/previous-versions/windows/desktop/regprov/stdregprov) verfügt nur über Methoden, die von C++ oder Skript aufgerufen werden können, die sich von der Win32-Klassenstruktur unterscheiden.
 
-Im folgenden Codebeispiel wird gezeigt, wie die [**StdRegProv. EnumKey**](/previous-versions/windows/desktop/regprov/enumkey-method-in-class-stdregprov) -Methode verwendet wird, um alle Microsoft-Software Unterschlüssel unter dem Registrierungsschlüssel aufzulisten.
+Das folgende Codebeispiel zeigt, wie Sie die [**StdRegProv.EnumKey-Methode**](/previous-versions/windows/desktop/regprov/enumkey-method-in-class-stdregprov) verwenden, um alle Microsoft-Softwareunterschlüssel unter dem Registrierungsschlüssel aufzulisten.
 
-**HKEY \_ Software für den lokalen \_ Computer** \\  \\ **Microsoft**
+**HKEY \_ LOKALE \_ COMPUTERSOFTWARE** \\  \\ **Microsoft**
 
 
 ```VB
@@ -83,43 +83,43 @@ foreach ($subKey in ($arrSubKeys.sNames))
 
 
 
-[**StdRegProv**](/previous-versions/windows/desktop/regprov/stdregprov) verfügt über verschiedene Methoden zum Lesen der verschiedenen Datentypen von Registrierungs Eintrags Werten. Wenn der Eintrag unbekannte Werte enthält, können Sie [**StdRegProv. EnumValues**](/previous-versions/windows/desktop/regprov/enumvalues-method-in-class-stdregprov) zum Auflisten der Werte abrufen. In der folgenden Tabelle werden die Entsprechungen zwischen **StdRegProv** -Methoden und den-Datentypen aufgelistet.
+[**StdRegProv**](/previous-versions/windows/desktop/regprov/stdregprov) verfügt über verschiedene Methoden zum Lesen der verschiedenen Datentypen für Registrierungseintragswerte. Wenn der Eintrag unbekannte Werte enthält, können Sie [**StdRegProv.EnumValues**](/previous-versions/windows/desktop/regprov/enumvalues-method-in-class-stdregprov) aufrufen, um sie aufzulisten. In der folgenden Tabelle ist die Entsprechung zwischen **den StdRegProv-Methoden** und den Datentypen aufgeführt.
 
 
 
 | Methode                                                                                  | Datentyp           |
 |-----------------------------------------------------------------------------------------|---------------------|
-| [**GetBinaryValue**](/previous-versions/windows/desktop/regprov/getbinaryvalue-method-in-class-stdregprov)                 | **REG- \_ Binärdatei**     |
+| [**GetBinaryValue**](/previous-versions/windows/desktop/regprov/getbinaryvalue-method-in-class-stdregprov)                 | **REG \_ BINARY**     |
 | [**GetDWORDValue**](/previous-versions/windows/desktop/regprov/getdwordvalue-method-in-class-stdregprov)                   | **REG \_ DWORD**      |
-| [**GetExpandedStringValue**](/previous-versions/windows/desktop/regprov/getexpandedstringvalue-method-in-class-stdregprov) | **REG \_ Expand \_ SZ** |
-| [**GetMultiStringValue**](/previous-versions/windows/desktop/regprov/getmultistringvalue-method-in-class-stdregprov)       | **REG \_ \_ MultiSZ**  |
-| [**GetStringValue**](/previous-versions/windows/desktop/regprov/getstringvalue-method-in-class-stdregprov)                 | **REG- \_ SZ**         |
+| [**GetExpandedStringValue**](/previous-versions/windows/desktop/regprov/getexpandedstringvalue-method-in-class-stdregprov) | **REG \_ EXPAND \_ SZ** |
+| [**GetMultiStringValue**](/previous-versions/windows/desktop/regprov/getmultistringvalue-method-in-class-stdregprov)       | **REG \_ MULTI \_ SZ**  |
+| [**GetStringValue**](/previous-versions/windows/desktop/regprov/getstringvalue-method-in-class-stdregprov)                 | **REG \_ SZ**         |
 
 
 
  
 
-In der folgenden Tabelle werden die entsprechenden Methoden zum Erstellen neuer Schlüssel oder Werte oder zum Ändern vorhandener-Werte aufgelistet.
+In der folgenden Tabelle sind die entsprechenden Methoden zum Erstellen neuer Schlüssel oder Werte oder zum Ändern vorhandener Schlüssel oder Werte aufgeführt.
 
 
 
 | Methode                                                                                  | Datentyp           |
 |-----------------------------------------------------------------------------------------|---------------------|
-| [**SetBinaryValue**](/previous-versions/windows/desktop/regprov/setbinaryvalue-method-in-class-stdregprov)                 | **REG- \_ Binärdatei**     |
+| [**SetBinaryValue**](/previous-versions/windows/desktop/regprov/setbinaryvalue-method-in-class-stdregprov)                 | **REG \_ BINARY**     |
 | [**SetDWORDValue**](/previous-versions/windows/desktop/regprov/setdwordvalue-method-in-class-stdregprov)                   | **REG \_ DWORD**      |
-| [**"Abtexpandedstringvalue"**](/previous-versions/windows/desktop/regprov/setexpandedstringvalue-method-in-class-stdregprov) | **REG \_ Expand \_ SZ** |
-| [**SetMultiStringValue**](/previous-versions/windows/desktop/regprov/setmultistringvalue-method-in-class-stdregprov)       | **REG \_ \_ MultiSZ**  |
-| [**SetStringValue**](/previous-versions/windows/desktop/regprov/setstringvalue-method-in-class-stdregprov)                 | **REG- \_ SZ**         |
+| [**SetExpandedStringValue**](/previous-versions/windows/desktop/regprov/setexpandedstringvalue-method-in-class-stdregprov) | **REG \_ EXPAND \_ SZ** |
+| [**SetMultiStringValue**](/previous-versions/windows/desktop/regprov/setmultistringvalue-method-in-class-stdregprov)       | **REG \_ MULTI \_ SZ**  |
+| [**SetStringValue**](/previous-versions/windows/desktop/regprov/setstringvalue-method-in-class-stdregprov)                 | **REG \_ SZ**         |
 
 
 
  
 
-Im folgenden Beispiel wird gezeigt, wie die Liste der Quellen für das System Ereignisprotokoll aus dem Registrierungsschlüssel gelesen wird.
+Das folgende Beispiel zeigt, wie die Liste der Quellen für das Systemereignisprotokoll aus dem Registrierungsschlüssel gelesen wird.
 
-**HKEY \_ \_** \\ **System** \\ **Aktuelles System Steuerungs Satz** \\ **Dienste**- \\ **Ereignisprotokoll** \\ **System** des lokalen Computers
+**HKEY \_ LOCAL \_ MACHINE** \\ **SYSTEM** Current \\ **Control Set** \\ **Services** \\ **Eventlog** \\ **System**
 
-Beachten Sie, dass die Elemente im mehrteiligen Zeichen folgen Wert als Sammlung oder Array behandelt werden.
+Beachten Sie, dass die Elemente im Multistringwert als Auflistung oder Array behandelt werden.
 
 
 ```VB
@@ -140,17 +140,17 @@ Next
 
 
 
-Der Registrierungs Anbieter wird in LocalService gehostet – nicht in LocalSystem. Aus diesem Grund ist das Abrufen von Informationen aus der Unterstruktur **HKEY \_ aktueller \_ Benutzer** nicht möglich. Skripts, die auf dem lokalen Computer ausgeführt werden, können jedoch weiterhin auf den **aktuellen HKEY- \_ \_ Benutzer** zugreifen. Sie können das Hostingmodell auf einem Remote Computer auf "LocalSystem" festlegen, dies ist jedoch ein Sicherheitsrisiko, da die Registrierung auf dem Remote Computer anfällig für feindlichen Zugriff ist. Weitere Informationen finden Sie unter [Anbieter Hosting und-Sicherheit](provider-hosting-and-security.md).
+Der Registrierungsanbieter wird in LocalService gehostet, nicht im LocalSystem. Daher ist es nicht möglich, Informationen remote aus der Teilstruktur **HKEY \_ CURRENT \_ USER** zu erhalten. Skripts, die auf dem lokalen Computer ausgeführt werden, können jedoch weiterhin auf **HKEY \_ CURRENT \_ USER** zugreifen. Sie können das Hostingmodell auf einem Remotecomputer auf LocalSystem festlegen. Dies ist jedoch ein Sicherheitsrisiko, da die Registrierung auf dem Remotecomputer anfällig für schädlichen Zugriff ist. Weitere Informationen finden Sie unter [Anbieterhosting und Sicherheit.](provider-hosting-and-security.md)
 
 ## <a name="examples"></a>Beispiele
 
-Der Code zum [Lesen eines binären Registrierungs Werts](https://Gallery.TechNet.Microsoft.Com/b0724cb2-36ed-4d0d-8b8f-428d0e3d0b82) VBScript in der TechNet Gallery verwendet WMI, um einen binären Registrierungs Wert zu lesen.
+Im [VbScript-Codebeispiel Lesen eines binären Registrierungswerts](https://Gallery.TechNet.Microsoft.Com/b0724cb2-36ed-4d0d-8b8f-428d0e3d0b82) im TechNet-Katalog wird WMI verwendet, um einen binären Registrierungswert zu lesen.
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
 <dl> <dt>
 
-[WMI-Tasks: Registrierung](wmi-tasks--registry.md)
+[WMI-Aufgaben: Registrierung](wmi-tasks--registry.md)
 </dt> </dl>
 
  

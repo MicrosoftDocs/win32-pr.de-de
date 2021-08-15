@@ -1,19 +1,19 @@
 ---
-description: Gibt einen registrierten Puffer Deskriptor an, der mit den Winsock-registrierten e/a-Erweiterungen verwendet wird.
+description: Gibt einen registrierten Pufferdeskriptor an, der mit den bei Winsock registrierten E/A-Erweiterungen verwendet wird.
 ms.assetid: 87D0A3F6-A44C-4D7F-B276-7FD5DC2DE7A3
-title: RIO_BUFFERID (mtausockdef. h)
+title: RIO_BUFFERID (Mswsockdef.h)
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 75bb439a567c361a056b750728d986891a1da468
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 6bde67e14a1cb591922ddc180ab8f308b8429c2b36c5998d313876200cd3a26c
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104042011"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120097550"
 ---
-# <a name="rio_bufferid"></a>Rio \_ -bufferid
+# <a name="rio_bufferid"></a>RIO \_ BUFFERID
 
-Die " **Rio \_ bufferid** typedef" gibt einen registrierten Puffer Deskriptor an, der mit den Winsock-registrierten e/a-Erweiterungen verwendet wird.
+Die **TYPDEFINITION FÜR DIE \_ PUFFER-ID** gibt einen registrierten Pufferdeskriptor an, der mit den registrierten E/A-Erweiterungen von Winsock verwendet wird.
 
 
 ```C++
@@ -24,26 +24,26 @@ typedef struct RIO_BUFFERID_t* RIO_BUFFERID, **PRIO_BUFFERID;
 
 <dl> <dt>
 
-**Rio \_ -bufferid**
+**RIO \_ BUFFERID**
 </dt> <dd>
 
-Ein Datentyp, der einen registrierten Puffer Deskriptor angibt, der mit Sende-und Empfangs Anforderungen verwendet wird.
+Ein Datentyp, der einen registrierten Pufferdeskriptor angibt, der mit Sende- und Empfangsanforderungen verwendet wird.
 
 </dd> </dl>
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Die registrierten Winsock-e/a-Erweiterungen arbeiten hauptsächlich bei registrierten Puffern mit **Rio \_ -bufferid-** Objekten. Eine Anwendung erhält mit der [**rioregisterbuffer**](/previous-versions/windows/desktop/legacy/hh437199(v=vs.85)) -Funktion eine **Rio \_ -bufferid** für einen vorhandenen Puffer. Eine Anwendung kann mithilfe der [**rioderegisterbuffer**](/windows/win32/api/mswsock/nc-mswsock-lpfn_rioderegisterbuffer) -Funktion eine Registrierung freigeben.
+Die bei Winsock registrierten E/A-Erweiterungen arbeiten in erster Linie mit registrierten Puffern **mitHILFE von RIO \_ BUFFERID-Objekten.** Eine Anwendung erhält mithilfe der [**FUNKTION RIORegisterBuffer**](/previous-versions/windows/desktop/legacy/hh437199(v=vs.85)) eine **RIO \_ BUFFERID** für einen vorhandenen Puffer. Eine Anwendung kann eine Registrierung mithilfe der [**FUNKTION RIODeregisterBuffer**](/windows/win32/api/mswsock/nc-mswsock-lpfn_rioderegisterbuffer) veröffentlichen.
 
-Wenn ein vorhandener Puffer mithilfe der [**rioregisterbuffer**](/previous-versions/windows/desktop/legacy/hh437199(v=vs.85)) -Funktion als **Rio \_ -bufferid-** Objekt registriert wird, werden bestimmte interne Ressourcen aus physischem Speicher zugeordnet, und der vorhandene Anwendungs Puffer wird in den physischen Speicher gesperrt. Die [**rioderegisterbuffer**](/windows/win32/api/mswsock/nc-mswsock-lpfn_rioderegisterbuffer) -Funktion wird aufgerufen, um die Registrierung des Puffers aufzuheben, diese internen Ressourcen freizugeben und zuzulassen, dass der Puffer entsperrt und aus physischem Speicher freigegeben werden kann.
+Wenn ein vorhandener Puffer mithilfe der [**FUNKTION RIORegisterBuffer**](/previous-versions/windows/desktop/legacy/hh437199(v=vs.85)) als **RIO \_ BUFFERID-Objekt** registriert wird, werden bestimmte interne Ressourcen aus dem physischen Speicher zugeordnet, und der vorhandene Anwendungspuffer wird im physischen Speicher gesperrt. Die [**FUNKTION RIODeregisterBuffer**](/windows/win32/api/mswsock/nc-mswsock-lpfn_rioderegisterbuffer) wird aufgerufen, um die Registrierung des Puffers zu aufheben, diese internen Ressourcen frei zu geben und zu ermöglichen, dass der Puffer entsperrt und aus dem physischen Speicher freigegeben wird.
 
-Die wiederholte Registrierung und Aufhebung der Registrierung von Anwendungs Puffern mithilfe der registrierten e/a-Erweiterungen von Winsock kann zu erheblichen Leistungseinbußen führen. Die folgenden Puffer Verwaltungsansätze sollten beim Entwerfen einer Anwendung mit den Winsock-registrierten e/a-Erweiterungen berücksichtigt werden, um die wiederholte Registrierung und Registrierung von Anwendungs Puffern zu minimieren:
+Die wiederholte Registrierung und Aufhebung der Registrierung von Anwendungspuffern mithilfe der bei Winsock registrierten E/A-Erweiterungen kann zu erheblichen Leistungseinbußen führen. Die folgenden Pufferverwaltungsansätze sollten beim Entwerfen einer Anwendung mithilfe der bei Winsock registrierten E/A-Erweiterungen berücksichtigt werden, um die wiederholte Registrierung und Aufhebung der Registrierung von Anwendungspuffern zu minimieren:
 
--   • Maximieren Sie die Wiederverwendung von Puffern.
--   • Bewahren Sie einen eingeschränkten Pool nicht verwendeter registrierter Puffer für die Verwendung durch die Anwendung auf.
--   • Behalten Sie einen eingeschränkten Pool registrierter Puffer bei, und führen Sie Puffer Kopien zwischen diesen registrierten Puffern und anderen nicht registrierten Puffern aus.
+-   • Maximieren der Wiederverwendung von Puffern.
+-   • Verwalten Sie einen begrenzten Pool nicht verwendeter registrierter Puffer für die Verwendung durch die Anwendung.
+-   • Verwalten Sie einen begrenzten Pool registrierter Puffer, und führen Sie Pufferkopien zwischen diesen registrierten Puffern und anderen nicht registrierten Puffern aus.
 
-Die typedef " **Rio \_ bufferid** " wird in der Header Datei " *mgosockdef. h* " definiert, die automatisch in der Header Datei " *mgosock. h* " enthalten ist. Die Header Datei " *mtausockdef. h* " sollte niemals direkt verwendet werden.
+Die **TYPDEFINITION FÜR DIE \_ PUFFER-ID** wird in der *Headerdatei "Mswsockdef.h"* definiert, die automatisch in der *Headerdatei "Mswsock.h"* enthalten ist. Die *Headerdatei "Mswsockdef.h"* sollte nie direkt verwendet werden.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -51,35 +51,35 @@ Die typedef " **Rio \_ bufferid** " wird in der Header Datei " *mgosockdef. h* "
 
 | Anforderung | Wert |
 |-------------------------------------|-------------------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows 8 \[ -Desktop-Apps\]<br/>                                                                  |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2012 \[ -Desktop-Apps\]<br/>                                                        |
-| Header<br/>                   | <dl> <dt>Mtausockdef. h (Include mtausock. h)</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | \[Windows 8 Nur Desktop-Apps\]<br/>                                                                  |
+| Unterstützte Mindestversion (Server)<br/> | \[Windows Server 2012 Nur Desktop-Apps\]<br/>                                                        |
+| Header<br/>                   | <dl> <dt>Mswsockdef.h (einschließlich Mswsock.h)</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Rio \_ buf**](/windows/desktop/api/Mswsockdef/ns-mswsockdef-rio_buf)
+[**RIO \_ BUF**](/windows/desktop/api/Mswsockdef/ns-mswsockdef-rio_buf)
 </dt> <dt>
 
-[**Rioderegisterbuffer**](/windows/win32/api/mswsock/nc-mswsock-lpfn_rioderegisterbuffer)
+[**RIODeregisterBuffer**](/windows/win32/api/mswsock/nc-mswsock-lpfn_rioderegisterbuffer)
 </dt> <dt>
 
-[**Rioreceive**](/windows/win32/api/mswsock/nc-mswsock-lpfn_rioreceive)
+[**RIOReceive**](/windows/win32/api/mswsock/nc-mswsock-lpfn_rioreceive)
 </dt> <dt>
 
-[**Rioreceiveex**](/windows/win32/api/mswsock/nc-mswsock-lpfn_rioreceiveex)
+[**RIOReceiveEx**](/windows/win32/api/mswsock/nc-mswsock-lpfn_rioreceiveex)
 </dt> <dt>
 
-[**Rioregisterbuffer**](/previous-versions/windows/desktop/legacy/hh437199(v=vs.85))
+[**RIORegisterBuffer**](/previous-versions/windows/desktop/legacy/hh437199(v=vs.85))
 </dt> <dt>
 
-[**Randalisend**](/windows/win32/api/mswsock/nc-mswsock-lpfn_riosend)
+[**RIOSend**](/windows/win32/api/mswsock/nc-mswsock-lpfn_riosend)
 </dt> <dt>
 
-[**Riosendex**](/previous-versions/windows/desktop/legacy/hh437216(v=vs.85))
+[**RIOSendEx**](/previous-versions/windows/desktop/legacy/hh437216(v=vs.85))
 </dt> </dl>
 
  
