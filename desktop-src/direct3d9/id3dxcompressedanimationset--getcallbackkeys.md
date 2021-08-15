@@ -1,5 +1,5 @@
 ---
-description: 'ID3DXCompressedAnimationSet::GetCallbackKeys-Methode: Füllt ein Array mit Rückrufschlüsseldaten aus, die für die Keyframe-Animation verwendet werden.'
+description: 'ID3DXCompressedAnimationSet::GetCallbackKeys-Methode: Füllt ein Array mit Rückrufschlüsseldaten auf, die für die Keyframeanimation verwendet werden.'
 ms.assetid: 0dc30c1f-9ffb-42ec-8074-84293f16c344
 title: ID3DXCompressedAnimationSet::GetCallbackKeys-Methode (D3dx9anim.h)
 ms.topic: reference
@@ -14,16 +14,16 @@ api_type:
 api_location:
 - d3dx9.lib
 - d3dx9.dll
-ms.openlocfilehash: d7c430358b5ba7f66c5a79b08ae01925141e659f
-ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
+ms.openlocfilehash: a4889f0292cf9e97b74db5c1d35f2bc8242acdadb608db2404bda5dcff1a62b8
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2021
-ms.locfileid: "108115328"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118296143"
 ---
 # <a name="id3dxcompressedanimationsetgetcallbackkeys-method"></a>ID3DXCompressedAnimationSet::GetCallbackKeys-Methode
 
-Füllt ein Array mit Rückrufschlüsseldaten aus, die für die Keyframe-Animation verwendet werden.
+Füllt ein Array mit Rückrufschlüsseldaten, die für die Keyframeanimation verwendet werden.
 
 ## <a name="syntax"></a>Syntax
 
@@ -45,7 +45,7 @@ HRESULT GetCallbackKeys(
 
 Typ: **[ **LPD3DXKEY \_ CALLBACK**](d3dxkey-callback.md)**
 
-Zeiger auf ein vom Benutzer zugeordnetes Array von [**D3DXKEY \_ CALLBACK-Strukturen,**](d3dxkey-callback.md) das die Methode mit Rückrufdaten füllen soll.
+Zeiger auf ein vom Benutzer zugewiesenes Array von [**D3DXKEY \_ CALLBACK-Strukturen,**](d3dxkey-callback.md) die von der -Methode mit Rückrufdaten auffüllt werden.
 
 </dd> </dl>
 
@@ -53,20 +53,20 @@ Zeiger auf ein vom Benutzer zugeordnetes Array von [**D3DXKEY \_ CALLBACK-Strukt
 
 Typ: **[ **HRESULT**](https://msdn.microsoft.com/library/Bb401631(v=MSDN.10).aspx)**
 
-Wenn die Methode erfolgreich ist, lautet der Rückgabewert S \_ OK. Wenn die Methode fehlschlägt, wird der folgende Wert zurückgegeben: D3DERR \_ INVALIDCALL.
+Wenn die Methode erfolgreich ist, ist der Rückgabewert S \_ OK. Wenn bei der Methode ein Fehler auftritt, wird der folgende Wert zurückgegeben: D3DERR \_ INVALIDCALL.
 
 ## <a name="requirements"></a>Anforderungen
 
 
 
-| Anforderungen | Wert |
+| Anforderung | Wert |
 |--------------------|----------------------------------------------------------------------------------------|
 | Header<br/>  | <dl> <dt>D3dx9anim.h</dt> </dl> |
 | Bibliothek<br/> | <dl> <dt>D3dx9.lib</dt> </dl>   |
 
 
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 <dl> <dt>
 

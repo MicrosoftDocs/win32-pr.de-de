@@ -1,21 +1,21 @@
 ---
-title: "\"Erscheinungsbild\""
-description: "\"Erscheinungsbild\""
+title: AppearsToNotSupportTabbing
+description: AppearsToNotSupportTabbing
 ms.assetid: AA0A982E-A342-4B49-B159-A2683C8F5CC4
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 1593a645a92b21e6444a3ff0bacecb2b313e0856
-ms.sourcegitcommit: 592c9bbd22ba69802dc353bcb5eb30699f9e9403
+ms.openlocfilehash: cf5c2a7e9287f8e136b0a9b859dba61e3fd2e508431186ce9adb0e4e0b617137
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "103729273"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118326733"
 ---
-# <a name="appearstonotsupporttabbing"></a>"Erscheinungsbild"
+# <a name="appearstonotsupporttabbing"></a>AppearsToNotSupportTabbing
 
 ## <a name="text"></a>Text
 
-Die Anwendung scheint keine Tabstopps zu unterstützen.
+Die Anwendung unterstützt scheinbar keine Tabstopps.
 
 ## <a name="type"></a>type
 
@@ -23,14 +23,14 @@ Fehler
 
 ## <a name="description"></a>BESCHREIBUNG
 
-Die Anwendung unterstützt keine Standardtastatur Navigation (Tab oder UMSCHALT + TAB).
+Die Anwendung unterstützt keine Standardtastaturnavigation (TAB ODER UMSCHALT+TAB).
 
-Dieses Problem bewirkt Probleme mit der Benutzerfreundlichkeit für Benutzer, die sich auf einen Bildschirm Reader oder die Tastatur für die Navigation verlassen, da keines der Elemente in der Anwendung erkennbar ist.
+Dieses Problem verursacht Benutzerfreundlichkeitsprobleme für Benutzer, die eine Sprachausgabe oder die Tastatur für die Navigation verwenden, da keines der Elemente in der Anwendung erkennbar ist.
 
 ## <a name="possible-causes"></a>Mögliche Ursachen
 
--   Das UI-Framework der Anwendung unterstützt MSAA nicht.
--   MSAA ist nicht für ein Steuerelement in der Anwendung implementiert.
+-   Das Benutzeroberflächenframework der Anwendung unterstützt MSAA nicht.
+-   MSAA ist für keine Steuerung in der Anwendung implementiert.
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
@@ -39,6 +39,6 @@ Dieses Problem bewirkt Probleme mit der Benutzerfreundlichkeit für Benutzer, di
 [Richtlinien zur Gestaltung einer tastaturgesteuerten Benutzeroberfläche](/previous-versions/windows/desktop/dnacc/guidelines-for-keyboard-user-interface-design)
 </dt> </dl>
 
- 
+ 
 
- 
+ 

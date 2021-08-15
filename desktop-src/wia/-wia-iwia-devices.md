@@ -1,5 +1,5 @@
 ---
-description: Sammlung von DeviceInfo-Objekten, die alle auf dem Computer installierten Geräte darstellt.
+description: Sammlung von DeviceInfo-Objekten, die alle auf dem Computer installierten Geräte darstellen.
 ms.assetid: 2f124188-2b66-46cc-9b26-bfef3709a1af
 title: Wia.Devices-Eigenschaft
 ms.topic: reference
@@ -14,19 +14,19 @@ api_type:
 - COM
 api_location:
 - Wiascr.dll
-ms.openlocfilehash: b4d98bfe1552156071efde0b46899ad058e75aec
-ms.sourcegitcommit: 3caaa3c92dcb1ef12f84464d14ce6262e65e988e
+ms.openlocfilehash: b6cf843d92b5ce2260578b653a1163526b22fb735c01542d772b2687ca890dc8
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/12/2021
-ms.locfileid: "109841312"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118208923"
 ---
 # <a name="wiadevices-property"></a>Wia.Devices-Eigenschaft
 
-Sammlung von [**DeviceInfo-Objekten,**](-wia-deviceinfo.md) die alle auf dem Computer installierten Geräte darstellt. Schreibgeschützt.
+Sammlung von [**DeviceInfo-Objekten,**](-wia-deviceinfo.md) die alle auf dem Computer installierten Geräte darstellen. Schreibgeschützt.
 
 > [!Note]  
-> Diese Auflistung ist 0-basiert.
+> Diese Auflistung basiert auf 0.
 
  
 
@@ -45,7 +45,7 @@ propVal = Wia.Devices
 
 ## <a name="examples"></a>Beispiele
 
-Im folgenden Beispiel wird die Verwendung der Sammlung **Geräte** zum Aufzählen der Geräte auf einem System veranschaulicht.
+Das folgende Beispiel veranschaulicht die Verwendung der **Sammlung Geräte** zum Aufzählen der Geräte auf einem System.
 
 
 ```JScript
@@ -72,8 +72,8 @@ Next
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows 2000 Professional- und Windows \[ XP-Desktop-Apps\]<br/>                                        |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server \[ 2003-Desktop-Apps\]<br/>                                                          |
+| Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional, nur Windows \[ XP-Desktop-Apps\]<br/>                                        |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2003-Desktop-Apps\]<br/>                                                          |
 | DLL<br/>                      | <dl> <dt>Wiascr.dll (Version 4.90 oder höher)</dt> </dl> |
 
 

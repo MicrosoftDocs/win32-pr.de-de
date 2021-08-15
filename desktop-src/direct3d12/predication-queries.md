@@ -1,32 +1,32 @@
 ---
 title: Prädikationsabfragen
-description: Das D3D12PredicationQueries-Beispiel veranschaulicht die Verschleierung von Okklusion mithilfe von DirectX 12-Abfrage Heaps und-Prädikaten. In der exemplarischen Vorgehensweise wird der zusätzliche Code beschrieben, der zum Erweitern des helloconstbuffer-Beispiels für die Behandlung von prädikationsabfragen
+description: Das D3D12PredicationQueries-Beispiel veranschaulicht okklusions-culling mit DirectX 12-Abfrageheaps und Prädikation. In der exemplarischen Vorgehensweise wird der zusätzliche Code beschrieben, der erforderlich ist, um das HelloConstBuffer-Beispiel für die Verarbeitung von Prädikationsabfragen zu erweitern.
 ms.assetid: F61817BB-45BC-4977-BE4A-EE0FDAFBCB57
 ms.localizationpriority: high
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: ad14e55864ee8d568acc0c9eb46134834d27ff54
-ms.sourcegitcommit: 4c00910ed754d7d0a68c9a833751d714c06e3b39
+ms.openlocfilehash: 2d37bd4653ec7610e36214cce31955f1742e5b27a42a381cc2aa7d758daaf5b4
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/05/2021
-ms.locfileid: "104548631"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117733396"
 ---
 # <a name="predication-queries"></a>Prädikationsabfragen
 
-Das **D3D12PredicationQueries** -Beispiel veranschaulicht die Verschleierung von Okklusion mithilfe von DirectX 12-Abfrage Heaps und-Prädikaten. In der exemplarischen Vorgehensweise wird der zusätzliche Code beschrieben, der zum Erweitern des **helloconstbuffer** -Beispiels für die Behandlung von prädikationsabfragen
+Das **D3D12PredicationQueries-Beispiel** veranschaulicht okklusions-culling mit DirectX 12-Abfrageheaps und Prädikation. In der exemplarischen Vorgehensweise wird der zusätzliche Code beschrieben, der erforderlich ist, um das **HelloConstBuffer-Beispiel** für die Verarbeitung von Prädikationsabfragen zu erweitern.
 
--   [Erstellen Sie einen tiefen Schablone-deskriptorheap und einen oksions Abfrage Heap.](#create-a-depth-stencil-descriptor-heap-and-an-occlusion-query-heap)
--   [Alpha Blending aktivieren](#enable-alpha-blending)
--   [Farben und Tiefe Schreibvorgänge deaktivieren](#disable-color-and-depth-writes)
--   [Erstellen eines Puffers zum Speichern der Abfrageergebnisse](#create-a-buffer-to-store-the-results-of-the-query)
--   [Zeichnen der Quads und ausführen und Auflösen der Okklusions Abfrage](#draw-the-quads-and-perform-and-resolve-the-occlusion-query)
+-   [Erstellen eines Tiefenschablonendeskriptorheaps und eines Verdeckungsabfrageheaps](#create-a-depth-stencil-descriptor-heap-and-an-occlusion-query-heap)
+-   [Aktivieren von Alphablending](#enable-alpha-blending)
+-   [Deaktivieren von Farb- und Tiefen-Schreibvorgängen](#disable-color-and-depth-writes)
+-   [Erstellen eines Puffers zum Speichern der Ergebnisse der Abfrage](#create-a-buffer-to-store-the-results-of-the-query)
+-   [Zeichnen der Quader und Ausführen und Auflösen der Verdeckungsabfrage](#draw-the-quads-and-perform-and-resolve-the-occlusion-query)
 -   [Ausführen des Beispiels](#run-the-sample)
--   [Verwandte Themen](#related-topics)
+-   [Zugehörige Themen](#related-topics)
 
-## <a name="create-a-depth-stencil-descriptor-heap-and-an-occlusion-query-heap"></a>Erstellen Sie einen tiefen Schablone-deskriptorheap und einen oksions Abfrage Heap.
+## <a name="create-a-depth-stencil-descriptor-heap-and-an-occlusion-query-heap"></a>Erstellen eines Tiefenschablonendeskriptorheaps und eines Verdeckungsabfrageheaps
 
-Erstellen Sie in der **loadpipeline** -Methode einen tiefen Schablone-deskriptorheap.
+Erstellen Sie in der **LoadPipeline-Methode** einen Tiefenschablonendeskriptorheap.
 
 ``` syntax
               // Describe and create a depth stencil view (DSV) descriptor heap.
@@ -42,7 +42,7 @@ Erstellen Sie in der **loadpipeline** -Methode einen tiefen Schablone-deskriptor
 <table>
 <thead>
 <tr class="header">
-<th>Aufruffluss</th>
+<th>Aufrufflow</th>
 <th>Parameter</th>
 </tr>
 </thead>
@@ -50,11 +50,11 @@ Erstellen Sie in der **loadpipeline** -Methode einen tiefen Schablone-deskriptor
 <tr class="odd">
 <td><a href="/windows/desktop/api/d3d12/ns-d3d12-d3d12_descriptor_heap_desc"><strong>D3D12_DESCRIPTOR_HEAP_DESC</strong></a></td>
 <td><dl><a href="/windows/desktop/api/d3d12/ne-d3d12-d3d12_descriptor_heap_type"><strong>D3D12_DESCRIPTOR_HEAP_TYPE</strong></a><br />
-[<strong>D3D12_DESCRIPTOR_HEAP_FLAG</strong>] (/Windows/Desktop/API/d3d12/ne-d3d12-d3d12_descriptor_heap_flags)<br />
+[<strong>D3D12_DESCRIPTOR_HEAP_FLAG</strong>] (/windows/desktop/api/d3d12/ne-d3d12-d3d12_descriptor_heap_flags)<br />
 </dl></td>
 </tr>
 <tr class="even">
-<td><a href="/windows/desktop/api/d3d12/nf-d3d12-id3d12device-createdescriptorheap"><strong>"Kreatedescriptorheap"</strong></a></td>
+<td><a href="/windows/desktop/api/d3d12/nf-d3d12-id3d12device-createdescriptorheap"><strong>CreateDescriptorHeap</strong></a></td>
 
 </tr>
 </tbody>
@@ -64,7 +64,7 @@ Erstellen Sie in der **loadpipeline** -Methode einen tiefen Schablone-deskriptor
 
  
 
-Erstellen Sie in der **loadassets** -Methode einen Heap für oksions Abfragen.
+Erstellen Sie in der **LoadAssets-Methode** einen Heap für Okklusionsabfragen.
 
 ``` syntax
      // Describe and create a heap for occlusion queries.
@@ -76,18 +76,18 @@ Erstellen Sie in der **loadassets** -Methode einen Heap für oksions Abfragen.
 
 
 
-| Aufruffluss                                                 | Parameter                                                |
+| Aufrufflow                                                 | Parameter                                                |
 |-----------------------------------------------------------|-----------------------------------------------------------|
-| [**D3D12 \_ Abfrage \_ Heap- \_ ABSC**](/windows/desktop/api/d3d12/ns-d3d12-d3d12_query_heap_desc) | [**D3D12- \_ Abfrage \_ heaptyp \_**](/windows/desktop/api/d3d12/ne-d3d12-d3d12_query_heap_type) |
-| [**"Kreatequeryheap"**](/windows/desktop/api/d3d12/nf-d3d12-id3d12device-createqueryheap)   |                                                           |
+| [**\_ \_ D3D12-ABFRAGEHEAP-DESC \_**](/windows/desktop/api/d3d12/ns-d3d12-d3d12_query_heap_desc) | [**\_D3D12-ABFRAGEHEAPTYP \_ \_**](/windows/desktop/api/d3d12/ne-d3d12-d3d12_query_heap_type) |
+| [**CreateQueryHeap**](/windows/desktop/api/d3d12/nf-d3d12-id3d12device-createqueryheap)   |                                                           |
 
 
 
  
 
-## <a name="enable-alpha-blending"></a>Alpha Blending aktivieren
+## <a name="enable-alpha-blending"></a>Aktivieren von Alphablending
 
-In diesem Beispiel werden zwei Quads gezeichnet und eine binäre Okklusions Abfrage veranschaulicht. Das Vierfache im Vordergrund wird auf dem Bildschirm animiert, und der im Hintergrund wird gelegentlich ausgeblendet. In der **loadassets** -Methode ist Alpha Blending für dieses Beispiel aktiviert, sodass wir sehen können, zu welchem Punkt D3D das Vierfache im Hintergrund wieder gibt.
+Dieses Beispiel zeichnet zwei Quader und veranschaulicht eine binäre Verdeckungsabfrage. Das Quad-Element im Vordergrund wird über den Bildschirm animiert, und das quad-Element im Hintergrund wird gelegentlich verdeckt. In der **LoadAssets-Methode** ist das Alphablending für dieses Beispiel aktiviert, damit wir sehen können, an welchem Punkt D3D das Quad in back occluded betrachtet.
 
 ``` syntax
      // Enable alpha blending so we can visualize the occlusion query results.
@@ -107,7 +107,7 @@ In diesem Beispiel werden zwei Quads gezeichnet und eine binäre Okklusions Abfr
 <table>
 <thead>
 <tr class="header">
-<th>Aufruffluss</th>
+<th>Aufrufflow</th>
 <th>Parameter</th>
 </tr>
 </thead>
@@ -115,10 +115,10 @@ In diesem Beispiel werden zwei Quads gezeichnet und eine binäre Okklusions Abfr
 <tr class="odd">
 <td><a href="cd3dx12-blend-desc.md"><strong>CD3DX12_BLEND_DESC</strong></a></td>
 <td><dl><a href="cd3dx12-default.md"><strong>CD3DX12_DEFAULT</strong></a><br />
-[<strong>D3D12_BLEND</strong>] (/Windows/Desktop/API/d3d12/ne-d3d12-d3d12_blend)<br />
-[<strong>D3D12_BLEND_OP</strong>] (/Windows/Desktop/API/d3d12/ne-d3d12-d3d12_blend_op)<br />
-[<strong>D3D12_LOGIC_OP</strong>] (/Windows/Desktop/API/d3d12/ne-d3d12-d3d12_logic_op)<br />
-[<strong>D3D12_COLOR_WRITE_ENABLE</strong>] (/Windows/Desktop/API/d3d12/ne-d3d12-d3d12_color_write_enable)<br />
+[<strong>D3D12_BLEND</strong>] (/windows/desktop/api/d3d12/ne-d3d12-d3d12_blend)<br />
+[<strong>D3D12_BLEND_OP</strong>] (/windows/desktop/api/d3d12/ne-d3d12-d3d12_blend_op)<br />
+[<strong>D3D12_LOGIC_OP</strong>] (/windows/desktop/api/d3d12/ne-d3d12-d3d12_logic_op)<br />
+[<strong>D3D12_COLOR_WRITE_ENABLE</strong>] (/windows/desktop/api/d3d12/ne-d3d12-d3d12_color_write_enable)<br />
 </dl></td>
 </tr>
 </tbody>
@@ -128,11 +128,11 @@ In diesem Beispiel werden zwei Quads gezeichnet und eine binäre Okklusions Abfr
 
  
 
-## <a name="disable-color-and-depth-writes"></a>Farben und Tiefe Schreibvorgänge deaktivieren
+## <a name="disable-color-and-depth-writes"></a>Deaktivieren von Farb- und Tiefen-Schreibvorgängen
 
-Die oksions Abfrage wird durch das Rendern eines Quad durchgeführt, das denselben Bereich abdeckt wie das Vierfache, dessen Sichtbarkeit getestet werden soll. In komplexeren Szenen wäre die Abfrage wahrscheinlich ein Begrenzungs Volume und kein einfaches Quad. In beiden Fällen wird ein neuer Pipeline Status erstellt, der das Schreiben in das Renderziel und den z-Puffer deaktiviert, sodass sich die Okklusions Abfrage selbst nicht auf die sichtbare Ausgabe des Renderings auswirkt.
+Die Verdeckungsabfrage wird ausgeführt, indem ein Quader gerendert wird, der den gleichen Bereich wie der Quader abdeckt, dessen Sichtbarkeit wir testen möchten. In komplexeren Szenen handelt es sich bei der Abfrage wahrscheinlich um ein begrenzungsvolumes und nicht um ein einfaches Quader. In beiden Fällen wird ein neuer Pipelinezustand erstellt, der das Schreiben in das Renderziel und den Z-Puffer deaktiviert, sodass sich die Verdeckungsabfrage selbst nicht auf die sichtbare Ausgabe des Renderingdurchlaufs auswirkt.
 
-Deaktivieren Sie in der **loadassets** -Methode Farb Schreibvorgänge und Tiefe Schreibvorgänge für den Zustand der oksion-Abfrage.
+Deaktivieren Sie in der **LoadAssets-Methode** Farb- und Tiefen-Schreibvorgänge für den Zustand der Verdeckungsabfrage.
 
 ``` syntax
  // Disable color writes and depth writes for the occlusion query's state.
@@ -144,18 +144,18 @@ Deaktivieren Sie in der **loadassets** -Methode Farb Schreibvorgänge und Tiefe 
 
 
 
-| Aufruffluss                                                                            | Parameter                                                  |
+| Aufrufflow                                                                            | Parameter                                                  |
 |--------------------------------------------------------------------------------------|-------------------------------------------------------------|
-| [**D3D12- \_ Grafik \_ Pipeline \_ Status \_ DESC**](/windows/desktop/api/d3d12/ns-d3d12-d3d12_graphics_pipeline_state_desc) | [**D3D12 \_ Tiefe \_ Schreib \_ Maske**](/windows/desktop/api/d3d12/ne-d3d12-d3d12_depth_write_mask) |
-| [**"Kreategraphicspipelinestate"**](/windows/desktop/api/d3d12/nf-d3d12-id3d12device-creategraphicspipelinestate)      |                                                             |
+| [**D3D12 \_ GRAPHICS \_ PIPELINE \_ STATE \_ DESC**](/windows/desktop/api/d3d12/ns-d3d12-d3d12_graphics_pipeline_state_desc) | [**D3D12 \_ DEPTH \_ WRITE \_ MASK**](/windows/desktop/api/d3d12/ne-d3d12-d3d12_depth_write_mask) |
+| [**CreateGraphicsPipelineState**](/windows/desktop/api/d3d12/nf-d3d12-id3d12device-creategraphicspipelinestate)      |                                                             |
 
 
 
  
 
-## <a name="create-a-buffer-to-store-the-results-of-the-query"></a>Erstellen eines Puffers zum Speichern der Abfrageergebnisse
+## <a name="create-a-buffer-to-store-the-results-of-the-query"></a>Erstellen eines Puffers zum Speichern der Ergebnisse der Abfrage
 
-In der **loadassets** -Methode muss ein Puffer erstellt werden, um die Ergebnisse der Abfrage zu speichern. Jede Abfrage benötigt im GPU-Speicher 8 Bytes Speicherplatz. In diesem Beispiel wird nur eine Abfrage durchführen, und aus Gründen der Einfachheit und Lesbarkeit wird ein Puffer genau dieser Größe erstellt (auch wenn dieser Funktionsbefehl eine 64-KB-Seite mit GPU-Speicher zuweist, wird wahrscheinlich ein größerer Puffer erstellt).
+In der **LoadAssets-Methode** muss ein Puffer erstellt werden, um die Ergebnisse der Abfrage zu speichern. Jede Abfrage erfordert 8 Bytes Speicherplatz im GPU-Arbeitsspeicher. In diesem Beispiel wird nur eine Abfrage ausgeführt, und der Einfachheit halber und der Lesbarkeit wird ein Puffer erstellt, der genau diese Größe aufweist (obwohl dieser Funktionsaufruf eine 64.000-Seite gpu-Arbeitsspeicher zuordnet– die meisten echten Apps würden wahrscheinlich einen größeren Puffer erstellen).
 
 ``` syntax
  // Create the query result buffer.
@@ -176,18 +176,18 @@ In der **loadassets** -Methode muss ein Puffer erstellt werden, um die Ergebniss
 <table>
 <thead>
 <tr class="header">
-<th>Aufruffluss</th>
+<th>Aufrufflow</th>
 <th>Parameter</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<td><a href="/windows/desktop/api/d3d12/nf-d3d12-id3d12device-createcommittedresource"><strong>"Kreatecommittedresource"</strong></a></td>
+<td><a href="/windows/desktop/api/d3d12/nf-d3d12-id3d12device-createcommittedresource"><strong>CreateCommittedResource</strong></a></td>
 <td><dl><a href="cd3dx12-heap-properties.md"><strong>CD3DX12_HEAP_PROPERTIES</strong></a><br />
-[<strong>D3D12_HEAP_TYPE</strong>] (/Windows/Desktop/API/d3d12/ne-d3d12-d3d12_heap_type)<br />
-[<strong>D3D12_HEAP_FLAG</strong>] (/Windows/Desktop/API/d3d12/ne-d3d12-d3d12_heap_flags)<br />
-[<strong>CD3DX12_RESOURCE_DESC</strong>] (cd3dx12-Resource-DESC.MD)<br />
-[<strong>D3D12_RESOURCE_STATES</strong>] (/Windows/Desktop/API/d3d12/ne-d3d12-d3d12_resource_states)<br />
+[<strong>D3D12_HEAP_TYPE</strong>] (/windows/desktop/api/d3d12/ne-d3d12-d3d12_heap_type)<br />
+[<strong>D3D12_HEAP_FLAG</strong>] (/windows/desktop/api/d3d12/ne-d3d12-d3d12_heap_flags)<br />
+[<strong>CD3DX12_RESOURCE_DESC</strong>] (cd3dx12-resource-desc.md)<br />
+[<strong>D3D12_RESOURCE_STATES</strong>] (/windows/desktop/api/d3d12/ne-d3d12-d3d12_resource_states)<br />
 </dl></td>
 </tr>
 </tbody>
@@ -197,14 +197,14 @@ In der **loadassets** -Methode muss ein Puffer erstellt werden, um die Ergebniss
 
  
 
-## <a name="draw-the-quads-and-perform-and-resolve-the-occlusion-query"></a>Zeichnen der Quads und ausführen und Auflösen der Okklusions Abfrage
+## <a name="draw-the-quads-and-perform-and-resolve-the-occlusion-query"></a>Zeichnen der Quader und Ausführen und Auflösen der Verdeckungsabfrage
 
-Nachdem das Setup abgeschlossen ist, wird die Hauptschleife in der **populatecommandlists** -Methode aktualisiert.
+Nach dem Setup wird die Main-Schleife in der **PopulateCommandLists-Methode** aktualisiert.
 
-<dl> 1. Zeichnen Sie die Quads von hinten nach vorne, damit der Transparenz Effekt ordnungsgemäß funktioniert. Das Zurückziehen des Quad in den Vordergrund basiert auf dem Ergebnis der Abfrage des vorherigen Frames und ist hierfür eine gängige Methode.  
-2. Ändern Sie das PSO, dass Renderziel-und tiefen Schablonen Schreibvorgänge deaktiviert werden.  
-3. Führen Sie die oksions Abfrage aus.  
-4. Auflösen der Okklusions Abfrage.  
+<dl> 1. Zeichnen Sie die Quads von zurück nach vorne, damit der Transparenzeffekt ordnungsgemäß funktioniert. Das Zurückstellen des Quaders nach vorn basiert auf dem Ergebnis der Abfrage des vorherigen Frames und ist hierfür eine recht gängige Technik.  
+2. Ändern Sie die PSO, um Renderziel- und Tiefenschablonen-Schreibvorgänge zu deaktivieren.  
+3. Führen Sie die Verdeckungsabfrage aus.  
+4. Lösen Sie die Verdeckungsabfrage auf.  
 </dl>
 
 ``` syntax
@@ -247,81 +247,81 @@ Nachdem das Setup abgeschlossen ist, wird die Hauptschleife in der **populatecom
 <table>
 <thead>
 <tr class="header">
-<th>Aufruffluss</th>
+<th>Aufrufflow</th>
 <th>Parameter</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
 <td><a href="cd3dx12-gpu-descriptor-handle.md"><strong>CD3DX12_GPU_DESCRIPTOR_HANDLE</strong></a></td>
-<td><a href="/windows/desktop/api/d3d12/nf-d3d12-id3d12descriptorheap-getgpudescriptorhandleforheapstart"><strong>Getgpudescriptor Lenker forheapstart</strong></a></td>
+<td><a href="/windows/desktop/api/d3d12/nf-d3d12-id3d12descriptorheap-getgpudescriptorhandleforheapstart"><strong>GetGPUDescriptorHandleForHeapStart</strong></a></td>
 </tr>
 <tr class="even">
-<td><a href="/windows/desktop/api/d3d12/nf-d3d12-id3d12graphicscommandlist-iasetprimitivetopology"><strong>Iasetprimitivetopology</strong></a></td>
+<td><a href="/windows/desktop/api/d3d12/nf-d3d12-id3d12graphicscommandlist-iasetprimitivetopology"><strong>IASetPrimitiveTopology</strong></a></td>
 <td><a href="/windows/desktop/api/d3dcommon/ne-d3dcommon-d3d_primitive_topology"><strong>D3D_PRIMITIVE_TOPOLOGY</strong></a></td>
 </tr>
 <tr class="odd">
-<td><a href="/windows/desktop/api/d3d12/nf-d3d12-id3d12graphicscommandlist-iasetvertexbuffers"><strong>Iasetvertexbuffers</strong></a></td>
+<td><a href="/windows/desktop/api/d3d12/nf-d3d12-id3d12graphicscommandlist-iasetvertexbuffers"><strong>IASetVertexBuffers</strong></a></td>
 
 </tr>
 <tr class="even">
-<td><a href="/windows/desktop/api/d3d12/nf-d3d12-id3d12graphicscommandlist-setgraphicsrootdescriptortable"><strong>Setgraphicsrootdescriptor Table</strong></a></td>
+<td><a href="/windows/desktop/api/d3d12/nf-d3d12-id3d12graphicscommandlist-setgraphicsrootdescriptortable"><strong>SetGraphicsRootDescriptorTable</strong></a></td>
 
 </tr>
 <tr class="odd">
-<td><a href="/windows/desktop/api/d3d12/nf-d3d12-id3d12graphicscommandlist-setpredication"><strong>Setprediation</strong></a></td>
+<td><a href="/windows/desktop/api/d3d12/nf-d3d12-id3d12graphicscommandlist-setpredication"><strong>SetPredication</strong></a></td>
 <td><a href="/windows/desktop/api/d3d12/ne-d3d12-d3d12_predication_op"><strong>D3D12_PREDICATION_OP</strong></a></td>
 </tr>
 <tr class="even">
-<td><a href="/windows/desktop/api/d3d12/nf-d3d12-id3d12graphicscommandlist-drawinstanced"><strong>Drawinstanzierte</strong></a></td>
+<td><a href="/windows/desktop/api/d3d12/nf-d3d12-id3d12graphicscommandlist-drawinstanced"><strong>DrawInstanced</strong></a></td>
 
 </tr>
 <tr class="odd">
-<td><a href="/windows/desktop/api/d3d12/nf-d3d12-id3d12graphicscommandlist-setpredication"><strong>Setprediation</strong></a></td>
+<td><a href="/windows/desktop/api/d3d12/nf-d3d12-id3d12graphicscommandlist-setpredication"><strong>SetPredication</strong></a></td>
 <td><a href="/windows/desktop/api/d3d12/ne-d3d12-d3d12_predication_op"><strong>D3D12_PREDICATION_OP</strong></a></td>
 </tr>
 <tr class="even">
-<td><a href="/windows/desktop/api/d3d12/nf-d3d12-id3d12graphicscommandlist-setgraphicsrootdescriptortable"><strong>Setgraphicsrootdescriptor Table</strong></a></td>
+<td><a href="/windows/desktop/api/d3d12/nf-d3d12-id3d12graphicscommandlist-setgraphicsrootdescriptortable"><strong>SetGraphicsRootDescriptorTable</strong></a></td>
 
 </tr>
 <tr class="odd">
-<td><a href="/windows/desktop/api/d3d12/nf-d3d12-id3d12graphicscommandlist-drawinstanced"><strong>Drawinstanzierte</strong></a></td>
+<td><a href="/windows/desktop/api/d3d12/nf-d3d12-id3d12graphicscommandlist-drawinstanced"><strong>DrawInstanced</strong></a></td>
 
 </tr>
 <tr class="even">
-<td><a href="/windows/desktop/api/d3d12/nf-d3d12-id3d12graphicscommandlist-setgraphicsrootdescriptortable"><strong>Setgraphicsrootdescriptor Table</strong></a></td>
+<td><a href="/windows/desktop/api/d3d12/nf-d3d12-id3d12graphicscommandlist-setgraphicsrootdescriptortable"><strong>SetGraphicsRootDescriptorTable</strong></a></td>
 
 </tr>
 <tr class="odd">
-<td><a href="/windows/desktop/api/d3d12/nf-d3d12-id3d12graphicscommandlist-setpipelinestate"><strong>Setpipelinestate</strong></a></td>
+<td><a href="/windows/desktop/api/d3d12/nf-d3d12-id3d12graphicscommandlist-setpipelinestate"><strong>SetPipelineState</strong></a></td>
 
 </tr>
 <tr class="even">
-<td><a href="/windows/desktop/api/d3d12/nf-d3d12-id3d12graphicscommandlist-beginquery"><strong>Beginquery</strong></a></td>
+<td><a href="/windows/desktop/api/d3d12/nf-d3d12-id3d12graphicscommandlist-beginquery"><strong>BeginQuery</strong></a></td>
 <td><a href="/windows/desktop/api/d3d12/ne-d3d12-d3d12_query_type"><strong>D3D12_QUERY_TYPE</strong></a></td>
 </tr>
 <tr class="odd">
-<td><a href="/windows/desktop/api/d3d12/nf-d3d12-id3d12graphicscommandlist-drawinstanced"><strong>Drawinstanzierte</strong></a></td>
+<td><a href="/windows/desktop/api/d3d12/nf-d3d12-id3d12graphicscommandlist-drawinstanced"><strong>DrawInstanced</strong></a></td>
 
 </tr>
 <tr class="even">
-<td><a href="/windows/desktop/api/d3d12/nf-d3d12-id3d12graphicscommandlist-endquery"><strong>Endquery</strong></a></td>
+<td><a href="/windows/desktop/api/d3d12/nf-d3d12-id3d12graphicscommandlist-endquery"><strong>EndQuery</strong></a></td>
 <td><a href="/windows/desktop/api/d3d12/ne-d3d12-d3d12_query_type"><strong>D3D12_QUERY_TYPE</strong></a></td>
 </tr>
 <tr class="odd">
-<td><a href="/windows/desktop/api/d3d12/nf-d3d12-id3d12graphicscommandlist-resourcebarrier"><strong>Resourcebarrier</strong></a></td>
+<td><a href="/windows/desktop/api/d3d12/nf-d3d12-id3d12graphicscommandlist-resourcebarrier"><strong>ResourceBarrier</strong></a></td>
 <td><dl><a href="cd3dx12-resource-barrier.md"><strong>CD3DX12_RESOURCE_BARRIER</strong></a><br />
-[<strong>D3D12_RESOURCE_STATES</strong>] (/Windows/Desktop/API/d3d12/ne-d3d12-d3d12_resource_states)<br />
+[<strong>D3D12_RESOURCE_STATES</strong>] (/windows/desktop/api/d3d12/ne-d3d12-d3d12_resource_states)<br />
 </dl></td>
 </tr>
 <tr class="even">
-<td><a href="/windows/desktop/api/d3d12/nf-d3d12-id3d12graphicscommandlist-resolvequerydata"><strong>Resolvequerydata</strong></a></td>
+<td><a href="/windows/desktop/api/d3d12/nf-d3d12-id3d12graphicscommandlist-resolvequerydata"><strong>ResolveQueryData</strong></a></td>
 <td><a href="/windows/desktop/api/d3d12/ne-d3d12-d3d12_query_type"><strong>D3D12_QUERY_TYPE</strong></a></td>
 </tr>
 <tr class="odd">
-<td><a href="/windows/desktop/api/d3d12/nf-d3d12-id3d12graphicscommandlist-resourcebarrier"><strong>Resourcebarrier</strong></a></td>
+<td><a href="/windows/desktop/api/d3d12/nf-d3d12-id3d12graphicscommandlist-resourcebarrier"><strong>ResourceBarrier</strong></a></td>
 <td><dl><a href="cd3dx12-resource-barrier.md"><strong>CD3DX12_RESOURCE_BARRIER</strong></a><br />
-[<strong>D3D12_RESOURCE_STATES</strong>] (/Windows/Desktop/API/d3d12/ne-d3d12-d3d12_resource_states)<br />
+[<strong>D3D12_RESOURCE_STATES</strong>] (/windows/desktop/api/d3d12/ne-d3d12-d3d12_resource_states)<br />
 </dl></td>
 </tr>
 </tbody>
@@ -333,26 +333,26 @@ Nachdem das Setup abgeschlossen ist, wird die Hauptschleife in der **populatecom
 
 ## <a name="run-the-sample"></a>Ausführen des Beispiels
 
-Nicht okkludiert:
+Nicht occluded:
 
-![zwei Felder nicht verdeckt](images/not-occluded.png)
+![Zwei Felder, die nicht verblendet sind](images/not-occluded.png)
 
-Zähler okkludierte
+Verdeckt:
 
-![ein Feld, das vollständig verdeckt ist](images/occluded.png)
+![Ein Feld vollständig verblendet](images/occluded.png)
 
-Teilweise okkludiert:
+Teilweise verblendet:
 
-![ein Feld ist teilweise verdeckt.](images/partially-occluded.png)
+![ein Feld teilweise verblendet](images/partially-occluded.png)
 
-## <a name="related-topics"></a>Verwandte Themen
+## <a name="related-topics"></a>Zugehörige Themen
 
 <dl> <dt>
 
-[D3D12-Code Exemplarische Vorgehensweisen](d3d12-code-walk-throughs.md)
+[Exemplarische Vorgehensweisen zu D3D12-Code](d3d12-code-walk-throughs.md)
 </dt> <dt>
 
-[Prädikation übersprungen](predication.md)
+[Prädikation](predication.md)
 </dt> <dt>
 
 [Abfragen](queries.md)

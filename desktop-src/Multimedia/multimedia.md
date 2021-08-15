@@ -1,548 +1,548 @@
 ---
 title: Multimedia
-description: Dieses Glossar enthält Definitionen für Begriffe, die in der Windows-Multimedia-Dokumentation verwendet werden.
+description: Dieses Glossar enthält Definitionen für Begriffe, die in der Multimediadokumentation Windows verwendet werden.
 ROBOTS: NOINDEX, NOFOLLOW
 ms.assetid: 0c35d8cd-0226-4161-bbb9-cb754785274c
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 0ed45a6503e1856f41e892eb6bcad03f4263ddf6
-ms.sourcegitcommit: ebd3ce6908ff865f1ef66f2fc96769be0aad82e1
+ms.openlocfilehash: 243b9eb6d84b133a98d65f24e3486b79d78397f75c17f3ed5ceb52a3f2ff59ec
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/19/2020
-ms.locfileid: "104473036"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118373397"
 ---
 # <a name="multimedia"></a>Multimedia
 
-Dieses Glossar enthält Definitionen für Begriffe, die in der Windows-Multimedia-Dokumentation verwendet werden.
+Dieses Glossar enthält Definitionen für Begriffe, die in der Multimediadokumentation Windows verwendet werden.
 
 <dl> <dt>
 
-<span id="_win32_adaptive_differential_pulse_code_modulation_adpcm_gloss"></span><span id="_WIN32_ADAPTIVE_DIFFERENTIAL_PULSE_CODE_MODULATION_ADPCM_GLOSS"></span>**Adaptive Differential Pulse Code-Modulation (ADPCM)**
+<span id="_win32_adaptive_differential_pulse_code_modulation_adpcm_gloss"></span><span id="_WIN32_ADAPTIVE_DIFFERENTIAL_PULSE_CODE_MODULATION_ADPCM_GLOSS"></span>**Adaptive Differential Pulse Code Pulses (ADPCM)**
 </dt> <dd>
 
-Eine Audiokomprimierungs Methode.
+Eine Audiokomprimierungstechnik.
 
 </dd> <dt>
 
 <span id="_win32_adpcm_gloss"></span><span id="_WIN32_ADPCM_GLOSS"></span>**ADPCM**
 </dt> <dd>
 
-Siehe [Adaptive Differential Pulse Code Modulation (ADPCM)](/windows).
+Weitere Informationen finden Sie unter [Adaptive Differential Pulse Code Pulses (ADPCM)](/windows).
 
 </dd> <dt>
 
-<span id="_win32_break_key_gloss"></span><span id="_WIN32_BREAK_KEY_GLOSS"></span>**Schlüssel Abbrechen**
+<span id="_win32_break_key_gloss"></span><span id="_WIN32_BREAK_KEY_GLOSS"></span>**Break key (Schlüssel unterbrechen)**
 </dt> <dd>
 
-Eine Tastenkombination in der Medien Steuerungs Schnittstelle (MCI), mit der ein warte Vorgang unterbrochen wird. Standardmäßig definiert MCI diesen Schlüssel als Strg + Pause. Eine Anwendung kann diesen Schlüssel mithilfe der MCI- \_ Befehls Meldung zum unterbrechen neu definieren.
+In Media Control Interface (MCI) eine Tastatureingabe, die einen Wartevorgang unterbricht. Standardmäßig definiert MCI diese Taste als STRG+BREAK. Eine Anwendung kann diesen Schlüssel mithilfe der MCI \_ BREAK-Befehlsmeldung neu definieren.
 
 </dd> <dt>
 
 <span id="_win32_cd_rom_extended_architecture_cd_xa_gloss"></span><span id="_WIN32_CD_ROM_EXTENDED_ARCHITECTURE_CD_XA_GLOSS"></span>**Erweiterte CD-ROM-Architektur (CD-XA)**
 </dt> <dd>
 
-Eine Erweiterung des CD-ROM-Standards, die die Speicherung von komprimierten Audiodaten zusammen mit anderen Daten auf einer kompakten CD ermöglicht. Dieser Standard definiert auch die Art und Weise, wie Daten von einem Datenträger gelesen werden. Audiosignale werden mit Text-und Grafikdaten auf einer einzelnen Spur kombiniert, damit Sie praktisch gleichzeitig gelesen werden können.
+Eine Erweiterung des CD-ROM-Standards, der die Speicherung komprimierter Audiodaten zusammen mit anderen Daten auf einer Compact Disc ermöglicht. Dieser Standard definiert auch, wie Daten von einem Datenträger gelesen werden. Audiosignale werden mit Text- und Grafikdaten auf einer einzelnen Spur kombiniert, sodass sie nahezu gleichzeitig gelesen werden können.
 
 </dd> <dt>
 
 <span id="_win32_channel_gloss"></span><span id="_WIN32_CHANNEL_GLOSS"></span>**Channel**
 </dt> <dd>
 
-Eine Methode, die von der Digital Instrumentation Digital Interface (MIDI) bereitgestellt wird, um Nachrichten an ein einzelnes Gerät innerhalb eines MIDI-Setups zu senden. Es sind 16 MIDI-Kanalnummern vorhanden. Geräte in einem MIDI-Setup können so umgeleitet werden, dass Sie nur auf Nachrichten reagieren, die mit einer für das Gerät spezifischen Kanalnummer gekennzeichnet sind.
+Eine methode, die von Instruments Instrument Digital Interface (CSV) zum Senden von Nachrichten an ein einzelnes Gerät innerhalb eines SETUP-Setups bereitgestellt wird. Es gibt 16 CHANNELS-Nummern. Geräte in einem SETUP können angewiesen werden, nur auf Nachrichten zu reagieren, die mit einer spezifischen Kanalnummer für das Gerät gekennzeichnet sind.
 
 </dd> <dt>
 
-<span id="_win32_channel_map_gloss"></span><span id="_WIN32_CHANNEL_MAP_GLOSS"></span>**Kanal** Zuordnung
+<span id="_win32_channel_map_gloss"></span><span id="_WIN32_CHANNEL_MAP_GLOSS"></span>**Kanalzuordnung**
 </dt> <dd>
 
-Eine vom MIDI-Mapper bereitgestellte Kanal Zuordnung, die Digital Instrumentation (Digital Interface Digital Interface, MIDI)-Nachrichten von einem Kanal an einen anderen umleiten kann. Siehe auch " [MIDI-Mapper](/windows)", " [Digital Instrumentation Digital Interface" (MIDI)](/windows).
+Eine Kanalzuordnung, die von DER MAPPER-Schnittstelle bereitgestellt wird, mit der MELDUNGEN der digitalen Schnittstelle (INSTRUMENTS) von einem Kanal zu einem anderen umgeleitet werden können. Weitere Informationen finden Sie auch unter [MAPPer](/windows), [Instruments Instrument Digital Interface (INSTRUMENTS)](/windows).
 
 </dd> <dt>
 
-<span id="_win32_chunk_gloss"></span><span id="_WIN32_CHUNK_GLOSS"></span> Block
+<span id="_win32_chunk_gloss"></span><span id="_WIN32_CHUNK_GLOSS"></span>**Block**
 </dt> <dd>
 
-Der grundlegende Baustein einer Datei im Ressourcenaustausch Datei Format (.), bestehend aus einem Bezeichner (als Block Bezeichner bezeichnet), einer Variablen Blockgröße und einem Blockdaten Bereich der Variablen Größe.
+Der grundlegende Baustein einer DATEI im Resource Interchange File Format (CSV), die aus einem Bezeichner (als Blockbezeichner bezeichnet), einer Blockgrößenvariablen und einem Blockdatenbereich variabler Größe besteht.
 
 </dd> <dt>
 
-<span id="_win32_command_message_gloss"></span><span id="_WIN32_COMMAND_MESSAGE_GLOSS"></span>**Befehls Meldung**
+<span id="_win32_command_message_gloss"></span><span id="_WIN32_COMMAND_MESSAGE_GLOSS"></span>**Befehlsmeldung**
 </dt> <dd>
 
-In MCI (Media Control Interface) eine symbolische Konstante, die einen eindeutigen Befehl für ein MCI-Gerät darstellt. Befehlsnachrichten verfügen über zugehörige Datenstrukturen, die Informationen bereitstellen, die ein Gerät zum Ausführen einer Anforderung benötigt.
+In der Mediensteuerungsschnittstelle (Media Control Interface, MCI) eine symbolische Konstante, die einen eindeutigen Befehl für ein MCI-Gerät darstellt. Befehlsmeldungen verfügen über zugeordnete Datenstrukturen, die Informationen bereitstellen, die ein Gerät zum Ausführen einer Anforderung benötigt.
 
 </dd> <dt>
 
-<span id="_win32_command_string_gloss"></span><span id="_WIN32_COMMAND_STRING_GLOSS"></span>**Befehls Zeichenfolge**
+<span id="_win32_command_string_gloss"></span><span id="_WIN32_COMMAND_STRING_GLOSS"></span>**Befehlszeichenfolge**
 </dt> <dd>
 
-In MCI (Media Control Interface) eine auf NULL endenden Zeichenfolge, die einen Befehl für ein MCI-Gerät darstellt. Die Text Zeichenfolge enthält alle Informationen, die ein MCI-Gerät benötigt, um eine Anforderung auszuführen. MCI analysiert die Text Zeichenfolge und übersetzt Sie in eine entsprechende Befehlsnachricht und Datenstruktur, die Sie dann an einen MCI-Gerätetreiber sendet.
+In der Media Control Interface (MCI) eine auf NULL endende Zeichenfolge, die einen Befehl für ein MCI-Gerät darstellt. Die Textzeichenfolge enthält alle Informationen, die ein MCI-Gerät zum Ausführen einer Anforderung benötigt. MCI analysiert die Textzeichenfolge und übersetzt sie in eine entsprechende Befehlsmeldung und Datenstruktur, die sie dann an einen MCI-Gerätetreiber sendet.
 
 </dd> <dt>
 
-<span id="_win32_compact_disc_digital_audio_cd_da_gloss"></span><span id="_WIN32_COMPACT_DISC_DIGITAL_AUDIO_CD_DA_GLOSS"></span>**Compact Disc – digitales Audiogerät (CD-da)**
+<span id="_win32_compact_disc_digital_audio_cd_da_gloss"></span><span id="_WIN32_COMPACT_DISC_DIGITAL_AUDIO_CD_DA_GLOSS"></span>**Compact Disc – Digitale Audiodaten (CD-DA)**
 </dt> <dd>
 
-Ein visuelles Datenspeicherformat, das für die Speicherung 73 von hochwertigen Digital Audiodaten mit hoher Qualität auf einer Compact-CD bereitstellt. Wird auch als "Red Book-Audiodatei" bezeichnet.
+Ein optisches Datenspeicherformat, das die Speicherung von qualitativ hochwertigen digitalen Audiodaten auf einer Compact Disc bis zu 73 Minuten ermöglicht. Wird auch als Red Book-Audio bezeichnet.
 
 </dd> <dt>
 
-<span id="_win32_compact_disc_read_only_memory_cd_rom_gloss"></span><span id="_WIN32_COMPACT_DISC_READ_ONLY_MEMORY_CD_ROM_GLOSS"></span>**Compact Disc – Schreib geschützter Speicher (CD-ROM)**
+<span id="_win32_compact_disc_read_only_memory_cd_rom_gloss"></span><span id="_WIN32_COMPACT_DISC_READ_ONLY_MEMORY_CD_ROM_GLOSS"></span>**Compact Disc – schreibgeschützter Arbeitsspeicher (CD-ROM)**
 </dt> <dd>
 
-Eine optische Daten Speicherungs Technologie, mit der große Mengen von Daten auf einer kompakten CD gespeichert werden können.
+Eine optische Datenspeichertechnologie, mit der große Datenmengen auf einer Compact Disc gespeichert werden können.
 
 </dd> <dt>
 
-<span id="_win32_compound_device_gloss"></span><span id="_WIN32_COMPOUND_DEVICE_GLOSS"></span>**Verbund Gerät**
+<span id="_win32_compound_device_gloss"></span><span id="_WIN32_COMPOUND_DEVICE_GLOSS"></span>**Verbundgerät**
 </dt> <dd>
 
-Ein Medien Steuerungs Schnittstellen Gerät (MCI), das ein Geräte Element erfordert, normalerweise eine Datendatei. Ein Beispiel für ein Verbund Gerät ist der MCI Wellenform-Audiotreiber. Siehe auch [Device-Element](/windows).
+Ein MCI-Gerät (Media Control Interface), das ein Geräteelement erfordert, in der Regel eine Datendatei. Ein Beispiel für ein zusammengesetztes Gerät ist der MCI Waveform-Audiotreiber. Siehe auch [Device-Element](/windows).
 
 </dd> <dt>
 
-<span id="_win32_control_change_gloss"></span><span id="_WIN32_CONTROL_CHANGE_GLOSS"></span>**Steuerelement Änderung**
+<span id="_win32_control_change_gloss"></span><span id="_WIN32_CONTROL_CHANGE_GLOSS"></span>**Steuern der Änderung**
 </dt> <dd>
 
-Weitere Informationen finden Sie unter [MIDI-Änderungs Nachricht](/windows).
+Weitere Informationen finden Sie in der [MELDUNG ZUR STEUERELEMENTÄNDERUNG.](/windows)
 
 </dd> <dt>
 
-<span id="_win32_device_element_gloss"></span><span id="_WIN32_DEVICE_ELEMENT_GLOSS"></span>**Device-Element**
+<span id="_win32_device_element_gloss"></span><span id="_WIN32_DEVICE_ELEMENT_GLOSS"></span>**device-Element**
 </dt> <dd>
 
-Daten, die für den Betrieb von zusammengesetzten Medien Steuerungs Schnittstellen-Geräten (MCI) erforderlich sind. Das Device-Element ist im Allgemeinen eine Eingabe-oder Ausgabe Datendatei.
+Daten, die für den Betrieb zusammengesetzter MCI-Geräte (Media Control Interface) erforderlich sind. Das Geräteelement ist im Allgemeinen eine Eingabe- oder Ausgabedatendatei.
 
 </dd> <dt>
 
-<span id="_win32_division_type_gloss"></span><span id="_WIN32_DIVISION_TYPE_GLOSS"></span>**Divisions Typ**
+<span id="_win32_division_type_gloss"></span><span id="_WIN32_DIVISION_TYPE_GLOSS"></span>**Divisionstyp**
 </dt> <dd>
 
-Das Verfahren, das verwendet wird, um die Zeit zwischen der Verwendung von Digital Instruments Digital Interface (MIDI)-Ereignissen in einem MIDI-Sequencer darzustellen
+Die Technik, die verwendet wird, um die Zeit zwischen Ereignissen der digitalen Schnittstelle (INSTRUMENTS) von Music Instruments in einem CAB-Sequencer darzustellen.
 
 </dd> <dt>
 
-<span id="_win32_file_element_gloss"></span><span id="_WIN32_FILE_ELEMENT_GLOSS"></span>**File-Element**
+<span id="_win32_file_element_gloss"></span><span id="_WIN32_FILE_ELEMENT_GLOSS"></span>**file-Element**
 </dt> <dd>
 
-Eine komplette Datei, die in einer "Riff"-Verbund Datei (Resource Interchange File Format) enthalten ist.
+Eine vollständige Datei, die in einer Verbunddatei im Resource Interchange File Format (CSV) enthalten ist.
 
 </dd> <dt>
 
 <span id="_win32_fm_synthesizer_gloss"></span><span id="_WIN32_FM_SYNTHESIZER_GLOSS"></span>**FM-Synthesizer**
 </dt> <dd>
 
-Siehe [Frequency Modulation (FM)-Synthesizer](/windows).
+Weitere Informationen finden Sie unter [Frequency Synthesizer (FM)](/windows).
 
 </dd> <dt>
 
-<span id="_win32_fourcc_four_character_code_gloss"></span><span id="_WIN32_FOURCC_FOUR_CHARACTER_CODE_GLOSS"></span>**FourCC (aus vier Zeichen bestehende Code)**
+<span id="_win32_fourcc_four_character_code_gloss"></span><span id="_WIN32_FOURCC_FOUR_CHARACTER_CODE_GLOSS"></span>**FOURCC (Vierstelliger Code)**
 </dt> <dd>
 
-Ein Code, der zum Identifizieren von Riff-Blöcken (Resource Interchange File Format) verwendet wird. Bei einem FourCC handelt es sich um eine 32-Bit-Menge, die als Sequenz von einem bis vier alphanumerischen ASCII-Zeichen dargestellt wird, die auf der rechten Seite mit leeren Zeichen aufgefüllt wird.
+Ein Code, der zum Identifizieren von Blöcken im Resource Interchange File Format (CSV) verwendet wird. Eine FOURCC ist eine 32-Bit-Menge, die als Sequenz von ein bis vier alphanumerischen ASCII-Zeichen dargestellt wird, die auf der rechten Seite mit leeren Zeichen aufgefüllt ist.
 
 </dd> <dt>
 
-<span id="_win32_frequency_modulation_fm_synthesizer_gloss"></span><span id="_WIN32_FREQUENCY_MODULATION_FM_SYNTHESIZER_GLOSS"></span>**Frequency Modulation (FM)-Synthesizer**
+<span id="_win32_frequency_modulation_fm_synthesizer_gloss"></span><span id="_WIN32_FREQUENCY_MODULATION_FM_SYNTHESIZER_GLOSS"></span>**Frequency-Synthesizer (FM)**
 </dt> <dd>
 
-Ein Synthesizer, der Sounds erstellt, indem die Ausgabe digitaler Oszillatoren mithilfe einer Frequenz-Modulationstechnik kombiniert wird.
+Ein Synthesizer, der Sounds erstellt, indem die Ausgabe digitaler Oszillatoren mithilfe einer Frequenzverfahren kombiniert wird.
 
 </dd> <dt>
 
-<span id="_win32_general_midi_gloss"></span><span id="_WIN32_GENERAL_MIDI_GLOSS"></span>**Allgemein (allgemein** )
+<span id="_win32_general_midi_gloss"></span><span id="_WIN32_GENERAL_MIDI_GLOSS"></span>**Allgemeines GILT**
 </dt> <dd>
 
-Eine von der Zuordnung der MIDI-Hersteller (MMA) erstellte Synthesizer-Spezifikation, die eine gemeinsame Konfiguration und einen Satz von Funktionen für Digital Interface (MIDI)-Synthesizer (Consumer Digital Instrumentation) definiert.
+Eine synthesizer-Spezifikation, die von der OPC Manufacturers Association (MMA) erstellt wurde, die eine gemeinsame Konfiguration und eine Reihe von Funktionen für CONSUMER-SYNTHESIZER (Instrument Digital Interface) definiert.
 
 </dd> <dt>
 
 <span id="_win32_hms_time_format_gloss"></span><span id="_WIN32_HMS_TIME_FORMAT_GLOSS"></span>**HMS-Zeitformat**
 </dt> <dd>
 
-Ein Zeitformat, das von der Media Control Interface (MCI) zum Ausdrücken von Zeit in Stunden, Minuten und Sekunden verwendet wird. Das Zeitformat "HMS" wird hauptsächlich von Videodisk-Geräten verwendet.
+Ein Zeitformat, das von der Media Control Interface (MCI) verwendet wird, um die Zeit in Stunden, Minuten und Sekunden auszudrücken. Das HMS-Zeitformat wird hauptsächlich von videodisc-Geräten verwendet.
 
 </dd> <dt>
 
 <span id="_win32_ima_gloss"></span><span id="_WIN32_IMA_GLOSS"></span>**IMA**
 </dt> <dd>
 
-Weitere Informationen finden Sie unter [interaktive Multimedia Association (IMA)](/windows) und [internationale MIDI Association (IMA)](/windows).
+Weitere Informationen finden Sie [unter Interactive Multimedia Association (IMA)](/windows) und International ASSOCIATION Association [(IMA).](/windows)
 
 </dd> <dt>
 
-<span id="_win32_interactive_multimedia_association_ima_gloss"></span><span id="_WIN32_INTERACTIVE_MULTIMEDIA_ASSOCIATION_IMA_GLOSS"></span>**Interaktive Multimedia Association (IMA)**
+<span id="_win32_interactive_multimedia_association_ima_gloss"></span><span id="_WIN32_INTERACTIVE_MULTIMEDIA_ASSOCIATION_IMA_GLOSS"></span>**Interactive Multimedia Association (IMA)**
 </dt> <dd>
 
-Ein professioneller Handelsverband von Unternehmen, Einrichtungen und Einzelpersonen, die an der Erstellung und Verwendung interaktiver multimediatologien beteiligt sind.
+Eine professionelle Fachorganisation von Unternehmen, Einrichtungen und Einzelpersonen, die an der Produktion und Verwendung interaktiver Multimediatechnologien beteiligt sind.
 
 </dd> <dt>
 
-<span id="_win32_international_midi_association_ima_gloss"></span><span id="_WIN32_INTERNATIONAL_MIDI_ASSOCIATION_IMA_GLOSS"></span>**Internationale MIDI-Association (IMA)**
+<span id="_win32_international_midi_association_ima_gloss"></span><span id="_WIN32_INTERNATIONAL_MIDI_ASSOCIATION_IMA_GLOSS"></span>**International ASSOCIATION (IMA)**
 </dt> <dd>
 
-Die gemeinnützige Organisation, in der Informationen über die Digital Instrumentation Digital Interface (MIDI)-Spezifikation zirkuliert werden.
+Die gemeinnützige Organisation, die Informationen über die SPEZIFIKATION DER DIGITALEN SCHNITTSTELLE (Instruments Instrument Digital Interface, INSTRUMENT) ermittelt.
 
 </dd> <dt>
 
-<span id="_win32_list_chunk_gloss"></span><span id="_WIN32_LIST_CHUNK_GLOSS"></span>Block **auflisten**
+<span id="_win32_list_chunk_gloss"></span><span id="_WIN32_LIST_CHUNK_GLOSS"></span>**LIST-Block**
 </dt> <dd>
 
-Ein Riff-Block (Resource Interchange File Format) mit einem Block Bezeichner der Liste. Listen Blöcke enthalten eine Reihe von Teilsegmenten.
+Ein SEGMENT IM (Resource Interchange File Format) mit dem Blockbezeichner LIST. LIST-Blöcke enthalten eine Reihe von Teilblöcken.
 
 </dd> <dt>
 
 <span id="_win32_list_type_gloss"></span><span id="_WIN32_LIST_TYPE_GLOSS"></span>**Listentyp**
 </dt> <dd>
 
-Ein vierstelliger Code (FourCC), der den Datentyp identifiziert, der in einem Riff-Block (Resource Interchange File Format) mit einem Block Bezeichner der Liste enthalten ist. Beispielsweise enthält ein Listen Segment mit dem Listentyp Info eine Liste mit Informationen zu einer Datei, z. b. das Erstellungsdatum und den Ersteller.
+Ein vierstelliger Code (FOURCC), der den Datentyp identifiziert, der in einem SEGMENT IM (Resource Interchange File Format) mit dem Blockbezeichner LIST enthalten ist. Beispielsweise enthält ein LIST-Block mit dem Listentyp INFO eine Liste mit Informationen zu einer Datei, z. B. das Erstellungsdatum und den Autor.
 
 </dd> <dt>
 
 <span id="_win32_mci_gloss"></span><span id="_WIN32_MCI_GLOSS"></span>**MCI**
 </dt> <dd>
 
-Siehe [Medien Steuerungs Schnittstelle](/windows).
+Weitere Informationen finden Sie [unter Mediensteuerungsschnittstelle.](/windows)
 
 </dd> <dt>
 
-<span id="_win32_media_control_interface_mci_gloss"></span><span id="_WIN32_MEDIA_CONTROL_INTERFACE_MCI_GLOSS"></span>**Medien Steuerungs Schnittstelle (MCI)**
+<span id="_win32_media_control_interface_mci_gloss"></span><span id="_WIN32_MEDIA_CONTROL_INTERFACE_MCI_GLOSS"></span>**Media Control Interface (MCI)**
 </dt> <dd>
 
-Allgemeine Steuerungssoftware, die eine geräteunabhängige Schnittstelle für Multimedia-Geräte und Mediendateien bereitstellt. MCI enthält eine befehlsnachrichten Schnittstelle und eine Befehls Zeichenfolgen-Schnittstelle.
+Übergeordnete Steuerungssoftware, die eine geräteunabhängige Schnittstelle für Multimediageräte und Mediendateien bereitstellt. MCI enthält eine Befehlsmeldungsschnittstelle und eine Befehlszeichenfolgen-Schnittstelle.
 
 </dd> <dt>
 
-<span id="_win32_midi_gloss"></span><span id="_WIN32_MIDI_GLOSS"></span>**MIDI**
+<span id="_win32_midi_gloss"></span><span id="_WIN32_MIDI_GLOSS"></span>**PARTS**
 </dt> <dd>
 
-Weitere Informationen finden Sie unter [Digital Instrumentation Digital Interface](/windows).
+Weitere Informationen finden Sie unter [Digital Interface für Instrument](/windows).
 
 </dd> <dt>
 
-<span id="_win32_midi_control_change_message_gloss"></span><span id="_WIN32_MIDI_CONTROL_CHANGE_MESSAGE_GLOSS"></span>**MIDI-Änderungs Meldung**
+<span id="_win32_midi_control_change_message_gloss"></span><span id="_WIN32_MIDI_CONTROL_CHANGE_MESSAGE_GLOSS"></span>**MELDUNG zum Ändern des STEUERELEMENTS**
 </dt> <dd>
 
-Eine an einen Synthesizer gesendete Digital Instrumentation Digital Interface (MIDI)-Meldung, mit der verschiedene Einstellungen für die Synthesizer-Steuerung geändert werden. Ein Beispiel für eine Steuerelement Änderungs Meldung ist die Volume Controller-Nachricht, die das Volume eines bestimmten MIDI-Kanals ändert.
+Eine MELDUNG vom 16. Bis zum 1. Bis zum 3. Bis 16. Jahr wurde eine NACHRICHT an einen Synthesizer gesendet, um unterschiedliche Einstellungen des Synthesizersteuerelements zu ändern. Ein Beispiel für eine Steueränderungsmeldung ist die Volumecontrollernachricht, die das Volume eines bestimmten SENDEKANALs ändert.
 
 </dd> <dt>
 
-<span id="_win32_midi_manufacturers_association_mma_gloss"></span><span id="_WIN32_MIDI_MANUFACTURERS_ASSOCIATION_MMA_GLOSS"></span>Zuordnung von **MIDI-Herstellern (MMA)**
+<span id="_win32_midi_manufacturers_association_mma_gloss"></span><span id="_WIN32_MIDI_MANUFACTURERS_ASSOCIATION_MMA_GLOSS"></span>**ASSOCIATION Manufacturers Association (MMA)**
 </dt> <dd>
 
-Eine gemeinsame Organisation, bestehend aus Digital Instrumentation Digital Interface (MIDI)-instrumentiererherstellern und-Softwareunternehmen. Der MMA arbeitet mit dem MIDI-Standard-Ausschuss zusammen, um die MIDI-Spezifikation beizubehalten.
+Eine gemeinsame Organisation, die sich aus Instrumentherstellern der Digitalen Schnittstelle (INSTRUMENT Digital Interface, INSTRUMENTS) und DEN SOFTWAREUNTERNEHMEN VON OPCN zusammensetzt. Das MMA arbeitet mit dem STANDARD-Ausschuss für DIE VERWALTUNG zusammen, um die NORM-Spezifikation zu verwalten.
 
 </dd> <dt>
 
-<span id="_win32_midi_mapper_gloss"></span><span id="_WIN32_MIDI_MAPPER_GLOSS"></span>**MIDI-Mapper**
+<span id="_win32_midi_mapper_gloss"></span><span id="_WIN32_MIDI_MAPPER_GLOSS"></span>**MAPPER**
 </dt> <dd>
 
-Windows-Systemsoftware, die Digital Instrumentation Digital Interface (MIDI)-Ausgabe Nachrichten modifiziert und Sie mithilfe von Werten, die in einer MIDI-Setup Zuordnung gespeichert sind, an ein-MIDI-Ausgabegerät umleitet. Der MIDI-Mapper kann sowohl den Zielchannel als auch das Ausgabegerät für eine Nachricht ändern und Programm Änderungs Meldungen, volumewerte und Schlüsselwerte ändern.
+Windows-Systemsoftware, die DIE OUTPUT-Ausgabenachrichten (Instruments Instrument Digital Interface) ändert und sie mithilfe von Werten, die in einer SETUP-Zuordnung für DAS SETUP gespeichert sind, an ein OUTPUT-Ausgabegerät umleitet. Der MAPPER kann den Zielkanal und das Ausgabegerät für eine Nachricht sowie Programmänderungsnachrichten, Volumewerte und Schlüsselwerte ändern.
 
 </dd> <dt>
 
-<span id="_win32_midi_mapping_gloss"></span><span id="_WIN32_MIDI_MAPPING_GLOSS"></span>**Zuordnung von MIDI**
+<span id="_win32_midi_mapping_gloss"></span><span id="_WIN32_MIDI_MAPPING_GLOSS"></span>**MAPPING (ZUORDNUNG)**
 </dt> <dd>
 
-Der Prozess der Übersetzung und Umleitung von Digital Instrumentation (Digital Interface Digital Interface)-Nachrichten gemäß den Daten, die in einem Setup der MIDI-Zuordnung definiert sind.
+Der Prozess des Übersetzens und Umleitens von MELDUNGEN der digitalen Schnittstelle (INSTRUMENTS) gemäß den daten, die in einer MAP-Einrichtung definiert sind.
 
 </dd> <dt>
 
-<span id="_win32_midi_program_change_message_gloss"></span><span id="_WIN32_MIDI_PROGRAM_CHANGE_MESSAGE_GLOSS"></span>**MIDI-Programm-Änderungs Meldung**
+<span id="_win32_midi_program_change_message_gloss"></span><span id="_WIN32_MIDI_PROGRAM_CHANGE_MESSAGE_GLOSS"></span>**MELDUNG** zum Ändern des PROGRAMMS
 </dt> <dd>
 
-Eine an einen Synthesizer gesendete (Digital Instrumentation Digital Interface) Nachricht, die an einen Synthesizer gesendet wird, um den Patch in einem bestimmten MIDI-Kanal zu ändern
+Eine MELDUNG vom 16. Bis zum 1. Bis zum 1. Bis zum 1. Bis zum 3. Bis 1. Bis zum 16. Mal wird eine NACHRICHT an einen Synthesizer gesendet, um den Patch auf einem bestimmten SENDEKANAL zu ändern.
 
 </dd> <dt>
 
-<span id="_win32_midi_sequence_gloss"></span><span id="_WIN32_MIDI_SEQUENCE_GLOSS"></span>**MIDI-Sequenz**
+<span id="_win32_midi_sequence_gloss"></span><span id="_WIN32_MIDI_SEQUENCE_GLOSS"></span>**SEQUENCE-Sequenz**
 </dt> <dd>
 
-Digital Instrumentation Digital Interface (MIDI)-Daten, die von einem MIDI-Sequencer wiedergegeben werden können.
+Instruments Instrument Digital Interface (INSTRUMENT Digital Interface)-Daten, die von einem CAB-Sequencer wiedergegeben werden können.
 
 </dd> <dt>
 
-<span id="_win32_midi_sequencer_gloss"></span><span id="_WIN32_MIDI_SEQUENCER_GLOSS"></span>**MIDI-Sequencer**
+<span id="_win32_midi_sequencer_gloss"></span><span id="_WIN32_MIDI_SEQUENCER_GLOSS"></span>**SEQUENZIERER FÜR DIE SEQUENZ**
 </dt> <dd>
 
-Ein Programm, das als Digital Instrumentation Digital Interface (MIDI) gespeicherte Dateien erstellt oder wieder gibt. Wenn ein Sequencer die Datei "MIDI"-Dateien wieder gibt, sendet er die Daten aus der Datei an einen MIDI-Synthesizer, der die Sounds erzeugt. Windows bietet einen mit der Media Control Interface (MCI) verfügbaren MIDI-Sequencer, der die Verwendung von MIDI-Dateien ermöglicht. Siehe auch [Media Control Interface (MCI)](/windows).
+Ein Programm, das Musiktitel erstellt oder abspielt, die als CSV-Dateien (Instrument Digital Interface) gespeichert sind. Wenn ein Sequencer CSV-Dateien wiedergibt, sendet er DIE DATEN aus der Datei an einen SYNTHESIZE-Synthesizer, der die Sounds erzeugt. Windows stellt einen OPC Sequencer bereit, auf den über die Mediensteuerungsschnittstelle (Media Control Interface, MCI) zugegriffen werden kann, der CSV-Dateien wiedergibt. Siehe auch [Media Control Interface (MCI)](/windows).
 
 </dd> <dt>
 
-<span id="_win32_midi_setup_map_gloss"></span><span id="_WIN32_MIDI_SETUP_MAP_GLOSS"></span>Zuordnung zu einem **MIDI**
+<span id="_win32_midi_setup_map_gloss"></span><span id="_WIN32_MIDI_SETUP_MAP_GLOSS"></span>**SETUP MAP (SETUP-Zuordnung)**
 </dt> <dd>
 
-Ein kompletter Satz von Daten für die Verwendung der Digital Instrumentation Digital Interface (MIDI)-Mapper, die beim Umleiten von MIDI-Nachrichten verwendet werden soll. Zu einem bestimmten Zeitpunkt kann nur eine Setup Zuordnung wirksam werden, aber der Benutzer kann über mehrere Setup Zuordnungen verfügen, die mithilfe der System Steuerungs Option "MIDI Mapper" ausgewählt werden können.
+Ein vollständiger Satz von Daten für die MAPPER-Mapper-Funktion für Die digitale Schnittstelle (INSTRUMENT Digital Interface), die beim Umleiten von MELDUNGEN verwendet werden soll. Es kann nur eine Setupzuordnung zu einem bestimmten Zeitpunkt in Kraft sein, aber dem Benutzer können mehrere Setupzuordnungen zur Verfügung stehen, die mithilfe der OPTION MAPPer Systemsteuerung können.
 
 </dd> <dt>
 
 <span id="_win32_mma_gloss"></span><span id="_WIN32_MMA_GLOSS"></span>**MMA**
 </dt> <dd>
 
-Siehe Zuordnung von [MIDI-Herstellern](/windows).
+Weitere Informationen [finden Sie unter ASSOCIATION DER HERSTELLER.](/windows)
 
 </dd> <dt>
 
 <span id="_win32_msf_time_format_gloss"></span><span id="_WIN32_MSF_TIME_FORMAT_GLOSS"></span>**MSF-Zeitformat**
 </dt> <dd>
 
-Ein Zeitformat, das von der MCI (Media Control Interface) verwendet wird, um die Zeit in Minuten, Sekunden und Frames auszudrücken. Die Anzahl der Frames in einer Sekunde hängt vom Typ des verwendeten Geräts ab. Compact Disk-Audiogeräte verwenden 75 Frames pro Sekunde. Das MSF-Zeitformat wird hauptsächlich von kompakten CD-Audiogeräten verwendet.
+Ein Zeitformat, das von der Media Control Interface (MCI) verwendet wird, um die Zeit in Minuten, Sekunden und Frames auszudrücken. Die Anzahl der Frames in einer Sekunde hängt vom Verwendeten Gerätetyp ab. Compact Disc-Audiogeräte verwenden 75 Frames pro Sekunde. Das MSF-Zeitformat wird in erster Linie von Compact Disc-Audiogeräten verwendet.
 
 </dd> <dt>
 
-<span id="_win32_musical_instrument_digital_interface_midi_gloss"></span><span id="_WIN32_MUSICAL_INSTRUMENT_DIGITAL_INTERFACE_MIDI_GLOSS"></span>**Digital Instrumentation Digital Interface (MIDI)**
+<span id="_win32_musical_instrument_digital_interface_midi_gloss"></span><span id="_WIN32_MUSICAL_INSTRUMENT_DIGITAL_INTERFACE_MIDI_GLOSS"></span>**Instrument Digital Interface (KEYBOARD)**
 </dt> <dd>
 
 Ein Standardprotokoll für die Kommunikation zwischen Musikinstrumenten und Computern.
 
 </dd> <dt>
 
-<span id="_win32_parts_per_quarter_note_ppqn_gloss"></span><span id="_WIN32_PARTS_PER_QUARTER_NOTE_PPQN_GLOSS"></span>**Hinweis "Teile pro Quartal" (ppqn)**
+<span id="_win32_parts_per_quarter_note_ppqn_gloss"></span><span id="_WIN32_PARTS_PER_QUARTER_NOTE_PPQN_GLOSS"></span>**Parts per quarter note (PPQN) (Teile pro Quartalshinweis (PPQN))**
 </dt> <dd>
 
-Ein für Digital Instrumentation Digital Interface (MIDI)-Sequenzen verwendetes Zeitformat. Ppqn ist das gängigste Zeitformat, das mit den standardmäßigen MIDI-Dateien verwendet wird.
+Ein Zeitformat, das für Sequenzen des Instrumentierens der digitalen Schnittstelle verwendet wird. PPQN ist das gängigste Zeitformat, das mit STANDARDMÄßIGEN DATEIEN verwendet wird.
 
 </dd> <dt>
 
-<span id="_win32_patch_gloss"></span><span id="_WIN32_PATCH_GLOSS"></span>**Patch**
+<span id="_win32_patch_gloss"></span><span id="_WIN32_PATCH_GLOSS"></span>**Patchen**
 </dt> <dd>
 
-Eine bestimmte Einrichtung eines "Digital Instrumentation Digital Interface"-Synthesizers (MIDI), der zu einem bestimmten Sound führt, normalerweise ein Sound, der ein bestimmtes musikalisches Instrument simuliert. Patches werden auch als Programme bezeichnet. Eine Meldung zum Ändern des Programmwechsels ändert die patcheinstellung in einem Synthesizer. Patch bezieht sich auch auf die Verbindung oder die Verbindungen zwischen den MIDI-Geräten. Siehe auch [Digital Instrumentation Digital Interface (MIDI)](/windows).
+Eine bestimmte Einrichtung eines Instrument Digital Interface-Synthesizers (INSTRUMENT Digital Interface), der zu einem bestimmten Sound führt, in der Regel zu einem Sound, der ein bestimmtes Instrument simuliert. Patches werden auch als Programme bezeichnet. Eine PROGRAMMÄNDERUNGsmeldung ändert die Patcheinstellung in einem Synthesizer. Patch bezieht sich auch auf die Verbindung oder Die Verbindungen zwischen DEN GERÄTEN. Weitere Informationen [finden Sie unter Instrument Digital Interface (KEYBOARD).](/windows)
 
 </dd> <dt>
 
-<span id="_win32_patch_caching_gloss"></span><span id="_WIN32_PATCH_CACHING_GLOSS"></span>**patchcaching**
+<span id="_win32_patch_caching_gloss"></span><span id="_WIN32_PATCH_CACHING_GLOSS"></span>**Patchzwischenspeicherung**
 </dt> <dd>
 
-Eine Technik, die einigen internen Digital Interface (MIDI)-Synthesizer-Gerätetreibern ermöglicht, ihre Patchdaten vorab zu laden, wodurch die Verzögerung zwischen dem Zeitpunkt, zu dem der Synthesizer eine Programm Änderungs Nachricht empfängt, und dem Zeitpunkt, zu dem ein Hinweis mit dem neuen Patch wiedergegeben wird, reduziert wird. Die patchzwischen Speicherung stellt außerdem sicher, dass erforderliche Patches verfügbar sind (der Synthesizer lädt möglicherweise nur eine Teilmenge der Patches). Siehe auch [Digital Instrumentation Digital Interface (MIDI)](/windows), [Patch](/windows).
+Eine Technik, die es einigen internen SYNTHESIZER-Synthesizertreibern (Instrument Digital Interface) ermöglicht, ihre Patchdaten vorab zu laden. Dadurch wird die Verzögerung zwischen dem Zeitpunkt, zu dem der Synthesizer eine PROGRAMMÄNDERUNGsnachricht empfängt, und dem Moment, in dem er mit dem neuen Patch eine Notiz abspielt, reduziert. Patchzwischenspeicherung stellt auch sicher, dass erforderliche Patches verfügbar sind (der Synthesizer kann möglicherweise nur eine Teilmenge seiner Patches laden). Weitere Informationen finden [Sie unter Instrument Digital Interface (KEYBOARD)](/windows), [patchen Sie](/windows).
 
 </dd> <dt>
 
-<span id="_win32_pitch_scale_factor_gloss"></span><span id="_WIN32_PITCH_SCALE_FACTOR_GLOSS"></span>**Skalierungsfaktor**
+<span id="_win32_pitch_scale_factor_gloss"></span><span id="_WIN32_PITCH_SCALE_FACTOR_GLOSS"></span>**Tonhöhenfaktor**
 </dt> <dd>
 
-In Wellenform-Audiodaten der Betrag, um den ein Wellenform-Audiotreiber die Tonhöhe skaliert. Ein Skalierungsfaktor von zwei ergibt eine 1-Oktave-Zunahme der Tonhöhe. Die Skalierung von Skalierungen erfordert spezielle Hardware. Die Wiedergabe Rate und die Stichprobenrate werden nicht geändert.
+In Waveform-Audio die Menge, um die ein Waveform-Audiotreiber die Tonhöhe skaliert. Ein Skalierungsfaktor von zwei führt zu einer Erhöhung der Tonhöhe um ein Oktaven. Die Tonhöhenskalierung erfordert spezielle Hardware. Die Wiedergaberate und die Abtastrate werden nicht geändert.
 
 </dd> <dt>
 
-<span id="_win32_playback_rate_scale_factor_gloss"></span><span id="_WIN32_PLAYBACK_RATE_SCALE_FACTOR_GLOSS"></span>**Skalierungsfaktor für Wiedergabe Rate**
+<span id="_win32_playback_rate_scale_factor_gloss"></span><span id="_WIN32_PLAYBACK_RATE_SCALE_FACTOR_GLOSS"></span>**Skalierungsfaktor der Wiedergaberate**
 </dt> <dd>
 
-In Wellenform-Audiodaten der Betrag, um den der Wellenform-Audiotreiber die Wiedergabe Rate skaliert. Die Wiedergabe Skalierung erfolgt über Software. die Samplingrate wird nicht geändert, aber der Treiber interpoliert, indem er Beispiele übersprungen oder synthegiert. Wenn die Wiedergabe Rate z. b. um den Faktor 2 geändert wird, überspringt der Treiber alle anderen Stichproben.
+Bei Waveform-Audiodaten die Menge, um die der Waveform-Audiotreiber die Wiedergaberate skaliert. Die Skalierung der Wiedergabe erfolgt durch Software. Die Abtastrate wird nicht geändert, aber der Treiber interpoliert durch Überspringen oder Synthetisieren von Stichproben. Wenn die Wiedergaberate beispielsweise um den Faktor 2 geändert wird, überspringt der Treiber alle anderen Stichproben.
 
 </dd> <dt>
 
-<span id="_win32_polyphony_gloss"></span><span id="_WIN32_POLYPHONY_GLOSS"></span>**Polyphonie**
+<span id="_win32_polyphony_gloss"></span><span id="_WIN32_POLYPHONY_GLOSS"></span>**Polyie**
 </dt> <dd>
 
-Die maximale Anzahl von Notizen, die von einem Digital Instrumentation Digital Interface (MIDI)-Ausgabegerät gleichzeitig wiedergegeben werden können.
+Die maximale Anzahl von Notizen, die ein Ausgabegerät für das Instrument Digital Interface (KEYBOARD) gleichzeitig wiedergeben kann.
 
 </dd> <dt>
 
-<span id="_win32_ppqn_gloss"></span><span id="_WIN32_PPQN_GLOSS"></span>**Ppqn**
+<span id="_win32_ppqn_gloss"></span><span id="_WIN32_PPQN_GLOSS"></span>**PPQN**
 </dt> <dd>
 
-Weitere Informationen finden [Sie Unterteile pro Quartal](/windows).
+Siehe [Teile pro Quartal Hinweis](/windows).
 
 </dd> <dt>
 
-<span id="_win32_preimaging_gloss"></span><span id="_WIN32_PREIMAGING_GLOSS"></span>**prämagung**
+<span id="_win32_preimaging_gloss"></span><span id="_WIN32_PREIMAGING_GLOSS"></span>**Prämimging**
 </dt> <dd>
 
-Der Prozess der buildbildung eines Film Frames in einem Speicherpuffer, bevor dieser angezeigt wird.
+Der Prozess des Erstellens eines Filmframes in einem Speicherpuffer, bevor er angezeigt wird.
 
 </dd> <dt>
 
-<span id="_win32_red_book_audio_gloss"></span><span id="_WIN32_RED_BOOK_AUDIO_GLOSS"></span>**Rotbook-Audiodatei**
+<span id="_win32_red_book_audio_gloss"></span><span id="_WIN32_RED_BOOK_AUDIO_GLOSS"></span>**Red Book-Audio**
 </dt> <dd>
 
-Siehe [Compact Disk-Digital audioaudiodatei (CD-da)](/windows).
+Weitere Informationen [finden Sie unter Compact Disc – Digital Audio (CD-DA).](/windows)
 
 </dd> <dt>
 
-<span id="_win32_resource_interchange_file_format_riff_gloss"></span><span id="_WIN32_RESOURCE_INTERCHANGE_FILE_FORMAT_RIFF_GLOSS"></span>**Format der Ressourcenaustausch Datei (Riff)**
+<span id="_win32_resource_interchange_file_format_riff_gloss"></span><span id="_WIN32_RESOURCE_INTERCHANGE_FILE_FORMAT_RIFF_GLOSS"></span>**Resource Interchange File Format (ENDE)**
 </dt> <dd>
 
-Eine markierte Datei Spezifikation, die zum Definieren von Standardformaten für Multimedia-Dateien verwendet wird. Die Struktur mit markierten Dateien hilft bei der Vermeidung von Kompatibilitätsproblemen, die häufig auftreten, wenn sich Dateiformat Definitionen im Zeitverlauf ändern. Da jedes Datenelement in der Datei durch einen Standard Header identifiziert wird, kann eine Anwendung, die ein bestimmtes Datenelement nicht erkennt, die unbekannten Informationen überspringen. Siehe auch [Format der markierten Datei](/windows).
+Eine Spezifikation mit tags, die zum Definieren von Standardformaten für Multimediadateien verwendet wird. Die Struktur mit tags trägt dazu bei, Kompatibilitätsprobleme zu vermeiden, die häufig auftreten, wenn sich Dateiformatdefinitionen im Laufe der Zeit ändern. Da jedes Datenelement in der Datei durch einen Standardheader identifiziert wird, kann eine Anwendung, die ein bestimmtes Datenelement nicht erkennt, die unbekannten Informationen überspringen. Siehe auch [mit Tags versehenes Dateiformat](/windows).
 
 </dd> <dt>
 
-<span id="_win32_riff_gloss"></span><span id="_WIN32_RIFF_GLOSS"></span>**Riff**
+<span id="_win32_riff_gloss"></span><span id="_WIN32_RIFF_GLOSS"></span>**BESEN**
 </dt> <dd>
 
-Weitere Informationen finden Sie unter [Ressourcenaustausch Datei Format (Riff)](/windows).
+Weitere Informationen [finden Sie unter Resource Interchange File Format (ENDE).](/windows)
 
 </dd> <dt>
 
-<span id="_win32_riff_chunk_gloss"></span><span id="_WIN32_RIFF_CHUNK_GLOSS"></span>**Riff** Block
+<span id="_win32_riff_chunk_gloss"></span><span id="_WIN32_RIFF_CHUNK_GLOSS"></span>**blockunk (blockunk)**
 </dt> <dd>
 
-Ein Block mit Block Bezeichnern für das [Ressourcenaustausch Datei Format (Riff)](/windows) , das einen identifizierenden Code und NULL oder mehr unter Segmente enthält. der Inhalt von hängt vom Typ des Formulars ab.
+Ein Block mit Blockbezeichner [Resource Interchange File Format (COD),](/windows) der einen identifizierenden Code und null oder mehr Unterchunks enthält, deren Inhalt vom Formulartyp abhängig ist.
 
 </dd> <dt>
 
-<span id="_win32_riff_file_gloss"></span><span id="_WIN32_RIFF_FILE_GLOSS"></span>**Riff-Datei**
+<span id="_win32_riff_file_gloss"></span><span id="_WIN32_RIFF_FILE_GLOSS"></span>**DATEITYP-Datei**
 </dt> <dd>
 
-Eine Datei, deren Format einem der veröffentlichten Riff-Formulare [(Resource Interchange File Format)](/windows) entspricht. Beispiele für Riff Dateien sind Wave-Dateien für Wellenform-Audiodaten, RMID-Dateien für Digital Instrumentation Digital Interface (MIDI)-Sequenzen und rdib-Dateien für geräteunabhängige Bitmaps.
+Eine Datei, deren Format einem der veröffentlichten Formatformen des [Resource Interchange File Format (FORMAT)](/windows) entspricht. Beispiele fürÜNDIG-Dateien sind WAVE-Dateien für Waveform-Audiodaten, RMID-Dateien für Sequenzen der digitalen Schnittstelle des Instrumentierens (KEYBOARD) und RDIB-Dateien für geräteunabhängige Bitmaps.
 
 </dd> <dt>
 
-<span id="_win32_riff_form_gloss"></span><span id="_WIN32_RIFF_FORM_GLOSS"></span>**Riff-Formular**
+<span id="_win32_riff_form_gloss"></span><span id="_WIN32_RIFF_FORM_GLOSS"></span>**FORMULAR FÜR DIE FORMULARVORLAGE**
 </dt> <dd>
 
-Eine Dateiformat Spezifikation, die auf dem Standard [Format des Ressourcenaustausch Datei Formats (Standard)](/windows) basiert.
+Eine Dateiformatspezifikation, die auf dem [Standards resource Interchange File Format (FORMAT)](/windows) basiert.
 
 </dd> <dt>
 
 <span id="_win32_sample_gloss"></span><span id="_WIN32_SAMPLE_GLOSS"></span>**Beispiel**
 </dt> <dd>
 
-Eine diskrete Wellenform Daten, die durch einen einzelnen numerischen Wert dargestellt werden. Beim Sampling handelt es sich um den Prozess der Umstellung von analogen Daten in digitale Daten, indem in regelmäßigen Abständen Beispiele des analogen Wellen Formulars entnommen werden.
+Ein diskreter Teil der Wellenformdaten, die durch einen einzelnen numerischen Wert dargestellt werden. Bei der Stichprobenentnahme werden analoge Daten in digitale Daten konvertiert, indem in regelmäßigen Abständen Stichproben der analogen Wellenform entnommen werden.
 
 </dd> <dt>
 
 <span id="_win32_sampling_rate_gloss"></span><span id="_WIN32_SAMPLING_RATE_GLOSS"></span>**Samplingrate**
 </dt> <dd>
 
-Die Rate, mit der ein Wellenform-Audiotreiber eine Audio-zu-Digital-oder eine Digital-zu-Audiokonvertierung durchführt. Für Compact Disk – Digital Audiodatei (CD-da) ist die Samplingrate 44,1 kHz. Siehe auch " [Compact Disk-Digital audioaudiodatei](/windows) "
+Die Rate, mit der ein Waveform-Audiotreiber eine Audio-zu-Digital- oder Digital-to-Audio-Konvertierung ausführt. Für compact disc – digital audio (CD-DA) beträgt die Samplingrate 44,1 kHz. Siehe auch [Compact Disc – digitale Audiodaten](/windows)
 
 </dd> <dt>
 
-<span id="_win32_sequence_gloss"></span><span id="_WIN32_SEQUENCE_GLOSS"></span>**Sequenz**
+<span id="_win32_sequence_gloss"></span><span id="_WIN32_SEQUENCE_GLOSS"></span>**sequence**
 </dt> <dd>
 
-Siehe [MIDI-Sequenz](/windows).
+Weitere Informationen [finden Sie unter DER SEQUENZ](/windows).
 
 </dd> <dt>
 
 <span id="_win32_sequencer_gloss"></span><span id="_WIN32_SEQUENCER_GLOSS"></span>**Sequencer**
 </dt> <dd>
 
-Siehe " [MIDI Sequencer](/windows)".
+Weitere Informationen [finden Sie unter DEM SEQUENCEr](/windows).
 
 </dd> <dt>
 
-<span id="_win32_simple_device_gloss"></span><span id="_WIN32_SIMPLE_DEVICE_GLOSS"></span>**einfaches Gerät**
+<span id="_win32_simple_device_gloss"></span><span id="_WIN32_SIMPLE_DEVICE_GLOSS"></span>**Einfaches Gerät**
 </dt> <dd>
 
-Ein Medien Steuerungs Schnittstellen Gerät (MCI), für das kein Geräte Element (Datendatei) für die Wiedergabe erforderlich ist. Der MCI Compact Disk-Audiotreiber ist ein Beispiel für ein einfaches Gerät.
+Ein MCI-Gerät (Media Control Interface), das kein Geräteelement (Datendatei) für die Wiedergabe benötigt. Der MCI Compact Disc-Audiotreiber ist ein Beispiel für ein einfaches Gerät.
 
 </dd> <dt>
 
 <span id="_win32_smpte_gloss"></span><span id="_WIN32_SMPTE_GLOSS"></span>**SMPTE**
 </dt> <dd>
 
-Weitere Informationen finden Sie [unter der Gesellschaft von Motion Picture und Fernseh Technikern](/windows).
+Siehe [Society of Motion Picture and Tv Engineers](/windows).
 
 </dd> <dt>
 
-<span id="_win32_smpte_division_type_gloss"></span><span id="_WIN32_SMPTE_DIVISION_TYPE_GLOSS"></span>**SMPTE-Divisions Typ**
+<span id="_win32_smpte_division_type_gloss"></span><span id="_WIN32_SMPTE_DIVISION_TYPE_GLOSS"></span>**SMPTE-Divisionstyp**
 </dt> <dd>
 
-Eines von vier SMPTE-Zeit Steuerungs Formaten. Die SMPTE-Zeit wird in Stunden, Minuten, Sekunden und Frames ausgedrückt. Der SMPTE-Divisions Typ gibt den Wert für Frames pro Sekunde an, der einer bestimmten SMPTE-Zeit entspricht. Beispielsweise ist eine SMPTE-Zeit von einer Stunde, 30 Minuten, 24 Sekunden und 15 Frames nur hilfreich, wenn der Wert Frames pro Sekunde oder der SMPTE-Divisions Typ bekannt ist.
+Eines von vier SMPTE-Zeitsteuerungsformaten. Die SMPTE-Zeit wird in Stunden, Minuten, Sekunden und Frames ausgedrückt. Der SMPTE-Divisionstyp gibt den Frame-pro-Sekunde-Wert an, der einer bestimmten SMPTE-Zeit entspricht. Beispielsweise ist eine SMPTE-Zeit von einer Stunde, 30 Minuten, 24 Sekunden und 15 Frames nur nützlich, wenn der Frames pro Sekunde oder der SMPTE-Divisionstyp bekannt ist.
 
 </dd> <dt>
 
 <span id="_win32_smpte_offset_gloss"></span><span id="_WIN32_SMPTE_OFFSET_GLOSS"></span>**SMPTE-Offset**
 </dt> <dd>
 
-Ein Digital Instrumentation Digital Interface (MIDI)-Ereignis, das die SMPTE-Zeit festlegt, zu der die Wiedergabe einer MIDI-Datei gestartet werden soll. SMPTE-Offsets werden nur mit dem SMPTE-Divisions Typ für die Verwendung von MIDI-Dateien verwendet.
+Ein Ereignis vom Format Instrument Digital Interface (MEDIEN), das die SMPTE-Zeit bestimmt, zu der die Wiedergabe einer SOLLTE-Datei beginnen soll. SMPTE-Offsets werden nur mitHILFE des SMPTE-Divisionstyps mitHILFE vonTEILUNGsdateien verwendet.
 
 </dd> <dt>
 
 <span id="_win32_smpte_time_gloss"></span><span id="_WIN32_SMPTE_TIME_GLOSS"></span>**SMPTE-Zeit**
 </dt> <dd>
 
-Eine Standarddarstellung der Zeit, die für die Video-und Filmindustrie entwickelt wurde. Die SMPTE-Zeit wird mit der Digital Instrumentation Digital Interface (MIDI)-Audiodatei verwendet, da viele Benutzer mithilfe von MIDI Filme und Videos bewerten. Die SMPTE-Zeit ist ein absolutes Zeitformat, das in Stunden, Minuten, Sekunden und Frames ausgedrückt wird. Standard mäßige SMPTE-Divisions Typen sind 24, 25 und 30 Frames pro Sekunde.
+Eine Standarddarstellung der Zeit, die für die Video- und Filmbranche entwickelt wurde. Die SMPTE-Zeit wird mit AUDIOdaten von Instrument Digital Interface (KEYBOARD) verwendet, da viele Personen zum Bewertung von Filmen und Videos mithilfe von NOTE die Audiodaten verwenden. SMPTE-Zeit ist ein absolutes Zeitformat, das in Stunden, Minuten, Sekunden und Frames ausgedrückt wird. Standard-SMPTE-Divisionstypen sind 24, 25 und 30 Frames pro Sekunde.
 
 </dd> <dt>
 
-<span id="_win32_society_of_motion_picture_and_television_engineers_smpte_gloss"></span><span id="_WIN32_SOCIETY_OF_MOTION_PICTURE_AND_TELEVISION_ENGINEERS_SMPTE_GLOSS"></span>**Bewegung von Bewegungsbild-und Fernseh Technikern (SMPTE)**
+<span id="_win32_society_of_motion_picture_and_television_engineers_smpte_gloss"></span><span id="_WIN32_SOCIETY_OF_MOTION_PICTURE_AND_TELEVISION_ENGINEERS_SMPTE_GLOSS"></span>**Society of Motion Picture and Tv Engineers (SMPTE)**
 </dt> <dd>
 
-Eine Zuordnung von Technikern, die an Movie, TV und Video Production beteiligt sind. SMPTE bezieht sich auch auf die SMPTE-Zeit, den von dieser Gruppe angenommenen Zeit Steuerungs Standard.
+Eine Zuordnung von Technikern, die an der Film-, Fernseh- und Videoproduktion beteiligt sind. SMPTE bezieht sich auch auf die SMPTE-Zeit, den Von dieser Gruppe übernommenen Zeitsteuerungsstandard.
 
 </dd> <dt>
 
 <span id="_win32_square_wave_synthesizer_gloss"></span><span id="_WIN32_SQUARE_WAVE_SYNTHESIZER_GLOSS"></span>**Square-Wave-Synthesizer**
 </dt> <dd>
 
-Ein Synthesizer, der einen Sound erzeugt, indem er quadratische Wellen verschiedener Frequenzen hinzufügt. Eine quadratische Welle ist eine rechteckige Wellenform.
+Ein Synthesizer, der Sound erzeugt, indem quadratische Wellen verschiedener Frequenzen hinzugefügt werden. Eine quadratische Welle ist eine rechteckige Wellenform.
 
 </dd> <dt>
 
-<span id="_win32_system_exclusive_data_gloss"></span><span id="_WIN32_SYSTEM_EXCLUSIVE_DATA_GLOSS"></span>**System exklusive Daten**
+<span id="_win32_system_exclusive_data_gloss"></span><span id="_WIN32_SYSTEM_EXCLUSIVE_DATA_GLOSS"></span>**Ausschließliche Systemdaten**
 </dt> <dd>
 
-In der Digital Instrumentation Digital Interface (MIDI) werden Nachrichten, die nur von von einem bestimmten Hersteller von einem bestimmten Hersteller verarbeitet werden. Die Hersteller von MIDI-Geräten können mithilfe von System exklusiven Daten benutzerdefinierte Nachrichten definieren, die zwischen den zugehörigen MIDI-Geräten ausgetauscht werden können. (Die standardmäßige Version von MIDI definiert nur ein Framework für System exklusive Nachrichten.) Siehe auch [Digital Instrumentation Digital Interface](/windows).
+In Instruments Instrument Digital Interface (SOLLEN) werden Nachrichten nur von DEN GERÄTEN eines bestimmten Herstellers verstanden. HERSTELLER von GERÄTEN können mithilfe von system exklusiven Daten benutzerdefinierte Nachrichten definieren, die zwischen ihrenLUS-Geräten ausgetauscht werden können. (Die STANDARDMÄßIGETE-Spezifikation definiert nur ein Framework für ausschließliche Systemmeldungen.) Weitere Informationen finden [Sie unter Instrument Digital Interface](/windows).
 
 </dd> <dt>
 
 <span id="_win32_tagged_file_format_gloss"></span><span id="_WIN32_TAGGED_FILE_FORMAT_GLOSS"></span>**Format der markierten Datei**
 </dt> <dd>
 
-Ein Dateiformat, in dem Daten mithilfe von Standard Headern gekennzeichnet werden, die den Informationstyp und die Länge identifizieren. Siehe auch das [Ressourcenaustausch Datei Format (Riff)](/windows).
+Ein Dateiformat, in dem Daten mithilfe von Standardheadern markiert werden, die Informationstyp und -länge identifizieren. Weitere Informationen finden [Sie unter Resource Interchange File Format (SOLL).](/windows)
 
 </dd> <dt>
 
-<span id="_win32_tempo_gloss"></span><span id="_WIN32_TEMPO_GLOSS"></span>**Tempo**
+<span id="_win32_tempo_gloss"></span><span id="_WIN32_TEMPO_GLOSS"></span>**tempo**
 </dt> <dd>
 
-Die Geschwindigkeit, mit der eine Digital Instrumentation-Datei (Digital Instrumentation Digital Interface, MIDI) wiedergegeben wird. Das Tempo wird in den Beats pro Minute (BPM) gemessen. Das typische MIDI-Tempo ist 120 BPM. Siehe auch [Digital Instrumentation Digital Interface](/windows).
+Die Geschwindigkeit, mit der eine Instrument Digital Interface-Datei (KEYBOARD) wiedergegeben wird. Das Tempo wird in Takten pro Minute (BPM) gemessen. typisches NRT-Tempo ist 120 BPM. Weitere Informationen finden [Sie unter Instrument Digital Interface](/windows).
 
 </dd> <dt>
 
 <span id="_win32_threshold_gloss"></span><span id="_WIN32_THRESHOLD_GLOSS"></span>**Schwellenwert**
 </dt> <dd>
 
-Bei der Joystick Schnittstelle der Betrag (in Geräte Einheiten), den die Stäbchen Koordinaten ändern müssen, bevor die Anwendung über die Bewegung benachrichtigt wird. Ein hoher Schwellenwert reduziert die Anzahl von Joystick-Nachrichten, die an eine Anwendung gesendet werden, verringert jedoch auch die Empfindlichkeit des Joysticks.
+Für die Benutzeroberfläche des -Geräts die Menge in Geräteeinheiten, die sich die Stickkoordinaten ändern müssen, bevor die Anwendung über die Bewegung benachrichtigt wird. Ein hoher Schwellenwert reduziert die Anzahl der an eine Anwendung gesendeten Meldungen, aber auch die Empfindlichkeit des 2016-2016-2016-2016-
 
 </dd> <dt>
 
 <span id="_win32_time_stamp_gloss"></span><span id="_WIN32_TIME_STAMP_GLOSS"></span>**Zeitstempel**
 </dt> <dd>
 
-Ein Tag, das es einem Digital Instrumentation Digital Interface (MIDI) Sequencer ermöglicht, aufgezeichnete MIDI-Daten im richtigen Moment wiederzugeben. Siehe auch [Digital Instrumentation Digital Interface](/windows).
+Ein Tag, das es einem Instrument Digital Interface-Sequencer (INSTRUMENT Digital Interface) ermöglicht, aufgezeichnete SIGNATURE-Daten im richtigen Moment wiederzugeben. Weitere Informationen finden [Sie unter Instrument Digital Interface](/windows).
 
 </dd> <dt>
 
 <span id="_win32_tmsf_time_format_gloss"></span><span id="_WIN32_TMSF_TIME_FORMAT_GLOSS"></span>**TMSF-Zeitformat**
 </dt> <dd>
 
-Ein Zeitformat, das von der Medien Steuerungs Schnittstelle (MCI) zum Ausdrücken von Zeit in Titeln, Minuten, Sekunden und Frames verwendet wird. Die Anzahl der Frames in einer Sekunde hängt vom Typ des verwendeten Geräts ab. Compact Disk-Audiogeräte verwenden 75 Frames pro Sekunde. Das TMSF-Zeitformat wird hauptsächlich von kompakten CD-Audiogeräten verwendet. Siehe auch [Media Control Interface (MCI)](/windows).
+Ein Zeitformat, das von der Media Control Interface (MCI) verwendet wird, um die Zeit in Spuren, Minuten, Sekunden und Frames auszudrücken. Die Anzahl der Frames in einer Sekunde hängt vom Verwendeten Gerätetyp ab. Compact Disc-Audiogeräte verwenden 75 Frames pro Sekunde. Das TMSF-Zeitformat wird in erster Linie von Compact Disk-Audiogeräten verwendet. Siehe auch [Media Control Interface (MCI).](/windows)
 
 </dd> <dt>
 
-<span id="_win32_track_gloss"></span><span id="_WIN32_TRACK_GLOSS"></span>nach **verfolgen**
+<span id="_win32_track_gloss"></span><span id="_WIN32_TRACK_GLOSS"></span>**track**
 </dt> <dd>
 
-Eine Abfolge von Sound auf einer CD-da-CD (Compact Disk – Digital Audio). Mit der Datei "Digital Instrumentation Digital Interface (MIDI)" können Informationen in vom Ersteller der Datei definierte Spuren getrennt werden. Die Dateien der MIDI-Datei können den MIDI-Kanälen entsprechen, oder Sie können Teile eines Titels (z. b. "Melodie" oder "Chor") entsprechen. eine CD-da-Spur entspricht in der Regel einem Song. Siehe auch [Compact Disk-Digital-Audiodatei](/windows).
+Eine Sequenz von Sound auf einer Kompaktdatenplatte– digitale Audiodaten (CD-DA)-Datenträger. Mit einer Datei vom Format Instrument Digital Interface (SOLLEN) können Informationen in Spuren getrennt werden, die vom Ersteller der Datei definiert werden. DIE-Dateispuren können den SENDER-Kanälen entsprechen, oder sie können Teilen eines Musiktitels (z. B. Orang oder Chorus) entsprechen. Ein CD-DA-Titel entspricht in der Regel einem Titel. Weitere Informationen finden [Sie unter Compact Disc – Digitale Audiodatei.](/windows)
 
 </dd> <dt>
 
-<span id="_win32_volume_scalar_gloss"></span><span id="_WIN32_VOLUME_SCALAR_GLOSS"></span>**volumeskalar**
+<span id="_win32_volume_scalar_gloss"></span><span id="_WIN32_VOLUME_SCALAR_GLOSS"></span>**Volumeskalar**
 </dt> <dd>
 
-Eine Komponente einer "Digital Instrumentation Digital Interface (MIDI)"-Mapper-patchkarte, die das Volume eines Patches in einem Synthesizer anpasst. Wenn z. b. der Bass Patch in einem Synthesizer relativ zum Klavier Patch zu laut ist, kann der volumeskalar das Volume für den Bass reduzieren oder das Volume für das Klavier vergrößern. (Bei Anwendungen mit Wellenform-Audiodaten kann auch das Ausgabe Volume angepasst werden.) Siehe auch " [MIDI-Mapper](/windows)", [Patch](/windows).
+Eine Komponente einer PATCH-Patchkarte (Instrument Digital Interface) eines Instrumentierers, die die Lautstärke eines Patches auf einem Synthesizer an passt. Wenn z. B. der Patch eines Synthetizers zu laut im Vergleich zum Skalar ist, kann der Volumeskalar das Volumen für die Klappe reduzieren oder die Lautstärke für die Skalarschreibung erhöhen. (Anwendungen, die Waveformaudio wiederverspielen, können auch das Ausgabevolumen anpassen.) Siehe auch [MAPPer ,](/windows) [Patchen von](/windows).
 
 </dd> <dt>
 
-<span id="_win32_wave_file_gloss"></span><span id="_WIN32_WAVE_FILE_GLOSS"></span>**Wave-Datei**
+<span id="_win32_wave_file_gloss"></span><span id="_WIN32_WAVE_FILE_GLOSS"></span>**WAVE-Datei**
 </dt> <dd>
 
-Ein Standarddatei Format zum Speichern von Wellenform-Audiodaten. Wave-Dateien haben eine. WAV-Dateinamenerweiterung.
+Ein Standarddateiformat zum Speichern von Waveform-Audiodaten. WAVE-Dateien verfügen über einen . WAV-Dateierweiterung.
 
 </dd> <dt>
 
-<span id="_win32_waveform_audio_gloss"></span><span id="_WIN32_WAVEFORM_AUDIO_GLOSS"></span>**Wellenform-Audiodatei**
+<span id="_win32_waveform_audio_gloss"></span><span id="_WIN32_WAVEFORM_AUDIO_GLOSS"></span>**Waveform-Audio**
 </dt> <dd>
 
-Eine Technik zum erneuten Erstellen eines Audiowellen Formulars anhand digitaler Beispiele der Wellenform.
+Eine Technik zum Neuerstellung einer Audio-Wellenform aus digitalen Stichproben der Wellenform.
 
 </dd> </dl>
 
- 
+ 
 
- 
+ 

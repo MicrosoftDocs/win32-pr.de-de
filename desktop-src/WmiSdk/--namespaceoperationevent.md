@@ -17,18 +17,18 @@ api_type:
 - Schema
 api_location:
 - All
-ms.openlocfilehash: d263af0eab5fc3899b45659bc8409a5e68776fe4
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: b5293f97eed0716b3add1d5f06513d556355b157d8e594b1f9e55cb8df6ca7ec
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106352524"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118320622"
 ---
-# <a name="__namespaceoperationevent-class"></a>\_\_Namespaceoperationevent-Klasse
+# <a name="__namespaceoperationevent-class"></a>\_\_NamespaceOperationEvent-Klasse
 
-Die **\_ \_ namespaceoperationevent** -System Klasse ist eine Basisklasse für alle systeminternen Ereignisse, die sich auf einen Namespace beziehen.
+Die **\_ \_ NamespaceOperationEvent-Systemklasse** ist eine Basisklasse für alle systeminternen Ereignisse, die sich auf einen Namespace beziehen.
 
-Die folgende Syntax wird durch MOF-Code (Managed Object Format) vereinfacht und schließt alle geerbten Eigenschaften ein. Eigenschaften werden in alphabetischer Reihenfolge und nicht in der MOF-Reihenfolge aufgelistet.
+Die folgende Syntax wird durch MOF-Code (Managed Object Format) vereinfacht und schließt alle geerbten Eigenschaften ein. Eigenschaften werden in alphabetischer Reihenfolge und nicht in MOF-Reihenfolge aufgeführt.
 
 ## <a name="syntax"></a>Syntax
 
@@ -43,30 +43,30 @@ class __NamespaceOperationEvent : __Event
 
 ## <a name="members"></a>Member
 
-Die **\_ \_ namespaceoperationevent** -Klasse verfügt über diese Typen von Membern:
+Die **\_ \_ NamespaceOperationEvent-Klasse** verfügt über die folgenden Membertypen:
 
 -   [Eigenschaften](#properties)
 
 ### <a name="properties"></a>Eigenschaften
 
-Die **\_ \_ namespaceoperationevent** -Klasse verfügt über diese Eigenschaften.
+Die **\_ \_ NamespaceOperationEvent-Klasse** verfügt über diese Eigenschaften.
 
 <dl> <dt>
 
-**Sicherheits \_ Beschreibung**
+**\_SICHERHEITSDESKRIPTOR**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Uint8** Array
+Datentyp: **uint8 array**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Deskriptor, der vom Ereignis Anbieter verwendet wird, um zu bestimmen, welche Benutzer das Ereignis empfangen können. Diese Eigenschaft wird von einem [**\_ \_ Ereignis**](--event.md)geerbt.
+Deskriptor, der vom Ereignisanbieter verwendet wird, um zu bestimmen, welche Benutzer das Ereignis empfangen können. Diese Eigenschaft wird vom Ereignis [**\_ \_ geerbt.**](--event.md)
 
 </dd> <dt>
 
-**TargetNamespace**
+**Targetnamespace**
 </dt> <dd> <dl> <dt>
 
 Datentyp: **\_ \_ Namespace**
@@ -75,36 +75,36 @@ Datentyp: **\_ \_ Namespace**
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Vom Ereignis betroffener Namespace. Bei Erstellungs Ereignissen handelt es sich hierbei um den neu erstellten Namespace. Bei Änderungs Ereignissen handelt es sich hierbei um den geänderten Namespace. Bei Lösch Ereignissen handelt es sich hierbei um den gelöschten Namespace.
+Namespace, der vom Ereignis betroffen ist. Bei Erstellungsereignissen ist dies der neu erstellte Namespace. Bei Änderungsereignissen ist dies der geänderte Namespace. Bei Löschereignissen ist dies der gelöschte Namespace.
 
 </dd> <dt>
 
-**\_Erstellungszeit**
+**ZEIT \_ ERSTELLT**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt64**
+Datentyp: **uint64**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Eindeutiger Wert, der die Uhrzeit angibt, zu der das Ereignis generiert wurde. Dies ist ein 64-Bit-Wert, der die Anzahl der 100-Nanosecond-Intervalle nach dem 1. Januar 1601 darstellt. Die Informationen liegen im UTC-Format (koordiniert Universal Times) vor. Diese Eigenschaft wird von einem [**\_ \_ Ereignis**](--event.md)geerbt.
+Eindeutiger Wert, der den Zeitpunkt angibt, zu dem das Ereignis generiert wurde. Dies ist ein 64-Bit-Wert, der die Anzahl von 100-Nanosekunden-Intervallen nach dem 1. Januar 1601 darstellt. Die Informationen sind im UTC-Format (Coordinated Universal Times) angegeben. Diese Eigenschaft wird vom Ereignis [**\_ \_ geerbt.**](--event.md)
 
-Weitere Informationen zur Verwendung von **UInt64** -Werten in Skripts finden Sie unter [Scripting in WMI](/windows/desktop/WmiSdk/creating-a-wmi-script).
+Weitere Informationen zur Verwendung von **uint64-Werten** in Skripts finden Sie unter [Skripterstellung in WMI.](/windows/desktop/WmiSdk/creating-a-wmi-script)
 
 </dd> </dl>
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Die **\_ \_ namespaceoperationevent** -Klasse wird vom [**\_ \_ Ereignis**](--event.md)abgeleitet.
+Die **\_ \_ NamespaceOperationEvent-Klasse** wird von Event [**\_ \_ abgeleitet.**](--event.md)
 
-Instanzen dieser Klasse werden nicht erstellt. WMI erstellt Instanzen von einer der folgenden Klassen, die von dieser Klasse abgeleitet werden:
+Instanzen dieser Klasse werden nicht erstellt. WMI erstellt Instanzen einer der folgenden Klassen, die von dieser Klasse abgeleitet werden:
 
-[**\_\_Namespacecreationevent**](--namespacecreationevent.md)
+[**\_\_NamespaceCreationEvent**](--namespacecreationevent.md)
 
-[**\_\_Namespacemodificationevent**](--namespacemodificationevent.md)
+[**\_\_NamespaceModificationEvent**](--namespacemodificationevent.md)
 
-[**\_\_Namespacedeletionevent**](--namespacedeletionevent.md)
+[**\_\_NamespaceDeletionEvent**](--namespacedeletionevent.md)
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -118,17 +118,17 @@ Instanzen dieser Klasse werden nicht erstellt. WMI erstellt Instanzen von einer 
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
 [**\_\_Ereignis**](/windows/desktop/WmiSdk/--event)
 </dt> <dt>
 
-[WMI-System Klassen](wmi-system-classes.md)
+[WMI-Systemklassen](wmi-system-classes.md)
 </dt> <dt>
 
-[Bestimmen des zu empfangenden Ereignis Typs](determining-the-type-of-event-to-receive.md)
+[Bestimmen des Zu empfangenden Ereignistyps](determining-the-type-of-event-to-receive.md)
 </dt> </dl>
 
  

@@ -1,31 +1,31 @@
 ---
-description: In diesem Thema wird beschrieben, wie eine Komponente in Microsoft DirectShow als Dynamic Link Library (dll) implementiert wird.
+description: In diesem Thema wird beschrieben, wie eine Komponente als Dll (Dynamic Link Library) in Microsoft DirectShow implementiert wird.
 ms.assetid: cb935c26-2dc9-4ab3-810d-b63f1018a62a
 title: DLL-Funktionen
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 22b6d1b15df86cf3d7a2eb81080ec02b02a868f3
-ms.sourcegitcommit: a47bd86f517de76374e4fff33cfeb613eb259a7e
+ms.openlocfilehash: 5f8c10951c63e14656fa967693145444c5d5fbffd96a2b11fa9ae4201ac89ae7
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/06/2021
-ms.locfileid: "106344772"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117821084"
 ---
 # <a name="dll-functions"></a>DLL-Funktionen
 
-In diesem Thema wird beschrieben, wie eine Komponente in Microsoft DirectShow als Dynamic Link Library (dll) implementiert wird.
+In diesem Thema wird beschrieben, wie eine Komponente als Dll (Dynamic Link Library) in Microsoft DirectShow implementiert wird.
 
-Eine DLL muss die folgenden Funktionen implementieren, damit Sie registriert, nicht registriert und in den Arbeitsspeicher geladen werden kann.
+Eine DLL muss die folgenden Funktionen implementieren, damit sie registriert, nicht registriert und in den Arbeitsspeicher geladen werden kann.
 
--   [*DllMain*](/windows/desktop/Dlls/dllmain): der DLL-Einstiegspunkt. Der Name *DllMain* ist ein Platzhalter für den Namen der Bibliothek definierten Funktion. Die DirectShow-Implementierung verwendet den Namen **DllEntryPoint**. Weitere Informationen finden Sie unter Platform SDK.
--   [**DllGetClassObject**](/windows/desktop/api/combaseapi/nf-combaseapi-dllgetclassobject): erstellt eine klassenfactoryinstanz. Wird in den vorherigen Abschnitten beschrieben.
--   [**DllCanUnloadNow**](/windows/desktop/api/combaseapi/nf-combaseapi-dllcanunloadnow): fragt ab, ob die DLL sicher entladen werden kann.
--   [**DllRegisterServer**](/windows/desktop/api/olectl/nf-olectl-dllregisterserver): erstellt Registrierungseinträge für die dll.
--   [**DllUnregisterServer**](/windows/desktop/api/olectl/nf-olectl-dllunregisterserver): entfernt Registrierungseinträge für die dll.
+-   [*DllMain:*](/windows/desktop/Dlls/dllmain)Der DLL-Einstiegspunkt. Der Name *DllMain* ist ein Platzhalter für den bibliotheksdefinierte Funktionsnamen. Die DirectShow-Implementierung verwendet den Namen **DllEntryPoint.** Weitere Informationen finden Sie im Plattform-SDK.
+-   [**DllGetClassObject:**](/windows/desktop/api/combaseapi/nf-combaseapi-dllgetclassobject)Erstellt eine Klassenfactoryinstanz. In den vorherigen Abschnitten beschrieben.
+-   [**DllCanUnloadNow:**](/windows/desktop/api/combaseapi/nf-combaseapi-dllcanunloadnow)Fragt ab, ob die DLL sicher entladen werden kann.
+-   [**DllRegisterServer:**](/windows/desktop/api/olectl/nf-olectl-dllregisterserver)Erstellt Registrierungseinträge für die DLL.
+-   [**DllUnregisterServer:**](/windows/desktop/api/olectl/nf-olectl-dllunregisterserver)Entfernt Registrierungseinträge für die DLL.
 
-Die ersten drei werden von DirectShow implementiert. Wenn Ihre Factoryvorlage eine Initialisierungsfunktion in der [**m \_ lpfninit**](cfactorytemplate-m-lpfninit.md) -Element Variablen bereitstellt, wird diese Funktion innerhalb der DLL-Einstiegspunkt Funktion aufgerufen. Weitere Informationen dazu, wann das System die DLL-Einstiegspunkt Funktion aufruft, finden Sie unter [*DllMain*](/windows/desktop/Dlls/dllmain).
+Von diesen werden die ersten drei von DirectShow implementiert. Wenn Ihre Factoryvorlage eine Initialisierungsfunktion in der [**Membervariable m \_ lpfnInit**](cfactorytemplate-m-lpfninit.md) bereitstellt, wird diese Funktion aus der DLL-Einstiegspunktfunktion aufgerufen. Weitere Informationen dazu, wann das System die DLL-Einstiegspunktfunktion aufruft, finden Sie unter [*DllMain*](/windows/desktop/Dlls/dllmain).
 
-Sie müssen [**DllRegisterServer**](/windows/desktop/api/olectl/nf-olectl-dllregisterserver) und [**DllUnregisterServer**](/windows/desktop/api/olectl/nf-olectl-dllunregisterserver)implementieren, aber DirectShow bietet eine Funktion mit dem Namen [**AMovieDllRegisterServer2**](amoviedllregisterserver2.md) , die die erforderliche Arbeit erledigt. Die Komponente kann diese Funktion einfach einschließen, wie im folgenden Beispiel gezeigt:
+Sie müssen [**DllRegisterServer**](/windows/desktop/api/olectl/nf-olectl-dllregisterserver) und [**DllUnregisterServer**](/windows/desktop/api/olectl/nf-olectl-dllunregisterserver)implementieren. DirectShow stellt jedoch eine Funktion namens [**AMovieDllRegisterServer2**](amoviedllregisterserver2.md) bereit, die die erforderlichen Aufgaben übernimmt. Ihre Komponente kann diese Funktion einfach umschließen, wie im folgenden Beispiel gezeigt:
 
 
 ```C++
@@ -42,9 +42,9 @@ STDAPI DllUnregisterServer()
 
 
 
-Allerdings können Sie in [**DllRegisterServer**](/windows/desktop/api/olectl/nf-olectl-dllregisterserver) und [**DllUnregisterServer**](/windows/desktop/api/olectl/nf-olectl-dllunregisterserver) den Registrierungsprozess nach Bedarf anpassen. Wenn Ihre DLL einen Filter enthält, müssen Sie möglicherweise zusätzliche Schritte ausführen. Weitere Informationen finden Sie unter Vorgehens [Weise beim Registrieren von DirectShow-Filtern](how-to-register-directshow-filters.md).
+In [**DllRegisterServer**](/windows/desktop/api/olectl/nf-olectl-dllregisterserver) und [**DllUnregisterServer**](/windows/desktop/api/olectl/nf-olectl-dllunregisterserver) können Sie den Registrierungsprozess jedoch nach Bedarf anpassen. Wenn Ihre DLL einen Filter enthält, müssen Sie möglicherweise zusätzliche Arbeit leisten. Weitere Informationen finden Sie unter [Registrieren von DirectShow-Filtern.](how-to-register-directshow-filters.md)
 
-Exportieren Sie in der Modul Definitionsdatei (. def) alle DLL-Funktionen mit Ausnahme der Einstiegspunkt Funktion. Im folgenden finden Sie eine Beispieldatei für die DEF-Datei:
+Exportieren Sie in der Datei module-definition (.def) alle DLL-Funktionen mit Ausnahme der Einstiegspunktfunktion. Im Folgenden wird eine DEF-Beispieldatei beschrieben:
 
 
 ```C++
@@ -57,13 +57,13 @@ EXPORTS
 
 
 
-Sie können die DLL mit dem Regsvr32.exe-Hilfsprogramm registrieren.
+Sie können die DLL mit dem hilfsprogramm Regsvr32.exe registrieren.
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
 <dl> <dt>
 
-[Erstellen einer DirectShow-Filter-dll](how-to-create-a-dll.md)
+[Erstellen einer DirectShow-Filter-DLL](how-to-create-a-dll.md)
 </dt> </dl>
 
  

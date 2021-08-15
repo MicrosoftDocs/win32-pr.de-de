@@ -1,8 +1,8 @@
 ---
-description: Initiiert die Kommunikation mit einem Ereignis Anbieter unter Verwendung eines eingeschränkten Satzes von Abfragen.
+description: Initiiert die Kommunikation mit einem Ereignisanbieter mithilfe eines eingeschränkten Satz von Abfragen.
 ms.assetid: dd076dd0-ed39-47a2-86fb-a595baf3f464
 ms.tgt_platform: multiple
-title: Iwbemeventsink-Schnittstelle (wbemprov. h)
+title: IWbemEventSink-Schnittstelle (Wbemprov.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -14,45 +14,45 @@ api_type:
 - COM
 api_location:
 - Wbemsvc.dll
-ms.openlocfilehash: 22a3a15920d26f482cedfa3a596fd439ea70c2f4
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 10c5fa56a96db3e46ce2c4c7941fd7a1d6fb27a1730dc3741890935782e4ace7
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106364123"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118318096"
 ---
-# <a name="iwbemeventsink-interface"></a>Iwbemeventsink-Schnittstelle
+# <a name="iwbemeventsink-interface"></a>IWbemEventSink-Schnittstelle
 
-Die **iwbemeventsink** -Schnittstelle initiiert die Kommunikation mit einem Ereignis Anbieter unter Verwendung eines eingeschränkten Satzes von Abfragen. Diese Schnittstelle erweitert [**iwbebobjectsink**](iwbemobjectsink.md)und bietet neue Methoden für Sicherheit und Leistung. Weitere Informationen zum Verwenden dieser Schnittstelle finden Sie unter [Schreiben eines Ereignis Anbieters](writing-an-event-provider.md) und [Sichern von WMI-Ereignissen](securing-wmi-events.md).
+Die **IWbemEventSink-Schnittstelle** initiiert die Kommunikation mit einem Ereignisanbieter mithilfe eines eingeschränkten Satz von Abfragen. Diese Schnittstelle erweitert [**IWbemObjectSink**](iwbemobjectsink.md)und stellt neue Methoden für Sicherheit und Leistung bereit. Weitere Informationen zur Verwendung dieser Schnittstelle finden Sie unter [Schreiben eines Ereignisanbieters](writing-an-event-provider.md) und [Sichern von WMI-Ereignissen.](securing-wmi-events.md)
 
 ## <a name="members"></a>Member
 
-Die **iwbemeventsink** -Schnittstelle verfügt über diese Typen von Membern:
+Die **IWbemEventSink-Schnittstelle** verfügt über die folgenden Membertypen:
 
 -   [Methoden](#methods)
 
 ### <a name="methods"></a>Methoden
 
-Die **iwbemeventsink** -Schnittstelle verfügt über diese Methoden.
+Die **IWbemEventSink-Schnittstelle** verfügt über diese Methoden.
 
 
 
 | Methode                                                                | BESCHREIBUNG                                                           |
 |:----------------------------------------------------------------------|:----------------------------------------------------------------------|
-| [**Getrestrictedsink**](/windows/desktop/api/Wbemprov/nf-wbemprov-iwbemeventsink-getrestrictedsink)         | Wird vom Consumer aufgerufen, um eingeschränkte Ereignis Abfragen einzurichten.<br/> |
-| [**IsActive**](/windows/desktop/api/Wbemprov/nf-wbemprov-iwbemeventsink-isactive)                           | Überprüft den Status der Ereignis Senke.<br/>                               |
-| [**Setbatchingparameters**](/windows/desktop/api/Wbemprov/nf-wbemprov-iwbemeventsink-setbatchingparameters) | Wird vom Consumer aufgerufen, um Batch Verarbeitungsparameter festzulegen.<br/>         |
-| [**Setsink Security**](/windows/desktop/api/Wbemprov/nf-wbemprov-iwbemeventsink-setsinksecurity)             | Wird verwendet, um die Sicherheits Beschreibung für eine Ereignis Senke zu aktualisieren.<br/>   |
+| [**GetRestrictedSink**](/windows/desktop/api/Wbemprov/nf-wbemprov-iwbemeventsink-getrestrictedsink)         | Wird vom Consumer aufgerufen, um eingeschränkte Ereignisabfragen zu erstellen.<br/> |
+| [**IsActive**](/windows/desktop/api/Wbemprov/nf-wbemprov-iwbemeventsink-isactive)                           | Überprüft den Status der Ereignissenke.<br/>                               |
+| [**SetBatchingParameters**](/windows/desktop/api/Wbemprov/nf-wbemprov-iwbemeventsink-setbatchingparameters) | Wird vom Consumer aufgerufen, um Batchverarbeitungsparameter festlegen.<br/>         |
+| [**SetSinkSecurity**](/windows/desktop/api/Wbemprov/nf-wbemprov-iwbemeventsink-setsinksecurity)             | Wird verwendet, um den Sicherheitsdeskriptor für eine Ereignissenke zu aktualisieren.<br/>   |
 
 
 
  
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Wenn Sie eine Ereignis-Abonnement-Senke ([**iwbewbjectsink**](iwbemobjectsink.md) oder **iwbemeventsink**) implementieren, sollten Sie in den Methoden des Sink-Objekts nicht WMI aufrufen. Beispielsweise kann das Aufrufen von [**IWbemServices:: cancelasynccall**](/windows/desktop/api/WbemCli/nf-wbemcli-iwbemservices-cancelasynccall) zum Abbrechen der Senke in einer Implementierung von [**iwbemeventsink:: setsink Security**](/windows/desktop/api/Wbemprov/nf-wbemprov-iwbemeventsink-setsinksecurity) den WMI-Status beeinträchtigen. Um ein Ereignis Abonnement abzubrechen, legen Sie ein Flag fest, und rufen Sie **IWbemServices:: cancelasynccall** von einem anderen Thread oder Objekt auf. Bei Implementierungen, die sich nicht auf eine Ereignis Senke beziehen, wie z. b. Object-, enum-und Abfrage-Abruf Werte, können Sie einen Rückruf in WMI durchlaufen.
+Rufen Sie beim Implementieren einer Ereignisabonnementsenke [**(IWbemObjectSink**](iwbemobjectsink.md) oder **IWbemEventSink)** nicht aus den Methoden des Senkenobjekts in WMI auf. Wenn Sie beispielsweise [**IWbemServices::CancelAsyncCall**](/windows/desktop/api/WbemCli/nf-wbemcli-iwbemservices-cancelasynccall) aufrufen, um die Senke innerhalb einer Implementierung von [**IWbemEventSink::SetSinkSecurity**](/windows/desktop/api/Wbemprov/nf-wbemprov-iwbemeventsink-setsinksecurity) abzubricht, kann der WMI-Zustand beeinträchtigt werden. Um ein Ereignisabonnement zu kündigen, legen Sie ein Flag fest, und rufen **Sie IWbemServices::CancelAsyncCall von** einem anderen Thread oder Objekt aus auf. Für Implementierungen, die nicht mit einer Ereignissenke verknüpft sind, z. B. Objekt-, Enum- und Abfrageabrufe, können Sie einen Rückruf in WMI ausführen.
 
-Sink-Implementierungen sollten die Ereignis Benachrichtigung innerhalb von 100 MS verarbeiten, weil der WMI-Thread, der die Ereignis Benachrichtigung übermittelt, erst dann andere Aufgaben ausführen kann, wenn die Verarbeitung des Sink-Objekts abgeschlossen ist. Wenn für die Benachrichtigung eine große Menge an Verarbeitung erforderlich ist, kann die Senke eine interne Warteschlange für einen anderen Thread verwenden, um die Verarbeitung zu verarbeiten.
+Senkenimplementierungen sollten die Ereignisbenachrichtigung innerhalb von 100 MSEC verarbeiten, da der WMI-Thread, der die Ereignisbenachrichtigung übergibt, keine anderen Arbeiten mehr tun kann, bis die Verarbeitung des Senkenobjekts abgeschlossen ist. Wenn die Benachrichtigung eine große Menge an Verarbeitung erfordert, kann die Senke eine interne Warteschlange für einen anderen Thread verwenden, um die Verarbeitung zu verarbeiten.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -62,13 +62,13 @@ Sink-Implementierungen sollten die Ereignis Benachrichtigung innerhalb von 100 M
 |-------------------------------------|-----------------------------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows Vista<br/>                                                                                  |
 | Unterstützte Mindestversion (Server)<br/> | Windows Server 2008<br/>                                                                            |
-| Header<br/>                   | <dl> <dt>Wbemprov. h (Include wbemittell. h)</dt> </dl> |
-| Bibliothek<br/>                  | <dl> <dt>Wbemuuid. lib</dt> </dl>                   |
+| Header<br/>                   | <dl> <dt>Wbemprov.h (einschließlich Wbemidl.h)</dt> </dl> |
+| Bibliothek<br/>                  | <dl> <dt>Wbemuuid.lib</dt> </dl>                   |
 | DLL<br/>                      | <dl> <dt>Wbemsvc.dll</dt> </dl>                    |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 

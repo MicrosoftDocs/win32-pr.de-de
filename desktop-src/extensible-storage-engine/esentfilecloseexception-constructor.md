@@ -1,6 +1,6 @@
 ---
-description: 'Weitere Informationen finden Sie hier: esentfilecloseexception-Konstruktor'
-title: Esentfilecloseexception-Konstruktor
+description: 'Weitere Informationen finden Sie unter: EsentFileCloseException-Konstruktor'
+title: EsentFileCloseException-Konstruktor
 TOCTitle: 'EsentFileCloseException constructor '
 ms:assetid: M:Microsoft.Isam.Esent.Interop.EsentFileCloseException.#ctor
 ms:mtpsurl: https://msdn.microsoft.com/library/microsoft.isam.esent.interop.esentfilecloseexception.esentfilecloseexception(v=EXCHG.10)
@@ -24,19 +24,19 @@ api_type:
 api_location:
 - Microsoft.Isam.Esent.Interop.dll
 ROBOTS: INDEX,FOLLOW
-ms.openlocfilehash: ec532d95095f8854d42ef987f846cfdd49d5948b
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: c6f9adb77664952fbd0d2671efcbdf8400830395d319065e8b3360f0c5a170ff
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106359590"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118269236"
 ---
-# <a name="esentfilecloseexception-constructor"></a>Esentfilecloseexception-Konstruktor
+# <a name="esentfilecloseexception-constructor"></a>EsentFileCloseException-Konstruktor
 
-Initialisiert eine neue Instanz der esentfilecloseexception-Klasse.
+Initialisiert eine neue Instanz der EsentFileCloseException-Klasse.
 
-**Namespace:**  [Microsoft. ISAM. ESENT. Interop](./microsoft.isam.esent.interop-namespace.md)  
-**Assembly:**  Microsoft. ISAM. ESENT. Interop (in Microsoft.Isam.Esent.Interop.dll)
+**Namespace:**  [Microsoft.Isam.Esent.Interop](./microsoft.isam.esent.interop-namespace.md)  
+**Assembly:**  Microsoft.Isam.Esent.Interop (in Microsoft.Isam.Esent.Interop.dll)
 
 ## <a name="syntax"></a>Syntax
 
@@ -56,8 +56,8 @@ public EsentFileCloseException()
 
 #### <a name="reference"></a>Referenz
 
-[Esentfilecloseexception-Klasse](./esentfilecloseexception-class.md)
+[EsentFileCloseException-Klasse](./esentfilecloseexception-class.md)
 
-[Esentfilecloseexception-Member](./esentfilecloseexception-members.md)
+[EsentFileCloseException-Member](./esentfilecloseexception-members.md)
 
-[Microsoft. ISAM. ESENT. Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)
+[Microsoft.Isam.Esent.Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)

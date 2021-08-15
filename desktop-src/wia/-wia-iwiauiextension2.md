@@ -1,7 +1,7 @@
 ---
-description: Die IWiaUIExtension2-Schnittstelle stellt Methoden bereit, die die vom System bereitgestellte Standardbenutzer Oberfläche durch eine benutzerdefinierte Benutzeroberfläche ersetzen und ein benutzerdefiniertes Gerätesymbol bereitstellen.
+description: Die IWiaUIExtension2-Schnittstelle stellt Methoden bereit, die die vom System bereitgestellte Standard-Benutzeroberfläche durch eine benutzerdefinierte Benutzeroberfläche ersetzen und ein benutzerdefiniertes Gerätesymbol bereitstellen.
 ms.assetid: 1a747ea3-2476-438b-baf0-903b86cbbb16
-title: IWiaUIExtension2-Schnittstelle (wiadevd. h)
+title: IWiaUIExtension2-Schnittstelle (Wiadevd.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,47 +13,47 @@ api_type:
 - COM
 api_location:
 - Wiadevd.h
-ms.openlocfilehash: 4bfac82f90938a89b0d0ed76d9649e8e1a7cf19c
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 2111c25a83a9b826f4cab7dba8f689e01a9868ac416b8fb3026f1b1fb49a90ec
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "103958969"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118208143"
 ---
 # <a name="iwiauiextension2-interface"></a>IWiaUIExtension2-Schnittstelle
 
-Die IWiaUIExtension2-Schnittstelle stellt Methoden bereit, die die vom System bereitgestellte Standardbenutzer Oberfläche durch eine benutzerdefinierte Benutzeroberfläche ersetzen und ein benutzerdefiniertes Gerätesymbol bereitstellen. Gerätehersteller können diese Schnittstelle implementieren, um benutzerdefinierte Benutzeroberflächen für Ihre Geräte bereitzustellen.
+Die IWiaUIExtension2-Schnittstelle stellt Methoden bereit, die die vom System bereitgestellte Standard-Benutzeroberfläche durch eine benutzerdefinierte Benutzeroberfläche ersetzen und ein benutzerdefiniertes Gerätesymbol bereitstellen. Gerätehersteller können diese Schnittstelle implementieren, um benutzerdefinierte Benutzeroberflächen für ihre Geräte zur Verfügung zu stellen.
 
 ## <a name="members"></a>Member
 
-Die **IWiaUIExtension2** -Schnittstelle erbt von der [**IUnknown**](/windows/win32/api/unknwn/nn-unknwn-iunknown) -Schnittstelle. **IWiaUIExtension2** verfügt auch über die folgenden Typen von Membern:
+Die **IWiaUIExtension2-Schnittstelle** erbt von der [**IUnknown-Schnittstelle.**](/windows/win32/api/unknwn/nn-unknwn-iunknown) **IWiaUIExtension2** verfügt auch über diese Membertypen:
 
 -   [Methoden](#methods)
 
 ### <a name="methods"></a>Methoden
 
-Die **IWiaUIExtension2** -Schnittstelle verfügt über diese Methoden.
+Die **IWiaUIExtension2-Schnittstelle** verfügt über diese Methoden.
 
 
 
 | Methode                                                       | BESCHREIBUNG                                                                                  |
 |:-------------------------------------------------------------|:---------------------------------------------------------------------------------------------|
-| [**Devicedialog**](-wia-iwiauiextension2-devicedialog.md)   | Stellt eine benutzerdefinierte Benutzeroberfläche bereit, die die standardmäßige Systembenutzer Oberfläche ersetzt.<br/> |
-| [**Getde viceicon**](-wia-iwiauiextension2-getdeviceicon.md) | Ruft ein benutzerdefiniertes Gerätesymbol ab.<br/>                                                        |
+| [**DeviceDialog**](-wia-iwiauiextension2-devicedialog.md)   | Stellt eine benutzerdefinierte Benutzeroberfläche bereit, die die Standard-Benutzeroberfläche des Systems ersetzt.<br/> |
+| [**GetDeviceIcon**](-wia-iwiauiextension2-getdeviceicon.md) | Ruft ein benutzerdefiniertes Gerätesymbol ab.<br/>                                                        |
 
 
 
  
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
 
 
 | IUnknown-Methoden                                        | BESCHREIBUNG                               |
 |---------------------------------------------------------|-------------------------------------------|
-| [IUnknown:: QueryInterface](/windows/win32/api/unknwn/nf-unknwn-iunknown-queryinterface(q)) | Gibt Zeiger auf unterstützte Schnittstellen zurück. |
-| [IUnknown:: adressf](/windows/win32/api/unknwn/nf-unknwn-iunknown-addref)                 | Inkrementiert Verweiszähler.               |
-| [IUnknown:: Release](/windows/win32/api/unknwn/nf-unknwn-iunknown-release)               | Dekrementiert Verweiszähler.               |
+| [IUnknown::QueryInterface](/windows/win32/api/unknwn/nf-unknwn-iunknown-queryinterface(q)) | Gibt Zeiger auf unterstützte Schnittstellen zurück. |
+| [IUnknown::AddRef](/windows/win32/api/unknwn/nf-unknwn-iunknown-addref)                 | Inkrementiert Verweiszähler.               |
+| [IUnknown::Release](/windows/win32/api/unknwn/nf-unknwn-iunknown-release)               | Dekrementiert Verweiszähler.               |
 
 
 
@@ -65,9 +65,9 @@ Die **IWiaUIExtension2** -Schnittstelle verfügt über diese Methoden.
 
 | Anforderung | Wert |
 |-------------------------------------|--------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>                                       |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2008 \[ -Desktop-Apps\]<br/>                                 |
-| Header<br/>                   | <dl> <dt>Wiadevd. h</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur \[ Vista-Desktop-Apps\]<br/>                                       |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2008-Desktop-Apps\]<br/>                                 |
+| Header<br/>                   | <dl> <dt>Wiadevd.h</dt> </dl> |
 
 
 

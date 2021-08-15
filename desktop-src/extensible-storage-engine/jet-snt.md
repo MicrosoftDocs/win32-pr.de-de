@@ -1,5 +1,5 @@
 ---
-description: 'Weitere Informationen finden Sie hier: JET_SNT'
+description: 'Weitere Informationen finden Sie unter: JET_SNT'
 title: JET_SNT
 TOCTitle: JET_SNT
 ms:assetid: 74ac5142-8102-4dd3-8f2a-786a7a2ac78f
@@ -15,12 +15,12 @@ api_type:
 - COM
 api_location: ''
 ROBOTS: INDEX,FOLLOW
-ms.openlocfilehash: 5d1d4fa75c8a41528e9868bc94fa638042d01cff
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: ad04730c52bce38e462c2521dc7c34872bfcb69c3337ac6af18d09d865b9cfd3
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104214389"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118252514"
 ---
 # <a name="jet_snt"></a>JET_SNT
 
@@ -29,7 +29,7 @@ _**Gilt für:** Windows | Windows Server_
 
 ## <a name="jet_snt"></a>JET_SNT
 
-Die [JET_SNT]() Gruppe von Konstanten beschreibt die Punkte des Status eines Vorgangs, über die Informationen angefordert werden, die in einem Rückruf der [JET_PFNSTATUS](./jet-pfnstatus-callback-function.md) Rückruffunktion angefordert werden.
+Die [JET_SNT]() Gruppe von Konstanten beschreibt die Punkte des Fortschritts eines Vorgangs, zu dem Informationen in einem Aufruf der rückruffunktion JET_PFNSTATUS [werden.](./jet-pfnstatus-callback-function.md)
 
 <table>
 <colgroup>
@@ -46,18 +46,18 @@ Die [JET_SNT]() Gruppe von Konstanten beschreibt die Punkte des Status eines Vor
 <tr class="odd">
 <td><p>JET_sntBegin<br />
 5</p></td>
-<td><p>Der Anfang eines Vorgangs.</p></td>
+<td><p>Der Anfang eines Vorgangs</p></td>
 </tr>
 <tr class="even">
 <td><p>JET_sntRequirements<br />
 7</p></td>
 <td><p>Wird nicht unterstützt.</p>
-<p><strong>Windows 2000-Server:</strong>  Der Vorgang wird gestartet. In diesem Fall sollte der letzte Parameter der Rückruffunktion ein gültiger Zeiger auf eine <a href="gg269328(v=exchg.10).md">JET_SNPROG</a> Struktur sein, die die Gesamtzahl der auszuführenden Einheiten angibt.</p></td>
+<p><strong>Windows 2000 Server:</strong>  Der Vorgang wird gestartet. In diesem Fall sollte der letzte Parameter der Rückruffunktion ein <a href="gg269328(v=exchg.10).md"></a> gültiger Zeiger auf eine JET_SNPROG-Struktur sein, die die Gesamtzahl der auszuführenden Einheiten angibt.</p></td>
 </tr>
 <tr class="odd">
 <td><p>JET_sntProgress<br />
 0</p></td>
-<td><p>Die Anzahl der abgeschlossenen Einheiten und die Anzahl der Einheiten, die noch ausgeführt werden müssen. Diese Informationen werden in den Elementen einer <a href="gg269328(v=exchg.10).md">JET_SNPROG</a> Struktur zurückgegeben.</p></td>
+<td><p>Die Anzahl der abgeschlossenen Einheiten und die Anzahl der noch zu erledigenden Einheiten. Diese Informationen werden in den Membern einer JET_SNPROG <a href="gg269328(v=exchg.10).md">zurückgegeben.</a></p></td>
 </tr>
 <tr class="even">
 <td><p>JET_sntComplete<br />
@@ -72,11 +72,11 @@ Die [JET_SNT]() Gruppe von Konstanten beschreibt die Punkte des Status eines Vor
 <tr class="even">
 <td><p>JET_sntRecoveryStep<br />
 8</p></td>
-<td><p>Die Wiederherstellungs Steuerung eines Vorgangs.</p>
+<td><p>Die Wiederherstellungssteuerung eines Vorgangs.</p>
 <div class="alert">
 
 > [!NOTE]
-> <P>Dieser Wert gilt nicht für Versionen des Windows-Betriebssystems, beginnend mit Windows 8.</P>
+> <P>Dieser Wert gilt nicht für Versionen des Windows Betriebssystems, beginnend mit Windows 8.</P>
 
 
 </div></td>
@@ -103,7 +103,7 @@ Die [JET_SNT]() Gruppe von Konstanten beschreibt die Punkte des Status eines Vor
 </tr>
 <tr class="odd">
 <td><p><strong>Header</strong></p></td>
-<td><p>In "ESENT. h" deklariert.</p></td>
+<td><p>In Esent.h deklariert.</p></td>
 </tr>
 </tbody>
 </table>

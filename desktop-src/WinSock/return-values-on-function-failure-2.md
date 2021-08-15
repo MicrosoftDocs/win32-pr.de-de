@@ -1,21 +1,21 @@
 ---
-description: Der Fehler "Manifest-konstantensocket" \_ wird zur Überprüfung des Funktions Fehlers bereitgestellt Obwohl die Verwendung dieser Konstante nicht obligatorisch ist, wird empfohlen. Im folgenden Beispiel wird die Verwendung der \_ socketfehlerkonstante veranschaulicht.
+description: Die Manifestkonstante SOCKET \_ ERROR wird zum Überprüfen des Funktionsfehlers bereitgestellt. Obwohl die Verwendung dieser Konstante nicht obligatorisch ist, wird sie empfohlen. Das folgende Beispiel veranschaulicht die Verwendung der SOCKET \_ ERROR-Konstante.
 ms.assetid: b46203dc-5666-413b-90fe-8432318f3037
-title: Rückgabewerte bei Funktions Fehlern
+title: Rückgabewerte bei Funktionsfehlern
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: b94280d47d705833528c03c0d98a4a31232a0c6a
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: b277da114c8c86c53339590eeff3e831cbaf2a4277765bf53047b3d07991b026
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104215347"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117740932"
 ---
-# <a name="return-values-on-function-failure"></a>Rückgabewerte bei Funktions Fehlern
+# <a name="return-values-on-function-failure"></a>Rückgabewerte bei Funktionsfehlern
 
-Der **\_ Fehler** "Manifest-konstantensocket" wird zur Überprüfung des Funktions Fehlers bereitgestellt Obwohl die Verwendung dieser Konstante nicht obligatorisch ist, wird empfohlen. Im folgenden Beispiel wird die Verwendung der **\_ socketfehlerkonstante** veranschaulicht.
+Die Manifestkonstante **SOCKET \_ ERROR** wird zum Überprüfen des Funktionsfehlers bereitgestellt. Obwohl die Verwendung dieser Konstante nicht obligatorisch ist, wird sie empfohlen. Das folgende Beispiel veranschaulicht die Verwendung der **SOCKET \_ ERROR-Konstante.**
 
-Typischer BSD-Stil (funktioniert nicht unter Windows)
+Typischer BSD-Stil (funktioniert nicht auf Windows)
 
 
 ```C++
@@ -28,7 +28,7 @@ Typischer BSD-Stil (funktioniert nicht unter Windows)
 
 
 
-Windows-Stil
+Windows Stil
 
 
 ```C++
@@ -52,19 +52,19 @@ Windows-Stil
 
 <dl> <dt>
 
-[Fehler Codes: errno, h \_ errno und WSAGetLastError](error-codes-errno-h-errno-and-wsagetlasterror-2.md)
+[Fehlercodes: errno, h \_ errno und WSAGetLastError](error-codes-errno-h-errno-and-wsagetlasterror-2.md)
 </dt> <dt>
 
 [Behandeln von Winsock-Fehlern](handling-winsock-errors.md)
 </dt> <dt>
 
-[Portieren von Socketanwendungen auf Winsock](porting-socket-applications-to-winsock.md)
+[Portieren von Socketanwendungen in Winsock](porting-socket-applications-to-winsock.md)
 </dt> <dt>
 
 [Überlegungen zur Winsock-Programmierung](winsock-programming-considerations.md)
 </dt> <dt>
 
-[Windows Sockets-Fehler Codes](windows-sockets-error-codes-2.md)
+[Windows Sockets-Fehlercodes](windows-sockets-error-codes-2.md)
 </dt> </dl>
 
  

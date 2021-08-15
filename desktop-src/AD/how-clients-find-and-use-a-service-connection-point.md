@@ -1,26 +1,26 @@
 ---
-title: Suchen und Verwenden eines Dienst Verbindungs Punkts durch Clients
-description: Im folgenden Codebeispiel wird gezeigt, wie eine Client Anwendung den globalen Katalog nach einem Dienst Verbindungspunkt (Service Connection Point, SCP) durchsucht.
+title: Suchen und Verwenden eines Dienstverbindungspunkts durch Clients
+description: Das folgende Codebeispiel zeigt, wie eine Clientanwendung den globalen Katalog nach einem Dienstverbindungspunkt (Service Connection Point, SCP) durchsucht.
 ms.assetid: d3163c22-22fe-4606-8cad-6f3a87f8fc36
 ms.tgt_platform: multiple
 keywords:
-- Dienst Verbindungspunkte AD, wie Clients suchen und verwenden
+- Dienstverbindungspunkte AD , Wie Clients suchen und verwenden
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: edf75a0002f9351903ed1c5eca79f498cb4a078d
-ms.sourcegitcommit: 803f3ccd65bdefe36bd851b9c6e7280be9489016
+ms.openlocfilehash: 184034085ed673df873f346b1cee78051e05641931de3b770f9a17a3d0d8eba0
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "104472541"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118188195"
 ---
-# <a name="how-clients-find-and-use-a-service-connection-point"></a>Suchen und Verwenden eines Dienst Verbindungs Punkts durch Clients
+# <a name="how-clients-find-and-use-a-service-connection-point"></a>Suchen und Verwenden eines Dienstverbindungspunkts durch Clients
 
-Im folgenden Codebeispiel wird gezeigt, wie eine Client Anwendung den globalen Katalog nach einem Dienst Verbindungspunkt (Service Connection Point, SCP) durchsucht. In diesem Codebeispiel verfügt die Client Anwendung über eine hart codierte GUID-Zeichenfolge, die den-Dienst identifiziert. Das Dienst Installationsprogramm hat dieselbe GUID-Zeichenfolge wie einen der Werte des SCPs **-Attributs** mit mehreren Werten gespeichert.
+Das folgende Codebeispiel zeigt, wie eine Clientanwendung den globalen Katalog nach einem Dienstverbindungspunkt (Service Connection Point, SCP) durchsucht. In diesem Codebeispiel verfügt die Clientanwendung über eine hart codierte GUID-Zeichenfolge, die den Dienst identifiziert. Das Dienstinstallationsprogramm hat dieselbe GUID-Zeichenfolge wie einer der Werte des SCPs-Attributs mit **mehrwertigen Schlüsselwörtern** gespeichert.
 
-Dieses Beispiel besteht aus zwei Routinen. Die **getgc** -Routine ruft einen [**idirector ysearch**](/windows/desktop/api/iads/nn-iads-idirectorysearch) -Zeiger für einen globalen Katalog (GC) ab. Die **scplocate** -Routine verwendet die **IDirectorySearch** -Methoden, um die GC zu durchsuchen.
+Dieses Beispiel besteht aus zwei Routinen. Die **GetGC-Routine** ruft einen [**IDirectorySearch-Zeiger**](/windows/desktop/api/iads/nn-iads-idirectorysearch) für einen globalen Katalog (GC) ab. Die **ScpLocate-Routine** verwendet die **IDirectorySearch-Methoden,** um die GC zu durchsuchen.
 
-Der GC enthält ein partielles Replikat aller Objekte in der Gesamtstruktur, enthält jedoch nicht alle SCP-Attribute, die für den Client erforderlich sind. Zuerst muss der Client die GC durchsuchen, um den SCP zu finden und seinen DN abzurufen. Anschließend verwendet der Client den Dienst SCP, um eine Bindung an einen [**IDirectoryObject**](/windows/desktop/api/iads/nn-iads-idirectoryobject) -Zeiger auf den SCP herzustellen. Der Client ruft dann die [**IDirectoryObject:: getobjectattributes**](/windows/desktop/api/iads/nf-iads-idirectoryobject-getobjectattributes) -Methode auf, um die restlichen Attribute abzurufen.
+Die GC enthält ein Teilreplikat jedes Objekts in der Gesamtstruktur, aber nicht alle SCP-Attribute, die der Client benötigt. Zunächst muss der Client die GC durchsuchen, um den SCP zu finden und seinen DN abzurufen. Anschließend verwendet der Client den DN des SCP zum Binden an einen [**IDirectoryObject-Zeiger**](/windows/desktop/api/iads/nn-iads-idirectoryobject) auf dem SCP. Der Client ruft dann die [**IDirectoryObject::GetObjectAttributes-Methode**](/windows/desktop/api/iads/nf-iads-idirectoryobject-getobjectattributes) auf, um die restlichen Attribute abzurufen.
 
 
 ```C++
@@ -292,6 +292,6 @@ cleanup:
 
 
 
- 
+ 
 
- 
+ 

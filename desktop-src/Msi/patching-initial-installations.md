@@ -1,41 +1,41 @@
 ---
-description: Ein Windows Installer Patch (MSP) kann angewendet werden, wenn eine Anwendung zum ersten Mal mithilfe der Patch-Eigenschaft installiert wird.
+description: Ein Windows Installer Patch (MSP) kann angewendet werden, wenn eine Anwendung zum ersten Mal mithilfe der PATCH-Eigenschaft installiert wird.
 ms.assetid: 2c4b9d5a-34fb-4a0b-b530-30bf238468fd
-title: Patchen von erst Installationen
+title: Patchen von Erstinstallationen
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: fa85e15da18f7342f38cf82228bc31b6e3085f09
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: ddf89c3a83a6000a5716b5317a9fc2965562c217b110b020a2795573f8175235
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "103960829"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118377633"
 ---
-# <a name="patching-initial-installations"></a>Patchen von erst Installationen
+# <a name="patching-initial-installations"></a>Patchen von Erstinstallationen
 
-Ein Windows Installer Patch (MSP) kann angewendet werden, wenn eine Anwendung zum ersten Mal mithilfe der [**Patch**](patch.md) -Eigenschaft installiert wird.
+Ein Windows Installer Patch (MSP) kann angewendet werden, wenn eine Anwendung zum ersten Mal mithilfe der [**PATCH-Eigenschaft installiert**](patch.md) wird.
 
-Zum Anwenden eines Patches bei der erstmaligen Installation der Anwendung muss die [**Patch**](patch.md) -Eigenschaft in der Befehlszeile festgelegt werden. Geben Sie den vollständigen Pfad zum Patch in der Befehlszeile als "Patch = {*path to Patch*}"-Eigenschaft/Wert-Paar an.
+Um bei der ersten Installation der Anwendung einen Patch anzuwenden, muss die [**PATCH-Eigenschaft**](patch.md) in der Befehlszeile festgelegt werden. Geben Sie den vollständigen Pfad zum Patch in der Befehlszeile als Eigenschaftswertpaar "PATCH={ pfad *to patch*}" an.
 
-Beachten Sie, dass das Angeben der [**Patch**](patch.md) -Eigenschaft in der Befehlszeile die bei der Verwendung von [**msiapplypatch**](/windows/desktop/api/Msi/nf-msi-msiapplypatcha) oder der/p- [Befehlszeilen Option](command-line-options.md)ausgeführten Patch-anwendbarkeits Prüfungen überschreibt.
+Beachten Sie, dass die Angabe der [**PATCH-Eigenschaft**](patch.md) in der Befehlszeile die Patchanwendbarkeitsprüfungen überschreibt, die bei Verwendung von [**MsiApplyPatch**](/windows/desktop/api/Msi/nf-msi-msiapplypatcha) oder der Befehlszeilenoption /p [ausgeführt werden.](command-line-options.md)
 
-Wenn ein Patch mithilfe von " [**msiapplypatch**](/windows/desktop/api/Msi/nf-msi-msiapplypatcha) " oder der [Befehlszeilen Option](command-line-options.md)"/p" angewendet wird, vergleicht das Installationsprogramm die aktuell auf dem Computer installierten Anwendungen mit der Liste der Produktcodes, die für den Empfang des Patches in der [**Vorlagen Zusammenfassungs**](template-summary.md) Eigenschaft berechtigt sind.
+Wenn ein Patch mit [**msiApplyPatch**](/windows/desktop/api/Msi/nf-msi-msiapplypatcha) oder der Befehlszeilenoption [/p](command-line-options.md)angewendet wird, vergleicht das Installationsprogramm die derzeit auf [](template-summary.md) dem Computer installierten Anwendungen mit der Liste der Produktcodes, die zum Empfangen des Patches berechtigt sind, in der Eigenschaft Vorlagenzusammenfassung.
 
-Wenn Sie die Eigenschaft [**Patch**](patch.md) in der Befehlszeile für die Installation bei der ersten Installation festlegen, werden die Anwendungen, die zum Empfangen des Patches berechtigt sind, durch Überprüfungs Bedingungen für die in das Patchpaket eingebetteten Transformationen bestimmt. Die empfohlene Methode zum Erstellen eines Patchpakets ist die Verwendung eines patcherstellungs Tools wie [Msimsp.exe](msimsp-exe.md) und [PATCHWIZ.DLL](patchwiz-dll.md). Die Überprüfungs Bedingungen für Transformationen im Patch stammen aus der Spalte "productvalidateflags" in der Tabelle " [TargetImages](targetimages-table-patchwiz-dll-.md) " der patcherstellungs-Eigenschaften Datei (. PCP).
+Wenn Sie die [**PATCH-Eigenschaft**](patch.md) in der Befehlszeile so festlegen, dass sie bei der ersten Installation installiert wird, werden die Anwendungen, die zum Empfangen des Patches berechtigt sind, durch Validierungsbedingungen für die in das Patchpaket eingebetteten Transformationen bestimmt. Die empfohlene Methode zum Generieren eines Patchpakets ist die Verwendung eines Tools zum Erstellen von Patches wie [Msimsp.exe](msimsp-exe.md) und [PATCHWIZ.DLL. ](patchwiz-dll.md) Die Validierungsbedingungen für Transformationen im Patch stammen aus der ProductValidateFlags -Spalte in der [TargetImages-Tabelle](targetimages-table-patchwiz-dll-.md) der PatchErstellungseigenschaftendatei (PCP- Datei).
 
-Der Patch kann angewendet werden, wenn die Anwendung zum ersten Mal von einer Befehlszeile, einer anderen Anwendung oder einem Skript installiert wird.
+Der Patch kann angewendet werden, wenn die Anwendung zum ersten Mal über eine Befehlszeile, eine andere Anwendung oder ein Skript installiert wird.
 
-Im folgenden wird das erste Patchen von der Befehlszeile gezeigt.
+Das folgende Beispiel zeigt das erstmalige Patchen über die Befehlszeile.
 
-**msiexec/I** *package.msi* **Patch =**_"c: \\ Directory \\ Patch. msp"_
+**msiexec /I** *package.msi* **PATCH=**_"c: directory \\ \\ patch.msp"_
 
-Das folgende Beispiel zeigt das erste Patchen aus einer anderen Anwendung.
+Das folgende Beispiel zeigt das erstmalige Patchen aus einer anderen Anwendung.
 
 ``` syntax
 UINT uiStat = MsiInstallProduct(_T("package.msi"), _T("PATCH=c:\directory\patch.msp"));
 ```
 
-Das folgende Beispiel zeigt das erste Patchen aus dem Skript.
+Das folgende Beispiel zeigt das erstmalige Patchen aus dem Skript.
 
 
 ```VB
@@ -46,11 +46,11 @@ Installer.InstallProduct "package.msi", "PATCH=c:\directory\patch.msp"
 
 
 
-* * Windows Installer 3,0 und höher: * *
+**Windows Installer 3.0 und höher: **
 
-Ab Windows Installer Version 3,0 können bei der erstmaligen Installation einer Anwendung mehrere Patches angewendet werden. Legen Sie die Eigenschaft [**Patch**](patch.md) auf eine durch Semikolons getrennte Liste der vollständigen Pfade der Patches fest. Das folgende Beispiel zeigt das erste Patchen mehrerer Patches von der Befehlszeile aus.
+Ab version Windows Installer 3.0 können mehrere Patches angewendet werden, wenn eine Anwendung zum ersten Mal installiert wird. Legen Sie [**die PATCH-Eigenschaft**](patch.md) auf eine durch Semikolons getrennte Liste der vollständigen Pfade der Patches fest. Das folgende Beispiel zeigt das erstmalige Patchen mehrerer Patches über die Befehlszeile.
 
-**msiexec/I** *package.msi* **Patch =**_"c: \\ Directory \\ Patch. msp; c: \\ Directory \\ Patch2. msp; c: \\ Directory \\ Patch3. msp"_
+**msiexec /I** *package.msi* **PATCH=**_"c: directory \\ \\ patch.msp;c: directory \\ \\ patch2.msp;c: directory \\ \\ patch3.msp"_
 
  
 

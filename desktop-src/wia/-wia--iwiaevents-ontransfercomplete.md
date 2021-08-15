@@ -1,7 +1,7 @@
 ---
 description: Das Ereignis tritt auf, wenn eine Datenübertragung erfolgreich abgeschlossen wurde.
 ms.assetid: 6110867b-21e2-48ab-97ad-0e084a0ccf07
-title: WIA. ontransfercomplete-Ereignis
+title: Wia.OnTransferComplete-Ereignis
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,14 +13,14 @@ api_type:
 - COM
 api_location:
 - Wiascr.dll
-ms.openlocfilehash: d33685e0e8fe233f96e9841359e56f759032d17c
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 9095302a2f3fe75e1939ebb979ec4aad4d87b0462a5b40997e5523e7313d98e0
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104216059"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118209274"
 ---
-# <a name="wiaontransfercomplete-event"></a>WIA. ontransfercomplete-Ereignis
+# <a name="wiaontransfercomplete-event"></a>Wia.OnTransferComplete-Ereignis
 
 Das Ereignis tritt auf, wenn eine Datenübertragung erfolgreich abgeschlossen wurde.
 
@@ -43,14 +43,14 @@ Wia.OnTransferComplete(
 *Element* 
 </dt> <dd>
 
-Das übermittelte [**Element**](-wia-item.md) Objekt.
+Das übertragene [**Item-Objekt.**](-wia-item.md)
 
 </dd> <dt>
 
-*Pfad* 
+*Path* 
 </dt> <dd>
 
-Der Pfad und der Dateiname des übertragenen Bilds.
+Der Pfad und der Dateiname des übertragenen Images.
 
 </dd> </dl>
 
@@ -58,11 +58,11 @@ Der Pfad und der Dateiname des übertragenen Bilds.
 
 Dieses Ereignis gibt keinen Wert zurück.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-WIA benachrichtigt das Skript oder die Anwendung, wenn eine Datenübertragung, ein Bild oder ein Sound erfolgreich abgeschlossen wird. Implementieren Sie die **objwia** \_ **ontransfercomplete ()** -Unterroutine, damit das Skript oder die Anwendung auf den Abschluss der Datenübertragung reagieren kann.
+WIA benachrichtigt das Skript oder die Anwendung, wenn eine Datenübertragung, ein Bild oder ein Sound erfolgreich abgeschlossen wurde. Implementieren Sie die **ObjWia** \_ **OnTransferComplete()-Unterroutine,** damit Ihr Skript oder Ihre Anwendung auf den Abschluss der Datenübertragung reagieren kann.
 
-Beispielsweise kann es sein, dass ein Skript nach der Übertragung ein Bild anzeigt.
+Angenommen, Sie möchten, dass ein Skript ein Bild anzeigt, nachdem es übertragen wurde.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -70,9 +70,9 @@ Beispielsweise kann es sein, dass ein Skript nach der Übertragung ein Bild anze
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional, Windows XP \[ Desktop-Apps\]<br/>                                        |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2003 \[ -Desktop-Apps\]<br/>                                                          |
-| DLL<br/>                      | <dl> <dt>Wiascr.dll (Version 4,90 oder höher)</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional, nur Windows \[ XP-Desktop-Apps\]<br/>                                        |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2003-Desktop-Apps\]<br/>                                                          |
+| DLL<br/>                      | <dl> <dt>Wiascr.dll (Version 4.90 oder höher)</dt> </dl> |
 
 
 

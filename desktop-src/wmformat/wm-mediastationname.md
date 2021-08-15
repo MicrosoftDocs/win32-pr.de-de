@@ -1,9 +1,9 @@
 ---
-title: WM/mediastationname
-description: Das WM/mediastationname-Attribut enthält den Namen der Station, die den Inhalt überträgt.
+title: WM/MediaStationName
+description: Das WM/MediaStationName-Attribut enthält den Namen der Station, die den Inhalt überträgt.
 ms.assetid: f52e3c15-d908-4b75-9eeb-20157803f8c0
 keywords:
-- WM/mediastationname Windows Media-Format
+- WM/MediaStationName windows Media Format
 topic_type:
 - apiref
 api_name:
@@ -12,39 +12,39 @@ api_type:
 - NA
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 30d44e9f494fc8cea49be9e53e3f9ee71f6009c2
-ms.sourcegitcommit: 57758ecb246c84d65e6e0e4bd5570d9176fa39cd
+ms.openlocfilehash: 2275fd104c5ec2f87378226e3d158fcd882d7eccf9b5e97fd9ee0060c2d4485f
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "103857576"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118195678"
 ---
-# <a name="wmmediastationname"></a>WM/mediastationname
+# <a name="wmmediastationname"></a>WM/MediaStationName
 
-Das **WM/mediastationname-** Attribut enthält den Namen der Station, die den Inhalt überträgt.
+Das **WM/MediaStationName-Attribut** enthält den Namen der Station, die den Inhalt überträgt.
 
 ## <a name="global-constant"></a>Globale Konstante
 
-g \_ wszwmmediastationname
+g \_ wszWMMediaStationName
 
 ## <a name="data-type"></a>Datentyp
 
-**WMT \_ - \_ Typzeichenfolge**
+**\_ \_ WMT-TYPZEICHENFOLGE**
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Dieses Attribut wird für Broadcast-TV verwendet.
+Dieses Attribut wird für Fernsehsendungen verwendet.
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
 [**Attributliste**](attribute-list.md)
 </dt> </dl>
 
- 
+ 
 
- 
+ 
 
 
 

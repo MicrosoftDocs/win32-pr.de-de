@@ -1,7 +1,7 @@
 ---
-description: 'IShellDispatch.Windows-Methode: Erstellt ein ShellWindows-Objekt und gibt es zurück. Dieses Objekt stellt eine Auflistung aller geöffneten Fenster dar, die zur Shell gehören.'
+description: 'IShellDispatch. Windows Methode: Erstellt ein ShellWindows-Objekt und gibt es zurück. Dieses Objekt stellt eine Auflistung aller geöffneten Fenster dar, die zur Shell gehören.'
 ms.assetid: 788E2106-3534-4e22-801F-677FD02BDFE0
-title: IShellDispatch.Windows-Methode (Shldisp.h)
+title: IShellDispatch. Windows -Methode (Shldisp.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,16 +13,16 @@ api_type:
 - COM
 api_location:
 - Shell32.dll
-ms.openlocfilehash: 16991d6a251909e8f3b277894a96e6ad08a7f9a4
-ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
+ms.openlocfilehash: f17e6f9ff4a8118043cf452af0647b78c7d2c4365f83a497481ee97236edb21c
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2021
-ms.locfileid: "108117168"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118221631"
 ---
-# <a name="ishelldispatchwindows-method"></a>IShellDispatch.Windows-Methode
+# <a name="ishelldispatchwindows-method"></a>IShellDispatch. Windows-Methode
 
-Erstellt ein [**ShellWindows-Objekt**](shellwindows.md) und gibt es zurück. Dieses Objekt stellt eine Auflistung aller geöffneten Fenster dar, die zur Shell gehören.
+Erstellt ein [**ShellWindows-Objekt und gibt es**](shellwindows.md) zurück. Dieses Objekt stellt eine Auflistung aller geöffneten Fenster dar, die zur Shell gehören.
 
 ## <a name="syntax"></a>Syntax
 
@@ -59,15 +59,15 @@ Typ: **[ **IDispatch**](/windows/win32/api/oaidl/nn-oaidl-idispatch)\*\***
 
 Ein Objektverweis auf das [**ShellWindows-Objekt.**](shellwindows.md)
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Diese Methode wird implementiert und über die [**Shell.Windows-Methode**](shell-windows.md) aufgerufen.
+Diese Methode wird implementiert und über die [**Shell.Windows**](shell-windows.md) aufgerufen.
 
 ## <a name="examples"></a>Beispiele
 
-In den folgenden Beispielen wird **Windows** verwendet, um das [**ShellWindows-Objekt**](shellwindows.md) abzurufen und die Anzahl der darin enthaltenen Elemente anzuzeigen. Die Verwendung wird für JScript, VBScript und Visual Basic angezeigt.
+In den folgenden Beispielen **Windows,** um das [**ShellWindows-Objekt**](shellwindows.md) abzurufen und die Anzahl der elemente anzuzeigen, die es enthält. Die Verwendung wird für JScript, VBScript und Visual Basic.
 
-Jscript:
+JScript:
 
 
 ```JScript
@@ -139,7 +139,7 @@ End Sub
 
 
 
-| Anforderungen | Wert |
+| Anforderung | Wert |
 |-------------------------------------|----------------------------------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional, nur Windows \[ XP-Desktop-Apps\]<br/>                                         |
 | Unterstützte Mindestversion (Server)<br/> | Windows 2000 Server \[nur Desktop-Apps\]<br/>                                                           |

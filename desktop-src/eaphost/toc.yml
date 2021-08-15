@@ -1,4 +1,4 @@
-- name: Extensible Authentication-Protokoll Host
+- name: Erweiterbarer Authentifizierungsprotokollhost
   href: portal.md
   items:
     - name: Informationen zu EAPHost
@@ -8,200 +8,200 @@
           href: eaphost-components.md
         - name: EAP-Attribute
           href: about-eap-attributes.md
-        - name: EAPHost-Rückruf Sequenz
+        - name: EAPHost-Aufrufsequenz
           href: about-eaphost-call-sequences.md
           items:
-            - name: Supplicant-API-Rückruf Sequenz
+            - name: Supplicant-API-Aufrufsequenz
               href: supplicant-api-call-sequence.md
-            - name: Peer Method API-Rückruf Sequenz
+            - name: Peermethode- API-Aufrufsequenz
               href: peer-method-api-call-sequence.md
-            - name: Tunnel Methode API-Rückruf Sequenz
+            - name: Tunnel Methoden-API-Aufrufsequenz
               href: tunnel-method-api-call-sequence1.md
-            - name: Authentifizierungsmethode-API-Rückruf Sequenz
+            - name: Authenticator Methoden-API-Aufrufsequenz
               href: authenticator-method-api-call-sequence.md
         - name: EAPHost-Supplicants
           href: eaphost-supplicants.md
           items:
-            - name: Konfigurieren der Benutzeroberfläche der EAP-Methode
+            - name: Konfigurieren der EAP-Benutzeroberfläche
               href: configuring-the-eap-method-user-interface.md
-            - name: Aktivieren von Gruppenrichtlinie
+            - name: Aktivieren Gruppenrichtlinie
               href: enabling-group-policy.md
             - name: Implementieren In-Band NAP-Unterstützung für EAP-Methoden
               href: enabling-in-band-nap-support.md
             - name: Implementieren der NAP-Unterstützung für EAP-Methoden
               href: implementing-nap-for-eap-methods.md
-            - name: Übertragen von Daten zwischen den Supplicant-und EAP-Methoden
+            - name: Übertragen von Daten zwischen den Supplicant- und EAP-Methoden
               href: transferring-data-between-the-supplicant-and-eap-methods.md
     - name: Verwenden von EAPHost
       href: using-eap-host.md
       items:
-        - name: Konfigurieren von Registrierungs Werten für EAP-Methoden
+        - name: Konfigurieren von Registrierungswerten für EAP-Methoden
           href: registry-keys-for-eap-methods.md
           items:
-            - name: Registrierungsschlüssel für die EAP-Authenticator-Methode
+            - name: Registrierungsschlüssel Authenticator EAP-Methode
               href: eap-authenticator-method-registry-keys.md
-            - name: Registrierungsschlüssel für die EAP-Peer Methode
+            - name: Registrierungsschlüssel für EAP-Peermethode
               href: eap-peer-method-registry-keys.md
-        - name: Aktivieren der EAPHost-Ablauf Verfolgung
+        - name: Aktivieren der EAPHost-Ablaufverfolgung
           href: enabling-tracing.md
-        - name: Implementieren des EAPHost-Schaltmechanismus
+        - name: Implementieren des EAPHost LEAP-Mechanismus
           href: implementing-the-eaphost-leap-mechanism.md
         - name: Installieren einer EAP-Methode
           href: installing-an-eap-method.md
         - name: SSO und PLAP
           href: understanding-sso-and-plap.md
           items:
-            - name: SSO-EAPHost-API (Übersicht)
+            - name: Übersicht über die SSO-EAPHost-API
               href: sso-eaphost-api-overview.md
-            - name: SSO-EAPHost-Szenarioübersicht
+            - name: SSO EAPHost-Szenario – Übersicht
               href: why-eaphost-sso.md
               items:
-                - name: SSO EAP-TLS Pin Caching-Verhalten
+                - name: Verhalten beim Zwischenspeichern von SSO-EAP-TLS-PIN
                   href: sso-eap-tls-pin-caching-behavior-.md
-                - name: Verhalten von SSO-Kenn Wort Änderungen
+                - name: SSO-Kennwortänderungsverhalten
                   href: sso-password-change-behavior-.md
     - name: Häufig gestellte Fragen zur EAPHost-Entwicklung
       href: eaphost-development-frequently-asked-questions.md
       items:
         - name: Allgemeine häufig gestellte Fragen
           href: general-frequently-asked-questions.md
-        - name: Häufig gestellte Fragen zu EAPHost-Supplicant
+        - name: Häufig gestellte Fragen zu EAPHost Supplicant
           href: eaphost-supplicant-frequently-asked-questions.md
         - name: Häufig gestellte Fragen zur EAP-Methode
           href: eap-method-frequently-asked-questions.md
-    - name: EAPHost-und Legacy-Schema Beispiele
+    - name: Beispiele für EAPHost- und Legacyschemas
       href: eap-host-schemas.md
       items:
         - name: Verbindungseigenschaften
           href: connection-profiles.md
           items:
-            - name: Eigenschaften der EAP-MS-CHAPv2 Verbindung
+            - name: EAPMS-CHAPv2 Verbindungseigenschaften
               href: eap-ms-chapv2-connection-properties.md
-            - name: EAP-TLS-Verbindungs Eigenschaften
+            - name: EAP-TLS-Verbindungseigenschaften
               href: eap-tls-connection-properties.md
-            - name: Eigenschaften der Peer-MS-CHAPv2 Verbindung
+            - name: PEAPMS-CHAPv2 Verbindungseigenschaften
               href: peap-ms-chapv2-connection-properties.md
-            - name: Eigenschaften von "Peer AP-TLS-Verbindung"
+            - name: PEAP-TLS-Verbindungseigenschaften
               href: peap-tls-connection-properties.md
-            - name: SDK-Verbindungs Eigenschaften
+            - name: SDK-Verbindungseigenschaften
               href: sdk-connection-properties.md
         - name: Benutzereigenschaften
           href: user-profiles.md
           items:
-            - name: EAP-MS-CHAPv2 Benutzereigenschaften
+            - name: EAP MS-CHAPv2-Benutzereigenschaften
               href: eap-ms-chapv2-properties.md
             - name: EAP-TLS-Benutzereigenschaften
               href: eap-tls-user-properties.md
-            - name: Eigenschaften von "Peer-MS-CHAPv2 Benutzer"
+            - name: PEAP MS-CHAPv2-Benutzereigenschaften
               href: peap-ms-chapv2-user-properties.md
-            - name: Eigenschaften von "Peer AP-TLS-Benutzer"
+            - name: PEAP-TLS-Benutzereigenschaften
               href: peap-tls-user-properties.md
             - name: SDK-Benutzereigenschaften
               href: sdk-user-properties.md
-    - name: EAPHost-API-Referenz
+    - name: Referenz zur EAPHost-API
       href: eaphost-api-reference.md
       items:
-        - name: EAPHost-Registrierungs Einstellungen
+        - name: EAPHost-Einstellungen
           href: eaphost-registry-settings.md
           items:
-            - name: Bypassaushandlung
+            - name: BypassNegotiation
               href: bypassnegotiation.md
             - name: AssumePhase2Fragmentation
               href: assumephase2fragmentation.md
-            - name: Overrideeapcertifi| eselection
+            - name: OverrideEAPCertificateSelection
               href: overrideeapcertificateselection.md
-            - name: '"Peer-serveruseallpurposecert"'
+            - name: PeapServerUseAllPurposeCert
               href: peapserveruseallpurposecert.md
-            - name: '"Peer-serveraccept tallpurposecert"'
+            - name: PeapServerAcceptAllPurposeCert
               href: peapserveracceptallpurposecert.md
-            - name: Tlsserveruseallpurposecert
+            - name: TlsServerUseAllPurposeCert
               href: tlsserveruseallpurposecert.md
-            - name: Tlsserverakzeptallpurposecert
+            - name: TlsServerAcceptAllPurposeCert
               href: tlsserveracceptallpurposecert.md
-        - name: EAPHost und Legacy Schema
+        - name: EAPHost und Legacyschema
           href: eaphost-schemas.md
           items:
             - name: baseeapconnectionpropertiesv1-Schema
               href: baseeapconnectionpropertiesv1schema-schema.md
               items:
-                - name: baseeapconnectionpropertiesv1-Schema Elemente
+                - name: baseeapconnectionpropertiesv1-Schemaelemente
                   href: baseeapconnectionpropertiesv1schema-elements.md
                   items:
-                    - name: EAP-Element
+                    - name: Eap-Element
                       href: baseeapconnectionpropertiesv1schema-eap-element.md
-                    - name: Eaptype-Element
+                    - name: EapType-Element
                       href: baseeapconnectionpropertiesv1schema-eaptype-element.md
-                    - name: Type (baseeapparameters)-Element
+                    - name: Type(BaseEapParameters)-Element
                       href: baseeapconnectionpropertiesv1schema-type-baseeapparameters-element.md
-                - name: komplexe baseeapconnectionpropertiesv1-Schema Typen
+                - name: baseeapconnectionpropertiesv1 Schema Complex Types
                   href: baseeapconnectionpropertiesv1schema-complex-types.md
                   items:
-                    - name: Komplexer baseeapparameters-Typ
+                    - name: Komplexer BaseEapParameters-Typ
                       href: baseeapconnectionpropertiesv1schema-baseeapparameters-complextype.md
-                    - name: Komplexer baseeaptypeparameters-Typ
+                    - name: Komplexer BaseEapTypeParameters-Typ
                       href: baseeapconnectionpropertiesv1schema-baseeaptypeparameters-complextype.md
             - name: baseeapmethodconfig-Schema
               href: baseeapmethodconfigschema-schema.md
               items:
-                - name: komplexe Typen von baseeapmethodconfig-Schemas
+                - name: baseeapmethodconfig Schema Complex Types
                   href: baseeapmethodconfigschema-complex-types.md
                   items:
-                    - name: Komplexer baseeapmethodconfig-Typ
+                    - name: Komplexer BaseEapMethodConfig-Typ
                       href: baseeapmethodconfigschema-baseeapmethodconfig-complextype.md
-            - name: baseeapmethoduseranmeldeinformationen-Schema
+            - name: baseeapmethodusercredentials-Schema
               href: baseeapmethodusercredentialsschema-schema.md
               items:
-                - name: komplexe Typen von baseeapmethoduseranmeldeinformationen
+                - name: baseeapmethodusercredentials Schema Complex Types
                   href: baseeapmethodusercredentialsschema-complex-types.md
                   items:
-                    - name: Komplexer baseeapmethoduseranmeldeinyp
+                    - name: Komplexer BaseEapMethodUserCredentials-Typ
                       href: baseeapmethodusercredentialsschema-baseeapmethodusercredentials-complextype.md
             - name: baseeapuserpropertiesv1-Schema
               href: baseeapuserpropertiesv1schema-schema.md
               items:
-                - name: baseeapuserpropertiesv1-Schema Elemente
+                - name: baseeapuserpropertiesv1-Schemaelemente
                   href: baseeapuserpropertiesv1schema-elements.md
                   items:
-                    - name: EAP-Element
+                    - name: Eap-Element
                       href: baseeapuserpropertiesv1schema-eap-element.md
-                    - name: Eaptype-Element
+                    - name: EapType-Element
                       href: baseeapuserpropertiesv1schema-eaptype-element.md
                     - name: Identity-Element
                       href: baseeapuserpropertiesv1schema-identity-element.md
-                    - name: Type (baseeapparameters)-Element
+                    - name: Type(BaseEapParameters)-Element
                       href: baseeapuserpropertiesv1schema-type-baseeapparameters-element.md
-                - name: komplexe baseeapuserpropertiesv1-Schema Typen
+                - name: baseeapuserpropertiesv1 Schema Complex Types
                   href: baseeapuserpropertiesv1schema-complex-types.md
                   items:
-                    - name: Komplexer baseeapparameters-Typ
+                    - name: Komplexer BaseEapParameters-Typ
                       href: baseeapuserpropertiesv1schema-baseeapparameters-complextype.md
-                    - name: Komplexer baseeaptypeparameters-Typ
+                    - name: Komplexer BaseEapTypeParameters-Typ
                       href: baseeapuserpropertiesv1schema-baseeaptypeparameters-complextype.md
             - name: eapcommon-Schema
               href: eapcommonschema-schema.md
               items:
-                - name: eapcommon-Schema Elemente
+                - name: eapcommon-Schemaelemente
                   href: eapcommonschema-elements.md
                   items:
-                    - name: Autorisiert (eapmethodtype)-Element
+                    - name: AuthorId (EapMethodType)-Element
                       href: eapcommonschema-authorid-eapmethodtype-element.md
-                    - name: Type (eapmethodtype)-Element
+                    - name: Type(EapMethodType)-Element
                       href: eapcommonschema-type-eapmethodtype-element.md
-                    - name: VendorID (eapmethodtype)-Element
+                    - name: VendorId (EapMethodType)-Element
                       href: eapcommonschema-vendorid-eapmethodtype-element.md
-                    - name: Vendortype (eapmethodtype)-Element
+                    - name: VendorType (EapMethodType)-Element
                       href: eapcommonschema-vendortype-eapmethodtype-element.md
-                - name: komplexe Typen von eapcommon-Schemas
+                - name: Komplexe eapcommon-Schematypen
                   href: eapcommonschema-complex-types.md
                   items:
-                    - name: Komplexer eapblob-Typ
+                    - name: Komplexer EapBlob-Typ
                       href: eapcommonschema-eapblob-complextype.md
-                    - name: Komplexer eapmethodtype-Typ
+                    - name: Komplexer EapMethodType-Typ
                       href: eapcommonschema-eapmethodtype-complextype.md
             - name: eapconnectionpropertiesv1-Schema
               href: eapconnectionpropertiesv1schema-schema.md
               items:
-                - name: eapconnectionpropertiesv1-Schema Elemente
+                - name: eapconnectionpropertiesv1-Schemaelemente
                   href: eapconnectionpropertiesv1schema-elements.md
                   items:
                     - name: Connection (Connections)-Element
@@ -213,110 +213,110 @@
             - name: eaphostconfig-Schema
               href: eaphostconfigschema-schema.md
               items:
-                - name: eaphostconfig-Schema Elemente
+                - name: eaphostconfig-Schemaelemente
                   href: eaphostconfigschema-elements.md
                   items:
-                    - name: Configblob-Element (eaphostconfig)
+                    - name: ConfigBlob-Element (EapHostConfig)
                       href: eaphostconfigschema-configblob-eaphostconfig-element.md
-                    - name: Config-Element (eaphostconfig)
+                    - name: Config-Element (EapHostConfig)
                       href: eaphostconfigschema-config-eaphostconfig-element.md
-                    - name: Eaphostconfig-Element
+                    - name: EapHostConfig-Element
                       href: eaphostconfigschema-eaphostconfig-element.md
-                    - name: EapMethod (eaphostconfig)-Element
+                    - name: EapMethod-Element (EapHostConfig)
                       href: eaphostconfigschema-eapmethod-eaphostconfig-element.md
-            - name: eaphustuseranmelde-Schema
+            - name: eaphostusercredentials-Schema
               href: eaphostusercredentialsschema-schema.md
               items:
-                - name: eaphustuser-Anmelde Informationen Schema Elemente
+                - name: eaphostusercredentials-Schemaelemente
                   href: eaphostusercredentialsschema-elements.md
                   items:
-                    - name: Das Element "kredentialsblob" (eaphustuseranmeldeinformationen)
+                    - name: CredentialsBlob(EapHostUserCredentials)-Element
                       href: eaphostusercredentialsschema-credentialsblob-eaphostusercredentials-element.md
-                    - name: Anmelde Informationen (eaphustuseranmeldeinformationen)-Element
+                    - name: Credentials (EapHostUserCredentials)-Element
                       href: eaphostusercredentialsschema-credentials-eaphostusercredentials-element.md
-                    - name: Eaphustuser-Anmelde Informationen-Element
+                    - name: EapHostUserCredentials-Element
                       href: eaphostusercredentialsschema-eaphostusercredentials-element.md
-                    - name: EapMethod (eaphustuseranmeldeinformationen)-Element
+                    - name: EapMethod (EapHostUserCredentials)-Element
                       href: eaphostusercredentialsschema-eapmethod-eaphostusercredentials-element.md
             - name: eaptlsconnectionpropertiesv1-Schema
               href: eaptlsconnectionpropertiesv1schema-schema.md
               items:
-                - name: eaptlsconnectionpropertiesv1-Schema Elemente
+                - name: eaptlsconnectionpropertiesv1-Schemaelemente
                   href: eaptlsconnectionpropertiesv1schema-elements.md
                   items:
-                    - name: Accept-Servername (eaptype)-Element
+                    - name: AcceptServerName (EapType)-Element
                       href: eaptlsconnectionpropertiesv1schema-tlsextensionstype-peapextensionstype-element.md
-                    - name: Certifikatestore ("kredentialssourceparameters")-Element
+                    - name: CertificateStore-Element (CredentialsSourceParameters)
                       href: eaptlsconnectionpropertiesv1schema-certificatestore-credentialssourceparameters-element.md
-                    - name: Kredentialssource-Element (eaptype)
+                    - name: CredentialsSource-Element (EapType)
                       href: eaptlsconnectionpropertiesv1schema-credentialssource-eaptype-element.md
-                    - name: Differentusername (eaptype)-Element
+                    - name: DifferentUsername (EapType)-Element
                       href: eaptlsconnectionpropertiesv1schema-differentusername-eaptype-element.md
-                    - name: Disableuserpromptforservervalidation (servervalidationparameters)-Element
+                    - name: DisableUserPromptForServerValidation (ServerValidationParameters)-Element
                       href: eaptlsconnectionpropertiesv1schema-disableuserpromptforservervalidation-servervalidationparameters-element.md
-                    - name: Eaptype-Element
+                    - name: EapType-Element
                       href: eaptlsconnectionpropertiesv1schema-eaptype-element.md
-                    - name: Server Ames (servervalidationparameters)-Element
+                    - name: ServerNames (ServerValidationParameters)-Element
                       href: eaptlsconnectionpropertiesv1schema-servernames-servervalidationparameters-element.md
-                    - name: Performservervalidation (eaptype)-Element
+                    - name: PerformServerValidation (EapType)-Element
                       href: eaptlsconnectionpropertiesv1schema-performservervalidation-peapextensionstype-element.md
-                    - name: ServerValidation (eaptype)-Element
+                    - name: ServerValidation (EapType)-Element
                       href: eaptlsconnectionpropertiesv1schema-servervalidation-eaptype-element.md
-                    - name: Simplecertselection (certselection)-Element
+                    - name: SimpleCertSelection (CertSelection)-Element
                       href: eaptlsconnectionpropertiesv1schema-simplecertselection-certselection-element.md
-                    - name: Smartcard-Element ("kredentialssourceparameters")
+                    - name: SmartCard-Element (CredentialsSourceParameters)
                       href: eaptlsconnectionpropertiesv1schema-smartcard-credentialssourceparameters-element.md
-                    - name: Tlsextensions (eaptype)-Element
+                    - name: TLSExtensions -Element (EapType)
                       href: eaptlsconnectionpropertiesv1schema-acceptservername-peapextensionstype-element.md
-                    - name: Treuhändrootca-Element (servervalidationparameters)
+                    - name: TrustedRootCA-Element (ServerValidationParameters)
                       href: eaptlsconnectionpropertiesv1schema-trustedrootca-servervalidationparameters-element.md
-                - name: einfache eaptlsconnectionpropertiesv1 Schema Typen
+                - name: eaptlsconnectionpropertiesv1 Schema Simple Types
                   href: eaptlsconnectionpropertiesv1schema-simple-types.md
                   items:
-                    - name: einfacher emptystring-Typ
+                    - name: emptyString Simple Type
                       href: eaptlsconnectionpropertiesv1schema-emptystring-simpletype.md
-                - name: komplexe eaptlsconnectionpropertiesv1-Schema Typen
+                - name: 'eaptlsconnectionpropertiesv1 : Komplexe Schematypen'
                   href: eaptlsconnectionpropertiesv1schema-complex-types.md
                   items:
-                    - name: Komplexer certselection-Typ
+                    - name: Komplexer CertSelection-Typ
                       href: eaptlsconnectionpropertiesv1schema-certselection-complextype.md
-                    - name: Komplexer Typ "kredentialssourceparameters"
+                    - name: Komplexer CredentialsSourceParameters-Typ
                       href: eaptlsconnectionpropertiesv1schema-credentialssourceparameters-complextype.md
-                    - name: Komplexer servervalidationparameters-Typ
+                    - name: Komplexer ServerValidationParameters-Typ
                       href: eaptlsconnectionpropertiesv1schema-servervalidationparameters-complextype.md
             - name: eaptlsconnectionpropertiesv2-Schema
               href: eaptlsconnectionpropertiesv2schema-schema.md
               items:
-                - name: eaptlsconnectionpropertiesv2-Schema Elemente
+                - name: eaptlsconnectionpropertiesv2-Schemaelemente
                   href: eaptlsconnectionpropertiesv2schema-elements.md
                   items:
-                    - name: Accept-Servername (eaptype)-Element
+                    - name: AcceptServerName (EapType)-Element
                       href: eaptlsconnectionpropertiesv2schema-acceptservername-eaptype-element.md
-                    - name: Performservervalidation (eaptype)-Element
+                    - name: PerformServerValidation (EapType)-Element
                       href: eaptlsconnectionpropertiesv2shema-tlsextensions-tlsextensionstype-element.md
-                    - name: Tlsextensions (tlsextensionstype)-Element
+                    - name: TLSExtensions-Element (TLSExtensionsType)
                       href: eaptlsconnectionpropertiesv2schema-performservervalidation-eaptype-element.md
-                - name: komplexe eaptlsconnectionpropertiesv2-Schema Typen
+                - name: eaptlsconnectionpropertiesv2 Schema Complex Types
                   href: eaptlsconnectionpropertiesv2schema-complex-types.md
                   items:
-                    - name: Komplexer tlsextensionstype-Typ
+                    - name: Komplexer TLSExtensionsType-Typ
                       href: eaptlsconnectionpropertiesv2schema-tlsextensionstype-complextype.md
             - name: eaptlsuserpropertiesv1-Schema
               href: eaptlsuserpropertiesv1schema-schema.md
               items:
-                - name: eaptlsuserpropertiesv1-Schema Elemente
+                - name: eaptlsuserpropertiesv1-Schemaelemente
                   href: eaptlsuserpropertiesv1schema-elements.md
                   items:
-                    - name: Eaptype-Element
+                    - name: EapType-Element
                       href: eaptlsuserpropertiesv1schema-eaptype-element.md
-                    - name: UserCert-Element (eaptype)
+                    - name: UserCert (EapType)-Element
                       href: eaptlsuserpropertiesv1schema-usercert-eaptype-element.md
                     - name: Username-Element
                       href: eaptlsuserpropertiesv1schema-username-element.md
             - name: eapuserpropertiesv1-Schema
               href: eapuserpropertiesv1schema-schema.md
               items:
-                - name: eapuserpropertiesv1-Schema Elemente
+                - name: eapuserpropertiesv1-Schemaelemente
                   href: eapuserpropertiesv1schema-elements.md
                   items:
                     - name: User-Element
@@ -324,107 +324,107 @@
             - name: mschapv2connectionpropertiesv1-Schema
               href: mschapv2connectionpropertiesv1schema-schema.md
               items:
-                - name: mschapv2connectionpropertiesv1-Schema Elemente
+                - name: mschapv2connectionpropertiesv1 Schemaelemente
                   href: mschapv2connectionpropertiesv1schema-elements.md
                   items:
-                    - name: Eaptype-Element
+                    - name: EapType-Element
                       href: mschapv2connectionpropertiesv1schema-eaptype-element.md
-                    - name: Usewinlogonanmeldeinformationen (eaptype)-Element
+                    - name: UseWinLogonCredentials (EapType)-Element
                       href: mschapv2connectionpropertiesv1schema-usewinlogoncredentials-eaptype-element.md
             - name: mschapv2userpropertiesv1-Schema
               href: mschapv2userpropertiesv1schema-schema.md
               items:
-                - name: mschapv2userpropertiesv1-Schema Elemente
+                - name: mschapv2userpropertiesv1-Schemaelemente
                   href: mschapv2userpropertiesv1schema-elements.md
                   items:
-                    - name: Eaptype-Element
+                    - name: EapType-Element
                       href: mschapv2userpropertiesv1schema-eaptype-element.md
-                    - name: LogonDomain (eaptype)-Element
+                    - name: LogonDomain (EapType)-Element
                       href: mschapv2userpropertiesv1schema-logondomain-eaptype-element.md
-                    - name: Password (eaptype)-Element
+                    - name: Password (EapType)-Element
                       href: mschapv2userpropertiesv1schema-password-eaptype-element.md
                     - name: Username-Element
                       href: mschapv2userpropertiesv1schema-username-element.md
             - name: mspeapconnectionpropertiesv1-Schema
               href: mspeapconnectionpropertiesv1schema-schema.md
               items:
-                - name: mspeapconnectionpropertiesv1-Schema Elemente
+                - name: mspeapconnectionpropertiesv1-Schemaelemente
                   href: mspeapconnectionpropertiesv1schema-elements.md
                   items:
-                    - name: Accept-Servername (Peer-extensionstype)-Element
+                    - name: AcceptServerName (PeapExtensionsType)-Element
                       href: mspeapconnectionpropertiesv1schema-acceptservername-peapextensionstype-element.md
-                    - name: Disableuserpromptforservervalidation (servervalidationparameters)-Element
+                    - name: DisableUserPromptForServerValidation (ServerValidationParameters)-Element
                       href: mspeapconnectionpropertiesv1schema-disableuserpromptforservervalidation-servervalidationparameters-element.md
-                    - name: Eaptype-Element
+                    - name: EapType-Element
                       href: mspeapconnectionpropertiesv1schema-eaptype-element.md
-                    - name: Enablequarantäne inechecks (eaptype)-Element
+                    - name: EnableQuarantineChecks (EapType)-Element
                       href: mspeapconnectionpropertiesv1schema-enablequarantinechecks-eaptype-element.md
-                    - name: Fastreconnect (eaptype)-Element
+                    - name: FastReconnect(EapType)-Element
                       href: mspeapconnectionpropertiesv1schema-fastreconnect-eaptype-element.md
-                    - name: Identityprivacy (papextensionstype)-Element
+                    - name: IdentityPrivacy (PeapExtensionsType)-Element
                       href: mspeapconnectionpropertiesv1schema-identityprivacy-peapextensionstype-element.md
-                    - name: Innereapoptional (eaptype)-Element
+                    - name: InnerEapOptional -Element (EapType)
                       href: mspeapconnectionpropertiesv1schema-innereapoptional-eaptype-element.md
-                    - name: Papextensions (eaptype)-Element
+                    - name: PeapExtensions -Element (EapType)
                       href: mspeapconnectionpropertiesv1schema-peapextensions-eaptype-element.md
-                    - name: PeapExtensionsV2 (Peer-extensionstype)-Element
+                    - name: PeapExtensionsV2 -Element (PeapExtensionsType)
                       href: mspeapconnectionpropertiesv1-peapextensionsv2-peapextensionstype-element.md
-                    - name: Performservervalidation (etapextensionstype)-Element
+                    - name: PerformServerValidation (PeapExtensionsType)-Element
                       href: mspeapconnectionpropertiesv1schema-performservervalidation-peapextensionstype-element.md
-                    - name: Requirecryptobinding (eaptype)-Element
+                    - name: RequireCryptoBinding (EapType)-Element
                       href: mspeapconnectionpropertiesv1schema-requirecryptobinding-eaptype-element.md
-                    - name: Server Ames (servervalidationparameters)-Element
+                    - name: ServerNames (ServerValidationParameters)-Element
                       href: mspeapconnectionpropertiesv1schema-servernames-servervalidationparameters-element.md
-                    - name: ServerValidation (eaptype)-Element
+                    - name: ServerValidation (EapType)-Element
                       href: mspeapconnectionpropertiesv1schema-servervalidation-eaptype-element.md
-                    - name: Treuhändrootca-Element (servervalidationparameters)
+                    - name: TrustedRootCA-Element (ServerValidationParameters)
                       href: mspeapconnectionpropertiesv1schema-trustedrootca-servervalidationparameters-element.md
-                - name: komplexe mspeapconnectionpropertiesv1-Schema Typen
+                - name: mspeapconnectionpropertiesv1 Schema Komplexe Typen
                   href: mspeapconnectionpropertiesv1schema-complex-types.md
                   items:
-                    - name: Komplexer Typ von "Peer apextensionstype"
+                    - name: Komplexer PeapExtensionsType-Typ
                       href: mspeapconnectionpropertiesv1schema-peapextensionstype-complextype.md
-                    - name: Komplexer servervalidationparameters-Typ
+                    - name: Komplexer ServerValidationParameters-Typ
                       href: mspeapconnectionpropertiesv1schema-servervalidationparameters-complextype.md
             - name: mspeapconnectionpropertiesv2-Schema
               href: mspeapconnectionpropertiesv2schema-schema.md
               items:
-                - name: mspeapconnectionpropertiesv2-Schema Elemente
+                - name: mspeapconnectionpropertiesv2-Schemaelemente
                   href: mspeapconnectionpropertiesv2schema-elements.md
                   items:
-                    - name: Accept-Servername (Peer-extensionstype)-Element
+                    - name: AcceptServerName (PeapExtensionsType)-Element
                       href: mspeapconnectionpropertiesv2-acceptservername-peapextensionstype-element.md
-                    - name: AnonymousUserName (identityprivacyparameters)-Element
+                    - name: AnonymousUserName (IdentityPrivacyParameters)-Element
                       href: mspeapconnectionpropertiesv2-anonymoususername-identityprivacyparameters-element.md
-                    - name: Enableidentityprivacy (identityprivacyparameters)-Element
+                    - name: EnableIdentityPrivacy (IdentityPrivacyParameters)-Element
                       href: mspeapconnectionpropertiesv2-enableidentityprivacy-identityprivacyparameters-element.md
-                    - name: Identityprivacy (papextensionstype)-Element
+                    - name: IdentityPrivacy (PeapExtensionsType)-Element
                       href: mspeapconnectionpropertiesv2-identityprivacy-peapextensionstype-element.md
-                    - name: PeapExtensionsV2 (Peer-extensionstype)-Element
+                    - name: PeapExtensionsV2 -Element (PeapExtensionsType)
                       href: mspeapconnectionpropertiesv2-peapextensionsv2-peapextensionstype-element.md
-                    - name: Performservervalidation (etapextensionstype)-Element
+                    - name: PerformServerValidation (PeapExtensionsType)-Element
                       href: mspeapconnectionpropertiesv2-performservervalidation-peapextensionstype-element.md
-                - name: komplexe mspeapconnectionpropertiesv2-Schema Typen
+                - name: Komplexe mspeapconnectionpropertiesv2-Schematypen
                   href: mspeapconnectionpropertiesv2schema-complex-types.md
                   items:
-                    - name: Komplexer identityprivacyparameters-Typ
+                    - name: Komplexer IdentityPrivacyParameters-Typ
                       href: mspeapconnectionpropertiesv2-identityprivacyparameters-complextype.md
                     - name: Komplexer PeapExtensionsTypeV2-Typ
                       href: mspeapconnectionpropertiesv2-peapextensionstypev2-complextype.md
             - name: mspeapuserpropertiesv1-Schema
               href: mspeapuserpropertiesv1schema-schema.md
               items:
-                - name: mspeapuserpropertiesv1-Schema Elemente
+                - name: mspeapuserpropertiesv1-Schemaelemente
                   href: mspeapuserpropertiesv1schema-elements.md
                   items:
-                    - name: Eaptype-Element
+                    - name: EapType-Element
                       href: mspeapuserpropertiesv1schema-eaptype-element.md
-                    - name: Papextensions (eaptype)-Element
+                    - name: PeapExtensions -Element (EapType)
                       href: mspeapuserpropertiesv1schema-peapextensions-eaptype-element.md
-                - name: komplexe mspeapuserpropertiesv1-Schema Typen
+                - name: mspeapuserpropertiesv1 Schema Komplexe Typen
                   href: mspeapuserpropertiesv1schema-complex-types.md
                   items:
-                    - name: Komplexer Typ von "Peer apextensionstype"
+                    - name: Komplexer PeapExtensionsType-Typ
                       href: mspeapuserpropertiesv1schema-peapextensionstype-complextype.md
         - name: Allgemeine EAPHost-API-Enumerationen
           href: common-eap-host-api-enumerations.md
@@ -433,7 +433,7 @@
               href: /windows/win32/api/eaptypes/ne-eaptypes-eap_attribute_type
             - name: EAP_CONFIG_INPUT_FIELD_TYPE
               href: /windows/win32/api/eaptypes/ne-eaptypes-eap_config_input_field_type
-            - name: Eapcode
+            - name: EapCode
               href: /windows/win32/api/eapmethodtypes/ne-eapmethodtypes-eapcode
         - name: Allgemeine EAPHost-API-Strukturen
           href: common-eap-host-api-structures.md
@@ -460,25 +460,25 @@
               href: /windows/win32/api/eaptypes/ns-eaptypes-eap_method_type
             - name: EAP_TYPE
               href: /windows/win32/api/eaptypes/ns-eaptypes-eap_type
-            - name: Eappacket
+            - name: EapPacket
               href: /windows/win32/api/eapmethodtypes/ns-eapmethodtypes-eappacket
         - name: Allgemeine EAPHost-Konstanten
           href: common-eap-host-error-constants.md
           items:
             - name: EAPHost-Konstanten
               href: eaphost-constants.md
-            - name: Eigenschaften der EAP-Methode
+            - name: EAP-Methodeneigenschaften
               href: eap-method-properties.md
-            - name: EAP-methodenflags
+            - name: EAP-Methodenflags
               href: eap-method-flags.md
-            - name: EAP-bezogene Fehler-und Informations Konstanten
+            - name: Fehler- und Informationskonst constants im Zusammenhang mit EAP
               href: eap-related-error-and-information-constants.md
-            - name: EAP_CERT Fehler Konstanten
+            - name: EAP_CERT Fehlerkonst constants
               href: eap-cert-error-constants.md
-        - name: EAPHost-Supplicant-API-Referenz
+        - name: Referenz zur EAPHost-Supplicant-API
           href: eap-host-supplicant-api-reference.md
           items:
-            - name: EAPHost-Supplicant-Konfigurationsfunktionen
+            - name: EAPHost Supplicant-Konfigurationsfunktionen
               href: eap-host-supplicant-configuration-functions.md
               items:
                 - name: EapHostPeerConfigBlob2Xml
@@ -487,71 +487,71 @@
                   href: /windows/desktop/api/eaphostpeerconfigapis/nf-eaphostpeerconfigapis-eaphostpeerconfigxml2blob
                 - name: EapHostPeerCredentialsXml2Blob
                   href: /windows/desktop/api/eaphostpeerconfigapis/nf-eaphostpeerconfigapis-eaphostpeercredentialsxml2blob
-                - name: Eaphostpeer-freerrormemory
+                - name: EapHostPeerFreeErrorMemory
                   href: /windows/desktop/api/eaphostpeerconfigapis/nf-eaphostpeerconfigapis-eaphostpeerfreeerrormemory
-                - name: Eaphostpeer-Speicher
+                - name: EapHostPeerFreeMemory
                   href: /windows/desktop/api/eaphostpeerconfigapis/nf-eaphostpeerconfigapis-eaphostpeerfreememory
-                - name: Eaphostpeer-getmethodproperties
+                - name: EapHostPeerGetMethodProperties
                   href: /windows/desktop/api/eaphostpeerconfigapis/nf-eaphostpeerconfigapis-eaphostpeergetmethodproperties
-                - name: Eaphostetergetmethods
+                - name: EapHostPeerGetMethods
                   href: /windows/desktop/api/eaphostpeerconfigapis/nf-eaphostpeerconfigapis-eaphostpeergetmethods
-                - name: Eaphostpeerinvokeconfigui
+                - name: EapHostPeerInvokeConfigUI
                   href: /windows/desktop/api/eaphostpeerconfigapis/nf-eaphostpeerconfigapis-eaphostpeerinvokeconfigui
-                - name: Eaphosteterinvokeidentityui
+                - name: EapHostPeerInvokeIdentityUI
                   href: /windows/desktop/api/eaphostpeerconfigapis/nf-eaphostpeerconfigapis-eaphostpeerinvokeidentityui
-                - name: Eaphostpeer-invokeinteractiveui
+                - name: EapHostPeerInvokeInteractiveUI
                   href: /windows/desktop/api/eaphostpeerconfigapis/nf-eaphostpeerconfigapis-eaphostpeerinvokeinteractiveui
-                - name: Eaphostpeer-querykredentialinputfields
+                - name: EapHostPeerQueryCredentialInputFields
                   href: /windows/desktop/api/eaphostpeerconfigapis/nf-eaphostpeerconfigapis-eaphostpeerquerycredentialinputfields
-                - name: Eaphostpeer-queryinteractiveuiinputfields
+                - name: EapHostPeerQueryInteractiveUIInputFields
                   href: /windows/desktop/api/eaphostpeerconfigapis/nf-eaphostpeerconfigapis-eaphostpeerqueryinteractiveuiinputfields
-                - name: Eaphostpeer-queryuiblobfrominteractiveuiinputfields
+                - name: EapHostPeerQueryUIBlobFromInteractiveUIInputFields
                   href: /windows/desktop/api/eaphostpeerconfigapis/nf-eaphostpeerconfigapis-eaphostpeerqueryuiblobfrominteractiveuiinputfields
-                - name: Eaphostpeer-queryuserblobfromkredentialinputfields
+                - name: EapHostPeerQueryUserBlobFromCredentialInputFields
                   href: /windows/desktop/api/eaphostpeerconfigapis/nf-eaphostpeerconfigapis-eaphostpeerqueryuserblobfromcredentialinputfields
-            - name: EAPHost-Supplicant-Lauf Zeitfunktionen
+            - name: EAPHost Supplicant-Laufzeitfunktionen
               href: eap-host-supplicant-run-time-functions.md
               items:
-                - name: Eaphosteterbeginsession
+                - name: EapHostPeerBeginSession
                   href: /windows/desktop/api/eappapis/nf-eappapis-eaphostpeerbeginsession
-                - name: Eaphostpeer-clearconnection
+                - name: EapHostPeerClearConnection
                   href: /windows/desktop/api/eappapis/nf-eappapis-eaphostpeerclearconnection
-                - name: Eaphostpeer-EndSession
+                - name: EapHostPeerEndSession
                   href: /windows/desktop/api/eappapis/nf-eappapis-eaphostpeerendsession
-                - name: Eaphostpeerfreeaperror
+                - name: EapHostPeerFreeEapError
                   href: /windows/desktop/api/eappapis/nf-eappapis-eaphostpeerfreeeaperror
-                - name: Eaphostpeergetauthstatus
+                - name: EapHostPeerGetAuthStatus
                   href: /windows/desktop/api/eappapis/nf-eappapis-eaphostpeergetauthstatus
-                - name: Eaphostpeer-getdatatounplumbanmelde Informationen
+                - name: EapHostPeerGetDataToUnplumbCredentials
                   href: /windows/desktop/api/eappapis/nf-eappapis-eaphostpeergetdatatounplumbcredentials
-                - name: Eaphostpeer Attribute
+                - name: EapHostPeerGetResponseAttributes
                   href: /windows/desktop/api/eappapis/nf-eappapis-eaphostpeergetresponseattributes
-                - name: Eaphostpeer ergetidentity
+                - name: EapHostPeerGetIdentity
                   href: /windows/desktop/api/eappapis/nf-eappapis-eaphostpeergetidentity
-                - name: Eaphostpeer ergetresult
+                - name: EapHostPeerGetResult
                   href: /windows/desktop/api/eappapis/nf-eappapis-eaphostpeergetresult
-                - name: Eaphosteterfreeruntimememory
+                - name: EapHostPeerFreeRuntimeMemory
                   href: /windows/desktop/api/eappapis/nf-eappapis-eaphostpeerfreeruntimememory
-                - name: Eaphostpeer-getsendpacket
+                - name: EapHostPeerGetSendPacket
                   href: /windows/desktop/api/eappapis/nf-eappapis-eaphostpeergetsendpacket
-                - name: Eaphostetergetuicontext
+                - name: EapHostPeerGetUIContext
                   href: /windows/desktop/api/eappapis/nf-eappapis-eaphostpeergetuicontext
-                - name: Eaphostpeer Initialize
+                - name: EapHostPeerInitialize
                   href: /windows/desktop/api/eappapis/nf-eappapis-eaphostpeerinitialize
-                - name: Eaphostpeer-processreceivedpacket
+                - name: EapHostPeerProcessReceivedPacket
                   href: /windows/desktop/api/eappapis/nf-eappapis-eaphostpeerprocessreceivedpacket
-                - name: Eaphostpeer Attribute
+                - name: EapHostPeerSetResponseAttributes
                   href: /windows/desktop/api/eappapis/nf-eappapis-eaphostpeersetresponseattributes
-                - name: Eaphostpeer Name
+                - name: EapHostPeerSetUIContext
                   href: /windows/desktop/api/eappapis/nf-eappapis-eaphostpeersetuicontext
-                - name: Eaphostpeer-Initialize
+                - name: EapHostPeerUninitialize
                   href: /windows/desktop/api/eappapis/nf-eappapis-eaphostpeeruninitialize
-            - name: EAPHost-Supplicant-Rückrufe
+            - name: EAPHost Supplicant-Rückrufe
               href: eap-host-supplicant-callbacks.md
               items:
-                - name: Notificationhandler
+                - name: NotificationHandler
                   href: /windows/desktop/api/eappapis/nc-eappapis-notificationhandler
-            - name: EAPHost-Supplicant-Enumerationen
+            - name: EAPHost Supplicant-Enumerationen
               href: eap-host-supplicant-enumerations.md
               items:
                 - name: EAP_INTERACTIVE_UI_DATA_TYPE
@@ -562,15 +562,15 @@
                   href: /windows/win32/api/EapTypes/ne-eaptypes-eap_method_property_value_type
                 - name: EAPHOST_AUTH_STATUS
                   href: /windows/win32/api/eaphostpeertypes/ne-eaphostpeertypes-eaphost_auth_status
-                - name: Eaphostpeer-authparametriams
+                - name: EapHostPeerAuthParams
                   href: /windows/win32/api/eaphostpeertypes/ne-eaphostpeertypes-eaphostpeerauthparams
-                - name: Eaphostpeer-methodresulverrat
+                - name: EapHostPeerMethodResultReason
                   href: /windows/win32/api/eaphostpeertypes/ne-eaphostpeertypes-eaphostpeermethodresultreason
-                - name: Eaphostpeer-Response Action
+                - name: EapHostPeerResponseAction
                   href: /windows/win32/api/eaphostpeertypes/ne-eaphostpeertypes-eaphostpeerresponseaction
                 - name: ISOLATION_STATE
                   href: /windows/win32/api/eaphostpeertypes/ne-eaphostpeertypes-isolation_state
-            - name: EAPHost-Supplicant-Strukturen
+            - name: EAPHost Supplicant-Strukturen
               href: eap-host-supplicant-structures.md
               items:
                 - name: EAP_CRED_LOGON_REQ
@@ -601,14 +601,14 @@
                   href: /windows/desktop/api/eaptypes/ns-eaptypes-eap_ui_data_format
                 - name: EAPHOST_AUTH_INFO
                   href: /windows/win32/api/eaphostpeertypes/ns-eaphostpeertypes-eaphost_auth_info
-                - name: Eaphostpeer-methodresult
+                - name: EapHostPeerMethodResult
                   href: /windows/win32/api/eaphostpeertypes/ns-eaphostpeertypes-eaphostpeermethodresult
-                - name: Eaphostpeer-Napinfo
+                - name: EapHostPeerNapInfo
                   href: eaphostpeernapinfo.md
-        - name: API-Referenz für die EAPHost-Peer Methode
+        - name: API-Referenz zur EAPHost-Peermethode
           href: eap-host-peer-method-api-reference.md
           items:
-            - name: EAPHost-Peer Methoden-Konfigurationsfunktionen
+            - name: Konfigurationsfunktionen der EAPHost-Peermethode
               href: eaphost-peer-method-configuration-functions.md
               items:
                 - name: EapPeerConfigBlob2Xml
@@ -617,127 +617,127 @@
                   href: /windows/desktop/api/eapmethodpeerapis/nf-eapmethodpeerapis-eappeerconfigxml2blob
                 - name: EapPeerCredentialsXml2Blob
                   href: /windows/desktop/api/eapmethodpeerapis/nf-eapmethodpeerapis-eappeercredentialsxml2blob
-                - name: Eappeerfreerrormemory
+                - name: EapPeerFreeErrorMemory
                   href: /windows/desktop/api/eapmethodpeerapis/nf-eapmethodpeerapis-eappeerfreeerrormemory
-                - name: Eappeerfrememory
+                - name: EapPeerFreeMemory
                   href: /windows/desktop/api/eapmethodpeerapis/nf-eapmethodpeerapis-eappeerfreememory
-                - name: Eappeergetmethodproperties
+                - name: EapPeerGetMethodProperties
                   href: /windows/desktop/api/eapmethodpeerapis/nf-eapmethodpeerapis-eappeergetmethodproperties
-                - name: Eappeerinvokeconfigui
+                - name: EapPeerInvokeConfigUI
                   href: /windows/desktop/api/eapmethodpeerapis/nf-eapmethodpeerapis-eappeerinvokeconfigui
-                - name: Eappeerinvokeidentityui
+                - name: EapPeerInvokeIdentityUI
                   href: /windows/desktop/api/eapmethodpeerapis/nf-eapmethodpeerapis-eappeerinvokeidentityui
-                - name: Eappeerinvokeinteractiveui
+                - name: EapPeerInvokeInteractiveUI
                   href: /windows/desktop/api/eapmethodpeerapis/nf-eapmethodpeerapis-eappeerinvokeinteractiveui
-                - name: Eappeerquerykredentialinputfields
+                - name: EapPeerQueryCredentialInputFields
                   href: /windows/desktop/api/eapmethodpeerapis/nf-eapmethodpeerapis-eappeerquerycredentialinputfields
-                - name: Eappeerqueryinteractiveuiinputfields
+                - name: EapPeerQueryInteractiveUIInputFields
                   href: /windows/desktop/api/eapmethodpeerapis/nf-eapmethodpeerapis-eappeerqueryinteractiveuiinputfields
-                - name: Eappeerqueryuiblobfrominteractiveuiinputfields
+                - name: EapPeerQueryUIBlobFromInteractiveUIInputFields
                   href: /windows/desktop/api/eapmethodpeerapis/nf-eapmethodpeerapis-eappeerqueryuiblobfrominteractiveuiinputfields
-                - name: Eappeerqueryuserblobfromkredentialinputfields
+                - name: EapPeerQueryUserBlobFromCredentialInputFields
                   href: /windows/desktop/api/eapmethodpeerapis/nf-eapmethodpeerapis-eappeerqueryuserblobfromcredentialinputfields
-            - name: EAPHost-Peer Methode Run-Time-Funktionen
+            - name: EAPHost-Peermethode Run-Time Functions
               href: eaphost-peer-method-run-time-functions.md
               items:
-                - name: Eappeerbeginsession
+                - name: EapPeerBeginSession
                   href: /windows/desktop/api/eapmethodpeerapis/nf-eapmethodpeerapis-eappeerbeginsession
-                - name: Eappeerendsession
+                - name: EapPeerEndSession
                   href: /windows/desktop/api/eapmethodpeerapis/nf-eapmethodpeerapis-eappeerendsession
-                - name: Eappeergetconfigblobanduserblob
+                - name: EapPeerGetConfigBlobAndUserBlob
                   href: /windows/desktop/api/eapmethodpeerapis/nf-eapmethodpeerapis-eappeergetconfigblobanduserblob
-                - name: Eappeergetidentity
+                - name: EapPeerGetIdentity
                   href: /windows/desktop/api/eapmethodpeerapis/nf-eapmethodpeerapis-eappeergetidentity
-                - name: Eappeergetinfo
+                - name: EapPeerGetInfo
                   href: /windows/desktop/api/eapmethodpeerapis/nf-eapmethodpeerapis-eappeergetinfo
-                - name: Eappeergetresponlattribute
+                - name: EapPeerGetResponseAttributes
                   href: /windows/desktop/api/eapmethodpeerapis/nf-eapmethodpeerapis-eappeergetresponseattributes
-                - name: Eappeergetresponsepacket
+                - name: EapPeerGetResponsePacket
                   href: /windows/desktop/api/eapmethodpeerapis/nf-eapmethodpeerapis-eappeergetresponsepacket
-                - name: Eappeergetresult
+                - name: EapPeerGetResult
                   href: /windows/desktop/api/eapmethodpeerapis/nf-eapmethodpeerapis-eappeergetresult
-                - name: Eappeergetuicontext
+                - name: EapPeerGetUIContext
                   href: /windows/desktop/api/eapmethodpeerapis/nf-eapmethodpeerapis-eappeergetuicontext
-                - name: Eappeerinitialize
+                - name: EapPeerInitialize
                   href: /windows/desktop/api/eapmethodpeerapis/nf-eapmethodpeerapis-eappeerinitialize
-                - name: Eappeerprocessrequestpacket
+                - name: EapPeerProcessRequestPacket
                   href: /windows/desktop/api/eapmethodpeerapis/nf-eapmethodpeerapis-eappeerprocessrequestpacket
-                - name: Eappeersetanmelde Informationen
+                - name: EapPeerSetCredentials
                   href: /windows/desktop/api/eapmethodpeerapis/nf-eapmethodpeerapis-eappeersetcredentials
-                - name: Eappeerabtresponlattribute
+                - name: EapPeerSetResponseAttributes
                   href: /windows/desktop/api/eapmethodpeerapis/nf-eapmethodpeerapis-eappeersetresponseattributes
-                - name: Eappeerabltuicontext
+                - name: EapPeerSetUIContext
                   href: /windows/desktop/api/eapmethodpeerapis/nf-eapmethodpeerapis-eappeersetuicontext
-                - name: Eappeershutdown
+                - name: EapPeerShutdown
                   href: /windows/desktop/api/eapmethodpeerapis/nf-eapmethodpeerapis-eappeershutdown
-            - name: EAPHost-Peer Methoden Enumerationen
+            - name: Enumerationen der EAPHost-Peermethode
               href: eap-host-peer-method-enumerations.md
               items:
-                - name: Eapkredentialtype
+                - name: EapCredentialType
                   href: /windows/win32/api/eaptypes/ne-eaptypes-eapcredentialtype
-                - name: Eappeermethodresponse Action
+                - name: EapPeerMethodResponseAction
                   href: /windows/win32/api/EapAuthenticatorActionDefine/ne-eapauthenticatoractiondefine-eappeermethodresponseaction
-                - name: Eappeermethodresulverrat
+                - name: EapPeerMethodResultReason
                   href: /windows/win32/api/EapAuthenticatorActionDefine/ne-eapauthenticatoractiondefine-eappeermethodresultreason
-            - name: EAPHost-Peer Methoden Strukturen
+            - name: EAPHost-Peermethodesstrukturen
               href: eap-host-peer-method-structures.md
               items:
-                - name: Eapcertifialisiecredential
+                - name: EapCertificateCredential
                   href: /windows/win32/api/eaptypes/ns-eaptypes-eapcertificatecredential
-                - name: Eapcredential
+                - name: EapCredential
                   href: /windows/win32/api/eaptypes/ns-eaptypes-eapcredential
                 - name: EAP_PEER_METHOD_ROUTINES
                   href: /windows/win32/api/eapmethodpeerapis/ns-eapmethodpeerapis-eap_peer_method_routines
-                - name: Eappeermethodoutput
+                - name: EapPeerMethodOutput
                   href: /windows/win32/api/EapAuthenticatorActionDefine/ns-eapauthenticatoractiondefine-eappeermethodoutput
-                - name: Eappeermethodresult
+                - name: EapPeerMethodResult
                   href: /windows/win32/api/eapmethodpeerapis/ns-eapmethodpeerapis-eappeermethodresult
-                - name: Eapsimcredential
+                - name: EapSimCredential
                   href: /windows/win32/api/eaptypes/ns-eaptypes-eapsimcredential
-                - name: Eapusernamepasswordcredential
+                - name: EapUsernamePasswordCredential
                   href: /windows/win32/api/eaptypes/ns-eaptypes-eapusernamepasswordcredential
         - name: EAPHost-Authenticator-Methoden-APIs
           href: eaphost-authenticator-method-apis.md
           items:
-            - name: EAPHost-Authenticator-Methoden Funktionen
+            - name: EAPHost-Authenticator-Methodenfunktionen
               href: eap-host-authenticator-method-functions.md
               items:
-                - name: Eapmethodauthentigorbeginsession
+                - name: EapMethodAuthenticatorBeginSession
                   href: /windows/desktop/api/eapmethodauthenticatorapis/nf-eapmethodauthenticatorapis-eapmethodauthenticatorbeginsession
-                - name: Eapmethodauthentianorendsession
+                - name: EapMethodAuthenticatorEndSession
                   href: /windows/desktop/api/eapmethodauthenticatorapis/nf-eapmethodauthenticatorapis-eapmethodauthenticatorendsession
-                - name: Eapmethodauthentietorfreerrormemory
+                - name: EapMethodAuthenticatorFreeErrorMemory
                   href: /windows/desktop/api/eapmethodauthenticatorapis/nf-eapmethodauthenticatorapis-eapmethodauthenticatorfreeerrormemory
-                - name: Eapmethodauthentitororgetattributes
+                - name: EapMethodAuthenticatorGetAttributes
                   href: /windows/desktop/api/eapmethodauthenticatorapis/nf-eapmethodauthenticatorapis-eapmethodauthenticatorgetattributes
-                - name: Eapmethodauthenticatcher-Speicher
+                - name: EapMethodAuthenticatorFreeMemory
                   href: /windows/desktop/api/eapmethodauthenticatorapis/nf-eapmethodauthenticatorapis-eapmethodauthenticatorfreememory
-                - name: Eapmethodauthentiaseorgetinfo
+                - name: EapMethodAuthenticatorGetInfo
                   href: /windows/desktop/api/eapmethodauthenticatorapis/nf-eapmethodauthenticatorapis-eapmethodauthenticatorgetinfo
-                - name: Eapmethodauthentianorgetresult
+                - name: EapMethodAuthenticatorGetResult
                   href: /windows/desktop/api/eapmethodauthenticatorapis/nf-eapmethodauthenticatorapis-eapmethodauthenticatorgetresult
-                - name: Eapmethodauthentianorinitialize
+                - name: EapMethodAuthenticatorInitialize
                   href: /windows/desktop/api/eapmethodauthenticatorapis/nf-eapmethodauthenticatorapis-eapmethodauthenticatorinitialize
-                - name: Eapmethodauthentipeorinvokeconfigui
+                - name: EapMethodAuthenticatorInvokeConfigUI
                   href: /windows/desktop/api/eapmethodauthenticatorapis/nf-eapmethodauthenticatorapis-eapmethodauthenticatorinvokeconfigui
-                - name: Eapmethodauthenti. receivepacket
+                - name: EapMethodAuthenticatorReceivePacket
                   href: /windows/desktop/api/eapmethodauthenticatorapis/nf-eapmethodauthenticatorapis-eapmethodauthenticatorreceivepacket
-                - name: Eapmethodauthentianorsendpacket
+                - name: EapMethodAuthenticatorSendPacket
                   href: /windows/desktop/api/eapmethodauthenticatorapis/nf-eapmethodauthenticatorapis-eapmethodauthenticatorsendpacket
-                - name: Eapmethodauthentitoror\tattributes
+                - name: EapMethodAuthenticatorSetAttributes
                   href: /windows/desktop/api/eapmethodauthenticatorapis/nf-eapmethodauthenticatorapis-eapmethodauthenticatorsetattributes
-                - name: Eapmethodauthenti| Herunterfahren
+                - name: EapMethodAuthenticatorShutdown
                   href: /windows/desktop/api/eapmethodauthenticatorapis/nf-eapmethodauthenticatorapis-eapmethodauthenticatorshutdown
-                - name: Eapmethodauthentianorupdateinnermethodparametriams
+                - name: EapMethodAuthenticatorUpdateInnerMethodParams
                   href: /windows/desktop/api/eapmethodauthenticatorapis/nf-eapmethodauthenticatorapis-eapmethodauthenticatorupdateinnermethodparams
-            - name: EAPHost-Authentifikator-Methoden Enumerationen
+            - name: EAPHost-Authenticator-Methodenenumeration
               href: eap-host-authenticator-method-enumerations.md
               items:
                 - name: EAP_AUTHENTICATOR_SEND_TIMEOUT
                   href: /windows/win32/api/eapAuthenticatorTypes/ne-eapauthenticatortypes-eap_authenticator_send_timeout
                 - name: EAP_METHOD_AUTHENTICATOR_RESPONSE_ACTION
                   href: /windows/win32/api/EapAuthenticatorActionDefine/ne-eapauthenticatoractiondefine-eap_method_authenticator_response_action
-            - name: EAPHost-Authenticator-Methoden Strukturen
+            - name: EAPHost-Authenticator-Methodenstrukturen
               href: eap-host-authenticator-method-structures.md
               items:
                 - name: EAP_AUTHENTICATOR_METHOD_ROUTINES

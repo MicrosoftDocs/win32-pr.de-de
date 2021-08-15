@@ -1,7 +1,7 @@
 ---
-description: Mit der Funktion "-Funktion" wird Netzwerkmonitor benachrichtigt, dass ein bestimmter Protokoll Parser vorhanden ist.
+description: Die CreateProtocol-Funktion benachrichtigt Netzwerkmonitor, dass ein bestimmter Protokollparser vorhanden ist.
 ms.assetid: 13ae261f-b1c0-4afc-b718-d64b3d4ec5ee
-title: Funktion "up Protocol" (Netmon. h)
+title: CreateProtocol-Funktion (Netmon.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,16 +13,16 @@ api_type:
 - DllExport
 api_location:
 - Nmapi.dll
-ms.openlocfilehash: 0b35f9505758256750ae02d24d6c2a84ed0646b1
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 173f744406ef2b360c0af7158e397c2001f146b9f2339bf6aaf3468b9a1465dd
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "104131857"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117796351"
 ---
-# <a name="createprotocol-function"></a>Funktion "up Protocol"
+# <a name="createprotocol-function"></a>CreateProtocol-Funktion
 
-Mit **der Funktion** "-Funktion" wird Netzwerkmonitor benachrichtigt, dass ein bestimmter Protokoll Parser vorhanden ist.
+Die **CreateProtocol-Funktion** benachrichtigt Netzwerkmonitor, dass ein bestimmter Protokollparser vorhanden ist.
 
 ## <a name="syntax"></a>Syntax
 
@@ -41,24 +41,24 @@ HPROTOCOL WINAPI CreateProtocol(
 
 <dl> <dt>
 
-*ProtocolName* \[ in\]
+*ProtocolName* \[ In\]
 </dt> <dd>
 
-Der Name des Protokolls, das vom Parser erkannt wird.
+Der Name des Protokolls, das der Parser erkennt.
 
 </dd> <dt>
 
-*lpentrypoints* \[ in\]
+*lpEntryPoints* \[ In\]
 </dt> <dd>
 
-Eine [entryPoints](entrypoints.md) -Struktur, die die verbleibenden Parser-DLL-Einstiegspunkte enthält. In den Hinweisen finden Sie eine Liste der Exportfunktionen, auf die jeder Einstiegspunkt verweist. Einstiegspunkte müssen in der Reihenfolge angegeben werden, in der die **entryPoints** -Struktur angegeben ist.
+Eine [ENTRYPOINTS-Struktur,](entrypoints.md) die die verbleibenden Parser-DLL-Einstiegspunkte enthält. Eine Liste der Exportfunktionen, auf die jeder Einstiegspunkt verweist, finden Sie unter Hinweise. Einstiegspunkte müssen in der Reihenfolge angegeben werden, in der die **ENTRYPOINTS-Struktur** angibt.
 
 </dd> <dt>
 
-*cbentrypoints* \[ in\]
+*cbEntryPoints* \[ In\]
 </dt> <dd>
 
-Die Größe der **entryPoints** -Struktur. Netzwerkmonitor stellt ein Makro der entryPoints- \_ Größe bereit, mit dem Sie die Größe der Struktur angeben können.
+Die Größe der **ENTRYPOINTS-Struktur.** Netzwerkmonitor stellt ein ENTRYPOINTS \_ SIZE-Makro bereit, mit dem Sie die Größe der Struktur angeben können.
 
 </dd> </dl>
 
@@ -66,26 +66,26 @@ Die Größe der **entryPoints** -Struktur. Netzwerkmonitor stellt ein Makro der 
 
 Wenn die Funktion erfolgreich ist, ist der Rückgabewert ein Handle für das Protokoll.
 
-Wenn die Funktion nicht erfolgreich ist, ist der Rückgabewert **null**.
+Wenn die Funktion nicht erfolgreich ist, ist der Rückgabewert **NULL.**
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Die Parser-DLL ruft während der Implementierung von [DllMain](dllmain-parser.md)" **kreateprotocol** " auf. Die **Funktion "** Funktion" wird aufgerufen, wenn das Betriebssystem die Parser-DLL zum ersten Mal lädt.
+Die Parser-DLL ruft **CreateProtocol** während der Implementierung von [DllMain auf.](dllmain-parser.md) Die **CreateProtocol-Funktion** wird aufgerufen, wenn das Betriebssystem die Parser-DLL zum ersten Mal lädt.
 
-Die Einstiegspunkte, auf die im *lpentrypoints* -Parameter verwiesen wird, enthalten Verweise auf die folgenden Exportfunktionen, die in der hier dargestellten Reihenfolge bereitgestellt werden müssen.
+Die Einstiegspunkte, auf die im *lpEntryPoints-Parameter* verwiesen wird, enthalten Zeiger auf die folgenden Exportfunktionen, die in der hier angegebenen Reihenfolge bereitgestellt werden müssen.
 
 -   [Registrieren](register-parser.md)
 -   [Registrierung aufheben](deregister.md)
--   [Erkenzeframe](recognizeframe.md)
--   [Attachproperties](attachproperties.md)
--   [Formatproperties](formatproperties.md)
+-   [RecognizeFrame](recognizeframe.md)
+-   [AttachProperties](attachproperties.md)
+-   [FormatProperties](formatproperties.md)
 
 
 
 | Für Informationen zu                                                                                 | Siehe                                                     |
 |----------------------------------------------------------------------------------------------------|---------------------------------------------------------|
-| Welche Parser sind und wie Sie mit Netzwerkmonitor funktionieren.                                          | [Parser](parsers.md)                                  |
-| Zum Implementieren von **DllMain** ist ein Beispiel für das Aufrufen von **createprotocol** in **DllMain** enthalten. | [Implementieren von DllMain](implementing-dllmain-parser.md) |
+| Was Parser sind und wie sie mit Netzwerkmonitor arbeiten.                                          | [Parser](parsers.md)                                  |
+| Das Implementieren von **DllMain** enthält ein Beispiel für den Aufruf von **CreateProtocol** in **DllMain.** | [Implementieren von DllMain](implementing-dllmain-parser.md) |
 
 
 
@@ -99,13 +99,13 @@ Die Einstiegspunkte, auf die im *lpentrypoints* -Parameter verwiesen wird, entha
 |-------------------------------------|--------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional \[nur Desktop-Apps\]<br/>                           |
 | Unterstützte Mindestversion (Server)<br/> | Windows 2000 Server \[nur Desktop-Apps\]<br/>                                 |
-| Header<br/>                   | <dl> <dt>Netmon. h</dt> </dl>  |
-| Bibliothek<br/>                  | <dl> <dt>Nmapi. lib</dt> </dl> |
+| Header<br/>                   | <dl> <dt>Netmon.h</dt> </dl>  |
+| Bibliothek<br/>                  | <dl> <dt>Nmapi.lib</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>Nmapi.dll</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 

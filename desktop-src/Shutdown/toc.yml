@@ -1,37 +1,37 @@
 - name: Herunterfahren des Systems
   href: system-shutdown.md
   items:
-    - name: Änderungen am Herunterfahren für Windows Vista
+    - name: Herunterfahren von Änderungen für Windows Vista
       href: shutdown-changes-for-windows-vista.md
-    - name: Zum Herunterfahren des Systems
+    - name: Informationen zum Herunterfahren des Systems
       href: about-system-shutdown.md
       items:
         - name: Abmelden
           href: logging-off.md
-        - name: Wird heruntergefahren
+        - name: Herunterfahren
           href: shutting-down.md
         - name: Ereignisprotokollierung
           href: shutdown-event-tracker.md
-    - name: Verwenden des System herunter Fahrens
+    - name: Verwenden des Herunterfahrens des Systems
       href: using-system-shutdown.md
       items:
         - name: Herunterfahren des Systems
           href: how-to-shut-down-the-system.md
         - name: Abmelden des aktuellen Benutzers
           href: how-to-log-off-the-current-user.md
-        - name: Vorgehensweise beim Sperren der Arbeitsstation
+        - name: Sperren der Arbeitsstation
           href: how-to-lock-the-workstation.md
-        - name: Anzeigen des Dialog Felds "Herunterfahren"
+        - name: Anzeigen des Dialogfelds "Herunterfahren"
           href: displaying-the-shutdown-dialog-box.md
-    - name: Verweis auf System Herunterfahren
+    - name: Referenz zum Herunterfahren des Systems
       href: system-shutdown-reference.md
       items:
-        - name: SystemShutdown-Funktionen
+        - name: Funktionen zum Herunterfahren des Systems
           href: system-shutdown-functions.md
           items:
-            - name: Abortsystemshutdown
+            - name: AbortSystemShutdown
               href: /windows/desktop/api/Winreg/nf-winreg-abortsystemshutdowna
-            - name: Exitwindows
+            - name: ExitWindows
               href: /windows/desktop/api/Winuser/nf-winuser-exitwindows
             - name: ExitWindowsEx
               href: /windows/desktop/api/Winuser/nf-winuser-exitwindowsex
@@ -39,22 +39,22 @@
               href: /windows/desktop/api/Winreg/nf-winreg-initiateshutdowna
             - name: InitiateSystemShutdown
               href: /windows/desktop/api/Winreg/nf-winreg-initiatesystemshutdowna
-            - name: Initiatesystemshutdownetx
+            - name: InitiateSystemShutdownEx
               href: /windows/desktop/api/Winreg/nf-winreg-initiatesystemshutdownexa
-            - name: Lock Workstation
+            - name: LockWorkStation
               href: /windows/desktop/api/Winuser/nf-winuser-lockworkstation
-            - name: Shutdownblockreasoncreate
+            - name: ShutdownBlockReasonErstellung
               href: /windows/desktop/api/Winuser/nf-winuser-shutdownblockreasoncreate
-            - name: Shutdownblockreasondestroy
+            - name: ShutdownBlockReasonDestroy
               href: /windows/desktop/api/Winuser/nf-winuser-shutdownblockreasondestroy
-            - name: Shutdownblockreasonquery
+            - name: ShutdownBlockReasonQuery
               href: /windows/desktop/api/Winuser/nf-winuser-shutdownblockreasonquery
-        - name: Herunterfahren von System Meldungen
+        - name: Meldungen zum Herunterfahren des Systems
           href: system-shutdown-messages.md
           items:
             - name: WM_ENDSESSION
               href: wm-endsession.md
             - name: WM_QUERYENDSESSION
               href: wm-queryendsession.md
-        - name: Grund Codes zum Herunterfahren des Systems
+        - name: Grundcodes für das Herunterfahren des Systems
           href: system-shutdown-reason-codes.md

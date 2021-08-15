@@ -1,41 +1,41 @@
 ---
-description: Gibt an, ob ein Medien Beispiel nach einer Lücke im Stream das erste Beispiel ist.
+description: Gibt an, ob ein Medienbeispiel das erste Beispiel nach einer Lücke im Stream ist.
 ms.assetid: f9e1e700-9958-404d-8b83-08f846f5a1b0
-title: MFSampleExtension_Discontinuity-Attribut (mfapi. h)
+title: MFSampleExtension_Discontinuity -Attribut (Mfapi.h)
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 2e401a26c269a3b77d881bc74ae2c7b30d9d88f2
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 2ac76b8e4d220ece7c34277bfac031213c1c042615d7ca48677839e54b77e5da
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104527944"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118241080"
 ---
-# <a name="mfsampleextension_discontinuity-attribute"></a>Discontinuity-Attribut für MF SampleExtension \_
+# <a name="mfsampleextension_discontinuity-attribute"></a>MFSampleExtension \_ Discontinuity-Attribut
 
-Gibt an, ob ein Medien Beispiel nach einer Lücke im Stream das erste Beispiel ist.
+Gibt an, ob ein Medienbeispiel das erste Beispiel nach einer Lücke im Stream ist.
 
 ## <a name="data-type"></a>Datentyp
 
-**Bool** gespeichert als **UInt32**
+**BOOL als** **UINT32 gespeichert**
 
 ## <a name="getset"></a>Abrufen/Festlegen
 
-Um dieses Attribut abzurufen, nennen Sie [**imfattributes:: GetUINT32**](/windows/desktop/api/mfobjects/nf-mfobjects-imfattributes-getuint32).
+Um dieses Attribut zu erhalten, rufen [**Sie DIE ATTRIBUTEs::GetUINT32 auf.**](/windows/desktop/api/mfobjects/nf-mfobjects-imfattributes-getuint32)
 
-Um dieses Attribut festzulegen, nennen Sie [**imfattributes:: SetUINT32**](/windows/desktop/api/mfobjects/nf-mfobjects-imfattributes-setuint32).
+Rufen Sie ZUM Festlegen dieses [**Attributs DIE ATTRIBUTEs::SetUINT32 auf.**](/windows/desktop/api/mfobjects/nf-mfobjects-imfattributes-setuint32)
 
 ## <a name="applies-to"></a>Gilt für:
 
-[**IMF Sample**](/windows/desktop/api/mfobjects/nn-mfobjects-imfsample)
+[**VERERBUNGSample**](/windows/desktop/api/mfobjects/nn-mfobjects-imfsample)
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Dieses Attribut gilt für Medien Beispiele. Wenn dieses Attribut **true** ist, bedeutet dies, dass es eine Diskontinuität im Stream gab, und dieses Beispiel ist der erste, der nach der Lücke angezeigt wird.
+Dieses Attribut gilt für Medienbeispiele. Wenn dieses Attribut **TRUE ist,** bedeutet dies, dass es eine Diskontinuität im Stream gab, und dieses Beispiel ist das erste, das nach der Lücke angezeigt wird.
 
-Wenn dieses Attribut nicht festgelegt ist, ist der Standardwert **false**.
+Wenn dieses Attribut nicht festgelegt ist, ist der Standardwert **FALSE.**
 
-Die GUID-Konstante für dieses Attribut wird aus "mfuuid. lib" exportiert.
+Die GUID-Konstante für dieses Attribut wird aus mfuuid.lib exportiert.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -43,9 +43,9 @@ Die GUID-Konstante für dieses Attribut wird aus "mfuuid. lib" exportiert.
 
 | Anforderung | Wert |
 |-------------------------------------|------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Windows Vista \[ -Desktop-Apps \| UWP-apps\]<br/>                              |
-| Unterstützte Mindestversion (Server)<br/> | Windows Server 2008 \[ -Desktop-Apps \| UWP-apps\]<br/>                        |
-| Header<br/>                   | <dl> <dt>Mfapi. h</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows \[Vista-Desktop-Apps \| UWP-Apps\]<br/>                              |
+| Unterstützte Mindestversion (Server)<br/> | Windows UWP-Apps für Server \[ 2008-Desktop-Apps \|\]<br/>                        |
+| Header<br/>                   | <dl> <dt>Mfapi.h</dt> </dl> |
 
 
 
@@ -53,13 +53,13 @@ Die GUID-Konstante für dieses Attribut wird aus "mfuuid. lib" exportiert.
 
 <dl> <dt>
 
-[Alphabetische Liste der Media Foundation Attribute](alphabetical-list-of-media-foundation-attributes.md)
+[Alphabetische Liste Media Foundation Attribute](alphabetical-list-of-media-foundation-attributes.md)
 </dt> <dt>
 
-[Beispiel Attribute](sample-attributes.md)
+[Beispielattribute](sample-attributes.md)
 </dt> <dt>
 
-[Medien Beispiele](media-samples.md)
+[Medienbeispiele](media-samples.md)
 </dt> </dl>
 
  

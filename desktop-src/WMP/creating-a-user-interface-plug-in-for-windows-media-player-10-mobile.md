@@ -1,51 +1,51 @@
 ---
-title: Erstellen eines Benutzeroberflächen-Plug-Ins für Windows Media Player 10 Mobile
-description: Erstellen eines Benutzeroberflächen-Plug-Ins für Windows Media Player 10 Mobile
+title: Erstellen eines Benutzeroberfläche-Plug-Ins für Windows Media Player 10 Mobile
+description: Erstellen eines Benutzeroberfläche-Plug-Ins für Windows Media Player 10 Mobile
 ms.assetid: 050418b7-d99c-49ab-8ce6-6511b194ffe6
 keywords:
-- Windows Media Player Mobile, Plug-ins
-- Windows Media Player Mobile, Benutzerschnittstellen-Plug-ins
-- Mobile Windows Media Player-Plug-ins
-- Plug-ins, Benutzeroberfläche
-- Plug-ins, Windows Media Player Mobile
-- Plug-Ins für Benutzeroberflächen, Windows Media Player Mobile
-- UI-Plug-ins, Windows Media Player Mobile
+- Windows Media Player Mobil, Plug-Ins
+- Windows Media Player Mobile Plug-Ins, Benutzeroberflächen-Plug-Ins
+- Windows Media Player Mobile Plug-Ins
+- Plug-Ins, Benutzeroberfläche
+- Plug-Ins, Windows Media Player Mobile
+- Benutzeroberflächen-Plug-Ins,Windows Media Player Mobile
+- Benutzeroberflächen-Plug-Ins, Windows Media Player Mobile
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 7d649ef1d8ed1b8fb1e1b54dc7eed106f798b1ad
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: 40f75d18303953464dc7d16be14daeb60ffd34167507dc6344499cc8b0f3a97d
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "106338997"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117750477"
 ---
-# <a name="creating-a-user-interface-plug-in-for-windows-media-player-10-mobile"></a>Erstellen eines Benutzeroberflächen-Plug-Ins für Windows Media Player 10 Mobile
+# <a name="creating-a-user-interface-plug-in-for-windows-media-player-10-mobile"></a>Erstellen eines Benutzeroberfläche-Plug-Ins für Windows Media Player 10 Mobile
 
-Windows Media Player 10 Mobile verwendet das gleiche Benutzeroberflächen-Plug-in-Modell wie das Windows-Desktop Media Player. Windows Media Player 10 Mobile kann jedoch nur mit Plug-Ins für die Benutzeroberfläche von background interagieren. Aufgrund der ähnlichen Plug-in-Modelle gelten die gleichen API-Aufrufe, die für Plug-Ins für die Background-Benutzeroberfläche auf dem Desktop gelten, auch für Plug-ins der Background-Benutzeroberfläche auf einem Windows Mobile-Gerät.
+Windows Media Player 10 Mobile verwendet das gleiche Benutzeroberflächen-Plug-In-Modell wie das Desktop-Windows Media Player. Allerdings kann Windows Media Player 10 Mobile nur mit Benutzeroberflächen-Plug-Ins im Hintergrund interagieren. Aufgrund der ähnlichen Plug-In-Modelle gelten dieselben API-Aufrufe, die auch für Benutzeroberflächen-Plug-Ins im Hintergrund auf dem Desktop gelten, auch für Benutzeroberflächen-Plug-Ins im Hintergrund auf einem Windows Mobile-Gerät.
 
-In den folgenden Abschnitten wird beschrieben, wie Sie ein Plug-in für die Background-Benutzeroberfläche mithilfe des vom Assistenten generierten Codes im Assistenten für Windows-Media Player-Plug-ins erstellen.
+In den folgenden Abschnitten wird beschrieben, wie Sie ein Benutzeroberflächen-Plug-In im Hintergrund erstellen, indem Sie vom Assistenten generierten Code aus dem Windows Media Player Plug-In-Assistenten verwenden.
 
 
 
 | `Section`                                                                | BESCHREIBUNG                                                                                                                                            |
 |------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------|
-| [Erste Schritte](getting-started.md)                                 | Beschreibt, was Sie installieren müssen, und wie Sie den Windows Media Player-Plug-in-Assistenten verwenden, um die Erstellung eines Plug-Ins für die Benutzeroberfläche zu automatisieren.    |
-| [Ändern des vom Assistenten generierten Codes](modifying-wizard-generated-code.md) | Beschreibt, was Sie aus dem vom Assistenten generierten Code ändern müssen, der im vorherigen Abschnitt erstellt wurde, sodass er mit Windows Media Player 10 Mobile funktioniert. |
+| [Erste Schritte](getting-started.md)                                 | Beschreibt, was Sie installieren müssen und wie Sie den Windows Media Player Plug-In-Assistenten verwenden, um die Erstellung eines Benutzeroberflächen-Plug-Ins im Hintergrund zu automatisieren.    |
+| [Ändern von vom Assistenten generierten Code](modifying-wizard-generated-code.md) | Beschreibt, was Sie aus dem vom Assistenten generierten Code ändern müssen, der im vorherigen Abschnitt erstellt wurde, damit er mit Windows Media Player 10 Mobile funktioniert. |
 
 
 
- 
+ 
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
 <dl> <dt>
 
-[**Programmier Handbuch für Benutzeroberflächen-Plug-ins**](user-interface-plug-ins-programming-guide.md)
+[**Benutzeroberfläche Programmierhandbuch für Plug-Ins**](user-interface-plug-ins-programming-guide.md)
 </dt> </dl>
 
- 
+ 
 
- 
+ 
 
 
 

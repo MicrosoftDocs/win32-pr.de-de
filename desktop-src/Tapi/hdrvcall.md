@@ -1,19 +1,19 @@
 ---
-description: Der hdrvcalldatatype stellt ein nicht transparentes Handle eines Dienstanbietern für eine Aufrufe Datenstruktur dar. Der Dienstanbieter muss einen Wert dieses Typs in einen Verweis auf die entsprechende Datenstruktur Instanz auflösen.
+description: Der HDRVCALL-Datentyp stellt ein nicht transparentes Handle für Dienstanbieter für eine Aufrufdatenstruktur dar. Der Dienstanbieter muss einen Wert dieses Typs in einen Verweis auf die entsprechende Datenstrukturinstanz auflösen.
 ms.assetid: 57a5a1c5-db9e-4667-8dd4-a1c4b9098e1c
-title: Hdrvcall
+title: HDRVCALL
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 17640fdbaa3d93a9066b062c3419b643e52dd21a
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: cf0df769a2f59135dc0cfff691c8a52c522b1793fdb4124e3d8f37367ccaf463
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106345794"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117762934"
 ---
-# <a name="hdrvcall"></a>Hdrvcall
+# <a name="hdrvcall"></a>HDRVCALL
 
-Der [**hdrvcalldatatype**](hdrvline.md) stellt den nicht transparenten Handle eines Dienstanbieters für eine aufrufsdatenstruktur dar. Der Dienstanbieter muss einen Wert dieses Typs in einen Verweis auf die entsprechende Datenstruktur Instanz auflösen.
+Der [**HDRVCALL-Datentyp**](hdrvline.md) stellt das nicht transparente Handle eines Dienstanbieters für eine Aufrufdatenstruktur dar. Der Dienstanbieter muss einen Wert dieses Typs in einen Verweis auf die entsprechende Datenstrukturinstanz auflösen.
 
  
 

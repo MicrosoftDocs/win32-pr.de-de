@@ -1,54 +1,54 @@
 ---
-title: Dienste für den Ressourcenaustausch-Datei Format
-description: Dienste für den Ressourcenaustausch-Datei Format
+title: Formatdienste für Ressourcenaustauschdateien
+description: Formatdienste für Ressourcenaustauschdateien
 ms.assetid: 8526794b-7b40-470f-94f7-935d7dbf9151
 keywords:
-- Multimedia-Datei-e/a, Ressourcenaustausch Dateiformat (Riff)
-- Datei-e/a, Ressourcenaustausch Dateiformat (Riff)
-- Eingabe und Ausgabe (e/a), Ressourcenaustausch Dateiformat (Riff)
-- E/a (Eingabe und Ausgabe), Format der Ressourcenaustausch Datei (Riff)
-- mmioopen-Funktion
-- Format der Ressourcenaustausch Datei (Riff)
-- Riff (Ressourcenaustausch-Dateiformat)
-- Riff-e/a
-- Riff Block
+- Multimediadatei-E/A, Resource Interchange File Format (DOSSIER)
+- Datei-E/A, Resource Interchange File Format (DOSSIER)
+- Eingabe und Ausgabe (E/A), Resource Interchange File Format (DOSSIER)
+- E/A (Eingabe und Ausgabe), Resource Interchange File Format (DOSSIER)
+- mmioOpen-Funktion
+- Resource Interchange File Format (DOSSIER)
+- PROTOKOLLDATEI (Resource Interchange File Format)
+- IGE E/A
+- UNK-Block
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 50cca3792ccded248951065c7b69f2e50d27e0ba
-ms.sourcegitcommit: ebd3ce6908ff865f1ef66f2fc96769be0aad82e1
+ms.openlocfilehash: 5967165996b2a7fb9ed9b40c9a1f3c5608cd3bb4eb1e6cf05ae351f6ce6f2a7d
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/19/2020
-ms.locfileid: "104314679"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117801927"
 ---
-# <a name="resource-interchange-file-format-services"></a>Dienste für den Ressourcenaustausch-Datei Format
+# <a name="resource-interchange-file-format-services"></a>Formatdienste für Ressourcenaustauschdateien
 
-Das bevorzugte Format für Multimedia-Dateien ist das Ressourcenaustausch Dateiformat (Riff). Die Datei-e/a-Funktionen der Riff Datei funktionieren mit den grundlegenden gepufferten und nicht gepufferten Datei-e/a Sie können die Riff Dateien auf die gleiche Weise wie andere Dateitypen öffnen, lesen und schreiben. Ausführliche Informationen zu Riff finden Sie unter [avifile-Funktionen und-Makros](avifile-functions-and-macros.md).
+Das bevorzugte Format für Multimediadateien ist das RESOURCE INTERCHANGE-Dateiformat (RESOURCE Interchange File Format). Die PROTOKOLLDATEI-E/A-Funktionen funktionieren mit den grundlegenden gepufferten und nicht gepufferten Datei-E/A-Diensten. Sie können CSV-Dateien auf die gleiche Weise wie andere Dateitypen öffnen, lesen und schreiben. Ausführliche Informationen zu CSV finden Sie unter [AVIFile Functions and Macros ( AVIFile-Funktionen und -Makros).](avifile-functions-and-macros.md)
 
-In den Riff Dateien werden vier Zeichen Codes verwendet, um Dateielemente zu identifizieren. Diese Codes sind 32-Bit-Mengen, die eine Sequenz von einem bis vier alphanumerischen ASCII-Zeichen darstellen, die auf der rechten Seite mit Leerzeichen aufgefüllt werden. Der Datentyp für vier Zeichen Codes ist **FourCC**. Verwenden Sie das [**mmiofourcc**](/windows/win32/api/vfw/nf-vfw-mmiofourcc) -Makro, um vier Zeichen in einen vierstelligen Code zu konvertieren. Verwenden Sie die [**mmiostringdefourcc**](/windows/win32/api/mmiscapi/nf-mmiscapi-mmiostringtofourcc) -Funktion, um eine mit NULL endende Zeichenfolge in einen aus vier Zeichen bestehende Code zu konvertieren.
+FÜR DATEIEN werden Vier-Zeichen-Codes verwendet, um Dateielemente zu identifizieren. Diese Codes sind 32-Bit-Mengen, die eine Sequenz von ein bis vier alphanumerischen ASCII-Zeichen darstellen, die auf der rechten Seite mit Leerzeichen aufgefüllt sind. Der Datentyp für Vier-Zeichen-Codes ist **FOURCC.** Verwenden Sie das [**MmioFOURCC-Makro,**](/windows/win32/api/vfw/nf-vfw-mmiofourcc) um vier Zeichen in einen vierstelligen Code zu konvertieren. Verwenden Sie die [**MmioStringToFOURCC-Funktion,**](/windows/win32/api/mmiscapi/nf-mmiscapi-mmiostringtofourcc) um eine auf NULL endende Zeichenfolge in einen vierstelligen Code zu konvertieren.
 
-Der grundlegende *Baustein einer Riff Datei ist ein Segment*. Ein Block ist eine logische Einheit von Multimedia-Daten, wie z. b. einem einzelnen Frame in einem Videoclip. Jeder Block enthält die folgenden Felder:
+Der grundlegende Baustein einer CSV-Datei ist ein *Block*. Ein Block ist eine logische Einheit von Multimediadaten, z. B. ein einzelner Frame in einem Videoclip. Jeder Block enthält die folgenden Felder:
 
--   Ein aus vier Zeichen bestehende Code, der den Block Bezeichner angibt.
--   Ein Double Word-Wert, der die Größe des Datenelements im Block angibt.
+-   Ein vierstelliger Code, der den Blockbezeichner angibt
+-   Ein Doublewordwert, der die Größe des Datenmembers im Block angibt.
 -   Ein Datenfeld
 
-Die folgende Abbildung zeigt einen "Riff"-Block, der zwei Teilsegmente enthält.
+Die folgende Abbildung zeigt einen BLOCK "CSV", der zwei Teilblöcke enthält.
 
-![der Riff Block, der zwei unter Segmente enthält.](images/mmio1.gif)
+![Chunk, der zwei Teilblöcke enthält Bild](images/mmio1.gif)
 
-Ein Block, der in einem anderen Block enthalten ist, ist ein *Teil*. Die einzigen Blöcke, die Teilsegmente enthalten dürfen, sind diejenigen mit dem Block Bezeichner "Riff" oder "List". Ein Block, der einen anderen Block enthält, wird als über *geordneter* Block bezeichnet. Der erste Block in einer Riff Datei muss ein "Riff"-Block sein. Alle anderen Blöcke in der Datei sind Teilsegmente des "Riff"-Blocks.
+Ein Block, der in einem anderen Block enthalten ist, ist ein *Unterkunk.* Die einzigen Blöcke, die Teilblöcke enthalten dürfen, sind diejenigen mit dem Blockbezeichner "CSV" oder "LIST". Ein Block, der einen anderen Block enthält, wird als *übergeordneter Block* bezeichnet. Der erste Block in einer CSV-Datei muss ein "DOSSIER"-Block sein. Alle anderen Blöcke in der Datei sind Teilblöcke des Segmentes "CSV".
 
-"Riff"-Blöcke enthalten ein zusätzliches Feld in den ersten vier Bytes des Daten Felds. Dieses zusätzliche Feld stellt den *Formulartyp* des Felds bereit. Der Formulartyp ist ein aus vier Zeichen bestehende Code, der das Format der in der Datei gespeicherten Daten identifiziert. Beispielsweise weisen Microsoft Waveform-Audiodateien den Formulartyp "Wave" auf.
+"IGE"-Blöcke enthalten ein zusätzliches Feld in den ersten vier Bytes des Datenfelds. Dieses zusätzliche Feld stellt den *Formulartyp* des Felds bereit. Der Formulartyp ist ein vierstelliger Code, der das Format der in der Datei gespeicherten Daten identifiziert. Beispielsweise weisen Microsoft Waveform-Audiodateien den Formulartyp "WAVE" auf.
 
-"List"-Blöcke enthalten auch ein zusätzliches Feld in den ersten vier Bytes des Daten Felds. Dieses zusätzliche Feld enthält den *Listentyp* des Felds. Der Listentyp ist ein aus vier Zeichen bestehende Code, der den Inhalt der Liste identifiziert. Beispielsweise kann ein "List"-Block mit dem Listentyp "Info" "iCop"-und "ICRD"-Blöcke enthalten, die Informationen zu Urheberrechten und Erstellungsdatum enthalten. In der folgenden Abbildung ist ein "Riff"-Block dargestellt, der einen "List"-Block und einen anderen Unterbereich enthält (der "List"-Block enthält zwei Teilsegmente).
+"LIST"-Blöcke enthalten auch ein zusätzliches Feld in den ersten vier Bytes des Datenfelds. Dieses zusätzliche Feld enthält den *Listentyp* des Felds. Der Listentyp ist ein vierstelliger Code, der den Inhalt der Liste identifiziert. Beispielsweise kann ein "LIST"-Block mit dem Listentyp "INFO" "ICOP" und "ICRD"-Blöcke enthalten, die Copyright- und Erstellungsdatumsinformationen bereitstellen. Die folgende Abbildung zeigt einen BLOCK "BESTEHT", der einen "LIST"-Block und einen anderen Unterchunk enthält (der "LIST"-Block enthält zwei Unterblöcke).
 
-![der Riff Block, der ein Listen Segment Bild enthält.](images/mmio2.gif)
+![Chunk, der ein Listenblöckenbild enthält](images/mmio2.gif)
 
-Multimedia-Datei-e/a-Dienste enthalten zwei Funktionen, die Sie verwenden können, um zwischen Blöcken in einer Riff Datei zu navigieren: [**mmioascend**](/windows/win32/api/mmiscapi/nf-mmiscapi-mmioascend) und [**mmioabstieg**](/windows/win32/api/mmiscapi/nf-mmiscapi-mmiodescend). Sie können diese Funktionen als Suchfunktionen auf hoher Ebene verwenden. Wenn Sie in einen Block absteigen, wird die Dateiposition auf das Datenfeld des Blocks (8 Bytes vom Anfang des Blocks) festgelegt. Für die Blöcke "Riff" und "List" wird die Dateiposition auf den Speicherort festgelegt, der auf den Typ oder den Auflistungstyp folgt (12 Bytes vom Anfang des Blocks). Wenn Sie aus einem Block aufsteigen, wird die Dateiposition auf den Speicherort festgelegt, der dem Ende des Blocks folgt.
+Multimediadatei-E/A-Dienste enthalten zwei Funktionen, mit denen Sie zwischen Blöcken in einer PROTOKOLLDATEI navigieren können: [**mmioAscend**](/windows/win32/api/mmiscapi/nf-mmiscapi-mmioascend) und [**mmioDescend**](/windows/win32/api/mmiscapi/nf-mmiscapi-mmiodescend). Sie können diese Funktionen als Suchfunktionen auf hoher Ebene verwenden. Wenn Sie in einen Block absteigen, wird die Dateiposition auf das Datenfeld des Blockes festgelegt (8 Bytes vom Anfang des Blockes). Für die Blöcke "ERFOLGT" und "LIST" wird die Dateiposition auf den Speicherort festgelegt, der dem Formulartyp oder Listentyp folgt (12 Bytes vom Anfang des Blöckes). Wenn Sie aus einem Block aufsteigen, wird die Dateiposition auf den Speicherort nach dem Ende des Blockes festgelegt.
 
-Um einen neuen Block zu erstellen, verwenden Sie die [**mmiokreatechunk**](/windows/win32/api/mmiscapi/nf-mmiscapi-mmiocreatechunk) -Funktion, um einen Block Header an der aktuellen Position in einer geöffneten Datei zu schreiben. Die Funktionen **mmioascend**, **mmiodescenund** **mmiokreatechunk** verwenden die [**mmckinfo**](/windows/win32/api/mmiscapi/ns-mmiscapi-mmckinfo) -Struktur zum angeben und Abrufen von Informationen zu "Riff"-Blöcken.
+Um einen neuen Block zu erstellen, verwenden Sie die [**mmioCreateChunk-Funktion,**](/windows/win32/api/mmiscapi/nf-mmiscapi-mmiocreatechunk) um einen Blockheader an der aktuellen Position in einer geöffneten Datei zu schreiben. Die **MmioAscend-,** **mmioDescend-** und **mmioCreateChunk-Funktionen** verwenden die [**MMCKINFO-Struktur,**](/windows/win32/api/mmiscapi/ns-mmiscapi-mmckinfo) um Informationen zu DEN SEGMENTEN anzugeben und abzurufen.
 
- 
+ 
 
- 
+ 

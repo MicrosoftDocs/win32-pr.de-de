@@ -1,9 +1,9 @@
 ---
 title: appobject-Attribut
-description: Das Attribut \ appobject \ identifiziert die Co-Klasse als Anwendungs Objekt, das einer vollständigen exe-Anwendung zugeordnet ist.
+description: Das Attribut \appobject\ identifiziert die Co-Klasse als Anwendungsobjekt, das einer vollständigen EXE-Anwendung zugeordnet ist.
 ms.assetid: f4fcdf55-7431-4d66-8a46-f741c52fbe56
 keywords:
-- appobject-Attribut-Mittel l
+- appobject-Attribut MIDL
 topic_type:
 - apiref
 api_name:
@@ -12,16 +12,16 @@ api_type:
 - NA
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: f0d937d4a83306bc0c29f3c8c806bc043febec6a
-ms.sourcegitcommit: ebd3ce6908ff865f1ef66f2fc96769be0aad82e1
+ms.openlocfilehash: f54cbe8d5c1c7a573216ae9cb55075ba3b3766d0d8c7898233be9364488131e4
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/19/2020
-ms.locfileid: "104390201"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117808332"
 ---
 # <a name="appobject-attribute"></a>appobject-Attribut
 
-Das **\[ appobject \]** -Attribut identifiziert die [**Co-Klasse**](coclass.md) als Anwendungs Objekt, das einer vollständigen exe-Anwendung zugeordnet ist.
+Das **\[ attribut \] appobject** identifiziert die [**Co-Klasse**](coclass.md) als Anwendungsobjekt, das einer vollständigen EXE-Anwendung zugeordnet ist.
 
 ``` syntax
 [
@@ -39,39 +39,39 @@ coclass classname
 
 <dl> <dt>
 
-*UUID-Nummer* 
+*uuid-number* 
 </dt> <dd>
 
-Gibt eine universell eindeutige Identifikationsnummer für die [**Co-Klasse**](coclass.md)an.
+Gibt eine universell eindeutige ID für die [**Co-Klasse an.**](coclass.md)
 
 </dd> <dt>
 
-*coclass-Attribute-List* 
+*coclass-attribute-list* 
 </dt> <dd>
 
-Gibt 0 (null) oder mehr Attribute an, die für die [**Co-Klasse**](coclass.md) -Anweisung gelten. Zulässige **Co-Klasse** -Attribute sind [**\[ HelpString \]**](helpstring.md), [**\[ HelpContext \]**](helpcontext.md), [**\[ lizenziert \]**](licensed.md), [**\[ Version \]**](version.md), [**\[ Control \]**](control.md)und [**\[ Hidden \]**](hidden.md).
+Gibt null oder mehr Attribute an, die für die [**coclass-Anweisung gelten.**](coclass.md) Zulässige **Co-Klasse-Attribute** sind [**\[ \] helpstring,**](helpstring.md) [**\[ helpcontext, \]**](helpcontext.md) [**\[ lizenziert, \]**](licensed.md) [**\[ version, \]**](version.md) [**\[ control \]**](control.md)und [**\[ hidden. \]**](hidden.md)
 
 </dd> <dt>
 
 *classname* 
 </dt> <dd>
 
-Gibt den Namen an, mit dem das Komponenten Objekt in der Typbibliothek bekannt ist.
+Gibt den Namen an, unter dem das Komponentenobjekt in der Typbibliothek bekannt ist.
 
 </dd> <dt>
 
-*Co-Klassendefinition* 
+*Co-Klasse-Definition* 
 </dt> <dd>
 
-Gibt die-Anweisungen an, die die [**Co-Klassen**](coclass.md) Definition bilden.
+Gibt Anweisungen an, aus denen sich die [**Co-Klasse-Definition**](coclass.md) zusammengibt.
 
 </dd> </dl>
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Das **\[ appobject \]** -Attribut gibt auch an, dass die Funktionen und Eigenschaften der [**Co-Klasse**](coclass.md) in der aktuellen Typbibliothek global verfügbar sind.
+Das **\[ attribut \] appobject** gibt auch an, dass die Funktionen und Eigenschaften der [**Co-Klasse**](coclass.md) global in der aktuellen Typbibliothek verfügbar sind.
 
-Die TYPEFLAG-Darstellung für dieses Attribut ist "TYPEFLAG \_ fappobject".
+Die Typflagdarstellung für dieses Attribut ist TYPEFLAG \_ FAPPOBJECT.
 
 ## <a name="examples"></a>Beispiele
 
@@ -95,10 +95,10 @@ coclass Hello
 [**coclass**](coclass.md)
 </dt> <dt>
 
-[**Steuerelement**](control.md)
+[**Steuerung**](control.md)
 </dt> <dt>
 
-[Erstellen einer Typbibliothek mit "Mittel l"](generating-a-type-library-with-midl-2.md)
+[Generieren einer Typbibliothek mit MIDL](generating-a-type-library-with-midl-2.md)
 </dt> <dt>
 
 [**helpstring**](helpstring.md)
@@ -107,24 +107,24 @@ coclass Hello
 [**helpcontext**](helpcontext.md)
 </dt> <dt>
 
-[**verbirgt**](hidden.md)
+[**Versteckte**](hidden.md)
 </dt> <dt>
 
-[**lizenziert**](licensed.md)
+[**Lizenziert**](licensed.md)
 </dt> <dt>
 
-[Beispiel für eine ODL-Datei](/previous-versions/windows/desktop/automat/odl-file-example)
+[ODL-Dateibeispiel](/previous-versions/windows/desktop/automat/odl-file-example)
 </dt> <dt>
 
-[Syntax der ODL-Datei](/previous-versions/windows/desktop/automat/odl-file-syntax)
+[ODL-Dateisyntax](/previous-versions/windows/desktop/automat/odl-file-syntax)
 </dt> <dt>
 
-[FUNCFLAGS](/windows/win32/api/oaidl/ne-oaidl-typeflags)
+[Typeflags](/windows/win32/api/oaidl/ne-oaidl-typeflags)
 </dt> <dt>
 
 [**Version**](version.md)
 </dt> </dl>
 
- 
+ 
 
- 
+ 

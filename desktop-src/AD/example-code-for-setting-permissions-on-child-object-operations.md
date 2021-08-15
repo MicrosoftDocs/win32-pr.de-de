@@ -1,22 +1,22 @@
 ---
-title: Beispiel Code für das Festlegen von Berechtigungen für untergeordnete Objekt Vorgänge
-description: Im folgenden C-und C++-Codebeispiel wird ein ACE erstellt, der dem angegebenen Vertrauens nehmer Erstellungs Rechte für Benutzer Objekte zuweist.
+title: Beispielcode zum Festlegen von Berechtigungen für Vorgänge untergeordneter Objekte
+description: Im folgenden C- und C++-Codebeispiel wird ein ACE erstellt, der dem angegebenen Vertrauensnehmer Erstellungsrechte für Benutzerobjekte zuweist.
 ms.assetid: 51010092-fa85-4f9c-8869-97fed30acc7f
 ms.tgt_platform: multiple
 keywords:
-- Active Directory Beispiele Active Directory, Festlegen von Berechtigungen für untergeordnete Objekt Vorgänge
+- 'Active Directory-Beispiele: Active Directory, Festlegen von Berechtigungen für Vorgänge untergeordneter Objekte'
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 7db12576aa9b5ba151ced08a98452759cc67e8bb
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: e53c2862ea645030af2ffb1f69e35c53f765588959dec945a31b8f6d6ce8ef6c
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "103855439"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118190088"
 ---
-# <a name="example-code-for-setting-permissions-on-child-object-operations"></a>Beispiel Code für das Festlegen von Berechtigungen für untergeordnete Objekt Vorgänge
+# <a name="example-code-for-setting-permissions-on-child-object-operations"></a>Beispielcode zum Festlegen von Berechtigungen für Vorgänge untergeordneter Objekte
 
-Im folgenden C-und C++-Codebeispiel wird ein ACE erstellt, der dem angegebenen Vertrauens nehmer Erstellungs Rechte für Benutzer Objekte zuweist.
+Im folgenden C- und C++-Codebeispiel wird ein ACE erstellt, der dem angegebenen Vertrauensnehmer Erstellungsrechte für Benutzerobjekte zuweist.
 
 
 ```C++
@@ -129,9 +129,9 @@ HRESULT CreateAceCreateUsers(LPWSTR pwszTrustee, BOOL fAllowed, IDispatch **ppDi
 
 
 
- 
+ 
 
- 
+ 
 
 
 

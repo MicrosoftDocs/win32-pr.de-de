@@ -1,52 +1,52 @@
 ---
-title: Programmier Handbuch zur benutzerdefinierten Visualisierung
-description: Programmier Handbuch zur benutzerdefinierten Visualisierung
+title: Programmierhandbuch für benutzerdefinierte Visualisierungen
+description: Programmierhandbuch für benutzerdefinierte Visualisierungen
 ms.assetid: a4e670b2-b70a-4f6b-8fc3-c4f5d855d723
 keywords:
-- Windows Media Player, Visualisierungen
-- Windows Media Player-Plug-ins, Visualisierungen
-- Plug-ins, Visualisierungen
-- Visualisierungen, Programmier Handbuch
-- benutzerdefinierte Visualisierungen, Programmier Handbuch
-- Programmier Handbuch, Visualisierungen
-- Visualisierungen, Rendering-Funktion
-- benutzerdefinierte Visualisierungen, Rendering-Funktion
-- Funktion "Rendering", Programmier Handbuch
+- Windows Media Player,Visualisierungen
+- Windows Media Player Plug-Ins,Visualisierungen
+- Plug-Ins, Visualisierungen
+- Visualisierungen,Programmierhandbuch
+- Benutzerdefinierte Visualisierungen, Programmierhandbuch
+- Programmierhandbuch,Visualisierungen
+- Visualisierungen,Render-Funktion
+- Benutzerdefinierte Visualisierungen, Renderfunktion
+- Renderfunktion, Programmierhandbuch
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 89e870915ec0052e8596708809c4151edc865fcb
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: a7481a34e09f2271a8bf9377ce7a92339198b985381b3fa2e277bcb6adbcab6a
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "106342035"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117750366"
 ---
-# <a name="custom-visualization-programming-guide"></a>Programmier Handbuch zur benutzerdefinierten Visualisierung
+# <a name="custom-visualization-programming-guide"></a>Programmierhandbuch für benutzerdefinierte Visualisierungen
 
-Das Schreiben Ihrer eigenen Visualisierung ist so einfach wie das Implementieren der Funktion " **Rendering** ", das Ändern von voreingestellten Informationen und das Erstellen der dll.
+Das Schreiben einer eigenen Visualisierung  ist so einfach wie das Implementieren der Render-Funktion, das Ändern von voreingestellten Informationen und das Erstellen Ihrer DLL.
 
-Im folgenden Thema wird beschrieben, wie eine Beispiel Visualisierung erstellt wird.
+Im folgenden Thema wird das Erstellen einer Beispielvisualisierung beschrieben.
 
 
 
 | Thema                                  | BESCHREIBUNG                                     |
 |----------------------------------------|-------------------------------------------------|
-| [Das Glüh Beispiel](the-glow-sample.md) | Beschreibt, wie eine einfache Visualisierung erstellt wird. |
+| [The Glow Sample](the-glow-sample.md) | Beschreibt, wie eine einfache Visualisierung erstellt wird. |
 
 
 
- 
+ 
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
 <dl> <dt>
 
-[**Benutzerdefinierte Visualisierungen in Windows Media Player**](windows-media-player-custom-visualizations.md)
+[**Windows Media Player Benutzerdefinierte Visualisierungen**](windows-media-player-custom-visualizations.md)
 </dt> </dl>
 
- 
+ 
 
- 
+ 
 
 
 

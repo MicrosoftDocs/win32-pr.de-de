@@ -1,39 +1,39 @@
 ---
-description: Signalisiert, dass eine Medienquelle die Pufferung der Daten beendet hat.
+description: Signalisiert, dass die Pufferung von Daten durch eine Medienquelle beendet wurde.
 ms.assetid: 11b1290d-d462-4aa0-a358-b3f6447c99d8
-title: Mebufferingbeendete-Ereignis (mfobjects. h)
+title: MEBufferingStopped-Ereignis (Mfobjects.h)
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: e996ec160f57ec598196b388170741705adb9a8c
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 8e953ae5d7a79c04c33f4d0b4f9c87faa1e5798ed95d2d3bae29dbd0fab8b12a
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104344299"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117878082"
 ---
-# <a name="mebufferingstopped-event"></a>Mebufferingbeendete-Ereignis
+# <a name="mebufferingstopped-event"></a>MEBufferingStopped-Ereignis
 
-Signalisiert, dass eine Medienquelle die Pufferung der Daten beendet hat.
+Signalisiert, dass die Pufferung von Daten durch eine Medienquelle beendet wurde.
 
-Eine Medienquelle sendet diese Nachricht, wenn Sie das Puffern von Daten nach dem Senden des [mebufferingstarted](mebufferingstarted.md) -Ereignisses stoppt.
+Eine Medienquelle sendet dies, wenn die Pufferung von Daten nach dem Senden des [MEBufferingStarted-Ereignisses](mebufferingstarted.md) beendet wird.
 
-Bytestreams, die die [**IMF bytestreambufferate**](/windows/desktop/api/mfidl/nn-mfidl-imfbytestreambuffering) -Schnittstelle implementieren, senden ebenfalls dieses Ereignis.
+Bytestreams, die die [**INTERFACESByteStreamBuffering-Schnittstelle**](/windows/desktop/api/mfidl/nn-mfidl-imfbytestreambuffering) implementieren, senden auch dieses Ereignis.
 
 ## <a name="event-values"></a>Ereigniswerte
 
-Mögliche Werte, die von [**imfmediaevent:: GetValue**](/windows/desktop/api/mfobjects/nf-mfobjects-imfmediaevent-getvalue) abgerufen werden, sind folgende.
+Mögliche Werte, die von [**DERMEDIAEVENT::GetValue**](/windows/desktop/api/mfobjects/nf-mfobjects-imfmediaevent-getvalue) abgerufen werden, sind:
 
 
 
 | VARTYPE              | BESCHREIBUNG                           |
 |----------------------|---------------------------------------|
-| VT \_ leer<br/> | Keine Ereignisdaten.<br/> <br/> |
+| VT \_ EMPTY<br/> | Keine Ereignisdaten.<br/> <br/> |
 
 
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Wenn die Medien Sitzung dieses Ereignis empfängt, wird die Präsentations Uhr neu gestartet. Die Medien Sitzung leitet das Ereignis auch an die Anwendung weiter.
+Wenn die Mediensitzung dieses Ereignis empfängt, startet sie die Präsentationsuhr neu. Die Mediensitzung leitet das Ereignis auch an die Anwendung weiter.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -41,17 +41,17 @@ Wenn die Medien Sitzung dieses Ereignis empfängt, wird die Präsentations Uhr n
 
 | Anforderung | Wert |
 |-------------------------------------|----------------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>                                                           |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2008 \[ -Desktop-Apps\]<br/>                                                     |
-| Header<br/>                   | <dl> <dt>Mfobjects. h (Include mfdl. h)</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows \[Nur Vista-Desktop-Apps\]<br/>                                                           |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2008-Desktop-Apps\]<br/>                                                     |
+| Header<br/>                   | <dl> <dt>Mfobjects.h (include Mfidl.h)</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[Ereignisse Media Foundation](media-foundation-events.md)
+[Media Foundation Ereignisse](media-foundation-events.md)
 </dt> </dl>
 
  

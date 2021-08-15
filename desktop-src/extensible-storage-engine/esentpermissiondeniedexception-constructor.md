@@ -1,6 +1,6 @@
 ---
-description: 'Weitere Informationen finden Sie unter: esentpermissiondeniedexception-Konstruktor'
-title: Esentpermissiondeniedexception-Konstruktor
+description: 'Weitere Informationen zu: EsentPermissionDeniedException-Konstruktor'
+title: EsentPermissionDeniedException-Konstruktor
 TOCTitle: 'EsentPermissionDeniedException constructor '
 ms:assetid: M:Microsoft.Isam.Esent.Interop.EsentPermissionDeniedException.#ctor
 ms:mtpsurl: https://msdn.microsoft.com/library/microsoft.isam.esent.interop.esentpermissiondeniedexception.esentpermissiondeniedexception(v=EXCHG.10)
@@ -24,19 +24,19 @@ api_type:
 api_location:
 - Microsoft.Isam.Esent.Interop.dll
 ROBOTS: INDEX,FOLLOW
-ms.openlocfilehash: f0587c195fb07f734b48d1e977b1b842e2dc13fe
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 7f6d0dd2728cecea5579dd10d9d87c1452ddc9d875da5b91d733dd7c98877cfe
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "104529846"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118261026"
 ---
-# <a name="esentpermissiondeniedexception-constructor"></a>Esentpermissiondeniedexception-Konstruktor
+# <a name="esentpermissiondeniedexception-constructor"></a>EsentPermissionDeniedException-Konstruktor
 
-Initialisiert eine neue Instanz der esentpermissiondeniedexception-Klasse.
+Initialisiert eine neue Instanz der EsentPermissionDeniedException-Klasse.
 
-**Namespace:**  [Microsoft. ISAM. ESENT. Interop](./microsoft.isam.esent.interop-namespace.md)  
-**Assembly:**  Microsoft. ISAM. ESENT. Interop (in Microsoft.Isam.Esent.Interop.dll)
+**Namespace:**  [Microsoft.Isam.Esent.Interop](./microsoft.isam.esent.interop-namespace.md)  
+**Assembly:**  Microsoft.Isam.Esent.Interop (in Microsoft.Isam.Esent.Interop.dll)
 
 ## <a name="syntax"></a>Syntax
 
@@ -56,8 +56,8 @@ public EsentPermissionDeniedException()
 
 #### <a name="reference"></a>Referenz
 
-[Esentpermissiondeniedexception-Klasse](./esentpermissiondeniedexception-class.md)
+[EsentPermissionDeniedException-Klasse](./esentpermissiondeniedexception-class.md)
 
-[Esentpermissiondeniedexception-Elemente](./esentpermissiondeniedexception-members.md)
+[EsentPermissionDeniedException-Member](./esentpermissiondeniedexception-members.md)
 
-[Microsoft. ISAM. ESENT. Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)
+[Microsoft.Isam.Esent.Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)

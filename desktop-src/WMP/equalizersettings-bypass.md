@@ -1,9 +1,9 @@
 ---
-title: Equalizersettings. Bypass
-description: Mit dem Bypass-Attribut wird ein Wert angegeben oder abgerufen, der angibt, ob der Ausgleichs Filter im Filter Diagramm umgangen wird.
+title: EQUALIZERSETTINGS.bypass
+description: Das Bypass-Attribut gibt einen Wert an, der angibt, ob der Equalizerfilter im Filterdiagramm umgangen wird, oder ruft einen Wert ab.
 ms.assetid: b189a6f1-e0d0-4cfa-9a99-73d3ccd705e0
 keywords:
-- Equalizersettings. Bypass-Windows-Media Player
+- EQUALIZERSETTINGS.bypass Windows Media Player
 topic_type:
 - apiref
 api_name:
@@ -12,16 +12,16 @@ api_type:
 - NA
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: b78fe6f4ce7608ff02ecb5b125b00171610ec112
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 636995cd62c83f46f97ea7371257a5fdfc8f1c79fec1873b229f80d92be6335d
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106366994"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117748938"
 ---
-# <a name="equalizersettingsbypass"></a>Equalizersettings. Bypass
+# <a name="equalizersettingsbypass"></a>EQUALIZERSETTINGS.bypass
 
-Mit dem **Bypass** -Attribut wird ein Wert angegeben oder abgerufen, der angibt, ob der Ausgleichs Filter im Filter Diagramm umgangen wird.
+Das **Bypass-Attribut** gibt einen Wert an, der angibt, ob der Equalizerfilter im Filterdiagramm umgangen wird, oder ruft einen Wert ab.
 
 ``` syntax
         elementID.bypass
@@ -29,22 +29,22 @@ Mit dem **Bypass** -Attribut wird ein Wert angegeben oder abgerufen, der angibt,
 
 ## <a name="possible-values"></a>Mögliche Werte
 
-Dieses Attribut ist ein **boolescher** Wert mit Lese-/Schreibzugriff.
+Dieses Attribut ist ein **boolescher** Lese-/Schreib-Wert.
 
 
 
 | Wert | BESCHREIBUNG                                |
 |-------|--------------------------------------------|
-| true  | Standard. Der Ausgleichs Filter wird umgangen. |
-| false | Der Equalizer-Filter wird verwendet.              |
+| true  | Standard. Der Equalizerfilter wird umgangen. |
+| false | Der Equalizerfilter wird verwendet.              |
 
 
 
  
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Wenn dieses Attribut nicht angegeben wird, wird der vorherige Wert beibehalten.
+Wenn dieses Attribut nicht angegeben ist, wird der vorherige Wert beibehalten.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -52,15 +52,15 @@ Wenn dieses Attribut nicht angegeben wird, wird der vorherige Wert beibehalten.
 
 | Anforderung | Wert |
 |--------------------|------------------------------------------------------|
-| Version<br/> | Windows Media Player, Version 7,0 oder höher<br/> |
+| Version<br/> | Windows Media Player Version 7.0 oder höher<br/> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Equalizersettings-Element**](equalizersettings-element.md)
+[**EQUALIZERSETTINGS-Element**](equalizersettings-element.md)
 </dt> </dl>
 
  

@@ -1,9 +1,9 @@
 ---
 title: ausgeblendetes Attribut
-description: Das Attribut \ Hidden \ gibt an, dass das Element vorhanden ist, aber nicht in einem benutzerorientierten Browser angezeigt werden sollte.
+description: Das \hidden\-Attribut gibt an, dass das Element vorhanden ist, aber nicht in einem benutzerorientierten Browser angezeigt werden sollte.
 ms.assetid: bf1f9270-fb93-4421-804e-d56e2c863bbd
 keywords:
-- Hidden-Attribut, Mittel
+- AUSGEBLENDETES ATTRIBUT MIDL
 topic_type:
 - apiref
 api_name:
@@ -12,16 +12,16 @@ api_type:
 - NA
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 1718351ef84199b60ba720ed2f3569cfa78a0a50
-ms.sourcegitcommit: ebd3ce6908ff865f1ef66f2fc96769be0aad82e1
+ms.openlocfilehash: a907a608376d9ad13f97427bd7a941b99221a0f14a6fa9fe35944ced10770b66
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/19/2020
-ms.locfileid: "106337645"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118384045"
 ---
 # <a name="hidden-attribute"></a>ausgeblendetes Attribut
 
-Das **\[ Hidden \]** -Attribut gibt an, dass das Element vorhanden ist, aber nicht in einem benutzerorientierten Browser angezeigt werden sollte.
+Das **\[ ausgeblendete \]** Attribut gibt an, dass das Element vorhanden ist, aber nicht in einem benutzerorientierten Browser angezeigt werden sollte.
 
 ``` syntax
 [
@@ -40,64 +40,64 @@ element element-name
 
 <dl> <dt>
 
-*andere-Attribute* 
+*other-attributes* 
 </dt> <dd>
 
-NULL oder mehr optionale Mittelwert Attribute.
+Null oder mehr optionale MIDL-Attribute.
 
 </dd> <dt>
 
-*gewisses* 
+*Element* 
 </dt> <dd>
 
-Eine der folgenden Direktiven: " [**Co-Klasse**](coclass.md)", " [**dispinterface**](dispinterface.md)", " [**Interface**](interface.md)" oder " [**Library**](library.md)".
+Eine der folgenden Direktiven: [**coclass**](coclass.md), [**dispinterface,**](dispinterface.md) [**interface**](interface.md)oder [**library**](library.md).
 
 </dd> <dt>
 
 *Elementname* 
 </dt> <dd>
 
-Der Name, den andere Softwarekomponenten verwenden können, um das aktuelle Element zu definieren.
+Der Name, den andere Softwarekomponenten verwenden können, um das aktuelle Element abzugrenzen.
 
 </dd> <dt>
 
-*definiert* 
+*Definitionen* 
 </dt> <dd>
 
-Gibt die-Anweisungen an, die die Element Definition bilden.
+Gibt Anweisungen an, die die Elementdefinition bilden.
 
 </dd> <dt>
 
 *Funktionstyp* 
 </dt> <dd>
 
-Der Rückgabetyp der Funktion.
+Gibt den Typ der Funktion zurück.
 
 </dd> <dt>
 
-*function-name* 
+*Funktionsname* 
 </dt> <dd>
 
-Der Name, der zum Aufrufen der Funktion verwendet wird.
+Name, der zum Aufrufen der Funktion verwendet wird.
 
 </dd> <dt>
 
-*Optional-Parameter-List* 
+*optional-parameter-list* 
 </dt> <dd>
 
-NULL oder mehr Funktionsparameter.
+Null oder mehr Funktionsparameter.
 
 </dd> </dl>
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Mit dem ausgeblendeten Attribut können Sie Elemente aus der Schnittstelle entfernen (indem Sie Sie vor der weiteren Verwendung schützen) und gleichzeitig die Kompatibilität mit vorhandenem Code beibehalten **\[ \]** Sie können das **\[ Hidden \]** -Attribut für Eigenschaften, Methoden und die Anweisungen [**Co-Klasse**](coclass.md), [**dispinterface**](dispinterface.md), [**Interface**](interface.md)und [**Library**](library.md) verwenden.
+Mit dem **\[ ausgeblendeten \]** Attribut können Sie Member aus ihrer Schnittstelle entfernen (indem Sie sie vor der weiteren Verwendung schützen), während gleichzeitig die Kompatibilität mit vorhandenem Code erhalten bleibt. Sie können das **\[ ausgeblendete \]** Attribut für Eigenschaften, Methoden und die [**Anweisungen coclass**](coclass.md), [**dispinterface,**](dispinterface.md) [**interface**](interface.md)und [**library**](library.md) verwenden.
 
-Wenn es für eine Bibliothek angegeben ist, verhindert das **\[ Hidden \]** -Attribut, dass die gesamte Bibliothek angezeigt wird. Dies ist für die Verwendung mit Steuerelementen vorgesehen. Hosts müssen eine neue Typbibliothek erstellen, die das Steuerelement mit erweiterten Eigenschaften umschließt.
+Wenn es für eine Bibliothek angegeben wird, verhindert das **\[ ausgeblendete \]** Attribut, dass die gesamte Bibliothek angezeigt wird. Dies ist für die Verwendung mit Steuerelementen vorgesehen. Hosts müssen eine neue Typbibliothek erstellen, die das Steuerelement mit erweiterten Eigenschaften umschließt.
 
 ### <a name="flags"></a>Flags
 
-varflag, ausgeblendetes funkflag, ausgeblendetes " \_ \_ TYPEFLAG" \_
+VARFLAG \_ HBIDDEN, FUNCFLAG \_ HBIDDEN, TYPEFLAG \_ HBIDDEN
 
 ## <a name="examples"></a>Beispiele
 
@@ -120,30 +120,30 @@ library HiddenLib
 
 <dl> <dt>
 
-[FUNCFLAGS](/windows/win32/api/oaidl/ne-oaidl-typeflags)
+[Typeflags](/windows/win32/api/oaidl/ne-oaidl-typeflags)
 </dt> <dt>
 
-[**dispinterface**](dispinterface.md)
+[**Dispatchschnittstelle**](dispinterface.md)
 </dt> <dt>
 
 [**coclass**](coclass.md)
 </dt> <dt>
 
-[Erstellen einer Typbibliothek mit "Mittel l"](generating-a-type-library-with-midl-2.md)
+[Generieren einer Typbibliothek mit MIDL](generating-a-type-library-with-midl-2.md)
 </dt> <dt>
 
-[**berfläche**](interface.md)
+[**Schnittstelle**](interface.md)
 </dt> <dt>
 
 [**Bibliothek**](library.md)
 </dt> <dt>
 
-[Syntax der ODL-Datei](/previous-versions/windows/desktop/automat/odl-file-syntax)
+[ODL-Dateisyntax](/previous-versions/windows/desktop/automat/odl-file-syntax)
 </dt> <dt>
 
-[Beispiel für eine ODL-Datei](/previous-versions/windows/desktop/automat/odl-file-example)
+[BEISPIEL FÜR ODL-Datei](/previous-versions/windows/desktop/automat/odl-file-example)
 </dt> </dl>
 
- 
+ 
 
- 
+ 

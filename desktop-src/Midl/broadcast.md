@@ -1,9 +1,9 @@
 ---
-title: Broadcast-Attribut
-description: Das Schlüsselwort \ Broadcast \ gibt an, dass Remote Prozedur Aufrufe an alle Server in einem lokalen Netzwerk gesendet werden.
+title: Broadcastattribut
+description: Das Schlüsselwort \broadcast\ gibt an, dass Remoteprozeduraufrufe an alle Server in einem lokalen Netzwerk gesendet werden.
 ms.assetid: 3951c80f-b7f1-457b-9eee-6e075291b27e
 keywords:
-- Broadcast Attribut-Mittel l
+- Broadcastattribut MIDL
 topic_type:
 - apiref
 api_name:
@@ -12,16 +12,16 @@ api_type:
 - NA
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 72c2bbb724fc292a5e3942bf2b6de61b5631cdc0
-ms.sourcegitcommit: 57758ecb246c84d65e6e0e4bd5570d9176fa39cd
+ms.openlocfilehash: f176b03f9d33ee1bbe1d0e805dfc109de477b7499f8fd624ba7732709dc61a10
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "104312852"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118385236"
 ---
-# <a name="broadcast-attribute"></a>Broadcast-Attribut
+# <a name="broadcast-attribute"></a>Broadcastattribut
 
-Das Schlüsselwort **\[ Broadcast \]** gibt an, dass Remote Prozedur Aufrufe an alle Server in einem lokalen Netzwerk gesendet werden.
+Die **\[ Schlüsselwortübertragung \]** gibt an, dass Remoteprozeduraufrufe an alle Server in einem lokalen Netzwerk gesendet werden.
 
 ``` syntax
 [
@@ -37,78 +37,78 @@ interface interface-name
 
 <dl> <dt>
 
-*Interface-Attribute-List* 
+*interface-attribute-list* 
 </dt> <dd>
 
-Gibt eine Liste von 0 (null) oder mehr IDL-Attributen an, die auf die gesamte Schnittstelle angewendet werden. Wenn zwei oder mehr Schnittstellen Attribute vorhanden sind, müssen diese durch Kommas getrennt werden.
+Gibt eine Liste von null oder mehr IDL-Attributen an, die für die gesamte Schnittstelle gelten. Wenn zwei oder mehr Schnittstellenattribute vorhanden sind, müssen sie durch Kommas getrennt werden.
 
 </dd> <dt>
 
-*Schnittstellen Name* 
+*Schnittstellenname* 
 </dt> <dd>
 
 Gibt den Namen der Schnittstelle an.
 
 </dd> <dt>
 
-*Attribut-List* 
+*Attributliste* 
 </dt> <dd>
 
 Gibt zusätzliche Attribute an, die auf die Funktion angewendet werden sollen. Trennen Sie mehrere Attribute durch Kommas.
 
 </dd> <dt>
 
-*ReturnType* 
+*returntype* 
 </dt> <dd>
 
 Gibt den Rückgabetyp der Funktion an.
 
 </dd> <dt>
 
-*function-name* 
+*Funktionsname* 
 </dt> <dd>
 
-Gibt den Namen der Funktion an, auf die das **\[ Broadcast \]** -Attribut angewendet wird.
+Gibt den Namen der Funktion an, auf die das **\[ \] Broadcastattribut** angewendet wird.
 
 </dd> <dt>
 
 *params* 
 </dt> <dd>
 
-Funktionsparameter Liste.
+Funktionsparameterliste.
 
 </dd> </dl>
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Das **\[ Broadcast \]** -Schlüsselwort gibt an, dass die Routine immer an alle Server im Netzwerk übermittelt wird, anstatt Sie an einen bestimmten Server zu übermitteln. Der Client empfängt die Ausgabe der ersten Antwort, um erfolgreich zurückzukehren, während nachfolgende Antworten verworfen werden.
+Das **\[ \] Broadcastschlüsselwort** gibt an, dass die Routine immer an alle Server im Netzwerk übertragen wird, anstatt an einen bestimmten Server übermittelt zu werden. Der Client empfängt die Ausgabe der ersten Antwort, die erfolgreich zurückgegeben wird, während nachfolgende Antworten verworfen werden.
 
-Ein Vorgang mit dem **\[ Broadcast \]** -Attribut ist implizit ein [**\[ idempotenter \]**](idempotent.md) Vorgang. Das **\[ Broadcast \]** -Attribut gibt jedoch zusätzliche Eigenschaften an, die Funktionen mit dem **\[ idempotenten \]** Attribut nicht haben. Funktionen, die das **\[ Broadcast \]** -Attribut verwenden, geben insbesondere an, dass die Routine mehrmals als Ergebnis eines Remote Prozedur Aufrufs aufgerufen werden kann. Gleichzeitig können Sie an mehrere Server gesendet werden. Dies unterscheidet sich vom **\[ idempotenten \]** Attribut, das nur angibt, dass ein Aufruf wiederholt werden kann, wenn er nicht abgeschlossen ist.
+Ein Vorgang mit dem **\[ \] Broadcastattribut** ist implizit ein [**\[ \] idempotenter**](idempotent.md) Vorgang. Das **\[ \] Broadcastattribut** gibt jedoch zusätzliche Eigenschaften an, über die Funktionen mit dem **\[ idempotenten \]** Attribut nicht verfügen. Insbesondere geben Funktionen, die das **\[ \] Broadcastattribut** verwenden, an, dass die Routine als Ergebnis eines Remoteprozeduraufrufs mehrmals aufgerufen werden kann. Gleichzeitig können sie an mehrere Server gesendet werden. Dies unterscheidet sich vom **\[ idempotenten \]** Attribut, das nur angibt, dass ein Aufruf wiederholt werden kann, wenn er nicht abgeschlossen ist.
 
-Wenn eine Remote Prozedur ihren-Aufrufe an alle Hosts in einem lokalen Netzwerk überträgt, muss Sie entweder die [**ncadg \_ -IP- \_ UDP-**](ncadg-ip-udp.md) oder die [**ncadg- \_ IPX**](ncadg-ipx.md) -Protokoll Sequenz verwenden. Beachten Sie, dass die Größe eines **\[ Broadcast \]** Pakets durch den verwendeten Datagramm-Dienst bestimmt wird.
+Wenn eine Remoteprozedur ihren Aufruf an alle Hosts in einem lokalen Netzwerk überträgt, muss sie entweder die [**ncadg \_ ip \_ udp-**](ncadg-ip-udp.md) oder die [**ncadg \_ ipx-Protokollsequenz**](ncadg-ipx.md) verwenden. Beachten Sie, dass die Größe eines **\[ \] Broadcastpakets** vom verwendeten Datagrammdienst bestimmt wird.
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
 [**idempotent**](idempotent.md)
 </dt> <dt>
 
-[Schnittstellen Definitionsdatei (IDL)](interface-definition-idl-file.md)
+[IDL-Datei (Interface Definition)](interface-definition-idl-file.md)
 </dt> <dt>
 
-[**auch**](maybe.md)
+[**Vielleicht**](maybe.md)
 </dt> <dt>
 
-[**ncadg \_ -IP- \_ UDP**](ncadg-ip-udp.md)
+[**ncadg \_ ip \_ udp**](ncadg-ip-udp.md)
 </dt> <dt>
 
-[**ncadg \_ IPX**](ncadg-ipx.md)
+[**ncadg \_ ipx**](ncadg-ipx.md)
 </dt> </dl>
 
- 
+ 
 
- 
+ 
 
 
 

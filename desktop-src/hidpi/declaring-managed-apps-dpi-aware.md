@@ -1,129 +1,129 @@
 ---
 title: Entwickeln einer DPI pro Monitor-fähigen WPF-Anwendung
-description: Beachten Sie, dass diese Seite die ältere WPF-Entwicklung für Windows 8.1 behandelt. Wenn Sie WPF-Anwendungen für Windows 10 entwickeln, finden Sie weitere Informationen in der neuesten Dokumentation auf GitHub..
+description: Hinweis Auf dieser Seite wird die Legacy-WPF-Entwicklung für Windows 8.1 behandelt. Wenn Sie WPF-Anwendungen für Windows 10 entwickeln, lesen Sie die neueste Dokumentation zu GitHub. .
 ms.assetid: 04a36dc7-684f-4846-aeba-970117070b4c
 keywords:
-- Windows-Benutzeroberfläche, dpi-fähige Anwendungen
-- Windows-Benutzeroberfläche, hohe dpi-
+- Windows Benutzeroberfläche,DPI-fähige Anwendungen
+- Windows Benutzeroberfläche, hoher DPI
 - DPI-fähige Anwendungen
-- hoher dpi-
-- Schreiben von dpi-fähigen Win32-Anwendungen
+- hoher DPI-Anteil
+- Schreiben von DPI-fähigen Win32-Anwendungen
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 8a32bfaf76271e61d0dc3791d5aaae9609be6d8c
-ms.sourcegitcommit: ebd3ce6908ff865f1ef66f2fc96769be0aad82e1
+ms.openlocfilehash: 1527412e3259efca7d81285c6ba7ed42dbaebf43d37307342de02f1d2ce9d339
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/19/2020
-ms.locfileid: "104101639"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118249688"
 ---
 # <a name="developing-a-per-monitor-dpi-aware-wpf-application"></a>Entwickeln einer DPI pro Monitor-fähigen WPF-Anwendung
 
 **Wichtige APIs**
 
--   [**Setprocessdpiawareness**](/windows/desktop/api/ShellScalingAPI/nf-shellscalingapi-setprocessdpiawareness)
--   [**Getprocessdpiawareness**](/windows/desktop/api/ShellScalingAPI/nf-shellscalingapi-getprocessdpiawareness)
--   [**Getdpiformonitor**](/windows/desktop/api/ShellScalingAPI/nf-shellscalingapi-getdpiformonitor)
+-   [**SetProcessDpiAwareness**](/windows/desktop/api/ShellScalingAPI/nf-shellscalingapi-setprocessdpiawareness)
+-   [**GetProcessDpiAwareness**](/windows/desktop/api/ShellScalingAPI/nf-shellscalingapi-getprocessdpiawareness)
+-   [**GetDpiForMonitor**](/windows/desktop/api/ShellScalingAPI/nf-shellscalingapi-getdpiformonitor)
 
 > [!Note]  
-> **Auf dieser Seite wird die Legacy-WPF-Entwicklung für Windows 8.1 behandelt.** Wenn Sie WPF-Anwendungen für Windows 10 entwickeln, finden Sie weitere Informationen <a href="https://github.com/microsoft/WPF-Samples/blob/master/PerMonitorDPI/readme.md">in der neuesten Dokumentation auf GitHub.</a>
+> **Auf dieser Seite wird die WPF-Legacyentwicklung für Windows 8.1 behandelt.** Wenn Sie WPF-Anwendungen für Windows 10 entwickeln, lesen Sie die <a href="https://github.com/microsoft/WPF-Samples/blob/master/PerMonitorDPI/readme.md">neueste Dokumentation zu GitHub.</a>
 
- 
+ 
 
-Windows 8.1 bietet Entwicklern neue Funktionen zum Erstellen von Desktop Anwendungen mit dpi-Werten pro Monitor. Um diese Funktionalität nutzen zu können, muss eine pro-Monitor-dpi-fähige Anwendung folgende Aktionen ausführen:
+Windows 8.1 bietet Entwicklern neue Funktionen zum Erstellen von DPI-fähigen Desktopanwendungen pro Monitor. Um diese Funktionalität nutzen zu können, muss eine DPI-fähige Anwendung pro Monitor folgende Schritte ausführen:
 
--   Ändern der Fenster Dimensionen, um eine physische Größe beizubehalten, die auf einer beliebigen Anzeige konsistent angezeigt wird
--   Erneutes Layout und erneutes Renren von Grafiken für die neue Fenstergröße
--   Schriftarten auswählen, die entsprechend der dpi-Ebene skaliert werden
--   Auswählen und Laden von bitmapassets, die auf die dpi-Ebene zugeschnitten sind
+-   Ändern der Fensterdimensionen, um eine physische Größe beizubehalten, die auf jeder Anzeige konsistent angezeigt wird
+-   Erneutes Layout und erneutes Rendern von Grafiken für die neue Fenstergröße
+-   Auswählen von Schriftarten, die entsprechend der DPI-Ebene skaliert werden
+-   Auswählen und Laden von Bitmapressourcen, die auf die DPI-Ebene zugeschnitten sind
 
-Zur Vereinfachung der Erstellung einer dpi-fähigen Anwendung mit dpi-Unterstützung bietet Windows 8.1 folgende Microsoft Win32APIs:
+Um die Erstellung einer DPI-fähigen Anwendung pro Monitor zu vereinfachen, stellt Windows 8.1 die folgenden Microsoft Win32APIs bereit:
 
--   [**Setprocessdpiawareness**](/windows/desktop/api/ShellScalingAPI/nf-shellscalingapi-setprocessdpiawareness) (oder dpi-Manifest-Eintrag) legt den Prozess auf einen angegebenen dpi-Wert fest, der dann festlegt, wie Windows die Benutzeroberfläche skaliert. Dies ersetzt [**SetProcessDPIAware**](/windows/desktop/api/winuser/nf-winuser-setprocessdpiaware).
--   [**Getprocessdpiawareness**](/windows/desktop/api/ShellScalingAPI/nf-shellscalingapi-getprocessdpiawareness) gibt den dpi-Bekanntheitsgrad zurück. Hierdurch wird [**isprocessdpiaware**](/windows/desktop/api/winuser/nf-winuser-isprocessdpiaware)abgelöst.
--   [**Getdpiformonitor**](/windows/desktop/api/ShellScalingAPI/nf-shellscalingapi-getdpiformonitor) gibt den dpi-Wert für einen Monitor zurück.
--   Die Benachrichtigung " [**WM- \_ dpichanged**](wm-dpichanged.md) -Fenster" wird an die dpi-fähigen Anwendungen pro Monitor gesendet, wenn sich die Position eines Fensters ändert, sodass der größte Teil des Bereichs einen Monitor mit einem dpi-Wert überschneidet, der sich vom dpi-Wert unterscheidet, bevor die Position geändert wird oder wenn der Benutzer den Schieberegler verschiebt. Um eine Anwendung zu erstellen, deren Größe geändert und wieder gerendert wird, wenn ein Benutzer Sie in eine andere Anzeige verschiebt, verwenden Sie diese Benachrichtigung.
+-   [**SetProcessDpiAwareness**](/windows/desktop/api/ShellScalingAPI/nf-shellscalingapi-setprocessdpiawareness) (oder DPI-Manifesteintrag) legt den Prozess auf eine angegebene DPI-Bekanntheitsstufe fest, die dann bestimmt, wie Windows die Benutzeroberfläche skaliert. Dadurch wird [**SetProcessDPIAware**](/windows/desktop/api/winuser/nf-winuser-setprocessdpiaware)abgelöst.
+-   [**GetProcessDpiAwareness**](/windows/desktop/api/ShellScalingAPI/nf-shellscalingapi-getprocessdpiawareness) gibt die DPI-Awareness-Ebene zurück. Dadurch wird [**IsProcessDPIAware**](/windows/desktop/api/winuser/nf-winuser-isprocessdpiaware)abgelöst.
+-   [**GetDpiForMonitor**](/windows/desktop/api/ShellScalingAPI/nf-shellscalingapi-getdpiformonitor) gibt den DPI für einen Monitor zurück.
+-   Die [**\_ WM-DPICHANGED-Fensterbenachrichtigung**](wm-dpichanged.md) wird an Monitor-DPI-fähige Anwendungen gesendet, wenn sich die Position eines Fensters so ändert, dass ein Großteil des Bereichs einen Monitor mit einem DPI überschneidet, der sich vom DPI unterscheidet, bevor sich die Position ändert oder der Benutzer den Anzeigeschieberegler verschiebt. Verwenden Sie diese Benachrichtigung, um eine Anwendung zu erstellen, deren Größe geändert und erneut gerendert wird, wenn ein Benutzer sie auf eine andere Anzeige verschiebt.
 
-Weitere Informationen zu verschiedenen dpi-Informationen, die für Desktop Anwendungen in unterstützt werden, finden Sie unter Windows 8.1 im Thema [Schreiben von DPI-Aware Desktop-und Win32-Anwendungen](https://msdn.microsoft.com/library/windows/desktop/mt843498(v=vs.85).aspx(d=robot)).
+Weitere Informationen zu den verschiedenen DPI-Bekanntheitsgraden, die für Desktopanwendungen in Windows 8.1 unterstützt werden, finden Sie im Thema [Schreiben von DPI-Aware Desktop- und Win32-Anwendungen.](https://msdn.microsoft.com/library/windows/desktop/mt843498(v=vs.85).aspx(d=robot))
 
 ## <a name="dpi-scaling-and-wpf"></a>DPI-Skalierung und WPF
 
-Windows Presentation Foundation (WPF)-Anwendungen sind standardmäßig System-dpi-fähig. Definitionen der verschiedenen dpi-Informationen finden Sie im Thema [schreiben DPI-Aware Desktop-und Win32-Anwendungen](https://msdn.microsoft.com/library/windows/desktop/mt843498(v=vs.85).aspx(d=robot)). Das WPF-Grafiksystem verwendet geräteunabhängige Einheiten, um Auflösung und Geräteunabhängigkeit zu ermöglichen. WPF skaliert jedes geräteunabhängige Pixel automatisch basierend auf dem aktuellen System-dpi-Wert. Dadurch können WPF-Anwendungen automatisch skaliert werden, wenn der dpi-Wert des Monitors, auf dem sich das Fenster befindet, dasselbe System-dpi ist. Da WPF-Anwendungen jedoch System dpi-fähig sind, wird die Anwendung vom Betriebssystem skaliert, wenn die Anwendung auf einen Monitor mit einem anderen dpi-Wert verschoben wird oder wenn der Schieberegler in der Systemsteuerung verwendet wird, um den dpi-Wert zu ändern. Das Skalieren im Betriebssystem kann dazu führen, dass WPF-Anwendungen unscharf angezeigt werden, insbesondere, wenn die Skalierung nicht ganzzahlig ist. Um das Skalieren von WPF-Anwendungen zu vermeiden, müssen Sie für die dpi-Unterstützung pro Monitor aktualisiert werden.
+WPF-Anwendungen (Windows Presentation Foundation) sind standardmäßig DPI-fähigen Systemanwendungen. Definitionen der verschiedenen DPI-Bewusstseinsebenen finden Sie im Thema [Schreiben von DPI-Aware Desktop- und Win32-Anwendungen.](https://msdn.microsoft.com/library/windows/desktop/mt843498(v=vs.85).aspx(d=robot)) Das WPF-Grafiksystem verwendet geräteunabhängige Einheiten, um Auflösung und Geräteunabhängigkeit zu ermöglichen. WPF skaliert jedes geräteunabhängige Pixel automatisch basierend auf dem aktuellen System-DPI. Dadurch können WPF-Anwendungen automatisch skaliert werden, wenn der DPI des Monitors, auf dem sich das Fenster befindet, demselben System-DPI entspricht. Da WPF-Anwendungen jedoch systemdpi-fähige Anwendungen sind, wird die Anwendung vom Betriebssystem skaliert, wenn die Anwendung auf einen Monitor mit einem anderen DPI verschoben wird oder wenn der Schieberegler in der Systemsteuerung verwendet wird, um den DPI zu ändern. Die Skalierung im Betriebssystem kann dazu führen, dass WPF-Anwendungen unscharf erscheinen, insbesondere wenn die Skalierung nicht integral ist. Um die Skalierung von WPF-Anwendungen zu vermeiden, müssen sie aktualisiert werden, um DPI-bewusst pro Monitor zu sein.
 
-## <a name="per-monitor-aware-wpf-sample-walkthrough"></a>Exemplarische Vorgehensweise für das WPF-Beispiel pro Monitor
+## <a name="per-monitor-aware-wpf-sample-walkthrough"></a>Exemplarische Vorgehensweise zum WPF-Beispiel pro Monitor
 
-Das [WPF](https://github.com/microsoft/Windows-classic-samples/tree/master/Samples/PerMonitorDPIAware) -Beispiel "pro Monitor-fähig" ist eine WPF-Beispielanwendung, die für die dpi-Unterstützung pro Monitor aktualisiert wurde. Das Beispiel umfasst zwei Projekte:
+Das [WPF-Beispiel](https://github.com/microsoft/Windows-classic-samples/tree/master/Samples/PerMonitorDPIAware) pro Monitor ist eine WPF-Beispielanwendung, die aktualisiert wurde, um DPI-fähige Daten pro Monitor zu erhalten. Das Beispiel umfasst zwei Projekte:
 
--   Nativehelpers. vcxproj: Hierbei handelt es sich um ein System eigenes Hilfsprogramm, das die Kernfunktionen implementiert, um eine WPF-Anwendung mit dpi-Werten pro Monitor zu erstellen, indem Sie die oben genannten Win32APIs verwenden. Das Projekt enthält zwei Klassen:
-    -   Permondpihelper: eine Klasse, die Hilfsfunktionen für dpi-bezogene Vorgänge bereitstellt, z. b. das Abrufen des aktuellen dpi-Wert des aktiven Monitors, das Festlegen eines Prozesses für die dpi-Unterstützung pro Monitor usw.
-    -   Permonitordpiwindow: eine Basisklasse, die von **System. Windows. Window** abgeleitet wird und Funktionen implementiert, mit denen ein WPF-Anwendungsfenster pro Monitor dpi-fähig ist. Passt die Fenstergröße, Grafik Renderinggröße und Schriftgröße basierend auf der dpi des Monitors und nicht auf dem System-dpi an.
--   Wpfapplikation. csproj: Beispiel einer WPF-Anwendung, die das permonitordpiwindow (permonitordpiwindow) verwendet, und zeigt, wie das Anwendungsfenster und das Rendering geändert werden, wenn das Fenster auf einen Monitor mit einem anderen dpi-Wert verschoben wird, oder wenn der Schieberegler in der Anzeige Steuerung verwendet wird, um den dpi zu ändern.
+-   NativeHelpers.vcxproj: Dies ist ein natives Hilfsprojekt, das die Kernfunktionen implementiert, um eine WPF-Anwendung mithilfe der oben genannten Win32APIs monitor-fähigen DPI-fähigen Anwendungen zu machen. Das Projekt enthält zwei Klassen:
+    -   PerMonDPIHelpers: Eine Klasse, die Hilfsfunktionen für DPI-bezogene Vorgänge bereitstellt, z. B. das Abrufen des aktuellen DPI des aktiven Monitors, das Festlegen eines Prozesses auf DPI-bezogene Vorgänge pro Monitor usw.
+    -   PerMonitorDPIWindow: Eine von **System.Windows abgeleitete Basisklasse. Fenster,** das Funktionen implementiert, um ein WPF-Anwendungsfenster so zu gestalten, dass es dpi-bewusst pro Monitor ist. Passt fenstergröße, Grafikrenderinggröße und Schriftgrad basierend auf dem DPI des Monitors anstelle des System-DPI an.
+-   WPFApplication.csproj: Beispiel-WPF-Anwendung, die PerMonitorDPIWindow (PerMonitorDPIWindow) nutzt und zeigt, wie sich das Anwendungsfenster und das Rendering ändern, wenn das Fenster auf einen Monitor mit einem anderen DPI verschoben wird oder wenn der Schieberegler in der Anzeigesteuerung verwendet wird, um den DPI zu ändern.
 
 Führen Sie die folgenden Schritte aus, um das Beispiel auszuführen:
 
-1.  Herunterladen und Entpacken des WPF-Beispiels " [pro Monitor](https://github.com/microsoft/Windows-classic-samples/tree/master/Samples/PerMonitorDPIAware) "
-2.  Starten Sie Microsoft Visual Studio, und wählen Sie **Datei > > Projekt/Projekt Mappe öffnen** .
-3.  Navigieren Sie zu dem Verzeichnis, das das entzippte Beispiel enthält. Wechseln Sie zum Verzeichnis für das Beispiel, und doppelklicken Sie auf die Visual Studio-Projektmappendatei (. sln).
-4.  Drücken Sie F7, oder verwenden Sie **Build > Build Solution** , um das Beispiel zu erstellen.
-5.  Drücken Sie STRG + F5 oder **Debuggen > starten ohne Debugging** , um das Beispiel auszuführen.
+1.  Herunterladen und Entzippen des [WPF-Beispiels](https://github.com/microsoft/Windows-classic-samples/tree/master/Samples/PerMonitorDPIAware) per Monitor Aware
+2.  Starten Sie Microsoft Visual Studio, und wählen Sie **Datei > > Project/Projektmappe öffnen** aus.
+3.  Navigieren Sie zu dem Verzeichnis, das das entpackte Beispiel enthält. Wechseln Sie zum Verzeichnis mit dem Namen für das Beispiel, und doppelklicken Sie auf die Datei Visual Studio Projektmappe (.sln).
+4.  Drücken Sie F7, oder verwenden **Sie Build > Build Solution** , um das Beispiel zu erstellen.
+5.  Drücken Sie STRG+F5, oder verwenden Sie **Debuggen > Starten ohne Debuggen,** um das Beispiel auszuführen.
 
-Um die Auswirkungen der Änderung von dpi für eine WPF-Anwendung, die mit der-Basisklasse im Beispiel aktualisiert wird, auf dpi-fähig zu erkennen, verschieben Sie das Anwendungsfenster in und aus anzeigen, die über unterschiedliche DPIs verfügen. Wenn das Fenster zwischen Monitoren verschoben wird, werden die Fenstergröße und die Benutzeroberflächen Skala basierend auf dem dpi-Wert der Anzeige mithilfe des skalierbaren Grafik Systems von WPF aktualisiert, anstatt durch das Betriebssystem skaliert zu werden. Die Benutzeroberfläche der Anwendung wird nativ gerendert und wird nicht verschwommen angezeigt. Wenn Sie nicht über zwei Anzeigeelemente mit unterschiedlichem dpi verfügen, ändern Sie den dpi-Code, indem Sie den Schieberegler in der Systemsteuerung anzeigen ändern. Wenn Sie den Schieberegler ändern und auf **anwenden** klicken, wird die Größe des Anwendungsfensters geändert und die Benutzeroberflächen Skalierung automatisch aktualisiert.
+Um die Auswirkungen der Änderung des DPI für eine WPF-Anwendung anzuzeigen, die aktualisiert wird, sodass sie mithilfe der Basisklasse im Beispiel monitorspezifische DPI-fähige Daten enthält, verschieben Sie das Anwendungsfenster in und aus Anzeigen mit unterschiedlichen DPIs. Wenn das Fenster zwischen Monitoren verschoben wird, werden die Fenstergröße und die Ui-Skalierung basierend auf dem DPI der Anzeige mithilfe des skalierbaren Grafiksystems von WPF aktualisiert, anstatt vom Betriebssystem skaliert zu werden. Die Benutzeroberfläche der Anwendung wird nativ gerendert und erscheint nicht unscharf. Wenn Sie nicht über zwei Anzeigen mit unterschiedlichen DPI verfügen, ändern Sie den DPI, indem Sie den Schieberegler in der Systemsteuerung Anzeigen ändern. Wenn Sie den Schieberegler ändern und auf **Übernehmen** klicken, wird die Größe des Fensters der Anwendung geändert und die Skalierung der Benutzeroberfläche automatisch aktualisiert.
 
-## <a name="updating-an-existing-wpf-application-to-be-per-monitor-dpi-aware-using-helper-project-in-the-wpf-sample"></a>Aktualisieren einer vorhandenen WPF-Anwendung für die dpi-Unterstützung per Monitor mithilfe des Hilfsprojekts im WPF-Beispiel
+## <a name="updating-an-existing-wpf-application-to-be-per-monitor-dpi-aware-using-helper-project-in-the-wpf-sample"></a>Aktualisieren einer vorhandenen WPF-Anwendung zur Überwachung von DPI-fähigen Daten mithilfe des Hilfsprojekts im WPF-Beispiel
 
-Wenn Sie bereits über eine WPF-Anwendung verfügen und das dpi-Hilfsobjekt aus dem Beispiel nutzen möchten, um es zu berücksichtigen, führen Sie die folgenden Schritte aus.
+Wenn Sie über eine vorhandene WPF-Anwendung verfügen und das DPI-Hilfsprojekt aus dem Beispiel nutzen möchten, um die DPI-Fähige zu machen, führen Sie die folgenden Schritte aus.
 
-1.  Herunterladen und Entpacken des WPF-Beispiels "pro Monitor"
-2.  Starten Sie Visual Studio, und wählen Sie **Datei > > Projekt/Projekt Mappe öffnen** aus.
-3.  Navigieren Sie zu dem Verzeichnis, das eine vorhandene WPF-Anwendung enthält, und doppelklicken Sie auf die Visual Studio-Projektmappendatei (. sln).
-4.  Klicken Sie mit der rechten Maustaste auf Projekt Mappe, **> > vorhandenes Projekt hinzuzufügen**. ![](images/scrvs-image1.png)
-5.  Navigieren Sie im Dialogfeld zur Dateiauswahl zu dem Verzeichnis, das das entzippte Beispiel enthält. Öffnen Sie für das Verzeichnis, das für das Beispiel benannt ist, navigieren Sie zum Ordner "nativehelpers", wählen Sie die Visual C++ Projektdatei "nativehelpers. vcxproj" aus, und klicken Sie auf **OK** .
-6.  Klicken Sie mit der rechten Maustaste auf das Projekt nativehelpers, und wählen Sie **Erstellen**. Hierdurch werden NativeHelpers.dll generiert, die im nächsten Schritt als Verweis auf die WPF-Anwendung hinzugefügt werden. ![](images/scrvs-image2.png)
-7.  Fügen Sie einen Verweis auf NativeHelpers.dll aus der WPF-Anwendung hinzu. Erweitern Sie das WPF-Anwendungsprojekt, klicken Sie mit der rechten Maustaste auf **Verweise** , und klicken Sie auf **Verweis hinzufügen.**
-8.  Erweitern Sie im daraufhin angezeigten Dialogfeld **den Abschnitt Projekt** Mappe. Wählen Sie unter **Projekte** die Option nativehelpers aus, und klicken Sie auf **OK** ![ einen Screenshot, der das Dialogfeld Resource Manager veranschaulicht.](images/scrvs-image3.png)
-9.  Erweitern Sie das WPF-Anwendungsprojekt, erweitern Sie **Eigenschaften**, und öffnen Sie **AssemblyInfo. cs**. Nehmen Sie an AssemblyInfo. cs die folgenden Ergänzungen vor.
-    -   Fügen Sie im Referenz Abschnitt (mithilfe von System. Windows. Media;) einen Verweis auf System. Windows. Media hinzu.
-    -   Fügen Sie das disabledpiawareness-Attribut () hinzu. `[assembly: DisableDpiAwareness]`
+1.  Herunterladen und Entzippen des WPF-Beispiels per Monitor Aware
+2.  Starten Sie Visual Studio, und wählen Sie **Datei > > Project/Projektmappe öffnen** aus.
+3.  Navigieren Sie zu dem Verzeichnis, das eine vorhandene WPF-Anwendung enthält, und doppelklicken Sie auf die Datei Visual Studio Projektmappe (.sln).
+4.  Klicken Sie mit der rechten Maustaste auf **Projektmappe > Hinzufügen > Vorhandene Project** ![ screenshot, der die Menüauswahl "Hinzufügen: Vorhandenes Projekt" veranschaulicht.](images/scrvs-image1.png)
+5.  Navigieren Sie im Dialogfeld für die Dateiauswahl zu dem Verzeichnis, das das entpackte Beispiel enthält. Öffnen Sie das Verzeichnis namens für das Beispiel, navigieren Sie zum Ordner "NativeHelpers", wählen Sie die Visual C++ Projektdatei "NativeHelpers.vcxproj" aus, und klicken Sie auf **OK.**
+6.  Klicken Sie mit der rechten Maustaste auf das Projekt NativeHelpers, und wählen **Sie Erstellen** aus. Dadurch wird NativeHelpers.dll generiert, die im nächsten Schritt als Verweis auf die WPF-Anwendung hinzugefügt werden. In einem Screenshot wird ![ die Auswahl des Buildmenüs veranschaulicht.](images/scrvs-image2.png)
+7.  Fügen Sie einen Verweis auf NativeHelpers.dll aus Ihrer WPF-Anwendung hinzu. Erweitern Sie Ihr WPF-Anwendungsprojekt, klicken Sie mit der rechten Maustaste auf **Verweise,** und klicken Sie auf **Verweis hinzufügen...**
+8.  Erweitern Sie im resultierenden Dialogfeld den Abschnitt **Projektmappe.** Wählen Sie unter **Projekte** die Option NativeHelpers aus, und klicken Sie in einem Screenshot auf **OK,** ![ der das Dialogfeld "Ressourcen-Manager" veranschaulicht.](images/scrvs-image3.png)
+9.  Erweitern Sie Ihr WPF-Anwendungsprojekt, erweitern **Sie Eigenschaften**, und öffnen Sie **AssemblyInfo.cs.** Nehmen Sie die folgenden Ergänzungen zu AssemblyInfo.cs vor:
+    -   Fügen Sie einen Verweis auf System hinzu. Windows. Medien im Verweisabschnitt (mit system.Windows. Medien;)
+    -   Hinzufügen des DisableDpiAwareness-Attributs ( `[assembly: DisableDpiAwareness]` )
 
-    ![ein Screenshot, der die zusätzlichen Eigenschaften veranschaulicht](images/scrvs-image4.png)
-10. Die Haupt-WPF-Fenster Klasse wird von der permonitordpiwindow-Basisklasse geerbt.
-    -   Aktualisieren Sie die CS-Datei des Hauptfensters von WPF so, dass Sie von der permonitordpiwindow-Basisklasse geerbt wird.
-        -   Fügen Sie im Abschnitt "Reference" einen Verweis auf nativehelpers hinzu, indem Sie die Zeile hinzufügen. `using NativeHelpers;`
-        -   Die Hauptfenster Klasse wird von der permonitordpiwindow-Klasse geerbt.
+    ![Screenshot zur Veranschaulichung der zusätzlichen Eigenschaften](images/scrvs-image4.png)
+10. Erben der WPF-Hauptfensterklasse von der PerMonitorDPIWindow-Basisklasse
+    -   Aktualisieren Sie die CS-Datei des WPF-Hauptfensters, um von der PerMonitorDPIWindow-Basisklasse zu erben.
+        -   Fügen Sie im Verweisabschnitt einen Verweis auf NativeHelpers hinzu, indem Sie die Zeile hinzufügen. `using NativeHelpers;`
+        -   Erben der Hauptfensterklasse von der PerMonitorDPIWindow-Klasse
 
-        ![ein Screenshot, der die c++-Referenz veranschaulicht](images/scrvs-image5.png)
-    -   Aktualisieren Sie die XAML-Datei des Haupt-WPF-Fensters, um von der permonitordpiwindow-Basisklasse zu erben.
-        -   Fügen Sie im Abschnitt "Reference" einen Verweis auf nativehelpers hinzu, indem Sie die Zeile hinzufügen. `xmlns:src="clr-namespace:NativeHelpers;assembly=NativeHelpers"`
-        -   Die Hauptfenster Klasse wird von der permonitordpiwindow-Klasse geerbt.
+        ![Screenshot zur Veranschaulichung der c++-Referenz](images/scrvs-image5.png)
+    -   Aktualisieren Sie die XAML-Datei des WPF-Hauptfensters, um von der PerMonitorDPIWindow-Basisklasse zu erben.
+        -   Fügen Sie im Verweisabschnitt einen Verweis auf NativeHelpers hinzu, indem Sie die Zeile hinzufügen. `xmlns:src="clr-namespace:NativeHelpers;assembly=NativeHelpers"`
+        -   Erben der Hauptfensterklasse von der PerMonitorDPIWindow-Klasse
 
-        ![Screenshot, der das Hinzufügen des XAML-Verweises veranschaulicht](images/scrvs-image6.png)
-11. Drücken Sie F7, oder verwenden Sie **Build > Build Solution** , um das Beispiel zu erstellen.
-12. Drücken Sie STRG + F5 oder **Debuggen > starten ohne Debugging** , um das Beispiel auszuführen.
+        ![Screenshot zum Hinzufügen des XAML-Verweises](images/scrvs-image6.png)
+11. Drücken Sie F7, oder verwenden **Sie Build > Build Solution** , um das Beispiel zu erstellen.
+12. Drücken Sie STRG+F5, oder verwenden Sie **Debuggen > Starten ohne Debuggen,** um das Beispiel auszuführen.
 
-Die [Beispielanwendung "pro Monitor-fähiger WPF](https://github.com/microsoft/Windows-classic-samples/tree/master/Samples/PerMonitorDPIAware) " veranschaulicht, wie eine WPF-Anwendung aktualisiert werden kann, um dpi-fähig zu sein, indem auf die Benachrichtigung "WM- [**\_ dpichanged**](wm-dpichanged.md) -Fenster" reagiert wird. In Reaktion auf die Fenster Benachrichtigung aktualisiert das Beispiel die Skalierungs Transformation, die von WPF verwendet wird, basierend auf dem aktuellen dpi-Wert des Monitors, auf dem sich das Fenster befindet. Der *wParam* -Parameter der Fenster Benachrichtigung enthält den neuen dpi-Code in der *wParam*. Der *LPARAM* enthält ein Rechteck mit der Größe und Position des neuen vorgeschlagenen Fensters, das auf den neuen dpi skaliert wird.
+Die [WPF-Beispielanwendung](https://github.com/microsoft/Windows-classic-samples/tree/master/Samples/PerMonitorDPIAware) pro Monitor veranschaulicht, wie eine WPF-Anwendung aktualisiert werden kann, um eine DPI-fähige Überwachung zu erhalten, indem auf die [**\_ WM-DPICHANGED-Fensterbenachrichtigung**](wm-dpichanged.md) reagiert wird. Als Reaktion auf die Fensterbenachrichtigung aktualisiert das Beispiel die von WPF verwendete Skalierungstransformation basierend auf dem aktuellen DPI des Monitors, auf dem sich das Fenster befindet. Die *wParam* der Fensterbenachrichtigung enthält den neuen DPI im *wParam*. Das *lParam-Objekt* enthält ein Rechteck mit der Größe und Position des neuen vorgeschlagenen Fensters, das für den neuen DPI skaliert wird.
 
 Hinweis:
 
 > [!Note]  
-> Da in diesem Beispiel die Fenstergröße und die Skalierungs Transformation des Stamm Knotens des WPF-Fensters überschrieben werden, sind möglicherweise weitere Aufgaben für Anwendungsentwickler erforderlich, wenn Folgendes gilt:
+> Da in diesem Beispiel die Fenstergröße und die Skalierungstransformation des Stammknotens des WPF-Fensters überschrieben werden, sind möglicherweise weitere Arbeiten erforderlich, wenn:
 >
-> -   Die Größe des Fensters wirkt sich auf andere Teile der Anwendung aus, wie dieses WPF-Fenster, das in einer anderen Anwendung gehostet wird.
-> -   Die WPF-Anwendung, die diese Klasse erweitert, legt eine andere Transformation für das visuelle Stamm Element fest. Das Beispiel kann eine andere Transformation überschreiben, die von der WPF-Anwendung selbst angewendet wird.
+> -   Die Größe des Fensters wirkt sich auf andere Teile der Anwendung aus, z. B. dieses WPF-Fenster, das in einer anderen Anwendung gehostet wird.
+> -   Die WPF-Anwendung, die diese Klasse erweitert, legt eine andere Transformation für das Stammvisual fest. Das Beispiel überschreibt möglicherweise eine andere Transformation, die von der WPF-Anwendung selbst angewendet wird.
 
- 
+ 
 
 ## <a name="overview-of-the-helper-project-in-the-wpf-sample"></a>Übersicht über das Hilfsprojekt im WPF-Beispiel
 
-Um eine vorhandene WPF-Anwendung pro Monitor dpi-fähig zu machen, bietet die nativehelpers-Bibliothek die folgenden Funktionen:
+Um eine vorhandene WPF-Anwendung monitorspezifische DPI-fähige WPF-Anwendungen zu erstellen, bietet die NativeHelpers-Bibliothek die folgenden Funktionen:
 
--   **Markiert die WPF-Anwendung als pro-ponitor-dpi-Unterstützung:** Die WPF-Anwendung wird mit dpi-Werten pro Monitor gekennzeichnet, indem [**setprocessdpiawareness**](/windows/desktop/api/ShellScalingAPI/nf-shellscalingapi-setprocessdpiawareness) für den aktuellen Prozess aufgerufen wird. Wenn Sie die Anwendung mit dpi-Werten pro Monitor markieren, wird sichergestellt, dass
+-   **Markiert die WPF-Anwendung als DPI-bewusst:** Die WPF-Anwendung wird durch Aufrufen von [**SetProcessDpiAwareness**](/windows/desktop/api/ShellScalingAPI/nf-shellscalingapi-setprocessdpiawareness) für den aktuellen Prozess als monitorspezifische DPI-orientierte Anwendung gekennzeichnet. Durch das Markieren der Anwendung als DPI-bewusst pro Monitor wird sichergestellt, dass
 
-    -   Das Betriebssystem skaliert die Anwendung nicht, wenn der System-dpi nicht mit dem aktuellen dpi-Wert des Monitors identisch ist, auf dem sich das Anwendungsfenster befindet.
-    -   Die [**WM- \_ dpichanged**](wm-dpichanged.md) -Nachricht wird gesendet, wenn sich der dpi-Wert des Fensters ändert.
+    -   Das Betriebssystem skaliert die Anwendung nicht, wenn der System-DPI nicht mit dem aktuellen DPI des Monitors im Anwendungsfenster übereinstimmen.
+    -   Die [**WM \_ DPICHANGED-Nachricht**](wm-dpichanged.md) wird gesendet, wenn sich der DPI-Aufruf des Fensters ändert.
 
--   **Passt die Fenster Dimension an, formatiert das Layout und renre den Grafik Inhalt erneut und wählt Schriftarten basierend auf dem anfänglichen dpi-Wert des Monitors aus, auf dem sich das Fenster befindet:** Nachdem die Anwendung mit dpi-Werten pro Monitor markiert wurde, skaliert WPF weiterhin die Fenstergröße, Grafik und Schriftgröße basierend auf dem System-dpi. Da der dpi-Wert beim APP-Start nicht garantiert identisch mit dem dpi-Wert des Monitors ist, auf dem das Fenster gestartet wird, werden diese Werte von der Bibliothek nach dem Laden des Fensters angepasst. Die Basisklasse **permonitordpiwindow** aktualisiert diese im **OnLoaded ()** -Handler.
+-   **Passt die Fensterdimension an, layoutt** und rendert Grafikinhalte neu und wählt Schriftarten basierend auf dem anfänglichen DPI des Monitors aus, auf dem sich das Fenster befindet: Sobald die Anwendung als monitorspezifische DPI-bezogene Anwendung markiert ist, skaliert WPF die Fenstergröße, Grafiken und Schriftgröße weiterhin basierend auf dem System-DPI. Da beim Starten der App nicht garantiert wird, dass der DPI-Wert des Systems mit dem DPI-Wert des Monitors identisch ist, auf dem das Fenster gestartet wird, passt die Bibliothek diese Werte an, sobald das Fenster geladen wurde. Die Basisklasse **PerMonitorDPIWindow** aktualisiert diese im **OnLoaded()-Handler.**
 
-    Die Fenstergröße wird aktualisiert, indem die Eigenschaften für **Breite** und **Höhe** des Fensters geändert werden. Layout und Größe werden aktualisiert, indem eine entsprechende Skalierungs Transformation auf den Stamm Knoten des WPF-Fensters angewendet wird.
+    Die Fenstergröße wird aktualisiert, indem die **Eigenschaften Breite** und **Höhe** des Fensters geändert werden. Das Layout und die Größe werden aktualisiert, indem eine entsprechende Skalierungstransformation auf den Stammknoten des WPF-Fensters ausgeführt wird.
 
     ```C++
     void PerMonitorDPIWindow::OnLoaded(Object^ , RoutedEventArgs^ ) 
@@ -175,9 +175,9 @@ Um eine vorhandene WPF-Anwendung pro Monitor dpi-fähig zu machen, bietet die na
 
     
 
--   **Antwortet auf WM \_ Benachrichtigung zum dpichanged-Fenster:** aktualisieren Sie die Fenstergröße, Grafik und Schriftgröße basierend auf dem in der Fenster Benachrichtigung übergebenen dpi-Code. Die Basisklasse **permonitordpiwindow** behandelt die Fenster Benachrichtigung in der Methode " **Lenker Nachrichten ()** ".
+-   **Reagiert auf WM \_ DPICHANGED-Fensterbenachrichtigung: Aktualisieren** Sie die Fenstergröße, Die Grafik und den Schriftgrad basierend auf dem in der Fensterbenachrichtigung übergebenen DPI. Die Basisklasse **PerMonitorDPIWindow** verarbeitet die Fensterbenachrichtigung in der **HandleMessages()-Methode.**
 
-    Die Fenstergröße wird durch Aufrufen von **SetWindowPos** mithilfe der Informationen aktualisiert, die im *LPARAM* der Fenster Meldung ausgegeben werden. Layout und Grafik Größe werden aktualisiert, indem eine entsprechende Skalierungs Transformation auf den Stamm Knoten des WPF-Fensters angewendet wird. Der Skalierungsfaktor wird mithilfe des dpi-Wert berechnet, der in der *wParam* der Fenster Meldung ausgegeben wird.
+    Die Fenstergröße wird aktualisiert, indem **SetWindowPos mithilfe** der im *Lparam* der Fenstermeldung übergebenen Informationen aufruft. Das Layout und die Grafikgröße werden aktualisiert, indem eine entsprechende Skalierungstransformation auf den Stammknoten des WPF-Fensters ausgeführt wird. Der Skalierungsfaktor wird mithilfe des DPI berechnet, der im *Wparam* der Fenstermeldung übergeben wird.
 
     ```C++
     IntPtr PerMonitorDPIWindow::HandleMessages(IntPtr hwnd, int msg, IntPtr wParam, IntPtr lParam, bool% )
@@ -231,17 +231,17 @@ Um eine vorhandene WPF-Anwendung pro Monitor dpi-fähig zu machen, bietet die na
 
     
 
-## <a name="handling-dpi-change-for-assets-like-images"></a>Behandeln von dpi-Änderungen für Assets wie Bilder
+## <a name="handling-dpi-change-for-assets-like-images"></a>Behandeln von DPI-Änderungen für Ressourcen wie Bilder
 
-Um Grafik Inhalte zu aktualisieren, wendet die Beispiel-WPF-Anwendung eine Skalierungs Transformation auf den Stamm Knoten der WPF-Anwendung an. Dies funktioniert gut für Inhalte, die nativ von WPF (Rechteck, Text usw.) gerendert werden. Dies impliziert, dass Bitmap-Assets wie Bilder von WPF skaliert werden.
+Zum Aktualisieren des Grafikinhalts wendet die WPF-Beispielanwendung eine Skalierungstransformation auf den Stammknoten der WPF-Anwendung an. Dies funktioniert zwar gut für Inhalte, die nativ von WPF gerendert werden (Rechteck, Text usw.), aber dies impliziert, dass Bitmapressourcen wie Bilder von WPF skaliert werden.
 
-Um unscharfe Bitmaps zu vermeiden, die durch die Skalierung verursacht werden, kann der WPF-Anwendungsentwickler ein benutzerdefiniertes dpi-Bild Steuerelement schreiben, das basierend auf dem aktuellen dpi-Wert des Monitors, auf dem sich das Fenster befindet, ein anderes Das Image-Steuerelement kann sich auf das **dpichanged ()** -Ereignis stützen, das für das WPF-Fenster ausgelöst wird, das aus dem **permonitordpiwindow** verwendet wird
+Um verschwommene Bitmaps zu vermeiden, die durch die Skalierung verursacht werden, kann der WPF-Anwendungsentwickler ein benutzerdefiniertes DPI-Bildsteuer steuerelement schreiben, das basierend auf dem aktuellen DPI-Wert des Monitors, auf dem sich das Fenster befindet, ein anderes Objekt auswählt. Das Image-Steuerelement kann sich auf das **DPIChanged()-Ereignis** verlassen, das für das WPF-Fenster ausgelöst wird, das von **PerMonitorDPIWindow** verwendet, wenn sich der DPI ändert.
 
 > [!Note]  
-> Das Image-Steuerelement sollte auch das Rechte Steuerelement beim Starten der APP im **geladenen** WPF-Fenster Ereignishandler auswählen.
+> Das Image-Steuerelement sollte auch das richtige Steuerelement während des App-Starts im **Loaded()** WPF-Fensterereignishandler auswählen.
 
- 
+ 
 
- 
+ 
 
- 
+ 

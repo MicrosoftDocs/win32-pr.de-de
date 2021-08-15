@@ -1,11 +1,11 @@
 ---
-title: Wiedergabemethode.
-description: Die Methode "stiteminfo" gibt den Wert eines Wiedergabelisten Attributs an.
+title: Playlist.setItemInfo-Methode
+description: Die setItemInfo-Methode gibt den Wert eines Wiedergabelistenattributs an.
 ms.assetid: ffecb43f-343d-4a4f-9356-0e3cfa85ce77
 keywords:
-- Media Player der Methode "stiteminfo"
-- Methode "stiteminfo", Windows Media Player, Wiedergabelisten Klasse
-- Wiedergabelisten-Klasse, Windows Media Player, Methode "stiteminfo"
+- setItemInfo-Methode Windows Media Player
+- setItemInfo-Methode Windows Media Player , Playlist-Klasse
+- Playlist-Klasse Windows Media Player , setItemInfo-Methode
 topic_type:
 - apiref
 api_name:
@@ -16,16 +16,16 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 8ff42e56e549100044db0881bb38ade5f2f1711a
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 47208d1fad03a57e26d1f5591adf658c7553a9087254b49c7aecfd904bd4d95f
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106369302"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118335747"
 ---
-# <a name="playlistsetiteminfo-method"></a>Wiedergabemethode.
+# <a name="playlistsetiteminfo-method"></a>Playlist.setItemInfo-Methode
 
-Die Methode " **stiteminfo** " gibt den Wert eines Wiedergabelisten Attributs an.
+Die **setItemInfo-Methode** gibt den Wert eines Wiedergabelistenattributs an.
 
 ## <a name="syntax"></a>Syntax
 
@@ -43,17 +43,17 @@ Playlist.setItemInfo(
 
 <dl> <dt>
 
-*Name* \[ in\]
+*name* \[ In\]
 </dt> <dd>
 
-Eine **Zeichenfolge** mit dem Namen des festzulegenden Attributs. Informationen zu den Attributen, die von Windows Media Player unterstützt werden, finden Sie in der [Referenz](attribute-reference.md)zu Windows Media Player-Attributen.
+**Zeichenfolge,** die den Namen des festzulegenden Attributs enthält. Informationen zu den attributen, die von Windows Media Player unterstützt werden, finden Sie im Windows Media Player [Attributverweis.](attribute-reference.md)
 
 </dd> <dt>
 
-*Wert* \[ in\]
+*wert* \[ In\]
 </dt> <dd>
 
-**Zeichenfolge** , die den neuen Wert für das Attribut enthält.
+**Zeichenfolge,** die den neuen Wert für das Attribut enthält.
 
 </dd> </dl>
 
@@ -61,9 +61,9 @@ Eine **Zeichenfolge** mit dem Namen des festzulegenden Attributs. Informationen 
 
 Diese Methode gibt keinen Wert zurück.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Eine besondere Verwendung der Methode "Methode" **ist das Sortieren** der Elemente in der Wiedergabeliste mithilfe des SortAttribute-Attributs. Im folgenden JScript-Beispiel wird eine Wiedergabeliste nach den Werten des userlastplayedtime-Attributs sortiert. Die Variablen Wiedergabeliste ist ein Verweis auf ein **Wiedergabe** Listen Objekt.
+Eine besondere Verwendung der **setItemInfo-Methode** besteht darin, die Elemente in der Wiedergabeliste mithilfe des SortAttribute-Attributs zu sortieren. Im folgenden JScript Beispiel wird eine Wiedergabeliste nach den Werten des UserLastPlayedTime-Attributs sortiert. Die Variablenwiedergabeliste ist ein Verweis auf ein **Wiedergabelistenobjekt.**
 
 
 ```JScript
@@ -72,13 +72,13 @@ playlist.setItemInfo("SortAttribute", "UserLastPlayedTime")
 
 
 
-Um diese Methode verwenden zu können, ist der vollständige Zugriff auf die Bibliothek erforderlich. Weitere Informationen finden Sie unter [Bibliotheks Zugriff](library-access.md).
+Um diese Methode verwenden zu können, ist vollzugriff auf die Bibliothek erforderlich. Weitere Informationen finden Sie unter [Bibliothekszugriff.](library-access.md)
 
 **Windows Media Player 10 Mobile:** Diese Methode wird nicht unterstützt.
 
 ## <a name="examples"></a>Beispiele
 
-Einen Beispielcode, der diese Eigenschaft verwendet, finden Sie unter der [AttributeCount](playlist-attributecount.md) -Eigenschaft.
+Beispielcode, der diese Eigenschaft verwendet, finden Sie in der [attributeCount-Eigenschaft.](playlist-attributecount.md)
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -86,25 +86,25 @@ Einen Beispielcode, der diese Eigenschaft verwendet, finden Sie unter der [Attri
 
 | Anforderung | Wert |
 |--------------------|------------------------------------------------------------------------------------|
-| Version<br/> | Windows Media Player Version 7,0 oder höher.<br/>                              |
+| Version<br/> | Windows Media Player Version 7.0 oder höher.<br/>                              |
 | DLL<br/>     | <dl> <dt>Wmp.dll</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Wiedergabelisten Objekt**](playlist-object.md)
+[**Wiedergabelistenobjekt**](playlist-object.md)
 </dt> <dt>
 
-[**Wiedergabeliste. getiteminfo**](playlist-getiteminfo.md)
+[**Playlist.getItemInfo**](playlist-getiteminfo.md)
 </dt> <dt>
 
-[**Settings. mediaaccessrights**](settings-mediaaccessrights.md)
+[**Einstellungen.mediaAccessRights**](settings-mediaaccessrights.md)
 </dt> <dt>
 
-[**Settings. requestmediaaccessrights**](settings-requestmediaaccessrights.md)
+[**Einstellungen.requestMediaAccessRights**](settings-requestmediaaccessrights.md)
 </dt> </dl>
 
  

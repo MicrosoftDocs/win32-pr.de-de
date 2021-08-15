@@ -3,20 +3,20 @@ title: Zeichnen mit doppelten Puffern
 description: Doppelte Puffer glätten den Übergang zwischen einem Bild und einem anderen auf dem Bildschirm.
 ms.assetid: 10801cc7-d26c-4bfd-95c0-f352a1c7a1f5
 keywords:
-- OpenGL unter Windows, doppelte Puffer
-- doppelte Puffer OpenGL
+- OpenGL auf Windows,double-Puffern
+- double buffers OpenGL
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: bbe52d427467b2a6e460ea56a9e72e580ea6f97d
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: 133a6e0794eb903215411016aeff14e3426854dcddc3a60bcfb2ba318481bee5
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "104311081"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118361390"
 ---
 # <a name="drawing-with-double-buffers"></a>Zeichnen mit doppelten Puffern
 
-Doppelte Puffer glätten den Übergang zwischen einem Bild und einem anderen auf dem Bildschirm. Das Austauschen von Puffern erfolgt in der Regel am Ende einer Sequenz von Zeichnungs Befehlen. Standardmäßig zeichnet sich die Microsoft-Implementierung von OpenGL in Windows auf den Offscreen-Puffer aus. Wenn die Zeichnung vollständig ist, wird die Funktion " [**Swap-Puffer**](/windows/desktop/api/wingdi/nf-wingdi-swapbuffers) " aufgerufen, um den Offscreen-Puffer in den Bildschirm Puffer zu kopieren. Im folgenden Codebeispiel wird vorbereitet, um zu zeichnen, eine Zeichnungs Funktion aufzurufen und das abgeschlossene Bild dann auf den Bildschirm zu kopieren, wenn die doppelte Pufferung verfügbar ist.
+Doppelte Puffer glätten den Übergang zwischen einem Bild und einem anderen auf dem Bildschirm. Austauschpuffer werden in der Regel am Ende einer Sequenz von Zeichnungsbefehlen angezeigt. Standardmäßig wird die Microsoft-Implementierung von OpenGL in Windows in den Off-Screen-Puffer gelost. Wenn das Zeichnen abgeschlossen ist, rufen Sie die [**SwapBuffers-Funktion**](/windows/desktop/api/wingdi/nf-wingdi-swapbuffers) auf, um den Off-Screen-Puffer in den Bildschirmpuffer zu kopieren. Das folgende Codebeispiel bereitet das Zeichnen vor, ruft eine Zeichnungsfunktion auf und kopiert dann das fertige Bild auf den Bildschirm, wenn doppelte Pufferung verfügbar ist.
 
 
 ```C++
@@ -40,7 +40,7 @@ void myRedraw(void)
 
 
 
-Im folgenden Codebeispiel wird ein Fenster Gerätekontext abgerufen, eine Szene gerendert, das Bild auf den Bildschirm kopiert (um das Rendering anzuzeigen) und dann der Gerätekontext freigegeben.
+Das folgende Codebeispiel erhält einen Fenstergerätekontext, rendert eine Szene, kopiert das Bild auf den Bildschirm (um das Rendering anzuzeigen) und gibt dann den Gerätekontext frei.
 
 
 ```C++
@@ -52,9 +52,9 @@ ReleaseDC(hWnd, hdc);
 
 
 
- 
+ 
 
- 
+ 
 
 
 

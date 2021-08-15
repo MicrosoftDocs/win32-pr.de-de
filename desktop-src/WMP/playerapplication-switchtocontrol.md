@@ -1,11 +1,11 @@
 ---
-title: Playerapplication. SwitchTo Control-Methode
-description: Die switchdecontrol-Methode schaltet ein Remotes Windows Media Player-Steuerelement in den angedockten Zustand.
+title: PlayerApplication.switchToControl-Methode
+description: Die switchToControl-Methode schaltet ein remote Windows Media Player steuerelement in den angedockten Zustand um.
 ms.assetid: 3c321b8f-8208-4c55-8872-38626d8ef9c9
 keywords:
-- switchdecontrol-Methode, Windows-Media Player
-- switchdecontrol-Methode, Windows Media Player, playerapplication-Klasse
-- Playerapplication-Klasse, Windows Media Player, SwitchTo Control-Methode
+- switchToControl-Windows Media Player
+- switchToControl-Windows Media Player , PlayerApplication-Klasse
+- PlayerApplication-Klasse Windows Media Player , switchToControl-Methode
 topic_type:
 - apiref
 api_name:
@@ -16,16 +16,16 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: e175c586631bcdf4345a421270521595332c51d4
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 759040ccb54d5dd32df83811f9878418dbe0a1108719eac4e3b7467b9b3c76f7
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106356327"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117747214"
 ---
-# <a name="playerapplicationswitchtocontrol-method"></a>Playerapplication. SwitchTo Control-Methode
+# <a name="playerapplicationswitchtocontrol-method"></a>PlayerApplication.switchToControl-Methode
 
-Die **switchdecontrol** -Methode schaltet ein Remotes Windows Media Player-Steuerelement in den angedockten Zustand.
+Die **switchToControl-Methode** schaltet ein remote Windows Media Player steuerelement in den angedockten Zustand um.
 
 ## <a name="syntax"></a>Syntax
 
@@ -44,9 +44,9 @@ Diese Methode hat keine Parameter.
 
 Diese Methode gibt keinen Wert zurück.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Diese Methode wird nur verwendet, wenn das Windows Media Player-Steuerelement Remoting ist.
+Diese Methode wird nur beim Remoting des Windows Media Player verwendet.
 
 **Windows Media Player 10 Mobile:** Diese Methode wird nicht unterstützt.
 
@@ -56,16 +56,16 @@ Diese Methode wird nur verwendet, wenn das Windows Media Player-Steuerelement Re
 
 | Anforderung | Wert |
 |--------------------|------------------------------------------------------------------------------------|
-| Version<br/> | Windows Media Player 9 oder höher.<br/>                                 |
+| Version<br/> | Windows Media Player 9-Serie oder höher.<br/>                                 |
 | DLL<br/>     | <dl> <dt>Wmp.dll</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Playerapplication-Objekt**](playerapplication-object.md)
+[**PlayerApplication-Objekt**](playerapplication-object.md)
 </dt> <dt>
 
 [**Remoting des Windows Media Player-Steuerelements**](remoting-the-windows-media-player-control.md)

@@ -1,7 +1,7 @@
 ---
-description: Skaliert alle einem angegebenen submesh zugeordneten Beispiele. Die-Methode ist nützlich für das Berechnen der unter Surface-Struktur.
+description: Skaliert alle Stichproben, die einem angegebenen Untermesh zugeordnet sind. Die -Methode ist nützlich für die Berechnung der Oberflächens scattering.
 ms.assetid: abb9ca6a-5fc2-4986-8a38-29998fe5e537
-title: 'ID3DXPRTEngine:: scalemeschchunk-Methode (D3DX9Mesh. h)'
+title: ID3DXPRTEngine::ScaleMeshChunk-Methode (D3DX9Mesh.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -14,16 +14,16 @@ api_type:
 api_location:
 - d3dx9.lib
 - d3dx9.dll
-ms.openlocfilehash: f688a5175e7b50c33dd93d06a4f988a14c062c86
-ms.sourcegitcommit: 14010c34b35fa268046c7683f021f86de08ddd0a
+ms.openlocfilehash: a42046678ef0b44f011c8440cd3456dc9ff236ec0f7a280b4650b49aa53c10d6
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "106367480"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117729584"
 ---
-# <a name="id3dxprtenginescalemeshchunk-method"></a>ID3DXPRTEngine:: scalemeschchunk-Methode
+# <a name="id3dxprtenginescalemeshchunk-method"></a>ID3DXPRTEngine::ScaleMeshChunk-Methode
 
-Skaliert alle einem angegebenen submesh zugeordneten Beispiele. Die-Methode ist nützlich für das Berechnen der unter Surface-Struktur.
+Skaliert alle Stichproben, die einem angegebenen Untermesh zugeordnet sind. Die -Methode ist nützlich für die Berechnung der Oberflächens scattering.
 
 ## <a name="syntax"></a>Syntax
 
@@ -42,30 +42,30 @@ HRESULT ScaleMeshChunk(
 
 <dl> <dt>
 
-*Umschlag* \[ in\]
+*uMeshChunk* \[ In\]
 </dt> <dd>
 
-Typ: **[ **uint**](../winprog/windows-data-types.md)**
+Typ: **[ **UINT**](../winprog/windows-data-types.md)**
 
-Speicherort im Mesh, an dem mit dem Skalieren von Beispielen begonnen wird.
+Position im Gitternetz, an dem mit der Skalierung von Stichproben begonnen werden soll.
 
 </dd> <dt>
 
-*f-Skala* \[ in\]
+*fScale* \[ In\]
 </dt> <dd>
 
-Typ: **[ **float**](../winprog/windows-data-types.md)**
+Typ: **[ **FLOAT**](../winprog/windows-data-types.md)**
 
-Der Wert, um den die einzelnen Vektor im submesh multipliziert werden sollen.
+Wert, mit dem jeder Vektor im Untermesh multipliziert werden soll.
 
 </dd> <dt>
 
-*pdataout* \[ in, out\]
+*pDataOut* \[ in, out\]
 </dt> <dd>
 
 Typ: **[ **LPD3DXPRTBUFFER**](id3dxprtbuffer.md)**
 
-Zeiger auf ein [**ID3DXPRTBuffer**](id3dxprtbuffer.md) -Objekt, um die im submesh übernommenen Beispiele zu erhalten.
+Zeiger auf ein [**ID3DXPRTBuffer-Objekt,**](id3dxprtbuffer.md) um neu skalierte Beispiele im Untermesh zu erhalten.
 
 </dd> </dl>
 
@@ -73,7 +73,7 @@ Zeiger auf ein [**ID3DXPRTBuffer**](id3dxprtbuffer.md) -Objekt, um die im submes
 
 Typ: **[ **HRESULT**](https://msdn.microsoft.com/library/Bb401631(v=MSDN.10).aspx)**
 
-Wenn die Methode erfolgreich ausgeführt wird, ist der Rückgabewert S \_ OK. Wenn die Methode fehlschlägt, kann der Rückgabewert einer der folgenden sein: D3DERR \_ invalidcall, E \_ outo fmemory.
+Wenn die Methode erfolgreich ist, lautet der Rückgabewert S \_ OK. Wenn die Methode fehlschlägt, kann der Rückgabewert einer der folgenden Werte sein: D3DERR \_ INVALIDCALL, E \_ OUTOFMEMORY.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -81,12 +81,12 @@ Wenn die Methode erfolgreich ausgeführt wird, ist der Rückgabewert S \_ OK. We
 
 | Anforderung | Wert |
 |--------------------|----------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>D3DX9Mesh. h</dt> </dl> |
-| Bibliothek<br/> | <dl> <dt>D3dx9. lib</dt> </dl>   |
+| Header<br/>  | <dl> <dt>D3DX9Mesh.h</dt> </dl> |
+| Bibliothek<br/> | <dl> <dt>D3dx9.lib</dt> </dl>   |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 

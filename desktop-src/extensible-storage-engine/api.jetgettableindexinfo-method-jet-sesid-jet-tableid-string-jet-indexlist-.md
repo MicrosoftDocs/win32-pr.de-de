@@ -1,6 +1,6 @@
 ---
-description: 'Weitere Informationen finden Sie unter: API. jetgettableindexinfo-Methode (JET_SESID, JET_TABLEID, Zeichenfolge, JET_INDEXLIST)'
-title: API. jetgettableindexinfo-Methode (JET_SESID, JET_TABLEID, Zeichenfolge, JET_INDEXLIST)
+description: 'Weitere Informationen finden Sie unter: Api.JetGetTableIndexInfo-Methode (JET_SESID, JET_TABLEID, String, JET_INDEXLIST)'
+title: Api.JetGetTableIndexInfo-Methode (JET_SESID, JET_TABLEID, String, JET_INDEXLIST)
 TOCTitle: JetGetTableIndexInfo method (JET_SESID, JET_TABLEID, String, JET_INDEXLIST)
 ms:assetid: M:Microsoft.Isam.Esent.Interop.Api.JetGetTableIndexInfo(Microsoft.Isam.Esent.Interop.JET_SESID,Microsoft.Isam.Esent.Interop.JET_TABLEID,System.String,Microsoft.Isam.Esent.Interop.JET_INDEXLIST@)
 ms:mtpsurl: https://msdn.microsoft.com/library/microsoft.isam.esent.interop.api.jetgettableindexinfo(v=EXCHG.10)
@@ -20,21 +20,21 @@ api_type:
 api_location:
 - Microsoft.Isam.Esent.Interop.dll
 ROBOTS: INDEX,FOLLOW
-ms.openlocfilehash: 5a39fba54463f7a55fd6a8521f5c905da4afb4e2
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 9fcdc0916d09bbe2dfa9e44ec4bdc0fa3bae8e0dda2148f327ca62f28c131b8c
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104214936"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118272323"
 ---
-# <a name="apijetgettableindexinfo-method-jet_sesid-jet_tableid-string-jet_indexlist"></a>API. jetgettableindexinfo-Methode (JET_SESID, JET_TABLEID, Zeichenfolge, JET_INDEXLIST)
+# <a name="apijetgettableindexinfo-method-jet_sesid-jet_tableid-string-jet_indexlist"></a>Api.JetGetTableIndexInfo-Methode (JET_SESID, JET_TABLEID, String, JET_INDEXLIST)
 
-**Hinweis: Diese API ist mittlerweile veraltet.**
+**HINWEIS: Diese API ist jetzt veraltet.**
 
-Ruft Informationen zu Indizes in einer Tabelle ab.
+Ruft Informationen zu Indizes für eine Tabelle ab.
 
-**Namespace:**  [Microsoft. ISAM. ESENT. Interop](./microsoft.isam.esent.interop-namespace.md)  
-**Assembly:**  Microsoft. ISAM. ESENT. Interop (in Microsoft.Isam.Esent.Interop.dll)
+**Namespace:**  [Microsoft.Isam.Esent.Interop](./microsoft.isam.esent.interop-namespace.md)  
+**Assembly:**  Microsoft.Isam.Esent.Interop (in Microsoft.Isam.Esent.Interop.dll)
 
 ## <a name="syntax"></a>Syntax
 
@@ -67,31 +67,31 @@ public static void JetGetTableIndexInfo(
 
 #### <a name="parameters"></a>Parameter
 
-  - -sid  
-    Typ: [Microsoft.ISAM.ESENT.Interop.JET_SESID](./jet-sesid-structure.md)  
+  - sesid  
+    Typ: [Microsoft.Isam.Esent.Interop.JET_SESID](./jet-sesid-structure.md)  
     
     Die zu verwendende Sitzung.
 
 <!-- end list -->
 
-  - TableID  
-    Typ: [Microsoft.ISAM.ESENT.Interop.JET_TABLEID](./jet-tableid-structure.md)  
+  - tableid  
+    Typ: [Microsoft.Isam.Esent.Interop.JET_TABLEID](./jet-tableid-structure.md)  
     
-    Die Tabelle, für die Indexinformationen abgerufen werden sollen.
+    Die Tabelle, über die Indexinformationen abgerufen werden.
 
 <!-- end list -->
 
-  - Indexname  
-    Typ: [System. String](/dotnet/api/system.string)  
+  - indexname  
+    Typ: [System.String](/dotnet/api/system.string)  
     
     Konvertiert die Zeichenfolgendarstellung einer Zahl in einem angegebenen Stil und einem kulturspezifischen Format in die entsprechende 32-Bit-Ganzzahl mit Vorzeichen.
 
 <!-- end list -->
 
   - indexlist  
-    Typ: [Microsoft.ISAM.ESENT.Interop.JET_INDEXLIST](./jet-indexlist-class.md)  
+    Typ: [Microsoft.Isam.Esent.Interop.JET_INDEXLIST](./jet-indexlist-class.md)  
     
-    Wird mit Informationen zu Indizes für die Tabelle ausgefüllt.
+    Mit Informationen zu Indizes für die Tabelle ausgefüllt.
 
 ## <a name="see-also"></a>Siehe auch
 
@@ -99,8 +99,8 @@ public static void JetGetTableIndexInfo(
 
 [API-Klasse](./api-class.md)
 
-[API-Mitglieder](./api-members.md)
+[API-Member](./api-members.md)
 
-[Jetgettableindexinfo-Überladung](./api.jetgettableindexinfo-method.md)
+[JetGetTableIndexInfo-Überladung](./api.jetgettableindexinfo-method.md)
 
-[Microsoft. ISAM. ESENT. Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)
+[Microsoft.Isam.Esent.Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)

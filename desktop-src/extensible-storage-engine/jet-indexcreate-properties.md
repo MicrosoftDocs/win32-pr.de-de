@@ -1,25 +1,25 @@
 ---
-description: 'Weitere Informationen finden Sie hier: JET_INDEXCREATE-Eigenschaften'
-title: Eigenschaften von JET_INDEXCREATE
+description: Weitere Informationen finden Sie unter JET_INDEXCREATE Eigenschaften.
+title: JET_INDEXCREATE Eigenschaften
 TOCTitle: JET_INDEXCREATE properties
 ms:assetid: Properties.T:Microsoft.Isam.Esent.Interop.JET_INDEXCREATE
 ms:mtpsurl: https://msdn.microsoft.com/library/microsoft.isam.esent.interop.jet_indexcreate_properties(v=EXCHG.10)
 ms:contentKeyID: 55103645
 ms.date: 07/30/2014
 ms.topic: article
-ms.openlocfilehash: 66b6ada105e6f6d12cb754f288478e85d75a07e9
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 0669d00b9c28e5299c5b9f55f0931ec7d22921eddad5e2b6b4876199057d111d
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "103960595"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118254267"
 ---
-# <a name="jet_indexcreate-properties"></a>Eigenschaften von JET_INDEXCREATE
+# <a name="jet_indexcreate-properties"></a>JET_INDEXCREATE Eigenschaften
 
-Geschützte Member einschließen  
-Geerbte Member einschließen  
+Geschützte Member enthalten  
+Geerbte Member enthalten  
 
-Der [JET_INDEXCREATE](./jet-indexcreate-class.md) -Typ macht die folgenden Member verfügbar.
+Der [JET_INDEXCREATE](./jet-indexcreate-class.md) macht die folgenden Member verfügbar.
 
 ## <a name="properties"></a>Eigenschaften
 
@@ -35,62 +35,62 @@ Der [JET_INDEXCREATE](./jet-indexcreate-class.md) -Typ macht die folgenden Membe
 <tr class="odd">
 <td><img src="../images/dn292128.pubproperty(exchg.10).gif" title="Öffentliche Eigenschaft" alt="Public property" /></td>
 <td><a href="dn335122(v=exchg.10).md">cbKey</a></td>
-<td>Ruft die Länge von szkey (in Zeichen) ab, einschließlich der beiden abschließenden Nullen, oder legt diese fest.</td>
+<td>Ruft die Länge von szKey einschließlich der beiden endenden NULL-Werte in Zeichen ab oder legt diese fest.</td>
 </tr>
 <tr class="even">
 <td><img src="../images/dn292128.pubproperty(exchg.10).gif" title="Öffentliche Eigenschaft" alt="Public property" /></td>
-<td><a href="dn335156(v=exchg.10).md">cbkeymost</a></td>
-<td>Ruft die maximal zulässige Größe (in Bytes) für Schlüssel im Index ab oder legt diese fest. Die unterstützte Mindestschlüsselgröße ist JET_cbKeyMostMin (255). Dies ist die maximale maximale Schlüsselgröße. Die maximale Schlüsselgröße hängt von der Datenbankseiten Größe <a href="hh596135(v=exchg.10).md">databasepagesize</a>ab. Die maximale Schlüsselgröße kann mit <a href="dn351156(v=exchg.10).md">keymost</a>abgerufen werden. Dieser Parameter wird unter Windows XP und Windows Server 2003 ignoriert. Anders als bei der nicht verwalteten API ist <strong>indexkeymost ()</strong> (JET_bitIndexKeyMost) nicht erforderlich, sondern wird automatisch hinzugefügt.</td>
+<td><a href="dn335156(v=exchg.10).md">cbKeyMost</a></td>
+<td>Ruft die maximal zulässige Größe für Schlüssel im Index in Bytes ab oder legt diese fest. Die unterstützte maximale Mindestschlüsselgröße beträgt JET_cbKeyMostMin (255). Dies ist die maximale Legacyschlüsselgröße. Die maximale Schlüsselgröße hängt von der Datenbankseitengröße <a href="hh596135(v=exchg.10).md">DatabasePageSize ab.</a> Die maximale Schlüsselgröße kann mit <a href="dn351156(v=exchg.10).md">KeyMost abgerufen werden.</a> Dieser Parameter wird auf Windows XP und Windows Server 2003 ignoriert. Im Gegensatz zur nicht verwalteten API wird <strong>IndexKeyMost()</strong> (JET_bitIndexKeyMost) nicht benötigt, sie wird automatisch hinzugefügt.</td>
 </tr>
 <tr class="odd">
 <td><img src="../images/dn292128.pubproperty(exchg.10).gif" title="Öffentliche Eigenschaft" alt="Public property" /></td>
-<td><a href="dn335158(v=exchg.10).md">cbvarsegmac</a></td>
-<td>Ruft die maximale Länge (in Byte) der einzelnen Spalten ab, die im Index gespeichert werden sollen, oder legt diese fest.</td>
+<td><a href="dn335158(v=exchg.10).md">cbVarSegMac</a></td>
+<td>Ruft die maximale Länge jeder Spalte in Bytes ab, die im Index gespeichert werden soll, oder legt diese fest.</td>
 </tr>
 <tr class="even">
 <td><img src="../images/dn292128.pubproperty(exchg.10).gif" title="Öffentliche Eigenschaft" alt="Public property" /></td>
-<td><a href="dn335118(v=exchg.10).md">cconditionalcolumn</a></td>
-<td>Ruft die Anzahl der bedingten Spalten ab oder legt Sie fest.</td>
+<td><a href="dn335118(v=exchg.10).md">cConditionalColumn</a></td>
+<td>Ruft die Anzahl der bedingten Spalten ab oder legt diese fest.</td>
 </tr>
 <tr class="odd">
 <td><img src="../images/dn292128.pubproperty(exchg.10).gif" title="Öffentliche Eigenschaft" alt="Public property" /></td>
-<td><a href="dn335157(v=exchg.10).md">irre</a></td>
-<td>Ruft den Fehlercode ab, der den Index erstellt, oder legt diesen fest.</td>
+<td><a href="dn335157(v=exchg.10).md">Err</a></td>
+<td>Ruft den Fehlercode beim Erstellen dieses Indexes ab oder legt diesen fest.</td>
 </tr>
 <tr class="even">
 <td><img src="../images/dn292128.pubproperty(exchg.10).gif" title="Öffentliche Eigenschaft" alt="Public property" /></td>
 <td><a href="dn335119(v=exchg.10).md">grbit</a></td>
-<td>Ruft Index Erstellungs Optionen ab oder legt Sie fest.</td>
+<td>Ruft Indexerstellungsoptionen ab oder legt sie fest.</td>
 </tr>
 <tr class="odd">
 <td><img src="../images/dn292128.pubproperty(exchg.10).gif" title="Öffentliche Eigenschaft" alt="Public property" /></td>
-<td><a href="dn335159(v=exchg.10).md">pidxunicode</a></td>
-<td>Ruft die optionalen Unicode-Vergleichs Optionen ab oder legt Sie fest.</td>
+<td><a href="dn335159(v=exchg.10).md">pidxUnicode</a></td>
+<td>Ruft die optionalen Unicode-Vergleichsoptionen ab oder legt sie fest.</td>
 </tr>
 <tr class="even">
 <td><img src="../images/dn292128.pubproperty(exchg.10).gif" title="Öffentliche Eigenschaft" alt="Public property" /></td>
-<td><a href="dn335120(v=exchg.10).md">pspacehints</a></td>
-<td>Ruft Speicherplatz Zuordnung, Wartung und Verwendungs Hinweise ab oder legt Sie fest.</td>
+<td><a href="dn335120(v=exchg.10).md">pSpaceHints</a></td>
+<td>Ruft Hinweise zur Speicherplatzzuordnung, Wartung und Nutzung ab oder legt diese fest.</td>
 </tr>
 <tr class="odd">
 <td><img src="../images/dn292128.pubproperty(exchg.10).gif" title="Öffentliche Eigenschaft" alt="Public property" /></td>
 <td><a href="dn335160(v=exchg.10).md">rgconditionalcolumn</a></td>
-<td>Ruft die optionalen bedingten Spalten ab oder legt Sie fest.</td>
+<td>Ruft die optionalen bedingten Spalten ab oder legt sie fest.</td>
 </tr>
 <tr class="even">
 <td><img src="../images/dn292128.pubproperty(exchg.10).gif" title="Öffentliche Eigenschaft" alt="Public property" /></td>
-<td><a href="dn335121(v=exchg.10).md">szindexname</a></td>
-<td>Ruft den Namen des zu erstellenden Indexes ab oder legt ihn fest.</td>
+<td><a href="dn335121(v=exchg.10).md">szIndexName</a></td>
+<td>Ruft den Namen des zu erstellenden Indexes ab oder legt den Namen fest.</td>
 </tr>
 <tr class="odd">
 <td><img src="../images/dn292128.pubproperty(exchg.10).gif" title="Öffentliche Eigenschaft" alt="Public property" /></td>
-<td><a href="dn335161(v=exchg.10).md">szkey</a></td>
-<td>Ruft die Beschreibung des Index Schlüssels ab oder legt Sie fest. Dies ist eine Double-NULL-terminierte Zeichenfolge mit durch Null getrennten Token. Jedes Token hat das Format [Direction-specifier] [Spaltenname], wobei Direction-Specification entweder &quot; + &quot; oder ist &quot; - &quot; . Beispielsweise wird ein szkey von &quot; + abc\0-def\0 + ghi\0 &quot; über die drei Spalten &quot; ABC &quot; (in aufsteigender Reihenfolge), &quot; DEF &quot; (in absteigender Reihenfolge) und &quot; ghi &quot; (in aufsteigender Reihenfolge) indiziert.</td>
+<td><a href="dn335161(v=exchg.10).md">szKey</a></td>
+<td>Ruft die Beschreibung des Indexschlüssels ab oder legt diese fest. Dies ist eine doppelte null-terminierte Zeichenfolge von Token mit NULL-Trennzeichen. Jedes Token hat das Formular [Richtungsspezifizierer][Spaltenname], wobei direction-specification entweder oder &quot; + &quot; &quot; - &quot; ist. Ein szKey von &quot; +abc\0-def\0+wiederherstellen\0 indiziert z. B. die drei Spalten abc (in aufsteigender &quot; &quot; &quot; Reihenfolge), &quot; def &quot; (in &quot; absteigender Reihenfolge) und (" in aufsteigender &quot; Reihenfolge").</td>
 </tr>
 <tr class="even">
 <td><img src="../images/dn292128.pubproperty(exchg.10).gif" title="Öffentliche Eigenschaft" alt="Public property" /></td>
-<td><a href="dn335162(v=exchg.10).md">uldensity</a></td>
-<td>Ruft die Dichte des Indexes ab oder legt Sie fest.</td>
+<td><a href="dn335162(v=exchg.10).md">ulDensity</a></td>
+<td>Ruft die Dichte des Indexes ab oder legt diese fest.</td>
 </tr>
 </tbody>
 </table>
@@ -104,4 +104,4 @@ Oben
 
 [JET_INDEXCREATE-Klasse](./jet-indexcreate-class.md)
 
-[Microsoft. ISAM. ESENT. Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)
+[Microsoft.Isam.Esent.Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)

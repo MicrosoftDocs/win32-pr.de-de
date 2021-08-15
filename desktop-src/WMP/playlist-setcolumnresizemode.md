@@ -1,9 +1,9 @@
 ---
-title: Wiedergabeliste. setcolumnresizemode
-description: Die setcolumnresizemode-Methode gibt die Größe der indizierten Spalten an.
+title: PLAYLIST.setColumnResizeMode
+description: Die setColumnResizeMode-Methode gibt an, wie sich die indizierte Spalte selbst formatiert.
 ms.assetid: 84ca0e60-ca24-4058-ae08-5b9cf3d7c38f
 keywords:
-- Wiedergabeliste. setcolumnresizemode (Windows Media Player)
+- PLAYLIST.setColumnResizeMode Windows Media Player
 topic_type:
 - apiref
 api_name:
@@ -13,16 +13,16 @@ api_type:
 ms.topic: reference
 ms.date: 05/31/2018
 api_location: ''
-ms.openlocfilehash: 9a1b83020f4400f4f1095c84e281fe498f2b67da
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 72f356108ff016c404468a9b152b4adac247cd72ee089a9e82ea3206c4c2ffea
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106372770"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118335802"
 ---
-# <a name="playlistsetcolumnresizemode"></a>Wiedergabeliste. setcolumnresizemode
+# <a name="playlistsetcolumnresizemode"></a>PLAYLIST.setColumnResizeMode
 
-Die **setcolumnresizemode** -Methode gibt die Größe der indizierten Spalten an.
+Die **setColumnResizeMode-Methode** gibt an, wie sich die indizierte Spalte selbst formatiert.
 
 ``` syntax
         elementID.setColumnResizeMode(column, mode)
@@ -32,26 +32,26 @@ Die **setcolumnresizemode** -Methode gibt die Größe der indizierten Spalten an
 
 <dl> <dt>
 
-<span id="column"></span><span id="COLUMN"></span>*Kolumne*
+<span id="column"></span><span id="COLUMN"></span>*Spalte*
 </dt> <dd>
 
-**Zahl** (**Long**), die den Index der zu ändernden Spalte angibt.
+**Zahl** (**long**), die den Index der zu ändernden Spalte angibt.
 
 </dd> <dt>
 
-<span id="mode"></span><span id="MODE"></span>*Spar*
+<span id="mode"></span><span id="MODE"></span>*Modus*
 </dt> <dd>
 
-**Zeichenfolge** , die den Größen Anpassungsmodus angibt. Enthält einen der folgenden Werte.
+**Eine Zeichenfolge,** die den Größenmodus angibt. Enthält einen der folgenden Werte.
 
 
 
 | Wert          | BESCHREIBUNG                                                                                                    |
 |----------------|----------------------------------------------------------------------------------------------------------------|
-| Autosizeheader | Die Größe der Spaltengröße wird an alle Daten in der Spalte und in der Kopfzeile angepasst.                                  |
-| Autosizedata   | Die Spaltengröße ändert sich, um nur alle Daten in der Spalte zu unterstützen.                                                 |
-| Fest          | Die Spalte hat eine Größe mit fester Größe.                                                                                    |
-| Dehn      | Die Größe der Spalte ändert sich, um den verbleibenden Platz im **Wiedergabe** Listenelement zu verwenden, nachdem alle anderen Spalten geändert wurden. |
+| AutoizeHeader | Die Größe der Spalte wird so geändert, dass alle Daten sowohl in der Spalte als auch im Header berücksichtigt werden.                                  |
+| AutoizeData   | Die Größe der Spalte wird so geändert, dass nur alle Daten in der Spalte berücksichtigt werden.                                                 |
+| Fest          | Die Spalte ist eine feste Größe.                                                                                    |
+| Erstreckt sich      | Die Größe der Spalte wird so geändert, dass der verbleibende Speicherplatz im **PLAYLIST-Element** verwendet wird, nachdem die Größe aller anderen Spalten geändert wurde. |
 
 
 
@@ -69,15 +69,15 @@ Diese Methode gibt keinen Wert zurück.
 
 | Anforderung | Wert |
 |--------------------|------------------------------------------------------|
-| Version<br/> | Windows Media Player, Version 7,0 oder höher<br/> |
+| Version<br/> | Windows Media Player Version 7.0 oder höher<br/> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Wiedergabelisten Element**](playlist-element.md)
+[**PLAYLIST-Element**](playlist-element.md)
 </dt> </dl>
 
  

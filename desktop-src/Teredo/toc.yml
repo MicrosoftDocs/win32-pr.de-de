@@ -26,13 +26,13 @@
               href: implementing-firewall-filters-for-teredo.md
             - name: Erforderliche Firewallausnahmen für Teredo
               href: required-firewall-exceptions-for-teredo.md
-            - name: Ausnahmen für die Windows-Filter Plattform für Teredo
+            - name: Windows Filtern von Plattformausnahmen für Teredo
               href: required-windows-filtering-platform-exceptions-for-teredo.md
         - name: Empfangen von angeforderten Datenverkehr über Teredo
           href: receiving-solicited-traffic-over-teredo.md
-        - name: Empfangen von angefordertem Datenverkehr über Teredo
+        - name: Empfangen von nicht angeforderten Datenverkehr über Teredo
           href: receiving-unsolicited-traffic-over-teredo.md
-        - name: Verwenden von Teredo mit IP-Hilfsprogramm
+        - name: Verwenden von Teredo mit dem IP-Hilfsfeld
           href: using-teredo-with-ip-helper.md
         - name: Verwenden von Teredo in Windows XP
           href: using-teredo-in-windows-xp.md

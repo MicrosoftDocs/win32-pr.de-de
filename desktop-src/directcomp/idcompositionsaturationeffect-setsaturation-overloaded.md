@@ -1,9 +1,9 @@
 ---
-title: Idcompositionsätationeffect-Enumerationsmethoden
+title: IDCompositionSaturationEffect SetSaturation-Methoden
 description: Legt die Sättigung des Bilds fest.
 ms.assetid: 2f92086f-51e1-ceda-a79f-a053d85a2502
 keywords:
-- Enumerationsmethoden directcomposition
+- SetSaturation-Methoden DirectComposition
 topic_type:
 - apiref
 api_type:
@@ -12,14 +12,14 @@ ms.topic: reference
 ms.date: 05/31/2018
 api_name: ''
 api_location: ''
-ms.openlocfilehash: 09bea22c73ea1cea34884473408f2ec45a74449c
-ms.sourcegitcommit: 592c9bbd22ba69802dc353bcb5eb30699f9e9403
+ms.openlocfilehash: caced66849600be95bacde373730317c5e42c1cd4efd03a95c91e1ccea5a1c26
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "104102242"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118281529"
 ---
-# <a name="idcompositionsaturationeffectsetsaturation-methods"></a>Idcompositionsätationeffect::-Enumerationsmethoden
+# <a name="idcompositionsaturationeffectsetsaturation-methods"></a>IDCompositionSaturationEffect::SetSaturation-Methoden
 
 Legt die Sättigung des Bilds fest.
 
@@ -27,10 +27,10 @@ Legt die Sättigung des Bilds fest.
 
 
 
-| Methode                                                                                             | BESCHREIBUNG                                  |
+| Methode                                                                                             | Beschreibung                                  |
 |:---------------------------------------------------------------------------------------------------|:---------------------------------------------|
-| [**-Sortierung**](/windows/win32/api/dcomp/nf-dcomp-idcompositionsaturationeffect-setsaturation(float))                               | Legt die Sättigung des Bilds fest.<br/> |
-| [**-Aktivität (idcompositionanimation \* )**](/windows/win32/api/dcomp/nf-dcomp-idcompositionsaturationeffect-setsaturation(idcompositionanimation)) | Legt die Sättigung des Bilds fest.<br/> |
+| [**SetSaturation**](/windows/win32/api/dcomp/nf-dcomp-idcompositionsaturationeffect-setsaturation(float))                               | Legt die Sättigung des Bilds fest.<br/> |
+| [**SetSaturation (IDCompositionAnimation \* )**](/windows/win32/api/dcomp/nf-dcomp-idcompositionsaturationeffect-setsaturation(idcompositionanimation)) | Legt die Sättigung des Bilds fest.<br/> |
 
 
 
@@ -38,7 +38,7 @@ Legt die Sättigung des Bilds fest.
 
 <dl> <dt>
 
-[**Idcompositionsätationeffect**](/windows/win32/api/dcomp/nn-dcomp-idcompositionsaturationeffect)
+[**IDCompositionSaturationEffect**](/windows/win32/api/dcomp/nn-dcomp-idcompositionsaturationeffect)
 </dt> </dl>
 
  

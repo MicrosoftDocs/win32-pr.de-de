@@ -1,44 +1,44 @@
 ---
-title: Vorschau-und Überlagerungs Modi
-description: Vorschau-und Überlagerungs Modi
+title: Vorschau- und Überlagerungsmodi
+description: Vorschau- und Überlagerungsmodi
 ms.assetid: 11e7848f-efda-452c-a9c7-405e636a2ead
 keywords:
 - WM_CAP_SET_PREVIEW Meldung
-- cappreview-Makro
+- capPreview-Makro
 - WM_CAP_SET_PREVIEWRATE Meldung
-- cappreviewrate-Makro
+- capPreviewRate-Makro
 - WM_CAP_SET_SCALE Meldung
-- cappreviewscale-Makro
+- capPreviewScale-Makro
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: af4dc293587160d950856fccb15709a11e9533bf
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: 9359b1380c5d6efe049bc4bea52a08a92f880af5d35558f4e65e21070f20c0cc
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "103947603"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118372369"
 ---
-# <a name="preview-and-overlay-modes"></a>Vorschau-und Überlagerungs Modi
+# <a name="preview-and-overlay-modes"></a>Vorschau- und Überlagerungsmodi
 
-Ein Erfassungs Treiber kann zwei Methoden zum Anzeigen eines eingehenden Videodaten Stroms implementieren: Vorschaumodus und Überlagerungs Modus. Wenn ein Aufzeichnungs Treiber beide Methoden implementiert, kann der Benutzer auswählen, welche Methode verwendet werden soll.
+Ein Erfassungstreiber kann zwei Methoden zum Anzeigen eines eingehenden Videostreams implementieren: den Vorschaumodus und den Überlagerungsmodus. Wenn ein Erfassungstreiber beide Methoden implementiert, kann der Benutzer auswählen, welche Methode verwendet werden soll.
 
-Der Vorschaumodus überträgt digitalisierte Frames von der Aufzeichnungs Hardware in den Systemspeicher und zeigt dann die digitalisierten Frames im Erfassungsfenster mithilfe von Funktionen der Graphics Device Interface (GDI) an. Anwendungen können die Vorschau Rate verringern, wenn das übergeordnete Fenster den Fokus verliert, und die Vorschau Rate erhöhen, wenn das übergeordnete Fenster den Fokus erhält. Durch diese Aktion wird die allgemeine Reaktionsfähigkeit des Systems verbessert, da der Vorschau Vorgang Prozessor intensiv ist.
+Der Vorschaumodus überträgt digitalisierte Frames von der Erfassungshardware an den Systemspeicher und zeigt dann die digitalisierten Frames im Erfassungsfenster mithilfe von GDI-Funktionen (Graphics Device Interface) an. Anwendungen können die Vorschaurate verringern, wenn das übergeordnete Fenster den Fokus verliert, und die Vorschaurate erhöhen, wenn das übergeordnete Fenster den Fokus erhält. Diese Aktion verbessert die allgemeine Reaktionsfähigkeit des Systems, da der Vorschauvorgang prozessorintensiv ist.
 
-Es gibt drei Nachrichten, um den Vorschauvorgang zu steuern.
+Es gibt drei Meldungen, um den Vorschauvorgang zu steuern.
 
--   Verwenden Sie die Vorschau Nachricht der [**WM- \_ Ober \_ \_ Grenze**](wm-cap-set-preview.md) , um den Vorschaumodus zu aktivieren oder zu deaktivieren, indem Sie das-(oder das [**cappreview**](/windows/desktop/api/Vfw/nf-vfw-cappreview) -Makro) an ein Aufzeichnungs Fenster senden
--   Verwenden Sie die " [**WM \_ Cap \_ Set \_ previewrate**](wm-cap-set-previewrate.md) "-Meldung (oder das " [**cappreviewrate**](/windows/desktop/api/Vfw/nf-vfw-cappreviewrate) "-Makro), um die Rate festzulegen, mit der Frames im Vorschaumodus angezeigt werden
--   Verwenden Sie die " [**WM \_ Cap \_ Set \_ Scale**](wm-cap-set-scale.md) "-Nachricht (oder das [**cappreviewscale**](/windows/desktop/api/Vfw/nf-vfw-cappreviewscale) -Makro), um die Skalierung des Vorschau Videos zu aktivieren oder zu deaktivieren.
+-   Verwenden Sie die [**WM \_ CAP SET \_ \_ PREVIEW-Meldung,**](wm-cap-set-preview.md) um den Vorschaumodus zu aktivieren oder zu deaktivieren, indem Sie (oder das [**CapPreview-Makro)**](/windows/desktop/api/Vfw/nf-vfw-cappreview) an ein Erfassungsfenster senden.
+-   Verwenden Sie die [**WM \_ CAP SET \_ \_ PREVIEWRATE-Meldung**](wm-cap-set-previewrate.md) (oder das [**CapPreviewRate-Makro),**](/windows/desktop/api/Vfw/nf-vfw-cappreviewrate) um die Rate festzulegen, mit der Frames im Vorschaumodus angezeigt werden.
+-   Verwenden Sie die [**WM \_ CAP SET \_ \_ SCALE-Nachricht**](wm-cap-set-scale.md) (oder das [**CapPreviewScale-Makro),**](/windows/desktop/api/Vfw/nf-vfw-cappreviewscale) um die Skalierung des Vorschauvideos zu aktivieren oder zu deaktivieren.
 
-Wenn Vorschau und Skalierung aktiviert sind, wird der erfasste Videoframe auf die Abmessungen des Aufzeichnungs Fensters gestreckt. Durch Aktivieren des Vorschaumodus wird der Überlagerungs Modus automatisch deaktiviert.
+Wenn Vorschau und Skalierung aktiviert sind, wird der erfasste Videoframe auf die Dimensionen des Erfassungsfensters gestreckt. Durch aktivieren des Vorschaumodus wird der Überlagerungsmodus automatisch deaktiviert.
 
-Der Überlagerungs Modus ist eine Hardware Funktion, die den Inhalt des Aufzeichnungs Puffers auf dem Monitor anzeigt, ohne CPU-Ressourcen zu verwenden. Sie können den Überlagerungs Modus aktivieren und deaktivieren, indem Sie die WM-Cap-über [**\_ \_ \_ Lagerungs**](wm-cap-set-overlay.md) Nachricht (oder das [**capoverlay**](/windows/desktop/api/Vfw/nf-vfw-capoverlay) -Makro) an ein Aufzeichnungs Fenster senden. Durch Aktivieren des Überlagerungs Modus wird der Vorschaumodus automatisch deaktiviert.
+Der Überlagerungsmodus ist eine Hardwarefunktion, die den Inhalt des Erfassungspuffers auf dem Monitor anzeigt, ohne CPU-Ressourcen zu verwenden. Sie können den Überlagerungsmodus aktivieren und deaktivieren, indem Sie die [**WM \_ CAP SET \_ \_ OVERLAY-Nachricht**](wm-cap-set-overlay.md) (oder das [**capOverlay-Makro)**](/windows/desktop/api/Vfw/nf-vfw-capoverlay) an ein Erfassungsfenster senden. Durch aktivieren des Überlagerungsmodus wird der Vorschaumodus automatisch deaktiviert.
 
-Sie können auch die Bild Lauf Position des Video Rahmens im Client Bereich des Aufzeichnungs Fensters für den Vorschaumodus oder den Überlagerungs Modus festlegen, indem Sie die WM-Cap-Abbild [**\_ \_ \_ scrollnachricht**](wm-cap-set-scroll.md) (oder das [**capsetscrollpos**](/windows/desktop/api/Vfw/nf-vfw-capsetscrollpos) -Makro) an ein Erfassungsfenster senden.
+Sie können auch die Bildlaufposition des Videoframes im Clientbereich des Erfassungsfensters für den Vorschau- oder Überlagerungsmodus festlegen, indem Sie die [**WM \_ CAP SET \_ \_ SCROLL-Nachricht**](wm-cap-set-scroll.md) (oder das [**CapSetScrollPos-Makro)**](/windows/desktop/api/Vfw/nf-vfw-capsetscrollpos) an ein Erfassungsfenster senden.
 
- 
+ 
 
- 
+ 
 
 
 

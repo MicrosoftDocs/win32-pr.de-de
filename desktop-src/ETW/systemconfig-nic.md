@@ -1,5 +1,5 @@
 ---
-description: Diese Klasse ist die Ereignistyp Klasse für Konfigurations Ereignisse der Netzwerkschnittstellenkarte. Die folgende Syntax wird durch den MOF-Code vereinfacht.
+description: Diese Klasse ist die Ereignistypklasse für Netzwerkschnittstellenkarten-Konfigurationsereignisse. Die folgende Syntax wird durch einen MOF-Code vereinfacht.
 ms.assetid: 66b2c116-810e-489d-ad5e-f9c09902005b
 title: SystemConfig_NIC-Klasse
 ms.topic: reference
@@ -19,18 +19,18 @@ api_name:
 api_type:
 - NA
 api_location: ''
-ms.openlocfilehash: 63d522eee993f0766554eb9bc4fb09d842e9cd8f
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 822e8404137eee9731bbfcee9f5d9f4495609078c4251b53269371dd4904cea7
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "103958961"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118393816"
 ---
-# <a name="systemconfig_nic-class"></a>SystemConfig- \_ NIC-Klasse
+# <a name="systemconfig_nic-class"></a>\_SystemConfig-NIC-Klasse
 
-Diese Klasse ist die Ereignistyp Klasse für Konfigurations Ereignisse der Netzwerkschnittstellenkarte.
+Diese Klasse ist die Ereignistypklasse für Netzwerkschnittstellenkarten-Konfigurationsereignisse.
 
-Die folgende Syntax wird durch den MOF-Code vereinfacht.
+Die folgende Syntax wird durch einen MOF-Code vereinfacht.
 
 ## <a name="syntax"></a>Syntax
 
@@ -50,42 +50,42 @@ class SystemConfig_NIC : SystemConfig
 
 ## <a name="members"></a>Member
 
-Die **\_ NIC** -Klasse von SystemConfig verfügt über diese Typen von Membern:
+Die **\_ SystemConfig-NIC-Klasse** verfügt über folgende Typen von Membern:
 
 -   [Eigenschaften](#properties)
 
 ### <a name="properties"></a>Eigenschaften
 
-Die **SystemConfig- \_ NIC** -Klasse verfügt über diese Eigenschaften.
+Die **\_ SystemConfig-NIC-Klasse** verfügt über diese Eigenschaften.
 
 <dl> <dt>
 
-Dnsserveradressen
+DnsServerAddresses
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: wmidataid (7), stringbeendigung ("nullterminiert"), Format ("w")
+Qualifizierer: WmiDataId(7), StringTermination("NullTerminated"), Format("w")
 </dt> </dl>
 
-IP-Adressen, die zum Abfragen von DNS-Servern verwendet werden sollen. Die Liste der Adressen ist durch Kommas getrennt.
+IP-Adressen, die beim Abfragen von DNS-Servern verwendet werden sollen. Die Liste der Adressen ist durch Kommas getrennt.
 
 </dd> <dt>
 
-IpAddresses
+Ipaddresses
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: wmidataid (6), stringbeendigung ("nullterminiert"), Format ("w")
+Qualifizierer: WmiDataId(6), StringTermination("NullTerminated"), Format("w")
 </dt> </dl>
 
 IP-Adressen, die der Netzwerkschnittstellenkarte zugeordnet sind. Die Liste der Adressen ist durch Kommas getrennt.
@@ -95,91 +95,91 @@ IP-Adressen, die der Netzwerkschnittstellenkarte zugeordnet sind. Die Liste der 
 Ipv4Index
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt32**
+Datentyp: **uint32**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: wmidataid (3)
+Qualifizierer: WmiDataId(3)
 </dt> </dl>
 
-Adapter Index für IPv4-NIC. Der Adapter Index kann sich ändern, wenn ein Adapter deaktiviert und dann aktiviert wird, oder unter anderen Umständen nicht als persistent eingestuft wird.
+Adapterindex für IPv4-NIC. Der Adapterindex kann sich ändern, wenn ein Adapter deaktiviert und dann aktiviert wird, oder unter anderen Umständen und sollte nicht als persistent betrachtet werden.
 
 </dd> <dt>
 
 Ipv6Index
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt32**
+Datentyp: **uint32**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: wmidataid (4)
+Qualifizierer: WmiDataId(4)
 </dt> </dl>
 
-Adapter Index für IPv6-NIC. Der Adapter Index kann sich ändern, wenn ein Adapter deaktiviert und dann aktiviert wird, oder unter anderen Umständen nicht als persistent eingestuft wird.
+Adapterindex für IPv6-NIC. Der Adapterindex kann sich ändern, wenn ein Adapter deaktiviert und dann aktiviert wird, oder unter anderen Umständen und sollte nicht als persistent betrachtet werden.
 
 </dd> <dt>
 
-Nicdescription
+NICDescription
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: wmidataid (5), stringbeendigung ("nullterminiert"), Format ("w")
+Qualifizierer: WmiDataId(5), StringTermination("NullTerminated"), Format("w")
 </dt> </dl>
 
-Die Beschreibung des Adapters.
+Beschreibung des Adapters.
 
 </dd> <dt>
 
-Physicaladdr
+PhysicalAddr
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt64**
+Datentyp: **uint64**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: wmidataid (1), Format ("x")
+Qualifizierer: WmiDataId(1), Format("x")
 </dt> </dl>
 
-Die Hardware Adresse für den Adapter.
+Hardwareadresse für den Adapter.
 
 </dd> <dt>
 
-Physicaladdrlen
+PhysicalAddrLen
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt32**
+Datentyp: **uint32**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: wmidataid (2)
+Qualifizierer: WmiDataId(2)
 </dt> </dl>
 
 Länge der Hardwareadresse für den Adapter.
 
 </dd> </dl>
 
-## <a name="requirements"></a>Requirements (Anforderungen)
+## <a name="requirements"></a>Anforderungen
 
 
 
 | Anforderung | Wert |
 |-------------------------------------|------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>       |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2008 \[ -Desktop-Apps\]<br/> |
+| Unterstützte Mindestversion (Client)<br/> | Windows \[Nur Vista-Desktop-Apps\]<br/>       |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2008-Desktop-Apps\]<br/> |
 
 
 

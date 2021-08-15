@@ -1,7 +1,7 @@
 ---
-description: Die getframesrcaddressoffset-Funktion gibt den Offset der Quelladresse der Frames zurück.
+description: Die GetFrameSrcAddressOffset-Funktion gibt den Offset der Quelladresse des Frames zurück.
 ms.assetid: 1c5408d7-cf66-4887-93ee-134c0b8c5eff
-title: Getframesrcaddressoffset-Funktion (Netmon. h)
+title: GetFrameSrcAddressOffset-Funktion (Netmon.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,16 +13,16 @@ api_type:
 - DllExport
 api_location:
 - Nmapi.dll
-ms.openlocfilehash: f7310c0ac2c6f402c37537100cc8060fef9eedd1
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 5c8c2315b53d336a06a73e63019daee842439f65aa53e3fb7d34d4944dcab9cf
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "104217173"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118366094"
 ---
-# <a name="getframesrcaddressoffset-function"></a>Getframesrcaddressoffset-Funktion
+# <a name="getframesrcaddressoffset-function"></a>GetFrameSrcAddressOffset-Funktion
 
-Die **getframesrcaddressoffset** -Funktion gibt den Offset der Quelladresse des Frames zurück.
+Die **GetFrameSrcAddressOffset-Funktion** gibt den Offset der Quelladresse des Frames zurück.
 
 ## <a name="syntax"></a>Syntax
 
@@ -41,7 +41,7 @@ DWORD WINAPI GetFrameSrcAddressOffset(
 
 <dl> <dt>
 
-*hframe* 
+*hFrame* 
 </dt> <dd>
 
 Handle für den Frame.
@@ -51,23 +51,23 @@ Handle für den Frame.
 *Adresstyp* 
 </dt> <dd>
 
-Der Quell Adressentyp. Der Parameterwert kann eines der folgenden sein:
+Quelladressentyp. Der Parameterwert kann einer der folgenden sein:
 
--   \_Adresstyp \_ Ethernet
--   Address \_ Type \_ IP
--   \_Adresstyp \_ IPX
--   \_Adresstyp \_ TokenRing
--   Adresstyp " \_ \_ f"
--   Address \_ Type \_ XNS
--   Address \_ Type \_ Vines \_ IP
--   \_Adresstyp \_ ATM
+-   ADRESSTYP \_ \_ ETHERNET
+-   \_ \_ IP-ADRESSTYP
+-   ADRESSTYP \_ \_ IPX
+-   ADDRESS \_ TYPE \_ TOKENRING
+-   \_ \_ ADRESSTYP-FDDI
+-   ADRESSTYP \_ \_ XNS
+-   ADRESSE \_ TYP \_ VINES \_ IP
+-   ADRESSTYP \_ \_ ATM
 
 </dd> <dt>
 
-*Addresslength* 
+*AddressLength* 
 </dt> <dd>
 
-Ein Zeiger auf ein **DWORD**, das bei der Rückgabe die Länge der Adresse in Bytes enthält.
+Zeiger auf ein **DWORD,** das bei der Rückgabe die Länge der Adresse in Bytes enthält.
 
 </dd> </dl>
 
@@ -85,8 +85,8 @@ Wenn die Funktion nicht erfolgreich ist, ist der Rückgabewert minus eins (-1).
 |-------------------------------------|--------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional \[nur Desktop-Apps\]<br/>                           |
 | Unterstützte Mindestversion (Server)<br/> | Windows 2000 Server \[nur Desktop-Apps\]<br/>                                 |
-| Header<br/>                   | <dl> <dt>Netmon. h</dt> </dl>  |
-| Bibliothek<br/>                  | <dl> <dt>Nmapi. lib</dt> </dl> |
+| Header<br/>                   | <dl> <dt>Netmon.h</dt> </dl>  |
+| Bibliothek<br/>                  | <dl> <dt>Nmapi.lib</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>Nmapi.dll</dt> </dl> |
 
 

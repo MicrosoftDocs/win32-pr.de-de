@@ -1,6 +1,6 @@
 ---
-description: 'Weitere Informationen finden Sie hier: jetexternalrestore-Funktion'
-title: Jetexternalrestore-Funktion
+description: Weitere Informationen finden Sie unter JetExternalRestore-Funktion.
+title: JetExternalRestore-Funktion
 TOCTitle: JetExternalRestore Function
 ms:assetid: c930689a-3ea6-4c5a-9318-76f519f23343
 ms:mtpsurl: https://msdn.microsoft.com/library/Gg294088(v=EXCHG.10)
@@ -20,21 +20,21 @@ api_type:
 api_location:
 - ESENT.DLL
 ROBOTS: INDEX,FOLLOW
-ms.openlocfilehash: 087949817ac0bcbe2effe2ff136a6ce80084daa2
-ms.sourcegitcommit: 168d11879cb9fd89d26f826482725c0a626be00f
+ms.openlocfilehash: 4844c14d6b60e5825b3b09f58b0d756e83b0f41c4e743684a29607a814d4f16f
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/16/2021
-ms.locfileid: "106373551"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118072823"
 ---
-# <a name="jetexternalrestore-function"></a>Jetexternalrestore-Funktion
+# <a name="jetexternalrestore-function"></a>JetExternalRestore-Funktion
 
 
 _**Gilt für:** Windows | Windows Server_
 
-## <a name="jetexternalrestore-function"></a>Jetexternalrestore-Funktion
+## <a name="jetexternalrestore-function"></a>JetExternalRestore-Funktion
 
-Die **jetexternalrestore** -Funktion stellt eine externe Sicherung wieder her, die mit den externen Backup-APIs erstellt wurde, und gibt einen Bereich von Protokoll Dateinummern an, die während der Wiedergabe wiedergegeben werden. Dies wird als "feste Wiederherstellung" bezeichnet. Dies ähnelt der von der [jetinit](./jetinit-function.md) -Funktion ausgeführten Soft-Wiederherstellung.
+Die **JetExternalRestore-Funktion** stellt eine externe Sicherung wieder her, die mit den externen Sicherungs-APIs erstellt wurde, und gibt einen Bereich von Protokolldateinummern an, die während des Wiederherstellungsprozesses wiedergegeben werden. Dies wird als harte Wiederherstellung bezeichnet, die ähnlich wie die von der JetInit-Funktion durchgeführte wie die weiche [Wiederherstellung ist.](./jetinit-function.md)
 
 ```cpp
 JET_ERR JET_API JetExternalRestore(
@@ -51,41 +51,41 @@ JET_ERR JET_API JetExternalRestore(
 
 ### <a name="parameters"></a>Parameter
 
-*szcheckpointfilepath*
+*szCheckpointFilePath*
 
-Der Pfad für die Prüf Punkt Datei, die während der Wiederherstellung verwendet werden soll, wenn *sztargetinstancecheckpointpath* nicht angegeben ist oder bereits über eine aktive oder ausgeführte Instanz verfügt.
+Der Pfad für die Prüfpunktdatei, die während der Wiederherstellung verwendet werden soll, wenn *szTargetInstanceCheckpointPath* nicht angegeben ist oder bereits über eine aktive oder ausgeführte Instanz verfügt.
 
-*szlogpath*
+*szLogPath*
 
-Der Pfad oder das Verzeichnis für die Protokolle für die letzte Phase (rückgängig) der Wiederherstellung und möglicherweise für die Roll Forward-Protokolle. Dieser Pfad kann mit dem *szbackuplogpath* identisch sein.
+Der Pfad oder das Verzeichnis für die Protokolle für die letzte Phase (Rückgängig) der Wiederherstellung und möglicherweise für die Roll forward-Protokolle. Dieser Pfad kann mit dem *szBackupLogPath identisch sein.*
 
 *rgrstmap*
 
-Dies ist ein Array von [JET_RSTMAP](./jet-rstmap-structure.md) Strukturen. Dabei handelt es sich um eine Zuordnung von alten und neuen Daten Bank Pfaden oder Dateinamen. Dies wird verwendet, da die Datenbanken möglicherweise an einem anderen Speicherort als dem Speicherort wieder hergestellt werden müssen, von dem aus Sie gesichert wurden. Wenn mehrere Datenbanken an einen einzelnen protokolliersatz angefügt werden, kann die Restore Map eine Teilmenge der wiederherzustellenden Datenbanken angeben.
+Dies ist ein Array [JET_RSTMAP](./jet-rstmap-structure.md) Strukturen. Dies ist eine Zuordnung alter und neuer Datenbankpfade oder Dateinamen. Dies wird verwendet, da die Datenbanken möglicherweise an einem anderen Speicherort als dem Speicherort wiederhergestellt werden müssen, von dem sie gespeichert wurden. Wenn mehrere Datenbanken an einen einzelnen Protokollierungssatz angefügt sind, kann die Wiederherstellungszuordnung eine Teilmenge der wiederherzustellenden Datenbanken angeben.
 
 *crstfilemap*
 
-Die Anzahl der Einträge im *rgrstmap* -Array Parameter.
+Die Anzahl der Einträge im *rgrstmap-Arrayparameter.*
 
-*szbackuplogpath*
+*szBackupLogPath*
 
-Der Pfad zu dem Verzeichnis, in dem die Protokolldateien wieder hergestellt werden. Dabei handelt es sich um die Protokolle, die während der externen Sicherungs Sequenz gelesen wurden. Dieser Pfad kann mit dem szlogpath identisch sein.
+Der Pfad zu dem Verzeichnis, in dem die Protokolldateien wiederhergestellt werden. Dies sind die Protokolle, die während der externen Sicherungssequenz ausgelesen wurden. Dieser Pfad kann mit dem szLogPath identisch sein.
 
-*genlow*
+*genLow*
 
-Die niedrigste Protokolldatei Nummer, die von *szbackuplogpath* wiedergegeben werden soll. Die vollständige Genauigkeit eines langen Zeichens ohne Vorzeichen sollte beibehalten werden, aber in den aktuellen Versionen der Engine ist diese Zahl eine hexadezimale Zahl im Bereich von 0x00000 bis 0xFFFFF. Dies kann sich in zukünftigen Versionen ändern.
+Die niedrigste Protokolldateinummer, die von *szBackupLogPath wiedergegeben werden soll.* Die vollständige Genauigkeit eines long-Werts ohne Vorzeichen sollte beibehalten werden, aber in aktuellen Versionen der Engine ist diese Zahl eine Hexadezimalzahl im Bereich von 0x00000 bis 0xFFFFF. Dies kann sich in zukünftigen Versionen ändern.
 
-*genhoch*
+*genHigh*
 
-Die höchste Protokoll dateizahl, die von *szbackuplogpath* wiedergegeben werden soll. Die vollständige Genauigkeit eines langen Zeichens ohne Vorzeichen sollte beibehalten werden, aber in den aktuellen Versionen der Engine ist diese Zahl eine hexadezimale Zahl im Bereich von 0x00000 bis 0xFFFFF. Dies kann sich in zukünftigen Versionen ändern.
+Die höchste Protokolldateinummer, die von *szBackupLogPath* wiedergegeben werden soll. Die vollständige Genauigkeit eines long-Werts ohne Vorzeichen sollte beibehalten werden, aber in aktuellen Versionen der Engine ist diese Zahl eine Hexadezimalzahl im Bereich von 0x00000 bis 0xFFFFF. Dies kann sich in zukünftigen Versionen ändern.
 
-*PFN*
+*pfn*
 
-Der Status Rückruf, um den Fortschritt der Wiederherstellung zu melden.
+Der Statusrückruf, um den Fortschritt der Wiederherstellung zu melden.
 
 ### <a name="return-value"></a>Rückgabewert
 
-Diese Funktion gibt den [JET_ERR](./jet-err.md) Datentyp mit einem der folgenden Rückgabecodes zurück. Weitere Informationen zu den möglichen ESE-Fehlern finden Sie unter [Extensible Storage Engine Errors](./extensible-storage-engine-errors.md) und [Error Handling Parameters](./error-handling-parameters.md).
+Diese Funktion gibt den [JET_ERR-Datentyp](./jet-err.md) mit einem der folgenden Rückgabecodes zurück. Weitere Informationen zu den möglichen ESE-Fehlern finden Sie unter [Extensible Storage Engine Errors](./extensible-storage-engine-errors.md) and [Error Handling Parameters](./error-handling-parameters.md).
 
 <table>
 <colgroup>
@@ -105,61 +105,61 @@ Diese Funktion gibt den [JET_ERR](./jet-err.md) Datentyp mit einem der folgenden
 </tr>
 <tr class="even">
 <td><p>JET_errOutOfMemory</p></td>
-<td><p>Der Vorgang ist fehlgeschlagen, da nicht genügend Arbeitsspeicher zugeordnet werden konnte, um den Vorgang abzuschließen.</p></td>
+<td><p>Fehler beim Vorgang, da nicht genügend Arbeitsspeicher zugeordnet werden konnte, um ihn abschließen zu können.</p></td>
 </tr>
 <tr class="odd">
 <td><p>JET_errInvalidParameter</p></td>
-<td><p>Einer der angegebenen Parameter enthielt einen unerwarteten Wert oder enthielt einen Wert, der nicht sinnvoll war, wenn er mit dem Wert eines anderen Parameters kombiniert wurde. Dies kann bei <strong>jetexternalrestore</strong>der Fall sein, wenn " <em>sztargetcheckpointpath</em> " und " <em>sztargetinstancelogpath</em> " nicht beide angegeben oder nicht angegeben sind. Das heißt, Sie müssen abgeglichen werden und beide angegeben oder nicht angegeben werden.</p></td>
+<td><p>Einer der bereitgestellten Parameter enthielt einen unerwarteten Wert oder einen Wert, der in Kombination mit dem Wert eines anderen Parameters nicht sinnvoll war. Dies kann für <strong>JetExternalRestore</strong>und so weiter geschehen, wenn <em>szTargetCheckpointPath</em> und <em>szTargetInstanceLogPath</em> entweder nicht beide angegeben oder nicht beide nicht angegeben sind. Das heißt, sie müssen übereinstimmen und sowohl angegeben als auch beide nicht angegeben sein.</p></td>
 </tr>
 <tr class="even">
 <td><p>JET_errDatabaseCorrupted</p></td>
-<td><p>Dies weist darauf hin, dass die Datenbank beschädigt wurde, oder eine unbekannte Datei.</p></td>
+<td><p>Dies weist darauf hin, dass die Datenbank beschädigt oder eine unbekannte Datei war.</p></td>
 </tr>
 <tr class="odd">
 <td><p>JET_errFileNotFound</p></td>
-<td><p>Der Vorgang ist fehlgeschlagen, da die angeforderte Datei nicht geöffnet werden konnte, da Sie im angegebenen Pfad nicht gefunden wurde.</p></td>
+<td><p>Fehler beim Vorgang, da die angeforderte Datei nicht geöffnet werden konnte, weil sie unter dem angegebenen Pfad nicht gefunden wurde.</p></td>
 </tr>
 <tr class="even">
 <td><p>JET_errInvalidPath</p></td>
-<td><p>Der Vorgang ist fehlgeschlagen, da der angegebene Pfad nicht gefunden wurde.</p></td>
+<td><p>Fehler beim Vorgang, weil der angegebene Pfad nicht gefunden werden konnte.</p></td>
 </tr>
 <tr class="odd">
 <td><p>JET_errRestoreOfNonBackupDatabase</p></td>
-<td><p>Dieser Fehler wird zurückgegeben, wenn es sich bei der während der Wiederherstellung angegebenen Datenbankdatei nicht um eine Datenbank handelt, die mit externer Sicherung gesichert wurde.</p></td>
+<td><p>Dieser Fehler wird zurückgegeben, wenn die während der Wiederherstellung angegebene Datenbankdatei keine Datenbank ist, die mit einer externen Sicherung gesichert wurde.</p></td>
 </tr>
 <tr class="even">
 <td><p>JET_errStartingRestoreLogTooHigh</p></td>
-<td><p>Dieser Fehler wird zurückgegeben, wenn eine der Protokolldateien im <em>szbackuplogpath</em>eine Protokoll Generierung unterhalb der von <em>genlow</em> oder <em>ploginfo. ulgenlow</em>angegebenen Protokolldateien aufweist.</p></td>
+<td><p>Dieser Fehler wird zurückgegeben, wenn eine der Protokolldateien in <em>szBackupLogPath</em>eine Protokollgenerierung unter der von <em>genLow</em> oder <em>pLogInfo.ulGenLow</em>angegebenen hat.</p></td>
 </tr>
 <tr class="odd">
 <td><p>JET_errEndingRestoreLogTooLow</p></td>
-<td><p>Dieser Fehler wird zurückgegeben, wenn eine der Protokolldateien im <em>szbackuplogpath</em>die Protokolldateien enthält, die über eine in <em>genhigh</em> oder <em>ploginfo. ulgenhigh</em>angegebene Protokoll Generierung verfügen.</p></td>
+<td><p>Dieser Fehler wird zurückgegeben, wenn eine für die Protokolldateien in <em>szBackupLogPath</em>eine Protokollgenerierung über der in <em>genHigh</em> oder <em>pLogInfo.ulGenHigh angegebenen hat.</em></p></td>
 </tr>
 <tr class="even">
 <td><p>JET_errBadRestoreTargetInstance</p></td>
-<td><p>Der angegebene <em>sztargetinstancelogpath</em> gehört nicht zu einer initialisierten Instanz. Dieser Fehler wird nur in Windows XP und höher zurückgegeben.</p></td>
+<td><p>Der <em>angegebene szTargetInstanceLogPath</em> gehört nicht zu einer initialisierten Instanz. Dieser Fehler wird nur in Windows XP und höher zurückgegeben.</p></td>
 </tr>
 <tr class="odd">
 <td><p>JET_errRunningInOneInstanceMode</p></td>
-<td><p>Die Datenbank-Engine kann eine externe Wiederherstellung oder eine feste Wiederherstellung nicht im Single Instance-Modus ausführen. Dieser Fehler wird nur in Windows XP und höher zurückgegeben.</p></td>
+<td><p>Die Datenbank-Engine kann keine externe Wiederherstellung oder harte Wiederherstellung im Einzelinstanzmodus ausführen. Dieser Fehler wird nur in Windows XP und höher zurückgegeben.</p></td>
 </tr>
 </tbody>
 </table>
 
 
-Bei Erfolg werden alle Datenbanken aus der *rgrstmap* vollständig wieder hergestellt und sind in einem sauberen oder konsistenten Zustand. An diesem Punkt kann die Datenbank erneut an eine vorhandene Instanz bereitgestellt werden.
+Bei Erfolg werden alle Datenbanken aus *der rgrstmap* vollständig wiederhergestellt und befinden sich in einem sauberen oder konsistenten Zustand. An diesem Punkt kann die Datenbank erneut in eine vorhandene Instanz bereitgestellt werden.
 
-Bei einem Fehler konnte die Engine die Datenbank nicht wiederherstellen. Die Datenbank befindet sich in einem ungültigen Status. um eine Wiederherstellung zu versuchen, muss die gesamte Datenbank wieder hergestellt werden. In der Regel handelt es sich bei einer solchen Situation um eine Datenträger-oder Protokoll Beschädigung oder eine andere Form der Protokoll Misswirtschaft oder um einen nicht kontinuierlichen Protokoll Satz.
+Bei einem Fehler konnte die Engine die Datenbank nicht wiederherstellen. Die Datenbank befindet sich in einem ungültigen Zustand, und um die wiederherzustellende Wiederherstellung zu wiederholen, muss die gesamte Datenbank erneut wiederhergestellt werden. In der Regel ist die Ursache einer solchen Situation eine Beschädigung des Datenträgers oder Protokolls, eine andere Form der Protokollfehlverwaltung oder ein nicht kontinuierlicher Protokollsatz.
 
-#### <a name="remarks"></a>Bemerkungen
+#### <a name="remarks"></a>Hinweise
 
-Um zu verstehen, wie eine "harte" Wiederherstellung funktioniert, müssen Sie verstehen, dass es drei Phasen der Wiederherstellung gibt und die zweite Phase zwei Teile haben kann. In Phase I sind Protokolle erforderlich, um eine gesicherte Datenbank in Konsistenz zu bringen (oder es kann ein ursprünglicher Satz inkrementeller Protokolle verwendet werden). In Phase II werden alle verfügbaren zusätzlichen Roll Forward-Protokolle genutzt, um die Datenbank konsistent zu machen. Außerdem gibt es eine Wiedergabe der zusätzlichen rollforwardprotokolle. Phase III ist die Roll Back Phase der Wiederherstellung.
+Um zu verstehen, wie eine "harte" Wiederherstellung funktioniert, müssen Sie verstehen, dass es drei Phasen der Wiederherstellung gibt und die zweite Phase aus zwei Teilen besteht. In Phase I sind Protokolle erforderlich, um eine datenbanksicherungskonsistente Datenbank zu gewährleisten (oder ein erster Satz inkrementeller Protokolle kann verwendet werden). In Phase II werden alle verfügbaren zusätzlichen Roll forward-Protokolle verwendet, um die Datenbank konsistent zu machen. Es gibt auch eine Wiedergabe der zusätzlichen Roll forward-Protokolle. Phase III ist die Rückgängig-Phase der Wiederherstellung.
 
-Phase I: die Wiedergabe des Satzes von Protokollen, die wieder hergestellt werden müssen, damit die Datenbank in einen konsistenten Status (oder einen anfänglichen Satz von Protokolldateien) gebracht wird. Im Grunde handelt es sich hierbei um die Wiedergabe des Satzes von Protokolldateien, die für die wiederherzustellenden Datenbanken nicht optional sind. Wenn in diesem Bereich von Protokollen fehlende Protokolle vorhanden sind, tritt bei der Wiederherstellung ein Fehler auf. Diese Protokolle sollten in dem Verzeichnis abgelegt werden, das im Parameter " *szbackuplogpath* " angegeben ist.
+Phase I: Die Wiedergabe der Protokolle, die wiederhergestellt werden müssen, damit die Datenbank in einen konsistenten Zustand (oder einen anfänglichen Satz von Protokolldateien) gebracht werden kann, wird ausgeführt. Im Grunde ist dies die Wiedergabe der Protokolldateien, die für die wiederherzustellenden Datenbanken nicht optional sind. Wenn Protokolle aus diesem Protokollbereich fehlen, kann die Wiederherstellung nicht wiederhergestellt werden. Diese Protokolle sollten in dem Verzeichnis gespeichert werden, das im *szBackupLogPath-Parameter angegeben* ist.
 
-Phase II: Optional können Protokolldateien, die aus inkrementellen oder differenziellen Sicherungen und aus den Protokolldateien einer aktiven Instanz stammen, über eine Reihe von Protokolldateien verfügen. Im Fall von Protokolldateien aus inkrementellen oder differenziellen Sicherungen können die Protokolldateien in den Verzeichnissen abgelegt werden, die entweder in den Parametern *szbackuplogpath* oder *sztargetinstancelogpath* angegeben sind, wobei das erste das empfohlene Verzeichnis ist. Die Protokolle, die für die Rollforwardphase (Phase II) verwendet werden, sollten aus derselben Reihe von Protokollen stammen, die während der Phase i abgespielt wurden, und sollten die Protokoll Nummern kontinuierlich erhöhen, ohne dass Lücken aus der Phase i protokolliert werden. Um eine Datenbank vollständig auf dem neuesten Stand zu halten, um die Protokolldateien zu verwenden, die derzeit von einer aktiven Instanz verwendet werden, müssen die Parameter *sztargetinstancelogpath* und *sztargetinstancecheckpointpath* angegeben werden. Dies ist auch dann möglich, wenn andere Datenbanken an diesen Protokoll Satz angefügt sind.
+Phase II: Optional gibt es einige Protokolldateien, bei denen es sich um Rollfor forward-Protokolldateien handelt, die aus inkrementellen oder differenziellen Sicherungen und aus den Protokolldateien einer aktiven Instanz stammen. Im Fall von Protokolldateien aus inkrementellen oder differenziellen Sicherungen können die Protokolldateien in den Verzeichnissen platziert werden, die entweder in den *SzBackupLogPath-* oder *szTargetInstanceLogPath-Parametern* angegeben sind, während ersteres das empfohlene Verzeichnis ist. Die protokolle, die für die Roll forward-Phase (Phase II) verwendet werden, sollten aus derselben Reihe von Protokollen stammen, die in Phase I abgespielt wurden, und sollten kontinuierlich inkrementierende Protokollnummern ohne Lücken aus den Phase-I-Protokollen aufweisen. Damit eine Datenbank mit den Protokolldateien, die derzeit von einer aktiven Instanz verwendet werden, vollständig auf dem neuesten Stand ist, müssen die Parameter *szTargetInstanceLogPath* und *szTargetInstanceCheckpointPath* angegeben werden. Dies kann auch dann erfolgen, wenn andere Datenbanken an diesen Protokollsatz angefügt sind.
 
-Phase III: in der letzten Wiederherstellungs Phase wird für alle Transaktionen, für die kein Commit ausgeführt wurde, ein Rollback ausgeführt. hierfür müssen neue Protokolldateien erstellt und die Prüf Punkt Datei aktualisiert werden. Diese Phase wird manchmal als "Rückgängig" bezeichnet. Der in dieser Phase zu verwendende Pfad der Prüf Punkt Datei ist der Pfad analog zum Protokoll Speicherort in Phase III, d. h., wenn *szlogpath* für Phase III verwendet wird, wird *szcheckpointfilepath* verwendet, wenn " *sztargetinstancelogpath* " für Phase III der Wiederherstellungs Sitzung " *sztargetinstancecheckpointpath* " verwendet wird.
+Phase III: In der letzten Phase der Wiederherstellung wird für alle Transaktionen, für die keinComcommitted-Fehler erforderlich ist, ein Rollback für alle Transaktionen verwendet. Dazu müssen neue Protokolldateien generiert und die Prüfpunktdatei aktualisiert werden. Diese Phase wird manchmal als "Rückgängig" bezeichnet. Der prüfpunktdateipfad, der während dieser Phase verwendet werden soll, entspricht dem Protokollspeicherort der Phase III. Wenn *szLogPath* für Phase III verwendet wird, wird *szCheckpointFilePath* verwendet, wenn *szTargetInstanceLogPath* für Phase III der Wiederherstellung *szTargetInstanceCheckpointPath* verwendet wird.
 
 Verwenden Sie dieses Flussdiagramm, um zu verstehen, wie die Pfade funktionieren:
 
@@ -183,19 +183,19 @@ Verwenden Sie dieses Flussdiagramm, um zu verstehen, wie die Pfade funktionieren
 </tr>
 <tr class="odd">
 <td><p><strong>Header</strong></p></td>
-<td><p>In "ESENT. h" deklariert.</p></td>
+<td><p>In Esent.h deklariert.</p></td>
 </tr>
 <tr class="even">
 <td><p><strong>Bibliothek</strong></p></td>
-<td><p>Verwenden Sie ESENT. lib.</p></td>
+<td><p>Verwenden Sie ESENT.lib.</p></td>
 </tr>
 <tr class="odd">
-<td><p><strong>DLL</strong></p></td>
+<td><p><strong>Dll</strong></p></td>
 <td><p>Erfordert ESENT.dll.</p></td>
 </tr>
 <tr class="even">
 <td><p><strong>Unicode</strong></p></td>
-<td><p>Implementiert als <strong>jetexternalrestorew</strong> (Unicode) und <strong>jetexternalrestorea</strong> (ANSI).</p></td>
+<td><p>Wird als <strong>JetExternalRestoreW</strong> (Unicode) und <strong>JetExternalRestoreA</strong> (ANSI) implementiert.</p></td>
 </tr>
 </tbody>
 </table>
@@ -207,5 +207,5 @@ Verwenden Sie dieses Flussdiagramm, um zu verstehen, wie die Pfade funktionieren
 [JET_PFNSTATUS](./jet-pfnstatus-callback-function.md)  
 [JET_RSTMAP](./jet-rstmap-structure.md)  
 [JET_LOGINFO](./jet-loginfo-structure.md)  
-[Jetbeginexternalbackup](./jetbeginexternalbackup-function.md)  
+[JetBeginExternalBackup](./jetbeginexternalbackup-function.md)  
 [JetInit](./jetinit-function.md)

@@ -1,19 +1,19 @@
 ---
-title: Lesen aus einem Stream und Schreiben in einen anderen Stream
-description: Lesen aus einem Stream und Schreiben in einen anderen Stream
+title: Lesen aus einem Stream und Schreiben in einen anderen
+description: Lesen aus einem Stream und Schreiben in einen anderen
 ms.assetid: 035a8862-9a0f-49d2-a060-5131ff2b7887
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 72b217dbfd0b88962b037c2822dbc7095bc87a83
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: 466b0cd6bb0622716de30b873ef93a96da2042babf43de26a3fceff15b4bb664
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "106338007"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118371597"
 ---
-# <a name="reading-from-one-stream-and-writing-to-another"></a>Lesen aus einem Stream und Schreiben in einen anderen Stream
+# <a name="reading-from-one-stream-and-writing-to-another"></a>Lesen aus einem Stream und Schreiben in einen anderen
 
-Im folgenden Beispiel werden Daten aus einem Stream gelesen, etwas mit den Daten erledigt und die komprimierten Daten in einen Stream einer neuen Datei geschrieben.
+Im folgenden Beispiel werden Daten aus einem Stream gelesen, mit den Daten umgewickelt und die komprimierten Daten in einen Datenstrom einer neuen Datei schreibt.
 
 
 ```C++
@@ -107,9 +107,9 @@ void SaveSmall(PAVISTREAM ps, LPSTR lpFilename)
 
 
 
- 
+ 
 
- 
+ 
 
 
 

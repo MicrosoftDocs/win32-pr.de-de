@@ -1,19 +1,19 @@
 ---
-description: Gibt die ID einer verschlüsselten Stichprobe an.
+description: Gibt die ID eines verschlüsselten Beispiels an.
 ms.assetid: 09B11406-DF7B-4541-998C-68306654BADC
-title: MFSampleExtension_Encryption_SampleID-Attribut (mfapi. h)
+title: MFSampleExtension_Encryption_SampleID -Attribut (Mfapi.h)
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: eb2aadcfcf895ddbfa9820a4df3a366ce409a555
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 42e89eb4213d75ea94bdb3c19ca88b2a1f3f28c8e8b1034ca452f2900f7b61ad
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104215039"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118240872"
 ---
-# <a name="mfsampleextension_encryption_sampleid-attribute"></a>\_SampleID-Attribut für MF SampleExtension \_ -Verschlüsselung
+# <a name="mfsampleextension_encryption_sampleid-attribute"></a>SampleID-Attribut für MFSampleExtension-Verschlüsselung \_ \_
 
-Gibt die ID einer verschlüsselten Stichprobe an.
+Gibt die ID eines verschlüsselten Beispiels an.
 
 ## <a name="data-type"></a>Datentyp
 
@@ -23,9 +23,9 @@ Gibt die ID einer verschlüsselten Stichprobe an.
 
 | Anforderung | Wert |
 |-------------------------------------|------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows 8 \[ -Desktop-Apps\]<br/>                                         |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2012 R2 \[ -Desktop-Apps\]<br/>                            |
-| Header<br/>                   | <dl> <dt>Mfapi. h</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | \[Windows 8 Nur Desktop-Apps\]<br/>                                         |
+| Unterstützte Mindestversion (Server)<br/> | Windows Server 2012 Nur \[ R2-Desktop-Apps\]<br/>                            |
+| Header<br/>                   | <dl> <dt>Mfapi.h</dt> </dl> |
 
 
 
@@ -33,7 +33,7 @@ Gibt die ID einer verschlüsselten Stichprobe an.
 
 <dl> <dt>
 
-[Alphabetische Liste der Media Foundation Attribute](alphabetical-list-of-media-foundation-attributes.md)
+[Alphabetische Liste Media Foundation Attribute](alphabetical-list-of-media-foundation-attributes.md)
 </dt> </dl>
 
  

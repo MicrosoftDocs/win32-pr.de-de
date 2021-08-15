@@ -1,32 +1,32 @@
 ---
-title: Aufrufen von Erstellungs-Assistenten aus der Anwendung
-description: Eine Anwendung oder Komponente kann dieselben Assistenten für die Erstellung von Verzeichnisdienst Objekten verwenden, die von den MMC-Snap-Ins für die Active Directory Verwaltung verwendet werden. Dies wird mit der idsadminkreateobj-Schnittstelle erreicht.
+title: Aufrufen von Erstellungs-Assistenten aus Ihrer Anwendung
+description: Eine Anwendung oder Komponente kann die gleichen Assistenten zum Erstellen von Verzeichnisdienstobjekten verwenden, die von den MMC-Snap-Ins der Active Directory-Verwaltung verwendet werden. Dies wird mit der IDsAdminCreateObj-Schnittstelle erreicht.
 ms.assetid: be4b6101-f795-403b-b93e-960759ac4f14
 ms.tgt_platform: multiple
 keywords:
-- Aufrufen von Erstellungs-Assistenten aus ihrer Anwendungs Anzeige
+- Aufrufen von Erstellungs-Assistenten aus Ihrem Anwendungs-AD
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: fa523d3b861d1d4a7588455b04c1a9633734253a
-ms.sourcegitcommit: 803f3ccd65bdefe36bd851b9c6e7280be9489016
+ms.openlocfilehash: ba1d5f8c722e3f673d998d3baaf33b4110293c70875a68fd03e8117f667351bd
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "104472524"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118187074"
 ---
-# <a name="invoking-creation-wizards-from-your-application"></a>Aufrufen von Erstellungs-Assistenten aus der Anwendung
+# <a name="invoking-creation-wizards-from-your-application"></a>Aufrufen von Erstellungs-Assistenten aus Ihrer Anwendung
 
-Eine Anwendung oder Komponente kann dieselben Assistenten für die Erstellung von Verzeichnisdienst Objekten verwenden, die von den MMC-Snap-Ins für die Active Directory Verwaltung verwendet werden. Dies wird mit der [**idsadminkreateobj**](/windows/desktop/api/DSAdmin/nn-dsadmin-idsadmincreateobj) -Schnittstelle erreicht.
+Eine Anwendung oder Komponente kann die gleichen Assistenten zum Erstellen von Verzeichnisdienstobjekten verwenden, die von den MMC-Snap-Ins der Active Directory-Verwaltung verwendet werden. Dies wird mit der [**IDsAdminCreateObj-Schnittstelle**](/windows/desktop/api/DSAdmin/nn-dsadmin-idsadmincreateobj) erreicht.
 
-## <a name="using-the-idsadmincreateobj-interface"></a>Verwenden der idsadminkreateobj-Schnittstelle
+## <a name="using-the-idsadmincreateobj-interface"></a>Verwenden der IDsAdminCreateObj-Schnittstelle
 
-Eine Anwendung oder Komponente (Client) erstellt eine Instanz der [**idsadmincreateobj**](/windows/desktop/api/DSAdmin/nn-dsadmin-idsadmincreateobj) -Schnittstelle durch Aufrufen von [**CoCreateInstance**](/windows/win32/api/combaseapi/nf-combaseapi-cocreateinstance) mit dem **CLSID- \_ dsadmincreateobj** -Klassen Bezeichner. COM muss initialisiert werden, indem [**CoInitialize**](/windows/win32/api/objbase/nf-objbase-coinitialize) aufgerufen wird, bevor **CoCreateInstance** aufgerufen wird.
+Eine Anwendung oder Komponente (Client) erstellt eine Instanz der [**IDsAdminCreateObj-Schnittstelle,**](/windows/desktop/api/DSAdmin/nn-dsadmin-idsadmincreateobj) indem [**CoCreateInstance**](/windows/win32/api/combaseapi/nf-combaseapi-cocreateinstance) mit dem **CLSID-Klassenbezeichner \_ DsAdminCreateObj** aufgerufen wird. COM muss durch Aufrufen von [**CoInitialize initialisiert**](/windows/win32/api/objbase/nf-objbase-coinitialize) werden, bevor **CoCreateInstance** aufgerufen wird.
 
-Der Client ruft dann [**idsadminkreateobj:: Initialisieren**](/windows/desktop/api/DSAdmin/nf-dsadmin-idsadmincreateobj-initialize) auf, um das [**idsadminkreateobj**](/windows/desktop/api/DSAdmin/nn-dsadmin-idsadmincreateobj) -Objekt zu initialisieren. **Idsadminkreateobj:: Initialize** akzeptiert einen [**IADsContainer**](/windows/desktop/api/iads/nn-iads-iadscontainer) -Schnittstellen Zeiger, der den Container darstellt, in dem das Objekt erstellt werden soll, und den Klassennamen des zu erstellenden Objekts. Beim Erstellen von Benutzer Objekten ist es auch möglich, ein vorhandenes Objekt anzugeben, das in das neue-Objekt kopiert wird.
+Der Client ruft dann [**IDsAdminCreateObj::Initialize**](/windows/desktop/api/DSAdmin/nf-dsadmin-idsadmincreateobj-initialize) auf, um das [**IDsAdminCreateObj-Objekt**](/windows/desktop/api/DSAdmin/nn-dsadmin-idsadmincreateobj) zu initialisieren. **IDsAdminCreateObj::Initialize** akzeptiert einen [**IADsContainer-Schnittstellenzeiger,**](/windows/desktop/api/iads/nn-iads-iadscontainer) der den Container darstellt, in dem das Objekt erstellt werden soll, und den Klassennamen des zu erstellenden Objekts. Beim Erstellen von Benutzerobjekten ist es auch möglich, ein vorhandenes Objekt anzugeben, das in das neue Objekt kopiert wird.
 
-Wenn das [**idsadminkreateobj**](/windows/desktop/api/DSAdmin/nn-dsadmin-idsadmincreateobj) -Objekt initialisiert wurde, ruft der Client " [**idsadminkreateobj::**](/windows/desktop/api/DSAdmin/nf-dsadmin-idsadmincreateobj-createmodal) up" auf, um den Objekterstellungs-Assistenten anzuzeigen.
+Wenn das [**IDsAdminCreateObj-Objekt**](/windows/desktop/api/DSAdmin/nn-dsadmin-idsadmincreateobj) initialisiert wurde, ruft der Client [**IDsAdminCreateObj::CreateModal**](/windows/desktop/api/DSAdmin/nf-dsadmin-idsadmincreateobj-createmodal) auf, um den Objekterstellungs-Assistenten anzuzeigen.
 
-Im Gegensatz zu den meisten Klassen-und Schnittstellen Bezeichner sind **CLSID \_ dsadminkreateobj** und **IID \_ adsadminkreateobj** nicht in einer Bibliotheksdatei definiert. Dies bedeutet, dass Sie den Speicher für diese Bezeichner in der Anwendung definieren müssen. Zu diesem Zweck müssen Sie die Datei "Initguid. h" direkt einschließen, bevor Sie "DSAdmin. h" einschließen. Die Datei "Initguid. h" darf nur einmal in einer Anwendung eingeschlossen werden. Im folgenden Codebeispiel wird gezeigt, wie Sie diese Dateien einschließen.
+Im Gegensatz zu den meisten Klassen- und Schnittstellenbezeichnern sind **CLSID \_ DsAdminCreateObj** und **IID \_ ADsAdminCreateObj** nicht in einer Bibliotheksdatei definiert. Dies bedeutet, dass Sie den Speicher für diese Bezeichner in Ihrer Anwendung definieren müssen. Hierzu müssen Sie die Datei initguid.h unmittelbar vor dem Einfügen von dsadmin.h einschließen. Die Datei initguid.h darf nur einmal in einer Anwendung enthalten sein. Das folgende Codebeispiel zeigt, wie diese Dateien eingeschlossen werden.
 
 
 ```C++
@@ -36,7 +36,7 @@ Im Gegensatz zu den meisten Klassen-und Schnittstellen Bezeichner sind **CLSID \
 
 
 
-Das folgende Codebeispiel zeigt, wie die [**idsadminkreateobj**](/windows/desktop/api/DSAdmin/nn-dsadmin-idsadmincreateobj) -Schnittstelle erstellt und zum Starten des Objekterstellungs-Assistenten für ein Benutzerobjekt verwendet werden kann.
+Das folgende Codebeispiel zeigt, wie die [**IDsAdminCreateObj-Schnittstelle**](/windows/desktop/api/DSAdmin/nn-dsadmin-idsadmincreateobj) erstellt und zum Starten des Objekterstellungs-Assistenten für ein Benutzerobjekt verwendet werden kann.
 
 
 ```C++
@@ -150,6 +150,6 @@ int main(void)
 
 
 
- 
+ 
 
- 
+ 

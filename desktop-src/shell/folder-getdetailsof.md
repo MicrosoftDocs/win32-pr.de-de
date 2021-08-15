@@ -1,7 +1,7 @@
 ---
-description: Ruft Details zu einem Element in einem Ordner ab. Beispielsweise Größe, Typ oder Zeitpunkt der letzten Änderung.
+description: Ruft Details zu einem Element in einem Ordner ab. Dies kann beispielsweise die Größe, der Typ oder der Zeitpunkt der letzten Änderung sein.
 ms.assetid: d2fe4550-f171-40d9-8bce-065b61826997
-title: Folder. GetDetailsOf-Methode (shlobj \_ Core. h)
+title: Folder.GetDetailsOf-Methode (Shlobj \_ core.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,16 +13,16 @@ api_type:
 - COM
 api_location:
 - Shell32.dll
-ms.openlocfilehash: 3ab89f00f254778a2417644d894f1e9e81eb43cf
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: c703150069bc839f2d20024c0de8f3197fba09c5c3571e3de818dec3f3d6737c
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "103958643"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117860328"
 ---
-# <a name="foldergetdetailsof-method"></a>Folder. GetDetailsOf-Methode
+# <a name="foldergetdetailsof-method"></a>Folder.GetDetailsOf-Methode
 
-Ruft Details zu einem Element in einem Ordner ab. Beispielsweise Größe, Typ oder Zeitpunkt der letzten Änderung.
+Ruft Details zu einem Element in einem Ordner ab. Dies kann beispielsweise die Größe, der Typ oder der Zeitpunkt der letzten Änderung sein.
 
 ## <a name="syntax"></a>Syntax
 
@@ -40,21 +40,21 @@ retVal = Folder.GetDetailsOf(
 
 <dl> <dt>
 
-*vitem* 
+*vItem* 
 </dt> <dd>
 
 Typ: **Variant**
 
-Das Element, für das die Informationen abgerufen werden sollen. Dabei muss es sich um ein [**folderItem**](folderitem.md) -Objekt handeln.
+Das Element, für das die Informationen abgerufen werden. Dies muss ein [**FolderItem-Objekt**](folderitem.md) sein.
 
 </dd> <dt>
 
-*icolumn* 
+*iColumn* 
 </dt> <dd>
 
-Type: **Integer**
+Typ: **Integer**
 
-Ein **ganzzahliger** Wert, der die abzurufenden Informationen angibt. Die für ein Element verfügbaren Informationen sind abhängig von dem Ordner, in dem Sie angezeigt wird. Dieser Wert entspricht der NULL basierten Spaltennummer, die in einer shellansicht angezeigt wird. Bei einem Element im Dateisystem kann dies einer der folgenden Werte sein:
+Ein **Ganzzahlwert,** der die abzurufenden Informationen angibt. Die für ein Element verfügbaren Informationen hängen vom Ordner ab, in dem es angezeigt wird. Dieser Wert entspricht der nullbasierten Spaltennummer, die in einer Shellansicht angezeigt wird. Für ein Element im Dateisystem kann dies einer der folgenden Werte sein:
 
 <dt>
 
@@ -120,28 +120,28 @@ Ruft die Attribute des Elements ab.
 
 </dt> <dd>
 
-Ruft die infotip-Informationen für das Element ab.
+Ruft die Infoinfoinformationen für das Element ab.
 
 </dd> </dl> </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Geben Sie Folgendes ein: **[**BSTR**](/previous-versions/windows/desktop/automat/bstr) \** _
+Typ: **[ **BSTR**](/previous-versions/windows/desktop/automat/bstr)\***
 
-Zeichenfolge, die das abgerufene Detail enthält.
+Eine Zeichenfolge, die die abgerufenen Details enthält.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
 > [!Note]  
-> Nicht alle Methoden werden für alle Ordner implementiert. Beispielsweise ist die [_ *para Sender Name* *](folder-parsename.md) -Methode nicht für den System Steuerungs Ordner (CSIDL-Steuer \_ Elemente) implementiert. Wenn Sie versuchen, eine nicht implementierte Methode aufzurufen, wird ein 0x800a01bd (Decimal 445)-Fehler ausgelöst.
+> Nicht alle Methoden werden für alle Ordner implementiert. Beispielsweise ist die [**ParseName-Methode**](folder-parsename.md) nicht für den ordner Systemsteuerung (CSIDL \_ CONTROLS) implementiert. Wenn Sie versuchen, eine nichtimplementierte Methode auf 0x800A01BD fehler (dezimal 445) wird ausgelöst.
 
  
 
 ## <a name="examples"></a>Beispiele
 
-Im folgenden Beispiel wird **GetDetailsOf** verwendet, um den Typ der Datei mit dem Namen Clock.avi abzurufen. Die richtige Verwendung wird für JScript, VBScript und Visual Basic angezeigt.
+Im folgenden Beispiel wird **GetDetailsOf verwendet,** um den Typ der Datei mit dem Namen Clock.avi. Die richtige Verwendung wird für JScript, VBScript und Visual Basic.
 
-JScript
+JScript:
 
 
 ```JScript
@@ -170,7 +170,7 @@ JScript
 
 
 
-VBScript
+Vbscript:
 
 
 ```VB
@@ -234,17 +234,17 @@ End Sub
 
 
 
-## <a name="requirements"></a>Requirements (Anforderungen)
+## <a name="requirements"></a>Anforderungen
 
 
 
 | Anforderung | Wert |
 |-------------------------------------|----------------------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional, Windows XP \[ Desktop-Apps\]<br/>                                         |
+| Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional nur Windows \[ XP-Desktop-Apps\]<br/>                                         |
 | Unterstützte Mindestversion (Server)<br/> | Windows 2000 Server \[nur Desktop-Apps\]<br/>                                                           |
-| Header<br/>                   | <dl> <dt>Shlobj \_ Core. h (Include Shldisp. h)</dt> </dl>  |
-| IDL<br/>                      | <dl> <dt>Shldisp. idl</dt> </dl>                         |
-| DLL<br/>                      | <dl> <dt>Shell32.dll (Version 4,71 oder höher)</dt> </dl> |
+| Header<br/>                   | <dl> <dt>Shlobj \_ core.h (include Shldisp.h)</dt> </dl>  |
+| Idl<br/>                      | <dl> <dt>Shldisp.idl</dt> </dl>                         |
+| DLL<br/>                      | <dl> <dt>Shell32.dll (Version 4.71 oder höher)</dt> </dl> |
 
 
 

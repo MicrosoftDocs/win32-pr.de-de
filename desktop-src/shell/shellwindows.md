@@ -1,7 +1,7 @@
 ---
-description: Stellt eine Auflistung der geöffneten Fenster dar, die zur Shell gehören. Mit diesen Objekten verknüpfte Methoden können Befehle in der Shell Steuern und ausführen sowie andere shellbezogene Objekte abrufen.
+description: Stellt eine Auflistung der geöffneten Fenster dar, die zur Shell gehören. Methoden, die diesen Objekten zugeordnet sind, können Befehle in der Shell steuern und ausführen und andere Shell-bezogene Objekte abrufen.
 ms.assetid: cad1f961-7fb4-4ba1-be48-b664d3de2c60
-title: Shellwindows-Objekt (Exdisp. h)
+title: ShellWindows-Objekt (Exdisp.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,34 +13,34 @@ api_type:
 - COM
 api_location:
 - Shell32.dll
-ms.openlocfilehash: 6a3a782dd4e29d56f5edc7a869004ac7b3fb7ccd
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: b558bf4df33e84fabae7e70c1722d78647514a52df8f62d05f8ecba8916c488a
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "104979809"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117857089"
 ---
-# <a name="shellwindows-object"></a>Shellwindows-Objekt
+# <a name="shellwindows-object"></a>ShellWindows-Objekt
 
-Stellt eine Auflistung der geöffneten Fenster dar, die zur Shell gehören. Mit diesen Objekten verknüpfte Methoden können Befehle in der Shell Steuern und ausführen sowie andere shellbezogene Objekte abrufen.
+Stellt eine Auflistung der geöffneten Fenster dar, die zur Shell gehören. Methoden, die diesen Objekten zugeordnet sind, können Befehle in der Shell steuern und ausführen und andere Shell-bezogene Objekte abrufen.
 
 ## <a name="members"></a>Member
 
-Das **shellwindows** -Objekt verfügt über diese Typen von Membern:
+Das **ShellWindows-Objekt** verfügt über diese Typen von Membern:
 
 -   [Methoden](#methods)
 -   [Eigenschaften](#properties)
 
 ### <a name="methods"></a>Methoden
 
-Das **shellwindows** -Objekt verfügt über diese Methoden.
+Das **ShellWindows-Objekt** verfügt über diese Methoden.
 
 
 
 | Methode                                                 | BESCHREIBUNG                                                                                                         |
 |:-------------------------------------------------------|:--------------------------------------------------------------------------------------------------------------------|
-| [**\_"Netwenum"**](shellwindows--newenum-method-7ral.md) | Erstellt ein neues **shellwindows** -Objekt, das eine Kopie dieses **shellwindows** -Objekts ist, und gibt es zurück.<br/>        |
-| [**Element**](shellwindows-item.md)                      | Ruft ein [**InternetExplorer**](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa752084(v=vs.85)) -Objekt ab, das das Shellfenster darstellt.<br/> |
+| [**\_NewEnum**](shellwindows--newenum-method-7ral.md) | Erstellt ein neues **ShellWindows-Objekt,** das eine Kopie dieses **ShellWindows-Objekts** ist, und gibt es zurück.<br/>        |
+| [**Element**](shellwindows-item.md)                      | Ruft ein [**InternetExplorer-Objekt**](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa752084(v=vs.85)) ab, das das Shellfenster darstellt.<br/> |
 
 
 
@@ -48,7 +48,7 @@ Das **shellwindows** -Objekt verfügt über diese Methoden.
 
 ### <a name="properties"></a>Eigenschaften
 
-Das **shellwindows** -Objekt verfügt über diese Eigenschaften.
+Das **ShellWindows-Objekt** verfügt über diese Eigenschaften.
 
 
 
@@ -60,16 +60,16 @@ Das **shellwindows** -Objekt verfügt über diese Eigenschaften.
 
  
 
-## <a name="requirements"></a>Requirements (Anforderungen)
+## <a name="requirements"></a>Anforderungen
 
 
 
 | Anforderung | Wert |
 |-------------------------------------|----------------------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional, Windows XP \[ Desktop-Apps\]<br/>                                         |
+| Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional, nur Windows \[ XP-Desktop-Apps\]<br/>                                         |
 | Unterstützte Mindestversion (Server)<br/> | Windows 2000 Server \[nur Desktop-Apps\]<br/>                                                           |
-| Header<br/>                   | <dl> <dt>Exdisp. h</dt> </dl>                            |
-| DLL<br/>                      | <dl> <dt>Shell32.dll (Version 4,71 oder höher)</dt> </dl> |
+| Header<br/>                   | <dl> <dt>Exdisp.h</dt> </dl>                            |
+| DLL<br/>                      | <dl> <dt>Shell32.dll (Version 4.71 oder höher)</dt> </dl> |
 
 
 

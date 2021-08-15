@@ -1,10 +1,10 @@
 ---
-description: Legt die Endpunkt Adresse fest, die zum Herstellen einer Verbindung mit einem Remote Modul verwendet wird.
+description: Legt die Endpunktadresse fest, die zum Herstellen einer Verbindung mit einer Remote-Engine verwendet wird.
 MS-HAID: vspixengine.IPeerToPeerEngine\_SetPlaybackEndpoint\_BOOL\_BSTR\_BSTR\_RemotingVersion
 MSHAttr:
 - PreferredSiteName:MSDN
 - PreferredLib:/library/windows/desktop
-title: 'Ietertopeerengine:: setplaybackendpoint-Methode'
+title: IPeerToPeerEngine::SetPlaybackEndpoint-Methode
 ms.topic: reference
 ms.date: 05/31/2018
 ms.assetid: D261D2EA-C930-406E-A5E1-CE5E98162399
@@ -17,16 +17,16 @@ api_location:
 topic_type:
 - APIRef
 - kbSyntax
-ms.openlocfilehash: bbec4826fb2659604a4b9f4388beed1829b42770
-ms.sourcegitcommit: a47bd86f517de76374e4fff33cfeb613eb259a7e
+ms.openlocfilehash: 81f3743c9f1cca5a763df23087d7703b79d198a9cd780f9a398017c53afaabfb
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/06/2021
-ms.locfileid: "104482406"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117721797"
 ---
-# <a name="span-idvspixengineipeertopeerengine_setplaybackendpoint_bool_bstr_bstr_remotingversionspanipeertopeerenginesetplaybackendpoint-method"></a><span id="vspixengine.ipeertopeerengine_setplaybackendpoint_bool_bstr_bstr_remotingversion"></span>Ietertopeerengine:: setplaybackendpoint-Methode
+# <a name="span-idvspixengineipeertopeerengine_setplaybackendpoint_bool_bstr_bstr_remotingversionspanipeertopeerenginesetplaybackendpoint-method"></a><span id="vspixengine.ipeertopeerengine_setplaybackendpoint_bool_bstr_bstr_remotingversion"></span>IPeerToPeerEngine::SetPlaybackEndpoint-Methode
 
-Legt die Endpunkt Adresse fest, die zum Herstellen einer Verbindung mit einem Remote Modul verwendet wird.
+Legt die Endpunktadresse fest, die zum Herstellen einer Verbindung mit einer Remote-Engine verwendet wird.
 
 ## <a name="syntax"></a>Syntax
 
@@ -42,29 +42,29 @@ HRESULT SetPlaybackEndpoint(
 
 ## <a name="parameters"></a>Parameter
 
-*busauthentifizierung*   
-true, wenn Authentifizierung verwendet werden soll. andernfalls false.
+*bUseAuthentication*   
+TRUE, um die Authentifizierung zu verwenden; andernfalls FALSE.
 
-*Dreher*   
-Eine com-Zeichenfolge, die die Endpunkt Adresse enthält.
+*Endpunkt*   
+Eine COM-Zeichenfolge, die die Endpunktadresse enthält.
 
-*SessionKey*   
-Eine com-Zeichenfolge, die den für die Verschlüsselung verwendeten Sitzungsschlüssel enthält.
+*sessionKey*   
+Eine COM-Zeichenfolge, die den für die Verschlüsselung verwendeten Sitzungsschlüssel enthält.
 
-*Remoteversion*   
+*remoteVersion*   
 Gibt die Version der zu verwendenden Remote-Engine an.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Wenn diese Methode erfolgreich ausgeführt wird, gibt Sie **S \_ OK** zurück. Andernfalls wird ein **HRESULT** -Fehlercode zurückgegeben.
+Wenn diese Methode erfolgreich ist, wird **S \_ OK zurückgegeben.** Andernfalls wird ein **HRESULT-Fehlercode** zurückgegeben.
 
 ## <a name="requirements"></a>Anforderungen
 
-<table><colgroup><col style="width: 50%" /><col style="width: 50%" /></colgroup><tbody><tr class="odd"><td><p>Header</p></td><td>Vspixengine. h</td></tr></tbody></table>
+<table><colgroup><col style="width: 50%" /><col style="width: 50%" /></colgroup><tbody><tr class="odd"><td><p>Header</p></td><td>Vspixengine.h</td></tr></tbody></table>
 
 ## <a name="span-idsee_alsospansee-also"></a><span id="see_also"></span>Siehe auch
 
-[**IPeer-topeerengine**](/windows/desktop/direct3dtools/ipeertopeerengine)
+[**IPeerToPeerEngine**](/windows/desktop/direct3dtools/ipeertopeerengine)
 
  
 

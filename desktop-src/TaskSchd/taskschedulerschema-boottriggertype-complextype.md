@@ -1,9 +1,9 @@
 ---
-title: komplexer boottriggertype-Typ
-description: Definiert das untergeordnete Element und die Sequenzierungs Informationen für das boottrigger-Element.
+title: 'BootTriggerType : Komplexer Typ'
+description: Definiert das untergeordnete Element und Sequenzierungsinformationen für das BootTrigger-Element.
 ms.assetid: 36ade928-7640-4f91-ab76-18398b0cd65f
 keywords:
-- komplexer boottriggertype-Typ Taskplaner
+- komplexer bootTriggerType-Typ Taskplaner
 topic_type:
 - apiref
 api_name:
@@ -13,16 +13,16 @@ api_type:
 ms.topic: reference
 ms.date: 05/31/2018
 api_location: ''
-ms.openlocfilehash: d16634cacb9c17e5027ac9e6b6dd7abb26b78007
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: fc0b04bfaf08ecee87d02a2b410fd1df2fbbe584d5649a5e9fe2ea2e5efacebd
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104478192"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118131859"
 ---
-# <a name="boottriggertype-complex-type"></a>komplexer boottriggertype-Typ
+# <a name="boottriggertype-complex-type"></a>BootTriggerType : Komplexer Typ
 
-Definiert das untergeordnete Element und die Sequenzierungs Informationen für das [**boottrigger**](taskschedulerschema-boottrigger-triggergroup-element.md) -Element.
+Definiert das untergeordnete Element und Sequenzierungsinformationen für das [**BootTrigger-Element.**](taskschedulerschema-boottrigger-triggergroup-element.md)
 
 ``` syntax
 <xs:complexType name="bootTriggerType">
@@ -48,13 +48,13 @@ Definiert das untergeordnete Element und die Sequenzierungs Informationen für d
 
 | Element                                                            | type     | BESCHREIBUNG                                                                                 |
 |--------------------------------------------------------------------|----------|---------------------------------------------------------------------------------------------|
-| [**Verzögern**](taskschedulerschema-delay-boottriggertype-element.md) | duration | Zeitspanne zwischen dem Starten des Systems und dem Auslösen des Auslösers. <br/> |
+| [**Verzögern**](taskschedulerschema-delay-boottriggertype-element.md) | duration | Die Zeitspanne zwischen dem Start des Systems und dem Auslösen des Triggers. <br/> |
 
 
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Zusätzlich zum untergeordneten-Element, das hier definiert ist, verwendet das [**boottrigger**](taskschedulerschema-boottrigger-triggergroup-element.md) -Element auch untergeordnete Elemente, die durch den komplexen [**triggerbasetype**](taskschedulerschema-triggerbasetype-complextype.md) -Typ definiert werden.
+Zusätzlich zum hier definierten untergeordneten Element verwendet das [**BootTrigger-Element**](taskschedulerschema-boottrigger-triggergroup-element.md) auch untergeordnete Elemente, die vom komplexen [**triggerBaseType-Typ**](taskschedulerschema-triggerbasetype-complextype.md) definiert werden.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -62,16 +62,16 @@ Zusätzlich zum untergeordneten-Element, das hier definiert ist, verwendet das [
 
 | Anforderung | Wert |
 |-------------------------------------|------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>       |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2008 \[ -Desktop-Apps\]<br/> |
+| Unterstützte Mindestversion (Client)<br/> | Windows \[Nur Vista-Desktop-Apps\]<br/>       |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2008-Desktop-Apps\]<br/> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[Komplexe Typen von Taskplaner Schemas](task-scheduler-schema-complex-types.md)
+[komplexe Schematypen Taskplaner](task-scheduler-schema-complex-types.md)
 </dt> <dt>
 
 [Aufgabenplanung](task-scheduler-start-page.md)

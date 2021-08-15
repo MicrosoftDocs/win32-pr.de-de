@@ -1,41 +1,41 @@
 ---
-description: Gibt die Portnummer des Proxy Servers an.
+description: Gibt die Portnummer des Proxyservers an.
 ms.assetid: cd84911b-3658-489f-b454-23eded0cbfa0
-title: MFNETSOURCE_PROXYPORT-Eigenschaft (mspdl. h)
+title: MFNETSOURCE_PROXYPORT-Eigenschaft (Mfidl.h)
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 228f7d9390d53f7d8182a198879dcb2d81e3bae7
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 0ac286fdcce276a29f08fef9df536f9a92152729791ff04d63478246825a718f
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104215134"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117874624"
 ---
-# <a name="mfnetsource_proxyport-property"></a>MF NetSource- \_ ProxyPort (Eigenschaft)
+# <a name="mfnetsource_proxyport-property"></a>MFNETSOURCE \_ PROXYPORT-Eigenschaft
 
-Gibt die Portnummer des Proxy Servers an.
+Gibt die Portnummer des Proxyservers an.
 
 
 
 Datentyp
 
-PROPVARIANT-Typ (VT)
+PROPVARIANT-Typ (vt)
 
 PROPVARIANT-Member
 
-**DWORD** (als **Long** gespeichert)
+**DWORD** (gespeichert als **LONG**)
 
 VT \_ I4
 
-**LVAL**
+**lVal**
 
 
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Die Konstante **MF-Quelle \_ ProxyPort** definiert die GUID für diesen Eigenschafts Schlüssel. Der Eigenschaften Bezeichner (PID) ist 0 (null).
+Die Konstante **MFNETSOURCE \_ PROXYPORT** definiert die GUID für diesen Eigenschaftsschlüssel. Der Eigenschaftenbezeichner (PID) ist 0 (null).
 
-Anwendungen können diese Eigenschaft verwenden, um den proxylocator bei der Erstellung des proxylocator-Objekts zu konfigurieren. Um die-Eigenschaft festzulegen, übergeben Sie einen **IPropertyStore** -Zeiger im *pproxyconfig* -Parameter der [**mfkreateproxylocator**](/windows/desktop/api/mfidl/nf-mfidl-mfcreateproxylocator) -Funktion. Wenn diese Eigenschaft nicht für http festgelegt ist, verwendet der proxylocator standardmäßig den Wert 80.
+Anwendungen können diese Eigenschaft verwenden, um den Proxylocator beim Erstellen des Proxylocatorobjekts zu konfigurieren. Um die Eigenschaft festzulegen, übergeben Sie einen **IPropertyStore-Zeiger** im *pProxyConfig-Parameter* der [**MFCreateProxyLocator-Funktion.**](/windows/desktop/api/mfidl/nf-mfidl-mfcreateproxylocator) Wenn diese Eigenschaft nicht für HTTP festgelegt ist, verwendet der Proxylocator standardmäßig den Wert 80.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -43,23 +43,23 @@ Anwendungen können diese Eigenschaft verwenden, um den proxylocator bei der Ers
 
 | Anforderung | Wert |
 |-------------------------------------|------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>                                     |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2008 \[ -Desktop-Apps\]<br/>                               |
-| Header<br/>                   | <dl> <dt>Mspdl. h</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows \[Nur Vista-Desktop-Apps\]<br/>                                     |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2008-Desktop-Apps\]<br/>                               |
+| Header<br/>                   | <dl> <dt>Mfidl.h</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[Eigenschaften von Media Foundation](media-foundation-properties.md)
+[Media Foundation-Eigenschaften](media-foundation-properties.md)
 </dt> <dt>
 
 [Netzwerk in Media Foundation](networking-in-media-foundation.md)
 </dt> <dt>
 
-[Proxy Unterstützung für Netzwerk Quellen](proxy-support-for-network-sources.md)
+[Proxyunterstützung für Netzwerkquellen](proxy-support-for-network-sources.md)
 </dt> </dl>
 
  

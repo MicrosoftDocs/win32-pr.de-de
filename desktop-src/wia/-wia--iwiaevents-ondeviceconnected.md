@@ -1,7 +1,7 @@
 ---
-description: Das Ereignis tritt auf, wenn ein neues Hardware Gerät für Windows-Abbild Beschaffung (WIA) verbunden ist.
+description: Das Ereignis tritt auf, wenn ein Windows WIA-Hardwaregerät (Image Acquisition) verbunden ist.
 ms.assetid: 327a29b8-581c-41b5-bea7-068bec95e653
-title: WIA. onabviceconnected-Ereignis
+title: Wia.OnDeviceConnected-Ereignis
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,16 +13,16 @@ api_type:
 - COM
 api_location:
 - Wiascr.dll
-ms.openlocfilehash: 952b738e8afa0850bd67bab1206382e96419513c
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: d878cc663cc9f7ea1422e2dc2cad10e652296a48ef597cf699fe5eb3af99e49b
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104216061"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118209547"
 ---
-# <a name="wiaondeviceconnected-event"></a>WIA. onabviceconnected-Ereignis
+# <a name="wiaondeviceconnected-event"></a>Wia.OnDeviceConnected-Ereignis
 
-Das Ereignis tritt auf, wenn ein neues Hardware Gerät für Windows-Abbild Beschaffung (WIA) verbunden ist.
+Das Ereignis tritt auf, wenn ein Windows WIA-Hardwaregerät (Image Acquisition) verbunden ist.
 
 ## <a name="syntax"></a>Syntax
 
@@ -50,11 +50,11 @@ Eine Zeichenfolge, die die ID des verbundenen Geräts enthält.
 
 Dieses Ereignis gibt keinen Wert zurück.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-WIA benachrichtigt das Skript oder die Anwendung immer dann, wenn ein neues Hardware Gerät mit dem Computer verbunden ist. Implementieren Sie die **objwia** \_ **ondeviceconnected ()** -Unterroutine, damit das Skript oder die Anwendung auf die Geräte Verbindung reagieren kann.
+WIA benachrichtigt das Skript oder die Anwendung, wenn ein neues Hardwaregerät mit dem Computer verbunden ist. Implementieren Sie **die Unterroutine objWia** \_ **OnDeviceConnected(),** damit das Skript oder die Anwendung auf die Geräteverbindung reagieren kann.
 
-Beispielsweise kann es sein, dass ein Skript die [**Geräte**](-wia-iwia-devices.md) Sammlung aktualisiert, wenn ein neues Gerät installiert wird.
+Sie möchten beispielsweise, dass ein Skript die [**Gerätesammlung**](-wia-iwia-devices.md) aktualisiert, wenn ein neues Gerät installiert wird.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -62,9 +62,9 @@ Beispielsweise kann es sein, dass ein Skript die [**Geräte**](-wia-iwia-devices
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional, Windows XP \[ Desktop-Apps\]<br/>                                        |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2003 \[ -Desktop-Apps\]<br/>                                                          |
-| DLL<br/>                      | <dl> <dt>Wiascr.dll (Version 4,90 oder höher)</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional, nur Windows \[ XP-Desktop-Apps\]<br/>                                        |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2003-Desktop-Apps\]<br/>                                                          |
+| DLL<br/>                      | <dl> <dt>Wiascr.dll (Version 4.90 oder höher)</dt> </dl> |
 
 
 
