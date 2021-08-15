@@ -1,5 +1,5 @@
 ---
-description: 'SystemConfig_V0_Services-Klasse: Diese Klasse ist die Ereignistypklasse für Dienstkonfigurationsereignisse.'
+description: 'SystemConfig_V0_Services Klasse: Diese Klasse ist die Ereignistypklasse für Dienstkonfigurationsereignisse.'
 ms.assetid: 1e6c2061-f1a2-4253-a0c4-4b45b2feceda
 title: SystemConfig_V0_Services-Klasse
 ms.topic: reference
@@ -44,13 +44,13 @@ class SystemConfig_V0_Services : SystemConfig_V0
 
 ## <a name="members"></a>Member
 
-Die **SystemConfig \_ V0 \_ Services-Klasse** verfügt über folgende Typen von Membern:
+Die **Klasse SystemConfig \_ V0 \_ Services** verfügt über die folgenden Membertypen:
 
 -   [Eigenschaften](#properties)
 
 ### <a name="properties"></a>Eigenschaften
 
-Die **SystemConfig \_ V0 \_ Services-Klasse** verfügt über diese Eigenschaften.
+Die **Klasse SystemConfig \_ V0 \_ Services** verfügt über diese Eigenschaften.
 
 <dl> <dt>
 
@@ -114,7 +114,7 @@ Zugriffstyp: Schreibgeschützt
 Qualifizierer: **WmiDataId** (1), **Max** (34)
 </dt> </dl>
 
-Eindeutiger Bezeichner des Diensts. Der Bezeichner gibt einen Hinweis auf die Funktionalität, die der Dienst bereitstellt.
+Eindeutiger Bezeichner des Diensts. Der Bezeichner gibt einen Hinweis auf die Funktionalität an, die der Dienst bietet.
 
 </dd> </dl>
 

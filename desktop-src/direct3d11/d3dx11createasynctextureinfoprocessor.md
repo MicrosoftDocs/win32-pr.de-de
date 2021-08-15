@@ -92,7 +92,7 @@ Für Win32-Desktop-Apps können Sie die [Concurrency Runtime](/previous-versions
 
 
 
-## <a name="see-also"></a>Weitere Informationen:
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 

@@ -1,9 +1,9 @@
 ---
-title: PSN_RESET Benachrichtigungs Code (prsht. h)
-description: Benachrichtigt eine Seite, dass das Eigenschaften Blatt zerstört werden soll. Dieser Benachrichtigungs Code wird in Form einer WM-Benachrichtigungs \_ Meldung gesendet.
+title: PSN_RESET Benachrichtigungscode (Prsht.h)
+description: Benachrichtigt eine Seite, dass das Eigenschaftenblatt zerstört werden soll. Dieser Benachrichtigungscode wird in Form einer WM \_ NOTIFY-Nachricht gesendet.
 ms.assetid: 75448852-8a5e-41a7-92b6-00692e771a06
 keywords:
-- Windows-Steuerelemente für PSN_RESET Benachrichtigungs
+- PSN_RESET Benachrichtigungscode Windows Controls
 topic_type:
 - apiref
 api_name:
@@ -14,16 +14,16 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 5642a5354d934b37ee58007a9fb260befe201edd
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: fb9f14b037d8757469497e644d870a887e6db36172b171f31b00d5615ff39532
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "106340314"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118409811"
 ---
-# <a name="psn_reset-notification-code"></a>\_Benachrichtigungs Code für PSN-zurück
+# <a name="psn_reset-notification-code"></a>PSN \_ RESET-Benachrichtigungscode
 
-Benachrichtigt eine Seite, dass das Eigenschaften Blatt zerstört werden soll. Dieser Benachrichtigungs Code wird in Form einer WM- [**\_ Benachrichtigungs**](wm-notify.md) Meldung gesendet.
+Benachrichtigt eine Seite, dass das Eigenschaftenblatt zerstört werden soll. Dieser Benachrichtigungscode wird in Form einer [**WM \_ NOTIFY-Nachricht**](wm-notify.md) gesendet.
 
 
 ```C++
@@ -41,7 +41,7 @@ PSN_RESET
 *lParam* 
 </dt> <dd>
 
-Zeiger auf eine [**pshnotify**](/windows/desktop/api/Prsht/ns-prsht-pshnotify) -Struktur, die Informationen über den Benachrichtigungs Code enthält.
+Zeiger auf eine [**PSHNOTIFY-Struktur,**](/windows/desktop/api/Prsht/ns-prsht-pshnotify) die Informationen zum Benachrichtigungscode enthält.
 
 </dd> </dl>
 
@@ -49,20 +49,20 @@ Zeiger auf eine [**pshnotify**](/windows/desktop/api/Prsht/ns-prsht-pshnotify) -
 
 Kein Rückgabewert.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Alle Änderungen, die seit dem letzten Benachrichtigungs Code für den [PSN \_](psn-apply.md) -Anwendungscode vorgenommen wurden, werden abgebrochen, außer im Fall von [**PSH \_ aerowizard**](/windows/desktop/api/Prsht/ns-prsht-propsheetheadera_v2), der diesen Benachrichtigungs Code nicht unterstützt.
+Alle Änderungen, die seit dem letzten [PSN \_ APPLY-Benachrichtigungscode](psn-apply.md) vorgenommen wurden, werden abgebrochen, mit Ausnahme von [**\_ PSHWIEWIZARD,**](/windows/desktop/api/Prsht/ns-prsht-propsheetheadera_v2)das diesen Benachrichtigungscode nicht unterstützt.
 
-Der **LPARAM** -Member der [**pshnotify**](/windows/desktop/api/Prsht/ns-prsht-pshnotify) -Struktur, auf die von *LPARAM* verwiesen wird, wird auf " **true** " festgelegt, wenn der Benutzer auf die Schaltfläche " **X** " in der oberen rechten Ecke des Eigenschaften Blatts geklickt hat. Der Wert ist **false** , wenn der Benutzer auf die Schaltfläche **Abbrechen** geklickt hat. Die **pshnotify** -Struktur enthält eine [**NMHDR**](/windows/desktop/api/richedit/ns-richedit-nmhdr) -Struktur als ersten Member, **HDR**. Der **hwndfrom** -Member dieser **NMHDR** -Struktur enthält das Handle für das Eigenschaften Blatt.
+Der **lParam-Member** der [**PSHNOTIFY-Struktur,**](/windows/desktop/api/Prsht/ns-prsht-pshnotify) auf den *lParam* zeigt, wird auf **TRUE** festgelegt, wenn der Benutzer auf die **X-Schaltfläche** in der oberen rechten Ecke des Eigenschaftenblatts geklickt hat. Der Wert ist **FALSE,** wenn der Benutzer auf die Schaltfläche **Abbrechen** geklickt hat. Die **PSHNOTIFY-Struktur** enthält eine [**NMHDR-Struktur**](/windows/desktop/api/richedit/ns-richedit-nmhdr) als erstes Element, **hdr**. Der **hwndFrom-Member** dieser **NMHDR-Struktur** enthält das Handle für das Eigenschaftenblatt.
 
-Eine Anwendung kann diesen Benachrichtigungs Code als Gelegenheit zum Ausführen von Bereinigungs Vorgängen verwenden.
+Eine Anwendung kann diesen Benachrichtigungscode zum Ausführen von Bereinigungsvorgängen verwenden.
 
 > [!Note]  
-> Das Eigenschaften Blatt bearbeitet die Liste der Seiten, wenn der \_ Benachrichtigungs Code für die PSN-zurück Setzung gesendet wird. Versuchen Sie nicht, während der Verarbeitung dieses Benachrichtigungs Codes Seiten hinzuzufügen, zu entfernen oder einzufügen. Dies führt zu unvorhersehbaren Ergebnissen.
+> Das Eigenschaftenblatt wird gerade bearbeitet, wenn der PSN \_ RESET-Benachrichtigungscode gesendet wird. Versuchen Sie bei der Verarbeitung dieses Benachrichtigungscodes nicht, Seiten hinzuzufügen, zu entfernen oder einzufügen. Dies führt zu unvorhersehbaren Ergebnissen.
 
  
 
-Beim Verarbeiten dieses Benachrichtigungs Codes dürfen Sie die [**EndDialog**](/windows/desktop/api/winuser/nf-winuser-enddialog) -Funktion nicht aufzurufen.
+Rufen Sie die [**EndDialog-Funktion**](/windows/desktop/api/winuser/nf-winuser-enddialog) nicht auf, wenn Sie diesen Benachrichtigungscode verarbeiten.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -70,9 +70,9 @@ Beim Verarbeiten dieses Benachrichtigungs Codes dürfen Sie die [**EndDialog**](
 
 | Anforderung | Wert |
 |-------------------------------------|------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>                                     |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2003 \[ -Desktop-Apps\]<br/>                               |
-| Header<br/>                   | <dl> <dt>Prsht. h</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows \[Nur Vista-Desktop-Apps\]<br/>                                     |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2003-Desktop-Apps\]<br/>                               |
+| Header<br/>                   | <dl> <dt>Prsht.h</dt> </dl> |
 
 
 

@@ -35,7 +35,7 @@ Die **CIM \_ PackagedComponent-Zuordnung** stellt eine explizite Beziehung dar, 
 
  
 
-Die folgende Syntax wird durch MOF-Code (Managed Object Format) vereinfacht und schließt alle geerbten Eigenschaften ein. Eigenschaften werden in alphabetischer Reihenfolge und nicht in MOF-Reihenfolge aufgelistet.
+Die folgende Syntax wird durch MOF-Code (Managed Object Format) vereinfacht und schließt alle geerbten Eigenschaften ein. Eigenschaften werden in alphabetischer Reihenfolge und nicht in MOF-Reihenfolge aufgeführt.
 
 ## <a name="syntax"></a>Syntax
 
@@ -51,7 +51,7 @@ class CIM_PackagedComponent : CIM_Container
 
 ## <a name="members"></a>Member
 
-Die **CIM \_ PackagedComponent-Klasse** verfügt über die folgenden Membertypen:
+Die **CIM \_ PackagedComponent-Klasse** verfügt über diese Membertypen:
 
 -   [Eigenschaften](#properties)
 
@@ -86,7 +86,7 @@ Datentyp: **string**
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Freiformzeichenfolge, die die Positionierung des physischen Elements innerhalb des physischen Pakets darstellt. Informationen relativ zu stationären Elementen im Container (z. B. "Zweiter Laufwerksschacht von oben"), Winkel, Höhe und andere Daten können in dieser Eigenschaft aufgezeichnet werden. Diese Zeichenfolge kann das CIM Location-Objekt ergänzen oder verwenden, statt es [**\_ zu**](cim-location.md) instanziieren.
+Freiformzeichenfolge, die die Positionierung des physischen Elements innerhalb des physischen Pakets darstellt. Informationen relativ zu den stationären Elementen im Container (z. B. "Zweiter Laufwerksschacht von oben"), Winkel, Höhe und andere Daten können in dieser Eigenschaft aufgezeichnet werden. Diese Zeichenfolge kann das CIM Location-Objekt ergänzen oder verwenden, statt [**es \_ zu**](cim-location.md) instanziieren.
 
 Diese Eigenschaft wird vom [**\_ CIM-Container geerbt.**](cim-container.md)
 

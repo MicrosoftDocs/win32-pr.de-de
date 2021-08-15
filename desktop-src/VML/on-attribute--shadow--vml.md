@@ -1,26 +1,26 @@
 ---
-title: On-Attribut (Schatten) (VML)
-description: On-Attribut (Schatten) (VML)
+title: On-Attribut (Schatten)(VML)
+description: On-Attribut (Schatten)(VML)
 ms.assetid: 234fe63e-8a4a-4067-9d05-a8990d1cee5c
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 83df69d8c90c99839f55836941746717a205d07a
-ms.sourcegitcommit: 592c9bbd22ba69802dc353bcb5eb30699f9e9403
+ms.openlocfilehash: 6fda4d33fbd22d2a7913f13ae8ad874ba3240944f06303f020888aeaafaee88f
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "103948949"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118345851"
 ---
-# <a name="on-attribute-shadowvml"></a>On-Attribut (Schatten) (VML)
+# <a name="on-attribute-shadowvml"></a>On-Attribut (Schatten)(VML)
 
-In diesem Thema wird VML beschrieben, eine Funktion, die ab Windows Internet Explorer 9 veraltet ist. Webseiten und Anwendungen, die auf VML basieren, sollten zu SVG oder anderen allgemein unterstützten Standards migriert werden.
+In diesem Thema wird VML beschrieben, ein Feature, das ab Version 9 Windows Internet Explorer ist. Webseiten und Anwendungen, die auf VML basieren, sollten zu SVG oder anderen weit verbreiteten Standards migriert werden.
 
 > [!Note]  
-> Ab Dezember 2011 wurde dieses Thema archiviert. Daher wird er nicht mehr aktiv verwaltet. Weitere Informationen finden Sie unter [archivierte Inhalte](/previous-versions/windows/internet-explorer/ie-developer/). Informationen, Empfehlungen und Anleitungen zur aktuellen Version von Windows Internet Explorer finden Sie im [Internet Explorer Developer Center](https://msdn.microsoft.com/ie/).
+> Seit Dezember 2011 wurde dieses Thema archiviert. Daher wird sie nicht mehr aktiv verwaltet. Weitere Informationen finden Sie unter [Archivierter Inhalt.](/previous-versions/windows/internet-explorer/ie-developer/) Informationen, Empfehlungen und Anleitungen zur aktuellen Version von Windows Internet Explorer finden Sie im [Internet Explorer Developer Center.](https://msdn.microsoft.com/ie/)
 
- 
+ 
 
-Bestimmt, ob ein Schatten angezeigt wird. Lese-/Schreibzugriff. **Vgder State**.
+Bestimmt, ob ein Schatten angezeigt wird. Lese-/Schreibzugriff. **VgTriState**.
 
 **Gilt für**
 
@@ -28,19 +28,19 @@ Bestimmt, ob ein Schatten angezeigt wird. Lese-/Schreibzugriff. **Vgder State**.
 
 **Tagsyntax**
 
-<v: *Element* on = " *Expression* " >
+<v: *element* on="-Ausdruck "> 
 
-**Skript Syntax**
+**Skriptsyntax**
 
-*Element* . on = "*Ausdruck*"
+*element* .on="*expression*"
 
-*Ausdruck* = *Element*. on
+*expression* = *.on-Element*
 
 **Anmerkungen**
 
-**True** gibt an, dass der Schatten angezeigt wird. Der Standardwert ist **False**.
+True **gibt an,** dass der Schatten angezeigt wird. Der Standardwert ist **False**.
 
-*VML-Standard Attribut*
+*VML-Standardattribut*
 
 **Beispiel**
 
@@ -61,6 +61,6 @@ Der Schatten wird angezeigt.
 
 
 
- 
+ 
 
- 
+ 

@@ -1,9 +1,9 @@
 ---
-title: glgetmapdv-Funktion (GL. h)
-description: Die Funktionen "glgetmapdv", "glgetmapfv" und "glgetmapiv" geben auswertungsparameter zurück. | glgetmapdv-Funktion (GL. h)
+title: glGetMapdv-Funktion (Gl.h)
+description: Die Funktionen glGetMapdv, glGetMapfv und glGetMapiv geben Auswertungsparameter zurück. | glGetMapdv-Funktion (Gl.h)
 ms.assetid: 3b4fc03b-ada4-4f4a-a234-fa6439f2e5c8
 keywords:
-- glgetmapdv-Funktion OpenGL
+- glGetMapdv-Funktion OpenGL
 topic_type:
 - apiref
 api_name:
@@ -14,16 +14,16 @@ api_type:
 - DllExport
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: dbf7dd5104ce7a47b0d1215221c115a7191f4548
-ms.sourcegitcommit: 92e74c99f8f4d097676959d0c317f533c2400a80
+ms.openlocfilehash: ac1603d87004e9b97e635e5fa6a52efa97c5e760ccd9010aa6f86fc62eb3ee7b
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/09/2021
-ms.locfileid: "106354950"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118360308"
 ---
-# <a name="glgetmapdv-function"></a>glgetmapdv-Funktion
+# <a name="glgetmapdv-function"></a>glGetMapdv-Funktion
 
-Die Funktionen " **glgetmapdv**", " [**glgetmapfv**](glgetmapfv.md)" und " [**glgetmapiv**](glgetmapiv.md) " geben auswertungsparameter zurück.
+Die Funktionen **glGetMapdv,** [**glGetMapfv**](glgetmapfv.md)und [**glGetMapiv**](glgetmapiv.md) geben Auswertungsparameter zurück.
 
 ## <a name="syntax"></a>Syntax
 
@@ -45,11 +45,11 @@ void WINAPI glGetMapdv(
 *Ziel* 
 </dt> <dd>
 
-Der symbolische Name einer Karte. Folgende Werte sind zulässig: GL \_ zuordnung1 \_ Color \_ 4, GL \_ zuordnung1 \_ Index, GL \_ zuordnung1 \_ Normal, GL \_ zuordnung1 \_ Texture \_ coord \_ 1, GL \_ zuordnung1 \_ Texture \_ coord \_ 2, GL \_ zuordnung1 \_ Texture \_ coord \_ 3, GL \_ zuordnung1 \_ Textur \_ coord \_ 4, GL \_ zuordnung1 \_ Vertex \_ 3, GL \_ zuordnung1 \_ Vertex \_ 4, GL \_ map2 \_ Color \_ 4, GL \_ map2 \_ Index, GL \_ map2 \_ Normal, GL \_ map2 \_ Texture \_ coord \_ 1, GL \_ map2 \_ Texture \_ coord \_ 2, GL \_ map2 \_ Texture \_ coord \_ 3, GL \_ map2 \_ Texture \_ coord \_ 4, GL \_ map2 \_ Vertex \_ 3 und GL \_ map2 \_ Vertex \_ 4.
+Der symbolische Name einer Zuordnung. Folgende Werte werden akzeptiert: GL \_ MAP1 \_ COLOR \_ 4, GL \_ MAP1 \_ INDEX, GL \_ MAP1 \_ NORMAL, GL \_ MAP1 \_ TEXTURE \_ COORD \_ 1, GL \_ MAP1 TEXTURE \_ \_ COORD \_ 2, GL \_ MAP1 TEXTURE \_ \_ COORD \_ 3, GL \_ MAP1 TEXTURE \_ \_ COORD \_ 4, GL \_ MAP1 \_ VERTEX \_ 3, GL \_ MAP1 \_ VERTEX \_ 4, GL \_ MAP2 COLOR \_ \_ 4, GL \_ MAP2 \_ INDEX, GL \_ MAP2 \_ NORMAL, GL \_ MAP2 TEXTURE \_ \_ COORD \_ 1, GL \_ MAP2 TEXTURE \_ \_ COORD \_ 2, GL \_ MAP2 TEXTURE \_ \_ COORD \_ 3, GL \_ MAP2 TEXTURE \_ \_ COORD \_ 4, GL \_ MAP2 \_ VERTEX \_ 3 UND GL \_ MAP2 \_ VERTEX \_ 4.
 
 </dd> <dt>
 
-*query* 
+*Frage* 
 </dt> <dd>
 
 Gibt an, welcher Parameter zurückgegeben werden soll. Die folgenden symbolischen Namen werden akzeptiert.
@@ -58,9 +58,9 @@ Gibt an, welcher Parameter zurückgegeben werden soll. Die folgenden symbolische
 
 | Wert                                                                                                                                             | Bedeutung                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   |
 |---------------------------------------------------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| <span id="GL_COEFF"></span><span id="gl_coeff"></span><dl> <dt>**GL. \_ coeff**</dt> </dl>    | Der *v* -Parameter gibt die Kontrollpunkte für die auswerterfunktion zurück. Eindimensionale Evaluatoren geben *Reihen* folgen Kontrollpunkte zurück, und zweidimensionale Evaluatoren geben *uorder* *x* *Vorder* Steuerungs Punkte zurück. Jeder Kontrollpunkt besteht aus einem, zwei, drei oder vier ganzzahligen Gleit Komma Werten mit einfacher Genauigkeit oder Gleit Komma Werten mit doppelter Genauigkeit, abhängig vom Typ der Auswertung. Zweidimensionale Steuerpunkte werden in der Reihenfolge der Zeilen zurückgegeben, wobei der *uorder* -Index schnell erhöht wird, und der *Vorder* -Index nach jeder Zeile. Ganzzahlige Werte werden, wenn angefordert, berechnet, indem die internen Gleit Komma Werte auf die nächstgelegenen ganzzahligen Werte gerundet werden.<br/> |
-| <span id="GL_ORDER"></span><span id="gl_order"></span><dl> <dt>**GL- \_ Bestellung**</dt> </dl>    | Der *v* -Parameter gibt die Reihenfolge der evaluatorfunktion zurück. Eindimensionale Evaluatoren geben einen einzelnen Wert zurück, *Order*. Zweidimensionale Evaluatoren geben zwei Werte zurück: *uorder* und *Vorder*.<br/>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 |
-| <span id="GL_DOMAIN"></span><span id="gl_domain"></span><dl> <dt>**GL- \_ Domäne**</dt> </dl> | Der *v* -Parameter gibt die linearen *u* -und *v* -Mapping-Parameter zurück. Eindimensionale Evaluatoren geben zwei Werte zurück, *u* 1 und *u* 2, wie von [**glMap1**](glmap1.md)angegeben. Zweidimensionale Evaluatoren geben gemäß [**glMap2**](glmap2.md)-Angabe vier Werte (*U1*, *U2*, *v1* und *v2*) zurück. Ganzzahlige Werte werden, wenn angefordert, berechnet, indem die internen Gleit Komma Werte auf die nächstgelegenen ganzzahligen Werte gerundet werden.<br/>                                                                                                                                                                                                                                                  |
+| <span id="GL_COEFF"></span><span id="gl_coeff"></span><dl> <dt>**GL \_ COEFF**</dt> </dl>    | Der *v-Parameter* gibt die Steuerungspunkte für die Auswertungsfunktion zurück. Eindimensionale Auswertungen geben *Kontrollpunkte* für die Reihenfolge zurück, und zweidimensionale Auswertungen geben *uorder* *x* *vorder-Kontrollpunkte* zurück. Jeder Steuerungspunkt besteht je nach Typ der Auswertung aus einem, zwei, drei oder vier ganzzahligen Gleitkommawerten mit einfacher Genauigkeit oder Gleitkommawerten mit doppelter Genauigkeit. Zweidimensionale Kontrollpunkte werden in Zeilen-Hauptreihenfolge zurückgegeben, wodurch der *UORDER-Index* schnell erhöht wird, und der *vordere* Index nach jeder Zeile. Ganzzahlige Werte werden bei Anforderung berechnet, indem die internen Gleitkommawerte auf die nächsten ganzzahligen Werte gerundet werden.<br/> |
+| <span id="GL_ORDER"></span><span id="gl_order"></span><dl> <dt>**GL \_ ORDER**</dt> </dl>    | Der *v-Parameter* gibt die Reihenfolge der Auswertungsfunktion zurück. Eindimensionale Auswertungen geben einen einzelnen Wert in *der Reihenfolge* zurück. Zweidimensionale Auswertungen geben zwei Werte zurück: *uorder* und *vorder*.<br/>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 |
+| <span id="GL_DOMAIN"></span><span id="gl_domain"></span><dl> <dt>**GL \_ DOMAIN**</dt> </dl> | Der *v-Parameter* gibt die linearen *u-* und v-Zuordnungsparameter zurück.  Eindimensionale Auswertungen geben zwei Werte zurück, *u* 1 und *u* 2, wie durch [**glMap1**](glmap1.md)angegeben. Zweidimensionale Auswertungen geben vier Werte zurück (*u1*, *u2*, *v1* und *v2*), wie von [**glMap2**](glmap2.md)angegeben. Ganzzahlige Werte werden bei Anforderung berechnet, indem die internen Gleitkommawerte auf die nächsten ganzzahligen Werte gerundet werden.<br/>                                                                                                                                                                                                                                                  |
 
 
 
@@ -68,7 +68,7 @@ Gibt an, welcher Parameter zurückgegeben werden soll. Die folgenden symbolische
 
 </dd> <dt>
 
-*Ramelow* 
+*V* 
 </dt> <dd>
 
 Gibt die angeforderten Daten zurück.
@@ -81,24 +81,24 @@ Diese Funktion gibt keinen Wert zurück.
 
 ## <a name="error-codes"></a>Fehlercodes
 
-Die folgenden Fehlercodes können von der Funktion " [**glgeterror**](glgeterror.md) " abgerufen werden.
+Die folgenden Fehlercodes können von der [**glGetError-Funktion**](glgeterror.md) abgerufen werden.
 
 
 
 | Name                                                                                                  | Bedeutung                                                                                                                               |
 |-------------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------|
-| <dl> <dt>**GL \_ ungültige Aufzählung. \_**</dt> </dl>      | Das *Ziel* oder die *Abfrage* war kein akzeptierter Wert.<br/>                                                                             |
-| <dl> <dt>**\_ungültiger \_ Vorgang**</dt> </dl> | Die Funktion wurde zwischen einem Aufruf von [**glBegin**](glbegin.md) und dem entsprechenden Aufruf von [**glEnd**](glend.md)aufgerufen.<br/> |
+| <dl> <dt>**GL \_ INVALID \_ ENUM**</dt> </dl>      | *target* oder *query* war kein akzeptierter Wert.<br/>                                                                             |
+| <dl> <dt>**GL \_ INVALID \_ OPERATION**</dt> </dl> | Die Funktion wurde zwischen einem Aufruf von [**glBegin**](glbegin.md) und dem entsprechenden Aufruf von [**glEnd**](glend.md)aufgerufen.<br/> |
 
 
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Die **glgetmap** -Funktion gibt evaluatorparameter zurück. (Die **glMap1** -Funktion und die **glMap2** -Funktion definieren Evaluatoren.) Der *Ziel* Parameter gibt eine Karte an, die *Abfrage* wählt einen bestimmten Parameter aus, und *v* verweist auf den Speicher, in den die Werte zurückgegeben werden.
+Die **glGetMap-Funktion** gibt Auswertungsparameter zurück. (Die Funktionen **glMap1** und **glMap2** definieren Auswertungen.) Der *Zielparameter* gibt eine Zuordnung an, *die Abfrage* wählt einen bestimmten Parameter aus und zeigt *auf* den Speicher, in dem die Werte zurückgegeben werden.
 
-Die zulässigen Werte für den *Ziel* Parameter werden in [**glMap1**](glmap1.md) und [**glMap2**](glmap2.md)beschrieben.
+Die zulässigen Werte für den *Zielparameter* werden in [**glMap1**](glmap1.md) und [**glMap2**](glmap2.md)beschrieben.
 
-Wenn ein Fehler generiert wird, wird keine Änderung am Inhalt von *v* vorgenommen.
+Wenn ein Fehler generiert wird, werden keine Änderungen am Inhalt von *v* vorgenommen.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -108,13 +108,13 @@ Wenn ein Fehler generiert wird, wird keine Änderung am Inhalt von *v* vorgenomm
 |-------------------------------------|-----------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional \[nur Desktop-Apps\]<br/>                              |
 | Unterstützte Mindestversion (Server)<br/> | Windows 2000 Server \[nur Desktop-Apps\]<br/>                                    |
-| Header<br/>                   | <dl> <dt>GL. h</dt> </dl>         |
-| Bibliothek<br/>                  | <dl> <dt>Opengl32. lib</dt> </dl> |
+| Header<br/>                   | <dl> <dt>Gl.h</dt> </dl>         |
+| Bibliothek<br/>                  | <dl> <dt>Opengl32.lib</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>Opengl32.dll</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
@@ -124,7 +124,7 @@ Wenn ein Fehler generiert wird, wird keine Änderung am Inhalt von *v* vorgenomm
 [**glEnd**](glend.md)
 </dt> <dt>
 
-[**glevalcoord**](glevalcoord-functions.md)
+[**glEvalCoord**](glevalcoord-functions.md)
 </dt> <dt>
 
 [**glMap1**](glmap1.md)

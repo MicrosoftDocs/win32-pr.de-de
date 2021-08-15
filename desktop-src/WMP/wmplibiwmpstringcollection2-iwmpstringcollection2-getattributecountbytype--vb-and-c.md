@@ -1,11 +1,11 @@
 ---
-title: IWMPStringCollection2 getattributezähltbytype-Methode
-description: Die getattributezähltbytype-Methode gibt die Anzahl der Attribute zurück, die dem angegebenen Zeichen folgen-Sammlungs Index, dem angegebenen Attributnamen und der angegebenen Sprache zugeordnet sind.
+title: IWMPStringCollection2 getAttributeCountByType-Methode
+description: Die getAttributeCountByType-Methode gibt die Anzahl der Attribute zurück, die dem angegebenen Zeichenfolgensammlungsindex, Attributnamen und der angegebenen Sprache zugeordnet sind.
 ms.assetid: 30312039-3676-4322-b6f6-fb86098bf578
 keywords:
-- getattributezähltbytype-Methode, Windows Media Player
-- getattributezähltbytype-Methode, Windows Media Player, IWMPStringCollection2-Schnittstelle
-- IWMPStringCollection2 Interface Windows Media Player, getattributezähltbytype-Methode
+- getAttributeCountByType-Windows Media Player
+- getAttributeCountByType-Methode Windows Media Player , IWMPStringCollection2-Schnittstelle
+- IWMPStringCollection2-Schnittstelle Windows Media Player , getAttributeCountByType-Methode
 topic_type:
 - apiref
 api_name:
@@ -16,16 +16,16 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: e9bb60fdd843fb3f45b6e4e3aff444a8a915fa0f
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: c236d03cad0612d8306b8ccde370136cb9b31acca82e0aa52761ed56fb4b9bb3
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106365748"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118330914"
 ---
-# <a name="iwmpstringcollection2getattributecountbytype-method"></a>IWMPStringCollection2:: getattributezähltbytype-Methode
+# <a name="iwmpstringcollection2getattributecountbytype-method"></a>IWMPStringCollection2::getAttributeCountByType-Methode
 
-Die **getattributezähltbytype** -Methode gibt die Anzahl der Attribute zurück, die dem angegebenen Zeichen folgen-Sammlungs Index, dem angegebenen Attributnamen und der angegebenen Sprache zugeordnet sind.
+Die **getAttributeCountByType-Methode** gibt die Anzahl der Attribute zurück, die dem angegebenen Zeichenfolgensammlungsindex, Attributnamen und der angegebenen Sprache zugeordnet sind.
 
 ## <a name="syntax"></a>Syntax
 
@@ -57,36 +57,36 @@ Implements IWMPStringCollection2.getAttributeCountByType
 
 <dl> <dt>
 
-*lcollectionindex* \[ in\]
+*lCollectionIndex* \[ In\]
 </dt> <dd>
 
-Der **System. Int32** -Wert, der den NULL basierten Index des Zeichen folgen-Sammel Elements angibt, aus dem das Attribut abgeleitet werden soll.
+Das **System.Int32-Objekt,** das den nullbasierten Index des Zeichenfolgensammlungselements angibt, aus dem das Attribut erhalten werden soll.
 
 </dd> <dt>
 
-*bstrintype* \[ in\]
+*bstrType* \[ In\]
 </dt> <dd>
 
-Die **System. String** -Eigenschaft, die den Namen des Attributs ist.
+Die **System.String,** die der Name des Attributs ist.
 
 </dd> <dt>
 
-*bstraulanguage* \[ in\]
+*bstrLanguage* \[ In\]
 </dt> <dd>
 
-Die **System. String** , die den Namen der Sprache hat. Wenn der Wert auf NULL oder auf eine Zeichenfolge der Länge 0 (null) festgelegt ist, wird die aktuelle Gebiets Schema Zeichenfolge verwendet. Andernfalls muss der Wert eine gültige RFC 1766-sprach Zeichenfolge sein, z. b. "en-US".
+Die **System.String,** die der Name der Sprache ist. Wenn der Wert auf NULL oder auf eine Zeichenfolge der Länge 0 (null) festgelegt ist (""), wird die aktuelle Locale String verwendet. Andernfalls muss der Wert eine gültige RFC 1766-Sprachzeichenfolge wie "en-us" sein.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Der **System. Int32** -Wert, der die Anzahl ist.
+Das **System.Int32,** das die Anzahl ist.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Diese Methode wird verwendet, um die Anzahl von Attributen zu ermitteln, die einem bestimmten Attributnamen für ein bestimmtes **StringCollection** -Element entsprechen. Index Nummern können dann an den vierten Parameter der **getItemInfoByType** -Methode übergeben werden.
+Diese Methode wird verwendet, um die Anzahl von Attributen zu finden, die einem bestimmten Attributnamen für ein bestimmtes **StringCollection-Element** entspricht. Indexnummern können dann an den vierten Parameter der **getItemInfoByType-Methode übergeben** werden.
 
-Um diese Methode verwenden zu können, ist Lesezugriff auf die Bibliothek erforderlich. Weitere Informationen finden Sie unter [Bibliotheks Zugriff](library-access.md).
+Um diese Methode verwenden zu können, ist Lesezugriff auf die Bibliothek erforderlich. Weitere Informationen finden Sie unter [Bibliothekszugriff.](library-access.md)
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -100,14 +100,14 @@ Um diese Methode verwenden zu können, ist Lesezugriff auf die Bibliothek erford
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**IWMPStringCollection2-Schnittstelle (VB und c#)**](iwmpstringcollection2--vb-and-c.md)
+[**IWMPStringCollection2-Schnittstelle (VB und C#)**](iwmpstringcollection2--vb-and-c.md)
 </dt> <dt>
 
-[**IWMPStringCollection2. getItemInfoByType (VB und c#)**](wmplibiwmpstringcollection2-iwmpstringcollection2-getiteminfobytype--vb-and-c.md)
+[**IWMPStringCollection2.getItemInfoByType (VB und C#)**](wmplibiwmpstringcollection2-iwmpstringcollection2-getiteminfobytype--vb-and-c.md)
 </dt> </dl>
 
  

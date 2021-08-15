@@ -1,9 +1,9 @@
 ---
-title: 'Texture2D:: Load (int, int, uint)-Funktion'
-description: 'Liest Textur Daten und gibt den Status des Vorgangs zurück. | Texture2D:: Load (int, int, uint)-Funktion'
+title: Texture2D::Load(int,int,uint)-Funktion
+description: Liest Texturdaten und gibt den Status des Vorgangs zurück. | Texture2D::Load(int,int,uint)-Funktion
 ms.assetid: 05A12BE2-4604-470B-9EE8-F03F51E6D254
 keywords:
-- Ladefunktion HLSL
+- Load-Funktion HLSL
 topic_type:
 - apiref
 api_name:
@@ -13,16 +13,16 @@ api_type:
 ms.topic: reference
 ms.date: 05/31/2018
 api_location: ''
-ms.openlocfilehash: 0c591b92b64641e169023f30663d8f5c6ef8a6c9
-ms.sourcegitcommit: 92e74c99f8f4d097676959d0c317f533c2400a80
+ms.openlocfilehash: 890f49a0609367dcf91c91146f786568fdd83f0f207f7aa69d8dd7c4019b4d1d
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/09/2021
-ms.locfileid: "104353259"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118507383"
 ---
-# <a name="texture2dloadintintuint-function"></a>Texture2D:: Load (int, int, uint)-Funktion
+# <a name="texture2dloadintintuint-function"></a>Texture2D::Load(int,int,uint)-Funktion
 
-Liest Textur Daten und gibt den Status des Vorgangs zurück.
+Liest Texturdaten und gibt den Status des Vorgangs zurück.
 
 ## <a name="syntax"></a>Syntax
 
@@ -41,7 +41,7 @@ Liest Textur Daten und gibt den Status des Vorgangs zurück.
 
 <dl> <dt>
 
-*Speicherort* \[ in\]
+*Standort* \[ In\]
 </dt> <dd>
 
 Typ: **int**
@@ -50,21 +50,21 @@ Texturkoordinaten
 
 </dd> <dt>
 
-*Offset* \[ in\]
+*Offset* \[ In\]
 </dt> <dd>
 
 Typ: **int**
 
-Ein Offset, der vor dem Sampling auf die Texturkoordinaten angewendet wird.
+Ein Offset, der vor der Stichprobenentnahme auf die Texturkoordinaten angewendet wird.
 
 </dd> <dt>
 
-*Status* \[ vorgenommen\]
+*Status* \[ out\]
 </dt> <dd>
 
 Typ: **uint**
 
-Der Status des Vorgangs. Sie können nicht direkt auf den Status zugreifen. übergeben Sie stattdessen den Status an die systeminterne [**checkaccessfullymapping**](checkaccessfullymapped.md) -Funktion. **Checkaccessfullymapping** gibt **true** zurück, wenn alle Werte aus dem entsprechenden **Sample**-, **Gather**-oder **Load** -Vorgang auf zugeordnete Kacheln in einer [gekachelten Ressource](/windows/desktop/direct3d11/direct3d-11-2-features)zugegriffen haben. Wenn Werte von einer nicht zugeordneten Kachel entnommen wurden, gibt **checkaccessfullymapping** den Wert **false** zurück.
+Der Status des Vorgangs. Sie können nicht direkt auf den Status zugreifen. Übergeben Sie stattdessen den Status an die [**systeminterne CheckAccessFullyMapped-Funktion.**](checkaccessfullymapped.md) **CheckAccessFullyMapped** gibt **TRUE zurück,** wenn alle Werte aus dem entsprechenden **Beispiel-,** **Gather-** oder **Load-Vorgang** auf zugeordnete Kacheln in einer [gekachelten Ressource zugegriffen haben.](/windows/desktop/direct3d11/direct3d-11-2-features) Wenn Werte aus einer nicht zugeordneten Kachel übernommen wurden, gibt **CheckAccessFullyMapped** **FALSE zurück.**
 
 </dd> </dl>
 
@@ -72,13 +72,13 @@ Der Status des Vorgangs. Sie können nicht direkt auf den Status zugreifen. übe
 
 Typ:
 
-Der Rückgabetyp entspricht dem Typ in der Deklaration für das [**Texture2D**](sm5-object-texture2d.md) -Objekt.
+Der Rückgabetyp entspricht dem Typ in der Deklaration für das [**Texture2D-Objekt.**](sm5-object-texture2d.md)
 
 ## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[Lade Methoden](texture2d-load.md)
+[Laden von Methoden](texture2d-load.md)
 </dt> </dl>
 
  

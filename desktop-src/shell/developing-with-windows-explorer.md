@@ -1,28 +1,28 @@
 ---
-description: Windows-Explorer ist eine leistungsstarke Anwendung zum Durchsuchen und Verwalten von Ressourcen.
+description: Windows Explorer ist eine leistungsstarke Anwendung für das Durchsuchen und Die Verwaltung von Ressourcen.
 ms.assetid: 879CE652-EDC0-4a14-925E-C83763133BE5
-title: Entwickeln mit Windows-Explorer
+title: Entwickeln mit Windows Explorer
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 2b7b68d48f2d1becea23311847a5ce41b3776321
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 22d00b513b3ee73c30b100cb4236d2c9fb327e1f9557d12ba86738ee9e910ca2
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104484387"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118460183"
 ---
-# <a name="developing-with-windows-explorer"></a>Entwickeln mit Windows-Explorer
+# <a name="developing-with-windows-explorer"></a>Entwickeln mit Windows Explorer
 
-Windows-Explorer ist eine leistungsstarke Anwendung zum Durchsuchen und Verwalten von Ressourcen. Der Zugriff auf den Windows-Explorer ist als integriertes Ganzes über Explorer.exe oder die [**IExplorerBrowser**](/windows/desktop/api/shobjidl_core/nn-shobjidl_core-iexplorerbrowser) -Schnittstelle möglich. Windows Explorer (Explorer.exe) kann mit [**ShellExecuteEx**](/windows/desktop/api/Shellapi/nf-shellapi-shellexecuteexa) oder einer ähnlichen Funktion als separater Prozess erzeugt werden.
+Windows Explorer ist eine leistungsstarke Anwendung für das Durchsuchen und Die Verwaltung von Ressourcen. Windows Auf den Explorer kann als integriertes Ganzes über Explorer.exe oder die [**IExplorerBrowser-Schnittstelle zugegriffen**](/windows/desktop/api/shobjidl_core/nn-shobjidl_core-iexplorerbrowser) werden. Windows Der Explorer (Explorer.exe) kann mit [**ShellExecuteEx**](/windows/desktop/api/Shellapi/nf-shellapi-shellexecuteexa) oder einer ähnlichen Funktion als separater Prozess ausgeführt werden.
 
 > [!Note]  
-> Die Befehlszeilenoptionen für Explorer.exe werden auf der Microsoft Windows-Support-Website im Artikel [Windows-Explorer-Command-Line Optionen](https://support.microsoft.com/kb/152457)dokumentiert.
+> Befehlszeilenoptionen für Explorer.exe sind auf der Microsoft Windows Support-Website im Artikel Windows [Explorer Command-Line dokumentiert.](https://support.microsoft.com/kb/152457)
 
  
 
-Geöffnete Explorer-Fenster können mithilfe von [**IShellWindows**](/windows/desktop/api/Exdisp/nn-exdisp-ishellwindows) (CLSID shellwindows) ermittelt und programmiert werden \_ , und neue Instanzen von Windows-Explorer können mithilfe von [**IWebBrowser2**](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa752127(v=vs.85)) (CLSID \_ shellbrowserwindow) erstellt werden.
+Geöffnete Explorer-Fenster können mithilfe von [**IShellWindows**](/windows/desktop/api/Exdisp/nn-exdisp-ishellwindows) (CLSID ShellWindows) gefunden und programmiert werden, und neue Instanzen von Windows Explorer können mithilfe von \_ [**IWebBrowser2**](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa752127(v=vs.85)) (CLSID \_ ShellBrowserWindow) erstellt werden.
 
-Im folgenden Codebeispiel wird veranschaulicht, wie das Windows-Explorer-Automatisierungs Modell zum Erstellen und ermitteln von Explorer-Fenstern verwendet werden kann, die ausgeführt werden.
+Das folgende Codebeispiel veranschaulicht, wie das Windows Explorer-Automatisierungsmodell verwendet werden kann, um ausgeführte Explorer-Fenster zu erstellen und zu entdecken.
 
 
 ```
@@ -225,31 +225,31 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int)
 
 
 
-Der Windows-Explorer-Client Bereich kann mithilfe der [IExplorerBrowser](/windows/desktop/api/shobjidl_core/nn-shobjidl_core-iexplorerbrowser) -Schnittstelle gehostet werden. Die Steuerelemente Windows Explorer-Client und Namespace Tree sind Standardkomponenten von Windows Vista und höher. Entwickler können die Schnittstellen als Bausteine wieder verwenden. Diese Steuerelemente werden häufig verwendet, um angepasste explorergeeignete explorerelemente für die Problemdomäne zu erstellen.
+Der Windows Explorer-Clientbereich kann über die [IExplorerBrowser-Schnittstelle gehostet](/windows/desktop/api/shobjidl_core/nn-shobjidl_core-iexplorerbrowser) werden. Der Windows Explorer-Client und die Namespacestruktur-Steuerelemente sind Standardkomponenten von Windows Vista und höher. Entwickler können die Schnittstellen wiederverwenden, um Komponenten zu erstellen. Diese Steuerelemente werden häufig verwendet, um benutzerdefinierte Explorer zu erstellen, die für die Problemdomäne geeignet sind.
 
-Die Steuerelemente in Windows-Explorer werden in die folgenden Funktions Kategorien eingeteilt:
+Die Steuerelemente im Windows Explorer werden in die folgenden Funktionalen Kategorien klassifiziert:
 
--   [Navigations Steuerelemente](#navigation-controls)
+-   [Navigationssteuerelemente](#navigation-controls)
 -   [Command-Steuerelemente für Befehle](#command-controls)
--   [Eigenschaften-und Vorschau Steuerelemente](#property-and-preview-controls)
+-   [Eigenschaften- und Vorschausteuerelemente](#property-and-preview-controls)
 -   [Filtern und Anzeigen von Steuerelementen](#filtering-and-view-controls)
--   [ListView-Steuerelement](#listview-control)
+-   [Listview-Steuerelement](#listview-control)
 
-## <a name="navigation-controls"></a>Navigations Steuerelemente
+## <a name="navigation-controls"></a>Navigationssteuerelemente
 
-Navigations Steuerelemente unterstützen Benutzer beim Bestimmen des Kontexts und Navigieren im zugeordneten logischen Domänen Bereich, dem sogenannten Pagespace. Der Pagespace für Windows-Explorer ist beispielsweise der Shellnamespace. Pagespaces bestehen aus null oder mehr Seiten.
+Navigationssteuerelemente unterstützen Benutzer beim Bestimmen des Kontexts und navigieren im zugeordneten logischen Domänenbereich, der als Pagespace bezeichnet wird. Beispielsweise ist der Pagespace für Windows Explorer der Shellnamespace. Pagespaces bestehen aus 0 (null) oder mehr Seiten.
 
-In der folgenden Tabelle sind die Navigations Steuerelemente aufgeführt und beschrieben, die in Windows-Explorer in den Betriebssystemen Windows Vista und höher verfügbar sind.
+In der folgenden Tabelle sind die Navigationssteuerelemente aufgeführt und beschrieben, die im Windows Explorer in den Betriebssystemen Windows Vista und höher verfügbar sind.
 
 
 
-| Navigations Steuerelement               | BESCHREIBUNG                                                                                                                                                                                |
+| Navigationssteuer steuerelement               | BESCHREIBUNG                                                                                                                                                                                |
 |----------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | Adressleiste (Breadcrumb-Steuerelement) | Zeigt die Adresse der aktuellen Seite im Pagespace an. Sie können auf Breadcrumb-Schaltflächen klicken, um zu einem beliebigen Vorgänger im Pagespace zu navigieren. Benutzer können auch URLs und Pfade eingeben, um zu navigieren. |
-| Ordnerstruktur                      | Stellt eine neue Version eines Tree-Steuer Elements bereit, das für große Seitenbereiche optimiert ist.                                                                                                                  |
-| Reise                           | Ermöglicht die relative Navigation durch Webstil-Schaltflächen wie " **zurück** " und " **Vorwärts**".                                                                                                    |
-| Titel                            | Zeigt den Namen und den Kontext des aktuellen Explorers an.                                                                                                                                            |
-| Pagespace                        | Zeigt die aktuelle Verzweigung des Pagespace an. Seiten können nach verschiedenen Kriterien angeordnet werden. Benutzer können auf eine Seite klicken, um zu dieser zu navigieren.                                                        |
+| Ordnerstruktur                      | Stellt eine neue Version eines Struktursteuer steuerelements zur Optimierung für große Pagespaces zur Auswahl.                                                                                                                  |
+| Reise                           | Ermöglicht die relative Navigation durch Schaltflächen im Webformat, z. **B. Zurück** und **Vorwärts.**                                                                                                    |
+| Titel                            | Zeigt den aktuellen Explorernamen und -kontext an.                                                                                                                                            |
+| Pagespace                        | Zeigt den aktuellen Branch des Seitenbereichs an. Seiten können nach unterschiedlichen Kriterien geordnet werden. Benutzer können auf eine Seite klicken, um zu ihr zu navigieren.                                                        |
 
 
 
@@ -257,31 +257,31 @@ In der folgenden Tabelle sind die Navigations Steuerelemente aufgeführt und bes
 
 ## <a name="command-controls"></a>Command-Steuerelemente für Befehle
 
-Befehls Steuerelemente kündigen den Benutzern die Features und Funktionen von Windows Explorer. Diese Steuerelemente führen entweder allgemeine Aktionen oder Aktionen aus, die für ein ausgewähltes Element oder bestimmte Elemente spezifisch sind.
+Befehlssteuerelemente geben den Benutzern die Features und Funktionen des Windows Explorer an. Diese Steuerelemente führen entweder allgemeine Aktionen oder Aktionen aus, die für ein oder mehrere ausgewählte Elemente spezifisch sind.
 
 
 
-| Befehls Steuerelement | BESCHREIBUNG                                                                                                                                                                                        |
+| Befehlssteuerung | BESCHREIBUNG                                                                                                                                                                                        |
 |-----------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Symbolleiste         | Zeigt Schaltflächen für häufig verwendete Befehle an (eine neue Version einer Befehls Symbolleiste). Zu den Anpassungsoptionen zählen Dropdown-Schaltflächen, unterteilte Schaltflächen, optionaler beschreibender Text und ein Überlauf Bereich. |
-| Hero            | Wird als einzelnes, optionales benutzerdefiniertes Steuerelement in der Mitte der Symbolleiste angezeigt. Er stellt den primären Befehl für den aktuellen Kontext dar.                                                             |
+| Symbolleiste         | Zeigt Schaltflächen für häufig verwendete Befehle an (eine neue Version einer Befehlssymbolleiste). Zu den Anpassungsoptionen gehören Dropdownschaltflächen, geteilte Schaltflächen, optionaler beschreibender Text und ein Überlaufbereich. |
+| Hero            | Wird als einzelnes, optionales benutzerdefiniertes Steuerelement in der Mitte der Symbolleiste angezeigt. Sie stellt den primären Befehl für den aktuellen Kontext dar.                                                             |
 | Menüleiste        | Zeigt Befehle über Menüs an.                                                                                                                                                                   |
-| Kontextmenü    | Listet eine Kontext relevante Teilmenge verfügbarer Befehle auf, die als Ergebnis des Rechtsklick auf ein Element angezeigt werden.                                                                               |
+| Kontextmenü    | Listet eine kontextbezogene Teilmenge der verfügbaren Befehle auf, die als Ergebnis eines Rechtsklicks auf ein Element angezeigt werden.                                                                               |
 
 
 
  
 
-## <a name="property-and-preview-controls"></a>Eigenschaften-und Vorschau Steuerelemente
+## <a name="property-and-preview-controls"></a>Eigenschaften- und Vorschausteuerelemente
 
-Eigenschaften-und Vorschau Steuerelemente werden verwendet, um Vorschau Elemente anzuzeigen und Element Eigenschaften anzuzeigen und zu bearbeiten.
+Eigenschaften- und Vorschausteuerelemente werden verwendet, um eine Vorschau von Elementen anzuzeigen und Elementeigenschaften anzuzeigen und zu bearbeiten.
 
 
 
 | Control    | BESCHREIBUNG                                                                                                                                                                                                                                        |
 |------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Vorschau    | Zeigt eine Vorschau des ausgewählten Elements an, z. b. eine Miniaturansicht oder ein Live Symbol.                                                                                                                                                                       |
-| Eigenschaften | Zeigt die Eigenschaften des ausgewählten Elements an. Bei Mehrfachauswahl wird eine Zusammenfassung der Eigenschaften für die ausgewählte Gruppe von Elementen angezeigt. Bei einer null-Auswahl wird eine Zusammenfassung der Eigenschaften für die aktuelle Seite (Inhalt von ListView) angezeigt. |
+| Vorschau    | Zeigt eine Vorschau des ausgewählten Elements an, z. B. eine Miniaturansicht oder ein Livesymbol.                                                                                                                                                                       |
+| Eigenschaften | Zeigt Eigenschaften des ausgewählten Elements an. Bei mehrfacher Auswahl wird eine Zusammenfassung der Eigenschaften für die ausgewählte Gruppe von Elementen angezeigt. Bei einer NULL-Auswahl wird eine Zusammenfassung der Eigenschaften für die aktuelle Seite (Inhalt der Listenansicht) angezeigt. |
 
 
 
@@ -289,38 +289,38 @@ Eigenschaften-und Vorschau Steuerelemente werden verwendet, um Vorschau Elemente
 
 ## <a name="filtering-and-view-controls"></a>Filtern und Anzeigen von Steuerelementen
 
-Filter-und Sicht Steuerelemente werden verwendet, um den Satz von Elementen in der ListView zu manipulieren und die Darstellung von Elementen in der ListView zu ändern.
+Filter- und Ansichtssteuerelemente werden verwendet, um den Satz von Elementen in der Listenansicht zu bearbeiten und die Darstellung von Elementen in der Listenansicht zu ändern.
 
 
 
 | Control   | BESCHREIBUNG                                                                                                                 |
 |-----------|-----------------------------------------------------------------------------------------------------------------------------|
-| Filtern    | Filtert oder ordnet Elemente in einer ListView auf der Grundlage von Eigenschaften an, die als Spalten aufgelistet sind. Wenn Sie auf eine Spalte klicken, wird diese Eigenschaft sortiert. |
-| Wordwheel | Filtert dynamisch und inkrementell die angezeigten Elemente in einer ListView basierend auf einer Eingabetext Zeichenfolge.                      |
-| Sicht      | Ermöglicht dem Benutzer das Ändern des Ansichtsmodus eines ListView-Steuer Elements. Ein Schieberegler kann verwendet werden, um die Symbolgröße zu bestimmen.                |
+| Filtern    | Filtert oder ordnet Elemente in einer Listenansicht basierend auf Eigenschaften an, die als Spalten aufgelistet sind. Wenn Sie auf eine Spalte klicken, wird nach dieser Eigenschaft sortiert. |
+| Wordwheel | Filtert die angezeigten Elemente in einer Listenansicht dynamisch und inkrementell basierend auf einer Eingabetextzeichenfolge.                      |
+| Sicht      | Ermöglicht dem Benutzer, den Ansichtsmodus eines ListView-Steuerelements zu ändern. Ein Schieberegler kann verwendet werden, um die Symbolgröße zu bestimmen.                |
 
 
 
  
 
-## <a name="listview-control"></a>ListView-Steuerelement
+## <a name="listview-control"></a>Listview-Steuerelement
 
-Das ListView-Steuerelement wird zum Anzeigen eines Satzes von Elementen in einem der vier Ansichtsmodi verwendet: Details, Kacheln, Symbole oder Panorama. Das ListView-Steuerelement ermöglicht es dem Benutzer auch, ein oder mehrere Elemente auszuwählen und zu aktivieren.
+Das Listview-Steuerelement wird verwendet, um eine Gruppe von Elementen in einem von vier Ansichtsmodi anzuzeigen: Details, Kacheln, Symbole oder Panorama. Mit dem Listview-Steuerelement kann der Benutzer auch ein oder mehrere Elemente auswählen und aktivieren.
 
 > [!Caution]  
-> Obwohl einige dieser Steuerelemente Namen und/oder Funktionen aufweisen, die den im System. Windows. Controls-Namespace gefundenen Standard-Windows Presentation Foundation (WPF)-Steuerelementen ähneln, sind Sie unterschiedliche Klassen.
+> Einige dieser Steuerelemente verfügen zwar über Namen und/oder Funktionen, die den im System Windows Presentation Foundation -Standardsteuerelementen (WPF) ähneln. Windows. Steuert den Namespace. Dabei handelt es sich um unterschiedliche Klassen.
 
  
 
-Diese separaten Steuerelemente arbeiten größtenteils über Ereignisse, die entweder durch eine Benutzerinteraktion oder durch die Steuerelemente selbst generiert werden. In der folgenden Tabelle werden die drei primären Ereignis Kategorien aufgeführt.
+Diese separaten Steuerelemente arbeiten größtenteils über Ereignisse zusammen, die entweder durch Benutzerinteraktion oder durch die Steuerelemente selbst generiert werden. In der folgenden Tabelle sind die drei primären Ereigniskategorien aufgeführt.
 
 
 
 | Ereigniskategorie | Beispiel                                                       |
 |----------------|---------------------------------------------------------------|
-| Navigation     | Von einer Seite zu einer anderen wechseln.                               |
-| Auswahl      | Ändern der aktuellen Auswahl in der ListView.               |
-| Änderung anzeigen    | Ändern der Präsentations Reihenfolge oder des Ansichtsmodus in ListView. |
+| Navigation     | Von einer Seite auf eine andere.                               |
+| Auswahl      | Ändern der aktuellen Auswahl in der Listenansicht.               |
+| Änderung anzeigen    | Ändern der Präsentations reihenfolge oder des Ansichtsmodus in der Listenansicht. |
 
 
 

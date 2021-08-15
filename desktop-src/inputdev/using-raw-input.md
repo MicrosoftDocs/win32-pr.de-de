@@ -1,41 +1,41 @@
 ---
 title: Verwenden von Rohdateneingaben
-description: Dieser Abschnitt enthält Beispielcode für Aufgaben im Zusammenhang mit roheingaben.
+description: Dieser Abschnitt enthält Beispielcode für Aufgaben im Zusammenhang mit Unformatierungseingaben.
 ms.assetid: e078e13c-06b8-4440-9d37-78c344b587e9
 keywords:
-- Benutzereingabe, Rohdaten Eingabe
-- Erfassen von Benutzereingaben, Rohdaten Eingabe
-- Rohdaten Eingabe
-- gepufferte Lesevorgänge für Rohdaten
-- Standard Lesevorgang für unformatierte Eingabe
-- Registrieren unformatierender Eingaben
-- Lesen von roheingaben
-- Joystick-roheingabe
-- Game Pad-roheingabe
+- Benutzereingabe,Roheingabe
+- Erfassen von Benutzereingaben, Rohdateneingaben
+- Rohdateneingabe
+- Gepufferter Lesedaten von Rohdateneingaben
+- Standardlesedaten von rohen Eingaben
+- Registrieren von Rohdateneingaben
+- Lesen von Rohdateneingaben
+- raw input
+- Unformatte Eingabe des Spielpads
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 637137481fd930214beb04d2c75a7a2921d8b5fa
-ms.sourcegitcommit: ae1241c7d27e0bd128dfa40ca0b4187728b2a9e0
+ms.openlocfilehash: ed7c020af77c20e191f0c71a2e89f66d13dddb9e85c3753ff1789e02729e0495
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/29/2021
-ms.locfileid: "106374061"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117884307"
 ---
 # <a name="using-raw-input"></a>Verwenden von Rohdateneingaben
 
 Dieser Abschnitt enthält Beispielcode für die folgenden Zwecke:
 
--   [Registrieren für unformatierte Eingaben](#registering-for-raw-input)
+-   [Registrieren für Rohdateneingaben](#registering-for-raw-input)
     -   [Beispiel 1](#example-1)
     -   [Beispiel 2](#example-2)
--   [Ausführen eines Standard-Lese vorgelesenen Eingabe Werts](#performing-a-standard-read-of-raw-input)
--   [Ausführen eines gepufferten gelesenen gelesenen](#performing-a-buffered-read-of-raw-input)
+-   [Ausführen eines Standardleseverfahrens für rohe Eingaben](#performing-a-standard-read-of-raw-input)
+-   [Ausführen eines gepufferten Lesens von Roheingaben](#performing-a-buffered-read-of-raw-input)
 
-## <a name="registering-for-raw-input"></a>Registrieren für unformatierte Eingaben
+## <a name="registering-for-raw-input"></a>Registrieren für Rohdateneingaben
 
-### <a name="example-1"></a>Beispiel 1
+### <a name="example-1"></a>Beispiel 1
 
-In diesem Beispiel gibt eine Anwendung die unformatierte Eingabe von Spiel Controllern (sowohl Game Pads als auch Joysticks) als auch alle Geräte auf der Seite telefonieverwendung außer der Beantwortung von Computern an.
+In diesem Beispiel gibt eine Anwendung die rohe Eingabe von Gamecontrollern (sowohl Spielpads als auch Vonn) und allen Geräten außerhalb der Telefonienutzungsseite mit Ausnahme von Antwortcomputern an.
 
 ```cpp
 RAWINPUTDEVICE Rid[4];
@@ -68,7 +68,7 @@ if (RegisterRawInputDevices(Rid, 4, sizeof(Rid[0])) == FALSE)
 
 ### <a name="example-2"></a>Beispiel 2
 
-In diesem Beispiel möchte eine Anwendung roheingaben von Tastatur und Maus, aber  [ältere Tastatur](keyboard-input-notifications.md) -und [Maus Fenster Meldungen](mouse-input-notifications.md) ignorieren (die von der gleichen Tastatur und Maus stammen).
+In diesem Beispiel möchte eine Anwendung rohe Eingaben [](keyboard-input-notifications.md) von Tastatur und Maus, aber legacy-Tastatur- und Mausfenstermeldungen [ignorieren](mouse-input-notifications.md) (die von derselben Tastatur und Maus stammen würden).
 
 ```cpp
 RAWINPUTDEVICE Rid[2];
@@ -89,9 +89,9 @@ if (RegisterRawInputDevices(Rid, 2, sizeof(Rid[0])) == FALSE)
 }
 ```
 
-## <a name="performing-a-standard-read-of-raw-input"></a>Ausführen eines Standard-Lese vorgelesenen Eingabe Werts
+## <a name="performing-a-standard-read-of-raw-input"></a>Ausführen eines Standardleseverfahrens für rohe Eingaben
 
-In diesem Beispiel wird gezeigt, wie eine Anwendung eine nicht gepufferte (oder standardmäßige) Schreibweise von roheingaben entweder von einer Tastatur oder Maus Eingabegeräte (HID) durchführt und dann verschiedene Informationen vom Gerät ausgibt.
+In diesem Beispiel wird gezeigt, wie eine Anwendung ungepufferte (oder standardmäßige) Lesefunktionen für unformatierte Eingaben über eine Tastatur oder eine Maus Eingabegeräte (HID) vorsteuert und anschließend verschiedene Informationen vom Gerät aus druckt.
 
 ```cpp
 case WM_INPUT: 
@@ -151,9 +151,9 @@ case WM_INPUT:
 } 
 ```
 
-## <a name="performing-a-buffered-read-of-raw-input"></a>Ausführen eines gepufferten gelesenen gelesenen
+## <a name="performing-a-buffered-read-of-raw-input"></a>Ausführen eines gepufferten Lesens von Roheingaben
 
-Dieses Beispiel zeigt, wie eine Anwendung einen gepufferten Lesevorgang von unformatierten Eingaben aus einer generischen HID durchführt.
+In diesem Beispiel wird gezeigt, wie eine Anwendung einen gepufferten Lese-/Ausgabelesedaten von einem generischen HID-Typ vorsteuert.
 
 ```cpp
 case MSG_GETRIBUFFER: // Private message

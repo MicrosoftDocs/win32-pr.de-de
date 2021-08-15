@@ -13,12 +13,12 @@ api_type:
 - COM
 api_location:
 - Shell32.dll
-ms.openlocfilehash: 29561519b95329093ef1f7bfc64023fd1ac4533d
-ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
+ms.openlocfilehash: a8f4d70d4f4c8a1b8c2745739e2434be0cfde936facd9dbb43cb04c6b7de5c52
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2021
-ms.locfileid: "108083688"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117858043"
 ---
 # <a name="shellcanstartstopservice-method"></a>Shell.CanStartStopService-Methode
 
@@ -64,23 +64,23 @@ Eine **Zeichenfolge,** die den Namen des Diensts enthält.
 
 Typ: **\* Variant**
 
-Gibt **TRUE** zurück, wenn der Benutzer den Dienst starten und beenden kann. andernfalls **FALSE.**
+Gibt **TRUE zurück,** wenn der Benutzer den Dienst starten und beenden kann. andernfalls **FALSE.**
 
 ### <a name="vb"></a>VB
 
 Typ: **\* Variant**
 
-Gibt **TRUE** zurück, wenn der Benutzer den Dienst starten und beenden kann. andernfalls **FALSE.**
+Gibt **TRUE zurück,** wenn der Benutzer den Dienst starten und beenden kann. andernfalls **FALSE.**
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Diese Methode ist derzeit in Microsoft Visual Basic nicht verfügbar.
+Diese Methode ist derzeit in Microsoft Visual Basic.
 
 ## <a name="examples"></a>Beispiele
 
 Die folgenden Beispiele zeigen die Verwendung von **CanStartStopService** für JScript und VBScript.
 
-Jscript:
+JScript:
 
 
 ```JScript
@@ -121,10 +121,10 @@ Vbscript:
 
 
 
-| Anforderungen | Wert |
+| Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional, nur Windows \[ XP-Desktop-Apps\]<br/>                                        |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server \[ 2003-Desktop-Apps\]<br/>                                                          |
+| Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional nur Windows \[ XP-Desktop-Apps\]<br/>                                        |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2003-Desktop-Apps\]<br/>                                                          |
 | Header<br/>                   | <dl> <dt>Shldisp.h</dt> </dl>                          |
 | Idl<br/>                      | <dl> <dt>Shldisp.idl</dt> </dl>                        |
 | DLL<br/>                      | <dl> <dt>Shell32.dll (Version 5.0 oder höher)</dt> </dl> |

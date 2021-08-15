@@ -1,11 +1,11 @@
 ---
-title: ID3DX11EffectPass computestateblockmask-Methode (D3dx11effect. h)
-description: Generiert eine Maske zum zulassen/verhindern von Zustandsänderungen.
+title: ID3DX11EffectPass ComputeStateBlockMask-Methode (D3dx11effect.h)
+description: Generieren Sie eine Maske zum Zulassen/Verhindern von Zustandsänderungen.
 ms.assetid: 584be931-0e22-43e6-b852-f0d2ab050bdd
 keywords:
-- Computestateblockmask-Methode Direct3D 11
-- Computestateblockmask-Methode Direct3D 11, ID3DX11EffectPass-Schnittstelle
-- ID3DX11EffectPass-Schnittstelle Direct3D 11, computestateblockmask-Methode
+- ComputeStateBlockMask-Methode Direct3D 11
+- ComputeStateBlockMask-Methode Direct3D 11 , ID3DX11EffectPass-Schnittstelle
+- ID3DX11EffectPass-Schnittstelle Direct3D 11 , ComputeStateBlockMask-Methode
 topic_type:
 - apiref
 api_name:
@@ -17,16 +17,16 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: b8fc5cb32ce9e9644d7d5b62868bfa99f150cc94
-ms.sourcegitcommit: 14010c34b35fa268046c7683f021f86de08ddd0a
-ms.translationtype: HT
+ms.openlocfilehash: 17198c076d200631142207189059ada425e9ec1ddf6e3c8a8d40499e40aa21a4
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "104982365"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118535056"
 ---
-# <a name="id3dx11effectpasscomputestateblockmask-method"></a>ID3DX11EffectPass:: computestateblockmask-Methode
+# <a name="id3dx11effectpasscomputestateblockmask-method"></a>ID3DX11EffectPass::ComputeStateBlockMask-Methode
 
-Generiert eine Maske zum zulassen/verhindern von Zustandsänderungen.
+Generieren Sie eine Maske zum Zulassen/Verhindern von Zustandsänderungen.
 
 ## <a name="syntax"></a>Syntax
 
@@ -43,12 +43,12 @@ HRESULT ComputeStateBlockMask(
 
 <dl> <dt>
 
-*pstateblockmask* 
+*pStateBlockMask* 
 </dt> <dd>
 
-Type: **[ **Bibliothek d3dx11 \_ State \_ Block \_ Mask**](d3dx11-state-block-mask.md)\***
+Typ: **[ **D3DX11 \_ STATE \_ BLOCK \_ MASK**](d3dx11-state-block-mask.md)\***
 
-Ein Zeiger auf eine Zustands Block Maske (siehe [**Bibliothek d3dx11 \_ State \_ Block \_ Mask**](d3dx11-state-block-mask.md)).
+Ein Zeiger auf eine Zustandsblockmaske (siehe [**D3DX11 \_ STATE \_ BLOCK \_ MASK**](d3dx11-state-block-mask.md)).
 
 </dd> </dl>
 
@@ -56,23 +56,23 @@ Ein Zeiger auf eine Zustands Block Maske (siehe [**Bibliothek d3dx11 \_ State \_
 
 Typ: **[ **HRESULT**](https://msdn.microsoft.com/library/Bb401631(v=MSDN.10).aspx)**
 
-Gibt einen der folgenden [Direct3D 11-Rückgabe Codes](d3d11-graphics-reference-returnvalues.md)zurück.
+Gibt einen der folgenden [Direct3D 11-Rückgabecodes zurück.](d3d11-graphics-reference-returnvalues.md)
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
 > [!Note]  
-> Das DirectX SDK stellt keine kompilierten Binärdateien für Effekte bereit. Sie müssen die Effekte 11-Quelle verwenden, um die Effekte-Anwendung zu erstellen. Weitere Informationen zum Verwenden der Effekte 11-Quelle finden Sie [unter Unterschiede zwischen den Effekten 10 und Effekte 11](d3d11-graphics-programming-guide-effects-differences.md).
+> Das DirectX SDK stellt keine kompilierten Binärdateien für Effekte zur Verfügung. Sie müssen die Effects 11-Quelle verwenden, um ihre Effekte-Typ-Anwendung zu erstellen. Weitere Informationen zur Verwendung der Quelle Effects 11 finden Sie unter [Unterschiede zwischen Effekten 10 und Effekten 11.](d3d11-graphics-programming-guide-effects-differences.md)
 
  
 
-## <a name="requirements"></a>Requirements (Anforderungen)
+## <a name="requirements"></a>Anforderungen
 
 
 
 | Anforderung | Wert |
 |--------------------|----------------------------------------------------------------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>D3dx11effect. h</dt> </dl>                                                    |
-| Bibliothek<br/> | <dl> <dt>N/v (die "Effects 11"-Bibliothek ist online als freigegebene Quelle verfügbar.)</dt> </dl> |
+| Header<br/>  | <dl> <dt>D3dx11effect.h</dt> </dl>                                                    |
+| Bibliothek<br/> | <dl> <dt>N/A (Eine Effects 11-Bibliothek ist online als freigegebene Quelle verfügbar.)</dt> </dl> |
 
 
 

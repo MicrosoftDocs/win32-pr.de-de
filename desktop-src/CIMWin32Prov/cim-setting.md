@@ -1,8 +1,8 @@
 ---
-description: Die CIM \_ Setting-Klasse stellt konfigurationsbezogene und betriebsbezogene Parameter für mindestens ein verwaltetes Systemelement dar.
+description: Die \_ CIM-Einstellungsklasse stellt konfigurationsbezogene und betriebsbezogene Parameter für ein oder mehrere verwaltete Systemelemente dar.
 ms.assetid: 57c46b00-96c4-4df1-82ad-01f7b4f75ced
 ms.tgt_platform: multiple
-title: CIM_Setting-Klasse (CIMWin32-WMI-Anbieter)
+title: CIM_Setting -Klasse (CIMWin32-WMI-Anbieter)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -24,12 +24,12 @@ ms.contentlocale: de-DE
 ms.lasthandoff: 08/11/2021
 ms.locfileid: "118421311"
 ---
-# <a name="cim_setting-class-cimwin32-wmi-providers"></a>CIM_Setting-Klasse (CIMWin32-WMI-Anbieter)
+# <a name="cim_setting-class-cimwin32-wmi-providers"></a>CIM_Setting -Klasse (CIMWin32-WMI-Anbieter)
 
-Die **CIM \_ Setting-Klasse** stellt konfigurationsbezogene und betriebsbezogene Parameter für mindestens ein verwaltetes Systemelement dar. Einem verwalteten Systemelement können mehrere Einstellungsobjekte zugeordnet sein. Die aktuellen Betriebswerte für die Parameter eines Elements werden durch Eigenschaften im Element selbst oder durch Eigenschaften in seinen Zuordnungen widergespiegelt. Diese Eigenschaften müssen nicht die gleichen Werte sein, die im Einstellungsobjekt vorhanden sind. Beispielsweise kann ein Modem eine Baudrate von 56 Kilobyte pro Sekunde festlegen, aber mit 19,2 Kilobyte pro Sekunde betrieben werden.
+Die **\_ CIM-Einstellungsklasse** stellt konfigurationsbezogene und betriebsbezogene Parameter für ein oder mehrere verwaltete Systemelemente dar. Einem verwalteten Systemelement können mehrere Einstellungsobjekte zugeordnet sein. Die aktuellen Betriebswerte für die Parameter eines Elements werden durch Eigenschaften im Element selbst oder durch Eigenschaften in seinen Zuordnungen widergespiegelt. Diese Eigenschaften müssen nicht die gleichen Werte sein, die im Einstellungsobjekt vorhanden sind. Beispielsweise kann ein Modem eine einstellungsweise Baudrate von 56 KILOBYTE pro Sekunde haben, aber mit 19,2 Kilobyte pro Sekunde ausgeführt werden.
 
 > [!IMPORTANT]
-> Die CIM-Klassen (Distributed Management Task Force) (DMTF (Distributed Management Task Force) (Common Information Model) sind die übergeordneten Klassen, auf denen WMI-Klassen erstellt werden. WMI unterstützt derzeit nur die [CIM 2.x-Versionsschemas.](https://dmtf.org/standards/cim/schemas)
+> Die CIM-Klassen (Distributed Management Task Force) (DMTF) (Common Information Model) sind die übergeordneten Klassen, auf denen WMI-Klassen erstellt werden. WMI unterstützt derzeit nur die [CIM 2.x-Versionsschemas.](https://dmtf.org/standards/cim/schemas)
 
  
 
@@ -49,20 +49,20 @@ class CIM_Setting
 
 ## <a name="members"></a>Member
 
-Die **CIM \_ Setting-Klasse** verfügt über folgende Typen von Membern:
+Die **\_ CIM-Einstellungsklasse** verfügt über die folgenden Membertypen:
 
 -   [Eigenschaften](#properties)
 
 ### <a name="properties"></a>Eigenschaften
 
-Die **CIM \_ Setting-Klasse** verfügt über diese Eigenschaften.
+Die **\_ CIM-Einstellungsklasse** verfügt über diese Eigenschaften.
 
 <dl> <dt>
 
 **Caption**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **string**
+Datentyp: **Zeichenfolge**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
@@ -78,7 +78,7 @@ Kurze Textbeschreibung des aktuellen Objekts.
 **Beschreibung**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **string**
+Datentyp: **Zeichenfolge**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
@@ -91,7 +91,7 @@ Textbeschreibung des aktuellen -Objekts.
 **SettingID**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **string**
+Datentyp: **Zeichenfolge**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
@@ -100,15 +100,15 @@ Zugriffstyp: Schreibgeschützt
 Qualifizierer: [**MaxLen**](/windows/desktop/WmiSdk/standard-qualifiers) (256)
 </dt> </dl>
 
-Bezeichner, durch den das aktuelle Objekt bekannt ist.
+Bezeichner, unter dem das aktuelle Objekt bekannt ist.
 
 </dd> </dl>
 
 ## <a name="remarks"></a>Hinweise
 
-WMI implementiert diese Klasse nicht. Informationen zu WMI-Klassen, die von **\_ CIM-Einstellungen** abgeleitet werden, finden Sie unter [Win32-Klassen.](win32-provider.md)
+WMI implementiert diese Klasse nicht. Informationen zu WMI-Klassen, die von **der \_ CIM-Einstellung abgeleitet wurden,** finden Sie unter [Win32-Klassen.](win32-provider.md)
 
-Diese Dokumentation wird von den CIM-Klassenbeschreibungen abgeleitet, die von dmtf veröffentlicht wurden. Möglicherweise hat Microsoft Änderungen vorgenommen, um kleinere Fehler zu korrigieren, den Dokumentationsstandards des Microsoft SDK zu entsprechen oder weitere Informationen bereitzustellen.
+Diese Dokumentation wird von den CIM-Klassenbeschreibungen abgeleitet, die von DMTF veröffentlicht wurden. Microsoft hat möglicherweise Änderungen vorgenommen, um kleinere Fehler zu beheben, die Dokumentationsstandards des Microsoft SDK zu erfüllen oder weitere Informationen zur Verfügung zu stellen.
 
 ## <a name="requirements"></a>Anforderungen
 

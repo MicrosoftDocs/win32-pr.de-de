@@ -1,24 +1,24 @@
 ---
-title: Wiedergeben eines Geräts
-description: Wiedergeben eines Geräts
+title: Wiedergabe eines Geräts
+description: Wiedergabe eines Geräts
 ms.assetid: 48d83e06-9e6e-498b-ad9b-0b66f235db25
 keywords:
-- MCI_PLAY-Befehl
-- MCIAVI-Wiedergabe Fenster
+- MCI_PLAY Befehl
+- MCIAVI-Wiedergabefenster
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: f73d8b6539e842a1ffa632ed1efae5c2c8d3cda1
-ms.sourcegitcommit: ebd3ce6908ff865f1ef66f2fc96769be0aad82e1
+ms.openlocfilehash: af9efc06b3d5f33dfb798aa4c47bf7d5a7a8bab45842de1da170c860d2a4a5f2
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/19/2020
-ms.locfileid: "103948740"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118372641"
 ---
-# <a name="playing-a-device"></a>Wiedergeben eines Geräts
+# <a name="playing-a-device"></a>Wiedergabe eines Geräts
 
-Der [**Wiedergabe**](play.md) Befehl ([**MCI \_ Play**](mci-play.md)) beginnt mit der Wiedergabe eines Geräts. Ohne Flags startet dieser Befehl von der aktuellen Position aus und wird wiedergegeben, bis der Befehl unterbrochen wird oder bis das Ende des Mediums oder der Datei erreicht ist. Nach der Wiedergabe befindet sich die aktuelle Position am Ende des Mediums. Sie können auch den Befehl [**Seek**](seek.md) ([**MCI \_ Seek**](mci-seek.md)) verwenden, um die aktuelle Position zu ändern.
+Der [**Befehl play**](play.md) ([**MCI \_ PLAY**](mci-play.md)) beginnt mit der Wiedergabe eines Geräts. Ohne Flags beginnt dieser Befehl mit der Wiedergabe von der aktuellen Position und wird so lange ausgeführt, bis der Befehl unterbrochen wird oder bis das Ende des Mediums oder der Datei erreicht ist. Nach der Wiedergabe befindet sich die aktuelle Position am Ende des Mediums. Sie können auch den [**Suchbefehl**](seek.md) ([**MCI \_ SEEK**](mci-seek.md)) verwenden, um die aktuelle Position zu ändern.
 
-Die meisten Geräte, die den **Play** -Befehl unterstützen, unterstützen auch die Flags "from" (MCI \_ from) und "to" (MCI \_ to). Diese Flags geben die Position an, an der das Gerät gestartet und beendet werden soll. Der folgende Befehl gibt z. b. eine CD-Audiodatenträger ab dem Anfang der ersten Spur mit der [**mciSendString**](/previous-versions//dd757161(v=vs.85)) -Funktion ein:
+Die meisten Geräte, die den **Wiedergabebefehl** unterstützen, unterstützen auch die Flags "from" (MCI FROM) und \_ "to" (MCI \_ TO). Diese Flags geben die Position an, an der das Gerät gestartet und die Wiedergabe beenden soll. Der folgende Befehl gibt beispielsweise mithilfe der [**mciSendString-Funktion**](/previous-versions//dd757161(v=vs.85)) einen CD-Audiodaten datenträger vom Anfang des ersten Titels wieder:
 
 
 ```C++
@@ -28,33 +28,33 @@ mciSendString("play cdaudio from 0", lpszReturnString,
 
 
 
-Einige Gerätetypen erweitern diesen Befehl, um die Funktionen eines bestimmten Geräts auszunutzen. Beispielsweise umfasst der [**Wiedergabe**](play.md) Befehl für den Geräte Datentyp " **Video Disk** " die Flags "fast" (MCI VD Play \_ \_ \_ fast), "langsam" (MCI \_ VD \_ Play \_ Slow) und "Scan" (MCI \_ VD \_ Play \_ Scan).
+Einige Gerätetypen erweitern diesen Befehl, um die Funktionen eines bestimmten Geräts auszunutzen. Der Befehl [](play.md) play für den **Gerätetyp videodisc** enthält beispielsweise die Flags "fast" (MCI \_ VD \_ PLAY \_ FAST), "slow" (MCI \_ VD PLAY SLOW) und \_ \_ "scan" (MCI \_ VD PLAY \_ \_ SCAN).
 
 > [!Note]  
-> Die dem Positionswert zugewiesenen Einheiten hängen von dem vom Gerät verwendeten Zeitformat ab. Jedes Gerät weist ein Standardzeit Format auf, Sie sollten jedoch das Zeitformat mithilfe des Befehls [**Set**](set.md) ([**MCI \_ set**](mci-set.md)) angeben, bevor Sie Befehle ausgeben, die Positionswerte verwenden.
+> Die einheiten, die dem Positionswert zugewiesen sind, hängen vom vom Gerät verwendeten Zeitformat ab. Jedes Gerät hat ein Standardzeitformat, aber Sie sollten das Zeitformat mithilfe des Befehls [**set**](set.md) ([**MCI \_ SET**](mci-set.md)) angeben, bevor Sie Befehle ausführen, die Positionswerte verwenden.
 
- 
+ 
 
-## <a name="playing-an-avi-file"></a>Abspielen einer AVI-Datei
+## <a name="playing-an-avi-file"></a>Wiedergabe einer AVI-Datei
 
-Videodateien in Windows bestehen aus mindestens zwei verschachtelten Datenströmen: einem Videodaten Strom (bildlich) und einem Audiodatenstrom. Sie können diese überlappenden Audiodateien (AVI) problemlos mithilfe von MCI-Befehlen abspielen. In den folgenden Abschnitten wird das Abspielen von AVI-Dateien erläutert
+Videodateien in Windows aus mindestens zwei übereinander verwebten Datenströmen: einem Videodatenstrom (13) und einem Audiostream. Sie können diese audio-video interleaved (AVI)-Dateien mithilfe von MCI-Befehlen problemlos wiederverspielen. In den folgenden Abschnitten wird die Wiedergabe von AVI-Dateien erläutert.
 
-## <a name="setting-up-an-mciavi-playback-window"></a>Einrichten eines MCIAVI-Wiedergabe Fensters
+## <a name="setting-up-an-mciavi-playback-window"></a>Einrichten eines MCIAVI-Wiedergabefensters
 
-Die Anwendung kann die folgenden Optionen angeben, um das Wiedergabe Fenster zum Abspielen einer AVI-Datei zu definieren:
+Ihre Anwendung kann die folgenden Optionen angeben, um das Wiedergabefenster für die Wiedergabe einer AVI-Datei zu definieren:
 
--   Verwenden Sie das Standard-Popup Fenster des MCIAVI-Treibers.
--   Geben Sie ein übergeordnetes Fenster und eine Fenster Formatvorlage an, mit denen der MCIAVI-Treiber das Wiedergabe Fenster erstellen kann.
--   Geben Sie ein Wiedergabe Fenster für den MCIAVI-Treiber an, der für die Wiedergabe verwendet wird.
--   Geben Sie die AVI-Datei auf einer voll Bild Anzeige wieder.
+-   Verwenden Sie das Standard-Popupfenster des MCIAVI-Treibers.
+-   Geben Sie ein übergeordnetes Fenster und einen Fensterstil an, die der MCIAVI-Treiber zum Erstellen des Wiedergabefensters verwenden kann.
+-   Geben Sie ein Wiedergabefenster an, das der MCIAVI-Treiber für die Wiedergabe verwenden soll.
+-   Geben Sie die AVI-Datei auf einer Vollbildanzeige wieder.
 
-Wenn die Anwendung keine Fenster Optionen angibt, erstellt der MCIAVI-Treiber ein Standardfenster für die Wiedergabe der Sequenz. Der Treiber erstellt dieses Wiedergabe Fenster für den [**geöffneten**](open.md) Befehl ([**MCI \_ Open**](mci-open.md)), zeigt jedoch erst das Fenster an, wenn die Anwendung einen Befehl sendet, um das Fenster anzuzeigen oder die Datei wiederzugeben. Dieses Standard Wiedergabe Fenster ist ein Popup Fenster mit einem Größen Anpassungsrahmen, einer Titelleiste, einem dicken Rahmen, einem **Fenster** Menü und einer Minimieren-Schaltfläche.
+Wenn In Ihrer Anwendung keine Fensteroptionen angegeben werden, erstellt der MCIAVI-Treiber ein Standardfenster für die Wiedergabe der Sequenz. Der Treiber erstellt dieses Wiedergabefenster für den befehl [**open**](open.md) ([**MCI \_ OPEN**](mci-open.md)), zeigt das Fenster jedoch erst an, wenn Ihre Anwendung einen Befehl sendet, um das Fenster anzuzeigen oder die Datei wiedergeben. Dieses Standardwiedergabefenster ist ein Popupfenster mit einem Größenrahmen, einer Titelleiste, einem dichten Rahmen, einem Fenstermenü und einer Schaltfläche Minimieren. 
 
-Die Anwendung kann auch ein übergeordnetes Fenster Handle und einen Fenster Stil angeben, wenn der Befehl zum **Öffnen** ausgegeben wird. In diesem Fall erstellt der MCIAVI-Treiber ein Fenster auf der Grundlage dieser Spezifikationen anstelle des standardmäßigen Popup Fensters. Die Anwendung kann einen beliebigen Fenster Stil angeben, der für die Funktion "up [Window](/windows/win32/api/winuser/nf-winuser-createwindowa) " verfügbar ist. Stile, die ein übergeordnetes Fenster erfordern, z. b. untergeordnete WS-Elemente \_ , sollten ein übergeordnetes Fenster Handle enthalten.
+Ihre Anwendung kann auch ein übergeordnetes Fensterhandel und ein Fensterformat angeben, wenn sie den Befehl **"Öffnen"** aus gibt. In diesem Fall erstellt der MCIAVI-Treiber anstelle des Standard-Popupfensters ein Fenster, das auf diesen Spezifikationen basiert. Ihre Anwendung kann einen beliebigen Fensterstil angeben, der für die [CreateWindow-Funktion verfügbar](/windows/win32/api/winuser/nf-winuser-createwindowa) ist. Stile, die ein übergeordnetes Fenster erfordern, z. B. WS \_ CHILD, sollten ein übergeordnetes Fensterhand handle enthalten.
 
-Die Anwendung kann auch ein eigenes Fenster erstellen und das Handle für den MCIAVI-Treiber über den [**Fenster**](window.md) Befehl ([**MCI- \_ Fenster**](mci-window.md)) bereitstellen. Der MCIAVI-Treiber verwendet dieses Fenster, anstatt einen eigenen zu erstellen.
+Ihre Anwendung kann auch ein eigenes Fenster erstellen und das Handle für den MCIAVI-Treiber mithilfe des Befehls [**window**](window.md) ([**MCI \_ WINDOW**](mci-window.md)) verwenden. Der MCIAVI-Treiber verwendet dieses Fenster, anstatt ein eigenes zu erstellen.
 
-Wenn der MCIAVI-Treiber das Wiedergabe Fenster erstellt oder ein Fenster Handle von der Anwendung abruft, wird das Fenster erst angezeigt, nachdem die Anwendung die Sequenz abgespielt oder einen Befehl zum Anzeigen des Fensters gesendet hat. Die Anwendung kann den **Fenster** Befehl verwenden, um das Fenster anzuzeigen, ohne die Sequenz zu spielen. Beispielsweise wird mit dem folgenden Befehl das Fenster mithilfe von " [**mciSendString**](/previous-versions//dd757161(v=vs.85))" angezeigt:
+Wenn der MCIAVI-Treiber das Wiedergabefenster erstellt oder ein Fensterhand handle von Ihrer Anwendung erhält, wird das Fenster erst angezeigt, wenn die Anwendung die Sequenz wiedergeben oder einen Befehl zum Anzeigen des Fensters sendet. Ihre Anwendung kann den Befehl **window verwenden,** um das Fenster ohne Wiedergabe der Sequenz anzuzeigen. Beispielsweise zeigt der folgende Befehl das Fenster mit [**mciSendString an:**](/previous-versions//dd757161(v=vs.85))
 
 
 ```C++
@@ -64,9 +64,9 @@ mciSendString("window movie state show", lpszReturnString,
 
 
 
-In diesem Beispiel ist "Movie" ein Alias für das Digital-Video-Gerät.
+In diesem Beispiel ist "movie" ein Alias für das Digitalvideogerät.
 
-Die Anwendung kann auch einen voll Bildschirm der AVI-Datei abspielen. Um den voll Bildschirm wiederzugeben, ändern Sie den Befehl [**Play**](play.md) ([**MCI \_ Play**](mci-play.md)) mit dem Flag "fullscreen" (MCI \_ MCIAVI \_ Play \_ fullscreen). Wenn Ihre Anwendung dieses Flag verwendet, verwendet der MCIAVI-Treiber ein 320-und 240-Pixel-Vollbildformat zum Abspielen der Sequenz. Beispielsweise wird mit dem folgenden Befehl der voll Bildschirm der geöffneten Datei (mit "Movie" als Alias) abgespielt:
+Ihre Anwendung kann auch eine AVI-Datei im Vollbildmodus wiederverspielen. Ändern Sie den Befehl play [**(**](play.md) [**MCI \_ PLAY**](mci-play.md)) mit dem Flag "Fullscreen" (MCI \_ MCIAVI \_ PLAY FULLSCREEN), um den Vollbildmodus \_ wieder anzuzeigen. Wenn Ihre Anwendung dieses Flag verwendet, verwendet der MCIAVI-Treiber ein 320- bis 240-Pixel-Vollbildformat für die Wiedergabe der Sequenz. Der folgende Befehl gibt z. B. die geöffnete Datei im Vollbildmodus wieder (mit "movie" als Alias):
 
 
 ```C++
@@ -76,20 +76,20 @@ mciSendString("play movie fullscreen", lpszReturnString,
 
 
 
-## <a name="changing-the-playback-state-for-an-avi-file"></a>Ändern des Wiedergabe Zustands für eine AVI-Datei
+## <a name="changing-the-playback-state-for-an-avi-file"></a>Ändern des Wiedergabezustands für eine AVI-Datei
 
-Die Anwendung kann den [**Seek**](seek.md) -Befehl ([**MCI \_ Seek**](mci-seek.md)) verwenden, um die aktuelle Position an den Anfang, das Ende oder an eine beliebige Position in einer AVI-Datei zu verschieben. Es gibt zwei Suchmodi für den MCIAVI-Treiber: genau und ungenau. Die Anwendung kann den Suchmodus mithilfe des Befehls [**Set**](set.md) ([**MCI \_ set**](mci-set.md)) ändern. Wenn Sie **Set** "Seek very on" verwenden, sucht der MCIAVI-Treiber genau nach dem Frame, der von der Anwendung angegeben wird. Dies kann zu einer Verzögerung führen, wenn die Datei temporlig komprimiert ist und die Anwendung keinen Keyframe angibt. Wenn Sie **Set** "Seek genau aus" verwenden, sucht der MCIAVI-Treiber den nächsten Keyframe in einer Temporale komprimierten Datei.
+Ihre Anwendung kann den [**Suchbefehl**](seek.md) ([**MCI \_ SEEK**](mci-seek.md)) verwenden, um die aktuelle Position an den Anfang, das Ende oder eine beliebige Position in einer AVI-Datei zu verschieben. Es gibt zwei Suchmodi für den MCIAVI-Treiber: genau und ungenau. Ihre Anwendung kann den Suchmodus mithilfe des Befehls [**set**](set.md) ([**MCI \_ SET**](mci-set.md)) ändern. Wenn Sie **set** "seek exactly on" verwenden, sucht der MCIAVI-Treiber genau den Rahmen, den Ihre Anwendung angibt. Dies kann zu einer Verzögerung führen, wenn die Datei zeitlich komprimiert ist und Ihre Anwendung keinen Keyframe an gibt. Wenn Sie **set** "seek exactly off" verwenden, sucht der MCIAVI-Treiber nach dem nächstgelegenen Keyframe in einer temporal komprimierten Datei.
 
-Einige MCI-Befehle ermöglichen der Anwendung, die Wiedergabe einer AVI-Datei auf andere Weise zu ändern. Beispielsweise wird eine AVI-Datei standardmäßig mit der normalen Geschwindigkeit abgespielt, aber Ihre Anwendung kann diese Geschwindigkeit erhöhen oder verringern, indem Sie das Flag "Geschwindigkeit" mit dem **Set** -Befehl verwenden. Für AVI-Dateien ist ein Geschwindigkeitswert von 1000 typisch. Damit ein Film mit der Hälfte seiner typischen Geschwindigkeit wiedergegeben werden kann, kann die Anwendung den Befehls **Satz** "Filmgeschwindigkeit 500" verwenden. Sie können auch **Set** "Movie Speed 2000" verwenden, um die Sequenz mit der doppelten Geschwindigkeit wiederzugeben.
+Mit einigen MCI-Befehlen kann Ihre Anwendung die Wiedergabe einer AVI-Datei auf andere Weise ändern. Beispielsweise wird eine AVI-Datei standardmäßig mit normaler Geschwindigkeit abspielt, aber Ihre Anwendung kann diese Geschwindigkeit erhöhen oder verringern, indem sie das Flag "speed" mit dem **Set-Befehl** verwendet. Bei AVI-Dateien ist ein Geschwindigkeitswert von 1000 typisch. Daher kann Ihre Anwendung den Befehlssatz **"Movie** speed 500" verwenden, um einen Film mit halber typischer Geschwindigkeit wieder zu spielen. Alternativ kann die  Sequenz mit der festgelegten "Filmgeschwindigkeit 2000" doppelt so schnell wie gewohnt abspielt werden.
 
-Der [**setaudiobefehl**](setaudio.md) ([**MCI \_ setaudiobefehl**](mci-setaudio.md)) ermöglicht der Anwendung die Steuerung des Audioteils einer AVI-Datei. Die Anwendung kann Audiodaten während der Wiedergabe stumm schalten oder bei mehreren audiostreamdateien den wiedergegebenen Audiostream auswählen.
+Mit [**dem Befehl setaudio**](setaudio.md) ([**MCI \_ SETAUDIO**](mci-setaudio.md)) kann Ihre Anwendung den Audioteil einer AVI-Datei steuern. Ihre Anwendung kann Audio während der Wiedergabe stummschalten oder bei mehreren Audiostreamdateien den audiostream auswählen, der abgespielt wird.
 
-Der MCIAVI-Treiber verfügt über ein Dialogfeld, in dem einige der Wiedergabe Optionen gesteuert werden können. Zu den Optionen, die für den Benutzer verfügbar sind, gehören das Auswählen der Fenster orientierten oder der Vollbildwiedergabe, das Auswählen des Suchmodus und das Zoomen des Bilds. In Ihrer Anwendung kann MCIAVI dieses Dialogfeld mithilfe des Befehls [**configure**](configure.md) ([**MCI \_ configure**](mci-configure.md)) anzeigen.
+Der MCIAVI-Treiber verfügt über ein Dialogfeld, um einige seiner Wiedergabeoptionen zu steuern. Zu den optionen, die dem Benutzer zur Verfügung stehen, gehören das Auswählen der fensterorientierten Wiedergabe oder der Vollbildwiedergabe, das Auswählen des Suchmodus und das Zoomen des Bilds. In Ihrer Anwendung kann MCIAVI dieses Dialogfeld mithilfe des Befehls [**configure**](configure.md) ([**MCI \_ CONFIGURE**](mci-configure.md)) anzeigen.
 
-## <a name="stream-handlers"></a>Datenstrom Handler
+## <a name="stream-handlers"></a>Streamhandler
 
-Die Daten in einer AVI-Datei werden als eine Reihe von Streams behandelt. Eine AVI-Datei enthält in der Regel einen Audiostream und einen Videostream, und es kann auch ein benutzerdefinierter Stream vorhanden sein, der Text oder andere benutzerdefinierte Daten enthält. Der MCIAVI-Treiber kann verschiedene Handler für diese Datenströme verwenden. Weitere Informationen zu benutzerdefinierten AVI-Dateien finden Sie unter [Custom File and Stream Handlers](custom-file-and-stream-handlers.md).
+Die Daten in einer AVI-Datei werden als eine Reihe von Datenströmen behandelt. Eine AVI-Datei enthält in der Regel einen Audio- und Videostream, und es kann auch einen benutzerdefinierten Stream geben, der Text oder einige andere benutzerdefinierte Daten enthält. Der MCIAVI-Treiber kann verschiedene Handler für diese Datenströme verwenden. Weitere Informationen zu benutzerdefinierten AVI-Dateien finden Sie unter [Benutzerdefinierte Datei- und Streamhandler.](custom-file-and-stream-handlers.md)
 
- 
+ 
 
- 
+ 

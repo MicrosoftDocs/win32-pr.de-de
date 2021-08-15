@@ -1,6 +1,6 @@
 ---
-title: Quellen Register Negate
-description: Führt für alle Register Komponenten eine Negation (y-x) aus.
+title: Source Register Negate
+description: Führt ein Negat (y -x) für alle Registerkomponenten aus.
 ms.assetid: fe11f7a7-81be-4237-8194-15704f6fe43c
 ms.topic: article
 ms.date: 05/31/2018
@@ -9,16 +9,16 @@ topic_type:
 api_name: ''
 api_type: ''
 api_location: ''
-ms.openlocfilehash: 2f6082523926d70e670e0b792c6e7e8f41c7c1a0
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: 94898dbbf193254165850ee696d2fea72d6d446908021dfbb5fd32f1920b7010
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "104036852"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118512951"
 ---
-# <a name="source-register-negate"></a>Quellen Register Negate
+# <a name="source-register-negate"></a>Source Register Negate
 
-Führt für alle Register Komponenten eine Negation (y =-x) aus.
+Führt ein Negat (y = -x) für alle Registerkomponenten aus.
 
 ## <a name="syntax"></a>Syntax
 
@@ -31,21 +31,21 @@ Führt für alle Register Komponenten eine Negation (y =-x) aus.
 
 ## <a name="registers"></a>Register
 
-Quell Register. Weitere Informationen zu Register Typen finden Sie unter [PS \_ 1 1 PS 1 \_ \_ \_ \_ \_ 2 \_ \_ PS \_ 1 \_ 3 \_ \_ PS \_ 1 \_ 4 Registern](dx9-graphics-reference-asm-ps-registers-ps-1-x.md).
+Quellregister. Weitere Informationen zu Registertypen finden Sie unter [ps \_ 1 \_ 1 \_ \_ ps \_ 1 \_ 2 ps \_ \_ \_ 1 \_ 3 ps \_ \_ \_ 1 \_ 4 Register .](dx9-graphics-reference-asm-ps-registers-ps-1-x.md)
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Der Inhalt des Registers wird nicht geändert. Der-Modifizierer wird nur auf die aus dem Register gelesenen Daten angewendet. Der Negation-Vorgang wird auf alle vier Farbkanäle (RGBA) angewendet.
+Der Inhalt des Registers wird nicht geändert. Der Modifizierer wird nur auf die aus dem Register gelesenen Daten angewendet. Der Negationsvorgang wird auf alle vier Farbkanäle (RGBA) angewendet.
 
-Dieser Vorgang wird ausgeführt, nachdem alle anderen Modifizierer für dasselbe Argument vorhanden sind.
+Dieser Vorgang wird nach allen anderen Modifizierern ausgeführt, die für dasselbe Argument vorhanden sind.
 
-Dieser Modifizierer schließt sich mit dem [Quell Register Invert](dx9-graphics-reference-asm-ps-registers-modifiers-invert.md) gegenseitig aus, sodass er nicht auf dasselbe Register angewendet werden kann.
+Dieser Modifizierer ist mit [der Quellregister-Umkehrung](dx9-graphics-reference-asm-ps-registers-modifiers-invert.md) gegenseitig ausschließend, sodass er nicht auf dasselbe Register angewendet werden kann.
 
-Dieser Modifizierer kann nur mit arithmetischen Anweisungen verwendet werden.
+Dieser Modifizierer ist nur für die Verwendung mit arithmetischen Anweisungen vorgesehen.
 
 ## <a name="example"></a>Beispiel
 
-Im folgenden Beispiel wird gezeigt, wie dieser Modifizierer verwendet wird.
+Im folgenden Beispiel wird die Verwendung dieses Modifizierer veranschaulicht.
 
 
 ```
@@ -58,12 +58,12 @@ mul r0, r0, -v1;
 
 <dl> <dt>
 
-[Pixel-Shader-quellregistrierungs Modifizierern](dx9-graphics-reference-asm-ps-registers-modifiers-source.md)
+[Quellregistermodifizierer für Pixelshader](dx9-graphics-reference-asm-ps-registers-modifiers-source.md)
 </dt> </dl>
 
- 
+ 
 
- 
+ 
 
 
 

@@ -1,9 +1,9 @@
 ---
-title: PSM_SETNEXTTEXT Meldung (prsht. h)
-description: Legt den Text der Schaltfläche weiter in einem Assistenten fest. Sie können diese Nachricht explizit oder mithilfe des propsheet- \_ Makros setnexttext senden.
+title: PSM_SETNEXTTEXT (Prsht.h)
+description: Legt den Text der Schaltfläche Weiter in einem Assistenten fest. Sie können diese Nachricht explizit oder mit dem PropSheet \_ SetNextText-Makro senden.
 ms.assetid: 4608425e-1724-4d0b-b0f6-9fec147a85f6
 keywords:
-- Windows-Steuerelemente für PSM_SETNEXTTEXT Meldung
+- PSM_SETNEXTTEXT von Windows-Steuerelementen
 topic_type:
 - apiref
 api_name:
@@ -15,16 +15,16 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: d781a8d76fca5c1e74bcda452b6ab7e03a32aacc
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 3d177acb2f2c96e12f5dc4b460ee88149ad81f9b4f79cc3505f776d8f1f92551
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "103740096"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118410080"
 ---
-# <a name="psm_setnexttext-message"></a>PSM- \_ setnexttext-Nachricht
+# <a name="psm_setnexttext-message"></a>PSM \_ SETNEXTTEXT-Meldung
 
-Legt den Text der Schaltfläche **weiter** in einem Assistenten fest. Sie können diese Nachricht explizit oder mithilfe des [**propsheet-Makros \_ setnexttext**](/windows/desktop/api/Prsht/nf-prsht-propsheet_setnexttext) senden.
+Legt den Text der Schaltfläche **Weiter** in einem Assistenten fest. Sie können diese Nachricht explizit oder mit dem [**PropSheet \_ SetNextText-Makro**](/windows/desktop/api/Prsht/nf-prsht-propsheet_setnexttext) senden.
 
 ## <a name="parameters"></a>Parameter
 
@@ -46,7 +46,7 @@ Zeiger auf einen Puffer, der den Text enthält.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Kein aussagekräftiger Rückgabewert.
+Kein sinnvoller Rückgabewert.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -54,10 +54,10 @@ Kein aussagekräftiger Rückgabewert.
 
 | Anforderung | Wert |
 |-------------------------------------|------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>                                     |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2008 \[ -Desktop-Apps\]<br/>                               |
-| Header<br/>                   | <dl> <dt>Prsht. h</dt> </dl> |
-| Unicode- und ANSI-Name<br/>   | **PSM \_ Setnexttextw** (Unicode)<br/>                                         |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur \[ Vista-Desktop-Apps\]<br/>                                     |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2008-Desktop-Apps\]<br/>                               |
+| Header<br/>                   | <dl> <dt>Prsht.h</dt> </dl> |
+| Unicode- und ANSI-Name<br/>   | **PSM \_ SETNEXTTEXTW** (Unicode)<br/>                                         |
 
 
 

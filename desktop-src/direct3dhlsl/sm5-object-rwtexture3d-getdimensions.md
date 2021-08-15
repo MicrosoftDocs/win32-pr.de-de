@@ -1,6 +1,6 @@
 ---
-title: 'RWTexture3D:: GetDimensions-Funktion'
-description: 'Gibt die Dimensionen der Ressource zurück. | RWTexture3D:: GetDimensions-Funktion'
+title: RWTexture3D::GetDimensions-Funktion
+description: Gibt die Dimensionen der Ressource zurück. | RWTexture3D::GetDimensions-Funktion
 ms.assetid: ba70b955-1e80-4f27-84f1-fc9d26a1f1ab
 keywords:
 - GetDimensions-Funktion HLSL
@@ -13,14 +13,14 @@ api_type:
 ms.topic: reference
 ms.date: 05/31/2018
 api_location: ''
-ms.openlocfilehash: 499ab493851257030921e9d55f4873eef8726915
-ms.sourcegitcommit: 92e74c99f8f4d097676959d0c317f533c2400a80
+ms.openlocfilehash: 2fcd1f5e5fb1ab87193c2946e68a8144f34a7275c9ad90e87e9cc7e960336e14
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/09/2021
-ms.locfileid: "104352968"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118509208"
 ---
-# <a name="rwtexture3dgetdimensions-function"></a>RWTexture3D:: GetDimensions-Funktion
+# <a name="rwtexture3dgetdimensions-function"></a>RWTexture3D::GetDimensions-Funktion
 
 Gibt die Dimensionen der Ressource zurück.
 
@@ -38,30 +38,30 @@ void GetDimensions(
 
 <dl> <dt>
 
-*Breite* \[ vorgenommen\]
+*Breite* \[ out\]
 </dt> <dd>
 
-Typ: **[ **uint**](/windows/desktop/WinProg/windows-data-types)**
+Typ: **[ **UINT**](/windows/desktop/WinProg/windows-data-types)**
 
-Die Ressourcen Breite in Texels.
+Die Ressourcenbreite in Texeln.
 
 </dd> <dt>
 
-*Höhe* \[ vorgenommen\]
+*Höhe* \[ out\]
 </dt> <dd>
 
-Typ: **[ **uint**](/windows/desktop/WinProg/windows-data-types)**
+Typ: **[ **UINT**](/windows/desktop/WinProg/windows-data-types)**
 
-Die Ressourcen Höhe in Texels.
+Die Ressourcenhöhe in Texeln.
 
 </dd> <dt>
 
-*Tiefe* \[ vorgenommen\]
+*Tiefe* \[ out\]
 </dt> <dd>
 
-Typ: **[ **uint**](/windows/desktop/WinProg/windows-data-types)**
+Typ: **[ **UINT**](/windows/desktop/WinProg/windows-data-types)**
 
-Die Ressourcen Tiefe in Texels.
+Die Ressourcentiefe in Texeln.
 
 </dd> </dl>
 
@@ -69,7 +69,7 @@ Die Ressourcen Tiefe in Texels.
 
 Diese Funktion gibt keinen Wert zurück.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
 Dies ist eine Liste der überladenen Versionen dieser Methode.
 
@@ -86,11 +86,11 @@ void GetDimensions(out float Width,
 
 
 
-Diese Funktion wird für die folgenden Typen von Shadern unterstützt:
+Diese Funktion wird für die folgenden Shadertypen unterstützt:
 
 
 
-| Scheitelpunkt | Hülle | Domain | Geometrie | Pixel | Compute |
+| Scheitelpunkt | Rumpf | Domain | Geometrie | Pixel | Compute |
 |--------|------|--------|----------|-------|---------|
 |        |      |        |          | x     | x       |
 
@@ -105,7 +105,7 @@ Diese Funktion wird für die folgenden Typen von Shadern unterstützt:
 [RWTexture3D](sm5-object-rwtexture3d.md)
 </dt> <dt>
 
-[Shader-Modell 5](d3d11-graphics-reference-sm5.md)
+[Shadermodell 5](d3d11-graphics-reference-sm5.md)
 </dt> </dl>
 
  

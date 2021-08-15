@@ -1,40 +1,40 @@
 ---
-title: IPX-Informationstypen für routerinformationblöcke
-description: Die folgenden Informationstypen sind in ipxrtdef. h aufgeführt. Verwenden Sie diese Informationstypen bei der Ausführung des IPX-Transports mit den routerinformations Block-Funktionen.
+title: IPX-Informationstypen für Routerinformationsblöcke
+description: Die folgenden Informationstypen sind in Ipxrtdef.h aufgeführt. Verwenden Sie diese Informationstypen mit den Routerinformationsblockfunktionen, wenn Sie den IPX-Transport ausführen.
 ms.assetid: 6cbc8415-f5ba-4f84-a23f-dd4f4a54d118
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: ab4494da951c04433da2cf9b1da20db7ea5f3119
-ms.sourcegitcommit: 592c9bbd22ba69802dc353bcb5eb30699f9e9403
+ms.openlocfilehash: 959f83daa47a0e4573f11b5146fa6f4fdbbe0120ca0c4e8beb123ac6263a8a8a
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "104039355"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117790853"
 ---
-# <a name="ipx-information-types-for-router-information-blocks"></a>IPX-Informationstypen für routerinformationblöcke
+# <a name="ipx-information-types-for-router-information-blocks"></a>IPX-Informationstypen für Routerinformationsblöcke
 
-Die folgenden Informationstypen sind in ipxrtdef. h aufgeführt. Verwenden Sie diese Informationstypen bei der Ausführung des IPX-Transports mit den routerinformations Block-Funktionen.
+Die folgenden Informationstypen sind in Ipxrtdef.h aufgeführt. Verwenden Sie diese Informationstypen mit den Routerinformationsblockfunktionen, wenn Sie den IPX-Transport ausführen.
 
 
 
 | Informationstyp                              | Informationsstruktur                                          |
 |-----------------------------------------------|----------------------------------------------------------------|
-| IPX- \_ Adapter- \_ \_ Infotyp                      | Informationen zum IPX- \_ Adapter \_                                             |
-| globaler IPX- \_ \_ \_ Informationstyp                       | globale IPX- \_ \_ Informationen                                              |
-| Typ der IPX- \_ Schnittstellen \_ Info \_                    | [**IPX- \_ if- \_ Info**](/windows/desktop/api/Ipxrtdef/ns-ipxrtdef-ipx_if_info)                           |
-| IPX \_ im \_ \_ \_ globalen \_ \_ Informationstyp "Datenverkehrs Filter"  | \_ \_ \_ globale Informationen zum Filtern von IPX-Datenverkehr \_                             |
-| \_ \_ \_ \_ globaler \_ \_ Infotyp für IPX-out-Traffic-Filter | \_ \_ \_ globale Informationen zum Filtern von IPX-Datenverkehr \_                             |
-| IPX \_ in \_ Datenverkehrs \_ Filter- \_ \_ Infotyp          | Informationen zum IPX- \_ Datenverkehrs \_ Filter \_                                     |
-| \_ \_ \_ Filter \_ \_ Informationstyp "IPX-out-Traffic"         | Informationen zum IPX- \_ Datenverkehrs \_ Filter \_                                     |
-| statischer IPX- \_ \_ NetBIOS- \_ Name- \_ \_ Typ        | Informationen zum statischen IPX- \_ \_ NetBIOS- \_ Namen \_                               |
-| statischer IPX- \_ \_ Routen- \_ \_ Infotyp                | statische IPX- \_ \_ Routen \_ Informationen                                       |
-| Infotyp für statischen IPX- \_ \_ Dienst \_ \_              | [**Informationen zum statischen IPX- \_ \_ Dienst \_**](/previous-versions/windows/desktop/legacy/aa374456(v=vs.85)) |
-| Verbindungstyp der ipxwan- \_ Schnittstelle \_ \_                 | [**ipxwan, \_ Wenn \_ Info**](/windows/desktop/api/Ipxrtdef/ns-ipxrtdef-ipxwan_if_info)                     |
+| INFOTYP \_ DES IPX-ADAPTERS \_ \_                      | \_IPX-ADAPTERINFORMATIONEN \_                                             |
+| GLOBALER \_ \_ IPX-INFOTYP \_                       | GLOBALE \_ \_ IPX-INFORMATIONEN                                              |
+| INFOTYP \_ DER IPX-SCHNITTSTELLE \_ \_                    | [**IPX \_ IF \_ INFO**](/windows/desktop/api/Ipxrtdef/ns-ipxrtdef-ipx_if_info)                           |
+| IPX \_ IM \_ \_ DATENVERKEHRSFILTER GLOBALER \_ \_ \_ INFORMATIONSTYP  | GLOBALE INFORMATIONEN \_ ZUM IPX-DATENVERKEHRSFILTER \_ \_ \_                             |
+| IPX \_ OUT \_ TRAFFIC \_ FILTER \_ GLOBAL \_ INFO \_ TYPE | GLOBALE INFORMATIONEN \_ ZUM IPX-DATENVERKEHRSFILTER \_ \_ \_                             |
+| IPX \_ IM \_ INFOTYP DES \_ \_ \_ DATENVERKEHRSFILTERS          | \_ \_ IPX-DATENVERKEHRSFILTERINFORMATIONEN \_                                     |
+| IPX \_ OUT \_ TRAFFIC \_ FILTER \_ INFO \_ TYPE         | \_ \_ IPX-DATENVERKEHRSFILTERINFORMATIONEN \_                                     |
+| IPX \_ STATIC \_ NETBIOS \_ NAME \_ INFO \_ TYPE        | IPX \_ STATIC \_ NETBIOS \_ NAME \_ INFO                               |
+| IPX \_ STATIC \_ ROUTE \_ INFO \_ TYPE                | IPX \_ STATIC ROUTE INFO (STATISCHE IPX-ROUTENINFORMATIONEN) \_ \_                                       |
+| IPX \_ STATIC \_ SERVICE \_ INFO \_ TYPE              | [**IPX \_ STATIC \_ SERVICE \_ INFO**](/previous-versions/windows/desktop/legacy/aa374456(v=vs.85)) |
+| INFOTYP DER \_ \_ IPXWAN-SCHNITTSTELLE \_                 | [**IPXWAN \_ IF \_ INFO**](/windows/desktop/api/Ipxrtdef/ns-ipxrtdef-ipxwan_if_info)                     |
 
 
 
- 
+ 
 
- 
+ 
 
- 
+ 

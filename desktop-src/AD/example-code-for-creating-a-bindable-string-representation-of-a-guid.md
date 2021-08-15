@@ -1,22 +1,22 @@
 ---
-title: Beispiel Code zum Erstellen einer bindbaren Zeichen folgen Darstellung einer GUID
-description: Das folgende Codebeispiel kann verwendet werden, um eine Zeichen folgen Darstellung einer GUID zurückzugeben, die zum Binden an das-Objekt verwendet werden kann.
+title: Beispielcode zum Erstellen einer bindbaren Zeichenfolgendarstellung einer GUID
+description: Das folgende Codebeispiel kann verwendet werden, um eine Zeichenfolgendarstellung einer GUID zurückgibt, die zum Binden an das -Objekt verwendet werden kann.
 ms.assetid: e39a6994-4328-40f2-8cb5-8b1f971e50d8
 ms.tgt_platform: multiple
 keywords:
-- Active Directory Beispiele Active Directory, Erstellen einer bindbaren Zeichen folgen Darstellung einer GUID
+- 'Active Directory-Beispiele: Active Directory, Erstellen einer bindbaren Zeichenfolgendarstellung einer GUID'
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: af6614ebeaf1028452ba75c0fc5dbaffb364e1ce
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: 2baafefa712d8826b5fc9442e1da8aaeac54d58c1e491750b2d39ceb5ee88ae5
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "104036372"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118694283"
 ---
-# <a name="example-code-for-creating-a-bindable-string-representation-of-a-guid"></a>Beispiel Code zum Erstellen einer bindbaren Zeichen folgen Darstellung einer GUID
+# <a name="example-code-for-creating-a-bindable-string-representation-of-a-guid"></a>Beispielcode zum Erstellen einer bindbaren Zeichenfolgendarstellung einer GUID
 
-Das folgende Codebeispiel kann verwendet werden, um eine Zeichen folgen Darstellung einer GUID zurückzugeben, die zum Binden an das-Objekt verwendet werden kann.
+Das folgende Codebeispiel kann verwendet werden, um eine Zeichenfolgendarstellung einer GUID zurückgibt, die zum Binden an das -Objekt verwendet werden kann.
 
 
 ```C++
@@ -84,9 +84,9 @@ HRESULT GUIDtoBindableString(LPGUID pGUID, LPWSTR *ppGUIDString)
 
 
 
- 
+ 
 
- 
+ 
 
 
 

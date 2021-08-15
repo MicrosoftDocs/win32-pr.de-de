@@ -1,21 +1,21 @@
 ---
-description: Die SetDIBitsToDevice-Funktion verwendet Farbdaten aus einem DIB, um die Pixel in dem angegebenen Rechteck auf dem Gerät festzulegen, das dem Zielgeräte Kontext zugeordnet ist.
+description: Die SetDIBitsToDevice-Funktion verwendet Farbdaten aus einem DIB, um die Pixel im angegebenen Rechteck auf dem Gerät festzulegen, das dem Zielgerätekontext zugeordnet ist.
 ms.assetid: 7cbb2b7a-2d95-4352-9e75-aa814e8f01bd
-title: Testen eines Druckers für JPEG-oder PNG-Unterstützung
+title: Testen eines Druckers auf JPEG- oder PNG-Unterstützung
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 151251a99d23913b2a515a36def6172c997ac31c
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: b8a83671c8ca0e64395e58c2275f343413e9563996ff4372e19d2512bfc5b7e1
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "103959471"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117885732"
 ---
-# <a name="testing-a-printer-for-jpeg-or-png-support"></a>Testen eines Druckers für JPEG-oder PNG-Unterstützung
+# <a name="testing-a-printer-for-jpeg-or-png-support"></a>Testen eines Druckers auf JPEG- oder PNG-Unterstützung
 
-Die [**SetDIBitsToDevice**](/windows/desktop/api/Wingdi/nf-wingdi-setdibitstodevice) -Funktion verwendet Farbdaten aus einem DIB, um die Pixel in dem angegebenen Rechteck auf dem Gerät festzulegen, das dem Zielgeräte Kontext zugeordnet ist.
+Die [**SetDIBitsToDevice-Funktion**](/windows/desktop/api/Wingdi/nf-wingdi-setdibitstodevice) verwendet Farbdaten aus einem DIB, um die Pixel im angegebenen Rechteck auf dem Gerät festzulegen, das dem Zielgerätekontext zugeordnet ist.
 
-[**SetDIBitsToDevice**](/windows/desktop/api/Wingdi/nf-wingdi-setdibitstodevice) wird so erweitert, dass ein JPEG-oder PNG-Bild als Quell Bild übergeben werden kann.
+[**SetDIBitsToDevice**](/windows/desktop/api/Wingdi/nf-wingdi-setdibitstodevice) wurde erweitert, damit ein JPEG- oder PNG-Bild als Quellbild übergeben werden kann.
 
 Beispiel:
 

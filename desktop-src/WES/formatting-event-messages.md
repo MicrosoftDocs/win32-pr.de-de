@@ -1,32 +1,32 @@
 ---
 title: Formatieren von Ereignismeldungen
-description: Ein Ereignis kann lokalisierte Nachrichten Zeichenfolgen enthalten, die Sie für die Anzeige formatieren können.
+description: Ein Ereignis kann lokalisierte Meldungszeichenfolgen enthalten, die Sie für die Anzeige formatieren können.
 ms.assetid: 31dd8276-1925-4a0e-9e2a-6966e8086238
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 314742838e5a756787385930e5122117b3a012c7
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: 119f7467ab36a46039c32c6ffb6f347ca4450966da5b69c1531ac1a966e0b7f5
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "106337152"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120005290"
 ---
 # <a name="formatting-event-messages"></a>Formatieren von Ereignismeldungen
 
-Ein Ereignis kann lokalisierte Nachrichten Zeichenfolgen enthalten, die Sie für die Anzeige formatieren können. Um eine Meldungs Zeichenfolge aus dem Ereignis abzurufen, rufen Sie die [**evtformatmessage**](/windows/desktop/api/WinEvt/nf-winevt-evtformatmessage) -Funktion auf. Ein Ereignis kann die folgenden Meldungs Zeichenfolgen enthalten:
+Ein Ereignis kann lokalisierte Meldungszeichenfolgen enthalten, die Sie für die Anzeige formatieren können. Um eine Meldungszeichenfolge aus dem Ereignis zu erhalten, rufen Sie die [**EvtFormatMessage-Funktion**](/windows/desktop/api/WinEvt/nf-winevt-evtformatmessage) auf. Ein Ereignis kann die folgenden Meldungszeichenfolgen enthalten:
 
--   Eine Meldungs Zeichenfolge für das Ereignis selbst.
--   Eine Meldungs Zeichenfolge, die den dem Ereignis zugewiesenen levelwert beschreibt.
--   Eine Meldungs Zeichenfolge, die den dem Ereignis zugewiesenen Aufgaben Wert beschreibt.
--   Eine Meldungs Zeichenfolge, die den dem Ereignis zugewiesenen opcodewert beschreibt.
--   Eine Meldungs Zeichenfolge, die die dem Ereignis zugewiesenen Schlüsselwort Werte beschreibt.
--   Eine Meldungs Zeichenfolge, die den dem Ereignis zugewiesenen channelwert beschreibt.
+-   Eine Meldungszeichenfolge für das Ereignis selbst.
+-   Eine Meldungszeichenfolge, die den dem Ereignis zugewiesenen Ebeneswert beschreibt.
+-   Eine Meldungszeichenfolge, die den task-Wert beschreibt, der dem Ereignis zugewiesen ist.
+-   Eine Meldungszeichenfolge, die den opcode-Wert beschreibt, der dem Ereignis zugewiesen ist.
+-   Eine Meldungszeichenfolge, die die Schlüsselwortwerte beschreibt, die dem Ereignis zugewiesen sind.
+-   Eine Meldungszeichenfolge, die den dem Ereignis zugewiesenen Kanalwert beschreibt.
 
-Sie können auch [**evtformatmessage**](/windows/desktop/api/WinEvt/nf-winevt-evtformatmessage) verwenden, um die Meldungs Zeichenfolge für den Anbieter oder eine XML-Zeichenfolge mit dem Ereignis und allen Meldungs Zeichenfolgen zu erhalten.
+Sie können [**evtFormatMessage**](/windows/desktop/api/WinEvt/nf-winevt-evtformatmessage) auch verwenden, um die Nachrichtenzeichenfolge für den Anbieter oder eine XML-Zeichenfolge zu erhalten, die das Ereignis und alle Nachrichtenzeichenfolgen enthält.
 
-Zusätzlich zum Absenden der Meldungs Zeichenfolgen aus den Ereignissen, die Sie Abfragen, können Sie auch die Meldungs Zeichenfolgen aus den Metadaten des Anbieters erhalten. Ausführliche Informationen zum Formatieren einer Nachricht auf der Grundlage einer Nachrichten-ID, die Sie aus den Metadaten des Anbieters erhalten, finden Sie unter Get [a Provider the Metadata](getting-a-provider-s-metadata-.md).
+Zusätzlich zum Abrufen der Meldungszeichenfolgen aus den von Ihnen abfragen Ereignissen können Sie auch die Meldungszeichenfolgen aus den Metadaten des Anbieters abrufen. Weitere Informationen zum Formatieren einer Nachricht basierend auf einem Nachrichtenbezeichner, den Sie aus den Metadaten des Anbieters erhalten, finden Sie unter Abrufen der Metadaten [eines Anbieters.](getting-a-provider-s-metadata-.md)
 
-Im folgenden Beispiel wird gezeigt, wie die Meldungs Zeichenfolgen von einem Ereignis ausgegeben werden.
+Das folgende Beispiel zeigt, wie die Meldungszeichenfolgen aus einem Ereignis erhalten werden.
 
 
 ```C++
@@ -218,9 +218,9 @@ LPWSTR GetMessageString(EVT_HANDLE hMetadata, EVT_HANDLE hEvent, EVT_FORMAT_MESS
 
 
 
- 
+ 
 
- 
+ 
 
 
 

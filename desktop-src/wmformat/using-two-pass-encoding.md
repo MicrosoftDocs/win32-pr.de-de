@@ -1,36 +1,36 @@
 ---
-title: Verwenden der Two-Pass Codierung (Windows Media Format 11 SDK)
-description: Verwenden von Two-Pass Codierung
+title: Using Two-Pass Encoding (Windows Media Format 11 SDK)
+description: Verwenden der Two-Pass Codierung
 ms.assetid: 55fc768b-15f0-4236-ad0d-3792ccaa9b4f
 keywords:
-- Advanced Systems Format (ASF), zwei-Pass-Codierung
-- ASF (Advanced Systems Format), Two-Pass Encoding
-- zwei-Pass-Codierung, Informationen
-- '2: Codierung, Informationen'
-- Codecs, Two-Pass-Codierung
-- Two-Pass-Codierung, IWMWriterPreprocess-Schnittstelle
+- Advanced Systems Format (ASF), Zwei-Pass-Codierung
+- ASF (Advanced Systems Format), 2-Pass-Codierung
+- Codierung mit zwei Durchgangen, Informationen
+- 2-Pass-Codierung,About
+- Codecs,Zwei-Pass-Codierung
+- Zweipasscodierung, IWMWriterPreprocess-Schnittstelle
 - 2-Pass-Codierung, IWMWriterPreprocess-Schnittstelle
 - IWMWriterPreprocess
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 1c3794856f47c1656cc53006268c41a063cdde96
-ms.sourcegitcommit: 8fa6614b715bddf14648cce36d2df22e5232801a
+ms.openlocfilehash: fd0683af636197b3f8116fca4dea85ce15609d2c99b0d9e0c11dfe0a2662a424
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/10/2020
-ms.locfileid: "104517336"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117653835"
 ---
-# <a name="using-two-pass-encoding-windows-media-format-11-sdk"></a>Verwenden der Two-Pass Codierung (Windows Media Format 11 SDK)
+# <a name="using-two-pass-encoding-windows-media-format-11-sdk"></a>Using Two-Pass Encoding (Windows Media Format 11 SDK)
 
-Einige Codecs unterstützen die zwei-Pass-Codierung für bestimmte Formate. In einigen Fällen erfordert ein Codec, dass ein angegebenes Format mit zwei Durchläufen codiert wird. Wenn die zwei-Pass-Codierung verwendet wird, senden Sie die Beispiele für den Stream vor dem Codierungs Durchlauf an den Codec. Der Codec analysiert die Beispiele und konfiguriert den Codierungs Durchlauf basierend auf der Analyse. Dies führt zu einer effizienteren codierten Datei.
+Einige Codecs unterstützen die Zwei-Pass-Codierung für bestimmte Formate. In einigen Fällen erfordert ein Codec, dass ein angegebenes Format mit zwei Durchläufen codiert wird. Wenn die Zwei-Pass-Codierung verwendet wird, senden Sie die Beispiele für den Stream vor dem Codierungspass an den Codec. Der Codec analysiert die Beispiele und konfiguriert den Codierungspass basierend auf der Analyse. Dies führt zu einer effizienter codierten Datei.
 
-Um zu ermitteln, ob ein Codec eine Codierung mit nur einem oder zwei Pass-oder beides für ein bestimmtes Format unterstützt, müssen Sie [**IWMCodecInfo3:: setcodecenumerationsetting**](/previous-versions/windows/desktop/api/Wmsdkidl/nf-wmsdkidl-iwmcodecinfo3-setcodecenumerationsetting) mit g \_ wsznumpass und den entsprechenden Wert aufrufen und dann die Formate auflisten, um festzustellen, ob die gewünschte zurückgegeben wird. Weitere Informationen zu den Windows Media-Codecs, die die zwei-Pass-Codierung unterstützen, finden Sie unter [Auswählen einer Codierungsmethode](choosing-an-encoding-method.md).
+Um zu bestimmen, ob ein Codec 1-Pass-Codierung, Zwei-Durch-Codierung oder beides für ein bestimmtes Format unterstützt, rufen Sie [**IWMCodecInfo3::SetCodecEnumerationSetting**](/previous-versions/windows/desktop/api/Wmsdkidl/nf-wmsdkidl-iwmcodecinfo3-setcodecenumerationsetting) mit g wszNumPasses und dem entsprechenden Wert auf, und enumerieren Sie dann die Formate, um festzustellen, ob das formatierte zurückgegeben \_ wird. Weitere Informationen zu den Windows Mediencodecs, die die Zwei-Durch-Durch-Codierung unterstützen, finden Sie unter [Auswählen einer Codierungsmethode.](choosing-an-encoding-method.md)
 
-Sie können die zwei-Pass-Codierung mit dem Windows Media-Format-SDK verwenden, indem Sie Methoden der [**IWMWriterPreprocess**](/previous-versions/windows/desktop/api/wmsdkidl/nn-wmsdkidl-iwmwriterpreprocess) -Schnittstelle aufrufen.
+Sie können die Zwei-Pass-Codierung mit dem Windows Media Format SDK verwenden, indem Sie Methoden der [**IWMWriterPreprocess-Schnittstelle**](/previous-versions/windows/desktop/api/wmsdkidl/nn-wmsdkidl-iwmwriterpreprocess) aufrufen.
 
-In Fällen, in denen die zwei-Pass-Codierung für ein bestimmtes Format erforderlich ist, aber die Anwendung einen Vorverarbeitungs Durchlauf nicht ausführen kann, schlägt der erste Schreibvorgang von " [**schreitesample**](/previous-versions/windows/desktop/api/Wmsdkidl/nf-wmsdkidl-iwmwriter-writesample) " mit NS \_ E \_ ungültige \_ NUM-Pässe fehl \_ .
+In Fällen, in denen für ein bestimmtes Format eine Codierung mit zwei Durchläufen erforderlich ist, die Anwendung jedoch keine Vorverarbeitungsüberläufe ausführen kann, schlägt der erste Aufruf von [**WriteSample**](/previous-versions/windows/desktop/api/Wmsdkidl/nf-wmsdkidl-iwmwriter-writesample) mit NS \_ E INVALID NUM PASSES \_ \_ \_ fehl.
 
-Die folgende Beispiel Funktion veranschaulicht, wie die Codierung mit zwei durchlaufen wird. Diese Funktion wird aufgerufen, nachdem der Writer mit einem Profil festgelegt und gestartet wurde. Weitere Informationen zur Verwendung dieses Codes finden Sie unter [Verwenden der Codebeispiele](using-the-code-examples.md).
+Die folgende Beispielfunktion veranschaulicht das Ausführen der Codierung mit zwei Durchgangen. Diese Funktion wird aufgerufen, nachdem der Writer mit einem Profil festgelegt und gestartet wurde. Weitere Informationen zur Verwendung dieses Codes finden Sie unter [Verwenden der Codebeispiele](using-the-code-examples.md).
 
 
 ```C++

@@ -1,26 +1,26 @@
 ---
-title: Imsrdpclientadvancedsettings maxeventcount (Eigenschaft)
-description: Diese Eigenschaft wird nicht unterstützt. | Imsrdpclientadvancedsettings maxeventcount (Eigenschaft)
+title: IMsRdpClientAdvancedSettings maxEventCount-Eigenschaft
+description: Diese Eigenschaft wird nicht unterstützt. | IMsRdpClientAdvancedSettings maxEventCount-Eigenschaft
 ms.assetid: d7b5951d-8cc3-48b4-af1b-1f547afbc6ae
 ms.tgt_platform: multiple
 keywords:
-- maxeventcount-Eigenschaft Remotedesktopdienste
-- maxeventcount-Eigenschaft Remotedesktopdienste, imsrdpclientadvancedsettings-Schnittstelle
-- Imsrdpclientadvancedsettings-Schnittstelle Remotedesktopdienste, maxeventcount-Eigenschaft
-- maxeventcount-Eigenschaft Remotedesktopdienste, IMsRdpClientAdvancedSettings2-Schnittstelle
-- IMsRdpClientAdvancedSettings2 Interface Remotedesktopdienste, maxeventcount (Eigenschaft)
-- maxeventcount-Eigenschaft Remotedesktopdienste, IMsRdpClientAdvancedSettings3-Schnittstelle
-- IMsRdpClientAdvancedSettings3 Interface Remotedesktopdienste, maxeventcount (Eigenschaft)
-- maxeventcount-Eigenschaft Remotedesktopdienste, IMsRdpClientAdvancedSettings4-Schnittstelle
-- IMsRdpClientAdvancedSettings4 Interface Remotedesktopdienste, maxeventcount (Eigenschaft)
-- maxeventcount-Eigenschaft Remotedesktopdienste, IMsRdpClientAdvancedSettings5-Schnittstelle
-- IMsRdpClientAdvancedSettings5 Interface Remotedesktopdienste, maxeventcount (Eigenschaft)
-- maxeventcount-Eigenschaft Remotedesktopdienste, IMsRdpClientAdvancedSettings6-Schnittstelle
-- IMsRdpClientAdvancedSettings6 Interface Remotedesktopdienste, maxeventcount (Eigenschaft)
-- maxeventcount-Eigenschaft Remotedesktopdienste, IMsRdpClientAdvancedSettings7-Schnittstelle
-- IMsRdpClientAdvancedSettings7 Interface Remotedesktopdienste, maxeventcount (Eigenschaft)
-- maxeventcount-Eigenschaft Remotedesktopdienste, IMsRdpClientAdvancedSettings8-Schnittstelle
-- IMsRdpClientAdvancedSettings8 Interface Remotedesktopdienste, maxeventcount (Eigenschaft)
+- maxEventCount-Eigenschaft Remotedesktopdienste
+- maxEventCount-Eigenschaft Remotedesktopdienste , IMsRdpClientAdvancedSettings-Schnittstelle
+- IMsRdpClientAdvancedSettings-Schnittstelle Remotedesktopdienste , maxEventCount-Eigenschaft
+- maxEventCount-Eigenschaft Remotedesktopdienste , IMsRdpClientAdvancedSettings2-Schnittstelle
+- IMsRdpClientAdvancedSettings2-Schnittstelle Remotedesktopdienste , maxEventCount-Eigenschaft
+- maxEventCount-Eigenschaft Remotedesktopdienste , IMsRdpClientAdvancedSettings3-Schnittstelle
+- IMsRdpClientAdvancedSettings3-Schnittstelle Remotedesktopdienste , maxEventCount-Eigenschaft
+- maxEventCount-Eigenschaft Remotedesktopdienste , IMsRdpClientAdvancedSettings4-Schnittstelle
+- IMsRdpClientAdvancedSettings4-Schnittstelle Remotedesktopdienste , maxEventCount-Eigenschaft
+- maxEventCount-Eigenschaft Remotedesktopdienste , IMsRdpClientAdvancedSettings5-Schnittstelle
+- IMsRdpClientAdvancedSettings5-Schnittstelle Remotedesktopdienste , maxEventCount-Eigenschaft
+- maxEventCount-Eigenschaft Remotedesktopdienste , IMsRdpClientAdvancedSettings6-Schnittstelle
+- IMsRdpClientAdvancedSettings6-Schnittstelle Remotedesktopdienste , maxEventCount-Eigenschaft
+- maxEventCount-Eigenschaft Remotedesktopdienste , IMsRdpClientAdvancedSettings7-Schnittstelle
+- IMsRdpClientAdvancedSettings7-Schnittstelle Remotedesktopdienste , maxEventCount-Eigenschaft
+- maxEventCount-Eigenschaft Remotedesktopdienste , IMsRdpClientAdvancedSettings8-Schnittstelle
+- IMsRdpClientAdvancedSettings8-Schnittstelle Remotedesktopdienste , maxEventCount-Eigenschaft
 topic_type:
 - apiref
 api_name:
@@ -54,14 +54,14 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: cb305d4a81b3c4dd9eb53dceab5a4e685c57c060
-ms.sourcegitcommit: 92e74c99f8f4d097676959d0c317f533c2400a80
+ms.openlocfilehash: b8cb0ee5cb5d38f57619e54be56d3c6cab49641b9183f7771cefbbfaad0eec0e
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/09/2021
-ms.locfileid: "103869776"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118353029"
 ---
-# <a name="imsrdpclientadvancedsettingsmaxeventcount-property"></a>Imsrdpclientadvancedsettings:: maxeventcount (Eigenschaft)
+# <a name="imsrdpclientadvancedsettingsmaxeventcount-property"></a>IMsRdpClientAdvancedSettings::maxEventCount-Eigenschaft
 
 Diese Eigenschaft wird nicht unterstützt.
 
@@ -84,13 +84,13 @@ HRESULT get_maxEventCount(
 
 ## <a name="property-value"></a>Eigenschaftswert
 
-Die neue Ereignis Anzahl. Der Standard ist 100.
+Die neue Ereignisanzahl. Der Standardwert ist 100.
 
 ## <a name="error-codes"></a>Fehlercodes
 
-Gibt **" \_ false**" zurück.
+Gibt **S \_ FALSE zurück.**
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
 Weitere Informationen zu Remotedesktop-Webverbindung finden Sie unter [Anforderungen für Remotedesktop-Webverbindung](requirements-for-remote-desktop-web-connection.md).
 
@@ -106,11 +106,11 @@ Weitere Informationen zu Remotedesktop-Webverbindung finden Sie unter [Anforderu
 | Ende des Supports (Server)<br/>    | Nicht unterstützt<br/>                                                                       |
 | Typbibliothek<br/>             | <dl> <dt>MsTscAx.dll</dt> </dl>          |
 | DLL<br/>                      | <dl> <dt>MsTscAx.dll</dt> </dl>          |
-| IID<br/>                      | IID \_ imsrdpclientadvancedsettings ist als 3c65b4ab-12b3-465b-acd4-b8dad3bff9e2 definiert.<br/> |
+| IID<br/>                      | IID \_ IMsRdpClientAdvancedSettings ist als 3c65b4ab-12b3-465b-acd4-b8dad3bff9e2 definiert.<br/> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
@@ -135,7 +135,7 @@ Weitere Informationen zu Remotedesktop-Webverbindung finden Sie unter [Anforderu
 [**IMsRdpClientAdvancedSettings8**](imsrdpclientadvancedsettings8.md)
 </dt> <dt>
 
-[**Imsrdpclientadvancedsettings**](imsrdpclientadvancedsettings-interface.md)
+[**IMsRdpClientAdvancedSettings**](imsrdpclientadvancedsettings-interface.md)
 </dt> </dl>
 
  

@@ -1,9 +1,9 @@
 ---
-title: Query (querylisttype)-Element
-description: Definiert einen Satz von Selektoren und Unterdrückern, die verwendet werden, um Ereignisse in das Resultset einzuschließen oder Ereignisse aus dem Resultset auszuschließen.
+title: Query (QueryListType)-Element
+description: Definiert einen Satz von Selektoren und Unterdrückungen, die verwendet werden, um Ereignisse in das Ergebnisset ein- oder auszuschließen.
 ms.assetid: 2491d7b7-6fbb-4230-92cf-4bef3d2a51cc
 keywords:
-- Abfrage Element-Ereignisprotokoll
+- Query-Element "EventLog"
 topic_type:
 - apiref
 api_name:
@@ -13,16 +13,16 @@ api_type:
 ms.topic: reference
 ms.date: 05/31/2018
 api_location: ''
-ms.openlocfilehash: c105a43d325c0399c681ca9093f1d62d3fb2b973
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: f6e6b3519a09e404e979e7164b178e0cad937bd74a305cc249ba57de65b3c465
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104478132"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120005180"
 ---
-# <a name="query-querylisttype-element"></a>Query (querylisttype)-Element
+# <a name="query-querylisttype-element"></a>Query (QueryListType)-Element
 
-Definiert einen Satz von Selektoren und Unterdrückern, die verwendet werden, um Ereignisse in das Resultset einzuschließen oder Ereignisse aus dem Resultset auszuschließen.
+Definiert einen Satz von Selektoren und Unterdrückungen, die verwendet werden, um Ereignisse in das Ergebnisset ein- oder auszuschließen.
 
 ``` syntax
 <xs:element name="Query"
@@ -30,7 +30,7 @@ Definiert einen Satz von Selektoren und Unterdrückern, die verwendet werden, um
  />
 ```
 
-Das **Query** -Element wird durch den komplexen Typ [**querylisttype**](queryschema-querylisttype-complextype.md) definiert.
+Das **Query-Element** wird durch den komplexen [**QueryListType-Typ**](queryschema-querylisttype-complextype.md) definiert.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -38,19 +38,19 @@ Das **Query** -Element wird durch den komplexen Typ [**querylisttype**](querysch
 
 | Anforderung | Wert |
 |-------------------------------------|------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>       |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2008 \[ -Desktop-Apps\]<br/> |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur \[ Vista-Desktop-Apps\]<br/>       |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2008-Desktop-Apps\]<br/> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
 **Übergeordnetes Element**
 </dt> <dt>
 
-[**Querylist**](queryschema-querylist-element.md)
+[**QueryList**](queryschema-querylist-element.md)
 </dt> </dl>
 
  

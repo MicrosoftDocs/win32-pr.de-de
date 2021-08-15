@@ -1,7 +1,7 @@
 ---
-description: Definiert den Prioritäts Typen, dem eine Animations Spur zugewiesen wird.
+description: Definiert den Prioritätstyp, dem eine Animationsspur zugewiesen wird.
 ms.assetid: 7bd83e31-09c4-4376-a22d-ed8023b78e84
-title: D3DXPRIORITY_TYPE-Enumeration (D3dx9anim. h)
+title: D3DXPRIORITY_TYPE -Enumeration (D3dx9anim.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,16 +13,16 @@ api_type:
 - HeaderDef
 api_location:
 - d3dx9anim.h
-ms.openlocfilehash: 5e6d82807cbd0e93e7a1127db80726c0ec06b5da
-ms.sourcegitcommit: 14010c34b35fa268046c7683f021f86de08ddd0a
+ms.openlocfilehash: e7ea5b7447b896c6b582280216af4d6c05cc540286ad31a2bfb337975fe6c88a
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "104394109"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118524849"
 ---
-# <a name="d3dxpriority_type-enumeration"></a>D3DXPRIORITY- \_ Typenumeration
+# <a name="d3dxpriority_type-enumeration"></a>D3DXPRIORITY \_ TYPE-Enumeration
 
-Definiert den Prioritäts Typen, dem eine Animations Spur zugewiesen wird.
+Definiert den Prioritätstyp, dem eine Animationsspur zugewiesen wird.
 
 ## <a name="syntax"></a>Syntax
 
@@ -41,30 +41,30 @@ typedef enum D3DXPRIORITY_TYPE {
 
 <dl> <dt>
 
-<span id="D3DXPRIORITY_LOW"></span><span id="d3dxpriority_low"></span>**D3DXPRIORITY \_ niedrig**
+<span id="D3DXPRIORITY_LOW"></span><span id="d3dxpriority_low"></span>**D3DXPRIORITY \_ LOW**
 </dt> <dd>
 
-Die Nachverfolgung sollte mit allen Spuren mit niedriger Priorität gemischt werden, bevor die Blend-Mischung mit niedriger Priorität mit der Mischung mit hoher Priorität gemischt wird.
+Die Spur sollte mit allen Spuren mit niedriger Priorität kombiniert werden, bevor die Mischung mit niedriger Priorität mit der Mischung mit hoher Priorität kombiniert wird.
 
 </dd> <dt>
 
-<span id="D3DXPRIORITY_HIGH"></span><span id="d3dxpriority_high"></span>**D3DXPRIORITY \_ hoch**
+<span id="D3DXPRIORITY_HIGH"></span><span id="d3dxpriority_high"></span>**D3DXPRIORITY \_ HIGH**
 </dt> <dd>
 
-Die Nachverfolgung sollte mit allen Titeln mit hoher Priorität gemischt werden, bevor die Blend-Mischung mit hoher Priorität mit der Mischung mit niedriger Priorität gemischt wird.
+Die Spur sollte mit allen Titeln mit hoher Priorität kombiniert werden, bevor die Mischung mit hoher Priorität mit der Mischung mit niedriger Priorität kombiniert wird.
 
 </dd> <dt>
 
-<span id="D3DXPRIORITY_FORCE_DWORD"></span><span id="d3dxpriority_force_dword"></span>**D3DXPRIORITY \_ Erzwingen von \_ DWORD**
+<span id="D3DXPRIORITY_FORCE_DWORD"></span><span id="d3dxpriority_force_dword"></span>**D3DXPRIORITY \_ FORCE \_ DWORD**
 </dt> <dd>
 
-Erzwingt die Kompilierung dieser Enumeration in 32 Bits. Ohne diesen Wert können einige Compiler zulassen, dass diese Enumeration in eine andere Größe als 32 Bits kompiliert wird. Dieser Wert wird nicht verwendet.
+Erzwingt, dass diese Enumeration auf eine Größe von 32 Bits kompiliert wird. Ohne diesen Wert würden einige Compiler zulassen, dass diese Enumeration in eine andere Größe als 32 Bits kompiliert wird. Dieser Wert wird nicht verwendet.
 
 </dd> </dl>
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Spuren mit der gleichen Priorität werden kombiniert, und die beiden resultierenden Werte werden dann mithilfe des Prioritäts-Blend-Faktors gemischt.
+Spuren mit der gleichen Priorität werden kombiniert, und die beiden resultierenden Werte werden dann mithilfe des Prioritätsmischungsfaktors kombiniert.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -72,11 +72,11 @@ Spuren mit der gleichen Priorität werden kombiniert, und die beiden resultieren
 
 | Anforderung | Wert |
 |-------------------|----------------------------------------------------------------------------------------|
-| Header<br/> | <dl> <dt>D3dx9anim. h</dt> </dl> |
+| Header<br/> | <dl> <dt>D3dx9anim.h</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 

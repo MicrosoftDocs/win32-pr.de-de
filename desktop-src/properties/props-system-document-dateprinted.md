@@ -1,5 +1,5 @@
 ---
-description: Gibt das Datum und die Uhrzeit des letzten Drucks des Dokuments an. Der Legacyname ist &\# 0034;DocLastPrinted&\# 0034;.
+description: Gibt das Datum und die Uhrzeit des letzten Drucks des Dokuments an. Der Legacyname lautet &\# 0034;DocLastPrinted&\# 0034;.
 ms.assetid: 57a08471-04b2-4c1e-9212-b76f6ca631f8
 title: System.Document. DatePrinted
 ms.topic: article
@@ -13,7 +13,7 @@ ms.locfileid: "118466697"
 ---
 # <a name="systemdocumentdateprinted"></a>System.Document. DatePrinted
 
-Gibt das Datum und die Uhrzeit des letzten Drucks des Dokuments an. Der Legacyname ist "DocLastPrinted".
+Gibt das Datum und die Uhrzeit des letzten Drucks des Dokuments an. Der Legacyname lautet "DocLastPrinted".
 
 ## <a name="windows-10-version-1703-windows-10-version-1607-windows-10-version-1511-windows-10-version-1507-windows-81-windows-8-windows-7"></a>Windows 10, Version 1703, Windows 10, Version 1607, Windows 10, Version 1511, Windows 10, Version 1507, Windows 8.1, Windows 8, Windows 7
 

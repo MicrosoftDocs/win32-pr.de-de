@@ -31,7 +31,7 @@ Enthält den Namen eines verteiltes Dateisystem (DFS)-Stamm- oder -Links.
 
 </dd> <dt>
 
-[_DFS_INFO_2 Struktur](/windows/desktop/api/lmdfs/ns-lmdfs-dfs_info_2)
+[_DFS_INFO_2-Struktur](/windows/desktop/api/lmdfs/ns-lmdfs-dfs_info_2)
 </dt> <dd>
 Enthält Informationen zu einem verteiltes Dateisystem (DFS)-Stamm oder -Link. Diese Struktur enthält den Namen, den Status und die Anzahl der DFS-Ziele für den Stamm oder Link.
 
@@ -49,7 +49,7 @@ Enthält Informationen zu einem verteiltes Dateisystem (DFS)-Stamm oder -Link. D
 
 </dd> <dt>
 
-[_DFS_INFO_5-Struktur](/windows/desktop/api/lmdfs/ns-lmdfs-dfs_info_5)
+[_DFS_INFO_5 Struktur](/windows/desktop/api/lmdfs/ns-lmdfs-dfs_info_5)
 </dt> <dd>
 Enthält Informationen zu einem verteiltes Dateisystem (DFS)-Stamm oder -Link. Diese Struktur enthält Name, Status, **GUID,** Time out, Namespace-/Stamm-/Linkeigenschaften, Metadatengröße und Anzahl der Ziele für den Stamm oder Link.
 
@@ -67,13 +67,13 @@ Enthält Informationen zu einem DFS-Namespace. Diese Struktur enthält die **Ver
 
 </dd> <dt>
 
-[_DFS_INFO_8-Struktur](/windows/desktop/api/lmdfs/ns-lmdfs-dfs_info_8)
+[_DFS_INFO_8 Struktur](/windows/desktop/api/lmdfs/ns-lmdfs-dfs_info_8)
 </dt> <dd>
 Enthält name, status, **GUID,** time-out, property flags, metadata size, DFS target information und link reparse point security descriptor for a root or link.
 
 </dd> <dt>
 
-[_DFS_INFO_9-Struktur](/windows/desktop/api/lmdfs/ns-lmdfs-dfs_info_9)
+[_DFS_INFO_9 Struktur](/windows/desktop/api/lmdfs/ns-lmdfs-dfs_info_9)
 </dt> <dd>
 Enthält name, status, **GUID,** time-out, property flags, metadata size, DFS target information, link reparse point security descriptor und eine Liste der DFS-Ziele für einen Stamm oder Link.
 
@@ -85,7 +85,7 @@ Enthält die DFS-Metadatenversion und die Funktionen eines vorhandenen DFS-Names
 
 </dd> <dt>
 
-[_DFS_INFO_100 Struktur](/windows/desktop/api/lmdfs/ns-lmdfs-dfs_info_100)
+[_DFS_INFO_100-Struktur](/windows/desktop/api/lmdfs/ns-lmdfs-dfs_info_100)
 </dt> <dd>
 Enthält einen Kommentar, der einem verteiltes Dateisystem (DFS)-Stamm oder -Link zugeordnet ist.
 
@@ -97,9 +97,9 @@ Beschreibt den Zustand des Speichers auf einem DFS-Stamm-, Link-, Stamm- oder Li
 
 </dd> <dt>
 
-[_DFS_INFO_102 Struktur](/windows/desktop/api/lmdfs/ns-lmdfs-dfs_info_102)
+[_DFS_INFO_102-Struktur](/windows/desktop/api/lmdfs/ns-lmdfs-dfs_info_102)
 </dt> <dd>
-Enthält einen Time out-Wert, der einem verteiltes Dateisystem -Stamm (DFS) oder einem Link in einem benannten DFS-Stamm zugeordnet werden soll.
+Enthält einen Time out-Wert, der einem verteiltes Dateisystem (DFS)-Stamm oder einem Link in einem benannten DFS-Stamm zugeordnet werden soll.
 
 </dd> <dt>
 
@@ -127,25 +127,25 @@ Enthält den Speicherstatus und die Priorität für ein DFS-Stammziel oder -Link
 
 </dd> <dt>
 
-[_DFS_INFO_107 Struktur](/windows/desktop/api/lmdfs/ns-lmdfs-dfs_info_107)
+[_DFS_INFO_107-Struktur](/windows/desktop/api/lmdfs/ns-lmdfs-dfs_info_107)
 </dt> <dd>
 Enthält Informationen zu einem DFS-Stamm oder -Link, einschließlich Kommentar, Status, Time out, Eigenschaftsflags und Sicherheitsbeschreibung des Verknüpfungsrearsepunkts.
 
 </dd> <dt>
 
-[_DFS_INFO_150-Struktur](/windows/desktop/api/lmdfs/ns-lmdfs-dfs_info_150)
+[_DFS_INFO_150 Struktur](/windows/desktop/api/lmdfs/ns-lmdfs-dfs_info_150)
 </dt> <dd>
 Enthält die Sicherheitsbeschreibung für den Wiederholungspunkt eines DFS-Links.
 
 </dd> <dt>
 
-[_DFS_INFO_200-Struktur](/windows/desktop/api/lmdfs/ns-lmdfs-dfs_info_200)
+[_DFS_INFO_200 Struktur](/windows/desktop/api/lmdfs/ns-lmdfs-dfs_info_200)
 </dt> <dd>
 Enthält den Namen eines domänenbasierten verteiltes Dateisystem-Namespace (DFS).
 
 </dd> <dt>
 
-[_DFS_INFO_300 Struktur](/windows/desktop/api/lmdfs/ns-lmdfs-dfs_info_300)
+[_DFS_INFO_300-Struktur](/windows/desktop/api/lmdfs/ns-lmdfs-dfs_info_300)
 </dt> <dd>
 Enthält den Namen und Typ (domänenbasiert oder eigenständig) eines DFS-Namespace.
 
@@ -157,7 +157,7 @@ Enthält Informationen zu einem DFS-Stamm- oder -Linkziel in einem DFS-Namespace
 
 </dd> <dt>
 
-[_DFS_STORAGE_INFO_1 Struktur](/windows/desktop/api/lmdfs/ns-lmdfs-dfs_storage_info_1)
+[_DFS_STORAGE_INFO_1-Struktur](/windows/desktop/api/lmdfs/ns-lmdfs-dfs_storage_info_1)
 </dt> <dd>
 Enthält Informationen zu einem DFS-Ziel, einschließlich des DFS-Zielservernamens und freigabenamens sowie des Status und der Priorität des Ziels.
 

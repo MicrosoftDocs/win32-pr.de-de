@@ -1,21 +1,21 @@
 ---
-description: Die WM- \_ syscolorchange-Meldung wird an alle Fenster der obersten Ebene gesendet, wenn eine Änderung an einer System Farbeinstellung vorgenommen wird.
+description: Die WM SYSCOLORCHANGE-Meldung wird an alle Fenster der obersten Ebene gesendet, wenn eine Änderung an einer \_ Systemfarbeinstellung vorgenommen wird.
 ms.assetid: ffe61768-86d6-4ea8-ae2d-1095a9afa925
-title: WM_SYSCOLORCHANGE Meldung (Winuser. h)
+title: WM_SYSCOLORCHANGE (Winuser.h)
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: ac3883f0534d91a6d852b0e70fbb4edabdcab56b
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 0e39ff8b5189da1a4cf48b7f6923c1cf12e8f30aa20fb26457d54a3f01d1b5c6
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "104980792"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118483099"
 ---
-# <a name="wm_syscolorchange-message"></a>WM- \_ syscolorchange-Meldung
+# <a name="wm_syscolorchange-message"></a>WM \_ SYSCOLORCHANGE-Meldung
 
-Die **WM- \_ syscolorchange** -Meldung wird an alle Fenster der obersten Ebene gesendet, wenn eine Änderung an einer System Farbeinstellung vorgenommen wird.
+Die **WM \_ SYSCOLORCHANGE-Meldung** wird an alle Fenster der obersten Ebene gesendet, wenn eine Änderung an einer Systemfarbeinstellung vorgenommen wird.
 
-Ein Fenster empfängt diese Meldung über seine [**WindowProc**](/previous-versions/windows/desktop/legacy/ms633573(v=vs.85)) -Funktion.
+Ein Fenster empfängt diese Nachricht über seine [**WindowProc-Funktion.**](/previous-versions/windows/desktop/legacy/ms633573(v=vs.85))
 
 
 ```C++
@@ -47,15 +47,15 @@ Dieser Parameter wird nicht verwendet.
 
 </dd> </dl>
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Das System sendet eine [**WM \_**](wm-paint.md) -Zeichnungs Meldung an jedes Fenster, das von einer System Farbänderung betroffen ist.
+Das System sendet eine [**WM \_ PAINT-Nachricht**](wm-paint.md) an jedes Fenster, das von einer Änderung der Systemfarbe betroffen ist.
 
-Anwendungen mit Pinseln, die die vorhandenen Systemfarben verwenden, sollten diese Pinsel löschen und mithilfe der neuen Systemfarben neu erstellen.
+Anwendungen mit Pinseln, die die vorhandenen Systemfarben verwenden, sollten diese Pinsel löschen und mit den neuen Systemfarben neu erstellen.
 
-Fenster der obersten Ebene, die allgemeine Steuerelemente verwenden, müssen die **WM- \_ syscolorchange** -Meldung an die Steuerelemente weiterleiten. andernfalls werden die Steuerelemente nicht über die Farbänderung benachrichtigt. Dadurch wird sichergestellt, dass die von den allgemeinen Steuerelementen verwendeten Farben mit den Farben übereinstimmen, die von anderen Benutzeroberflächen Objekten verwendet werden. Beispielsweise verwendet ein ToolBar-Steuerelement die Farbe "3D-Objekte", um seine Schaltflächen zu zeichnen. Wenn der Benutzer die 3D-Objekt Farbe ändert, aber die **WM- \_ syscolorchange** -Meldung nicht an die Symbolleiste weitergeleitet wird, bleiben die Schaltflächen der Symbolleiste in der ursprünglichen Farbe, während sich die Farbe anderer Schaltflächen im System ändert.
+Fenster auf oberster Ebene, die allgemeine Steuerelemente verwenden, müssen die **WM \_ SYSCOLORCHANGE-Meldung** an die Steuerelemente weitersennen. Andernfalls werden die Steuerelemente nicht über die Farbänderung benachrichtigt. Dadurch wird sichergestellt, dass die von Ihren allgemeinen Steuerelementen verwendeten Farben mit denen anderer Benutzeroberflächenobjekte konsistent sind. Beispielsweise verwendet ein Symbolleisten-Steuerelement die Farbe "3D-Objekte", um seine Schaltflächen zu zeichnen. Wenn der Benutzer die Farbe der 3D-Objekte ändert, die **WM \_ SYSCOLORCHANGE-Meldung** jedoch nicht an die Symbolleiste weitergeleitet wird, verbleiben die Symbolleistenschaltflächen in ihrer ursprünglichen Farbe, während sich die Farbe anderer Schaltflächen im System ändert.
 
-## <a name="requirements"></a>Requirements (Anforderungen)
+## <a name="requirements"></a>Anforderungen
 
 
 
@@ -63,7 +63,7 @@ Fenster der obersten Ebene, die allgemeine Steuerelemente verwenden, müssen die
 |-------------------------------------|----------------------------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional \[nur Desktop-Apps\]<br/>                                               |
 | Unterstützte Mindestversion (Server)<br/> | Windows 2000 Server \[nur Desktop-Apps\]<br/>                                                     |
-| Header<br/>                   | <dl> <dt>Winuser. h (Windows. h einschließen)</dt> </dl> |
+| Header<br/>                   | <dl> <dt>Winuser.h (include Windows.h)</dt> </dl> |
 
 
 
@@ -74,10 +74,10 @@ Fenster der obersten Ebene, die allgemeine Steuerelemente verwenden, müssen die
 [Übersicht über Farben](colors.md)
 </dt> <dt>
 
-[Farb Meldungen](color-messages.md)
+[Farbmeldungen](color-messages.md)
 </dt> <dt>
 
-[**WM- \_ Paint**](wm-paint.md)
+[**WM \_ PAINT**](wm-paint.md)
 </dt> </dl>
 
  

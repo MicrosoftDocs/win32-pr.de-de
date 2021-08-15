@@ -1,5 +1,5 @@
 ---
-description: Die maximale Öffnung der Brille, die von der Kamera aufgezeichnet wird, die aus den EXIF-Informationen (Exchangeable Image File) übernommen wird.
+description: Die maximale Öffnung der Brille, wie von der Kamera aufgezeichnet, die aus den EXIF-Informationen (Exchangeable Image File) entnommen wird.
 ms.assetid: 363ec646-be17-4616-8b22-091d7807c727
 title: System.Photo.MaxAperture
 ms.topic: article
@@ -13,7 +13,7 @@ ms.locfileid: "118228184"
 ---
 # <a name="systemphotomaxaperture"></a>System.Photo.MaxAperture
 
-Die maximale Öffnung der Brille, die von der Kamera aufgezeichnet wird, die aus den EXIF-Informationen (Exchangeable Image File) übernommen wird. Diese Eigenschaft wird aus [System.Photo.MaxApertureNumerator](./props-system-photo-maxaperturenumerator.md) und [System.Photo.MaxApertureDenominator berechnet.](./props-system-photo-maxaperturedenominator.md)
+Die maximale Öffnung der Brille, wie von der Kamera aufgezeichnet, die aus den EXIF-Informationen (Exchangeable Image File) entnommen wird. Diese Eigenschaft wird aus [System.Photo.MaxApertureNumerator](./props-system-photo-maxaperturenumerator.md) und [System.Photo.MaxApertureDenominator](./props-system-photo-maxaperturedenominator.md)berechnet.
 
 ## <a name="windows-10-version-1703-windows-10-version-1607-windows-10-version-1511-windows-10-version-1507-windows-81-windows-8-windows-7-windows-vista"></a>Windows 10, Version 1703, Windows 10, Version 1607, Windows 10, Version 1511, Windows 10, Version 1507, Windows 8.1, Windows 8, Windows 7, Windows Vista
 

@@ -1,7 +1,7 @@
 ---
 description: Registriert benutzerdefinierte Vorlagen.
 ms.assetid: e142a0f2-d0ef-4479-82cd-ba8d5059d1d2
-title: 'ID3DXFile:: registertemplates-Methode (D3DX9Xof. h)'
+title: ID3DXFile::RegisterTemplates-Methode (D3DX9Xof.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -14,14 +14,14 @@ api_type:
 api_location:
 - D3dx9.lib
 - D3dx9.dll
-ms.openlocfilehash: b7864b63d55ba219c5076920acc809f824bc1820
-ms.sourcegitcommit: 14010c34b35fa268046c7683f021f86de08ddd0a
+ms.openlocfilehash: b6dba0b79b7a7baaa6a05daf0b30609a129e76ab80529289a48b9b379426f33c
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "106361220"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118520785"
 ---
-# <a name="id3dxfileregistertemplates-method"></a>ID3DXFile:: registertemplates-Methode
+# <a name="id3dxfileregistertemplates-method"></a>ID3DXFile::RegisterTemplates-Methode
 
 Registriert benutzerdefinierte Vorlagen.
 
@@ -41,21 +41,21 @@ HRESULT RegisterTemplates(
 
 <dl> <dt>
 
-*pvData* \[ in\]
+*pvData* \[ In\]
 </dt> <dd>
 
-Geben Sie Folgendes ein: **[ **lpcvoid**](../winprog/windows-data-types.md)**
+Typ: **[ **LPCVOID**](../winprog/windows-data-types.md)**
 
-Ein Zeiger auf einen Puffer, der aus einer x-Datei im Text-oder Binärformat besteht, das Vorlagen enthält.
+Zeiger auf einen Puffer, der aus einer X-Datei im Text- oder Binärformat besteht, die Vorlagen enthält.
 
 </dd> <dt>
 
-*CBSIZE* \[ in\]
+*cbSize* \[ In\]
 </dt> <dd>
 
-Typ: **[ **Größe \_ T**](../winprog/windows-data-types.md)**
+Typ: **[ **SIZE \_ T**](../winprog/windows-data-types.md)**
 
-Größe des Puffers, auf den pvData zeigt (in Bytes).
+Größe des Puffers, auf den pvData zeigt, in Bytes.
 
 </dd> </dl>
 
@@ -63,11 +63,11 @@ Größe des Puffers, auf den pvData zeigt (in Bytes).
 
 Typ: **[ **HRESULT**](https://msdn.microsoft.com/library/Bb401631(v=MSDN.10).aspx)**
 
-Wenn die Methode erfolgreich ausgeführt wird, ist der Rückgabewert S \_ OK. Wenn die Methode fehlschlägt, kann der Rückgabewert einer der folgenden sein: D3DXFERR \_ badvalue, D3DXFERR Parameter \_ Error.
+Wenn die Methode erfolgreich ist, ist der Rückgabewert S \_ OK. Wenn bei der Methode ein Fehler auftritt, kann der Rückgabewert einer der folgenden Sein: D3DXFERR \_ BADVALUE, D3DXFERR \_ PARSEERROR.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Das folgende Code Fragment stellt einen Beispiel aufzurufen von **Register Templates** und Beispiel Inhalt für den Puffer bereit, in den **pvData** verweist.
+Das folgende Codefragment enthält einen Beispielaufruf von **RegisterTemplates** und Beispielinhalten für den Puffer, auf **den pvData** zeigt.
 
 
 ```
@@ -113,7 +113,7 @@ goto End;
 
 Alle Vorlagen müssen einen Namen und eine UUID angeben.
 
-Diese Methode ruft die [**registerenumtemplates**](id3dxfile--registerenumtemplates.md) -Methode auf und erhält durch Aufrufen von [**createenumubject**](id3dxfile--createenumobject.md) mit **pvData** als ersten Parameter einen [**ID3DXFileEnumObject**](id3dxfileenumobject.md) -Schnittstellen Zeiger.
+Diese Methode ruft die [**RegisterEnumTemplates-Methode**](id3dxfile--registerenumtemplates.md) auf und ruft einen [**ID3DXFileEnumObject-Schnittstellenzeiger**](id3dxfileenumobject.md) durch Aufrufen von [**CreateEnumObject**](id3dxfile--createenumobject.md) mit **pvData** als ersten Parameter ab.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -121,19 +121,19 @@ Diese Methode ruft die [**registerenumtemplates**](id3dxfile--registerenumtempla
 
 | Anforderung | Wert |
 |--------------------|---------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>D3DX9Xof. h</dt> </dl> |
-| Bibliothek<br/> | <dl> <dt>D3dx9. lib</dt> </dl>  |
+| Header<br/>  | <dl> <dt>D3DX9Xof.h</dt> </dl> |
+| Bibliothek<br/> | <dl> <dt>D3dx9.lib</dt> </dl>  |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
 [ID3DXFile](id3dxfile.md)
 </dt> <dt>
 
-[**Registerenumtemplates**](id3dxfile--registerenumtemplates.md)
+[**RegisterEnumTemplates**](id3dxfile--registerenumtemplates.md)
 </dt> </dl>
 
  

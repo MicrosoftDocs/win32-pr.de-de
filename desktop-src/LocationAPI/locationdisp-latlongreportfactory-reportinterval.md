@@ -1,7 +1,7 @@
 ---
-description: Das aktuelle Berichts Ereignis Intervall (breiten-/Längen Grad) in Millisekunden.
+description: Das aktuelle Ereignisintervall für den Breiten-/Längengradbericht in Millisekunden.
 ms.assetid: bb33c4c1-805d-4519-8363-b0221d420b36
-title: LocationDisp. latlongreportfactory. reportinterval (Eigenschaft)
+title: LocationDisp.LatLongReportFactory.ReportInterval (Eigenschaft)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -12,18 +12,18 @@ api_name:
 api_type:
 - COM
 api_location: ''
-ms.openlocfilehash: b456f69a70655b22b1eca30e02d9d5369d19f38c
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: d12ceab473ae9375a9a1a96ff28d5389cccf324f4a447f17df7c628a514dcf4c
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "104216572"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118386687"
 ---
-# <a name="locationdisplatlongreportfactoryreportinterval-property"></a>LocationDisp. latlongreportfactory. reportinterval (Eigenschaft)
+# <a name="locationdisplatlongreportfactoryreportinterval-property"></a>LocationDisp.LatLongReportFactory.ReportInterval (Eigenschaft)
 
-\[Das Location-API-Objektmodell ist für die Verwendung in den Betriebssystemen verfügbar, die im Abschnitt "Anforderungen" angegeben sind. Es kann in nachfolgenden Versionen geändert oder entfernt werden. Verwenden Sie stattdessen die [W3C-geolozierungs-API](/previous-versions/windows/internet-explorer/ie-developer/samples/gg589513(v=vs.85)), um auf den Standort von einer Website zuzugreifen. Verwenden Sie die [**Windows. Devices. Geolokation**](/uwp/api/Windows.Devices.Geolocation) -API, um auf den Speicherort einer Desktop Anwendung zuzugreifen.\]
+\[Das Location-API-Objektmodell steht für die Verwendung in den im Abschnitt Anforderungen angegebenen Betriebssystemen zur Verfügung. Es kann in nachfolgenden Versionen geändert oder entfernt werden. Verwenden Sie stattdessen die [W3C-Geolocation-API,](/previous-versions/windows/internet-explorer/ie-developer/samples/gg589513(v=vs.85))um von einer Website aus auf den Standort zuzugreifen. Um von einer Desktopanwendung aus auf den Speicherort zu zugreifen, verwenden Sie [**die Windows. Devices.Geolocation-API.**](/uwp/api/Windows.Devices.Geolocation)\]
 
-Das aktuelle Berichts Ereignis Intervall (breiten-/Längen Grad) in Millisekunden.
+Das aktuelle Ereignisintervall für den Breiten-/Längengradbericht in Millisekunden.
 
 Dies ist eine Eigenschaft mit Lese- und Schreibzugriff.
 
@@ -39,11 +39,11 @@ LocationDisp.LatLongReportFactory.ReportInterval = ReportInterval
 
 ## <a name="property-value"></a>Eigenschaftswert
 
-Diese Eigenschaft ist ein Lese- **/Schreib-ULONG**.
+Diese Eigenschaft ist ein ULONG-Objekt mit **Lese-/Schreibzugriff.**
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Dieser Wert ist eine Anforderung an den Speicherort Anbieter. Es ist nicht erforderlich, dass der standortanbieter Berichte in dem von Ihnen angeforderten Intervall bereitstellt. Lesen Sie den Wert dieser Eigenschaft, um die Einstellung für das tatsächliche Berichts Intervall zu ermitteln.
+Dieser Wert ist eine Anforderung an den Standortanbieter. Der Standortanbieter muss in dem von Ihnen geforderten Intervall keine Berichte bereitstellen. Lesen Sie den Wert dieser Eigenschaft, um die Einstellung true report interval zu finden.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -51,7 +51,7 @@ Dieser Wert ist eine Anforderung an den Speicherort Anbieter. Es ist nicht erfor
 
 | Anforderung | Wert |
 |-------------------------------------|--------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows 7 \[ -Desktop-Apps\]<br/> |
+| Unterstützte Mindestversion (Client)<br/> | Windows 7 \[ Desktop-Apps\]<br/> |
 | Unterstützte Mindestversion (Server)<br/> | Nicht unterstützt<br/>                  |
 
 

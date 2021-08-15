@@ -1,5 +1,5 @@
 ---
-description: Zeitstempel des angegebenen Subjekts und gibt optional einen Zeiger auf eine Signatur Geber- \_ Kontext Struktur zurück, die einen Zeiger auf ein BLOB enthält. Diese Funktion kann verwendet werden, um die X. 509-Public Key-Infrastruktur, RFC 3161&\# 8211; kompatible Zeitstempel, auszuführen.
+description: Stempelt den angegebenen Betreff und gibt optional einen Zeiger auf eine SIGNER CONTEXT-Struktur zurück, die einen Zeiger \_ auf ein BLOB enthält. Diese Funktion kann verwendet werden, um X.509 Public Key Infrastructure, RFC 3161&\# 8211;kompatibel, Zeitstempel durchzuführen.
 ms.assetid: fb82545b-c00f-44eb-96f4-aa27a125c8d9
 title: SignerTimeStampEx2-Funktion
 ms.topic: reference
@@ -13,19 +13,19 @@ api_type:
 - DllExport
 api_location:
 - Mssign32.dll
-ms.openlocfilehash: 07dc9162c9cb8832e93e2518c7208d235d878875
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: c5a9bfc81c3196657f611c9263e0d957ca867a64479b34900dce7078237e195f
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106351455"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118898269"
 ---
 # <a name="signertimestampex2-function"></a>SignerTimeStampEx2-Funktion
 
-Der **SignerTimeStampEx2** -Funktions Zeitstempel des angegebenen Subjekts und gibt optional einen Zeiger auf eine Signatur Geber- [**\_ Kontext**](signer-context.md) Struktur zurück, die einen Zeiger auf ein [*BLOB*](../secgloss/b-gly.md)enthält. Diese Funktion kann verwendet werden, um die X. 509-Public Key-Infrastruktur, RFC 3161 – kompatible, Zeitstempel auszuführen.
+Die **SignerTimeStampEx2-Funktion** stempelt den angegebenen Betreff und gibt optional einen Zeiger auf eine [**SIGNER \_ CONTEXT-Struktur**](signer-context.md) zurück, die einen Zeiger auf ein [*BLOB enthält.*](../secgloss/b-gly.md) Diese Funktion kann verwendet werden, um X.509 Public Key Infrastructure, RFC 3161-konforme Zeitstempel, durchzuführen.
 
 > [!Note]  
-> Diese Funktion verfügt über keine zugeordnete Header Datei oder Import Bibliothek. Um diese Funktion aufzurufen, müssen Sie eine benutzerdefinierte Header Datei erstellen und die [**LoadLibrary**](/windows/win32/api/libloaderapi/nf-libloaderapi-loadlibrarya) -Funktion und die [**GetProcAddress**](/windows/win32/api/libloaderapi/nf-libloaderapi-getprocaddress) -Funktion verwenden, um dynamisch mit Mssign32.dll zu verknüpfen.
+> Dieser Funktion ist keine Headerdatei oder Importbibliothek zugeordnet. Zum Aufrufen dieser Funktion müssen Sie eine benutzerdefinierte Headerdatei erstellen und die [**Funktionen LoadLibrary**](/windows/win32/api/libloaderapi/nf-libloaderapi-loadlibrarya) und [**GetProcAddress**](/windows/win32/api/libloaderapi/nf-libloaderapi-getprocaddress) verwenden, um eine dynamische Verknüpfung mit Mssign32.dll.
 
  
 
@@ -50,17 +50,17 @@ HRESULT WINAPI SignerTimeStampEx2(
 
 <dl> <dt>
 
-*dwFlags* \[ in\]
+*dwFlags* \[ In\]
 </dt> <dd>
 
--Wert, der den Typ des zu generierenden Zeitstempels angibt. Dieser Parameter kann einen der folgenden Werte annehmen. Die Werte schließen sich gegenseitig aus.
+Ein Wert, der den Typ des zu generierenden Zeitstempels angibt. Dieser Parameter kann einen der folgenden Werte annehmen. Die Werte schließen sich gegenseitig aus.
 
 
 
 | Wert                                                                                                                                                                                                          | Bedeutung                                                |
 |----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|--------------------------------------------------------|
-| <span id="SIGNER_TIMESTAMP_AUTHENTICODE"></span><span id="signer_timestamp_authenticode"></span><dl> <dt>**Signatur Geber- \_ Zeitstempel \_ Authenticode**</dt> </dl> | Gibt einen Authenticode-Zeitstempel an.<br/>       |
-| <span id="SIGNER_TIMESTAMP_RFC3161"></span><span id="signer_timestamp_rfc3161"></span><dl> <dt>**Signatur Geber- \_ Zeitstempel \_ Timestampserver**</dt> </dl>                | Gibt einen RFC 3161 – kompatiblen Zeitstempel an.<br/> |
+| <span id="SIGNER_TIMESTAMP_AUTHENTICODE"></span><span id="signer_timestamp_authenticode"></span><dl> <dt>**SIGNER \_ TIMESTAMP \_ AUTHENTICODE**</dt> </dl> | Gibt einen Authenticode-Zeitstempel an.<br/>       |
+| <span id="SIGNER_TIMESTAMP_RFC3161"></span><span id="signer_timestamp_rfc3161"></span><dl> <dt>**SIGNATURER \_ TIMESTAMP \_ RFC3161**</dt> </dl>                | Gibt einen RFC 3161-kompatiblen Zeitstempel an.<br/> |
 
 
 
@@ -68,57 +68,57 @@ HRESULT WINAPI SignerTimeStampEx2(
 
 </dd> <dt>
 
-*psubjetinfo* \[ in\]
+*pSubjectInfo* \[ In\]
 </dt> <dd>
 
-Die Adresse einer [**Signatur Geber- \_ \_ Informations**](signer-subject-info.md) Struktur, die den Betreff darstellt, der mit einem Zeitstempel versehen werden soll.
+Die Adresse einer [**SIGNER \_ SUBJECT \_ INFO-Struktur,**](signer-subject-info.md) die das Subjekt darstellt, für das ein Zeitstempel verwendet werden soll.
 
 </dd> <dt>
 
-*pwszhttptimestamp* \[ in\]
+*pwszHttpTimeStamp* \[ In\]
 </dt> <dd>
 
-Die Adresse einer null-terminierten Unicode-Zeichenfolge, die die URL eines Zeitstempel Servers enthält.
+Die Adresse einer auf NULL beendeten Unicode-Zeichenfolge, die die URL eines Zeitstempelservers enthält.
 
 </dd> <dt>
 
-*dwalgid* \[ in\]
+*dwAlgId* \[ In\]
 </dt> <dd>
 
-Gibt einen Hash Algorithmus an, der zum Ausführen von RFC 3161 – kompatiblen Zeitstempeln verwendet werden soll. Dieser Parameter wird bei Authenticode-Zeitstempeln ignoriert.
+Gibt einen Hashalgorithmus an, der zum Ausführen von RFC 3161-kompatiblen Zeitstempeln verwendet werden soll. Dieser Parameter wird für Authenticode-Zeitstempel ignoriert.
 
 </dd> <dt>
 
-*psrequest* \[ in\]
+*psRequest* \[ In\]
 </dt> <dd>
 
-Dies ist optional. Die Adresse einer [**crypt- \_ Attribut**](/windows/desktop/api/Wincrypt/ns-wincrypt-crypt_attributes) Struktur, die zusätzliche Attribute enthält, die der Zeitstempel Anforderung hinzugefügt werden.
+Optional. Die Adresse einer [**CRYPT \_ ATTRIBUTES-Struktur,**](/windows/desktop/api/Wincrypt/ns-wincrypt-crypt_attributes) die zusätzliche Attribute enthält, die der Zeitstempelanforderung hinzugefügt werden.
 
-Dieser Parameter ist optional und kann **null** sein, wenn er nicht eingeschlossen ist.
+Dieser Parameter ist optional und kann **NULL sein,** wenn er nicht enthalten ist.
 
 </dd> <dt>
 
-*psipdata* \[ in\]
+*pSipData* \[ In\]
 </dt> <dd>
 
-Dies ist optional. Ein 32-Bit-Wert, der als zusätzliche Daten an SIP-Funktionen ( [*Subject Interface Package, subject Interface Package*](../secgloss/s-gly.md) ) weitergeleitet wird. Das Format und der Inhalt dieses Parameters werden vom SIP-Anbieter definiert.
+Optional. Ein 32-Bit-Wert, der als zusätzliche Daten an DIE-Funktionen [*(Subject Interface Package)*](../secgloss/s-gly.md) übergeben wird. Das Format und der Inhalt dieses Parameters werden vom SIP-Anbieter definiert.
 
-Dieser Parameter ist optional und kann **null** sein, wenn er nicht eingeschlossen ist.
+Dieser Parameter ist optional und kann **NULL sein,** wenn er nicht enthalten ist.
 
 </dd> <dt>
 
-*ppsignercontext* \[ vorgenommen\]
+*ppSignerContext* \[ out\]
 </dt> <dd>
 
-Dies ist optional. Die Adresse eines Zeigers auf die [**Signatur Geber- \_ Kontext**](signer-context.md) Struktur, die das signierte BLOB enthält. Wenn Sie die Signatur Geber- **\_ Kontext** Struktur nicht mehr verwenden, können Sie Sie durch Aufrufen der [**signerfreesignercontext**](signerfreesignercontext.md) -Funktion freigeben.
+Optional. Die Adresse eines Zeigers auf die [**SIGNER \_ CONTEXT-Struktur,**](signer-context.md) die das signierte BLOB enthält. Wenn Sie die **SIGNER \_ CONTEXT-Struktur** nicht mehr verwenden, geben Sie sie frei, indem Sie die [**SignerFreeSignerContext-Funktion**](signerfreesignercontext.md) aufrufen.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Wenn die Funktion erfolgreich ausgeführt wird, gibt die Funktion S \_ OK zurück.
+Wenn die Funktion erfolgreich ist, gibt sie S \_ OK zurück.
 
-Wenn die Funktion fehlschlägt, wird ein **HRESULT** -Wert zurückgegeben, der den Fehler angibt. Eine Liste der allgemeinen Fehlercodes finden Sie unter [Allgemeine HRESULT-Werte](common-hresult-values.md).
+Wenn die Funktion fehlschlägt, wird ein **HRESULT-Wert** zurückgegeben, der den Fehler angibt. Eine Liste der allgemeinen Fehlercodes finden Sie unter [Allgemeine HRESULT-Werte](common-hresult-values.md).
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -126,20 +126,20 @@ Wenn die Funktion fehlschlägt, wird ein **HRESULT** -Wert zurückgegeben, der d
 
 | Anforderung | Wert |
 |-------------------------------------|-----------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows 7 \[ -Desktop-Apps\]<br/>                                              |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2008 R2 \[ -Desktop-Apps\]<br/>                                 |
+| Unterstützte Mindestversion (Client)<br/> | Windows 7 \[ Desktop-Apps\]<br/>                                              |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server 2008 \[ R2-Desktop-Apps\]<br/>                                 |
 | DLL<br/>                      | <dl> <dt>Mssign32.dll</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Signertimestamp**](signertimestamp.md)
+[**SignerTimeStamp**](signertimestamp.md)
 </dt> <dt>
 
-[**Signertimestampex**](signertimestampex.md)
+[**SignerTimeStampEx**](signertimestampex.md)
 </dt> </dl>
 
  

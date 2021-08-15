@@ -13,12 +13,12 @@ api_type:
 ms.topic: reference
 ms.date: 05/31/2018
 api_location: ''
-ms.openlocfilehash: 1a2d351eb36c6910790e2dceb94e3a97951ad850
-ms.sourcegitcommit: 592c9bbd22ba69802dc353bcb5eb30699f9e9403
-ms.translationtype: HT
+ms.openlocfilehash: ac8be8a81cca5c0ed7377475f2e3688a8c0c90c33fddcaab8c4de0f15f174eca
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "104976800"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118514773"
 ---
 # <a name="asuint"></a>asuint
 
@@ -26,7 +26,7 @@ Interpretiert das Bitmuster von *x* als ganze Zahl ohne Vorzeichen.
 
 
 
-| Ret-Taste (*x*) |
+| ret asuint(*x*) |
 |-----------------|
 
 
@@ -39,7 +39,7 @@ Interpretiert das Bitmuster von *x* als ganze Zahl ohne Vorzeichen.
 
 | Element                                                   | BESCHREIBUNG                        |
 |--------------------------------------------------------|------------------------------------|
-| <span id="x"></span><span id="X"></span>*Stuben*<br/> | \[im \] Eingabe Wert.<br/> |
+| <span id="x"></span><span id="X"></span>*X*<br/> | \[in \] Der Eingabewert.<br/> |
 
 
 
@@ -55,25 +55,25 @@ Die Eingabe, die als ganze Zahl ohne Vorzeichen interpretiert wird.
 
 | Name  | [**Vorlagentyp**](dx-graphics-hlsl-intrinsic-functions.md)                                                  | [**Komponententyp**](dx-graphics-hlsl-intrinsic-functions.md)                 | Size                           |
 |-------|----------------------------------------------------------------------------------------------------------------|--------------------------------------------------------------------------------|--------------------------------|
-| *x*   | [**Skalar**](dx-graphics-hlsl-intrinsic-functions.md), **Vektor** oder **Matrix** | [**float**](/windows/desktop/WinProg/windows-data-types), [ **int**](/windows/desktop/WinProg/windows-data-types) | any                            |
-| *TZI* | identisch mit Eingabe *x*                                                                                              | [**uint**](/windows/desktop/WinProg/windows-data-types)                                         | gleiche Dimension (n) wie Eingabe *x* |
+| *x*   | [**Skalar,**](dx-graphics-hlsl-intrinsic-functions.md) **Vektor** oder **Matrix** | [**float,**](/windows/desktop/WinProg/windows-data-types) [ **int**](/windows/desktop/WinProg/windows-data-types) | any                            |
+| *Ret* | identisch mit Eingabe *x*                                                                                              | [**uint**](/windows/desktop/WinProg/windows-data-types)                                         | Gleiche Dimension(n) wie Eingabe *x* |
 
 
 
  
 
-## <a name="minimum-shader-model"></a>Minimaler Shader-Modell
+## <a name="minimum-shader-model"></a>Minimales Shadermodell
 
-Diese Funktion wird in den folgenden shadermodellen unterstützt.
+Diese Funktion wird in den folgenden Shadermodellen unterstützt.
 
 
 
 | Shadermodell                                                        | Unterstützt |
 |---------------------------------------------------------------------|-----------|
-| [Shader Model 4](dx-graphics-hlsl-sm4.md) und höhere shadermodelle | ja       |
-| [Shader-Modell 3 (DirectX HLSL)](dx-graphics-hlsl-sm3.md)           | nein        |
-| [Shader-Modell 2 (DirectX HLSL)](dx-graphics-hlsl-sm2.md)           | nein        |
-| [Shader-Modell 1 (DirectX HLSL)](dx-graphics-hlsl-sm1.md)           | Nein        |
+| [Shadermodell 4](dx-graphics-hlsl-sm4.md) und höhere Shadermodelle | ja       |
+| [Shadermodell 3 (DirectX HLSL)](dx-graphics-hlsl-sm3.md)           | nein        |
+| [Shadermodell 2 (DirectX HLSL)](dx-graphics-hlsl-sm2.md)           | nein        |
+| [Shadermodell 1 (DirectX HLSL)](dx-graphics-hlsl-sm1.md)           | Nein        |
 
 
 
@@ -83,7 +83,7 @@ Diese Funktion wird in den folgenden shadermodellen unterstützt.
 
 <dl> <dt>
 
-[**Intrinsische Funktionen (DirectX HLSL)**](dx-graphics-hlsl-intrinsic-functions.md)
+[**Systeminterne Funktionen (DirectX HLSL)**](dx-graphics-hlsl-intrinsic-functions.md)
 </dt> </dl>
 
  

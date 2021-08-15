@@ -33,7 +33,7 @@ ms.locfileid: "118420377"
 ---
 # <a name="cim_videocontrollerresolution-class"></a>CIM \_ VideoControllerResolution-Klasse
 
-Die **CIM \_ VideoControllerResolution-Klasse** stellt die verschiedenen Videomodi dar, die ein Videocontroller unterstützen kann. Videomodi werden durch die mögliche horizontale und vertikale Auflösung, die Aktualisierungsrate, den Scanmodus und die Anzahl der von einem Controller unterstützten Farbeinstellungen definiert. Die tatsächlichen Auflösungen sind die werte, die im [**CIM \_ VideoController-Objekt angegeben**](cim-videocontroller.md) sind.
+Die **CIM \_ VideoControllerResolution-Klasse** stellt die verschiedenen Videomodi dar, die ein Videocontroller unterstützen kann. Videomodi werden durch die möglichen horizontalen und vertikalen Auflösungen, die Aktualisierungsrate, den Scanmodus und die Anzahl von Farbeinstellungen definiert, die von einem Controller unterstützt werden. Die tatsächlichen Auflösungen sind die Werte, die im [**CIM \_ VideoController-Objekt angegeben**](cim-videocontroller.md) sind.
 
 Hardware, die nicht mit dem Windows Display Driver Model (WDDM) kompatibel ist, gibt ungenaue Eigenschaftswerte für Instanzen dieser Klasse zurück.
 
@@ -42,7 +42,7 @@ Hardware, die nicht mit dem Windows Display Driver Model (WDDM) kompatibel ist, 
 
  
 
-Die folgende Syntax wird durch Managed Object Format (MOF)-Code vereinfacht und enthält alle geerbten Eigenschaften. Eigenschaften werden in alphabetischer Reihenfolge und nicht in MOF-Reihenfolge aufgelistet.
+Die folgende Syntax wird durch Managed Object Format (MOF)-Code vereinfacht und enthält alle geerbten Eigenschaften. Eigenschaften werden in alphabetischer Reihenfolge und nicht in MOF-Reihenfolge aufgeführt.
 
 ## <a name="syntax"></a>Syntax
 
@@ -78,7 +78,7 @@ Die **CIM \_ VideoControllerResolution-Klasse** verfügt über diese Eigenschaft
 **Caption**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
@@ -96,7 +96,7 @@ Diese Eigenschaft wird von der [**CIM-Einstellung \_ geerbt.**](cim-setting.md)
 **Beschreibung**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
@@ -136,7 +136,7 @@ Zugriffstyp: Schreibgeschützt
 Qualifizierer: [**ModelCorrespondence**](/windows/desktop/WmiSdk/standard-qualifiers) ("[**CIM \_ VideoController**](cim-videocontroller.md).**MaxRefreshRate**"), [**MappingStrings**](/windows/desktop/WmiSdk/standard-qualifiers) ("MIF. DMTF \| Monitor Resolution \| 002.7"), [**Units**](/windows/desktop/WmiSdk/standard-qualifiers) ("hertz")
 </dt> </dl>
 
-Maximale Aktualisierungsrate, wenn ein Bereich von Raten mit den angegebenen Auflösungen in Hertz unterstützt wird.
+Maximale Aktualisierungsrate, wenn ein Bereich von Raten mit den angegebenen Auflösungen in hertz unterstützt wird.
 
 </dd> <dt>
 
@@ -152,7 +152,7 @@ Zugriffstyp: Schreibgeschützt
 Qualifizierer: [**ModelCorrespondence**](/windows/desktop/WmiSdk/standard-qualifiers) ("[**CIM \_ VideoController**](cim-videocontroller.md).**MinRefreshRate**"), [**MappingStrings**](/windows/desktop/WmiSdk/standard-qualifiers) ("MIF. DMTF \| Monitor Resolution \| 002.6"), [**Units**](/windows/desktop/WmiSdk/standard-qualifiers) ("hertz")
 </dt> </dl>
 
-Mindestaktualisierungsrate, wenn ein Bereich von Raten mit den angegebenen Auflösungen in Hertz unterstützt wird.
+Minimale Aktualisierungsrate, wenn ein Bereich von Raten mit den angegebenen Auflösungen in Hertz unterstützt wird.
 
 </dd> <dt>
 
@@ -250,7 +250,7 @@ Nicht geschachtelter Vorgang
 **SettingID**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt

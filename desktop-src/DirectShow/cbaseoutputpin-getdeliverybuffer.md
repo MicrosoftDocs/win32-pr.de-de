@@ -1,7 +1,7 @@
 ---
-description: Die getdeliverybuffer-Methode ruft ein Medien Beispiel ab, das einen leeren Puffer enthält.
+description: Die GetDeliveryBuffer-Methode ruft ein Medienbeispiel ab, das einen leeren Puffer enthält.
 ms.assetid: 5a20c11b-50f8-443e-a4d5-6bcffde741d5
-title: Cbaseoutputpin. getdeliverybuffer-Methode (amfilter. h)
+title: CBaseOutputPin.GetDeliveryBuffer-Methode (Amfilter.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -16,16 +16,16 @@ api_location:
 - Strmbase.dll
 - Strmbasd.lib
 - Strmbasd.dll
-ms.openlocfilehash: 332fad740c1ea904feee1a437273f21eb4c1def0
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 2d118e21ea67932529c41b35595619c6e03b907718708ba285aa2a6578177f7b
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106373953"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117823609"
 ---
-# <a name="cbaseoutputpingetdeliverybuffer-method"></a>Cbaseoutputpin. getdeliverybuffer-Methode
+# <a name="cbaseoutputpingetdeliverybuffer-method"></a>CBaseOutputPin.GetDeliveryBuffer-Methode
 
-Die- `GetDeliveryBuffer` Methode ruft ein Medien Beispiel ab, das einen leeren Puffer enthält.
+Die `GetDeliveryBuffer` -Methode ruft ein Medienbeispiel ab, das einen leeren Puffer enthält.
 
 ## <a name="syntax"></a>Syntax
 
@@ -45,52 +45,52 @@ virtual HRESULT GetDeliveryBuffer(
 
 <dl> <dt>
 
-*ppsample* 
+*ppSample* 
 </dt> <dd>
 
-Adresse einer Variablen, die einen Zeiger auf die [**imediasample**](/windows/desktop/api/Strmif/nn-strmif-imediasample) -Schnittstelle des Puffers empfängt.
+Adresse einer Variablen, die einen Zeiger auf die [**IMediaSample-Schnittstelle**](/windows/desktop/api/Strmif/nn-strmif-imediasample) des Puffers empfängt.
 
 </dd> <dt>
 
-*pstarttime* 
+*pStartTime* 
 </dt> <dd>
 
-Ein Zeiger auf die Startzeit des Beispiels oder **null**.
+Zeiger auf die Startzeit des Beispiels oder **NULL.**
 
 </dd> <dt>
 
-*Zeit* 
+*pEndTime* 
 </dt> <dd>
 
-Ein Zeiger auf die Endzeit der Stichprobe oder **null**.
+Zeiger auf die Endzeit des Beispiels oder **NULL.**
 
 </dd> <dt>
 
 *dwFlags* 
 </dt> <dd>
 
-Bitweise Kombination von Flags, die von der [**imemzuzucator:: GetBuffer**](/windows/desktop/api/Strmif/nf-strmif-imemallocator-getbuffer) -Schnittstelle unterstützt werden.
+Bitweise Kombination von Flags, die von der [**IMemAllocator::GetBuffer-Schnittstelle unterstützt**](/windows/desktop/api/Strmif/nf-strmif-imemallocator-getbuffer) werden.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt einen **HRESULT** -Wert zurück. Mögliche Werte sind die in der folgenden Tabelle aufgeführten Werte.
+Gibt einen **HRESULT-Wert** zurück. Mögliche Werte sind die in der folgenden Tabelle aufgeführten Werte.
 
 
 
 | Rückgabecode                                                                                   | Beschreibung                        |
 |-----------------------------------------------------------------------------------------------|------------------------------------|
 | <dl> <dt>**S \_ OK**</dt> </dl>          | Erfolg.<br/>                |
-| <dl> <dt>**E \_ nointerface**</dt> </dl> | Keine Zuweisung verfügbar.<br/> |
+| <dl> <dt>**E \_ NOINTERFACE**</dt> </dl> | Keine Zuweisung verfügbar.<br/> |
 
 
 
  
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Diese Methode ruft die **imemzuzucator:: GetBuffer** -Methode für die Zuweisung auf und übergibt die Parameter an diese Methode.
+Diese Methode ruft die **IMemAllocator::GetBuffer-Methode** für die Zuweisung auf und übergibt die Parameter an diese Methode.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -98,16 +98,16 @@ Diese Methode ruft die **imemzuzucator:: GetBuffer** -Methode für die Zuweisung
 
 | Anforderung | Wert |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>Amfilter. h (Include Streams. h)</dt> </dl>                                                                                  |
-| Bibliothek<br/> | <dl> " <dt>Straumbase. lib" (Einzelhandels Builds);</dt> " <dt>Straumbasd. lib" (Debugbuilds)</dt> </dl> |
+| Header<br/>  | <dl> <dt>Amfilter.h (include Streams.h)</dt> </dl>                                                                                  |
+| Bibliothek<br/> | <dl> <dt>Strmbase.lib (Einzelhandels-Builds); </dt> <dt>Strmbasd.lib (Debugbuilds)</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Cbaseoutputpin-Klasse**](cbaseoutputpin.md)
+[**CBaseOutputPin-Klasse**](cbaseoutputpin.md)
 </dt> </dl>
 
  

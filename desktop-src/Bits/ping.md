@@ -1,9 +1,9 @@
 ---
-title: Ping
-description: Verwenden Sie das pingpaket zum Herstellen einer Verbindung und Aushandeln der Sicherheit mit dem Server.
+title: Pingen
+description: Verwenden Sie das Ping-Paket, um eine Verbindung herzustellen und die Sicherheit mit dem Server auszuhandeln.
 ms.assetid: 10b01fe8-d1a3-4a3b-ac35-e3557d3ef4ee
 keywords:
-- Ping-Bits
+- Ping BITS
 topic_type:
 - apiref
 api_name:
@@ -12,16 +12,16 @@ api_type:
 - NA
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 86c9428a39cfaebbce150583d47a344c4a36ca66
-ms.sourcegitcommit: 476861130ea63675206d1f06e517059705b930ed
+ms.openlocfilehash: 479e03e6e18c0ec7421bd225744c5181029fc2b2e220f35c7bae7a3b02d42b07
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/06/2019
-ms.locfileid: "106340472"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120004890"
 ---
-# <a name="ping"></a>Ping
+# <a name="ping"></a>Pingen
 
-Verwenden Sie das **pingpaket** zum Herstellen einer Verbindung und Aushandeln der Sicherheit mit dem Server.
+Verwenden Sie das **Ping-Paket,** um eine Verbindung herzustellen und die Sicherheit mit dem Server auszuhandeln.
 
 ``` syntax
 BITS_POST remote-URL HTTP/1.1
@@ -32,39 +32,39 @@ BITS-Packet-Type: Ping
 
 <dl> <dt>
 
-<span id="BITS_POST"></span><span id="bits_post"></span>Bits- \_ Post
+<span id="BITS_POST"></span><span id="bits_post"></span>BITS \_ POST
 </dt> <dd>
 
-Bits-spezifisches Verb, das dieses Paket für den BITS-Server identifiziert.
+BITS-spezifisches Verb, das dieses Paket an den BITS-Server identifiziert.
 
-Ersetzen Sie Remote-URL durch den absoluten oder relativen URI. Ersetzen Sie in der Regel Remote-URL durch den Remote Dateinamen des Auftrags.
+Ersetzen Sie remote-URL durch den absoluten oder relativen URI. Ersetzen Sie remote-URL in der Regel durch den Remotedateinamen des Auftrags.
 
 </dd> <dt>
 
-<span id="BITS-Packet-Type"></span><span id="bits-packet-type"></span><span id="BITS-PACKET-TYPE"></span>Bits-Pakettyp
+<span id="BITS-Packet-Type"></span><span id="bits-packet-type"></span><span id="BITS-PACKET-TYPE"></span>BITS-Packet-Type
 </dt> <dd>
 
-Identifiziert dieses Anforderungspaket als Ping-Paket.
+Identifiziert dieses Anforderungspaket als Pingpaket.
 
 </dd> </dl>
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Das **Ping** -Paket ist optional. Anstatt ein **Ping** -Paket zu senden, können Sie das Paket " [**Create-Session**](create-session.md) " verwenden, um eine Verbindung herzustellen und Sicherheit auszuhandeln. Es ist jedoch effizienter, das **Ping** -Paket zu diesem Zweck zu verwenden.
+Das **Pingpaket** ist optional. Anstatt ein **Pingpaket** zu senden, können Sie das [**Paket Create-Session**](create-session.md) verwenden, um eine Verbindung herzustellen und die Sicherheit auszuhandeln. Es ist jedoch effizienter, das **Ping-Paket** für diesen Zweck zu verwenden.
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Bestätigung für Ping**](ack-for-ping.md)
+[**Ack für Ping**](ack-for-ping.md)
 </dt> <dt>
 
 [**Create-Session**](create-session.md)
 </dt> </dl>
 
- 
+ 
 
- 
+ 
 
 
 

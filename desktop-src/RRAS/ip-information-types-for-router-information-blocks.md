@@ -4,12 +4,12 @@ description: Erfahren Sie mehr über die IP-Informationstypen, die in Ipinfoid.h
 ms.assetid: 911c61d4-e500-48c6-8861-39dbc09ab4e7
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: a49abdb139eaa94440e380ce710280d744bd6ac5
-ms.sourcegitcommit: 91530c19d26ba4c57a6af1f37b57f211f580464e
+ms.openlocfilehash: 93a94829c116ac2dece2a9076d2b3cf37b42d60874bcc063a6f43811ee61b82b
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2021
-ms.locfileid: "112395115"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117790984"
 ---
 # <a name="ip-information-types-for-router-information-blocks"></a>IP-Informationstypen für Routerinformationsblöcke
 
@@ -28,7 +28,7 @@ Die folgenden Informationstypen sind in Ipinfoid.h aufgeführt. Verwenden Sie di
 -   \_ \_ IP-MCAST-LIMITINFORMATIONEN \_
 -   IP \_ PROT \_ PRIORITY \_ INFO
 -   \_ \_ IP-ROUTENINFORMATIONEN
--   \_ \_ IP-ROUTER-DATENTRÄGERINFORMATIONEN \_
+-   INFORMATIONEN ZUM \_ IP-ROUTER-DATENTRÄGER \_ \_
 
  
 

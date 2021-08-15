@@ -1,46 +1,46 @@
 ---
-title: On-Attribut (TextPath) (VML)
-description: On-Attribut (TextPath) (VML)
+title: On-Attribut (TextPath)(VML)
+description: On-Attribut (TextPath)(VML)
 ms.assetid: b4a88473-6d5f-42b3-afd6-86f602c83724
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 00ae791b1144046a1c29e92d11663cd15d696bc5
-ms.sourcegitcommit: 592c9bbd22ba69802dc353bcb5eb30699f9e9403
+ms.openlocfilehash: 0a7b1361bc0600ecca64e252ac25254d26b340cfd34a481de9424017de3381ad
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "104517090"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118345813"
 ---
-# <a name="on-attribute-textpathvml"></a>On-Attribut (TextPath) (VML)
+# <a name="on-attribute-textpathvml"></a>On-Attribut (TextPath)(VML)
 
-In diesem Thema wird VML beschrieben, eine Funktion, die ab Windows Internet Explorer 9 veraltet ist. Webseiten und Anwendungen, die auf VML basieren, sollten zu SVG oder anderen allgemein unterstützten Standards migriert werden.
+In diesem Thema wird VML beschrieben, ein Feature, das ab Version 9 Windows Internet Explorer ist. Webseiten und Anwendungen, die auf VML basieren, sollten zu SVG oder anderen weit verbreiteten Standards migriert werden.
 
 > [!Note]  
-> Ab Dezember 2011 wurde dieses Thema archiviert. Daher wird er nicht mehr aktiv verwaltet. Weitere Informationen finden Sie unter [archivierte Inhalte](/previous-versions/windows/internet-explorer/ie-developer/). Informationen, Empfehlungen und Anleitungen zur aktuellen Version von Windows Internet Explorer finden Sie im [Internet Explorer Developer Center](https://msdn.microsoft.com/ie/).
+> Seit Dezember 2011 wurde dieses Thema archiviert. Daher wird sie nicht mehr aktiv verwaltet. Weitere Informationen finden Sie unter [Archivierter Inhalt.](/previous-versions/windows/internet-explorer/ie-developer/) Informationen, Empfehlungen und Anleitungen zur aktuellen Version von Windows Internet Explorer finden Sie im [Internet Explorer Developer Center.](https://msdn.microsoft.com/ie/)
 
- 
+ 
 
-Definiert, ob der Text angezeigt wird. Lese-/Schreibzugriff. **Vgder State**.
+Definiert, ob der Text angezeigt wird. Lese-/Schreibzugriff. **VgTriState**.
 
 **Gilt für**
 
-[TextPath](msdn-online-vml-textpath-element.md)
+[Textpath](msdn-online-vml-textpath-element.md)
 
 **Tagsyntax**
 
-<v: *Element* on = " *Expression* " >
+<v: *element* on="-Ausdruck "> 
 
-**Skript Syntax**
+**Skriptsyntax**
 
-*Element* . on = "*Ausdruck*"
+*element* .on="*expression*"
 
-*Ausdruck* = *Element*. on
+*expression* = *.on-Element*
 
 **Anmerkungen**
 
-Der Standardwert ist **False**. Dieser Wert muss auf **true** festgelegt werden, um Text in einem Textpfad anzuzeigen.
+Der Standardwert ist **False**. Dieser Wert muss auf True festgelegt **werden,** um Text in einem Textpfad anzuzeigen.
 
-*VML-Standard Attribut*
+*VML-Standardattribut*
 
 **Beispiel**
 
@@ -58,6 +58,6 @@ Der Text im Textpfad wird angezeigt.
 
 
 
- 
+ 
 
- 
+ 

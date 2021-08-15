@@ -1,11 +1,11 @@
 ---
-title: ID3DX11EffectSamplerVariable getbackingstore-Methode (D3dx11effect. h)
-description: Einen Zeiger auf eine Variable mit dem samplerstatus erhalten.
+title: ID3DX11EffectSamplerVariable GetBackingStore-Methode (D3dx11effect.h)
+description: Sie erhalten einen Zeiger auf eine Variable, die den Samplerzustand enthält.
 ms.assetid: b188fb86-f54b-481e-9110-7b8af70ff303
 keywords:
-- Getbackingstore-Methode Direct3D 11
-- Getbackingstore-Methode Direct3D 11, ID3DX11EffectSamplerVariable-Schnittstelle
-- ID3DX11EffectSamplerVariable Interface Direct3D 11, getbackingstore-Methode
+- GetBackingStore-Methode Direct3D 11
+- GetBackingStore-Methode Direct3D 11, ID3DX11EffectSamplerVariable-Schnittstelle
+- ID3DX11EffectSamplerVariable-Schnittstelle Direct3D 11 , GetBackingStore-Methode
 topic_type:
 - apiref
 api_name:
@@ -17,16 +17,16 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 03f2d6ac3035d1dd2fd3aee8950135d7b4481862
-ms.sourcegitcommit: 14010c34b35fa268046c7683f021f86de08ddd0a
+ms.openlocfilehash: b51bba7ff1c23a7b842fc6f41ea623b19096b4cbf1691e5645d32cc1df02a2bf
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "104355366"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118534166"
 ---
-# <a name="id3dx11effectsamplervariablegetbackingstore-method"></a>ID3DX11EffectSamplerVariable:: getbackingstore-Methode
+# <a name="id3dx11effectsamplervariablegetbackingstore-method"></a>ID3DX11EffectSamplerVariable::GetBackingStore-Methode
 
-Einen Zeiger auf eine Variable mit dem samplerstatus erhalten.
+Sie erhalten einen Zeiger auf eine Variable, die den Samplerzustand enthält.
 
 ## <a name="syntax"></a>Syntax
 
@@ -47,18 +47,18 @@ HRESULT GetBackingStore(
 *Index* 
 </dt> <dd>
 
-Typ: **[ **uint**](/windows/desktop/WinProg/windows-data-types)**
+Typ: **[ **UINT**](/windows/desktop/WinProg/windows-data-types)**
 
-Indizieren Sie in ein Array von Sampler-Beschreibungen. Wenn nur eine samplervariable vorhanden ist, verwenden Sie 0.
+Index in ein Array von Samplerbeschreibungen. Wenn nur eine Samplervariable im Effekt ist, verwenden Sie 0.
 
 </dd> <dt>
 
-*psamplerdebug* 
+*pSamplerDesc* 
 </dt> <dd>
 
-Type: **[ **D3D11 \_ Sampler \_ DESC**](/windows/desktop/api/D3D11/ns-d3d11-d3d11_sampler_desc)\***
+Typ: **[ **D3D11 \_ SAMPLER \_ DESC**](/windows/desktop/api/D3D11/ns-d3d11-d3d11_sampler_desc)\***
 
-Ein Zeiger auf eine samplerbeschreibung (siehe [**D3D11 \_ Sampler \_**](/windows/desktop/api/D3D11/ns-d3d11-d3d11_sampler_desc)Debug).
+Ein Zeiger auf eine Samplerbeschreibung (siehe [**D3D11 \_ SAMPLER \_ DESC**](/windows/desktop/api/D3D11/ns-d3d11-d3d11_sampler_desc)).
 
 </dd> </dl>
 
@@ -66,23 +66,23 @@ Ein Zeiger auf eine samplerbeschreibung (siehe [**D3D11 \_ Sampler \_**](/window
 
 Typ: **[ **HRESULT**](https://msdn.microsoft.com/library/Bb401631(v=MSDN.10).aspx)**
 
-Gibt einen der folgenden [Direct3D 11-Rückgabe Codes](d3d11-graphics-reference-returnvalues.md)zurück.
+Gibt einen der folgenden [Direct3D 11-Rückgabecodes zurück.](d3d11-graphics-reference-returnvalues.md)
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
 > [!Note]  
-> Das DirectX SDK stellt keine kompilierten Binärdateien für Effekte bereit. Sie müssen die Effekte 11-Quelle verwenden, um die Effekte-Anwendung zu erstellen. Weitere Informationen zum Verwenden der Effekte 11-Quelle finden Sie [unter Unterschiede zwischen den Effekten 10 und Effekte 11](d3d11-graphics-programming-guide-effects-differences.md).
+> Das DirectX SDK stellt keine kompilierten Binärdateien für Effekte bereit. Sie müssen die Quelle Effects 11 verwenden, um Ihre Effekttypanwendung zu erstellen. Weitere Informationen zur Verwendung der Quelle Effects 11 finden Sie unter [Unterschiede zwischen Effekten 10 und Effekten 11.](d3d11-graphics-programming-guide-effects-differences.md)
 
  
 
-## <a name="requirements"></a>Requirements (Anforderungen)
+## <a name="requirements"></a>Anforderungen
 
 
 
 | Anforderung | Wert |
 |--------------------|----------------------------------------------------------------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>D3dx11effect. h</dt> </dl>                                                    |
-| Bibliothek<br/> | <dl> <dt>N/v (die "Effects 11"-Bibliothek ist online als freigegebene Quelle verfügbar.)</dt> </dl> |
+| Header<br/>  | <dl> <dt>D3dx11effect.h</dt> </dl>                                                    |
+| Bibliothek<br/> | <dl> <dt>Nicht verfügbar (eine Effects 11-Bibliothek ist online als freigegebene Quelle verfügbar.)</dt> </dl> |
 
 
 

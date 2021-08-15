@@ -1,21 +1,21 @@
 ---
-description: Die folgenden c#-und Visual Basic Scripting Edition-Beispiele (VBScript) veranschaulichen das Exportieren einer Momentaufnahme eines virtuellen Computers.
+description: Die folgenden Beispiele für C# und Visual Basic Scripting Edition (VBScript) veranschaulichen das Exportieren einer Momentaufnahme eines virtuellen Computers.
 ms.assetid: 4DEC4962-99E1-42BB-81B1-8530BF9C4B92
-title: Exportieren einer Momentaufnahme einer virtuellen Maschine
+title: Exportieren einer Momentaufnahme eines virtuellen Computers
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 7bef5cb0f86c1de1b82c294760f7e2a33539218b
-ms.sourcegitcommit: 3d9eb6638763fee8b87c378657458f814182e36c
+ms.openlocfilehash: 07b8ce51f8cddeb648b5d4a5c58166eda3fcd2841a55f2eeda9e4f42e3f3e8fd
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/10/2021
-ms.locfileid: "106351194"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118393354"
 ---
-# <a name="exporting-a-snapshot-of-a-virtual-machine"></a>Exportieren einer Momentaufnahme einer virtuellen Maschine
+# <a name="exporting-a-snapshot-of-a-virtual-machine"></a>Exportieren einer Momentaufnahme eines virtuellen Computers
 
-Die folgenden c#-und Visual Basic Scripting Edition-Beispiele (VBScript) veranschaulichen das Exportieren einer Momentaufnahme eines virtuellen Computers. Beispiele, die veranschaulichen, wie Sie einen virtuellen Computer exportieren, finden Sie im Thema [**exportsystemdefinition**](exportsystemdefinition-msvm-virtualsystemmanagementservice.md) .
+Die folgenden Beispiele für C# und Visual Basic Scripting Edition (VBScript) veranschaulichen das Exportieren einer Momentaufnahme eines virtuellen Computers. Beispiele zum Exportieren eines virtuellen Computers finden Sie im [**Thema ExportSystemDefinition.**](exportsystemdefinition-msvm-virtualsystemmanagementservice.md)
 
-Die c#-Hilfsprogramme, auf die verwiesen wird, finden Sie unter [Allgemeine Hilfsprogramme für die Virtualisierungsbeispiele (v2)](common-utilities-for-the-virtualization-samples-v2.md).
+Die referenzierten C#-Hilfsprogramme finden Sie unter [Allgemeine Hilfsprogramme für die Virtualisierungsbeispiele (V2).](common-utilities-for-the-virtualization-samples-v2.md)
 
 
 ```CSharp
@@ -339,6 +339,6 @@ End Function
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
-[Exportieren der Konfiguration einer virtuellen Maschine](exporting-the-configuration-of-a-virtual-machine.md)
+[Exportieren der Konfiguration eines virtuellen Computers](exporting-the-configuration-of-a-virtual-machine.md)
 
-[**Exportsystemdefinition**](exportsystemdefinition-msvm-virtualsystemmanagementservice.md)
+[**ExportSystemDefinition**](exportsystemdefinition-msvm-virtualsystemmanagementservice.md)

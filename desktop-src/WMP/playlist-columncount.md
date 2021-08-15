@@ -1,9 +1,9 @@
 ---
-title: Wiedergabeliste. ColumnCount
-description: Das ColumnCount-Attribut ruft die Anzahl angezeigter Spalten ab.
+title: PLAYLIST.columnCount
+description: Das columnCount-Attribut ruft die Anzahl der angezeigten Spalten ab.
 ms.assetid: 967e711c-302a-429a-89bd-dcfd9d4dbe45
 keywords:
-- Wiedergabeliste. ColumnCount Windows Media Player
+- PLAYLIST.columnCount-Windows Media Player
 topic_type:
 - apiref
 api_name:
@@ -12,16 +12,16 @@ api_type:
 - NA
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 6ee13cc3aa357327eea7d547e73002d410712285
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 8c2fff66ae4ad7deca4aa49536e973c4e62cfc7ebd64ccb1acc620081f82cfd2
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106358617"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117747092"
 ---
-# <a name="playlistcolumncount"></a>Wiedergabeliste. ColumnCount
+# <a name="playlistcolumncount"></a>PLAYLIST.columnCount
 
-Das **ColumnCount** -Attribut ruft die Anzahl angezeigter Spalten ab.
+Das **columnCount-Attribut** ruft die Anzahl der angezeigten Spalten ab.
 
 ``` syntax
         elementID.columnCount
@@ -29,7 +29,7 @@ Das **ColumnCount** -Attribut ruft die Anzahl angezeigter Spalten ab.
 
 ## <a name="possible-values"></a>Mögliche Werte
 
-Bei diesem Attribut handelt es sich um eine schreibgeschützte **Zahl** (**Long**).
+Dieses Attribut ist eine schreibgeschützte **Zahl** (**long**).
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -37,15 +37,15 @@ Bei diesem Attribut handelt es sich um eine schreibgeschützte **Zahl** (**Long*
 
 | Anforderung | Wert |
 |--------------------|------------------------------------------------------|
-| Version<br/> | Windows Media Player, Version 7,0 oder höher<br/> |
+| Version<br/> | Windows Media Player Version 7.0 oder höher<br/> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Wiedergabelisten Element**](playlist-element.md)
+[**PLAYLIST-Element**](playlist-element.md)
 </dt> </dl>
 
  

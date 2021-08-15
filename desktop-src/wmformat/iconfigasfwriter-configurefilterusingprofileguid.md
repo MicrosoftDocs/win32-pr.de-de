@@ -1,11 +1,11 @@
 ---
-title: Iconfigasfwriter-Methode "Konfigurations Methode"
-description: Mit der Methode "konfigurierte Methode" wird der Filter konfiguriert, um eine auf dem angegebenen vordefinierten Profil basierende ASF-Datei zu schreiben. (Veraltet.).
+title: IConfigAsfWriter ConfigureFilterUsingProfileGuid-Methode
+description: Die ConfigureFilterUsingProfileGuid-Methode konfiguriert den Filter zum Schreiben einer ASF-Datei basierend auf dem angegebenen vordefinierten Profil. (Veraltet.)
 ms.assetid: 94161ee7-1b74-47af-9d77-568abe6237c3
 keywords:
-- Konfigurierten Windows Media-Format für die Methode "Konfigurations Methode"
-- Methode "config refilterusingprofileguid" Windows Media-Format, iconfigasfwriter-Schnittstelle
-- Iconfigasfwriter-Schnittstelle Windows Media-Format, Methode "config refilterusingprofileguid"
+- 'ConfigureFilterUsingProfileGuid-Methode : Windows Media Format'
+- ConfigureFilterUsingProfileGuid-Methode windows Media Format , IConfigAsfWriter-Schnittstelle
+- IConfigAsfWriter-Schnittstelle windows Media Format , ConfigureFilterUsingProfileGuid-Methode
 topic_type:
 - apiref
 api_name:
@@ -15,16 +15,16 @@ api_type:
 ms.topic: reference
 ms.date: 05/31/2018
 api_location: ''
-ms.openlocfilehash: a1521738af4411baa2c11f3d20722e09e2d22a83
-ms.sourcegitcommit: 592c9bbd22ba69802dc353bcb5eb30699f9e9403
+ms.openlocfilehash: f427dc67695ebaca3e3e7502f2f1961b738a8f775ace394948ef445f3ad9a64e
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "104517024"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118703086"
 ---
-# <a name="iconfigasfwriterconfigurefilterusingprofileguid-method"></a>Iconfigasfwriter:: konfigurifirefilterusingprofileguid-Methode
+# <a name="iconfigasfwriterconfigurefilterusingprofileguid-method"></a>IConfigAsfWriter::ConfigureFilterUsingProfileGuid-Methode
 
-Mit der Methode " **konfigurierte** Methode" wird der Filter konfiguriert, um eine auf dem angegebenen vordefinierten Profil basierende ASF-Datei zu schreiben. (Veraltet.)
+Die **ConfigureFilterUsingProfileGuid-Methode** konfiguriert den Filter zum Schreiben einer ASF-Datei basierend auf dem angegebenen vordefinierten Profil. (Veraltet.)
 
 ## <a name="syntax"></a>Syntax
 
@@ -41,38 +41,38 @@ HRESULT ConfigureFilterUsingProfileGuid(
 
 <dl> <dt>
 
-*guidprofile* \[ in\]
+*guidProfile* \[ In\]
 </dt> <dd>
 
-**GUID** , die ein Profil identifiziert, das in der Windows Media-Format-SDK-Header Datei "wmsysprf. h" definiert ist.
+**GUID,** die ein Profil identifiziert, wie in der Windows Media Format SDK-Headerdatei Wmsysprf.h definiert.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt einen der folgenden **HRESULT** -Werte zurück.
+Gibt einen der folgenden **HRESULT-Werte** zurück.
 
 
 
 | Rückgabecode                                                                                         | Beschreibung                             |
 |-----------------------------------------------------------------------------------------------------|-----------------------------------------|
 | <dl> <dt>**S \_ OK**</dt> </dl>                | Die Methode wurde erfolgreich ausgeführt.<br/>        |
-| <dl> <dt>**E \_ fehlschlagen**</dt> </dl>              | Das Profil ist ungültig.<br/>    |
-| <dl> <dt>**VFW \_ E \_ falscher \_ Zustand**</dt> </dl> | Das Filter Diagramm wurde beendet.<br/> |
+| <dl> <dt>**E \_ FAIL**</dt> </dl>              | Das Profil ist ungültig.<br/>    |
+| <dl> <dt>**VFW \_ E \_ WRONG \_ STATE**</dt> </dl> | Das Filterdiagramm wird beendet.<br/> |
 
 
 
  
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Ab dem Windows Media Format 9-Reihe-SDK wurden keine neuen Systemprofile definiert. Mit dieser Methode können nur Systemprofil-GUIDs der Version 8 (oder früher) verwendet werden.
+Ab dem Windows Media Format 9 Series SDK wurden keine neuen Systemprofile definiert. Mit dieser Methode können nur Systemprofil-GUIDs der Version 8 (oder früher) verwendet werden.
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Iconfigasfwriter-Schnittstelle**](/previous-versions/windows/desktop/legacy/dd743205(v=vs.85))
+[**IConfigAsfWriter-Schnittstelle**](/previous-versions/windows/desktop/legacy/dd743205(v=vs.85))
 </dt> </dl>
 
  

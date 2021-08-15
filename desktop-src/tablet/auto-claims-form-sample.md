@@ -1,37 +1,37 @@
 ---
-description: Das Beispiel für automatische Ansprüche adressiert ein hypothetisches Szenario für einen Versicherungs Prüfer.
+description: Im Beispiel für automatische Ansprüche wird ein hypothetisches Szenario für einen Versicherungsbewerter behandelt.
 ms.assetid: bec4333a-62ca-4254-a39b-04bc2c556992
-title: Beispiel für automatisches Anspruchsformular
+title: Beispiel für ein Formular für automatische Ansprüche
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 71c5ff78a3c38036ef9352660b4d7959e2ad87e5
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 2fe22545d60ad4116e2607f3fcf01feb94dbfecaa74bc591288e4d91b6d3d465
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "104346889"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117857118"
 ---
-# <a name="auto-claims-form-sample"></a>Beispiel für automatisches Anspruchsformular
+# <a name="auto-claims-form-sample"></a>Beispiel für ein Formular für automatische Ansprüche
 
-Das Beispiel für automatische Ansprüche adressiert ein hypothetisches Szenario für einen Versicherungs Prüfer. Die Arbeit des assors erfordert, dass er mit den Clients zu Hause oder Unternehmen besucht und seine Anspruchs Informationen in ein Formular eingegeben hat. Zur Steigerung der Produktivität des assors entwickelt seine IT-Abteilung eine Tablet-Anwendung, die es Ihnen oder Ihnen ermöglicht, Anspruchs Informationen schnell und genau über zwei Ink-Steuerelemente einzugeben: [InkEdit](/previous-versions/ms835842(v=msdn.10)) -und [InkPicture](/previous-versions/ms583740(v=vs.100)) -Steuerelemente.
+Im Beispiel für automatische Ansprüche wird ein hypothetisches Szenario für einen Versicherungsbewerter behandelt. Die Arbeit des Bewerter erfordert, dass er zu Hause oder im Unternehmen Kunden besucht und seine Anspruchsinformationen in ein Formular eingeben muss. Um die Produktivität des Bewerters zu steigern, entwickelt seine IT-Abteilung eine Tablet-Anwendung, mit der er anspruchsinformationen schnell und genau über zwei Ink-Steuerelemente eingeben kann: [InkEdit-](/previous-versions/ms835842(v=msdn.10)) und [InkPicture-Steuerelemente.](/previous-versions/ms583740(v=vs.100))
 
-In diesem Beispiel wird ein [InkEdit](/previous-versions/ms835842(v=msdn.10)) -Steuerelement für jedes Texteingabefeld verwendet. Ein Benutzer gibt die relevanten Informationen über eine Versicherungsrichtlinie und ein Fahrzeug in diese Felder mit einem Stift ein. Das [InkPicture](/previous-versions/ms583740(v=vs.100)) -Steuerelement wird zum Hinzufügen von frei Hand Eingaben über ein Auto Mobil Bild verwendet, um beschädigte Bereiche des Autos hervorzuheben. Das Beispiel für automatische Ansprüche ist für C \# und Microsoft Visual Basic .net verfügbar. In diesem Thema wird das Visual Basic .net beschrieben.
+In diesem Beispiel wird für jedes [Texteingabefeld ein InkEdit-Steuerelement](/previous-versions/ms835842(v=msdn.10)) verwendet. Ein Benutzer gibt die relevanten Informationen zu einer Versicherungsrichtlinie und einem Fahrzeug mit einem Stift in diese Felder ein. Das [InkPicture-Steuerelement](/previous-versions/ms583740(v=vs.100)) wird verwendet, um Ink über einem Automobilbild hinzuzufügen, um beschädigte Bereiche des Autos hervorzuheben. Das Beispiel für automatische Ansprüche ist für C und \# Microsoft Visual Basic .NET verfügbar. In diesem Thema wird die Visual Basic .NET beschrieben.
 
-Die autoclaims-Klasse ist als eine Unterklasse von [System. Windows. Forms. Form](/dotnet/api/system.windows.forms.form?view=netcore-3.1) definiert, und eine-Klasse, die für die Erstellung und Verwaltung von Freihand Ebenen für unterschiedliche Arten von Beschädigungen definiert ist. Vier Ereignishandler werden definiert, um die folgenden Aufgaben auszuführen:
+Die AutoClaims-Klasse wird als Unterklasse von [System.Windows. Forms.Form](/dotnet/api/system.windows.forms.form?view=netcore-3.1) und eine geschachtelte Klasse werden definiert, um Ebenen von Ink für verschiedene Arten von Schäden zu erstellen und zu verwalten. Vier Ereignishandler werden definiert, um die folgenden Aufgaben auszuführen:
 
--   Die Formular-und Freihand Ebenen werden initialisiert.
--   Das [InkPicture](/previous-versions/ms583740(v=vs.100)) -Steuerelement wird neu gezeichnet.
--   Auswählen einer Freihand Schicht durch das Listenfeld.
--   Ändern der Sichtbarkeit einer Freihand Schicht.
+-   Initialisieren der Formular- und Ink-Ebenen.
+-   Neuzeichnung des [InkPicture-Steuerelements.](/previous-versions/ms583740(v=vs.100))
+-   Auswählen einer Ink-Ebene über das Listenfeld.
+-   Ändern der Sichtbarkeit einer Ink-Schicht.
 
 > [!Note]  
-> Versionen dieses Beispiels sind in C \# und Visual Basic .net verfügbar. Die in diesem Abschnitt erörterte Version ist Visual Basic .net. Die Konzepte sind Zwischenversionen identisch.
+> Versionen dieses Beispiels sind in C und \# Visual Basic .NET verfügbar. Die in diesem Abschnitt erläuterte Version ist Visual Basic .NET. Die Konzepte sind in den verschiedenen Versionen identisch.
 
  
 
-## <a name="defining-the-form-and-ink-layers"></a>Definieren von Formular-und Freihand Ebenen
+## <a name="defining-the-form-and-ink-layers"></a>Definieren der Formular- und Ink-Ebenen
 
-Sie müssen den [Microsoft. Ink](/previous-versions/ms826516(v=msdn.10)) -Namespace importieren:
+Sie müssen den [Microsoft.Ink-Namespace](/previous-versions/ms826516(v=msdn.10)) importieren:
 
 
 ```VB
@@ -48,7 +48,7 @@ using Microsoft.Ink;
 
 
 
-Im nächsten Schritt wird in der autoclaims-Klasse eine `InkLayer` -Klasse definiert und ein Array aus vier- `InkLayer` Objekten deklariert. (Inklayer enthält ein [Microsoft. Ink.](/previous-versions/ms583670(v=vs.100)) Ink-Objekt zum Speichern von "Ink" und " [System. Drawing. Color](/dotnet/api/system.drawing.color?view=netcore-3.1) " und **boolesche** Werte zum Speichern der Farbe und des verborgenen Zustands der Ebene.) Ein fünftes Ink-Objekt wird deklariert, um frei Hand Eingaben für das [InkPicture](/previous-versions/ms583740(v=vs.100)) zu behandeln, wenn alle frei Hand Ebenen ausgeblendet sind.
+Als Nächstes wird in der AutoClaims-Klasse eine geschachtelte Klasse definiert und ein `InkLayer` Array von vier `InkLayer` -Objekten deklariert. (InkLayer enthält ein [Microsoft.Ink.Ink-Objekt](/previous-versions/ms583670(v=vs.100)) zum Speichern von Freidruck sowie [System.Drawing.Color](/dotnet/api/system.drawing.color?view=netcore-3.1) und **boolesche** Werte zum Speichern der Farbe und des ausgeblendeten Zustands der Ebene.) Ein fünftes Ink-Objekt wird deklariert, um InkPicture zu verarbeiten, wenn alle [InkPicture-Ebenen](/previous-versions/ms583740(v=vs.100)) ausgeblendet sind.
 
 
 ```VB
@@ -86,11 +86,11 @@ bool selectedHidden = false;
 
 
 
-Jede Ebene verfügt über ein eigenes [Ink](/previous-versions/ms583670(v=vs.100)) -Objekt. Das Anspruchsformular (Body, Windows, Tiers und Scheinwerfer) enthält vier diskrete Bereiche, sodass vier inklayer-Objekte verwendet werden. Ein Benutzer kann eine beliebige Kombination von Ebenen gleichzeitig anzeigen.
+Jede Ebene verfügt über ein eigenes [Ink-Objekt.](/previous-versions/ms583670(v=vs.100)) Es gibt vier diskrete Interessenbereiche in der Anspruchsform (Körper, Fenster, Reifen und Taschenlampen), sodass vier InkLayer-Objekte verwendet werden. Ein Benutzer kann eine beliebige Kombination von Ebenen gleichzeitig anzeigen.
 
-## <a name="initializing-the-form-and-ink-layers"></a>Initialisieren von Formular-und Freihand Ebenen
+## <a name="initializing-the-form-and-ink-layers"></a>Initialisieren der Formular- und Ink-Ebenen
 
-Der `Load` Ereignishandler initialisiert das [](/previous-versions/ms583670(v=vs.100)) frei Hand Objekt und die vier `InkLayer` Objekte.
+Der `Load` Ereignishandler initialisiert das [Ink-Objekt](/previous-versions/ms583670(v=vs.100)) und die vier `InkLayer` -Objekte.
 
 
 ```VB
@@ -141,7 +141,7 @@ lstAnnotationLayer.SelectedIndex = 0;
 
 
 
-Legen Sie abschließend die frei Hand Farbe für das [InkPicture](/previous-versions/ms583740(v=vs.100)) -Steuerelement auf den aktuell ausgewählten Listenfeld Eintrag fest.
+Legen Sie abschließend die Freidruckfarbe für das [InkPicture-Steuerelement](/previous-versions/ms583740(v=vs.100)) auf den aktuell ausgewählten Listenfeldeintrag fest.
 
 
 ```VB
@@ -158,9 +158,9 @@ inkPictVehicle.DefaultDrawingAttributes.Color = inkLayers[lstAnnotationLayer.Sel
 
 
 
-## <a name="redrawing-the-inkpicture-control"></a>Umzeichnen des InkPicture-Steuer Elements
+## <a name="redrawing-the-inkpicture-control"></a>Neuzeichnung des InkPicture-Steuerelements
 
-Im geerbten [Paint](/dotnet/api/system.windows.forms.control.paint?view=netcore-3.1) -Ereignishandler des [InkPicture](/previous-versions/ms583740(v=vs.100)) -Steuer Elements werden die frei Hand Ebenen geprüft, um zu bestimmen, welche ausgeblendet sind. Wenn eine Ebene nicht ausgeblendet ist, wird Sie von der Ereignis Prozedur mithilfe der [Draw](/previous-versions/ms828488(v=msdn.10)) -Methode der [Renderer](/previous-versions/ms582196(v=vs.100)) -Eigenschaft angezeigt. Wenn Sie die Objektkatalog betrachten, sehen Sie, dass die Microsoft. Ink. InkPicture. Renderer-Eigenschaft als [Microsoft. Ink. Renderer](/previous-versions/ms828481(v=msdn.10)) -Objekt definiert ist:
+Im [geerbten](/previous-versions/ms583740(v=vs.100)) Paint des InkPicture-Steuerelements werden die Ink-Ebenen überprüft, um zu bestimmen, welche ausgeblendet sind. [](/dotnet/api/system.windows.forms.control.paint?view=netcore-3.1) Wenn eine Ebene nicht ausgeblendet ist, zeigt die Ereignisprozedur sie mithilfe der Draw-Methode der [Renderer-Eigenschaft](/previous-versions/ms582196(v=vs.100)) an. [](/previous-versions/ms828488(v=msdn.10)) Wenn Sie im Objektbrowser nachschauen, sehen Sie, dass die Microsoft.Ink.InkPicture.Renderer-Eigenschaft als [Microsoft.Ink.Renderer-Objekt definiert](/previous-versions/ms828481(v=msdn.10)) ist:
 
 
 ```VB
@@ -199,9 +199,9 @@ private void inkPictVehicle_Paint(object sender, System.Windows.Forms.PaintEvent
 
 
 
-## <a name="selecting-an-ink-layer-through-the-list-box"></a>Auswählen einer Freihand Schicht über das Listenfeld
+## <a name="selecting-an-ink-layer-through-the-list-box"></a>Auswählen einer Ink-Schicht über das Listenfeld
 
-Wenn der Benutzer ein Element im Listenfeld auswählt, prüft der [SelectedIndexChanged](/dotnet/api/system.windows.forms.listbox.selectedindexchanged?view=netcore-3.1) -Ereignishandler zunächst, ob die Auswahl geändert wurde und das [InkPicture](/previous-versions/ms583740(v=vs.100)) -Steuerelement momentan keine Freihand sammelt. Anschließend wird die frei Hand Farbe des InkPicture-Steuer Elements auf die entsprechende Farbe für die ausgewählte Freihand-Ebene festgelegt. Außerdem wird das Kontrollkästchen Ebene ausblenden so aktualisiert, dass der verborgene Status der ausgewählten Freihand Schicht angezeigt wird. Schließlich wird die geerbte [Aktualisierungs](/dotnet/api/system.windows.forms.control.refresh?view=netcore-3.1) Methode des InkPicture-Steuer Elements verwendet, um nur die gewünschten Ebenen innerhalb des Steuer Elements anzuzeigen.
+Wenn der Benutzer ein Element im Listenfeld auswählt, überprüft der [SelectedIndexChanged-Ereignishandler](/dotnet/api/system.windows.forms.listbox.selectedindexchanged?view=netcore-3.1) zunächst, ob die Auswahl geändert wurde und dass das InkPicture-Steuerelement derzeit keine [InkPicture-Funktion](/previous-versions/ms583740(v=vs.100)) sammelt. Anschließend wird die InkPicture-Farbe des InkPicture-Steuerelements auf die entsprechende Farbe für die ausgewählte Ink-Schicht legt. Außerdem wird das Kontrollkästchen Ebene ausblenden aktualisiert, um den ausgeblendeten Status der ausgewählten Ink-Ebene widerzubilden. Schließlich wird die geerbte [Refresh-Methode](/dotnet/api/system.windows.forms.control.refresh?view=netcore-3.1) des InkPicture-Steuerelements verwendet, um nur die gewünschten Ebenen innerhalb des Steuerelements anzuzeigen.
 
 
 ```VB
@@ -282,13 +282,13 @@ private void lstAnnotationLayer_SelectedIndexChanged(object sender, System.Event
 
 
 
-## <a name="changing-the-visibility-of-an-ink-layer"></a>Ändern der Sichtbarkeit einer Freihand Schicht
+## <a name="changing-the-visibility-of-an-ink-layer"></a>Ändern der Sichtbarkeit einer Ink-Schicht
 
-Der `CheckedChanged` Ereignishandler prüft zunächst, ob die Auswahl geändert wurde und dass das [InkPicture](/previous-versions/ms583740(v=vs.100)) -Steuerelement zurzeit keine Freihand sammelt. Anschließend wird der verborgene Status der ausgewählten Freihand Schicht aktualisiert, und die InkEnabled des InkPicture-Steuer Elements wird auf **false** festgelegt.
+Der Ereignishandler überprüft zunächst, ob sich die Auswahl geändert hat und ob das InkPicture-Steuerelement derzeit keine `CheckedChanged` [InkPicture-Funktion](/previous-versions/ms583740(v=vs.100)) sammelt. Anschließend wird der ausgeblendete Status der ausgewählten InkPicture-Ebene aktualisiert, und das InkEnabled-Steuerelement des InkPicture-Steuerelements wird auf **FALSE**, festgelegt.
 
-Als nächstes wird die InkEnabled-Eigenschaft des InkPicture-Steuer Elements vor dem Aktualisieren der Ink-Eigenschaft auf **false** festgelegt.
+Als Nächstes wird die InkEnabled-Eigenschaft des InkPicture-Steuerelements auf **FALSE** festgelegt, bevor die Ink-Eigenschaft aktualisiert wird.
 
-Zum Schluss ist das [InkPicture](/previous-versions/ms583740(v=vs.100)) -Steuerelement für den jeweiligen Fahrzeugteil entweder aktiviert oder deaktiviert, je nachdem, ob das Kontrollkästchen Ebene ausblenden aktiviert ist, und die [Aktualisierungs](/dotnet/api/system.windows.forms.control.refresh?view=netcore-3.1) Methode des InkPicture-Steuer Elements wird verwendet, um nur die gewünschten Ebenen innerhalb des Steuer Elements anzuzeigen.
+Schließlich wird das [InkPicture-Steuerelement](/previous-versions/ms583740(v=vs.100)) entweder für das bestimmte Fahrzeugteil aktiviert oder deaktiviert, je nach Aktivierter Kontrollkästchen Ebene ausblenden, und die [Refresh-Methode](/dotnet/api/system.windows.forms.control.refresh?view=netcore-3.1) des InkPicture-Steuerelements wird verwendet, um nur die gewünschten Ebenen innerhalb des Steuerelements anzuzeigen.
 
 
 ```VB
@@ -373,13 +373,13 @@ private void chHideLayer_CheckedChanged(object sender, System.EventArgs e)
 
 ## <a name="closing-the-form"></a>Schließen des Formulars
 
-Im vom Windows Form-Designer generierten Code werden die Steuerelemente [InkEdit](/previous-versions/ms835842(v=msdn.10)) und [InkPicture](/previous-versions/ms583740(v=vs.100)) der Komponentenliste des Formulars hinzugefügt, wenn das Formular initialisiert wird. Wenn das Formular geschlossen wird, werden die InkEdit-und InkPicture-Steuerelemente sowie die anderen Komponenten des Formulars von der [verwerfen-Methode](/previous-versions/dotnet/netframework-3.5/ms571303(v=vs.90)) des Formulars entfernt. Die verwerfen-Methode des Formulars gibt auch die frei [Hand Objekte frei, die für](/previous-versions/ms583670(v=vs.100)) das Formular erstellt werden.
+Im Windows des Formular-Designers werden die Steuerelemente [InkEdit](/previous-versions/ms835842(v=msdn.10)) und [InkPicture](/previous-versions/ms583740(v=vs.100)) der Komponentenliste des Formulars hinzugefügt, wenn das Formular initialisiert wird. Wenn das Formular geschlossen wird, werden die Steuerelemente InkEdit und InkPicture sowie die anderen Komponenten des Formulars durch die [Dispose-Methode](/previous-versions/dotnet/netframework-3.5/ms571303(v=vs.90)) des Formulars verworfen. Die Dispose-Methode des Formulars [](/previous-versions/ms583670(v=vs.100)) gibt auch die Fürk-Objekte zurück, die für das Formular erstellt werden.
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
 <dl> <dt>
 
-[Microsoft. Ink. Ink](/previous-versions/ms583670(v=vs.100))
+[Microsoft.Ink.Ink](/previous-versions/ms583670(v=vs.100))
 </dt> <dt>
 
 [InkPicture-Steuerelement](inkpicture-control.md)

@@ -1,28 +1,28 @@
 ---
-title: Beispiel Code für den Empfang von Änderungs Benachrichtigungen
-description: Im folgenden Codebeispiel wird gezeigt, wie das LDAP-Änderungs Benachrichtigungs Steuerelement verwendet wird, um Benachrichtigungen über Änderungen an einem Objekt in Active Directory Domain Services zu empfangen.
+title: Beispielcode für den Empfang von Änderungsbenachrichtigungen
+description: Im folgenden Codebeispiel wird gezeigt, wie Sie die LDAP-Änderungsbenachrichtigungssteuerung verwenden, um Benachrichtigungen über Änderungen an einem Objekt in Active Directory Domain Services zu empfangen.
 ms.assetid: e1d36d1c-ee50-4c2f-92f6-eee1dae1c5af
 ms.tgt_platform: multiple
 keywords:
-- Active Directory Beispiele Active Directory, empfangen von Änderungs Benachrichtigungen
+- 'Active Directory-Beispiele: Active Directory, Empfangen von Änderungsbenachrichtigungen'
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 4edd1b5d6e91ee712e1586bee3b63fcd25ceaf95
-ms.sourcegitcommit: 803f3ccd65bdefe36bd851b9c6e7280be9489016
+ms.openlocfilehash: b1d0cbc3a6aeebf1e5e313993fcc060d78379e7aa1f806135f56b4c59926f9ea
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "103948575"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118693138"
 ---
-# <a name="example-code-for-receiving-change-notifications"></a>Beispiel Code für den Empfang von Änderungs Benachrichtigungen
+# <a name="example-code-for-receiving-change-notifications"></a>Beispielcode für den Empfang von Änderungsbenachrichtigungen
 
-Im folgenden Codebeispiel wird gezeigt, wie das LDAP-Änderungs Benachrichtigungs Steuerelement verwendet wird, um Benachrichtigungen über Änderungen an einem Objekt in Active Directory Domain Services zu empfangen. Im Beispiel wird für Benachrichtigungen registriert, der anfängliche Zustand des-Objekts wird gelesen, und anschließend wird eine-Schleife verwendet, um auf Änderungen am-Objekt zu warten und diese zu verarbeiten.
+Im folgenden Codebeispiel wird gezeigt, wie Sie die LDAP-Änderungsbenachrichtigungssteuerung verwenden, um Benachrichtigungen über Änderungen an einem Objekt in Active Directory Domain Services zu empfangen. Im Beispiel wird für Benachrichtigungen registriert, der Anfangszustand des -Objekts gelesen und anschließend eine -Schleife verwendet, um auf Änderungen am -Objekt zu warten und diese zu verarbeiten.
 
-Zuerst Ruft das Codebeispiel die [**LDAP- \_ Such \_**](/previous-versions/windows/desktop/api/winldap/nf-winldap-ldap_search_ext) Funktion "ext" auf, bei der es sich um einen asynchronen Suchvorgang handelt, der nach dem Registrieren einer Benachrichtigungs Anforderung zurückkehrt Zweitens: nach dem Einrichten der Benachrichtigungs Anforderung Ruft das Beispiel die [**LDAP \_ Search \_ s**](/previous-versions/windows/desktop/api/winldap/nf-winldap-ldap_search_s) -Funktion auf, bei der es sich um einen synchronen Suchvorgang handelt, der den aktuellen Zustand des Objekts liest. Drittens verwendet das Beispiel eine-Schleife, die das LDAP-Ergebnis aufruft, \_ um auf die Ergebnisse des asynchronen Such Vorgangs zu warten. Wenn die [**LDAP- \_ Ergebnis**](/previous-versions/windows/desktop/api/winldap/nf-winldap-ldap_result) Funktion zurückgibt, verarbeitet das Beispiel die Suchergebnisse und wiederholt die Schleife.
+Zunächst ruft das Codebeispiel die [**ldap \_ search \_ ext-Funktion**](/previous-versions/windows/desktop/api/winldap/nf-winldap-ldap_search_ext) auf, bei der es sich um einen asynchronen Suchvorgang handelt, der nach dem Registrieren einer Benachrichtigungsanforderung zurückgegeben wird. Zweitens ruft das Beispiel nach dem Einrichten der [**\_ \_ Benachrichtigungsanforderung**](/previous-versions/windows/desktop/api/winldap/nf-winldap-ldap_search_s) die Funktion der Ldap-Suche auf. Dabei handelt es sich um einen synchronen Suchvorgang, der den aktuellen Zustand des Objekts liest. Drittens verwendet das Beispiel eine Schleife, die ldap \_ result aufruft, um auf Ergebnisse des asynchronen Suchvorgangs zu warten. Wenn die [**\_ Ldap-Ergebnisfunktion**](/previous-versions/windows/desktop/api/winldap/nf-winldap-ldap_result) zurückgegeben wird, verarbeitet das Beispiel die Suchergebnisse und wiederholt die Schleife.
 
-Beachten Sie Folgendes: Wenn das Beispiel den aktuellen Status liest und dann die Benachrichtigungs Anforderung eingerichtet hat, gibt es einen Zeitraum, in dem Änderungen auftreten können, bevor die Benachrichtigungs Anforderung registriert wurde. Wenn das-Objekt nach dem Einrichten der Benachrichtigungs Anforderung gelesen wird, funktioniert das Fenster in umgekehrter Reihenfolge – Sie können Benachrichtigungen über Änderungen erhalten, die vor dem Lesen des Anfangs Zustands aufgetreten sind. Um dies zu behandeln, speichert das Beispiel den Wert des Objekt- [**uSNChanged**](/windows/desktop/ADSchema/a-usnchanged) -Attributs beim Lesen des Anfangs Zustands des Objekts. Wenn das [**LDAP- \_ Ergebnis**](/previous-versions/windows/desktop/api/winldap/nf-winldap-ldap_result) mit einer Änderungs Benachrichtigung zurückkehrt, vergleicht das Beispiel den **zwischengespeicherten** Wert des Attributs "Wert" mit dem Wert, der vom LDAP- **\_ Ergebnis** gemeldet wird. Wenn **der neue Wert** des Attributs "Wert" von "Wert" kleiner oder gleich dem zwischengespeicherten Wert ist, werden die Ergebnisse im Beispiel verworfen, da Sie auf eine Änderung hinweisen, die vor dem anfänglichen Lesevorgang aufgetreten ist.
+Beachten Sie Folgendes: Wenn im Beispiel der aktuelle Zustand gelesen und dann die Benachrichtigungsanforderung eingerichtet wird, gibt es einen Zeitraum, in dem Änderungen auftreten können, bevor die Benachrichtigungsanforderung registriert wurde. Wenn Sie das -Objekt nach dem Einrichten der Benachrichtigungsanforderung lesen, funktioniert das Fenster umgekehrt. Sie können Benachrichtigungen zu Änderungen erhalten, die vor dem Lesen des Anfangszustands aufgetreten sind. Um dies zu behandeln, speichert das Beispiel den [**uSNChanged-Attributwert**](/windows/desktop/ADSchema/a-usnchanged) des Objekts zwischen, wenn der Anfangszustand des Objekts gelesen wird. Wenn das [**\_ Ldap-Ergebnis**](/previous-versions/windows/desktop/api/winldap/nf-winldap-ldap_result) dann mit einer Änderungsbenachrichtigung zurückgegeben wird, vergleicht das Beispiel den zwischengespeicherten **uSNChanged-Attributwert** mit dem Wert, der vom **\_ Ldap-Ergebnis** gemeldet wird. Wenn der neue **uSNChanged-Attributwert** kleiner oder gleich dem zwischengespeicherten Wert ist, verwirft das Beispiel die Ergebnisse, da sie auf eine Änderung hinweisen, die vor dem ersten Lesevorgang aufgetreten ist.
 
-In diesem Beispiel wird eine Basisebene durchsucht, die ein einzelnes-Objekt überwacht. Sie können den Bereich für den **LDAP- \_ Bereich \_ onelevel** angeben, um alle untergeordneten Objekte des angegebenen Objekts zu überwachen. Sie können den Code auch so ändern, dass bis zu fünf Benachrichtigungs Anforderungen registriert werden, und dann die [**LDAP- \_ Ergebnis**](/previous-versions/windows/desktop/api/winldap/nf-winldap-ldap_result) Funktion verwenden, um auf Benachrichtigungen von beliebigen Anforderungen zu warten. Beachten Sie, dass sich Änderungs Benachrichtigungs Anforderungen auf die Leistung des Servers auswirken. Weitere Informationen zum Verbessern der Leistung finden Sie unter [Ändern von Benachrichtigungen in Active Directory Domain Services](change-notifications-in-active-directory-domain-services.md).
+In diesem Beispiel wird eine Basisebenensuche ausgeführt, die ein einzelnes Objekt überwacht. Sie können den **\_ LDAP-BEREICH \_ ONELEVEL** angeben, um alle untergeordneten Objekte des angegebenen Objekts zu überwachen. Sie können den Code auch so ändern, dass bis zu fünf Benachrichtigungsanforderungen registriert werden, und dann die [**\_ Ldap-Ergebnisfunktion**](/previous-versions/windows/desktop/api/winldap/nf-winldap-ldap_result) verwenden, um auf Benachrichtigungen von einer der Anforderungen zu warten. Denken Sie daran, dass Änderungsbenachrichtigungsanforderungen die Leistung des Servers beeinträchtigen. Weitere Informationen zum Verbessern der Leistung finden Sie unter Ändern von [Benachrichtigungen in Active Directory Domain Services](change-notifications-in-active-directory-domain-services.md).
 
 
 ```C++
@@ -407,6 +407,6 @@ int wmain(int   cArgs,WCHAR  *pArgs[])
 
 
 
- 
+ 
 
- 
+ 

@@ -1,9 +1,9 @@
 ---
-title: UDM_SETRANGE Meldung (kommstrg. h)
-description: Legt die minimalen und maximalen Positionen (Bereich) für ein auf-ab-Steuerelement fest.
+title: UDM_SETRANGE Meldung (Commctrl.h)
+description: Legt die minimalen und maximalen Positionen (Bereich) für ein Auf-Ab-Steuerelement fest.
 ms.assetid: 81875528-86cc-419a-a07c-f4f98baf1462
 keywords:
-- Windows-Steuerelemente für UDM_SETRANGE Meldung
+- UDM_SETRANGE Windows-Steuerelemente für Nachrichten
 topic_type:
 - apiref
 api_name:
@@ -14,16 +14,16 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: fb32a72ca8ca5182e87e2c0346cbc44ab25300e8
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 60499c960b7f2e496dc4317229865a8838013fc5d78c194072bee27e761ba4d3
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104040787"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118408055"
 ---
-# <a name="udm_setrange-message"></a>UDM- \_ Nachricht
+# <a name="udm_setrange-message"></a>UDM \_ SETRANGE-Nachricht
 
-Legt die minimalen und maximalen Positionen (Bereich) für ein auf-ab-Steuerelement fest.
+Legt die minimalen und maximalen Positionen (Bereich) für ein Auf-Ab-Steuerelement fest.
 
 ## <a name="parameters"></a>Parameter
 
@@ -35,7 +35,7 @@ Legt die minimalen und maximalen Positionen (Bereich) für ein auf-ab-Steuerelem
 *lParam* 
 </dt> <dd>
 
-Das [**LoWord**](/previous-versions/windows/desktop/legacy/ms632659(v=vs.85)) ist ein **kurzes** Element, das die maximale Position für das auf-ab-Steuerelement angibt, und das [**HIWORD**](/previous-versions/windows/desktop/legacy/ms632657(v=vs.85)) ist ein **kurzes** Element, das die minimale Position angibt. Keine der Positionen kann größer als der UD \_ MaxVal-Wert oder kleiner als der UD \_ MinVal-Wert sein. Außerdem darf der Unterschied zwischen den beiden Positionen UD MaxVal nicht überschreiten \_ .
+[**LOWORD**](/previous-versions/windows/desktop/legacy/ms632659(v=vs.85)) ist ein **Short,** der die maximale Position für das Auf-Ab-Steuerelement angibt, und [**hiword**](/previous-versions/windows/desktop/legacy/ms632657(v=vs.85)) ist ein **Short,** der die Mindestposition angibt. Keine der Positionen darf größer als der UD \_ MAXVAL-Wert oder kleiner als der UD \_ MINVAL-Wert sein. Darüber hinaus darf der Unterschied zwischen den beiden Positionen UD MAXVAL nicht \_ überschreiten.
 
 </dd> </dl>
 
@@ -43,9 +43,9 @@ Das [**LoWord**](/previous-versions/windows/desktop/legacy/ms632659(v=vs.85)) is
 
 Kein Rückgabewert.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Die maximale Position kann kleiner als die minimale Position sein. Durch Klicken auf die Schaltfläche mit dem Pfeil nach oben wird die aktuelle Position näher an die maximale Position verschoben, und durch Klicken auf die nach-unten-Taste wird die minimale Position
+Die maximale Position kann kleiner als die Mindestposition sein. Wenn Sie auf die Schaltfläche mit dem Pfeil nach oben klicken, wird die aktuelle Position näher an die maximale Position verschoben, und durch Klicken auf die Schaltfläche mit dem Pfeil nach unten wird die Mindestposition erreicht.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -53,20 +53,20 @@ Die maximale Position kann kleiner als die minimale Position sein. Durch Klicken
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>                                        |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2003 \[ -Desktop-Apps\]<br/>                                  |
-| Header<br/>                   | <dl> <dt>Kommstrg. h</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows \[Nur Vista-Desktop-Apps\]<br/>                                        |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2003-Desktop-Apps\]<br/>                                  |
+| Header<br/>                   | <dl> <dt>Commctrl.h</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Makelparam**](/windows/desktop/api/winuser/nf-winuser-makelparam)
+[**MAKELPARAM**](/windows/desktop/api/winuser/nf-winuser-makelparam)
 </dt> <dt>
 
-[**UDM-über \_ Tragung**](udm-setrange.md)
+[**UDM \_ SETRANGE**](udm-setrange.md)
 </dt> </dl>
 
  

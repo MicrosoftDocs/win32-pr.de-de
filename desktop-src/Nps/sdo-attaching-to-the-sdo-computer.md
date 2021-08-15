@@ -1,25 +1,25 @@
 ---
 title: Anfügen an den SDO-Computer
-description: Mit dem Schnittstellen Zeiger, der von cokreateinstance zurückgegeben wurde, wird die isdomachine Attach-Methode aufgerufen.
+description: Rufen Sie mit dem von CoCreateInstance zurückgegebenen Schnittstellenzeiger die ISdoMachine Attach-Methode auf.
 ms.assetid: b28691ef-4054-4cd1-92aa-72ad9902fba3
 ms.tgt_platform: multiple
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 1d35b9088fc1848dcf581bf69db036dce57cdd2b
-ms.sourcegitcommit: 592c9bbd22ba69802dc353bcb5eb30699f9e9403
+ms.openlocfilehash: 5863302da3f213c1360c254782a31c0dfc4fcb9a946f5827155862bca01405cb
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "103948816"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118362188"
 ---
 # <a name="attaching-to-the-sdo-computer"></a>Anfügen an den SDO-Computer
 
-Mit dem Schnittstellen Zeiger, der von [**cokreateinstance**](/windows/win32/api/combaseapi/nf-combaseapi-cocreateinstance)zurückgegeben wurde, können Sie die [**isdomachine:: Attach**](/windows/desktop/api/sdoias/nf-sdoias-isdomachine-attach) -Methode aufrufen. Übergeben Sie **null** als Parameter an die **Attach** -Methode. Der Wert **null** gibt an, dass **Attach** das Computer Objekt dem lokalen Computer zuordnen soll. Das Anfügen an einen Remote Computer wird nicht unterstützt.
+Rufen Sie mit dem von [**CoCreateInstance**](/windows/win32/api/combaseapi/nf-combaseapi-cocreateinstance)zurückgegebenen Schnittstellenzeiger die [**ISdoMachine::Attach-Methode**](/windows/desktop/api/sdoias/nf-sdoias-isdomachine-attach) auf. Übergeben **Sie NULL** als Parameter an die **Attach-Methode.** Der Wert **NULL gibt** an, dass **Attach** das Computerobjekt dem lokalen Computer zugibt. Das Anfügen an einen Remotecomputer wird nicht unterstützt.
 
-Um festzustellen, ob der lokale Computer bereits angefügt ist, müssen Sie die [**isdomachine:: getattachedcomputer**](/windows/desktop/api/sdoias/nf-sdoias-isdomachine-getattachedcomputer) -Methode aufrufen.
+Um festzustellen, ob der lokale Computer bereits angefügt ist, rufen Sie die [**ISdoMachine::GetAttachedComputer-Methode**](/windows/desktop/api/sdoias/nf-sdoias-isdomachine-getattachedcomputer) auf.
 
-Beispielcode, der das Anfügen an den lokalen Computer veranschaulicht, finden [Sie unter Anfügen an einen SDO-Enabled Computer](/windows/desktop/Nps/sdo-attaching-to-an-sdo-enabled-computer) .
+[Beispielcode, der](/windows/desktop/Nps/sdo-attaching-to-an-sdo-enabled-computer) das Anfügen an den lokalen Computer veranschaulicht, finden Sie unter Anfügen an einen SDO-Enabled Computer.
 
- 
+ 
 
- 
+ 

@@ -1,7 +1,7 @@
 ---
-description: Die stationquery-Struktur enthält Informationen zu einem bestimmten Computer, der Netzwerkmonitor verwendet.
+description: Die STATIONQUERY-Struktur stellt Informationen zu einem bestimmten Computer mithilfe von Netzwerkmonitor.
 ms.assetid: b7202c6b-e2b9-4a6f-8b87-3d11879f1d69
-title: Stationquery-Struktur (Netmon. h)
+title: STATIONQUERY-Struktur (Netmon.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,16 +13,16 @@ api_type:
 - HeaderDef
 api_location:
 - Netmon.h
-ms.openlocfilehash: de76c4da7bc27d76c04aeeaa7a46d69134e411ca
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: a2e46f4c0d213091a3915b5310d7768a193d33e5ac3391fd3bc3c6781e32cb57
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106358824"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118363056"
 ---
-# <a name="stationquery-structure"></a>Stationquery-Struktur
+# <a name="stationquery-structure"></a>STATIONQUERY-Struktur
 
-Die **stationquery** -Struktur enthält Informationen zu einem bestimmten Computer, der Netzwerkmonitor verwendet.
+Die **STATIONQUERY-Struktur** stellt Informationen zu einem bestimmten Computer mithilfe von Netzwerkmonitor.
 
 ## <a name="syntax"></a>Syntax
 
@@ -51,16 +51,16 @@ typedef struct _STATIONQUERY {
 **Flags**
 </dt> <dd>
 
-Flags, die den aktuellen Status Netzwerkmonitor identifizieren.
+Flags, die den aktuellen Zustand der Netzwerkmonitor.
 
 
 
 | Wert                                                                                                                                                                                                                | Bedeutung                                                 |
 |----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|---------------------------------------------------------|
-| <span id="STATIONQUERY_FLAGS_LOADED"></span><span id="stationquery_flags_loaded"></span><dl> <dt>**stationquery- \_ Flags \_ geladen**</dt> </dl>                   | Der Treiber wird geladen, aber der Kernel ist nicht.<br/> |
-| <span id="STATIONQUERY_FLAGS_RUNNING"></span><span id="stationquery_flags_running"></span><dl> <dt>**stationquery- \_ Flags werden \_ ausgeführt**</dt> </dl>                | Der Treiber ist geladen, aber es werden keine Daten erfasst.<br/> |
-| <span id="STATIONQUERY_FLAGS_CAPTURING"></span><span id="stationquery_flags_capturing"></span><dl> <dt>**Aufzeichnen von stationquery- \_ Flags \_**</dt> </dl>          | Der Treiber ist aktiv an einer Erfassung beteiligt.<br/> |
-| <span id="STATIONQUERY_FLAGS_TRANSMITTING"></span><span id="stationquery_flags_transmitting"></span><dl> <dt>**Übertragung von stationquery- \_ Flags \_**</dt> </dl> | Dieses Flag ist veraltet.<br/>                       |
+| <span id="STATIONQUERY_FLAGS_LOADED"></span><span id="stationquery_flags_loaded"></span><dl> <dt>**GELADENE \_ \_ STATIONQUERY-FLAGS**</dt> </dl>                   | Der Treiber wird geladen, der Kernel jedoch nicht.<br/> |
+| <span id="STATIONQUERY_FLAGS_RUNNING"></span><span id="stationquery_flags_running"></span><dl> <dt>**\_STATIONQUERY-FLAGS \_ WERDEN AUSGEFÜHRT**</dt> </dl>                | Der Treiber wird geladen, erfasst aber keine Daten.<br/> |
+| <span id="STATIONQUERY_FLAGS_CAPTURING"></span><span id="stationquery_flags_capturing"></span><dl> <dt>**ERFASSEN VON \_ STATIONQUERY-FLAGS \_**</dt> </dl>          | Der Treiber ist aktiv an einer Erfassung beteiligt.<br/> |
+| <span id="STATIONQUERY_FLAGS_TRANSMITTING"></span><span id="stationquery_flags_transmitting"></span><dl> <dt>**\_STATIONQUERY-FLAGS, \_ DIE ÜBERTRAGEN**</dt> </dl> | Dieses Flag ist veraltet.<br/>                       |
 
 
 
@@ -68,38 +68,38 @@ Flags, die den aktuellen Status Netzwerkmonitor identifizieren.
 
 </dd> <dt>
 
-**Bcdverminor**
+**BCDVerMinor**
 </dt> <dd>
 
-Die neben Versionsnummer der Netzwerkmonitor, die auf dem Computer installiert ist.
+Nebenversionsnummer der Netzwerkmonitor auf dem Computer installiert.
 
 </dd> <dt>
 
-**Bcdvermajor**
+**BCDVerMajor**
 </dt> <dd>
 
-Die Hauptversionsnummer der Netzwerkmonitor, die auf dem Computer installiert ist.
+Hauptversionsnummer der Netzwerkmonitor auf dem Computer installiert.
 
 </dd> <dt>
 
-**Lizenznummer**
+**LicenseNumber**
 </dt> <dd>
 
-Software Lizenznummer.
+Softwarelizenznummer.
 
 </dd> <dt>
 
 **MachineName**
 </dt> <dd>
 
-Der Name des Computer Herstellers, falls vorhanden.
+Name des Computerherstellers, sofern eins vor ist.
 
 </dd> <dt>
 
 **UserName**
 </dt> <dd>
 
-Benutzername oder System Bezeichner.
+Benutzername oder Systembezeichner.
 
 </dd> <dt>
 
@@ -110,30 +110,30 @@ Für die zukünftige Verwendung reserviert.
 
 </dd> <dt>
 
-**Adapteraddress**
+**AdapterAddress**
 </dt> <dd>
 
-NIC-Adresse
+NIC-Adresse.
 
 </dd> <dt>
 
-**Wmachinename**
+**WMachineName**
 </dt> <dd>
 
-Name des Unicode-Computers. Dieser Member gilt für Netzwerkmonitor 2,0 oder höher.
+Unicode-Computername. Dieser Member gilt für Netzwerkmonitor 2.0 oder höher.
 
 </dd> <dt>
 
-**Wusername**
+**WUserName**
 </dt> <dd>
 
-Unicode-Benutzername. Dieser Member gilt für Netzwerkmonitor 2,0 oder höher.
+Unicode-Benutzername. Dieser Member gilt für Netzwerkmonitor 2.0 oder höher.
 
 </dd> </dl>
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Ein Array dieser Strukturen wird von der [QueryTable](querytable.md) -Struktur verwendet, um eine Liste der Computer bereitzustellen, die derzeit Netzwerkmonitor zum Erfassen von Daten verwenden.
+Ein Array dieser Strukturen wird von der [QUERYTABLE-Struktur](querytable.md) verwendet, um eine Liste der Computer zur Verfügung zu stellen, die Netzwerkmonitor zum Erfassen von Daten verwenden.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -143,15 +143,15 @@ Ein Array dieser Strukturen wird von der [QueryTable](querytable.md) -Struktur v
 |-------------------------------------|-------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional \[nur Desktop-Apps\]<br/>                          |
 | Unterstützte Mindestversion (Server)<br/> | Windows 2000 Server \[nur Desktop-Apps\]<br/>                                |
-| Header<br/>                   | <dl> <dt>Netmon. h</dt> </dl> |
+| Header<br/>                   | <dl> <dt>Netmon.h</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[QueryTable](querytable.md)
+[Querytable](querytable.md)
 </dt> </dl>
 
  

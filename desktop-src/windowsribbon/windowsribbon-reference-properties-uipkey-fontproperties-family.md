@@ -1,6 +1,6 @@
 ---
 title: UI_PKEY_FontProperties_Family
-description: Identifiziert die \_ PKEY \_ FontProperties \_ Family-Eigenschaft der Benutzeroberfläche.
+description: Identifiziert die \_ Eigenschaft PKEY \_ FontProperties Family der Benutzeroberfläche. \_
 ms.assetid: 95064588-9c14-401f-a86e-7b11e86faaf9
 ms.topic: article
 ms.date: 05/31/2018
@@ -11,9 +11,9 @@ ms.contentlocale: de-DE
 ms.lasthandoff: 08/11/2021
 ms.locfileid: "118438659"
 ---
-# <a name="ui_pkey_fontproperties_family"></a>\_ \_ PKEY-Schriftarteigenschaftenfamilie der \_ Benutzeroberfläche
+# <a name="ui_pkey_fontproperties_family"></a>UI \_ PKEY \_ FontProperties \_ Family
 
-Identifiziert die \_ PKEY \_ FontProperties \_ Family-Eigenschaft der Benutzeroberfläche.
+Identifiziert die \_ Eigenschaft PKEY \_ FontProperties Family der Benutzeroberfläche. \_
 
 ```
 propertyDescription
@@ -27,22 +27,22 @@ propertyDescription
 
 ## <a name="remarks"></a>Hinweise
 
-Die \_ PKEY FontProperties-Familie der Benutzeroberfläche wird von einer Anwendung verwendet, um den Wert des Dropdownkatalogs der \_ \_ Schriftfamilie abfragt. 
+Die \_ PKEY \_ FontProperties-Familie der Benutzeroberfläche wird von einer Anwendung \_ verwendet, um den Wert des Dropdownkatalogs **font family** abzufragen.
 
-Der Wert der PKEY FontProperties-Familie der Benutzeroberfläche entspricht einem Windows GDI-Schriftartfamiliennamen, der mit der \_ \_ \_ [EnumFontFamilies-Funktion](/windows/win32/api/wingdi/nf-wingdi-enumfontfamiliesa) oder der [EnumFontFamiliesEx-Funktion](/windows/win32/api/wingdi/nf-wingdi-enumfontfamiliesexa) [](../gdi/font-families.md) abgerufen wird.
+Der Wert der \_ Ui-PKEY \_ FontProperties-Familie \_ entspricht einem [Windows GDI-Schriftartfamiliennamen,](../gdi/font-families.md) der mit der [EnumFontFamilies-Funktion](/windows/win32/api/wingdi/nf-wingdi-enumfontfamiliesa) oder [der EnumFontFamiliesEx-Funktion](/windows/win32/api/wingdi/nf-wingdi-enumfontfamiliesexa)abgerufen wurde.
 
 Der Standardwert ist eine leere Zeichenfolge.
 
-Wenn für den Wert für die \_ PKEY FontProperties-Familie der Benutzeroberfläche eine leere Zeichenfolge angegeben wird, wird die \_ \_ Schriftartauswahl nicht mehr angezeigt.
+Wenn eine leere Zeichenfolge für den Wert für die \_ Ui PKEY \_ FontProperties Family angegeben \_ wird, wird die Schriftartauswahl gelöscht.
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
 <dl> <dt>
 
-[Eigenschaften des Schriftart-Steuerelements](windowsribbon-reference-properties-fontcontrol.md)
+[Eigenschaften des Schriftartsteuerelements](windowsribbon-reference-properties-fontcontrol.md)
 </dt> <dt>
 
-[Schriftart-Steuerelement](windowsribbon-controls-fontcontrol.md)
+[Schriftartsteuerelement](windowsribbon-controls-fontcontrol.md)
 </dt> </dl>
 
  

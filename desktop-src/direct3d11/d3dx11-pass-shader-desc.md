@@ -1,6 +1,6 @@
 ---
-title: D3DX11_PASS_SHADER_DESC-Struktur (D3dx11effect.h)
-description: Beschreibt einen Effektdurchlauf.
+title: D3DX11_PASS_SHADER_DESC -Struktur (D3dx11effect.h)
+description: Beschreibt einen Effektpass.
 ms.assetid: 4676ad80-1b21-4e8b-8cec-f530ef0b9fd7
 keywords:
 - D3DX11_PASS_SHADER_DESC-Struktur Direct3D 11
@@ -23,7 +23,7 @@ ms.locfileid: "118536836"
 ---
 # <a name="d3dx11_pass_shader_desc-structure"></a>D3DX11 \_ PASS \_ SHADER \_ DESC-Struktur
 
-Beschreibt einen Effektdurchlauf.
+Beschreibt einen Effektpass.
 
 ## <a name="syntax"></a>Syntax
 
@@ -65,9 +65,9 @@ Das Element von pShaderVariable (falls ein Array) oder 0 (falls nicht zutreffend
 
 ## <a name="remarks"></a>Hinweise
 
-D3DX11 \_ PASS \_ SHADER \_ DESC wird mit [**id3DX11EffectPass**](id3dx11effectpass.md) \* Get ShaderDesc-Methoden verwendet.
+D3DX11 \_ PASS \_ SHADER \_ DESC wird mit [**ID3DX11EffectPass**](id3dx11effectpass.md) Get \* ShaderDesc-Methoden verwendet.
 
-Wenn es sich um eine Inline-Shaderzuweisung handelt, ist die zurückgegebene Schnittstelle eine anonyme Shadervariable, die auf andere Weise nicht abgerufen werden kann. Der Name in der Variablenbeschreibung lautet "$Anonymous". Wenn es keine Zuweisung dieses Typs im Passblock gibt, pShaderVariable != **NULL**, aber pShaderVariable->IsValid() == **FALSE**.
+Wenn es sich um eine Inline-Shaderzuweisung handelt, handelt es sich bei der zurückgegebenen Schnittstelle um eine anonyme Shadervariable, die auf andere Weise nicht abgerufen werden kann. Der Name in der Variablenbeschreibung ist "$Anonymous". Wenn dieser Typ im Passblock nicht zugeordnet ist, pShaderVariable != **NULL,** aber pShaderVariable->IsValid() == **FALSE**.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -79,11 +79,11 @@ Wenn es sich um eine Inline-Shaderzuweisung handelt, ist die zurückgegebene Sch
 
 
 
-## <a name="see-also"></a>Weitere Informationen:
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[Effekte 11 Strukturen](d3d11-graphics-reference-effects11-structures.md)
+[Effects 11 Structures](d3d11-graphics-reference-effects11-structures.md)
 </dt> </dl>
 
  

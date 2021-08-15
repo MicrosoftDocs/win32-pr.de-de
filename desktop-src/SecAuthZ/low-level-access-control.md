@@ -1,30 +1,30 @@
 ---
-description: Sicherheitsfunktionen auf niedriger Ebene helfen Ihnen beim Arbeiten mit Sicherheits Deskriptoren, Zugriffs Steuerungs Listen (Access Control Lists, ACLs) und Zugriffs Steuerungs Einträgen (ACEs).
+description: Mithilfe von Sicherheitsfunktionen auf niedriger Ebene können Sie mit Sicherheitsbeschreibungen, Zugriffssteuerungslisten (ACLs) und Zugriffssteuerungseinträgen (ACCESS Control Entries, ACEs) arbeiten.
 ms.assetid: 16337b77-23c5-4b7a-a344-66a02ee0e8a8
-title: Access Control auf niedriger Ebene
+title: Low-Level-Access Control
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: b10ae3187348e395372030dfe9add31b7690c534
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: e45a0a2e64055a249c1b743ae4159ee3de7f7dbd5a1cfce63dad4289b27bf941
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "104217754"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117781554"
 ---
-# <a name="low-level-access-control"></a>Access Control auf niedriger Ebene
+# <a name="low-level-access-control"></a>Low-Level-Access Control
 
-Sicherheitsfunktionen auf niedriger Ebene helfen Ihnen beim Arbeiten mit [*Sicherheits Deskriptoren*](/windows/desktop/SecGloss/s-gly), [*Zugriffs Steuerungs Listen (Access Control Lists*](/windows/desktop/SecGloss/a-gly) , ACLs) und [*Zugriffs Steuerungs Einträgen*](/windows/desktop/SecGloss/a-gly) (ACEs).
+Mithilfe von Sicherheitsfunktionen auf niedriger Ebene können Sie mit [*Sicherheitsdeskriptoren,*](/windows/desktop/SecGloss/s-gly)Zugriffssteuerungslisten [](/windows/desktop/SecGloss/a-gly) (ACLs) und Zugriffssteuerungseinträgen [](/windows/desktop/SecGloss/a-gly) (ACEs) arbeiten.
 
-Eine Beschreibung des Modells finden Sie unter [Access Control Modell](access-control-model.md).
+Eine Beschreibung des Modells finden Sie unter Access Control [Model](access-control-model.md).
 
 
 
 | Thema                                                                                                  | BESCHREIBUNG                                                                                                                                                                                                                                                                                                  |
 |--------------------------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| [Low-Level-sicherheitsdeskriptorfunktionen](low-level-security-descriptor-functions.md)                 | Funktionen zum Festlegen und Abrufen der [*Sicherheits Beschreibung*](/windows/desktop/SecGloss/s-gly)eines Objekts.                                                                                                                                                |
-| [Erstellung von Sicherheits Deskriptoren auf niedriger Ebene](low-level-security-descriptor-creation.md)                   | Funktionen zum Erstellen einer [*Sicherheits Beschreibung*](/windows/desktop/SecGloss/s-gly) und zum erhalten und Festlegen der Komponenten einer Sicherheits Beschreibung.                                                                                                        |
-| [Absolute und Self-Relative Sicherheits Deskriptoren](absolute-and-self-relative-security-descriptors.md) | Funktionen zum Überprüfen oder zwischen dem [*absoluten*](/windows/desktop/SecGloss/a-gly) oder dem [*selbst relativen*](/windows/desktop/SecGloss/s-gly) Format. |
-| [ACL-und ACE-Funktionen auf niedriger Ebene](low-level-acl-and-ace-functions.md)                                 | Funktionen zum Verwalten von ACLs und ACEs.                                                                                                                                                                                                                                                                        |
+| [Sicherheitsdeskriptorfunktionen auf niedriger Ebene](low-level-security-descriptor-functions.md)                 | Funktionen zum Festlegen und Abrufen der Sicherheitsbeschreibung [*eines Objekts.*](/windows/desktop/SecGloss/s-gly)                                                                                                                                                |
+| [Erstellen eines Low-Level-Sicherheitsdeskriptors](low-level-security-descriptor-creation.md)                   | Funktionen zum Erstellen eines [*Sicherheitsdeskriptors*](/windows/desktop/SecGloss/s-gly) und Abrufen und Festlegen der Komponenten eines Sicherheitsdeskriptors.                                                                                                        |
+| [Absolute und Self-Relative Sicherheitsbeschreibungen](absolute-and-self-relative-security-descriptors.md) | Funktionen zum Überprüfen oder Konvertieren zwischen [*absolutem*](/windows/desktop/SecGloss/a-gly) oder [*selbst relativem*](/windows/desktop/SecGloss/s-gly) Format. |
+| [Low-Level-ACL- und ACE-Funktionen](low-level-acl-and-ace-functions.md)                                 | Funktionen zum Verwalten von ACLs und ACEs.                                                                                                                                                                                                                                                                        |
 
 
 

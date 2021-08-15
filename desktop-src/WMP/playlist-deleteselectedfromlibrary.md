@@ -1,9 +1,9 @@
 ---
-title: Wiedergabeliste. Delta eselectedfromlibrary
-description: Die Methode "Delta Type electedfromlibrary" löscht das ausgewählte Element aus der Wiedergabeliste und aus der Bibliothek.
+title: PLAYLIST.deleteSelectedFromLibrary
+description: Die deleteSelectedFromLibrary-Methode löscht das ausgewählte Element aus der Wiedergabeliste und aus der Bibliothek.
 ms.assetid: 04775d62-91dc-4c08-a864-0301fbc1995f
 keywords:
-- Wiedergabeliste. Delta Type electedfromlibrary Windows Media Player
+- PLAYLIST.deleteSelectedFromLibrary Windows Media Player
 topic_type:
 - apiref
 api_name:
@@ -13,16 +13,16 @@ api_type:
 ms.topic: reference
 ms.date: 05/31/2018
 api_location: ''
-ms.openlocfilehash: d08699edfb7811503a1df8fcc2c622e234a0aaaf
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 489525b96ddff6fc68cfaeac8749bf400e5ff5ad674f111aef6a37f3d98bec3f
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106368531"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117747079"
 ---
-# <a name="playlistdeleteselectedfromlibrary"></a>Wiedergabeliste. Delta eselectedfromlibrary
+# <a name="playlistdeleteselectedfromlibrary"></a>PLAYLIST.deleteSelectedFromLibrary
 
-Die Methode " **Delta Type electedfromlibrary** " löscht das ausgewählte Element aus der Wiedergabeliste und aus der Bibliothek.
+Die **deleteSelectedFromLibrary-Methode** löscht das ausgewählte Element aus der Wiedergabeliste und aus der Bibliothek.
 
 ``` syntax
         elementID.deleteSelectedFromLibrary()
@@ -42,18 +42,18 @@ Diese Methode gibt keinen Wert zurück.
 
 | Anforderung | Wert |
 |--------------------|------------------------------------------------------|
-| Version<br/> | Windows Media Player, Version 7,0 oder höher<br/> |
+| Version<br/> | Windows Media Player Version 7.0 oder höher<br/> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Wiedergabelisten Element**](playlist-element.md)
+[**PLAYLIST-Element**](playlist-element.md)
 </dt> <dt>
 
-[**Wiedergabeliste. Delta esgewählt**](playlist-deleteselected.md)
+[**PLAYLIST.deleteSelected**](playlist-deleteselected.md)
 </dt> </dl>
 
  

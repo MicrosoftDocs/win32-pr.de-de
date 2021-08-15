@@ -1,9 +1,9 @@
 ---
-title: Komplexer leveltype-Typ
-description: Definiert einen Schweregrad Wert, der die Ausführlichkeit der protokollierten Ereignisse bestimmt.
+title: Komplexer LevelType-Typ
+description: Definiert einen Schweregrad, der die Ausführlichkeit der protokollierten Ereignisse bestimmt.
 ms.assetid: c71aedef-7c43-4343-9d6d-94eb45da49b9
 keywords:
-- "\"Leveltype\"-Ereignisprotokoll Komplex"
+- Komplexer LevelType-Typ EventLog
 topic_type:
 - apiref
 api_name:
@@ -13,16 +13,16 @@ api_type:
 ms.topic: reference
 ms.date: 05/31/2018
 api_location: ''
-ms.openlocfilehash: 237b38890283769e9aac20c9b3a3703ff4b72d3a
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: b80e034f6b77f869207ecb785edbb935841eed2dba6bde73ad88c441dabf15cf
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104102934"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119055938"
 ---
-# <a name="leveltype-complex-type"></a>Komplexer leveltype-Typ
+# <a name="leveltype-complex-type"></a>Komplexer LevelType-Typ
 
-Definiert einen Schweregrad Wert, der die Ausführlichkeit der protokollierten Ereignisse bestimmt.
+Definiert einen Schweregrad, der die Ausführlichkeit der protokollierten Ereignisse bestimmt.
 
 ``` syntax
 <xs:complexType name="LevelType"
@@ -59,32 +59,32 @@ Definiert einen Schweregrad Wert, der die Ausführlichkeit der protokollierten E
 
 | Name    | type                                                              | BESCHREIBUNG                                                                                                                                                                                                                                                                                                        |
 |---------|-------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| message | [**"Strauch"**](eventmanifestschema-strtableref-simpletype.md) | Der lokalisierte Anzeige Name für die Ebene. Die Meldungs Zeichenfolge verweist auf eine lokalisierte Zeichenfolge im [**STRINGTABLE**](eventmanifestschema-stringtable-resources-element.md) -Abschnitt des Manifests. <br/>                                                                                                    |
+| message | [**strTableRef**](eventmanifestschema-strtableref-simpletype.md) | Der lokalisierte Anzeigename für die Ebene. Die Meldungszeichenfolge verweist auf eine lokalisierte Zeichenfolge im [**StringTable-Abschnitt**](eventmanifestschema-stringtable-resources-element.md) des Manifests. <br/>                                                                                                    |
 | name    | **QName**                                                         | Der Name, der dieser Ebene zugewiesen werden soll. Dieser Name muss innerhalb des Bereichs des Anbieters eindeutig sein.<br/>                                                                                                                                                                                                            |
-| Symbol  | [**Csymboltype**](eventmanifestschema-csymboltype-simpletype.md) | Das Symbol, das verwendet werden soll, um auf die Ebene in der Anwendung zu verweisen. Der [**Nachrichten Compiler (MC.exe)**](message-compiler--mc-exe-.md) verwendet das Symbol, um eine Konstante für die Ebene in der vom Compiler generierten Header Datei zu erstellen. Wenn Sie kein Symbol angeben, generiert der Compiler einen für Sie.<br/> |
-| value   | [**UInt8Type**](eventmanifestschema-hexint8type-simpletype.md)   | Der Wert der Ebene. Sie können Werte im Bereich von 16 bis 255 angeben. Informationen zu vordefinierten Werten finden Sie unter Hinweise.<br/>                                                                                                                                                                                               |
+| Symbol  | [**CSymbolType**](eventmanifestschema-csymboltype-simpletype.md) | Das Symbol, das verwendet werden soll, um auf die Ebene in Ihrer Anwendung zu verweisen. Der [**Nachrichtencompiler (MC.exe)**](message-compiler--mc-exe-.md) verwendet das -Symbol, um eine Konstante für die Ebene in der Headerdatei zu erstellen, die der Compiler generiert. Wenn Sie kein Symbol angeben, generiert der Compiler ein Symbol für Sie.<br/> |
+| value   | [**UInt8Type**](eventmanifestschema-hexint8type-simpletype.md)   | Der Wert der Ebene. Sie können Werte im Bereich von 16 bis 255 angeben. Vordefinierte Werte finden Sie unter Hinweise.<br/>                                                                                                                                                                                               |
 
 
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Im folgenden sind die vordefinierten Ebenen-Werte, die Sie verwenden können, fest. Diese Werte werden in der Winmeta.xml-Datei definiert, die in der Windows SDK enthalten ist.
+Im Folgenden finden Sie die vordefinierten Levelwerte, die Sie verwenden können. Diese Werte werden in der Winmeta.xml definiert, die im Windows SDK enthalten ist.
 
 
 
 | Name              | Wert | Symbol                    | BESCHREIBUNG                                                             |
 |-------------------|-------|---------------------------|-------------------------------------------------------------------------|
-| win:Critical      | 1     | WinEvent- \_ Ebene \_ kritisch | Identifiziert ein nicht normales Exit-oder Beendigungs Ereignis.<br/>            |
-| win:Error         | 2     | Fehler auf \_ winereignisebene \_    | Identifiziert ein schwerwiegendes Fehler Ereignis.<br/>                             |
-| win:Warning       | 3     | Warnung auf \_ winereignisebene \_  | Identifiziert ein Warn Ereignis, z. b. einen Zuordnungs Fehler.<br/>    |
-| win:Informational | 4     | Informationen zur WinEvent- \_ Ebene \_     | Identifiziert ein nicht-Fehler Ereignis, z. b. ein Eingabe-oder ein Exit-Ereignis.<br/> |
-| win:Verbose       | 5     | Verbose der WinEvent- \_ Ebene \_  | Identifiziert ein ausführliches Ablauf Verfolgungs Ereignis.<br/>                           |
+| win:Critical      | 1     | WINEVENT \_ LEVEL \_ CRITICAL | Identifiziert ein ungewöhnliches Beendigungs- oder Beendigungsereignis.<br/>            |
+| win:Error         | 2     | WINEVENT \_ LEVEL \_ ERROR    | Identifiziert ein schwerwiegendes Fehlerereignis.<br/>                             |
+| win:Warning       | 3     | WINEVENT \_ LEVEL \_ WARNING  | Identifiziert ein Warnungsereignis, z. B. einen Zuordnungsfehler.<br/>    |
+| win:Informational | 4     | INFORMATIONEN ZUM \_ \_ WINEVENT-LEVEL     | Identifiziert ein Nicht-Fehlerereignis, z. B. ein Einstiegs- oder Beendigungsereignis.<br/> |
+| win:Verbose       | 5     | WINEVENT \_ LEVEL \_ VERBOSE  | Identifiziert ein detailliertes Ablaufverfolgungsereignis.<br/>                           |
 
 
 
  
 
-Eine höhere Anzahl impliziert, dass Sie auch niedrigere Ebenen erhalten. Wenn Sie z. b. "Win: Warning" angeben, werden alle Warnungen, Fehler und kritischen Ereignisse angezeigt.
+Höhere Zahlen implizieren, dass Sie auch niedrigere Ebenen erhalten. Wenn Sie beispielsweise win:Warning angeben, erhalten Sie alle Warnungs-, Fehler- und kritischen Ereignisse.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -92,8 +92,8 @@ Eine höhere Anzahl impliziert, dass Sie auch niedrigere Ebenen erhalten. Wenn S
 
 | Anforderung | Wert |
 |-------------------------------------|------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>       |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2008 \[ -Desktop-Apps\]<br/> |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur \[ Vista-Desktop-Apps\]<br/>       |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2008-Desktop-Apps\]<br/> |
 
 
 

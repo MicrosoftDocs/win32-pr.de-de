@@ -1,12 +1,12 @@
 ---
 title: SetEncryptionLevel-Methode der Win32_TSGeneralSetting-Klasse
-description: Die setencryptionlevel-Methode legt die Verschlüsselungs Stufe fest.
+description: Die SetEncryptionLevel-Methode legt die Verschlüsselungsebene fest.
 ms.assetid: 1822c4dc-bce6-489f-b21e-f96faffd2fa5
 ms.tgt_platform: multiple
 keywords:
-- Setencryptionlevel-Methode Remotedesktopdienste
-- Setencryptionlevel-Methode Remotedesktopdienste, Win32_TSGeneralSetting-Klasse
-- Win32_TSGeneralSetting-Klasse Remotedesktopdienste, setencryptionlevel-Methode
+- SetEncryptionLevel-Methode Remotedesktopdienste
+- SetEncryptionLevel-Methode Remotedesktopdienste , Win32_TSGeneralSetting-Klasse
+- Win32_TSGeneralSetting Klasse Remotedesktopdienste , SetEncryptionLevel-Methode
 topic_type:
 - apiref
 api_name:
@@ -17,16 +17,16 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: b1fbe727c75851bb13252d196e1fe7d599f881c1
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: a54aacf931a66d6d4bdd4daa24a6432e4caa7fb01695aebbe4324b17ab5f2bed
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104104595"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118348842"
 ---
-# <a name="setencryptionlevel-method-of-the-win32_tsgeneralsetting-class"></a>Setencryptionlevel-Methode der Win32- \_ Klasse "zgeneralsetting"
+# <a name="setencryptionlevel-method-of-the-win32_tsgeneralsetting-class"></a>SetEncryptionLevel-Methode der Win32 \_ TSGeneralSetting-Klasse
 
-Die **setencryptionlevel** -Methode legt die Verschlüsselungs Stufe fest.
+Die **SetEncryptionLevel-Methode** legt die Verschlüsselungsebene fest.
 
 ## <a name="syntax"></a>Syntax
 
@@ -43,10 +43,10 @@ uint32 SetEncryptionLevel(
 
 <dl> <dt>
 
-*Minverschlüsselungslevel* \[ in\]
+*MinEncryptionLevel* \[ In\]
 </dt> <dd>
 
-Die minimale Verschlüsselungs Stufe, die festgelegt werden soll.
+Die festzulegende Mindestverschlüsselungsebene.
 
 <dt>
 
@@ -57,7 +57,7 @@ Die minimale Verschlüsselungs Stufe, die festgelegt werden soll.
 
 </dt> <dd>
 
-Niedriger Verschlüsselungs Grad. Nur vom Client an den Server gesendete Daten werden mithilfe der 56-Bit-Verschlüsselung verschlüsselt. Beachten Sie, dass die vom Server an den Client gesendeten Daten nicht verschlüsselt sind.
+Niedrige Verschlüsselungsebene. Nur daten, die vom Client an den Server gesendet werden, werden mit 56-Bit-Verschlüsselung verschlüsselt. Beachten Sie, dass die vom Server an den Client gesendeten Daten nicht verschlüsselt sind.
 
 </dd> <dt>
 
@@ -68,18 +68,18 @@ Niedriger Verschlüsselungs Grad. Nur vom Client an den Server gesendete Daten w
 
 </dt> <dd>
 
-Client kompatibles Verschlüsselungs Niveau Alle Daten, die vom Client an den Server und vom Server an den Client gesendet werden, werden mit der maximalen Schlüssel Stärke verschlüsselt, die vom Client unterstützt wird.
+Clientkompatible Verschlüsselungsebene. Alle Daten, die von Client zu Server und von Server zu Client gesendet werden, werden mit der maximalen Schlüsselstärke verschlüsselt, die vom Client unterstützt wird.
 
 </dd> <dt>
 
 <span id="3"></span>
 
-<span id="3"></span>**€**
+<span id="3"></span>**3**
 
 
 </dt> <dd>
 
-Hohes Maß an Verschlüsselung. Alle Daten, die vom Client an den Server und vom Server an den Client gesendet werden, werden mit starker 128-Bit-Verschlüsselung verschlüsselt. Clients, die diese Verschlüsselungs Stufe nicht unterstützen, können keine Verbindung herstellen.
+Hoher Verschlüsselungsgrad. Alle Daten, die von Client zu Server und von Server zu Client gesendet werden, werden mit starker 128-Bit-Verschlüsselung verschlüsselt. Clients, die diese Verschlüsselungsebene nicht unterstützen, können keine Verbindung herstellen.
 
 </dd> <dt>
 
@@ -90,17 +90,17 @@ Hohes Maß an Verschlüsselung. Alle Daten, die vom Client an den Server und vom
 
 </dt> <dd>
 
-Mit der PPS-kompatible Verschlüsselung. Alle Daten, die vom Client an den Server und vom Server an den Client gesendet werden, werden verschlüsselt und mit den Federal Information Processing Standard (FI)-Verschlüsselungsalgorithmen mithilfe der Kryptografiemodule von Microsoft entschlüsselt. Der Standardwert für "Sicherheitsanforderungen für kryptografische Module" ist "Standard". In den Informationen zu den in der US-Regierung verwendeten Hardware-und Softwaremodulen werden die behördlichen Anforderungen für Hardware-und Software Kryptografiemodule beschrieben. 2001 140-2 1994 140-1
+FIPS-konforme Verschlüsselung. Alle Daten, die von Client zu Server und von Server zu Client gesendet werden, werden mit den FIPS-Verschlüsselungsalgorithmen (Federal Information Processing Standard) mithilfe der kryptografischen Microsoft-Module verschlüsselt und entschlüsselt. FIPS ist ein Standard mit dem Titel "Sicherheitsanforderungen für kryptografische Module". FIPS 140-1 (1994) und FIPS 140-2 (2001) beschreiben die Anforderungen der Regierung für Hardware- und Software-Kryptografiemodule, die innerhalb der US-Regierung verwendet werden.
 
 </dd> </dl> </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt bei Erfolg Erfolg zurück, andernfalls wird ein WMI-Fehlercode zurückgegeben. Eine Liste dieser Werte finden Sie unter [Remotedesktopdienste Fehler Codes des WMI-Anbieters](terminal-services-wmi-provider-error-codes.md) .
+Gibt Erfolg bei Erfolg zurück, andernfalls einen WMI-Fehlercode. Eine Liste dieser Werte finden [Sie unter Remotedesktopdienste WMI-Anbieterfehlercodes.](terminal-services-wmi-provider-error-codes.md)
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Managed Object Format-Dateien (MOF) enthalten die Definitionen für Windows-Verwaltungsinstrumentation (WMI)-Klassen. MOF-Dateien werden nicht als Teil des Microsoft Windows Software Development Kit (SDK) installiert. Sie werden auf dem Server installiert, wenn Sie die zugehörige Rolle mithilfe der Server-Manager hinzufügen. Weitere Informationen zu MOF-Dateien finden Sie unter [Managed Object Format (MOF)](/windows/desktop/WmiSdk/managed-object-format--mof-).
+Managed Object Format -Dateien (MOF) enthalten die Definitionen für Windows Management Instrumentation (WMI)-Klassen. MOF-Dateien werden nicht als Teil des Microsoft Windows Software Development Kit (SDK) installiert. Sie werden auf dem Server installiert, wenn Sie die zugeordnete Rolle mithilfe der Server-Manager hinzufügen. Weitere Informationen zu MOF-Dateien finden Sie unter [Managed Object Format (MOF).](/windows/desktop/WmiSdk/managed-object-format--mof-)
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -111,16 +111,16 @@ Managed Object Format-Dateien (MOF) enthalten die Definitionen für Windows-Verw
 | Unterstützte Mindestversion (Client)<br/> | Windows Vista<br/>                                                                |
 | Unterstützte Mindestversion (Server)<br/> | Windows Server 2008<br/>                                                          |
 | Namespace<br/>                | Root \\ CIMv2 \\ TerminalServices<br/>                                                |
-| MOF<br/>                      | <dl> <dt>Tscsgwmi. MOF</dt> </dl> |
+| MOF<br/>                      | <dl> <dt>TSCfgWmi.mof</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>TSCfgWmi.dll</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Win32-Einstellung für "" \_**](win32-tsgeneralsetting.md)
+[**Win32 \_ TSGeneralSetting**](win32-tsgeneralsetting.md)
 </dt> </dl>
 
  

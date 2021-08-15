@@ -1,10 +1,10 @@
 ---
-title: ID3DX11EffectTechnique-Schnittstelle (D3dx11effect. h)
-description: Eine ID3DX11EffectTechnique-Schnittstelle ist eine Auflistung von Durchläufen. Die Lebensdauer eines ID3DX11EffectTechnique-Objekts entspricht der Lebensdauer seines übergeordneten ID3DX11Effect-Objekts.
+title: ID3DX11EffectTechnique-Schnittstelle (D3dx11effect.h)
+description: Eine ID3DX11EffectTechnique-Schnittstelle ist eine Auflistung von Durchläufen. Die Lebensdauer eines ID3DX11EffectTechnique-Objekts entspricht der Lebensdauer des übergeordneten ID3DX11Effect-Objekts.
 ms.assetid: 63d52cac-287d-4432-bf2b-7b4e67e525e6
 keywords:
 - ID3DX11EffectTechnique-Schnittstelle Direct3D 11
-- ID3DX11EffectTechnique Interface Direct3D 11, beschrieben
+- ID3DX11EffectTechnique-Schnittstelle Direct3D 11 , beschrieben
 topic_type:
 - apiref
 api_name:
@@ -16,60 +16,60 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: e582d8f94b2dbcbb2052a8cf3a59d8ba514367cc
-ms.sourcegitcommit: 14010c34b35fa268046c7683f021f86de08ddd0a
+ms.openlocfilehash: 4d8970ad1e75f37e8270a013d3830216ae128e41c03d4ad5245ac6ffc7615691
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "104982540"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118532352"
 ---
 # <a name="id3dx11effecttechnique-interface"></a>ID3DX11EffectTechnique-Schnittstelle
 
-Eine **ID3DX11EffectTechnique** -Schnittstelle ist eine Auflistung von Durchläufen.
+Eine **ID3DX11EffectTechnique-Schnittstelle** ist eine Auflistung von Durchläufen.
 
-Die Lebensdauer eines **ID3DX11EffectTechnique** -Objekts entspricht der Lebensdauer seines übergeordneten [**ID3DX11Effect**](id3dx11effect.md) -Objekts.
+Die Lebensdauer eines **ID3DX11EffectTechnique-Objekts** entspricht der Lebensdauer des übergeordneten [**ID3DX11Effect-Objekts.**](id3dx11effect.md)
 
 -   [Methoden](#methods)
 
 ### <a name="methods"></a>Methoden
 
-Die **ID3DX11EffectTechnique** -Schnittstelle verfügt über diese Methoden.
+Die **ID3DX11EffectTechnique-Schnittstelle** verfügt über diese Methoden.
 
 
 
 | Methode                                                                        | BESCHREIBUNG                                                           |
 |:------------------------------------------------------------------------------|:----------------------------------------------------------------------|
-| [**Computestateblockmask**](id3dx11effecttechnique-computestateblockmask.md) | Berechnen Sie eine Zustands Block Maske, um Zustandsänderungen zuzulassen/zu verhindern.<br/> |
-| [**Getannotationbyindex**](id3dx11effecttechnique-getannotationbyindex.md)   | Eine Anmerkung nach Index erhalten.<br/>                                |
-| [**Getannotationbyname**](id3dx11effecttechnique-getannotationbyname.md)     | Eine Anmerkung anhand des Namens erhalten.<br/>                                 |
-| [**GetDesc**](id3dx11effecttechnique-getdesc.md)                             | Hier finden Sie eine Technik Beschreibung.<br/>                               |
-| [**Getpassbyindex**](id3dx11effecttechnique-getpassbyindex.md)               | Einen Pass-by-Index erhalten.<br/>                                       |
-| [**Getpassbyname**](id3dx11effecttechnique-getpassbyname.md)                 | Einen Pass-Through-Namen erhalten.<br/>                                        |
-| [**IsValid**](id3dx11effecttechnique-isvalid.md)                             | Testen Sie eine Technik, um festzustellen, ob Sie eine gültige Syntax enthält.<br/>       |
+| [**ComputeStateBlockMask**](id3dx11effecttechnique-computestateblockmask.md) | Berechnen Sie eine Zustandsblockmaske, um Zustandsänderungen zu ermöglichen bzw. zu verhindern.<br/> |
+| [**GetAnnotationByIndex**](id3dx11effecttechnique-getannotationbyindex.md)   | Sie erhalten eine Anmerkung nach Index.<br/>                                |
+| [**GetAnnotationByName**](id3dx11effecttechnique-getannotationbyname.md)     | Erhalten Sie eine Anmerkung nach Namen.<br/>                                 |
+| [**GetDesc**](id3dx11effecttechnique-getdesc.md)                             | Erhalten Sie eine Technikbeschreibung.<br/>                               |
+| [**GetPassByIndex**](id3dx11effecttechnique-getpassbyindex.md)               | Get a pass by index (Index für Pass-by-Index).<br/>                                       |
+| [**GetPassByName**](id3dx11effecttechnique-getpassbyname.md)                 | Erhalten Sie einen Pass nach Name.<br/>                                        |
+| [**IsValid**](id3dx11effecttechnique-isvalid.md)                             | Testen Sie eine Technik, um zu überprüfen, ob sie eine gültige Syntax enthält.<br/>       |
 
 
 
  
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Ein Effekt enthält mindestens eine Technik. jede Technik enthält einen oder mehrere Durchgänge. Jeder Durchlauf enthält Zustands Zuweisungen.
+Ein Effekt enthält eine oder mehrere Techniken. jede Technik enthält einen oder mehrere Durchläufe. Jeder Durchgang enthält Zustandszuweisungen.
 
-Um eine Wirkungs Technik-Schnittstelle zu erhalten, müssen Sie eine Methode wie [**ID3DX11Effect:: gettechniquebyname**](id3dx11effect-gettechniquebyname.md)aufrufen.
+Um eine Effekttechnikschnittstelle zu erhalten, rufen Sie eine Methode wie [**ID3DX11Effect::GetTechniqueByName auf.**](id3dx11effect-gettechniquebyname.md)
 
 > [!Note]  
-> Das DirectX SDK stellt keine kompilierten Binärdateien für Effekte bereit. Sie müssen die Effekte 11-Quelle verwenden, um die Effekte-Anwendung zu erstellen. Weitere Informationen zum Verwenden der Effekte 11-Quelle finden Sie [unter Unterschiede zwischen den Effekten 10 und Effekte 11](d3d11-graphics-programming-guide-effects-differences.md).
+> Das DirectX SDK stellt keine kompilierten Binärdateien für Effekte bereit. Sie müssen die Quelle Effects 11 verwenden, um Ihre Effekttypanwendung zu erstellen. Weitere Informationen zur Verwendung der Quelle Effects 11 finden Sie unter [Unterschiede zwischen Effekten 10 und Effekten 11.](d3d11-graphics-programming-guide-effects-differences.md)
 
  
 
-## <a name="requirements"></a>Requirements (Anforderungen)
+## <a name="requirements"></a>Anforderungen
 
 
 
 | Anforderung | Wert |
 |--------------------|----------------------------------------------------------------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>D3dx11effect. h</dt> </dl>                                                    |
-| Bibliothek<br/> | <dl> <dt>N/v (die "Effects 11"-Bibliothek ist online als freigegebene Quelle verfügbar.)</dt> </dl> |
+| Header<br/>  | <dl> <dt>D3dx11effect.h</dt> </dl>                                                    |
+| Bibliothek<br/> | <dl> <dt>Nicht verfügbar (eine Effects 11-Bibliothek ist online als freigegebene Quelle verfügbar.)</dt> </dl> |
 
 
 
@@ -77,7 +77,7 @@ Um eine Wirkungs Technik-Schnittstelle zu erhalten, müssen Sie eine Methode wie
 
 <dl> <dt>
 
-[Effekte 11-Schnittstellen](d3d11-graphics-reference-effects11-interfaces.md)
+[Effekte 11 Schnittstellen](d3d11-graphics-reference-effects11-interfaces.md)
 </dt> <dt>
 
 [D3DX-Schnittstellen](d3d11-graphics-reference-d3dx11-interfaces.md)

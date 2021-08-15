@@ -4,28 +4,28 @@ description: Symbol "Taskleiste" für Zeichen
 ms.assetid: b1db7151-b367-4708-897e-0695988163e8
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: b3769e6ce04886ce763d967eb14af4f0cd77628f
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: af64413b0ecfee182902c6db376ce1857b8b1cf59e2d1a93274b70366ad5ee4f
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "104309432"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118474983"
 ---
 # <a name="the-character-taskbar-icon"></a>Symbol "Taskleiste" für Zeichen
 
-\[Der Microsoft-Agent ist ab Windows 7 veraltet und in nachfolgenden Versionen von Windows möglicherweise nicht verfügbar.\]
+\[Microsoft Agent ist ab Version Windows 7 veraltet und in nachfolgenden Versionen von Windows.\]
 
-Wenn ein Zeichen erstellt wurde, das ein Symbol enthält, wird das Symbol im Benachrichtigungsbereich der Taskleiste angezeigt, wenn der Microsoft-Agent ausgeführt wird. Dieses Symbol bietet Zugriff auf das Popup Menü des Zeichens, das den Zugriff auf die globalen Befehle des Agents ermöglicht, wie z. b. die, die das Zeichen ausblenden und anzeigen.
+Wenn ein Zeichen so erstellt wurde, dass es ein Symbol enthält, wird das Symbol im Benachrichtigungsbereich der Taskleiste angezeigt, wenn Microsoft Agent ausgeführt wird. Dieses Symbol ermöglicht den Zugriff auf das Popupmenü des Zeichens, das Zugriff auf die globalen Befehle des -Agents bietet, z. B. befehle, die das Zeichen ausblenden und anzeigen.
 
 ![Benachrichtigungsbereich mit Uhr und Symbol](images/f1tbicon.gif)
 
-Wenn Sie den Mauszeiger über das Task leisten Symbol bewegen, wird ein Tip-Fenster angezeigt, das den Namen des Zeichens (in der aktuellen Sprache des Systems) wieder gibt. Durch einen einfachen Klick auf das Task leisten Symbol des Zeichens wird das Zeichen angezeigt. Die Aktion, die dem Doppelklicken auf das Symbol zugeordnet ist, hängt von der aktuellen Anwendung ab, die dieses Zeichen steuert.
+Wenn Sie den Zeiger über das Taskleistensymbol bewegen, wird ein Tippfenster angezeigt, das den Namen des Zeichens (in der aktuellen Sprache des Systems) wiederspiegelt. Wenn Sie auf das Taskleistensymbol des Zeichens klicken, wird das Zeichen angezeigt. Die Aktion, die dem Doppelklicken auf das Symbol zugeordnet ist, hängt von der aktuellen Anwendung ab, die dieses Zeichen steuert.
 
-Wenn Sie mit der rechten Maustaste auf das Symbol klicken, wird ein Popup Menü angezeigt. Wenn das Zeichen sichtbar ist, zeigt das Popup Menü dieselben Befehle an wie die, die angezeigt werden, wenn Sie mit der rechten Maustaste auf das Zeichen klicken. Wenn das Zeichen ausgeblendet ist, werden nur das Fenster "Sprachbefehle öffnen (oder schließen)" und "Befehle anzeigen" angezeigt.
+Wenn Sie mit der rechten Maustaste auf das Symbol klicken, wird ein Popupmenü angezeigt. Wenn das Zeichen sichtbar ist, werden im Popupmenü die gleichen Befehle wie beim Rechtsklick auf das Zeichen angezeigt. Wenn das Zeichen ausgeblendet ist, werden nur die Befehle Sprachbefehle öffnen (oder schließen) und Anzeigen angezeigt.
 
- 
+ 
 
- 
+ 
 
 
 

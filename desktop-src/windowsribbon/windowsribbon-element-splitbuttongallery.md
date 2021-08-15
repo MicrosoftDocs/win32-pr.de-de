@@ -3,7 +3,7 @@ title: SplitButtonGallery-Element
 description: Stellt ein Split Button Gallery-Steuerelement mit einem katalogbasierten Dropdownmenü dar.
 ms.assetid: 65b6af50-6d9a-4285-b2d9-26dfb904d0b8
 keywords:
-- SplitButtonGallery-Element Windows-Menüband
+- SplitButtonGallery-Element Windows Menüband
 topic_type:
 - apiref
 api_name:
@@ -13,18 +13,18 @@ api_type:
 ms.topic: reference
 ms.date: 05/31/2018
 api_location: ''
-ms.openlocfilehash: f5f8767135b9472acba333b1cdfa6ab102e9b7f4
-ms.sourcegitcommit: 099ecdda1e83618b844387405da0db0ebda93a65
+ms.openlocfilehash: c28c2f87a1d8fb165f02ad71c96b38bcbb381bb3590bd9bff98b3feb364044bc
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/04/2021
-ms.locfileid: "111444831"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117850815"
 ---
 # <a name="splitbuttongallery-element"></a>SplitButtonGallery-Element
 
 Stellt ein Split [Button Gallery-Steuerelement](windowsribbon-controls-splitbuttongallery.md) mit einem katalogbasierten Dropdownmenü dar.
 
-## <a name="usage"></a>Verwendung
+## <a name="usage"></a>Verbrauch
 
 ``` syntax
 <SplitButtonGallery
@@ -53,7 +53,7 @@ Stellt ein Split [Button Gallery-Steuerelement](windowsribbon-controls-splitbutt
 <thead>
 <tr class="header">
 <th>attribute</th>
-<th>Typ</th>
+<th>type</th>
 <th>Erforderlich</th>
 <th>BESCHREIBUNG</th>
 </tr>
@@ -71,7 +71,7 @@ Stellt ein Split [Button Gallery-Steuerelement](windowsribbon-controls-splitbutt
 <td>xs:positiveInteger oder xs:string<br/></td>
 <td>Nein<br/></td>
 <td>Ordnet das Element einem <a href="windowsribbon-element-command.md"><strong>Command zu.</strong></a><br/> <br/>
-<dt><span></span><span></span><strong></strong> (xs:positiveInteger oder xs:string)<br/> </dt> <dd> Eine Zeichenfolge, ein ganzzahliger Wert zwischen 2 und 59999( einschließlich) oder ein Hexadezimalwert zwischen 0x2 und 0xea5f einschließlich. <br/> Der Wert muss innerhalb des Menüband-XML-Dokuments eindeutig sein. <br/> Maximale Länge: 100 Zeichen. <br/> </dd> </dl></td>
+<dt><span></span><span></span><strong></strong> (xs:positiveInteger oder xs:string)<br/> </dt> <dd> Eine Zeichenfolge, ein ganzzahliger Wert zwischen 2 und 59999 einschließlich oder ein Hexadezimalwert zwischen 0x2 und 0xea5f einschließlich. <br/> Der Wert muss innerhalb des Menüband-XML-Dokuments eindeutig sein. <br/> Maximale Länge: 100 Zeichen. <br/> </dd> </dl></td>
 </tr>
 <tr class="odd">
 <td><strong>HasLargeItems</strong><br/></td>
@@ -122,12 +122,12 @@ Gilt nur für Kataloge, in denen der Wert des <em>Type-Attributs</em> gleich <co
 
 | Element                                                                                                 | BESCHREIBUNG                                        |
 |---------------------------------------------------------------------------------------------------------|----------------------------------------------------|
-| [**Schaltfläche**](windowsribbon-element-button.md)<br/>                                               | Kann ein oder mehrere Male auftreten<br/> <br/> |
-| [**Checkbox**](windowsribbon-element-checkbox.md)<br/>                                           | Kann ein oder mehrere Male auftreten<br/> <br/> |
-| [**SplitButton**](windowsribbon-element-splitbutton.md)<br/>                                     | Kann ein oder mehrere Male auftreten<br/> <br/> |
+| [**Schaltfläche**](windowsribbon-element-button.md)<br/>                                               | Kann ein oder mehrere Male auftreten.<br/> <br/> |
+| [**Checkbox**](windowsribbon-element-checkbox.md)<br/>                                           | Kann ein oder mehrere Male auftreten.<br/> <br/> |
+| [**SplitButton**](windowsribbon-element-splitbutton.md)<br/>                                     | Kann ein oder mehrere Male auftreten.<br/> <br/> |
 | [**SplitButtonGallery.MenuGroups**](windowsribbon-element-splitbuttongallery-menugroups.md)<br/> | Muss genau einmal auftreten<br/> <br/>     |
 | [**SplitButtonGallery.MenuLayout**](windowsribbon-element-splitbuttongallery-menulayout.md)<br/> | Kann höchstens einmal auftreten.<br/> <br/>      |
-| [**ToggleButton**](windowsribbon-element-togglebutton.md)<br/>                                   | Kann ein oder mehrere Male auftreten<br/> <br/> |
+| [**ToggleButton**](windowsribbon-element-togglebutton.md)<br/>                                   | Kann ein oder mehrere Male auftreten.<br/> <br/> |
 
 
 
@@ -157,7 +157,7 @@ Gilt nur für Kataloge, in denen der Wert des <em>Type-Attributs</em> gleich <co
 </tr>
 <tr class="odd">
 <td><a href="windowsribbon-element-menugroup.md"><strong>Menugroup</strong></a><br/></td>
-<td>Wenn sie in einem <a href="windowsribbon-element-applicationmenu.md"><strong>ApplicationMenu</strong></a>enthalten ist. Dieses Element wird nur auf der ersten Ebene unterstützt und darf keine untergeordneten Elemente enthalten.<br/> <br/></td>
+<td>, wenn es in einem <a href="windowsribbon-element-applicationmenu.md"><strong>ApplicationMenu</strong></a>enthalten ist. Dieses Element wird nur auf der ersten Ebene unterstützt und darf keine untergeordneten Elemente enthalten.<br/> <br/></td>
 </tr>
 <tr class="even">
 <td><a href="windowsribbon-element-quickaccesstoolbar-applicationdefaults.md"><strong>QuickAccessToolbar.ApplicationDefaults</strong></a><br/></td>
@@ -178,7 +178,7 @@ Windows 8 und neuer.
 
 ## <a name="remarks"></a>Hinweise
 
-Dies ist optional.
+Optional.
 
 Kann ein oder mehrere Male für jedes [**ControlGroup-,**](windowsribbon-element-controlgroup.md) [**Group-, MenuGroup-**](windowsribbon-element-menugroup.md)oder [**SplitButton-Element**](windowsribbon-element-splitbutton.md) auftreten. [](windowsribbon-element-group.md)
 
@@ -246,11 +246,11 @@ Dieser Codeabschnitt zeigt die **SplitButtonGallery-Steuerelementdeklarationen.*
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[Split Button Gallery-Steuerelement](windowsribbon-controls-splitbuttongallery.md)
+[Steuerelement "Katalog mit geteilten Schaltflächen"](windowsribbon-controls-splitbuttongallery.md)
 </dt> <dt>
 
 [Arbeiten mit Katalogen](ribbon-controls-galleries.md)

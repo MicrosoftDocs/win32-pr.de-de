@@ -1,27 +1,27 @@
 ---
-title: Threading Unterschiede zwischen Direct3D-Versionen
-description: Viele multithreadprogrammierungs-Modelle verwenden Synchronisierungs primitive (z. b. Mutexen), um kritische Abschnitte zu erstellen und zu verhindern, dass der Zugriff auf Code von mehreren Threads gleichzeitig erfolgt.
+title: Threadingunterschiede zwischen Direct3D-Versionen
+description: Viele Multithread-Programmiermodelle verwenden Synchronisierungsprimitiven (z. B. Mutexe), um kritische Abschnitte zu erstellen und zu verhindern, dass von mehreren Threads gleichzeitig auf Code zugegriffen wird.
 ms.assetid: 0c4f984e-4dd0-4714-b911-592ca86d5dc0
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: f0e99c68dbdba1d6f0cdd789f6ccac8b81d4ac03
-ms.sourcegitcommit: 592c9bbd22ba69802dc353bcb5eb30699f9e9403
+ms.openlocfilehash: 9e9b53e53ad10dc662bfb57dc880c6423b3df0f320d109f212e54c10f3b9f314
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "104390645"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117913057"
 ---
-# <a name="threading-differences-between-direct3d-versions"></a>Threading Unterschiede zwischen Direct3D-Versionen
+# <a name="threading-differences-between-direct3d-versions"></a>Threadingunterschiede zwischen Direct3D-Versionen
 
-Viele multithreadprogrammierungs-Modelle verwenden Synchronisierungs primitive (z. b. Mutexen), um kritische Abschnitte zu erstellen und zu verhindern, dass der Zugriff auf Code von mehreren Threads gleichzeitig erfolgt.
+Viele Multithread-Programmiermodelle verwenden Synchronisierungsprimitiven (z. B. Mutexe), um kritische Abschnitte zu erstellen und zu verhindern, dass von mehreren Threads gleichzeitig auf Code zugegriffen wird.
 
-Die Methoden zum Erstellen von Ressourcen der [**ID3D11Device**](/windows/desktop/api/D3D11/nn-d3d11-id3d11device) -Schnittstelle wurden jedoch so konzipiert, dass Sie Wiedereintritts fähig werden, ohne dass Synchronisierungs primitive und kritische Abschnitte erforderlich sind. Folglich sind die Methoden zum Erstellen von Ressourcen effizient und leicht zu verwenden.
+Die Methoden zum Erstellen von Ressourcen der [**ID3D11Device-Schnittstelle**](/windows/desktop/api/D3D11/nn-d3d11-id3d11device) wurden jedoch so entworfen, dass sie erneut in die Lage sind, ohne Synchronisierungsprimitiven und kritische Abschnitte zu erfordern. Daher sind die Ressourcenerstellungsmethoden effizient und einfach zu verwenden.
 
 
 
 |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   |
 |-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Unterschiede zwischen Direct3D 11, 10 und 9:<br/> Direct3D 11 ist standardmäßig größtenteils Thread sicher und ermöglicht es den Anwendungen weiterhin, die Verwendung von D3D11 \_ Create \_ Device \_ Singlethreaded zu abonnieren. Wenn Anwendungen nicht Thread sicher sind, müssen Sie Threading Regeln einhalten. Die Laufzeit synchronisiert Threads für die Anwendung, sodass gleichzeitige Threads ausgeführt werden können. Tatsächlich ist die Synchronisierung in Direct3D 11 effizienter als die Verwendung der Thread sicheren Schicht in Direct3D 10.<br/> Direct3D 10 unterstützt die gleichzeitig Ausführung von nur einem Thread. Direct3D 10 ist vollständig Thread sicher und ermöglicht es einer Anwendung, dieses Verhalten mithilfe von d3d10 \_ Create \_ Device \_ Single Thread abzumelden \_ . <br/> Direct3D 9 ist nicht standardmäßig Thread sicher. Wenn Sie jedoch " [**devatedevice**](/windows/desktop/api/d3d9/nf-d3d9-idirect3d9-createdevice) " oder " [**foratedeviceex**](/windows/desktop/api/d3d9/nf-d3d9-idirect3d9ex-createdeviceex) " aufrufen, um ein Gerät zu erstellen, können Sie das D3DCREATE- \_ multithreadflag angeben, um den Direct3D 9-API-Thread sicher zu machen. Dies verursacht einen erheblichen Synchronisierungs Aufwand. Daher wird empfohlen, den Direct3D 9-API-Thread sicher zu gestalten, da die Leistung beeinträchtigt werden kann.<br/> |
+| Unterschiede zwischen Direct3D 11, 10 und 9:<br/> Direct3D 11 ist standardmäßig größtenteils threadsicher und lässt weiterhin zu, dass Anwendungen die Verwendung von D3D11 \_ CREATE \_ DEVICE \_ SINGLETHREADED deaktivieren. Wenn Anwendungen nicht threadsicher sind, müssen sie Threadingregeln einhalten. Die Runtime synchronisiert Threads im Namen der Anwendung, sodass gleichzeitige Threads ausgeführt werden können. Tatsächlich ist die Synchronisierung in Direct3D 11 effizienter als die Verwendung der threadsicheren Schicht in Direct3D 10.<br/> Direct3D 10 kann die Ausführung von nur einem Thread gleichzeitig unterstützen. Direct3D 10 ist vollständig threadsicher und ermöglicht es einer Anwendung, dieses Verhalten mithilfe von D3D10 \_ CREATE \_ DEVICE SINGLE \_ \_ THREADED zu deaktivieren. <br/> Direct3D 9 ist standardmäßig nicht threadsicher. Wenn Sie jedoch [**CreateDevice**](/windows/desktop/api/d3d9/nf-d3d9-idirect3d9-createdevice) oder [**CreateDeviceEx**](/windows/desktop/api/d3d9/nf-d3d9-idirect3d9ex-createdeviceex) aufrufen, um ein Gerät zu erstellen, können Sie das Flag D3DCREATE MULTITHREADED angeben, um den \_ Direct3D 9-API-Thread sicher zu machen. Dies verursacht einen erheblichen Synchronisierungsaufwand. Daher wird nicht empfohlen, den Direct3D 9-API-Thread sicher zu machen, da die Leistung beeinträchtigt werden kann.<br/> |
 
 
 
@@ -31,7 +31,7 @@ Die Methoden zum Erstellen von Ressourcen der [**ID3D11Device**](/windows/deskto
 
 <dl> <dt>
 
-[MultiThreading](overviews-direct3d-11-render-multi-thread.md)
+[Multithreading](overviews-direct3d-11-render-multi-thread.md)
 </dt> </dl>
 
  

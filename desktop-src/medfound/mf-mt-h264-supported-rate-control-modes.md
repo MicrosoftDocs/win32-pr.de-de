@@ -1,19 +1,19 @@
 ---
-description: Gibt die unterstützten Raten Steuerungs Modi für einen H. 264-Videostream an.
+description: Gibt die unterstützten Ratensteuerungsmodi für einen H.264-Videostream an.
 ms.assetid: DAA62ECD-AFA2-40C2-9B52-F2D581F4D894
-title: MF_MT_H264_SUPPORTED_RATE_CONTROL_MODES-Attribut (mfapi. h)
+title: MF_MT_H264_SUPPORTED_RATE_CONTROL_MODES-Attribut (Mfapi.h)
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 3c7b315bf41d662dd5abb283c346710f485789ff
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 9665fd99635749e2400437e77cb89e74d2cb8675689f6f4b867a20ac82fadaec
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106343320"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117692282"
 ---
-# <a name="mf_mt_h264_supported_rate_control_modes-attribute"></a>Von MF \_ MT \_ H264 \_ unterstütztes \_ Attribut für Raten \_ Steuerungs \_ Modi
+# <a name="mf_mt_h264_supported_rate_control_modes-attribute"></a>MF \_ MT \_ H264 \_ SUPPORTED RATE CONTROL \_ \_ \_ MODES-Attribut
 
-Gibt die unterstützten Raten Steuerungs Modi für einen H. 264-Videostream an.
+Gibt die unterstützten Ratensteuerungsmodi für einen H.264-Videostream an.
 
 ## <a name="data-type"></a>Datentyp
 
@@ -21,19 +21,19 @@ Gibt die unterstützten Raten Steuerungs Modi für einen H. 264-Videostream an.
 
 ## <a name="getset"></a>Abrufen/Festlegen
 
-Um dieses Attribut abzurufen, nennen Sie [**imfattributes:: GetUINT32**](/windows/desktop/api/mfobjects/nf-mfobjects-imfattributes-getuint32).
+Rufen Sie ZUM Abrufen dieses [**Attributs DIE ATTRIBUTEAttributes::GetUINT32 auf.**](/windows/desktop/api/mfobjects/nf-mfobjects-imfattributes-getuint32)
 
-Um dieses Attribut festzulegen, nennen Sie [**imfattributes:: SetUINT32**](/windows/desktop/api/mfobjects/nf-mfobjects-imfattributes-setuint32).
+Rufen Sie ZUM Festlegen dieses [**Attributs DIE ATTRIBUTEAttributes::SetUINT32 auf.**](/windows/desktop/api/mfobjects/nf-mfobjects-imfattributes-setuint32)
 
 ## <a name="applies-to"></a>Gilt für:
 
-[**IMF MediaType**](/windows/desktop/api/mfobjects/nn-mfobjects-imfmediatype)
+[**ARCHEMEDIATYPE**](/windows/desktop/api/mfobjects/nn-mfobjects-imfmediatype)
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Dieses Attribut gilt für Medientypen für H. 264-Streams, die über USB übertragen werden. Der Wert entspricht dem Feld **bmsupportedratecontrolmodes** im UVC 1,5 H. 264-Videoformat Deskriptor.
+Dieses Attribut gilt für Medientypen für H.264-Streams, die über USB übertragen werden. Der Wert entspricht dem **BmSupportedRateControlModes-Feld** im UVC 1.5 H.264-Videoformatdeskriptor.
 
-Dieses Attribut wird auch mit [H. 264 UVC 1,5-Kamera Codierern](camera-encoder-h264-uvc-1-5.md)verwendet.
+Dieses Attribut wird auch mit [H.264 UVC 1.5-Kameraencodern](camera-encoder-h264-uvc-1-5.md)verwendet.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -41,20 +41,20 @@ Dieses Attribut wird auch mit [H. 264 UVC 1,5-Kamera Codierern](camera-encoder-h
 
 | Anforderung | Wert |
 |-------------------------------------|------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Windows 8 \[ -Desktop-Apps \| UWP-apps\]<br/>                                  |
-| Unterstützte Mindestversion (Server)<br/> | Windows Server 2012 \[ -Desktop-Apps \| UWP-apps\]<br/>                        |
-| Header<br/>                   | <dl> <dt>Mfapi. h</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | \[Windows 8 \|Desktop-Apps UWP-Apps\]<br/>                                  |
+| Unterstützte Mindestversion (Server)<br/> | \[Windows Server 2012 \|Desktop-Apps UWP-Apps\]<br/>                        |
+| Header<br/>                   | <dl> <dt>Mfapi.h</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
 [Alphabetische Liste der Media Foundation Attribute](alphabetical-list-of-media-foundation-attributes.md)
 </dt> <dt>
 
-[Medientyp Attribute](media-type-attributes.md)
+[Medientypattribute](media-type-attributes.md)
 </dt> </dl>
 
  

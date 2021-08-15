@@ -1,9 +1,9 @@
 ---
-title: 'Structuredbuffer:: structuredbuffer-Lade Methoden'
-description: Liest Puffer Daten aus einem structuredbuffer.
+title: StructuredBuffer::StructuredBuffer Load-Methoden
+description: Liest Pufferdaten aus einem StructuredBuffer.
 ms.assetid: 4c797f36-d8e6-46ed-8ff0-248c28f82998
 keywords:
-- Lade Methoden HLSL
+- HlSL-Lademethoden
 topic_type:
 - apiref
 api_type:
@@ -12,16 +12,16 @@ ms.topic: reference
 ms.date: 05/31/2018
 api_name: ''
 api_location: ''
-ms.openlocfilehash: b294671ab1d67b3583f2f119f2a77cf3d22a301f
-ms.sourcegitcommit: 476861130ea63675206d1f06e517059705b930ed
+ms.openlocfilehash: 3a92c96283a8d835c4717a9ab54b580d8caf97b227b9a12aa0d97d0022d4350d
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/06/2019
-ms.locfileid: "104038225"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117724439"
 ---
-# <a name="structuredbufferload-methods"></a>Structuredbuffer:: Load-Methoden
+# <a name="structuredbufferload-methods"></a>StructuredBuffer::Load-Methoden
 
-Liest Puffer Daten aus einem [**structuredbuffer**](sm5-object-structuredbuffer.md).
+Liest Pufferdaten aus einem [**StructuredBuffer-**](sm5-object-structuredbuffer.md).
 
 ### <a name="overload-list"></a>Überladeliste
 
@@ -29,8 +29,8 @@ Liest Puffer Daten aus einem [**structuredbuffer**](sm5-object-structuredbuffer.
 
 | Methode                                                      | BESCHREIBUNG                                                          |
 |:------------------------------------------------------------|:---------------------------------------------------------------------|
-| [**Load (int, uint)**](structuredbuffer-load-float-uint-.md) | Liest Puffer Daten und gibt den Status des Vorgangs zurück.<br/> |
-| [**Laden (int)**](structuredbuffer-load-float-.md)           | Liest Puffer Daten.<br/>                                        |
+| [**Load(int,uint)**](structuredbuffer-load-float-uint-.md) | Liest Pufferdaten und gibt den Status des Vorgangs zurück.<br/> |
+| [**Load(int)**](structuredbuffer-load-float-.md)           | Liest Pufferdaten.<br/>                                        |
 
 
 
@@ -38,7 +38,7 @@ Liest Puffer Daten aus einem [**structuredbuffer**](sm5-object-structuredbuffer.
 
 <dl> <dt>
 
-[Structuredbuffer](sm5-object-structuredbuffer.md)
+[StructuredBuffer](sm5-object-structuredbuffer.md)
 </dt> </dl>
 
  

@@ -1,5 +1,5 @@
 ---
-description: 'ShellFolderView.Folder-Eigenschaft: Ruft ein Folder-Objekt ab, das die Sicht darstellt.'
+description: 'ShellFolderView.Folder-Eigenschaft: Ruft ein Folder-Objekt ab, das die Ansicht darstellt.'
 ms.assetid: 8f3e7827-f2a0-4ce9-b3e9-e6316ec58863
 title: ShellFolderView.Folder-Eigenschaft (Shldisp.h)
 ms.topic: reference
@@ -13,14 +13,14 @@ api_type:
 - COM
 api_location:
 - Shell32.dll
-ms.openlocfilehash: 370fddc1428c8f77edb77cdac2dc04123fc5211f
-ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
+ms.openlocfilehash: 40ff2dbed37aa8ceb80072870c78cee4e63cba3656550081be2c655cb6f6ddf9
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2021
-ms.locfileid: "108083418"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117857709"
 ---
-# <a name="shellfolderviewfolder-property"></a>ShellFolderView.Folder-Eigenschaft
+# <a name="shellfolderviewfolder-property"></a>ShellFolderView.Folder (Eigenschaft)
 
 Ruft ein [**Folder-Objekt**](folder.md) ab, das die Sicht darstellt.
 
@@ -39,13 +39,13 @@ Folder = ShellFolderView.Folder
 
 Objekt, das das [**Folder-Objekt**](folder.md) empfängt.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-**Der Ordner** kann nur auf dem lokalen System aufgerufen werden. Sie funktioniert nicht, wenn sie auf einer Webseite über HTTP oder UNC ausgeführt wird.
+**Der** Ordner kann nur auf dem lokalen System aufgerufen werden. Sie funktioniert nicht, wenn sie auf einer Webseite über HTTP oder UNC ausgeführt wird.
 
 ## <a name="examples"></a>Beispiele
 
-Das folgende Beispiel zeigt die ordnungsgemäße Verwendung dieser Eigenschaft für JScript, das in HTML eingebettet ist.
+Das folgende Beispiel zeigt die ordnungsgemäße Verwendung dieser Eigenschaft für JScript in HTML eingebetteten Dateien.
 
 
 ```JScript
@@ -97,7 +97,7 @@ Das folgende Beispiel zeigt die ordnungsgemäße Verwendung dieser Eigenschaft f
 
 
 
-| Anforderungen | Wert |
+| Anforderung | Wert |
 |-------------------------------------|----------------------------------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional, nur Windows \[ XP-Desktop-Apps\]<br/>                                         |
 | Unterstützte Mindestversion (Server)<br/> | Windows 2000 Server \[nur Desktop-Apps\]<br/>                                                           |

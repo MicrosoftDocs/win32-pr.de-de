@@ -1,26 +1,26 @@
 ---
-title: IMsRdpClientNonScriptable3 connectionbartext-Eigenschaft
-description: Legt den Text zum Aktualisieren der Verbindungs Leiste fest oder ruft ihn ab.
+title: IMsRdpClientNonScriptable3 ConnectionBarText-Eigenschaft
+description: Legt den Text zum Aktualisieren der Verbindungsleiste fest oder ruft diesen ab.
 ms.assetid: 9671118d-ee7c-4077-be81-57655aff5e35
 ms.tgt_platform: multiple
 keywords:
-- Connectionbartext-Eigenschaft Remotedesktopdienste
-- Connectionbartext-Eigenschaft Remotedesktopdienste, IMsRdpClientNonScriptable3-Schnittstelle
-- IMsRdpClientNonScriptable3 Interface Remotedesktopdienste, connectionbartext-Eigenschaft
-- Connectionbartext-Eigenschaft Remotedesktopdienste, IMsRdpClientNonScriptable4-Schnittstelle
-- IMsRdpClientNonScriptable4 Interface Remotedesktopdienste, connectionbartext-Eigenschaft
-- Connectionbartext-Eigenschaft Remotedesktopdienste, IMsRdpClientNonScriptable5-Schnittstelle
-- IMsRdpClientNonScriptable5 Interface Remotedesktopdienste, connectionbartext-Eigenschaft
-- Connectionbartext-Eigenschaft Remotedesktopdienste, MsRdpClient5-Objekt
-- MsRdpClient5-Objekt Remotedesktopdienste, connectionbartext-Eigenschaft
-- Connectionbartext-Eigenschaft Remotedesktopdienste, MsRdpClient6-Objekt
-- MsRdpClient6-Objekt Remotedesktopdienste, connectionbartext-Eigenschaft
-- Connectionbartext-Eigenschaft Remotedesktopdienste, MsRdpClient7-Objekt
-- MsRdpClient7-Objekt Remotedesktopdienste, connectionbartext-Eigenschaft
-- Connectionbartext-Eigenschaft Remotedesktopdienste, MsRdpClient8-Objekt
-- MsRdpClient8-Objekt Remotedesktopdienste, connectionbartext-Eigenschaft
-- Connectionbartext-Eigenschaft Remotedesktopdienste, MsRdpClient9-Objekt
-- MsRdpClient9-Objekt Remotedesktopdienste, connectionbartext-Eigenschaft
+- ConnectionBarText-Eigenschaft Remotedesktopdienste
+- ConnectionBarText-Eigenschaft Remotedesktopdienste , IMsRdpClientNonScriptable3-Schnittstelle
+- IMsRdpClientNonScriptable3-Schnittstelle Remotedesktopdienste , ConnectionBarText-Eigenschaft
+- ConnectionBarText-Eigenschaft Remotedesktopdienste , IMsRdpClientNonScriptable4-Schnittstelle
+- IMsRdpClientNonScriptable4-Schnittstelle Remotedesktopdienste , ConnectionBarText-Eigenschaft
+- ConnectionBarText-Eigenschaft Remotedesktopdienste , IMsRdpClientNonScriptable5-Schnittstelle
+- IMsRdpClientNonScriptable5-Schnittstelle Remotedesktopdienste , ConnectionBarText-Eigenschaft
+- ConnectionBarText-Eigenschaft Remotedesktopdienste , MsRdpClient5-Objekt
+- MsRdpClient5-Objekt Remotedesktopdienste , ConnectionBarText-Eigenschaft
+- ConnectionBarText-Eigenschaft Remotedesktopdienste , MsRdpClient6-Objekt
+- MsRdpClient6-Objekt Remotedesktopdienste , ConnectionBarText-Eigenschaft
+- ConnectionBarText-Eigenschaft Remotedesktopdienste , MsRdpClient7-Objekt
+- MsRdpClient7-Objekt Remotedesktopdienste , ConnectionBarText-Eigenschaft
+- ConnectionBarText-Eigenschaft Remotedesktopdienste , MsRdpClient8-Objekt
+- MsRdpClient8-Objekt Remotedesktopdienste , ConnectionBarText-Eigenschaft
+- ConnectionBarText-Eigenschaft Remotedesktopdienste , MsRdpClient9-Objekt
+- MsRdpClient9-Objekt Remotedesktopdienste , ConnectionBarText-Eigenschaft
 topic_type:
 - apiref
 api_name:
@@ -44,16 +44,16 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 76819dd28ffd8b2ee5e2dfb30017e341dd49db5b
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 89dac8f704f5ecaa7bd521af10f05fd1c56d2adebff70827862478847a782faf
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "103743296"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117941593"
 ---
-# <a name="imsrdpclientnonscriptable3connectionbartext-property"></a>IMsRdpClientNonScriptable3:: connectionbartext-Eigenschaft
+# <a name="imsrdpclientnonscriptable3connectionbartext-property"></a>IMsRdpClientNonScriptable3::ConnectionBarText-Eigenschaft
 
-Legt den Text zum Aktualisieren der Verbindungs Leiste fest oder ruft ihn ab.
+Legt den Text zum Aktualisieren der Verbindungsleiste fest oder ruft diesen ab.
 
 Dies ist eine Eigenschaft mit Lese- und Schreibzugriff.
 
@@ -74,11 +74,11 @@ HRESULT get_ConnectionBarText(
 
 ## <a name="property-value"></a>Eigenschaftswert
 
-Legt die Text Zeichenfolge fest, die auf der Verbindungs Leiste angezeigt wird.
+Legt die Textzeichenfolge fest, die auf der Verbindungsleiste angezeigt werden soll.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Sie müssen die **IMsRdpClientNonScriptable3::p UT \_ connectionbartext** -Methode anrufen, bevor Sie die [**imstscsecuredsettings::p UT- \_ voll Bild**](imstscsecuredsettings-fullscreen.md) Methode oder die [**imsrdpclient::p UT- \_ voll Bild**](imsrdpclient-fullscreen.md) Methode aufzurufen.
+Sie müssen die **Methode IMsRdpClientNonScriptable3::p ut \_ ConnectionBarText** aufrufen, bevor Sie die [**IMsTscSecuredSettings::p ut \_ Fullscreen-Methode**](imstscsecuredsettings-fullscreen.md) oder die [**IMsRdpClient::p ut \_ Fullscreen-Methode**](imsrdpclient-fullscreen.md) aufrufen.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -94,7 +94,7 @@ Sie müssen die **IMsRdpClientNonScriptable3::p UT \_ connectionbartext** -Metho
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 

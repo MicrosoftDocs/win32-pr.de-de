@@ -2,7 +2,7 @@
 description: Die Reset-Methode der \_ CIM-Lüfterklasse fordert eine Zurücksetzung des logischen Geräts an.
 ms.assetid: f7755cf6-cc16-4559-ac72-60d3a782f267
 ms.tgt_platform: multiple
-title: Reset-Methode der CIM_Fan Klasse
+title: Reset-Methode der CIM_Fan-Klasse
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -23,10 +23,10 @@ ms.locfileid: "118419133"
 ---
 # <a name="reset-method-of-the-cim_fan-class"></a>Reset-Methode der \_ CIM-Lüfterklasse
 
-Die **Reset-Methode** der \_ CIM-Lüfterklasse fordert eine Zurücksetzung des logischen Geräts an. Diese Methode wird von [**CIM \_ LogicalDevice geerbt.**](cim-logicaldevice.md)
+Die **Reset-Methode** der \_ CIM-Lüfterklasse fordert eine Zurücksetzung des logischen Geräts an. Diese Methode wird von [**CIM \_ LogicalDevice**](cim-logicaldevice.md)geerbt.
 
 > [!IMPORTANT]
-> Die CIM-Klassen (Distributed Management Task Force) (DMTF) (Common Information Model) sind die übergeordneten Klassen, auf denen WMI-Klassen erstellt werden. WMI unterstützt derzeit nur die [CIM 2.x-Versionsschemas.](https://dmtf.org/standards/cim/schemas)
+> Die CIM-Klassen (Distributed Management Task Force) (DMTF (Distributed Management Task Force) (Common Information Model) sind die übergeordneten Klassen, auf denen WMI-Klassen erstellt werden. WMI unterstützt derzeit nur die [CIM 2.x-Versionsschemas.](https://dmtf.org/standards/cim/schemas)
 
  
 
@@ -51,7 +51,7 @@ Gibt 0 (null) zurück, wenn die Anforderung erfolgreich ausgeführt wurde, 1 (ei
 
 Diese Methode wird derzeit nicht von WMI implementiert. Um diese Methode zu verwenden, müssen Sie sie in Ihrem eigenen Anbieter implementieren.
 
-Diese Dokumentation wird von den CIM-Klassenbeschreibungen abgeleitet, die von DMTF veröffentlicht wurden. Microsoft hat möglicherweise Änderungen vorgenommen, um kleinere Fehler zu beheben, die Dokumentationsstandards des Microsoft SDK zu erfüllen oder weitere Informationen zur Verfügung zu stellen.
+Diese Dokumentation wird von den CIM-Klassenbeschreibungen abgeleitet, die von dmtf veröffentlicht wurden. Möglicherweise hat Microsoft Änderungen vorgenommen, um kleinere Fehler zu korrigieren, den Dokumentationsstandards des Microsoft SDK zu entsprechen oder weitere Informationen bereitzustellen.
 
 ## <a name="requirements"></a>Anforderungen
 

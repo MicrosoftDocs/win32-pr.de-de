@@ -1,9 +1,9 @@
 ---
-title: EM_PASTESPECIAL Meldung (RichEdit. h)
-description: Fügt ein bestimmtes Zwischenablage Format in einem Rich-Edit-Steuerelement ein.
+title: EM_PASTESPECIAL (Richedit.h)
+description: Eingefügt ein bestimmtes Zwischenablageformat in ein Rich-Edit-Steuerelement.
 ms.assetid: b4b9c1a7-943d-4dc8-bcb9-054c984b82ba
 keywords:
-- Windows-Steuerelemente für EM_PASTESPECIAL Meldung
+- EM_PASTESPECIAL meldungssteuerelemente Windows
 topic_type:
 - apiref
 api_name:
@@ -14,16 +14,16 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 9375dd4a333f0e29d5e8f2721409244cf80f1233
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 2dc1af4dd0566cdf8e256b34f87fcc52ea855bc521c87cbe390e02b8b1cf7b06
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "103859016"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118412801"
 ---
-# <a name="em_pastespecial-message"></a>\_Gepastespecial Nachricht
+# <a name="em_pastespecial-message"></a>\_EM-PASTESPECIAL-Nachricht
 
-Fügt ein bestimmtes Zwischenablage Format in einem Rich-Edit-Steuerelement ein.
+Eingefügt ein bestimmtes Zwischenablageformat in ein Rich-Edit-Steuerelement.
 
 ## <a name="parameters"></a>Parameter
 
@@ -32,14 +32,14 @@ Fügt ein bestimmtes Zwischenablage Format in einem Rich-Edit-Steuerelement ein.
 *wParam* 
 </dt> <dd>
 
-Gibt die [Zwischenablage Formate](/windows/desktop/dataxchg/clipboard-formats)an.
+Gibt die [Zwischenablageformate an.](/windows/desktop/dataxchg/clipboard-formats)
 
 </dd> <dt>
 
 *lParam* 
 </dt> <dd>
 
-Zeiger auf eine [**repastespecial**](/windows/desktop/api/Richedit/ns-richedit-repastespecial) -Struktur oder **null**. Wenn ein Objekt eingefügt wird, wird die **repastespecial** -Struktur mit dem gewünschten Anzeige Aspekt ausgefüllt. Wenn *LPARAM* **null** ist oder der **dwAspect** -Member 0 (null) ist, ist der verwendete Anzeige Aspekt der Inhalt des Objekt Deskriptors.
+Zeiger auf eine [**REPASTESPECIAL-Struktur**](/windows/desktop/api/Richedit/ns-richedit-repastespecial) oder **NULL.** Wenn ein Objekt eingefüllt wird, wird die **REPASTESPECIAL-Struktur** mit dem gewünschten Anzeigeaspekt gefüllt. Wenn *lParam* **NULL ist** oder das **dwAspect-Member** 0 (null) ist, wird der Inhalt des Objektdeskriptors als Anzeigeaspekt verwendet.
 
 </dd> </dl>
 
@@ -53,17 +53,17 @@ Diese Meldung gibt keinen Wert zurück.
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>                                        |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2003 \[ -Desktop-Apps\]<br/>                                  |
-| Header<br/>                   | <dl> <dt>RichEdit. h</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur \[ Vista-Desktop-Apps\]<br/>                                        |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2003-Desktop-Apps\]<br/>                                  |
+| Header<br/>                   | <dl> <dt>Richedit.h</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Repastespecial**](/windows/desktop/api/Richedit/ns-richedit-repastespecial)
+[**REPASTESPECIAL**](/windows/desktop/api/Richedit/ns-richedit-repastespecial)
 </dt> </dl>
 
  

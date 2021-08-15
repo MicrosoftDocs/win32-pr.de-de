@@ -1,34 +1,34 @@
 ---
 title: Modul 4. Benutzereingaben
-description: Vorherige Module untersuchten das Erstellen eines Fensters, das Verarbeiten von Fenster Meldungen und das einfache Zeichnen mit 2D-Grafiken.
+description: In früheren Modulen wurden das Erstellen eines Fensters, das Verarbeiten von Fenstermeldungen und das einfache Zeichnen mit 2D-Grafiken untersucht.
 ms.assetid: C35FBC18-201B-4175-8977-9DAF3914E515
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 9f5dff1d7e6b572326fa75662dc855279b1a1c93
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: fe0613fa8774e5465dc83349fd4cbadd06b54acfa871950e91477f7a525ae141
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "103709113"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118388037"
 ---
 # <a name="module-4-user-input"></a>Modul 4. Benutzereingaben
 
-Vorherige Module untersuchten das Erstellen eines Fensters, das Verarbeiten von Fenster Meldungen und das einfache Zeichnen mit 2D-Grafiken. In diesem Modul betrachten wir die Maus-und Tastatureingaben. Am Ende dieses Moduls können Sie ein einfaches Zeichnungsprogramm schreiben, das die Maus und die Tastatur verwendet.
+In früheren Modulen wurden das Erstellen eines Fensters, das Verarbeiten von Fenstermeldungen und das einfache Zeichnen mit 2D-Grafiken untersucht. In diesem Modul betrachten wir Maus- und Tastatureingaben. Am Ende dieses Moduls können Sie ein einfaches Zeichenprogramm schreiben, das Die Maus und Tastatur verwendet.
 
 ## <a name="in-this-section"></a>In diesem Abschnitt
 
 -   [Mauseingabe](mouse-input.md)
--   [Antworten auf Mausklicks](mouse-clicks.md)
+-   [Reagieren auf Mausklicks](mouse-clicks.md)
 -   [Mausbewegung](mouse-movement.md)
--   [Verschiedene Maus Vorgänge](other-mouse-operations.md)
--   [Tastatureingabe](keyboard-input.md)
--   [Zugriffstasten Tabellen](accelerator-tables.md)
--   [Festlegen des Cursor Bilds](setting-the-cursor-image.md)
--   [Benutzereingabe: erweitertes Beispiel](user-input--extended-example.md)
+-   [Verschiedene Mausvorgänge](other-mouse-operations.md)
+-   [Tastatureingaben](keyboard-input.md)
+-   [Zugriffstastentabellen](accelerator-tables.md)
+-   [Festlegen des Cursorbilds](setting-the-cursor-image.md)
+-   [Benutzereingabe: Erweitertes Beispiel](user-input--extended-example.md)
 
- 
+ 
 
- 
+ 
 
 
 

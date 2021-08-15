@@ -1,46 +1,46 @@
 ---
 title: UI_PKEY_SmallHighContrastImage
-description: Identifiziert die UI \_ pkey \_ smallhighcontrastimage-Eigenschaft.
+description: Identifiziert die \_ PKEY \_ SmallHighContrastImage-Eigenschaft der Benutzeroberfläche.
 ms.assetid: e0dd23b9-62dd-4626-816b-aac4fb48bbbe
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 33d86ed649f49d934469be2c4efe113264916f3f
-ms.sourcegitcommit: 592c9bbd22ba69802dc353bcb5eb30699f9e9403
+ms.openlocfilehash: 5e84844690693c589c32e864a67c1267b894961096d8bbad51316c671d9297e1
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "103948886"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117850061"
 ---
-# <a name="ui_pkey_smallhighcontrastimage"></a>UI \_ pkey \_ smallhighkontra stimage
+# <a name="ui_pkey_smallhighcontrastimage"></a>UI \_ PKEY \_ SmallHighContrastImage
 
-Identifiziert die UI \_ pkey \_ smallhighcontrastimage-Eigenschaft.
+Identifiziert die \_ PKEY \_ SmallHighContrastImage-Eigenschaft der Benutzeroberfläche.
 
 ```
 propertyDescription
-   name = UI_PKEY_SmallHighContrastImage
-   shellPKey = UI_PKEY_SmallHighContrastImage
-   formatID = 00000010-7363-696e-8441798acf5aebb7
-   propID = 10
-   typeInfo
-      type = IUIImage
+   name = UI_PKEY_SmallHighContrastImage
+   shellPKey = UI_PKEY_SmallHighContrastImage
+   formatID = 00000010-7363-696e-8441798acf5aebb7
+   propID = 10
+   typeInfo
+      type = IUIImage
 ```
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-UI \_ pkey \_ smallhighkontra stimage wird von einer Anwendung verwendet, um das kleine Bild mit hohem Kontrast abzufragen, das einem Menüband-Steuerelement zugeordnet ist.
+Ui \_ PKEY \_ SmallHighContrastImage wird von einer Anwendung verwendet, um das kleine Bild mit hohem Kontrast abzufragen, das einem Menübandsteuerelement zugeordnet ist.
 
-Der Eigenschafts Wert ist ein [**iuiimage**](/windows/desktop/api/uiribbon/nn-uiribbon-iuiimage) -Objekt.
+Der Eigenschaftswert ist ein [**IUIImage-Objekt.**](/windows/desktop/api/uiribbon/nn-uiribbon-iuiimage)
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
 <dl> <dt>
 
-[Ressourcen Eigenschaften](windowsribbon-reference-properties-resource.md)
+[Ressourceneigenschaften](windowsribbon-reference-properties-resource.md)
 </dt> <dt>
 
-[Angeben von Menüband-Bild Ressourcen](windowsribbon-imageformats.md)
+[Angeben von Menübandbildressourcen](windowsribbon-imageformats.md)
 </dt> </dl>
 
- 
+ 
 
- 
+ 

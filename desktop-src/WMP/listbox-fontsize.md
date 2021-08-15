@@ -1,9 +1,9 @@
 ---
-title: ListBox. FontSize
-description: Das FontSize-Attribut gibt den Schrift Grad für das Listenfeld-Steuerelement an oder ruft ihn ab.
+title: LISTBOX.fontSize
+description: Das fontSize-Attribut gibt den Schriftgrad für das Listenfeld-Steuerelement an oder ruft den Schriftgrad ab.
 ms.assetid: e7756249-5295-4564-8ba6-dd28d5104024
 keywords:
-- ListBox. FontSize-Fenster Media Player
+- LISTBOX.fontSize-Windows Media Player
 topic_type:
 - apiref
 api_name:
@@ -12,16 +12,16 @@ api_type:
 - NA
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: ca230736c5ef2ff34c1a5e7c3c75c7105a61ae44
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 7cc017c52d086d7c6a63e8a5fbf5d3f5b55cd6382034bfb36e291078418abf32
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106368416"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120003410"
 ---
-# <a name="listboxfontsize"></a>ListBox. FontSize
+# <a name="listboxfontsize"></a>LISTBOX.fontSize
 
-Das **FontSize** -Attribut gibt den Schrift Grad für das Listenfeld-Steuerelement an oder ruft ihn ab.
+Das **fontSize-Attribut** gibt den Schriftgrad für das Listenfeld-Steuerelement an oder ruft den Schriftgrad ab.
 
 ``` syntax
         elementID.fontSize
@@ -29,7 +29,7 @@ Das **FontSize** -Attribut gibt den Schrift Grad für das Listenfeld-Steuereleme
 
 ## <a name="possible-values"></a>Mögliche Werte
 
-Dieses Attribut ist eine Lese-/schreibzahl (**Long**), die den Schrift Grad in Punkten angibt.  Der Standardwert ist 10.
+Dieses Attribut ist eine Lese-/Schreibnummer (**long**), die den Schriftgrad in Punkten an gibt.  Der Standardwert ist 10.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -41,14 +41,14 @@ Dieses Attribut ist eine Lese-/schreibzahl (**Long**), die den Schrift Grad in P
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**ListBox-Element**](listbox-element.md)
+[**LISTBOX-Element**](listbox-element.md)
 </dt> <dt>
 
-[**ListBox. FontStyle**](listbox-fontstyle.md)
+[**LISTBOX.fontStyle**](listbox-fontstyle.md)
 </dt> </dl>
 
  

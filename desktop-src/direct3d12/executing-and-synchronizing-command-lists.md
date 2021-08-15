@@ -96,7 +96,7 @@ Methoden zum Verwalten von gekachelten Ressourcen, die über die [**ID3D11Device
 
 
 
-| Methode                                                              | Beschreibung                                                                                              |
+| Methode                                                              | BESCHREIBUNG                                                                                              |
 |---------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------|
 | [**CopyTileMappings**](/windows/desktop/api/d3d12/nf-d3d12-id3d12commandqueue-copytilemappings)     | Kopiert Zuordnungen aus einer quellkachelten Ressource in eine zielkachelte Ressource.<br/>                 |
 | [**UpdateTileMappings**](/windows/desktop/api/d3d12/nf-d3d12-id3d12commandqueue-updatetilemappings) | Aktualisiert Zuordnungen von Kachelspeicherorten in gekachelten Ressourcen zu Speicherspeicherorten in einem Ressourcenheap.<br/> |

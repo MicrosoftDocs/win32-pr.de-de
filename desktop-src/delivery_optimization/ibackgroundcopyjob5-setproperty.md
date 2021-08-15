@@ -47,14 +47,14 @@ HRESULT SetProperty(
 *PropertyId* \[ In\]
 </dt> <dd>
 
-Die ID der Eigenschaft, die als [](bits-job-property-id.md) Einsenumerwert BITS_JOB_PROPERTY_ID festgelegt wird.
+Die ID der Eigenschaft, die als [**BITS_JOB_PROPERTY_ID**](bits-job-property-id.md) Enumerationswert angegeben wird.
 
 </dd> <dt>
 
 *PropertyValue* \[ In\]
 </dt> <dd>
 
-Der Wert der Eigenschaft, die festgelegt wird. Um einen Wert zu halten, dessen Typ für die -Eigenschaft geeignet ist, wird dieser Wert über die BITS_JOB_PROPERTY_VALUE-Union angegeben, die aus allen bekannten Eigenschaftentypen besteht. [](bits-job-property-value-.md)
+Der Wert der Eigenschaft, die festgelegt wird. Um einen Wert zu speichern, dessen Typ für die -Eigenschaft geeignet ist, wird dieser Wert über die [**BITS_JOB_PROPERTY_VALUE**](bits-job-property-value-.md) Union angegeben, die aus allen bekannten Eigenschaftstypen besteht.
 
 </dd> </dl>
 
@@ -78,8 +78,8 @@ Die -Methode gibt die folgenden Rückgabewerte zurück.
 
 | Anforderung | Wert |
 |-------------------------------------|-----------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Windows 10 Desktop-Apps, Version 1709 \[\]<br/>                                           |
-| Unterstützte Mindestversion (Server)<br/> | Windows Server, version 1709 desktop apps only (Nur \[ Desktop-Apps der Version 1709)\]<br/>                                       |
+| Unterstützte Mindestversion (Client)<br/> | Windows 10, nur Desktop-Apps der Version 1709 \[\]<br/>                                           |
+| Unterstützte Mindestversion (Server)<br/> | Windows Server, nur Desktop-Apps der Version 1709 \[\]<br/>                                       |
 | Header<br/>                   | <dl> <dt>Deliveryoptimization.h</dt> </dl>   |
 | Idl<br/>                      | <dl> <dt>DeliveryOptimization.idl</dt> </dl> |
 | Bibliothek<br/>                  | <dl> <dt>Dosvc.lib</dt> </dl>                |
@@ -88,7 +88,7 @@ Die -Methode gibt die folgenden Rückgabewerte zurück.
 
 
 
-## <a name="see-also"></a>Weitere Informationen:
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 

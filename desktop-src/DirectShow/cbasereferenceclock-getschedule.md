@@ -1,7 +1,7 @@
 ---
-description: Die getschedule-Methode ruft einen Zeiger auf das Zeit Planungs Objekt der Uhr ab.
+description: Die GetSchedule-Methode ruft einen Zeiger auf das Zeitplanungsobjekt der Uhr ab.
 ms.assetid: ae509f16-d85f-4365-8cf2-c6585cbbdc3d
-title: Cbasereferenceclock. getschedule-Methode (Ref. h)
+title: CBaseReferenceClock.GetSchedule-Methode (Refclock.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -16,16 +16,16 @@ api_location:
 - Strmbase.dll
 - Strmbasd.lib
 - Strmbasd.dll
-ms.openlocfilehash: a37cdb3e18f3ab71b144af071233aee5a6a3a93d
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 6be5c4ed76573428967138682b478a54859e4ca97213f132ff805a0e83be0b50
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106354098"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117822836"
 ---
-# <a name="cbasereferenceclockgetschedule-method"></a>Cbasereferenceclock. getschedule-Methode
+# <a name="cbasereferenceclockgetschedule-method"></a>CBaseReferenceClock.GetSchedule-Methode
 
-Die `GetSchedule` -Methode ruft einen Zeiger auf das Zeit Planungs Objekt der Uhr ab.
+Die `GetSchedule` -Methode ruft einen Zeiger auf das Zeitplanungsobjekt der Uhr ab.
 
 ## <a name="syntax"></a>Syntax
 
@@ -42,7 +42,7 @@ Diese Methode hat keine Parameter.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt die [**cbasereferenceclock:: m \_ pschedule**](cbasereferenceclock-m-pschedule.md) -Member-Variable zurück.
+Gibt die [**CBaseReferenceClock::m \_ pSchedule-Membervariable**](cbasereferenceclock-m-pschedule.md) zurück.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -50,16 +50,16 @@ Gibt die [**cbasereferenceclock:: m \_ pschedule**](cbasereferenceclock-m-psched
 
 | Anforderung | Wert |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>Ref. h (Include Streams. h)</dt> </dl>                                                                                  |
-| Bibliothek<br/> | <dl> " <dt>Straumbase. lib" (Einzelhandels Builds);</dt> " <dt>Straumbasd. lib" (Debugbuilds)</dt> </dl> |
+| Header<br/>  | <dl> <dt>Refclock.h (include Streams.h)</dt> </dl>                                                                                  |
+| Bibliothek<br/> | <dl> <dt>Strmbase.lib (Einzelhandels-Builds); </dt> <dt>Strmbasd.lib (Debugbuilds)</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Cbasereferenceclock-Klasse**](cbasereferenceclock.md)
+[**CBaseReferenceClock-Klasse**](cbasereferenceclock.md)
 </dt> </dl>
 
  

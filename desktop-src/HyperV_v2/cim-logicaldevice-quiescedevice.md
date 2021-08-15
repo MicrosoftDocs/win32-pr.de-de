@@ -1,7 +1,7 @@
 ---
-description: Die Methode "quiescedevice" wurde als veraltet markiert, anstelle der allgemeineren Methode "requestStateChange", die sich direkt mit der von dieser Methode bereitgestellten Funktionalität überlappt.
+description: Die QuiesceDevice-Methode ist anstelle der allgemeineren RequestStateChange-Methode veraltet, die sich direkt mit der von dieser Methode bereitgestellten Funktionalität überschneidet.
 ms.assetid: c5154c00-ff9c-40d8-bb76-41ae72ce86ae
-title: Quiescedevice-Methode der CIM_LogicalDevice-Klasse
+title: QuiesceDevice-Methode der CIM_LogicalDevice-Klasse
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,16 +13,16 @@ api_type:
 - COM
 api_location:
 - vmms.exe
-ms.openlocfilehash: 82041b36592f00bf71dc7e2d744fcf94b7a666c6
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: c7becb86f19c245488d779e1b26ab5321ba3f2aa0ac3c7811d96f9d1cb8a5dbf
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "104347808"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117995692"
 ---
-# <a name="quiescedevice-method-of-the-cim_logicaldevice-class"></a>Quiescedevice-Methode der CIM \_ LogicalDevice-Klasse
+# <a name="quiescedevice-method-of-the-cim_logicaldevice-class"></a>QuiesceDevice-Methode der CIM \_ LogicalDevice-Klasse
 
-Die Methode " **quiescedevice** " wurde als veraltet markiert, anstelle der allgemeineren Methode " **requestStateChange** ", die sich direkt mit der von dieser Methode bereitgestellten Funktionalität überlappt.
+Die **QuiesceDevice-Methode** ist anstelle der allgemeineren **RequestStateChange-Methode** veraltet, die sich direkt mit der von dieser Methode bereitgestellten Funktionalität überschneidet.
 
 ## <a name="syntax"></a>Syntax
 
@@ -39,16 +39,16 @@ uint32 QuiesceDevice(
 
 <dl> <dt>
 
-Inaktiven Status  \[ in\]
+*Stille Klammer* \[ In\]
 </dt> <dd>
 
-Bei Festlegung auf **true** beenden Sie alle Aktivitäten ordnungsgemäß, wenn die Aktivität **false** fortsetzen.
+Wenn diese Einstellung auf **TRUE** festgelegt ist, beenden Sie alle Aktivitäten sauber, wenn **FALSE** die Aktivität fortsetzen soll.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt bei Erfolg 0 (null) zurück. Andernfalls wird ein Fehler zurückgegeben.
+Gibt bei Erfolg den Wert 0 zurück. andernfalls wird ein Fehler zurückgegeben.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -58,13 +58,13 @@ Gibt bei Erfolg 0 (null) zurück. Andernfalls wird ein Fehler zurückgegeben.
 |-------------------------------------|---------------------------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows 8.1<br/>                                                                                  |
 | Unterstützte Mindestversion (Server)<br/> | Windows Server 2012 R2<br/>                                                                       |
-| Namespace<br/>                | \\Stammvirtualisierung \\ v2<br/>                                                                     |
-| MOF<br/>                      | <dl> <dt>Windowsvirtualization. v2. MOF</dt> </dl> |
+| Namespace<br/>                | \\Root-Virtualisierung \\ v2<br/>                                                                     |
+| MOF<br/>                      | <dl> <dt>WindowsVirtualization.V2.mof</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>Vmms.exe</dt> </dl>                     |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
