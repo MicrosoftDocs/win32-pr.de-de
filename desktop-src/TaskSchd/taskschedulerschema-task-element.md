@@ -1,9 +1,9 @@
 ---
 title: Task-Element
-description: Definiert die Aufgabe, die vom Dienst Taskplaner wird.
+description: Definiert die Aufgabe, die vom Taskplaner Dienst ausgeführt wird.
 ms.assetid: 103a332a-8620-4e0c-81b5-4782d85fc391
 keywords:
-- Aufgabenelement-Taskplaner
+- Task-Element Taskplaner
 topic_type:
 - apiref
 api_name:
@@ -22,7 +22,7 @@ ms.locfileid: "118356233"
 ---
 # <a name="task-element"></a>Task-Element
 
-Definiert die Aufgabe, die vom Dienst Taskplaner wird.
+Definiert die Aufgabe, die vom Taskplaner Dienst ausgeführt wird.
 
 ``` syntax
 <xs:element name="Task"
@@ -62,11 +62,11 @@ Definiert die Aufgabe, die vom Dienst Taskplaner wird.
 | Element                                                                           | type                                                                                 | BESCHREIBUNG                                                                                                                         |
 |-----------------------------------------------------------------------------------|--------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------|
 | [**Aktionen**](taskschedulerschema-actions-tasktype-element.md)                   | [**actionsType**](taskschedulerschema-actionstype-complextype.md)                   | Gibt die aktionen an, die von der Aufgabe ausgeführt werden.<br/>                                                                             |
-| [**Daten**](taskschedulerschema-data-tasktype-element.md)                         | [**Datatype**](taskschedulerschema-datatype-complextype.md)                         | Gibt Additionsdaten an, die der Aufgabe zugeordnet sind, aber andernfalls vom Taskplaner werden.<br/>         |
+| [**Daten**](taskschedulerschema-data-tasktype-element.md)                         | [**Datatype**](taskschedulerschema-datatype-complextype.md)                         | Gibt Additionsdaten an, die dem Task zugeordnet sind, aber andernfalls vom Taskplaner Dienst nicht verwendet werden.<br/>         |
 | [**Principals**](taskschedulerschema-principals-tasktype-element.md)             | [**principalsType**](taskschedulerschema-principalstype-complextype.md)             | Gibt die Sicherheitskontexte an, die zum Ausführen der Aufgabe verwendet werden können.<br/>                                                        |
-| [**RegistrationInfo**](taskschedulerschema-registrationinfo-tasktype-element.md) | [**registrationInfoType**](taskschedulerschema-registrationinfotype-complextype.md) | Gibt Administratorinformationen zum Task an, z. B. den Autor der Aufgabe und das Datum, an dem die Aufgabe registriert wird.<br/> |
+| [**RegistrationInfo**](taskschedulerschema-registrationinfo-tasktype-element.md) | [**registrationInfoType**](taskschedulerschema-registrationinfotype-complextype.md) | Gibt administrative Informationen über den Task an, z. B. den Ersteller der Aufgabe und das Datum, an dem der Task registriert ist.<br/> |
 | [**Einstellungen**](taskschedulerschema-settings-tasktype-element.md)                 | [**settingsType**](taskschedulerschema-settingstype-complextype.md)                 | Gibt die Einstellungen an, die der Taskplaner zum Ausführen der Aufgabe verwendet.<br/>                                                 |
-| [**Trigger**](taskschedulerschema-triggers-tasktype-element.md)                 | [**triggersType**](taskschedulerschema-triggerstype-complextype.md)                 | Gibt die Trigger an, die die Aufgabe starten.<br/>                                                                              |
+| [**Trigger**](taskschedulerschema-triggers-tasktype-element.md)                 | [**triggersType**](taskschedulerschema-triggerstype-complextype.md)                 | Gibt die Trigger an, die den Task starten.<br/>                                                                              |
 
 
 
@@ -82,7 +82,7 @@ Informationen zur Skriptentwicklung finden Sie unter [**TaskDefinition**](taskde
 
 | Anforderung | Wert |
 |-------------------------------------|------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Windows Nur \[ Vista-Desktop-Apps\]<br/>       |
+| Unterstützte Mindestversion (Client)<br/> | Windows \[Nur Vista-Desktop-Apps\]<br/>       |
 | Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2008-Desktop-Apps\]<br/> |
 
 

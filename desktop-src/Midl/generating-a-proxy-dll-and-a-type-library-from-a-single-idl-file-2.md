@@ -1,21 +1,21 @@
 ---
-title: Erstellen einer Proxy-dll und einer Typbibliothek aus einer einzelnen IDL-Datei
-description: Sie können eine einzelne IDL-Datei verwenden, um sowohl die proxystubdateien als auch die Header Dateien für das Mars Hallen von Code und eine Typbibliothek zu generieren.
+title: Generieren einer Proxy-DLL und einer Typbibliothek aus einer einzelnen IDL-Datei
+description: Sie können eine einzelne IDL-Datei verwenden, um sowohl die Proxystubs als auch Headerdateien zum Marshallen von Code und eine Typbibliothek zu generieren.
 ms.assetid: faa647ac-765a-45bd-8193-b6ea90d064ff
 keywords:
-- Microsoft Interface Definition Language mittlerer l, Tasks, Erstellen einer Proxy-dll und einer Typbibliothek
+- Microsoft Interface Definition Language MIDL , Tasks, Generieren einer Proxy-DLL und einer Typbibliothek
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: a81001bba7aeff416e765291d3e6660b705919a0
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: 92e7bf2694b791007b0f1da303525217cf55d75d574e083c6d1756bc2784d0ef
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "104037336"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118384236"
 ---
-# <a name="generating-a-proxy-dll-and-a-type-library-from-a-single-idl-file"></a>Erstellen einer Proxy-dll und einer Typbibliothek aus einer einzelnen IDL-Datei
+# <a name="generating-a-proxy-dll-and-a-type-library-from-a-single-idl-file"></a>Generieren einer Proxy-DLL und einer Typbibliothek aus einer einzelnen IDL-Datei
 
-Sie können eine einzelne IDL-Datei verwenden, um sowohl die proxystubdateien als auch die Header Dateien für das Mars Hallen von Code und eine Typbibliothek zu generieren. Hierzu definieren Sie eine Schnittstelle außerhalb des Bibliotheks Blocks und verweisen dann innerhalb des Bibliotheks Blocks auf diese Schnittstelle, wie im folgenden Beispiel gezeigt:
+Sie können eine einzelne IDL-Datei verwenden, um sowohl die Proxystubs als auch Headerdateien zum Marshallen von Code und eine Typbibliothek zu generieren. Hierzu definieren Sie eine Schnittstelle außerhalb des Bibliotheksblocks und verweisen dann innerhalb des Bibliotheksblocks auf diese Schnittstelle, wie in diesem Beispiel gezeigt:
 
 ``` syntax
 //file: AllKnown.idl
@@ -49,11 +49,11 @@ library KnownLibrary
 };
 ```
 
-Weitere Informationen finden Sie unter [Mars Hallen von OLE-Datentypen](marshaling-ole-data-types.md) und [zusätzlichen Dateien, die zum Generieren einer Typbibliothek erforderlich](additional-files-required-to-generate-a-type-library-2.md)sind.
+Weitere Informationen finden Sie unter [Marshallen von OLE-Datentypen](marshaling-ole-data-types.md) und [zusätzlichen Dateien, die zum Generieren einer Typbibliothek erforderlich sind.](additional-files-required-to-generate-a-type-library-2.md)
 
- 
+ 
 
- 
+ 
 
 
 

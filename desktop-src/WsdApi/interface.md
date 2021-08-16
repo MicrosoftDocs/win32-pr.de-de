@@ -1,17 +1,17 @@
 ---
 description: Der Name der Schnittstelle, die von QueryInterface zurückgegeben werden soll.
 ms.assetid: 3db34c89-a97d-47a2-97dd-4bb80da09e82
-title: Interface-Element
+title: interface-Element
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: d8a64b349a32751ab60e86669ea766c62686d9cc
-ms.sourcegitcommit: b6fe9acffad983c14864b8fe0296f6025cb1f961
+ms.openlocfilehash: ea298ece6431bac854483df7b01d8e31afb4d6dfcb34eb6e347f11ee8ade97c6
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2021
-ms.locfileid: "107994717"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118311569"
 ---
-# <a name="interface-element"></a>Interface-Element
+# <a name="interface-element"></a>interface-Element
 
 Der Name der Schnittstelle, die von QueryInterface zurückgegeben werden soll.
 
@@ -33,7 +33,7 @@ Es gibt keine untergeordneten Elemente.
 
 
 
-| Element                                                       | BESCHREIBUNG                                                                                            |
+| Element                                                       | Beschreibung                                                                                            |
 |---------------------------------------------------------------|--------------------------------------------------------------------------------------------------------|
 | [**IUnknownDefinitions**](iunknowndefinitions.md)<br/> | Generiert Implementierungen für die Funktionen QueryInterface, AddRef und Release.<br/> <br/> |
 

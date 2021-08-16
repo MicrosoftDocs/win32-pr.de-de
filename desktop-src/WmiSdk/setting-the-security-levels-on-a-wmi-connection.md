@@ -1,22 +1,22 @@
 ---
-description: Nachdem Sie einen Zeiger auf einen IWbemServices-Proxy abgerufen haben, müssen Sie die Sicherheit des Proxys für den Zugriff auf WMI über den Proxy festlegen.
+description: Nachdem Sie einen Zeiger auf einen IWbemServices-Proxy abgerufen haben, müssen Sie die Sicherheit auf dem Proxy für den Zugriff auf WMI über den Proxy festlegen.
 ms.assetid: dd453e0e-aa1f-4ef1-ab21-613630b2758c
 ms.tgt_platform: multiple
-title: Festlegen der Sicherheitsstufen für eine WMI-Verbindung
+title: Festlegen der Sicherheitsebenen für eine WMI-Verbindung
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: cc58b4bbbe1a01d927d8f5977c21003cdae2e315
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: e2c2c4a492d4b40410b42fd9a94f22d346617a84d3baaa0679db325452a69c19
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106350933"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118315324"
 ---
-# <a name="setting-the-security-levels-on-a-wmi-connection"></a>Festlegen der Sicherheitsstufen für eine WMI-Verbindung
+# <a name="setting-the-security-levels-on-a-wmi-connection"></a>Festlegen der Sicherheitsebenen für eine WMI-Verbindung
 
-Nachdem Sie einen Zeiger auf einen [**IWbemServices**](/windows/desktop/api/WbemCli/nn-wbemcli-iwbemservices) -Proxy abgerufen haben, müssen Sie die Sicherheit des Proxys für den Zugriff auf WMI über den Proxy festlegen. Sie müssen die Sicherheit festlegen, da der **IWbemServices** -Proxy Zugriff auf ein Out-of-Process-Objekt gewährt. Im Allgemeinen lässt die com-Sicherheit nicht zu, dass ein Prozess auf einen anderen Prozess zugreift, wenn Sie die richtigen Sicherheitseigenschaften nicht festlegen. Weitere Informationen finden Sie unter [Festlegen der Sicherheit für IWbemServices und andere](setting-the-security-on-iwbemservices-and-other-proxies.md)Proxys. Verbindungen mit unterschiedlichen Betriebssystemen erfordern unterschiedliche Authentifizierungs Stufen und Identitätswechsel. Weitere Informationen finden Sie unter [Herstellen einer Verbindung mit WMI auf einem Remote Computer](connecting-to-wmi-on-a-remote-computer.md).
+Nachdem Sie einen Zeiger auf einen [**IWbemServices-Proxy**](/windows/desktop/api/WbemCli/nn-wbemcli-iwbemservices) abgerufen haben, müssen Sie die Sicherheit auf dem Proxy für den Zugriff auf WMI über den Proxy festlegen. Sie müssen die Sicherheit festlegen, da der **IWbemServices-Proxy** Zugriff auf ein Out-of-Process-Objekt gewährt. Im Allgemeinen lässt die COM-Sicherheit nicht zu, dass ein Prozess auf einen anderen Prozess zutritt, wenn Sie nicht die richtigen Sicherheitseigenschaften festlegen. Weitere Informationen finden Sie unter Setting the Security on IWbemServices and Other Proxys (Festlegen der Sicherheit für [IWbemServices und andere Proxys).](setting-the-security-on-iwbemservices-and-other-proxies.md) Verbindungen mit verschiedenen Betriebssystemen erfordern unterschiedliche Authentifizierungs- und Identitätswechselebenen. Weitere Informationen finden Sie unter [Herstellen einer Verbindung mit WMI auf einem Remotecomputer.](connecting-to-wmi-on-a-remote-computer.md)
 
-Die Codebeispiele in diesem Thema erfordern die folgenden Verweise und \# include-Anweisungen, um ordnungsgemäß zu kompilieren.
+Die Codebeispiele in diesem Thema erfordern die folgenden Verweise und \# Include-Anweisungen, um ordnungsgemäß zu kompilieren.
 
 
 ```C++
@@ -29,13 +29,13 @@ using namespace std;
 
 
 
-Im folgenden Verfahren wird beschrieben, wie die Sicherheitsstufen für eine WMI-Verbindung festgelegt werden.
+Im folgenden Verfahren wird beschrieben, wie die Sicherheitsebenen für eine WMI-Verbindung festgelegt werden.
 
-**So legen Sie die Sicherheitsstufen für eine WMI-Verbindung fest**
+**So legen Sie die Sicherheitsebenen für eine WMI-Verbindung fest**
 
--   Legen Sie die Sicherheitsstufen des [**IWbemServices**](/windows/desktop/api/WbemCli/nn-wbemcli-iwbemservices) -Proxys mit einem Aufrufen von [**CoSetProxyBlanket**](/windows/win32/api/combaseapi/nf-combaseapi-cosetproxyblanket)fest.
+-   Legen Sie die Sicherheitsebenen für den [**IWbemServices-Proxy**](/windows/desktop/api/WbemCli/nn-wbemcli-iwbemservices) mit einem Aufruf von [**CoSetProxyBlanket fest.**](/windows/win32/api/combaseapi/nf-combaseapi-cosetproxyblanket)
 
-    Im folgenden Codebeispiel wird eine gängige Methode zum Aufrufen von [**CoSetProxyBlanket**](/windows/win32/api/combaseapi/nf-combaseapi-cosetproxyblanket)beschrieben.
+    Im folgenden Codebeispiel wird eine gängige Methode zum Aufrufen von [**CoSetProxyBlanket beschrieben.**](/windows/win32/api/combaseapi/nf-combaseapi-cosetproxyblanket)
 
     ```C++
         HRESULT hres;
@@ -66,7 +66,7 @@ Im folgenden Verfahren wird beschrieben, wie die Sicherheitsstufen für eine WMI
 
     
 
-Nachdem Sie die Sicherheitsstufen für Ihren [**IWbemServices**](/windows/desktop/api/WbemCli/nn-wbemcli-iwbemservices) -Zeiger festgelegt haben, können Sie auf die verschiedenen Funktionen von WMI zugreifen. Nachdem Sie die Verwendung von WMI abgeschlossen haben, müssen Sie die Anwendung Herunterfahren. Weitere Informationen finden Sie unter [Bereinigen und Herunterfahren einer WMI-Anwendung](cleaning-up-and-shutting-down-a-wmi-application.md).
+Nachdem Sie die Sicherheitsebenen für Ihren [**IWbemServices-Zeiger**](/windows/desktop/api/WbemCli/nn-wbemcli-iwbemservices) festgelegt haben, können Sie auf die verschiedenen Funktionen von WMI zugreifen. Nachdem Sie die Verwendung von WMI abgeschlossen haben, müssen Sie Die Anwendung herunterfahren. Weitere Informationen finden Sie unter [Bereinigen und Herunterfahren einer WMI-Anwendung.](cleaning-up-and-shutting-down-a-wmi-application.md)
 
  
 

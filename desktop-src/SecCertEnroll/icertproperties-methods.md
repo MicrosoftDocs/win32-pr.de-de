@@ -1,25 +1,25 @@
 ---
-description: Die icertproperties-Schnittstelle stellt die folgenden Methoden zur Verfügung.
+description: Die ICertProperties-Schnittstelle macht die folgenden Methoden verfügbar.
 ms.assetid: F1950715-641E-42B0-AC48-E4C85D1801C6
-title: Icertproperties-Methoden
+title: ICertProperties-Methoden
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: c4bbb0a3ef52b9afb74d000245ad6e8e34b7f012
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 73f82266b6a9ef6ef71a1e5c83bd9c66728d726eecd1f054419fde938c0b328d
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "104216912"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117779499"
 ---
-# <a name="icertproperties-methods"></a>Icertproperties-Methoden
+# <a name="icertproperties-methods"></a>ICertProperties-Methoden
 
-Die [**icertproperties**](/windows/desktop/api/CertEnroll/nn-certenroll-icertproperties) -Schnittstelle stellt die folgenden Methoden zur Verfügung.
+Die [**ICertProperties-Schnittstelle**](/windows/desktop/api/CertEnroll/nn-certenroll-icertproperties) macht die folgenden Methoden verfügbar.
 
 ## <a name="in-this-section"></a>In diesem Abschnitt
 
--   [**Add-Methode**](/windows/desktop/api/CertEnroll/nf-certenroll-icertproperties-add)
+-   [**Methode hinzufügen**](/windows/desktop/api/CertEnroll/nf-certenroll-icertproperties-add)
 -   [**Clear-Methode**](/windows/desktop/api/CertEnroll/nf-certenroll-icertproperties-clear)
--   [**Initializefromcertificate-Methode**](/windows/desktop/api/CertEnroll/nf-certenroll-icertproperties-initializefromcertificate)
+-   [**InitializeFromCertificate-Methode**](/windows/desktop/api/CertEnroll/nf-certenroll-icertproperties-initializefromcertificate)
 -   [**Remove-Methode**](/windows/desktop/api/CertEnroll/nf-certenroll-icertproperties-remove)
 
  

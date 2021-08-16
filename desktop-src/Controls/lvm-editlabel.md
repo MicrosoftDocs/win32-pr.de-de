@@ -1,9 +1,9 @@
 ---
-title: LVM_EDITLABEL Nachricht (Commctrl.h)
-description: Beginnt die direkte Bearbeitung des Texts des angegebenen Listenansichtselements. Die Nachricht wählt implizit das angegebene Element aus und konzentriert es. Sie können diese Nachricht explizit oder mithilfe des ListView \_ EditLabel-Makros senden.
+title: LVM_EDITLABEL (Commctrl.h)
+description: Beginnt mit der place-Bearbeitung des angegebenen Listenansichtselementtexts. Die Meldung wählt das angegebene Element implizit aus und konzentriert es. Sie können diese Nachricht explizit oder mithilfe des ListView \_ EditLabel-Makros senden.
 ms.assetid: b63f13f1-6e66-4770-af84-30bcdb241727
 keywords:
-- LVM_EDITLABEL Windows-Steuerelemente für Nachrichten
+- LVM_EDITLABEL meldungssteuerelemente Windows
 topic_type:
 - apiref
 api_name:
@@ -25,7 +25,7 @@ ms.locfileid: "118411844"
 ---
 # <a name="lvm_editlabel-message"></a>LVM \_ EDITLABEL-Nachricht
 
-Beginnt die direkte Bearbeitung des Texts des angegebenen Listenansichtselements. Die Nachricht wählt implizit das angegebene Element aus und konzentriert es. Sie können diese Nachricht explizit oder mithilfe des [**ListView \_ EditLabel-Makros**](/windows/desktop/api/Commctrl/nf-commctrl-listview_editlabel) senden.
+Beginnt mit der place-Bearbeitung des angegebenen Listenansichtselementtexts. Die Meldung wählt das angegebene Element implizit aus und konzentriert es. Sie können diese Nachricht explizit oder mithilfe des [**ListView \_ EditLabel-Makros**](/windows/desktop/api/Commctrl/nf-commctrl-listview_editlabel) senden.
 
 ## <a name="parameters"></a>Parameter
 
@@ -34,7 +34,7 @@ Beginnt die direkte Bearbeitung des Texts des angegebenen Listenansichtselements
 *wParam* 
 </dt> <dd>
 
-Der Index des Listenansichtselements. Um die Bearbeitung abzubrechen, legen Sie den Index auf -1 fest.
+Der Index des Listenansichtselements. Legen Sie zum Abbrechen der Bearbeitung den Index auf -1 fest.
 
 </dd> <dt>
 
@@ -43,13 +43,13 @@ Der Index des Listenansichtselements. Um die Bearbeitung abzubrechen, legen Sie 
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt das Handle für das Bearbeitungssteuerelement zurück, das bei Erfolg zum Bearbeiten des Elementtexts verwendet wird, oder andernfalls **NULL.**
+Gibt das Handle an das Bearbeitungssteuerelement zurück, das verwendet wird, um den Elementtext bei Erfolg zu bearbeiten, andernfalls **NULL.**
 
 ## <a name="remarks"></a>Hinweise
 
-Wenn der Benutzer die Bearbeitung abschließt oder abbricht, wird das Bearbeitungssteuerelement zerstört, und das Handle ist nicht mehr gültig. Sie können das Bearbeitungssteuerelement untergliedern, sollten es jedoch nicht zerstören.
+Wenn der Benutzer die Bearbeitung abbricht oder abbricht, wird das Bearbeitungssteuer steuerelement zerstört, und das Handle ist nicht mehr gültig. Sie können das Bearbeitungssteuersteuer steuerelement unterklassig machen, aber Sie sollten es nicht zerstören.
 
-Das Steuerelement muss den Fokus haben, bevor Sie diese Nachricht an das Steuerelement senden. Der Fokus kann mithilfe der [**SetFocus-Funktion**](/windows/desktop/api/winuser/nf-winuser-setfocus) festgelegt werden.
+Das Steuerelement muss den Fokus haben, bevor Sie diese Nachricht an das Steuerelement senden. Der Fokus kann mithilfe der [**SetFocus-Funktion festgelegt**](/windows/desktop/api/winuser/nf-winuser-setfocus) werden.
 
 Wenn *wParam* -1 ist, wird ein [LVN \_ ENDLABELEDIT-Benachrichtigungscode](lvn-endlabeledit.md) gesendet.
 
@@ -59,7 +59,7 @@ Wenn *wParam* -1 ist, wird ein [LVN \_ ENDLABELEDIT-Benachrichtigungscode](lvn-e
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Windows \[Nur Vista-Desktop-Apps\]<br/>                                        |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur \[ Vista-Desktop-Apps\]<br/>                                        |
 | Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2003-Desktop-Apps\]<br/>                                  |
 | Header<br/>                   | <dl> <dt>Commctrl.h</dt> </dl> |
 | Unicode- und ANSI-Name<br/>   | **LVM \_ EDITLABELW** (Unicode) und **LVM \_ EDITLABELA** (ANSI)<br/>               |

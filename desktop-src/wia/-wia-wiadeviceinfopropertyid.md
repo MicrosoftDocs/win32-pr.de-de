@@ -15,7 +15,7 @@ ms.locfileid: "118207574"
 
 Geräteinformationseigenschaften sind Eigenschaften, die das Setup und die Installation des Geräts beschreiben. Diese Eigenschaften sind über die [**IWiaDevMgr-Schnittstelle**](/windows/desktop/api/wia_xp/nn-wia_xp-iwiadevmgr) und auch über das Stammelement verfügbar.
 
-Geräteinformationseigenschaften wird bei Verwendung in C/C++ das Präfix "WIA \_ \_ DIP" (Device Information Property) vorangestellt und von Windows Image Acquisition (WIA) bereitgestellt. Zu Skriptzwecken verwenden diese Konstanten das Präfix "DeviceInfo" und sind Teil des Aufzählungstyps WiaDeviceInfoPropertyId. Weitere Informationen finden Sie unter [**Eigenschaftenkonstanten für Geräteinformationen.**](-wia-wiadeviceinfoprop.md)
+Geräteinformationseigenschaften wird bei Verwendung in C/C++ das Präfix "WIA DIP" (Device Information Property) vorangestellt und von Windows \_ \_ Image Acquisition (WIA) bereitgestellt. Zu Skriptzwecken verwenden diese Konstanten das Präfix "DeviceInfo" und sind Teil des aufzählten WiaDeviceInfoPropertyId-Typs. Weitere [**Informationen finden Sie unter Eigenschaftenkonst constants**](-wia-wiadeviceinfoprop.md) für Geräteinformationen.
 
  
 

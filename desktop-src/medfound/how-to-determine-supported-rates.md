@@ -1,27 +1,27 @@
 ---
-description: Bestimmen der unterstützten Tarife
+description: Ermitteln der unterstützten Raten
 ms.assetid: 7f2b64e1-1062-4f77-b8e0-62b6d962ae8b
-title: Bestimmen der unterstützten Tarife
+title: Ermitteln der unterstützten Raten
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 1f67e9753604f51e85c641e616e8b69944b96618
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 8aadbf0f9a0ce9608b58019d64ddb18a2227bbeb2941540086a6f998e40ebc3d
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104214964"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117878942"
 ---
-# <a name="how-to-determine-supported-rates"></a>Bestimmen der unterstützten Tarife
+# <a name="how-to-determine-supported-rates"></a>Ermitteln der unterstützten Raten
 
-Vor dem Ändern der Wiedergabe Rate sollte eine Anwendung überprüfen, ob die Wiedergabe Rate von den Objekten in der Pipeline unterstützt wird. Die [**imfresupport**](/windows/desktop/api/mfidl/nn-mfidl-imfratesupport) -Schnittstelle stellt Methoden zum erzielen der maximalen Forward-und Reverse-Raten, die unterstützte Rate, die der angeforderten Rate am nächsten liegt, und die langsamste Rate bereit. Jede dieser Raten Abfragen kann die Wiedergabe Richtung angeben und angeben, ob die Verdünnung verwendet werden soll. Die genaue Wiedergabe Rate wird mithilfe der [**imfratecontrol**](/windows/desktop/api/mfidl/nn-mfidl-imfratecontrol) -Schnittstelle abgefragt.
+Vor dem Ändern der Wiedergaberate sollte eine Anwendung überprüfen, ob die Wiedergaberate von den Objekten in der Pipeline unterstützt wird. Die [**BERATERateSupport-Schnittstelle**](/windows/desktop/api/mfidl/nn-mfidl-imfratesupport) stellt Methoden bereit, um die maximalen Vorwärts- und Umgekehrt-Raten, die unterstützte Rate, die einer angeforderten Rate am nächsten ist, und die langsamste Rate zu erhalten. Jede dieser Rate-Abfragen kann die Wiedergaberichtung angeben und angeben, ob die Thinning-Abfrage verwendet werden soll. Die genaue Wiedergaberate wird mithilfe der [**BERRATEControl-Schnittstelle abgefragt.**](/windows/desktop/api/mfidl/nn-mfidl-imfratecontrol)
 
-Weitere Informationen zum Ändern der Wiedergabe Raten finden [Sie unter Festlegen der Wiedergabe Rate für die Medien Sitzung](how-to-set-the-playback-rate-on-the-media-session.md).
+Informationen zum Ändern der Wiedergaberaten finden Sie unter Festlegen der [Wiedergaberate für die Mediensitzung.](how-to-set-the-playback-rate-on-the-media-session.md)
 
-Allgemeine Informationen zu den Wiedergabe Raten finden Sie unter [Informationen zur Raten Kontrolle](about-rate-control.md).
+Allgemeine Informationen zu Wiedergaberaten finden Sie unter [Informationen zur Ratensteuerung.](about-rate-control.md)
 
-## <a name="to-determine-the-current-playback-rate"></a>So bestimmen Sie die aktuelle Wiedergabe Rate
+## <a name="to-determine-the-current-playback-rate"></a>So bestimmen Sie die aktuelle Wiedergaberate
 
-1.  Holen Sie sich den Raten Steuerungs Dienst aus der Medien Sitzung.
+1.  Sie können den Rate Control-Dienst aus der Mediensitzung erhalten.
 
     ```C++
     IMFRateControl *pRateControl = NULL;
@@ -34,11 +34,11 @@ Allgemeine Informationen zu den Wiedergabe Raten finden Sie unter [Informationen
 
     
 
-    Übergeben Sie einen initialisierten [**imfmediasession**](/windows/desktop/api/mfidl/nn-mfidl-imfmediasession) -Schnittstellen Zeiger im *punkObject* -Parameter von [**mfgetservice**](/windows/desktop/api/mfidl/nf-mfidl-mfgetservice).
+    Übergeben Sie einen initialisierten [**INTERFACEMediaSession-Schnittstellenzeiger**](/windows/desktop/api/mfidl/nn-mfidl-imfmediasession) im *parameterobject* von [**MFGetService.**](/windows/desktop/api/mfidl/nf-mfidl-mfgetservice)
 
-    Die Anwendung muss den Raten Steuerungs Dienst über die Medien Sitzung Abfragen. Intern fragt die Medien Sitzung die Objekte in der Topologie ab.
+    Die Anwendung muss den Rate Control-Dienst über die Mediensitzung abfragen. Intern fragt die Mediensitzung die Objekte in der Topologie ab.
 
-2.  Ruft die [**imfratecontrol:: getrate**](/windows/desktop/api/mfidl/nf-mfidl-imfratecontrol-getrate) -Methode auf, um die aktuelle Wiedergabe Rate zu erhalten.
+2.  Rufen Sie [**die METHODE VERRATEControl::GetRate**](/windows/desktop/api/mfidl/nf-mfidl-imfratecontrol-getrate) auf, um die aktuelle Wiedergaberate zu erhalten.
 
     ```C++
     hr = pRateControl->GetRate(&bThin, &rate);
@@ -46,11 +46,11 @@ Allgemeine Informationen zu den Wiedergabe Raten finden Sie unter [Informationen
 
     
 
-    Der *pfthin* -Parameter von [**getrate**](/windows/desktop/api/mfidl/nf-mfidl-imfratecontrol-getrate) empfängt einen **booleschen** Wert, der angibt, ob der Stream gerade schlank ist. Die Anwendung muss **null** übergeben, wenn Sie keine Unterstützung für die Unterstützung des Datenstroms Abfragen möchte. Der *pflrate* -Parameter empfängt die aktuelle Wiedergabe Rate.
+    Der *pfThin-Parameter* von [**GetRate**](/windows/desktop/api/mfidl/nf-mfidl-imfratecontrol-getrate) empfängt einen **BOOL-Wert,** der angibt, ob der Stream gerade ausgefälsiert wird. Die Anwendung muss NULL **übergeben,** wenn sie keine Unterstützung für die Verankerung des Streams abfragen möchte. Der *parameter pflRate* empfängt die aktuelle Wiedergaberate.
 
-## <a name="to-determine-the-nearest-supported-rate"></a>So bestimmen Sie die nächstgelegene unterstützte Rate
+## <a name="to-determine-the-nearest-supported-rate"></a>So bestimmen Sie die nächste unterstützte Rate
 
-1.  Holen Sie sich den Dienst zur Gebühren Unterstützung aus der Medien Sitzung.
+1.  Sie können den Supportdienst für die Rate aus der Mediensitzung erhalten.
 
     ```C++
     IMFRateSupport *pRateSupport = NULL;
@@ -63,9 +63,9 @@ Allgemeine Informationen zu den Wiedergabe Raten finden Sie unter [Informationen
 
     
 
-    Übergeben Sie einen initialisierten [**imfmediasession**](/windows/desktop/api/mfidl/nn-mfidl-imfmediasession) -Schnittstellen Zeiger im *punkObject* -Parameter von [**mfgetservice**](/windows/desktop/api/mfidl/nf-mfidl-mfgetservice).
+    Übergeben Sie einen initialisierten [**INTERFACEMediaSession-Schnittstellenzeiger**](/windows/desktop/api/mfidl/nn-mfidl-imfmediasession) im *parameterobject* von [**MFGetService.**](/windows/desktop/api/mfidl/nf-mfidl-mfgetservice)
 
-2.  Rufen Sie die [**imfratesupport:: isratesupportiert**](/windows/desktop/api/mfidl/nf-mfidl-imfratesupport-isratesupported) -Methode auf, um die unterstützte Rate abzurufen, die der angeforderten Wiedergabe Rate am nächsten liegt.
+2.  Rufen Sie [**die METHODE VERRATESupport::IsRateSupported**](/windows/desktop/api/mfidl/nf-mfidl-imfratesupport-isratesupported) auf, um die unterstützte Rate abzurufen, die einer angeforderten Wiedergaberate am nächsten liegt.
 
     ```C++
     float rateRequested = 4.0;
@@ -78,15 +78,15 @@ Allgemeine Informationen zu den Wiedergabe Raten finden Sie unter [Informationen
 
     
 
-    Im Beispiel wird abgefragt, ob eine Wiedergabe Rate von 4,0 bei der Verdünnung unterstützt wird. Dies wird durch Übergeben von " **true** " im Parameter " *f* " von [**isratesupportiert**](/windows/desktop/api/mfidl/nf-mfidl-imfratesupport-isratesupported)angegeben. Wenn diese Rate unterstützt wird, enthält *actualrate* die Wiedergabe Rate 4,0, und der-Befehl wird mit dem Rückgabewert S \_ OK erfolgreich ausgeführt. Wenn die genaue Wiedergabe Rate nicht unterstützt wird, wird die nächste unterstützte Rate in *actualrate* empfangen. Wenn die Rate nicht unterstützt wird und keine verfügbare nächste Wiedergabe Rate verfügbar ist, gibt der-Rückruf einen entsprechenden Fehlercode zurück.
+    Im Beispiel wird abgefragt, ob eine Wiedergaberate von 4,0 mit Thinning unterstützt wird. Dies wird durch Übergeben **von TRUE** im *fThin-Parameter* von [**IsRateSupported angegeben.**](/windows/desktop/api/mfidl/nf-mfidl-imfratesupport-isratesupported) Wenn diese Rate unterstützt wird, *enthält actualRate* die Wiedergaberate von 4,0, und der Aufruf ist mit dem Rückgabewert S \_ OK erfolgreich. Wenn die genaue Wiedergaberate nicht unterstützt wird, wird die nächste unterstützte Rate in *actualRate empfangen.* Wenn die Rate nicht unterstützt wird und keine nächste Wiedergaberate verfügbar ist, gibt der Aufruf einen entsprechenden Fehlercode zurück.
 
-    Diese Werte können sich abhängig davon ändern, welche Pipeline Komponenten geladen werden. Daher sollten Sie die Werte erneut Abfragen, wenn Sie eine neue topolgy laden.
+    Diese Werte können sich abhängig davon ändern, welche Pipelinekomponenten geladen werden. Daher sollten Sie die Werte erneut abfragen, wenn Sie eine neue topololgy laden.
 
-    Wenn die gewünschte Wiedergabe Rate nicht unterstützt wird, besteht eine Möglichkeit darin, jedes Objekt in der Topologie einzeln abzufragen, um herauszufinden, ob eine bestimmte Komponente die Rate nicht unterstützt. Möglicherweise sind Sie in der Lage, die Topologie ohne diese Komponente neu zu erstellen und dann die gewünschte Rate zu spielen. Wenn z. b. jede Komponente außer dem audiorenderer eine bestimmte Rate unterstützt, können Sie die Topologie ohne den audiobranch neu erstellen und ohne Audiodaten mit der gewünschten Geschwindigkeit wiedergeben.
+    Wenn die gewünschte Wiedergaberate nicht unterstützt wird, besteht eine Möglichkeit in der individuellen Abfrage jedes Objekts in der Topologie, um herauszufinden, ob eine bestimmte Komponente die Rate nicht unterstützt. Möglicherweise können Sie die Topologie ohne diese Komponente neu erstellen und dann mit der gewünschten Rate wieder verwenden. Wenn beispielsweise jede Komponente mit Ausnahme des Audiorenderers eine bestimmte Rate unterstützt, können Sie die Topologie ohne den Audiozweig neu erstellen und mit der gewünschten Rate ohne Audio wieder geben.
 
 ## <a name="to-determine-the-slowest-supported-rate"></a>So bestimmen Sie die langsamste unterstützte Rate
 
-1.  Holen Sie sich den Dienst zur Gebühren Unterstützung aus der Medien Sitzung.
+1.  Sie können den Supportdienst für die Rate aus der Mediensitzung erhalten.
 
     ```C++
     IMFRateSupport *pRateSupport = NULL;
@@ -99,9 +99,9 @@ Allgemeine Informationen zu den Wiedergabe Raten finden Sie unter [Informationen
 
     
 
-    Übergeben Sie einen initialisierten [**imfmediasession**](/windows/desktop/api/mfidl/nn-mfidl-imfmediasession) -Schnittstellen Zeiger im *punkObject* -Parameter von [**mfgetservice**](/windows/desktop/api/mfidl/nf-mfidl-mfgetservice).
+    Übergeben Sie einen initialisierten [**INTERFACEMediaSession-Schnittstellenzeiger**](/windows/desktop/api/mfidl/nn-mfidl-imfmediasession) im *parameterobject* von [**MFGetService.**](/windows/desktop/api/mfidl/nf-mfidl-mfgetservice)
 
-2.  Rufen Sie die [**imfratesupport:: gezlowestrate**](/windows/desktop/api/mfidl/nf-mfidl-imfratesupport-getslowestrate) -Methode auf, um die langsamste unterstützte Rate abzurufen.
+2.  Rufen Sie [**die METHODE MARSHRateSupport::GetSlowestRate**](/windows/desktop/api/mfidl/nf-mfidl-imfratesupport-getslowestrate) auf, um die langsamste unterstützte Rate abzurufen.
 
     ```C++
     float slowestRate = 0;
@@ -113,21 +113,21 @@ Allgemeine Informationen zu den Wiedergabe Raten finden Sie unter [Informationen
 
     
 
-    Im Beispiel wird die langsamste umgekehrte Wiedergabe Rate bei der Verdünnung abgefragt. Die untere Grenze wird im *slowestrate* -Parameter von [**gesorlowestrate**](/windows/desktop/api/mfidl/nf-mfidl-imfratesupport-getslowestrate)empfangen.
+    Im Beispiel wird die langsamste Umgekehrt-Wiedergaberate mit Verlangsamung abgefragt. Die untere Grenze wird im *slowestRate-Parameter* von [**GetSlowestRate empfangen.**](/windows/desktop/api/mfidl/nf-mfidl-imfratesupport-getslowestrate)
 
-    Wenn die umgekehrte Wiedergabe oder die Verdünnung nicht unterstützt wird, gibt der-Rückruf einen entsprechenden Fehlercode zurück.
+    Wenn reverse playback or thinning nicht unterstützt wird, gibt der Aufruf einen entsprechenden Fehlercode zurück.
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
 <dl> <dt>
 
-[Medien Sitzung](media-session.md)
+[Mediensitzung](media-session.md)
 </dt> <dt>
 
-[Raten Steuerung](rate-control.md)
+[Rate Control](rate-control.md)
 </dt> <dt>
 
-[Suchen, schnelles vorwärts und umgekehrtes spielen](seeking--fast-forward--and-reverse-play.md)
+[Suchen, Vorlauf und Umgekehrtes Wiederkehren](seeking--fast-forward--and-reverse-play.md)
 </dt> </dl>
 
  

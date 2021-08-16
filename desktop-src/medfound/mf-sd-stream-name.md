@@ -51,7 +51,7 @@ Die GUID-Konstante für dieses Attribut wird aus mfuuid.lib exportiert.
 
 <dl> <dt>
 
-[Alphabetische Liste Media Foundation Attributen](alphabetical-list-of-media-foundation-attributes.md)
+[Alphabetische Liste Media Foundation Attribute](alphabetical-list-of-media-foundation-attributes.md)
 </dt> <dt>
 
 [Streamdeskriptorattribute](stream-descriptor-attributes.md)

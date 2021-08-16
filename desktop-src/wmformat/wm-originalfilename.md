@@ -29,7 +29,7 @@ g \_ wszWMOriginalFilename
 
 ## <a name="data-type"></a>Datentyp
 
-**\_ \_ WMT-TYPZEICHENFOLGE**
+**\_WMT-TYPZEICHENFOLGE \_**
 
 ## <a name="see-also"></a>Weitere Informationen
 

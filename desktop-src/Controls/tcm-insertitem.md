@@ -1,9 +1,9 @@
 ---
-title: TCM_INSERTITEM Meldung (kommstrg. h)
-description: Fügt eine neue Registerkarte in ein Registerkarten-Steuerelement ein. Sie können diese Nachricht explizit oder mithilfe des tabctrl \_ InsertItem-Makros senden.
+title: TCM_INSERTITEM Meldung (Commctrl.h)
+description: Fügt eine neue Registerkarte in ein Registerkartensteuerelement ein. Sie können diese Nachricht explizit oder mithilfe des TabCtrl \_ InsertItem-Makros senden.
 ms.assetid: e547c49a-699c-4137-8680-20391d138d54
 keywords:
-- Windows-Steuerelemente für TCM_INSERTITEM Meldung
+- TCM_INSERTITEM Meldung Windows-Steuerelemente
 topic_type:
 - apiref
 api_name:
@@ -16,16 +16,16 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 58002006944a221571e37c37d25259d0aaa74fc4
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: a7c3c17714218562d7ddc82497a7ef27e131e30a2ff04daf36970dfbcf5cc354
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "106343873"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117829101"
 ---
-# <a name="tcm_insertitem-message"></a>TCM \_ InsertItem-Nachricht
+# <a name="tcm_insertitem-message"></a>TCM \_ INSERTITEM-Nachricht
 
-Fügt eine neue Registerkarte in ein Registerkarten-Steuerelement ein. Sie können diese Nachricht explizit oder mithilfe des [**tabctrl \_ InsertItem**](/windows/desktop/api/Commctrl/nf-commctrl-tabctrl_insertitem) -Makros senden.
+Fügt eine neue Registerkarte in ein Registerkartensteuerelement ein. Sie können diese Nachricht explizit oder mithilfe des [**TabCtrl \_ InsertItem-Makros**](/windows/desktop/api/Commctrl/nf-commctrl-tabctrl_insertitem) senden.
 
 ## <a name="parameters"></a>Parameter
 
@@ -41,13 +41,13 @@ Index der neuen Registerkarte.
 *lParam* 
 </dt> <dd>
 
-Ein Zeiger auf eine [**TCITEM**](/windows/win32/api/commctrl/ns-commctrl-tcitema) -Struktur, die die Attribute der Registerkarte angibt. Die Member **dwstate** und **dwstatemask** dieser Struktur werden von dieser Nachricht ignoriert.
+Zeiger auf eine [**TCITEM-Struktur,**](/windows/win32/api/commctrl/ns-commctrl-tcitema) die die Attribute der Registerkarte angibt. Die **dwState-** und **dwStateMask-Member** dieser Struktur werden von dieser Meldung ignoriert.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt den Index der neuen Registerkarte zurück, wenn erfolgreich, andernfalls-1.
+Gibt bei Erfolg den Index der neuen Registerkarte zurück, andernfalls -1.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -55,10 +55,10 @@ Gibt den Index der neuen Registerkarte zurück, wenn erfolgreich, andernfalls-1.
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>                                        |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2003 \[ -Desktop-Apps\]<br/>                                  |
-| Header<br/>                   | <dl> <dt>Kommstrg. h</dt> </dl> |
-| Unicode- und ANSI-Name<br/>   | **TCM \_ Insertitemw** (Unicode) und **TCM \_ insertitema** (ANSI)<br/>             |
+| Unterstützte Mindestversion (Client)<br/> | Windows \[Nur Vista-Desktop-Apps\]<br/>                                        |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2003-Desktop-Apps\]<br/>                                  |
+| Header<br/>                   | <dl> <dt>Commctrl.h</dt> </dl> |
+| Unicode- und ANSI-Name<br/>   | **TCM \_ INSERTITEMW** (Unicode) und **TCM \_ INSERTITEMA** (ANSI)<br/>             |
 
 
 

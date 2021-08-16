@@ -1,5 +1,5 @@
 ---
-title: glGetTexEnv Functions
+title: glGetTexEnv-Funktionen
 description: Diese Funktionen geben Texturumgebungsparameter zurück.
 ms.assetid: 9dd0d7ac-f3e0-43a8-8458-2664965cce7c
 ms.topic: article
@@ -11,7 +11,7 @@ ms.contentlocale: de-DE
 ms.lasthandoff: 08/11/2021
 ms.locfileid: "118359803"
 ---
-# <a name="glgettexenv-functions"></a>glGetTexEnv Functions
+# <a name="glgettexenv-functions"></a>glGetTexEnv-Funktionen
 
 Diese Funktionen geben Texturumgebungsparameter zurück:
 

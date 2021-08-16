@@ -31,7 +31,7 @@ Windows Portable Geräte unterstützen die folgenden Geräteeigenschaften.
 <tr class="header">
 <th>Eigenschaft</th>
 <th>VarType</th>
-<th>Beschreibung</th>
+<th>BESCHREIBUNG</th>
 </tr>
 </thead>
 <tbody>
@@ -48,7 +48,7 @@ Windows Portable Geräte unterstützen die folgenden Geräteeigenschaften.
 <tr class="odd">
 <td><span id="wpd_device_functional_unique_id"></span><span id="WPD_DEVICE_FUNCTIONAL_UNIQUE_ID"></span><strong>WPD_DEVICE_FUNCTIONAL_UNIQUE_ID</strong></td>
 <td><strong>VT_VECTOR | VT_UI1</strong></td>
-<td>Ein eindeutiger 16-Byte-Bezeichner, der für mehrere vom Gerät unterstützte Transporte verwendet wird. Wenn ein einzelnes Gerät mehrere Transporte unterstützt, kann diese Eigenschaft verwendet werden, um die verschiedenen WPD-Transporttreiber diesem Gerät zu zuordnen.</td>
+<td>Ein eindeutiger 16-Byte-Bezeichner, der für mehrere vom Gerät unterstützte Transporte üblich ist. Wenn ein einzelnes Gerät mehrere Transporte unterstützt, kann diese Eigenschaft verwendet werden, um die verschiedenen WPD-Transporttreiber diesem Gerät zuzuordnen.</td>
 </tr>
 <tr class="even">
 <td><span id="wpd_device_manufacturer"></span><span id="WPD_DEVICE_MANUFACTURER"></span><strong>WPD_DEVICE_MANUFACTURER</strong></td>
@@ -63,17 +63,17 @@ Windows Portable Geräte unterstützen die folgenden Geräteeigenschaften.
 <tr class="even">
 <td><span id="wpd_device_model_unique_id"></span><span id="WPD_DEVICE_MODEL_UNIQUE_ID"></span><strong>WPD_DEVICE_MODEL_UNIQUE_ID</strong></td>
 <td><strong>VT_VECTOR | VT_UI1</strong></td>
-<td>Ein eindeutiger 16-Byte-Bezeichner, der zur Unterscheidung zwischen verschiedenen Modellen eines Geräts verwendet wird.</td>
+<td>Ein eindeutiger 16-Byte-Bezeichner, der verwendet wird, um zwischen verschiedenen Modellen eines Geräts zu unterscheiden.</td>
 </tr>
 <tr class="odd">
 <td><strong>WPD_DEVICE_NETWORK_IDENTIFIER</strong></td>
 <td><strong>VT_UI8</strong></td>
-<td>Ein -Wert, der den EUI-64-Netzwerkbezeichner des Geräts angibt. Diese Eigenschaft wird für Out-of-Band-Netzwerkvorgänge verwendet. Wenn das Gerät über physische MAC-48-Netzwerkadressen verfügt (typisch für IPv4-Netzwerke), wird die MAC-48-Adresse in der EUI-64-Adresse als die beiden Hälften der MAC-48-Adresse codiert, die durch FF-FF getrennt sind. Der EUI-64-Wert wird in netzwerk- oder &quot; &quot; &quot; big-endian-Reihenfolge gespeichert, wobei eine &quot; EUI-64-Adresse von 01-02-03-FF-FF-04-05-06 im VT_UI8 platziert wird, damit der Dezimalwert 72624942021346566. Diese Eigenschaft ist auf jedem Gerät erforderlich, das nominale oder sichere Authentifizierung unterstützt. Diese Eigenschaft wird auf Geräten empfohlen, die nur zero authentication unterstützen. Der Wert kann vom Host verwendet werden, um den Zugriff auf das Gerät ohne Benutzereingriff automatisch zu erstellen.<br/></td>
+<td>Ein -Wert, der den EUI-64-Netzwerkbezeichner des Geräts angibt. Diese Eigenschaft wird für Out-of-Band-Netzwerkvorgänge verwendet. Wenn das Gerät über physische MAC-48-Netzwerkadressen verfügt (typisch für IPv4-Netzwerke), wird die MAC-48-Adresse in der EUI-64-Adresse als die beiden Hälften der MAC-48-Adresse codiert, die durch FF-FF getrennt sind. Der WERT EUI-64 wird in &quot; netzwerk- &quot; oder &quot; big-endian-Reihenfolge &quot; gespeichert, wobei die EUI-64-Adresse 01-02-03-FF-FF-04-05-06 im VT_UI8 platziert wird, sodass der Dezimalwert 72624942021346566 wird. Diese Eigenschaft ist auf jedem Gerät erforderlich, das nominale oder sichere Authentifizierung unterstützt. Diese Eigenschaft wird auf Geräten empfohlen, die nur Die Nullauthentifizierung unterstützen. Der Wert kann vom Host verwendet werden, um ohne Benutzereingriff automatisch Zugriff auf das Gerät herzustellen.<br/></td>
 </tr>
 <tr class="even">
 <td><span id="wpd_device_power_level"></span><span id="WPD_DEVICE_POWER_LEVEL"></span><strong>WPD_DEVICE_POWER_LEVEL</strong></td>
 <td><strong>VT_UI4</strong></td>
-<td>Ein Wert zwischen 0 und 100, der den Akkustand des Geräts angibt, bei dem 0 kein Wert und 100 vollständig aufgeladen sind.</td>
+<td>Ein Wert von 0 bis 100, der den Stromstand des Akkus des Geräts angibt, wobei 0 keine und 100 vollständig aufgeladen sind.</td>
 </tr>
 <tr class="odd">
 <td><span id="wpd_device_power_source"></span><span id="WPD_DEVICE_POWER_SOURCE"></span><strong>WPD_DEVICE_POWER_SOURCE</strong></td>
@@ -93,27 +93,27 @@ Windows Portable Geräte unterstützen die folgenden Geräteeigenschaften.
 <tr class="even">
 <td><span id="wpd_device_supported_drm_scheme"></span><span id="WPD_DEVICE_SUPPORTED_DRM_SCHEME"></span><strong>WPD_DEVICE_SUPPORTED_DRM_SCHEMES</strong></td>
 <td><strong>VT_UNKNOWN</strong></td>
-<td>Ein -Wert, der angibt, ob die vom Gerät zurückgegebenen unterstützten Formate in einer bevorzugten Reihenfolge vorliegen. Das erste Format in der Liste wird vom Gerät am meisten bevorzugt, während das letzte das am wenigsten bevorzugte Format ist. Anwendungen können diese Eigenschaft verwenden, um zu bestimmen, ob die unterstützten Formate eines Geräts in einer bevorzugten Reihenfolge aufgeführt werden.<br/></td>
+<td>Ein -Wert, der angibt, ob die vom Gerät zurückgegebenen unterstützten Formate in einer bevorzugten Reihenfolge vorliegen. Das erste Format in der Liste wird vom Gerät am meisten bevorzugt, während das letzte am wenigsten bevorzugt wird. Anwendungen können diese Eigenschaft verwenden, um zu bestimmen, ob die unterstützten Formate eines Geräts in einer bevorzugten Reihenfolge aufgeführt werden.<br/></td>
 </tr>
 <tr class="odd">
 <td><span id="wpd_device_supported_formats_are_ordered"></span><span id="WPD_DEVICE_SUPPORTED_FORMATS_ARE_ORDERED"></span><strong>WPD_DEVICE_SUPPORTED_FORMATS_ARE_ORDERED</strong></td>
 <td><strong>VT_BOOL</strong></td>
-<td>Ein boolescher Wert, der angibt, ob die vom Gerät zurückgegebenen unterstützten Formate in einer bevorzugten Reihenfolge vorliegen. Das heißt, das erste zurückgegebene Format wird am meisten bevorzugt, während das zuletzt zurückgegebene Format am wenigsten bevorzugt wird.</td>
+<td>Ein boolescher Wert, der angibt, ob die vom Gerät zurückgegebenen unterstützten Formate in einer bevorzugten Reihenfolge vorliegen. Das heißt, das erste zurückgegebene Format ist am bevorzugten, während das zuletzt zurückgegebene Format am wenigsten bevorzugt wird.</td>
 </tr>
 <tr class="even">
 <td><span id="wpd_device_supports_non_consumable"></span><span id="WPD_DEVICE_SUPPORTS_NON_CONSUMABLE"></span><strong>WPD_DEVICE_SUPPORTS_NON_CONSUMABLE</strong></td>
 <td><strong>VT_BOOL</strong></td>
-<td>Ein boolescher Wert, der angibt, ob das Gerät nicht verwertbare Objekte unterstützt. Dabei handelt es sich um Objekte, die das Gerät nur speichern, nicht wiederspielen oder in irgendeiner Weise verwenden soll.</td>
+<td>Ein boolescher Wert, der angibt, ob das Gerät nicht verwendbare Objekte unterstützt. Dies sind Objekte, die das Gerät nur speichern, nicht wiedergeben oder verwenden soll.</td>
 </tr>
 <tr class="odd">
 <td><span id="wpd_device_sync_partner"></span><span id="WPD_DEVICE_SYNC_PARTNER"></span><strong>WPD_DEVICE_SYNC_PARTNER</strong></td>
 <td><strong>VT_LPWSTR</strong></td>
-<td>Eine lesbare Beschreibung des Synchronisierungspartners <em>eines Geräts.</em> Dies ist ein Gerät, eine Anwendung oder ein Server, mit dem das Gerät kommuniziert, um einen gemeinsamen Zustand oder eine Gruppe von Dateien zwischen beiden Partnern zu verwalten. Beispiele hierfür sind E-Mail-Programme und Musikbibliotheken.</td>
+<td>Eine lesbare Beschreibung des <em>Synchronisierungspartners</em>eines Geräts. Dies ist ein Gerät, eine Anwendung oder ein Server, mit dem das Gerät kommuniziert, um einen gemeinsamen Zustand oder eine Gruppe von Dateien zwischen beiden Partnern aufrechtzuerhalten. Beispiele hierfür sind E-Mail-Programme und Musikbibliotheken.</td>
 </tr>
 <tr class="even">
 <td><span id="wpd_device_friendly_name"></span><span id="WPD_DEVICE_FRIENDLY_NAME"></span><strong>WPD_DEVICE_FRIENDLY_NAME</strong></td>
 <td><strong>VT_LPWSTR</strong></td>
-<td>Ein -Wert, der den vom Benutzer auf dem Gerät festgelegten Benutzernamen darstellt.</td>
+<td>Ein -Wert, der den Anzeigenamen darstellt, der vom Benutzer auf dem Gerät festgelegt wird.</td>
 </tr>
 <tr class="odd">
 <td><span id="wpd_device_transport"></span><span id="WPD_DEVICE_TRANSPORT"></span><strong>WPD_DEVICE_TRANSPORT</strong></td>
@@ -123,7 +123,7 @@ Windows Portable Geräte unterstützen die folgenden Geräteeigenschaften.
 <tr class="even">
 <td><span id="wpd_device_type"></span><span id="WPD_DEVICE_TYPE"></span><strong>WPD_DEVICE_TYPE</strong></td>
 <td><strong>VT_UI4</strong></td>
-<td>Ein -Wert, der den Gerätetyp angibt. -Anwendungen verwenden diese Eigenschaft nur zu Darstellungszwecken. Funktionale Merkmale des Geräts werden durch funktionale Objekte entschieden. Geräte, die kein Gerätesymbol angeben, <strong></strong> z. B. eine WPD_RESOURCE_ICON für das Geräteobjekt, werden im WPD-Namespace mit einem generischen Symbol dargestellt. Dieses Symbol hängt vom angegebenen Gerätetyp ab. Wenn der Gerätetyp beispielsweise ein Mobiltelefon ist, wird das generische Telefonsymbol verwendet. Bei der ersten Installation des Geräts wird dieser Eigenschaftswert vom WPD-Klasseninstallationsprogramm als PORTABLE_DEVICE_TYPE in der Geräteregistrierung REG_DWORD.<br/> Die möglichen Werte dieses Parameters <a href="object-properties.md"><strong></strong></a> sind aus der WPD_DEVICE_TYPES Enumeration, die in PortableDevice.h definiert ist. Gültige Werte:<br/> <dl> <strong>WPD_DEVICE_TYPE_GENERIC</strong><br />
+<td>Ein -Wert, der den Gerätetyp angibt. -Anwendungen verwenden diese Eigenschaft nur zu Darstellungszwecken. Funktionale Merkmale des Geräts werden durch funktionale Objekte bestimmt. Geräte, die kein Gerätesymbol bereitstellen, z. <strong>B.</strong> ein WPD_RESOURCE_ICON für das Geräteobjekt, werden im WPD-Namespace mit einem generischen Symbol dargestellt. Dieses Symbol hängt vom angegebenen Gerätetyp ab, z. B. wenn der Gerätetyp ein Mobiltelefon ist, wird das generische Telefonsymbol verwendet. Bei der ersten Installation des Geräts wird dieser Eigenschaftswert vom WPD Class Installer abgefragt und in der Geräteregistrierung unter dem PORTABLE_DEVICE_TYPE Wert als REG_DWORD gespeichert.<br/> Die möglichen Werte dieses Parameters stammen aus der <a href="object-properties.md"><strong>in</strong></a> PortableDevice.h definierten WPD_DEVICE_TYPES-Enumeration. Gültige Werte:<br/> <dl> <strong>WPD_DEVICE_TYPE_GENERIC</strong><br />
 <strong>WPD_DEVICE_TYPE_CAMERA</strong><br />
 <strong>WPD_DEVICE_TYPE_MEDIA_PLAYER</strong><br />
 <strong>WPD_DEVICE_TYPE_PHONE</strong><br />
@@ -135,7 +135,7 @@ Windows Portable Geräte unterstützen die folgenden Geräteeigenschaften.
 <tr class="odd">
 <td><span id="wpd_device_use_device_stage"></span><span id="WPD_DEVICE_USE_DEVICE_STAGE"></span><strong>WPD_DEVICE_USE_DEVICE_STAGE</strong></td>
 <td><strong>VT_BOOL</strong></td>
-<td>Wenn diese Eigenschaft vorhanden ist und auf <strong>TRUE festgelegt</strong>ist, kann das Gerät zusammen mit Device Stage. Dies ist für Geräte gedacht, die keine Metadaten mithilfe des Device Metadata Service speichern <strong>können,</strong>aber Metadaten auf den Microsoft-Servern bereitstellen.</td>
+<td>Wenn diese Eigenschaft vorhanden ist und auf <strong>TRUE</strong>festgelegt ist, kann das Gerät mit Device Stage verwendet werden. Dies ist für Geräte vorgesehen, die keine Metadaten mithilfe des <strong>Device Metadata Service</strong>speichern können, aber Metadaten auf den Microsoft-Servern bereitstellen.</td>
 </tr>
 </tbody>
 </table>

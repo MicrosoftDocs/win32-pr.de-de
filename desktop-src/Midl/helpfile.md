@@ -1,9 +1,9 @@
 ---
 title: helpfile-Attribut
-description: Das Attribut \helpfile\legt den Namen der Hilfedatei für eine Typbibliothek fest. Alle Typen in einer Bibliothek verwenden dieselbe Hilfedatei.
+description: Das \helpfile\-Attribut legt den Namen der Hilfedatei für eine Typbibliothek fest. Alle Typen in einer Bibliothek verwenden dieselbe Hilfedatei.
 ms.assetid: caa248b1-a1a7-4c36-886a-079a66a01907
 keywords:
-- Helpfile-Attribut MIDL
+- HELPFILE-Attribut MIDL
 topic_type:
 - apiref
 api_name:
@@ -21,7 +21,7 @@ ms.locfileid: "118384020"
 ---
 # <a name="helpfile-attribute"></a>helpfile-Attribut
 
-Das **\[ Helpfile-Attribut \]** legt den Namen der Hilfedatei für eine Typbibliothek fest. Alle Typen in einer Bibliothek verwenden dieselbe Hilfedatei.
+Das **\[ helpfile-Attribut \]** legt den Namen der Hilfedatei für eine Typbibliothek fest. Alle Typen in einer Bibliothek verwenden dieselbe Hilfedatei.
 
 ``` syntax
 [
@@ -42,7 +42,7 @@ library
 *uuid-number* 
 </dt> <dd>
 
-Gibt eine universell eindeutige ID für die Bibliothek [**an.**](library.md)
+Gibt eine universell eindeutige ID für die [**Bibliothek**](library.md)an.
 
 </dd> <dt>
 
@@ -56,7 +56,7 @@ Gibt den Namen der Datei an, die den Hilfetext enthält.
 *optional-attribute-list* 
 </dt> <dd>
 
-Gibt null oder mehr Attribute an, die der MIDL-Compiler auf die Bibliothek [**anwenden soll.**](library.md)
+Gibt null oder mehr Attribute an, die der MIDL-Compiler auf die [**Bibliothek**](library.md)anwendet.
 
 </dd> <dt>
 
@@ -69,7 +69,7 @@ Gibt eine oder mehrere MIDL-Anweisungen an, die die Bibliotheksschnittstelle def
 
 ## <a name="remarks"></a>Hinweise
 
-Verwenden Sie **die GetDocumentation-Funktionen** in den **Schnittstellen ITypeLib** und **ITypeInfo,** um den Dateinamen abzurufen.
+Verwenden Sie die **GetDocumentation-Funktionen** in den **Schnittstellen ITypeLib** und **ITypeInfo,** um den Dateinamen abzurufen.
 
 ## <a name="examples"></a>Beispiele
 
@@ -96,7 +96,7 @@ library Hello
 [ODL-Dateisyntax](/previous-versions/windows/desktop/automat/odl-file-syntax)
 </dt> <dt>
 
-[ODL-Dateibeispiel](/previous-versions/windows/desktop/automat/odl-file-example)
+[BEISPIEL FÜR ODL-Datei](/previous-versions/windows/desktop/automat/odl-file-example)
 </dt> <dt>
 
 [Generieren einer Typbibliothek mit MIDL](generating-a-type-library-with-midl-2.md)

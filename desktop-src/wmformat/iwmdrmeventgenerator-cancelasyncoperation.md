@@ -1,11 +1,11 @@
 ---
-title: Iwmdrmeventgenerator cancelasyncoperation-Methode (wmdrmsdk. h)
-description: Die cancelasyncoperation-Methode bricht einen asynchronen Vorgang ab.
+title: IWMDRMEventGenerator CancelAsyncOperation-Methode (Wmdrmsdk.h)
+description: Die CancelAsyncOperation-Methode bricht einen asynchronen Vorgang ab.
 ms.assetid: 95c59e03-b6c8-40c2-b1dc-381cb6d8d558
 keywords:
-- Cancelasyncoperation-Methode, Windows Media-Format
-- Cancelasyncoperation-Methode, Windows Media-Format, iwmdrmeventgenerator-Schnittstelle
-- Iwmdrmeventgenerator-Schnittstelle Windows Media-Format, cancelasyncoperation-Methode
+- CancelAsyncOperation-Methode windows Media Format
+- CancelAsyncOperation-Methode windows Media Format , IWMDRMEventGenerator-Schnittstelle
+- IWMDRMEventGenerator-Schnittstelle windows Media Format , CancelAsyncOperation-Methode
 topic_type:
 - apiref
 api_name:
@@ -17,16 +17,16 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 1223f56e820eb5927eeb972f28056baa14824774
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 25ca44fa141d21caeed1d0f16da65a1db61fe319e2b9424600275563e6c5d52f
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106367044"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117847157"
 ---
-# <a name="iwmdrmeventgeneratorcancelasyncoperation-method"></a>Iwmdrmeventgenerator:: cancelasyncoperation-Methode
+# <a name="iwmdrmeventgeneratorcancelasyncoperation-method"></a>IWMDRMEventGenerator::CancelAsyncOperation-Methode
 
-Die **cancelasyncoperation** -Methode bricht einen asynchronen Vorgang ab.
+Die **CancelAsyncOperation-Methode** bricht einen asynchronen Vorgang ab.
 
 ## <a name="syntax"></a>Syntax
 
@@ -43,16 +43,16 @@ HRESULT CancelAsyncOperation(
 
 <dl> <dt>
 
-*punkcancelationcookie* \[ in\]
+*kateCancelationCookie* \[ In\]
 </dt> <dd>
 
-Zeiger auf das Abbruch Cookie, das den asynchronen Vorgang identifiziert, der abgebrochen werden soll. Dieses Cookie wird von der-Methode bereitgestellt, mit der der Vorgang gestartet wird.
+Zeiger auf das Abbruchcookie, das den asynchronen Vorgang identifiziert, der abgebrochen werden soll. Dieses Cookie wird von der Methode bereitgestellt, die zum Starten des Vorgangs verwendet wird.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Die-Methode gibt ein **HRESULT** zurück. Mögliches Werte (aber nicht die Einzigen) sind die in der folgenden Tabelle.
+Die Methode gibt ein **HRESULT** zurück. Mögliches Werte (aber nicht die Einzigen) sind die in der folgenden Tabelle.
 
 
 
@@ -74,16 +74,16 @@ Keine.
 
 | Anforderung | Wert |
 |--------------------|-----------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>Wmdrmsdk. h</dt> </dl>   |
-| Bibliothek<br/> | <dl> <dt>Wmdrmsdk. lib</dt> </dl> |
+| Header<br/>  | <dl> <dt>Wmdrmsdk.h</dt> </dl>   |
+| Bibliothek<br/> | <dl> <dt>Wmdrmsdk.lib</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Iwmdrmeventgenerator-Schnittstelle**](iwmdrmeventgenerator.md)
+[**IWMDRMEventGenerator-Schnittstelle**](iwmdrmeventgenerator.md)
 </dt> </dl>
 
  

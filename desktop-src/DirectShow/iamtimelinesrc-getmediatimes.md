@@ -1,7 +1,7 @@
 ---
-description: Die getmediatimes-Methode ruft die Start-und Endzeit des Mediums ab.
+description: Die GetMediaTimes-Methode ruft die Start- und Beendigungszeiten des Mediums ab.
 ms.assetid: c6a7d992-ceb5-4378-aee2-f2d778b41516
-title: 'Iamtimelinesrc:: getmediatimes-Methode (qedit. h)'
+title: IAMTimelineSrc::GetMediaTimes-Methode (Qedit.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -14,21 +14,21 @@ api_type:
 api_location:
 - strmiids.lib
 - strmiids.dll
-ms.openlocfilehash: fa6e9cbb69da504a929e23722068583489063b9d
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: a2a4b3fc716ba0865a010155e2f1e8a592cab396f5efb0c2d4afa3264da4a337
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106372474"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119756040"
 ---
-# <a name="iamtimelinesrcgetmediatimes-method"></a>Iamtimelinesrc:: getmediatimes-Methode
+# <a name="iamtimelinesrcgetmediatimes-method"></a>IAMTimelineSrc::GetMediaTimes-Methode
 
 > [!Note]  
-> \[Veraltet. Diese API kann aus zukünftigen Versionen von Windows entfernt werden.\]
+> \[Veraltet. Diese API kann aus zukünftigen Releases von Windows entfernt werden.\]
 
  
 
-Die `GetMediaTimes` -Methode ruft die Start-und Endzeit des Mediums ab.
+Die `GetMediaTimes` -Methode ruft die Start- und Beendigungszeiten des Mediums ab.
 
 ## <a name="syntax"></a>Syntax
 
@@ -46,35 +46,35 @@ HRESULT GetMediaTimes(
 
 <dl> <dt>
 
-*PStart* 
+*pStart* 
 </dt> <dd>
 
-Empfängt die Start Zeit der Medien in 100-Nanosecond-Einheiten.
+Empfängt die Startzeit des Mediums in Einheiten von 100 Nanosekunden.
 
 </dd> <dt>
 
-*pstopps* 
+*Pstop* 
 </dt> <dd>
 
-Empfängt die Endzeit des Mediums in 100-Nanosecond-Einheiten.
+Empfängt die Medienstoppzeit in Einheiten von 100 Nanosekunden.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Wenn diese Methode erfolgreich ausgeführt wird, gibt Sie **S \_ OK** zurück. Andernfalls wird ein **HRESULT** -Fehlercode zurückgegeben.
+Wenn diese Methode erfolgreich ist, wird **S \_ OK** zurückgegeben. Andernfalls wird ein **HRESULT-Fehlercode** zurückgegeben.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Die Medien Zeiten sind relativ zur ursprünglichen Mediendatei. Weitere Informationen finden Sie unter [Zeit in DirectShow-Bearbeitungs Diensten](time-in-directshow-editing-services.md).
+Die Medienzeiten sind relativ zur ursprünglichen Mediendatei. Weitere Informationen finden Sie unter [Time in DirectShow Editing Services](time-in-directshow-editing-services.md).
 
 > [!Note]  
-> Die Header Datei "qedit. h" ist nicht mit Direct3D-Headern nach Version 7 kompatibel.
+> Die Headerdatei Qedit.h ist nicht mit Direct3D-Headern kompatibel, die höher als Version 7 sind.
 
  
 
 > [!Note]  
-> Zum Abrufen von "qedit. h" Laden Sie das [Microsoft Windows SDK Update für Windows Vista und .NET Framework 3,0](https://msdn.microsoft.com/windowsvista/bb980924.aspx)herunter. "Qedit. h" ist im Microsoft Windows SDK für Windows 7 und .NET Framework 3,5 Service Pack 1 nicht verfügbar.
+> Laden Sie zum Abrufen von Qedit.h das [Microsoft Windows SDK-Update für Windows Vista und .NET Framework 3.0](https://msdn.microsoft.com/windowsvista/bb980924.aspx)herunter. Qedit.h ist im Microsoft Windows SDK für Windows 7 und .NET Framework 3.5 Service Pack 1 nicht verfügbar.
 
  
 
@@ -84,19 +84,19 @@ Die Medien Zeiten sind relativ zur ursprünglichen Mediendatei. Weitere Informat
 
 | Anforderung | Wert |
 |--------------------|-----------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>"Qedit. h"</dt> </dl>      |
-| Bibliothek<br/> | <dl> <dt>"" "" ". Lib"</dt> </dl> |
+| Header<br/>  | <dl> <dt>Qedit.h</dt> </dl>      |
+| Bibliothek<br/> | <dl> <dt>Strmiids.lib</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Iamtimelinesrc-Schnittstelle**](iamtimelinesrc.md)
+[**IAMTimelineSrc-Schnittstelle**](iamtimelinesrc.md)
 </dt> <dt>
 
-[Fehler-und Erfolgs Codes](error-and-success-codes.md)
+[Fehler- und Erfolgscodes](error-and-success-codes.md)
 </dt> </dl>
 
  

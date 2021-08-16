@@ -1,5 +1,5 @@
 ---
-description: Dieses Dokument enthält eine Liste der von Windows WIC (Imaging Component) definierten Fehlercodes.
+description: Dieses Dokument enthält eine Liste der Windows Imaging Component (WIC) definierten Fehlercodes.
 ms.assetid: 1ded909c-311b-49e3-ba23-b22cd7a77bc6
 title: Codec-Fehlercodes
 ms.topic: article
@@ -13,7 +13,7 @@ ms.locfileid: "118207259"
 ---
 # <a name="codec-error-codes"></a>Codec-Fehlercodes
 
-Dieses Dokument enthält eine Liste der von Windows WIC (Imaging Component) definierten Fehlercodes.
+Dieses Dokument enthält eine Liste der Windows Imaging Component (WIC) definierten Fehlercodes.
 
 -   [WIC-Fehler nach Code](#wic-errors-by-code)
 -   [WIC-Fehler nach Wert](#wic-errors-by-value)
@@ -24,7 +24,7 @@ Die folgende Tabelle enthält eine Liste der Fehlercodes, die von den WICAPIs in
 
 | Fehlercode                                      | Fehlerwert                      |
 |-------------------------------------------------|----------------------------------|
-| WINCODEC \_ ERR \_ ABORTED                          | 0x80004004 (E \_ ABORT)            |
+| WINCODEC \_ ERR \_ ABGEBROCHEN                          | 0x80004004 (E \_ ABORT)            |
 | WINCODEC \_ ERR \_ ACCESSDENIED                     | 0x80070005 (E \_ ACCESSDENIED)     |
 | WINCODEC \_ ERR \_ ALREADYLOCKED                    | 0x88982f0D                       |
 | WINCODEC \_ ERR \_ BADHEADER                        | 0x88982f61                       |
@@ -50,8 +50,8 @@ Die folgende Tabelle enthält eine Liste der Fehlercodes, die von den WICAPIs in
 | WINCODEC \_ ERR \_ NOTINITIALIZED                   | 0x88982f0C                       |
 | WINCODEC \_ ERR \_ OUTOFMEMORY                      | 0x8007000E (E \_ OUTOFMEMORY)      |
 | WINCODEC \_ ERR \_ PALETTEUNAVAILABLE               | 0x88982f45                       |
-| WINCODEC \_ \_ ERR-EIGENSCHAFTNOTFOUND                 | 0x88982f40                       |
-| WINCODEC \_ \_ ERR-EIGENSCHAFTNOTSUPPORTED             | 0x88982f41                       |
+| WINCODEC \_ ERR \_ PROPERTYNOTFOUND                 | 0x88982f40                       |
+| WINCODEC \_ ERR \_ PROPERTYNOTSUPPORTED             | 0x88982f41                       |
 | WINCODEC \_ ERR \_ PROPERTYSIZE                     | 0x88982f42                       |
 | WINCODEC \_ ERR \_ PROPERTYUNEXPECTEDTYPE           | 0x88982f8E                       |
 | WINCODEC \_ ERR \_ REQUESTONLYVALIDATMETADATAROOT   | 0x88982f92                       |
@@ -67,7 +67,7 @@ Die folgende Tabelle enthält eine Liste der Fehlercodes, die von den WICAPIs in
 | WINCODEC \_ ERR \_ UNSUPPORTEDPIXELFORMAT           | 0x88982f80                       |
 | WINCODEC \_ ERR \_ UNSUPPORTEDVERSION               | 0x88982f0B                       |
 | WINCODEC \_ ERR \_ VALUEOUTOFRANGE                  | 0x88982f05                       |
-| WINCODEC \_ ERR \_ VALUEOVERFLOW                    | INTSAFE \_ E \_ ARITHMETISCHER \_ ÜBERLAUF |
+| WINCODEC \_ ERR \_ VALUEOVERFLOW                    | \_ \_ ARITHMETISCHER \_ ÜBERLAUF INTSAFE E |
 | WINCODEC \_ ERR \_ WRONGSTATE                       | 0x88982f04                       |
 
 
@@ -84,7 +84,7 @@ Die folgende Tabelle enthält eine Liste der Fehlercodes, die von den WICAPIs in
 | 0x80070057 (E \_ INVALIDARG)       | WINCODEC \_ ERR \_ INVALIDPARAMETER                 |
 | 0x8007000E (E \_ OUTOFMEMORY)      | WINCODEC \_ ERR \_ OUTOFMEMORY                      |
 | 0x80004001 (E \_ NOTIMPL)          | WINCODEC \_ ERR \_ NOTIMPLEMENTED                   |
-| 0x80004004 (E \_ ABORT)            | WINCODEC \_ ERR \_ ABGEBROCHEN                          |
+| 0x80004004 (E \_ ABORT)            | WINCODEC \_ ERR \_ ABORTED                          |
 | 0x80070005 (E \_ ACCESSDENIED)     | WINCODEC \_ ERR \_ ACCESSDENIED                     |
 | INTSAFE \_ E \_ ARITHMETISCHER \_ ÜBERLAUF | WINCODEC \_ ERR \_ VALUEOVERFLOW                    |
 | 0x88982f04                       | WINCODEC \_ ERR \_ WRONGSTATE                       |

@@ -1,5 +1,5 @@
 ---
-description: Stellt die Objekte in einer Sicht dar und stellt Eigenschaften und Methoden zum Abrufen von Informationen über den Inhalt der Sicht zur Verfügung.
+description: Stellt die -Objekte in einer Sicht dar und stellt Eigenschaften und Methoden bereit, die zum Abrufen von Informationen über den Inhalt der Sicht verwendet werden.
 ms.assetid: 3b866266-fee0-42f7-a1e0-9adb6cc2e23f
 title: ShellFolderView-Objekt (Shldisp.h)
 ms.topic: reference
@@ -22,11 +22,11 @@ ms.locfileid: "118452127"
 ---
 # <a name="shellfolderview-object"></a>ShellFolderView-Objekt
 
-Stellt die Objekte in einer Sicht dar und stellt Eigenschaften und Methoden zum Abrufen von Informationen über den Inhalt der Sicht zur Verfügung.
+Stellt die -Objekte in einer Sicht dar und stellt Eigenschaften und Methoden bereit, die zum Abrufen von Informationen über den Inhalt der Sicht verwendet werden.
 
 ## <a name="members"></a>Member
 
-Das **ShellFolderView-Objekt** verfügt über die folgenden Membertypen:
+Das **ShellFolderView-Objekt** verfügt über diese Typen von Membern:
 
 -   [Ereignisse](#events)
 -   [Methoden](#methods)
@@ -38,9 +38,9 @@ Das **ShellFolderView-Objekt** verfügt über diese Ereignisse.
 
 
 
-| Ereignis                                                        | Beschreibung                                                                              |
+| Ereignis                                                        | BESCHREIBUNG                                                                              |
 |:-------------------------------------------------------------|:-----------------------------------------------------------------------------------------|
-| [**SelectionChanged**](shellfolderview-selectionchanged.md) | Tritt ein, wenn sich der Auswahlzustand eines Elements oder elements in der Ansicht geändert hat.<br/> |
+| [**SelectionChanged**](shellfolderview-selectionchanged.md) | Tritt ein, wenn sich der Auswahlzustand eines Elements oder eines Elements in der Ansicht geändert hat.<br/> |
 
 
 
@@ -52,7 +52,7 @@ Das **ShellFolderView-Objekt** verfügt über diese Methoden.
 
 
 
-| Methode                                                 | Beschreibung                                                                                                        |
+| Methode                                                 | BESCHREIBUNG                                                                                                        |
 |:-------------------------------------------------------|:-------------------------------------------------------------------------------------------------------------------|
 | [**PopupItemMenu**](shellfolderview-popupitemmenu.md) | Erstellt ein Kontextmenü für das angegebene Element und gibt die ausgewählte Befehlszeichenfolge zurück.<br/>                 |
 | [**SelectedItems**](shellfolderview-selecteditems.md) | Ruft ein [**FolderItems-Objekt**](folderitems.md) ab, das alle ausgewählten Elemente in der Ansicht darstellt.<br/> |
@@ -68,9 +68,9 @@ Das **ShellFolderView-Objekt** verfügt über diese Eigenschaften.
 
 
 
-| Eigenschaft                                                      | Zugriffstyp          | Beschreibung                                                                                                  |
+| Eigenschaft                                                      | Zugriffstyp          | BESCHREIBUNG                                                                                                  |
 |:--------------------------------------------------------------|:---------------------|:-------------------------------------------------------------------------------------------------------------|
-| [**Application**](shellfolderview-application.md)<br/> | Schreibgeschützt<br/> | Enthält das Application-Objekt des -Objekts.<br/>                                                         |
+| [**Application**](shellfolderview-application.md)<br/> | Schreibgeschützt<br/> | Enthält das Application-Objekt des Objekts.<br/>                                                         |
 | [**FocusedItem**](shellfolderview-focuseditem.md)<br/> | Schreibgeschützt<br/> | Ruft ein [**FolderItem-Objekt**](folderitem.md) ab, das das Element mit dem Eingabefokus darstellt.<br/> |
 | [**Ordner**](shellfolderview-folder.md)<br/>           | Schreibgeschützt<br/> | Ruft ein [**Folder-Objekt**](folder.md) ab, das die Sicht darstellt.<br/>                                  |
 | [**Parent**](shellfolderview-parent.md)<br/>           | Schreibgeschützt<br/> | Nicht implementiert.<br/>                                                                                  |

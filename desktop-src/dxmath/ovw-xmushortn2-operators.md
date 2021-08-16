@@ -26,7 +26,7 @@ Die [**XMUSHORTN2-Struktur**](/windows/desktop/api/DirectXPackedVector/ns-direct
 
 | Methoden                                                 | BESCHREIBUNG                                                                                                             |
 |---------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------|
-| [**operator =**](/windows/win32/api/directxpackedvector/nf-directxpackedvector-xmushortn2-operator-assign)<br/> | Weist die Vektorkomponentendaten aus einer Instanz von `XMUSHORTN2` der aktuellen Instanz von `XMUSHORTN2` zu.<br/> |
+| [**operator =**](/windows/win32/api/directxpackedvector/nf-directxpackedvector-xmushortn2-operator-assign)<br/> | Weist der aktuellen Instanz von die Vektorkomponentendaten von `XMUSHORTN2` einer Instanz von `XMUSHORTN2` zu.<br/> |
 
 
 

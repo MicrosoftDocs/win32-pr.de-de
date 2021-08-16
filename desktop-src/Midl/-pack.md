@@ -1,9 +1,9 @@
 ---
-title: /Pack-Schalter
-description: Der/Pack-Schalter ist mit der Option/ZP identisch.
+title: /pack-Schalter
+description: Der Schalter /pack entspricht der Option /Zp.
 ms.assetid: 381e3099-adb4-4219-bbb4-89c9e1dd3928
 keywords:
-- /Pack-Schalter-Mittel l
+- /pack switch MIDL
 topic_type:
 - apiref
 api_name:
@@ -12,16 +12,16 @@ api_type:
 - NA
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: c807846148d81e0e59620046d9f24380fe647c11
-ms.sourcegitcommit: 57758ecb246c84d65e6e0e4bd5570d9176fa39cd
+ms.openlocfilehash: ad9282cd5ab56d2e037ba585676a83c5cd558ecb26354ab191899ad341506f5d
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "104038108"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117991942"
 ---
-# <a name="pack-switch"></a>/Pack-Schalter
+# <a name="pack-switch"></a>/pack-Schalter
 
-Der **/Pack** -Schalter ist mit der Option [**/ZP**](-zp.md) identisch.
+Der Schalter **/pack** entspricht der Option [**/Zp.**](-zp.md)
 
 ``` syntax
 midl /pack packing_level
@@ -31,43 +31,43 @@ midl /pack packing_level
 
 <dl> <dt>
 
-*Packungs \_ Stufe* 
+*\_Komprimierungsebene* 
 </dt> <dd>
 
-Gibt die Verpackungs Ebene von Strukturen im Zielsystem an. Der Wert auf der Verpackungs Ebene kann auf 1, 2, 4 oder 8 festgelegt werden.
+Gibt die Komprimierungsebene von Strukturen im Zielsystem an. Der Komprimierungsebenenwert kann auf 1, 2, 4 oder 8 festgelegt werden.
 
 </dd> </dl>
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Der **/Pack** -Schalter legt die Verpackungs Ebene von Strukturen im Zielsystem fest. Der Wert auf der Packungs Ebene entspricht dem Wert der [**/ZP**](-zp.md) -Option, der vom Microsoft C/C++-Compiler, Version 7,0, verwendet wird. Weitere Informationen finden Sie in der Microsoft C/C++-Programmier Dokumentation.
+Der Schalter **/pack** bestimmt die Komprimierungsebene von Strukturen im Zielsystem. Der Wert auf Komprimierungsebene entspricht dem [**/Zp-Optionswert,**](-zp.md) der vom Microsoft C/C++-Compiler der Version 7.0 verwendet wird. Weitere Informationen finden Sie in der C/C++-Programmierdokumentation von Microsoft.
 
-Geben Sie die gleiche Packungs Ebene an, wenn Sie den Mittelwert Compiler und den C-Compiler aufrufen. Der standardmäßige Verpackungs Grad, der verwendet wird, wenn weder der [**/ZP**](-zp.md) -noch der **/Pack** -Schalter angegeben ist, in beiden Buildumgebungen 8.
+Geben Sie die gleiche Komprimierungsebene an, wenn Sie den MIDL-Compiler und den C-Compiler aufrufen. Die Standard-Komprimierungsstufe, die verwendet wird, wenn weder der Schalter [**"/Zp"**](-zp.md) noch **"/pack"** angegeben ist, ist in beiden Buildumgebungen 8.
 
-Eine Erläuterung der möglichen Gefahren bei der Verwendung nicht standardmäßiger Verpackungs Stufen finden Sie im [**/ZP**](-zp.md) -Hilfethema.
+Eine Erläuterung der potenziellen Gefährdungen bei der Verwendung von nicht standardmäßigen Komprimierungsstufen finden Sie im [**Hilfethema /Zp.**](-zp.md)
 
 ## <a name="examples"></a>Beispiele
 
-**Mittel l/Pack 2 Dateiname. idl**
+**midl /pack 2 filename.idl**
 
-**Mittel l/Pack 8. idl**
+**midl /pack 8 bar.idl**
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[Allgemeine Syntax der Mittell-Befehlszeile](general-midl-command-line-syntax.md)
+[Allgemeine MIDL-Befehlszeilensyntax](general-midl-command-line-syntax.md)
 </dt> <dt>
 
-[**/ENV**](-env.md)
+[**/env**](-env.md)
 </dt> <dt>
 
-[**/ZP**](-zp.md)
+[**/Zp**](-zp.md)
 </dt> </dl>
 
- 
+ 
 
- 
+ 
 
 
 

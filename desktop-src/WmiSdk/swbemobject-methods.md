@@ -1,42 +1,42 @@
 ---
-description: Das Objekt "errbemubject" stellt die folgenden Methoden zur Verfügung.
+description: Das SWbemObject-Objekt macht die folgenden Methoden verfügbar.
 ms.assetid: F1534655-488C-4C78-BFE3-B7477149458B
 ms.tgt_platform: multiple
-title: Errbemubject-Methoden
+title: SWbemObject-Methoden
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: e4061782aa586bb3d628a7dd3b81254288da03d7
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 691356d5112a0634c97813ef305408ea36dd286428eb148465d0002e38c91805
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "103863779"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118313855"
 ---
-# <a name="swbemobject-methods"></a>Errbemubject-Methoden
+# <a name="swbemobject-methods"></a>SWbemObject-Methoden
 
-Das Objekt " [**errbemubject**](swbemobject.md) " stellt die folgenden Methoden zur Verfügung.
+Das [**SWbemObject-Objekt**](swbemobject.md) macht die folgenden Methoden verfügbar.
 
 ## <a name="in-this-section"></a>In diesem Abschnitt
 
--   [**ASSOCIATORS- \_ Methode**](swbemobject-associators-.md)
--   [**Associatorsasync- \_ Methode**](swbemobject-associatorsasync-.md)
--   [**Clone- \_ Methode**](swbemobject-clone-.md)
--   [**CompareTo- \_ Methode**](swbemobject-compareto-.md)
--   [**DELETE- \_ Methode**](swbemobject-delete-.md)
--   [**Deleteasync- \_ Methode**](swbemobject-deleteasync-.md)
--   [**ExecMethod- \_ Methode**](swbemobject-execmethod-.md)
--   [**ExecMethodAsync- \_ Methode**](swbemobject-execmethodasync-.md)
--   [**Getobjecttext- \_ Methode**](swbemobject-getobjecttext-.md)
--   [**Instance- \_ Methode**](swbemobject-instances-.md)
--   [**Instancesasync- \_ Methode**](swbemobject-instancesasync-.md)
--   [**Put- \_ Methode**](swbemobject-put-.md)
--   [**Putasync- \_ Methode**](swbemobject-putasync-.md)
--   [**References- \_ Methode**](swbemobject-references-.md)
--   [**Referencesasync- \_ Methode**](swbemobject-referencesasync-.md)
--   [**Spawnderivedclass- \_ Methode**](swbemobject-spawnderivedclass-.md)
--   [**SpawnInstance- \_ Methode**](swbemobject-spawninstance-.md)
--   [**Subclasses- \_ Methode**](swbemobject-subclasses-.md)
--   [**Subclassesasync- \_ Methode**](swbemobject-subclassesasync-.md)
+-   [**Assoziatorenmethode \_**](swbemobject-associators-.md)
+-   [**\_AssociatorsAsync-Methode**](swbemobject-associatorsasync-.md)
+-   [**\_Klonmethode**](swbemobject-clone-.md)
+-   [**\_CompareTo-Methode**](swbemobject-compareto-.md)
+-   [**\_Delete-Methode**](swbemobject-delete-.md)
+-   [**\_DeleteAsync-Methode**](swbemobject-deleteasync-.md)
+-   [**\_ExecMethod-Methode**](swbemobject-execmethod-.md)
+-   [**\_ExecMethodAsync-Methode**](swbemobject-execmethodasync-.md)
+-   [**\_GetObjectText-Methode**](swbemobject-getobjecttext-.md)
+-   [**\_Instances-Methode**](swbemobject-instances-.md)
+-   [**\_InstancesAsync-Methode**](swbemobject-instancesasync-.md)
+-   [**\_Put-Methode**](swbemobject-put-.md)
+-   [**\_PutAsync-Methode**](swbemobject-putasync-.md)
+-   [**\_References-Methode**](swbemobject-references-.md)
+-   [**\_ReferencesAsync-Methode**](swbemobject-referencesasync-.md)
+-   [**SpawnDerivedClass-Methode \_**](swbemobject-spawnderivedclass-.md)
+-   [**SpawnInstance-Methode \_**](swbemobject-spawninstance-.md)
+-   [**\_Unterklassenmethode**](swbemobject-subclasses-.md)
+-   [**\_SubclassesAsync-Methode**](swbemobject-subclassesasync-.md)
 
  
 

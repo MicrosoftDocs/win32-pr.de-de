@@ -12,12 +12,12 @@ api_name:
 api_type:
 - NA
 api_location: ''
-ms.openlocfilehash: 88c205dbd5ce071a809cf87f4f97bb6d42120dcb
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 5db6107c061c845113e91590dab405bdd84cb4741f766abfeef6a1344652f115
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106353571"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117744162"
 ---
 # <a name="myipaddressex-function"></a>myIPAddressEx-Funktion
 
@@ -29,11 +29,11 @@ Diese Funktion besitzt keine Parameter.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Eine durch Semikolons getrennte Zeichenfolge, die alle IP-Adressen für localhost (IPv6 und/oder IPv4) enthält, oder eine leere Zeichenfolge, wenn "localhost" nicht in eine IP-Adresse aufgelöst werden kann.
+Eine durch Semikolons getrennte Zeichenfolge, die alle IP-Adressen für localhost (IPv6 und/oder IPv4) enthält, oder eine leere Zeichenfolge, wenn localhost nicht in eine IP-Adresse aufgelöst werden kann.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Findproxyforurlex-Implementierer sollten Code hinzufügen, der die Zeichenfolge von durch Semikola getrennten IP-Adressen in separate Adressen unterbricht.
+FindProxyforURLEx-Implementierer sollten Code hinzufügen, der die Zeichenfolge von durch Semikolons getrennten IP-Adressen in separate Adressen unterbricht.
 
 ## <a name="examples"></a>Beispiele
 
@@ -47,10 +47,10 @@ myIpAddressEx();
 
 <dl> <dt>
 
-[IPv6-abhängige proxyhilfsobjekts-Definitionen](ipv6-aware-proxy-helper-api-definitions.md)
+[IPv6-fähige Proxyhilfs-API-Definitionen](ipv6-aware-proxy-helper-api-definitions.md)
 </dt> <dt>
 
-[IPv6-Erweiterungen für das Auto-config-Datei Format des Navigators](ipv6-extensions-to-navigator-auto-config-file-format.md)
+[IPv6-Erweiterungen für das Navigator-Dateiformat für die automatische Konfiguration](ipv6-extensions-to-navigator-auto-config-file-format.md)
 </dt> </dl>
 
  

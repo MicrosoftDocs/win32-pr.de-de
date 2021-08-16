@@ -1,8 +1,8 @@
 ---
-description: Geplante WMI-Tasks erstellen und erhalten Informationen zu geplanten Tasks. Weitere Beispiele finden Sie im technet scriptcenter unter https://www.microsoft.com/technet .
+description: Geplante WMI-Aufgaben erstellen und erhalten Informationen zu geplanten Aufgaben. Weitere Beispiele finden Sie im TechNet ScriptCenter unter https://www.microsoft.com/technet .
 ms.assetid: 62151fe8-8880-43f2-b456-628bd9c7cc1c
 ms.tgt_platform: multiple
-title: 'WMI-Tasks: geplante Aufgaben'
+title: 'WMI-Tasks: Geplante Aufgaben'
 ms.topic: article
 ms.date: 05/31/2018
 topic_type:
@@ -10,35 +10,35 @@ topic_type:
 api_name: ''
 api_type: ''
 api_location: ''
-ms.openlocfilehash: 4051df4348ee47710b5d2d1f5dcc3f59f607d997
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: ee4fcf193296d5c474987a3a99877b3bfb43868f79527200893303df351920cb
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106360188"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117738839"
 ---
-# <a name="wmi-tasks-scheduled-tasks"></a>WMI-Tasks: geplante Aufgaben
+# <a name="wmi-tasks-scheduled-tasks"></a>WMI-Tasks: Geplante Aufgaben
 
-Geplante WMI-Tasks erstellen und erhalten Informationen zu geplanten Tasks. Weitere Beispiele finden Sie im technet scriptcenter unter [https://www.microsoft.com/technet](https://technet.microsoft.com/default.aspx) .
+Geplante WMI-Aufgaben erstellen und erhalten Informationen zu geplanten Aufgaben. Weitere Beispiele finden Sie im TechNet ScriptCenter unter [https://www.microsoft.com/technet](https://technet.microsoft.com/default.aspx) .
 
-In den in diesem Thema gezeigten Skript Beispielen werden nur Daten vom lokalen Computer abgerufen. Weitere Informationen zur Verwendung des Skripts zum Abrufen von Daten von Remote Computern finden Sie unter [Herstellen einer Verbindung mit WMI auf einem Remote Computer](connecting-to-wmi-on-a-remote-computer.md).
+Die in diesem Thema gezeigten Skriptbeispiele beziehen nur Daten vom lokalen Computer. Weitere Informationen zur Verwendung des Skripts zum Abrufen von Daten von Remotecomputern finden Sie unter Herstellen einer Verbindung [mit WMI auf einem Remotecomputer.](connecting-to-wmi-on-a-remote-computer.md)
 
 
-Im folgenden Verfahren wird die Vorgehensweise zum Ausführen eines Skripts beschrieben.
+Im folgenden Verfahren wird das Ausführen eines Skripts beschrieben.
 
 **So führen Sie ein Skript aus**
 
-1.  Kopieren Sie den Code, und speichern Sie ihn in einer Datei mit der Erweiterung. vb, z. b. *filename.vbs*. Stellen Sie sicher, dass der Text-Editor der Datei keine Erweiterung ". txt" hinzufügt.
-2.  Öffnen Sie ein Eingabe Aufforderungs Fenster, und navigieren Sie zu dem Verzeichnis, in dem Sie die Datei gespeichert haben.
-3.  Geben Sie **cscript-filename.vbs** an der Eingabeaufforderung ein.
-4.  Wenn Sie nicht auf ein Ereignisprotokoll zugreifen können, überprüfen Sie, ob Sie von einer Eingabeaufforderung mit erhöhten Rechten ausführen. Einige Ereignisprotokolle, z. b. das Sicherheits Ereignisprotokoll, werden möglicherweise durch die Benutzer Zugriffs Steuerung (User Access Control, UAC) geschützt.
+1.  Kopieren Sie den Code, und speichern Sie ihn in einer Datei mit der Erweiterung .vbs, z. *B.filename.vbs*. Stellen Sie sicher, dass Ihr Text-Editor der .txt keine Erweiterung hinzufüge.
+2.  Öffnen Sie ein Eingabeaufforderungsfenster, und navigieren Sie zu dem Verzeichnis, in dem Sie die Datei gespeichert haben.
+3.  Geben **Sie cscript filename.vbs** eingabeaufforderung ein.
+4.  Wenn Sie nicht auf ein Ereignisprotokoll zugreifen können, überprüfen Sie, ob Sie über eine Eingabeaufforderung mit erhöhten Rechten ausführen. Einige Ereignisprotokollen, z. B. das Sicherheitsereignisprotokoll, können durch Benutzerzugriffssteuerungen (User Access Controls, UAC) geschützt werden.
 
 > [!Note]  
-> Cscript zeigt standardmäßig die Ausgabe eines Skripts im Eingabe Aufforderungs Fenster an. Da WMI-Skripts große Mengen an Ausgaben verursachen können, empfiehlt es sich, die Ausgabe in eine Datei umzuleiten. Geben Sie an der Eingabeaufforderung **cscript filename.vbs > outfile.txt** ein, um die Ausgabe des *filename.vbs* Skripts in *outfile.txt* umzuleiten.
+> Standardmäßig zeigt cscript die Ausgabe eines Skripts im Eingabeaufforderungsfenster an. Da WMI-Skripts große Mengen an Ausgabe erzeugen können, sollten Sie die Ausgabe an eine Datei umleiten. Geben **Sie cscript filename.vbs > outfile.txt** eingabeaufforderung ein, um  die Ausgabe des skriptsfilename.vbsan *outfile.txt.*
 
  
 
-In der folgenden Tabelle sind Skript Beispiele aufgelistet, die zum Abrufen verschiedener Datentypen auf dem lokalen Computer verwendet werden können.
+In der folgenden Tabelle sind Skriptbeispiele aufgeführt, die zum Abrufen verschiedener Datentypen vom lokalen Computer verwendet werden können.
 
 
 
@@ -50,13 +50,13 @@ In der folgenden Tabelle sind Skript Beispiele aufgelistet, die zum Abrufen vers
 <thead>
 <tr class="header">
 <th>Vorgehensweisen</th>
-<th>WMI-Klassen oder-Methoden</th>
+<th>WMI-Klassen oder -Methoden</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<td>... Erstellen Sie geplante Tasks mithilfe von Skripts?</td>
-<td>Verwenden Sie die <a href="/windows/desktop/CIMWin32Prov/win32-scheduledjob"><strong>Win32_ScheduledJob</strong></a> -Klasse und die <a href="/windows/desktop/CIMWin32Prov/create-method-in-class-win32-scheduledjob"><strong>Create</strong></a> -Methode. Wenn Sie Schwierigkeiten haben, diese Aufgabe unter Windows 7 oder höher zu funktionieren, finden Sie weitere Informationen im Abschnitt <strong>Win32_ScheduledJob</strong> Hinweise. wahrscheinlich verhindern Ihre Einstellungen, dass Sie die-Klasse verwenden.<br/> <span data-codelanguage="VisualBasic"></span>
+<td>... Geplante Aufgaben mithilfe von Skripts erstellen?</td>
+<td>Verwenden Sie <a href="/windows/desktop/CIMWin32Prov/win32-scheduledjob"><strong>Win32_ScheduledJob</strong></a> -Klasse und die <a href="/windows/desktop/CIMWin32Prov/create-method-in-class-win32-scheduledjob"><strong>Create-Methode.</strong></a> Wenn Sie Schwierigkeiten haben, diese Aufgabe auf Windows 7 oder höher auszuführen, lesen Sie den Abschnitt <strong>Win32_ScheduledJob</strong> Hinweise. Wahrscheinlich verhindern Ihre Einstellungen die Verwendung der -Klasse.<br/> <span data-codelanguage="VisualBasic"></span>
 <table>
 <colgroup>
 <col style="width: 100%" />
@@ -85,11 +85,11 @@ End If</code></pre></td>
 </tbody>
 </table>
 
-<p>In der Zeichenfolge * * * * * * * &quot; * 143000.000000-420 &quot; (wird im <em>StartTime</em> -Parameterwert der <a href="/windows/desktop/CIMWin32Prov/create-method-in-class-win32-scheduledjob"><strong>Create</strong></a> -Methode verwendet), &quot; gibt * * * * * * * * * 143000,000000 &quot; an, dass der Task um 14,30 (2:30 Uhr) beginnt und &quot; -420 &quot; die Zeitzone angibt. Die Zeit Zonennummer ist die aktuelle Abweichung der lokalen Zeit Übersetzung. Die Verschiebung ist der Unterschied zwischen der UTC-Zeit und der Ortszeit. Multiplizieren Sie die Anzahl der Stunden, die Ihre Zeitzone vor oder hinter der Ortszeit (GMT) um 60 liegen soll, um die Verschiebung für Ihre Zeitzone zu berechnen (verwenden Sie eine positive Zahl für die Anzahl von Stunden, wenn Ihre Zeitzone vor GMT liegt, und eine negative Zahl, wenn sich Ihre Zeitzone hinter GMT befindet). Fügen Sie der Berechnung eine zusätzliche 60 hinzu, wenn die Zeitzone die Sommerzeit verwendet. Die Pacific Standard Time-Zone beträgt z. b. acht Stunden hinter GMT. Daher entspricht der Bias dem Wert-420 (-8 * 60 + 60), wenn die Sommerzeit verwendet wird, und-480 (-8 * 60), wenn die Sommerzeit nicht verwendet wird. Sie können auch den Wert der Bias ermitteln, indem Sie die Eigenschaft "Bias" der <a href="/windows/desktop/CIMWin32Prov/win32-timezone"><strong>Win32_TimeZone</strong></a> Klasse Abfragen.</p></td>
+<p>In der Zeichenfolge &quot; "*143000.000000-420" (verwendet im StartTime-Parameterwert der &quot; <a href="/windows/desktop/CIMWin32Prov/create-method-in-class-win32-scheduledjob"><strong>Create-Methode)</strong></a> gibt <em></em> &quot; "**143000.000000" an, dass die Aufgabe bei &quot; 14,30 (14:30 Uhr) beginnt und &quot; -420 die &quot; Zeitzone angibt. Die Zeitzonennummer ist die aktuelle Abweichung der lokalen Zeitübersetzung. Die Abweichung ist der Unterschied zwischen der UTC-Zeit und der Ortszeit. Multiplizieren Sie zum Berechnen der Abweichung für Ihre Zeitzone die Anzahl der Stunden, die Ihre Zeitzone voraus oder hinter Greenwich Mean Time (GMT) liegt, mit 60 (verwenden Sie eine positive Zahl für die Anzahl der Stunden, wenn Ihre Zeitzone vor GMT liegt, und eine negative Zahl, wenn sich Ihre Zeitzone hinter GMT befindet). Fügen Sie ihrer Berechnung weitere 60 hinzu, wenn in Ihrer Zeitzone die Sommerzeit verwendet wird. Die Pacific Standard Time Zone liegt beispielsweise acht Stunden hinter GMT, daher entspricht die Abweichung -420 (-8 * 60 + 60), wenn Sommerzeit verwendet wird, und -480 (-8 * 60), wenn die Sommerzeit nicht verwendet wird. Sie können den Wert der Verzerrung auch ermitteln, indem Sie die Bias-Eigenschaft der <a href="/windows/desktop/CIMWin32Prov/win32-timezone"><strong>Win32_TimeZone</strong></a> abfragen.</p></td>
 </tr>
 <tr class="even">
 <td>... gibt eine Liste aller geplanten Aufgaben auf einem Computer zurück?</td>
-<td><p>Verwenden Sie die <a href="/windows/desktop/CIMWin32Prov/win32-scheduledjob"><strong>Win32_ScheduledJob</strong></a> -Klasse. Beachten Sie, dass diese Klasse nur Aufträge zurückgeben kann, die entweder mit einem Skript oder mit AT.exe erstellt werden. Informationen zu Aufträgen, die vom Assistenten für geplante Aufgaben erstellt oder geändert werden, können nicht zurückgegeben werden.</p>
+<td><p>Verwenden Sie <a href="/windows/desktop/CIMWin32Prov/win32-scheduledjob"><strong>die Win32_ScheduledJob-Klasse.</strong></a> Beachten Sie, dass diese Klasse nur Aufträge zurückgeben kann, die entweder mithilfe eines Skripts oder eines Skripts AT.exe. Er kann keine Informationen zu Aufträgen zurückgeben, die vom Assistenten für geplante Aufgaben erstellt oder geändert wurden.</p>
 <div class="code">
 <span data-codelanguage="VisualBasic"></span>
 <table>
@@ -144,13 +144,13 @@ Next</code></pre></td>
 
 <dl> <dt>
 
-[WMI-Tasks für Skripts und Anwendungen](wmi-tasks-for-scripts-and-applications.md)
+[WMI-Aufgaben für Skripts und Anwendungen](wmi-tasks-for-scripts-and-applications.md)
 </dt> <dt>
 
-[WMI C++ Anwendungsbeispiele](wmi-c---application-examples.md)
+[Beispiele für WMI-C++-Anwendungen](wmi-c---application-examples.md)
 </dt> <dt>
 
-[Technet scriptcenter](https://www.microsoft.com/technet/scriptcenter)
+[TechNet ScriptCenter](https://www.microsoft.com/technet/scriptcenter)
 </dt> </dl>
 
  

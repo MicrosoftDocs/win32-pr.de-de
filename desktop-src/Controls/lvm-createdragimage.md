@@ -3,7 +3,7 @@ title: LVM_CREATEDRAGIMAGE (Commctrl.h)
 description: Erstellt eine Ziehbildliste für das angegebene Element. Sie können diese Nachricht explizit oder mithilfe des ListView \_ CreateDragImage-Makros senden.
 ms.assetid: face4c8f-01ff-4f5a-a468-e306a50dae35
 keywords:
-- LVM_CREATEDRAGIMAGE von Windows Steuerelementen
+- LVM_CREATEDRAGIMAGE meldungssteuerelemente Windows
 topic_type:
 - apiref
 api_name:
@@ -45,7 +45,7 @@ Ein Zeiger auf eine [**POINT-Struktur,**](/previous-versions//dd162805(v=vs.85))
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt das Handle an die Ziehbildliste zurück, falls erfolgreich, **andernfalls NULL.**
+Gibt das Handle für die Ziehbildliste zurück, falls erfolgreich, **andernfalls NULL.**
 
 ## <a name="remarks"></a>Hinweise
 

@@ -3,7 +3,7 @@ title: Error.errorCount
 description: Die errorCount-Eigenschaft ruft die Anzahl der Fehler in der Fehlerwarteschlange ab.
 ms.assetid: 64d9bb0a-fcc4-401b-a7bd-529e1a517f3b
 keywords:
-- Error.errorCount Windows Media Player
+- Error.errorCount-Windows Media Player
 topic_type:
 - apiref
 api_name:
@@ -36,11 +36,11 @@ Diese Eigenschaft ist eine schreibgeschützte **Zahl** (**long**).
 
 ## <a name="remarks"></a>Hinweise
 
-Sie sollten *Einstellungen* festlegen. **enableErrorDialogs** wird auf FALSE festgelegt, wenn Sie benutzerdefinierte Fehlermeldungen anzeigen möchten.
+Legen Sie *fest Einstellungen.* **enableErrorDialogs wird** auf FALSE festgelegt, wenn Sie benutzerdefinierte Fehlermeldungen anzeigen möchten.
 
 ## <a name="examples"></a>Beispiele
 
-Im folgenden JScript Beispiel wird *Fehler verwendet.* **errorCount** in einem Ereignishandler, um den Benutzer über den letzten Fehler in der Fehlerwarteschlange zu informieren. Das **Player-Objekt** wurde mit der ID = "Player" erstellt.
+Im folgenden beispiel JScript Fehler *verwendet.* **errorCount** in einem Ereignishandler, um den Benutzer über den letzten Fehler in der Fehlerwarteschlange zu warnen. Das **Player-Objekt** wurde mit der ID = "Player" erstellt.
 
 
 ```JScript

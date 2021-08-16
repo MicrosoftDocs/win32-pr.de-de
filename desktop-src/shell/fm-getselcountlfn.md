@@ -13,12 +13,12 @@ api_type:
 api_location:
 - Wfext.h
 ms.assetid: d0815afc-5356-48a7-a90d-5f48dae6bee5
-ms.openlocfilehash: 1ec06c08775836a94b9ada6520ea7c5ea46b62f3
-ms.sourcegitcommit: 3caaa3c92dcb1ef12f84464d14ce6262e65e988e
+ms.openlocfilehash: ff0884e1b80e4a5a7e6c295bd449c8e1f6d069ced6c988f584108318a98c6891
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/12/2021
-ms.locfileid: "109841341"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119094175"
 ---
 # <a name="fm_getselcountlfn-message"></a>FM \_ GETSELCOUNTLFN-Nachricht
 
@@ -54,7 +54,7 @@ Nur Erweiterungen, die lange Dateinamen unterstützen (z. B. netzwerkspezifische
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 

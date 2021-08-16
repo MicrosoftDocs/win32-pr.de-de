@@ -1,7 +1,7 @@
 ---
-description: Die Fotometadatenrichtlinie für die System.Photo.FlashEnreal-Eigenschaft.
+description: Die Richtlinie für Fotometadaten für die System.Photo.FlashStopp-Eigenschaft.
 ms.assetid: d10a4de9-16fe-4920-aa7f-b2f95fb23045
-title: System.Photo.FlashEnmetadatenrichtlinie für Foto
+title: System.Photo.Flash Speicher-Richtlinie für Fotometadaten
 ms.topic: article
 ms.date: 05/31/2018
 ms.openlocfilehash: 1faebdcd32eaae346a44de9d1fa19f6954cb9d74ee9d79a09645216660845d16
@@ -11,13 +11,13 @@ ms.contentlocale: de-DE
 ms.lasthandoff: 08/11/2021
 ms.locfileid: "118204929"
 ---
-# <a name="systemphotoflashenergy-photo-metadata-policy"></a>System.Photo.FlashEnmetadatenrichtlinie für Foto
+# <a name="systemphotoflashenergy-photo-metadata-policy"></a>System.Photo.Flash Speicher-Richtlinie für Fotometadaten
 
-Die Fotometadatenrichtlinie für die [System.Photo.FlashEnreal-Eigenschaft.](../properties/props-system-photo-flashenergy.md)
+Die Richtlinie für Fotometadaten für die [System.Photo.FlashStopp-Eigenschaft.](../properties/props-system-photo-flashenergy.md)
 
 ### <a name="pkey"></a>PKEY
 
-PKEY \_ Photo \_ FlashEnmedia
+PKEY \_ Photo \_ FlashKey
 
 ### <a name="containers"></a>Container
 
@@ -33,7 +33,7 @@ Double
 
 ### <a name="conflict-resolution-policy"></a>Konfliktlösungsrichtlinie
 
-Werte aus unterschiedlichen Schemas werden abgestimmt.
+Werte aus verschiedenen Schemas werden abgestimmt.
 
 ### <a name="jpeg-policy"></a>JPEG-Richtlinie
 
@@ -44,7 +44,7 @@ Werte aus unterschiedlichen Schemas werden abgestimmt.
 | Auftrag | Pfad                          | Datenträgerformat |
 |-------|-------------------------------|-------------|
 | 1     | /app1/ifd/exif/{ushort=41483} |             |
-| 2     | /xmp/exif:FlashEn usb         |             |
+| 2     | /xmp/exif:Flash Led         |             |
 
 
 
@@ -57,7 +57,7 @@ Werte aus unterschiedlichen Schemas werden abgestimmt.
 | Auftrag | Pfad                          | Datenträgerformat |
 |-------|-------------------------------|-------------|
 | 1     | /app1/ifd/exif/{ushort=41483} |             |
-| 2     | /xmp/exif:FlashEn usb         |             |
+| 2     | /xmp/exif:Flash Led         |             |
 
 
 
@@ -70,7 +70,7 @@ Werte aus unterschiedlichen Schemas werden abgestimmt.
 | Auftrag | Pfad                          |
 |-------|-------------------------------|
 | 1     | /app1/ifd/exif/{ushort=41483} |
-| 2     | /xmp/exif:flashenspeichern         |
+| 2     | /xmp/exif:flash blink         |
 
 
 
@@ -85,7 +85,7 @@ Werte aus unterschiedlichen Schemas werden abgestimmt.
 | Auftrag | Pfad                      | Datenträgerformat |
 |-------|---------------------------|-------------|
 | 1     | /ifd/exif/{ushort=41483}  |             |
-| 2     | /ifd/xmp/exif:FlashEn usb |             |
+| 2     | /ifd/xmp/exif:Flash Led |             |
 
 
 
@@ -98,7 +98,7 @@ Werte aus unterschiedlichen Schemas werden abgestimmt.
 | Auftrag | Pfad                      | Datenträgerformat |
 |-------|---------------------------|-------------|
 | 1     | /ifd/exif/{ushort=41483}  |             |
-| 2     | /ifd/xmp/exif:FlashEn usb |             |
+| 2     | /ifd/xmp/exif:Flash Led |             |
 
 
 
@@ -111,7 +111,7 @@ Werte aus unterschiedlichen Schemas werden abgestimmt.
 | Auftrag | Pfad                      |
 |-------|---------------------------|
 | 1     | /ifd/exif/{ushort=41483}  |
-| 2     | /ifd/xmp/exif:flashenkapsel |
+| 2     | /ifd/xmp/exif:flash blink |
 
 
 
@@ -123,7 +123,7 @@ Werte aus unterschiedlichen Schemas werden abgestimmt.
 
 <dl> <dt>
 
-[System.Photo.FlashEnreal](../properties/props-system-photo-flashenergy.md)
+[System.Photo.FlashStopp](../properties/props-system-photo-flashenergy.md)
 </dt> </dl>
 
  

@@ -1,5 +1,5 @@
 ---
-description: Die Verbinden verbindet den NPP mithilfe einer angegebenen NIC mit dem Netzwerk und stellt Konfigurationsinformationen über die Verbindung zur Verfügung.
+description: Die Verbinden-Methode verbindet das NPP mithilfe einer angegebenen NIC mit dem Netzwerk und stellt Konfigurationsinformationen über die Verbindung bereit.
 ms.assetid: 48189b2b-9889-4bd8-8972-26005fb7c341
 title: IESP::Verbinden-Methode (Netmon.h)
 ms.topic: reference
@@ -23,7 +23,7 @@ ms.locfileid: "118365608"
 ---
 # <a name="iespconnect-method"></a>IESP::Verbinden-Methode
 
-Die **Verbinden** verbindet das NPP mithilfe einer angegebenen NIC mit dem Netzwerk und stellt Konfigurationsinformationen über die Verbindung zur Verfügung.
+Die **Verbinden-Methode** verbindet das NPP mithilfe einer angegebenen NIC mit dem Netzwerk und stellt Konfigurationsinformationen über die Verbindung bereit.
 
 ## <a name="syntax"></a>Syntax
 
@@ -46,36 +46,36 @@ HRESULT STDMETHODCALLTYPE Connect(
 *hInputBlob* \[ In\]
 </dt> <dd>
 
-Handle für das BLOB, das die NIC angibt, mit der das NPP eine Verbindung herstellt, und die Konfigurationsinformationen für diese Verbindung angibt.
+Handle für das BLOB, das die NIC angibt, mit der das NPP eine Verbindung herstellt, und die Konfigurationsinformationen für diese Verbindung.
 
 </dd> <dt>
 
 *StatusCallbackProc* \[ In\]
 </dt> <dd>
 
-Adresse der Rückruffunktion des Benutzers, die Statusaktualisierungen wie Trigger empfängt. Wenn keine Rückruffunktion verwendet wird, legen Sie diesen Parameter und den *UserContext-Parameter* auf **NULL fest.**
+Adresse der Rückruffunktion des Benutzers, die Statusupdates wie Trigger empfängt. Wenn keine Rückruffunktion verwendet wird, legen Sie diesen Parameter und den *UserContext-Parameter* auf **NULL** fest.
 
 </dd> <dt>
 
 *UserContext* \[ In\]
 </dt> <dd>
 
-Der Wert, der übergeben wird, wenn die Rückruffunktion des Benutzers aufgerufen wird. Der Wert dieses Parameters ist in der Regel entweder HWND oder ein This-Zeiger. Wenn keine Rückruffunktion angegeben wird, legen Sie diesen Parameter und den *StatusCallbackProc-Parameter* auf **NULL fest.**
+Wert, der übergeben wird, wenn die Rückruffunktion des Benutzers aufgerufen wird. Der Wert dieses Parameters ist in der Regel entweder HWND oder ein "this"-Zeiger. Wenn keine Rückruffunktion angegeben ist, legen Sie diesen Parameter und den *StatusCallbackProc-Parameter* auf **NULL** fest.
 
 </dd> <dt>
 
 *hErrorBlob* \[ out\]
 </dt> <dd>
 
-Handle für ein Fehlerblob, das zusätzliche Fehlerinformationen enthält.
+Behandeln sie ein Fehler-BLOB, das zusätzliche Fehlerinformationen enthält.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Wenn die Methode erfolgreich ist, ist der Rückgabewert NMERR \_ SUCCESS.
+Wenn die Methode erfolgreich ist, lautet der Rückgabewert NMERR \_ SUCCESS.
 
-Wenn die Methode nicht erfolgreich ist, ist der Rückgabewert einer der folgenden Fehlercodes (einschließlich der Fehler, die vom internen **IESP::Configure-Aufruf zurückgegeben** werden):
+Wenn die Methode nicht erfolgreich ist, ist der Rückgabewert einer der folgenden Fehlercodes (einschließlich der Fehler, die vom internen **IESP::Configure-Aufruf** zurückgegeben werden):
 
 
 
@@ -97,11 +97,11 @@ Wenn die Methode nicht erfolgreich ist, ist der Rückgabewert einer der folgende
 </tr>
 <tr class="even">
 <td><dl> <dt><strong>NMERR_BLOB_CONVERSION_ERROR</strong></dt> </dl></td>
-<td>Das Konfigurationsblob ist beschädigt. Dieser Fehler wird durch den <strong>IESP::Configure-Aufruf</strong> generiert.<br/></td>
+<td>Das Konfigurations-BLOB ist beschädigt. Dieser Fehler wird durch den <strong>IESP::Configure-Aufruf</strong> generiert.<br/></td>
 </tr>
 <tr class="odd">
 <td><dl> <dt><strong>NMERR_BLOB_ENTRY_DOES_NOT_EXIST</strong></dt> </dl></td>
-<td>Dem durch den <em>hInputBlob-Parameter</em> angegebenen EingabeBLOB fehlt ein Eintrag, der zum Ausführen dieses Vorgangs erforderlich ist. Dieser Fehler kann durch den <strong>IESP::Verbinden- oder</strong> <strong>IESP::Configure-Aufruf generiert</strong> werden. Sehen Sie sich den von <em>hErrorBlob</em> zurückgegebenen FehlerBLOB an, um zu ermitteln, welcher Eintrag nicht gefunden wurde.<br/></td>
+<td>Dem durch den <em>Parameter hInputBlob</em> angegebenen Eingabe-BLOB fehlt ein Eintrag, der zum Ausführen dieses Vorgangs erforderlich ist. Dieser Fehler kann durch den Aufruf von <strong>IESP::Verbinden</strong> oder <strong>IESP::Configure</strong> generiert werden. Sehen Sie sich den von <em>hErrorBlob</em> zurückgegebenen Fehler-BLOB an, um zu ermitteln, welcher Eintrag nicht gefunden wurde.<br/></td>
 </tr>
 <tr class="even">
 <td><dl> <dt><strong>NMERR_BLOB_NOT_INITIALIZED</strong></dt> </dl></td>
@@ -109,7 +109,7 @@ Wenn die Methode nicht erfolgreich ist, ist der Rückgabewert einer der folgende
 </tr>
 <tr class="odd">
 <td><dl> <dt><strong>NMERR_BLOB_STRING_INVALID</strong></dt> </dl></td>
-<td>Die Zeichenfolge wird nicht mit NULL beendet. Dieser Fehler wird durch den <strong>IESP::Configure-Aufruf</strong> generiert.<br/></td>
+<td>Die Zeichenfolge ist nicht NULL-terminiert. Dieser Fehler wird durch den <strong>IESP::Configure-Aufruf</strong> generiert.<br/></td>
 </tr>
 <tr class="even">
 <td><dl> <dt><strong>NMERR_ILLEGAL_TRIGGER</strong></dt> </dl></td>
@@ -121,16 +121,16 @@ Wenn die Methode nicht erfolgreich ist, ist der Rückgabewert einer der folgende
 </tr>
 <tr class="even">
 <td><dl> <dt><strong>NMERR_NO_DEFAULT_CAPTURE_DIRECTORY</strong></dt> </dl></td>
-<td>Das Standarderfassungsverzeichnis wurde in der Registrierung nicht festgelegt. Verwenden Sie den folgenden Pfad zum Festlegen des Erfassungsverzeichnisses. <br/>
+<td>Das Standarderfassungsverzeichnis wurde in der Registrierung nicht festgelegt. Verwenden Sie den folgenden Pfad, um das Erfassungsverzeichnis festzulegen. <br/>
 <pre class="syntax" data-space="preserve"><code>HKEY_LOCAL_MACHINE\System\CurrentControlSet\Services\nm\Parameters\CapturePath</code></pre></td>
 </tr>
 <tr class="odd">
 <td><dl> <dt><strong>NMERR_OUT_OF_MEMORY</strong></dt> </dl></td>
-<td>Der zum Ausführen dieses Vorgangs benötigte Arbeitsspeicher ist nicht verfügbar. Dieser Fehler wird durch den <strong>IESP::Configure-Aufruf</strong> generiert.<br/></td>
+<td>Der zum Ausführen dieses Vorgangs erforderliche Arbeitsspeicher ist nicht verfügbar. Dieser Fehler wird durch den <strong>IESP::Configure-Aufruf</strong> generiert.<br/></td>
 </tr>
 <tr class="even">
 <td><dl> <dt><strong>NMERR_TIMEOUT</strong></dt> </dl></td>
-<td>Für die Anforderung ist ein Time out erfolgt. Dieser Fehler wird durch den <strong>IESP::Configure-Aufruf</strong> generiert.<br/></td>
+<td>Für die Anforderung ist ein Time out aufgetreten. Dieser Fehler wird durch den <strong>IESP::Configure-Aufruf</strong> generiert.<br/></td>
 </tr>
 <tr class="odd">
 <td><dl> <dt><strong>NMERR_UPLEVEL_BLOB</strong></dt> </dl></td>
@@ -145,13 +145,13 @@ Wenn die Methode nicht erfolgreich ist, ist der Rückgabewert einer der folgende
 
 ## <a name="remarks"></a>Hinweise
 
-Wenn die **Verbinden** aufgerufen wird, ruft Netzwerkmonitor **automatisch IESP::Configure** mithilfe des BLOB auf, das vom *hInputBlob-Parameter bereitgestellt* wird. Beachten Sie, dass alle Fehlercodes, die durch den Aufruf von **IESP::Configure** zurückgegeben werden, zurückgegeben und vom **IESP::Verbinden** zurückgegeben werden.
+Wenn die **Verbinden-Methode** aufgerufen wird, ruft Netzwerkmonitor **automatisch IESP::Configure** auf, indem sie das blob verwendet, das vom *hInputBlob-Parameter* bereitgestellt wird. Beachten Sie, dass alle Fehlercodes, die vom Aufruf von **IESP::Configure** zurückgegeben werden, vom **IESP::Verbinden-Aufruf** zurückgegeben werden.
 
-Diese Methode muss aufgerufen werden, bevor Sie mit dem Erfassen von Frames beginnen können. Beachten Sie, dass Sie beim Herstellen einer Verbindung mit dem Netzwerk mit dieser Methode weiterhin die **IESP-Schnittstelle** verwenden müssen, um Frames zu erfassen.
+Diese Methode muss aufgerufen werden, bevor Sie mit der Erfassung von Frames beginnen können. Beachten Sie Folgendes: Wenn Sie mit dieser Methode eine Verbindung mit dem Netzwerk herstellen, müssen Sie weiterhin die **IESP-Schnittstelle** verwenden, um Frames zu erfassen.
 
-Das von *hInputBlob* angegebene EingabeBLOB kann durch Aufrufen von **GetNPPBlobFromUI,** **GetNPPBlobTable** und **SelectNPPBlobFromTable ermittelt werden.**
+Das von *hInputBlob* angegebene Eingabe-BLOB kann durch Aufrufen von **GetNPPBlobFromUI,** **GetNPPBlobTable** und **SelectNPPBlobFromTable** abgerufen werden.
 
-Das von *hErrorBlob* zurückgegebene Fehlerblob enthält Einträge, Netzwerkmonitor in dem in *hInputBlob* angegebenen EingabeBLOB nicht verstanden oder nicht finden konnten. Das zurückgegebene Fehlerblob enthält Fehlerinformationen, die die Anwendung für die Problembehandlung verwenden kann. Wenn beispielsweise NMERR BLOB ENTRY DOES NOT EXIST zurückgegeben wird, wird der Eintrag, den Netzwerkmonitor nicht finden konnte, \_ \_ in das zurückgegebene \_ \_ Fehlerblob \_ eingeschlossen.
+Das von *hErrorBlob* zurückgegebene Fehlerblob enthält Einträge, die Netzwerkmonitor nicht verstehen oder im Eingabe-BLOB finden konnten, das in *hInputBlob* angegeben ist. Das zurückgegebene Fehler-BLOB enthält Fehlerinformationen, die die Anwendung für die Problembehandlung verwenden kann. Wenn z. B. NMERR \_ BLOB ENTRY DOES NOT EXIST zurückgegeben \_ \_ \_ \_ wird, ist der Eintrag, den Netzwerkmonitor nicht finden konnten, im zurückgegebenen Fehlerblob enthalten.
 
 
 

@@ -1,9 +1,9 @@
 ---
-title: smartwiedergabe-Element
-description: Das smartwiedergabe-Element enthält den dynamisch definierten Teil einer Wiedergabeliste.
+title: smartPlaylist-Element
+description: Das smartPlaylist-Element enthält den dynamisch definierten Teil einer Wiedergabeliste.
 ms.assetid: 05912849-7475-4eb9-a7bd-00f20b80b1cf
 keywords:
-- smartwiedergabe-Element, Windows Media Player
+- smartPlaylist-Element Windows Media Player
 topic_type:
 - apiref
 api_name:
@@ -13,16 +13,16 @@ api_type:
 ms.topic: reference
 ms.date: 05/31/2018
 api_location: ''
-ms.openlocfilehash: 511294af2de4343cb7f63db4312d530aadf57da6
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: a21d685759e9e8b27c881ceaec6595535b3c4b799eb28ecd94dd96a3a571ec99
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106371489"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119763470"
 ---
-# <a name="smartplaylist-element"></a>smartwiedergabe-Element
+# <a name="smartplaylist-element"></a>smartPlaylist-Element
 
-Das **smartwiedergabe** -Element enthält den dynamisch definierten Teil einer Wiedergabeliste.
+Das **smartPlaylist-Element** enthält den dynamisch definierten Teil einer Wiedergabeliste.
 
 ``` syntax
 <smartPlaylist
@@ -37,28 +37,28 @@ Das **smartwiedergabe** -Element enthält den dynamisch definierten Teil einer W
 
 | Begriff                                                                                                                                   | BESCHREIBUNG                                                                                                 |
 |----------------------------------------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------|
-| <span id="version__required______________"></span><span id="VERSION__REQUIRED______________"></span>**Version** (erforderlich) <br/> | Die Dezimalzahl, die die Versionsnummer des intelligenten Wiedergabelisten Schemas darstellt. Legen Sie auf 1.0.0.0 fest.<br/> |
+| <span id="version__required______________"></span><span id="VERSION__REQUIRED______________"></span>**Version** (erforderlich) <br/> | Die Dezimalzahl, die die Versionsnummer des Schemas für intelligente Wiedergabelisten darstellt. Legen Sie auf 1.0.0.0 fest.<br/> |
 
 
 
  
 
-## <a name="parentchild-elements"></a>Über-/unterordnungselemente
+## <a name="parentchild-elements"></a>Übergeordnete/untergeordnete Elemente
 
 
 
 | Hierarchy | Elemente                                                       |
 |-----------|----------------------------------------------------------------|
 | Parent    | [Seq](seq-element.md)                                         |
-| Untergeordnet     | [Queryset](queryset-element.md), [Filter](filter-element.md) |
+| Untergeordnet     | [querySet,](queryset-element.md) [filter](filter-element.md) |
 
 
 
  
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Ein **smartwiedergabe** -Element enthält in der Regel ein **Queryset** -Element und kann auch ein **Filter** Element enthalten.
+Ein **smartPlaylist-Element** enthält in der Regel ein **querySet-Element** und kann auch ein **Filterelement** enthalten.
 
 ## <a name="examples"></a>Beispiele
 
@@ -93,30 +93,30 @@ Ein **smartwiedergabe** -Element enthält in der Regel ein **Queryset** -Element
 
 | Anforderung | Wert |
 |--------------------|----------------------------------------------------|
-| Version<br/> | Windows Media Player 9 oder höher.<br/> |
+| Version<br/> | Windows Media Player 9-Serie oder höher.<br/> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Argument-Element**](argument-element.md)
+[**argument-Element**](argument-element.md)
 </dt> <dt>
 
-[**Filter-Element**](filter-element.md)
+[**filter-Element**](filter-element.md)
 </dt> <dt>
 
-[**Fragment-Element**](fragment-element.md)
+[**fragment-Element**](fragment-element.md)
 </dt> <dt>
 
-[**Queryset-Element**](queryset-element.md)
+[**querySet-Element**](queryset-element.md)
 </dt> <dt>
 
-[**ENQ-Element**](seq-element.md)
+[**seq-Element**](seq-element.md)
 </dt> <dt>
 
-[**Referenz zu Windows Media-Wiedergabelisten Elementen**](windows-media-playlist-elements-reference.md)
+[**Windows Referenz zu Medienwiedergabelistenelementen**](windows-media-playlist-elements-reference.md)
 </dt> </dl>
 
  

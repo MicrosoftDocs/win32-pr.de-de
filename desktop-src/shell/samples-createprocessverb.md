@@ -1,5 +1,5 @@
 ---
-description: Veranschaulicht die Implementierung eines shellverbs mithilfe der Methode "Methode".
+description: Veranschaulicht, wie ein Shellverb mithilfe der CreateProcess-Methode implementiert wird.
 title: CreateProcess-Verb (Beispiel)
 ms.topic: article
 ms.date: 05/31/2018
@@ -9,34 +9,34 @@ api_type: ''
 api_location: ''
 topic_type:
 - kbArticle
-ms.openlocfilehash: 8e52f251e12f0ca06bcb729407a7c8303836f9fc
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: c0af34d5ec9f687ec6c58bb73f337b38d512527c0ace4bd20eae12d49c87a62d
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "104980329"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117858340"
 ---
 # <a name="createprocess-verb-sample"></a>CreateProcess-Verb (Beispiel)
 
-Veranschaulicht die Implementierung eines shellverbs mithilfe der Methode "Methode".
+Veranschaulicht, wie ein Shellverb mithilfe der CreateProcess-Methode implementiert wird.
 
 Dieses Thema enthält folgende Abschnitte:
 
 -   [Beschreibung](#description)
--   [Anforderungen](#requirements)
+-   [Requirements](#requirements)
 -   [Herunterladen des Beispiels](#downloading-the-sample)
--   [Beispiel zum Aufbau](#building-the-sample)
+-   [Erstellen des Beispiels](#building-the-sample)
 -   [Ausführen des Beispiels](#running-the-sample)
 
 ## <a name="description"></a>BESCHREIBUNG
 
-Auf dem Prozess basierende Verben sind von der Ausführung einer ausführbaren Datei und der Übergabe eines Befehlszeilen Arguments abhängig. Diese Methode ist nicht so leistungsfähig wie die Methoden "DropTarget" und "ExecuteCommand", aber Sie erreicht das wünschenswert Verhalten außerhalb des Prozesses.
+CreateProcess-basierte Verben hängen davon ab, dass eine ausführbare Datei ausgeführt und ein Befehlszeilenargument übergeben wird. Diese Methode ist nicht so leistungsfähig wie die DropTarget- und ExecuteCommand-Methoden, erreicht jedoch das gewünschte Out-of-Process-Verhalten.
 
-## <a name="requirements"></a>Requirements (Anforderungen)
+## <a name="requirements"></a>Anforderungen
 
 
 
-| Produkt                                | Minimale Produkt Version |
+| Product (Produkt)                                | Mindestproduktversion |
 |----------------------------------------|-------------------------|
 | Windows                                | Windows Vista           |
 | Windows Software Development Kit (SDK) | 7.0                     |
@@ -49,25 +49,25 @@ Auf dem Prozess basierende Verben sind von der Ausführung einer ausführbaren D
 
 | Standort      | Pfad-URL                                                                                             |
 |---------------|------------------------------------------------------------------------------------------------------|
-| GitHub  | [Beispiel für "kreateprocessverb"](https://github.com/microsoft/Windows-classic-samples/tree/master/Samples/Win7Samples/winui/shell/appshellintegration/CreateProcessVerb) |
+| GitHub  | [CreateProcessVerb-Beispiel](https://github.com/microsoft/Windows-classic-samples/tree/master/Samples/Win7Samples/winui/shell/appshellintegration/CreateProcessVerb) |
 
 ## <a name="building-the-sample"></a>Erstellen des Beispiels
 
-So erstellen Sie das Beispiel von der Eingabeaufforderung aus:
+So erstellen Sie das Beispiel über die Eingabeaufforderung:
 
-1.  Öffnen Sie das Eingabe Aufforderungs Fenster, und navigieren Sie **zum Projektverzeichnis** für das Projekt "Projekt".
+1.  Öffnen Sie das Eingabeaufforderungsfenster, und navigieren Sie zum **Projektverzeichnis CreateProcessVerb.**
 2.  Geben Sie `msbuild CreateProcessVerb.sln` ein.
 
-So erstellen Sie das Beispiel mithilfe Microsoft Visual Studio (bevorzugt):
+So erstellen Sie das Beispiel mit Microsoft Visual Studio (bevorzugt):
 
-1.  Öffnen Sie Windows-Explorer, und navigieren Sie **zum Projektverzeichnis** für das Projekt "Projekt".
-2.  Doppelklicken Sie auf das Symbol für die Datei "Datei" in Visual Studio, um das Projekt in Visual Studio zu öffnen.
-3.  Wählen Sie im Menü **Erstellen** die Option Projekt Mappe **Erstellen** aus.
+1.  Öffnen Windows Explorer, und navigieren Sie zum **Projektverzeichnis CreateProcessVerb.**
+2.  Doppelklicken Sie auf das Symbol für die Datei CreateProcessVerb.sln, um das Projekt in Visual Studio.
+3.  Klicken Sie im Menü **Build** (Erstellen) auf **Build Solution** (Projektmappe erstellen).
 
 ## <a name="running-the-sample"></a>Ausführen des Beispiels
 
-1.  Navigieren Sie mithilfe der Eingabeaufforderung oder Windows-Explorer zu dem Verzeichnis, das die neue ausführbare Datei enthält.
-2.  Geben Sie in der Befehlszeile ein `CreateProcessVerb.exe` . Alternativ können Sie in Windows-Explorer auf das Symbol für CreateProcessVerb.exe doppelklicken.
+1.  Navigieren Sie über die Eingabeaufforderung oder den Explorer zu dem Verzeichnis, das die neue ausführbare Windows enthält.
+2.  Geben Sie in der Befehlszeile `CreateProcessVerb.exe` ein. Doppelklicken Sie alternativ Windows Explorer auf das Symbol für CreateProcessVerb.exe.
 3.  Befolgen Sie die Anweisungen im angezeigten Dialogfeld.
 
  

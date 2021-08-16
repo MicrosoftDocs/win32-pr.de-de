@@ -1,52 +1,52 @@
 ---
-title: Paging mit idirector ysearch
+title: Paging mit IDirectorySearch
 description: Paging gibt an, wie viele Zeilen der Server an den Client zurückgibt.
 ms.assetid: cf4aa56a-c6f7-47c8-956d-512a5cffbf22
 ms.tgt_platform: multiple
 keywords:
-- Paging mit idirector ysearch ADSI
-- ADSI, Search, idirector ysearch, andere Suchoptionen, Paging
+- Paging mit IDirectorySearch ADSI
+- ADSI, Suchen, IDirectorySearch, Andere Suchoptionen, Paging
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: a6e9fdf001f5908f6c3fc7321c8c94cda09f1b96
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: 48494c01831e6b69931fc6b6f779ed9b042b7fecaaf17fa62286c094a926ba73
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "103947336"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117838940"
 ---
-# <a name="paging-with-idirectorysearch"></a>Paging mit idirector ysearch
+# <a name="paging-with-idirectorysearch"></a>Paging mit IDirectorySearch
 
-Paging gibt an, wie viele Zeilen der Server an den Client zurückgibt. Eine Seite kann durch die Anzahl von Zeilen oder ein Zeitlimit definiert werden. Das ADSI COM-Objekt ruft jede Ergebnisseite auf Grundlage der in der folgenden Tabelle aufgeführten Werte ab. Der Aufrufer ruft [**IDirectorySearch:: GetNextRow**](/windows/desktop/api/Iads/nf-iads-idirectorysearch-getnextrow) auf, wenn er das Seiten Ende erreicht hat, und das ADSI COM-Objekt ruft die nächste Seite ab.
+Paging gibt an, wie viele Zeilen der Server an den Client zurückgibt. Eine Seite kann durch die Anzahl der Zeilen oder ein Zeitlimit definiert werden. Das ADSI COM-Objekt ruft jede Seite der Ergebnisse basierend auf den in der folgenden Tabelle aufgeführten Werten ab. Der Aufrufer ruft [**IDirectorySearch::GetNextRow**](/windows/desktop/api/Iads/nf-iads-idirectorysearch-getnextrow) auf, wenn er das Seitenende erreicht hat und das ADSI COM-Objekt die nächste Seite abruft.
 
 
 
-| Wert                                   | BESCHREIBUNG                                                                                                                                                                                                                                          |
+| Wert                                   | Beschreibung                                                                                                                                                                                                                                          |
 |-----------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| **Anzeigen von \_ searchpref \_ Page Size**           | Gibt die maximale Anzahl von Zeilen an, die auf einer Seite zurückgegeben werden sollen.                                                                                                                                                                                            |
-| **Auslagerungszeit- \_ \_ \_ \_ Limit für Werbeeinblendungen** | Gibt die maximale Zeit in Sekunden an, die der Server zum Sammeln einer Ergebnisseite aufwenden soll, bevor die Seite an den Client zurückgegeben wird. Wenn der Grenzwert erreicht wird, beendet der Server die Suche und gibt die bereits für die Seite abgerufenen Zeilen zurück. |
+| **ADS \_ SEARCHPREF \_ PAGESIZE**           | Gibt die maximale Anzahl von Zeilen an, die auf einer Seite zurückgegeben werden sollen.                                                                                                                                                                                            |
+| **ADS \_ SEARCHPREF \_ PAGED \_ TIME \_ LIMIT** | Gibt die maximale Zeit in Sekunden an, die der Server für das Sammeln einer Seite mit Ergebnissen aufwenden soll, bevor die Seite an den Client zurückgegeben wird. Wenn der Grenzwert erreicht ist, beendet der Server die Suche und gibt die Zeilen zurück, die bereits für die Seite abgerufen wurden. |
 
 
 
- 
+ 
 
-Wenn keine dieser Sucheinstellungen festgelegt ist, ist der Standardwert kein Paging. Suchen der Active Directory, die ohne Paging ausgeführt werden, sind auf die Rückgabe von maximal den ersten 1000 Datensätzen beschränkt. Daher müssen Sie eine seitenweise Suche verwenden, wenn die Möglichkeit besteht, dass das Resultset mehr als 1000 Elemente enthält.
+Wenn keine dieser Sucheinstellungen festgelegt ist, wird standardmäßig kein Paging verwendet. Suchvorgänge in Active Directory, die ohne Auslagerung ausgeführt werden, sind auf die Rückgabe von maximal 1.000 Datensätzen beschränkt. Daher müssen Sie eine ausgelagerungte Suche verwenden, wenn die Möglichkeit besteht, dass das Resultset mehr als 1.000 Elemente enthält.
 
-Ein Suchvorgang kann dazu führen, dass eine große Anzahl von Objekten zurückgegeben wird. Wenn der Server das Ergebnis in einem Satz zurückgibt, kann dies die Leistung des Clients und des Servers verringern und die Netzwerk Auslastung beeinträchtigen. Eine auslagerbare Suche kann verwendet werden, um dies zu verhindern. In einer auslagerenen Suche kann der Client Ergebnisse in kleineren Paketen akzeptieren. Die Größe eines Pakets wird als Suchseiten Größe bezeichnet.
+Ein Suchvorgang kann dazu führen, dass eine große Anzahl von Objekten zurückgegeben wird. Wenn der Server das Ergebnis in einem Satz zurückgibt, kann dies die Leistung von Client und Server beeinträchtigen und sich auf die Netzwerklast auswirken. Seitensuchen können verwendet werden, um dies zu verhindern. Bei einer ausgelagerungten Suche kann der Client Ergebnisse in kleineren Paketen akzeptieren. Die Größe eines Pakets wird als Größe der Suchseite bezeichnet.
 
-Auslagerbare Suchvorgänge bieten sowohl dem Client als auch dem Server Vorteile. Der Client kann bei der Darstellung der Ergebnisse für Benutzer reaktionsfähiger sein. Dies ist besonders wichtig für grafische Benutzeroberflächen Tools, die den Fenster Anzeige Prozess starten können, während der andere Thread gleichzeitig die Daten empfängt.
+Ausgelagerungssuchen bieten sowohl für den Client als auch für den Server Vorteile. Der Client kann reaktionsfähiger sein, wenn die Ergebnisse Benutzern präsentiert werden. Dies ist besonders relevant für grafische Benutzeroberflächentools, die den Fensteranzeigeprozess starten können, während der andere Thread die Daten gleichzeitig empfängt.
 
-Auf Serverseite wird der Vorgang durch seitenweise Suchen skalierbar. Wenn z. b. 100 Clients Suchanforderungen gleichzeitig ausgeben und im Durchschnitt jeder Client 200 Objekte empfängt. Wenn keine Seitengröße angegeben ist, muss der Server im ungünstigsten Fall über ausreichend Arbeitsspeicher verfügen, um 20.000 Objekte zu speichern. Wenn hingegen jeder Client eine Seitengröße angibt (z. b. zehn Objekte), wird die Arbeitsspeicher Anforderung auf dem Server um den Faktor 20 reduziert.
+Auf serverseitiger Seite wird der Vorgang durch ausgelagerungte Suchvorgänge skalierbar. Wenn z. B. 100 Clients gleichzeitig Suchanforderungen ausstellen und im Durchschnitt jeder Client zwei hundert Objekte empfängt. Wenn keine Seitengröße angegeben wird, muss der Server im schlimmsten Fall über ausreichend Arbeitsspeicher für 20.000 Objekte verfügen. Wenn dagegen jeder Client eine Seitengröße angibt, z. B. zehn Objekte, wird der Arbeitsspeicherbedarf auf dem Server um den Faktor 20 reduziert.
 
-Außerdem kann ein Client mit einer auslagerungssuche den Vorgang abbrechen, der gerade ausgeführt wird. Im Gegensatz dazu empfängt der Client in einer nicht Auslagerungs Suche ein Resultset in einem Paket. Dadurch kann die Netzwerkleistung verringert werden.
+Darüber hinaus kann ein Client mithilfe einer ausgelagerungten Suche den ausgeführten Vorgang abbrechen. Im Gegensatz dazu empfängt der Client bei einer nicht ausgelagerungten Suche ein Resultset in einem Paket. Dies kann die Netzwerkleistung beeinträchtigen.
 
-ADSI behandelt die Seitengröße für den Client. Der Client muss die Anzahl der aktuell ausgeführten Objekte nicht zählen. ADSI kapselt die Server Interaktion für den Client. Aus Sicht des Clients gibt die Suche ein umfassendes Resultset zurück.
+ADSI verarbeitet die Seitengröße für den Client. Der Client muss die Anzahl der ausgeführten Objekte nicht zählen. ADSI kapselt die Serverinteraktion für den Client. Aus Clientsicht gibt die Suche ein vollständiges Resultset zurück.
 
-Es wird empfohlen, Paging zu verwenden.
+Es wird empfohlen, paging zu verwenden.
 
-Wenn Sie eine maximale Seitengröße angeben möchten, legen Sie die Suchoption **ADS \_ searchpref \_ PageSize** mit einem **\_ ganzzahligen adstype** -Wert fest, der auf die maximale Anzahl von Zeilen pro Seite in dem an die [**IDirectorySearch:: setsearchpreference**](/windows/desktop/api/Iads/nf-iads-idirectorysearch-setsearchpreference) -Methode über gebenden ADS festgelegt ist. [**\_ \_**](/windows/desktop/api/Iads/ns-iads-ads_searchpref_info)
+Um eine maximale Seitengröße anzugeben, legen Sie eine **ADS \_ SEARCHPREF \_ PAGESIZE-Suchoption** mit einem **ADSTYPE \_ INTEGER-Wert** auf die maximale Anzahl von Zeilen pro Seite im [**ADS \_ SEARCHPREF \_ INFO-Array**](/windows/desktop/api/Iads/ns-iads-ads_searchpref_info) fest, das an die [**IDirectorySearch::SetSearchPreference-Methode**](/windows/desktop/api/Iads/nf-iads-idirectorysearch-setsearchpreference) übergeben wird.
 
-Im folgenden Codebeispiel wird gezeigt, wie die maximale Seitengröße festgelegt wird.
+Im folgenden Codebeispiel wird veranschaulicht, wie die maximale Seitengröße festgelegt wird.
 
 
 ```C++
@@ -58,9 +58,9 @@ SearchPref.vValue.Integer = 1000;
 
 
 
-Um einen Seiten Zeitraum anzugeben, legen Sie die Suchoption für das Auslagerungs **\_ \_ \_ Zeit \_ Limit für Werbe** Einblendungen auf einen Wert vom Typ " **adstype \_** " fest, der auf die maximale Anzahl von Sekunden festgelegt ist, die der Server für das Abrufen einer Seite im [**ADS- \_ \_ infoarray**](/windows/desktop/api/Iads/ns-iads-ads_searchpref_info) mit der [**IDirectorySearch:: setsearchpreference**](/windows/desktop/api/Iads/nf-iads-idirectorysearch-setsearchpreference) -Methode aufwenden soll.
+Um eine Seitenzeit anzugeben, legen Sie eine **ADS \_ SEARCHPREF \_ PAGED \_ TIME \_ LIMIT-Suchoption** mit einem **ADSTYPE \_ INTEGER-Wert** fest, der auf die maximale Anzahl von Sekunden festgelegt ist, die der Server für das Abrufen einer Seite im [**ADS \_ SEARCHPREF \_ INFO-Array**](/windows/desktop/api/Iads/ns-iads-ads_searchpref_info) aufwenden soll, die an die [**IDirectorySearch::SetSearchPreference-Methode**](/windows/desktop/api/Iads/nf-iads-idirectorysearch-setsearchpreference) übergeben wird.
 
-Im folgenden Codebeispiel wird gezeigt, wie die Seiten Zeit angegeben wird.
+Im folgenden Codebeispiel wird gezeigt, wie Die Seitenzeit angegeben wird.
 
 
 ```C++
@@ -72,9 +72,9 @@ SearchPref.vValue.Integer = 60;
 
 
 
- 
+ 
 
- 
+ 
 
 
 

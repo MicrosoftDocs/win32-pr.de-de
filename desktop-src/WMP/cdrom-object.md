@@ -1,9 +1,9 @@
 ---
-title: Come-Objekt
-description: Das Cbetreiber-Objekt bietet eine Möglichkeit, auf eine CD oder DVD in seinem Laufwerk zu zugreifen.
+title: Chole-Objekt
+description: Das Chole-Objekt bietet eine Möglichkeit, auf eine CD oder DVD auf dem Laufwerk zuzugreifen.
 ms.assetid: 9045b130-3e08-4880-a4e7-79b704c4c1f9
 keywords:
-- Come-Windows Media Player
+- C Windows Media Player
 topic_type:
 - apiref
 api_name:
@@ -20,24 +20,24 @@ ms.contentlocale: de-DE
 ms.lasthandoff: 08/11/2021
 ms.locfileid: "118342643"
 ---
-# <a name="cdrom-object"></a>Come-Objekt
+# <a name="cdrom-object"></a>Chole-Objekt
 
-Das **Cbetreiber-Objekt** bietet eine Möglichkeit, auf eine CD oder DVD in seinem Laufwerk zu zugreifen.
+Das **Chole-Objekt** bietet eine Möglichkeit, auf eine CD oder DVD auf dem Laufwerk zuzugreifen.
 
-Das **Ckrony-Objekt** unterstützt die folgenden Eigenschaften.
+Das **C csv-Objekt** unterstützt die folgenden Eigenschaften.
 
 
 
 | Eigenschaft                                   | BESCHREIBUNG                                                                                                                                             |
 |--------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------|
-| [driveSpecifier](cdrom-drivespecifier.md) | Ruft den Cd- oder DVD-Laufwerkbuchstaben ab.                                                                                                                   |
-| [Playlist](cdrom-playlist.md)             | Ruft ein [Playlist-Objekt](playlist-object.md) ab, das die Titel auf der CD darstellt, die sich derzeit auf dem CD-Laufwerk befindet, oder die Titeleinträge auf Stammebene für DVD. |
+| [driveSpecifier](cdrom-drivespecifier.md) | Ruft den Laufwerkbuchstaben der CD oder DVD ab.                                                                                                                   |
+| [Playlist](cdrom-playlist.md)             | Ruft ein [Wiedergabelistenobjekt](playlist-object.md) ab, das die Titel auf der CD darstellt, die sich derzeit auf dem CD-Laufwerk befinden, oder die Titeleinträge auf Stammebene für die DVD. |
 
 
 
  
 
-Das **Ckrony-Objekt** unterstützt die folgende Methode.
+Das **C csv-Objekt** unterstützt die folgende Methode.
 
 
 
@@ -49,7 +49,7 @@ Das **Ckrony-Objekt** unterstützt die folgende Methode.
 
  
 
-Der Zugriff auf das **Ckrony-Objekt** erfolgt über die folgende Methode.
+Der Zugriff auf das **C csv-Objekt** erfolgt über die folgende Methode.
 
 
 
@@ -61,13 +61,13 @@ Der Zugriff auf das **Ckrony-Objekt** erfolgt über die folgende Methode.
 
  
 
-Zur Veranschaulichung wird player.c syntax.item(*index*) in den Referenzsyntaxabschnitten verwendet.
+Zur Veranschaulichung wird player.ccollection.item(*index*) in den Abschnitten zur Verweissyntax verwendet.
 
 ## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Objektmodellreferenz für die Skripterstellung**](object-model-reference-for-scripting.md)
+[**Objektmodellreferenz für Skripterstellung**](object-model-reference-for-scripting.md)
 </dt> </dl>
 
  

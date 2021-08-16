@@ -1,5 +1,5 @@
 ---
-description: Die WMI-Klasse der Win32 \_ DependentService-Zuordnung verknüpft zwei voneinander abhängige Basisdienste.
+description: Die \_ WMI-Klasse für die Win32 DependentService-Zuordnung bezieht sich auf zwei voneinander abhängige Basisdienste.
 ms.assetid: ba21fce3-f8f9-4886-b09d-a9e830376364
 ms.tgt_platform: multiple
 title: Win32_DependentService-Klasse
@@ -26,7 +26,7 @@ ms.locfileid: "118417628"
 ---
 # <a name="win32_dependentservice-class"></a>Win32 \_ DependentService-Klasse
 
-Die [WMI-Klasse](/windows/desktop/WmiSdk/retrieving-a-class) der **Win32 \_ DependentService-Zuordnung** verknüpft zwei voneinander abhängige Basisdienste.
+Die **WMI-Klasse für die Win32 \_ DependentService-Zuordnung** bezieht sich auf zwei voneinander abhängige Basisdienste. [](/windows/desktop/WmiSdk/retrieving-a-class)
 
 Die folgende Syntax wurde aus MOF-Code (Managed Object Format, verwaltetes Objektformat) vereinfacht und enthält alle geerbten Eigenschaften. Eigenschaften werden in alphabetischer Reihenfolge und nicht in MOF-Reihenfolge aufgeführt.
 
@@ -44,7 +44,7 @@ class Win32_DependentService : CIM_ServiceServiceDependency
 
 ## <a name="members"></a>Member
 
-Die **Win32 \_ DependentService-Klasse** verfügt über folgende Typen von Membern:
+Die **Win32 \_ DependentService-Klasse** verfügt über die folgenden Membertypen:
 
 -   [Eigenschaften](#properties)
 
@@ -63,10 +63,10 @@ Datentyp: **Win32 \_ BaseService**
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**key**](/windows/desktop/WmiSdk/key-qualifier), [**Override**](/windows/desktop/WmiSdk/standard-qualifiers) ("Vorgänger"), [**MappingStrings**](/windows/desktop/WmiSdk/standard-qualifiers) ("WMI \| Win32 \_ BaseService")
+Qualifizierer: [**schlüssel**](/windows/desktop/WmiSdk/key-qualifier), [**Override**](/windows/desktop/WmiSdk/standard-qualifiers) ("Antecedent"), [**MappingStrings**](/windows/desktop/WmiSdk/standard-qualifiers) ("WMI \| Win32 \_ BaseService")
 </dt> </dl>
 
-Ein [**Win32 \_ BaseService,**](win32-baseservice.md) der den Basisdienst darstellt, der von der **Dependent-Eigenschaft** dieser Klasse abhängig ist.
+Ein [**\_ Win32-Basisdienst, der**](win32-baseservice.md) den Basisdienst darstellt, der von der **Dependent-Eigenschaft** dieser Klasse abhängig war.
 
 </dd> <dt>
 
@@ -79,10 +79,10 @@ Datentyp: **Win32 \_ BaseService**
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**key**](/windows/desktop/WmiSdk/key-qualifier), [**Override**](/windows/desktop/WmiSdk/standard-qualifiers) ("Dependent"), [**MappingStrings**](/windows/desktop/WmiSdk/standard-qualifiers) ("WMI \| Win32 \_ BaseService")
+Qualifizierer: [**Key**](/windows/desktop/WmiSdk/key-qualifier), [**Override**](/windows/desktop/WmiSdk/standard-qualifiers) ("Dependent"), [**MappingStrings**](/windows/desktop/WmiSdk/standard-qualifiers) ("WMI \| Win32 \_ BaseService")
 </dt> </dl>
 
-Ein [**Win32 \_ BaseService,**](win32-baseservice.md) der den Basisdienst darstellt, der von der **Vorgängereigenschaft** dieser Klasse abhängig ist.
+Ein [**\_ Win32-Basisdienst,**](win32-baseservice.md) der den Basisdienst darstellt, der von der **Antecedent-Eigenschaft dieser** Klasse abhängig ist.
 
 </dd> <dt>
 
@@ -97,7 +97,7 @@ Zugriffstyp: Schreibgeschützt
 
 Art der Dienst-zu-Dienst-Abhängigkeit. Diese Eigenschaft gibt an, dass der zugeordnete Dienst abgeschlossen, gestartet oder nicht gestartet werden muss, damit der Dienst funktioniert.
 
-Diese Eigenschaft wird von [**CIM \_ ServiceServiceDependency**](cim-serviceservicedependency.md)geerbt.
+Diese Eigenschaft wird von [**CIM \_ ServiceServiceDependency geerbt.**](cim-serviceservicedependency.md)
 
 <dt>
 
@@ -110,7 +110,7 @@ Diese Eigenschaft wird von [**CIM \_ ServiceServiceDependency**](cim-serviceserv
 
 <span id="Other"></span><span id="other"></span><span id="OTHER"></span>
 
-<span id="Other"></span><span id="other"></span><span id="OTHER"></span>**Andere** (1)
+<span id="Other"></span><span id="other"></span><span id="OTHER"></span>**Sonstige** (1)
 
 
 </dt> <dd></dd> <dt>
@@ -152,7 +152,7 @@ Der Dienst darf nicht gestartet werden.
 
 ## <a name="remarks"></a>Hinweise
 
-Die **Win32 \_ DependentService-Klasse** wird von [**CIM \_ ServiceServiceDependency**](cim-serviceservicedependency.md)abgeleitet.
+Die **Win32 \_ DependentService-Klasse** wird von [**CIM \_ ServiceServiceDependency abgeleitet.**](cim-serviceservicedependency.md)
 
 ## <a name="requirements"></a>Anforderungen
 

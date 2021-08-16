@@ -1,19 +1,19 @@
 ---
-title: Beispiel für eine Server Anmerkung
-description: Beispiel für eine Server Anmerkung
+title: Beispiel für Serveranmerkungen
+description: Beispiel für Serveranmerkungen
 ms.assetid: 8e87a2ca-236c-4082-acf5-dc3807dde6bc
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 75fb36fe7f196b44d2e43429168d5b65126c53eb
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: 219269a911b0848c62bc138ab0114a5d7178294688f86024146caf8acb9a87e4
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "106342246"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117745111"
 ---
-# <a name="server-annotation-sample"></a>Beispiel für eine Server Anmerkung
+# <a name="server-annotation-sample"></a>Beispiel für Serveranmerkungen
 
-Im folgenden finden Sie ein Beispiel für eine Server Anmerkung. Befolgen Sie die Anweisungen in Kommentaren, die mit/ \* TODO/markiert sind \* .
+Im Folgenden finden Sie ein Beispiel für die Serveranmerkung. Befolgen Sie die Anweisungen in Kommentaren, die mit \* /TODO \* / markiert sind.
 
 
 ```C++
@@ -205,9 +205,9 @@ public:
 
 
 
- 
+ 
 
- 
+ 
 
 
 

@@ -1,5 +1,5 @@
 ---
-description: Die Eigenschaft PKEY Device FriendlyName enthält den Angezeigten Namen des Endpunktgeräts (z. B. &\_ \_ \# 0034; Lautsprecher (XYZ-Audioadapter)&\# 0034;).
+description: Die PKEY \_ Device \_ FriendlyName-Eigenschaft enthält den Anzeigenamen des Endpunktgeräts (z. B. &\# 0034; Lautsprecher (XYZ-Audioadapter)&\# 0034;).
 ms.assetid: 3ccd6a78-8bc3-4a46-8f11-7c2ae8a23c63
 title: PKEY_Device_FriendlyName (Functiondiscoverykeys \_ devpkey.h)
 ms.topic: reference
@@ -13,11 +13,11 @@ ms.locfileid: "118406426"
 ---
 # <a name="pkey_device_friendlyname"></a>PKEY \_ Device \_ FriendlyName
 
-Die **Eigenschaft PKEY \_ Device \_ FriendlyName** enthält den Angezeigten Namen des Endpunktgeräts (z.B. "Speakers (XYZ Audio Adapter)").
+Die **PKEY \_ Device \_ FriendlyName-Eigenschaft** enthält den Anzeigenamen des Endpunktgeräts (z. B. "Speakers (XYZ Audio Adapter)").
 
 Der **vt-Member** der **PROPVARIANT-Struktur** ist auf VT \_ LPWSTR festgelegt.
 
-Der **pwszVal-Member** der **PROPVARIANT-Struktur** verweist auf eine null endende Zeichenfolge mit Breitzeichen, die den Benutzerfreundlichen Namen des Endpunktgeräts enthält.
+Der **pwszVal-Member** der **PROPVARIANT-Struktur** zeigt auf eine auf NULL endende Zeichenfolge mit Breitzeichen, die den Anzeigenamen des Endpunktgeräts enthält.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -25,7 +25,7 @@ Der **pwszVal-Member** der **PROPVARIANT-Struktur** verweist auf eine null enden
 
 | Anforderung | Wert |
 |-------------------------------------|-------------------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Windows Nur \[ Vista-Desktop-Apps\]<br/>                                                              |
+| Unterstützte Mindestversion (Client)<br/> | Windows \[Nur Vista-Desktop-Apps\]<br/>                                                              |
 | Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2008-Desktop-Apps\]<br/>                                                        |
 | Header<br/>                   | <dl> <dt>Functiondiscoverykeys \_ devpkey.h</dt> </dl> |
 

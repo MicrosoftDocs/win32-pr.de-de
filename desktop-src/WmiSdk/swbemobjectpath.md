@@ -1,8 +1,8 @@
 ---
-description: Verwenden Sie die Methoden und Eigenschaften des Objekts "errbemubjectpath", um einen Objekt Pfad zu erstellen und zu überprüfen. Dieses Objekt kann durch den VBScript-Befehl "up-Object" erstellt werden.
+description: Verwenden Sie die Methoden und Eigenschaften des SWbemObjectPath-Objekts, um einen Objektpfad zu erstellen und zu überprüfen. Dieses Objekt kann durch den VBScript CreateObject-Aufruf erstellt werden.
 ms.assetid: f2cf489d-d2a9-4926-84cf-fb33fe3d726a
 ms.tgt_platform: multiple
-title: Errbemubjectpath-Objekt (wbemdisp. h)
+title: SWbemObjectPath-Objekt (Wbemdisp.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -15,34 +15,34 @@ api_type:
 - COM
 api_location:
 - Wbemdisp.dll
-ms.openlocfilehash: 1e6836cd58970f3667d8f629a678d55bec5185a8
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 2d7273b39c5cdccea7e46a077c925247846cd9ca255fc1dba20a95aeb159b773
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106360164"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118313549"
 ---
-# <a name="swbemobjectpath-object"></a>Errbemubjectpath-Objekt
+# <a name="swbemobjectpath-object"></a>SWbemObjectPath-Objekt
 
-Verwenden Sie die Methoden und Eigenschaften des Objekts " **errbemubjectpath** ", um einen Objekt Pfad zu erstellen und zu überprüfen. Dieses Objekt kann durch den VBScript-Befehl "up- **Object** " erstellt werden.
+Verwenden Sie die Methoden und Eigenschaften des **SWbemObjectPath-Objekts,** um einen Objektpfad zu erstellen und zu überprüfen. Dieses Objekt kann durch den VBScript **CreateObject-Aufruf erstellt** werden.
 
 ## <a name="members"></a>Member
 
-Das Objekt " **errbeporbjectpath** " verfügt über diese Typen von Membern:
+Das **SWbemObjectPath-Objekt** verfügt über die folgenden Membertypen:
 
 -   [Methoden](#methods)
 -   [Eigenschaften](#properties)
 
 ### <a name="methods"></a>Methoden
 
-Das Objekt " **errbemubjectpath** " verfügt über diese Methoden.
+Das **SWbemObjectPath-Objekt** verfügt über diese Methoden.
 
 
 
-| Methode                                                   | BESCHREIBUNG                                                     |
+| Methode                                                   | Beschreibung                                                     |
 |:---------------------------------------------------------|:----------------------------------------------------------------|
-| [**-Klasse**](swbemobjectpath-setasclass.md)         | Erzwingt, dass der Pfad eine WMI-Klasse adressiert.<br/>              |
-| [**"Ttassingleton"**](swbemobjectpath-setassingleton.md) | Erzwingt, dass der Pfad eine Singleton-WMI-Instanz adressiert.<br/> |
+| [**SetAsClass**](swbemobjectpath-setasclass.md)         | Erzwingt, dass der Pfad eine WMI-Klasse adressiert.<br/>              |
+| [**SetAsSingleton**](swbemobjectpath-setassingleton.md) | Erzwingt, dass der Pfad eine Singleton-WMI-Instanz adressiert.<br/> |
 
 
 
@@ -50,25 +50,25 @@ Das Objekt " **errbemubjectpath** " verfügt über diese Methoden.
 
 ### <a name="properties"></a>Eigenschaften
 
-Das Objekt " **errbemubjectpath** " verfügt über diese Eigenschaften.
+Das **SWbemObjectPath-Objekt** verfügt über diese Eigenschaften.
 
 
 
-| Eigenschaft                                                              | Zugriffstyp           | BESCHREIBUNG                                                                                                                                                                          |
+| Eigenschaft                                                              | Zugriffstyp           | Beschreibung                                                                                                                                                                          |
 |:----------------------------------------------------------------------|:----------------------|:-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| [**Autoritative Stelle**](swbemobjectpath-authority.md)<br/>             | Lesen/Schreiben<br/> | Eine Zeichenfolge, die die Autoritäts Komponente des Objekt Pfads definiert.<br/>                                                                                                           |
-| [**Klasse**](swbemobjectpath-class.md)<br/>                     | Lesen/Schreiben<br/> | Der Name der Klasse, die Teil des Objekt Pfads ist.<br/>                                                                                                                        |
-| [**DisplayName**](swbemobjectpath-displayname.md)<br/>         | Lesen/Schreiben<br/> | Eine Zeichenfolge, die den Pfad in einem Formular enthält, das als Moniker-Anzeige Name verwendet werden kann. Siehe [Erstellen einer WMI-Anwendung oder eines Skripts](creating-a-wmi-application-or-script.md).<br/> |
-| [**IsClass**](swbemobjectpath-isclass.md)<br/>                 | Schreibgeschützt<br/>  | Boolescher Wert, der angibt, ob dieser Pfad eine Klasse darstellt. Dies entspricht der Eigenschaft " [ \_ \_ Eigenschaft" in der com](wmi-system-properties.md) -API.<br/>                    |
-| [**IsSingleton**](swbemobjectpath-issingleton.md)<br/>         | Schreibgeschützt<br/>  | Boolescher Wert, der angibt, ob dieser Pfad eine Singleton-Instanz darstellt.<br/>                                                                                                |
-| [**Schlüssel**](swbemobjectpath-keys.md)<br/>                       | Schreibgeschützt<br/>  | Ein [**-**](swbemnamedvalueset.md) Objekt, das die Schlüsselwert Bindungen enthält.<br/>                                                                          |
-| [**Gebietsschema**](swbemobjectpath-locale.md)<br/>                   | Lesen/Schreiben<br/> | Eine Zeichenfolge, die das Gebiets Schema für diesen Objekt Pfad enthält.<br/>                                                                                                                     |
-| [**Namespace**](swbemobjectpath-namespace.md)<br/>             | Lesen/Schreiben<br/> | Der Name des Namespace, der Teil des Objekt Pfads ist. Dies entspricht der [ \_ \_ Namespace](wmi-system-properties.md) -Eigenschaft in der com-API.<br/>                        |
-| [**Namespace**](swbemobjectpath-parentnamespace.md)<br/> | Schreibgeschützt<br/>  | Der Name des übergeordneten Elements des Namespace, der Teil des Objekt Pfads ist.<br/>                                                                                                      |
-| [**ADS**](swbemobjectpath-path.md)<br/>                       | Lesen/Schreiben<br/> | Enthält den absoluten Pfad. Dies entspricht der Eigenschaft [ \_ \_ path](wmi-system-properties.md) System in der com-API. Dies ist die Standard Eigenschaft dieses Objekts.<br/>    |
-| [**RelPath**](swbemobjectpath-relpath.md)<br/>                 | Lesen/Schreiben<br/> | Enthält den relativen Pfad. Dies entspricht der Eigenschaft " [ \_ \_ RelPath](wmi-system-properties.md) System" in der com-API.<br/>                                              |
-| [**Sicherheit\_**](swbemobjectpath-security-.md)<br/>            | Schreibgeschützt<br/>  | Wird verwendet, um die Sicherheitseinstellungen zu lesen oder zu ändern.<br/>                                                                                                                             |
-| [**Servers**](swbemobjectpath-server.md)<br/>                   | Lesen/Schreiben<br/> | Name des Servers. Dies entspricht der [ \_ \_ Server](wmi-system-properties.md) System Eigenschaft in der com-API.<br/>                                                       |
+| [**Behörde**](swbemobjectpath-authority.md)<br/>             | Lesen/Schreiben<br/> | Eine Zeichenfolge, die die Authority-Komponente des Objektpfads definiert.<br/>                                                                                                           |
+| [**Klasse**](swbemobjectpath-class.md)<br/>                     | Lesen/Schreiben<br/> | Name der Klasse, die Teil des Objektpfads ist.<br/>                                                                                                                        |
+| [**DisplayName**](swbemobjectpath-displayname.md)<br/>         | Lesen/Schreiben<br/> | Eine Zeichenfolge, die den Pfad in einem Formular enthält, das als Monikeranzeigename verwendet werden kann. Weitere Informationen [finden Sie unter Erstellen einer WMI-Anwendung oder eines Skripts.](creating-a-wmi-application-or-script.md)<br/> |
+| [**IsClass**](swbemobjectpath-isclass.md)<br/>                 | Schreibgeschützt<br/>  | Boolescher Wert, der angibt, ob dieser Pfad eine Klasse darstellt. Dies entspricht der [ \_ \_ Eigenschaft "Property"](wmi-system-properties.md) in der COM-API.<br/>                    |
+| [**IsSingleton**](swbemobjectpath-issingleton.md)<br/>         | Schreibgeschützt<br/>  | Boolescher Wert, der angibt, ob dieser Pfad eine Singletoninstanz darstellt.<br/>                                                                                                |
+| [**Schlüssel**](swbemobjectpath-keys.md)<br/>                       | Schreibgeschützt<br/>  | Ein [**SWbemNamedValueSet-Objekt,**](swbemnamedvalueset.md) das die Schlüsselwertbindungen enthält.<br/>                                                                          |
+| [**Gebietsschema**](swbemobjectpath-locale.md)<br/>                   | Lesen/Schreiben<br/> | Eine Zeichenfolge, die das -Locale für diesen Objektpfad enthält.<br/>                                                                                                                     |
+| [**Namespace**](swbemobjectpath-namespace.md)<br/>             | Lesen/Schreiben<br/> | Der Name des Namespace, der Teil des Objektpfads ist. Dies ist identisch mit der [ \_ \_ Namespace-Eigenschaft](wmi-system-properties.md) in der COM-API.<br/>                        |
+| [**ParentNamespace**](swbemobjectpath-parentnamespace.md)<br/> | Schreibgeschützt<br/>  | Der Name des übergeordneten Elements des Namespace, der Teil des Objektpfads ist.<br/>                                                                                                      |
+| [**Pfad**](swbemobjectpath-path.md)<br/>                       | Lesen/Schreiben<br/> | Enthält den absoluten Pfad. Dies ist identisch mit der [ \_ \_ Path-Systemeigenschaft](wmi-system-properties.md) in der COM-API. Dies ist die Standardeigenschaft dieses Objekts.<br/>    |
+| [**Relpath**](swbemobjectpath-relpath.md)<br/>                 | Lesen/Schreiben<br/> | Enthält den relativen Pfad. Dies ist identisch mit der [ \_ \_ Relpath-Systemeigenschaft](wmi-system-properties.md) in der COM-API.<br/>                                              |
+| [**Sicherheit\_**](swbemobjectpath-security-.md)<br/>            | Schreibgeschützt<br/>  | Wird zum Lesen oder Ändern der Sicherheitseinstellungen verwendet.<br/>                                                                                                                             |
+| [**Server**](swbemobjectpath-server.md)<br/>                   | Lesen/Schreiben<br/> | Name des Servers. Dies ist identisch mit der [ \_ \_ Server-Systemeigenschaft](wmi-system-properties.md) in der COM-API.<br/>                                                       |
 
 
 
@@ -76,7 +76,7 @@ Das Objekt " **errbemubjectpath** " verfügt über diese Eigenschaften.
 
 ## <a name="examples"></a>Beispiele
 
-Im folgenden VBScript-Codebeispiel wird veranschaulicht, wie Objekt Pfade erstellt werden.
+Im folgenden VBScript-Codebeispiel wird veranschaulicht, wie Objektpfade erstellt werden.
 
 
 ```VB
@@ -136,7 +136,7 @@ WScript.Echo ""
 
 
 
-Im folgenden perl-Codebeispiel wird veranschaulicht, wie Objekt Pfade erstellt werden.
+Im folgenden Perl-Codebeispiel wird veranschaulicht, wie Objektpfade erstellt werden.
 
 
 ```
@@ -221,19 +221,19 @@ else
 |-------------------------------------|-----------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows Vista<br/>                                                                |
 | Unterstützte Mindestversion (Server)<br/> | Windows Server 2008<br/>                                                          |
-| Header<br/>                   | <dl> <dt>Wbemdisp. h</dt> </dl>   |
-| Typbibliothek<br/>             | <dl> <dt>Wbemdisp. tlb</dt> </dl> |
+| Header<br/>                   | <dl> <dt>Wbemdisp.h</dt> </dl>   |
+| Typbibliothek<br/>             | <dl> <dt>Wbemdisp.tlb</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>Wbemdisp.dll</dt> </dl> |
-| CLSID<br/>                    | CLSID- \_ Swap-Austausch Pfad<br/>                                                       |
-| IID<br/>                      | IID \_ iswbemubjectpath<br/>                                                        |
+| CLSID<br/>                    | CLSID \_ SWbemObjectPath<br/>                                                       |
+| IID<br/>                      | IID \_ ISWbemObjectPath<br/>                                                        |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[API-Skript Objekte](scripting-api-objects.md)
+[Skripterstellung für API-Objekte](scripting-api-objects.md)
 </dt> </dl>
 
  

@@ -1,21 +1,21 @@
 ---
-title: Leuchtkraft zum Alpha Effekt
-description: Legen Sie den Alpha-Kanal mit der Leuchtkraft des Bilds fest, und legen Sie die Farbkanäle auf 0 fest.
+title: Leuchtdichte zu Alphaeffekt
+description: Verwenden Sie die Leuchtdichte für den Alphaeffekt, um den Alphakanal auf die Leuchtdichte des Bilds festzulegen, und legen Sie die Farbkanäle auf 0 fest.
 ms.assetid: B380DE5A-C097-47E0-8E0F-E3C9D2BA44B0
 keywords:
-- Leuchtkraft zum Alpha Effekt
+- Leuchtdichte zu Alphaeffekt
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 8fb4c6fb78a1d49498b2adab6716d41e93d30deb
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 803070fea76b47c1334803a4e7f8fef510cc77c8b3bc05c8477b572cb0451670
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104553037"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117825258"
 ---
-# <a name="luminance-to-alpha-effect"></a>Leuchtkraft zum Alpha Effekt
+# <a name="luminance-to-alpha-effect"></a>Leuchtdichte zu Alphaeffekt
 
-Legen Sie den Alpha-Kanal mit der Leuchtkraft des Bilds fest, und legen Sie die Farbkanäle auf 0 fest. Sie können die Ausgabe dieses Effekts verwenden, um einen semitransparenten Overlay basierend auf der Helligkeit des Eingabe Bilds zu erstellen. Oder Sie können Sie verwenden, um eine Bildmaske zu erstellen.
+Verwenden Sie die Leuchtdichte für den Alphaeffekt, um den Alphakanal auf die Leuchtdichte des Bilds festzulegen, und legen Sie die Farbkanäle auf 0 fest. Sie können die Ausgabe dieses Effekts verwenden, um eine semitransparente Überlagerung basierend auf der Helligkeit des Eingabebilds zu erstellen. Sie können es auch verwenden, um eine Bildmaske zu erstellen.
 
 > [!Note]  
 > Dieser Effekt hat keine Eigenschaften.
@@ -26,14 +26,14 @@ Die CLSID für diesen Effekt ist CLSID \_ D2D1LuminanceToAlpha.
 
 ## <a name="example-image"></a>Beispielbild
 
-Dieses Beispiel zeigt die Ausgabe des Leuchtkraft-und Alpha Effekts, der über einer weißen Oberfläche zusammengesetzt wird, um Deckkraft anzuzeigen.
+Dieses Beispiel zeigt die Ausgabe der Leuchtdichte für den Alphaeffekt, die über einer weißen Oberfläche zusammengesetzt ist, um Deckkraft anzuzeigen.
 
 
 
 | Vorher                                                            |
 |-------------------------------------------------------------------|
 | ![das Bild vor dem Effekt.](images/default-before.jpg)        |
-| Nach                                                             |
+| Danach                                                             |
 | ![das Bild nach der Transformation.](images/18-luminancetoalpha.png) |
 
 
@@ -65,15 +65,15 @@ m_d2dContext->EndDraw();
 
 
 
-Durch diesen Effekt wird der Alphakanal der Ausgabe mit dieser Farbmatrix auf die Leuchtkraft des Eingabe Bilds festgelegt.
+Dieser Effekt legt den Alphakanal der Ausgabe mithilfe dieser Farbmatrix auf die Leuchtdichte des Eingabebilds fest.
 
-![die Farbmatrix, die der Effekt zum Festlegen des Alphakanals verwendet.](images/luminance-to-alpha-math1.png)
+![Die Farbmatrix, die der Effekt verwendet, um den Alphakanal festzulegen.](images/luminance-to-alpha-math1.png)
 
-Diese Auswirkung verarbeitet und gibt vorab multiplizierte Alpha Bilder aus. Der Effekt funktioniert nicht bei geraden Alpha Bildern, es sei denn, Sie sind vollständig undurchsichtig.
+Dieser Effekt nutzt und gibt prämultipliierte Alphabilder aus. Der Effekt funktioniert nur bei alphangeraden Bildern, wenn sie vollständig deckend sind.
 
 > [!Note]
 >
-> Da Bilder in einem Gamma kompensierten Format gespeichert werden, sollten Sie vor dem Berechnen der Leuchtkraft für ein Bild zuerst eine umgekehrte Gammakorrektur durchführen, um die tatsächlichen Farbwerte für das Bild zu erhalten. Da Images normalerweise in 2,2 Gamma gespeichert werden, können Sie den Gamma-Übertragungs Effekt mit einem Exponenten von (1/2.2) verwenden und dann die Ausgabe dieses Effekts verwenden.
+> Da Bilder in einem Gammakompensierungsformat gespeichert werden, sollten Sie vor dem Berechnen der Leuchtdichte für ein Bild zuerst eine umgekehrte Gammakorrektur durchführen, um die tatsächlichen Farbwerte für das Bild abzurufen. Da Bilder normalerweise bei 2,2 Gamma gespeichert werden, können Sie den Gammaübertragungseffekt mit einem Exponenten von (1/2.2) verwenden und dann die Ausgabe dieses Effekts verwenden.
 
  
 
@@ -83,18 +83,18 @@ Diese Auswirkung verarbeitet und gibt vorab multiplizierte Alpha Bilder aus. Der
 
 | Anforderung | Wert |
 |--------------------------|------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client) | Windows 8 und Platt Form Update für Windows 7 \[ -Desktop-Apps für \| Windows Store-Apps\] |
-| Unterstützte Mindestversion (Server) | Windows 8 und Platt Form Update für Windows 7 \[ -Desktop-Apps für \| Windows Store-Apps\] |
-| Header                   | d2d1effects. h                                                                      |
-| Bibliothek                  | d2d1. lib, dxguid. lib                                                               |
+| Unterstützte Mindestversion (Client) | Windows 8 und Plattformupdate für Windows 7 \[ Desktop-Apps \| Windows Store Apps\] |
+| Unterstützte Mindestversion (Server) | Windows 8 und Plattformupdate für Windows 7 \[ Desktop-Apps \| Windows Store Apps\] |
+| Header                   | d2d1effects.h                                                                      |
+| Bibliothek                  | d2d1.lib, dxguid.lib                                                               |
 
 
 
  
 
-## <a name="output-bitmap"></a>Ausgabe Bitmap
+## <a name="output-bitmap"></a>Ausgabebitmap
 
-Die Ausgabe entspricht der Größe des Eingabe Bilds.
+Die Ausgabe hat die gleiche Größe wie das Eingabebild.
 
 ## <a name="related-topics"></a>Zugehörige Themen
 

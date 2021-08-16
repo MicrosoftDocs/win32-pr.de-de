@@ -1,6 +1,6 @@
 ---
 title: DsBackupGetBackupLogs-Funktion (Ntdsbcli.h)
-description: Erhält die Liste der Protokolldateien, die für den angegebenen Sicherungskontext gesichert werden müssen.
+description: Ruft die Liste der Protokolldateien ab, die für den angegebenen Sicherungskontext gesichert werden müssen.
 ms.assetid: 09b3fdac-41ea-471c-a0dd-54414181f6fe
 ms.tgt_platform: multiple
 keywords:
@@ -26,9 +26,9 @@ ms.locfileid: "118430103"
 ---
 # <a name="dsbackupgetbackuplogs-function"></a>DsBackupGetBackupLogs-Funktion
 
-\[Diese Funktion ist für die Verwendung in den im Abschnitt Anforderungen angegebenen Betriebssystemen verfügbar. Es kann in nachfolgenden Versionen geändert oder entfernt werden. Ab Windows Vista verwenden Sie stattdessen [Volumeschattenkopie-Dienst (VSS).](../vss/volume-shadow-copy-service-overview.md)\]
+\[Diese Funktion ist für die Verwendung in den Betriebssystemen verfügbar, die im Abschnitt Anforderungen angegeben sind. Es kann in nachfolgenden Versionen geändert oder entfernt werden. Verwenden Sie ab Windows Vista stattdessen [Volumeschattenkopie-Dienst (VSS).](../vss/volume-shadow-copy-service-overview.md)\]
 
-Die **DsBackupGetBackupLogs-Funktion** erhält die Liste der Protokolldateien, die für den angegebenen Sicherungskontext gesichert werden müssen.
+Die **DsBackupGetBackupLogs-Funktion** ruft die Liste der Protokolldateien ab, die für den angegebenen Sicherungskontext gesichert werden müssen.
 
 ## <a name="syntax"></a>Syntax
 
@@ -50,60 +50,60 @@ HRESULT DsBackupGetBackupLogs(
 *hbc* \[ In\]
 </dt> <dd>
 
-Enthält das Mit der [**DsBackupPrepare-Funktion erhaltene Sicherungskontexthand**](dsbackupprepare.md) handle.
+Enthält das Sicherungskontexthandle, das mit der [**DsBackupPrepare-Funktion**](dsbackupprepare.md) abgerufen wurde.
 
 </dd> <dt>
 
 *pszBackupLogFiles* \[ out\]
 </dt> <dd>
 
-Zeiger auf einen Zeichenfolgenzeiger, der die Liste der Protokolldateinamen als UNC-Pfade empfängt. Initialisieren Sie diesen Wert auf **NULL,** bevor **Sie DsBackupGetBackupLogs aufrufen.**
+Zeiger auf einen Zeichenfolgenzeiger, der die Liste der Protokolldateinamen als UNC-Pfade empfängt. Initialisieren Sie diesen Wert auf **NULL,** bevor Sie **DsBackupGetBackupLogs** aufrufen.
 
-Diese Liste empfängt eine doppelte Null-Terminierungsliste mit einzelnen Zeichenfolgen mit NULL-Terminierung.
+Diese Liste empfängt eine doppelt auf NULL endende Liste einzelner null-terminierte Zeichenfolgen.
 
-Dieser Puffer wird von der **DsBackupGetBackupLogs-Funktion** zugeordnet und muss durch Aufrufen der [**DsBackupFree-Funktion nicht**](dsbackupfree.md) mehr benötigt werden.
+Dieser Puffer wird von der **DsBackupGetBackupLogs-Funktion** zugeordnet und muss freigegeben werden, wenn er nicht mehr benötigt wird, indem die [**DsBackupFree-Funktion**](dsbackupfree.md) aufgerufen wird.
 
-Das erste Zeichen jedes Dateinamens enthält eine der [**BFT-Konstanten,**](bft-constants.md) die den Typ des Namens identifizieren.
+Das erste Zeichen jedes Dateinamens enthält eine der [**BFT-Konstanten,**](bft-constants.md) die den Typ des Namens identifiziert.
 
 </dd> <dt>
 
-*besize* \[ out\]
+*layoutSize* \[ out\]
 </dt> <dd>
 
-Zeiger auf **den DWORD-Wert,** der die Größe des *Puffers pszBackupLogFiles* in Bytes empfängt.
+Zeiger auf den **DWORD-Wert,** der die Größe des *Puffers pszBackupLogFiles* in Bytes empfängt.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt **S \_ OK zurück,** wenn die Funktion erfolgreich ist, andernfalls ein Win32- oder RPC-Fehlercode. In der folgenden Liste sind weitere mögliche Fehlercodes aufgeführt.
+Gibt **S \_ OK** zurück, wenn die Funktion erfolgreich ist oder andernfalls ein Win32- oder RPC-Fehlercode vorliegt. In der folgenden Liste sind weitere mögliche Fehlercodes aufgeführt.
 
 <dl> <dt>
 
-**FEHLER \_ BEIM \_ ZUGRIFF VERWEIGERT**
+**FEHLERZUGRIFF \_ \_ VERWEIGERT**
 </dt> <dd>
 
-Der Aufrufer verfügt nicht über die richtigen Zugriffsberechtigungen zum Aufrufen dieser Funktion. Mit [**der DsSetAuthIdentity-Funktion**](dssetauthidentity.md) können die Anmeldeinformationen festgelegt werden, die für die Sicherungs- und Wiederherstellungsfunktionen verwendet werden sollen.
+Der Aufrufer verfügt nicht über die richtigen Zugriffsberechtigungen zum Aufrufen dieser Funktion. Die [**DsSetAuthIdentity-Funktion**](dssetauthidentity.md) kann verwendet werden, um die Anmeldeinformationen festzulegen, die für die Sicherungs- und Wiederherstellungsfunktionen verwendet werden sollen.
 
 </dd> <dt>
 
-**FEHLER \_ UNGÜLTIGER \_ PARAMETER**
+**FEHLER: \_ UNGÜLTIGER \_ PARAMETER**
 </dt> <dd>
 
-*"hbc",* *"pszBackupLogFiles"* *oder "formatSize" ist* ungültig.
+*hbc,* *pszBackupLogFiles* oder *designsSize* ist ungültig.
 
 </dd> <dt>
 
-**FEHLER: \_ NICHT \_ GENÜGEND \_ ARBEITSSPEICHER**
+**FEHLER \_ NICHT \_ GENÜGEND \_ ARBEITSSPEICHER**
 </dt> <dd>
 
-Es ist ein Speicherbelegungsfehler aufgetreten.
+Fehler bei der Speicherbelegung.
 
 </dd> </dl>
 
 ## <a name="remarks"></a>Hinweise
 
-Die **Funktion DsBackupGetBackupLogs enthält** eine Liste der Protokolldateien, die für eine Sicherung erforderlich sind. Eine vollständige Sicherung besteht aus den Datenbankdateien, die von der [**DsBackupGetDatabaseNames-Funktion**](dsbackupgetdatabasenames.md) bereitgestellt werden, und den Protokolldateien. Inkrementelle Sicherungen von Active Directory-Servern werden nicht unterstützt.
+Die **DsBackupGetBackupLogs-Funktion** stellt eine Liste der Protokolldateien bereit, die für eine Sicherung erforderlich sind. Eine vollständige Sicherung besteht aus den Datenbankdateien, die von der [**DsBackupGetDatabaseNames-Funktion**](dsbackupgetdatabasenames.md) bereitgestellt werden, und den Protokolldateien. Inkrementelle Sicherungen von Active Directory-Servern werden nicht unterstützt.
 
 ## <a name="requirements"></a>Anforderungen
 

@@ -1,23 +1,23 @@
 ---
 title: Kennwort läuft nie ab (LDAP-Anbieter)
-description: Wenn Sie die Option Kennwort läuft nie ab mithilfe des LDAP-Anbieters aktivieren möchten, legen Sie \_ \_ für das \_ \_ userAccountControl-Attribut der userAccountControl-Eigenschaft das Kennwort für die Werbung
+description: Um die Option Kennwort läuft nie ab mithilfe des LDAP-Anbieters zu aktivieren, legen Sie das ADS \_ UF DONT EXPIRE PASSWD-Flag für das \_ \_ \_ UserAccountControl-Attribut des Benutzers fest.
 ms.assetid: b8d7e7fe-c846-45c4-9c5f-770530453836
 ms.tgt_platform: multiple
 keywords:
-- Kennwort läuft nie ab ADSI, LDAP-Anbieter
-- LDAP-Anbieter ADSI, Beispiele für die Benutzerverwaltung, Kennwort läuft nie ab
+- Password Never Expires ADSI ,LDAP provider (Kennwort läuft nie ab ADSI, LDAP-Anbieter)
+- LDAP-Anbieter ADSI , Benutzerverwaltungsbeispiele, Kennwort läuft nie ab
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 94c0d9eb42d37c1bcc7d65495fa0d72609060407
-ms.sourcegitcommit: b0ebdefc3dcd5c04bede94091833aa1015a2f95c
+ms.openlocfilehash: dfa48145fa2b78c7685cdf52ab58b1e681df48c7d10a80f0ac7462fa7d4cb868
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/21/2020
-ms.locfileid: "104391010"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117838930"
 ---
 # <a name="password-never-expires-ldap-provider"></a>Kennwort läuft nie ab (LDAP-Anbieter)
 
-Wenn Sie die Option Kennwort läuft nie ab mithilfe des LDAP-Anbieters aktivieren möchten, legen Sie für das [**userAccountControl-Attribut der userAccountControl**](/windows/desktop/ADSchema/a-useraccountcontrol) -Eigenschaft das Kennwort für die [**\_ \_ \_ \_ Werbung**](/windows/win32/api/iads/ne-iads-ads_user_flag_enum)
+Um die Option Kennwort läuft nie ab mithilfe des LDAP-Anbieters zu aktivieren, legen Sie das [**ADS \_ UF \_ DONT \_ EXPIRE \_ PASSWD-Flag**](/windows/win32/api/iads/ne-iads-ads_user_flag_enum) für das [**UserAccountControl-Attribut des Benutzers**](/windows/desktop/ADSchema/a-useraccountcontrol) fest.
 
 
 ```VB
@@ -56,6 +56,6 @@ hr = pUser->Release();
 
 
 
- 
+ 
 
- 
+ 

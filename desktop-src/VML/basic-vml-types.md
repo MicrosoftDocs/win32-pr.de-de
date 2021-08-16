@@ -1,21 +1,21 @@
 ---
 title: Grundlegende VML-Typen
-description: In diesem Thema wird VML beschrieben, ein Feature, das ab Windows Internet Explorer 9 als veraltet gilt. Migrieren von Webseiten und Anwendungen, die auf VML basieren, zu SVG oder anderen weit verbreiteten Standards.
+description: In diesem Thema wird VML beschrieben, ein Feature, das ab Version 9 Windows Internet Explorer ist. Migrieren Sie Webseiten und Anwendungen, die auf VML basieren, zu SVG oder anderen weit verbreiteten Standards.
 ms.assetid: 07c17e7b-5ac4-4a8d-a468-559307408d5b
 keywords:
 - Vector Markup Language (VML), Basistypen
 - VML (Vector Markup Language),Basistypen
-- Vektorgrafiken, grundlegende VML-Typen
+- Vektorgrafiken,einfache VML-Typen
 - Vector Markup Language (VML), Typen
-- VML (Vector Markup Language), Typen
+- VML (Vector Markup Language),Typen
 - Vektorgrafiken, VML-Typen
 - Grundlegende VML-Typen
-- boolescher Typ
-- fraction-Typ
-- Typ der Koordinate
+- Boolescher Typ
+- Bruchtyp
+- Ordinaltyp
 - length-Typ
 - Measuretyp
-- Angle-Typ
+- Winkeltyp
 - Farbtyp
 - Schriftarttyp
 - Bitmaptyp
@@ -31,10 +31,10 @@ ms.locfileid: "118347819"
 ---
 # <a name="basic-vml-types"></a>Grundlegende VML-Typen
 
-In diesem Thema wird VML beschrieben, ein Feature, das ab Windows Internet Explorer 9 als veraltet gilt. Webseiten und Anwendungen, die auf VML basieren, sollten zu SVG oder anderen allgemein unterstützten Standards migriert werden.
+In diesem Thema wird VML beschrieben, ein Feature, das ab Version 9 Windows Internet Explorer ist. Webseiten und Anwendungen, die auf VML basieren, sollten zu SVG oder anderen weit verbreiteten Standards migriert werden.
 
 > [!Note]  
-> Seit Dezember 2011 wurde dieses Thema archiviert. Daher wird sie nicht mehr aktiv verwaltet. Weitere Informationen finden Sie unter [Archivierter Inhalt.](/previous-versions/windows/internet-explorer/ie-developer/) Informationen, Empfehlungen und Anleitungen zur aktuellen Version von Windows Internet Explorer finden Sie unter [Internet Explorer Developer Center.](https://msdn.microsoft.com/ie/)
+> Seit Dezember 2011 wurde dieses Thema archiviert. Daher wird sie nicht mehr aktiv verwaltet. Weitere Informationen finden Sie unter [Archivierter Inhalt.](/previous-versions/windows/internet-explorer/ie-developer/) Informationen, Empfehlungen und Anleitungen zur aktuellen Version von Windows Internet Explorer finden Sie im [Internet Explorer Developer Center.](https://msdn.microsoft.com/ie/)
 
  
 
@@ -64,30 +64,30 @@ In diesem Thema wird VML beschrieben, ein Feature, das ab Windows Internet Explo
 
 ## <a name="introduction"></a>Einführung
 
-In diesem Vorschlag wird eine kleine Anzahl grundlegender Typen verwendet, die in der folgenden Tabelle aufgeführt sind.
+Dieser Vorschlag verwendet eine kleine Anzahl grundlegender Typen, die in der folgenden Tabelle aufgeführt sind.
 
 
 
 | type                  | Element           | Grundlegende Darstellung | BESCHREIBUNG                                                                                          |
 |-----------------------|-------------------|----------------------------|------------------------------------------------------------------------------------------------------|
 | [boolean](#boolean)   |                   | 1 Bit                      | Ein boolescher Wert: true oder false.                                                                      |
-| [fraction](#fraction) |                   | Nummer 2 6                 | Ein numerischer Wert, der um 2 6 (65536) skaliert und als ganze Zahl mit Vorzeichen gespeichert wird.                               |
-| [Koordinieren](#ordinate) |                   | 30-Bit-Ganzzahl plus Vorzeichen   | Teil einer Koordinate (z. B. in einem Pfad), die durch Coord definierten Werte.                                |
+| [fraction](#fraction) |                   | Zahl 2 6                 | Ein numerischer Wert, der um 2 6 (65536) skaliert und als ganze Zahl mit Vorzeichen gespeichert wird.                               |
+| [Koordinieren](#ordinate) |                   | 30-Bit-Ganzzahl plus Vorzeichen   | Teil einer Koordinate (z. B. in einem Pfad) der durch coord definierten Werte.                                |
 | [length](#length)     |                   | [Wwu](#length)             | Eine physische Länge, z. B. die Breite einer Linie oder die Größe einer Schriftart.                                |
 | [Messen](#measure)   |                   | EMU oder Nummer 2 6          | Entweder eine physische Länge, einschließlich einer Anzahl von Gerätepixeln, oder ein Bruchteil einer anderen Menge. |
-| [angle](#angle)       |                   | Grad 2 6                | Ein Winkel; Positive ist im Uhrzeigersinn.                                                                     |
-| [color](#color)       | [c](#color)       | complex                    | Ein Element, das das Ableiten einer Farbe zulässt.                                                        |
+| [angle](#angle)       |                   | Grad 2 6                | Ein Winkel; Positiv ist im Uhrzeigersinn.                                                                     |
+| [color](#color)       | [c](#color)       | complex                    | Ein Element, mit dem eine Farbe abgeleitet werden kann.                                                        |
 | [Schriftart](#font)         | [Schriftart](#font)     | complex                    | Eine Beschreibung einer Schriftart.                                                                             |
 | [Bitmap](#bitmap)     | [Bitmap](#bitmap) | href                       | Ein Verweis auf eine externe Bilddatei.                                                             |
-| [Vektor](#vector)     | [V](#vector)      | complex                    | Beschreibung eines Vektorpfads                                                                       |
+| [Vektor](#vector)     | [V](#vector)      | complex                    | Eine Beschreibung eines Vektorpfads                                                                       |
 
 
 
  
 
-Die "grundlegende Darstellung" ist die Darstellung mit der höchsten Genauigkeit, für die der Vorschlag eine konforme Implementierung erfordert. Daten verloren, wenn die Implementierung die Daten nicht mit der erforderlichen Genauigkeit darstellen kann. Die Typen "Color", "font" und "vector" entsprechen Elementen, die selbst strukturell sind. In gewissem Sinne handelt es sich dabei nicht um einfache Typen. Es ist jedoch praktisch, sie in diesem Vorschlag als solche zu behandeln.
+Die "grundlegende Darstellung" ist die Darstellung mit der höchsten Genauigkeit, die der Vorschlag erfordert, um eine konforme Implementierung zu verwalten. -Daten gehen verloren, wenn die Implementierung die Daten nicht mit der erforderlichen Genauigkeit darstellen kann. Die Farb-, Schriftart- und Vektortypen entsprechen Elementen, die selbst strukturiert sind– in einem Sinne sind sie keine grundlegenden Typen; Es ist jedoch praktisch, sie in diesem Vorschlag als solche zu behandeln.
 
-Jedem nicht komplexen Basistyp ist ein Element mit dem gleichen Namen zugeordnet. Diese Elementnamen sind reserviert und dürfen nicht für andere Zwecke innerhalb von Erweiterungen verwendet werden, auch wenn die Verwendung innerhalb eines onview="skip"-Erweiterungselements erfolgt. Aus diesem Grund ist es möglich, dass eine Implementierung, die auf unbekanntes XML trifft, einen effizienten internen Speicher des unbekannten XML bereitstellt, solange die Werte in die "type"-Elemente eingeschlossen sind.
+Jedem nicht komplexen Basistyp ist ein Element mit demselben Namen zugeordnet. Diese Elementnamen sind reserviert und dürfen nicht für andere Zwecke innerhalb von Erweiterungen verwendet werden, auch wenn die Verwendung innerhalb eines onview="skip"-Erweiterungselements liegt. Aus diesem Grund ist es möglich, dass eine Implementierung, die unbekanntes XML-Code trifft, eine effiziente interne Speicherung des unbekannten XML-Code ermöglicht, solange die Werte in die "Type"-Elemente eingeschlossen sind.
 
 
 ```HTML
@@ -97,11 +97,11 @@ Jedem nicht komplexen Basistyp ist ein Element mit dem gleichen Namen zugeordnet
 
 
 
-Im ersten Beispiel oben muss die Zeichenfolge "1.578" als Zeichenfolge gespeichert werden (die Implementierung weiß nicht, ob es sich um eine Zeichenfolge oder eine Zahl handelt). Im zweiten Beispiel gibt das Fraction-Element an, dass der Inhalt eine Zahl ist, sodass es in die Darstellung mit hoher Genauigkeit konvertiert werden kann.
+Im ersten Beispiel oben muss die Zeichenfolge "1.578" als Zeichensequenz gespeichert werden (die Implementierung weiß nicht, ob es sich um eine Zeichenfolge oder eine Zahl handelt). Im zweiten Beispiel gibt das Fraction-Element an, dass der Inhalt eine Zahl ist, daher kann er in die Bruchdarstellung mit hoher Genauigkeit konvertiert werden.
 
-Komplexe Typen (einschließlich Bitmap) verfügen über zugeordnete Elementnamen, die zum Begrenzen des Werts verwendet werden. Dies vereinfacht die Analyse, indem sichergestellt wird, dass die komplexeren Analysetasks eindeutigen Elementtags zugeordnet werden.
+Komplexe Typen (einschließlich Bitmap) verfügen über zugeordnete Elementnamen, die zum Begrenzen des Werts verwendet werden. Dadurch wird die Analyse vereinfacht, indem sichergestellt wird, dass die komplexeren Analyseaufgaben eindeutigen Elementtags zugeordnet werden.
 
-[![Zurück zum Anfang ](images/top.gif) Zurück zum Anfang](#top)
+[![zurück zum Anfang ](images/top.gif) Zurück zum Anfang](#top)
 
 ## <a name="boolean"></a>boolean
 
@@ -117,7 +117,7 @@ Ein boolescher Wert wird als Schlüsselwort dargestellt, das den Zustand des Fla
 
 
 
-| Wert für TRUE | Wert für FALSE |
+| Wert für "true" | Wert für false |
 |----------------|-----------------|
 | true           | false           |
 | ja            | nein              |
@@ -131,7 +131,7 @@ Ein boolescher Wert wird als Schlüsselwort dargestellt, das den Zustand des Fla
 
 Eine Implementierung kann einen beliebigen Wert schreiben und muss alle Werte erkennen. Eine Implementierung kann Werte von einer Darstellung in eine andere ändern.
 
-[![Zurück zum Anfang ](images/top.gif) Zurück zum Anfang](#top)
+[![zurück zum Anfang ](images/top.gif) Zurück zum Anfang](#top)
 
 ## <a name="fraction"></a>fraction
 
@@ -143,7 +143,7 @@ fraction
 
 
 
-Alle numerischen Werte (d. h. Werte dimensionsloser Mengen) in diesem Vorschlag können als ganze Zahlen gespeichert werden, indem sie um 2 6 (65536) skaliert werden. Eine Zahl kann entweder in dieser Form mit dem Suffix f oder als Dezimalzahl ohne Suffix angegeben werden. Daher stellen die folgenden hypothetischen Elemente den gleichen Wert dar.
+Alle numerischen Werte (d. h. Werte dimensionsloser Mengen) in diesem Vorschlag können als ganze Zahlen gespeichert werden, indem sie um 2 6 (65536) skaliert werden. Eine Zahl kann entweder in dieser Form mit dem Suffix f oder als Dezimalzahl ohne Suffix angegeben werden. Daher stellen die folgenden hypothetischen Elemente denselben Wert dar.
 
 
 ```HTML
@@ -153,15 +153,15 @@ Alle numerischen Werte (d. h. Werte dimensionsloser Mengen) in diesem Vorschlag 
 
 
 
-Eine Menge mit dem Suffix f muss eine ganze Zahl sein. Bruchzahlen sind nicht zulässig. Die resultierende ganze Zahl muss als Komplement mit Vorzeichen einer 32-Bit-2-Zahl darstellbar sein. daher ist der effektive Bereich der Darstellung 32768 (tatsächlich kleiner als 32768 und größer oder gleich -32768).)
+Eine Menge mit dem Suffix f muss eine ganze Zahl sein. Bruchzahlen sind nicht zulässig. Die resultierende ganze Zahl muss als 32-Bit-2-Komplement mit Vorzeichen dargestellt werden können. Daher ist der effektive Bereich der Darstellung 32768 (tatsächlich kleiner als 32768 und größer oder gleich -32768).
 
-Eine konforme Implementierung ist erforderlich, um Werte beizubehalten, die als f-Werte ausgedrückt werden. Werte, die als Dezimalzahlen dargestellt werden, können in einen f-Wert konvertiert und auf diese Weise gespeichert werden. Eine Anwendung ist berechtigt, intern generierte Werte in jeder geeigneten Einheit aufzuzeichnen. ein aus einem vorhandenen Dokument eingelesener Wert muss jedoch entweder mit der vollständigen ursprünglichen Genauigkeit beibehalten oder in einen f-Wert konvertiert werden.
+Eine konforme Implementierung ist erforderlich, um Werte zu erhalten, die als f-Werte ausgedrückt werden. Werte, die als Dezimalzahlen dargestellt werden, können in einen f-Wert konvertiert und auf diese Weise gespeichert werden. Eine Anwendung darf intern generierte Werte in jeder geeigneten Einheit aufzeichnen. Ein aus einem vorhandenen Dokument gelesener Wert muss jedoch entweder bis zur vollständigen ursprünglichen Genauigkeit beibehalten oder in einen f-Wert konvertiert werden.
 
-Wenn die Implementierung dies nicht kann, muss sie den Benutzer warnen, dass Daten verloren gehen können. (Es ist akzeptabel, eine solche Warnung einmal auszugeben, wenn extern generierte Daten zum ersten Mal gefunden werden.)
+Wenn die Implementierung dies nicht tun kann, muss sie den Benutzer warnen, dass Möglicherweise Daten verloren gehen. (Es ist akzeptabel, eine solche Warnung einmal aus zu geben, wenn extern generierte Daten zum ersten Mal gefunden werden.)
 
-Wenn ein Dezimalwert in das f-Format konvertiert wird, kann die Implementierung einen beliebigen arithmetischen Rundungsmodus verwenden. eine ganze Zahl muss jedoch genau in das f-Format konvertiert werden. Es wird empfohlen, dass Implementierungen konvertiert werden, indem sie auf minus unendlich gerundet werden, und dass die Konvertierung immer genau ist.
+Wenn ein Dezimalwert in das f-Format konvertiert wird, kann die Implementierung einen beliebigen arithmetischen Rundungsmodus verwenden. eine ganze Zahl muss jedoch genau in das Format f konvertiert werden. Es wird empfohlen, dass Implementierungen konvertiert werden, indem sie auf minus unendlich gerundet werden und dass die Konvertierung immer genau ist.
 
-[![Zurück zum Anfang ](images/top.gif) Zurück zum Anfang](#top)
+[![zurück zum Anfang ](images/top.gif) Zurück zum Anfang](#top)
 
 ## <a name="ordinate"></a>Koordinieren
 
@@ -173,13 +173,13 @@ ordinate
 
 
 
-Die Einheiten des Koordinatensystems, die von coord eingerichtet werden, sind von einem nominalen Typ, der als "15" bezeichnet wird. Dies ist ein Maß für die Länge, wird jedoch nur in Bezug auf das Rechteck verwendet, das durch das Coord eingerichtet wird. Jeder Wert vom Typ "ordinate" wird anhand der *w-* und *h-Werte* des Koords und des resultierenden Verhältnisses skaliert, das verwendet wird, um eine echte Messung auf dem Ausgabegerät einzurichten.
+Die Einheiten des koordinatenkoordinaten Systems sind von einem nominalen Typ, der als Ordinalzahl bezeichnet wird. Dies ist ein Maß für die Länge, wird aber nur in Bezug auf das Rechteck verwendet, das coord eingibt. Jeder Wert vom Typ ordinte wird durch die *w-* und *h-Werte* des Coord und das resultierende Verhältnis skaliert, das verwendet wird, um eine echte Messung auf dem Ausgabegerät zu erstellen.
 
-Eine konforme Implementierung muss in der Lage sein, Werte von bis zu 30 Bit plus Vorzeichen (d.h. eine 31-Bit-Ganzzahl mit Vorzeichen, keine 32-Bit-Ganzzahl mit Vorzeichen) zu verarbeiten. Es wird jedoch empfohlen, dass Implementierungen versuchen, Koordinaten für Pfad- und ähnliche Elemente mit einer Genauigkeit von etwa 16 Bits zu erzeugen. Dadurch wird die Wahrscheinlichkeit eines Unterlaufs oder Überlaufs in einer nicht konformen Implementierung minimiert.
+Eine konforme Implementierung muss ordinierte Werte von bis zu 30 Bits plus Vorzeichen verarbeiten können (d. h. eine 31-Bit-Ganzzahl mit Vorzeichen, keine 32-Bit-Ganzzahl mit Vorzeichen). Es wird jedoch empfohlen, dass Implementierungen versuchen, Koordinaten für Pfadelemente und ähnliche Elemente mit einer Genauigkeit von etwa 16 Bits zu erzeugen. Dadurch wird die Wahrscheinlichkeit eines Unterlaufs oder Überlaufs in einer nicht konformen Implementierung minimiert.
 
--Werte sind immer integral. Ein Dezimaltrennzeichen wird möglicherweise nicht in einem Wert vom Typ "vererkt" angezeigt. Es dürfen keine Einheitenspezifizierer an Werte vom Typ "Spezifizierer" angefügt werden.
+Ordinalwerte sind immer integral. Ein Dezimaltrennzeichen wird möglicherweise nicht in einem Wert vom Typ Ordinalzahl angezeigt. An Werte vom Typ ordinte dürfen keine Einheitenspezifizierer angefügt werden.
 
-[![Zurück zum Anfang ](images/top.gif) Zurück zum Anfang](#top)
+[![zurück zum Anfang ](images/top.gif) Zurück zum Anfang](#top)
 
 ## <a name="length"></a>length
 
@@ -193,14 +193,14 @@ length
 
 Eine Länge ist eine reale Messung oder manchmal eine Messung in Gerätepixeln. Es wird empfohlen, dass Implementierungen die Verwendung von Gerätepixeln (px) vermeiden.
 
-Alle [STANDARDMÄßIGEN CSS1-Einheitenqualifizierer](https://www.w3.org/pub/WWW/TR/REC-CSS1) sind mit einer Länge zulässig. Darüber hinaus kann die Qualifiziereremulator-Emulator verwendet werden. Dieser Qualifizierer bezieht sich auf eine Einheit , die EWU (English Metric Unit), die ein gemeinsamer Nenner der Maßmengen ist, die in Computergrafiken weit verbreitet sind. Die EMU ist inch/914400, d.h. es gibt 914400 EMU pro Zoll. <sup></sup> In der folgenden Tabelle ist die Anzahl der EMUs in einer kleinen Anzahl häufig auftretender Einheiten aufgeführt.
+Alle STANDARDMÄßIGEN CSS1-Einheitenqualifizierer sind für eine Länge zulässig. [](https://www.w3.org/pub/WWW/TR/REC-CSS1) Darüber hinaus kann der Qualifizierer Emu verwendet werden. Dieser Qualifizierer bezieht sich auf eine Einheit – die EMU (English Metric Unit) –, die ein gemeinsamer Nenner der Messmengen ist, die weit verbreitet in Computergrafiken verwendet werden. Die EMU ist "inch/914400", d. h., es gibt 914400 EMU pro Zoll. <sup></sup> In der folgenden Tabelle ist die Anzahl der EMUs in einer kleinen Anzahl häufig gefundener Einheiten aufgeführt.
 
 
 
-| Anzahl der EMUs | Anzahl pro Zoll | Number per Millimeter | BESCHREIBUNG             |
+| Anzahl der EMUs | Zahl pro Zoll | Zahl pro Millimeter | BESCHREIBUNG             |
 |----------------|-----------------|-----------------------|-------------------------|
 | 360            |                 | 0,01                  | Win32 HIMETRIC          |
-| 12700          | 72              |                       | "point"                 |
+| 12700          | 72              |                       | "Point"                 |
 | 635            | 1440            |                       | Win32 TWIP              |
 | 762            | 1200            |                       | Drucker mit hoher Auflösung |
 
@@ -208,25 +208,25 @@ Alle [STANDARDMÄßIGEN CSS1-Einheitenqualifizierer](https://www.w3.org/pub/WWW/
 
  
 
-Bruchteile von EMUs sind nicht zulässig. Jede Messung muss als 32-Bit-Ganzzahl von EMUs mit Vorzeichen darstellbar sein – dies schränkt die Größe einer Messung auf 2348 Zoll ein – etwa 59 Meter oder 65 Meter. Da sich die Messungen immer auf die Größe eines Renderings auf einem Ausgabegerät mit nominaler Bildschirm- oder Seitengröße beziehen, liegen sie immer innerhalb dieses Bereichs.
+Bruchzahlen von EMUs sind nicht zulässig. Jede Messung muss als 32-Bit-Ganzzahl mit Vorzeichen von EMUs darstellbar sein – dies beschränkt die Größe einer Messung auf 2348 Zoll – etwa 59 Meter oder 65 Meter. Da die Messungen immer auf die Größe eines Renderings auf einem nominalen Ausgabegerät mit Bildschirm- oder Seitengröße verweisen, liegen sie immer innerhalb dieses Bereichs.
 
-Beachten Sie jedoch, dass die Darstellung für reale Messungen ungeeignet ist und dass an dem Ort, an dem diese aufgezeichnet werden (z. B. um die tatsächliche Größe eines Pfads aufzuzeichnen), eine andere Darstellung verwendet werden muss.
+Beachten Sie jedoch, dass die Darstellung für reale Messungen ungeeignet ist und dass dort, wo diese aufgezeichnet werden (z. B. um die reale Größe eines Pfads zu erfassen), eine andere Darstellung verwendet werden muss.
 
-Eine konforme Implementierung ist erforderlich, um Werte beizubehalten, bei denen es sich um die genaue Anzahl von EMUs handelt. Auf andere Weise dargestellte Werte können in einen EMU-Wert konvertiert und auf diese Weise gespeichert werden. Eine Anwendung ist berechtigt, intern generierte Werte in jeder geeigneten Einheit aufzuzeichnen. Ein aus einem vorhandenen Dokument eingelesener Wert muss jedoch entweder mit voller ursprünglicher Genauigkeit beibehalten oder in einen EMU-Wert konvertiert werden.
+Eine konforme Implementierung ist erforderlich, um Werte zu erhalten, die eine genaue Anzahl von EMUs sind. Auf andere Weise dargestellte Werte können in einen EMU-Wert konvertiert und auf diese Weise gespeichert werden. Eine Anwendung darf intern generierte Werte in jeder geeigneten Einheit aufzeichnen. Ein aus einem vorhandenen Dokument gelesener Wert muss jedoch entweder bis zur vollständigen ursprünglichen Genauigkeit beibehalten oder in einen EMU-Wert konvertiert werden.
 
-Wenn die Implementierung dies nicht kann, muss sie den Benutzer warnen, dass Daten verloren gehen können. (Es ist akzeptabel, eine solche Warnung einmal auszugeben, wenn extern generierte Daten zum ersten Mal gefunden werden.)
+Wenn die Implementierung dies nicht tun kann, muss sie den Benutzer warnen, dass Möglicherweise Daten verloren gehen. (Es ist akzeptabel, eine solche Warnung einmal aus zu geben, wenn extern generierte Daten zum ersten Mal gefunden werden.)
 
-In der Praxis werden physische Längen für relativ wenige Messungen in diesem Vorschlag verwendet. Die normalerweise wichtigsten Daten sind die Pfaddaten, die im Koordinatensystem codiert werden, das auf Formbasis durch Coord definiert wird.
+In der Praxis werden physische Längen für relativ wenige Messungen in diesem Vorschlag verwendet. Die Daten, die normalerweise am wichtigsten sind, sind die Pfaddaten, die im Koordinatensystem codiert werden, das auf Formbasis durch Coord definiert wird.
 
 ### <a name="alternative-representations"></a>Alternative Darstellungen
 
-Die Standardlängendarstellungen von HTML werden von [CSS1](https://www.w3.org/pub/WWW/TR/REC-CSS1#length-units) definiert. Relative Einheiten, mit Ausnahme des Pixels, sind in dem Kontext, in dem Längen in diesem Vorschlag verwendet werden, nicht sinnvoll und dürfen nicht verwendet werden. Wenn das Dokument die beabsichtigte Pixelgröße (Ziel) aufzeichnet, definiert dies die Übersetzung von Pixeln in EMU. Andernfalls sollte der von [CSS1](https://www.w3.org/pub/WWW/TR/REC-CSS1#length-units) definierte Standardwert von 90 dpi verwendet werden.
+Die Standardlängendarstellungen von HTML werden durch [CSS1 definiert.](https://www.w3.org/pub/WWW/TR/REC-CSS1#length-units) Relative Einheiten, mit Ausnahme des Pixels, sind im Kontext, in dem Längen in diesem Vorschlag verwendet werden, nicht sinnvoll und dürfen nicht verwendet werden. Wenn das Dokument die beabsichtigte Pixelgröße (Ziel) auf zeichnet, wird die Übersetzung von Pixeln in EMU definiert. Andernfalls sollte der von [CSS1](https://www.w3.org/pub/WWW/TR/REC-CSS1#length-units) definierte Standardwert von 90 dpi verwendet werden.
 
-Mit Ausnahme von emu kann jeder Wert als Dezimalbruch angegeben werden. Wenn ein Dezimalwert in EMU konvertiert wird, kann die Implementierung einen beliebigen arithmetischen Rundungsmodus verwenden. (Die einzige Möglichkeit für eine Erstellungsanwendung, ein bestimmtes Ergebnis zu gewährleisten, besteht darin, sie in emu anzugeben.)
+Mit Ausnahme von Emu kann jeder Wert als Dezimalbruch angegeben werden. Wenn ein Dezimalwert in EMU konvertiert wird, kann die Implementierung einen beliebigen arithmetischen Rundungsmodus verwenden. (Die einzige Möglichkeit für eine Erstellungsanwendung, ein bestimmtes Ergebnis zu garantieren, besteht in der Angabe in emu.)
 
-Wenn kein Einheitenspezifizierer in einem Längenwert angegeben wird, muss die Implementierung von emu ausgehen.
+Wenn kein Einheitenspezifizierer in einem Längenwert angegeben wird, muss die Implementierung emu voraussetzungen.
 
-[![Zurück zum Anfang ](images/top.gif) Zurück zum Anfang](#top)
+[![zurück zum Anfang ](images/top.gif) Zurück zum Anfang](#top)
 
 ## <a name="measure"></a>Kennzahl
 
@@ -238,11 +238,11 @@ measure
 
 
 
-Ein Measure ist eine Menge, die entweder eine [Länge](#length) oder ein [Bruchteil](#fraction)sein kann. Dies ähnelt den HTML- und CSS-Längenmessungen, die in vielen Fällen entweder physische Messungen oder Prozentsätze einer anderen Menge sein können. Wenn kein Einheitenspezifizierer angegeben wird, muss davon ausgegangen werden, dass es sich bei dem Wert um einen Dezimalbruch handelt (daher wird dieses Verhalten von fraction und nicht von length geerbt.)
+Ein Measure ist eine Menge, die entweder eine Länge [oder](#length) einen Bruch [sein kann.](#fraction) Dies ähnelt den HTML- und CSS-Längenmessungen, die in vielen Fällen entweder physische Messungen oder Prozentsätze einer anderen Menge sein können. Wenn kein Einheitenspezifizierer angegeben wird, muss davon ausgegangen werden, dass der Wert ein Dezimalbruch ist (daher wird dieses Verhalten von fraction und nicht von length geerbt.)
 
-Im Gegensatz zur Länge hat ein Pixelwert eine kontextdefinierte Bedeutung, sodass die Konvertierung in die Emulierung normalerweise ungeeignet ist. Es gibt drei mögliche grundlegende Darstellungen, die von der Implementierung verwaltet werden müssen (d. h., eine Darstellung kann nicht ohne Informationsverlust in eine andere konvertiert werden).
+Im Gegensatz zur Länge hat ein Pixelwert eine kontextdefinierte Bedeutung, sodass die Konvertierung in Emu normalerweise ungeeignet ist. Es gibt drei mögliche grundlegende Darstellungen, die von der Implementierung verwaltet werden müssen (d. h., eine Darstellung kann ohne Verlust von Informationen nicht in eine andere konvertiert werden).
 
-1.  Ein Bruchwert sollte im [Bruchformat](#fraction) beibehalten werden (ein "f"-Wert).
+1.  Ein Bruchwert sollte im Bruchformat beibehalten [werden](#fraction) (ein "f"-Wert).
 2.  Eine physische Länge sollte in EMU beibehalten werden.
 3.  Ein Pixelwert sollte als ganze Anzahl von Pixeln beibehalten werden.
 
@@ -250,9 +250,9 @@ Bruchzahlen von Pixeln sind nicht zulässig.
 
 ### <a name="alternative-representations"></a>Alternative Darstellungen
 
-Alle alternativen Darstellungen von [Bruch](#fraction) und [Länge](#length) sind zulässig.
+Alle alternativen Darstellungen von [Bruch und](#fraction) [Länge](#length) sind zulässig.
 
-[![Zurück zum Anfang ](images/top.gif) Zurück zum Anfang](#top)
+[![zurück zum Anfang ](images/top.gif) Zurück zum Anfang](#top)
 
 ## <a name="angle"></a>angle
 
@@ -264,17 +264,17 @@ angle
 
 
 
-Die grundlegende Darstellung eines Winkels ist eine Anzahl von Grad, die um 2 6 (65536) multipliziert und als ganze Zahl gespeichert werden. Da der Koordinatenraum invertiert ist (die positive y-Achse ist herunter), ist ein Winkel im Uhrzeigersinn positiv. Eine konforme Implementierung ist erforderlich, um die vollständige Genauigkeit eines solchen Werts zu erhalten.
+Die grundlegende Darstellung eines Winkels ist eine Anzahl von Graden, die durch 2 6 (65536) multiplet und als ganze Zahl gespeichert werden. Da der Koordinatenraum invertiert ist (die positive y-Achse ist herunter), ist ein Winkel im Uhrzeigersinn positiv. Eine konforme Implementierung ist erforderlich, um die vollständige Genauigkeit eines solchen Werts zu erhalten.
 
 Eine Implementierung darf einen beliebigen Bereich für Winkel verwenden und darf einen Winkel normalisieren (z. B. bis -180 bis +180 oder 0 bis 360). Implementierungen müssen nicht konsistent sein. die integrale Darstellung eines Winkels darf jedoch den Bereich einer 32-Bit-Ganzzahl mit Vorzeichen nicht überschreiten.
 
-Das Suffix fd wird verwendet, um diese Darstellung eines Winkels (Bruchgrad) zu identifizieren. Beachten Sie, dass sich dies von dem f-Suffix für einen dimensionslosen Bruch unterscheidet, obwohl identische arithmetische Brüche zur Unterstützung verwendet werden können. Der Standardwert für einen Winkelwert ist einfacher Grad, d. h. ein nicht skaliertes Wert. Dies kann auch mit dem Suffix " " (dem Gradsymbol) signalisiert werden. Die Verwendung dieses Codierungstyps hängt jedoch davon ab, dass eine geeignete Dokumentcodierung verwendet wird. Folglich wird das Suffix deg auch als Mittlere Grad definiert. Der vollständige Satz möglicher Ausreichender ist wie folgt.
+Das Suffix fd wird verwendet, um diese Darstellung eines Winkels (Bruchgrad) zu identifizieren. Beachten Sie, dass sich dies von dem f-Suffix für einen dimensionslosen Bruch unterscheidet, obwohl identische arithmetische Brüche zur Unterstützung verwendet werden können. Der Standardwert für einen Winkelwert ist einfacher Grad, d. h. ein nicht skaliertes Wert. Dies kann auch mit dem Suffix " " (dem Gradsymbol) signalisiert werden. Die Verwendung dieses Codierungstyps hängt jedoch davon ab, dass eine geeignete Dokumentcodierung verwendet wird. Folglich wird das Suffix deg auch als Mittelwerte definiert. Der vollständige Satz möglicher Ausreichender ist wie folgt.
 
 
 
 | Suffix       | Konvertierungsfaktor | Kommentare                               |
 |--------------|-------------------|----------------------------------------|
-| Fd           | 1                 | Hochpräzise interne Darstellung |
+| Fd           | 1                 | Interne Darstellung mit hoher Genauigkeit |
 | none, deg,   | 65536             | Grad                                |
 | rad          | 65536pi/180       | Radians                                |
 
@@ -347,24 +347,24 @@ In den XPointer-Definitionen ist die Speicherortquelle das Element, das den Farb
 | line             | ancestor(1,shape)<br/> child(1, line)<br/> child(1, color)<br/>                           | 1     | Die Vordergrundlinienfarbe der Form.                                                                                                                                   |
 | lineBack         | ancestor(1,shape)<br/> child(1, line)<br/> child(1,back) <br/> child(1, color)<br/> | 1     | Die Hintergrundlinienfarbe der Form.                                                                                                                                   |
 | lineOrFill       | Zeile, Füllung                                                                                                  | 1     | Der Zeilenwert, wenn kein Standardwert festgelegt ist, andernfalls der Füllwert. Dadurch wird effektiv die Farbe zurückgegeben, die sich am Rand der Form befindet.                                           |
-| fillThenLine     | fill, line                                                                                                  | 1     | Der Füllwert, wenn kein Standardwert verwendet wird, andernfalls der Zeilenwert. Dadurch wird effektiv die Hauptfarbe der Form zurückgegeben (wenn die Form nicht ausgefüllt ist, ist das Ergebnis die Linienfarbe).   |
+| fillThenLine     | fill, line                                                                                                  | 1     | Der Füllwert, wenn kein Standardwert festgelegt ist, andernfalls der Zeilenwert. Dadurch wird effektiv die Hauptformfarbe zurückgegeben (wenn die Form nicht ausgefüllt ist, ist das Ergebnis die Linienfarbe).   |
 | shadow           | ancestor(1,shape)<br/> child(1, shadow)<br/> child(1, color)<br/>                         | 2     | Die Farbe des Schattens (dies ist ein Feature der Ebene 2).                                                                                                                      |
-| scheme           | Siehe unten                                                                                                   | 1     | Eine Schemafarbe aus dem für das Dokument definierten Schema. siehe unten.                                                                                                       |
-| scheme(*index*)  | Siehe unten                                                                                                   | 1     | *Schemafarbindex,* beginnend mit 0; siehe unten.                                                                                                                         |
-| this             | Impliziert                                                                                                     | 2     | Der Vorgang (Ausfüllen eines Pfads oder Zeichnen) wird auf andere Weise definiert (z. B. als Bitmap), und die Farbe gibt eine "Änderung" an den Farben an, die so impliziert sind. |
-| palette(*index*) | Impliziert                                                                                                     | 3     | Verhält sich auf die gleiche Weise wie dies, mit dem Unterschied, dass genau ein Eintrag in einer Bitmapfarbtabelle identifiziert wird. Nur zulässig, wenn dies explizit angegeben ist.                             |
-| Keine             | \-                                                                                                          | 2     | Gibt das Fehlen einer Farbe an. kann verwendet werden, um einen Zeichnungsvorgang abzubrechen, der die Farbe verwendet.                                                                          |
-| System           | Siehe unten                                                                                                   | 3     | Eine von der Systembenutzerschnittstelle definierte Farbe.                                                                                                                             |
+| scheme           | Siehe unten                                                                                                   | 1     | Eine Schemafarbe aus dem für das Dokument definierten Schema; siehe unten.                                                                                                       |
+| scheme(*index*)  | Siehe unten                                                                                                   | 1     | *Schemafarbindex* ab 0; siehe unten.                                                                                                                         |
+| this             | Impliziert                                                                                                     | 2     | Der Vorgang (Auffüllen oder Zeichnen eines Pfads) wird auf andere Weise definiert (z. B. als Bitmap), und die Farbe gibt eine "Änderung" der so implizierten Farben an. |
+| palette(*index*) | Impliziert                                                                                                     | 3     | Verhält sich auf die gleiche Weise wie dies, mit der Ausnahme, dass genau ein Eintrag in einer Bitmapfarbtabelle identifiziert wird. Nur zulässig, wenn explizit angegeben.                             |
+| Keine             | \-                                                                                                          | 2     | Gibt das Fehlen einer Farbe an. kann verwendet werden, um einen Zeichnungsvorgang abzubricht, der die Farbe verwendet.                                                                          |
+| System           | Siehe unten                                                                                                   | 3     | Eine farbe, die von der Systemoberfläche definiert wird.                                                                                                                             |
 
 
 
  
 
-Mit dieser Farbe kann ein Farbwert eine Änderung an einer Farbe angeben, die auf andere Weise abgeleitet wird. insbesondere kann ein einzelner Vorgang für alle Farben in einer Bitmap angegeben werden. Die *Palette(Index)-Farbe* identifiziert einen bestimmten Eintrag in einer palettenzuordnungsbasierten Bitmap. Die Verwendung dieser Option ist nur für die Aufzeichnung eines Farbtabelleneintrags definiert, der in einer solchen Bitmap als transparent betrachtet werden sollte.
+Mit dieser Farbe kann ein Farbwert eine Änderung an einer Farbe angeben, die auf andere Weise abgeleitet wird. insbesondere kann ein einzelner Vorgang für alle Farben in einer Bitmap angegeben werden. Die *Palettenfarbe*( Index ) identifiziert einen bestimmten Eintrag in einer Bitmap, die einer Palette zugeordnet ist. Die Verwendung dieser Option ist nur für die Aufzeichnung eines Farbtabelleneintrags definiert, der in einer solchen Bitmap als transparent betrachtet werden sollte.
 
 Die Definition eines Farbwerts darf weder direkt noch indirekt auf sich selbst verweisen. Wenn eine solche Definition gefunden wird, wird empfohlen, aber nicht erforderlich, dass die Implementierung den nicht definierten Wert als schwarz behandelt.
 
-[![Zurück zum Anfang ](images/top.gif) Zurück zum Anfang](#top)
+[![zurück zum Anfang ](images/top.gif) Zurück zum Anfang](#top)
 
 ### <a name="html-colors"></a>HTML-Farben
 
@@ -378,15 +378,15 @@ Farbnamen und sRGB-Werte
 
 Black = " \# 000000"
 
-![Beispiel für eine grüne Farbe.](images/green.gif)
+![Beispiel für grüne Farbe.](images/green.gif)
 
 Grün = " \# 008000"
 
-![Beispiel für silberfarbene Farbe.](images/silver.gif)
+![Beispiel für die Farbe "Silber".](images/silver.gif)
 
 Silver = " \# C0C0C0"
 
-![Beispiel für Limonenfarbe.](images/lime.gif)
+![Beispiel für die Limonenfarbe.](images/lime.gif)
 
 Lime = " \# 00FF00"
 
@@ -394,25 +394,25 @@ Lime = " \# 00FF00"
 
 Gray = " \# 808080"
 
-![Beispiel für olivfarbene Farbe.](images/olive.gif)
+![Beispiel für die Farbe "Oliv".](images/olive.gif)
 
-^ = " \# 808000"
+Oliv = " \# 808000"
 
-![Beispiel für weißer Farbe.](images/white.gif)
+![Beispiel für eine weiße Farbe.](images/white.gif)
 
 White = " \# FFFFFF"
 
 ![Beispiel für ywllow-Farbe.](images/yellow.gif)
 
-Gelb = " \# FFFF00"
+Yellow = " \# FFFF00"
 
-![Beispiel für marunische Farbe.](images/maroon.gif)
+![Beispiel für die Farbe des Marons.](images/maroon.gif)
 
 Maroon = " \# 800000"
 
-![Beispiel für farbgebungsfarbenes Farbschema.](images/navy.gif)
+![Beispiel für die Farbe "Farbe".](images/navy.gif)
 
-Unicode = " \# 000080"
+Sid = " \# 000080"
 
 ![Beispiel für eine rote Farbe.](images/red.gif)
 
@@ -430,11 +430,11 @@ Purple = " \# 800080"
 
 Teal = " \# 008080"
 
-![Beispiel für farbgebungsfarbene Farben.](images/fuchsia.gif)
+![Beispiel für Diebenenfarbe.](images/fuchsia.gif)
 
-Sollia = " \# FF00FF"
+Igenia = " \# FF00FF"
 
-![Beispiel für Aquafarbe.](images/aqua.gif)
+![Beispiel für die Farbe "Aqua".](images/aqua.gif)
 
 Aqua = " \# 00FFFF"
 
@@ -442,11 +442,11 @@ Aqua = " \# 00FFFF"
 
  
 
-[![Zurück zum Anfang ](images/top.gif) Zurück zum Anfang](#top)
+[![zurück zum Anfang ](images/top.gif) Zurück zum Anfang](#top)
 
 ### <a name="scheme-colors"></a>Schemafarben
 
-Die Schemafarben, auf die vom Schema verwiesen wird, werden auf Dokumentebene mithilfe des Metatags mit dem Namensattribut "Designfarbschema" definiert.
+Die Schemafarben, auf die durch schema verwiesen wird, werden auf Dokumentebene definiert, indem das Metatag mit dem Namensattribut "Theme Color Scheme" verwendet wird.
 
 
 ```HTML
@@ -456,7 +456,7 @@ Die Schemafarben, auf die vom Schema verwiesen wird, werden auf Dokumentebene mi
 
 
 
-Mit diesem Tag können bis zu acht Schemafarben definiert werden. Nicht definierte Farben sollten standardmäßig schwarz sein. Die Schemafarben ermöglichen das Ändern des Farbschemas, das für ein vollständiges Dokument verwendet wird, nur durch Ändern des Inhalts des Designfarbschemas. Um sicherzustellen, dass aus verschiedenen Erstellungsanwendungen importierte Grafiken die Schemafarben konsistent verwenden, werden die folgenden Interpretationen definiert. Die "Nutzung" ist eine kurze Beschreibung des Zwecks, und die Spalte "beschreibung" enthält zusätzliche Details.
+Mit diesem Tag können bis zu acht Schemafarben definiert werden. Nicht definierte Farben sollten standardmäßig schwarz sein. Die Schemafarben ermöglichen das Ändern des Farbschemas, das für ein vollständiges Dokument verwendet wird, einfach durch Ändern des Inhalts des Designfarbschemas. Um sicherzustellen, dass aus verschiedenen Erstellungsanwendungen importierte Grafiken die Schemafarben konsistent verwenden, werden die folgenden Interpretationen definiert. Die "Nutzung" ist eine kurze Beschreibung des Zwecks, und die Spalte "beschreibung" enthält zusätzliche Details.
 
 
 
@@ -464,28 +464,28 @@ Mit diesem Tag können bis zu acht Schemafarben definiert werden. Nicht definier
 |-------|-------------------|-------------------------------|--------------------------------------------------------------------------------------------------------------------------|
 | 0     | scheme.background | Hintergrund                    | Die Farbe, die für den Hintergrund einer Grafik (und häufig für die gesamte Seite) verwendet wird.                                    |
 | 1     | scheme.text       | Text und Zeilen                | Die Farbe für Text, der an eine Form angefügt ist, und die Standardlinienfarbe.                                                      |
-| 2     | scheme.shadow     | Shadows                       | Standardschattenfarbe: Die Farbe, die normalerweise für Formschatten verwendet wird.                                                     |
+| 2     | scheme.shadow     | Shadows                       | Standardschattenfarbe– die Farbe, die normalerweise für Formschatten verwendet wird.                                                     |
 | 3     | scheme.title      | Titeltext                    | Die Farbe, die für Überschriften- oder Titeltext verwendet werden soll.                                                                              |
-| 4     | scheme.fill       | Füllt                         | Standardfüllfarbe: die Farbe, die normalerweise zum Füllen von Formen verwendet wird.                                                          |
+| 4     | scheme.fill       | Füllt                         | Standardfüllfarbe– die Farbe, die normalerweise zum Füllen von Formen verwendet wird.                                                          |
 | 5     | scheme.accent     | Akzent                        | Normale "Hervorhebungsfarbe", die verwendet wird, um ein wichtiges Element einer Grafik hervorzuheben.                                             |
 | 6     | scheme.hyperlink  | Akzent und Link          | Hervorhebungsfarbe, die für Links verwendet wird. Kann für andere Zwecke verwendet werden, bei denen die Farbe einen Link zu anderen Informationen kennzeichnet. |
-| 7     | scheme.followed   | Akzent und linker Anschluss | Hervorhebungsfarbe für links gefolgte Links; ist auch für "Rückwärts"-Links geeignet.                                         |
+| 7     | scheme.followed   | Akzent und gefolgter Link | Hervorhebungsfarbe für gefolgte Links; ist auch für Rückwärtslinks geeignet.                                         |
 
 
 
  
 
-Auf eine Schemafarbe kann entweder anhand des Namens oder des Indexes verwiesen werden, daher sind scheme.fill und scheme(4) die gleiche Farbe.
+Auf eine Schemafarbe kann entweder nach Name oder index verwiesen werden, daher haben scheme.fill und scheme(4) dieselbe Farbe.
 
-Schemafarben nehmen nicht am Standardschema teil, wenn keine Farbe angegeben ist. Eine nicht angegebene Füllfarbe muss immer als weiß interpretiert werden, unabhängig von der Farbe der Schemafarbe 4. Die Akzentfarben sollten sowohl mit den Hintergrundfarben (0) als auch mit den Füllfarben (4) kontrastiert werden, und Text- und Titeltextfarben sollten die gleiche Eigenschaft aufweisen. Eine Standardmethode besteht darin, die Akzente und den Standardtext (in der Regel Schwarz oder Weiß) zu verfärben.
+Schemafarben sind nicht Teil des Standardschemas, wenn keine Farbe angegeben ist. Eine nicht angegebene Füllfarbe muss immer als weiß interpretiert werden, unabhängig von der Farbe der Schemafarbe 4. Die Akzentfarben sollten gegenüber den Hintergrundfarben (0) und den Füllfarben (4) sowie text- und title-Textfarben dieselbe Eigenschaft haben. Eine Standardtechnik besteht in der Farbfärbung der Akzente und des Standardtexts (in der Regel schwarz oder weiß).
 
-[![Zurück zum Anfang ](images/top.gif) Zurück zum Anfang](#top)
+[![zurück zum Anfang ](images/top.gif) Zurück zum Anfang](#top)
 
 ### <a name="system-colors"></a>Systemfarben
 
 Anwendungen zeichnen Farben manchmal basierend auf Betriebssystemeinstellungen in Grafiken auf. Normalerweise sind diese vorübergehend und müssen nicht geschrieben werden. Die Systemcolor-Definitionen sind ausschließlich zur Unterstützung vorhanden. Eine Systemfarbe wird eingeführt, indem ein entsprechendes Tag in einem neuen Namespace definiert und die entsprechenden Informationen in den Elementinhalt eingefügt werden.
 
-Dieser Vorschlag definiert ein solches Tag, um die in der Headerdatei winuser.h definierten Windows Benutzeroberflächenfarben zu codieren.
+Dieser Vorschlag definiert ein solches Tag, um die Windows in der Headerdatei winuser.h definierten Benutzeroberflächenfarben zu codieren.
 
 
 ```HTML
@@ -495,9 +495,9 @@ win.color
 
 
 
-Der Inhalt des Elements ist eine einzelne ganze Zahl, die den Wert der relevanten \_ COLOR-Definition aus winuser.h enthält. Ein ähnliches Verfahren kann für jede system- oder anwendungsspezifische Farbspezifikation verwendet werden. Es wird dringend empfohlen, dieses Feature nur aus Gründen der Abwärtskompatibilität zu verwenden.
+Der Inhalt des Elements ist eine einzelne ganze Zahl, die den Wert der relevanten \_ COLOR-Definition aus winuser.h enthält. Eine ähnliche Technik kann für jede system- oder anwendungsspezifische Farbspezifikation übernommen werden. Es wird dringend empfohlen, dieses Feature nur aus Gründen der Abwärtskompatibilität zu verwenden.
 
-[![Zurück zum Anfang ](images/top.gif) Zurück zum Anfang](#top)
+[![zurück zum Anfang ](images/top.gif) Zurück zum Anfang](#top)
 
 ### <a name="pure-colors"></a>Reine Farben
 
@@ -509,15 +509,15 @@ pure
 
 
 
-Wenn das Element <pure/> in einem Farbwert angezeigt wird, ist dies ein Hinweis darauf, dass die Farbe nicht durch ein Dithermuster angenähert werden soll. Dies ist ein Feature der Ebene 1, das von einer konformen Implementierung nicht berücksichtigt werden muss. Die Bezeichnung ist wichtig für Grafiken, die auf Geräten mit mittlerer Auflösung angezeigt werden, z. B. Videoanzeigen, bei denen kleine Features (z. B. Linien) zu ungültigen Aliasen mit geblendeten Farben führen können. Auf Geräten wie Druckern, die normalerweise alle Farben außer den wenigen vollständig ausgelasteten Farben dithern, ist das Dithering normalerweise ausreichend gut, um dieses Problem zu vermeiden.
+Wenn das Element in einem Farbwert angezeigt wird, ist dies ein Hinweis darauf, dass die Farbe nicht durch ein <pure/> Dithermuster angedeutet werden sollte. Dies ist ein Feature der Ebene 1, das von einer konformen Implementierung nicht erfüllt werden muss. Die Bezeichnung ist wichtig für Grafiken, die auf Geräten mit mittlerer Auflösung angezeigt werden, z. B. Videoanzeigen, bei denen kleine Features (z. B. Linien) schlechte Aliase mit ditherierten Farben verursachen können. Auf Geräten wie Druckern, die normalerweise alle Farben mit Ausnahme der wenigen vollständigen Farben dithern, ist das Dithering normalerweise ausreichend, um dieses Problem zu vermeiden.
 
-[![Zurück zum Anfang ](images/top.gif) Zurück zum Anfang](#top)
+[![zurück zum Anfang ](images/top.gif) Zurück zum Anfang](#top)
 
 ### <a name="color-adjustments"></a>Farbanpassungen
 
-Die Basisfarbe kann durch arithmetische Operationen für den RGB-Wert angepasst werden. Diese Vorgänge werden mithilfe zusätzlicher Elemente innerhalb des Farbwerts definiert. Solche Anpassungen sind nur nützlich, wenn sie auf Von anderen Elementen abgeleitete Farben angewendet werden. Es ist gültig, eine solche Anpassung für einen festen Farbwert anzugeben. Eine Implementierung kann diese jedoch auf den entsprechenden RGB-Wert reduzieren und anstelle des Originals speichern.
+Die Basisfarbe kann durch arithmetische Operationen für den RGB-Wert angepasst werden. Diese Vorgänge werden mit zusätzlichen Elementen innerhalb des Farbwerts definiert. Solche Anpassungen sind nur nützlich, wenn sie auf Farben angewendet werden, die von anderen Elementen abgeleitet wurden. Es ist gültig, eine solche Anpassung für einen festen Farbwert anzugeben. eine Implementierung kann dies jedoch auf den entsprechenden RGB-Wert reduzieren und anstelle des Originals speichern.
 
-Alle in diesem Abschnitt beschriebenen Farbanpassungsfunktionen sind Features der Ebene 1.
+Alle in diesem Abschnitt beschriebenen Farbanpassungsfeatures sind Features der Ebene 1.
 
 
 ```HTML
@@ -552,16 +552,16 @@ color.adj
 
 
 
-Der Parameter der ersten sechs Vorgänge ist ein einzelner integraler numerischer Wert im Bereich von 0 bis 255. Die Anpassung wird für den 3x8-Bit-RGB-Wert wie folgt ausgeführt:
+Der Parameter der ersten sechs Vorgänge ist ein einzelner integraler numerischer Wert im Bereich von 0 bis 255. Die Anpassung erfolgt für den RGB-Wert von 3 x 8 Bit wie folgt:
 
-1.  Wenn <gray/> angegeben wird, wird der RGB-Wert durch yyy ersetzt, wobei y der Leuchtdichtewert (y') ist, der anhand des sRGB-Werts im Anschluss an ITU-r BT.709 berechnet wird. Diese Berechnung sieht wie hier aus:
+1.  Wenn angegeben wird, wird der RGB-Wert durch yyy ersetzt, wobei y der Ludomanzwert (y) ist, der anhand des sRGB-Werts im Anschluss an <gray/> ITU-r BT.709 berechnet wird. Diese Berechnung ist:
     ```HTML
     y = 0 2125xr + 0 7154xg + 0 0721xb
     ```
 
     
 
-2.  Wenn eine color.op-Änderung angegeben wird, wird jede Komponente gemäß der folgenden Tabelle separat angepasst. c ist der Komponentenwert, und p ist der color.parameter-Wert.
+2.  Wenn eine Color.op-Änderung angegeben wird, wird jede Komponente separat gemäß der folgenden Tabelle angepasst. c ist der Komponentenwert, und p ist der Color.Parameter-Wert.
 
     | Vorgang       | Formel                            |
     |-----------------|------------------------------------|
@@ -570,15 +570,15 @@ Der Parameter der ersten sechs Vorgänge ist ein einzelner integraler numerische
     | add             | c := c + p                         |
     | Subtrahieren        | c := c - p                         |
     | reversesubtract | c := p - c                         |
-    | Schwarzweiss      | , wenn c < p thenc := 0elsec := 255 |
+    | Schwarzweiss      | wenn c < p, dannc := 0elsec := 255 |
 
     
 
      
 
-    In jedem Fall wird 0 verwendet, wenn der berechnete Komponentenwert c 255 überschreitet, dann wird 255 verwendet, und wenn er kleiner als 0 ist, wird 0 verwendet.
+    Wenn der berechnete Komponentenwert c 255 überschreitet, wird in jedem Fall 255 verwendet, und wenn er kleiner als 0 ist, wird 0 verwendet.
 
-3.  Wenn <INVERT128/> angegeben wird, wird der Wert 128 für jede Komponente subtrahiert oder jeder Komponente hinzugefügt. Dies hängt davon ab, ob die Komponente kleiner als 128 ist oder nicht.
+3.  Wenn angegeben ist, wird der Wert 128 subtrahiert oder jeder Komponente hinzugefügt, je nach dem, ob die Komponente kleiner als <INVERT128/> 128 ist oder nicht.
     ```HTML
     if c < 128
         then
@@ -596,7 +596,7 @@ Der Parameter der ersten sechs Vorgänge ist ein einzelner integraler numerische
 
     
 
-[![Zurück zum Anfang ](images/top.gif) Zurück zum Anfang](#top)
+[![zurück zum Anfang ](images/top.gif) Zurück zum Anfang](#top)
 
 ## <a name="font"></a>font
 
@@ -610,11 +610,11 @@ font
 
 
 
-Eine Schriftart wird mithilfe eines Formatattributs identifiziert, wie in [CSS1 Abschnitt 5.2 (Schriftarteigenschaften)](https://www.w3.org/pub/WWW/TR/REC-CSS1#font-properties) definiert. Der Text des Schriftartelements ist derzeit nicht definiert, kann aber in Zukunft verwendet werden, um Standardschriftartinformationen zu codieren. Anfängliche Implementierungen dieses Vorschlags sollten die Informationen beibehalten, aber nicht interpretieren.
+Eine Schriftart wird mithilfe eines Formatattributs identifiziert, wie in [CSS1 Abschnitt 5.2 (Schriftarteigenschaften) definiert.](https://www.w3.org/pub/WWW/TR/REC-CSS1#font-properties) Der Text des Schriftartelements ist derzeit nicht definiert, kann aber in Zukunft zum Codieren von Standardschriftartinformationen verwendet werden. Die ersten Implementierungen dieses Vorschlags sollten die Informationen beibehalten, aber nicht interpretieren.
 
-Es ist unwahrscheinlich, dass in Zukunft Unterstützung für Out-of-Line-Schriftartinformationen (herunterladbare Schriftarten oder freigegebene Schriftartressourcen) hinzugefügt wird. Dies erfolgt durch ein XML-Linkelement innerhalb des Inhalts des Schriftartelements, um die Abwärtskompatibilität mit anfänglichen Implementierungen sicherzustellen.
+Es ist ratsam, dass in Zukunft Unterstützung für Out-of-Line-Schriftartinformationen (herunterladbare Schriftarten oder freigegebene Schriftartressourcen) hinzugefügt wird. Dies erfolgt durch ein XML-Link-Element innerhalb des Inhalts des Schriftartelements, um die Abwärtskompatibilität mit anfänglichen Implementierungen sicherzustellen.
 
-[![Zurück zum Anfang ](images/top.gif) Zurück zum Anfang](#top)
+[![zurück zum Anfang ](images/top.gif) Zurück zum Anfang](#top)
 
 ## <a name="bitmap"></a>Bitmap
 
@@ -635,50 +635,50 @@ bitmap
 
 
 
-Mit dem Bitmap-Element kann ein Verweis auf eine Out-of-Line-Bildressource (normalerweise eine Bitmap) in eine Grafik aufgenommen werden.
+Mit dem Bitmapelement kann ein Verweis auf eine Out-of-Line-Bildressource (normalerweise eine Bitmap) in eine Grafik aufgenommen werden.
 
-Bitmap ist ein Feature der Ebene 1.
+bitmap ist ein Feature der Ebene 1.
 
-Das Verhaltensattribut kann verwendet werden, um anzugeben, wie die Bitmap von einer Bearbeitungsanwendung behandelt werden soll. Der Wert kann eines oder beide der folgenden Token sein.
+Das Behavior-Attribut kann verwendet werden, um anzugeben, wie die Bitmap von einer Bearbeitungsanwendung behandelt werden soll. Der Wert kann eines oder beide der folgenden Token sein.
 
 
 
 | Token    | BESCHREIBUNG                                                                                                                                                                                                                                                                             |
 |----------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Separate | Markiert die Bitmap als separate Entität, die nicht als integraler Bestandteil des Dokuments betrachtet werden sollte. Die Bitmap sollte nicht mit dem Dokument aufbewahrt werden. Wenn das Dokument kopiert wird, sollte die Bitmap nicht kopiert werden. Wenn das Dokument verschoben wird, sollte die Bitmap nicht mit ihm verschoben werden. |
-| original | Das Title-Attribut identifiziert die ursprüngliche Position der Bitmap als URL. Andernfalls wird die Bedeutung des Titels nicht angegeben.                                                                                                                                                          |
+| Separate | Markiert die Bitmap als separate Entität, die nicht als integraler Teil des Dokuments betrachtet werden sollte. Die Bitmap sollte nicht mit dem Dokument beibehalten werden. Wenn das Dokument kopiert wird, sollte die Bitmap nicht kopiert werden. Wenn das Dokument verschoben wird, sollte die Bitmap nicht damit verschoben werden. |
+| original | Das Title-Attribut identifiziert die ursprüngliche Position der Bitmap als URL. andernfalls wird die Bedeutung des Titels nicht angegeben.                                                                                                                                                          |
 
 
 
  
 
-Diese Werte sind beide Hinweise auf das erwartete Verhalten. Die separate Option bezieht sich auf das Verhalten der Daten, auf die von href verwiesen wird. Wenn sowohl separate als auch original angegeben werden, wird erwartet, dass die Anwendung den href-URI ignoriert und die Bitmap aus den ursprünglichen Daten neu generiert. Wenn nur original angegeben wird, wird von der Anwendung erwartet, dass sie den href-URI verwendet, um die Bitmap zu finden, aber dem Benutzer die Möglichkeit gibt, sie neu zu generieren.
+Diese Werte sind hinweise auf das erwartete Verhalten. Die separate Option bezieht sich auf das Verhalten der Daten, auf die href verweist. Wenn sowohl separate als auch originale angegeben werden, wird erwartet, dass die Anwendung den href-URI ignoriert und die Bitmap aus den ursprünglichen Daten neu generiert. Wenn nur original angegeben wird, wird von der Anwendung erwartet, dass sie den href-URI verwendet, um die Bitmap zu finden, dem Benutzer jedoch die Möglichkeit gibt, sie erneut zu generieren.
 
-Es ist gültig, den href-URI und das title-Attribut zum gleichen (lexikalischen) Wert zu machen. Dies ist geeignet, wenn die Bitmap, auf die verwiesen wird, nicht mit dem Dokument "gespeichert" wird. Es ist beabsichtigt (wenn auch nicht erforderlich), dass href für die eigene Kopie der Bitmap des Dokuments verwendet wird , die gelöscht werden kann, wenn die verweisenden Formen gelöscht werden, und dass dieser Titel verwendet wird, um eine freigegebene Kopie anzugeben. Wenn also beide den gleichen Wert enthalten, gibt es keine dokumentspezifische Kopie.
+Es ist zulässig, den href-URI und das Title-Attribut auf denselben (lexikalischen) Wert zu ändern. Dies ist geeignet, wenn die Bitmap, auf die verwiesen wird, nicht mit dem Dokument "gespeichert" wird. Es ist (wenn auch nicht erforderlich) vorgesehen, dass href für die eigene Kopie der Bitmap des Dokuments verwendet wird ( die gelöscht werden kann, wenn die verweisenden Formen gelöscht werden) und dieser Titel verwendet wird, um eine freigegebene Kopie anzugeben. Wenn beide den gleichen Wert enthalten, gibt es also keine dokumentspezifische Kopie.
 
 Anwendungen ignorieren den Hinweis möglicherweise, wenn er nicht in das tatsächliche Speichermodell der XML-Daten passt.
 
-[![zurück zum Anfang ](images/top.gif) Zurück zum Anfang](#top)
+[![Zurück zum Anfang ](images/top.gif) Zurück zum Anfang](#top)
 
 ### <a name="picture-file-formats"></a>Bilddateiformate
 
-Im Rahmen dieses Vorschlags sind externe Daten aus jeder Zeit entweder eine Bitmap oder eine Datei, die zum Erzeugen einer Bitmap verwendet wird. Auf Renderebene 0 muss kein externes Bitmapformat unterstützt werden. Pfade können nur mit Vollfarben gefüllt werden. Zum Rendern des vollständigen Füllstands der Renderebene 1 müssen Bitmaps unterstützt werden. Renderebene 1 enthält (nur) die folgenden Formate:
+Im Kontext dieses Vorschlags sind externe Daten immer entweder eine Bitmap oder eine Datei, die zum Erstellen einer Bitmap verwendet wird. Auf Renderebene 0 muss kein externes Bitmapformat unterstützt werden. Pfade können nur mit Volltonfarben gefüllt werden. Zum Rendern des vollständigen Satzes von Füllungen auf Renderebene 1 müssen Bitmaps unterstützt werden. Renderebene 1 enthält (nur) die folgenden Formate:
 
-1.  JFIF, d. h. Iso/IEC 10918-Formatdaten, die in eine Datei mit dem JFIF-Header eingebettet sind (der nach dem SOI Maker als bestimmter APP0-Marker angesehen werden kann) und (nur) den Bereich der JPEG-Formate enthalten, die vom IJG v6-Code unterstützt werden.
+1.  JFIF, d.h. daten im ISO/IEC 10918-Format, die in eine Datei mit dem JFIF-Header eingebettet sind (die nach dem SOI-Maker als bestimmter APP0-Marker betrachtet werden können) und einschließlich (nur) des Bereichs der JPEG-Formate, die vom IJG v6-Code unterstützt werden.
 2.  PNG, wie in der PNG-Version 1.0-Spezifikation definiert.
 
 Renderebene 2 bietet auch Unterstützung für Folgendes:
 
--   GIF, wie in der GIF-Spezifikation definiert, die 1987 von CompuServ veröffentlicht wurde (normalerweise als "GIF87a" bezeichnet). GIF89a muss auch auf dieser Ebene unterstützt werden, jedoch mit der Einschränkung, dass die Daten keine Erweiterungsblöcke enthalten dürfen, die interpretiert werden müssen, um die Bitmap als Grafiksteuersteuererweiterungen anzuzeigenmit einer Anforderung für Benutzereingaben oder einer Verzögerungszeit. Dadurch können Kommentare eingeschlossen werden, aber nicht die Nur-Text-Erweiterung. Eine Anwendung kann Anwendungserweiterungen (0x21, 0xFF) einfügen. Unter Verwendung der Terminologie dieses Vorschlags dürfen diese jedoch nur Bearbeitungs- und nicht Renderingdaten enthalten.
+-   GIF, wie durch die GIF-Spezifikation definiert, die von CompuServ im Jahr 1987 veröffentlicht wurde (normalerweise als "GIF87a" bezeichnet). GIF89a muss auch auf dieser Ebene unterstützt werden. Dies unterliegt der Einschränkung, dass die Daten keine Erweiterungsblöcke enthalten dürfen, die interpretiert werden müssen, um die Bitmap anzuzeigen, außer Grafiksteuerelementerweiterungenmitouta-Anforderung für Benutzereingaben oder eine Verzögerungszeit. Dadurch können Kommentare eingeschlossen werden, aber nicht die Nur-Text-Erweiterung. Eine Anwendung kann Anwendungserweiterungen (0x21, 0xFF) einfügen, aber gemäß der Terminologie dieses Vorschlags dürfen diese nur Bearbeitungs- und nicht Renderingdaten enthalten.
 
-Jedes andere datenformat, das in der Grafik verwendet wird, erzwingt, dass diese Grafik mindestens Bearbeitungsebene 3 und möglicherweise Renderingebene 3 ist (wenn die Daten zum Rendern der Grafik erforderlich sind). Einer Anwendung wird empfohlen, die unterstützten Formate zu veröffentlichen. Beispielsweise unterstützt Microsoft Office die folgenden zusätzlichen Formate nativ und kann daher Bearbeitungsdaten in diesem Format schreiben:
+Jedes andere datenformat, das in der Grafik verwendet wird, erzwingt, dass diese Grafik mindestens die Bearbeitungsebene 3 und möglicherweise die Ebene 3 rendert (wenn die Daten zum Rendern der Grafik erforderlich sind). Einer Anwendung wird empfohlen, die unterstützten Formate zu veröffentlichen. beispielsweise unterstützt Microsoft Office die folgenden zusätzlichen Formate nativ und kann daher Bearbeitungsdaten in dieser Form schreiben:
 
 1.  WMF – Windows Metadatei (Win 3.1-Format)
-2.  EMF : Windows "erweiterte" Metadatei (Win32-Format)
-3.  PICT : Mac OS QuickDraw PICT-Datei (alle Versionen, aber ohne QuickTime-Datensätze oder andere Erweiterungen)
-4.  BMP: Windows Bitmapdateiformat, "os/2" (BITMAPCORE), BITMAPINFO, BITMAPV4 und BITMAPV5
+2.  EMF – Windows "erweiterte" Metadatei (Win32-Format)
+3.  PICT – Mac OS QuickDraw PICT-Datei (alle Versionen, jedoch ohne QuickTime-Datensätze oder andere Erweiterungen)
+4.  BMP – Windows Bitmapdateiformat, "os/2" (BITMAPCORE), BITMAPINFO, BITMAPV4 und BITMAPV5
 
-[![zurück zum Anfang ](images/top.gif) Zurück zum Anfang](#top)
+[![Zurück zum Anfang ](images/top.gif) Zurück zum Anfang](#top)
 
 ## <a name="vector"></a>Vektor
 
@@ -690,7 +690,7 @@ v
 
 
 
-Ein Vektorgrafikpfad wird als pcdata codiert. Der Inhalt des v-Elements wird gemischt und enthält eine Vektorpfadbeschreibung, die optional mit p-Elementen parametrisiert wird.
+Ein Vektorgrafikpfad wird als pcdata codiert. Der Inhalt des v-Elements wird gemischt und enthält optional eine Vektorpfadbeschreibung, die mit p-Elementen parametrisiert wird.
 
 [Zurück zur VML-Übersicht](web-workshop---specs---standards----how-to-use-vml-on-web-pages.md)
 

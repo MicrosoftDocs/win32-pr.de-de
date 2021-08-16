@@ -1,6 +1,6 @@
 ---
 title: SampleLevel::SampleLevel(S,float,float,int,uint)-Funktion für Texture2D
-description: Probieren Sie eine Textur2D auf der angegebenen Mipmapebene aus und gibt den Status des Vorgangs zurück.
+description: Samples a Texture2D on the specified mipmap level and returns status about the operation.
 ms.assetid: B021D42E-9F63-4CCE-939B-F93D91F7CB80
 keywords:
 - SampleLevel-Funktion HLSL
@@ -22,7 +22,7 @@ ms.locfileid: "118510289"
 ---
 # <a name="samplelevelsamplelevelsfloatfloatintuint-function-for-texture2d"></a>SampleLevel::SampleLevel(S,float,float,int,uint)-Funktion für Texture2D
 
-Probieren Sie eine [**Textur2D**](sm5-object-texture2d.md) auf der angegebenen Mipmapebene aus und gibt den Status des Vorgangs zurück.
+Samples a [**Texture2D**](sm5-object-texture2d.md) on the specified mipmap level and returns status about the operation.
 
 ## <a name="syntax"></a>Syntax
 
@@ -61,7 +61,7 @@ Texturkoordinaten Der Argumenttyp ist vom Texturobjekttyp abhängig.
 
 
 
-| Texture-Object-Typ                    | Parametertyp |
+| Texture-Object Typ                    | Parametertyp |
 |----------------------------------------|----------------|
 | Texture1D                              | float          |
 | Texture1DArray, Texture2D              | float2         |
@@ -79,7 +79,7 @@ Texturkoordinaten Der Argumenttyp ist vom Texturobjekttyp abhängig.
 
 Typ: **float**
 
-\[in \] Eine Zahl, die die Mipmapebene angibt. Wenn der Wert ≤ 0 ist, wird mipmap level 0 (größte Karte) verwendet. Der Bruchwert (sofern angegeben) wird verwendet, um zwischen zwei Mipmapebenen zu interpolieren.
+\[in \] Eine Zahl, die die Mipmapebene angibt. Wenn der Wert ≤ 0 ist, wird Mipmap-Ebene 0 (größte Karte) verwendet. Der Bruchwert (sofern angegeben) wird verwendet, um zwischen zwei Mipmapebenen zu interpolieren.
 
 </dd> <dt>
 
@@ -88,11 +88,11 @@ Typ: **float**
 
 Typ: **int**
 
-Ein optionaler Texturkoordinatenoffset, der für jeden Texturobjekttyp verwendet werden kann. Der Offset wird vor der Stichprobenentnahme auf den Speicherort angewendet. Verwenden Sie einen Offset nur auf einem ganzzahligen Miplevel. Andernfalls erhalten Sie möglicherweise Ergebnisse, die sich nicht gut in die Hardware übersetzen lassen. Der Argumenttyp ist vom Texturobjekttyp abhängig. Weitere Informationen finden Sie unter [Anwenden von ganzzahligen Offsets.](dx-graphics-hlsl-to-sample.md)
+Ein optionaler Texturkoordinatenoffset, der für jeden Texturobjekttyp verwendet werden kann. Der Offset wird vor der Stichprobenentnahme auf die Position angewendet. Verwenden Sie einen Offset nur bei einer ganzzahligen MIP-Ebene. Andernfalls erhalten Sie möglicherweise Ergebnisse, die sich nicht gut in die Hardware übersetzen lassen. Der Argumenttyp ist vom Texturobjekttyp abhängig. Weitere Informationen finden Sie unter [Anwenden von ganzzahligen Offsets.](dx-graphics-hlsl-to-sample.md)
 
 
 
-| Texture-Object-Typ           | Parametertyp |
+| Texture-Object Typ           | Parametertyp |
 |-------------------------------|----------------|
 | Texture1D, Texture1DArray     | INT            |
 | Texture2D, Texture2DArray     | int2           |
@@ -110,7 +110,7 @@ Ein optionaler Texturkoordinatenoffset, der für jeden Texturobjekttyp verwendet
 
 Typ: **uint**
 
-Der Status des Vorgangs. Sie können nicht direkt auf den Status zugreifen. Übergeben Sie stattdessen den Status an die systeminterne [**CheckAccessFullyMapped-Funktion.**](checkaccessfullymapped.md) **CheckAccessFullyMapped** gibt **TRUE** zurück, wenn alle Werte aus dem entsprechenden **Beispiel-,** **Gather-** oder **Load-Vorgang** auf zugeordnete Kacheln in einer [gekachelten Ressource](/windows/desktop/direct3d11/direct3d-11-2-features)zugegriffen haben. Wenn Werte aus einer nicht zugeordneten Kachel stammen, gibt **CheckAccessFullyMapped** **FALSE** zurück.
+Der Status des Vorgangs. Sie können nicht direkt auf den Status zugreifen. Übergeben Sie stattdessen den Status an die [**systeminterne CheckAccessFullyMapped-Funktion.**](checkaccessfullymapped.md) **CheckAccessFullyMapped** gibt **TRUE zurück,** wenn alle Werte aus dem entsprechenden **Beispiel-,** **Gather-** oder **Load-Vorgang** auf zugeordnete Kacheln in einer [gekachelten Ressource zugegriffen haben.](/windows/desktop/direct3d11/direct3d-11-2-features) Wenn Werte aus einer nicht zugeordneten Kachel übernommen wurden, gibt **CheckAccessFullyMapped** **FALSE zurück.**
 
 </dd> </dl>
 
@@ -118,7 +118,7 @@ Der Status des Vorgangs. Sie können nicht direkt auf den Status zugreifen. Übe
 
 Typ: **[ **DXGI \_ FORMAT**](/windows/desktop/api/dxgiformat/ne-dxgiformat-dxgi_format)**
 
-Das Texturformat, bei dem es sich um einen der typisierten Werte handelt, die in [**DXGI \_ FORMAT**](/windows/desktop/api/dxgiformat/ne-dxgiformat-dxgi_format)aufgeführt sind.
+Das Texturformat, bei dem es sich um einen der typierten Werte handelt, die in [**DXGI \_ FORMAT aufgeführt sind.**](/windows/desktop/api/dxgiformat/ne-dxgiformat-dxgi_format)
 
 ## <a name="see-also"></a>Weitere Informationen
 

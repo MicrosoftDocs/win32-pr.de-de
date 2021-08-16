@@ -1,51 +1,51 @@
 ---
-description: Vorteile der Verarbeitung in der Warteschlange
+description: Vorteile der Warteschlangenverarbeitung
 ms.assetid: dc1fc03f-1e2c-481c-95a7-f8d7b1e06bb0
-title: Vorteile der Verarbeitung in der Warteschlange
+title: Vorteile der Warteschlangenverarbeitung
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: e7a0d2068d70ecf611ec334632c8b8f819319ef3
-ms.sourcegitcommit: d39e82e232f6510f843fdb8d55d25b4e9e02e880
+ms.openlocfilehash: 02c41d902d9e72af40b70ccc95efe33e2857c8ef07953c70ef1fc0879ba676ee
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/03/2021
-ms.locfileid: "104550815"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118308784"
 ---
-# <a name="benefits-of-queued-processing"></a>Vorteile der Verarbeitung in der Warteschlange
+# <a name="benefits-of-queued-processing"></a>Vorteile der Warteschlangenverarbeitung
 
-Beim Entwerfen neuer Anwendungen müssen Entwickler die Auswirkungen der Codierungs Komponenten auf eine (synchrone) Echtzeitverarbeitung und eine in der Warteschlange eingereihte (asynchrone) Verarbeitung in Erwägung gezogen. Die Auswahl hängt von den Anforderungen der jeweiligen Anwendung ab, die von der zugrunde liegenden Geschäftslogik bestimmt werden. Als Richtlinie bietet die Verarbeitung in der Warteschlange die folgenden Vorteile gegenüber der Echtzeitverarbeitung:
+Beim Entwerfen neuer Anwendungen müssen Entwickler die Auswirkungen der Codierungskomponenten auf die (synchrone) Echtzeitverarbeitung und die Warteschlangenverarbeitung (asynchron) berücksichtigen. Die Auswahl hängt von den Anforderungen der jeweiligen Anwendung ab, die von der zugrunde liegenden Geschäftslogik bestimmt werden. Als Richtlinie bietet die Warteschlangenverarbeitung gegenüber der Echtzeitverarbeitung die folgenden Vorteile:
 
--   Reduzierte Abhängigkeit von Verfügbarkeit der Komponente
+-   Geringere Abhängigkeit von der Komponentenverfügbarkeit
 -   Kürzere Lebensdauer von Komponenten
--   Ununterbrochene Produktivität bei der Verwendung von getrennten Anwendungen
--   Nachrichten Zuverlässigkeit
--   Effiziente Server Planung
+-   Unterbrechungsfreie Produktivität bei Verwendung getrennter Anwendungen
+-   Nachrichtenzuverlässigkeit
+-   Effiziente Serverplanung
 
-## <a name="component-availability"></a>Komponenten Verfügbarkeit
+## <a name="component-availability"></a>Komponentenverfügbarkeit
 
-Wenn in einer echt Zeit Verarbeitungs Anwendung nur eine Komponente der Transaktion verfügbar ist – möglicherweise aufgrund von Serverüberlastung oder Netzwerkproblemen – wird der gesamte Prozess blockiert und kann nicht abgeschlossen werden. Im Gegensatz dazu trennt eine Anwendung, die den com+-Warteschlangen Dienst in der Warteschlange verwendet, die Transaktion in Aktivitäten, die jetzt abgeschlossen werden müssen, und die, die zu einem späteren Zeitpunkt abgeschlossen werden können. Beispielsweise können Nachrichten zur späteren Verarbeitung in die Warteschlange eingereiht werden, damit die anfordernde Komponente für andere Aufgaben frei ist.
+Wenn in einer Echtzeitverarbeitungsanwendung nur eine Komponente der Transaktion nicht verfügbar ist – möglicherweise aufgrund von Serverüberladungen oder Netzwerkproblemen –, wird der gesamte Prozess blockiert und kann nicht abgeschlossen werden. Im Gegensatz dazu trennt eine Anwendung, die den COM+-Dienst für komponenten in der Warteschlange verwendet, die Transaktion in Aktivitäten, die jetzt abgeschlossen werden müssen, und solche, die zu einem späteren Zeitpunkt abgeschlossen werden können. Beispielsweise können Nachrichten zur späteren Verarbeitung in die Warteschlange gestellt werden, damit die anfordernde Komponente für andere Aufgaben frei ist.
 
 ## <a name="component-lifetimes"></a>Lebensdauer von Komponenten
 
-Eine Anwendung, die den Dienst für in der Warteschlange befindliche Komponenten verwendet, ermöglicht die unabhängige Funktionsweise der Serverkomponente. Daher können Serverkomponenten schneller ausgeführt werden. In einem Echtzeitsystem ist die Serverkomponente ab dem Zeitpunkt vorhanden, zu dem Sie erstellt wird, bis das Objekt schließlich freigegeben wird. Der Server wartet, bis der Client Methodenaufrufe durchführt und Ergebnisse zurückgegeben werden, die das schnelle Radfahren von Server Objekten negiert und die Server Skalierbarkeit einschränkt.
+Eine Anwendung, die den Dienst für Komponenten in der Warteschlange verwendet, ermöglicht der Serverkomponente, unabhängig vom Client zu arbeiten. Daher können Serverkomponenten schneller abgeschlossen werden. In einem Echtzeitsystem ist die Serverkomponente von dem Zeitpunkt, zu dem sie erstellt wird, bis zum Ende der Entität des Objekts vorhanden. Der Server wartet darauf, dass der Client Methodenaufrufe sendet und Ergebnisse zurückgegeben werden. Dies negiert das schnelle Durchfahren von Serverobjekten und schränkt die Serverskalierbarkeit ein.
 
-## <a name="disconnected-applications"></a>Nicht verbundene Anwendungen
+## <a name="disconnected-applications"></a>Nicht verbundenen Anwendungen
 
-Durch die zunehmende Verwendung von Laptops, Notebooks und Palmen Computern wurde eine Anforderung für Anwendungen hergestellt, die gelegentlich nicht verbundene Clients oder mobile Benutzer bedienen. In einem in der Warteschlange befindlichen System können diese Benutzer weiterhin in einem getrennten Szenario arbeiten oder wenn Sie nicht mit dem Server verbunden sind. Sie können später eine Verbindung mit den Datenbanken oder Servern herstellen, um Ihre Anforderungen zu verarbeiten. Beispielsweise kann ein Vertriebsmitarbeiter Bestellungen von Kunden nehmen und später eine Verbindung mit der Versandabteilung herstellen, um diese Bestellungen zu verarbeiten.
+Die zunehmende Verwendung von Laptops, Notebooks und Handflächencomputern hat die Notwendigkeit von Anwendungen geschaffen, die gelegentlich getrennte Clients oder mobile Benutzer bedienen. In einem System in der Warteschlange können diese Benutzer in einem nicht verbundenen Szenario oder ohne Verbindung mit dem Server weiterhin arbeiten, und sie können später eine Verbindung mit den Datenbanken oder Servern herstellen, um ihre Anforderungen zu verarbeiten. Beispielsweise kann ein Vertriebsmitarbeiter Bestellungen von Kunden übernehmen und später eine Verbindung mit der Versandabteilung herstellen, um diese Bestellungen zu verarbeiten.
 
-Wenn Sie über eine Komponente verfügen, die entweder verbunden oder getrennt ausgeführt werden kann, werden Nachrichten in eine Richtung verschoben, und es ist selten notwendig, hin und her zu wechseln. Beispielsweise empfängt die Liefer Komponente im Bestell Szenario die Nachricht und verarbeitet sie. Möglicherweise wird eine andere Komponente für die Abrechnung oder Überwachung generiert. Der Client führt einen Commit aus, bevor der Server jemals gestartet wird. Die Nachricht wird erst gesendet, wenn die Anwendung einen Commit ausführt.
+Wenn Sie über eine Komponente verfügen, die entweder verbunden oder getrennt ausgeführt werden kann, werden Nachrichten in eine Richtung gesendet, und es ist selten notwendig, hin und her zu wechseln. Beispielsweise empfängt die Versandkomponente im Auftragsszenario die Nachricht und verarbeitet sie. Möglicherweise wird eine weitere Komponente für die Abrechnung oder Überwachung generiert. Der Client committ, bevor der Server überhaupt gestartet wird. Die Nachricht wird erst gesendet, wenn ein Commit für die Anwendung besteht.
 
-Die folgende Abbildung zeigt den Informationsfluss in einem getrennten Szenario.
+Die folgende Abbildung zeigt den Informationsfluss in einem nicht verbundenen Szenario.
 
-![Diagramm, das den Informationsfluss zwischen Client und Server anzeigt.](images/b1818188-0294-4bd8-8bbe-9fe8eea9e09a.png)
+![Diagramm, das den Informationsfluss zwischen Client und Server zeigt.](images/b1818188-0294-4bd8-8bbe-9fe8eea9e09a.png)
 
-## <a name="message-reliability"></a>Nachrichten Zuverlässigkeit
+## <a name="message-reliability"></a>Nachrichtenzuverlässigkeit
 
-Message Queuing ist ein leistungsfähiges Tool, das Daten Bank Techniken verwendet, um Daten auf robuste Weise zu schützen. Bei einem Server Fehler stellt Message Queuing sicher, dass für die Transaktionen ein Rollback ausgeführt wird, sodass keine Nachrichten verloren gehen und die Daten nicht beschädigt sind.
+Message Queuing ist ein leistungsstarkes Tool, das Datenbanktechniken verwendet, um Daten auf stabile Weise zu schützen. Im Falle eines Serverfehlers stellt Message Queuing sicher, dass für Transaktionen ein Rollback ausgeführt wird, damit Nachrichten nicht verloren gehen und daten nicht beschädigt werden.
 
-## <a name="server-scheduling"></a>Server Planung
+## <a name="server-scheduling"></a>Serverplanung
 
-Eine Anwendung, die in der Warteschlange befindliche Komponenten verwendet, eignet sich gut für die Zeit Verschiebe Ausführung von Komponenten, bei der unkritische Arbeit auf einen außerhalb der Spitzenzeiten beschränkt wird. Dabei handelt es sich um dasselbe nützliche Konzept, das auf die herkömmliche Verarbeitung im Batch Modus angewendet wurde. Ähnliche Anforderungen können für eine zusammenhängende Ausführung durch den Server verzögert werden, anstatt dass der Server sofort auf eine Vielzahl von Anforderungen reagieren muss.
+Eine Anwendung, die Komponenten in der Warteschlange verwendet, eignet sich gut für die Zeitverschiebung der Komponentenausführung, die unkritische Arbeit auf einen zeitraumswechselten Zeitraum verschiebt. Dies ist dasselbe nützliche Konzept, das auch auf die herkömmliche Batchmodusverarbeitung angewendet wurde. Ähnliche Anforderungen können für die zusammenhängende Ausführung durch den Server verzögert werden, anstatt dass der Server sofort auf eine Vielzahl von Anforderungen reagieren muss.
 
  
 

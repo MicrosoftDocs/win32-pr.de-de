@@ -517,7 +517,7 @@ Die Startkonfiguration für das Gerät steht in Konflikt mit anderen Geräten.
 
 </dt> <dd>
 
-Das Treiberlader für das Gerät fehlt.
+Das Treiberladegerät für das Gerät fehlt.
 
 </dd> <dt>
 
@@ -651,7 +651,7 @@ Die Registrierung ist möglicherweise beschädigt.
 
 <span id="System_failure__Try_changing_the_driver_for_this_device._If_that_does_not_work__see_your_hardware_documentation._Windows_is_removing_this_device."></span><span id="system_failure__try_changing_the_driver_for_this_device._if_that_does_not_work__see_your_hardware_documentation._windows_is_removing_this_device."></span><span id="SYSTEM_FAILURE__TRY_CHANGING_THE_DRIVER_FOR_THIS_DEVICE._IF_THAT_DOES_NOT_WORK__SEE_YOUR_HARDWARE_DOCUMENTATION._WINDOWS_IS_REMOVING_THIS_DEVICE."></span>
 
-<span id="System_failure__Try_changing_the_driver_for_this_device._If_that_does_not_work__see_your_hardware_documentation._Windows_is_removing_this_device."></span><span id="system_failure__try_changing_the_driver_for_this_device._if_that_does_not_work__see_your_hardware_documentation._windows_is_removing_this_device."></span><span id="SYSTEM_FAILURE__TRY_CHANGING_THE_DRIVER_FOR_THIS_DEVICE._IF_THAT_DOES_NOT_WORK__SEE_YOUR_HARDWARE_DOCUMENTATION._WINDOWS_IS_REMOVING_THIS_DEVICE."></span>**Systemfehler: Versuchen Sie, den Treiber für dieses Gerät zu ändern. Wenn dies nicht funktioniert, lesen Sie Ihre Hardwaredokumentation. Windows entfernt dieses Gerät.** (21)
+<span id="System_failure__Try_changing_the_driver_for_this_device._If_that_does_not_work__see_your_hardware_documentation._Windows_is_removing_this_device."></span><span id="system_failure__try_changing_the_driver_for_this_device._if_that_does_not_work__see_your_hardware_documentation._windows_is_removing_this_device."></span><span id="SYSTEM_FAILURE__TRY_CHANGING_THE_DRIVER_FOR_THIS_DEVICE._IF_THAT_DOES_NOT_WORK__SEE_YOUR_HARDWARE_DOCUMENTATION._WINDOWS_IS_REMOVING_THIS_DEVICE."></span>**Systemfehler: Versuchen Sie, den Treiber für dieses Gerät zu ändern. Wenn dies nicht funktioniert, lesen Sie ihre Hardwaredokumentation. Windows entfernt dieses Gerät.** (21)
 
 
 </dt> <dd>
@@ -700,7 +700,7 @@ Das Gerät ist nicht vorhanden, funktioniert nicht ordnungsgemäß oder verfügt
 
 </dt> <dd>
 
-Windows Das Gerät wird weiterhin eingerichtet.
+Windows wird das Gerät weiterhin eingerichtet.
 
 </dd> <dt>
 
@@ -711,7 +711,7 @@ Windows Das Gerät wird weiterhin eingerichtet.
 
 </dt> <dd>
 
-Windows Das Gerät wird weiterhin eingerichtet.
+Windows wird das Gerät weiterhin eingerichtet.
 
 </dd> <dt>
 
@@ -829,7 +829,7 @@ Diese Eigenschaft wird von [**CIM \_ ManagedSystemElement geerbt.**](cim-managed
 **Deviceid**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **string**
+Datentyp: **Zeichenfolge**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
@@ -838,7 +838,7 @@ Zugriffstyp: Schreibgeschützt
 Qualifizierer: [ **\_ CIM-Taste**](/windows/desktop/WmiSdk/standard-wmi-qualifiers)
 </dt> </dl>
 
-Adresse oder andere identifizierende Informationen zum eindeutigen Benennen des logischen Geräts.
+Adresse oder andere identifizierende Informationen, um das logische Gerät eindeutig zu benennen.
 
 Diese Eigenschaft wird von [**CIM \_ LogicalDevice geerbt.**](cim-logicaldevice.md)
 
@@ -862,7 +862,7 @@ Diese Eigenschaft wird von [**CIM \_ LogicalDevice geerbt.**](cim-logicaldevice.
 **ErrorDescription**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **string**
+Datentyp: **Zeichenfolge**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
@@ -892,7 +892,7 @@ Diese Eigenschaft wird von [**CIM \_ ManagedSystemElement geerbt.**](cim-managed
 
 </dd> <dt>
 
-**IsSworgSupply**
+**IsSw zeitsupply**
 </dt> <dd> <dl> <dt>
 
 Datentyp: **boolescher Wert**
@@ -901,7 +901,7 @@ Datentyp: **boolescher Wert**
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-True **gibt an,** dass es sich bei der Stromversorgung um eine schalt- bzw. lineare Stromversorgung handelt.
+True **gibt an,** dass es sich bei der Stromversorgung um eine Schalt- bzw. lineare Stromversorgung handelt.
 
 </dd> <dt>
 
@@ -923,7 +923,7 @@ Diese Eigenschaft wird von [**CIM \_ LogicalDevice geerbt.**](cim-logicaldevice.
 **Name**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **string**
+Datentyp: **Zeichenfolge**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
@@ -941,7 +941,7 @@ Diese Eigenschaft wird von [**CIM \_ ManagedSystemElement geerbt.**](cim-managed
 **PNPDeviceID**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **string**
+Datentyp: **Zeichenfolge**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
@@ -1027,7 +1027,7 @@ Die [**SetPowerState-Methode**](setpowerstate-method-in-class-cim-controller.md)
 
 <span id="Power_Cycling_Supported"></span><span id="power_cycling_supported"></span><span id="POWER_CYCLING_SUPPORTED"></span>
 
-<span id="Power_Cycling_Supported"></span><span id="power_cycling_supported"></span><span id="POWER_CYCLING_SUPPORTED"></span>**Energieradfahren unterstützt** (6)
+<span id="Power_Cycling_Supported"></span><span id="power_cycling_supported"></span><span id="POWER_CYCLING_SUPPORTED"></span>**Power-Bike unterstützt** (6)
 
 
 </dt> <dd>
@@ -1060,7 +1060,7 @@ Zugriffstyp: Schreibgeschützt
 
 If **TRUE**, the device can be power managed, that is, put into a power-save state. False **gibt** an, dass der ganzzahlige Wert 1 ("Nicht unterstützt") der einzige Eintrag im **PowerManagementCapabilities-Array sein** sollte.
 
-Diese Eigenschaft gibt nicht an, ob energieverwaltungsfeatures derzeit aktiviert sind oder welche Features unterstützt werden, sofern aktiviert. Weitere Informationen finden Sie im **PowerManagementCapabilities-Array.** Diese Eigenschaft wird von [**CIM \_ LogicalDevice geerbt.**](cim-logicaldevice.md)
+Diese Eigenschaft gibt nicht an, ob energieverwaltungsfeatures derzeit aktiviert sind oder welche Features unterstützt werden, sofern aktiviert. Weitere Informationen finden Sie unter **PowerManagementCapabilities-Array.** Diese Eigenschaft wird von [**CIM \_ LogicalDevice geerbt.**](cim-logicaldevice.md)
 
 </dd> <dt>
 

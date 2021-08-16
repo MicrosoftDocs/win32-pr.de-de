@@ -1,10 +1,10 @@
 ---
 title: carLicense-Attribut
-description: Fahrzeuglizenz oder Nummernschild.
+description: Fahrzeuglizenz oder Registrierungskennzeichen.
 ms.assetid: 09505889-3dcc-46a3-851d-d9594c3a2ccb
 ms.tgt_platform: multiple
 keywords:
-- CARLICENSE-Attribut AD-Schema
+- carLicense-Attribut AD-Schema
 topic_type:
 - apiref
 api_name:
@@ -22,7 +22,7 @@ ms.locfileid: "118427595"
 ---
 # <a name="carlicense-attribute"></a>carLicense-Attribut
 
-Fahrzeuglizenz oder Nummernschild.
+Fahrzeuglizenz oder Registrierungskennzeichen.
 
 
 
@@ -34,7 +34,7 @@ Fahrzeuglizenz oder Nummernschild.
 | Aktualisieren von Berechtigungen  | \-                                          |
 | Updatehäufigkeit  | \-                                          |
 | Attribute-Id      | 2.16.840.1.113730.3.1.1                     |
-| System-Id-Guid    | d4159c92-957d-4a87-8a67-8d2934e01649        |
+| System-ID-GUID    | d4159c92-957d-4a87-8a67-8d2934e01649        |
 | Syntax            | [**String(Unicode)**](s-string-unicode.md) |
 
 
@@ -56,7 +56,7 @@ Fahrzeuglizenz oder Nummernschild.
 | Link-ID                | \-                                                                                    |
 | MAPI-Id                | \-                                                                                    |
 | System-Only            | False                                                                                 |
-| Is-Single-Valued       | False                                                                                 |
+| Ist einwertig       | False                                                                                 |
 | Ist indiziert             | False                                                                                 |
 | Im globalen Katalog      | False                                                                                 |
 | NT-Security-Descriptor | O:BAG:BAD:S:                                                                          |
@@ -77,7 +77,7 @@ Fahrzeuglizenz oder Nummernschild.
 | Link-ID                | \-                                                                                    |
 | MAPI-Id                | \-                                                                                    |
 | System-Only            | False                                                                                 |
-| Is-Single-Valued       | False                                                                                 |
+| Ist einwertig       | False                                                                                 |
 | Ist indiziert             | False                                                                                 |
 | Im globalen Katalog      | False                                                                                 |
 | NT-Security-Descriptor | O:BAG:BAD:S:                                                                          |
@@ -98,7 +98,7 @@ Fahrzeuglizenz oder Nummernschild.
 | Link-ID                | \-                                                                                    |
 | MAPI-Id                | \-                                                                                    |
 | System-Only            | False                                                                                 |
-| Is-Single-Valued       | False                                                                                 |
+| Ist einwertig       | False                                                                                 |
 | Ist indiziert             | False                                                                                 |
 | Im globalen Katalog      | False                                                                                 |
 | NT-Security-Descriptor | O:BAG:BAD:S:                                                                          |

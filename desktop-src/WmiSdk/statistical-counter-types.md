@@ -1,34 +1,34 @@
 ---
-description: Die Leistungs Datenanbieter für die leistungsstarke WMI-Leistung berechnet die statistischen Leistungs Zählers für eine angegebene Anzahl von Rohdaten-Leistungs Beispielen.
+description: Der WMI-Leistungsindikator "Formatierte Leistung Datenanbieter berechnet die statistischen Indikatortypen für eine angegebene Anzahl von Unformatierten Indikatordatenbeispielen.
 ms.assetid: a7e32ef2-fad1-449c-beee-07db4b93e3fe
 ms.tgt_platform: multiple
-title: Statistische Counter-Typen
+title: Statistische Indikatortypen
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: cb97224b06881cbc3c8b1375c04a4df5be1095f4
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 1289bae423305bac863afefaba8e5700268d98e594fe767d597c8470aa4f1ac0
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "104042587"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118314819"
 ---
-# <a name="statistical-counter-types"></a>Statistische Counter-Typen
+# <a name="statistical-counter-types"></a>Statistische Indikatortypen
 
-Die [Leistungs Datenanbieter](formatted-performance-data-provider.md) für die leistungsstarke WMI-Leistung berechnet die statistischen Leistungs Zählers für eine angegebene Anzahl von Rohdaten-Leistungs Beispielen. Die Algorithmen für die Counter-Typen erfordern keine geerbten Zeitstempel-oder Häufigkeits Eigenschaften (z. b. " **Zeitstempel \_ PerfTime** " oder " **Frequency \_ PerfTime**"), die für andere Leistungstypen erforderlich sind
+Der WMI-Hochleistungs-Leistungsindikator ["Formatierte Datenanbieter](formatted-performance-data-provider.md) berechnet die statistischen Indikatortypen für eine angegebene Anzahl von Unformatierten Indikatordatenbeispielen. Die Algorithmen für die Indikatortypen erfordern keine geerbten Zeitstempel- oder Häufigkeitseigenschaften (z. B. **TimeStamp \_ PerfTime** oder **Frequency \_ PerfTime),** die andere Indikatortypen erfordern.
 
-Stattdessen unterstützen die statistischen Counter-Typen einen **Qualifizierer** , der die Anzahl der zu verwendenden Beispiele identifiziert. Ein Beispiel wird gesammelt, wenn die [**Aktualisierungs**](/windows/desktop/api/Wbemcli/nf-wbemcli-iwbemrefresher-refresh) Methode für das Leistungs Objekt aufgerufen wird. Verwenden Sie für Skripts die Methode " [**Swap. Refresh**](swbemrefresher-refresh.md) ". Die berechneten Daten enthalten das Ergebnis der Berechnung, die für die **samplewindow** -Anzahl von Stichproben aus der Rohdaten-Eigenschaft ausgeführt wird. Die Rohdaten für die Berechnung sind frm der im **Counter** -Qualifizierer angegebene Eigenschaftsname.
+Stattdessen unterstützen die statistischen Indikatortypen einen **Qualifizierer,** der an identifiziert, wie viele Stichproben verwendet werden. Ein Beispiel wird gesammelt, wenn die [**Refresh-Methode**](/windows/desktop/api/Wbemcli/nf-wbemcli-iwbemrefresher-refresh) für das Leistungsobjekt aufgerufen wird. Verwenden Sie für Skripts die [**SWbemRefresher.Refresh-Methode.**](swbemrefresher-refresh.md) Die berechneten Daten enthalten das Ergebnis der Berechnung, die für die **SampleWindow-Anzahl** von Stichproben aus der Rohdateneigenschaft ausgeführt wurde. Die Rohdaten für die Berechnung stammen aus dem Eigenschaftennamen, der im **Counter-Qualifizierer** angegeben ist.
 
-Weitere Informationen finden Sie unter Abrufen [statistischer Leistungsdaten](obtaining-statistical-performance-data.md) und [zugreifen auf vorinstallierte WMI-Leistungsklassen](accessing-wmi-preinstalled-performance-classes.md).
+Weitere Informationen finden Sie unter [Abrufen statistischer Leistungsdaten](obtaining-statistical-performance-data.md) und [Zugreifen auf vorinstallierte WMI-Leistungsklassen.](accessing-wmi-preinstalled-performance-classes.md)
 
 
 
-| CounterType-Konstante                    | BESCHREIBUNG                                                                                                                                                                                |
+| CounterType-Konstante                    | Beschreibung                                                                                                                                                                                |
 |-----------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| [\_kochmittel Wert](cooker-average.md)   | Fasst wiederholte Beobachtungen einer Eigenschaft in einer [**Win32 \_ perfrawdata**](/windows/desktop/CIMWin32Prov/win32-perfrawdata) -Klasse zusammen und dividiert die Summe durch die Anzahl von Beobachtungen.                              |
-| [Maximaler kochwert \_](cooker-max.md)           | Größter Wert aus einem Satz von Beobachtungen einer Eigenschaft in einer [**Win32 \_ perfrawdata**](/windows/desktop/CIMWin32Prov/win32-perfrawdata) -Klasse.                                                                    |
-| [Koch \_ Min.](cooker-min.md)           | Der kleinste Wert aus einem Satz von Beobachtungen einer Eigenschaft in einer [**Win32 \_ perfrawdata**](/windows/desktop/CIMWin32Prov/win32-perfrawdata) -Klasse.                                                                   |
-| [Koch \_ Bereich](cooker-range.md)       | Der Unterschied [zwischen den minimalen](cooker-min.md) und [maximalen](cooker-max.md) Werten für einen Satz von unformatierten Beobachtungen einer Eigenschaft in einer [**Win32 \_ perfrawdata**](/windows/desktop/CIMWin32Prov/win32-perfrawdata) -Klasse. |
-| [Koch \_ Varianz](cooker-variance.md) | Das Maß der Varianz, das verwendet werden kann, um die Dispersion für eine Reihe von unformatierten Beobachtungen einer Eigenschaft in einer " [**\_ perfrawdata**](/windows/desktop/CIMWin32Prov/win32-perfrawdata) "-Klasse zu charakterisieren.            |
+| [COOKER \_ AVERAGE](cooker-average.md)   | Summiert wiederholte Beobachtungen einer Eigenschaft in einer [**Win32 \_ PerfRawData-Klasse**](/windows/desktop/CIMWin32Prov/win32-perfrawdata) und dividiert die Summe durch die Anzahl der Beobachtungen.                              |
+| [COOKER \_ MAX](cooker-max.md)           | Größter Wert aus einer Reihe von Beobachtungen einer Eigenschaft in einer [**Win32 \_ PerfRawData-Klasse.**](/windows/desktop/CIMWin32Prov/win32-perfrawdata)                                                                    |
+| [COOKER \_ MIN](cooker-min.md)           | Kleinster Wert aus einer Reihe von Beobachtungen einer Eigenschaft in einer [**Win32 \_ PerfRawData-Klasse.**](/windows/desktop/CIMWin32Prov/win32-perfrawdata)                                                                   |
+| [COOKER \_ RANGE](cooker-range.md)       | Unterschied zwischen den [Min-](cooker-min.md) und [Max-Werten](cooker-max.md) für einen Satz roher Beobachtungen einer Eigenschaft in einer [**Win32 \_ PerfRawData-Klasse.**](/windows/desktop/CIMWin32Prov/win32-perfrawdata) |
+| [COOKER \_ VARIANCE](cooker-variance.md) | Maß für Die Variabilität, die verwendet werden kann, um eine Reihe roher Beobachtungen einer Eigenschaft in einer [**Win32 \_ PerfRawData-Klasse zu**](/windows/desktop/CIMWin32Prov/win32-perfrawdata) charakterisieren.            |
 
 
 
@@ -38,7 +38,7 @@ Weitere Informationen finden Sie unter Abrufen [statistischer Leistungsdaten](ob
 
 <dl> <dt>
 
-[WMI-Leistungsdaten Typen](wmi-performance-counter-types.md)
+[WMI-Leistungsindikatortypen](wmi-performance-counter-types.md)
 </dt> <dt>
 
 [Überwachen von Leistungsdaten](monitoring-performance-data.md)
@@ -47,7 +47,7 @@ Weitere Informationen finden Sie unter Abrufen [statistischer Leistungsdaten](ob
 [Aktualisieren von WMI-Daten in Skripts](refreshing-wmi-data-in-scripts.md)
 </dt> <dt>
 
-[Zugreifen auf Leistungsdaten im Skript](accessing-performance-data-in-script.md)
+[Zugreifen auf Leistungsdaten in Skripts](accessing-performance-data-in-script.md)
 </dt> <dt>
 
 [Zugreifen auf Leistungsdaten in C++](accessing-performance-data-in-c--.md)

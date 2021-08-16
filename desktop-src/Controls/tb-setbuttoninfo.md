@@ -1,9 +1,9 @@
 ---
-title: TB_SETBUTTONINFO Meldung (kommstrg. h)
+title: TB_SETBUTTONINFO Meldung (Commctrl.h)
 description: Legt die Informationen für eine vorhandene Schaltfläche in einer Symbolleiste fest.
 ms.assetid: ac9b88b9-d0d0-4669-a342-708924d97c8b
 keywords:
-- Windows-Steuerelemente für TB_SETBUTTONINFO Meldung
+- TB_SETBUTTONINFO Windows-Steuerelemente für Nachrichten
 topic_type:
 - apiref
 api_name:
@@ -16,14 +16,14 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 70612a90f245a25dde5a487917d7c3b669424ea8
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 8e9fa1da0f9556c025b83ac2b3345680fe11dac0dd15e202ed7336cacfe511e1
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "103859239"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117829624"
 ---
-# <a name="tb_setbuttoninfo-message"></a>TB \_ SetButtonInfo-Meldung
+# <a name="tb_setbuttoninfo-message"></a>TB \_ SETBUTTONINFO-Meldung
 
 Legt die Informationen für eine vorhandene Schaltfläche in einer Symbolleiste fest.
 
@@ -34,24 +34,24 @@ Legt die Informationen für eine vorhandene Schaltfläche in einer Symbolleiste 
 *wParam* 
 </dt> <dd>
 
-Schaltflächen Bezeichner.
+Schaltflächenbezeichner.
 
 </dd> <dt>
 
 *lParam* 
 </dt> <dd>
 
-Ein Zeiger auf eine [**tbbuttoninfo**](/windows/desktop/api/Commctrl/ns-commctrl-tbbuttoninfoa) -Struktur, die die neuen Schaltflächen Informationen enthält. Die Member **CBSIZE** und **dwMask** dieser Struktur müssen ausgefüllt werden, bevor diese Nachricht gesendet wird.
+Zeiger auf eine [**TBBUTTONINFO-Struktur,**](/windows/desktop/api/Commctrl/ns-commctrl-tbbuttoninfoa) die die neuen Schaltflächeninformationen enthält. Die **CbSize-** und **dwMask-Member** dieser Struktur müssen vor dem Senden dieser Nachricht ausgefüllt werden.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt bei Erfolg einen Wert ungleich 0 (null) zurück, andernfalls NULL.
+Gibt bei Erfolg einen Wert ungleich 0 (null) zurück. Andernfalls wird 0 (null) zurückgegeben.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Text wird normalerweise Schaltflächen zugewiesen, wenn Sie einer Symbolleiste hinzugefügt werden, indem der Index einer Zeichenfolge im Zeichen folgen Pool der Symbolleiste angegeben wird. Wenn Sie eine **TB- \_ SetButtonInfo** verwenden, um einer Schaltfläche neuen Text zuzuweisen, wird der Text dauerhaft aus dem Zeichen folgen Pool überschrieben. Sie können den Text ändern, indem Sie **TB \_ SetButtonInfo** erneut aufrufen, aber Sie können die Zeichenfolge nicht aus dem Zeichen folgen Pool neu zuweisen.
+Text wird Schaltflächen häufig zugewiesen, wenn sie einer Symbolleiste hinzugefügt werden, indem der Index einer Zeichenfolge im Zeichenfolgenpool der Symbolleiste angegeben wird. Wenn Sie eine **TB \_ SETBUTTONINFO** verwenden, um einer Schaltfläche neuen Text zuzuweisen, wird der Text aus dem Zeichenfolgenpool dauerhaft überschrieben. Sie können den Text ändern, indem Sie **TB \_ SETBUTTONINFO** erneut aufrufen, aber Sie können die Zeichenfolge nicht aus dem Zeichenfolgenpool neu zuweisen.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -59,33 +59,33 @@ Text wird normalerweise Schaltflächen zugewiesen, wenn Sie einer Symbolleiste h
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>                                        |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2003 \[ -Desktop-Apps\]<br/>                                  |
-| Header<br/>                   | <dl> <dt>Kommstrg. h</dt> </dl> |
-| Unicode- und ANSI-Name<br/>   | **TB \_ Setbuttoninfow** (Unicode) und **TB \_ setbuttoninfoa** (ANSI)<br/>         |
+| Unterstützte Mindestversion (Client)<br/> | Windows \[Nur Vista-Desktop-Apps\]<br/>                                        |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2003-Desktop-Apps\]<br/>                                  |
+| Header<br/>                   | <dl> <dt>Commctrl.h</dt> </dl> |
+| Unicode- und ANSI-Name<br/>   | **TB \_ SETBUTTONINFOW** (Unicode) und **TB \_ SETBUTTONINFOA** (ANSI)<br/>         |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-**Verweis**
+**Referenz**
 </dt> <dt>
 
-[**TB ( \_ AddButtons)**](tb-addbuttons.md)
+[**TB \_ ADDBUTTONS**](tb-addbuttons.md)
 </dt> <dt>
 
-[**TB \_ getbuttoninfo**](tb-getbuttoninfo.md)
+[**TB \_ GETBUTTONINFO**](tb-getbuttoninfo.md)
 </dt> <dt>
 
-[**TB \_ getbuttontext**](tb-getbuttontext.md)
+[**TB \_ GETBUTTONTEXT**](tb-getbuttontext.md)
 </dt> <dt>
 
-[**TB \_ GetString**](tb-getstring.md)
+[**TB \_ GETSTRING**](tb-getstring.md)
 </dt> <dt>
 
-[**TB ( \_ InsertButton)**](tb-insertbutton.md)
+[**TB \_ INSERTBUTTON**](tb-insertbutton.md)
 </dt> </dl>
 
  

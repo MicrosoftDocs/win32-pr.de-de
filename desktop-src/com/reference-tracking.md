@@ -1,26 +1,26 @@
 ---
-title: Verweis Nachverfolgung
-description: Verweis Nachverfolgung
+title: Verweisnachverfolgung
+description: Verweisnachverfolgung
 ms.assetid: 1e2cf555-3b96-42d5-a0bb-abb720c93520
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 4f45607a495e973ec33acde6d97cb1f83259a27c
-ms.sourcegitcommit: 5f33645661bf8c825a7a2e73950b1f4ea0f1cd82
+ms.openlocfilehash: 1321c922cc0a7493e3e4792f7c0f925618330c2e42665296fb06792635a4ea70
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/21/2020
-ms.locfileid: "104474309"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118309763"
 ---
-# <a name="reference-tracking"></a>Verweis Nachverfolgung
+# <a name="reference-tracking"></a>Verweisnachverfolgung
 
-Die Verweis Nachverfolgung kann die unbeabsichtigte oder schädliche frühe Freigabe von Objekten verhindern.
+Die Verweisnachverfolgung kann die unbeabsichtigte oder böswillige frühe Freigabe von Objekten verhindern.
 
-Wenn Sie die Verweis Verfolgung aktivieren, fordern Sie an, dass verteilte [**adressf**](/windows/win32/api/unknwn/nf-unknwn-iunknown-addref) -und [**releaseaufrufe**](/windows/win32/api/unknwn/nf-unknwn-iunknown-release) von com authentifiziert werden. Wenn die Verweis Verfolgung aktiviert ist, verfolgt com den Verweis Zähler pro Benutzer, damit ein Benutzer die **Freigabe** nur für Objekte aufrufen kann, die der Benutzer zuvor als " **adressf** " bezeichnet hat. Obwohl bei der Verweis Nachverfolgung die Leistung beeinträchtigt werden kann, wird sichergestellt, dass unabhängig davon, wie oft ein bestimmter Benutzer die **Freigabe** aufruft, die Objekte und stubwerte weiterhin vorhanden sind, wenn ein anderer Benutzer einen Verweis darauf hat.
+Wenn Sie die Verweisnachverfolgung aktivieren, fordern Sie an, dass verteilte [**AddRef-**](/windows/win32/api/unknwn/nf-unknwn-iunknown-addref) und [**Release-Aufrufe**](/windows/win32/api/unknwn/nf-unknwn-iunknown-release) von COM authentifiziert werden. Wenn die Verweisnachverfolgung aktiviert ist, verfolgt COM die Anzahl der Benutzerverweise nach, sodass ein Benutzer **Release** nur für Objekte aufrufen kann, für die der Benutzer zuvor **AddRef aufgerufen** hat. Obwohl die Verweisnachverfolgung die Leistung beeinträchtigen kann, wird sichergestellt, dass unabhängig davon, wie oft ein angegebener Benutzer **Release** aufruft, die Objekte und Stubs weiterhin vorhanden sind, wenn eine andere Person auf sie verweist.
 
-Der Client kann die Verweis Nachverfolgung für einen Prozess festlegen, indem er \_ \_ in einem [**CoInitializeSecurity**](/windows/desktop/api/combaseapi/nf-combaseapi-coinitializesecurity)-Rückruf das eoac Secure Refs-funktionsflag übergibt. Mithilfe Dcomcnfg.exe können Sie auch die Verweis Nachverfolgung für alle Anwendungen auf einem Computer aktivieren oder deaktivieren.
+Der Client kann die Verweisnachverfolgung für einen Prozess festlegen, indem er das EOAC SECURE REFS-Funktionsflag in einem Aufruf von \_ \_ [**CoInitializeSecurity überträgt.**](/windows/desktop/api/combaseapi/nf-combaseapi-coinitializesecurity) Sie können die Verweisnachverfolgung auch für alle Anwendungen auf einem Computer aktivieren oder deaktivieren, indem Sie Dcomcnfg.exe.
 
-Wenn die Verweis Nachverfolgung aktiviert ist, verwendet [**IUnknown**](/windows/desktop/api/Unknwn/nn-unknwn-iunknown) immer Standard Sicherheitseinstellungen. In diesem Fall tritt bei Aufrufen von [**CoSetProxyBlanket**](/windows/desktop/api/combaseapi/nf-combaseapi-cosetproxyblanket) bei **IUnknown** ein Fehler auf.
+Wenn die Verweisnachverfolgung aktiviert ist, [**verwendet IUnknown**](/windows/desktop/api/Unknwn/nn-unknwn-iunknown) immer Standardsicherheitseinstellungen. In diesem Fall können Aufrufe von [**CoSetProxyBlanket**](/windows/desktop/api/combaseapi/nf-combaseapi-cosetproxyblanket) in **IUnknown** nicht durchgeführt werden.
 
- 
+ 
 
- 
+ 

@@ -1,19 +1,19 @@
 ---
-description: Ordner Tiefe-Prädikate steuern den Bereich einer Suche, indem Sie einen Pfad angeben und angeben, ob eine Tiefe oder eine flache Durchquerung durchlaufen werden soll.
+description: Ordnertiefeprädikate steuern den Bereich einer Suche, indem sie einen Pfad angeben und angeben, ob ein tiefer oder flacher Durchlauf ausgeführt werden soll.
 ms.assetid: 8eadbd42-3538-412e-9bf8-b2355d23437e
-title: Bereichs-und Verzeichnis Prädikate
+title: SCOPE- und DIRECTORY-Prädikate
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 2418b2149a5bf05bd000460c787b7f967856c5c3
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: f221ba4048f1ab7f5096321cc00aed209acb5ca3e5616e6e6a4fbbc516dfc28b
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104128548"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118462469"
 ---
-# <a name="scope-and-directory-predicates"></a>Bereichs-und Verzeichnis Prädikate
+# <a name="scope-and-directory-predicates"></a>SCOPE- und DIRECTORY-Prädikate
 
-Ordner Tiefe-Prädikate steuern den Bereich einer Suche, indem Sie einen Pfad angeben und angeben, ob eine Tiefe oder eine flache Durchquerung durchlaufen werden soll. Das folgende Beispiel zeigt die Syntax der Ordner Tiefe-Prädikate:
+Ordnertiefeprädikate steuern den Bereich einer Suche, indem sie einen Pfad angeben und angeben, ob ein tiefer oder flacher Durchlauf ausgeführt werden soll. Im Folgenden wird die Syntax der Ordnertiefeprädikate veranschaulicht:
 
 
 ```
@@ -22,9 +22,9 @@ Ordner Tiefe-Prädikate steuern den Bereich einer Suche, indem Sie einen Pfad an
 
 
 
-Auf das Prädikat folgt ein Gleichheitszeichen. Der Pfad wird in einfache Anführungszeichen eingeschlossen und muss mit einem Protokoll und einem Doppelpunkt beginnen (z `file:` . b `mapi:` ., oder `csc:` ). Das Bereichs Prädikat führt einen tiefen Durchlauf des Pfads aus, einschließlich aller Unterordner, während das Verzeichnis Prädikat nur einen flachen Durchlauf des angegebenen Ordners ausführt. Wie andere Structured Query Language (SQL)-Einschränkungen können Sie mehr als eine Ordner tiefen Einschränkung in einer einzelnen Abfrage angeben.
+Auf das Prädikat folgt ein Gleichheitszeichen. Der Pfad ist in einfachen Anführungszeichen enthalten und muss mit einem Protokoll und einem Doppelpunkt (z. B. `file:` , `mapi:` oder ) `csc:` beginnen. Das SCOPE-Prädikat führt einen tiefen Durchlauf des Pfads aus, einschließlich aller Unterordner, während das DIRECTORY-Prädikat einen flachen Durchlauf nur des angegebenen Ordners durchführt. Wie bei anderen strukturierte Abfragesprache -Einschränkungen (SQL) können Sie in einer einzelnen Abfrage mehrere Einschränkungen für die Ordnertiefe angeben.
 
-Um den lokalen Katalog eines Remote Computers abzufragen, müssen Sie den Computernamen vor dem Katalog und einen Universal Naming Convention (UNC)-Pfad auf dem Remote Computer in der Scope-oder Directory-Klausel einschließen.
+Um den lokalen Katalog eines Remotecomputers abzufragen, fügen Sie den Computernamen vor dem Katalog und einen UNC-Pfad (Universal Naming Convention) auf dem Remotecomputer in die SCOPE- oder DIRECTORY-Klausel ein.
 
 ## <a name="examples"></a>Beispiele
 
@@ -43,10 +43,10 @@ SELECT System.ItemURL FROM SystemIndex WHERE SCOPE='mapi://{S-1-5-21-2117521111-
 
 
 
-Im ersten Bereichs Beispiel wird der Ordner "C: \\ Dateien \\ Berichte" und alle zugehörigen Unterordner durchsucht. Im Verzeichnis Beispiel werden nur der Stamm Ordner C: \\ Files-Berichte durchsucht \\ .
+Im ersten SCOPE-Beispiel werden der Ordner C: \\ Files Reports und alle \\ zugehörigen Unterordner durchsucht. Im DIRECTORY-Beispiel wird nur der Stammordner C: \\ Files Reports durchsucht. \\
 
 > [!Note]  
-> Die umgekehrten Schrägstriche () des Dateisystems \\ werden zu einem URL-Schrägstrich (manchmal auch als Schrägstriche bezeichnet) (/).
+> Die umgekehrten Schrägstriche des Dateisystems \\ () werden zu einem SCHRÄGSTRICH im URL-Stil (manchmal als Schrägstriche bezeichnet) (/).
 
  
 

@@ -1,7 +1,7 @@
 ---
-description: Die Put \_ size-Methode legt die Ausgabegröße und den streckungs Modus fest.
+description: Die \_ put Size-Methode legt die Ausgabegröße und den Stretchmodus fest.
 ms.assetid: 1186eee4-b5c1-4216-abb3-86ea03b2da40
-title: Iresize::p ut_Size-Methode (qedit. h)
+title: IResize::p ut_Size-Methode (Qedit.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -14,21 +14,21 @@ api_type:
 api_location:
 - strmiids.lib
 - strmiids.dll
-ms.openlocfilehash: 579cee086798e64abd07b25cc4f7bb14405157dd
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: d2da95cca7bf19182dd4c0f5f385715256ae9c5253c356094110c028fb1b016d
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106368378"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117818130"
 ---
-# <a name="iresizeput_size-method"></a>Iresize::p UT \_ size-Methode
+# <a name="iresizeput_size-method"></a>IResize::p ut \_ Size-Methode
 
 > [!Note]  
-> \[Veraltet. Diese API kann aus zukünftigen Versionen von Windows entfernt werden.\]
+> \[Veraltet. Diese API kann aus zukünftigen Releases von Windows entfernt werden.\]
 
  
 
-Die `put_Size` -Methode legt die Ausgabegröße und den streckungs Modus fest.
+Die `put_Size` -Methode legt die Ausgabegröße und den Stretchmodus fest.
 
 ## <a name="syntax"></a>Syntax
 
@@ -47,46 +47,46 @@ HRESULT put_Size(
 
 <dl> <dt>
 
-*Höhe* \[ in\]
+*Höhe* \[ In\]
 </dt> <dd>
 
-Die Höhe des Videos in Pixel.
+Die Videohöhe in Pixel.
 
 </dd> <dt>
 
-*Breite* \[ in\]
+*Breite* \[ In\]
 </dt> <dd>
 
-Die Breite des Videos in Pixel.
+Die Videobreite in Pixel.
 
 </dd> <dt>
 
-*Flags* \[in\]
+*Flags* \[ In\]
 </dt> <dd>
 
-Der streckungs Modus. Informationen zu möglichen Werten finden Sie unter [**Größenänderung für Flags**](resize-flags.md) .
+Der Stretchmodus. Mögliche Werte finden Sie unter Ändern der Größe von [**Flags.**](resize-flags.md)
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt einen **HRESULT** -Wert zurück.
+Gibt einen **HRESULT-Wert** zurück.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-DES kann diese Methode vor oder nach dem Aufruf von **Put \_ mediaType** aufrufen. Wenn des auf diese Methode vor dem Aufruf von **Put \_ mediaType** aufruft, sollte der Filter einen Standardwert für die Bittiefe auswählen und die Größen Werte zum Erstellen eines Ausgabemedien Typs verwenden. Wenn des nach dem Aufruf von **Put \_ mediaType** diese Methode aufruft, sollte der Filter seinen aktuellen Ausgabetyp mit den neuen Größen ändern.
+DES kann diese Methode vor oder nach dem Aufruf von **put \_ MediaType** aufrufen. Wenn DES diese Methode vor dem Aufrufen von **put \_ MediaType** aufruft, sollte der Filter einen Standardwert für die Bittiefe auswählen und die Größenwerte verwenden, um einen Ausgabemedientyp zu erstellen. Wenn DES diese Methode nach dem Aufruf von **put \_ MediaType aufruft,** sollte der Filter seinen aktuellen Ausgabetyp mit den neuen Größen ändern.
 
-Des kann diese Methode auch nach der Verbindungs Herstellung der Ausgabe-PIN aufruft. Ändern Sie in diesem Fall den Ausgabetyp, und verbinden Sie die Ausgabe-PIN erneut mit dem neuen Typ. Weitere Informationen finden Sie unter Wiederherstellen einer [Verbindung mit Pins](reconnecting-pins.md) .
+DES kann diese Methode auch aufrufen, nachdem der Ausgabepin verbunden wurde. Ändern Sie in diesem Fall den Ausgabetyp, und verbinden Sie den Ausgabepin erneut mit dem neuen Typ. Weitere Informationen finden Sie unter [Erneutes Verbinden von Pins.](reconnecting-pins.md)
 
-Der *Flags* -Parameter gibt an, wie der Filter den Vorgang zum Ändern der Größe ausführen soll.
+Der *Flags-Parameter* gibt an, wie der Filter den Größenänderungsvorgang ausführen soll.
 
 > [!Note]  
-> Die Header Datei "qedit. h" ist nicht mit Direct3D-Headern nach Version 7 kompatibel.
+> Die Headerdatei Qedit.h ist nicht mit Direct3D-Headern kompatibel, die höher als Version 7 sind.
 
  
 
 > [!Note]  
-> Zum Abrufen von "qedit. h" Laden Sie das [Microsoft Windows SDK Update für Windows Vista und .NET Framework 3,0](https://msdn.microsoft.com/windowsvista/bb980924.aspx)herunter. "Qedit. h" ist im Microsoft Windows SDK für Windows 7 und .NET Framework 3,5 Service Pack 1 nicht verfügbar.
+> Laden Sie zum Abrufen von Qedit.h das [Microsoft Windows SDK-Update für Windows Vista und .NET Framework 3.0](https://msdn.microsoft.com/windowsvista/bb980924.aspx)herunter. Qedit.h ist im Microsoft Windows SDK für Windows 7 und .NET Framework 3.5 Service Pack 1 nicht verfügbar.
 
  
 
@@ -96,20 +96,20 @@ Der *Flags* -Parameter gibt an, wie der Filter den Vorgang zum Ändern der Grö�
 
 | Anforderung | Wert |
 |--------------------|-----------------------------------------------------------------------------------------|
-| Version<br/> | DirectX 9,0 oder höher<br/>                                                         |
-| Header<br/>  | <dl> <dt>"Qedit. h"</dt> </dl>      |
-| Bibliothek<br/> | <dl> <dt>"" "" ". Lib"</dt> </dl> |
+| Version<br/> | DirectX 9.0 oder höher<br/>                                                         |
+| Header<br/>  | <dl> <dt>Qedit.h</dt> </dl>      |
+| Bibliothek<br/> | <dl> <dt>Strmiids.lib</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[Fehler-und Erfolgs Codes](error-and-success-codes.md)
+[Fehler- und Erfolgscodes](error-and-success-codes.md)
 </dt> <dt>
 
-[**Iresize-Schnittstelle**](iresize.md)
+[**IResize-Schnittstelle**](iresize.md)
 </dt> </dl>
 
  

@@ -4,16 +4,16 @@ ms.assetid: 7fdfc20a-9148-4ae1-8101-7a387c0d0edc
 title: Schreiben einer Hauptfunktion für Dienstprogramme
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 83aa743bfabbeafa2e05818c5bb068a949dce807
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: d82e3c519650957f4f27b00ff54864f558cafba3db960f30c0dd20517328f1c4
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104525808"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117966611"
 ---
 # <a name="writing-a-service-programs-main-function"></a>Schreiben der Hauptfunktion eines Dienstprogramms
 
-Die **Haupt** Funktion eines [Dienstprogramms](service-programs.md) Ruft die [**StartServiceCtrlDispatcher**](/windows/desktop/api/Winsvc/nf-winsvc-startservicectrldispatchera) -Funktion auf, um eine Verbindung mit dem [Dienststeuerungs-Manager (Service Control Manager](service-control-manager.md) , SCM) herzustellen und den steuerungsdispatcherthread zu starten. Der Verteiler Thread Schleifen und wartet auf eingehende Steuerungsanforderungen für die Dienste, die in der dispatchtabelle angegeben sind. Dieser Thread gibt zurück, wenn ein Fehler aufgetreten ist oder alle Dienste im Prozess beendet wurden. Wenn alle Dienste im Prozess beendet wurden, sendet der SCM eine Steuerungs Anforderung an den Verteiler-Thread, der ihn zum Beenden auffordert. Dieser Thread gibt dann vom **StartServiceCtrlDispatcher** -Befehl zurück, und der Prozess kann beendet werden.
+Die **Hauptfunktion** eines [Dienstprogramms](service-programs.md) ruft die [**StartServiceCtrlDispatcher-Funktion**](/windows/desktop/api/Winsvc/nf-winsvc-startservicectrldispatchera) auf, um eine Verbindung mit dem [Dienststeuerungs-Manager](service-control-manager.md) (Service Control Manager, SCM) herzustellen und den Steuerungsverteilungsthread zu starten. Der Verteilerthread wartet auf eingehende Steuerungsanforderungen für die in der Dispatchtabelle angegebenen Dienste. Dieser Thread gibt zurück, wenn ein Fehler auftritt oder wenn alle Dienste im Prozess beendet wurden. Wenn alle Dienste im Prozess beendet wurden, sendet der SCM eine Steuerungsanforderung an den Verteilerthread, der ihn angibt, dass er beendet werden soll. Dieser Thread gibt dann vom **StartServiceCtrlDispatcher-Aufruf** zurück, und der Prozess kann beendet werden.
 
 In diesem Beispiel werden die folgenden globalen Definitionen verwendet.
 
@@ -28,9 +28,9 @@ HANDLE                  ghSvcStopEvent = NULL;
 
 
 
-Das folgende Beispiel kann als Einstiegspunkt für ein Dienstprogramm verwendet werden, das einen einzelnen Dienst unterstützt. Wenn das Dienstprogramm mehrere Dienste unterstützt, fügen Sie die Namen der zusätzlichen Dienste der Verteilungs Tabelle hinzu, damit Sie vom Verteiler-Thread überwacht werden können.
+Das folgende Beispiel kann als Einstiegspunkt für ein Dienstprogramm verwendet werden, das einen einzelnen Dienst unterstützt. Wenn Ihr Dienstprogramm mehrere Dienste unterstützt, fügen Sie der Dispatchtabelle die Namen der zusätzlichen Dienste hinzu, damit sie vom Verteilerthread überwacht werden können.
 
-Die \_ Tmain-Funktion ist der Einstiegspunkt. Die svkreportevent-Funktion schreibt Informationsmeldungen und Fehler in das Ereignisprotokoll. Weitere Informationen zum Schreiben der svcmain-Funktion finden Sie unter [Schreiben einer ServiceMain](writing-a-servicemain-function.md)-Funktion. Weitere Informationen zur svcinstall-Funktion finden Sie unter [Installieren eines Dienstanbieter](installing-a-service.md). Weitere Informationen zum Schreiben der svcctrlhandler-Funktion finden Sie unter [Schreiben einer Steuerelement Handler-Funktion](writing-a-control-handler-function.md). Den gesamten Beispiel Dienst, einschließlich der Quelle für die svdeportevent-Funktion, finden Sie unter [svc. cpp](svc-cpp.md).
+Die \_ tmain-Funktion ist der Einstiegspunkt. Die SvcReportEvent-Funktion schreibt Informationsmeldungen und Fehler in das Ereignisprotokoll. Informationen zum Schreiben der SvcMain-Funktion finden Sie unter [Schreiben einer ServiceMain-Funktion.](writing-a-servicemain-function.md) Weitere Informationen zur SvcInstall-Funktion finden Sie unter [Installieren eines Diensts.](installing-a-service.md) Informationen zum Schreiben der SvcCtrlHandler-Funktion finden Sie unter [Schreiben einer Steuerelementhandlerfunktion.](writing-a-control-handler-function.md) Den vollständigen Beispieldienst, einschließlich der Quelle für die SvcReportEvent-Funktion, finden Sie unter [Svc.cpp.](svc-cpp.md)
 
 
 ```C++
@@ -75,7 +75,7 @@ int __cdecl _tmain(int argc, TCHAR *argv[])
 
 
 
-Im folgenden finden Sie ein Beispiel für "Sample. h", wie vom Nachrichten Compiler generiert. Weitere Informationen finden Sie unter [Sample.MC](sample-mc.md).
+Es folgt ein Beispiel für "Sample.h", das vom Nachrichtencompiler generiert wird. Weitere Informationen finden Sie unter [Sample.mc](sample-mc.md).
 
 ``` syntax
  // The following are message definitions.
@@ -138,10 +138,10 @@ Im folgenden finden Sie ein Beispiel für "Sample. h", wie vom Nachrichten Compi
 
 <dl> <dt>
 
-[Dienst Einstiegspunkt](service-entry-point.md)
+[Diensteinstiegspunkt](service-entry-point.md)
 </dt> <dt>
 
-[Das Complete Service-Beispiel](the-complete-service-sample.md)
+[Beispiel für den vollständigen Dienst](the-complete-service-sample.md)
 </dt> </dl>
 
  

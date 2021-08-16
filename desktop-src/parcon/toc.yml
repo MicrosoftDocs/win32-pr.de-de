@@ -1,59 +1,59 @@
-- name: Eltern Steuerelemente
+- name: Jugendschutz
   href: parental-controls-portal.md
   items:
-    - name: Neues in Windows 8-Jugendschutz Steuerelementen
+    - name: Neues bei der Windows 8 Jugendschutz
       href: what-s-new-in-windows-8-parental-controls.md
-    - name: Neues in Windows 7-Jugendschutz Steuerelementen
+    - name: 'What es New in Windows 7 Parental Controls (Neues in Windows 7: Jugendschutz)'
       href: what-s-new-in-windows-7-parental-controls.md
-    - name: Informationen zu Eltern Steuerelementen
+    - name: Informationen zu Jugendkontrollen
       href: about-parental-controls.md
       items:
-        - name: Problemsteuerelement-Problem Erklärung
+        - name: Problemerklärung zur Jugendschutzsteuerung
           href: parental-controls-problem-statement.md
-        - name: Windows-familiensicherheits Lösung
+        - name: Windows Family Safety-Lösung
           href: windows-family-safety-solution.md
-        - name: Wichtige Entwurfsentscheidungen für Eltern Steuerelemente
+        - name: Wichtige Entwurfsentscheidungen zu Jugendkontrollen
           href: parental-controls-key-design-decisions.md
-        - name: Stabilität der Jugend Steuerelemente
+        - name: Stabilität der Jugendschutzkontrollen
           href: parental-controls-robustness.md
-        - name: Feature-Satz für Eltern Steuerelemente
+        - name: Jugendschutzfunktionssatz
           href: parental-controls-feature-set.md
           items:
-            - name: Eltern Steuerelemente Top-Level Benutzeroberfläche
+            - name: JugendschutzTop-Level Benutzeroberfläche
               href: parental-controls-top-level-user-interface.md
-            - name: Aktivitätsberichte für Eltern Steuerelemente
+            - name: Jugendschutz Aktivitätsberichterstattung
               href: parental-controls-activity-reporting.md
-            - name: Elterliche Kontrollen In-Box Einschränkungen und Benutzeroberflächen
+            - name: JugendschutzIn-Box Einschränkungen und Benutzeroberflächen
               href: parental-controls-in-box-restrictions-and-user-interfaces.md
-            - name: Übersicht über die Eltern Steuerungs-API
+            - name: Übersicht über die Jugendschutz-API
               href: parental-controls-api-overview.md
-            - name: Übersicht über die Erweiterbarkeits Features für Eltern Steuerelemente
+            - name: Übersicht über Erweiterbarkeitsfunktionen für Jugendschutz
               href: parental-controls-extensibility-features-overview.md
-        - name: Verfügbarkeit der Jugend Steuerungs SKU
+        - name: Verfügbarkeit der SKU "Jugendkontrollen"
           href: parental-controls-sku-availability.md
-    - name: Verwenden von Eltern Steuerelementen
+    - name: Verwenden von Jugendkontrollen
       href: using-parental-controls.md
       items:
-        - name: Zuordnung von Projektmappen zur Jugend Steuerungs Infrastruktur
+        - name: Zuordnen von Lösungen zur Infrastruktur für die Jugendkontrollen
           href: mapping-solutions-onto-the-parental-controls-infrastructure.md
-        - name: Zuordnung von Konto Identitäten für Eltern Steuerelemente
+        - name: Zuordnung von Kontoidentitäten für Jugendschutz
           href: association-of-account-identities-for-parental-controls.md
-        - name: Eltern Steuerelemente und Benutzerkontensteuerung
+        - name: Jugendschutz und Benutzerkontensteuerung
           href: parental-controls-and-user-account-control.md
-        - name: Verwenden von Eltern Steuerungs-APIs
+        - name: Verwenden von Jugendschutz-APIs
           href: using-parental-controls-apis.md
           items:
-            - name: Verwenden von Einstellungen für die Jugend Steuerungseinstellungen
+            - name: Verwenden von Jugendschutz-Einstellungen APIs
               href: using-parental-controls-settings-apis.md
-            - name: Verwenden von Protokollierungs-APIs für Eltern Steuerelemente
+            - name: Verwenden von Protokollierungs-APIs für Jugendschutz
               href: using-logging-apis-for-parental-controls.md
-    - name: Verweis auf Eltern Steuerelemente
+    - name: Referenz zu Jugendkontrollen
       href: parental-controls-reference.md
       items:
-        - name: Protokollierung der Jugend Kontrollen
+        - name: Protokollierung der Jugendschutzkontrollen
           href: parental-controls-logging.md
           items:
-            - name: Protokollierungs-Enumerationen für Eltern Steuerelemente
+            - name: Protokollierungsenumeration für Jugendschutzsteuerelemente
               href: parental-controls-logging-enumerations.md
               items:
                 - name: WPC_ARGS_CONVERSATIONINITEVENT
@@ -100,40 +100,40 @@
                   href: /windows/win32/api/Wpcevent/ne-wpcevent-wpcflag_isblocked
                 - name: WPCFLAG_LOGOFF_TYPE
                   href: /windows/win32/api/Wpcevent/ne-wpcevent-wpcflag_logoff_type
-            - name: Protokollierungs Ereignisse der Jugend Steuerung
+            - name: 'Jugendschutz: Protokollierungsereignisse'
               href: parental-controls-logging-events.md
               items:
-                - name: WPCEVENT_CUSTOM Ereignis
+                - name: WPCEVENT_CUSTOM-Ereignis
                   href: wpcevent-custom-event.md
-                - name: WPCEVENT_EMAIL_CONTACT Ereignis
+                - name: WPCEVENT_EMAIL_CONTACT-Ereignis
                   href: wpcevent-email-contact-event.md
-                - name: WPCEVENT_EMAIL_RECEIVED Ereignis
+                - name: WPCEVENT_EMAIL_RECEIVED-Ereignis
                   href: wpcevent-email-received-event.md
-                - name: WPCEVENT_EMAIL_SENT Ereignis
+                - name: WPCEVENT_EMAIL_SENT-Ereignis
                   href: wpcevent-email-sent-event.md
-                - name: WPCEVENT_GAME_START Ereignis
+                - name: WPCEVENT_GAME_START-Ereignis
                   href: wpcevent-game-start-event.md
-                - name: WPCEVENT_IM_CONTACT Ereignis
+                - name: WPCEVENT_IM_CONTACT-Ereignis
                   href: wpcevent-im-contact-event.md
-                - name: WPCEVENT_IM_FEATURE Ereignis
+                - name: WPCEVENT_IM_FEATURE-Ereignis
                   href: wpcevent-im-feature-event.md
-                - name: WPCEVENT_IM_INVITATION Ereignis
+                - name: WPCEVENT_IM_INVITATION-Ereignis
                   href: wpcevent-im-invitation-event.md
-                - name: WPCEVENT_IM_JOIN Ereignis
+                - name: WPCEVENT_IM_JOIN-Ereignis
                   href: wpcevent-im-join-event.md
-                - name: WPCEVENT_IM_LEAVE Ereignis
+                - name: WPCEVENT_IM_LEAVE-Ereignis
                   href: wpcevent-im-leave-event.md
-                - name: WPCEVENT_MEDIA_PLAYBACK Ereignis
+                - name: WPCEVENT_MEDIA_PLAYBACK-Ereignis
                   href: wpcevent-media-playback-event.md
                 - name: WPCEVENT_SYS_SETTINGCHANGE
                   href: wpcevent-sys-settingchange-event.md
-                - name: WPCEVENT_SYSTEM_APPBLOCKED Ereignis
+                - name: WPCEVENT_SYSTEM_APPBLOCKED-Ereignis
                   href: wpcevent-system-appblocked-event.md
-                - name: WPCEVENT_WEB_FILEDOWNLOAD Ereignis
+                - name: WPCEVENT_WEB_FILEDOWNLOAD-Ereignis
                   href: wpcevent-web-filedownload-event.md
-                - name: WPCEVENT_WEB_URLVISIT Ereignis
+                - name: WPCEVENT_WEB_URLVISIT-Ereignis
                   href: wpcevent-web-urlvisit-event.md
-        - name: Mindestrecompliance-API für Eltern Kontrollen
+        - name: Jugendschutz-API für Mindestkonformität
           href: parental-controls-minimum-compliance-api.md
           items:
             - name: IWindowsParentalControls
@@ -142,82 +142,82 @@
                 - name: IWindowsParentalControls-Methoden
                   href: iwindowsparentalcontrols-methods.md
                   items:
-                    - name: Getgamessettings-Methode
+                    - name: GetGamesSettings-Methode
                       href: /windows/desktop/api/Wpcapi/nf-wpcapi-iwindowsparentalcontrols-getgamessettings
-                    - name: Getusersettings-Methode
+                    - name: GetUserSettings-Methode
                       href: /windows/desktop/api/wpcapi/nf-wpcapi-iwindowsparentalcontrolscore-getusersettings
-                    - name: Getvisibility-Methode
+                    - name: GetVisibility-Methode
                       href: /windows/desktop/api/wpcapi/nf-wpcapi-iwindowsparentalcontrolscore-getvisibility
-                    - name: Getwebfilterinfo-Methode
+                    - name: GetWebFilterInfo-Methode
                       href: /windows/desktop/api/wpcapi/nf-wpcapi-iwindowsparentalcontrolscore-getwebfilterinfo
-                    - name: Getwebsettings-Methode
+                    - name: GetWebSettings-Methode
                       href: /windows/desktop/api/wpcapi/nf-wpcapi-iwindowsparentalcontrolscore-getwebsettings
-            - name: Iwpcgamessettings
+            - name: IWPCGamesSettings
               href: /windows/desktop/api/Wpcapi/nn-wpcapi-iwpcgamessettings
               items:
-                - name: Iwpcgamessettings-Methoden
+                - name: IWPCGamesSettings-Methoden
                   href: iwpcgamessettings-methods.md
                   items:
-                    - name: Isblockierte-Methode
+                    - name: IsBlocked-Methode
                       href: /windows/desktop/api/Wpcapi/nf-wpcapi-iwpcgamessettings-isblocked
-            - name: Iwpcsettings
+            - name: IWPCSettings
               href: /windows/desktop/api/Wpcapi/nn-wpcapi-iwpcsettings
               items:
-                - name: Iwpcsettings-Methoden
+                - name: IWPCSettings-Methoden
                   href: iwpcsettings-methods.md
                   items:
-                    - name: Getlastsettingschangetime-Methode
+                    - name: GetLastSettingsChangeTime-Methode
                       href: /windows/desktop/api/Wpcapi/nf-wpcapi-iwpcsettings-getlastsettingschangetime
-                    - name: Getrestrictions-Methode
+                    - name: GetRestrictions-Methode
                       href: /windows/desktop/api/Wpcapi/nf-wpcapi-iwpcsettings-getrestrictions
-                    - name: Isloggingrequired-Methode
+                    - name: IsLoggingRequired-Methode
                       href: /windows/desktop/api/Wpcapi/nf-wpcapi-iwpcsettings-isloggingrequired
-            - name: Iwpcwebsettings
+            - name: IWPCWebSettings
               href: /windows/desktop/api/Wpcapi/nn-wpcapi-iwpcwebsettings
               items:
-                - name: Iwpcwebsettings-Methoden
+                - name: IWPCWebSettings-Methoden
                   href: iwpcwebsettings-methods.md
                   items:
                     - name: GetSettings-Methode
                       href: /windows/desktop/api/Wpcapi/nf-wpcapi-iwpcwebsettings-getsettings
-                    - name: Requesturloverride-Methode
+                    - name: RequestURLOverride-Methode
                       href: /windows/desktop/api/Wpcapi/nf-wpcapi-iwpcwebsettings-requesturloverride
-        - name: WMI-Anbieter-API für Eltern Steuerelemente
+        - name: WMI-Anbieter-API für Jugendschutz
           href: parental-controls-wmi-provider-api.md
           items:
-            - name: Iwpcproviderconfig
+            - name: IWPCProviderConfig
               href: /windows/desktop/api/Wpcapi/nn-wpcapi-iwpcproviderconfig
               items:
-                - name: Iwpcproviderconfig-Methoden
+                - name: IWPCProviderConfig-Methoden
                   href: iwpcproviderconfig-methods.md
                   items:
                     - name: Configure-Methode
                       href: /windows/desktop/api/Wpcapi/nf-wpcapi-iwpcproviderconfig-configure
-                    - name: Getusersummary-Methode
+                    - name: GetUserSummary-Methode
                       href: /windows/desktop/api/Wpcapi/nf-wpcapi-iwpcproviderconfig-getusersummary
-                    - name: Requestoverride-Methode
+                    - name: RequestOverride-Methode
                       href: /windows/desktop/api/Wpcapi/nf-wpcapi-iwpcproviderconfig-requestoverride
-            - name: Iwpcproviderstate
+            - name: IWPCProviderState
               href: /windows/desktop/api/Wpcapi/nn-wpcapi-iwpcproviderstate
               items:
-                - name: Iwpcproviderstate-Methoden
+                - name: IWPCProviderState-Methoden
                   href: iwpcproviderstate-methods.md
                   items:
-                    - name: Methode deaktivieren
+                    - name: Disable-Methode
                       href: /windows/desktop/api/Wpcapi/nf-wpcapi-iwpcproviderstate-disable
                     - name: Enable-Methode
                       href: /windows/desktop/api/Wpcapi/nf-wpcapi-iwpcproviderstate-enable
-            - name: Iwpcprovidersupport
+            - name: IWPCProviderSupport
               href: /windows/desktop/api/Wpcapi/nn-wpcapi-iwpcprovidersupport
               items:
-                - name: Iwpcprovidersupport-Methoden
+                - name: IWPCProviderSupport-Methoden
                   href: iwpcprovidersupport-methods.md
                   items:
                     - name: GetCurrent-Methode
                       href: /windows/desktop/api/Wpcapi/nf-wpcapi-iwpcprovidersupport-getcurrent
-            - name: Jugend Steuerungs-WMI-Anbieter Schema
+            - name: Schema des WMI-Anbieters für Jugendschutz
               href: parental-controls-wmi-provider-schema.md
-    - name: Beispiele für Eltern Steuerelemente
+    - name: Beispiele für Jugendschutz
       href: parental-controls-samples.md
-    - name: Glossar für Eltern Steuerelemente
+    - name: Glossar zu Jugendkontrollen
       href: parental-controls-glossary.md

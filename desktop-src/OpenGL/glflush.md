@@ -1,6 +1,6 @@
 ---
 title: glFlush-Funktion (Gl.h)
-description: Die glFlush-Funktion erzwingt die Ausführung von OpenGL-Funktionen in begrenzter Zeit.
+description: Die glFlush-Funktion erzwingt die Ausführung von OpenGL-Funktionen in endlicher Zeit.
 ms.assetid: 7544b724-472f-4055-8f1c-64ddb58caaf3
 keywords:
 - glFlush-Funktion OpenGL
@@ -23,7 +23,7 @@ ms.locfileid: "118360407"
 ---
 # <a name="glflush-function"></a>glFlush-Funktion
 
-Die **glFlush-Funktion** erzwingt die Ausführung von OpenGL-Funktionen in begrenzter Zeit.
+Die **glFlush-Funktion** erzwingt die Ausführung von OpenGL-Funktionen in endlicher Zeit.
 
 ## <a name="syntax"></a>Syntax
 
@@ -44,23 +44,23 @@ Diese Funktion gibt keinen Wert zurück.
 
 ## <a name="error-codes"></a>Fehlercodes
 
-Der folgende Fehlercode kann von der [**glGetError-Funktion abgerufen**](glgeterror.md) werden.
+Der folgende Fehlercode kann von der [**glGetError-Funktion**](glgeterror.md) abgerufen werden.
 
 
 
 | Name                                                                                                  | Bedeutung                                                                                                                               |
 |-------------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------|
-| <dl> <dt>**UNGÜLTIGER \_ \_ GL-VORGANG**</dt> </dl> | Die Funktion wurde zwischen einem Aufruf von [**glBegin**](glbegin.md) und dem entsprechenden Aufruf von [**glEnd aufgerufen.**](glend.md)<br/> |
+| <dl> <dt>**GL \_ INVALID \_ OPERATION**</dt> </dl> | Die Funktion wurde zwischen einem Aufruf von [**glBegin**](glbegin.md) und dem entsprechenden Aufruf von [**glEnd**](glend.md)aufgerufen.<br/> |
 
 
 
 ## <a name="remarks"></a>Hinweise
 
-Verschiedene OpenGL-Implementierungen puffern Befehle an verschiedenen Speicherorten, einschließlich Netzwerkpuffern und der Grafikbeschleunigung selbst. Die **glFlush-Funktion** leert alle diese Puffer, sodass alle ausgegebenen Befehle so schnell ausgeführt werden, wie sie von der tatsächlichen Rendering-Engine akzeptiert werden. Obwohl diese Ausführung in einem bestimmten Zeitraum möglicherweise nicht abgeschlossen wird, wird sie in einem begrenzten Zeitraum abgeschlossen.
+Verschiedene OpenGL-Implementierungen puffern Befehle an verschiedenen Speicherorten, einschließlich Netzwerkpuffern und dem Grafikbeschleuniger selbst. Die **glFlush-Funktion** leert alle diese Puffer, sodass alle ausgegebenen Befehle so schnell ausgeführt werden, wie sie von der tatsächlichen Rendering-Engine akzeptiert werden. Obwohl diese Ausführung in einem bestimmten Zeitraum möglicherweise nicht abgeschlossen wird, wird sie in einem begrenzten Zeitraum abgeschlossen.
 
-Da jedes OpenGL-Programm über ein Netzwerk oder über eine Zugriffstaste ausgeführt werden kann, die Befehle puffert, müssen Sie **glFlush** in allen Programmen aufrufen, die erfordern, dass alle zuvor ausgegebenen Befehle abgeschlossen wurden. Rufen Sie beispielsweise **glFlush auf,** bevor Sie auf Benutzereingaben warten, die vom generierten Image abhängig sind.
+Da jedes OpenGL-Programm über ein Netzwerk oder eine Zugriffstaste ausgeführt werden kann, die Befehle puffert, müssen Sie **glFlush** in allen Programmen aufrufen, die erfordern, dass alle zuvor ausgegebenen Befehle abgeschlossen wurden. Rufen Sie beispielsweise **glFlush** auf, bevor Sie auf Benutzereingaben warten, die vom generierten Image abhängen.
 
-Die **glFlush-Funktion** kann jederzeit zurückgeben. Es wird nicht gewartet, bis die Ausführung aller zuvor ausgegebenen OpenGL-Funktionen abgeschlossen ist.
+Die **glFlush-Funktion** kann jederzeit zurückgeben. Sie wartet nicht, bis die Ausführung aller zuvor ausgegebenen OpenGL-Funktionen abgeschlossen ist.
 
 ## <a name="requirements"></a>Anforderungen
 

@@ -1,45 +1,45 @@
 ---
-description: Der Like-Operator bestimmt, ob eine Zeichenfolge mit einem angegebenen Muster übereinstimmt.
+description: Der LIKE-Operator bestimmt, ob eine Zeichenfolge einem angegebenen Muster entspricht.
 ms.assetid: 6cafe696-891d-4b17-8802-4b872f76fc78
 ms.tgt_platform: multiple
-title: Like-Operator
+title: LIKE-Operator
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 9091f44dd131d5d2c30d2d46aa4fc109dcdf02b7
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: c2e5df500091fac8b15bcdcb448b7a97fc00dc62807ba854757e447f07e6f4e9
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106355636"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118317869"
 ---
-# <a name="like-operator"></a>Like-Operator
+# <a name="like-operator"></a>LIKE-Operator
 
-Der Like-Operator bestimmt, ob eine Zeichenfolge mit einem angegebenen Muster übereinstimmt. Das angegebene Muster kann genau die Zeichen enthalten, die übereinstimmen müssen, oder es kann Meta-Zeichen enthalten. Der Like-Operator gleicht die Teil Zeichenfolgen in der folgenden Tabelle mit den Platzhalter Zeichen ab.
+Der LIKE-Operator bestimmt, ob eine Zeichenfolge einem angegebenen Muster entspricht. Das angegebene Muster kann genau die übereinstimmenden Zeichen oder Metazeichen enthalten. Tatsächlich gleicht der LIKE-Operator Teilzeichenfolgen mithilfe der Platzhalterzeichen in der folgenden Tabelle ab.
 
 
 
-| Zeichen       | BESCHREIBUNG                                                                                                                                                                                 |
+| Zeichen       | Beschreibung                                                                                                                                                                                 |
 |-----------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| \[ \]           | Ein beliebiges Zeichen innerhalb des angegebenen Bereichs ( \[ a-f \] ) oder Set ( \[ abcdef \] ).                                                                                                                 |
-| ^               | Ein beliebiges Zeichen, das nicht innerhalb des Bereichs ( \[ ^ a-f \] ) oder der festgelegten Menge ( \[ ^ abcdef \] ) liegt.                                                                                                                     |
-| %               | Eine beliebige Zeichenfolge mit 0 (null) oder mehr Zeichen. Im folgenden Beispiel werden alle-Instanzen gesucht, bei denen "Win" an einer beliebigen Stelle im Klassennamen gefunden wird: `SELECT * FROM meta_class WHERE __Class LIKE "%Win%"` |
-| \_ (Unterstrich) | Ein beliebiges Zeichen. Jeder Literale unterstrich, der in der Abfrage Zeichenfolge verwendet wird, muss mit Escapezeichen versehen werden \[ \] (eckige Klammern).                                                             |
+| \[ \]           | Ein beliebiges Zeichen innerhalb des angegebenen Bereichs ( \[ a-f \] ) oder set ( \[ abcdef \] ).                                                                                                                 |
+| ^               | Ein beliebiges Zeichen, das nicht innerhalb des Bereichs liegt ( \[ ^a-f \] ) oder festgelegt ( \[ ^abcdef \] .)                                                                                                                     |
+| %               | Eine beliebige Zeichenfolge mit 0 (null) oder mehr Zeichen. Im folgenden Beispiel werden alle Instanzen gefunden, in denen "Win" an einer beliebigen Stelle im Klassennamen gefunden wird: `SELECT * FROM meta_class WHERE __Class LIKE "%Win%"` |
+| \_ (Unterstrich) | Ein beliebiges Zeichen. Jeder literale Unterstrich, der in der Abfragezeichenfolge verwendet wird, muss mit Escapezeichen gesetzt werden, indem er in \[ \] eckige Klammern gesetzt wird.                                                             |
 
 
 
  
 
-Beispielsweise ruft der folgende PowerShell-Code alle Instanzen der Win32- **\_ OperatingSystem** -Klasse ab, deren **Name** -Eigenschaft mit **FirstName** beginnt:
+Der folgende Power Shell-Code ruft beispielsweise alle Instanzen der **Win32 \_ operatingSystem-Klasse** ab, deren **Name-Eigenschaft** mit **FirstName beginnt:**
 
 `Get-WmiObject win32_computerSystem -filter "Name LIKE 'FirstName%'"`
 
-Da der Unterstrich ein Meta-Zeichen ist, muss die Escapezeichen, wenn das Abfrage Ziel einen Unterstrich aufweist, \[ \] umschließen. Beispielsweise können Sie alle Klassen Abfragen, die einen doppelten Unterstrich im Namen aufweisen.
+Da es sich bei dem Unterstrich um ein Metazeichen handelt, müssen die Escapezeichen des Abfrageziels den Unterstrich \[ \] umschließen. Beispielsweise können Sie alle Klassen abfragen, die einen doppelten Unterstrich im Namen haben.
 
-Wenn Sie alle Klassen mit einem doppelten Unterstrich im Namen suchen möchten, müssen Sie beide Unterstriche mit \[ \] (eckigen Klammern) versehen, z. b.:
+Um alle Klassen mit einem doppelten Unterstrich im Namen zu finden, müssen Sie beide Unterstriche mit (eckigen Klammern) um \[ \] escapen, z. B.:
 
 `SELECT * FROM meta_class WHERE __CLASS LIKE "%[_][_]%"`
 
-Sie können eine like-Anweisung mit Not negieren. Stellen Sie zu diesem Zweck sicher, dass nicht direkt vor dem Feldnamen steht. Beispiel:
+Sie können eine LIKE-Anweisung mit NOT negieren. Stellen Sie dazu sicher, dass Sie NOT direkt vor dem Feldnamen platzieren. Beispiel:
 
 `  Get-WmiObject -computerName "." -query 'Select * FROM Win32_Printer WHERE Local="TRUE"      AND Network ="False" AND DriverName LIKE "%HP%"      AND NOT PortName LIKE "%10.%" AND NOT PortName LIKE "%\\%"'`
 

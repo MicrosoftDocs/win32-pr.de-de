@@ -1,23 +1,23 @@
 ---
-description: Jeder der folgenden Konstruktoren initialisiert ein neues chstring-Objekt mit den angegebenen Daten.
+description: Jeder der folgenden Konstruktoren initialisiert ein neues CHString-Objekt mit den angegebenen Daten.
 audience: developer
 ms.assetid: d49e1600-d5d4-4c44-81c5-1b8c53b768de
 ms.tgt_platform: multiple
-title: 'Chstring:: chstring-Konstruktoren (chstring. h)'
+title: CHString::CHString-Konstruktoren (ChString.h)
 ms.date: 07/02/2019
 ms.topic: reference
-ms.openlocfilehash: 711d2f28680a9f273ff808876e30e92f66336b89
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 80ce10988fc335c5a16eff8507346dbcdffd6fa70f75d74fb48d3f84b0e2332b
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "104216320"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118320048"
 ---
-# <a name="chstringchstring-constructors"></a>Chstring:: chstring-Konstruktoren
+# <a name="chstringchstring-constructors"></a>CHString::CHString-Konstruktoren
 
-\[Die [**chstring**](chstring.md) -Klasse ist Teil des WMI-Anbieter-Frameworks, das jetzt im Endzustand behandelt wird, und keine weiteren Entwicklungen, Verbesserungen oder Updates werden für nicht sicherheitsrelevante Probleme verfügbar sein, die diese Bibliotheken betreffen. Die [Mi-APIs](/previous-versions/windows/desktop/wmi_v2/windows-management-infrastructure) sollten für alle neuen Entwicklungen verwendet werden.\]
+\[Die [**CHString-Klasse**](chstring.md) ist Teil des WMI-Anbieterframework, das jetzt als endgültig betrachtet wird, und es sind keine weiteren Entwicklungen, Erweiterungen oder Updates für nicht sich sicherheitsbezogene Probleme verfügbar, die sich auf diese Bibliotheken betreffen. Die [MI-APIs](/previous-versions/windows/desktop/wmi_v2/windows-management-infrastructure) sollten für alle neuen Entwicklungen verwendet werden.\]
 
-Jeder der folgenden Konstruktoren initialisiert ein neues [**chstring**](chstring.md) -Objekt mit den angegebenen Daten.
+Jeder der folgenden Konstruktoren initialisiert ein neues [**CHString-Objekt**](chstring.md) mit den angegebenen Daten.
 
 ### <a name="overload-list"></a>Überladeliste
 
@@ -25,13 +25,13 @@ Jeder der folgenden Konstruktoren initialisiert ein neues [**chstring**](chstrin
 
 | Konstruktor                                                                        | BESCHREIBUNG                                                  |
 |:-----------------------------------------------------------------------------------|:-------------------------------------------------------------|
-| [**Chstring ()**](/windows/win32/api/rrascfg/nn-rrascfg-ieapproviderconfig)                                          | Erstellt ein leeres chstring-Objekt.<br/>                 |
-| [**Chstring (LPCSTR)**](/windows/win32/api/chstring/nf-chstring-chstring-chstring(lpcstr))                              | Initialisiert mit dem LPCSTR-Wert.<br/>                |
-| [**Chstring (LPCWSTR)**](/windows/win32/api/chstring/nf-chstring-chstring-chstring(lpcwstr))                            | Initialisiert mit dem LPCWSTR-Wert.<br/>               |
-| [**Chstring (WCHAR, int)**](/windows/win32/api/chstring/nf-chstring-chstring-chstring(wchar_int))                        | Initialisiert mit int-Kopien des WCHAR-Werts.<br/>   |
-| [**Chstring (LPCWSTR, int)**](/windows/win32/api/chstring/nf-chstring-chstring-chstring(lpcwstr_int))                    | Initialisiert mit int-Kopien des LPCWSTR-Werts.<br/> |
-| [**Chstring (konstantenchstring-&)**](/windows/win32/api/chstring/nf-chstring-chstring-chstring(constchstring_))            | Repliziert den chstring-Parameter.<br/>                |
-| [**Chstring (Konstante ohne Vorzeichen \* )**](/windows/win32/api/chstring/nf-chstring-chstring-chstring(constunsignedchar)) | Initialisiert mit dem Wert, auf den von char verwiesen wird \* .<br/>  |
+| [**CHString()**](/windows/win32/api/rrascfg/nn-rrascfg-ieapproviderconfig)                                          | Erstellt ein leeres CHString-Objekt.<br/>                 |
+| [**CHString(LPCSTR)**](/windows/win32/api/chstring/nf-chstring-chstring-chstring(lpcstr))                              | Initialisiert mit dem LPCSTR-Wert.<br/>                |
+| [**CHString(LPCWSTR)**](/windows/win32/api/chstring/nf-chstring-chstring-chstring(lpcwstr))                            | Initialisiert mit dem LPCWSTR-Wert.<br/>               |
+| [**CHString(WCHAR,int)**](/windows/win32/api/chstring/nf-chstring-chstring-chstring(wchar_int))                        | Initialisiert mit int-Kopien des WCHAR-Werts.<br/>   |
+| [**CHString(LPCWSTR,int)**](/windows/win32/api/chstring/nf-chstring-chstring-chstring(lpcwstr_int))                    | Initialisiert mit int-Kopien des LPCWSTR-Werts.<br/> |
+| [**CHString(const CHString&)**](/windows/win32/api/chstring/nf-chstring-chstring-chstring(constchstring_))            | Repliziert den CHString-Parameter.<br/>                |
+| [**CHString(const unsigned char \* )**](/windows/win32/api/chstring/nf-chstring-chstring-chstring(constunsignedchar)) | Initialisiert mit dem Wert, auf den char \* zeigt.<br/>  |
 
 
 
@@ -43,8 +43,8 @@ Jeder der folgenden Konstruktoren initialisiert ein neues [**chstring**](chstrin
 |-------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows Vista<br/>                                                                                                                                      |
 | Unterstützte Mindestversion (Server)<br/> | Windows Server 2008<br/>                                                                                                                                |
-| Header<br/>                   | <dl> <dt>Chstring. h (Include-Datei "f")</dt> </dl>                                                    |
-| Bibliothek<br/>                  | <dl> <dt>Framedyn. lib</dt> </dl>                                                                       |
+| Header<br/>                   | <dl> <dt>ChString.h (include FwCommon.h)</dt> </dl>                                                    |
+| Bibliothek<br/>                  | <dl> <dt>FrameDyn.lib</dt> </dl>                                                                       |
 | DLL<br/>                      | <dl> <dt>FrameDynOS.dll; </dt> <dt>FrameDyn.dll</dt> </dl> |
 
 

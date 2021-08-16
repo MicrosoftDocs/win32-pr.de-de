@@ -3,7 +3,7 @@ title: ValueQueries (eventTriggerType) -Element
 description: Enthält eine Sequenz von Elementen, die jeweils einen Namen und einen XPath-Abfragewert enthalten.
 ms.assetid: 4b57568c-81b6-43fd-9194-9817c4817197
 keywords:
-- ValueQueries-Taskplaner
+- ValueQueries-Element Taskplaner
 topic_type:
 - apiref
 api_name:

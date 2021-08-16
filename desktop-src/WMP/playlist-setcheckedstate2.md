@@ -1,6 +1,6 @@
 ---
 title: PLAYLIST.setCheckedState2
-description: Die setCheckedState2-Methode legt den überprüften Zustand des Elements mit dem angegebenen Index im PLAYLIST-Element fest.
+description: Die setCheckedState2-Methode legt den aktivierten Zustand des Elements mit dem angegebenen Index im PLAYLIST-Element fest.
 ms.assetid: 241221a3-810b-422d-8f73-25c5b5c82c70
 keywords:
 - PLAYLIST.setCheckedState2 Windows Media Player
@@ -22,7 +22,7 @@ ms.locfileid: "118336219"
 ---
 # <a name="playlistsetcheckedstate2"></a>PLAYLIST.setCheckedState2
 
-Die **setCheckedState2-Methode** legt den überprüften Zustand des Elements mit dem angegebenen Index im **PLAYLIST-Element** fest.
+Die **setCheckedState2-Methode** legt den aktivierten Zustand des Elements mit dem angegebenen Index im **PLAYLIST-Element** fest.
 
 ``` syntax
         elementID.setCheckedState(item, checked)
@@ -35,14 +35,14 @@ Die **setCheckedState2-Methode** legt den überprüften Zustand des Elements mit
 <span id="item"></span><span id="ITEM"></span>*Artikel*
 </dt> <dd>
 
-**Number** (**long**), die den Index des zu aktivierenden oder zu deaktivierenden Wiedergabelistenelements angibt.
+**Zahl** (**long**), die den Index des Wiedergabelistenelements angibt, das überprüft oder deaktiviert werden soll.
 
 </dd> <dt>
 
 <span id="checked"></span><span id="CHECKED"></span>*Überprüft*
 </dt> <dd>
 
-**Boolescher Wert,** der angibt, ob das angegebene Element überprüft (TRUE) oder deaktiviert (FALSE) werden soll.
+**Boolescher Wert,** der angibt, ob das angegebene Element überprüft (true) oder deaktiviert (FALSE) werden soll.
 
 </dd> </dl>
 
@@ -52,7 +52,7 @@ Diese Methode gibt einen **booleschen zurück.**
 
 ## <a name="remarks"></a>Hinweise
 
-Diese Methode kann mit geschachtelten Wiedergabelisten verwendet werden und ersetzt die **setCheckedState-Methode,** die dies nicht kann. Sie können alle Elemente auf den angeforderten Zustand festlegen, indem Sie 1 im *Elementparameter* angeben.
+Diese Methode kann mit geschachtelten Wiedergabelisten arbeiten und ersetzt die **setCheckedState-Methode,** was nicht möglich ist. Sie können alle Elemente auf den angeforderten Zustand festlegen, indem Sie im *Elementparameter* 1 angeben.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -60,7 +60,7 @@ Diese Methode kann mit geschachtelten Wiedergabelisten verwendet werden und erse
 
 | Anforderung | Wert |
 |--------------------|---------------------------------------------------|
-| Version<br/> | Windows Media Player Serie 9 oder höher<br/> |
+| Version<br/> | Windows Media Player 9-Serie oder höher<br/> |
 
 
 

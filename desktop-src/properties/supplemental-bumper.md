@@ -19,10 +19,10 @@ ms.locfileid: "118463915"
 
 
 
-| Thema                                                                                  | Beschreibung                                                                                                                                                                                                                                                |
+| Thema                                                                                  | BESCHREIBUNG                                                                                                                                                                                                                                                |
 |----------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| [System.Supplemental.AlbumID](https://www.bing.com/search?q=System.Supplemental.AlbumID)<br/>       | Enthält die Bezeichner der Alben, deren Member das Element ist. Kann in Verbindung mit dem Element Album in den Content Indexer-APIs verwendet werden, um andere Apps über Bildalben zu benachrichtigen, die der Benutzer erstellt hat oder die Apps bereits erstellt haben.<br/> |
-| [System.Supplemental.ResourceId](https://www.bing.com/search?q=System.Supplemental.ResourceId)<br/> | Enthält den Bezeichner für das Element im Remotesynchronisierungsdienst. Wird verwendet, um eine Datei im System mit denen zu vergleichen, die in der Cloud verfügbar sind.<br/>                                                                                               |
+| [System.Supplemental.AlbumID](https://www.bing.com/search?q=System.Supplemental.AlbumID)<br/>       | Enthält die Bezeichner der Alben, denen das Element angehört. Kann in Verbindung mit dem Element "Album" in den Content Indexer-APIs verwendet werden, um andere Apps über Bilderalben zu benachrichtigen, die der Benutzer erstellt hat oder die Apps bereits erstellt haben.<br/> |
+| [System.Supplemental.ResourceId](https://www.bing.com/search?q=System.Supplemental.ResourceId)<br/> | Enthält den Bezeichner für das Element im Remotesynchronisierungsdienst. Wird zum Vergleichen einer Datei auf dem System mit dateien verwendet, die in der Cloud verfügbar sind.<br/>                                                                                               |
 
 
 

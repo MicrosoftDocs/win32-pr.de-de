@@ -1,6 +1,6 @@
 ---
-description: 'Weitere Informationen finden Sie unter: cimmufdeserializer. deserializanhaltungen-Methode (Byte [], UInt32)'
-title: Cimmufdeserializer. deserializeinhaltungen-Methode (Byte [], UInt32) (Microsoft. Management. Infrastructure. Serialization)
+description: 'Weitere Informationen zu: CimMofDeserializer.DeserializeInstances-Methode (Byte[], UInt32)'
+title: CimMofDeserializer.DeserializeInstances-Methode (Byte[], UInt32) (Microsoft.Management.Infrastructure.Serialization)
 TOCTitle: CimMofDeserializer.DeserializeInstances method (Byte[], UInt32) (Microsoft.Management.Infrastructure.Serialization)
 ms:assetid: M:Microsoft.Management.Infrastructure.Serialization.CimMofDeserializer.DeserializeInstances(System.Byte[],System.UInt32@)
 ms.date: 11/14/2019
@@ -20,19 +20,19 @@ topic_type:
 - apiref
 product_family_name: VS
 ms.topic: reference
-ms.openlocfilehash: 90cc4f9d88afa9f4ec566ff4733995bce8160eb1
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: c44270429dc81c64d26b5e2512686bde97ac7851235eab01ebd545aae762e0ee
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104524812"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118317329"
 ---
-# <a name="cimmofdeserializerdeserializeinstances-method-byteuint32"></a>Cimmufdeserializer. deserializanhaltungen-Methode (Byte \[ \] , UInt32)
+# <a name="cimmofdeserializerdeserializeinstances-method-byteuint32"></a>CimMofDeserializer.DeserializeInstances-Methode (Byte, \[ \] UInt32)
 
-Deserialisiert CIM-Instanzen auf der Grundlage von serialisierten Daten.
+Deserialisiert CIM-Instanzen basierend auf serialisierten Daten.
 
-**Namespace:**   [Microsoft. Management. Infrastructure. Serialization](/previous-versions/windows/desktop/wmi_v2/mi-managed-api/hh832966(v=vs.85))  
-**Assembly:**  Microsoft. Management. Infrastructure (in Microsoft.Management.Infrastructure.dll)  
+**Namespace:**   [Microsoft.Management.Infrastructure.Serialization](/previous-versions/windows/desktop/wmi_v2/mi-managed-api/hh832966(v=vs.85))  
+**Assembly:**  Microsoft.Management.Infrastructure (in Microsoft.Management.Infrastructure.dll)  
 
 ## <a name="syntax"></a>Syntax
 
@@ -67,24 +67,24 @@ Public Function DeserializeInstances (
 #### <a name="parameters"></a>Parameter
 
   - serializedData  
-    Typ: [System. Byte](/dotnet/api/system.byte?view=netframework-4.8)\[\]
+    Typ: [System.Byte](/dotnet/api/system.byte?view=netframework-4.8)\[\]
     
     Ein Puffer, der die serialisierten Daten enthält.
 
 <!-- end list -->
 
   - offset  
-    Typ: [System. UInt32](/dotnet/api/system.uint32?view=netframework-4.8)
+    Typ: [System.UInt32](/dotnet/api/system.uint32?view=netframework-4.8)
     
-    Der Byte Offset für den Speicherort, an dem mit dem Lesen der Daten begonnen werden soll. Wenn die Methode zurückgegeben wird, zeigt der Offset auf das nächste Byte nach den deserialisierten Instanzen.
+    Der Byteoffset zu der Position, an der mit dem Lesen der Daten begonnen werden soll. Wenn die Methode zurückgegeben wird, verweist der Offset auf das nächste Byte nach den deserialisierten Instanzen.
 
 #### <a name="return-value"></a>Rückgabewert
 
-Typ: [System. Collections. Generic. IEnumerable](/dotnet/api/system.collections.generic.ienumerable-1?view=netframework-4.8)\<[CimInstance](/previous-versions/windows/desktop/wmi_v2/mi-managed-api/hh832336(v=vs.85))\>
+Typ: [System.Collections.Generic.IEnumerable](/dotnet/api/system.collections.generic.ienumerable-1?view=netframework-4.8)\<[CimInstance](/previous-versions/windows/desktop/wmi_v2/mi-managed-api/hh832336(v=vs.85))\>
 
-Eine [IEnumerable \<T\> ](/dotnet/api/system.collections.generic.ienumerable-1?view=netframework-4.8) -Schnittstelle, die zum Auflisten der CIM-Klassen verwendet werden kann.
+Eine [ \<T\> IEnumerable-Schnittstelle,](/dotnet/api/system.collections.generic.ienumerable-1?view=netframework-4.8) die zum Aufzählen der CIM-Klassen verwendet werden kann.
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
-[Ciminstance-Klasse](/previous-versions/windows/desktop/wmi_v2/mi-managed-api/hh832336(v=vs.85))  
-[Microsoft. Management. Infrastructure. Serialization-Namespace](/previous-versions/windows/desktop/wmi_v2/mi-managed-api/hh832966(v=vs.85))
+[CimInstance-Klasse](/previous-versions/windows/desktop/wmi_v2/mi-managed-api/hh832336(v=vs.85))  
+[Microsoft.Management.Infrastructure.Serialization-Namespace](/previous-versions/windows/desktop/wmi_v2/mi-managed-api/hh832966(v=vs.85))

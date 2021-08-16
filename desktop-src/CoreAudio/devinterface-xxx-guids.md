@@ -36,7 +36,7 @@ Wenn Sie diesen Wert an [**ActivateAudioInterfaceAsync**](/windows/desktop/api/m
 
 Gibt die Abfragezeichenfolge an, die zum Aufzählen aller Audiorenderinggeräte im System verwendet wird. Dieser Wert wird von [**MediaDevice::GetAudioRenderSelector zurückgegeben.**](/uwp/api/windows.media.devices.mediadevice.getaudiorenderselector)
 
-Durch Übergeben dieses Werts [**an ActivateAudioInterfaceAsync**](/windows/desktop/api/mmdeviceapi/nf-mmdeviceapi-activateaudiointerfaceasync) wird die angeforderte Schnittstelle auf dem Standardaudiorendergerät aktiviert.
+Wenn Sie diesen Wert an [**ActivateAudioInterfaceAsync**](/windows/desktop/api/mmdeviceapi/nf-mmdeviceapi-activateaudiointerfaceasync) übergeben, wird die angeforderte Schnittstelle auf dem Standardgerät für Audiorendering aktiviert.
 
 
 </dt> </dl> </dd> <dt>
@@ -46,7 +46,7 @@ Durch Übergeben dieses Werts [**an ActivateAudioInterfaceAsync**](/windows/desk
 
 
 
-Gibt die Abfragezeichenfolge an, die zum Aufzählen [**allerPort-Objekte**](/uwp/api/Windows.Devices.Midi.MidiInPort) im System verwendet wird. Dieser Wert wird von [**EinerPort::GetDeviceSelector zurückgegeben.**](/uwp/api/windows.devices.midi.midiinport.getdeviceselector)
+Gibt die Abfragezeichenfolge an, die zum [](/uwp/api/Windows.Devices.Midi.MidiInPort) Aufzählen aller Import-Objekte im System verwendet wird. Dieser Wert wird [**vonPort::GetDeviceSelector zurückgegeben.**](/uwp/api/windows.devices.midi.midiinport.getdeviceselector)
 
 
 </dt> </dl> </dd> <dt>
@@ -56,7 +56,7 @@ Gibt die Abfragezeichenfolge an, die zum Aufzählen [**allerPort-Objekte**](/uwp
 
 
 
-Gibt die Abfragezeichenfolge an, die zum Aufzählen aller [**AttributoutPort-Objekte**](/uwp/api/Windows.Devices.Midi.MidiOutPort) im System verwendet wird. Dieser Wert wird von [**Einerport::GetDeviceSelector zurückgegeben.**](/uwp/api/windows.devices.midi.midioutport.getdeviceselector)
+Gibt die Abfragezeichenfolge an, die zum Aufzählen aller [**AttributoutPort-Objekte**](/uwp/api/Windows.Devices.Midi.MidiOutPort) im System verwendet wird. Dieser Wert wird von [**)::GetDeviceSelector zurückgegeben.**](/uwp/api/windows.devices.midi.midioutport.getdeviceselector)
 
 
 </dt> </dl> </dd> </dl>

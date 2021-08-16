@@ -1,5 +1,5 @@
 ---
-description: In diesem Thema erfahren Sie, wie Sie eine Verknüpfung für Ihre APP erstellen, ihr eine appusermodelid zuweisen und Sie auf dem Start Bildschirm installieren.
+description: In diesem Thema erfahren Sie, wie Sie eine Verknüpfung für Ihre App erstellen, ihr eine AppUserModelID zuweisen und sie im Startbildschirm.
 title: Aktivieren von Desktoppopupbenachrichtigungen über eine AppUserModelID
 ms.topic: article
 ms.date: 05/31/2018
@@ -9,23 +9,23 @@ api_type: ''
 api_location: ''
 topic_type:
 - kbSyntax
-ms.openlocfilehash: bd02a0ec6512aa7637f0d6b2b281e1b862e61d3d
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 517c2b72e830c00b105048adc63923291f896cd5d0d77569c91b1aa12e034e60
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104978856"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118459792"
 ---
 # <a name="how-to-enable-desktop-toast-notifications-through-an-appusermodelid"></a>Aktivieren von Desktoppopupbenachrichtigungen über eine AppUserModelID
 
-In diesem Thema erfahren Sie, wie Sie eine Verknüpfung für Ihre APP erstellen, ihr eine [appusermodelid](appids.md)zuweisen und Sie auf dem Start Bildschirm installieren. Es wird dringend empfohlen, dass Sie dies in der Windows Installer statt im Code Ihrer APP tun. Wenn keine gültige Verknüpfung auf dem Start Bildschirm oder in **allen Programmen** installiert ist, können Sie keine Popup Benachrichtigung von einer Desktop-App aus aufrichten.
+In diesem Thema erfahren Sie, wie Sie eine Verknüpfung für Ihre App erstellen, ihr eine [AppUserModelID](appids.md)zuweisen und sie im Startbildschirm. Es wird dringend empfohlen, dies im Windows Installer und nicht im Code Ihrer App zu tun. Ohne eine gültige Verknüpfung, die im Startbildschirm oder **unter** Alle Programme installiert ist, können Sie keine Popupbenachrichtigung von einer Desktop-App aus erstellen.
 
 > [!Note]  
-> Die in diesem Thema verwendeten Beispiel Methoden stammen aus dem [Desktop-Popup Beispiel](https://github.com/microsoft/Windows-classic-samples/tree/master/Samples/DesktopToasts).
+> Die in diesem Thema verwendeten Beispielmethoden sind aus dem [Desktop-Popupbeispiel entnommen.](https://github.com/microsoft/Windows-classic-samples/tree/master/Samples/DesktopToasts)
 
  
 
-## <a name="what-you-need-to-know"></a>Was Sie wissen müssen
+## <a name="what-you-need-to-know"></a>Wichtige Informationen
 
 ### <a name="technologies"></a>Technologien
 
@@ -34,16 +34,16 @@ In diesem Thema erfahren Sie, wie Sie eine Verknüpfung für Ihre APP erstellen,
 ### <a name="prerequisites"></a>Voraussetzungen
 
 -   Bibliotheken
-    -   C++: Runtime. Object. lib
-    -   C \# : Windows. winmd
--   C \# : Windows-API-Code Paket für Microsoft .NET Framework
--   Eine Version von Microsoft Visual Studio, die mindestens Windows 8 unterstützt.
+    -   C++: Runtime.object.lib
+    -   C \# : Windows. Winmd
+-   C \# : Windows API Code Pack für Microsoft .NET Framework
+-   Eine Version von Microsoft Visual Studio, die mindestens Windows 8
 
-## <a name="instructions"></a>Instructions
+## <a name="instructions"></a>Anweisungen
 
 ### <a name="step-1-prepare-the-shortcut-to-be-created"></a>Schritt 1: Vorbereiten der zu erstellenden Verknüpfung
 
-In diesem Beispiel wird zuerst der Pfad des Ordners für App-Daten des Benutzers über die [**GetEnvironmentVariable**](/windows/win32/api/processenv/nf-processenv-getenvironmentvariablea) -Funktion bestimmt. Anschließend wird der vollständige Pfad zur Verknüpfung erstellt, es wird festgelegt, dass an diesem Speicherort noch keine Verknüpfung dieses Namens vorhanden ist, und diese Informationen werden an eine andere Methode weitergeleitet, die die Verknüpfung erstellt und installiert.
+In diesem Beispiel wird zunächst der Pfad des App-Datenordners des Benutzers über die [**GetEnvironmentVariable-Funktion**](/windows/win32/api/processenv/nf-processenv-getenvironmentvariablea) bestimmt. Anschließend wird der vollständige Pfad zur Verknüpfung erstellt, es wird ermittelt, dass an diesem Speicherort noch keine Verknüpfung mit diesem Namen vorhanden ist, und diese Informationen werden an eine andere Methode übertragen, die die Verknüpfung erstellt und installiert.
 
 Beachten Sie, dass die Verknüpfung pro Benutzer oder pro App bereitgestellt werden kann.
 
@@ -81,9 +81,9 @@ HRESULT DesktopToastsApp::TryCreateShortcut()
 
 
 
-### <a name="step-2-create-the-shortcut-and-install-it-in-the-start-screen"></a>Schritt 2: Erstellen Sie die Verknüpfung, und installieren Sie Sie auf dem Start Bildschirm.
+### <a name="step-2-create-the-shortcut-and-install-it-in-the-start-screen"></a>Schritt 2: Erstellen Sie die Verknüpfung, und installieren Sie sie im Startbildschirm
 
-In diesem Beispiel wird auch der Eigenschaften Speicher der Verknüpfung abgerufen, und die erforderliche [System.AppUserModel.ID](../properties/props-system-appusermodel-id.md) -Eigenschaft wird von einer zuvor definierten Variablen,, festgelegt `AppID` .
+In diesem Beispiel wird auch der Eigenschaftenspeicher der Verknüpfung abgerufen und die erforderliche [System.AppUserModel.ID-Eigenschaft](../properties/props-system-appusermodel-id.md) aus einer zuvor definierten Variablen `AppID` festgelegt.
 
 
 ```C++
@@ -144,60 +144,60 @@ HRESULT DesktopToastsApp::InstallShortcut(_In_z_ wchar_t *shortcutPath)
 
 
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Als Alternative zu dem in diesem Thema gezeigten Ansatz können Sie ein Framework, wie z. b. das Windows Installer-XML (WiX), verwenden, um die Verknüpfung zu generieren und als Teil der Windows Installer bereitzustellen. In diesem Fall sollte dieser Code in der MSI-Datei statt im Code der App enthalten sein. Weitere Informationen finden Sie in der WiX-Beispielkonfigurationsdatei im Beispiel zum [Senden von Popup Benachrichtigungen aus Desktop-Apps](https://github.com/microsoftarchive/msdn-code-gallery-microsoft/tree/master/Official%20Windows%20Platform%20Sample/Windows%208%20app%20samples/%5BC%2B%2B%5D-Windows%208%20app%20samples/C%2B%2B/Windows%208%20app%20samples/Toast%20notifications%20sample%20(Windows%208)) .
+Als Alternative zu dem in diesem Thema gezeigten Ansatz können Sie ein Framework wie das Windows Installer XML (WiX) verwenden, um die Verknüpfung zu generieren und als Teil des Windows-Installers bereitzustellen. In diesem Fall sollte dieser Code in der MSI und nicht im Code der App enthalten sein. Weitere Informationen finden Sie in der WiX-Beispielkonfigurationsdatei, die im Beispiel [Senden von Popupbenachrichtigungen von Desktop-Apps enthalten](https://github.com/microsoftarchive/msdn-code-gallery-microsoft/tree/master/Official%20Windows%20Platform%20Sample/Windows%208%20app%20samples/%5BC%2B%2B%5D-Windows%208%20app%20samples/C%2B%2B/Windows%208%20app%20samples/Toast%20notifications%20sample%20(Windows%208)) ist.
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
 <dl> <dt>
 
-[Schnellstart: Senden einer Popup Benachrichtigung vom Desktop](quickstart-sending-desktop-toast.md)
+[Schnellstart: Senden einer Popupbenachrichtigung vom Desktop](quickstart-sending-desktop-toast.md)
 </dt> <dt>
 
 [Beispiel zum Senden von Toastbenachrichtigungen aus Desktop-Apps](https://github.com/microsoftarchive/msdn-code-gallery-microsoft/tree/master/Official%20Windows%20Platform%20Sample/Windows%208%20app%20samples/%5BC%2B%2B%5D-Windows%208%20app%20samples/C%2B%2B/Windows%208%20app%20samples/Toast%20notifications%20sample%20(Windows%208))
 </dt> <dt>
 
-[Anwendungs Benutzer Modell-IDs (appusermudelids)](appids.md)
+[Anwendungsbenutzermodell-IDs (AppUserModelIDs)](appids.md)
 </dt> <dt>
 
-[Gewusst wie: Installieren der WiX-Tools (Windows Installer XML)](/previous-versions/windows/server-essentials/gg513936(v=msdn.10))
+[How to: Install the Windows Installer XML (WiX) Tools](/previous-versions/windows/server-essentials/gg513936(v=msdn.10))
 </dt> <dt>
 
 [Popup-XML-Schema](/uwp/schemas/tiles/toastschema/schema-root)
 </dt> <dt>
 
-[Übersicht über Popup Benachrichtigungen](/previous-versions/windows/apps/hh779727(v=win.10))
+[Übersicht über Popupbenachrichtigungen](/previous-versions/windows/apps/hh779727(v=win.10))
 </dt> <dt>
 
-[Schnellstart: Senden einer Popup Benachrichtigung](/previous-versions/windows/apps/hh465448(v=win.10))
+[Schnellstart: Senden einer Popupbenachrichtigung](/previous-versions/windows/apps/hh465448(v=win.10))
 </dt> <dt>
 
 [Schnellstart: Senden einer Popup-Pushbenachrichtigung](/previous-versions/windows/hh761487(v=win.10))
 </dt> <dt>
 
-[Richtlinien und Prüfliste für Popup Benachrichtigungen](/windows/uwp/design/shell/tiles-and-notifications/)
+[Richtlinien und Checkliste für Popupbenachrichtigungen](/windows/uwp/design/shell/tiles-and-notifications/)
 </dt> <dt>
 
-[Hinzufügen von Bildern zu einer Popup Vorlage](/previous-versions/windows/)
+[Hinzufügen von Bildern zu einer Popupvorlage](/previous-versions/windows/)
 </dt> <dt>
 
-[Überprüfen der Popup Benachrichtigungseinstellungen](/previous-versions/windows/)
+[Überprüfen der Einstellungen für Popupbenachrichtigungen](/previous-versions/windows/)
 </dt> <dt>
 
-[Auswählen und Verwenden einer Popup Vorlage](/previous-versions/windows/apps/hh465448(v=win.10))
+[Auswählen und Verwenden einer Popupvorlage](/previous-versions/windows/apps/hh465448(v=win.10))
 </dt> <dt>
 
-[Behandeln der Aktivierung über eine Popup Benachrichtigung](/previous-versions/windows/apps/hh761468(v=win.10))
+[Behandeln der Aktivierung von Popupbenachrichtigungen](/previous-versions/windows/apps/hh761468(v=win.10))
 </dt> <dt>
 
-[Abonnieren von Popup Benachrichtigungen](/previous-versions/windows/apps/hh781238(v=win.10))
+[Aktivieren von Popupbenachrichtigungen](/previous-versions/windows/apps/hh781238(v=win.10))
 </dt> <dt>
 
-[Auswählen einer Popup Vorlage](/previous-versions/windows/apps/hh761494(v=win.10))
+[Auswählen einer Popupvorlage](/previous-versions/windows/apps/hh761494(v=win.10))
 </dt> <dt>
 
-[Popup-Audiooptionen](/previous-versions/windows/apps/hh761492(v=win.10))
+[Audiooptionen für Popups](/previous-versions/windows/apps/hh761492(v=win.10))
 </dt> </dl>
 
  

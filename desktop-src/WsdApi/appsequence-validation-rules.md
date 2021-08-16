@@ -1,21 +1,21 @@
 ---
-description: Appsequence-Informationen, die in WS-Discovery Ankündigungs-und Antwort Nachrichten (Hello, Probe Matches und resolvematches) enthalten sind.
+description: AppSequence-Informationen, die in WS-Discovery Ankündigungs- und Antwortnachrichten (Hello, ProbeMatches und ResolveMatches) enthalten sind.
 ms.assetid: f54eaa09-7ce8-4948-a0c5-edf2d054f6d5
-title: Appsequence-Validierungsregeln
+title: AppSequence-Überprüfungsregeln
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 3ea44c1ee2d157608ddd1756e71d7183f310df87
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 73f2acec9d9d3858b5d68b0240499d95dba059ac1bcac745f1dc69bebc2056a3
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104528592"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117738643"
 ---
-# <a name="appsequence-validation-rules"></a>Appsequence-Validierungsregeln
+# <a name="appsequence-validation-rules"></a>AppSequence-Überprüfungsregeln
 
-Appsequence-Informationen, die in WS-Discovery Ankündigungs-und Antwort Nachrichten ([Hello](hello-message.md), [Probe Matches](probematches-message.md)und [resolvematches](resolvematches-message.md)) enthalten sind. Diese Informationen werden von WSDAPI verarbeitet und überprüft, bevor diese Nachrichten an Komponenten oberhalb des Stapels weitergeleitet werden (z. b. Netzwerk-Explorer oder eine Anwendung, die WSDAPI aufrufen).
+AppSequence-Informationen, die in WS-Discovery Ankündigungs- und Antwortnachrichten enthalten sind ([Hello](hello-message.md), [ProbeMatches](probematches-message.md)und [ResolveMatches](resolvematches-message.md)). Diese Informationen werden von WSDAPI verarbeitet und überprüft, bevor diese Nachrichten an Komponenten über dem Stapel übergeben werden (z. B. Netzwerk-Explorer oder eine Anwendung, die WSDAPI aufruft).
 
-Der folgende XML-Code zeigt ein Beispiel für ein appsequence-Element. Das WSD-Präfix verweist auf den-Namespace `https://schemas.xmlsoap.org/ws/2005/04/discovery` .
+Der folgende XML-Code zeigt ein AppSequence-Beispielelement. Das wsd-Präfix bezieht sich auf den Namespace `https://schemas.xmlsoap.org/ws/2005/04/discovery` .
 
 ``` syntax
 <wsd:AppSequence InstanceId="2"
@@ -24,17 +24,17 @@ Der folgende XML-Code zeigt ein Beispiel für ein appsequence-Element. Das WSD-P
 </wsd:AppSequence>
 ```
 
-WSDAPI ignoriert veraltete Nachrichten. Für jedes Gerät (eindeutig durch die Endpunkt Adresse im SOAP-Text identifiziert) ignoriert WSDAPI alle Nachrichten mit einer appsequence-messagenzahl, die niedriger ist als die letzte angezeigte Meldung.
+WSDAPI ignoriert veraltete Nachrichten. Für jedes Gerät (eindeutig durch die Endpunktadresse im SOAP-Text identifiziert) ignoriert WSDAPI alle Nachrichten, deren AppSequence MessageNumber niedriger als die letzte angezeigte Nachricht ist.
 
-WSDAPI ignoriert veraltete xaddr-Ankündigungen. Wenn die appsequence-InstanceId niedriger als die letzte angezeigte instanceId ist, ignoriert WSDAPI die im SOAP-Text angekündigten xaddrs. Wenn die InstanceId gleich der vorherigen ist, aber MetadataVersion niedriger ist als die letzte MetadataVersion, ignoriert WSDAPI die xaddrs.
+WSDAPI ignoriert veraltete XAddr-Ankündigungen. Wenn die AppSequence-Instanz-ID niedriger als die zuletzt angezeigte InstanceId ist, ignoriert WSDAPI die im SOAP-Text angekündigten XAddrs. Wenn die InstanceId mit der vorherigen identisch ist, die MetadataVersion jedoch niedriger als die letzte MetadataVersion ist, ignoriert WSDAPI die XAddrs.
 
-WSDAPI ignoriert doppelte WS-Discovery Meldungen. Wenn zwei identische WS-Discovery-Nachrichten an WSDAPI gesendet werden, wird nur der erste empfangene verarbeitet. Dies ist in der Regel nur für Anwendungen relevant, die direkt in die [**iwsdiscoverypublisher**](/windows/desktop/api/WsdDisco/nn-wsddisco-iwsdiscoverypublisher) -oder [**iwsdiscoveryprovider**](/windows/desktop/api/WsdDisco/nn-wsddisco-iwsdiscoveryprovider) -Schnittstellen aufzurufen.
+WSDAPI ignoriert doppelte WS-Discovery Nachrichten. Wenn zwei identische WS-Discovery Nachrichten an WSDAPI gesendet werden, wird nur der erste empfangene verarbeitet. Dies ist in der Regel nur für Anwendungen relevant, die die [**Schnittstellen IWSDiscoveryPublisher**](/windows/desktop/api/WsdDisco/nn-wsddisco-iwsdiscoverypublisher) oder [**IWSDiscoveryProvider**](/windows/desktop/api/WsdDisco/nn-wsddisco-iwsdiscoveryprovider) direkt aufrufen.
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
 <dl> <dt>
 
-[Ermittlungs-und Metadatenaustausch-Nachrichten Muster](discovery-and-metadata-exchange-message-patterns.md)
+[Ermittlungs- und Metadaten-Exchange Nachrichtenmuster](discovery-and-metadata-exchange-message-patterns.md)
 </dt> </dl>
 
  

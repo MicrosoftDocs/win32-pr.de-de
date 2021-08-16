@@ -1,19 +1,19 @@
-- name: Microsoft Interface Definition Language (Mittel l)
+- name: Microsoft Interface Definition Language (MIDL)
   href: midl-start-page.md
   items:
     - name: Informationen zu diesem Leitfaden
       href: about-this-guide-2.md
-    - name: Verwenden des Mittel l-Compilers
+    - name: Verwenden des MIDL-Compilers
       href: using-the-midl-compiler-2.md
       items:
-        - name: Aufrufen des Mittel l-Compilers
+        - name: Aufrufen des MIDL-Compilers
           href: invoking-the-midl-compiler.md
         - name: Antwortdateien
           href: response-files.md
-        - name: Verwenden von C/C++-Präprozessor mit mittlerer l
+        - name: Verwenden von C/C++-Preprocessor mit MIDL
           href: using-c-c-preprocessor-with-midl.md
           items:
-            - name: C-präprozessoranforderungen für die Mittel l
+            - name: C-Präprozessoranforderungen für MIDL
               href: c-preprocessor-requirements-for-midl.md
             - name: 'Umgang mit #defines in IDL-Dateien'
               href: dealing-with-defines-in-idl-files-2.md
@@ -21,16 +21,16 @@
               href: verifying-preprocessor-options.md
             - name: Speichern der Präprozessorausgabe
               href: saving-preprocessor-output.md
-        - name: C/C++-compilerüberlegungen
+        - name: Überlegungen zum C/C++-Compiler
           href: c-c-compiler-considerations.md
           items:
-            - name: C-Compilerprobleme beim Packen
+            - name: Probleme beim Packen des C-Compilers
               href: c-compiler-packing-issues.md
-            - name: C-compilerdefinitionen für Proxy/Stub
+            - name: C-Compilerdefinitionen für Proxys/Stubs
               href: c-compiler-definitions-for-proxy-stubs.md
         - name: Verwenden der __midl vordefinierten Konstante
           href: using-the---midl-predefined-constant.md
-        - name: Mittel l und RPC
+        - name: MIDL und RPC
           href: midl-and-rpc.md
           items:
             - name: Für eine RPC-Schnittstelle generierte Dateien
@@ -40,43 +40,43 @@
                   href: the-client-stub.md
                 - name: Der Serverstub
                   href: the-server-stub.md
-                - name: Die Header Datei
+                - name: Die Headerdatei
                   href: the-header-file.md
-            - name: Stubziele für bestimmte 32-Bit-oder 64-Bit-Plattformen
+            - name: Zielstubs für bestimmte 32-Bit- oder 64-Bit-Plattformen
               href: targeting-stubs-for-specific-32-bit-or-64-bit-platforms.md
-        - name: Mittel l und com
+        - name: MIDL und COM
           href: midl-and-com.md
           items:
             - name: Für eine COM-Schnittstelle generierte Dateien
               href: files-generated-for-a-com-interface.md
               items:
-                - name: Die Schnittstellen Proxy Datei
+                - name: Die Schnittstellenproxydatei
                   href: the-interface-proxy-file.md
-                - name: Die Header Dateien
+                - name: Die Headerdateien
                   href: the-header-files.md
-                - name: Die UUID-Schnittstellen Datei
+                - name: Die Schnittstellen-UUID-Datei
                   href: the-interface-uuid-file.md
-                - name: Die Schnittstellen Registrierungsdatei
+                - name: Die Schnittstellenregistrierungsdatei
                   href: the-interface-registration-file.md
-            - name: Marshalling von OLE-Datentypen
+            - name: Marshallen von OLE-Datentypen
               href: marshaling-ole-data-types.md
-        - name: Mittel l und ODL
+        - name: MIDL und ODL
           href: midl-and-odl.md
           items:
-            - name: Erstellen einer Typbibliothek mit "Mittel l"
+            - name: Generieren einer Typbibliothek mit MIDL
               href: generating-a-type-library-with-midl-2.md
             - name: 'Zusätzliche Dateien, die zum Generieren einer Typbibliothek erforderlich sind'
               href: additional-files-required-to-generate-a-type-library-2.md
-            - name: Unterschiede zwischen "Mittel l" und "MkTypLib"
+            - name: Unterschiede zwischen MIDL und MkTypLib
               href: differences-between-midl-and-mktyplib.md
-            - name: ODL-sprach Features in der Mitte
+            - name: ODL-Sprachfeatures in MIDL
               href: odl-language-features-in-midl.md
-            - name: Erstellen einer Proxy-dll und einer Typbibliothek aus einer einzelnen IDL-Datei
+            - name: Generieren einer Proxy-DLL und einer Typbibliothek aus einer einzelnen IDL-Datei
               href: generating-a-proxy-dll-and-a-type-library-from-a-single-idl-file-2.md
-        - name: Mittlere und Windows-Runtime Komponenten
+        - name: MIDLRT- und Windows Runtime-Komponenten
           href: midlrt-and-windows-runtime-components.md
           items:
-            - name: Mdmerge-und Metadatendateien
+            - name: MDMERGE- und Metadatendateien
               href: mdmerge-and-metadata-files.md
               items:
                 - name: /i
@@ -103,104 +103,104 @@
               href: '-ns-prefix.md'
             - name: /winmd
               href: '-winmd.md'
-            - name: /WinRT
+            - name: /winrt
               href: '-winrt.md'
     - name: Schnittstellendefinitionen und Typbibliotheken
       href: interface-definitions-and-type-libraries.md
       items:
         - name: Schnittstellen in verteilten Objekten
           href: interfaces-in-distributed-objects.md
-        - name: 'COM-, DCOM-und Typbibliotheken'
+        - name: 'COM-, DCOM- und Typbibliotheken'
           href: com-dcom-and-type-libraries.md
-        - name: Schnittstellen Definitionsdatei (IDL)
+        - name: IDL-Datei (Interface Definition)
           href: interface-definition-idl-file.md
           items:
-            - name: Datentypen im Schnittstellen Text
+            - name: Datentypen im Schnittstellentext
               href: data-types-in-the-interface-body.md
               items:
-                - name: 'Typdefinitionen, Konstruktordeklarationen und Importe'
+                - name: 'Typdefinitionen, Konstruktdeklarationen und Importe'
                   href: type-definitions-construct-declarations-and-imports.md
         - name: IDL-Attribute
           href: idl-attributes.md
           items:
-            - name: Aliasing-und Marshallingattribute
+            - name: Aliasing- und Marshallingattribute
               href: aliasing-and-marshaling-attributes.md
             - name: Asynchrone Attribute
               href: asynchronous-attributes.md
-            - name: Array-und Sized-Pointer Attribute
+            - name: Array- und Sized-Pointer attribute
               href: array-and-sized-pointer-attributes.md
-            - name: Datentyp Attribute
+            - name: Datentypattribute
               href: data-type-attributes.md
             - name: Direktionale Attribute
               href: directional-attributes.md
-            - name: Funktions Aufrufattribute
+            - name: Funktionsaufrufattribute
               href: function-call-attributes.md
-            - name: Schnittstellen Header Attribute
+            - name: Schnittstellenheaderattribute
               href: interface-header-attributes.md
-            - name: Leistungs Attribute
+            - name: Leistungsattribute
               href: performance-attributes.md
-            - name: Zeiger-Typattribute
+            - name: Zeigertypattribute
               href: pointer-type-attributes.md
-            - name: Struktur-und Union-Attribute
+            - name: Struktur- und Union-Attribute
               href: structure-and-union-attributes.md
-            - name: Typbibliotheks Attribute
+            - name: Typbibliotheksattribute
               href: type-library-attributes.md
-        - name: Anwendungs Konfigurationsdatei (ACF)
+        - name: 'Anwendungskonfigurationsdatei (Application Configuration File, ACF)'
           href: application-configuration-file-acf-.md
         - name: ACF-Attribute
           href: acf-attributes.md
           items:
             - name: Binden von ACF-Attributen
               href: binding-acf-attributes.md
-            - name: ACF-Attribute der Stub-Optimierung
+            - name: ACF-Attribute für die Stuboptimierung
               href: stub-optimization-acf-attributes.md
-            - name: Type-Conversion und Marshalling von ACF-Attributen
+            - name: Type-Conversion und Marshallen von ACF-Attributen
               href: type-conversion-and-marshaling-acf-attributes.md
             - name: ACF-Attribute für die Speicherverwaltung
               href: memory-management-acf-attributes.md
-            - name: Fehler-und Ausnahmebehandlung von ACF-Attributen
+            - name: ACF-Attribute für die Fehler- und Ausnahmebehandlung
               href: error-and-exception-handling-acf-attributes.md
             - name: Verwenden von ACF-Attributen in einer IDL-Datei
               href: using-acf-attributes-in-an-idl-file.md
-        - name: Datentypen in der Mitte
+        - name: MIDL-Datentypen
           href: midl-data-types.md
           items:
-            - name: Mittel l-Basis Typen
+            - name: MIDL-Basistypen
               href: midl-base-types.md
               items:
-                - name: Vordefinierte mittlere und Basis Typen
+                - name: VORDEFINIERTE MIDL- und Basistypen
                   href: midl-predefined-and-base-types.md
                 - name: Typen mit und ohne Vorzeichen
                   href: signed-vs--unsigned-types.md
-                - name: Andere Datentypen in der Mitte
+                - name: Andere MIDL-Datentypen
                   href: other-midl-data-types.md
-            - name: Mittelgroße Arrays
+            - name: MIDL-Arrays
               href: midl-arrays.md
-            - name: Mittel l-Typdefinitionen
+            - name: MIDL-Typdefinitionen
               href: midl-type-definitions.md
-            - name: Enumerationstypen der Mitte
+            - name: MIDL-Enumerationstypen
               href: midl-enumerated-types.md
-            - name: Mittel l-Strukturen
+            - name: MIDL-Strukturen
               href: midl-structures.md
-            - name: Mittel l-Unions
+            - name: MIDL-Unions
               href: midl-unions.md
               items:
-                - name: Gekapselt Unions
+                - name: Gekapselte Unions
                   href: encapsulated-unions.md
-                - name: Nicht gekapselt Unions
+                - name: Nicht gekapselte Unions
                   href: nonencapsulated-unions.md
-            - name: Mittel l-Bindungs Handles
+            - name: MIDL-Bindungshandles
               href: midl-binding-handles.md
         - name: Importieren von Dateien und Typbibliotheken
           href: importing-files-and-type-libraries.md
         - name: Importieren von System-Headerdateien
           href: importing-system-header-files.md
-    - name: Mittlere Command-Line Referenz
+    - name: MIDL Command-Line-Referenz
       href: midl-command-line-reference.md
       items:
-        - name: Allgemeine Syntax der Mittell-Befehlszeile
+        - name: Allgemeine MIDL-Befehlszeilensyntax
           href: general-midl-command-line-syntax.md
-        - name: Der Antwortdatei Befehl.
+        - name: Befehl "Antwortdatei"
           href: the-response-file-command.md
         - name: /acf
           href: '-acf.md'
@@ -216,7 +216,7 @@
           href: '-c-ext.md'
         - name: /caux
           href: '-caux.md'
-        - name: /Char
+        - name: /char
           href: '-char.md'
         - name: /client
           href: '-client.md'
@@ -224,7 +224,7 @@
           href: '-confirm.md'
         - name: /cpp_cmd
           href: '-cpp-cmd.md'
-        - name: /Cpp_opt
+        - name: /cpp_opt
           href: '-cpp-opt.md'
         - name: /cstruct_out
           href: '-cstruct-out.md'
@@ -234,31 +234,31 @@
           href: '-d.md'
         - name: /dlldata
           href: '-dlldata.md'
-        - name: /ENV
+        - name: /env
           href: '-env.md'
-        - name: /Error
+        - name: /error
           href: '-error.md'
         - name: /h
           href: '-h.md'
-        - name: /Header
+        - name: /header
           href: '-header.md'
-        - name: /Help (/?)
+        - name: /help (/?)
           href: '-help-.md'
         - name: /I
           href: '-i.md'
         - name: /ia64
           href: '-ia64.md'
-        - name: /IID
+        - name: /iid
           href: '-iid.md'
-        - name: /Import
+        - name: /import
           href: '-import.md'
-        - name: /LCID
+        - name: /lcid
           href: '-lcid.md'
         - name: /mktyplib203
           href: '-mktyplib203.md'
         - name: /ms_ext
           href: '-ms-ext.md'
-        - name: /Ms_union
+        - name: /ms_union
           href: '-ms-union.md'
         - name: /msc_ver
           href: '-msc-ver.md'
@@ -266,7 +266,7 @@
           href: '-new.md'
         - name: /newtlb
           href: '-newtlb.md'
-        - name: '/no_cpp,/nocpp'
+        - name: '/no_cpp, /nocpp'
           href: '-no-cpp-nocpp.md'
         - name: /no_default_epv
           href: '-no-default-epv.md'
@@ -286,7 +286,7 @@
           href: '-o.md'
         - name: /Oi
           href: '-oi.md'
-        - name: /Old
+        - name: /old
           href: '-old.md'
         - name: /oldtlb
           href: '-oldtlb.md'
@@ -298,13 +298,13 @@
           href: '-osf.md'
         - name: /out
           href: '-out.md'
-        - name: /Pack
+        - name: /pack
           href: '-pack.md'
         - name: /prefix
           href: '-prefix.md'
-        - name: /Protocol
+        - name: /protocol
           href: '-protocol.md'
-        - name: /Proxy
+        - name: /proxy
           href: '-proxy.md'
         - name: /robust
           href: '-robust.md'
@@ -328,7 +328,7 @@
           href: '-system-.md'
         - name: /target
           href: '-target.md'
-        - name: /TLB
+        - name: /tlb
           href: '-tlb.md'
         - name: /U
           href: '-u.md'
@@ -350,12 +350,12 @@
           href: '-zp.md'
         - name: /Zs
           href: '-zs.md'
-    - name: Mittel l-Sprachreferenz
+    - name: MIDL-Sprachreferenz
       href: midl-language-reference.md
       items:
         - name: Reservierte Schlüsselwörter
           href: reserved-keywords.md
-        - name: Serialisierung im gemischten Modus von Kontext Handles
+        - name: Serialisierung von Kontexthandles im gemischten Modus
           href: mixed-mode-serialization-of-context-handles.md
         - name: aggregatable
           href: aggregatable.md
@@ -429,7 +429,7 @@
           href: dispinterface.md
         - name: displaybind
           href: displaybind.md
-        - name: dllname (Str)
+        - name: dllname(str)
           href: dllname-str-.md
         - name: double
           href: double.md
@@ -543,7 +543,7 @@
           href: ncacn-dnet-nsp.md
         - name: ncacn_http
           href: ncacn-http.md
-        - name: ncacn_ip_tcp
+        - name: Ncacn_ip_tcp
           href: ncacn-ip-tcp.md
         - name: ncacn_nb_ipx
           href: ncacn-nb-ipx.md
@@ -563,9 +563,9 @@
           href: ncadg-ipx.md
         - name: ncadg_mq
           href: ncadg-mq.md
-        - name: Ncalrpc
+        - name: ncalrpc
           href: ncalrpc.md
-        - name: NoCode
+        - name: nocode
           href: nocode.md
         - name: nonbrowsable
           href: nonbrowsable.md
@@ -573,7 +573,7 @@
           href: noncreatable.md
         - name: nonextensible
           href: nonextensible.md
-        - name: informiert
+        - name: Benachrichtigen
           href: notify.md
         - name: notify_flag
           href: notify-flag.md
@@ -695,7 +695,7 @@
           href: user-marshal.md
         - name: usesgetlasterror
           href: usesgetlasterror.md
-        - name: uuid
+        - name: UUID
           href: uuid.md
         - name: v1_enum
           href: v1-enum.md
@@ -709,10 +709,10 @@
           href: wchar-t.md
         - name: wire_marshal
           href: wire-marshal.md
-    - name: Compilerfehler und-Warnungen
+    - name: MIDL-Compilerfehler und -Warnungen
       href: midl-compiler-errors-and-warnings.md
       items:
-        - name: Formate für Fehler-und Warnmeldungen
+        - name: Fehler- und Warnmeldungsformate
           href: error-and-warning-message-formats.md
         - name: Präprozessorfehler
           href: preprocessor-errors.md

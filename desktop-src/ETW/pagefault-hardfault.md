@@ -48,7 +48,7 @@ class PageFault_HardFault : PageFault_V2
 
 ## <a name="members"></a>Member
 
-Die **PageFault \_ HardFault-Klasse** verfügt über die folgenden Membertypen:
+Die **PageFault \_ HardFault-Klasse** verfügt über diese Typen von Membern:
 
 -   [Eigenschaften](#properties)
 
@@ -86,14 +86,14 @@ Zugriffstyp: Schreibgeschützt
 Qualifizierer: WmiDataId(4), Zeiger
 </dt> </dl>
 
-Übereinstimmung mit dem Wert dieses Zeigers auf den **FileObject-Zeigerwert** in einem [**FileIo \_ Name-Ereignis,**](fileio-name.md) um den Namen der Datei zu bestimmen.
+Übereinstimmung mit dem Wert dieses Zeigers mit dem **FileObject-Zeigerwert** in einem [**FileIo \_ Name-Ereignis,**](fileio-name.md) um den Namen der Datei zu bestimmen.
 
 </dd> <dt>
 
 **InitialTime**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Objekt**
+Datentyp: **object**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
@@ -134,7 +134,7 @@ Zugriffstyp: Schreibgeschützt
 Qualifizierer: WmiDataId(5), Format("x")
 </dt> </dl>
 
-Threadbezeichner des Threads, in dem der Seitenfehler aufgetreten ist.
+Threadbezeichner des Threads, der auf den Seitenfehler gestoßen ist.
 
 </dd> <dt>
 
@@ -160,7 +160,7 @@ Fehleradresse.
 
 | Anforderung | Wert |
 |-------------------------------------|------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Windows Nur \[ Vista-Desktop-Apps\]<br/>       |
+| Unterstützte Mindestversion (Client)<br/> | Windows \[Nur Vista-Desktop-Apps\]<br/>       |
 | Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2008-Desktop-Apps\]<br/> |
 
 

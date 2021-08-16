@@ -1,9 +1,9 @@
 ---
-title: filePath Simple Type
+title: einfacher filePath-Typ
 description: Definiert eine Zeichenfolge, die einen vollqualifizierten Pfad zu einer Datei enthält.
 ms.assetid: a9b8f40a-fecd-4325-b068-a5aca3133134
 keywords:
-- filePath simple type EventLog
+- 'einfacher filePath-Typ: EventLog'
 topic_type:
 - apiref
 api_name:
@@ -20,7 +20,7 @@ ms.contentlocale: de-DE
 ms.lasthandoff: 08/11/2021
 ms.locfileid: "118343996"
 ---
-# <a name="filepath-simple-type"></a>filePath Simple Type
+# <a name="filepath-simple-type"></a>einfacher filePath-Typ
 
 Definiert eine Zeichenfolge, die einen vollqualifizierten Pfad zu einer Datei enthält. Der Pfad kann Umgebungsvariablen enthalten.
 
@@ -38,7 +38,7 @@ Definiert eine Zeichenfolge, die einen vollqualifizierten Pfad zu einer Datei en
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | nur Windows 7 \[ Desktop-Apps\]<br/>              |
+| Unterstützte Mindestversion (Client)<br/> | Windows 7 \[ Desktop-Apps\]<br/>              |
 | Unterstützte Mindestversion (Server)<br/> | Windows Nur Server 2008 \[ R2-Desktop-Apps\]<br/> |
 
 

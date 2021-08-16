@@ -1,7 +1,7 @@
 ---
 description: Schließt ein Suchhandle.
 ms.assetid: 2e6a547f-26a7-401a-b1e4-3f085ce82729
-title: Cscfindclose-Funktion
+title: CSCFindClose-Funktion
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,14 +13,14 @@ api_type:
 - DllExport
 api_location:
 - Cscmig.dll
-ms.openlocfilehash: 69e3ea972ccd67a1db999c186709ef3aeff84be9
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 862159ed74d6c7c9ddbe4d6f97bede37bab7dca949e6d3259715737de07b8df5
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106354713"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119758720"
 ---
-# <a name="cscfindclose-function"></a>Cscfindclose-Funktion
+# <a name="cscfindclose-function"></a>CSCFindClose-Funktion
 
 \[Diese Funktion wird nicht unterstützt und sollte nicht verwendet werden.\]
 
@@ -41,20 +41,20 @@ BOOL WINAPI CSCFindClose(
 
 <dl> <dt>
 
-*hfind* \[ in\]
+*hFind* \[ In\]
 </dt> <dd>
 
-Ein Suchhandle, das von der [**cscfindfirstfilew**](cscfindfirstfilew.md) -Funktion zurückgegeben wird.
+Ein von der [**CSCFindFirstFileW-Funktion**](cscfindfirstfilew.md) zurückgegebenes Suchhandle.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Diese Funktion gibt **true** zurück, wenn Sie erfolgreich ist. Andernfalls wird **false** zurückgegeben.
+Diese Funktion gibt **TRUE** zurück, wenn sie erfolgreich ist. Andernfalls wird **FALSE** zurückgegeben.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Dieser Funktion ist keine Import Bibliothek oder Header Datei zugeordnet. Sie müssen ihn mithilfe der [**LoadLibrary**](/windows/win32/api/libloaderapi/nf-libloaderapi-loadlibrarya) -Funktion und der [**GetProcAddress**](/windows/win32/api/libloaderapi/nf-libloaderapi-getprocaddress) -Funktion aufrufen.
+Dieser Funktion ist keine Importbibliothek oder Headerdatei zugeordnet. Sie müssen sie mithilfe der [**Funktionen LoadLibrary**](/windows/win32/api/libloaderapi/nf-libloaderapi-loadlibrarya) und [**GetProcAddress**](/windows/win32/api/libloaderapi/nf-libloaderapi-getprocaddress) aufrufen.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -66,11 +66,11 @@ Dieser Funktion ist keine Import Bibliothek oder Header Datei zugeordnet. Sie m�
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Cscfindfirstfilew**](cscfindfirstfilew.md)
+[**CSCFindFirstFileW**](cscfindfirstfilew.md)
 </dt> </dl>
 
  

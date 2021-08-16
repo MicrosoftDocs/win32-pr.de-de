@@ -1,49 +1,49 @@
 ---
-description: Windows Vista führt eine große Anzahl von Funktionen ein, die Gebiets Schema Namen anstelle von Gebiets Schema Bezeichnernamen verwenden.
+description: Windows Vista führt eine große Anzahl von Funktionen ein, die Locale-Namen anstelle von Locale Identifiers verwenden.
 ms.assetid: e88c31b2-b1da-40ae-b512-67b8ad409b95
-title: Aufrufen der "locale Name"-Funktionen
+title: Aufrufen der "Locale Name"-Funktionen
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: c58c15d2d9fe7721eb162f8c7cf96084bd4afa2e
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: bc97490f21c54a187f2db31c6ee5c7eaa6c45e64069f9be9594c99e2376ef04e
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "103751152"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119754890"
 ---
-# <a name="calling-the-locale-name-functions"></a>Aufrufen der "locale Name"-Funktionen
+# <a name="calling-the-locale-name-functions"></a>Aufrufen der "Locale Name"-Funktionen
 
-Windows Vista führt eine große Anzahl von Funktionen ein, die Gebiets Schema [Namen](locale-names.md) anstelle von Gebiets Schema [Bezeichnernamen](locale-identifiers.md)verwenden. Diese neuen Funktionen bieten eine gute unter [Stützung für zusätzliche](custom-locales.md)Gebiets Schemas, und einige von Ihnen bieten zusätzliche Funktionen, die in den älteren nls-Funktionen nicht verfügbar sind. Einige von Ihnen, wie z. b. die neuen Enumerationsfunktionen, stellen auch Entwurfs Verbesserungen dar.
+Windows Vista führt eine große Anzahl von Funktionen ein, die [Locale-Namen anstelle](locale-names.md) von [Locale Identifiers verwenden.](locale-identifiers.md) Diese neuen Funktionen bieten gute Unterstützung für zusätzliche [Locales,](custom-locales.md)und einige davon bieten zusätzliche Funktionen, die in den älteren NLS-Funktionen nicht verfügbar sind. Einige davon, z. B. die neuen Enumerationsfunktionen, stellen auch Entwurfsverbesserungen dar.
 
 > [!Note]  
-> Anwendungen, die nur unter Windows Vista und höher ausgeführt werden sollen, sollten die "locale Name"-Funktionen für die NLS-Funktionen verwenden, die Gebiets Schema Bezeichner verwenden.
+> Anwendungen, die nur unter Windows Vista und höher ausgeführt werden sollen, sollten die "Locale Name"-Funktionen vor den NLS-Funktionen verwenden, die Locale Identifiers verwenden.
 
  
 
-In der folgenden Tabelle werden die Funktionen für den Gebiets Schema Namen zusammen mit den älteren Funktionen aufgelistet, die Sie ersetzen können.
+In der folgenden Tabelle sind die Namensfunktionen des Locale sowie die älteren Funktionen aufgeführt, die sie ersetzen können.
 
 
 
-| Funktionen mit Gebiets Schema Namen                                     | Funktionen mit Gebiets Schema Bezeichnerzeichen                                                             |
+| Funktionen mitHilfe von Locale-Namen                                     | Funktionen mitHilfe von Locale Identifiers                                                             |
 |------------------------------------------------------------------|------------------------------------------------------------------------------------------------|
-| [**Comparestringex**](/windows/desktop/api/Stringapiset/nf-stringapiset-comparestringex)                       | [**CompareString**](/windows/win32/api/stringapiset/nf-stringapiset-comparestringw)                                                         |
-| [**Enumcalendarinfoexex**](/windows/desktop/api/Winnls/nf-winnls-enumcalendarinfoexex)             | [**Enumcalendarinfo**](/windows/desktop/api/Winnls/nf-winnls-enumcalendarinfoa), [ **enumcalendarinfoex**](/windows/desktop/api/Winnls/nf-winnls-enumcalendarinfoexa) |
-| [**Enumdateformatsexex**](/windows/desktop/api/Winnls/nf-winnls-enumdateformatsexex)               | [**Enumdateformats**](/windows/desktop/api/Winnls/nf-winnls-enumdateformatsa), [ **enumdateformatsex**](/windows/desktop/api/Winnls/nf-winnls-enumdateformatsexa)     |
-| [**Enumsystemlocalesex**](/windows/desktop/api/Winnls/nf-winnls-enumsystemlocalesex)               | [**Enumsystemgebiets Schemas**](/windows/desktop/api/Winnls/nf-winnls-enumsystemlocalesa)                                                 |
-| [**Enumtimeformatsex**](/windows/desktop/api/Winnls/nf-winnls-enumtimeformatsex)                   | [**Enumtimeformats**](/windows/desktop/api/Winnls/nf-winnls-enumtimeformatsa)                                                     |
-| [**Findnlsstringex**](/windows/desktop/api/Winnls/nf-winnls-findnlsstringex)                       | [**Findnlsstring**](/windows/desktop/api/Winnls/nf-winnls-findnlsstring)                                                         |
-| [**Getcalendarinfoex**](/windows/desktop/api/Winnls/nf-winnls-getcalendarinfoex)                   | [**Getcalendarinfo**](/windows/desktop/api/Winnls/nf-winnls-getcalendarinfoa)                                                     |
-| [**GetCurrency cyformatex**](/windows/desktop/api/Winnls/nf-winnls-getcurrencyformatex)               | [**Gethappcyformat**](/windows/desktop/api/Winnls/nf-winnls-getcurrencyformata)                                                 |
+| [**CompareStringEx**](/windows/desktop/api/Stringapiset/nf-stringapiset-comparestringex)                       | [**CompareString**](/windows/win32/api/stringapiset/nf-stringapiset-comparestringw)                                                         |
+| [**EnumCalendarInfoExEx**](/windows/desktop/api/Winnls/nf-winnls-enumcalendarinfoexex)             | [**EnumCalendarInfo**](/windows/desktop/api/Winnls/nf-winnls-enumcalendarinfoa), [ **EnumCalendarInfoEx**](/windows/desktop/api/Winnls/nf-winnls-enumcalendarinfoexa) |
+| [**EnumDateFormatsExEx**](/windows/desktop/api/Winnls/nf-winnls-enumdateformatsexex)               | [**EnumDateFormats**](/windows/desktop/api/Winnls/nf-winnls-enumdateformatsa), [ **EnumDateFormatsEx**](/windows/desktop/api/Winnls/nf-winnls-enumdateformatsexa)     |
+| [**EnumSystemLocalesEx**](/windows/desktop/api/Winnls/nf-winnls-enumsystemlocalesex)               | [**EnumSystemLocales**](/windows/desktop/api/Winnls/nf-winnls-enumsystemlocalesa)                                                 |
+| [**EnumTimeFormatsEx**](/windows/desktop/api/Winnls/nf-winnls-enumtimeformatsex)                   | [**EnumTimeFormats**](/windows/desktop/api/Winnls/nf-winnls-enumtimeformatsa)                                                     |
+| [**FindNLSStringEx**](/windows/desktop/api/Winnls/nf-winnls-findnlsstringex)                       | [**FindNLSString**](/windows/desktop/api/Winnls/nf-winnls-findnlsstring)                                                         |
+| [**GetCalendarInfoEx**](/windows/desktop/api/Winnls/nf-winnls-getcalendarinfoex)                   | [**GetCalendarInfo**](/windows/desktop/api/Winnls/nf-winnls-getcalendarinfoa)                                                     |
+| [**GetCurrencyFormatEx**](/windows/desktop/api/Winnls/nf-winnls-getcurrencyformatex)               | [**GetCurrencyFormat**](/windows/desktop/api/Winnls/nf-winnls-getcurrencyformata)                                                 |
 | [**GetDateFormatEx**](/windows/desktop/api/datetimeapi/nf-datetimeapi-getdateformatex)                       | [**GetDateFormat**](/windows/desktop/api/datetimeapi/nf-datetimeapi-getdateformata)                                                         |
-| [**Getdurationformatex**](/windows/desktop/api/Winnls/nf-winnls-getdurationformatex)               | [**Getdurationformat**](/windows/desktop/api/Winnls/nf-winnls-getdurationformat)                                                 |
-| [**GetLocaleInfoEx**](/windows/desktop/api/Winnls/nf-winnls-getlocaleinfoex)                       | [**Getlocaleingefo**](/windows/desktop/api/Winnls/nf-winnls-getlocaleinfoa)                                                         |
-| [**GetNLSVersionEx**](/windows/desktop/api/Winnls/nf-winnls-getnlsversionex)                       | [**Getnlsversion**](/windows/desktop/api/Winnls/nf-winnls-getnlsversion)                                                         |
-| [**Getnumformatex**](/windows/desktop/api/Winnls/nf-winnls-getnumberformatex)                   | [**Getnumformat**](/windows/desktop/api/Winnls/nf-winnls-getnumberformata)                                                     |
-| [**Getsystemdefaultlocalename**](/windows/desktop/api/Winnls/nf-winnls-getsystemdefaultlocalename) | [**GetSystemDefaultLCID**](/windows/desktop/api/Winnls/nf-winnls-getsystemdefaultlcid)                                           |
-| [**Gettimeformatex**](/windows/desktop/api/datetimeapi/nf-datetimeapi-gettimeformatex)                       | [**GetTimeFormat**](/windows/desktop/api/datetimeapi/nf-datetimeapi-gettimeformata)                                                         |
-| [**Getuserdefaultlocalename**](/windows/desktop/api/Winnls/nf-winnls-getuserdefaultlocalename)     | [**GetUserDefaultLCID**](/windows/desktop/api/Winnls/nf-winnls-getuserdefaultlcid)                                               |
-| [**Isvalidlocalename**](/windows/desktop/api/Winnls/nf-winnls-isvalidlocalename)                   | [**Isvalidlocale**](/windows/desktop/api/Winnls/nf-winnls-isvalidlocale)                                                         |
-| [**Lcmapstringex**](/windows/desktop/api/Winnls/nf-winnls-lcmapstringex)                           | [**LCMapString**](/windows/desktop/api/Winnls/nf-winnls-lcmapstringa)                                                             |
+| [**GetDurationFormatEx**](/windows/desktop/api/Winnls/nf-winnls-getdurationformatex)               | [**GetDurationFormat**](/windows/desktop/api/Winnls/nf-winnls-getdurationformat)                                                 |
+| [**GetLocaleInfoEx**](/windows/desktop/api/Winnls/nf-winnls-getlocaleinfoex)                       | [**GetLocaleInfo**](/windows/desktop/api/Winnls/nf-winnls-getlocaleinfoa)                                                         |
+| [**GetNLSVersionEx**](/windows/desktop/api/Winnls/nf-winnls-getnlsversionex)                       | [**GetNLSVersion**](/windows/desktop/api/Winnls/nf-winnls-getnlsversion)                                                         |
+| [**GetNumberFormatEx**](/windows/desktop/api/Winnls/nf-winnls-getnumberformatex)                   | [**GetNumberFormat**](/windows/desktop/api/Winnls/nf-winnls-getnumberformata)                                                     |
+| [**GetSystemDefaultLocaleName**](/windows/desktop/api/Winnls/nf-winnls-getsystemdefaultlocalename) | [**GetSystemDefaultLCID**](/windows/desktop/api/Winnls/nf-winnls-getsystemdefaultlcid)                                           |
+| [**GetTimeFormatEx**](/windows/desktop/api/datetimeapi/nf-datetimeapi-gettimeformatex)                       | [**GetTimeFormat**](/windows/desktop/api/datetimeapi/nf-datetimeapi-gettimeformata)                                                         |
+| [**GetUserDefaultLocaleName**](/windows/desktop/api/Winnls/nf-winnls-getuserdefaultlocalename)     | [**GetUserDefaultLCID**](/windows/desktop/api/Winnls/nf-winnls-getuserdefaultlcid)                                               |
+| [**IsValidLocaleName**](/windows/desktop/api/Winnls/nf-winnls-isvalidlocalename)                   | [**IsValidLocale**](/windows/desktop/api/Winnls/nf-winnls-isvalidlocale)                                                         |
+| [**LCMapStringEx**](/windows/desktop/api/Winnls/nf-winnls-lcmapstringex)                           | [**LCMapString**](/windows/desktop/api/Winnls/nf-winnls-lcmapstringa)                                                             |
 
 
 
@@ -51,13 +51,13 @@ In der folgenden Tabelle werden die Funktionen für den Gebiets Schema Namen zus
 
 ## <a name="example"></a>Beispiel
 
-Ein Beispiel für die Verwendung mehrerer Funktionen, die auf Gebiets Schema Namen basieren, finden Sie im [Beispiel nls: Name-based APIs](nls--name-based-apis-sample.md).
+Ein Beispiel für die Verwendung mehrerer Funktionen, die auf Den namen des Lokalen basieren, finden Sie unter [NLS: Name-based APIs Sample](nls--name-based-apis-sample.md)(Beispiel für namensbasierte APIs).
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
 <dl> <dt>
 
-[Verwenden der Unterstützung für nationale Sprache](using-national-language-support.md)
+[Verwenden der Unterstützung der Landessprache](using-national-language-support.md)
 </dt> </dl>
 
  

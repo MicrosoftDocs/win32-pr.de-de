@@ -15,13 +15,13 @@ ms.locfileid: "118325969"
 
 ## <a name="text"></a>Text
 
-Die Struktur ist {0} ebenen tief.
+Die Struktur ist {0} ebenentiefe.
 
-## <a name="type"></a>type
+## <a name="type"></a>Typ
 
 Informational
 
-## <a name="description"></a>BESCHREIBUNG
+## <a name="description"></a>Beschreibung
 
 Die Tiefe der Elementstruktur für das Überprüfungsziel.
 
@@ -32,7 +32,7 @@ Die Tiefe der Elementstruktur für das Überprüfungsziel.
 [Richtlinien zur Gestaltung einer tastaturgesteuerten Benutzeroberfläche](/previous-versions/windows/desktop/dnacc/guidelines-for-keyboard-user-interface-design)
 </dt> <dt>
 
-[Windows Richtlinien für die Benutzererfahrungsinteraktion – Tastatur](https://msdn.microsoft.com/library/bb545460.aspx#guidelines)
+[Windows Richtlinien für die Interaktion mit der Benutzeroberfläche – Tastatur](https://msdn.microsoft.com/library/bb545460.aspx#guidelines)
 </dt> </dl>
 
  

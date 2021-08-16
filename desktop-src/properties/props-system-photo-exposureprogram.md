@@ -1,5 +1,5 @@
 ---
-description: Der Exposure Program-Modus der Kamera zum Zeitpunkt der Aufnahme des Fotos, wie aus den ExIF-Informationen (Exchangeable Image File) gelesen.
+description: Der Belichtungsprogrammmodus der Kamera zum Zeitpunkt der Aufnahme des Fotos, wie aus den EXIF-Informationen (Exchangeable Image File) gelesen.
 ms.assetid: d27003b4-f30a-4c48-b32f-933b2f29182a
 title: System.Photo.ExposureProgram
 ms.topic: article
@@ -13,7 +13,7 @@ ms.locfileid: "118229975"
 ---
 # <a name="systemphotoexposureprogram"></a>System.Photo.ExposureProgram
 
-Der Exposure Program-Modus der Kamera zum Zeitpunkt der Aufnahme des Fotos, wie aus den ExIF-Informationen (Exchangeable Image File) gelesen.
+Der Belichtungsprogrammmodus der Kamera zum Zeitpunkt der Aufnahme des Fotos, wie aus den EXIF-Informationen (Exchangeable Image File) gelesen.
 
 ## <a name="windows-10-version-1703-windows-10-version-1607-windows-10-version-1511-windows-10-version-1507-windows-81-windows-8-windows-7"></a>Windows 10, Version 1703, Windows 10, Version 1607, Windows 10, Version 1511, Windows 10, Version 1507, Windows 8.1, Windows 8, Windows 7
 

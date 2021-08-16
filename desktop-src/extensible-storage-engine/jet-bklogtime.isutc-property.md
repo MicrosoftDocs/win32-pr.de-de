@@ -1,6 +1,6 @@
 ---
-description: 'Weitere Informationen finden Sie hier: JET_BKLOGTIME. Isutc-Eigenschaft'
-title: JET_BKLOGTIME. Isutc-Eigenschaft
+description: 'Weitere Informationen finden Sie unter: JET_BKLOGTIME. IsUtc-Eigenschaft'
+title: JET_BKLOGTIME. IsUtc-Eigenschaft
 TOCTitle: 'IsUtc property '
 ms:assetid: P:Microsoft.Isam.Esent.Interop.JET_BKLOGTIME.IsUtc
 ms:mtpsurl: https://msdn.microsoft.com/library/microsoft.isam.esent.interop.jet_bklogtime.isutc(v=EXCHG.10)
@@ -25,19 +25,19 @@ api_type:
 api_location:
 - Microsoft.Isam.Esent.Interop.dll
 ROBOTS: INDEX,FOLLOW
-ms.openlocfilehash: 414caa48ddfdd492389f63739bfbf23bfc7d1f4e
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 03631ae43c65d2bfc8e5afc7b18b9654d122709d5eb2e67e060990579a158f5c
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "103866852"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118487603"
 ---
-# <a name="jet_bklogtimeisutc-property"></a>JET_BKLOGTIME. Isutc-Eigenschaft
+# <a name="jet_bklogtimeisutc-property"></a>JET_BKLOGTIME. IsUtc-Eigenschaft
 
-Ruft einen Wert ab, der angibt, ob die JET_BKLOGTIME in UTC ist.
+Ruft einen Wert ab, der angibt, ob JET_BKLOGTIME utc ist.
 
-**Namespace:**  [Microsoft. ISAM. ESENT. Interop](./microsoft.isam.esent.interop-namespace.md)  
-**Assembly:**  Microsoft. ISAM. ESENT. Interop (in Microsoft.Isam.Esent.Interop.dll)
+**Namespace:**  [Microsoft.Isam.Esent.Interop](./microsoft.isam.esent.interop-namespace.md)  
+**Assembly:**  Microsoft.Isam.Esent.Interop (in Microsoft.Isam.Esent.Interop.dll)
 
 ## <a name="syntax"></a>Syntax
 
@@ -58,14 +58,14 @@ public bool IsUtc { get; }
 
 #### <a name="property-value"></a>Eigenschaftswert
 
-Typ: [System. Boolean](/dotnet/api/system.boolean)  
+Typ: [System.Boolean](/dotnet/api/system.boolean)  
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
-#### <a name="reference"></a>Referenz
+#### <a name="reference"></a>Verweis
 
-[JET_BKLOGTIME Struktur](./jet-bklogtime-structure2.md)
+[JET_BKLOGTIME-Struktur](./jet-bklogtime-structure2.md)
 
-[Mitglieder JET_BKLOGTIME](./jet-bklogtime-members.md)
+[JET_BKLOGTIME Member](./jet-bklogtime-members.md)
 
-[Microsoft. ISAM. ESENT. Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)
+[Microsoft.Isam.Esent.Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)

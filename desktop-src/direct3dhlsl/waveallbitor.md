@@ -1,6 +1,6 @@
 ---
 title: WaveActiveBitOr-Funktion
-description: Gibt das bitweise OR aller Werte des Ausdrucks auf allen aktiven Spuren in der aktuellen Welle zurück und repliziert es zurück an alle aktiven Lanes.
+description: Gibt das bitweise OR aller Werte des Ausdrucks über alle aktiven Lanes in der aktuellen Welle zurück und repliziert sie wieder auf alle aktiven Lanes.
 ms.assetid: FC8E5987-DAA7-41E6-A1AB-AA0E6A82CFC7
 keywords:
 - WaveActiveBitOr-Funktion HLSL
@@ -22,7 +22,7 @@ ms.locfileid: "118504890"
 ---
 # <a name="waveactivebitor-function"></a>WaveActiveBitOr-Funktion
 
-Gibt das bitweise OR aller Werte des Ausdrucks auf allen aktiven Spuren in der aktuellen Welle zurück und repliziert es zurück an alle aktiven Lanes.
+Gibt das bitweise OR aller Werte des Ausdrucks über alle aktiven Lanes in der aktuellen Welle zurück und repliziert sie wieder auf alle aktiven Lanes.
 
 ## <a name="syntax"></a>Syntax
 
@@ -49,7 +49,7 @@ Der bitweise OR-Wert.
 
 ## <a name="remarks"></a>Hinweise
 
-Diese Funktion wird von Shadermodell 6.0 in allen Shaderstufen unterstützt. 
+Diese Funktion wird vom Shadermodell 6.0 in allen Shaderstufen unterstützt. 
 
 
 

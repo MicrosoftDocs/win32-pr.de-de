@@ -5,7 +5,7 @@ ms.assetid: 768a5a4e-8221-417a-ad65-9a213a176eca
 ms.tgt_platform: multiple
 keywords:
 - ITsSbResourcePluginStoreEx-Remotedesktopdienste
-- ITsSbResourcePluginStoreEx-Schnittstelle Remotedesktopdienste , beschrieben
+- ITsSbResourcePluginStoreEx-Schnittstelle Remotedesktopdienste beschrieben
 topic_type:
 - apiref
 api_name:
@@ -24,7 +24,7 @@ ms.locfileid: "118351291"
 ---
 # <a name="itssbresourcepluginstoreex-interface"></a>ITsSbResourcePluginStoreEx-Schnittstelle
 
-Macht Methoden verfügbar, mit denen Ressourcen-Plug-Ins Objekte wie Sitzungen und Ziele speichern können. Diese Methoden fügen diese Objekte hinzu, löschen und fragen sie ab.
+Macht Methoden verfügbar, mit denen Ressourcen-Plug-Ins Objekte wie Sitzungen und Ziele speichern können. Diese Methoden fügen diese Objekte hinzu, löschen sie und fragen sie ab.
 
 Diese Schnittstelle ist nur auf Windows Server 2012 R2 mit [installierter KB3091411](https://support.microsoft.com/kb/3091411) verfügbar. Die [**AcquireTargetLock-**](/windows/desktop/api/sbtsv/nf-sbtsv-itssbresourcepluginstore-acquiretargetlock) [**und ReleaseTargetLock-Methoden**](/windows/desktop/api/sbtsv/nf-sbtsv-itssbresourcepluginstore-releasetargetlock) der [**ITsSbResourcePluginStore-Schnittstelle**](/windows/desktop/api/sbtsv/nn-sbtsv-itssbresourcepluginstore) sind ab Windows Server 2016.
 

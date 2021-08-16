@@ -1,11 +1,11 @@
 ---
-title: IMsRdpClientAdvancedSettings-TransportType-Eigenschaft
+title: IMsRdpClientAdvancedSettings TransportType-Eigenschaft
 description: Gibt den vom Client verwendeten Transporttyp an.
 ms.assetid: 752f5fbc-eb5a-48eb-8750-fc25c8a2f024
 ms.tgt_platform: multiple
 keywords:
-- TransportType-Remotedesktopdienste
-- TransportType-Remotedesktopdienste , IMsRdpClientAdvancedSettings-Schnittstelle
+- TransportType-Eigenschaft Remotedesktopdienste
+- TransportType-Eigenschaft Remotedesktopdienste , IMsRdpClientAdvancedSettings-Schnittstelle
 - IMsRdpClientAdvancedSettings-Schnittstelle Remotedesktopdienste , TransportType-Eigenschaft
 topic_type:
 - apiref
@@ -26,9 +26,9 @@ ms.contentlocale: de-DE
 ms.lasthandoff: 08/11/2021
 ms.locfileid: "118352975"
 ---
-# <a name="imsrdpclientadvancedsettingstransporttype-property"></a>IMsRdpClientAdvancedSettings::TransportType (Eigenschaft)
+# <a name="imsrdpclientadvancedsettingstransporttype-property"></a>IMsRdpClientAdvancedSettings::TransportType-Eigenschaft
 
-Gibt den vom Client verwendeten Transporttyp an. Diese Eigenschaft wird nicht vom -Steuerelement Remotedesktop ActiveX verwendet.
+Gibt den vom Client verwendeten Transporttyp an. Diese Eigenschaft wird vom Remotedesktop ActiveX-Steuerelement nicht verwendet.
 
 Dies ist eine Eigenschaft mit Lese- und Schreibzugriff.
 
@@ -49,11 +49,11 @@ HRESULT get_TransportType(
 
 ## <a name="property-value"></a>Eigenschaftswert
 
-Legt den Transporttyp fest. Diese Methode kann erfolgreich sein, aber der Wertsatz wird nie vom Remotedesktop ActiveX verwendet.
+Legt den Transporttyp fest. Diese Methode kann erfolgreich sein, aber der festgelegte Wert wird nie vom Remotedesktop ActiveX-Steuerelement verwendet.
 
 ## <a name="remarks"></a>Hinweise
 
-Weitere Informationen zu Remotedesktop-Webverbindung finden Sie unter [Requirements for Remotedesktop-Webverbindung](requirements-for-remote-desktop-web-connection.md).
+Weitere Informationen zu Remotedesktop-Webverbindung finden Sie unter [Anforderungen für Remotedesktop-Webverbindung](requirements-for-remote-desktop-web-connection.md).
 
 ## <a name="requirements"></a>Anforderungen
 

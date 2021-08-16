@@ -1,33 +1,33 @@
 ---
-description: Dieser Artikel enthält Häufigkeitstabellen für die internationale analoge TV-Optimierung für Irland. Häufigkeitsindizes sind für Kanalnummern nicht geeignet.
+description: Dieser Artikel enthält Häufigkeitstabellen für die internationale analoge TV-Optimierung für Irland. Häufigkeitsindizes eignen sich nicht für Kanalnummern.
 ms.assetid: be60ca37-9f3a-44cd-8646-28fcbda5e79e
 title: Irland
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: b004a811a59a6e2556cdd4187728e5842bea1a46
-ms.sourcegitcommit: 51ef825fb48f15e1aa30e8795988f10dc2b2155c
+ms.openlocfilehash: 40b8335c2ac38555996d76713b70ce369710724e7e5b7fd827a0769abf0ddedb
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/14/2021
-ms.locfileid: "112068156"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117818599"
 ---
 # <a name="ireland"></a>Irland
 
-Eine Erläuterung der folgenden Tabellen finden Sie unter [Tabellen und Zuweisungen](tables-and-assignments.md).
+Eine Erläuterung der folgenden Tabellen finden Sie unter [Tabellen und Zuweisungen.](tables-and-assignments.md)
 
 Die Häufigkeitsindizes in den Tabellen "Irland" sind nicht für die Verwendung als Kanalnummern geeignet.
 
 -   [Windows 7 und höher](#windows-7-and-later)
-    -   [Broadcastzuweisungen in Irland](#ireland-broadcast-assignments)
+    -   [Zuweisungen von Broadcasts in Irland](#ireland-broadcast-assignments)
     -   [Kabelzuweisungen in Irland](#ireland-cable-assignments)
 -   [Frühere Kanalzuweisungen](#earlier-channel-assignments)
-    -   [Broadcastzuweisungen in Irland](#ireland-broadcast-assignments)
+    -   [Zuweisungen von Broadcasts in Irland](#ireland-broadcast-assignments)
     -   [Kabelzuweisungen in Irland](#ireland-cable-assignments)
--   [Verwandte Themen](#related-topics)
+-   [Zugehörige Themen](#related-topics)
 
 ## <a name="windows-7-and-later"></a>Windows 7 und höher
 
-### <a name="ireland-broadcast-assignments"></a>Broadcastzuweisungen in Irland
+### <a name="ireland-broadcast-assignments"></a>Zuweisungen von Broadcasts in Irland
 
 ``` syntax
         1L,             // Lowest channel
@@ -164,7 +164,7 @@ Die Häufigkeitsindizes in den Tabellen "Irland" sind nicht für die Verwendung 
 
 ## <a name="earlier-channel-assignments"></a>Frühere Kanalzuweisungen
 
-### <a name="ireland-broadcast-assignments"></a>Broadcastzuweisungen in Irland
+### <a name="ireland-broadcast-assignments"></a>Zuweisungen von Broadcasts in Irland
 
 ``` syntax
         1L,             // Lowest channel

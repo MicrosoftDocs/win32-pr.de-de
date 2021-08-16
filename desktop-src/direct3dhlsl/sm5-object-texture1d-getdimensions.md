@@ -1,6 +1,6 @@
 ---
-title: 'Texture1D:: GetDimensions-Funktion'
-description: 'Gibt die Dimensionen der Ressource zurück. | Texture1D:: GetDimensions-Funktion'
+title: Texture1D::GetDimensions-Funktion
+description: Gibt die Dimensionen der Ressource zurück. | Texture1D::GetDimensions-Funktion
 ms.assetid: eb8fc02f-01c8-44b9-9d7e-faf59660c287
 keywords:
 - GetDimensions-Funktion HLSL
@@ -13,14 +13,14 @@ api_type:
 ms.topic: reference
 ms.date: 05/31/2018
 api_location: ''
-ms.openlocfilehash: fdd9b79a1cc1fa2a5a8db3e0db7a7163878b066b
-ms.sourcegitcommit: 92e74c99f8f4d097676959d0c317f533c2400a80
-ms.translationtype: HT
+ms.openlocfilehash: 1cca266d5e921d4f8071123d7b6be8b142ff83b06e2efebbe16fb5970555eaf0
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/09/2021
-ms.locfileid: "104530707"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118508696"
 ---
-# <a name="texture1dgetdimensions-function"></a>Texture1D:: GetDimensions-Funktion
+# <a name="texture1dgetdimensions-function"></a>Texture1D::GetDimensions-Funktion
 
 Gibt die Dimensionen der Ressource zurück.
 
@@ -38,30 +38,30 @@ void GetDimensions(
 
 <dl> <dt>
 
-*Miplevel* \[ in\]
+*MipLevel* \[ In\]
 </dt> <dd>
 
-Typ: **[ **uint**](/windows/desktop/WinProg/windows-data-types)**
+Typ: **[ **UINT**](/windows/desktop/WinProg/windows-data-types)**
 
-Optional. MipMap-Ebene (muss angegeben werden, wenn " *numoflevels* " verwendet wird).
+Optional. Mipmap-Ebene (muss angegeben werden, wenn *NumberOfLevels* verwendet wird).
 
 </dd> <dt>
 
-*Breite* \[ vorgenommen\]
+*Breite* \[ out\]
 </dt> <dd>
 
-Typ: **[ **uint**](/windows/desktop/WinProg/windows-data-types)**
+Typ: **[ **UINT**](/windows/desktop/WinProg/windows-data-types)**
 
-Die Ressourcen Breite in Texels.
+Die Ressourcenbreite in Texeln.
 
 </dd> <dt>
 
-*Nummerige* \[ vorgenommen\]
+*NumberOfLevels* \[ out\]
 </dt> <dd>
 
-Typ: **[ **uint**](/windows/desktop/WinProg/windows-data-types)**
+Typ: **[ **UINT**](/windows/desktop/WinProg/windows-data-types)**
 
-Die Anzahl von MipMap-Ebenen (erfordert auch *miplevel* ).
+Die Anzahl der Mipmap-Ebenen (erfordert *auch MipLevel).*
 
 </dd> </dl>
 
@@ -69,7 +69,7 @@ Die Anzahl von MipMap-Ebenen (erfordert auch *miplevel* ).
 
 Diese Funktion gibt keinen Wert zurück.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
 Dies ist eine Liste der überladenen Versionen dieser Methode.
 
@@ -90,11 +90,11 @@ void GetDimensions(out float Width);
 
 
 
-Diese Funktion wird für die folgenden Typen von Shadern unterstützt:
+Diese Funktion wird für die folgenden Shadertypen unterstützt:
 
 
 
-| Scheitelpunkt | Hülle | Domain | Geometrie | Pixel | Compute |
+| Scheitelpunkt | Rumpf | Domain | Geometrie | Pixel | Compute |
 |--------|------|--------|----------|-------|---------|
 |        |      |        |          | x     | x       |
 
@@ -109,7 +109,7 @@ Diese Funktion wird für die folgenden Typen von Shadern unterstützt:
 [Texture1D](sm5-object-texture1d.md)
 </dt> <dt>
 
-[Shader-Modell 5](d3d11-graphics-reference-sm5.md)
+[Shadermodell 5](d3d11-graphics-reference-sm5.md)
 </dt> </dl>
 
  

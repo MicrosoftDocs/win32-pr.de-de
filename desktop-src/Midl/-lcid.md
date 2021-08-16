@@ -1,9 +1,9 @@
 ---
-title: /LCID-Schalter
-description: Mit der/LCID-Compileroption können Sie internationale Zeichen in ihren Eingabedateien, Dateinamen und Verzeichnis Pfaden verwenden.
+title: Schalter "/lcid"
+description: Mit der Compileroption /lcid MIDL können Sie internationale Zeichen in Ihren Eingabedateien, Dateinamen und Verzeichnispfaden verwenden.
 ms.assetid: 2ab4ba67-4414-4889-8ed7-83f4888caf8b
 keywords:
-- /LCID-Schalter-Mittel l
+- /lcid switch MIDL
 topic_type:
 - apiref
 api_name:
@@ -12,58 +12,58 @@ api_type:
 - NA
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 370548bb9899ce84173f2321a129aaeda1c6fe81
-ms.sourcegitcommit: 57758ecb246c84d65e6e0e4bd5570d9176fa39cd
+ms.openlocfilehash: b5ceff1f9a4ef2f6c95a8dac12ff689995efe4fdd3619cf48e11043967fec053
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "104312948"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118385513"
 ---
-# <a name="lcid-switch"></a>/LCID-Schalter
+# <a name="lcid-switch"></a>Schalter "/lcid"
 
-Mit der **/LCID** -Compileroption können Sie internationale Zeichen in ihren Eingabedateien, Dateinamen und Verzeichnis Pfaden verwenden.
+Mit **der Compileroption /lcid** MIDL können Sie internationale Zeichen in Ihren Eingabedateien, Dateinamen und Verzeichnispfaden verwenden.
 
 ``` syntax
 midl /lcid localeID
 ```
 
-## <a name="switch-options"></a>Optionen wechseln
+## <a name="switch-options"></a>Switch-Optionen
 
 <dl> <dt>
 
-*LocaleID* 
+*Localeid* 
 </dt> <dd>
 
-Gibt den 32-Bit-Gebiets Schema Bezeichner an, der in der Unterstützung von Windows- Der Gebiets Schema Bezeichner sollte in Dezimalzahlen angegeben werden.
+Gibt den 32-Bit-Locale Identifier an, der in Windows National Language Support verwendet wird. Der Locale Identifier muss in decimal angegeben werden.
 
 </dd> </dl>
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-In den Eingabedateien können Sie lokalisierte Kommentare, Zeichen folgen, helpstrings und Bezeichner verwenden. Der **/LCID** -Schalter bietet insbesondere vollständige DBCS-Unterstützung, um asiatische Sprachen wie Japanisch, Chinesisch und Koreanisch darzustellen.
+Innerhalb der Eingabedateien können Sie lokalisierte Kommentare, Zeichenfolgen, Hilfezeichenfolgen und Bezeichner verwenden. Insbesondere der Schalter **/lcid** bietet vollständige DBCS-Unterstützung für die Darstellung von chinesischen Sprachen wie Japanisch, Chinesisch und Koreanisch.
 
 > [!Note]  
-> Der **/LCID** -Schalter ist mit der mittleren l-Version 3.01.75 und höher verfügbar.
+> Der **Schalter /lcid** ist ab MIDL-Version 3.01.75 verfügbar.
 
- 
+ 
 
 ## <a name="examples"></a>Beispiele
 
-**Mittel l/LCID 1041 iface. idl**
+**midl /lcid 1041 iface.idl**
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[Allgemeine Syntax der Mittell-Befehlszeile](general-midl-command-line-syntax.md)
+[Allgemeine MIDL-Befehlszeilensyntax](general-midl-command-line-syntax.md)
 </dt> <dt>
 
-[**LCID**](lcid.md)
+[**Lcid**](lcid.md)
 </dt> </dl>
 
- 
+ 
 
- 
+ 
 
 
 
