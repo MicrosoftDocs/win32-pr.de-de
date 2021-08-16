@@ -1,9 +1,9 @@
 ---
-title: onmouout
-description: Der onmouabout-Ereignishandler behandelt ein Ereignis, das auftritt, wenn der Benutzer den Mauszeiger vom Element bewegt.
+title: Onmouseout
+description: Der onmouseout-Ereignishandler behandelt ein Ereignis, das auftritt, wenn der Benutzer den Zeiger aus dem Element verschiebt.
 ms.assetid: 8d4c5aec-0d4e-4912-a5e6-9aa1cf3e0971
 keywords:
-- onmousout-Windows-Media Player
+- onmouseout Windows Media Player
 topic_type:
 - apiref
 api_name:
@@ -13,24 +13,24 @@ api_type:
 ms.topic: reference
 ms.date: 05/31/2018
 api_location: ''
-ms.openlocfilehash: 172865ad8a6255ff18d52369058ecb9bdbbeb09a
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 7b14b055d99781423f5a9961ccb49f9b60380289d22ad53ab4d8aab975be2656
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106364635"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119616730"
 ---
-# <a name="onmouseout"></a>onmouout
+# <a name="onmouseout"></a>Onmouseout
 
-Der **onmouabout** -Ereignishandler behandelt ein Ereignis, das auftritt, wenn der Benutzer den Mauszeiger vom Element bewegt.
+Der **onmouseout-Ereignishandler** behandelt ein Ereignis, das auftritt, wenn der Benutzer den Zeiger aus dem Element verschiebt.
 
 ``` syntax
 onmouseout
 ```
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Dieser Ereignishandler ist für das **Wiedergabe** Listenelement nicht anwendbar.
+Dieser Ereignishandler gilt nicht für das **PLAYLIST-Element.**
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -38,11 +38,11 @@ Dieser Ereignishandler ist für das **Wiedergabe** Listenelement nicht anwendbar
 
 | Anforderung | Wert |
 |--------------------|-----------------------------------------------------|
-| Version<br/> | Windows Media Player, Version 70 oder höher<br/> |
+| Version<br/> | Windows Media Player Version 70 oder höher<br/> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 

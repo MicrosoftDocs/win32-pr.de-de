@@ -1,5 +1,5 @@
 ---
-description: Gibt an, ob das Laufwerk für den Speicher portierbar ist.
+description: Gibt an, ob das Laufwerk für den Speicher portabel ist.
 ms.assetid: d9ac5df6-9f25-4f11-a7fd-63cdc0060d8b
 title: System. Storage. Tragbar
 ms.topic: article
@@ -13,7 +13,7 @@ ms.locfileid: "119598120"
 ---
 # <a name="systemstorageportable"></a>System. Storage. Tragbar
 
-Gibt an, ob das Laufwerk für den Speicher portierbar ist.
+Gibt an, ob das Laufwerk für den Speicher portabel ist.
 
 ## <a name="windows-10-version-1703-windows-10-version-1607-windows-10-version-1511-windows-10-version-1507-windows-81-windows-8"></a>Windows 10, Version 1703, Windows 10, Version 1607, Windows 10, Version 1511, Windows 10, Version 1507, Windows 8.1, Windows 8
 

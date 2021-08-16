@@ -1,5 +1,5 @@
 ---
-description: Anwendungen ordnen jeder Textur in der Gruppe der aktuellen Texturen eine Mischungsphase zu. Direct3D wertet jede Mischungsphase in der Reihenfolge aus, beginnend mit der ersten Textur in der Menge und endet mit der achten.
+description: Anwendungen ordnen jeder Textur im Satz der aktuellen Texturen eine Mischungsphase zu. Direct3D wertet jede Mischungsphase in der reihenfolge aus, beginnend mit der ersten Textur im Satz und endend mit der achten.
 ms.assetid: 3b7faefd-30be-4f74-b0f7-621d65130286
 title: Texturmischungsvorgänge und -argumente (Direct3D 9)
 ms.topic: article
@@ -13,14 +13,14 @@ ms.locfileid: "118797772"
 ---
 # <a name="texture-blending-operations-and-arguments-direct3d-9"></a>Texturmischungsvorgänge und -argumente (Direct3D 9)
 
-Anwendungen ordnen jeder Textur in der Gruppe der aktuellen Texturen eine Mischungsphase zu. Direct3D wertet jede Mischungsphase in der Reihenfolge aus, beginnend mit der ersten Textur in der Menge und endet mit der achten.
+Anwendungen ordnen jeder Textur im Satz der aktuellen Texturen eine Mischungsphase zu. Direct3D wertet jede Mischungsphase in der reihenfolge aus, beginnend mit der ersten Textur im Satz und endend mit der achten.
 
-Direct3D wendet die Informationen aus jeder Textur in der Gruppe der aktuellen Texturen auf die zugehörige Mischungsphase an. Anwendungen steuern, welche Informationen aus einer Texturphase verwendet werden, indem [**sie IDirect3DDevice9::SetTextureStageState aufrufen.**](/windows/desktop/api) Sie können separate Vorgänge für die Farb- und Alphakanäle festlegen, und jeder Vorgang verwendet zwei Argumente. Geben Sie Farbkanalvorgänge mithilfe des D3DTSS COLOROP-Phasenstatus an, und geben Sie \_ Alphavorgänge mithilfe von D3DTSS \_ ALPHAOP an. In beiden Phasenzuständen werden Werte des [**aufzählten D3DTEXTUREOP-Typs**](./d3dtextureop.md) verwendet.
+Direct3D wendet die Informationen aus jeder Textur im Satz der aktuellen Texturen auf die Füllphase an, die ihr zugeordnet ist. Anwendungen steuern, welche Informationen aus einer Texturphase durch Aufrufen von [**IDirect3DDevice9::SetTextureStageState**](/windows/desktop/api)verwendet werden. Sie können separate Vorgänge für die Farb- und Alphakanäle festlegen, und jeder Vorgang verwendet zwei Argumente. Angeben von Farbkanalvorgängen mithilfe des D3DTSS \_ COLOROP-Phasenzustands; Angeben von Alphavorgängen mithilfe von D3DTSS \_ ALPHAOP. Beide Phasenzustände verwenden Werte aus dem [**D3DTEXTUREOP-Enumerationstyp.**](./d3dtextureop.md)
 
-Texturmischungsargumente verwenden die D3DTSS-Member \_ COLORARG1, D3DTSS \_ COLORARG2, D3DTSS \_ ALPHARG1 und D3DTSS \_ ALPHARG2 des aufzählten [**D3DTEXTURESTAGESTATETYPE-Typs.**](./d3dtexturestagestatetype.md) Die entsprechenden Argumentwerte werden mithilfe von [D3DTA identifiziert.](d3dta.md)
+Texturmischungsargumente verwenden die Member D3DTSS \_ COLORARG1, D3DTSS \_ COLORARG2, D3DTSS \_ ALPHARG1 und D3DTSS \_ ALPHARG2 des [**D3DTEXTURESTAGESTATETYPE-Enumerationstyps.**](./d3dtexturestagestatetype.md) Die entsprechenden Argumentwerte werden mithilfe von [D3DTA](d3dta.md)identifiziert.
 
 > [!Note]  
-> Sie können eine Texturphase und alle nachfolgenden Texturmischungsphasen in der Kaskadierung deaktivieren, indem Sie den Farbvorgang für diese Phase auf D3DTOP \_ DISABLE festlegen. Wenn Sie den Farbvorgang deaktivieren, wird auch der Alphavorgang deaktiviert. Alphavorgänge können nicht deaktiviert werden, wenn Farbvorgänge aktiviert sind. Das Festlegen des Alpha-Vorgangs auf D3DTOP DISABLE, wenn Farbblending aktiviert ist, führt zu \_ nicht definiertem Verhalten.
+> Sie können eine Texturphase und alle nachfolgenden Texturmischungsstufen in der Kaskadierung deaktivieren, indem Sie den Farbvorgang für diese Phase auf D3DTOP \_ DISABLE festlegen. Wenn Sie den Farbvorgang deaktivieren, wird auch der Alphavorgang deaktiviert. Alphavorgänge können nicht deaktiviert werden, wenn Farbvorgänge aktiviert sind. Das Festlegen des Alphavorgangs auf D3DTOP \_ DISABLE bei aktivierter Farbmischung führt zu nicht definiertem Verhalten.
 
  
 

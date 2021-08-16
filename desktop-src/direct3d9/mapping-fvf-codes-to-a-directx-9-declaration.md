@@ -1,5 +1,5 @@
 ---
-description: In dieser Tabelle werden FVF-Codes einer D3DVERTEXELEMENT9-Struktur zugeordnet.
+description: Diese Tabelle ordnet FVF-Codes einer D3DVERTEXELEMENT9-Struktur zu.
 ms.assetid: de865481-2a08-4d25-967c-8e68b7affe8d
 title: Zuordnen von FVF-Codes zu einer Direct3D 9-Deklaration (Direct3D 9)
 ms.topic: article
@@ -13,7 +13,7 @@ ms.locfileid: "118799076"
 ---
 # <a name="mapping-fvf-codes-to-a-direct3d-9-declaration-direct3d-9"></a>Zuordnen von FVF-Codes zu einer Direct3D 9-Deklaration (Direct3D 9)
 
-In dieser Tabelle werden FVF-Codes einer [**D3DVERTEXELEMENT9-Struktur**](d3dvertexelement9.md) zugeordnet.
+Diese Tabelle ordnet FVF-Codes einer [**D3DVERTEXELEMENT9-Struktur**](d3dvertexelement9.md) zu.
 
 
 
@@ -38,49 +38,49 @@ In dieser Tabelle werden FVF-Codes einer [**D3DVERTEXELEMENT9-Struktur**](d3dver
 
  
 
-## <a name="vertex-declarations-with-d3ddeclusage_positiont"></a>Vertexdeklarationen mit D3DDECLUSAGE \_ POSITIONT
+## <a name="vertex-declarations-with-d3ddeclusage_positiont"></a>Scheitelpunktdeklarationen mit D3DDECLUSAGE \_ POSITIONT
 
-Das Vorhandensein eines Scheitelpunktelements mit (D3DUSAGE \_ POSITIONT, 0) wird verwendet, um dem Gerät anzugeben, dass die eingehenden Scheitelpunktdaten bereits die Vertexverarbeitung durchlaufen haben (z. B. eine FVF mit D3DFVF \_ XYZRHW-Bitsatz). Wenn die derzeit festgelegte Deklaration zur Zeichnenzeit über ein Element mit der Semantik (D3DUSAGE \_ POSITIONT, 0) verfügt, wird die gesamte Scheitelpunktverarbeitung übersprungen (so als ob eine FVF mit D3DFVF \_ XYZRHW-Bit festgelegt worden wäre).
+Das Vorhandensein eines Scheitelpunktelements mit (D3DUSAGE POSITIONT, 0) wird verwendet, um dem Gerät anzugeben, dass die einkommenden Scheitelpunktdaten bereits eine Scheitelpunktverarbeitung (z. B. eine \_ FVF mit D3DFVF XYZRHW-Bitsatz) verarbeitet \_ haben. Wenn die derzeit festgelegte Deklaration zur Zeichnen-Zeit ein Element mit der Semantik (D3DUSAGE POSITIONT, 0) auf hat, wird die gesamte Vertexverarbeitung übersprungen (so, als ob eine \_ FVF mit D3DFVF \_ XYZRHW-Bit festgelegt wurde).
 
 Es gibt einige Einschränkungen für Scheitelpunktdeklarationen mit (D3DDECLUSAGE \_ POSITIONT, 0):
 
--   In solchen Deklarationen kann nur Stream 0 (null) verwendet werden.
--   Vertexelemente müssen durch Erhöhen des Datenstromoffsets sortiert werden.
--   Der Streamoffset muss an DWORD ausgerichtet sein.
+-   In solchen Deklarationen kann nur der Stream 0 (null) verwendet werden.
+-   Scheitelpunktelemente müssen durch Erhöhen des Streamoffsets sortiert werden.
+-   Der Streamoffset muss DWORD-ausgerichtet sein.
 -   Das gleiche Paar (Nutzung, Nutzungsindex) sollte nur einmal aufgeführt werden.
 -   Nur die D3DDECLMETHOD \_ DEFAULT-Methode kann verwendet werden.
--   Andere Scheitelpunktelemente können nicht über die Semantik (D3DDECLUSAGE \_ POSITION, 0) verfügen.
+-   Andere Vertexelemente können nicht die Semantik (D3DDECLUSAGE \_ POSITION, 0) haben.
 
-Darüber hinaus gibt es einige Einschränkungen für eine solche Deklaration im Zusammenhang mit der Gerätetreiberversion. Diese Einschränkungen sind wirksam, da Direct3D solche Deklarationen ohne Konvertierung direkt an den Treiber sendet.
+Darüber hinaus gelten einige Einschränkungen für eine solche Deklaration im Zusammenhang mit der Gerätetreiberversion. Diese Einschränkungen sind wirksam, da Direct3D solche Deklarationen direkt an den Treiber sendet, ohne dass eine Konvertierung erfolgt.
 
-## <a name="vertex-declarations-without-d3ddeclusage_positiont"></a>Vertexdeklarationen ohne D3DDECLUSAGE \_ POSITIONT
+## <a name="vertex-declarations-without-d3ddeclusage_positiont"></a>Scheitelpunktdeklarationen ohne D3DDECLUSAGE \_ POSITIONT
 
-Runtime überprüft die Erstellung von Deklarationen. Im Folgenden sind die allgemeinen Regeln für die zulässigen Deklarationen enthalten.
+Runtime überprüft die Erstellung von Deklarationen. Im Folgenden finden Sie die allgemeinen Regeln dafür, welche Deklarationen legal sind.
 
--   Alle Scheitelpunktelemente für einen Stream müssen aufeinander folgen und nach Offset sortiert werden.
--   Der Streamoffset muss an DWORD ausgerichtet sein.
+-   Alle Scheitelpunktelemente für einen Stream müssen aufeinanderfolgende und nach Offset sortiert sein.
+-   Der Streamoffset muss DWORD-ausgerichtet sein.
 -   Das gleiche Paar (Nutzung, Nutzungsindex) sollte nur einmal aufgeführt werden.
 -   Wenn D3DDEVCAPS2 \_ VERTEXELEMENTSCANSHARESTREAMOFFSET festgelegt ist, dann
-    -   Mehrere Vertexelemente können denselben Offset in einem Stream gemeinsam nutzen.
-    -   Die Scheitelpunktelemente können alle unterschiedliche Typen aufweisen, die unterschiedliche Größen aufweisen können.
-    -   Die Scheitelpunktelemente können sich beliebig überschneiden. Beispielsweise kann ein Element an einer Position eines Streams beginnen, der sich gleichzeitig in der Mitte eines anderen Elements befindet.
-    -   Vertexelemente dürfen einen Datenstromoffset in beliebiger Reihenfolge aufweisen.
--   Die Anzahl der Vertexelemente darf nicht größer als 64 sein.
+    -   Mehrere Scheitelpunktelemente können den gleichen Offset in einem Stream gemeinsam haben.
+    -   Die Scheitelpunktelemente können alle verschiedene Typen haben, die unterschiedliche Größen haben können.
+    -   Die Scheitelpunktelemente können sich willkürlich überlappen. Beispielsweise kann ein Element an einer Position eines Streams beginnen, der sich gleichzeitig in der Mitte eines anderen Elements befindet.
+    -   Vertexelemente dürfen einen Streamoffset in beliebiger Reihenfolge haben.
+-   Die Anzahl der Scheitelpunktelemente darf nicht größer als 64 sein.
 -   UsageIndex sollte im Bereich \[ von 0 bis 15 \] liegen.
--   Die Deklaration, die mit der DrawPrimitive-API verwendet wird, darf keine anderen Vertexelemente als D3DDECLMETHOD \_ DEFAULT, D3DDECLMETHOD \_ LOOKUPPRESAMPLED oder D3DDECLMETHOD \_ LOOKUP aufweisen.
--   Die Deklaration, die D3DDECLMETHOD \_ LOOKUP oder LOOKUPPRESAMPLED enthält, sollte nur mit der programmierbaren Scheitelpunktpipeline verwendet werden.
--   Die Deklaration, die mit der DrawRectPatch/DrawTriPatch-API verwendet wird, darf keine Vertexelemente mit D3DDECLMETHOD \_ LOOKUPPRESAMPLED oder D3DDECLMETHOD \_ LOOKUP aufweisen.
--   Die Deklaration sollte nur ein Element mit der D3DDECLMETHOD \_ LOOKUP- oder D3DDECLMETHOD \_ LOOKUPPRESAMPLED-Methode aufweisen.
--   Die Deklaration mit D3DDECLMETHOD \_ LOOKUP oder D3DDECLMETHOD \_ LOOKUPPRESAMPLED darf keine anderen Elemente als D3DDECLMETHOD DEFAULT enthalten, da die \_ Verschiebungszuordnung nur für N-Patches erfolgt.
--   Vertexelemente mit D3DDECLMETHOD \_ LOOKUP oder D3DDECLMETHOD \_ LOOKUPPRESAMPLED können nur mit der Semantik (D3DDECLUSAGE \_ SAMPLE, n) und umgekehrt verwendet werden.
--   Wenn ein Vertexelement mit der D3DDECLMETHOD \_ LOOKUP-Methode über einen Streamindex und offset eines bereits vorhandenen Vertexelements verfügt, sollte dieses Vertexelement den gleichen Datentyp aufweisen.
--   Ein Vertexelement mit der D3DDECLMETHOD \_ LOOKUP-Methode sollte den Datentyp D3DDECLTYPE \_ FLOAT2/3/4 aufweisen.
--   Vertexelemente mit den Typen D3DDECLMETHOD \_ CROSSUV, D3DDECLMETHOD \_ PARTIALU und D3DDECLMETHOD \_ PARTIALV sollten einen Offset eines Vertexelements mit einem kompatiblen Datentyp aufweisen.
--   Ein Vertexelement mit der Methode D3DDECLMETHOD \_ UV oder D3DDECLMETHOD \_ LOOKUPPRESAMPLED muss den Typ D3DDECLTYPE \_ UNUSED, stream index zero und stream offset zero aufweisen.
+-   Die Deklaration, die mit der DrawPrimitive-API verwendet wird, darf keine anderen Scheitelpunktelemente als D3DDECLMETHOD \_ DEFAULT, D3DDECLMETHOD \_ LOOKUPPRESAMPLED oder D3DDECLMETHOD \_ LOOKUP enthalten.
+-   Die Deklaration, die D3DDECLMETHOD LOOKUP oder LOOKUPPRESAMPLED enthält, sollte nur mit der \_ programmierbaren Vertexpipeline verwendet werden.
+-   Die Deklaration, die mit der DrawRectPatch/DrawTriPatch-API verwendet wird, darf keine Scheitelpunktelemente mit D3DDECLMETHOD \_ LOOKUPPRESAMPLED oder D3DDECLMETHOD \_ LOOKUP enthalten.
+-   Die Deklaration sollte nur ein Element mit der D3DDECLMETHOD \_ LOOKUP- oder D3DDECLMETHOD \_ LOOKUPPRESAMPLED-Methode enthalten.
+-   Deklarationen mit D3DDECLMETHOD LOOKUP oder \_ D3DDECLMETHOD LOOKUPPRESAMPLED dürfen keine anderen Elemente als \_ D3DDECLMETHOD DEFAULT enthalten, da die Verschiebungszuordnung nur für \_ N-Patches erfolgt.
+-   Vertexelemente mit D3DDECLMETHOD LOOKUP oder \_ D3DDECLMETHOD LOOKUPPRESAMPLED können nur mit der \_ Semantik (D3DDECLUSAGE SAMPLE, n) und umgekehrt verwendet \_ werden.
+-   Wenn ein Vertexelement mit der D3DDECLMETHOD LOOKUP-Methode über einen Streamindex und einen Offset eines bereits vorhandenen Vertexelements verfügt, sollte dieses \_ Vertexelement denselben Datentyp haben.
+-   Ein Vertexelement mit der D3DDECLMETHOD \_ LOOKUP-Methode muss den Datentyp D3DDECLTYPE \_ FLOAT2/3/4 haben.
+-   Vertexelemente mit den Typen D3DDECLMETHOD \_ CROSSUV, D3DDECLMETHOD PARTIALU und \_ D3DDECLMETHOD PARTIALV sollten einen Offset eines Scheitelpunktelements mit einem kompatiblen Datentyp \_ haben.
+-   Ein Vertexelement mit der Methode D3DDECLMETHOD UV oder \_ D3DDECLMETHOD LOOKUPPRESAMPLED muss den Typ \_ D3DDECLTYPE UNUSED, den Streamindex 0 (null) und den Streamoffset 0 \_ (null) haben.
 -   Deklarationen mit den Methoden D3DDECLMETHOD \_ UV, D3DDECLMETHOD PARTIALU und \_ D3DDECLMETHOD PARTIALV können nur \_ mit DrawRectPatch verwendet werden.
 -   Die Verwendung von D3DDECLUSAGE TESSFACTOR sollte nur mit dem \_ Datentyp D3DDECLTYPE FLOAT1 und dem \_ Verwendungsindex 0 verwendet werden.
 -   Wenn eine Deklaration für Mosaik (DrawRectPatch, DrawTriPatch, N-Patches) verwendet wird, muss der Datentyp kleiner oder gleich D3DDECLTYPE \_ SHORT4 sein.
--   Deklarationen, die Methoden enthalten, die bestimmte Gerätefunktionen erfordern (z. B. Verschiebungszuordnung, RT-Patches), können nur erstellt werden, wenn sie vom Gerät unterstützt werden.
+-   Deklarationen, die Methoden enthalten, die bestimmte Gerätefunktionen erfordern (z. B. Verschiebungszuordnung, RT-Patches), können nur erstellt werden, wenn das Gerät sie unterstützt.
 -   Eine Scheitelpunktdeklaration, die zum Zeichnen von Punkten und Linien verwendet wird, darf keine anderen Methoden als D3DDECLMETHOD \_ DEFAULT haben.
 -   Die Deklarationen, die erstellt werden können, hängen auch von den Treiberfunktionen ab.
 
@@ -96,25 +96,25 @@ Runtime überprüft die Erstellung von Deklarationen. Im Folgenden sind die allg
 -   Die Eingabedeklaration muss in eine gültige FVF übersetzbar sein (sie muss die gleiche Reihenfolge von Scheitelpunktelementen und deren Datentypen haben).
 -   Lücken in Texturkoordinaten sind zulässig.
 
-### <a name="direct3d-9-drivers-with-pixel-shader-version-3-support"></a>Direct3D 9-Treiber mit Unterstützung für Pixels shader Version 3
+### <a name="direct3d-9-drivers-with-pixel-shader-version-3-support"></a>Direct3D 9-Treiber mit Unterstützung für Pixel-Shader Version 3
 
 Allgemeinere Deklarationen sind zulässig.
 
 -   Scheitelpunktelemente können in beliebiger Reihenfolge sein und über beliebige Datentypen verfügen.
 -   Mehrere Scheitelpunktelemente können denselben Streamoffset gemeinsam verwenden und gleichzeitig einen anderen Typ haben, wenn D3DDEVCAPS2 \_ VERTEXELEMENTSCANSHARESTREAMOFFSET vom Gerät festgelegt wird.
 
-## <a name="vertex-declaration-usage-with-the-programmable-vertex-pipeline"></a>Vertexdeklarationsverwendung mit der programmierbaren Scheitelpunktpipeline
+## <a name="vertex-declaration-usage-with-the-programmable-vertex-pipeline"></a>Verwendung der Scheitelpunktdeklaration mit der programmierbaren Vertexpipeline
 
 -   Zur Zeichnen-Zeit sucht Direct3D in der aktuellen Vertexdeklaration und der aktuellen Vertex-Shaderfunktion nach der gleichen Kombination aus Nutzungs- und Nutzungsindex. Wenn die Kombination gefunden wird, wird das Register aus der Shaderfunktions-DCL als Ziel für das Scheitelpunktelement verwendet.
 -   Wenn ein Scheitelpunktelement in der aktuellen Scheitelpunktdeklaration über eine Verwendung verfügt, die im aktuellen Vertex-Shader nicht gefunden wird, wird dieses Vertexelement ignoriert.
--   Bei Verwendung einer Vertex-Shaderversion unter 2.0 muss die im Shadercode erwähnte Semantik in der Deklaration vorhanden sein, die zur Zeichnen-Zeit gebunden ist. Wenn Vertex-Shader 2.0 und höher verwendet werden, ist diese Einschränkung, die anwendungen die Verwendung verschiedener Vertexdeklarationen mit demselben Vertex-Shader ermöglicht, nicht vorhanden. Dies ist nützlich, wenn ein Vertex-Shader Eingabedaten basierend auf statischen Bedingungen liest. Vertex-Shaderregister, die aufgrund dieser nicht initialisiert werden, verfügen über nicht definierte Werte.
+-   Bei Verwendung einer Vertex-Shaderversion unter 2.0 muss die im Shadercode erwähnte Semantik in der Deklaration vorhanden sein, die zur Zeichnen-Zeit gebunden ist. Wenn Vertex-Shader 2.0 und höher verwendet werden, ist diese Einschränkung, die anwendungen die Verwendung verschiedener Vertexdeklarationen mit demselben Vertex-Shader ermöglicht, nicht vorhanden. Dies ist nützlich, wenn ein Vertex-Shader Eingabedaten basierend auf statischen Bedingungen liest. Vertex-Shaderregister, die nicht initialisiert wurden, verfügen daher über nicht definierte Werte.
 
 Es gibt zusätzliche Einschränkungen bei der Verwendung mit Hardwarevertexverarbeitung auf einem DirectX 8-Treiber:
 
 -   Scheitelpunktelemente können sich nicht überlappen oder denselben Offset gemeinsam haben.
 -   Datentypen sind auf das beschränkt, was der DirectX 8-Treiber verstehen kann.
 
-CreateVertexDeclaration kann fehlschlagen, wenn die bereitgestellte Deklaration nicht in eine DirectX 8-Deklaration konvertiert werden kann. Bei einem Gerät im gemischten Modus kommt es zu diesem Fehler zur Draw-Zeit, da dies das einzige Mal ist, dass bekannt ist, ob dieser Shader mit Hardware- oder \* Softwarevertexverarbeitung verwendet wird.
+CreateVertexDeclaration kann fehlschlagen, wenn die bereitgestellte Deklaration nicht in eine DirectX 8-Deklaration konvertiert werden kann. Bei einem Gerät im gemischten Modus kommt es zu diesem Fehler zur Draw-Zeit, da dies der einzige Zeitpunkt ist, an dem bekannt ist, ob dieser Shader mit Hardware- oder \* Softwarevertexverarbeitung verwendet wird.
 
 ## <a name="vertex-declaration-usage-with-the-fixed-function-pipeline"></a>Verwendung der Scheitelpunktdeklaration mit der Festen Funktionspipeline
 
@@ -123,7 +123,7 @@ Es können nur Deklarationen verwendet werden, die den folgenden Regeln entsprec
 -   Es sollten keine Lücken zwischen Scheitelpunktelementen bestehen (SKIP war in einer DirectX 8-Deklaration, die für die feste Funktionspipeline verwendet wird, nicht zulässig).
 -   Semantic (D3DDECLUSAGE POSITION, 0) muss angegeben werden und muss \_ den Datentyp D3DDECLTYPE \_ FLOAT3 haben.
 -   Ein Vertexelement mit der D3DDECLMETHOD UV-Methode muss die Verwendung \_ von D3DDECLUSAGE \_ TEXCOORD oder D3DDECLUSAGE \_ BLENDWEIGHT angeben.
--   Ein Scheitelpunktelement mit der Methode D3DDECLMETHOD PARTIALU, PARTIALV oder CROSSUV kann nur mit \_ \_ \_ D3DDECLUSAGE POSITION, NORMAL, BLENDWEIGHT oder TEXCOORD verwendet werden und muss den Eingabetyp \_ \_ \_ \_ D3DDECLTYPE \_ FLOAT3 verwenden.
+-   Ein Vertexelement mit der Methode D3DDECLMETHOD PARTIALU, PARTIALV oder CROSSUV kann nur mit \_ \_ \_ D3DDECLUSAGE POSITION, NORMAL, BLENDWEIGHT oder TEXCOORD verwendet werden und muss den Eingabetyp \_ \_ \_ \_ D3DDECLTYPE \_ FLOAT3 verwenden.
 
 Wenn eine Deklaration mit Hardwarevertexverarbeitung auf einem DirectX 8-Treiber verwendet wird, konvertiert die Direct3D-Runtime sie mit den folgenden Regeln in eine DirectX 8-deklaration:
 
@@ -131,7 +131,7 @@ Wenn eine Deklaration mit Hardwarevertexverarbeitung auf einem DirectX 8-Treiber
 -   Der Datentyp muss kleiner oder gleich D3DDECLTYPE \_ SHORT4 sein.
 -   Es sind nur die folgenden Methoden zulässig: D3DDECLMETHOD \_ DEFAULT, D3DDECLMETHOD \_ CROSSUV und D3DDECLMETHOD \_ UV
 -   Die Zuordnung zwischen [einer Direct3D 9-Deklaration und einer Direct3D 8-Deklaration (Direct3D 9)](mapping-between-a-directx-9-declaration-and-directx-8.md) zeigt, welche Direct3D 9-Semantik in eine DirectX 8-Deklaration konvertiert werden könnte. Usage und UsageIndex werden in einen Registerwert konvertiert.
--   Wenn eine Deklaration n Scheitelpunktelemente enthält und 0 -m (m < n) einer FVF (Elemente, die in Zuordnung zwischen einer Direct3D-Deklaration und [FVF-Codes (Direct3D 9)](mapping-between-a-directx-9-declaration-and-fvf-codes.md)beschrieben werden) ist, m + 1 jedoch nicht, dann:
+-   Wenn eine Deklaration n Scheitelpunktelemente enthält und 0 –m (m < n) einer FVF (Elemente, die in Zuordnung zwischen einer Direct3D-Deklaration und [FVF-Codes (Direct3D 9)](mapping-between-a-directx-9-declaration-and-fvf-codes.md)beschrieben sind), m + 1 jedoch nicht, dann:
     -   Wenn eines von m + 2 bis n - 1 Scheitelpunktelementen FVF/dx8decl zuordnen, ist die Deklaration ungültig.
     -   Die Elemente 0 in m werden konvertiert (von der Runtime für DirectX 8 und ältere Treiber und von den Direct3D 9-Treibern) mithilfe der Zuordnung zwischen einer Direct3D-Deklaration und [FVF-Codes (Direct3D 9),](mapping-between-a-directx-9-declaration-and-fvf-codes.md)m + 1, m + 2 bis n - 1 werden zusammenhängenden Texcoord(k), texcoord(k+1) zugeordnet, beginnend mit jedem Texcoord in Elementen 0 - m.
     -   Es wird davon ausgegangen, dass der Datentyp bei einem zugeordneten Texcoord float 1234 ist und dabei den Datentyp ersetzt, den das aktuelle Element enthält (jedoch die \[ \] gleiche Größe). Daher kann der vorhandene Datentyp etwas sein, das nicht unter Zuordnung zwischen einer Direct3D-Deklaration und [FVF-Codes (Direct3D 9) enthalten ist.](mapping-between-a-directx-9-declaration-and-fvf-codes.md)

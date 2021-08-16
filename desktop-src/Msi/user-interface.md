@@ -15,9 +15,9 @@ ms.locfileid: "119809350"
 
 Windows Das Installationsprogramm stellt eine vollständige Benutzeroberfläche (UI) zum Installieren einer Anwendung oder eines Produkts bereit. Die Benutzeroberfläche stellt dem Benutzer die verfügbaren Optionen zum Konfigurieren der Installation zur Verfügung und erhält vom Benutzer Informationen über den ausstehenden Installationsvorgang.
 
-[Informationen zum Benutzeroberfläche](about-the-user-interface.md) beschreibt die Funktionalität der Benutzeroberfläche des Installationsprogramms. [Unter Verwendung Benutzeroberfläche](using-the-user-interface.md) wird die Verwendung der internen Benutzeroberfläche des Installationsprogramms beschrieben.
+[Informationen zur Benutzeroberfläche](about-the-user-interface.md) beschreibt die Funktionalität der Benutzeroberfläche des Installationsprogramms. [Unter Verwendung Benutzeroberfläche](using-the-user-interface.md) wird die Verwendung der internen Benutzeroberfläche des Installationsprogramms beschrieben.
 
-Referenzinformationen zum internen Dialogfeld des Installationsprogramms sowie zu Steuerelementstilen und -optionen finden Sie in [Benutzeroberfläche Referenz.](user-interface-reference.md)
+Referenzinformationen zum internen Dialogfeld des Installationsprogramms sowie Steuerelementstile und -optionen finden Sie in [Benutzeroberfläche Referenz.](user-interface-reference.md)
 
  
 

@@ -1,19 +1,19 @@
 ---
-description: Gibt einen Befehl an, der durch ShellExecute ausgeführt werden kann, um eine Anwendung zu starten, wenn Sie an die Taskleiste angeheftet ist, oder wenn eine neue Instanz der Anwendung über die Sprung Liste der Anwendung gestartet wird.
+description: Gibt einen Befehl an, der über ShellExecute ausgeführt werden kann, um eine Anwendung zu starten, wenn sie an die Taskleiste angeheftet ist oder wenn eine neue Instanz der Anwendung über die Anwendungsinstanz gestartet Sprungliste.
 ms.assetid: 83aab060-0629-48e3-a2db-9ba96a8631e5
-title: System. appusermodel. relaunchcommand
+title: System.AppUserModel.NeustartCommand
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 84049f605896ba5e99a98f33557e6ee4dea37df5
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 1cc2ce3783aa9ab3d76124b8d62f9d9d9ad2e1f5d4b92622716df111456dbabd
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106360176"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119554520"
 ---
-# <a name="systemappusermodelrelaunchcommand"></a>System. appusermodel. relaunchcommand
+# <a name="systemappusermodelrelaunchcommand"></a>System.AppUserModel.NeustartCommand
 
-Gibt einen Befehl an, der durch [**ShellExecute**](/windows/win32/api/shellapi/nf-shellapi-shellexecutea) ausgeführt werden kann, um eine Anwendung zu starten, wenn Sie an die Taskleiste angeheftet ist, oder wenn eine neue Instanz der Anwendung über die Sprung Liste der Anwendung gestartet wird.
+Gibt einen Befehl an, der über [**ShellExecute**](/windows/win32/api/shellapi/nf-shellapi-shellexecutea) ausgeführt werden kann, um eine Anwendung zu starten, wenn sie an die Taskleiste angeheftet ist oder wenn eine neue Instanz der Anwendung über die Anwendungsinstanz gestartet Sprungliste.
 
 Einige Beispiele dafür sind:
 
@@ -28,23 +28,23 @@ notepad.exe
 
 
 
-Diese Eigenschaft wird nur verwendet, wenn ein Fenster über eine explizite Anwendungs Benutzer Modell-ID (appusermodelid) verfügt ([System.AppUserModel.ID](./props-system-appusermodel-id.md), festgelegt über [**SHGetPropertyStoreForWindow**](/windows/desktop/api/Shellapi/nf-shellapi-shgetpropertystoreforwindow)). Wenn das Fenster nicht über eine explizite appusermodelid verfügt, wird diese Eigenschaft ignoriert, und das Fenster wird gruppiert und angeheftet, als wäre es Teil des Prozesses, in dem es enthalten ist. Weitere Informationen zur Anwendung von expliziten appusermudelids und deren Auswirkungen auf das Anheften der Taskleiste finden Sie unter [Anwendungs Benutzer Modell-IDs (appusermudelids)](../shell/appids.md).
+Diese Eigenschaft wird nur verwendet, wenn ein Fenster über eine explizite Anwendungsbenutzermodell-ID (AppUserModelID) verfügt ([System.AppUserModel.ID](./props-system-appusermodel-id.md), festgelegt durch [**SHGetPropertyStoreForWindow**](/windows/desktop/api/Shellapi/nf-shellapi-shgetpropertystoreforwindow)). Wenn das Fenster nicht über eine explizite AppUserModelID verfügt, wird diese Eigenschaft ignoriert, und das Fenster wird so gruppiert und angeheftet, als wäre es Teil des Prozesses, der es besitzt. Weitere Informationen zur Anwendung expliziter AppUserModelIDs und deren Auswirkungen auf das Anheften der Taskleiste finden Sie unter [Anwendungsbenutzermodell-IDs (AppUserModelIDs).](../shell/appids.md)
 
-Diese Eigenschaft soll von Anwendungen oder Fenstern verwendet werden, die nicht standardmäßige Neustarts-Informationen bereitstellen möchten.
+Diese Eigenschaft soll von Anwendungen oder Fenstern verwendet werden, die nicht standardmäßige Neustartinformationen bereitstellen möchten.
 
 > [!Note]  
-> [System. appusermodel. relaunchcommand]() und [System. appusermodel. relaunchdisplaynameresource](./props-system-appusermodel-relaunchdisplaynameresource.md) müssen immer zusammengesetzt werden. Wenn eine dieser Eigenschaften nicht festgelegt ist, wird keines von beiden verwendet.
+> [System.AppUserModel.NeustartCommand]() und [System.AppUserModel.NeustartDisplayNameResource](./props-system-appusermodel-relaunchdisplaynameresource.md) müssen immer zusammen festgelegt werden. Wenn eine dieser Eigenschaften nicht festgelegt ist, wird keine dieser Eigenschaften verwendet.
 
  
 
-Diese Eigenschaft kann zusammen mit " [System. appusermodel. relaunchdisplaynameresource](./props-system-appusermodel-relaunchdisplaynameresource.md) " und " [System. appusermodel. relaunchifiresource](./props-system-appusermodel-relaunchiconresource.md) " verwendet werden, um ein Fenster visuell als Anwendung für den Benutzer zu definieren. Dies ist nützlich für Host Anwendungsszenarien, in denen eine einzelne Host Instanz mehrere untergeordnete Anwendungen ausführt. Beispielsweise kann es vorkommen, dass ein virtueller Computer, auf dem mehrere virtualisierte Anwendungen gehostet werden, die virtualisierten Anwendungen als individuelle Anwendungen für den Benutzer angezeigt werden soll. Die virtuelle Maschine kann jedes Fenster mit einer expliziten appusermodelid und den entsprechenden Neustart Eigenschaften bezeichnen, damit Sie als Anwendungen angezeigt werden. Der Benutzer kann Sie dann an die Taskleiste anheften und die angeheftete Instanz "neu starten".
+Diese Eigenschaft kann zusammen mit [System.AppUserModel.DisplayNameResource](./props-system-appusermodel-relaunchdisplaynameresource.md) und [System.AppUserModel.PersistentIconResource](./props-system-appusermodel-relaunchiconresource.md) verwendet werden, um ein Fenster visuell als Anwendung für den Benutzer zu definieren. Dies ist nützlich für Hostanwendungsszenarien, in denen eine einzelne Hostinstanz mehrere untergeordnete Anwendungen ausgeführt. Ein virtueller Computer, der mehrere virtualisierte Anwendungen hostet, möchte beispielsweise, dass diese virtualisierten Anwendungen dem Benutzer als einzelne Anwendungen angezeigt werden. Der virtuelle Computer könnte jedes Fenster mit einer expliziten AppUserModelID und den entsprechenden Neugestaltungseigenschaften beschriften, damit sie als Anwendungen angezeigt werden. Der Benutzer könnte sie dann an die Taskleiste anheften und die angeheftete Instanz "neu starten".
 
 > [!Note]  
-> Diese Eigenschaft wird ignoriert, wenn [System. appusermodel. preventpinning](./props-system-appusermodel-preventpinning.md) festgelegt ist. Dies ermöglicht es einer Anwendung, die Gruppierung ihrer Fenster zu steuern, indem Ihnen explizit appusermudelids zugewiesen wird, aber verhindert wird, dass diese Fenster fixiert werden.
+> Diese Eigenschaft wird ignoriert, wenn [System.AppUserModel.PreventPinning](./props-system-appusermodel-preventpinning.md) festgelegt ist. Dadurch kann eine Anwendung die Gruppierung ihrer Fenster steuern, indem ihnen explizite AppUserModelIDs zugewiesen werden, diese Fenster jedoch nicht angeheftet werden.
 
  
 
-Wenn Sie diese Eigenschaft für ein Fenster festlegen möchten, rufen Sie mithilfe von [**SHGetPropertyStoreForWindow**](/windows/desktop/api/Shellapi/nf-shellapi-shgetpropertystoreforwindow) den Eigenschaften Speicher des Fensters ab, und verwenden Sie die Methoden dieses abgerufenen [**IPropertyStore**](/windows/win32/api/propsys/nn-propsys-ipropertystore) -Objekts, um die [System. appusermodel. relaunchcommand]() -Eigenschaft dieses Fensters festzulegen.
+Verwenden Sie zum Festlegen dieser Eigenschaft für ein Fenster [**SHGetPropertyStoreForWindow,**](/windows/desktop/api/Shellapi/nf-shellapi-shgetpropertystoreforwindow) um den Eigenschaftenspeicher des Fensters abzurufen, und verwenden Sie die Methoden des [**abgerufenen IPropertyStore-Objekts,**](/windows/win32/api/propsys/nn-propsys-ipropertystore) um die [System.AppUserModel.TargetingCommand-Eigenschaft]() dieses Fensters festlegen.
 
 ## <a name="windows-10-version-1703-windows-10-version-1607-windows-10-version-1511-windows-10-version-1507-windows-81-windows-8-windows-7"></a>Windows 10, Version 1703, Windows 10, Version 1607, Windows 10, Version 1511, Windows 10, Version 1507, Windows 8.1, Windows 8, Windows 7
 
@@ -62,78 +62,78 @@ propertyDescription
       IsInnate = false
 ```
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Pkey-Werte werden in "propkey. h" definiert.
+PKEY-Werte werden in Propkey.h definiert.
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
 <dl> <dt>
 
-[Anwendungs Benutzer Modell-IDs (appusermudelids)](../shell/appids.md)
+[Anwendungsbenutzermodell-IDs (AppUserModelIDs)](../shell/appids.md)
 </dt> <dt>
 
 [System.AppUserModel.ID](./props-system-appusermodel-id.md)
 </dt> <dt>
 
-[propertydescriptionlist](./propdesc-schema-propertydescriptionlist.md)
+[propertyDescriptionList](./propdesc-schema-propertydescriptionlist.md)
 </dt> <dt>
 
-[propertydescription](./propdesc-schema-propertydescription.md)
+[propertyDescription](./propdesc-schema-propertydescription.md)
 </dt> <dt>
 
-[SearchInfo](./propdesc-schema-searchinfo.md)
+[searchInfo](./propdesc-schema-searchinfo.md)
 </dt> <dt>
 
-[Labelinfo](./propdesc-schema-labelinfo.md)
+[labelInfo](./propdesc-schema-labelinfo.md)
 </dt> <dt>
 
-[TypeInfo](./propdesc-schema-typeinfo.md)
+[Typeinfo](./propdesc-schema-typeinfo.md)
 </dt> <dt>
 
-[Display Info](./propdesc-schema-displayinfo.md)
+[displayInfo](./propdesc-schema-displayinfo.md)
 </dt> <dt>
 
 [aliasInfo](./propdesc-schema-aliasinfo.md)
 </dt> <dt>
 
-[StringFormat](./propdesc-schema-stringformat.md)
+[Stringformat](./propdesc-schema-stringformat.md)
 </dt> <dt>
 
-[BooleanFormat](./propdesc-schema-booleanformat.md)
+[booleanFormat](./propdesc-schema-booleanformat.md)
 </dt> <dt>
 
-[NumberFormat](./propdesc-schema-numberformat.md)
+[Numberformat](./propdesc-schema-numberformat.md)
 </dt> <dt>
 
 [dateTimeFormat](./propdesc-schema-datetimeformat.md)
 </dt> <dt>
 
-[enumeratedlist](./propdesc-schema-enumeratedlist.md)
+[enumeratedList](./propdesc-schema-enumeratedlist.md)
 </dt> <dt>
 
 [enum](./propdesc-schema-enum.md)
 </dt> <dt>
 
-[enumbereich](./propdesc-schema-enumrange.md)
+[enumRange](./propdesc-schema-enumrange.md)
 </dt> <dt>
 
 [image](./propdesc-schema-image.md)
 </dt> <dt>
 
-[DrawControl](./propdesc-schema-drawcontrol.md)
+[drawControl](./propdesc-schema-drawcontrol.md)
 </dt> <dt>
 
-[editcontrol](./propdesc-schema-editcontrol.md)
+[editControl](./propdesc-schema-editcontrol.md)
 </dt> <dt>
 
-[FilterControl](./propdesc-schema-filtercontrol.md)
+[Filtercontrol](./propdesc-schema-filtercontrol.md)
 </dt> <dt>
 
-[querycontrol](./propdesc-schema-querycontrol.md)
+[queryControl](./propdesc-schema-querycontrol.md)
 </dt> <dt>
 
-[relatedpropertyinfo](./propdesc-schema-relatedpropertyinfo.md)
+[relatedPropertyInfo](./propdesc-schema-relatedpropertyinfo.md)
 </dt> <dt>
 
 [relatedProperty](./propdesc-schema-relatedproperty.md)

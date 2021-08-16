@@ -1,27 +1,27 @@
 ---
-description: 'Weitere Informationen finden Sie hier: JET_SIGNATURE Member'
-title: Mitglieder JET_SIGNATURE
+description: Weitere Informationen zu JET_SIGNATURE Mitgliedern
+title: JET_SIGNATURE-Member
 TOCTitle: JET_SIGNATURE members
 ms:assetid: AllMembers.T:Microsoft.Isam.Esent.Interop.JET_SIGNATURE
 ms:mtpsurl: https://msdn.microsoft.com/library/microsoft.isam.esent.interop.jet_signature_members(v=EXCHG.10)
 ms:contentKeyID: 39514139
 ms.date: 07/30/2014
 ms.topic: article
-ms.openlocfilehash: 97e345a2894133907f3211fef681bbc951e2152c
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: ae0bab16174f78b1203e00a41f689a476fd7b03efd3a67ce8c8742ae82147e4b
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "103958795"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119833390"
 ---
-# <a name="jet_signature-members"></a>Mitglieder JET_SIGNATURE
+# <a name="jet_signature-members"></a>JET_SIGNATURE-Member
 
-Geschützte Member einschließen  
-Geerbte Member einschließen  
+Einschließen geschützter Member  
+Einschließen geerbter Member  
 
-Die JET_SIGNATURE Struktur enthält Informationen, die eine Datenbank oder eine Protokolldatei Sequenz eindeutig identifizieren.
+Die JET_SIGNATURE-Struktur enthält Informationen, die eine Datenbank- oder Protokolldateisequenz eindeutig identifizieren.
 
-Der [JET_SIGNATURE](./jet-signature-structure2.md) -Typ macht die folgenden Member verfügbar.
+Der [JET_SIGNATURE-Typ](./jet-signature-structure2.md) macht die folgenden Member verfügbar.
 
 ## <a name="methods"></a>Methoden
 
@@ -36,38 +36,38 @@ Der [JET_SIGNATURE](./jet-signature-structure2.md) -Typ macht die folgenden Memb
 <tbody>
 <tr class="odd">
 <td><img src="../images/dn292146.pubmethod(exchg.10).gif" title="Öffentliche Methode" alt="Public method" /></td>
-<td><a href="hh557517(v=exchg.10).md">Ist gleich(Objekt)</a></td>
-<td>Gibt einen Wert zurück, der angibt, ob diese Instanz gleich einer anderen Instanz ist. (Überschreibt <a href="/dotnet/api/system.valuetype.equals#System_ValueType_Equals_System_Object_">ValueType. gleich (Object)</a>.)</td>
+<td><a href="hh557517(v=exchg.10).md">Equals(Object)</a></td>
+<td>Gibt einen Wert zurück, der angibt, ob diese Instanz gleich einer anderen Instanz ist. (Überschreibt <a href="/dotnet/api/system.valuetype.equals#System_ValueType_Equals_System_Object_">ValueType.Equals(Object)</a>.)</td>
 </tr>
 <tr class="even">
 <td><img src="../images/dn292146.pubmethod(exchg.10).gif" title="Öffentliche Methode" alt="Public method" /></td>
-<td><a href="hh564920(v=exchg.10).md">Ist gleich(JET_SIGNATURE)</a></td>
+<td><a href="hh564920(v=exchg.10).md">Equals(JET_SIGNATURE)</a></td>
 <td>Gibt einen Wert zurück, der angibt, ob diese Instanz gleich einer anderen Instanz ist.</td>
 </tr>
 <tr class="odd">
 <td><img src="../images/dn292116.protmethod(exchg.10).gif" title="Geschützte Methode" alt="Protected method" /></td>
 <td><a href="/dotnet/api/system.object.finalize#System_Object_Finalize">Finalize</a></td>
-<td>(Von <a href="/dotnet/api/system.object">Objekt</a>geerbt.)</td>
+<td>(Geerbt vom <a href="/dotnet/api/system.object">Objekt</a>.)</td>
 </tr>
 <tr class="even">
 <td><img src="../images/dn292146.pubmethod(exchg.10).gif" title="Öffentliche Methode" alt="Public method" /></td>
 <td><a href="hh565706(v=exchg.10).md">GetHashCode</a></td>
-<td>Gibt den Hashcode für diese Instanz zurück. (Überschreibt <a href="/dotnet/api/system.valuetype.gethashcode#System_ValueType_GetHashCode">ValueType. GetHashCode ()</a>.)</td>
+<td>Gibt den Hashcode für diese Instanz zurück. (Überschreibt <a href="/dotnet/api/system.valuetype.gethashcode#System_ValueType_GetHashCode">ValueType.GetHashCode()</a>.)</td>
 </tr>
 <tr class="odd">
 <td><img src="../images/dn292146.pubmethod(exchg.10).gif" title="Öffentliche Methode" alt="Public method" /></td>
-<td><a href="/dotnet/api/system.object.gettype#System_Object_GetType">GetType</a></td>
-<td>(Von <a href="/dotnet/api/system.object">Objekt</a>geerbt.)</td>
+<td><a href="/dotnet/api/system.object.gettype#System_Object_GetType">Gettype</a></td>
+<td>(Geerbt vom <a href="/dotnet/api/system.object">Objekt</a>.)</td>
 </tr>
 <tr class="even">
 <td><img src="../images/dn292116.protmethod(exchg.10).gif" title="Geschützte Methode" alt="Protected method" /></td>
-<td><a href="/dotnet/api/system.object.memberwiseclone#System_Object_MemberwiseClone">Mitgliedglieder Klon</a></td>
-<td>(Von <a href="/dotnet/api/system.object">Objekt</a>geerbt.)</td>
+<td><a href="/dotnet/api/system.object.memberwiseclone#System_Object_MemberwiseClone">MemberwiseClone</a></td>
+<td>(Geerbt vom <a href="/dotnet/api/system.object">Objekt</a>.)</td>
 </tr>
 <tr class="odd">
 <td><img src="../images/dn292146.pubmethod(exchg.10).gif" title="Öffentliche Methode" alt="Public method" /></td>
 <td><a href="hh565085(v=exchg.10).md">ToString</a></td>
-<td>Generiert eine Zeichen folgen Darstellung der-Struktur. (Überschreibt <a href="/dotnet/api/system.valuetype.tostring#System_ValueType_ToString">ValueType.-Zeichenfolge ()</a>.)</td>
+<td>Generieren Sie eine Zeichenfolgendarstellung der -Struktur. (Überschreibt <a href="/dotnet/api/system.valuetype.tostring#System_ValueType_ToString">ValueType.ToString()</a>.)</td>
 </tr>
 </tbody>
 </table>
@@ -94,7 +94,7 @@ Oben
 <tr class="even">
 <td><img src="../images/dn350944.puboperator(exchg.10).gif" title="Öffentlicher Operator" alt="Public operator" /><img src="../images/dn292146.static(exchg.10).gif" title="Statischer Member" alt="Static member" /></td>
 <td><a href="hh596753(v=exchg.10).md">Ungleichheit</a></td>
-<td>Bestimmt, ob zwei angegebene Instanzen von JET_SIGNATURE nicht gleich sind.</td>
+<td>Bestimmt, ob zwei angegebene Instanzen von JET_SIGNATURE ungleich sind.</td>
 </tr>
 </tbody>
 </table>
@@ -102,10 +102,10 @@ Oben
 
 Oben
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
-#### <a name="reference"></a>Referenz
+#### <a name="reference"></a>Verweis
 
-[JET_SIGNATURE Struktur](./jet-signature-structure2.md)
+[JET_SIGNATURE-Struktur](./jet-signature-structure2.md)
 
-[Microsoft. ISAM. ESENT. Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)
+[Microsoft.Isam.Esent.Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)

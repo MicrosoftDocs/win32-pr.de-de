@@ -1,9 +1,9 @@
 ---
-title: BCC (sendemailtype)-Element
-description: Enthält die in der Bcc-Zeile einer e-Mail-Nachricht verwendeten e-Mail-Adressen.
+title: Bcc -Element (sendEmailType)
+description: Enthält die E-Mail-Adressen, die in der Bcc-Zeile einer E-Mail-Nachricht verwendet werden.
 ms.assetid: c80407d0-3b3f-4efe-91de-7a3a7abc996f
 keywords:
-- BCC-Element Taskplaner
+- Bcc-Element Taskplaner
 topic_type:
 - apiref
 api_name:
@@ -13,16 +13,16 @@ api_type:
 ms.topic: reference
 ms.date: 05/31/2018
 api_location: ''
-ms.openlocfilehash: f262b8f5d74018a4622f915def85df5e16108cdb
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 1409d50a0317758534724b9e2c3a9796c4dd0cb40e666f58fc65ca0771da9762
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104104349"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119659040"
 ---
-# <a name="bcc-sendemailtype-element"></a>BCC (sendemailtype)-Element
+# <a name="bcc-sendemailtype-element"></a>Bcc -Element (sendEmailType)
 
-Enthält die in der Bcc-Zeile einer e-Mail-Nachricht verwendeten e-Mail-Adressen.
+Enthält die E-Mail-Adressen, die in der Bcc-Zeile einer E-Mail-Nachricht verwendet werden.
 
 ``` syntax
 <xs:element name="Bcc"
@@ -30,7 +30,7 @@ Enthält die in der Bcc-Zeile einer e-Mail-Nachricht verwendeten e-Mail-Adressen
  />
 ```
 
-Das **Bcc** -Element wird durch den komplexen [**sendemailtype**](taskschedulerschema-sendemailtype-complextype.md) -Typ definiert.
+Das **Bcc-Element** wird vom komplexen [**SendEmailType-Typ**](taskschedulerschema-sendemailtype-complextype.md) definiert.
 
 ## <a name="parent-element"></a>Übergeordnetes Element
 
@@ -38,15 +38,15 @@ Das **Bcc** -Element wird durch den komplexen [**sendemailtype**](taskschedulers
 
 | Element                                                                              | Abgeleitet von                                                           | BESCHREIBUNG                                                  |
 |--------------------------------------------------------------------------------------|------------------------------------------------------------------------|--------------------------------------------------------------|
-| [**SendEmail (Aktionsgruppe)**](taskschedulerschema-sendemail-actiongroup-element.md) | [**sendemailtype**](taskschedulerschema-sendemailtype-complextype.md) | Stellt eine Aktion dar, die eine e-Mail-Nachricht sendet.<br/> |
+| [**SendEmail (actionGroup)**](taskschedulerschema-sendemail-actiongroup-element.md) | [**sendEMailType**](taskschedulerschema-sendemailtype-complextype.md) | Stellt eine Aktion dar, die eine E-Mail sendet.<br/> |
 
 
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Informationen zur C++-Entwicklung finden Sie unter [**Bcc-Eigenschaft von iemailaction**](/windows/desktop/api/taskschd/nf-taskschd-iemailaction-get_bcc).
+Informationen zur C++-Entwicklung finden Sie unter [**Bcc-Eigenschaft von IEmailAction**](/windows/desktop/api/taskschd/nf-taskschd-iemailaction-get_bcc).
 
-Informationen zur Skript Entwicklung finden Sie unter [**emailaction. BCC**](emailaction-bcc.md).
+Informationen zur Skriptentwicklung finden Sie unter [**EmailAction.Bcc**](emailaction-bcc.md).
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -54,8 +54,8 @@ Informationen zur Skript Entwicklung finden Sie unter [**emailaction. BCC**](ema
 
 | Anforderung | Wert |
 |-------------------------------------|------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>       |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2008 \[ -Desktop-Apps\]<br/> |
+| Unterstützte Mindestversion (Client)<br/> | Windows \[Nur Vista-Desktop-Apps\]<br/>       |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2008-Desktop-Apps\]<br/> |
 
 
 

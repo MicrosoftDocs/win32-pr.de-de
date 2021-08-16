@@ -1,9 +1,9 @@
 ---
-title: PSM_QUERYSIBLINGS Meldung (prsht. h)
-description: Wird an ein Eigenschaften Blatt gesendet, das die Nachricht dann an jede Ihrer Seiten weiterleitet. Sie können diese Nachricht explizit oder mithilfe des propsheet \_ querysiblings-Makros senden.
+title: PSM_QUERYSIBLINGS (Prsht.h)
+description: Wird an ein Eigenschaftenblatt gesendet, das die Nachricht dann an jede seiner Seiten weitersandt. Sie können diese Nachricht explizit oder mithilfe des PropSheet \_ QuerySiblings-Makros senden.
 ms.assetid: 96f48847-b7b8-4d6f-8bde-ada915b7c962
 keywords:
-- Windows-Steuerelemente für PSM_QUERYSIBLINGS Meldung
+- PSM_QUERYSIBLINGS von Windows-Steuerelementen
 topic_type:
 - apiref
 api_name:
@@ -14,16 +14,16 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: ea5943fefa906475e34d1cc7acc7f8a86cd99252
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: c270a3c7a667894f7821f6c0c169115846b6ddc2492648f5f9d75a0c85d21d04
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104517966"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120088650"
 ---
-# <a name="psm_querysiblings-message"></a>PSM- \_ querysiblings-Meldung
+# <a name="psm_querysiblings-message"></a>PSM \_ QUERYSIBLINGS-Meldung
 
-Wird an ein Eigenschaften Blatt gesendet, das die Nachricht dann an jede Ihrer Seiten weiterleitet. Sie können diese Nachricht explizit oder mithilfe des [**propsheet \_ querysiblings**](/windows/desktop/api/Prsht/nf-prsht-propsheet_querysiblings) -Makros senden.
+Wird an ein Eigenschaftenblatt gesendet, das die Nachricht dann an jede seiner Seiten weitersandt. Sie können diese Nachricht explizit oder mithilfe des [**PropSheet \_ QuerySiblings-Makros**](/windows/desktop/api/Prsht/nf-prsht-propsheet_querysiblings) senden.
 
 ## <a name="parameters"></a>Parameter
 
@@ -32,24 +32,24 @@ Wird an ein Eigenschaften Blatt gesendet, das die Nachricht dann an jede Ihrer S
 *wParam* 
 </dt> <dd>
 
-Der erste Anwendungs definierte Parameter.
+Erster anwendungsdefinierter Parameter.
 
 </dd> <dt>
 
 *lParam* 
 </dt> <dd>
 
-Der zweite Anwendungs definierte Parameter.
+Zweiter anwendungsdefinierter Parameter.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt den Wert ungleich 0 (null) von einer Seite im Eigenschaften Blatt zurück, oder NULL, wenn keine Seite einen Wert ungleich 0 (null) zurückgibt.
+Gibt den Wert ungleich 0 (null) von einer Seite im Eigenschaftenblatt zurück, oder 0 (null), wenn keine Seite einen Wert ungleich 0 (null) zurückgibt.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Wenn eine Seite einen Wert ungleich 0 (null) zurückgibt, sendet das Eigenschaften Blatt die Nachricht nicht an nachfolgende Seiten.
+Wenn eine Seite einen Wert ungleich 0 (null) zurückgibt, sendet das Eigenschaftenblatt die Nachricht nicht an nachfolgende Seiten.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -57,9 +57,9 @@ Wenn eine Seite einen Wert ungleich 0 (null) zurückgibt, sendet das Eigenschaft
 
 | Anforderung | Wert |
 |-------------------------------------|------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>                                     |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2003 \[ -Desktop-Apps\]<br/>                               |
-| Header<br/>                   | <dl> <dt>Prsht. h</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur \[ Vista-Desktop-Apps\]<br/>                                     |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2003-Desktop-Apps\]<br/>                               |
+| Header<br/>                   | <dl> <dt>Prsht.h</dt> </dl> |
 
 
 

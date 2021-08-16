@@ -21,7 +21,7 @@ ms.locfileid: "118791103"
 ---
 # <a name="rwtexture1darrayload-methods"></a>RWTexture1DArray::Load-Methoden
 
-Liest Texturdaten aus einem [**RWTexture1DArray.**](sm5-object-rwtexture1darray.md)
+Liest Texturdaten aus einem [**RWTexture1DArray-**](sm5-object-rwtexture1darray.md).
 
 ### <a name="overload-list"></a>Überladeliste
 

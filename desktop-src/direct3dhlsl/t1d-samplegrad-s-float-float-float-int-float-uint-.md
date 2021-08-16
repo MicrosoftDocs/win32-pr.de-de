@@ -1,6 +1,6 @@
 ---
 title: SampleGrad::SampleGrad(S,float,float,float,int,float,uint)-Funktion für Texture1D
-description: Stichproben einer Textur mithilfe eines Farbverlaufs, um die Berechnung der Stichprobenposition zu beeinflussen, mit einem optionalen Wert, an den die Werte der Stichprobenebenendetails (SAMPLE Level-of-Detail, LOD) klammern. Für Texture1D.
+description: Stichproben einer Textur, wobei ein Farbverlauf verwendet wird, um die Berechnung der Stichprobenposition zu beeinflussen, mit einem optionalen Wert zum Zusammenbinden von LOD-Werten (Sample Level of Detail). Für Texture1D.
 ms.assetid: E2B131AC-99E6-493A-91EE-EB0D3EE7FA8B
 keywords:
 - SampleGrad-Funktion HLSL
@@ -22,7 +22,7 @@ ms.locfileid: "118789089"
 ---
 # <a name="samplegradsamplegradsfloatfloatfloatintfloatuint-function-for-texture1d"></a>SampleGrad::SampleGrad(S,float,float,float,int,float,uint)-Funktion für Texture1D
 
-Stichproben einer Textur mithilfe eines Farbverlaufs, um die Berechnung der Stichprobenposition zu beeinflussen, mit einem optionalen Wert, an den die Werte der Stichprobenebenendetails (SAMPLE Level-of-Detail, LOD) klammern. Gibt den Status des Vorgangs zurück.
+Stichproben einer Textur, wobei ein Farbverlauf verwendet wird, um die Berechnung der Stichprobenposition zu beeinflussen, mit einem optionalen Wert zum Zusammenbinden von LOD-Werten (Sample Level of Detail). Gibt den Status des Vorgangs zurück.
 
 ## <a name="syntax"></a>Syntax
 
@@ -63,7 +63,7 @@ Texturkoordinaten Der Argumenttyp ist vom Texturobjekttyp abhängig.
 
 
 
-| Texture-Object Typ                    | Parametertyp |
+| Texture-Object-Typ                    | Parametertyp |
 |----------------------------------------|----------------|
 | Texture1D                              | float          |
 | Texture1DArray, Texture2D              | float2         |
@@ -81,11 +81,11 @@ Texturkoordinaten Der Argumenttyp ist vom Texturobjekttyp abhängig.
 
 Typ: **float**
 
-Die Änderungsrate der Oberflächengeometrie in x-Richtung. Der Argumenttyp ist vom Texturobjekttyp abhängig.
+Die Änderungsrate der Oberflächengeometrie in x Richtung. Der Argumenttyp ist vom Texturobjekttyp abhängig.
 
 
 
-| Texture-Object Typ                      | Parametertyp |
+| Texture-Object-Typ                      | Parametertyp |
 |------------------------------------------|----------------|
 | Texture1D, Texture1DArray                | float          |
 | Texture2D, Texture2DArray                | float2         |
@@ -107,7 +107,7 @@ Die Änderungsrate der Oberflächengeometrie in y-Richtung. Der Argumenttyp ist 
 
 
 
-| Texture-Object Typ                      | Parametertyp |
+| Texture-Object-Typ                      | Parametertyp |
 |------------------------------------------|----------------|
 | Texture1D, Texture1DArray                | float          |
 | Texture2D, Texture2DArray                | float2         |
@@ -125,11 +125,11 @@ Die Änderungsrate der Oberflächengeometrie in y-Richtung. Der Argumenttyp ist 
 
 Typ: **int**
 
-Ein optionaler Texturkoordinatenoffset, der für jeden Texturobjekttyp verwendet werden kann. Der Offset wird vor der Stichprobenentnahme auf die Position angewendet. Verwenden Sie einen Offset nur bei einer ganzzahligen MIP-Ebene. Andernfalls erhalten Sie möglicherweise Ergebnisse, die sich nicht gut in die Hardware übersetzen lassen. Der Argumenttyp ist vom Texturobjekttyp abhängig. Weitere Informationen finden Sie unter [Anwenden von ganzzahligen Offsets.](dx-graphics-hlsl-to-sample.md)
+Ein optionaler Texturkoordinatenoffset, der für jeden Texturobjekttyp verwendet werden kann. Der Offset wird vor der Stichprobenentnahme auf den Speicherort angewendet. Verwenden Sie einen Offset nur auf einem ganzzahligen Miplevel. Andernfalls erhalten Sie möglicherweise Ergebnisse, die sich nicht gut in die Hardware übersetzen lassen. Der Argumenttyp ist vom Texturobjekttyp abhängig. Weitere Informationen finden Sie unter [Anwenden von ganzzahligen Offsets.](dx-graphics-hlsl-to-sample.md)
 
 
 
-| Texture-Object Typ           | Parametertyp |
+| Texture-Object-Typ           | Parametertyp |
 |-------------------------------|----------------|
 | Texture1D, Texture1DArray     | INT            |
 | Texture2D, Texture2DArray     | int2           |
@@ -147,7 +147,7 @@ Ein optionaler Texturkoordinatenoffset, der für jeden Texturobjekttyp verwendet
 
 Typ: **float**
 
-Ein optionaler Wert, an den LoD-Beispielwerte klammern werden. Wenn Sie z. B. 2,0f für den Klammerwert übergeben, stellen Sie sicher, dass keine einzelne Stichprobe auf eine MIP-Ebene unter 2,0f zuf zutritt.
+Ein optionaler Wert zum Klammern von LOD-Beispielwerten. Wenn Sie beispielsweise 2,0f für den Klammerwert übergeben, stellen Sie sicher, dass keine einzelne Stichprobe auf eine Mip-Ebene kleiner als 2,0f zugreift.
 
 </dd> <dt>
 
@@ -156,7 +156,7 @@ Ein optionaler Wert, an den LoD-Beispielwerte klammern werden. Wenn Sie z. B. 2,
 
 Typ: **uint**
 
-Der Status des Vorgangs. Sie können nicht direkt auf den Status zugreifen. Übergeben Sie stattdessen den Status an die [**systeminterne CheckAccessFullyMapped-Funktion.**](checkaccessfullymapped.md) **CheckAccessFullyMapped** gibt **TRUE zurück,** wenn alle Werte aus dem entsprechenden **Beispiel-,** **Gather-** oder **Load-Vorgang** auf zugeordnete Kacheln in einer [gekachelten Ressource zugegriffen haben.](/windows/desktop/direct3d11/direct3d-11-2-features) Wenn Werte aus einer nicht zugeordneten Kachel übernommen wurden, gibt **CheckAccessFullyMapped** **FALSE zurück.**
+Der Status des Vorgangs. Sie können nicht direkt auf den Status zugreifen. Übergeben Sie stattdessen den Status an die systeminterne [**CheckAccessFullyMapped-Funktion.**](checkaccessfullymapped.md) **CheckAccessFullyMapped** gibt **TRUE** zurück, wenn alle Werte aus dem entsprechenden **Beispiel-,** **Gather-** oder **Load-Vorgang** auf zugeordnete Kacheln in einer [gekachelten Ressource](/windows/desktop/direct3d11/direct3d-11-2-features)zugegriffen haben. Wenn Werte aus einer nicht zugeordneten Kachel stammen, gibt **CheckAccessFullyMapped** **FALSE** zurück.
 
 </dd> </dl>
 
@@ -164,7 +164,7 @@ Der Status des Vorgangs. Sie können nicht direkt auf den Status zugreifen. Übe
 
 Typ: **[ **DXGI \_ FORMAT**](/windows/desktop/api/dxgiformat/ne-dxgiformat-dxgi_format)**
 
-Das Texturformat, bei dem es sich um einen der typierten Werte handelt, die in [**DXGI \_ FORMAT aufgeführt sind.**](/windows/desktop/api/dxgiformat/ne-dxgiformat-dxgi_format)
+Das Texturformat, bei dem es sich um einen der typisierten Werte handelt, die in [**DXGI \_ FORMAT**](/windows/desktop/api/dxgiformat/ne-dxgiformat-dxgi_format)aufgeführt sind.
 
 ## <a name="see-also"></a>Weitere Informationen
 

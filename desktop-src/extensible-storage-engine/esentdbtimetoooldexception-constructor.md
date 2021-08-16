@@ -1,5 +1,5 @@
 ---
-description: 'Weitere Informationen finden Sie unter: EsentDbTimeTooOldException-Konstruktor'
+description: 'Weitere Informationen zu: EsentDbTimeTooOldException-Konstruktor'
 title: EsentDbTimeTooOldException-Konstruktor
 TOCTitle: 'EsentDbTimeTooOldException constructor '
 ms:assetid: M:Microsoft.Isam.Esent.Interop.EsentDbTimeTooOldException.#ctor

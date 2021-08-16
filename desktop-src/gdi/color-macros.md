@@ -1,26 +1,26 @@
 ---
-description: 'Die folgenden Makros werden mit Color verwendet:'
+description: 'Die folgenden Makros werden mit Farbe verwendet:'
 ms.assetid: f5bded0f-5f55-4512-9c00-9a9eb08c39f0
-title: Farb Makros
+title: Farbmakros
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 4b9a2d65cc2e0601888f7e36c8531f7c08ff8b32
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 6739b05c5261495b720ee7d3dec346acf92adb44190af3ef66fac9d729977d4e
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104978752"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119105739"
 ---
-# <a name="color-macros"></a>Farb Makros
+# <a name="color-macros"></a>Farbmakros
 
-Die folgenden Makros werden mit Color verwendet:
+Die folgenden Makros werden mit Farbe verwendet:
 
--   [**Dibindex**](/windows/desktop/api/Mmsystem/nf-mmsystem-dibindex)
--   [**Getbvalue**](/windows/desktop/api/Wingdi/nf-wingdi-getbvalue)
--   [**Getgvalue**](/windows/desktop/api/Wingdi/nf-wingdi-getgvalue)
--   [**Getrvalue**](/windows/desktop/api/Wingdi/nf-wingdi-getrvalue)
--   [**Paletteingedex**](/windows/desktop/api/Wingdi/nf-wingdi-paletteindex)
--   [**Palettergb**](/windows/desktop/api/Wingdi/nf-wingdi-palettergb)
+-   [**DIBINDEX**](/windows/desktop/api/Mmsystem/nf-mmsystem-dibindex)
+-   [**GetBValue**](/windows/desktop/api/Wingdi/nf-wingdi-getbvalue)
+-   [**GetGValue**](/windows/desktop/api/Wingdi/nf-wingdi-getgvalue)
+-   [**GetRValue**](/windows/desktop/api/Wingdi/nf-wingdi-getrvalue)
+-   [**PALETTEINDEX**](/windows/desktop/api/Wingdi/nf-wingdi-paletteindex)
+-   [**PALETTERGB**](/windows/desktop/api/Wingdi/nf-wingdi-palettergb)
 -   [**RGB**](/windows/desktop/api/Wingdi/nf-wingdi-rgb)
 
  

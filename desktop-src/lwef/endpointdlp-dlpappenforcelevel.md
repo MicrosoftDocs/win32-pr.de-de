@@ -1,5 +1,5 @@
 ---
-description: Gibt die Erzwingungsebene eines Endpunkt-DLP-Vorgangs (Data Loss Prevention) an.
+description: Gibt die Erzwingungsebene eines Endpunkt-DLP-Vorgangs (Data Loss Prevention, Verhinderung von Datenverlust) an.
 title: DlpAppEnforceLevel-Enumeration (endpointdlp.h)
 ms.topic: reference
 ms.date: 03/18/2021
@@ -12,12 +12,12 @@ api_type:
 - COM
 api_location:
 - endpointdlp.h
-ms.openlocfilehash: d0ccc8d0d39bc4022899deaeb9e8a81eae1f720f
-ms.sourcegitcommit: 91110c16e4713ed82d7fb80562d3ddf40b5d76b2
+ms.openlocfilehash: 99bd06a41c88ff0b5a02b9b329877c015aea7dfb3fdbc58fea3c2e305829faf1
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/14/2021
-ms.locfileid: "107495773"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119349350"
 ---
 # <a name="dlpappenforcelevel-enumeration"></a>DlpAppEnforceLevel-Enumeration
 
@@ -86,12 +86,12 @@ Der Höchstwert der Enumeration.
 
 
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
 Werte aus dieser Enumeration werden von der [DLP_APP_OP_ENLIGHTENED_LEVEL](endpointdlp-dlp_app_op_enlightened_level.md) verwendet.
 
 
-## <a name="requirements"></a>Requirements (Anforderungen)
+## <a name="requirements"></a>Anforderungen
 
 
 

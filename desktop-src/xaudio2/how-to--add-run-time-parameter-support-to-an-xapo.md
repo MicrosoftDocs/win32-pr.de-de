@@ -20,7 +20,7 @@ Sie können einer XAPO Laufzeitparameterunterstützung hinzufügen, indem Sie di
 3.  Fügen Sie der Implementierung von [**IXAPO::P rocess**](/windows/win32/api/xapo/nf-xapo-ixapo-process)Aufrufe der Methoden [**CXAPOParametersBase::BeginProcess**](/windows/win32/api/xapobase/nf-xapobase-cxapoparametersbase-beginprocess) und [**CXAPOParametersBase::EndProcess**](/windows/win32/api/xapobase/nf-xapobase-cxapoparametersbase-endprocess) hinzu.
 
     > [!Note]  
-    > Durch Hinzufügen dieser Methoden zu [IXAPO::P rocess](how-to--build-a-basic-audio-processing-graph.md) kann [**CXAPOParametersBase**](/windows/desktop/api/XAPOBase/nl-xapobase-cxapoparametersbase) die Kopien der Effektparameter in einem threadsicheren Zustand speichern. Rufen Sie [**CXAPOParametersBase::BeginProcess**](/windows/win32/api/xapobase/nf-xapobase-cxapoparametersbase-beginprocess) am Anfang von [**IXAPO::P rocess**](/windows/win32/api/xapo/nf-xapo-ixapo-process)und [**CXAPOParametersBase::EndProcess**](/windows/win32/api/xapobase/nf-xapobase-cxapoparametersbase-endprocess) am Ende von **IXAPO::P rocess** auf.
+    > Durch Das Hinzufügen dieser Methoden zu [IXAPO::P rocess](how-to--build-a-basic-audio-processing-graph.md) kann [**CXAPOParametersBase**](/windows/desktop/api/XAPOBase/nl-xapobase-cxapoparametersbase) die Kopien der Effektparameter in einem threadsicheren Zustand speichern. Rufen Sie [**CXAPOParametersBase::BeginProcess**](/windows/win32/api/xapobase/nf-xapobase-cxapoparametersbase-beginprocess) am Anfang von [**IXAPO::P rocess**](/windows/win32/api/xapo/nf-xapo-ixapo-process)und [**CXAPOParametersBase::EndProcess**](/windows/win32/api/xapobase/nf-xapobase-cxapoparametersbase-endprocess) am Ende von **IXAPO::P rocess** auf.
 
      
 

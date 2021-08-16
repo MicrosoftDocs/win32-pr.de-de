@@ -4,12 +4,12 @@ ms.assetid: 071dc91f-3574-4e0e-b2ba-0e4a56ce4a28
 title: Geschachtelte ScoredProperty-Instanzen
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 15a80d291fa59b2f36191f42b2f99ea9d22789a2
-ms.sourcegitcommit: 5d4e99f4c8f42f5f543e52cb9beb9fb13ec56c5f
+ms.openlocfilehash: 0824e5645d723cdf3f0f45d985f3dd06b8c1b74de32fd2e47bb5843e37c2540f
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2021
-ms.locfileid: "112408603"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119099044"
 ---
 # <a name="nested-scoredproperty-instances"></a>Geschachtelte ScoredProperty-Instanzen
 
@@ -30,7 +30,7 @@ Beachten Sie, dass Sie nicht auf das Hinzufügen von ScoredProperty-Instanzen al
 </psf:ScoredProperty>
 ```
 
-Ein Vergleich der ursprünglichen und erweiterten Option-Instanzen erzeugt eine nahezu perfekte Übereinstimmung, da die erweiterte Option eine Obermenge des Originals ist und die Speicherorte und Werte der einzelnen ursprünglichen ScoredProperty-Instanzen beibehalten werden.
+Ein Vergleich der ursprünglichen und erweiterten Option-Instanzen ergibt eine nahezu perfekte Übereinstimmung, da die erweiterte Option eine Obermenge des Originals ist und die Speicherorte und Werte der einzelnen ursprünglichen ScoredProperty-Instanzen beibehalten werden.
 
 ## <a name="related-topics"></a>Zugehörige Themen
 

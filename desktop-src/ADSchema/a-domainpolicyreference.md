@@ -1,11 +1,11 @@
 ---
-title: Domain-Policy-Reference-Attribut
-description: Der Distinguished Name eines Domänen Richtlinien Objekts, von dem ein Richtlinien Objekt kopiert wird.
+title: Domänenrichtlinien-Verweisattribut
+description: Der Distinguished Name eines Domänenrichtlinienobjekts, aus dem ein Richtlinienobjekt kopiert wird.
 ms.assetid: 914920de-6dc2-4dda-bf10-a34f5315eb74
 ms.tgt_platform: multiple
 keywords:
-- AD-Schema für Domänen Richtlinien Verweis-Attribut
-- domainpolicyreference-Attribut, AD-Schema
+- AD-Schema für Domänenrichtlinienreferenzattribut
+- domainPolicyReference-Attribut AD-Schema
 topic_type:
 - apiref
 api_name:
@@ -14,28 +14,28 @@ api_type:
 - Schema
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: f9723abde3bd04dc9c50f6b4c00f1ed80c4da0c2
-ms.sourcegitcommit: b77ace27b0432e7cd3863191b11926be032fbe2f
+ms.openlocfilehash: e066b635aac650d0dc0c5713695ab9a1842d289fa3562470191e895bf6870f1b
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "103957346"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119656900"
 ---
-# <a name="domain-policy-reference-attribute"></a>Domain-Policy-Reference-Attribut
+# <a name="domain-policy-reference-attribute"></a>Domänenrichtlinien-Verweisattribut
 
-Der Distinguished Name eines Domänen Richtlinien Objekts, von dem ein Richtlinien Objekt kopiert wird.
+Der Distinguished Name eines Domänenrichtlinienobjekts, aus dem ein Richtlinienobjekt kopiert wird.
 
 
 
 | Eingabe | Wert |
 |-------------------|-----------------------------------------|
-| CN                | Domänen Richtlinien Referenz                 |
-| LDAP-Display-Name | domainpolicyreference                   |
+| CN                | Domänenrichtlinienreferenz                 |
+| Ldap-Anzeigename | domainPolicyReference                   |
 | Size              | \-                                      |
-| Berechtigung aktualisieren  | \-                                      |
-| Aktualisierungshäufigkeit  | \-                                      |
+| Aktualisieren von Berechtigungen  | \-                                      |
+| Updatehäufigkeit  | \-                                      |
 | Attribute-Id      | 1.2.840.113556.1.4.422                  |
-| System-ID-GUID    | 80a67e2a-9F 22-11D0-AFDD-00c04f 930c9    |
+| System-ID-GUID    | 80a67e2a-9f22-11d0-afdd-00c04fd930c9    |
 | Syntax            | [**Object(DS-DN)**](s-object-ds-dn.md) |
 
 
@@ -43,7 +43,7 @@ Der Distinguished Name eines Domänen Richtlinien Objekts, von dem ein Richtlini
 ## <a name="implementations"></a>Implementierungen
 
 -   [**Windows 2000 Server**](#windows-2000-server)
--   [**Windows Server 2003**](#windows-server-2003)
+-   [**Windows Server 2003**](#windows-server-2003)
 -   [**Windows Server 2003 R2**](#windows-server-2003-r2)
 -   [**Windows Server 2008**](#windows-server-2008)
 -   [**Windows Server 2008 R2**](#windows-server-2008-r2)
@@ -58,19 +58,19 @@ Der Distinguished Name eines Domänen Richtlinien Objekts, von dem ein Richtlini
 | Link-ID                | \-                                                 |
 | MAPI-Id                | \-                                                 |
 | System-Only            | False                                              |
-| Ist-einwertig       | Richtig                                               |
+| Ist einwertig       | True                                               |
 | Ist indiziert             | False                                              |
 | Im globalen Katalog      | False                                              |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                       |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                       |
 | Range-Lower            | \-                                                 |
 | Range-Upper            | \-                                                 |
 | Search-Flags           | 0x00000000                                         |
 | System-Flags           | 0x00000010                                         |
-| In verwendete Klassen        | [**Domänen Richtlinie**](c-domainpolicy.md)<br/> |
+| In verwendete Klassen        | [**Domänenrichtlinie**](c-domainpolicy.md)<br/> |
 
 
 
-## <a name="windows-server-2003"></a>Windows Server 2003
+## <a name="windows-server-2003"></a>Windows Server 2003
 
 
 
@@ -79,15 +79,15 @@ Der Distinguished Name eines Domänen Richtlinien Objekts, von dem ein Richtlini
 | Link-ID                | \-                                                 |
 | MAPI-Id                | \-                                                 |
 | System-Only            | False                                              |
-| Ist-einwertig       | Richtig                                               |
+| Ist einwertig       | True                                               |
 | Ist indiziert             | False                                              |
 | Im globalen Katalog      | False                                              |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                       |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                       |
 | Range-Lower            | \-                                                 |
 | Range-Upper            | \-                                                 |
 | Search-Flags           | 0x00000000                                         |
 | System-Flags           | 0x00000010                                         |
-| In verwendete Klassen        | [**Domänen Richtlinie**](c-domainpolicy.md)<br/> |
+| In verwendete Klassen        | [**Domänenrichtlinie**](c-domainpolicy.md)<br/> |
 
 
 
@@ -100,15 +100,15 @@ Der Distinguished Name eines Domänen Richtlinien Objekts, von dem ein Richtlini
 | Link-ID                | \-                                                 |
 | MAPI-Id                | \-                                                 |
 | System-Only            | False                                              |
-| Ist-einwertig       | Richtig                                               |
+| Ist einwertig       | True                                               |
 | Ist indiziert             | False                                              |
 | Im globalen Katalog      | False                                              |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                       |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                       |
 | Range-Lower            | \-                                                 |
 | Range-Upper            | \-                                                 |
 | Search-Flags           | 0x00000000                                         |
 | System-Flags           | 0x00000010                                         |
-| In verwendete Klassen        | [**Domänen Richtlinie**](c-domainpolicy.md)<br/> |
+| In verwendete Klassen        | [**Domänenrichtlinie**](c-domainpolicy.md)<br/> |
 
 
 
@@ -121,15 +121,15 @@ Der Distinguished Name eines Domänen Richtlinien Objekts, von dem ein Richtlini
 | Link-ID                | \-                                                 |
 | MAPI-Id                | \-                                                 |
 | System-Only            | False                                              |
-| Ist-einwertig       | Richtig                                               |
+| Is-Single-Valued       | True                                               |
 | Ist indiziert             | False                                              |
 | Im globalen Katalog      | False                                              |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                       |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                       |
 | Range-Lower            | \-                                                 |
 | Range-Upper            | \-                                                 |
 | Search-Flags           | 0x00000000                                         |
 | System-Flags           | 0x00000010                                         |
-| In verwendete Klassen        | [**Domänen Richtlinie**](c-domainpolicy.md)<br/> |
+| In verwendete Klassen        | [**Domänenrichtlinie**](c-domainpolicy.md)<br/> |
 
 
 
@@ -142,15 +142,15 @@ Der Distinguished Name eines Domänen Richtlinien Objekts, von dem ein Richtlini
 | Link-ID                | \-                                                 |
 | MAPI-Id                | \-                                                 |
 | System-Only            | False                                              |
-| Ist-einwertig       | Richtig                                               |
+| Is-Single-Valued       | True                                               |
 | Ist indiziert             | False                                              |
 | Im globalen Katalog      | False                                              |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                       |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                       |
 | Range-Lower            | \-                                                 |
 | Range-Upper            | \-                                                 |
 | Search-Flags           | 0x00000000                                         |
 | System-Flags           | 0x00000010                                         |
-| In verwendete Klassen        | [**Domänen Richtlinie**](c-domainpolicy.md)<br/> |
+| In verwendete Klassen        | [**Domänenrichtlinie**](c-domainpolicy.md)<br/> |
 
 
 
@@ -163,15 +163,15 @@ Der Distinguished Name eines Domänen Richtlinien Objekts, von dem ein Richtlini
 | Link-ID                | \-                                                 |
 | MAPI-Id                | \-                                                 |
 | System-Only            | False                                              |
-| Ist-einwertig       | Richtig                                               |
+| Is-Single-Valued       | True                                               |
 | Ist indiziert             | False                                              |
 | Im globalen Katalog      | False                                              |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                       |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                       |
 | Range-Lower            | \-                                                 |
 | Range-Upper            | \-                                                 |
 | Search-Flags           | 0x00000000                                         |
 | System-Flags           | 0x00000010                                         |
-| In verwendete Klassen        | [**Domänen Richtlinie**](c-domainpolicy.md)<br/> |
+| In verwendete Klassen        | [**Domänenrichtlinie**](c-domainpolicy.md)<br/> |
 
 
 

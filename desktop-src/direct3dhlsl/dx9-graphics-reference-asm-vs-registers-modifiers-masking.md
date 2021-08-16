@@ -1,6 +1,6 @@
 ---
-title: Ziel Register Maskierung
-description: Die Maskierung gibt an, welche Komponenten des Ziel Registers mit dem Ergebnis einer Anweisung aktualisiert werden. Textur Register verfügen über einen Regelsatz, und nicht Textur Register verfügen über einen anderen Satz von Regeln.
+title: Zielregistermaskierung
+description: Die Maskierung gibt an, welche Komponenten des Zielregisters mit dem Ergebnis einer Anweisung aktualisiert werden. Texturregister verfügen über einen Satz von Regeln, und Nichttexturregister verfügen über einen anderen Satz von Regeln.
 ms.assetid: 989ebe55-1f80-4063-b116-4284520f52cc
 ms.topic: article
 ms.date: 05/31/2018
@@ -9,56 +9,56 @@ topic_type:
 api_name: ''
 api_type: ''
 api_location: ''
-ms.openlocfilehash: 7ce15f75f424cb7796ef7db7a8b89bd5bcbfa9cf
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: ee1a8d45e847f7da785bd09b83e778d140cee68007add882066b508b38043550
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "104388520"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119119684"
 ---
-# <a name="destination-register-masking"></a>Ziel Register Maskierung
+# <a name="destination-register-masking"></a>Zielregistermaskierung
 
-Die Maskierung gibt an, welche Komponenten des Ziel Registers mit dem Ergebnis einer Anweisung aktualisiert werden. Textur Register verfügen über einen Regelsatz, und nicht Textur Register verfügen über einen anderen Satz von Regeln.
+Die Maskierung gibt an, welche Komponenten des Zielregisters mit dem Ergebnis einer Anweisung aktualisiert werden. Texturregister verfügen über einen Satz von Regeln, und Nichttexturregister verfügen über einen anderen Satz von Regeln.
 
--   DX9 \_ Graphics \_ Reference \_ ASM \_ vs \_ registriert \_ \_ modifizierermaskierung: Dieser Abschnitt enthält Regeln zum Anwenden von Masken auf Ziel Register.
--   Textur \_ Register \_ Masken: Textur Register verfügen über einige eindeutige Regeln.
+-   dx9 \_ graphics \_ reference \_ asm vs \_ \_ registers \_ modifizierer \_ maskierung: Dieser Abschnitt enthält Regeln zum Anwenden von Masken auf Zielregister.
+-   \_ \_ Texturregistermasken: Texturregister verfügen über einige eindeutige Regeln.
 
-## <a name="destination-register-masking"></a>Ziel Register Maskierung
+## <a name="destination-register-masking"></a>Zielregistermaskierung
 
-Wie in der folgenden Tabelle gezeigt, kann die Maskierung (wobei eine der gültigen Vertex-Shader- [Register für Vertex-Shader](dx9-graphics-reference-asm-vs-registers.md)ist) auf die einzelnen Komponenten der Vektordaten angewendet werden.
+Wie in der folgenden Tabelle gezeigt, kann die Maskierung (wobei einer der gültigen [Vertex-Shader-Vertex-Shaderregister](dx9-graphics-reference-asm-vs-registers.md)ist) auf die einzelnen Komponenten der Vektordaten angewendet werden.
 
 
 
-| Komponentenmodifizierer | BESCHREIBUNG      |
+| Komponentenmodifizierer | Beschreibung      |
 |--------------------|------------------|
-| r. {x} {y} {z} {w}     | Ziel Maske |
+| r.{x}{y}{z}{w}     | Zielmaske |
 
 
 
- 
+ 
 
--   Im Allgemeinen ist die Angabe von Schreib Masken für die Ziel Registrierung ein guter Codierungsstil. Dadurch wird der Code einfacher zu lesen und zu warten.
--   Eine beliebige Kombination von Komponenten kann angegeben werden (einschließlich "None"), solange "x" vor "y", "y" vor "z" und "z" vorangeht.
--   Die OPTS-und ofog-Ausgabe Register dürfen nur eine Maske verwenden.
--   Bestimmte Anweisungen erfordern, dass das Ziel Register eine einzelne Schreib Maske verwendet: Exp, EXPP, Log, LogP, Pow, rcp und RSQ.
--   In Version 1,0 erforderte die FRC-Anweisung eine der folgenden Masken Kombinationen:. x oder. y oder. XY. Version 2,0 hat keine Masken Einschränkung.
--   SinCos erfordert eine der folgenden Masken Kombinationen:. x,. y oder. xyz.
--   m3x2 erfordert die. XY-Schreib Maske.
--   M3x3 und m4x3 erfordern die Schreib Maske ". xyz".
--   M3x4 und M4x4 erfordern entweder die. XYZ-Schreib Maske oder die Standard Schreib Maske (xyzw).
+-   Im Allgemeinen ist die Angabe von Zielregister-Schreibmasken ein guter Codierungsstil. Dies erleichtert das Lesen und Verwalten von Code.
+-   Eine beliebige Kombination von Komponenten kann (einschließlich keiner) angegeben werden, solange x vor y, y vor z und z vor w.
+-   Die oPts- und oFog-Ausgaberegister dürfen nur eine Maske verwenden.
+-   Bestimmte Anweisungen erfordern, dass das Zielregister eine einzelne Schreibmaske verwendet: exp, expp, log, logp, pow, rcp und rsq.
+-   In Version 1.0 erforderte die frc-Anweisung eine der folgenden Maskenkombinationen: .x oder .y oder .xy. Für Version 2.0 gelten keine Maskeneinschränkungen.
+-   sincos erfordert eine der folgenden Maskenkombinationen: .x oder .y oder .xyz.
+-   m3x2 erfordert die XY-Schreibmaske.
+-   m3x3 und m4x3 erfordern die Schreibmaske .xyz.
+-   m3x4 und m4x4 erfordern entweder die Schreibmaske .xyz oder die Standardschreibmaske (xyzw).
 
-## <a name="texture-register-masks"></a>Textur Register Masken
+## <a name="texture-register-masks"></a>Texturregistermasken
 
-Die Validierungsregeln für die Verwendung von modifiziererregistern für Texturkoordinaten Register sind enger als die Validierungsregeln für andere Register.
+Die Validierungsregeln für die Verwendung von Modifizierern für Texturkoordinatenregister sind enger als die Validierungsregeln für andere Register.
 
--   Wenn OTN geschrieben ist, müssen auch alle vorherigen Register (OTN-1 ~ oT0) geschrieben werden.
--   Die "kombinierte" Schreib Maske für alle oT- \# Register muss genau eines der folgenden sein:
+-   Wenn oTn geschrieben wird, müssen auch alle vorherigen Register (oTn-1 ~ oT0) geschrieben werden.
+-   Die "kombinierte" Schreibmaske für ein beliebiges \# oT-Register muss genau eine der folgenden Sein:
     -   .x
-    -   . XY
-    -   . XYZ
-    -   . xyzw (entspricht nicht der Verwendung von komponentenmodifizierersätzen)
+    -   .xy
+    -   .xyz
+    -   .xyzw (entspricht nicht der Verwendung von Komponentenmodifizierern)
 
-Beispielsweise kann ein Vertex-Shader in separaten Anweisungen an Textur Register ausgeben.
+Beispielsweise kann ein Vertex-Shader in separaten Anweisungen an Texturregister ausgegeben werden.
 
 
 ```
@@ -71,7 +71,7 @@ Beispielsweise kann ein Vertex-Shader in separaten Anweisungen an Textur Registe
 
 
 
-Oder die Anweisungen können kombiniert werden.
+Alternativ können die Anweisungen kombiniert werden.
 
 
 ```
@@ -82,18 +82,18 @@ Oder die Anweisungen können kombiniert werden.
 
 
 
-Diese Einschränkungen gelten nur für die Texturkoordinaten Register.
+Diese Einschränkungen gelten nur für die Texturkoordinatenregister.
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
 <dl> <dt>
 
-[Vertex-Shader-registermodifiziererer](dx9-graphics-reference-asm-vs-registers-modifiers.md)
+[Vertex-Shader-Registermodifizierer](dx9-graphics-reference-asm-vs-registers-modifiers.md)
 </dt> </dl>
 
- 
+ 
 
- 
+ 
 
 
 

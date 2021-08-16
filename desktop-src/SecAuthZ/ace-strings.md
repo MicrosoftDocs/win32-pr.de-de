@@ -15,7 +15,7 @@ ms.locfileid: "117785401"
 
 Die [Sicherheitsdeskriptordefinitionssprache (Security Descriptor Definition Language,](security-descriptor-definition-language.md) SDDL) verwendet ACE-Zeichenfolgen in den DACL- und SACL-Komponenten einer [*Sicherheitsbeschreibungszeichenfolge.*](/windows/desktop/SecGloss/s-gly)
 
-Wie in den Beispielen zum [Sicherheitsdeskriptorzeichenfolgenformat](security-descriptor-string-format.md) gezeigt, wird jeder ACE in einer Sicherheitsdeskriptorzeichenfolge in Klammern eingeschlossen. Die Felder des ACE befinden sich in der folgenden Reihenfolge und werden durch Semikolons (;).
+Wie in den Beispielen zum [Sicherheitsdeskriptorzeichenfolgenformat](security-descriptor-string-format.md) gezeigt, wird jeder ACE in einer Sicherheitsdeskriptorzeichenfolge in Klammern eingeschlossen. Die Felder des ACE sind in der folgenden Reihenfolge und durch Semikolons (;) getrennt.
 
 > [!Note]  
 > Es gibt ein anderes Format für [*bedingte Zugriffssteuerungseinträge*](/windows/desktop/SecGloss/a-gly) (Conditional Access Control Entries, ACEs) als für andere ACE-Typen. Informationen zu bedingten ACEs finden Sie unter [Sicherheitsbeschreibungsdefinitionssprache für bedingte ACEs.](security-descriptor-definition-language-for-conditional-aces-.md)
@@ -81,7 +81,7 @@ Eine Zeichenfolge, die den Wert des **AceFlags-Members** der [**ACE \_ HEADER-St
 | „ID“             | SDDL \_ GEERBT          | GEERBTER \_ ACE                |
 | "SA"             | SDDL \_ AUDIT \_ SUCCESS     | ACE-FLAG FÜR \_ ERFOLGREICHEN ZUGRIFF \_ \_ |
 | "FA"             | FEHLER BEI DER \_ SDDL-ÜBERWACHUNG \_     | ACE-FLAG FÜR \_ FEHLGESCHLAGENEN ZUGRIFF \_ \_     |
-| "TP"             | SDDL \_ TRUST \_ PROTECTED \_ FILTER | WINDOWS SERVER 2016 \_ DES ACE-FLAGS FÜR GESCHÜTZTE \_ FILTER \_ \_ **VERTRAUEN, Windows 10 Version 1607, Windows 10 Version 1511, Windows 10 Version 1507, Windows Server 2012 R2, Windows 8.1, Windows Server 2012, Windows 8, Windows Server 2008 R2, Windows 7, Windows Server 2008, Windows Vista und Windows Server 2003:** Nicht verfügbar. |
+| "TP"             | SDDL \_ TRUST \_ PROTECTED \_ FILTER | WINDOWS SERVER 2016 DES \_ ACE-FLAGS FÜR GESCHÜTZTE \_ FILTER \_ \_ **VERTRAUEN, Windows 10 Version 1607, Windows 10 Version 1511, Windows 10 Version 1507, Windows Server 2012 R2, Windows 8.1, Windows Server 2012, Windows 8, Windows Server 2008 R2, Windows 7, Windows Server 2008, Windows Vista und Windows Server 2003:** Nicht verfügbar. |
 | "CR"             | SDDL \_ CRITICAL           | CRITICAL \_ ACE FLAG Windows Server Version \_ **1803, Windows 10 Version 1803, Windows Server Version 1709, Windows 10 Version 1709, Windows 10 Version 1703, Windows Server 2016, Windows 10 Version 1607, Windows 10 Version 1511, Windows 10 Version 1507, Windows Server 2012 R2, Windows 8.1, Windows Server 2012, Windows 8, Windows Server 2008 R2, Windows 7, Windows Server 2008, Windows Vista und Windows Server 2003:** Nicht verfügbar. |
  
 
@@ -148,17 +148,17 @@ Eine Zeichenfolge, die die vom ACE gesteuerten [Zugriffsrechte](access-rights-an
 
 ### <a name="mandatory-label-rights"></a>Obligatorische Bezeichnungsrechte
 
-| Zugriffsberechtigungszeichenfolge | Konstante in "Sddl.h" | Zugriffsrechtwert |
+| Zugriffsberechtigungszeichenfolge | Konstante in Sddl.h | Zugriff auf den richtigen Wert |
 |----------------------|--------------------|--------------------|
-| "NR"                 | SDDL \_ NO \_ READ \_ UP | \_SYSTEM MANDATORY LABEL NO READ UP Windows Server \_ \_ \_ \_ **2008, Windows Vista and Windows Server 2003:** Not available. |
-| "NW"                 | SDDL \_ OHNE \_ \_ SCHREIBZUGRIFF | \_SYSTEM MANDATORY LABEL NO WRITE UP Windows Server \_ \_ \_ \_ **2008, Windows Vista and Windows Server 2003:** Not available. |
-| "NX"                 | SDDL \_ NO \_ EXECUTE \_ UP | \_SYSTEM MANDATORY LABEL NO EXECUTE UP Windows Server \_ \_ \_ \_ **2008, Windows Vista and Windows Server 2003:** Not available. |
+| "NR"                 | SDDL \_ NO \_ READ \_ UP | OBLIGATORISCHE \_ \_ SYSTEMBEZEICHNUNG \_ NO READ UP Windows Server \_ \_ **2008, Windows Vista and Windows Server 2003:** Not available. |
+| "NW"                 | SDDL \_ NO \_ WRITE \_ UP | OBLIGATORISCHE \_ \_ SYSTEMBEZEICHNUNG \_ NO WRITE UP Windows Server \_ \_ **2008, Windows Vista and Windows Server 2003:** Not available. |
+| "NX"                 | SDDL \_ NO \_ EXECUTE \_ UP | OBLIGATORISCHE \_ \_ SYSTEMBEZEICHNUNG \_ NO EXECUTE UP Windows Server \_ \_ **2008, Windows Vista und Windows Server 2003:** Nicht verfügbar. |
 </dd> <dt>
 
 <span id="object_guid"></span><span id="OBJECT_GUID"></span>**\_Objekt-GUID**
 </dt> <dd>
 
-Eine Zeichenfolgendarstellung einer GUID, die den Wert des **ObjectType-Members** einer objektspezifischen ACE-Struktur angibt, z. B. [**ACCESS ALLOWED OBJECT \_ \_ \_ ACE**](/windows/desktop/api/Winnt/ns-winnt-access_allowed_object_ace). Die GUID-Zeichenfolge verwendet das format, das von der [**UuidToString-Funktion**](/windows/desktop/api/rpcdce/nf-rpcdce-uuidtostring) zurückgegeben wird.
+Eine Zeichenfolgendarstellung einer GUID, die den Wert des **ObjectType-Members** einer objektspezifischen ACE-Struktur angibt, z. B. [**ACCESS ALLOWED OBJECT \_ \_ \_ ACE**](/windows/desktop/api/Winnt/ns-winnt-access_allowed_object_ace). Die GUID-Zeichenfolge verwendet das von der [**UuidToString-Funktion zurückgegebene**](/windows/desktop/api/rpcdce/nf-rpcdce-uuidtostring) Format.
 
 In der folgenden Tabelle sind einige häufig verwendete Objekt-GUIDs aufgeführt.
 
@@ -175,32 +175,32 @@ In der folgenden Tabelle sind einige häufig verwendete Objekt-GUIDs aufgeführt
 
 </dd> <dt>
 
-<span id="inherit_object_guid"></span><span id="INHERIT_OBJECT_GUID"></span>**\_Erben der \_ Objekt-GUID**
+<span id="inherit_object_guid"></span><span id="INHERIT_OBJECT_GUID"></span>**\_ \_ Objekt-GUID erben**
 </dt> <dd>
 
-Eine Zeichenfolgendarstellung einer GUID, die den Wert des **InheritedObjectType-Elements** einer objektspezifischen ACE-Struktur angibt. Die GUID-Zeichenfolge verwendet das [**UuidToString-Format.**](/windows/desktop/api/rpcdce/nf-rpcdce-uuidtostring)
+Eine Zeichenfolgendarstellung einer GUID, die den Wert des **InheritedObjectType-Members** einer objektspezifischen ACE-Struktur angibt. Die GUID-Zeichenfolge verwendet das [**UuidToString-Format.**](/windows/desktop/api/rpcdce/nf-rpcdce-uuidtostring)
 
 </dd> <dt>
 
 <span id="account_sid"></span><span id="ACCOUNT_SID"></span>**account \_ sid**
 </dt> <dd>
 
-[SID-Zeichenfolge,](sid-strings.md) die den [Vertrauensnehmer](trustees.md) des ACE identifiziert.
+[SID-Zeichenfolge,](sid-strings.md) die den [Vertrauenshänder](trustees.md) des ACE identifiziert.
 
 </dd> <dt>
 
 <span id="resource_attribute"></span><span id="RESOURCE_ATTRIBUTE"></span>**\_Ressourcenattribut**
 </dt> <dd>
 
-\[OPTIONAL \] Das \_ Ressourcenattribut ist nur für Ressourcen-ACEs und optional. Eine Zeichenfolge, die den Datentyp angibt. Der Ace-Datentyp des Ressourcenattributs kann einer der folgenden Datentypen sein, die in Sddl.h definiert sind.
+\[OPTIONAL \] Das \_ Ressourcenattribut gilt nur für Ressourcen-ACEs und ist optional. Eine Zeichenfolge, die den Datentyp angibt. Der Ace-Datentyp des Ressourcenattributs kann einer der folgenden Datentypen sein, die in Sddl.h definiert sind.
 
-Das \# Zeichen "" ist synonym mit "0" in Ressourcenattributen. Beispiel: D:AI(XA;OICI;FA;;; WD;(OctetStringType== \# 1 \# 2 \# 3 \# \# )) entspricht und wird als D:AI(XA;OICI;FA;;; interpretiert. WD;(OctetStringType== \# 01020300)).
+Das \# ""-Zeichen ist synonym mit "0" in Ressourcenattributen. Beispiel: D:AI(XA;OICI;FA;;; WD;(OctetStringType== \# 1 \# 2 \# 3 )) entspricht \# \# D:AI(XA;OICI;FA;;; WD;(OctetStringType== \# 01020300)).
 
 **Windows Server 2008 R2, Windows 7, Windows Server 2008, Windows Vista und Windows Server 2003:** Ressourcenattribute sind nicht verfügbar.
 
 
 
-| Ace-Datentypzeichenfolge für Ressourcenattribut | Konstante in "Sddl.h" | Datentyp        |
+| Ressourcenattribut ace-Datentypzeichenfolge | Konstante in Sddl.h | Datentyp        |
 |-----------------------------------------|--------------------|------------------|
 | "TI"                                    | SDDL \_ INT          | Ganze Zahl mit Vorzeichen   |
 | "TU"                                    | SDDL \_ UINT         | Ganze Zahl ohne Vorzeichen |
@@ -215,7 +215,7 @@ Das \# Zeichen "" ist synonym mit "0" in Ressourcenattributen. Beispiel: D:AI(XA
 
 </dd> </dl>
 
-Das folgende Beispiel zeigt eine ACE-Zeichenfolge für einen zugriffsberechtigten ACE. Da es sich nicht um einen objektspezifischen ACE handelt, enthält er keine Informationen in der **\_ Objekt-GUID** und **erbt \_ \_ Objekt-GUID-Felder.** Das Feld **ace \_ flags** ist ebenfalls leer, was angibt, dass keines der ACE-Flags festgelegt ist.
+Das folgende Beispiel zeigt eine ACE-Zeichenfolge für einen zugriffsbasierten ACE. Da es sich nicht um einen objektspezifischen ACE handelt, enthält er keine Informationen in den Feldern **\_ "Objekt-GUID"** und **\_ "Objekt-GUID \_ erben".** Das **Feld \_ ace flags** ist ebenfalls leer, was darauf hinweist, dass keines der ACE-Flags festgelegt ist.
 
 
 ```C++
@@ -241,7 +241,7 @@ Ace Sid      : (S-1-1-0)
 
 
 
-Das folgende Beispiel zeigt eine Datei, die mit Ressourcenansprüchen für Windows und strukturierte Abfragesprache (SQL) klassifiziert ist, wobei Secrecy auf High Business Impact festgelegt ist.
+Das folgende Beispiel zeigt eine Datei, die mit Ressourcenansprüchen für Windows und strukturierte Abfragesprache (SQL) klassifiziert ist, bei der "Secrecy" auf "High Business Impact" festgelegt ist.
 
 
 ```C++
@@ -264,12 +264,12 @@ Resource Attributes: Project has the strings Windows and SQL, Secrecy has the un
 
 
 
-Weitere Informationen finden Sie unter [Security Descriptor String Format (Format der Sicherheitsbeschreibungszeichenfolge)](security-descriptor-string-format.md) und [SID Strings (SID-Zeichenfolgen).](sid-strings.md) Informationen zu bedingten ACEs finden Sie unter [Sicherheitsbeschreibungsdefinitionssprache für bedingte ACEs.](security-descriptor-definition-language-for-conditional-aces-.md)
+Weitere Informationen finden Sie unter [Sicherheitsdeskriptor-Zeichenfolgenformat](security-descriptor-string-format.md) und [SID-Zeichenfolgen.](sid-strings.md) Informationen zu bedingten ACEs finden Sie unter [Sicherheitsbeschreibungsdefinitionssprache für bedingte ACEs.](security-descriptor-definition-language-for-conditional-aces-.md)
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
 <dl> <dt>
 
-[\[MS-DTYP: \] Beschreibungssprache des Sicherheitsdeskriptors](/openspecs/windows_protocols/ms-dtyp/4f4251cc-23b6-44b6-93ba-69688422cb06)
+[\[MS-DTYP: \] Beschreibungssprache für Sicherheitsbeschreibungen](/openspecs/windows_protocols/ms-dtyp/4f4251cc-23b6-44b6-93ba-69688422cb06)
 </dt> </dl>
 

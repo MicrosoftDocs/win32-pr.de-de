@@ -1,35 +1,35 @@
 ---
-description: Wird von der Netzwerkquelle ausgelöst, wenn mit dem Öffnen einer URL begonnen wird.
+description: Wird von der Netzwerkquelle ausgelöst, wenn eine URL geöffnet wird.
 ms.assetid: 0844ac10-cc5b-4e7f-92df-3a5901c72148
-title: Meconnectstart-Ereignis (mfobjects. h)
+title: MEConnectStart-Ereignis (Mfobjects.h)
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: d8e45d723a62854c34ba7b297e462d03fed97a9b
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 01360d452e6b20bde9e7aaaaf9e678cab1b3c6fe912e9682949dfc24e1e7d5cc
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104527431"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120013850"
 ---
-# <a name="meconnectstart-event"></a>Meconnectstart-Ereignis
+# <a name="meconnectstart-event"></a>MEConnectStart-Ereignis
 
-Wird von der Netzwerkquelle ausgelöst, wenn mit dem Öffnen einer URL begonnen wird.
+Wird von der Netzwerkquelle ausgelöst, wenn eine URL geöffnet wird.
 
 ## <a name="event-values"></a>Ereigniswerte
 
-Mögliche Werte, die von [**imfmediaevent:: GetValue**](/windows/desktop/api/mfobjects/nf-mfobjects-imfmediaevent-getvalue) abgerufen werden, sind folgende.
+Mögliche Werte, die von [**DERMEDIAEVENT::GetValue abgerufen werden,**](/windows/desktop/api/mfobjects/nf-mfobjects-imfmediaevent-getvalue) sind:
 
 
 
 | VARTYPE              | BESCHREIBUNG                           |
 |----------------------|---------------------------------------|
-| VT \_ leer<br/> | Keine Ereignisdaten.<br/> <br/> |
+| VT \_ EMPTY<br/> | Keine Ereignisdaten.<br/> <br/> |
 
 
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Die Netzwerkquelle sendet dieses Ereignis direkt über die [**imfsourceopenmonitor:: onsourceevent**](/windows/desktop/api/mfidl/nf-mfidl-imfsourceopenmonitor-onsourceevent) -Methode der Anwendung an die Anwendung, nicht über die übliche [**imfmediaeventgenerator**](/windows/desktop/api/mfobjects/nn-mfobjects-imfmediaeventgenerator) -Schnittstelle.
+Die Netzwerkquelle sendet dieses Ereignis direkt über die [**METHODE DER ANWENDUNG DURCH DIESOURCEOpenMonitor::OnSourceEvent**](/windows/desktop/api/mfidl/nf-mfidl-imfsourceopenmonitor-onsourceevent) an die Anwendung, nicht über die übliche [**BESCHRIFTUNGMediaEventGenerator-Schnittstelle.**](/windows/desktop/api/mfobjects/nn-mfobjects-imfmediaeventgenerator)
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -37,20 +37,20 @@ Die Netzwerkquelle sendet dieses Ereignis direkt über die [**imfsourceopenmonit
 
 | Anforderung | Wert |
 |-------------------------------------|----------------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>                                                           |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2008 \[ -Desktop-Apps\]<br/>                                                     |
-| Header<br/>                   | <dl> <dt>Mfobjects. h (Include mfdl. h)</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur \[ Vista-Desktop-Apps\]<br/>                                                           |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2008-Desktop-Apps\]<br/>                                                     |
+| Header<br/>                   | <dl> <dt>Mfobjects.h (einschließlich Mfidl.h)</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**IMF sourceopenmonitor**](/windows/desktop/api/mfidl/nn-mfidl-imfsourceopenmonitor)
+[**DURCHSICHTQuelleOpenMonitor**](/windows/desktop/api/mfidl/nn-mfidl-imfsourceopenmonitor)
 </dt> <dt>
 
-[Ereignisse Media Foundation](media-foundation-events.md)
+[Media Foundation Ereignisse](media-foundation-events.md)
 </dt> </dl>
 
  

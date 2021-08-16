@@ -15,16 +15,16 @@ api_type:
 api_location:
 - Shlwapi.dll
 ms.assetid: 1108614d-7034-48da-a4a5-544f8d9af3ca
-ms.openlocfilehash: 38d331d57b9484ab6d7a505d929508f30d510ad8
-ms.sourcegitcommit: 3caaa3c92dcb1ef12f84464d14ce6262e65e988e
+ms.openlocfilehash: c38e84df2ca6f379e7d479125f1f454a10426406ba40ad21721fe01f67cce6f2
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/12/2021
-ms.locfileid: "109841211"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120090210"
 ---
 # <a name="mlhtmlhelp-function"></a>MLHtmlHelp-Funktion
 
-\[Diese Funktion ist über Windows XP und Windows Server 2003 verfügbar. Sie kann in nachfolgenden Versionen von Windows geändert oder nicht verfügbar sein.\]
+\[Diese Funktion ist über Windows XP und Windows Server 2003 verfügbar. Er kann in nachfolgenden Versionen von Windows geändert oder nicht verfügbar sein.\]
 
 Zeigt ein Hilfefenster an, das der aktuellen Einstellung der Benutzeroberflächensprache entspricht.
 
@@ -79,7 +79,7 @@ Der auszuführende Befehl. Diese Funktion unterstützt nur [HH \_ DISPLAY \_ TOP
 
 Typ: **DWORD \_ PTR**
 
-Alle daten, die erforderlich sein können, basierend auf dem Wert des *uCommand-Parameters.*
+Alle daten, die möglicherweise erforderlich sind, basierend auf dem Wert des *uCommand-Parameters.*
 
 </dd> <dt>
 
@@ -96,22 +96,22 @@ Der **DWORD-Wert,** der die Codepage der aktuellen Ui-Spracheinstellung angibt, 
 
 Typ: **HWND**
 
-Abhängig vom angegebenen *uCommand* und dem Ergebnis gibt **MLHtmlHelp** eine oder beide der folgenden Punkte zurück:
+Abhängig vom angegebenen *uCommand* und dem Ergebnis gibt **MLHtmlHelp** eine oder beide der folgenden Angaben zurück:
 
 -   Das Handle (hwnd) des Hilfefensters.
--   **NULL.** In einigen Fällen gibt **NULL einen** Fehler an. in anderen Fällen gibt **NULL** an, dass das Hilfefenster noch nicht erstellt wurde.
+-   **NULL**. In einigen Fällen weist **NULL** auf einen Fehler hin. in anderen Fällen gibt **NULL** an, dass das Hilfefenster noch nicht erstellt wurde.
 
 ## <a name="remarks"></a>Hinweise
 
 Wenn ein Problem mit dem Pfad der Hilfedatei für die aktuelle Sprache auftritt, wird der Aufruf zur Standardbehandlung an [HtmlHelp](/previous-versions/windows/desktop/htmlhelp/accessing-the-html-help-api) weitergeleitet.
 
-Wenn das Hilfefenster geschlossen ist, kehrt der Fokus zum Besitzer zurück, es sei denn, der Besitzer ist der Desktop. Wenn *hwndCaller* der Desktop ist, bestimmt das Betriebssystem, wo der Fokus zurückgegeben wird.
+Wenn das Hilfefenster geschlossen wird, wird der Fokus an den Besitzer zurückgegeben, es sei denn, der Besitzer ist der Desktop. Wenn *hwndCaller* der Desktop ist, bestimmt das Betriebssystem, wo der Fokus zurückgegeben wird.
 
-Wenn **MLHtmlHelp** darüber hinaus Benachrichtigungsmeldungen aus dem Hilfefenster sendet, werden die Nachrichten an [](/previous-versions/windows/desktop/htmlhelp/about-notification-messages) *hwndCaller* gesendet, solange Sie die Nachverfolgung von Benachrichtigungsmeldungen in der Hilfefensterdefinition aktiviert haben.
+Wenn **MLHtmlHelp** darüber hinaus Benachrichtigungsmeldungen aus dem Hilfefenster sendet, werden die Nachrichten an *hwndCaller* gesendet, solange Sie die Nachverfolgung von [Benachrichtigungsmeldungen](/previous-versions/windows/desktop/htmlhelp/about-notification-messages) in der Definition des Hilfefensters aktiviert haben.
 
 ## <a name="examples"></a>Beispiele
 
-Das folgende Beispiel ruft den [Befehl HH \_ DISPLAY \_ TOPIC](/previous-versions/windows/desktop/htmlhelp/hh-display-topic-command) auf, um die Hilfedatei mit dem Namen Help.chm zu öffnen und ihr Standardthema im Hilfefenster mit dem Namen `Mainwin` anzuzeigen. Im Allgemeinen ist das in diesem Befehl angegebene Hilfefenster ein standardmäßiger [HTML Help Viewer.](/previous-versions/windows/desktop/htmlhelp/html-help-viewer-topics)
+Im folgenden Beispiel wird der [HH \_ DISPLAY \_ TOPIC-Befehl](/previous-versions/windows/desktop/htmlhelp/hh-display-topic-command) zum Öffnen der Hilfedatei help.chm und zum Anzeigen des Standardthemas im Hilfefenster mit dem Namen `Mainwin` verwendet. Im Allgemeinen ist das in diesem Befehl angegebene Hilfefenster ein [standardmäßiger HTML-Hilfe-Viewer.](/previous-versions/windows/desktop/htmlhelp/html-help-viewer-topics)
 
 ``` syntax
 HWND hwnd = HtmlHelp(GetDesktopWindow(),
@@ -122,7 +122,7 @@ HWND hwnd = HtmlHelp(GetDesktopWindow(),
 ```
 
 > [!Note]  
-> Legen Sie bei Verwendung dieser Funktion die Stapelgröße der ausführbaren Hostdatei auf mindestens 100.000 fest. Wenn die definierte Stapelgröße zu klein ist, wird der Thread, der zum Ausführen der HTML-Hilfe erstellt wurde, ebenfalls mit dieser Stapelgröße erstellt, und der Vorgang kann fehlschlagen. Optional können Sie /STACK aus der Linkbefehlszeile entfernen und auch alle STACK-Einstellungen in der DEF-Datei der ausführbaren Datei entfernen (in diesem Fall ist die Standardstapelgröße 1 MB). Sie können die Stapelgröße auch mit dem Compilerbefehl /Fnumber festlegen (der Compiler über gibt diese als /STACK an den Linker weiter).
+> Legen Sie bei Verwendung dieser Funktion die Stapelgröße der ausführbaren Hostdatei auf mindestens 100.000 fest. Wenn die definierte Stapelgröße zu klein ist, wird der Thread, der zum Ausführen der HTML-Hilfe erstellt wurde, ebenfalls mit dieser Stapelgröße erstellt, und der Vorgang kann fehlschlagen. Optional können Sie /STACK über die Linkbefehlszeile und alle STACK-Einstellungen in der DEF-Datei der ausführbaren Datei entfernen (in diesem Fall beträgt die Standardstapelgröße 1 MB). Sie können die Stapelgröße auch mit dem Compilerbefehl /Fnumber festlegen (der Compiler übergibt dies als /STACK an den Linker).
 
  
 
@@ -132,8 +132,8 @@ HWND hwnd = HtmlHelp(GetDesktopWindow(),
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows 2000 Professional- und Windows \[ XP-Desktop-Apps\]<br/>                                        |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server \[ 2003-Desktop-Apps\]<br/>                                                          |
+| Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional, nur Windows \[ XP-Desktop-Apps\]<br/>                                        |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2003-Desktop-Apps\]<br/>                                                          |
 | Header<br/>                   | <dl> <dt>Keine</dt> </dl>                               |
 | DLL<br/>                      | <dl> <dt>Shlwapi.dll (Version 5.0 oder höher)</dt> </dl> |
 | Unicode- und ANSI-Name<br/>   | **MLHtmlHelpW** (Unicode) und **MLHtmlHelpA** (ANSI)<br/>                                               |

@@ -1,6 +1,6 @@
 ---
-title: Allgemeine Dialogfeldreferenz
-description: . | Allgemeine Dialogfeldreferenz
+title: Referenz zu allgemeinen Dialogfeldern
+description: . | Referenz zu allgemeinen Dialogfeldern
 ms.assetid: 0abb8407-a50d-4b01-a90f-d037d67183d8
 ms.topic: reference
 ms.date: 05/31/2018
@@ -11,7 +11,7 @@ ms.contentlocale: de-DE
 ms.lasthandoff: 08/11/2021
 ms.locfileid: "118786130"
 ---
-# <a name="common-dialog-box-reference"></a>Allgemeine Dialogfeldreferenz
+# <a name="common-dialog-box-reference"></a>Referenz zu allgemeinen Dialogfeldern
 
 ## <a name="in-this-section"></a>In diesem Abschnitt
 

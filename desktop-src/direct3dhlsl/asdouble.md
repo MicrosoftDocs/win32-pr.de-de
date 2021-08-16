@@ -1,9 +1,9 @@
 ---
-title: AsDouble-Funktion
-description: Interpretiert einen Umwandlungs Wert (2 32-Bit-Werte) in einen Double-Wert um.
+title: asdouble-Funktion
+description: Interpretiert einen Umwandlungswert (zwei 32-Bit-Werte) in einen Double neu.
 ms.assetid: 55e5276d-81e1-4e7e-8cb4-0beb57d2fb7f
 keywords:
-- AsDouble-Funktion HLSL
+- asdouble-Funktion HLSL
 topic_type:
 - apiref
 api_name:
@@ -13,23 +13,23 @@ api_type:
 ms.topic: reference
 ms.date: 05/31/2018
 api_location: ''
-ms.openlocfilehash: caa2c83ee01739a2e2ee9595d0a26e1bdb80fef1
-ms.sourcegitcommit: 57758ecb246c84d65e6e0e4bd5570d9176fa39cd
+ms.openlocfilehash: 0e191a2bf9ee7fb46337c3c7dfef7f8dea3525acf936ab745c07e7720f1ac509
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "104038141"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119626640"
 ---
-# <a name="asdouble-function"></a>AsDouble-Funktion
+# <a name="asdouble-function"></a>asdouble-Funktion
 
-Interpretiert einen Umwandlungs Wert (2 32-Bit-Werte) in einen Double-Wert um.
+Interpretiert einen Umwandlungswert (zwei 32-Bit-Werte) in einen Double neu.
 
 ## <a name="syntax"></a>Syntax
 
 ``` syntax
 double asdouble(
-  in uint lowbits,
-  in uint highbits
+  in uint lowbits,
+  in uint highbits
 );
 ```
 
@@ -37,79 +37,79 @@ double asdouble(
 
 <dl> <dt>
 
-*lowbits* \[ in\]
+*lowbits* \[ In\]
 </dt> <dd>
 
 Typ: **uint**
 
-Das niedrige 32-Bit-Muster des Eingabe Werts.
+Das niedrige 32-Bit-Muster des Eingabewerts.
 
 </dd> <dt>
 
-*highbits* \[ in\]
+*Highbits* \[ In\]
 </dt> <dd>
 
 Typ: **uint**
 
-Das High 32-Bit-Muster des Eingabe Werts.
+Das hohe 32-Bit-Muster des Eingabewerts.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Typ: **Double**
+Typ: **double**
 
-Die Eingabe (2 32-Bit-Werte) wird als Double-Wert umgewandelt.
+Die Eingabe (zwei 32-Bit-Werte) wird als Double-Wert umformiert.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Außerdem ist die folgende überladene Version verfügbar:
+Die folgende überladene Version ist ebenfalls verfügbar:
 
 ``` syntax
 double2 asdouble(uint2 lowbits, uint2 highbits);
 ```
 
-Wenn der Eingabe Wert 2 32-Bit-Komponenten ist, enthält der Rückgabetyp einen Double-Wert. Wenn der Eingabe Wert 4 32-Bit-Komponenten ist, enthält der Rückgabetyp zwei Double-Werte. Wenn der Eingabe Wert ein 64-Bit-Typ ist, hat der zurückgegebene Wert die gleiche Anzahl von Komponenten wie der Eingabe Wert.
+Wenn der Eingabewert zwei 32-Bit-Komponenten ist, enthält der Rückgabetyp ein Double. Wenn der Eingabewert vier 32-Bit-Komponenten ist, enthält der Rückgabetyp zwei Doubles. Wenn der Eingabewert ein 64-Bit-Typ ist, hat der zurückgegebene Wert die gleiche Anzahl von Komponenten wie der Eingabewert.
 
-### <a name="minimum-shader-model"></a>Minimaler Shader-Modell
+### <a name="minimum-shader-model"></a>Shader-Mindestmodell
 
-Diese Funktion wird in den folgenden shadermodellen unterstützt.
+Diese Funktion wird in den folgenden Shadermodellen unterstützt.
 
 
 
 | Shadermodell                                                                | Unterstützt |
 |-----------------------------------------------------------------------------|-----------|
-| [Shader Model 5](d3d11-graphics-reference-sm5.md) und höhere shadermodelle | ja       |
+| [Shadermodell 5](d3d11-graphics-reference-sm5.md) und höhere Shadermodelle | ja       |
 
 
 
- 
+ 
 
-Diese Funktion wird in den folgenden Typen von Shadern unterstützt:
+Diese Funktion wird in den folgenden Shadertypen unterstützt:
 
 
 
-| Scheitelpunkt | Hülle | Domain | Geometrie | Pixel | Compute |
+| Scheitelpunkt | Rumpf | Domain | Geometrie | Pixel | Compute |
 |--------|------|--------|----------|-------|---------|
 | x      | x    | x      | x        | x     | x       |
 
 
 
- 
+ 
 
 ## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[Intrinsische Funktionen](dx-graphics-hlsl-intrinsic-functions.md)
+[Systeminterne Funktionen](dx-graphics-hlsl-intrinsic-functions.md)
 </dt> <dt>
 
-[Shader-Modell 5](d3d11-graphics-reference-sm5.md)
+[Shadermodell 5](d3d11-graphics-reference-sm5.md)
 </dt> </dl>
 
- 
+ 
 
- 
+ 
 
 
 

@@ -1,34 +1,34 @@
 ---
-title: Leitfaden (com)
-description: In diesem Leitfaden wird die Microsoft-Component Object Model (com) vorgestellt.
+title: Leitfaden (COM)
+description: In diesem Leitfaden wird microsoft Component Object Model (COM) vorgestellt.
 ms.assetid: 9c67dbfd-31ce-4664-a34a-4d26d97e1b1d
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 1fdb6473146d1c30142c24d350261a18149e0198
-ms.sourcegitcommit: 8fa6614b715bddf14648cce36d2df22e5232801a
+ms.openlocfilehash: 299f88427e9d118352680769518decb6a48723cf62d0c86e0356a53b8236ccac
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/10/2020
-ms.locfileid: "104391421"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120070900"
 ---
-# <a name="guide-com"></a>Leitfaden (com)
+# <a name="guide-com"></a>Leitfaden (COM)
 
-In diesem Leitfaden wird die Microsoft-Component Object Model (com) vorgestellt.
+In diesem Leitfaden wird microsoft Component Object Model (COM) vorgestellt.
 
--   [Neuerungen in com](what-s-new-in-com.md)
+-   [Neuerungen in COM](what-s-new-in-com.md)
 -   [Das Component Object Model](the-component-object-model.md)
--   [Prozesse, Threads und Apartments](processes--threads--and-apartments.md)
--   [COM-Clients und-Server](com-clients-and-servers.md)
--   [Erstellen und Verarbeiten von asynchronen Aufrufen](making-and-processing-asynchronous-calls.md)
+-   [Prozesse, Threads und Apartment](processes--threads--and-apartments.md)
+-   [COM-Clients und -Server](com-clients-and-servers.md)
+-   [Erstellen und Verarbeiten asynchroner Aufrufe](making-and-processing-asynchronous-calls.md)
 -   [Definieren von COM-Schnittstellen](defining-com-interfaces.md)
--   [Registrieren von com-Anwendungen](registering-com-applications.md)
--   [Sicherheit in com](security-in-com.md)
--   [Fehlerbehandlung in com](error-handling-in-com.md)
+-   [Registrieren von COM-Anwendungen](registering-com-applications.md)
+-   [Sicherheit in COM](security-in-com.md)
+-   [Fehlerbehandlung in COM](error-handling-in-com.md)
 -   [COM-Handler](com-handlers.md)
--   [DLL-Surrogates](dll-surrogates.md)
+-   [DLL-Ersatzzeichen](dll-surrogates.md)
 -   [Moniker](monikers.md)
--   [Ereignisse in com und Verbindungs fähigen Objekten](events-in-com-and-connectable-objects.md)
--   [Implementierung des Komponenten Kategorien-Managers](component-categories-manager-implementation.md)
+-   [Ereignisse in COM- und verbindungsfähigen Objekten](events-in-com-and-connectable-objects.md)
+-   [Implementierung des Komponentenkategorien-Managers](component-categories-manager-implementation.md)
 
 ## <a name="related-topics"></a>Zugehörige Themen
 

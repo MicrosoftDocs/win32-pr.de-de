@@ -85,12 +85,12 @@ Die folgenden Fehlercodes können von der [**glGetError-Funktion abgerufen**](gl
 
 ## <a name="remarks"></a>Hinweise
 
-Die **funktion glLightModelf legt** den Beleuchtungsmodellparameter fest. Der *pname-Parameter* benennt einen Parameter, *und param* gibt den neuen Wert an. Der Wert oder die Werte einzelner Light Source-Parameter.
+Die **funktion glLightModelf legt** den Beleuchtungsmodellparameter fest. Der *pname-Parameter* benennt einen Parameter, *und param* gibt den neuen Wert an. Der Wert oder die Werte einzelner Lichtquellenparameter.
 
 Im RGBA-Modus ist die helle Farbe eines Scheitelpunkts die Summe der Materialausdrucksstärke, des Produkts der materialen Umgebungsrefleance und der Umgebungsstärke des Beleuchtungsmodells mit voller Szenenstärke und dem Beitrag jeder aktivierten Lichtquelle. Jede Lichtquelle trägt zur Summe von drei Begriffen bei: Ambient, Diffuse und Specular.
 
 -   Der Beitrag der Umgebungslichtquelle ist das Produkt der materialen Umgebungsreflektoranz und der Umgebungsstärke des Lichts.
--   Der diffuse Lichtquellenbeitrag ist das Produkt der materialen diffusen Reflektoren, der diffusen Intensität des Lichts und des Punktprodukts des Normalwerts des Scheitelpunkts mit dem normalisierten Vektor vom Scheitelpunkt zur Lichtquelle.
+-   Der diffuse Lichtquellenbeitrag ist das Produkt der materialen diffusen Reflektoranz, der diffusen Intensität des Lichts und des Punktprodukts des Normalwerts des Scheitelpunkts mit dem normalisierten Vektor vom Scheitelpunkt zur Lichtquelle.
 -   Der Glanzlichtquellenbeitrag ist das Produkt der materialspezifischen Reflektoren, der Glanzstärke des Lichts und des Punktprodukts der normalisierten Vertex-to-Eye- und Vertex-to-Light-Vektoren, die zur Stärke des Materials erhöht werden.
 
 Alle drei Lichtquellenbeiträge werden gleichmäßig auf der Grundlage des Abstands vom Scheitelpunkt zur Lichtquelle und der Lichtquellenrichtung, des Verteilungs exponenten und des Verteilungsabschneidewinkels abgedämpft. Alle Punktprodukte werden durch 0 (null) ersetzt, wenn sie zu einem negativen Wert ausgewertet werden.
@@ -101,7 +101,7 @@ Im Farbindexmodus reicht der Wert des hell erlichten Indexes eines Scheitelpunkt
 
 Die folgenden Funktionen rufen Informationen im Zusammenhang mit der **glLightModelf-Funktion** ab:
 
-[**glGet**](glgetbooleanv--glgetdoublev--glgetfloatv--glgetintegerv.md) mit dem Argument GL \_ LIGHT MODEL LOCAL \_ \_ \_ VIEWER
+[**glGet mit**](glgetbooleanv--glgetdoublev--glgetfloatv--glgetintegerv.md) dem Argument GL \_ LIGHT MODEL LOCAL \_ \_ \_ VIEWER
 
 [**glGet**](glgetbooleanv--glgetdoublev--glgetfloatv--glgetintegerv.md) mit dem Argument GL \_ LIGHT MODEL TWO \_ \_ \_ SIDE
 

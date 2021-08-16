@@ -1,53 +1,53 @@
 ---
-title: Generische Benutzer Steuerungspunkt-Anwendung
-description: Mit der generischen benutzersteuerungs Punkt-Anwendung (UCP) können Sie Geräte ermitteln, diese ermittelten Geräte steuern und die zugehörigen Informationen über eine grafische Benutzeroberfläche anzeigen.
+title: Anwendung für generische Benutzerkontrollpunkt
+description: Mit der anwendung für den generischen Benutzersteuerungspunkt (UCP) können Sie Geräte entdecken, diese gefundenen Geräte steuern und die zugehörigen Ereignisinformationen mithilfe einer grafischen Benutzeroberfläche anzeigen.
 ms.assetid: 18ac23df-9d69-4a28-91e5-991eb4f3e6ed
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: ee56710cc1fafcc8551b34cb53df531f1f8cb601
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: bc0bbf454da2bf36becb3c8b0aff2babc87925df7ac658fc9dc7963ba9182fad
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "104566997"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119655734"
 ---
-# <a name="generic-user-control-point-application"></a>Generische Benutzer Steuerungspunkt-Anwendung
+# <a name="generic-user-control-point-application"></a>Anwendung für generische Benutzerkontrollpunkt
 
-Mit der generischen benutzersteuerungs Punkt-Anwendung (UCP) können Sie Geräte ermitteln, diese ermittelten Geräte steuern und die zugehörigen Informationen über eine grafische Benutzeroberfläche anzeigen.
+Mit der anwendung für den generischen Benutzersteuerungspunkt (UCP) können Sie Geräte entdecken, diese gefundenen Geräte steuern und die zugehörigen Ereignisinformationen mithilfe einer grafischen Benutzeroberfläche anzeigen.
 
 **So starten Sie die generische UCP-Anwendung**
 
-1.  Erstellen und konfigurieren Sie die Beispiele \\ netds \\ UPnP \\ genericucp \\ cpp \\devtype.txt Datei (oder die \\devtype.txt Datei VisualBasic \\ ) mit Geräteinformationen. Mit dieser Datei können Sie den generischen UCP für die Suchvorgänge "Suchen nach Typ" und "Async Find" konfigurieren. Jede Zeile der Datei muss einen Gerätetyp und die zugehörige Beschreibung enthalten. Beispiel:
+1.  Erstellen und konfigurieren Sie die Beispiele \\ netds upnp GenericUCP CPPdevtype.txt -Datei (oder die \\ \\ \\ \\ \\ VisualBasic \\devtype.txt-Datei) mit Geräteinformationen. Mit dieser Datei können Sie den generischen UCP für die Suchvorgänge "Nach Typ suchen" und "asynchrone Suche" konfigurieren. Jede Zeile der Datei muss einen Gerätetyp und die zugehörige Beschreibung enthalten. Beispiel:
 
     ``` syntax
     upnp:rootdevice All Root Devices
     urn:schemas-upnp-org:device:mediaplayer:1    Media Player
     ```
 
-    Dieses Beispiel gilt für ein fiktives Media Player-Gerät. Das "Media Player" am Ende der zweiten Zeile ist nicht Teil des Gerätetyps, sondern dient zu Informationszwecken in der generischen UCP-Anwendung. Das gleiche gilt für "alle Stamm Geräte" in der ersten Zeile.
+    Dieses Beispiel gilt für ein fiktives Medienplayergerät. Der "Media Player" am Ende der zweiten Zeile ist kein Teil des Gerätetyps, sondern dient zu Informationszwecken in der generischen UCP-Anwendung. Dasselbe gilt für "Alle Stammgeräte" in der ersten Zeile.
 
-    Fügen Sie eine Zeile hinzu, die den jeweiligen Gerätetyp und die Beschreibung für jedes Gerät enthält.
+    Fügen Sie eine Zeile hinzu, die Ihren spezifischen Gerätetyp und die Beschreibung für jedes Gerät enthält.
 
-2.  Erstellen und konfigurieren Sie die Beispiele \\ netds \\ UPnP \\ genericucp \\ cpp \\udn.txt Datei (oder die \\udn.txt Datei VisualBasic \\ ) mit udn-Informationen für Ihre Geräte. Mit dieser Datei können Sie den generischen UCP für die Suche nach udn suchen konfigurieren. Jede Zeile verwendet die folgende Form:
+2.  Erstellen und konfigurieren Sie die Beispiele \\ netds \\ upnp \\ GenericUCP \\ CPP \\udn.txt-Datei (oder die \\ VisualBasic \\udn.txt-Datei) mit UDN-Informationen für Ihre Geräte. Mit dieser Datei können Sie den generischen UCP für die Suche nach "Nach UDN suchen" konfigurieren. Jede Zeile verwendet das folgende Formular:
 
     ``` syntax
     uuid:{7d50b574-4213-4b88-84d9-e5c9241fcb3a}
     ```
 
-    Fügen Sie eine Zeile hinzu, die ihren spezifischen udn für jedes Gerät enthält.
+    Fügen Sie eine Zeile hinzu, die Ihre spezifische UDN für jedes Gerät enthält.
 
-3.  Führen Sie GenericUCP.exe aus. Das Fenster **generisches UCP** wird angezeigt.
+3.  Führen Sie GenericUCP.exe. Das **Fenster Generischer UCP** wird angezeigt.
 
-    ![Generisches UCP-Fenster](images/generic-ucp.png)
+    ![Generisches Fenster "ucp"](images/generic-ucp.png)
 
 > [!Note]  
-> Die **Ansichts Darstellung** und der **Ansichts Dienst DESC.** -Funktionalität ist nicht im C++-Beispielcode implementiert.
+> Der **Ansichtspräsentations-** **und Ansichtsdienst-Desc.** -Funktionalität ist im C++-Beispielcode nicht implementiert.
 
- 
+ 
 
- 
+ 
 
- 
+ 
 
 
 

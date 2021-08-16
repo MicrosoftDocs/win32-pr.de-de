@@ -33,21 +33,21 @@ PCCERT_CONTEXT WINAPI CryptUIDlgSelectCertificate(
 *pcsc* \[ In\]
 </dt> <dd>
 
-Ein Zeiger auf eine [**CRYPTUI \_ SELECTCERTIFICATE-Struktur, \_**](cryptui-selectcertificate-struct.md) die Informationen zum anzuzeigenden Dialogfeld enthält.
+Ein Zeiger auf eine [**CRYPTUI \_ SELECTCERTIFICATE-STRUKTUR, \_**](cryptui-selectcertificate-struct.md) die Informationen über das anzuzeigende Dialogfeld enthält.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Ein Zeiger auf eine [**CERT \_ CONTEXT-Struktur,**](/windows/win32/api/Wincrypt/ns-wincrypt-cert_context) die das vom Benutzer ausgewählte Zertifikat darstellt. Wenn Sie die Verwendung dieses Zertifikats abgeschlossen haben, müssen Sie diesen Zeiger an die [**CertFreeCertificateContext-Funktion**](/windows/win32/api/wincrypt/nf-wincrypt-certfreecertificatecontext) übergeben, um die Verweisanzahl des Zertifikatkontexts zu dekrementieren.
+Ein Zeiger auf eine [**CERT \_ CONTEXT-Struktur,**](/windows/win32/api/Wincrypt/ns-wincrypt-cert_context) die das vom Benutzer ausgewählte Zertifikat darstellt. Wenn Sie mit der Verwendung dieses Zertifikats fertig sind, müssen Sie diesen Zeiger an die [**CertFreeCertificateContext-Funktion**](/windows/win32/api/wincrypt/nf-wincrypt-certfreecertificatecontext) übergeben, um den Verweiszähler des Zertifikatkontexts zu dekrementieren.
 
-Wenn **das dwFlags-Member** der *pcsc-Struktur* das **CRYPTUI \_ SELECTCERT \_ MULTISELECT-Flag** nicht enthält, bedeutet der Rückgabewert **NULL,** dass der Benutzer das Dialogfeld geschlossen hat, ohne ein Zertifikat auszuwählen.
+Wenn der **dwFlags-Member** der *pcsc-Struktur* das **CRYPTUI \_ SELECTCERT \_ MULTISELECT-Flag** nicht enthält, bedeutet ein Rückgabewert von **NULL,** dass der Benutzer das Dialogfeld geschlossen hat, ohne ein Zertifikat auszuwählen.
 
-Wenn der **dwFlags-Member** der *pcsc-Struktur* das **CRYPTUI \_ SELECTCERT \_ MULTISELECT-Flag** enthält, gibt diese Funktion immer **NULL zurück.** Die ausgewählten Zertifikate sind im Zertifikatspeicher enthalten, der durch das **hSelectedCertStore-Mitglied** von *pcsc dargestellt wird.* Wenn die Anzahl der Zertifikate im Speicher vor und nach dem Aufruf von **CryptUIDlgSelectCertificate** gleich ist, hat der Benutzer das Dialogfeld geschlossen, ohne Zertifikate auszuwählen.
+Wenn der **dwFlags-Member** der *pcsc-Struktur* das **CRYPTUI \_ SELECTCERT \_ MULTISELECT-Flag** enthält, gibt diese Funktion immer **NULL** zurück. Die ausgewählten Zertifikate werden im Zertifikatspeicher enthalten sein, der durch das **hSelectedCertStore-Element** von *pcsc* dargestellt wird. Wenn die Anzahl der Zertifikate im Speicher vor und nach dem Aufruf von **CryptUIDlgSelectCertificate** gleich ist, hat der Benutzer das Dialogfeld geschlossen, ohne Zertifikate auszuwählen.
 
 ## <a name="remarks"></a>Hinweise
 
-Wenn das **dwFlags-Mitglied** der [**CRYPTUI \_ SELECTCERTIFICATE \_ STRUCT-Struktur**](cryptui-selectcertificate-struct.md) auf **CRYPTUI \_ SELECTCERT \_ LEGACY** festgelegt ist, wird das Legacydialogfeld angezeigt. Andernfalls wird das aktuelle Dialogfeld für die Zertifikatauswahl angezeigt.
+Wenn der **dwFlags-Member** der [**CRYPTUI \_ SELECTCERTIFICATE-Struktur \_**](cryptui-selectcertificate-struct.md) auf **CRYPTUI \_ SELECTCERT \_ LEGACY** festgelegt ist, wird das Legacydialogfeld angezeigt. Andernfalls wird das aktuelle Dialogfeld für die Zertifikatauswahl angezeigt.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -55,9 +55,9 @@ Wenn das **dwFlags-Mitglied** der [**CRYPTUI \_ SELECTCERTIFICATE \_ STRUCT-Stru
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Windows \[ XP-Desktop-Apps\]<br/>                                                       |
+| Unterstützte Mindestversion (Client)<br/> | nur Windows \[ XP-Desktop-Apps\]<br/>                                                       |
 | Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2003-Desktop-Apps\]<br/>                                              |
-| Ende des Supports<br/> | Windows 7 \[ Desktop-Apps\]<br/>                                                       |
+| Ende des Supports<br/> | nur Windows 7 \[ Desktop-Apps\]<br/>                                                       |
 | Bibliothek<br/>                  | <dl> <dt>Cryptui.lib</dt> </dl>            |
 | DLL<br/>                      | <dl> <dt>Cryptui.dll</dt> </dl>            |
 | Unicode- und ANSI-Name<br/>   | **CryptUIDlgSelectCertificateW** (Unicode) und **CryptUIDlgSelectCertificateA** (ANSI)<br/> |

@@ -1,7 +1,7 @@
 ---
-description: Die doshowwindow-Methode legt den Anzeige Zustand des Fensters fest.
+description: Die DoShowWindow-Methode legt den Showzustand des Fensters fest.
 ms.assetid: 4180de9d-ef40-40e3-aa37-be54283b1f97
-title: Cbasewindow. doshowwindow-Methode (winutil. h)
+title: CBaseWindow.DoShowWindow-Methode (Winutil.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -16,16 +16,16 @@ api_location:
 - Strmbase.dll
 - Strmbasd.lib
 - Strmbasd.dll
-ms.openlocfilehash: a2a1f7d4cd9bc4600733d5d33f9df6d3b6998f57
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 7fef63e04d0e04f2fe0daa78cd6b33a22fa7c8fa14c57b1e022703dea0914dab
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106372382"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119074628"
 ---
-# <a name="cbasewindowdoshowwindow-method"></a>Cbasewindow. doshowwindow-Methode
+# <a name="cbasewindowdoshowwindow-method"></a>CBaseWindow.DoShowWindow-Methode
 
-Die **doshowwindow** -Methode legt den Anzeige Zustand des Fensters fest.
+Die **DoShowWindow-Methode** legt den Showzustand des Fensters fest.
 
 ## <a name="syntax"></a>Syntax
 
@@ -45,13 +45,13 @@ HRESULT DoShowWindow(
 *ShowCmd* 
 </dt> <dd>
 
-Flag, das angibt, wie das Fenster angezeigt werden soll. Der Wert kann eine beliebige Konstante sein, die für den *nCmdShow* -Parameter der [**ShowWindow**](/windows/desktop/api/winuser/nf-winuser-showwindow) -Funktion definiert ist.
+Flag, das angibt, wie das Fenster angezeigt werden soll. Der Wert kann eine beliebige Konstante sein, die für den *nCmdShow-Parameter* der [**ShowWindow-Funktion definiert**](/windows/desktop/api/winuser/nf-winuser-showwindow) ist.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Wenn diese Methode erfolgreich ausgeführt wird, gibt Sie **S \_ OK** zurück. Andernfalls wird ein **HRESULT** -Fehlercode zurückgegeben.
+Wenn diese Methode erfolgreich ist, wird **S \_ OK zurückgegeben.** Andernfalls wird ein **HRESULT-Fehlercode** zurückgegeben.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -59,16 +59,16 @@ Wenn diese Methode erfolgreich ausgeführt wird, gibt Sie **S \_ OK** zurück. A
 
 | Anforderung | Wert |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>Winutil. h (Include Streams. h)</dt> </dl>                                                                                   |
-| Bibliothek<br/> | <dl> " <dt>Straumbase. lib" (Einzelhandels Builds);</dt> " <dt>Straumbasd. lib" (Debugbuilds)</dt> </dl> |
+| Header<br/>  | <dl> <dt>Winutil.h (include Streams.h)</dt> </dl>                                                                                   |
+| Bibliothek<br/> | <dl> <dt>Strmbase.lib (Einzelhandels-Builds); </dt> <dt>Strmbasd.lib (Debugbuilds)</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Cbasewindow-Klasse**](cbasewindow.md)
+[**CBaseWindow-Klasse**](cbasewindow.md)
 </dt> </dl>
 
  

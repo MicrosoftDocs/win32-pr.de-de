@@ -1,5 +1,5 @@
 ---
-description: Die FixTimes2-Methode rundet die angegebenen Start- und Stoppzeiten auf die nächsten Rahmengrenzen, wie durch die Einstellung der Bildfrequenz der übergeordneten Gruppe definiert. Diese Methode entspricht IAMTimelineObj::FixTimes, nimmt jedoch REFTIME-Werte an.
+description: Die FixTimes2-Methode rundet die angegebenen Start- und Stoppzeiten auf die nächsten Rahmengrenzen, wie in der Einstellung für die Bildfrequenz der übergeordneten Gruppe definiert. Diese Methode entspricht IAMTimelineObj::FixTimes, nimmt jedoch REFTIME-Werte an.
 ms.assetid: bdb3d999-2c91-4108-9286-c6e1f3362c09
 title: IAMTimelineObj::FixTimes2-Methode (Qedit.h)
 ms.topic: reference

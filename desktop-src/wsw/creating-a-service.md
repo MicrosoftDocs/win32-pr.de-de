@@ -1,31 +1,31 @@
 ---
 title: Erstellen eines Diensts
-description: Das Erstellen eines Webdiensts wurde in wwsapi durch die Dienstmodell-API und das WsUtil.exe Tool erheblich vereinfacht.
+description: Das Erstellen eines Webdiensts wird in WWSAPI durch die Dienstmodell-API und das WsUtil.exe-Tool erheblich vereinfacht.
 ms.assetid: 3536d1c6-6179-4f69-9cc8-27fe6ae30826
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: f4700324a84962047f403ca7ad090adc3e9f4e99
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: 93f6daadbfcd1d06f76bf5bef97559214e36015d3f72ff440e77f4293a47ea57
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "103856896"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119805740"
 ---
 # <a name="creating-a-service"></a>Erstellen eines Diensts
 
-Das Erstellen eines Webdiensts wurde in wwsapi durch die [Dienstmodell](service-model-layer-overview.md) -API und das [WsUtil.exe](wsutil-compiler-tool.md) Tool erheblich vereinfacht. Das Dienstmodell stellt eine API zur Verfügung, die es dem Dienst und dem Client ermöglicht, [Nachrichten](message.md) über einen [Kanal](channel.md) als C-Methodenaufrufe zu senden und zu empfangen. Das Tool "wsutil" generiert stusb und Header zum Implementieren des Dienstanbieter.
+Das Erstellen eines Webdiensts wird in WWSAPI durch die [Dienstmodell-API](service-model-layer-overview.md) und das [WsUtil.exe-Tool ](wsutil-compiler-tool.md) erheblich vereinfacht. Das Dienstmodell stellt eine API bereit, mit der der Dienst und der Client [Nachrichten](message.md) über einen [Kanal](channel.md) als C-Methodenaufrufe senden und empfangen können. Das WsUtil-Tool generiert Stubs und Header für die Implementierung des Diensts.
 
-## <a name="implementing-a-calculator-service-using-wwsapi"></a>Implementieren eines Rechner Dienstanbieter mithilfe von wwsapi
+## <a name="implementing-a-calculator-service-using-wwsapi"></a>Implementieren eines Rechnerdiensts mit WWSAPI
 
-Implementieren Sie mithilfe der generierten Quellen aus dem [Wsutil.exe](wsutil-compiler-tool.md) Tool den Dienst mithilfe der folgenden Schritte.
+Implementieren Sie den Dienst mithilfe der generierten Quellen aus dem [Wsutil.exe](wsutil-compiler-tool.md) Tool, indem Sie die folgenden Schritte ausführen.
 
-Fügen Sie die Header in die Anwendungs Quelle ein.
+Schließen Sie die Header in Ihre Anwendungsquelle ein.
 
 ``` syntax
 #include "CalculatorProxyStub.h"
 ```
 
-Implementieren Sie die Dienst Vorgänge. In diesem Beispiel sind die Dienst Vorgänge die Add-und Subtract-Funktionen des Rechner Dienstanbieter.
+Implementieren Sie die Dienstvorgänge. In diesem Beispiel sind die Dienstvorgänge die Funktionen Hinzufügen und Subtrahieren des Rechnerdiensts.
 
 ``` syntax
 HRESULT CALLBACK Add (const WS_OPERATION_CONTEXT* context, 
@@ -49,7 +49,7 @@ HRESULT CALLBACK Subtract (const WS_OPERATION_CONTEXT* context,
 }
 ```
 
-Definieren Sie den Dienstvertrag durch Festlegen der Felder einer [**WS- \_ Dienst \_ Vertrags**](/windows/desktop/api/WebServices/ns-webservices-ws_service_contract) Struktur.
+Definieren Sie den Dienstvertrag, indem Sie die Felder einer [**WS \_ SERVICE \_ CONTRACT-Struktur**](/windows/desktop/api/WebServices/ns-webservices-ws_service_contract) festlegen.
 
 ``` syntax
 static const DefaultBinding_ICalculatorFunctionTable calculatorFunctions = {Add, Subtract};
@@ -61,7 +61,7 @@ static const WS_SERVICE_CONTRACT calculatorContract =
 };
 ```
 
-Erstellen Sie nun einen Dienst Host, und öffnen Sie ihn für die Kommunikation.
+Erstellen Sie nun einen Diensthost, und öffnen Sie ihn für die Kommunikation.
 
 ``` syntax
 WS_SERVICE_ENDPOINT serviceEndpoint = {0};
@@ -81,11 +81,11 @@ if (FAILED (hr = WsOpenServiceHost (host, NULL, error)))
     goto Error;
 ```
 
-Eine vollständige Implementierung des Rechner Dienstanbieter finden Sie im Codebeispiel unter [httpcalculatorserviceexample](httpcalculatorserviceexample.md) .
+Eine vollständige Implementierung des Rechnerdiensts finden Sie im Codebeispiel unter [HttpCalculatorServiceExample.](httpcalculatorserviceexample.md)
 
- 
+ 
 
- 
+ 
 
 
 

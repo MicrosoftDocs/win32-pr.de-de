@@ -1,7 +1,7 @@
 ---
-description: Diese Klasse ist die Ereignistyp Klasse für bereite Thread Ereignisse. Die folgende Syntax wird durch den MOF-Code vereinfacht.
+description: Diese Klasse ist die Ereignistypklasse für bereite Threadereignisse. Die folgende Syntax wird durch einen MOF-Code vereinfacht.
 ms.assetid: 861ab070-5536-4897-b523-9b09a7d59b3e
-title: "\"Leserythread\"-Klasse"
+title: ReadyThread-Klasse
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -17,18 +17,18 @@ api_name:
 api_type:
 - NA
 api_location: ''
-ms.openlocfilehash: e10029c0397c16a5a5eb30be6e3db64c0baec596
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 1b4b3d63b63e4deb9c48f9e117122f021e9d63791292e60da3cc919a6e4535e0
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "103862876"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119069810"
 ---
-# <a name="readythread-class"></a>"Leserythread"-Klasse
+# <a name="readythread-class"></a>ReadyThread-Klasse
 
-Diese Klasse ist die Ereignistyp Klasse für bereite Thread Ereignisse.
+Diese Klasse ist die Ereignistypklasse für bereite Threadereignisse.
 
-Die folgende Syntax wird durch den MOF-Code vereinfacht.
+Die folgende Syntax wird durch einen MOF-Code vereinfacht.
 
 ## <a name="syntax"></a>Syntax
 
@@ -46,17 +46,17 @@ class ReadyThread : Thread_V2
 
 ## <a name="members"></a>Member
 
-Die " **leserythread** "-Klasse verfügt über diese Typen von Membern:
+Die **ReadyThread-Klasse** verfügt über die folgenden Membertypen:
 
 -   [Eigenschaften](#properties)
 
 ### <a name="properties"></a>Eigenschaften
 
-Die " **leserythread** "-Klasse verfügt über diese Eigenschaften.
+Die **ReadyThread-Klasse** verfügt über diese Eigenschaften.
 
 <dl> <dt>
 
-Anpassung erhöhen
+AdjustIncrement
 </dt> <dd> <dl> <dt>
 
 Datentyp: **sint8**
@@ -65,14 +65,14 @@ Datentyp: **sint8**
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: wmidataid (3)
+Qualifizierer: WmiDataId(3)
 </dt> </dl>
 
-Der Wert, mit dem die Priorität angepasst wird.
+Der Wert, um den die Priorität angepasst wird.
 
 </dd> <dt>
 
-Adjustreason
+AdjustReason
 </dt> <dd> <dl> <dt>
 
 Datentyp: **sint8**
@@ -81,18 +81,18 @@ Datentyp: **sint8**
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: wmidataid (2)
+Qualifizierer: WmiDataId(2)
 </dt> </dl>
 
-Der Grund für die Prioritäts Erhöhung.
+Der Grund für die Prioritätssteigerung.
 
 
 
 | Wert                                                                        | Bedeutung                                                                                                                 |
 |------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------|
-| <dl> <dt>0</dt> </dl> | Das Inkrement wird ignoriert.<br/>                                                                                        |
-| <dl> <dt>1</dt> </dl> | Wenden Sie das Inkrement an, das am Ende jedes Quantums inkrementell beeinträchtigt wird.<br/>                              |
-| <dl> <dt>2</dt> </dl> | Wenden Sie das Inkrement als Verstärkung an, die vollständig bei Quantum (in der Regel für die Prioritäts Spende) verfällt.<br/> |
+| <dl> <dt>0</dt> </dl> | Ignorieren Sie das Inkrement.<br/>                                                                                        |
+| <dl> <dt>1</dt> </dl> | Wenden Sie das Inkrement an, das inkrementell am Ende jedes Quantens abfällt.<br/>                              |
+| <dl> <dt>2</dt> </dl> | Wenden Sie das Inkrement als Verstärkung an, die im Quantenzustand vollständig verfällt (in der Regel für Prioritätsverfall).<br/> |
 
 
 
@@ -109,24 +109,24 @@ Datentyp: **sint8**
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: wmidataid (4)
+Qualifizierer: WmiDataId(4)
 </dt> </dl>
 
-Im folgenden sind die möglichen Statusflags aufgeführt:
+Im Folgenden finden Sie die möglichen Statusflags:
 
 
 
 | Wert                                                                          | Bedeutung                                                                    |
 |--------------------------------------------------------------------------------|----------------------------------------------------------------------------|
-| <dl> <dt>0x1</dt> </dl> | Der Thread wurde von DPC (verzögerter Prozedur aufzurufen) neu erstellt.<br/> |
-| <dl> <dt>0x2</dt> </dl> | Der Kernel Stapel wird zurzeit ausgetauscht.<br/>                      |
-| <dl> <dt>0x4</dt> </dl> | Der Prozess Adressraum wird ausgetauscht.<br/>                       |
+| <dl> <dt>0x1</dt> </dl> | Der Thread wurde aus DPC (verzögerter Prozeduraufruf) gelesen.<br/> |
+| <dl> <dt>0x2</dt> </dl> | Der Kernelstapel wird derzeit ausgetauscht.<br/>                      |
+| <dl> <dt>0x4</dt> </dl> | Der Prozessadressenbereich wird ausgetauscht.<br/>                       |
 
 
 
  
 
-Beachten Sie Folgendes: Wenn der Kernel Stapel oder der Prozess Adressraum ausgetauscht wird, gibt es nach dem Kernel Stapel ein zusätzliches "Read-Thread"-Ereignis, oder der Prozess Adressraum wird wieder in den Austausch eingefügt, und der Thread wird für die Weiterleitung bereit.
+Beachten Sie, dass beim Austauschen des Kernelstapels oder des Prozessadressenbereichs ein zusätzliches ReadyThread-Ereignis erfolgt, nachdem der Kernelstapel oder der Prozessadressenbereich wieder ausgetauscht und der Thread für die Versendung bereit gemacht wurde.
 
 </dd> <dt>
 
@@ -139,30 +139,30 @@ Datentyp: **sint8**
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: wmidataid (5)
+Qualifizierer: WmiDataId(5)
 </dt> </dl>
 
 Reserviert.
 
 </dd> <dt>
 
-Tthreadid
+TThreadId
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt32**
+Datentyp: **uint32**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: wmidataid (1), Format ("x")
+Qualifizierer: WmiDataId(1), Format("x")
 </dt> </dl>
 
-Der Thread Bezeichner des Threads, der für die Ausführung neu erstellt wird.
+Der Threadbezeichner des Threads, der für die Ausführung gelesen wird.
 
 </dd> </dl>
 
-## <a name="requirements"></a>Requirements (Anforderungen)
+## <a name="requirements"></a>Anforderungen
 
 
 
@@ -177,7 +177,7 @@ Der Thread Bezeichner des Threads, der für die Ausführung neu erstellt wird.
 
 <dl> <dt>
 
-[**Thread \_ v2**](thread-v2.md)
+[**Thread \_ V2**](thread-v2.md)
 </dt> </dl>
 
  

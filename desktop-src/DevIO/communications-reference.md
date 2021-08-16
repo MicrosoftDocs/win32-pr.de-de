@@ -1,22 +1,22 @@
 ---
 description: Die folgenden Elemente werden mit Kommunikationsressourcen verwendet.
 ms.assetid: 0bee52ac-0454-4c80-8452-d4ab32f45771
-title: Kommunikations Referenz
+title: Kommunikationsreferenz
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 7486ca1741a293931c31d012b0f958458a8df211
-ms.sourcegitcommit: c7add10d695482e1ceb72d62b8a4ebd84ea050f7
+ms.openlocfilehash: 31e8cdb303c1ecae921df9b4277cea4abee8816a63fbc81644dcb813eced92c7
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "103861120"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119768860"
 ---
-# <a name="communications-reference"></a>Kommunikations Referenz
+# <a name="communications-reference"></a>Kommunikationsreferenz
 
 Die folgenden Elemente werden mit Kommunikationsressourcen verwendet.
 
 -   [Kommunikationsfunktionen](communications-functions.md)
--   [Kommunikations Steuerungs Codes](communications-control-codes.md)
+-   [Codes für Die Kommunikationssteuerung](communications-control-codes.md)
 -   [Kommunikationsstrukturen](communications-structures.md)
 
  

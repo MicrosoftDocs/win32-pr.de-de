@@ -50,7 +50,7 @@ Diese Funktion gibt keinen Wert zurück.
 
 ## <a name="remarks"></a>Hinweise
 
-Dieser Vorgang führt keine Aktion für Rasterizer aus, die ihn nicht unterstützen.
+Dieser Vorgang führt keine Aktion für Rasterizer aus, die sie nicht unterstützen.
 
 ### <a name="minimum-shader-model"></a>Minimales Shadermodell
 
@@ -60,7 +60,7 @@ Diese Funktion wird in den folgenden Shadermodellen unterstützt.
 
 | Shadermodell                                                        | Unterstützt |
 |---------------------------------------------------------------------|-----------|
-| [ShaderModell 4 (DirectX HLSL) oder höher.](dx-graphics-hlsl-sm3.md) | ja       |
+| [ShaderModell 4 (DirectX HLSL) oder höher.](dx-graphics-hlsl-sm3.md) | Ja       |
 
 
 

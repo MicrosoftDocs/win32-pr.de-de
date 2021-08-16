@@ -1,5 +1,5 @@
 ---
-description: 'Die Namen der Personen im Feld Cc:'
+description: 'Die Namen von Personen im Feld Cc: .'
 ms.assetid: a9675268-7006-4a6a-9a7a-68541f43311b
 title: System.Message.CcName
 ms.topic: article
@@ -13,7 +13,7 @@ ms.locfileid: "118724678"
 ---
 # <a name="systemmessageccname"></a>System.Message.CcName
 
-Die Namen der Personen im Feld Cc:
+Die Namen von Personen im Feld Cc: .
 
 ## <a name="windows-10-version-1703-windows-10-version-1607-windows-10-version-1511-windows-10-version-1507-windows-81-windows-8-windows-7-windows-vista"></a>Windows 10, Version 1703, Windows 10, Version 1607, Windows 10, Version 1511, Windows 10, Version 1507, Windows 8.1, Windows 8, Windows 7, Windows Vista
 

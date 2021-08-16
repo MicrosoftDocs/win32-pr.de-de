@@ -1,11 +1,11 @@
 ---
-title: Phone-IP-anderes Attribut
-description: Die Liste der alternativen TCP/IP-Adressen für das Telefon. Wird von Telefoniediensten verwendet.
+title: Telefon-Ip-Other-Attribut
+description: Die Liste alternativer TCP/IP-Adressen für das Telefon. Wird von Telefonie verwendet.
 ms.assetid: 3689c561-6dc1-4d73-adec-01c4ebdb5e47
 ms.tgt_platform: multiple
 keywords:
-- "\"Phone-IP-other\"-Attribut AD-Schema"
-- AD-Schema für das Attribut "otheripphone"
+- ad-Schema für Telefon-Ip-Other-Attribut
+- otherIpPhone-Attribut AD-Schema
 topic_type:
 - apiref
 api_name:
@@ -14,28 +14,28 @@ api_type:
 - Schema
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 7955b4fb80d46c19e5536517b53eb419e6de9ec6
-ms.sourcegitcommit: b77ace27b0432e7cd3863191b11926be032fbe2f
+ms.openlocfilehash: c0457389ccdec37549ab4ccd1f36019b30a39f796e483b2950174b65d0b3a927
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "106346571"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119924030"
 ---
-# <a name="phone-ip-other-attribute"></a>Phone-IP-anderes Attribut
+# <a name="phone-ip-other-attribute"></a>Telefon-Ip-Other-Attribut
 
-Die Liste der alternativen TCP/IP-Adressen für das Telefon. Wird von Telefoniediensten verwendet.
+Die Liste alternativer TCP/IP-Adressen für das Telefon. Wird von Telefonie verwendet.
 
 
 
 | Eingabe | Wert |
 |-------------------|----------------------------------------------------------------------------------|
-| CN                | Telefon-IP-Sonstiges                                                                   |
-| LDAP-Display-Name | otherIpPhone                                                                     |
+| CN                | Telefon-Ip-Other                                                                   |
+| Ldap-Anzeigename | otherIpPhone                                                                     |
 | Size              | \-                                                                               |
-| Berechtigung aktualisieren  | Domänen Administrator oder Konto Besitzer.                                           |
-| Aktualisierungshäufigkeit  | Wenn der Benutzerdaten Satz erstellt und die Telefonnummer geändert werden muss. |
+| Aktualisieren von Berechtigungen  | Domänenadministrator oder Kontobesitzer.                                           |
+| Updatehäufigkeit  | Wenn der Datensatz des Benutzers erstellt wird und die Telefonnummer geändert werden muss. |
 | Attribute-Id      | 1.2.840.113556.1.4.722                                                           |
-| System-ID-GUID    | 4d146 E4B-48d4-11d1-a9c3-0000e80367c1                                             |
+| System-ID-GUID    | 4d146e4b-48d4-11d1-a9c3-0000f80367c1                                             |
 | Syntax            | [**String(Unicode)**](s-string-unicode.md)                                      |
 
 
@@ -43,7 +43,7 @@ Die Liste der alternativen TCP/IP-Adressen für das Telefon. Wird von Telefonied
 ## <a name="implementations"></a>Implementierungen
 
 -   [**Windows 2000 Server**](#windows-2000-server)
--   [**Windows Server 2003**](#windows-server-2003)
+-   [**Windows Server 2003**](#windows-server-2003)
 -   [**Windows Server 2003 R2**](#windows-server-2003-r2)
 -   [**Windows Server 2008**](#windows-server-2008)
 -   [**Windows Server 2008 R2**](#windows-server-2008-r2)
@@ -58,10 +58,10 @@ Die Liste der alternativen TCP/IP-Adressen für das Telefon. Wird von Telefonied
 | Link-ID                | \-                                                                 |
 | MAPI-Id                | \-                                                                 |
 | System-Only            | False                                                              |
-| Ist-einwertig       | False                                                              |
+| Ist einwertig       | False                                                              |
 | Ist indiziert             | False                                                              |
-| Im globalen Katalog      | Richtig                                                               |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                                       |
+| Im globalen Katalog      | True                                                               |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                                       |
 | Range-Lower            | \-                                                                 |
 | Range-Upper            | \-                                                                 |
 | Search-Flags           | 0x00000000                                                         |
@@ -70,7 +70,7 @@ Die Liste der alternativen TCP/IP-Adressen für das Telefon. Wird von Telefonied
 
 
 
-## <a name="windows-server-2003"></a>Windows Server 2003
+## <a name="windows-server-2003"></a>Windows Server 2003
 
 
 
@@ -79,10 +79,10 @@ Die Liste der alternativen TCP/IP-Adressen für das Telefon. Wird von Telefonied
 | Link-ID                | \-                                                                 |
 | MAPI-Id                | \-                                                                 |
 | System-Only            | False                                                              |
-| Ist-einwertig       | False                                                              |
+| Ist einwertig       | False                                                              |
 | Ist indiziert             | False                                                              |
-| Im globalen Katalog      | Richtig                                                               |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                                       |
+| Im globalen Katalog      | True                                                               |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                                       |
 | Range-Lower            | \-                                                                 |
 | Range-Upper            | \-                                                                 |
 | Search-Flags           | 0x00000000                                                         |
@@ -100,10 +100,10 @@ Die Liste der alternativen TCP/IP-Adressen für das Telefon. Wird von Telefonied
 | Link-ID                | \-                                                                 |
 | MAPI-Id                | \-                                                                 |
 | System-Only            | False                                                              |
-| Ist-einwertig       | False                                                              |
+| Ist einwertig       | False                                                              |
 | Ist indiziert             | False                                                              |
-| Im globalen Katalog      | Richtig                                                               |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                                       |
+| Im globalen Katalog      | True                                                               |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                                       |
 | Range-Lower            | \-                                                                 |
 | Range-Upper            | \-                                                                 |
 | Search-Flags           | 0x00000000                                                         |
@@ -121,10 +121,10 @@ Die Liste der alternativen TCP/IP-Adressen für das Telefon. Wird von Telefonied
 | Link-ID                | \-                                                                 |
 | MAPI-Id                | \-                                                                 |
 | System-Only            | False                                                              |
-| Ist-einwertig       | False                                                              |
+| Ist einwertig       | False                                                              |
 | Ist indiziert             | False                                                              |
-| Im globalen Katalog      | Richtig                                                               |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                                       |
+| Im globalen Katalog      | True                                                               |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                                       |
 | Range-Lower            | \-                                                                 |
 | Range-Upper            | \-                                                                 |
 | Search-Flags           | 0x00000000                                                         |
@@ -142,10 +142,10 @@ Die Liste der alternativen TCP/IP-Adressen für das Telefon. Wird von Telefonied
 | Link-ID                | \-                                                                 |
 | MAPI-Id                | \-                                                                 |
 | System-Only            | False                                                              |
-| Ist-einwertig       | False                                                              |
+| Ist einwertig       | False                                                              |
 | Ist indiziert             | False                                                              |
-| Im globalen Katalog      | Richtig                                                               |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                                       |
+| Im globalen Katalog      | True                                                               |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                                       |
 | Range-Lower            | \-                                                                 |
 | Range-Upper            | \-                                                                 |
 | Search-Flags           | 0x00000000                                                         |
@@ -163,10 +163,10 @@ Die Liste der alternativen TCP/IP-Adressen für das Telefon. Wird von Telefonied
 | Link-ID                | \-                                                                 |
 | MAPI-Id                | \-                                                                 |
 | System-Only            | False                                                              |
-| Ist-einwertig       | False                                                              |
+| Ist einwertig       | False                                                              |
 | Ist indiziert             | False                                                              |
-| Im globalen Katalog      | Richtig                                                               |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                                       |
+| Im globalen Katalog      | True                                                               |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                                       |
 | Range-Lower            | \-                                                                 |
 | Range-Upper            | \-                                                                 |
 | Search-Flags           | 0x00000000                                                         |

@@ -1,26 +1,26 @@
 ---
-title: VML-eqn-Attribut
-description: VML-eqn-Attribut
+title: VML Eqn-Attribut
+description: VML Eqn-Attribut
 ms.assetid: b2c41bad-2f83-4280-9441-33206d8dc1b7
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: f8da00084a825147c6f8a05f503e5ee2679f40e8
-ms.sourcegitcommit: 592c9bbd22ba69802dc353bcb5eb30699f9e9403
+ms.openlocfilehash: ae5872c29064f24a10b4a12c0d0e2a4ca4a200f79e295d60713fe56355f23aa3
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "104316413"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119655450"
 ---
-# <a name="vml-eqn-attribute"></a>VML-eqn-Attribut
+# <a name="vml-eqn-attribute"></a>VML Eqn-Attribut
 
-In diesem Thema wird VML beschrieben, eine Funktion, die ab Windows Internet Explorer 9 veraltet ist. Webseiten und Anwendungen, die auf VML basieren, sollten zu SVG oder anderen allgemein unterstützten Standards migriert werden.
+In diesem Thema wird VML beschrieben, ein Feature, das ab Version 9 Windows Internet Explorer ist. Webseiten und Anwendungen, die auf VML basieren, sollten zu SVG oder anderen weit verbreiteten Standards migriert werden.
 
 > [!Note]  
-> Ab Dezember 2011 wurde dieses Thema archiviert. Daher wird er nicht mehr aktiv verwaltet. Weitere Informationen finden Sie unter [archivierte Inhalte](/previous-versions/windows/internet-explorer/ie-developer/). Informationen, Empfehlungen und Anleitungen zur aktuellen Version von Windows Internet Explorer finden Sie im [Internet Explorer Developer Center](https://msdn.microsoft.com/ie/).
+> Seit Dezember 2011 wurde dieses Thema archiviert. Daher wird sie nicht mehr aktiv verwaltet. Weitere Informationen finden Sie unter [Archivierter Inhalt.](/previous-versions/windows/internet-explorer/ie-developer/) Informationen, Empfehlungen und Anleitungen zur aktuellen Version von Windows Internet Explorer finden Sie im [Internet Explorer Developer Center.](https://msdn.microsoft.com/ie/)
 
  
 
-Definiert die Gleichung, die von einer Formel verwendet wird. Lese-/Schreibzugriff. **Zeichenfolge**.
+Definiert die von einer Formel verwendete Gleichung. Lese-/Schreibzugriff. **Zeichenfolge.**
 
 **Gilt für**
 
@@ -28,24 +28,24 @@ Definiert die Gleichung, die von einer Formel verwendet wird. Lese-/Schreibzugri
 
 **Tagsyntax**
 
-<v: *Element* eqn = " *Expression* " >
+<v: *element* eqn="-Ausdruck "> 
 
-**Skript Syntax**
+**Skriptsyntax**
 
-*Element* . eqn = "*Ausdruck*"
+*element* .eqn="*expression*"
 
-*Ausdruck* = *Element*. eqn
+*expression* = *Element*.eqn
 
 **Anmerkungen**
 
-Gleichungen werden durch die Auswertung eines Text Ausdrucks definiert, der über die allgemeine Form eines Vorgangs gefolgt von bis zu drei Argumenten verfügt. Jedes Argument kann die folgenden Typen aufweisen:
+Gleichungen werden durch die Auswertung eines Textausdrucks definiert, der die allgemeine Form eines Vorgangs hat, gefolgt von bis zu drei Argumenten. Jedes Argument kann die folgenden Typen haben:
 
--   Anpassung (z. b. \# 2)
--   eine andere Formel (z. b. @2 )
--   fixierte Zahlen (z. b. 2)
--   vordefinierte Werte
+-   Anpassung (z. B. \# 2)
+-   eine andere Formel (z. B. @2 )
+-   Feste Zahlen (z. B. 2)
+-   Vordefinierte Werte
 
-In der folgenden Tabelle sind die Formeln definiert, die mit den optionalen Argumenten für die Namen " *v*", " *P1*" und " *P2*" verwendet werden können. Das Formel Muster ist:
+In der folgenden Tabelle werden die Formeln definiert, die mit den optionalen Argumenten unter den Namen *v,* *p1* und *p2 verwendet werden können.* Das Formelmuster ist:
 
 <f eqn=" *operation* \[*v* \] \[*p1* \] \[*p2* \]"/>
 
@@ -53,52 +53,52 @@ In der folgenden Tabelle sind die Formeln definiert, die mit den optionalen Argu
 
 | Vorgang | Parameter | Exact  | Ergebnis                    | BESCHREIBUNG                                                                    |
 |-----------|--------|--------|---------------------------|--------------------------------------------------------------------------------|
-| ster       | 1      | ja    | v                         | Definiert einen Führungs Wert aus einem anderen Wert.                                   |
-| Sum       | 3      | ja    | v + P1-P2               | Wird für Addition und Subtraktion verwendet.                                             |
-| product   | 3      | rundet | v \* P1/P2              | Wird für Multiplikation und Division verwendet.                                          |
-| mId       | 2      | scher    | (v + P1)/2               | Average.                                                                       |
-| abs       | 1      | ja    | Abs (v)                    | Absoluter Wert.                                                                |
-| Min.       | 2      | ja    | min (v, P1)                 | Der geringere Wert von "v" und "P1".                                                  |
-| max       | 2      | ja    | Max (v, P1)                 | Der höhere Wert von "v" und "P1".                                                 |
-| if        | 3      | ja    | v > 0? P1: P2        | Bedingte Tests.                                                           |
-| mod       | 3      | nein     | SQRT (v ^ 2 + P1 ^ 2 + P2 ^ 2)   | Modulus-Wert.                                                                 |
-| atan2     | 2      | nein     | atan2 (P1, v)               | Polar Wert in Grad \* 2 ^ 16 (FD-Einheiten).                                     |
-| sin       | 2      | nein     | v \* Sin (P1)              | Sin, Argument in Grad \* 2 ^ 16 (FD- [Einheiten](msdn-online-vml-units.md) ).     |
-| cos       | 2      | nein     | v \* cos (P1)              | COS, Argument in Grad \* 2 ^ 16 (FD- [Einheiten](msdn-online-vml-units.md) ).     |
-| cosatan2  | 3      | nein     | v \* cos (atan2 (P2, P1))    | Behält die vollständige Genauigkeit in der zwischen Berechnung bei.                           |
-| sinatan2  | 3      | nein     | v \* Sin (atan2 (P2, P1))    | Behält die vollständige Genauigkeit in der zwischen Berechnung bei.                           |
-| sqrt      | 1      | nein     | SQRT (v)                   | Das Ergebnis ist positiv und wird abgerundet.                                            |
-| sumangle  | 3      | ja    | v + P1 \* 2 ^ 16 + P2 \* 2 ^ 16 | v skaliert um 2 ^ 16; P1 und P2 sind Grad.<br/>                            |
-| ellipse   | 3      | nein     | P2 \* sqrt (1-(v/P1) ^ 2)    | Ellipse.                                                                       |
-| tan       | 2      | nein     | v \* Tan (P1)              | Tangens, Argument in Grad \* 2 ^ 16 (FD- [Einheiten](msdn-online-vml-units.md) ). |
+| Val       | 1      | ja    | v                         | Definiert einen Leitfadenwert aus einem anderen Wert.                                   |
+| Sum       | 3      | ja    | v + p1 - p2               | Wird für Addition und Subtraktion verwendet.                                             |
+| product   | 3      | Runden | v \* p1/p2              | Wird für Multiplikation und Division verwendet.                                          |
+| mId       | 2      | (c)    | (v + p1)/ 2               | Average.                                                                       |
+| abs       | 1      | ja    | abs(v)                    | Absoluter Wert.                                                                |
+| Min       | 2      | ja    | min(v,p1)                 | Der geringere Wert von v und p1.                                                  |
+| max       | 2      | ja    | max(v,p1)                 | Der höhere Wert von v und p1.                                                 |
+| if        | 3      | ja    | v > 0 ? p1 : p2        | Bedingte Tests.                                                           |
+| mod       | 3      | nein     | sqrt(v^2 + p1^2 + p2^2)   | Moduluswert.                                                                 |
+| atan2     | 2      | nein     | atan2(p1,v)               | Polarwert in Grad \* 2^16 (FD-Einheiten).                                     |
+| sin       | 2      | nein     | v \* sin(p1)              | Sin, Argument in Grad \* 2^16 [](msdn-online-vml-units.md) (FD-Einheiten ).     |
+| cos       | 2      | nein     | v \* cos(p1)              | Cos, Argument in Grad \* 2^16 [](msdn-online-vml-units.md) (FD-Einheiten ).     |
+| cosatan2  | 3      | nein     | v \* cos(atan2(p2,p1))    | Behält die vollständige Genauigkeit bei der Zwischenberechnung bei.                           |
+| sinatan2  | 3      | nein     | v \* sin(atan2(p2,p1))    | Behält die vollständige Genauigkeit bei der Zwischenberechnung bei.                           |
+| sqrt      | 1      | nein     | sqrt(v)                   | Das Ergebnis ist positiv und rundet ab.                                            |
+| sumangle  | 3      | ja    | v + p1 \* 2^16 + p2 \* 2^16 | v skaliert um 2^16; p1 und p2 sind Grad.<br/>                            |
+| ellipse   | 3      | nein     | p2 \* sqrt(1-(v/p1)^2)    | Ellipse.                                                                       |
+| tan       | 2      | nein     | v \* tan(p1)              | Tangens, Argument in Grad \* 2^16 [](msdn-online-vml-units.md) (FD-Einheiten ). |
 
 
 
  
 
-Beachten Sie, dass die Gleichung nur aus Vorgängen und Zahlen besteht. mathematische Symbole werden ausgelassen. Beispielsweise die Gleichung
+Beachten Sie, dass die Gleichung nur aus Vorgängen und Zahlen besteht. mathematische Symbole werden ausgelassen. Beispiel: die Gleichung
 
-eqn = "Sum 5 9 3"
+eqn="sum 5 9 3"
 
-ergibt die Entsprechung von
+würde das Äquivalent von ergeben.
 
-5 + 9-3
+5 + 9 - 3
 
-für den zurückgegebenen Wert 11. Wenn keine Operanden vorhanden sind, wird der Wert nicht verwendet. Beispiel:
+für den zurückgegebenen Wert 11. Wenn Operanden fehlen, wird der Wert nicht verwendet. Beispiel:
 
-eqn = "Sum 5 9"
+eqn="sum 5 9"
 
-ergibt die Entsprechung von
+würde das Äquivalent von ergeben.
 
 5 + 9
 
 und würden den fehlenden Operanden ignorieren.
 
-*VML-Standard Attribut*
+*VML-Standardattribut*
 
 **Beispiel**
 
-Die folgende Formel ergibt ein Ergebnis von 6 (die Summe beider Zahlen dividiert durch 2), was, wenn dies die erste Formel war, durch das Symbol "" abgerufen werden konnte @0 .
+Die folgende Formel würde ein Ergebnis von 6 ergeben (die Summe beider Zahlen dividiert durch 2), was, wenn dies die erste Formel wäre, durch das Symbol " " abgerufen werden @0 kann.
 
 
 ```HTML

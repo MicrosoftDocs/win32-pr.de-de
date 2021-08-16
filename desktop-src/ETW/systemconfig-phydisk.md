@@ -27,18 +27,18 @@ api_name:
 api_type:
 - NA
 api_location: ''
-ms.openlocfilehash: 52ab249ab5087a1528317687d90f6d8fa665bc1a
-ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
+ms.openlocfilehash: 465fe0bacd23ad99bb744c915b60056b96419761f93a4aefd5f1a3d2fb4c6129
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2021
-ms.locfileid: "108106098"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119766350"
 ---
 # <a name="systemconfig_phydisk-class"></a>SystemConfig \_ PhyDisk-Klasse
 
 Diese Klasse ist die Ereignistypklasse für physische Datenträgerkonfigurationsereignisse.
 
-Die folgende Syntax wird durch MOF-Code vereinfacht.
+Die folgende Syntax wird durch einen MOF-Code vereinfacht.
 
 ## <a name="syntax"></a>Syntax
 
@@ -149,7 +149,7 @@ Datentyp: **char16-Array**
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: **WmiDataId** (10), **Max** (256), **Format(s)**
+Qualifizierer: **WmiDataId** (10), **Max** (256), **Format("s")**
 </dt> </dl>
 
 Name des Laufwerkherstellers.
@@ -168,7 +168,7 @@ Zugriffstyp: Schreibgeschützt
 Qualifizierer: **WmiDataId** (13)
 </dt> </dl>
 
-Nicht verwendet.
+Wird nicht verwendet.
 
 </dd> <dt>
 
@@ -200,7 +200,7 @@ Zugriffstyp: Schreibgeschützt
 Qualifizierer: **WmiDataId** (9)
 </dt> </dl>
 
-SCSI Logical Unit Number (LUN) des SCSI-Adapters.
+SCSI-LUN (Logical Unit Number) des SCSI-Adapters.
 
 </dd> <dt>
 
@@ -280,7 +280,7 @@ Zugriffstyp: Schreibgeschützt
 Qualifizierer: **WmiDataId** (15), **Max** (2), **Format("s")**
 </dt> </dl>
 
-Nicht verwendet.
+Wird nicht verwendet.
 
 </dd> <dt>
 
@@ -320,10 +320,10 @@ True, wenn der Schreibcache aktiviert ist.
 
 
 
-| Anforderungen | Wert |
+| Anforderung | Wert |
 |-------------------------------------|------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows \[ Vista-Desktop-Apps\]<br/>       |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server \[ 2008-Desktop-Apps\]<br/> |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur \[ Vista-Desktop-Apps\]<br/>       |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2008-Desktop-Apps\]<br/> |
 
 
 

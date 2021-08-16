@@ -12,14 +12,14 @@ api_type:
 - COM
 api_location:
 - endpointdlp.h
-ms.openlocfilehash: 2d9c1aa8335078cad71832c6090cada1669641cb
-ms.sourcegitcommit: 91110c16e4713ed82d7fb80562d3ddf40b5d76b2
+ms.openlocfilehash: e47fa7705701701af2fc0832c5ea27cfdc7d1e67948ec095f3c24837a93de18b
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/14/2021
-ms.locfileid: "107495789"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119610480"
 ---
-# <a name="dlp_app_op_enlightened_level-structure"></a>DLP_APP_OP_ENLIGHTENED_LEVEL-Struktur
+# <a name="dlp_app_op_enlightened_level-structure"></a>DLP_APP_OP_ENLIGHTENED_LEVEL Struktur
 
 Ordnet eine DLP-Aktion (Data Loss Prevention) eines Endpunkts einer Erzwingungsebene zu.
 
@@ -34,7 +34,7 @@ typedef struct _DLP_APP_OP_ENLIGHTENED_LEVEL{
 ```
 
 
-## <a name="members"></a>Members
+## <a name="members"></a>Member
 
 <dl> <dt>
 
@@ -58,7 +58,7 @@ Ein Wert aus [DlpAppEnforceLevel,](endpointdlp-dlpappenforcelevel.md) der die Er
 
 
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
 Übergeben Sie ein Array dieser Strukturen an [DlpInitializeEnforcementMode,](endpointdlp-dlpinitializeenforcementmode.md) um den Erzwingungsmodus für eine Reihe von Endpunkt-DLP-Vorgängen festzulegen.
 

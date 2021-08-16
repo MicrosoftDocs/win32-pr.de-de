@@ -4,8 +4,8 @@ description: Die Anzahl von Tagen, bevor ein gelöschtes Objekt aus den Verzeich
 ms.assetid: 58898097-912b-4fe6-b6ea-91f49aaa2b1b
 ms.tgt_platform: multiple
 keywords:
-- Tombstone-Lifetime AD-Attributschema
-- tombstoneLifetime-Attribut AD-Schema
+- Tombstone-Lifetime AD-Schema
+- TOMBSTONELifetime-Attribut AD-Schema
 topic_type:
 - apiref
 api_name:
@@ -23,7 +23,7 @@ ms.locfileid: "119644950"
 ---
 # <a name="tombstone-lifetime-attribute"></a>Tombstone-Lifetime-Attribut
 
-Die Anzahl von Tagen, bevor ein gelöschtes Objekt aus den Verzeichnisdiensten entfernt wird. Dies hilft beim Entfernen von Objekten von replizierten Servern und verhindert, dass Wiederherstellungen ein gelöschtes Objekt erneut einführen. Dieser Wert befindet sich im Verzeichnisdienstobjekt in der Konfigurations-NIC.
+Die Anzahl von Tagen, bevor ein gelöschtes Objekt aus den Verzeichnisdiensten entfernt wird. Dies hilft, Objekte von replizierten Servern zu entfernen und zu verhindern, dass Wiederherstellungen ein gelöschtes Objekt erneut bereitstellen. Dieser Wert befindet sich im Verzeichnisdienstobjekt in der Konfigurations-NIC.
 
 
 
@@ -35,7 +35,7 @@ Die Anzahl von Tagen, bevor ein gelöschtes Objekt aus den Verzeichnisdiensten e
 | Aktualisieren von Berechtigungen  | \-                                                        |
 | Updatehäufigkeit  | \-                                                        |
 | Attribute-Id      | 1.2.840.113556.1.2.54                                     |
-| System-ID-GUID    | 16c3a860-1273-11d0-a060-00aa006c33ed                      |
+| System-Id-Guid    | 16c3a860-1273-11d0-a060-00aa006c33ed                      |
 | Syntax            | [**Enumeration**](s-enumeration.md)                      |
 
 
@@ -59,7 +59,7 @@ Die Anzahl von Tagen, bevor ein gelöschtes Objekt aus den Verzeichnisdiensten e
 | Link-ID                | \-                                               |
 | MAPI-Id                | 0x8145                                           |
 | System-Only            | False                                            |
-| Ist einwertig       | True                                             |
+| Is-Single-Valued       | True                                             |
 | Ist indiziert             | False                                            |
 | Im globalen Katalog      | False                                            |
 | NT-Security-Descriptor | O:BAG:BAD:S:                                     |
@@ -80,7 +80,7 @@ Die Anzahl von Tagen, bevor ein gelöschtes Objekt aus den Verzeichnisdiensten e
 | Link-ID                | \-                                               |
 | MAPI-Id                | 0x8145                                           |
 | System-Only            | False                                            |
-| Ist einwertig       | True                                             |
+| Is-Single-Valued       | True                                             |
 | Ist indiziert             | False                                            |
 | Im globalen Katalog      | False                                            |
 | NT-Security-Descriptor | O:BAG:BAD:S:                                     |
@@ -101,7 +101,7 @@ Die Anzahl von Tagen, bevor ein gelöschtes Objekt aus den Verzeichnisdiensten e
 | Link-ID                | \-                                               |
 | MAPI-Id                | 0x8145                                           |
 | System-Only            | False                                            |
-| Ist einwertig       | True                                             |
+| Is-Single-Valued       | True                                             |
 | Ist indiziert             | False                                            |
 | Im globalen Katalog      | False                                            |
 | NT-Security-Descriptor | O:BAG:BAD:S:                                     |

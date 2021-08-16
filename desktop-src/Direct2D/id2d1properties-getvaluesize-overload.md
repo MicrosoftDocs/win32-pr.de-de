@@ -1,9 +1,9 @@
 ---
-title: ID2D1Properties getvaluesize-Methoden
-description: Ruft die Größe des Eigenschafts Werts in Bytes ab, wobei der Eigenschafts Index verwendet wird.
+title: ID2D1Properties GetValueSize-Methoden
+description: Ruft die Größe des Eigenschaftswerts in Bytes mithilfe des Eigenschaftenindexes ab.
 ms.assetid: 62D47611-1AF7-45F3-BB7B-20BF478811BE
 keywords:
-- Methoden der getvaluesize-Überladungs Methoden Direct2D
+- Methoden der GetValueSize-Überladungsmethoden Direct2D
 topic_type:
 - apiref
 api_type:
@@ -12,16 +12,16 @@ ms.topic: reference
 ms.date: 05/31/2018
 api_name: ''
 api_location: ''
-ms.openlocfilehash: 88d4a36f72844b97e5a7ff28675a8a47e3b962d4
-ms.sourcegitcommit: 592c9bbd22ba69802dc353bcb5eb30699f9e9403
+ms.openlocfilehash: 89837444579ed38841232ce1f8704a30d0a428e0ec8e30177f6bde85ec87e1e7
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "106342138"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119075264"
 ---
-# <a name="id2d1propertiesgetvaluesize-methods"></a>ID2D1Properties:: getvaluesize-Methoden
+# <a name="id2d1propertiesgetvaluesize-methods"></a>ID2D1Properties::GetValueSize-Methoden
 
-Ruft die Größe des Eigenschafts Werts in Bytes ab, wobei der Eigenschafts Index verwendet wird.
+Ruft die Größe des Eigenschaftswerts in Bytes mithilfe des Eigenschaftenindexes ab.
 
 ### <a name="overload-list"></a>Überladeliste
 
@@ -29,16 +29,16 @@ Ruft die Größe des Eigenschafts Werts in Bytes ab, wobei der Eigenschafts Inde
 
 | Methode                                                       | BESCHREIBUNG                                                                                                     |
 |:-------------------------------------------------------------|:----------------------------------------------------------------------------------------------------------------|
-| [**Getvaluesize (U)**](/windows/win32/api/d2d1_1/nf-d2d1_1-id2d1properties-getvaluesize(u))     | Ruft die Größe des Eigenschafts Werts in Bytes ab, wobei der Eigenschafts Index verwendet wird. Dies ist eine Vorlagen Überladung.<br/> |
-| [**Getvaluesize (UInt32)**](/windows/win32/api/d2d1_1/nf-d2d1_1-id2d1properties-getvaluesize(uint32)) | Ruft die Größe des Eigenschafts Werts in Bytes ab, wobei der Eigenschafts Index verwendet wird.<br/>                              |
+| [**GetValueSize(U)**](/windows/win32/api/d2d1_1/nf-d2d1_1-id2d1properties-getvaluesize(u))     | Ruft die Größe des Eigenschaftswerts in Bytes mithilfe des Eigenschaftenindexes ab. Dies ist eine Vorlagenüberladung.<br/> |
+| [**GetValueSize(UINT32)**](/windows/win32/api/d2d1_1/nf-d2d1_1-id2d1properties-getvaluesize(uint32)) | Ruft die Größe des Eigenschaftswerts in Bytes mithilfe des Eigenschaftenindexes ab.<br/>                              |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**ID2D1Properties**](/windows/win32/api/d2d1_1/nn-d2d1_1-id2d1properties)
+[**ID2D1Eigenschaften**](/windows/win32/api/d2d1_1/nn-d2d1_1-id2d1properties)
 </dt> </dl>
 
  

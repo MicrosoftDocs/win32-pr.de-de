@@ -1,6 +1,6 @@
 ---
 title: Bytecodeänderungen in SM5.1
-description: SM5.1 ändert, wie Ressourcenregister deklariert und in anweisungen referenziert werden.
+description: SM5.1 ändert die Art und Weise, wie Ressourcenregister deklariert werden und auf die in den Anweisungen verwiesen wird.
 ms.assetid: ABECF705-67B8-4419-8D18-74B43B9DC3AF
 ms.topic: article
 ms.date: 05/31/2018
@@ -13,7 +13,7 @@ ms.locfileid: "118794558"
 ---
 # <a name="bytecode-changes-in-sm51"></a>Bytecodeänderungen in SM5.1
 
-SM5.1 ändert, wie Ressourcenregister deklariert und in anweisungen referenziert werden.
+SM5.1 ändert die Art und Weise, wie Ressourcenregister deklariert werden und auf die in den Anweisungen verwiesen wird.
 
 SM5.1 geht auf die Deklaration einer Registervariablen zu, ähnlich wie bei Gruppen-Shared Memory-Registern, wie im folgenden Beispiel veranschaulicht:
 
@@ -93,7 +93,7 @@ Beachten Sie, dass die ID des Bereichs nicht mit der HLSL-Untergrenze-Deklaratio
 
 Die Reihenfolge der Reflektionsressourcenbindungen und Shaderdeklarationsanweisungen ist identisch, um die Übereinstimmung zwischen HLSL-Variablen und Bytecode-IDs zu identifizieren.
 
-Jede Deklarationsanweisung in SM5.1 verwendet einen 3D-Operanden, um die Bereichs-ID, die untere und die obere Grenze zu definieren. Ein zusätzliches Token wird ausgegeben, um den Registerbereich anzugeben. Andere Token können auch ausgegeben werden, um zusätzliche Eigenschaften des Bereichs zu vermitteln, z. B. gibt die Cbuffer- oder strukturierte Pufferdeklarationsanweisung die Größe des Cbuffers oder der Struktur aus. Die genauen Details der Codierung finden Sie in d3d12TokenizedProgramFormat.h und D3D10ShaderBinary::CShaderCodeParser.
+Jede Deklarationsanweisung in SM5.1 verwendet einen 3D-Operanden, um die Bereichs-ID, die untere und die obere Grenze zu definieren. Ein zusätzliches Token wird ausgegeben, um den Registerbereich anzugeben. Andere Token können auch ausgegeben werden, um zusätzliche Eigenschaften des Bereichs zu vermitteln, z. B. gibt die Cbuffer- oder strukturierte Pufferdeklarationsanweisung die Größe des cbuffer oder der Struktur aus. Die genauen Details der Codierung finden Sie in d3d12TokenizedProgramFormat.h und D3D10ShaderBinary::CShaderCodeParser.
 
 SM5.1-Anweisungen geben keine zusätzlichen Ressourcenoperndeninformationen als Teil der Anweisung aus (wie in SM5.0). Diese Informationen werden nun in die Deklarationsanweisungen verschoben. In SM5.0 erforderten Anweisungen zum Indizieren von Ressourcen Ressourcenattribute, die in erweiterten Opcodetoken beschrieben werden mussten, da die Indizierung die Zuordnung zur Deklaration verschleierte. In SM5.1 wird jede ID (z. B. "t1") eindeutig einer einzelnen Deklaration zugeordnet, die die erforderlichen Ressourceninformationen beschreibt. Daher werden die erweiterten Opcodetoken, die in Anweisungen zum Beschreiben von Ressourceninformationen verwendet werden, nicht mehr ausgegeben.
 

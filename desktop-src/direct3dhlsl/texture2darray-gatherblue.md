@@ -27,7 +27,7 @@ Gibt die blauen Komponenten der vier Texelwerte eines [**Texture2DArray**](sm5-o
 
 
 
-| Methode                                                                                                        | Beschreibung                                                                                                                                      |
+| Methode                                                                                                        | BESCHREIBUNG                                                                                                                                      |
 |:--------------------------------------------------------------------------------------------------------------|:-------------------------------------------------------------------------------------------------------------------------------------------------|
 | [**GatherBlue(S,float,int)**](sm5-object-texture2darray-gatherblue.md)                                        | Gibt die blauen Komponenten der vier Texelwerte zurück, die in einem bilinearen Filtervorgang verwendet werden.<br/>                                 |
 | [**GatherBlue(S,float,int,uint)**](t2darray-gatherblue-s-float-int-uint-.md)                                  | Gibt die blauen Komponenten der vier Texelwerte zurück, die in einem bilinearen Filtervorgang zusammen mit dem Kachelzuordnungsstatus verwendet werden.<br/> |

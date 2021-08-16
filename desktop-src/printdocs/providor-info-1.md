@@ -1,7 +1,7 @@
 ---
-description: Die providor \_ Info \_ 1-Struktur identifiziert einen Druckanbieter.
+description: Die PROVIDOR \_ INFO \_ 1-Struktur identifiziert einen Druckanbieter.
 ms.assetid: 0eff115a-b3d2-4c8f-b820-46e7f62dd295
-title: PROVIDOR_INFO_1 Struktur (winspool. h)
+title: PROVIDOR_INFO_1 -Struktur (Winspool.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -15,16 +15,16 @@ api_type:
 - HeaderDef
 api_location:
 - Winspool.h
-ms.openlocfilehash: 2eabc00009b76247af71b06ea877ca0bf738c1d5
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 4f9e7015382ef34f4582c4772e148059c4ed01de9e81da5af71bc0849df26f15
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "104347488"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120091700"
 ---
-# <a name="providor_info_1-structure"></a>Providor \_ Info \_ 1-Struktur
+# <a name="providor_info_1-structure"></a>PROVIDOR \_ INFO \_ 1-Struktur
 
-Die **providor \_ Info \_ 1** -Struktur identifiziert einen Druckanbieter.
+Die **PROVIDOR \_ INFO \_ 1-Struktur** identifiziert einen Druckanbieter.
 
 ## <a name="syntax"></a>Syntax
 
@@ -46,21 +46,21 @@ typedef struct _PROVIDOR_INFO_1 {
 **pName**
 </dt> <dd>
 
-Zeiger auf eine mit NULL endenden Zeichenfolge, die den Namen des Druck Anbieters ist.
+Zeiger auf eine auf NULL beendete Zeichenfolge, die der Name des Druckanbieters ist.
 
 </dd> <dt>
 
-**nach-oben**
+**pUmgebung**
 </dt> <dd>
 
-Zeiger auf eine mit NULL endenden Umgebungs Zeichenfolge, die die Umgebung angibt, in der die Anbieter-DLL (Dynamic-Link Library) ausgeführt werden soll.
+Zeiger auf eine auf NULL beendete Umgebungszeichenfolge, die die Umgebung angibt, in der die Dynamic Link Library (DLL) des Anbieters ausgeführt werden soll.
 
 </dd> <dt>
 
-**pdllname**
+**pDLLName**
 </dt> <dd>
 
-Zeiger auf eine mit NULL endenden Zeichenfolge, die der Name der Anbieter. dll ist.
+Zeiger auf eine auf NULL beendete Zeichenfolge, die der Name des Anbieters .dll.
 
 </dd> </dl>
 
@@ -72,22 +72,22 @@ Zeiger auf eine mit NULL endenden Zeichenfolge, die der Name der Anbieter. dll i
 |-------------------------------------|-----------------------------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional \[nur Desktop-Apps\]<br/>                                                |
 | Unterstützte Mindestversion (Server)<br/> | Windows 2000 Server \[nur Desktop-Apps\]<br/>                                                      |
-| Header<br/>                   | <dl> <dt>Winspool. h (Include Windows. h)</dt> </dl> |
-| Unicode- und ANSI-Name<br/>   | **\_ Providor \_ Info \_ 1W** (Unicode) und **\_ providor \_ Info \_ 1a** (ANSI)<br/>                         |
+| Header<br/>                   | <dl> <dt>Winspool.h (include Windows.h)</dt> </dl> |
+| Unicode- und ANSI-Name<br/>   | **\_ PROVIDOR \_ INFO \_ 1W** (Unicode) und **\_ PROVIDOR \_ INFO \_ 1A** (ANSI)<br/>                         |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
 [Drucken](printdocs-printing.md)
 </dt> <dt>
 
-[Druck Spooler-API-Strukturen](printing-and-print-spooler-structures.md)
+[Drucken von Spooler-API-Strukturen](printing-and-print-spooler-structures.md)
 </dt> <dt>
 
-[**Addprintprovidor**](addprintprovidor.md)
+[**AddPrintProvidor**](addprintprovidor.md)
 </dt> </dl>
 
  

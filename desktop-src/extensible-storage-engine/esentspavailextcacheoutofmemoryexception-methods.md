@@ -28,7 +28,7 @@ Der [EsentSPAvailExtCacheOutOfMemoryException-Typ](./esentspavailextcacheoutofme
 <tr class="header">
 <th> </th>
 <th>Name</th>
-<th>Beschreibung</th>
+<th>BESCHREIBUNG</th>
 </tr>
 </thead>
 <tbody>

@@ -1,11 +1,11 @@
 ---
 title: ms-DS-Has-Instantiated-NCs-Attribut
-description: DS-Replikationsstatusinformationen, analog zu (und einer Obermenge) der vorhandenen Attribute hasMasterNCs und hasPartialReplicaNCs. Wird vom KCC beim Einrichten von Replikationspartnern verwendet.
+description: DS-Replikationsstatusinformationen, analog zu den vorhandenen Attributen (und einer Obermenge von ), verfügen überMasterNCs und hasPartialReplicaNCs. Für die Verwendung durch den KCC beim Einrichten von Replikationspartnern.
 ms.assetid: 00dda441-e382-4fb2-b735-ae547901c11f
 ms.tgt_platform: multiple
 keywords:
-- AD-Schema des ms-DS-Has-Instantiated-NCs-Attributs
-- AD-Schema des msDS-HasInstantiatedNCs-Attributs
+- MS-DS-Has-Instantiated-NCs-Attribut AD-Schema
+- msDS-HasInstantiatedNCs-Attribut AD-Schema
 topic_type:
 - apiref
 api_name:
@@ -23,7 +23,7 @@ ms.locfileid: "119804051"
 ---
 # <a name="ms-ds-has-instantiated-ncs-attribute"></a>ms-DS-Has-Instantiated-NCs-Attribut
 
-DS-Replikationsstatusinformationen, analog zu (und einer Obermenge) der vorhandenen Attribute hasMasterNCs und hasPartialReplicaNCs. Wird vom KCC beim Einrichten von Replikationspartnern verwendet.
+DS-Replikationsstatusinformationen, analog zu den vorhandenen Attributen (und einer Obermenge von ), verfügen überMasterNCs und hasPartialReplicaNCs. Für die Verwendung durch den KCC beim Einrichten von Replikationspartnern.
 
 
 
@@ -33,9 +33,9 @@ DS-Replikationsstatusinformationen, analog zu (und einer Obermenge) der vorhande
 | Ldap-Anzeigename | msDS-HasInstantiatedNCs                                                                                                                                                                                     |
 | Size              | 4 Bytes                                                                                                                                                                                                     |
 | Aktualisieren von Berechtigungen  | Dieser Wert wird vom System festgelegt.                                                                                                                                                                            |
-| Updatehäufigkeit  | Ungefähr doppelt so oft wie hasMasterNCs/hasPartialReplicaNCs. Diese vorhandenen Attribute werden nur aktualisiert, wenn der Domänencontroller eine Partition hinzufügt oder entfernt (z. B. beim Wechsel von DC in GC oder umgekehrt). |
+| Updatehäufigkeit  | Ungefähr doppelt so oft wie hasMasterNCs/hasPartialReplicaNCs. Diese vorhandenen Attribute werden nur aktualisiert, wenn der DC eine Partition hinzufügt oder entfernt (z. B. beim Wechsel von DC zu GC oder umgekehrt). |
 | Attribute-Id      | 1.2.840.113556.1.4.1709                                                                                                                                                                                     |
-| System-Id-Guid    | 11e9a5bc-4517-4049-af9c-51554fb0fc09                                                                                                                                                                        |
+| System-ID-GUID    | 11e9a5bc-4517-4049-af9c-51554fb0fc09                                                                                                                                                                        |
 | Syntax            | [**Object(DN-Binary)**](s-object-dn-binary.md)                                                                                                                                                             |
 
 
@@ -58,7 +58,7 @@ DS-Replikationsstatusinformationen, analog zu (und einer Obermenge) der vorhande
 | Link-ID                | 2002                                     |
 | MAPI-Id                | \-                                       |
 | System-Only            | True                                     |
-| Is-Single-Valued       | False                                    |
+| Ist einwertig       | False                                    |
 | Ist indiziert             | False                                    |
 | Im globalen Katalog      | False                                    |
 | NT-Security-Descriptor | O:BAG:BAD:S:                             |
@@ -79,7 +79,7 @@ DS-Replikationsstatusinformationen, analog zu (und einer Obermenge) der vorhande
 | Link-ID                | 2002                                     |
 | MAPI-Id                | \-                                       |
 | System-Only            | True                                     |
-| Is-Single-Valued       | False                                    |
+| Ist einwertig       | False                                    |
 | Ist indiziert             | False                                    |
 | Im globalen Katalog      | False                                    |
 | NT-Security-Descriptor | O:BAG:BAD:S:                             |
@@ -100,7 +100,7 @@ DS-Replikationsstatusinformationen, analog zu (und einer Obermenge) der vorhande
 | Link-ID                | 2002                                     |
 | MAPI-Id                | \-                                       |
 | System-Only            | True                                     |
-| Is-Single-Valued       | False                                    |
+| Ist einwertig       | False                                    |
 | Ist indiziert             | False                                    |
 | Im globalen Katalog      | False                                    |
 | NT-Security-Descriptor | O:BAG:BAD:S:                             |

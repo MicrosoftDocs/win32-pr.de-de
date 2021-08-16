@@ -1,11 +1,11 @@
 ---
-title: Idwrite-fontfallbackbuilder-AddMapping-Methode
-description: Fügt eine einzelne Zuordnung an die Liste an. Dies wird einmal für jede weitere Zuordnung aufgerufen.
+title: IDWriteFontFallbackBuilder AddMapping-Methode
+description: Fügt eine einzelne Zuordnung an die Liste an. Rufen Sie dies einmal für jede zusätzliche Zuordnung auf.
 ms.assetid: FCA3CD9C-9FB3-49BD-B4D1-53AEAAAAEE8A
 keywords:
-- Direkte Schreibweise von AddMapping-Methode
-- AddMapping-Methode Direct Write, idwrite Test fontfallbackbuilder-Schnittstelle
-- Idwrite-fontfallbackbuilder-Schnittstelle Direct Write, AddMapping-Methode
+- AddMapping-Methode " Direct Write"
+- AddMapping-Methode Direct Write , IDWriteFontFallbackBuilder-Schnittstelle
+- IDWriteFontFallbackBuilder-Schnittstelle Direct Write , AddMapping-Methode
 topic_type:
 - apiref
 api_name:
@@ -16,16 +16,16 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: a084aa2a9df0e34741c8bf5f39ae00933d49cfe7
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 0b6496ac9ef9bdfa574cc2c4710ed4620fd855dbf5eff2b22885b32bf343d141
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104392043"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119650440"
 ---
-# <a name="idwritefontfallbackbuilderaddmapping-method"></a>Idschreitefontfallbackbuilder:: AddMapping-Methode
+# <a name="idwritefontfallbackbuilderaddmapping-method"></a>IDWriteFontFallbackBuilder::AddMapping-Methode
 
-Fügt eine einzelne Zuordnung an die Liste an. Dies wird einmal für jede weitere Zuordnung aufgerufen.
+Fügt eine einzelne Zuordnung an die Liste an. Rufen Sie dies einmal für jede zusätzliche Zuordnung auf.
 
 ## <a name="syntax"></a>Syntax
 
@@ -49,75 +49,75 @@ HRESULT AddMapping(
 
 <dl> <dt>
 
-*Ketten* 
+*Bereiche* 
 </dt> <dd>
 
-Typ: **[**dwrite- \_ Unicode- \_ Bereich**](/windows/win32/api/Dwrite_1/ns-dwrite_1-dwrite_unicode_range) \** _
+Typ: **[ **DWRITE \_ UNICODE \_ RANGE**](/windows/win32/api/Dwrite_1/ns-dwrite_1-dwrite_unicode_range)\***
 
 Unicode-Bereiche, die für diese Zuordnung gelten.
 
 </dd> <dt>
 
-_rangesCount * 
+*rangesCount* 
 </dt> <dd>
 
-Typ: **UInt32**
+Typ: **UINT32**
 
-Anzahl von Unicode-Bereichen.
+Anzahl der Unicode-Bereiche.
 
 </dd> <dt>
 
-*targetfamilynames* \[ in\]
+*targetFamilyNames* \[ In\]
 </dt> <dd>
 
-Typ: Konstante **WCHAR \* \***
+Typ: **const \* \* WCHAR**
 
-Liste der Ziel Familiennamen-Zeichen folgen.
+Liste der Zeichenfolgen für Zielfamiliennamen.
 
 </dd> <dt>
 
-*targetfamilynamescount* 
+*targetFamilyNamesCount* 
 </dt> <dd>
 
-Typ: **UInt32**
+Typ: **UINT32**
 
-Anzahl der Ziel Familiennamen.
+Anzahl der Zielfamiliennamen.
 
 </dd> <dt>
 
-*FontCollection* \[ in, optional\]
+*fontCollection* \[ in, optional\]
 </dt> <dd>
 
-Typ: **[ **idschreitefontcollection**](/windows/win32/api/dwrite/nn-dwrite-idwritefontcollection)**
+Typ: **[ **IDWriteFontCollection**](/windows/win32/api/dwrite/nn-dwrite-idwritefontcollection)**
 
-Optionale explizite Schriftart Auflistung für diese Zuordnung.
+Optionale explizite Schriftartauflistung für diese Zuordnung.
 
 </dd> <dt>
 
-*localename* \[ in, optional\]
+*localeName* \[ in, optional\]
 </dt> <dd>
 
-Typ: * Konstante *WCHAR \** _
+Typ: **const \* WCHAR**
 
-Das Gebiets Schema des Kontexts.
+Gebietsschema des Kontexts.
 
 </dd> <dt>
 
-_baseFamilyName * \[ in, optional\]
+*baseFamilyName* \[ in, optional\]
 </dt> <dd>
 
-Typ: * Konstante *WCHAR \** _
+Typ: **const \* WCHAR**
 
-Der Basis Familienname für den Abgleich, falls zutreffend.
+Basisfamilienname, mit dem ggf. eine Übereinstimmung besteht.
 
 </dd> <dt>
 
-_scale * 
+*scale* 
 </dt> <dd>
 
-Typ: **float**
+Typ: **FLOAT**
 
-Der Skalierungsfaktor zum Multiplizieren der Ergebnisziel Schriftart.
+Skalierungsfaktor zum Multiplizieren der Zielschriftart des Ergebnisses.
 
 </dd> </dl>
 
@@ -125,7 +125,7 @@ Der Skalierungsfaktor zum Multiplizieren der Ergebnisziel Schriftart.
 
 Typ: **HRESULT**
 
-Wenn diese Methode erfolgreich ausgeführt wird, gibt Sie **S \_ OK** zurück. Andernfalls wird ein **HRESULT** -Fehlercode zurückgegeben.
+Wenn diese Methode erfolgreich ist, wird **S \_ OK** zurückgegeben. Andernfalls wird ein **HRESULT-Fehlercode** zurückgegeben.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -133,19 +133,19 @@ Wenn diese Methode erfolgreich ausgeführt wird, gibt Sie **S \_ OK** zurück. A
 
 | Anforderung | Wert |
 |-------------------------------------|-----------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Windows 8.1 \[ Desktop-Apps \| UWP-apps\]<br/>                                     |
-| Unterstützte Mindestversion (Server)<br/> | Windows Server 2012 R2 \[ -Desktop-Apps \| UWP-apps\]<br/>                          |
-| Unterstützte Mindestversion (Telefon)<br/>  | Windows Phone 8,1 \[ Windows Phone Silverlight 8,1 und Windows-Runtime apps\]<br/> |
-| Bibliothek<br/>                  | <dl> <dt>Dwrite. lib</dt> </dl>   |
+| Unterstützte Mindestversion (Client)<br/> | \[Windows 8.1 \|Desktop-Apps UWP-Apps\]<br/>                                     |
+| Unterstützte Mindestversion (Server)<br/> | Windows Server 2012 \[R2-Desktop-Apps \| UWP-Apps\]<br/>                          |
+| Unterstützte Mindestversion (Telefon)<br/>  | Windows Phone 8.1 \[ Windows Phone Silverlight 8.1- und Windows Runtime-Apps\]<br/> |
+| Bibliothek<br/>                  | <dl> <dt>Dwrite.lib</dt> </dl>   |
 | DLL<br/>                      | <dl> <dt>Dwrite.dll</dt> </dl>   |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Idschreitefontfallbackbuilder**](idwritefontfallbackbuilder.md)
+[**IDWriteFontFallbackBuilder**](idwritefontfallbackbuilder.md)
 </dt> </dl>
 
  

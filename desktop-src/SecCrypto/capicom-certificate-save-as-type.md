@@ -28,7 +28,7 @@ Der **CAPICOM \_ CERTIFICATE SAVE AS \_ \_ TYPE-Enumerationstyp \_** definiert d
 
 
 
-| Member                                  | BESCHREIBUNG                                                                                                                                   | Wert |
+| Member                                  | Beschreibung                                                                                                                                   | Wert |
 |-----------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------|-------|
 | **CAPICOM \_ CERTIFICATE \_ SAVE \_ AS \_ PFX** | Die Ausgabedatei wird als PFX-Datei (PKCS 12) formatiert, und alle zugehörigen privaten Schlüssel, die exportierbar sind, werden ebenfalls gespeichert.<br/> | 0     |
 | **CAPICOM \_ CERTIFICATE \_ SAVE \_ AS \_ CER** | Die Ausgabedatei wird als CER-Datei formatiert, ohne dass private Schlüssel gespeichert werden.<br/>                                                        | 1     |

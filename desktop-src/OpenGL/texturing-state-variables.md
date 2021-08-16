@@ -1,6 +1,6 @@
 ---
-title: Texturieren von Zustandsvariablen
-description: Texturieren von Zustandsvariablen
+title: Statusvariablen für Texturen
+description: Statusvariablen für Texturen
 ms.assetid: 2d9d3d8b-ecaa-412c-8105-ae2ca801784e
 keywords:
 - Texturierungszustandsvariablen OpenGL
@@ -12,14 +12,14 @@ api_type:
 - NA
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: ff468c701100cc598a519ed3aa290913016a559e
-ms.sourcegitcommit: 63753fcfb0afbbe5ec283fb8316e62c2dc950f66
+ms.openlocfilehash: 7393fc6e700b028ba3783e5c78d8175e0c3fba4937bf3830d5cae8897aa0d4db
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/22/2021
-ms.locfileid: "107908648"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119776580"
 ---
-# <a name="texturing-state-variables"></a>Texturieren von Zustandsvariablen
+# <a name="texturing-state-variables"></a>Statusvariablen für Texturen
 
 <dl> <dt><span id="GL_TEXTURE_x"></span><span id="gl_texture_x"></span><span id="GL_TEXTURE_X"></span>GL \_ TEXTURE \_ *x*</dt> <dd> 
 
@@ -60,7 +60,7 @@ ms.locfileid: "107908648"
 
  
 
-</dd> <dt><span id="GL_TEXTURE_HEIGHT"></span><span id="gl_texture_height"></span>GL \_ \_ TEXTURHÖHE</dt> <dd> 
+</dd> <dt><span id="GL_TEXTURE_HEIGHT"></span><span id="gl_texture_height"></span>GL \_ TEXTURE \_ HEIGHT</dt> <dd> 
 
 | Eigenschaft | Wert |
 |------------------|----------------------------------------------------------|
@@ -77,7 +77,7 @@ ms.locfileid: "107908648"
 
 | Eigenschaft | Wert |
 |------------------|----------------------------------------------------------|
-| Beschreibung:     | *x* – D Texturbild *i* es border                      |
+| Beschreibung:     | *x* – D Texturbild *i* 's border                      |
 | Attributgruppe: |                                                          |
 | Anfangswert:   | 0                                                        |
 | Get-Befehl:     | [**glGetTexLevelParameter**](glgettexlevelparameter.md) |
@@ -86,7 +86,7 @@ ms.locfileid: "107908648"
 
  
 
-</dd> <dt><span id="GL_TEXTURE_COMPONENTS"></span><span id="gl_texture_components"></span>\_ \_ GL-TEXTURKOMPONENTEN</dt> <dd> 
+</dd> <dt><span id="GL_TEXTURE_COMPONENTS"></span><span id="gl_texture_components"></span>GL \_ TEXTURE \_ COMPONENTS</dt> <dd> 
 
 | Eigenschaft | Wert |
 |------------------|----------------------------------------------------------|
@@ -168,7 +168,7 @@ ms.locfileid: "107908648"
 
 | Eigenschaft | Wert |
 |------------------|--------------------------------------|
-| Beschreibung:     | Texturumgebungsfarbe            |
+| Beschreibung:     | Farbe der Texturumgebung            |
 | Attributgruppe: | Struktur                              |
 | Anfangswert:   | 0, 0, 0, 0                           |
 | Get-Befehl:     | [**glGetTexEnvfv**](glgettexenv.md) |

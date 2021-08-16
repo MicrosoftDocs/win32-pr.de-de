@@ -1,89 +1,89 @@
 ---
-description: Eigenschaften werden verwendet, um einem Zertifikat einen Wert zuzuordnen.
+description: Eigenschaften werden verwendet, um einem Zertifikat einen Wert zu zuordnen.
 ms.assetid: a6433416-fe77-4bb0-bd8e-9410a49ab861
-title: Externe Eigenschaften Funktionen
+title: Externe Eigenschaftenfunktionen
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 26c8148022bf604aa90780787c068b330c469ae6
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 40196f4f42823ad44debeccc0fa85dc4615d58d1a0ccf521b2dd796e72574db3
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "104217638"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117779630"
 ---
-# <a name="external-property-functions"></a>Externe Eigenschaften Funktionen
+# <a name="external-property-functions"></a>Externe Eigenschaftenfunktionen
 
-Eigenschaften werden verwendet, um einem Zertifikat einen Wert zuzuordnen. Eigenschaften werden niemals an eine Zertifizierungsstelle ( [*Certification Authority*](/windows/desktop/SecGloss/c-gly) , ca) gesendet oder von dieser verarbeitet. Sie werden nicht in einem Zertifikat gespeichert. Normalerweise werden Sie einem Zertifikat zugeordnet, nachdem das Zertifikat von der Zertifizierungsstelle empfangen wurde und bevor es in einem Speicher gespeichert wird. Die Eigenschaften werden zusammen mit dem Zertifikat im Speicher gespeichert. CertEnroll.dll implementiert die [**icertproperty**](/windows/desktop/api/CertEnroll/nn-certenroll-icertproperty) -Schnittstelle und die folgenden Schnittstellen, die von **icertproperty** abgeleitet sind:
+Eigenschaften werden verwendet, um einem Zertifikat einen Wert zu zuordnen. Eigenschaften werden nie an eine Zertifizierungsstelle [*gesendet*](/windows/desktop/SecGloss/c-gly) oder von ihr verarbeitet, und sie werden nicht in einem Zertifikat gespeichert. In der Regel werden sie einem Zertifikat zugeordnet, nachdem das Zertifikat von der Zertifizierungsstelle empfangen und bevor es in einem Speicher gespeichert wird. Die Eigenschaften werden zusammen mit dem Zertifikat im Speicher gespeichert. CertEnroll.dll implementiert die [**ICertProperty-Schnittstelle**](/windows/desktop/api/CertEnroll/nn-certenroll-icertproperty) und die folgenden Schnittstellen, die von **ICertProperty abgeleitet wurden:**
 
--   [**Icertpropertyarchiviert**](/windows/desktop/api/CertEnroll/nn-certenroll-icertpropertyarchived)
--   [**Icertpropertyarchivedkeyhash**](/windows/desktop/api/CertEnroll/nn-certenroll-icertpropertyarchivedkeyhash)
--   [**Icertpropertyautoenroll**](/windows/desktop/api/CertEnroll/nn-certenroll-icertpropertyautoenroll)
--   [**Icertpropertybackedup**](/windows/desktop/api/CertEnroll/nn-certenroll-icertpropertybackedup)
--   [**Icertpropertydescription**](/windows/desktop/api/CertEnroll/nn-certenroll-icertpropertydescription)
--   [**Icertpropertyeinschreibung**](/windows/desktop/api/CertEnroll/nn-certenroll-icertpropertyenrollment)
--   [**Icertpropertyfriendlyname**](/windows/desktop/api/CertEnroll/nn-certenroll-icertpropertyfriendlyname)
--   [**Icertpropertykeyprovinfo**](/windows/desktop/api/CertEnroll/nn-certenroll-icertpropertykeyprovinfo)
--   [**Icertpropertyrenewal**](/windows/desktop/api/CertEnroll/nn-certenroll-icertpropertyrenewal)
--   [**Icertpropertyrequestoriginator**](/windows/desktop/api/CertEnroll/nn-certenroll-icertpropertyrequestoriginator)
+-   [**ICertPropertyArchived**](/windows/desktop/api/CertEnroll/nn-certenroll-icertpropertyarchived)
+-   [**ICertPropertyArchivedKeyHash**](/windows/desktop/api/CertEnroll/nn-certenroll-icertpropertyarchivedkeyhash)
+-   [**ICertPropertyAutoEnroll**](/windows/desktop/api/CertEnroll/nn-certenroll-icertpropertyautoenroll)
+-   [**ICertPropertyBackedUp**](/windows/desktop/api/CertEnroll/nn-certenroll-icertpropertybackedup)
+-   [**ICertPropertyDescription**](/windows/desktop/api/CertEnroll/nn-certenroll-icertpropertydescription)
+-   [**ICertPropertyEnrollment**](/windows/desktop/api/CertEnroll/nn-certenroll-icertpropertyenrollment)
+-   [**ICertPropertyFriendlyName**](/windows/desktop/api/CertEnroll/nn-certenroll-icertpropertyfriendlyname)
+-   [**ICertPropertyKeyProvInfo**](/windows/desktop/api/CertEnroll/nn-certenroll-icertpropertykeyprovinfo)
+-   [**ICertPropertyRenewal**](/windows/desktop/api/CertEnroll/nn-certenroll-icertpropertyrenewal)
+-   [**ICertPropertyRequestOriginator**](/windows/desktop/api/CertEnroll/nn-certenroll-icertpropertyrequestoriginator)
 -   [**ICertPropertySHA1Hash**](/windows/desktop/api/CertEnroll/nn-certenroll-icertpropertysha1hash)
 
-In den folgenden Abschnitten wird eine Funktion identifiziert, die von Xenroll.dll zum Verwalten externer Zertifikat Eigenschaften exportiert wird. Außerdem wird in jedem Abschnitt erläutert, wie CertEnroll.dll verwendet wird, um die Funktion zu ersetzen, oder es wird angegeben, dass keine Zuordnung zwischen den beiden Bibliotheken besteht:
+In jedem der folgenden Abschnitte wird eine Funktion identifiziert, die von Xenroll.dll zum Verwalten externer Zertifikateigenschaften exportiert wird. In jedem Abschnitt wird auch erläutert, wie sie CertEnroll.dll funktion ersetzen, oder gibt an, dass keine Zuordnung zwischen den beiden Bibliotheken vorhanden ist:
 
--   [addblobpropertytcertificatewstr](#addblobpropertytocertificatewstr)
--   [Getprivatekeyarchivecertificate](#getprivatekeyarchivecertificate)
--   [resetblobproperties](#resetblobproperties)
--   [Setprivatekeyarchivecertificate](#setprivatekeyarchivecertificate)
--   [Setsignercertificate](#setsignercertificate)
--   [Thumbprintwstr](#thumbprintwstr)
+-   [addBlobPropertyToCertificateWStr](#addblobpropertytocertificatewstr)
+-   [GetPrivateKeyArchiveCertificate](#getprivatekeyarchivecertificate)
+-   [resetBlobProperties](#resetblobproperties)
+-   [SetPrivateKeyArchiveCertificate](#setprivatekeyarchivecertificate)
+-   [SetSignerCertificate](#setsignercertificate)
+-   [ThumbPrintWStr](#thumbprintwstr)
 -   [Zugehörige Themen](#related-topics)
 
-## <a name="addblobpropertytocertificatewstr"></a>addblobpropertytcertificatewstr
+## <a name="addblobpropertytocertificatewstr"></a>addBlobPropertyToCertificateWStr
 
-Die [**addblobpropertytocertificatewstr**](/windows/desktop/api/xenroll/nf-xenroll-ienroll4-addblobpropertytocertificatewstr) -Funktion in Xenroll.dll fügt dem Zertifikat eine Eigenschaft hinzu.
+Die [**addBlobPropertyToCertificateWStr-Funktion**](/windows/desktop/api/xenroll/nf-xenroll-ienroll4-addblobpropertytocertificatewstr) in Xenroll.dll dem Zertifikat eine -Eigenschaft hinzu.
 
-In CertEnroll.dll implementieren alle von [**icertproperty**](/windows/desktop/api/CertEnroll/nn-certenroll-icertproperty) abgeleiteten Objekte eine [**setvalueoncertificate**](/windows/desktop/api/CertEnroll/nf-certenroll-icertproperty-setvalueoncertificate) -Methode, die Sie verwenden können, um eine Eigenschaft einem Zertifikat zuzuordnen. Außerdem implementiert das [**IX509Enrollment**](/windows/desktop/api/CertEnroll/nn-certenroll-ix509enrollment) -Objekt die Eigenschaften [**certificatefriendlyname**](/windows/desktop/api/CertEnroll/nf-certenroll-ix509enrollment-get_certificatefriendlyname) und [**certificatedescription**](/windows/desktop/api/CertEnroll/nf-certenroll-ix509enrollment-get_certificatedescription) direkt.
+In CertEnroll.dll implementieren alle von [**ICertProperty**](/windows/desktop/api/CertEnroll/nn-certenroll-icertproperty) abgeleiteten Objekte eine [**SetValueOnCertificate-Methode,**](/windows/desktop/api/CertEnroll/nf-certenroll-icertproperty-setvalueoncertificate) mit der Sie eine Eigenschaft einem Zertifikat zuordnen können. Außerdem implementiert das [**IX509Enrollment-Objekt**](/windows/desktop/api/CertEnroll/nn-certenroll-ix509enrollment) direkt die [**CertificateFriendlyName-**](/windows/desktop/api/CertEnroll/nf-certenroll-ix509enrollment-get_certificatefriendlyname) und [**CertificateDescription-Eigenschaften.**](/windows/desktop/api/CertEnroll/nf-certenroll-ix509enrollment-get_certificatedescription)
 
-## <a name="getprivatekeyarchivecertificate"></a>Getprivatekeyarchivecertificate
+## <a name="getprivatekeyarchivecertificate"></a>GetPrivateKeyArchiveCertificate
 
-Die Funktion " [**getprivatekeyarchivecertificate**](/windows/desktop/api/xenroll/nf-xenroll-ienroll4-getprivatekeyarchivecertificate) " in Xenroll.dll ruft das Exchange-Zertifikat ab, das zum Archivieren eines [*privaten Schlüssels*](/windows/desktop/SecGloss/p-gly)verwendet wird.
+Die [**GetPrivateKeyArchiveCertificate-Funktion**](/windows/desktop/api/xenroll/nf-xenroll-ienroll4-getprivatekeyarchivecertificate) in Xenroll.dll das Exchange-Zertifikat ab, das zum Archivieren eines privaten [*Schlüssels verwendet wird.*](/windows/desktop/SecGloss/p-gly)
 
-Sie können das [**IX509CertificateRequestCmc**](/windows/desktop/api/CertEnroll/nn-certenroll-ix509certificaterequestcmc) -Objekt in CertEnroll.dll verwenden, um eine Anforderung für eine Zertifizierungsstelle zum Archivieren Ihres privaten Schlüssels zu erstellen. Sie müssen ein Exchange-Zertifikat von der Zertifizierungsstelle abrufen und den [*öffentlichen*](/windows/desktop/SecGloss/p-gly) Schlüssel, der in diesem Zertifikat enthalten ist, verwenden, um den privaten Schlüssel zu verschlüsseln, den Sie für die Archivierung übermitteln. Rufen Sie zum angeben oder Abrufen eines Zertifizierungsstellen-Exchange-Zertifikats die [**keyarchivalcertificate**](/windows/desktop/api/CertEnroll/nf-certenroll-ix509certificaterequestcmc-get_keyarchivalcertificate) -Eigenschaft für dieses Objekt auf.
+Sie können das [**IX509CertificateRequestCmc-Objekt**](/windows/desktop/api/CertEnroll/nn-certenroll-ix509certificaterequestcmc) in CertEnroll.dll, um eine Anforderung für eine Zertifizierungsstelle zum Archivieren Ihres privaten Schlüssels zu erstellen. Sie müssen ein Austauschzertifikat von der [](/windows/desktop/SecGloss/p-gly) Zertifizierungsstelle abrufen und den in diesem Zertifikat enthaltenen öffentlichen Schlüssel verwenden, um den privaten Schlüssel zu verschlüsseln, den Sie zur Archivierung übermitteln. Rufen Sie zum Angeben oder Abrufen eines Zertifizierungsstellenaustauschzertifikats die [**KeyArchivalCertificate-Eigenschaft**](/windows/desktop/api/CertEnroll/nf-certenroll-ix509certificaterequestcmc-get_keyarchivalcertificate) für dieses Objekt auf.
 
-## <a name="resetblobproperties"></a>resetblobproperties
+## <a name="resetblobproperties"></a>resetBlobProperties
 
-Die [**resetblobproperties**](/windows/desktop/api/xenroll/nf-xenroll-icenroll4-resetblobproperties) -Funktion in Xenroll.dll entfernt die Eigenschaften Auflistung aus dem Zertifikat.
+Die [**resetBlobProperties-Funktion**](/windows/desktop/api/xenroll/nf-xenroll-icenroll4-resetblobproperties) in Xenroll.dll entfernt die Eigenschaftensammlung aus dem Zertifikat.
 
-In CertEnroll.dll implementieren alle Eigenschaften Objekte, die von [**icertproperty**](/windows/desktop/api/CertEnroll/nn-certenroll-icertproperty) abgeleitet werden, die [**removefromcertificate**](/windows/desktop/api/CertEnroll/nf-certenroll-icertproperty-removefromcertificate) -Eigenschaft, die Sie verwenden können, um die Zuordnung einer Eigenschaft zu einem Zertifikat aufzuheben.
+In CertEnroll.dll implementieren alle von [**ICertProperty**](/windows/desktop/api/CertEnroll/nn-certenroll-icertproperty) abgeleiteten Eigenschaftenobjekte die [**RemoveFromCertificate-Eigenschaft,**](/windows/desktop/api/CertEnroll/nf-certenroll-icertproperty-removefromcertificate) mit der Sie die Zuordnung einer Eigenschaft zu einem Zertifikat entfernen können.
 
-## <a name="setprivatekeyarchivecertificate"></a>Setprivatekeyarchivecertificate
+## <a name="setprivatekeyarchivecertificate"></a>SetPrivateKeyArchiveCertificate
 
-Die [**setprivatekeyarchivecertificate**](/windows/desktop/api/xenroll/nf-xenroll-ienroll4-setprivatekeyarchivecertificate) -Funktion in Xenroll.dll gibt ein Exchange-Zertifikat an, das zum Archivieren eines privaten Schlüssels verwendet wird.
+Die [**Funktion SetPrivateKeyArchiveCertificate**](/windows/desktop/api/xenroll/nf-xenroll-ienroll4-setprivatekeyarchivecertificate) in Xenroll.dll ein Austauschzertifikat an, das zum Archivieren eines privaten Schlüssels verwendet wird.
 
-Sie können das [**IX509CertificateRequestCmc**](/windows/desktop/api/CertEnroll/nn-certenroll-ix509certificaterequestcmc) -Objekt in CertEnroll.dll verwenden, um eine Anforderung für eine Zertifizierungsstelle zum Archivieren Ihres privaten Schlüssels zu erstellen. Sie müssen ein Exchange-Zertifikat von der Zertifizierungsstelle abrufen und den öffentlichen Schlüssel, der in diesem Zertifikat enthalten ist, verwenden, um den privaten Schlüssel zu verschlüsseln, den Sie für die Archivierung übermitteln. Rufen Sie zum angeben oder Abrufen eines Zertifizierungsstellen-Exchange-Zertifikats die [**keyarchivalcertificate**](/windows/desktop/api/CertEnroll/nf-certenroll-ix509certificaterequestcmc-get_keyarchivalcertificate) -Eigenschaft für dieses Objekt auf.
+Sie können das [**IX509CertificateRequestCmc-Objekt**](/windows/desktop/api/CertEnroll/nn-certenroll-ix509certificaterequestcmc) in CertEnroll.dll, um eine Anforderung für eine Zertifizierungsstelle zum Archivieren Ihres privaten Schlüssels zu erstellen. Sie müssen ein Austauschzertifikat von der Zertifizierungsstelle abrufen und den in diesem Zertifikat enthaltenen öffentlichen Schlüssel verwenden, um den privaten Schlüssel zu verschlüsseln, den Sie zur Archivierung übermitteln. Rufen Sie zum Angeben oder Abrufen eines Zertifizierungsstellenaustauschzertifikats die [**KeyArchivalCertificate-Eigenschaft**](/windows/desktop/api/CertEnroll/nf-certenroll-ix509certificaterequestcmc-get_keyarchivalcertificate) für dieses Objekt auf.
 
-## <a name="setsignercertificate"></a>Setsignercertificate
+## <a name="setsignercertificate"></a>SetSignerCertificate
 
-Die Funktion " [**setsignercertificate**](/windows/desktop/api/xenroll/nf-xenroll-ienroll4-setsignercertificate) " in Xenroll.dll gibt ein Signatur Geber Zertifikat an.
+Die [**SetSignerCertificate-Funktion**](/windows/desktop/api/xenroll/nf-xenroll-ienroll4-setsignercertificate) in Xenroll.dll Gibt ein Signiererzertifikat an.
 
-Das [**isignercertificate**](/windows/desktop/api/CertEnroll/nn-certenroll-isignercertificate) -Objekt in CertEnroll.dll kann verwendet werden, um eine [*PKCS \# 7*](/windows/desktop/SecGloss/p-gly)-, CMC-oder selbst signierte [*Zertifikat Anforderung*](/windows/desktop/SecGloss/c-gly)zu signieren. Sie können das Objekt mit einem vorhandenen Signaturzertifikat initialisieren und es einer Anforderung zuordnen, indem Sie eine der folgenden Eigenschaften aufrufen:
+Das [**ISignerCertificate-Objekt**](/windows/desktop/api/CertEnroll/nn-certenroll-isignercertificate) in CertEnroll.dll kann verwendet werden, um eine [*PKCS \# 7-,*](/windows/desktop/SecGloss/p-gly)CMC- oder selbstsignierte [*Zertifikatanforderung zu signieren.*](/windows/desktop/SecGloss/c-gly) Sie können das -Objekt mithilfe eines vorhandenen Signaturzertifikats initialisieren und es einer Anforderung zuordnen, indem Sie eine der folgenden Eigenschaften aufrufen:
 
--   [**Signerzertifikate**](/windows/desktop/api/CertEnroll/nf-certenroll-ix509certificaterequestcmc-get_signercertificates) auf [ **IX509CertificateRequestCmc**](/windows/desktop/api/CertEnroll/nn-certenroll-ix509certificaterequestcmc)
+-   [**SignerCertificates**](/windows/desktop/api/CertEnroll/nf-certenroll-ix509certificaterequestcmc-get_signercertificates) auf [ **IX509CertificateRequestCmc**](/windows/desktop/api/CertEnroll/nn-certenroll-ix509certificaterequestcmc)
 -   [**SignerCertificate**](/windows/desktop/api/CertEnroll/nf-certenroll-ix509certificaterequestpkcs7-get_signercertificate) auf [ **IX509CertificateRequestPkcs7**](/windows/desktop/api/CertEnroll/nn-certenroll-ix509certificaterequestpkcs7)
 -   [**SignerCertificate**](/windows/desktop/api/CertEnroll/nf-certenroll-ix509certificaterequestcertificate-get_signercertificate) auf [ **IX509CertificateRequestCertificate**](/windows/desktop/api/CertEnroll/nn-certenroll-ix509certificaterequestcertificate)
 
-Außerdem kann das Signaturzertifikat festgelegt werden, wenn Sie eine CMC-Anforderung aus einer inneren Anforderung und einer Vorlage initialisieren oder eine PKCS \# 7-Anforderung aus einer vorhandenen Anforderung initialisieren.
+Wenn Sie eine CMC-Anforderung aus einer inneren Anforderung und einer Vorlage initialisieren oder eine PKCS 7-Anforderung aus einer vorhandenen Anforderung initialisieren, kann das Signaturzertifikat \# festgelegt werden.
 
-## <a name="thumbprintwstr"></a>Thumbprintwstr
+## <a name="thumbprintwstr"></a>ThumbPrintWStr
 
-Die Funktion [**thumbprintwstr**](/windows/desktop/api/xenroll/nf-xenroll-ienroll4-get_thumbprintwstr) in Xenroll.dll gibt den Wert des Zertifikat Hash an oder ruft ihn ab.
+Die [**ThumbPrintWStr-Funktion**](/windows/desktop/api/xenroll/nf-xenroll-ienroll4-get_thumbprintwstr) in Xenroll.dll gibt den Wert des Zertifikathashs an oder ruft den Wert ab.
 
-In CertEnroll.dll können Sie das [**ICertPropertySHA1Hash**](/windows/desktop/api/CertEnroll/nn-certenroll-icertpropertysha1hash) -Objekt verwenden, um einen [*Hashwert*](/windows/desktop/SecGloss/h-gly) ([*Fingerabdruck*](/windows/desktop/SecGloss/t-gly)) abzurufen, der durch Aufrufen der [**initializefromcertificate**](/windows/desktop/api/CertEnroll/nf-certenroll-ix509certificaterequestpkcs7-initializefromcertificate) -Methode erstellt wurde.
+In CertEnroll.dll können Sie das [**ICertPropertySHA1Hash-Objekt**](/windows/desktop/api/CertEnroll/nn-certenroll-icertpropertysha1hash) verwenden, um einen Hashwert [*(*](/windows/desktop/SecGloss/t-gly)Fingerabdruck ) abzurufen, der durch Aufrufen der [**InitializeFromCertificate-Methode erstellt**](/windows/desktop/api/CertEnroll/nf-certenroll-ix509certificaterequestpkcs7-initializefromcertificate) wurde. [](/windows/desktop/SecGloss/h-gly)
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
 <dl> <dt>
 
-[Zuordnung von Xenroll.dll zu CertEnroll.dll](mapping-xenroll-dll-to-certenroll-dll.md)
+[Zuordnen Xenroll.dll zu CertEnroll.dll](mapping-xenroll-dll-to-certenroll-dll.md)
 </dt> </dl>
 
  

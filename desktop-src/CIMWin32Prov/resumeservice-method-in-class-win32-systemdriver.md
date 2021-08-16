@@ -1,5 +1,5 @@
 ---
-description: Versucht, den vom System Treiber verwalteten Dienst in den Status "wieder aufgenommen" zu versetzen.
+description: Versucht, den vom Systemtreiber verwalteten Dienst in den Status "Fortgesetzt" zu platzieren.
 ms.assetid: 16bacf06-4236-4d58-9b09-cb86bb73d78a
 ms.tgt_platform: multiple
 title: ResumeService-Methode der Win32_SystemDriver-Klasse
@@ -14,18 +14,18 @@ api_type:
 - COM
 api_location:
 - CIMWin32.dll
-ms.openlocfilehash: d326fcd0a3bc9801f5e214cdc8740170cf1f1cf8
-ms.sourcegitcommit: c7add10d695482e1ceb72d62b8a4ebd84ea050f7
+ms.openlocfilehash: 837007870961150476556d2ead51fdf0142b911d1be256defa105249304298a1
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "103958235"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119922900"
 ---
-# <a name="resumeservice-method-of-the-win32_systemdriver-class"></a>ResumeService-Methode der Win32 \_ systemdriver-Klasse
+# <a name="resumeservice-method-of-the-win32_systemdriver-class"></a>ResumeService-Methode der Win32 \_ SystemDriver-Klasse
 
-Die **ResumeService** -Methode der [WMI-Klasse](/windows/desktop/WmiSdk/retrieving-a-class) versucht, den vom System Treiber verwalteten Dienst in den Status "fortgesetzt" zu versetzen.
+Die [ResumeService-WMI-Klassenmethode](/windows/desktop/WmiSdk/retrieving-a-class) versucht, den vom Systemtreiber verwalteten Dienst in den Status "Fortgesetzt" zu setzen. 
 
-In diesem Thema wird die MOF-Syntax (Managed Object Format) verwendet. Weitere Informationen zum Verwenden dieser Methode finden Sie unter [Aufrufen einer Methode](/windows/desktop/WmiSdk/calling-a-method).
+In diesem Thema wird Managed Object Format (MOF)-Syntax verwendet. Weitere Informationen zur Verwendung dieser Methode finden Sie unter [Aufrufen einer Methode.](/windows/desktop/WmiSdk/calling-a-method)
 
 ## <a name="syntax"></a>Syntax
 
@@ -42,7 +42,7 @@ Diese Methode hat keine Parameter.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt einen Wert von 0 (null) zurück, wenn die **ResumeService** -Anforderung akzeptiert wurde, 1 (eins), wenn die Anforderung nicht unterstützt wird, und jede andere Zahl gibt einen Fehler an.
+Gibt den Wert 0 (null) zurück, wenn die **ResumeService-Anforderung** akzeptiert wurde, 1 (eins), wenn die Anforderung nicht unterstützt wird, und eine beliebige andere Zahl, um einen Fehler anzugeben.
 
 <dl> <dt>
 
@@ -63,7 +63,7 @@ Die Anforderung wird nicht unterstützt.
 **2**
 </dt> <dd>
 
-Der Benutzer verfügte nicht über die erforderlichen Zugriffsrechte.
+Der Benutzer hatte nicht den erforderlichen Zugriff.
 
 </dd> <dt>
 
@@ -84,7 +84,7 @@ Der angeforderte Steuerungscode ist nicht gültig, oder es ist für den Dienst n
 **5**
 </dt> <dd>
 
-Der angeforderte Steuerungs Code kann nicht an den Dienst gesendet werden, weil der Status des Diensts ([**Win32- \_ baseservice**](win32-baseservice.md).**State** -Eigenschaft) ist gleich 0, 1 oder 2.
+Der angeforderte Steuerungscode kann nicht an den Dienst gesendet werden, da der Zustand des Diensts ([**Win32 \_ BaseService ) ist.**](win32-baseservice.md)**State-Eigenschaft)** ist gleich 0, 1 oder 2.
 
 </dd> <dt>
 
@@ -112,7 +112,7 @@ Beim Starten des Diensts ist ein unbekannter Fehler aufgetreten.
 **9**
 </dt> <dd>
 
-Der Verzeichnispfad zur ausführbaren Dienst Datei wurde nicht gefunden.
+Der Verzeichnispfad zur ausführbaren Dienstdatei wurde nicht gefunden.
 
 </dd> <dt>
 
@@ -133,7 +133,7 @@ Die Datenbank zum Hinzufügen eines neuen Diensts ist gesperrt.
 **12**
 </dt> <dd>
 
-Eine Abhängigkeit, von der dieser Dienst abhängt, wurde aus dem System entfernt.
+Eine Abhängigkeit, von der dieser Dienst abhängig ist, wurde aus dem System entfernt.
 
 </dd> <dt>
 
@@ -172,7 +172,7 @@ Es gibt keinen Ausführungsthread für den Dienst.
 
 </dd> <dt>
 
-**Jahren**
+**18**
 </dt> <dd>
 
 Es gibt Ringabhängigkeiten beim Starten des Diensts.
@@ -189,21 +189,21 @@ Es wird ein Dienst unter dem gleichen Namen ausgeführt.
 **20**
 </dt> <dd>
 
-Der Name des diensdienstanbieter enthält ungültige Zeichen.
+Der Name des Diensts enthält ungültige Zeichen.
 
 </dd> <dt>
 
 **21**
 </dt> <dd>
 
-An den Dienst wurden ungültige Parameter übermittelt.
+Ungültige Parameter wurden an den Dienst übergeben.
 
 </dd> <dt>
 
 **22**
 </dt> <dd>
 
-Das Konto, unter dem dieser Dienst ausgeführt werden soll, ist entweder ungültig oder verfügt nicht über die Berechtigungen zum Ausführen des Dienstanbieter.
+Das Konto, unter dem dieser Dienst ausgeführt werden soll, ist entweder ungültig oder verfügt nicht über die Berechtigungen zum Ausführen des Diensts.
 
 </dd> <dt>
 
@@ -223,7 +223,7 @@ Der Dienst ist im System derzeitig angehalten.
 
 ## <a name="examples"></a>Beispiele
 
-Der folgende PowerShell-Code versucht, den Dienst "Microsoft USB Printer Class" fortzusetzen.
+Der folgende PowerShell-Code versucht, den Dienst "Microsoft USB Printer Class" wieder aufzunehmen.
 
 
 ```PowerShell
@@ -243,20 +243,20 @@ $Return = $usbPrintDriver.ResumeService()
 |-------------------------------------|-----------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows Vista<br/>                                                                |
 | Unterstützte Mindestversion (Server)<br/> | Windows Server 2008<br/>                                                          |
-| Namespace<br/>                | Root \\ CIMV2<br/>                                                                  |
-| MOF<br/>                      | <dl> <dt>Cimwin32. MOF</dt> </dl> |
+| Namespace<br/>                | \\Stamm-CIMV2<br/>                                                                  |
+| MOF<br/>                      | <dl> <dt>CIMWin32.mof</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>CIMWin32.dll</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
 [Betriebssystemklassen](/previous-versions//aa392727(v=vs.85))
 </dt> <dt>
 
-[**Win32- \_ System Treiber**](win32-systemdriver.md)
+[**Win32 \_ SystemDriver**](win32-systemdriver.md)
 </dt> </dl>
 
  

@@ -1,35 +1,35 @@
 ---
-description: Die in der folgenden Tabelle aufgeführten Funktionen übersetzen Zeichen folgen aus einem Zeichen folgertyp in einen anderen.
+description: Die in der folgenden Tabelle aufgeführten Funktionen übersetzen Zeichenfolgen von einem Zeichenfolgentyp in einen anderen.
 ms.assetid: 26802339-6291-4767-b468-68a9e8e95774
-title: Übersetzung zwischen Zeichen folgen Typen
+title: Übersetzung zwischen Zeichenfolgentypen
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 877721f2d8ce3852011786e487598e3fd068c9eb
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 1b62ae39307e92c203441ea8ddb9dc61b394a02622e3c86a8949b59539588585
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106349442"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119631920"
 ---
-# <a name="translation-between-string-types"></a>Übersetzung zwischen Zeichen folgen Typen
+# <a name="translation-between-string-types"></a>Übersetzung zwischen Zeichenfolgentypen
 
-Die in der folgenden Tabelle aufgeführten Funktionen übersetzen Zeichen folgen aus einem Zeichen folgertyp in einen anderen.
+Die in der folgenden Tabelle aufgeführten Funktionen übersetzen Zeichenfolgen von einem Zeichenfolgentyp in einen anderen.
 
 
 
 | Funktion                                           | BESCHREIBUNG                                             |
 |----------------------------------------------------|---------------------------------------------------------|
-| [**FoldString**](/windows/win32/api/stringapiset/nf-stringapiset-foldstringw)                   | Übersetzt eine Zeichenfolge in eine andere Zeichenfolge.             |
-| [**LCMapString**](/windows/desktop/api/Winnls/nf-winnls-lcmapstringa)                 | Ordnet eine Zeichenfolge nach dem Gebiets Schema zu.                      |
-| [**Zu Unicode**](/windows/win32/api/winuser/nf-winuser-tounicode)              | Übersetzt einen virtuellen Schlüsselcode in ein Unicode-Zeichen. |
-| [**MultiByteToWideChar muss**](/windows/desktop/api/Stringapiset/nf-stringapiset-multibytetowidechar) | Ordnet eine Multibytezeichenfolge einer Unicode-Zeichenfolge zu.            |
-| [**WideCharToMultiByte**](/windows/desktop/api/Stringapiset/nf-stringapiset-widechartomultibyte) | Ordnet eine Unicode-Zeichenfolge einer Multibytezeichenfolge zu.            |
+| [**FoldString**](/windows/win32/api/stringapiset/nf-stringapiset-foldstringw)                   | Übersetzt eine Zeichenfolge in eine andere.             |
+| [**LCMapString**](/windows/desktop/api/Winnls/nf-winnls-lcmapstringa)                 | Karten eine Zeichenfolge nach Gebietsschema.                      |
+| [**ToUnicode**](/windows/win32/api/winuser/nf-winuser-tounicode)              | Übersetzt einen Virtuellen Schlüsselcode in ein Unicode-Zeichen. |
+| [**MultiByteToWideChar**](/windows/desktop/api/Stringapiset/nf-stringapiset-multibytetowidechar) | Karten eine Multibytezeichenfolge in eine Unicode-Zeichenfolge.            |
+| [**WideCharToMultiByte**](/windows/desktop/api/Stringapiset/nf-stringapiset-widechartomultibyte) | Karten eine Unicode-Zeichenfolge in eine Multibytezeichenfolge.            |
 
 
 
  
 
-Die Funktionen [**WideCharToMultiByte**](/windows/desktop/api/Stringapiset/nf-stringapiset-widechartomultibyte) und [**MultiByteToWideChar**](/windows/desktop/api/Stringapiset/nf-stringapiset-multibytetowidechar) sind besonders nützlich für Anwendungen, die mehrere Zeichen folgen Typen unterstützen. ANSI C definiert auch die Konvertierungs Funktionen **wcstomb** und **mbstowcs**, aber Sie können nur in den und aus dem von der Standard-C-Bibliothek unterstützten Zeichensatz konvertieren.
+Die Funktionen [**WideCharToMultiByte**](/windows/desktop/api/Stringapiset/nf-stringapiset-widechartomultibyte) und [**MultiByteToWideChar**](/windows/desktop/api/Stringapiset/nf-stringapiset-multibytetowidechar) sind besonders nützlich für Anwendungen, die mehrere Zeichenfolgentypen unterstützen. ANSI C definiert auch die Konvertierungsfunktionen **wcstombs** und **mbstowcs,** sie können jedoch nur in und aus dem Zeichensatz konvertiert werden, der von der C-Standardbibliothek unterstützt wird.
 
 ## <a name="related-topics"></a>Zugehörige Themen
 

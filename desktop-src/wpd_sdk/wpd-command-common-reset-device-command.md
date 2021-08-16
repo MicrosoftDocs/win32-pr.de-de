@@ -1,7 +1,7 @@
 ---
-description: Der Befehl "der Befehl" der Befehl " \_ \_ Common \_ Reset \_ Device" setzt das Gerät zurück. Dies bedeutet nicht die Neuformatierung. Dies entspricht dem Ausschalten des Geräts.
+description: Mit dem Befehl WPD COMMAND COMMON RESET DEVICE wird \_ \_ das Gerät \_ \_ zurückgesetzt. Dies bedeutet nicht, dass neu formatiert wird. dies entspricht dem Ein- und Ausschalten des Geräts.
 ms.assetid: 7a630cc9-02ea-46be-9645-8a0306606139
-title: WPD_COMMAND_COMMON_RESET_DEVICE Befehl (portabledevice. h)
+title: WPD_COMMAND_COMMON_RESET_DEVICE-Befehl (PortableDevice.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,20 +13,20 @@ api_type:
 - HeaderDef
 api_location:
 - PortableDevice.h
-ms.openlocfilehash: e7ea3fd0088d4997b233670c8ec10bfb16928cb6
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: b6a492b7017b8ace6c9118c2f08a1761d7785277fb497474d3e9f39aad60ae8b
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106369296"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119083373"
 ---
-# <a name="wpd_command_common_reset_device-command"></a>Befehl zum \_ \_ \_ Zurücksetzen des \_ Geräts für WPD-Befehl
+# <a name="wpd_command_common_reset_device-command"></a>\_WPD-BEFEHL \_ COMMON RESET \_ DEVICE \_ Command
 
-Der Befehl "der Befehl" der Befehl " **\_ \_ Common \_ Reset \_ Device** " setzt das Gerät zurück. Dies bedeutet nicht die Neuformatierung. Dies entspricht dem Ausschalten des Geräts.
+Mit dem Befehl **WPD \_ COMMAND COMMON RESET \_ \_ \_ DEVICE** wird das Gerät zurückgesetzt. Dies bedeutet nicht, dass neu formatiert wird. dies entspricht dem Ein- und Ausschalten des Geräts.
 
 ## <a name="command-category"></a>Befehlskategorie
 
-**Allgemeine WPD- \_ Kategorie \_**
+**WPD \_ CATEGORY \_ COMMON**
 
 ## <a name="parameters"></a>Parameter
 
@@ -38,10 +38,10 @@ Als Ergebnisse des Treibers werden erwartet:
 
 
 
-| Ergebnis                                         | VarType   | BESCHREIBUNG                                                                                                                                                                                                                                                                                                                                                                            |
+| Ergebnis                                         | VarType   | Beschreibung                                                                                                                                                                                                                                                                                                                                                                            |
 |------------------------------------------------|-----------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| **WPD- \_ Eigenschaft allgemeiner \_ \_ HRESULT**             | VT- \_ Fehler | Erforderlich. Ein **HRESULT** , das den Erfolg oder Fehler beim Ausführen des Befehls angibt. Wenn der Aufrufer eine ungültige Anforderung sendet, sollte der Treiber **HRESULT \_ aus Win32 zurückgeben \_ (Fehler \_ nicht \_ unterstützt)** , und es ist nicht erforderlich, andere Ergebnis Werte zurückzugeben. Fehlercodes enthalten [Fehlercodes für tragbare Windows-Geräte](error-constants.md) oder andere geeignete Fehlercodes. |
-| **WPD- \_ Eigenschaft allgemeiner \_ \_ Treiber \_ Fehler \_ Code** | VT \_ UI4   | Dies ist optional. Ein Treiber spezifischer Fehlercode. Dies wird in der Regel nur für Treiber Tests verwendet, oder wenn der Treiber, das Gerät und der Client verbunden sind.                                                                                                                                                                                                                                |
+| **\_WPD-EIGENSCHAFT \_ COMMON \_ HRESULT**             | \_VT-FEHLER | Erforderlich. Ein **HRESULT,** das angibt, ob der Befehl erfolgreich ausgeführt wurde oder nicht ausgeführt werden kann. Wenn der Aufrufer eine ungültige Anforderung stellt, sollte der Treiber **HRESULT \_ FROM \_ WIN32(ERROR \_ NOT \_ SUPPORTED)** zurückgeben und muss keine anderen Ergebniswerte zurückgeben. Fehlercodes umfassen [Windows Fehlercodes für portable Geräte](error-constants.md) oder andere geeignete Fehlercodes. |
+| **ALLGEMEINER \_ \_ \_ \_ TREIBERFEHLERCODE \_ FÜR WPD-EIGENSCHAFTEN** | VT \_ UI4   | Optional. Ein treiberspezifischer Fehlercode. Dies wird in der Regel nur für Treibertests verwendet, oder wenn Treiber, Gerät und Client alle zusammen entworfen wurden.                                                                                                                                                                                                                                |
 
 
 
@@ -49,7 +49,7 @@ Als Ergebnisse des Treibers werden erwartet:
 
 ## <a name="calling-methods"></a>Aufrufen von Methoden
 
-Kann nur direkt mit [**iportabledevice:: Send Command**](/windows/desktop/api/PortableDeviceApi/nf-portabledeviceapi-iportabledevice-sendcommand)aufgerufen werden.
+Kann nur direkt mit [**IPortableDevice::SendCommand**](/windows/desktop/api/PortableDeviceApi/nf-portabledeviceapi-iportabledevice-sendcommand)aufgerufen werden.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -57,11 +57,11 @@ Kann nur direkt mit [**iportabledevice:: Send Command**](/windows/desktop/api/Po
 
 | Anforderung | Wert |
 |-------------------|---------------------------------------------------------------------------------------------|
-| Header<br/> | <dl> <dt>Portabledevice. h</dt> </dl> |
+| Header<br/> | <dl> <dt>PortableDevice.h</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 

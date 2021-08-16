@@ -1,38 +1,38 @@
 ---
-description: Listet die skalaren Funktionen auf, die von directxmath bereitgestellt werden.
+description: Listet die von DirectXMath bereitgestellten Skalarfunktionen auf.
 ms.assetid: 833273ac-4bbc-029e-df3b-cb860d364cba
-title: Skalarfunktionen der directxmath-Bibliothek
+title: Skalarfunktionen der DirectXMath-Bibliothek
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 85431e4ed91fc19c5e0e6011ce757dd5ef760dee
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 50cead11a6cae9dd555ceedd5d62eca29ce5c4f59fc344ea3972ec404c9135e3
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104528052"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119118180"
 ---
-# <a name="directxmath-library-scalar-functions"></a>Skalarfunktionen der directxmath-Bibliothek
+# <a name="directxmath-library-scalar-functions"></a>Skalarfunktionen der DirectXMath-Bibliothek
 
-Listet die skalaren Funktionen auf, die von directxmath bereitgestellt werden.
+Listet die von DirectXMath bereitgestellten Skalarfunktionen auf.
 
 ## <a name="in-this-section"></a>In diesem Abschnitt
 
 
 
-| Thema                                                     | BESCHREIBUNG                                                          |
+| Thema                                                     | Beschreibung                                                          |
 |-----------------------------------------------------------|----------------------------------------------------------------------|
-| [**Xmscalaracos**](/windows/win32/api/directxmath/nf-directxmath-xmscalaracos)<br/>           | Berechnet den Arkus Kosinus einer Gleit Komma Zahl.<br/>        |
-| [**Xmscalaracost**](/windows/win32/api/directxmath/nf-directxmath-xmscalaracosest)<br/>     | Schätzt den Arkus Kosinus einer Gleit Komma Zahl.<br/>       |
-| [**Xmscalarasin**](/windows/win32/api/directxmath/nf-directxmath-xmscalarasin)<br/>           | Berechnet den Arkus Sinus einer Gleit Komma Zahl.<br/>          |
-| [**Xmscalarasinest**](/windows/win32/api/directxmath/nf-directxmath-xmscalarasinest)<br/>     | Schätzt den Arkus Sinus einer Gleit Komma Zahl.<br/>         |
-| [**Xmscalarcos**](/windows/win32/api/directxmath/nf-directxmath-xmscalarcos)<br/>             | Berechnet den Kosinus eines bogenwinkels.<br/>                    |
-| [**Xmscalarcost**](/windows/win32/api/directxmath/nf-directxmath-xmscalarcosest)<br/>       | Schätzt den Kosinus eines bogenwinkels.<br/>                   |
-| [**Xmscalarmudangle**](/windows/win32/api/directxmath/nf-directxmath-xmscalarmodangle)<br/>   | Berechnet einen Winkel zwischen-XM \_ Pi und XM \_ Pi.<br/>             |
-| [**Xmscalarnetzarequal**](/windows/win32/api/directxmath/nf-directxmath-xmscalarnearequal)<br/> | Bestimmt, ob zwei Gleit Komma Werte nahezu gleich sind.<br/> |
-| [**Xmscalarsin**](/windows/win32/api/directxmath/nf-directxmath-xmscalarsin)<br/>             | Berechnet den Sinus eines bogenwinkels.<br/>                      |
-| [**Xmscalarsincos**](/windows/win32/api/directxmath/nf-directxmath-xmscalarsincos)<br/>       | Berechnet den Sinus und Kosinus eines bogenwinkels.<br/>      |
-| [**Xmscalarsincost**](/windows/win32/api/directxmath/nf-directxmath-xmscalarsincosest)<br/> | Schätzt den Sinus und Kosinus eines bogenwinkels.<br/>     |
-| [**Xmscalarsinest**](/windows/win32/api/directxmath/nf-directxmath-xmscalarsinest)<br/>       | Schätzt den Sinus eines bogenwinkels.<br/>                     |
+| [**XMScalarACos**](/windows/win32/api/directxmath/nf-directxmath-xmscalaracos)<br/>           | Berechnet den Arkuscosinus einer Gleitkommazahl.<br/>        |
+| [**XMScalarACosEst**](/windows/win32/api/directxmath/nf-directxmath-xmscalaracosest)<br/>     | Schätzt den Arkuscosinus einer Gleitkommazahl.<br/>       |
+| [**XMScalarASin**](/windows/win32/api/directxmath/nf-directxmath-xmscalarasin)<br/>           | Berechnet den Arkussinus einer Gleitkommazahl.<br/>          |
+| [**XMScalarASinEst**](/windows/win32/api/directxmath/nf-directxmath-xmscalarasinest)<br/>     | Schätzt den Arkussinus einer Gleitkommazahl.<br/>         |
+| [**XMScalarCos**](/windows/win32/api/directxmath/nf-directxmath-xmscalarcos)<br/>             | Berechnet den Kosinus eines Bogenmaßwinkels.<br/>                    |
+| [**XMScalarCosEst**](/windows/win32/api/directxmath/nf-directxmath-xmscalarcosest)<br/>       | Schätzt den Kosinus eines Bogenmaßwinkels.<br/>                   |
+| [**XMScalarModAngle**](/windows/win32/api/directxmath/nf-directxmath-xmscalarmodangle)<br/>   | Berechnet einen Winkel zwischen -XM \_ PI und XM \_ PI.<br/>             |
+| [**XMScalarNearEqual**](/windows/win32/api/directxmath/nf-directxmath-xmscalarnearequal)<br/> | Bestimmt, ob zwei Gleitkommawerte nahezu gleich sind.<br/> |
+| [**XMScalarSin**](/windows/win32/api/directxmath/nf-directxmath-xmscalarsin)<br/>             | Berechnet den Sinus eines Bogenmaßwinkels.<br/>                      |
+| [**XMScalarSinCos**](/windows/win32/api/directxmath/nf-directxmath-xmscalarsincos)<br/>       | Berechnet sowohl den Sinus als auch den Kosinus eines Bogenmaßwinkels.<br/>      |
+| [**XMScalarSinCosEst**](/windows/win32/api/directxmath/nf-directxmath-xmscalarsincosest)<br/> | Schätzt sowohl den Sinus als auch den Kosinus eines Bogenmaßwinkels.<br/>     |
+| [**XMScalarSinEst**](/windows/win32/api/directxmath/nf-directxmath-xmscalarsinest)<br/>       | Schätzt den Sinus eines Bogenmaßwinkels.<br/>                     |
 
 
 
@@ -42,7 +42,7 @@ Listet die skalaren Funktionen auf, die von directxmath bereitgestellt werden.
 
 <dl> <dt>
 
-[Directxmath-Bibliotheksfunktionen](ovw-xnamath-reference-functions.md)
+[DirectXMath-Bibliotheksfunktionen](ovw-xnamath-reference-functions.md)
 </dt> </dl>
 
  

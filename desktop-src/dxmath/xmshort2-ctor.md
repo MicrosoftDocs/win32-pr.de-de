@@ -11,18 +11,18 @@ api_name: ''
 api_type:
 - NA
 api_location: ''
-ms.openlocfilehash: e7804c6724735b575314462be8e18124240bba2d
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 08feaa115f814a2e4475122b96197261c42241709609482b4063c1edeb69ff86
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104041926"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119117990"
 ---
 # <a name="xmshort2-constructors"></a>XMSHORT2-Konstruktoren
 
-Von verfügbar gemachte Konstruktoren `XMSHORT2` .
+Konstruktoren, die von verfügbar gemacht `XMSHORT2` werden.
 
-Erstellt Instanzen der [**XMSHORT2**](/windows/desktop/api/DirectXPackedVector/ns-directxpackedvector-xmshort2) -Struktur.
+Erstellt Instanzen der [**XMSHORT2-Struktur.**](/windows/desktop/api/DirectXPackedVector/ns-directxpackedvector-xmshort2)
 
 > [!Note]  
 > Die hier aufgeführten Konstruktoren sind nur unter C++ verfügbar.
@@ -56,7 +56,7 @@ Dieser Konstruktor ist nur unter C++ verfügbar.
 </tr>
 <tr class="even">
 <td style="text-align: left;"><a href="/windows/desktop/api/directxpackedvector/nf-directxpackedvector-xmshort2-xmshort2(float_float)"><strong>XMSHORT2 (float, float)</strong></a></td>
-<td style="text-align: left;">Initialisiert eine neue Instanz von <code>XMSHORT2</code> aus zwei <code>float</code> Argumenten. <br/> Dieser Konstruktor initialisiert eine neue Instanz von <a href="/windows/desktop/api/DirectXPackedVector/ns-directxpackedvector-xmshort2"><strong>XMSHORT2</strong></a> von zwei <code>float</code> Argumenten. <br/>
+<td style="text-align: left;">Initialisiert eine neue Instanz von <code>XMSHORT2</code> aus zwei <code>float</code> Argumenten. <br/> Dieser Konstruktor initialisiert eine neue Instanz von <a href="/windows/desktop/api/DirectXPackedVector/ns-directxpackedvector-xmshort2"><strong>XMSHORT2</strong></a> aus zwei <code>float</code> Argumenten. <br/>
 <blockquote>
 [!Note]<br />
 Dieser Konstruktor ist nur unter C++ verfügbar.
@@ -64,8 +64,8 @@ Dieser Konstruktor ist nur unter C++ verfügbar.
 <br/></td>
 </tr>
 <tr class="odd">
-<td style="text-align: left;"><a href="/windows/desktop/api/directxpackedvector/nf-directxpackedvector-xmshort2-xmshort2(constfloat)"><strong>XMSHORT2 (konstant float *)</strong></a></td>
-<td style="text-align: left;">Initialisiert eine neue Instanz von <code>XMSHORT2</code> aus einem Array Argument mit zwei Elementen <code>float</code> . <br/> Dieser Konstruktor initialisiert eine neue Instanz von <a href="/windows/desktop/api/DirectXPackedVector/ns-directxpackedvector-xmshort2"><strong>XMSHORT2</strong></a> aus einem aus einem zwei-Element- <code>float</code> Array Argument. <br/>
+<td style="text-align: left;"><a href="/windows/desktop/api/directxpackedvector/nf-directxpackedvector-xmshort2-xmshort2(constfloat)"><strong>XMSHORT2 (const float*)</strong></a></td>
+<td style="text-align: left;">Initialisiert eine neue Instanz von <code>XMSHORT2</code> aus einem Arrayargument mit zwei <code>float</code> Elementen. <br/> Dieser Konstruktor initialisiert eine neue Instanz von <a href="/windows/desktop/api/DirectXPackedVector/ns-directxpackedvector-xmshort2"><strong>XMSHORT2</strong></a> aus einem aus einem Arrayargument mit zwei <code>float</code> Elementen. <br/>
 <blockquote>
 [!Note]<br />
 Dieser Konstruktor ist nur unter C++ verfügbar.
@@ -73,8 +73,8 @@ Dieser Konstruktor ist nur unter C++ verfügbar.
 <br/></td>
 </tr>
 <tr class="even">
-<td style="text-align: left;"><a href="/windows/desktop/api/directxpackedvector/nf-directxpackedvector-xmshort2-xmshort2(constint16_t)"><strong>XMSHORT2 (konstant int16_t *)</strong></a></td>
-<td style="text-align: left;">Initialisiert eine neue Instanz von <code>XMSHORT2</code> aus einem Array Argument mit zwei Elementen <code>int16_t</code> . <br/> Dieser Konstruktor initialisiert eine neue Instanz von <a href="/windows/desktop/api/DirectXPackedVector/ns-directxpackedvector-xmshort2"><strong>XMSHORT2</strong></a> aus einem aus einem zwei-Element- <code>int16_t</code> Array Argument. <br/>
+<td style="text-align: left;"><a href="/windows/desktop/api/directxpackedvector/nf-directxpackedvector-xmshort2-xmshort2(constint16_t)"><strong>XMSHORT2 (const int16_t*)</strong></a></td>
+<td style="text-align: left;">Initialisiert eine neue Instanz von <code>XMSHORT2</code> aus einem Arrayargument mit zwei <code>int16_t</code> Elementen. <br/> Dieser Konstruktor initialisiert eine neue Instanz von <a href="/windows/desktop/api/DirectXPackedVector/ns-directxpackedvector-xmshort2"><strong>XMSHORT2</strong></a> aus einem aus einem Arrayargument mit zwei <code>int16_t</code> Elementen. <br/>
 <blockquote>
 [!Note]<br />
 Dieser Konstruktor ist nur unter C++ verfügbar.
@@ -82,8 +82,8 @@ Dieser Konstruktor ist nur unter C++ verfügbar.
 <br/></td>
 </tr>
 <tr class="odd">
-<td style="text-align: left;"><a href="/windows/desktop/api/directxpackedvector/nf-directxpackedvector-xmshort2-xmshort2(int16_t_int16_t)"><strong>XMSHORT2 (int16_t int16_t)</strong></a></td>
-<td style="text-align: left;">Initialisiert eine neue Instanz von <code>XMSHORT2</code> aus zwei <code>int16_t</code> Argumenten. <br/> Dieser Konstruktor initialisiert eine neue Instanz von <a href="/windows/desktop/api/DirectXPackedVector/ns-directxpackedvector-xmshort2"><strong>XMSHORT2</strong></a> von zwei <code>int16_t</code> Argumenten. <br/>
+<td style="text-align: left;"><a href="/windows/desktop/api/directxpackedvector/nf-directxpackedvector-xmshort2-xmshort2(int16_t_int16_t)"><strong>XMSHORT2 (int16_t,int16_t)</strong></a></td>
+<td style="text-align: left;">Initialisiert eine neue Instanz von <code>XMSHORT2</code> aus zwei <code>int16_t</code> Argumenten. <br/> Dieser Konstruktor initialisiert eine neue Instanz von <a href="/windows/desktop/api/DirectXPackedVector/ns-directxpackedvector-xmshort2"><strong>XMSHORT2</strong></a> aus zwei <code>int16_t</code> Argumenten. <br/>
 <blockquote>
 [!Note]<br />
 Dieser Konstruktor ist nur unter C++ verfügbar.
@@ -95,14 +95,14 @@ Dieser Konstruktor ist nur unter C++ verfügbar.
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
 [XMSHORT2-Erweiterungen](ovw-xmshort2-extensions.md)
 </dt> <dt>
 
-**Verweis**
+**Referenz**
 </dt> <dt>
 
 [**XMSHORT2**](/windows/desktop/api/DirectXPackedVector/ns-directxpackedvector-xmshort2)

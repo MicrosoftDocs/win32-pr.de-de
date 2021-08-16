@@ -1,5 +1,5 @@
 ---
-description: 'IRenderEngine::SetInterestRange2-Methode: Wird nicht unterstützt.'
+description: 'IRenderEngine::SetInterestRange2-Methode: Nicht unterstützt.'
 ms.assetid: c5572927-905e-4420-9038-3f9573c5d0b0
 title: IRenderEngine::SetInterestRange2-Methode
 ms.topic: reference
@@ -12,17 +12,17 @@ api_name:
 api_type:
 - COM
 api_location: ''
-ms.openlocfilehash: 2be9d8d2f69d2606de855cf5f08eb3deb41de634
-ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
+ms.openlocfilehash: 69d78b4f4e18890e992bba5902ac6140dfed73fa8abb1f3814fc8dfbff6fdba1
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2021
-ms.locfileid: "108089028"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119791850"
 ---
 # <a name="irenderenginesetinterestrange2-method"></a>IRenderEngine::SetInterestRange2-Methode
 
 > [!Note]  
-> \[Veraltet. Diese API wird möglicherweise aus zukünftigen Versionen von Windows entfernt.\]
+> \[Veraltet. Diese API wird möglicherweise aus zukünftigen Releases von Windows.\]
 
  
 
@@ -44,7 +44,7 @@ HRESULT SetInterestRange2(
 
 <dl> <dt>
 
-*Starten* 
+*Start* 
 </dt> <dd>
 
 Reserviert.
@@ -62,7 +62,7 @@ Reserviert.
 
 Wenn diese Methode erfolgreich ist, wird **S \_ OK zurückgegeben.** Andernfalls wird ein **HRESULT-Fehlercode** zurückgegeben.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
 > [!Note]  
 > Die Headerdatei Qedit.h ist nicht mit Direct3D-Headern nach Version 7 kompatibel.
@@ -70,7 +70,7 @@ Wenn diese Methode erfolgreich ist, wird **S \_ OK zurückgegeben.** Andernfalls
  
 
 > [!Note]  
-> Um Qedit.h zu erhalten, laden Sie das Microsoft Windows SDK Update für Windows Vista und .NET Framework [3.0 herunter.](https://msdn.microsoft.com/windowsvista/bb980924.aspx) Qedit.h ist im Microsoft Windows SDK für Windows 7 und .NET Framework 3.5 Service Pack 1 nicht verfügbar.
+> Um Qedit.h zu erhalten, laden Sie das [Microsoft Windows SDK-Update für Windows Vista und .NET Framework 3.0 herunter.](https://msdn.microsoft.com/windowsvista/bb980924.aspx) Qedit.h ist im Microsoft Windows SDK für Windows 7 und .NET Framework 3.5 Service Pack 1 nicht verfügbar.
 
  
 

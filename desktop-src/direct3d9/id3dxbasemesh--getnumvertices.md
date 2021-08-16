@@ -1,7 +1,7 @@
 ---
-description: Ruft die Anzahl der Scheitel Punkte im Mesh ab.
+description: Ruft die Anzahl der Scheitelzeichen im Gitternetz ab.
 ms.assetid: 2be2bb34-74fa-438c-913d-e41dd9fa8354
-title: 'ID3DXBaseMesh:: getnumvertices-Methode (D3DX9Mesh. h)'
+title: ID3DXBaseMesh::GetNumVertices-Methode (D3DX9Mesh.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -14,16 +14,16 @@ api_type:
 api_location:
 - d3dx9.lib
 - d3dx9.dll
-ms.openlocfilehash: 0f239cbae38c09f2718aff4cf6fcbb2234ae60f8
-ms.sourcegitcommit: 14010c34b35fa268046c7683f021f86de08ddd0a
+ms.openlocfilehash: 7f576616dc342c6ee8b7d822f15f9245e541d86ce39ee3935e7a5e6c2933faea
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "104050934"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119121792"
 ---
-# <a name="id3dxbasemeshgetnumvertices-method"></a>ID3DXBaseMesh:: getnumvertices-Methode
+# <a name="id3dxbasemeshgetnumvertices-method"></a>ID3DXBaseMesh::GetNumVertices-Methode
 
-Ruft die Anzahl der Scheitel Punkte im Mesh ab.
+Ruft die Anzahl der Scheitelzeichen im Gitternetz ab.
 
 ## <a name="syntax"></a>Syntax
 
@@ -42,7 +42,7 @@ Diese Methode hat keine Parameter.
 
 Typ: **[ **DWORD**](../winprog/windows-data-types.md)**
 
-Gibt die Anzahl der Scheitel Punkte im Mesh zurück.
+Gibt die Anzahl der Scheitelzeichen im Gitternetz zurück.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -50,12 +50,12 @@ Gibt die Anzahl der Scheitel Punkte im Mesh zurück.
 
 | Anforderung | Wert |
 |--------------------|----------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>D3DX9Mesh. h</dt> </dl> |
-| Bibliothek<br/> | <dl> <dt>D3dx9. lib</dt> </dl>   |
+| Header<br/>  | <dl> <dt>D3DX9Mesh.h</dt> </dl> |
+| Bibliothek<br/> | <dl> <dt>D3dx9.lib</dt> </dl>   |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 

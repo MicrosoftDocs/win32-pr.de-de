@@ -1,9 +1,9 @@
 ---
-title: Wiederholungs Element (triggerbasetype)
-description: Gibt an, wie oft die Aufgabe ausgeführt wird und wie lange das Wiederholungsmuster nach dem Start der Aufgabe wiederholt wird.
+title: Wiederholungselement (triggerBaseType)
+description: Gibt an, wie oft der Task ausgeführt wird und wie lange das Wiederholungsmuster wiederholt wird, nachdem der Task gestartet wurde.
 ms.assetid: d43c7f9a-3a7b-44a9-901b-9ad18c027b1b
 keywords:
-- Wiederholungs Element Taskplaner
+- Wiederholungselement Taskplaner
 topic_type:
 - apiref
 api_name:
@@ -13,16 +13,16 @@ api_type:
 ms.topic: reference
 ms.date: 05/31/2018
 api_location: ''
-ms.openlocfilehash: 7ebd6f9f77998e5e975e24ff752a475e3880c0aa
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: dfcce3e008a9959ca279f64c83a898eb2239d007d8fc32dfb5da5942395055bd
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104477778"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119959540"
 ---
-# <a name="repetition-triggerbasetype-element"></a>Wiederholungs Element (triggerbasetype)
+# <a name="repetition-triggerbasetype-element"></a>Wiederholungselement (triggerBaseType)
 
-Gibt an, wie oft die Aufgabe ausgeführt wird und wie lange das Wiederholungsmuster nach dem Start der Aufgabe wiederholt wird.
+Gibt an, wie oft der Task ausgeführt wird und wie lange das Wiederholungsmuster wiederholt wird, nachdem der Task gestartet wurde.
 
 ``` syntax
 <xs:element name="Repetition"
@@ -30,7 +30,7 @@ Gibt an, wie oft die Aufgabe ausgeführt wird und wie lange das Wiederholungsmus
  />
 ```
 
-Das **Wiederholungs** Element wird durch den komplexen Typ [**triggerbasetype**](taskschedulerschema-triggerbasetype-complextype.md) definiert.
+Das **Wiederholungselement** wird durch den komplexen [**TriggerBaseType-Typ**](taskschedulerschema-triggerbasetype-complextype.md) definiert.
 
 ## <a name="parent-element"></a>Übergeordnetes Element
 
@@ -38,13 +38,13 @@ Das **Wiederholungs** Element wird durch den komplexen Typ [**triggerbasetype**]
 
 | Element                                                                                     | Abgeleitet von                                                                               | BESCHREIBUNG                                                                                  |
 |---------------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------|
-| [**Boottrigger**](taskschedulerschema-boottrigger-triggergroup-element.md)                 | [**boottriggertype**](taskschedulerschema-boottriggertype-complextype.md)                 | Gibt einen-Fehler an, mit dem eine Aufgabe gestartet wird, wenn das System gestartet wird.<br/>                 |
-| [**Calendarausgelöst**](taskschedulerschema-calendartrigger-triggergroup-element.md)         | [**calendartriggertype**](taskschedulerschema-calendartriggertype-complextype.md)         | Gibt einen täglichen, wöchentlichen, monatlichen oder monatlichen Tag-of-the-Week-(Dow-)-auslöst an.<br/>   |
-| [**EventTrigger**](taskschedulerschema-eventtrigger-triggergroup-element.md)               | [**eventtriggertype**](taskschedulerschema-eventtriggertype-complextype.md)               | Gibt einen-Fehler an, der einen Task startet, wenn ein System Ereignis auftritt.<br/>                |
-| [**Idle-Auslösung**](taskschedulerschema-idletrigger-triggergroup-element.md)                 | [**idletriggertype**](taskschedulerschema-idletriggertype-complextype.md)                 | Gibt einen-Auslösers an, der einen Task startet, wenn der Computer in den Leerlauf wechselt.<br/> |
-| [**Logonauslöst**](taskschedulerschema-logontrigger-triggergroup-element.md)               | [**logontriggertype**](taskschedulerschema-logontriggertype-complextype.md)               | Gibt einen-Vorgang an, der einen Task startet, wenn sich ein Benutzer anmeldet.<br/>                       |
-| [**Registration-Auslösers**](taskschedulerschema-registrationtrigger-triggergroup-element.md) | [**registrationtriggertype**](taskschedulerschema-registrationtriggertype-complextype.md) | Gibt einen-Typ an, der einen Task startet, wenn der Task registriert wird.<br/>               |
-| [**TimeTrigger**](taskschedulerschema-timetrigger-triggergroup-element.md)                 | [**timetriggertype**](taskschedulerschema-timetriggertype-complextype.md)                 | Gibt einen-Auslösers an, der einen Task startet, wenn der--ausgelöst wird<br/>             |
+| [**BootTrigger**](taskschedulerschema-boottrigger-triggergroup-element.md)                 | [**bootTriggerType**](taskschedulerschema-boottriggertype-complextype.md)                 | Gibt einen Trigger an, der eine Aufgabe startet, wenn das System gestartet wird.<br/>                 |
+| [**CalendarTrigger**](taskschedulerschema-calendartrigger-triggergroup-element.md)         | [**calendarTriggerType**](taskschedulerschema-calendartriggertype-complextype.md)         | Gibt einen täglichen, wöchentlichen, monatlichen oder monatlichen DOW-Trigger (Day-of-the-Week) an.<br/>   |
+| [**EventTrigger**](taskschedulerschema-eventtrigger-triggergroup-element.md)               | [**eventTriggerType**](taskschedulerschema-eventtriggertype-complextype.md)               | Gibt einen Trigger an, der eine Aufgabe startet, wenn ein Systemereignis auftritt.<br/>                |
+| [**IdleTrigger**](taskschedulerschema-idletrigger-triggergroup-element.md)                 | [**idleTriggerType**](taskschedulerschema-idletriggertype-complextype.md)                 | Gibt einen Trigger an, der eine Aufgabe startet, wenn der Computer in den Leerlauf wechselt.<br/> |
+| [**LogonTrigger**](taskschedulerschema-logontrigger-triggergroup-element.md)               | [**logonTriggerType**](taskschedulerschema-logontriggertype-complextype.md)               | Gibt einen Trigger an, der eine Aufgabe startet, wenn sich ein Benutzer anmeldet.<br/>                       |
+| [**RegistrationTrigger**](taskschedulerschema-registrationtrigger-triggergroup-element.md) | [**registrationTriggerType**](taskschedulerschema-registrationtriggertype-complextype.md) | Gibt einen Trigger an, der eine Aufgabe startet, wenn der Task registriert wird.<br/>               |
+| [**TimeTrigger**](taskschedulerschema-timetrigger-triggergroup-element.md)                 | [**timeTriggerType**](taskschedulerschema-timetriggertype-complextype.md)                 | Gibt einen Trigger an, der eine Aufgabe startet, wenn der Trigger aktiviert wird.<br/>             |
 
 
 
@@ -55,16 +55,16 @@ Das **Wiederholungs** Element wird durch den komplexen Typ [**triggerbasetype**]
 | Element                                                                                   | type     | BESCHREIBUNG                                                                                                         |
 |-------------------------------------------------------------------------------------------|----------|---------------------------------------------------------------------------------------------------------------------|
 | [**Duration**](taskschedulerschema-duration-repetitiontype-element.md)                   | duration | Gibt an, wie lange das Muster wiederholt wird.<br/>                                                              |
-| [**Intervall**](taskschedulerschema-interval-repetitiontype-element.md)                   | duration | Gibt die Zeitspanne zwischen den einzelnen Neustarts der Aufgabe an.<br/>                                           |
-| [**Stopatdurationend**](taskschedulerschema-stopatdurationend-repetitiontype-element.md) | boolean  | Gibt an, dass eine laufende Instanz der Aufgabe am Ende der Wiederholungsmuster Dauer beendet wird.<br/> |
+| [**Intervall**](taskschedulerschema-interval-repetitiontype-element.md)                   | duration | Gibt die Zeitspanne zwischen jedem Neustart der Aufgabe an.<br/>                                           |
+| [**StopAtDurationEnd**](taskschedulerschema-stopatdurationend-repetitiontype-element.md) | boolean  | Gibt an, dass eine ausgeführte Instanz des Tasks am Ende der Wiederholungsmusterdauer beendet wird.<br/> |
 
 
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Wenn Sie eine Wiederholungs Dauer für eine Aufgabe angeben, müssen Sie auch das Wiederholungsintervall angeben.
+Wenn Sie eine Wiederholungsdauer für eine Aufgabe angeben, müssen Sie auch das Wiederholungsintervall angeben.
 
-Wenn Sie eine Aufgabe registrieren, die einen-Auslösers mit einem Wiederholungsintervall von einer Minute und einer Wiederholungs Dauer von vier Minuten enthält, wird die Aufgabe fünfmal gestartet. Die fünf Wiederholungen können mithilfe des folgenden Musters definiert werden.
+Wenn Sie eine Aufgabe registrieren, die einen Trigger mit einem Wiederholungsintervall von einer Minute und einer Wiederholungsdauer von vier Minuten enthält, wird der Task fünfmal gestartet. Die fünf Wiederholungen können im folgenden Muster definiert werden.
 
 1.  Eine Aufgabe beginnt am Anfang der ersten Minute.
 2.  Die nächste Aufgabe beginnt am Ende der ersten Minute.
@@ -72,17 +72,17 @@ Wenn Sie eine Aufgabe registrieren, die einen-Auslösers mit einem Wiederholungs
 4.  Die nächste Aufgabe beginnt am Ende der dritten Minute.
 5.  Die nächste Aufgabe beginnt am Ende der vierten Minute.
 
-**Windows Server 2003, Windows XP und Windows 2000:** Wenn Sie eine Aufgabe registrieren, die einen-Auslösers mit einem Wiederholungsintervall von einer Minute und einer Wiederholungs Dauer von vier Minuten enthält, wird die Aufgabe viermal gestartet.
+**Windows Server 2003, Windows XP und Windows 2000:** Wenn Sie eine Aufgabe registrieren, die einen Trigger mit einem Wiederholungsintervall von einer Minute und einer Wiederholungsdauer von vier Minuten enthält, wird die Aufgabe viermal gestartet.
 
-**Windows Vista, Windows 7, Windows Server 2008, Windows 8 und Windows Server 2012:** Wenn die Wiederholungs Dauer auf das genaue Vielfache des Intervalls festgelegt wird, ergibt sich in der Regel die oben beschriebene Anzahl. Unter bestimmten starken Ladebedingungen ist es jedoch möglich, dass die Dauer Zeitüberschreitung liegt, bevor TaskScheduler das abschließende Aufgaben Intervall starten kann.
+**Windows Vista, Windows 7, Windows Server 2008, Windows 8 und Windows Server 2012:** Wenn Sie die Wiederholungsdauer auf ein exaktes Vielfaches des Intervalls festlegen, ergeben sich in der Regel die oben beschriebenen Zahlen. Unter bestimmten Bedingungen mit hoher Auslastung ist es jedoch möglich, für die Dauer ein Timeout zu erreichen, bevor TaskScheduler das letzte Aufgabenintervall starten kann.
 
-Bei der Skripterstellung wird das Wiederholungsmuster mithilfe [**der Eigenschaft "" des "**](trigger-repetition.md) "
+Für die Skriptentwicklung wird das Wiederholungsmuster mithilfe der [**Trigger.Repetition-Eigenschaft**](trigger-repetition.md) angegeben, die von allen Triggerobjekten geerbt wird.
 
-Bei der C++-Entwicklung wird das Wiederholungsmuster mithilfe der [**i-Funktion:: Wiederholungs**](/windows/desktop/api/taskschd/nf-taskschd-itrigger-get_repetition) Eigenschaft angegeben, die von allen-auslöserschnittstellen geerbt wird.
+Für die C++-Entwicklung wird das Wiederholungsmuster mithilfe der [**ITRigger::Repetition-Eigenschaft**](/windows/desktop/api/taskschd/nf-taskschd-itrigger-get_repetition) angegeben, die von allen Triggerschnittstellen geerbt wird.
 
 ## <a name="examples"></a>Beispiele
 
-Der folgende XML-Code definiert ein startauslöserelement, das ein Wiederholungsmuster für einen-Auslösers angibt
+Der folgende XML-Code definiert ein Starttriggerelement, das ein Wiederholungsmuster für einen Trigger angibt.
 
 
 ```XML
@@ -108,16 +108,16 @@ Der folgende XML-Code definiert ein startauslöserelement, das ein Wiederholungs
 
 | Anforderung | Wert |
 |-------------------------------------|------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>       |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2008 \[ -Desktop-Apps\]<br/> |
+| Unterstützte Mindestversion (Client)<br/> | Windows \[Nur Vista-Desktop-Apps\]<br/>       |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2008-Desktop-Apps\]<br/> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[Schema Elemente Taskplaner](task-scheduler-schema-elements.md)
+[Taskplaner Schemaelemente](task-scheduler-schema-elements.md)
 </dt> <dt>
 
 [Aufgabenplanung](task-scheduler-start-page.md)

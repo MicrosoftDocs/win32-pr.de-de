@@ -1,7 +1,7 @@
 ---
-description: Die copymediatype-Funktion kopiert eine am- \_ \_ Medientyp Struktur in eine andere Struktur, einschließlich des Format Blocks.
+description: Die CopyMediaType-Funktion kopiert eine AM \_ MEDIA \_ TYPE-Struktur in eine andere Struktur, einschließlich des Formatblocks.
 ms.assetid: 5b47e197-abb5-4b2c-ad65-a506c5e239be
-title: Copymediatype-Funktion (mtype. h)
+title: CopyMediaType-Funktion (Mtype.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -16,16 +16,16 @@ api_location:
 - Strmbase.dll
 - Strmbasd.lib
 - Strmbasd.dll
-ms.openlocfilehash: 2e37f277244ae9b82c395d7901917e1fc1e78b35
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: b193f64edb55a342546f26db1975080490f0e69b2caa91695b3bc63240750983
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106361585"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119634373"
 ---
-# <a name="copymediatype-function"></a>Copymediatype-Funktion
+# <a name="copymediatype-function"></a>CopyMediaType-Funktion
 
-Die **copymediatype** -Funktion kopiert eine [**am- \_ \_ Medientyp**](/windows/win32/api/strmif/ns-strmif-am_media_type) Struktur in eine andere Struktur, einschließlich des Format Blocks.
+Die **CopyMediaType-Funktion** kopiert eine [**AM MEDIA \_ \_ TYPE-Struktur**](/windows/win32/api/strmif/ns-strmif-am_media_type) in eine andere Struktur, einschließlich des Formatblocks.
 
 ## <a name="syntax"></a>Syntax
 
@@ -43,29 +43,29 @@ HRESULT WINAPI CopyMediaType(
 
 <dl> <dt>
 
-*pmttarget* 
+*pmtTarget* 
 </dt> <dd>
 
-Zeiger auf eine [**\_ \_ Medientyp**](/windows/win32/api/strmif/ns-strmif-am_media_type) Struktur. Die-Methode kopiert den Medientyp in diese-Struktur.
+Zeiger auf eine [**AM \_ MEDIA \_ TYPE-Struktur.**](/windows/win32/api/strmif/ns-strmif-am_media_type) Die -Methode kopiert den Medientyp in diese Struktur.
 
 </dd> <dt>
 
-*pmtsource* 
+*pmtSource* 
 </dt> <dd>
 
-Zeiger auf eine zu Kopier Elle [**\_ \_ Quelltyp-Medientyp**](/windows/win32/api/strmif/ns-strmif-am_media_type) Struktur.
+Zeiger auf eine zu kopierende [**AM \_ MEDIA TYPE-Quellstruktur. \_**](/windows/win32/api/strmif/ns-strmif-am_media_type)
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt " \_ OK" oder "E \_ outo" zurück.
+Gibt S \_ OK oder E \_ OUTOFMEMORY zurück.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Diese Funktion ordnet den Speicher für den Format Block zu. Wenn der *pmttarget* -Parameter bereits einen zugeordneten Format Block enthält, tritt ein Speicherplatz auf. Um einen Speicherplatz zu vermeiden, rufen Sie " [**fremediatype**](freemediatype.md) " auf, bevor Sie diese Funktion aufrufen.
+Diese Funktion belegt den Arbeitsspeicher für den Formatblock. Wenn der *pmtTarget-Parameter* bereits einen zugeordneten Formatblock enthält, tritt ein Speicherverlust auf. Um einen Speicherverlust zu vermeiden, rufen [**Sie FreeMediaType**](freemediatype.md) auf, bevor Sie diese Funktion aufrufen.
 
-Nachdem die Methode zurückgegeben wurde, können Sie [**freemediatype**](freemediatype.md) auf *pmttarget* aufzurufen, um den Format Block freizugeben.
+Nachdem die Methode zurückgegeben wurde, rufen [**Sie FreeMediaType**](freemediatype.md) auf *pmtTarget* auf, um den Formatblock frei zu machen.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -73,16 +73,16 @@ Nachdem die Methode zurückgegeben wurde, können Sie [**freemediatype**](freeme
 
 | Anforderung | Wert |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>Mtype. h (Include Streams. h)</dt> </dl>                                                                                     |
-| Bibliothek<br/> | <dl> " <dt>Straumbase. lib" (Einzelhandels Builds);</dt> " <dt>Straumbasd. lib" (Debugbuilds)</dt> </dl> |
+| Header<br/>  | <dl> <dt>Mtype.h (include Streams.h)</dt> </dl>                                                                                     |
+| Bibliothek<br/> | <dl> <dt>Strmbase.lib (Verkaufsbuilds); </dt> <dt>Strmbasd.lib (Debugbuilds)</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Medientyp Funktionen**](media-type-functions.md)
+[**Medientypfunktionen**](media-type-functions.md)
 </dt> </dl>
 
  

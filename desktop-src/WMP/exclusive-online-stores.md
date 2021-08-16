@@ -1,43 +1,43 @@
 ---
-title: Exklusive Online Stores
-description: Exklusive Online Stores
+title: Exklusive Onlineshops
+description: Exklusive Onlineshops
 ms.assetid: f2b7f9a7-2299-48f4-b915-2c1a5e0d68bb
 keywords:
-- Windows Media Player Online Stores, exklusiv
-- Online Stores, exklusiv
-- Geben Sie 1 Online Stores ein, exklusiv
-- Typ 2 Online Stores, exklusiv
-- exklusive Online Stores
+- Windows Media Player,exklusiv
+- Onlineshops,exklusiv
+- Typ 1 Onlineshops,exklusiv
+- Typ 2 Onlineshops,exklusiv
+- Exklusive Onlineshops
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: f408a0ada0de46d637537ffccd3ec162da04e8ce
-ms.sourcegitcommit: 48d1c892045445bcbd0f22bafa2fd3861ffaa6e7
+ms.openlocfilehash: d199c47a201743ca56f9f9f199b5202bbdbe5fb320628afc5052b0ca8b969c24
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/19/2020
-ms.locfileid: "106338041"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119650090"
 ---
-# <a name="exclusive-online-stores"></a>Exklusive Online Stores
+# <a name="exclusive-online-stores"></a>Exklusive Onlineshops
 
-Bei Windows Media Player 11 kann eine Anwendung, die das Player-Steuerelement Remote einbettet, einen exklusiven Online Store angeben. In diesem Fall ist der Dienst-Selector in Windows-Media Player deaktiviert, und nur der angegebene Onlinespeicher ist für den Benutzer verfügbar. Außerdem übernimmt Windows Media Player die durch das **Color** -Element des exklusiven Online Store-Dokuments angegebene Farbe.
+Mit Windows Media Player 11 kann eine Anwendung, die das Player-Steuerelement remote einbettet, einen exklusiven Onlineshop angeben. In diesem Fall ist die Dienstauswahl in Windows Media Player deaktiviert, und nur der angegebene Onlineshop ist für den Benutzer verfügbar. Außerdem übernimmt Windows Media Player farbe, die durch das **Color-Element** des ServiceInfo-Dokuments des exklusiven Onlineshops angegeben wird.
 
-Um einen exklusiven Online Store anzugeben, muss eine Anwendung exclusiveservice:*keyName* an das Ende der Zeichenfolge anfügen, die von [iwmpremotemediaservices:: getservicetype](/previous-versions/windows/desktop/api/wmp/nf-wmp-iwmpremotemediaservices-getservicetype)zurückgegeben wird. Angenommen, Proseware ist der Schlüssel Name, der einem bestimmten Online Store zugewiesen wird. Wenn **getservicetype** die Zeichenfolge "Remote exclusiveservice: Proseware" zurückgibt, ist Proseware der einzige Online Shop, der im Remote Embedded Player-Steuerelement verfügbar ist.
+Um einen exklusiven Onlineshop anzugeben, muss eine Anwendung ExclusiveService:*keyname* an das Ende der Zeichenfolge anfügen, die sie von [IWMPRemoteMediaServices::GetServiceType zurückgibt.](/previous-versions/windows/desktop/api/wmp/nf-wmp-iwmpremotemediaservices-getservicetype) Angenommen, Proseware ist der Schlüsselname, der einem bestimmten Onlineshop gegeben wird. Wenn **GetServiceType** die Zeichenfolge "Remote ExclusiveService:Proseware" zurückgibt, ist Proseware der einzige Onlineshop, der im remote eingebetteten Player-Steuerelement verfügbar ist.
 
-Eine Anwendung kann Windows Media Player nur dann auf einen exklusiven Online Store beschränken, wenn Windows Media Player nicht bereits ausgeführt wird, wenn die Anwendung gestartet wird. Die Anwendung ist dafür verantwortlich, den Benutzer darüber zu informieren, dass Sie Windows Media Player schließen muss, bevor die Anwendung ausgeführt wird.
+Eine Anwendung kann Windows Media Player auf einen exklusiven Onlineshop beschränken, wenn Windows Media Player beim Start der Anwendung noch nicht ausgeführt wird. Es liegt in der Verantwortung der Anwendung, den Benutzer darüber zu informieren, dass er die Windows Media Player vor dem Ausführen der Anwendung schließen muss.
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
 <dl> <dt>
 
-[**Informationen, die von Typ 1 und Typ 2 Online Stores gemeinsam sind**](information-common-to-type-1-and-type-2-online-stores.md)
+[**Allgemeine Informationen zu Onlineshops vom Typ 1 und 2**](information-common-to-type-1-and-type-2-online-stores.md)
 </dt> <dt>
 
 [**Remoting des Windows Media Player-Steuerelements**](remoting-the-windows-media-player-control.md)
 </dt> </dl>
 
- 
+ 
 
- 
+ 
 
 
 

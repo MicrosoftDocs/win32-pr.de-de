@@ -17,7 +17,7 @@ Das [**Attributes-Objekt**](attributes.md) macht die folgenden Methoden verfügb
 
 ## <a name="in-this-section"></a>In diesem Abschnitt
 
--   [**Add-Methode**](attributes-add.md)
+-   [**Methode hinzufügen**](attributes-add.md)
 -   [**Clear-Methode**](attributes-clear.md)
 -   [**Remove-Methode**](attributes-remove.md)
 

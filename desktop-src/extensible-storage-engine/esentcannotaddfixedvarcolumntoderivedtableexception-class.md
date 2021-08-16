@@ -1,6 +1,6 @@
 ---
-description: 'Weitere Informationen finden Sie unter: esentcannotaddfixedvarcolumnyderivedtableexception-Klasse'
-title: Esentcannotaddfixedvarcolumndederivedtableexception-Klasse
+description: 'Weitere Informationen finden Sie unter: EsentCannotAddFixedVarColumnToDerivedTableException-Klasse'
+title: EsentCannotAddFixedVarColumnToDerivedTableException-Klasse
 TOCTitle: EsentCannotAddFixedVarColumnToDerivedTableException class
 ms:assetid: T:Microsoft.Isam.Esent.Interop.EsentCannotAddFixedVarColumnToDerivedTableException
 ms:mtpsurl: https://msdn.microsoft.com/library/microsoft.isam.esent.interop.esentcannotaddfixedvarcolumntoderivedtableexception(v=EXCHG.10)
@@ -24,29 +24,29 @@ api_type:
 api_location:
 - Microsoft.Isam.Esent.Interop.dll
 ROBOTS: INDEX,FOLLOW
-ms.openlocfilehash: f0f2c59415bc905f2231f2aa4ffc7b05ff699710
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 4b37414dd7710f4e0a6ebc5d022040a304bbee85871715ba7d615cfedf99493a
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106362913"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119117043"
 ---
-# <a name="esentcannotaddfixedvarcolumntoderivedtableexception-class"></a>Esentcannotaddfixedvarcolumndederivedtableexception-Klasse
+# <a name="esentcannotaddfixedvarcolumntoderivedtableexception-class"></a>EsentCannotAddFixedVarColumnToDerivedTableException-Klasse
 
-Basisklasse für JET_err. Cannotaddfixedvarcolumnaufderivedtable-Ausnahmen.
+Basisklasse für JET_err. CannotAddFixedVarColumnToDerivedTable exceptions.
 
 ## <a name="inheritance-hierarchy"></a>Vererbungshierarchie
 
 [System.Object](/dotnet/api/system.object)  
   [System.Exception](/dotnet/api/system.exception)  
-    [Microsoft. ISAM. ESENT. esentexception](./esentexception-class.md)  
-      [Microsoft. ISAM. ESENT. Interop. esenterrorexception](./esenterrorexception-class.md)  
-        [Microsoft. ISAM. ESENT. Interop. esentapiexception](./esentapiexception-class.md)  
-          [Microsoft. ISAM. ESENT. Interop. esentobsoleteexception](./esentobsoleteexception-class.md)  
-            Microsoft. ISAM. ESENT. Interop. esentcannotaddfixedvarcolumninderivedtableexception  
+    [Microsoft.Isam.Esent.EsentException](./esentexception-class.md)  
+      [Microsoft.Isam.Esent.Interop.EsentErrorException](./esenterrorexception-class.md)  
+        [Microsoft.Isam.Esent.Interop.EsentApiException](./esentapiexception-class.md)  
+          [Microsoft.Isam.Esent.Interop.EsentObsoleteException](./esentobsoleteexception-class.md)  
+            Microsoft.Isam.Esent.Interop.EsentCannotAddFixedVarColumnToDerivedTableException  
 
-**Namespace:**  [Microsoft. ISAM. ESENT. Interop](./microsoft.isam.esent.interop-namespace.md)  
-**Assembly:**  Microsoft. ISAM. ESENT. Interop (in Microsoft.Isam.Esent.Interop.dll)
+**Namespace:**  [Microsoft.Isam.Esent.Interop](./microsoft.isam.esent.interop-namespace.md)  
+**Assembly:**  Microsoft.Isam.Esent.Interop (in Microsoft.Isam.Esent.Interop.dll)
 
 ## <a name="syntax"></a>Syntax
 
@@ -68,10 +68,10 @@ public sealed class EsentCannotAddFixedVarColumnToDerivedTableException : EsentO
 
 Alle öffentlichen statischen Elemente dieses Typs (Shared in Microsoft Visual Basic) sind threadsicher. Bei Instanzmembern ist die Threadsicherheit nicht gewährleistet.
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
-#### <a name="reference"></a>Referenz
+#### <a name="reference"></a>Verweis
 
-[Esentcannotaddfixedvarcolumnabderivedtableexception-Member](./esentcannotaddfixedvarcolumntoderivedtableexception-members.md)
+[EsentCannotAddFixedVarColumnToDerivedTableException-Member](./esentcannotaddfixedvarcolumntoderivedtableexception-members.md)
 
-[Microsoft. ISAM. ESENT. Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)
+[Microsoft.Isam.Esent.Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)

@@ -5,7 +5,7 @@ ms.assetid: ec6d8565-e628-47a4-be84-c07b12cd9aec
 ms.tgt_platform: multiple
 keywords:
 - MS-DS-Claim-Source-Attribut AD-Schema
-- AD-Schema des msDS-ClaimSource-Attributs
+- MSDS-ClaimSource-Attribut AD-Schema
 topic_type:
 - apiref
 api_name:
@@ -35,7 +35,7 @@ Bei einem Anspruchstyp gibt dieses Attribut die Quelle des Anspruchstyps an. Die
 | Aktualisieren von Berechtigungen  | \-                                          |
 | Updatehäufigkeit  | \-                                          |
 | Attribute-Id      | 1.2.840.113556.1.4.2157                     |
-| System-Id-Guid    | fa32f2a6-f28b-47d0-bf91-663e8f910a72        |
+| System-ID-GUID    | fa32f2a6-f28b-47d0-bf91-663e8f910a72        |
 | Syntax            | [**String(Unicode)**](s-string-unicode.md) |
 
 
@@ -53,7 +53,7 @@ Bei einem Anspruchstyp gibt dieses Attribut die Quelle des Anspruchstyps an. Die
 | Link-ID                | \-                                                      |
 | MAPI-Id                | \-                                                      |
 | System-Only            | False                                                   |
-| Is-Single-Valued       | True                                                    |
+| Ist einwertig       | True                                                    |
 | Ist indiziert             | False                                                   |
 | Im globalen Katalog      | False                                                   |
 | NT-Security-Descriptor | O:BAG:BAD:S:                                            |

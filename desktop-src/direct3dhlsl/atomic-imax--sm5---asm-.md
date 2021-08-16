@@ -26,7 +26,7 @@ Atomarer ganzzahliger Wert mit Vorzeichen im Arbeitsspeicher.
 
 
 
-| Element                                                                                                           | Beschreibung                                                                                                                                                                               |
+| Element                                                                                                           | BESCHREIBUNG                                                                                                                                                                               |
 |----------------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | <span id="dst"></span><span id="DST"></span>*Dst*<br/>                                                   | \[in \] Die Komponenten, die mit *src0 verglichen werden.* Dieser Wert muss eine ungeordnete Zugriffsansicht (UAV) (u) \# sein. Im Compute-Shader kann es sich auch um gemeinsam genutzten Threadgruppenspeicher (g ) \# sein. <br/> |
 | <span id="dstAddress"></span><span id="dstaddress"></span><span id="DSTADDRESS"></span>*dstAddress*<br/> | \[in \] Die Speicheradresse.<br/>                                                                                                                                                     |
@@ -40,7 +40,7 @@ Atomarer ganzzahliger Wert mit Vorzeichen im Arbeitsspeicher.
 
 Dieser Vorgang führt einen 32-Bit-Einzelkomponenten-Höchstwert mit Vorsigniertem *src0* in *dst* bei einer 32-Bit-Adresse pro Komponente *dstAddress* aus, die atomisch ausgeführt wird.
 
-Die Anzahl von Komponenten, die von der Adresse übernommen werden, wird durch die Dimensionalität von *dst* u \# oder g \# bestimmt.
+Die Anzahl von Komponenten, die aus der Adresse genommen werden, wird durch die Dimensionalität von *dst* u \# oder g \# bestimmt.
 
 Wenn *dst* ein u ist, kann es als unformatiert, \# typisch oder strukturiert deklariert werden. Bei Typ muss es als UINT/SINT deklariert werden, und das gebundene Ressourcenformat ist R32 \_ \_ UINT/SINT.
 
@@ -86,12 +86,12 @@ Diese Anweisung wird in den folgenden Shadermodellen unterstützt:
 
 | Shadermodell                                              | Unterstützt |
 |-----------------------------------------------------------|-----------|
-| [Shadermodell 5](d3d11-graphics-reference-sm5.md)        | ja       |
-| [Shadermodell 4.1](dx-graphics-hlsl-sm4.md)              | nein        |
-| [Shadermodell 4](dx-graphics-hlsl-sm4.md)                | nein        |
-| [Shadermodell 3 (DirectX HLSL)](dx-graphics-hlsl-sm3.md) | nein        |
-| [Shadermodell 2 (DirectX HLSL)](dx-graphics-hlsl-sm2.md) | nein        |
-| [Shadermodell 1 (DirectX HLSL)](dx-graphics-hlsl-sm1.md) | nein        |
+| [Shadermodell 5](d3d11-graphics-reference-sm5.md)        | Ja       |
+| [Shadermodell 4.1](dx-graphics-hlsl-sm4.md)              | Nein        |
+| [Shadermodell 4](dx-graphics-hlsl-sm4.md)                | Nein        |
+| [Shadermodell 3 (DirectX HLSL)](dx-graphics-hlsl-sm3.md) | Nein        |
+| [Shadermodell 2 (DirectX HLSL)](dx-graphics-hlsl-sm2.md) | Nein        |
+| [Shadermodell 1 (DirectX HLSL)](dx-graphics-hlsl-sm1.md) | Nein        |
 
 
 

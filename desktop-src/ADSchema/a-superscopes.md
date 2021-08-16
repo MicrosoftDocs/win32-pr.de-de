@@ -1,11 +1,11 @@
 ---
 title: Super-Scopes-Attribut
-description: Dieses Attribut wird verwendet, um alle unterschiedlichen Bereiche, die in der DHCP-Klasse verwendet werden, in einer einzelnen Entität zu gruppieren.
+description: Dieses Attribut wird verwendet, um alle verschiedenen Bereiche, die in der DHCP-Klasse verwendet werden, zu einer einzelnen Entität zu gruppiert.
 ms.assetid: c5c59a77-97d8-4f8b-9ac4-bc031333233f
 ms.tgt_platform: multiple
 keywords:
-- AD-Schema für Super-Scopes-Attribut
-- Schema für das Schema "superscopes"
+- Super-Scopes AD-Schema
+- superScopes-Attribut AD-Schema
 topic_type:
 - apiref
 api_name:
@@ -14,28 +14,28 @@ api_type:
 - Schema
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: fea8eba0856fd9a5a815f02bd2590b820e7b4d04
-ms.sourcegitcommit: b77ace27b0432e7cd3863191b11926be032fbe2f
+ms.openlocfilehash: 93965eb8407342235dc8c883266b0812fb41ccb9ff421b2de4fac76b71afa1fe
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "104122660"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119923130"
 ---
 # <a name="super-scopes-attribute"></a>Super-Scopes-Attribut
 
-Dieses Attribut wird verwendet, um alle unterschiedlichen Bereiche, die in der DHCP-Klasse verwendet werden, in einer einzelnen Entität zu gruppieren.
+Dieses Attribut wird verwendet, um alle verschiedenen Bereiche, die in der DHCP-Klasse verwendet werden, zu einer einzelnen Entität zu gruppiert.
 
 
 
 | Eingabe | Wert |
 |-------------------|--------------------------------------|
 | CN                | Super-Scopes                         |
-| LDAP-Display-Name | Bereichs Gruppierungen                          |
+| Ldap-Anzeigename | Bereichsgruppierungen                          |
 | Size              | \-                                   |
-| Berechtigung aktualisieren  | \-                                   |
-| Aktualisierungshäufigkeit  | \-                                   |
+| Aktualisieren von Berechtigungen  | \-                                   |
+| Updatehäufigkeit  | \-                                   |
 | Attribute-Id      | 1.2.840.113556.1.4.710               |
-| System-ID-GUID    | 963d274b-48be-11d1-a9c3-0000b80367c1 |
+| System-Id-Guid    | 963d274b-48be-11d1-a9c3-0000f80367c1 |
 | Syntax            | [**String(IA5)**](s-string-ia5.md)  |
 
 
@@ -43,7 +43,7 @@ Dieses Attribut wird verwendet, um alle unterschiedlichen Bereiche, die in der D
 ## <a name="implementations"></a>Implementierungen
 
 -   [**Windows 2000 Server**](#windows-2000-server)
--   [**Windows Server 2003**](#windows-server-2003)
+-   [**Windows Server 2003**](#windows-server-2003)
 -   [**Windows Server 2003 R2**](#windows-server-2003-r2)
 -   [**Windows Server 2008**](#windows-server-2008)
 -   [**Windows Server 2008 R2**](#windows-server-2008-r2)
@@ -58,10 +58,10 @@ Dieses Attribut wird verwendet, um alle unterschiedlichen Bereiche, die in der D
 | Link-ID                | \-                                           |
 | MAPI-Id                | \-                                           |
 | System-Only            | False                                        |
-| Ist-einwertig       | False                                        |
+| Is-Single-Valued       | False                                        |
 | Ist indiziert             | False                                        |
 | Im globalen Katalog      | False                                        |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                 |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                 |
 | Range-Lower            | \-                                           |
 | Range-Upper            | \-                                           |
 | Search-Flags           | 0x00000000                                   |
@@ -70,7 +70,7 @@ Dieses Attribut wird verwendet, um alle unterschiedlichen Bereiche, die in der D
 
 
 
-## <a name="windows-server-2003"></a>Windows Server 2003
+## <a name="windows-server-2003"></a>Windows Server 2003
 
 
 
@@ -79,10 +79,10 @@ Dieses Attribut wird verwendet, um alle unterschiedlichen Bereiche, die in der D
 | Link-ID                | \-                                           |
 | MAPI-Id                | \-                                           |
 | System-Only            | False                                        |
-| Ist-einwertig       | False                                        |
+| Is-Single-Valued       | False                                        |
 | Ist indiziert             | False                                        |
 | Im globalen Katalog      | False                                        |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                 |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                 |
 | Range-Lower            | \-                                           |
 | Range-Upper            | \-                                           |
 | Search-Flags           | 0x00000000                                   |
@@ -100,10 +100,10 @@ Dieses Attribut wird verwendet, um alle unterschiedlichen Bereiche, die in der D
 | Link-ID                | \-                                           |
 | MAPI-Id                | \-                                           |
 | System-Only            | False                                        |
-| Ist-einwertig       | False                                        |
+| Is-Single-Valued       | False                                        |
 | Ist indiziert             | False                                        |
 | Im globalen Katalog      | False                                        |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                 |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                 |
 | Range-Lower            | \-                                           |
 | Range-Upper            | \-                                           |
 | Search-Flags           | 0x00000000                                   |
@@ -121,10 +121,10 @@ Dieses Attribut wird verwendet, um alle unterschiedlichen Bereiche, die in der D
 | Link-ID                | \-                                           |
 | MAPI-Id                | \-                                           |
 | System-Only            | False                                        |
-| Ist-einwertig       | False                                        |
+| Is-Single-Valued       | False                                        |
 | Ist indiziert             | False                                        |
 | Im globalen Katalog      | False                                        |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                 |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                 |
 | Range-Lower            | \-                                           |
 | Range-Upper            | \-                                           |
 | Search-Flags           | 0x00000000                                   |
@@ -142,10 +142,10 @@ Dieses Attribut wird verwendet, um alle unterschiedlichen Bereiche, die in der D
 | Link-ID                | \-                                           |
 | MAPI-Id                | \-                                           |
 | System-Only            | False                                        |
-| Ist-einwertig       | False                                        |
+| Is-Single-Valued       | False                                        |
 | Ist indiziert             | False                                        |
 | Im globalen Katalog      | False                                        |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                 |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                 |
 | Range-Lower            | \-                                           |
 | Range-Upper            | \-                                           |
 | Search-Flags           | 0x00000000                                   |
@@ -163,10 +163,10 @@ Dieses Attribut wird verwendet, um alle unterschiedlichen Bereiche, die in der D
 | Link-ID                | \-                                           |
 | MAPI-Id                | \-                                           |
 | System-Only            | False                                        |
-| Ist-einwertig       | False                                        |
+| Is-Single-Valued       | False                                        |
 | Ist indiziert             | False                                        |
 | Im globalen Katalog      | False                                        |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                 |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                 |
 | Range-Lower            | \-                                           |
 | Range-Upper            | \-                                           |
 | Search-Flags           | 0x00000000                                   |

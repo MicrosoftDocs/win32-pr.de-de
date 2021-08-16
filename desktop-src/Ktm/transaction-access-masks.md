@@ -51,7 +51,7 @@ Der Aufrufer kann Transaktionsinformationen festlegen.
 
 
 
-Der Aufrufer kann sich in diese Transaktion einträgt.
+Der Aufrufer kann sich in diese Transaktion einlisten.
 
 
 </dt> </dl> </dd> <dt>
@@ -95,7 +95,7 @@ Der Aufrufer kann diese Transaktion an einen übergeordneten Ressourcen-Manager 
 
 </dt> </dl> </dd> <dt>
 
-<span id="TRANSACTION_GENERIC_READ"></span><span id="transaction_generic_read"></span>**GENERISCHER \_ \_ TRANSAKTIONSLESE-VORGANG**
+<span id="TRANSACTION_GENERIC_READ"></span><span id="transaction_generic_read"></span>**GENERISCHER \_ \_ TRANSAKTIONSLESEDATENLESE-VORGANG**
 </dt> <dd> <dl> <dt>
 
 0x120001

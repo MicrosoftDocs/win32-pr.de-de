@@ -4,16 +4,16 @@ ms.assetid: edbc8450-b5a2-476a-bbe8-b66676552607
 title: XMFLOAT4-Operatoren
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: a8bd78f690be4f7089c22d530c64e97f07ce5dbb
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 475ca133437e247b3d102c571b25cf96ed188538ed52d32922f08b9450ea8abb
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104215091"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119118437"
 ---
 # <a name="xmfloat4-operators"></a>XMFLOAT4-Operatoren
 
-Die [**XMFLOAT4**](/windows/win32/api/directxmath/ns-directxmath-xmfloat4) -Struktur macht die folgenden Operatoren verfügbar.
+Die [**XMFLOAT4-Struktur**](/windows/win32/api/directxmath/ns-directxmath-xmfloat4) macht die folgenden Operatoren verfügbar.
 
 > [!Note]  
 > Die hier aufgeführten Operatoren sind nur unter C++ verfügbar.
@@ -26,7 +26,7 @@ Die [**XMFLOAT4**](/windows/win32/api/directxmath/ns-directxmath-xmfloat4) -Stru
 
 | Methoden                                               | BESCHREIBUNG                                                                                                         |
 |-------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------|
-| [**Operator =**](/windows/win32/api/directxmath/nf-directxmath-xmfloat4-operator-assign(xmfloat4__))<br/> | Weist die Vektor Komponenten Daten einer Instanz von `XMFLOAT4` der aktuellen Instanz von zu `XMFLOAT4` .<br/> |
+| [**operator =**](/windows/win32/api/directxmath/nf-directxmath-xmfloat4-operator-assign(xmfloat4__))<br/> | Weist der aktuellen Instanz von die Vektorkomponentendaten von `XMFLOAT4` einer Instanz von `XMFLOAT4` zu.<br/> |
 
 
 
@@ -39,7 +39,7 @@ Die [**XMFLOAT4**](/windows/win32/api/directxmath/ns-directxmath-xmfloat4) -Stru
 [XMFLOAT4-Erweiterungen](ovw-xmfloat4-extensions.md)
 </dt> <dt>
 
-**Verweis**
+**Referenz**
 </dt> <dt>
 
 [**XMFLOAT4**](/windows/win32/api/directxmath/ns-directxmath-xmfloat4)

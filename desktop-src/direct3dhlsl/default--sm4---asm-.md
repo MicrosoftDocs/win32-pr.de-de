@@ -1,5 +1,5 @@
 ---
-title: default (sm4 - asm)
+title: default (sm4 – asm)
 description: Eine optionale Bezeichnung in einer switch-Anweisung.
 ms.assetid: DB10F654-4A98-4ED8-A3B4-CA9FE1DFE6CD
 ms.topic: reference
@@ -11,7 +11,7 @@ ms.contentlocale: de-DE
 ms.lasthandoff: 08/11/2021
 ms.locfileid: "118792676"
 ---
-# <a name="default-sm4---asm"></a>default (sm4 - asm)
+# <a name="default-sm4---asm"></a>default (sm4 – asm)
 
 Eine optionale Bezeichnung in einer [switch-Anweisung.](switch--sm4---asm-.md)
 
@@ -26,7 +26,7 @@ Eine optionale Bezeichnung in einer [switch-Anweisung.](switch--sm4---asm-.md)
 
 ## <a name="remarks"></a>Hinweise
 
-Diese Anweisung funktioniert wie der Standard **in** C. Das Durchfallen ist nur gültig, wenn kein Code hinzugefügt wurde, sodass mehrere Fälle (einschließlich **Standard)** denselben Codeblock gemeinsam verwenden können.
+Diese Anweisung funktioniert wie **die Standardeinstellung** in C. Das Durchlaufen ist nur gültig, wenn kein Code hinzugefügt wurde, sodass mehrere Fälle (einschließlich **standard**) denselben Codeblock gemeinsam nutzen können.
 
 In einem **Switchkonstrukt** ist nur eine **Standard-Anweisung** zulässig.
 
@@ -42,7 +42,7 @@ Diese Anweisung gilt für die folgenden Shaderstufen:
 
  
 
-## <a name="minimum-shader-model"></a>Minimales Shadermodell
+## <a name="minimum-shader-model"></a>Shader-Mindestmodell
 
 Diese Funktion wird in den folgenden Shadermodellen unterstützt.
 
@@ -50,12 +50,12 @@ Diese Funktion wird in den folgenden Shadermodellen unterstützt.
 
 | Shadermodell                                              | Unterstützt |
 |-----------------------------------------------------------|-----------|
-| [Shadermodell 5](d3d11-graphics-reference-sm5.md)        | ja       |
-| [Shadermodell 4.1](dx-graphics-hlsl-sm4.md)              | ja       |
-| [Shadermodell 4](dx-graphics-hlsl-sm4.md)                | ja       |
-| [Shadermodell 3 (DirectX HLSL)](dx-graphics-hlsl-sm3.md) | nein        |
-| [Shadermodell 2 (DirectX HLSL)](dx-graphics-hlsl-sm2.md) | nein        |
-| [Shadermodell 1 (DirectX HLSL)](dx-graphics-hlsl-sm1.md) | nein        |
+| [Shadermodell 5](d3d11-graphics-reference-sm5.md)        | Ja       |
+| [Shadermodell 4.1](dx-graphics-hlsl-sm4.md)              | Ja       |
+| [Shadermodell 4](dx-graphics-hlsl-sm4.md)                | Ja       |
+| [Shadermodell 3 (DirectX HLSL)](dx-graphics-hlsl-sm3.md) | Nein        |
+| [Shadermodell 2 (DirectX HLSL)](dx-graphics-hlsl-sm2.md) | Nein        |
+| [Shadermodell 1 (DirectX HLSL)](dx-graphics-hlsl-sm1.md) | Nein        |
 
 
 
@@ -65,7 +65,7 @@ Diese Funktion wird in den folgenden Shadermodellen unterstützt.
 
 <dl> <dt>
 
-[Shader Model 4-Assembly (DirectX HLSL)](dx-graphics-hlsl-sm4-asm.md)
+[Shadermodell 4-Assembly (DirectX HLSL)](dx-graphics-hlsl-sm4-asm.md)
 </dt> </dl>
 
  

@@ -1,7 +1,7 @@
 ---
-description: 'Die GetProperties-Methode ruft die Eigenschaften des Beispiels ab. Diese Methode implementiert die IMediaSample2:: GetProperties-Methode.'
+description: Die GetProperties-Methode ruft die Eigenschaften des Beispiels ab. Diese Methode implementiert die IMediaSample2::GetProperties-Methode.
 ms.assetid: c2a6d611-9c17-41fb-bb6d-f5b17f1c9966
-title: Cmediasample. GetProperties-Methode (amfilter. h)
+title: CMediaSample.GetProperties-Methode (Amfilter.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -16,16 +16,16 @@ api_location:
 - Strmbase.dll
 - Strmbasd.lib
 - Strmbasd.dll
-ms.openlocfilehash: 06ee1022f298e2f5167d348777b33fc2f1703eef
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 856da0c73f3dd93d0c660f55aa0a9de35d87ab1b270df2179d7ad0b520e6d0a2
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106369395"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119074024"
 ---
-# <a name="cmediasamplegetproperties-method"></a>Cmediasample. GetProperties-Methode
+# <a name="cmediasamplegetproperties-method"></a>CMediaSample.GetProperties-Methode
 
-Die- `GetProperties` Methode ruft die Eigenschaften des Beispiels ab. Diese Methode implementiert die [**IMediaSample2:: GetProperties**](/windows/desktop/api/Strmif/nf-strmif-imediasample2-getproperties) -Methode.
+Die `GetProperties` -Methode ruft die Eigenschaften des Beispiels ab. Diese Methode implementiert die [**IMediaSample2::GetProperties-Methode.**](/windows/desktop/api/Strmif/nf-strmif-imediasample2-getproperties)
 
 ## <a name="syntax"></a>Syntax
 
@@ -43,30 +43,30 @@ HRESULT GetProperties(
 
 <dl> <dt>
 
-*cbproperties* 
+*cbProperties* 
 </dt> <dd>
 
-Länge der abzurufenden Eigenschaften Daten in Bytes.
+Länge der abzurufenden Eigenschaftsdaten in Bytes.
 
 </dd> <dt>
 
-*pbproperties* 
+*pbProperties* 
 </dt> <dd>
 
-Zeiger auf einen Puffer der Größe *cbproperties*.
+Zeiger auf einen Puffer der Größe *cbProperties*.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt einen der **HRESULT** -Werte zurück, die in der folgenden Tabelle aufgeführt sind.
+Gibt einen der in der folgenden Tabelle gezeigten **HRESULT-Werte** zurück.
 
 
 
 | Rückgabecode                                                                               | Beschreibung                           |
 |-------------------------------------------------------------------------------------------|---------------------------------------|
 | <dl> <dt>**S \_ OK**</dt> </dl>      | Erfolg.<br/>                   |
-| <dl> <dt>**E- \_ Zeiger**</dt> </dl> | **Null** -Zeigerargument.<br/> |
+| <dl> <dt>**\_E-ZEIGER**</dt> </dl> |  NULL-Zeigerargument.<br/> |
 
 
 
@@ -78,16 +78,16 @@ Gibt einen der **HRESULT** -Werte zurück, die in der folgenden Tabelle aufgefü
 
 | Anforderung | Wert |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>Amfilter. h (Include Streams. h)</dt> </dl>                                                                                  |
-| Bibliothek<br/> | <dl> " <dt>Straumbase. lib" (Einzelhandels Builds);</dt> " <dt>Straumbasd. lib" (Debugbuilds)</dt> </dl> |
+| Header<br/>  | <dl> <dt>Amfilter.h (include Streams.h)</dt> </dl>                                                                                  |
+| Bibliothek<br/> | <dl> <dt>Strmbase.lib (Einzelhandels-Builds); </dt> <dt>Strmbasd.lib (Debugbuilds)</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Cmediasample-Klasse**](cmediasample.md)
+[**CMediaSample-Klasse**](cmediasample.md)
 </dt> </dl>
 
  
