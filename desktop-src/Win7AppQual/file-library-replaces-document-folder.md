@@ -41,7 +41,7 @@ ms.locfileid: "118329670"
 
 
 
-## <a name="description"></a>BESCHREIBUNG
+## <a name="description"></a>Beschreibung
 
 Bibliotheken bieten eine zentralisierte ordnerähnliche Benutzeroberfläche für Dateispeicherung, Suche und Zugriff an mehreren Lokalen und Remotestandorten.
 

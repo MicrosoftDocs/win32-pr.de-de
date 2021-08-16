@@ -1,9 +1,9 @@
 ---
-title: Byte-Attribut
-description: Das Byte-Schlüsselwort gibt ein 8-Bit-Datenelement an.
+title: byte-Attribut
+description: Das byte-Schlüsselwort gibt ein 8-Bit-Datenelement an.
 ms.assetid: d6401e05-5498-4d66-8f70-2c794ed26527
 keywords:
-- Byte-Attribut-Mittell
+- Byteattribut MIDL
 topic_type:
 - apiref
 api_name:
@@ -12,16 +12,16 @@ api_type:
 - NA
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 347b1f22f06431c5490d4fdac15cdb22b25da69e
-ms.sourcegitcommit: 57758ecb246c84d65e6e0e4bd5570d9176fa39cd
+ms.openlocfilehash: a271cc81fe97fb25850bfe4dcb7d2edb55ba3c69805dab17d013bc646768e87f
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "106340468"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118384724"
 ---
-# <a name="byte-attribute"></a>Byte-Attribut
+# <a name="byte-attribute"></a>byte-Attribut
 
-Das **Byte** -Schlüsselwort gibt ein 8-Bit-Datenelement an.
+Das **byte-Schlüsselwort** gibt ein 8-Bit-Datenelement an.
 
 ``` syntax
 byte identifier-name;
@@ -34,21 +34,21 @@ byte identifier-name;
 *Bezeichnername* 
 </dt> <dd>
 
-Gibt einen gültigen Mittell-Bezeichner an. Gültige Mittell-Bezeichner bestehen aus bis zu 31 alphanumerischen Zeichen und/oder unterstrichen und müssen mit einem Buchstaben oder einem Unterstrich beginnen.
+Gibt einen gültigen MIDL-Bezeichner an. Gültige MIDL-Bezeichner bestehen aus bis zu 31 alphanumerischen und/oder Unterstrichen und müssen mit einem alphabetischen oder Unterstrich beginnen.
 
 </dd> </dl>
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Ein **Byte** -Datenelement wird bei der Übertragung im Netzwerk nicht als [**char**](char-idl.md) -Typ konvertiert.
+Ein **Bytedatenelement** wird für die Übertragung im Netzwerk nicht wie ein [**char-Typ konvertiert.**](char-idl.md)
 
-Der **Bytetyp** ist einer der Basis Typen der IDL (Interface Definition Language). Der **Bytetyp** kann als Typspezifizierer in [**Konstanten**](const.md) Deklarationen, [**typedef**](typedef.md) -Deklarationen, allgemeinen Deklarationen und Funktions Deklaratoren (als Funktionsrückgabetyp-Spezifizierer und als Parametertyp Spezifizierer) angezeigt werden. Informationen zu dem Kontext, in dem typspezifier angezeigt wird, finden Sie unter [Schnittstellen Definitionsdatei (IDL)](interface-definition-idl-file.md).
+Der **Bytetyp** ist einer der Basistypen der Schnittstellendefinitionssprache (Interface Definition Language, IDL). Der **Bytetyp** kann als Typspezifizierer in const-Deklarationen, [](const.md) [**TypeDef-Deklarationen,**](typedef.md) allgemeinen Deklarationen und Funktionsdeklaratoren (als Funktions-Rückgabetypspezifizierer und als Parametertypspezifizierer) angezeigt werden. Informationen zum Kontext, in dem Typspezifizierer angezeigt werden, finden Sie unter [Interface Definition (IDL)-Datei.](interface-definition-idl-file.md)
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[Mittel l-Basis Typen](midl-base-types.md)
+[MIDL-Basistypen](midl-base-types.md)
 </dt> <dt>
 
 [**Char**](char-idl.md)
@@ -57,15 +57,15 @@ Der **Bytetyp** ist einer der Basis Typen der IDL (Interface Definition Language
 [**const**](const.md)
 </dt> <dt>
 
-[Schnittstellen Definitionsdatei (IDL)](interface-definition-idl-file.md)
+[IDL-Datei (Interface Definition)](interface-definition-idl-file.md)
 </dt> <dt>
 
-[**typedef**](typedef.md)
+[**Typedef**](typedef.md)
 </dt> </dl>
 
- 
+ 
 
- 
+ 
 
 
 

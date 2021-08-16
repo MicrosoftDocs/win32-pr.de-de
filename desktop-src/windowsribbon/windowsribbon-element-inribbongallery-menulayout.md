@@ -1,6 +1,6 @@
 ---
-title: InRibbonGallery.MenuLayout-Eigenschaft
-description: Stellt einen Container für In-Ribbon-Katalog-Dropdownmenülayouts dar.
+title: InRibbonGallery.MenuLayout (Eigenschaft)
+description: Stellt einen Container für In-Ribbon Katalog-Dropdownmenülayouts dar.
 ms.assetid: 89e0eb39-2790-4571-a661-ab3ebafbb13f
 keywords:
 - InRibbonGallery.MenuLayout-Eigenschaft Windows Menüband
@@ -19,9 +19,9 @@ ms.contentlocale: de-DE
 ms.lasthandoff: 08/11/2021
 ms.locfileid: "117850763"
 ---
-# <a name="inribbongallerymenulayout-property"></a>InRibbonGallery.MenuLayout-Eigenschaft
+# <a name="inribbongallerymenulayout-property"></a>InRibbonGallery.MenuLayout (Eigenschaft)
 
-Stellt einen Container für Menülayouts [im](windowsribbon-controls-inribbongallery.md) Menübandkatalog dar.
+Stellt einen Container für [Dropdownmenülayouts](windowsribbon-controls-inribbongallery.md) im Menübandkatalog dar.
 
 ## <a name="usage"></a>Verbrauch
 
@@ -39,7 +39,7 @@ Es gibt keine Attribute.
 
 
 
-| Element                                                                           | BESCHREIBUNG                                    |
+| Element                                                                           | Beschreibung                                    |
 |-----------------------------------------------------------------------------------|------------------------------------------------|
 | [**FlowMenuLayout**](windowsribbon-element-flowmenulayout.md)<br/>         | Muss genau einmal auftreten<br/> <br/> |
 | [**VerticalMenuLayout**](windowsribbon-element-verticalmenulayout.md)<br/> | Muss genau einmal auftreten<br/> <br/> |
@@ -60,7 +60,7 @@ Es gibt keine Attribute.
 
 Optional.
 
-Kann höchstens einmal für jedes [**InRibbonGallery-Element**](windowsribbon-element-inribbongallery.md) auftreten.
+Kann für jedes [**InRibbonGallery-Element mindestens einmal**](windowsribbon-element-inribbongallery.md) auftreten.
 
 > [!Note]  
 > Maximal ein untergeordnetes Element ([**VerticalMenuLayout**](windowsribbon-element-verticalmenulayout.md) oder [**FlowMenuLayout**](windowsribbon-element-flowmenulayout.md)) ist zulässig.
@@ -69,9 +69,9 @@ Kann höchstens einmal für jedes [**InRibbonGallery-Element**](windowsribbon-el
 
 ## <a name="examples"></a>Beispiele
 
-Im folgenden Beispiel wird das grundlegende Markup für den [Katalog im Menüband](windowsribbon-controls-inribbongallery.md)veranschaulicht.
+Im folgenden Beispiel wird das grundlegende Markup für den [In-Ribbon Gallery veranschaulicht.](windowsribbon-controls-inribbongallery.md)
 
-Dieser Codeabschnitt zeigt die **InRibbonGallery.MenuLayout-Steuerelementdeklaration.**
+Dieser Codeabschnitt zeigt die **Steuerelementdeklaration InRibbonGallery.MenuLayout.**
 
 
 ```XML
@@ -108,7 +108,7 @@ Dieser Codeabschnitt zeigt die **InRibbonGallery.MenuLayout-Steuerelementdeklara
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | nur Windows 7 \[ Desktop-Apps\]<br/>              |
+| Unterstützte Mindestversion (Client)<br/> | Windows 7 \[ Desktop-Apps\]<br/>              |
 | Unterstützte Mindestversion (Server)<br/> | Windows Nur Server 2008 \[ R2-Desktop-Apps\]<br/> |
 
 
@@ -117,7 +117,7 @@ Dieser Codeabschnitt zeigt die **InRibbonGallery.MenuLayout-Steuerelementdeklara
 
 <dl> <dt>
 
-[Katalogsteuerelement im Menüband](windowsribbon-controls-inribbongallery.md)
+[Steuerelement "Katalog im Menüband"](windowsribbon-controls-inribbongallery.md)
 </dt> <dt>
 
 [Arbeiten mit Katalogen](ribbon-controls-galleries.md)

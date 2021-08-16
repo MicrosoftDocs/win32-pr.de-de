@@ -1,9 +1,9 @@
 ---
-title: WIM_OPEN Meldung (Mmsystem.h)
-description: Die WIM \_ OPEN-Nachricht wird an eine Waveform-Audio-Eingaberückruffunktion gesendet, wenn ein Waveform-Audio-Eingabegerät geöffnet wird.
+title: WIM_OPEN (Mmsystem.h)
+description: Die WIM OPEN-Nachricht wird an eine Waveform-Audio-Eingaberückruffunktion gesendet, wenn ein \_ Waveform-Audio-Eingabegerät geöffnet wird.
 ms.assetid: de18e6b2-ea28-46d9-812c-e6dac49838ee
 keywords:
-- WIM_OPEN Nachricht Windows Multimedia
+- WIM_OPEN von Windows Multimedia
 topic_type:
 - apiref
 api_name:
@@ -75,7 +75,7 @@ Diese Meldung gibt keinen Wert zurück.
 [Waveform-Audio](waveform-audio.md)
 </dt> <dt>
 
-[Wellenformnachrichten](waveform-messages.md)
+[Waveform-Nachrichten](waveform-messages.md)
 </dt> </dl>
 
  

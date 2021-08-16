@@ -1,6 +1,6 @@
 ---
-description: 'Weitere Informationen finden Sie unter: esentoperationexception-Konstruktor (String, JET_err)'
-title: Esentoperationexception-Konstruktor (Zeichenfolge, JET_err)
+description: 'Weitere Informationen zu: EsentOperationException-Konstruktor (String, JET_err)'
+title: EsentOperationException-Konstruktor (String, JET_err)
 TOCTitle: EsentOperationException constructor (String, JET_err)
 ms:assetid: M:Microsoft.Isam.Esent.Interop.EsentOperationException.#ctor(System.String,Microsoft.Isam.Esent.Interop.JET_err)
 ms:mtpsurl: https://msdn.microsoft.com/library/microsoft.isam.esent.interop.esentoperationexception.esentoperationexception(v=EXCHG.10)
@@ -20,19 +20,19 @@ api_type:
 api_location:
 - Microsoft.Isam.Esent.Interop.dll
 ROBOTS: INDEX,FOLLOW
-ms.openlocfilehash: bb25ea404e4581b369f9d81e772ba4b2e95f7fc1
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 59ade12284cd6e0a7d165a03b61e6b67edd2ad86aa41c7b93f6a6da15cae0593
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106356671"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118493673"
 ---
-# <a name="esentoperationexception-constructor-string-jet_err"></a>Esentoperationexception-Konstruktor (Zeichenfolge, JET_err)
+# <a name="esentoperationexception-constructor-string-jet_err"></a>EsentOperationException-Konstruktor (String, JET_err)
 
-Initialisiert eine neue Instanz der esentoperationexception-Klasse.
+Initialisiert eine neue Instanz der EsentOperationException-Klasse.
 
-**Namespace:**  [Microsoft. ISAM. ESENT. Interop](./microsoft.isam.esent.interop-namespace.md)  
-**Assembly:**  Microsoft. ISAM. ESENT. Interop (in Microsoft.Isam.Esent.Interop.dll)
+**Namespace:**  [Microsoft.Isam.Esent.Interop](./microsoft.isam.esent.interop-namespace.md)  
+**Assembly:**  Microsoft.Isam.Esent.Interop (in Microsoft.Isam.Esent.Interop.dll)
 
 ## <a name="syntax"></a>Syntax
 
@@ -60,25 +60,25 @@ protected EsentOperationException(
 #### <a name="parameters"></a>Parameter
 
   - description  
-    Typ: [System. String](/dotnet/api/system.string)  
+    Typ: [System.String](/dotnet/api/system.string)  
     
     Die Beschreibung des Fehlers.
 
 <!-- end list -->
 
-  - irre  
-    Typ: [Microsoft.ISAM.ESENT.Interop.JET_err](./jet-err-enumeration.md)  
+  - Err  
+    Typ: [Microsoft.Isam.Esent.Interop.JET_err](./jet-err-enumeration.md)  
     
     Der Fehlercode der Ausnahme.
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
-#### <a name="reference"></a>Referenz
+#### <a name="reference"></a>Verweis
 
 [EsentOperationException-Klasse](./esentoperationexception-class.md)
 
-[Esentoperationexception-Member](./esentoperationexception-members.md)
+[EsentOperationException-Member](./esentoperationexception-members.md)
 
-[Esentoperationexception-Überladung](./esentoperationexception-constructor.md)
+[EsentOperationException-Überladung](./esentoperationexception-constructor.md)
 
-[Microsoft. ISAM. ESENT. Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)
+[Microsoft.Isam.Esent.Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)

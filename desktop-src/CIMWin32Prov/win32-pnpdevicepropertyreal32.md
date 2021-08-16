@@ -28,7 +28,7 @@ ms.locfileid: "118417424"
 ---
 # <a name="win32_pnpdevicepropertyreal32-class"></a>Win32 \_ PnPDevicePropertyReal32-Klasse
 
-Stellt eine PnP-Geräteeigenschaft vom Typ **real32 dar.**
+Stellt eine PnP-Geräteeigenschaft vom Typ **real32** dar.
 
 Die folgende Syntax enthält vereinfachten MOF-Code und schließt alle geerbten Eigenschaften ein.
 
@@ -47,13 +47,13 @@ class Win32_PnPDevicePropertyReal32 : Win32_PnPDeviceProperty
 
 ## <a name="members"></a>Member
 
-Die **Win32 \_ PnPDevicePropertyReal32-Klasse** verfügt über die folgenden Membertypen:
+Die **Win32 \_ PnPDevicePropertyReal32-Klasse** verfügt über diese Typen von Membern:
 
 -   [Eigenschaften](#properties)
 
 ### <a name="properties"></a>Eigenschaften
 
-Die **\_ Win32-Klasse PnPDevicePropertyReal32** verfügt über diese Eigenschaften.
+Die **Win32 \_ PnPDevicePropertyReal32-Klasse** verfügt über diese Eigenschaften.
 
 <dl> <dt>
 
@@ -73,7 +73,7 @@ Der Eigenschaftswert.
 **Deviceid**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
@@ -81,37 +81,37 @@ Zugriffstyp: Schreibgeschützt
 
 Identifiziert das PnP-Gerät.
 
-Diese Eigenschaft wird von [**Win32 \_ PnPDeviceProperty geerbt.**](win32-pnpdeviceproperty.md)
+Diese Eigenschaft wird von [**Win32 \_ PnPDeviceProperty**](win32-pnpdeviceproperty.md)geerbt.
 
 </dd> <dt>
 
 **Schlüssel**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Der Wert des Schlüssel-Name-Value, das die **Data-Eigenschaft identifiziert.**
+Der Wert des Schlüssel-Name-Value-Paars, das die **Data-Eigenschaft** identifiziert.
 
-Diese Eigenschaft wird von [**Win32 \_ PnPDeviceProperty geerbt.**](win32-pnpdeviceproperty.md)
+Diese Eigenschaft wird von [**Win32 \_ PnPDeviceProperty**](win32-pnpdeviceproperty.md)geerbt.
 
 </dd> <dt>
 
 **Keyname**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Der Name des Schlüssel-Name-Value, das die **Data-Eigenschaft identifiziert.**
+Der Name des Schlüssel-Name-Value-Paars, das die **Data-Eigenschaft** identifiziert.
 
-Diese Eigenschaft wird von [**Win32 \_ PnPDeviceProperty geerbt.**](win32-pnpdeviceproperty.md)
+Diese Eigenschaft wird von [**Win32 \_ PnPDeviceProperty**](win32-pnpdeviceproperty.md)geerbt.
 
 </dd> <dt>
 
@@ -126,7 +126,7 @@ Zugriffstyp: Schreibgeschützt
 
 Der Typ der **Data-Eigenschaft.**
 
-Diese Eigenschaft wird von [**Win32 \_ PnPDeviceProperty geerbt.**](win32-pnpdeviceproperty.md)
+Diese Eigenschaft wird von [**Win32 \_ PnPDeviceProperty**](win32-pnpdeviceproperty.md)geerbt.
 
 Die möglichen Werte sind.
 
@@ -218,7 +218,7 @@ Die möglichen Werte sind.
 
 <span id="Decimal"></span><span id="decimal"></span><span id="DECIMAL"></span>
 
-**Decimal** (12)
+**Dezimal** (12)
 
 
 </dt> <dd></dd> <dt>
@@ -253,14 +253,14 @@ Die möglichen Werte sind.
 
 <span id="Boolean"></span><span id="boolean"></span><span id="BOOLEAN"></span>
 
-**Boolescher Wert** (17)
+**Boolean** (17)
 
 
 </dt> <dd></dd> <dt>
 
 <span id="String"></span><span id="string"></span><span id="STRING"></span>
 
-**String** (18)
+**Zeichenfolge** (18)
 
 
 </dt> <dd></dd> <dt>
@@ -330,7 +330,7 @@ Die möglichen Werte sind.
 
 <span id="Binary"></span><span id="binary"></span><span id="BINARY"></span>
 
-**Binary** (4099)
+**Binär** (4099)
 
 
 </dt> <dd></dd> <dt>
@@ -477,7 +477,7 @@ Die möglichen Werte sind.
 
 <span id="Unknown_-_check_in_devpropdef.h"></span><span id="unknown_-_check_in_devpropdef.h"></span><span id="UNKNOWN_-_CHECK_IN_DEVPROPDEF.H"></span>
 
-**Unbekannt– Einchecken in devpropdef.h** (4120)
+**Unbekannt: Einchecken von "devpropdef.h"** (4120)
 
 
 </dt> <dd></dd> <dt>

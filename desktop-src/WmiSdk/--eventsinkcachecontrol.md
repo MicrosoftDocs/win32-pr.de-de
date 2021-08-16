@@ -1,5 +1,5 @@
 ---
-description: Wird verwendet, um zu bestimmen, wann WMI den IWbemUnboundObjectSink-Zeiger eines Ereignisverbraucheranbieters frei gibt.
+description: Wird verwendet, um zu bestimmen, wann WMI einen IWbemUnboundObjectSink-Zeiger eines Ereignisverbraucheranbieters freigibt.
 ms.assetid: f7b14efc-a2f7-4e99-8ec8-5b5af0743139
 ms.tgt_platform: multiple
 title: __EventSinkCacheControl-Klasse
@@ -24,7 +24,7 @@ ms.locfileid: "118557914"
 ---
 # <a name="__eventsinkcachecontrol-class"></a>\_\_EventSinkCacheControl-Klasse
 
-Die **\_ \_ Systemklasse EventSinkCacheControl** wird verwendet, um zu bestimmen, wann WMI den [**IWbemUnboundObjectSink-Zeiger eines Ereignisverbraucheranbieters**](/windows/desktop/api/Wbemprov/nn-wbemprov-iwbemunboundobjectsink) frei gibt. Die **\_ \_ EventSinkCacheControl-Klasse** ist eine Singletonklasse. Sie befindet sich nur im \\ Stammnamespace.
+Die **\_ \_ Systemklasse EventSinkCacheControl** wird verwendet, um zu bestimmen, wann WMI den [**IWbemUnboundObjectSink-Zeiger**](/windows/desktop/api/Wbemprov/nn-wbemprov-iwbemunboundobjectsink) eines Ereignisverbraucheranbieters freigibt. Die **\_ \_ EventSinkCacheControl-Klasse** ist eine Singletonklasse. Sie befindet sich nur im \\ Stammnamespace.
 
 Die folgende Syntax wird durch MOF-Code (Managed Object Format) vereinfacht und schließt alle geerbten Eigenschaften ein. Eigenschaften werden in alphabetischer Reihenfolge und nicht in MOF-Reihenfolge aufgeführt.
 
@@ -40,7 +40,7 @@ class __EventSinkCacheControl : CacheControl
 
 ## <a name="members"></a>Member
 
-Die **\_ \_ EventSinkCacheControl-Klasse** verfügt über die folgenden Membertypen:
+Die **\_ \_ EventSinkCacheControl-Klasse** verfügt über folgende Typen von Membern:
 
 -   [Eigenschaften](#properties)
 
@@ -59,13 +59,13 @@ Datentyp: **datetime**
 Zugriffstyp: Lesen/Schreiben
 </dt> </dl>
 
-Zeitintervall, nach dem WMI einen Ereignisanbieter frei gibt. Es kann bis zu zweimal das angegebene Intervall dauern, um den Anbieter zu entladen. Die Zeit hat das [Intervallformat](interval-format.md).
+Zeitintervall, nach dem WMI einen Ereignisanbieter freigibt. Das Entladen des Anbieters kann bis zu doppelt so lange dauern. Die Zeit liegt im [Intervallformat vor.](interval-format.md)
 
 </dd> </dl>
 
 ## <a name="remarks"></a>Hinweise
 
-Die **\_ \_ EventSinkCacheControl-Klasse** wird von [**\_ \_ CacheControl abgeleitet.**](--cachecontrol.md) Weitere Informationen zur Verwendung dieser Klasse finden Sie unter [Entladen eines Anbieters.](unloading-a-provider.md)
+Die **\_ \_ EventSinkCacheControl-Klasse** wird von [**\_ \_ CacheControl**](--cachecontrol.md)abgeleitet. Weitere Informationen zur Verwendung dieser Klasse finden Sie unter [Entladen eines Anbieters.](unloading-a-provider.md)
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -79,7 +79,7 @@ Die **\_ \_ EventSinkCacheControl-Klasse** wird von [**\_ \_ CacheControl abgele
 
 
 
-## <a name="see-also"></a>Weitere Informationen:
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 

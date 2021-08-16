@@ -1,9 +1,9 @@
 ---
-title: UserID (sessionstatechangetriggertype)-Element
-description: Enthält den Benutzer für die Terminal Server Sitzung. Wenn eine Sitzungs Zustandsänderung für diesen Benutzer erkannt wird, wird eine Aufgabe gestartet.
+title: UserId (sessionStateChangeTriggerType) -Element
+description: Enthält den Benutzer für die Terminalserversitzung. Wenn eine Änderung des Sitzungszustands für diesen Benutzer erkannt wird, wird eine Aufgabe gestartet.
 ms.assetid: 7605f444-b2c9-4bba-a035-f1307c01184f
 keywords:
-- UserID-Element Taskplaner
+- UserId-Element Taskplaner
 topic_type:
 - apiref
 api_name:
@@ -13,16 +13,16 @@ api_type:
 ms.topic: reference
 ms.date: 05/31/2018
 api_location: ''
-ms.openlocfilehash: cd66a05d25ea9b44f124d55ccc0cbb2c628aeeb5
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: d6f6ddaf196f83d727e4641df6e59375033eb60c076451d70866d9d227ca457d
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104518587"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118355575"
 ---
-# <a name="userid-sessionstatechangetriggertype-element"></a>UserID (sessionstatechangetriggertype)-Element
+# <a name="userid-sessionstatechangetriggertype-element"></a>UserId (sessionStateChangeTriggerType) -Element
 
-Enthält den Benutzer für die Terminal Server Sitzung. Wenn eine Sitzungs Zustandsänderung für diesen Benutzer erkannt wird, wird eine Aufgabe gestartet.
+Enthält den Benutzer für die Terminalserversitzung. Wenn eine Änderung des Sitzungszustands für diesen Benutzer erkannt wird, wird eine Aufgabe gestartet.
 
 ``` syntax
 <xs:element name="UserId"
@@ -32,7 +32,7 @@ Enthält den Benutzer für die Terminal Server Sitzung. Wenn eine Sitzungs Zusta
  />
 ```
 
-Das **UserID** -Element wird durch den komplexen Typ [**sessionstatechangetriggertype**](taskschedulerschema-sessionstatechangetriggertype-complextype.md) definiert.
+Das **UserId-Element** wird durch den komplexen [**SessionStateChangeTriggerType-Typ**](taskschedulerschema-sessionstatechangetriggertype-complextype.md) definiert.
 
 ## <a name="parent-element"></a>Übergeordnetes Element
 
@@ -40,15 +40,15 @@ Das **UserID** -Element wird durch den komplexen Typ [**sessionstatechangetrigge
 
 | Element                       | Abgeleitet von                                                                                           | BESCHREIBUNG                                                                                     |
 |-------------------------------|--------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------|
-| **Sessionstatechange-Auslösers** | [**sessionstatechangetriggertype**](taskschedulerschema-sessionstatechangetriggertype-complextype.md) | Gibt einen-Endpunkt an, der einen Task startet, wenn sich der Status einer Terminal Server Sitzung ändert.<br/> |
+| **SessionStateChangeTrigger** | [**sessionStateChangeTriggerType**](taskschedulerschema-sessionstatechangetriggertype-complextype.md) | Gibt einen Trigger an, der eine Aufgabe startet, wenn sich der Status einer Terminalserversitzung ändert.<br/> |
 
 
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Informationen zur C++-Entwicklung finden Sie unter [**UserId-Eigenschaft von isessionstatechangelöst**](/windows/desktop/api/taskschd/nf-taskschd-isessionstatechangetrigger-get_userid).
+Informationen zur C++-Entwicklung finden Sie unter [**UserId-Eigenschaft von ISessionStateChangeTrigger**](/windows/desktop/api/taskschd/nf-taskschd-isessionstatechangetrigger-get_userid).
 
-Informationen zur Skript Entwicklung finden Sie unter [**sessionstatechange-Benutzer-ID**](sessionstatechangetrigger-userid.md).
+Informationen zur Skriptentwicklung finden Sie unter [**SessionStateChangeTrigger.UserId**](sessionstatechangetrigger-userid.md).
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -56,8 +56,8 @@ Informationen zur Skript Entwicklung finden Sie unter [**sessionstatechange-Benu
 
 | Anforderung | Wert |
 |-------------------------------------|------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>       |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2008 \[ -Desktop-Apps\]<br/> |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur \[ Vista-Desktop-Apps\]<br/>       |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2008-Desktop-Apps\]<br/> |
 
 
 

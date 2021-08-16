@@ -1,25 +1,25 @@
 ---
-title: Httprawserviceexample
-description: Dieses Beispiel zeigt, wie Sie den Dienst Host verwenden, um unformatierte HTTP-Anforderungen (nicht SOAP) zu verarbeiten.
+title: HttpRawServiceExample
+description: In diesem Beispiel wird gezeigt, wie der Diensthost verwendet wird, um unformatierte HTTP-Anforderungen (nicht SOAP) zu verarbeiten.
 ms.assetid: fbe5ad9c-f3f4-40c2-86e0-03b945aab89f
 keywords:
-- Httprawserviceexample Native Webdienste
-- Wwsapi
+- HttpRawServiceExample Native-Web-Services
+- WWSAPI
 - WWS
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 6e137bf1770856b51e50ce0dc8cca827662c7925
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: bc1aa7e7aec653aa5bdff294cfd86346cec06378e5a5e9a3923540642f44bef5
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "103712246"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117841527"
 ---
-# <a name="httprawserviceexample"></a>Httprawserviceexample
+# <a name="httprawserviceexample"></a>HttpRawServiceExample
 
-Dieses Beispiel zeigt, wie Sie den Dienst Host verwenden, um unformatierte HTTP-Anforderungen (nicht SOAP) zu verarbeiten.
+In diesem Beispiel wird gezeigt, wie der Diensthost verwendet wird, um unformatierte HTTP-Anforderungen (nicht SOAP) zu verarbeiten.
 
-## <a name="httprawservicecpp"></a>Httprawservice. cpp
+## <a name="httprawservicecpp"></a>HttpRawService.cpp
 
 
 ```C++
@@ -579,9 +579,9 @@ Exit:
 
 
 
- 
+ 
 
- 
+ 
 
 
 

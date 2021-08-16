@@ -1,7 +1,7 @@
 ---
 description: Enthält den Titel des Ordners.
 ms.assetid: 95c064ff-4504-4e9c-80ac-47beca443ad4
-title: Folder. Title-Eigenschaft (Shldisp. h)
+title: Folder.Title-Eigenschaft (Shldisp.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,14 +13,14 @@ api_type:
 - COM
 api_location:
 - Shell32.dll
-ms.openlocfilehash: 8fc66d231d49d724749ae79b248b4dca9d917acc
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: a1b449caa1a1447b292a982522e30b9172168f09098d5e4dee0647c0ae6dc14e
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104979681"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117860257"
 ---
-# <a name="foldertitle-property"></a>Folder. Title (Eigenschaft)
+# <a name="foldertitle-property"></a>Folder.Title-Eigenschaft
 
 Enthält den Titel des Ordners.
 
@@ -39,18 +39,18 @@ strTitle = Folder.Title
 
 Eine Zeichenfolge, die den Titel des Objekts enthält.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
 > [!Note]  
-> Nicht alle Methoden werden für alle Ordner implementiert. Beispielsweise ist die Methode " [**Parser Name**](folder-parsename.md) " nicht für den System Steuerungs Ordner (CSIDL-Steuer \_ Elemente) implementiert. Wenn Sie versuchen, eine nicht implementierte Methode aufzurufen, wird ein 0x800a01bd (Decimal 445)-Fehler ausgelöst.
+> Nicht alle Methoden werden für alle Ordner implementiert. Beispielsweise wird die [**ParseName-Methode**](folder-parsename.md) nicht für den ordner Systemsteuerung (CSIDL \_ CONTROLS) implementiert. Wenn Sie versuchen, eine nicht implementierte Methode aufzurufen, wird ein 0x800A01BD (Dezimalzahl 445) ausgelöst.
 
  
 
 ## <a name="examples"></a>Beispiele
 
-Im folgenden Beispiel wird **Title** verwendet, um den Titel des Ordners abzurufen, der die Programm Gruppen des Benutzers enthält (in der Regel "Programme"). Die richtige Verwendung wird für JScript, VBScript und Visual Basic angezeigt.
+Im folgenden Beispiel wird **Title** verwendet, um den Titel des Ordners abzurufen, der die Programmgruppen des Benutzers enthält (in der Regel "Programme"). Die richtige Verwendung wird für JScript, VBScript und Visual Basic angezeigt.
 
-JScript
+JScript:
 
 
 ```JScript
@@ -72,7 +72,7 @@ JScript
 
 
 
-VBScript
+Vbscript:
 
 
 ```VB
@@ -121,17 +121,17 @@ End Sub
 
 
 
-## <a name="requirements"></a>Requirements (Anforderungen)
+## <a name="requirements"></a>Anforderungen
 
 
 
 | Anforderung | Wert |
 |-------------------------------------|----------------------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional, Windows XP \[ Desktop-Apps\]<br/>                                         |
+| Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional, nur Windows \[ XP-Desktop-Apps\]<br/>                                         |
 | Unterstützte Mindestversion (Server)<br/> | Windows 2000 Server \[nur Desktop-Apps\]<br/>                                                           |
-| Header<br/>                   | <dl> <dt>Shldisp. h</dt> </dl>                           |
-| IDL<br/>                      | <dl> <dt>Shldisp. idl</dt> </dl>                         |
-| DLL<br/>                      | <dl> <dt>Shell32.dll (Version 4,71 oder höher)</dt> </dl> |
+| Header<br/>                   | <dl> <dt>Shldisp.h</dt> </dl>                           |
+| Idl<br/>                      | <dl> <dt>Shldisp.idl</dt> </dl>                         |
+| DLL<br/>                      | <dl> <dt>Shell32.dll (Version 4.71 oder höher)</dt> </dl> |
 
 
 

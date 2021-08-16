@@ -1,5 +1,5 @@
 ---
-description: Benutzerdefinierte Aktionen, die in JScript oder Visual Basic, Scripting Edition (VBScript) geschrieben werden, können eine optionale Funktion aufrufen. Diese Funktionen müssen einen der in der folgenden Tabelle gezeigten Werte zurückgeben.
+description: Benutzerdefinierte Aktionen, die in JScript oder Visual Basic, Scripting Edition (VBScript) geschrieben wurden, können eine optionale Funktion aufrufen. Diese Funktionen müssen einen der in der folgenden Tabelle gezeigten Werte zurückgeben.
 ms.assetid: f05d0b94-e79e-440e-9f2b-99fe0e9e2646
 title: Rückgabewerte von JScript und benutzerdefinierten VBScript-Aktionen
 ms.topic: article
@@ -13,7 +13,7 @@ ms.locfileid: "118626090"
 ---
 # <a name="return-values-of-jscript-and-vbscript-custom-actions"></a>Rückgabewerte von JScript und benutzerdefinierten VBScript-Aktionen
 
-Benutzerdefinierte Aktionen, die in JScript oder Visual Basic, Scripting Edition (VBScript) geschrieben werden, können eine optionale Funktion aufrufen. Diese Funktionen müssen einen der in der folgenden Tabelle gezeigten Werte zurückgeben.
+Benutzerdefinierte Aktionen, die in JScript oder Visual Basic, Scripting Edition (VBScript) geschrieben wurden, können eine optionale Funktion aufrufen. Diese Funktionen müssen einen der in der folgenden Tabelle gezeigten Werte zurückgeben.
 
 
 
@@ -22,7 +22,7 @@ Benutzerdefinierte Aktionen, die in JScript oder Visual Basic, Scripting Edition
 | msiDoActionStatusNoAction | 0            | Die Aktion wurde nicht ausgeführt.                                                                                       |
 | msiDoActionStatusSuccess  | IDOK = 1     | Die Aktion wurde erfolgreich abgeschlossen.                                                                             |
 | msiDoActionStatusUserExit | IDCANCEL = 2 | Vorzeitige Beendigung durch den Benutzer.                                                                             |
-| msiDoActionStatusFailure  | IDABORT = 3  | Nicht behebbarer Fehler. Wird zurückgegeben, wenn während der Analyse oder Ausführung des Skripts oder JScript VBScript ein Fehler auftritt. |
+| msiDoActionStatusFailure  | IDABORT = 3  | Nicht behebbarer Fehler. Wird zurückgegeben, wenn während der Analyse oder Ausführung des -JScript VBScript ein Fehler auftritt. |
 | msiDoActionStatusSuspend  | IDRETRY = 4  | Angehaltene Sequenz, die später fortgesetzt werden soll.                                                                    |
 | msiDoActionStatusFinished | IDIGNORE = 5 | Überspringen Sie die verbleibenden Aktionen. Kein Fehler.                                                                      |
 

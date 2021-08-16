@@ -1,7 +1,7 @@
 ---
-description: Entfernt einen Animations Satz aus dem Animations Controller.
+description: Entfernt einen Animationssatz aus dem Animationscontroller.
 ms.assetid: 2ca99651-8249-44c2-9560-b3cfaa930862
-title: 'ID3DXAnimationController:: unregisteranimationset-Methode (D3dx9anim. h)'
+title: ID3DXAnimationController::UnregisterAnimationSet-Methode (D3dx9anim.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -14,16 +14,16 @@ api_type:
 api_location:
 - d3dx9.lib
 - d3dx9.dll
-ms.openlocfilehash: 35c70552f16daac6d2cfed5cbccf268179526ae1
-ms.sourcegitcommit: 14010c34b35fa268046c7683f021f86de08ddd0a
+ms.openlocfilehash: 4b2065ee9928291812b614b42137e130a7986402b25234537fc9b84fafa6f714
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "106351990"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118522349"
 ---
-# <a name="id3dxanimationcontrollerunregisteranimationset-method"></a>ID3DXAnimationController:: unregisteranimationset-Methode
+# <a name="id3dxanimationcontrollerunregisteranimationset-method"></a>ID3DXAnimationController::UnregisterAnimationSet-Methode
 
-Entfernt einen Animations Satz aus dem Animations Controller.
+Entfernt einen Animationssatz aus dem Animationscontroller.
 
 ## <a name="syntax"></a>Syntax
 
@@ -40,12 +40,12 @@ HRESULT UnregisterAnimationSet(
 
 <dl> <dt>
 
-*panimset* \[ in\]
+*pAnimSet* \[ In\]
 </dt> <dd>
 
 Typ: **[ **LPD3DXANIMATIONSET**](id3dxanimationset.md)**
 
-Zeiger auf den [**ID3DXAnimationSet**](id3dxanimationset.md) -Animations Satz, der entfernt werden soll.
+Zeiger auf die zu entfernende [**ID3DXAnimationSet-Animation.**](id3dxanimationset.md)
 
 </dd> </dl>
 
@@ -53,7 +53,7 @@ Zeiger auf den [**ID3DXAnimationSet**](id3dxanimationset.md) -Animations Satz, d
 
 Typ: **[ **HRESULT**](https://msdn.microsoft.com/library/Bb401631(v=MSDN.10).aspx)**
 
-Wenn die Methode erfolgreich ausgeführt wird, ist der Rückgabewert S \_ OK. Wenn die Methode fehlschlägt, kann der Rückgabewert einer der folgenden Werte sein: D3DERR \_ invalidcall, D3DERR \_ NotFound.
+Wenn die Methode erfolgreich ist, lautet der Rückgabewert S \_ OK. Wenn die Methode fehlschlägt, kann der Rückgabewert einer der folgenden Werte sein: D3DERR \_ INVALIDCALL, D3DERR \_ NOTFOUND.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -61,12 +61,12 @@ Wenn die Methode erfolgreich ausgeführt wird, ist der Rückgabewert S \_ OK. We
 
 | Anforderung | Wert |
 |--------------------|----------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>D3dx9anim. h</dt> </dl> |
-| Bibliothek<br/> | <dl> <dt>D3dx9. lib</dt> </dl>   |
+| Header<br/>  | <dl> <dt>D3dx9anim.h</dt> </dl> |
+| Bibliothek<br/> | <dl> <dt>D3dx9.lib</dt> </dl>   |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 

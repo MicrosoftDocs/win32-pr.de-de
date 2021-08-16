@@ -58,13 +58,13 @@ Der Wert 0 gibt an, dass kein Volume (stummgeschaltet) ist. Der Wert 100 gibt da
 
 | Anforderung | Wert |
 |----------------------|------------------------------------------------------------------------------------------------------------------------|
-| Version<br/>   | Windows Media Player 9er Serie oder höher<br/>                                                                      |
+| Version<br/>   | Windows Media Player 9-Serie oder höher<br/>                                                                      |
 | Namespace<br/> | **WMPLib**<br/>                                                                                                  |
 | Assembly<br/>  | <dl> <dt>Interop.WMPLib.dll (Interop.WMPLib.dll.dll)</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Weitere Informationen:
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 

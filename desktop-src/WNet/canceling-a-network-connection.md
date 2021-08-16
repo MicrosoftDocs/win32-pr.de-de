@@ -1,6 +1,6 @@
 ---
 title: Abbrechen einer Netzwerkverbindung
-description: Um eine Verbindung mit einer Netzwerkressource abzubrechen, kann eine Anwendung die WNetCancelConnection2-Funktion aufrufen, wie im folgenden Beispiel gezeigt.
+description: Um eine Verbindung mit einer Netzwerkressource abzubricht, kann eine Anwendung die WNetCancelConnection2-Funktion aufrufen, wie im folgenden Beispiel gezeigt.
 ms.assetid: a1c80222-4986-4c51-86a5-a1caacb4b2fe
 ms.topic: article
 ms.date: 05/31/2018
@@ -13,9 +13,9 @@ ms.locfileid: "118566920"
 ---
 # <a name="canceling-a-network-connection"></a>Abbrechen einer Netzwerkverbindung
 
-Um eine Verbindung mit einer Netzwerkressource abzubrechen, kann eine Anwendung die [**WNetCancelConnection2-Funktion**](/windows/win32/api/winnetwk/nf-winnetwk-wnetcancelconnection2a) aufrufen, wie im folgenden Beispiel gezeigt.
+Um eine Verbindung mit einer Netzwerkressource abzubricht, kann eine Anwendung die [**WNetCancelConnection2-Funktion**](/windows/win32/api/winnetwk/nf-winnetwk-wnetcancelconnection2a) aufrufen, wie im folgenden Beispiel gezeigt.
 
-Der Aufruf von **WNetCancelConnection2** gibt an, dass eine Netzwerkverbindung nicht mehr persistent sein soll. Im Beispiel wird ein anwendungsdefiniertes Fehlerhandler zum Verarbeiten von Fehlern und die [**TextOut-Funktion**](/windows/desktop/api/wingdi/nf-wingdi-textouta) zum Drucken aufrufen.
+Der Aufruf von **WNetCancelConnection2** gibt an, dass eine Netzwerkverbindung nicht mehr persistent sein soll. Das Beispiel ruft einen anwendungsdefinierten Fehlerhandler auf, um Fehler zu verarbeiten, und die [**TextOut-Funktion**](/windows/desktop/api/wingdi/nf-wingdi-textouta) zum Drucken.
 
 
 ```C++
@@ -52,9 +52,9 @@ printf("Connection closed for z: drive.\n");
 
 
 
-Die [**WNetCancelConnection-Funktion**](/windows/win32/api/winnetwk/nf-winnetwk-wnetcancelconnectiona) wird aus Kompatibilitätsgründen mit früheren Versionen von Windows für Arbeitsgruppen unterstützt. Verwenden Sie für neue Anwendungen [**WNetCancelConnection2.**](/windows/win32/api/winnetwk/nf-winnetwk-wnetcancelconnection2a)
+Die [**WNetCancelConnection-Funktion**](/windows/win32/api/winnetwk/nf-winnetwk-wnetcancelconnectiona) wird aus Kompatibilitäts- und Windows für Arbeitsgruppen unterstützt. Verwenden Sie für neue Anwendungen [**WNetCancelConnection2.**](/windows/win32/api/winnetwk/nf-winnetwk-wnetcancelconnection2a)
 
-Weitere Informationen zur Verwendung eines anwendungsdefinierte Fehlerhandlers finden Sie unter [Abrufen von Netzwerkfehlern.](retrieving-network-errors.md)
+Weitere Informationen zur Verwendung eines anwendungsdefinierten Fehlerhandlers finden Sie unter [Retrieving Network Errors](retrieving-network-errors.md).
 
  
 

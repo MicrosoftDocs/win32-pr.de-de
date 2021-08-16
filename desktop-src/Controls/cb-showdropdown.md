@@ -1,9 +1,9 @@
 ---
-title: CB_SHOWDROPDOWN Meldung (Winuser. h)
-description: Eine Anwendung sendet eine CB- \_ ShowDropDown-Nachricht, um das Listenfeld eines Kombinations Felds mit dem Format "CBS \_ Dropdown" oder "CBS DropDownList" anzuzeigen oder auszublenden \_ .
+title: CB_SHOWDROPDOWN (Winuser.h)
+description: Eine Anwendung sendet eine CB SHOWDROPDOWN-Nachricht, um das Listenfeld eines Kombinationsfelds mit dem DROPDOWN- oder \_ \_ CBS-DROPDOWNLIST-Format von CBS ein- oder \_ auszublenden.
 ms.assetid: 32b995d7-eed6-4173-8525-0d356dea39b3
 keywords:
-- Windows-Steuerelemente für CB_SHOWDROPDOWN Meldung
+- CB_SHOWDROPDOWN meldungssteuerelemente Windows
 topic_type:
 - apiref
 api_name:
@@ -14,16 +14,16 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: fb66e9a0ecf3b6680fce9aca7f680fd6e6fd13e0
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 6c820c65c053f7acbcffb379228ea5f7720476b6d2165ac4988ce8789e912cdd
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104105603"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117832238"
 ---
-# <a name="cb_showdropdown-message"></a>CB- \_ ShowDropDown-Meldung
+# <a name="cb_showdropdown-message"></a>CB \_ SHOWDROPDOWN-Meldung
 
-Eine Anwendung sendet eine **CB- \_ ShowDropDown** -Nachricht, um das Listenfeld eines Kombinations Felds mit dem Format " [**CBS \_ Dropdown**](combo-box-styles.md) " oder " [**CBS \_ DropDownList**](combo-box-styles.md) " anzuzeigen oder auszublenden.
+Eine Anwendung sendet eine **CB \_ SHOWDROPDOWN-Nachricht,** um das Listenfeld eines Kombinationsfelds mit dem DROPDOWN- oder [**\_**](combo-box-styles.md) [**\_ CBS-DROPDOWNLIST-Format**](combo-box-styles.md) von CBS ein- oder auszublenden.
 
 ## <a name="parameters"></a>Parameter
 
@@ -32,7 +32,7 @@ Eine Anwendung sendet eine **CB- \_ ShowDropDown** -Nachricht, um das Listenfeld
 *wParam* 
 </dt> <dd>
 
-Ein **boolescher** Wert, der angibt, ob das Dropdown-Listenfeld angezeigt oder ausgeblendet werden soll. Der Wert **true** zeigt das Listenfeld an. der Wert **false** blendet ihn aus.
+Eine **BOOL,** die angibt, ob das Dropdownlistenfeld angezeigt oder ausgeblendet werden soll. Der Wert **TRUE zeigt** das Listenfeld an. Der Wert **FALSE blendet** ihn aus.
 
 </dd> <dt>
 
@@ -45,11 +45,11 @@ Dieser Parameter wird nicht verwendet.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Der Rückgabewert ist immer " **true**".
+Der Rückgabewert ist immer **TRUE.**
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Diese Meldung hat keine Auswirkung auf ein Kombinations Feld, das mit [**dem \_ einfachen CBS**](combo-box-styles.md) -Stil erstellt wurde.
+Diese Meldung hat keine Auswirkungen auf ein Kombinationsfeld, das mit dem [**CBS \_ SIMPLE-Stil erstellt**](combo-box-styles.md) wurde.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -57,17 +57,17 @@ Diese Meldung hat keine Auswirkung auf ein Kombinations Feld, das mit [**dem \_ 
 
 | Anforderung | Wert |
 |-------------------------------------|----------------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>                                                           |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2003 \[ -Desktop-Apps\]<br/>                                                     |
-| Header<br/>                   | <dl> <dt>Winuser. h (Windows. h einschließen)</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur \[ Vista-Desktop-Apps\]<br/>                                                           |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2003-Desktop-Apps\]<br/>                                                     |
+| Header<br/>                   | <dl> <dt>Winuser.h (include Windows.h)</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**CB \_ getdroppedstate**](cb-getdroppedstate.md)
+[**CB \_ GETDROPPEDSTATE**](cb-getdroppedstate.md)
 </dt> </dl>
 
  

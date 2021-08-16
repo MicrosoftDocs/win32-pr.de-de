@@ -1,33 +1,33 @@
 ---
-description: Erfahren Sie mehr über TLS-Verschlüsselungssammlungen in Windows 7. Verschlüsselungssammlungen können nur für TLS-Versionen ausgehandelt werden, die diese unterstützen.
+description: Erfahren Sie mehr über TLS-Verschlüsselungssammlungen in Windows 7. Verschlüsselungssammlungen können nur für TLS-Versionen ausgehandelt werden, die sie unterstützen.
 ms.assetid: 283CB634-25EA-47F5-A2E3-0913F7D3D9DC
 title: TLS-Verschlüsselungssammlungen in Windows 7
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 70cbb6905c2505e53b3083e86cb04084eff824b1
-ms.sourcegitcommit: d0eb44d0a95f5e5efbfec3d3e9c143f5cba25bc3
+ms.openlocfilehash: ec429fa3175c93da20dedd4e0b55905b6d3bd0cbe5aceb0872b7ec065ecc6064
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/17/2021
-ms.locfileid: "112262381"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117786000"
 ---
 # <a name="tls-cipher-suites-in-windows-7"></a>TLS-Verschlüsselungssammlungen in Windows 7
 
-Verschlüsselungssammlungen können nur für TLS-Versionen ausgehandelt werden, die diese unterstützen. Die höchste unterstützte TLS-Version wird immer im TLS-Handshake bevorzugt. BEISPIELSWEISE kann SSL \_ CK \_ RC4 \_ 128 \_ WITH \_ MD5 nur verwendet werden, wenn sowohl der Client als auch der Server TLS 1.2, 1.1 & 1.0 oder SSL 3.0 nicht unterstützen, da es nur mit SSL 2.0 unterstützt wird.
+Verschlüsselungssammlungen können nur für TLS-Versionen ausgehandelt werden, die sie unterstützen. Die höchste unterstützte TLS-Version wird im TLS-Handshake immer bevorzugt. Beispielsweise kann SSL CK RC4 128 WITH MD5 nur verwendet werden, wenn sowohl der Client als auch der Server \_ \_ TLS \_ \_ \_ 1.2, 1.1 & 1.0 oder SSL 3.0 nicht unterstützen, da es nur mit SSL 2.0 unterstützt wird.
 
 Die Verfügbarkeit von Verschlüsselungssammlungen sollte auf zwei Arten gesteuert werden:
 
--   Die Standardprioritätsreihenfolge wird überschrieben, wenn eine Prioritätsliste konfiguriert ist. Verschlüsselungssammlungen, die nicht in der Prioritätsliste enthalten sind, werden nicht verwendet.
--   Zulässig, wenn die Anwendung SCH \_ USE STRONG CRYPTO übergibt: Der Microsoft \_ \_ Schannel-Anbieter filtert bekannte schwache Verschlüsselungssammlungen heraus, wenn die Anwendung das FLAG SCH \_ USE STRONG CRYPTO \_ \_ verwendet. In Windows 7 werden RC4-Verschlüsselungssammlungen herausgefiltert.
+-   Die Standardprioritäts reihenfolge wird überschrieben, wenn eine Prioritätsliste konfiguriert wird. Verschlüsselungssammlungen, die nicht in der Prioritätsliste enthalten sind, werden nicht verwendet.
+-   Zulässig, wenn die Anwendung SCH USE STRONG CRYPTO besteht: Der \_ Microsoft \_ \_ Schannel-Anbieter filtert bekannte schwache Verschlüsselungssammlungen heraus, wenn die Anwendung das FLAG SCH \_ USE STRONG CRYPTO \_ \_ verwendet. In Windows 7 werden RC4-Verschlüsselungssammlungen herausgefiltert.
 
 > [!IMPORTANT]
-> HTTP/2-Webdienste schlagen mit nicht HTTP/2-kompatiblen Verschlüsselungssammlungen fehl. Um sicherzustellen, dass Ihre Webdienste mit HTTP/2-Clients und -Browsern funktionieren, lesen Sie [Bereitstellen einer benutzerdefinierten Verschlüsselungssammlungsreihenfolge.](https://support.microsoft.com/help/4032720/how-to-deploy-custom-cipher-suite-ordering-in-windows-server-2016)
+> HTTP/2-Webdienste führen bei nicht HTTP/2-kompatiblen Verschlüsselungssammlungen zu einem Fehler. Um sicherzustellen, dass Ihre Webdienste mit HTTP/2-Clients und -Browsern funktionieren, lesen Sie How to deploy custom cipher suite ordering (Bereitstellen einer [benutzerdefinierten Verschlüsselungssammlungsbestellung).](https://support.microsoft.com/help/4032720/how-to-deploy-custom-cipher-suite-ordering-in-windows-server-2016)
 
  
 
-Die FIPS-Konformität wurde komplexer, da die Spalte mit aktivierten FIPS-Modus in früheren Versionen dieser Tabelle durch elliptische Kurven irreführend wurde. Beispielsweise ist eine Verschlüsselungssammlung wie TLS \_ ECDHE \_ RSA \_ WITH \_ AES \_ 128 \_ CBC \_ SHA256 nur FIPS-kompatibel, wenn NIST-elliptische Kurven verwendet werden. Informationen dazu, welche Kombinationen aus elliptischen Kurven und Verschlüsselungssammlungen im FIPS-Modus aktiviert werden, finden Sie im Abschnitt 3.3.1 der [Richtlinien für die Auswahl, Konfiguration und Verwendung von TLS-Implementierungen.]( https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-52r1.pdf)
+Die FIPS-Konformität wurde durch das Hinzufügen elliptischer Kurven komplexer, wodurch die Spalte fips mode enabled (FIPS-Modus aktiviert) in früheren Versionen dieser Tabelle irreführend wurde. Beispielsweise ist eine Verschlüsselungssammlung wie TLS \_ ECDHE \_ RSA \_ WITH \_ AES \_ 128 \_ CBC \_ SHA256 nur FIPS-konform, wenn NIST-elliptische Kurven verwendet werden. Um herauszufinden, welche Kombinationen aus elliptischen Kurven und Verschlüsselungssammlungen im FIPS-Modus aktiviert werden, lesen Sie Abschnitt 3.3.1 der Richtlinien für die Auswahl, Konfiguration und Verwendung von [TLS-Implementierungen.]( https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-52r1.pdf)
 
-Windows 7, Windows 8 und Windows Server 2012 werden vom Windows Update durch das Update 3042058 aktualisiert, das die Prioritätsreihenfolge ändert. Weitere Informationen finden Sie in der [Microsoft-Sicherheitsempfehlung 3042058.](/security-updates/SecurityAdvisories/2015/3042058) Die folgenden Verschlüsselungssammlungen sind vom Microsoft Schannel-Anbieter standardmäßig in dieser Prioritätsreihenfolge aktiviert:
+Windows 7, Windows 8 und Windows Server 2012 werden durch das Windows Update durch das 3042058 aktualisiert, wodurch die Prioritäts reihenfolge geändert wird. Weitere [Informationen finden Sie 3042058](/security-updates/SecurityAdvisories/2015/3042058) Microsoft-Sicherheitsempfehlung. Die folgenden Verschlüsselungssammlungen sind vom Microsoft Schannel-Anbieter standardmäßig in dieser Prioritäts reihenfolge aktiviert:
 
 
 
@@ -108,7 +108,7 @@ Die folgenden Verschlüsselungssammlungen werden vom Microsoft Schannel-Anbieter
 
  
 
-Um Verschlüsselungssammlungen hinzuzufügen, verwenden Sie die Gruppenrichtlinieneinstellung SSL Cipher Suite Order unter Computerkonfiguration > Administrative Vorlagen > Netzwerk > SSL-Konfigurationseinstellungen, um eine Prioritätsliste für alle Verschlüsselungssammlungen zu konfigurieren, die Sie aktivieren möchten.
+Verwenden Sie zum Hinzufügen von Verschlüsselungssammlungen die Gruppenrichtlinieneinstellung SSL Cipher Suite Order unter Computer Configuration > Administrative Vorlagen > Network > SSL Configuration Einstellungen , um eine Prioritätsliste für alle Verschlüsselungssammlungen zu konfigurieren, die Sie aktivieren möchten.
 
  
 

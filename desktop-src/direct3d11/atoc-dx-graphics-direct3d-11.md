@@ -30,7 +30,7 @@ Weitere Informationen finden Sie unter [Direct3D 11 Features](direct3d-11-featur
 
  
 
-| Thema                                                                          | Beschreibung                                                                                                                                                                                           |
+| Thema                                                                          | BESCHREIBUNG                                                                                                                                                                                           |
 |--------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | [Verwenden von Direct3D 11](how-to-use-direct3d-11.md)<br/>                | In diesem Abschnitt wird veranschaulicht, wie Sie die Direct3D 11-API verwenden, um mehrere allgemeine Aufgaben auszuführen.<br/>                                                                                               |
 | [Neues in Direct3D 11](dx-graphics-overviews-introduction.md)<br/> | In diesem Abschnitt werden features beschrieben, die in Direct3D 11, Direct3D 11.1 und Direct3D 11.2 hinzugefügt wurden.<br/>                                                                                                    |
@@ -43,7 +43,7 @@ Weitere Informationen finden Sie unter [Direct3D 11 Features](direct3d-11-featur
 
 Zusätzlich zu Direct3D 11, das von Windows 7 und höher und Windows Server 2008 R2 und höher unterstützt wird, ist Direct3D 11 für Windows Vista mit Service Pack 2 (SP2) und Windows Server 2008 verfügbar, indem [KB 971644](https://support.microsoft.com/kb/971644) und KB 971512 [heruntergeladen werden.](https://support.microsoft.com/kb/971512/)
 
-Informationen zu neuen Direct3D 11.1-Features, die in Windows 8, Windows Server 2012 enthalten sind und teilweise unter Windows 7 und Windows Server 2008 R2 über das Plattformupdate für [Windows 7](https://support.microsoft.com/kb/2670838)verfügbar sind, finden Sie unter [Direct3D 11.1](direct3d-11-1-features.md) Features und das Plattformupdate [für Windows 7](/windows/desktop/direct3darticles/platform-update-for-windows-7).
+Informationen zu neuen Direct3D 11.1-Features, die in Windows 8, Windows Server 2012 enthalten sind und teilweise unter Windows 7 und Windows Server 2008 R2 über das Plattformupdate für [Windows 7](https://support.microsoft.com/kb/2670838)verfügbar sind, finden Sie unter [Direct3D 11.1](direct3d-11-1-features.md) Features und das [Plattformupdate für Windows 7](/windows/desktop/direct3darticles/platform-update-for-windows-7).
 
  
 

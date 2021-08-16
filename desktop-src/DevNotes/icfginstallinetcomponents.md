@@ -1,7 +1,7 @@
 ---
 description: Installiert die angegebenen Systemkomponenten.
 ms.assetid: f4b7b8e5-b392-4208-9f56-b343974e05ff
-title: Icsginstallinetcomponents-Funktion
+title: IcfgInstallInetComponents-Funktion
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,14 +13,14 @@ api_type:
 - DllExport
 api_location:
 - Icfgnt5.dll
-ms.openlocfilehash: 649b1fa73bcdd83d7fc01d5a4df9a198168a3f1d
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 7708dd065c066ce3e9fd8e4de1044c6bc8587d2526abdf9aeac175b4387dec42
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106352968"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117827244"
 ---
-# <a name="icfginstallinetcomponents-function"></a>Icsginstallinetcomponents-Funktion
+# <a name="icfginstallinetcomponents-function"></a>IcfgInstallInetComponents-Funktion
 
 Installiert die angegebenen Systemkomponenten.
 
@@ -48,7 +48,7 @@ Ein Handle für das übergeordnete Fenster.
 
 </dd> <dt>
 
-*DWF Options* 
+*dwfOptions* 
 </dt> <dd>
 
 Eine Kombination der folgenden Flags, die die Installation und Konfiguration steuern.
@@ -57,9 +57,9 @@ Eine Kombination der folgenden Flags, die die Installation und Konfiguration ste
 
 | Wert                                                                                                                                                                                                                                  | Bedeutung                                        |
 |----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|------------------------------------------------|
-| <span id="ICFG_INSTALLMAIL"></span><span id="icfg_installmail"></span><dl> <dt>**ICFG \_ Installmail**</dt> <dt>0x00000004</dt> </dl> | Installieren Sie Exchange und Internet-e-Mail.<br/> |
-| <span id="ICFG_INSTALLRAS"></span><span id="icfg_installras"></span><dl> <dt>**ICFG \_ Installras**</dt> <dt>0x00000002</dt> </dl>    | Installieren Sie RAS (falls erforderlich).<br/>            |
-| <span id="ICFG_INSTALLTCP"></span><span id="icfg_installtcp"></span><dl> <dt>**ICFG \_ Installtcp**</dt> <dt>0x00000001</dt> </dl>    | Installieren Sie TCP/IP (falls erforderlich).<br/>         |
+| <span id="ICFG_INSTALLMAIL"></span><span id="icfg_installmail"></span><dl> <dt>**ICFG \_ INSTALLMAIL-0x00000004**</dt> <dt></dt> </dl> | Installieren Exchange und Internet-E-Mail.<br/> |
+| <span id="ICFG_INSTALLRAS"></span><span id="icfg_installras"></span><dl> <dt>**ICFG \_ INSTALLRAS-0x00000002**</dt> <dt></dt> </dl>    | Installieren Sie RAS (falls erforderlich).<br/>            |
+| <span id="ICFG_INSTALLTCP"></span><span id="icfg_installtcp"></span><dl> <dt>**ICFG \_ INSTALLTCP-0x00000001**</dt> <dt></dt> </dl>    | Installieren Sie TCP/IP (falls erforderlich).<br/>         |
 
 
 
@@ -67,20 +67,20 @@ Eine Kombination der folgenden Flags, die die Installation und Konfiguration ste
 
 </dd> <dt>
 
-*lpfneedsrestart* 
+*lpfNeedsRestart* 
 </dt> <dd>
 
-Wenn dieser Wert ungleich **null** ist, wird bei der Rückgabe nur dann **true** angezeigt, wenn Windows neu gestartet werden muss, um die Installation abzuschließen.
+Wenn dieser Wert nicht NULL **ist,** ist er bei der Rückgabe nur **true,** wenn Windows neu gestartet werden müssen, um die Installation abzuschließen.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt einen **HRESULT** -Wert zurück. Wenn keine Fehler auftreten, wird der **Fehler \_ Erfolgs** Code zurückgegeben.
+Gibt einen **HRESULT-Wert** zurück. Wenn keine Fehler auftreten, wird der **ERROR \_ SUCCESS-Code** zurückgegeben.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Dieser Funktion ist keine Import Bibliothek oder Header Datei zugeordnet. Sie müssen ihn mithilfe der [**LoadLibrary**](/windows/win32/api/libloaderapi/nf-libloaderapi-loadlibrarya) -Funktion und der [**GetProcAddress**](/windows/win32/api/libloaderapi/nf-libloaderapi-getprocaddress) -Funktion aufrufen.
+Dieser Funktion ist keine Importbibliothek oder Headerdatei zugeordnet. Sie müssen sie mithilfe der [**Funktionen LoadLibrary**](/windows/win32/api/libloaderapi/nf-libloaderapi-loadlibrarya) und [**GetProcAddress**](/windows/win32/api/libloaderapi/nf-libloaderapi-getprocaddress) aufrufen.
 
 ## <a name="requirements"></a>Anforderungen
 

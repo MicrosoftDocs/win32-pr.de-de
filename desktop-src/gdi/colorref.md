@@ -26,13 +26,13 @@ typedef DWORD* LPCOLORREF;
 
 ## <a name="remarks"></a>Hinweise
 
-Wenn Sie eine [explizite RGB-Farbe](/windows/desktop/api/Wingdi/nf-wingdi-rgb) angeben, weist der **COLORREF-Wert** die folgende hexadezimale Form auf:
+Wenn Sie eine explizite [RGB-Farbe](/windows/desktop/api/Wingdi/nf-wingdi-rgb) angeben, weist **der COLORREF-Wert** die folgende Hexadezimalform auf:
 
 `0x00bbggrr`
 
-Das Low-Order-Byte enthält einen Wert für die relative Intensität von Rot. Das zweite Byte enthält einen Wert für Grün. und das dritte Byte enthält einen Wert für blau. Das höher geordnete Byte muss 0 (null) sein. Der Höchstwert für ein einzelnes Byte ist 0xFF.
+Das niedrigwertige Byte enthält einen Wert für die relative Intensität von Rot. Das zweite Byte enthält einen Wert für grün. und das dritte Byte enthält einen Wert für blau. Das obere Byte muss 0 (null) sein. Der Höchstwert für ein einzelnes Byte ist 0xFF.
 
-Verwenden Sie das [RGB-Makro,](/windows/desktop/api/Wingdi/nf-wingdi-rgb) um einen **COLORREF-Farbwert** zu erstellen. Um die einzelnen Werte für die roten, grünen und blauen Komponenten eines Farbwerts zu extrahieren, verwenden Sie die Makros [**GetRValue,**](/windows/desktop/api/Wingdi/nf-wingdi-getrvalue) [GetGValue](/windows/desktop/api/Wingdi/nf-wingdi-getgvalue)bzw. [GetBValue.](/windows/desktop/api/Wingdi/nf-wingdi-getbvalue)
+Verwenden Sie das **RGB-Makro,** um einen COLORREF-Farbwert [zu](/windows/desktop/api/Wingdi/nf-wingdi-rgb) erstellen. Um die einzelnen Werte für die roten, grünen und blauen Komponenten eines Farbwerts zu extrahieren, verwenden Sie die Makros [**GetRValue,**](/windows/desktop/api/Wingdi/nf-wingdi-getrvalue) [GetGValue](/windows/desktop/api/Wingdi/nf-wingdi-getgvalue)und [GetBValue.](/windows/desktop/api/Wingdi/nf-wingdi-getbvalue)
 
 ## <a name="example"></a>Beispiel
 
@@ -45,7 +45,7 @@ const COLORREF rgbBlack =  0x00000000;
 const COLORREF rgbWhite =  0x00FFFFFF;
 ```
 
-Beispiel aus [Windows klassischen Beispielen](https://github.com/microsoft/Windows-classic-samples) zu GitHub.
+Beispiel aus [Windows klassischen Beispielen](https://github.com/microsoft/Windows-classic-samples) auf GitHub.
 
 ## <a name="requirements"></a>Anforderungen
 

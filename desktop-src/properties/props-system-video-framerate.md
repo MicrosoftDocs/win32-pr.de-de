@@ -1,5 +1,5 @@
 ---
-description: Gibt die Bildfrequenz für den Videostream in Frames pro 1000 Sekunden an.
+description: Gibt die Bildfrequenz für den Videostream in Frames pro 1.000 Sekunden an.
 ms.assetid: cd5a2ae0-43ef-44e4-aa70-bca33baf2a56
 title: System.Video.FrameRate
 ms.topic: article
@@ -13,7 +13,7 @@ ms.locfileid: "118227372"
 ---
 # <a name="systemvideoframerate"></a>System.Video.FrameRate
 
-Gibt die Bildfrequenz für den Videostream in Frames pro 1000 Sekunden an.
+Gibt die Bildfrequenz für den Videostream in Frames pro 1.000 Sekunden an.
 
 ## <a name="windows-10-version-1703-windows-10-version-1607-windows-10-version-1511-windows-10-version-1507-windows-81-windows-8-windows-7"></a>Windows 10, Version 1703, Windows 10, Version 1607, Windows 10, Version 1511, Windows 10, Version 1507, Windows 8.1, Windows 8, Windows 7
 
@@ -48,7 +48,7 @@ propertyDescription
 
 ## <a name="remarks"></a>Hinweise
 
-Um Kürzungsfehler zu reduzieren, verwendet diese Eigenschaft nicht das Standardframeratenmaß von Frames pro Sekunde (FPS). Stattdessen misst diese Eigenschaft die Bildfrequenz als Frames pro 1000 Sekunden (FPS multipliziert mit 1000). [System.Video.FrameRate]() würde beispielsweise eine Bildfrequenz von 29,97 FPS als ganzzahligen Wert von 29970 ausdrücken.
+Um den Abschneidefehler zu reduzieren, verwendet diese Eigenschaft nicht das Standardframeraten-Measure von Frames pro Sekunde (FPS). Stattdessen misst diese Eigenschaft die Framerate als Frames pro 1000 Sekunden (FPS multipliziert mit 1000). [System.Video.FrameRate]() würde beispielsweise eine Bildfrequenz von 29,97 FPS als ganzzahligen Wert von 29970 ausdrücken.
 
 PKEY-Werte werden in Propkey.h definiert.
 

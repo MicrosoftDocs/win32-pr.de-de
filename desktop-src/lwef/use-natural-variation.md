@@ -1,29 +1,29 @@
 ---
-title: Natürliche Variation verwenden
-description: Natürliche Variation verwenden
+title: Verwenden natürlicher Variationen
+description: Verwenden natürlicher Variationen
 ms.assetid: 5d5750e4-cf30-43dc-9419-7e6bbdb9aa5a
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 1fd2d35afeb168dc8839ba259f0079434b487c4f
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: 6259730599966205f4751c4ada9b8ef361cedf6d1a1a59dd1ce7d67aaf0fb448
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "104100642"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118474508"
 ---
-# <a name="use-natural-variation"></a>Natürliche Variation verwenden
+# <a name="use-natural-variation"></a>Verwenden natürlicher Variationen
 
-\[Der Microsoft-Agent ist ab Windows 7 veraltet und in nachfolgenden Versionen von Windows möglicherweise nicht verfügbar.\]
+\[Microsoft Agent ist ab Version Windows 7 veraltet und in nachfolgenden Versionen von Windows.\]
 
-Obwohl die Konsistenz der Darstellung in der herkömmlichen Schnittstelle Ihrer Anwendung, wie z. b. Menüs und Dialogfeldern, die Schnittstelle besser vorhersagbar macht, verändern Sie die Animation und die gesprochene Ausgabe in der Schnittstelle des Zeichens. Eine angemessene Variation der Zeichen Antworten bietet eine natürlichere Oberfläche. Wenn ein Zeichen den Benutzer immer genau auf die gleiche Weise adressiert, Wenn Sie z. b. immer die gleichen Wörter sagen, ist es wahrscheinlich, dass der Benutzer das Zeichen langweilig, uneigennützig oder sogar ungrob betrachtet. Die menschliche Kommunikation umfasst selten eine genaue Wiederholung. Auch wenn etwas in ähnlicher Situation wiederholt wird, können wir den Wortlaut, Gesten oder Gesichtsausdruck ändern.
+Die Konsistenz der Darstellung in der herkömmlichen Oberfläche Ihrer Anwendung, z. B. Menüs und Dialogfelder, macht die Schnittstelle zwar vorhersagbarer, variiert jedoch die Animation und gesprochene Ausgabe in der Benutzeroberfläche des Zeichens. Das entsprechende Variieren der Antworten des Zeichens bietet eine natürlichere Schnittstelle. Wenn ein Zeichen den Benutzer immer genau auf die gleiche Weise adressiert; Wenn der Benutzer z. B. immer die gleichen Wörter sagt, ist es wahrscheinlich, dass er das Zeichen als "verwaist", "desinteressiert" oder sogar "unerschädigend" betrachtet. Bei der menschlichen Kommunikation kommt es selten zu einer präzisen Wiederholung. Auch wenn wir etwas in einer ähnlichen Situation wiederholen, können wir Formulierungen, Gesten oder Gesichtsausdrücke ändern.
 
-Mit dem Microsoft-Agent können Sie in einer Variation für ein Zeichen erstellen. Wenn Sie die Animationen eines Zeichens definieren, können Sie die Verzweigungs Wahrscheinlichkeiten in jedem Animations Frame verwenden, um eine Animation zu ändern, wenn Sie wiedergegeben wird. Sie können jedem Zustand auch mehrere Animationen zuweisen. Der Microsoft-Agent wählt nach dem Zufallsprinzip eine der zugewiesenen Animationen aus. Bei der Sprachausgabe können Sie auch vertikale Balken Zeichen in den Ausgabetext einschließen, damit der gesprochene Text automatisch variiert. Der Microsoft-Agent wählt z. b. nach dem Zufallsprinzip eine der folgenden Anweisungen aus, wenn dieser Text als Teil der [**Sprech**](speak-method.md) Methode verarbeitet wird:
+Microsoft Agent ermöglicht es Ihnen, in einer Variation für ein Zeichen zu erstellen. Beim Definieren der Animationen eines Zeichens können Sie Verzweigungswahrscheinlichkeiten für jeden Animationsframe verwenden, um eine Animation zu ändern, wenn sie abspielt. Sie können jedem Zustand auch mehrere Animationen zuweisen. Microsoft Agent wählt bei jedem Initiieren eines Zustands nach dem Zufallsprinzip eine der zugewiesenen Animationen aus. Für die Sprachausgabe können Sie auch vertikale Balkenzeichen in Ihren Ausgabetext eingeben, um den gesprochenen Text automatisch zu variieren. Microsoft Agent wählt beispielsweise nach dem Zufallsprinzip eine der folgenden Anweisungen aus, wenn dieser Text als Teil der [**Speak-Methode verarbeitet**](speak-method.md) wird:
 
-"Ich kann dies sagen. \| Das kann ich sagen. \| Ich kann etwas anderes sagen. "
+"Das kann ich sagen. \| Das kann ich sagen. \| Ich kann etwas anderes sagen."
 
- 
+ 
 
- 
+ 
 
 
 

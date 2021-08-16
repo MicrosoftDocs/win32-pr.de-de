@@ -1,19 +1,19 @@
 ---
-description: Zertifikat Dienste gibt Zertifikate aus, die in PKI-Anwendungen (Public Key-Infrastruktur) verwendet werden können.
+description: Zertifikatdienste stellen Zertifikate aus, die in PKI-Anwendungen (Public Key-Infrastruktur) verwendet werden können.
 ms.assetid: 2e6482b5-382d-4b17-b71e-6d2e4483a45e
-title: Anwendungs Verwendung
+title: Anwendungsverwendungen
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 9f588d2a7baa7dc781e9e2c7a3653230e57a2ed6
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 16f6dd2141c725a4062425b86974ae4d2c3d28420da07841584f6712b833c13e
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "103868815"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117773677"
 ---
-# <a name="application-uses"></a>Anwendungs Verwendung
+# <a name="application-uses"></a>Anwendungsverwendungen
 
-Zertifikat Dienste gibt Zertifikate aus, die in PKI-Anwendungen (Public Key-Infrastruktur) verwendet werden können. Beispielsweise funktionieren die Zertifikate in SSL-, S/MIME-und IPSec-Anwendungen. Mögliche Szenarien, in denen diese Zertifikate verwendet werden können, sind digitale Signaturen und Nachrichten Verschlüsselung. Die Zertifikat Dienste stellen Zertifikate, [*Zertifikat Sperr Listen*](../secgloss/c-gly.md) (CRL) und CRL-Verteilungs Punkte (CDP) zur Verfügung, die sowohl von Microsoft als auch von anderen Anwendungen verwendet werden können, die nicht von Microsoft stammen.
+Zertifikatdienste stellen Zertifikate aus, die in PKI-Anwendungen (Public Key-Infrastruktur) verwendet werden können. Die Zertifikate funktionieren beispielsweise in SSL-, S/MIME- und IPSEC-Anwendungen. Mögliche Szenarien, in denen diese Zertifikate verwendet werden können, sind digitale Signatur und Nachrichtenverschlüsselung. Die Zertifikatdienste stellen Zertifikate, [*Zertifikatsperrlisten*](../secgloss/c-gly.md) (Certificate Revocation Lists, CRL) und CRL-Verteilungspunkte (CDP) bereit, die sowohl von Microsoft- als auch von Nicht-Microsoft-Anwendungen verwendet werden können.
 
  
 

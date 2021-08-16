@@ -1,22 +1,22 @@
 ---
-description: Authentifizierung von LSA-Benutzer Anmelde Authentifizierung
+description: LSA-Benutzeranmeldungsauthentifizierung
 ms.assetid: 62606687-05f1-4757-9fcd-c1932412dcc4
-title: Authentifizierung von LSA-Benutzer Anmelde Authentifizierung
+title: LSA-Benutzeranmeldungsauthentifizierung
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: f57371a1c9f4c3269822fa98475bc0b426b854a8
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: e1e077de9273491cef3fa3d63f67c8171b3f40fa27bef6c902e7a2cbcdfeb904
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "104217325"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117787073"
 ---
-# <a name="lsa-user-logon-authentication"></a>Authentifizierung von LSA-Benutzer Anmelde Authentifizierung
+# <a name="lsa-user-logon-authentication"></a>LSA-Benutzeranmeldungsauthentifizierung
 
-Die LSA verarbeitet die Benutzeranmeldung und-Authentifizierung auf dem lokalen Computer. wenn das Authentifizierungs Paket, das die Anmelde Anforderung verarbeitet, die Passthrough-Authentifizierung unterstützt, kann die LSA Benutzer auch auf anderen Computern im Netzwerk anmelden. Der LSA ermöglicht den Zugriff auf Authentifizierungs Pakete für SSPs (Security Support Providers). Einer der beiden folgenden Authentifizierungs Typen wird ausgeführt:
+Die LSA übernimmt die Benutzeranmeldung und -authentifizierung auf dem lokalen Computer. Wenn das Authentifizierungspaket, das die Anmeldeanforderung verarbeitet, die Pass-Through-Authentifizierung unterstützt, kann sich das LSA auch bei anderen Computern im Netzwerk anmelden. Das LSA bietet Zugriff auf Authentifizierungspakete für Sicherheitssupportanbieter (Security Support Providers, SSPs). Einer der beiden folgenden Authentifizierungstypen wird ausgeführt:
 
 -   [Interaktive Authentifizierung](interactive-authentication.md)
--   [Nicht interaktive Authentifizierung](noninteractive-authentication.md)
+-   [Nichtinteraktive Authentifizierung](noninteractive-authentication.md)
 
  
 

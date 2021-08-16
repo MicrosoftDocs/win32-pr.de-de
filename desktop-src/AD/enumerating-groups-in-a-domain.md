@@ -1,48 +1,48 @@
 ---
-title: Auflisten von Gruppen in einer Domäne
-description: Gruppen können in einem beliebigen Container oder einer Organisationseinheit (OE) in einer Domäne und im Stammverzeichnis der Domäne abgelegt werden.
+title: Aufzählen von Gruppen in einer Domäne
+description: Gruppen können in einem beliebigen Container oder einer Organisationseinheit (OE) in einer Domäne sowie im Stamm der Domäne platziert werden.
 ms.assetid: 7f9d3c90-b6f4-4bfa-960f-58f380aa487c
 ms.tgt_platform: multiple
 keywords:
-- Auflisten von Gruppen in einer Domänen-AD
+- Aufzählen von Gruppen in einem Domänen-AD
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 3586b8c6d261c769cabe56def2aa9396a58fa3a5
-ms.sourcegitcommit: 803f3ccd65bdefe36bd851b9c6e7280be9489016
+ms.openlocfilehash: 3723122ef2ab70a7396b2b2821c96a20b4d92419c1e10d1c00b11ff903cb6719
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "103724561"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118429846"
 ---
-# <a name="enumerating-groups-in-a-domain"></a>Auflisten von Gruppen in einer Domäne
+# <a name="enumerating-groups-in-a-domain"></a>Aufzählen von Gruppen in einer Domäne
 
-Gruppen können in einem beliebigen Container oder einer Organisationseinheit (OE) in einer Domäne und im Stammverzeichnis der Domäne abgelegt werden. Dies bedeutet, dass sich Gruppen an verschiedenen Speicherorten in der Verzeichnishierarchie befinden können. Daher haben Sie zwei Möglichkeiten zum Auflisten von Gruppen:
+Gruppen können in einem beliebigen Container oder einer Organisationseinheit (OE) in einer Domäne sowie im Stamm der Domäne platziert werden. Dies bedeutet, dass Sich Gruppen an zahlreichen Speicherorten in der Verzeichnishierarchie befinden können. Daher haben Sie zwei Möglichkeiten zum Aufzählen von Gruppen:
 
-1.  Listet die Gruppen auf, die direkt in einem Container, in einer Organisationseinheit oder im Stammverzeichnis der Domäne enthalten sind.
+1.  Aufzählen der Gruppen, die direkt in einem Container, einer Organisationseinheit oder im Stamm der Domäne enthalten sind.
 
-    Binden Sie explizit an das Container Objekt, das die aufzuzählenden Gruppen enthält, legen Sie mithilfe der [**IADsContainer. Filter**](/windows/desktop/api/iads/nn-iads-iadscontainer) -Eigenschaft einen Filter fest, der "Groups" als Klasse enthält, und verwenden Sie die [**IADsContainer:: get \_ \_ NewEnum**](/windows/desktop/api/iads/nf-iads-iadscontainer-get__newenum) -Methode, um die Gruppen Objekte aufzuzählen.
+    Binden Sie explizit an das Containerobjekt, das die aufzuzählenden Gruppen enthält, legen Sie mithilfe der [**IADsContainer.Filter-Eigenschaft**](/windows/desktop/api/iads/nn-iads-iadscontainer) einen Filter fest, der "groups" als Klasse enthält, und verwenden Sie die [**IADsContainer::get \_ \_ NewEnum-Methode,**](/windows/desktop/api/iads/nf-iads-iadscontainer-get__newenum) um die Gruppenobjekte aufzuzählen.
 
-    Diese Technik listet Gruppen auf, die direkt in einem Container-oder OU-Objekt enthalten sind. Wenn der Container andere Container enthält, die potenziell andere Gruppen enthalten können, müssen Sie eine Bindung an diese Container durchlaufen und die Gruppen für diese Container rekursiv aufzählen. Wenn Sie die Gruppen Objekte und schreibgeschützte Eigenschaften bearbeiten möchten, verwenden Sie die in Option 2 beschriebene Tiefe Suche.
+    Dieses Verfahren listet Gruppen auf, die direkt in einem Container oder OU-Objekt enthalten sind. Wenn der Container andere Container enthält, die möglicherweise andere Gruppen enthalten können, müssen Sie eine Bindung an diese Container erstellen und die Gruppen in diesen Containern rekursiv aufzählen. Verwenden Sie die in Option 2 beschriebene umfassende Suche, um die Gruppenobjekte zu bearbeiten und nur bestimmte Eigenschaften zu lesen.
 
-    Da die Enumeration Zeiger auf ADSI COM-Objekte zurückgibt, die die einzelnen Gruppen Objekte darstellen, können Sie [**QueryInterface**](/windows/win32/api/unknwn/nf-unknwn-iunknown-queryinterface(q)) zum Abrufen von [**IADs**](/windows/desktop/api/iads/nn-iads-iads), [**IADsGroup**](/windows/desktop/api/iads/nn-iads-iadsgroup)und [**IADsPropertyList**](/windows/desktop/api/iads/nn-iads-iadspropertylist) -Schnittstellen Zeigern auf das Group-Objekt abrufen. Das heißt, Sie können Schnittstellen Zeiger auf jedes enumerierte Gruppen Objekt in einem Container aufrufen, ohne explizit eine Bindung an jedes Group-Objekt durchführen zu müssen. Zum Ausführen von Vorgängen für alle Gruppen direkt innerhalb eines Containers erfordert die Enumeration keine Bindung an jede Gruppe, um **IADs** oder **IADsGroup** -Methoden aufzurufen. Um bestimmte Eigenschaften aus Gruppen abzurufen, verwenden Sie [**IDirectorySearch**](/windows/desktop/api/iads/nn-iads-idirectorysearch) , wie in der zweiten Option beschrieben.
+    Da enumeration Zeiger auf ADSI-COM-Objekte zurückgibt, die jedes Gruppenobjekt darstellen, können Sie [**QueryInterface**](/windows/win32/api/unknwn/nf-unknwn-iunknown-queryinterface(q)) aufrufen, um [**IADs-**](/windows/desktop/api/iads/nn-iads-iads), [**IADsGroup-**](/windows/desktop/api/iads/nn-iads-iadsgroup)und [**IADsPropertyList-Schnittstellenzeiger**](/windows/desktop/api/iads/nn-iads-iadspropertylist) auf das Gruppenobjekt abzurufen. Das heißt, Sie können Schnittstellenzeiger auf jedes aufzählte Gruppenobjekt in einem Container abrufen, ohne explizit an jedes Gruppenobjekt binden zu müssen. Zum Ausführen von Vorgängen für alle Gruppen direkt in einem Container ist für die Enumeration keine Bindung an jede Gruppe erforderlich, um **IADs** oder **IADsGroup-Methoden** aufzurufen. Um bestimmte Eigenschaften aus Gruppen abzurufen, verwenden [**Sie IDirectorySearch,**](/windows/desktop/api/iads/nn-iads-idirectorysearch) wie in der zweiten Option beschrieben.
 
-    Eine Ausnahme hiervon tritt auf, wenn Sie versuchen, eine Gruppe aufzulisten, die Mitglieder mit bekannten Sicherheits Prinzipalen ist, z. b. "alle", "authentifizierte Benutzer", "Batch" usw. Da Sie keine Bindung an diese Objekttypen haben, werden Sie nicht aufgelistet, wenn Sie Gruppen im WinNT-Bereich auflisten, auch wenn Sie möglicherweise gebunden werden, da bestimmte IADs-Methoden wie Class, ADsPath und Name beim Aufruf für Enumerationsmember korrekte Ergebnisse zurückgeben.
+    Eine Ausnahme tritt auf, wenn Sie versuchen, eine Gruppe aufzuzählen, die Mitglieder enthält, die bekannte Sicherheitsprinzipale sind, z. B. Jeder, Authentifizierte Benutzer, BATCH usw. Da sie nicht an diese Objekttypen gebunden werden können, werden sie nicht aufgelistet, wenn Sie Gruppen im WinNT-Bereich aufzählen, obwohl dies möglicherweise zu binden scheint, da bestimmte IADs-Methoden wie Class, ADsPath und Name beim Aufrufen von aufgezählten Membern die richtigen Ergebnisse zurückgeben.
 
-2.  Führen Sie eine Tiefe Suche nach "objectCategory = Group" durch, um alle Gruppen in einer Struktur zu finden.
+2.  Führen Sie eine umfassende Suche nach "objectCategory=group" durch, um alle Gruppen in einer Struktur zu finden.
 
-    Binden Sie zunächst an das Container Objekt, in dem die Suche beginnen soll. Um z. b. alle Gruppen in einer Domäne zu suchen, binden Sie an den Stamm der Domäne. Wenn Sie alle Gruppen in der Gesamtstruktur suchen möchten, binden Sie Sie an den globalen Katalog, und suchen Sie aus dem Stammverzeichnis der GC.
+    Binden Sie zunächst an das Containerobjekt, an dem mit der Suche begonnen werden soll. Um beispielsweise alle Gruppen in einer Domäne zu finden, binden Sie an den Stamm der Domäne. Um alle Gruppen in der Gesamtstruktur zu suchen, binden Sie an den globalen Katalog, und suchen Sie im Stammverzeichnis der GC.
 
-    Verwenden Sie dann [**IDirectorySearch**](/windows/desktop/api/iads/nn-iads-idirectorysearch) , um mithilfe eines Suchfilters, der (objectCategory = Group) enthält, und der Such Einstellung der **ADS- \_ Bereichs \_ Teilstruktur** eine Abfrage durchführen.
+    Verwenden Sie dann [**IDirectorySearch,**](/windows/desktop/api/iads/nn-iads-idirectorysearch) um abfragen, indem Sie einen Suchfilter verwenden, der (objectCategory=group) und die Suchpräferenz von **ADS SCOPE \_ \_ SUBTREE** enthält.
 
     > [!Note]  
-    > Sie können eine Suche mit einer Such Einstellung von **ADS \_ Scope \_ onelevel** durchführen, um die Suche auf den direkten Inhalt des Container Objekts zu beschränken, an das Sie gebunden sind.
+    > Sie können eine Suche mit der Sucheinstellung **ADS \_ SCOPE \_ ONELEVEL** ausführen, um die Suche auf den direkten Inhalt des Containerobjekts zu beschränken, an das Sie gebunden sind.
 
-     
+     
 
-    [**IDirectorySearch**](/windows/desktop/api/iads/nn-iads-idirectorysearch) ruft nur die Werte spezifischer Eigenschaften aus Gruppen ab. Um Werte abzurufen, verwenden Sie **idirector ysearch**. Um die von einer Suche zurückgegebenen Gruppen Objekte zu bearbeiten, d. h., um [**IADs**](/windows/desktop/api/iads/nn-iads-iads) oder [**IADsGroup**](/windows/desktop/api/iads/nn-iads-iadsgroup) -Methoden zu verwenden, binden Sie explizit an Sie. Geben Sie zu diesem Zweck "Distinguished **shedname** " als eine der Eigenschaften an, die von der Suche zurückgegeben werden sollen, und verwenden Sie die zurückgegebenen Distinguished Names zum Binden an jede in der Suche zurückgegebene Gruppe.
+    [**IDirectorySearch**](/windows/desktop/api/iads/nn-iads-idirectorysearch) ruft nur die Werte bestimmter Eigenschaften aus Gruppen ab. Verwenden Sie **IDirectorySearch,** um Werte abzurufen. Um die von einer Suche zurückgegebenen Gruppenobjekte zu bearbeiten, d. h. [**IADs**](/windows/desktop/api/iads/nn-iads-iads) oder [**IADsGroup-Methoden**](/windows/desktop/api/iads/nn-iads-iadsgroup) zu verwenden, binden Sie explizit an sie. Geben Sie hierzu **distinguishedName** als eine der Eigenschaften an, die von der Suche zurückgegeben werden sollen, und verwenden Sie die zurückgegebenen Distinguished Names, um eine Bindung an jede in der Suche zurückgegebene Gruppe zu verwenden.
 
-    Es werden nur bestimmte Eigenschaften abgerufen. Sie können nicht alle Attribute abrufen, ohne explizit alle möglichen Attribute der Group-Klasse anzugeben.
+    Es werden nur bestimmte Eigenschaften abgerufen. Sie können nicht alle Attribute abrufen, ohne jedes mögliche Attribut der Gruppenklasse explizit anzugeben.
 
- 
+ 
 
- 
+ 

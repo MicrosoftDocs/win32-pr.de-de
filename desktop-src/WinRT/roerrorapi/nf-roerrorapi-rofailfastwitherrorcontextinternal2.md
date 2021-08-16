@@ -1,6 +1,6 @@
 ---
 title: RoFailFastWithErrorContextInternal2-Funktion
-description: Löst eine nicht kontinuierbare Ausnahme im aktuellen Prozess aus und ermöglicht ihnen auch das Aufnehmen zusätzlicher Fehlerkontexte, die nicht bereits vom Betriebssystem erfasst wurden.
+description: Löst eine nicht kontinuierbare Ausnahme im aktuellen Prozess aus und ermöglicht es Ihnen auch, zusätzlichen Fehlerkontext ein-/aus, der nicht bereits vom Betriebssystem erfasst wurde.
 ms.localizationpriority: low
 ms.topic: reference
 ms.date: 03/13/2020
@@ -49,7 +49,7 @@ Das **HRESULT,** das dem aktuellen Fehler zugeordnet ist. Die Ausnahme wird für
 
 Typ: **[ULONG](../../winprog/windows-data-types.md)**
 
-Die Anzahl der Elemente im *Array aStowedExceptionPointers.*
+Die Anzahl der Elemente im *aStowedExceptionPointers-Array.*
 
 `aStowedExceptionPointers`
 
@@ -75,6 +75,6 @@ Weitere Informationen finden Sie unter [RoFailFastWithErrorContext-Funktion](/wi
 | **Bibliothek** | Nicht zutreffend |
 | **Dll** | ComBase.dll |
 
-## <a name="see-also"></a>Weitere Informationen:
+## <a name="see-also"></a>Weitere Informationen
 
 * [RoFailFastWithErrorContext-Funktion](/windows/win32/api/roerrorapi/nf-roerrorapi-rofailfastwitherrorcontext)

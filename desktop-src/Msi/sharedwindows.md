@@ -1,5 +1,5 @@
 ---
-description: Das Installationsprogramm legt die SharedWindows-Eigenschaft fest, wenn das System als Shared Windows verwendet wird.
+description: Das Installationsprogramm legt die SharedWindows-Eigenschaft fest, wenn das System als freigegebene Windows.
 ms.assetid: 22dd5ee9-25d3-4bc6-9181-13095497a1d3
 title: SharedWindows-Eigenschaft
 ms.topic: reference
@@ -13,7 +13,7 @@ ms.locfileid: "118624704"
 ---
 # <a name="sharedwindows-property"></a>SharedWindows-Eigenschaft
 
-Das Installationsprogramm legt die **SharedWindows-Eigenschaft** fest, wenn das System als Shared Windows verwendet wird.
+Das Installationsprogramm legt die **SharedWindows-Eigenschaft** fest, wenn das System als Shared Windows.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -21,7 +21,7 @@ Das Installationsprogramm legt die **SharedWindows-Eigenschaft** fest, wenn das 
 
 | Anforderung | Wert |
 |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Version<br/> | Windows Installationsprogramm 5.0 auf Windows Server 2012, Windows 8, Windows Server 2008 R2 oder Windows 7. Windows Installer 4.0 oder Windows Installer 4.5 auf Windows Server 2008 oder Windows Vista. Windows Installationsprogramm auf Windows Server 2003 oder Windows XP. Unter [Windows Installer Run-Time Requirements (Anforderungen für](windows-installer-portal.md) Windows Installer) finden Sie Informationen zu den mindestens erforderlichen Windows Service Packs, die für eine Windows Installer-Version erforderlich sind.<br/> |
+| Version<br/> | Windows Installer 5.0 auf Windows Server 2012, Windows 8, Windows Server 2008 R2 oder Windows 7. Windows Installer 4.0 oder Windows Installer 4.5 auf Windows Server 2008 oder Windows Vista. Windows Installationsprogramm auf Windows Server 2003 oder Windows XP. Informationen zum [Windows Service](windows-installer-portal.md) Pack, das für eine Windows Installer-Version erforderlich ist, finden Sie unter Windows Installer Run-Time Anforderungen.<br/> |
 
 
 

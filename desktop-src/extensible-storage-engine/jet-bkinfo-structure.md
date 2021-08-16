@@ -1,5 +1,5 @@
 ---
-description: 'Weitere Informationen finden Sie hier: JET_BKINFO Struktur'
+description: 'Weitere Informationen finden Sie unter: JET_BKINFO Struktur'
 title: JET_BKINFO Struktur
 TOCTitle: JET_BKINFO Structure
 ms:assetid: dfaf1d72-1d5f-4777-91c1-6affb735b092
@@ -15,12 +15,12 @@ api_type:
 - COM
 api_location: ''
 ROBOTS: INDEX,FOLLOW
-ms.openlocfilehash: 6c4849c23e742657d8f5eaba8a030426f7a2a440
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 9f391d711c6d10c50cfdb26314be6ee709ff481bda0ce370faa28d514422444c
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "104217870"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118487865"
 ---
 # <a name="jet_bkinfo-structure"></a>JET_BKINFO Struktur
 
@@ -29,7 +29,7 @@ _**Gilt für:** Windows | Windows Server_
 
 ## <a name="jet_bkinfo-structure"></a>JET_BKINFO Struktur
 
-Die **JET_BKINFO** -Struktur enthält eine Sammlung von Daten zu einem bestimmten Sicherungs Ereignis.
+Die **JET_BKINFO-Struktur** enthält eine Sammlung von Daten zu einem bestimmten Sicherungsereignis.
 
 ```cpp
     typedef struct {
@@ -45,31 +45,31 @@ Die **JET_BKINFO** -Struktur enthält eine Sammlung von Daten zu einem bestimmte
 
 ### <a name="members"></a>Member
 
-**lgposmark**
+**lgposMark**
 
 Die ID dieser Sicherung.
 
-**logtimemark**
+**logtimeMark**
 
-Der Zeitpunkt dieses Sicherungs Ereignisses.
+Der Zeitpunkt dieses Sicherungsereignis.
 
-**bklogtimemark**
+**bklogtimeMark**
 
-Die Zeit dieses Sicherungs Ereignisses mit zusätzlichen Bits, die auf eine Momentaufnahme Sicherung hindeuten.
+Der Zeitpunkt dieses Sicherungsereignis mit zusätzlichen Bits, um eine Momentaufnahmesicherung anzugeben.
 
-**Windows Vista: bklogtimemark** wird in Windows Vista eingeführt.
+**Windows Vista: bklogtimeMark** wird in Windows Vista eingeführt.
 
-**genlow**
+**genLow**
 
-Die niedrige Protokoll Generierungs Nummer, die diesem Sicherungs Ereignis zugeordnet ist.
+Die niedrige Protokollgenerierungsnummer, die diesem Sicherungsereignis zugeordnet ist.
 
-**genhoch**
+**genHigh**
 
-Die hohe Protokoll Generierungs Nummer, die diesem Sicherungs Ereignis zugeordnet ist.
+Die hohe Protokollgenerierungsnummer, die diesem Sicherungsereignis zugeordnet ist.
 
-### <a name="remarks"></a>Bemerkungen
+### <a name="remarks"></a>Hinweise
 
-Diese Struktur wird in der [JET_DBINFOMISC](./jet-dbinfomisc-structure.md) -Struktur verwendet, um Daten zum Daten Bank Sicherungs Ereignis darzustellen.
+Diese Struktur wird innerhalb der JET_DBINFOMISC [verwendet,](./jet-dbinfomisc-structure.md) um Daten zum Datenbanksicherungsereignis zu darstellen.
 
 ### <a name="requirements"></a>Anforderungen
 
@@ -89,7 +89,7 @@ Diese Struktur wird in der [JET_DBINFOMISC](./jet-dbinfomisc-structure.md) -Stru
 </tr>
 <tr class="odd">
 <td><p><strong>Header</strong></p></td>
-<td><p>In "ESENT. h" deklariert.</p></td>
+<td><p>Wird in Esent.h deklariert.</p></td>
 </tr>
 </tbody>
 </table>

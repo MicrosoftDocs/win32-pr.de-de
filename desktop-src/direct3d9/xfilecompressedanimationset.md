@@ -1,7 +1,7 @@
 ---
 description: Identifiziert komprimierte Keyframe-Animationsdaten.
 ms.assetid: 2aab46db-e0ad-4bbb-b1c5-a254ec6cb984
-title: Xfilecompressedanimationset-Struktur (D3dx9mesh. h)
+title: XFILECOMPRIMDANIMATIONSET-Struktur (D3dx9mesh.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,14 +13,14 @@ api_type:
 - HeaderDef
 api_location:
 - d3dx9mesh.h
-ms.openlocfilehash: 240cac57c9c0d123203ee4599c14092df1327f94
-ms.sourcegitcommit: 14010c34b35fa268046c7683f021f86de08ddd0a
+ms.openlocfilehash: 41c64ae7bb2ca4acf87e1b63de90f2ccfc78e8d769adf334aa1f68b9bf79de0f
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "106365075"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118518561"
 ---
-# <a name="xfilecompressedanimationset-structure"></a>Xfilecompressedanimationset-Struktur
+# <a name="xfilecompressedanimationset-structure"></a>XFILECOMINNENDANIMATIONSET-Struktur
 
 Identifiziert komprimierte Keyframe-Animationsdaten.
 
@@ -42,36 +42,36 @@ typedef struct XFILECOMPRESSEDANIMATIONSET {
 
 <dl> <dt>
 
-**Compressedblocksize**
+**CompressedBlockSize**
 </dt> <dd>
 
 Typ: **[ **DWORD**](../winprog/windows-data-types.md)**
 
 </dd> <dd>
 
-Gesamtgröße (in Bytes) der komprimierten Daten im komprimierten Keyframe-Animationsdaten Puffer.
+Gesamtgröße der komprimierten Daten im komprimierten Keyframe-Animationsdatenpuffer in Bytes.
 
 </dd> <dt>
 
-**Tickspersec**
+**TicksPerSec**
 </dt> <dd>
 
-Typ: **[ **float**](../winprog/windows-data-types.md)**
+Typ: **[ **FLOAT**](../winprog/windows-data-types.md)**
 
 </dd> <dd>
 
-Anzahl der Animations Tastatur-Frame Ticks, die pro Sekunde auftreten.
+Anzahl der Animations-Keyframe-Ticks, die pro Sekunde auftreten.
 
 </dd> <dt>
 
-**Playbacktyp**
+**PlaybackType**
 </dt> <dd>
 
 Typ: **[ **DWORD**](../winprog/windows-data-types.md)**
 
 </dd> <dd>
 
-Der Typ der Wiedergabe Schleife für Animations Sätze. Siehe [**D3DXPLAYBACK \_ Type**](./d3dxplayback-type.md).
+Typ der Wiedergabeschleife des Animationssets. Siehe [**D3DXPLAYBACK \_ TYPE**](./d3dxplayback-type.md).
 
 </dd> <dt>
 
@@ -82,7 +82,7 @@ Typ: **[ **DWORD**](../winprog/windows-data-types.md)**
 
 </dd> <dd>
 
-Minimale Puffergröße in Bytes, die zum Speichern komprimierter Keyframe-Animationsdaten erforderlich ist. Der Wert ist gleich ((compressedblocksize + 3)/4).
+Minimale Puffergröße in Bytes, die zum Enthalten komprimierter Keyframe-Animationsdaten erforderlich ist. Der Wert ist gleich ( ( CompressedBlockSize + 3 ) / 4 ).
 
 </dd> </dl>
 
@@ -92,11 +92,11 @@ Minimale Puffergröße in Bytes, die zum Speichern komprimierter Keyframe-Animat
 
 | Anforderung | Wert |
 |-------------------|----------------------------------------------------------------------------------------|
-| Header<br/> | <dl> <dt>D3dx9mesh. h</dt> </dl> |
+| Header<br/> | <dl> <dt>D3dx9mesh.h</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 

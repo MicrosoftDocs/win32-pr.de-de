@@ -1,9 +1,9 @@
 ---
-title: 'Rwbyteaddressbuffer:: interlockedcomparestore-Funktion'
-description: Vergleicht die Eingabe atomarisch mit dem Vergleichswert.
+title: RWByteAddressBuffer::InterlockedCompareStore-Funktion
+description: Ccompares the input to the comparison value, atomically( Ccompares the input to the comparison value, atomically).
 ms.assetid: d82a73b6-24a5-4eb3-9f20-15ba263c93d0
 keywords:
-- Interlockedcomparestore-Funktion HLSL
+- InterlockedCompareStore-Funktion HLSL
 topic_type:
 - apiref
 api_name:
@@ -13,24 +13,24 @@ api_type:
 ms.topic: reference
 ms.date: 05/31/2018
 api_location: ''
-ms.openlocfilehash: abaa390ba74657e42b54a5147a7bc4006564a5fb
-ms.sourcegitcommit: 592c9bbd22ba69802dc353bcb5eb30699f9e9403
+ms.openlocfilehash: dcb19358f98c1280ddb180b7381fb7714d28cc7db145ca36577f5f97f70c9f1b
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "103858387"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118509689"
 ---
-# <a name="interlockedcomparestore-function"></a>Interlockedcomparestore-Funktion
+# <a name="interlockedcomparestore-function"></a>InterlockedCompareStore-Funktion
 
-Vergleicht die Eingabe atomarisch mit dem Vergleichswert.
+Ccompares the input to the comparison value, atomically( Ccompares the input to the comparison value, atomically).
 
 ## <a name="syntax"></a>Syntax
 
 ``` syntax
 void InterlockedCompareStore(
-  in UINT dest,
-  in UINT compare_value,
-  in UINT value
+  in UINT dest,
+  in UINT compare_value,
+  in UINT value
 );
 ```
 
@@ -38,28 +38,28 @@ void InterlockedCompareStore(
 
 <dl> <dt>
 
-*dest* \[ in\]
+*dest* \[ In\]
 </dt> <dd>
 
-Typ: **[ **uint**](/windows/desktop/WinProg/windows-data-types)**
+Typ: **[ **UINT**](/windows/desktop/WinProg/windows-data-types)**
 
 Die Zieladresse.
 
 </dd> <dt>
 
-*\_ Wert vergleichen* \[ in\]
+*\_ Vergleichswert* \[ in\]
 </dt> <dd>
 
-Typ: **[ **uint**](/windows/desktop/WinProg/windows-data-types)**
+Typ: **[ **UINT**](/windows/desktop/WinProg/windows-data-types)**
 
 Der Vergleichswert.
 
 </dd> <dt>
 
-*Wert* \[ in\]
+*wert* \[ In\]
 </dt> <dd>
 
-Typ: **[ **uint**](/windows/desktop/WinProg/windows-data-types)**
+Typ: **[ **UINT**](/windows/desktop/WinProg/windows-data-types)**
 
 Der Eingabewert.
 
@@ -69,32 +69,32 @@ Der Eingabewert.
 
 Diese Funktion gibt keinen Wert zurück.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Dieser Vorgang kann nur für typisierte int-oder uint-Ressourcen und Shared Memory-Variablen ausgeführt werden. Es gibt drei Verwendungsmöglichkeiten für diese Funktion. Der erste ist, wenn R ein Variablentyp für den gemeinsamen Speicher ist. In diesem Fall führt die Funktion den Vorgang für das Shared Memory-Register aus, auf das von dest verwiesen wird. Das zweite Szenario ist, wenn R ein Ressourcen Variablentyp ist. In diesem Szenario führt die Funktion den Vorgang an dem Ressourcen Speicherort aus, auf den "dest" verweist. Das dritte Szenario ist, dass R ein lokaler Variablentyp ist. In diesem Szenario wird die Funktion auf den Vorgang reduziert, der mit lokalen Vorgängen ausgeführt wird.
+Dieser Vorgang kann nur für int- oder uint-typisierte Ressourcen und Freigegebene Speichervariablen ausgeführt werden. Es gibt drei mögliche Verwendungsmöglichkeiten für diese Funktion. Die erste ist, wenn R ein Variablentyp für gemeinsam genutzten Arbeitsspeicher ist. In diesem Fall führt die Funktion den Vorgang für das Shared Memory-Register aus, auf das vom Dest verwiesen wird. Das zweite Szenario ist, wenn R ein Ressourcenvariablentyp ist. In diesem Szenario führt die Funktion den Vorgang für den Ressourcenspeicherort aus, auf den vom Dest verwiesen wird. Schließlich ist das dritte Szenario, wenn R ein lokaler Variablentyp ist. In diesem Szenario wird die Funktion auf den Vorgang reduziert, der mit lokalen Vorgängen ausgeführt wird.
 
-Diese Funktion wird in den folgenden Typen von Shadern unterstützt:
+Diese Funktion wird in den folgenden Shadertypen unterstützt:
 
 
 
-| VS  | Jh  | DS  | GS  | PS  | CS  |
+| VS  | Hs  | DS  | GS  | PS  | CS  |
 |-----|-----|-----|-----|-----|-----|
 | x   | x   | x   | x   | x   | x   |
 
 
 
- 
+ 
 
 ## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[Rwbyteaddressbuffer](sm5-object-rwbyteaddressbuffer.md)
+[RWByteAddressBuffer](sm5-object-rwbyteaddressbuffer.md)
 </dt> <dt>
 
-[Shader-Modell 5](d3d11-graphics-reference-sm5.md)
+[Shadermodell 5](d3d11-graphics-reference-sm5.md)
 </dt> </dl>
 
- 
+ 
 
- 
+ 

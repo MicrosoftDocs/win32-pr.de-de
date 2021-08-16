@@ -13,16 +13,16 @@ ms.locfileid: "118325427"
 ---
 # <a name="developers-guide-for-active-accessibility-clients"></a>Entwicklerhandbuch für Active Accessibility Clients
 
-Dieser Abschnitt richtet sich an Cliententwickler, die Microsoft Active Accessibility verwenden, um Informationen zu Benutzeroberflächenelementen abzurufen.
+Dieser Abschnitt ist für Cliententwickler, die Microsoft Active Accessibility verwenden, um Informationen zu Benutzeroberflächenelementen zu erhalten.
 
 ## <a name="in-this-section"></a>In diesem Abschnitt
 
--   [Abrufen eines Zeigers auf eine barrierefreie Objektschnittstelle](getting-an-accessible-object-interface-pointer.md)
+-   [Abrufen eines Barrierefreien Objektschnittstellenzeigers](getting-an-accessible-object-interface-pointer.md)
 -   [Überprüfen von IAccessible-Rückgabewerten](checking-iaccessible-return-values.md)
--   [Empfangen von Fehlern für IAccessible-Schnittstellenzeiger](receiving-errors-for-iaccessible-interface-pointers.md)
--   [bildschirmskalierung für Active Accessibility und Windows Vista](active-accessibility-and-windows-vista-screen-scaling.md)
+-   [Empfangen von Fehlern für IAccessible-Schnittstellenzeker](receiving-errors-for-iaccessible-interface-pointers.md)
+-   [Active Accessibility und Windows Vista-Bildschirmskalierung](active-accessibility-and-windows-vista-screen-scaling.md)
 
-Informationen zum Arbeiten mit Ereignissen in einer Clientanwendung finden Sie unter [WinEvents und Active Accessibility](winevents-overview.md).
+Informationen zum Arbeiten mit Ereignissen in einer Clientanwendung finden Sie unter [WinEvents und Active Accessibility.](winevents-overview.md)
 
  
 

@@ -3,7 +3,7 @@ title: PlaylistCollection.getByName-Methode
 description: Die getByName-Methode ruft ein PlaylistArray-Objekt ab, das Wiedergabelisten mit dem angegebenen Namen enthält, sofern vorhanden.
 ms.assetid: 0308a98d-1149-4367-b602-33fa54c1760f
 keywords:
-- getByName-Windows Media Player
+- getByName-Methode Windows Media Player
 - getByName-Methode Windows Media Player , PlaylistCollection-Klasse
 - PlaylistCollection-Klasse Windows Media Player , getByName-Methode
 topic_type:
@@ -42,10 +42,10 @@ retVal = PlaylistCollection.getByName(
 
 <dl> <dt>
 
-*Name* \[ In\]
+*name* \[ In\]
 </dt> <dd>
 
-**Eine Zeichenfolge,** die den Namen der wiedergabelisten enthält, die abgerufen werden sollen.
+**Zeichenfolge,** die den Namen der abzurufenden Wiedergabelisten enthält.
 
 </dd> </dl>
 
@@ -55,13 +55,13 @@ Diese Methode gibt ein **PlaylistArray-Objekt** zurück.
 
 ## <a name="remarks"></a>Hinweise
 
-Verwenden Sie *PlaylistArray*. **count,** um zu bestimmen, ob eine Wiedergabeliste vorhanden ist. Wenn **count** 0 (null) ist, ist keine Wiedergabeliste vorhanden.
+Verwenden Sie *PlaylistArray.* **count,** um zu bestimmen, ob eine Wiedergabeliste vorhanden ist. Wenn **count** 0 (null) ist, ist keine Wiedergabeliste vorhanden.
 
 Um diese Methode zu verwenden, ist Lesezugriff auf die Bibliothek erforderlich. Weitere Informationen finden Sie unter [Bibliothekszugriff.](library-access.md)
 
 ## <a name="examples"></a>Beispiele
 
-Im folgenden beispiel JScript *playlistCollection verwendet.* **getByName zum** Überprüfen des **playlistCollection-Objekts** auf eine Wiedergabeliste mit dem Namen "ThreeList". Wenn die Wiedergabeliste "Threelist" vorhanden ist, **legt getByName** "ThreeList" als aktuelle Wiedergabeliste fest. Das **Player-Objekt** wurde mit der ID = "Player" erstellt.
+Im folgenden JScript Beispiel wird *playlistCollection* verwendet. **getByName,** um das **playlistCollection-Objekt** auf eine Wiedergabeliste mit dem Namen "ThreeList" zu überprüfen. Wenn die Wiedergabeliste "Threelist" vorhanden ist, legt **getByName** "ThreeList" als aktuelle Wiedergabeliste fest. Das **Player-Objekt** wurde mit der ID = "Player" erstellt.
 
 
 ```JScript

@@ -1,7 +1,7 @@
 ---
-description: Wird an eine Erweiterungs-DLL gesendet, wenn der Datei-Manager die dll lädt.
+description: Wird an eine Erweiterungs-DLL gesendet, wenn der Datei-Manager die DLL lädt.
 ms.assetid: 9d673ab8-c468-4b46-b96e-1adfaa9f85fb
-title: FMEVENT_LOAD Meldung (WF. h)
+title: FMEVENT_LOAD Nachricht (Wfext.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,16 +13,16 @@ api_type:
 - HeaderDef
 api_location:
 - Wfext.h
-ms.openlocfilehash: de7a950e3f17c9b2cee2b66a047d289ca29b6b56
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 8001ca861b77755ea7f5ee829a9af490c2f426dcd6179f2fe84831c624bb4ef5
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104979705"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117860655"
 ---
-# <a name="fmevent_load-message"></a>Meldung zum Laden des Ereignisses \_
+# <a name="fmevent_load-message"></a>FMEVENT \_ LOAD-Nachricht
 
-Wird an eine Erweiterungs-DLL gesendet, wenn der Datei-Manager die dll lädt.
+Wird an eine Erweiterungs-DLL gesendet, wenn der Datei-Manager die DLL lädt.
 
 ## <a name="parameters"></a>Parameter
 
@@ -38,19 +38,19 @@ Muss Null sein.
 *lpfmsld* 
 </dt> <dd>
 
-Die Adresse einer [**Lom- \_ Lade**](fms-load.md) Struktur, die den Delta Wert für das Menü Element angibt.
+Die Adresse einer [**FMS \_ LOAD-Struktur,**](fms-load.md) die den Änderungswert des Menüelements angibt.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Eine Erweiterungs-DLL muss **true** zurückgeben, um das Laden der dll fortzusetzen. Wenn die DLL **false** zurückgibt, ruft der Datei-Manager die [**FreeLibrary**](/windows/win32/api/libloaderapi/nf-libloaderapi-freelibrary) -Funktion auf und beendet jegliche Kommunikation mit der Erweiterungs-DLL.
+Eine Erweiterungs-DLL muss **TRUE** zurückgeben, um das Laden der DLL fortzusetzen. Wenn die DLL **FALSE** zurückgibt, ruft der Datei-Manager die [**FreeLibrary-Funktion**](/windows/win32/api/libloaderapi/nf-libloaderapi-freelibrary) auf und beendet jegliche Kommunikation mit der Erweiterungs-DLL.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Eine Anwendung sollte die Member " **dwSize**", " **szmenuname**" und " **HMENU** " in der [**FMS- \_ Lade**](fms-load.md) Struktur ausfüllen. Außerdem sollte Sie den Wert des **wmenudelta** -Members speichern und verwenden, um Menü Elemente bei der Menü Änderung zu identifizieren.
+Eine Anwendung sollte die Member **dwSize,** **szMenuName** und **hMenu** in der [**FMS \_ LOAD-Struktur ausfüllen.**](fms-load.md) Außerdem sollte der Wert des **wMenuDelta-Elements** gespeichert und zum Identifizieren von Menüelementen beim Ändern des Menüs verwendet werden.
 
-## <a name="requirements"></a>Requirements (Anforderungen)
+## <a name="requirements"></a>Anforderungen
 
 
 
@@ -58,7 +58,7 @@ Eine Anwendung sollte die Member " **dwSize**", " **szmenuname**" und " **HMENU*
 |-------------------------------------|------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional \[nur Desktop-Apps\]<br/>                         |
 | Unterstützte Mindestversion (Server)<br/> | Windows 2000 Server \[nur Desktop-Apps\]<br/>                               |
-| Header<br/>                   | <dl> <dt>WF. h</dt> </dl> |
+| Header<br/>                   | <dl> <dt>Wfext.h</dt> </dl> |
 
 
 
@@ -66,7 +66,7 @@ Eine Anwendung sollte die Member " **dwSize**", " **szmenuname**" und " **HMENU*
 
 <dl> <dt>
 
-[**"F"**](fmextensionproc.md)
+[**FMExtensionProc**](fmextensionproc.md)
 </dt> </dl>
 
  

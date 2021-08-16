@@ -1,5 +1,5 @@
 ---
-description: Die empfohlene Methode zum Generieren eines Patchpakets ist die Verwendung von Tools für die Patcherstellung wie Msimsp.exe und Patchwiz.dll. Das Msimsp.exe-Tool ist nur in den sdk-Komponenten Windows für Windows Installer-Entwickler verfügbar.
+description: Die empfohlene Methode zum Generieren eines Patchpakets ist die Verwendung von Tools zur Patcherstellung wie Msimsp.exe und Patchwiz.dll. Das Msimsp.exe-Tool ist nur in den sdk-Komponenten Windows für Windows Installer-Entwickler verfügbar.
 ms.assetid: fa8e9d68-3db1-4d17-aa99-2ca0ed421c7a
 title: Msimsp.exe
 ms.topic: article
@@ -13,13 +13,13 @@ ms.locfileid: "118627797"
 ---
 # <a name="msimspexe"></a>Msimsp.exe
 
-Die empfohlene Methode zum Generieren eines Patchpakets ist die Verwendung von Tools zur Patcherstellung wie Msimsp.exe und [Patchwiz.dll. ](patchwiz-dll.md) Das Msimsp.exe-Tool ist nur in den sdk-Komponenten Windows für Windows [Installer-Entwickler verfügbar.](platform-sdk-components-for-windows-installer-developers.md)
+Die empfohlene Methode zum Generieren eines Patchpakets ist die Verwendung von Tools zur Patcherstellung wie Msimsp.exe und [Patchwiz.dll. ](patchwiz-dll.md) Das Msimsp.exe-Tool ist nur in den [SDK Windows komponenten für Windows Installer-Entwickler verfügbar.](platform-sdk-components-for-windows-installer-developers.md)
 
 Msimsp.exe ist eine ausführbare Datei, die [Patchwiz.dll. ](patchwiz-dll.md) Das Tool kann verwendet werden, um ein Patchpaket zu erstellen, indem der Pfad zu einer Eigenschaftendatei für die Patcherstellung (PCP-Datei) und der Pfad zum Patchpaket übergeben wird, das erstellt wird. Msimsp.ex kann auch verwendet werden, um eine Protokolldatei zu erstellen und einen temporären Ordner anzugeben, in dem die Transformationen, Schränken und Dateien, die zum Erstellen des Patchpakets verwendet werden, gespeichert werden.
 
 Die Befehlszeilensyntax für Msimsp.exe ist:
 
-**Msimsp.exe -s** *\[ Pfad zur PCP-Datei \]* **-p** *\[ pfad zur \] MSP-Datei* **{options}**
+**Msimsp.exe -s** *\[ Pfad zur PCP-Datei \]* **-p** *\[ pfad \] zur MSP-Datei* **{options}**
 
 Bei den Befehlszeilenoptionen wird die Schreibung nicht beachtet, und anstelle eines Bindestrichs können Schrägstrichtrennzeichen verwendet werden. Wenn keine Optionen angegeben sind, Msimsp.exe die aktuellen Werte der Zusammenfassungsinformationseigenschaften angezeigt.
 
@@ -84,7 +84,7 @@ Mit diesem Befehl wird die Befehlszeilenhilfe angezeigt.
 > [!Note]
 > Msimsp.exe beim Aufrufen von Makecab.exe fehler, wenn in der Datei -Spalte [](file-table.md) der Tabelle Datei des Installationspakets Werte enthalten sind, die sich nur nach Fall unterscheiden. Windows Beim Installationsprogramm wird die Kleinschreibung beachtet, und ein Installationspaket wie in der folgenden Tabelle ist nur dann möglich, wenn Comp1 und Comp2 in verschiedenen Verzeichnissen installiert sind. In diesem Szenario können Sie Msimsp.exe oder [Patchwiz.dll](patchwiz-dll.md) jedoch nicht verwenden, um einen Patch für das Paket zu generieren, da Msimsp.exe und Patchwiz.dll Makecab.exe aufrufen, bei dem die Groß-/Kleinschreibung nicht beachtet wird.
 > 
-> Vermeiden Sie die Erstellung eines Installationspakets, z. B. die folgende partielle [Dateitabelle.](file-table.md)
+> Vermeiden Sie das Erstellen eines Installationspakets, z. B. die folgende [partielle Dateitabelle.](file-table.md)
 > 
 > | Datei       | Komponente\_ | FileName   |
 > |------------|-------------|------------|
@@ -99,13 +99,13 @@ Mit diesem Befehl wird die Befehlszeilenhilfe angezeigt.
 [Erstellen eines Patchpakets](creating-a-patch-package.md)
 </dt> <dt>
 
-[Beispiel für ein kleines Updatepatching](a-small-update-patching-example.md)
+[Ein Beispiel für ein kleines Updatepatching](a-small-update-patching-example.md)
 </dt> <dt>
 
 [Windows Installer-Entwicklungstools](windows-installer-development-tools.md)
 </dt> <dt>
 
-[Veröffentlichte Versionen, Tools und Redistributables](released-versions-tools-and-redistributables.md)
+[Veröffentlichte Versionen, Tools und Verteilbare Versionen](released-versions-tools-and-redistributables.md)
 </dt> </dl>
 
  

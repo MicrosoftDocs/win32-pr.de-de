@@ -1,19 +1,19 @@
 ---
-description: Beschreibt ein einzelnes Vertex-Element in einer Scheitelpunkt Deklaration.
+description: Beschreibt ein einzelnes Scheitelpunktelement in einer Scheitelpunktdeklaration.
 ms.assetid: efe3e98b-938d-4d4c-b790-2b8c8aab0ded
-title: Vertexelement
+title: VertexElement
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 049511c89b335c0da31a9f41344082c3b818fa0d
-ms.sourcegitcommit: a47bd86f517de76374e4fff33cfeb613eb259a7e
+ms.openlocfilehash: 9c2ecef6cfa8c522532599acef1b83343c64edd2b5eca93fe461d8bf8419ada8
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/06/2021
-ms.locfileid: "104124742"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118518852"
 ---
-# <a name="vertexelement"></a>Vertexelement
+# <a name="vertexelement"></a>VertexElement
 
-Beschreibt ein einzelnes Vertex-Element in einer Scheitelpunkt Deklaration.
+Beschreibt ein einzelnes Scheitelpunktelement in einer Scheitelpunktdeklaration.
 
 ``` syntax
 template VertexElement 
@@ -28,12 +28,12 @@ template VertexElement
 
 Hierbei gilt:
 
--   Type-Scheitelpunkt Datentyp. Siehe [**D3DDECLTYPE**](./d3ddecltype.md).
--   Method-Mosaik Verarbeitungsmethode. Siehe [**D3DDECLMETHOD**](./d3ddeclmethod.md).
--   Verwendungs orientierte Verwendung der Vertexdaten. Siehe [**D3DDECLUSAGE**](./d3ddeclusage.md).
--   "Start": ändert die Verwendungs Daten. Siehe [**D3DDECLUSAGE**](./d3ddeclusage.md).
+-   Typ: Vertexdatentyp. Siehe [**D3DDECLTYPE**](./d3ddecltype.md).
+-   Methode: Tessellator-Verarbeitungsmethode. Siehe [**D3DDECLMETHOD**](./d3ddeclmethod.md).
+-   Verwendung: Beabsichtigte Verwendung der Scheitelpunktdaten. Siehe [**D3DDECLUSAGE**](./d3ddeclusage.md).
+-   UsageIndex: Ändert die Nutzungsdaten. Siehe [**D3DDECLUSAGE**](./d3ddeclusage.md).
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 

@@ -13,12 +13,12 @@ api_type:
 - HeaderDef
 api_location:
 - d3dx9mesh.h
-ms.openlocfilehash: a312c2618960691184182039afe38acc8947eb6a
-ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
+ms.openlocfilehash: 6b83389ae4d92027245877e24e01621f0d93f123dee9ff4f040586b3e7c5111d
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2021
-ms.locfileid: "108098098"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118525271"
 ---
 # <a name="d3dxmesh-enumeration"></a>D3DXMESH-Enumeration
 
@@ -88,10 +88,10 @@ Verwenden Sie das [**D3DUSAGE \_ RTPATCHES-Verwendungsflag**](d3dusage.md) für 
 
 </dd> <dt>
 
-<span id="D3DXMESH_NPATCHES"></span><span id="d3dxmesh_npatches"></span>**\_D3DXMESH-NPATCHES**
+<span id="D3DXMESH_NPATCHES"></span><span id="d3dxmesh_npatches"></span>**D3DXMESH \_ NPATCHES**
 </dt> <dd>
 
-Wenn Sie dieses Flag angeben, werden der Scheitelpunkt und der Indexpuffer des Gitternetzes mit dem [**\_ NPATCHES-Flag D3DUSAGE**](d3dusage.md) erstellt. Dies ist erforderlich, wenn das Gittermodellobjekt mithilfe der N-Patch-Erweiterung mit Direct3D gerendert werden soll.
+Wenn Sie dieses Flag angeben, werden der Scheitelpunkt und der Indexpuffer des Gitternetzes mit dem [**\_ NPATCHES-Flag D3DUSAGE**](d3dusage.md) erstellt. Dies ist erforderlich, wenn das Meshobjekt mithilfe der N-Patch-Erweiterung mit Direct3D gerendert werden soll.
 
 </dd> <dt>
 
@@ -112,70 +112,70 @@ Verwenden Sie das [**D3DPOOL \_ MANAGED-Verwendungsflag**](./d3dpool.md) für Sc
 <span id="D3DXMESH_VB_WRITEONLY"></span><span id="d3dxmesh_vb_writeonly"></span>**D3DXMESH \_ VB \_ WRITEONLY**
 </dt> <dd>
 
-Verwenden Sie [**das D3DUSAGE \_ WRITEONLY-Verwendungsflag**](d3dusage.md) für Scheitelpunktpuffer.
+Verwenden Sie das [**D3DUSAGE \_ WRITEONLY-Verwendungsflag**](d3dusage.md) für Scheitelpunktpuffer.
 
 </dd> <dt>
 
 <span id="D3DXMESH_VB_DYNAMIC"></span><span id="d3dxmesh_vb_dynamic"></span>**D3DXMESH \_ VB \_ DYNAMIC**
 </dt> <dd>
 
-Verwenden Sie [**das D3DUSAGE DYNAMIC-Verwendungsflag \_**](d3dusage.md) für Scheitelpunktpuffer.
+Verwenden Sie das [**D3DUSAGE \_ DYNAMIC-Verwendungsflag**](d3dusage.md) für Scheitelpunktpuffer.
 
 </dd> <dt>
 
 <span id="D3DXMESH_VB_SOFTWAREPROCESSING"></span><span id="d3dxmesh_vb_softwareprocessing"></span>**D3DXMESH \_ VB \_ SOFTWAREPROCESSING**
 </dt> <dd>
 
-Verwenden Sie [**das D3DUSAGE \_ SOFTWAREPROCESSING-Verwendungsflag**](d3dusage.md) für Scheitelpunktpuffer.
+Verwenden Sie das [**D3DUSAGE \_ SOFTWAREPROCESSING-Verwendungsflag**](d3dusage.md) für Scheitelpunktpuffer.
 
 </dd> <dt>
 
 <span id="D3DXMESH_IB_SYSTEMMEM"></span><span id="d3dxmesh_ib_systemmem"></span>**D3DXMESH \_ IB \_ SYSTEMMEM**
 </dt> <dd>
 
-Verwenden Sie [**das D3DPOOL \_ SYSTEMMEM-Verwendungsflag**](./d3dpool.md) für Indexpuffer.
+Verwenden Sie das [**D3DPOOL \_ SYSTEMMEM-Verwendungsflag**](./d3dpool.md) für Indexpuffer.
 
 </dd> <dt>
 
-<span id="D3DXMESH_IB_MANAGED"></span><span id="d3dxmesh_ib_managed"></span>**D3DXMESH \_ IB \_ MANAGED**
+<span id="D3DXMESH_IB_MANAGED"></span><span id="d3dxmesh_ib_managed"></span>**D3DXMESH \_ IB \_ VERWALTET**
 </dt> <dd>
 
-Verwenden Sie [**das D3DPOOL \_ MANAGED-Verwendungsflag**](./d3dpool.md) für Indexpuffer.
+Verwenden Sie das [**D3DPOOL \_ MANAGED-Verwendungsflag**](./d3dpool.md) für Indexpuffer.
 
 </dd> <dt>
 
 <span id="D3DXMESH_IB_WRITEONLY"></span><span id="d3dxmesh_ib_writeonly"></span>**D3DXMESH \_ IB \_ WRITEONLY**
 </dt> <dd>
 
-Verwenden Sie [**das D3DUSAGE \_ WRITEONLY-Verwendungsflag**](d3dusage.md) für Indexpuffer.
+Verwenden Sie das [**D3DUSAGE \_ WRITEONLY-Verwendungsflag**](d3dusage.md) für Indexpuffer.
 
 </dd> <dt>
 
 <span id="D3DXMESH_IB_DYNAMIC"></span><span id="d3dxmesh_ib_dynamic"></span>**D3DXMESH \_ IB \_ DYNAMIC**
 </dt> <dd>
 
-Verwenden Sie [**das D3DUSAGE \_ DYNAMIC-Verwendungsflag**](d3dusage.md) für Indexpuffer.
+Verwenden Sie das [**D3DUSAGE \_ DYNAMIC-Verwendungsflag**](d3dusage.md) für Indexpuffer.
 
 </dd> <dt>
 
 <span id="D3DXMESH_IB_SOFTWAREPROCESSING"></span><span id="d3dxmesh_ib_softwareprocessing"></span>**D3DXMESH \_ IB \_ SOFTWAREPROCESSING**
 </dt> <dd>
 
-Verwenden Sie [**das D3DUSAGE \_ SOFTWAREPROCESSING-Verwendungsflag**](d3dusage.md) für Indexpuffer.
+Verwenden Sie das [**D3DUSAGE \_ SOFTWAREPROCESSING-Verwendungsflag**](d3dusage.md) für Indexpuffer.
 
 </dd> <dt>
 
-<span id="D3DXMESH_VB_SHARE"></span><span id="d3dxmesh_vb_share"></span>**D3DXMESH \_ \_ VB-FREIGABE**
+<span id="D3DXMESH_VB_SHARE"></span><span id="d3dxmesh_vb_share"></span>**D3DXMESH \_ VB \_ SHARE**
 </dt> <dd>
 
-Erzwingt, dass die geklonten Gitternetze Scheitelpunktpuffer freigeben.
+Erzwingt, dass die geklonten Gitternetze Scheitelpunktpuffer gemeinsam nutzen.
 
 </dd> <dt>
 
 <span id="D3DXMESH_USEHWONLY"></span><span id="d3dxmesh_usehwonly"></span>**D3DXMESH \_ USEHWONLY**
 </dt> <dd>
 
-Verwenden Sie nur die Hardwareverarbeitung. Bei Geräten im gemischten Modus wird dieses Flag dazu führen, dass das System Hardware verwendet (sofern dies in der Hardware unterstützt wird) oder standardmäßig die Softwareverarbeitung verwendet.
+Verwenden Sie nur die Hardwareverarbeitung. Bei Geräten im gemischten Modus bewirkt dieses Flag, dass das System Hardware verwendet (sofern in der Hardware unterstützt) oder die Softwareverarbeitung standardmäßig verwendet.
 
 </dd> <dt>
 
@@ -214,15 +214,15 @@ Entspricht der Angabe von D3DXMESH \_ VB \_ SOFTWAREPROCESSING und D3DXMESH \_ I
 
 </dd> </dl>
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Ein 32-Bit-Gitternetz (D3DXMESH \_ 32BIT) kann theoretisch (2^32)-1 Gesichter und Scheitelpunkte unterstützen. Die Zuweisung von Arbeitsspeicher für ein Gitternetz, das auf einem 32-Bit-Betriebssystem groß ist, ist jedoch nicht praktikabel.
+Ein 32-Bit-Gitternetz (D3DXMESH \_ 32BIT) kann theoretisch (2^32)-1 Gesichter und Scheitelpunkte unterstützen. Die Zuweisung von Arbeitsspeicher für ein Gitternetz, das unter einem 32-Bit-Betriebssystem groß ist, ist jedoch nicht praktikabel.
 
 ## <a name="requirements"></a>Anforderungen
 
 
 
-| Anforderungen | Wert |
+| Anforderung | Wert |
 |-------------------|----------------------------------------------------------------------------------------|
 | Header<br/> | <dl> <dt>D3dx9mesh.h</dt> </dl> |
 

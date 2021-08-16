@@ -68,7 +68,7 @@ Zugriffstyp: Schreibgeschützt
 **InstanceName**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
@@ -114,7 +114,7 @@ Die **MSMCAEvent \_ MemoryPageRemoved-Klasse** wird von [**WMIEvent abgeleitet.*
 
 
 
-## <a name="see-also"></a>Weitere Informationen:
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 

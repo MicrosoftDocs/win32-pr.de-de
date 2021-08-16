@@ -1,42 +1,42 @@
 ---
-title: Domänen Strukturen
-description: Eine Domänen Struktur besteht aus mehreren Domänen, die über ein gemeinsames Schema und eine gemeinsame Konfiguration verfügen und einen zusammenhängenden Namespace bilden.
+title: Domänenstrukturen
+description: Eine Domänenstruktur besteht aus mehreren Domänen, die ein gemeinsames Schema und eine gemeinsame Konfiguration verwenden und einen zusammenhängenden Namespace bilden.
 ms.assetid: 3deb4053-3124-4180-8ab0-35fff689a37e
 ms.tgt_platform: multiple
 keywords:
-- Domänen Struktur Active Directory
+- Domänenstruktur Active Directory
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: a21d2b36968615fd4e92912fdd94246ef8dda0c1
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: 40a1e2ed05284d2a08735b048fb41d97d6597634f711094d0a3763c2d7f8be67
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "104206278"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118430516"
 ---
-# <a name="domain-trees"></a>Domänen Strukturen
+# <a name="domain-trees"></a>Domänenstrukturen
 
-Eine *Domänen* Struktur besteht aus mehreren Domänen, die über ein gemeinsames Schema und eine gemeinsame Konfiguration verfügen und einen zusammenhängenden Namespace bilden. Domänen in einer Struktur werden auch über Vertrauens Stellungen miteinander verknüpft. Active Directory ist ein Satz aus einer oder mehreren Strukturen.
+Eine *Domänenstruktur* besteht aus mehreren Domänen, die ein gemeinsames Schema und eine gemeinsame Konfiguration verwenden und einen zusammenhängenden Namespace bilden. Domänen in einer Struktur werden auch durch Vertrauensstellungen miteinander verknüpft. Active Directory ist ein Satz von einer oder mehrere Strukturen.
 
-Strukturen können auf zwei Arten angezeigt werden. Eine Ansicht sind die Vertrauens Stellungen zwischen Domänen. Die andere Ansicht ist der Namespace der Domänen Struktur.
+Strukturen können auf zwei Arten angezeigt werden. Eine Ansicht sind die Vertrauensstellungen zwischen Domänen. Die andere Ansicht ist der Namespace der Domänenstruktur.
 
-## <a name="viewing-trust-relationships"></a>Anzeigen von Vertrauens Stellungen
+## <a name="viewing-trust-relationships"></a>Anzeigen von Vertrauensstellungen
 
-Sie können ein Diagramm einer Domänen Struktur basierend auf den einzelnen Domänen und der vorhandenen Vertrauensbeziehung zeichnen.
+Sie können ein Diagramm einer Domänenstruktur basierend auf den einzelnen Domänen und der vorhandenen Vertrauensstellung zeichnen.
 
-Windows 2000 richtet Vertrauens Stellungen zwischen Domänen basierend auf dem Kerberos-Sicherheitsprotokoll ein. Die Kerberos-Vertrauensstellung ist transitiv und hierarchisch – Wenn Domäne a Domäne b vertraut und Domäne b Domäne c vertraut, vertraut Domäne a Domäne c.
+Windows 2000 richtet Vertrauensstellungen zwischen Domänen basierend auf dem Kerberos-Sicherheitsprotokoll ein. Die Kerberos-Vertrauensstellung ist transitiv und hierarchisch: Wenn Domäne A Domäne B vertraut und Domäne B Domäne C vertraut, dann vertraut Domäne A Domäne C.
 
-![Vertrauensbeziehung der Domänen Struktur](images/domain-trust.png)
+![Vertrauensstellung der Domänenstruktur](images/domain-trust.png)
 
 ## <a name="viewing-the-namespace"></a>Anzeigen des Namespace
 
-Sie können auch ein Diagramm einer Domänen Struktur basierend auf dem-Namespace zeichnen. Sie können den Distinguished Name eines Objekts ermitteln, indem Sie dem Pfad in der Hierarchie des Domänen Struktur-Namespace folgen. Diese Sicht ist nützlich für das Gruppieren von Objekten in einer logischen Hierarchie. Der Hauptvorteil eines zusammenhängenden Namespace besteht darin, dass eine Tiefe Suche aus dem Stamm des-Namespace die gesamte Hierarchie durchsucht.
+Sie können auch ein Diagramm einer Domänenstruktur basierend auf dem Namespace zeichnen. Sie können den Distinguished Name eines Objekts bestimmen, indem Sie dem Pfad in der Hierarchie des Domänenstrukturnamespace folgen. Diese Sicht ist nützlich, um Objekte in einer logischen Hierarchie zu gruppieren. Der Hauptvorteil eines zusammenhängenden Namespace ist, dass eine tiefe Suche aus dem Stamm des Namespace die gesamte Hierarchie durchsucht.
 
-![Namespace-Domänen Struktur](images/namespace.png)
+![Namespacedomänenstruktur](images/namespace.png)
 
- 
+ 
 
- 
+ 
 
 
 

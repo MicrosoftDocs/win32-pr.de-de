@@ -4,7 +4,7 @@ description: Gibt an, ob der Sicherheitskonto-Manager Datengrößen erzwingt, um
 ms.assetid: 745e271e-28f4-4012-83a8-606d88de0221
 ms.tgt_platform: multiple
 keywords:
-- UAS-Compat AD-Attributschema
+- UAS-Compat AD-Schema
 - AD-Schema des uASCompat-Attributs
 topic_type:
 - apiref
@@ -52,7 +52,7 @@ Gibt an, ob der Sicherheitskonto-Manager Datengrößen erzwingt, um Active Direc
 | Aktualisieren von Berechtigungen  | Wird von einem Administrator ausgeführt.       |
 | Updatehäufigkeit  | \-                                   |
 | Attribute-Id      | 1.2.840.113556.1.4.155               |
-| System-ID-GUID    | bf967a61-0de6-11d0-a285-00aa003049e2 |
+| System-Id-Guid    | bf967a61-0de6-11d0-a285-00aa003049e2 |
 | Syntax            | [**Enumeration**](s-enumeration.md) |
 
 
@@ -75,7 +75,7 @@ Gibt an, ob der Sicherheitskonto-Manager Datengrößen erzwingt, um Active Direc
 | Link-ID                | \-                                                    |
 | MAPI-Id                | \-                                                    |
 | System-Only            | Falsch                                                 |
-| Ist einwertig       | Richtig                                                  |
+| Is-Single-Valued       | Richtig                                                  |
 | Ist indiziert             | Falsch                                                 |
 | Im globalen Katalog      | Falsch                                                 |
 | NT-Security-Descriptor | O:BAG:BAD:S:                                          |
@@ -96,7 +96,7 @@ Gibt an, ob der Sicherheitskonto-Manager Datengrößen erzwingt, um Active Direc
 | Link-ID                | \-                                                    |
 | MAPI-Id                | \-                                                    |
 | System-Only            | Falsch                                                 |
-| Ist einwertig       | Richtig                                                  |
+| Is-Single-Valued       | Richtig                                                  |
 | Ist indiziert             | Falsch                                                 |
 | Im globalen Katalog      | Falsch                                                 |
 | NT-Security-Descriptor | O:BAG:BAD:S:                                          |

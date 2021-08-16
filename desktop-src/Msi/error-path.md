@@ -1,5 +1,5 @@
 ---
-description: In Windows Installer-Versionen 1.0 und 1.1 ist die Path-Eigenschaft immer die leere Zeichenfolge. Zukünftige Versionen können diesen Wert verwenden, um den Pfad zu der Datei oder dem Verzeichnis zurückderherzustellen, die nicht erstellt werden konnte.
+description: In Windows Installer-Versionen 1.0 und 1.1 ist die Path-Eigenschaft immer die leere Zeichenfolge. In zukünftigen Versionen kann dieser Wert verwendet werden, um den Pfad zu der Datei oder dem Verzeichnis zurückzugeben, die nicht erstellt werden konnte.
 ms.assetid: b79dd347-acda-47d7-aa3b-c0f9a6ca1d3b
 title: Error.Path-Eigenschaft (Mergemod.h)
 ms.topic: reference
@@ -23,7 +23,7 @@ ms.locfileid: "118378151"
 ---
 # <a name="errorpath-property"></a>Error.Path-Eigenschaft
 
-In Windows Installer-Versionen 1.0 und 1.1 ist die Path-Eigenschaft immer die leere Zeichenfolge. Zukünftige Versionen können diesen Wert verwenden, um den Pfad zu der Datei oder dem Verzeichnis zurückderherzustellen, die nicht erstellt werden konnte.
+In Windows Installer-Versionen 1.0 und 1.1 ist die Path-Eigenschaft immer die leere Zeichenfolge. In zukünftigen Versionen kann dieser Wert verwendet werden, um den Pfad zu der Datei oder dem Verzeichnis zurückzugeben, die nicht erstellt werden konnte.
 
 Diese Eigenschaft ist schreibgeschützt.
 
@@ -40,11 +40,11 @@ propVal = Error.Path
 
 ## <a name="remarks"></a>Hinweise
 
-Dieser Wert ist nur für Fehler vom Typ msmErrorFileCreate oder msmErrorDirCreate gültig. Sie können den Fehlertyp ermitteln, indem Sie [**die Type-Eigenschaft**](error-type.md) des [**Error-Objekts**](error-object.md) aufrufen.
+Dieser Wert ist nur für Fehler vom Typ msmErrorFileCreate oder msmErrorDirCreate gültig. Sie können den Fehlertyp ermitteln, indem Sie die [**Type-Eigenschaft**](error-type.md) des [**Error-Objekts**](error-object.md) aufrufen.
 
 ### <a name="c"></a>C++
 
-Siehe [**get \_ Path-Funktion.**](/windows/win32/api/mergemod/nf-mergemod-imsmerror-get_path)
+Weitere Informationen finden Sie unter Get Path function [**(Get \_ Path-Funktion).**](/windows/win32/api/mergemod/nf-mergemod-imsmerror-get_path)
 
 ## <a name="requirements"></a>Anforderungen
 

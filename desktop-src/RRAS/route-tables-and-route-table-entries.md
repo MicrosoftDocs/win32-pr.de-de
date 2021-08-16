@@ -13,7 +13,7 @@ ms.locfileid: "117788055"
 ---
 # <a name="route-tables-and-route-table-entries"></a>Routentabellen und Routentabelleneinträge
 
-**Windows Server 2003:** Diese API wurde durch die [RoutingTabellen-Manager-API Version 2](about-routing-table-manager-version-2.md) ersetzt und ist über server 2003 hinaus Windows verfügbar. Neue Anwendungen sollten die Routingtabellen-Manager-API Version 2 verwenden.
+**Windows Server 2003:** Diese API wurde durch die [RoutingTabellen-Manager-API Version 2](about-routing-table-manager-version-2.md) ersetzt und ist über Windows Server 2003 hinaus nicht mehr verfügbar. Neue Anwendungen sollten die Routingtabellen-Manager-API Version 2 verwenden.
 
 Der Routingtabellen-Manager verwaltet für jede Protokollfamilie unterschiedliche Routingtabellen. Derzeit wird explizite Unterstützung für die Routingprotokollfamilien Internet protocol (IP) und Internet Packet Exchange (IPX) bereitgestellt. Unabhängig von der Protokollfamilie enthält jeder Routeneintrag die folgenden Informationen:
 
@@ -24,7 +24,7 @@ Der Routingtabellen-Manager verwaltet für jede Protokollfamilie unterschiedlich
 -   Der Zeitpunkt, zu dem die Route erstellt oder zuletzt aktualisiert wurde.
 -   Die Zeit, die diese Route in der Routingtabelle beibehalten wird. Wenn diese Zeitspanne verstreicht und die Route nicht aktualisiert wurde, entfernt der Routingtabellen-Manager die Route aus der Tabelle. In diesem Fall wird für die Route ein Alter *von bezeichnet.*
 -   Daten, die für die Protokollfamilie spezifisch sind. Diese Daten sind für RTMv1 transparent. Wenn sich diese Daten jedoch für eine Route ändern, die als "beste Route" festgelegt ist, sendet der Routingtabellen-Manager eine Benachrichtigung zur Routenänderung.
--   Daten, die für das Routingprotokoll spezifisch sind. Diese Daten sind für den Routingtabellen-Manager vollständig transparent, da Änderungen an diesen Daten keine Routenänderungsbenachrichtigung verursachen.
+-   Spezifische Daten für das Routingprotokoll. Diese Daten sind für den Routingtabellen-Manager vollständig transparent, da Änderungen an diesen Daten keine Routenänderungsbenachrichtigung verursachen.
 
 Die folgenden Werte identifizieren eine Route in der Routingtabelle eindeutig:
 

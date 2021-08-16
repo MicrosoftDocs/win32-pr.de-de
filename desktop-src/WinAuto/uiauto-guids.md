@@ -13,7 +13,7 @@ ms.locfileid: "118324721"
 ---
 # <a name="deprecated-guids"></a>Veraltete GUIDs
 
-In diesem Thema werden die GUIDs beschrieben, die mit der [**UiaLookupId-Funktion**](/windows/desktop/api/UIAutomationCoreApi/nf-uiautomationcoreapi-uialookupid) verwendet werden.
+In diesem Thema werden die GUIDs beschrieben, die mit der [**UiaLookupId-Funktion verwendet**](/windows/desktop/api/UIAutomationCoreApi/nf-uiautomationcoreapi-uialookupid) werden.
 
 > [!Note]  
 > Die [**UiaLookupId-Funktion**](/windows/desktop/api/UIAutomationCoreApi/nf-uiautomationcoreapi-uialookupid) und die in diesem Thema beschriebenen GUIDs sind veraltet. Stattdessen sollten Anwendungen die in den folgenden Abschnitten beschriebenen Bezeichner verwenden:
@@ -26,7 +26,7 @@ In diesem Thema werden die GUIDs beschrieben, die mit der [**UiaLookupId-Funktio
 -   [Eigenschaftsbezeichner](uiauto-entry-propids.md)
 -   [Textattributbezeichner](uiauto-textattribute-ids.md)
 
-In diesem Abschnitt werden die folgenden GUIDs aufgelistet:
+In diesem Abschnitt werden die folgenden GUIDs aufgeführt:
 
 -   [PATTERNID-GUIDs](#patternid-guids)
 -   [CONTROLTYPEID-GUIDs](#controltypeid-guids)
@@ -44,35 +44,35 @@ Die PATTERNID-GUIDs, die Steuerelementmuster in der [**UiaLookupId-Funktion**](/
 |----------------------------------|
 | \_ \_ Anmerkungsmuster-GUID        |
 | \_ \_ DOCK-Muster-GUID              |
-| Drag \_ Pattern \_ GUID (Muster-GUID ziehen)              |
+| \_ \_ Ziehmuster-GUID              |
 | \_ \_ DropTarget-Muster-GUID        |
-| ExpandCollpase \_ Pattern \_ GUID    |
+| \_ExpandCollpase-Muster-GUID \_    |
 | \_ \_ Rastermuster-GUID              |
 | \_ \_ GridItem-Muster-GUID          |
-| Aufrufen \_ der \_ Muster-GUID            |
-| ItemContainer \_ Pattern \_ GUID     |
-| Guid des \_ LegacyIAccessible-Musters \_ |
+| Invoke \_ Pattern \_ GUID (Muster-GUID aufrufen)            |
+| \_ \_ ItemContainer-Muster-GUID     |
+| LegacyIAccessible \_ Pattern \_ GUID |
 | \_ \_ ObjectModel-Muster-GUID       |
 | \_ \_ RangeValue-Muster-GUID        |
 | \_ \_ Scrollmuster-GUID            |
 | \_ \_ ScrollItem-Muster-GUID        |
 | \_Auswahlmuster               |
 | \_ \_ SelectionItem-Muster-GUID     |
-| GUID des \_ Tabellenkalkulationsmusters \_       |
-| GUID für \_ SpreadsheetItem-Muster \_   |
+| GUID \_ für \_ Tabellenmuster       |
+| GuiD des \_ SpreadsheetItem-Musters \_   |
 | \_SynchronizedInput-Muster-GUID \_ |
-| \_ \_ Formatvorlagenmuster-GUID            |
-| Guid des \_ Tabellenmusters \_             |
-| Guid des \_ TableItem-Musters \_         |
+| \_ \_ Stilmuster-GUID            |
+| \_ \_ Tabellenmuster-GUID             |
+| \_ \_ TableItem-Muster-GUID         |
 | \_ \_ TextChild-Muster-GUID         |
 | \_ \_ Textmuster-GUID              |
-| Text \_ Pattern2 \_ GUID             |
+| \_ \_ Textmuster2-GUID             |
 | Umschalten \_ der \_ Muster-GUID            |
 | \_Transformationsmuster               |
-| Transform \_ Pattern2 \_ GUID        |
+| \_ \_ Transformationsmuster2-GUID        |
 | \_ \_ Wertmuster-GUID             |
 | \_VirtualizedItem-Muster-GUID \_   |
-| Guid des \_ Fenstermusters \_            |
+| \_ \_ Fenstermuster-GUID            |
 
 
 
@@ -86,45 +86,45 @@ Die CONTROLTYPEID-GUIDs, die Steuerelementtypen in der [**UiaLookupId-Funktion**
 
 | CONTROLTYPEID-GUIDs        |
 |----------------------------|
-| \_GUID des Schaltflächensteuerelements \_      |
-| \_Guid des \_ Kalendersteuerelements    |
-| \_GUID des CheckBox-Steuerelements \_    |
+| \_ \_ Schaltflächen-Steuerelement-GUID      |
+| \_ \_ KALENDER-STEUERELEMENT-GUID    |
+| \_ \_ CheckBox-Steuerelement-GUID    |
 | \_ \_ ComboBox-Steuerelement-GUID    |
-| GUID des benutzerdefinierten \_ \_ Steuerelements      |
-| Guid des \_ \_ DataGrid-Steuerelements    |
-| Guid des \_ DataItem-Steuerelements \_    |
-| \_GUID des \_ Dokumentsteuerelements    |
-| Bearbeiten \_ der \_ Steuerelement-GUID        |
-| \_ \_ Gruppensteuerelement-GUID       |
-| \_Guid des Headersteuerelements \_      |
+| BENUTZERDEFINIERTE \_ \_ STEUERELEMENT-GUID      |
+| \_ \_ DataGrid-Steuerelement-GUID    |
+| \_ \_ DataItem-Steuerelement-GUID    |
+| \_ \_ Dokumentsteuerungs-GUID    |
+| Bearbeiten der \_ \_ Steuerelement-GUID        |
+| \_ \_ Gruppensteuerungs-GUID       |
+| \_ \_ HEADER-Steuerelement-GUID      |
 | \_ \_ HeaderItem-Steuerelement-GUID  |
-| \_ \_ Linksteuerelement-GUID   |
-| \_ \_ Bildsteuerelement-GUID       |
-| \_Guid des \_ Listensteuerelements        |
-| GUID des \_ ListItem-Steuerelements \_    |
-| \_GUID des \_ Menüsteuerelements        |
+| \_ \_ LINK-Steuerelement-GUID   |
+| GuiD \_ des \_ Bildsteuersteuerprogramms       |
+| \_ \_ List-Steuerelement-GUID        |
+| \_ \_ ListItem-Steuerelement-GUID    |
+| \_ \_ Menüsteuerelement-GUID        |
 | \_ \_ MenuBar-Steuerelement-GUID     |
 | \_ \_ MenuItem-Steuerelement-GUID    |
-| \_Guid des \_ Bereichssteuerelements        |
+| \_ \_ Bereichssteuerungs-GUID        |
 | \_ \_ ProgressBar-Steuerelement-GUID |
 | \_ \_ RadioButton-Steuerelement-GUID |
 | \_ \_ ScrollBar-Steuerelement-GUID   |
 | \_ \_ Trennzeichen-Steuerelement-GUID   |
-| \_GUID des Schieberegler-Steuerelements \_      |
-| \_ \_ Drehungssteuerelement-GUID     |
-| Guid des \_ SplitButton-Steuerelements \_ |
-| Guid des \_ StatusBar-Steuerelements \_   |
-| \_GUID des Registerkartensteuerelements \_         |
-| GUID des \_ TabItem-Steuerelements \_     |
-| \_GUID des \_ Tabellensteuerelements       |
-| Guid \_ des Textsteuerelements \_        |
-| Thumb \_ Control \_ GUID       |
-| Guid des \_ TitleBar-Steuerelements \_    |
-| Guid des \_ ToolBar-Steuerelements \_     |
-| Guid des \_ QuickInfo-Steuerelements \_     |
-| \_Guid des \_ Struktursteuerelements        |
+| \_ \_ Schieberegler-Steuerelement-GUID      |
+| \_ \_ Spinner-Steuerelement-GUID     |
+| \_ \_ SplitButton-Steuerelement-GUID |
+| \_ \_ StatusBar-Steuerelement-GUID   |
+| GUID \_ des \_ Registerkartensteuersteuerprogramms         |
+| \_ \_ TabItem-Steuerelement-GUID     |
+| \_ \_ TABELLEN-STEUERELEMENT-GUID       |
+| \_ \_ Textsteuersteuerfeld-GUID        |
+| \_ \_ THUMB-Steuerelement-GUID       |
+| \_ \_ TitleBar-Steuerelement-GUID    |
+| \_ \_ ToolBar-Steuerelement-GUID     |
+| \_ \_ QuickInfo-Steuerelement-GUID     |
+| \_ \_ Struktursteuersteuer-GUID        |
 | \_ \_ TreeItem-Steuerelement-GUID    |
-| \_Guid des \_ Fenstersteuerelements      |
+| \_ \_ Fenstersteuerungs-GUID      |
 
 
 
@@ -132,7 +132,7 @@ Die CONTROLTYPEID-GUIDs, die Steuerelementtypen in der [**UiaLookupId-Funktion**
 
 ## <a name="eventid-guids"></a>EVENTID-GUIDs
 
-Die EVENTID-GUIDs, die Microsoft Benutzeroberflächenautomatisierung Ereignisse in der [**UiaLookupId-Funktion**](/windows/desktop/api/UIAutomationCoreApi/nf-uiautomationcoreapi-uialookupid) darstellen, sind in der folgenden Tabelle aufgeführt.
+Die EVENTID-GUIDs, die Microsoft Benutzeroberflächenautomatisierung-Ereignisse in der [**UiaLookupId-Funktion**](/windows/desktop/api/UIAutomationCoreApi/nf-uiautomationcoreapi-uialookupid) darstellen, sind in der folgenden Tabelle aufgeführt.
 
 
 
@@ -140,36 +140,36 @@ Die EVENTID-GUIDs, die Microsoft Benutzeroberflächenautomatisierung Ereignisse 
 |--------------------------------------------------------------|
 | \_AsyncContentLoaded-Ereignis-GUID \_                              |
 | \_AutomationFocusChanged-Ereignis-GUID \_                          |
-| \_AutomationPropertyChanged-Ereignis-GUID \_                       |
-| \_ \_ DragCancel-Ereignis-GUID ziehen \_                                |
-| \_DragComplete-Ereignis-GUID \_ \_                              |
-| Drag\_DragStart\_Event\_GUID                                 |
+| AutomationPropertyChanged-Ereignis-GUID \_ \_                       |
+| \_DragCancel-Ereignis-GUID \_ \_ ziehen                                |
+| \_ \_ DragComplete-Ereignis-GUID ziehen \_                              |
+| \_ \_ DragStart-Ereignis-GUID ziehen \_                                 |
 | DropTarget \_ \_ DragEnter-Ereignis-GUID \_                           |
 | DropTarget \_ \_ DragLeave-Ereignis-GUID \_                           |
-| DropTarget \_ \_ \_ Dropped-Ereignis-GUID                             |
+| DropTarget \_ Dropped \_ Event \_ GUID                             |
 | HostedFragmentRootsInvalidated-Ereignis-GUID \_ \_                  |
 | \_InputDiscarded-Ereignis-GUID \_                                  |
 | \_InputReachedOtherElement-Ereignis-GUID \_                        |
-| InputReachedTarget-Ereignis-GUID \_ \_                              |
-| Invoke \_ Invoked \_ Event \_ GUID                                 |
-| \_LayoutInvalidated-Ereignis-GUID \_                               |
+| \_InputReachedTarget-Ereignis-GUID \_                              |
+| Aufrufen \_ der \_ GUID für aufgerufene Ereignisse \_                                 |
+| LayoutInvalidated \_ Event \_ GUID                               |
 | \_LiveRegionChanged-Ereignis-GUID \_                               |
-| \_MenuClosed-Ereignis-GUID \_                                      |
+| MenuClosed \_ Event \_ GUID                                      |
 | \_MenuModeEnd-Ereignis-GUID \_                                     |
 | \_ \_ MenuModeStart-Ereignis-GUID                                   |
-| \_MenuOpened-Ereignis-GUID \_                                      |
-| GuiD \_ des Selection InvalidatedEvent-Ereignisses \_ \_                     |
+| MenüÖffnen der \_ \_ Ereignis-GUID                                      |
+| Selection \_ InvalidatedEvent \_ Event \_ GUID                     |
 | \_SelectionItem-ElementAddedToSelectionEvent-Ereignis-GUID \_ \_     |
 | \_SelectionItem-ElementRemovedFromSelectionEvent-Ereignis-GUID \_ \_ |
 | \_SelectionItem-ElementSelectedEvent-Ereignis-GUID \_ \_             |
 | \_ \_ StructureChanged-Ereignis-GUID                                |
 | \_ \_ SystemAlert-Ereignis-GUID                                     |
-| Text \_ \_ TextChangedEvent-Ereignis-GUID \_                          |
-| Text \_ TextSelectionChangedEvent-Ereignis-GUID \_ \_                 |
-| \_ToolTipClosed-Ereignis-GUID \_                                   |
-| \_ \_ \_ FensterfensterOpened-Ereignis-GUID                            |
+| Text \_ TextChangedEvent \_ Event \_ GUID                          |
+| Text \_ TextSelectionChangedEvent \_ Event \_ GUID                 |
+| ToolTipClosed \_ Event \_ GUID                                   |
+| \_FensterfensterÖffnen der \_ \_ Ereignis-GUID                            |
 | \_ToolTipOpened-Ereignis-GUID \_                                   |
-| \_ \_ \_ FensterfensterClosed-Ereignis-GUID                            |
+| Window \_ WindowClosed \_ Event \_ GUID                            |
 
 
 
@@ -185,152 +185,152 @@ Die PROPERTYID-GUIDs, die Benutzeroberflächenautomatisierung Eigenschaften in d
 |-----------------------------------------------------|
 | \_ \_ AcceleratorKey-Eigenschaften-GUID                      |
 | \_ \_ AccessKey-Eigenschaften-GUID                           |
-| Annotation \_ \_ AnnotationTypeId-Eigenschaften-GUID \_        |
-| Annotation \_ \_ AnnotationTypeName-Eigenschaften-GUID \_      |
-| GuiD \_ der \_ Anmerkungsautoreigenschaft \_                  |
-| \_ \_ DateTime-Eigenschafts-GUID \_ für Anmerkungen                |
-| GuiD \_ der \_ \_ Anmerkungszieleigenschaft                  |
-| \_AriaProperties-Eigenschaften-GUID \_                      |
-| \_AriaRole-Eigenschaften-GUID \_                            |
+| Annotation \_ \_ AnnotationTypeId-Eigenschafts-GUID \_        |
+| Annotation \_ \_ AnnotationTypeName-Eigenschafts-GUID \_      |
+| Annotation \_ Author \_ Property \_ GUID                  |
+| Annotation \_ DateTime \_ Property \_ GUID                |
+| \_GUID der \_ Anmerkungszieleigenschaft \_                  |
+| GUID der \_ AriaProperties-Eigenschaft \_                      |
+| GUID der \_ AriaRole-Eigenschaft \_                            |
 | \_ \_ AutomationId-Eigenschaften-GUID                        |
 | \_BoundingRectangle-Eigenschaften-GUID \_                   |
 | \_ \_ ClassName-Eigenschaften-GUID                           |
-| \_ \_ ClickablePoint-Eigenschaften-GUID                      |
+| GUID der \_ ClickablePoint-Eigenschaft \_                      |
 | \_ \_ ControllerFor-Eigenschaften-GUID                       |
 | \_ \_ ControlType-Eigenschaften-GUID                         |
-| \_ \_ Kultureigenschafts-GUID                             |
+| Culture \_ Property \_ GUID                             |
 | \_ \_ DescribedBy-Eigenschaften-GUID                         |
-| Dock \_ \_ DockPosition-Eigenschaften-GUID \_                  |
-| Drag \_ \_ DropEffect-Eigenschaften-GUID \_                    |
-| Drag \_ \_ DropEffects-Eigenschaften-GUID \_                   |
-| Ziehen Der \_ Guid der GrabbedItems-Eigenschaft \_ \_                  |
-| Ziehen \_ der IsGrabbed-Eigenschaften-GUID \_ \_                     |
-| DropTarget \_ \_ DropTargetEffect-Eigenschaften-GUID \_        |
-| DropTarget \_ DropTargetEffects-Eigenschaften-GUID \_ \_       |
+| \_ \_ Dock DockPosition-Eigenschaften-GUID \_                  |
+| Drag\_DropEffect\_Property\_GUID                    |
+| Drag\_DropEffects\_Property\_GUID                   |
+| Ziehen der \_ Guid der GrabbedItems-Eigenschaft \_ \_                  |
+| Ziehen der \_ \_ \_ IsGrabbed-Eigenschaften-GUID                     |
+| DropTarget \_ \_ DropTargetEffect-Eigenschafts-GUID \_        |
+| DropTarget \_ \_ DropTargetEffects-Eigenschaften-GUID \_       |
 | ExpandCollapse \_ \_ ExpandCollapseState-Eigenschaften-GUID \_ |
 | \_ \_ FlowsTo-Eigenschaften-GUID                             |
 | \_ \_ FrameworkId-Eigenschaften-GUID                         |
-| Grid \_ \_ ColumnCount-Eigenschaften-GUID \_                   |
-| Grid \_ \_ RowCount-Eigenschaften-GUID \_                      |
-| GuiD \_ der GridItem-Spalteneigenschaft \_ \_                    |
+| \_ \_ Grid ColumnCount-Eigenschaften-GUID \_                   |
+| \_ \_ Grid RowCount-Eigenschaften-GUID \_                      |
+| GridItem \_ Column \_ Property \_ GUID                    |
 | GridItem \_ \_ ColumnSpan-Eigenschaften-GUID \_                |
-| GuiD der \_ übergeordneten GridItem-Eigenschaft \_ \_                    |
-| \_ \_ GridItem-Zeileneigenschafts-GUID \_                       |
+| Guid der \_ übergeordneten GridItem-Eigenschaft \_ \_                    |
+| GridItem \_ Row \_ Property \_ GUID                       |
 | GridItem \_ \_ RowSpan-Eigenschaften-GUID \_                   |
 | \_HasKeyboardFocus-Eigenschaften-GUID \_                    |
-| \_ \_ HelpText-Eigenschaften-GUID                            |
-| IsAnnotationPatternAvailable-Eigenschaften-GUID \_ \_        |
+| Guid der \_ \_ HelpText-Eigenschaft                            |
+| \_IsAnnotationPatternAvailable-Eigenschaften-GUID \_        |
 | \_ \_ IsContentElement-Eigenschaften-GUID                    |
 | \_ \_ IsControlElement-Eigenschaften-GUID                    |
-| IsDataValidForForm-Eigenschaften-GUID \_ \_                  |
-| IsDockPatternAvailable-Eigenschaften-GUID \_ \_              |
-| IsDragPatternAvailable-Eigenschaften-GUID \_ \_              |
-| IsDropTargetPatternAvailable-Eigenschaften-GUID \_ \_        |
+| \_IsDataValidForForm-Eigenschaften-GUID \_                  |
+| \_IsDockPatternAvailable-Eigenschafts-GUID \_              |
+| \_IsDragPatternAvailable-Eigenschafts-GUID \_              |
+| \_IsDropTargetPatternAvailable-Eigenschafts-GUID \_        |
 | \_IsEnabled-Eigenschaften-GUID \_                           |
-| IsExpandCollapsePatternAvailable-Eigenschaften-GUID \_ \_    |
-| IsGridItemPatternAvailable-Eigenschaften-GUID \_ \_          |
+| IsExpandCollapsePatternAvailable-Eigenschafts-GUID \_ \_    |
+| \_IsGridItemPatternAvailable-Eigenschafts-GUID \_          |
 | \_IsGridPatternAvailable-Eigenschaften-GUID \_              |
-| IsInvokePatternAvailable-Eigenschaften-GUID \_ \_            |
-| IsItemContainerPatternAvailable-Eigenschaften-GUID \_ \_     |
+| \_IsInvokePatternAvailable-Eigenschafts-GUID \_            |
+| \_IsItemContainerPatternAvailable-Eigenschaften-GUID \_     |
 | \_IsKeyboardFocusable-Eigenschaften-GUID \_                 |
 | IsLegacyIAccessiblePatternAvailable-Eigenschaften-GUID \_ \_ |
-| IsMultipleViewPatternAvailable-Eigenschaften-GUID \_ \_      |
-| IsObjectModelPatternAvailable-Eigenschaften-GUID \_ \_       |
+| \_IsMultipleViewPatternAvailable-Eigenschafts-GUID \_      |
+| \_IsObjectModelPatternAvailable-Eigenschaften-GUID \_       |
 | \_ \_ IsOffscreen-Eigenschaften-GUID                         |
 | \_ \_ IsPassword-Eigenschaften-GUID                          |
-| IsRangeValuePatternAvailable-Eigenschaften-GUID \_ \_        |
-| IsRequiredForForm-Eigenschaften-GUID \_ \_                   |
+| \_IsRangeValuePatternAvailable-Eigenschaften-GUID \_        |
+| \_IsRequiredForForm-Eigenschaften-GUID \_                   |
 | IsScrollItemPatternAvailable-Eigenschaften-GUID \_ \_        |
-| IsScrollPatternAvailable-Eigenschaften-GUID \_ \_            |
+| \_IsScrollPatternAvailable-Eigenschaften-GUID \_            |
 | IsSelectionItemPatternAvailable-Eigenschaften-GUID \_ \_     |
-| IsSelectionPatternAvailable-Eigenschaften-GUID \_ \_         |
-| IsSpreadsheetPatternAvailable-Eigenschaften-GUID \_ \_       |
-| IsSpreadsheetItemPatternAvailable-Eigenschaften-GUID \_ \_   |
-| IsStylesPatternAvailable-Eigenschaften-GUID \_ \_            |
-| IsSynchronizedInputPatternAvailable-Eigenschaften-GUID \_ \_ |
-| IsTableItemPatternAvailable-Eigenschaften-GUID \_ \_         |
+| \_IsSelectionPatternAvailable-Eigenschaften-GUID \_         |
+| \_IsSpreadsheetPatternAvailable-Eigenschaften-GUID \_       |
+| IsSpreadsheetItemPatternAvailable-Eigenschafts-GUID \_ \_   |
+| \_IsStylesPatternAvailable-Eigenschaften-GUID \_            |
+| \_IsSynchronizedInputPatternAvailable-Eigenschafts-GUID \_ |
+| \_IsTableItemPatternAvailable-Eigenschaften-GUID \_         |
 | \_IsTablePatternAvailable-Eigenschaften-GUID \_             |
-| IsTextChildPatternAvailable-Eigenschaften-GUID \_ \_         |
+| \_IsTextChildPatternAvailable-Eigenschaften-GUID \_         |
 | \_IsTextPatternAvailable-Eigenschaften-GUID \_              |
-| IsTextPattern2Available-Eigenschaften-GUID \_ \_             |
-| IsTogglePatternAvailable-Eigenschaften-GUID \_ \_            |
-| IsTransformPatternAvailable-Eigenschaften-GUID \_ \_         |
-| IsTransformPattern2Available-Eigenschaften-GUID \_ \_        |
-| \_IsValuePatternAvailable-Eigenschaften-GUID \_             |
+| \_IsTextPattern2Available-Eigenschaften-GUID \_             |
+| \_IsTogglePatternAvailable-Eigenschaften-GUID \_            |
+| \_IsTransformPatternAvailable-Eigenschaften-GUID \_         |
+| \_IsTransformPattern2Available-Eigenschaften-GUID \_        |
+| \_IsValuePatternAvailable-Eigenschafts-GUID \_             |
 | IsVirtualizedItemPatternAvailable-Eigenschaften-GUID \_ \_   |
-| IsWindowPatternAvailable-Eigenschaften-GUID \_ \_            |
+| \_IsWindowPatternAvailable-Eigenschaften-GUID \_            |
 | \_ \_ ItemStatus-Eigenschaften-GUID                          |
 | \_ \_ ItemType-Eigenschaften-GUID                            |
 | \_ \_ LabeledBy-Eigenschaften-GUID                           |
-| LegacyIAccessible \_ \_ ChildId-Eigenschaften-GUID \_          |
-| LegacyIAccessible \_ \_ DefaultAction-Eigenschaften-GUID \_    |
-| LegacyIAccessible \_ \_ \_ Description-Eigenschaften-GUID      |
-| LegacyIAccessible \_ \_ \_ Help-Eigenschaften-GUID             |
+| LegacyIAccessible \_ ChildId \_ Property \_ GUID          |
+| Guid der \_ DefaultAction-Eigenschaft "LegacyIAccessible" \_ \_    |
+| LegacyIAccessible \_ Description \_ Property \_ GUID      |
+| Guid der \_ LegacyIAccessible-Hilfeeigenschaft \_ \_             |
 | LegacyIAccessible \_ \_ KeyboardShortcut-Eigenschaften-GUID \_ |
-| LegacyIAccessible \_ \_ Name-Eigenschaften-GUID \_             |
-| LegacyIAccessible \_ Role \_ Property \_ GUID             |
-| LegacyIAccessible \_ \_ \_ Selection-Eigenschaften-GUID        |
-| LegacyIAccessible \_ \_ \_ State-Eigenschafts-GUID            |
-| \_ \_ LegacyIAccessible-Eigenschafts-GUID \_            |
+| LegacyIAccessible \_ Name \_ Property \_ GUID             |
+| Guid der \_ LegacyIAccessible-Rolleneigenschaft \_ \_             |
+| LegacyIAccessible \_ Selection \_ Property \_ GUID        |
+| LegacyIAccessible \_ State \_ Property \_ GUID            |
+| Guid der Eigenschaft "LegacyIAccessible \_ Value" \_ \_            |
 | \_ \_ LiveSetting-Eigenschaften-GUID                         |
-| GuiD der \_ LocalizedControlType-Eigenschaft \_                |
-| MultipleView \_ \_ CurrentView-Eigenschaften-GUID \_           |
+| \_ \_ LocalizedControlType-Eigenschaften-GUID                |
+| \_ \_ MultipleView CurrentView-Eigenschaften-GUID \_           |
 | MultipleView \_ \_ SupportedViews-Eigenschaften-GUID \_        |
-| \_ \_ Name-Eigenschafts-GUID                                |
-| NewNativeWindowHandle-Eigenschaften-GUID \_ \_               |
-| \_OptimizeForVisualContent-Eigenschaften-GUID \_            |
-| GuiD \_ der \_ Ausrichtungseigenschaft                         |
+| Name \_ Property \_ GUID                                |
+| \_NewNativeWindowHandle-Eigenschaften-GUID \_               |
+| \_ \_ OptimizeForVisualContent-Eigenschaften-GUID            |
+| \_GUID der Orientation-Eigenschaft \_                         |
 | \_ \_ ProcessId-Eigenschaften-GUID                           |
 | \_ProviderDescription-Eigenschaften-GUID \_                 |
 | RangeValue \_ \_ IsReadOnly-Eigenschaften-GUID \_              |
 | RangeValue \_ \_ LargeChange-Eigenschaften-GUID \_             |
-| RangeValue \_ \_ Maximum-Eigenschafts-GUID \_                 |
+| RangeValue \_ Maximum \_ Property \_ GUID                 |
 | RangeValue \_ Minimum \_ Property \_ GUID                 |
 | RangeValue \_ \_ SmallChange-Eigenschaften-GUID \_             |
-| RangeValue \_ \_ Value-Eigenschafts-GUID \_                   |
-| \_ \_ RuntimeId-Eigenschaften-GUID                           |
-| Scrollen \_ \_ horizontalScrollable-Eigenschaften-GUID \_      |
-| Scrollen \_ der GuiD der HorizontalScrollPercent-Eigenschaft \_ \_     |
-| Scrollen \_ der HorizontalViewSize-Eigenschaften-GUID \_ \_          |
-| Scroll \_ \_ verticallyScrollable-Eigenschaften-GUID \_        |
-| Scroll \_ \_ verticalScrollPercent-Eigenschaften-GUID \_       |
-| Scrollen \_ der VerticalViewSize-Eigenschaften-GUID \_ \_            |
-| Auswahl: \_ \_ CanSelectMultiple-Eigenschaften-GUID \_        |
-| Select \_ \_ IsSelectionRequired-Eigenschaften-GUID \_      |
-| \_ \_ \_ Auswahlauswahl-Eigenschaften-GUID                |
-| SelectionItem \_ \_ IsSelected-Eigenschaften-GUID \_           |
-| SelectionItem \_ \_ \_ SelectionContainer-Eigenschaften-GUID   |
-| SpreadsheetItem \_ \_ AnnotationObjects-Eigenschaften-GUID \_  |
-| SpreadsheetItem \_ \_ AnnotationTypes-Eigenschaften-GUID \_    |
-| GuiD der \_ SpreadsheetItem-Formeleigenschaft \_ \_            |
-| Stile \_ \_ extendedProperties-Eigenschaften-GUID \_          |
-| \_Stile: \_ FillColor-Eigenschaften-GUID \_                   |
-| Stile \_ \_ fillPatternColor-Eigenschaften-GUID \_            |
-| Stile \_ \_ FillPatternStyle-Eigenschaften-GUID \_            |
-| Formatieren \_ der \_ \_ Shape-Eigenschafts-GUID                       |
-| \_StyleId-Eigenschafts-GUID \_ \_ für Stile                     |
-| \_ \_ StyleName-Eigenschafts-GUID \_ für Stile                   |
-| Table \_ \_ ColumnHeaders-Eigenschaften-GUID \_                |
-| Table \_ \_ RowHeaders-Eigenschaften-GUID \_                   |
-| \_RowOrColumnMajor-Eigenschaften-GUID \_ der \_ Tabelle             |
-| TableItem \_ \_ ColumnHeaderItems-Eigenschaften-GUID \_        |
-| TableItem \_ \_ RowHeaderItems-Eigenschaften-GUID \_           |
-| Umschalten \_ der ToggleState-Eigenschaften-GUID \_ \_                 |
-| TransformIeren \_ der CanMove-Eigenschaften-GUID \_ \_                  |
-| Transformieren \_ der CanResize-Eigenschaften-GUID \_ \_                |
-| Transformieren \_ der CanRotate-Eigenschaften-GUID \_ \_                |
+| RangeValue \_ Value \_ Property \_ GUID                   |
+| \_ \_ RuntimeId-Eigenschafts-GUID                           |
+| \_ \_ HorizontallyScrollable-Eigenschaften-GUID \_ scrollen      |
+| Scrollen der \_ \_ HorizontalScrollPercent-Eigenschafts-GUID \_     |
+| Scrollen \_ der \_ HorizontalViewSize-Eigenschafts-GUID \_          |
+| Scrollen der \_ \_ Eigenschaften-GUID "VerticallyScrollable" \_        |
+| Scroll \_ VerticalScrollPercent \_ Property \_ GUID       |
+| Scrollen \_ der \_ VerticalViewSize-Eigenschafts-GUID \_            |
+| Selection \_ CanSelectMultiple \_ Property \_ GUID        |
+| Selection \_ IsSelectionRequired \_ Property \_ GUID      |
+| \_ \_ EIGENSCHAFTEN-GUID der Auswahlauswahl \_                |
+| \_ \_ SelectionItem IsSelected-Eigenschafts-GUID \_           |
+| \_ \_ SelectionItem SelectionContainer-Eigenschaften-GUID \_   |
+| GUID der SpreadsheetItem \_ \_ AnnotationObjects-Eigenschaft \_  |
+| GUID der SpreadsheetItem \_ \_ AnnotationTypes-Eigenschaft \_    |
+| GUID der \_ SpreadsheetItem-Formeleigenschaft \_ \_            |
+| \_Guid der ExtendedProperties-Eigenschaft für \_ \_ Stile          |
+| \_Stile: \_ \_ FillColor-Eigenschaften-GUID                   |
+| \_Formatvorlagen: \_ \_ FillPatternColor-Eigenschaften-GUID            |
+| \_ \_ FillPatternStyle-Eigenschaften-GUID für \_ Stile            |
+| \_ \_ Guid der \_ Formatvorlageneigenschaft                       |
+| \_ \_ StyleId-Eigenschaften-GUID für \_ Stile                     |
+| \_ \_ StyleName-Eigenschaften-GUID für \_ Stile                   |
+| Table \_ \_ ColumnHeaders-Eigenschafts-GUID \_                |
+| Table \_ \_ RowHeaders-Eigenschafts-GUID \_                   |
+| Table \_ RowOrColumnMajor \_ Property \_ GUID             |
+| TableItem \_ \_ ColumnHeaderItems-Eigenschafts-GUID \_        |
+| TableItem \_ \_ RowHeaderItems-Eigenschafts-GUID \_           |
+| \_ \_ ToggleState-Eigenschaften-GUID \_ umschalten                 |
+| Transformieren \_ der \_ \_ CanMove-Eigenschaften-GUID                  |
+| Transformieren der \_ \_ \_ CanResize-Eigenschaften-GUID                |
+| Transformieren der \_ \_ \_ CanRotate-Eigenschaften-GUID                |
 | Transform2 \_ \_ CanZoom-Eigenschaften-GUID \_                 |
-| Transform2 \_ \_ ZoomLevel-Eigenschaften-GUID \_               |
+| Transform2 \_ \_ ZoomLevel-Eigenschafts-GUID \_               |
 | Transform2 \_ \_ ZoomMaximum-Eigenschaften-GUID \_             |
-| Transform2 \_ \_ ZoomMinimum-Eigenschaften-GUID \_             |
-| Wert \_ der IsReadOnly-Eigenschaften-GUID \_ \_                   |
-| \_ \_ \_ Wertwert-Eigenschafts-GUID                        |
-| Window \_ \_ CanMaximize-Eigenschaften-GUID \_                 |
+| Transform2 \_ \_ ZoomMinimum-Eigenschafts-GUID \_             |
+| Value \_ IsReadOnly \_ Property \_ GUID                   |
+| Value \_ Value \_ Property \_ GUID                        |
+| Window \_ CanMaximize \_ Property \_ GUID                 |
 | Window \_ CanMinimize \_ Property \_ GUID                 |
-| Window \_ \_ IsModal-Eigenschaften-GUID \_                     |
-| Window \_ \_ IsTopmost-Eigenschaften-GUID \_                   |
+| Window \_ IsModal \_ Property \_ GUID                     |
+| Window \_ IsTopmost \_ Property \_ GUID                   |
 | Window \_ \_ WindowInteractionState-Eigenschaften-GUID \_      |
-| \_ \_ FensterfensterVisualState-Eigenschaften-GUID \_           |
+| Window \_ WindowVisualState \_ Property \_ GUID           |
 
 
 
@@ -344,46 +344,46 @@ Die TEXTATTRIBUTEID-GUIDs, die Textattribute in der [**UiaLookupId-Funktion**](/
 
 | TEXTATTRIBUTEID-GUIDs                          |
 |------------------------------------------------|
-| \_ \_ \_ TextanimationStyle-Attribut-GUID          |
-| Text \_ \_ AnnotationObjects-Attribut-GUID \_       |
-| Text \_ \_ AnnotationTypes-Attribut-GUID \_         |
+| \_ \_ TextanimationStyle-Attribut-GUID \_          |
+| Text \_ AnnotationObjects \_ Attribute \_ GUID       |
+| Text \_ AnnotationTypes \_ Attribute \_ GUID         |
 | Text \_ \_ BackgroundColor-Attribut-GUID \_         |
-| Text \_ \_ BulletStyle-Attribut-GUID \_             |
-| Text \_ \_ CapStyle-Attribut-GUID \_                |
+| \_ \_ Text BulletStyle-Attribut-GUID \_             |
+| Text \_ CapStyle \_ Attribute \_ GUID                |
 | Text \_ \_ CaretBidiMode-Attribut-GUID \_           |
 | Text \_ \_ CaretPosition-Attribut-GUID \_           |
-| \_ \_ \_ Textkulturattribut-GUID                 |
-| Text \_ \_ FontName-Attribut-GUID \_                |
-| \_ \_ \_ TextschriftartSize-Attribut-GUID                |
-| Text \_ \_ fontWeight-Attribut-GUID \_              |
+| GUID des \_ \_ Textkulturattributs \_                 |
+| Text \_ FontName \_ Attribute \_ GUID                |
+| Text \_ \_ FontSize-Attribut-GUID \_                |
+| Text \_ FontWeight \_ Attribute \_ GUID              |
 | Text \_ \_ ForegroundColor-Attribut-GUID \_         |
-| Text \_ \_ HorizontalTextAlignment-Attribut-GUID \_ |
-| TEXT \_ \_ INDENTATIONFirstLine-Attribut-GUID \_    |
-| \_ \_ \_ TexteinzugLeading-Attribut-GUID      |
-| \_ \_ TexteinzugTrailing-Attribut-GUID \_     |
-| Text \_ \_ IsActive-Attribut-GUID \_                |
-| Text \_ \_ IsHidden-Attribut-GUID \_                |
-| Text \_ \_ IsItalic-Attribut-GUID \_                |
-| Text \_ \_ IsReadOnly-Attribut-GUID \_              |
+| \_ \_ Text HorizontalTextAlignment-Attribut-GUID \_ |
+| Text \_ IndentationFirstLine \_ Attribute \_ GUID    |
+| \_ \_ TexteinzugLeading-Attribut-GUID \_      |
+| \_ \_ TEXT IndentationTrailing-Attribut-GUID \_     |
+| Text \_ IsActive \_ Attribute \_ GUID                |
+| Text \_ IsHidden \_ Attribute \_ GUID                |
+| Text \_ IsItalic \_ Attribute \_ GUID                |
+| \_Text \_ IsReadOnly-Attribut-GUID \_              |
 | Text \_ \_ IsSubscript-Attribut-GUID \_             |
 | Text \_ \_ IsSuperscript-Attribut-GUID \_           |
 | \_ \_ \_ Textlinkattribut-GUID                    |
-| Text \_ \_ MarginBottom-Attribut-GUID \_            |
+| Text \_ MarginBottom \_ Attribute \_ GUID            |
 | Text \_ \_ MarginLeading-Attribut-GUID \_           |
-| Text \_ \_ MarginTop-Attribut-GUID \_               |
-| \_ \_ \_ TextrandTrailing-Attribut-GUID          |
+| Text \_ MarginTop \_ Attribute \_ GUID               |
+| Text \_ MarginTrailing \_ Attribute \_ GUID          |
 | Text \_ \_ OutlineStyles-Attribut-GUID \_           |
 | Text \_ \_ OverlineColor-Attribut-GUID \_           |
 | Text \_ \_ OverlineStyle-Attribut-GUID \_           |
-| Text \_ \_ selectionActiveEnd-Attribut-GUID \_      |
+| \_ \_ TextauswahlActiveEnd-Attribut-GUID \_      |
 | Text \_ \_ StrikethroughColor-Attribut-GUID \_      |
 | Text \_ \_ StrikethroughStyle-Attribut-GUID \_      |
-| Text \_ \_ StyleId-Attribut-GUID \_                 |
-| Text \_ \_ StyleName-Attribut-GUID \_               |
-| \_Attribut-GUID für \_ \_ Textregisterkarte                    |
-| Text \_ \_ TextFlowDirection-Attribut-GUID \_       |
+| Text \_ StyleId \_ Attribute \_ GUID                 |
+| Text \_ StyleName \_ Attribute \_ GUID               |
+| \_Guid des Attributs "Textregisterkarten" \_ \_                    |
+| \_ \_ TextTextFlowDirection-Attribut-GUID \_       |
 | Text \_ \_ UnderlineColor-Attribut-GUID \_          |
-| Text \_ \_ UnderlineStyle-Attribut-GUID \_          |
+| Text \_ UnderlineStyle \_ Attribute \_ GUID          |
 
 
 

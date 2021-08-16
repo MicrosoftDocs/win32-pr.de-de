@@ -3,24 +3,24 @@ title: Verarbeiten der Audiodaten
 description: Verarbeiten der Audiodaten
 ms.assetid: ba41e3f4-d991-4da6-9091-7a7e42622e76
 keywords:
-- Windows Media Player-Plug-ins, Echo Sample DoProcess Output-Methode
-- Plug-ins, Echo Sample DoProcess Output-Methode
-- Plug-Ins für die digitale Signalverarbeitung, Echo Sample DoProcess Output-Methode
-- DSP-Plug-ins, Echo Sample DoProcess Output-Methode
-- Echo DSP-Plug-in-Beispiel, DoProcess Output-Methode
-- Echo DSP-Plug-in-Beispiel, Audiodaten
+- Windows Media Player-Plug-Ins,Echo-Beispiel-DoProcessOutput-Methode
+- Plug-Ins,Echo-Beispielmethode "DoProcessOutput"
+- Plug-Ins für die digitale Signalverarbeitung,Echo-Beispielmethode "DoProcessOutput"
+- DSP-Plug-Ins,Echo-Beispielmethode "DoProcessOutput"
+- Echo DSP-Plug-In-Beispiel, DoProcessOutput-Methode
+- Echo DSP-Plug-In-Beispiel, Audiodaten
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: acc14acb99aed20825ff970025363c6a795a0c8c
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: 678e1debd586017bfbe748d4f2bed6d17607afcbe2719b5e3ecba8cabf667af6
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "106337596"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118334483"
 ---
 # <a name="processing-the-audio-data"></a>Verarbeiten der Audiodaten
 
-Die Standard Implementierung von " **DoProcess Output** " beginnt mit dem Abrufen eines Zeigers auf eine gültige **WaveFormatEx** -Struktur, wie dies in "" von "" in "" von "" **zugeordnet** wurde. Anschließend werden die Informationen in dieser Struktur verwendet, um die Anzahl der Stichproben im Eingabepuffer zu berechnen, die auf die Verarbeitung warten. Der folgende Code ist aus der Standard Implementierung:
+Die Standardimplementierung von **DoProcessOutput** beginnt mit dem Abrufen eines Zeigers auf eine gültige **WAVEFORMATEX-Struktur,** genau wie in **AllocateStreamingResources.** Anschließend werden die Informationen in dieser Struktur verwendet, um die Anzahl der Stichproben im Eingabepuffer zu berechnen, die auf die Verarbeitung warten. Der folgende Code ist aus der Standardimplementierung:
 
 
 ```C++
@@ -35,27 +35,27 @@ DWORD dwSamplesToProcess = (*cbBytesProcessed / pWave->nBlockAlign) * pWave->nCh
 
 
 
-Anschließend überprüft der Code den **wbitspersample** -Member, um die Bittiefe der Audiodatei zu bestimmen. Dieser Wert wird in einer Switch-Anweisung verwendet, um eine separate Verarbeitung für 8-Bit-und 16-Bit-Audiodaten bereitzustellen.
+Anschließend überprüft der Code den **wBitsPerSample-Member,** um die Bittiefe der Audiodatei zu bestimmen. Dieser Wert wird in einer switch-Anweisung verwendet, um eine separate Verarbeitung für 8-Bit- und 16-Bit-Audio zu ermöglichen.
 
-## <a name="differences-between-8-bit-and-16-bit-audio"></a>Unterschiede zwischen 8-Bit-und 16-Bit-Audiodaten
+## <a name="differences-between-8-bit-and-16-bit-audio"></a>Unterschiede zwischen 8-Bit- und 16-Bit-Audio
 
-Es gibt wichtige Unterschiede zwischen 8-Bit-und 16-Bit-Audiodaten. Daher unterscheiden sich die Verarbeitungs Routinen zum Erstellen des Echo Effekts. Die beiden Formate unterscheiden sich wie folgt:
+Es gibt wichtige Unterschiede zwischen 8-Bit- und 16-Bit-Audio. Daher unterscheiden sich die Verarbeitungsroutinen zum Erstellen des Echoeffekts. Die beiden Formate unterscheiden sich auf folgende Weise:
 
--   Jedes Format hat eine andere Stichprobengröße: 8-Bit-Samplings belegen jeweils ein Byte Arbeitsspeicher, während 16-Bit-Stichproben jeweils zwei Bytes belegen.
--   Jedes Format repräsentiert die Audioamplitude anders. 8-Bit-Audiodaten werden durch eine Ganzzahl ohne Vorzeichen mit einem Bereich von 0 bis 255 dargestellt. der Wert 128 stellt den Ruhe Wert dar. die 16-Bit-Audiodaten werden durch eine ganze Zahl mit Vorzeichen und einen Bereich von-32768 bis 32767 dargestellt. der Wert 0 (null) stellt den Ruhe Wert dar.
+-   Jedes Format hat eine andere Stichprobengröße: 8-Bit-Stichproben belegen jeweils ein Byte Arbeitsspeicher, während 16-Bit-Stichproben jeweils zwei Bytes belegen.
+-   Jedes Format stellt die Audioamplitude unterschiedlich dar. 8-Bit-Audio wird durch eine ganze Zahl ohne Vorzeichen mit einem Bereich von 0 bis 255 dargestellt. Der Wert 128 stellt die Stille dar. 16-Bit-Audio wird durch eine ganze Zahl mit Vorzeichen mit einem Bereich von -32768 bis 32767 dargestellt. Der Wert 0 (null) stellt die Stille dar.
 
-Während der Vorgang zum Erstellen des Echo Effekts für jedes Format grundsätzlich identisch ist, müssen sich die Details leicht unterscheiden.
+Während der Prozess der Erstellung des Echoeffekts für jedes Format grundsätzlich identisch ist, müssen sich die Details geringfügig unterscheiden.
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
 <dl> <dt>
 
-[**Implementieren von Cecho::D oprocess Output**](implementing-cecho--doprocessoutput.md)
+[**Implementieren von CEcho::D oProcessOutput**](implementing-cecho--doprocessoutput.md)
 </dt> </dl>
 
- 
+ 
 
- 
+ 
 
 
 

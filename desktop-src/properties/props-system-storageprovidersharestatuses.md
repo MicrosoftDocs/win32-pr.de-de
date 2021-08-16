@@ -1,5 +1,5 @@
 ---
-description: Diese Eigenschaft stellt eine Liste der Freigabestatus für die vom Speicheranbieter angegebene Datei/den Ordner dar. Jeder Freigabestatus muss einer der bekannten Werte sein, der durch die Enumerationen unterStorageProviderShareStatuses angegeben wird. Er ist eine schreibgeschützte Eigenschaft, die nur vom Speicheranbieter aktualisiert werden sollte.
+description: Diese Eigenschaft stellt eine Liste der Freigabestatus für die vom Speicheranbieter angegebene Datei bzw. den Ordner dar. Jeder Freigabestatus muss einer der bekannten Werte sein, der durch die enumerations belowStorageProviderShareStatuses angegeben wird, ist eine schreibgeschützte Eigenschaft. Er sollte nur vom Speicheranbieter aktualisiert werden.
 ms.assetid: 131bf48a-0ab9-4b1f-9625-6fca5d15219f
 title: System.StorageProviderShareStatuses
 ms.topic: article
@@ -13,7 +13,7 @@ ms.locfileid: "118227507"
 ---
 # <a name="systemstorageprovidersharestatuses"></a>System.StorageProviderShareStatuses
 
-Diese Eigenschaft stellt eine Liste der Freigabestatus für die vom Speicheranbieter angegebene Datei/den Ordner dar. Jeder Freigabestatus muss einer der bekannten Werte sein, der durch die Enumerationen unterStorageProviderShareStatuses angegeben wird. Er ist eine schreibgeschützte Eigenschaft, die nur vom Speicheranbieter aktualisiert werden sollte.
+Diese Eigenschaft stellt eine Liste der Freigabestatus für die vom Speicheranbieter angegebene Datei bzw. den Ordner dar. Jeder Freigabestatus muss einer der bekannten Werte sein, der durch die enumerations belowStorageProviderShareStatuses angegeben wird, ist eine schreibgeschützte Eigenschaft. Er sollte nur vom Speicheranbieter aktualisiert werden.
 
 ## <a name="windows-10-version-1703-windows-10-version-1607-windows-10-version-1511-windows-10-version-1507-windows-81"></a>Windows 10, Version 1703, Windows 10, Version 1607, Windows 10, Version 1511, Windows 10, Version 1507, Windows 8.1
 

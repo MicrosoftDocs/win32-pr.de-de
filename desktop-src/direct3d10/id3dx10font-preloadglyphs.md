@@ -1,5 +1,5 @@
 ---
-description: Laden Sie eine Reihe von Glyphen in den Videospeicher, um die Effizienz des Renderings auf dem Gerät zu verbessern.
+description: Laden Sie eine Reihe von Glyphen in den Videospeicher, um die Effizienz des Renderns auf dem Gerät zu verbessern.
 ms.assetid: 7d063d52-af2c-44a6-9019-3d546acfbd4a
 title: ID3DX10Font::P reloadGlyphs-Methode (D3DX10.h)
 ms.topic: reference
@@ -23,7 +23,7 @@ ms.locfileid: "118540336"
 ---
 # <a name="id3dx10fontpreloadglyphs-method"></a>ID3DX10Font::P reloadGlyphs-Methode
 
-Laden Sie eine Reihe von Glyphen in den Videospeicher, um die Effizienz des Renderings auf dem Gerät zu verbessern.
+Laden Sie eine Reihe von Glyphen in den Videospeicher, um die Effizienz des Renderns auf dem Gerät zu verbessern.
 
 ## <a name="syntax"></a>Syntax
 
@@ -46,16 +46,16 @@ HRESULT PreloadGlyphs(
 
 Typ: **[ **UINT**](../winprog/windows-data-types.md)**
 
-ID des ersten Glyphen, das in den Videospeicher geladen werden soll.
+ID des ersten Glyphens, das in den Videospeicher geladen werden soll.
 
 </dd> <dt>
 
-*Letzte* \[ In\]
+*Zuletzt* \[ In\]
 </dt> <dd>
 
 Typ: **[ **UINT**](../winprog/windows-data-types.md)**
 
-ID des letzten Glyphen, das in den Videospeicher geladen werden soll.
+ID des letzten Glyphens, das in den Videospeicher geladen werden soll.
 
 </dd> </dl>
 
@@ -63,13 +63,13 @@ ID des letzten Glyphen, das in den Videospeicher geladen werden soll.
 
 Typ: **[ **HRESULT**](https://msdn.microsoft.com/library/Bb401631(v=MSDN.10).aspx)**
 
-Wenn die Methode erfolgreich ist, ist der Rückgabewert S \_ OK. Wenn bei der Methode ein Fehler auftritt, kann der Rückgabewert einer der folgenden Sein: D3DERR \_ INVALIDCALL, D3DXERR \_ INVALIDDATA.
+Wenn die Methode erfolgreich ist, lautet der Rückgabewert S \_ OK. Wenn die Methode fehlschlägt, kann der Rückgabewert einer der folgenden Werte sein: D3DERR \_ INVALIDCALL, D3DXERR \_ INVALIDDATA.
 
 ## <a name="remarks"></a>Hinweise
 
-Diese Methode generiert Texturen, die die Eingabe-Glyphen enthalten. Die Glyphen werden als eine Reihe von Dreiecken gezeichnet.
+Diese Methode generiert Texturen, die die Eingabeglyphen enthalten. Die Glyphen werden als eine Reihe von Dreiecken gezeichnet.
 
-Glyphen werden nicht auf dem Gerät gerendert. ID3DX10Font::D rawText muss weiterhin aufgerufen werden, um die Glyphen zu rendern. Durch das Vorabladen von Glyphen in den Videospeicher verwendet ID3DX10Font::D rawText jedoch deutlich weniger CPU-Ressourcen.
+Glyphen werden nicht auf dem Gerät gerendert. ID3DX10Font::D rawText muss weiterhin aufgerufen werden, um die Glyphen zu rendern. Durch das Vorabladen von Glyphen in den Videospeicher beansprucht ID3DX10Font::D rawText jedoch deutlich weniger CPU-Ressourcen.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -82,7 +82,7 @@ Glyphen werden nicht auf dem Gerät gerendert. ID3DX10Font::D rawText muss weite
 
 
 
-## <a name="see-also"></a>Weitere Informationen:
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 

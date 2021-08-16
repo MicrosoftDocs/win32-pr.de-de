@@ -1,11 +1,11 @@
 ---
-title: ms-DS-Transformations-Rules-kompiliertes Attribut
-description: BLOB, das kompilierte Transformationsregeln enthält.
+title: ms-DS-Transformation-Rules-Compiled-Attribut
+description: Blob mit kompilierten Transformationsregeln.
 ms.assetid: 13fc1bd5-b9dc-4934-bccf-86d4d32243c6
 ms.tgt_platform: multiple
 keywords:
-- AD-Schema für ms-DS-Transformation-Rules-kompilierte Attribute
-- AD-Schema des msDS-transformationruleskompilierten-Attributs
+- ms-DS-Transformation-Rules-Compiled attribute AD Schema
+- MSDS-TransformationRulesCompiled-Attribut AD-Schema
 topic_type:
 - apiref
 api_name:
@@ -14,28 +14,28 @@ api_type:
 - Schema
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: dbadd0d7b2ddce46894d0acdbd90507ab0721142
-ms.sourcegitcommit: b77ace27b0432e7cd3863191b11926be032fbe2f
+ms.openlocfilehash: 6eacc372da07c13f46ef8ac0bccaa31ff944715ed56d922907c7f9fa13a36ef9
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "103745097"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118425657"
 ---
-# <a name="ms-ds-transformation-rules-compiled-attribute"></a>ms-DS-Transformations-Rules-kompiliertes Attribut
+# <a name="ms-ds-transformation-rules-compiled-attribute"></a>ms-DS-Transformation-Rules-Compiled-Attribut
 
-BLOB, das kompilierte Transformationsregeln enthält.
+Blob mit kompilierten Transformationsregeln.
 
 
 
 | Eingabe | Wert |
 |-------------------|-------------------------------------------------------|
-| CN                | ms-DS-Transformation-Regeln-kompiliert                   |
-| LDAP-Display-Name | MSDS-transformationruleskompiliert                      |
+| CN                | ms-DS-Transformation-Rules-Compiled                   |
+| Ldap-Anzeigename | msDS-TransformationRulesCompiled                      |
 | Size              | \-                                                    |
-| Berechtigung aktualisieren  | \-                                                    |
-| Aktualisierungshäufigkeit  | \-                                                    |
+| Aktualisieren von Berechtigungen  | \-                                                    |
+| Updatehäufigkeit  | \-                                                    |
 | Attribute-Id      | 1.2.840.113556.1.4.2190                               |
-| System-ID-GUID    | 0bb49a10-536b-BC4D-A273-0bab0dd4bd10                  |
+| System-Id-Guid    | 0bb49a10-536b-bc4d-a273-0bab0dd4bd10                  |
 | Syntax            | [**Object(Replica-Link)**](s-object-replica-link.md) |
 
 
@@ -52,11 +52,11 @@ BLOB, das kompilierte Transformationsregeln enthält.
 |------------------------|-----------------------------------------------------------------------------------------------------|
 | Link-ID                | \-                                                                                                  |
 | MAPI-Id                | \-                                                                                                  |
-| System-Only            | Richtig                                                                                                |
-| Ist-einwertig       | Richtig                                                                                                |
+| System-Only            | True                                                                                                |
+| Is-Single-Valued       | True                                                                                                |
 | Ist indiziert             | False                                                                                               |
 | Im globalen Katalog      | False                                                                                               |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                                                                        |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                                                                        |
 | Range-Lower            | \-                                                                                                  |
 | Range-Upper            | \-                                                                                                  |
 | Search-Flags           | 0x00000080                                                                                          |

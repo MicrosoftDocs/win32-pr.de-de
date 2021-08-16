@@ -55,7 +55,7 @@ Um die Features aufzulisten, durchläuft eine Anwendung das [**StringList-Objekt
 
 
 
-## <a name="see-also"></a>Weitere Informationen:
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 

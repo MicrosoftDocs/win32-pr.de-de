@@ -1,21 +1,21 @@
 ---
-description: Die Create-Methode erstellt eine neue ittime-Komponente.
+description: Die Create-Methode erstellt eine neue ITTime-Komponente.
 ms.assetid: dee50454-8358-4898-b098-2de51505b658
-title: 'Ittimecollection:: Create-Methode (sdpblb. h)'
+title: ITTimeCollection::Create-Methode (Sdpblb.h)
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: df62bbc8f1ad2a24a9b80a7f5d0a25bc01f713d8
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 12a65949d0584f6ed41d3e1611c790b6b94dfa88a4e11ba18818974af5d38cef
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106357627"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117762372"
 ---
-# <a name="ittimecollectioncreate-method"></a>Ittimecollection:: Create-Methode
+# <a name="ittimecollectioncreate-method"></a>ITTimeCollection::Create-Methode
 
-\[ Rendezvous-Steuerelemente und Schnittstellen für die IP-telefoniekonferenz sind nicht für die Verwendung in Windows Vista, Windows Server 2008 und nachfolgenden Versionen des Betriebssystems verfügbar. Die RTC-Client-API bietet eine ähnliche Funktionalität.\]
+\[Rendezvous IP-Telefoniekonferenz-Steuerelemente und -Schnittstellen sind nicht für die Verwendung in Windows Vista, Windows Server 2008 und nachfolgenden Versionen des Betriebssystems verfügbar. Die RTC-Client-API bietet ähnliche Funktionen.\]
 
-Die **Create** -Methode erstellt eine neue [**ittime**](ittime.md) -Komponente.
+Die **Create-Methode** erstellt eine neue [**ITTime-Komponente.**](ittime.md)
 
 ## <a name="syntax"></a>Syntax
 
@@ -33,14 +33,14 @@ HRESULT Create(
 
 <dl> <dt>
 
-*Index* \[ in\]
+*Index* \[ In\]
 </dt> <dd>
 
-Der Index des zu erstellenden Elements. (Das Index Array ist 1-basiert.)
+Index des zu erstellenden Elements. (Das Indexarray ist einsbasiertes Array.)
 
 </dd> <dt>
 
-*pptime* \[ vorgenommen\]
+*ppTime* \[ out\]
 </dt> <dd>
 
 Zeiger auf die erstellte b-Komponente.
@@ -56,21 +56,21 @@ Diese Methode kann einen dieser Werte zurückgeben.
 | Wert                                                                                         | Bedeutung                                                         |
 |-----------------------------------------------------------------------------------------------|-----------------------------------------------------------------|
 | <dl> <dt>**S \_ OK**</dt> </dl>          | Methode war erfolgreich.<br/>                                    |
-| <dl> <dt>**E- \_ Zeiger**</dt> </dl>     | Der *pptime* -Parameter ist kein gültiger Zeiger.<br/>       |
-| <dl> <dt>**E \_ invalidArg**</dt> </dl>  | Der *Index* -Parameter ist ungültig.<br/>                  |
-| <dl> <dt>**E \_ outo-Memory**</dt> </dl> | Zum Ausführen des Vorgangs ist nicht genügend Arbeitsspeicher vorhanden.<br/> |
-| <dl> <dt>**E \_ fehlschlagen**</dt> </dl>        | Unbekannter Fehler.<br/>                                   |
-| <dl> <dt>**E \_ notimpl**</dt> </dl>     | Diese Methode ist noch nicht implementiert.<br/>                  |
+| <dl> <dt>**\_E-ZEIGER**</dt> </dl>     | Der *ppTime-Parameter* ist kein gültiger Zeiger.<br/>       |
+| <dl> <dt>**E \_ INVALIDARG**</dt> </dl>  | Der *Index-Parameter* ist ungültig.<br/>                  |
+| <dl> <dt>**E \_ OUTOFMEMORY**</dt> </dl> | Es ist nicht genügend Arbeitsspeicher vorhanden, um den Vorgang durchzuführen.<br/> |
+| <dl> <dt>**E \_ FAIL**</dt> </dl>        | Unbekannter Fehler.<br/>                                   |
+| <dl> <dt>**E \_ NOTIMPL**</dt> </dl>     | Diese Methode ist noch nicht implementiert.<br/>                  |
 
 
 
  
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-TAPI Ruft die **adressf** -Methode für die [**ittime**](ittime.md) -Schnittstelle auf, die von **ittimecollection:: Create** zurückgegeben wurde. Die Anwendung muss Release auf der v-Schnittstelle aufzurufen, um Ressourcen frei **zugeben** , die ihr zugeordnet sind.
+TAPI ruft die **AddRef-Methode** für die [**ITTime-Schnittstelle**](ittime.md) auf, die von **ITTimeCollection::Create zurückgegeben wird.** Die Anwendung muss **Release auf der v-Schnittstelle** aufrufen, um ressourcen frei zu machen, die ihr zugeordnet sind.
 
-Diese Funktion kann Daten in unverschlüsselter Form über das Netzwerk senden. aus diesem Grund kann ein Benutzer, der sich im Netzwerk befindet, möglicherweise die Daten lesen. Das Sicherheitsrisiko, dass Daten im Klartext gesendet werden, sollte vor der Verwendung dieser Methode berücksichtigt werden.
+Diese Funktion kann Daten unverschlüsselt über das Netzwerk senden. Aus diesem Grund kann eine Person, die im Netzwerk abhört, die Daten lesen. Das Sicherheitsrisiko des Sendens der Daten in Klartext sollte vor der Verwendung dieser Methode berücksichtigt werden.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -78,21 +78,21 @@ Diese Funktion kann Daten in unverschlüsselter Form über das Netzwerk senden. 
 
 | Anforderung | Wert |
 |-------------------------|---------------------------------------------------------------------------------------|
-| TAPI-Version<br/> | Erfordert TAPI 3,0 oder höher<br/>                                                 |
-| Header<br/>       | <dl> <dt>Sdpblb. h</dt> </dl>   |
-| Bibliothek<br/>      | <dl> <dt>UUID. lib</dt> </dl>   |
+| TAPI-Version<br/> | Erfordert TAPI 3.0 oder höher<br/>                                                 |
+| Header<br/>       | <dl> <dt>Sdpblb.h</dt> </dl>   |
+| Bibliothek<br/>      | <dl> <dt>Uuid.lib</dt> </dl>   |
 | DLL<br/>          | <dl> <dt>Sdpblb.dll</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Ittimecollection**](ittimecollection.md)
+[**ITTimeCollection**](ittimecollection.md)
 </dt> <dt>
 
-[**Ittime**](ittime.md)
+[**ITTime**](ittime.md)
 </dt> </dl>
 
  

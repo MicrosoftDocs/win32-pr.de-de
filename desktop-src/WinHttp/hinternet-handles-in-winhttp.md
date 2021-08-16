@@ -1,71 +1,71 @@
 ---
-description: Die Microsoft Windows HTTP-Dienste (WinHTTP) verwenden Handles, um die Einstellungen und Informationen, die bei Verwendung des HTTP-Protokolls erforderlich sind, nachzuverfolgen.
+description: Microsoft Windows HTTP Services (WinHTTP) verwendet Handles, um die Einstellungen und Informationen nachzuverfolgen, die bei Verwendung des HTTP-Protokolls erforderlich sind.
 ms.assetid: 0bd82860-1347-40c8-ae77-c4d865c109be
-title: HINTERNET Handles in WinHTTP
+title: HINTERNET-Handles in WinHTTP
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: bf374675ad6f2114dd48e0a3ff1db50cd0dd7f9c
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 3a76f925d11646ed2fe5b5d3732fe8972d979cdc6383a4d47e955c0e60a1390e
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "104560724"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118563270"
 ---
-# <a name="hinternet-handles-in-winhttp"></a>HINTERNET Handles in WinHTTP
+# <a name="hinternet-handles-in-winhttp"></a>HINTERNET-Handles in WinHTTP
 
-Die Microsoft Windows HTTP-Dienste (WinHTTP) verwenden Handles, um die Einstellungen und Informationen, die bei Verwendung des HTTP-Protokolls erforderlich sind, nachzuverfolgen. Jedes Handle verwaltet Informationen, die für eine HTTP-Sitzung, eine Verbindung mit einem HTTP-Server oder eine bestimmte Ressource relevant sind. In diesem Thema werden die verschiedenen Typen von Handles, die Benennungs Konventionen für diese Handles und ihre hierarchische Struktur beschrieben.
+Microsoft Windows HTTP Services (WinHTTP) verwendet Handles, um die Einstellungen und Informationen nachzuverfolgen, die bei Verwendung des HTTP-Protokolls erforderlich sind. Jedes Handle verwaltet Informationen zu einer HTTP-Sitzung, einer Verbindung mit einem HTTP-Server oder einer bestimmten Ressource. In diesem Thema werden die verschiedenen Typen von Handles, die Benennungskonventionen für diese Handles und ihre hierarchische Struktur beschrieben.
 
--   [Informationen zu hinternethandles](#about-hinternet-handles)
--   [Benennungs Handles](#naming-handles)
--   [Handle der Hierarchie](#handle-hierarchy)
--   [Erläuterung der Handle-Hierarchie](#explanation-of-the-handle-hierarchy)
+-   [Informationen zu HINTERNET-Handles](#about-hinternet-handles)
+-   [Benennungshandles](#naming-handles)
+-   [Handlehierarchie](#handle-hierarchy)
+-   [Erläuterung der Handlehierarchie](#explanation-of-the-handle-hierarchy)
 
-## <a name="about-hinternet-handles"></a>Informationen zu hinternethandles
+## <a name="about-hinternet-handles"></a>Informationen zu HINTERNET-Handles
 
-Die Handles, die von WinHTTP erstellt und verwendet werden, werden als **hinternethandles** bezeichnet. Die WinHTTP-Funktionen geben **HINTERNET** Handles zurück, die nicht mit anderen Handles austauschbar sind, sodass Sie nicht mit Funktionen wie "read [**File**](/windows/desktop/api/fileapi/nf-fileapi-readfile) " oder " [**CloseHandle**](/windows/desktop/api/handleapi/nf-handleapi-closehandle)" verwendet werden können. Ebenso können andere Handles nicht mit WinHTTP-Funktionen verwendet werden. So kann z. b. ein von " [**kreatefile**](/windows/desktop/api/fileapi/nf-fileapi-createfilea) " zurückgegebener Handle nicht an " [**WinHttpReadData**](/windows/desktop/api/Winhttp/nf-winhttp-winhttpreaddata)" übergeben werden. Diese **HINTERNET** -Handles können nicht geschlossen werden, während ein API-Befehl, der das Handle verwendet, ausgeführt wird. Um eine Racebedingung zu vermeiden, sollten Anwendungen das Handle schützen und verhindern, dass es so lange geschlossen wird, wie der API-Vorgang ausgeführt wird.
+Die von WinHTTP erstellten und verwendeten Handles werden **als HINTERNET-Handles** bezeichnet. Die WinHTTP-Funktionen geben **HINTERNET-Handles** zurück, die nicht mit anderen Handles austauschbar sind, sodass sie nicht mit Funktionen wie [**ReadFile**](/windows/desktop/api/fileapi/nf-fileapi-readfile) oder [**CloseHandle**](/windows/desktop/api/handleapi/nf-handleapi-closehandle)verwendet werden können. Auf ähnliche Weise können andere Handles nicht mit WinHTTP-Funktionen verwendet werden. Beispielsweise kann ein von [**CreateFile**](/windows/desktop/api/fileapi/nf-fileapi-createfilea) zurückgegebenes Handle nicht an [**WinHttpReadData**](/windows/desktop/api/Winhttp/nf-winhttp-winhttpreaddata)übergeben werden. Diese **HINTERNET-Handles** können nicht geschlossen werden, während ein API-Aufruf mit dem Handle ausgeführt wird. Um eine Racebedingung zu vermeiden, sollten Anwendungen das Handle schützen und verhindern, dass es geschlossen wird, solange der API-Aufruf ausgeführt wird.
 
-Microsoft Win32 Internet (WinInet)-Funktionen verwenden auch **HINTERNET** -Handles. Die in WinInet-Funktionen verwendeten Handles können jedoch nicht mit den in WinHTTP-Funktionen verwendeten Handles ausgetauscht werden. Weitere Informationen zu WinInet finden Sie unter [Informationen zu WinInet](/windows/desktop/WinInet/about-wininet).
+Microsoft Win32 Internet-Funktionen (WinInet) verwenden auch **HINTERNET-Handles.** Die in WinInet-Funktionen verwendeten Handles können jedoch nicht mit den Handles ausgetauscht werden, die in WinHTTP-Funktionen verwendet werden. Weitere Informationen zu WinInet finden Sie unter [Informationen zu WinINet.](/windows/desktop/WinInet/about-wininet)
 
-Die [**WinHttpCloseHandle**](/windows/desktop/api/Winhttp/nf-winhttp-winhttpclosehandle) -Funktion schließt WinHTTP- **HINTERNET** -Handles.
+Die [**WinHttpCloseHandle-Funktion**](/windows/desktop/api/Winhttp/nf-winhttp-winhttpclosehandle) schließt WinHTTP **HINTERNET-Handles.**
 
-## <a name="naming-handles"></a>Benennungs Handles
+## <a name="naming-handles"></a>Benennungshandles
 
-In der gesamten WinHTTP-Dokumentation zeigen Beschreibungen von Funktionen in der Anwendungsprogrammierschnittstelle (Application Programming Interface, API) und im Beispielcode die Erstellung und Verwendung verschiedener Typen von **hinternethandles** . Um die verschiedenen Typen der verfügbaren Handles nachzuverfolgen, ist die Benennung dieser Handles einheitlich. In der folgenden Tabelle sind die in der-Dokumentation verwendeten Bezeichner aufgeführt.
+In der gesamten WinHTTP-Dokumentation zeigen Beschreibungen der Funktionen in der Anwendungsprogrammierschnittstelle (APPLICATION Programming Interface, API) und Beispielcode die Erstellung und Verwendung verschiedener **Hinternet-Handles.** Um die verschiedenen verfügbaren Handles nachzuverfolgen, ist die Benennung dieser Handles konsistent. In der folgenden Tabelle sind die konventionsgemäß verwendeten Bezeichner in der Dokumentation aufgeführt.
 
 
 
-| Handle-Typ       | Funktion zum Erstellen eines Handles                                                                                                          | Bezeichner |
+| Handletyp       | Handle zum Erstellen einer Funktion                                                                                                          | Bezeichner |
 |-------------------|-----------------------------------------------------------------------------------------------------------------------------------|------------|
-| Generisches Handle    | [**WinHttpOpen**](/windows/desktop/api/Winhttp/nf-winhttp-winhttpopen), [**WinHttpConnect**](/windows/desktop/api/Winhttp/nf-winhttp-winhttpconnect)oder [**winhttpopanrequest**](/windows/desktop/api/Winhttp/nf-winhttp-winhttpopenrequest) | HINTERNET  |
-| Sitzungs handle    | [**WinHttpOpen**](/windows/desktop/api/Winhttp/nf-winhttp-winhttpopen)                                                                                                | hsession   |
-| Verbindungs Handle | [**WinHttpConnect**](/windows/desktop/api/Winhttp/nf-winhttp-winhttpconnect)                                                                                          | hconnect   |
-| Anforderungs handle    | [**Winhttpopanrequest**](/windows/desktop/api/Winhttp/nf-winhttp-winhttpopenrequest)                                                                                  | hrequest   |
+| Generisches Handle    | [**WinHttpOpen,**](/windows/desktop/api/Winhttp/nf-winhttp-winhttpopen) [**WinHttpConnect**](/windows/desktop/api/Winhttp/nf-winhttp-winhttpconnect)oder [**WinHttpOpenRequest**](/windows/desktop/api/Winhttp/nf-winhttp-winhttpopenrequest) | hInternet  |
+| Sitzungshandle    | [**WinHttpOpen**](/windows/desktop/api/Winhttp/nf-winhttp-winhttpopen)                                                                                                | hSession   |
+| Verbindungshandle | [**WinHttpConnect**](/windows/desktop/api/Winhttp/nf-winhttp-winhttpconnect)                                                                                          | hConnect   |
+| Anforderungshandle    | [**WinHttpOpenRequest**](/windows/desktop/api/Winhttp/nf-winhttp-winhttpopenrequest)                                                                                  | hRequest   |
 
 
 
  
 
-## <a name="handle-hierarchy"></a>Handle der Hierarchie
+## <a name="handle-hierarchy"></a>Handlehierarchie
 
-Die **HINTERNET** -Handles werden in einer-Hierarchie verwaltet. Das von [**WinHttpOpen**](/windows/desktop/api/Winhttp/nf-winhttp-winhttpopen) zurückgegebene Handle ist das Sitzungs- **HINTERNET** -handle. Durch Aufrufen von **WinHttpOpen** werden die WinHTTP-Funktionen initialisiert, und es wird ein Sitzungs Kontext gestartet, der Benutzerinformationen und Einstellungen während der gesamten Lebensdauer des Sitzungs Handles beibehält. [**WinHttpConnect**](/windows/desktop/api/Winhttp/nf-winhttp-winhttpconnect) gibt einen HTTP-oder HTTPS-Zielserver an und erstellt ein **HINTERNET** -Verbindungs Handle. Standardmäßig erbt das Verbindungs Handle die Einstellungen für das Sitzungs handle. Jede Ressource, die mit einem [**winhttpopanrequest**](/windows/desktop/api/Winhttp/nf-winhttp-winhttpopenrequest) -Befehl angegeben wird, wird einem Anforderungs- **HINTERNET** -Handle zugewiesen.
+Die **HINTERNET-Handles** werden in einer Hierarchie verwaltet. Das von [**WinHttpOpen**](/windows/desktop/api/Winhttp/nf-winhttp-winhttpopen) zurückgegebene Handle ist das **HINTERNET-Handle** der Sitzung. Durch den Aufruf von **WinHttpOpen** werden die WinHTTP-Funktionen initialisiert und ein Sitzungskontext gestartet, der Benutzerinformationen und -einstellungen während der gesamten Lebensdauer des Sitzungshandle verwaltet. [**WinHttpConnect**](/windows/desktop/api/Winhttp/nf-winhttp-winhttpconnect) gibt einen HTTP- oder HTTPS-Zielserver an und erstellt ein HINTERNET-Verbindungshandle.  Standardmäßig erbt das Verbindungshandle die Einstellungen für das Sitzungshandle. Jeder Ressource, die mit einem Aufruf von [**WinHttpOpenRequest**](/windows/desktop/api/Winhttp/nf-winhttp-winhttpopenrequest) angegeben wird, wird ein HINTERNET-Anforderungshandle zugewiesen. 
 
-Im folgenden Diagramm wird die Hierarchie der **hinternethandles** veranschaulicht. Jedes Feld im Diagramm stellt eine WinHTTP-Funktion dar, die ein **HINTERNET** -handle zurückgibt.
+Das folgende Diagramm veranschaulicht die Hierarchie der **HINTERNET-Handles.** Jedes Feld im Diagramm stellt eine WinHTTP-Funktion dar, die ein **HINTERNET-Handle** zurückgibt.
 
-![Funktionen zum Erstellen von Handles](images/art-winhttp2.png)
+![Funktionen, die Handles erstellen](images/art-winhttp2.png)
 
-Nach dem Schließen eines Handles muss die Anwendung auf den Empfang von Rückruf Benachrichtigungen für das Handle vorbereitet werden, bis der endgültige **WinHTTP- \_ Rückruf \_ Status " \_ \_ Closed** "-Wert behandelt wird, um anzugeben, dass das Handle vollständig geschlossen ist.
+Nach dem Schließen eines Handles muss die Anwendung darauf vorbereitet sein, Rückrufbenachrichtigungen für das Handle zu empfangen, bis der endgültige **WINHTTP \_ CALLBACK \_ STATUS HANDLE \_ \_ CLOSED-Wert** zurückgegeben wird, um anzugeben, dass das Handle vollständig geschlossen ist.
 
-Ein Sitzungs Handle wird als übergeordnetes Element eines beliebigen Verbindungs Handles bezeichnet, das zum Erstellen verwendet wurde. Ebenso werden sowohl das Verbindungs Handle als auch das übergeordnete Sitzungs Handle als Parent eines beliebigen Anforderungs Handles bezeichnet, das zum Erstellen des Verbindungs Handles verwendet wird.
+Ein Sitzungshandle wird als übergeordnetes Element eines Verbindungshandle bezeichnet, das zum Erstellen verwendet wird. Ebenso werden sowohl das Verbindungshandle als auch das übergeordnete Sitzungshandle als übergeordnetes Element jedes Anforderungshandle bezeichnet, das vom Verbindungshandle erstellt wird.
 
-Wenn ein übergeordnetes Handle geschlossen wird, werden alle untergeordneten Elemente indirekt ungültig gemacht, auch wenn Sie nicht geschlossen sind, und nachfolgende Anforderungen, die Sie verwenden, schlagen mit dem fehlerhaften **\_ \_ handle** fehl. Es ist nicht möglich, dass ausstehende asynchrone Anforderungen ordnungsgemäß abgeschlossen werden.
+Wenn ein übergeordnetes Handle geschlossen wird, werden alle untergeordneten Elemente indirekt ungültig, auch wenn sie nicht selbst geschlossen werden. Nachfolgende Anforderungen, die sie verwenden, schlagen mit dem Fehler **FEHLER \_ UNGÜLTIGES \_ HANDLE** fehl. Ausstehende asynchrone Anforderungen können nicht ordnungsgemäß abgeschlossen werden.
 
-Im folgenden Diagramm werden die Funktionen gezeigt, die das **hinternethandle** verwenden, das von [**WinHttpOpenRequest**](/windows/desktop/api/Winhttp/nf-winhttp-winhttpopenrequest)erstellt wurde. Die schattierten Felder stellen WinHTTP-Funktionen dar, die Handles erstellen, und in den einfachen Feldern werden die Funktionen angezeigt, die diese **HINTERNET** -Handles verwenden. Das Diagramm ist auch so organisiert, dass die Reihenfolge angezeigt wird, in der WinHTTP-Funktionen normalerweise aufgerufen werden.
+Das folgende Diagramm zeigt die Funktionen, die das von [**WinHttpOpenRequest**](/windows/desktop/api/Winhttp/nf-winhttp-winhttpopenrequest)erstellte **HINTERNET-Handle** verwenden. Die schattierten Felder stellen WinHTTP-Funktionen dar, die Handles erstellen, und die einfachen Felder zeigen die Funktionen an, die diese **HINTERNET-Handles** verwenden. Das Diagramm ist auch so organisiert, dass die Reihenfolge angezeigt wird, in der WinHTTP-Funktionen normalerweise aufgerufen werden.
 
-![Funktionen zum Erstellen von Handles](images/art-winhttp2.png)
+![Funktionen, die Handles erstellen](images/art-winhttp2.png)
 
-## <a name="explanation-of-the-handle-hierarchy"></a>Erläuterung der Handle-Hierarchie
+## <a name="explanation-of-the-handle-hierarchy"></a>Erläuterung der Handlehierarchie
 
-Zuerst wird ein Sitzungs Handle mit [**WinHttpOpen**](/windows/desktop/api/Winhttp/nf-winhttp-winhttpopen)erstellt. [**WinHttpConnect**](/windows/desktop/api/Winhttp/nf-winhttp-winhttpconnect) erfordert das Sitzungs Handle als ersten Parameter und gibt ein Verbindungs Handle für einen angegebenen Server zurück. Ein Anforderungs Handle wird von [**winhttpopanrequest**](/windows/desktop/api/Winhttp/nf-winhttp-winhttpopenrequest)erstellt, das das von [**WinHttpConnect**](/windows/desktop/api/Winhttp/nf-winhttp-winhttpconnect)erstellte Verbindungs Handle verwendet. Wenn die Anwendung zusätzliche Header zur Anforderung hinzufügen möchte oder wenn es erforderlich ist, dass die Anwendung Anmelde Informationen für die Authentifizierung festlegt, können [**winhttpadressquestheaders**](/windows/desktop/api/Winhttp/nf-winhttp-winhttpaddrequestheaders) und [**winhttpsetanmelde**](/windows/desktop/api/Winhttp/nf-winhttp-winhttpsetcredentials) Informationen mit diesem Anforderungs Handle aufgerufen werden. Die Anforderung wird von [**WinHttpSendRequest**](/windows/desktop/api/Winhttp/nf-winhttp-winhttpsendrequest)gesendet, die das Anforderungs Handle verwendet. Nachdem die Anforderung gesendet wurde, können zusätzliche Daten mithilfe von [**winhttpwrite tedata**](/windows/desktop/api/Winhttp/nf-winhttp-winhttpwritedata)an den Server gesendet werden, oder die Anwendung kann direkt zu [**WinHttpReceiveResponse**](/windows/desktop/api/Winhttp/nf-winhttp-winhttpreceiveresponse) überspringen, um anzugeben, dass keine weiteren Informationen an den Server gesendet werden. An diesem Punkt kann das Anforderungs handle abhängig vom Zweck der Anwendung zum Aufrufen von [**WinHttpQueryHeaders**](/windows/desktop/api/Winhttp/nf-winhttp-winhttpqueryheaders), [**winhttpqueryauthschemas**](/windows/desktop/api/Winhttp/nf-winhttp-winhttpqueryauthschemes)oder zum Abrufen einer Ressource mit " [**winhttpquerydataavailable**](/windows/desktop/api/Winhttp/nf-winhttp-winhttpquerydataavailable) " und " [**WinHttpReadData**](/windows/desktop/api/Winhttp/nf-winhttp-winhttpreaddata)" verwendet werden.
+Zunächst wird ein Sitzungshandle mit [**WinHttpOpen**](/windows/desktop/api/Winhttp/nf-winhttp-winhttpopen)erstellt. [**WinHttpConnect**](/windows/desktop/api/Winhttp/nf-winhttp-winhttpconnect) erfordert das Sitzungshandle als ersten Parameter und gibt ein Verbindungshandle für einen angegebenen Server zurück. Ein Anforderungshandle wird von [**WinHttpOpenRequest**](/windows/desktop/api/Winhttp/nf-winhttp-winhttpopenrequest)erstellt, das das von [**WinHttpConnect**](/windows/desktop/api/Winhttp/nf-winhttp-winhttpconnect)erstellte Verbindungshandle verwendet. Wenn die Anwendung der Anforderung zusätzliche Header hinzufügst oder die Anwendung Anmeldeinformationen für die Authentifizierung festlegen muss, können [**WinHttpAddRequestHeaders**](/windows/desktop/api/Winhttp/nf-winhttp-winhttpaddrequestheaders) und [**WinHttpSetCredentials**](/windows/desktop/api/Winhttp/nf-winhttp-winhttpsetcredentials) mit diesem Anforderungshandle aufgerufen werden. Die Anforderung wird von [**WinHttpSendRequest**](/windows/desktop/api/Winhttp/nf-winhttp-winhttpsendrequest)gesendet, die das Anforderungshandle verwendet. Nach dem Senden der Anforderung können zusätzliche Daten mit [**WinHttpWriteData**](/windows/desktop/api/Winhttp/nf-winhttp-winhttpwritedata)an den Server gesendet werden, oder die Anwendung kann direkt zu [**WinHttpReceiveResponse**](/windows/desktop/api/Winhttp/nf-winhttp-winhttpreceiveresponse) springen, um anzugeben, dass keine weiteren Informationen an den Server gesendet werden. An diesem Punkt kann das Anforderungshandle abhängig vom Zweck der Anwendung verwendet werden, um [**WinHttpQueryHeaders**](/windows/desktop/api/Winhttp/nf-winhttp-winhttpqueryheaders), [**WinHttpQueryAuthSchemes**](/windows/desktop/api/Winhttp/nf-winhttp-winhttpqueryauthschemes)oder eine Ressource mit [**WinHttpQueryDataAvailable**](/windows/desktop/api/Winhttp/nf-winhttp-winhttpquerydataavailable) und [**WinHttpReadData**](/windows/desktop/api/Winhttp/nf-winhttp-winhttpreaddata)abzurufen.
 
  
 

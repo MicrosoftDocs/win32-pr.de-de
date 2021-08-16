@@ -19,7 +19,7 @@ Die [**IDeliveryOptimizationJob-Schnittstelle**](ideliveryoptimizationjob.md) ma
 
 
 
-| Thema                                                                                     | Beschreibung                                                                                         |
+| Thema                                                                                     | BESCHREIBUNG                                                                                         |
 |-------------------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------|
 | [**AddFileWithRanges-Methode**](ideliveryoptimizationjob-addfilewithranges.md)<br/> | Fügt einem Downloadauftrag eine Datei hinzu und gibt die Bereiche der Datei an, die Sie herunterladen möchten.<br/> |
 

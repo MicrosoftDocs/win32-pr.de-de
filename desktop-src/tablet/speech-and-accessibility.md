@@ -1,28 +1,28 @@
 ---
-description: Damit auf Anwendungen zugegriffen werden kann, müssen Informationen zu Bildschirm Inhalten mithilfe der Spracherkennungs-Hilfsprogramme verfügbar gemacht werden.
+description: Damit auf Anwendungen zugegriffen werden kann, müssen Informationen zu Bildschirminhalten mithilfe der Spracherkennungs-Hilfsprogramme verfügbar gemacht werden.
 ms.assetid: 6fc4116b-1516-49e2-acad-da376d2efa50
-title: Sprache und Barrierefreiheit
+title: Spracherkennung und Barrierefreiheit
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 1e3632b9cd225ee9146d56148974bc823210e553
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 34b043b683b6754cb46752201cf0db39a1336f80b04e6f6dd1c2fb6e995d5a05
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106363224"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118715500"
 ---
-# <a name="speech-and-accessibility"></a>Sprache und Barrierefreiheit
+# <a name="speech-and-accessibility"></a>Spracherkennung und Barrierefreiheit
 
-Damit auf Anwendungen zugegriffen werden kann, müssen Informationen zu Bildschirm Inhalten mithilfe der Spracherkennungs-Hilfsprogramme verfügbar gemacht werden. Diese Hilfsprogramme müssen bestimmte Steuerelemente identifizieren und benennen, damit Sie einen gesprochenen Steuerelement Namen erkennen und dieses Steuerelement als Antwort auf gesprochene Befehle bearbeiten können.
+Damit auf Anwendungen zugegriffen werden kann, müssen Informationen zu Bildschirminhalten mithilfe der Spracherkennungs-Hilfsprogramme verfügbar gemacht werden. Diese Hilfsprogramme müssen bestimmte Steuerelemente identifizieren und benennen, damit sie einen gesprochenen Steuerelementnamen erkennen und dieses Steuerelement als Reaktion auf gesprochene Befehle bearbeiten können.
 
-Wenn Sie z. b. ein Spracheingabe-Hilfsprogramm verwenden, kann ein Benutzer beispielsweise "file" oder "Page Setup" verwenden, um das entsprechende Befehlsmenü Element auszuwählen, und dann "Landscape" (Querformat), um das entsprechende Kontrollkästchen auszuwählen. Sie müssen die Informationen zu diesen Elementen verfügbar machen, um das gewünschte Ziel zu erreichen.
+Wenn sie beispielsweise ein Spracheingabe-Hilfsprogramm verwenden, kann ein Benutzer "Datei" und dann "Seiteneinrichtung" sagen, um das entsprechende Befehlsmenüelement auszuwählen, und dann "Querformat" sagen, um das entsprechende Kontrollkästchen zu aktivieren. Sie müssen die Informationen zu diesen Elementen verfügbar machen, um das gewünschte Ziel zu erreichen.
 
-In den folgenden Themen wird die Verwendung von Richtlinien für Sprache und Barrierefreiheit erörtert.
+In den folgenden Themen wird die Verwendung von Richtlinien für Sprache und Barrierefreiheit behandelt.
 
--   [Verwenden von Microsoft Active Accessibility](using-microsoft-active-accessibility.md)
+-   [Verwenden Microsoft Active Accessibility](using-microsoft-active-accessibility.md)
 -   [Verfügbar machen von Steuerelementen und Menüs](exposing-controls-and-menus.md)
 -   [Verfügbar machen eines Fensters](exposing-a-window.md)
--   [Programm gesteuertes verfügbar machen von Text](exposing-text-programmatically.md)
+-   [Programmgesteuertes Verfügbarstellen von Text](exposing-text-programmatically.md)
 -   [Referenzen](references.md)
 
  

@@ -23,7 +23,7 @@ Die folgenden Themen werden erläutert.
 
 
 
-| Thema                                                                                      | BESCHREIBUNG                                                                                                                                     |
+| Thema                                                                                      | Beschreibung                                                                                                                                     |
 |--------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------|
 | [Erstellen eines Einzeilenbearbeitungs-Steuerelements](use-a-single-line--edit-control.md)<br/> | In diesem Thema wird veranschaulicht, wie Sie ein Dialogfeld erstellen, das ein einzeilenbasiertes Bearbeitungssteuerfeld enthält. <br/>                                        |
 | [Erstellen eines mehrstufigen Bearbeitungssteuer steuerelements](use-a-multiline-edit-control.md)<br/>      | In diesem Thema wird veranschaulicht, wie ein einfacher Textprozessor implementiert wird, indem dem Clientbereich eines Fensters ein mehrteiliges Bearbeitungssteuerwort hinzugefügt wird. <br/> |

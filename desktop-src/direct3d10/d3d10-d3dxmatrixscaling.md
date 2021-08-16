@@ -1,5 +1,5 @@
 ---
-description: 'D3DXMatrixScaling-Funktion (D3DX10Math.h): Erstellt eine Matrix, die entlang der x-Achse, der y-Achse und der Z-Achse skaliert wird.'
+description: 'D3DXMatrixScaling-Funktion (D3DX10Math.h): Erstellt eine Matrix, die entlang der X-Achse, der Y-Achse und der Z-Achse skaliert wird.'
 ms.assetid: 1804bf41-26de-4be1-ad62-7a871d7408e6
 title: D3DXMatrixScaling-Funktion (D3DX10Math.h)
 ms.topic: reference
@@ -57,7 +57,7 @@ Zeiger auf die [**D3DXMATRIX-Struktur,**](d3d10-d3dxmatrix.md) die das Ergebnis 
 
 Typ: **[ **FLOAT**](../winprog/windows-data-types.md)**
 
-Skalierungsfaktor, der entlang der x-Achse angewendet wird.
+Skalierungsfaktor, der entlang der X-Achse angewendet wird.
 
 </dd> <dt>
 
@@ -100,7 +100,7 @@ Der Rückgabewert für diese Funktion ist der gleiche Wert, der im pOut-Paramete
 
 
 
-## <a name="see-also"></a>Weitere Informationen:
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 

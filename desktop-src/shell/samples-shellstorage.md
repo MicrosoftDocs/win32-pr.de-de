@@ -1,5 +1,5 @@
 ---
-description: Veranschaulicht das Erstellen von Dateien und Ordnern in Shellcontainern. Zeigt auch, wie sie im Shell-Element gespeichert werden, das vom Dateidialogfeld zurückgegeben wird.
+description: Veranschaulicht das Erstellen von Dateien und Ordnern in Shellcontainern. Außerdem wird gezeigt, wie sie in dem Shellelement speichern, das vom Dateidialogfeld zurückgegeben wird.
 title: Beispiel für den Shellspeicher
 ms.topic: article
 ms.date: 05/31/2018
@@ -18,7 +18,7 @@ ms.locfileid: "117858259"
 ---
 # <a name="shell-storage-sample"></a>Beispiel für den Shellspeicher
 
-Veranschaulicht das Erstellen von Dateien und Ordnern in Shellcontainern. Zeigt auch, wie sie im Shell-Element gespeichert werden, das vom Dateidialogfeld zurückgegeben wird.
+Veranschaulicht das Erstellen von Dateien und Ordnern in Shellcontainern. Außerdem wird gezeigt, wie sie in dem Shellelement speichern, das vom Dateidialogfeld zurückgegeben wird.
 
 Dieses Thema enthält folgende Abschnitte:
 
@@ -31,7 +31,7 @@ Dieses Thema enthält folgende Abschnitte:
 
 
 
-| Product (Produkt)                                | Mindestversion des Produkts |
+| Product (Produkt)                                | Mindestproduktversion |
 |----------------------------------------|-------------------------|
 | Windows                                | Windows Vista           |
 | Windows Software Development Kit (SDK) | 7.0                     |

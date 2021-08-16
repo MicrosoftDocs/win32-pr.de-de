@@ -1,9 +1,9 @@
 ---
 title: IDCompositionScaleTransform3D SetScaleX-Methoden (Dcomp.h)
-description: Ändert oder animiert den Wert der ScaleX-Eigenschaft einer 3D-Skalierungs Transformation.
+description: Ändert oder animiert den Wert der ScaleX-Eigenschaft einer 3D-Skalierungstransformation.
 ms.assetid: 96A7B9EC-7CD9-489F-AB97-A297321BDACD
 keywords:
-- Setscalex-Methoden directcomposition
+- SetScaleX-Methoden DirectComposition
 topic_type:
 - apiref
 api_location:
@@ -12,16 +12,16 @@ api_type:
 - DllExport
 ms.date: 07/02/2019
 ms.topic: reference
-ms.openlocfilehash: 0799c0fa93564e4db277311ae6492a5f7eb85649
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: f7fc52b6b98bfcc60bdf8db1636c6ef23c0c62ea7fb382a9c17e8daa00b8ddae
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "106344715"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118505520"
 ---
-# <a name="idcompositionscaletransform3dsetscalex-methods"></a>IDCompositionScaleTransform3D:: setscalex-Methoden
+# <a name="idcompositionscaletransform3dsetscalex-methods"></a>IDCompositionScaleTransform3D::SetScaleX-Methoden
 
-Ändert oder animiert den Wert der ScaleX-Eigenschaft einer 3D-Skalierungs Transformation. Die ScaleX-Eigenschaft gibt den Skalierungsfaktor entlang der x-Achse an.
+Ändert oder animiert den Wert der ScaleX-Eigenschaft einer 3D-Skalierungstransformation. Die ScaleX-Eigenschaft gibt den Skalierungsfaktor entlang der X-Achse an.
 
 ### <a name="overload-list"></a>Überladeliste
 
@@ -29,8 +29,8 @@ ms.locfileid: "106344715"
 
 | Methode                                                                                                        | BESCHREIBUNG                                           |
 |:--------------------------------------------------------------------------------------------------------------|:------------------------------------------------------|
-| [**Setscalex (float)**](/windows/win32/api/dcomp/nf-dcomp-idcompositionscaletransform3d-setscalex(float))                                     | Ändert den Wert der ScaleX-Eigenschaft.<br/>  |
-| [**Setscalex (idcompositionanimation \* )**](/windows/win32/api/dcomp/nf-dcomp-idcompositionscaletransform3d-setscalex(idcompositionanimation)) | Animiert den Wert der ScaleX-Eigenschaft.<br/> |
+| [**SetScaleX(float)**](/windows/win32/api/dcomp/nf-dcomp-idcompositionscaletransform3d-setscalex(float))                                     | Ändert den Wert der ScaleX-Eigenschaft.<br/>  |
+| [**SetScaleX(IDCompositionAnimation \* )**](/windows/win32/api/dcomp/nf-dcomp-idcompositionscaletransform3d-setscalex(idcompositionanimation)) | Animiert den Wert der ScaleX-Eigenschaft.<br/> |
 
 
 
@@ -40,22 +40,22 @@ ms.locfileid: "106344715"
 
 | Anforderung | Wert |
 |-------------------------------------|--------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows 8 \[ -Desktop-Apps\]<br/>                                           |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2012 \[ -Desktop-Apps\]<br/>                                 |
-| Header<br/>                   | <dl> <dt>Dcomp. h</dt> </dl>   |
-| Bibliothek<br/>                  | <dl> <dt>Dcomp. lib</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows 8 \[ Desktop-Apps\]<br/>                                           |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2012-Desktop-Apps\]<br/>                                 |
+| Header<br/>                   | <dl> <dt>Dcomp.h</dt> </dl>   |
+| Bibliothek<br/>                  | <dl> <dt>Dcomp.lib</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>Dcomp.dll</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
 [**IDCompositionScaleTransform3D**](/windows/win32/api/dcomp/nn-dcomp-idcompositionscaletransform)
 </dt> <dt>
 
-[**IDCompositionScaleTransform3D:: setscaley**](/windows/win32/api/dcomp/nf-dcomp-idcompositionscaletransform3d-setscaley(float))
+[**IDCompositionScaleTransform3D::SetScaley**](/windows/win32/api/dcomp/nf-dcomp-idcompositionscaletransform3d-setscaley(float))
 </dt> <dt>
 
 [**IDCompositionScaleTransform3D::SetScaleZ**](/windows/win32/api/dcomp/nf-dcomp-idcompositionscaletransform3d-setscalez(float))

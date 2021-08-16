@@ -1,5 +1,5 @@
 ---
-description: Die CIM \_ -Chip Klasse stellt den Typ der integrierten Verbindungs Hardware dar, einschließlich ASICs, Prozessoren, Speicherchips usw.
+description: Die \_ CIM-Chipklasse stellt den Typ der integrierten Leitungshardware dar, einschließlich ASICs, Prozessoren, Speicherchips usw.
 ms.assetid: 3c2b0023-5d02-49b9-90f5-d66eb8a103f0
 ms.tgt_platform: multiple
 title: CIM_Chip-Klasse
@@ -33,23 +33,23 @@ api_type:
 - DllExport
 api_location:
 - CIMWin32.dll
-ms.openlocfilehash: 953ae371edca42409246307b21aad69a02cf4a66
-ms.sourcegitcommit: c7add10d695482e1ceb72d62b8a4ebd84ea050f7
+ms.openlocfilehash: 7a20d2066741dd14ada9ed35f29e226723c4fc5d7d3766f1a3762fdf070d0b03
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104483550"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117835008"
 ---
-# <a name="cim_chip-class"></a>CIM- \_ Chip Klasse
+# <a name="cim_chip-class"></a>\_CIM-Chipklasse
 
-Die **CIM- \_ Chip** Klasse stellt den Typ der integrierten Verbindungs Hardware dar, einschließlich ASICs, Prozessoren, Speicherchips usw.
+Die **\_ CIM-Chipklasse** stellt den Typ der integrierten Leitungshardware dar, einschließlich ASICs, Prozessoren, Speicherchips usw.
 
 > [!IMPORTANT]
-> Die Klassen der DMTF-CIM (Common Information Model) sind die übergeordneten Klassen, auf denen WMI-Klassen erstellt werden. WMI unterstützt zurzeit nur die [CIM 2. x-Versions Schemas](https://dmtf.org/standards/cim/schemas).
+> Die CIM-Klassen (Distributed Management Task Force) (DMTF (Distributed Management Task Force) (Common Information Model) sind die übergeordneten Klassen, auf denen WMI-Klassen erstellt werden. WMI unterstützt derzeit nur die [CIM 2.x-Versionsschemas.](https://dmtf.org/standards/cim/schemas)
 
  
 
-Die folgende Syntax wird durch MOF-Code (Managed Object Format) vereinfacht und schließt alle geerbten Eigenschaften ein. Eigenschaften werden in alphabetischer Reihenfolge und nicht in der MOF-Reihenfolge aufgelistet.
+Die folgende Syntax wird durch MOF-Code (Managed Object Format) vereinfacht und schließt alle geerbten Eigenschaften ein. Eigenschaften werden in alphabetischer Reihenfolge und nicht in MOF-Reihenfolge aufgeführt.
 
 ## <a name="syntax"></a>Syntax
 
@@ -81,47 +81,47 @@ class CIM_Chip : CIM_PhysicalComponent
 
 ## <a name="members"></a>Member
 
-Die **CIM- \_ Chip** Klasse verfügt über diese Typen von Membern:
+Die **\_ CIM-Chipklasse** verfügt über diese Typen von Membern:
 
 -   [Eigenschaften](#properties)
 
 ### <a name="properties"></a>Eigenschaften
 
-Die **CIM- \_ Chip** Klasse verfügt über diese Eigenschaften.
+Die **\_ CIM-Chipklasse** verfügt über diese Eigenschaften.
 
 <dl> <dt>
 
 **Caption**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**maxlen**](/windows/desktop/WmiSdk/standard-qualifiers) (64), [**Display Name**](/windows/desktop/WmiSdk/standard-qualifiers) ("Caption")
+Qualifizierer: [**MaxLen**](/windows/desktop/WmiSdk/standard-qualifiers) (64), [**DisplayName**](/windows/desktop/WmiSdk/standard-qualifiers) ("Caption")
 </dt> </dl>
 
-Eine kurze Textbeschreibung des-Objekts.
+Eine kurze Textbeschreibung des Objekts.
 
 Diese Eigenschaft wird von [**CIM \_ ManagedSystemElement**](cim-managedsystemelement.md)geerbt.
 
 </dd> <dt>
 
-**"Name der Klassenname"**
+**CreationClassName**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**CIM- \_ Taste**](/windows/desktop/WmiSdk/standard-wmi-qualifiers), [**maxlen**](/windows/desktop/WmiSdk/standard-qualifiers) (256)
+Qualifizierer: [**\_ CIM-Schlüssel,**](/windows/desktop/WmiSdk/standard-wmi-qualifiers) [**MaxLen**](/windows/desktop/WmiSdk/standard-qualifiers) (256)
 </dt> </dl>
 
-Der Name der Klasse oder Unterklasse, die bei der Erstellung einer Instanz verwendet wird. Wenn diese Eigenschaft mit anderen Schlüsseleigenschaften der-Klasse verwendet wird, können alle Instanzen der-Klasse und deren Unterklassen eindeutig identifiziert werden.
+Name der Klasse oder Unterklasse, die bei der Erstellung einer Instanz verwendet wird. Bei Verwendung mit anderen Schlüsseleigenschaften der -Klasse ermöglicht diese Eigenschaft die eindeutige Identifizierung aller Instanzen der -Klasse und ihrer Unterklassen.
 
 Diese Eigenschaft wird von [**CIM \_ PhysicalElement**](cim-physicalelement.md)geerbt.
 
@@ -130,31 +130,31 @@ Diese Eigenschaft wird von [**CIM \_ PhysicalElement**](cim-physicalelement.md)g
 **Beschreibung**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**Display Name**](/windows/desktop/WmiSdk/standard-qualifiers) ("Description")
+Qualifizierer: [**DisplayName**](/windows/desktop/WmiSdk/standard-qualifiers) ("Beschreibung")
 </dt> </dl>
 
-Eine Textbeschreibung des-Objekts.
+Eine Textbeschreibung des Objekts.
 
 Diese Eigenschaft wird von [**CIM \_ ManagedSystemElement**](cim-managedsystemelement.md)geerbt.
 
 </dd> <dt>
 
-**Formfaktor**
+**FormFactor**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt16**
+Datentyp: **uint16**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Der Implementierungs Formfaktor für den Chip. Die folgenden Werte können angegeben werden.
+Implementierungsformfaktor für den Chip. Die folgenden Werte können angegeben werden.
 
 <dt>
 
@@ -167,7 +167,7 @@ Der Implementierungs Formfaktor für den Chip. Die folgenden Werte können angeg
 
 <span id="Other"></span><span id="other"></span><span id="OTHER"></span>
 
-**Sonstige** (1)
+**Andere** (1)
 
 
 </dt> <dd></dd> <dt>
@@ -216,14 +216,14 @@ Der Implementierungs Formfaktor für den Chip. Die folgenden Werte können angeg
 
 <span id="DIMM"></span><span id="dimm"></span>
 
-**DIMM** (8)
+**DIM** (8)
 
 
 </dt> <dd></dd> <dt>
 
 <span id="TSOP"></span><span id="tsop"></span>
 
-**Wahrheits** Satz (9)
+**TSOP** (9)
 
 
 </dt> <dd></dd> <dt>
@@ -237,7 +237,7 @@ Der Implementierungs Formfaktor für den Chip. Die folgenden Werte können angeg
 
 <span id="RIMM"></span><span id="rimm"></span>
 
-**RIMM** (11)
+**ÄNDER** (11)
 
 
 </dt> <dd></dd> <dt>
@@ -251,7 +251,7 @@ Der Implementierungs Formfaktor für den Chip. Die folgenden Werte können angeg
 
 <span id="SRIMM"></span><span id="srimm"></span>
 
-**Srimm** (13)
+**SRIMM** (13)
 
 
 </dt> <dd></dd> <dt>
@@ -279,7 +279,7 @@ Der Implementierungs Formfaktor für den Chip. Die folgenden Werte können angeg
 
 <span id="TQFP"></span><span id="tqfp"></span>
 
-**TQFP** (17)
+**THACKP** (17)
 
 
 </dt> <dd></dd> <dt>
@@ -314,7 +314,7 @@ Der Implementierungs Formfaktor für den Chip. Die folgenden Werte können angeg
 
 <span id="FPBGA"></span><span id="fpbga"></span>
 
-**Fpbga** (22)
+**FPBGA** (22)
 
 
 </dt> <dd></dd> <dt>
@@ -328,41 +328,41 @@ Der Implementierungs Formfaktor für den Chip. Die folgenden Werte können angeg
 
 <span id="FB-DIMM"></span><span id="fb-dimm"></span>
 
-**FB-DIMM** (24)
+**FB-DIM** (24)
 
 
 </dt> <dd></dd> </dl>
 
 </dd> <dt>
 
-**"Anappable"**
+**HotSwappable**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **boolescher** Wert
+Datentyp: **boolescher Wert**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-**True** gibt an, dass das Paket im laufenden Betrieb ausgetauscht werden kann. Ein physisches Paket kann mit einem ausgetauschten Element ersetzt werden, wenn das Element durch ein physisch anderes (aber gleichwertiges) Element ersetzt werden kann, während das enthaltende Paket eingeschaltet ist. Beispielsweise kann eine Lüfter-Komponente so entworfen werden, dass Sie im laufenden Betrieb ausgetauscht wird. Alle Komponenten, bei denen es sich um eine ausgetauschte Komponente handelt, sind von Natur aus austauschbar und austauschbar.
+True gibt an, dass das Paket im laufenden Betrieb getauscht werden kann. Ein physisches Paket kann im laufenden Betrieb ausgetauscht werden, wenn das Element durch ein physisch anderes (aber gleichwertiges) ersetzt werden kann, während das enthaltende Paket aktiviert ist. Beispielsweise kann eine Lüfterkomponente so entworfen werden, dass sie im laufenden Betrieb ausgetauscht wird. Alle Komponenten, die im laufenden Betrieb ausgetauscht werden können, können grundsätzlich entfernt und ersetzt werden.
 
-Diese Eigenschaft wird von [**CIM \_ physicalcomponent**](cim-physicalcomponent.md)geerbt.
+Diese Eigenschaft wird von [**CIM \_ PhysicalComponent**](cim-physicalcomponent.md)geerbt.
 
 </dd> <dt>
 
 **InstallDate**
 </dt> <dd> <dl> <dt>
 
-**Datentyp: DateTime**
+Datentyp: **datetime**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**mappingstrings**](/windows/desktop/WmiSdk/standard-qualifiers) ("MIF". DMTF \| ComponentID \| 001,5 "), [**Display Name**](/windows/desktop/WmiSdk/standard-qualifiers) (" Install Date ")
+Qualifizierer: [**MappingStrings**](/windows/desktop/WmiSdk/standard-qualifiers) ("MIF. DMTF \| ComponentID \| 001.5"), [**DisplayName**](/windows/desktop/WmiSdk/standard-qualifiers) ("Installationsdatum")
 </dt> </dl>
 
-Gibt an, wann das Objekt installiert wurde. Ein fehlender Wert weist nicht darauf hin, dass das Objekt nicht installiert ist.
+Gibt an, wann das Objekt installiert wurde. Das Fehlen eines Werts gibt nicht an, dass das Objekt nicht installiert ist.
 
 Diese Eigenschaft wird von [**CIM \_ ManagedSystemElement**](cim-managedsystemelement.md)geerbt.
 
@@ -371,16 +371,16 @@ Diese Eigenschaft wird von [**CIM \_ ManagedSystemElement**](cim-managedsystemel
 **Manufacturer**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**maxlen**](/windows/desktop/WmiSdk/standard-qualifiers) (256)
+Qualifizierer: [**MaxLen**](/windows/desktop/WmiSdk/standard-qualifiers) (256)
 </dt> </dl>
 
-Der Name der Organisation, die für die Erstellung des physischen Elements verantwortlich ist. Weitere Informationen finden Sie unter der **Hersteller** Eigenschaft des [**CIM- \_ Produkts**](cim-product.md).
+Name der Organisation, die für die Erstellung des physischen Elements verantwortlich ist. Weitere Informationen finden Sie unter der **Vendor-Eigenschaft** von [**CIM \_ Product**](cim-product.md).
 
 Diese Eigenschaft wird von [**CIM \_ PhysicalElement**](cim-physicalelement.md)geerbt.
 
@@ -389,13 +389,13 @@ Diese Eigenschaft wird von [**CIM \_ PhysicalElement**](cim-physicalelement.md)g
 **Modell**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**maxlen**](/windows/desktop/WmiSdk/standard-qualifiers) (64)
+Qualifizierer: [**MaxLen**](/windows/desktop/WmiSdk/standard-qualifiers) (64)
 </dt> </dl>
 
 Der Name, mit dem das physische Element allgemein bekannt ist.
@@ -407,16 +407,16 @@ Diese Eigenschaft wird von [**CIM \_ PhysicalElement**](cim-physicalelement.md)g
 **Name**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**Display Name**](/windows/desktop/WmiSdk/standard-qualifiers) ("Name")
+Qualifizierer: [**DisplayName**](/windows/desktop/WmiSdk/standard-qualifiers) ("Name")
 </dt> </dl>
 
-Die Bezeichnung, nach der das-Objekt bekannt ist. Bei einer Unterklasse kann diese Eigenschaft als Schlüsseleigenschaft überschrieben werden.
+Bezeichnung, mit der das Objekt bekannt ist. Bei Einer Unterklasse kann diese Eigenschaft als Schlüsseleigenschaft überschrieben werden.
 
 Diese Eigenschaft wird von [**CIM \_ ManagedSystemElement**](cim-managedsystemelement.md)geerbt.
 
@@ -425,13 +425,13 @@ Diese Eigenschaft wird von [**CIM \_ ManagedSystemElement**](cim-managedsystemel
 **OtherIdentifyingInfo**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Zusätzliche Daten, über die Informationen zu Asset-Tags hinausgehen, die zum Identifizieren eines physischen Elements verwendet werden können. Ein Beispiel hierfür sind Barcode Daten, die einem Element zugeordnet sind, das ebenfalls über ein Bestands Kennzeichen verfügt. Beachten Sie Folgendes: Wenn nur Barcode Daten verfügbar sind und eindeutig sind und als Element Schlüssel verwendet werden können, ist diese Eigenschaft NULL, und die Barcode Daten werden als Klassen Schlüssel in der **Tag** -Eigenschaft verwendet.
+Zusätzliche Daten, die über Assettaginformationen hinausgehen und zum Identifizieren eines physischen Elements verwendet werden können. Ein Beispiel sind Balkencodedaten, die einem Element zugeordnet sind, das ebenfalls über ein Medienobjekttag verfügt. Beachten Sie Folgendes: Wenn nur Balkencodedaten verfügbar sind und eindeutig sind und als Elementschlüssel verwendet werden können, wäre diese Eigenschaft NULL, und die Balkencodedaten würden als Klassenschlüssel in der **Tag-Eigenschaft** verwendet werden.
 
 Diese Eigenschaft wird von [**CIM \_ PhysicalElement**](cim-physicalelement.md)geerbt.
 
@@ -440,79 +440,79 @@ Diese Eigenschaft wird von [**CIM \_ PhysicalElement**](cim-physicalelement.md)g
 **PartNumber**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**maxlen**](/windows/desktop/WmiSdk/standard-qualifiers) (256)
+Qualifizierer: [**MaxLen**](/windows/desktop/WmiSdk/standard-qualifiers) (256)
 </dt> </dl>
 
-Teilenummer, die von der Organisation zugewiesen wurde, die für das Erstellen oder die Herstellung des physischen Elements verantwortlich ist
+Teilenummer, die von der Organisation zugewiesen wird, die für die Produktion oder Herstellung des physischen Elements verantwortlich ist.
 
 Diese Eigenschaft wird von [**CIM \_ PhysicalElement**](cim-physicalelement.md)geerbt.
 
 </dd> <dt>
 
-**Poweredon**
+**PoweredOn**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **boolescher** Wert
+Datentyp: **boolescher Wert**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-**True** gibt an, dass das physische Element eingeschaltet ist. Andernfalls ist Sie zurzeit deaktiviert.
+True gibt an, dass das physische Element eingeschaltet ist. Andernfalls ist sie derzeit deaktiviert.
 
 Diese Eigenschaft wird von [**CIM \_ PhysicalElement**](cim-physicalelement.md)geerbt.
 
 </dd> <dt>
 
-**Ab**
+**Abnehmbare**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **boolescher** Wert
+Datentyp: **boolescher Wert**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-**True** gibt an, dass dieses Element in den physischen Container übernommen werden soll, in dem es normalerweise gefunden wird, ohne die Funktion der gesamten Paket Erstellung zu beeinträchtigen. Ein Paket gilt auch dann als austauschbar, wenn die Stromversorgung deaktiviert sein muss, um das Entfernen auszuführen. Wenn die Stromversorgung aktiviert und das Paket entfernt werden kann, ist das-Element austauschbar und kann im laufenden Betrieb ausgetauscht werden. Beispielsweise kann ein erweiterbarer Prozessor Chip entfernt werden.
+True gibt an, dass dieses Element so konzipiert ist, dass es in den physischen Container, in dem es normalerweise gefunden wird, ein- und aus dem Container aufgenommen wird, ohne die Funktion der gesamten Paketierung zu beeinträchtigen. Ein Paket gilt auch dann als wechselbar, wenn die Stromversorgung ausgeschaltet sein muss, um die Entfernung durchzuführen. Wenn die Stromversorgung eingeschaltet und das Paket entfernt werden kann, ist das Element wechselbar und kann im laufenden Betrieb ausgetauscht werden. Beispielsweise kann ein aktualisierbarer Prozessorchip entfernt werden.
 
-Diese Eigenschaft wird von [**CIM \_ physicalcomponent**](cim-physicalcomponent.md)geerbt.
+Diese Eigenschaft wird von [**CIM \_ PhysicalComponent**](cim-physicalcomponent.md)geerbt.
 
 </dd> <dt>
 
-**Replaceable**
+**Austauschbare**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **boolescher** Wert
+Datentyp: **boolescher Wert**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Wenn der Wert **true** ist, kann das-Element durch einen physisch anderen ersetzt werden. Beispielsweise ist für einige Computersysteme das Upgrade des Hauptprozessor-Chips auf eine höhere Bewertungsstufe möglich. In diesem Fall wird der Prozessor als ersetzbar bezeichnet. Alle wechselkomponenten sind von Natur aus ersetzbar.
+True gibt an, dass das Element durch ein physisch anderes ersetzt werden kann. Einige Computersysteme ermöglichen beispielsweise das Upgrade des Hauptprozessorchips auf eine höhere Uhrbewertung. In diesem Fall wird der Prozessor als ersetzbar bezeichnet. Alle Wechselkomponenten sind grundsätzlich austauschbar.
 
-Diese Eigenschaft wird von [**CIM \_ physicalcomponent**](cim-physicalcomponent.md)geerbt.
+Diese Eigenschaft wird von [**CIM \_ PhysicalComponent**](cim-physicalcomponent.md)geerbt.
 
 </dd> <dt>
 
-**SerialNumber**
+**Serialnumber**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**maxlen**](/windows/desktop/WmiSdk/standard-qualifiers) (64)
+Qualifizierer: [**MaxLen**](/windows/desktop/WmiSdk/standard-qualifiers) (64)
 </dt> </dl>
 
-Vom Hersteller zugewiesene Nummer, mit der das physische Element identifiziert wird.
+Vom Hersteller zugeordnete Nummer, die zum Identifizieren des physischen Elements verwendet wird.
 
 Diese Eigenschaft wird von [**CIM \_ PhysicalElement**](cim-physicalelement.md)geerbt.
 
@@ -521,16 +521,16 @@ Diese Eigenschaft wird von [**CIM \_ PhysicalElement**](cim-physicalelement.md)g
 **SKU**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**maxlen**](/windows/desktop/WmiSdk/standard-qualifiers) (64)
+Qualifizierer: [**MaxLen**](/windows/desktop/WmiSdk/standard-qualifiers) (64)
 </dt> </dl>
 
-Die Stock Keeping Unit-Nummer für dieses physische Element.
+Lagerhaltungseinheitennummer für dieses physische Element.
 
 Diese Eigenschaft wird von [**CIM \_ PhysicalElement**](cim-physicalelement.md)geerbt.
 
@@ -539,18 +539,18 @@ Diese Eigenschaft wird von [**CIM \_ PhysicalElement**](cim-physicalelement.md)g
 **Status**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**maxlen**](/windows/desktop/WmiSdk/standard-qualifiers) (10), [**Display Name**](/windows/desktop/WmiSdk/standard-qualifiers) ("Status")
+Qualifizierer: [**MaxLen**](/windows/desktop/WmiSdk/standard-qualifiers) (10), [**DisplayName**](/windows/desktop/WmiSdk/standard-qualifiers) ("Status")
 </dt> </dl>
 
-Eine Zeichenfolge, die den aktuellen Status des Objekts angibt. Der Betriebsstatus und der nicht betriebliche Status können definiert werden. Der Betriebsstatus kann "OK", "heruntergestuft" und "pred Fail" enthalten. "Pred Fail" gibt an, dass ein Element ordnungsgemäß funktioniert, aber einen Fehler vorhersagt (z. b. ein intelligent-fähiges Festplattenlaufwerk).
+Zeichenfolge, die den aktuellen Status des Objekts angibt. Der Betriebsstatus und der nicht betriebsbereite Status können definiert werden. Der Betriebsstatus kann "OK", "Heruntergestuft" und "Fehler vor dem Fehler" enthalten. "Pred Fail" gibt an, dass ein Element ordnungsgemäß funktioniert, aber einen Fehler vorhersagt (z. B. ein SMART-fähiges Festplattenlaufwerk).
 
-Der nicht betriebliche Status kann "Error", "Starting", "Stop" und "Service" enthalten. "Service" kann während der Datenträger Spiegelung angewendet werden, indem eine Benutzer Berechtigungs Liste oder eine andere administrative Arbeit neu geladen wird. Nicht alle diese Arbeiten sind online, aber das verwaltete Element ist weder "OK" noch in einem der anderen Zustände.
+Nicht betriebsbereite Status können "Error", "Starting", "Stopping" und "Service" sein. "Dienst" kann während der Datenträgerspiegelung, beim erneuten Laden einer Benutzerberechtigungsliste oder bei anderen Administrativen Arbeiten angewendet werden. Nicht alle dieser Arbeiten sind online, aber das verwaltete Element ist weder "OK" noch in einem der anderen Zustände.
 
 Diese Eigenschaft wird von [**CIM \_ ManagedSystemElement**](cim-managedsystemelement.md)geerbt.
 
@@ -574,35 +574,35 @@ Folgende Werte sind gültig:
 
 <span id="Degraded"></span><span id="degraded"></span><span id="DEGRADED"></span>
 
-Herunter **gestuft ("** heruntergestuft")
+**Heruntergestuft** ("Heruntergestuft")
 
 
 </dt> <dd></dd> <dt>
 
 <span id="Unknown"></span><span id="unknown"></span><span id="UNKNOWN"></span>
 
-**Unbekannt** ("unbekannt")
+**Unbekannt** ("Unbekannt")
 
 
 </dt> <dd></dd> <dt>
 
 <span id="Pred_Fail"></span><span id="pred_fail"></span><span id="PRED_FAIL"></span>
 
-**Pred-** Fehler ("pred Fail")
+**Pred Fail** ("Pred Fail")
 
 
 </dt> <dd></dd> <dt>
 
 <span id="Starting"></span><span id="starting"></span><span id="STARTING"></span>
 
-Wird **gestartet** ("wird gestartet")
+**Wird gestartet** ("Wird gestartet")
 
 
 </dt> <dd></dd> <dt>
 
 <span id="Stopping"></span><span id="stopping"></span><span id="STOPPING"></span>
 
-Wird **beendet ("wird angehalten** ")
+**Beenden** ("Wird beendet")
 
 
 </dt> <dd></dd> <dt>
@@ -616,28 +616,28 @@ Wird **beendet ("wird angehalten** ")
 
 <span id="Stressed"></span><span id="stressed"></span><span id="STRESSED"></span>
 
-**Betont** ("gestresst")
+**Mannslast** ("1000")
 
 
 </dt> <dd></dd> <dt>
 
 <span id="NonRecover"></span><span id="nonrecover"></span><span id="NONRECOVER"></span>
 
-**Nicht wiederherstellen** ("nicht wiederherstellen")
+**NonRecover** ("NonRecover")
 
 
 </dt> <dd></dd> <dt>
 
 <span id="No_Contact"></span><span id="no_contact"></span><span id="NO_CONTACT"></span>
 
-**Kein Kontakt** ("kein Kontakt")
+**Kein Kontakt** ("Kein Kontakt")
 
 
 </dt> <dd></dd> <dt>
 
 <span id="Lost_Comm"></span><span id="lost_comm"></span><span id="LOST_COMM"></span>
 
-**Verlorene** Kommunikations ("verlorene Kommunikations-")
+**Verlorenes Komma** ("Verlorenes Komma")
 
 
 </dt> <dd></dd> </dl>
@@ -647,16 +647,16 @@ Wird **beendet ("wird angehalten** ")
 **Tag**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**CIM- \_ Taste**](/windows/desktop/WmiSdk/standard-wmi-qualifiers), [**maxlen**](/windows/desktop/WmiSdk/standard-qualifiers) (256)
+Qualifizierer: [**\_ CIM-Schlüssel,**](/windows/desktop/WmiSdk/standard-wmi-qualifiers) [**MaxLen**](/windows/desktop/WmiSdk/standard-qualifiers) (256)
 </dt> </dl>
 
-Identifiziert das physische Element eindeutig und fungiert als Schlüssel des Elements. Diese Eigenschaft kann Informationen enthalten, z. b. Daten zu Bestands Kennzeichen oder Seriennummer. Der Schlüssel für [**CIM \_ PhysicalElement**](cim-physicalelement.md) wird in der Objekthierarchie sehr hoch platziert, um die Hardware oder Entität unabhängig von der physischen Platzierung in (oder in) Schränken, Adaptern usw. unabhängig voneinander zu identifizieren. Beispielsweise kann eine Wechsel Komponente, für die ein ausgetauschte Vorgang ausgeführt werden kann, aus dem enthaltenden (Bereichs bezogenen) Paket entnommen und vorübergehend nicht verwendet werden. Das Objekt bleibt weiterhin vorhanden und kann sogar in einen anderen Bereichs Container eingefügt werden. Der Schlüssel für ein physisches Element ist eine beliebige Zeichenfolge, die unabhängig von der Platzierung oder der Speicherort orientierten Hierarchie definiert wird.
+Identifiziert das physische Element eindeutig und dient als Schlüssel des Elements. Diese Eigenschaft kann Informationen enthalten, z. B. Assettag- oder Seriennummerndaten. Der Schlüssel für [**CIM \_ PhysicalElement**](cim-physicalelement.md) wird sehr hoch in der Objekthierarchie platziert, um die Hardware oder Entität unabhängig von der physischen Platzierung in Schränken, Adaptern usw. zu identifizieren. Beispielsweise kann eine Wechselkomponente, die im laufenden Betrieb ausgetauscht werden kann, aus dem enthaltenden Paket (Bereichspaket) entnommen und vorübergehend nicht verwendet werden. Das Objekt ist weiterhin vorhanden und kann sogar in einen anderen Bereichscontainer eingefügt werden. Der Schlüssel für ein physisches Element ist eine beliebige Zeichenfolge, die unabhängig von der Platzierung oder der standortorientierten Hierarchie definiert ist.
 
 Diese Eigenschaft wird von [**CIM \_ PhysicalElement**](cim-physicalelement.md)geerbt.
 
@@ -665,13 +665,13 @@ Diese Eigenschaft wird von [**CIM \_ PhysicalElement**](cim-physicalelement.md)g
 **Version**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> <dt>
 
-Qualifizierer: [**maxlen**](/windows/desktop/WmiSdk/standard-qualifiers) (64)
+Qualifizierer: [**MaxLen**](/windows/desktop/WmiSdk/standard-qualifiers) (64)
 </dt> </dl>
 
 Gibt die Version des physischen Elements an.
@@ -680,13 +680,13 @@ Diese Eigenschaft wird von [**CIM \_ PhysicalElement**](cim-physicalelement.md)g
 
 </dd> </dl>
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Die **CIM- \_ Chip** Klasse wird von [**CIM \_ physicalcomponent**](cim-physicalcomponent.md)abgeleitet.
+Die **\_ CIM-Chipklasse** wird von [**CIM \_ PhysicalComponent**](cim-physicalcomponent.md)abgeleitet.
 
-Diese Klasse wird von WMI nicht implementiert. Weitere Informationen zu Klassen, die vom **CIM- \_ Chip** abgeleitet sind, finden Sie unter [Win32-Klassen](win32-provider.md).
+WMI implementiert diese Klasse nicht. Weitere Informationen zu Klassen, die von **\_ CIM-Chip** abgeleitet wurden, finden Sie unter [Win32-Klassen.](win32-provider.md)
 
-Diese Dokumentation wird von den von der DMTF veröffentlichten CIM-Klassen Beschreibungen abgeleitet. Microsoft hat möglicherweise Änderungen an den korrekten geringfügigen Fehlern vorgenommen, den Microsoft SDK-Dokumentations Standards entsprechen oder weitere Informationen bereitstellen.
+Diese Dokumentation wird von den CIM-Klassenbeschreibungen abgeleitet, die von dmtf veröffentlicht wurden. Möglicherweise hat Microsoft Änderungen vorgenommen, um kleinere Fehler zu korrigieren, den Dokumentationsstandards des Microsoft SDK zu entsprechen oder weitere Informationen bereitzustellen.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -696,17 +696,17 @@ Diese Dokumentation wird von den von der DMTF veröffentlichten CIM-Klassen Besc
 |-------------------------------------|-----------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows Vista<br/>                                                                |
 | Unterstützte Mindestversion (Server)<br/> | Windows Server 2008<br/>                                                          |
-| Namespace<br/>                | Root \\ CIMV2<br/>                                                                  |
-| MOF<br/>                      | <dl> <dt>Cimwin32. MOF</dt> </dl> |
+| Namespace<br/>                | \\Stamm-CIMV2<br/>                                                                  |
+| MOF<br/>                      | <dl> <dt>CIMWin32.mof</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>CIMWin32.dll</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**CIM- \_ physicalcomponent**](cim-physicalcomponent.md)
+[**CIM \_ PhysicalComponent**](cim-physicalcomponent.md)
 </dt> </dl>
 
  

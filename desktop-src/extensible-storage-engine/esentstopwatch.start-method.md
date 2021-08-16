@@ -1,6 +1,6 @@
 ---
-description: 'Weitere Informationen über: esentstopwatch. Start-Methode'
-title: Esentstopwatch. Start-Methode
+description: 'Weitere Informationen zu: EsentStopwatch.Start-Methode'
+title: EsentStopwatch.Start-Methode
 TOCTitle: 'Start method '
 ms:assetid: M:Microsoft.Isam.Esent.Interop.EsentStopwatch.Start
 ms:mtpsurl: https://msdn.microsoft.com/library/microsoft.isam.esent.interop.esentstopwatch.start(v=EXCHG.10)
@@ -24,19 +24,19 @@ api_type:
 api_location:
 - Microsoft.Isam.Esent.Interop.dll
 ROBOTS: INDEX,FOLLOW
-ms.openlocfilehash: 8f4699239ee0ee1868cfc7006a6006e742b5644f
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: de2e045cfc2e775c0cd9a8ce0ff4e2b9eec156c78b18b6639a6902a0bdd74849
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "104216461"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118490487"
 ---
-# <a name="esentstopwatchstart-method"></a>Esentstopwatch. Start-Methode
+# <a name="esentstopwatchstart-method"></a>EsentStopwatch.Start-Methode
 
-Beginnt mit dem Messen der ESENT-Arbeit.
+Beginnt mit der Messung der ESENT-Arbeit.
 
-**Namespace:**  [Microsoft. ISAM. ESENT. Interop](./microsoft.isam.esent.interop-namespace.md)  
-**Assembly:**  Microsoft. ISAM. ESENT. Interop (in Microsoft.Isam.Esent.Interop.dll)
+**Namespace:**  [Microsoft.Isam.Esent.Interop](./microsoft.isam.esent.interop-namespace.md)  
+**Assembly:**  Microsoft.Isam.Esent.Interop (in Microsoft.Isam.Esent.Interop.dll)
 
 ## <a name="syntax"></a>Syntax
 
@@ -53,12 +53,12 @@ instance.Start()
 public void Start()
 ```
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
-#### <a name="reference"></a>Referenz
+#### <a name="reference"></a>Verweis
 
-[Esentstopwatch-Klasse](./esentstopwatch-class.md)
+[EsentStopwatch-Klasse](./esentstopwatch-class.md)
 
-[Esentstopwatch-Member](./esentstopwatch-members.md)
+[EsentStopwatch-Elemente](./esentstopwatch-members.md)
 
-[Microsoft. ISAM. ESENT. Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)
+[Microsoft.Isam.Esent.Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)

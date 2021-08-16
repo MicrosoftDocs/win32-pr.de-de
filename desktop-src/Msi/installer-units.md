@@ -1,5 +1,5 @@
 ---
-description: Eine Windows-Installer-Benutzeroberflächeneinheit entspricht ungefähr dem Zwölftel (1/12) der Höhe des 10-Punkt-MS Sans Serif-Schriftgrads.
+description: Eine Windows Installer-Benutzeroberflächeneinheit entspricht ungefähr dem Zwölftel (1/12) der Höhe des 10-Punkt-MS Sans Serif-Schriftgrads.
 ms.assetid: 5ef6dee1-71e7-446b-b526-5c6c4e7525f2
 title: Installer-Einheiten
 ms.topic: article
@@ -13,7 +13,7 @@ ms.locfileid: "118629986"
 ---
 # <a name="installer-units"></a>Installer-Einheiten
 
-Eine Windows-Installer-Benutzeroberflächeneinheit entspricht ungefähr dem Zwölftel (1/12) der Höhe des 10-Punkt-MS Sans Serif-Schriftgrads. Die relative Größe von Dialogen, Steuerelementen und Schriftarten kann sich abhängig vom Schriftgrad ändern, der auf der Benutzeroberfläche verwendet wird. Um die korrekte Anzeige der Benutzeroberfläche sicherzustellen, sollten Setupentwickler ihre Anwendung immer mit den tatsächlichen Schriftgraden testen.
+Eine Windows Installer-Benutzeroberflächeneinheit entspricht ungefähr dem Zwölftel (1/12) der Höhe des 10-Punkt-MS Sans Serif-Schriftgrads. Die relative Größe von Dialogen, Steuerelementen und Schriftarten kann sich abhängig vom Schriftgrad ändern, der auf der Benutzeroberfläche verwendet wird. Um die korrekte Anzeige der Benutzeroberfläche sicherzustellen, sollten Setupentwickler ihre Anwendung immer mit den tatsächlichen Schriftgraden testen.
 
  
 

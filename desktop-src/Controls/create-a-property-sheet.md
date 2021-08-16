@@ -1,38 +1,38 @@
 ---
 title: Erstellen eines Eigenschaftenblatts
-description: Im Beispiel in diesem Abschnitt wird ein Eigenschaften Blatt mit zwei Seiten \ 8212 erstellt; eines zum Festlegen der Schriftart Eigenschaften einer Zelle in einer Kalkulations Tabelle und ein weiteres zum Festlegen der Rahmen Eigenschaften der Zelle.
+description: Im Beispiel in diesem Abschnitt wird ein Eigenschaftenblatt erstellt, das zwei Seiten \ 8212 enthält; eine zum Festlegen der Schriftarteigenschaften einer Zelle in einer Kalkulationstabelle und eine andere zum Festlegen der Rahmeneigenschaften der Zelle.
 ms.assetid: 61ACF87A-938C-4487-ACEB-484FCB677C6A
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: d15abd44f3a583afd99c5d943b9105c8734b73c1
-ms.sourcegitcommit: 11f52354f570aacaf1ba2a266b2e507abd73352a
+ms.openlocfilehash: 5fa99c3e678fa7d8e6aa70cd3f5c6e4c7bc514f94114c7bb7a411fa7df1caac3
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/19/2021
-ms.locfileid: "106350743"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117831846"
 ---
 # <a name="how-to-create-a-property-sheet"></a>Erstellen eines Eigenschaftenblatts
 
-Im Beispiel in diesem Abschnitt wird ein Eigenschaften Blatt erstellt, das zwei Seiten enthält – eine zum Festlegen der Schriftart Eigenschaften einer Zelle in einer Kalkulations Tabelle und eine weitere zum Festlegen der Rahmen Eigenschaften der Zelle.
+Im Beispiel in diesem Abschnitt wird ein Eigenschaftenblatt erstellt, das zwei Seiten enthält: eine zum Festlegen der Schriftarteigenschaften einer Zelle in einer Kalkulationstabelle und eine andere zum Festlegen der Rahmeneigenschaften der Zelle.
 
-Im Beispiel werden die Seiten definiert, indem ein paar von [**PROPSHEETPAGE**](pss-propsheetpage.md) -Strukturen gefüllt und die Adresse in der [**propsheetheiader**](pss-propsheetheader.md) -Struktur angegeben wird, die an die [**PropertySheet**](/windows/desktop/api/Prsht/nf-prsht-propertysheeta) -Funktion übermittelt wird.
+Im Beispiel werden die Seiten definiert, indem ein Paar von [**PROPSHEETPAGE-Strukturen**](pss-propsheetpage.md) ausgefüllt und die Adresse in der [**PROPSHEETHEADER-Struktur**](pss-propsheetheader.md) angegeben wird, die an die [**PropertySheet-Funktion**](/windows/desktop/api/Prsht/nf-prsht-propertysheeta) übergeben wird.
 
-## <a name="what-you-need-to-know"></a>Was Sie wissen müssen
+## <a name="what-you-need-to-know"></a>Wichtige Informationen
 
 ### <a name="technologies"></a>Technologien
 
--   [Windows-Steuerelemente](window-controls.md)
+-   [Windows Steuerelemente](window-controls.md)
 
 ### <a name="prerequisites"></a>Voraussetzungen
 
 -   C/C++
--   Programmieren der Windows-Benutzeroberfläche
+-   Windows Benutzeroberfläche-Programmierung
 
 ## <a name="instructions"></a>Anweisungen
 
-### <a name="create-a-property-sheet"></a>Erstellen eines Eigenschaften Blatts
+### <a name="create-a-property-sheet"></a>Erstellen eines Eigenschaftenblatts
 
-Im folgenden Codebeispiel wird veranschaulicht, wie ein zwei – Page-Eigenschaften Blatt erstellt wird.
+Im folgenden Codebeispiel wird veranschaulicht, wie sie ein Eigenschaftenblatt mit zwei Seiten erstellen.
 
 
 ```C++
@@ -89,18 +89,18 @@ VOID DoPropertySheet(HWND hwndOwner)
 
 
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Die Dialogfeld Vorlagen, Symbole und Bezeichnungen für die Seiten werden aus den Ressourcen geladen, die in der ausführbaren Datei der Anwendung enthalten sind. Das Symbol für das Eigenschaften Blatt wird auch aus den Ressourcen der Anwendung geladen.
+Die Dialogfeldvorlagen, Symbole und Bezeichnungen für die Seiten werden aus den Ressourcen geladen, die in der ausführbaren Datei der Anwendung enthalten sind. Das Symbol für das Eigenschaftenblatt wird auch aus den Ressourcen der Anwendung geladen.
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
 <dl> <dt>
 
-[Verwenden von Eigenschaften Blättern](using-property-sheets.md)
+[Verwenden von Eigenschaftenblättern](using-property-sheets.md)
 </dt> <dt>
 
-[Eigenschafts Beispiel](https://github.com/microsoft/Windows-classic-samples/tree/master/Samples/Win7Samples/winui/controls/common/property)
+[Eigenschaftsbeispiel](https://github.com/microsoft/Windows-classic-samples/tree/master/Samples/Win7Samples/winui/controls/common/property)
 </dt> </dl>
 
  

@@ -1,33 +1,33 @@
 ---
-description: Gibt die Sprache an, die von einem Datenstrom in einer ASF-Datei (Advanced Systems Format) verwendet wird.
+description: Gibt die Sprache an, die von einem Stream in einer ASF-Datei (Advanced Systems Format) verwendet wird.
 ms.assetid: 834cac0a-0c84-49aa-baf2-32bae26e215b
-title: MF_SD_ASF_EXTSTRMPROP_LANGUAGE_ID_INDEX-Attribut (wmcontainer. h)
+title: MF_SD_ASF_EXTSTRMPROP_LANGUAGE_ID_INDEX Attribut (Wmcontainer.h)
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 2afcf2388d2c0641aede4ff0eaccac9178207fb3
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 87f77b53a4156cf21a23680618da010db781e0c7c75d7d4decb2f9e1136c5dbb
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106349317"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118474068"
 ---
-# <a name="mf_sd_asf_extstrmprop_language_id_index-attribute"></a>\_Benutzer- \_ ID- \_ \_ \_ \_ Index Attribut der MF SD-Datei
+# <a name="mf_sd_asf_extstrmprop_language_id_index-attribute"></a>MF \_ SD \_ ASF \_ EXTSTRMPROP \_ LANGUAGE ID \_ \_ INDEX-Attribut
 
-Gibt die Sprache an, die von einem Datenstrom in einer ASF-Datei (Advanced Systems Format) verwendet wird.
+Gibt die Sprache an, die von einem Stream in einer ASF-Datei (Advanced Systems Format) verwendet wird.
 
 ## <a name="data-type"></a>Datentyp
 
 **UINT32**
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Dieses Attribut gilt für streamdeskriptoren für den ASF-Inhalt. Der Wert ist ein Index in der Sprachliste, die im [**MF PD-Attribut " \_ \_ ASF \_ langlist**](mf-pd-asf-langlist-attribute.md) " enthalten ist.
+Dieses Attribut gilt für Streamdeskriptoren für ASF-Inhalt. Der Wert ist ein Index in der Sprachliste, die im [**MF \_ PD \_ ASF \_ LANGLIST-Attribut**](mf-pd-asf-langlist-attribute.md) enthalten ist.
 
-Dieses Attribut entspricht dem Feld "Stream Language ID Index" im erweiterten Stream Properties-Objekt. Weitere Informationen finden Sie in der ASF-Spezifikation.
+Dieses Attribut entspricht dem Feld Stream Language ID Index im Extended Stream Properties-Objekt. Weitere Informationen finden Sie in der ASF-Spezifikation.
 
-Die [**imfasf ContentInfo:: generatepresentationdescriptor**](/windows/desktop/api/wmcontainer/nf-wmcontainer-imfasfcontentinfo-generatepresentationdescriptor) -Methode generiert dieses Attribut aus den ASF-Metadaten. Die Anwendung kann den Datenstrom Deskriptor für den Stream aus dem Präsentations Deskriptor erstellen, indem Sie [**imfpresentationdescriptor:: getstreamdescriptorbyindex**](/windows/desktop/api/mfidl/nf-mfidl-imfpresentationdescriptor-getstreamdescriptorbyindex)aufrufen.
+Die [**IMFASFContentInfo::GeneratePresentationDescriptor-Methode**](/windows/desktop/api/wmcontainer/nf-wmcontainer-imfasfcontentinfo-generatepresentationdescriptor) generiert dieses Attribut aus den ASF-Metadaten. Die Anwendung kann den Streamdeskriptor für den Stream aus dem Präsentationsdeskriptor erstellen, indem [**SIE DENKPresentationDescriptor::GetStreamDescriptorByIndex**](/windows/desktop/api/mfidl/nf-mfidl-imfpresentationdescriptor-getstreamdescriptorbyindex)aufrufen.
 
-Sie können das Sprachtag auch abrufen, indem Sie den Datenstrom Deskriptor für das [**MF \_ SD- \_ sprach**](mf-sd-language-attribute.md) Attribut Abfragen.
+Sie können das Sprachtag auch abrufen, indem Sie den Streamdeskriptor für das [**MF \_ SD \_ LANGUAGE-Attribut**](mf-sd-language-attribute.md) abfragen.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -35,32 +35,32 @@ Sie können das Sprachtag auch abrufen, indem Sie den Datenstrom Deskriptor für
 
 | Anforderung | Wert |
 |-------------------------------------|------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>                                           |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2008 \[ -Desktop-Apps\]<br/>                                     |
-| Header<br/>                   | <dl> <dt>Wmcontainer. h</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows \[Nur Vista-Desktop-Apps\]<br/>                                           |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2008-Desktop-Apps\]<br/>                                     |
+| Header<br/>                   | <dl> <dt>Wmcontainer.h</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
 [Alphabetische Liste der Media Foundation Attribute](alphabetical-list-of-media-foundation-attributes.md)
 </dt> <dt>
 
-[**Imfattributes:: GetUINT32**](/windows/desktop/api/mfobjects/nf-mfobjects-imfattributes-getuint32)
+[**ATTRIBUTEAttributes::GetUINT32**](/windows/desktop/api/mfobjects/nf-mfobjects-imfattributes-getuint32)
 </dt> <dt>
 
-[**Imfattributes:: SetUINT32**](/windows/desktop/api/mfobjects/nf-mfobjects-imfattributes-setuint32)
+[**DENKattribute::SetUINT32**](/windows/desktop/api/mfobjects/nf-mfobjects-imfattributes-setuint32)
 </dt> <dt>
 
-[**IMF-Deskriptor**](/windows/desktop/api/mfidl/nn-mfidl-imfstreamdescriptor)
+[**ÜBERSCHREIBENStreamDescriptor**](/windows/desktop/api/mfidl/nn-mfidl-imfstreamdescriptor)
 </dt> <dt>
 
 [Streamdeskriptorattribute](stream-descriptor-attributes.md)
 </dt> <dt>
 
-[ASF-Header Objekt](asf-file-structure.md)
+[ASF-Headerobjekt](asf-file-structure.md)
 </dt> </dl>
 
  

@@ -1,6 +1,6 @@
 ---
-title: Schaltflächen-Steuerelementbenachrichtigungen
-description: Schaltflächen-Steuerelementbenachrichtigungen
+title: Benachrichtigungen zum Schaltflächensteuerelement
+description: Benachrichtigungen zum Schaltflächensteuerelement
 ms.assetid: 37d1bbaa-7187-47fb-a711-49a9b6175a29
 ms.topic: article
 ms.date: 05/31/2018
@@ -11,11 +11,11 @@ ms.contentlocale: de-DE
 ms.lasthandoff: 08/11/2021
 ms.locfileid: "118416706"
 ---
-# <a name="button-control-notifications"></a>Schaltflächen-Steuerelementbenachrichtigungen
+# <a name="button-control-notifications"></a>Benachrichtigungen zum Schaltflächensteuerelement
 
 ## <a name="in-this-section"></a>In diesem Abschnitt
 
--   [\_BCN-DROPDOWN](bcn-dropdown.md)
+-   [\_BCN-DROPDOWNLISTE](bcn-dropdown.md)
 -   [BCN \_ HOTITEMCHANGE](bcn-hotitemchange.md)
 -   [BN \_ GEKLICKT](bn-clicked.md)
 -   [BN \_ DBLCLK](bn-dblclk.md)
@@ -24,7 +24,7 @@ ms.locfileid: "118416706"
 -   [BN \_ HILITE](bn-hilite.md)
 -   [BN \_ KILLFOCUS](bn-killfocus.md)
 -   [BN \_ PAINT](bn-paint.md)
--   [BN \_ PUSHED](bn-pushed.md)
+-   [BN \_ PER PUSH ÜBERTRAGEN](bn-pushed.md)
 -   [BN \_ SETFOCUS](bn-setfocus.md)
 -   [BN \_ UNHILITE](bn-unhilite.md)
 -   [BN \_ UNPUSHED](bn-unpushed.md)

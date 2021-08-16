@@ -1,5 +1,5 @@
 ---
-description: Erläutert Methoden zum Öffnen eines Systemsteuerung-Elements für Windows Vista- und höher-Systeme sowie zum Abdecken von Legacy-Systemsteuerung Befehlen.
+description: Erläutert Methoden zum Öffnen eines Systemsteuerung-Elements für Windows Vista- und höher-Systeme sowie zur Behandlung von Legacy-Systemsteuerung Befehlen.
 ms.assetid: c17167ab-e9a0-4290-955c-484d038b82af
 title: Ausführen Systemsteuerung Elementen
 ms.topic: article
@@ -14,7 +14,7 @@ ms.locfileid: "118224276"
 # <a name="executing-control-panel-items"></a>Ausführen Systemsteuerung Elementen
 
 > [!Note]  
-> Wenn Sie nach der Liste der kanonischen und Modulnamen für Systemsteuerung suchen, finden Sie weitere Informationen unter [Kanonische Namen Systemsteuerung Items.](controlpanel-canonical-names.md)
+> Wenn Sie nach der Liste der kanonischen und Modulnamen für Systemsteuerung suchen, finden Sie weitere Informationen unter [Kanonische Namen von](controlpanel-canonical-names.md)Systemsteuerung Elementen.
 
  
 
@@ -23,7 +23,7 @@ Es gibt zwei Möglichkeiten zum Öffnen eines Systemsteuerung Elements:
 -   Der Benutzer kann Systemsteuerung und dann ein Element öffnen, indem er auf das Symbol des Elements klickt oder doppelklickt.
 -   Der Benutzer oder eine Anwendung kann ein Systemsteuerung starten, indem es direkt über die Eingabeaufforderung ausgeführt wird.
 
-Eine Anwendung kann die Systemsteuerung programmgesteuert öffnen, indem sie die [**WinExec-Funktion**](/windows/win32/api/winbase/nf-winbase-winexec) verwendet.
+Eine Anwendung kann die Systemsteuerung programmgesteuert mithilfe der [**WinExec-Funktion**](/windows/win32/api/winbase/nf-winbase-winexec) öffnen.
 
 
 ```
@@ -41,7 +41,7 @@ WinExec("c:\windows\system32\control.exe MyCpl.cpl", SW_NORMAL);
 
 
 
-Wenn ein Systemsteuerung über eine Befehlszeile geöffnet wird, können Sie ihn anweisen, eine bestimmte Registerkarte im Element zu öffnen. Aufgrund des Hinzu- und Entfernens bestimmter Registerkarten in einigen Windows Vista Systemsteuerung-Elementen hat sich die Nummerierung der Registerkarten möglicherweise von der Nummerierung in Windows XP geändert. Im folgenden Beispiel wird beispielsweise die vierte Registerkarte im Element System auf Windows XP und die dritte Registerkarte auf Windows Vista gestartet.
+Wenn ein Systemsteuerung über eine Befehlszeile geöffnet wird, können Sie es anweisen, eine bestimmte Registerkarte im Element zu öffnen. Aufgrund des Hinzu- und Entfernens bestimmter Registerkarten in einigen Windows Vista Systemsteuerung-Elementen hat sich die Nummerierung der Registerkarten möglicherweise von der Nummerierung in Windows XP geändert. Im folgenden Beispiel wird beispielsweise die vierte Registerkarte im Element System auf Windows XP und die dritte Registerkarte auf Windows Vista gestartet.
 
 
 ```
@@ -59,11 +59,11 @@ In diesem Thema wird Folgendes erörtert:
 
 ## <a name="windows-vista-canonical-names"></a>Windows Kanonische Vista-Namen
 
-In Windows Vista und höher ist die bevorzugte Methode zum Starten eines Systemsteuerung-Elements über eine Befehlszeile die Verwendung des kanonischen Namens des Systemsteuerung Elements. Ein kanonischer Name ist eine nicht lokalisierte Zeichenfolge, die vom Systemsteuerung in der Registrierung deklariert wird. Der Wert der Verwendung eines kanonischen Namens ist, dass der Modulname des Systemsteuerung abstrahiert wird. Ein Element kann in einer .dll implementiert und später erneut implementiert .exe oder seinen Modulnamen ändern. Solange der kanonische Name unverändert bleibt, muss jedes Programm, das ihn mit diesem kanonischen Namen öffnet, nicht aktualisiert werden.
+In Windows Vista und höher ist die bevorzugte Methode zum Starten eines Systemsteuerung-Elements über eine Befehlszeile die Verwendung des kanonischen Namens des Systemsteuerung Elements. Ein kanonischer Name ist eine nicht lokalisierte Zeichenfolge, die vom Systemsteuerung in der Registrierung deklariert wird. Der Wert der Verwendung eines kanonischen Namens ist, dass er den Modulnamen des Systemsteuerung abstrahiert. Ein Element kann in einer -.dll und später erneut als ein Element implementiert .exe oder seinen Modulnamen ändern. Solange der kanonische Name unverändert bleibt, muss jedes Programm, das ihn mit diesem kanonischen Namen öffnet, nicht aktualisiert werden.
 
 Standardmäßig wird der kanonische Name als "CorporationName.ControlPanelItemName" gebildet.
 
-Das folgende Beispiel zeigt, wie eine Anwendung das Systemsteuerung-Element Windows **Mit** [**WinExec aktualisieren kann.**](/windows/win32/api/winbase/nf-winbase-winexec)
+Das folgende Beispiel zeigt, wie eine Anwendung das Systemsteuerung-Element Windows **Update** mit [**WinExec starten kann.**](/windows/win32/api/winbase/nf-winbase-winexec)
 
 
 ```
@@ -72,17 +72,17 @@ WinExec("%systemroot%\system32\control.exe /name Microsoft.WindowsUpdate", SW_NO
 
 
 
-Um ein Systemsteuerung mit seinem kanonischen Namen zu starten, verwenden Sie: "%systemroot% \\ system32 \\control.exe /name *canonicalName*"
+Um ein Systemsteuerung-Element mit seinem kanonischen Namen zu starten, verwenden Sie: "%systemroot% \\ system32 \\control.exe /name *canonicalName*"
 
-Um eine bestimmte Unterseite in einem Element oder mit zusätzlichen Parametern zu öffnen, verwenden Sie: "%systemroot% \\ system32 \\control.exe /name **canonicalName** /page **pageName**"
+Verwenden Sie zum Öffnen einer bestimmten Unterseite in einem Element oder zum Öffnen mit zusätzlichen Parametern: "%systemroot% \\ system32 \\control.exe /name **canonicalName** /page **pageName**"
 
-Eine Anwendung kann auch die [**IOpenControlPanel::Open-Methode**](/windows/desktop/api/shobjidl_core/nf-shobjidl_core-iopencontrolpanel-open) implementieren, um Systemsteuerung-Elemente zu starten, einschließlich der Möglichkeit, eine bestimmte Unterseite zu öffnen.
+Eine Anwendung kann auch die [**IOpenControlPanel::Open-Methode**](/windows/desktop/api/shobjidl_core/nf-shobjidl_core-iopencontrolpanel-open) implementieren, um Systemsteuerung zu starten, einschließlich der Möglichkeit, eine bestimmte Unterseite zu öffnen.
 
-Eine vollständige Liste der kanonischen Systemsteuerung Elementnamen finden Sie unter [Kanonische Namen von](controlpanel-canonical-names.md)Systemsteuerung Elementen.
+Eine vollständige Liste der kanonischen Systemsteuerung-Elementnamen finden Sie unter [Kanonische Namen von](controlpanel-canonical-names.md)Systemsteuerung Elementen.
 
 ## <a name="new-commands-for-windows-vista"></a>Neue Befehle für Windows Vista
 
-Unter Windows Vista werden einige Optionen, auf die von einem .cpl-Modul unter Windows XP zugegriffen wurde, jetzt als .exe implementiert. Dies sorgt für zusätzliche Sicherheit, da Standardbenutzer beim Versuch, die Dateien zu starten, aufgefordert werden können, Administratoranmeldeinformationen anzugeben. Auf Optionen, die keine zusätzliche Sicherheit erfordern, wird über dieselben Befehlszeilen zugegriffen, die in xp Windows wurden. Im Folgenden finden Sie eine Liste der Befehle, die in Windows Vista für den Zugriff auf bestimmte Registerkarten von Systemsteuerung werden:
+Unter Windows Vista werden einige Optionen, auf die von einem .cpl-Modul auf Windows XP zugegriffen wurde, jetzt als .exe implementiert. Dies bietet zusätzliche Sicherheit, da Standardbenutzer beim Versuch, die Dateien zu starten, zur Eingabe von Administratoranmeldeinformationen aufgefordert werden können. Auf Optionen, die keine zusätzliche Sicherheit erfordern, wird über dieselben Befehlszeilen zugegriffen, die in xp Windows wurden. Im Folgenden finden Sie eine Liste von Befehlen, die in Windows Vista verwendet werden, um auf bestimmte Registerkarten von Systemsteuerung zugreifen:
 
 ### <a name="personalization"></a>Personalization
 
@@ -130,7 +130,7 @@ Unter Windows Vista werden einige Optionen, auf die von einem .cpl-Modul unter W
 
 -   Aktuelle Planeinstellungen bearbeiten: %windir% \\ system32 \\control.exe /name Microsoft.PowerOptions /page pagePlanSettings
 -   Systemeinstellungen: %windir% \\ system32 \\control.exe /name Microsoft.PowerOptions /page pageGlobalSettings
--   Erstellen eines Energieplans: %windir% \\ system32 \\control.exe /name Microsoft.PowerOptions /pageCreateNewPlan
+-   Erstellen eines Energieplans: %windir% \\ system32 \\control.exe /name Microsoft.PowerOptions /page pageCreateNewPlan
 -   Es gibt keinen kanonischen Befehl für die Seite "Advanced Einstellungen". Der Zugriff erfolgt auf ältere Weise: %windir% \\ system32 \\control.exe powercfg.cpl,,3
 
 ## <a name="legacy-control-panel-commands"></a>Legacy-Systemsteuerung Befehle
@@ -176,7 +176,7 @@ Die Editionen Starter und Basic unterstützen diesen Befehl nicht.
 </tr>
 <tr class="odd">
 <td>control.exe Drucker</td>
-<td>Zeigt den <strong>Ordner Drucker und Faxe</strong> an.</td>
+<td>Zeigt den Ordner <strong>Drucker und Faxe</strong> an.</td>
 </tr>
 <tr class="even">
 <td>control.exe Schriftarten</td>
@@ -193,16 +193,16 @@ Für Windows 2000- und höher-Systeme:
 
 
 
-| Befehl                    | BESCHREIBUNG                                              |
+| Befehl                    | Beschreibung                                              |
 |----------------------------|----------------------------------------------------------|
 | control.exe Ordner        | Öffnet das Fenster **Ordneroptionen.**                  |
-| control.exe netware        | Startet (sofern installiert) das **Fenster".**   |
+| control.exe netware        | Startet (sofern installiert) das **Fenster "Schließen von NetWare".**   |
 | control.exe Telefonie      | Öffnet das Fenster **Telefon und Modemoptionen.**         |
 | control.exe admintools     | Zeigt den **Ordner Verwaltung an.**            |
-| control.exe schedtasks     | Zeigt den **Ordner Geplante Aufgaben** an.                 |
-| control.exe netconnections | Zeigt den Ordner **Netzwerkverbindungen** an.             |
-| control.exe       | Öffnet das **Fenster "Überwachung des Monitors"** (sofern installiert). |
-| control.exe von Benutzerpasswörtern  | Öffnet das **Fenster Benutzerkonten.**                   |
+| control.exe schedtasks     | Zeigt den Ordner **Geplante Aufgaben** an.                 |
+| control.exe netconnections | Zeigt den Ordner **Netzwerkverbindungen an.**             |
+| control.exe       | Startet das Fenster **Überwachungsmonitor** (sofern installiert). |
+| control.exe userpasswords  | Öffnet das Fenster **Benutzerkonten.**                   |
 
 
 
@@ -212,28 +212,28 @@ Für Windows 2000- und höher-Systeme:
 
 <dl> <dt>
 
-[Systemsteuerung Elemente](control-panel-applications.md)
+[Systemsteuerung Items](control-panel-applications.md)
 </dt> <dt>
 
 [Richtlinien zur Benutzerfreundlichkeit](user-experience-guidelines.md)
 </dt> <dt>
 
-[Registrieren Systemsteuerung Elementen](registering-control-panel-items.md)
+[Registrieren von Systemsteuerung Elementen](registering-control-panel-items.md)
 </dt> <dt>
 
 [Verwenden von CPLApplet](using-cplapplet.md)
 </dt> <dt>
 
-[Systemsteuerung Nachrichtenverarbeitung](message-processing.md)
+[Systemsteuerung der Nachrichtenverarbeitung](message-processing.md)
 </dt> <dt>
 
-[Erweitern von Systemsteuerung Elementen](extending-system-control-panel-items.md)
+[Erweitern von System Systemsteuerung Elementen](extending-system-control-panel-items.md)
 </dt> <dt>
 
 [Zuweisen Systemsteuerung Kategorien](assigning-control-panel-categories.md)
 </dt> <dt>
 
-[Erstellen durchsuchbarer Aufgabenlinks für Systemsteuerung Element](creating-searchable-task-links.md)
+[Erstellen durchsuchbarer Aufgabenlinks für ein Systemsteuerung Element](creating-searchable-task-links.md)
 </dt> <dt>
 
 [Zugreifen auf die Systemsteuerung im Tresor-Modus unter Windows Vista](accessing-the-cp-in-safe-mode-under-vista.md)

@@ -1,11 +1,11 @@
 ---
-title: Iamwmbufferpass-setnotify-Methode
-description: Die setnotify-Methode wird von Anwendungen verwendet, um den WM-ASF-oder WM-ASF-Lesefilter mit einem Zeiger auf die iamwmbufferpasscallback-Schnittstelle der Anwendung bereitzustellen.
+title: IAMWMBufferPass SetNotify-Methode
+description: Die SetNotify-Methode wird von Anwendungen verwendet, um den WM ASF Writer- oder WM ASF Reader-Filter mit einem Zeiger auf die IAMWMBufferPassCallback-Schnittstelle der Anwendung bereitzustellen.
 ms.assetid: b0fff344-a20c-4cfc-828b-c6fc49d990ea
 keywords:
-- Setnotify-Methode (Windows Media-Format)
-- Setnotify-Methode Windows Media-Format, iamwmbufferpass-Schnittstelle
-- Iamwmbufferpass-Schnittstelle Windows Media-Format, setnotify-Methode
+- SetNotify-Methode windows Media Format
+- SetNotify-Methode windows Media Format , IAMWMBufferPass-Schnittstelle
+- IAMWMBufferPass-Schnittstelle windows Media Format , SetNotify-Methode
 topic_type:
 - apiref
 api_name:
@@ -15,23 +15,23 @@ api_type:
 ms.topic: reference
 ms.date: 05/31/2018
 api_location: ''
-ms.openlocfilehash: 9739952792fcfa49da1b5656db513c3af41a419c
-ms.sourcegitcommit: 592c9bbd22ba69802dc353bcb5eb30699f9e9403
+ms.openlocfilehash: 47e189a2654ed4c760fdfcd6ced5506cc90d5e7cc989a7f79979e6d95b0bbfb2
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "104390850"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117847606"
 ---
-# <a name="iamwmbufferpasssetnotify-method"></a>Iamwmbufferpass:: setnotify-Methode
+# <a name="iamwmbufferpasssetnotify-method"></a>IAMWMBufferPass::SetNotify-Methode
 
-Die **setnotify** -Methode wird von Anwendungen verwendet, um den WM-ASF-oder [WM-ASF-Lesefilter](wm-asf-reader-filter.md) mit einem Zeiger auf die [**iamwmbufferpasscallback**](/previous-versions/windows/desktop/api/dshowasf/nn-dshowasf-iamwmbufferpasscallback) -Schnittstelle der Anwendung bereitzustellen.
+Die **SetNotify-Methode** wird von Anwendungen verwendet, um den WM ASF Writer- oder [WM ASF Reader-Filter](wm-asf-reader-filter.md) mit einem Zeiger auf die [**IAMWMBufferPassCallback-Schnittstelle**](/previous-versions/windows/desktop/api/dshowasf/nn-dshowasf-iamwmbufferpasscallback) der Anwendung bereitzustellen.
 
 ## <a name="syntax"></a>Syntax
 
 
 ```C++
 HRESULT SetNotify(
-  [in] IAMWMBufferPassCallback *pCallback
+  [in] IAMWMBufferPassCallback *pCallback
 );
 ```
 
@@ -41,28 +41,28 @@ HRESULT SetNotify(
 
 <dl> <dt>
 
-*pCallback* \[ in\]
+*pCallback* \[ In\]
 </dt> <dd>
 
-Zeiger auf die **iamwmbufferpasscallback** -Schnittstelle der Anwendung.
+Zeiger auf die **IAMWMBufferPassCallback-Schnittstelle** der Anwendung.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Wenn die Methode erfolgreich ausgeführt wird, gibt Sie S \_ OK zurück. Wenn ein Fehler auftritt, wird ein **HRESULT** -Fehlercode zurückgegeben.
+Wenn die Methode erfolgreich ist, wird S \_ OK zurückgegeben. Wenn ein Fehler auftritt, wird ein **HRESULT-Fehlercode** zurückgegeben.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Ruft diese Methode auf, bevor das Filter Diagramm in den Status "Run" versetzt wird.
+Rufen Sie diese Methode auf, bevor Sie das Filterdiagramm in den Ausführungszustand versetzen.
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Iamwmbufferpass-Schnittstelle**](/previous-versions/windows/desktop/api/dshowasf/nn-dshowasf-iamwmbufferpass)
+[**IAMWMBufferPass-Schnittstelle**](/previous-versions/windows/desktop/api/dshowasf/nn-dshowasf-iamwmbufferpass)
 </dt> </dl>
 
- 
+ 
 
- 
+ 

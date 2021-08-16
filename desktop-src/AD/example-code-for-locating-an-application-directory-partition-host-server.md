@@ -1,11 +1,11 @@
 ---
 title: Beispielcode zum Suchen eines Anwendungsverzeichnispartitionshostservers
-description: Dieses Thema enthält ein Codebeispiel, das einen Anwendungsverzeichnispartitionshostserver sucht.
+description: Dieses Thema enthält ein Codebeispiel, das einen Hostserver für die Anwendungsverzeichnispartition sucht.
 ms.assetid: c161323b-13ce-4986-8b24-b459009ff53c
 ms.tgt_platform: multiple
 keywords:
 - Beispielcode zum Suchen eines Anwendungsverzeichnispartitionshostservers AD
-- Application Directory Partition AD , Beispielcode zum Suchen eines Application Directory-Partitionshostservers
+- Anwendungsverzeichnispartition AD , Beispielcode zum Suchen eines Anwendungsverzeichnispartitionshostservers
 ms.topic: article
 ms.date: 05/31/2018
 ms.openlocfilehash: 03d7a218acf3608c18587b7d9b9c82779f17fd6eb251608a86d99d8acb3b7bd4
@@ -17,9 +17,9 @@ ms.locfileid: "118693599"
 ---
 # <a name="example-code-for-locating-an-application-directory-partition-host-server"></a>Beispielcode zum Suchen eines Anwendungsverzeichnispartitionshostservers
 
-Dieses Thema enthält ein Codebeispiel, das einen Anwendungsverzeichnispartitionshostserver sucht.
+Dieses Thema enthält ein Codebeispiel, das einen Hostserver für die Anwendungsverzeichnispartition sucht.
 
-Das folgende C/C++-Codebeispiel zeigt, wie sie die [**DsGetDcName-Funktion**](/windows/desktop/api/DsGetDC/nf-dsgetdc-dsgetdcnamea) verwendet, um einen Domänencontroller zu suchen, der ein Replikat einer Anwendungsverzeichnispartition hostet. Dieses Codebeispiel zeigt auch, wie sie die [**DsCrackNames-Funktion**](/windows/desktop/api/Ntdsapi/nf-ntdsapi-dscracknamesa) verwendet, um den Distinguished Name einer Anwendungsverzeichnispartition in einen DNS-Namen zu konvertieren.
+Das folgende C/C++-Codebeispiel zeigt, wie Sie die [**DsGetDcName-Funktion**](/windows/desktop/api/DsGetDC/nf-dsgetdc-dsgetdcnamea) verwenden, um einen Domänencontroller zu finden, der ein Replikat einer Anwendungsverzeichnispartition hostet. Dieses Codebeispiel zeigt auch, wie Sie die [**DsCrackNames-Funktion**](/windows/desktop/api/Ntdsapi/nf-ntdsapi-dscracknamesa) verwenden, um den Distinguished Name einer Anwendungsverzeichnispartition in einen DNS-Namen zu konvertieren.
 
 
 ```C++

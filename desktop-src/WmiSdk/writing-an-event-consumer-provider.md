@@ -41,7 +41,7 @@ Im folgenden Verfahren wird beschrieben, wie ein Ereignisverbraucheranbieter imp
 
 4.  Geben Sie mindestens einen physischen Consumers an, um die Ereignismeldungen von WMI zu empfangen.
 
-    Ein physischer Consumer ist ein COM-Objekt, das einen permanenten Ereignis consumer darstellt. Alle physischen Consumers müssen die [**IWbemUnboundObjectSink-Schnittstelle**](/windows/desktop/api/Wbemprov/nn-wbemprov-iwbemunboundobjectsink) implementieren. Weitere Informationen finden Sie unter [Implementieren eines physischen Consumers.](implementing-a-physical-consumer.md)
+    Ein physischer Consumer ist ein COM-Objekt, das einen permanenten Ereignis consumer darstellt. Alle physischen Benutzer müssen die [**IWbemUnboundObjectSink-Schnittstelle**](/windows/desktop/api/Wbemprov/nn-wbemprov-iwbemunboundobjectsink) implementieren. Weitere Informationen finden Sie unter [Implementieren eines physischen Consumers.](implementing-a-physical-consumer.md)
 
  
 

@@ -1,6 +1,6 @@
 ---
-title: Auswählen, wann barrierefreie Objekte erstellt werden
-description: Serverentwickler können alle zugänglichen Objekte innerhalb eines Containers erstellen, wenn der Container erstellt wird, oder sie können die barrierefreien Objekte dynamisch erstellen.
+title: Auswählen, wann barrierefreie Objekte erstellt werden sollen
+description: Serverentwickler können alle barrierefreien Objekte in einem Container erstellen, wenn der Container erstellt wird, oder sie können die barrierefreien Objekte dynamisch erstellen.
 ms.assetid: 26c8bb4b-19ec-4fd5-b758-30cb6a513818
 ms.topic: article
 ms.date: 05/31/2018
@@ -11,13 +11,13 @@ ms.contentlocale: de-DE
 ms.lasthandoff: 08/11/2021
 ms.locfileid: "118325979"
 ---
-# <a name="choosing-when-to-create-accessible-objects"></a>Auswählen, wann barrierefreie Objekte erstellt werden
+# <a name="choosing-when-to-create-accessible-objects"></a>Auswählen, wann barrierefreie Objekte erstellt werden sollen
 
-Serverentwickler können alle zugänglichen Objekte innerhalb eines Containers erstellen, wenn der Container erstellt wird, oder sie können die barrierefreien Objekte dynamisch erstellen.
+Serverentwickler können alle barrierefreien Objekte in einem Container erstellen, wenn der Container erstellt wird, oder sie können die barrierefreien Objekte dynamisch erstellen.
 
 Stellen Sie sich beispielsweise ein Dialogfeld mit mehreren benutzerdefinierten Steuerelementen vor. Ein Server erstellt barrierefreie Objekte für alle benutzerdefinierten Steuerelemente, wenn das Dialogfeld angezeigt wird. Wenn eines der Steuerelemente jedoch ein benutzerdefiniertes Kombinationsfeld ist, wartet der Server, bis ein Benutzer es auswählt, um barrierefreie Objekte für die Elemente zu erstellen, die das Kombinationsfeld enthält.
 
-Wenn das übergeordnete Element barrierefreie Objekte dynamisch erstellt, verwenden Anwendungen weniger Arbeitsspeicher, als wenn alle möglichen barrierefreien Objekte im Voraus erstellt wurden.
+Wenn das übergeordnete Element dynamisch barrierefreie Objekte erstellt, verbrauchen Anwendungen weniger Arbeitsspeicher als wenn alle möglichen barrierefreien Objekte im Voraus erstellt wurden.
 
  
 

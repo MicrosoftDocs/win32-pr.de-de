@@ -1,8 +1,8 @@
 ---
-title: DO_DOWNLOAD_STATUS-Struktur
-description: Wird verwendet, um den Status eines bestimmten Downloads abzurufen.
+title: DO_DOWNLOAD_STATUS Struktur
+description: Wird verwendet, um den Status eines bestimmten Downloads zu erhalten.
 keywords:
-- DO_DOWNLOAD_STATUS-Struktur
+- DO_DOWNLOAD_STATUS Struktur
 topic_type:
 - apiref
 api_name:
@@ -21,9 +21,9 @@ ms.contentlocale: de-DE
 ms.lasthandoff: 08/11/2021
 ms.locfileid: "118543734"
 ---
-# <a name="do_download_status-structure"></a>DO_DOWNLOAD_STATUS-Struktur
+# <a name="do_download_status-structure"></a>DO_DOWNLOAD_STATUS Struktur
 
-Die **DO_DOWNLOAD_STATUS-Struktur** wird verwendet, um den Status eines bestimmten Downloads abzurufen. Sie wird durch Aufrufen der **IDODownload::GetStatus-Funktion** abgerufen.
+Die **DO_DOWNLOAD_STATUS-Struktur** wird verwendet, um den Status eines bestimmten Downloads zu erhalten. Sie wird durch Aufrufen der **IDODownload::GetStatus-Funktion** erhalten.
 
 ## <a name="syntax"></a>Syntax
 ```cpp
@@ -41,7 +41,7 @@ typedef struct _DO_DOWNLOAD_STATUS
 
 `BytesTotal`
 
-Die Gesamtzahl der herunterzuladende Bytes.
+Die Gesamtzahl der herunterzuladenden Bytes.
 
 `BytesTransferred`
 
@@ -49,7 +49,7 @@ Die Anzahl der Bytes, die bereits heruntergeladen wurden.
 
 `State`
 
-Der aktuelle Downloadstatus, wie durch die **DODownloadState-Enumeration** definiert.
+Der aktuelle Downloadzustand, wie von der **DODownloadState-Enumeration** definiert.
 
 `Error`
 
@@ -64,5 +64,5 @@ Die erweiterten Fehlerinformationen (sofern vorhanden), die dem aktuellen Downlo
 | &nbsp; | &nbsp; |
 | ---- |:---- |
 | **Unterstützte Mindestversion (Client)** | \[Windows 10, Version 1809 Nur Win32-Anwendungen\] |
-| **Unterstützte Mindestversion (Server)** | Windows Server, nur Win32-Anwendungen der Version 1809 \[\] |
+| **Unterstützte Mindestversion (Server)** | Windows Server, version 1809 Win32 applications only (Nur \[ Win32-Anwendungen der Version 1809)\] |
 | **Header** | Do.h |
