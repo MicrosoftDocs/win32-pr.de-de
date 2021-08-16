@@ -1,7 +1,7 @@
 ---
-description: Benachrichtigt eine Anwendung, dass eine zuvor geplante Connect-oder Disconnect-Anforderung an das MTP/Bluetooth-Gerät abgeschlossen wurde.
+description: Benachrichtigt eine Anwendung, dass eine zuvor geplante Anforderung Verbinden verbindung mit dem MTP-/Bluetooth abgeschlossen wurde.
 ms.assetid: 1588d0ec-0d6a-4379-bfdc-4ba5fdaa4665
-title: 'Iconnectionrequestcallback:: OnComplete-Methode (devpkey. h)'
+title: IConnectionRequestCallback::OnComplete-Methode (Devpkey.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -14,16 +14,16 @@ api_type:
 api_location:
 - PortableDeviceGuids.lib
 - PortableDeviceGuids.dll
-ms.openlocfilehash: 922169b7e17335c47425665bb9a9e54891e68723
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: b21248cde95d4b58accb7e629efedfc7c05eef7b08f411e240314a6a07690b3a
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "103866523"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117843188"
 ---
-# <a name="iconnectionrequestcallbackoncomplete-method"></a>Iconnectionrequestcallback:: OnComplete-Methode
+# <a name="iconnectionrequestcallbackoncomplete-method"></a>IConnectionRequestCallback::OnComplete-Methode
 
-Mit der **OnComplete** -Methode wird eine Anwendung benachrichtigt, dass eine zuvor geplante Connect-oder Disconnect-Anforderung an das MTP/Bluetooth-Gerät abgeschlossen wurde.
+Die **OnComplete-Methode** benachrichtigt eine Anwendung, dass eine zuvor geplante Verbinden- oder Disconnect-Anforderung an das MTP/Bluetooth abgeschlossen wurde.
 
 ## <a name="syntax"></a>Syntax
 
@@ -40,7 +40,7 @@ HRESULT OnComplete(
 
 <dl> <dt>
 
-*hrStatus* \[ in\]
+*hrStatus* \[ In\]
 </dt> <dd>
 
 Der Status der Anforderung zum Verbinden oder Trennen eines bestimmten Geräts.
@@ -49,7 +49,7 @@ Der Status der Anforderung zum Verbinden oder Trennen eines bestimmten Geräts.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Die-Methode gibt ein **HRESULT** zurück. Mögliches Werte (aber nicht die Einzigen) sind die in der folgenden Tabelle.
+Die Methode gibt ein **HRESULT** zurück. Mögliches Werte (aber nicht die Einzigen) sind die in der folgenden Tabelle.
 
 
 
@@ -61,11 +61,11 @@ Die-Methode gibt ein **HRESULT** zurück. Mögliches Werte (aber nicht die Einzi
 
  
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Eine Anwendung implementiert die [**iconnectionrequestcallback**](iconnectionrequestcallback.md) -Schnittstelle zum Empfangen von Benachrichtigungen zu abgeschlossenen Anforderungen und zum Abbrechen ausstehender Anforderungen.
+Eine Anwendung implementiert die [**IConnectionRequestCallback-Schnittstelle,**](iconnectionrequestcallback.md) um Benachrichtigungen über abgeschlossene Anforderungen zu empfangen und ausstehende Anforderungen abzubricht.
 
-Windows Portable Devices (WPD) ruft diese Methode auf, um eine Anwendung zu benachrichtigen, dass eine zuvor geplante Anforderung abgeschlossen wurde. Jede Anforderung kann durch den von der Anwendung bereitgestellten Rückruf nachverfolgt und abgebrochen werden. Wenn die Anwendung also mehrere Anforderungen gleichzeitig mit demselben [**iportabledeviceconnector**](/windows/desktop/api/portabledeviceconnectapi/nn-portabledeviceconnectapi-iportabledeviceconnector) -Objekt senden muss, sollte jeder Anforderung ein eindeutiges [**iconnectionrequestcallback**](iconnectionrequestcallback.md) -Objekt als Eingabeparameter an die [**iportabledeviceconnector:: Connect**](/windows/desktop/api/portabledeviceconnectapi/nf-portabledeviceconnectapi-iportabledeviceconnector-connect) -und [**iportabledeviceconnector::D isconnect**](/windows/desktop/api/portabledeviceconnectapi/nf-portabledeviceconnectapi-iportabledeviceconnector-disconnect) -Methoden übergeben werden.
+Windows Portable Devices (WPD) ruft diese Methode auf, um eine Anwendung zu benachrichtigen, dass eine zuvor geplante Anforderung abgeschlossen wurde. Jede Anforderung kann durch den von der Anwendung bereitgestellten Rückruf nachverfolgt und abgebrochen werden. Wenn die Anwendung also mehrere Anforderungen gleichzeitig mit dem gleichen [**IPortableDeviceConnector-Objekt**](/windows/desktop/api/portabledeviceconnectapi/nn-portabledeviceconnectapi-iportabledeviceconnector) senden muss, sollte jeder Anforderung ein eindeutiges [**IConnectionRequestCallback-Objekt**](iconnectionrequestcallback.md) als Eingabeparameter an die [**Methoden IPortableDeviceConnector::Verbinden**](/windows/desktop/api/portabledeviceconnectapi/nf-portabledeviceconnectapi-iportabledeviceconnector-connect) und [**IPortableDeviceConnector::D isconnector**](/windows/desktop/api/portabledeviceconnectapi/nf-portabledeviceconnectapi-iportabledeviceconnector-disconnect) übergeben werden.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -73,19 +73,19 @@ Windows Portable Devices (WPD) ruft diese Methode auf, um eine Anwendung zu bena
 
 | Anforderung | Wert |
 |-------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows 7 \[ -Desktop-Apps\]<br/>                                                                                                                             |
+| Unterstützte Mindestversion (Client)<br/> | Windows 7 \[ Desktop-Apps\]<br/>                                                                                                                             |
 | Unterstützte Mindestversion (Server)<br/> | Nicht unterstützt<br/>                                                                                                                                              |
-| Header<br/>                   | <dl> <dt>Devpkey. h; </dt> <dt>Portablede viceconnectapi. h</dt> </dl> |
-| IDL<br/>                      | <dl> <dt>Portablede viceconnectapi. idl</dt> </dl>                                                                |
-| Bibliothek<br/>                  | <dl> <dt>Portabledeviceguids. lib</dt> </dl>                                                                     |
+| Header<br/>                   | <dl> <dt>Devpkey.h; </dt> <dt>Portabledeviceconnectapi.h</dt> </dl> |
+| Idl<br/>                      | <dl> <dt>Portabledeviceconnectapi.idl</dt> </dl>                                                                |
+| Bibliothek<br/>                  | <dl> <dt>PortableDeviceGuids.lib</dt> </dl>                                                                     |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Iconnectionrequestcallback**](iconnectionrequestcallback.md)
+[**IConnectionRequestCallback**](iconnectionrequestcallback.md)
 </dt> </dl>
 
  

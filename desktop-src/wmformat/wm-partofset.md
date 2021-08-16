@@ -1,9 +1,9 @@
 ---
-title: WM/Element Satz
-description: Das Attribut WM/Parser enthält die Teilenummer und die Gesamtzahl der Teile in der Menge, zu der die Datei gehört. Die beiden Werte werden durch einen Schrägstrich getrennt.
+title: WM/PartOfSet
+description: Das WM/PartOfSet-Attribut enthält die Teilenummer und die Gesamtanzahl der Teile in der Menge, zu der die Datei gehört. Die beiden Werte werden durch einen Schrägstrich getrennt.
 ms.assetid: a7facc38-776b-40c5-a93a-71d0e2effa2d
 keywords:
-- WM/Element "Windows Media-Format" festlegen
+- WM/PartOfSet windows Media Format
 topic_type:
 - apiref
 api_name:
@@ -12,24 +12,24 @@ api_type:
 - NA
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 3684f2ec3b9d48b6515a3c33133b9153fdf683c1
-ms.sourcegitcommit: 57758ecb246c84d65e6e0e4bd5570d9176fa39cd
+ms.openlocfilehash: 6fedc93c9cc43513729483dfb5f7fb849d88e3cf4e78bbae88b9b04ca3664be8
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "106337826"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117844487"
 ---
-# <a name="wmpartofset"></a>WM/Element Satz
+# <a name="wmpartofset"></a>WM/PartOfSet
 
-Das Attribut **WM/Parser** enthält die Teilenummer und die Gesamtzahl der Teile in der Menge, zu der die Datei gehört. Die beiden Werte werden durch einen Schrägstrich getrennt.
+Das **WM/PartOfSet-Attribut** enthält die Teilenummer und die Gesamtanzahl der Teile in der Menge, zu der die Datei gehört. Die beiden Werte werden durch einen Schrägstrich getrennt.
 
 ## <a name="global-constant"></a>Globale Konstante
 
-g \_ wszwmparametset
+g \_ wszWMPartOfSet
 
 ## <a name="data-type"></a>Datentyp
 
-**WMT \_ - \_ Typzeichenfolge**
+**\_ \_ WMT-TYPZEICHENFOLGE**
 
 ## <a name="example"></a>Beispiel
 
@@ -41,18 +41,18 @@ g \_ wszwmparametset
 
 
 
- 
+ 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
 [**Attributliste**](attribute-list.md)
 </dt> </dl>
 
- 
+ 
 
- 
+ 
 
 
 

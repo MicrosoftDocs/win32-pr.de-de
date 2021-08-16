@@ -1,7 +1,7 @@
 ---
-description: Tragbare Windows-Geräte unterstützen die folgenden e-Mail-Eigenschaften.
+description: Windows Portable Geräte unterstützen die folgenden E-Mail-Eigenschaften.
 ms.assetid: c886622e-57e7-4bd1-b645-0e979ee7b66a
-title: E-Mail-Eigenschaften (portabledevice. h)
+title: E-Mail-Eigenschaften (PortableDevice.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,28 +13,28 @@ api_type:
 - HeaderDef
 api_location:
 - PortableDevice.h
-ms.openlocfilehash: de25d73e9fb331538ecdbf5f22306d85c282b338
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 4c67a341bcc7fcac041f02cc183c02e024e60b121150aba0ce62da2f973ccbec
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106361535"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117843232"
 ---
 # <a name="email-properties"></a>E-Mail-Eigenschaften
 
-Tragbare Windows-Geräte unterstützen die folgenden e-Mail-Eigenschaften.
+Windows Portable Geräte unterstützen die folgenden E-Mail-Eigenschaften.
 
 
 
-| Eigenschaft                         | VarType        | BESCHREIBUNG                                                                                                                               |
+| Eigenschaft                         | VarType        | Beschreibung                                                                                                                               |
 |----------------------------------|----------------|-------------------------------------------------------------------------------------------------------------------------------------------|
-| **WPD \_ -e-Mail \_ Bcc- \_ Zeile**        | **VT \_ LPWSTR** | Die Bcc-Empfänger der e-Mail-Nachricht. BCC-Empfänger erhalten eine Kopie der e-Mail, deren Namen jedoch nicht als Empfänger angezeigt werden.   |
-| **WPD \_ -e-Mail- \_ \_ Leitung**         | **VT \_ LPWSTR** | Die CC-Empfänger der e-Mail-Nachricht. CC-Empfänger erhalten eine Kopie der e-Mail-Nachricht, deren Namen als Empfänger angezeigt werden. |
-| **WPD \_ -e-Mail \_ enthält \_ Anlagen** | **VT \_ bool**   | Ein boolescher Wert, der angibt, ob diese e-Mail über Anlagen verfügt.                                                               |
-| **WPD \_ -e-Mail \_ \_ wurde \_ gelesen**  | **VT \_ bool**   | Ein boolescher Wert, der angibt, ob diese e-Mail-Nachricht gelesen wurde.                                                                 |
-| **\_empfangene WPD-e-Mail \_ \_**   | **VT- \_ Datum**   | Ein Wert, der angibt, wann die e-Mail-Nachricht empfangen wurde.                                                                              |
-| **WPD \_ -e-Mail \_ \_**  | **VT \_ LPWSTR** | Die E-Mail-Adresse des Absenders.                                                                                                         |
-| **WPD \_ -e-Mail \_ an \_ Zeile**         | **VT \_ LPWSTR** | Die Hauptempfänger der e-Mail-Nachricht.                                                                                                |
+| **WPD \_ EMAIL \_ BCC \_ LINE**        | **VT \_ LPWSTR** | Die BCC-Empfänger der E-Mail. BCC-Empfänger erhalten eine Kopie der E-Mail, aber ihre Namen werden nicht als Empfänger angezeigt.   |
+| **WPD \_ EMAIL \_ CC \_ LINE**         | **VT \_ LPWSTR** | Die CC-Empfänger der E-Mail. CC-Empfänger erhalten eine Kopie der E-Mail-Nachricht, und ihre Namen werden als Empfänger angezeigt. |
+| **WPD \_ EMAIL \_ HAS \_ ATTACHMENTS (WPD-E-MAIL ENTHÄLT ANLAGEN)** | **VT \_ BOOL**   | Ein boolescher Wert, der angibt, ob diese E-Mail-Nachricht Anlagen enthält.                                                               |
+| **\_ \_ WPD-E-MAIL \_ WURDE \_ GELESEN**  | **VT \_ BOOL**   | Ein boolescher Wert, der angibt, ob diese E-Mail-Nachricht gelesen wurde.                                                                 |
+| **\_WPD-E-MAIL-EMPFANGENE \_ \_ ZEIT**   | **VT \_ DATE**   | Ein -Wert, der angibt, wann die E-Mail empfangen wurde.                                                                              |
+| **\_WPD-E-MAIL-ABSENDERADRESSE \_ \_**  | **VT \_ LPWSTR** | Die E-Mail-Adresse des Absenders.                                                                                                         |
+| **\_WPD-E-MAIL \_ AN \_ ZEILE**         | **VT \_ LPWSTR** | Die Hauptempfänger der E-Mail-Nachricht.                                                                                                |
 
 
 
@@ -46,15 +46,15 @@ Tragbare Windows-Geräte unterstützen die folgenden e-Mail-Eigenschaften.
 
 | Anforderung | Wert |
 |-------------------|---------------------------------------------------------------------------------------------|
-| Header<br/> | <dl> <dt>Portabledevice. h</dt> </dl> |
+| Header<br/> | <dl> <dt>PortableDevice.h</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**WPD-Eigenschaften und-Attribute**](properties-and-attributes.md)
+[**WPD-Eigenschaften und -Attribute**](properties-and-attributes.md)
 </dt> </dl>
 
  

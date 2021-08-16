@@ -1,19 +1,19 @@
 ---
-description: Der Datentyp für die Initialisierung der \_ Aushandlung ist ein spezieller Wert des Typs DWORD.
+description: Der INITIALIZE \_ NEGOTIATION-Datentyp ist ein spezieller Wert vom Typ DWORD.
 ms.assetid: ce978913-47a1-4387-bd1b-1795aaf82dd7
 title: INITIALIZE_NEGOTIATION
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 51a55879a0952d3f8b5e268ec6a01a666bdbf5ee
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: d24763b9214dcffab99c83f24028e451a33d70dd7e4210f4eff64b0c39306d6d
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "103753417"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117762777"
 ---
-# <a name="initialize_negotiation"></a>Aushandlung initialisieren \_
+# <a name="initialize_negotiation"></a>INITIALIZE \_ NEGOTIATION
 
-Der Datentyp für die **Initialisierung der \_ Aushandlung** ist ein spezieller Wert des Typs **DWORD**. Sie kann als *dwdeviceid* -Parameter in den [**TSPI \_ linenegotiatetspiversion**](/windows/win32/api/tspi/nf-tspi-tspi_linenegotiatetspiversion) -und [**TSPI \_ phonenegotiatetspiversion**](/windows/win32/api/tspi/nf-tspi-tspi_phonenegotiatetspiversion) -Funktionen übergeben werden. Dies deutet darauf hin, dass TAPI eine TSPI-Schnittstellen Versionsnummer unabhängig von bestimmten Geräten aushandeln kann.
+Der **INITIALIZE \_ NEGOTIATION-Datentyp** ist ein spezieller Wert vom **Typ DWORD.** Sie kann als *dwDeviceID-Parameter* in den [**Funktionen TSPI \_ lineNegotiateTSPIVersion**](/windows/win32/api/tspi/nf-tspi-tspi_linenegotiatetspiversion) und [**TSPI \_ phoneNegotiateTSPIVersion übergeben**](/windows/win32/api/tspi/nf-tspi-tspi_phonenegotiatetspiversion) werden. Dies bedeutet, dass TAPI unabhängig von bestimmten Geräten eine TSPI-Schnittstellenversionsnummer aushandeln kann.
 
  
 

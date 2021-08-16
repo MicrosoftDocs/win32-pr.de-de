@@ -1,50 +1,50 @@
 ---
-description: 'Die folgende Liste gibt Ergänzungen und Änderungen an der Volumeschattenkopie-Dienst-Schnittstelle in Windows Server 2003 mit Service Pack 1 (SP1) an:'
+description: 'Die folgende Liste enthält Ergänzungen und Änderungen an der Volumeschattenkopie-Dienst-Schnittstelle in Windows Server 2003 mit Service Pack 1 (SP1):'
 ms.assetid: 9e0dba98-5d23-444d-bd2f-cb72de8fb2d2
-title: Neues in VSS unter Windows Server 2003 SP1
+title: Neuerungen in VSS in Windows Server 2003 SP1
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 559b51d5b019d9d57aa154c4728ef5c8f4bb19d6
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: baed6cde05eb1aabe1bc43f48aa035146e020f23d215e7902d3544414619b4e2
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104485019"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118344196"
 ---
-# <a name="whats-new-in-vss-in-windows-server-2003-sp1"></a>Neues in VSS unter Windows Server 2003 SP1
+# <a name="whats-new-in-vss-in-windows-server-2003-sp1"></a>Neuerungen in VSS in Windows Server 2003 SP1
 
-Die folgende Liste gibt Ergänzungen und Änderungen an der Volumeschattenkopie-Dienst-Schnittstelle in Windows Server 2003 mit Service Pack 1 (SP1) an:
+Die folgende Liste enthält Ergänzungen und Änderungen an der Volumeschattenkopie-Dienst-Schnittstelle in Windows Server 2003 mit Service Pack 1 (SP1):
 
 ## <a name="auto-recovery"></a>Automatische Wiederherstellung
 
-Die [*Automatische Wiederherstellung*](vssgloss-a.md) ermöglicht Writer eine Zeit zum Aktualisieren von Komponenten in einer Schatten Kopie, bevor die Schatten Kopie dauerhaft in schreibgeschützt geändert wird. Beispielsweise muss eine Datenbank möglicherweise unvollständige Transaktionen für alle Schatten Kopien zurücksetzen (der datenbankwriter würde das **VSS CF- \_ \_ \_ sicherungswiederherstellungsflag** für die Datenbankkomponenten festlegen). Die automatische Wiederherstellung, die von der anfordernden Person initiiert wurde, ermöglicht eine differenzierte Wiederherstellung (z. b. das Wiederherstellen einer Tabelle in einer Datenbank oder eines Ordners auf einem e-Mail-Server) oder das Rollback zur Unterstützung von Data Mining zur Durchführung von Analysen, die für einen Produktions **Server zu langsam \_ \_ \_ \_** sind. Die automatische Wiederherstellung ist nicht mit transportfähigen Schatten Kopien kompatibel, aber die gleiche Funktionalität wird durch die Verwendung der [schnellen Wiederherstellung mithilfe von austauschen schattenkopierten Volumes](fast-recovery-using-transportable-shadow-copied-volumes.md)unterstützt.
+[*Die automatische Wiederherstellung*](vssgloss-a.md) ermöglicht Writern eine Zeit zum Aktualisieren von Komponenten in einer Schattenkopie, bevor die Schattenkopie dauerhaft in schreibgeschützt geändert wird. Beispielsweise muss eine Datenbank möglicherweise ein Rollback für unvollständige Transaktionen für alle Schattenkopien durchführen (der Datenbankwriter würde das **VSS \_ CF BACKUP \_ \_ RECOVERY-Flag** für die Datenbankkomponenten festlegen). Die vom Anfordernden initiierte automatische Wiederherstellung ermöglicht sowohl eine differenzierte Wiederherstellung (z. B. das Wiederherstellen einer Tabelle in einer Datenbank oder eines Ordners auf einem E-Mail-Server) als auch das Rollback zur Unterstützung von Data Mining, um Analysen durchzuführen, die für einen Produktionsserver zu langsam wären (der Anforderer würde **VSS \_ VOLSNAP \_ ATTR \_ ROLLBACK \_ RECOVERY** zum Schattenkopiekontext hinzufügen).) Die automatische Wiederherstellung ist nicht mit transportierbaren Schattenkopien kompatibel, aber die gleiche Funktionalität wird durch die Verwendung der [schnellen Wiederherstellung mit transportierbaren volumes mit Schattenkopien](fast-recovery-using-transportable-shadow-copied-volumes.md)unterstützt.
 
-Die folgenden Programmier Elemente haben Änderungen zur Unterstützung der automatischen Wiederherstellung:
+Die folgenden Programmierelemente haben Änderungen zur Unterstützung der automatischen Wiederherstellung:
 
-Klassen Methoden
+Klassenmethoden
 
--   [**CVssWriter:: geznapshotdevicename**](/windows/desktop/api/VsWriter/nf-vswriter-cvsswriter-getsnapshotdevicename)
--   [**CVssWriter:: OnPostSnapshot**](/windows/desktop/api/VsWriter/nf-vswriter-cvsswriter-onpostsnapshot)
+-   [**CVssWriter::GetSnapshotDeviceName**](/windows/desktop/api/VsWriter/nf-vswriter-cvsswriter-getsnapshotdevicename)
+-   [**CVssWriter::OnPostSnapshot**](/windows/desktop/api/VsWriter/nf-vswriter-cvsswriter-onpostsnapshot)
 
 Enumerationen
 
--   [**VSS \_ - \_ Komponentenflags**](/windows/desktop/api/VsWriter/ne-vswriter-vss_component_flags)
--   [**\_VSS \_ - \_ volumesnapshotattribute \_**](/windows/desktop/api/Vss/ne-vss-vss_volume_snapshot_attributes)
+-   [**\_ \_ VSS-KOMPONENTENFLAGS**](/windows/desktop/api/VsWriter/ne-vswriter-vss_component_flags)
+-   [**\_\_ \_ VSS-VOLUMEMOMENTAUFNAHMEATTRIBUTE \_**](/windows/desktop/api/Vss/ne-vss-vss_volume_snapshot_attributes)
 
-Schnittstellen Methoden
+Schnittstellenmethoden
 
--   [**Ivssproviderkreatesnapshotset::P Verfeinerungs Momentaufnahmen**](/windows/desktop/api/VsProv/nf-vsprov-ivssprovidercreatesnapshotset-prefinalcommitsnapshots)
--   [**Ivssproviderkreatesnapshotset::P ostfinalcommitsnapshot**](/windows/desktop/api/VsProv/nf-vsprov-ivssprovidercreatesnapshotset-postfinalcommitsnapshots)
+-   [**IVssProviderCreateSnapshotSet::P reFinalCommitSnapshots**](/windows/desktop/api/VsProv/nf-vsprov-ivssprovidercreatesnapshotset-prefinalcommitsnapshots)
+-   [**IVssProviderCreateSnapshotSet::P ostFinalCommitSnapshots**](/windows/desktop/api/VsProv/nf-vsprov-ivssprovidercreatesnapshotset-postfinalcommitsnapshots)
 
-## <a name="full-support-for-transportable-shadow-copies"></a>Vollständige Unterstützung für transportable-Schatten Kopien
+## <a name="full-support-for-transportable-shadow-copies"></a>Vollständige Unterstützung für transportierbare Schattenkopien
 
-Transportable-Schatten Kopien werden in allen Editionen von Windows Server 2003 mit SP1 unterstützt. Weitere Informationen finden Sie unter [importieren transportable-Schattenkopievolumes](importing-transportable-shadow-copied-volumes.md).
+Transportierbare Schattenkopien werden in allen Editionen von Windows Server 2003 mit SP1 unterstützt. Weitere Informationen finden Sie unter [Importieren von transportierbaren Schattenkopievolumes.](importing-transportable-shadow-copied-volumes.md)
 
-## <a name="fast-recovery-using-transportable-shadow-copied-volumes"></a>Schnelle Wiederherstellung mithilfe von transportable schattenkopierten Volumes
+## <a name="fast-recovery-using-transportable-shadow-copied-volumes"></a>Schnelle Wiederherstellung mit transportierbaren Schattenkopievolumes
 
-[Schnelle Wiederherstellung mithilfe von transportable schattenkopierten Volumes](fast-recovery-using-transportable-shadow-copied-volumes.md)
+[Schnelle Wiederherstellung mit transportierbaren Schattenkopievolumes](fast-recovery-using-transportable-shadow-copied-volumes.md)
 
-## <a name="shadow-copy-storage-area-management"></a>Schatten Kopie-Speicherbereichs Verwaltung
+## <a name="shadow-copy-storage-area-management"></a>Schattenkopiespeicherbereichsverwaltung
 
 [**IVssSnapshotMgmt2**](/windows/desktop/api/VsMgmt/nn-vsmgmt-ivsssnapshotmgmt2)
 

@@ -51,16 +51,16 @@ Handle für den Frame.
 *Adresstyp* 
 </dt> <dd>
 
-Quelladressentyp. Der Parameterwert kann einer der folgenden sein:
+Quelladresstyp. Der Parameterwert kann einer der folgenden Sein:
 
--   ADRESSTYP \_ \_ ETHERNET
--   \_ \_ IP-ADRESSTYP
--   ADRESSTYP \_ \_ IPX
--   ADDRESS \_ TYPE \_ TOKENRING
--   \_ \_ ADRESSTYP-FDDI
+-   \_ \_ ADRESSTYP ETHERNET
+-   \_ \_ IP-ADRESSE
+-   \_ \_ ADRESSTYP IPX
+-   ADRESSTYP \_ \_ TOKENRING
+-   \_ \_ ADRESSTYP FDDI
 -   ADRESSTYP \_ \_ XNS
--   ADRESSE \_ TYP \_ VINES \_ IP
--   ADRESSTYP \_ \_ ATM
+-   ADRESSTYP \_ \_ VINES \_ IP
+-   \_ \_ ADRESSTYP ATM
 
 </dd> <dt>
 
@@ -75,7 +75,7 @@ Zeiger auf ein **DWORD,** das bei der Rückgabe die Länge der Adresse in Bytes 
 
 Wenn die Funktion erfolgreich ist, ist der Rückgabewert der Offset zur Quelladresse.
 
-Wenn die Funktion nicht erfolgreich ist, ist der Rückgabewert minus eins (-1).
+Wenn die Funktion nicht erfolgreich ist, beträgt der Rückgabewert minus 1 (-1).
 
 ## <a name="requirements"></a>Anforderungen
 

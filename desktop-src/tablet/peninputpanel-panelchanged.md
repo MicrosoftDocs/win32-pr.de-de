@@ -1,21 +1,21 @@
 ---
-description: Veraltet. Der "tzinputpanel" wurde durch den Text Eingabe Panel (Tip) ersetzt. Tritt auf, wenn sich das Objekt "pinputpanel" zwischen Layouts ändert.
+description: Veraltet. Das PenInputPanel wurde durch den Texteingabebereich (TIP) ersetzt. Tritt ein, wenn sich das PenInputPanel-Objekt zwischen Layouts ändert.
 ms.assetid: 21d38406-7ed9-4741-a092-ed3a369dc0dc
-title: "\"Pinputpanel. PanelChanged\"-Ereignis (msink AUT. h)"
+title: PenInputPanel.PanelChanged-Ereignis (Msinkaut.h)
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 1d6ff0f415e12131221a8dad1c0775a347ef96cf
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 41f722609ae71761a2a2a05c743aba7bfd83b7d4ff8689333bf2093d4dc21345
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "104347869"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117856519"
 ---
-# <a name="peninputpanelpanelchanged-event"></a>"Pinputpanel. PanelChanged"-Ereignis
+# <a name="peninputpanelpanelchanged-event"></a>PenInputPanel.PanelChanged-Ereignis
 
-Veraltet. Der " [**tzinputpanel**](peninputpanel-class.md) " wurde durch den [Text Eingabe Panel (Tip)](text-input-panel-reference.md)ersetzt.
+Veraltet. Das [**PenInputPanel**](peninputpanel-class.md) wurde durch den [Texteingabebereich (TIP) ersetzt.](text-input-panel-reference.md)
 
-Tritt auf, wenn sich das Objekt " [**pinputpanel**](peninputpanel-class.md) " zwischen Layouts ändert.
+Tritt ein, wenn [**sich das PenInputPanel-Objekt**](peninputpanel-class.md) zwischen Layouts ändert.
 
 ## <a name="syntax"></a>Syntax
 
@@ -32,22 +32,22 @@ HRESULT PanelChanged(
 
 <dl> <dt>
 
-*Newpaneltype* \[ in\]
+*NewPanelType* \[ In\]
 </dt> <dd>
 
-Der neue Panel-Typ, der nach dem Auslösen des **PanelChanged** -Ereignisses für die Eingabe innerhalb des " [**kinputpanel**](peninputpanel-class.md) "-Objekts verwendet wird.
+Der neue Paneltyp, der für die Eingabe innerhalb des [**PenInputPanel-Objekts**](peninputpanel-class.md) verwendet wird, nachdem das **PanelChanged-Ereignis** angezeigt wird.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Wenn dieses Ereignis erfolgreich ist, gibt es " **S \_ OK**" zurück. Andernfalls wird ein **HRESULT** -Fehlercode zurückgegeben.
+Wenn dieses Ereignis erfolgreich ist, wird **S \_ OK zurückgegeben.** Andernfalls wird ein **HRESULT-Fehlercode** zurückgegeben.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Beim Erstellen eines " [**pinputpanel**](peninputpanel-class.md) "-Objekts ist [**Handschrift**](/windows/win32/api/peninputpanel/ne-peninputpanel-paneltype) der standardmäßige **PanelType**. Wenn Sie den Bereich ändern, indem Sie die [**CurrentPanel**](/windows/desktop/api/peninputpanel/nf-peninputpanel-ipeninputpanel-get_currentpanel) -Eigenschaft festlegen, bevor der Stift Eingabebereich zum ersten Mal aktiviert wird, tritt ein **PanelChanged** -Ereignis auf.
+Beim Erstellen eines [**PenInputPanel-Objekts**](peninputpanel-class.md) [**ist Handwriting**](/windows/win32/api/peninputpanel/ne-peninputpanel-paneltype) der **Standardmäßige PanelType.** Wenn Sie den Bereich ändern, indem Sie die [**CurrentPanel-Eigenschaft**](/windows/desktop/api/peninputpanel/nf-peninputpanel-ipeninputpanel-get_currentpanel) festlegen, bevor der Stifteingabebereich zum ersten Mal aktiv wird, tritt ein **PanelChanged-Ereignis** auf.
 
-Das **PanelChanged** -Ereignis wird nicht ausgelöst, wenn sich der Benutzer zwischen den gepackten und geschachtelten Schreibvorgängen ändert.
+Das **PanelChanged-Ereignis** wird nicht ausgelöst, wenn der Benutzer zwischen Lined- und Boxed-Schreibpads wechselt.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -55,18 +55,18 @@ Das **PanelChanged** -Ereignis wird nicht ausgelöst, wenn sich der Benutzer zwi
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows XP Tablet PC Edition \[ Desktop-Apps\]<br/>                                                       |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur Desktop-Apps der XP Tablet PC Edition \[\]<br/>                                                       |
 | Unterstützte Mindestversion (Server)<br/> | Nicht unterstützt<br/>                                                                                           |
-| Header<br/>                   | <dl> <dt>Msink AUT. h (erfordert auch msink AUT \_ i. c)</dt> </dl> |
+| Header<br/>                   | <dl> <dt>Msinkaut.h (erfordert auch Msinkaut \_ i.c)</dt> </dl> |
 | Bibliothek<br/>                  | <dl> <dt>InkObj.dll</dt> </dl>                               |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**"Pendel Panel"**](peninputpanel-class.md)
+[**Peninputpanel**](peninputpanel-class.md)
 </dt> </dl>
 
  

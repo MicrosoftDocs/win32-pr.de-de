@@ -1,5 +1,5 @@
 ---
-description: Links zur Dokumentation für die IAzScope2-Interoperabilitäts-Wrappermethoden und -Eigenschaften.
+description: Links zur Dokumentation für die IAzScope2-Interoperabilitätswrappermethoden und -eigenschaften.
 ms.assetid: 2e1fb2af-3512-416c-8716-7e1303783ea5
 title: Microsoft.Interop.Security.AzRoles.IAzScope2-Schnittstelle
 ms.topic: reference
@@ -144,22 +144,22 @@ ms.locfileid: "117780582"
 ---
 # <a name="microsoftinteropsecurityazrolesiazscope2-interface"></a>Microsoft.Interop.Security.AzRoles.IAzScope2-Schnittstelle
 
-Die Interoperabilitäts-Wrappermethoden und -eigenschaften von **Microsoft.Interop.Security.Azroles.IAzScope2** sind unter der COM-Version der Methode oder Eigenschaft dokumentiert. Auf jeden Membernamen folgt ein Link zur korrelierenden COM-Dokumentation.
+Die **Microsoft.Interop.Security.Azroles.IAzScope2-Interoperabilitätswrappermethoden** und -eigenschaften sind unter der COM-Version der Methode oder Eigenschaft dokumentiert. Ein Link zur korrelierenden COM-Dokumentation folgt jedem Membernamen.
 
 ## <a name="members"></a>Member
 
-Die **Schnittstelle Microsoft.Interop.Security.AzRoles.IAzScope2** verfügt über die folgenden Membertypen:
+Die **Microsoft.Interop.Security.AzRoles.IAzScope2-Schnittstelle** verfügt über die folgenden Membertypen:
 
 -   [Methoden](#methods)
 -   [Eigenschaften](#properties)
 
 ### <a name="methods"></a>Methoden
 
-Die **Schnittstelle Microsoft.Interop.Security.AzRoles.IAzScope2** verfügt über diese Methoden.
+Die **Microsoft.Interop.Security.AzRoles.IAzScope2-Schnittstelle** verfügt über diese Methoden.
 
 
 
-| Methode                                                                         | BESCHREIBUNG                                                                                          |
+| Methode                                                                         | Beschreibung                                                                                          |
 |:-------------------------------------------------------------------------------|:-----------------------------------------------------------------------------------------------------|
 | **Microsoft.Interop.Security.Azroles.IAzScope2.AddPolicyAdministrator**        | [**IAzScope::AddPolicyAdministrator**](/windows/desktop/api/Azroles/nf-azroles-iazscope-addpolicyadministrator)<br/>               |
 | **Microsoft.Interop.Security.Azroles.IAzScope2.AddPolicyAdministratorName**    | [**IAzScope::AddPolicyAdministratorName**](/windows/desktop/api/Azroles/nf-azroles-iazscope-addpolicyadministratorname)<br/>       |
@@ -196,11 +196,11 @@ Die **Schnittstelle Microsoft.Interop.Security.AzRoles.IAzScope2** verfügt übe
 
 ### <a name="properties"></a>Eigenschaften
 
-Die **Schnittstelle Microsoft.Interop.Security.AzRoles.IAzScope2** verfügt über diese Eigenschaften.
+Die **Microsoft.Interop.Security.AzRoles.IAzScope2-Schnittstelle** verfügt über diese Eigenschaften.
 
 
 
-| Eigenschaft                                                                             | Zugriffstyp           | BESCHREIBUNG                                                                                           |
+| Eigenschaft                                                                             | Zugriffstyp           | Beschreibung                                                                                           |
 |:-------------------------------------------------------------------------------------|:----------------------|:------------------------------------------------------------------------------------------------------|
 | **Microsoft.Interop.Security.Azroles.IAzScope2.ApplicationData**<br/>          | Lesen/Schreiben<br/> | [**ApplicationData-Eigenschaft von IAzScope**](/windows/desktop/api/Azroles/nf-azroles-iazscope-get_applicationdata)<br/>                   |
 | **Microsoft.Interop.Security.Azroles.IAzScope2.ApplicationGroups**<br/>        | Schreibgeschützt<br/>  | [**ApplicationGroups-Eigenschaft von IAzScope**](/windows/desktop/api/Azroles/nf-azroles-iazscope-get_applicationgroups)<br/>               |

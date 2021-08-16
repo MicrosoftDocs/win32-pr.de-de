@@ -1,7 +1,7 @@
 ---
-description: Wird von einer Dateierweiterung (oder einer anderen Anwendung) gesendet, damit der Datei-Manager alle Erweiterungs-DLLs neu lädt, die im \[ Abschnitt AddOns \] der Winfile.ini-Datei aufgeführt sind.
+description: Wird von einer Datei-Manager-Erweiterung (oder einer anderen Anwendung) gesendet, um den Datei-Manager dazu zu führen, dass alle Erweiterungs-DLLs, die im Abschnitt AddOns der Dateidatei Winfile.ini \[ \] werden, neu geladen werden.
 ms.assetid: 5103a986-5f45-4deb-aaae-c6e87cb60051
-title: FM_RELOAD_EXTENSIONS-Nachricht (Wfext.h)
+title: FM_RELOAD_EXTENSIONS (Wfext.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -20,9 +20,9 @@ ms.contentlocale: de-DE
 ms.lasthandoff: 08/11/2021
 ms.locfileid: "118224174"
 ---
-# <a name="fm_reload_extensions-message"></a>\_FM RELOAD \_ EXTENSIONS-Meldung
+# <a name="fm_reload_extensions-message"></a>FM \_ RELOAD \_ EXTENSIONS-Meldung
 
-Wird von einer Dateierweiterung (oder einer anderen Anwendung) gesendet, damit der Datei-Manager alle Erweiterungs-DLLs neu lädt, die im \[ Abschnitt AddOns \] der Winfile.ini-Datei aufgeführt sind.
+Wird von einer Datei-Manager-Erweiterung (oder einer anderen Anwendung) gesendet, um den Datei-Manager dazu zu führen, dass alle Erweiterungs-DLLs, die im Abschnitt AddOns der Dateidatei Winfile.ini \[ \] werden, neu geladen werden.
 
 ## <a name="parameters"></a>Parameter
 
@@ -48,7 +48,7 @@ Kein Rückgabewert.
 
 ## <a name="remarks"></a>Hinweise
 
-Andere Anwendungen können die [**PostMessage-Funktion**](/windows/win32/api/winuser/nf-winuser-postmessagea) verwenden, um diese Nachricht an den Datei-Manager zu senden. Um das entsprechende Datei-Manager-Fensterhandle abzurufen, kann eine Anwendung "WFS \_ Frame" als *lpszClassName-Parameter* in einem Aufruf der [**FindWindow-Funktion**](/windows/win32/api/winuser/nf-winuser-findwindowa) angeben.
+Andere Anwendungen können die [**PostMessage-Funktion**](/windows/win32/api/winuser/nf-winuser-postmessagea) verwenden, um diese Nachricht an den Datei-Manager zu senden. Um das entsprechende File Manager-Fensterhandle zu erhalten, kann eine Anwendung "WFS Frame" als \_ *lpszClassName-Parameter* in einem Aufruf der [**FindWindow-Funktion**](/windows/win32/api/winuser/nf-winuser-findwindowa) angeben.
 
 ## <a name="requirements"></a>Anforderungen
 

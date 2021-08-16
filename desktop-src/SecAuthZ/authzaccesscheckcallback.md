@@ -1,7 +1,7 @@
 ---
-description: Eine anwendungsdefinierte Funktion, die Rückrufzugriffssteuerungseinträge (Access Control Entries, ACEs) während einer Zugriffsüberprüfung verarbeitet.
+description: Eine anwendungsdefinierte Funktion, die Rückrufzugriffssteuerungseinträge (ACEs) während einer Zugriffsüberprüfung verarbeitet.
 ms.assetid: e8a510e6-0739-4765-ad07-3bcb1b9c905c
-title: Rückruffunktion "AccessCheckCallback" inHz
+title: AutohzAccessCheckCallback-Rückruffunktion
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -19,9 +19,9 @@ ms.contentlocale: de-DE
 ms.lasthandoff: 08/11/2021
 ms.locfileid: "117784156"
 ---
-# <a name="authzaccesscheckcallback-callback-function"></a>Rückruffunktion "AccessCheckCallback" inHz
+# <a name="authzaccesscheckcallback-callback-function"></a>AutohzAccessCheckCallback-Rückruffunktion
 
-Die **Funktion "SollhzAccessCheckCallback"** ist eine anwendungsdefinierte Funktion, die Rückruf-Zugriffssteuerungseinträge (Callback [*Access Control Entries,*](/windows/desktop/SecGloss/a-gly) ACEs) während einer Zugriffsüberprüfung verarbeitet. **HzAccessCheckCallback** ist ein Platzhalter für den anwendungsdefinierten Funktionsnamen. Die Anwendung registriert diesen Rückruf, indem [**sie BlendhzInitializeResourceManager aufruft.**](/windows/desktop/api/Authz/nf-authz-authzinitializeresourcemanager)
+Die **AutohzAccessCheckCallback-Funktion** ist eine anwendungsdefinierte Funktion, die [*Rückrufzugriffssteuerungseinträge*](/windows/desktop/SecGloss/a-gly) (ACEs) während einer Zugriffsüberprüfung verarbeitet. **AuthzAccessCheckCallback** ist ein Platzhalter für den anwendungsdefinierte Funktionsnamen. Die Anwendung registriert diesen Rückruf durch Aufrufen von [**InitiathzInitializeResourceManager.**](/windows/desktop/api/Authz/nf-authz-authzinitializeresourcemanager)
 
 ## <a name="syntax"></a>Syntax
 
@@ -51,14 +51,14 @@ Ein Handle für einen Clientkontext.
 *pAce* \[ In\]
 </dt> <dd>
 
-Ein Zeiger auf den ACE, der ausgewertet werden soll, um ihn in den Aufruf der [**Funktion "SollhzAccessCheck" einschlussen zu**](/windows/desktop/api/Authz/nf-authz-authzaccesscheck) können.
+Ein Zeiger auf den ACE, der ausgewertet werden soll, um die Aufnahme in den Aufruf der [**AuthzAccessCheck-Funktion**](/windows/desktop/api/Authz/nf-authz-authzaccesscheck) zu ermitteln.
 
 </dd> <dt>
 
 *pArgs* \[ in, optional\]
 </dt> <dd>
 
-Daten, die im *DynamicGroupArgs-Parameter* des Aufrufs von [**"MusshzAccessCheck"**](/windows/desktop/api/Authz/nf-authz-authzaccesscheck) oder [**"AghzCachedAccessCheck" übergeben werden.**](/windows/desktop/api/Authz/nf-authz-authzcachedaccesscheck)
+Daten, die im *DynamicGroupArgs-Parameter* des Aufrufs von [**AuthzAccessCheck**](/windows/desktop/api/Authz/nf-authz-authzaccesscheck) oder [**AuthzCachedAccessCheck**](/windows/desktop/api/Authz/nf-authz-authzcachedaccesscheck)übergeben werden.
 
 </dd> <dt>
 
@@ -67,21 +67,21 @@ Daten, die im *DynamicGroupArgs-Parameter* des Aufrufs von [**"MusshzAccessCheck
 
 Ein Zeiger auf eine boolesche Variable, die die Ergebnisse der Auswertung der von der Anwendung definierten Logik empfängt.
 
-Die Ergebnisse sind **TRUE,** wenn die Logik feststellt, dass der ACE anwendbar ist, und wird in den Aufruf von [**BishzAccessCheck eingeschlossen.**](/windows/desktop/api/Authz/nf-authz-authzaccesscheck) Andernfalls sind die Ergebnisse **FALSE.**
+Die Ergebnisse sind **TRUE,** wenn die Logik bestimmt, dass der ACE anwendbar ist und in den Aufruf von [**AuthzAccessCheck**](/windows/desktop/api/Authz/nf-authz-authzaccesscheck)eingeschlossen wird. Andernfalls sind die Ergebnisse **FALSE.**
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Wenn die Funktion erfolgreich ist, gibt die Funktion **TRUE zurück.**
+Wenn die Funktion erfolgreich ist, gibt die Funktion **TRUE** zurück.
 
-Wenn die Funktion die Auswertung nicht ausführen kann, gibt sie **FALSE zurück.** Verwenden [**Sie SetLastError,**](/windows/desktop/api/errhandlingapi/nf-errhandlingapi-setlasterror) um einen Fehler an die Zugriffsüberprüfungsfunktion zurück zu geben.
+Wenn die Funktion die Auswertung nicht durchführen kann, gibt sie **FALSE** zurück. Verwenden Sie [**SetLastError,**](/windows/desktop/api/errhandlingapi/nf-errhandlingapi-setlasterror) um einen Fehler an die Zugriffsüberprüfungsfunktion zurückzugeben.
 
 ## <a name="remarks"></a>Hinweise
 
-Sicherheitsattributvariablen müssen im Clientkontext vorhanden sein, wenn in einem bedingten Ausdruck darauf verwiesen wird. Andernfalls wird der Begriff des bedingten Ausdrucks, auf den sie verweisen, als unbekannt ausgewertet.
+Sicherheitsattributvariablen müssen im Clientkontext vorhanden sein, wenn in einem bedingten Ausdruck auf verwiesen wird. Andernfalls wird der bedingte Ausdrucksausdruck, der auf sie verweist, als unbekannt ausgewertet.
 
-Weitere Informationen finden Sie unter [How AccessCheck Works (Funktionsweise von AccessCheck)](how-dacls-control-access-to-an-object.md) und [Centralized Authorization Policy overviews](centralized-authorization-policy.md) (Übersicht über zentralisierte Autorisierungsrichtlinien).
+Weitere Informationen finden Sie unter Funktionsweise von [AccessCheck](how-dacls-control-access-to-an-object.md) und Übersichten zu [zentralisierten Autorisierungsrichtlinien.](centralized-authorization-policy.md)
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -89,7 +89,7 @@ Weitere Informationen finden Sie unter [How AccessCheck Works (Funktionsweise vo
 
 | Anforderung | Wert |
 |-------------------------------------|------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Windows Nur \[ XP-Desktop-Apps\]<br/>                            |
+| Unterstützte Mindestversion (Client)<br/> | Windows \[Nur XP-Desktop-Apps\]<br/>                            |
 | Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2003-Desktop-Apps\]<br/>                   |
 | Verteilbare Komponente<br/>          | Windows Server 2003 Administration Tools Pack auf Windows XP<br/> |
 
@@ -108,16 +108,16 @@ Weitere Informationen finden Sie unter [How AccessCheck Works (Funktionsweise vo
 [Funktionsweise von AccessCheck](how-dacls-control-access-to-an-object.md)
 </dt> <dt>
 
-[**HzAccessCheck**](/windows/desktop/api/Authz/nf-authz-authzaccesscheck)
+[**AuthzAccessCheck**](/windows/desktop/api/Authz/nf-authz-authzaccesscheck)
 </dt> <dt>
 
-[**CodhzCachedAccessCheck**](/windows/desktop/api/Authz/nf-authz-authzcachedaccesscheck)
+[**AuthzCachedAccessCheck**](/windows/desktop/api/Authz/nf-authz-authzcachedaccesscheck)
 </dt> <dt>
 
-[**QshzInitializeRemoteResourceManager**](/windows/desktop/api/Authz/nf-authz-authzinitializeremoteresourcemanager)
+[**AuthzInitializeRemoteResourceManager**](/windows/desktop/api/Authz/nf-authz-authzinitializeremoteresourcemanager)
 </dt> <dt>
 
-[**QshzInitializeResourceManager**](/windows/desktop/api/Authz/nf-authz-authzinitializeresourcemanager)
+[**AuthzInitializeResourceManager**](/windows/desktop/api/Authz/nf-authz-authzinitializeresourcemanager)
 </dt> </dl>
 
  

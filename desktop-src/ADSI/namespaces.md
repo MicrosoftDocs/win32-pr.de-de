@@ -7,16 +7,16 @@ keywords:
 - Namespaces ADSI
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: d29d93963b2fc2b3fa6ea0eb486fe95b46ba0e9e
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: d416782f2a96ca716f6e803ad9d0b4200c82cff6ad0ad033751a89a5d2c8af1f
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "104387958"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117839381"
 ---
 # <a name="namespaces"></a>Namespaces
 
-Objekte, die sich in einem bestimmten Namespace befinden, werden durch einen eindeutigen Namen identifiziert. Beispielsweise befinden sich auf einem PC-Laufwerk gespeicherte Dateien im Dateisystem-Namespace. Der eindeutige Name einer Datei basiert darauf, wo Sie im Dateisystem-Namespace gespeichert wird. Beispiel:
+Objekte, die sich in einem bestimmten Namespace befinden, werden durch einen eindeutigen Namen identifiziert. Dateien, die auf einem PC-Laufwerk gespeichert sind, befinden sich beispielsweise im Dateisystemnamespace. Der eindeutige Name einer Datei basiert darauf, wo sie im Dateisystemnamespace gespeichert ist. Beispiel:
 
 
 ```C++
@@ -25,7 +25,7 @@ C:\public\documents\adsi\adsi_spec.doc
 
 
 
-Verzeichnisdienst-Namespaces identifizieren auch die Objekte, die Sie mit eindeutigen Namen enthalten, die normalerweise auf dem Speicherort im Verzeichnis basieren, an dem das Objekt gefunden werden kann. Beispielsweise kann ein bestimmtes Objekt in einem X. 500-Verzeichnis einen Namen wie den folgenden aufweisen:
+Verzeichnisdienstnamespaces identifizieren auch die darin enthaltenen Objekte anhand eindeutiger Namen, die in der Regel auf dem Speicherort im Verzeichnis basieren, in dem das Objekt gefunden werden kann. Beispielsweise kann ein bestimmtes Objekt in einem X.500-Verzeichnis einen Namen wie den folgenden haben:
 
 
 ```C++
@@ -34,11 +34,11 @@ CN=John,OU=Marketing,O=Fabrikam
 
 
 
-Verschiedene Verzeichnisdienste verwenden verschiedene Formulare, um die darin enthaltenen Objekte zu benennen. Dies vereinfacht den Umgang mit verschiedenen Namespaces, insbesondere für Entwickler, die alle unterschiedlichen Umgebungen in Betracht ziehen, in denen der Code möglicherweise ausgeführt wird.
+Verschiedene Verzeichnisdienste verwenden unterschiedliche Formen, um die darin enthaltenen Objekte zu benennen. Dies erschwert den Umgang mit verschiedenen Namespaces, insbesondere für Entwickler, und berücksichtigt dabei alle unterschiedlichen Umgebungen, in denen der Code ausgeführt werden kann.
 
-Ein Ziel von Active Directory Service Interfaces (ADSI) ist die Bereitstellung eines Benennungs Frameworks, das den Zugriff auf Namespaces verschiedener Verzeichnis Dienstanbieter ermöglicht.
+Ein Ziel von Active Directory-Dienstschnittstellen (ACTIVE Directory Service Interfaces, ADSI) ist die Bereitstellung eines Benennungsframeworks, das den Zugriff auf Namespaces verschiedener Verzeichnisdienstanbieter ermöglicht.
 
-ADSI definiert eine Benennungs Konvention, mit der ein Objekt in einer heterogenen Umgebung eindeutig identifiziert werden kann. Diese Namen werden als ADsPath-Zeichen folgen bezeichnet. ADsPath-Zeichen folgen benötigen verschiedene Formen:
+ADSI definiert eine Namenskonvention, die ein Objekt in einer heterogenen Umgebung eindeutig identifizieren kann. Diese Namen werden als ADsPath-Zeichenfolgen bezeichnet. ADsPath-Zeichenfolgen haben mehrere Formen:
 
 
 ```C++
@@ -51,11 +51,11 @@ ADSI definiert eine Benennungs Konvention, mit der ein Objekt in einer heterogen
 
 
 
-Es können zusätzliche zusätzliche Formate von ADSI-Anbietern eingeführt werden (z. b. der ADSI-Anbieter für den Internetinformationsdienste-Server, der die adspaths "IIS://" unterstützt).
+Zusätzliche ADsPath-Formate können von verschiedenen ADSI-Anbietern eingeführt werden (z. B. dem ADSI-Anbieter für den Internetinformationsdienste-Server, der die "IIS://" ADsPaths unterstützt).
 
- 
+ 
 
- 
+ 
 
 
 

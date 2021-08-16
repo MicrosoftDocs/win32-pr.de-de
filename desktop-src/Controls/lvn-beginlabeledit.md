@@ -1,9 +1,9 @@
 ---
-title: LVN_BEGINLABELEDIT Benachrichtigungs Code (kommctrl. h)
-description: Benachrichtigt das übergeordnete Fenster eines Listenansicht-Steuer Elements über den Anfang der Bezeichnungs Bearbeitung für ein Element. Dieser Benachrichtigungs Code wird in Form einer WM-Benachrichtigungs \_ Meldung gesendet.
+title: LVN_BEGINLABELEDIT Benachrichtigungscode (Commctrl.h)
+description: Benachrichtigt das übergeordnete Fenster eines Listenansichtssteuerelements über den Beginn der Bearbeitung von Bezeichnungen für ein Element. Dieser Benachrichtigungscode wird in Form einer WM \_ NOTIFY-Nachricht gesendet.
 ms.assetid: c13a9e95-22a9-476e-aeee-4928b8b096b0
 keywords:
-- Windows-Steuerelemente für LVN_BEGINLABELEDIT Benachrichtigungs
+- LVN_BEGINLABELEDIT Benachrichtigungscode Windows Controls
 topic_type:
 - apiref
 api_name:
@@ -16,16 +16,16 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: f77550b474534cee096b610a0805bce547d9b429
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: ab5b5ecfed8fdc15ec2779e204d01b0375c7da702e2a2e9fe8a3cdc3b178b0fb
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "103949460"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117830651"
 ---
-# <a name="lvn_beginlabeledit-notification-code"></a>LVN \_ beginlabeledit-Benachrichtigungs Code
+# <a name="lvn_beginlabeledit-notification-code"></a>LVN \_ BEGINLABELEDIT-Benachrichtigungscode
 
-Benachrichtigt das übergeordnete Fenster eines Listenansicht-Steuer Elements über den Anfang der Bezeichnungs Bearbeitung für ein Element. Dieser Benachrichtigungs Code wird in Form einer WM- [**\_ Benachrichtigungs**](wm-notify.md) Meldung gesendet.
+Benachrichtigt das übergeordnete Fenster eines Listenansichtssteuerelements über den Beginn der Bearbeitung von Bezeichnungen für ein Element. Dieser Benachrichtigungscode wird in Form einer [**WM \_ NOTIFY-Nachricht**](wm-notify.md) gesendet.
 
 
 ```C++
@@ -43,23 +43,23 @@ LVN_BEGINLABELEDIT
 *lParam* 
 </dt> <dd>
 
-Zeiger auf eine [**nmlvdispinfo**](/windows/win32/api/commctrl/ns-commctrl-nmlvdispinfoa) -Struktur. Das **Element Element** dieser Struktur ist eine [**lvitem**](/windows/win32/api/commctrl/ns-commctrl-lvitema) -Struktur, deren **iItem** -Member das Element identifiziert, das bearbeitet wird. Beachten Sie, dass unter Elemente nicht bearbeitet werden können. der **iSubItem** -Member ist immer auf 0 (null) festgelegt.
+Zeiger auf eine [**NMLVDISPINFO-Struktur.**](/windows/win32/api/commctrl/ns-commctrl-nmlvdispinfoa) Der **Elementmember** dieser Struktur ist eine [**LVITEM-Struktur,**](/windows/win32/api/commctrl/ns-commctrl-lvitema) deren **iItem-Member** das zu bearbeitende Element identifiziert. Beachten Sie, dass Unteritems nicht bearbeitet werden können. Der **iSubItem-Member** ist immer auf 0 (null) festgelegt.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Um dem Benutzer die Bearbeitung der Bezeichnung zu ermöglichen, geben Sie **false** zurück.
+Damit der Benutzer die Bezeichnung bearbeiten kann, geben Sie **FALSE zurück.**
 
-Um zu verhindern, dass der Benutzer die Bezeichnung bearbeitet, geben Sie " **true**" zurück.
+Um zu verhindern, dass der Benutzer die Bezeichnung bearbeitet, geben Sie **TRUE** zurück.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Wenn die Bezeichnungs Bearbeitung beginnt, wird ein Bearbeitungs Steuerelement erstellt, positioniert und initialisiert. Bevor es angezeigt wird, sendet das Listenansicht-Steuerelement seinen übergeordneten Fenster einen LVN \_ beginlabeledit-Benachrichtigungs Code.
+Wenn die Bearbeitung von Bezeichnungen beginnt, wird ein Bearbeitungssteuerelement erstellt, positioniert und initialisiert. Bevor es angezeigt wird, sendet das Listenansichtssteuerelement seinem übergeordneten Fenster einen LVN \_ BEGINLABELEDIT-Benachrichtigungscode.
 
-Implementieren Sie zum Anpassen der Bezeichnungs Bearbeitung einen Handler für LVN \_ beginlabeledit, und senden Sie eine [**LVM \_ geteditcontrol**](lvm-geteditcontrol.md) -Nachricht an das Listenansicht-Steuerelement. Wenn eine Bezeichnung bearbeitet wird, ist der Rückgabewert ein Handle für das Bearbeitungs Steuerelement. Verwenden Sie dieses Handle, um das Bearbeitungs Steuerelement anzupassen, indem Sie die üblichen **EM \_ xxx** -Meldungen senden.
+Implementieren Sie zum Anpassen der Bearbeitung von Bezeichnungen einen Handler für LVN \_ BEGINLABELEDIT, und senden Sie eine [**LVM \_ GETEDITCONTROL-Nachricht**](lvm-geteditcontrol.md) an das Listenansichtssteuerelement. Wenn eine Bezeichnung bearbeitet wird, ist der Rückgabewert ein Handle für das Bearbeitungssteuerelement. Verwenden Sie dieses Handle, um das Bearbeitungssteuerelement anzupassen, indem Sie die üblichen **EM \_ XXX-Nachrichten** senden.
 
-Wenn der Benutzer die Bearbeitung abbricht oder abschließt, empfängt das übergeordnete Fenster einen [LVN \_ endlabeledit](lvn-endlabeledit.md) -Benachrichtigungs Code.
+Wenn der Benutzer die Bearbeitung abbricht oder abschließt, empfängt das übergeordnete Fenster einen [LVN \_ ENDLABELEDIT-Benachrichtigungscode.](lvn-endlabeledit.md)
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -67,10 +67,10 @@ Wenn der Benutzer die Bearbeitung abbricht oder abschließt, empfängt das über
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>                                        |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2003 \[ -Desktop-Apps\]<br/>                                  |
-| Header<br/>                   | <dl> <dt>Kommstrg. h</dt> </dl> |
-| Unicode- und ANSI-Name<br/>   | **LVN \_ Beginlabeleditw** (Unicode) und **LVN \_ beginlabeledita** (ANSI)<br/>     |
+| Unterstützte Mindestversion (Client)<br/> | Windows \[Nur Vista-Desktop-Apps\]<br/>                                        |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2003-Desktop-Apps\]<br/>                                  |
+| Header<br/>                   | <dl> <dt>Commctrl.h</dt> </dl> |
+| Unicode- und ANSI-Name<br/>   | **LVN \_ BEGINLABELEDITW** (Unicode) und **LVN \_ BEGINLABELEDITA** (ANSI)<br/>     |
 
 
 

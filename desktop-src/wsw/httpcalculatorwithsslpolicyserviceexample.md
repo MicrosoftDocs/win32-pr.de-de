@@ -1,6 +1,6 @@
 ---
 title: HttpCalculatorWithSslPolicyServiceExample
-description: Überprüfen Sie ein C++-Beispiel für die Windows Web Services-API (WWSAPI) eines HTTP-Rechners mit SSL-Richtliniendienst.
+description: Sehen Sie sich ein Windows Web Services API (WWSAPI) C++-Beispiel für einen HTTP-Rechner mit SSL-Richtliniendienst an.
 ms.assetid: 5b3fc119-10c2-444b-91d3-415ad36a65ab
 keywords:
 - HttpCalculatorWithSslPolicyServiceExample Native-Web-Services
@@ -8,16 +8,16 @@ keywords:
 - WWS
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 05ef60e86ff6c14bb8fb91369785c197b3994c94
-ms.sourcegitcommit: 5d4e99f4c8f42f5f543e52cb9beb9fb13ec56c5f
+ms.openlocfilehash: f6dc7f985ec42585f1a1044d4391254190e183ec2ab5c940e42c6f8a3a283743
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2021
-ms.locfileid: "112409773"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117841554"
 ---
 # <a name="httpcalculatorwithsslpolicyserviceexample"></a>HttpCalculatorWithSslPolicyServiceExample
 
-In diesem Beispiel wird gezeigt, wie Sie einen Diensthost zum Hosten eines Rechnerdiensts über HTTP mit SSL-Transportsicherheit und Http-Header-Standardauthentifizierung verwenden. In diesem Setup wird die Transportverbindung durch SSL geschützt (signiert, verschlüsselt), wodurch auch die Serverauthentifizierung ermöglicht wird. Die Clientauthentifizierung wird durch ein Benutzername-Kennwort-Paar bereitgestellt, das in HTTP-Headern mithilfe des basisbasierten Schemas bereitgestellt wird.
+In diesem Beispiel wird gezeigt, wie Sie den Diensthost zum Hosten eines Rechnerdiensts über HTTP mit SSL-Transportsicherheit und HTTP-Header-Standardauthentifizierung verwenden. Bei diesem Setup wird die Transportverbindung durch SSL geschützt (signiert, verschlüsselt), wodurch auch die Serverauthentifizierung ermöglicht wird. Die Clientauthentifizierung wird durch ein Benutzername-Kennwort-Paar bereitgestellt, das in HTTP-Headern unter Verwendung des basisbasierten Schemas angegeben wird.
 
 -   [HttpCalculatorWithSslPolicyService.cpp](#httpcalculatorwithsslpolicyservicecpp)
 -   [CalculatorServiceWithPolicy.wsdl](#calculatorservicewithpolicywsdl)

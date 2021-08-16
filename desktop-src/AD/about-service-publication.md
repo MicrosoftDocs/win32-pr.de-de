@@ -1,48 +1,48 @@
 ---
-title: Informationen zur Dienst Veröffentlichung
-description: Bei einem Dienst handelt es sich um eine Anwendung, die Daten oder Vorgänge für Netzwerk Clients verfügbar macht. Häufig wird ein Dienst als formaler Microsoft Win32-basierter Dienst implementiert, dies ist jedoch nicht erforderlich.
+title: Informationen zur Dienstveröffentlichung
+description: Ein Dienst ist eine Anwendung, die Daten oder Vorgänge für Netzwerkclients verfügbar macht. Häufig wird ein Dienst als formaler Microsoft Win32-basierter Dienst implementiert, aber dies ist nicht erforderlich.
 ms.assetid: 500f37ff-2551-44a0-91d8-56f0df5afa69
 ms.tgt_platform: multiple
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: ee34c1f0955f45f1bd4c689455ac03e79d987480
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: 3945107125df04bbdb862d476d0aba78711ba8f89622c732e0d6ae53d65d1eb9
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "103947296"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117840905"
 ---
-# <a name="about-service-publication"></a>Informationen zur Dienst Veröffentlichung
+# <a name="about-service-publication"></a>Informationen zur Dienstveröffentlichung
 
-Bei einem Dienst handelt es sich um eine Anwendung, die Daten oder Vorgänge für Netzwerk Clients verfügbar macht. Häufig wird ein Dienst als formaler Microsoft Win32-basierter Dienst implementiert, dies ist jedoch nicht erforderlich.
+Ein Dienst ist eine Anwendung, die Daten oder Vorgänge für Netzwerkclients verfügbar macht. Häufig wird ein Dienst als formaler Microsoft Win32-basierter Dienst implementiert, aber dies ist nicht erforderlich.
 
-Bei der Dienst Veröffentlichung werden Daten zu einer oder mehreren Instanzen eines bestimmten dienstanzen erstellt und verwaltet, damit der Dienst von Netzwerk Clients gefunden und verwendet werden kann. Das Veröffentlichen eines Dienstanbieter in Active Directory Domain Services ermöglicht es Clients und Administratoren, von einer Computer zentrierten Ansicht des verteilten Systems in eine Dienst zentrierte Ansicht zu wechseln.
+Bei der Dienstveröffentlichung werden Daten zu einer oder mehreren Instanzen eines bestimmten Diensts erstellt und verwaltet, damit Netzwerkclients den Dienst finden und verwenden können. Durch das Veröffentlichen eines Diensts in Active Directory Domain Services können Clients und Administratoren von einer computerzentrierten Ansicht des verteilten Systems zu einer dienstzentrierten Ansicht wechseln.
 
-**Betriebssysteme Microsoft Windows NT 3,51 und höher:** Ein verteiltes System war eine Gruppe von Computern, auf denen verschiedene Dienste ausgeführt werden. Um auf einen Dienst zuzugreifen, benötigte eine Anwendung Daten zu den Computern, auf denen der Dienst angeboten wurde.
+**Microsoft Windows NT 3.51 und höher:** Ein verteiltes System war eine Gruppe von Computern, auf denen verschiedene Dienste ausgeführt werden. Für den Zugriff auf einen Dienst benötigte eine Anwendung Daten darüber, welche Computer den Dienst angeboten haben.
 
-**Windows 2000 Server, Windows 2000 Advanced Server und Windows 2000 Datacenter Server:** Dienste veröffentlichen ihr vorhanden sein mithilfe Active Directory Domain Services-Objekten. Die-Objekte enthalten Bindungs Informationen, die von Client Anwendungen zum Herstellen einer Verbindung mit Instanzen des dienstanzen verwendet werden. Um auf einen Dienst zuzugreifen, muss ein Client nicht über bestimmte Computer Bescheid wissen: die Objekte in einem Active Directory Server enthalten diese Informationen. Ein Client fragt den Active Directory Server nach einem Objekt ab, das einen Dienst darstellt (als Verbindungspunkt Objekt bezeichnet) und verwendet die Bindungs Daten aus dem-Objekt, um eine Verbindung mit dem Dienst herzustellen.
+**Windows 2000 Server, Windows 2000 Advanced Server und Windows 2000 Datacenter Server:** Dienste veröffentlichen ihre Existenz mit Active Directory Domain Services-Objekten. Die -Objekte enthalten Bindungsinformationen, die Clientanwendungen zum Herstellen einer Verbindung mit Instanzen des Diensts verwenden. Für den Zugriff auf einen Dienst benötigt ein Client keine Informationen zu bestimmten Computern: Die Objekte auf einem Active Directory-Server enthalten diese Informationen. Ein Client fragt den Active Directory-Server nach einem Objekt ab, das einen Dienst darstellt (als Verbindungspunktobjekt bezeichnet) und verwendet die Bindungsdaten aus dem -Objekt, um eine Verbindung mit dem Dienst herzustellen.
 
-In der folgenden Tabelle werden Beispiele für-Bindungen angezeigt.
+Die folgende Tabelle zeigt Beispiele für Bindungen.
 
 
 
 | Dienst      | Bindung                                                                                                                                                                                                                     |
 |--------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Dateidienst | UNC-Name für eine Freigabe. Beispiel: " \\ \\ myserver \\ mysharename".                                                                                                                                                              |
-| Webdienst  | URL. Beispiel: " https://www.fabrikam.com ".                                                                                                                                                                                 |
-| RPC-Dienst  | Remote Prozedur Aufruf (RPC)-Bindung: spezielle codierte Informationen, die zum Herstellen einer Verbindung mit dem RPC-Server verwendet werden. RPC-Bindungen können mit den RPC-APIs in und aus Zeichen folgen konvertiert werden. Beispiel: "ncacn \_ IP \_ TCP:Server. fabrikam. com". |
+| Dateidienst | UNC-Name für eine Freigabe. Beispiel: \\ \\ "MyServer \\ MyshareName".                                                                                                                                                              |
+| Webdienst  | URL. Beispiel: https://www.fabrikam.com " ".                                                                                                                                                                                 |
+| RPC-Dienst  | RPC-Bindung (Remote Procedure Call): Spezielle codierte Informationen, die zum Herstellen einer Verbindung mit dem RPC-Server verwendet werden. RPC-Bindungen können mit den RPC-APIs in und aus Zeichenfolgen konvertiert werden. Beispiel: "ncacn \_ ip \_ tcp:server.fabrikam.com". |
 
 
 
- 
+ 
 
-In einem verteilten System sind die Computer Engines, und die interessanten Entitäten sind die verfügbaren Dienste. Aus Sicht des Benutzers ist die Identität des Computers, der einen bestimmten Dienst bereitstellt, nicht wichtig. Wichtig ist, dass Sie auf den Dienst selbst zugreifen.
+In einem verteilten System sind die Computer Engines, und die interessanten Entitäten sind die verfügbaren Dienste. Aus Benutzersicht ist die Identität des Computers, der einen bestimmten Dienst bereitstellt, nicht wichtig. Wichtig ist der Zugriff auf den Dienst selbst.
 
-Dies ist auch bei der Dienst Verwaltung der Fall. Der Administrator einer bestimmten DNS-Zone ist an den Computern, auf denen der DNS-Dienst ausgeführt wird, nicht interessiert. der Administrator möchte DNS verwalten. Es gibt wahrscheinlich mehrere Instanzen des DNS-Dienstanbieter, von denen eine autorisierend ist. Die Computer, die den DNS-Dienst unterstützen, sind für den DNS-Administrator nicht wichtig. Wichtig ist, wie der Dienst als einzelne verteilte Ressource verwaltet wird – nicht als einzelne Prozesse, die auf verschiedenen Computern ausgeführt werden.
+Dies ist auch bei der Dienstverwaltung der Fall. Der Administrator einer bestimmten DNS-Zone ist nicht an den Computern interessiert, auf denen der DNS-Dienst ausgeführt wird. Der Administrator möchte DNS verwalten. Es werden wahrscheinlich mehrere Instanzen des DNS-Diensts vorhanden sein, von denen eine autoritativ ist. Die Computer, die den DNS-Dienst unterstützen, sind für den DNS-Administrator nicht wichtig. Wichtig ist, wie der Dienst als einzelne verteilte Ressource verwaltet wird, nicht als einzelne Prozesse, die auf verschiedenen Computern ausgeführt werden.
 
- 
+ 
 
- 
+ 
 
 
 

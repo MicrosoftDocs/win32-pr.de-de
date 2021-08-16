@@ -1,29 +1,29 @@
 ---
-description: TAPI weist Sitzungs Bezeichner zu, die für jede Sitzung und Anwendung eindeutig sind.
+description: TAPI weist Sitzungsbezeichner zu, die für jede Sitzung und Anwendung eindeutig sind.
 ms.assetid: 711a9bc6-ffc6-499b-8653-ba230028c146
 title: Sitzungsbezeichner
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: e135beb439d1c5fb2fdd46d4986cd35dc5ae49b0
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 527706159328b3919e47c39bc5fb160615ed2c202d33c1ce39c711b6921235a5
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "104393802"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117760782"
 ---
 # <a name="session-identifier"></a>Sitzungsbezeichner
 
-TAPI weist Sitzungs Bezeichner zu, die für jede Sitzung und Anwendung eindeutig sind. Eine Anwendung verwendet eine Sitzungs-ID, um mit TAPI über eine bestimmte Sitzung zu kommunizieren. Eine Anwendung erhält in der Regel einen Bezeichner, indem eine neue Kommunikationssitzung erstellt wird oder wenn TAPI eine Sitzung anbietet.
+TAPI weist Sitzungsbezeichner zu, die für jede Sitzung und Anwendung eindeutig sind. Eine Anwendung verwendet einen Sitzungsbezeichner, um mit TAPI über eine bestimmte Sitzung zu kommunizieren. Eine Anwendung erhält einen Bezeichner in der Regel entweder durch Erstellen einer neuen Kommunikationssitzung oder wenn TAPI eine Sitzung anbietet.
 
-Ein Sitzungs Bezeichner kann nicht verwendet werden, um Informationen an eine andere Anwendung zu übergeben. Verwenden Sie zu diesem Zweck die [Telefonnummer](call-id-ovr.md), die von einem Dienstanbieter zugewiesen werden kann.
+Ein Sitzungsbezeichner kann nicht verwendet werden, um Informationen an eine andere Anwendung zu übergeben. Verwenden Sie zu diesem Zweck die [Aufruf-ID](call-id-ovr.md), die von einem Dienstanbieter zugewiesen werden kann.
 
-Weitere Informationen zu Vorgängen, die Sitzungen erstellen und eine Sitzungs-ID zurückgeben, finden Sie unter [Initiieren einer Sitzung](initiate-a-session-ovr.md) . Weitere Informationen zu Vorgängen, die Sitzungs Bezeichner von TAPI abrufen, finden [Sie unter reagieren auf eine Sitzung](respond-to-session-initiated-elsewhere-ovr.md) . Weitere Informationen zum Freigeben von Sitzungs Ressourcen finden Sie unter [Beenden einer Sitzung](terminate-a-session-ovr.md) .
+Informationen zu Vorgängen, die Sitzungen erstellen und einen Sitzungsbezeichner zurückgeben, finden Sie unter [Initiieren](initiate-a-session-ovr.md) einer Sitzung. Informationen zu Vorgängen, die Sitzungsbezeichner von TAPI abrufen, finden Sie unter [Reagieren auf an anderer Stelle initiierte](respond-to-session-initiated-elsewhere-ovr.md) Sitzungen. Informationen zum Freigeben von Sitzungsressourcen finden Sie unter [Beenden einer](terminate-a-session-ovr.md) Sitzung.
 
-Alle Dienstanbieter müssen eine bestimmte Form der Sitzungs Identifikation unterstützen.
+Alle Dienstanbieter müssen eine Form der Sitzungsidentifikation unterstützen.
 
-**TAPI 2. x:** Der primäre Bezeichner einer Kommunikationssitzung ist das-Anweisungs Handle.
+**TAPI 2.x:** Der primäre Bezeichner einer Kommunikationssitzung ist das Aufrufhandle.
 
-**TAPI 3. x:** Eine Sitzung wird durch ein [Aufruf Objekt](call-object.md) dargestellt, und der primäre Bezeichner ist ein Zeiger auf die [**itcallinfo**](/windows/desktop/api/tapi3if/nn-tapi3if-itcallinfo) -Schnittstelle.
+**TAPI 3.x:** Eine Sitzung wird durch ein [Aufrufobjekt](call-object.md) dargestellt, und der primäre Bezeichner ist ein Zeiger auf die [**ITCallInfo-Schnittstelle.**](/windows/desktop/api/tapi3if/nn-tapi3if-itcallinfo)
 
  
 

@@ -1,7 +1,7 @@
 ---
-description: Eine Anwendungs definierte Funktion, die eine Liste von Sicherheits-IDs (SIDs) erstellt, die für einen Client gelten. Authzcomputegroupscallback ist ein Platzhalter für den Namen der Anwendungs definierten Funktion.
+description: Eine anwendungsdefinierte Funktion, die eine Liste von Sicherheits-IDs (SIDs) erstellt, die für einen Client gelten. HzComputeGroupsCallback ist ein Platzhalter für den anwendungsdefinierten Funktionsnamen.
 ms.assetid: c20a02a0-5303-4433-a484-5a89999b32b9
-title: Authzcomputegroupscallback-Rückruffunktion
+title: HzComputeGroupsCallback-Rückruffunktion
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -12,16 +12,16 @@ api_name:
 api_type:
 - UserDefined
 api_location: ''
-ms.openlocfilehash: 3728f8114d87d07ddb33dd77a6fda5db30d07cf0
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 7c30194e4131cbd375192723e23308e1ad5ead69d849ab73857f72ef1d4b0790
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "103760830"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117784078"
 ---
-# <a name="authzcomputegroupscallback-callback-function"></a>Authzcomputegroupscallback-Rückruffunktion
+# <a name="authzcomputegroupscallback-callback-function"></a>HzComputeGroupsCallback-Rückruffunktion
 
-Die **authzcomputegroupscallback** -Funktion ist eine Anwendungs definierte Funktion, die eine Liste von [*Sicherheits*](/windows/desktop/SecGloss/s-gly) -IDs (SIDs) erstellt, die für einen Client gelten. **Authzcomputegroupscallback** ist ein Platzhalter für den Namen der Anwendungs definierten Funktion.
+Die **Funktion "ComputeGroupsCallback"** ist eine anwendungsdefinierte Funktion, die eine Liste von Sicherheits-IDs (SIDs) erstellt, die für einen Client gelten. [](/windows/desktop/SecGloss/s-gly) **HzComputeGroupsCallback** ist ein Platzhalter für den anwendungsdefinierten Funktionsnamen.
 
 ## <a name="syntax"></a>Syntax
 
@@ -43,59 +43,59 @@ BOOL CALLBACK AuthzComputeGroupsCallback(
 
 <dl> <dt>
 
-" *hauthzclientcontext* \[ " in\]
+*hAuthzClientContext* \[ In\]
 </dt> <dd>
 
-Ein Handle für einen Client Kontext.
+Ein Handle für einen Clientkontext.
 
 </dd> <dt>
 
-*Args* \[ in\]
+*Args* \[ In\]
 </dt> <dd>
 
-Daten, die im *dynamicgrouparser* -Parameter eines Aufrufes der [**authzinitializecontextfromauthzcontext**](/windows/desktop/api/Authz/nf-authz-authzinitializecontextfromauthzcontext)-, [**AuthzInitializeContextFromSid**](/windows/desktop/api/Authz/nf-authz-authzinitializecontextfromsid)-oder [**AuthzInitializeContextFromToken**](/windows/desktop/api/Authz/nf-authz-authzinitializecontextfromtoken) -Funktion übergeben werden.
+Daten, die im *DynamicGroupArgs-Parameter* eines Aufrufs der [**Funktion "AuthhzInitializeContextFromAuthzContext",**](/windows/desktop/api/Authz/nf-authz-authzinitializecontextfromauthzcontext) [**"AuthhzInitializeContextFromSid"**](/windows/desktop/api/Authz/nf-authz-authzinitializecontextfromsid)oder [**"AuthhzInitializeContextFromToken"**](/windows/desktop/api/Authz/nf-authz-authzinitializecontextfromtoken) übergeben werden.
 
 </dd> <dt>
 
-*psidattrarray* \[ vorgenommen\]
+*pSidAttrArray* \[ out\]
 </dt> <dd>
 
-Ein Zeiger auf eine Zeiger Variable, die die Adresse eines Arrays von [**sid \_ -und \_ Attribute-**](/windows/desktop/api/Winnt/ns-winnt-sid_and_attributes) Strukturen empfängt. Diese Strukturen stellen die Gruppen dar, zu denen der Client gehört.
+Ein Zeiger auf eine Zeigervariable, die die Adresse eines Arrays von [**\_ SID- und \_ ATTRIBUTES-Strukturen empfängt.**](/windows/desktop/api/Winnt/ns-winnt-sid_and_attributes) Diese Strukturen stellen die Gruppen dar, zu denen der Client gehört.
 
 </dd> <dt>
 
-*psidcount* \[ vorgenommen\]
+*pSidCount* \[ out\]
 </dt> <dd>
 
-Die Anzahl der Strukturen in *psidattrarray*.
+Die Anzahl der Strukturen in *pSidAttrArray.*
 
 </dd> <dt>
 
-*prestrictedsidattrarray* \[ vorgenommen\]
+*pRestrictedSidAttrArray* \[ out\]
 </dt> <dd>
 
-Ein Zeiger auf eine Zeiger Variable, die die Adresse eines Arrays von [**sid \_ -und \_ Attribute-**](/windows/desktop/api/Winnt/ns-winnt-sid_and_attributes) Strukturen empfängt. Diese Strukturen stellen die Gruppen dar, von denen der Client beschränkt ist.
+Ein Zeiger auf eine Zeigervariable, die die Adresse eines Arrays von [**\_ SID- und \_ ATTRIBUTES-Strukturen empfängt.**](/windows/desktop/api/Winnt/ns-winnt-sid_and_attributes) Diese Strukturen stellen die Gruppen dar, von denen der Client eingeschränkt ist.
 
 </dd> <dt>
 
-*prestrictedsidcount* \[ vorgenommen\]
+*pRestrictedSidCount* \[ out\]
 </dt> <dd>
 
-Die Anzahl der Strukturen in *psidrestrictedattrarray*.
+Die Anzahl der Strukturen in *pSidRestrictedAttrArray.*
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Wenn die Funktion erfolgreich eine Liste von SIDs zurückgibt, ist der Rückgabewert " **true**".
+Wenn die Funktion erfolgreich eine Liste von SIDs zurückgibt, ist der Rückgabewert **TRUE.**
 
-Wenn die Funktion fehlschlägt, ist der Rückgabewert **false**.
+Wenn die Funktion fehlschlägt, ist der Rückgabewert **FALSE.**
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Anwendungen können dem Client Kontext auch SIDs hinzufügen, indem Sie [**AuthzAddSidsToContext**](/windows/desktop/api/Authz/nf-authz-authzaddsidstocontext)aufrufen.
+Anwendungen können dem Clientkontext auch SIDs hinzufügen, indem [**sie PerlhzAddSidsToContext aufrufen.**](/windows/desktop/api/Authz/nf-authz-authzaddsidstocontext)
 
-Attribut Variablen müssen in Form eines Ausdrucks vorliegen, wenn Sie mit logischen Operatoren verwendet werden. Andernfalls werden Sie als UNKNOWN ausgewertet.
+Attributvariablen müssen in Form eines Ausdrucks sein, wenn sie mit logischen Operatoren verwendet werden. Andernfalls werden sie als unbekannt ausgewertet.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -103,38 +103,38 @@ Attribut Variablen müssen in Form eines Ausdrucks vorliegen, wenn Sie mit logis
 
 | Anforderung | Wert |
 |-------------------------------------|------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows XP \[ -Desktop-Apps\]<br/>                            |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2003 \[ -Desktop-Apps\]<br/>                   |
-| Verteilbare Komponente<br/>          | Windows Server 2003-Verwaltungs Tools Pack unter Windows XP<br/> |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur \[ XP-Desktop-Apps\]<br/>                            |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2003-Desktop-Apps\]<br/>                   |
+| Verteilbare Komponente<br/>          | Windows Server 2003 Administration Tools Pack on Windows XP<br/> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
 [Grundlegende Access Control Funktionen](authorization-functions.md)
 </dt> <dt>
 
-[**AuthzAddSidsToContext**](/windows/desktop/api/Authz/nf-authz-authzaddsidstocontext)
+[**HzAddSidsToContext**](/windows/desktop/api/Authz/nf-authz-authzaddsidstocontext)
 </dt> <dt>
 
-[**Authzcachedaccesscheck**](/windows/desktop/api/Authz/nf-authz-authzcachedaccesscheck)
+[**AuhzCachedAccessCheck**](/windows/desktop/api/Authz/nf-authz-authzcachedaccesscheck)
 </dt> <dt>
 
-[**Authzinitializecontextfromauthzcontext**](/windows/desktop/api/Authz/nf-authz-authzinitializecontextfromauthzcontext)
+[**AuthhzInitializeContextFromAuthzContext**](/windows/desktop/api/Authz/nf-authz-authzinitializecontextfromauthzcontext)
 </dt> <dt>
 
-[**AuthzInitializeContextFromSid**](/windows/desktop/api/Authz/nf-authz-authzinitializecontextfromsid)
+[**QshzInitializeContextFromSid**](/windows/desktop/api/Authz/nf-authz-authzinitializecontextfromsid)
 </dt> <dt>
 
-[**AuthzInitializeContextFromToken**](/windows/desktop/api/Authz/nf-authz-authzinitializecontextfromtoken)
+[**QshzInitializeContextFromToken**](/windows/desktop/api/Authz/nf-authz-authzinitializecontextfromtoken)
 </dt> <dt>
 
-[**Authzinitializeresourcemanager**](/windows/desktop/api/Authz/nf-authz-authzinitializeresourcemanager)
+[**QshzInitializeResourceManager**](/windows/desktop/api/Authz/nf-authz-authzinitializeresourcemanager)
 </dt> <dt>
 
-[**SID \_ und \_ Attribute**](/windows/desktop/api/Winnt/ns-winnt-sid_and_attributes)
+[**SID \_ UND \_ ATTRIBUTE**](/windows/desktop/api/Winnt/ns-winnt-sid_and_attributes)
 </dt> </dl>
 
  

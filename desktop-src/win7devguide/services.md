@@ -15,15 +15,15 @@ ms.locfileid: "118203863"
 
 Windows 7 bietet eine leistungsstarke, hochgradig erweiterbare und verwaltbare Plattform zum Erstellen und Integrieren der Webdienste und Anwendungen der Zukunft.
 
-Windows 7 bietet sowohl APIs mit verwaltetem Code als auch native APIs zum Erstellen und Ausführen von Webdiensten. Eine Vielzahl neuer Features basiert auf einer neuen Erweiterbarkeitsebene, die es Entwicklern ermöglicht, alle APIs in nativem Code oder innerhalb des Microsoft-.NET Framework.
+Windows 7 bietet sowohl APIs mit verwaltetem Code als auch native APIs zum Erstellen und Ausführen von Webdiensten. Eine Vielzahl neuer Features baut auf einer neuen Erweiterbarkeitsebene auf, die es Entwicklern ermöglicht, alle APIs in nativem Code oder innerhalb des Microsoft-.NET Framework.
 
 Windows 7 können Entwickler auch bessere Zwischenspeicherungs- und Suchfunktionen nutzen. Mit diesen Verbesserungen können Entwickler Daten schneller abrufen und die Netzwerkbandbreitennutzung reduzieren.
 
 ## <a name="windows-web-services"></a>Windows Webdienste
 
-Mit [Windows Webdiensten können](/windows/desktop/wsw/portal)Sie Anwendungen erstellen, die problemlos mit einem lokalen Computer oder einem Remotewebdienst kommunizieren. Windows Webdienste sind eine native Codeimplementierung von SOAP und bieten kernbasierte Netzwerkkommunikation, indem sie einen breiten Satz von Webdiensten *(WS)* von Protokollen unterstützen. Windows Webdienste sind ein Peer Windows [Communication Foundation](/previous-versions/windows/desktop/cc907054(v=vs.85)) (*WCF*, Webdienste mit verwaltetem Code) und stellen eine leistungsstarke Teilmenge der *WCF-Funktionalität* zur Verfügung. Windows Webdienste bieten die folgenden Vorteile:
+Mit [Windows Webdiensten können](/windows/desktop/wsw/portal)Sie Anwendungen erstellen, die problemlos mit einem lokalen Computer oder einem Remotewebdienst kommunizieren. Windows Webdienste sind eine native Codeimplementierung von SOAP und bieten kernbasierteNetzwerkkommunikation, indem sie einen breiten Satz von Webdiensten (WS)-Protokollfamilien unterstützen. Windows Webdienste sind ein Peer-to-Windows [Communication Foundation](/previous-versions/windows/desktop/cc907054(v=vs.85)) *(WCF,* Webdienste mit verwaltetem Code) und stellen eine leistungsstarke Teilmenge der *WCF-Funktionalität* zur Verfügung. Windows Webdienste bieten die folgenden Vorteile:
 
--   Die Fähigkeit, native Codewebdienste in C/C++ in Windows Client und Server zu erstellen.
+-   Die Möglichkeit, native Codewebdienste in C/C++ in Windows Client und Server zu erstellen.
 -   Umfassende Integration in [Windows Communication Foundation-Dienste.](/previous-versions/windows/desktop/cc907054(v=vs.85))
 -   Die Möglichkeit, Webdienste mit minimaler Startzeit zu erstellen.
 -   Die Fähigkeit, Dienste basierend auf der *WS-Kernfamilie* von Protokollen und *W3C-Standards zu* erstellen.

@@ -1,21 +1,21 @@
 ---
-description: Die GetRange-Methode ruft den Bereich der gültigen Werte für eine angegebene Eigenschaft zum Aufrufen der Qualität ab.
+description: Die GetRange-Methode ruft den Bereich gültiger Werte für eine bestimmte Eigenschaft der Aufrufqualität ab.
 ms.assetid: 974033cf-59ce-4593-93d7-290094c20a7c
-title: 'Itcallqualitycontrol:: GetRange-Methode (ipmsp. h)'
+title: ITCallQualityControl::GetRange-Methode (Ipmsp.h)
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 4dd3941ee8d7d0605cc6fefc61963065e4e5ba57
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 0a8d21c9266e64a9bcb31da0028a0ea28b8de98793d56d5bcf28c791c5497756
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106372047"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117762436"
 ---
-# <a name="itcallqualitycontrolgetrange-method"></a>Itcallqualitycontrol:: GetRange-Methode
+# <a name="itcallqualitycontrolgetrange-method"></a>ITCallQualityControl::GetRange-Methode
 
-\[ Diese Methode ist nicht für die Verwendung in Windows Vista, Windows Server 2008 und nachfolgenden Versionen des Betriebssystems verfügbar. Die RTC-Client-API bietet eine ähnliche Funktionalität.\]
+\[Diese Methode ist nicht für die Verwendung in Windows Vista, Windows Server 2008 und nachfolgenden Versionen des Betriebssystems verfügbar. Die RTC-Client-API bietet ähnliche Funktionen.\]
 
-Die **GetRange** -Methode ruft den Bereich der gültigen Werte für eine angegebene [Eigenschaft zum Aufrufen der Qualität](callqualityproperty.md)ab.
+Die **GetRange-Methode** ruft den Bereich gültiger Werte für eine bestimmte [Aufrufqualitätseigenschaft ab.](callqualityproperty.md)
 
 ## <a name="syntax"></a>Syntax
 
@@ -37,45 +37,45 @@ HRESULT GetRange(
 
 <dl> <dt>
 
-*Eigenschaft* \[ in\]
+*Eigenschaft* \[ In\]
 </dt> <dd>
 
-Member der [**callqualityproperty**](callqualityproperty.md) -Enumeration.
+Member der [**CallQualityProperty-Enumerator.**](callqualityproperty.md)
 
 </dd> <dt>
 
-*plmin* \[ vorgenommen\]
+*plMin* \[ out\]
 </dt> <dd>
 
-Der minimale gültige Wert für die Input-Eigenschaft.
+Minimal gültiger Wert für die Eingabeeigenschaft.
 
 </dd> <dt>
 
-*plmax* \[ vorgenommen\]
+*plMax* \[ out\]
 </dt> <dd>
 
-Maximal gültiger Wert für die Eingabe Eigenschaft.
+Maximal gültiger Wert für die Eingabeeigenschaft.
 
 </dd> <dt>
 
-*plsteppingdelta* \[ vorgenommen\]
+*plSteppingDelta* \[ out\]
 </dt> <dd>
 
-Inkrement, um den der Eigenschafts Wert vergrößert oder verkleinert werden kann.
+Inkrement, um das der Eigenschaftswert erhöht oder verringert werden kann.
 
 </dd> <dt>
 
-*pldefault* \[ vorgenommen\]
+*plDefault* \[ out\]
 </dt> <dd>
 
-Der Standardwert für den *Property* -Parameter.
+Standardwert für den *Property-Parameter.*
 
 </dd> <dt>
 
-*plflags* \[ vorgenommen\]
+*plFlags* \[ out\]
 </dt> <dd>
 
-Der Wert der [**tapicontrolflags**](tapicontrolflags.md) -Enumeration, die angibt, wie der- *Eigenschafts* Wert gesteuert wird.
+Der Wert der [**TAPIControlFlags-Aufenumerierung,**](tapicontrolflags.md) der angibt, wie der *Eigenschaftswert* gesteuert wird.
 
 </dd> </dl>
 
@@ -88,7 +88,7 @@ Diese Methode kann einen dieser Werte zurückgeben.
 | Rückgabecode                                                                                   | Beschreibung                                                     |
 |-----------------------------------------------------------------------------------------------|-----------------------------------------------------------------|
 | <dl> <dt>**S \_ OK**</dt> </dl>          | Methode war erfolgreich.<br/>                                    |
-| <dl> <dt>**E \_ outo-Memory**</dt> </dl> | Zum Ausführen des Vorgangs ist nicht genügend Arbeitsspeicher vorhanden.<br/> |
+| <dl> <dt>**E \_ OUTOFMEMORY**</dt> </dl> | Es ist nicht genügend Arbeitsspeicher vorhanden, um den Vorgang durchzuführen.<br/> |
 
 
 
@@ -100,24 +100,24 @@ Diese Methode kann einen dieser Werte zurückgeben.
 
 | Anforderung | Wert |
 |-------------------------|--------------------------------------------------------------------------------------|
-| TAPI-Version<br/> | Erfordert TAPI 3,1<br/>                                                         |
-| Header<br/>       | <dl> <dt>Ipmsp. h</dt> </dl>   |
-| Bibliothek<br/>      | <dl> <dt>UUID. lib</dt> </dl>  |
+| TAPI-Version<br/> | Erfordert TAPI 3.1<br/>                                                         |
+| Header<br/>       | <dl> <dt>Ipmsp.h</dt> </dl>   |
+| Bibliothek<br/>      | <dl> <dt>Uuid.lib</dt> </dl>  |
 | DLL<br/>          | <dl> <dt>Tapi3.dll</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Itcallqualitycontrol**](itcallqualitycontrol.md)
+[**ITCallQualityControl**](itcallqualitycontrol.md)
 </dt> <dt>
 
-[**Tapicontrolflags**](tapicontrolflags.md)
+[**TAPIControlFlags**](tapicontrolflags.md)
 </dt> <dt>
 
-[**Callqualityproperty**](callqualityproperty.md)
+[**CallQualityProperty**](callqualityproperty.md)
 </dt> </dl>
 
  

@@ -1,28 +1,28 @@
 ---
-title: Iadsdeleteops-Schnittstelle
-description: Die iadsdeleteops-Schnittstelle wird in Aufsichts-und Wartungsroutinen für den zugrunde liegenden Verzeichnis Speicher verwendet. Es können Blattobjekte und gesamte Teil Strukturen in einem einzelnen Vorgang gelöscht werden.
+title: IADsDeleteOps-Schnittstelle
+description: Die IADsDeleteOps-Schnittstelle wird in Überwachungs- und Wartungsroutinen für den zugrunde liegenden Verzeichnisspeicher verwendet. Sie kann Blattobjekte und ganze Teilstrukturen in einem einzigen Vorgang löschen.
 ms.assetid: 821b71c2-e9f5-4ca8-9366-e8a3f1907670
 ms.tgt_platform: multiple
 keywords:
-- Iadsdeleteops-Schnittstelle ADSI
-- Iadsdeleteops ADSI, using
-- ADSI ADSI, Beispielcode C/C++, verwenden von iadsdeleteops zum Löschen ganzer Gruppen
+- IADsDeleteOps Interface ADSI
+- IADsDeleteOps ADSI mit
+- ADSI ADSI , Beispielcode C/C++, mit IADsDeleteOps zum Löschen ganzer Gruppen
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 6332dd28e903996e8688d6c6fc672df080822595
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: 192411e53f54de2a5f73cc043f35cea6787f4b879972b6a69ada4760c175292a
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "106339179"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117839943"
 ---
-# <a name="iadsdeleteops-interface"></a>Iadsdeleteops-Schnittstelle
+# <a name="iadsdeleteops-interface"></a>IADsDeleteOps-Schnittstelle
 
-Die [**iadsdeleteops**](/windows/desktop/api/Iads/nn-iads-iadsdeleteops) -Schnittstelle wird in Aufsichts-und Wartungsroutinen für den zugrunde liegenden Verzeichnis Speicher verwendet. Es können Blattobjekte und gesamte Teil Strukturen in einem einzelnen Vorgang gelöscht werden.
+Die [**IADsDeleteOps-Schnittstelle**](/windows/desktop/api/Iads/nn-iads-iadsdeleteops) wird in Überwachungs- und Wartungsroutinen für den zugrunde liegenden Verzeichnisspeicher verwendet. Sie kann Blattobjekte und ganze Teilstrukturen in einem einzigen Vorgang löschen.
 
-Wenn diese Schnittstelle nicht unterstützt wird, würde das Löschen eines Objekts aus Active Directory erfordern, dass jedes enthaltene Objekt rekursiv aufgezählt und gelöscht wird. Mit dieser Schnittstelle können alle Containerobjekte mit allen darin enthaltenen Objekten und untergeordneten Elementen mit einem einzelnen Vorgang gelöscht werden.
+Wenn diese Schnittstelle nicht unterstützt wird, erfordert das Löschen eines Objekts aus Active Directory, dass jedes enthaltene Objekt rekursiv aufzählt und gelöscht wird. Mit dieser Schnittstelle kann jedes Containerobjekt mit allen enthaltenen Objekten und Unterobjekten mit einem einzigen Vorgang gelöscht werden.
 
-Im folgenden Codebeispiel werden der Container "eng" und alle untergeordneten Objekte gelöscht.
+Im folgenden Codebeispiel werden der Container "Eng" und alle untergeordneten Objekte gelöscht.
 
 
 ```C++
@@ -64,7 +64,7 @@ if(pwszPassword)
 
 
 
-Im folgenden Codebeispiel werden der Container "eng" und alle untergeordneten Objekte gelöscht.
+Im folgenden Codebeispiel werden der Container "Eng" und alle untergeordneten Objekte gelöscht.
 
 
 ```VB
@@ -79,9 +79,9 @@ DeleteOps.DeleteObject (0)
 
 
 
- 
+ 
 
- 
+ 
 
 
 

@@ -1,5 +1,5 @@
 ---
-description: Die \_ LINEADDRESSSTATE-Bitflagkonst constants beschreiben verschiedene Adressstatuselemente.
+description: Die \_ LINEADDRESSSTATE-Bitflagkonstanten beschreiben verschiedene Adressstatuselemente.
 ms.assetid: f06140d0-f41a-4228-93c5-21d609af5473
 title: LINEADDRESSSTATE_ Konstanten (Tapi.h)
 ms.topic: reference
@@ -13,7 +13,7 @@ ms.locfileid: "117761852"
 ---
 # <a name="lineaddressstate_-constants"></a>LINEADDRESSSTATE-Konstanten \_
 
-Die **\_ LINEADDRESSSTATE-Bitflagkonst** constants beschreiben verschiedene Adressstatuselemente.
+Die **\_ LINEADDRESSSTATE-Bitflagkonstanten** beschreiben verschiedene Adressstatuselemente.
 
 <dl> <dt>
 
@@ -22,7 +22,7 @@ Die **\_ LINEADDRESSSTATE-Bitflagkonst** constants beschreiben verschiedene Adre
 
 
 
-Gibt an, dass sich aufgrund von Konfigurationsänderungen, die vom Benutzer oder anderen Umständen vorgenommen wurden, mindestens ein Member in der [**LINEADDRESSCAPS-Struktur**](/windows/desktop/api/Tapi/ns-tapi-lineaddresscaps) für die Adresse geändert hat. Die Anwendung sollte [**lineGetAddressCaps verwenden,**](/windows/desktop/api/Tapi/nf-tapi-linegetaddresscaps) um die aktualisierte Struktur zu lesen. Wenn ein Dienstanbieter eine [**LINE \_ ADDRESSSTATE-Nachricht**](line-addressstate.md) mit diesem Wert an TAPI sendet, überträgt TAPI diese an Anwendungen, die TAPI-Version 1.4 oder höher ausgehandelt haben. Anwendungen, die eine frühere API-Version aushandeln, empfangen [**LINE \_ LINEDEVSTATE-Nachrichten,**](line-linedevstate.md) die LINEDEVSTATE REINIT angeben. Daher müssen sie ihre Verbindung mit TAPI herunterfahren und erneut initialisieren, um die aktualisierten Informationen zu \_ erhalten.
+Gibt an, dass sich aufgrund von Konfigurationsänderungen durch den Benutzer oder unter anderen Umständen mindestens ein Member in der [**LINEADDRESSCAPS-Struktur**](/windows/desktop/api/Tapi/ns-tapi-lineaddresscaps) für die Adresse geändert hat. Die Anwendung sollte [**lineGetAddressCaps**](/windows/desktop/api/Tapi/nf-tapi-linegetaddresscaps) verwenden, um die aktualisierte Struktur zu lesen. Wenn ein Dienstanbieter eine [**LINE \_ ADDRESSSTATE-Nachricht**](line-addressstate.md) mit diesem Wert an TAPI sendet, übergibt TAPI sie an Anwendungen, die TAPI Version 1.4 oder höher ausgehandelt haben. Anwendungen, die eine frühere API-Version aushandeln, erhalten [**LINE \_ LINEDEVSTATE-Nachrichten,**](line-linedevstate.md) die LINEDEVSTATE \_ REINIT angeben, sodass sie ihre Verbindung mit TAPI herunterfahren und erneut initialisieren müssen, um die aktualisierten Informationen abzurufen.
 
 
 </dt> </dl> </dd> <dt>
@@ -42,7 +42,7 @@ Das gerätespezifische Element des Adressstatus wurde geändert.
 
 
 
-Der Weiterleitungsstatus der Adresse hat sich geändert, einschließlich möglicherweise der Anzahl von Ringen zum Bestimmen einer Bedingung ohne Antwort. Die Anwendung sollte den Adressstatus überprüfen, um Details zum aktuellen Weiterleitungsstatus der Adresse zu ermitteln.
+Der Weiterleitungsstatus der Adresse wurde geändert, einschließlich möglicherweise der Anzahl von Ringen zum Bestimmen einer Bedingung ohne Antwort. Die Anwendung sollte den Adressstatus überprüfen, um Details zum aktuellen Weiterleitungsstatus der Adresse zu ermitteln.
 
 
 </dt> </dl> </dd> <dt>
@@ -52,7 +52,7 @@ Der Weiterleitungsstatus der Adresse hat sich geändert, einschließlich möglic
 
 
 
-Die überwachte oder überbrückte Adresse wurde von einer Station in mehr als einer Station verwendet.
+Die überwachte oder überbrückte Adresse wurde von der Nutzung durch eine Station in die Nutzung durch mehrere Stationen geändert.
 
 
 </dt> </dl> </dd> <dt>
@@ -62,7 +62,7 @@ Die überwachte oder überbrückte Adresse wurde von einer Station in mehr als e
 
 
 
-Die Adresse wurde von leeren oder von vielen Bridged Stations verwendet, um von nur einer Station verwendet zu werden.
+Die Adresse hat sich von im Leerlauf oder in der Verwendung durch viele Brückenstationen in die Verwendung durch nur eine Station geändert.
 
 
 </dt> </dl> </dd> <dt>
@@ -72,7 +72,7 @@ Die Adresse wurde von leeren oder von vielen Bridged Stations verwendet, um von 
 
 
 
-Die Adresse wurde in "Im Leerlauf" geändert (sie wird von keinen Stationen verwendet).
+Die Adresse wurde in den Leerlauf geändert (sie wird von keiner Station verwendet).
 
 
 </dt> </dl> </dd> <dt>
@@ -82,7 +82,7 @@ Die Adresse wurde in "Im Leerlauf" geändert (sie wird von keinen Stationen verw
 
 
 
-Die Anzahl der Aufrufe für die Adresse hat sich geändert. Dies ist das Ergebnis von Ereignissen wie einem neuen eingehenden Anruf, einem ausgehenden Anruf für die Adresse oder einem Anruf, der seinen Hold-Status ändert. Dieses Flag deckt Änderungen in den Membern **dwNumActiveCalls,** **dwNumOnHoldCalls** und **dwNumOnHoldPendingCalls** in der [**LINEADDRESSSTATUS-Struktur**](/windows/desktop/api/Tapi/ns-tapi-lineaddressstatus) ab. Die Anwendung sollte alle drei Member überprüfen, wenn sie eine [**LINE ADDRESSSTATE(numCalls)-Nachricht \_**](line-addressstate.md) empfängt.
+Die Anzahl der Aufrufe für die Adresse hat sich geändert. Dies ist das Ergebnis von Ereignissen wie einem neuen eingehenden Anruf, einem ausgehenden Anruf für die Adresse oder einem Anruf, der seinen Aufbewahrungsstatus ändert. Dieses Flag deckt Änderungen in den **Membern dwNumActiveCalls**, **dwNumOnHoldCalls** und **dwNumOnHoldPendingCalls** in der [**LINEADDRESSSTATUS-Struktur**](/windows/desktop/api/Tapi/ns-tapi-lineaddressstatus) ab. Die Anwendung sollte alle drei Member überprüfen, wenn sie eine [**LINE \_ ADDRESSSTATE-Nachricht**](line-addressstate.md) (numCalls) empfängt.
 
 
 </dt> </dl> </dd> <dt>
@@ -92,7 +92,7 @@ Die Anzahl der Aufrufe für die Adresse hat sich geändert. Dies ist das Ergebni
 
 
 
-Andere Adressstatuselemente als die unten aufgeführten wurden geändert. Die Anwendung sollte den aktuellen Adressstatus überprüfen, um zu ermitteln, welche Elemente geändert wurden.
+Andere Als die unten aufgeführten Adressstatuselemente wurden geändert. Die Anwendung sollte den aktuellen Adressstatus überprüfen, um zu ermitteln, welche Elemente geändert wurden.
 
 
 </dt> </dl> </dd> <dt>

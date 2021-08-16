@@ -58,7 +58,7 @@ Gibt **TRUE** zurück, wenn erfolgreich, oder **FALSE,** wenn das Erfassungsfens
 
 ## <a name="remarks"></a>Hinweise
 
-Der Name ist eine Textzeichenfolge, die aus dem Ressourcenbereich des Treibers abgerufen wird. Anwendungen sollten für diese Zeichenfolge ungefähr 80 Bytes zuordnen. Wenn der Treiber keine Namensressource enthält, wird der vollständige Pfadname des Treibers zurückgegeben, der in der Registrierung oder in der SYSTEM.INI-Datei aufgeführt ist.
+Der Name ist eine Textzeichenfolge, die aus dem Ressourcenbereich des Treibers abgerufen wird. Anwendungen sollten für diese Zeichenfolge ungefähr 80 Bytes zuordnen. Wenn der Treiber keine Namensressource enthält, wird der vollständige Pfadname des Treibers zurückgegeben, der in der Registrierung oder in der datei SYSTEM.INI aufgeführt ist.
 
 ## <a name="requirements"></a>Anforderungen
 

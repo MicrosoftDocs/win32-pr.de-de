@@ -73,7 +73,7 @@ Die **Microsoft.Interop.Security.AzRoles.IAzOperation2-Schnittstelle** verfügt 
 
 
 
-| Methode                                                               | BESCHREIBUNG                                                                               |
+| Methode                                                               | Beschreibung                                                                               |
 |:---------------------------------------------------------------------|:------------------------------------------------------------------------------------------|
 | **Microsoft.Interop.Security.Azroles.IAzOperation2.GetProperty**     | [**IAzOperation::GetProperty**](/windows/desktop/api/Azroles/nf-azroles-iazoperation-getproperty)<br/>                  |
 | **Microsoft.Interop.Security.Azroles.IAzOperation2.RoleAssignments** | [**IAzOperation2::RoleAssignments**](/windows/desktop/api/Azroles/nf-azroles-iazoperation2-roleassignments)<br/> |
@@ -90,7 +90,7 @@ Die **Microsoft.Interop.Security.AzRoles.IAzOperation2-Schnittstelle** verfügt 
 
 
 
-| Eigenschaft                                                                        | Zugriffstyp           | BESCHREIBUNG                                                                                 |
+| Eigenschaft                                                                        | Zugriffstyp           | Beschreibung                                                                                 |
 |:--------------------------------------------------------------------------------|:----------------------|:--------------------------------------------------------------------------------------------|
 | **Microsoft.Interop.Security.Azroles.IAzOperation2.ApplicationData**<br/> | Lesen/Schreiben<br/> | [**ApplicationData-Eigenschaft von IAzOperation**](/windows/desktop/api/Azroles/nf-azroles-iazoperation-get_applicationdata)<br/> |
 | **Microsoft.Interop.Security.Azroles.IAzOperation2.Description**<br/>     | Lesen/Schreiben<br/> | [**Description-Eigenschaft von IAzOperation**](/windows/desktop/api/Azroles/nf-azroles-iazoperation-get_description)<br/>         |

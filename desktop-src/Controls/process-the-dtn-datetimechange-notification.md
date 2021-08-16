@@ -1,39 +1,39 @@
 ---
-title: Verarbeiten der DTN_DATETIMECHANGE Benachrichtigung
-description: In diesem Thema wird veranschaulicht, wie Benachrichtigungen von Änderungen, die vom Benutzer vorgenommen wurden, an das Steuerelement für die Datums-und Zeitauswahl (DTP) verarbeitet werden.
+title: Verarbeiten der DTN_DATETIMECHANGE-Benachrichtigung
+description: In diesem Thema wird veranschaulicht, wie Sie Benachrichtigungen über Vom Benutzer vorgenommene Änderungen am DTP-Steuerelement (Datums- und Uhrzeitauswahl) verarbeiten.
 ms.assetid: AE029962-E9D3-47BC-A24F-312B54137F18
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 5434c7ebbda673f76a757375e9a3d23504483d42
-ms.sourcegitcommit: a716ca2a6a22a400f02c6b31699cf4da83ee3619
+ms.openlocfilehash: 9490059a202eff69a05b34a086e74d6df52758713fd5b66d899d1ab114a31040
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/04/2020
-ms.locfileid: "103949261"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117829921"
 ---
-# <a name="how-to-process-the-dtn_datetimechange-notification"></a>Verarbeiten der Dtn \_ datetimechange-Benachrichtigung
+# <a name="how-to-process-the-dtn_datetimechange-notification"></a>Verarbeiten der \_ DTN-DATETIMECHANGE-Benachrichtigung
 
-In diesem Thema wird veranschaulicht, wie Benachrichtigungen von Änderungen, die vom Benutzer vorgenommen wurden, an das Steuerelement für die Datums-und Zeitauswahl (DTP) verarbeitet werden.
+In diesem Thema wird veranschaulicht, wie Sie Benachrichtigungen über Vom Benutzer vorgenommene Änderungen am DTP-Steuerelement (Datums- und Uhrzeitauswahl) verarbeiten.
 
-## <a name="what-you-need-to-know"></a>Was Sie wissen müssen
+## <a name="what-you-need-to-know"></a>Wichtige Informationen
 
 ### <a name="technologies"></a>Technologien
 
--   [Windows-Steuerelemente](window-controls.md)
+-   [Windows Steuerelemente](window-controls.md)
 
 ### <a name="prerequisites"></a>Voraussetzungen
 
 -   C/C++
--   Programmieren der Windows-Benutzeroberfläche
+-   Windows Benutzeroberfläche-Programmierung
 
 ## <a name="instructions"></a>Anweisungen
 
 
-Ein DTP-Steuerelement sendet den [Dtn \_ datetimechange](dtn-datetimechange.md) -Benachrichtigungs Code, wenn eine Änderung auftritt. Diese Benachrichtigung wird z. b. generiert, wenn der Benutzer eines der Felder im-Steuerelement ändert oder wenn das Steuerelement auf den [**DTS \_ shownone**](date-and-time-picker-control-styles.md) -Stil festgelegt ist, wenn der Benutzer den Zustand des Kontrollkästchens des Steuer Elements ändert.
+Ein DTP-Steuerelement sendet den [DTN DATETIMECHANGE-Benachrichtigungscode, \_ ](dtn-datetimechange.md) wenn eine Änderung auftritt. Diese Benachrichtigung wird z. B. generiert, wenn der Benutzer eines der Felder im Steuerelement ändert oder wenn das Steuerelement auf den [**DTS \_ SHOWNONE-Stil**](date-and-time-picker-control-styles.md) festgelegt ist, wenn der Benutzer den Zustand des Kontrollkästchens des Steuerelements ändert.
 
-Die Anwendung muss Code enthalten, um Dtn \_ datetimechange-Nachrichten zu verarbeiten, die vom DTP-Steuerelement gesendet werden.
+Ihre Anwendung muss Code zum Verarbeiten von DTN \_ DATETIMECHANGE-Nachrichten enthalten, die vom DTP-Steuerelement gesendet werden.
 
-Das folgende C++-Codebeispiel ist eine Anwendungs definierte Funktion, die den Zustand eines DTP-Steuer Elements angibt, das auf den **DTS \_ shownone** -Stil festgelegt ist.
+Das folgende C++-Codebeispiel ist eine anwendungsdefinierte Funktion, die den Zustand eines DTP-Steuerelements angibt, das auf den **DTS \_ SHOWNONE-Stil** festgelegt ist.
 
 
 
@@ -58,13 +58,13 @@ void WINAPI DoDateTimeChange(LPNMDATETIMECHANGE lpChange)
 
 <dl> <dt>
 
-[Verwenden von Steuerelementen für Datums-und Zeitauswahl](using-date-and-time-picker.md)
+[Verwenden von Steuerelementen für die Datums- und Uhrzeitauswahl](using-date-and-time-picker.md)
 </dt> <dt>
 
-[Steuerelement Verweis für Datums-und Zeitauswahl](bumper-date-and-time-picker-date-and-time-picker-control-reference.md)
+[Datums- und Uhrzeitauswahl-Steuerelementreferenz](bumper-date-and-time-picker-date-and-time-picker-control-reference.md)
 </dt> <dt>
 
-[Datums-und Zeitauswahl](date-and-time-picker-control-reference.md)
+[Datums- und Uhrzeitauswahl](date-and-time-picker-control-reference.md)
 </dt> </dl>
 
  

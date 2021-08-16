@@ -15,7 +15,7 @@ ms.locfileid: "118218411"
 
 TraceLogging definiert die folgenden Makros, mit denen Sie einen Anbieter definieren, Ereignisse protokollieren und Aktivitäten erstellen können:
 
--   [**TraceLogging-Wrappermakros**](tracelogging-wrapper-macros.md)
+-   [**TraceLogging Wrapper-Makros**](tracelogging-wrapper-macros.md)
 -   [**TRACELOGGING \_ DECLARE \_ PROVIDER**](/windows/desktop/api/traceloggingprovider/nf-traceloggingprovider-tracelogging_declare_provider)
 -   [**TRACELOGGING \_ DEFINE \_ PROVIDER**](/windows/desktop/api/traceloggingprovider/nf-traceloggingprovider-tracelogging_define_provider)
 -   [**TRACELOGGING: \_ DEFINIEREN \_ DES \_ ANBIETERSPEICHERS**](/windows/desktop/api/traceloggingprovider/nf-traceloggingprovider-tracelogging_define_provider_storage)

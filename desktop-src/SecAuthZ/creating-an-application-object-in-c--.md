@@ -1,21 +1,21 @@
 ---
-description: Ein Autorisierungs Richtlinien Speicher enthält Autorisierungs Richtlinien Informationen für eine oder mehrere Anwendungen. Für jede Anwendung, die diesen Richtlinien Speicher verwendet, müssen Sie ein IAzApplication-Objekt erstellen und in einem Richtlinien Speicher speichern.
+description: Ein Autorisierungsrichtlinienspeicher enthält Autorisierungsrichtlinieninformationen für eine oder mehrere Anwendungen. Für jede Anwendung, die diesen Richtlinienspeicher verwendet, müssen Sie ein IAzApplication-Objekt erstellen und in einem Richtlinienspeicher speichern.
 ms.assetid: 2bba1068-ae03-4388-be4d-9865e42e440e
-title: Erstellen eines Anwendungs Objekts in C++
+title: Erstellen eines Anwendungsobjekts in C++
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 86885124e2fff52bc5cce2260e3d7fb727b58eb5
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: a434bb87d064a7fe19698e78565577238f75051fbf233e36ddf2da1725987c06
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "103863255"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117782624"
 ---
-# <a name="creating-an-application-object-in-c"></a>Erstellen eines Anwendungs Objekts in C++
+# <a name="creating-an-application-object-in-c"></a>Erstellen eines Anwendungsobjekts in C++
 
-Ein Autorisierungs Richtlinien Speicher enthält Autorisierungs Richtlinien Informationen für eine oder mehrere Anwendungen. Für jede Anwendung, die diesen Richtlinien Speicher verwendet, müssen Sie ein [**IAzApplication**](/windows/desktop/api/Azroles/nn-azroles-iazapplication) -Objekt erstellen und in einem Richtlinien Speicher speichern.
+Ein Autorisierungsrichtlinienspeicher enthält Autorisierungsrichtlinieninformationen für eine oder mehrere Anwendungen. Für jede Anwendung, die diesen Richtlinienspeicher verwendet, müssen Sie ein [**IAzApplication-Objekt**](/windows/desktop/api/Azroles/nn-azroles-iazapplication) erstellen und in einem Richtlinienspeicher speichern.
 
-Im folgenden Beispiel wird gezeigt, wie ein [**IAzApplication**](/windows/desktop/api/Azroles/nn-azroles-iazapplication) -Objekt erstellt wird, das eine Anwendung darstellt, und wie das **IAzApplication** -Objekt dem Autorisierungs Richtlinien Speicher hinzugefügt wird, der von der Anwendung verwendet wird. Im Beispiel wird davon ausgegangen, dass ein vorhandener XML-Richtlinien Speicher namens MyStore.xml im Stammverzeichnis des Laufwerks C vorhanden ist.
+Das folgende Beispiel zeigt, wie Sie ein [**IAzApplication-Objekt**](/windows/desktop/api/Azroles/nn-azroles-iazapplication) erstellen, das eine Anwendung darstellt, und wie Sie das **IAzApplication-Objekt** dem Autorisierungsrichtlinienspeicher hinzufügen, den die Anwendung verwendet. Im Beispiel wird davon ausgegangen, dass im Stammverzeichnis von Laufwerk C ein XML-Richtlinienspeicher namens MyStore.xml vorhanden ist.
 
 
 ```C++

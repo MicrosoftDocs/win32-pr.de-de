@@ -1,53 +1,53 @@
 ---
-title: Writer-netzwerksink-Objekt
-description: Writer-netzwerksink-Objekt
+title: Writer-Netzwerksenkenobjekt
+description: Writer-Netzwerksenkenobjekt
 ms.assetid: f7765b42-693a-4f48-b750-17579e860b6d
 keywords:
-- Windows Media-Format-SDK, Writer-netzwerksenkenobjekte
-- Advanced Systems Format (ASF), Writer-netzwerksenkenobjekte
-- ASF (Advanced Systems Format), Writer-netzwerksenkenobjekte
-- Objekte, Writer-netzwerksenke-Objekte
-- Writer-netzwerksink-Objekte
+- Windows Medienformat-SDK, Writer-Netzwerksenkenobjekte
+- Advanced Systems Format (ASF),Writer-Netzwerksenkenobjekte
+- ASF (Advanced Systems Format), Writer-Netzwerksenkenobjekte
+- Objekte,Writer-Netzwerksenkenobjekte
+- Writer-Netzwerksenkenobjekte
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: c85af356c1d326ddaaf3703ca87c3b7bdd1628b9
-ms.sourcegitcommit: ad672d3a10192c5ccac619ad2524407109266e93
+ms.openlocfilehash: c2011fd161fc4ac5e1cd03d955f06259e6499e343970cc309b1e8c41db051a32
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/25/2020
-ms.locfileid: "104101351"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117843725"
 ---
-# <a name="writer-network-sink-object"></a>Writer-netzwerksink-Objekt
+# <a name="writer-network-sink-object"></a>Writer-Netzwerksenkenobjekt
 
-Das Writer-netzwerksink-Objekt wird verwendet, um digitale Medien in ein Netzwerk zu schreiben.
+Das Writer-Netzwerksenkenobjekt wird verwendet, um digitale Medien in ein Netzwerk zu schreiben.
 
-Das Writer-netzwerksink-Objekt wird von der Funktion [**wmkreateschreiternetworksink**](/previous-versions/windows/desktop/api/Wmsdkidl/nf-wmsdkidl-wmcreatewriternetworksink)erstellt, mit der ein Zeiger auf eine **iwmschreiternetworksink** -Schnittstelle festgelegt wird. Die anderen Schnittstellen des Writer-netzwerksink-Objekts können durch Aufrufen der **QueryInterface** -Methode abgerufen werden.
+Das Writer-Netzwerksenkenobjekt wird von der [**Funktion WMCreateWriterNetworkSink**](/previous-versions/windows/desktop/api/Wmsdkidl/nf-wmsdkidl-wmcreatewriternetworksink)erstellt, die einen Zeiger auf eine **IWMWriterNetworkSink-Schnittstelle** legt. Die anderen Schnittstellen des Writer-Netzwerksenkenobjekts können durch Aufrufen der **QueryInterface-Methode ermittelt** werden.
 
 
 
-| Schnittstelle                                              | BESCHREIBUNG                                                                                                                                                                                                     |
+| Schnittstelle                                              | Beschreibung                                                                                                                                                                                                     |
 |--------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| [**Iwmclientconnections**](/previous-versions/windows/desktop/api/wmsdkidl/nn-wmsdkidl-iwmclientconnections)   | Sammelt Informationen zu verbundenen Clients.                                                                                                                                                                      |
-| [**IWMClientConnections2**](/previous-versions/windows/desktop/api/wmsdkidl/nn-wmsdkidl-iwmclientconnections2) | Ruft erweiterte Client Informationen ab.                                                                                                                                                                          |
-| [**Iwmregistercallback**](/previous-versions/windows/desktop/api/wmsdkidl/nn-wmsdkidl-iwmregistercallback)     | Ermöglicht es der Anwendung, Statusmeldungen aus dem-Objekt zu erhalten.                                                                                                                                                 |
-| [**Iwmschreiternetworksink**](/previous-versions/windows/desktop/api/wmsdkidl/nn-wmsdkidl-iwmwriternetworksink)   | Öffnet und schließt Ports, legt die maximale Anzahl von Clients fest und ruft Sie ab, die eine Verbindung mit dem sink-Objekt herstellen können, legt das vom Writer-Objekt zu verwendende Netzwerkprotokoll fest und führt andere erweiterte Funktionen aus. |
-| [**Iwmschreibsink**](/previous-versions/windows/desktop/api/wmsdkidl/nn-wmsdkidl-iwmwritersink)                 | Weist Arbeitsspeicher zu, bestimmt, ob die Senke in Echtzeit ausgeführt wird, und verarbeitet mehrere Rückruf Funktionen.                                                                                                |
+| [**IWMClientConnections**](/previous-versions/windows/desktop/api/wmsdkidl/nn-wmsdkidl-iwmclientconnections)   | Sammelt Informationen zu verbundenen Clients.                                                                                                                                                                      |
+| [**IWMClientConnections2**](/previous-versions/windows/desktop/api/wmsdkidl/nn-wmsdkidl-iwmclientconnections2) | Ruft erweiterte Clientinformationen ab.                                                                                                                                                                          |
+| [**IWMRegisterCallback**](/previous-versions/windows/desktop/api/wmsdkidl/nn-wmsdkidl-iwmregistercallback)     | Ermöglicht es der Anwendung, Statusmeldungen aus dem -Objekt zu erhalten.                                                                                                                                                 |
+| [**IWMWriterNetworkSink**](/previous-versions/windows/desktop/api/wmsdkidl/nn-wmsdkidl-iwmwriternetworksink)   | Öffnet und schließt Ports, legt die maximale Anzahl von Clients fest, die eine Verbindung mit dem Senkenobjekt herstellen können, legt das Netzwerkprotokoll fest, das vom Writerobjekt verwendet werden soll, und führt andere erweiterte Funktionen aus. |
+| [**IWMWriterSink**](/previous-versions/windows/desktop/api/wmsdkidl/nn-wmsdkidl-iwmwritersink)                 | Weist Arbeitsspeicher zu, bestimmt, ob die Senke in Echtzeit ausgeführt wird, und verarbeitet mehrere Rückruffunktionen.                                                                                                |
 
 
 
- 
+ 
 
-Die folgende Rückruf Schnittstelle kann von der Anwendung implementiert werden, um den Fortschritt eines Writer-netzwerksink-Objekts zu verfolgen.
+Die folgende Rückrufschnittstelle kann von der Anwendung implementiert werden, um den Fortschritt eines Writernetzwerksenkenobjekts zu verfolgen.
 
 
 
-| Schnittstelle                                      | BESCHREIBUNG                                                                    |
+| Schnittstelle                                      | Beschreibung                                                                    |
 |------------------------------------------------|--------------------------------------------------------------------------------|
-| [**Iwmstatus Callback**](/previous-versions/windows/desktop/api/wmsdkidl/nn-wmsdkidl-iwmstatuscallback) | Erforderlich, wenn Statusinformationen an die Host Anwendung übermittelt werden müssen. |
+| [**IWMStatusCallback**](/previous-versions/windows/desktop/api/wmsdkidl/nn-wmsdkidl-iwmstatuscallback) | Erforderlich, wenn Statusinformationen an die Hostanwendung übermittelt werden müssen. |
 
 
 
- 
+ 
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
@@ -59,12 +59,12 @@ Die folgende Rückruf Schnittstelle kann von der Anwendung implementiert werden,
 [**Objekte**](objects.md)
 </dt> <dt>
 
-[**Arbeiten mit Writer-senken**](working-with-writer-sinks.md)
+[**Arbeiten mit Writer-Senken**](working-with-writer-sinks.md)
 </dt> </dl>
 
- 
+ 
 
- 
+ 
 
 
 

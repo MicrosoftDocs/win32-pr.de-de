@@ -1,5 +1,5 @@
 ---
-description: Meldet ein instanzlöschungsereignis, bei dem es sich um einen Typ eines systeminternen Ereignisses handelt, das beim Löschen einer Instanz aus dem Namespace generiert wird.
+description: Meldet ein Instanzlöschereignis, bei dem es sich um einen Typ systeminterner Ereignisse handelt, der generiert wird, wenn eine Instanz aus dem Namespace gelöscht wird.
 ms.assetid: a370fc95-15e3-49c3-98de-2f40d742f207
 ms.tgt_platform: multiple
 title: __InstanceDeletionEvent-Klasse
@@ -17,18 +17,18 @@ api_type:
 - Schema
 api_location:
 - All
-ms.openlocfilehash: 018bac665aa95393fc1a9c7e51ad42038e8b27c3
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: a210f67e7e71d9980a3eeb88ae54fad7fee3ec62597b81ae7253a2893a437a7f
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106360697"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118320884"
 ---
-# <a name="__instancedeletionevent-class"></a>\_\_Instancedeletionevent-Klasse
+# <a name="__instancedeletionevent-class"></a>\_\_InstanceDeletionEvent-Klasse
 
-Die **\_ \_ instancedeletionevent** -System Klasse meldet ein instanzlöschungsereignis, bei dem es sich um einen Typ eines systeminternen [Ereignisses](determining-the-type-of-event-to-receive.md) handelt, das beim Löschen einer Instanz aus dem-Namespace generiert wird.
+Die **\_ \_ InstanceDeletionEvent-Systemklasse** meldet ein Instanzlöschereignis, [](determining-the-type-of-event-to-receive.md) bei dem es sich um einen Typ systeminterner Ereignisse handelt, der generiert wird, wenn eine Instanz aus dem Namespace gelöscht wird.
 
-Die folgende Syntax wird durch MOF-Code (Managed Object Format) vereinfacht und schließt alle geerbten Eigenschaften ein. Eigenschaften werden in alphabetischer Reihenfolge und nicht in der MOF-Reihenfolge aufgelistet.
+Die folgende Syntax wird durch MOF-Code (Managed Object Format) vereinfacht und schließt alle geerbten Eigenschaften ein. Eigenschaften werden in alphabetischer Reihenfolge und nicht in MOF-Reihenfolge aufgeführt.
 
 ## <a name="syntax"></a>Syntax
 
@@ -43,72 +43,72 @@ class __InstanceDeletionEvent : __InstanceOperationEvent
 
 ## <a name="members"></a>Member
 
-Die **\_ \_ instancedeletionevent** -Klasse verfügt über diese Typen von Membern:
+Die **\_ \_ InstanceDeletionEvent-Klasse** verfügt über die folgenden Membertypen:
 
 -   [Eigenschaften](#properties)
 
 ### <a name="properties"></a>Eigenschaften
 
-Die **\_ \_ instancedeletionevent** -Klasse verfügt über diese Eigenschaften.
+Die **\_ \_ InstanceDeletionEvent-Klasse** verfügt über diese Eigenschaften.
 
 <dl> <dt>
 
-**Sicherheits \_ Beschreibung**
+**\_SICHERHEITSDESKRIPTOR**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Uint8** Array
+Datentyp: **uint8 array**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Deskriptor, der vom Ereignis Anbieter verwendet wird, um zu bestimmen, welche Benutzer das Ereignis empfangen können. Diese Eigenschaft wird von einem [**\_ \_ Ereignis**](--event.md)geerbt.
+Deskriptor, der vom Ereignisanbieter verwendet wird, um zu bestimmen, welche Benutzer das Ereignis empfangen können. Diese Eigenschaft wird vom Ereignis [**\_ \_ geerbt.**](--event.md)
 
 </dd> <dt>
 
 **TargetInstance**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Object**
+Datentyp: **Objekt**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Kopie der-Instanz, die gelöscht wurde. Diese Eigenschaft wird von [**\_ \_ instanceoperationevent**](--instanceoperationevent.md)geerbt.
+Kopie der Instanz, die gelöscht wurde. Diese Eigenschaft wird von [**\_ \_ InstanceOperationEvent geerbt.**](--instanceoperationevent.md)
 
 </dd> <dt>
 
-**\_Erstellungszeit**
+**ZEIT \_ ERSTELLT**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **UInt64**
+Datentyp: **uint64**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
 </dt> </dl>
 
-Eindeutiger Wert, der die Uhrzeit angibt, zu der das Ereignis generiert wurde. Dies ist ein 64-Bit-Wert, der die Anzahl der 100-Nanosecond-Intervalle nach dem 1. Januar 1601 darstellt. Die Informationen liegen im UTC-Format (koordinierte Weltzeit) vor. Diese Eigenschaft wird von einem [**\_ \_ Ereignis**](--event.md)geerbt.
+Eindeutiger Wert, der den Zeitpunkt angibt, zu dem das Ereignis generiert wurde. Dies ist ein 64-Bit-Wert, der die Anzahl von 100-Nanosekunden-Intervallen nach dem 1. Januar 1601 darstellt. Die Informationen haben das format koordinierte Weltzeit (UTC). Diese Eigenschaft wird vom Ereignis [**\_ \_ geerbt.**](--event.md)
 
-Weitere Informationen zur Verwendung von **UInt64** -Werten in Skripts finden Sie unter [Scripting in WMI](/windows/desktop/WmiSdk/creating-a-wmi-script).
+Weitere Informationen zur Verwendung von **uint64-Werten** in Skripts finden Sie unter [Skripterstellung in WMI.](/windows/desktop/WmiSdk/creating-a-wmi-script)
 
 </dd> </dl>
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Die **\_ \_ instancedeletionevent** -Klasse wird von [**\_ \_ instanceoperationevent**](--instanceoperationevent.md)abgeleitet.
+Die **\_ \_ InstanceDeletionEvent-Klasse** wird von [**\_ \_ InstanceOperationEvent abgeleitet.**](--instanceoperationevent.md)
 
-**Löschen einer Ressource: \_ \_ instancedeletionevent**
+**Löschen einer Ressource: \_ \_ InstanceDeletionEvent**
 
-Wenn Sie sicherstellen möchten, dass ein bestimmtes antivirenüberprüfungs Programm weiterhin auf einem Computer ausgeführt wird, können Sie ein Skript schreiben, mit dem die Prozesse auf dem Computer überwacht werden, um zu bestimmen, ob die Prozesse angehalten werden.
+Wenn Sie sicherstellen möchten, dass ein bestimmtes Antivirenprogramm weiterhin auf einem Computer ausgeführt wird, können Sie ein Skript schreiben, das die Prozesse auf dem Computer überwacht, um zu ermitteln, ob eines dieser Programme anhält.
 
-Benachrichtigungs Abfragen, die eine Benachrichtigung über das Löschen einer Ressource anfordern und systeminterne Ereignisse verwenden, verwenden alle eine Syntax ähnlich der folgenden:
+Benachrichtigungsabfragen, die eine Benachrichtigung über das Löschen einer Ressource anfordern und systeminterne Ereignisse verwenden, verwenden eine Syntax ähnlich der folgenden:
 
 `SELECT * FROM __InstanceDeletionEvent WHERE TargetInstance ISA 'Win32_Process' and TargetInstance.Name = 'notepad.exe' `
 
 ## <a name="examples"></a>Beispiele
 
-Im Codebeispiel für das [Monitor Process](https://Gallery.TechNet.Microsoft.Com/060a9adb-f99b-4f34-ba65-19b5f5815a38) Delete-Ereignis VBScript in der TechNet Gallery wird **\_ \_ instancedeletionevent** verwendet, um das erste Vorkommen eines Lösch Ereignisses für eine WMI-Instanz für den [**Win32- \_ Prozess**](/windows/desktop/CIMWin32Prov/win32-process)zu überwachen
+Das [](https://Gallery.TechNet.Microsoft.Com/060a9adb-f99b-4f34-ba65-19b5f5815a38) VBScript-Codebeispiel zum Überwachen des Prozesslöschereignisses im TechNet-Katalog verwendet **\_ \_ InstanceDeletionEvent,** um das erste Vorkommen eines Löschereignisses einer WMI-Instanz für [**den Win32-Prozess \_ zu überwachen.**](/windows/desktop/CIMWin32Prov/win32-process)
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -122,14 +122,14 @@ Im Codebeispiel für das [Monitor Process](https://Gallery.TechNet.Microsoft.Com
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**\_\_Instanceoperationevent**](/windows/desktop/WmiSdk/--instanceoperationevent)
+[**\_\_InstanceOperationEvent**](/windows/desktop/WmiSdk/--instanceoperationevent)
 </dt> <dt>
 
-[WMI-System Klassen](wmi-system-classes.md)
+[WMI-Systemklassen](wmi-system-classes.md)
 </dt> </dl>
 
  

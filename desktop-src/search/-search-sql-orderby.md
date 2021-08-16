@@ -13,7 +13,7 @@ ms.locfileid: "118227185"
 ---
 # <a name="order-by-clause"></a>ORDER BY-Klausel
 
-Die ORDER BY-Klausel sortiert die Ergebnisse basierend auf dem Wert einer oder mehrere Spalten, die Sie angeben. Im Folgenden finden Sie die Syntax der ORDER BY-Klausel:
+Die ORDER BY-Klausel sortiert die Ergebnisse basierend auf dem Wert einer oder mehrere Spalten, die Sie angeben. Es folgt die Syntax der ORDER BY-Klausel:
 
 
 ```
@@ -24,7 +24,7 @@ ORDER BY <column> [<direction>] [,<column> [<direction>]]
 
 Der Spaltenspezifizierer muss eine gültige Spalte sein. Sie können den Spaltenspezifizierer verwenden, um in der Reihenfolge, in der sie in der Abfrage angezeigt werden, auf Spalten zu verweisen. Die erste Spalte in der Abfrage ist mit 1 nummeriert. Sie können mehr als eine Spalte in die ORDER BY-Klausel durch Kommas getrennt hinzufügen.
 
-Der optionale Richtungsspezifizierer kann entweder "ASC" für aufsteigend (niedrig bis hoch) oder "DESC" für absteigend (hoch bis niedrig) sein. Wenn Sie keinen Richtungsspezifizierer bereitstellen, wird der Standardwert (aufsteigend) verwendet. Wenn Sie mehr als eine Spalte angeben, aber nicht alle Richtungen angeben, wird die Richtung, die Sie zuletzt angeben, auf jede Spalte angewendet, bis Sie die Richtung explizit ändern.
+Der optionale Richtungsspezifizierer kann entweder "ASC" für aufsteigend (niedrig bis hoch) oder "DESC" für absteigend (hoch bis niedrig) sein. Wenn Sie keinen Richtungsspezifizierer bereitstellen, wird der Standardwert (aufsteigend) verwendet. Wenn Sie mehrere Spalten angeben, aber nicht alle Richtungen angeben, wird die Richtung, die Sie zuletzt angeben, auf jede Spalte angewendet, bis Sie die Richtung explizit ändern.
 
 In der folgenden ORDER BY-Klausel werden beispielsweise die Spalten A, B, C und G in aufsteigender Reihenfolge sortiert, während die Spalten D, E und F in absteigender Reihenfolge sortiert werden.
 

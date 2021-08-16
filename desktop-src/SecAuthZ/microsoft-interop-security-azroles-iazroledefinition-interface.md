@@ -134,7 +134,7 @@ Die **Schnittstelle Microsoft.Interop.Security.AzRoles.IAzRoleDefinition** verf√
 
 
 
-| Methode                                                                        | BESCHREIBUNG                                                                                          |
+| Methode                                                                        | Beschreibung                                                                                          |
 |:------------------------------------------------------------------------------|:-----------------------------------------------------------------------------------------------------|
 | **Microsoft.Interop.Security.Azroles.IAzRoleDefinition.AddAppMember**         | [**IAzRole::AddAppMember**](/windows/desktop/api/Azroles/nf-azroles-iazrole-addappmember)<br/>                                     |
 | **Microsoft.Interop.Security.Azroles.IAzRoleDefinition.AddMember**            | [**IAzRole::AddMember**](/windows/desktop/api/Azroles/nf-azroles-iazrole-addmember)<br/>                                           |
@@ -165,7 +165,7 @@ Die **Schnittstelle Microsoft.Interop.Security.AzRoles.IAzRoleDefinition** verf√
 
 
 
-| Eigenschaft                                                                            | Zugriffstyp           | BESCHREIBUNG                                                                                           |
+| Eigenschaft                                                                            | Zugriffstyp           | Beschreibung                                                                                           |
 |:------------------------------------------------------------------------------------|:----------------------|:------------------------------------------------------------------------------------------------------|
 | **Microsoft.Interop.Security.Azroles.IAzRoleDefinition.ApplicationData**<br/> | Lesen/Schreiben<br/> | [**ApplicationData-Eigenschaft von IAzRole**](/windows/desktop/api/Azroles/nf-azroles-iazrole-get_applicationdata)<br/>                     |
 | **Microsoft.Interop.Security.Azroles.IAzRoleDefinition.AppMembers**<br/>      | Schreibgesch√ºtzt<br/>  | [**AppMembers-Eigenschaft von IAzRole**](/windows/desktop/api/Azroles/nf-azroles-iazrole-get_appmembers)<br/>                               |

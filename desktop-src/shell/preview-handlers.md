@@ -1,52 +1,52 @@
 ---
-description: Vorschau Handler werden aufgerufen, wenn ein Element ausgewählt wird, um eine vereinfachte, umfangreiche schreibgeschützte Vorschau der Dateiinhalte im Lesebereich der Sicht anzuzeigen. Dies geschieht, ohne dass die zugehörige Anwendung der Datei gestartet wird.
+description: Vorschauhandler werden aufgerufen, wenn ein Element ausgewählt wird, um eine einfache, umfassende, schreibgeschützte Vorschau des Dateiinhalts im Lesebereich der Ansicht anzuzeigen. Dies erfolgt, ohne die zugeordnete Anwendung der Datei zu starten.
 ms.assetid: 166a4001-d237-44a4-a457-e320e995639c
-title: Vorschau Handler und Shell-Vorschau Host
+title: Vorschauhandler und Shell-Vorschauhost
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 993c6c8e7b15d9bfc24b5dd42352407a3a53c45b
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: c5ccc6c2a519b4f9646e76a0a0ef4d0d26348e08d114eb9a080aaee09a75b9f9
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "104979960"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117858762"
 ---
-# <a name="preview-handlers-and-shell-preview-host"></a>Vorschau Handler und Shell-Vorschau Host
+# <a name="preview-handlers-and-shell-preview-host"></a>Vorschauhandler und Shell-Vorschauhost
 
-Vorschau Handler werden aufgerufen, wenn ein Element ausgewählt wird, um eine vereinfachte, umfangreiche Schreib *geschützte Vorschau der* Dateiinhalte im Lesebereich der Sicht anzuzeigen. Dies geschieht, ohne dass die zugehörige Anwendung der Datei gestartet wird.
+Vorschauhandler werden aufgerufen, wenn ein Element ausgewählt *wird,* um eine einfache, umfassende, schreibgeschützte Vorschau des Dateiinhalts im Lesebereich der Ansicht anzuzeigen. Dies erfolgt, ohne die zugeordnete Anwendung der Datei zu starten.
 
-In diesem Thema werden die folgenden Themen behandelt:
+In diesem Thema werden die folgenden Themen erläutert:
 
--   [Vorschau der handlerarchitektur](#preview-handler-architecture)
--   [Server Modell Optionen](#server-model-options)
+-   [Vorschauhandlerarchitektur](#preview-handler-architecture)
+-   [Servermodelloptionen](#server-model-options)
 -   [Initialisierung](#initialization)
--   [Vorschauhandlerdatenfluss](#preview-handler-data-flow)
--   [Debuggen eines Vorschau Handlers](#debugging-a-preview-handler)
--   [Bereitstellen eines eigenen Prozesses für einen Vorschau Handler](#providing-your-own-process-for-a-preview-handler)
+-   [Preview Handler Data Flow](#preview-handler-data-flow)
+-   [Debuggen eines Vorschauhandlers](#debugging-a-preview-handler)
+-   [Bereitstellen eines eigenen Prozesses für einen Vorschauhandler](#providing-your-own-process-for-a-preview-handler)
 -   [Zugehörige Themen](#related-topics)
 
-## <a name="preview-handler-architecture"></a>Vorschau der handlerarchitektur
+## <a name="preview-handler-architecture"></a>Vorschauhandlerarchitektur
 
-Ein Vorschau Handler ist eine gehostete Anwendung. Zu den Hosts gehören Windows-Explorer in Windows Vista oder Microsoft Outlook 2007. Hosts implementieren [**IPreviewHandlerFrame**](/windows/win32/api/shobjidl_core/nn-shobjidl_core-ipreviewhandlerframe) als Kommunikationsmethode zwischen dem Vorschau Handler und dem Host.
+Ein Vorschauhandler ist eine gehostete Anwendung. Hosts enthalten den Windows Explorer in Windows Vista oder Microsoft Outlook 2007. Hosts implementieren [**IPreviewHandlerFrame**](/windows/win32/api/shobjidl_core/nn-shobjidl_core-ipreviewhandlerframe) als Kommunikationsmethode zwischen dem Vorschauhandler und dem Host.
 
-Der Vorschau Handler implementiert die folgenden Schnittstellen:
+Der Vorschauhandler selbst implementiert diese Schnittstellen:
 
--   [**IInitializeWithStream**](/windows/desktop/api/Propsys/nn-propsys-iinitializewithstream)
--   [**IObjectWithSite**](/windows/win32/api/ocidl/nn-ocidl-iobjectwithsite)
+-   [**Iinitializewithstream**](/windows/desktop/api/Propsys/nn-propsys-iinitializewithstream)
+-   [**Iobjectwithsite**](/windows/win32/api/ocidl/nn-ocidl-iobjectwithsite)
 -   [**IOleWindow**](/windows/win32/api/oleidl/nn-oleidl-iolewindow)
 -   [**IPreviewHandler**](/windows/win32/api/shobjidl_core/nn-shobjidl_core-ipreviewhandler)
 -   [**IPreviewHandlerVisuals**](/windows/win32/api/shobjidl_core/nn-shobjidl_core-ipreviewhandlervisuals) (optional)
 
-Der Handler wird über seine [**IObjectWithSite**](/windows/win32/api/ocidl/nn-ocidl-iobjectwithsite)aufgerufen, die einen [**IUnknown**](/windows/win32/api/unknwn/nn-unknwn-iunknown) -Zeiger zurückgibt, über den Sie ein [**IPreviewHandlerFrame**](/windows/win32/api/shobjidl_core/nn-shobjidl_core-ipreviewhandlerframe) -Objekt für die Interaktion mit dem Host anfordern.
+Ihr Handler wird über das [**IObjectWithSite-Objekt**](/windows/win32/api/ocidl/nn-ocidl-iobjectwithsite)aufgerufen, das einen [**IUnknown-Zeiger**](/windows/win32/api/unknwn/nn-unknwn-iunknown) zurückgibt, über den Sie ein [**IPreviewHandlerFrame-Objekt**](/windows/win32/api/shobjidl_core/nn-shobjidl_core-ipreviewhandlerframe) für die Interaktion mit dem Host anfordern.
 
-## <a name="server-model-options"></a>Server Modell Optionen
+## <a name="server-model-options"></a>Servermodelloptionen
 
-Vorschau Handler werden immer außerhalb des Prozesses ausgeführt. Hierfür gibt es zwei Methoden:
+Für Vorschauhandler ist der Prozess immer nicht mehr verfügbar. Es gibt zwei Methoden, dies zu implementieren:
 
-1.  Ein Vorschau Handler kann als Prozess interner Server erstellt, aber über einen Out-of-Process-Ersatz Host ausgeführt werden. Dies ist die bevorzugte Methode. Das System stellt einen Ersatz Zeichen Host für dieses in der Prevhost.exe-Datei bereit. Vorschau Handler, die mit dieser Methode erstellt wurden, sind nicht mit Outlook 2007 unter Windows XP kompatibel. Diese Handler funktionieren jedoch in Windows-Explorer und Outlook 2007, die unter Windows Vista ausgeführt werden.
-2.  Ein Vorschau Handler kann als lokaler Component Object Model (com)-Server erstellt werden. Dies wird aus verschiedenen Gründen nicht empfohlen. Zuerst ist die Implementierung eines Prozess internen Servers einfacher. Noch wichtiger ist, dass die Implementierung als Prozess interner Server eine bessere Kontrolle über die Lebensdauer des Handlerobjekts bietet, was eine bessere Bereinigung und Effizienz ermöglicht.
+1.  Ein Vorschauhandler kann als Prozessserver erstellt, aber über einen Out-of-Process-Ersatzhost ausgeführt werden. Dies ist die bevorzugte Methode. Das System stellt einen Ersatzhost für diesen in der Prevhost.exe zurEntschlüsselung. Vorschauhandler, die mit dieser Methode erstellt werden, sind nicht mit Outlook 2007 auf Windows XP kompatibel. Diese Handler funktionieren jedoch in Windows Explorer und Outlook 2007 unter Windows Vista.
+2.  Ein Vorschauhandler kann als lokaler serverseitiger Component Object Model (COM) erstellt werden. Dies wird aus verschiedenen Gründen nicht empfohlen. Erstens ist die Implementierung eines Prozessservers einfacher. Noch wichtiger ist, dass die Implementierung als Prozessserver eine bessere Kontrolle über die Lebensdauer des Handlerobjekts bietet, was eine bessere Bereinigung und Effizienz ermöglicht.
 
-Standardmäßig werden Vorschau Handler aus Sicherheitsgründen in einem Il-Prozess mit niedriger Integritäts Ebene ausgeführt. Optional können Sie die Ausführung als Low-Il-Prozess deaktivieren, indem Sie den folgenden Wert in der Registrierung festlegen. Dies wird jedoch nicht empfohlen. Systeme können schließlich so konfiguriert werden, dass Sie jeden Prozess ablehnen, bei dem es sich nicht um niedrige Il handelt
+Standardmäßig werden Vorschauhandler aus Sicherheitsgründen in einem Il-Prozess (Low Integrity Level) ausgeführt. Sie können die Ausführung optional als Prozess mit niedriger IL deaktivieren, indem Sie den folgenden Wert in der Registrierung festlegen. Dies wird jedoch nicht empfohlen. Systeme könnten schließlich so konfiguriert werden, dass alle Prozesse abgelehnt werden, die keine geringe IL sind.
 
 ```
 HKEY_CLASSES_ROOT
@@ -55,42 +55,42 @@ HKEY_CLASSES_ROOT
          DisableLowILProcessIsolation [DWORD] = 1
 ```
 
-Verschiedene Vorschau Handler verwenden den gleichen ProzessStandard mäßig gemeinsam. Zwei Instanzen von Prevhost.exe können gleichzeitig ausgeführt werden. eine für Handler, die als Low-Il-Prozesse ausgeführt werden, eine für Handler, die dieses Verhalten deaktiviert haben.
+Verschiedene Vorschauhandler verwenden standardmäßig denselben Prozess. Zwei Instanzen von Prevhost.exe können gleichzeitig ausgeführt werden. einer für Handler, die als Low IL-Prozesse ausgeführt werden, einer für Handler, die sich von diesem Verhalten abgemeldet haben.
 
 ## <a name="initialization"></a>Initialisierung
 
-Wie bei Miniaturansichten und Eigenschaften Handlern wird dringend empfohlen, dass Sie den Handler mit einem Stream initialisieren. Wenn erforderlich, können Sie eine Datei oder ein Element initialisieren, aber Streams bieten die sicherste Methode zum Implementieren eines Handlers. Durch die Initialisierung durch einen Stream wird die Datei Integrität und die Stabilitäts Vorteile für das System der Ausführung des Handlers als Low-Il-Prozess sichergestellt, wie z. b. das Schützen des Systems vor Pufferüberläufen, das Einschränken des Speicher Orts von Informationen und das Einschränken der Kommunikation mit anderen Fenstern.
+Wie bei Miniaturansichts- und Eigenschaftshandlern wird dringend empfohlen, den Handler mit einem Stream zu initialisieren. Sie können bei Bedarf über eine Datei oder ein Element initialisieren, aber Streams bieten die sicherste Möglichkeit, einen Handler zu implementieren. Die Initialisierung über einen Stream stellt die Dateiintegrität und die Stabilitätsvorteile für das System sicher, bei dem der Handler als niedriger IL-Prozess ausgeführt wird, z. B. der Schutz des Systems vor Pufferüberläufen, das Einschränken, wo ein Handler Informationen schreiben kann, und das Einschränken der Kommunikation mit anderen Fenstern.
 
-Wenn Sie mit einem Datei-oder shellelement initialisieren müssen, speichern Sie den Dateipfad oder einen Verweis auf das [**IShellItem**](/windows/desktop/api/shobjidl_core/nn-shobjidl_core-ishellitem)-Element. Lesen Sie keine Daten aus diesen Quellen, bis [**IPreviewHandler::D opreview**](/windows/desktop/api/shobjidl_core/nf-shobjidl_core-ipreviewhandler-dopreview) aufgerufen wird.
+Wenn Sie mit einer Datei oder einem Shellelement initialisieren müssen, speichern Sie den Dateipfad oder einen Verweis auf [**IShellItem**](/windows/desktop/api/shobjidl_core/nn-shobjidl_core-ishellitem). Lesen Sie erst Dann Daten aus diesen Quellen, wenn [**IPreviewHandler::D oPreview**](/windows/desktop/api/shobjidl_core/nf-shobjidl_core-ipreviewhandler-dopreview) aufgerufen wird.
 
-Im Allgemeinen sollten bei der Initialisierung keine schweren Aufgaben ausgeführt werden, z. b. das Erstellen und Speichern eines Vorschau Bilds. Zur optimalen Effizienz sollte diese Art der Verarbeitung erst durchgeführt werden, wenn die Vorschau für aufgerufen wird.
+Im Allgemeinen sollte die Initialisierung keine hohen Arbeitslasten wie das Erstellen und Speichern eines Vorschauimages haben. Um eine optimale Effizienz zu erzielen, sollte diese Art der Verarbeitung erst erfolgen, wenn die Vorschau aufgerufen wird.
 
-## <a name="preview-handler-data-flow"></a>Vorschauhandlerdatenfluss
+## <a name="preview-handler-data-flow"></a>Preview Handler Data Flow
 
-Der Datenfluss im Vorschau Prozess folgt dem hier gezeigten allgemeinen Pfad. Der Host kann als Windows-Explorer in Windows Vista oder Outlook 2007 betrachtet werden.
+Der Datenfluss im Vorschauprozess folgt dem hier gezeigten allgemeinen Pfad. Der Host kann als Windows Explorer in Windows Vista oder Outlook 2007 verwendet werden.
 
-1.  Der Vorschau Handler wird initialisiert, vorzugsweise mit einem Stream.
-2.  Das Ansichts Fenster wird vom Host über [**IPreviewHandler:: SetWindow**](/windows/desktop/api/shobjidl_core/nf-shobjidl_core-ipreviewhandler-setwindow)an den Handler übermittelt.
-3.  An diesem Punkt sollte der Handler nichts weiter tun, bis [**IPreviewHandler::D opreview**](/windows/desktop/api/shobjidl_core/nf-shobjidl_core-ipreviewhandler-dopreview) aufgerufen wird.
-4.  Die Vorschau wird im Lesebereich durch einen [**IPreviewHandler**](/windows/desktop/api/shobjidl_core/nf-shobjidl_core-ipreviewhandler-dopreview)-Ansichts Vorgang angezeigt::D opreview.
-5.  Die Größe des Fensters wird über [**IPreviewHandler:: SetRect**](/windows/desktop/api/shobjidl_core/nf-shobjidl_core-ipreviewhandler-setrect)festgelegt.
-6.  Die Größe des Fensters wird bei Bedarf über [**IPreviewHandler:: SetRect**](/windows/desktop/api/shobjidl_core/nf-shobjidl_core-ipreviewhandler-setrect)geändert.
-7.  Die Vorschau wird entladen, und ihre Ressourcen werden freigegeben, wenn Sie nicht mehr benötigt werden, und zwar durch einen [**IPreviewHandler:: Entladen**](/windows/desktop/api/shobjidl_core/nf-shobjidl_core-ipreviewhandler-unload)-Ansichts Vorgang.
+1.  Der Vorschauhandler wird initialisiert, vorzugsweise mit einem Stream.
+2.  Das Ansichtsfenster wird vom Host über [**IPreviewHandler::SetWindow**](/windows/desktop/api/shobjidl_core/nf-shobjidl_core-ipreviewhandler-setwindow)an den Handler übergeben.
+3.  An diesem Punkt sollte der Handler nichts weiter tun, bis [**IPreviewHandler::D oPreview**](/windows/desktop/api/shobjidl_core/nf-shobjidl_core-ipreviewhandler-dopreview) aufgerufen wird.
+4.  Die Vorschau wird im Lesebereich durch einen Aufruf von [**IPreviewHandler::D oPreview angezeigt.**](/windows/desktop/api/shobjidl_core/nf-shobjidl_core-ipreviewhandler-dopreview)
+5.  Die Größe des Fensters wird über [**IPreviewHandler::SetRect festgelegt.**](/windows/desktop/api/shobjidl_core/nf-shobjidl_core-ipreviewhandler-setrect)
+6.  Die Größe des Fensters wird bei Bedarf über [**IPreviewHandler::SetRect geändert.**](/windows/desktop/api/shobjidl_core/nf-shobjidl_core-ipreviewhandler-setrect)
+7.  Die Vorschau wird entladen, und ihre Ressourcen werden freigegeben, wenn sie nicht mehr benötigt werden, durch einen Aufruf von [**IPreviewHandler::Unload**](/windows/desktop/api/shobjidl_core/nf-shobjidl_core-ipreviewhandler-unload).
 
-## <a name="debugging-a-preview-handler"></a>Debuggen eines Vorschau Handlers
+## <a name="debugging-a-preview-handler"></a>Debuggen eines Vorschauhandlers
 
-Wenn Sie die Empfehlungen zum Implementieren Ihres Vorschau Handlers als Prozess interner Server befolgt haben, können Sie an Prevhost.exe anfügen, um den Vorschau Handler zu debuggen. Wie bereits erwähnt, beachten Sie, dass es möglicherweise zwei Instanzen von Prevhost.exe gibt, eine für normale Low-Il-Prozesse und eine für die Handler, die die Ausführung als Low-Il-Prozess deaktiviert haben.
+Wenn Sie die Empfehlungen befolgt haben, um den Vorschauhandler als Prozessserver zu implementieren, können Sie zum Debuggen des Vorschauhandlers an Prevhost.exe. Wie bereits erwähnt, sollten Sie beachten, dass es zwei Instanzen von Prevhost.exe geben könnte: eine für normale Prozesse mit niedriger IL und eine für die Handler, die sich gegen die Ausführung als niedriger IL-Prozess entschieden haben.
 
-Wenn Sie Prevhost.exe nicht in der Liste der verfügbaren Prozesse finden, wurde es wahrscheinlich nicht zu diesem Zeitpunkt geladen. Wenn Sie auf eine Datei für eine Vorschau klicken, wird das Ersatz Zeichen geladen, und es sollte dann als anfügbare Prozess angezeigt werden.
+Wenn Sie die Prevhost.exe in der Liste der verfügbaren Prozesse nicht finden, wurde sie wahrscheinlich zu diesem Zeitpunkt nicht geladen. Wenn Sie auf eine Datei für eine Vorschau klicken, wird das Ersatzzeichen geladen, und es sollte dann als anfingbarer Prozess angezeigt werden.
 
-## <a name="providing-your-own-process-for-a-preview-handler"></a>Bereitstellen eines eigenen Prozesses für einen Vorschau Handler
+## <a name="providing-your-own-process-for-a-preview-handler"></a>Bereitstellen eines eigenen Prozesses für einen Vorschauhandler
 
-Wenn Sie die Erstellung eines neuen Prozesses für den Handler erzwingen möchten, anstatt ihn unter dem Standardprozess zu ausführen, erstellen Sie unter **AppID** einen neuen Unterschlüssel für Ihren Handler, und legen Sie dessen dllersatz-Eintrag auf "Prevhost.exe" fest. Verwenden Sie den **AppID** -Unterschlüssel anstelle der Standard-Prevhost.exe- **AppID**.
+Wenn Sie die Erstellung eines neuen Prozesses für Ihren Handler erzwingen möchten, anstatt unter dem Standardprozess ausgeführt zu werden, erstellen Sie einen neuen Unterschlüssel für den Handler unter **AppID,** und legen Sie dessen DllSurrogate-Eintrag auf "Prevhost.exe" fest. Verwenden Sie **diesen AppID-Unterschlüssel** anstelle des Prevhost.exe **AppID**.
 
-Wenn Sie einen neuen Prozess bereitstellen, kann der Handler die Ausführung unter einem freigegebenen Prozess vermeiden, da dies standardmäßig der Fall wäre. Dadurch können Sie beispielsweise die spezifische Version des Common Language Runtime (CLR) im Prozess sicherstellen. Dies ist erforderlich, wenn Sie eine verwaltete Implementierung eines Vorschau Handlers entwickeln.
+Durch die Bereitstellung eines neuen Prozesses kann der Handler vermeiden, dass er wie standardmäßig unter einem freigegebenen Prozess ausgeführt wird. Dadurch können Sie beispielsweise die spezifische Version der Common Language Runtime (CLR) im Prozess sicherstellen. Dies ist erforderlich, wenn Sie eine verwaltete Implementierung eines Vorschauhandlers erstellen.
 
 > [!Note]  
-> 32-Bit-Vorschau Handler sollten bei der Installation auf 64-Bit-Betriebssystemen **AppID** {534a1e02-d58fi-44fi0-b58b-36cbed287c7c} verwenden.
+> 32-Bit-Vorschauhandler sollten **appID** {534A1E02-D58F-44f0-B58B-36CBED287C7C} verwenden, wenn sie auf 64-Bit-Betriebssystemen installiert sind.
 
  
 
@@ -98,13 +98,13 @@ Wenn Sie einen neuen Prozess bereitstellen, kann der Handler die Ausführung unt
 
 <dl> <dt>
 
-[Entwickeln von Vorschau Handlern](building-preview-handlers.md)
+[Erstellen von Vorschauhandlern](building-preview-handlers.md)
 </dt> <dt>
 
-[Registrieren eines Vorschau Handlers](how-to-register-a-preview-handler.md)
+[Registrieren eines Vorschauhandlers](how-to-register-a-preview-handler.md)
 </dt> <dt>
 
-[Vorschau der handlerrichtlinien](preview-handler-guidelines.md)
+[Richtlinien für Vorschauhandler](preview-handler-guidelines.md)
 </dt> </dl>
 
  

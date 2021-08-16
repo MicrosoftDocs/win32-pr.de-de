@@ -13,7 +13,7 @@ ms.locfileid: "118223574"
 ---
 # <a name="how-to-define-file-type-attributes"></a>Definieren von Dateitypattributen
 
-Durch das Zuweisen von Dateitypattributen zu einer zugeordneten ProgID können Sie einige Aspekte des Verhaltens des Dateityps steuern. Vor Windows Vista konnten Sie mit diesen Attributen einschränken, in welchem  Umfang der Benutzer die Eigenschaftenregisterkarte Ordneroptionen verwenden kann, um verschiedene Aspekte des Dateityps zu ändern, z. B. das Symbol oder verben.
+Durch das Zuweisen von Dateitypattributen zu einer zugeordneten ProgID können Sie einige Aspekte des Verhaltens des Dateityps steuern. Vor Windows Vista konnten Sie mit diesen Attributen das Ausmaß einschränken, in  dem der Benutzer die Eigenschaftenregisterkarte Ordneroptionen verwenden kann, um verschiedene Aspekte des Dateityps zu ändern, z. B. das Symbol oder die Verben.
 
 Dateitypattribute sind binäre Flags, die als **REG \_ DWORD-** oder **REG \_ BINARY-Werte** im zugeordneten ProgID-Unterschlüssel des Dateityps angegeben werden.
 
@@ -29,7 +29,7 @@ Fügen Sie dem zugeordneten Unterschlüssel ProgID des Dateityps einen EditFlags
 
 Legen Sie den Eintrag auf den entsprechenden Attributwert fest.
 
-Das folgende Beispiel zeigt die \_ FTA-Attribute NoRemove (0x00000010) und FTA \_ NoNewVerb (0x00000020), die für den .myp-Dateityp festgelegt sind.
+Das folgende Beispiel zeigt die für den .myp-Dateityp festgelegten \_ Attribute FTA NoRemove (0x00000010) und FTA \_ NoNewVerb (0x00000020).
 
 ```
 HKEY_CLASSES_ROOT

@@ -1,7 +1,7 @@
 ---
-description: Mit einem ACE (Conditional Access Control Entry) kann eine Zugriffsbedingung ausgewertet werden, wenn eine Zugriffsüberprüfung durchgeführt wird. Die Sicherheitsdeskriptordefinitionssprache (Security Descriptor Definition Language, SDDL) stellt Syntax zum Definieren von bedingten ACEs in einem Zeichenfolgenformat bereit.
+description: Mit einem ACE (Conditional Access Control Entry) kann eine Zugriffsbedingung ausgewertet werden, wenn eine Zugriffsüberprüfung durchgeführt wird. Die Sicherheitsbeschreibungsdefinitionssprache (SECURITY Descriptor Definition Language, SDDL) stellt Syntax zum Definieren bedingter ACEs in einem Zeichenfolgenformat zur Verfügung.
 ms.assetid: cdc3629d-c4d8-4910-8838-3bdb601f7064
-title: Sicherheitsbeschreibungsdefinitionssprache für bedingte ACEs
+title: Definitionssprache für Sicherheitsbeschreibungen für bedingte ACEs
 ms.topic: article
 ms.date: 05/31/2018
 ms.openlocfilehash: ee0a746460c7582d95e0c95e2a2c179aac2eb29456418234cb52e842c8c56738
@@ -11,13 +11,13 @@ ms.contentlocale: de-DE
 ms.lasthandoff: 08/11/2021
 ms.locfileid: "117780525"
 ---
-# <a name="security-descriptor-definition-language-for-conditional-aces"></a>Sicherheitsbeschreibungsdefinitionssprache für bedingte ACEs
+# <a name="security-descriptor-definition-language-for-conditional-aces"></a>Definitionssprache für Sicherheitsbeschreibungen für bedingte ACEs
 
-Mit einem ACE (Conditional [*Access Control Entry)*](/windows/desktop/SecGloss/a-gly) kann eine Zugriffsbedingung ausgewertet werden, wenn eine Zugriffsüberprüfung durchgeführt wird. Die Sicherheitsdeskriptordefinitionssprache (Security Descriptor Definition Language, SDDL) stellt Syntax zum Definieren von bedingten ACEs in einem Zeichenfolgenformat bereit.
+Mit einem ACE (Conditional [*Access Control Entry)*](/windows/desktop/SecGloss/a-gly) kann eine Zugriffsbedingung ausgewertet werden, wenn eine Zugriffsüberprüfung durchgeführt wird. Die Sicherheitsbeschreibungsdefinitionssprache (SECURITY Descriptor Definition Language, SDDL) stellt Syntax zum Definieren bedingter ACEs in einem Zeichenfolgenformat zur Verfügung.
 
-Die SDDL für einen bedingten ACE ist identisch mit jedem ACE, wobei die Syntax für die bedingte Anweisung an das Ende der ACE-Zeichenfolge angefügt ist. Informationen zu SDDL finden Sie unter [Security Descriptor Definition Language](security-descriptor-definition-language.md).
+Die SDDL für einen bedingten ACE ist mit der für jeden ACE identisch, und die Syntax für die bedingte Anweisung wird an das Ende der ACE-Zeichenfolge angefügt. Informationen zu SDDL finden Sie unter [Security Descriptor Definition Language](security-descriptor-definition-language.md).
 
-Das \# Zeichen "" ist synonym mit "0" in Ressourcenattributen. Beispiel: D:AI(XA;OICI;FA;;; WD;(OctetStringType== \# 1 \# 2 \# 3 \# \# )) entspricht und wird als D:AI(XA;OICI;FA;;; interpretiert. WD;(OctetStringType== \# 01020300)).
+Das \# ""-Zeichen ist synonym mit "0" in Ressourcenattributen. Beispiel: D:AI(XA;OICI;FA;;; WD;(OctetStringType== 1 2 3 )) entspricht und wird als \# \# \# \# \# D:AI(XA;OICI;FA;;; WD;(OctetStringType== \# 01020300)).
 
 -   [Bedingtes ACE-Zeichenfolgenformat](#conditional-ace-string-format)
 -   [Bedingte Ausdrücke](#conditional-expressions)
@@ -33,22 +33,22 @@ Das \# Zeichen "" ist synonym mit "0" in Ressourcenattributen. Beispiel: D:AI(XA
 
 Jeder ACE in einer [*Sicherheitsbeschreibungszeichenfolge*](/windows/desktop/SecGloss/s-gly) ist in Klammern eingeschlossen. Die Felder des ACE befinden sich in der folgenden Reihenfolge und werden durch Semikolons (;).
 
-*AceType***;** _AceFlags_* _;_ *_Rechte_*_;_ *_ObjectGuid_*_;_ *_InheritObjectGuid_*_;_ *_AccountSid_*_;(_*_ConditionalExpression_*_)_*
+*AceType***;** _AceFlags_* _;_ *_Rechte;_* *_ObjectGuid_*_;_ *_InheritObjectGuid_*_;_ *_AccountSid_*_;(_*_ConditionalExpression_*_)_*
 
-Die Felder sind wie in [ACE-Zeichenfolgen](ace-strings.md)beschrieben, mit den folgenden Ausnahmen.
+Die Felder sind wie unter [ACE-Zeichenfolgen beschrieben,](ace-strings.md)mit den folgenden Ausnahmen.
 
 -   Das *AceType-Feld* kann eine der folgenden Zeichenfolgen sein.
 
-    | ACE-Typzeichenfolge | Konstante in "Sddl.h"                         | AceType-Wert                                   |
+    | ACE-Typzeichenfolge | Konstante in Sddl.h                         | AceType-Wert                                   |
     |-----------------|--------------------------------------------|-------------------------------------------------|
-    | "XA"<br/> | SDDL \_ CALLBACK \_ ACCESS \_ ALLOWED<br/> | \_ZUGRIFF ZULÄSSIGER \_ \_ RÜCKRUF-ACE-TYP \_<br/> |
-    | "XD"<br/> | ZUGRIFF DES \_ SDDL-RÜCKRUFS \_ \_ VERWEIGERT<br/>  | ACCESS \_ DENIED \_ CALLBACK \_ ACE \_ TYPE<br/>  |
+    | "XA"<br/> | \_SDDL-RÜCKRUFZUGRIFF \_ \_ ZULÄSSIG<br/> | ACCESS \_ ALLOWED \_ CALLBACK \_ ACE \_ TYPE<br/> |
+    | "XD"<br/> | \_SDDL-RÜCKRUFZUGRIFF \_ \_ VERWEIGERT<br/>  | ACCESS \_ DENIED \_ CALLBACK \_ ACE \_ TYPE<br/>  |
 
     
 
      
 
--   Die ACE-Zeichenfolge enthält einen oder mehrere bedingte Ausdrücke, die in Klammern am Ende der Zeichenfolge eingeschlossen sind.
+-   Die ACE-Zeichenfolge enthält mindestens einen bedingten Ausdruck, der am Ende der Zeichenfolge in Klammern eingeschlossen ist.
 
 ## <a name="conditional-expressions"></a>Bedingte Ausdrücke
 
@@ -56,15 +56,15 @@ Ein bedingter Ausdruck kann eines der folgenden Elemente enthalten.
 
 
 
-| Ausdruckselement                                                | BESCHREIBUNG                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       |
+| Ausdruckselement                                                | Beschreibung                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       |
 |-------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | *AttributeName*<br/>                                        | Testet, ob das angegebene Attribut über einen Wert ungleich 0 (null) verfügt.<br/>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             |
 | **exists** *AttributeName*<br/>                             | Testet, ob das angegebene Attribut im Clientkontext vorhanden ist.<br/>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    |
 | *AttributeName-Operatorwert*  <br/>                     | Gibt das Ergebnis des angegebenen Vorgangs zurück.<br/>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         |
 | *ConditionalExpression* **\|\|** _ConditionalExpression_<br/> | Testet, ob einer der angegebenen bedingten Ausdrücke true ist.<br/>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 |
-| *ConditionalExpression* **&&** *ConditionalExpression*<br/> | Testet, ob beide der angegebenen bedingten Ausdrücke wahr sind.<br/>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  |
+| *ConditionalExpression* **&&** *ConditionalExpression*<br/> | Testet, ob beide angegebenen bedingten Ausdrücke true sind.<br/>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  |
 | **! (**_ConditionalExpression_*_)_*<br/>                     | Die Umkehrung eines bedingten Ausdrucks.<br/>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               |
-| **Member \_ von{**_SidArray_*_}_*<br/>                         | Testet, ob das [**SID \_ AND \_ ATTRIBUTES-Array**](/windows/desktop/api/Winnt/ns-winnt-sid_and_attributes) des Clientkontexts alle [Sicherheitsbezeichner](security-identifiers.md) (SIDs) in der durch Trennzeichen getrennten Liste enthält, die von *SidArray* angegeben wird.<br/> Für ACEs zulassen muss für eine Clientkontext-SID das **SE \_ GROUP \_ ENABLED-Attribut** festgelegt sein, um als Übereinstimmung angesehen zu werden.<br/> Für ACEs verweigern muss für eine Clientkontext-SID entweder das **SE \_ GROUP \_ ENABLED** oder das **SE GROUP USE FOR \_ \_ \_ \_ DENY \_ ONLY-Attribut** festgelegt sein, um als Übereinstimmung angesehen zu werden.<br/> Das *SidArray-Array* kann entweder SID-Zeichenfolgen (z.B. "S-1-5-6") oder SID-Aliase (z.B. "BA") enthalten.<br/> |
+| **Member \_ von{**_SidArray_*_}_*<br/>                         | Testet, ob das [**\_ SID AND \_ ATTRIBUTES-Array**](/windows/desktop/api/Winnt/ns-winnt-sid_and_attributes) des Clientkontexts alle Sicherheits-IDs (SIDs) in der durch Komma getrennten Liste enthält, die von *SidArray angegeben wird.* [](security-identifiers.md)<br/> Für Allow ACEs muss für eine Clientkontext-SID SE **\_ GROUP \_ ENABLED-Attribut** festgelegt sein, um als Übereinstimmung angesehen zu werden.<br/> Für Deny ACEs muss für eine Clientkontext-SID entweder das attribut **SE \_ GROUP \_ ENABLED** oder das **SE GROUP USE FOR \_ \_ \_ \_ DENY \_ ONLY-Attribut** festgelegt sein, um als Übereinstimmung angesehen zu werden.<br/> Das *SidArray-Array* kann entweder SID-Zeichenfolgen (z. B. "S-1-5-6") oder SID-Aliase (z. B. "BA" enthalten.<br/> |
 
 
 
@@ -72,7 +72,7 @@ Ein bedingter Ausdruck kann eines der folgenden Elemente enthalten.
 
 ## <a name="attributes"></a>Attribute
 
-Ein Attribut stellt ein Element im [**ARRAY DER SECURITY ATTRIBUTES \_ \_ \_ INFORMATION**](/windows/desktop/api/Authz/ns-authz-authz_security_attributes_information) von AUTHZ im Clientkontext dar. Ein Attributname kann alle alphanumerischen Zeichen und die Zeichen ":", "/", "." und "" \_ enthalten.
+Ein Attribut stellt ein Element im [**ARRAY MIT SICHERHEIT ATTRIBUTE INFORMATION \_ \_ \_ im**](/windows/desktop/api/Authz/ns-authz-authz_security_attributes_information) Clientkontext dar. Ein Attributname kann alle alphanumerischen Zeichen und alle Zeichen ":", "/", "." und "" \_ enthalten.
 
 Ein Attributwert kann einer der folgenden Typen sein.
 
@@ -80,10 +80,10 @@ Ein Attributwert kann einer der folgenden Typen sein.
 
 | Werttyp         | BESCHREIBUNG                                                                                                                                                                                         |
 |--------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Integer<br/> | Eine 64-Bit-Ganzzahl in Dezimal- oder Hexadezimalschreibweise.<br/>                                                                                                                              |
-| String<br/>  | Ein Zeichenfolgenwert, der durch Anführungszeichen getrennt ist.<br/>                                                                                                                                                      |
-| SID<br/>     | SID(S-1-1-0) oder SID(BA). Muss sich auf DEM RHS von Member \_ von oder Device Member von \_ \_ befingen.<br/>                                                                                                           |
-| BLOB<br/>    | \# gefolgt von Hexadezimalzahlen. Wenn die Länge der Zahlen ungerade ist, wird in \# eine 0 übersetzt, um sie gleichmäßig zu machen. Auch eine \# , die an anderer Stelle im Wert angezeigt wird, wird in eine 0 übersetzt.<br/> |
+| Integer<br/> | Eine 64-Bit-Ganzzahl in dezimaler oder hexadezimaler Notation.<br/>                                                                                                                              |
+| String<br/>  | Ein durch Anführungszeichen getrennter Zeichenfolgenwert.<br/>                                                                                                                                                      |
+| SID<br/>     | SID(S-1-1-0) oder SID(BA). Muss in RHS des Mitglieds \_ oder \_ Gerätemitglieds von \_ sein.<br/>                                                                                                           |
+| BLOB<br/>    | \# gefolgt von Hexadezimalzahlen. Wenn die Länge der Zahlen ungerade ist, wird in eine 0 übersetzt, \# um sie gleichmäßig zu machen. Außerdem wird ein , das an anderer Stelle im Wert angezeigt \# wird, in 0 übersetzt.<br/> |
 
 
 
@@ -91,11 +91,11 @@ Ein Attributwert kann einer der folgenden Typen sein.
 
 ## <a name="operators"></a>Operatoren
 
-Die folgenden Operatoren werden für die Verwendung in bedingten Ausdrücken definiert, um die Werte von Attributen zu testen. Alle diese Operatoren sind binäre Operatoren und werden im Format *AttributeName-Operatorwert* verwendet. 
+Die folgenden Operatoren sind für die Verwendung in bedingten Ausdrücken definiert, um die Werte von Attributen zu testen. All diese Operatoren sind binäre Operatoren und werden in der Form *AttributeName* *Operator Value* *verwendet.*
 
 
 
-| Operator            | BESCHREIBUNG                                                                                                              |
+| Operator            | Beschreibung                                                                                                              |
 |---------------------|--------------------------------------------------------------------------------------------------------------------------|
 | ==<br/>       | Konventionelle Definition.<br/>                                                                                      |
 | !=<br/>       | Konventionelle Definition.<br/>                                                                                      |
@@ -103,20 +103,20 @@ Die folgenden Operatoren werden für die Verwendung in bedingten Ausdrücken def
 | <=<br/>    | Konventionelle Definition.<br/>                                                                                      |
 | ><br/>     | Konventionelle Definition.<br/>                                                                                      |
 | >=<br/>    | Konventionelle Definition.<br/>                                                                                      |
-| Enthält<br/> | **TRUE,** wenn der Wert des angegebenen Attributs eine Obermenge des angegebenen Werts ist; Andernfalls **FALSE**.<br/>  |
-| Eine \_ der<br/>  | **TRUE,** wenn der angegebene Wert eine Obermenge des Werts des angegebenen Attributs ist; Andernfalls **FALSE**. <br/> |
+| Enthält<br/> | **TRUE,** wenn der Wert des angegebenen Attributs eine Obermenge des angegebenen Werts ist; andernfalls **FALSE**.<br/>  |
+| Ein \_ beliebiges von<br/>  | **TRUE,** wenn der angegebene Wert eine Obermenge des Werts des angegebenen Attributs ist; andernfalls **FALSE**. <br/> |
 
 
 
  
 
-Darüber hinaus werden die unären Operatoren Exists, Member \_ of und negation (!) wie in der Tabelle Bedingte Ausdrücke beschrieben definiert.
+Darüber hinaus werden die unären Operatoren Exists, Member von und Negation (!) wie in der Tabelle \_ Conditional Expressions beschrieben definiert.
 
-Dem Operator "Contains" muss Leerzeichen vorangestellt werden, gefolgt von Leerzeichen, und dem Operator "Any \_ of" muss Leerraum vorangestellt werden.
+Dem Contains-Operator muss Leerzeichen vorangehende und gefolgt werden, und dem Operator "Any of" muss Leerzeichen \_ vorangehende werden.
 
 ## <a name="operator-precedence"></a>Operatorrangfolge
 
-Die Operatoren werden in der folgenden Rangfolge ausgewertet, wobei Vorgänge gleicher Rangfolge von links nach rechts ausgewertet werden.
+Die Operatoren werden in der folgenden Rangfolge ausgewertet, und Vorgänge mit gleicher Rangfolge werden von links nach rechts ausgewertet.
 
 1.  Exists, Member \_ von
 2.  Contains, Any \_ of
@@ -129,7 +129,7 @@ Darüber hinaus kann jeder Teil eines bedingten Ausdrucks in Klammern eingeschlo
 
 ## <a name="unknown-values"></a>Unbekannte Werte
 
-Die Ergebnisse von bedingten Ausdrücken geben manchmal den Wert **Unknown** zurück. Beispielsweise gibt jeder der relationalen Vorgänge Unknown **zurück,** wenn das angegebene Attribut nicht vorhanden ist.
+Die Ergebnisse bedingter Ausdrücke geben manchmal den Wert **Unknown zurück.** Beispielsweise gibt jeder der relationalen Vorgänge Unknown **zurück,** wenn das angegebene Attribut nicht vorhanden ist.
 
 In der folgenden Tabelle werden die Ergebnisse für einen logischen **AND-Vorgang** zwischen zwei bedingten Ausdrücken beschrieben: *ConditionalExpression1* und *ConditionalExpression2.*
 
@@ -240,7 +240,7 @@ D:(XA; ; FX;;; S-1-1-0; ( @User.Project Any \_ of @Resource.Project ))
 <span id="Policy"></span><span id="policy"></span><span id="POLICY"></span>Politik
 </dt> <dd>
 
-Lesezugriff zulassen, wenn sich der Benutzer mit einer Smartcard angemeldet hat, ein Sicherungsoperator ist und von einem Computer aus eine Verbindung mit aktivierter BitLocker-Funktion herstellen kann.
+Lesezugriff zulassen, wenn sich der Benutzer mit einer Smartcard angemeldet hat, ein Sicherungsoperator ist und von einem Computer aus eine Verbindung mit aktivierter BitLocker-Verbindung stellt.
 
 </dd> <dt>
 

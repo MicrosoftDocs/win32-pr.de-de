@@ -106,7 +106,7 @@ ms.locfileid: "117780943"
 ---
 # <a name="microsoftinteropsecurityazrolesiazroleassignment-interface"></a>Microsoft.Interop.Security.AzRoles.IAzRoleAssignment-Schnittstelle
 
-Die Interoperabilit√§ts-Wrappermethoden und -eigenschaften **von Microsoft.Interop.Security.Azroles.IAzRoleAssignmentAssignment** sind in der COM-Version der Methode oder Eigenschaft dokumentiert. Auf jeden Membernamen folgt ein Link zur korrelierenden COM-Dokumentation.
+Die Interoperabilit√§ts-Wrappermethoden und -eigenschaften **von Microsoft.Interop.Security.Azroles.IAzRoleAssignmentAssignment** sind unter der COM-Version der Methode oder Eigenschaft dokumentiert. Auf jeden Membernamen folgt ein Link zur korrelierenden COM-Dokumentation.
 
 ## <a name="members"></a>Member
 
@@ -121,7 +121,7 @@ Die **Schnittstelle Microsoft.Interop.Security.AzRoles.IAzRoleAssignment** verf√
 
 
 
-| Methode                                                                        | BESCHREIBUNG                                                                                          |
+| Methode                                                                        | Beschreibung                                                                                          |
 |:------------------------------------------------------------------------------|:-----------------------------------------------------------------------------------------------------|
 | **Microsoft.Interop.Security.Azroles.IAzRoleAssignment.AddAppMember**         | [**IAzRole::AddAppMember**](/windows/desktop/api/Azroles/nf-azroles-iazrole-addappmember)<br/>                                     |
 | **Microsoft.Interop.Security.Azroles.IAzRoleAssignment.AddMember**            | [**IAzRole::AddMember**](/windows/desktop/api/Azroles/nf-azroles-iazrole-addmember)<br/>                                           |
@@ -151,7 +151,7 @@ Die **Schnittstelle Microsoft.Interop.Security.AzRoles.IAzRoleAssignment** verf√
 
 
 
-| Eigenschaft                                                                                      | Zugriffstyp           | BESCHREIBUNG                                                                                           |
+| Eigenschaft                                                                                      | Zugriffstyp           | Beschreibung                                                                                           |
 |:----------------------------------------------------------------------------------------------|:----------------------|:------------------------------------------------------------------------------------------------------|
 | **Microsoft.Interop.Security.Azroles.IAzRoleAssignmentAssignment.ApplicationData**<br/> | Lesen/Schreiben<br/> | [**ApplicationData-Eigenschaft von IAzRole**](/windows/desktop/api/Azroles/nf-azroles-iazrole-get_applicationdata)<br/>                     |
 | **Microsoft.Interop.Security.Azroles.IAzRoleAssignmentAssignment.AppMembers**<br/>      | Schreibgesch√ºtzt<br/>  | [**AppMembers-Eigenschaft von IAzRole**](/windows/desktop/api/Azroles/nf-azroles-iazrole-get_appmembers)<br/>                               |

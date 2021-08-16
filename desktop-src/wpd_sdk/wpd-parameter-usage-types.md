@@ -1,7 +1,7 @@
 ---
-description: Der \_ Enumerationstyp der WPD-Parameter \_ Verwendungs \_ Typen beschreibt, wie ein Methoden Parameter in einer bestimmten Methode verwendet wird.
+description: Der WPD \_ PARAMETER \_ USAGE \_ TYPES-Enumerationstyp beschreibt, wie ein Methodenparameter in einer bestimmten Methode verwendet wird.
 ms.assetid: 60cbb4fa-c5fd-4402-bfd4-8fd95c009a33
-title: WPD_PARAMETER_USAGE_TYPES-Enumeration (portabledevice. h)
+title: WPD_PARAMETER_USAGE_TYPES -Enumeration (PortableDevice.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,16 +13,16 @@ api_type:
 - HeaderDef
 api_location:
 - PortableDevice.h
-ms.openlocfilehash: 72d4ebffccc3d1bc7d446848c29ebbc60539430e
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 8ece49d1b961ce6ce5c14241d14bf69480e1eb79028f57a2cb959f5d7c4b79dc
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106367642"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117842067"
 ---
-# <a name="wpd_parameter_usage_types-enumeration"></a>WPD- \_ Parameter \_ Verwendungs Typen- \_ Enumeration
+# <a name="wpd_parameter_usage_types-enumeration"></a>WPD \_ PARAMETER \_ USAGE \_ TYPES-Enumeration
 
-Der Enumerationstyp der [**WPD- \_ Parameter \_ Verwendungs \_ Typen**](/windows/desktop/wpd_sdk/wpd-parameter-usage-types) beschreibt, wie ein Methoden Parameter in einer bestimmten Methode verwendet wird.
+Der [**WPD \_ PARAMETER USAGE \_ TYPES-Enumerationstyp \_**](/windows/desktop/wpd_sdk/wpd-parameter-usage-types) beschreibt, wie ein Methodenparameter in einer bestimmten Methode verwendet wird.
 
 ## <a name="syntax"></a>Syntax
 
@@ -42,31 +42,31 @@ typedef enum tagWPD_PARAMETER_USAGE_TYPES {
 
 <dl> <dt>
 
-<span id="WPD_PARAMETER_USAGE_RETURN"></span><span id="wpd_parameter_usage_return"></span>**Verwendungs Rückgabe von WPD- \_ Parametern \_ \_**
+<span id="WPD_PARAMETER_USAGE_RETURN"></span><span id="wpd_parameter_usage_return"></span>**\_ \_ WPD-PARAMETERVERWENDUNGS-RÜCKGABE \_**
 </dt> <dd>
 
-Der-Parameter empfängt den Rückgabewert, wenn er von der-Methode angegeben wird.
+Der -Parameter empfängt den Rückgabewert, wenn er von der -Methode angegeben wird.
 
 </dd> <dt>
 
-<span id="WPD_PARAMETER_USAGE_IN"></span><span id="wpd_parameter_usage_in"></span>**Verwendung von WPD- \_ Parametern \_ \_ in**
+<span id="WPD_PARAMETER_USAGE_IN"></span><span id="wpd_parameter_usage_in"></span>**\_WPD-PARAMETERVERWENDUNG \_ \_ IN**
 </dt> <dd>
 
-Der-Parameter enthält einen Eingabe Wert, bevor die-Methode aufgerufen wird.
+Der -Parameter enthält einen Eingabewert, bevor die -Methode aufgerufen wird.
 
 </dd> <dt>
 
-<span id="WPD_PARAMETER_USAGE_OUT"></span><span id="wpd_parameter_usage_out"></span>**Verwendung von WPD- \_ Parametern \_ \_**
+<span id="WPD_PARAMETER_USAGE_OUT"></span><span id="wpd_parameter_usage_out"></span>**\_WPD-PARAMETERVERWENDUNG \_ \_ OUT**
 </dt> <dd>
 
-Der-Parameter enthält einen Ausgabewert, wenn die-Methode zurückgibt.
+Der -Parameter enthält einen Ausgabewert, wenn die Methode zurückgegeben wird.
 
 </dd> <dt>
 
-<span id="WPD_PARAMETER_USAGE_INOUT"></span><span id="wpd_parameter_usage_inout"></span>**\_ \_ INOUT-Verwendung \_ von WPD-Parametern**
+<span id="WPD_PARAMETER_USAGE_INOUT"></span><span id="wpd_parameter_usage_inout"></span>**\_WPD-PARAMETERVERWENDUNG \_ \_ INOUT**
 </dt> <dd>
 
-Der-Parameter enthält einen Eingabe Wert, bevor die-Methode aufgerufen wird, und einen Ausgabewert, wenn Sie zurückgibt.
+Der -Parameter enthält einen Eingabewert, bevor die Methode aufgerufen wird, und einen Ausgabewert, wenn sie zurückgegeben wird.
 
 </dd> </dl>
 
@@ -76,7 +76,7 @@ Der-Parameter enthält einen Eingabe Wert, bevor die-Methode aufgerufen wird, un
 
 | Anforderung | Wert |
 |-------------------|---------------------------------------------------------------------------------------------|
-| Header<br/> | <dl> <dt>Portabledevice. h</dt> </dl> |
+| Header<br/> | <dl> <dt>PortableDevice.h</dt> </dl> |
 
 
 

@@ -4,7 +4,7 @@ description: Die WMDRMNET POLICY TRANSCRYPTPLAY-Struktur enthält die Richtlinie
 ms.assetid: 95671c58-a593-40bb-856e-28ad1cba340e
 keywords:
 - WMDRMNET_POLICY_TRANSCRYPTPLAY struktur windows media format
-- Strukturfenster-Medienformat
+- Strukturfenster Medienformat
 topic_type:
 - apiref
 api_name:

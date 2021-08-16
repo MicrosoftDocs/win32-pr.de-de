@@ -1,6 +1,6 @@
 ---
 description: Legt das aktuelle Kontingentlimit des Benutzers fest oder ruft es ab.
-title: DIDiskQuotaUser.QuotaLimit-Eigenschaft
+title: DIDiskQuotaUser.QuotaLimit (Eigenschaft)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -20,9 +20,9 @@ ms.contentlocale: de-DE
 ms.lasthandoff: 08/11/2021
 ms.locfileid: "118224730"
 ---
-# <a name="didiskquotauserquotalimit-property"></a>DIDiskQuotaUser.QuotaLimit-Eigenschaft
+# <a name="didiskquotauserquotalimit-property"></a>DIDiskQuotaUser.QuotaLimit (Eigenschaft)
 
-Legt das aktuelle [**Kontingentlimit**](diskquotacontrol-object.md)des Benutzers fest oder ruft es ab.
+Legt die aktuelle Kontingentgrenze des Benutzers fest oder [**ruft sie ab.**](diskquotacontrol-object.md)
 
 Dies ist eine Eigenschaft mit Lese- und Schreibzugriff.
 
@@ -38,7 +38,7 @@ DIDiskQuotaUser.QuotaLimit = iQuotaLimit
 
 ## <a name="property-value"></a>Eigenschaftswert
 
-Ein **Ganzzahlwert,** der das aktuelle Kontingentlimit des Benutzers in Bytes angibt oder empfängt.
+Ein **Ganzzahlwert,** der die aktuelle Kontingentgrenze des Benutzers in Bytes angibt oder empfängt.
 
 ## <a name="requirements"></a>Anforderungen
 

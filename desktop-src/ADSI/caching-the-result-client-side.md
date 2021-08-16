@@ -1,34 +1,34 @@
 ---
-title: Zwischenspeichern des Ergebnisses (Client seitig)
-description: Das Client seitige Zwischenspeichern speichert das Resultset im Client Speicher und bietet Leistungsverbesserungen für die Clientseite.
+title: Zwischenspeichern des Ergebnisses (clientseitig)
+description: Bei der clientseitigen Zwischenspeicherung wird das Ergebnis im Clientspeicher gespeichert, was zu Leistungsverbesserungen für die Clientseite führt.
 ms.assetid: 6e61b2f6-dd58-466e-9cef-5bc6301e983f
 ms.tgt_platform: multiple
 keywords:
-- Zwischenspeichern des Ergebnisses (Client seitig) ADSI
+- Zwischenspeichern des Ergebnisses (clientseitiges) ADSI
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: cb965da1da0c791db215dd7eee925a7c9f67ccf8
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: 7c2394c4f9e3213261bc52e15ada6fa9416703706fedeccaf144493821133e1c
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "103947355"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117840500"
 ---
-# <a name="caching-the-result-client-side"></a>Zwischenspeichern des Ergebnisses (Client seitig)
+# <a name="caching-the-result-client-side"></a>Zwischenspeichern des Ergebnisses (clientseitig)
 
-Das Client seitige Zwischenspeichern speichert das Resultset im Client Speicher und bietet Leistungsverbesserungen für die Clientseite. Ein Client kann ein Objekt wiederholt ohne mehrere Fahrten zum Server erneut überprüfen. Standardmäßig speichert ADSI das Resultset für die Clients zwischen. Dadurch kann ADSI Clients die SQL-ähnliche Cursor Unterstützung bereitstellen. Sie können ein bestimmtes Resultset mehrmals durchlaufen.
+Bei der clientseitigen Zwischenspeicherung wird das Ergebnis im Clientspeicher gespeichert, was zu Leistungsverbesserungen für die Clientseite führt. Ein Client kann ein Objekt wiederholt ohne mehrere Fahrten zum Server erneut besuchen. Standardmäßig speichert ADSI das Ergebnisset für die Clients zwischen. Dies ermöglicht ADSI, Clients eine SQL Cursorunterstützung zu bieten. Sie können ein bestimmtes Ergebnisset mehrmals durch iterieren.
 
-Mit ADSI können Clients den Cache auch deaktivieren, um die Arbeitsspeicher Anforderungen zu reduzieren. Wenn das Client seitige Zwischenspeichern deaktiviert ist, behält der Client das Resultset nicht im Arbeitsspeicher. Jede Zeile wird freigegeben, nachdem Sie von der Anwendung abgerufen wurde. Die Deaktivierung der Client seitigen Zwischenspeicherung kann nützlich sein, um die Client seitigen Speicheranforderungen in Fällen zu verringern, in denen Sie nur einen einzigen Durchlauf durch das Resultset durchführen möchten. Wenn Clients das Ergebnis jedoch nicht zwischenspeichern, erhalten Sie Cursor Unterstützung.
+ADSI ermöglicht Es Clients auch, den Cache zu deaktivieren, um den Arbeitsspeicherbedarf zu reduzieren. Wenn die clientseitige Zwischenspeicherung deaktiviert ist, verwaltet der Client das ResultSet nicht im Arbeitsspeicher. Jede Zeile wird nach dem Abrufen durch die Anwendung wieder frei. Das Deaktivieren der clientseitigen Zwischenspeicherung kann nützlich sein, um die clientseitigen Speicheranforderungen in Solchen Fällen zu verringern, in denen Sie nur einen einzelnen Pass durch das Resultset machen möchten. Wenn Clients das Ergebnis jedoch nicht zwischenspeichern, geben sie die Cursorunterstützung auf.
 
 Weitere Informationen zum Zwischenspeichern von Ergebnissen mit einer bestimmten Suchschnittstelle finden Sie unter:
 
--   [Ergebnis Zwischenspeicherung mit idirector ysearch](result-caching-with-idirectorysearch.md)
--   [Suchen mit ActiveX Data Objects](searching-with-activex-data-objects-ado.md)
+-   [Zwischenspeichern von Ergebnis mit IDirectorySearch](result-caching-with-idirectorysearch.md)
+-   [Suchen mit ActiveX Datenobjekten](searching-with-activex-data-objects-ado.md)
 -   [Suchen mit OLE DB](searching-with-ole-db.md)
 
- 
+ 
 
- 
+ 
 
 
 

@@ -25,7 +25,7 @@ ms.locfileid: "118312499"
 ---
 # <a name="swbemservicesreferencesto-method"></a>SWbemServices.ReferencesTo-Methode
 
-Die **ReferencesTo-Methode** des [**SWbemServices-Objekts**](swbemservices.md) gibt eine Auflistung aller Zuordnungsklassen oder -instanzen zurück, die auf eine bestimmte Quellklasse oder -instanz verweisen. Diese Methode führt die gleiche Funktion wie die [REFERENCES OF](references-of-statement.md) WQL-Abfrage aus.
+Die **ReferencesTo-Methode** des [**SWbemServices-Objekts**](swbemservices.md) gibt eine Auflistung aller Zuordnungsklassen oder -instanzen zurück, die auf eine bestimmte Quellklasse oder Instanz verweisen. Diese Methode führt dieselbe Funktion aus wie die [REFERENCES OF](references-of-statement.md) WQL-Abfrage.
 
 Diese Methode wird im semisynchronen Modus aufgerufen. Weitere Informationen finden Sie unter [Aufrufen einer Methode.](calling-a-method.md)
 
@@ -56,49 +56,49 @@ objWbemObjectSet = .ReferencesTo( _
 *strObjectPath* 
 </dt> <dd>
 
-Erforderlich. Zeichenfolge, die den Objektpfad der Quelle für diese Methode enthält. Weitere Informationen finden Sie unter [Beschreiben des Speicherorts eines WMI-Objekts.](describing-the-location-of-a-wmi-object.md)
+Erforderlich. Eine Zeichenfolge, die den Objektpfad der Quelle für diese Methode enthält. Weitere Informationen finden Sie unter [Beschreiben des Speicherorts eines WMI-Objekts.](describing-the-location-of-a-wmi-object.md)
 
 </dd> <dt>
 
 *strResultClass* \[ Optional\]
 </dt> <dd>
 
-Zeichenfolge, die einen Klassennamen enthält. Wenn angegeben, gibt dieser Parameter an, dass die zurückgegebenen Zuordnungsobjekte zu der in diesem Parameter angegebenen Klasse gehören oder von dieser abgeleitet werden müssen.
+Eine Zeichenfolge, die einen Klassennamen enthält. Wenn angegeben, gibt dieser Parameter an, dass die zurückgegebenen Zuordnungsobjekte zu der in diesem Parameter angegebenen Klasse gehören oder von dieser abgeleitet werden müssen.
 
 </dd> <dt>
 
 *strRole* \[ Optional\]
 </dt> <dd>
 
-Zeichenfolge, die einen Eigenschaftennamen enthält. Wenn angegeben, gibt dieser Parameter an, dass die zurückgegebenen Zuordnungsobjekte auf die Objekte beschränkt werden müssen, in denen das Quellobjekt eine bestimmte Rolle spielt. Die Rolle wird durch den Namen einer angegebenen Eigenschaft (die eine Verweiseigenschaft sein muss) einer Zuordnung definiert.
+Eine Zeichenfolge, die einen Eigenschaftennamen enthält. Wenn angegeben, gibt dieser Parameter an, dass die zurückgegebenen Zuordnungsobjekte auf diejenigen beschränkt werden müssen, in denen das Quellobjekt eine bestimmte Rolle spielt. Die Rolle wird durch den Namen einer angegebenen Eigenschaft (die eine Verweiseigenschaft sein muss) einer Zuordnung definiert.
 
 </dd> <dt>
 
 *bClassesOnly* \[ Optional\]
 </dt> <dd>
 
-Ein boolescher Wert, der angibt, ob eine Liste von Klassennamen anstelle von tatsächlichen Instanzen der Klassen zurückgegeben werden soll. Dies sind die Klassen, zu denen die Zuordnungsobjekte gehören. Der Standardwert für diesen Parameter ist **FALSE.**
+Ein boolescher Wert, der angibt, ob anstelle der tatsächlichen Instanzen der Klassen eine Liste von Klassennamen zurückgegeben werden soll. Dies sind die Klassen, zu denen die Zuordnungsobjekte gehören. Der Standardwert für diesen Parameter ist **FALSE.**
 
 </dd> <dt>
 
 *bSchemaOnly* \[ Optional\]
 </dt> <dd>
 
-Boolescher Wert, der angibt, ob die Abfrage auf das Schema und nicht auf die Daten angewendet wird. Der Standardwert für diesen Parameter ist **FALSE.** Sie kann nur auf **TRUE** festgelegt werden, wenn der *strObjectPath-Parameter* den Objektpfad einer Klasse angibt. Bei Festlegung auf **TRUE** stellt der Satz zurückgegebener Endpunkte Klassen dar, die der Quellklasse im Schema entsprechend zugeordnet sind.
+Ein boolescher Wert, der angibt, ob die Abfrage auf das Schema und nicht auf die Daten angewendet wird. Der Standardwert für diesen Parameter ist **FALSE.** Sie kann nur auf **TRUE festgelegt werden,** wenn der *parameter strObjectPath* den Objektpfad einer Klasse angibt. Bei True **stellt der** Satz zurückgegebener Endpunkte Klassen dar, die der Quellklasse im Schema entsprechend zugeordnet sind.
 
 </dd> <dt>
 
 *strRequiredQualifier* \[ Optional\]
 </dt> <dd>
 
-Zeichenfolge, die einen Qualifizierernamen enthält. Wenn angegeben, gibt dieser Parameter an, dass die zurückgegebenen Zuordnungsobjekte den angegebenen Qualifizierer enthalten müssen.
+Eine Zeichenfolge, die einen Qualifizierernamen enthält. Wenn angegeben, gibt dieser Parameter an, dass die zurückgegebenen Zuordnungsobjekte den angegebenen Qualifizierer enthalten müssen.
 
 </dd> <dt>
 
 *iFlags* \[ Optional\]
 </dt> <dd>
 
-Ganze Zahl, die zusätzliche Flags für den Vorgang angibt. Der Standardwert für diesen Parameter ist **wbemFlagReturnImmediately,** der den Aufruf anleitet, sofort zurückzukehren, anstatt zu warten, bis die Abfrage abgeschlossen ist. Dieser Parameter kann die folgenden Werte akzeptieren.
+Eine ganze Zahl, die zusätzliche Flags für den Vorgang angibt. Der Standardwert für diesen Parameter ist **wbemFlagReturnImmediately.** Dadurch wird der Aufruf sofort zurückgegeben, anstatt zu warten, bis die Abfrage abgeschlossen ist. Dieser Parameter kann die folgenden Werte akzeptieren.
 
 <dt>
 
@@ -109,7 +109,7 @@ Ganze Zahl, die zusätzliche Flags für den Vorgang angibt. Der Standardwert fü
 
 </dt> <dd>
 
-Bewirkt, dass ein vorwärts gerichteter Enumerator zurückgegeben wird. Vorwärts-Enumeratoren sind im Allgemeinen viel schneller und verwenden weniger Arbeitsspeicher als herkömmliche Enumeratoren, lassen jedoch keine Aufrufe von [**SWbemObject.Clone \_**](swbemobject-clone-.md)zu.
+Bewirkt, dass ein vorwärts enumerator zurückgegeben wird. Vorwärts-Enumeratoren sind im Allgemeinen viel schneller und verwenden weniger Arbeitsspeicher als herkömmliche Enumeratoren, aber sie lassen keine Aufrufe von [**SWbemObject.Clone zu. \_**](swbemobject-clone-.md)
 
 </dd> <dt>
 
@@ -120,24 +120,24 @@ Bewirkt, dass ein vorwärts gerichteter Enumerator zurückgegeben wird. Vorwärt
 
 </dt> <dd>
 
-Bewirkt, dass Windows Management Instrumentation (WMI) Zeiger auf Objekte der Enumeration beibehält, bis der Client den Enumerator freigibt.
+Bewirkt Windows dass die Verwaltungsinstrumentation (WMI) Zeiger auf Objekte der Enumeration beibehalten, bis der Client den Enumerator frei gibt.
 
 </dd> <dt>
 
 <span id="wbemFlagReturnImmediately"></span><span id="wbemflagreturnimmediately"></span><span id="WBEMFLAGRETURNIMMEDIATELY"></span>
 
-<span id="wbemFlagReturnImmediately"></span><span id="wbemflagreturnimmediately"></span><span id="WBEMFLAGRETURNIMMEDIATELY"></span>wbemFlagReturnImmediately** (16 (0x10))
+<span id="wbemFlagReturnImmediately"></span><span id="wbemflagreturnimmediately"></span><span id="WBEMFLAGRETURNIMMEDIATELY"></span>wbemFlagReturnImmediately( (16 (0x10))
 
 
 </dt> <dd>
 
-Bewirkt, dass der Aufruf sofort zurückgegeben wird.
+Bewirkt, dass der Aufruf sofort zurückkehrt.
 
 </dd> <dt>
 
 <span id="wbemFlagReturnWhenComplete"></span><span id="wbemflagreturnwhencomplete"></span><span id="WBEMFLAGRETURNWHENCOMPLETE"></span>
 
-<span id="wbemFlagReturnWhenComplete"></span><span id="wbemflagreturnwhencomplete"></span><span id="WBEMFLAGRETURNWHENCOMPLETE"></span>wbemFlagReturnWhenComplete( (0 (0x0))
+<span id="wbemFlagReturnWhenComplete"></span><span id="wbemflagreturnwhencomplete"></span><span id="WBEMFLAGRETURNWHENCOMPLETE"></span>wbemFlagReturnWhenComplete** (0 (0x0))
 
 
 </dt> <dd>
@@ -148,19 +148,19 @@ Bewirkt, dass dieser Aufruf blockiert wird, bis die Abfrage abgeschlossen ist. D
 
 <span id="wbemFlagUseAmendedQualifiers"></span><span id="wbemflaguseamendedqualifiers"></span><span id="WBEMFLAGUSEAMENDEDQUALIFIERS"></span>
 
-<span id="wbemFlagUseAmendedQualifiers"></span><span id="wbemflaguseamendedqualifiers"></span><span id="WBEMFLAGUSEAMENDEDQUALIFIERS"></span>wbemFlagUseAmendedQualifiers( (131072 (0x20000))
+<span id="wbemFlagUseAmendedQualifiers"></span><span id="wbemflaguseamendedqualifiers"></span><span id="WBEMFLAGUSEAMENDEDQUALIFIERS"></span>wbemFlagUseAmendedQualifiers** (131072 (0x20000))
 
 
 </dt> <dd>
 
-Bewirkt, dass WMI Klassenänderungsdaten zusammen mit der Basisklassendefinition zurückgibt. Weitere Informationen finden Sie unter [Lokalisieren von WMI-Klasseninformationen.](localizing-wmi-class-information.md)
+Bewirkt, dass WMI Klassenänderungsdaten zusammen mit der Basisklassendefinition zurück gibt. Weitere Informationen finden Sie unter [Lokalisieren von WMI-Klasseninformationen.](localizing-wmi-class-information.md)
 
 </dd> </dl> </dd> <dt>
 
 *objWbemNamedValueSet* \[ Optional\]
 </dt> <dd>
 
-In der Regel ist dies nicht definiert. Andernfalls ist dies ein [**SWbemNamedValueSet-Objekt,**](swbemnamedvalueset.md) dessen Elemente die Kontextinformationen darstellen, die vom Anbieter verwendet werden können, der die Anforderung wartet. Ein Anbieter, der solche Informationen unterstützt oder erfordert, muss die erkannten Wertnamen, den Datentyp des Werts, die zulässigen Werte und die Semantik dokumentieren.
+In der Regel ist dies nicht definiert. Andernfalls ist dies ein [**SWbemNamedValueSet-Objekt,**](swbemnamedvalueset.md) dessen Elemente die Kontextinformationen darstellen, die vom Anbieter verwendet werden können, der die Anforderung bedient. Ein Anbieter, der solche Informationen unterstützt oder erfordert, muss die erkannten Wertnamen, den Datentyp des Werts, die zulässigen Werte und die Semantik dokumentieren.
 
 </dd> </dl>
 
@@ -182,7 +182,7 @@ Nach Abschluss der **ReferencesTo-Methode** kann das **Err-Objekt** einen der Fe
 **wbemErrAccessDenied** – 2147749891 (0x80041003)
 </dt> <dd>
 
-Der aktuelle Benutzer verfügt nicht über die Berechtigung, eine oder mehrere der vom Aufruf zurückgegebenen Klassen anzuzeigen.
+Der aktuelle Benutzer verfügt nicht über die Berechtigung, eine oder mehrere der vom Aufruf zurückgegebenen Klassen anzeigen zu können.
 
 </dd> <dt>
 
@@ -196,27 +196,27 @@ Unbekannter Fehler.
 **wbemErrInvalidParameter** – 2147749896 (0x80041008)
 </dt> <dd>
 
-Es wurde ein ungültiger Parameter angegeben.
+Ungültiger Parameter wurde angegeben.
 
 </dd> <dt>
 
-**wbemErrOutOfMemory** – 2147749894 (0x80041006)
+**wbemErrOutOfMemory** : 2147749894 (0x80041006)
 </dt> <dd>
 
-Nicht genügend Arbeitsspeicher, um den Vorgang abzuschließen.
+Nicht genügend Arbeitsspeicher zum Abschließen des Vorgangs.
 
 </dd> <dt>
 
 **wbemFlagUseAmendedQualifiers** – 131072 (0x20000)
 </dt> <dd>
 
-Bewirkt, dass WMI Klassenänderungsdaten mit der Basisklassendefinition zurückgibt.
+Bewirkt, dass WMI Klassenänderungsdaten mit der Basisklassendefinition zurück gibt.
 
 </dd> </dl>
 
 ## <a name="remarks"></a>Hinweise
 
-Weitere Informationen zu den REFERENCES OF zugeordneten WQL-Abfragen, Quellinstanzen und Zuordnungsobjekten finden Sie unter [ASSOCIATORS OF-Anweisung.](associators-of-statement.md)
+Weitere Informationen zu den REFERENCES OF zugeordneten WQL-Abfragen, Quellinstanzen und Zuordnungsobjekten finden Sie unter [ASSOCIATORS OF Statement](associators-of-statement.md).
 
 ## <a name="requirements"></a>Anforderungen
 

@@ -1,7 +1,7 @@
 ---
 description: Ruft den Warnungsschwellenwert des Benutzers als Textzeichenfolge ab.
 ms.assetid: 55b53ad0-e7cd-4417-9087-297ac96e245f
-title: DIDiskQuotaUser.QuotaThresholdText-Eigenschaft
+title: DIDiskQuotaUser.QuotaThresholdText (Eigenschaft)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -20,7 +20,7 @@ ms.contentlocale: de-DE
 ms.lasthandoff: 08/11/2021
 ms.locfileid: "118224675"
 ---
-# <a name="didiskquotauserquotathresholdtext-property"></a>DIDiskQuotaUser.QuotaThresholdText-Eigenschaft
+# <a name="didiskquotauserquotathresholdtext-property"></a>DIDiskQuotaUser.QuotaThresholdText (Eigenschaft)
 
 Ruft den Warnungsschwellenwert des Benutzers als Textzeichenfolge ab.
 
@@ -37,7 +37,7 @@ QuotaThresholdText = DIDiskQuotaUser.QuotaThresholdText
 
 ## <a name="property-value"></a>Eigenschaftswert
 
-Der Zeichenfolgenwert, der den Warnungsschwellenwert des Benutzers enthält. Wenn die Datenträgerverwendung eines Benutzers diesen Wert überschreitet und die [**LogQuotaThreshold-Eigenschaft**](diskquotacontrol-logquotathreshold.md) auf **TRUE** festgelegt ist, generiert das System einen Ereignisprotokolleintrag.
+Der Zeichenfolgenwert, der den Warnungsschwellenwert des Benutzers enthält. Wenn die Datenträgerauslastung eines Benutzers diesen Wert überschreitet und die [**LogQuotaThreshold-Eigenschaft**](diskquotacontrol-logquotathreshold.md) auf **TRUE** festgelegt ist, generiert das System einen Ereignisprotokolleintrag.
 
 ## <a name="requirements"></a>Anforderungen
 

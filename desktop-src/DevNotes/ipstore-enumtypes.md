@@ -1,7 +1,7 @@
 ---
-description: Gibt eine Schnittstelle zum Auflisten von Typen zurück, die derzeit in der geschützten Datenbank registriert sind.
+description: Gibt eine Schnittstelle zum Aufzählen von Typen zurück, die derzeit in der geschützten Datenbank registriert sind.
 ms.assetid: 0c0c2ad7-90b0-4fc0-8972-82eb159653be
-title: 'Ipstore:: enumtypes-Methode (pstore. h)'
+title: IPStore::EnumTypes-Methode (Pstore.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,18 +13,18 @@ api_type:
 - COM
 api_location:
 - Pstorec.dll
-ms.openlocfilehash: 73166a9fc1d76ae9f67528636eda567b9fa190a2
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: c44429b4145158bc54e52d700546a29caf3e9665d38e51679e596adbdec6c3b6
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106367426"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117827113"
 ---
-# <a name="ipstoreenumtypes-method"></a>Ipstore:: enumtypes-Methode
+# <a name="ipstoreenumtypes-method"></a>IPStore::EnumTypes-Methode
 
-\[Geschützter Speicher (pstore) ist für die Verwendung in Windows Server 2003 und Windows XP verfügbar. Sie steht nur für schreibgeschützte Vorgänge in Windows Server 2008 und Windows Vista zur Verfügung, ist aber möglicherweise in nachfolgenden Versionen nicht verfügbar. Pstore verwendet eine ältere Implementierung des Schutzes von Daten. Entwicklern wird dringend empfohlen, den stärkeren Datenschutz zu nutzen, der von den Funktionen [**CryptProtectData**](/windows/win32/api/dpapi/nf-dpapi-cryptprotectdata) und [**CryptUnprotectData**](/windows/win32/api/dpapi/nf-dpapi-cryptunprotectdata) bereitgestellt wird.\]
+\[Protected Storage (Pstore) ist für die Verwendung in Windows Server 2003 und Windows XP verfügbar. Sie ist nur für schreibgeschützte Vorgänge in Windows Server 2008 und Windows Vista verfügbar, ist in nachfolgenden Versionen jedoch möglicherweise nicht verfügbar. Pstore verwendet eine ältere Implementierung des Datenschutzes. Entwicklern wird dringend empfohlen, den verstärkten Datenschutz zu nutzen, der von den Funktionen [**CryptProtectData**](/windows/win32/api/dpapi/nf-dpapi-cryptprotectdata) und [**CryptUnprotectData**](/windows/win32/api/dpapi/nf-dpapi-cryptunprotectdata) bereitgestellt wird.\]
 
-Gibt eine Schnittstelle zum Auflisten von Typen zurück, die derzeit in der geschützten Datenbank registriert sind.
+Gibt eine Schnittstelle zum Aufzählen von Typen zurück, die derzeit in der geschützten Datenbank registriert sind.
 
 ## <a name="syntax"></a>Syntax
 
@@ -43,17 +43,17 @@ HRESULT EnumTypes(
 
 <dl> <dt>
 
-*Schlüssel* \[ in\]
+*Schlüssel* \[ In\]
 </dt> <dd>
 
-Gibt an, ob der Typ auf dem Computer lokal ist oder nur dem erstellerstellerbenutzer zugeordnet ist.
+Gibt an, ob der Typ lokal auf dem Computer ist oder nur dem erstellenden Benutzer zugeordnet ist.
 
 
 
 | Wert                                                                                                                                                                                                                                                   | Bedeutung                                                                            |
 |---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------|
-| <span id="PST_KEY_CURRENT_USER"></span><span id="pst_key_current_user"></span><dl> <dt>**PST \_ Schlüssel \_ aktueller \_ Benutzer**</dt> <dt>0x00000000</dt> </dl>    | Der Speicher wird im Abschnitt Aktueller Benutzer der Registrierung verwaltet.<br/>  |
-| <span id="PST_KEY_LOCAL_MACHINE"></span><span id="pst_key_local_machine"></span><dl> <dt>**PST \_ Key \_ local \_ Machine**</dt> <dt>0x00000001</dt> </dl> | Der Speicher wird im Abschnitt lokaler Computer der Registrierung verwaltet.<br/> |
+| <span id="PST_KEY_CURRENT_USER"></span><span id="pst_key_current_user"></span><dl> <dt>**PST \_ KEY \_ CURRENT \_ USER**</dt> <dt>0x00000000</dt> </dl>    | Der Speicher wird im aktuellen Benutzerabschnitt der Registrierung verwaltet.<br/>  |
+| <span id="PST_KEY_LOCAL_MACHINE"></span><span id="pst_key_local_machine"></span><dl> <dt>**PST \_ KEY \_ LOCAL \_ MACHINE**</dt> <dt>0x00000001</dt> </dl> | Der Speicher wird im Abschnitt lokaler Computer der Registrierung verwaltet.<br/> |
 
 
 
@@ -61,23 +61,23 @@ Gibt an, ob der Typ auf dem Computer lokal ist oder nur dem erstellerstellerbenu
 
 </dd> <dt>
 
-*dwFlags* \[ in\]
+*dwFlags* \[ In\]
 </dt> <dd>
 
-Reserviert: muss auf 0 (null) festgelegt werden.
+Reserviert: Muss auf 0 (null) festgelegt werden.
 
 </dd> <dt>
 
-*ppum* \[ in\]
+*ppenum* \[ In\]
 </dt> <dd>
 
-Ein Zeiger auf eine [**ierumpstoretypes**](ienumpstoretypes.md) -Schnittstelle, die verwendet wird, um die enumerationsaufgaben auszuführen.
+Ein Zeiger auf eine [**IEnumPStoreTypes-Schnittstelle,**](ienumpstoretypes.md) die zum Ausführen der Enumerationsaufgaben verwendet wird.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Der Rückgabewert ist ein **HRESULT** -Wert. Der Wert **PST \_ E \_ OK** gibt an, dass die Funktion erfolgreich war.
+Der Rückgabewert ist ein **HRESULT-Wert.** Der Wert **PST \_ E \_ OK** gibt an, dass die Funktion erfolgreich war.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -85,16 +85,16 @@ Der Rückgabewert ist ein **HRESULT** -Wert. Der Wert **PST \_ E \_ OK** gibt an
 
 | Anforderung | Wert |
 |-------------------|----------------------------------------------------------------------------------------|
-| Header<br/> | <dl> <dt>Pstore. h</dt> </dl>    |
+| Header<br/> | <dl> <dt>Pstore.h</dt> </dl>    |
 | DLL<br/>    | <dl> <dt>Pstorec.dll</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Ipstore**](ipstore.md)
+[**IPStore**](ipstore.md)
 </dt> </dl>
 
  

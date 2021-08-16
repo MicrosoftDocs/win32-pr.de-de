@@ -1,27 +1,27 @@
 ---
-description: Wenn eine Anwendung eine Zugriffs Überprüfung durch Aufrufen der authzaccesscheck-Funktion durchführt, können die Ergebnisse dieser Zugriffs Überprüfung zwischengespeichert werden.
+description: Wenn eine Anwendung eine Zugriffsüberprüfung durch Aufrufen der Funktion "AuhzAccessCheck" ausführt, können die Ergebnisse dieser Zugriffsüberprüfung zwischengespeichert werden.
 ms.assetid: d79a5683-6c67-487f-b9a6-4e80da38b827
-title: Caching-Zugriffs Überprüfungen
+title: Zwischenspeichern von Zugriffsüberprüfungen
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 967e0a5398d93c1715d7d08e5c7c75695e4120ee
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 83659c35fb9334e55bd7dfcd2368275dc16eb0d4836b8d6fa69a6ed8d713d953
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "104350588"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117783555"
 ---
-# <a name="caching-access-checks"></a>Caching-Zugriffs Überprüfungen
+# <a name="caching-access-checks"></a>Zwischenspeichern von Zugriffsüberprüfungen
 
-Wenn eine Anwendung eine Zugriffs Überprüfung durch Aufrufen der [**authzaccesscheck**](/windows/desktop/api/Authz/nf-authz-authzaccesscheck) -Funktion durchführt, können die Ergebnisse dieser Zugriffs Überprüfung zwischengespeichert werden. Wenn der *pauthzhandle* -Parameter der [**authzaccesscheck**](/windows/desktop/api/Authz/nf-authz-authzaccesscheck) -Funktion nicht **null** ist, führt die Funktion eine separate Zugriffs Überprüfung durch, wobei die angeforderte [**Zugriffs \_ Maske**](access-mask.md) den **maximal \_ zulässigen** Wert hat, und speichert die Ergebnisse dieser Überprüfung zwischen. Ein Handle für die Ergebnisse dieser Überprüfung kann dann als *authzhandle* -Parameter an die [**authzcachedaccesscheck**](/windows/desktop/api/Authz/nf-authz-authzcachedaccesscheck) -Funktion übergeben werden. Dies ermöglicht eine schnellere Zugriffs Überprüfung für einen bestimmten Client und [*Sicherheits Deskriptoren*](/windows/desktop/SecGloss/s-gly).
+Wenn eine Anwendung eine Zugriffsüberprüfung durch Aufrufen der [**Funktion "PerformhzAccessCheck"**](/windows/desktop/api/Authz/nf-authz-authzaccesscheck) durchführt, können die Ergebnisse dieser Zugriffsüberprüfung zwischengespeichert werden. Wenn der *pAuthzHandle-Parameter* der [**Funktion "AuthhzAccessCheck"**](/windows/desktop/api/Authz/nf-authz-authzaccesscheck) nicht **NULL** ist, führt die Funktion eine separate Zugriffsüberprüfung mit der angeforderten [**ACCESS \_ MASK**](access-mask.md) von **MAXIMUM \_ ALLOWED** aus und speichert die Ergebnisse dieser Überprüfung zwischen. Ein Handle für die Ergebnisse dieser Überprüfung kann dann als *Parameter Vom Typ "KindhzHandle"* an die [**Funktion "SollhzCachedAccessCheck" übergeben**](/windows/desktop/api/Authz/nf-authz-authzcachedaccesscheck) werden. Dies ermöglicht eine schnellere Zugriffsüberprüfung für einen bestimmten Client und [*Sicherheitsdeskriptoren.*](/windows/desktop/SecGloss/s-gly)
 
-Nur der statische Teil einer Zugriffs Überprüfung kann zwischengespeichert werden. Alle Rückruf- [*Zugriffs Steuerungs Einträge*](/windows/desktop/SecGloss/a-gly) (ACEs) oder ACEs, die die **Prinzipal- \_ Self** -sid enthalten, müssen für jede Zugriffs Überprüfung ausgewertet werden.
+Nur der statische Teil einer Zugriffsüberprüfung kann zwischengespeichert werden. Alle [*Rückruf-Zugriffssteuerungseinträge*](/windows/desktop/SecGloss/a-gly) (ACEs) oder ACEs, die die **\_ PRINCIPAL-SELF-SID** enthalten, müssen für jede Zugriffsüberprüfung ausgewertet werden.
 
-Attribut Variablen müssen in Form eines Ausdrucks vorliegen, wenn Sie mit logischen Operatoren verwendet werden. Andernfalls werden Sie als UNKNOWN ausgewertet.
+Attributvariablen müssen in Form eines Ausdrucks sein, wenn sie mit logischen Operatoren verwendet werden. andernfalls werden sie als unbekannt ausgewertet.
 
 ## <a name="example"></a>Beispiel
 
-Im folgenden Beispiel wird der Zugriff auf ein zwischengespeichertes Ergebnis einer vorherigen Zugriffs Überprüfung überprüft. Die vorherige Zugriffs Überprüfung wurde im Beispiel für das [Überprüfen des Zugriffs mit der Authz-API](checking-access-with-authz-api.md)durchgeführt.
+Im folgenden Beispiel wird der Zugriff auf ein zwischengespeichertes Ergebnis einer vorherigen Zugriffsüberprüfung überprüft. Die vorherige Zugriffsüberprüfung wurde im Beispiel unter [Überprüfen des Zugriffs mit Authz API.](checking-access-with-authz-api.md)
 
 
 ```C++
@@ -134,16 +134,16 @@ BOOL CheckCachedAccess(AUTHZ_CLIENT_CONTEXT_HANDLE hClientContext)
 
 <dl> <dt>
 
-[Hinzufügen von SIDs zu einem Client Kontext](adding-sids-to-a-client-context.md)
+[Hinzufügen von SIDs zu einem Clientkontext](adding-sids-to-a-client-context.md)
 </dt> <dt>
 
-[Überprüfen des Zugriffs mit der Authz-API](checking-access-with-authz-api.md)
+[Überprüfen des Zugriffs mit Authz API](checking-access-with-authz-api.md)
 </dt> <dt>
 
-[Initialisieren eines Client Kontexts](initializing-a-client-context.md)
+[Initialisieren eines Clientkontexts](initializing-a-client-context.md)
 </dt> <dt>
 
-[Abfragen eines Client Kontexts](querying-a-client-context.md)
+[Abfragen eines Clientkontexts](querying-a-client-context.md)
 </dt> </dl>
 
  

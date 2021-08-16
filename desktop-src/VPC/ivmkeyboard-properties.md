@@ -1,26 +1,26 @@
 ---
-title: Ivmkeyboard-Eigenschaften
-description: Die ivmkeyboard-Schnittstelle macht die folgenden Eigenschaften verfügbar.
+title: IVMKeyboard-Eigenschaften
+description: Die IVMKeyboard-Schnittstelle macht die folgenden Eigenschaften verfügbar.
 ms.assetid: E31C4937-AEAD-431B-8239-E8CC12FC74D3
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: e8623eb60d11ad2f5e650b0b67095915450b8cc9
-ms.sourcegitcommit: 592c9bbd22ba69802dc353bcb5eb30699f9e9403
+ms.openlocfilehash: 514c66e4e269996cad94e315268f159fb15b83fb3453959ad7b6f2c0df2cbe0d
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "103727929"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118345383"
 ---
-# <a name="ivmkeyboard-properties"></a>Ivmkeyboard-Eigenschaften
+# <a name="ivmkeyboard-properties"></a>IVMKeyboard-Eigenschaften
 
-\[Windows Virtual PC ist nicht mehr für die Verwendung ab Windows 8 verfügbar. Verwenden Sie stattdessen den [Hyper-V-WMI-Anbieter (v2)](/windows/desktop/HyperV_v2/windows-virtualization-portal).\]
+\[Windows Der virtuelle PC ist ab Windows 8 nicht mehr für die Verwendung verfügbar. Verwenden Sie stattdessen den [Hyper-V-WMI-Anbieter (V2).](/windows/desktop/HyperV_v2/windows-virtualization-portal)\]
 
-Die [**ivmkeyboard**](ivmkeyboard.md) -Schnittstelle macht die folgenden Eigenschaften verfügbar.
+Die [**IVMKeyboard-Schnittstelle**](ivmkeyboard.md) macht die folgenden Eigenschaften verfügbar.
 
 ## <a name="in-this-section"></a>In diesem Abschnitt
 
--   [**Hasexclusiveaccess (Eigenschaft)**](ivmkeyboard-hasexclusiveaccess.md)
+-   [**HasExclusiveAccess-Eigenschaft**](ivmkeyboard-hasexclusiveaccess.md)
 
- 
+ 
 
- 
+ 

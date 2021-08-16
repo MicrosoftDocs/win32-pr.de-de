@@ -1,5 +1,5 @@
 ---
-description: Veranschaulicht die Verwendung des Dialog Felds "allgemeine Datei" in verschiedenen Modi zum Auswählen von Dateien, Containern (Ordnern) oder Dateien und Ordnern (waren Korb Modus), ohne das Dialog Feld zu verwerfen.
+description: Veranschaulicht, wie das Dialogfeld "Allgemeine Datei" in verschiedenen Modi verwendet wird, um Dateien, Container (Ordner) oder dateien und ordner (Warenkorbmodus) zu wählen, ohne das Dialogfeld zu schließen.
 title: Modi des Dialogfelds „Gemeinsame Dateien“ (Beispiel)
 ms.topic: article
 ms.date: 05/31/2018
@@ -9,29 +9,29 @@ api_type: ''
 api_location: ''
 topic_type:
 - kbArticle
-ms.openlocfilehash: 0dab735425c800e143bc2808b247fa89d1c23094
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 0e6cdc5df1d8ba07664f1ca06114dbf138d7a7e7dde7b78cb588d4c446072a3c
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "104980769"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117858472"
 ---
 # <a name="common-file-dialog-modes-sample"></a>Modi des Dialogfelds „Gemeinsame Dateien“ (Beispiel)
 
-Veranschaulicht die Verwendung des Dialog Felds "allgemeine Datei" in verschiedenen Modi zum Auswählen von Dateien, Containern (Ordnern) oder Dateien und Ordnern (waren Korb Modus), ohne das Dialog Feld zu verwerfen.
+Veranschaulicht, wie das Dialogfeld "Allgemeine Datei" in verschiedenen Modi verwendet wird, um Dateien, Container (Ordner) oder dateien und ordner (Warenkorbmodus) zu wählen, ohne das Dialogfeld zu schließen.
 
 Dieses Thema enthält folgende Abschnitte:
 
--   [Anforderungen](#requirements)
+-   [Requirements](#requirements)
 -   [Herunterladen des Beispiels](#downloading-the-sample)
--   [Beispiel zum Aufbau](#building-the-sample)
+-   [Erstellen des Beispiels](#building-the-sample)
 -   [Ausführen des Beispiels](#running-the-sample)
 
-## <a name="requirements"></a>Requirements (Anforderungen)
+## <a name="requirements"></a>Anforderungen
 
 
 
-| Produkt                                | Minimale Produkt Version |
+| Product (Produkt)                                | Mindestproduktversion |
 |----------------------------------------|-------------------------|
 | Windows                                | Windows Vista           |
 | Windows Software Development Kit (SDK) | 7.0                     |
@@ -40,21 +40,21 @@ Dieses Thema enthält folgende Abschnitte:
 
  
 
-Weitere Anforderungen finden Sie in der im Beispiel enthaltenen Infodatei.
+Weitere Anforderungen finden Sie in der im Beispiel enthaltenen Readme-Datei.
 
 ## <a name="downloading-the-sample"></a>Herunterladen des Beispiels
 
 | Standort      | Pfad-URL                                                                                             |
 |---------------|------------------------------------------------------------------------------------------------------|
-| GitHub  | [Commonfiledialogmodes-Beispiel](https://github.com/microsoft/Windows-classic-samples/tree/master/Samples/Win7Samples/winui/shell/appplatform/CommonFileDialogModes) |
+| GitHub  | [CommonFileDialogModes-Beispiel](https://github.com/microsoft/Windows-classic-samples/tree/master/Samples/Win7Samples/winui/shell/appplatform/CommonFileDialogModes) |
 
 ## <a name="building-the-sample"></a>Erstellen des Beispiels
 
-Anweisungen zum Erstellen des Beispiels finden Sie in der im Beispiel enthaltenen Infodatei.
+Anweisungen zum Erstellen des Beispiels finden Sie in der im Beispiel enthaltenen Readme-Datei.
 
 ## <a name="running-the-sample"></a>Ausführen des Beispiels
 
-Anweisungen zum Erstellen des Beispiels finden Sie in der im Beispiel enthaltenen Infodatei.
+Anweisungen zum Erstellen des Beispiels finden Sie in der im Beispiel enthaltenen Readme-Datei.
 
  
 

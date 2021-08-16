@@ -1,5 +1,5 @@
 ---
-description: Die RENDBIND-Konstanten sind Flags, die von der ITDirectory::Bind-Methode verwendet werden, um angegebene Authentifizierungstypen anzugeben.
+description: Die RENDBIND-Konstanten sind Flags, die von der ITDirectory::Bind-Methode verwendet werden, um die angegebenen Authentifizierungstypen anzugeben.
 ms.assetid: 27bcf36a-1826-4603-9821-22fcc5c1e186
 title: RENDBIND_ Konstanten (Rend.h)
 ms.topic: reference
@@ -13,9 +13,9 @@ ms.locfileid: "117760863"
 ---
 # <a name="rendbind_-constants"></a>\_RENDBIND-Konstanten
 
-\[Steuerelemente und Schnittstellen für Rendezvous-IP-Telefoniekonferenzen sind nicht für die Verwendung in Windows Vista, Windows Server 2008 und nachfolgenden Versionen des Betriebssystems verfügbar. Die RTC-Client-API bietet ähnliche Funktionen.\]
+\[Rendezvous-IP-Telefoniekonferenz-Steuerelemente und -Schnittstellen sind nicht für die Verwendung in Windows Vista, Windows Server 2008 und nachfolgenden Versionen des Betriebssystems verfügbar. Die RTC-Client-API bietet ähnliche Funktionen.\]
 
-Die RENDBIND-Konstanten sind Flags, die von der [**ITDirectory::Bind-Methode verwendet**](/windows/desktop/api/Rend/nf-rend-itdirectory-bind) werden, um angegebene Authentifizierungstypen anzugeben.
+Die RENDBIND-Konstanten sind Flags, die von der [**ITDirectory::Bind-Methode**](/windows/desktop/api/Rend/nf-rend-itdirectory-bind) verwendet werden, um die angegebenen Authentifizierungstypen anzugeben.
 
 <dl> <dt>
 
@@ -79,7 +79,7 @@ Verwenden Sie das Standardkennwort.
 
 
 
-Die vorherigen drei ORed wurden der Einfachheit halber zusammengelassen.
+Die vorherigen drei OR wurden aus Gründen der Einfachheit zusammengehörig.
 
 
 </dt> </dl> </dd> </dl>

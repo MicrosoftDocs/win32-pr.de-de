@@ -1,5 +1,5 @@
 ---
-description: Dienstanbieter-Designer sollten versuchen, die Ausführungszeit synchroner Vorgänge kurz zu halten.
+description: Dienstanbieter-Designer sollten versuchen, die Ausführungszeit von synchronen Vorgängen kurz zu halten.
 ms.assetid: eb264ab7-15bb-4cd5-8af8-f979f02a7a39
 title: Synchrone Anforderungen
 ms.topic: article
@@ -13,15 +13,15 @@ ms.locfileid: "117760687"
 ---
 # <a name="synchronous-requests"></a>Synchrone Anforderungen
 
-Dienstanbieter-Designer sollten versuchen, die Ausführungszeit synchroner Vorgänge kurz zu halten. Beispielsweise gibt es einen "Open"-Vorgang, der zur Initialisierungszeit aufgerufen wird und den Dienstanbieter und TAPI auf nachfolgende Vorgänge auf einem Gerät vorbereitet. Ein Dienstanbieter, dessen Implementierung auf den Clientcomputer und einen dedizierten Server aufgeteilt ist, kann sicher sein, dass er mit seinem Remoteserver kommunizieren kann. Die Implementierung von "Open" kann datenstrukturen lediglich zuordnen und initialisieren, um das Gerät und die Rückgabe zu repräsentieren, und die End-to-End-Kommunikation aufschieben, bis ein echter Vorgang angefordert wird.
+Dienstanbieter-Designer sollten versuchen, die Ausführungszeit von synchronen Vorgängen kurz zu halten. Beispielsweise gibt es einen "Open"-Vorgang, der zur Initialisierungszeit aufgerufen wird und den Dienstanbieter und TAPI für nachfolgende Vorgänge auf einem Gerät vorbereitet. Ein Dienstanbieter, dessen Implementierung auf den Clientcomputer und einen dedizierten Server aufgeteilt ist, kann sich sicher sein, dass er mit seinem Remoteserver kommunizieren kann. Die Implementierung von "Open" kann datenstrukturen einfach zuordnen und initialisieren, um das Gerät darzustellen und zurückzugeben, wodurch die End-to-End-Kommunikation verschoben wird, bis ein echter Vorgang angefordert wird.
 
-Jede solche "optimistische" Implementierung eines synchronen Vorgangs kann später auf Ressourceneinschränkungen oder Remotekommunikationsfehler stoßen. Im Allgemeinen kann selbst ein "konservativer" Ansatz diese Probleme nicht vollständig verhindern. Dienstanbieter-Designer müssen den besten Kompromiss zwischen Zuverlässigkeit und Leistung wählen. Ein Fehler dieser Art sollte nach Möglichkeit ordnungsgemäß behandelt werden. Aus Sicht von TSPI-Geräten sollten sie auch dann für "Buchhaltungszwecke" gültig bleiben, wenn sie den Fehlerstatus für einen angeforderten Vorgang zurückgeben.
+Bei einer solchen "optimistischen" Implementierung eines synchronen Vorgangs können später Ressourceneinschränkungen oder Remotekommunikationsfehler auftreten. Im Allgemeinen kann selbst ein "konservativer" Ansatz diese Probleme nicht vollständig verhindern. Dienstanbieter-Designer müssen den besten Kompromiss zwischen Zuverlässigkeit und Leistung auswählen. Ein Fehler dieser Art sollte nach Möglichkeit ordnungsgemäß behandelt werden. Aus Sicht von TSPI-Geräten sollten sie für "Buchhaltungszwecke" gültig bleiben, auch wenn sie den Fehlerstatus für einen angeforderten Vorgang zurückgeben.
 
-Die Implementierung eines optimistischen Ansatzes für synchrone Anforderungen sollte nicht auf Kosten der richtigen Semantik für den Vorgang erfolgen. Kehren Sie zum Beispiel "Öffnen" zurück, wenn das Öffnen eines Geräts um eine ärmliche, nicht durchsetzbare Ressource wie Kommunikationsports konkurrieren und reservieren muss, sollte dies wahrscheinlich auch dann der Reihe nach sein, wenn es zeitaufwändig ist.
+Die Implementierung eines optimistischen Ansatzes für synchrone Anforderungen sollte nicht auf Kosten der richtigen Semantik für den Vorgang erfolgen. Kehren Sie zum Beispiel "Öffnen" zurück. Wenn das Öffnen eines Geräts um eine gebundene, nicht löschbare Ressource wie Kommunikationsports konkurrieren und reservieren muss, sollte dies wahrscheinlich auch dann erfolgen, wenn es zeitaufwändig ist.
 
 **TAPI 2.x:** Ein Vorgang, der synchron abgeschlossen wird, führt die gesamte Verarbeitung im Funktionsaufruf durch, der von der Anwendung ausgeführt wird. Die Funktion gibt je nach Erfolg oder Fehler unterschiedliche Werte zurück:
 
--   **Synchroner Erfolg.** Wenn die Anforderung oder der Dienst, die bzw. der der Funktion entspricht, erfolgreich ausgeführt wurde, gibt die Funktion 0 (null) zurück, was den Erfolg angibt. Alle Als Ergebnis des Funktionsaufrufs geschriebenen Werte sind zuverlässig und können sofort verwendet werden.
+-   **Synchroner Erfolg.** Wenn die Anforderung oder der Dienst, der der Funktion entspricht, erfolgreich ausgeführt wurde, gibt die Funktion 0 (null) zurück, was auf den Erfolg hinweist. Alle Werte, die als Ergebnis des Funktionsaufrufs geschrieben werden, sind zuverlässig und können sofort verwendet werden.
 -   **Synchroner Fehler.** Wenn die Funktion einen Fehler erkennt und die Anforderung nicht ausgeführt wird, wird eine negative Fehlernummer zurückgegeben, um den Fehler zu identifizieren.
 
  

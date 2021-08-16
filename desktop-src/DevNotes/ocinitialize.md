@@ -1,7 +1,7 @@
 ---
 description: Initialisiert den optionalen Komponenten-Manager.
 ms.assetid: 9a7ddca6-a6c8-4d96-81bb-66158b83ab68
-title: Ocinitialize-Funktion
+title: OcInitialize-Funktion
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,14 +13,14 @@ api_type:
 - DllExport
 api_location:
 - OcManage.dll
-ms.openlocfilehash: aad102ac9881a801f693a429aab5dae07d09b5e8
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 08e7ffd7f8ad6faa2b08f937627627b6e74bbc09505482c589023db5dae37677
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106371022"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117826745"
 ---
-# <a name="ocinitialize-function"></a>Ocinitialize-Funktion
+# <a name="ocinitialize-function"></a>OcInitialize-Funktion
 
 Initialisiert den optionalen Komponenten-Manager.
 
@@ -43,47 +43,47 @@ PVOID OcInitialize(
 
 <dl> <dt>
 
-*Rückrufe* \[ in\]
+*Rückrufe* \[ In\]
 </dt> <dd>
 
-Ein Zeiger auf eine [**OCM \_ - \_ Clientrückrufe**](ocm-client-callbacks.md) -Struktur, die die Rückruf Funktionen angibt, die vom OC-Manager zum Ausführen verschiedener Aufgaben verwendet werden sollen.
+Ein Zeiger auf eine [**OCM \_ CLIENT \_ CALLBACKS-Struktur,**](ocm-client-callbacks.md) die die Rückruffunktionen angibt, die vom OC-Manager zum Ausführen verschiedener Aufgaben verwendet werden sollen.
 
 </dd> <dt>
 
-*Masterocinfname* \[ in\]
+*MasterOcInfName* \[ In\]
 </dt> <dd>
 
-Der Pfad der "OC. inf"-Master Datei.
+Der Pfad der OC-Master-INF-Datei.
 
 </dd> <dt>
 
-*Flags* \[in\]
+*Flags* \[ In\]
 </dt> <dd>
 
-Dieser Parameter kann einen oder mehrere der folgenden Werte aufweisen.
+Bei diesem Parameter kann es sich um einen oder mehrere der folgenden Werte handelt.
 
 <dl> <dt>
 
-<span id="OCINIT_FORCENEWINF"></span><span id="ocinit_forcenewinf"></span>**Ocinit \_ Forcenewinf** (0x00000001)
+<span id="OCINIT_FORCENEWINF"></span><span id="ocinit_forcenewinf"></span>**OCINIT \_ FORCENEWINF** (0x00000001)
 </dt> <dt>
 
-<span id="OCINIT_KILLSUBCOMPS"></span><span id="ocinit_killsubcomps"></span>**Ocinit \_ Killsubcomps** (0x00000002)
+<span id="OCINIT_KILLSUBCOMPS"></span><span id="ocinit_killsubcomps"></span>**OCINIT \_ KILLSUBCOMPS** (0x00000002)
 </dt> <dt>
 
-<span id="OCINIT_RUNQUIET"></span><span id="ocinit_runquiet"></span>**Ocinit \_ Runquiet** (0x00000004)
+<span id="OCINIT_RUNQUIET"></span><span id="ocinit_runquiet"></span>**OCINIT \_ RUNQUIET** (0x00000004)
 </dt> <dt>
 
-<span id="OCINIT_LANGUAGEAWARE"></span><span id="ocinit_languageaware"></span>**Ocinit \_ Languageaware** (0x00000008)
+<span id="OCINIT_LANGUAGEAWARE"></span><span id="ocinit_languageaware"></span>**OCINIT \_ LANGUAGEAWARE** (0x00000008)
 </dt> </dl> </dd> <dt>
 
-*ShowError* \[ vorgenommen\]
+*ShowError* \[ out\]
 </dt> <dd>
 
 Wenn die Funktion fehlschlägt, gibt dieser Parameter an, ob eine Fehlermeldung angezeigt werden soll.
 
 </dd> <dt>
 
-*Protokollieren* \[ in\]
+*Protokollieren* \[ In\]
 </dt> <dd>
 
 Ein Handle für das Protokoll.
@@ -92,11 +92,11 @@ Ein Handle für das Protokoll.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Die-Funktion gibt den OC Manager-Kontextwert zurück.
+Die Funktion gibt den Kontextwert des OC-Managers zurück.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Dieser Funktion ist keine Import Bibliothek oder Header Datei zugeordnet. Sie müssen ihn mithilfe der [**LoadLibrary**](/windows/win32/api/libloaderapi/nf-libloaderapi-loadlibrarya) -Funktion und der [**GetProcAddress**](/windows/win32/api/libloaderapi/nf-libloaderapi-getprocaddress) -Funktion aufrufen.
+Dieser Funktion ist keine Importbibliothek oder Headerdatei zugeordnet. Sie müssen sie mithilfe der [**Funktionen LoadLibrary**](/windows/win32/api/libloaderapi/nf-libloaderapi-loadlibrarya) und [**GetProcAddress**](/windows/win32/api/libloaderapi/nf-libloaderapi-getprocaddress) aufrufen.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -108,14 +108,14 @@ Dieser Funktion ist keine Import Bibliothek oder Header Datei zugeordnet. Sie m�
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**OCM- \_ Client \_ Rückrufe**](ocm-client-callbacks.md)
+[**\_ \_ OCM-CLIENTRÜCKRUFE**](ocm-client-callbacks.md)
 </dt> <dt>
 
-[**Okbeenden**](octerminate.md)
+[**OcTerminate**](octerminate.md)
 </dt> </dl>
 
  

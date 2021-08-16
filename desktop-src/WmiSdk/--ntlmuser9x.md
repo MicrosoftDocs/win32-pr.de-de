@@ -1,5 +1,5 @@
 ---
-description: Steuert den Remote Zugriff auf nicht unterstützte Versionen von Windows.
+description: Steuert den Remotezugriff auf nicht unterstützte Versionen von Windows.
 ms.assetid: eb326bba-a011-4b9c-b4ee-fc08ae364f6f
 ms.tgt_platform: multiple
 title: __NTLMUser9X-Klasse
@@ -19,16 +19,16 @@ api_type:
 - Schema
 api_location:
 - All
-ms.openlocfilehash: 79aa5153869c7337b6849e8c465dbbf8b36a0f58
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 2d05920b0936e8ff4de3eb338938e03e92edb4596efbf01f1064b6952a7df661
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106349650"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118320578"
 ---
 # <a name="__ntlmuser9x-class"></a>\_\_NTLMUser9X-Klasse
 
-Die **\_ \_ NTLMUser9X** -System Klasse steuert den Remote Zugriff auf nicht unterstützte Versionen von Windows. Die folgende Syntax wird durch MOF-Code (Managed Object Format) vereinfacht und schließt alle geerbten Eigenschaften ein. Eigenschaften werden in alphabetischer Reihenfolge und nicht in der MOF-Reihenfolge aufgelistet.
+Die **\_ \_ NTLMUser9X-Systemklasse** steuert den Remotezugriff auf nicht unterstützte Versionen von Windows. Die folgende Syntax wird durch MOF-Code (Managed Object Format) vereinfacht und schließt alle geerbten Eigenschaften ein. Eigenschaften werden in alphabetischer Reihenfolge und nicht in MOF-Reihenfolge aufgeführt.
 
 ## <a name="syntax"></a>Syntax
 
@@ -45,26 +45,26 @@ class __NTLMUser9X : __SecurityRelatedClass
 
 ## <a name="members"></a>Member
 
-Die **\_ \_ NTLMUser9X** -Klasse verfügt über diese Typen von Membern:
+Die **\_ \_ NTLMUser9X-Klasse** verfügt über diese Typen von Membern:
 
 -   [Eigenschaften](#properties)
 
 ### <a name="properties"></a>Eigenschaften
 
-Die **\_ \_ NTLMUser9X** -Klasse verfügt über diese Eigenschaften.
+Die **\_ \_ NTLMUser9X-Klasse** verfügt über diese Eigenschaften.
 
 <dl> <dt>
 
 **Autoritative Stelle**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Lesen/Schreiben
 </dt> </dl>
 
-Die Domäne, für die ein Benutzername gilt.
+Domäne, für die ein Benutzername gilt.
 
 </dd> <dt>
 
@@ -91,7 +91,7 @@ Keine Vererbung.
 2
 </dt> <dd>
 
-Gilt für untergeordnete Namespaces, zusätzlich zur aktuellen.
+Wenden Sie zusätzlich zum aktuellen Namespace auch auf untergeordnete Namespaces an.
 
 </dd> </dl>
 
@@ -106,14 +106,14 @@ Datentyp: **sint32**
 Zugriffstyp: Lesen/Schreiben
 </dt> </dl>
 
-Bitmaske, die Zugriffsrechte für den Namespace im WMI-Repository (Windows-Verwaltungsinstrumentation) angibt. Informationen zu Bitwerten finden Sie unter [**Namespace-Zugriffsrechte Konstanten**](namespace-access-rights-constants.md).
+Bitmaske, die Zugriffsrechte für den Namespace im WMI-Repository (Windows Management Instrumentation) angibt. Bitwerte finden Sie unter [**Namespace Access Rights Constants**](namespace-access-rights-constants.md).
 
 </dd> <dt>
 
 **Name**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Lesen/Schreiben
@@ -123,7 +123,7 @@ Benutzername.
 
 </dd> <dt>
 
-**Type**
+**Typ**
 </dt> <dd> <dl> <dt>
 
 Datentyp: **sint32**
@@ -132,29 +132,29 @@ Datentyp: **sint32**
 Zugriffstyp: Lesen/Schreiben
 </dt> </dl>
 
-Der Zugriff ist zulässig.
+Zugriff zulässig.
 
 <dt>
 
 0
 </dt> <dd>
 
-Der Zugriff ist zulässig.
+Zugriff zulässig.
 
 </dd> <dt>
 
 2
 </dt> <dd>
 
-Zugriff verweigert.
+Zugriff verweigert:
 
 </dd> </dl>
 
 </dd> </dl>
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Die **\_ \_ NTLMUser9X** -Klasse wird als Eingabeparameter für die Methoden " [**\_ \_ SystemSecurity:: Get9XUserList**](--systemsecurity-get9xuserlist.md) " und " [**\_ \_ SystemSecurity:: Set9XUserList**](--systemsecurity-set9xuserlist.md) " verwendet.
+Die **\_ \_ NTLMUser9X-Klasse** wird als Eingabeparameter für die Methoden [**\_ \_ SystemSecurity::Get9XUserList**](--systemsecurity-get9xuserlist.md) und [**\_ \_ SystemSecurity::Set9XUserList**](--systemsecurity-set9xuserlist.md) verwendet.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -168,14 +168,14 @@ Die **\_ \_ NTLMUser9X** -Klasse wird als Eingabeparameter für die Methoden " [
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**\_\_Securityrelatedclass**](/windows/desktop/WmiSdk/--securityrelatedclass)
+[**\_\_SecurityRelatedClass**](/windows/desktop/WmiSdk/--securityrelatedclass)
 </dt> <dt>
 
-[WMI-System Klassen](wmi-system-classes.md)
+[WMI-Systemklassen](wmi-system-classes.md)
 </dt> <dt>
 
 [**\_\_SystemSecurity**](--systemsecurity.md)

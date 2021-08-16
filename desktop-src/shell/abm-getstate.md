@@ -1,6 +1,6 @@
 ---
-description: Ruft den Automatischhide- und Always On-Top-Zustände der Windows ab.
-title: ABM_GETSTATE (Shellapi.h)
+description: Ruft die Zustände autohide und always on-top der Windows Taskleiste ab.
+title: ABM_GETSTATE Meldung (Shellapi.h)
 ms.topic: reference
 ms.date: 05/31/2018
 ms.assetid: 18e16752-16be-492b-a4fa-c951e18dc86c
@@ -22,7 +22,7 @@ ms.locfileid: "118225229"
 ---
 # <a name="abm_getstate-message"></a>ABM \_ GETSTATE-Nachricht
 
-Ruft den Automatischhide- und Always On-Top-Zustände der Windows ab.
+Ruft die Zustände autohide und always on-top der Windows Taskleiste ab.
 
 
 ```C++
@@ -38,13 +38,13 @@ uState = (UINT) SHAppBarMessage(ABM_GETSTATE, pabd);
 *pabd* 
 </dt> <dd>
 
-Zeiger auf eine [**APPBARDATA-Struktur.**](/windows/desktop/api/Shellapi/ns-shellapi-appbardata) Sie müssen das **cbSize-Mitglied beim** Senden dieser Nachricht angeben. alle anderen Member werden ignoriert.
+Zeiger auf eine [**APPBARDATA-Struktur.**](/windows/desktop/api/Shellapi/ns-shellapi-appbardata) Sie müssen den **cbSize-Member** angeben, wenn Sie diese Nachricht senden. alle anderen Member werden ignoriert.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt 0 (null) zurück, wenn sich die Taskleiste weder im Autohide- noch im Always On-Top-Zustand befindet. Andernfalls ist der Rückgabewert eine oder beide der folgenden Werte:
+Gibt 0 (null) zurück, wenn sich die Taskleiste weder im autohide- noch always-on-top-Zustand befindet. Andernfalls ist der Rückgabewert einer oder beide der folgenden Werte:
 
 
 
@@ -65,13 +65,13 @@ Gibt 0 (null) zurück, wenn sich die Taskleiste weder im Autohide- noch im Alway
 <td>Die Taskleiste befindet sich im Always On-Top-Zustand. <br/>
 <blockquote>
 [!Note]<br />
-Ab Windows 7 wird ABS_ALWAYSONTOP nicht mehr zurückgegeben, da sich die Taskleiste immer in diesem Zustand befindet. Älterer Code sollte aktualisiert werden, um das Fehlen dieses Werts in zu ignorieren und nicht davon auszugehen, dass dieser Rückgabewert bedeutet, dass sich die Taskleiste nicht im Always On-Top-Zustand befindet.
+Ab Windows 7 wird ABS_ALWAYSONTOP nicht mehr zurückgegeben, da sich die Taskleiste immer in diesem Zustand befindet. Älterer Code sollte aktualisiert werden, um das Fehlen dieses Werts in zu ignorieren und nicht davon auszugehen, dass der Rückgabewert bedeutet, dass sich die Taskleiste nicht im Always On-Top-Zustand befindet.
 </blockquote>
 <br/></td>
 </tr>
 <tr class="even">
 <td><dl> <dt><strong>ABS_AUTOHIDE</strong></dt> </dl></td>
-<td>Die Taskleiste befindet sich im Automatischhide-Zustand.<br/></td>
+<td>Die Taskleiste befindet sich im Autohide-Zustand.<br/></td>
 </tr>
 </tbody>
 </table>
@@ -86,7 +86,7 @@ Ab Windows 7 wird ABS_ALWAYSONTOP nicht mehr zurückgegeben, da sich die Tasklei
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Windows Nur \[ XP-Desktop-Apps\]<br/>                                           |
+| Unterstützte Mindestversion (Client)<br/> | Windows \[Nur XP-Desktop-Apps\]<br/>                                           |
 | Unterstützte Mindestversion (Server)<br/> | Windows 2000 Server \[nur Desktop-Apps\]<br/>                                  |
 | Header<br/>                   | <dl> <dt>Shellapi.h</dt> </dl> |
 

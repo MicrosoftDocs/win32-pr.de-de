@@ -1,31 +1,31 @@
 ---
-description: In Active Directory gespeicherte Autorisierungs Richtlinien Speicher unterstützen die Delegierung der Verwaltung.
+description: Autorisierungsrichtlinienspeicher, die in Active Directory gespeichert sind, unterstützen die Delegierung der Verwaltung.
 ms.assetid: ccad4c19-7a16-4599-9a42-23cae7084418
-title: Delegieren der definierenden Berechtigungen in C++
+title: Delegieren der Definition von Berechtigungen in C++
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: cc299e3506300da1f0db2b4a9bacfce60def1c40
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 2f79202a3f8ee21934f890d3c5a66a19be4466fa2b1ecdfe31672a4edfc2319e
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106366075"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117782054"
 ---
-# <a name="delegating-the-defining-of-permissions-in-c"></a>Delegieren der definierenden Berechtigungen in C++
+# <a name="delegating-the-defining-of-permissions-in-c"></a>Delegieren der Definition von Berechtigungen in C++
 
-In Active Directory gespeicherte Autorisierungs Richtlinien Speicher unterstützen die Delegierung der Verwaltung. Die Verwaltung kann an Benutzer und Gruppen auf Geschäfts-, Anwendungs-oder Bereichs Ebene delegiert werden.
+Autorisierungsrichtlinienspeicher, die in Active Directory gespeichert sind, unterstützen die Delegierung der Verwaltung. Die Verwaltung kann an Benutzer und Gruppen auf Speicher-, Anwendungs- oder Bereichsebene delegiert werden.
 
-Auf jeder Ebene ist eine Liste von Administratoren und Lesern vorhanden. Administratoren eines Stores, einer Anwendung oder eines Bereichs können den Richtlinien Speicher auf der Delegierten Ebene lesen und ändern. Leser können den Richtlinien Speicher auf der Delegierten Ebene lesen, den Speicher jedoch nicht ändern.
+Auf jeder Ebene gibt es eine Liste von Administratoren und Lesern. Administratoren eines Speichers, einer Anwendung oder eines Bereichs können den Richtlinienspeicher auf delegierter Ebene lesen und ändern. Leser können den Richtlinienspeicher auf delegierter Ebene lesen, aber den Speicher nicht ändern.
 
-Ein Benutzer oder eine Gruppe, der entweder als Administrator oder als Leser einer Anwendung dient, muss auch als Delegierter Benutzer des Richtlinien Speicher hinzugefügt werden, der diese Anwendung enthält. Ebenso muss ein Benutzer oder eine Gruppe, der ein Administrator oder ein Leser eines Bereichs ist, als Delegierter Benutzer der Anwendung hinzugefügt werden, die diesen Bereich enthält.
+Ein Benutzer oder eine Gruppe, der bzw. die ein Administrator oder Leser einer Anwendung ist, muss auch als delegierter Benutzer des Richtlinienspeichers hinzugefügt werden, der diese Anwendung enthält. Ebenso muss ein Benutzer oder eine Gruppe, der Administrator oder Leser eines Bereichs ist, als delegierter Benutzer der Anwendung hinzugefügt werden, die diesen Bereich enthält.
 
-Wenn Sie z. b. die Verwaltung eines Bereichs delegieren möchten, fügen Sie zuerst den Benutzer oder die Gruppe der Liste der Delegierten Benutzer des Stores mit dem Bereich hinzu, indem Sie die [**IAzAuthorizationStore:: adddelegatedpolicyuser**](/windows/desktop/api/Azroles/nf-azroles-iazauthorizationstore-adddelegatedpolicyuser) -Methode aufrufen. Fügen Sie dann den Benutzer oder die Gruppe der Liste der Delegierten Benutzer der Anwendung hinzu, die den Bereich enthält, indem Sie die [**IAzApplication:: adddelegatedpolicyuser**](/windows/desktop/api/Azroles/nf-azroles-iazapplication-adddelegatedpolicyuser) -Methode aufrufen. Fügen Sie schließlich den Benutzer oder die Gruppe der Liste der Administratoren des Bereichs hinzu, indem Sie die [**iazscope:: addpolicyadministrator**](/windows/desktop/api/Azroles/nf-azroles-iazscope-addpolicyadministrator) -Methode aufrufen.
+Um beispielsweise die Verwaltung eines Bereichs zu delegieren, fügen Sie zunächst den Benutzer oder die Gruppe der Liste der delegierten Benutzer des Speichers hinzu, der den Bereich enthält, indem Sie die [**IAzAuthorizationStore::AddDelegatedPolicyUser-Methode**](/windows/desktop/api/Azroles/nf-azroles-iazauthorizationstore-adddelegatedpolicyuser) aufrufen. Fügen Sie dann den Benutzer oder die Gruppe der Liste der delegierten Benutzer der Anwendung hinzu, die den Bereich enthält, indem Sie die [**IAzApplication::AddDelegatedPolicyUser-Methode**](/windows/desktop/api/Azroles/nf-azroles-iazapplication-adddelegatedpolicyuser) aufrufen. Fügen Sie abschließend den Benutzer oder die Gruppe der Liste der Administratoren des Bereichs hinzu, indem Sie die [**IAzScope::AddPolicyAdministrator-Methode**](/windows/desktop/api/Azroles/nf-azroles-iazscope-addpolicyadministrator) aufrufen.
 
-XML-basierte Richtlinien Speicher unterstützen nicht die Delegierung auf einer beliebigen Ebene.
+XML-basierte Richtlinienspeicher unterstützen delegierungen auf keiner Ebene.
 
-Ein Bereich in einem Autorisierungs Speicher, der in Active Directory gespeichert ist, kann nicht delegiert werden, wenn der Bereich Aufgaben Definitionen enthält, die Autorisierungs Regeln oder Rollen Definitionen enthalten, die Autorisierungs Regeln enthalten.
+Ein Bereich in einem Autorisierungsspeicher, der in Active Directory gespeichert ist, kann nicht delegiert werden, wenn der Bereich Aufgabendefinitionen enthält, die Autorisierungsregeln oder Rollendefinitionen enthalten, die Autorisierungsregeln enthalten.
 
-Im folgenden Beispiel wird gezeigt, wie die Verwaltung einer Anwendung delegiert wird. Im Beispiel wird davon ausgegangen, dass am angegebenen Speicherort ein Active Directory Autorisierungs Richtlinien Speicher vorhanden ist, dass dieser Richtlinien Speicher eine Anwendung mit dem Namen "Kosten" enthält und dass diese Anwendung keine Aufgaben mit Geschäftsregel Skripts enthält.
+Das folgende Beispiel zeigt, wie die Verwaltung einer Anwendung delegiert wird. Im Beispiel wird davon ausgegangen, dass ein vorhandener Active Directory-Autorisierungsrichtlinienspeicher am angegebenen Speicherort vorhanden ist, dass dieser Richtlinienspeicher eine Anwendung namens Expense enthält und dass diese Anwendung keine Aufgaben mit Geschäftsregelskripts enthält.
 
 
 ```C++

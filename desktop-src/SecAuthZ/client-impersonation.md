@@ -1,31 +1,31 @@
 ---
-description: Identitätswechsel ist die Fähigkeit eines Threads, mit anderen Sicherheitsinformationen auszuführen, als der Prozess, der den Thread besitzt.
+description: Identitätswechsel ist die Fähigkeit eines Threads, mit anderen Sicherheitsinformationen als dem Prozess, der den Thread besitzt, auszuführen.
 ms.assetid: a3f74372-bdc9-43eb-b72f-7d00a43e78a8
-title: Client Identitätswechsel (Autorisierung)
+title: Clientpersonation (Autorisierung)
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 32e72abb17c9f5f6271f55fbfc77da4f6b93ca2d
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 454e943b53cffbc4430c71b31e2b172095b999e2201c4cafc08b081bf1782e64
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "103959170"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117783066"
 ---
-# <a name="client-impersonation-authorization"></a>Client Identitätswechsel (Autorisierung)
+# <a name="client-impersonation-authorization"></a>Clientpersonation (Autorisierung)
 
-Identitäts [*Wechsel ist die*](/windows/desktop/SecGloss/i-gly) Fähigkeit eines Threads, mit anderen Sicherheitsinformationen auszuführen, als der Prozess, der den Thread besitzt. In der Regel nimmt ein Thread in einer Serveranwendung die Identität eines Clients an. Dies ermöglicht es dem Server Thread, im Auftrag des Clients auf Objekte auf dem Server zuzugreifen oder den Zugriff auf die eigenen Objekte des Clients zu überprüfen.
+[*Identitätswechsel ist*](/windows/desktop/SecGloss/i-gly) die Fähigkeit eines Threads, mit anderen Sicherheitsinformationen als dem Prozess, der den Thread besitzt, auszuführen. In der Regel wird die Identität eines Clients von einem Thread in einer Serveranwendung angenommen. Dadurch kann der Serverthread im Namen dieses Clients auf Objekte auf dem Server zugreifen oder den Zugriff auf die eigenen Objekte des Clients überprüfen.
 
-Die Microsoft Windows-API bietet die folgenden Funktionen, um einen Identitätswechsel zu starten:
+Die Microsoft Windows-API stellt die folgenden Funktionen bereit, um einen Identitätswechsel zu starten:
 
--   Eine DDE-Serveranwendung kann die [**DdeImpersonateClient**](/windows/win32/api/ddeml/nf-ddeml-ddeimpersonateclient) -Funktion zum Annehmen der Identität eines Clients aufruft.
--   Ein Named Pipe-Server kann die Funktion "Identität [**atenamedpipeclient**](/windows/win32/api/namedpipeapi/nf-namedpipeapi-impersonatenamedpipeclient) " aufrufen.
--   Sie können die Funktion "Identität [**ateloggedonuser**](/windows/win32/api/securitybaseapi/nf-securitybaseapi-impersonateloggedonuser) " aufrufen, um die Identität des Sicherheits Kontexts eines [*Zugriffs*](/windows/desktop/SecGloss/a-gly)Tokens für ein angemeldetes Benutzer anzunehmen.
--   Mit der Identität [**ateself**](/windows/win32/api/securitybaseapi/nf-securitybaseapi-impersonateself) -Funktion kann ein Thread eine Kopie seines eigenen Zugriffs Tokens generieren. Dies ist hilfreich, wenn eine Anwendung den Sicherheitskontext eines einzelnen Threads ändern muss. Beispielsweise muss manchmal nur ein Thread eines Prozesses eine [*Berechtigung*](/windows/desktop/SecGloss/p-gly)aktivieren.
--   Sie können die Funktion [**SetThreadToken**](/windows/win32/api/processthreadsapi/nf-processthreadsapi-setthreadtoken) aufrufen, damit der Zielthread im Sicherheitskontext [*eines angegebenen Identitäts*](/windows/desktop/SecGloss/i-gly)Wechsel Tokens ausgeführt wird.
--   Eine Microsoft-RPC-Serveranwendung (Remote Procedure Callcenter) kann die [**RpcImpersonateClient**](/windows/desktop/api/rpcdce/nf-rpcdce-rpcimpersonateclient) -Funktion zum Annehmen der Identität eines Clients aufruft.
--   Ein [*Sicherheitspaket*](/windows/desktop/SecGloss/s-gly) oder ein Anwendungsserver kann die [**Identität der Identität**](/windows/desktop/api/sspi/nf-sspi-impersonatesecuritycontext) eines Clients annehmen.
+-   Eine DDE-Serveranwendung kann die [**DdeImpersonateClient-Funktion**](/windows/win32/api/ddeml/nf-ddeml-ddeimpersonateclient) aufrufen, um die Identität eines Clients zu übernehmen.
+-   Ein Named Pipe-Server kann die [**ImpersonateNamedPipeClient-Funktion**](/windows/win32/api/namedpipeapi/nf-namedpipeapi-impersonatenamedpipeclient) aufrufen.
+-   Sie können die [**Funktion ImpersonateLoggedOnUser**](/windows/win32/api/securitybaseapi/nf-securitybaseapi-impersonateloggedonuser) aufrufen, um die Identität des Sicherheitskontexts des Zugriffstokens eines angemeldeten [*Benutzers zu angenommen.*](/windows/desktop/SecGloss/a-gly)
+-   Mit [**der ImpersonateSelf-Funktion**](/windows/win32/api/securitybaseapi/nf-securitybaseapi-impersonateself) kann ein Thread eine Kopie seines eigenen Zugriffstokens generieren. Dies ist nützlich, wenn eine Anwendung den Sicherheitskontext eines einzelnen Threads ändern muss. Beispielsweise muss manchmal nur ein Thread eines Prozesses eine Berechtigung [*aktivieren.*](/windows/desktop/SecGloss/p-gly)
+-   Sie können die [**Funktion SetThreadToken**](/windows/win32/api/processthreadsapi/nf-processthreadsapi-setthreadtoken) aufrufen, damit der Zielthread im Sicherheitskontext eines angegebenen [*Identitätswechseltokens ausgeführt wird.*](/windows/desktop/SecGloss/i-gly)
+-   Eine RPC-Serveranwendung (Microsoft Remote Procedure Call) kann die [**RpcImpersonateClient-Funktion**](/windows/desktop/api/rpcdce/nf-rpcdce-rpcimpersonateclient) aufrufen, um die Identität eines Clients zu übernehmen.
+-   Ein [*Sicherheitspaket oder*](/windows/desktop/SecGloss/s-gly) Anwendungsserver kann die [**ImpersonateSecurityContext-Funktion**](/windows/desktop/api/sspi/nf-sspi-impersonatesecuritycontext) aufrufen, um die Identität eines Clients zu ändern.
 
-Bei den meisten dieser Identitätswechsel kann der Identitätswechsel Thread durch Aufrufen der [**RevertToSelf**](/windows/win32/api/securitybaseapi/nf-securitybaseapi-reverttoself) -Funktion in seinen eigenen Sicherheitskontext zurückgesetzt werden. Die Ausnahme stellt der RPC-Identitätswechsel dar, bei dem die RPC-Serveranwendung [**rpkrevertstoself**](/windows/desktop/api/rpcdce/nf-rpcdce-rpcreverttoself) oder [**rpkrevertstoselfex**](/windows/desktop/api/rpcdce/nf-rpcdce-rpcreverttoselfex) aufruft, um in ihren eigenen Sicherheitskontext zurückzukehren.
+Bei den meisten dieser Identitätswechsel kann der Identitätswechselthread auf seinen eigenen Sicherheitskontext zurückwechseln, indem er die [**RevertToSelf-Funktion**](/windows/win32/api/securitybaseapi/nf-securitybaseapi-reverttoself) aufruft. Die Ausnahme ist der RPC-Identitätswechsel, bei dem die RPC-Serveranwendung [**RpcRevertToSelf**](/windows/desktop/api/rpcdce/nf-rpcdce-rpcreverttoself) oder [**RpcRevertToSelfEx**](/windows/desktop/api/rpcdce/nf-rpcdce-rpcreverttoselfex) aufruft, um auf ihren eigenen Sicherheitskontext zurückzuwechseln.
 
  
 

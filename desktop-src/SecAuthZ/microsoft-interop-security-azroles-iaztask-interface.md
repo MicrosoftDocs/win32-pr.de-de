@@ -109,7 +109,7 @@ Die **Schnittstelle Microsoft.Interop.Security.AzRoles.IAzTask verfügt** über 
 
 
 
-| Methode                                                            | BESCHREIBUNG                                                                  |
+| Methode                                                            | Beschreibung                                                                  |
 |:------------------------------------------------------------------|:-----------------------------------------------------------------------------|
 | **Microsoft.Interop.Security.Azroles.IAzTask.AddOperation**       | [**IAzTask::AddOperation**](/windows/desktop/api/Azroles/nf-azroles-iaztask-addoperation)<br/>             |
 | **Microsoft.Interop.Security.Azroles.IAzTask.AddPropertyItem**    | [**IAzTask::AddPropertyItem**](/windows/desktop/api/Azroles/nf-azroles-iaztask-addpropertyitem)<br/>       |
@@ -127,11 +127,11 @@ Die **Schnittstelle Microsoft.Interop.Security.AzRoles.IAzTask verfügt** über 
 
 ### <a name="properties"></a>Eigenschaften
 
-Die **Schnittstelle Microsoft.Interop.Security.AzRoles.IAzTask verfügt** über diese Eigenschaften.
+Die **Schnittstelle Microsoft.Interop.Security.AzRoles.IAzTask** verfügt über diese Eigenschaften.
 
 
 
-| Eigenschaft                                                                      | Zugriffstyp           | BESCHREIBUNG                                                                               |
+| Eigenschaft                                                                      | Zugriffstyp           | Beschreibung                                                                               |
 |:------------------------------------------------------------------------------|:----------------------|:------------------------------------------------------------------------------------------|
 | **Microsoft.Interop.Security.Azroles.IAzTask.ApplicationData**<br/>     | Lesen/Schreiben<br/> | [**ApplicationData-Eigenschaft von IAzTask**](/windows/desktop/api/Azroles/nf-azroles-iaztask-get_applicationdata)<br/>         |
 | **Microsoft.Interop.Security.Azroles.IAzTask.BizRule**<br/>             | Lesen/Schreiben<br/> | [**BizRule-Eigenschaft von IAzTask**](/windows/desktop/api/Azroles/nf-azroles-iaztask-get_bizrule)<br/>                         |

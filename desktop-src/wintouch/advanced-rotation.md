@@ -1,6 +1,6 @@
 ---
 title: Erweiterte Drehung
-description: In diesem Abschnitt wird erläutert, wie ein Objekt basierend auf dem Ort rotiert wird, an dem der Benutzer die Drehungsbearbeitung vor ort macht.
+description: In diesem Abschnitt wird erläutert, wie sie ein Objekt drehen, je nach dem Ort, an dem der Benutzer die Drehungsmanipulation vor sich geht.
 ms.assetid: 56b339b1-a062-4c0e-91c8-aec08a17bc65
 keywords:
 - Windows Touch,Drehung
@@ -20,13 +20,13 @@ ms.locfileid: "118199516"
 ---
 # <a name="advanced-rotation"></a>Erweiterte Drehung
 
-In diesem Abschnitt wird erläutert, wie ein Objekt basierend auf dem Ort rotiert wird, an dem der Benutzer die Drehungsbearbeitung vor ort macht.
+In diesem Abschnitt wird erläutert, wie sie ein Objekt drehen, je nach dem Ort, an dem der Benutzer die Drehungsmanipulation vor sich geht.
 
 Die folgende Abbildung veranschaulicht zwei verschiedene Möglichkeiten, wie ein Objekt gedreht werden kann.
 
 ![Abbildung, die zwei Arten der Drehung mit einem Finger zeigt: um die Mitte oder um den Rand herum, mit dem Rand, der sowohl Drehung als auch Übersetzung einträgt](images/rotation.png)
 
-In Beispiel A wird das -Objekt um den Mittelpunkt des Objekts herum bearbeitet. In Beispiel B wird das -Objekt um den Mittelpunkt der Bearbeitung gedreht. Um bearbeitungen um einen anderen Punkt als den Mittelpunkt des Objekts zu unterstützen, müssen Sie eine zusammengesetzte Bearbeitung durchführen, die sowohl Drehung als auch Übersetzung ausführt. Der folgende Code zeigt, wie diese Bearbeitung durchgeführt und berechnet wird.
+In Beispiel A wird das -Objekt um den Mittelpunkt des Objekts herum bearbeitet. In Beispiel B wird das -Objekt um den Mittelpunkt der Manipulation gedreht. Um bearbeitungen um einen anderen Punkt als den Mittelpunkt des Objekts zu unterstützen, müssen Sie eine zusammengesetzte Bearbeitung durchführen, die sowohl Drehung als auch Übersetzung ausführt. Der folgende Code zeigt, wie diese Bearbeitung durchgeführt und berechnet wird.
 
 
 ```C++

@@ -1,313 +1,313 @@
 ---
-description: Die linecallfeature- \_ Konstanten geben Vorgänge an, die für eine bestimmte Adresse oder einen Aufruf aufgerufen werden können.
+description: Die LINECALLFEATURE-Konstanten geben Vorgänge an, die für eine bestimmte Adresse oder einen \_ bestimmten Aufruf aufgerufen werden können.
 ms.assetid: 8bb1d678-079c-4c83-b4a2-08fd7afdca9b
-title: LINECALLFEATURE_ Konstanten (TAPI. h)
+title: LINECALLFEATURE_ Konstanten (Tapi.h)
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: b8477b3bab058945a4a55ef13d1593cb5d635524
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 594376bc3ed117f75c0e5303eae108e5f22395506ad56e76a63b8b73a5bbe2e8
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106360881"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117761744"
 ---
-# <a name="linecallfeature_-constants"></a>Linecallfeature- \_ Konstanten
+# <a name="linecallfeature_-constants"></a>\_LINECALLFEATURE-Konstanten
 
-Die **linecallfeature \_** -Konstanten geben Vorgänge an, die für eine bestimmte Adresse oder einen Aufruf aufgerufen werden können.
+Die **LINECALLFEATURE-Konstanten \_** geben Vorgänge an, die für eine bestimmte Adresse oder einen bestimmten Aufruf aufgerufen werden können.
 
 <dl> <dt>
 
-<span id="LINECALLFEATURE_ACCEPT"></span><span id="linecallfeature_accept"></span>**linecallfeature- \_ Annahme**
+<span id="LINECALLFEATURE_ACCEPT"></span><span id="linecallfeature_accept"></span>**LINECALLFEATURE \_ ACCEPT**
 </dt> <dd> <dl> <dt>
 
 
 
-Akzeptieren Sie den-Befehl ( [**lineaccept**](/windows/desktop/api/Tapi/nf-tapi-lineaccept)).
+Akzeptieren Sie den Aufruf ( [**lineAccept**](/windows/desktop/api/Tapi/nf-tapi-lineaccept)).
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="LINECALLFEATURE_ADDTOCONF"></span><span id="linecallfeature_addtoconf"></span>**linecallfeature \_ addesconf**
+<span id="LINECALLFEATURE_ADDTOCONF"></span><span id="linecallfeature_addtoconf"></span>**LINECALLFEATURE \_ ADDTOCONF**
 </dt> <dd> <dl> <dt>
 
 
 
-Fügen Sie den-Befehl zur aktuellen Konferenz hinzu ( [**lineaddumconference**](/windows/desktop/api/Tapi/nf-tapi-lineaddtoconference)).
+Fügen Sie den Aufruf zur aktuellen Konferenz hinzu ( [**lineAddToConference**](/windows/desktop/api/Tapi/nf-tapi-lineaddtoconference)).
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="LINECALLFEATURE_ANSWER"></span><span id="linecallfeature_answer"></span>**linecallfeature- \_ Antwort**
+<span id="LINECALLFEATURE_ANSWER"></span><span id="linecallfeature_answer"></span>**LINECALLFEATURE-ANTWORT \_**
 </dt> <dd> <dl> <dt>
 
 
 
-Beantworten Sie den Anruf ( [**lineanswer**](/windows/desktop/api/Tapi/nf-tapi-lineanswer)).
+Beantworten Sie den Aufruf ( [**lineAnswer**](/windows/desktop/api/Tapi/nf-tapi-lineanswer)).
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="LINECALLFEATURE_BLINDTRANSFER"></span><span id="linecallfeature_blindtransfer"></span>**linecallfeature- \_ blintransfer**
+<span id="LINECALLFEATURE_BLINDTRANSFER"></span><span id="linecallfeature_blindtransfer"></span>**LINECALLFEATURE \_ BLINDTRANSFER**
 </dt> <dd> <dl> <dt>
 
 
 
-Führen Sie eine Blind Übertragung des Aufrufes ( [**lineblintransfer**](/windows/desktop/api/Tapi/nf-tapi-lineblindtransfer)) aus.
+Führen Sie eine blinde Übertragung für den Aufruf aus ( [**lineBlindTransfer**](/windows/desktop/api/Tapi/nf-tapi-lineblindtransfer)).
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="LINECALLFEATURE_COMPLETECALL"></span><span id="linecallfeature_completecall"></span>**\_completecalllinecallfeature**
+<span id="LINECALLFEATURE_COMPLETECALL"></span><span id="linecallfeature_completecall"></span>**LINECALLFEATURE \_ COMPLETECALL**
 </dt> <dd> <dl> <dt>
 
 
 
-Schließen Sie den-Befehl ( [**linecompletecall)**](/windows/desktop/api/Tapi/nf-tapi-linecompletecall)ab.
+Schließen Sie den Aufruf ab ( [**lineCompleteCall**](/windows/desktop/api/Tapi/nf-tapi-linecompletecall)).
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="LINECALLFEATURE_COMPLETETRANSF"></span><span id="linecallfeature_completetransf"></span>**linecallfeature \_ completetransf**
+<span id="LINECALLFEATURE_COMPLETETRANSF"></span><span id="linecallfeature_completetransf"></span>**LINECALLFEATURE \_ COMPLETETRANSF**
 </dt> <dd> <dl> <dt>
 
 
 
-Schließen Sie die Telefon Übertragung ( [**linecompletetransfer**](/windows/desktop/api/Tapi/nf-tapi-linecompletetransfer)) ab.
+Schließen Sie die Anrufübertragung ab ( [**lineCompleteTransfer**](/windows/desktop/api/Tapi/nf-tapi-linecompletetransfer)).
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="LINECALLFEATURE_DIAL"></span><span id="linecallfeature_dial"></span>**linecallfeature- \_ Dial**
+<span id="LINECALLFEATURE_DIAL"></span><span id="linecallfeature_dial"></span>**LINECALLFEATURE \_ DIAL**
 </dt> <dd> <dl> <dt>
 
 
 
-Wählen Sie die Ziel Nummer des Aufrufes ( [**linedial**](/windows/desktop/api/Tapi/nf-tapi-linedial)) aus.
+Wählen Sie die Zielnummer für den Anruf aus ( [**lineDial**](/windows/desktop/api/Tapi/nf-tapi-linedial)).
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="LINECALLFEATURE_DROP"></span><span id="linecallfeature_drop"></span>**linecallfeature- \_ Drop**
+<span id="LINECALLFEATURE_DROP"></span><span id="linecallfeature_drop"></span>**LINECALLFEATURE \_ DROP**
 </dt> <dd> <dl> <dt>
 
 
 
-Löschen Sie den-Befehl ( [**linedrop**](/windows/desktop/api/Tapi/nf-tapi-linedrop)).
+Drop the call ( [**lineDrop**](/windows/desktop/api/Tapi/nf-tapi-linedrop)).
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="LINECALLFEATURE_GATHERDIGITS"></span><span id="linecallfeature_gatherdigits"></span>**linecallfeature- \_ gatherdigits**
+<span id="LINECALLFEATURE_GATHERDIGITS"></span><span id="linecallfeature_gatherdigits"></span>**LINECALLFEATURE \_ GATHERDIGITS**
 </dt> <dd> <dl> <dt>
 
 
 
-Erfassen von Ziffern aus dem-Befehl ( [**linegatherdigits**](/windows/desktop/api/Tapi/nf-tapi-linegatherdigits)).
+Erfassen Sie Ziffern aus dem Aufruf ( [**lineGatherDigits**](/windows/desktop/api/Tapi/nf-tapi-linegatherdigits)).
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="LINECALLFEATURE_GENERATEDIGITS"></span><span id="linecallfeature_generatedigits"></span>**"generatedigits" in linecallfeature \_**
+<span id="LINECALLFEATURE_GENERATEDIGITS"></span><span id="linecallfeature_generatedigits"></span>**LINECALLFEATURE \_ GENERATEDIGITS**
 </dt> <dd> <dl> <dt>
 
 
 
-Generieren von Ziffern im-Befehl ( [**linegeneratedigits**](/windows/desktop/api/Tapi/nf-tapi-linegeneratedigits)).
+Generieren Sie Ziffern für den Aufruf ( [**lineGenerateDigits**](/windows/desktop/api/Tapi/nf-tapi-linegeneratedigits)).
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="LINECALLFEATURE_GENERATETONE"></span><span id="linecallfeature_generatetone"></span>**linecallfeature \_ generatetone**
+<span id="LINECALLFEATURE_GENERATETONE"></span><span id="linecallfeature_generatetone"></span>**LINECALLFEATURE \_ GENERATETONE**
 </dt> <dd> <dl> <dt>
 
 
 
-Generieren von Tönen im-Befehl ( [**linegeneratetone**](/windows/desktop/api/Tapi/nf-tapi-linegeneratetone)).
+Generieren Von Tönen beim Aufruf ( [**lineGenerateTone**](/windows/desktop/api/Tapi/nf-tapi-linegeneratetone)).
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="LINECALLFEATURE_HOLD"></span><span id="linecallfeature_hold"></span>**linecallfeature \_ halten**
+<span id="LINECALLFEATURE_HOLD"></span><span id="linecallfeature_hold"></span>**LINECALLFEATURE \_ HOLD**
 </dt> <dd> <dl> <dt>
 
 
 
-Halten Sie den aufrufenden ( [**linehold**](/windows/desktop/api/Tapi/nf-tapi-linehold)).
+Halten Sie den Aufruf zurück [**(lineHold**](/windows/desktop/api/Tapi/nf-tapi-linehold)).
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="LINECALLFEATURE_MONITORDIGITS"></span><span id="linecallfeature_monitordigits"></span>**linecallfeature- \_ monitordigits**
+<span id="LINECALLFEATURE_MONITORDIGITS"></span><span id="linecallfeature_monitordigits"></span>**LINECALLFEATURE \_ MONITORDIGITS**
 </dt> <dd> <dl> <dt>
 
 
 
-Überwachen Sie die Ziffern des Aufrufes ( [**linemonitordigits**](/windows/desktop/api/Tapi/nf-tapi-linemonitordigits) ).
+Überwachen von Ziffern im Aufruf ( [**lineMonitorDigits**](/windows/desktop/api/Tapi/nf-tapi-linemonitordigits) ).
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="LINECALLFEATURE_MONITORMEDIA"></span><span id="linecallfeature_monitormedia"></span>**linecallfeature- \_ monitormedia**
+<span id="LINECALLFEATURE_MONITORMEDIA"></span><span id="linecallfeature_monitormedia"></span>**LINECALLFEATURE \_ MONITORMEDIA**
 </dt> <dd> <dl> <dt>
 
 
 
-Überwachen Sie die Medien des Aufrufes ( [**linemonitormedia**](/windows/desktop/api/Tapi/nf-tapi-linemonitormedia)).
+Überwachen Sie die Medien des Aufrufs ( [**lineMonitorMedia**](/windows/desktop/api/Tapi/nf-tapi-linemonitormedia)).
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="LINECALLFEATURE_MONITORTONES"></span><span id="linecallfeature_monitortones"></span>**linecallfeature- \_ monitortöne**
+<span id="LINECALLFEATURE_MONITORTONES"></span><span id="linecallfeature_monitortones"></span>**LINECALLFEATURE \_ MONITORTONES**
 </dt> <dd> <dl> <dt>
 
 
 
-Überwachen Sie die Töne des Aufrufes ( [**linemonitortones**](/windows/desktop/api/Tapi/nf-tapi-linemonitortones)).
+Überwachen Von Tönen beim Aufruf ( [**lineMonitorTones**](/windows/desktop/api/Tapi/nf-tapi-linemonitortones)).
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="LINECALLFEATURE_PARK"></span><span id="linecallfeature_park"></span>**linecallfeature- \_ Park**
+<span id="LINECALLFEATURE_PARK"></span><span id="linecallfeature_park"></span>**LINECALLFEATURE \_ PARK**
 </dt> <dd> <dl> <dt>
 
 
 
-Park des Aufrufes ( [**linepark**](/windows/desktop/api/Tapi/nf-tapi-linepark)).
+Parken Sie den Aufruf ( [**linePark**](/windows/desktop/api/Tapi/nf-tapi-linepark)).
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="LINECALLFEATURE_PREPAREADDCONF"></span><span id="linecallfeature_prepareaddconf"></span>**linecallfeature \_ prepareaddconf**
+<span id="LINECALLFEATURE_PREPAREADDCONF"></span><span id="linecallfeature_prepareaddconf"></span>**LINECALLFEATURE \_ PREPAREADDCONF**
 </dt> <dd> <dl> <dt>
 
 
 
-Bereiten Sie den-Befehl zusätzlich zu einer Konferenz ( [**lineprepareaddumconference**](/windows/desktop/api/Tapi/nf-tapi-lineprepareaddtoconference)) vor.
+Bereiten Sie den Aufruf für die Ergänzung zu einer Konferenz vor ( [**linePrepareAddToConference**](/windows/desktop/api/Tapi/nf-tapi-lineprepareaddtoconference)).
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="LINECALLFEATURE_REDIRECT"></span><span id="linecallfeature_redirect"></span>**linecallfeature- \_ Umleitung**
+<span id="LINECALLFEATURE_REDIRECT"></span><span id="linecallfeature_redirect"></span>**LINECALLFEATURE-UMLEITUNG \_**
 </dt> <dd> <dl> <dt>
 
 
 
-Umleiten des Aufrufes an ein anderes Ziel ( [**lineredirect**](/windows/desktop/api/Tapi/nf-tapi-lineredirect)).
+Leiten Sie den Aufruf an ein anderes Ziel um ( [**lineRedirect**](/windows/desktop/api/Tapi/nf-tapi-lineredirect)).
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="LINECALLFEATURE_RELEASEUSERUSERINFO"></span><span id="linecallfeature_releaseuseruserinfo"></span>**linecallfeature \_ releaseuseruserinfo**
+<span id="LINECALLFEATURE_RELEASEUSERUSERINFO"></span><span id="linecallfeature_releaseuseruserinfo"></span>**LINECALLFEATURE \_ RELEASEUSERUSERINFO**
 </dt> <dd> <dl> <dt>
 
 
 
-Aktuelle Benutzer Benutzerinformationen ( [**linereleaseuseruserinfo**](/windows/desktop/api/Tapi/nf-tapi-linereleaseuseruserinfo)) freigeben.
+Geben Sie aktuelle Benutzerinformationen frei ( [**lineReleaseUserUserInfo**](/windows/desktop/api/Tapi/nf-tapi-linereleaseuseruserinfo)).
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="LINECALLFEATURE_REMOVEFROMCONF"></span><span id="linecallfeature_removefromconf"></span>**linecallfeature \_ removefromconf**
+<span id="LINECALLFEATURE_REMOVEFROMCONF"></span><span id="linecallfeature_removefromconf"></span>**LINECALLFEATURE \_ REMOVEFROMCONF**
 </dt> <dd> <dl> <dt>
 
 
 
-Entfernen Sie den-Befehl von der Konferenz ( [**lineremovefromconference**](/windows/desktop/api/Tapi/nf-tapi-lineremovefromconference)).
+Entfernen Sie den Aufruf aus der Konferenz ( [**lineRemoveFromConference**](/windows/desktop/api/Tapi/nf-tapi-lineremovefromconference)).
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="LINECALLFEATURE_SECURECALL"></span><span id="linecallfeature_securecall"></span>**linecallfeature \_ securecall**
+<span id="LINECALLFEATURE_SECURECALL"></span><span id="linecallfeature_securecall"></span>**LINECALLFEATURE \_ SECURECALL**
 </dt> <dd> <dl> <dt>
 
 
 
-Sichern Sie den-Befehl ( [**linesecurecall**](/windows/desktop/api/Tapi/nf-tapi-linesecurecall)).
+Sichern Sie den Aufruf ( [**lineSecureCall**](/windows/desktop/api/Tapi/nf-tapi-linesecurecall)).
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="LINECALLFEATURE_SENDUSERUSER"></span><span id="linecallfeature_senduseruser"></span>**linecallfeature \_ senduseruser**
+<span id="LINECALLFEATURE_SENDUSERUSER"></span><span id="linecallfeature_senduseruser"></span>**LINECALLFEATURE \_ SENDUSERUSER**
 </dt> <dd> <dl> <dt>
 
 
 
-Benutzer Benutzerinformationen senden ( [**linesenduseruserinfo**](/windows/desktop/api/Tapi/nf-tapi-linesenduseruserinfo)).
+Senden von Benutzerinformationen ( [**lineSendUserUserInfo**](/windows/desktop/api/Tapi/nf-tapi-linesenduseruserinfo)).
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="LINECALLFEATURE_SETCALLDATA"></span><span id="linecallfeature_setcalldata"></span>**linecallfeature \_ setcalldata**
+<span id="LINECALLFEATURE_SETCALLDATA"></span><span id="linecallfeature_setcalldata"></span>**LINECALLFEATURE \_ SETCALLDATA**
 </dt> <dd> <dl> <dt>
 
 
 
-Legen Sie den Aufruf Datenpuffer ( [**linesetcalldata**](/windows/desktop/api/Tapi/nf-tapi-linesetcalldata)) fest. (TAPI-Versionen 2,0 und höher).
+Legen Sie den Aufrufdatenpuffer fest ( [**lineSetCallData**](/windows/desktop/api/Tapi/nf-tapi-linesetcalldata)). (TAPI-Versionen 2.0 und höher).
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="LINECALLFEATURE_SETCALLPARAMS"></span><span id="linecallfeature_setcallparams"></span>**linecallfeature \_ setcallpara**
+<span id="LINECALLFEATURE_SETCALLPARAMS"></span><span id="linecallfeature_setcallparams"></span>**LINECALLFEATURE \_ SETCALLPARAMS**
 </dt> <dd> <dl> <dt>
 
 
 
-Festlegen von Aufruf Parametern ( [**linesetcallparameams**](/windows/desktop/api/Tapi/nf-tapi-linesetcallparams)).
+Festlegen von Aufrufparametern ( [**lineSetCallParams**](/windows/desktop/api/Tapi/nf-tapi-linesetcallparams)).
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="LINECALLFEATURE_SETMEDIACONTROL"></span><span id="linecallfeature_setmediacontrol"></span>**linecallfeature \_ setmediacontrol**
+<span id="LINECALLFEATURE_SETMEDIACONTROL"></span><span id="linecallfeature_setmediacontrol"></span>**LINECALLFEATURE \_ SETMEDIACONTROL**
 </dt> <dd> <dl> <dt>
 
 
 
-Mediensteuer Elemente festlegen ( [**linesetmediacontrol**](/windows/desktop/api/Tapi/nf-tapi-linesetmediacontrol)).
+Festlegen von Mediensteuerelementen ( [**lineSetMediaControl**](/windows/desktop/api/Tapi/nf-tapi-linesetmediacontrol)).
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="LINECALLFEATURE_SETQOS"></span><span id="linecallfeature_setqos"></span>**linecallfeature \_ setqos**
+<span id="LINECALLFEATURE_SETQOS"></span><span id="linecallfeature_setqos"></span>**LINECALLFEATURE \_ SETQOS**
 </dt> <dd> <dl> <dt>
 
 
 
-Legen Sie QoS-Ebenen für den Aufruf ( [**linesetcallqualityofservice**](/windows/desktop/api/Tapi/nf-tapi-linesetcallqualityofservice)) fest. (TAPI-Versionen 2,0 und höher).
+Legen Sie QOS-Ebenen für den Aufruf fest ( [**lineSetCallQualityOfService**](/windows/desktop/api/Tapi/nf-tapi-linesetcallqualityofservice)). (TAPI-Versionen 2.0 und höher).
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="LINECALLFEATURE_SETTERMINAL"></span><span id="linecallfeature_setterminal"></span>**linecallfeature \_ setterminal**
+<span id="LINECALLFEATURE_SETTERMINAL"></span><span id="linecallfeature_setterminal"></span>**LINECALLFEATURE \_ SETTERMINAL**
 </dt> <dd> <dl> <dt>
 
 
 
-Legen Sie das Terminal fest, das mit dem-Befehl ( [**linesetterminal**](/windows/desktop/api/Tapi/nf-tapi-linesetterminal)) verwendet werden soll.
+Legen Sie das Terminal fest, das mit dem Aufruf ( [**lineSetTerminal ) verwendet werden soll.**](/windows/desktop/api/Tapi/nf-tapi-linesetterminal)
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="LINECALLFEATURE_SETTREATMENT"></span><span id="linecallfeature_settreatment"></span>**linecallfeature- \_ settrerelierung**
+<span id="LINECALLFEATURE_SETTREATMENT"></span><span id="linecallfeature_settreatment"></span>**LINECALLFEATURE \_ SETTREATMENT**
 </dt> <dd> <dl> <dt>
 
 
 
-Legen Sie die Aufruf Behandlung ( [**linesetcalltreatment**](/windows/desktop/api/Tapi/nf-tapi-linesetcalltreatment)) fest. (TAPI-Versionen 2,0 und höher).
+Festlegen der Aufrufbehandlung ( [**lineSetCallTreatment**](/windows/desktop/api/Tapi/nf-tapi-linesetcalltreatment)). (TAPI-Versionen 2.0 und höher).
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="LINECALLFEATURE_SETUPCONF"></span><span id="linecallfeature_setupconf"></span>**linecallfeature \_ setupconf**
+<span id="LINECALLFEATURE_SETUPCONF"></span><span id="linecallfeature_setupconf"></span>**LINECALLFEATURE \_ SETUPCONF**
 </dt> <dd> <dl> <dt>
 
 
 
-Richten Sie eine Konferenz ein ( [**linesetupconference**](/windows/desktop/api/Tapi/nf-tapi-linesetupconference)).
+Richten Sie eine Konferenz ein ( [**lineSetupConference**](/windows/desktop/api/Tapi/nf-tapi-linesetupconference)).
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="LINECALLFEATURE_SETUPTRANSFER"></span><span id="linecallfeature_setuptransfer"></span>**linecallfeature \_ setuptransfer**
+<span id="LINECALLFEATURE_SETUPTRANSFER"></span><span id="linecallfeature_setuptransfer"></span>**LINECALLFEATURE \_ SETUPTRANSFER**
 </dt> <dd> <dl> <dt>
 
 
@@ -317,33 +317,33 @@ Richten Sie eine Übertragung ein ( [**lineSetupTransfer**](/windows/desktop/api
 
 </dt> </dl> </dd> <dt>
 
-<span id="LINECALLFEATURE_SWAPHOLD"></span><span id="linecallfeature_swaphold"></span>**linecallfeature- \_ Austausch**
+<span id="LINECALLFEATURE_SWAPHOLD"></span><span id="linecallfeature_swaphold"></span>**LINECALLFEATURE \_ SWAPHOLD**
 </dt> <dd> <dl> <dt>
 
 
 
-Ausführen eines Swap-Vorgangs ( [**lineswaphold**](/windows/desktop/api/Tapi/nf-tapi-lineswaphold)).
+Ausführen eines Austausch-Hold-Vorgangs [**(lineSwapHold**](/windows/desktop/api/Tapi/nf-tapi-lineswaphold)).
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="LINECALLFEATURE_UNHOLD"></span><span id="linecallfeature_unhold"></span>**Unhold von linecallfeature \_**
+<span id="LINECALLFEATURE_UNHOLD"></span><span id="linecallfeature_unhold"></span>**LINECALLFEATURE \_ UNHOLD**
 </dt> <dd> <dl> <dt>
 
 
 
-Halten Sie den Rückruf ( [**lineunhold**](/windows/desktop/api/Tapi/nf-tapi-lineunhold)) gedrückt.
+Halten Sie den Aufruf aus [**(lineUnhold**](/windows/desktop/api/Tapi/nf-tapi-lineunhold)).
 
 
 </dt> </dl> </dd> </dl>
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
 Keine Erweiterbarkeit. Alle 32 Bits sind reserviert.
 
-Diese Konstanten werden sowohl in [**lineaddresscaps**](/windows/desktop/api/Tapi/ns-tapi-lineaddresscaps) (von [**linegetaddresscaps**](/windows/desktop/api/Tapi/nf-tapi-linegetaddresscaps)zurückgegeben) als auch in [**linecallstatus**](/windows/desktop/api/Tapi/ns-tapi-linecallstatus) (zurückgegeben von [**linegetcallstatus**](/windows/desktop/api/Tapi/nf-tapi-linegetcallstatus)) verwendet. **Lineaddresscaps** meldet die Verfügbarkeit der Aufruf Funktionen für die angegebene Adresse. Diese Informationen werden von einer Anwendung beim Initialisieren verwendet, um zu bestimmen, was möglicherweise später möglich ist, wenn Aufrufe vorhanden sind. Für den angegebenen Aufruf meldet **linecallstatus** , welche Aufruf Features aufgerufen werden können, während sich der Aufruf im aktuellen Aufruf Zustand befindet. Letztere übernimmt die Berechtigung zum Abrufen von Berechtigungen. Eine Anwendung würde diese Bestimmung nach dem Abrufen von Zustandsänderungen dynamisch vornehmen.
+Diese Konstanten werden sowohl in [**LINEADDRESSCAPS**](/windows/desktop/api/Tapi/ns-tapi-lineaddresscaps) (von [**lineGetAddressCaps**](/windows/desktop/api/Tapi/nf-tapi-linegetaddresscaps)zurückgegeben) als auch in [**LINECALLSTATUS**](/windows/desktop/api/Tapi/ns-tapi-linecallstatus) (von [**lineGetCallStatus zurückgegeben) verwendet.**](/windows/desktop/api/Tapi/nf-tapi-linegetcallstatus) **LINEADDRESSCAPS meldet** die Verfügbarkeit der Aufruffunktionen unter der angegebenen Adresse. Eine Anwendung verwendet diese Informationen, wenn sie initialisiert wird, um zu bestimmen, was sie später tun kann, wenn Aufrufe vorhanden sind. Für den angegebenen Aufruf meldet **LINECALLSTATUS,** welche Aufruffeatures aufgerufen werden können, während sich der Aufruf im aktuellen Aufrufzustand befindet. Letztere berücksichtigt Aufrufberechtigungen. Eine Anwendung würde diese Bestimmung dynamisch vornehmen, nachdem sich der Aufrufzustand geändert hat.
 
-Der Wert von "linecallfeature \_ releaseuseruserinfo" ist neu in TAPI 1,4. Es gibt keine Überlegungen zur Abwärtskompatibilität. Ein Dienstanbieter kann diesen Wert auch dann in relevanten Membern (in [**lineaddresscaps**](/windows/desktop/api/Tapi/ns-tapi-lineaddresscaps) und [**linecallstatus**](/windows/desktop/api/Tapi/ns-tapi-linecallstatus)) zurückgeben, wenn auf dem Zeilen Gerät ältere API-Versionen ausgehandelt wurden.
+Der LINECALLFEATURE \_ RELEASEUSERUSERINFO-Wert ist neu in TAPI 1.4. Es gibt keine Überlegungen zur Abwärtskompatibilität. Ein Dienstanbieter kann diesen Wert auch dann in relevanten Membern zurückgeben (in [**LINEADDRESSCAPS**](/windows/desktop/api/Tapi/ns-tapi-lineaddresscaps) und [**LINECALLSTATUS),**](/windows/desktop/api/Tapi/ns-tapi-linecallstatus)wenn ältere API-Versionen auf dem Liniengerät ausgehandelt wurden.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -351,25 +351,25 @@ Der Wert von "linecallfeature \_ releaseuseruserinfo" ist neu in TAPI 1,4. Es gi
 
 | Anforderung | Wert |
 |-------------------------|-----------------------------------------------------------------------------------|
-| TAPI-Version<br/> | Erfordert TAPI 2,0 oder höher<br/>                                             |
-| Header<br/>       | <dl> <dt>TAPI. h</dt> </dl> |
+| TAPI-Version<br/> | Erfordert TAPI 2.0 oder höher<br/>                                             |
+| Header<br/>       | <dl> <dt>Tapi.h</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Lineaddresscaps**](/windows/desktop/api/Tapi/ns-tapi-lineaddresscaps)
+[**LINEADDRESSCAPS**](/windows/desktop/api/Tapi/ns-tapi-lineaddresscaps)
 </dt> <dt>
 
-[**Linecallstatus**](/windows/desktop/api/Tapi/ns-tapi-linecallstatus)
+[**LINECALLSTATUS**](/windows/desktop/api/Tapi/ns-tapi-linecallstatus)
 </dt> <dt>
 
-[**linegetaddresscaps**](/windows/desktop/api/Tapi/nf-tapi-linegetaddresscaps)
+[**lineGetAddressCaps**](/windows/desktop/api/Tapi/nf-tapi-linegetaddresscaps)
 </dt> <dt>
 
-[**linegetcallstatus**](/windows/desktop/api/Tapi/nf-tapi-linegetcallstatus)
+[**lineGetCallStatus**](/windows/desktop/api/Tapi/nf-tapi-linegetcallstatus)
 </dt> </dl>
 
  

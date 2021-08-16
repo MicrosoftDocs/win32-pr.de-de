@@ -1,29 +1,29 @@
 ---
-title: Konto Ablauf (WinNT-Anbieter)
-description: Wenn Sie den WinNT-Anbieter verwenden, kann das Ablaufdatum des Kontos mithilfe der IADsUser. AccountExpirationDate-Eigenschaft festgelegt werden.
+title: Kontoablauf (WinNT-Anbieter)
+description: Bei Verwendung des WinNT-Anbieters kann das Ablaufdatum des Kontos mithilfe der IADsUser.AccountExpirationDate-Eigenschaft festgelegt werden.
 ms.assetid: 1d887a33-a3ae-4c61-88fa-2764a6bbf6bf
 ms.tgt_platform: multiple
 keywords:
-- Konto Ablauf ADSI, WinNT-Anbieter
-- WinNT-Anbieter ADSI, Beispiele für die Benutzerverwaltung, Konto Ablauf
+- Kontoablauf ADSI, WinNT-Anbieter
+- WinNT-Anbieter ADSI , Benutzerverwaltungsbeispiele, Kontoablauf
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 4936004cbd68c853f5e6d5c76a405f2a8340d22a
-ms.sourcegitcommit: 6515eef99ca0d1bbe3e27d4575e9986f5255f277
+ms.openlocfilehash: 4fd23973a4de31fed629428be9f4df1b6cade34e77f78680a5f87c9d55c42234
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/10/2021
-ms.locfileid: "106353698"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117838410"
 ---
-# <a name="account-expiration-winnt-provider"></a>Konto Ablauf (WinNT-Anbieter)
+# <a name="account-expiration-winnt-provider"></a>Kontoablauf (WinNT-Anbieter)
 
-Wenn Sie den WinNT-Anbieter verwenden, kann das Ablaufdatum des Kontos mithilfe der [**IADsUser. AccountExpirationDate**](iadsuser-property-methods.md) -Eigenschaft festgelegt werden.
+Bei Verwendung des WinNT-Anbieters kann das Ablaufdatum des Kontos mithilfe der [**IADsUser.AccountExpirationDate-Eigenschaft festgelegt**](iadsuser-property-methods.md) werden.
 
-Um das Ablaufdatum des Kontos festzulegen, legen Sie die [**IADsUser. AccountExpirationDate**](iadsuser-property-methods.md) -Eigenschaft auf den gewünschten Datumswert fest. Um das Ablaufdatum des Kontos so festzulegen, dass es nie abläuft, legen Sie diese Eigenschaft auf "January 1, 1970" fest.
+Legen Sie zum Festlegen des Ablaufdatums des Kontos die [**IADsUser.AccountExpirationDate-Eigenschaft**](iadsuser-property-methods.md) auf den gewünschten Datumswert fest. Legen Sie diese Eigenschaft auf "1. Januar 1970" fest, um das Ablaufdatum des Kontos so zu festlegen, dass es nie abläuft.
 
-## <a name="example-1"></a>Beispiel 1
+## <a name="example-1"></a>Beispiel 1
 
-Im folgenden Codebeispiel wird gezeigt, wie das Ablaufdatum des Kontos mithilfe Visual Basic mit ADSI festgelegt wird.
+Das folgende Codebeispiel zeigt, wie Sie das Ablaufdatum des Kontos mithilfe von Visual Basic ADSI festlegen.
 
 
 ```VB
@@ -42,7 +42,7 @@ usr.SetInfo
 
 ## <a name="example-2"></a>Beispiel 2
 
-Im folgenden Codebeispiel wird gezeigt, wie das Ablaufdatum des Kontos mithilfe von C++ mit ADSI festgelegt wird.
+Das folgende Codebeispiel zeigt, wie Sie das Ablaufdatum des Kontos mit C++ mit ADSI festlegen.
 
 
 ```C++

@@ -1,5 +1,5 @@
 ---
-description: Stellt eine Adresse in der Master Dateitabelle (MFT) dar. Die Adresse wird mit einer zirkulär wiederverwendeten Sequenznummer gekennzeichnet, die zum Zeitpunkt der Gültigkeit des MFT-Segment Verweises festgelegt wird.
+description: Stellt eine Adresse in der Masterdateitabelle (Master File Table, MFT) dar. Die Adresse wird mit einer zirkulären wiederverwendeten Sequenznummer gekennzeichnet, die zum Zeitpunkt der Gültigkeit des MFT-Segmentverweises festgelegt wurde.
 ms.assetid: 59d83b95-83fb-4630-8ce4-f58441c748ab
 title: MFT_SEGMENT_REFERENCE Struktur
 ms.topic: reference
@@ -12,18 +12,18 @@ api_name:
 api_type:
 - NA
 api_location: ''
-ms.openlocfilehash: beabe7620dadd01b25b3556715b33e2f10c2c230
-ms.sourcegitcommit: c7add10d695482e1ceb72d62b8a4ebd84ea050f7
+ms.openlocfilehash: 0ef3ad4e727465b5ceb24c1ecc785f62b747da8113b8853bffc3431604089066
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104125642"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117827086"
 ---
-# <a name="mft_segment_reference-structure"></a>MFT- \_ Segment \_ Verweis Struktur
+# <a name="mft_segment_reference-structure"></a>MFT \_ SEGMENT \_ REFERENCE-Struktur
 
-\[Diese Struktur gilt nur für Version 3 von NTFS-Volumes. Sie kann in zukünftigen Versionen geändert werden.\]
+\[Diese Struktur ist nur für Version 3 von NTFS-Volumes gültig. Sie kann in zukünftigen Versionen geändert werden.\]
 
-Stellt eine Adresse in der Master Dateitabelle (MFT) dar. Die Adresse wird mit einer zirkulär wiederverwendeten Sequenznummer gekennzeichnet, die zum Zeitpunkt der Gültigkeit des MFT-Segment Verweises festgelegt wird.
+Stellt eine Adresse in der Masterdateitabelle (Master File Table, MFT) dar. Die Adresse wird mit einer zirkulären wiederverwendeten Sequenznummer gekennzeichnet, die zum Zeitpunkt der Gültigkeit des MFT-Segmentverweises festgelegt wurde.
 
 ## <a name="syntax"></a>Syntax
 
@@ -42,17 +42,17 @@ typedef struct _MFT_SEGMENT_REFERENCE {
 
 <dl> <dt>
 
-**Segmentnumlowpart**
+**SegmentNumberLowPart**
 </dt> <dd>
 
-Der niedrige Teil der Segment Nummer.
+Der untere Teil der Segmentnummer.
 
 </dd> <dt>
 
-**Segmentnumhighpart**
+**SegmentNumberHighPart**
 </dt> <dd>
 
-Der hohe Teil der Segment Nummer.
+Der hohe Teil der Segmentnummer.
 
 </dd> <dt>
 
@@ -63,23 +63,23 @@ Die Sequenznummer ungleich 0 (null). Der Wert 0 ist reserviert.
 
 </dd> </dl>
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Beachten Sie, dass es für diese Struktur keine zugeordnete Header Datei gibt.
+Beachten Sie, dass für diese Struktur keine Headerdatei zugeordnet ist.
 
-Diese Struktur Definition ist nur für die Hauptversion 3 und die neben Version 0 oder 1 gültig, wie von [**FSCTL \_ get \_ NTFS \_ Volume \_ Data**](/windows/win32/api/winioctl/ni-winioctl-fsctl_get_ntfs_volume_data)berichtet.
+Diese Strukturdefinition ist nur für Hauptversion 3 und Nebenversion 0 oder 1 gültig, wie von [**FSCTL \_ GET \_ NTFS \_ VOLUME \_ DATA**](/windows/win32/api/winioctl/ni-winioctl-fsctl_get_ntfs_volume_data)gemeldet.
 
-Der **Datentyp " \_ Dateiverweis** " ist wie folgt definiert.
+Der **FILE \_ REFERENCE-Datentyp** ist wie folgt definiert.
 
 ``` syntax
 typedef MFT_SEGMENT_REFERENCE FILE_REFERENCE, *PFILE_REFERENCE;
 ```
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[Master Dateitabelle](master-file-table.md)
+[Masterdateitabelle](master-file-table.md)
 </dt> </dl>
 
  

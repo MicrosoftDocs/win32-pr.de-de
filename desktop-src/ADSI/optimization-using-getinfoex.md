@@ -1,28 +1,28 @@
 ---
-title: Optimierung mithilfe von "GetInfoEx"
+title: Optimierung mit GetInfoEx
 description: Wird verwendet, um bestimmte Attributwerte aus dem zugrunde liegenden Verzeichnisdienst in den lokalen Cache zu laden.
 ms.assetid: e6111957-22cb-4473-9814-5bcbc79583b2
 ms.tgt_platform: multiple
 keywords:
 - Optimierung mit GetInfoEx ADSI
-- GetInfoEx ADSI, Optimierung mithilfe von IADs GetInfoEx
-- ADSI ADSI, using, Optimierung mithilfe der IADs GetInfoEx-Methode
+- GetInfoEx ADSI , Optimierung mit IADs GetInfoEx
+- ADSI ADSI , Using, Optimization Using the IADs GetInfoEx Method
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: b522093fff00700cf35b864edde2a6ae7f8f9922
-ms.sourcegitcommit: b0ebdefc3dcd5c04bede94091833aa1015a2f95c
+ms.openlocfilehash: d4daf75fa3961a57996d6ae51d237d27835213a25a20c52452b5896c6224964a
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/21/2020
-ms.locfileid: "104316454"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117838994"
 ---
-# <a name="optimization-using-getinfoex"></a>Optimierung mithilfe von "GetInfoEx"
+# <a name="optimization-using-getinfoex"></a>Optimierung mit GetInfoEx
 
-Die [**IADs. GetInfoEx**](/windows/desktop/api/Iads/nf-iads-iads-getinfoex) -Methode wird verwendet, um bestimmte Attributwerte aus dem zugrunde liegenden Verzeichnisdienst in den lokalen Cache zu laden. Diese Methode lädt nur die angegebenen Attributwerte in den lokalen Cache. Die [**IADs. GetInfo**](/windows/desktop/api/Iads/nf-iads-iads-getinfo) -Methode wird verwendet, um alle Attributwerte in den lokalen Cache zu laden.
+Die [**IADs.GetInfoEx-Methode**](/windows/desktop/api/Iads/nf-iads-iads-getinfoex) wird verwendet, um bestimmte Attributwerte aus dem zugrunde liegenden Verzeichnisdienst in den lokalen Cache zu laden. Diese Methode lädt nur die angegebenen Attributwerte in den lokalen Cache. Die [**IADs.GetInfo-Methode**](/windows/desktop/api/Iads/nf-iads-iads-getinfo) wird verwendet, um alle Attributwerte in den lokalen Cache zu laden.
 
-Die [**IADs. GetInfoEx**](/windows/desktop/api/Iads/nf-iads-iads-getinfoex) -Methode ruft bestimmte aktuelle Werte für die Eigenschaften eines Active Directory Objekts aus dem zugrunde liegenden Verzeichnis Speicher ab und aktualisiert die zwischengespeicherten Werte.
+Die [**IADs.GetInfoEx-Methode**](/windows/desktop/api/Iads/nf-iads-iads-getinfoex) ruft bestimmte aktuelle Werte für die Eigenschaften eines Active Directory-Objekts aus dem zugrunde liegenden Verzeichnisspeicher ab und aktualisiert die zwischengespeicherten Werte.
 
-Wenn bereits ein Wert im Eigenschafts Cache vorhanden ist, wird der zwischengespeicherte Wert anstelle des aktuellen Werts aus dem zugrunde liegenden Verzeichnis abgerufen, wenn die [**IADs. Get**](/windows/desktop/api/Iads/nf-iads-iads-get) -oder [**IADs. Getex**](/windows/desktop/api/Iads/nf-iads-iads-getex) -Methode aufgerufen wird, ohne dass zuerst " [**IADs. GetInfoEx**](/windows/desktop/api/Iads/nf-iads-iads-getinfoex) " für dieses Attribut aufgerufen wird. Dies kann bewirken, dass aktualisierte Attributwerte überschrieben werden, wenn der lokale Cache geändert wurde, die Werte jedoch nicht mit einem Aufrufen der [**IADs. * tinfo**](/windows/desktop/api/Iads/nf-iads-iads-setinfo) -Methode in den zugrunde liegenden Verzeichnisdienst übertragen wurden. Die empfohlene Methode zur Vermeidung von zwischen Speicherungs Problemen besteht darin, die Attribut Wertänderungen immer zu übertragen, indem **IADs. SetInfo** aufgerufen wird, bevor [**IADs. GetInfo**](/windows/desktop/api/Iads/nf-iads-iads-getinfo)aufgerufen wird
+Wenn jedoch bereits ein Wert im Eigenschaftencache vorhanden ist, ruft der Aufruf der [**IADs.Get-**](/windows/desktop/api/Iads/nf-iads-iads-get) oder [**IADs.GetEx-Methode,**](/windows/desktop/api/Iads/nf-iads-iads-getex) ohne zuerst [**IADs.GetInfoEx**](/windows/desktop/api/Iads/nf-iads-iads-getinfoex) für dieses Attribut aufzurufen, den zwischengespeicherten Wert anstelle des aktuellen Werts aus dem zugrunde liegenden Verzeichnis ab. Dies kann dazu führen, dass aktualisierte Attributwerte überschrieben werden, wenn der lokale Cache geändert wurde, aber für die Werte kein Commit an den zugrunde liegenden Verzeichnisdienst mit einem Aufruf der [**IADs.SetInfo-Methode**](/windows/desktop/api/Iads/nf-iads-iads-setinfo) ausgeführt wurde. Die empfohlene Methode zum Vermeiden von Zwischenspeicherungsproblemen besteht darin, Attributwertänderungen immer durch Aufrufen von **IADs.SetInfo** vor dem Aufrufen von [**IADs.GetInfo**](/windows/desktop/api/Iads/nf-iads-iads-getinfo)zu committen.
 
 
 ```VB
@@ -70,12 +70,12 @@ Cleanup:
 
 
 
-## <a name="retrieving-active-directory-constructed-attributes"></a>Abrufen Active Directory konstruierter Attribute
+## <a name="retrieving-active-directory-constructed-attributes"></a>Abrufen von von Active Directory konstruierten Attributen
 
-In Active Directory werden die meisten konstruierten Attribute abgerufen und zwischengespeichert, wenn die [**IADs. GetInfo**](/windows/desktop/api/Iads/nf-iads-iads-getinfo) -Methode aufgerufen wird ([**IADs. Get**](/windows/desktop/api/Iads/nf-iads-iads-get) führt einen impliziten **IADs. GetInfo** -Aufruf aus, wenn der Cache leer ist). Einige konstruierte Attribute werden jedoch nicht automatisch abgerufen und zwischengespeichert. Daher ist es erforderlich, dass die [**IADs. GetInfoEx**](/windows/desktop/api/Iads/nf-iads-iads-getinfoex) -Methode explizit aufgerufen wird, um Sie abzurufen. In Active Directory wird das Attribut [**CanonicalName**](/windows/desktop/ADSchema/a-canonicalname) beispielsweise nicht abgerufen, wenn die **IADs. GetInfo** -Methode aufgerufen wird und **IADs. Get** die **E \_ ADS- \_ Eigenschaft \_ nicht \_ gefunden** zurückgibt. Die **IADs. GetInfoEx** -Methode muss aufgerufen werden, um das **CanonicalName** -Attribut abzurufen. Diese konstruierten Attribute werden auch nicht mithilfe der [**IADsPropertyList**](/windows/desktop/api/Iads/nn-iads-iadspropertylist) -Schnittstelle zum Auflisten der Attribute abgerufen.
+In Active Directory werden die meisten konstruierten Attribute abgerufen und zwischengespeichert, wenn die [**IADs.GetInfo-Methode**](/windows/desktop/api/Iads/nf-iads-iads-getinfo) aufgerufen wird ([**IADs.Get**](/windows/desktop/api/Iads/nf-iads-iads-get) führt einen impliziten **IADs.GetInfo-Aufruf** aus, wenn der Cache leer ist). Einige konstruierte Attribute werden jedoch nicht automatisch abgerufen und zwischengespeichert und erfordern daher, dass die [**IADs.GetInfoEx-Methode**](/windows/desktop/api/Iads/nf-iads-iads-getinfoex) explizit aufgerufen wird, um sie abzurufen. Beispielsweise wird in Active Directory das [**canonicalName-Attribut**](/windows/desktop/ADSchema/a-canonicalname) nicht abgerufen, wenn die **IADs.GetInfo-Methode** aufgerufen wird und **IADs.Get** **E ADS PROPERTY NOT \_ \_ \_ \_ FOUND** zurückgibt. Die **IADs.GetInfoEx-Methode** muss aufgerufen werden, um das **canonicalName-Attribut** abzurufen. Die gleichen konstruierten Attribute werden auch nicht mithilfe der [**IADsPropertyList-Schnittstelle**](/windows/desktop/api/Iads/nn-iads-iadspropertylist) abgerufen, um die Attribute aufzulisten.
 
-Weitere Informationen und ein Codebeispiel, das zeigt, wie Sie alle Attributwerte abrufen, finden Sie unter [Beispielcode zum Lesen eines konstruierten Attributs](example-code-for-reading-a-constructed-attribute.md).
+Weitere Informationen und ein Codebeispiel, das zeigt, wie alle Attributwerte abgerufen werden, finden Sie unter [Beispielcode zum Lesen eines konstruierten Attributs.](example-code-for-reading-a-constructed-attribute.md)
 
- 
+ 
 
- 
+ 

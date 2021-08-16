@@ -26,7 +26,7 @@ Stellt eine Auflistung der geöffneten Fenster dar, die zur Shell gehören. Meth
 
 ## <a name="members"></a>Member
 
-Das **ShellWindows-Objekt** verfügt über diese Typen von Membern:
+Das **ShellWindows-Objekt** verfügt über die folgenden Membertypen:
 
 -   [Methoden](#methods)
 -   [Eigenschaften](#properties)
@@ -37,7 +37,7 @@ Das **ShellWindows-Objekt** verfügt über diese Methoden.
 
 
 
-| Methode                                                 | BESCHREIBUNG                                                                                                         |
+| Methode                                                 | Beschreibung                                                                                                         |
 |:-------------------------------------------------------|:--------------------------------------------------------------------------------------------------------------------|
 | [**\_NewEnum**](shellwindows--newenum-method-7ral.md) | Erstellt ein neues **ShellWindows-Objekt,** das eine Kopie dieses **ShellWindows-Objekts** ist, und gibt es zurück.<br/>        |
 | [**Element**](shellwindows-item.md)                      | Ruft ein [**InternetExplorer-Objekt**](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa752084(v=vs.85)) ab, das das Shellfenster darstellt.<br/> |
@@ -52,7 +52,7 @@ Das **ShellWindows-Objekt** verfügt über diese Eigenschaften.
 
 
 
-| Eigenschaft                                       | Zugriffstyp          | BESCHREIBUNG                                                |
+| Eigenschaft                                       | Zugriffstyp          | Beschreibung                                                |
 |:-----------------------------------------------|:---------------------|:-----------------------------------------------------------|
 | [**Anzahl**](shellwindows-count.md)<br/> | Schreibgeschützt<br/> | Enthält die Anzahl der Elemente in der Auflistung.<br/> |
 

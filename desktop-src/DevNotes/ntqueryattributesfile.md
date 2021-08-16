@@ -1,7 +1,7 @@
 ---
-description: Ruft grundlegende Attribute für das angegebene Datei Objekt ab.
+description: Ruft grundlegende Attribute für das angegebene Dateiobjekt ab.
 ms.assetid: 19f9a2ac-4db6-4c67-9f85-c107063e11b8
-title: Ntqueryattributesfile-Funktion
+title: NtQueryAttributesFile-Funktion
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,18 +13,18 @@ api_type:
 - DllExport
 api_location:
 - ntdll.dll
-ms.openlocfilehash: a1d6d2ff20539f5ef65c0886ba51a0dbabafb44d
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: e6b1ecdc7cc7f0a5c18afc3eeb613c3f9cd9a38aa22a876ad156c3d1c6b1bc97
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106351240"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117826806"
 ---
-# <a name="ntqueryattributesfile-function"></a>Ntqueryattributesfile-Funktion
+# <a name="ntqueryattributesfile-function"></a>NtQueryAttributesFile-Funktion
 
-\[Diese Funktion kann ohne vorherige Ankündigung geändert oder aus Windows entfernt werden.\]
+\[Diese Funktion kann ohne weitere Ankündigung geändert oder aus Windows entfernt werden.\]
 
-Ruft grundlegende Attribute für das angegebene Datei Objekt ab.
+Ruft grundlegende Attribute für das angegebene Dateiobjekt ab.
 
 ## <a name="syntax"></a>Syntax
 
@@ -42,29 +42,29 @@ NTSTATUS NtQueryAttributesFile(
 
 <dl> <dt>
 
-*Objectattributes* \[ in\]
+*ObjectAttributes* \[ In\]
 </dt> <dd>
 
-Ein Zeiger auf eine [Objekt \_ Attribut](https://msdn.microsoft.com/library/aa491657.aspx) Struktur, die die Attribute bereitstellt, die für das Datei Objekt verwendet werden sollen.
+Ein Zeiger auf eine [OBJECT \_ ATTRIBUTES-Struktur,](https://msdn.microsoft.com/library/aa491657.aspx) die die Attribute anweist, die für das Dateiobjekt verwendet werden sollen.
 
 </dd> <dt>
 
-*Fileinformation* \[ vorgenommen\]
+*FileInformation* \[ out\]
 </dt> <dd>
 
-Ein Zeiger auf eine [Datei \_ grundlegende \_ Informations](https://msdn.microsoft.com/library/aa491634.aspx) Struktur, um die zurückgegebenen Datei Attributinformationen zu erhalten.
+Ein Zeiger auf eine [FILE \_ BASIC \_ INFORMATION-Struktur](https://msdn.microsoft.com/library/aa491634.aspx) zum Empfangen der zurückgegebenen Dateiattributinformationen.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt den NTSTATUS-oder-Fehlercode zurück.
+Gibt einen NTSTATUS- oder Fehlercode zurück.
 
-Die Formulare und die Bedeutung von NTSTATUS-Fehlercodes sind in der Header Datei "NTSTATUS. h" aufgeführt, die im WDK verfügbar ist, und werden in der WDK-Dokumentation beschrieben.
+Die Formulare und die Bedeutung von NTSTATUS-Fehlercodes sind in der im WDK verfügbaren Headerdatei "Ntstatus.h" aufgeführt und in der WDK-Dokumentation beschrieben.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Dieser Funktion ist keine Header Datei zugeordnet. Die zugehörige Import Bibliothek ntdll. lib ist im WDK verfügbar. Sie können auch die [**LoadLibrary**](-loadlibrary.md) -Funktion und die [**GetProcAddress**](-getprocaddress-.md) -Funktion verwenden, um dynamisch mit Ntdll.dll zu verknüpfen.
+Dieser Funktion ist keine Headerdatei zugeordnet. Die zugeordnete Importbibliothek Ntdll.lib ist im WDK verfügbar. Sie können auch die [**Funktionen LoadLibrary**](-loadlibrary.md) und [**GetProcAddress**](-getprocaddress-.md) verwenden, um dynamisch mit Ntdll.dll zu verknüpfen.
 
 ## <a name="requirements"></a>Anforderungen
 

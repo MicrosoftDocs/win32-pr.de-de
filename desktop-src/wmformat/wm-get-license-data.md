@@ -1,9 +1,9 @@
 ---
-title: WM_GET_LICENSE_DATA Struktur (drmexternals. h)
-description: Die WM \_ - \_ Lizenz \_ Datenstruktur enthält Informationen darüber, wo eine DRM-Lizenz abgerufen werden muss.
+title: WM_GET_LICENSE_DATA-Struktur (Drmexternals.h)
+description: Die WM \_ GET \_ LICENSE \_ DATA-Struktur enthält Informationen zum Erwerb einer DRM-Lizenz.
 ms.assetid: 7e8053d5-f3f5-4519-97f5-6dbd89982f3a
 keywords:
-- WM_GET_LICENSE_DATA Struktur-Windows Media-Format
+- WM_GET_LICENSE_DATA Strukturfenster Medienformat
 topic_type:
 - apiref
 api_name:
@@ -14,16 +14,16 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 4f238bea29ab7271896dc7516b6424e4cc298f5c
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: f5f53b6ddfd532710e712637c57785d8893d8f977807bfb45cac0fc787ccbf58
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104391905"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117844474"
 ---
-# <a name="wm_get_license_data-structure"></a>WM \_ - \_ Lizenz \_ Datenstruktur erhalten
+# <a name="wm_get_license_data-structure"></a>WM \_ GET \_ LICENSE \_ DATA-Struktur
 
-Die **WM \_ - \_ Lizenz \_ Daten** Struktur enthält Informationen darüber, wo eine [*DRM*](wmformat-glossary.md) - [*Lizenz*](wmformat-glossary.md)abgerufen werden muss.
+Die **WM GET LICENSE \_ \_ \_ DATA-Struktur** enthält Informationen dazu, wo eine [*DRM-Lizenz*](wmformat-glossary.md) [](wmformat-glossary.md)erworben werden kann.
 
 ## <a name="syntax"></a>Syntax
 
@@ -48,50 +48,50 @@ typedef struct _WMGetLicenseData {
 **dwSize**
 </dt> <dd>
 
-**DWORD** , das die Größe der **WM-Lizenz für die \_ get- \_ Lizenz \_ Daten** in Bytes enthält.
+**DWORD,** das die Größe der **WM GET LICENSE \_ \_ \_ DATA-Struktur** in Bytes enthält.
 
 </dd> <dt>
 
 **Std.**
 </dt> <dd>
 
-**HRESULT** -Rückgabecode.
+**HRESULT-Rückgabecode.**
 
 </dd> <dt>
 
-**wszurl**
+**wszURL**
 </dt> <dd>
 
-Eine mit NULL endenden breit Zeichen-Zeichenfolge, die die Lizenz Erwerbs-URL enthält. Verwenden Sie diese Zeichenfolge und die **pbpostdata** -Zeichenfolge in einem nicht automatischen Lizenzerwerb.
+Auf NULL endende Zeichenfolge mit Breitzeichen, die die Lizenzerwerbs-URL enthält. Verwenden Sie diese Zeichenfolge und die **pbPostData-Zeichenfolge** beim nicht automatischen Lizenzerwerb.
 
 </dd> <dt>
 
-**wszlocalfilename**
+**wszLocalFilename**
 </dt> <dd>
 
-Breit Zeichen-NULL-terminierte Zeichenfolge, die eine lokale HTML-Seite enthält, die von der DRM-Komponente generiert wird. Wenn diese Zeichenfolge in einen Browser geladen wird, wird die HTTP-Anforderung zusammen mit den erforderlichen Post-Daten automatisch an die Lizenz Erwerbs-URL umgeleitet. Die Verwendung dieser lokalen URL ist nun veraltet. Die empfohlene Vorgehensweise ist die Verwendung der **wszurl** -und **pbpostdata** -Zeichen folgen.
+Auf NULL endende Zeichenfolge mit Breitzeichen, die eine lokale HTML-Seite enthält, die von der DRM-Komponente generiert wird. Wenn diese Zeichenfolge in einen Browser geladen wird, leitet sie die HTTP-Anforderung zusammen mit den erforderlichen Postdaten automatisch an die Lizenzerwerbs-URL um. Die Verwendung dieser lokalen URL ist jetzt veraltet. Es wird empfohlen, die **Zeichenfolgen wszURL** und **pbPostData** zu verwenden.
 
 </dd> <dt>
 
-**pbpostdata**
+**pbPostData**
 </dt> <dd>
 
-Zeiger auf ein Bytearray, das die Daten enthält, die an die Lizenz Erwerbs-URL gesendet werden sollen. Sie müssen die folgende Zeichenfolge am Anfang der **pbpostdata** -Zeichenfolge hinzufügen: "nonsilent = 1&Challenge =". Die resultierende Zeichenfolge sollte dann an **wszurl** angehängt werden, wenn Sie die HTTP-Anforderung bilden.
+Zeiger auf ein Bytearray, das die Daten enthält, die an die Lizenzerwerbs-URL gesendet werden sollen. Sie müssen am Anfang der **pbPostData-Zeichenfolge** die folgende Zeichenfolge hinzufügen: "nonsilent=1&challenge=". Die resultierende Zeichenfolge sollte dann beim Erstellen der HTTP-Anforderung an **wszURL** angefügt werden.
 
 </dd> <dt>
 
-**dwpostdatasize**
+**dwPostDataSize**
 </dt> <dd>
 
-**DWORD** , das die Größe von **pbpostdata** ohne die Zeichenfolge "nonsilent = 1&Challenge =" angibt, auf die in **pbpostdata** verwiesen wird.
+**DWORD,** das die Größe von **pbPostData** ohne die Zeichenfolge "nonsilent=1&challenge=" angibt, auf die in **pbPostData** verwiesen wird.
 
 </dd> </dl>
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Diese ausgefüllte Struktur wird im *pValue* -Parameter der [**iwmstatuscallback:: OnStatus**](/previous-versions/windows/desktop/api/Wmsdkidl/nf-wmsdkidl-iwmstatuscallback-onstatus) -Methode zurückgegeben, wenn der **WMT- \_ Status** " **WMT \_ No \_ Rights \_ Ex** " oder " **WMT-Abruf \_ \_ Lizenz**" entspricht. Für WMT \_ - \_ Ereignisse ohne Rechte \_ Ereignisse ist das **HR** -Mitglied NS \_ e- \_ Lizenz \_ erforderlich, NS e-Lizenz- \_ \_ \_ oudefdate oder NS e- \_ \_ Lizenz \_ falsche \_ Rechte. Jeder dieser Fehler gibt an, dass eine neue Lizenz abgerufen werden muss, indem zur URL im **wszurl** -Member navigiert wird.
+Diese ausgefüllte Struktur wird im *pValue-Parameter* der [**IWMStatusCallback::OnStatus-Methode**](/previous-versions/windows/desktop/api/Wmsdkidl/nf-wmsdkidl-iwmstatuscallback-onstatus) zurückgegeben, wenn **WMT \_ STATUS** gleich **WMT \_ NO RIGHTS \_ \_ EX** oder **WMT ACQUIRE \_ \_ LICENSE** ist. Bei WMT \_ NO \_ RIGHTS \_ EX-Ereignissen ist das **HR-Mitglied** NS E \_ LICENSE \_ \_ REQUIRED, NS \_ E LICENSE \_ \_ OUTOFDATE oder NS \_ E LICENSE INCORRECT \_ \_ \_ RIGHTS. Jeder dieser Fehler gibt an, dass eine neue Lizenz erworben werden muss, indem Sie zur URL im **wszURL-Mitglied** navigieren.
 
-Beim Abrufen von \_ Lizenz Ereignissen durch WMT \_ übergibt das **Personal** Mitglied das Makro "erfolgreich", wenn eine Lizenz erfolgreich abgerufen wurde. Wenn dieses Ereignis nach einem Versuch der automatischen Übernahme empfangen wird und **HR** gleich der NS \_ E \_ DRM- \_ Lizenz \_ notbezogen ist, bedeutet dies, dass nur nicht automatische Käufe vom Lizenzserver für diese Lizenz unterstützt werden.
+Bei WMT \_ ACQUIRE \_ LICENSE-Ereignissen übergibt das **hr-Mitglied** das SUCCEEDED-Makro, wenn eine Lizenz erfolgreich erworben wurde. Wenn dieses Ereignis nach einem Versuch der automatischen Übernahme empfangen wird und **hr** gleich NS \_ E \_ DRM LICENSE \_ \_ NOTACQUIRED ist, gibt dies an, dass nur der nicht automatische Erwerb vom Lizenzserver für diese Lizenz unterstützt wird.
 
 Die Audioplayer-Beispielanwendung veranschaulicht, wie die in dieser Struktur zurückgegebenen Informationen ordnungsgemäß verwendet werden.
 
@@ -103,16 +103,16 @@ Die Audioplayer-Beispielanwendung veranschaulicht, wie die in dieser Struktur zu
 |-------------------------------------|-------------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional \[nur Desktop-Apps\]<br/>                                |
 | Unterstützte Mindestversion (Server)<br/> | Windows 2000 Server \[nur Desktop-Apps\]<br/>                                      |
-| Version<br/>                  | SDK für Windows Media-Format 7 oder höhere Versionen des SDKs<br/>                       |
-| Header<br/>                   | <dl> <dt>Drmexternals. h</dt> </dl> |
+| Version<br/>                  | Windows Media Format 7 SDK oder höhere Versionen des SDK<br/>                       |
+| Header<br/>                   | <dl> <dt>Drmexternals.h</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Iwmdrmreader:: AcquireLicense**](/previous-versions/windows/desktop/api/Wmsdkidl/nf-wmsdkidl-iwmdrmreader-acquirelicense)
+[**IWMDRMReader::AcquireLicense**](/previous-versions/windows/desktop/api/Wmsdkidl/nf-wmsdkidl-iwmdrmreader-acquirelicense)
 </dt> <dt>
 
 [**Strukturen**](structures.md)

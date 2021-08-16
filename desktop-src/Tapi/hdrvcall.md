@@ -1,5 +1,5 @@
 ---
-description: Der HDRVCALL-Datentyp stellt ein nicht transparentes Handle für Dienstanbieter für eine Aufrufdatenstruktur dar. Der Dienstanbieter muss einen Wert dieses Typs in einen Verweis auf die entsprechende Datenstrukturinstanz auflösen.
+description: Der HDRVCALL-Datentyp stellt ein nicht transparentes Handle von Dienstanbietern für eine Aufrufdatenstruktur dar. Der Dienstanbieter muss einen Wert dieses Typs in einen Verweis auf die entsprechende Datenstrukturinstanz auflösen.
 ms.assetid: 57a5a1c5-db9e-4667-8dd4-a1c4b9098e1c
 title: HDRVCALL
 ms.topic: article

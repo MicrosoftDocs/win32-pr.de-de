@@ -1,147 +1,147 @@
 ---
-description: Die \_ Bits-Flag-Konstanten von linedevcapflags sind eine Auflistung von booleschen Werten, in denen verschiedene Zeilen Gerätefunktionen beschrieben werden.
+description: Die LINEDEVCAPFLAGS-Bitflagkonstanten sind eine Sammlung boolescher Konstanten, die verschiedene Funktionen \_ des Liniengeräts beschreiben.
 ms.assetid: 0c537488-9fb9-4961-bd0a-1937aefc0b08
-title: LINEDEVCAPFLAGS_ Konstanten (TAPI. h)
+title: LINEDEVCAPFLAGS_ Konstanten (Tapi.h)
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: ffefca75c00fdf09b1886affbff7f0ea90bab6c1
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: c2d54acf1855bc09d9b2160e1ae681b25ff1de8ce310049fd4aabf4af6f8f2f8
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106359794"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117761717"
 ---
-# <a name="linedevcapflags_-constants"></a>Linedevcapflags- \_ Konstanten
+# <a name="linedevcapflags_-constants"></a>LINEDEVCAPFLAGS-Konstanten \_
 
-Die Bits-Flag-Konstanten von **linedevcapflags \_** sind eine Auflistung von booleschen Werten, in denen verschiedene Zeilen Gerätefunktionen beschrieben werden.
+Die **\_ LINEDEVCAPFLAGS-Bitflagkonstanten** sind eine Sammlung boolescher Konstanten, die verschiedene Funktionen des Liniengeräts beschreiben.
 
 <dl> <dt>
 
-<span id="LINEDEVCAPFLAGS_CALLHUB"></span><span id="linedevcapflags_callhub"></span>**linedevcapflags \_ callhub**
+<span id="LINEDEVCAPFLAGS_CALLHUB"></span><span id="linedevcapflags_callhub"></span>**LINEDEVCAPFLAGS \_ CALLHUB**
 </dt> <dd> <dl> <dt>
 
 
 
-Gibt an, ob callhubs in dieser Zeile unterstützt werden. Dieses Flag ist nur für Anwendungen verfügbar, die eine TAPI-Version von 3,0 oder höher aushandeln.
+Gibt an, ob Aufrufhubs in dieser Zeile unterstützt werden. Dieses Flag wird nur für Anwendungen verfügbar gemacht, die eine TAPI-Version von 3.0 oder höher aushandeln.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="LINEDEVCAPFLAGS_CALLHUBTRACKING"></span><span id="linedevcapflags_callhubtracking"></span>**linedevcapflags \_ callhubtracking**
+<span id="LINEDEVCAPFLAGS_CALLHUBTRACKING"></span><span id="linedevcapflags_callhubtracking"></span>**LINEDEVCAPFLAGS \_ CALLHUBTRACKING**
 </dt> <dd> <dl> <dt>
 
 
 
-Gibt an, ob die callhub-Nachverfolgung in dieser Zeile unterstützt wird Dieses Flag ist nur für Anwendungen verfügbar, die eine TAPI-Version von 3,0 oder höher aushandeln.
+Gibt an, ob die Anrufhubnachverfolgung in dieser Zeile unterstützt wird. Dieses Flag wird nur für Anwendungen verfügbar gemacht, die eine TAPI-Version von 3.0 oder höher aushandeln.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="LINEDEVCAPFLAGS_CLOSEDROP"></span><span id="linedevcapflags_closedrop"></span>**linedevcapflags- \_ closedrop**
+<span id="LINEDEVCAPFLAGS_CLOSEDROP"></span><span id="linedevcapflags_closedrop"></span>**LINEDEVCAPFLAGS \_ CLOSEDROP**
 </dt> <dd> <dl> <dt>
 
 
 
-Gibt an, was geschieht, wenn eine geöffnete Zeile geschlossen wird, während die Anwendung Aufrufe aktiv in der Zeile ausgeführt hat. **True** gibt an, dass der Dienstanbieter alle aktiven Aufrufe in der Zeile löscht (löscht), wenn die letzte Anwendung, die die Zeile geöffnet hat, mit [**lineclose**](/windows/desktop/api/Tapi/nf-tapi-lineclose)geschlossen wird. **False** gibt an, dass der Dienstanbieter in solchen Fällen keine aktiven Aufrufe löscht. Stattdessen bleiben die Aufrufe aktiv und Steuern externe Geräte. Ein Dienstanbieter legt dieses Bit in der Regel auf " **false** " fest, wenn es ein anderes Gerät gibt, das den Anruf aufrechterhalten kann. Wenn z. b. eine analoge Linie den Computer aufweist und die Telefonnummer in einer Partei Konfiguration direkt mit Ihnen verbunden ist, hält das OFFHOOK-Telefon den Anruf automatisch an, selbst nachdem der Computer eingeschaltet ist.
+Gibt an, was geschieht, wenn eine geöffnete Zeile geschlossen wird, während die Anwendung aktiv in der Zeile aufruft. True **gibt an,** dass der Dienstanbieter alle aktiven Aufrufe in der Zeile löscht (löscht), wenn die letzte Anwendung, die die Zeile geöffnet hat, sie mit [**lineClose schließt.**](/windows/desktop/api/Tapi/nf-tapi-lineclose) False **gibt** an, dass der Dienstanbieter in solchen Fällen keine aktiven Aufrufe verwirf. Stattdessen bleiben die Aufrufe aktiv und werden von externen Geräten kontrolliert. Ein Dienstanbieter legt dieses Bit in der Regel auf **FALSE** fest, wenn es ein anderes Gerät gibt, das den Anruf aktiv halten kann, z. B. wenn eine analoge Leitung den Computer und das Telefon in einer Party-Line-Konfiguration direkt mit ihnen verbinden, hält das Offhooktelefon den Anruf automatisch aktiv, auch wenn der Computer ausgeschaltet ist.
 
-Anwendungen sollten dieses Flag überprüfen, um zu bestimmen, ob der Benutzer gewarnt werden soll (im Dialogfeld OK/Abbrechen), dass aktive Aufrufe verloren gehen.
+Anwendungen sollten dieses Flag überprüfen, um zu bestimmen, ob der Benutzer (mit einem Dialogfeld OK/Abbrechen) ge warnen soll, dass aktive Aufrufe verloren gehen.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="LINEDEVCAPFLAGS_CROSSADDRCONF"></span><span id="linedevcapflags_crossaddrconf"></span>**linedevcapflags \_ crossaddrconf**
+<span id="LINEDEVCAPFLAGS_CROSSADDRCONF"></span><span id="linedevcapflags_crossaddrconf"></span>**LINEDEVCAPFLAGS \_ CROSSADDRCONF**
 </dt> <dd> <dl> <dt>
 
 
 
-Gibt an, ob Aufrufe an verschiedene Adressen in dieser Zeile übertragen werden können.
+Gibt an, ob Aufrufe an verschiedenen Adressen in dieser Zeile in einer Konferenz verwendet werden können.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="LINEDEVCAPFLAGS_DIALBILLING"></span><span id="linedevcapflags_dialbilling"></span>**linedevcapflags- \_ dialabrechnung**
-</dt> <dd> <dl> <dt>
-
-
-</dt> </dl> </dd> <dt>
-
-<span id="LINEDEVCAPFLAGS_DIALDIALTONE"></span><span id="linedevcapflags_dialdialtone"></span>**linedevcapflags- \_ dialdialtone**
+<span id="LINEDEVCAPFLAGS_DIALBILLING"></span><span id="linedevcapflags_dialbilling"></span>**LINEDEVCAPFLAGS \_ DIALBILLING**
 </dt> <dd> <dl> <dt>
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="LINEDEVCAPFLAGS_DIALQUIET"></span><span id="linedevcapflags_dialquiet"></span>**linedevcapflags- \_ dialquiet**
+<span id="LINEDEVCAPFLAGS_DIALDIALTONE"></span><span id="linedevcapflags_dialdialtone"></span>**LINEDEVCAPFLAGS \_ DIALDIALTONE**
 </dt> <dd> <dl> <dt>
-
-
-
-Diese Flags geben an, ob der deklarable String-Modifizierer "$", "@" oder "W" für ein bestimmtes Zeilen Gerät unterstützt wird. Dies ist **true** , wenn der-Modifizierer unterstützt wird. andernfalls **false**. Das "?" (der Benutzer wird aufgefordert, den Wähl Vorgang fortzusetzen) wird nie von einem liniengerät unterstützt. Diese Flags ermöglichen es einer Anwendung, nach oben zu ermitteln, welche modifiziererer zur Generierung eines lineerr führen würden. Die Anwendung hat die Wahl, dass für nicht unterstützte Zeichen oder die "RAW"-Zeichenfolge aus [**linetranslateaddress**](/windows/desktop/api/Tapi/nf-tapi-linetranslateaddress) als Teil von Funktionen wie [**linemakecall**](/windows/desktop/api/Tapi/nf-tapi-linemakecall) oder [**linedial**](/windows/desktop/api/Tapi/nf-tapi-linedial) vorab überprüft werden kann, und ermöglicht der Funktion, einen Fehler zu generieren, um zu erkennen, welcher nicht unterstützte Modifizierer zuerst in der Zeichenfolge auftritt.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="LINEDEVCAPFLAGS_HIGHLEVCOMP"></span><span id="linedevcapflags_highlevcomp"></span>**linedevcapflags \_ highlevcomp**
+<span id="LINEDEVCAPFLAGS_DIALQUIET"></span><span id="linedevcapflags_dialquiet"></span>**LINEDEVCAPFLAGS \_ DIALQUIET**
 </dt> <dd> <dl> <dt>
 
 
 
-Gibt an, ob in dieser Zeile allgemeine Kompatibilitäts Informationselemente unterstützt werden.
+Diese Flags geben an, ob der modifizierbare Zeichenfolgenmodifizierer "$", "@" oder "W" für ein bestimmtes Zeilengerät unterstützt wird. Er ist **TRUE,** wenn der Modifizierer unterstützt wird. andernfalls **FALSE**. Das "?" (Auffordern des Benutzers zum Fortsetzen des Wählens) wird von einem Liniengerät nie unterstützt. Mit diesen Flags kann eine Anwendung im Vorfeld bestimmen, welche Modifizierer zur Generierung eines LINEERR führen würden. Die Anwendung kann vor dem Scannen von Wählzeichenfolgen für nicht unterstützte Zeichen wählen oder die "rohe" Zeichenfolge von [**lineTranslateAddress**](/windows/desktop/api/Tapi/nf-tapi-linetranslateaddress) direkt an den Anbieter als Teil von Funktionen wie [**lineMakeCall**](/windows/desktop/api/Tapi/nf-tapi-linemakecall) oder [**lineDial**](/windows/desktop/api/Tapi/nf-tapi-linedial) übergeben und die Funktion einen Fehler generieren lassen, um ihm mitteilen zu können, welcher nicht unterstützte Modifizierer zuerst in der Zeichenfolge auftritt.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="LINEDEVCAPFLAGS_LOWLEVCOMP"></span><span id="linedevcapflags_lowlevcomp"></span>**linedevcapflags \_ lowlevcomp**
+<span id="LINEDEVCAPFLAGS_HIGHLEVCOMP"></span><span id="linedevcapflags_highlevcomp"></span>**LINEDEVCAPFLAGS \_ HIGHLEVCOMP**
 </dt> <dd> <dl> <dt>
 
 
 
-Gibt an, ob Kompatibilitäts Informationselemente auf niedriger Ebene in dieser Zeile unterstützt werden.
+Gibt an, ob Kompatibilitätsinformationselemente auf hoher Ebene in dieser Zeile unterstützt werden.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="LINEDEVCAPFLAGS_MEDIACONTROL"></span><span id="linedevcapflags_mediacontrol"></span>**linedevcapflags \_ MediaControl**
+<span id="LINEDEVCAPFLAGS_LOWLEVCOMP"></span><span id="linedevcapflags_lowlevcomp"></span>**LINEDEVCAPFLAGS \_ LOWLEVCOMP**
 </dt> <dd> <dl> <dt>
 
 
 
-Gibt an, ob Medien Steuerungs Vorgänge für Aufrufe in dieser Zeile verfügbar sind.
+Gibt an, ob Kompatibilitätsinformationselemente auf niedriger Ebene in dieser Zeile unterstützt werden.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="LINEDEVCAPFLAGS_MSP"></span><span id="linedevcapflags_msp"></span>**linedevcapflags- \_ MSP**
+<span id="LINEDEVCAPFLAGS_MEDIACONTROL"></span><span id="linedevcapflags_mediacontrol"></span>**LINEDEVCAPFLAGS \_ MEDIACONTROL**
 </dt> <dd> <dl> <dt>
 
 
 
-Gibt an, ob der Zeile ein Medien Dienstanbieter (MSP) zugeordnet ist. Dieses Flag ist nur für Anwendungen verfügbar, die eine TAPI-Version von 3,0 oder höher aushandeln.
+Gibt an, ob Mediensteuerungsvorgänge für Aufrufe in dieser Zeile verfügbar sind.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="LINEDEVCAPFLAGS_MULTIPLEADDR"></span><span id="linedevcapflags_multipleaddr"></span>**linedevcapflags \_ multipleaddr**
+<span id="LINEDEVCAPFLAGS_MSP"></span><span id="linedevcapflags_msp"></span>**LINEDEVCAPFLAGS \_ MSP**
 </dt> <dd> <dl> <dt>
 
 
 
-Gibt an, ob [**linemakecall**](/windows/desktop/api/Tapi/nf-tapi-linemakecall), [**linedial**](/windows/desktop/api/Tapi/nf-tapi-linedial), [**TSPI \_ linemakecall**](/windows/win32/api/tspi/nf-tspi-tspi_linemakecall)oder [**TSPI \_ linedial**](/windows/win32/api/tspi/nf-tspi-tspi_linedial) mehrere Adressen gleichzeitig behandeln kann (wie bei umgekehrtem Multiplexing).
+Gibt an, ob der Zeile ein Media Service Provider (MSP) zugeordnet ist. Dieses Flag wird nur für Anwendungen verfügbar gemacht, die eine TAPI-Version von 3.0 oder höher aushandeln.
 
 
 </dt> </dl> </dd> <dt>
 
-<span id="LINEDEVCAPFLAGS_PRIVATEOBJECTS"></span><span id="linedevcapflags_privateobjects"></span>**"linedevcapflags" \_ privateobjects**
+<span id="LINEDEVCAPFLAGS_MULTIPLEADDR"></span><span id="linedevcapflags_multipleaddr"></span>**LINEDEVCAPFLAGS \_ MULTIPLEADDR**
 </dt> <dd> <dl> <dt>
 
 
 
-Gibt an, ob [anbieterspezifische Schnittstellen](./provider-specific-interfaces.md) implementiert wurden. Dieses Flag ist nur für Anwendungen verfügbar, die eine TAPI-Version von 3,0 oder höher aushandeln.
+Gibt an, ob [**lineMakeCall,**](/windows/desktop/api/Tapi/nf-tapi-linemakecall) [**lineDial,**](/windows/desktop/api/Tapi/nf-tapi-linedial) [**TSPI \_ lineMakeCall**](/windows/win32/api/tspi/nf-tspi-tspi_linemakecall)oder [**TSPI \_ lineDial**](/windows/win32/api/tspi/nf-tspi-tspi_linedial) mehrere Adressen gleichzeitig behandeln können (wie beim umgekehrten Multiplexing).
+
+
+</dt> </dl> </dd> <dt>
+
+<span id="LINEDEVCAPFLAGS_PRIVATEOBJECTS"></span><span id="linedevcapflags_privateobjects"></span>**LINEDEVCAPFLAGS \_ PRIVATEOBJECTS**
+</dt> <dd> <dl> <dt>
+
+
+
+Gibt [an, ob anbieterspezifische Schnittstellen](./provider-specific-interfaces.md) implementiert wurden. Dieses Flag wird nur für Anwendungen verfügbar gemacht, die eine TAPI-Version von 3.0 oder höher aushandeln.
 
 
 </dt> </dl> </dd> </dl>
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
 Keine Erweiterbarkeit. Alle 32 Bits sind reserviert.
 
@@ -151,25 +151,25 @@ Keine Erweiterbarkeit. Alle 32 Bits sind reserviert.
 
 | Anforderung | Wert |
 |-------------------------|-----------------------------------------------------------------------------------|
-| TAPI-Version<br/> | Erfordert TAPI 2,0 oder höher<br/>                                             |
-| Header<br/>       | <dl> <dt>TAPI. h</dt> </dl> |
+| TAPI-Version<br/> | Erfordert TAPI 2.0 oder höher<br/>                                             |
+| Header<br/>       | <dl> <dt>Tapi.h</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**lineclose**](/windows/desktop/api/Tapi/nf-tapi-lineclose)
+[**lineClose**](/windows/desktop/api/Tapi/nf-tapi-lineclose)
 </dt> <dt>
 
-[**linedial**](/windows/desktop/api/Tapi/nf-tapi-linedial)
+[**lineDial**](/windows/desktop/api/Tapi/nf-tapi-linedial)
 </dt> <dt>
 
-[**linemakecall**](/windows/desktop/api/Tapi/nf-tapi-linemakecall)
+[**lineMakeCall**](/windows/desktop/api/Tapi/nf-tapi-linemakecall)
 </dt> <dt>
 
-[**linetranslateaddress**](/windows/desktop/api/Tapi/nf-tapi-linetranslateaddress)
+[**lineTranslateAddress**](/windows/desktop/api/Tapi/nf-tapi-linetranslateaddress)
 </dt> </dl>
 
  

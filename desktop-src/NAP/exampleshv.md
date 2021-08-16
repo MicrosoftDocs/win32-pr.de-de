@@ -1,29 +1,29 @@
 ---
-title: Beispiel-SHV
-description: Im folgenden Beispiel wird eine System Integritätsprüfung (System Health Prüfungs, SHV) auf einem NAP-Integritäts Richtlinien Server eingerichtet.
+title: ShV-Beispiel
+description: Im folgenden Beispiel wird ein System health validator (SHV) auf einem NAP-Integritätsrichtlinie-Server eingerichtet.
 ms.assetid: 2264c1d7-b1fb-4937-bf24-d6fa05bdc6fe
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: c071a1ce6ba974d2170cbd8a4cda2d7e66b18f46
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: 82ec6d2f3f1c5f6aa7f9a1686d288177054f373a3962a9d7db47b9467d9b08a8
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "104470948"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118369014"
 ---
-# <a name="example-shv"></a>Beispiel-SHV
+# <a name="example-shv"></a>ShV-Beispiel
 
 > [!Note]  
-> Die Netzwerk Zugriffsschutz-Plattform ist ab Windows 10 nicht verfügbar.
+> Die Netzwerkzugriffsschutz-Plattform ist ab dem Windows 10
 
- 
+ 
 
-Im folgenden Beispiel wird eine System Integritätsprüfung (System Health Prüfungs, SHV) auf einem NAP-Integritäts Richtlinien Server eingerichtet.
+Im folgenden Beispiel wird ein System health validator (SHV) auf einem NAP-Integritätsrichtlinie-Server eingerichtet.
 
 > [!Note]  
-> Das NAP-SDK enthält außerdem einen vollständigen Satz von Beispielcode, der sich im... \\ Beispiele für \\ netds- \\ NAP... Verzeichnis der SDK-Installation. Diese Beispiel Gruppe umfasst und den Systemintegritäts-Agent (SHA), SHV und Erzwingungs Client (EC). Es verfügt über vollständige funktionierende NAP-Szenarien zum Einrichten der Kommunikation zwischen SHA-SHV und SHA-ec.
+> Das NAP SDK enthält auch einen vollständigen Satz von Beispielcode, der im \\ ... Beispiele \\ für NetDS \\ NAP... Verzeichnis Ihrer SDK-Installation. Dieser Beispielsatz enthält und system health agent (SHA), SHV und Enforcement Client (EC). Es verfügt über vollständig funktionierende NAP-Szenarien, in denen die Kommunikation zwischen SHA-SHV und SHA-EC eingerichtet wird.
 
- 
+ 
 
 
 ```C++
@@ -285,9 +285,9 @@ HRESULT CSampleShv::FillResponseSoH(HRESULT validationResult,
 
 
 
- 
+ 
 
- 
+ 
 
 
 

@@ -31,7 +31,7 @@ Dieses Thema enthält folgende Abschnitte:
 
 ## <a name="about-direct2d-resources"></a>Informationen zu Direct2D-Ressourcen
 
-Viele hardwarebeschleunigte 2D-APIs sind auf ein CPU-orientiertes Ressourcenmodell und eine Reihe von Renderingvorgängen ausgelegt, die gut für CPUs funktionieren. Ein Teil der API ist dann hardwarebeschleunigt. Die Implementierung dieser APIs erfordert einen Ressourcen-Manager zum Zuordnen von CPU-Ressourcen zu Ressourcen auf der GPU. Aufgrund von GPU-Einschränkungen können einige Vorgänge möglicherweise nicht in jedem Fall beschleunigt werden. In diesen Fällen muss der Ressourcen-Manager zwischen CPU und GPU (was teuer ist) hin und her kommunizieren, damit er zum CPU-Rendering übergehen kann. In einigen Fällen kann es unvorhersehbar erzwingen, dass das Rendering vollständig auf die CPU zurückfallen muss. Darüber hinaus erfordern Renderingvorgänge, die einfach erscheinen, möglicherweise temporäre zwischengeschaltete Renderingschritte, die nicht in der API verfügbar gemacht werden und zusätzliche GPU-Ressourcen erfordern.
+Viele hardwarebeschleunigte 2D-APIs sind auf ein CPU-orientiertes Ressourcenmodell und eine Reihe von Renderingvorgängen ausgelegt, die gut für CPUs funktionieren. Ein Teil der API ist dann hardwarebeschleunigt. Die Implementierung dieser APIs erfordert einen Ressourcen-Manager zum Zuordnen von CPU-Ressourcen zu Ressourcen auf der GPU. Aufgrund von GPU-Einschränkungen können einige Vorgänge unter Umständen nicht in jedem Fall beschleunigt werden. In diesen Fällen muss der Ressourcen-Manager zwischen CPU und GPU (was teuer ist) hin und her kommunizieren, damit er zum CPU-Rendering übergehen kann. In einigen Fällen kann es unvorhersehbar erzwingen, dass das Rendering vollständig auf die CPU zurückfallen muss. Darüber hinaus erfordern Renderingvorgänge, die einfach erscheinen, möglicherweise temporäre zwischengeschaltete Renderingschritte, die nicht in der API verfügbar gemacht werden und zusätzliche GPU-Ressourcen erfordern.
 
 Direct2D bietet eine direktere Zuordnung zur vollständigen Nutzung der GPU. Es bietet zwei Kategorien von Ressourcen: geräteunabhängig und geräteabhängig.
 
@@ -48,7 +48,7 @@ Wie im vorherigen Abschnitt beschrieben, befinden sich geräteunabhängige Resso
 
 -   [**ID2D1DrawingStateBlock**](/windows/win32/api/d2d1/nn-d2d1-id2d1drawingstateblock)
 -   [**ID2D1Factory**](/windows/win32/api/d2d1/nn-d2d1-id2d1factory)
--   [**ID2D1Geometry und**](/windows/win32/api/d2d1/nn-d2d1-id2d1geometry) die Schnittstellen, die davon erben.
+-   [**ID2D1Geometry**](/windows/win32/api/d2d1/nn-d2d1-id2d1geometry) und die Schnittstellen, die davon erben.
 -   [**ID2D1GeometrySink und**](/windows/win32/api/d2d1/nn-d2d1-id2d1geometrysink) [ **ID2D1SimplifiedGeometrySink**](/windows/win32/api/d2d1/nn-d2d1-id2d1simplifiedgeometrysink)
 -   [**ID2D1StrokeStyle**](/windows/win32/api/d2d1/nn-d2d1-id2d1strokestyle)
 
@@ -58,7 +58,7 @@ Mit Ausnahme von Renderzielen sind alle von einer Factory erstellten Ressourcen 
 
 ## <a name="device-dependent-resources"></a>Device-Dependent Ressourcen
 
-Jede Ressource, die in der vorherigen Liste nicht benannt ist, ist eine geräteabhängige Ressource. Geräteabhängige Ressourcen sind einem bestimmten Renderinggerät zugeordnet. Wenn die Hardwarebeschleunigung verfügbar ist, ist dieses Gerät die GPU. In anderen Fällen handelt es sich um die CPU.
+Jede Ressource, die in der vorherigen Liste nicht benannt ist, ist eine geräteabhängige Ressource. Geräteabhängige Ressourcen sind einem bestimmten Renderinggerät zugeordnet. Wenn die Hardwarebeschleunigung verfügbar ist, ist dieses Gerät die GPU. In anderen Fällen ist dies die CPU.
 
 Verwenden Sie ein Renderziel, um die meisten geräteabhängigen Ressourcen zu erstellen. In den meisten Fällen verwenden Sie eine Factory, um ein Renderziel zu erstellen.
 
@@ -66,10 +66,10 @@ Im Folgenden finden Sie Beispiele für geräteabhängige Ressourcen:
 
 -   [**ID2D1Brush und**](/windows/win32/api/d2d1/nn-d2d1-id2d1brush) die Schnittstellen, die davon erben. Verwenden Sie ein Renderziel, um Pinsel zu erstellen.
 -   [**ID2D1Layer**](/windows/win32/api/d2d1/nn-d2d1-id2d1layer). Verwenden Sie ein Renderziel, um Ebenen zu erstellen.
--   [**ID2D1RenderTarget**](/windows/win32/api/d2d1/nn-d2d1-id2d1rendertarget) und die Schnittstellen, die davon erben. Um ein Renderziel zu erstellen, verwenden Sie eine Factory oder ein anderes Renderziel.
+-   [**ID2D1RenderTarget und**](/windows/win32/api/d2d1/nn-d2d1-id2d1rendertarget) die Schnittstellen, die davon erben. Um ein Renderziel zu erstellen, verwenden Sie eine Factory oder ein anderes Renderziel.
 
 > [!Note]  
-> Beginnend mit Windows 8 gibt es neue Schnittstellen, die geräteabhängige Ressourcen erstellen. Ein [**ID2D1Device**](/windows/win32/api/d2d1_1/nn-d2d1_1-id2d1device) und ein [**ID2D1DeviceContext**](/windows/win32/api/d2d1_1/nn-d2d1_1-id2d1devicecontext) können eine Ressource gemeinsam nutzen, wenn der Gerätekontext und die Ressource aus demselben **ID2D1Device erstellt werden.**
+> Ab Windows 8 gibt es neue Schnittstellen, die geräteabhängige Ressourcen erstellen. Ein [**ID2D1Device**](/windows/win32/api/d2d1_1/nn-d2d1_1-id2d1device) und ein [**ID2D1DeviceContext**](/windows/win32/api/d2d1_1/nn-d2d1_1-id2d1devicecontext) können eine Ressource gemeinsam nutzen, wenn der Gerätekontext und die Ressource aus demselben **ID2D1Device erstellt werden.**
 
  
 

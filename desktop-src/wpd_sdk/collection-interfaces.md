@@ -1,28 +1,28 @@
 ---
-description: Sammlungs Schnittstellen
+description: Sammlungsschnittstellen
 ms.assetid: 5b76c30c-3114-46fb-bf35-b47115f33961
-title: Sammlungs Schnittstellen
+title: Sammlungsschnittstellen
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 89cf53e57ae5c098f66b3048fc6c3a26fe3efba4
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: c7204ac4e2330d3970d9ec82cc778df12b04f87fcacf966f5a31a46e074ad26b
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106363725"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117843394"
 ---
-# <a name="collection-interfaces"></a>Sammlungs Schnittstellen
+# <a name="collection-interfaces"></a>Sammlungsschnittstellen
 
-Die folgenden Schnittstellen werden verwendet, um Gruppen von Werten verschiedener Arten, einschließlich **PropertyKey** -Werte, **GUID** -Werten oder anderer Auflistungs Schnittstellen, zu speichern. Diese Schnittstellen werden von Client Anwendungen und Treibern verwendet, um Daten für Methoden Parameter zu speichern.
+Die folgenden Schnittstellen werden verwendet, um Gruppen von Werten verschiedener Art zu enthalten, einschließlich **PROPERTYKEY-Werten,** **GUID-Werten** oder anderen Auflistungsschnittstellen. Diese Schnittstellen werden sowohl von Clientanwendungen als auch von Treibern verwendet, um Daten für Methodenparameter zu enthalten.
 
 
 
-| Schnittstelle                                                                            | BESCHREIBUNG                                                            |
+| Schnittstelle                                                                            | Beschreibung                                                            |
 |--------------------------------------------------------------------------------------|------------------------------------------------------------------------|
-| [**Iportabledevicekeycollection**](iportabledevicekeycollection.md)                 | Enthält eine Auflistung von **PropertyKey** -Werten.                          |
-| [**Iportabledevicepropvariantcollection**](iportabledevicepropvariantcollection.md) | Enthält eine Auflistung von **PROPVARIANT** -Werten desselben VarType.      |
-| [**Iportablede vicevalues**](iportabledevicevalues.md)                               | Enthält eine Auflistung der **PropertyKey**- / **PROPVARIANT** -Paare.           |
-| [**Iportableabvicevaluescollection**](iportabledevicevaluescollection.md)           | Enthält eine Auflistung von Null basierten **iportabledevicevalues** -Schnittstellen. |
+| [**IPortableDeviceKeyCollection**](iportabledevicekeycollection.md)                 | Enthält eine Auflistung von **PROPERTYKEY-Werten.**                          |
+| [**IPortableDevicePropVariantCollection**](iportabledevicepropvariantcollection.md) | Enthält eine Auflistung von **PROPVARIANT-Werten** desselben VARTYPE.      |
+| [**IPortableDeviceValues**](iportabledevicevalues.md)                               | Enthält eine Auflistung von **PROPERTYKEY** / **PROPVARIANT-Paaren.**           |
+| [**IPortableDeviceValuesCollection**](iportabledevicevaluescollection.md)           | Enthält eine Auflistung nullbasierter **IPortableDeviceValues-Schnittstellen.** |
 
 
 

@@ -1,5 +1,5 @@
 ---
-description: In dieser Schnellstartanleitung wird veranschaulicht, wie eine Popup Benachrichtigung aus einer Desktop-App erhoben wird.
+description: In dieser Schnellstartanleitung erfahren Sie, wie Sie eine Popupbenachrichtigung von einer Desktop-App auslösen.
 title: Senden einer Popupbenachrichtigung vom Desktop
 ms.topic: article
 ms.date: 05/31/2018
@@ -9,31 +9,31 @@ api_type: ''
 api_location: ''
 topic_type:
 - kbSyntax
-ms.openlocfilehash: 36f9da25c20d99da74be30046fc5f9f4789dfd73
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 79f8f65b18fd6774f318541b15d1649b7c25526f46bf3ab57f02edc4788687c9
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "103866148"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117858654"
 ---
-# <a name="quickstart-sending-a-toast-notification-from-the-desktop"></a>Schnellstart: Senden einer Popup Benachrichtigung vom Desktop
+# <a name="quickstart-sending-a-toast-notification-from-the-desktop"></a>Schnellstart: Senden einer Popupbenachrichtigung vom Desktop
 
-In dieser Schnellstartanleitung wird veranschaulicht, wie eine Popup Benachrichtigung aus einer Desktop-App erhoben wird.
+In dieser Schnellstartanleitung erfahren Sie, wie Sie eine Popupbenachrichtigung von einer Desktop-App auslösen.
 
 ## <a name="prerequisites"></a>Voraussetzungen
 
 -   Bibliotheken
-    -   C++: Runtime. Object. lib
-    -   C \# : Windows. winmd
--   Auf dem Start Bildschirm muss eine Verknüpfung mit der APP mit [System.AppUserModel.ID](../properties/props-system-appusermodel-id.md)installiert sein. Beachten Sie jedoch, dass es nicht an den Start Bildschirm angeheftet werden muss. Weitere Informationen finden Sie unter Aktivieren von desktoppopup [-Benachrichtigungen über eine appusermodelid](enable-desktop-toast-with-appusermodelid.md).
--   Eine Version von Microsoft Visual Studio, die mindestens Windows 8 unterstützt.
+    -   C++: Runtime.object.lib
+    -   C: \# Windows. Winmd
+-   Eine Verknüpfung mit Ihrer App mit einem [System.AppUserModel.ID](../properties/props-system-appusermodel-id.md)muss auf dem Startbildschirm installiert werden. Beachten Sie jedoch, dass sie nicht an die Startbildschirm angeheftet werden muss. Weitere Informationen finden Sie unter [Aktivieren von Desktop-Popupbenachrichtigungen über eine AppUserModelID.](enable-desktop-toast-with-appusermodelid.md)
+-   Eine Version von Microsoft Visual Studio, die mindestens Windows 8 unterstützt
 
-## <a name="instructions"></a>Instructions
+## <a name="instructions"></a>Anweisungen
 
-### <a name="1-create-your-toast-content"></a>1. Erstellen Sie den Popup Inhalt.
+### <a name="1-create-your-toast-content"></a>1. Erstellen Ihres Popupinhalts
 
 > [!Note]  
-> Beachten Sie, dass Desktop-Apps nur lokale Images verwenden können, wenn Sie eine Popup Vorlage angeben, die ein Bild enthält. webimages werden nicht unterstützt. Außerdem muss der Pfad zur lokalen Bilddatei als absoluter (nicht relativer) Pfad angegeben werden.
+> Wenn Sie eine Popupvorlage angeben, die ein Bild enthält, beachten Sie, dass Desktop-Apps nur lokale Bilder verwenden können. Webimages werden nicht unterstützt. Außerdem muss der Pfad zur lokalen Bilddatei als absoluter (nicht relativer) Pfad angegeben werden.
 
  
 
@@ -58,9 +58,9 @@ ToastNotification toast = new ToastNotification(toastXml);
 
 
 
-### <a name="2-create-and-attach-the-event-handlers"></a>2. erstellen und Anfügen von Ereignis Handlern
+### <a name="2-create-and-attach-the-event-handlers"></a>2. Erstellen und Anfügen der Ereignishandler
 
-Registrieren von Handlern für die Popup Ereignisse: aktiviert, verworfen und fehlerhaft. Eine Desktop-App muss das aktivierte Ereignis zumindest abonnieren, damit Sie die erwartete Aktivierung der APP vom Toast aus verarbeiten kann, wenn der Benutzer Sie auswählt.
+Registrieren Sie Handler für die Popupereignisse: Aktiviert, Verworfen und Fehler. Eine Desktop-App muss mindestens das Aktiviert-Ereignis abonnieren, damit sie die erwartete Aktivierung der App vom Popup verarbeiten kann, wenn der Benutzer sie auswählt.
 
 
 ```csharp
@@ -71,10 +71,10 @@ toast.Failed += ToastFailed;
 
 
 
-### <a name="3-send-the-toast"></a>3. den Toast senden
+### <a name="3-send-the-toast"></a>3. Senden des Popups
 
 > [!IMPORTANT]
-> Sie müssen die [appusermodelid](../properties/props-system-appusermodel-id.md) der Verknüpfung ihrer App auf dem Start Bildschirm jedes Mal einschließen, wenn Sie " [**foratetoastnotifier**](/uwp/api/Windows.UI.Notifications.ToastNotificationManager?view=winrt-19041)" aufrufen. Wenn Sie dies nicht tun, wird der Toast nicht angezeigt.
+> Sie müssen die [AppUserModelID](../properties/props-system-appusermodel-id.md) der Verknüpfung Ihrer App bei jedem Aufruf von [**CreateToastNotifier**](/uwp/api/Windows.UI.Notifications.ToastNotificationManager?view=winrt-19041)in den Startbildschirm einfügen. Wenn Sie dies nicht tun, wird Ihr Popup nicht angezeigt.
 
  
 
@@ -85,9 +85,9 @@ ToastNotificationManager.CreateToastNotifier(appID).Show(toast);
 
 
 
-### <a name="4-handle-the-callbacks"></a>4. behandeln Sie die Rückrufe.
+### <a name="4-handle-the-callbacks"></a>4. Verarbeiten der Rückrufe
 
-Bringen Sie das Fenster ihrer app in den Vordergrund, wenn ein "aktivierter" Rückruf von der Popup Benachrichtigung empfangen wird. Wenn ein Benutzer einen Toast auswählt, wird erwartet, dass die app in einer Ansicht mit dem Inhalt dieses Popups gestartet wird.
+Stellen Sie das Fenster Ihrer App in den Vordergrund, wenn sie einen "aktivierten" Rückruf von der Popupbenachrichtigung empfängt. Wenn ein Benutzer ein Popup auswählt, wird erwartet, dass die App mit einer Ansicht gestartet wird, die sich auf den Inhalt dieses Popups bezieht.
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
@@ -102,31 +102,31 @@ Bringen Sie das Fenster ihrer app in den Vordergrund, wenn ein "aktivierter" Rü
 [Popup-XML-Schema](/uwp/schemas/tiles/toastschema/schema-root)
 </dt> <dt>
 
-[Übersicht über Popup Benachrichtigungen](/previous-versions/windows/apps/hh779727(v=win.10))
+[Übersicht über Popupbenachrichtigungen](/previous-versions/windows/apps/hh779727(v=win.10))
 </dt> <dt>
 
-[Schnellstart: Senden einer Popup Benachrichtigung](/previous-versions/windows/apps/hh465448(v=win.10))
+[Schnellstart: Senden einer Popupbenachrichtigung](/previous-versions/windows/apps/hh465448(v=win.10))
 </dt> <dt>
 
 [Schnellstart: Senden einer Popup-Pushbenachrichtigung](/previous-versions/windows/hh761487(v=win.10))
 </dt> <dt>
 
-[Richtlinien und Prüfliste für Popup Benachrichtigungen](/windows/uwp/design/shell/tiles-and-notifications/)
+[Richtlinien und Prüfliste für Popupbenachrichtigungen](/windows/uwp/design/shell/tiles-and-notifications/)
 </dt> <dt>
 
-[Auswählen und Verwenden einer Popup Vorlage](/previous-versions/windows/apps/hh465448(v=win.10))
+[Auswählen und Verwenden einer Popupvorlage](/previous-versions/windows/apps/hh465448(v=win.10))
 </dt> <dt>
 
-[Behandeln der Aktivierung über eine Popup Benachrichtigung](/previous-versions/windows/apps/hh761468(v=win.10))
+[Behandeln der Aktivierung über eine Popupbenachrichtigung](/previous-versions/windows/apps/hh761468(v=win.10))
 </dt> <dt>
 
-[Abonnieren von Popup Benachrichtigungen](/previous-versions/windows/apps/hh781238(v=win.10))
+[So entscheiden Sie sich für Popupbenachrichtigungen](/previous-versions/windows/apps/hh781238(v=win.10))
 </dt> <dt>
 
-[Auswählen einer Popup Vorlage](/previous-versions/windows/apps/hh761494(v=win.10))
+[Auswählen einer Popupvorlage](/previous-versions/windows/apps/hh761494(v=win.10))
 </dt> <dt>
 
-[Popup-Audiooptionen](/previous-versions/windows/apps/hh761492(v=win.10))
+[Popupaudiooptionen](/previous-versions/windows/apps/hh761492(v=win.10))
 </dt> </dl>
 
  

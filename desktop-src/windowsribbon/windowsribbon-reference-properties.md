@@ -1,6 +1,6 @@
 ---
 title: Eigenschaftsschlüssel
-description: Referenzdokumentation für die Windows Menüband-Framework-Eigenschaftsschlüssel, eine Auflistung von PROPERTYKEY- und PROPVARIANT-Schlüssel-Wert-Paaren, die verwendet werden, um den Zustand eines Menübandframeworkbefehls zu beschreiben.
+description: Referenzdokumentation für die Windows-Framework-Eigenschaftsschlüssel des Menübands, eine Sammlung von PROPERTYKEY- und PROPVARIANT-Schlüssel-Wert-Paaren, die verwendet werden, um den Zustand eines Menübandframeworkbefehls zu beschreiben.
 ms.assetid: 12bc7fda-ff69-4316-8baf-cc97e19a231c
 ms.topic: article
 ms.date: 05/31/2018
@@ -13,7 +13,7 @@ ms.locfileid: "118201332"
 ---
 # <a name="property-keys"></a>Eigenschaftsschlüssel
 
-Referenzdokumentation für die Windows Menüband-Framework-Eigenschaftsschlüssel, eine Auflistung von **PROPERTYKEY-** und PROPVARIANT-Schlüssel-Wert-Paaren, die verwendet werden, um den Zustand eines Menübandframeworkbefehls zu beschreiben. 
+Referenzdokumentation für die Windows-Framework-Eigenschaftsschlüssel des Menübands, eine Sammlung von **PROPERTYKEY-** und PROPVARIANT-Schlüssel-Wert-Paaren, die zum Beschreiben des Zustands eines Menübandframeworkbefehls verwendet werden. 
 
 > [!Note]  
 > Ein Schlüssel muss in der Auflistung für jeden Befehl eindeutig sein.
@@ -24,15 +24,15 @@ Referenzdokumentation für die Windows Menüband-Framework-Eigenschaftsschlüsse
 
 [Sammlungseigenschaften](windowsribbon-reference-properties-collection.md)
 
-Referenzdokumentation zu Eigenschaftsschlüsseln für auflistungsbasierte Steuerelemente des Menübandframeworks.
+Referenzdokumentation zu Eigenschaftsschlüsseln für auflistungsbasierte Steuerelemente im Menübandframework.
 
-[Farbwähler-Eigenschaften](windowsribbon-reference-properties-colorpicker.md)
+[Farbwähler Eigenschaften](windowsribbon-reference-properties-colorpicker.md)
 
-Referenzdokumentation zu Eigenschaftsschlüsseln für das [Menübandframework dropdown Farbwähler](windowsribbon-controls-dropdowncolorpicker.md).
+Referenzdokumentation zu Eigenschaftenschlüsseln für das [Menübandframework-Dropdownmenü Farbwähler](windowsribbon-controls-dropdowncolorpicker.md).
 
-[Eigenschaften des Schriftartsteuerelements](windowsribbon-reference-properties-fontcontrol.md)
+[Eigenschaften des Schriftart-Steuerelements](windowsribbon-reference-properties-fontcontrol.md)
 
-Referenzdokumentation zu Eigenschaftsschlüsseln für das Menübandframework [Schriftartsteuerelement](windowsribbon-controls-fontcontrol.md).
+Referenzdokumentation zu Eigenschaftsschlüsseln für das Menübandframework [Schriftartsteuerelemente](windowsribbon-controls-fontcontrol.md).
 
 [Frameworkeigenschaften](windowsribbon-reference-properties-framework.md)
 
@@ -44,11 +44,11 @@ Referenzdokumentation zu Eigenschaftsschlüsseln für Menübandframeworkressourc
 
 [Menübandeigenschaften](windowsribbon-reference-properties-ribbon.md)
 
-Referenzdokumentation zu Eigenschaftsschlüsseln für die Menübandansicht des Menübandframeworks.
+Referenzdokumentation zu Eigenschaftsschlüsseln für die Menübandansicht des Menübandframework.
 
 [Zustandseigenschaften](windowsribbon-reference-properties-state.md)
 
-Referenzdokumentation zu Eigenschaftsschlüsseln für den Menüband-Framework-Steuerelementzustand oder -Kontext.
+Referenzdokumentation zu Eigenschaftsschlüsseln für den Steuerelementzustand oder Kontext des Menübandframework.
 
 ## <a name="related-topics"></a>Zugehörige Themen
 

@@ -1,5 +1,5 @@
 ---
-description: Der HDRVLINE-Datentyp stellt ein nicht transparentes Handle des Dienstanbieters für eine Liniendatenstruktur dar. Der Dienstanbieter muss einen Wert dieses Typs in einen Verweis auf die entsprechende Datenstrukturinstanz auflösen.
+description: Der HDRVLINE-Datentyp stellt ein nicht transparentes Handle für Dienstanbieter für eine Zeilendatenstruktur dar. Der Dienstanbieter muss einen Wert dieses Typs in einen Verweis auf die entsprechende Datenstrukturinstanz auflösen.
 ms.assetid: 8bb1c3fe-a3de-4299-bc15-58321c5da549
 title: HDRVLINE
 ms.topic: article
@@ -13,7 +13,7 @@ ms.locfileid: "117762892"
 ---
 # <a name="hdrvline"></a>HDRVLINE
 
-Der **HDRVLINE-Datentyp** stellt das nicht transparente Handle eines Dienstanbieters für eine Liniendatenstruktur dar. Der Dienstanbieter muss einen Wert dieses Typs in einen Verweis auf die entsprechende Datenstrukturinstanz auflösen.
+Der **HDRVLINE-Datentyp** stellt das nicht transparente Handle eines Dienstanbieters für eine Zeilendatenstruktur dar. Der Dienstanbieter muss einen Wert dieses Typs in einen Verweis auf die entsprechende Datenstrukturinstanz auflösen.
 
  
 
