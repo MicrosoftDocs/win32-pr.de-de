@@ -1,11 +1,11 @@
 ---
-title: ID3DX11EffectGroup getdesc-Methode (D3dx11effect. h)
+title: ID3DX11EffectGroup GetDesc-Methode (D3dx11effect.h)
 description: Ruft eine Gruppenbeschreibung ab.
 ms.assetid: 04bb707a-be21-43d1-8d9d-5a84d29fda74
 keywords:
-- Getdesc-Methode Direct3D 11
-- Getdesc-Methode Direct3D 11, ID3DX11EffectGroup-Schnittstelle
-- ID3DX11EffectGroup-Schnittstelle Direct3D 11, getdesc-Methode
+- GetDesc-Methode Direct3D 11
+- GetDesc-Methode Direct3D 11, ID3DX11EffectGroup-Schnittstelle
+- ID3DX11EffectGroup-Schnittstelle Direct3D 11 , GetDesc-Methode
 topic_type:
 - apiref
 api_name:
@@ -17,14 +17,14 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: c32d44e215a6c89a7d71e899d9839509cbe39417
-ms.sourcegitcommit: 14010c34b35fa268046c7683f021f86de08ddd0a
+ms.openlocfilehash: ccbd7413748e19ca74b6663dd9ab775aa305bce741f458c86138050a919c5d1b
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "103961690"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118535512"
 ---
-# <a name="id3dx11effectgroupgetdesc-method"></a>ID3DX11EffectGroup:: getdesc-Methode
+# <a name="id3dx11effectgroupgetdesc-method"></a>ID3DX11EffectGroup::GetDesc-Methode
 
 Ruft eine Gruppenbeschreibung ab.
 
@@ -43,12 +43,12 @@ HRESULT GetDesc(
 
 <dl> <dt>
 
-*PDE SC* 
+*pDesc* 
 </dt> <dd>
 
-Typ: **[ **Bibliothek d3dx11 \_ Group \_ DESC**](d3dx11-group-desc.md)\***
+Typ: **[ **D3DX11 \_ GROUP \_ DESC**](d3dx11-group-desc.md)\***
 
-Ein Zeiger auf eine [**Bibliothek d3dx11 \_ Group \_**](d3dx11-group-desc.md) -Struktur.
+Ein Zeiger auf eine [**D3DX11 \_ GROUP \_ DESC-Struktur.**](d3dx11-group-desc.md)
 
 </dd> </dl>
 
@@ -56,23 +56,23 @@ Ein Zeiger auf eine [**Bibliothek d3dx11 \_ Group \_**](d3dx11-group-desc.md) -S
 
 Typ: **[ **HRESULT**](https://msdn.microsoft.com/library/Bb401631(v=MSDN.10).aspx)**
 
-Gibt einen der folgenden [Direct3D 11-Rückgabe Codes](d3d11-graphics-reference-returnvalues.md)zurück.
+Gibt einen der folgenden [Direct3D 11-Rückgabecodes zurück.](d3d11-graphics-reference-returnvalues.md)
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
 > [!Note]  
-> Das DirectX SDK stellt keine kompilierten Binärdateien für Effekte bereit. Sie müssen die Effekte 11-Quelle verwenden, um die Effekte-Anwendung zu erstellen. Weitere Informationen zum Verwenden der Effekte 11-Quelle finden Sie [unter Unterschiede zwischen den Effekten 10 und Effekte 11](d3d11-graphics-programming-guide-effects-differences.md).
+> Das DirectX SDK stellt keine kompilierten Binärdateien für Effekte bereit. Sie müssen die Quelle Effects 11 verwenden, um Ihre Effekttypanwendung zu erstellen. Weitere Informationen zur Verwendung der Quelle Effects 11 finden Sie unter [Unterschiede zwischen Effekten 10 und Effekten 11.](d3d11-graphics-programming-guide-effects-differences.md)
 
  
 
-## <a name="requirements"></a>Requirements (Anforderungen)
+## <a name="requirements"></a>Anforderungen
 
 
 
 | Anforderung | Wert |
 |--------------------|----------------------------------------------------------------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>D3dx11effect. h</dt> </dl>                                                    |
-| Bibliothek<br/> | <dl> <dt>N/v (die "Effects 11"-Bibliothek ist online als freigegebene Quelle verfügbar.)</dt> </dl> |
+| Header<br/>  | <dl> <dt>D3dx11effect.h</dt> </dl>                                                    |
+| Bibliothek<br/> | <dl> <dt>Nicht verfügbar (eine Effects 11-Bibliothek ist online als freigegebene Quelle verfügbar.)</dt> </dl> |
 
 
 

@@ -29,15 +29,15 @@ g \_ wszWMStreamTypeInfo
 
 ## <a name="data-type"></a>Datentyp
 
-[**WM \_ STREAM \_ TYPE \_ INFO**](/previous-versions/windows/desktop/api/wmsdkidl/ns-wmsdkidl-wm_stream_type_info) (**WMT TYPE \_ \_ BINARY**)
+[**WM \_ \_ \_ STREAMTYPINFORMATIONEN**](/previous-versions/windows/desktop/api/wmsdkidl/ns-wmsdkidl-wm_stream_type_info) (**\_ WMT-TYP \_ BINARY**)
 
 ## <a name="remarks"></a>Hinweise
 
-Dieses Attribut gilt für bestimmte Streams. Sie können dieses Attribut für Stream 0 nicht abrufen.
+Dieses Attribut gilt für bestimmte Datenströme. Sie können dieses Attribut für Stream 0 nicht abrufen.
 
 Dieses Attribut ist schreibgeschützt.
 
-**Auf WM/StreamTypeInfo kann** über das Metadaten-Editor-Objekt zugegriffen werden. Dies ist die einzige Möglichkeit, auf Datenstromkonfigurationsinformationen zu zugreifen, ohne die Datei mit dem Readerobjekt (oder dem synchronen Readerobjekt) zu öffnen.
+**Auf WM/StreamTypeInfo** kann über das Metadaten-Editor-Objekt zugegriffen werden. Dies ist die einzige Möglichkeit, auf Datenstromkonfigurationsinformationen zuzugreifen, ohne die Datei mit dem Readerobjekt (oder dem synchronen Readerobjekt) zu öffnen.
 
 ## <a name="see-also"></a>Weitere Informationen
 

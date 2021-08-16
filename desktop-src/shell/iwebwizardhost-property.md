@@ -20,7 +20,7 @@ ms.contentlocale: de-DE
 ms.lasthandoff: 08/11/2021
 ms.locfileid: "118720540"
 ---
-# <a name="webwizardhostproperty-property"></a>WebWizardHost.Property (Eigenschaft)
+# <a name="webwizardhostproperty-property"></a>WebWizardHost.Property-Eigenschaft
 
 Legt den aktuellen Wert einer Eigenschaft fest oder ruft sie ab.
 
@@ -46,7 +46,7 @@ Eine Variable vom Typ [**BSTR,**](/previous-versions/windows/desktop/automat/bst
 
 | Anforderung | Wert |
 |-------------------------------------|----------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Windows Nur \[ XP-Desktop-Apps\]<br/>                                            |
+| Unterstützte Mindestversion (Client)<br/> | Windows \[Nur XP-Desktop-Apps\]<br/>                                            |
 | Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2003-Desktop-Apps\]<br/>                                   |
 | Header<br/>                   | <dl> <dt>Shldisp.h</dt> </dl>   |
 | Idl<br/>                      | <dl> <dt>Shldisp.idl</dt> </dl> |
@@ -63,7 +63,7 @@ Eine Variable vom Typ [**BSTR,**](/previous-versions/windows/desktop/automat/bst
 [Verwenden des Übertragungsmanifests](../lwef/pubwiz-manifest.md)
 </dt> <dt>
 
-[Manifestschema übertragen](manifest-schema.md)
+[Übertragen des Manifestschemas](manifest-schema.md)
 </dt> </dl>
 
  

@@ -1,5 +1,5 @@
 ---
-description: 'Erfahren Sie mehr über: JET_LGPOS. Equals-Methode (Objekt)'
+description: 'Weitere Informationen finden Sie unter: JET_LGPOS. Equals-Methode (Objekt)'
 title: JET_LGPOS. Equals-Methode (Objekt)
 TOCTitle: Equals method (Object)
 ms:assetid: M:Microsoft.Isam.Esent.Interop.JET_LGPOS.Equals(System.Object)
@@ -65,15 +65,15 @@ public override bool Equals(
 #### <a name="return-value"></a>Rückgabewert
 
 Typ: [System.Boolean](/dotnet/api/system.boolean)  
-True, wenn die beiden Instanzen gleich sind.  
+TRUE, wenn die beiden Instanzen gleich sind.  
 
 ## <a name="see-also"></a>Weitere Informationen
 
 #### <a name="reference"></a>Verweis
 
-[JET_LGPOS Struktur](./jet-lgpos-structure2.md)
+[JET_LGPOS-Struktur](./jet-lgpos-structure2.md)
 
-[JET_LGPOS-Member](./jet-lgpos-members.md)
+[JET_LGPOS Member](./jet-lgpos-members.md)
 
 [Equals-Überladung](./jet-lgpos.equals-method.md)
 

@@ -1,5 +1,5 @@
 ---
-description: NULL gibt den normalen Fall an (datei ist offline verfügbar). Der Teilfall gilt nur für Ordner, in denen inhalte offline und andere nicht verfügbar sind.
+description: NULL gibt den normalen Fall an (die Datei ist offline verfügbar). Der Teilfall gilt nur für Ordner, in denen einige Inhalte möglicherweise offline verfügbar sind und andere nicht.
 ms.assetid: 46b03632-702e-46df-8204-33ada85adbee
 title: System.FileOfflineAvailabilityStatus
 ms.topic: article
@@ -13,7 +13,7 @@ ms.locfileid: "118727448"
 ---
 # <a name="systemfileofflineavailabilitystatus"></a>System.FileOfflineAvailabilityStatus
 
-NULL gibt den normalen Fall an (datei ist offline verfügbar). Der Teilfall gilt nur für Ordner, in denen inhalte offline und andere nicht verfügbar sind.
+NULL gibt den normalen Fall an (die Datei ist offline verfügbar). Der Teilfall gilt nur für Ordner, in denen einige Inhalte möglicherweise offline verfügbar sind und andere nicht.
 
 ## <a name="windows-10-version-1703"></a>Windows 10, Version 1703
 

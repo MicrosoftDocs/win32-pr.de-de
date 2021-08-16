@@ -1,11 +1,11 @@
 ---
-title: Ivmharddisk-Merge-Methode (vpccominterfaces. h)
-description: Führt eine differenzierende virtuelle Festplatte mit dem übergeordneten Datenträger Image zusammen.
+title: IVMHardDisk Merge-Methode (VPCCOMInterfaces.h)
+description: Führt eine unterschiedliche virtuelle Festplatte mit dem übergeordneten Datenträgerimage zusammen.
 ms.assetid: e2aca4d3-79c1-416a-b135-f4680c03d200
 keywords:
-- Merge-Methode Virtual PC
-- Merge-Methode Virtual PC, ivmharddisk-Schnittstelle
-- Ivmharddisk Interface Virtual PC, Merge-Methode
+- Mergemethode Virtueller PC
+- Mergemethode Virtual PC, IVMHardDisk-Schnittstelle
+- IVMHardDisk-Schnittstelle Virtueller PC, Mergemethode
 topic_type:
 - apiref
 api_name:
@@ -16,18 +16,18 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: bb5e4b32cb1df2f754463cee7f8275b00f86513b
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 5b1683b5a44d8418dc247dddcfde52b369c293484e5c3b19c139fe25521ac6c9
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "103956662"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118998940"
 ---
-# <a name="ivmharddiskmerge-method"></a>Ivmharddisk:: Merge-Methode
+# <a name="ivmharddiskmerge-method"></a>IVMHardDisk::Merge-Methode
 
-\[Windows Virtual PC ist nicht mehr für die Verwendung ab Windows 8 verfügbar. Verwenden Sie stattdessen den [Hyper-V-WMI-Anbieter (v2)](/windows/desktop/HyperV_v2/windows-virtualization-portal).\]
+\[Windows Der virtuelle PC ist ab diesem Zeitraum nicht mehr Windows 8. Verwenden Sie stattdessen den [Hyper-V-WMI-Anbieter (V2).](/windows/desktop/HyperV_v2/windows-virtualization-portal)\]
 
-Führt eine differenzierende virtuelle Festplatte mit dem übergeordneten Datenträger Image zusammen.
+Führt eine unterschiedliche virtuelle Festplatte mit dem übergeordneten Datenträgerimage zusammen.
 
 ## <a name="syntax"></a>Syntax
 
@@ -44,10 +44,10 @@ HRESULT Merge(
 
 <dl> <dt>
 
-*mergetask* \[ Out, retval\]
+*mergeTask* \[ out, retval\]
 </dt> <dd>
 
-Ein [**ivmtask**](ivmtask.md) -Objekt, das verwendet wird, um den Abschluss des Zusammenführungs Vorgangs zu verfolgen.
+Ein [**IVMTask-Objekt,**](ivmtask.md) das zum Nachverfolgen des Abschlusses des Zusammenführungsprozesses verwendet wird.
 
 </dd> </dl>
 
@@ -60,13 +60,13 @@ Diese Methode kann einen dieser Werte zurückgeben.
 | Rückgabecode/-wert                                                                                                                                                                              | BESCHREIBUNG                                                                                                                                                                                                                       |
 |------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | <dl> <dt>**S \_ OK**</dt> <dt>0</dt> </dl>                                                    | Der Vorgang wurde durchgeführt.<br/>                                                                                                                                                                                          |
-| <dl> <dt>**E \_ Zeiger**</dt> <dt>0x80004003</dt> </dl>                                      | Der-Parameter ist **null**.<br/>                                                                                                                                                                                             |
-| <dl> <dt>**HRESULT \_ Von \_ Win32 (Fehler \_ Freigabe \_ Verletzung)**</dt> <dt>0x80070020</dt> </dl> | Das von diesem [**ivmharddisk**](ivmharddisk.md) -Objekt referenzierte virtuelle Festplatten Abbild wird verwendet, oder das übergeordnete Element dieses virtuellen Festplatten Abbilds wird verwendet. Oder die Festplatten Abbilder können Teil eines gespeicherten Zustands sein.<br/> |
-| <dl> <dt>**VM \_ E \_ falscher \_ HD \_ - \_ Abbildtyp**</dt> <dt>0xa004067b</dt> </dl>                   | Das Image der virtuellen Festplatte, auf das dieses [**ivmharddisk**](ivmharddisk.md) -Objekt verweist, muss ein differenzierender Datenträger Abbild sein.<br/>                                                                                            |
-| <dl> <dt>**VM \_ E \_ - \_ Datei \_**</dt> schreibgeschützt <dt>0xa004067a</dt> </dl>                         | Das übergeordnete Element des virtuellen Festplatten Abbilds, auf das von diesem [**ivmharddisk**](ivmharddisk.md) -Objekt verwiesen wird, ist schreibgeschützt.<br/>                                                                                             |
-| <dl> <dt>**VM \_ E über \_ geordneter \_ Pfad \_ nicht \_ gefunden**</dt> <dt>0xa0040677</dt> </dl>                 | Das übergeordnete Element der virtuellen Festplatte, auf die von diesem [**ivmharddisk**](ivmharddisk.md) -Objekt verwiesen wird, ist nicht vorhanden.<br/>                                                                                                       |
-| <dl> <dt>**VM \_ E \_ App \_ \_ herunter**</dt> fahren <dt>0xa0040209</dt> </dl>                      | Das virtuelle Festplatten Abbild kann nicht zusammengeführt werden, da die Anwendung heruntergefahren wird.<br/>                                                                                                                                 |
-| <dl> <dt>**DISP \_ E- \_ Ausnahme**</dt> <dt>0x80020009</dt> </dl>                              | Ein unerwarteter Fehler ist aufgetreten.<br/>                                                                                                                                                                                      |
+| <dl> <dt>**E \_ ZEIGER 0X80004003**</dt> <dt></dt> </dl>                                      | Der Parameter ist **NULL.**<br/>                                                                                                                                                                                             |
+| <dl> <dt>**HRESULT \_ FROM \_ \_ WIN32(FEHLERFREIGABEVERLETZUNG) \_**</dt> <dt>0X80070020</dt> </dl> | Das image der virtuellen Festplatte, auf das dieses [**IVMHardDisk-Objekt**](ivmharddisk.md) verweist, wird verwendet, oder das übergeordnete Image dieses virtuellen Festplattenimages wird verwendet. Oder diese Festplattenabbilder können Teil eines gespeicherten Zustands sein.<br/> |
+| <dl> <dt>**VM \_ E \_ FALSCHER \_ \_ \_ HD-IMAGETYP**</dt> <dt>0XA004067B</dt> </dl>                   | Das Image der virtuellen Festplatte, auf das dieses [**IVMHardDisk-Objekt**](ivmharddisk.md) verweist, muss ein sich unterscheidende Datenträgerimage sein.<br/>                                                                                            |
+| <dl> <dt>**VM \_ E \_ FILE READ ONLY \_ \_ 0xA004067A**</dt> <dt></dt> </dl>                         | Das übergeordnete Image der virtuellen Festplatte, auf das dieses [**IVMHardDisk-Objekt**](ivmharddisk.md) verweist, ist als schreibgeschützt gekennzeichnet.<br/>                                                                                             |
+| <dl> <dt>**VM \_ DER \_ ÜBERGEORDNETE PFAD WURDE \_ \_ \_ NICHT**</dt> <dt>0XA0040677</dt> </dl>                 | Das übergeordnete Element der virtuellen Festplatte, auf die von diesem [**IVMHardDisk-Objekt**](ivmharddisk.md) verwiesen wird, ist nicht vorhanden.<br/>                                                                                                       |
+| <dl> <dt>**VM \_ \_ \_ E-APP WIRD \_ HERUNTERGEFAHREN**</dt> <dt>0XA0040209</dt> </dl>                      | Das Image der virtuellen Festplatte kann nicht zusammengeführt werden, da die Anwendung heruntergefahren wird.<br/>                                                                                                                                 |
+| <dl> <dt>**DISP \_ E \_ EXCEPTION**</dt> <dt>0x80020009</dt> </dl>                              | Ein unerwarteter Fehler ist aufgetreten.<br/>                                                                                                                                                                                      |
 
 
 
@@ -78,20 +78,20 @@ Diese Methode kann einen dieser Werte zurückgeben.
 
 | Anforderung | Wert |
 |-------------------------------------|-----------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows 7 \[ -Desktop-Apps\]<br/>                                                    |
+| Unterstützte Mindestversion (Client)<br/> | Windows 7 \[ Desktop-Apps\]<br/>                                                    |
 | Unterstützte Mindestversion (Server)<br/> | Nicht unterstützt<br/>                                                                     |
 | Ende des Supports (Client)<br/>    | Windows 7<br/>                                                                          |
-| Produkt<br/>                  | Windows Virtual PC<br/>                                                                 |
-| Header<br/>                   | <dl> <dt>Vpccominterfaces. h</dt> </dl> |
-| IID<br/>                      | IID \_ ivmharddisk ist als ffa14ae6-48f5-42a4-8a22-186f2e5c7db0 definiert.<br/>                |
+| Product (Produkt)<br/>                  | Windows Virtual PC<br/>                                                                 |
+| Header<br/>                   | <dl> <dt>VPCCOMInterfaces.h</dt> </dl> |
+| IID<br/>                      | IID \_ IVMHardDisk ist als ffa14ae6-48f5-42a4-8a22-186f2e5c7db0 definiert.<br/>                |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Ivmharddisk**](ivmharddisk.md)
+[**IVMHardDisk**](ivmharddisk.md)
 </dt> </dl>
 
  

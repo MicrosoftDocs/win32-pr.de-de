@@ -1,5 +1,5 @@
 ---
-description: Die meisten Verwaltungsaufgaben zum Konfigurieren der COM+-Anwendungssicherheit umfassen das Auffüllen vordefinierter Rollen mit Benutzern, sowohl bei der Installation von Anwendungen als auch fortlaufend.
+description: Die meisten Verwaltungsaufgaben zum Konfigurieren der COM+-Anwendungssicherheit umfassen das Aufrollen vordefinierter Rollen mit Benutzern, sowohl bei der Installation von Anwendungen als auch fortlaufend.
 ms.assetid: a7395d48-0193-420f-92ca-b0427ba9d496
 title: Verwalten von Benutzern in Rollen
 ms.topic: article
@@ -13,9 +13,9 @@ ms.locfileid: "118547628"
 ---
 # <a name="managing-users-in-roles"></a>Verwalten von Benutzern in Rollen
 
-Die meisten Verwaltungsaufgaben zum Konfigurieren der COM+-Anwendungssicherheit umfassen das Auffüllen vordefinierter Rollen mit Benutzern, sowohl bei der Installation von Anwendungen als auch fortlaufend. Einführende Informationen zur Funktionsweise dieser Sicherheitsfeatures finden Sie unter [Konfigurieren von Role-Based Security](configuring-role-based-security.md).
+Die meisten Verwaltungsaufgaben zum Konfigurieren der COM+-Anwendungssicherheit umfassen das Aufrollen vordefinierter Rollen mit Benutzern, sowohl bei der Installation von Anwendungen als auch fortlaufend. Einführende Informationen zur Funktionsweise dieser Sicherheitsfeatures finden Sie unter [Configuring Role-Based Security](configuring-role-based-security.md).
 
-In diesem Abschnitt werden Schritt-für-Schritt-Anweisungen für die folgenden Aufgaben bereitgestellt:
+In diesem Abschnitt finden Sie schritt-für-Schritt-Anweisungen für die folgenden Aufgaben:
 
 -   [Aktivieren Role-Based Autorisierungsüberprüfung](enabling-role-based-authorization-checking.md)
 -   [Zuweisen eines Benutzerkontos oder einer Gruppe zu einer Rolle](assigning-a-user-account-or-group-to-a-role.md)

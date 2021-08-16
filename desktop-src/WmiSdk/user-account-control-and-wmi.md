@@ -19,7 +19,7 @@ ms.locfileid: "118553316"
 ---
 # <a name="user-account-control-and-wmi"></a>Benutzerkontensteuerung und WMI
 
-Die Benutzerkontensteuerung (User Account Control, UAC) wirkt sich auf die WMI-Daten aus, die von einem Befehlszeilentool zurückgegeben werden, den Remotezugriff und die Ausführung von Skripts. Weitere Informationen zur Benutzerkontensteuerung finden Sie unter Erste Schritte [benutzerkontensteuerung.](https://support.microsoft.com/help/922708/how-to-use-user-account-control-uac-in-windows-vista)
+Die Benutzerkontensteuerung (User Account Control, UAC) wirkt sich auf die WMI-Daten aus, die von einem Befehlszeilentool zurückgegeben werden, den Remotezugriff und die Ausführung von Skripts. Weitere Informationen zur Benutzerkontensteuerung finden Sie unter Erste Schritte [Mit Benutzerkontensteuerung](https://support.microsoft.com/help/922708/how-to-use-user-account-control-uac-in-windows-vista).
 
 In den folgenden Abschnitten wird die UAC-Funktionalität beschrieben:
 
@@ -31,9 +31,9 @@ In den folgenden Abschnitten wird die UAC-Funktionalität beschrieben:
 
 ## <a name="user-account-control"></a>Benutzerkontensteuerung
 
-Unter UAC verfügen Konten in der [](/windows/desktop/SecGloss/a-gly)lokalen Administratorgruppe über zwei Zugriffstoken, eines mit Standardbenutzerberechtigungen und eines mit Administratorrechten. Aufgrund der UAC-Zugriffstokenfilterung wird ein Skript normalerweise unter dem Standardbenutzertoken ausgeführt, es sei denn, es wird "als Administrator" im Modus mit erhöhten Rechten ausgeführt. Nicht alle Skripts benötigten Administratorrechte.
+Unter UAC verfügen Konten in der [](/windows/desktop/SecGloss/a-gly)lokalen Gruppe Administratoren über zwei Zugriffstoken, eines mit Standardbenutzerberechtigungen und eines mit Administratorrechten. Aufgrund der UAC-Zugriffstokenfilterung wird ein Skript normalerweise unter dem Standardbenutzertoken ausgeführt, es sei denn, es wird im Modus mit erhöhten Rechten als Administrator ausgeführt. Nicht alle Skripts benötigten Administratorrechte.
 
-Skripts können nicht programmgesteuert bestimmen, ob sie unter einem Standardbenutzersicherheitstoken oder einem Administratortoken ausgeführt werden. Für das Skript tritt möglicherweise ein Fehler mit dem Fehler "Zugriff verweigert" auf. Wenn das Skript Administratorrechte erfordert, muss es im Modus mit erhöhten Rechten ausgeführt werden. Der Zugriff auf WMI-Namespaces unterscheidet sich je nachdem, ob das Skript im Modus mit erhöhten Rechten ausgeführt wird. Einige WMI-Vorgänge, z. B. das Abrufen von Daten oder das Ausführen der meisten Methoden, erfordern nicht, dass das Konto als Administrator ausgeführt wird. Weitere Informationen zu Standardzugriffsberechtigungen finden Sie unter [Zugriff auf WMI-Namespaces](access-to-wmi-namespaces.md) und [Ausführen privilegierter Vorgänge.](executing-privileged-operations.md)
+Skripts können nicht programmgesteuert bestimmen, ob sie unter einem Standardbenutzersicherheitstoken oder einem Administratortoken ausgeführt werden. Beim Skript tritt möglicherweise ein Fehler auf, bei dem der Zugriff verweigert wurde. Wenn das Skript Administratorrechte erfordert, muss es im Modus mit erhöhten Rechten ausgeführt werden. Der Zugriff auf WMI-Namespaces unterscheidet sich je nachdem, ob das Skript im Modus mit erhöhten Rechten ausgeführt wird. Einige WMI-Vorgänge, z. B. das Abrufen von Daten oder das Ausführen der meisten Methoden, erfordern nicht, dass das Konto als Administrator ausgeführt wird. Weitere Informationen zu Standardzugriffsberechtigungen finden Sie unter [Zugriff auf WMI-Namespaces](access-to-wmi-namespaces.md) und [Ausführen privilegierter Vorgänge.](executing-privileged-operations.md)
 
 Aufgrund der Benutzerkontensteuerung muss sich das Konto, unter dem das Skript ausgeführt wird, in der Gruppe Administratoren auf dem lokalen Computer sein, damit es mit erhöhten Rechten ausgeführt werden kann.
 
@@ -42,7 +42,7 @@ Sie können ein Skript oder eine Anwendung mit erhöhten Rechten ausführen, ind
 **So führen Sie ein Skript im Modus mit erhöhten Rechten aus**
 
 1.  Öffnen Sie ein Eingabeaufforderungsfenster, indem Sie mit der rechten Maustaste auf die Eingabeaufforderung im Startmenü und dann **auf Als Administrator ausführen klicken.**
-2.  Planen Sie die Ausführung des Skripts mit erhöhten Rechten mit Taskplaner. Weitere Informationen finden Sie unter [Sicherheitskontexte für ausgeführte Tasks.](/windows/desktop/TaskSchd/security-contexts-for-running-tasks)
+2.  Planen Sie, dass das Skript mit erhöhten Rechten ausgeführt wird, Taskplaner. Weitere Informationen finden Sie unter [Sicherheitskontexte für ausgeführte Tasks.](/windows/desktop/TaskSchd/security-contexts-for-running-tasks)
 3.  Führen Sie das Skript mit dem integrierten Administratorkonto aus.
 
 ## <a name="account-needed-to-run-wmi-command-line-tools"></a>Konto, das zum Ausführen von WMI-Command-Line Tools erforderlich ist
@@ -53,15 +53,15 @@ Um die folgenden [WMI-Command-Line Tools](wmi-command-line-tools.md)auszuführen
 
 -   [**wmic**](wmic.md)
 
-    Wenn Sie Wmic nach der Systeminstallation zum ersten Mal ausführen, muss es über eine Eingabeaufforderung mit erhöhten Rechten ausgeführt werden. Der Modus mit erhöhten Rechten ist möglicherweise nicht für nachfolgende Ausführungen von Wmic erforderlich, es sei denn, die WMI-Vorgänge erfordern Administratorrechte.
+    Wenn Sie Wmic zum ersten Mal nach der Systeminstallation ausführen, muss es über eine Eingabeaufforderung mit erhöhten Rechten ausgeführt werden. Der Modus mit erhöhten Rechten ist möglicherweise nicht für nachfolgende Ausführungen von Wmic erforderlich, es sei denn, die WMI-Vorgänge erfordern Administratorrechte.
 
 -   [**winmgmt**](winmgmt.md)
 
 -   [**wmiadap**](wmiadap.md)
 
-Um das [*WMI-Steuerelement*](gloss-w.md) (Wmimgmt.msc) ausführen und Änderungen an den Sicherheits- oder Überwachungseinstellungen des WMI-Namespace vornehmen zu können, muss Ihrem Konto das Recht Sicherheit bearbeiten explizit erteilt worden sein oder sich in der lokalen Administratorgruppe befinden. Das integrierte Administratorkonto kann auch die Sicherheit oder Überwachung für einen Namespace ändern.
+Um das [*WMI-Steuerelement*](gloss-w.md) (Wmimgmt.msc) ausführen und Änderungen an den Sicherheits- oder Überwachungseinstellungen des WMI-Namespace vornehmen zu können, muss Ihrem Konto das Recht Sicherheit bearbeiten explizit erteilt worden sein oder in der lokalen Administratorgruppe enthalten sein. Das integrierte Administratorkonto kann auch die Sicherheit oder Überwachung für einen Namespace ändern.
 
-Wbemtest.exe, ein Befehlszeilentool, das nicht von Microsoft-Kundendienstdiensten unterstützt wird, kann von Konten ausgeführt werden, die sich nicht in der lokalen Administratorgruppe befinden, es sei denn, ein bestimmter Vorgang erfordert Berechtigungen, die normalerweise Administratorkonten gewährt werden.
+Wbemtest.exe, ein Befehlszeilentool, das nicht von Microsoft-Kundensupportdiensten unterstützt wird, kann von Konten ausgeführt werden, die sich nicht in der lokalen Administratorgruppe befinden, es sei denn, ein bestimmter Vorgang erfordert Berechtigungen, die normalerweise Administratorkonten gewährt werden.
 
 ## <a name="handling-remote-connections-under-uac"></a>Behandeln von Remoteverbindungen unter UAC
 
@@ -73,7 +73,7 @@ In einer Arbeitsgruppe ist das Konto, das eine Verbindung mit dem Remotecomputer
 
 Die Sicherheit muss angepasst werden, damit dieses Konto verwendet werden kann, da das Konto nie über Administratorrechte verfügt hat. Geben Sie dem lokalen Benutzer:
 
--   Remotestart- und -aktivierungsrechte für den Zugriff auf DCOM. Weitere Informationen finden Sie unter [Herstellen einer Verbindung mit WMI auf einem Remotecomputer.](connecting-to-wmi-on-a-remote-computer.md)
+-   Remotestart- und Aktivierungsrechte für den Zugriff auf DCOM. Weitere Informationen finden Sie unter [Herstellen einer Verbindung mit WMI auf einem Remotecomputer.](connecting-to-wmi-on-a-remote-computer.md)
 -   Rechte für den Remotezugriff auf den WMI-Namespace (Remoteaktivieren). Weitere Informationen finden Sie unter [Zugriff auf WMI-Namespaces.](access-to-wmi-namespaces.md)
 -   Das Recht, auf das spezifische sicherungsfähige Objekt zu zugreifen, abhängig von der sicherheit, die für das Objekt erforderlich ist.
 

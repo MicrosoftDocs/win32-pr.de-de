@@ -1,9 +1,9 @@
 ---
-title: WM/Dirigent
-description: Das WM/Conductor-Attribut enthält den Namen des Leiters.
+title: WM/Enumer
+description: Das WM-Attribut bzw. das Attribut "Attribute" enthält den Namen des Attributs.
 ms.assetid: 12c58716-7b91-4014-9741-575a017cf7f1
 keywords:
-- Windows Media-Format "WM/Dirigent"
+- WM/Überdurchschnittliche Windows-Medienformat
 topic_type:
 - apiref
 api_name:
@@ -12,35 +12,35 @@ api_type:
 - NA
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 193bf35b9e16e19b08de100044ba994ed5c60050
-ms.sourcegitcommit: 57758ecb246c84d65e6e0e4bd5570d9176fa39cd
+ms.openlocfilehash: b4012569c392406470a7e53e7e4a4cb9c1aa010b5c30ebf98a3f88d3f3b5396b
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "104312995"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119027098"
 ---
-# <a name="wmconductor"></a>WM/Dirigent
+# <a name="wmconductor"></a>WM/Enumer
 
-Das **WM/Conductor-** Attribut enthält den Namen des Leiters.
+Das **WM-Attribut bzw. das Attribut "Attribute"** enthält den Namen des Attributs.
 
 ## <a name="global-constant"></a>Globale Konstante
 
-g \_ wszwmconductor
+g \_ wszWMConductor
 
 ## <a name="data-type"></a>Datentyp
 
-**WMT \_ - \_ Typzeichenfolge**
+**\_ \_ WMT-TYPZEICHENFOLGE**
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
 [**Attributliste**](attribute-list.md)
 </dt> </dl>
 
- 
+ 
 
- 
+ 
 
 
 

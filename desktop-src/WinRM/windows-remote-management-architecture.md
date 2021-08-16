@@ -1,6 +1,6 @@
 ---
-title: Windows-Remoteverwaltung-Architektur
-description: Die Windows-Remoteverwaltung-Architektur besteht aus Komponenten auf den Client-und Server Computern.
+title: Windows Architektur der Remoteverwaltung
+description: Die Windows-Remoteverwaltungsarchitektur besteht aus Komponenten auf den Client- und Servercomputern.
 ms.assetid: 82e67851-fe46-4bb0-8278-9718b5e0c7ae
 ms.tgt_platform: multiple
 ms.topic: article
@@ -10,30 +10,30 @@ topic_type:
 api_name: ''
 api_type: ''
 api_location: ''
-ms.openlocfilehash: 0f5576913c5e4a1f2a105fb77e2282dc682c6659
-ms.sourcegitcommit: 592c9bbd22ba69802dc353bcb5eb30699f9e9403
+ms.openlocfilehash: 889a823c4c67bed29f9ce695d84c893654b541aed76e0c79860e31f24c543662
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "103729185"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120121594"
 ---
-# <a name="windows-remote-management-architecture"></a>Windows-Remoteverwaltung-Architektur
+# <a name="windows-remote-management-architecture"></a>Windows Architektur der Remoteverwaltung
 
-Die Windows-Remoteverwaltung-Architektur besteht aus Komponenten auf den Client-und Server Computern. Die folgende Abbildung zeigt die Komponenten auf beiden Computern, die Interaktion der Komponenten mit anderen Komponenten und das Protokoll, das für die Kommunikation zwischen den Computern verwendet wird.
+Die Windows-Remoteverwaltungsarchitektur besteht aus Komponenten auf den Client- und Servercomputern. Die folgende Abbildung zeigt die Komponenten auf beiden Computern, die Interaktion der Komponenten mit anderen Komponenten und das Protokoll, das für die Kommunikation zwischen den Computern verwendet wird.
 
-![WinRM-Architektur](images/winrm-architecture.png)
+![winrm-Architektur](images/winrm-architecture.png)
 
-## <a name="requesting-client"></a>Anfordernder Client
+## <a name="requesting-client"></a>Anfordern des Clients
 
-Die folgenden WinRM-Komponenten befinden sich auf dem Computer, auf dem das Skript ausgeführt wird, das Daten anfordert.
+Die folgenden WinRM-Komponenten befinden sich auf dem Computer, auf dem das Skript zum Anfordern von Daten ausgeführt wird.
 
 -   WinRM-Anwendung
 
-    Dies ist das Skript oder **WinRM** -Befehlszeilen Tool, das die WinRM-Skript-API verwendet, um Aufrufe zum Anfordern von Daten oder zum Ausführen von Methoden auszuführen. Weitere Informationen finden Sie in der [WinRM-Skript-API](winrm-scripting-api.md).
+    Dies ist  das Skript oder Winrm-Befehlszeilentool, das die WinRM-Skripterstellungs-API verwendet, um Aufrufe zum Anfordern von Daten oder zum Ausführen von Methoden auszuführen. Weitere Informationen finden Sie in der [WinRM-Skripterstellungs-API.](winrm-scripting-api.md)
 
 -   WSMAuto.dll
 
-    Die Automatisierungs Schicht, die Skriptunterstützung bereitstellt.
+    Die Automatisierungsebene, die Skriptunterstützung bietet.
 
 -   WsmCL.dll
 
@@ -41,19 +41,19 @@ Die folgenden WinRM-Komponenten befinden sich auf dem Computer, auf dem das Skri
 
 -   HTTP-API
 
-    WinRM erfordert Unterstützung für http-und HTTPS-Transport.
+    WinRM erfordert Unterstützung für HTTP- und HTTPS-Transport.
 
-## <a name="responding-server"></a>Reaktions Ende Server
+## <a name="responding-server"></a>Antwortserver
 
-Die folgenden WinRM-Komponenten befinden sich auf dem Reaktions enden Computer.
+Die folgenden WinRM-Komponenten befinden sich auf dem reagierenden Computer.
 
 -   HTTP-API
 
-    WinRM erfordert Unterstützung für http-und HTTPS-Transport.
+    WinRM erfordert Unterstützung für HTTP- und HTTPS-Transport.
 
 -   WSMAuto.dll
 
-    Die Automatisierungs Schicht, die Skriptunterstützung bereitstellt.
+    Die Automatisierungsebene, die Skriptunterstützung bietet.
 
 -   WsmCL.dll
 
@@ -61,11 +61,11 @@ Die folgenden WinRM-Komponenten befinden sich auf dem Reaktions enden Computer.
 
 -   WsmSvc.dll
 
-    WinRM- [*Listenerdienst*](windows-remote-management-glossary.md) .
+    [*WinRM-Listenerdienst.*](windows-remote-management-glossary.md)
 
 -   WsmProv.dll
 
-    Anbieter Subsystem.
+    Anbietersubsystem.
 
 -   WsmRes.dll
 
@@ -73,19 +73,19 @@ Die folgenden WinRM-Komponenten befinden sich auf dem Reaktions enden Computer.
 
 -   WsmWmiPl.dll
 
-    [*WMI-Plug-in*](windows-remote-management-glossary.md). Dies ermöglicht Ihnen das Abrufen von WMI-Daten über WinRM.
+    [*WMI-Plug-In*](windows-remote-management-glossary.md). Dadurch können Sie WMI-Daten über WinRM abrufen.
 
--   Intelligent Platform Management Interface (IPMI)-Treiber und WMI-IPMI-Anbieter
+-   IPMI-Treiber (Intelligent Platform Management Interface) und WMI-IPMI-Anbieter
 
-    Diese Komponenten stellen alle Hardware Daten bereit, die mithilfe der IPMI-Klassen angefordert werden. Weitere Informationen finden Sie unter [IPMI-Anbieter](/previous-versions/windows/desktop/ipmiprv/ipmi-provider). BMC-Hardware muss von dem SMBIOS oder vom Gerät, das manuell erstellt wurde, durch Laden des Treibers erkannt werden. Weitere Informationen finden Sie unter [Installation und Konfiguration für Windows-Remoteverwaltung](installation-and-configuration-for-windows-remote-management.md).
+    Diese Komponenten stellen alle Hardwaredaten zur Verfügung, die mithilfe der IPMI-Klassen angefordert werden. Weitere Informationen finden Sie unter [IPMI-Anbieter.](/previous-versions/windows/desktop/ipmiprv/ipmi-provider) BMC-Hardware muss vom SMBIOS oder dem gerät erkannt worden sein, das manuell durch Laden des Treibers erstellt wurde. Weitere Informationen finden Sie unter [Installation und Konfiguration für Windows Remoteverwaltung.](installation-and-configuration-for-windows-remote-management.md)
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
 <dl> <dt>
 
-[Informationen zu Windows-Remoteverwaltung](about-windows-remote-management.md)
+[Informationen Windows Remoteverwaltung](about-windows-remote-management.md)
 </dt> </dl>
 
- 
+ 
 
- 
+ 

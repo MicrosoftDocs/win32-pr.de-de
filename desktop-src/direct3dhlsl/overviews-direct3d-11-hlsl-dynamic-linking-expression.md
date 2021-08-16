@@ -1,6 +1,6 @@
 ---
-title: Einschränkungen der Schnittstellen Verwendung
-description: Die aktuelle GPU-Hardware unterstützt keine unterschiedlichen Slot-Informationen zur Shader-Laufzeit. Folglich können Schnittstellen Verweise nicht innerhalb eines bedingten Ausdrucks, z. b. einer if-oder Switch-Anweisung, geändert werden.
+title: Einschränkungen der Schnittstellenverwendung
+description: Die aktuelle GPU-Hardware unterstützt zur Shaderlaufzeit keine unterschiedlichen Slotinformationen. Folglich können Schnittstellenverweise nicht innerhalb eines bedingten Ausdrucks wie einer if- oder switch-Anweisung geändert werden.
 ms.assetid: 95a505d8-3ec4-49b7-bb2b-f29a655e4225
 ms.topic: article
 ms.date: 05/31/2018
@@ -9,20 +9,20 @@ topic_type:
 api_name: ''
 api_type: ''
 api_location: ''
-ms.openlocfilehash: 8825d192dcb874ce8b148c4ade5c579a55857311
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: eae44bbdb93ab2b3ffa0d09385c56b463192cc68c17e0454f9edd3326f722d29
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "104309723"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119672560"
 ---
-# <a name="interface-usage-restrictions"></a>Einschränkungen der Schnittstellen Verwendung
+# <a name="interface-usage-restrictions"></a>Einschränkungen der Schnittstellenverwendung
 
-Die aktuelle GPU-Hardware unterstützt keine unterschiedlichen Slot-Informationen zur Shader-Laufzeit. Folglich können Schnittstellen Verweise nicht innerhalb eines bedingten Ausdrucks, z. b. einer if-oder Switch-Anweisung, geändert werden.
+Die aktuelle GPU-Hardware unterstützt zur Shaderlaufzeit keine unterschiedlichen Slotinformationen. Folglich können Schnittstellenverweise nicht innerhalb eines bedingten Ausdrucks wie einer if- oder switch-Anweisung geändert werden.
 
-Der folgende Shader-Code veranschaulicht, wann diese Einschränkung stattfindet und einen möglichen alternativen Ansatz.
+Der folgende Shadercode veranschaulicht, wann diese Einschränkung auftritt und ein möglicher alternativer Ansatz.
 
-Unter Berücksichtigung der folgenden Schnittstellen Deklarationen:
+Mit den folgenden Schnittstellendeklarationen:
 
 
 ```
@@ -43,7 +43,7 @@ B arrayB[6];
 
 
 
-Die folgenden Klassen Deklarationen werden angegeben:
+Mit den folgenden Klassendeklarationen:
 
 
 ```
@@ -78,7 +78,7 @@ class C4 : A, B
 
 
 
-Ein Schnittstellen Verweis kann nicht innerhalb des bedingten Ausdrucks (einer if-Anweisung) geändert werden:
+Ein Schnittstellenverweis kann nicht innerhalb des bedingten Ausdrucks geändert werden (eine if-Anweisung):
 
 
 ```
@@ -110,7 +110,7 @@ float main() : wicked
 
 
 
-Mit derselben Schnittstelle und denselben Klassen Deklarationen können Sie einen Index verwenden, um die gleiche Funktionalität bereitzustellen und die erzwungene Schleife zu vermeiden.
+Angesichts der gleichen Schnittstellen- und Klassendeklarationen können Sie einen Index verwenden, um die gleiche Funktionalität zur Verfügung zu stellen und die erzwungene Schleifenaufrollung zu vermeiden.
 
 
 ```
@@ -142,12 +142,12 @@ float main() : wicked
 
 <dl> <dt>
 
-[Dynamisches Verknüpfen](overviews-direct3d-11-hlsl-dynamic-linking.md)
+[Dynamische Verknüpfung](overviews-direct3d-11-hlsl-dynamic-linking.md)
 </dt> </dl>
 
- 
+ 
 
- 
+ 
 
 
 

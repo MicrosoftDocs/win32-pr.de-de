@@ -1,9 +1,9 @@
 ---
-title: EM_GETPASSWORDCHAR Meldung (Winuser. h)
-description: Ruft das Kenn Wort Zeichen ab, das ein Bearbeitungs Steuerelement anzeigt, wenn der Benutzer Text eingibt. Sie können diese Nachricht entweder an ein Bearbeitungs Steuerelement oder ein Rich Edit-Steuerelement senden.
+title: EM_GETPASSWORDCHAR (Winuser.h)
+description: Ruft das Kennwortzeichen ab, das ein Bearbeitungssteuerzeichen anzeigt, wenn der Benutzer Text einzugeben. Sie können diese Nachricht entweder an ein Bearbeitungssteuer steuerelement oder an ein Rich Edit-Steuerelement senden.
 ms.assetid: 874336f6-701b-466a-afa6-0cb3e787ba4c
 keywords:
-- Windows-Steuerelemente für EM_GETPASSWORDCHAR Meldung
+- EM_GETPASSWORDCHAR von Windows-Steuerelementen
 topic_type:
 - apiref
 api_name:
@@ -14,16 +14,16 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 6285f002554e22c89896711d3d1d355a95c6bb7a
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: b8c4e7ac576f18d0ab28fcf8c2288d2bee7966866a71180a81c34896c2396f56
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "103859175"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117831207"
 ---
-# <a name="em_getpasswordchar-message"></a>EM \_ getpasswordchar-Meldung
+# <a name="em_getpasswordchar-message"></a>EM \_ GETPASSWORDCHAR-Nachricht
 
-Ruft das Kenn Wort Zeichen ab, das ein Bearbeitungs Steuerelement anzeigt, wenn der Benutzer Text eingibt. Sie können diese Nachricht entweder an ein Bearbeitungs Steuerelement oder ein Rich Edit-Steuerelement senden.
+Ruft das Kennwortzeichen ab, das ein Bearbeitungssteuerzeichen anzeigt, wenn der Benutzer Text einzugeben. Sie können diese Nachricht entweder an ein Bearbeitungssteuer steuerelement oder an ein Rich Edit-Steuerelement senden.
 
 ## <a name="parameters"></a>Parameter
 
@@ -45,15 +45,15 @@ Nicht verwendet; muss 0 (null) sein.
 
 ## <a name="return-value"></a>Rückgabewert
 
-Der Rückgabewert gibt das Zeichen an, das anstelle von Zeichen, die vom Benutzer eingegeben werden, angezeigt werden soll. Wenn der Rückgabewert **null** ist, gibt es kein Kenn Wort Zeichen, und das Steuerelement zeigt die vom Benutzer eingegebenen Zeichen an.
+Der Rückgabewert gibt das Zeichen an, das statt aller vom Benutzer typierten Zeichen angezeigt werden soll. Wenn der Rückgabewert **NULL ist,** gibt es kein Kennwortzeichen, und das Steuerelement zeigt die vom Benutzer eingegebenen Zeichen an.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Wenn ein Bearbeitungs Steuerelement mit dem es-Kenn [**\_ Wort**](edit-control-styles.md) Stil erstellt wird, wird das standardmäßige Kenn Wort Zeichen auf ein Sternchen () festgelegt \* . Wenn ein Bearbeitungs Steuerelement ohne den es-Kenn **\_ Wort** Stil erstellt wird, gibt es kein Kenn Wort Zeichen. Um das Kenn Wort Zeichen zu ändern, senden Sie die Nachricht [**EM \_ setpasswordchar**](em-setpasswordchar.md) .
+Wenn ein Bearbeitungssteuerzeichen im [**ES \_ PASSWORD-Format**](edit-control-styles.md) erstellt wird, wird das Standardkennwortzeichen auf ein Sternchen () \* festgelegt. Wenn ein Bearbeitungssteuerzeichen ohne **ES \_ PASSWORD-Format erstellt** wird, ist kein Kennwortzeichen enthalten. Um das Kennwortzeichen zu ändern, senden Sie die [**EM \_ SETPASSWORDCHAR-Nachricht.**](em-setpasswordchar.md)
 
-Steuer **Elemente bearbeiten:** Mehrzeilige Bearbeitungs Steuerelemente unterstützen das Kenn Wort Format oder die Nachrichten nicht.
+**Steuerelemente bearbeiten:** Mehrline-Bearbeitungssteuerelemente unterstützen das Kennwortformat oder Nachrichten nicht.
 
-Umfassende **Bearbeitung:** Wird in Microsoft Rich Edit 2,0 und höher unterstützt. Sowohl einzeilige als auch mehrzeilige Bearbeitungs Steuerelemente unterstützen den Kenn Wort Stil und die Nachrichten. Informationen zur Kompatibilität von Rich-Edit-Versionen mit den verschiedenen Systemversionen finden Sie unter Informationen [zu Rich Edit](about-rich-edit-controls.md)-Steuerelementen.
+**Umfangreiche Bearbeitung:** Wird in Microsoft Rich Edit 2.0 und höher unterstützt. Sowohl einzeilen- als auch mehrzeilenbasierte Bearbeitungssteuerelemente unterstützen das Kennwortformat und Meldungen. Informationen zur Kompatibilität von Rich Edit-Versionen mit den verschiedenen Systemversionen finden Sie unter [Informationen zu Rich Edit-Steuerelementen.](about-rich-edit-controls.md)
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -61,17 +61,17 @@ Umfassende **Bearbeitung:** Wird in Microsoft Rich Edit 2,0 und höher unterstü
 
 | Anforderung | Wert |
 |-------------------------------------|----------------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>                                                           |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2003 \[ -Desktop-Apps\]<br/>                                                     |
-| Header<br/>                   | <dl> <dt>Winuser. h (Windows. h einschließen)</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur \[ Vista-Desktop-Apps\]<br/>                                                           |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2003-Desktop-Apps\]<br/>                                                     |
+| Header<br/>                   | <dl> <dt>Winuser.h (include Windows.h)</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**EM \_ setpasswordchar**](em-setpasswordchar.md)
+[**EM \_ SETPASSWORDCHAR**](em-setpasswordchar.md)
 </dt> </dl>
 
  

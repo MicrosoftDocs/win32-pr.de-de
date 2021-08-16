@@ -1,9 +1,9 @@
 ---
-title: WM/encodingtime-Attribut
-description: Das WM/encodingtime-Attribut ist das Datum und die Uhrzeit, zu denen der Inhalt codiert wurde.
+title: WM/EncodingTime-Attribut
+description: Das WM/EncodingTime-Attribut ist das Datum und die Uhrzeit, zu der der Inhalt codiert wurde.
 ms.assetid: 264f379a-0bec-4143-bc23-ab45fb725af6
 keywords:
-- WM/encodingtime-Attribut, Windows Media Player
+- WM/EncodingTime-Attribut Windows Media Player
 topic_type:
 - apiref
 api_name:
@@ -12,33 +12,33 @@ api_type:
 - NA
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 659a1ec5b192782370804745da3f232db6e439dd
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 24b143218b854177852049c1ae1ed530360c196eecd217db3ed53d9f46bd2915
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106366028"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120122660"
 ---
-# <a name="wmencodingtime-attribute"></a>WM/encodingtime-Attribut
+# <a name="wmencodingtime-attribute"></a>WM/EncodingTime-Attribut
 
-Das **WM/encodingtime-** Attribut ist das Datum und die Uhrzeit, zu denen der Inhalt codiert wurde.
+Das **WM/EncodingTime-Attribut** ist das Datum und die Uhrzeit, zu der der Inhalt codiert wurde.
 
 ## <a name="applies-to"></a>Gilt für
 
 -   [Audioelemente](audio-item-attributes.md)
--   [Häufig verwendete Windows Media-Dateiattribute](commonly-used-windows-media-file-attributes.md)
+-   [Häufig verwendete Windows Mediendateiattribute](commonly-used-windows-media-file-attributes.md)
 -   [Wiedergabelisten](playlist-attributes-ref.md)
--   [Video Elemente](video-item-attributes.md)
+-   [Videoelemente](video-item-attributes.md)
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Dieses Attribut ist sowohl in der Bibliothek als auch in der digitalen Mediendatei gespeichert.
+Dieses Attribut wird sowohl in der Bibliothek als auch in der digitalen Mediendatei gespeichert.
 
-" **Aliationdate** " ist ein Alias für dieses Attribut.
+**CreationDate ist** ein Alias für dieses Attribut.
 
-Die SDK-Konstante für das Windows Media-Format für dieses Attribut ist g \_ wszwmencodingtime.
+Die Windows Media Format SDK-Konstante für dieses Attribut ist g \_ wszWMEncodingTime.
 
-Um zu ermitteln, ob Sie den Wert dieses Attributs ändern können, verwenden Sie die [Media. isread onlyitem](media-isreadonlyitem.md) -Methode.
+Um zu bestimmen, ob Sie den Wert dieses Attributs ändern können, verwenden Sie die [Media.isReadOnlyItem-Methode.](media-isreadonlyitem.md)
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -50,11 +50,11 @@ Um zu ermitteln, ob Sie den Wert dieses Attributs ändern können, verwenden Sie
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Attribut Verweis**](attribute-reference.md)
+[**Attributreferenz**](attribute-reference.md)
 </dt> </dl>
 
  

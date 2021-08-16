@@ -24,11 +24,11 @@ ms.locfileid: "118542045"
 ---
 # <a name="ideliveryoptimizationfile2-interface"></a>IDeliveryOptimizationFile2-Schnittstelle
 
-**IDeliveryOptimizationFile2 unterstützt das Festlegen** und Abrufen optionaler Dateieigenschaften. 
+**IDeliveryOptimizationFile2** unterstützt das Festlegen und Abrufen optionaler Dateieigenschaften. 
 
 ## <a name="members"></a>Member
 
-Die **IDeliveryOptimizationFile2-Schnittstelle** erbt von der [**IUnknown-Schnittstelle.**](/windows/desktop/api/unknwn/nn-unknwn-iunknown) **IDeliveryOptimizationFile2** verfügt auch über diese Membertypen:
+Die **IDeliveryOptimizationFile2-Schnittstelle** erbt von der [**IUnknown-Schnittstelle.**](/windows/desktop/api/unknwn/nn-unknwn-iunknown) **IDeliveryOptimizationFile2** verfügt auch über diese Typen von Membern:
 
 - [Methoden](#methods)
 
@@ -36,7 +36,7 @@ Die **IDeliveryOptimizationFile2-Schnittstelle** erbt von der [**IUnknown-Schnit
 
 Die **IDeliveryOptimizationFile2-Schnittstelle** verfügt über diese Methoden.
 
-| Methode                                                 | Beschreibung                                                  |
+| Methode                                                 | BESCHREIBUNG                                                  |
 |:-------------------------------------------------------|:-------------------------------------------------------------|
 | [**GetProperty**](ideliveryoptimizationfile2-getproperty.md)  | Diese Methode gibt eine einzelne Eigenschaft der DO-Datei zurück. |
 | [**Setproperty**](ideliveryoptimizationfile2-setproperty.md)  | Diese Methode legt eine einzelne Eigenschaft der DO-Datei fest.    |
@@ -45,8 +45,8 @@ Die **IDeliveryOptimizationFile2-Schnittstelle** verfügt über diese Methoden.
 
 | Anforderung | Wert |
 |-------------------------------|-----------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)      | Windows 10 Desktop-Apps, Version 1803 \[\]                                    |
-| Unterstützte Mindestversion (Server)      | Windows Server, version 1709 desktop apps only (Nur \[ Desktop-Apps der Version 1709)\]                                |
+| Unterstützte Mindestversion (Client)      | Windows 10, nur Desktop-Apps der Version 1803 \[\]                                    |
+| Unterstützte Mindestversion (Server)      | Windows Server, nur Desktop-Apps der Version 1709 \[\]                                |
 | Header                        | Deliveryoptimization.h                                                            |
 | Idl                           | DeliveryOptimization.idl                                                          |
 | Bibliothek                       | Dosvc.lib                                                                         |

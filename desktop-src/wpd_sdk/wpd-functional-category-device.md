@@ -1,60 +1,60 @@
 ---
-description: WPD \_ - \_ funktionskategoriegerät \_
+description: WPD \_ FUNCTIONAL \_ CATEGORY \_ DEVICE
 ms.assetid: 64b34490-1cb5-4915-ae1c-77bd4ab79ad7
 title: WPD_FUNCTIONAL_CATEGORY_DEVICE
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: eb179311af5fb3c3eef063157e3615b21eeb66a5
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 499f39cf60e247c0abbbcc66f7fad52099a2a83a93f348b1ac9636bb790b9354
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106356964"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117842216"
 ---
-# <a name="wpd_functional_category_device"></a>WPD \_ - \_ funktionskategoriegerät \_
+# <a name="wpd_functional_category_device"></a>WPD \_ FUNCTIONAL \_ CATEGORY \_ DEVICE
 
-Ein \_ Geräte funktionales Objekt der WPD-Funktions \_ Kategorie \_ kapselt das Gerät (d. h. das oberste Objekt des Geräts). Wenn ein Gerät diese funktionale Kategorie implementiert, sollte es zusätzlich zu den Eigenschaften, die für das [Geräte Objekt](device-object.md)aufgelistet werden, auch diese Eigenschaften unterstützen.
+Ein \_ \_ funktionales WPD FUNCTIONAL CATEGORY \_ DEVICE-Objekt kapselt das Gerät (das oberste Objekt des Geräts). Wenn ein Gerät diese Funktionskategorie implementiert, sollte es diese Eigenschaften zusätzlich zu den eigenschaften unterstützen, die für das [Geräteobjekt](device-object.md)aufgeführt sind.
 
 
 
 | Eigenschaftsname                                                                                                         | Erforderlich oder optional                                                                                                |
 |-----------------------------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------|
-| [WPD- \_ Objekt- \_ ID](object-properties.md)                                                                | Erforderlich, schreibgeschützt. Ein Client kann diese Eigenschaft auch zum Zeitpunkt der Erstellung nicht festlegen.                                      |
-| [übergeordnete WPD- \_ Objekt- \_ \_ ID](object-properties.md)                                                 | Erforderlich.                                                                                                           |
-| [WPD- \_ Objekt \_ Name](object-properties.md)                                                            | Erforderlich.                                                                                                           |
-| [\_ \_ persistente \_ eindeutige \_ ID für WPD-Objekt](object-properties.md)                          | Erforderlich, schreibgeschützt. Ein Client kann diese Eigenschaft auch zum Zeitpunkt der Erstellung nicht festlegen.                                      |
-| [WPD- \_ Objekt \_ Format](object-properties.md)                                                        | Erforderlich.                                                                                                           |
-| [Inhaltstyp für WPD- \_ Objekt \_ \_](object-properties.md)                                           | Erforderlich.                                                                                                           |
-| [WPD- \_ Objekt \_ IsHidden](object-properties.md)                                                    | Erforderlich, wenn das Objekt ausgeblendet ist.                                                                                   |
-| [WPD- \_ Objekt \_ IsSystem](object-properties.md)                                                    | Erforderlich, wenn das Objekt ein Systemobjekt ist (stellt eine Systemdatei dar).                                               |
-| [WPD- \_ Objekt \_ Größe](object-properties.md)                                                            | Erforderlich, wenn das Objekt über mindestens eine Ressource verfügt.                                                                   |
-| [\_ \_ ursprünglicher \_ Dateiname \_ des WPD-Objekts](object-properties.md)                              | Erforderlich, wenn das-Objekt eine Datei darstellt.                                                                           |
-| [WPD- \_ Objekt \_ nicht \_ verwendbar](object-properties.md)                                       | Empfohlen, wenn das Objekt nicht für die Verwendung durch das Gerät bestimmt ist.                                               |
-| [Verweise auf WPD- \_ Objekte \_](object-properties.md)                                                | Erforderlich, wenn das-Objekt über Verweise auf andere-Objekte verfügt.                                                             |
-| [WPD- \_ Objekt \_ Schlüsselwörter](object-properties.md)                                                    | Dies ist optional.                                                                                                           |
-| [WPD- \_ Objekt \_ Synchronisierungs- \_ ID](object-properties.md)                                                     | Dies ist optional.                                                                                                           |
-| [WPD- \_ Objekt \_ ist DRM- \_ \_ geschützt](object-properties.md)                                  | Erforderlich, wenn das Objekt durch DRM-Technologie geschützt wird.                                                              |
-| [\_ \_ Erstellungsdatum des WPD-Objekts \_](object-properties.md)                                           | Dies ist optional.                                                                                                           |
-| [Datum des WPD- \_ Objekts \_ \_ geändert](object-properties.md)                                         | Empfohlen.                                                                                                        |
-| [erstelltes WPD- \_ Objekt \_ Datum \_](object-properties.md)                                         | Dies ist optional.                                                                                                           |
-| [\_ \_ zurück \_ Verweise auf WPD-Objekte](object-properties.md)                                                                | Empfohlen, wenn auf das Objekt von einem anderen Objekt verwiesen wird.                                                          |
-| [\_ \_ \_ Funktions \_ Objekt- \_ ID des WPD-Objekt Containers](object-properties.md)     | Dies ist optional.                                                                                                           |
-| [WPD \_ - \_ Objekt \_ generieren \_ der Miniaturansicht aus der \_ Ressource](object-properties.md) | Dies ist optional.                                                                                                           |
-| [WPD- \_ Funktions \_ Objekt \_ Kategorie](miscellaneous-properties.md)                      | Erforderlich.                                                                                                           |
-| [WPD- \_ Geräte \_ Synchronisierungs \_ Partner](device-properties.md)                                           | Dies ist optional.                                                                                                           |
-| [Version der WPD- \_ Geräte \_ Firmware \_](device-properties.md)                                   | Erforderlich.                                                                                                           |
-| [\_ \_ Energie \_ Pegel des WPD-Geräts](device-properties.md)                                             | Empfohlen, wenn das Gerät über einen Akku verfügt.                                                                                |
-| [WPD \_ - \_ Geräte \_ Stromquelle](device-properties.md)                                           | Empfohlen.                                                                                                        |
-| [WPD- \_ Geräte \_ Protokoll](device-properties.md)                                                    | Empfohlen.                                                                                                        |
-| [WPD- \_ Geräte \_ Hersteller](device-properties.md)                                            | Erforderlich.                                                                                                           |
-| [WPD- \_ Geräte \_ Modell](device-properties.md)                                                          | Erforderlich.                                                                                                           |
-| [\_ \_ Serien \_ Nummer des WPD-Geräts](device-properties.md)                                         | Erforderlich.                                                                                                           |
-| [WPD- \_ Gerät \_ unterstützt \_ nicht \_ verwendbar](device-properties.md)                    | Erforderlich, wenn das Gerät nicht verwendbare Objekte unterstützt. Das heißt, wenn das Gerät für die einfache Datenspeicherung verwendet werden kann. |
-| [DateTime für WPD- \_ Gerät \_](device-properties.md)                                                    | Dies ist optional.                                                                                                           |
-| [Anzeige Name des WPD- \_ Geräts \_ \_](device-properties.md)                                         | Empfohlen.                                                                                                        |
-| [vom WPD- \_ Gerät \_ unterstützte \_ DRM- \_ Schemata](device-properties.md)                        | Empfohlen, wenn das Gerät DRM-Technologie unterstützt.                                                                  |
-| [vom WPD- \_ Gerät \_ unterstützte \_ Formate \_ sind \_ geordnet](device-properties.md)       | Empfohlen, wenn das Gerät eine bevorzugte Format Anordnung unterstützt.                                                       |
-| [WPD \_ - \_ Gerätetyp](device-properties.md)                                                            | Empfohlen.                                                                                                        |
+| [\_ \_ WPD-OBJEKT-ID](object-properties.md)                                                                | Erforderlich, schreibgeschützt. Ein Client kann diese Eigenschaft auch zur Erstellungszeit nicht festlegen.                                      |
+| [ÜBERGEORDNETE \_ \_ \_ WPD-OBJEKT-ID](object-properties.md)                                                 | Erforderlich.                                                                                                           |
+| [\_WPD-OBJEKTNAME \_](object-properties.md)                                                            | Erforderlich.                                                                                                           |
+| [\_PERSISTENTE EINDEUTIGE ID DES \_ \_ \_ WPD-OBJEKTS](object-properties.md)                          | Erforderlich, schreibgeschützt. Ein Client kann diese Eigenschaft auch zur Erstellungszeit nicht festlegen.                                      |
+| [\_WPD-OBJEKTFORMAT \_](object-properties.md)                                                        | Erforderlich.                                                                                                           |
+| [\_ \_ WPD-OBJEKTINHALTSTYP \_](object-properties.md)                                           | Erforderlich.                                                                                                           |
+| [\_WPD-OBJEKT \_ ISHIDDEN](object-properties.md)                                                    | Erforderlich, wenn das Objekt ausgeblendet ist.                                                                                   |
+| [WPD \_ OBJECT \_ ISSYSTEM](object-properties.md)                                                    | Erforderlich, wenn das Objekt ein Systemobjekt ist (stellt eine Systemdatei dar).                                               |
+| [\_WPD-OBJEKTGRÖßE \_](object-properties.md)                                                            | Erforderlich, wenn das Objekt über mindestens eine Ressource verfügt.                                                                   |
+| [\_ \_ URSPRÜNGLICHER \_ \_ DATEINAME DES WPD-OBJEKTS](object-properties.md)                              | Erforderlich, wenn das -Objekt eine Datei darstellt.                                                                           |
+| [\_WPD-OBJEKT \_ NICHT \_ VERWENDBAR](object-properties.md)                                       | Empfohlen, wenn das Objekt nicht für die Nutzung durch das Gerät vorgesehen ist.                                               |
+| [\_ \_ WPD-OBJEKTVERWEISE](object-properties.md)                                                | Erforderlich, wenn das Objekt Verweise auf andere Objekte hat.                                                             |
+| [\_ \_ WPD-OBJEKTSCHLÜSSELWÖRTER](object-properties.md)                                                    | Optional.                                                                                                           |
+| [\_ \_ WPD-OBJEKTSYNCHRONISIERUNGS-ID \_](object-properties.md)                                                     | Optional.                                                                                                           |
+| [\_WPD-OBJEKT \_ IST \_ \_ DRM-GESCHÜTZT](object-properties.md)                                  | Erforderlich, wenn das Objekt durch drm-Technologie geschützt ist.                                                              |
+| [ERSTELLUNGSDATUM \_ DES WPD-OBJEKTS \_ \_](object-properties.md)                                           | Optional.                                                                                                           |
+| [ÄNDERUNGSDATUM \_ DES WPD-OBJEKTS \_ \_](object-properties.md)                                         | Empfohlen.                                                                                                        |
+| [ERSTELLUNGSDATUM \_ DES WPD-OBJEKTS \_ \_](object-properties.md)                                         | Optional.                                                                                                           |
+| [\_ \_ WPD-OBJEKTRÜCKVERWEISE \_](object-properties.md)                                                                | Empfohlen, wenn ein anderes Objekt auf das Objekt verweist.                                                          |
+| [FUNKTIONALE \_ \_ \_ \_ OBJEKT-ID DES WPD-OBJEKTCONTAINERS \_](object-properties.md)     | Optional.                                                                                                           |
+| [\_WPD-OBJEKT \_ GENERIERT \_ \_ MINIATURANSICHTEN AUS \_ RESSOURCE](object-properties.md) | Optional.                                                                                                           |
+| [WPD \_ FUNCTIONAL \_ OBJECT \_ CATEGORY](miscellaneous-properties.md)                      | Erforderlich.                                                                                                           |
+| [\_ \_ WPD-GERÄTESYNCHRONISIERUNGSPARTNER \_](device-properties.md)                                           | Optional.                                                                                                           |
+| [\_ \_ WPD-GERÄTEFIRMWAREVERSION \_](device-properties.md)                                   | Erforderlich.                                                                                                           |
+| [WPD \_ DEVICE \_ POWER \_ LEVEL](device-properties.md)                                             | Empfohlen, wenn das Gerät über einen Akku verfügt.                                                                                |
+| [WPD \_ DEVICE \_ POWER \_ SOURCE](device-properties.md)                                           | Empfohlen.                                                                                                        |
+| [\_WPD-GERÄTEPROTOKOLL \_](device-properties.md)                                                    | Empfohlen.                                                                                                        |
+| [\_WPD-GERÄTEHERSTELLER \_](device-properties.md)                                            | Erforderlich.                                                                                                           |
+| [\_WPD-GERÄTEMODELL \_](device-properties.md)                                                          | Erforderlich.                                                                                                           |
+| [\_ \_ WPD-GERÄTESERIENNUMMER \_](device-properties.md)                                         | Erforderlich.                                                                                                           |
+| [\_WPD-GERÄT \_ UNTERSTÜTZT NICHT \_ \_ VERWENDBAR](device-properties.md)                    | Erforderlich, wenn das Gerät nicht verwendbare Objekte unterstützt. Das heißt, wenn das Gerät für die einfache Datenspeicherung verwendet werden kann. |
+| [WPD \_ DEVICE \_ DATETIME](device-properties.md)                                                    | Optional.                                                                                                           |
+| [ANZEIGENAME DES \_ WPD-GERÄTS \_ \_](device-properties.md)                                         | Empfohlen.                                                                                                        |
+| [VOM \_ WPD-GERÄT \_ UNTERSTÜTZTE \_ \_ DRM-SCHEMAS](device-properties.md)                        | Empfohlen, wenn das Gerät DRM-Technologie unterstützt.                                                                  |
+| [VOM \_ \_ WPD-GERÄT UNTERSTÜTZTE \_ FORMATE WERDEN \_ \_ SORTIERT.](device-properties.md)       | Empfohlen, wenn das Gerät die bevorzugte Formatreihenfolge unterstützt.                                                       |
+| [\_WPD-GERÄTETYP \_](device-properties.md)                                                            | Empfohlen.                                                                                                        |
 
 
 
@@ -62,13 +62,13 @@ Ein \_ Geräte funktionales Objekt der WPD-Funktions \_ Kategorie \_ kapselt das
 
 ## <a name="typical-resources"></a>Typische Ressourcen
 
-Diese Objekte Hosten in der Regel keine Ressourcen.
+Diese Objekte hosten in der Regel keine Ressourcen.
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
 <dl> <dt>
 
-[**Funktions Objekt des WPD- \_ \_ Inhaltstyp \_ \_**](wpd-content-type-functional-object.md)
+[**\_FUNKTIONALES OBJEKT DES WPD-INHALTSTYPS \_ \_ \_**](wpd-content-type-functional-object.md)
 </dt> </dl>
 
  

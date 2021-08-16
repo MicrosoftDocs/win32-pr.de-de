@@ -1,5 +1,5 @@
 ---
-description: 'Weitere Informationen finden Sie unter: EsentMultiValuedColumnMustBeTaggedException-Konstruktor'
+description: 'Weitere Informationen zu: EsentMultiValuedColumnMustBeTaggedException-Konstruktor'
 title: EsentMultiValuedColumnMustBeTaggedException-Konstruktor
 TOCTitle: 'EsentMultiValuedColumnMustBeTaggedException constructor '
 ms:assetid: M:Microsoft.Isam.Esent.Interop.EsentMultiValuedColumnMustBeTaggedException.#ctor

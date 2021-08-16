@@ -39,12 +39,12 @@ Die **ID3DX11EffectDepthStencilViewVariable-Schnittstelle** verfügt über diese
 
 
 
-| Methode                                                                                     | Beschreibung                                              |
+| Methode                                                                                     | BESCHREIBUNG                                              |
 |:-------------------------------------------------------------------------------------------|:---------------------------------------------------------|
 | [**GetDepthStencil**](id3dx11effectdepthstencilviewvariable-getdepthstencil.md)           | Hier erhalten Sie eine Ressource für die Tiefen-Schablonenansicht.<br/>            |
-| [**GetDepthStencilArray**](id3dx11effectdepthstencilviewvariable-getdepthstencilarray.md) | Hier finden Sie ein Array von Ressourcen für die Tiefen-Schablonenansicht.<br/> |
-| [**SetDepthStencil**](id3dx11effectdepthstencilviewvariable-setdepthstencil.md)           | Legen Sie eine Ressource für die Tiefen schablonenansicht fest.<br/>            |
-| [**SetDepthStencilArray**](id3dx11effectdepthstencilviewvariable-setdepthstencilarray.md) | Legen Sie ein Array von Ressourcen für die Tiefen schablonenansicht fest.<br/> |
+| [**GetDepthStencilArray**](id3dx11effectdepthstencilviewvariable-getdepthstencilarray.md) | Hier erhalten Sie ein Array von Ressourcen für die Tiefen-Schablonenansicht.<br/> |
+| [**SetDepthStencil**](id3dx11effectdepthstencilviewvariable-setdepthstencil.md)           | Legen Sie eine Ressource für die Tiefen-Schablonenansicht fest.<br/>            |
+| [**SetDepthStencilArray**](id3dx11effectdepthstencilviewvariable-setdepthstencilarray.md) | Legen Sie ein Array von Ressourcen für die Tiefen-Schablonenansicht fest.<br/> |
 
 
 
@@ -68,7 +68,7 @@ Die **ID3DX11EffectDepthStencilViewVariable-Schnittstelle** verfügt über diese
 
 
 
-## <a name="see-also"></a>Weitere Informationen:
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 

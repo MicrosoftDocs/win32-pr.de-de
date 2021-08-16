@@ -3,7 +3,7 @@ title: So aufzählen Sie alle installierten Windows Mediencodecs
 description: So aufzählen Sie alle installierten Windows Mediencodecs
 ms.assetid: 651c8624-0b66-4d0e-a25f-6c4b1a94e849
 keywords:
-- Streams,Aufzählen installierter Windows Mediencodecs
+- Streams, Aufzählen installierter Windows Mediencodecs
 - Codecs, Enumerationen
 - Streams, Codecindizes
 - Codecs, Indizes

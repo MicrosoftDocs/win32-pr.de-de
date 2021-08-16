@@ -5,7 +5,7 @@ ms.assetid: 68ae1f68-0585-4bc5-bea4-eb55f3626093
 keywords:
 - IsUpdateNeeded-Eigenschaft Legacy Windows Umgebungsfeatures
 - IsUpdateNeeded-Eigenschaft Legacy Windows Umgebungsfeatures, IResultsViewer-Schnittstelle
-- IResultsViewer-Schnittstelle Legacy Windows Environment Features , IsUpdateNeeded-Eigenschaft
+- IResultsViewer-Schnittstelle Legacy Windows Umgebungsfeatures, IsUpdateNeeded-Eigenschaft
 topic_type:
 - apiref
 api_name:

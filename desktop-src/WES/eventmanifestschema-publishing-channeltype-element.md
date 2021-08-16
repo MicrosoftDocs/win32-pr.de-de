@@ -1,9 +1,9 @@
 ---
-title: Publishing (channelType)-Element
-description: Definiert die Protokollierungs Eigenschaften für die Sitzung, die vom Kanal verwendet wird. | Publishing (channelType)-Element
+title: publishing (ChannelType)-Element
+description: Definiert die Protokollierungseigenschaften für die Sitzung, die der Kanal verwendet. | publishing (ChannelType)-Element
 ms.assetid: 032b5888-550b-4771-bd30-3195602811a7
 keywords:
-- Veröffentlichungs Element-Ereignisprotokoll
+- Publishing-Element EventLog
 topic_type:
 - apiref
 api_name:
@@ -13,16 +13,16 @@ api_type:
 ms.topic: reference
 ms.date: 05/31/2018
 api_location: ''
-ms.openlocfilehash: e47604ad3a9a9372fa1432db96777e85ef901176
-ms.sourcegitcommit: 92e74c99f8f4d097676959d0c317f533c2400a80
+ms.openlocfilehash: f1758ee390c75708ea1f0acd5fb75af4e8db8c6128b1b7b39c8e4f2ea71ed28d
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/09/2021
-ms.locfileid: "103961443"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119055858"
 ---
-# <a name="publishing-channeltype-element"></a>Publishing (channelType)-Element
+# <a name="publishing-channeltype-element"></a>publishing (ChannelType)-Element
 
-Definiert die Protokollierungs Eigenschaften für die Sitzung, die vom Kanal verwendet wird.
+Definiert die Protokollierungseigenschaften für die Sitzung, die der Kanal verwendet.
 
 ``` syntax
 <xs:element name="publishing"
@@ -30,7 +30,7 @@ Definiert die Protokollierungs Eigenschaften für die Sitzung, die vom Kanal ver
  />
 ```
 
-Das **Publishing** -Element wird durch den komplexen [**channelType**](eventmanifestschema-channeltype-complextype.md) -Typ definiert.
+Das **Veröffentlichungselement** wird durch den komplexen [**ChannelType-Typ**](eventmanifestschema-channeltype-complextype.md) definiert.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -38,19 +38,19 @@ Das **Publishing** -Element wird durch den komplexen [**channelType**](eventmani
 
 | Anforderung | Wert |
 |-------------------------------------|------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>       |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2008 \[ -Desktop-Apps\]<br/> |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur \[ Vista-Desktop-Apps\]<br/>       |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2008-Desktop-Apps\]<br/> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
 **Übergeordnetes Element**
 </dt> <dt>
 
-[**Channel (channelellisttype)**](eventmanifestschema-channel-channellisttype-element.md)
+[**channel (ChannelListType)**](eventmanifestschema-channel-channellisttype-element.md)
 </dt> </dl>
 
  

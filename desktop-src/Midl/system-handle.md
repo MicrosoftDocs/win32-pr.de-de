@@ -1,8 +1,8 @@
 ---
 title: system_handle-Attribut
-description: Das \system_handle\-Attribut gibt einen systemdefinierte Handletyp an.
+description: Das \system_handle\-Attribut gibt einen systemdefinierten Handletyp an.
 keywords:
-- system_handle-Attribut MIDL
+- system_handle MIDL-Attribut
 topic_type:
 - apiref
 api_name:
@@ -20,7 +20,7 @@ ms.locfileid: "118641266"
 ---
 # <a name="system_handle-attribute"></a>system_handle-Attribut
 
-Das \[  \] system_handle-Attribut gibt einen systemdefinierte Handletyp an, der den Zugriff auf ein Systemobjekt darstellt.
+Das \[  \] system_handle-Attribut gibt einen systemdefinierten Handletyp an, der den Zugriff auf ein Systemobjekt darstellt.
 
 ``` syntax
 [system_handle(system-handle-type[,optional-access-mask])]
@@ -33,19 +33,19 @@ Das \[  \] system_handle-Attribut gibt einen systemdefinierte Handletyp an, der 
 *system-handle-type* 
 </dt> <dd>
 
-Gibt eine der Systemhandletypoptionen an.
+Gibt eine der Optionen des Systemhandpunkttyps an.
 
 Die gültigen Optionen sind:
-* [sh_composition](sh-composition.md) : Ein DirectComposition-Oberflächenhandle
-* [sh_event:](sh-event.md) Ein benanntes oder unbenanntes Ereignisobjekt
+* [sh_composition:](sh-composition.md) Ein DirectComposition-Oberflächenhand handle
+* [sh_event:](sh-event.md) Ein benanntes oder unbenannte Ereignisobjekt
 * [sh_file:](sh-file.md) Eine Datei oder ein E/A-Gerät
 * [sh_job:](sh-job.md) Ein Auftragsobjekt
-* [sh_mutex:](sh-mutex.md) Ein benanntes oder unbenanntes Mutexobjekt
-* [sh_pipe:](sh-pipe.md) Ein anonymes oder benanntes Pipeobjekt
+* [sh_mutex:](sh-mutex.md) Ein benanntes oder unbenannte Mutex-Objekt
+* [sh_pipe:](sh-pipe.md) Ein anonymes Objekt oder ein Named Pipe-Objekt
 * [sh_process:](sh-process.md) Ein Prozessobjekt
 * [sh_reg_key:](sh-reg-key.md) Ein Registrierungsschlüssel
-* [sh_section:](sh-section.md) Abschnitt "Freigegebener Arbeitsspeicher"
-* [sh_semaphore:](sh-semaphore.md) Ein benanntes oder unbenanntes Semaphorobjekt
+* [sh_section:](sh-section.md) Abschnitt "Freigegebener Speicher"
+* [sh_semaphore:](sh-semaphore.md) Ein benanntes oder unbenannte Semaphorobjekt
 * [sh_socket:](sh-socket.md) Ein WinSock-Socketobjekt
 * [sh_thread:](sh-thread.md) Ein Threadobjekt
 * [sh_token:](sh-token.md) Ein Zugriffstokenobjekt
@@ -55,31 +55,31 @@ Die gültigen Optionen sind:
 *optional-access-mask*
 </dt> <dd>
 
-Fordert optional bestimmte Zugriffsrechte an, die auf das duplizierte Handle angewendet werden. Wenn dies nicht angegeben ist, wird das Handle standardmäßig mit dem gleichen Zugriff dupliziert. 
+Fordert optional bestimmte Zugriffsrechte an, die auf das duplizierte Handle angewendet werden. Wenn dies nicht angegeben ist, wird das Handle standardmäßig mit demselben Zugriff dupliziert. 
 
-Um eine andere Zugriffsebene anzugeben, verwenden Sie objektspezifische Zugriffsrechte, die dem ausgewählten zugrunde liegenden Systemobjekt entsprechen.
+Um eine andere Zugriffsebene anzugeben, verwenden Sie objektspezifische Zugriffsrechte, die dem ausgewählten zugrunde liegenden Systemobjekt entspricht.
 
-Weitere Informationen zur Weitergabe von Zugriffsrechten während der Duplizierung finden Sie in der [DuplicateHandle-Dokumentation.](/windows/win32/api/handleapi/nf-handleapi-duplicatehandle)
+Weitere Informationen zur Propagierung von Zugriffsrechten während der Duplizierung finden Sie in der [DuplicateHandle-Dokumentation.](/windows/win32/api/handleapi/nf-handleapi-duplicatehandle)
 
-Links zu Listen mit Zugriffsrechten für jeden Objekttyp finden Sie in der *DuplicateHandle-Referenz* sowie in den Überschriften **siehe auch** auf jeder `sh_*` Parameterseite.
+Links zu Listen mit Zugriffsrechten für jeden Objekttyp finden Sie in  der *DuplicateHandle-Referenz* sowie in den Überschriften der einzelnen `sh_*` Parameterseiten.
 
 </dd> </dl>
 
 ## <a name="remarks"></a>Hinweise
 
-Um dieses Attribut verwenden zu können, muss das `-target` Flag `NT100` auf (oder höher) festgelegt werden, wenn midl.exe ausgeführt wird.
+Um dieses Attribut verwenden zu können, muss das Flag auf (oder höher) festgelegt werden, `-target` wenn sie `NT100` midl.exe.
 
 Systemhandles sind Handles, die vom Betriebssystem definiert werden, um Zugriff auf eine Systemressource zu ermöglichen. Der spezifische Typ des Objekts hinter dem Handle muss beim Deklarieren des Attributs angegeben werden.
 
-Bei einem mit markierten Handle `[in]` wird das Handle in die Remoteprozedur dupliziert und bleibt für die Dauer dieser Prozedur gültig. Bei Rückgabe aus der Remoteprozedur wird das duplizierte Handle freigegeben. Um den Zugriff auf das zugrunde liegende Objekt beizubehalten, muss die Remoteanwendung das Handle in ihren eigenen Adressraum duplizieren.
+Bei einem Handle mit dem Namen wird das Handle in der Remoteprozedur dupliziert und bleibt für die `[in]` Dauer dieser Prozedur gültig. Bei rückgabe von der Remoteprozedur wird das duplizierte Handle frei. Um den Zugriff auf das zugrunde liegende Objekt zu erhalten, muss die Remoteanwendung das Handle in ihren eigenen Adressraum duplizieren.
 
-Im Gegensatz dazu verliert die Remoteprozedur den Besitz für ein handle, das als markiert `[out]` ist, wenn eine Remoteprozedur ein Handle von einem Aufruf zurückgibt. Um den Zugriff auf das zugrunde liegende Objekt beizubehalten, sollte die Remoteprozedur das Handle duplizieren und das Duplikat zurückgeben. Das zurückgegebene Handle gehört dann dem Aufrufer, der die Verantwortung übernimmt, es zu schließen, wenn der Zugriff auf das zugrunde liegende Systemobjekt nicht mehr erforderlich ist.
+Im Gegensatz dazu verliert die Remoteprozedur für ein Handle, das als gekennzeichnet ist, den Besitz, wenn eine Remoteprozedur ein Handle von einem Aufruf `[out]` zurückgibt. Um den Zugriff auf das zugrunde liegende Objekt zu erhalten, sollte die Remoteprozedur das Handle duplizieren und das Duplikat zurückgeben. Das zurückgegebene Handle gehört dann dem Aufrufer, der die Verantwortung übernimmt, es zu schließen, wenn der Zugriff auf das zugrunde liegende Systemobjekt nicht mehr erforderlich ist.
 
 Da dies ein Mechanismus zum Weiterleiten des Zugriffs auf ein Systemobjekt ist, gilt dieses Attribut nur für Aufrufe zwischen Prozeduren auf demselben Computer.
 
-Die Erstellungs- und Zugriffsparameter, die dem zugrunde liegenden Objekt hinter dem Systemhandle bei der Erstellung übergeben werden, bestimmen, ob es erfolgreich in den Remoteprozedurkontext gemarshallt werden kann.
+Die Erstellungs- und Zugriffsparameter, die dem zugrunde liegenden Objekt hinter dem Systemhand handle bei der Erstellung übergeben werden, bestimmen, ob es erfolgreich in den Remoteprozedurkontext marshallt werden kann.
 
-Ein Array von `system_handle` kann entweder in oder ausgehend mit der Syntax übergeben werden, die in der Dokumentation [**size_is Attributs**](size-is.md) enthalten ist.
+Ein Array von kann entweder in oder mit der Syntax übergeben werden, die in der Dokumentation size_is `system_handle` [**Attributs gefunden**](size-is.md) wird.
 
 ## <a name="examples"></a>Beispiele
 
@@ -105,7 +105,7 @@ interface MyInterface : IUnknown
 | Unterstützte Mindestversion (Client) | Windows 10 Anniversary Update (Version 1607, Build 14393) |
 | Unterstützte Mindestversion (Server) | Windows Server 2016 (Build 14393) |
 
-## <a name="see-also"></a>Weitere Informationen:
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 <!--

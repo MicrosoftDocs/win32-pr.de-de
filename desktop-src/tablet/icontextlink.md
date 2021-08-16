@@ -38,9 +38,9 @@ Die **IContextLink-Schnittstelle** verfügt über diese Methoden.
 
 | Methode                                                                  | Beschreibung                                                                                                             |
 |:------------------------------------------------------------------------|:------------------------------------------------------------------------------------------------------------------------|
-| [**GetContextLinkDirection**](icontextlink-getcontextlinkdirection.md) | Ruft den Typ der Beziehung ab, die **dieser IContextLink** darstellt.<br/>                                         |
-| [**GetDestinationNode**](icontextlink-getdestinationnode.md)           | Ruft das [**IContextNode-Objekt**](icontextnode.md) ab, das das Ziel für dieses **IContextLink-Objekt ist.**<br/> |
-| [**GetSourceNode**](icontextlink-getsourcenode.md)                     | Ruft das [**IContextNode-Objekt**](icontextnode.md) ab, das die Quelle für dieses **IContextLink-Objekt ist.**<br/>      |
+| [**GetContextLinkDirection**](icontextlink-getcontextlinkdirection.md) | Ruft den Typ der Beziehung ab, die von **IContextLink** dargestellt wird.<br/>                                         |
+| [**GetDestinationNode**](icontextlink-getdestinationnode.md)           | Ruft das [**IContextNode-Objekt**](icontextnode.md) ab, das das Ziel für diesen **IContextLink** ist.<br/> |
+| [**GetSourceNode**](icontextlink-getsourcenode.md)                     | Ruft das [**IContextNode-Objekt**](icontextnode.md) ab, das die Quelle für diesen **IContextLink** ist.<br/>      |
 
 
 
@@ -48,9 +48,9 @@ Die **IContextLink-Schnittstelle** verfügt über diese Methoden.
 
 ## <a name="remarks"></a>Hinweise
 
-Im Folgenden finden Sie ein Beispiel für eine Beziehung, die durch ein **IContextLink-Objekt dargestellt** wird:
+Im Folgenden ist ein Beispiel für eine Beziehung dargestellt, die durch ein **IContextLink-Objekt** dargestellt wird:
 
--   Wenn ein AnalysisHint-Knoten in der Ink-Analyse verwendet wird, erstellt der Ink-Analysevorgang ein **IContextLink-Objekt** vom Typ AnalysisHint zwischen dem Analysehinweisknoten und dem Knoten, der Schreibvorgang innerhalb des Bereichs des Hinweises enthält. Der Quellknoten ist der Analysehinweisknoten, und der Zielknoten ist der Knoten, der Schreibdaten enthält.
+-   Wenn ein AnalysisHint-Knoten in der Freihandanalyse verwendet wird, erstellt der Freihandanalysevorgang ein **IContextLink-Objekt** vom Typ AnalysisHint zwischen dem Analysehinweisknoten und dem Knoten, der Das Schreiben im Bereich des Hinweises enthält. Der Quellknoten ist der Analysehinweisknoten, und der Zielknoten ist der Knoten, der Schreibdaten enthält.
 
 ## <a name="requirements"></a>Anforderungen
 

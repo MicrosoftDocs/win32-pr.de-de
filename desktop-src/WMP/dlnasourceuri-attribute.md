@@ -1,9 +1,9 @@
 ---
-title: Dlnasourceuri-Attribut
-description: Das dlnasourceuri-Attribut ist der universelle Ressourcen Bezeichner (URI) des Elements.
+title: DLNASourceURI-Attribut
+description: Das DLNASourceURI-Attribut ist der universelle Ressourcenbezeichner (URI) des Elements.
 ms.assetid: 323c897b-9b76-44f7-9313-c51595589583
 keywords:
-- Dlnasourceuri-Attribut, Windows Media Player
+- DLNASourceURI-Windows Media Player
 topic_type:
 - apiref
 api_name:
@@ -12,34 +12,34 @@ api_type:
 - NA
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 96ebe21a39a67dec9356c5dd5360efb48f4ef029
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 07e5383de75fef1a0e1957f270a8a5238951bce4ede1418dbf79ba2038777372
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106366033"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118997170"
 ---
-# <a name="dlnasourceuri-attribute"></a>Dlnasourceuri-Attribut
+# <a name="dlnasourceuri-attribute"></a>DLNASourceURI-Attribut
 
-Das **dlnasourceuri** -Attribut ist der universelle Ressourcen Bezeichner (URI) des Elements.
+Das **DLNASourceURI-Attribut** ist der universelle Ressourcenbezeichner (URI) des Elements.
 
 ## <a name="applies-to"></a>Gilt für
 
 -   [**Audioelemente**](audio-item-attributes.md)
 -   [**Andere Elemente**](other-item-attributes.md)
--   [**Foto Elemente**](photo-item-attributes.md)
--   [**Wiedergabelisten Elemente**](playlist-attributes-ref.md)
--   [**Video Elemente**](video-item-attributes.md)
+-   [**Fotoelemente**](photo-item-attributes.md)
+-   [**Wiedergabelistenelemente**](playlist-attributes-ref.md)
+-   [**Videoelemente**](video-item-attributes.md)
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Wenn sich das Element in der lokalen Bibliothek des aktuellen Benutzers befindet, sind dieses Attribut, das [**SourceUrl**](sourceurl-attribute.md) -Attribut und der von [**iwmpmedia:: get \_ SourceUrl**](/previous-versions/windows/desktop/api/wmp/nf-wmp-iwmpmedia-get_sourceurl) zurückgegebene Wert identisch.
+Wenn sich das Element in der lokalen Bibliothek des aktuellen Benutzers befindet, sind dieses Attribut, das [**SourceURL-Attribut**](sourceurl-attribute.md) und der von [**IWMPMedia::get \_ sourceURL**](/previous-versions/windows/desktop/api/wmp/nf-wmp-iwmpmedia-get_sourceurl) zurückgegebene Wert identisch.
 
-Wenn sich das Element nicht in der lokalen Bibliothek des aktuellen Benutzers befindet, aber zu einer Remote Bibliothek gehört, ist dieses Attribut ein Bezeichner der Form DLNA-playsingle://*xxx*.
+Wenn sich das Element nicht in der lokalen Bibliothek des aktuellen Benutzers befindet, sondern zu einer Remotebibliothek gehört, ist dieses Attribut ein Bezeichner des Formulars dlna-playsingle://*xxx*.
 
-Sie können einen DLNA-playsingle-URI an die [**IWMPCore3:: newmedia**](/previous-versions/windows/desktop/api/wmp/nf-wmp-iwmpcore3-newmedia) -Methode übergeben, um eine [**iwmpmedia**](/previous-versions/windows/desktop/api/wmp/nn-wmp-iwmpmedia) -Schnittstelle zu erhalten, die es Ihnen ermöglicht, die Metadaten des Medien Elements anzuzeigen und ggf. die Stern Bewertung des Medien Elements zu bearbeiten. Beachten Sie jedoch, dass der DLNA-playsingle-URI für einen Inhaltsverzeichnis Dienst (CDs) gelten muss, den Windows Media Player bereits ermittelt hat. Die **newmedia** -Methode initiiert keine UPnP-Ermittlung und sucht nach den CDs.
+Sie können einen dlna-playsingle-URI an die [**IWMPCore3::newMedia-Methode**](/previous-versions/windows/desktop/api/wmp/nf-wmp-iwmpcore3-newmedia) übergeben, um eine [**IWMPMedia-Schnittstelle**](/previous-versions/windows/desktop/api/wmp/nn-wmp-iwmpmedia) zu erhalten, mit der Sie die Metadaten des Medienelements anzeigen und möglicherweise die Sternbewertung des Medienelements bearbeiten können. Beachten Sie jedoch, dass der dlna-playsingle-URI für einen Inhaltsverzeichnisdienst (CDS) verwendet werden muss, Windows Media Player bereits gefunden wurde. Die **newMedia-Methode** initiiert keine UPnP-Ermittlung und sucht nicht nach dem CDS.
 
-Sie können die Stern Bewertung eines Medien Elements nur in einer Remote Bibliothek bearbeiten, wenn die Remote Bibliothek den Bearbeitungsvorgang unterstützt. Remote Bibliotheken, die auf einem Computer unter Windows 7 gehostet werden, unterstützen den Bearbeitungsvorgang. Bei Remote Bibliotheken, die auf einem Computer mit einem älteren Windows-Betriebssystem als Windows 7 gehostet werden, wird der Bearbeitungsvorgang nicht unterstützt.
+Sie können die Sternbewertung eines Medienelements in einer Remotebibliothek nur bearbeiten, wenn die Remotebibliothek den Bearbeitungsvorgang unterstützt. Remotebibliotheken, die auf einem Computer mit Windows 7 gehostet werden, unterstützen den Bearbeitungsvorgang. Remotebibliotheken, die auf einem Computer gehostet werden, auf dem ein Windows betriebssystem vor Windows 7 ausgeführt wird, unterstützen den Bearbeitungsvorgang nicht.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -51,11 +51,11 @@ Sie können die Stern Bewertung eines Medien Elements nur in einer Remote Biblio
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Attribut Verweis**](attribute-reference.md)
+[**Attributreferenz**](attribute-reference.md)
 </dt> </dl>
 
  

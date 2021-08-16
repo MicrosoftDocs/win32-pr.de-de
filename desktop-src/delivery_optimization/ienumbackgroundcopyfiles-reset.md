@@ -51,7 +51,7 @@ Diese Methode gibt **S_OK** bei Erfolg oder einen der STANDARDMÄßIGEN COM **HR
 
 | Anforderung | Wert |
 |-------------------------------------|-----------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Windows 10 Desktop-Apps, Version 1709 \[\]<br/>                                           |
+| Unterstützte Mindestversion (Client)<br/> | Windows 10, version 1709 desktop apps only (Nur \[ Desktop-Apps der Version 1709)\]<br/>                                           |
 | Unterstützte Mindestversion (Server)<br/> | Windows Server, version 1709 desktop apps only (Nur \[ Desktop-Apps der Version 1709)\]<br/>                                       |
 | Header<br/>                   | <dl> <dt>Deliveryoptimization.h</dt> </dl>   |
 | Idl<br/>                      | <dl> <dt>DeliveryOptimization.idl</dt> </dl> |
@@ -61,7 +61,7 @@ Diese Methode gibt **S_OK** bei Erfolg oder einen der STANDARDMÄßIGEN COM **HR
 
 
 
-## <a name="see-also"></a>Weitere Informationen:
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 

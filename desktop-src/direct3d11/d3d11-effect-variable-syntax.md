@@ -25,11 +25,11 @@ Die [vollständige Syntax finden Sie unter Variablensyntax (DirectX HLSL).](/win
 
 
 
-| Name         | Beschreibung                                                                                                                                                                                 |
+| Name         | BESCHREIBUNG                                                                                                                                                                                 |
 |--------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | DataType     | Alle [grundlegenden](/windows/desktop/direct3dhlsl/dx-graphics-hlsl-variable-syntax)Typen, [Texturen,](/windows/desktop/direct3dhlsl/dx-graphics-hlsl-to-type)ungeordnete Zugriffsansichten, Shader oder Zustandsblocktypen.                            |
 | VariableName | Eine ASCII-Zeichenfolge, die den Namen der Effektvariablen eindeutig identifiziert.                                                                                                                   |
-| SemanticName | Eine ASCII-Zeichenfolge, die zusätzliche Informationen darüber angibt, wie eine Variable verwendet werden soll. Eine Semantik ist eine ASCII-Zeichenfolge, die entweder ein vordefinierter Systemwert oder eine benutzerdefinierte Benutzerzeichenfolge sein kann. |
+| SemanticName | Eine ASCII-Zeichenfolge, die zusätzliche Informationen zur Verwendung einer Variablen angibt. Eine Semantik ist eine ASCII-Zeichenfolge, die entweder ein vordefinierter Systemwert oder eine benutzerdefinierte Benutzerzeichenfolge sein kann. |
 | Anmerkungen  | Mindestens ein Teil der vom Benutzer bereitgestellten Informationen (Metadaten), die vom Effektsystem ignoriert werden. Informationen zur Syntax finden Sie unter [Anmerkungssyntax (Direct3D 11).](d3d11-effect-annotation-syntax.md)     |
 | InitialValue | Der Standardwert der Variablen.                                                                                                                                                          |
 
@@ -96,7 +96,7 @@ Texture2D g_MeshTexture;            // Color texture for mesh
 
 Das Sampling einer Textur erfolgt mit einem Texturs sampler. Informationen zum Einrichten eines Samplers in einem Effekt finden Sie unter dem [Samplertyp](/windows/desktop/direct3dhlsl/dx-graphics-hlsl-sampler).
 
-Dieses Beispiel veranschaulicht das Deklarieren von globalen variablen ungeordneten Zugriffsansichten.
+Dieses Beispiel veranschaulicht das Deklarieren globaler ungeordneter Zugriffsansichtsvariablen.
 
 
 ```

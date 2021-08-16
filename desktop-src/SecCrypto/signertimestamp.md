@@ -1,7 +1,7 @@
 ---
-description: Zeitstempel des angegebenen Subjekts. Diese Funktion unterstützt das Zeitstempel von Authenticode. Verwenden Sie die SignerTimeStampEx2-Funktion, um die X. 509-Zeitstempel für die Public Key-Infrastruktur (RFC 3161) auszuführen.
+description: Stempelt den angegebenen Betreff mit einem Zeitstempel. Diese Funktion unterstützt den Authenticode-Zeitstempel. Verwenden Sie die SignerTimeStampEx2-Funktion, um den Zeitstempel der X.509 Public Key Infrastructure (RFC 3161) durchzuführen.
 ms.assetid: fb2c149b-dba2-4879-be97-831037e1110b
-title: Signertimestamp-Funktion
+title: SignerTimeStamp-Funktion
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,19 +13,19 @@ api_type:
 - DllExport
 api_location:
 - Mssign32.dll
-ms.openlocfilehash: c4c57f231f70477a76b4d4f6156354ebc847a715
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: cb33852cb2860a29d43a41b2331a910a098384b872e972a74cf94f627bebf75a
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "103960453"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118898296"
 ---
-# <a name="signertimestamp-function"></a>Signertimestamp-Funktion
+# <a name="signertimestamp-function"></a>SignerTimeStamp-Funktion
 
-Die **signertimestamp** -Funktion stempelt den angegebenen Betreff. Diese Funktion unterstützt das Zeitstempel von Authenticode. Verwenden Sie die [**SignerTimeStampEx2**](signertimestampex2.md) -Funktion, um die X. 509-Zeitstempel für die Public Key-Infrastruktur (RFC 3161) auszuführen.
+Die **SignerTimeStamp-Funktion** stempelt den angegebenen Betreff. Diese Funktion unterstützt den Authenticode-Zeitstempel. Verwenden Sie die [**SignerTimeStampEx2-Funktion,**](signertimestampex2.md) um den Zeitstempel der X.509 Public Key Infrastructure (RFC 3161) durchzuführen.
 
 > [!Note]  
-> Diese Funktion verfügt über keine zugeordnete Header Datei oder Import Bibliothek. Um diese Funktion aufzurufen, müssen Sie eine benutzerdefinierte Header Datei erstellen und die [**LoadLibrary**](/windows/win32/api/libloaderapi/nf-libloaderapi-loadlibrarya) -Funktion und die [**GetProcAddress**](/windows/win32/api/libloaderapi/nf-libloaderapi-getprocaddress) -Funktion verwenden, um dynamisch mit Mssign32.dll zu verknüpfen.
+> Dieser Funktion ist keine Headerdatei oder Importbibliothek zugeordnet. Zum Aufrufen dieser Funktion müssen Sie eine benutzerdefinierte Headerdatei erstellen und die [**Funktionen LoadLibrary**](/windows/win32/api/libloaderapi/nf-libloaderapi-loadlibrarya) und [**GetProcAddress**](/windows/win32/api/libloaderapi/nf-libloaderapi-getprocaddress) verwenden, um eine dynamische Verknüpfung mit Mssign32.dll.
 
  
 
@@ -47,43 +47,43 @@ HRESULT WINAPI SignerTimeStamp(
 
 <dl> <dt>
 
-*psubjetinfo* \[ in\]
+*pSubjectInfo* \[ In\]
 </dt> <dd>
 
-Die Adresse einer [**Signatur Geber- \_ \_ Informations**](signer-subject-info.md) Struktur, die den Betreff darstellt, der mit einem Zeitstempel versehen werden soll.
+Die Adresse einer [**SIGNER \_ SUBJECT \_ INFO-Struktur,**](signer-subject-info.md) die das Subjekt darstellt, für das ein Zeitstempel verwendet werden soll.
 
 </dd> <dt>
 
-*pwszhttptimestamp* \[ in\]
+*pwszHttpTimeStamp* \[ In\]
 </dt> <dd>
 
-Die Adresse einer null-terminierten Unicode-Zeichenfolge, die die URL eines Zeitstempel Servers enthält.
+Die Adresse einer auf NULL beendeten Unicode-Zeichenfolge, die die URL eines Zeitstempelservers enthält.
 
 </dd> <dt>
 
-*psrequest* \[ in, optional\]
+*psRequest* \[ in, optional\]
 </dt> <dd>
 
-Die Adresse einer [**crypt- \_ Attribut**](/windows/desktop/api/Wincrypt/ns-wincrypt-crypt_attributes) Struktur, die zusätzliche Attribute enthält, die der Zeitstempel Anforderung hinzugefügt werden.
+Die Adresse einer [**CRYPT \_ ATTRIBUTES-Struktur,**](/windows/desktop/api/Wincrypt/ns-wincrypt-crypt_attributes) die zusätzliche Attribute enthält, die der Zeitstempelanforderung hinzugefügt werden.
 
-Dieser Parameter ist optional und kann **null** sein, wenn er nicht eingeschlossen ist.
+Dieser Parameter ist optional und kann **NULL sein,** wenn er nicht enthalten ist.
 
 </dd> <dt>
 
-*psipdata* \[ in, optional\]
+*pSipData* \[ in, optional\]
 </dt> <dd>
 
-Ein 32-Bit-Wert, der als zusätzliche Daten an SIP-Funktionen weitergeleitet wird. Das Format und der Inhalt dieser werden vom SIP-Anbieter definiert.
+Ein 32-Bit-Wert, der als zusätzliche Daten an DIE SIP-Funktionen übergeben wird. Das Format und der Inhalt dieses wird vom SIP-Anbieter definiert.
 
-Dieser Parameter ist optional und kann **null** sein, wenn er nicht eingeschlossen ist.
+Dieser Parameter ist optional und kann **NULL sein,** wenn er nicht enthalten ist.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Wenn die Funktion erfolgreich ausgeführt wird, gibt die Funktion S \_ OK zurück.
+Wenn die Funktion erfolgreich ist, gibt sie S \_ OK zurück.
 
-Wenn die Funktion fehlschlägt, wird ein **HRESULT** -Wert zurückgegeben, der den Fehler angibt. Eine Liste der allgemeinen Fehlercodes finden Sie unter [Allgemeine HRESULT-Werte](common-hresult-values.md).
+Wenn die Funktion fehlschlägt, wird ein **HRESULT-Wert** zurückgegeben, der den Fehler angibt. Eine Liste der allgemeinen Fehlercodes finden Sie unter [Allgemeine HRESULT-Werte](common-hresult-values.md).
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -91,8 +91,8 @@ Wenn die Funktion fehlschlägt, wird ein **HRESULT** -Wert zurückgegeben, der d
 
 | Anforderung | Wert |
 |-------------------------------------|-----------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows XP \[ -Desktop-Apps\]<br/>                                             |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2003 \[ -Desktop-Apps\]<br/>                                    |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur \[ XP-Desktop-Apps\]<br/>                                             |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2003-Desktop-Apps\]<br/>                                    |
 | DLL<br/>                      | <dl> <dt>Mssign32.dll</dt> </dl> |
 
 

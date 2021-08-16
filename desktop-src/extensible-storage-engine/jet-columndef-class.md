@@ -1,5 +1,5 @@
 ---
-description: 'Weitere Informationen finden Sie unter: JET_COLUMNDEF-Klasse'
+description: 'Weitere Informationen zu: JET_COLUMNDEF-Klasse'
 title: JET_COLUMNDEF-Klasse
 TOCTitle: JET_COLUMNDEF class
 ms:assetid: T:Microsoft.Isam.Esent.Interop.JET_COLUMNDEF
@@ -24,12 +24,12 @@ api_type:
 api_location:
 - Microsoft.Isam.Esent.Interop.dll
 ROBOTS: INDEX,FOLLOW
-ms.openlocfilehash: 163bd6740585139340e0aafbec01f5153e88e4d2
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 3c64ef334bd25c8a6c6a681492a9f5eda2e272cb37a71ce848f2281ef2f2e66a
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106369754"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119668210"
 ---
 # <a name="jet_columndef-class"></a>JET_COLUMNDEF-Klasse
 
@@ -40,8 +40,8 @@ Beschreibt eine Spalte in einer Tabelle einer ESENT-Datenbank.
 [System.Object](/dotnet/api/system.object)  
   Microsoft.Isam.Esent.Interop.JET_COLUMNDEF  
 
-**Namespace:**  [Microsoft. ISAM. ESENT. Interop](./microsoft.isam.esent.interop-namespace.md)  
-**Assembly:**  Microsoft. ISAM. ESENT. Interop (in Microsoft.Isam.Esent.Interop.dll)
+**Namespace:**  [Microsoft.Isam.Esent.Interop](./microsoft.isam.esent.interop-namespace.md)  
+**Assembly:**  Microsoft.Isam.Esent.Interop (in Microsoft.Isam.Esent.Interop.dll)
 
 ## <a name="syntax"></a>Syntax
 
@@ -64,10 +64,10 @@ public sealed class JET_COLUMNDEF : IContentEquatable<JET_COLUMNDEF>,
 
 Alle öffentlichen statischen Elemente dieses Typs (Shared in Microsoft Visual Basic) sind threadsicher. Bei Instanzmembern ist die Threadsicherheit nicht gewährleistet.
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
-#### <a name="reference"></a>Referenz
+#### <a name="reference"></a>Verweis
 
-[Mitglieder JET_COLUMNDEF](./jet-columndef-members.md)
+[JET_COLUMNDEF-Member](./jet-columndef-members.md)
 
-[Microsoft. ISAM. ESENT. Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)
+[Microsoft.Isam.Esent.Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)

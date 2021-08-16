@@ -1,5 +1,5 @@
 ---
-description: 'Weitere Informationen zu: EsentTableLockedException-Eigenschaften'
+description: Weitere Informationen finden Sie unter EsentTableLockedException properties (EsentTableLockedException-Eigenschaften).
 title: EsentTableLockedException-Eigenschaften
 TOCTitle: EsentTableLockedException properties
 ms:assetid: Properties.T:Microsoft.Isam.Esent.Interop.EsentTableLockedException
@@ -28,7 +28,7 @@ Der [EsentTableLockedException-Typ](./esenttablelockedexception-class.md) macht 
 <tr class="header">
 <th> </th>
 <th>Name</th>
-<th>Beschreibung</th>
+<th>BESCHREIBUNG</th>
 </tr>
 </thead>
 <tbody>

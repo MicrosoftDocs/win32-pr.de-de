@@ -4,12 +4,12 @@ ms.assetid: 5bf62e2a-7d5f-4feb-872a-54d102759824
 title: Funktionen (DirectShow)
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: d0095470110e649739cb119d3f9a2faaf0d689ae
-ms.sourcegitcommit: 4570ac533e129ff88b23f2c2b69e0140ead3a4a4
+ms.openlocfilehash: cc74386281a7b0ddb88aff498f4d922df1d249386a41564674f1011091e93a9b
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/26/2021
-ms.locfileid: "106352182"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118401248"
 ---
 # <a name="directshow-functions"></a>DirectShow-Funktionen
 
@@ -17,9 +17,9 @@ DirectShow stellt die folgende Funktion bereit.
 
 
 
-| Funktion                                 | BESCHREIBUNG                                              |
+| Funktion                                 | Beschreibung                                              |
 |------------------------------------------|----------------------------------------------------------|
-| [**Amgeterrortext**](/windows/win32/api/errors/nf-errors-amgeterrortexta) | Ruft den Fehlermeldungs Text für eine bestimmte Nachrichten-ID ab. |
+| [**AMGetErrorText**](/windows/win32/api/errors/nf-errors-amgeterrortexta) | Ruft den Fehlermeldungstext für eine bestimmte Nachrichten-ID ab. |
 
 
 

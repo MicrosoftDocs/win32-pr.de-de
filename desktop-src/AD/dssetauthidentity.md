@@ -26,7 +26,7 @@ ms.locfileid: "118695505"
 ---
 # <a name="dssetauthidentity-function"></a>DsSetAuthIdentity-Funktion
 
-\[Diese Funktion ist für die Verwendung in den Betriebssystemen verfügbar, die im Abschnitt Anforderungen angegeben sind. Es kann in nachfolgenden Versionen geändert oder entfernt werden. Verwenden Sie ab Windows Vista stattdessen [Volumeschattenkopie-Dienst (VSS).](../vss/volume-shadow-copy-service-overview.md)\]
+\[Diese Funktion ist für die Verwendung in den Im Abschnitt Anforderungen angegebenen Betriebssystemen verfügbar. Es kann in nachfolgenden Versionen geändert oder entfernt werden. Ab Windows Vista verwenden Sie stattdessen [Volumeschattenkopie-Dienst (VSS).](../vss/volume-shadow-copy-service-overview.md)\]
 
 Die **DsSetAuthIdentity-Funktion** legt den Sicherheitskontext fest, unter dem die Verzeichnissicherungs-APIs aufgerufen werden.
 
@@ -50,31 +50,31 @@ HRESULT DsSetAuthIdentity(
 *szUserName* \[ In\]
 </dt> <dd>
 
-Die auf NULL endende Zeichenfolge, die den Benutzernamen angibt.
+Die auf NULL beendete Zeichenfolge, die den Benutzernamen angibt.
 
 </dd> <dt>
 
 *szDomainName* \[ In\]
 </dt> <dd>
 
-Die auf NULL endende Zeichenfolge, die den Namen der Domäne angibt, zu der der Benutzer gehört.
+Die auf NULL beendete Zeichenfolge, die den Namen der Domäne angibt, zu der der Benutzer gehört.
 
 </dd> <dt>
 
 *szPassword* \[ In\]
 </dt> <dd>
 
-Die auf NULL endende Zeichenfolge, die das Kennwort des Benutzers in der angegebenen Domäne angibt.
+Die auf NULL beendete Zeichenfolge, die das Kennwort des Benutzers in der angegebenen Domäne angibt.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Wenn erfolgreich, wird ein standardmäßiger **HRESULT-Erfolgscode** zurückgegeben. Andernfalls wird ein Fehlercode zurückgegeben.
+Wenn erfolgreich, gibt einen **HRESULT-Standarderfolgscode** zurück. Andernfalls wird ein Fehlercode zurückgegeben.
 
 ## <a name="remarks"></a>Hinweise
 
-Wenn **DsSetAuthIdentity** nicht aufgerufen wird, wird der Sicherheitskontext des aktuellen Prozesses angenommen.
+Wenn **DsSetAuthIdentity nicht** aufgerufen wird, wird der Sicherheitskontext des aktuellen Prozesses angenommen.
 
 ## <a name="requirements"></a>Anforderungen
 

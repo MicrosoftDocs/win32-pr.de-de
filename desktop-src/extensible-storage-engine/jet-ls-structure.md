@@ -61,6 +61,6 @@ Alle öffentlichen statischen Elemente dieses Typs (Shared in Microsoft Visual�
 
 #### <a name="reference"></a>Verweis
 
-[JET_LS Member](./jet-ls-members.md)
+[JET_LS Mitglieder](./jet-ls-members.md)
 
 [Microsoft.Isam.Esent.Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)

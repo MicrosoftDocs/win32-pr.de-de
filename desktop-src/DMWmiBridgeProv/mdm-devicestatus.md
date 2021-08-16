@@ -1,6 +1,6 @@
 ---
 title: MDM_DeviceStatus-Klasse
-description: Die MDM \_ DeviceStatus-Klasse wird vom Unternehmen verwendet, um die Geräte Inventur nachzuverfolgen und den Status der Konformität dieser Geräte mit ihren Unternehmensrichtlinien abzufragen.
+description: Die MDM DeviceStatus-Klasse wird vom Unternehmen verwendet, um den Gerätebestand nachverfolgung und den Konformitätsstatus dieser Geräte mit ihren \_ Unternehmensrichtlinien abfragt.
 ms.assetid: fceaaf36-8f33-410a-89b4-c824b10164d5
 keywords:
 - MDM_DeviceStatus-Klasse
@@ -17,18 +17,18 @@ api_type:
 - DllExport
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 751a33553b4a00ac6719ce6e24c75a03444f0f49
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: e830b0c7f0883bdd46e22d21a46033ef48777b58eca18ec64971c5d67f604186
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104104996"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119967660"
 ---
 # <a name="mdm_devicestatus-class"></a>MDM \_ DeviceStatus-Klasse
 
 \[Einige Informationen beziehen sich auf Vorabversionen, die vor der kommerziellen Freigabe grundlegend geändert werden können. Microsoft übernimmt keine Garantie, weder ausdrücklich noch stillschweigend, für die hier bereitgestellten Informationen.\]
 
-Die **MDM \_ DeviceStatus** -Klasse wird vom Unternehmen verwendet, um die Geräte Inventur nachzuverfolgen und den Status der Konformität dieser Geräte mit ihren Unternehmensrichtlinien abzufragen.
+Die **MDM \_ DeviceStatus-Klasse** wird vom Unternehmen verwendet, um den Gerätebestand nachverfolgung und den Konformitätsstatus dieser Geräte mit ihren Unternehmensrichtlinien abfragt.
 
 Die folgende Syntax enthält vereinfachten MOF-Code und schließt alle geerbten Eigenschaften ein.
 
@@ -47,13 +47,13 @@ class MDM_DeviceStatus
 
 ## <a name="members"></a>Member
 
-Die **MDM \_ DeviceStatus** -Klasse verfügt über diese Typen von Membern:
+Die **MDM \_ DeviceStatus-Klasse** verfügt über die folgenden Membertypen:
 
 -   [Eigenschaften](#properties)
 
 ### <a name="properties"></a>Eigenschaften
 
-Die **MDM \_ DeviceStatus** -Klasse verfügt über diese Eigenschaften.
+Die **MDM \_ DeviceStatus-Klasse** verfügt über diese Eigenschaften.
 
 <dl> <dt>
 
@@ -80,11 +80,11 @@ Zugriffstyp: Schreibgeschützt
 Qualifizierer: [ **Schlüssel**](/windows/desktop/WmiSdk/key-qualifier)
 </dt> </dl>
 
-Der Stamm Knoten für den DeviceStatus-Konfigurations Dienstanbieter.
+Der Stammknoten für den DeviceStatus-Konfigurationsdienstanbieter.
 
 </dd> <dt>
 
-**ParentID**
+**Parentid**
 </dt> <dd> <dl> <dt>
 
 Datentyp: **Zeichenfolge**
@@ -96,11 +96,11 @@ Zugriffstyp: Schreibgeschützt
 Qualifizierer: [ **Schlüssel**](/windows/desktop/WmiSdk/key-qualifier)
 </dt> </dl>
 
-Beschreibt den vollständigen Pfad zum übergeordneten Knoten. Für diese Klasse ist die Zeichenfolge "./Vendor/msft/".
+Beschreibt den vollständigen Pfad zum übergeordneten Knoten. Für diese Klasse ist die Zeichenfolge "./Vendor/MSFT/".
 
 </dd> <dt>
 
-[Securebootstate](/windows/client-management/mdm/devicestatus-csp#devicestatus-securebootstate)
+[SecureBootState](/windows/client-management/mdm/devicestatus-csp#devicestatus-securebootstate)
 </dt> <dd> <dl> <dt>
 
 Datentyp: **sint32**
@@ -117,19 +117,19 @@ Zugriffstyp: Lesen/Schreiben
 
 | Anforderung | Wert |
 |-------------------------------------|------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows 10 \[ -Desktop-Apps\]<br/>                                                    |
+| Unterstützte Mindestversion (Client)<br/> | \[Windows 10 Nur Desktop-Apps\]<br/>                                                    |
 | Unterstützte Mindestversion (Server)<br/> | Nicht unterstützt<br/>                                                                      |
-| Namespace<br/>                | Root \\ CIMv2 \\ MDM- \\ dmmap<br/>                                                             |
-| MOF<br/>                      | <dl> <dt>Dmwmibridgeprov. MOF</dt> </dl> |
+| Namespace<br/>                | \\Stamm-CIMv2 \\ MDM \\ DMMap<br/>                                                             |
+| MOF<br/>                      | <dl> <dt>DMWmiBridgeProv.mof</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>DMWmiBridgeProv.dll</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[Verwenden von PowerShell-Skripts mit dem WMI-Bridge Anbieter](/windows/client-management/mdm/using-powershell-scripting-with-the-wmi-bridge-provider)
+[Verwenden von PowerShell-Skripts mit dem WMI-Bridge-Anbieter](/windows/client-management/mdm/using-powershell-scripting-with-the-wmi-bridge-provider)
 </dt> </dl>
 
  

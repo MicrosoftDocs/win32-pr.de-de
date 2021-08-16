@@ -23,7 +23,7 @@ ms.locfileid: "118643624"
 
 Es gibt einige wichtige Bereiche, in denen sich der MIDL-Compiler von MkTypLib unterscheidet. Die meisten dieser Unterschiede treten auf, da MIDL eher auf C-Syntax ausgerichtet ist als MkTypLib.
 
-Im Allgemeinen sollten Sie die MIDL-Syntax in Ihren IDL-Dateien verwenden. Wenn Sie jedoch eine vorhandene ODL-Datei kompilieren oder auf andere Weise die Kompatibilität mit MkTypLib gewährleisten müssen, verwenden Sie die MIDL-Compileroption [**/mktyplib203,**](-mktyplib203.md) um das Verhalten von MIDL wie Mkktyplib.exe, Version 2.03, zu erzwingen. (Dies ist die letzte Version des MkTypLib-Tools.) Insbesondere die **Option /mktyplib203** löst diese Unterschiede auf:
+Im Allgemeinen sollten Sie die MIDL-Syntax in Ihren IDL-Dateien verwenden. Wenn Sie jedoch eine vorhandene ODL-Datei kompilieren oder auf andere Weise die Kompatibilität mit MkTypLib gewährleisten müssen, verwenden Sie die MidL-Compileroption [**/mktyplib203,**](-mktyplib203.md) um das Verhalten von MIDL wie Mkktyplib.exe, Version 2.03, zu erzwingen. (Dies ist die letzte Version des MkTypLib-Tools.) Insbesondere die **Option /mktyplib203** löst diese Unterschiede auf:
 
 -   typedef-Syntax für komplexe Datentypen
 
@@ -36,7 +36,7 @@ Im Allgemeinen sollten Sie die MIDL-Syntax in Ihren IDL-Dateien verwenden. Wenn 
 
     Wenn ein optionales Tag fehlt, generiert MIDL es und fügt der vom Benutzer bereitgestellten Definition effektiv ein Tag hinzu. Da die erste Definition über ein Tag verfügt, generiert MIDL einen TKIND RECORD für \_ "this struct" und einen \_ TKIND-ALIAS für \_ "this \_ struct" (definition "this struct" als Alias für \_ "struct \_ tag"). Da das Tag in der zweiten Definition fehlt, generiert MIDL einen TKIND RECORD für einen in MIDL internen, verfehlten Namen, der für den Benutzer nicht aussagekräftig ist, und einen \_ TKIND-ALIAS für \_ "diese \_ Struktur".
 
-    Dies hat potenzielle Auswirkungen auf Typbibliotheksbrowser, die einfach den Namen eines Datensatzes auf ihrer Benutzeroberfläche anzeigen. Wenn Sie erwarten, dass ein TKIND RECORD einen echten Namen hat, können nicht erkennbare Namen \_ auf der Benutzeroberfläche angezeigt werden. Dieses Verhalten gilt auch für [**Union-**](union.md) und Enum-Definitionen, bei der der MIDL-Compiler TKIND-UNIONs bzw. [](enum.md) \_ TKIND-ENUMs \_ generiert.
+    Dies hat potenzielle Auswirkungen auf Typbibliotheksbrowser, die einfach den Namen eines Datensatzes auf ihrer Benutzeroberfläche anzeigen. Wenn Sie davon ausgehen, dass ein TKIND RECORD einen echten Namen hat, können auf der Benutzeroberfläche nicht erkennbare \_ Namen angezeigt werden. Dieses Verhalten gilt auch für [**Union-**](union.md) und Enum-Definitionen, bei der der MIDL-Compiler TKIND-UNIONs bzw. [](enum.md) \_ TKIND-ENUMs \_ generiert.
 
     MIDL ermöglicht auch [**Struktur-,**](struct.md) [](union.md)Union- und [**Enumdefinitionen im C-Stil.**](enum.md) Die folgende Definition ist beispielsweise in MIDL legal:
 
@@ -47,7 +47,7 @@ Im Allgemeinen sollten Sie die MIDL-Syntax in Ihren IDL-Dateien verwenden. Wenn 
 
 -   Boolean-Datentypen
 
-    In MkTypLib entspricht der [**boolesche**](boolean.md) Basistyp und der MkTypLib-Datentyp BOOL VT BOOL, der VARIANT BOOL entspricht und als kurze definiert \_ \_ [**ist.**](short.md) In MIDL entspricht der **boolesche** Basistyp VT UI1, das als zeichen ohne Vorzeichen definiert ist, und der BOOL-Datentyp wird als \_ long [**definiert.**](long.md) [](unsigned.md) Dies führt zu Schwierigkeiten, wenn Sie IDL-Syntax und ODL-Syntax in derselben Datei kombinieren, während Sie weiterhin versuchen, die Kompatibilität mit MkTypLib zu gewährleisten. Da die Datentypen unterschiedliche Größen haben, passt der Marshallingcode nicht zu dem, was in den Typinformationen beschrieben wird. Wenn Sie eine \_ VT-BOOL in Ihrer Typbibliothek verwenden möchten, sollten Sie den VARIANT \_ BOOL-Datentyp verwenden.
+    In MkTypLib entspricht der [**boolesche**](boolean.md) Basistyp und der MkTypLib-Datentyp BOOL VT BOOL, der VARIANT BOOL entspricht und als kurze definiert \_ \_ [**ist.**](short.md) In MIDL entspricht der **boolesche** Basistyp VT UI1, das als zeichen ohne Vorzeichen definiert ist, und der BOOL-Datentyp wird als long \_ [**definiert.**](long.md) [](unsigned.md) Dies führt zu Schwierigkeiten, wenn Sie IDL-Syntax und ODL-Syntax in derselben Datei kombinieren, während Sie weiterhin versuchen, die Kompatibilität mit MkTypLib zu gewährleisten. Da die Datentypen unterschiedliche Größen haben, passt der Marshallingcode nicht zu dem, was in den Typinformationen beschrieben wird. Wenn Sie eine \_ VT-BOOL in Ihrer Typbibliothek verwenden möchten, sollten Sie den VARIANT \_ BOOL-Datentyp verwenden.
 
 -   GUID-Definitionen in Headerdateien
 
@@ -61,7 +61,7 @@ Die folgenden Verhaltensunterschiede können nicht mithilfe des Schalters [**/mk
 
 -   Bereich von Symbolen in einer Enum-Deklaration
 
-    In MkTypLib ist der Gültigkeitsbereich von Symbolen in einer Enum "local". In MIDL ist der Gültigkeitsbereich von Symbolen in einer Enum global, wie er in C ist. Beispielsweise wird der folgende Code in MkTypLib kompiliert, generiert jedoch einen Fehler aufgrund doppelter Namen in MIDL:
+    In MkTypLib ist der Gültigkeitsbereich von Symbolen in einer -Enum lokal. In MIDL ist der Gültigkeitsbereich von Symbolen in einer Enum global, wie er in C ist. Beispielsweise wird der folgende Code in MkTypLib kompiliert, generiert jedoch einen Fehler aufgrund doppelter Namen in MIDL:
 
     ``` syntax
     typedef struct { ... } a;
@@ -107,7 +107,7 @@ Die folgenden Verhaltensunterschiede können nicht mithilfe des Schalters [**/mk
 
 -   VOID-Datentyp nicht erkannt
 
-    MIDL erkennt den void-Datentyp [**der**](void.md) C-Sprache und den OLE Automation VOID-Datentyp nicht. Wenn Sie über eine ODL-Datei verfügen, die VOID verwendet, platzieren Sie diese Definition am Anfang der Datei:
+    MIDL erkennt den void-Datentyp der C-Sprache und den OLE Automation VOID-Datentyp nicht. [](void.md) Wenn Sie über eine ODL-Datei verfügen, die VOID verwendet, platzieren Sie diese Definition am Anfang der Datei:
 
     ``` syntax
 #define VOID void

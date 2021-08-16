@@ -1,7 +1,7 @@
 ---
-description: Die rkeyclosekeyservice-Funktion wird nicht unterstützt.
+description: Die RKeyCloseKeyService-Funktion wird nicht unterstützt.
 ms.assetid: 3a3d41d4-d8ce-4ed8-a70b-dd3629ab7b44
-title: Rkeyclosekeyservice-Funktion (rkeysvcc. h)
+title: RKeyCloseKeyService-Funktion (Rkeysvcc.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,18 +13,18 @@ api_type:
 - HeaderDef
 api_location:
 - Rkeysvcc.h
-ms.openlocfilehash: 3a35362876c067de011ec69a858e20150308cbd4
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 5c7a075cf4869e350d90e278d009098cf4716d6518b1970c15b8b8264c93cd22
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "103862623"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118900555"
 ---
-# <a name="rkeyclosekeyservice-function"></a>Rkeyclosekeyservice-Funktion
+# <a name="rkeyclosekeyservice-function"></a>RKeyCloseKeyService-Funktion
 
-Die **rkeyclosekeyservice** -Funktion wird nicht unterstützt.
+Die **RKeyCloseKeyService-Funktion** wird nicht unterstützt.
 
-**Windows Server 2003:** Die Funktion **rkeyclosekeyservice** schließt ein Schlüsseldienst handle, das durch einen vorherigen aufrufsbefehl der [**rkeyopenkeyservice**](rkeyopenkeyservice.md) -Funktion geöffnet wurde. Beachten Sie, dass sich dieses Verhalten in Windows Server 2003 mit Service Pack 1 (SP1) geändert hat.
+**Windows Server 2003:** Die **Funktion RKeyCloseKeyService** schließt ein Schlüsseldiensthand handle, das durch einen vorherigen Aufruf der [**RKeyOpenKeyService-Funktion geöffnet**](rkeyopenkeyservice.md) wurde. Beachten Sie, dass sich dieses Verhalten mit Windows Server 2003 mit Service Pack 1 (SP1) geändert hat.
 
 ## <a name="syntax"></a>Syntax
 
@@ -42,17 +42,17 @@ ULONG RKeyCloseKeyService(
 
 <dl> <dt>
 
-*hkeysvccli* \[ in\]
+*hKeySvcCli* \[ In\]
 </dt> <dd>
 
-Ein [**keysvcc \_ handle**](keysvcc-handle.md) -handle, das zuvor von [**rkeyopenkeyservice**](rkeyopenkeyservice.md)geöffnet wurde. Dieser Wert darf nicht **null** sein.
+Ein [**KEYSVCC \_ HANDLE-Handle,**](keysvcc-handle.md) das zuvor von [**RKeyOpenKeyService geöffnet wurde.**](rkeyopenkeyservice.md) Dieser Wert darf nicht **NULL sein.**
 
 </dd> <dt>
 
-*beibehalten* \[ in, out\]
+*pReserved* \[ in, out\]
 </dt> <dd>
 
-Reserviert. Legen Sie diesen Wert auf **null** fest.
+Reserviert. Legen Sie diesen Wert auf **NULL fest.**
 
 </dd> </dl>
 
@@ -60,7 +60,7 @@ Reserviert. Legen Sie diesen Wert auf **null** fest.
 
 Wenn die Funktion erfolgreich ist, ist der Rückgabewert S \_ OK.
 
-Wenn die Funktion fehlschlägt, ist der Rückgabewert ein **ulong** -Wert, der den Fehler angibt.
+Wenn die Funktion fehlschlägt, ist der Rückgabewert ein **ULONG-Wert,** der den Fehler angibt.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -69,19 +69,19 @@ Wenn die Funktion fehlschlägt, ist der Rückgabewert ein **ulong** -Wert, der d
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Nicht unterstützt<br/>                                                             |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2003 \[ -Desktop-Apps\]<br/>                                  |
-| Header<br/>                   | <dl> <dt>Rkeysvcc. h</dt> </dl> |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2003-Desktop-Apps\]<br/>                                  |
+| Header<br/>                   | <dl> <dt>Rkeysvcc.h</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Rkeyopenkeyservice**](rkeyopenkeyservice.md)
+[**RKeyOpenKeyService**](rkeyopenkeyservice.md)
 </dt> <dt>
 
-[**Rkeypfxinstall**](rkeypfxinstall.md)
+[**RKeyPFXInstall**](rkeypfxinstall.md)
 </dt> </dl>
 
  

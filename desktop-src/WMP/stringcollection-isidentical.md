@@ -1,11 +1,11 @@
 ---
-title: StringCollection. isidentical-Methode
-description: Die isidentical-Methode ruft einen Wert ab, der angibt, ob das angegebene Objekt mit dem aktuellen-Objekt identisch ist. | StringCollection. isidentical-Methode
+title: StringCollection.isIdentical-Methode
+description: Die isIdentical-Methode ruft einen Wert ab, der angibt, ob das angegebene Objekt mit dem aktuellen identisch ist. | StringCollection.isIdentical-Methode
 ms.assetid: 5f2aabbe-e6c7-4aa2-a30d-30178a4ba3db
 keywords:
-- isidentical-Methode, Windows Media Player
-- isidentical-Methode, Windows Media Player, StringCollection-Klasse
-- StringCollection-Klasse, Windows Media Player, isidentical-Methode
+- isIdentical-Windows Media Player
+- isIdentical-Windows Media Player , StringCollection-Klasse
+- StringCollection-Klasse Windows Media Player , isIdentical-Methode
 topic_type:
 - apiref
 api_name:
@@ -16,16 +16,16 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: ec4035e748921afd77865fa29c9a8507abe55128
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: aded9879ded384feaa5bd12bd167c1eab0e1a0f764a3cf4370b84ca4b2422ff7
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106370728"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120123020"
 ---
-# <a name="stringcollectionisidentical-method"></a>StringCollection. isidentical-Methode
+# <a name="stringcollectionisidentical-method"></a>StringCollection.isIdentical-Methode
 
-Die **isidentical** -Methode ruft einen Wert ab, der angibt, ob das angegebene Objekt mit dem aktuellen-Objekt identisch ist.
+Die **isIdentical-Methode** ruft einen Wert ab, der angibt, ob das angegebene Objekt mit dem aktuellen identisch ist.
 
 ## <a name="syntax"></a>Syntax
 
@@ -42,20 +42,20 @@ bRetVal = StringCollection.isIdentical(
 
 <dl> <dt>
 
-*StringCollection* \[ in\]
+*stringCollection* \[ In\]
 </dt> <dd>
 
-**StringCollection** -Objekt, das mit dem aktuellen-Objekt verglichen werden soll.
+**StringCollection-Objekt,** das mit dem aktuellen verglichen werden soll.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Diese Methode gibt einen **booleschen** Wert zurück.
+Diese Methode gibt einen **booleschen zurück.**
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Um diese Methode verwenden zu können, ist Lesezugriff auf die Bibliothek erforderlich. Weitere Informationen finden Sie unter [Bibliotheks Zugriff](library-access.md).
+Um diese Methode zu verwenden, ist Lesezugriff auf die Bibliothek erforderlich. Weitere Informationen finden Sie unter [Bibliothekszugriff.](library-access.md)
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -68,7 +68,7 @@ Um diese Methode verwenden zu können, ist Lesezugriff auf die Bibliothek erford
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 

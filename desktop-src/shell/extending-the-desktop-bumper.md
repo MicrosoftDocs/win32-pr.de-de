@@ -9,25 +9,25 @@ api_type: ''
 api_location: ''
 topic_type:
 - kbArticle
-ms.openlocfilehash: 278de1a2e034fe4d003a1266f83cfb6812a30f1b
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 9973ea52a2140d02fb611cf79991c3e18196b3cc33df5edd52f9be3229faa94f
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104215963"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117860861"
 ---
 # <a name="extending-the-desktop"></a>Erweitern des Desktops
 
--   [Desktop-App-Kacheln auf dem Start Bildschirm](desktop-app-tiles-on-the-start-screen.md)
+-   [Desktop-App-Kacheln auf dem Startbildschirm](desktop-app-tiles-on-the-start-screen.md)
 -   [Grundlegendes zur Taskleiste](taskbar.md)
--   [Vorgehensweise beim Hinzufügen von Verknüpfungen zum Startmenü](how-to-add-shortcuts-to-the-start-menu.md)
+-   [Hinzufügen von Verknüpfungen zum Startmenü](how-to-add-shortcuts-to-the-start-menu.md)
 -   [Erweitern der Taskleiste](taskbar-extensions.md)
--   [Arbeiten mit App-Benutzer Modell-IDs (appusermudelids)](appids.md)
--   [Ausschließen von Elementen aus der Taskleiste anheften und zuletzt auftretenden Listen](how-to-exclude-items-from-taskbar-pinning-and-recent-frequent-lists.md)
--   [Verwalten von Benachrichtigungen und des Benachrichtigungs Bereichs der Taskleiste](notification-area.md)
--   [Schnellstart: Senden einer Popup Benachrichtigung vom Desktop](quickstart-sending-desktop-toast.md)
+-   [Arbeiten mit Anwendungsbenutzermodell-IDs (AppUserModelIDs)](appids.md)
+-   [Ausschließen von Elementen aus Der Taskleisten-Pinning und zuletzt durchgeführten/häufigen Listen](how-to-exclude-items-from-taskbar-pinning-and-recent-frequent-lists.md)
+-   [Verwalten von Benachrichtigungen und des Taskleistenbenachrichtigungsbereichs](notification-area.md)
+-   [Schnellstart: Senden einer Popupbenachrichtigung vom Desktop](quickstart-sending-desktop-toast.md)
 -   [Aktivieren von Desktoppopupbenachrichtigungen über eine AppUserModelID](enable-desktop-toast-with-appusermodelid.md)
--   [Verwenden von Anwendungs Desktop-Symbolleisten](application-desktop-toolbars.md)
+-   [Verwenden von Anwendungsdesktopsymbolleisten](application-desktop-toolbars.md)
 
  
 

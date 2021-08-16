@@ -1,23 +1,23 @@
 ---
-title: IMAX (SM4-ASM)
-description: Maximale Komponenten Weise Ganzzahl.
+title: imax (sm4 - asm)
+description: Komponentenweises Ganzzahl-Maximum.
 ms.assetid: 005468AA-577E-441F-ACD5-37A691E62CDD
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: cc1bc6311573b1e7b39fbeaa93904203e7aae2ae
-ms.sourcegitcommit: fe03c5d92ca6a0d66a114b2303e99c0a19241ffb
+ms.openlocfilehash: 20da254802d32b936724e11cf947baf91c205a0d9f61754c2e142a1380166640
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/20/2019
-ms.locfileid: "104101066"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119672860"
 ---
-# <a name="imax-sm4---asm"></a>IMAX (SM4-ASM)
+# <a name="imax-sm4---asm"></a>imax (sm4 - asm)
 
-Maximale Komponenten Weise Ganzzahl.
+Komponentenweises Ganzzahl-Maximum.
 
 
 
-| IMAX dest \[ . mask \] , \[  - \] src0 \[ . Swizzle \] , \[ - \] Quelle1 \[ . Swizzle \] , |
+| imax dest \[ .mask \] , \[  - \] src0 \[ .swizzle \] , \[ - \] src1 \[ .swizzle \] , |
 |--------------------------------------------------------------------|
 
 
@@ -28,19 +28,19 @@ Maximale Komponenten Weise Ganzzahl.
 
 | Element                                                            | BESCHREIBUNG                                                                                             |
 |-----------------------------------------------------------------|---------------------------------------------------------------------------------------------------------|
-| <span id="dest"></span><span id="DEST"></span>*dest*<br/> | \[im \] Ergebnis des Vorgangs.<br/> *dest*  =  *src0*  >  *Quelle1* ? *src0* : *Quelle1*<br/> |
-| <span id="src0"></span><span id="SRC0"></span>*src0*<br/> | \[im \] Wert, der mit *Quelle1* verglichen werden soll.<br/>                                                       |
-| <span id="src1"></span><span id="SRC1"></span>*Quelle1*<br/> | \[im \] Wert, der mit *src0* verglichen werden soll.<br/>                                                       |
+| <span id="dest"></span><span id="DEST"></span>*Dest*<br/> | \[in \] Das Ergebnis des Vorgangs.<br/> *dest*  =  *src0*  >  *src1* ? *src0* : *src1*<br/> |
+| <span id="src0"></span><span id="SRC0"></span>*src0*<br/> | \[in \] Der wert, der mit *src1 verglichen werden soll.*<br/>                                                       |
+| <span id="src1"></span><span id="SRC1"></span>*src1*<br/> | \[in \] Der wert, der mit *src0 verglichen werden soll.*<br/>                                                       |
 
 
 
  
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Der optionale Negation-Modifizierer für Quell Operanden nimmt die Ergänzung von 2 vor dem Ausführen des Vorgangs an.
+Der optionale Negatmodifizierer für Quelloperatoren nimmt vor dem Ausführen des Vorgangs ein Komplement von 2 an.
 
-Diese Anweisung gilt für die folgenden Shader-Phasen:
+Diese Anweisung gilt für die folgenden Shaderstufen:
 
 
 
@@ -52,20 +52,20 @@ Diese Anweisung gilt für die folgenden Shader-Phasen:
 
  
 
-## <a name="minimum-shader-model"></a>Minimaler Shader-Modell
+## <a name="minimum-shader-model"></a>Minimales Shadermodell
 
-Diese Funktion wird in den folgenden shadermodellen unterstützt.
+Diese Funktion wird in den folgenden Shadermodellen unterstützt.
 
 
 
 | Shadermodell                                              | Unterstützt |
 |-----------------------------------------------------------|-----------|
-| [Shader-Modell 5](d3d11-graphics-reference-sm5.md)        | ja       |
-| [Shadermodell 4,1](dx-graphics-hlsl-sm4.md)              | ja       |
+| [Shadermodell 5](d3d11-graphics-reference-sm5.md)        | ja       |
+| [Shadermodell 4.1](dx-graphics-hlsl-sm4.md)              | ja       |
 | [Shadermodell 4](dx-graphics-hlsl-sm4.md)                | ja       |
-| [Shader-Modell 3 (DirectX HLSL)](dx-graphics-hlsl-sm3.md) | nein        |
-| [Shader-Modell 2 (DirectX HLSL)](dx-graphics-hlsl-sm2.md) | nein        |
-| [Shader-Modell 1 (DirectX HLSL)](dx-graphics-hlsl-sm1.md) | nein        |
+| [Shadermodell 3 (DirectX HLSL)](dx-graphics-hlsl-sm3.md) | nein        |
+| [Shadermodell 2 (DirectX HLSL)](dx-graphics-hlsl-sm2.md) | nein        |
+| [Shadermodell 1 (DirectX HLSL)](dx-graphics-hlsl-sm1.md) | nein        |
 
 
 

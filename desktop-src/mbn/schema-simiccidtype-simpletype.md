@@ -1,7 +1,7 @@
 ---
-description: Definiert einen Typ für das simiccid-Element des mobilen Breitband Profils.
+description: Definiert einen Typ für das SimIccID-Element des Mobilen Breitbandprofils.
 ms.assetid: ce77180e-71e2-4cef-84e0-32397216385f
-title: einfacher simiccidtype-Typ
+title: simIccIDType Simple Type
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -11,16 +11,16 @@ api_name:
 - simIccIDType
 api_type:
 - Schema
-ms.openlocfilehash: 410145e659a4845c9c96aaeb76d522de3e0c7b53
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 33a984875e1e6840787d81dc53c8fc13ead54a0328f6610d75c30075066c13c2
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106355488"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119035758"
 ---
-# <a name="simiccidtype-simple-type"></a>einfacher simiccidtype-Typ
+# <a name="simiccidtype-simple-type"></a>simIccIDType Simple Type
 
-Der einfache Typ **simiccidtype** definiert einen Typ für das [**simiccid-**](schema-simiccid-mbnprofile-element.md) Element des mobilen Breitband Profils. Bei diesem Typ handelt es sich um eine Sammlung von Ziffern und/oder groß-und Kleinbuchstaben, mindestens ein Zeichen lang und höchstens 20 Zeichen lang.
+Der einfache **simIccIDType-Typ** definiert einen Typ für das [**SimIccID-Element**](schema-simiccid-mbnprofile-element.md) des Mobilen Breitbandprofils. Dieser Typ ist eine Auflistung von Ziffern und/oder Groß- und Kleinbuchstaben, mindestens ein Zeichen lang und höchstens 20 Zeichen lang.
 
 ``` syntax
 <xs:simpleType name="simIccIDType">
@@ -36,7 +36,7 @@ Der einfache Typ **simiccidtype** definiert einen Typ für das [**simiccid-**](s
 
 ## <a name="patterns"></a>Muster
 
-Der einfache Typ **simiccidtype** ist ein Token, das durch das folgende Muster eingeschränkt wird:
+Der einfache **simIccIDType-Typ** ist ein Token, das durch das folgende Muster eingeschränkt ist:
 
 -   `[a-zA-Z\d]{1,20}`
 
@@ -46,7 +46,7 @@ Der einfache Typ **simiccidtype** ist ein Token, das durch das folgende Muster e
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Windows 7 \[ -Desktop-Apps \| UWP-apps\]<br/> |
+| Unterstützte Mindestversion (Client)<br/> | Windows 7 \[ Desktop-Apps \| UWP-Apps\]<br/> |
 | Unterstützte Mindestversion (Server)<br/> | Nicht unterstützt<br/>                         |
 
 

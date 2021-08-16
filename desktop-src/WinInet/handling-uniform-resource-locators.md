@@ -1,101 +1,101 @@
 ---
 title: Behandeln von Uniform Resource Locators
-description: Eine Uniform Resource Locator (URL) ist eine kompakte Darstellung der Standort-und Zugriffsmethode für eine Ressource, die sich im Internet befindet.
+description: Ein Uniform Resource Locator (URL) ist eine kompakte Darstellung des Speicherorts und der Zugriffsmethode für eine Ressource im Internet.
 ms.assetid: bb59ada6-f49f-412c-a32c-4fb9495b1222
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 08157738d99e78ff4d458a3bdd1b1e2e661ce538
-ms.sourcegitcommit: 6515eef99ca0d1bbe3e27d4575e9986f5255f277
+ms.openlocfilehash: 419433c8a06b6243bf048896664a67da31a3c58d1d79eb6fea65f9fc99dbe63a
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/10/2021
-ms.locfileid: "104551316"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120121870"
 ---
 # <a name="handling-uniform-resource-locators"></a>Behandeln von Uniform Resource Locators
 
-Eine Uniform Resource Locator (URL) ist eine kompakte Darstellung der Standort-und Zugriffsmethode für eine Ressource, die sich im Internet befindet. Jede URL besteht aus einem Schema (http, HTTPS oder FTP) und einer Schema spezifischen Zeichenfolge. Diese Zeichenfolge kann auch eine Kombination aus Verzeichnispfad, Such Zeichenfolge oder Name der Ressource enthalten. Die WinInet-Funktionen bieten die Möglichkeit, URLs zu erstellen, zu kombinieren, aufzulösen und zu kanonisieren. Weitere Informationen zu URLs finden Sie unter [RFC-1738](https://www.ietf.org/rfc/rfc1738.txt) für URL (Uniform Resource Locators).
+Ein Uniform Resource Locator (URL) ist eine kompakte Darstellung des Speicherorts und der Zugriffsmethode für eine Ressource im Internet. Jede URL besteht aus einem Schema (HTTP, HTTPS oder FTP) und einer schemaspezifischen Zeichenfolge. Diese Zeichenfolge kann auch eine Kombination aus einem Verzeichnispfad, einer Suchzeichenfolge oder einem Namen der Ressource enthalten. Die WinINet-Funktionen bieten die Möglichkeit, URLs zu erstellen, zu kombinieren, zu unterbrechen und zu kanonisieren. Weitere Informationen zu URLs finden Sie unter [RFC-1738](https://www.ietf.org/rfc/rfc1738.txt) on Uniform Resource Locators (URL).
 
-Die URL-Funktionen arbeiten aufgabenorientiert. Der Inhalt und das Format der URL, die an die Funktion übergeben wird, werden nicht überprüft. Die aufrufende Anwendung sollte die Verwendung dieser Funktionen nachverfolgen, um sicherzustellen, dass die Daten im vorgesehenen Format vorliegen. Beispielsweise würde die [**internetcanonicalizeurl**](/windows/desktop/api/Wininet/nf-wininet-internetcanonicalizeurla) -Funktion das Zeichen "%" in die Escapesequenz "%25" konvertieren, wenn keine Flags verwendet werden. Wenn [**internetcanonicalizeurl**](/windows/desktop/api/Wininet/nf-wininet-internetcanonicalizeurla) für die kanonisierte URL verwendet wird, wird die Escapesequenz "%25" in die Escapesequenz "%2525" konvertiert, was nicht ordnungsgemäß funktioniert.
+Die URL-Funktionen arbeiten aufgabenorientiert. Der Inhalt und das Format der URL, die der Funktion übergeben wird, werden nicht überprüft. Die aufrufende Anwendung sollte die Verwendung dieser Funktionen nachverfolgen, um sicherzustellen, dass die Daten im vorgesehenen Format vorliegen. Beispielsweise würde die [**InternetCanonicalizeUrl-Funktion**](/windows/desktop/api/Wininet/nf-wininet-internetcanonicalizeurla) das Zeichen "%" in die Escapesequenz "%25" konvertieren, wenn keine Flags verwendet werden. Wenn [**InternetCanonicalizeUrl**](/windows/desktop/api/Wininet/nf-wininet-internetcanonicalizeurla) für die kanonisierte URL verwendet wird, wird die Escapesequenz "%25" in die Escapesequenz "%2525" konvertiert, was nicht ordnungsgemäß funktioniert.
 
 -   [Was ist eine kanonisierte URL?](#what-is-a-canonicalized-url)
--   [Verwenden der WinInet-Funktionen zum Verarbeiten von URLs](#using-the-wininet-functions-to-handle-urls)
--   [Kanonisierende URLs](#what-is-a-canonicalized-url)
--   [Kombinieren von Basis-und relativen URLs](#combining-base-and-relative-urls)
--   [Knacken von URLs](#cracking-urls)
+-   [Verwenden der WinINet-Funktionen zum Verarbeiten von URLs](#using-the-wininet-functions-to-handle-urls)
+-   [Kanonisieren von URLs](#what-is-a-canonicalized-url)
+-   [Kombinieren von Basis- und relativen URLs](#combining-base-and-relative-urls)
+-   [Auflisten von URLs](#cracking-urls)
 -   [Erstellen von URLs](#creating-urls)
--   [Direktes Aufrufen von URLs](#accessing-urls-directly)
+-   [Direkter Zugriff auf URLs](#accessing-urls-directly)
 
 ## <a name="what-is-a-canonicalized-url"></a>Was ist eine kanonisierte URL?
 
-Das Format aller URLs muss der akzeptierten Syntax und Semantik entsprechen, damit Sie über das Internet auf Ressourcen zugreifen können. Kanonisierung ist der Prozess, bei dem eine URL formatiert wird, um diese akzeptierte Syntax und Semantik zu befolgen.
+Das Format aller URLs muss der akzeptierten Syntax und Semantik entsprechen, um über das Internet auf Ressourcen zugreifen zu können. Kanonisierung ist der Prozess der Formatierung einer URL, um dieser akzeptierten Syntax und Semantik zu folgen.
 
-Zeichen, die codiert werden müssen, enthalten alle Zeichen, die kein entsprechendes Grafikzeichen im US-ASCII-codierten Zeichensatz aufweisen (hexadezimal 80-FF, die nicht im codierten US-ASCII-Zeichensatz verwendet werden, und hexadezimale 00-1f und 7F, die Steuerzeichen sind, Leerzeichen, "%" (zum Codieren anderer Zeichen verwendet) und unsichere Zeichen (<, >, ", \# , {,}, \| , \\ , ^, ~, \[ , \] und ').
+Zeichen, die codiert werden müssen, enthalten alle Zeichen, die kein entsprechendes Grafikzeichen im US-ASCII-codierten Zeichensatz (hexadezimal 80-FF, , die nicht im US-ASCII-Codezeichensatz und hexadezimal 00-1F und 7F verwendet werden, die Steuerzeichen sind, Leerzeichen, "%" (wird zum Codieren anderer Zeichen verwendet) und unsichere Zeichen (<, >, ", \# , {, }, \| , , \\ ^, ~, \[ und \] ').
 
-## <a name="using-the-wininet-functions-to-handle-urls"></a>Verwenden der WinInet-Funktionen zum Verarbeiten von URLs
+## <a name="using-the-wininet-functions-to-handle-urls"></a>Verwenden der WinINet-Funktionen zum Verarbeiten von URLs
 
-In der folgenden Tabelle werden die URL-Funktionen zusammengefasst.
+In der folgenden Tabelle sind die URL-Funktionen zusammengefasst.
 
 
 
 | Funktion                                                   | BESCHREIBUNG                                        |
 |------------------------------------------------------------|----------------------------------------------------|
-| [**Internetcanonicalizeurl**](/windows/desktop/api/Wininet/nf-wininet-internetcanonicalizeurla) | Kanonisiert die URL.                             |
-| [**Internetcombineurl**](/windows/desktop/api/Wininet/nf-wininet-internetcombineurla)           | Kombiniert Basis-und relative URLs.                   |
-| [**Internetcrackurl**](/windows/desktop/api/Wininet/nf-wininet-internetcrackurla)               | Analysiert eine URL-Zeichenfolge in-Komponenten.               |
-| [**Internetkreateurl**](/windows/desktop/api/Wininet/nf-wininet-internetcreateurla)             | Erstellt eine URL-Zeichenfolge aus-Komponenten.              |
-| [**InternetOpenURL**](/windows/desktop/api/Wininet/nf-wininet-internetopenurla)                 | Startet das Abrufen einer FTP-, http-oder HTTPS-Ressource. |
+| [**InternetCanonicalizeUrl**](/windows/desktop/api/Wininet/nf-wininet-internetcanonicalizeurla) | Kanonisiert die URL.                             |
+| [**InternetCombineUrl**](/windows/desktop/api/Wininet/nf-wininet-internetcombineurla)           | Kombiniert Basis- und relative URLs.                   |
+| [**InternetCrackUrl**](/windows/desktop/api/Wininet/nf-wininet-internetcrackurla)               | Analysiert eine URL-Zeichenfolge in Komponenten.               |
+| [**InternetCreateUrl**](/windows/desktop/api/Wininet/nf-wininet-internetcreateurla)             | Erstellt eine URL-Zeichenfolge aus Komponenten.              |
+| [**InternetOpenUrl**](/windows/desktop/api/Wininet/nf-wininet-internetopenurla)                 | Beginnt mit dem Abrufen einer FTP-, HTTP- oder HTTPS-Ressource. |
 
 
 
  
 
-## <a name="canonicalizing-urls"></a>Kanonisierende URLs
+## <a name="canonicalizing-urls"></a>Kanonisieren von URLs
 
-Die kanonialisierung einer URL ist der Prozess, bei dem eine URL, die möglicherweise unsichere Zeichen (z. b. Leerzeichen, reservierte Zeichen usw.) enthält, in ein akzeptiertes Format konvertiert wird.
+Das Kanonisieren einer URL ist der Prozess, der eine URL, die unsichere Zeichen wie Leerzeichen, reservierte Zeichen und so weiter enthalten kann, in ein akzeptiertes Format konvertiert.
 
-Die [**internetcanonicalizeurl**](/windows/desktop/api/Wininet/nf-wininet-internetcanonicalizeurla) -Funktion kann zum kanonisieren von URLs verwendet werden. Diese Funktion ist sehr aufgabenorientiert, sodass die Anwendung die Verwendung sorgfältig verfolgen sollte. [**Internetcanonicalizeurl**](/windows/desktop/api/Wininet/nf-wininet-internetcanonicalizeurla) überprüft nicht, ob die an Sie übergebenen URL bereits kanonisiert ist und ob die zurückgegebene URL gültig ist.
+Die [**InternetCanonicalizeUrl-Funktion**](/windows/desktop/api/Wininet/nf-wininet-internetcanonicalizeurla) kann verwendet werden, um URLs zu kanonisieren. Diese Funktion ist sehr aufgabenorientiert, daher sollte die Anwendung ihre Verwendung sorgfältig nachverfolgen. [**InternetCanonicalizeUrl**](/windows/desktop/api/Wininet/nf-wininet-internetcanonicalizeurla) überprüft nicht, ob die übergebene URL bereits kanonisiert ist und ob die zurückgegebene URL gültig ist.
 
-Die folgenden fünf Flags steuern, wie [**internetcanonicalizeurl**](/windows/desktop/api/Wininet/nf-wininet-internetcanonicalizeurla) eine bestimmte URL behandelt. Die Flags können in Kombination verwendet werden. Wenn keine Flags verwendet werden, codiert die Funktion die URL standardmäßig.
+Die folgenden fünf Flags steuern, [**wie InternetCanonicalizeUrl eine**](/windows/desktop/api/Wininet/nf-wininet-internetcanonicalizeurla) bestimmte URL behandelt. Die Flags können in Kombination verwendet werden. Wenn keine Flags verwendet werden, codiert die Funktion die URL standardmäßig.
 
 
 
 | Wert                     | Bedeutung                                                                                                                                                                                                 |
 |---------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| ICU- \_ Browser \_ Modus        | Codieren oder Decodieren Sie keine Zeichen nach " \# " oder "?", und entfernen Sie nachfolgende Leerzeichen nicht nach "?". Wenn dieser Wert nicht angegeben wird, wird die gesamte URL codiert, und nachfolgende Leerzeichen werden entfernt. |
-| ICU- \_ Decodierung               | Konvertieren Sie alle% XX-Sequenzen in Zeichen, einschließlich Escapesequenzen, bevor die URL analysiert wird.                                                                                                          |
-| nur in ICU codierende \_ \_ Leerzeichen \_ | Nur Leerzeichen codieren.                                                                                                                                                                                     |
-| ICU \_ nicht \_ Codieren           | Nicht unsichere Zeichen in Escapesequenzen konvertieren.                                                                                                                                                   |
-| ICU \_ No \_ Meta             | Entfernen Sie keine Metasequenzen (z. b. "." und "..") aus der URL.                                                                                                                                       |
+| \_ICU-BROWSERMODUS \_        | Codieren oder decodieren Sie keine Zeichen nach " " oder "?", und entfernen Sie nach "?" keine \# nach". Wenn dieser Wert nicht angegeben wird, wird die gesamte URL codiert, und nach dem Leerraum wird entfernt. |
+| \_ICU-DECODIERUNG               | Konvertieren Sie alle %XX-Sequenzen in Zeichen, einschließlich Escapesequenzen, bevor die URL analysiert wird.                                                                                                          |
+| NUR \_ ICU-CODIERUNGSRÄUME \_ \_ | Nur Leerzeichen codieren.                                                                                                                                                                                     |
+| ICU \_ NO \_ ENCODE           | Konvertieren Sie unsichere Zeichen nicht in Escapesequenzen.                                                                                                                                                   |
+| ICU \_ NO \_ META             | Entfernen Sie meta-Sequenzen (z.B. "." und "..") nicht aus der URL.                                                                                                                                       |
 
 
 
  
 
-Das Flag für die ICU- \_ Decodierung sollte nur für kanonisierte URLs verwendet werden, da davon ausgegangen wird, dass es sich bei allen% XX-Sequenzen um Escapecodes handelt, die in die durch den Code aufgeführten Zeichen konvertiert werden. Wenn die URL das Symbol "%" enthält, das nicht Teil eines Escapecodes ist, behandelt die ICU- \_ Decodierung Sie weiterhin als eins. Dieses Merkmal kann dazu führen, dass [**internetcanonicalizeurl**](/windows/desktop/api/Wininet/nf-wininet-internetcanonicalizeurla) eine ungültige URL erstellt.
+Das ICU-DECODE-Flag sollte nur für kanonisierte URLs verwendet werden, da davon ausgegangen wird, dass alle %XX-Sequenzen Escapecodes sind und diese in die vom Code angegebenen Zeichen \_ konvertiert. Wenn die URL ein "%"-Symbol enthält, das nicht Teil eines Escapecodes ist, behandelt ICU \_ DECODE sie weiterhin als eins. Dieses Merkmal kann dazu [**führen, dass InternetCanonicalizeUrl**](/windows/desktop/api/Wininet/nf-wininet-internetcanonicalizeurla) eine ungültige URL erstellt.
 
-Um [**internetcanonicalizeurl**](/windows/desktop/api/Wininet/nf-wininet-internetcanonicalizeurla) zum Zurückgeben einer vollständig decodierten URL verwenden zu können, müssen die ICU \_ -decodierungsflags und die ICU-Kennung nicht codiert \_ \_ werden. Dieses Setup geht davon aus, dass die an [**internetcanonicalizeurl**](/windows/desktop/api/Wininet/nf-wininet-internetcanonicalizeurla) übergebenen URL zuvor kanonisiert wurde.
+Um [**InternetCanonicalizeUrl**](/windows/desktop/api/Wininet/nf-wininet-internetcanonicalizeurla) zum Zurückgeben einer vollständig decodierten URL zu verwenden, müssen die \_ Flags ICU DECODE und ICU \_ NO \_ ENCODE angegeben werden. Bei diesem Setup wird davon ausgegangen, dass die URL, die an [**InternetCanonicalizeUrl**](/windows/desktop/api/Wininet/nf-wininet-internetcanonicalizeurla) übergeben wird, zuvor kanonisiert wurde.
 
-## <a name="combining-base-and-relative-urls"></a>Kombinieren von Basis-und relativen URLs
+## <a name="combining-base-and-relative-urls"></a>Kombinieren von Basis- und relativen URLs
 
-Ein relative URL ist eine kompakte Darstellung des Speicher Orts einer Ressource in Relation zu einer absoluten Basis-URL. Die Basis-URL muss dem Parser bekannt sein und umfasst in der Regel das Schema, den Netzwerk Speicherort und Teile des URL-Pfads. Eine Anwendung kann [**internetcombineurl**](/windows/desktop/api/Wininet/nf-wininet-internetcombineurla) aufgerufen werden, um die relative URL mit ihrer Basis-URL zu kombinieren. [**Internetcombineurl**](/windows/desktop/api/Wininet/nf-wininet-internetcombineurla) wird die resultierende URL auch kanonisiert.
+Ein relative URL ist eine kompakte Darstellung des Speicherorts einer Ressource relativ zu einer absoluten Basis-URL. Die Basis-URL muss dem Parser bekannt sein und in der Regel das Schema, den Netzwerkspeicherort und Teile des URL-Pfads enthalten. Eine Anwendung kann [**InternetCombineUrl aufrufen,**](/windows/desktop/api/Wininet/nf-wininet-internetcombineurla) um die relative URL mit ihrer Basis-URL zu kombinieren. [**InternetCombineUrl**](/windows/desktop/api/Wininet/nf-wininet-internetcombineurla) kanonisiert auch die resultierende URL.
 
-## <a name="cracking-urls"></a>Knacken von URLs
+## <a name="cracking-urls"></a>Auflisten von URLs
 
-Die Funktion [**internetknackurl**](/windows/desktop/api/Wininet/nf-wininet-internetcrackurla) trennt eine URL in Ihre Komponenten Teile und gibt die von der URL- [**\_ Komponenten**](/windows/desktop/api/Wininet/ns-wininet-url_componentsa) Struktur, die an die Funktion übermittelt wird, aufgeführten Komponenten zurück.
+Die [**InternetCrackUrl-Funktion**](/windows/desktop/api/Wininet/nf-wininet-internetcrackurla) trennt eine URL in ihre Komponententeile und gibt die Komponenten zurück, die durch die [**URL \_ COMPONENTS-Struktur**](/windows/desktop/api/Wininet/ns-wininet-url_componentsa) angegeben sind, die an die Funktion übergeben wird.
 
-Die Komponenten, die die [**URL- \_ Komponenten**](/windows/desktop/api/Wininet/ns-wininet-url_componentsa) Struktur bilden, sind die Schema Nummer, der Hostname, die Portnummer, der Benutzername, das Kennwort, der URL-Pfad und zusätzliche Informationen (z. b. Suchparameter). Jede Komponente, außer dem Schema und den Portnummern, verfügt über einen Zeichen folgen Member, der die Informationen enthält, und einen Member, der die Länge des Zeichen folgen Elements enthält. Das Schema und die Portnummern verfügen nur über einen Member, der den entsprechenden Wert speichert. Beide werden bei allen erfolgreichen Aufrufen von [**internetcrackurl**](/windows/desktop/api/Wininet/nf-wininet-internetcrackurla)zurückgegeben.
+Die Komponenten, aus denen sich die [**STRUKTUR DER \_ URL-KOMPONENTEN**](/windows/desktop/api/Wininet/ns-wininet-url_componentsa) zusammenzieht, sind die Schemanummer, der Hostname, die Portnummer, der Benutzername, das Kennwort, der URL-Pfad und zusätzliche Informationen (z. B. Suchparameter). Jede Komponente, mit Ausnahme des Schemas und der Portnummern, verfügt über ein Zeichenfolgenelement, das die Informationen enthält, und einen Member, der die Länge des Zeichenfolgenelements enthält. Das Schema und die Portnummern verfügen nur über ein Member, das den entsprechenden Wert speichert. sie werden beide bei allen erfolgreichen Aufrufen von [**InternetCrackUrl zurückgegeben.**](/windows/desktop/api/Wininet/nf-wininet-internetcrackurla)
 
-Um den Wert einer bestimmten Komponente in der Struktur der [**URL- \_ Komponenten**](/windows/desktop/api/Wininet/ns-wininet-url_componentsa) zu erhalten, muss der Member, der die Zeichen folgen Länge dieser Komponente speichert, auf einen Wert ungleich 0 (null) festgelegt werden. Der Zeichen folgen Member kann entweder die Adresse eines Puffers oder **null** sein.
+Um den Wert einer bestimmten Komponente in der [**URL \_ COMPONENTS-Struktur**](/windows/desktop/api/Wininet/ns-wininet-url_componentsa) zu erhalten, muss der Member, der die Zeichenfolgenlänge dieser Komponente speichert, auf einen Wert ungleich 0 (null) festgelegt werden. Der Zeichenfolgen-Member kann entweder die Adresse eines Puffers oder **NULL sein.**
 
-Wenn das Zeigermember die Adresse eines Puffers enthält, muss das Zeichen folgen Längen Element die Größe dieses Puffers enthalten. [**Internetcrackurl**](/windows/desktop/api/Wininet/nf-wininet-internetcrackurla) gibt die Komponenten Informationen als Zeichenfolge im Puffer zurück und speichert die Länge der Zeichenfolge im Zeichen folgen Längen Element.
+Wenn der Zeiger member die Adresse eines Puffers enthält, muss der Zeichenfolgenlängen-Member die Größe dieses Puffers enthalten. [**InternetCrackUrl gibt**](/windows/desktop/api/Wininet/nf-wininet-internetcrackurla) die Komponenteninformationen als Zeichenfolge im Puffer zurück und speichert die Zeichenfolgenlänge im Zeichenfolgenlängenelement.
 
-Wenn das Zeigermember **null** ist, kann das Zeichen folgen Längen Element auf einen Wert ungleich 0 (null) festgelegt werden. [**Internetcrackurl**](/windows/desktop/api/Wininet/nf-wininet-internetcrackurla) speichert die Adresse des ersten Zeichens der URL-Zeichenfolge, die die Komponenten Informationen enthält, und legt die Zeichen folgen Länge auf die Anzahl der Zeichen im verbleibenden Teil der URL-Zeichenfolge fest, die sich auf die Komponente bezieht.
+Wenn der Zeiger member NULL **ist,** kann der Zeichenfolgenlängen-Member auf einen beliebigen Wert ungleich 0 (null) festgelegt werden. [**InternetCrackUrl**](/windows/desktop/api/Wininet/nf-wininet-internetcrackurla) speichert die Adresse des ersten Zeichens der URL-Zeichenfolge, die die Komponenteninformationen enthält, und legt die Zeichenfolgenlänge auf die Anzahl der Zeichen im verbleibenden Teil der URL-Zeichenfolge fest, die sich auf die Komponente bezieht.
 
-Alle Zeiger Elemente, die auf **null** festgelegt sind, mit einem Element, das nicht NULL ist, zeigen auf den entsprechenden Startpunkt in der URL-Zeichenfolge Die im Längen Element gespeicherte Länge muss verwendet werden, um das Ende der Informationen der einzelnen Komponente zu bestimmen.
+Alle Zeigermitglieder, die auf **NULL mit** einem Member ungleich 0 (null) festgelegt sind, zeigen auf den entsprechenden Ausgangspunkt in der URL-Zeichenfolge. Die im Längenelement gespeicherte Länge muss verwendet werden, um das Ende der Informationen der einzelnen Komponente zu bestimmen.
 
-Damit die Struktur der [**URL- \_ Komponenten**](/windows/desktop/api/Wininet/ns-wininet-url_componentsa) ordnungsgemäß initialisiert wird, muss der **dwstructsize** -Member auf die Größe der [**URL- \_ Komponenten**](/windows/desktop/api/Wininet/ns-wininet-url_componentsa) Struktur in Bytes festgelegt werden.
+Um die Initialisierung der [**URL \_ COMPONENTS-Struktur**](/windows/desktop/api/Wininet/ns-wininet-url_componentsa) ordnungsgemäß zu beenden, muss das **dwStructSize-Member** auf die Größe der [**URL \_ COMPONENTS-Struktur**](/windows/desktop/api/Wininet/ns-wininet-url_componentsa) in Bytes festgelegt werden.
 
-Im folgenden Beispiel werden die Komponenten der URL im Bearbeitungsfeld, IDC \_ PreOpen1, zurückgegeben, und die Komponenten werden an das Listenfeld IDC \_ preopenlist zurückgegeben. Wenn Sie nur die Informationen für eine einzelne Komponente anzeigen möchten, kopiert diese Funktion das Zeichen direkt nach den Informationen der Komponente in der Zeichenfolge und ersetzt diese temporär durch **null**.
+Im folgenden Beispiel werden die Komponenten der URL im Bearbeitungsfeld IDC PreOpen1 und die Komponenten an das Listenfeld \_ IDC \_ PreOpenList zurückgegeben. Um nur die Informationen für eine einzelne Komponente anzuzeigen, kopiert diese Funktion das Zeichen unmittelbar nach den Komponenteninformationen in der Zeichenfolge und ersetzt es vorübergehend durch einen **NULL-Wert.**
 
 
 ```C++
@@ -285,32 +285,32 @@ BOOL listURLpart( HWND hDlg, int nListBoxId,
 
 ## <a name="creating-urls"></a>Erstellen von URLs
 
-Die [**internetkreateurl**](/windows/desktop/api/Wininet/nf-wininet-internetcreateurla) -Funktion verwendet die Informationen in der Struktur der [**URL- \_ Komponenten**](/windows/desktop/api/Wininet/ns-wininet-url_componentsa) , um eine Uniform Resource Locator zu erstellen.
+Die [**InternetCreateUrl-Funktion**](/windows/desktop/api/Wininet/nf-wininet-internetcreateurla) verwendet die Informationen in der [**URL \_ COMPONENTS-Struktur,**](/windows/desktop/api/Wininet/ns-wininet-url_componentsa) um eine Uniform Resource Locator.
 
-Die Komponenten, aus denen die [**URL- \_ Komponenten**](/windows/desktop/api/Wininet/ns-wininet-url_componentsa) Struktur besteht, sind das Schema, der Hostname, die Portnummer, der Benutzername, das Kennwort, der URL-Pfad und zusätzliche Informationen (z. b. Suchparameter). Jede Komponente, außer der Portnummer, verfügt über einen Zeichen folgen Member, der die Informationen enthält, und einen Member, der die Länge des Zeichen folgen Elements enthält.
+Die Komponenten, aus denen sich die [**URL \_ COMPONENTS-Struktur**](/windows/desktop/api/Wininet/ns-wininet-url_componentsa) zusammenzusetzen hat, sind das Schema, der Hostname, die Portnummer, der Benutzername, das Kennwort, der URL-Pfad und zusätzliche Informationen (z. B. Suchparameter). Jede Komponente, mit Ausnahme der Portnummer, verfügt über ein Zeichenfolgenelement, das die Informationen enthält, und einen Member, der die Länge des Zeichenfolgenelements enthält.
 
-Für jede erforderliche Komponente sollte das Zeigermember die Adresse des Puffers enthalten, der die Informationen enthält. Das Längen Element muss auf 0 (null) festgelegt werden, wenn das Zeigermember die Adresse einer null-terminierten Zeichenfolge enthält. Das Längen Element muss auf die Länge der Zeichenfolge festgelegt werden, wenn das Zeigermember die Adresse einer Zeichenfolge enthält, die nicht mit 0 (null) beendet wird. Das Zeiger Element von Komponenten, die nicht erforderlich sind, muss **null** sein.
+Für jede erforderliche Komponente sollte der Zeigerelement die Adresse des Puffers enthalten, der die Informationen enthält. Das Längenmitglied sollte auf 0 (null) festgelegt werden, wenn das Zeigermitglied die Adresse einer Zeichenfolge enthält, die auf Null endet. Der Längen-Member sollte auf die Zeichenfolgenlänge festgelegt werden, wenn der Zeiger member die Adresse einer Zeichenfolge enthält, die nicht mit 0 (null) beendet ist. Der Zeiger member aller Komponenten, die nicht erforderlich sind, muss **NULL sein.**
 
-## <a name="accessing-urls-directly"></a>Direktes Aufrufen von URLs
+## <a name="accessing-urls-directly"></a>Direkter Zugriff auf URLs
 
-Auf FTP-und http-Ressourcen im Internet kann direkt mithilfe der Funktionen [**InternetOpenUrl**](/windows/desktop/api/Wininet/nf-wininet-internetopenurla), [**internetreadfile**](/windows/desktop/api/Wininet/nf-wininet-internetreadfile)und [**internetfindnextfile**](/windows/desktop/api/Wininet/nf-wininet-internetfindnextfilea) zugegriffen werden. [**InternetOpenUrl**](/windows/desktop/api/Wininet/nf-wininet-internetopenurla) öffnet eine Verbindung mit der Ressource an der URL, die an die Funktion übermittelt wurde. Wenn diese Verbindung hergestellt wird, können zwei Schritte ausgeführt werden. Wenn es sich bei der Ressource um eine Datei handelt, kann Sie von " [**internetreadfile**](/windows/desktop/api/Wininet/nf-wininet-internetreadfile) " heruntergeladen werden. Zweitens: Wenn es sich bei der Ressource um ein Verzeichnis handelt, kann [**internetfindnextfile**](/windows/desktop/api/Wininet/nf-wininet-internetfindnextfilea) die Dateien im Verzeichnis auflisten (außer bei Verwendung von CERN-Proxys). Weitere Informationen zu " [**internetreadfile**](/windows/desktop/api/Wininet/nf-wininet-internetreadfile)" finden Sie unter [Lesen von Dateien](common-functions.md). Weitere Informationen zu [**internetfindnextfile**](/windows/desktop/api/Wininet/nf-wininet-internetfindnextfilea)finden Sie untersuchen [der nächsten Datei](common-functions.md).
+Auf FTP- und HTTP-Ressourcen im Internet kann direkt mithilfe der [**Funktionen InternetOpenUrl,**](/windows/desktop/api/Wininet/nf-wininet-internetopenurla) [**InternetReadFile**](/windows/desktop/api/Wininet/nf-wininet-internetreadfile)und [**InternetFindNextFile zugegriffen**](/windows/desktop/api/Wininet/nf-wininet-internetfindnextfilea) werden. [**InternetOpenUrl öffnet**](/windows/desktop/api/Wininet/nf-wininet-internetopenurla) eine Verbindung mit der Ressource unter der URL, die an die Funktion übergeben wird. Wenn diese Verbindung hergestellt wird, gibt es zwei mögliche Schritte. Erstens: Wenn es sich bei der Ressource um eine Datei handelt, [**kann sie von InternetReadFile**](/windows/desktop/api/Wininet/nf-wininet-internetreadfile) heruntergeladen werden. Zweitens: Wenn die Ressource ein Verzeichnis ist, [**kann InternetFindNextFile**](/windows/desktop/api/Wininet/nf-wininet-internetfindnextfilea) die Dateien im Verzeichnis aufzählen (außer bei Verwendung von CERN-Proxys). Weitere Informationen zu [**InternetReadFile finden Sie**](/windows/desktop/api/Wininet/nf-wininet-internetreadfile)unter [Lesen von Dateien.](common-functions.md) Weitere Informationen zu [**InternetFindNextFile finden**](/windows/desktop/api/Wininet/nf-wininet-internetfindnextfilea)Sie unter [Suchen der nächsten Datei.](common-functions.md)
 
-Für Anwendungen, die über einen CERN-Proxy ausgeführt werden müssen, kann [**InternetOpenUrl**](/windows/desktop/api/Wininet/nf-wininet-internetopenurla) für den Zugriff auf FTP-Verzeichnisse und-Dateien verwendet werden. Die FTP-Anforderungen werden verpackt, damit Sie wie eine HTTP-Anforderung angezeigt werden, die der CERN-Proxy akzeptieren würde.
+Für Anwendungen, die über einen CERN-Proxy betrieben werden müssen, kann [**InternetOpenUrl**](/windows/desktop/api/Wininet/nf-wininet-internetopenurla) für den Zugriff auf FTP-Verzeichnisse und -Dateien verwendet werden. Die FTP-Anforderungen werden so verpackt, dass sie wie eine HTTP-Anforderung aussehen, die der CERN-Proxy akzeptiert.
 
-[**InternetOpenUrl**](/windows/desktop/api/Wininet/nf-wininet-internetopenurla) verwendet das [**hinternethandle**](appendix-a-hinternet-handles.md) , das von der [**InternetOpen**](/windows/desktop/api/Wininet/nf-wininet-internetopena) -Funktion erstellt wurde, und die URL der Ressource. Die URL muss das Schema (http:, FTP:, file: \[ für eine lokale Datei \] oder https: für ein \[ Hypertext-Protokoll sicher \] ) und einen Netzwerk Speicherort (z `www.microsoft.com` . b.) enthalten. Die URL kann auch einen Pfad enthalten (z. b./isapi/gomscom.ASP? Target =/Windows/Feature/) und Ressourcen Name (z. b. default.htm). Für http-oder HTTPS-Anforderungen können zusätzliche Header eingeschlossen werden.
+[**InternetOpenUrl**](/windows/desktop/api/Wininet/nf-wininet-internetopenurla) verwendet das [**HINTERNET-Handle,**](appendix-a-hinternet-handles.md) das von der [**InternetOpen-Funktion**](/windows/desktop/api/Wininet/nf-wininet-internetopena) erstellt wurde, und die URL der Ressource. Die URL muss das Schema (http:, ftp:, file: \[ für eine lokale Datei oder \] https: für \[ sicheres Hypertextprotokoll) und den \] Netzwerkspeicherort (z. `www.microsoft.com` B. ) enthalten. Die URL kann auch einen Pfad enthalten (z.B. /isapi/gomscom.asp? TARGET=/windows/feature/) und Ressourcenname (z.B. default.htm). Für HTTP- oder HTTPS-Anforderungen können zusätzliche Header eingeschlossen werden.
 
-[**Internetquerydataavailable**](/windows/desktop/api/Wininet/nf-wininet-internetquerydataavailable), [**internetfindnextfile**](/windows/desktop/api/Wininet/nf-wininet-internetfindnextfilea), [**internetreadfile**](/windows/desktop/api/Wininet/nf-wininet-internetreadfile)und [**internetsetfilepointer**](/windows/desktop/api/Wininet/nf-wininet-internetsetfilepointer) (nur http-oder HTTPS-URLs) können das Handle verwenden, das von [**InternetOpenUrl**](/windows/desktop/api/Wininet/nf-wininet-internetopenurla) zum Herunterladen der Ressource erstellt wurde.
+[**InternetQueryDataAvailable,**](/windows/desktop/api/Wininet/nf-wininet-internetquerydataavailable) [**InternetFindNextFile,**](/windows/desktop/api/Wininet/nf-wininet-internetfindnextfilea) [**InternetReadFile**](/windows/desktop/api/Wininet/nf-wininet-internetreadfile)und [**InternetSetFilePointer**](/windows/desktop/api/Wininet/nf-wininet-internetsetfilepointer) (nur HTTP- oder HTTPS-URLs) können das von [**InternetOpenUrl**](/windows/desktop/api/Wininet/nf-wininet-internetopenurla) erstellte Handle verwenden, um die Ressource herunterzuladen.
 
-Im folgenden Diagramm wird veranschaulicht, welche Handles für die einzelnen Funktionen verwendet werden können.
+Das folgende Diagramm veranschaulicht, welche Handles mit den einzelnen Funktionen verwendet werden sollen.
 
-![mit Functions zu verwendende Handles](images/ax-wnt02.png)
+![Handles für die Verwendung mit Funktionen](images/ax-wnt02.png)
 
-Das von [**InternetOpen**](/windows/desktop/api/Wininet/nf-wininet-internetopena) erstellte Stamm- [**HINTERNET**](appendix-a-hinternet-handles.md) Handle wird von [**InternetOpenUrl**](/windows/desktop/api/Wininet/nf-wininet-internetopenurla)verwendet. Das **hinternethandle** , das von [**InternetOpenUrl**](/windows/desktop/api/Wininet/nf-wininet-internetopenurla) erstellt wurde, kann von [**internetquerydataavailable**](/windows/desktop/api/Wininet/nf-wininet-internetquerydataavailable), [**internetreadfile**](/windows/desktop/api/Wininet/nf-wininet-internetreadfile), [**internetfindnextfile**](/windows/desktop/api/Wininet/nf-wininet-internetfindnextfilea) (hier nicht gezeigt) und [**internetsetfilepointer**](/windows/desktop/api/Wininet/nf-wininet-internetsetfilepointer) (nur http-oder HTTPS-URLs) verwendet werden.
+Das von [**InternetOpen**](/windows/desktop/api/Wininet/nf-wininet-internetopena) erstellte [**HINTERNET-Stammhandle**](appendix-a-hinternet-handles.md) wird von [**InternetOpenUrl**](/windows/desktop/api/Wininet/nf-wininet-internetopenurla)verwendet. Das von [**InternetOpenUrl**](/windows/desktop/api/Wininet/nf-wininet-internetopenurla) erstellte **HINTERNET-Handle** kann von [**InternetQueryDataAvailable,**](/windows/desktop/api/Wininet/nf-wininet-internetquerydataavailable) [**InternetReadFile,**](/windows/desktop/api/Wininet/nf-wininet-internetreadfile) [**InternetFindNextFile**](/windows/desktop/api/Wininet/nf-wininet-internetfindnextfilea) (hier nicht gezeigt) und [**InternetSetFilePointer**](/windows/desktop/api/Wininet/nf-wininet-internetsetfilepointer) (nur HTTP- oder HTTPS-URLs) verwendet werden.
 
 Weitere Informationen finden Sie unter [**HINTERNET Handles**](appendix-a-hinternet-handles.md).
 
 > [!Note]  
-> WinInet unterstützt keine Server Implementierungen. Außerdem sollte Sie nicht von einem Dienst verwendet werden. Verwenden Sie für Server Implementierungen oder-Dienste [Microsoft Windows HTTP-Dienste (WinHTTP)](/windows/desktop/WinHttp/winhttp-start-page).
+> WinINet unterstützt keine Serverimplementierungen. Darüber hinaus sollte sie nicht von einem Dienst verwendet werden. Verwenden Sie für Serverimplementierungen oder -dienste [Microsoft Windows HTTP-Dienste (WinHTTP).](/windows/desktop/WinHttp/winhttp-start-page)
 
  
 

@@ -1,9 +1,9 @@
 ---
-title: TB_GETITEMRECT Meldung (kommstrg. h)
-description: Ruft das umgebende Rechteck einer Schaltfläche in einer Symbolleiste ab.
+title: TB_GETITEMRECT (Commctrl.h)
+description: Ruft das umgebundene Rechteck einer Schaltfläche in einer Symbolleiste ab.
 ms.assetid: 42c2c86e-0002-4029-be6a-fdfdf405b78c
 keywords:
-- Windows-Steuerelemente für TB_GETITEMRECT Meldung
+- TB_GETITEMRECT von Windows Steuerelementen
 topic_type:
 - apiref
 api_name:
@@ -14,16 +14,16 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: e71a4c6540a1a7ff918b97b3a331e692f6d44529
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 1c6dbfa4c7e305c4e2dfe53b45edaac1d6601631c920fa266c64292fd7e6d97e
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "103859103"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117829705"
 ---
-# <a name="tb_getitemrect-message"></a>TB- \_ GetItemRect-Nachricht
+# <a name="tb_getitemrect-message"></a>TB \_ GETITEMRECT-Nachricht
 
-Ruft das umgebende Rechteck einer Schaltfläche in einer Symbolleiste ab.
+Ruft das umgebundene Rechteck einer Schaltfläche in einer Symbolleiste ab.
 
 ## <a name="parameters"></a>Parameter
 
@@ -32,24 +32,24 @@ Ruft das umgebende Rechteck einer Schaltfläche in einer Symbolleiste ab.
 *wParam* 
 </dt> <dd>
 
-NULL basierter Index der Schaltfläche, für die Informationen abgerufen werden sollen.
+Nullbasierter Index der Schaltfläche, für die Informationen abgerufen werden.
 
 </dd> <dt>
 
 *lParam* 
 </dt> <dd>
 
-Ein Zeiger auf eine [**Rect**](/previous-versions//dd162897(v=vs.85)) -Struktur, die die Client Koordinaten des umschließenden Rechtecks empfängt.
+Zeiger auf eine [**RECT-Struktur,**](/previous-versions//dd162897(v=vs.85)) die die Clientkoordinaten des umgebundenen Rechtecks empfängt.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt **true** zurück, wenn erfolgreich, andernfalls **false** .
+Gibt **TRUE zurück,** wenn erfolgreich, andernfalls **FALSE.**
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Diese Nachricht ruft nicht das umgebende Rechteck für Schaltflächen ab, deren Zustand auf den [**ausgeblendeten \_ TBSTATE**](toolbar-button-states.md) -Wert festgelegt ist.
+Diese Meldung ruft das umgebundene Rechteck für Schaltflächen, deren Zustand auf den [**TBSTATE \_ HIDDEN-Wert**](toolbar-button-states.md) festgelegt ist, nicht ab.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -57,9 +57,9 @@ Diese Nachricht ruft nicht das umgebende Rechteck für Schaltflächen ab, deren 
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>                                        |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2003 \[ -Desktop-Apps\]<br/>                                  |
-| Header<br/>                   | <dl> <dt>Kommstrg. h</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur \[ Vista-Desktop-Apps\]<br/>                                        |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2003-Desktop-Apps\]<br/>                                  |
+| Header<br/>                   | <dl> <dt>Commctrl.h</dt> </dl> |
 
 
 

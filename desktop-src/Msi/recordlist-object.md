@@ -22,11 +22,11 @@ ms.locfileid: "118626808"
 ---
 # <a name="recordlist-object"></a>RecordList-Objekt
 
-Das **RecordList-Objekt** ist eine Auflistung von [**Record-Objekten.**](record-object.md) Sie müssen überprüfen, ob **das RecordList-Objekt** vorhanden und nicht leer ist, bevor Sie auf seine Eigenschaften verweisen.
+Das **RecordList-Objekt** ist eine Auflistung von [**Record-Objekten.**](record-object.md) Sie müssen überprüfen, ob das **RecordList-Objekt** vorhanden und nicht leer ist, bevor Sie auf seine Eigenschaften verweisen.
 
 ## <a name="members"></a>Member
 
-Das **RecordList-Objekt** verfügt über die folgenden Membertypen:
+Das **RecordList-Objekt** verfügt über diese Typen von Membern:
 
 -   [Eigenschaften](#properties)
 
@@ -39,7 +39,7 @@ Das **RecordList-Objekt** verfügt über diese Eigenschaften.
 | Eigenschaft                                     | Beschreibung                                                          |
 |:---------------------------------------------|:---------------------------------------------------------------------|
 | [**Anzahl**](recordlist-count.md)<br/> | Gibt die Anzahl der Elemente im **RecordList-Objekt** zurück.<br/> |
-| [**Element**](recordlist-item.md)<br/>   | Gibt einen Datensatz in einer **RecordList-Objektsammlung** zurück.<br/>   |
+| [**Element**](recordlist-item.md)<br/>   | Gibt einen Datensatz in einer **RecordList-Objektauflistung** zurück.<br/>   |
 
 
 
@@ -51,20 +51,20 @@ Das **RecordList-Objekt** verfügt über diese Eigenschaften.
 
 | Anforderung | Wert |
 |--------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Version<br/> | Windows Installer 5.0 auf Windows Server 2012, Windows 8, Windows Server 2008 R2 oder Windows 7. Windows Installer 4.0 oder Windows Installer 4.5 auf Windows Server 2008 oder Windows Vista. Windows Installationsprogramm auf Windows Server 2003 oder Windows XP<br/> |
+| Version<br/> | Windows Installationsprogramm 5.0 auf Windows Server 2012, Windows 8, Windows Server 2008 R2 oder Windows 7. Windows Installer 4.0 oder Windows Installer 4.5 auf Windows Server 2008 oder Windows Vista. Windows Installationsprogramm auf Windows Server 2003 oder Windows XP<br/> |
 | DLL<br/>     | <dl> <dt>Msi.dll</dt> </dl>                                                                                                                                                                      |
-| IID<br/>     | IID \_ IRecordList ist als 000C1096-0000-0000-C000-00000000046 definiert.<br/>                                                                                                                                                                          |
+| IID<br/>     | IID \_ IRecordList ist als 000C1096-0000-0000-C000-0000000000046 definiert.<br/>                                                                                                                                                                          |
 
 
 
-## <a name="see-also"></a>Weitere Informationen:
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
 [**Datensatz**](record-object.md)
 </dt> <dt>
 
-[Windows Skriptbeispiele für Installer](windows-installer-scripting-examples.md)
+[Windows Beispiele für Skripterstellung für Installer](windows-installer-scripting-examples.md)
 </dt> </dl>
 
  

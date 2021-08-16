@@ -13,7 +13,7 @@ ms.locfileid: "118748698"
 ---
 # <a name="languageid-property"></a>LanguageID-Eigenschaft
 
-\[Der Microsoft-Agent ist ab Windows 7 veraltet und in nachfolgenden Versionen von Windows möglicherweise nicht mehr verfügbar.\]
+\[Microsoft Agent ist ab Version Windows 7 veraltet und in nachfolgenden Versionen von Windows.\]
 
 <dl> <dt>
 
@@ -27,17 +27,17 @@ Gibt die Sprach-ID für das Zeichen zurück oder legt sie fest.
 <span id="Syntax"></span><span id="syntax"></span><span id="SYNTAX"></span>**Syntax**
 </dt> <dd>
 
-*agent.dll Zeichen* *  **("**_CharacterID_*_"). LanguageID_* \[  =  *LanguageID*\]
+*agent.**Characters* *  **("**_CharacterID_*_"). LanguageID_* \[  =  *LanguageID*\]
 
 
 
 Teil
 
-Beschreibung
+BESCHREIBUNG
 
 LanguageID
 
-Eine long-Ganzzahl, die die Sprach-ID für das Zeichen angibt. Die Sprach-ID (LANGID) für ein Zeichen ist ein von Windows definierter 16-Bit-Wert, der aus einer primären Sprach-ID und einer sekundären Sprach-ID besteht. Die folgenden Beispiele sind Werte für Sprachen, die von Microsoft Agent unterstützt werden. Informationen zum Ermitteln des Werts für andere Sprachen finden Sie in der *Plattform-SDK-Dokumentation.*
+Eine lange ganze Zahl, die die Sprach-ID für das Zeichen angibt. Die Sprach-ID (LANGID) für ein Zeichen ist ein von Windows definierter 16-Bit-Wert, der aus einer primären Und einer sekundären Sprach-ID besteht. Die folgenden Beispiele sind Werte für Sprachen, die von Microsoft Agent unterstützt werden. Informationen zum Ermitteln des Werts für andere Sprachen finden Sie in der *Platform SDK-Dokumentation.*
 
  
 
@@ -207,18 +207,18 @@ Ungarisch
 
 ## <a name="remarks"></a>Hinweise
 
-Wenn Sie die **LanguageID** für das Zeichen nicht festlegen, entspricht die Sprach-ID der aktuellen Systemsprach-ID, wenn die entsprechende Agent-Sprach-DLL installiert ist. Andernfalls lautet die Sprache des Zeichens Englisch (USA).
+Wenn Sie die **LanguageID** für das Zeichen nicht festlegen, ist ihre Sprach-ID die aktuelle Systemsprach-ID, wenn die entsprechende -Agent-Sprach-DLL installiert ist. Andernfalls ist die Sprache des Zeichens Englisch (USA).
 
-Diese Eigenschaft bestimmt auch die Sprache für Denontext von Wörtern, die Befehle im Popupmenü des Zeichens und die Spracherkennungs-Engine. Außerdem wird die Standardsprache für die TTS-Ausgabe bestimmt.
+Diese Eigenschaft bestimmt auch die Sprache für Den Wortsprechblasentext, die Befehle im Popupmenü des Zeichens und die Spracherkennungs-Engine. Außerdem wird die Standardsprache für die TTS-Ausgabe bestimmt.
 
-Wenn Sie versuchen, die **LanguageID** für ein Zeichen festzulegen, und die Agent-Sprach-DLL für diese Sprache nicht installiert ist oder keine Anzeigeschriftart für die Sprach-ID verfügbar ist, löst der -Agent einen Fehler aus, und **LanguageID** bleibt bei der letzten Einstellung.
+Wenn Sie versuchen, die **LanguageID** für ein Zeichen zu setzen, und die DLL der -Agent-Sprache für diese Sprache nicht installiert ist oder keine Anzeigeschriftart für die Sprach-ID verfügbar ist, löst der -Agent einen Fehler aus, und **LanguageID** bleibt bei der letzten Einstellung.
 
-Wenn Sie diese Eigenschaft festlegen, wird kein Fehler ausgelöst, wenn keine übereinstimmenden Sprach-Engines für die Sprache vorhanden sind. Überprüfen Sie [**SRModeID**](srmodeid-property.md) oder [**TTSModeID,**](ttsmodeid-property.md)um zu ermitteln, ob eine kompatible Sprach-Engine für **languageID** verfügbar ist. Wenn Sie **LanguageID** nicht festlegen, wird sie auf die Standardeinstellung für die Sprach-ID des Benutzers festgelegt.
+Wenn Sie diese Eigenschaft festlegen, wird kein Fehler ausgegeben, wenn keine entsprechenden Sprach-Engines für die Sprache angezeigt werden. Überprüfen Sie [**SRModeID**](srmodeid-property.md) oder [**TTSModeID,**](ttsmodeid-property.md)um zu ermitteln, ob eine kompatible Sprach-Engine für **languageID** verfügbar ist. Wenn Sie **LanguageID nicht festlegen,** wird diese auf die Standardsprach-ID-Einstellung des Benutzers festgelegt.
 
 Diese Eigenschaft gilt nur für die Verwendung des Zeichens durch Ihre Clientanwendung. Die Einstellung wirkt sich nicht auf andere Clients des Zeichens oder anderer Zeichen Ihrer Clientanwendung aus.
 
 > [!Note]  
-> Wenn Sie **LanguageID** auf eine Sprache festlegen, die bidirektionalen Text unterstützt (z. B. Arabisch oder Hebräisch), aber auf dem System, auf dem Ihre Anwendung ausgeführt wird, keine bidirektionale Unterstützung installiert ist, wird Text in der Wortsprechblase in logischer statt in der Anzeigereihenfolge angezeigt.
+> Wenn Sie **LanguageID** auf eine Sprache festlegen, die bidirektionalen Text unterstützt (z. B. Arabisch oder Hebräisch), aber auf dem System, auf dem Ihre Anwendung ausgeführt wird, keine bidirektionale Unterstützung installiert ist, wird Text im Wortsprechblasen in logischer statt in anzeiger Reihenfolge angezeigt.
 
  
 

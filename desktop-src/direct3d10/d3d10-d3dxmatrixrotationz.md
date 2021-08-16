@@ -1,5 +1,5 @@
 ---
-description: 'D3DXMatrixRotationZ-Funktion (D3DX10Math.h): Erstellt eine Matrix, die sich um die Z-Achse dreht.'
+description: 'D3DXMatrixRotationZ-Funktion (D3DX10Math.h): Erstellt eine Matrix, die um die Z-Achse gedreht wird.'
 ms.assetid: a168ea24-0cec-4e1b-a128-e9dadedf190b
 title: D3DXMatrixRotationZ-Funktion (D3DX10Math.h)
 ms.topic: reference
@@ -23,7 +23,7 @@ ms.locfileid: "118541260"
 ---
 # <a name="d3dxmatrixrotationz-function-d3dx10mathh"></a>D3DXMatrixRotationZ-Funktion (D3DX10Math.h)
 
-Erstellt eine Matrix, die sich um die Z-Achse dreht.
+Erstellt eine Matrix, die um die Z-Achse gedreht wird.
 
 ## <a name="syntax"></a>Syntax
 
@@ -63,7 +63,7 @@ Drehwinkel im Bogenmaß. Winkel werden im Uhrzeigersinn gemessen, wenn sie von d
 
 Typ: **[ **D3DXMATRIX**](../direct3d9/d3dxmatrix.md)\***
 
-Zeiger auf eine um die Z-Achse gedrehte D3DXMATRIX-Struktur.
+Zeiger auf eine D3DXMATRIX-Struktur, die um die Z-Achse gedreht wurde.
 
 ## <a name="remarks"></a>Hinweise
 
@@ -80,7 +80,7 @@ Der Rückgabewert für diese Funktion ist der gleiche Wert, der im pOut-Paramete
 
 
 
-## <a name="see-also"></a>Weitere Informationen:
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 

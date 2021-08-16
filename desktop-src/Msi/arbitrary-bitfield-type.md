@@ -1,5 +1,5 @@
 ---
-description: Der &\# 0034; Bitfield&\# 0034; geben Sie ohne Kontextanforderungen ein, dass der Benutzer eine ganze Zahl bereitstellt, deren Wert verwendet wird, um ein oder mehrere Bits in einem Bitfeld festzulegen. Dieser Text kann in einer beliebigen Sprache enthalten sein, die mit der Codepage der Datenbank kompatibel ist.
+description: Der &\# 0034; Bitfield&0034; geben Sie ohne Kontextanforderungen ein, dass der Benutzer eine ganze Zahl angibt, deren Wert verwendet wird, um ein oder mehrere Bits in einem \# Bitfeld zu setzen. Dieser Text kann in einer beliebigen Sprache enthalten sein, die mit der Codepage der Datenbank kompatibel ist.
 ms.assetid: 28e1bdb9-a42d-46ce-ad24-71bc22e2d92a
 title: Beliebiger Bitfeldtyp
 ms.topic: article
@@ -13,11 +13,11 @@ ms.locfileid: "118381384"
 ---
 # <a name="arbitrary-bitfield-type"></a>Beliebiger Bitfeldtyp
 
-Der Typ "Bitfield" ohne Kontext fordert an, dass der Benutzer eine ganze Zahl bereitstellt, deren Wert verwendet wird, um ein oder mehrere Bits in einem Bitfeld festzulegen. Dieser Text kann in einer beliebigen Sprache enthalten sein, die mit der Codepage der Datenbank kompatibel ist.
+Der Typ "Bitfield" ohne Kontextanforderungen, dass der Benutzer eine ganze Zahl angibt, deren Wert verwendet wird, um ein oder mehrere Bits in einem Bitfeld zu setzen. Dieser Text kann in einer beliebigen Sprache enthalten sein, die mit der Codepage der Datenbank kompatibel ist.
 
-Der beliebige Bitfeldtyp des [semantischen Typs](semantic-types.md) ist einer der Bitfield-Typen. Dieser Typ besteht aus einer ganzen Zahl, die vom Benutzer aus einer Reihe von Auswahlmöglichkeiten ausgewählt wird. Das Mergetool ersetzt die ausgewählte ganze Zahl in die Vorlagen, die in der Spalte Wert der [Tabelle ModuleSubsdatenbank](modulesubstitution-table.md)angegeben sind. Um ein konfigurierbares Element dieses Typs anzugeben, sollten Modulautoren den Namen des Elements in die Spalte Name eingeben, "3" in die Spalte Format eingeben, die Spalte Typ leer lassen und die Liste der möglichen ganzen Zahlen in der ContextData-Spalte der [ModuleConfiguration-Tabelle](moduleconfiguration-table.md)eingeben.
+Der Beliebige Bitfeldtyp des [semantischen Typs](semantic-types.md) ist einer der Bitfield-Typen. Dieser Typ besteht aus einer ganzen Zahl, die vom Benutzer aus einer Reihe von Auswahlmöglichkeiten ausgewählt wird. Das Mergetool ersetzt die ausgewählte ganze Zahl in die Vorlagen, die in der Spalte Wert der [ModuleSubs integer -Tabelle angegeben sind.](modulesubstitution-table.md) Um ein konfigurierbares Element dieses Typs anzugeben, sollten Modulautoren den Namen des Elements in die Spalte Name eingeben, "3" in die Spalte Format eingeben, die Spalte Typ leer lassen und die Liste der möglichen ganzen Zahlen in der ContextData -Spalte der [ModuleConfiguration-Tabelle eingeben.](moduleconfiguration-table.md)
 
-Die Spalte Typ ist reserviert und muss NULL sein. Der Eintrag in der ContextData-Spalte für alle Bitfield-Formattypen muss das Format " <mask> aufweisen.<Name>=<value>;<Name>=<value>....", wobei <mask> ein ganzzahliger Wert ist, der die interessanten Bits angibt, <Name> ein lokalisierbarer Anzeigename für die Auswahl ist und <value> ist ein ganzzahliger Dezimalwert. Die Kontextspalte wird im [CMSM-Sonderformat](cmsm-special-format.md) und für alle Bitfeldtypen verwendet. Ein Literalzeichen "=" oder ";" kann in das Feld eingegeben werden, <Name> indem ihm ein umgekehrter Schrägstrich (' ') vorangestellt \\ wird.
+Die Spalte Typ ist reserviert und muss NULL sein. Der Eintrag in der ContextData-Spalte für alle Bitfield Format-Typen muss das Format " <mask> haben.<Name>=<value>;<Name>=<value>....", wobei ein ganzzahliger Wert ist, der die bits of interest angibt, ist ein <mask> <Name> lokalisierbarer Anzeigename für die Auswahl, und <value> ist ein ganzzahliger Dezimalwert. Die Kontextspalte wird im [CMSM-Sonderformat und](cmsm-special-format.md) für alle Bitfeldtypen verwendet. Ein Literalzeichen "=" oder ";" kann in das Feld eingegeben werden, indem ihm ein schräger Schrägstrich <Name> (' \\ ') vorangestellt wird.
 
  
 

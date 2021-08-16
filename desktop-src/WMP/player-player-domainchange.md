@@ -1,11 +1,11 @@
 ---
-title: Player. domainchange-Ereignis
-description: Das domainchange-Ereignis tritt auf, wenn die DVD-Domäne geändert wird. | Player. domainchange-Ereignis
+title: Player.DomainChange-Ereignis
+description: Das DomainChange-Ereignis tritt auf, wenn sich die DVD-Domäne ändert. | Player.DomainChange-Ereignis
 ms.assetid: 01965492-276e-4d30-99eb-767e0776b423
 keywords:
-- Windows-Media Player für Domänen Änderungs Ereignisse
-- Domainchange-Ereignis, Windows Media Player, Player-Klasse
-- Player-Klasse Windows Media Player, domainchange-Ereignis
+- DomainChange-Ereignis Windows Media Player
+- DomainChange-Ereignis Windows Media Player , Player-Klasse
+- Player-Klasse Windows Media Player , DomainChange-Ereignis
 topic_type:
 - apiref
 api_name:
@@ -16,16 +16,16 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: fa9637913451aa5bba937906130899c46e0bd34d
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 6f6d70c6a3c2ac2d29c03e6d0518b5e7341f988f41e1bf2f5bb84a7de9f83f68
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106365487"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118995910"
 ---
-# <a name="playerdomainchange-event"></a>Player. domainchange-Ereignis
+# <a name="playerdomainchange-event"></a>Player.DomainChange-Ereignis
 
-Das **domainchange** -Ereignis tritt auf, wenn die DVD-Domäne geändert wird.
+Das **DomainChange-Ereignis** tritt auf, wenn sich die DVD-Domäne ändert.
 
 ## <a name="syntax"></a>Syntax
 
@@ -42,20 +42,20 @@ Player.DomainChange(
 
 <dl> <dt>
 
-*Domäne* 
+*strDomain* 
 </dt> <dd>
 
-**Zeichenfolge** , die die neue Domäne angibt. Enthält einen der folgenden Werte.
+**Zeichenfolge,** die die neue Domäne angibt. Enthält einen der folgenden Werte.
 
 
 
 | Zeichenfolge            | Beschreibung                                                          |
 |-------------------|----------------------------------------------------------------------|
-| FirstPlay         | Die Standard Initialisierung einer DVD-CD wird durchgeführt.                     |
-| videomanagermenu  | Anzeigen von Menüs für die gesamte Festplatte. Wird auch als "Root Menu" oder "topmenu" bezeichnet. |
-| videotitlesetmenu | Anzeigen von Menüs für den aktuellen Titel Satz. Wird auch als titlemenu bezeichnet.     |
+| firstplay         | Ausführen der Standardinitialisierung eines DVD-Datenträgers.                     |
+| videoManagerMenu  | Anzeigen von Menüs für ganze Datenträger. Wird auch als Stammmenü oder topMenu bezeichnet. |
+| videoTitleSetMenu | Anzeigen von Menüs für den aktuellen Titelsatz. Wird auch als titleMenu bezeichnet.     |
 | title             | Anzeigen des aktuellen Titels.                                        |
-| stop              | Der DVD-Navigator befindet sich in der DVD-stoppdomäne.                         |
+| stop              | Der DVD-Navigator befindet sich in der Domäne DVD-Beenden.                         |
 
 
 
@@ -67,9 +67,9 @@ Player.DomainChange(
 
 Dieses Ereignis gibt keinen Wert zurück.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Der Wert von Ereignis Parametern wird von Windows Media Player festgelegt, und der Zugriff auf und die Übergabe an eine Methode in einer importierten JScript-Datei mithilfe des angegebenen Parameter namens ist möglich. Dieser Parameter Name muss genau wie gezeigt eingegeben werden, einschließlich der Groß-/Kleinschreibung.
+Der Wert von Ereignisparametern wird von Windows Media Player angegeben und kann mithilfe des angegebenen Parameternamens in einer importierten JScript-Datei auf eine Methode zugegriffen oder an diese übergeben werden. Dieser Parametername muss genau wie gezeigt eingegeben werden, einschließlich Der Groß-/Großschreibung.
 
 **Windows Media Player 10 Mobile:** Dieses Ereignis wird nicht unterstützt.
 
@@ -84,7 +84,7 @@ Der Wert von Ereignis Parametern wird von Windows Media Player festgelegt, und d
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 

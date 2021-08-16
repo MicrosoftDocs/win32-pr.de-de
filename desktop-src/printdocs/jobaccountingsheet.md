@@ -4,12 +4,12 @@ ms.assetid: fd16bd46-32e3-4896-ac5c-03c1bf6ad515
 title: JobAccountingSheet
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 499d78db7a967e256ee79cd6e0c35d2f7d59dff4
-ms.sourcegitcommit: 5d4e99f4c8f42f5f543e52cb9beb9fb13ec56c5f
+ms.openlocfilehash: 678a2c0cb39fd29dcf46779b306e380dd7535a6fadc762d89a3cb92f4db24c57
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2021
-ms.locfileid: "112409094"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119034158"
 ---
 # <a name="jobaccountingsheet"></a>JobAccountingSheet
 
@@ -27,7 +27,7 @@ Beschreibt das Buchhaltungsblatt, das für den Auftrag ausgegeben werden soll. D
 
 | Name | Wert |
 |----------------------------|--------------------|
-| Elementtyp <br/>   | Funktion<br/> |
+| Elementtyp <br/>   | Komponente<br/> |
 | Bereichspräfix <br/> | Auftrag<br/>     |
 | Hinweise <br/>          | Keine<br/>    |
 

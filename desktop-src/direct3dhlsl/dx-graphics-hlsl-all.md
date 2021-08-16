@@ -1,9 +1,9 @@
 ---
 title: alle
-description: Bestimmt, ob alle Komponenten des angegebenen-Werts ungleich 0 (null) sind.
+description: Bestimmt, ob alle Komponenten des angegebenen Werts nicht 0 (null) sind.
 ms.assetid: 9ee079ff-cd2c-41f5-98cd-ea1f4215e7d5
 keywords:
-- Alle HLSL
+- alle HLSL
 topic_type:
 - apiref
 api_name:
@@ -13,20 +13,20 @@ api_type:
 ms.topic: reference
 ms.date: 05/31/2018
 api_location: ''
-ms.openlocfilehash: 59d59e18655aab10d13af998f4e2aa94da3fa08b
-ms.sourcegitcommit: 592c9bbd22ba69802dc353bcb5eb30699f9e9403
-ms.translationtype: HT
+ms.openlocfilehash: 9ddc9dd6177021500a84fb5fd8feba166b42ef671dfd96af3536615a068bfce1
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "104976849"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119673600"
 ---
 # <a name="all"></a>alle
 
-Bestimmt, ob alle Komponenten des angegebenen-Werts ungleich 0 (null) sind.
+Bestimmt, ob alle Komponenten des angegebenen Werts nicht 0 (null) sind.
 
 
 
-| *ret* all (*x*) |
+| *ret* all(*x*) |
 |----------------|
 
 
@@ -39,7 +39,7 @@ Bestimmt, ob alle Komponenten des angegebenen-Werts ungleich 0 (null) sind.
 
 | Element                                                   | BESCHREIBUNG                            |
 |--------------------------------------------------------|----------------------------------------|
-| <span id="x"></span><span id="X"></span>*Stuben*<br/> | \[im \] angegebenen Wert.<br/> |
+| <span id="x"></span><span id="X"></span>*X*<br/> | \[in \] Der angegebene Wert.<br/> |
 
 
 
@@ -47,11 +47,11 @@ Bestimmt, ob alle Komponenten des angegebenen-Werts ungleich 0 (null) sind.
 
 ## <a name="return-value"></a>Rückgabewert
 
-**True** , wenn alle Komponenten des *x* -Parameters ungleich NULL sind. andernfalls **false**.
+**TRUE,** wenn alle Komponenten des *x-Parameters* nicht 0 (null) sind; andernfalls **FALSE.**
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Diese Funktion [**ähnelt der**](dx-graphics-hlsl-any.md) intrinsischen HLSL-Funktion. Die **any** -Funktion bestimmt, ob Komponenten des angegebenen-Werts ungleich 0 (null) sind, während die **all** -Funktion bestimmt, ob alle Komponenten des angegebenen Werts ungleich 0 (null) sind.
+Diese Funktion ähnelt der [**systeminternen**](dx-graphics-hlsl-any.md) HLSL-Funktion. Die **any-Funktion** bestimmt, ob Komponenten des angegebenen Werts nicht 0 (null) sind, während die **all-Funktion** bestimmt, ob alle Komponenten des angegebenen Werts nicht 0 (null) sind.
 
 ## <a name="type-description"></a>Typbeschreibung
 
@@ -59,23 +59,23 @@ Diese Funktion [**ähnelt der**](dx-graphics-hlsl-any.md) intrinsischen HLSL-Fun
 
 | Name  | [**Vorlagentyp**](dx-graphics-hlsl-intrinsic-functions.md)                                                  | [**Komponententyp**](dx-graphics-hlsl-intrinsic-functions.md)                                                         | Size |
 |-------|----------------------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------|------|
-| *x*   | [**Skalar**](dx-graphics-hlsl-intrinsic-functions.md), **Vektor** oder **Matrix** | [**float**](/windows/desktop/WinProg/windows-data-types), [**int**](/windows/desktop/WinProg/windows-data-types), [**bool**](/windows/desktop/WinProg/windows-data-types) | any  |
-| *TZI* | [**Skalar**](dx-graphics-hlsl-intrinsic-functions.md)                            | [**bool**](/windows/desktop/WinProg/windows-data-types)                                                                                 | 1    |
+| *x*   | [**Skalar,**](dx-graphics-hlsl-intrinsic-functions.md) **Vektor** oder **Matrix** | [**float,**](/windows/desktop/WinProg/windows-data-types) [**int,**](/windows/desktop/WinProg/windows-data-types) [**bool**](/windows/desktop/WinProg/windows-data-types) | any  |
+| *Ret* | [**Skalare**](dx-graphics-hlsl-intrinsic-functions.md)                            | [**bool**](/windows/desktop/WinProg/windows-data-types)                                                                                 | 1    |
 
 
 
  
 
-## <a name="minimum-shader-model"></a>Minimaler Shader-Modell
+## <a name="minimum-shader-model"></a>Minimales Shadermodell
 
-Diese Funktion wird in den folgenden shadermodellen unterstützt.
+Diese Funktion wird in den folgenden Shadermodellen unterstützt.
 
 
 
 | Shadermodell                                                                       | Unterstützt             |
 |------------------------------------------------------------------------------------|-----------------------|
-| [Shader Model 2 (DirectX HLSL)](dx-graphics-hlsl-sm2.md) und höhere Shader-Modelle | ja                   |
-| [Shader-Modell 1 (DirectX HLSL)](dx-graphics-hlsl-sm1.md)                          | vs \_ 1 \_ 1 und PS \_ 1 \_ 4 |
+| [Shadermodell 2 (DirectX HLSL)](dx-graphics-hlsl-sm2.md) und höhere Shadermodelle | ja                   |
+| [Shadermodell 1 (DirectX HLSL)](dx-graphics-hlsl-sm1.md)                          | vs \_ 1 \_ 1 und ps \_ 1 \_ 4 |
 
 
 
@@ -85,7 +85,7 @@ Diese Funktion wird in den folgenden shadermodellen unterstützt.
 
 <dl> <dt>
 
-[**Intrinsische Funktionen (DirectX HLSL)**](dx-graphics-hlsl-intrinsic-functions.md)
+[**Systeminterne Funktionen (DirectX HLSL)**](dx-graphics-hlsl-intrinsic-functions.md)
 </dt> </dl>
 
  

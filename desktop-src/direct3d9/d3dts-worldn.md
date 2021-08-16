@@ -1,7 +1,7 @@
 ---
-description: Identifiziert nachfolgende Transformations Matrizen, die verwendet werden können, um Vertices mit der entsprechenden Matrix und einem im Vertex-Format angegebenen Mischungs Gewichtungswert (Beta) zu kombinieren.
+description: Identifiziert nachfolgende Transformationsmatrizen, die verwendet werden können, um Scheitelpunkte mithilfe der entsprechenden Matrix und eines im Scheitelpunktformat angegebenen Gewichtungswerts (Beta) zu mischen.
 ms.assetid: cab444c2-b245-4d1a-a90c-745c92a2ea89
-title: D3DTS_WORLDn (D3d9types. h)
+title: D3DTS_WORLDn (D3d9types.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,16 +13,16 @@ api_type:
 - HeaderDef
 api_location:
 - D3d9types.h
-ms.openlocfilehash: 004435d278538c788e21ed7dc3482fd5e248895b
-ms.sourcegitcommit: 14010c34b35fa268046c7683f021f86de08ddd0a
+ms.openlocfilehash: 7026308192f43b7290dedcb9572772c9eda45acdc87d018480bd59202a2dc2df
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "106351936"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120119400"
 ---
-# <a name="d3dts_worldn"></a>D3DTS \_ worldn
+# <a name="d3dts_worldn"></a>D3DTS \_ WORLDn
 
-Identifiziert nachfolgende Transformations Matrizen, die verwendet werden können, um Vertices mit der entsprechenden Matrix und einem im Vertex-Format angegebenen Mischungs Gewichtungswert (Beta) zu kombinieren.
+Identifiziert nachfolgende Transformationsmatrizen, die verwendet werden können, um Scheitelpunkte mithilfe der entsprechenden Matrix und eines im Scheitelpunktformat angegebenen Gewichtungswerts (Beta) zu mischen.
 
 ``` syntax
 #define D3DTS_WORLDn 
@@ -31,9 +31,9 @@ Identifiziert nachfolgende Transformations Matrizen, die verwendet werden könne
 #define D3DTS_WORLD3 D3DTS_WORLDMATRIX(3)
 ```
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Diese Makros werden bereitgestellt, um das Portieren vorhandener Anwendungen auf Direct3D 9 zu vereinfachen.
+Diese Makros werden bereitgestellt, um das Portieren vorhandener Anwendungen zu Direct3D 9 zu vereinfachen.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -41,11 +41,11 @@ Diese Makros werden bereitgestellt, um das Portieren vorhandener Anwendungen auf
 
 | Anforderung | Wert |
 |-------------------|----------------------------------------------------------------------------------------|
-| Header<br/> | <dl> <dt>D3d9types. h</dt> </dl> |
+| Header<br/> | <dl> <dt>D3d9types.h</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
@@ -55,7 +55,7 @@ Diese Makros werden bereitgestellt, um das Portieren vorhandener Anwendungen auf
 [**SetTransform**](/windows/win32/api/d3d9helper/nf-d3d9helper-idirect3ddevice9-settransform)
 </dt> <dt>
 
-[**D3DTS \_ worldmatrix**](d3dts-worldmatrix.md)
+[**D3DTS \_ WORLDMATRIX**](d3dts-worldmatrix.md)
 </dt> </dl>
 
  

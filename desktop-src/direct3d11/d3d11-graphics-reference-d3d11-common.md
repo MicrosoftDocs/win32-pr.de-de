@@ -20,11 +20,11 @@ Die Direct3D-API definiert mehrere API-Elemente, die für Direct3D 12, Direct3D 
 
 
 
-| Thema                                                                                            | Beschreibung                                                                         |
+| Thema                                                                                            | BESCHREIBUNG                                                                         |
 |--------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------|
 | [Allgemeine Versionsschnittstellen](d3d11-graphics-reference-d3d11-common-interfaces.md)<br/>     | Dieser Abschnitt enthält Informationen zu den allgemeinen Versionsschnittstellen.<br/>   |
 | [Allgemeine Versionsstrukturen](d3d11-graphics-reference-d3d11-common-structures.md)<br/>     | Dieser Abschnitt enthält Informationen zu den allgemeinen Versionsstrukturen.<br/>   |
-| [Allgemeine Versionsenumerationen](d3d11-graphics-reference-d3d11-common-enumerations.md)<br/> | Dieser Abschnitt enthält Informationen zu den allgemeinen Versionsenumerationen.<br/> |
+| [Allgemeine Versionsenumeration](d3d11-graphics-reference-d3d11-common-enumerations.md)<br/> | Dieser Abschnitt enthält Informationen zu den allgemeinen Versionsenumeration.<br/> |
 
 
 

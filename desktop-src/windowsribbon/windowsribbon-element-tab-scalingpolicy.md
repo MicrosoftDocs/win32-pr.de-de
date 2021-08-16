@@ -1,9 +1,9 @@
 ---
-title: Tab. scalingpolicy (Eigenschaft)
-description: Stellt einen Container für Spezifikationen der Registerkarten Skala dar.
+title: Tab.ScalingPolicy(Eigenschaft)
+description: Stellt einen Container für Tabstoppskalierungsspezifikationen dar.
 ms.assetid: cc1e4a35-9348-459b-a2f1-25c34d49e5e8
 keywords:
-- Tab. scalingpolicy-Eigenschaft, Windows-Menüband
+- Tab.ScalingPolicy-Eigenschaft Windows Menüband
 topic_type:
 - apiref
 api_name:
@@ -12,16 +12,16 @@ api_type:
 - NA
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: c46528e7b5957415db55f1a51dd6dafed7e1da98
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 11b98174ff5c3426a4805905f0aa7ada86d63a644f4245135bcede5c71d11e75
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104478606"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117850796"
 ---
-# <a name="tabscalingpolicy-property"></a>Tab. scalingpolicy (Eigenschaft)
+# <a name="tabscalingpolicy-property"></a>Tab.ScalingPolicy(Eigenschaft)
 
-Stellt einen Container für Spezifikationen der [Register](windowsribbon-controls-tab.md) kartenskala dar.
+Stellt einen Container für [Tabstoppskalierungsspezifikationen](windowsribbon-controls-tab.md) dar.
 
 ## <a name="usage"></a>Verbrauch
 
@@ -39,7 +39,7 @@ Es gibt keine Attribute.
 
 
 
-| Element                                                                 | BESCHREIBUNG                                    |
+| Element                                                                 | Beschreibung                                    |
 |-------------------------------------------------------------------------|------------------------------------------------|
 | [**ScalingPolicy**](windowsribbon-element-scalingpolicy.md)<br/> | Muss genau einmal auftreten<br/> <br/> |
 
@@ -55,17 +55,17 @@ Es gibt keine Attribute.
 
 
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Dies ist optional.
+Optional.
 
-Kann höchstens einmal für jede [**Registerkarte**](windowsribbon-element-tab.md)auftreten.
+Kann für jede Registerkarte nur einmal [**auftreten.**](windowsribbon-element-tab.md)
 
-Skalierungs Spezifikationen beschreiben das Größen-und Layoutverhalten für die Steuerelemente auf einer [Registerkarte](windowsribbon-controls-tab.md) , wenn die Größe des Menübands geändert wird.
+Skalierungsspezifikationen beschreiben die Größe und das Layoutverhalten für die Steuerelemente in einer [Registerkarte,](windowsribbon-controls-tab.md) wenn die Größe des Menübands geändert wird.
 
 ## <a name="examples"></a>Beispiele
 
-Das folgende Codebeispiel veranschaulicht ein [**scalingpolicy**](windowsribbon-element-scalingpolicy.md) -Manifest, das eine [**scalingpolicy. ideal sizes**](windowsribbon-element-scalingpolicy-idealsizes.md) [**sizedefinition**](windowsribbon-element-sizedefinition.md) -Einstellung für jede von vier Gruppen von Steuerelementen auf einer Registerkarte **Home** angibt. Außerdem werden [**Skalierungs**](windowsribbon-element-scale.md) Elemente angegeben, um das reduzierende Verhalten der einzelnen Gruppen in absteigender Reihenfolge zu beeinflussen.
+Im folgenden Codebeispiel wird ein [**ScalingPolicy-Manifest**](windowsribbon-element-scalingpolicy.md) veranschaulicht, das eine [**ScalingPolicy.IdealSizes**](windowsribbon-element-scalingpolicy-idealsizes.md) [**SizeDefinition-Einstellung**](windowsribbon-element-sizedefinition.md) für jede von vier Gruppen von Steuerelementen auf einer **Registerkarte Start angibt.** Darüber hinaus werden [**Skalierungselemente**](windowsribbon-element-scale.md) angegeben, um das Reduzierungsverhalten jeder Gruppe in absteigender Reihenfolge zu beeinflussen.
 
 
 ```C++
@@ -137,16 +137,16 @@ Das folgende Codebeispiel veranschaulicht ein [**scalingpolicy**](windowsribbon-
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows 7 \[ -Desktop-Apps\]<br/>              |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2008 R2 \[ -Desktop-Apps\]<br/> |
+| Unterstützte Mindestversion (Client)<br/> | Windows 7 \[ Desktop-Apps\]<br/>              |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server 2008 \[ R2-Desktop-Apps\]<br/> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[Anpassen eines Menübands durch Größen Definitionen und Skalierungs Richtlinien](windowsribbon-templates.md)
+[Anpassen eines Menübands durch Größendefinitionen und Skalierungsrichtlinien](windowsribbon-templates.md)
 </dt> </dl>
 
  

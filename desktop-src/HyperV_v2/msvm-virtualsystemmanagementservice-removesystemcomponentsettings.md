@@ -104,7 +104,7 @@ Gibt bei einem Erfolg 0 oder 4096 zurück. andernfalls wird ein Fehler zurückge
 
 
 
-## <a name="see-also"></a>Weitere Informationen:
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 

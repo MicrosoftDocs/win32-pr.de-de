@@ -13,7 +13,7 @@ ms.locfileid: "118546152"
 ---
 # <a name="the-com-event-class-object"></a>Das COM+-Ereignisklassenobjekt
 
-Der COM+-Ereignisdienst verwendet ein *Ereignisklassenobjekt,* um die Verbindung zwischen Verleger und Abonnent zu verwalten. Das Ereignisklassenobjekt ist eine COM+-Komponente, die vom COM+-Ereignissystem verwaltet und gespeichert wird und die Schnittstellen und Methoden enthält, mit denen ein Herausgeber Ereignisse ausschalten kann. Es handelt sich um ein persistentes Objekt, das die Ereignisse angibt, die auftreten können, und optional den Herausgeber identifiziert. Sie geben die Schnittstellen und Methoden an, die eine Ereignisklasse enthalten soll, indem Sie eine Typbibliothek bereitstellen.
+Der COM+-Ereignisdienst verwendet ein *Ereignisklassenobjekt,* um die Verbindung zwischen Verleger und Abonnent zu verwalten. Das Ereignisklassenobjekt ist eine COM+-Komponente, die vom COM+-Ereignissystem verwaltet und gespeichert wird und die Schnittstellen und Methoden enthält, die von einem Verleger verwendet werden, um Ereignisse zu löschen. Es handelt sich um ein persistentes Objekt, das die Ereignisse angibt, die auftreten können, und optional den Herausgeber identifiziert. Sie geben die Schnittstellen und Methoden an, die eine Ereignisklasse enthalten soll, indem Sie eine Typbibliothek bereitstellen.
 
 Um ein Ereignis zu erzeugen, instanziiert der Herausgeber das Ereignisklassenobjekt, indem er [**CoCreateInstance**](/windows/desktop/api/combaseapi/nf-combaseapi-cocreateinstance) oder die Microsoft Visual Basic **CreateObject-Methode** aufruft und die Ereignisschnittstelle anfing, zurückgegeben zu werden. Das instanziierte Ereignisklassenobjekt enthält die Implementierung der angeforderten Schnittstelle des Ereignissystems. Ein interessierter Abonnent muss auch die Ereignisklassenschnittstelle implementieren, um Ereignisse von einem bestimmten Herausgeber zu empfangen. Wenn das Ereignisklassenobjekt instanziiert wird, ordnet das Ereignissystem es den entsprechenden Abonnenten zu. Die Liste der Abonnenten wird für die Lebensdauer des Ereignisklassenobjekts beibehalten. Ein Ereignis kann entweder seriell oder parallel an mehrere Abonnenten übermittelt werden.
 
@@ -22,7 +22,7 @@ Wenn Sie ein Ereignisklassenobjekt implementieren, sollten Sie eine selbstregist
 Da Ereignisklassenobjekte konfigurierte Komponenten sind, können andere Attribute, z. B. Warteschlangen, Transaktionen, Sicherheit und so weiter, für sie konfiguriert werden, indem entweder das Verwaltungstool Komponentendienste oder die COM+-Verwaltungs-SDK-Funktionen verwendet werden.
 
 > [!Note]  
-> Der COM+-Ereignisdienst verwendet das Marshalling von Typbibliotheken. Dadurch gelten einige Einschränkungen für Ereignisklassenschnittstellen. Der Typbibliotheks-Marshaller unterstützt beispielsweise nicht die Größe der MIDL-Attribute [**\_ und**](/windows/desktop/Midl/size-is) [**die Länge \_ ist**](/windows/desktop/Midl/length-is).
+> Der COM+-Ereignisdienst verwendet das Marshalling von Typbibliotheken. Dadurch gelten einige Einschränkungen für Ereignisklassenschnittstellen. Beispielsweise unterstützt der Typbibliotheks-Marshaller nicht die Größe der MIDL-Attribute [**\_ und**](/windows/desktop/Midl/size-is) [**die Länge \_ ist**](/windows/desktop/Midl/length-is).
 
  
 
@@ -30,7 +30,7 @@ Ein Ereignisklassenobjekt besitzt Veröffentlichungsattribute, die bestimmen, wi
 
 -   **EventCLSID**. Ein eindeutiger Bezeichner, der die CLSID der Komponente angibt.
 -   **EventClassName**. Ein eindeutiger Bezeichner, der die PROGID der Komponente angibt.
--   **TypeLibrary**. Stellt eine Liste der Schnittstellen bereit, die vom Ereignisklassenobjekt angeboten werden. Es ist nicht notwendig, die in der Typbibliothek angegebenen auslobenden Schnittstellen zu implementieren.
+-   **TypeLibrary**. Stellt eine Liste der Schnittstellen bereit, die vom Ereignisklassenobjekt angeboten werden. Die in der Typbibliothek angegebenen auslobenden Schnittstellen müssen nicht implementiert werden.
 
 ## <a name="related-topics"></a>Zugehörige Themen
 

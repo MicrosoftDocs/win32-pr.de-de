@@ -1,9 +1,9 @@
 ---
 title: HasScript
-description: Das HasScript-Attribut ist ein Attribut auf Dateiebene, das an gibt, ob die Datei Skriptstreams enthält.
+description: Das HasScript-Attribut ist ein Attribut auf Dateiebene, das angibt, ob die Datei Skriptstreams enthält.
 ms.assetid: e94c37ea-e11c-4abd-91d1-8f82612d8cba
 keywords:
-- HasScript-Windows-Medienformat
+- HasScript windows Media Format
 topic_type:
 - apiref
 api_name:
@@ -21,7 +21,7 @@ ms.locfileid: "117847633"
 ---
 # <a name="hasscript"></a>HasScript
 
-Das **HasScript-Attribut** ist ein Attribut auf Dateiebene, das an gibt, ob die Datei Skriptstreams enthält.
+Das **HasScript-Attribut** ist ein Attribut auf Dateiebene, das angibt, ob die Datei Skriptstreams enthält.
 
 ## <a name="global-constant"></a>Globale Konstante
 

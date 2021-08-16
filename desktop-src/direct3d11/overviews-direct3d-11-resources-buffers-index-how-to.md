@@ -1,30 +1,30 @@
 ---
-title: Erstellen eines Index Puffers
-description: In diesem Thema wird gezeigt, wie ein Index Puffer zur Vorbereitung des Renderings initialisiert wird.
+title: Erstellen eines Indexpuffers
+description: In diesem Thema wird gezeigt, wie ein Indexpuffer als Vorbereitung für das Rendering initialisiert wird.
 ms.assetid: 4b33d32a-27fd-4652-87ac-3b7268881f89
 keywords:
-- Index Puffer, erstellen
+- Indexpuffer, erstellen
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 38c4c99639748876a5f5fd84e546aaf299885c76
-ms.sourcegitcommit: 2d531328b6ed82d4ad971a45a5131b430c5866f7
+ms.openlocfilehash: d474114e5908a42a112dddd550e24c13e5e1d3bf2cec523d47dfe1d617ac0bf5
+ms.sourcegitcommit: e6600f550f79bddfe58bd4696ac50dd52cb03d7e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "104207077"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "120119500"
 ---
-# <a name="how-to-create-an-index-buffer"></a>Vorgehensweise: Erstellen eines Index Puffers
+# <a name="how-to-create-an-index-buffer"></a>Vorgehensweise: Erstellen eines Indexpuffers
 
-[Index Puffer](overviews-direct3d-11-resources-buffers-intro.md) enthalten Indexdaten. In diesem Thema wird gezeigt, wie ein [Index Puffer](overviews-direct3d-11-resources-buffers-intro.md) zur Vorbereitung des Renderings initialisiert wird.
+[Indexpuffer](overviews-direct3d-11-resources-buffers-intro.md) enthalten Indexdaten. In diesem Thema wird gezeigt, wie ein [Indexpuffer](overviews-direct3d-11-resources-buffers-intro.md) als Vorbereitung für das Rendering initialisiert wird.
 
-**So initialisieren Sie einen Index Puffer**
+**So initialisieren Sie einen Indexpuffer**
 
-1.  Erstellen Sie einen Puffer, der die Indexinformationen enthält.
-2.  Erstellen Sie eine Puffer Beschreibung, indem Sie eine [**D3D11- \_ Puffer- \_**](/windows/desktop/api/D3D11/ns-d3d11-d3d11_buffer_desc) Debug-Struktur ausfüllen. Übergeben Sie das D3D11 \_ Bind \_ Index \_ buffer-Flag an den **bindflags** -Member, und übergeben Sie die Größe des Puffers in Bytes an den **bytewidth** -Member.
-3.  Erstellen Sie eine Beschreibung der untergeordneten Quelldaten, indem Sie eine [**D3D11 \_ subresource- \_ Daten**](/windows/desktop/api/D3D11/ns-d3d11-d3d11_subresource_data) Struktur ausfüllen. Der **psysmem** -Member sollte direkt auf die in Schritt 1 erstellten Indexdaten verweisen.
-4.  Aufrufen von [**ID3D11Device:: up Buffer**](/windows/desktop/api/D3D11/nf-d3d11-id3d11device-createbuffer) beim Übergeben der [**D3D11- \_ Puffer- \_**](/windows/desktop/api/D3D11/ns-d3d11-d3d11_buffer_desc) Debug-Struktur, der [**D3D11 \_ subresource- \_ Daten**](/windows/desktop/api/D3D11/ns-d3d11-d3d11_subresource_data) Struktur und der Adresse eines Zeigers auf die [**ID3D11Buffer**](/windows/desktop/api/D3D11/nn-d3d11-id3d11buffer) -Schnittstelle, die initialisiert werden soll.
+1.  Erstellen Sie einen Puffer, der Ihre Indexinformationen enthält.
+2.  Erstellen Sie eine Pufferbeschreibung, indem Sie eine [**D3D11 \_ BUFFER \_ DESC-Struktur**](/windows/desktop/api/D3D11/ns-d3d11-d3d11_buffer_desc) ausfüllen. Übergeben Sie das BIND INDEX BUFFER-Flag D3D11 \_ \_ an den \_ **BindFlags-Member,** und übergeben Sie die Größe des Puffers in Bytes an den **ByteWidth-Member.**
+3.  Erstellen Sie eine Beschreibung der Unterressourcendaten, indem Sie eine [**D3D11 \_ SUBRESOURCE \_ DATA-Struktur**](/windows/desktop/api/D3D11/ns-d3d11-d3d11_subresource_data) ausfüllen. Der **pSysMem-Member** sollte direkt auf die Indexdaten verweisen, die in Schritt 1 erstellt wurden.
+4.  Rufen Sie [**ID3D11Device::CreateBuffer**](/windows/desktop/api/D3D11/nf-d3d11-id3d11device-createbuffer) auf, während Sie die [**D3D11 \_ BUFFER \_ DESC-Struktur,**](/windows/desktop/api/D3D11/ns-d3d11-d3d11_buffer_desc) die [**D3D11 \_ SUBRESOURCE \_ DATA-Struktur**](/windows/desktop/api/D3D11/ns-d3d11-d3d11_subresource_data) und die Adresse eines Zeigers auf die zu initialisierende [**ID3D11Buffer-Schnittstelle**](/windows/desktop/api/D3D11/nn-d3d11-id3d11buffer) übergeben.
 
-Im folgenden Codebeispiel wird veranschaulicht, wie ein Index Puffer erstellt wird. In diesem Beispiel wird angenommen, dass
+Im folgenden Codebeispiel wird veranschaulicht, wie ein Indexpuffer erstellt wird. In diesem Beispiel wird davon ausgegangen, dass
 
 
 ```
@@ -33,7 +33,7 @@ g_pd3dDevice
 
 
 
-ist ein gültiges [**ID3D11Device**](/windows/desktop/api/D3D11/nn-d3d11-id3d11device) -Objekt, das
+ist ein gültiges [**ID3D11Device-Objekt,**](/windows/desktop/api/D3D11/nn-d3d11-id3d11device) und das
 
 
 ```
@@ -42,7 +42,7 @@ g_pd3dContext
 
 
 
-ist ein gültiges [**Verknüpfung id3d11devicecontext aus**](/windows/desktop/api/D3D11/nn-d3d11-id3d11devicecontext) -Objekt.
+ist ein gültiges [**ID3D11DeviceContext-Objekt.**](/windows/desktop/api/D3D11/nn-d3d11-id3d11devicecontext)
 
 
 ```
@@ -84,12 +84,12 @@ g_pd3dContext->IASetIndexBuffer( g_pIndexBuffer, DXGI_FORMAT_R32_UINT, 0 );
 [Puffer](overviews-direct3d-11-resources-buffers.md)
 </dt> <dt>
 
-[Verwendung von Direct3D 11](how-to-use-direct3d-11.md)
+[Verwenden von Direct3D 11](how-to-use-direct3d-11.md)
 </dt> </dl>
 
- 
+ 
 
- 
+ 
 
 
 

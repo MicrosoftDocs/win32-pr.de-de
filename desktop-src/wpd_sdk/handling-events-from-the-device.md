@@ -4,31 +4,31 @@ ms.assetid: 529a8b7a-08b4-47de-8ed3-28e8fff0ede2
 title: Behandeln von Ereignissen vom Gerät
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 74692b73e39aa83286604408f3c556f5fbeb3f58
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: efb972e0de232ce281923ae2f763e264ef7120f363981778dcab7a8cb254fbfa
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106350959"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117843242"
 ---
 # <a name="handling-events-from-the-device"></a>Behandeln von Ereignissen vom Gerät
 
-Ein anderer Vorgang, der von einer WPD-Anwendung ausgeführt wird, ist die Behandlung von Ereignissen, die vom Gerät ausgelöst werden.
+Ein weiterer Vorgang, der von einer WPD-Anwendung durchgeführt wird, ist die Behandlung von Ereignissen, die vom Gerät ausgelöst werden.
 
-Ereignis Behandlungs Vorgänge werden mithilfe der in der folgenden Tabelle beschriebenen Schnittstellen ausgeführt.
+Ereignisbehandlungsvorgänge werden mithilfe der in der folgenden Tabelle beschriebenen Schnittstellen durchgeführt.
 
 
 
-| Schnittstelle                                                                      | BESCHREIBUNG                                                      |
+| Schnittstelle                                                                      | Beschreibung                                                      |
 |--------------------------------------------------------------------------------|------------------------------------------------------------------|
-| [**Iportabledevice-Schnittstelle**](/windows/desktop/api/PortableDeviceApi/nn-portabledeviceapi-iportabledevice)                           | Ermöglicht der Anwendung das registrieren, um asynchrone Rückrufe zu empfangen. |
-| [**Iportabledeviceeventcallback-Schnittstelle**](/windows/desktop/api/PortableDeviceApi/nn-portabledeviceapi-iportabledeviceeventcallback) | Enthält den Ereignishandler der Anwendung.                        |
+| [**IPortableDevice-Schnittstelle**](/windows/desktop/api/PortableDeviceApi/nn-portabledeviceapi-iportabledevice)                           | Ermöglicht der Anwendung die Registrierung, um asynchrone Rückrufe zu empfangen. |
+| [**IPortableDeviceEventCallback-Schnittstelle**](/windows/desktop/api/PortableDeviceApi/nn-portabledeviceapi-iportabledeviceeventcallback) | Enthält den Ereignishandler der Anwendung.                        |
 
 
 
  
 
-Die cportabledeviceeventscallback-Klasse im deviceevents. cpp-Modul der Beispielanwendung veranschaulicht, wie eine Anwendung [**iportabledeviceeventcallback**](/windows/desktop/api/PortableDeviceApi/nn-portabledeviceapi-iportabledeviceeventcallback)implementieren kann. Die Implementierung der [**OnEvent**](/windows/desktop/api/PortableDeviceApi/nf-portabledeviceapi-iportabledeviceeventcallback-onevent) -Methode in dieser Klasse schreibt die Parameter für ein beliebiges Ereignis in das Konsolenfenster der Anwendung. Zusätzlich zur OnEvent-Methode implementiert diese Klasse adressf und Release, die zur Verwaltung des Verweis Zählers des Objekts verwendet werden.
+Die CPortableDeviceEventsCallback-Klasse im DeviceEvents.cpp-Modul der Beispielanwendung veranschaulicht, wie eine Anwendung [**IPortableDeviceEventCallback**](/windows/desktop/api/PortableDeviceApi/nn-portabledeviceapi-iportabledeviceeventcallback)implementieren kann. Die Implementierung der [**OnEvent-Methode**](/windows/desktop/api/PortableDeviceApi/nf-portabledeviceapi-iportabledeviceeventcallback-onevent) in dieser Klasse schreibt die Parameter für jedes Ereignis in das Konsolenfenster der Anwendung. Zusätzlich zur OnEvent-Methode implementiert diese Klasse AddRef und Release, die zum Verwalten des Verweiszählers des Objekts verwendet werden.
 
 
 ```C++
@@ -106,7 +106,7 @@ public:
 
 
 
-Die Beispielanwendung instanziiert die cportabledeviceeventscallback-Klasse in ihrer registerforeventnotification-Hilfsfunktion. Diese Funktion erstellt mithilfe des new-Operators eine Instanz des Rückruf Objekts. Anschließend wird die [**iportabledevice:: Empfehlung**](/windows/desktop/api/PortableDeviceApi/nf-portabledeviceapi-iportabledevice-advise) -Methode aufgerufen, um den Rückruf zu registrieren und mit dem empfangen von Ereignissen zu beginnen.
+Die Beispielanwendung instanziiert die CPortableDeviceEventsCallback-Klasse in ihrer RegisterForEventNotifications-Hilfsfunktion. Diese Funktion erstellt mithilfe des new-Operators eine Instanz des Rückrufobjekts. Anschließend wird die [**IPortableDevice::Advise-Methode**](/windows/desktop/api/PortableDeviceApi/nf-portabledeviceapi-iportabledevice-advise) aufgerufen, um den Rückruf zu registrieren und mit dem Empfangen von Ereignissen zu beginnen.
 
 
 ```C++
@@ -181,7 +181,7 @@ void RegisterForEventNotifications(IPortableDevice* pDevice)
 
 
 
-Wenn die Beispielanwendung über empfangende Ereignisse verfügt, ruft Sie die unregisterforeventnotification-Hilfsfunktion auf. Diese Funktion ruft wiederum die [**iportabledevice:: unberatungsmethode**](/windows/desktop/api/PortableDeviceApi/nf-portabledeviceapi-iportabledevice-unadvise) auf, um die Registrierung des Rückrufs beim Empfangen von Ereignissen aufzuheben.
+Sobald die Beispielanwendung Ereignisse empfängt, ruft sie die Hilfsfunktion UnregisterForEventNotifications auf. Diese Funktion ruft wiederum die [**IPortableDevice::Unadvise-Methode**](/windows/desktop/api/PortableDeviceApi/nf-portabledeviceapi-iportabledevice-unadvise) auf, um die Registrierung des Rückrufs für den Empfang von Ereignissen zu aufheben.
 
 
 ```C++
@@ -215,10 +215,10 @@ void UnregisterForEventNotifications(IPortableDevice* pDevice)
 
 <dl> <dt>
 
-[**Iportabledevice-Schnittstelle**](/windows/desktop/api/PortableDeviceApi/nn-portabledeviceapi-iportabledevice)
+[**IPortableDevice-Schnittstelle**](/windows/desktop/api/PortableDeviceApi/nn-portabledeviceapi-iportabledevice)
 </dt> <dt>
 
-[**Iportabledeviceeventcallback-Schnittstelle**](/windows/desktop/api/PortableDeviceApi/nn-portabledeviceapi-iportabledeviceeventcallback)
+[**IPortableDeviceEventCallback-Schnittstelle**](/windows/desktop/api/PortableDeviceApi/nn-portabledeviceapi-iportabledeviceeventcallback)
 </dt> <dt>
 
 [**Programmierhandbuch**](programming-guide.md)

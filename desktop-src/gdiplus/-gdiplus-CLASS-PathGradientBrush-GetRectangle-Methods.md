@@ -1,19 +1,19 @@
 ---
-description: In diesem Thema werden die getrechteck-Methoden der PathGradientBrush-Klasse aufgelistet. Eine vollständige Liste der Methoden für die PathGradientBrush-Klasse finden Sie unter PathGradientBrush-Methoden.
+description: In diesem Thema werden die GetRectangle-Methoden der PathGradientBrush-Klasse aufgelistet. Eine vollständige Liste der Methoden für die PathGradientBrush-Klasse finden Sie unter PathGradientBrush-Methoden.
 ms.assetid: 626f4ef4-854f-4744-8a72-c62efb55803f
-title: PathGradientBrush. getrechteck-Methoden
+title: PathGradientBrush.GetRectangle-Methoden
 ms.date: 07/02/2019
 ms.topic: reference
-ms.openlocfilehash: 4a6327d2361c4558fc81507c04b1ba91151de992
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: a1f7d41603f9e1b508d4171384e9f99f61b93a38f31d47b38bc0e3d2478c4de5
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104979280"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119964370"
 ---
-# <a name="pathgradientbrushgetrectangle-methods"></a>PathGradientBrush. getrechteck-Methoden
+# <a name="pathgradientbrushgetrectangle-methods"></a>PathGradientBrush.GetRectangle-Methoden
 
-In diesem Thema werden die getrechteck-Methoden der [**PathGradientBrush**](/windows/win32/api/gdipluspath/nl-gdipluspath-pathgradientbrush) -Klasse aufgelistet. Eine vollständige Liste der Methoden für die **PathGradientBrush** -Klasse finden Sie unter [PathGradientBrush-Methoden](-gdiplus-class-pathgradientbrush-methods.md).
+In diesem Thema werden die GetRectangle-Methoden der [**PathGradientBrush-Klasse**](/windows/win32/api/gdipluspath/nl-gdipluspath-pathgradientbrush) aufgelistet. Eine vollständige Liste der Methoden für die **PathGradientBrush-Klasse** finden Sie unter [PathGradientBrush-Methoden.](-gdiplus-class-pathgradientbrush-methods.md)
 
 ### <a name="overload-list"></a>Überladeliste
 
@@ -21,8 +21,8 @@ In diesem Thema werden die getrechteck-Methoden der [**PathGradientBrush**](/win
 
 | Methode                                                                                     | BESCHREIBUNG                                                                                                                                                                                                         |
 |:-------------------------------------------------------------------------------------------|:--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| [**Getrechteck (Rect \* )**](/windows/win32/api/gdipluspath/nf-gdipluspath-pathgradientbrush-getrectangle(outrect))   | Die [**PathGradientBrush:: getrechteck**](/windows/win32/api/gdipluspath/nf-gdipluspath-pathgradientbrush-getrectangle(outrect)) -Methode ruft das kleinste Rechteck ab, das den Begrenzungs Pfad dieses Pfad Farbverlaufs Pinsels einschließt.<br/>  |
-| [**Getrechteck (RectF \* )**](/previous-versions//ms535096(v=vs.85)) | Die [**PathGradientBrush:: getrechteck**](/previous-versions//ms535096(v=vs.85)) -Methode ruft das kleinste Rechteck ab, das den Begrenzungs Pfad dieses Pfad Farbverlaufs Pinsels einschließt.<br/> |
+| [**GetRectangle(Rect \* )**](/windows/win32/api/gdipluspath/nf-gdipluspath-pathgradientbrush-getrectangle(outrect))   | Die [**PathGradientBrush::GetRectangle-Methode**](/windows/win32/api/gdipluspath/nf-gdipluspath-pathgradientbrush-getrectangle(outrect)) ruft das kleinste Rechteck ab, das den Begrenzungspfad dieses Pfadfarbverlaufspinsels einschließt.<br/>  |
+| [**GetRectangle(RectF \* )**](/previous-versions//ms535096(v=vs.85)) | Die [**PathGradientBrush::GetRectangle-Methode**](/previous-versions//ms535096(v=vs.85)) ruft das kleinste Rechteck ab, das den Begrenzungspfad dieses Pfadfarbverlaufspinsels einschließt.<br/> |
 
 
 

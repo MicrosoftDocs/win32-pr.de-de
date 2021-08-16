@@ -1,11 +1,11 @@
 ---
-title: Controls. Play-Methode
-description: Die Play-Methode bewirkt, dass das aktuelle Medien Element wiedergegeben wird, oder die Wiedergabe eines angehaltenen Elements wird wieder aufgenommen.
+title: Controls.play-Methode
+description: Die Wiedergabemethode bewirkt, dass das aktuelle Medienelement mit der Wiedergabe beginnt, oder setzt die Wiedergabe eines angehaltenen Elements fort.
 ms.assetid: 2218a13b-6294-45f5-bb6f-c5a1e433e0c6
 keywords:
-- Wiedergabemethode Windows Media Player
-- Play-Methode, Windows Media Player, Controls-Klasse
-- Steuerelement-Klasse, Windows Media Player, Wiedergabemethode
+- play-Methode Windows Media Player
+- play-Methode Windows Media Player , Controls-Klasse
+- Steuert die Klasse Windows Media Player , play-Methode
 topic_type:
 - apiref
 api_name:
@@ -16,16 +16,16 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: ea66f3bc4cf01d194dc44bcdf7b7cc838e1f3799
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 86ce3c1572515b320a62b1b3c76aac72e44101e21f3b0f89d7c3356046ea95f5
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106358696"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118997450"
 ---
-# <a name="controlsplay-method"></a>Controls. Play-Methode
+# <a name="controlsplay-method"></a>Controls.play-Methode
 
-Die **Play** -Methode bewirkt, dass das aktuelle Medien Element wiedergegeben wird, oder die Wiedergabe eines angehaltenen Elements wird wieder aufgenommen.
+Die **Wiedergabemethode** bewirkt, dass das aktuelle Medienelement mit der Wiedergabe beginnt, oder setzt die Wiedergabe eines angehaltenen Elements fort.
 
 ## <a name="syntax"></a>Syntax
 
@@ -44,13 +44,13 @@ Diese Methode hat keine Parameter.
 
 Diese Methode gibt keinen Wert zurück.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Wenn diese Methode während der schnellen Weiterleitung oder rebuggen aufgerufen wird, der Wert von *Settings*. die **Rate** ist auf 1,0 festgelegt.
+Wenn diese Methode beim schnellen Weiterleiten oder Zurückspulen aufgerufen wird, *Einstellungen* der Wert von . **rate** ist auf 1,0 festgelegt.
 
 ## <a name="examples"></a>Beispiele
 
-Im folgenden Beispiel wird ein HTML-Schaltflächen Element erstellt, das **Play** zum Wiedergeben des aktuellen Medien Elements verwendet. Das **Player** -Objekt wurde mit ID = "Player" erstellt.
+Im folgenden Beispiel wird ein HTML BUTTON-Element erstellt, das **play** verwendet, um das aktuelle Medienelement wiederzuspielen. Das **Player-Objekt** wurde mit der ID = "Player" erstellt.
 
 
 ```JScript
@@ -74,12 +74,12 @@ Im folgenden Beispiel wird ein HTML-Schaltflächen Element erstellt, das **Play*
 
 | Anforderung | Wert |
 |--------------------|------------------------------------------------------------------------------------|
-| Version<br/> | Windows Media Player Version 7,0 oder höher.<br/>                              |
+| Version<br/> | Windows Media Player Version 7.0 oder höher.<br/>                              |
 | DLL<br/>     | <dl> <dt>Wmp.dll</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 

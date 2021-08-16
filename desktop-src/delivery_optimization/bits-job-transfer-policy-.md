@@ -77,7 +77,7 @@ Gibt an, dass der Auftrag nur übertragen wird, wenn eine Verbindung verfügbar 
 <span id="BITS_JOB_TRANSFER_POLICY_UNRESTRICTED"></span><span id="bits_job_transfer_policy_unrestricted"></span>**BITS_JOB_TRANSFER_POLICY_UNRESTRICTED**
 </dt> <dd>
 
-Gibt an, dass der Auftrag nur übertragen wird, wenn eine Verbindung verfügbar ist, die keine Kosten oder Grenzwerte für den Datenverkehr verursacht.
+Gibt an, dass der Auftrag nur übertragen wird, wenn eine Verbindung verfügbar ist, die keine Kosten- oder Datenverkehrsgrenzwerte erzwingt.
 
 </dd> </dl>
 
@@ -87,7 +87,7 @@ Gibt an, dass der Auftrag nur übertragen wird, wenn eine Verbindung verfügbar 
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Windows 10 Desktop-Apps, Version 1709 \[\]<br/>                                         |
+| Unterstützte Mindestversion (Client)<br/> | Windows 10, version 1709 desktop apps only (Nur \[ Desktop-Apps der Version 1709)\]<br/>                                         |
 | Unterstützte Mindestversion (Server)<br/> | Windows Server, version 1709 desktop apps only (Nur \[ Desktop-Apps der Version 1709)\]<br/>                                     |
 | Header<br/>                   | <dl> <dt>Deliveryoptimization.h</dt> </dl> |
 

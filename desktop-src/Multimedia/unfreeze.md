@@ -1,6 +1,6 @@
 ---
-title: Unfreeze-Befehl
-description: Der Befehl unfreeze aktiviert die Videoerfassung erneut in den Framepuffer, nachdem er durch den Freeze-Befehl deaktiviert wurde. Digitalvideo-, VCR- und Videoüberlagerungsgeräte erkennen diesen Befehl.
+title: Befehl "unfreeze"
+description: Der Befehl unfreeze aktiviert den Videoerwerb erneut für den Framepuffer, nachdem er durch den Freeze-Befehl deaktiviert wurde. Digital-Video-, VCR- und Videoüberlagerungsgeräte erkennen diesen Befehl.
 ms.assetid: ca90c299-2003-44cb-a879-4bc767480965
 keywords:
 - Befehl "unfreeze" Windows Multimedia
@@ -19,11 +19,11 @@ ms.contentlocale: de-DE
 ms.lasthandoff: 08/11/2021
 ms.locfileid: "118370810"
 ---
-# <a name="unfreeze-command"></a>Unfreeze-Befehl
+# <a name="unfreeze-command"></a>Befehl "unfreeze"
 
-Der Befehl unfreeze aktiviert die Videoerfassung erneut in den Framepuffer, nachdem er durch den [Freeze-Befehl](freeze.md) deaktiviert wurde. Digitalvideo-, VCR- und Videoüberlagerungsgeräte erkennen diesen Befehl.
+Der Befehl unfreeze aktiviert den Videoerwerb erneut für den Framepuffer, nachdem er durch den Freeze-Befehl [deaktiviert](freeze.md) wurde. Digital-Video-, VCR- und Videoüberlagerungsgeräte erkennen diesen Befehl.
 
-Um diesen Befehl zu senden, rufen Sie die [**mciSendString-Funktion**](/previous-versions//dd757161(v=vs.85)) auf, wobei der *lpszCommand-Parameter* wie folgt festgelegt ist.
+Um diesen Befehl zu senden, rufen Sie die [**mciSendString-Funktion**](/previous-versions//dd757161(v=vs.85)) mit dem *lpszCommand-Parameter* auf, der wie folgt festgelegt ist.
 
 ``` syntax
 _stprintf_s(
@@ -49,7 +49,7 @@ Bezeichner eines MCI-Geräts. Dieser Bezeichner oder Alias wird zugewiesen, wenn
 <span id="lpszUnfreeze"></span><span id="lpszunfreeze"></span><span id="LPSZUNFREEZE"></span>*lpszUnfreeze*
 </dt> <dd>
 
-Flag für die erneute Videoerfassung in den Framepuffer. In der folgenden Tabelle sind die Gerätetypen aufgeführt, die den Befehl **unfreeze** und die von den einzelnen Typen verwendeten Flags erkennen.
+Flag für das erneute Einfüllen des Videoabrufs in den Framepuffer. In der folgenden Tabelle sind gerätetypen aufgeführt, die den Befehl **unfreeze** erkennen, und die flags, die von den einzelnen Typen verwendet werden.
 
 
 
@@ -63,15 +63,15 @@ Flag für die erneute Videoerfassung in den Framepuffer. In der folgenden Tabell
 
  
 
-Die folgende Tabelle enthält die Flags, die im **lpszUnfreeze-Parameter** angegeben werden können, und ihre Bedeutungen.
+In der folgenden Tabelle sind die Flags, die im **lpszUnfreeze-Parameter** angegeben werden können, und ihre Bedeutungen aufgeführt.
 
 
 
 | Wert          | Bedeutung                                                                                                                                                                                                                                                                                    |
 |----------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| am *Rechteck* | Gibt die Region an, in der die Videoerfassung wieder einseniert werden soll. Das Rechteck ist relativ zum Ursprung des Videopuffers und wird als *X1 Y1 X2 Y2* angegeben. Die Koordinaten *X1 Y1* geben die obere linke Ecke des Rechtecks und die Koordinaten *X2 Y2* die Breite und Höhe an. |
-| input          | Aufheben des Fixierens des Eingabebilds.                                                                                                                                                                                                                                                                  |
-| output         | Aufheben der Freigabe des Ausgabebilds. Wenn weder "input" noch "output" angegeben ist, wird "output" angenommen.                                                                                                                                                                                                  |
+| am *Rechteck* | Gibt den Bereich an, in dem der Videoerwerb erneut reenabled werden soll. Das Rechteck ist relativ zum Ursprung des Videopuffers und wird als *X1 Y1 X2 Y2 angegeben.* Die Koordinaten *X1 Y1* geben die obere linke Ecke des Rechtecks an, und die *Koordinaten X2 Y2* geben die Breite und Höhe an. |
+| input          | Entflädt das Eingabebild.                                                                                                                                                                                                                                                                  |
+| output         | Entfreeze das Ausgabebild. Wenn weder "input" noch "output" angegeben wird, wird "output" angenommen.                                                                                                                                                                                                  |
 
 
 
@@ -82,17 +82,17 @@ Die folgende Tabelle enthält die Flags, die im **lpszUnfreeze-Parameter** angeg
 <span id="lpszFlags"></span><span id="lpszflags"></span><span id="LPSZFLAGS"></span>*lpszFlags*
 </dt> <dd>
 
-Kann "wait", "notify" oder beides sein. Für DigitalVideo- und VCR-Geräte kann auch "Test" angegeben werden. Weitere Informationen zu diesen Flags finden Sie unter [Die Warte-, Benachrichtigungs- und Testflags.](the-wait-notify-and-test-flags.md)
+Kann "wait", "notify" oder beides sein. Für digital-video- und VCR-Geräte kann auch "test" angegeben werden. Weitere Informationen zu diesen Flags finden Sie unter [Die Warte-, Benachrichtigungs- und Testflags](the-wait-notify-and-test-flags.md).
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt 0 (null) zurück, wenn der Fehler erfolgreich war, oder andernfalls ein Fehler.
+Gibt 0 (null) zurück, wenn erfolgreich, andernfalls ein Fehler.
 
 ## <a name="examples"></a>Beispiele
 
-Der folgende Befehl entpackt einen Bereich des Videopuffers.
+Der folgende Befehl entlädt einen Bereich des Videopuffers.
 
 ``` syntax
 unfreeze vboard at 10 20 90 165

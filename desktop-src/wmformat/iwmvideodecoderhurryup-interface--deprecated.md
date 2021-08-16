@@ -1,9 +1,9 @@
 ---
 title: IWMVideoDecoderHurryup-Schnittstelle (Wmcodecdsp.h)
-description: Die aktuelle Dokumentation zu Windows Mediencodecs und digitalen Signalprozessoren finden Sie unter Windows Medienaudio- und Videocodec und DSP-APIs. | IWMVideoDecoderHurryup-Schnittstelle (Wmcodecdsp.h)
+description: Die aktuelle Dokumentation zu Windows Mediencodecs und digitalen Signalprozessoren finden Sie unter Windows Media Audio and Video Codec and DSP APIs (Medienaudio- und Videocodec und DSP-APIs). | IWMVideoDecoderHurryup-Schnittstelle (Wmcodecdsp.h)
 ms.assetid: 15206194-f49c-444c-858c-20c0a82ead37
 keywords:
-- IWMVideoDecoderHurryup-Schnittstelle windows Medienformat
+- IWMVideoDecoderHurryup Interface windows Media Format
 topic_type:
 - apiref
 api_name:
@@ -23,7 +23,7 @@ ms.locfileid: "118700796"
 ---
 # <a name="iwmvideodecoderhurryup-interface"></a>IWMVideoDecoderHurryup-Schnittstelle
 
-Die aktuelle Dokumentation zu Windows Mediencodecs und digitalen Signalprozessoren finden Sie unter [Windows Medienaudio- und Videocodec und DSP-APIs.](/previous-versions//dd464626(v=vs.85))
+Die aktuelle Dokumentation zu Windows Mediencodecs und digitalen Signalprozessoren finden Sie unter Windows Medienaudio- und Videocodec und [DSP-APIs.](/previous-versions//dd464626(v=vs.85))
 
 ## <a name="requirements"></a>Anforderungen
 

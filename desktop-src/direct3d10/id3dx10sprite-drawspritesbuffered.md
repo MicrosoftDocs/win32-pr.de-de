@@ -1,5 +1,5 @@
 ---
-description: Fügen Sie dem Zu rendernden Sprites-Batch ein Array von Sprites hinzu.
+description: Fügen Sie dem Batch von Sprites, die gerendert werden sollen, ein Array von Sprites hinzu.
 ms.assetid: e6a9f806-7244-4139-b47e-c46dfab38a31
 title: ID3DX10Sprite::D rawSpritesBuffered-Methode (D3DX10.h)
 ms.topic: reference
@@ -23,7 +23,7 @@ ms.locfileid: "118540037"
 ---
 # <a name="id3dx10spritedrawspritesbuffered-method"></a>ID3DX10Sprite::D rawSpritesBuffered-Methode
 
-Fügen Sie dem Zu rendernden Sprites-Batch ein Array von Sprites hinzu. Dies muss zwischen Aufrufen von [**ID3DX10Sprite::Begin**](id3dx10sprite-begin.md) und [**ID3DX10Sprite::End**](id3dx10sprite-end.md)aufgerufen werden, und [**ID3DX10Sprite::Flush**](id3dx10sprite-flush.md) muss vor End aufgerufen werden, um alle Batch-Sprites zum Rendern an das Gerät zu senden. Diese Draw-Methode ist besonders nützlich beim Zeichnen einer kleinen Anzahl von Sprites, die in einen großen Batch gepuffert werden sollen, z. B. Schriftarten.
+Fügen Sie dem Batch von Sprites, die gerendert werden sollen, ein Array von Sprites hinzu. Dieser muss zwischen Aufrufen von [**ID3DX10Sprite::Begin**](id3dx10sprite-begin.md) und [**ID3DX10Sprite::End**](id3dx10sprite-end.md)aufgerufen werden, und [**ID3DX10Sprite::Flush**](id3dx10sprite-flush.md) muss vor End aufgerufen werden, um alle Batch-Sprites zum Rendern an das Gerät zu senden. Diese Zeichnen-Methode ist besonders nützlich, wenn Sie eine kleine Anzahl von Sprites zeichnen, die in einen großen Batch gepuffert werden soll, z. B. Schriftarten.
 
 ## <a name="syntax"></a>Syntax
 
@@ -46,7 +46,7 @@ HRESULT DrawSpritesBuffered(
 
 Typ: **[ **D3DX10 \_ SPRITE**](d3dx10-sprite.md)\***
 
-Das Zu zeichnende Array von Sprites. Siehe [**D3DX10 \_ SPRITE**](d3dx10-sprite.md).
+Das Array der zu zeichnenden Sprites. Siehe [**D3DX10 \_ SPRITE**](d3dx10-sprite.md).
 
 </dd> <dt>
 
@@ -63,7 +63,7 @@ Die Anzahl der Sprites in pSprites.
 
 Typ: **[ **HRESULT**](https://msdn.microsoft.com/library/Bb401631(v=MSDN.10).aspx)**
 
-Wenn die Methode erfolgreich ist, lautet der Rückgabewert S \_ OK. Wenn die Methode fehlschlägt, kann der Rückgabewert einer der folgenden Werte sein: D3DERR \_ INVALIDCALL, D3DXERR \_ INVALIDDATA.
+Wenn die Methode erfolgreich ist, ist der Rückgabewert S \_ OK. Wenn bei der Methode ein Fehler auftritt, kann der Rückgabewert einer der folgenden Sein: D3DERR \_ INVALIDCALL, D3DXERR \_ INVALIDDATA.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -76,7 +76,7 @@ Wenn die Methode erfolgreich ist, lautet der Rückgabewert S \_ OK. Wenn die Met
 
 
 
-## <a name="see-also"></a>Weitere Informationen:
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 

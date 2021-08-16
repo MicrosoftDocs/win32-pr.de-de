@@ -1,19 +1,19 @@
 ---
-description: In diesem Thema werden die Konstruktoren der Grafikklasse aufgelistet. Eine komplette Klassen Auflistung finden Sie unter Grafikklasse.
+description: In diesem Thema werden die Konstruktoren der Graphics-Klasse aufgelistet. Eine vollständige Klassenauflistung finden Sie unter Grafikklasse.
 ms.assetid: 76c4c444-cd6f-43ff-8ab7-96469d4505b9
-title: Grafiken. Graphics-Konstruktoren
+title: Graphics.Graphics-Konstruktoren
 ms.date: 07/02/2019
 ms.topic: reference
-ms.openlocfilehash: 48c9a6181138b2c0a1caccb707ca30c3c4fedf5a
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 02b0b01e59227fba47a35a9c7cf7741d3dcb67b1c0feb5347d2b689dcd230529
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "103755809"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119964800"
 ---
-# <a name="graphicsgraphics-constructors"></a>Grafiken. Graphics-Konstruktoren
+# <a name="graphicsgraphics-constructors"></a>Graphics.Graphics-Konstruktoren
 
-In diesem Thema werden die Konstruktoren der [**Grafik**](/windows/win32/api/gdiplusgraphics/nl-gdiplusgraphics-graphics) Klasse aufgelistet. Eine komplette Klassen Auflistung finden Sie unter **Grafikklasse**.
+In diesem Thema werden die Konstruktoren der [**Graphics-Klasse**](/windows/win32/api/gdiplusgraphics/nl-gdiplusgraphics-graphics) aufgelistet. Eine vollständige Klassenauflistung finden Sie unter **Grafikklasse**.
 
 ### <a name="overload-list"></a>Überladeliste
 
@@ -21,10 +21,10 @@ In diesem Thema werden die Konstruktoren der [**Grafik**](/windows/win32/api/gdi
 
 | Konstruktor                                                                   | BESCHREIBUNG                                                                                                                                                                        |
 |:------------------------------------------------------------------------------|:-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| [**Grafiken (HDC)**](/previous-versions//ms536160(v=vs.85))                | Erstellt ein [**Graphics:: graphics**](/previous-versions//ms536160(v=vs.85)) -Objekt, das einem angegebenen Gerätekontext zugeordnet ist.<br/>                                |
-| [**Grafiken (Bild \* )**](/windows/win32/api/gdiplusgraphics/nf-gdiplusgraphics-graphics-graphics(inimage))          | Erstellt ein [**Graphics:: graphics**](/windows/win32/api/gdiplusgraphics/nf-gdiplusgraphics-graphics-graphics(inimage)) -Objekt, das einem [**Bild**](/windows/win32/api/gdiplusheaders/nl-gdiplusheaders-image) Objekt zugeordnet ist.<br/>   |
-| [**Grafiken (HWND, bool)**](/windows/win32/api/gdiplusgraphics/nf-gdiplusgraphics-graphics-graphics(inhwnd_inbool))     | Erstellt ein [**Graphics:: graphics**](/windows/win32/api/gdiplusgraphics/nf-gdiplusgraphics-graphics-graphics(inhwnd_inbool)) -Objekt, das mit einem angegebenen Fenster verknüpft ist.<br/>                                   |
-| [**Grafiken (hdc, handle)**](/windows/win32/api/gdiplusgraphics/nf-gdiplusgraphics-graphics-graphics(inhdc_inhandle)) | Erstellt ein [**Graphics:: graphics**](/windows/win32/api/gdiplusgraphics/nf-gdiplusgraphics-graphics-graphics(inhdc_inhandle)) -Objekt, das einem angegebenen Gerätekontext und einem angegebenen Gerät zugeordnet ist.<br/> |
+| [**Grafik (HDC)**](/previous-versions//ms536160(v=vs.85))                | Erstellt ein [**Graphics::Graphics-Objekt,**](/previous-versions//ms536160(v=vs.85)) das einem angegebenen Gerätekontext zugeordnet ist.<br/>                                |
+| [**Graphics(Image \* )**](/windows/win32/api/gdiplusgraphics/nf-gdiplusgraphics-graphics-graphics(inimage))          | Erstellt ein [**Graphics::Graphics-Objekt,**](/windows/win32/api/gdiplusgraphics/nf-gdiplusgraphics-graphics-graphics(inimage)) das einem [**Image-Objekt**](/windows/win32/api/gdiplusheaders/nl-gdiplusheaders-image) zugeordnet ist.<br/>   |
+| [**Graphics(HWND, BOOL)**](/windows/win32/api/gdiplusgraphics/nf-gdiplusgraphics-graphics-graphics(inhwnd_inbool))     | Erstellt ein [**Graphics::Graphics-Objekt,**](/windows/win32/api/gdiplusgraphics/nf-gdiplusgraphics-graphics-graphics(inhwnd_inbool)) das einem angegebenen Fenster zugeordnet ist.<br/>                                   |
+| [**Grafik (HDC, HANDLE)**](/windows/win32/api/gdiplusgraphics/nf-gdiplusgraphics-graphics-graphics(inhdc_inhandle)) | Erstellt ein [**Graphics::Graphics-Objekt,**](/windows/win32/api/gdiplusgraphics/nf-gdiplusgraphics-graphics-graphics(inhdc_inhandle)) das einem angegebenen Gerätekontext und einem angegebenen Gerät zugeordnet ist.<br/> |
 
 
 

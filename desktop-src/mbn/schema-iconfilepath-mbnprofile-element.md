@@ -1,7 +1,7 @@
 ---
-description: Enthält den Pfad der Symbol Datei für die Verbindung.
+description: Enthält den Pfad der Symboldatei für die Verbindung.
 ms.assetid: 9daf4916-914b-4326-9933-b433cc00b4c1
-title: Iconfilepath (mbnprofile)-Element
+title: ICONFilePath (MBNProfile)-Element
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -11,26 +11,26 @@ api_name:
 - ICONFilePath
 api_type:
 - Schema
-ms.openlocfilehash: 6b1e98f76fe2f83ce214076223b5a1439bd0ea45
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: ea662a7519a8705818ef502f5b797f437b0f89bee649d0bde18ce6f71b099d74
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106343698"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119035818"
 ---
-# <a name="iconfilepath-mbnprofile-element"></a>Iconfilepath (mbnprofile)-Element
+# <a name="iconfilepath-mbnprofile-element"></a>ICONFilePath (MBNProfile)-Element
 
-Das **iconfilepath (mbnprofile)** -Element enthält den Pfad der Symbol Datei für die Verbindung.
+Das **ICONFilePath (MBNProfile)-Element** enthält den Pfad der Symboldatei für die Verbindung.
 
-Die Benutzeroberfläche für die Betriebssystem Verbindung zeigt dieses Symbol an, wenn eine Verbindung mit diesem Element hergestellt wird.
+Auf der Benutzeroberfläche für die Betriebssystemverbindung wird dieses Symbol angezeigt, wenn eine Verbindung mit diesem Element hergestellt wird.
 
-Wenn Sie den XML-Code zum Erstellen des Profils in [**der Methode "**](/windows/desktop/api/mbnapi/nf-mbnapi-imbnconnectionprofilemanager-createconnectionprofile) Methode" von " [**imbnconnectionprofilemanager**](/windows/desktop/api/mbnapi/nn-mbnapi-imbnconnectionprofilemanager) " übergeben, sollte dieser Pfad auf den Quell Speicherort der Symbol Datei verweisen. Bei erfolgreicher Erstellung des [**imbnconnectionprofile**](/windows/desktop/api/mbnapi/nn-mbnapi-imbnconnectionprofile) -Objekts kopiert der Mobile Breitbanddienst die Symbol Datei im internen Speicher, und der Profilpfad wird geändert, um dies widerzuspiegeln.
+Wenn der XML-Code zum Erstellen des Profils in der [**CreateConnectionProfile-Methode**](/windows/desktop/api/mbnapi/nf-mbnapi-imbnconnectionprofilemanager-createconnectionprofile) der [**IMbnConnectionProfileManager-Schnittstelle**](/windows/desktop/api/mbnapi/nn-mbnapi-imbnconnectionprofilemanager) übergeben wird, sollte dieser Pfad auf den Quellspeicherort der Symboldatei verweisen. Bei erfolgreicher Erstellung des [**IMbnConnectionProfile-Objekts**](/windows/desktop/api/mbnapi/nn-mbnapi-imbnconnectionprofile) kopiert der Mobile Broadband-Dienst die Symboldatei in den internen Speicher, und der Profilpfad wird entsprechend geändert.
 
-Die Symbol Datei sollte das BMP-Format mit einer Größe von 32 x 32 Pixel aufweisen.
+Die Symboldatei sollte im .bmp 32X32 Pixel-Dimension vorliegen.
 
 Dieses Element ist eine Zeichenfolge mit einer Länge von bis zu 1024 Zeichen, die einen absoluten Dateipfad enthält.
 
-Das-Element ist optional.
+Das -Element ist optional.
 
 ``` syntax
 <xs:element name="ICONFilePath"
@@ -38,7 +38,7 @@ Das-Element ist optional.
  />
 ```
 
-Das **iconfilepath** -Element wird durch das [**mbnprofile**](schema-mbnprofile-element.md) -Element definiert.
+Das **ICONFilePath-Element** wird durch das [**MBNProfile-Element**](schema-mbnprofile-element.md) definiert.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -46,25 +46,25 @@ Das **iconfilepath** -Element wird durch das [**mbnprofile**](schema-mbnprofile-
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Windows 7 \[ -Desktop-Apps \| UWP-apps\]<br/> |
+| Unterstützte Mindestversion (Client)<br/> | Windows 7 \[ Desktop-Apps \| UWP-Apps\]<br/> |
 | Unterstützte Mindestversion (Server)<br/> | Nicht unterstützt<br/>                         |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-**Definitions Kontext des Elements im Schema**
+**Definitionskontext des Elements im Schema**
 </dt> <dt>
 
-[**Mbnprofile**](schema-mbnprofile-element.md)
+[**MBNProfile**](schema-mbnprofile-element.md)
 </dt> <dt>
 
-**Mögliches unmittelbar übergeordnetes Element in der Schema Instanz**
+**Mögliches unmittelbar übergeordnetes Element in der Schemainstanz**
 </dt> <dt>
 
-[**Mbnprofile**](schema-mbnprofile-element.md)
+[**MBNProfile**](schema-mbnprofile-element.md)
 </dt> </dl>
 
  

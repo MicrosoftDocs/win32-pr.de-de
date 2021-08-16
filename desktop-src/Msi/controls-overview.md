@@ -15,15 +15,15 @@ ms.locfileid: "118638522"
 
 Windows Das Installationsprogramm implementiert eine Reihe von Standardsteuerelementen, die Paketautoren in Dialogfeldern platzieren können. Allerdings sind nicht alle standardmäßigen Microsoft Windows-Steuerelemente verfügbar, und benutzerdefinierte Steuerelemente können nicht für die Verwendung mit der Benutzeroberfläche des Installationsprogramms erstellt werden.
 
-Steuerelemente werden in Dialogfeldern im Installationsprogramm auf ähnliche Weise erstellt wie Dialogfelder programmgesteuert mithilfe der Microsoft Windows-Benutzeroberflächen-API. Ein Steuerelement wird aus einer In der Control-Tabelle aufgezeichneten Vorlage erstellt. Diese Vorlage unterscheidet sich geringfügig darin, dass sie den eindeutigen Namen des Dialogfelds enthält, in dem das Steuerelement angezeigt wird.
+Steuerelemente werden für Dialogfelder im Installationsprogramm ähnlich wie Dialogfelder programmgesteuert mithilfe der Microsoft Windows-Benutzeroberflächen-API erstellt. Ein Steuerelement wird aus einer Vorlage erstellt, die in der Control-Tabelle aufgezeichnet wurde. Diese Vorlage ist etwas anders, da sie den eindeutigen Namen des Dialogfelds enthält, in dem das Steuerelement angezeigt wird.
 
-In der Benutzeroberfläche-API von Microsoft Windows erfolgt die Benutzerinteraktion durch Erstellen einer Rückruffunktion zum Verarbeiten von Nachrichten, die vom Steuerelement gesendet werden. Außerdem empfangen die meisten Microsoft Windows-Steuerelemente Nachrichten, z. B. die von der [SendMessage-Funktion](/windows/win32/api/winuser/nf-winuser-sendmessage) gesendeten Nachrichten.
+In der Microsoft Windows-Benutzeroberflächen-API erfolgt die Benutzerinteraktion durch Erstellen einer Rückruffunktion zum Verarbeiten von Nachrichten, die vom -Steuerelement gesendet werden. Außerdem empfangen die meisten Microsoft Windows-Steuerelemente Nachrichten, z. B. die, die von der [SendMessage-Funktion gesendet](/windows/win32/api/winuser/nf-winuser-sendmessage) werden.
 
-Die Kommunikation zwischen dem Benutzer und den Steuerelementen erfolgt im Installationsprogramm mithilfe von [ControlEvents.](controlevent-overview.md) Es gibt jedoch einen begrenzten Satz von ControlEvents, die für jedes Steuerelement in der eingeschränkten Gruppe von Steuerelementen in Windows Installer spezifisch sind. Steuerelemente können mehr als ein ControlEvent posten und möglicherweise mehr als ein ControlEvent empfangen.
+Die Kommunikation zwischen dem Benutzer und den Steuerelementen erfolgt im Installationsprogramm mithilfe von [ControlEvents.](controlevent-overview.md) Es gibt jedoch einen begrenzten Satz von ControlEvents, die für jedes Steuerelement in der begrenzten Gruppe von Steuerelementen im Windows sind. Steuerelemente können mehr als ein ControlEvent veröffentlichen und möglicherweise mehr als ein ControlEvent empfangen.
 
-Steuerelemente können bestimmte ControlEvents mithilfe der ControlEvent-Tabelle veröffentlichen. Steuerelemente können ControlEvents mithilfe der [EventMapping-Tabelle](eventmapping-table.md)empfangen.
+Steuerelemente können bestimmte ControlEvents mithilfe der ControlEvent-Tabelle veröffentlichen. Steuerelemente können ControlEvents über die [EventMapping-Tabelle empfangen.](eventmapping-table.md)
 
-Windows Das Installationsprogramm veröffentlicht ControlEvents auch während der Ausführung einiger Aktionen, und Steuerelemente, die diese ControlEvents in der EventMapping-Tabelle abonniert haben, empfangen sie.
+Windows Das Installationsprogramm veröffentlicht ControlEvents auch während der Ausführung einiger Aktionen, und Steuerelemente, die diese ControlEvents in der EventMapping-Tabelle abonniert haben, erhalten sie.
 
  
 

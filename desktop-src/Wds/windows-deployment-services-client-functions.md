@@ -1,6 +1,6 @@
 ---
 title: Windows Clientfunktionen der Bereitstellungsdienste
-description: Die folgenden Funktionen werden mit der Client-API Windows Bereitstellungsdienste verwendet.
+description: Die folgenden Funktionen werden mit der Windows Deployment Services-Client-API verwendet.
 ms.assetid: 4cedd8a8-7f46-4229-9d96-58965b751e43
 ms.topic: article
 ms.date: 05/31/2018
@@ -13,7 +13,7 @@ ms.locfileid: "118566385"
 ---
 # <a name="windows-deployment-services-client-functions"></a>Windows Clientfunktionen der Bereitstellungsdienste
 
-Die folgenden Funktionen werden mit der Client-API Windows Bereitstellungsdienste verwendet.
+Die folgenden Funktionen werden mit der Windows Deployment Services-Client-API verwendet.
 
 
 

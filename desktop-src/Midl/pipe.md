@@ -31,10 +31,10 @@ typedef pipe element-type pipe-declarator;
 
 <dl> <dt>
 
-*Elementtyp* 
+*element-type* 
 </dt> <dd>
 
-Definiert die Größe eines einzelnen Elements im Übertragungspuffer. Der *Elementtyp kann* ein [Basistyp,](midl-base-types.md)ein vordefinierter Typ, eine \_ Struktur, eine [**32b-enum**](v1-enum.md)oder ein Typbezeichner sein. [](struct.md) Für Elementtypen gelten *mehrere \_ Einschränkungen,* wie unten in den Anmerkungen beschrieben.
+Definiert die Größe eines einzelnen Elements im Übertragungspuffer. Der *Elementtyp kann* ein [Basistyp,](midl-base-types.md)ein vordefinierter Typ, eine \_ [**Struktur,**](struct.md) [**eine 32b-enum**](v1-enum.md)oder ein Typbezeichner sein. Für Elementtypen gelten *mehrere \_ Einschränkungen,* wie unten in den Anmerkungen beschrieben.
 
 </dd> <dt>
 
@@ -55,9 +55,9 @@ Die folgenden Einschränkungen gelten für Pipes:
 -   Sie können die Übertragung nicht **\[** [**\_ als**](transmit-as.md) **\]** , darstellen **\[** [**\_ als**](represent-as.md) **\]** , **\[** [**Wire \_ Marshal**](wire-marshal.md)oder Benutzer-Marshallingattribute **\]** **\[** [**\_**](user-marshal.md) **\]** auf einen Pipetyp oder auf den Elementtyp anwenden.
 -   Ein Pipetyp darf kein Member einer Struktur oder Union, das Ziel eines Zeigers oder der Basistyp eines Arrays sein.
 -   Ein Als Pipetyp deklarierter Datentyp kann nur als Parameter eines Remoteaufrufs verwendet werden.
--   Sie können einen Pipeparameter in beide Richtungen als Wert oder als Verweis **\[** [](ref.md) **\]** (Verweiszeiger) übergeben. Sie können das **\[** [**ptr-Attribut jedoch nicht**](ptr.md) **\]** auf eine Pipe anwenden, die als Verweis übergeben wird. Sie können keinen Pipeparameter mit einem **\[** [**eindeutigen oder**](unique.md) vollständigen Zeiger **\]** angeben, unabhängig von der Richtung.
+-   Sie können einen Pipeparameter in beide Richtungen als Wert oder als Verweis **\[** [](ref.md) **\]** (Verweiszeiger) übergeben. Sie können das **\[** [**ptr-Attribut jedoch nicht**](ptr.md) **\]** auf eine Pipe anwenden, die als Verweis übergeben wird. Sie können keinen Pipeparameter mit einem eindeutigen oder vollständigen Zeiger angeben, unabhängig **\[** [](unique.md) **\]** von der Richtung.
 -   Pipes können nicht in **\[** [**Objektschnittstellen verwendet**](object.md) **\]** werden.
--   Sie können das **\[** [**idempotente Attribut nicht auf**](idempotent.md) eine **\]** Routine anwenden, die über einen Pipeparameter verfügt.
+-   Sie können das **\[** [**idempotente Attribut nicht auf**](idempotent.md) eine Routine **\]** anwenden, die über einen Pipeparameter verfügt.
 -   Sie können die Serialisierungsattribute nicht verwenden, nicht mit Pipes **\[** [](encode.md) **\]** codieren und **\[** [**decodieren.**](decode.md) **\]**
 -   Automatische Handles können nicht standardmäßig oder mit dem AutoHandles-Attribut mit Pipes verwendet **\[** [**\_**](auto-handle.md) **\]** werden.
 
