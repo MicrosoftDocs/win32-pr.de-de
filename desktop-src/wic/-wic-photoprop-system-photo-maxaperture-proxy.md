@@ -1,23 +1,23 @@
 ---
-description: Der Eigenschafts Proxy für die Richtlinie System. Photo. maxaperture Photo Metadata.
+description: Der Eigenschaftenproxy für die System.Photo.MaxAperture-Fotometadatenrichtlinie.
 ms.assetid: c508cf7d-1106-4a59-bd82-2b788b8e6ce0
-title: System. Photo. maxaperture-Proxy
+title: System.Photo.MaxAperture-Proxy
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 27a1510304c54caae334f677af6070707bb17d62
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: e94dffb75c6d3748d7748360bbcee648ce98104a9b7ad4219df29c88bb653b75
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "104530026"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118964789"
 ---
-# <a name="systemphotomaxaperture-proxy"></a>System. Photo. maxaperture-Proxy
+# <a name="systemphotomaxaperture-proxy"></a>System.Photo.MaxAperture-Proxy
 
-Der Eigenschafts Proxy für die Richtlinie System. Photo. maxaperture Photo Metadata.
+Der Eigenschaftenproxy für die System.Photo.MaxAperture-Fotometadatenrichtlinie.
 
 ### <a name="description"></a>BESCHREIBUNG
 
-Der Eigenschafts Proxy gibt ein rationelles paar a durch das [PROPVARIANT](/windows/win32/api/propidlbase/ns-propidlbase-propvariant) -Element "uhval" zurück.
+Der Eigenschaftenproxy gibt ein rationales Paar a über das [PROPVARIANT-Element](/windows/win32/api/propidlbase/ns-propidlbase-propvariant) "hmVal" zurück.
 
 ### <a name="containers"></a>Container
 
@@ -27,23 +27,23 @@ JPEG, TIFF
 
 Ja
 
-### <a name="output-propvariant-type"></a>Ausgabe-PROPVARIANT-Typ
+### <a name="output-propvariant-type"></a>PROPVARIANT-Ausgabetyp
 
 VT \_ UI8
 
-### <a name="denominator"></a>Vorzuschlagen
+### <a name="denominator"></a>Nenner
 
-Highpart des uhval.
+HighPart des "hmVal".
 
 ### <a name="numerator"></a>Zähler
 
-LowPart des uhval.
+LowPart des "hmVal".
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
 <dl> <dt>
 
-[System. Photo. maxaperture](../properties/props-system-photo-maxaperture.md)
+[System.Photo.MaxAperture](../properties/props-system-photo-maxaperture.md)
 </dt> </dl>
 
  

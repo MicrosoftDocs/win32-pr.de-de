@@ -1,6 +1,6 @@
 ---
 description: Weitere Informationen zu JET_INSTANCE Eigenschaften
-title: JET_INSTANCE-Eigenschaften
+title: JET_INSTANCE Eigenschaften
 TOCTitle: JET_INSTANCE properties
 ms:assetid: Properties.T:Microsoft.Isam.Esent.Interop.JET_INSTANCE
 ms:mtpsurl: https://msdn.microsoft.com/library/microsoft.isam.esent.interop.jet_instance_properties(v=EXCHG.10)
@@ -14,7 +14,7 @@ ms.contentlocale: de-DE
 ms.lasthandoff: 08/11/2021
 ms.locfileid: "118765807"
 ---
-# <a name="jet_instance-properties"></a>JET_INSTANCE-Eigenschaften
+# <a name="jet_instance-properties"></a>JET_INSTANCE Eigenschaften
 
 Einschließen geschützter Member  
 Einschließen geerbter Member  
@@ -28,7 +28,7 @@ Der [JET_INSTANCE-Typ](./jet-instance-structure.md) macht die folgenden Member v
 <tr class="header">
 <th> </th>
 <th>Name</th>
-<th>Beschreibung</th>
+<th>BESCHREIBUNG</th>
 </tr>
 </thead>
 <tbody>

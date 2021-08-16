@@ -1,6 +1,6 @@
 ---
-description: 'Weitere Informationen finden Sie hier: vistagrbits. continueafterthaw-Feld'
-title: Vistagrbits. continueafterthaw-Feld (Microsoft. ISAM. ESENT. Interop. Vista)
+description: 'Weitere Informationen zu: VistaGrbits.ContinueAfterThaw-Feld'
+title: VistaGrbits.ContinueAfterThaw-Feld (Microsoft.Isam.Esent.Interop.Vista)
 TOCTitle: ContinueAfterThaw field
 ms:assetid: F:Microsoft.Isam.Esent.Interop.Vista.VistaGrbits.ContinueAfterThaw
 ms:mtpsurl: https://msdn.microsoft.com/library/microsoft.isam.esent.interop.vista.vistagrbits.continueafterthaw(v=EXCHG.10)
@@ -24,19 +24,19 @@ api_type:
 api_location:
 - Microsoft.Isam.Esent.Interop.dll
 ROBOTS: INDEX,FOLLOW
-ms.openlocfilehash: dd79f4ce042f34e281b3f04136f45dc892c81052
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 24effcbe91b32e5f74c0a052e50d8ed865371b8e149af7b76195e7b1021dbbf5
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "104218125"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118978130"
 ---
-# <a name="vistagrbitscontinueafterthaw-field"></a>Vistagrbits. continueafterthaw-Feld
+# <a name="vistagrbitscontinueafterthaw-field"></a>VistaGrbits.ContinueAfterThaw-Feld
 
-Die Momentaufnahme Sitzung wird nach jedessnapshotthaw fortgesetzt, und es wird ein jedessnapshotend-Funktions aufrufbedarf benötigt.
+Die Momentaufnahmesitzung wird nach JetOSSnapshotThaw fortgesetzt und erfordert einen JetOSSnapshotEnd-Funktionsaufruf.
 
-**Namespace:**  [Microsoft. ISAM. ESENT. Interop. Vista](./microsoft.isam.esent.interop.vista-namespace.md)  
-**Assembly:**  Microsoft. ISAM. ESENT. Interop (in Microsoft.Isam.Esent.Interop.dll)
+**Namespace:**  [Microsoft.Isam.Esent.Interop.Vista](./microsoft.isam.esent.interop.vista-namespace.md)  
+**Assembly:**  Microsoft.Isam.Esent.Interop (in Microsoft.Isam.Esent.Interop.dll)
 
 ## <a name="syntax"></a>Syntax
 
@@ -53,12 +53,12 @@ value = VistaGrbits.ContinueAfterThaw
 public const SnapshotPrepareGrbit ContinueAfterThaw
 ```
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
-#### <a name="reference"></a>Referenz
+#### <a name="reference"></a>Verweis
 
-[Vistagrbits-Klasse](./vistagrbits-class.md)
+[VistaGrbits-Klasse](./vistagrbits-class.md)
 
-[Vistagrbits-Member](./vistagrbits-members.md)
+[VistaGrbits-Member](./vistagrbits-members.md)
 
-[Microsoft. ISAM. ESENT. Interop. Vista-Namespace](./microsoft.isam.esent.interop.vista-namespace.md)
+[Microsoft.Isam.Esent.Interop.Vista-Namespace](./microsoft.isam.esent.interop.vista-namespace.md)

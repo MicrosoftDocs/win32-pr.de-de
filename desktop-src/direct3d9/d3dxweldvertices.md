@@ -1,7 +1,7 @@
 ---
-description: Führt eine kombinieren von replizierten Vertices mit identischen Attributen aus. Diese Methode verwendet angegebene Epsilon-Werte für Gleichheits Vergleiche.
+description: Führt replizierte Scheitelungen zusammen, die über gleiche Attribute verfügen. Diese Methode verwendet angegebene epsilon-Werte für Gleichheitsvergleiche.
 ms.assetid: bddf6e0c-55a1-40d2-8681-e7f0f9002bfa
-title: D3DXWeldVertices-Funktion (D3DX9Mesh. h)
+title: D3DXWeldVertices-Funktion (D3DX9Mesh.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -14,16 +14,16 @@ api_type:
 api_location:
 - d3dx9.lib
 - d3dx9.dll
-ms.openlocfilehash: 76e0a6f259bc8ba547a02b2e95cccf718d54e904
-ms.sourcegitcommit: 14010c34b35fa268046c7683f021f86de08ddd0a
+ms.openlocfilehash: 3ce6a9a05573467e0725785a6272e5542c4f871080fe221ac12078b17165eb5a
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "103762084"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118803273"
 ---
 # <a name="d3dxweldvertices-function"></a>D3DXWeldVertices-Funktion
 
-Führt eine kombinieren von replizierten Vertices mit identischen Attributen aus. Diese Methode verwendet angegebene Epsilon-Werte für Gleichheits Vergleiche.
+Führt replizierte Scheitelungen zusammen, die über gleiche Attribute verfügen. Diese Methode verwendet angegebene epsilon-Werte für Gleichheitsvergleiche.
 
 ## <a name="syntax"></a>Syntax
 
@@ -46,66 +46,66 @@ HRESULT D3DXWeldVertices(
 
 <dl> <dt>
 
-*pmesh* \[ in\]
+*pMesh* \[ In\]
 </dt> <dd>
 
 Typ: **[ **LPD3DXMESH**](id3dxmesh.md)**
 
-Zeiger auf ein [**ID3DXMesh**](id3dxmesh.md) -Objekt, das Mesh, von dem Vertices geschweißt werden.
+Zeiger auf ein [**ID3DXMesh-Objekt,**](id3dxmesh.md) das Gittermodell, aus dem Scheitelpunkts gezähnt werden.
 
 </dd> <dt>
 
-*Flags* \[in\]
+*Flags* \[ In\]
 </dt> <dd>
 
 Typ: **[ **DWORD**](../winprog/windows-data-types.md)**
 
-Eine Kombination aus einem oder mehreren Flags aus [**D3DXWELDEPSILONSFLAGS**](./d3dxweldepsilonsflags.md).
+Kombination aus mindestens einem Flag von [**D3DXWELDEPSILONSFLAGS**](./d3dxweldepsilonsflags.md).
 
 </dd> <dt>
 
-*pepsilons* \[ in\]
+*pEpsilons* \[ In\]
 </dt> <dd>
 
-Typ: **Konstanten [**D3DXWeldEpsilons**](d3dxweldepsilons.md) \***
+Typ: **const [**D3DXWeldEpsilons**](d3dxweldepsilons.md) \***
 
-Zeiger auf eine [**D3DXWeldEpsilons**](d3dxweldepsilons.md) -Struktur, die die Epsilon-Werte angibt, die für diese Methode verwendet werden sollen. Verwenden Sie **null** , um alle Strukturmember mit einem Standardwert von 1.0 e-6f zu initialisieren.
+Zeiger auf eine [**D3DXWeldEpsilons-Struktur,**](d3dxweldepsilons.md) in der die epsilon-Werte angegeben werden, die für diese Methode verwendet werden sollen. Verwenden **Sie NULL,** um alle Strukturmitglieder auf den Standardwert 1.0e-6f zu initialisieren.
 
 </dd> <dt>
 
-*padjackocyin* \[ in\]
+*pAdjacencyIn* \[ In\]
 </dt> <dd>
 
-Typ: Konstante **[**DWORD**](../winprog/windows-data-types.md) \***
+Typ: **const [**DWORD**](../winprog/windows-data-types.md) \***
 
-Zeiger auf ein Array von drei DWORDs pro Gesicht, das die drei Nachbarn für jedes Gesicht im quellmesh angibt. Wenn der Rand keine angrenzenden Gesichter hat, ist der Wert 0xFFFFFFFF. Wenn dieser Parameter auf **null** festgelegt ist, wird [**ID3DXBaseMesh:: generateseency**](id3dxbasemesh--generateadjacency.md) aufgerufen, um logische Informations Informationen zu erstellen.
-
-</dd> <dt>
-
-*padjacumcyout* \[ in, out\]
-</dt> <dd>
-
-Typ: **[ **DWORD**](../winprog/windows-data-types.md)\***
-
-Zeiger auf ein Array von drei DWORDs pro Gesicht, das die drei Nachbarn für jedes Gesicht im optimierten Mesh angibt. Wenn der Rand keine angrenzenden Gesichter hat, ist der Wert 0xFFFFFFFF.
+Zeiger auf ein Array von drei DWORDs pro Gesicht, die die drei Nachbarn für jedes Gesicht im Quellgitter angeben. Wenn der Rand keine angrenzenden Gesichter hat, wird der Wert 0xffffffff. Wenn dieser Parameter auf NULL festgelegt **ist,** [**wird ID3DXBaseMesh::GenerateAdjacency**](id3dxbasemesh--generateadjacency.md) aufgerufen, um logische Adjacency-Informationen zu erstellen.
 
 </dd> <dt>
 
-*pfakeremap* \[ vorgenommen\]
+*pAdjacencyOut* \[ in, out\]
 </dt> <dd>
 
 Typ: **[ **DWORD**](../winprog/windows-data-types.md)\***
 
-Ein Array von DWords, eines pro Gesicht, das die ursprüngliche Gitterfläche angibt, die jedem Gesicht im geschweißten Mesh entspricht.
+Zeiger auf ein Array von drei DWORDs pro Gesicht, die die drei Nachbarn für jedes Gesicht im optimierten Gitter angeben. Wenn der Rand keine angrenzenden Gesichter hat, wird der Wert 0xffffffff.
 
 </dd> <dt>
 
-*ppvertexremap* \[ vorgenommen\]
+*pFaceRemap* \[ out\]
+</dt> <dd>
+
+Typ: **[ **DWORD**](../winprog/windows-data-types.md)\***
+
+Ein Array von DWORDs pro Gesicht, das das ursprüngliche Gitternetzgesicht identifiziert, das jedem Gesicht im Gitternetz entspricht.
+
+</dd> <dt>
+
+*ppVertexRemap* \[ out\]
 </dt> <dd>
 
 Typ: **[ **LPD3DXBUFFER**](id3dxbuffer.md)\***
 
-Adresse eines Zeigers auf eine [**ID3DXBuffer**](id3dxbuffer.md) -Schnittstelle, die ein DWORD für jeden Scheitelpunkt enthält, der angibt, wie die neuen Scheitel Punkten den alten Scheitel Punkten zugeordnet werden. Diese Neuzuordnung ist nützlich, wenn Sie externe Daten basierend auf der neuen Scheitelpunkt Zuordnung ändern müssen.
+Adresse eines Zeigers auf eine [**ID3DXBuffer-Schnittstelle,**](id3dxbuffer.md) die ein DWORD für jeden Scheitelpunkt enthält, das angibt, wie die neuen Scheitelpunkte den alten Scheitelpunkte zuordnen. Diese Neuzuordnung ist nützlich, wenn Sie externe Daten basierend auf der neuen Scheitelpunktzuordnung ändern müssen.
 
 </dd> </dl>
 
@@ -113,15 +113,15 @@ Adresse eines Zeigers auf eine [**ID3DXBuffer**](id3dxbuffer.md) -Schnittstelle,
 
 Typ: **[ **HRESULT**](https://msdn.microsoft.com/library/Bb401631(v=MSDN.10).aspx)**
 
-Wenn die Funktion erfolgreich ausgeführt wird, ist der Rückgabewert D3D \_ OK. Wenn die Funktion fehlschlägt, kann der Rückgabewert einer der folgenden sein: D3DERR \_ invalidcall, E \_ oudefmemory.
+Wenn die Funktion erfolgreich ist, ist der Rückgabewert D3D \_ OK. Wenn die Funktion fehlschlägt, kann der Rückgabewert einer der folgenden sein: D3DERR \_ INVALIDCALL, E \_ OUTOFMEMORY.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Diese Funktion verwendet die angegebenen Informationen zum Ermitteln der Punkte, die repliziert werden. Vertices werden auf Grundlage eines Epsilon-Vergleichs zusammengeführt. Vertices mit gleicher Position müssen bereits berechnet und durch Punkt repräsentative Daten dargestellt werden.
+Diese Funktion verwendet bereitgestellte Adjacency-Informationen, um die replizierten Punkte zu bestimmen. Scheitelungen werden basierend auf einem Epsilon-Vergleich zusammengeführt. Scheitelpunkt mit gleicher Position müssen bereits berechnet und durch punkt repräsentative Daten dargestellt worden sein.
 
-Diese Funktion kombiniert logisch versießte Scheitel Punkte, die ähnliche Komponenten aufweisen, wie z. b. normale oder Texturkoordinaten innerhalb von pepsilons.
+Diese Funktion kombiniert logisch strukturierte Scheitelelemente, die ähnliche Komponenten aufweisen, z. B. Normal- oder Texturkoordinaten innerhalb von pEpsilons.
 
-Im folgenden Beispielcode wird diese Funktion mit aktiviertem Schweißen aufgerufen. Vertices werden mithilfe von Epsilon-Werten für den normalen Vektor und die Scheitelpunkt Position verglichen. Ein Zeiger wird an ein Flächen *kartogramm (pfakeremap*) zurückgegeben.
+Der folgende Beispielcode ruft diese Funktion mit aktivierter -Funktion auf. Scheitelpunkte werden mithilfe von Epsilonwerten für normale Vektor- und Scheitelpunktposition verglichen. Ein Zeiger wird auf ein Array zur Neuzuordnung der Gesichtserkennung *(pFaceRemap) zurückgegeben.*
 
 
 ```
@@ -177,12 +177,12 @@ DWORD            i;                       // internal variable
 
 | Anforderung | Wert |
 |--------------------|----------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>D3DX9Mesh. h</dt> </dl> |
-| Bibliothek<br/> | <dl> <dt>D3dx9. lib</dt> </dl>   |
+| Header<br/>  | <dl> <dt>D3DX9Mesh.h</dt> </dl> |
+| Bibliothek<br/> | <dl> <dt>D3dx9.lib</dt> </dl>   |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 

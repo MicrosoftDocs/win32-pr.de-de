@@ -3,7 +3,7 @@ title: WMDRMNET_POLICY_TYPE-Enumeration (Wmdrmsdk.h)
 description: Der WMDRMNET \_ POLICY \_ TYPE-Enumerationstyp listet die Typen von Richtlinien auf, die für Windows Medien-DRM für Netzwerkgerätevorgänge verfügbar sind.
 ms.assetid: 83e9e247-3bd8-4857-97b6-95b3cd5ad25c
 keywords:
-- WMDRMNET_POLICY_TYPE-Enumerationsfenster Medienformat
+- WMDRMNET_POLICY_TYPE-Enumerationsfenster Media Format
 - Enumerationsfenster Medienformat
 topic_type:
 - apiref

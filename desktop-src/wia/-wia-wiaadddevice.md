@@ -1,7 +1,7 @@
 ---
-description: Die Funktion wiaadddevice Ruft die Benutzeroberfläche des Assistenten zum Installieren von Scanner und Kameras auf. Dies entspricht der Ausführung von &\# 0034; rundll32.exe STI \_ci.dll AddDevice&\# 0034; von der Eingabeaufforderung aus.
+description: Die WiaAddDevice-Funktion ruft die Benutzeroberfläche des Scanner- und Kamerainstallations-Assistenten auf. Dies entspricht der Ausführung von &\# 0034;rundll32.exe sti \_ci.dll AddDevice&\# 0034; über die Eingabeaufforderung.
 ms.assetid: 83a1e22c-d751-4c8e-8f39-ec987042c745
-title: Wiaadddevice-Funktion (WIA. h)
+title: WiaAddDevice-Funktion (Wia.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -14,16 +14,16 @@ api_type:
 api_location:
 - Wiaguid.lib
 - Wiaguid.dll
-ms.openlocfilehash: 694265f0a59096a5a6a58ccbf4e43c92e21fe9b1
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 81dcff3cdca3459126751b12b86f1e11adc2b4fec8926f69211f0508253b64fd
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "103751752"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118965399"
 ---
-# <a name="wiaadddevice-function"></a>Wiaadddevice-Funktion
+# <a name="wiaadddevice-function"></a>WiaAddDevice-Funktion
 
-Die Funktion **wiaadddevice** Ruft die Benutzeroberfläche des Assistenten zum Installieren von Scanner und Kameras auf. Dies entspricht der Ausführung von "rundll32.exe STI \_ci.dll AddDevice" an der Eingabeaufforderung.
+Die **WiaAddDevice-Funktion** ruft die Benutzeroberfläche des Scanner- und Kamerainstallations-Assistenten auf. Dies entspricht der Ausführung von "rundll32.exe sti \_ci.dll AddDevice" über die Eingabeaufforderung.
 
 ## <a name="syntax"></a>Syntax
 
@@ -42,9 +42,9 @@ Diese Funktion besitzt keine Parameter.
 
 Diese Funktion gibt keinen Wert zurück.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Diese Funktion sollte mit Administrator Anmelde Informationen aufgerufen werden. Bei der Ausführung unter der Benutzerkontensteuerung (LUA) sollte der Prozess erhöht werden.
+Diese Funktion sollte mit Administratoranmeldeinformationen aufgerufen werden. Bei der Ausführung unter Benutzerkontensteuerung (USER Account Control, LUA) sollte der Prozess mit erhöhten Rechten ausgeführt werden.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -52,18 +52,18 @@ Diese Funktion sollte mit Administrator Anmelde Informationen aufgerufen werden.
 
 | Anforderung | Wert |
 |-------------------------------------|----------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>                                         |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2008 \[ -Desktop-Apps\]<br/>                                   |
-| Header<br/>                   | <dl> <dt>WIA. h</dt> </dl>       |
-| Bibliothek<br/>                  | <dl> <dt>Wiaguid. lib</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows \[Nur Vista-Desktop-Apps\]<br/>                                         |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2008-Desktop-Apps\]<br/>                                   |
+| Header<br/>                   | <dl> <dt>Wia.h</dt> </dl>       |
+| Bibliothek<br/>                  | <dl> <dt>Wiaguid.lib</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Installwiadevice**](-wia-installwiadevice.md)
+[**InstallWiaDevice**](-wia-installwiadevice.md)
 </dt> </dl>
 
  

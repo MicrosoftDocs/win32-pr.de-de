@@ -1,9 +1,9 @@
 ---
 title: IWMPStringCollection2 getAttributeCountByType-Methode
-description: Die getAttributeCountByType-Methode gibt die Anzahl der Attribute zurück, die dem angegebenen Zeichenfolgensammlungsindex, Attributnamen und der angegebenen Sprache zugeordnet sind.
+description: Die getAttributeCountByType-Methode gibt die Anzahl der Attribute zurück, die dem angegebenen Zeichenfolgenauflistungsindex, attributnamen und der angegebenen Sprache zugeordnet sind.
 ms.assetid: 30312039-3676-4322-b6f6-fb86098bf578
 keywords:
-- getAttributeCountByType-Windows Media Player
+- getAttributeCountByType-Methode Windows Media Player
 - getAttributeCountByType-Methode Windows Media Player , IWMPStringCollection2-Schnittstelle
 - IWMPStringCollection2-Schnittstelle Windows Media Player , getAttributeCountByType-Methode
 topic_type:
@@ -25,7 +25,7 @@ ms.locfileid: "118330914"
 ---
 # <a name="iwmpstringcollection2getattributecountbytype-method"></a>IWMPStringCollection2::getAttributeCountByType-Methode
 
-Die **getAttributeCountByType-Methode** gibt die Anzahl der Attribute zurück, die dem angegebenen Zeichenfolgensammlungsindex, Attributnamen und der angegebenen Sprache zugeordnet sind.
+Die **getAttributeCountByType-Methode** gibt die Anzahl der Attribute zurück, die dem angegebenen Zeichenfolgenauflistungsindex, attributnamen und der angegebenen Sprache zugeordnet sind.
 
 ## <a name="syntax"></a>Syntax
 
@@ -60,33 +60,33 @@ Implements IWMPStringCollection2.getAttributeCountByType
 *lCollectionIndex* \[ In\]
 </dt> <dd>
 
-Das **System.Int32-Objekt,** das den nullbasierten Index des Zeichenfolgensammlungselements angibt, aus dem das Attribut erhalten werden soll.
+**System.Int32,** das den nullbasierten Index des Zeichenfolgenauflistungselements angibt, aus dem das Attribut abzurufen ist.
 
 </dd> <dt>
 
 *bstrType* \[ In\]
 </dt> <dd>
 
-Die **System.String,** die der Name des Attributs ist.
+Die **System.String,** bei der es sich um den Namen des Attributs handelt.
 
 </dd> <dt>
 
 *bstrLanguage* \[ In\]
 </dt> <dd>
 
-Die **System.String,** die der Name der Sprache ist. Wenn der Wert auf NULL oder auf eine Zeichenfolge der Länge 0 (null) festgelegt ist (""), wird die aktuelle Locale String verwendet. Andernfalls muss der Wert eine gültige RFC 1766-Sprachzeichenfolge wie "en-us" sein.
+Die **System.String,** bei der es sich um den Namen der Sprache handelt. Wenn der Wert auf NULL oder auf eine Zeichenfolge der Länge 0 (null) ("") festgelegt ist, wird die aktuelle Gebietsschemazeichenfolge verwendet. Andernfalls muss der Wert eine gültige RFC 1766-Sprachzeichenfolge wie "en-us" sein.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Das **System.Int32,** das die Anzahl ist.
+Die **System.Int32-Datei,** bei der es sich um die Anzahl handelt.
 
 ## <a name="remarks"></a>Hinweise
 
-Diese Methode wird verwendet, um die Anzahl von Attributen zu finden, die einem bestimmten Attributnamen für ein bestimmtes **StringCollection-Element** entspricht. Indexnummern können dann an den vierten Parameter der **getItemInfoByType-Methode übergeben** werden.
+Diese Methode wird verwendet, um die Anzahl der Attribute zu ermitteln, die einem bestimmten Attributnamen für ein bestimmtes **StringCollection-Element** entsprechen. Indexnummern können dann an den vierten Parameter der **getItemInfoByType-Methode** übergeben werden.
 
-Um diese Methode verwenden zu können, ist Lesezugriff auf die Bibliothek erforderlich. Weitere Informationen finden Sie unter [Bibliothekszugriff.](library-access.md)
+Um diese Methode zu verwenden, ist Lesezugriff auf die Bibliothek erforderlich. Weitere Informationen finden Sie unter [Bibliothekszugriff.](library-access.md)
 
 ## <a name="requirements"></a>Anforderungen
 

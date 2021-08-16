@@ -1,5 +1,5 @@
 ---
-description: Die AddSource-Methode des Installer-Objekts fügt der Liste der gültigen Netzwerkquellen in der Quellliste eine Quelle hinzu.
+description: Die AddSource-Methode des Installer-Objekts fügt der Liste gültiger Netzwerkquellen in der Quellliste eine Quelle hinzu.
 ms.assetid: e24c8484-fe84-4f97-9c06-c063bb7c6810
 title: Installer.AddSource-Methode
 ms.topic: reference
@@ -22,7 +22,7 @@ ms.locfileid: "118633164"
 ---
 # <a name="installeraddsource-method"></a>Installer.AddSource-Methode
 
-Die **AddSource-Methode** des [**Installer-Objekts**](installer-object.md) fügt der Liste der gültigen Netzwerkquellen in der Quellliste eine Quelle hinzu.
+Die **AddSource-Methode** des [**Installer-Objekts**](installer-object.md) fügt der Liste gültiger Netzwerkquellen in der Quellliste eine Quelle hinzu.
 
 ## <a name="syntax"></a>Syntax
 
@@ -51,7 +51,7 @@ Gibt den Produktcode an.
 *Benutzer* 
 </dt> <dd>
 
-Benutzername für die Installation pro Benutzer; NULL oder eine leere Zeichenfolge für die Installation pro Computer.
+Benutzername für die Installation pro Benutzer; NULL oder leere Zeichenfolge für die Installation pro Computer.
 
 </dd> <dt>
 
@@ -72,13 +72,13 @@ Diese Methode gibt keinen Wert zurück.
 
 | Anforderung | Wert |
 |--------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Version<br/> | Windows Installer 5.0 auf Windows Server 2012, Windows 8, Windows Server 2008 R2 oder Windows 7. Windows Installer 4.0 oder Windows Installer 4.5 auf Windows Server 2008 oder Windows Vista. Windows Installationsprogramm auf Windows Server 2003 oder Windows XP<br/> |
+| Version<br/> | Windows Installationsprogramm 5.0 auf Windows Server 2012, Windows 8, Windows Server 2008 R2 oder Windows 7. Windows Installer 4.0 oder Windows Installer 4.5 auf Windows Server 2008 oder Windows Vista. Windows Installationsprogramm auf Windows Server 2003 oder Windows XP<br/> |
 | DLL<br/>     | <dl> <dt>Msi.dll</dt> </dl>                                                                                                                                                                      |
-| IID<br/>     | IID \_ IInstaller ist als 000C1090-0000-0000-C000-00000000046 definiert.<br/>                                                                                                                                                                           |
+| IID<br/>     | IID \_ IInstaller ist als 000C1090-0000-0000-C000-0000000000046 definiert.<br/>                                                                                                                                                                           |
 
 
 
-## <a name="see-also"></a>Weitere Informationen:
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 

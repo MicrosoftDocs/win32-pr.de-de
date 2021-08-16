@@ -1,7 +1,7 @@
 ---
 description: Legt einen booleschen Wert fest, der angibt, ob das Zertifikat archiviert wird, oder ruft diesen ab.
 ms.assetid: a6526b0e-e76b-4f03-a6ba-9e380e362364
-title: Certificate.Archived (Eigenschaft)
+title: Certificate.Archived-Eigenschaft
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -20,11 +20,11 @@ ms.contentlocale: de-DE
 ms.lasthandoff: 08/11/2021
 ms.locfileid: "117771949"
 ---
-# <a name="certificatearchived-property"></a>Certificate.Archived (Eigenschaft)
+# <a name="certificatearchived-property"></a>Certificate.Archived-Eigenschaft
 
-\[CAPICOM ist eine 32-Bit-Komponente, die für die Verwendung in den folgenden Betriebssystemen verfügbar ist: Windows Server 2008, Windows Vista und Windows XP. Verwenden Sie stattdessen die [**X509Certificate2-Klasse**](/dotnet/api/system.security.cryptography.x509certificates.x509certificate2?view=netcore-3.1) im [**Namespace System.Security.Cryptography.X509Certificates.**](/dotnet/api/system.security.cryptography.x509certificates.publickey.-ctor?view=netcore-3.1)\]
+\[CAPICOM ist eine nur 32-Bit-Komponente, die für die Verwendung in den folgenden Betriebssystemen verfügbar ist: Windows Server 2008, Windows Vista und Windows XP. Verwenden Sie stattdessen die [**X509Certificate2-Klasse**](/dotnet/api/system.security.cryptography.x509certificates.x509certificate2?view=netcore-3.1) im [**Namespace System.Security.Cryptography.X509Certificates.**](/dotnet/api/system.security.cryptography.x509certificates.publickey.-ctor?view=netcore-3.1)\]
 
-Die **Archivierte** Eigenschaft legt einen booleschen Wert fest oder ruft diesen ab, der angibt, ob das Zertifikat archiviert wird.
+Die **Eigenschaft Archiviert** legt einen booleschen Wert fest oder ruft diesen ab, der angibt, ob das Zertifikat archiviert wird.
 
 Dies ist eine Eigenschaft mit Lese- und Schreibzugriff.
 
@@ -39,14 +39,14 @@ Certificate.Archived As Boolean
 
 ## <a name="property-value"></a>Eigenschaftswert
 
-Ein boolescher Wert, der angibt, ob das Zertifikat archiviert wird. True **gibt an,** dass das Zertifikat archiviert wird. Beachten Sie, dass das Zertifikat durch Ändern **des Werts von false** in **true** archiviert wird.
+Ein boolescher Wert, der angibt, ob das Zertifikat archiviert wird. True gibt an, dass das Zertifikat archiviert wird. Beachten Sie, dass das Zertifikat durch Ändern des Werts von **FALSE** in **TRUE** archiviert wird.
 
 ## <a name="remarks"></a>Hinweise
 
-Diese Eigenschaft löst CAPICOM E NOT ALLOWED aus, wenn ein Skript \_ aus einer \_ \_ webbasierten Anwendung erstellt wird.
+Diese Eigenschaft löst CAPICOM \_ E \_ NOT ALLOWED \_ aus, wenn ein Skript aus einer webbasierten Anwendung erstellt wird.
 
 > [!Note]  
-> Ein archiviertes Zertifikat ist auf der Benutzeroberfläche für die Zertifikatverwaltung nicht sichtbar. Außerdem werden archivierte Zertifikate nicht in den [**Store. Öffnen Sie**](store-open.md) die -Methode, es sei denn, CAPICOM \_ STORE OPEN INCLUDE \_ \_ \_ ARCHIVED ist angegeben.
+> Ein archiviertes Zertifikat ist auf der Benutzeroberfläche der Zertifikatverwaltung nicht sichtbar. Außerdem werden archivierte Zertifikate nicht in die [**Store eingeschlossen. Open-Methode,**](store-open.md) es sei denn, CAPICOM \_ STORE OPEN INCLUDE \_ \_ \_ ARCHIVED ist angegeben.
 
  
 

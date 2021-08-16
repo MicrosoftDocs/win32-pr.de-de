@@ -1,11 +1,11 @@
 ---
-title: MS-SQL-kreationdate-Attribut
+title: MS-SQL-CreationDate-Attribut
 description: Das Datum, an dem die Datenbank erstellt wurde.
 ms.assetid: c3b098f0-2575-4a7d-9a1d-a6189b9af2c8
 ms.tgt_platform: multiple
 keywords:
-- AD-Schema für MS-SQL-deationdate-Attribut
-- AD-Schema für MS-SQL-deationdate-Attribut
+- AD-Schema des MS-SQL-CreationDate-Attributs
+- mS-SQL-CreationDate-Attribut AD-Schema
 topic_type:
 - apiref
 api_name:
@@ -14,14 +14,14 @@ api_type:
 - Schema
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 0c499a65ef8beee485bab647d8649559b74cfbd1
-ms.sourcegitcommit: b77ace27b0432e7cd3863191b11926be032fbe2f
+ms.openlocfilehash: d9be6df5b67da26b9f5691e26c8b8a915f0e717f47d123455421a1fa9606b816
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "106345968"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118961139"
 ---
-# <a name="ms-sql-creationdate-attribute"></a>MS-SQL-kreationdate-Attribut
+# <a name="ms-sql-creationdate-attribute"></a>MS-SQL-CreationDate-Attribut
 
 Das Datum, an dem die Datenbank erstellt wurde.
 
@@ -29,11 +29,11 @@ Das Datum, an dem die Datenbank erstellt wurde.
 
 | Eingabe | Wert |
 |-------------------|---------------------------------------------|
-| CN                | MS-SQL--erationdate                         |
-| LDAP-Display-Name | MS-SQL--erationdate                         |
+| CN                | MS-SQL-CreationDate                         |
+| Ldap-Anzeigename | mS-SQL-CreationDate                         |
 | Size              | \-                                          |
-| Berechtigung aktualisieren  | Dieser Wert wird vom System festgelegt.            |
-| Aktualisierungshäufigkeit  | Wenn eine neue Datenbank erstellt wird.             |
+| Aktualisieren von Berechtigungen  | Dieser Wert wird vom System festgelegt.            |
+| Updatehäufigkeit  | Wenn eine neue Datenbank erstellt wird.             |
 | Attribute-Id      | 1.2.840.113556.1.4.1397                     |
 | System-ID-GUID    | ede14754-ccee-11d2-9993-0000f87a57d4        |
 | Syntax            | [**String(Unicode)**](s-string-unicode.md) |
@@ -43,7 +43,7 @@ Das Datum, an dem die Datenbank erstellt wurde.
 ## <a name="implementations"></a>Implementierungen
 
 -   [**Windows 2000 Server**](#windows-2000-server)
--   [**Windows Server 2003**](#windows-server-2003)
+-   [**Windows Server 2003**](#windows-server-2003)
 -   [**Windows Server 2003 R2**](#windows-server-2003-r2)
 -   [**Windows Server 2008**](#windows-server-2008)
 -   [**Windows Server 2008 R2**](#windows-server-2008-r2)
@@ -58,10 +58,10 @@ Das Datum, an dem die Datenbank erstellt wurde.
 | Link-ID                | \-                                                            |
 | MAPI-Id                | \-                                                            |
 | System-Only            | False                                                         |
-| Ist-einwertig       | Richtig                                                          |
+| Ist einwertig       | True                                                          |
 | Ist indiziert             | False                                                         |
 | Im globalen Katalog      | False                                                         |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                                  |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                                  |
 | Range-Lower            | \-                                                            |
 | Range-Upper            | \-                                                            |
 | Search-Flags           | 0x00000000                                                    |
@@ -70,7 +70,7 @@ Das Datum, an dem die Datenbank erstellt wurde.
 
 
 
-## <a name="windows-server-2003"></a>Windows Server 2003
+## <a name="windows-server-2003"></a>Windows Server 2003
 
 
 
@@ -79,10 +79,10 @@ Das Datum, an dem die Datenbank erstellt wurde.
 | Link-ID                | \-                                                            |
 | MAPI-Id                | \-                                                            |
 | System-Only            | False                                                         |
-| Ist-einwertig       | Richtig                                                          |
+| Ist einwertig       | True                                                          |
 | Ist indiziert             | False                                                         |
 | Im globalen Katalog      | False                                                         |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                                  |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                                  |
 | Range-Lower            | \-                                                            |
 | Range-Upper            | \-                                                            |
 | Search-Flags           | 0x00000000                                                    |
@@ -100,10 +100,10 @@ Das Datum, an dem die Datenbank erstellt wurde.
 | Link-ID                | \-                                                            |
 | MAPI-Id                | \-                                                            |
 | System-Only            | False                                                         |
-| Ist-einwertig       | Richtig                                                          |
+| Ist einwertig       | True                                                          |
 | Ist indiziert             | False                                                         |
 | Im globalen Katalog      | False                                                         |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                                  |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                                  |
 | Range-Lower            | \-                                                            |
 | Range-Upper            | \-                                                            |
 | Search-Flags           | 0x00000000                                                    |
@@ -121,10 +121,10 @@ Das Datum, an dem die Datenbank erstellt wurde.
 | Link-ID                | \-                                                            |
 | MAPI-Id                | \-                                                            |
 | System-Only            | False                                                         |
-| Ist-einwertig       | Richtig                                                          |
+| Is-Single-Valued       | True                                                          |
 | Ist indiziert             | False                                                         |
 | Im globalen Katalog      | False                                                         |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                                  |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                                  |
 | Range-Lower            | \-                                                            |
 | Range-Upper            | \-                                                            |
 | Search-Flags           | 0x00000000                                                    |
@@ -142,10 +142,10 @@ Das Datum, an dem die Datenbank erstellt wurde.
 | Link-ID                | \-                                                            |
 | MAPI-Id                | \-                                                            |
 | System-Only            | False                                                         |
-| Ist-einwertig       | Richtig                                                          |
+| Is-Single-Valued       | True                                                          |
 | Ist indiziert             | False                                                         |
 | Im globalen Katalog      | False                                                         |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                                  |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                                  |
 | Range-Lower            | \-                                                            |
 | Range-Upper            | \-                                                            |
 | Search-Flags           | 0x00000000                                                    |
@@ -163,10 +163,10 @@ Das Datum, an dem die Datenbank erstellt wurde.
 | Link-ID                | \-                                                            |
 | MAPI-Id                | \-                                                            |
 | System-Only            | False                                                         |
-| Ist-einwertig       | Richtig                                                          |
+| Is-Single-Valued       | True                                                          |
 | Ist indiziert             | False                                                         |
 | Im globalen Katalog      | False                                                         |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                                                  |
+| NT-Security-Descriptor | O:BAG:BAD:S:                                                  |
 | Range-Lower            | \-                                                            |
 | Range-Upper            | \-                                                            |
 | Search-Flags           | 0x00000000                                                    |

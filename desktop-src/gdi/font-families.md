@@ -1,5 +1,5 @@
 ---
-description: Eine Schriftfamilie ist eine Gruppe von Schriftarten mit gemeinsamen Strichbreiten und Serifenmerkmalen. Es gibt fünf Schriftfamilien. Eine sechste Familie ermöglicht einer Anwendung die Verwendung der Standardschriftart. In der folgenden Tabelle werden die Schriftfamilien beschrieben.
+description: Eine Schriftfamilie ist ein Satz von Schriftarten mit allgemeinen Strichbreiten und Serifenmerkmalen. Es gibt fünf Schriftfamilien. Eine sechste Familie ermöglicht einer Anwendung die Verwendung der Standardschriftart. In der folgenden Tabelle werden die Schriftfamilien beschrieben.
 ms.assetid: 3c462000-4f65-43d0-8937-059081a8c417
 title: Schriftfamilien
 ms.topic: article
@@ -22,7 +22,7 @@ Eine *Schriftfamilie ist* ein Satz von Schriftarten mit allgemeinen Strichbreite
 | Dekorativ  | Gibt eine zierlich dargestellte Schriftart an. Ein Beispiel ist Altes Englisch.                                                                                          |
 | Dontcare    | Gibt einen generischen Familiennamen an. Dieser Name wird verwendet, wenn Informationen zu einer Schriftart nicht vorhanden sind oder keine Rolle spielt. Die Standardschriftart wird verwendet. |
 | Modern      | Gibt eine Monospaceschriftart mit oder ohne Serifs an. Monospace-Schriftarten sind in der Regel modern. Beispiele hierfür sind Pica,Lite und Courier New.         |
-| Römisch       | Gibt eine proportionale Schriftart mit Serifen an. Ein Beispiel ist Times New Roman.                                                                     |
+| Römisch       | Gibt eine proportionale Schriftart mit Serifs an. Ein Beispiel ist Times New Roman.                                                                     |
 | Skript      | Gibt eine Schriftart an, die so entworfen wurde, dass sie wie Handschrift aussieht. Beispiele hierfür sind Script und Cursive.                                              |
 | Schweizer       | Gibt eine proportionale Schriftart ohne Serifs an. Ein Beispiel ist Arial.                                                                            |
 

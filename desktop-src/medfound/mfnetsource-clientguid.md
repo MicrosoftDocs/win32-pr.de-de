@@ -1,25 +1,25 @@
 ---
-description: Eindeutiger Bezeichner, durch den der Server den Client identifiziert.
+description: Eindeutiger Bezeichner, mit dem der Server den Client identifiziert.
 ms.assetid: 490a2b03-aba8-4510-80c5-ca12f4037747
-title: MFNETSOURCE_CLIENTGUID-Eigenschaft (mspdl. h)
+title: MFNETSOURCE_CLIENTGUID-Eigenschaft (Mfidl.h)
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: cc5df46741d4a0b9a6a125396b6f93dd32bfadf6
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 9585f5ac9cd69148272cb986746f6849aad4c3aa048b46baf2f75aeaba77c092
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104130117"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118738989"
 ---
-# <a name="mfnetsource_clientguid-property"></a>MF NetSource- \_ clientguid (Eigenschaft)
+# <a name="mfnetsource_clientguid-property"></a>MFNETSOURCE \_ CLIENTGUID-Eigenschaft
 
-Eindeutiger Bezeichner, durch den der Server den Client identifiziert.
+Eindeutiger Bezeichner, mit dem der Server den Client identifiziert.
 
 
 
 Datentyp
 
-PROPVARIANT-Typ (VT)
+PROPVARIANT-Typ (vt)
 
 PROPVARIANT-Member
 
@@ -31,11 +31,11 @@ VT \_ CLSID
 
 
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Die **MF NetSource- \_ clientguid** -Konstante definiert die GUID für den Eigenschafts Schlüssel. Der Eigenschaften Bezeichner (PID) ist 0 (null). Um diese Eigenschaft für die Netzwerkquelle festzulegen, übergeben Sie einen **IPropertyStore** -Zeiger an den quellresolver. Weitere Informationen finden Sie unter [Konfigurieren einer Medienquelle](configuring-a-media-source.md).
+Die **MFNETSOURCE \_ CLIENTGUID-Konstante** definiert die GUID für den Eigenschaftsschlüssel. Der Eigenschaftenbezeichner (PID) ist 0 (null). Um diese Eigenschaft für die Netzwerkquelle festzulegen, übergeben Sie einen **IPropertyStore-Zeiger** an den Quell resolver. Weitere Informationen finden Sie unter [Konfigurieren einer Medienquelle.](configuring-a-media-source.md)
 
-Wenn Sie nicht als **GUID \_ null** festgelegt oder festgelegt ist, generiert Microsoft Media Foundation eine anonyme GUID pro Sitzung, die den Datenschutz für den Benutzer sicherstellt.
+Wenn nicht als **GUID \_ NULL** festgelegt oder festgelegt wird, generiert Microsoft Media Foundation eine anonyme GUID pro Sitzung, die den Datenschutz des Benutzers sicherstellt.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -43,17 +43,17 @@ Wenn Sie nicht als **GUID \_ null** festgelegt oder festgelegt ist, generiert Mi
 
 | Anforderung | Wert |
 |-------------------------------------|------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows 7 \[ -Desktop-Apps\]<br/>                                         |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2008 R2 \[ -Desktop-Apps\]<br/>                            |
-| Header<br/>                   | <dl> <dt>Mspdl. h</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | nur Windows 7 \[ Desktop-Apps\]<br/>                                         |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server 2008 \[ R2-Desktop-Apps\]<br/>                            |
+| Header<br/>                   | <dl> <dt>Mfidl.h</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[Eigenschaften von Media Foundation](media-foundation-properties.md)
+[Media Foundation-Eigenschaften](media-foundation-properties.md)
 </dt> <dt>
 
 [Netzwerk in Media Foundation](networking-in-media-foundation.md)

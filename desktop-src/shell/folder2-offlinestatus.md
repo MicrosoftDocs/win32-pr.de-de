@@ -1,7 +1,7 @@
 ---
-description: Enthält den Offline Status des Ordners.
+description: Enthält den Offlinestatus des Ordners.
 ms.assetid: b50b130d-0675-49b5-b730-f67ea1c71d8c
-title: Folder2. Offlinestatus-Eigenschaft (Shldisp. h)
+title: Folder2.OfflineStatus-Eigenschaft (Shldisp.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,16 +13,16 @@ api_type:
 - COM
 api_location:
 - Shell32.dll
-ms.openlocfilehash: d456eae826e8a2e173b92fac4be716fb24bcb92d
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: a2664a99fb103b41bd3b5040b3876b0cb92b8f9c010f420f93af7eb62a6f32bd
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104977072"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117860247"
 ---
-# <a name="folder2offlinestatus-property"></a>Folder2. Offlinestatus (Eigenschaft)
+# <a name="folder2offlinestatus-property"></a>Folder2.OfflineStatus-Eigenschaft
 
-Enthält den Offline Status des Ordners.
+Enthält den Offlinestatus des Ordners.
 
 Diese Eigenschaft ist schreibgeschützt.
 
@@ -37,13 +37,13 @@ iOfflineStatus = Folder2.OfflineStatus
 
 ## <a name="property-value"></a>Eigenschaftswert
 
-Eine **ganze** Zahl, die auf einen der folgenden Werte festgelegt ist.
+Eine **ganze Zahl,** die auf einen der folgenden Werte festgelegt ist.
 
 <dt>
 
 
 
- (OFS \_ ) Dirtycache)
+ (OFS \_ DIRTYCACHE)
 
 
 </dt> <dd>
@@ -54,18 +54,18 @@ Der Server ist mit nicht synchronisierten Änderungen online.
 
 
 
- (OFS \_ ) VSTE
+ (OFS \_ INACTIVE)
 
 
 </dt> <dd>
 
-Das Offline Caching ist für diesen Ordner nicht aktiviert.
+Die Offlinezwischenspeicherung ist für diesen Ordner nicht aktiviert.
 
 </dd> <dt>
 
 
 
- (OFS \_ ) Aufzu
+ (OFS \_ OFFLINE)
 
 
 </dt> <dd>
@@ -76,7 +76,7 @@ Der Server ist offline.
 
 
 
- (OFS \_ ) Internet
+ (OFS \_ ONLINE)
 
 
 </dt> <dd>
@@ -87,7 +87,7 @@ Der Server ist online.
 
 
 
- (OFS \_ ) Serverback)
+ (OFS \_ SERVERBACK)
 
 
 </dt> <dd>
@@ -96,18 +96,18 @@ Der Server ist offline, kann aber erreicht werden.
 
 </dd> </dl>
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
 > [!Note]  
-> Offlinedateien müssen durch Ordneroptionen aktiviert werden, damit **Offlinestatus** ordnungsgemäß funktioniert. Wenn die Offlinedateien-Option nicht aktiviert ist, gibt die-Eigenschaft **OFS \_ inaktiv** zurück.
+> Offlinedateien müssen über Ordneroptionen aktiviert werden, damit **OfflineStatus** ordnungsgemäß funktioniert. Wenn die Offlinedateien Option nicht aktiviert ist, gibt die Eigenschaft **OFS \_ INACTIVE** zurück.
 
  
 
 ## <a name="examples"></a>Beispiele
 
-Das folgende Beispiel zeigt die ordnungsgemäße Verwendung von **Offlinestatus** für JScript, VBScript und Visual Basic.
+Das folgende Beispiel zeigt die ordnungsgemäße Verwendung von **OfflineStatus** für JScript, VBScript und Visual Basic.
 
-JScript
+JScript:
 
 
 ```JScript
@@ -130,7 +130,7 @@ JScript
 
 
 
-VBScript
+Vbscript:
 
 
 ```VB
@@ -180,17 +180,17 @@ End Sub
 
 
 
-## <a name="requirements"></a>Requirements (Anforderungen)
+## <a name="requirements"></a>Anforderungen
 
 
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional, Windows XP \[ Desktop-Apps\]<br/>                                        |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2003 \[ -Desktop-Apps\]<br/>                                                          |
-| Header<br/>                   | <dl> <dt>Shldisp. h</dt> </dl>                          |
-| IDL<br/>                      | <dl> <dt>Shldisp. idl</dt> </dl>                        |
-| DLL<br/>                      | <dl> <dt>Shell32.dll (Version 5,0 oder höher)</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional, nur Windows \[ XP-Desktop-Apps\]<br/>                                        |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2003-Desktop-Apps\]<br/>                                                          |
+| Header<br/>                   | <dl> <dt>Shldisp.h</dt> </dl>                          |
+| Idl<br/>                      | <dl> <dt>Shldisp.idl</dt> </dl>                        |
+| DLL<br/>                      | <dl> <dt>Shell32.dll (Version 5.0 oder höher)</dt> </dl> |
 
 
 

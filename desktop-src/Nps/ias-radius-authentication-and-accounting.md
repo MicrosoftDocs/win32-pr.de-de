@@ -1,63 +1,63 @@
 ---
-title: RADIUS-Authentifizierung,-Autorisierung und-Kontoführung
-description: NPS unterstützt das RADIUS-Protokoll (Remote Authentication Dial-in User Service) vollständig. Das RADIUS-Protokoll ist der de-facto-Standard für die Remote Benutzerauthentifizierung und ist in RFC 2865 und RFC 2866 dokumentiert.
+title: RADIUS-Authentifizierung, -Autorisierung und -Buchhaltung
+description: NPS unterstützt das RADIUS-Protokoll (Remote Authentication Dial-In User Service) vollständig. Das RADIUS-Protokoll ist der De-facto-Standard für die Remotebenutzerauthentifizierung und ist in RFC 2865 und RFC 2866 dokumentiert.
 ms.assetid: 3e00d555-355c-4a4c-a389-ab44e9ed9ca9
 ms.tgt_platform: multiple
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: cce45bbc6e4802ed5137849a5b22520c8a4badbb
-ms.sourcegitcommit: 592c9bbd22ba69802dc353bcb5eb30699f9e9403
+ms.openlocfilehash: e3b0395b6bc147da4f78bb718cda714014b9b665f5a26a8d20fa29402ee8dec1
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "104390693"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119063493"
 ---
-# <a name="radius-authentication-authorization-and-accounting"></a>RADIUS-Authentifizierung,-Autorisierung und-Kontoführung
+# <a name="radius-authentication-authorization-and-accounting"></a>RADIUS-Authentifizierung, -Autorisierung und -Buchhaltung
 
 > [!Note]  
-> Der Internet Authentifizierungsdienst (IAS) wurde ab Windows Server 2008 in den Netzwerk Richtlinien Server (Network Policy Server, NPS) umbenannt. Der Inhalt dieses Themas gilt sowohl für IAS als auch für NPS. Im gesamten Text wird NPS verwendet, um auf alle Versionen des Dienstanbieter zu verweisen, einschließlich der Versionen, die ursprünglich als IAS bezeichnet wurden.
+> Der Internetauthentifizierungsdienst (INTERNET Authentication Service, IAS) wurde ab Windows Server 2008 in Netzwerkrichtlinienserver (Network Policy Server, NPS) umbenannt. Der Inhalt dieses Themas gilt sowohl für IAS als auch für NPS. Im gesamten Text wird NPS verwendet, um auf alle Versionen des Diensts zu verweisen, einschließlich der Versionen, die ursprünglich als IAS bezeichnet wurden.
 
- 
+ 
 
-NPS unterstützt das RADIUS-Protokoll (Remote Authentication Dial-in User Service) vollständig. Das RADIUS-Protokoll ist der de-facto-Standard für die Remote Benutzerauthentifizierung und ist in [RFC 2865](https://www.ietf.org/rfc/rfc2865.txt) und [RFC 2866](https://www.ietf.org/rfc/rfc2866.txt)dokumentiert.
+NPS unterstützt das RADIUS-Protokoll (Remote Authentication Dial-In User Service) vollständig. Das RADIUS-Protokoll ist der De-facto-Standard für die Remotebenutzerauthentifizierung und ist in [RFC 2865](https://www.ietf.org/rfc/rfc2865.txt) und [RFC 2866](https://www.ietf.org/rfc/rfc2866.txt)dokumentiert.
 
-## <a name="radius-authentication-and-authorization"></a>RADIUS-Authentifizierung und-Autorisierung
+## <a name="radius-authentication-and-authorization"></a>RADIUS-Authentifizierung und -Autorisierung
 
-Das folgende Diagramm zeigt einen authentifizier enden Client ("User"), der über eine DFÜ-Verbindung mithilfe des Point-to-Point-Protokoll (PPP) eine Verbindung mit einem Netzwerk Zugriffs Server (NAS) herstellt. Um den Benutzer zu authentifizieren, kontaktiert der NAS einen Remote Server, auf dem NPS ausgeführt wird. Der NAS-und der NPS-Server kommunizieren mit dem RADIUS-Protokoll.
+Das folgende Diagramm zeigt einen authentifizierenden Client ("Benutzer"), der über eine DFÜ-Verbindung eine Verbindung mit einem Netzwerkzugriffsserver (NAS) über die Point-to-Point-Protokoll herstellt. Um den Benutzer zu authentifizieren, kontaktiert das NAS einen Remoteserver, auf dem NPS ausgeführt wird. Nas und NPS-Server kommunizieren über das RADIUS-Protokoll.
 
-![Remote Benutzerauthentifizierung](images/ias01.png)
+![Remotebenutzerauthentifizierung](images/ias01.png)
 
-Ein NAS fungiert als Client eines Servers oder von Servern, die das RADIUS-Protokoll unterstützen. Server, die das RADIUS-Protokoll unterstützen, werden im Allgemeinen als RADIUS-Server bezeichnet. Der RADIUS-Client, d. h. das NAS, übergibt Informationen über den Benutzer an bestimmte RADIUS-Server und verhält sich dann mit der Antwort, die die Server zurückgeben. Die Anforderung, die vom NAS an den RADIUS-Server gesendet wird, um den Benutzer zu authentifizieren, wird im Allgemeinen als "Authentifizierungsanforderung" bezeichnet.
+Ein NAS fungiert als Client eines Servers oder eines Servers, der das RADIUS-Protokoll unterstützt. Server, die das RADIUS-Protokoll unterstützen, werden im Allgemeinen als RADIUS-Server bezeichnet. Der RADIUS-Client, d. h. der NAS, übergibt Informationen über den Benutzer an die angegebenen RADIUS-Server und reagiert dann auf die Antwort, die die Server zurückgeben. Die Anforderung, die vom NAS an den RADIUS-Server gesendet wird, um den Benutzer zu authentifizieren, wird im Allgemeinen als "Authentifizierungsanforderung" bezeichnet.
 
-Wenn der Benutzer von einem RADIUS-Server erfolgreich authentifiziert wird, gibt der RADIUS-Server Konfigurationsinformationen an den NAS zurück, damit er dem Benutzer Netzwerkdienst bereitstellen kann. Diese Konfigurationsinformationen bestehen aus "Autorisierungen" und enthalten unter anderem den Typ des dienstannas, den der Benutzer möglicherweise bereitstellt (z. b. PPP oder Telnet).
+Wenn ein RADIUS-Server den Benutzer erfolgreich authentifiziert, gibt der RADIUS-Server Konfigurationsinformationen an das NAS zurück, damit er dem Benutzer Einen Netzwerkdienst bereitstellen kann. Diese Konfigurationsinformationen bestehen aus "Autorisierungen" und enthalten unter anderem den Typ des Diensts NAS, der dem Benutzer zur Verfügung steht (z. B. PPUs oder Telnet).
 
-Während der RADIUS-Server die Authentifizierungsanforderung verarbeitet, kann er Autorisierungs Funktionen ausführen, wie z. b. das Überprüfen der Telefonnummer des Benutzers und das überprüfen, ob der Benutzer bereits über eine Sitzung verfügt. Der RADIUS-Server kann ermitteln, ob der Benutzer bereits über eine Sitzung verfügt, indem er eine Verbindung mit einem Zustands Server aufnimmt.
+Während der RADIUS-Server die Authentifizierungsanforderung verarbeitet, kann er Autorisierungsfunktionen wie das Überprüfen der Telefonnummer des Benutzers und das Überprüfen, ob der Benutzer bereits über eine Sitzung verfügt, ausführen. Der RADIUS-Server kann ermitteln, ob der Benutzer bereits eine Sitzung ausgeführt hat, indem er sich an einen Zustandsserver wendet.
 
-Weitere Informationen zur RADIUS-Authentifizierung und-Autorisierung finden Sie unter [RFC 2865](https://www.ietf.org/rfc/rfc2865.txt).
+Weitere Informationen zur RADIUS-Authentifizierung und -Autorisierung finden Sie unter [RFC 2865](https://www.ietf.org/rfc/rfc2865.txt).
 
 ## <a name="radius-accounting"></a>RADIUS-Kontoführung
 
-Der RADIUS-Server sammelt außerdem eine Vielzahl von Informationen, die vom NAS gesendet werden, die für die Buchhaltung und die Berichterstellung zur Netzwerkaktivität verwendet werden können. Der RADIUS-Client sendet Informationen an bestimmte RADIUS-Server, wenn sich der Benutzer anmeldet und abmeldet. Der RADIUS-Client sendet möglicherweise regelmäßig zusätzliche Verwendungs Informationen, während die Sitzung ausgeführt wird. Die Anforderungen, die vom Client an den Server gesendet werden, um Anmelde-/Abmelde-und Verwendungs Informationen aufzuzeichnen, werden im Allgemeinen als "Buchhaltungs Anforderungen" bezeichnet.
+Der RADIUS-Server sammelt auch eine Vielzahl von Informationen, die vom NAS gesendet werden und für die Kontoführung und Berichterstellung zur Netzwerkaktivität verwendet werden können. Der RADIUS-Client sendet Informationen an festgelegte RADIUS-Server, wenn sich der Benutzer anmeldet und sich abmeldet. Der RADIUS-Client sendet möglicherweise regelmäßig zusätzliche Nutzungsinformationen, während die Sitzung ausgeführt wird. Die Anforderungen, die vom Client an den Server gesendet werden, um Anmeldung/Abmeldung und Nutzungsinformationen aufzuzeichnen, werden im Allgemeinen als "Buchhaltungsanforderungen" bezeichnet.
 
-Weitere Informationen zur RADIUS-Buchhaltung finden Sie unter [RFC 2866](https://www.ietf.org/rfc/rfc2866.txt).
+Weitere Informationen zur RADIUS-Kontoführung finden Sie unter [RFC 2866](https://www.ietf.org/rfc/rfc2866.txt).
 
 ## <a name="radius-proxy"></a>RADIUS-Proxy
 
-Ein RADIUS-Server kann als Proxy Client für andere RADIUS-Server fungieren. In diesen Fällen übergibt der vom NAS angewandte RADIUS-Server die Authentifizierungs-oder Buchhaltungs Anforderung an einen anderen RADIUS-Server, der die Authentifizierung oder die Buchhaltungs Aufgabe ausführt.
+Ein RADIUS-Server kann als Proxyclient für andere RADIUS-Server fungieren. In diesen Fällen übergibt der VOM NAS kontaktierte RADIUS-Server die Authentifizierungs- oder Buchhaltungsanforderung an einen anderen RADIUS-Server, der die Authentifizierung oder die Buchhaltungsaufgabe tatsächlich ausführt.
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
 <dl> <dt>
 
-[Internet Authentifizierungsdienst und Netzwerk Richtlinien Server](internet-authentication-service-vs-network-policy-server.md)
+[Internetauthentifizierungsdienst und Netzwerkrichtlinienserver](internet-authentication-service-vs-network-policy-server.md)
 </dt> <dt>
 
-[RADIUS-Buchhaltungs Pakete](/windows/desktop/Nps/ias-radius-accounting-packets)
+[RADIUS-Buchhaltungspakete](/windows/desktop/Nps/ias-radius-accounting-packets)
 </dt> <dt>
 
-[Arbeiten mit einem Zustands Server](/windows/desktop/Nps/ias-working-with-a-state-server)
+[Arbeiten mit einem Zustandsserver](/windows/desktop/Nps/ias-working-with-a-state-server)
 </dt> </dl>
 
- 
+ 
 
- 
+ 

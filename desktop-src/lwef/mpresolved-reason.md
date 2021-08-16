@@ -1,10 +1,10 @@
 ---
-title: MPRESOLVED_REASON-Enumeration (mpclient. h)
-description: Mögliche Gründe für das Auflösen eines Fehlers bei der Behebung.
+title: MPRESOLVED_REASON -Enumeration (MpClient.h)
+description: Mögliche Gründe für die Behebung eines Wiegefehlers.
 ms.assetid: 29E875D7-97DA-4129-AB71-B261CD0E682A
 keywords:
-- MPRESOLVED_REASON-Enumerationsfunktionen der Legacy-Windows-Umgebung
-- PMPRESOLVED_REASON enumerationszeiger Legacy-Windows-Umgebungs Features
+- MPRESOLVED_REASON enumeration legacy Windows Environment Features
+- PMPRESOLVED_REASON enumeration pointer Legacy Windows Environment Features
 topic_type:
 - apiref
 api_name:
@@ -15,16 +15,16 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: ab31fc8b734852ccdf15278f535d916228b43976
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: a365ef55d9fe2d76e619f3c772cc1df2e6c5e1c8c33721f24dc844d064b33398
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104040773"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118975980"
 ---
-# <a name="mpresolved_reason-enumeration"></a>Mpregelöste \_ reason-Enumeration
+# <a name="mpresolved_reason-enumeration"></a>MPRESOLVED \_ REASON-Enumeration
 
-Mögliche Gründe für das Auflösen eines Fehlers bei der Behebung.
+Mögliche Gründe für die Behebung eines Wiegefehlers.
 
 ## <a name="syntax"></a>Syntax
 
@@ -43,24 +43,24 @@ typedef enum tagMPRESOLVED_REASON {
 
 <dl> <dt>
 
-<span id="MPRESOLVED_REASON_UNKNOWN"></span><span id="mpresolved_reason_unknown"></span>**mpregelösten \_ Grund \_ unbekannt**
+<span id="MPRESOLVED_REASON_UNKNOWN"></span><span id="mpresolved_reason_unknown"></span>**MPRESOLVED \_ REASON \_ UNKNOWN**
 </dt> <dd>
 
 In einem Fehlerzustand.
 
 </dd> <dt>
 
-<span id="MPRESOLVED_REASON_FULL_SCAN"></span><span id="mpresolved_reason_full_scan"></span>**mpregelöste \_ Grund für \_ vollständige \_ Überprüfung**
+<span id="MPRESOLVED_REASON_FULL_SCAN"></span><span id="mpresolved_reason_full_scan"></span>**MPRESOLVED \_ REASON \_ FULL \_ SCAN**
 </dt> <dd>
 
 Es wurde eine vollständige Überprüfung durchgeführt.
 
 </dd> <dt>
 
-<span id="MPRESOLVED_REASON_TIMED_OUT"></span><span id="mpresolved_reason_timed_out"></span>**mpregelösten \_ Grund Zeitüberschreitung \_ \_**
+<span id="MPRESOLVED_REASON_TIMED_OUT"></span><span id="mpresolved_reason_timed_out"></span>**TIME OUT FÜR MPRESOLVED \_ REASON \_ \_**
 </dt> <dd>
 
-Genügend Zeit vergangen. Der Standardwert ist eine Woche.
+Es ist genügend Zeit vergangen. Der Standardwert ist eine Woche.
 
 </dd> </dl>
 
@@ -70,9 +70,9 @@ Genügend Zeit vergangen. Der Standardwert ist eine Woche.
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows 8 \[ -Desktop-Apps\]<br/>                                            |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2012 \[ -Desktop-Apps\]<br/>                                  |
-| Header<br/>                   | <dl> <dt>Mpclient. h</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | \[Windows 8 Nur Desktop-Apps\]<br/>                                            |
+| Unterstützte Mindestversion (Server)<br/> | \[Windows Server 2012 Nur Desktop-Apps\]<br/>                                  |
+| Header<br/>                   | <dl> <dt>MpClient.h</dt> </dl> |
 
 
 

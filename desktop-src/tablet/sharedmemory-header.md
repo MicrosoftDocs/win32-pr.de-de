@@ -1,7 +1,7 @@
 ---
-description: Speichert Informationen zu freigegebenen Speicherabschnitten.
+description: Speichert Informationen zu Freigegebenen Speicherabschnitten.
 ms.assetid: 73a650ee-110c-43f2-a5e2-783d52fd29ee
-title: SHAREDMEMORY_HEADER Struktur
+title: SHAREDMEMORY_HEADER-Struktur
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -12,16 +12,16 @@ api_name:
 api_type:
 - NA
 api_location: ''
-ms.openlocfilehash: 695f3ef09cb5e7e67de757ee3926df6fde7ddff5
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 9ae596819feb4bd70aa47e7881521e5a69e5bd0a509b974e591d08907efda51c
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "106363225"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118966799"
 ---
-# <a name="sharedmemory_header-structure"></a>SharedMemory- \_ Header Struktur
+# <a name="sharedmemory_header-structure"></a>SHAREDMEMORY \_ HEADER-Struktur
 
-Speichert Informationen zu freigegebenen Speicherabschnitten.
+Speichert Informationen zu Freigegebenen Speicherabschnitten.
 
 ## <a name="syntax"></a>Syntax
 
@@ -48,86 +48,86 @@ typedef struct _SHAREDMEMORY_HEADER {
 
 <dl> <dt>
 
-**cbtotal**
+**cbTotal**
 </dt> <dd>
 
-Die Größe der Daten in Bytes, auf die von dieser Header Struktur verwiesen wird.
+Die Größe der Daten in Bytes, auf die von dieser Headerstruktur verwiesen wird.
 
 </dd> <dt>
 
-**cboffsekunden**
+**cbOffsetSns**
 </dt> <dd>
 
-Die Größe in Bytes, in der die Seriennummern von der Header Struktur versetzt werden.
+Die Größe in Bytes, in der die Seriennummern von der Headerstruktur versetzt werden.
 
 </dd> <dt>
 
-**idxevent**
+**idxEvent**
 </dt> <dd>
 
-Der Ereignis Index. Dieser Wert wird mit aufeinander folgenden Ereignissen inkrementiert.
+Der Ereignisindex. Dieser Wert wird mit aufeinander folgenden Ereignissen inkrementiert.
 
 </dd> <dt>
 
-**dwevent**
+**dwEvent**
 </dt> <dd>
 
-Das Ereignis, das diesem Header zugeordnet ist.
+Das diesem Header zugeordnete Ereignis.
 
 </dd> <dt>
 
-**zid**
+**Cid**
 </dt> <dd>
 
-Der Cursor Bezeichner, auf den vom Shared Memory-Header verwiesen wird.
+Der Cursorbezeichner, auf den der Shared Memory-Header verweist.
 
 </dd> <dt>
 
 **sn**
 </dt> <dd>
 
-Die Seriennummer für den Header des freigegebenen Speichers.
+Die Seriennummer für den Shared Memory-Header.
 
 </dd> <dt>
 
-**sysegvt**
+**sysEvt**
 </dt> <dd>
 
-Das System Ereignis, dem vorangestellten Präfix \_ \* , das diesem Header zugeordnet ist. Weitere Informationen finden Sie im Abschnitt "Hinweise".
+Das Systemereignis mit dem Präfix SE \_ \* , das diesem Header zugeordnet ist. Weitere Informationen finden Sie im Abschnitt "Hinweise".
 
 </dd> <dt>
 
-**syabvtdata**
+**sysEvtData**
 </dt> <dd>
 
-Die [**System \_ Ereignis \_ Daten**](/windows/win32/api/tpcshrd/ns-tpcshrd-system_event_data) Struktur, die dem System Ereignis zugeordnet ist.
+Die [**SYSTEM \_ EVENT \_ DATA-Struktur,**](/windows/win32/api/tpcshrd/ns-tpcshrd-system_event_data) die dem Systemereignis zugeordnet ist.
 
 </dd> <dt>
 
-**cpakete**
+**cPackets**
 </dt> <dd>
 
-Gibt die Anzahl der Pakete an, die dem aktuellen Shared Memory-Abschnitt zugeordnet sind.
+Die Anzahl der Pakete, die dem aktuellen Abschnitt für freigegebenen Speicher zugeordnet sind.
 
 </dd> <dt>
 
-**CB-Pakete**
+**cbPackets**
 </dt> <dd>
 
-Die Größe der dem aktuellen Shared Memory-Abschnitt zugeordneten Pakete in Bytes.
+Die Größe der Pakete in Bytes, die dem aktuellen Freigegebenen Speicherabschnitt zugeordnet sind.
 
 </dd> <dt>
 
-**"f"**
+**fSnsPresent**
 </dt> <dd>
 
-Ein Flag, das angibt, ob Seriennummern im aktuellen Shared Memory-Abschnitt vorhanden sind.
+Ein Flag, das angibt, ob Seriennummern im aktuellen Freigegebenen Speicherabschnitt vorhanden sind.
 
 </dd> </dl>
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Die folgenden Werte sind für den **sysegvt** -Member definiert.
+Die folgenden Werte werden für den **sysEvt-Member** definiert.
 
 
 ```C++
@@ -146,11 +146,11 @@ Die folgenden Werte sind für den **sysegvt** -Member definiert.
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**System \_ Ereignis \_ Daten**](/windows/win32/api/tpcshrd/ns-tpcshrd-system_event_data)
+[**\_ \_ SYSTEMEREIGNISDATEN**](/windows/win32/api/tpcshrd/ns-tpcshrd-system_event_data)
 </dt> </dl>
 
  

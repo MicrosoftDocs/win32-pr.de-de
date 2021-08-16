@@ -1,12 +1,12 @@
 ---
-title: IMsRdpClientTransportSettings3 gatewayauthloginpage (Eigenschaft)
-description: Die Adresse der Anmelde Webseite, die zum Authentifizieren eines Benutzers verwendet werden soll.
+title: IMsRdpClientTransportSettings3 GatewayAuthLoginPage (Eigenschaft)
+description: Die Adresse der Anmeldewebseite, die zum Authentifizieren eines Benutzers verwendet werden soll.
 ms.assetid: d7a5e0d8-353e-416d-a9e0-11ef5072f9ff
 ms.tgt_platform: multiple
 keywords:
-- Gatewayauthloginpage-Eigenschaft Remotedesktopdienste
-- Gatewayauthloginpage-Eigenschaft Remotedesktopdienste, IMsRdpClientTransportSettings3-Schnittstelle
-- IMsRdpClientTransportSettings3 Interface Remotedesktopdienste, gatewayauthloginpage (Eigenschaft)
+- Eigenschafteneigenschaft "GatewayAuthLoginPage Remotedesktopdienste
+- GatewayAuthLoginPage-Eigenschaft Remotedesktopdienste , IMsRdpClientTransportSettings3-Schnittstelle
+- IMsRdpClientTransportSettings3-Schnittstelle Remotedesktopdienste , GatewayAuthLoginPage-Eigenschaft
 topic_type:
 - apiref
 api_name:
@@ -19,16 +19,16 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: f5be535dea0a89f1cf6e7c238029e53f38f58b0c
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 672fc929e2fccf6934a2703684e467c75fd8afb725107a73bf0f6bb311c09bfc
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104106089"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119000929"
 ---
-# <a name="imsrdpclienttransportsettings3gatewayauthloginpage-property"></a>IMsRdpClientTransportSettings3:: gatewayauthloginpage (Eigenschaft)
+# <a name="imsrdpclienttransportsettings3gatewayauthloginpage-property"></a>IMsRdpClientTransportSettings3::GatewayAuthLoginPage (Eigenschaft)
 
-Die Adresse der Anmelde Webseite, die zum Authentifizieren eines Benutzers verwendet werden soll.
+Die Adresse der Anmeldewebseite, die zum Authentifizieren eines Benutzers verwendet werden soll.
 
 Dies ist eine Eigenschaft mit Lese- und Schreibzugriff.
 
@@ -49,7 +49,7 @@ HRESULT get_GatewayAuthLoginPage(
 
 ## <a name="property-value"></a>Eigenschaftswert
 
-Die Adresse der neuen Anmelde Webseite.
+Die neue Adresse der Anmeldewebseite.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -64,7 +64,7 @@ Die Adresse der neuen Anmelde Webseite.
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 

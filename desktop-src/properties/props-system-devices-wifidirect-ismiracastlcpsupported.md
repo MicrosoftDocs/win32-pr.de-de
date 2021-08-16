@@ -1,5 +1,5 @@
 ---
-description: Gibt an, ob der Linkinhaltsschutz vom Wi-Fi Direct Device unterstützt wird, Miracast ist.
+description: Gibt an, ob der Linkinhaltsschutz vom Wi-Fi Direct Device unterstützt wird, wenn es Miracast fähig ist.
 ms.assetid: 7d5e86aa-f190-4e0a-9fd8-9081d7f2ac27
 title: System.Devices.WiFiDirect.IsMiracastLcpSupported
 ms.topic: article
@@ -13,7 +13,7 @@ ms.locfileid: "118728070"
 ---
 # <a name="systemdeviceswifidirectismiracastlcpsupported"></a>System.Devices.WiFiDirect.IsMiracastLcpSupported
 
-Gibt an, ob der Linkinhaltsschutz vom Wi-Fi Direct Device unterstützt wird, wenn Miracast ist.
+Gibt an, ob der Linkinhaltsschutz vom Wi-Fi Direct Device unterstützt wird, wenn es Miracast kann.
 
 ## <a name="windows-10-version-1703-windows-10-version-1607-windows-10-version-1511-windows-10-version-1507"></a>Windows 10, Version 1703, Windows 10, Version 1607, Windows 10, Version 1511, Windows 10, Version 1507
 

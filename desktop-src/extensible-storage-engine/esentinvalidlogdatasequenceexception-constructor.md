@@ -1,5 +1,5 @@
 ---
-description: 'Weitere Informationen finden Sie unter: EsentInvalidLogDataSequenceException-Konstruktor'
+description: 'Weitere Informationen zu: EsentInvalidLogDataSequenceException-Konstruktor'
 title: EsentInvalidLogDataSequenceException-Konstruktor
 TOCTitle: 'EsentInvalidLogDataSequenceException constructor '
 ms:assetid: M:Microsoft.Isam.Esent.Interop.EsentInvalidLogDataSequenceException.#ctor

@@ -1,24 +1,24 @@
 ---
-description: Windows-basierte Systeme können über mehrere Instanzen des Objekttyp "Treuhänder" verfügen.
+description: Windows-basierten Systemen können mehrere Instanzen des TrustedDomain-Objekttyps haben.
 ms.assetid: 13efedb5-ebb6-459b-8c4f-06774226278c
-title: Der "Treuhänder Domain"-Objekttyp
+title: Der TrustedDomain-Objekttyp
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 70f0a4e6eca0790d877a9a23e4d83725d4e80798
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: bdab860f9192e48433242251578a20a45bf294164c0bffff8b6f00562a1442e9
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "103750857"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119004838"
 ---
-# <a name="the-trusteddomain-object-type"></a>Der "Treuhänder Domain"-Objekttyp
+# <a name="the-trusteddomain-object-type"></a>Der TrustedDomain-Objekttyp
 
-Windows-basierte Systeme können über mehrere Instanzen des Objekttyp " [**Treuhänder**](trusteddomain-object.md) " verfügen. Die Objekte für die **Treuhänder Domäne** verfügen über zwei Felder, die in allen " **Treuhänder Domain** "-Objekten eindeutig sein müssen:
+Windows-basierten Systemen können mehrere Instanzen [](trusteddomain-object.md) des TrustedDomain-Objekttyps haben. **TrustedDomain-Objekte** verfügen über zwei Felder, die für alle **TrustedDomain-Objekte eindeutig sein** müssen:
 
--   Der Name der [ **Treuhänder Domäne**](trusteddomain-object.md)
--   Die [*Sicherheits*](/windows/desktop/SecGloss/s-gly) -ID (SID) der [**Treuhänder Domäne**](trusteddomain-object.md).
+-   Der Name der [ **TrustedDomain**](trusteddomain-object.md)
+-   Die [*Sicherheits-ID*](/windows/desktop/SecGloss/s-gly) (SID) der [**TrustedDomain.**](trusteddomain-object.md)
 
-Der Versuch, ein neues " **Treuhänder Domain** "-Objekt mit einem Namen oder einer SID zu erstellen, die bereits von einem anderen " **Treuhänder Domain** "-Objekt verwendet wird, wird zurückgewiesen.
+Der Versuch, ein neues **TrustedDomain-Objekt** mit einem Namen oder einer SID zu erstellen, das bereits von einem anderen **TrustedDomain-Objekt** verwendet wird, wird abgelehnt.
 
  
 

@@ -1,37 +1,37 @@
 ---
-description: Arbeiten mit MFT-Medien Puffern und-Beispielen
+description: Arbeiten mit MFT-Medienpuffern und -Beispielen
 ms.assetid: dda4048e-bc4c-40ac-a6bd-34984f3717e0
-title: Arbeiten mit MFT-Medien Puffern und-Beispielen
+title: Arbeiten mit MFT-Medienpuffern und -Beispielen
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 6373f6d75b4122409b54649eed6f90e95c2f50c7
-ms.sourcegitcommit: c16214e53680dc71d1c07111b51f72b82a4512d8
+ms.openlocfilehash: d964f1c2f2a5fd5f92d5af87213c6977fc51bee76caf3a281861788e2a2fb922
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/03/2021
-ms.locfileid: "104351338"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118736451"
 ---
-# <a name="working-with-mft-media-buffers-and-samples"></a>Arbeiten mit MFT-Medien Puffern und-Beispielen
+# <a name="working-with-mft-media-buffers-and-samples"></a>Arbeiten mit MFT-Medienpuffern und -Beispielen
 
-Codec-MFTs übergeben Mediendaten mithilfe von Medien Puffern und Beispielen hin und her.
+Codec-MFTs übergeben Mediendaten mithilfe von Medienpuffern und Samplings hin und her.
 
-Ein Medien Puffer ist ein COM-Objekt, das einen Speicherblock verwaltet, der normalerweise Mediendaten enthält. Wenn Daten an oder von einem MFT-Wert übermittelt werden, werden Sie immer in Form eines Medien Puffers übermittelt.
+Ein Medienpuffer ist ein COM-Objekt, das einen Speicherblock verwaltet, in der Regel zum Speichern von Mediendaten. Wenn Daten an oder von einem MFT übergeben werden, werden sie immer in Form eines Medienpuffers übergeben.
 
-Alle Medien Puffer machen die **imfmediabuffer** -Schnittstelle verfügbar. Diese Schnittstelle ist für beliebige Datentypen konzipiert. Puffer mit Videodaten machen häufig auch **IMF2DBuffer** verfügbar.
+Alle Medienpuffer machen die **INTERFACESMediaBuffer-Schnittstelle** verfügbar. Diese Schnittstelle ist für jeden Datentyp konzipiert. Puffer, die Videodaten enthalten, machen häufig auch **DEN 2DBuffer verfügbar.**
 
-Ein Medien Puffer hat eine maximale Größe, die der für den Puffer zugeordneten Arbeitsspeicher Menge entspricht. Um die maximale Größe zu ermitteln, nennen Sie **imfmediabuffer:: getmaxlength**. Ein Medien Puffer hat zu einem beliebigen Zeitpunkt auch eine aktuelle Länge, d. h. die Menge gültiger Daten im Puffer, von 0 Bytes bis zur maximalen Größe. Um die aktuelle Länge abzurufen, nennen Sie **imfmediabuffer:: getcurrentlength**. Beim Erstellen des Puffers ist die aktuelle Länge 0 (null). Wenn Sie Daten in den Puffer schreiben, müssen Sie **imfmediabuffer:: setcurrentlength** aufrufen, um die aktuelle Länge zu aktualisieren.
+Ein Medienpuffer hat eine maximale Größe, d. h. die Menge an Arbeitsspeicher, die dem Puffer zugeordnet ist. Rufen Sie ZUM Ermitteln der maximalen Größe **DEN AUFRUF VONMEDIABUFFER::GetMaxLength** auf. Zu jedem Zeitpunkt verfügt ein Medienpuffer auch über eine aktuelle Länge, d. h. die Menge gültiger Daten im Puffer, die zwischen null Bytes und der maximalen Größe liegen. Rufen Sie ZUM Abrufen der aktuellen Länge **DEN AUFRUF VONMEDIABUFFER::GetCurrentLength** auf. Wenn der Puffer erstellt wird, ist die aktuelle Länge 0 (null). Wenn Sie Daten in den Puffer schreiben, rufen Sie **ÜBERMEDIABUFFER::SetCurrentLength** auf, um die aktuelle Länge zu aktualisieren.
 
-Um auf den Speicher im Puffer zuzugreifen, nennen Sie **imfmediabuffer:: Lock**. Diese Methode gibt einen Zeiger auf den Anfang des Speicherblocks zurück. Wenn Sie die Verwendung des Zeigers abgeschlossen haben, nennen Sie **imfmediabuffer:: Unlock**. Die **Lock** -Methode ist kein Thread Synchronisierungs Mechanismus. Es ist nicht gewährleistet, dass andere Threads nicht auf den Puffer zugreifen können. Mithilfe der **Lock** -Methode wird sichergestellt, dass der Speicher, auf den zugegriffen wird, gültig bleibt, bis Sie die **Unlock** -Methode aufrufen.
+Rufen Sie ZUM Zugreifen auf den Arbeitsspeicher im Puffer **DEN AUFRUF VONMEDIABUFFER::Lock** auf. Diese Methode gibt einen Zeiger auf den Anfang des Speicherblocks zurück. Wenn Sie die Verwendung des Zeigers abgeschlossen haben, rufen Sie **DENMEDIABUFFER::Unlock** auf. Die **Lock-Methode** ist kein Threadsynchronisierungsmechanismus. sie garantiert nicht, dass andere Threads nicht auf den Puffer zugreifen können. Die **Lock-Methode** wird verwendet, um sicherzustellen, dass der Arbeitsspeicher, auf den zugegriffen wird, gültig bleibt, bis Sie die **Unlock-Methode** aufrufen.
 
-Ein Medien Beispiel Objekt (im Kontext des Media Foundation SDK) ist ein Objekt, das eine geordnete Liste von 0 (null) oder mehr Puffern enthält. In Medien Beispielen wird die **IMF Sample** -Schnittstelle verfügbar gemacht.
+Ein Medienbeispielobjekt (im Kontext des Media Foundation SDK) ist ein Objekt, das eine sortierte Liste von null oder mehr Puffern enthält. Medienbeispiele machen die **INTERFACESSample-Schnittstelle** verfügbar.
 
-Um ein neues Beispiel zu erstellen, rufen Sie die **mfkreatesample** -Funktion auf. Anfänglich ist die Puffer Liste des Beispiels leer. Um einen Puffer am Ende der Liste hinzuzufügen, nennen Sie **imfsample:: addbuffer**.
+Um ein neues Beispiel zu erstellen, rufen Sie die **MFCreateSample-Funktion** auf. Anfänglich ist die Pufferliste des Beispiels leer. Rufen Sie ZUM Hinzufügen eines Puffers am Ende der Liste **DEN AUFRUF VONSAMPLE::AddBuffer auf.**
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
 <dl> <dt>
 
-[Arbeiten mit Codec-DMOS](workingwithcodecdmos.md)
+[Arbeiten mit Codec-DMOs](workingwithcodecdmos.md)
 </dt> <dt>
 
 [Arbeiten mit Codec-MFTs](workingwithcodecmfts.md)

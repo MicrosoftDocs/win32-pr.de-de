@@ -1,26 +1,26 @@
 ---
-description: Beschreibt die Prozesse für die Implementierung von Geräte Ereignis Handlern in der Registrierung.
+description: Beschreibt die Prozesse zum Implementieren von Geräteereignishandlern in der Registrierung.
 ms.assetid: 84B12B5C-C179-4124-A1FC-B90D120336BF
-title: Registrieren eines Handlers für ein Geräte Ereignis
+title: Registrieren eines Handlers für ein Geräteereignis
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 34ef15071b349afa3f863e7c57b64c280c2aef8f
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 66a13abe8917d93ac6a4801e0c11cb7223da25e362923df229180b8c8e6211ac
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "103864919"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117859599"
 ---
-# <a name="how-to-register-a-handler-for-a-device-event"></a>Registrieren eines Handlers für ein Geräte Ereignis
+# <a name="how-to-register-a-handler-for-a-device-event"></a>Registrieren eines Handlers für ein Geräteereignis
 
-Handler definieren den Software Teil von AutoPlay. Sie definieren das Symbol und den anzeigen amen der Software sowie die Komponente "Component Object Model (com)", die instanziiert werden soll, und wie die Komponente als Reaktion auf ein Ereignis initialisiert wird. Jeder Handler für ein bestimmtes Ereignis wird als Wert unter dem entsprechenden **EventHandler** -Schlüssel registriert. Wenn dieses Ereignis erkannt wird, wird der Benutzer aufgefordert, einen Handler aus einer Liste aller für dieses Ereignis registrierten Handler auszuwählen.
+Handler definieren den Softwareteil der automatischen Wiedergabe. Sie definieren das Symbol und den Anzeigenamen der Software sowie die COM-Komponente (Component Object Model), die instanziiert werden soll und wie die Komponente als Reaktion auf ein Ereignis initialisiert wird. Jeder Handler für ein bestimmtes Ereignis wird als Wert unter dem entsprechenden **EventHandler-Schlüssel** registriert. Wenn dieses Ereignis erkannt wird, wird der Benutzer aufgefordert, einen Handler aus einer Liste aller Handler auszuwählen, die für dieses Ereignis registriert sind.
 
-## <a name="instructions"></a>Instructions
+## <a name="instructions"></a>Anweisungen
 
 
-Handler und die zugehörigen Werte werden unter dem Schlüssel " **autoplayhandlers** \\ **Handlers** " definiert. Unterschlüssel unterscheiden sich abhängig davon, ob das System den Geräte Inhalt direkt lesen kann oder ob das Gerät über eine proprietäre Oberfläche Inhalt für das System bereitstellt.
+Handler und ihre zugeordneten Werte werden unter dem **Schlüssel AutoplayHandlers** \\ **Handlers** definiert. Unterschlüssel unterscheiden sich abhängig davon, ob das System Geräteinhalte direkt lesen kann oder ob das Gerät Inhalte über eine proprietäre Schnittstelle für das System bereitstellt.
 
-Das folgende Beispiel zeigt die Unterschlüssel und Werte, die für ein Gerät verwendet werden, z. b. eine digitale Videokamera oder MP3-Player, die den Inhalt des Systems über eine proprietäre Schnittstelle bereitstellt. Der Beispiel Handler heißt **MyHandler**.
+Das folgende Beispiel zeigt die Unterschlüssel und Werte, die für ein Gerät verwendet werden, z. B. eine digitale Videokamera oder .mp3 Player, die den Inhalt über eine proprietäre Schnittstelle für das System bereitstellt. Der Beispielhandler heißt **MyHandler.**
 
 ```
 HKEY_LOCAL_MACHINE or HKEY_CURRENT_USER
@@ -41,17 +41,17 @@ HKEY_LOCAL_MACHINE or HKEY_CURRENT_USER
 ```
 
 > [!Note]  
-> Das Beispiel zeigt zwar sowohl einen ProgID-als auch einen Klassen Bezeichner (CLSID), aber in der Praxis schließen sich diese Werte gegenseitig aus, sodass nur eine oder die andere vorhanden ist. Der ProgID-Wert wird bevorzugt. Je nachdem, welche verwendet wird, sollte es auf eine COM-Komponente verweisen, die die [**ihweventhandler**](/windows/desktop/api/Shobjidl/nn-shobjidl-ihweventhandler) -Schnittstelle implementiert.
+> Während das Beispiel sowohl einen ProgID- als auch einen CLSID-Wert (Class Identifier) zeigt, schließen sich diese Werte in der Praxis gegenseitig aus, sodass nur der eine oder der andere vorhanden ist. Der ProgID-Wert wird bevorzugt. Je nachdem, was verwendet wird, sollte es auf eine COM-Komponente verweisen, die die [**IHWEventHandler-Schnittstelle**](/windows/desktop/api/Shobjidl/nn-shobjidl-ihweventhandler) implementiert.
 
  
 
-Sie können den Aktionswert als Literalwert eingeben, z. b. "Musik abspielen", wie in diesem Beispiel gezeigt, oder als Dateiname mit einer Ressourcen Zeichenfolge. Sie können den Anbieter Wert auch als Literalwert oder als Dateinamen mit einer Ressourcen Zeichenfolge eingeben. AutoPlay kombiniert den Aktionswert und den Anbieter Wert mit dem Wort "using", um eine benutzerfreundliche Beschriftung zu erstellen, die auf der Benutzeroberfläche angezeigt wird. Im Beispiel ist die resultierende Beschriftung "Abspielen von Musik mit Windows Media Player".
+Sie können den Aktionswert als Literalwert eingeben, z. B. "Musik wiedergeben", wie in diesem Beispiel gezeigt, oder als Dateiname mit einer Ressourcenzeichenfolge. Sie können den Anbieterwert auch als Literalwert oder als Dateinamen mit einer Ressourcenzeichenfolge eingeben. Bei der automatischen Wiedergabe werden der Aktionswert und der Anbieterwert mit dem Wort "using" kombiniert, um eine benutzerfreundliche Beschriftung zu erstellen, die auf der Benutzeroberfläche angezeigt wird. Im Beispiel lautet die resultierende Beschriftung "Musik mit Windows Media Player wiedergeben".
 
-Der DefaultIcon-Wert verweist entweder auf eine ICO-Datei oder auf eine Ressource in einer Binärdatei. Wenn der numerische Wert, der auf den Binär Dateinamen folgt, 0 (null) oder größer ist, dann ist dies der Indexwert des Symbols in dieser Binärdatei. Wenn es sich um einen negativen Wert handelt, ist dies die Symbol Ressourcen-ID. Es werden negative Indexwerte empfohlen. Im Fall einer ICO-Datei ist kein Wert erforderlich. Es wird empfohlen, Umgebungsvariablen im Pfad zu verwenden.
+Der DefaultIcon-Wert verweist entweder auf eine ICO-Datei oder eine Ressource in einer Binärdatei. Wenn der numerische Wert, der dem Binärdateinamen folgt, 0 (null) oder größer ist, ist er der Indexwert des Symbols in dieser Binärdatei. Wenn es sich um einen negativen Wert handelt, handelt es sich um die Symbolressourcen-ID. Negative Indexwerte werden empfohlen. Bei einer ICO-Datei ist kein Wert erforderlich. Es wird empfohlen, umgebungsvariablen im Pfad zu verwenden.
 
-Der initcmdline-Wert übergibt unverändert durch die [**ihweventhandler:: Initialize**](/windows/desktop/api/Shobjidl/nf-shobjidl-ihweventhandler-initialize) -Methode, bevor andere Methoden aufgerufen werden.
+Der InitCmdLine-Wert wird unverändert durch die [**IHWEventHandler::Initialize-Methode**](/windows/desktop/api/Shobjidl/nf-shobjidl-ihweventhandler-initialize) übergeben, bevor andere Methoden aufgerufen werden.
 
-Das folgende Beispiel zeigt die Unterschlüssel und Werte, die für ein Gerät verwendet werden, das direkt gelesen werden kann, z. b. ein CD-ROM-Laufwerk oder einen anderen Wechsel Datenträger. Der Beispiel Handler wird auch als **MyHandler** bezeichnet.
+Das folgende Beispiel zeigt die Unterschlüssel und Werte, die für ein Gerät verwendet werden, das direkt gelesen werden kann, z. B. ein CD-ROM-Laufwerk oder ein anderer Wechseldatenträger. Auch hier heißt der Beispielhandler **MyHandler**.
 
 ```
 HKEY_LOCAL_MACHINE or HKEY_CURRENT_USER
@@ -70,9 +70,9 @@ HKEY_LOCAL_MACHINE or HKEY_CURRENT_USER
                            Provider [REG_SZ] = @%systemroot%\System32\wiaacmgr.exe,-101
 ```
 
-In diesem Beispiel werden die Aktions-und Anbieter Werte als Dateiname mit einer Ressourcen Zeichenfolge anstelle von Literalwerten angezeigt, aber die Zeichen folgen, auf die Sie verweisen, werden auf die gleiche Weise verwendet. Sie werden mit dem Wort "using" kombiniert, um eine benutzerfreundliche Beschriftung zu bilden, wie bereits erläutert.
+In diesem Beispiel werden die Werte Für Aktion und Anbieter als Dateiname mit einer Ressourcenzeichenfolge anstelle von Literalwerten angezeigt, aber die Zeichenfolgen, auf die sie verweisen, werden auf die gleiche Weise verwendet. Sie werden mit dem Wort "using" kombiniert, um eine benutzerfreundliche Beschriftung zu bilden, wie weiter oben erläutert.
 
-Die Werte invokeprogid und invokeverb ersetzen CLSID, initcmdline und ProgID. Die Werte invokeprogid und invokeverb entsprechen den Schlüsselnamen, die unter **HKEY \_ Classes \_ root** gefunden werden, wie im folgenden Registrierungs Eintrag gezeigt. Diese Gruppe von Beispiel Schlüsseln entspricht dem zuvor beschriebenen spezifischen handlerbeispiel.
+InvokeProgID- und InvokeVerb-Werte ersetzen CLSID, InitCmdLine und ProgID. Die InvokeProgID- und InvokeVerb-Werte stimmen mit Schlüsselnamen überein, die sich unter **HKEY \_ CLASSES \_ ROOT** befinden, wie im folgenden Registrierungseintrag gezeigt. Dieser Satz von Beispielschlüsseln entspricht dem zuvor beschriebenen spezifischen Handlerbeispiel.
 
 ```
 HKEY_CLASSES_ROOT
@@ -83,9 +83,9 @@ HKEY_CLASSES_ROOT
                Clsid = {F1ABE2B5-C073-4dba-B6EB-FD7A5111DD8F}
 ```
 
-Die [**cokreateingestance**](/windows/win32/api/combaseapi/nf-combaseapi-cocreateinstance) -Funktion verwendet die CLSID, um die entsprechende Anwendung zu implementieren.
+Die [**CoCreateInstance-Funktion**](/windows/win32/api/combaseapi/nf-combaseapi-cocreateinstance) verwendet die CLSID, um die entsprechende Anwendung zu implementieren.
 
-Nachdem Sie den Handler auf eine dieser beiden Arten definiert haben, müssen Sie ihn für ein bestimmtes Ereignis registrieren. Hierzu geben Sie den Handlernamen als Wert für den Schlüssel dieses Ereignisses unter **Eventhandlers** an. Im folgenden Beispiel wird gezeigt, wie **MyHandler** als Handler für das genericvolumearrival-Ereignis registriert wird. Es ist kein Datenwert zugewiesen.
+Nachdem Sie den Handler auf eine dieser beiden Arten definiert haben, müssen Sie ihn für ein bestimmtes Ereignis registrieren. Dazu geben Sie den Handlernamen als Wert für den Schlüssel dieses Ereignisses unter **EventHandlers an.** Im folgenden Beispiel wird gezeigt, wie **MyHandler** als Handler für das GenericVolume Handler-Ereignis registriert wird. Ihm ist kein Datenwert zugewiesen.
 
 ```
 HKEY_LOCAL_MACHINE or HKEY_CURRENT_USER
@@ -104,10 +104,10 @@ HKEY_LOCAL_MACHINE or HKEY_CURRENT_USER
 
 <dl> <dt>
 
-[**Ihweventhandler**](/windows/desktop/api/Shobjidl/nn-shobjidl-ihweventhandler)
+[**IHWEventHandler**](/windows/desktop/api/Shobjidl/nn-shobjidl-ihweventhandler)
 </dt> <dt>
 
-[**CoCreateInstance**](/windows/win32/api/combaseapi/nf-combaseapi-cocreateinstance)
+[**Cocreateinstance**](/windows/win32/api/combaseapi/nf-combaseapi-cocreateinstance)
 </dt> </dl>
 
  

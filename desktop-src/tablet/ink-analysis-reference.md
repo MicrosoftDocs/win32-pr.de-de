@@ -1,5 +1,5 @@
 ---
-description: Dieser Abschnitt enthält die Referenz zur Ink-Analyse für die COM-Bibliotheksreferenz für Tablet PC. Die Klassen und Schnittstellen für die Ink-Analyse sind nicht automation-kompatibel.
+description: Dieser Abschnitt enthält die Referenz zur Ink-Analyse für die COM-Bibliotheksreferenz für Tablet PC. Die Klassen und Schnittstellen der Ink-Analyse sind nicht Automation-kompatibel.
 ms.assetid: c53fc913-66e4-4b50-8f61-7d4e57093d4f
 title: Referenz zur Ink-Analyse
 ms.topic: article
@@ -13,15 +13,15 @@ ms.locfileid: "118718720"
 ---
 # <a name="ink-analysis-reference"></a>Referenz zur Ink-Analyse
 
-Dieser Abschnitt enthält die Referenz zur Ink-Analyse für die COM-Bibliotheksreferenz für Tablet PC. Die Klassen und Schnittstellen für die Ink-Analyse sind nicht automation-kompatibel.
+Dieser Abschnitt enthält die Referenz zur Ink-Analyse für die COM-Bibliotheksreferenz für Tablet PC. Die Klassen und Schnittstellen der Ink-Analyse sind nicht Automation-kompatibel.
 
 ## <a name="in-this-section"></a>In diesem Abschnitt
 
 -   [Klassen und Schnittstellen für die Ink-Analyse](classes-and-interfaces---ink-analysis.md)
--   [Ink Analysis Constants](ink-analysis-constants.md)
--   [Enumerationen der Ink-Analyse](ink-analysis-enumerations.md)
+-   [Konstanten für die Ink-Analyse](ink-analysis-constants.md)
+-   [Ink Analysis Enumerations](ink-analysis-enumerations.md)
 -   [Ink Analysis Events](-ianalysisevents.md)
--   [Struktur der Ink-Analyse](ink-analysis-structures.md)
+-   [Ink-Analysestrukturen](ink-analysis-structures.md)
 
  
 

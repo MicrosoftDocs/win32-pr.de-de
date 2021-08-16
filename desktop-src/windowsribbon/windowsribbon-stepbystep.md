@@ -1,66 +1,66 @@
 ---
-title: Erstellen einer Menü Bandanwendung
-description: Das Windows-Menüband-Framework besteht aus zwei unterschiedlichen, aber abhängigen Entwicklungsplattformen, eine Markup Sprache, die auf Extensible Application Markup Language (XAML) basiert, um Steuerelemente und deren visuelles Layout zu deklarieren, sowie einen auf C++ Component Object Model (com) basierenden Satz von Schnittstellen zum Definieren von Befehls Funktionalität und anwendungshooks. Diese Arbeitsabteilung innerhalb der Multifunktionsleisten-Framework-Architektur erfordert, dass ein Entwickler, der die umfassenden Benutzeroberflächen Funktionen des Frameworks nutzen möchte, die Benutzeroberfläche im Markup entwerfen und beschreiben muss und dann die COM-Schnittstellen des Menüband-Frameworks verwenden, um das Framework mit der Host Anwendung zu verbinden.
+title: Erstellen einer Menübandanwendung
+description: Das Windows Menüband-Framework besteht aus zwei unterschiedlichen, aber abhängigen Entwicklungsplattformen, einer Markupsprache, die auf Extensible Application Markup Language (XAML) zum Deklarieren von Steuerelementen und deren visuellem Layout basiert, und einem C++-Component Object Model (COM)-basierten Satz von Schnittstellen zum Definieren von Befehlsfunktionen und Anwendungshooks. Diese Arbeitsaufteilung innerhalb der Menüband-Frameworkarchitektur erfordert, dass ein Entwickler, der die umfassenden Benutzeroberflächenfunktionen des Frameworks nutzen möchte, die Benutzeroberfläche im Markup entwerfen und beschreiben und dann die COM-Schnittstellen des Menübandframeworks verwenden muss, um das Framework mit der Hostanwendung zu verbinden.
 ms.assetid: 1bd3dbb5-822b-4551-8330-8b202a4cecdf
 keywords:
-- Windows-Menüband, Erstellen von Anwendungen
-- Multifunktionsleiste, Erstellen von Anwendungen
-- Windows-Menüband, Roadmap
+- Windows Menüband, Erstellen von Anwendungen
+- Menüband, Erstellen von Anwendungen
+- Windows Menüband, Roadmap
 - Menüband, Roadmap
-- Windows-Menüband, Markup
+- Windows Menüband, Markup
 - Menüband, Markup
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 0a10f683c7fbb07b9992e418a4c09dc9aecba280
-ms.sourcegitcommit: 592c9bbd22ba69802dc353bcb5eb30699f9e9403
+ms.openlocfilehash: ee3cc3395b2fe53759152f5d0244c6546c08832bda190035a918af6049a99811
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "104390740"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117850029"
 ---
-# <a name="creating-a-ribbon-application"></a>Erstellen einer Menü Bandanwendung
+# <a name="creating-a-ribbon-application"></a>Erstellen einer Menübandanwendung
 
-Das Windows-Menüband-Framework besteht aus zwei unterschiedlichen, aber abhängigen Entwicklungsplattformen: einer Markup Sprache, die auf Extensible Application Markup Language (XAML) basiert, um Steuerelemente und deren visuelles Layout zu deklarieren, und einem auf C++ Component Object Model (com) basierenden Satz von Schnittstellen zum Definieren von Befehls Funktionalität und anwendungshooks. Diese Arbeitsabteilung innerhalb der Multifunktionsleisten-Framework-Architektur erfordert, dass ein Entwickler, der die umfassenden Benutzeroberflächen Funktionen des Frameworks nutzen möchte, die Benutzeroberfläche im Markup entwerfen und beschreiben muss und dann die COM-Schnittstellen des Menüband-Frameworks verwenden, um das Framework mit der Host Anwendung zu verbinden.
+Das Windows Menübandframework besteht aus zwei unterschiedlichen, aber abhängigen Entwicklungsplattformen: einer Markupsprache, die auf Extensible Application Markup Language (XAML) zum Deklarieren von Steuerelementen und deren visuellem Layout basiert, und einem C++-Component Object Model (COM)-basierten Satz von Schnittstellen zum Definieren von Befehlsfunktionen und Anwendungshooks. Diese Arbeitsaufteilung innerhalb der Menüband-Frameworkarchitektur erfordert, dass ein Entwickler, der die umfassenden Benutzeroberflächenfunktionen des Frameworks nutzen möchte, die Benutzeroberfläche im Markup entwerfen und beschreiben und dann die COM-Schnittstellen des Menübandframeworks verwenden muss, um das Framework mit der Hostanwendung zu verbinden.
 
--   [Menüband-Roadmap](#ribbon-roadmap)
+-   [Roadmap für Menüband](#ribbon-roadmap)
 -   [Schreiben des Markups](#write-the-markup)
-    -   [Markup kompilieren](#compile-the-markup)
+    -   [Kompilieren des Markups](#compile-the-markup)
 -   [Erstellen der Anwendung](#build-the-application)
-    -   [Initialisieren der Multifunktionsleiste](#initialize-the-ribbon)
-    -   [Das Markup mit der Anwendung verknüpfen](#link-the-markup-to-the-application)
+    -   [Initialisieren des Menübands](#initialize-the-ribbon)
+    -   [Verknüpfen des Markups mit der Anwendung](#link-the-markup-to-the-application)
     -   [Kompilieren der Anwendung](#link-the-markup-to-the-application)
--   [Lauf Zeit Updates und Ausführungen](#run-time-updates-and-executions)
+-   [Laufzeitupdates und -ausführungen](#run-time-updates-and-executions)
 -   [OLE-Unterstützung](#ole-support)
 -   [Zugehörige Themen](#related-topics)
 
-## <a name="ribbon-roadmap"></a>Menüband-Roadmap
+## <a name="ribbon-roadmap"></a>Roadmap für Menüband
 
-Die visuellen Aspekte einer Menü Bandanwendung, wie z. b. welche Steuerelemente angezeigt werden und wo Sie platziert werden, werden im Markup deklariert (siehe [Deklarieren von Befehlen und Steuerelementen mit Menüband-Markup](windowsribbon-schema.md)). Die Anwendungs Befehls Logik, z. b. Was geschieht, wenn eine Schaltfläche gedrückt wird, wird im Code implementiert.
+Die visuellen Aspekte einer Menübandanwendung, z. B. welche Steuerelemente angezeigt werden und wo sie platziert werden, werden im Markup deklariert (siehe [Deklarieren von Befehlen und Steuerelementen mit Menübandmarkup](windowsribbon-schema.md)). Die Logik des Anwendungsbefehls, z. B. was geschieht, wenn eine Schaltfläche gedrückt wird, wird im Code implementiert.
 
-Der Prozess der Implementierung eines Menübands und der Einbindung in eine Windows-Anwendung erfordert vier grundlegende Aufgaben: Schreiben Sie das Markup, kompilieren Sie das Markup, schreiben Sie den Code, und kompilieren und verknüpfen Sie die gesamte Anwendung.
+Der Prozess der Implementierung eines Menübands und derEntbindung in eine Windows Anwendung erfordert vier grundlegende Aufgaben: Schreiben des Markups, Kompilieren des Markups, Schreiben des Codes und Kompilieren und Verknüpfen der gesamten Anwendung.
 
-Das folgende Diagramm veranschaulicht den Workflow für eine typische multifunktionsleistenimplementierung.
+Das folgende Diagramm veranschaulicht den Workflow für eine typische Menübandimplementierung.
 
-![das Diagramm zeigt den Workflow für eine typische Multifunktionsleisten Implementierung.](images/overviews/ribbonroadmap.png)
+![Diagramm, das den Workflow für eine typische Menübandimplementierungen zeigt.](images/overviews/ribbonroadmap.png)
 
 In den folgenden Abschnitten wird dieser Prozess ausführlicher beschrieben.
 
 ## <a name="write-the-markup"></a>Schreiben des Markups
 
-Nachdem die Multifunktionsleisten-Benutzeroberfläche entworfen wurde, besteht die erste Aufgabe für einen Anwendungsentwickler darin, die Benutzeroberfläche mit Menüband-Markup zu beschreiben.
+Nachdem die Menüband-Benutzeroberfläche entworfen wurde, besteht die erste Aufgabe für einen Anwendungsentwickler darin, die Benutzeroberfläche mit Menübandmarkup zu beschreiben.
 
 > [!IMPORTANT]
-> Die Markup Schema Datei uicc. xsd von Ribbon Framework wird mit dem Microsoft Windows Software Development Kit (SDK) für Windows 7 und .NET Framework 4,0 installiert. Wenn Sie den Standard Installationspfad verwenden, befindet sich die Datei im Ordner% Program Files% \\ Microsoft sdert \\ Windows \\ \[ Version Number bin, in \] \\ dem von vielen XML-Editoren auf Sie verwiesen werden kann, um Hinweise und automatische Vervollständigung bereitzustellen.
+> Die Menübandframework-Markupschemadatei UICC.xsd wird mit dem Microsoft Windows Software Development Kit (SDK) für Windows 7 und .NET Framework 4.0 installiert. Unter Verwendung des Standardinstallationspfads befindet sich die Datei im Ordner %ProgramFiles% \\ Microsoft SDKs \\ Windows \\ \[ Versionsnummer \] \\ Bin, in dem viele XML-Editoren auf sie verweisen können, um Hinweise und automatische Vervollständigung bereitzustellen.
 
- 
+ 
 
-Menü Band Steuerelemente, Menü Band Befehle (die Steuerelement unabhängigen Elemente, die die Basisfunktionalität für Menüband-Steuerelemente bereitstellen), und das gesamte Steuerelement Layout und visuelle Beziehungen werden im Markup deklariert. Die Struktur des Menü Band Markups hebt den Unterschied zwischen Menüband-Steuerelementen und Befehlen durch zwei primäre Knoten Hierarchien hervor: eine Struktur von [Befehlen und Ressourcen](windowsribbon-reference-elements-command.md) [sowie eine](windowsribbon-reference-elements-view.md) Ansichts Struktur.
+Menübandsteuerelemente, Menübandbefehle (die steuerelementunabhängigen Elemente, die die Basisfunktionalität für Menübandsteuerelemente bereitstellen) und alle Steuerelementlayout- und visuellen Beziehungen werden im Markup deklariert. Die Struktur des Menübandmarkups hebt den Unterschied zwischen Menübandsteuerelementen und Befehlen durch zwei primäre Knotenhierarchien hervor: eine [Commands- und Resources-Struktur und](windowsribbon-reference-elements-command.md) eine [Views-Struktur.](windowsribbon-reference-elements-view.md)
 
-Alle Container und Aktionen, die über das Menüband verfügbar gemacht werden, werden in der Struktur " [Befehle und Ressourcen](windowsribbon-reference-elements-command.md) " deklariert. Jedes Command-Element ist einem Satz von Ressourcen zugeordnet, die vom Benutzeroberflächen Entwurf benötigt werden.
+Alle Container und Aktionen, die vom Menüband verfügbar gemacht werden, werden in der [Struktur Befehle und Ressourcen](windowsribbon-reference-elements-command.md) deklariert. Jedes Command-Element ist einem Satz von Ressourcen zugeordnet, wie dies für den Benutzeroberflächenentwurf erforderlich ist.
 
-Nachdem Sie die Befehle für eine Anwendung erstellt haben, deklarieren Sie Steuerelemente in der Struktur [Sichten](windowsribbon-reference-elements-view.md) und binden jedes Steuerelement an einen Befehl, um die Befehls Funktionalität verfügbar zu machen. Das Menüband-Framework bestimmt die tatsächliche Positionierung der Steuerelemente auf der Grundlage der hier deklarierten Steuerelement Hierarchie.
+Nachdem Sie die Befehle für eine Anwendung erstellt haben, deklarieren Sie Steuerelemente in der [Ansichtsstruktur](windowsribbon-reference-elements-view.md) und binden jedes Steuerelement an einen Befehl, um die Befehlsfunktion verfügbar zu machen. Das Menübandframework bestimmt die tatsächliche Positionierung der Steuerelemente basierend auf der hier deklarierten Steuerelementhierarchie.
 
-Im folgenden Codebeispiel wird veranschaulicht, wie Sie ein Schaltflächen-Steuerelement mit der Bezeichnung Exit Application deklarieren und einem Exit-Befehl zuordnen.
+Im folgenden Codebeispiel wird veranschaulicht, wie Sie ein Button-Steuerelement mit der Bezeichnung Exit-Anwendung deklarieren und einem Exitbefehl zuordnen.
 
 
 ```
@@ -87,53 +87,53 @@ Im folgenden Codebeispiel wird veranschaulicht, wie Sie ein Schaltflächen-Steue
 
 
 > [!TIP]
-> Obwohl es möglich ist, eine beliebige Dateinamenerweiterung für die Menüband-Markup Datei zu verwenden, ist XML die empfohlene Erweiterung, die in der gesamten Dokumentation verwendet wird.
+> Es ist zwar möglich, eine beliebige Dateinamenerweiterung für die Menüband-Markupdatei zu verwenden, aber .xml ist die empfohlene Erweiterung, die in der gesamten Dokumentation verwendet wird.
 
- 
+ 
 
-### <a name="compile-the-markup"></a>Markup kompilieren
+### <a name="compile-the-markup"></a>Kompilieren des Markups
 
-Nachdem die Menüband-Markup Datei erstellt wurde, muss Sie vom Menüband-Markup Compiler (UICC), der im Windows-Software Development Kit (SDK) enthalten ist, in ein binäres Format kompiliert werden. Ein Verweis auf diese Binärdatei wird während der Initialisierung des Menüband-Frameworks von der Host Anwendung an die [**iuiframework:: loadui**](/windows/desktop/api/uiribbon/nf-uiribbon-iuiframework-loadui) -Methode übermittelt.
+Nachdem die Menüband-Markupdatei erstellt wurde, muss sie vom Menübandmarkupcompiler UI Command Compiler (UICC), der im Windows Software Development Kit (SDK) enthalten ist, in ein Binärformat kompiliert werden. Ein Verweis auf diese Binärdatei wird während der Initialisierung des Menübandframeworks durch die Hostanwendung an die [**IUIFramework::LoadUI-Methode**](/windows/desktop/api/uiribbon/nf-uiribbon-iuiframework-loadui) übergeben.
 
-UICC kann direkt über ein Befehlszeilenfenster ausgeführt oder als "benutzerdefinierter Buildschritt" in Visual Studio hinzugefügt werden.
+UICC kann direkt über ein Befehlszeilenfenster ausgeführt oder als "Benutzerdefinierter Buildschritt" in Visual Studio hinzugefügt werden.
 
-In der folgenden Abbildung wird der UICC Markup Compiler im Windows 7 SDK-cmd-Shellfenster gezeigt.
+Die folgende Abbildung zeigt den UICC-Markupcompiler im CMD Shell-Fenster Windows 7 SDK.
 
-![Screenshot, der uicc.exe in einem Befehlszeilenfenster anzeigt.](images/overviews/screenshot-intentcl-commandline.png)
+![Screenshot, der uicc.exe in einem Befehlszeilenfenster zeigt.](images/overviews/screenshot-intentcl-commandline.png)
 
-Die folgende Abbildung zeigt UICC, das als benutzerdefinierter Buildschritt in Visual Studio hinzugefügt wurde.
+Die folgende Abbildung zeigt UICC, das in Visual Studio als benutzerdefinierter Buildschritt hinzugefügt wurde.
 
 ![Screenshot, der zeigt, uicc.exe als benutzerdefinierter Buildschritt in Visual Studio hinzugefügt wurde.](images/overviews/screenshot-vs-intentcl-custombuildstep.png)
 
-Das UICC generiert drei Dateien: eine binäre Version des Markups (. BML), einen ID-Definitions Header (h-Datei) zum verfügbar machen von Markup Elementen für die Menüband-Host Anwendung und ein [Ressourcen Definitions Skript](../menurc/about-resource-files.md) (RC-Datei), um das Menüband Bild und die Zeichen folgen Ressourcen zur Kompilierzeit mit der Host Anwendung zu verknüpfen.
+Die UICC generiert drei Dateien: eine binäre Version des Markups (.bml), einen ID-Definitionsheader (H-Datei), um Markupelemente für die Menübandhostanwendung verfügbar zu machen, und ein [Ressourcendefinitionsskript (RC-Datei),](../menurc/about-resource-files.md) um Menübandimage- und Zeichenfolgenressourcen zur Kompilierzeit mit der Hostanwendung zu verknüpfen.
 
-Ausführlichere Informationen zum Kompilieren von Multifunktionsleisten-Frameworks finden Sie unter Kompilieren von Menü [Band Markup](windowsribbon-intentcl.md).
+Weitere Informationen zum Kompilieren von Menübandframework-Markup finden Sie unter [Kompilieren von Menübandmarkup](windowsribbon-intentcl.md).
 
 ## <a name="build-the-application"></a>Erstellen der Anwendung
 
-Nachdem die vorläufige Benutzeroberfläche für eine Multifunktionsleistenanwendung im Markup entworfen und implementiert wurde, muss der Anwendungscode geschrieben werden, der das Framework initialisiert, das Markup nutzt und die im Markup deklarierten Befehle an die entsprechenden Befehls Handler in der Anwendung bindet.
+Nachdem die vorläufige Benutzeroberfläche für eine Menübandanwendung im Markup entworfen und implementiert wurde, muss Anwendungscode geschrieben werden, der das Framework initialisiert, das Markup nutzt und die im Markup deklarierten Befehle an die entsprechenden Befehlshandler in der Anwendung bindet.
 
 > [!IMPORTANT]
 >
-> Da das Multifunktionsleisten-Framework com-basiert ist, wird empfohlen, dass Menü Bandprojekte den \_ \_ uuidof ()-Operator verwenden, um auf die GUIDs für Menüband Framework-Schnittstellen (IIDs) zu verweisen. In Fällen, in denen es nicht möglich ist, den \_ \_ uuidof ()-Operator zu verwenden, z. b. Wenn ein nicht-Microsoft-Compiler verwendet oder die Host Anwendung C-basiert ist, müssen die IIDs von der Anwendung definiert werden, da Sie nicht in UUID. lib enthalten sind.
+> Da das Menübandframework COM-basiert ist, wird empfohlen, dass Menübandprojekte den \_ \_ Operator uuidof() verwenden, um auf die GUIDs für Menübandframeworkschnittstellen (IIDs) zu verweisen. In Fällen, in denen es nicht möglich ist, den \_ \_ uuidof()-Operator zu verwenden, z. B. wenn ein Nicht-Microsoft-Compiler verwendet wird oder die Hostanwendung C-basiert ist, müssen die IIDs von der Anwendung definiert werden, da sie nicht in uuid.lib enthalten sind.
 >
-> Wenn die IIDs von der Anwendung definiert werden, müssen die in uiribbon. idl angegebenen GUIDs verwendet werden.
+> Wenn die IIDs von der Anwendung definiert werden, müssen die in UIRibbon.idl angegebenen GUIDs verwendet werden.
 >
-> Uiribbon. idl ist Teil des [Windows Software Development Kit (SDK)](https://msdn.microsoft.com/windows/bb980924.aspx) und befindet sich im Standard Installationspfad von% Program Files% \\ Microsoft SDKs \\ Windows \\ v 7.0 \\ include.
+> UIRibbon.idl ist teil des [Windows Software Development Kit (SDK)](https://msdn.microsoft.com/windows/bb980924.aspx) und befindet sich im Standardinstallationspfad von %ProgramFiles% Microsoft \\ SDKs Windows \\ \\ v7.0 \\ Include.
 
- 
+ 
 
-### <a name="initialize-the-ribbon"></a>Initialisieren der Multifunktionsleiste
+### <a name="initialize-the-ribbon"></a>Initialisieren des Menübands
 
-Das folgende Diagramm veranschaulicht die Schritte, die zum Implementieren einer einfachen Multifunktionsleistenanwendung erforderlich sind.
+Das folgende Diagramm veranschaulicht die Schritte, die zum Implementieren einer einfachen Menübandanwendung erforderlich sind.
 
-![Diagramm mit den Schritten, die zum Implementieren einer einfachen Multifunktionsleisten-Implementierung erforderlich sind.](images/overviews/initializationsteps.png)
+![Diagramm, das die Schritte zeigt, die zum Implementieren einer einfachen Menübandimplementierungen erforderlich sind.](images/overviews/initializationsteps.png)
 
-In den folgenden Schritten wird ausführlich beschrieben, wie eine einfache Menü Bandanwendung implementiert wird.
+In den folgenden Schritten wird ausführlich beschrieben, wie Sie eine einfache Menübandanwendung implementieren.
 
-1.  CoCreateInstance
+1.  Cocreateinstance
 
-    Die Anwendung ruft die com-Standard-cokreateinstance-Funktion mit der Multifunktionsleisten-Framework-Klassen-ID auf, um einen Zeiger auf das Framework abzurufen.
+    Die Anwendung ruft die COM CoCreateInstance-Standardfunktion mit der Klassen-ID des Menübandframeworks auf, um einen Zeiger auf das Framework abzurufen.
 
     ```
     IUIFramework* pFramework = NULL;
@@ -150,14 +150,14 @@ In den folgenden Schritten wird ausführlich beschrieben, wie eine einfache Men�
 
     
 
-2.  Initialisieren (HWND, iuiapplication \* )
+2.  Initialize(hwnd, IUIApplication \* )
 
-    Die Anwendung ruft [**iuiframework:: Initialize**](/windows/desktop/api/uiribbon/nf-uiribbon-iuiframework-initialize)auf und übergibt zwei Parameter: das Handle für das Fenster auf oberster Ebene, das das Menüband enthält, und einen Zeiger auf die [**iuiapplication**](/windows/desktop/api/uiribbon/nn-uiribbon-iuiapplication) -Implementierung, die es dem Framework ermöglicht, Rückrufe für die Anwendung zu erstellen.
+    Die Anwendung ruft [**IUIFramework::Initialize**](/windows/desktop/api/uiribbon/nf-uiribbon-iuiframework-initialize)auf und übergibt zwei Parameter: das Handle für das Fenster der obersten Ebene, das das Menüband enthält, und einen Zeiger auf die [**IUIApplication-Implementierung,**](/windows/desktop/api/uiribbon/nn-uiribbon-iuiapplication) die es dem Framework ermöglicht, Rückrufe für die Anwendung durchzuführen.
 
     > \[! Wichtig\]  
-    > Das Menüband-Framework wird als Single Thread-Apartment (STA) initialisiert.
+    > Das Menübandframework wird als Singlethread-Apartment (STA) initialisiert.
 
-     
+     
 
     ```
     hr = pFramework->Initialize(hWndHost, pApplication);
@@ -169,9 +169,9 @@ In den folgenden Schritten wird ausführlich beschrieben, wie eine einfache Men�
 
     
 
-3.  Loadui (Instanz, resourceName)
+3.  LoadUI(instanz, resourceName)
 
-    Die Anwendung ruft [**iuiframework:: loadui**](/windows/desktop/api/uiribbon/nf-uiribbon-iuiframework-loadui) auf, um die Markup Ressource zu binden. Der erste Parameter dieser Funktion ist ein Handle für die Menüband-Anwendungs Instanz. Der zweite Parameter ist der Name der zuvor kompilierten binären Markup Ressource. Indem das binäre Markup an das Multifunktionsleisten-Framework übergeben wird, signalisiert die Anwendung, wie die Menüband-Struktur lauten soll und wie Steuerelemente angeordnet werden sollten. Außerdem bietet das Framework ein Manifest von Befehlen, die verfügbar gemacht werden (z. b. einfügen, Ausschneiden, suchen), die vom Framework verwendet werden, wenn es Befehls bezogene Rückrufe zur Laufzeit ausführt.
+    Die Anwendung ruft [**IUIFramework::LoadUI**](/windows/desktop/api/uiribbon/nf-uiribbon-iuiframework-loadui) auf, um die Markupressource zu binden. Der erste Parameter dieser Funktion ist ein Handle für die Menübandanwendungsinstanz. Der zweite Parameter ist der Name der binären Markupressource, die zuvor kompiliert wurde. Indem das binäre Markup an das Menübandframework übergeben wird, signalisiert die Anwendung, wie die Menübandstruktur aussehen soll und wie Steuerelemente angeordnet werden sollen. Außerdem wird dem Framework ein Manifest von Befehlen zur Verfügung gestellt (z. B. Einfügen, Ausschneiden, Suchen), die vom Framework verwendet werden, wenn befehlsbezogene Rückrufe zur Laufzeit ausgeführt werden.
 
     ```
     hr = pFramework->LoadUI(GetModuleHandle(NULL), L"APPLICATION_RIBBON");
@@ -183,18 +183,18 @@ In den folgenden Schritten wird ausführlich beschrieben, wie eine einfache Men�
 
     
 
-4.  [**Iuiapplication:: onkreateuicommand**](/windows/desktop/api/uiribbon/nf-uiribbon-iuiapplication-oncreateuicommand) -Rückrufe
+4.  [**IUIApplication::OnCreateUICommand-Rückrufe**](/windows/desktop/api/uiribbon/nf-uiribbon-iuiapplication-oncreateuicommand)
 
-    Nachdem die Schritte 1 bis 3 abgeschlossen sind, weiß das Menüband-Framework, welche Befehle im Menüband verfügbar gemacht werden sollen. Das Framework benötigt jedoch noch zwei Dinge, bevor das Menüband voll funktionsfähig ist: eine Methode, um der Anwendung mitzuteilen, wann Befehle ausgeführt werden und wie Sie zur Laufzeit Befehls Ressourcen oder Eigenschaften erhalten. Wenn z. b. ein Kombinations Feld in der Benutzeroberfläche angezeigt werden soll, muss das Framework die Elemente Abfragen, mit denen das Kombinations Feld aufgefüllt werden soll.
+    Nach Abschluss der Schritte 1 bis 3 weiß das Menübandframework, welche Befehle im Menüband verfügbar gemacht werden sollen. Das Framework benötigt jedoch noch zwei Dinge, bevor das Menüband voll funktionsfähig ist: eine Möglichkeit, der Anwendung mitzuteilen, wann Befehle ausgeführt werden, und eine Möglichkeit zum Abrufen von Befehlsressourcen oder Eigenschaften zur Laufzeit. Wenn beispielsweise ein Kombinationsfeld auf der Benutzeroberfläche angezeigt werden soll, muss das Framework nach den Elementen fragen, mit denen das Kombinationsfeld aufgefüllt werden soll.
 
-    Diese beiden Funktionen werden über die [**iuicommandhandler**](/windows/desktop/api/uiribbon/nn-uiribbon-iuicommandhandler) -Schnittstelle behandelt. Insbesondere für jeden Befehl, der im binären Markup deklariert ist (siehe Schritt 3 oben), ruft das Framework [**iuiapplication:: onforateuicommand**](/windows/desktop/api/uiribbon/nf-uiribbon-iuiapplication-oncreateuicommand) auf, um die Anwendung nach einem **iuicommandhandler** -Objekt für diesen Befehl zu Fragen.
+    Diese beiden Funktionen werden über die [**IUICommandHandler-Schnittstelle**](/windows/desktop/api/uiribbon/nn-uiribbon-iuicommandhandler) verarbeitet. Insbesondere ruft das Framework für jeden im binären Markup deklarierten Befehl (siehe Schritt 3 [**oben) IUIApplication::OnCreateUICommand auf,**](/windows/desktop/api/uiribbon/nf-uiribbon-iuiapplication-oncreateuicommand) um die Anwendung nach einem **IUICommandHandler-Objekt** für diesen Befehl zu fragen.
 
     > [!Note]  
-    > Mit der [**iuicommandhandler**](/windows/desktop/api/uiribbon/nn-uiribbon-iuicommandhandler) -Schnittstelle kann ein Befehls Handler an einen oder mehrere Befehle gebunden werden.
+    > Mit der [**IUICommandHandler-Schnittstelle**](/windows/desktop/api/uiribbon/nn-uiribbon-iuicommandhandler) kann ein Befehlshandler an einen oder mehrere Befehle gebunden werden.
 
-     
+     
 
-Die Anwendung muss mindestens [**iuiapplication**](/windows/desktop/api/uiribbon/nn-uiribbon-iuiapplication) Methodenstub implementieren, die E \_ notimpl zurückgeben, wie im folgenden Beispiel gezeigt.
+Die Anwendung muss mindestens Stubs mit [**IUIApplication-Methoden**](/windows/desktop/api/uiribbon/nn-uiribbon-iuiapplication) implementieren, die E NOTIMPL zurückgeben, \_ wie im folgenden Beispiel gezeigt.
 
 
 ```
@@ -224,9 +224,9 @@ STDMETHOD(OnDestroyUICommand)(UINT32 commandId,
 
 
 
-### <a name="link-the-markup-to-the-application"></a>Das Markup mit der Anwendung verknüpfen
+### <a name="link-the-markup-to-the-application"></a>Verknüpfen des Markups mit der Anwendung
 
-An diesem Punkt müssen die Markup Ressourcen Dateien mit der Host Anwendung verknüpft werden, indem ein Verweis auf die Markup Ressourcen Definitionsdatei (die einen Verweis auf die Markup Header Datei enthält) in der Anwendungs Ressourcen Datei eingeschlossen wird. Beispielsweise ist für eine Anwendung mit dem Namen "ribbonapp" mit der Ressourcen Datei "ribbonui. RC" die folgende Zeile in der Datei "ribbonapp. RC" erforderlich.
+An diesem Punkt müssen die Markupressourcendateien mit der Hostanwendung verknüpft werden, indem ein Verweis auf die Markupressourcendefinitionsdatei (die einen Verweis auf die Markupheaderdatei enthält) in die Ressourcendatei der Anwendung eingeschlossen wird. Beispielsweise erfordert eine Anwendung namens RibbonApp mit einer Ressourcendatei namens ribbonUI.rc die folgende Zeile in der Datei RibbonApp.rc.
 
 
 ```C++
@@ -235,59 +235,59 @@ An diesem Punkt müssen die Markup Ressourcen Dateien mit der Host Anwendung ver
 
 
 
-Abhängig vom verwendeten Compiler und Linker kann das Ressourcen Definitions Skript auch kompiliert werden, bevor die Multifunktionsleistenanwendung kompiliert werden kann. Das Befehlszeilen Tool des [Ressourcen Compilers (RC)](../menurc/using-rc-the-rc-command-line-.md) , das im Lieferumfang von Microsoft Visual Studio und der Windows SDK enthalten ist, kann für diese Aufgabe verwendet werden.
+Abhängig vom verwendeten Compiler und Linker erfordert das Ressourcendefinitionsskript möglicherweise auch eine Kompilierung, bevor die Menübandanwendung kompiliert werden kann. Das Befehlszeilentool [ressourcencompiler (RC),](../menurc/using-rc-the-rc-command-line-.md) das mit Microsoft Visual Studio und dem Windows SDK ausgeliefert wird, kann für diese Aufgabe verwendet werden.
 
 ### <a name="compile-the-application"></a>Kompilieren der Anwendung
 
-Nachdem die Menüband-Anwendung kompiliert wurde, kann Sie ausgeführt und die Benutzeroberfläche getestet werden. Wenn die Benutzeroberfläche optimiert werden muss und keine Änderungen an zugeordneten Befehls Handlern im Kern Anwendungscode vorgenommen werden, überarbeiten Sie die Markup Quelldatei, kompilieren Sie das Markup mit UICC.exe neu, und verknüpfen Sie die neuen Markup Ressourcen Dateien. Wenn die Anwendung neu gestartet wird, wird die geänderte Benutzeroberfläche angezeigt.
+Nachdem die Menübandanwendung kompiliert wurde, kann sie ausgeführt und die Benutzeroberfläche getestet werden. Wenn die Benutzeroberfläche optimiert werden muss und keine Änderungen an zugeordneten Befehlshandlern im Hauptanwendungscode vorgenommen werden, überarbeiten Sie die Markupquelldatei, kompilieren Sie das Markup mit UICC.exe neu, und verknüpfen Sie die neuen Markupressourcendateien. Wenn die Anwendung neu gestartet wird, wird die geänderte Benutzeroberfläche angezeigt.
 
-All dies ist möglich, ohne den Kern Anwendungscode zu berühren – eine bedeutende Verbesserung im Vergleich zur standardmäßigen Anwendungsentwicklung und-Verteilung.
+All dies ist möglich, ohne den Kernanwendungscode zu berühren – eine erhebliche Verbesserung gegenüber der Entwicklung und Verteilung von Standardanwendungen.
 
-## <a name="run-time-updates-and-executions"></a>Lauf Zeit Updates und Ausführungen
+## <a name="run-time-updates-and-executions"></a>Laufzeitupdates und -ausführungen
 
-Die Lauf Zeit Kommunikationsstruktur des Menüband-Frameworks basiert auf einem Push-und Pull-oder bidirektionalen Aufrufer-Modell.
+Die Laufzeitkommunikationsstruktur des Menübandframeworks basiert auf einem Push- und Pullmodell oder einem zweiseitigen Aufrufermodell.
 
-Dieses Modell ermöglicht es dem Framework, die Anwendung zu informieren, wenn ein Befehl ausgeführt wird, und ermöglicht sowohl dem Framework als auch der Anwendung das Abfragen, aktualisieren und ungültig machen von Eigenschafts Werten und Menü Band Ressourcen. Diese Funktionalität wird durch eine Reihe von Schnittstellen und Methoden bereitgestellt.
+Dieses Modell ermöglicht es dem Framework, die Anwendung zu informieren, wenn ein Befehl ausgeführt wird, und ermöglicht es sowohl dem Framework als auch der Anwendung, Eigenschaftswerte und Menübandressourcen abzufragen, zu aktualisieren und für ungültig zu erklären. Diese Funktionalität wird über eine Reihe von Schnittstellen und Methoden bereitgestellt.
 
-Das Framework ruft aktualisierte Eigenschaften Informationen mithilfe der [**iuicommandhandler:: updateproperty**](/windows/desktop/api/uiribbon/nf-uiribbon-iuicommandhandler-updateproperty) -Rückruf Methode aus der Multifunktionsleisten-Anwendung ab. Eine Befehls-ID und ein Eigenschafts Schlüssel, der die zu Aktualisier Endes Befehls Eigenschaft identifiziert, werden an die Methode weitergegeben, die dann einen Wert für diesen Eigenschafts Schlüssel an das Framework zurückgibt oder diesen überträgt.
+Das Framework ruft aktualisierte Eigenschafteninformationen aus der Menübandanwendung über die [**Rückrufmethode IUICommandHandler::UpdateProperty**](/windows/desktop/api/uiribbon/nf-uiribbon-iuicommandhandler-updateproperty) ab. Eine Befehls-ID und ein Eigenschaftenschlüssel, der die zu aktualisierende Command-Eigenschaft identifiziert, werden an die Methode übergeben, die dann einen Wert für diesen Eigenschaftsschlüssel an das Framework zurückgibt oder pusht.
 
-Das Framework ruft [**iuicommandhandler:: Execute**](/windows/desktop/api/uiribbon/nf-uiribbon-iuicommandhandler-execute) auf, wenn ein Befehl ausgeführt wird, wobei sowohl die Befehls-ID als auch der aufgetretene Typ der Ausführung ([**UI \_ executionverb**](/windows/desktop/api/uiribbon/ne-uiribbon-ui_executionverb)) identifiziert wird. An dieser Stelle gibt die Anwendung die Ausführungs Logik für einen Befehl an.
+Das Framework ruft [**IUICommandHandler::Execute**](/windows/desktop/api/uiribbon/nf-uiribbon-iuicommandhandler-execute) auf, wenn ein Befehl ausgeführt wird. Dabei werden sowohl die Befehls-ID als auch der Typ der aufgetretenen Ausführung identifiziert ([**UI \_ EXECUTIONVERB**](/windows/desktop/api/uiribbon/ne-uiribbon-ui_executionverb)). Hier gibt die Anwendung die Ausführungslogik für einen Befehl an.
 
-Das folgende Diagramm veranschaulicht die Lauf Zeit Kommunikation für die Befehlsausführung zwischen dem Framework und der Anwendung.
+Das folgende Diagramm veranschaulicht die Laufzeitkommunikation für die Befehlsausführung zwischen dem Framework und der Anwendung.
 
-![das Diagramm zeigt ein Beispiel für die Lauf Zeit Kommunikation zwischen dem Menüband-Framework und einer Host Anwendung.](images/overviews/updatesandexecutions.png)
+![Diagramm, das ein Beispiel für die Laufzeitkommunikation zwischen dem Menübandframework und einer Hostanwendung zeigt.](images/overviews/updatesandexecutions.png)
 
 > [!Note]  
-> Das Implementieren der [**iuicommandhandler:: updateproperty**](/windows/desktop/api/uiribbon/nf-uiribbon-iuicommandhandler-updateproperty) -Funktion und der [**iuicommandhandler:: Execute**](/windows/desktop/api/uiribbon/nf-uiribbon-iuicommandhandler-execute) -Funktion ist nicht erforderlich, um anfänglich ein Menüband in einer Anwendung anzuzeigen. Diese Methoden sind jedoch erforderlich, um sicherzustellen, dass die Anwendung ordnungsgemäß funktioniert, wenn Befehle vom Benutzer ausgeführt werden.
+> Die Implementierung [**der Funktionen IUICommandHandler::UpdateProperty**](/windows/desktop/api/uiribbon/nf-uiribbon-iuicommandhandler-updateproperty) und [**IUICommandHandler::Execute**](/windows/desktop/api/uiribbon/nf-uiribbon-iuicommandhandler-execute) ist nicht erforderlich, um zunächst ein Menüband in einer Anwendung anzuzeigen. Diese Methoden sind jedoch erforderlich, um sicherzustellen, dass die Anwendung ordnungsgemäß funktioniert, wenn Befehle vom Benutzer ausgeführt werden.
 
- 
+ 
 
 ## <a name="ole-support"></a>OLE-Unterstützung
 
-Eine Menüband-Anwendung kann als OLE-Server konfiguriert werden, um die Out-of-Place-OLE-Aktivierung zu unterstützen.
+Eine Menübandanwendung kann als OLE-Server konfiguriert werden, um die out-of-place-OLE-Aktivierung zu unterstützen.
 
-Objekte, die in einer OLE-Serveranwendung erstellt wurden, behalten ihre Zuordnung mit der Serveranwendung bei, wenn Sie in eine OLE-Client Anwendung (oder in einen Container) eingefügt (oder eingefügt) werden. Bei der Out-of-Place-OLE-Aktivierung wird durch Doppelklicken auf das Objekt in der Client Anwendung eine dedizierte Instanz der Serveranwendung geöffnet, und das Objekt wird zur Bearbeitung geladen. Wenn die Serveranwendung geschlossen wird, werden alle an dem Objekt vorgenommenen Änderungen in der Client Anwendung übernommen.
+Objekte, die in einer OLE-Serveranwendung erstellt werden, behalten ihre Zuordnung zur Serveranwendung bei, wenn sie in eine OLE-Clientanwendung (oder einen -Container) eingefügt (eingefügt oder platziert) werden. Bei der nicht richtigen OLE-Aktivierung wird durch Doppelklicken auf das Objekt in der Clientanwendung eine dedizierte Instanz der Serveranwendung geöffnet und das Objekt zur Bearbeitung geladen. Wenn die Serveranwendung geschlossen wird, werden alle am Objekt vorgenommenen Änderungen in der Clientanwendung widergespiegelt.
 
 > [!Note]  
-> Das Menüband-Framework unterstützt keine direkte OLE-Aktivierung. Objekte, die in einem Menüband-basierten OLE-Server erstellt werden, können nicht innerhalb der OLE-Client Anwendung bearbeitet werden. Eine externe dedizierte Instanz der Serveranwendung ist erforderlich.
+> Das Menübandframework unterstützt keine inaktive OLE-Aktivierung. Objekte, die auf einem menübandbasierten OLE-Server erstellt wurden, können nicht innerhalb der OLE-Clientanwendung bearbeitet werden. Eine externe dedizierte Instanz der Serveranwendung ist erforderlich.
 
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
 <dl> <dt>
 
-[Deklarieren von Befehlen und Steuerelementen mit Menüband-Markup](./windowsribbon-schema.md)
+[Deklarieren von Befehlen und Steuerelementen mit Menübandmarkup](./windowsribbon-schema.md)
 </dt> <dt>
 
-[Multifunktionsleisten-Benutzeroberflächen Richtlinien](https://msdn.microsoft.com/library/cc872782.aspx)
+[Richtlinien für die Benutzerfreundlichkeit des Menübands](https://msdn.microsoft.com/library/cc872782.aspx)
 </dt> <dt>
 
-[Menüband-Entwurfsprozess](https://msdn.microsoft.com/library/cc872781.aspx)
+[Menübandentwurfsprozess](https://msdn.microsoft.com/library/cc872781.aspx)
 </dt> </dl>
 
- 
+ 
 
- 
+ 
 
 
 

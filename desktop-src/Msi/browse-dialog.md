@@ -37,7 +37,7 @@ Dialogfelder zum Durchsuchen enthalten in der Regel drei [PushButton-Steuereleme
 
  
 
-Damit die Option Neuer Ordner mit einem nicht standardmäßigen Ordnernamen funktioniert, muss der Pfad des neuen Ordners in der [UIText-Tabelle angegeben werden.](uitext-table.md) Die Pfadzeichenfolge sollte das Formular "Short file name \| long file name" für den Dateinamen verwenden. Verwenden Sie z. B. einen Dateinamen wie "MyProd~1 \| My 1 My Product". Weitere Informationen zum Dateiformat finden Sie unter [Filename](filename.md) column data type (Datentyp der Dateinamenspalte). Wenn der Pfad nicht in der UIText-Tabelle vorhanden oder auf einen ungültigen Wert festgelegt ist, wird er standardmäßig auf den Wert "Fldr \| New Folder" festgelegt. Die **Schaltfläche Neuer Ordner** kann weggelassen werden, wenn das Dialogfeld nur nach vorhandenen Ordnern suchen muss.
+Damit die Option Neuer Ordner mit einem nicht standardmäßigen Ordnernamen funktioniert, muss der Pfad des neuen Ordners in der [UIText-Tabelle angegeben werden.](uitext-table.md) Die Pfadzeichenfolge sollte das Formular "Short file name \| long file name" als Dateinamen verwenden. Verwenden Sie z. B. einen Dateinamen wie "MyProd~1 \| My 1 My Product". Weitere Informationen zum Dateiformat finden Sie unter [Filename](filename.md) column data type (Datentyp der Spalte Dateiname). Wenn der Pfad nicht in der UIText-Tabelle vorhanden oder auf einen ungültigen Wert festgelegt ist, wird er standardmäßig auf den Wert "Fldr \| New Folder" festgelegt. Die **Schaltfläche Neuer Ordner** kann weggelassen werden, wenn das Dialogfeld nur nach vorhandenen Ordnern suchen muss.
 
  
 

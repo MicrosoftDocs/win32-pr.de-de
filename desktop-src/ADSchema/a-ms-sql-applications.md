@@ -1,6 +1,6 @@
 ---
 title: MS-SQL-Applications-Attribut
-description: Wird nicht verwendet. Der Standardwert ist auf Appl 1, Appl 2, Appl 3, Appl 4 und Appl 5 festgelegt.
+description: Wird nicht verwendet. Der Standardwert ist auf, Appl 1, Appl 2, Appl 3, Appl 4 und Appl 5 festgelegt.
 ms.assetid: 4907439e-8b1d-4e9e-8fce-6f4845f29c90
 ms.tgt_platform: multiple
 keywords:
@@ -23,7 +23,7 @@ ms.locfileid: "118686740"
 ---
 # <a name="ms-sql-applications-attribute"></a>MS-SQL-Applications-Attribut
 
-Wird nicht verwendet. Der Standardwert ist auf Appl 1, Appl 2, Appl 3, Appl 4 und Appl 5 festgelegt.
+Wird nicht verwendet. Der Standardwert ist auf, Appl 1, Appl 2, Appl 3, Appl 4 und Appl 5 festgelegt.
 
 
 
@@ -35,7 +35,7 @@ Wird nicht verwendet. Der Standardwert ist auf Appl 1, Appl 2, Appl 3, Appl 4 un
 | Aktualisieren von Berechtigungen  | \-                                          |
 | Updatehäufigkeit  | \-                                          |
 | Attribute-Id      | 1.2.840.113556.1.4.1400                     |
-| System-ID-GUID    | fbcda2ea-ccee-11d2-9993-0000f87a57d4        |
+| System-Id-Guid    | fbcda2ea-ccee-11d2-9993-0000f87a57d4        |
 | Syntax            | [**String(Unicode)**](s-string-unicode.md) |
 
 
@@ -58,7 +58,7 @@ Wird nicht verwendet. Der Standardwert ist auf Appl 1, Appl 2, Appl 3, Appl 4 un
 | Link-ID                | \-                                                                                                                            |
 | MAPI-Id                | \-                                                                                                                            |
 | System-Only            | Falsch                                                                                                                         |
-| Ist einwertig       | Falsch                                                                                                                         |
+| Is-Single-Valued       | Falsch                                                                                                                         |
 | Ist indiziert             | Falsch                                                                                                                         |
 | Im globalen Katalog      | Falsch                                                                                                                         |
 | NT-Security-Descriptor | O:BAG:BAD:S:                                                                                                                  |
@@ -79,7 +79,7 @@ Wird nicht verwendet. Der Standardwert ist auf Appl 1, Appl 2, Appl 3, Appl 4 un
 | Link-ID                | \-                                                                                                                            |
 | MAPI-Id                | \-                                                                                                                            |
 | System-Only            | Falsch                                                                                                                         |
-| Ist einwertig       | Falsch                                                                                                                         |
+| Is-Single-Valued       | Falsch                                                                                                                         |
 | Ist indiziert             | Falsch                                                                                                                         |
 | Im globalen Katalog      | Falsch                                                                                                                         |
 | NT-Security-Descriptor | O:BAG:BAD:S:                                                                                                                  |
@@ -100,7 +100,7 @@ Wird nicht verwendet. Der Standardwert ist auf Appl 1, Appl 2, Appl 3, Appl 4 un
 | Link-ID                | \-                                                                                                                            |
 | MAPI-Id                | \-                                                                                                                            |
 | System-Only            | Falsch                                                                                                                         |
-| Ist einwertig       | Falsch                                                                                                                         |
+| Is-Single-Valued       | Falsch                                                                                                                         |
 | Ist indiziert             | Falsch                                                                                                                         |
 | Im globalen Katalog      | Falsch                                                                                                                         |
 | NT-Security-Descriptor | O:BAG:BAD:S:                                                                                                                  |

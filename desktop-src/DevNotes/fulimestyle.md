@@ -1,7 +1,7 @@
 ---
-description: Gibt an, ob ein nicht-Farbstil einen Unterstrich hat.
+description: Gibt an, ob ein nicht farbiger Stil einen Unterstreichungsstil aufgibt.
 ms.assetid: 452dda6e-b12b-457c-9a01-c5363359c9f5
-title: Fulimestyle-Funktion
+title: FUlIMEStyle-Funktion
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,16 +13,16 @@ api_type:
 - DllExport
 api_location:
 - Imeshare.dll
-ms.openlocfilehash: a49090d2ca192dfd3ec6d0064b92bd2233af79c2
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: c53e48fbf2c607ee8a99c4f952cdb1bf9056826def452c42283dfd615392c4ab
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106354109"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118956099"
 ---
-# <a name="fulimestyle-function"></a>Fulimestyle-Funktion
+# <a name="fulimestyle-function"></a>FUlIMEStyle-Funktion
 
-Gibt an, ob ein nicht-Farbstil einen Unterstrich hat.
+Gibt an, ob ein nicht farbiger Stil einen Unterstreichungsstil aufgibt.
 
 ## <a name="syntax"></a>Syntax
 
@@ -39,20 +39,20 @@ BOOL __cdecl FUlIMEStyle(
 
 <dl> <dt>
 
-*pimestyle* \[ in\]
+*pimestyle* \[ In\]
 </dt> <dd>
 
-Eine **imestyle** -Struktur, die von der [**pimestylefromattr**](pimestylefromattr.md) -Funktion zur체ckgegeben wird.
+Eine VON [**DER PIMEStyleFromAttr-Funktion zur체ckgegebene**](pimestylefromattr.md) **IMESTYLE-Struktur.**
 
 </dd> </dl>
 
 ## <a name="return-value"></a>R체ckgabewert
 
-TRUE, wenn der Stil einen Unterstrich hat.
+TRUE, wenn der Stil 체ber einen Unterstreichungsstil verf체gt.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Dieser Funktion ist keine Import Bibliothek oder Header Datei zugeordnet. Sie m체ssen ihn mithilfe der [**LoadLibrary**](/windows/win32/api/libloaderapi/nf-libloaderapi-loadlibrarya) -Funktion und der [**GetProcAddress**](/windows/win32/api/libloaderapi/nf-libloaderapi-getprocaddress) -Funktion aufrufen.
+Dieser Funktion ist keine Importbibliothek oder Headerdatei zugeordnet. Sie m체ssen sie mithilfe der [**Funktionen LoadLibrary**](/windows/win32/api/libloaderapi/nf-libloaderapi-loadlibrarya) und [**GetProcAddress**](/windows/win32/api/libloaderapi/nf-libloaderapi-getprocaddress) aufrufen.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -64,11 +64,11 @@ Dieser Funktion ist keine Import Bibliothek oder Header Datei zugeordnet. Sie m�
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Pimestylefromattr**](pimestylefromattr.md)
+[**PIMEStyleFromAttr**](pimestylefromattr.md)
 </dt> </dl>
 
  

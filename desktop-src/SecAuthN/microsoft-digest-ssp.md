@@ -1,5 +1,5 @@
 ---
-description: Implementiert das Digestzugriffsprotokoll, ein einfaches Authentifizierungsprotokoll für die Verwendung mit hypertext transfer protocol oder Simple Authentication Security Layer.
+description: Implementiert das Digest Access-Protokoll, ein einfaches Authentifizierungsprotokoll für die Verwendung mit Hypertext Transfer Protocol oder Simple Authentication Security Layer.
 ms.assetid: 0b7d67c9-00ac-4b04-bf8e-97aaf1020108
 title: Microsoft Digest SSP
 ms.topic: article
@@ -13,16 +13,16 @@ ms.locfileid: "117786972"
 ---
 # <a name="microsoft-digest-ssp"></a>Microsoft Digest SSP
 
-Microsoft Digest ist ein [*Sicherheitsunterstützungsanbieter (Security Support Provider,*](../secgloss/s-gly.md) SSP), der das Digestzugriffsprotokoll implementiert, ein einfaches Authentifizierungsprotokoll für Parteien, die an http- oder SASL-basierten Kommunikationen (Simple Authentication Security Layer) beteiligt sind.
+Microsoft Digest ist ein Sicherheitssupportanbieter [*(Security*](../secgloss/s-gly.md) Support Provider, SSP), der das Digest Access-Protokoll implementiert, ein einfaches Authentifizierungsprotokoll für Parteien, die an der http-basierten Kommunikation (Hypertext Transfer Protocol) oder der SASL-basierten Kommunikation (Simple Authentication Security Layer) beteiligt sind.
 
-Microsoft Digest bietet einen einfachen Mechanismus zur Reaktion auf Herausforderungen für die Authentifizierung von Clients. Dieser SSP ist für die Verwendung durch Client-/Serveranwendungen mit HTTP- oder SASL-basierter Kommunikation vorgesehen.
+Microsoft Digest bietet einen einfachen Antwortmechanismus für Herausforderungen für die Authentifizierung von Clients. Dieser SSP ist für die Verwendung durch Client-/Serveranwendungen mit HTTP- oder SASL-basierter Kommunikation vorgesehen.
 
 > [!IMPORTANT]
-> Die Digestauthentifizierung wird nicht gesamtstrukturübergreifend unterstützt.
+> Die Digestauthentifizierung wird gesamtstrukturenübergreifend nicht unterstützt.
 
  
 
-Die folgenden Abschnitte enthalten Informationen zu Microsoft Digest SSP.
+Die folgenden Abschnitte enthalten Informationen zum Microsoft Digest SSP.
 
 -   [Das Digestzugriffsprotokoll](the-digest-access-protocol.md)
 -   [Qualität von Schutz und Verschlüsselungen](quality-of-protection-and-ciphers.md)

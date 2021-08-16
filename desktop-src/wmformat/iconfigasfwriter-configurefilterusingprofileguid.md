@@ -1,9 +1,9 @@
 ---
 title: IConfigAsfWriter ConfigureFilterUsingProfileGuid-Methode
-description: Die ConfigureFilterUsingProfileGuid-Methode konfiguriert den Filter zum Schreiben einer ASF-Datei basierend auf dem angegebenen vordefinierten Profil. (Veraltet.)
+description: Die ConfigureFilterUsingProfileGuid-Methode konfiguriert den Filter, um eine ASF-Datei basierend auf dem angegebenen vordefinierten Profil zu schreiben. (Veraltet.)
 ms.assetid: 94161ee7-1b74-47af-9d77-568abe6237c3
 keywords:
-- 'ConfigureFilterUsingProfileGuid-Methode : Windows Media Format'
+- ConfigureFilterUsingProfileGuid-Methode windows Media Format
 - ConfigureFilterUsingProfileGuid-Methode windows Media Format , IConfigAsfWriter-Schnittstelle
 - IConfigAsfWriter-Schnittstelle windows Media Format , ConfigureFilterUsingProfileGuid-Methode
 topic_type:
@@ -24,7 +24,7 @@ ms.locfileid: "118703086"
 ---
 # <a name="iconfigasfwriterconfigurefilterusingprofileguid-method"></a>IConfigAsfWriter::ConfigureFilterUsingProfileGuid-Methode
 
-Die **ConfigureFilterUsingProfileGuid-Methode** konfiguriert den Filter zum Schreiben einer ASF-Datei basierend auf dem angegebenen vordefinierten Profil. (Veraltet.)
+Die **ConfigureFilterUsingProfileGuid-Methode** konfiguriert den Filter, um eine ASF-Datei basierend auf dem angegebenen vordefinierten Profil zu schreiben. (Veraltet.)
 
 ## <a name="syntax"></a>Syntax
 
@@ -44,7 +44,7 @@ HRESULT ConfigureFilterUsingProfileGuid(
 *guidProfile* \[ In\]
 </dt> <dd>
 
-**GUID,** die ein Profil identifiziert, wie in der Windows Media Format SDK-Headerdatei Wmsysprf.h definiert.
+**GUID,** die ein Profil gemäß definition in der Windows Media Format SDK-Headerdatei Wmsysprf.h identifiziert.
 
 </dd> </dl>
 

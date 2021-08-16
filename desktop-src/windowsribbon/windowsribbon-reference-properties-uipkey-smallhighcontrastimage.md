@@ -27,7 +27,7 @@ propertyDescription
 
 ## <a name="remarks"></a>Hinweise
 
-Ui \_ PKEY \_ SmallHighContrastImage wird von einer Anwendung verwendet, um das kleine Bild mit hohem Kontrast abzufragen, das einem Menübandsteuerelement zugeordnet ist.
+Ui PKEY SmallHighContrastImage wird von einer Anwendung verwendet, um das kleine Bild mit hohem Kontrast abfragt, \_ \_ das einem Menüband-Steuerelement zugeordnet ist.
 
 Der Eigenschaftswert ist ein [**IUIImage-Objekt.**](/windows/desktop/api/uiribbon/nn-uiribbon-iuiimage)
 

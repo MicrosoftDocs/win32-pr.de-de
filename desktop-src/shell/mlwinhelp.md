@@ -1,7 +1,7 @@
 ---
-description: Startet die Windows-Hilfe (Winhelp.exe) und übergibt zusätzliche Daten, mit denen die Art der von der Anwendung angeforderten Hilfe angegeben wird.
+description: Startet Windows Hilfe (Winhelp.exe) und übergibt zusätzliche Daten, die die Art der von der Anwendung angeforderten Hilfe angibt.
 ms.assetid: e7466832-f236-4567-b05d-37d25fe88ba2
-title: Mlwinhelp-Funktion
+title: MLWinHelp-Funktion
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -15,18 +15,18 @@ api_type:
 - DllExport
 api_location:
 - Shlwapi.dll
-ms.openlocfilehash: badfeb599fd24fd255eb064bbaf6d99a3b758bd8
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: a6c109f39107ba3cfd1800cca8db516d0033a2f3c32b9784e4359b3c6c50655d
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104977888"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118968899"
 ---
-# <a name="mlwinhelp-function"></a>Mlwinhelp-Funktion
+# <a name="mlwinhelp-function"></a>MLWinHelp-Funktion
 
-\[Diese Funktion ist über Windows XP und Windows Server 2003 verfügbar. Sie wird möglicherweise in nachfolgenden Versionen von Windows geändert oder ist nicht verfügbar.\]
+\[Diese Funktion ist über Windows XP und Windows Server 2003 verfügbar. Sie kann in nachfolgenden Versionen von geändert oder nicht verfügbar Windows.\]
 
-Startet die Windows-Hilfe (Winhelp.exe) und übergibt zusätzliche Daten, mit denen die Art der von der Anwendung angeforderten Hilfe angegeben wird.
+Startet Windows Hilfe (Winhelp.exe) und übergibt zusätzliche Daten, die die Art der von der Anwendung angeforderten Hilfe angibt.
 
 ## <a name="syntax"></a>Syntax
 
@@ -46,100 +46,100 @@ BOOL MLWinHelp(
 
 <dl> <dt>
 
-*hwndmain* \[ in\]
+*hWndMain* \[ In\]
 </dt> <dd>
 
 Typ: **HWND**
 
-Ein Handle für das Fenster, das die Hilfe anfordert. Die **mlwinhelp** -Funktion verwendet dieses Handle, um nachzuverfolgen, welche Anwendungen die Hilfe angefordert haben. Wenn der *ucommand* -Parameter Hilfe \_ Kontextmenü oder Hilfe \_ WM- \_ Hilfe angibt, identifiziert *hwndmain* das Steuerelement, das die Hilfe anfordert.
+Ein Handle für das Fenster, das Hilfe an fordert. Die **MLWinHelp-Funktion** verwendet dieses Handle, um zu verfolgen, welche Anwendungen Hilfe angefordert haben. Wenn der *uCommand-Parameter* HELP CONTEXTMENU oder HELP WM HELP angibt, identifiziert \_ \_ \_ *hWndMain* das Steuerelement, das Hilfe angibt.
 
 </dd> <dt>
 
-*lpszhelp* \[ in\]
+*lpszHelp* \[ In\]
 </dt> <dd>
 
 Typ: **LPCTSTR**
 
-Die Adresse einer auf NULL endenden Zeichenfolge, die den Pfad enthält, falls erforderlich, und den Namen der Hilfedatei, die von **mlwinhelp** angezeigt werden soll.
+Die Adresse einer auf NULL beendeten Zeichenfolge, die bei Bedarf den Pfad und den Namen der Hilfedatei enthält, die **MLWinHelp** anzeigen soll.
 
-Auf den Dateinamen kann eine Spitze Klammer (>) und der Name eines sekundären Fensters folgen, wenn das Thema in einem sekundären Fenster anstelle des primären Fensters angezeigt werden soll. Sie müssen den Namen des sekundären Fensters im Windows- \[ \] Abschnitt der Hilfeprojekt Datei (. hpj) definieren.
-
-</dd> <dt>
-
-*ucommand* \[ in\]
-</dt> <dd>
-
-Typ: **uint**
-
-Der Typ der angeforderten Hilfe. Eine Liste der möglichen Werte und deren Auswirkung auf den Wert, der im *dwdata* -Parameter zu platzieren ist, finden Sie im Abschnitt "Hinweise".
+Auf den Dateinamen kann eine eckige Klammer (>) und der Name eines sekundären Fensters folgen, wenn das Thema in einem sekundären Fenster und nicht im primären Fenster angezeigt werden soll. Sie müssen den Namen des sekundären Fensters im Windows-Abschnitt der Hilfeprojektdatei \[ \] (.hpj) definieren.
 
 </dd> <dt>
 
-*dwdata* \[ in\]
+*uCommand* \[ In\]
 </dt> <dd>
 
-Typ: **DWORD \_ ptr**
+Typ: **UINT**
 
-Weitere Daten. Der verwendete Wert hängt vom Wert des *ucommand* -Parameters ab. Eine Liste der möglichen *dwdata* -Werte finden Sie im Abschnitt "Hinweise".
+Der Angeforderte Hilfetyp. Eine Liste der möglichen Werte und deren Auswirkungen auf den Wert, der im *dwData-Parameter* gespeichert werden soll, finden Sie im Abschnitt "Hinweise".
+
+</dd> <dt>
+
+*dwData* \[ In\]
+</dt> <dd>
+
+Typ: **DWORD \_ PTR**
+
+Zusätzliche Daten. Der verwendete Wert hängt vom Wert des *uCommand-Parameters* ab. Eine Liste der möglichen *dwData-Werte* finden Sie im Abschnitt Hinweise.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Typ: **bool**
+Typ: **BOOL**
 
 Gibt bei Erfolg einen Wert ungleich 0 (null) oder andernfalls 0 (null) zurück. Um erweiterte Fehlerinformationen zu erhalten, rufen Sie [**GetLastError**](/windows/win32/api/errhandlingapi/nf-errhandlingapi-getlasterror) auf.
 
 ## <a name="remarks"></a>Bemerkungen
 
-Diese Funktion ist nicht in einer Header Datei enthalten und muss von Ordnungszahl 395 für **mlwinhelpa** und 397 für **mlwinhelpw** aufgerufen werden.
+Diese Funktion ist nicht in einer Headerdatei enthalten und muss mit der Ordnungszahl 395 für **MLWinHelpA** und 397 für **MLWinHelpW aufgerufen werden.**
 
-**Mlwinhelp** ist im Grunde ein Wrapper für [**WinHelp**](/windows/desktop/api/Winuser/nf-winuser-winhelpa). Es wird versucht, den Pfad zur Hilfedatei abzurufen, die der aktuellen Einstellung der Benutzeroberflächen Sprache entspricht, bevor **WinHelp** aufgerufen wird. Wenn Sie erfolgreich ist, übergibt Sie diesen Pfad. Wenn ein Fehler auftritt, übergibt er den Pfad, auf den von *lpszhelp* verwiesen wird.
+**MLWinHelp** ist im Wesentlichen ein Wrapper für [**WinHelp.**](/windows/desktop/api/Winuser/nf-winuser-winhelpa) Es wird versucht, den Pfad zur Hilfedatei zu erhalten, die der aktuellen Einstellung der Benutzeroberflächensprache entspricht, bevor **WinHelp aufruft.** Wenn dies erfolgreich ist, wird dieser Pfad übergibt. Wenn ein Fehler auftritt, wird der Pfad übergibt, auf den *lpszHelp zeigt.*
 
-Diese Funktion schlägt fehl, wenn Sie von einem beliebigen Kontext, aber vom aktuellen Benutzer aufgerufen wird.
+Diese Funktion schlägt fehl, wenn sie aus einem beliebigen Kontext aufgerufen wird, jedoch vom aktuellen Benutzer.
 
-Vor dem Schließen des Fensters, das die Hilfe angefordert hat, muss die Anwendung **mlwinhelp** aufrufen, wobei der *ucommand* -Parameter zum Beenden der Hilfe festgelegt ist \_ . Bis alle Anwendungen diesen Vorgang abgeschlossen haben, wird die Windows-Hilfe nicht beendet. Beachten Sie, dass das Aufrufen der Windows-Hilfe mit dem \_ Befehl Hilfe Quit nicht erforderlich ist, wenn Sie die Windows-Hilfe mithilfe des \_ Befehls Help contextpopup gestartet haben.
+Vor dem Schließen des Fensters, in dem Hilfe angefordert wurde, muss die Anwendung **MLWinHelp** aufrufen, und der *uCommand-Parameter* muss auf HELP \_ QUIT festgelegt sein. Bis alle Anwendungen dies getan haben, Windows die Hilfe nicht beendet. Beachten Sie, dass Windows Hilfe mit dem Befehl HELP QUIT nicht erforderlich ist, wenn Sie den \_ Befehl HELP CONTEXTPOPUP verwendet haben, um die Windows \_ starten.
 
-In der folgenden Tabelle werden die möglichen Werte für den *ucommand* -Parameter und die entsprechenden Formate des *dwdata* -Parameters angezeigt.
+Die folgende Tabelle zeigt die möglichen Werte für den *uCommand-Parameter* und die entsprechenden Formate des *dwData-Parameters.*
 
 
 
-| *ucommand*          | Action                                                                                                                                                                                                                                                               | *dwdata*                                                                                                                                                                                                                                                                                                     |
+| *uCommand*          | Aktion                                                                                                                                                                                                                                                               | *dwData*                                                                                                                                                                                                                                                                                                     |
 |---------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Hilfe \_ Befehl       | Führt ein Hilfe Makro oder eine Makro Zeichenfolge aus.                                                                                                                                                                                                                               | Die Adresse einer Zeichenfolge, die den Namen der zu testenden Hilfe Makros angibt. Wenn die Zeichenfolge mehrere Makronamen angibt, müssen die Namen durch Semikolons getrennt werden. Sie müssen für einige Makros die Kurzform des Makro namens verwenden, da der lange Name von der Windows-Hilfe nicht unterstützt wird.                         |
-| Hilfe \_ Inhalte      | Zeigt das von der Option Inhalt angegebene Thema im \[ Abschnitt Optionen \] der HPJ-Datei an. Dieser Befehl dient der Abwärtskompatibilität. Neue Anwendungen sollten eine CNT-Datei bereitstellen und den Help \_ Finder-Befehl verwenden.                                           | Erten Legen Sie auf 0 fest.                                                                                                                                                                                                                                                                                           |
-| Hilfe \_ Kontext       | Zeigt das Thema an, das durch den angegebenen Kontext Bezeichner identifiziert wird, der im \[ Karten \] Abschnitt der HPJ-Datei definiert ist.                                                                                                                                                   | Enthält den Kontext Bezeichner für das Thema.                                                                                                                                                                                                                                                               |
-| Hilfe ( \_ Kontextmenü)   | Zeigt das Menü **Hilfe** für das ausgewählte Fenster an und zeigt das Thema für das ausgewählte Steuerelement in einem Popup Fenster an.                                                                                                                                             | Die Adresse eines Arrays von **DWORD** -Paaren. Das erste **DWORD** in jedem Paar ist der Steuerelement Bezeichner, der zweite ist der Kontext Bezeichner für das Thema. Das Array muss durch ein paar Nullen beendet werden {0,0} . Wenn Sie einem bestimmten Steuerelement keine Hilfe hinzufügen möchten, legen Sie seinen Kontext Bezeichner auf-1 fest. |
-| Hilfe \_ contextpopup  | Zeigt das Thema an, das durch den angegebenen Kontext Bezeichner identifiziert wird, der im \[ Karten \] Abschnitt der HPJ-Datei in einem Popup Fenster definiert ist.                                                                                                                                | Enthält den Kontext Bezeichner für ein Thema.                                                                                                                                                                                                                                                                 |
-| Hilfe- \_ Finder        | Zeigt das Dialogfeld **Hilfe Themen** an.                                                                                                                                                                                                                             | Erten Legen Sie auf 0 fest.                                                                                                                                                                                                                                                                                           |
-| Hilfe für \_ forcefile     | Stellt sicher, dass in der Windows-Hilfe die richtige Hilfedatei angezeigt wird. Wenn die falsche Hilfedatei angezeigt wird, öffnet die Windows-Hilfe die richtige. Andernfalls gibt es keine Aktion.                                                                                     | Erten Legen Sie auf 0 fest.                                                                                                                                                                                                                                                                                           |
-| Hilfe \_ helponhelp    | Zeigt Hilfe zur Verwendung der Windows-Hilfe an, wenn die WinHlp32. HLP-Datei verfügbar ist.                                                                                                                                                                                     | Erten Legen Sie auf 0 fest.                                                                                                                                                                                                                                                                                           |
-| Hilfe \_ Index         | Zeigt das von der Option Inhalt angegebene Thema im \[ Abschnitt Optionen \] der HPJ-Datei an. Dieser Befehl dient der Abwärtskompatibilität. Neue Anwendungen sollten den Help \_ Finder-Befehl verwenden.                                                                   | Erten Legen Sie auf 0 fest.                                                                                                                                                                                                                                                                                           |
-| Hilfe \_ Taste           | Zeigt das Thema in der Schlüsselwort Tabelle an, das dem angegebenen Schlüsselwort entspricht, wenn eine genaue Übereinstimmung vorliegt. Wenn mehrere Übereinstimmungen vorhanden sind, wird der Index mit den Themen angezeigt, die im Listenfeld **Themen gefunden** werden.                                                 | Adresse einer Schlüsselwort Zeichenfolge. Mehrere Schlüsselwörter müssen durch Semikolons getrennt werden.                                                                                                                                                                                                                              |
-| Hilfe- \_ multikey      | Zeigt das Thema an, das durch ein Schlüsselwort in einer alternativen Schlüsselwort Tabelle angegeben wird.                                                                                                                                                                                           | Adresse einer [**multikeyhelp**](/windows/win32/api/winuser/ns-winuser-multikeyhelpa) -Struktur, die ein Tabellen fußnotiz-Zeichen und ein Schlüsselwort angibt.                                                                                                                                                                                     |
-| Hilfe \_ partialkey    | Zeigt das Thema in der Schlüsselwort Tabelle an, das dem angegebenen Schlüsselwort entspricht, wenn eine genaue Übereinstimmung vorliegt. Wenn mehrere Übereinstimmungen vorhanden sind, wird das Dialogfeld **gefundene Themen** angezeigt. Um den Index ohne Übergabe eines Schlüssel Worts anzuzeigen, verwenden Sie einen Zeiger auf eine leere Zeichenfolge. | Adresse einer Schlüsselwort Zeichenfolge. Mehrere Schlüsselwörter müssen durch Semikolons getrennt werden.                                                                                                                                                                                                                              |
-| Hilfe \_ Beenden          | Teilt der Windows-Hilfe mit, dass Sie nicht mehr benötigt wird. Wenn keine anderen Anwendungen nach Hilfe gefragt wurden, schließt Windows die Windows-Hilfe.                                                                                                                                         | Erten Legen Sie auf 0 fest.                                                                                                                                                                                                                                                                                           |
-| Hilfe \_ setContent   | Gibt das Inhalts Thema an. In der Windows-Hilfe wird dieses Thema angezeigt, wenn der Benutzer auf die Schaltfläche **Inhalt** klickt, wenn der Hilfedatei keine CNT-Datei zugeordnet ist.                                                                                                  | Enthält den Kontext Bezeichner für das Inhalts Thema.                                                                                                                                                                                                                                                      |
-| Hilfe \_ setpopup Torys \_ | Legt die Position des nachfolgenden Popup Fensters fest.                                                                                                                                                                                                                   | Enthält die Positionsdaten. Verwenden Sie das [**makelong**](/previous-versions/windows/desktop/legacy/ms632660(v=vs.85)) -Makro, um die horizontalen und vertikalen Koordinaten zu einem einzelnen Wert zu verketten. Das Popup Fenster wird so positioniert, als ob sich der Mauszeiger am angegebenen Punkt befand, als das Popup Fenster aufgerufen wurde.                                 |
-| Hilfe- \_ setwinpos     | Zeigt das Windows-Hilfefenster an, wenn es minimiert ist oder im Arbeitsspeicher vorhanden ist, und legt seine Größe und Position wie angegeben fest.                                                                                                                                                      | Die Adresse einer [**helpwininfo**](/windows/win32/api/winuser/ns-winuser-helpwininfoa) -Struktur, die die Größe und Position eines primären oder sekundären Hilfe Fensters angibt.                                                                                                                                                             |
-| Hilfe- \_ TCard         | Gibt an, dass ein Befehl für eine Schulungs Karten Instanz der Windows-Hilfe ist. Kombinieren Sie diesen Befehl mit anderen Befehlen, indem Sie den bitweisen OR-Operator verwenden.                                                                                                                    | Hängt von dem Befehl ab, mit dem dieser Befehl kombiniert wird.                                                                                                                                                                                                                                                  |
-| Hilfe \_ WM- \_ Hilfe      | Zeigt das Thema für das Steuerelement an, das durch den *hwndmain* -Parameter in einem Popup Fenster identifiziert wird.                                                                                                                                                                        | Die Adresse eines Arrays von **DWORD** -Paaren. Das erste **DWORD** in jedem Paar ist ein Steuerelement Bezeichner, und der zweite ist ein Kontext Bezeichner für ein Thema. Das Array muss durch ein paar Nullen beendet werden {0,0} . Wenn Sie einem bestimmten Steuerelement keine Hilfe hinzufügen möchten, legen Sie seinen Kontext Bezeichner auf-1 fest.       |
+| \_HELP-BEFEHL       | Führt ein Hilfemakro oder eine Makrozeichenfolge aus.                                                                                                                                                                                                                               | Adresse einer Zeichenfolge, die den Namen der ausgeführten Hilfemakros angibt. Wenn die Zeichenfolge mehrere Makronamen angibt, müssen die Namen durch Semikolons getrennt werden. Sie müssen die Kurzform des Makronamens für einige Makros verwenden, da Windows Hilfe den langen Namen nicht unterstützt.                         |
+| \_HILFEINHALTE      | Zeigt das thema an, das durch die Option Inhalt im \[ Abschnitt OPTIONS \] der HPJ-Datei angegeben wird. Dieser Befehl ist aus Gründen der Abwärtskompatibilität. Neue Anwendungen sollten eine CNT-Datei bereitstellen und den Befehl HELP \_ FINDER verwenden.                                           | Ignoriert; auf 0 festgelegt.                                                                                                                                                                                                                                                                                           |
+| \_HILFEKONTEXT       | Zeigt das Thema an, das durch den angegebenen Kontextbezeichner identifiziert wird, der im \[ \] MAP-Abschnitt der HPJ-Datei definiert ist.                                                                                                                                                   | Enthält den Kontextbezeichner für das Thema.                                                                                                                                                                                                                                                               |
+| \_HILFEKONTEXTMENÜ   | Zeigt das **Menü Hilfe** für das ausgewählte Fenster an und zeigt dann das Thema für das ausgewählte Steuerelement in einem Popupfenster an.                                                                                                                                             | Adresse eines Arrays von **DWORD-Paaren.** Das erste **DWORD** in jedem Paar ist der Steuerelementbezeichner, und das zweite ist der Kontextbezeichner für das Thema. Das Array muss durch ein Paar von Nullen beendet {0,0} werden. Wenn Sie einem bestimmten Steuerelement keine Hilfe hinzufügen möchten, legen Sie dessen Kontextbezeichner auf -1 fest. |
+| \_HILFEKONTEXTPOPUP  | Zeigt das Thema an, das durch den angegebenen Kontextbezeichner identifiziert wird, der im \[ MAP-Abschnitt \] der HPJ-Datei in einem Popupfenster definiert ist.                                                                                                                                | Enthält den Kontextbezeichner für ein Thema.                                                                                                                                                                                                                                                                 |
+| \_HILFE-FINDER        | Zeigt das **Dialogfeld Hilfethemen** an.                                                                                                                                                                                                                             | Ignoriert; auf 0 festgelegt.                                                                                                                                                                                                                                                                                           |
+| HELP \_ FORCEFILE     | Stellt sicher Windows dass in der Hilfe die richtige Hilfedatei angezeigt wird. Wenn die falsche Hilfedatei angezeigt wird, wird Windows Hilfe die richtige geöffnet. Andernfalls gibt es keine Aktion.                                                                                     | Ignoriert; auf 0 festgelegt.                                                                                                                                                                                                                                                                                           |
+| HELP \_ HELPONHELP    | Zeigt Hilfe zur Verwendung von Windows Hilfe an, wenn die Datei Winhlp32.hlp verfügbar ist.                                                                                                                                                                                     | Ignoriert; auf 0 festgelegt.                                                                                                                                                                                                                                                                                           |
+| HELP \_ INDEX         | Zeigt das thema an, das durch die Option Inhalt im \[ Abschnitt OPTIONS \] der HPJ-Datei angegeben wird. Dieser Befehl ist aus Gründen der Abwärtskompatibilität. Neue Anwendungen sollten den Befehl HELP \_ FINDER verwenden.                                                                   | Ignoriert; auf 0 festgelegt.                                                                                                                                                                                                                                                                                           |
+| \_HILFESCHLÜSSEL           | Zeigt das Thema in der Schlüsselworttabelle an, das dem angegebenen Schlüsselwort entspricht, wenn eine genaue Übereinstimmung vor liegt. Wenn mehrere Übereinstimmungen gefunden werden, wird der Index mit den Themen angezeigt, die im **Listenfeld Themen gefunden** aufgeführt sind.                                                 | Adresse einer Schlüsselwortzeichenfolge. Mehrere Schlüsselwörter müssen durch Semikolons getrennt werden.                                                                                                                                                                                                                              |
+| HELP \_ MULTIKEY      | Zeigt das durch ein Schlüsselwort angegebene Thema in einer alternativen Schlüsselworttabelle an.                                                                                                                                                                                           | Adresse einer [**MULTIKEYHELP-Struktur,**](/windows/win32/api/winuser/ns-winuser-multikeyhelpa) die ein Tabellennotezeichen und ein Schlüsselwort angibt.                                                                                                                                                                                     |
+| HELP \_ PARTIALKEY    | Zeigt das Thema in der Schlüsselworttabelle an, das dem angegebenen Schlüsselwort entspricht, wenn eine genaue Übereinstimmung vor liegt. Wenn mehrere Übereinstimmungen gefunden wurden, wird das **Dialogfeld Themen gefunden** angezeigt. Um den Index anzuzeigen, ohne ein Schlüsselwort zu übergeben, verwenden Sie einen Zeiger auf eine leere Zeichenfolge. | Adresse einer Schlüsselwortzeichenfolge. Mehrere Schlüsselwörter müssen durch Semikolons getrennt werden.                                                                                                                                                                                                                              |
+| HELP \_ QUIT          | Informiert Windows Hilfe darüber, dass sie nicht mehr benötigt wird. Wenn keine anderen Anwendungen um Hilfe gebeten haben, Windows sie Windows Hilfe.                                                                                                                                         | Ignoriert; auf 0 festgelegt.                                                                                                                                                                                                                                                                                           |
+| HELP \_ SETCONTENTS   | Gibt das Thema Inhalt an. Windows In der Hilfe wird dieses Thema angezeigt, wenn der Benutzer auf die Schaltfläche **Inhalt** klickt, wenn der Hilfedatei keine CNT-Datei zugeordnet ist.                                                                                                  | Enthält den Kontextbezeichner für das Thema Inhalt.                                                                                                                                                                                                                                                      |
+| HELP \_ SETPOPUP \_ POS | Legt die Position des nachfolgenden Popupfensters fest.                                                                                                                                                                                                                   | Enthält die Positionsdaten. Verwenden Sie das [**MAKELONG-Makro,**](/previous-versions/windows/desktop/legacy/ms632660(v=vs.85)) um die horizontalen und vertikalen Koordinaten zu einem einzelnen Wert zu verketten. Das Popupfenster wird so positioniert, als ob sich der Mauszeiger an dem angegebenen Punkt befand, an dem das Popupfenster aufgerufen wurde.                                 |
+| HELP \_ SETWINPOS     | Zeigt das Windows Hilfefenster an, wenn es minimiert oder im Arbeitsspeicher ist, und legt dessen Größe und Position wie angegeben fest.                                                                                                                                                      | Adresse einer [**HELPWININFO-Struktur,**](/windows/win32/api/winuser/ns-winuser-helpwininfoa) die die Größe und Position eines primären oder sekundären Hilfefensters angibt.                                                                                                                                                             |
+| \_HILFE-TCARD         | Gibt an, dass ein Befehl für eine Trainingskarteninstanz von Windows Hilfe vorgesehen ist. Kombinieren Sie diesen Befehl mit anderen Befehlen, indem Sie den bitweisen OR-Operator verwenden.                                                                                                                    | Hängt vom Befehl ab, mit dem dieser Befehl kombiniert wird.                                                                                                                                                                                                                                                  |
+| HILFE \_ \_ WM-HILFE      | Zeigt das Thema für das Steuerelement an, das durch den *hWndMain-Parameter* in einem Popupfenster identifiziert wird.                                                                                                                                                                        | Adresse eines Arrays von **DWORD-Paaren.** Das erste **DWORD** in jedem Paar ist ein Steuerelementbezeichner, und das zweite ist ein Kontextbezeichner für ein Thema. Das Array muss durch ein Paar von Nullen beendet {0,0} werden. Wenn Sie einem bestimmten Steuerelement keine Hilfe hinzufügen möchten, legen Sie dessen Kontextbezeichner auf -1 fest.       |
 
 
 
  
 
-## <a name="requirements"></a>Requirements (Anforderungen)
+## <a name="requirements"></a>Anforderungen
 
 
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional, Windows XP \[ Desktop-Apps\]<br/>                                        |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2003 \[ -Desktop-Apps\]<br/>                                                          |
-| Header<br/>                   | <dl> <dt>None</dt> </dl>                               |
-| DLL<br/>                      | <dl> <dt>Shlwapi.dll (Version 5,0 oder höher)</dt> </dl> |
-| Unicode- und ANSI-Name<br/>   | **Mlwinhelpw** (Unicode) und **mlwinhelpa** (ANSI)<br/>                                                 |
+| Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional, nur Windows \[ XP-Desktop-Apps\]<br/>                                        |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2003-Desktop-Apps\]<br/>                                                          |
+| Header<br/>                   | <dl> <dt>Keine</dt> </dl>                               |
+| DLL<br/>                      | <dl> <dt>Shlwapi.dll (Version 5.0 oder höher)</dt> </dl> |
+| Unicode- und ANSI-Name<br/>   | **MLWinHelpW** (Unicode) und **MLWinHelpA** (ANSI)<br/>                                                 |
 
 
 
@@ -147,10 +147,10 @@ In der folgenden Tabelle werden die möglichen Werte für den *ucommand* -Parame
 
 <dl> <dt>
 
-[**Helpwininfo**](/windows/win32/api/winuser/ns-winuser-helpwininfoa)
+[**HELPWININFO**](/windows/win32/api/winuser/ns-winuser-helpwininfoa)
 </dt> <dt>
 
-[**Multikeyhelp**](/windows/win32/api/winuser/ns-winuser-multikeyhelpa)
+[**MULTIKEYHELP**](/windows/win32/api/winuser/ns-winuser-multikeyhelpa)
 </dt> </dl>
 
  

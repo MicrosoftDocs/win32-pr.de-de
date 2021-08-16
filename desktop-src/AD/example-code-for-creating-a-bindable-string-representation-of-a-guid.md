@@ -1,6 +1,6 @@
 ---
 title: Beispielcode zum Erstellen einer bindbaren Zeichenfolgendarstellung einer GUID
-description: Das folgende Codebeispiel kann verwendet werden, um eine Zeichenfolgendarstellung einer GUID zurückgibt, die zum Binden an das -Objekt verwendet werden kann.
+description: Das folgende Codebeispiel kann verwendet werden, um eine Zeichenfolgendarstellung einer GUID zurückzugeben, die zum Binden an das -Objekt verwendet werden kann.
 ms.assetid: e39a6994-4328-40f2-8cb5-8b1f971e50d8
 ms.tgt_platform: multiple
 keywords:
@@ -16,7 +16,7 @@ ms.locfileid: "118694283"
 ---
 # <a name="example-code-for-creating-a-bindable-string-representation-of-a-guid"></a>Beispielcode zum Erstellen einer bindbaren Zeichenfolgendarstellung einer GUID
 
-Das folgende Codebeispiel kann verwendet werden, um eine Zeichenfolgendarstellung einer GUID zurückgibt, die zum Binden an das -Objekt verwendet werden kann.
+Das folgende Codebeispiel kann verwendet werden, um eine Zeichenfolgendarstellung einer GUID zurückzugeben, die zum Binden an das -Objekt verwendet werden kann.
 
 
 ```C++

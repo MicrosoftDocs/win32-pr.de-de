@@ -1,9 +1,9 @@
 ---
-title: glupwlcurve-Funktion (glu. h)
-description: Die Funktion "glupwlcurve" beschreibt eine schrittweise lineare, lineare, nicht einheitliche rationelle B-Spline-Kürzungs Kurve (NURBS).
+title: gluPwlCurve-Funktion (Glu.h)
+description: Die gluPwlCurve-Funktion beschreibt eine stückweise lineare non-Uniform Rational B-Spline (NURBS)-Kürzungskurve.
 ms.assetid: 3d08e7e8-dfdf-447c-9795-bd73299412b5
 keywords:
-- glupwlcurve-Funktion OpenGL
+- gluPwlCurve-Funktion OpenGL
 topic_type:
 - apiref
 api_name:
@@ -14,16 +14,16 @@ api_type:
 - DllExport
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: d15c532659811c7e499369e7798c4b1ceaf842bc
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 9911619e54247c633d4b3cecc69327f92da6a7f27c3cebf9231ec86ad0f0a20d
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "106345913"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119061568"
 ---
-# <a name="glupwlcurve-function"></a>glupwlcurve-Funktion
+# <a name="glupwlcurve-function"></a>gluPwlCurve-Funktion
 
-Die Funktion " **glupwlcurve** " beschreibt eine schrittweise lineare, lineare, nicht einheitliche rationelle B-Spline-Kürzungs Kurve ([NURBS](using-nurbs-curves-and-surfaces.md)).
+Die **gluPwlCurve-Funktion** beschreibt eine stückweise lineare non-Uniform Rational B-Spline (NURBS)-Trimmingkurve.[](using-nurbs-curves-and-surfaces.md)
 
 ## <a name="syntax"></a>Syntax
 
@@ -47,7 +47,7 @@ void WINAPI gluPwlCurve(
 *nobj* 
 </dt> <dd>
 
-Das NURBS-Objekt (mit [**glunewnurbsrenderer**](glunewnurbsrenderer.md)erstellt).
+Das NURBS-Objekt (erstellt mit [**gluNewNurbsRenderer**](glunewnurbsrenderer.md)).
 
 </dd> <dt>
 
@@ -61,21 +61,21 @@ Die Anzahl der Punkte in der Kurve.
 *array* 
 </dt> <dd>
 
-Ein Array, das die Kurven Punkte enthält.
+Ein Array, das die Kurvenpunkte enthält.
 
 </dd> <dt>
 
 *Schritt* 
 </dt> <dd>
 
-Der Offset (eine Anzahl von Gleit Komma Werten mit einfacher Genauigkeit) zwischen den Punkten der Kurve.
+Der Offset (eine Anzahl von Gleitkommawerten mit einzelner Genauigkeit) zwischen Punkten in der Kurve.
 
 </dd> <dt>
 
 *type* 
 </dt> <dd>
 
-Der Typ der Kurve. Muss entweder "glu \_ zuordnung1 \_ Trim \_ 2" oder "glu \_ zuordnung1 \_ Trim \_ 3" lauten.
+Der Typ der Kurve. Muss entweder GLU \_ MAP1 \_ TRIM \_ 2 oder GLU \_ MAP1 \_ TRIM \_ 3 sein.
 
 </dd> </dl>
 
@@ -83,11 +83,11 @@ Der Typ der Kurve. Muss entweder "glu \_ zuordnung1 \_ Trim \_ 2" oder "glu \_ z
 
 Diese Funktion gibt keinen Wert zurück.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Die Funktion " **glupwlcurve** " beschreibt eine schrittweise lineare Kürzungs Kurve für eine nursb-Oberfläche. Eine schrittweise lineare Kurve besteht aus einer Liste von Koordinaten der Punkte im Parameter Bereich für die zu gekürzte nursb-Oberfläche. Diese Punkte sind mit Liniensegmenten verbunden, um eine Kurve zu bilden. Wenn die Kurve eine Annäherung an eine echte Kurve ist, sollten die Punkte nahe genug sein, damit der resultierende Pfad bei der in der Anwendung verwendeten Auflösung gekrümmte angezeigt wird.
+Die **gluPwlCurve-Funktion** beschreibt eine stückweise lineare Kürzungskurve für eine NURBS-Oberfläche. Eine stückweise lineare Kurve besteht aus einer Liste von Koordinaten von Punkten im Parameterraum für die zu kürzede NURBS-Oberfläche. Diese Punkte sind mit Liniensegmenten verbunden, um eine Kurve zu bilden. Wenn die Kurve eine Näherung zu einer echten Kurve ist, sollten die Punkte nahe genug sein, damit der resultierende Pfad bei der in der Anwendung verwendeten Auflösung gekrümmt angezeigt wird.
 
-Wenn der *Typ* "glu \_ zuordnung1 Trim 2" ist, wird \_ \_ eine Kurve im zweidimensionalen (*u* -und *v*-) Parameter Bereich beschrieben. Wenn dies der Fall \_ ist \_ \_ , wird eine Kurve im zweidimensionalen, homogenen (*u*, *v*-und *w*)-Parameter Bereich beschrieben. Weitere Informationen zu Kürzungs Kurven finden Sie unter " [**glubegintrim**](glubegintrim.md)".
+Wenn *der Typ* GLU MAP1 TRIM 2 ist, wird eine Kurve im zweidimensionalen \_ \_ \_ Parameterraum (*u* und *v*) beschrieben. Wenn es sich um GLU MAP1 TRIM 3 handelt, wird eine Kurve im zweidimensionalen homogenen \_ \_ \_ Parameterraum (*u*, *v* und *w*) beschrieben. Weitere Informationen zum Kürzen von Kurven finden Sie unter [**gluBeginTrim**](glubegintrim.md).
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -97,26 +97,26 @@ Wenn der *Typ* "glu \_ zuordnung1 Trim 2" ist, wird \_ \_ eine Kurve im zweidime
 |-------------------------------------|--------------------------------------------------------------------------------------|
 | Unterstützte Mindestversion (Client)<br/> | Windows 2000 Professional \[nur Desktop-Apps\]<br/>                           |
 | Unterstützte Mindestversion (Server)<br/> | Windows 2000 Server \[nur Desktop-Apps\]<br/>                                 |
-| Header<br/>                   | <dl> <dt>Glu. h</dt> </dl>     |
-| Bibliothek<br/>                  | <dl> <dt>Glu32. lib</dt> </dl> |
+| Header<br/>                   | <dl> <dt>Glu.h</dt> </dl>     |
+| Bibliothek<br/>                  | <dl> <dt>Glu32.lib</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>Glu32.dll</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**glubegincurve**](glubegincurve.md)
+[**gluBeginCurve**](glubegincurve.md)
 </dt> <dt>
 
-[**glubegintrim**](glubegintrim.md)
+[**gluBeginTrim**](glubegintrim.md)
 </dt> <dt>
 
-[**glunewnurbsrenderer**](glunewnurbsrenderer.md)
+[**gluNewNurbsRenderer**](glunewnurbsrenderer.md)
 </dt> <dt>
 
-[**glunurbscurve**](glunurbscurve.md)
+[**gluNurbsCurve**](glunurbscurve.md)
 </dt> </dl>
 
  

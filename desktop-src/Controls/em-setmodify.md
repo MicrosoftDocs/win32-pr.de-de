@@ -1,9 +1,9 @@
 ---
-title: EM_SETMODIFY Meldung (Winuser. h)
-description: Legt das Änderungsflag für ein Bearbeitungs Steuerelement fest oder löscht dieses. Das Änderungsflag gibt an, ob der Text im Bearbeitungs Steuerelement geändert wurde. Sie können diese Nachricht entweder an ein Bearbeitungs Steuerelement oder ein Rich Edit-Steuerelement senden.
+title: EM_SETMODIFY (Winuser.h)
+description: Legt das Änderungsflag für ein Bearbeitungssteuerzeichen fest oder löschen es. Das Änderungsflag gibt an, ob der Text im Bearbeitungssteuerfeld geändert wurde. Sie können diese Nachricht entweder an ein Bearbeitungssteuer steuerelement oder an ein Rich Edit-Steuerelement senden.
 ms.assetid: 9393f03e-0719-458b-8122-616df738c417
 keywords:
-- Windows-Steuerelemente für EM_SETMODIFY Meldung
+- EM_SETMODIFY von Windows-Steuerelementen
 topic_type:
 - apiref
 api_name:
@@ -14,16 +14,16 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 591b57dbc5441e96c1c6d3963172864713ed939f
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: fcd367a828e7f431b6177a2ec99fe508fec3e48c4743d492277f00ed4965e001
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "103859012"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117831162"
 ---
-# <a name="em_setmodify-message"></a>EM- \_ setmodify-Meldung
+# <a name="em_setmodify-message"></a>EM \_ SETMODIFY-Nachricht
 
-Legt das Änderungsflag für ein Bearbeitungs Steuerelement fest oder löscht dieses. Das Änderungsflag gibt an, ob der Text im Bearbeitungs Steuerelement geändert wurde. Sie können diese Nachricht entweder an ein Bearbeitungs Steuerelement oder ein Rich Edit-Steuerelement senden.
+Legt das Änderungsflag für ein Bearbeitungssteuerzeichen fest oder löschen es. Das Änderungsflag gibt an, ob der Text im Bearbeitungssteuerfeld geändert wurde. Sie können diese Nachricht entweder an ein Bearbeitungssteuer steuerelement oder an ein Rich Edit-Steuerelement senden.
 
 ## <a name="parameters"></a>Parameter
 
@@ -32,7 +32,7 @@ Legt das Änderungsflag für ein Bearbeitungs Steuerelement fest oder löscht di
 *wParam* 
 </dt> <dd>
 
-Der neue Wert für das Änderungsflag. Der Wert **true** gibt an, dass der Text geändert wurde, und der Wert **false** gibt an, dass er nicht geändert wurde.
+Der neue Wert für das Änderungsflag. Der Wert **TRUE gibt** an, dass der Text geändert wurde, und der Wert **FALSE** gibt an, dass er nicht geändert wurde.
 
 </dd> <dt>
 
@@ -47,13 +47,13 @@ Dieser Parameter wird nicht verwendet.
 
 Diese Meldung gibt keinen Wert zurück.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Wenn das Steuerelement erstellt wird, löscht das System das Änderungsflag automatisch auf 0 (null). Wenn der Benutzer den Text des Steuer Elements ändert, legt das System das Flag auf einen Wert ungleich 0 (null) fest. Sie können die [**EM \_ getmodify**](em-getmodify.md) -Nachricht an das Bearbeitungs Steuerelement senden, um den aktuellen Status des Flags abzurufen.
+Beim Erstellen des Steuerelements wird das Änderungsflag automatisch auf 0 (null) gelöscht. Wenn der Benutzer den Text des Steuerelements ändert, legt das System das Flag auf ungleich 0 (null) fest. Sie können die [**EM \_ GETMODIFY-Nachricht**](em-getmodify.md) an das Bearbeitungssteuerzeichen senden, um den aktuellen Status des Flags abzurufen.
 
-**Rich Edit 1,0:** Objekte, die ohne das **REO \_ dynamicsize** -Flag erstellt werden, Sperren Ihre Blöcke, wenn das Modify-Flag auf " **false**" festgelegt ist.
+**Rich Edit 1.0:** Objekte, die ohne **das REO \_ DYNAMICSIZE-Flag** erstellt wurden, sperren ihre Extent, wenn das Modify-Flag auf **FALSE festgelegt ist.**
 
-Umfassende **Bearbeitung:** Wird in Microsoft Rich Edit 1,0 und höher unterstützt. Informationen zur Kompatibilität von Rich-Edit-Versionen mit den verschiedenen Systemversionen finden Sie unter Informationen [zu Rich Edit](about-rich-edit-controls.md)-Steuerelementen.
+**Umfangreiche Bearbeitung:** Wird in Microsoft Rich Edit 1.0 und höher unterstützt. Informationen zur Kompatibilität von Rich Edit-Versionen mit den verschiedenen Systemversionen finden Sie unter [Informationen zu Rich Edit-Steuerelementen.](about-rich-edit-controls.md)
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -61,23 +61,23 @@ Umfassende **Bearbeitung:** Wird in Microsoft Rich Edit 1,0 und höher unterstü
 
 | Anforderung | Wert |
 |-------------------------------------|----------------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>                                                           |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2003 \[ -Desktop-Apps\]<br/>                                                     |
-| Header<br/>                   | <dl> <dt>Winuser. h (Windows. h einschließen)</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur \[ Vista-Desktop-Apps\]<br/>                                                           |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2003-Desktop-Apps\]<br/>                                                     |
+| Header<br/>                   | <dl> <dt>Winuser.h (include Windows.h)</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-**Verweis**
+**Referenz**
 </dt> <dt>
 
-[**EM \_ getmodify**](em-getmodify.md)
+[**EM \_ GETMODIFY**](em-getmodify.md)
 </dt> <dt>
 
-[**Reobject**](/windows/desktop/api/Richole/ns-richole-reobject)
+[**REOBJECT**](/windows/desktop/api/Richole/ns-richole-reobject)
 </dt> </dl>
 
  

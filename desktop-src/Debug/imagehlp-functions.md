@@ -1,67 +1,67 @@
 ---
-description: Im folgenden finden Sie die imagehlp-Funktionen.
+description: Im Folgenden sind die ImageHlp-Funktionen dargestellt.
 ms.assetid: 926f412e-25ba-4f9c-a118-b5a1bc723379
-title: Imagehlp-Funktionen
+title: ImageHlp-Funktionen
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 16e921707474f68e288f67e84dda9e361922bca0
-ms.sourcegitcommit: c7add10d695482e1ceb72d62b8a4ebd84ea050f7
+ms.openlocfilehash: f2650d80dfb78f346a5fab22e0adfabdfb11c8e626ad3b5ea39930337feaebe8
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "103958503"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118957109"
 ---
-# <a name="imagehlp-functions"></a>Imagehlp-Funktionen
+# <a name="imagehlp-functions"></a>ImageHlp-Funktionen
 
-Im folgenden finden Sie die imagehlp-Funktionen.
+Im Folgenden sind die ImageHlp-Funktionen dargestellt.
 
-## <a name="image-access"></a>Bildzugriff
+## <a name="image-access"></a>Imagezugriff
 
-Die Bild Zugriffs Funktionen greifen auf die Daten in einem ausführbaren Image zu. Die-Funktionen bieten Zugriff auf hoher Ebene auf die Basis von Bildern und einen sehr spezifischen Zugriff auf die gängigsten Teile der Daten eines Bilds.
+Die Imagezugriffsfunktionen greifen auf die Daten in einem ausführbaren Image zu. Die Funktionen bieten allgemeinen Zugriff auf die Basis von Bildern und sehr spezifischen Zugriff auf die gängigsten Teile der Bilddaten.
 
 <dl>
 
-[**Getimageconfiginformation**](/windows/desktop/api/Imagehlp/nf-imagehlp-getimageconfiginformation)  
-[**Getimageunusedheaderbytes**](/windows/desktop/api/Imagehlp/nf-imagehlp-getimageunusedheaderbytes)  
+[**GetImageConfigInformation**](/windows/desktop/api/Imagehlp/nf-imagehlp-getimageconfiginformation)  
+[**GetImageUnusedHeaderBytes**](/windows/desktop/api/Imagehlp/nf-imagehlp-getimageunusedheaderbytes)  
 [**ImageLoad**](/windows/desktop/api/Imagehlp/nf-imagehlp-imageload)  
-[**Image entladen**](/windows/desktop/api/Imagehlp/nf-imagehlp-imageunload)  
-[**Mapandload**](/windows/desktop/api/Imagehlp/nf-imagehlp-mapandload)  
-[**"Contimageconfiginformation"**](/windows/desktop/api/Imagehlp/nf-imagehlp-setimageconfiginformation)  
-[**Fehler bei unmapandload**](/windows/desktop/api/Imagehlp/nf-imagehlp-unmapandload)  
+[**ImageUnload**](/windows/desktop/api/Imagehlp/nf-imagehlp-imageunload)  
+[**MapAndLoad**](/windows/desktop/api/Imagehlp/nf-imagehlp-mapandload)  
+[**SetImageConfigInformation**](/windows/desktop/api/Imagehlp/nf-imagehlp-setimageconfiginformation)  
+[**UnMapAndLoad**](/windows/desktop/api/Imagehlp/nf-imagehlp-unmapandload)  
 </dl>
 
-## <a name="image-integrity"></a>Bildintegrität
+## <a name="image-integrity"></a>Imageintegrität
 
-Die Bild Integritäts Funktionen verwalten den Satz von Zertifikaten in einer Bilddatei.
+Die Imageintegritätsfunktionen verwalten den Satz von Zertifikaten in einer Imagedatei.
 
 <dl>
 
-[**Digestfunction**](/windows/desktop/api/Imagehlp/nc-imagehlp-digest_function)  
-[**Imageaddcertificate**](/windows/desktop/api/Imagehlp/nf-imagehlp-imageaddcertificate)  
-[**Imageenumeratecertificates**](/windows/desktop/api/Imagehlp/nf-imagehlp-imageenumeratecertificates)  
-[**Imagegetcertificatedata**](/windows/desktop/api/Imagehlp/nf-imagehlp-imagegetcertificatedata)  
-[**Imagegetcertifialisieheader**](/windows/desktop/api/Imagehlp/nf-imagehlp-imagegetcertificateheader)  
-[**Imagegetdigeststream**](/windows/desktop/api/Imagehlp/nf-imagehlp-imagegetdigeststream)  
-[**Imageremovecertificate**](/windows/desktop/api/Imagehlp/nf-imagehlp-imageremovecertificate)  
+[**DigestFunction**](/windows/desktop/api/Imagehlp/nc-imagehlp-digest_function)  
+[**ImageAddCertificate**](/windows/desktop/api/Imagehlp/nf-imagehlp-imageaddcertificate)  
+[**ImageEnumerateCertificates**](/windows/desktop/api/Imagehlp/nf-imagehlp-imageenumeratecertificates)  
+[**ImageGetCertificateData**](/windows/desktop/api/Imagehlp/nf-imagehlp-imagegetcertificatedata)  
+[**ImageGetCertificateHeader**](/windows/desktop/api/Imagehlp/nf-imagehlp-imagegetcertificateheader)  
+[**ImageGetDigestStream**](/windows/desktop/api/Imagehlp/nf-imagehlp-imagegetdigeststream)  
+[**ImageRemoveCertificate**](/windows/desktop/api/Imagehlp/nf-imagehlp-imageremovecertificate)  
 </dl>
 
-## <a name="image-modification"></a>Bild Änderung
+## <a name="image-modification"></a>Bildänderung
 
-Mit den Funktionen für die Bild Änderung können Sie das ausführbare Image ändern.
+Mit den Bildänderungsfunktionen können Sie das ausführbare Image ändern.
 
 <dl>
 
 [**BindImage**](/windows/desktop/api/Imagehlp/nf-imagehlp-bindimage)  
 [**BindImageEx**](/windows/desktop/api/Imagehlp/nf-imagehlp-bindimageex)  
 [**CheckSumMappedFile**](/windows/desktop/api/Imagehlp/nf-imagehlp-checksummappedfile)  
-[**Mapfileandchecksum**](/windows/desktop/api/Imagehlp/nf-imagehlp-mapfileandchecksuma)  
-[**Rebaseimage**](/windows/desktop/api/Imagehlp/nf-imagehlp-rebaseimage)  
+[**MapFileAndCheckSum**](/windows/desktop/api/Imagehlp/nf-imagehlp-mapfileandchecksuma)  
+[**ReBaseImage**](/windows/desktop/api/Imagehlp/nf-imagehlp-rebaseimage)  
 [**ReBaseImage64**](/windows/desktop/api/Imagehlp/nf-imagehlp-rebaseimage64)  
-[**Splitsymbols**](/windows/desktop/api/Imagehlp/nf-imagehlp-splitsymbols)  
-[**Status Routine**](/windows/desktop/api/Imagehlp/nc-imagehlp-pimagehlp_status_routine)  
-[**Touchfiletimes**](/windows/desktop/api/Imagehlp/nf-imagehlp-touchfiletimes)  
-[**Updatedebuginfofile**](/windows/desktop/api/Imagehlp/nf-imagehlp-updatedebuginfofile)  
-[**Updatedebuginfofileex**](/windows/desktop/api/Imagehlp/nf-imagehlp-updatedebuginfofileex)  
+[**SplitSymbols**](/windows/desktop/api/Imagehlp/nf-imagehlp-splitsymbols)  
+[**StatusRoutine**](/windows/desktop/api/Imagehlp/nc-imagehlp-pimagehlp_status_routine)  
+[**TouchFileTimes**](/windows/desktop/api/Imagehlp/nf-imagehlp-touchfiletimes)  
+[**UpdateDebugInfoFile**](/windows/desktop/api/Imagehlp/nf-imagehlp-updatedebuginfofile)  
+[**UpdateDebugInfoFileEx**](/windows/desktop/api/Imagehlp/nf-imagehlp-updatedebuginfofileex)  
 </dl>
 
  

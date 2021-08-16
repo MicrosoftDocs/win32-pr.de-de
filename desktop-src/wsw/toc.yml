@@ -1,35 +1,35 @@
-- name: Windows-Webdienste
+- name: Windows Webdienste
   href: portal.md
   items:
     - name: Informationen zu Windows-Webdiensten
       href: about-windows-web-services.md
       items:
-        - name: Übersicht über die Dienstmodell Ebene
+        - name: Übersicht über die Dienstmodellebene
           href: service-model-layer-overview.md
           items:
-            - name: Dienst Host
+            - name: Diensthost
               href: service-host.md
               items:
                 - name: Dienstautorisierung
                   href: service-authorization.md
-                - name: Benutzer Zustand des Dienst Hosts
+                - name: Benutzerstatus des Diensthosts
                   href: user-host-state.md
                 - name: Dienstmetadaten
                   href: service-metadata.md
-                - name: Abbruch Abbrechen
+                - name: Anrufabbruch
                   href: call-cancellation.md
                 - name: Abbruch
                   href: cancellation.md
-            - name: Dienst Proxy
+            - name: Dienstproxy
               href: service-proxy.md
               items:
-                - name: Dienst Proxy und-Sitzungen
+                - name: Dienstproxy und Sitzungen
                   href: service-proxy-and-sessions.md
             - name: Kontext
               href: context.md
             - name: Vertrag
               href: contract.md
-        - name: Übersicht über die Kanal Schicht
+        - name: Übersicht über die Kanalebene
           href: channel-layer-overview.md
           items:
             - name: '`Message`'
@@ -48,11 +48,11 @@
             - name: Sicherheitsübersicht
               href: security-overview.md
               items:
-                - name: Sicherheits Beschreibung
+                - name: Sicherheitsbeschreibung
                   href: security-description.md
-                - name: Sicherheits Kanaleinstellungen
+                - name: Einstellungen des Sicherheitskanals
                   href: security-channel-settings.md
-                - name: Sicherheits Bindungen
+                - name: Sicherheitsbindungen
                   href: security-bindings.md
                 - name: Sicherheitsanmeldeinformationen
                   href: security-credentials.md
@@ -64,7 +64,7 @@
                   href: federation.md
                 - name: Endpunktidentität
                   href: endpoint-identity.md
-                - name: Ergebnisse der Sicherheits Verarbeitung
+                - name: Ergebnisse der Sicherheitsverarbeitung
                   href: security-processing-results.md
                 - name: wird von
                   href: extended-protection.md
@@ -76,7 +76,7 @@
         - name: Übersicht über XML-Ebenen
           href: xml-layer-overview.md
           items:
-            - name: XML-Writer
+            - name: XML Writer
               href: xml-writer.md
             - name: XML-Reader
               href: xml-reader.md
@@ -94,27 +94,27 @@
               href: xml-canonicalization.md
             - name: XML-Sprachunterstützung
               href: xml-language-support.md
-        - name: Wsutil-Compilertool
+        - name: WsUtil-Compilertool
           href: wsutil-compiler-tool.md
           items:
-            - name: Webdienst-Compilertool
+            - name: Webdienstcompilertool
               href: web-service-compiler-tool.md
-            - name: Webdienst-Erweiterungs Datei
+            - name: Webdiensterweiterungsdatei
               href: web-service-extension-file.md
             - name: WSDL-Unterstützung
               href: wsdl-support.md
-            - name: Dienst Vorgang
+            - name: Dienstvorgang
               href: service-operation.md
               items:
-                - name: Server seitige Dienst Vorgänge
+                - name: Serverseitige Dienstvorgänge
                   href: server-side-service-operations.md
-                - name: Client seitige Dienst Vorgänge
+                - name: Clientseitige Dienstvorgänge
                   href: client-side-service-operations.md
             - name: Unterstützung von Schemas
               href: schema-support.md
-            - name: Ebene der Schema Unterstützung
+            - name: Schemaunterstützungsebene
               href: schema-support-level.md
-            - name: Richtlinien Unterstützung
+            - name: Richtlinienunterstützung
               href: policy-support.md
         - name: Debuggen
           href: debugging.md
@@ -123,212 +123,212 @@
         - name: Asynchrones Modell
           href: asynchronous-model.md
           items:
-            - name: Vorgangs Kontext Lebensdauer und Threading
+            - name: Lebensdauer und Threading des Vorgangskontexts
               href: operation-context-lifetime-and-threading.md
             - name: Threadsicherheit
               href: thread-safety.md
-        - name: Errors
+        - name: Fehler
           href: errors.md
         - name: Fehler
           href: faults.md
         - name: Heap
           href: heap.md
-        - name: Versorgungsunternehmen
+        - name: Hilfsprogramme
           href: utilities.md
-    - name: Verwenden von Windows-Webdiensten
+    - name: Verwenden von Windows Webdiensten
       href: using-windows-web-services.md
       items:
         - name: Erstellen eines Clients
           href: creating-a-client.md
-        - name: Manuelles Erstellen eines Dienst Proxys für einen WCF-Dienst
+        - name: Manuelles Erstellen eines Dienstproxys für einen WCF-Dienst
           href: manually-creating-a-service-proxy-for-a-wcf-service.md
         - name: Erstellen eines Diensts
           href: creating-a-service.md
-        - name: Beispiele für Windows-Webdienste
+        - name: Windows Beispiele für Webdienste
           href: windows-web-services-examples.md
           items:
-            - name: Beispiele für Dienst Modelle
+            - name: Beispiele für Dienstmodelle
               href: service-model-examples.md
               items:
-                - name: Calculatorwsdl
+                - name: CalculatorWsdl
                   href: calculatorwsdl.md
-                - name: Httpcalculatorclieintexample
+                - name: HttpCalculatorClientExample
                   href: httpcalculatorclientexample.md
-                - name: Httpcalculatorserviceexample
+                - name: HttpCalculatorServiceExample
                   href: httpcalculatorserviceexample.md
-                - name: Httpcalculatorwithbasicoversslcliumtexample
+                - name: HttpCalculatorWithBasicOverSslClientExample
                   href: httpcalculatorwithbasicoversslclientexample.md
-                - name: Httpcalculatorwithbasicoversslserviceexample
+                - name: HttpCalculatorWithBasicOverSslServiceExample
                   href: httpcalculatorwithbasicoversslserviceexample.md
-                - name: Httpcalculatorwithencodecodchannelclieintexample
+                - name: HttpCalculatorWithEncodedChannelClientExample
                   href: httpcalculatorwithencodedchannelclientexample.md
-                - name: Httpcalculatorwithencodecodchannelserviceexample
+                - name: HttpCalculatorWithEncodedChannelServiceExample
                   href: httpcalculatorwithencodedchannelserviceexample.md
-                - name: Httpcalculatorwithkerberosoversslcliumtexample
+                - name: HttpCalculatorWithKerberosOverSslClientExample
                   href: httpcalculatorwithkerberosoversslclientexample.md
-                - name: Httpcalculatorwithkerberosoversslserviceexample
+                - name: HttpCalculatorWithKerberosOverSslServiceExample
                   href: httpcalculatorwithkerberosoversslserviceexample.md
-                - name: Httpcalculatorwithlayeredchannelclieintexample
+                - name: HttpCalculatorWithLayeredChannelClientExample
                   href: httpcalculatorwithlayeredchannelclientexample.md
-                - name: Httpcalculatorwithlayeredchannelserviceexample
+                - name: HttpCalculatorWithLayeredChannelServiceExample
                   href: httpcalculatorwithlayeredchannelserviceexample.md
-                - name: Httpcalculatorwithsslclieintexample
+                - name: HttpCalculatorWithSslClientExample
                   href: httpcalculatorwithsslclientexample.md
-                - name: Httpcalculatorwithsslserviceexample
+                - name: HttpCalculatorWithSslServiceExample
                   href: httpcalculatorwithsslserviceexample.md
-                - name: Httpcalculatorwithsslpolizyklieintexample
+                - name: HttpCalculatorWithSslPolicyClientExample
                   href: httpcalculatorwithsslpolicyclientexample.md
-                - name: Httpcalculatorwithsslpolicyserviceexample
+                - name: HttpCalculatorWithSslPolicyServiceExample
                   href: httpcalculatorwithsslpolicyserviceexample.md
-                - name: Httpcalculatorwithusernameoversslcliumtexample
+                - name: HttpCalculatorWithUsernameOverSslClientExample
                   href: httpcalculatorwithusernameoversslclientexample.md
-                - name: Httpcalculatorwithusernameoversslserviceexample
+                - name: HttpCalculatorWithUserNameOverSslServiceExample
                   href: httpcalculatorwithusernameoversslserviceexample.md
-                - name: Beispiel für httpcalculatorwithusernamexmltekenoversslclient
+                - name: HttpCalculatorWithUsernameXmlTokenOverSslClient-Beispiel
                   href: httpcalculatorwithusernamexmltokenoversslclientexample.md
-                - name: Httppurchaseorderclieintexample
+                - name: HttpPurchaseOrderClientExample
                   href: httppurchaseorderclientexample.md
-                - name: Httppurchaseorderserviceexample
+                - name: HttpPurchaseOrderServiceExample
                   href: httppurchaseorderserviceexample.md
-                - name: Httppurchaseorderwithkerberosoversslclieintexample
+                - name: HttpPurchaseOrderWithKerberosOverSslClientExample
                   href: httppurchaseorderwithkerberosoversslclientexample.md
-                - name: Httppurchaseorderwithkerberosoversslserviceexample
+                - name: HttpPurchaseOrderWithKerberosOverSslServiceExample
                   href: httppurchaseorderwithkerberosoversslserviceexample.md
-                - name: Httppurchaseorderwithsslcliumtexample
+                - name: HttpPurchaseOrderWithSslClientExample
                   href: httppurchaseorderwithsslclientexample.md
-                - name: Httppurchaseorderwithsslserviceexample
+                - name: HttpPurchaseOrderWithSslServiceExample
                   href: httppurchaseorderwithsslserviceexample.md
-                - name: Httppurchaseorderwithusernameoversslcliumtexample
+                - name: HttpPurchaseOrderWithUsernameOverSslClientExample
                   href: httppurchaseorderwithusernameoversslclientexample.md
-                - name: Httppurchaseorderwithusernameoversslserviceexample
+                - name: HttpPurchaseOrderWithUserNameOverSslServiceExample
                   href: httppurchaseorderwithusernameoversslserviceexample.md
-                - name: Httpcustomheaderpurchaseordercliumtexample
+                - name: HttpCustomHeaderPurchaseOrderClientExample
                   href: httpcustomheaderpurchaseorderclientexample.md
-                - name: Httpcustomheaderpurchaseorderserviceexample
+                - name: HttpCustomHeaderPurchaseOrderServiceExample
                   href: httpcustomheaderpurchaseorderserviceexample.md
-                - name: Httpgetsample
+                - name: HttpGetSample
                   href: httpgetsample.md
-                - name: Servicecancellationexample
+                - name: ServiceCancellationExample
                   href: servicecancellationexample.md
-                - name: Sessionfullcalculatorclieintexample
+                - name: SessionfullCalculatorClientExample
                   href: sessionfullcalculatorclientexample.md
-                - name: Sessionfullcalculatorserviceexample
+                - name: SessionfullCalculatorServiceExample
                   href: sessionfullcalculatorserviceexample.md
-                - name: Httprawcliumtexample
+                - name: HttpRawClientExample
                   href: httprawclientexample.md
-                - name: Httprawserviceexample
+                - name: HttpRawServiceExample
                   href: httprawserviceexample.md
-                - name: Untypedcliumtexample
+                - name: UnTypedClientExample
                   href: untypedclientexample.md
-                - name: Untypedserviceexample
+                - name: UnTypedServiceExample
                   href: untypedserviceexample.md
-                - name: Blockingserviceexample
+                - name: BlockingServiceExample
                   href: blockingserviceexample.md
-                - name: Callabandon-Beispiel
+                - name: CallAbillenExample
                   href: callabandonexample.md
-                - name: Asmxterraservicesamplewithcustomproxy
+                - name: AsmxProxyServiceSampleWithCustomProxy
                   href: asmxterraservicesamplewithcustomproxy.md
-                - name: Policytemplateexample
+                - name: PolicyTemplateExample
                   href: policytemplateexample.md
-                - name: Wcfpublicservicesample
+                - name: WcfPublicServiceSample
                   href: wcfpublicservicesample.md
-            - name: Beispiele für die TCP-Kanal Schicht
+            - name: Beispiele für TCP-Kanalebene
               href: tcp-channel-layer-examples.md
               items:
-                - name: Asyncstreamingtcpcliumtexample
+                - name: AsyncStreamingTcpClientExample
                   href: asyncstreamingtcpclientexample.md
-                - name: Asyncstreamingtcpserverexample
+                - name: AsyncStreamingTcpServerExample
                   href: asyncstreamingtcpserverexample.md
                 - name: MetadataExchangeSample
                   href: metadataexchangesample.md
-                - name: Onewaytcpcliumtexample
+                - name: OneWayTcpClientExample
                   href: onewaytcpclientexample.md
-                - name: Onewaytcpserverexample
+                - name: OneWayTcpServerExample
                   href: onewaytcpserverexample.md
-                - name: Requestreplytcpcliumtexample
+                - name: RequestReplyTcpClientExample
                   href: requestreplytcpclientexample.md
-                - name: Requestreplytcpserverexample
+                - name: RequestReplyTcpServerExample
                   href: requestreplytcpserverexample.md
-                - name: Servicemonikersample
+                - name: ServiceMonikerSample
                   href: servicemonikersample.md
-                - name: Streamingtcpcliumtexample
+                - name: StreamingTcpClientExample
                   href: streamingtcpclientexample.md
-                - name: Streamingtcpserverexample
+                - name: StreamingTcpServerExample
                   href: streamingtcpserverexample.md
-            - name: Beispiele für HTTP-Kanal Ebenen
+            - name: Beispiele für HTTP-Kanalebenen
               href: http-channel-layer-examples.md
               items:
-                - name: Httpclieintexample
+                - name: HttpClientExample
                   href: httpclientexample.md
-                - name: Httpserverexample
+                - name: HttpServerExample
                   href: httpserverexample.md
-                - name: Streaminghttpcliumtexample
+                - name: StreamingHttpClientExample
                   href: streaminghttpclientexample.md
-                - name: Streaminghttpserverexample
+                - name: StreamingHttpServerExample
                   href: streaminghttpserverexample.md
-            - name: Beispiele für UDP-Kanal Ebenen
+            - name: Beispiele für die UDP-Kanalebene
               href: udp-channel-layer-examples.md
               items:
-                - name: Multicastudpcliumtexample
+                - name: MulticastUdpClientExample
                   href: multicastudpclientexample.md
                 - name: MulticastUdpClientExample6
                   href: multicastudpclientexample6.md
-                - name: Multicastudpserverexample
+                - name: MulticastUdpServerExample
                   href: multicastudpserverexample.md
                 - name: MulticastUdpServerExample6
                   href: multicastudpserverexample6.md
-                - name: Onewayudpcliumtexample
+                - name: OneWayUdpClientExample
                   href: onewayudpclientexample.md
-                - name: Onewayudpserverexample
+                - name: OneWayUdpServerExample
                   href: onewayudpserverexample.md
-            - name: Kanalebenenbeispiele für benannte Pipes
+            - name: Beispiele für Named Pipes-Kanalebenen
               href: named-pipes-channel-layer-examples.md
               items:
-                - name: Requestreplynamedpipesclieintexample
+                - name: RequestReplyNamedPipesClientExample
                   href: requestreplynamedpipesclientexample.md
-                - name: Requestreplynamedpipesserverexample
+                - name: RequestReplyNamedPipesServerExample
                   href: requestreplynamedpipesserverexample.md
-                - name: Streamingnamedpipesclieintexample
+                - name: StreamingNamedPipesClientExample
                   href: streamingnamedpipesclientexample.md
-                - name: Streamingnamedpipesserverexample
+                - name: StreamingNamedPipesServerExample
                   href: streamingnamedpipesserverexample.md
             - name: Nachrichtenbeispiele
               href: message-examples.md
               items:
-                - name: Customheaderexample
+                - name: CustomHeaderExample
                   href: customheaderexample.md
-                - name: Forwardmessageexample
+                - name: ForwardMessageExample
                   href: forwardmessageexample.md
                 - name: MessageEncodingExample
                   href: messageencodingexample.md
             - name: XML-Beispiele
               href: xml-examples.md
               items:
-                - name: Derivedtypeexample
+                - name: DerivedTypeExample
                   href: derivedtypeexample.md
-                - name: Insertelementexample
+                - name: InsertElementExample
                   href: insertelementexample.md
-                - name: Navigatexmlexample
+                - name: NavigateXmlExample
                   href: navigatexmlexample.md
-                - name: '"Read attributeexample"'
+                - name: ReadAttributeExample
                   href: readattributeexample.md
-                - name: '"Read Beschreib tearrayexample"'
+                - name: ReadWriteArrayExample
                   href: readwritearrayexample.md
-                - name: '"Read Write Items bytesxmlexample"'
+                - name: ReadWriteBytesXmlExample
                   href: readwritebytesxmlexample.md
-                - name: '"Read Write texmlexample"'
+                - name: ReadWriteXmlExample
                   href: readwritexmlexample.md
-                - name: '"Read-terawxmlexample"'
+                - name: ReadWriteRawXmlExample
                   href: readwriterawxmlexample.md
-                - name: Read xmlexample
+                - name: ReadXmlExample
                   href: readxmlexample.md
-                - name: '"Read xmlsimpleexample"'
+                - name: ReadXmlSimpleExample
                   href: readxmlsimpleexample.md
-                - name: '"Write texmlsimpleexample"'
+                - name: WriteXmlSimpleExample
                   href: writexmlsimpleexample.md
-                - name: Xmlbufferexample
+                - name: XmlBufferExample
                   href: xmlbufferexample.md
-                - name: Xmlditionaryexample
+                - name: XmlDictionaryExample
                   href: xmldictionaryexample.md
             - name: Beispiele für asynchrone Modelle
               href: async-model-examples.md
@@ -339,20 +339,20 @@
                   href: asyncadd3explicitexample.md
                 - name: AsyncAdd3ImplicitExample
                   href: asyncadd3implicitexample.md
-            - name: Beispiele für Sicherheits Kanal Ebenen
+            - name: Beispiele für Die Sicherheitskanalebene
               href: security-channel-layer-examples.md
               items:
-                - name: Httpclientwithkerberosoversslexample
+                - name: HttpClientWithKerberosOverSslExample
                   href: httpclientwithkerberosoversslexample.md
-                - name: Httpclientwithsslexample
+                - name: HttpClientWithSslExample
                   href: httpclientwithsslexample.md
-                - name: Httpclientwithusernameoversslexample
+                - name: HttpClientWithUsernameOverSslExample
                   href: httpclientwithusernameoversslexample.md
-                - name: Httpserverwithkerberosoversslexample
+                - name: HttpServerWithKerberosOverSslExample
                   href: httpserverwithkerberosoversslexample.md
-                - name: Httpserverwithsslexample
+                - name: HttpServerWithSslExample
                   href: httpserverwithsslexample.md
-                - name: Httpserverwithusernameoversslexample
+                - name: HttpServerWithUsernameOverSslExample
                   href: httpserverwithusernameoversslexample.md
                 - name: MetadataImportWithIssuedTokenOverSslExample
                   href: metadataimportwithissuedtokenoversslexample.md
@@ -360,25 +360,25 @@
                   href: metadataimportwithusernameoversslexample.md
                 - name: MetadataImportWithX509OverSslExample
                   href: metadataimportwithx509oversslexample.md
-                - name: Requestreplynamedpipesclientwithwindowstransportsecurityexample
+                - name: RequestReplyNamedPipesClientWithWindowsTransportSecurityExample
                   href: requestreplynamedpipesclientwithwindowstransportsecurityexample.md
-                - name: Requestreplynamedpipesserverwithwindowstransportsecurityexample
+                - name: RequestReplyNamedPipesServerWithWindowsTransportSecurityExample
                   href: requestreplynamedpipesserverwithwindowstransportsecurityexample.md
-                - name: Requestreplytcpclientwithwindowstransportsecurityexample
+                - name: RequestReplyTcpClientWithWindowsTransportSecurityExample
                   href: requestreplytcpclientwithwindowstransportsecurityexample.md
-                - name: Requestreplytcpserverwithwindowstransportsecurity-Beispiel
+                - name: RequestReplyTcpServerWithWindowsTransportSecurity-Beispiel
                   href: requestreplytcpserverwithwindowstransportsecurityexample.md
-            - name: Datei Replikations Beispiele
+            - name: Beispiele für die Dateireplikation
               href: file-replication-examples.md
               items:
-                - name: Filereptoolexample
+                - name: FileRepToolExample
                   href: filereptoolexample.md
-                - name: Filerepserviceexample
+                - name: FileRepServiceExample
                   href: filerepserviceexample.md
-    - name: Referenz zu Windows-Webdiensten
+    - name: Windows Webdienstreferenz
       href: windows-web-services-reference.md
       items:
-        - name: Rückruf Funktionen für Windows-Webdienste
+        - name: Windows Webdienst-Rückruffunktionen
           href: web-services-for-windows-callback-functions.md
           items:
             - name: WS_ABANDON_MESSAGE_CALLBACK
@@ -724,158 +724,158 @@
               href: /windows/desktop/api/WebServices/ne-webservices-ws_xml_writer_output_type
             - name: WS_XML_WRITER_PROPERTY_ID
               href: /windows/desktop/api/WebServices/ne-webservices-ws_xml_writer_property_id
-        - name: Windows-Webdienst Funktionen
+        - name: Windows Webdienstfunktionen
           href: web-services-for-windows-functions.md
           items:
-            - name: Wsabandoncall
+            - name: WsAboanCall
               href: /windows/desktop/api/WebServices/nf-webservices-wsabandoncall
-            - name: Wsabandonmessage
+            - name: WsAbtaxinMessage
               href: /windows/desktop/api/WebServices/nf-webservices-wsabandonmessage
-            - name: Wsabortchannel
+            - name: WsAbortChannel
               href: /windows/desktop/api/WebServices/nf-webservices-wsabortchannel
-            - name: Wsabortlistener
+            - name: WsAbortListener
               href: /windows/desktop/api/WebServices/nf-webservices-wsabortlistener
-            - name: Wsabortservicehost
+            - name: WsAbortServiceHost
               href: /windows/desktop/api/WebServices/nf-webservices-wsabortservicehost
-            - name: Wsabortserviceproxy
+            - name: WsAbortServiceProxy
               href: /windows/desktop/api/WebServices/nf-webservices-wsabortserviceproxy
-            - name: Wsakzeptchannel
+            - name: WsAcceptChannel
               href: /windows/desktop/api/WebServices/nf-webservices-wsacceptchannel
-            - name: Wsaddcustomheader
+            - name: WsAddCustomHeader
               href: /windows/desktop/api/WebServices/nf-webservices-wsaddcustomheader
-            - name: Wsadderrorstring
+            - name: WsAddErrorString
               href: /windows/desktop/api/WebServices/nf-webservices-wsadderrorstring
-            - name: Wsaddmappedheader
+            - name: WsAddMappedHeader
               href: /windows/desktop/api/WebServices/nf-webservices-wsaddmappedheader
-            - name: Wsaddressmessage
+            - name: WsAddressMessage
               href: /windows/desktop/api/WebServices/nf-webservices-wsaddressmessage
-            - name: Wsalloc
+            - name: WsAlloc
               href: /windows/desktop/api/WebServices/nf-webservices-wsalloc
-            - name: Wsasyncexecute
+            - name: WsAsyncExecute
               href: /windows/desktop/api/WebServices/nf-webservices-wsasyncexecute
-            - name: Wscall
+            - name: WsCall
               href: /windows/desktop/api/WebServices/nf-webservices-wscall
-            - name: Wscheckmustverständlicherweise-Header
+            - name: WsCheckMustUnderstandHeaders
               href: /windows/desktop/api/WebServices/nf-webservices-wscheckmustunderstandheaders
-            - name: Wsclosechannel
+            - name: WsCloseChannel
               href: /windows/desktop/api/WebServices/nf-webservices-wsclosechannel
-            - name: Wscloselistener
+            - name: WsCloseListener
               href: /windows/desktop/api/WebServices/nf-webservices-wscloselistener
-            - name: Wscloseservicehost
+            - name: WsCloseServiceHost
               href: /windows/desktop/api/WebServices/nf-webservices-wscloseservicehost
-            - name: Wscloseserviceproxy
+            - name: WsCloseServiceProxy
               href: /windows/desktop/api/WebServices/nf-webservices-wscloseserviceproxy
-            - name: Wscombineurl
+            - name: WsCombineUrl
               href: /windows/desktop/api/WebServices/nf-webservices-wscombineurl
-            - name: Wscopyerror
+            - name: WsCopyError
               href: /windows/desktop/api/WebServices/nf-webservices-wscopyerror
-            - name: Wscopynode
+            - name: WsCopyNode
               href: /windows/desktop/api/WebServices/nf-webservices-wscopynode
-            - name: Wscreatechannel
+            - name: WsCreateChannel
               href: /windows/desktop/api/WebServices/nf-webservices-wscreatechannel
-            - name: Wscreatechannelforlistener
+            - name: WsCreateChannelForListener
               href: /windows/desktop/api/WebServices/nf-webservices-wscreatechannelforlistener
-            - name: Wscreateerror
+            - name: WsCreateError
               href: /windows/desktop/api/WebServices/nf-webservices-wscreateerror
-            - name: Wscreatefaultfromerror
+            - name: WsCreateFaultFromError
               href: /windows/desktop/api/WebServices/nf-webservices-wscreatefaultfromerror
-            - name: Wscreateheap
+            - name: WsCreateHeap
               href: /windows/desktop/api/WebServices/nf-webservices-wscreateheap
-            - name: Wscreatelistener
+            - name: WsCreateListener
               href: /windows/desktop/api/WebServices/nf-webservices-wscreatelistener
-            - name: Wscreatemess Age
+            - name: WsCreateMessage
               href: /windows/desktop/api/WebServices/nf-webservices-wscreatemessage
-            - name: Wscreatemessageforchannel
+            - name: WsCreateMessageForChannel
               href: /windows/desktop/api/WebServices/nf-webservices-wscreatemessageforchannel
-            - name: Wscreatemetadata
+            - name: WsCreateMetadata
               href: /windows/desktop/api/WebServices/nf-webservices-wscreatemetadata
-            - name: Wscreatereader
+            - name: WsCreateReader
               href: /windows/desktop/api/WebServices/nf-webservices-wscreatereader
-            - name: Wscreateserviceendpointfromtemplate
+            - name: WsCreateServiceEndpointFromTemplate
               href: /windows/desktop/api/WebServices/nf-webservices-wscreateserviceendpointfromtemplate
-            - name: Wscreateservicehost
+            - name: WsCreateServiceHost
               href: /windows/desktop/api/WebServices/nf-webservices-wscreateservicehost
-            - name: Wscreateserviceproxy
+            - name: WsCreateServiceProxy
               href: /windows/desktop/api/WebServices/nf-webservices-wscreateserviceproxy
-            - name: Wscreateserviceproxyfromtemplate
+            - name: WsCreateServiceProxyFromTemplate
               href: /windows/desktop/api/WebServices/nf-webservices-wscreateserviceproxyfromtemplate
-            - name: Wscreatewriter
+            - name: WsCreateWriter
               href: /windows/desktop/api/WebServices/nf-webservices-wscreatewriter
-            - name: Wscreatexmlbuffer
+            - name: WsCreateXmlBuffer
               href: /windows/desktop/api/WebServices/nf-webservices-wscreatexmlbuffer
-            - name: Wscreatexmlsecuritytoken
+            - name: WsCreateXmlSecurityToken
               href: /windows/desktop/api/WebServices/nf-webservices-wscreatexmlsecuritytoken
-            - name: Wsdatetimeto FILETIME
+            - name: WsDateTimeToFileTime
               href: /windows/desktop/api/WebServices/nf-webservices-wsdatetimetofiletime
-            - name: Wsdecodeurl
+            - name: WsDecodeUrl
               href: /windows/desktop/api/WebServices/nf-webservices-wsdecodeurl
-            - name: Wsdumpmemory
+            - name: WsDumpMemory
               href: wsdumpmemory.md
-            - name: Wsencodeurl
+            - name: WsEncodeUrl
               href: /windows/desktop/api/WebServices/nf-webservices-wsencodeurl
-            - name: Wsendreadercanonicalization
+            - name: WsEndReaderCanonicalization
               href: /windows/desktop/api/WebServices/nf-webservices-wsendreadercanonicalization
-            - name: Wsendschreiterkanonisierung
+            - name: WsEndWriterCanonicalization
               href: /windows/desktop/api/WebServices/nf-webservices-wsendwritercanonicalization
-            - name: Wsfiletimeto DateTime
+            - name: WsFileTimeToDateTime
               href: /windows/desktop/api/WebServices/nf-webservices-wsfiletimetodatetime
-            - name: Wsfillbody
+            - name: WsFillBody
               href: /windows/desktop/api/WebServices/nf-webservices-wsfillbody
-            - name: Wsfillreader
+            - name: WsFillReader
               href: /windows/desktop/api/WebServices/nf-webservices-wsfillreader
-            - name: Wsfindattribute
+            - name: WsFindAttribute
               href: /windows/desktop/api/WebServices/nf-webservices-wsfindattribute
-            - name: Wsflushbody
+            - name: WsFlushBody
               href: /windows/desktop/api/WebServices/nf-webservices-wsflushbody
-            - name: Wsflushwriter
+            - name: WsFlushWriter
               href: /windows/desktop/api/WebServices/nf-webservices-wsflushwriter
-            - name: Wsfrechannel
+            - name: WsFreeChannel
               href: /windows/desktop/api/WebServices/nf-webservices-wsfreechannel
-            - name: Wsfreerror
+            - name: WsFreeError
               href: /windows/desktop/api/WebServices/nf-webservices-wsfreeerror
-            - name: Wsfreeheap
+            - name: WsFreeHeap
               href: /windows/desktop/api/WebServices/nf-webservices-wsfreeheap
-            - name: Wsfreelistener
+            - name: WsFreeListener
               href: /windows/desktop/api/WebServices/nf-webservices-wsfreelistener
-            - name: Wsfreemess Age
+            - name: WsFreeMessage
               href: /windows/desktop/api/WebServices/nf-webservices-wsfreemessage
-            - name: Wsfremetadata
+            - name: WsFreeMetadata
               href: /windows/desktop/api/WebServices/nf-webservices-wsfreemetadata
-            - name: Wsfreereader
+            - name: WsFreeReader
               href: /windows/desktop/api/WebServices/nf-webservices-wsfreereader
-            - name: Wsfreesecuritytoken
+            - name: WsFreeSecurityToken
               href: /windows/desktop/api/WebServices/nf-webservices-wsfreesecuritytoken
-            - name: Wsfreeservicehost
+            - name: WsFreeServiceHost
               href: /windows/desktop/api/WebServices/nf-webservices-wsfreeservicehost
-            - name: Wsfreeserviceproxy
+            - name: WsFreeServiceProxy
               href: /windows/desktop/api/WebServices/nf-webservices-wsfreeserviceproxy
-            - name: Wsfrewriter
+            - name: WsFreeWriter
               href: /windows/desktop/api/WebServices/nf-webservices-wsfreewriter
-            - name: Wsgetchannelproperty
+            - name: WsGetChannelProperty
               href: /windows/desktop/api/WebServices/nf-webservices-wsgetchannelproperty
-            - name: Wsgetcustomheader
+            - name: WsGetCustomHeader
               href: /windows/desktop/api/WebServices/nf-webservices-wsgetcustomheader
-            - name: Wsgetdictionary
+            - name: WsGetDictionary
               href: /windows/desktop/api/WebServices/nf-webservices-wsgetdictionary
-            - name: Wsgeterrorproperty
+            - name: WsGetErrorProperty
               href: /windows/desktop/api/WebServices/nf-webservices-wsgeterrorproperty
-            - name: Wsgeterrorstring
+            - name: WsGetErrorString
               href: /windows/desktop/api/WebServices/nf-webservices-wsgeterrorstring
-            - name: Wsgetfaulterrordetail
+            - name: WsGetFaultErrorDetail
               href: /windows/desktop/api/WebServices/nf-webservices-wsgetfaulterrordetail
-            - name: Wsgetfaulterrorproperty
+            - name: WsGetFaultErrorProperty
               href: /windows/desktop/api/WebServices/nf-webservices-wsgetfaulterrorproperty
-            - name: Wsgederader
+            - name: WsGetHeader
               href: /windows/desktop/api/WebServices/nf-webservices-wsgetheader
-            - name: Wsgetheiaderattribute
+            - name: WsGetHeaderAttributes
               href: /windows/desktop/api/WebServices/nf-webservices-wsgetheaderattributes
-            - name: Wsgeder approperty
+            - name: WsGetHeapProperty
               href: /windows/desktop/api/WebServices/nf-webservices-wsgetheapproperty
-            - name: Wsgetlistenerproperty
+            - name: WsGetListenerProperty
               href: /windows/desktop/api/WebServices/nf-webservices-wsgetlistenerproperty
-            - name: Wsgetmappedheader
+            - name: WsGetMappedHeader
               href: /windows/desktop/api/WebServices/nf-webservices-wsgetmappedheader
-            - name: Wsgetmessageproperty
+            - name: WsGetMessageProperty
               href: /windows/desktop/api/WebServices/nf-webservices-wsgetmessageproperty
             - name: WsGetMetadataEndpoints
               href: /windows/desktop/api/WebServices/nf-webservices-wsgetmetadataendpoints
@@ -883,243 +883,243 @@
               href: /windows/desktop/api/WebServices/nf-webservices-wsgetmetadataproperty
             - name: WsGetMissingMetadataDocumentAddress
               href: /windows/desktop/api/WebServices/nf-webservices-wsgetmissingmetadatadocumentaddress
-            - name: Wsgetnamespacefromprefix
+            - name: WsGetNamespaceFromPrefix
               href: /windows/desktop/api/WebServices/nf-webservices-wsgetnamespacefromprefix
-            - name: Wsgetoperationcontextproperty
+            - name: WsGetOperationContextProperty
               href: /windows/desktop/api/WebServices/nf-webservices-wsgetoperationcontextproperty
-            - name: Wsgetpolicyalternativecount
+            - name: WsGetPolicyAlternativeCount
               href: /windows/desktop/api/WebServices/nf-webservices-wsgetpolicyalternativecount
-            - name: Wsgetpolicyproperty
+            - name: WsGetPolicyProperty
               href: /windows/desktop/api/WebServices/nf-webservices-wsgetpolicyproperty
-            - name: Wsgetprefixfromnamespace
+            - name: WsGetPrefixFromNamespace
               href: /windows/desktop/api/WebServices/nf-webservices-wsgetprefixfromnamespace
-            - name: Wsgetreadernode
+            - name: WsGetReaderNode
               href: /windows/desktop/api/WebServices/nf-webservices-wsgetreadernode
-            - name: Wsgetreaderposition
+            - name: WsGetReaderPosition
               href: /windows/desktop/api/WebServices/nf-webservices-wsgetreaderposition
-            - name: Wsgetreaderproperty
+            - name: WsGetReaderProperty
               href: /windows/desktop/api/WebServices/nf-webservices-wsgetreaderproperty
-            - name: Wsgetsecuritycontextproperty
+            - name: WsGetSecurityContextProperty
               href: /windows/desktop/api/WebServices/nf-webservices-wsgetsecuritycontextproperty
-            - name: Wsgetsecuritytoken-Eigenschaft
+            - name: WsGetSecurityTokenProperty
               href: /windows/desktop/api/WebServices/nf-webservices-wsgetsecuritytokenproperty
-            - name: Wsgetservicehostproperty
+            - name: WsGetServiceHostProperty
               href: /windows/desktop/api/WebServices/nf-webservices-wsgetservicehostproperty
-            - name: Wsgetserviceproxyproperty
+            - name: WsGetServiceProxyProperty
               href: /windows/desktop/api/WebServices/nf-webservices-wsgetserviceproxyproperty
-            - name: Wsgetschreiterposition
+            - name: WsGetWriterPosition
               href: /windows/desktop/api/WebServices/nf-webservices-wsgetwriterposition
-            - name: Wsgetschreiterproperty
+            - name: WsGetWriterProperty
               href: /windows/desktop/api/WebServices/nf-webservices-wsgetwriterproperty
-            - name: Wsgetxmlattribute
+            - name: WsGetXmlAttribute
               href: /windows/desktop/api/WebServices/nf-webservices-wsgetxmlattribute
-            - name: Wsinitializemess
+            - name: WsInitializeMessage
               href: /windows/desktop/api/WebServices/nf-webservices-wsinitializemessage
-            - name: Wsmarkheaderasverstanden
+            - name: WsMarkHeaderAsUnderstood
               href: /windows/desktop/api/WebServices/nf-webservices-wsmarkheaderasunderstood
-            - name: Wsmatchpolicyalternative
+            - name: WsMatchPolicyAlternative
               href: /windows/desktop/api/WebServices/nf-webservices-wsmatchpolicyalternative
-            - name: Wsmovereader
+            - name: WsMoveReader
               href: /windows/desktop/api/WebServices/nf-webservices-wsmovereader
-            - name: Wsmovewriter
+            - name: WsMoveWriter
               href: /windows/desktop/api/WebServices/nf-webservices-wsmovewriter
-            - name: Wsoffsetof
+            - name: WsOffsetOf
               href: /windows/desktop/api/WebServices/nf-webservices-wsoffsetof
-            - name: Wsopumchannel
+            - name: WsOpenChannel
               href: /windows/desktop/api/WebServices/nf-webservices-wsopenchannel
-            - name: Wsopumlistener
+            - name: WsOpenListener
               href: /windows/desktop/api/WebServices/nf-webservices-wsopenlistener
-            - name: Wsopeinservicehost
+            - name: WsOpenServiceHost
               href: /windows/desktop/api/WebServices/nf-webservices-wsopenservicehost
-            - name: Wsopeinserviceproxy
+            - name: WsOpenServiceProxy
               href: /windows/desktop/api/WebServices/nf-webservices-wsopenserviceproxy
-            - name: Wspullbytes
+            - name: WsPullBytes
               href: /windows/desktop/api/WebServices/nf-webservices-wspullbytes
-            - name: Wspushbytes
+            - name: WsPushBytes
               href: /windows/desktop/api/WebServices/nf-webservices-wspushbytes
-            - name: Wslesarray
+            - name: WsReadArray
               href: /windows/desktop/api/WebServices/nf-webservices-wsreadarray
-            - name: Wslesattribute
+            - name: WsReadAttribute
               href: /windows/desktop/api/WebServices/nf-webservices-wsreadattribute
-            - name: Wsread Body
+            - name: WsReadBody
               href: /windows/desktop/api/WebServices/nf-webservices-wsreadbody
-            - name: Wslebytes
+            - name: WsReadBytes
               href: /windows/desktop/api/WebServices/nf-webservices-wsreadbytes
-            - name: Wsleserchars
+            - name: WsReadChars
               href: /windows/desktop/api/WebServices/nf-webservices-wsreadchars
             - name: WsReadCharsUtf8
               href: /windows/desktop/api/WebServices/nf-webservices-wsreadcharsutf8
-            - name: Wsread Element
+            - name: WsReadElement
               href: /windows/desktop/api/WebServices/nf-webservices-wsreadelement
-            - name: Wsumdattribute
+            - name: WsReadEndAttribute
               href: /windows/desktop/api/WebServices/nf-webservices-wsreadendattribute
-            - name: Wsleserumdelta
+            - name: WsReadEndElement
               href: /windows/desktop/api/WebServices/nf-webservices-wsreadendelement
-            - name: Wsleserendpointadressssextension
+            - name: WsReadEndpointAddressExtension
               href: /windows/desktop/api/WebServices/nf-webservices-wsreadendpointaddressextension
-            - name: Wsumenvelopeend
+            - name: WsReadEnvevesEnd
               href: /windows/desktop/api/WebServices/nf-webservices-wsreadenvelopeend
-            - name: Wsumenvelopestart
+            - name: WsReadEnvevesStart
               href: /windows/desktop/api/WebServices/nf-webservices-wsreadenvelopestart
-            - name: Wslesmessageend
+            - name: WsReadMessageEnd
               href: /windows/desktop/api/WebServices/nf-webservices-wsreadmessageend
-            - name: Wsummessagestart
+            - name: WsReadMessageStart
               href: /windows/desktop/api/WebServices/nf-webservices-wsreadmessagestart
-            - name: Wsummetadata
+            - name: WsReadMetadata
               href: /windows/desktop/api/WebServices/nf-webservices-wsreadmetadata
-            - name: Wsread Node
+            - name: WsReadNode
               href: /windows/desktop/api/WebServices/nf-webservices-wsreadnode
-            - name: Wsleserqualifiedname
+            - name: WsReadQualifiedName
               href: /windows/desktop/api/WebServices/nf-webservices-wsreadqualifiedname
-            - name: Wsleserstartattribute
+            - name: WsReadStartAttribute
               href: /windows/desktop/api/WebServices/nf-webservices-wsreadstartattribute
-            - name: Wsleserstartelements
+            - name: WsReadStartElement
               href: /windows/desktop/api/WebServices/nf-webservices-wsreadstartelement
-            - name: Wsumstartelements
+            - name: WsReadToStartElement
               href: /windows/desktop/api/WebServices/nf-webservices-wsreadtostartelement
-            - name: Wslestype
+            - name: WsReadType
               href: /windows/desktop/api/WebServices/nf-webservices-wsreadtype
-            - name: Wsread Value
+            - name: WsReadValue
               href: /windows/desktop/api/WebServices/nf-webservices-wsreadvalue
-            - name: Wsumxmlbuffer
+            - name: WsReadXmlBuffer
               href: /windows/desktop/api/WebServices/nf-webservices-wsreadxmlbuffer
-            - name: Wsumxmlbufferfromb
+            - name: WsReadXmlBufferFromBytes
               href: /windows/desktop/api/WebServices/nf-webservices-wsreadxmlbufferfrombytes
-            - name: Wsreceivemess
+            - name: WsReceiveMessage
               href: /windows/desktop/api/WebServices/nf-webservices-wsreceivemessage
-            - name: Wsregisteroperationforcancel
+            - name: WsRegisterOperationForCancel
               href: /windows/desktop/api/WebServices/nf-webservices-wsregisteroperationforcancel
-            - name: Wsremovecustomheader
+            - name: WsRemoveCustomHeader
               href: /windows/desktop/api/WebServices/nf-webservices-wsremovecustomheader
-            - name: Wsremoveheader
+            - name: WsRemoveHeader
               href: /windows/desktop/api/WebServices/nf-webservices-wsremoveheader
-            - name: Wsremovemappedheader
+            - name: WsRemoveMappedHeader
               href: /windows/desktop/api/WebServices/nf-webservices-wsremovemappedheader
-            - name: Wsremovenode
+            - name: WsRemoveNode
               href: /windows/desktop/api/WebServices/nf-webservices-wsremovenode
-            - name: Wsrequestreply
+            - name: WsRequestReply
               href: /windows/desktop/api/WebServices/nf-webservices-wsrequestreply
-            - name: Wsrequestsecuritytoken
+            - name: WsRequestSecurityToken
               href: /windows/desktop/api/WebServices/nf-webservices-wsrequestsecuritytoken
-            - name: Wsresetchannel
+            - name: WsResetChannel
               href: /windows/desktop/api/WebServices/nf-webservices-wsresetchannel
-            - name: Wsre-Terror
+            - name: WsResetError
               href: /windows/desktop/api/WebServices/nf-webservices-wsreseterror
-            - name: Wsreabthap
+            - name: WsResetHeap
               href: /windows/desktop/api/WebServices/nf-webservices-wsresetheap
-            - name: Wsresetlistener
+            - name: WsResetListener
               href: /windows/desktop/api/WebServices/nf-webservices-wsresetlistener
-            - name: Wsresetmessage
+            - name: WsResetMessage
               href: /windows/desktop/api/WebServices/nf-webservices-wsresetmessage
-            - name: Wsresetmetadata
+            - name: WsResetMetadata
               href: /windows/desktop/api/WebServices/nf-webservices-wsresetmetadata
-            - name: Wsresetservicehost
+            - name: WsResetServiceHost
               href: /windows/desktop/api/WebServices/nf-webservices-wsresetservicehost
-            - name: Wsresetserviceproxy
+            - name: WsResetServiceProxy
               href: /windows/desktop/api/WebServices/nf-webservices-wsresetserviceproxy
-            - name: Wsrevokesecuritycontext
+            - name: WsRevokeSecurityContext
               href: /windows/desktop/api/WebServices/nf-webservices-wsrevokesecuritycontext
-            - name: Wssendfaultmessageforerror
+            - name: WsSendFaultMessageForError
               href: /windows/desktop/api/WebServices/nf-webservices-wssendfaultmessageforerror
-            - name: Wssendmessage
+            - name: WsSendMessage
               href: /windows/desktop/api/WebServices/nf-webservices-wssendmessage
-            - name: Wssendreplymess
+            - name: WsSendReplyMessage
               href: /windows/desktop/api/WebServices/nf-webservices-wssendreplymessage
-            - name: Wssetauentfail
+            - name: WsSetAutoFail
               href: wssetautofail.md
-            - name: Wssetchannelproperty
+            - name: WsSetChannelProperty
               href: /windows/desktop/api/WebServices/nf-webservices-wssetchannelproperty
-            - name: Wsseterrorproperty
+            - name: WsSetErrorProperty
               href: /windows/desktop/api/WebServices/nf-webservices-wsseterrorproperty
-            - name: Wssetfaulterrordetail
+            - name: WsSetFaultErrorDetail
               href: /windows/desktop/api/WebServices/nf-webservices-wssetfaulterrordetail
-            - name: Wssetfaulterrorproperty
+            - name: WsSetFaultErrorProperty
               href: /windows/desktop/api/WebServices/nf-webservices-wssetfaulterrorproperty
-            - name: Wssetheiader
+            - name: WsSetHeader
               href: /windows/desktop/api/WebServices/nf-webservices-wssetheader
-            - name: Wssetinput
+            - name: WsSetInput
               href: /windows/desktop/api/WebServices/nf-webservices-wssetinput
-            - name: Wssetinputstobuffer
+            - name: WsSetInputToBuffer
               href: /windows/desktop/api/WebServices/nf-webservices-wssetinputtobuffer
-            - name: Wssetlistenerproperty
+            - name: WsSetListenerProperty
               href: /windows/desktop/api/WebServices/nf-webservices-wssetlistenerproperty
-            - name: Wssetmessageproperty
+            - name: WsSetMessageProperty
               href: /windows/desktop/api/WebServices/nf-webservices-wssetmessageproperty
-            - name: Wssetoutput
+            - name: WsSetOutput
               href: /windows/desktop/api/WebServices/nf-webservices-wssetoutput
-            - name: Wssetoutputtbuffer
+            - name: WsSetOutputToBuffer
               href: /windows/desktop/api/WebServices/nf-webservices-wssetoutputtobuffer
-            - name: Wssetreaderposition
+            - name: WsSetReaderPosition
               href: /windows/desktop/api/WebServices/nf-webservices-wssetreaderposition
-            - name: Wssetschreiterposition
+            - name: WsSetWriterPosition
               href: /windows/desktop/api/WebServices/nf-webservices-wssetwriterposition
-            - name: Wsshutdownsessionchannel
+            - name: WsShutdownSessionChannel
               href: /windows/desktop/api/WebServices/nf-webservices-wsshutdownsessionchannel
-            - name: Wsskipnode
+            - name: WsSkipNode
               href: /windows/desktop/api/WebServices/nf-webservices-wsskipnode
-            - name: Wsstartreadercanonicalization
+            - name: WsStartReaderCanonicalization
               href: /windows/desktop/api/WebServices/nf-webservices-wsstartreadercanonicalization
-            - name: Wsstartschreitercanonicalization
+            - name: WsStartWriterCanonicalization
               href: /windows/desktop/api/WebServices/nf-webservices-wsstartwritercanonicalization
-            - name: Wstrimxmlwhitespace
+            - name: WsTrimXmlWhitespace
               href: /windows/desktop/api/WebServices/nf-webservices-wstrimxmlwhitespace
-            - name: Wsverifyxmlncname
+            - name: WsVerifyXmlNCName
               href: /windows/desktop/api/WebServices/nf-webservices-wsverifyxmlncname
-            - name: Wsschreitearray
+            - name: WsWriteArray
               href: /windows/desktop/api/WebServices/nf-webservices-wswritearray
-            - name: Wsschreiteattribute
+            - name: WsWriteAttribute
               href: /windows/desktop/api/WebServices/nf-webservices-wswriteattribute
-            - name: Wsschreitebody
+            - name: WsWriteBody
               href: /windows/desktop/api/WebServices/nf-webservices-wswritebody
-            - name: Wsschreitebytes
+            - name: WsWriteBytes
               href: /windows/desktop/api/WebServices/nf-webservices-wswritebytes
-            - name: Wswrite techars
+            - name: WsWriteChars
               href: /windows/desktop/api/WebServices/nf-webservices-wswritechars
             - name: WsWriteCharsUtf8
               href: /windows/desktop/api/WebServices/nf-webservices-wswritecharsutf8
-            - name: Wsschreiteelement
+            - name: WsWriteElement
               href: /windows/desktop/api/WebServices/nf-webservices-wswriteelement
-            - name: Wsschreiteendattribute
+            - name: WsWriteEndAttribute
               href: /windows/desktop/api/WebServices/nf-webservices-wswriteendattribute
-            - name: Wsschreiteendcdata
+            - name: WsWriteEndCData
               href: /windows/desktop/api/WebServices/nf-webservices-wswriteendcdata
-            - name: Wsschreiteendelta-Element
+            - name: WsWriteEndElement
               href: /windows/desktop/api/WebServices/nf-webservices-wswriteendelement
-            - name: Wsschreiteendstartelements
+            - name: WsWriteEndStartElement
               href: /windows/desktop/api/WebServices/nf-webservices-wswriteendstartelement
-            - name: Wsschreiteenvelopeend
+            - name: WsWriteEnvevesEnd
               href: /windows/desktop/api/WebServices/nf-webservices-wswriteenvelopeend
-            - name: Wsschreiteenvelopestart
+            - name: WsWriteEnvevesStart
               href: /windows/desktop/api/WebServices/nf-webservices-wswriteenvelopestart
-            - name: Wsschreitemessageend
+            - name: WsWriteMessageEnd
               href: /windows/desktop/api/WebServices/nf-webservices-wswritemessageend
-            - name: Wsschreitemessagestart
+            - name: WsWriteMessageStart
               href: /windows/desktop/api/WebServices/nf-webservices-wswritemessagestart
-            - name: Wsschreitenode
+            - name: WsWriteNode
               href: /windows/desktop/api/WebServices/nf-webservices-wswritenode
-            - name: Wsschreitequalifiedname
+            - name: WsWriteQualifiedName
               href: /windows/desktop/api/WebServices/nf-webservices-wswritequalifiedname
-            - name: Wsschreitestartattribute
+            - name: WsWriteStartAttribute
               href: /windows/desktop/api/WebServices/nf-webservices-wswritestartattribute
-            - name: Wsschreitestartcdata
+            - name: WsWriteStartCData
               href: /windows/desktop/api/WebServices/nf-webservices-wswritestartcdata
-            - name: Wsschreitestartelements
+            - name: WsWriteStartElement
               href: /windows/desktop/api/WebServices/nf-webservices-wswritestartelement
-            - name: Wsschreitetext
+            - name: WsWriteText
               href: /windows/desktop/api/WebServices/nf-webservices-wswritetext
-            - name: Wsschreitetype
+            - name: WsWriteType
               href: /windows/desktop/api/WebServices/nf-webservices-wswritetype
-            - name: Wsschreitevalue
+            - name: WsWriteValue
               href: /windows/desktop/api/WebServices/nf-webservices-wswritevalue
-            - name: Wsschreitexmlbuffer
+            - name: WsWriteXmlBuffer
               href: /windows/desktop/api/WebServices/nf-webservices-wswritexmlbuffer
-            - name: Wsschreitexmlbufferybytes
+            - name: WsWriteXmlBufferToBytes
               href: /windows/desktop/api/WebServices/nf-webservices-wswritexmlbuffertobytes
-            - name: Wsschreitexmlnsattribute
+            - name: WsWriteXmlnsAttribute
               href: /windows/desktop/api/WebServices/nf-webservices-wswritexmlnsattribute
-            - name: Wsxmlstringequals
+            - name: WsXmlStringEquals
               href: /windows/desktop/api/WebServices/nf-webservices-wsxmlstringequals
-        - name: Windows-Webdienst Handles
+        - name: Windows Webdiensthandles
           href: web-services-for-windows-handles.md
           items:
             - name: WS_CHANNEL
@@ -1152,7 +1152,7 @@
               href: ws-xml-reader.md
             - name: WS_XML_WRITER
               href: ws-xml-writer.md
-        - name: Windows-Webdienst Makros
+        - name: Windows Webdienstmakros
           href: web-services-for-windows-macros.md
           items:
             - name: WS_STRING_EMPTY
@@ -1165,11 +1165,11 @@
               href: /previous-versions/windows/desktop/legacy/dd323562(v=vs.85)
             - name: WS_XML_STRING_VALUE
               href: /windows/desktop/api/WebServices/nf-webservices-ws_xml_string_value
-            - name: Wsgräfin
+            - name: WsCountOf
               href: /windows/desktop/api/WebServices/nf-webservices-wscountof
-        - name: Rückgabewerte für Windows-Webdienste
+        - name: Windows Rückgabewerte für Webdienste
           href: windows-web-services-return-values.md
-        - name: Windows-Webdienst Strukturen
+        - name: Windows Webdienststrukturen
           href: web-services-for-windows-structures.md
           items:
             - name: WS_ANY_ATTRIBUTE
@@ -1682,13 +1682,13 @@
               href: /windows/win32/api/WebServices/ns-webservices-ws_xml_writer_stream_output
             - name: WS_XML_WRITER_TEXT_ENCODING
               href: /windows/win32/api/WebServices/ns-webservices-ws_xml_writer_text_encoding
-- name: Vorabruf von Debug-APIs für Windows Store-Apps
+- name: Vorabrufen von Debug-APIs für Windows Store-Apps
   href: windows-runtime-prefetch-debug-apis.md
   items:
-    - name: Icontentprefetchertask-Auslösers
+    - name: IContentPrefetcherTaskTrigger
       href: /windows/desktop/api/IContentPrefetcherTaskTrigger/nn-icontentprefetchertasktrigger-icontentprefetchertasktrigger
       items:
-        - name: Isregisteredforcontentprefetch-Methode
+        - name: IsRegisteredForContentPrefetch-Methode
           href: /windows/desktop/api/IContentPrefetcherTaskTrigger/nf-icontentprefetchertasktrigger-icontentprefetchertasktrigger-isregisteredforcontentprefetch
-        - name: Triggercontentprefetchertask-Methode
+        - name: TriggerContentPrefetcherTask-Methode
           href: /windows/desktop/api/IContentPrefetcherTaskTrigger/nf-icontentprefetchertasktrigger-icontentprefetchertasktrigger-triggercontentprefetchertask

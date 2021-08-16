@@ -1,7 +1,7 @@
 ---
-description: Diese Konstante ist die maximale Anzahl von Vertex-Deklaratoren für ein Mesh.
+description: Diese Konstante ist die maximale Anzahl von Scheitelpunktdeklaratoren für ein Gitternetz.
 ms.assetid: 234e99a2-1907-4065-b03b-fb9e8d6812ab
-title: MAX_FVF_DECL_SIZE-Enumeration (D3dx9mesh. h)
+title: MAX_FVF_DECL_SIZE -Enumeration (D3dx9mesh.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,16 +13,16 @@ api_type:
 - HeaderDef
 api_location:
 - d3dx9mesh.h
-ms.openlocfilehash: 7204308e6b9355b416218f31af301b5ea6d8fff5
-ms.sourcegitcommit: 14010c34b35fa268046c7683f021f86de08ddd0a
+ms.openlocfilehash: 52ac939cc77bbd87dbecffc07253f0fadc5cbbdaa48e07f938f163c453c21e14
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "106371905"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118798796"
 ---
-# <a name="max_fvf_decl_size-enumeration"></a>Maximal zulässige Anzahl von \_ f- \_ decl- \_ Größen
+# <a name="max_fvf_decl_size-enumeration"></a>MAX \_ FVF \_ DECL \_ SIZE-Enumeration
 
-Diese Konstante ist die maximale Anzahl von Vertex-Deklaratoren für ein Mesh.
+Diese Konstante ist die maximale Anzahl von Scheitelpunktdeklaratoren für ein Gitternetz.
 
 ## <a name="syntax"></a>Syntax
 
@@ -39,16 +39,16 @@ typedef enum  {
 
 <dl> <dt>
 
-<span id="MAX_FVF_DECL_SIZE"></span><span id="max_fvf_decl_size"></span>**maximale \_ Größe der f- \_ decl \_**
+<span id="MAX_FVF_DECL_SIZE"></span><span id="max_fvf_decl_size"></span>**MAXIMALE \_ \_ FVF-DECL-GRÖßE \_**
 </dt> <dd>
 
-Die maximale Anzahl von Elementen in der Vertex-Deklaration. Der zusätzliche (+ 1) ist für [**D3DDECL \_ End**](d3ddecl-end.md).
+Die maximale Anzahl von Elementen in der Scheitelpunktdeklaration. Der zusätzliche (+1) ist für [**D3DDECL \_ END.**](d3ddecl-end.md)
 
 </dd> </dl>
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-MAXD3DDECLLENGTH wird als Maximum von 64 definiert (siehe d3d9types. h). Dies schließt nicht das "End"-markervertex-Element ein.
+MAXD3DDECLLENGTH ist als Maximalwert von 64 definiert (siehe d3d9types.h). Dies schließt das Vertexelement des Markers "end" nicht ein.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -56,11 +56,11 @@ MAXD3DDECLLENGTH wird als Maximum von 64 definiert (siehe d3d9types. h). Dies sc
 
 | Anforderung | Wert |
 |-------------------|----------------------------------------------------------------------------------------|
-| Header<br/> | <dl> <dt>D3dx9mesh. h</dt> </dl> |
+| Header<br/> | <dl> <dt>D3dx9mesh.h</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 

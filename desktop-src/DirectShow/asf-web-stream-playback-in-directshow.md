@@ -1,32 +1,32 @@
 ---
-description: Wiedergabe von ASF-Webstream in DirectShow
+description: ASF-Webstreamwiedergabe in DirectShow
 ms.assetid: c7818c62-24af-4eac-84b8-f76be4ca6c09
-title: Wiedergabe von ASF-Webstream in DirectShow
+title: ASF-Webstreamwiedergabe in DirectShow
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 2d14a83d2baf9c11aa824f5d6358f62790c16b30
-ms.sourcegitcommit: a47bd86f517de76374e4fff33cfeb613eb259a7e
+ms.openlocfilehash: c28d9d3b7ea4fba5537383a846e6eff64f3815eefa21613c6056a15a5e497f77
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/06/2021
-ms.locfileid: "104341938"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117824625"
 ---
-# <a name="asf-web-stream-playback-in-directshow"></a>Wiedergabe von ASF-Webstream in DirectShow
+# <a name="asf-web-stream-playback-in-directshow"></a>ASF-Webstreamwiedergabe in DirectShow
 
-Microsoft DirectShow unterstützt Webstreams in Dateiwiedergabe Szenarios über den [WM-ASF-Reader](wm-asf-reader-filter.md) -Filter. Sie müssen jedoch einen eigenen DirectShow-Filter schreiben, um den Stream zu erfassen und beizubehalten.
+Microsoft DirectShow unterstützt Webstreams in Dateiwiedergabeszenarien über den [WM ASF-Readerfilter.](wm-asf-reader-filter.md) Sie müssen jedoch einen eigenen DirectShow-Filter schreiben, um den Stream zu erfassen und dauerhaft zu speichern.
 
 > [!Note]  
-> Um Webstreams in Inhalten wiederzugeben, die von einem Server mit Windows Media Services gestreamt werden, verwenden Sie die Windows Media Player 9-Reihe ActiveX®-Steuerelement, das in eine Webseite eingebettet ist.
+> Um Webstreams in Inhalten wieder anzuzeigen, die von einem Server gestreamt werden, auf dem Windows Media-Dienste ausgeführt wird, verwenden Sie das Windows Media Player 9 Series ActiveX®-Steuerelement, das in eine Webseite eingebettet ist.
 
  
 
-Wenn eine Datei mit Streams vom Typ "wmmediatype \_ Filetransfer" angegeben wird, erstellt der WM-ASF-Reader eine Ausgabe-PIN. Der Format Block ist eine [**WMT- \_ Webstream- \_ Format**](/previous-versions/windows/desktop/api/wmsdkidl/ns-wmsdkidl-wmt_webstream_format) Struktur. (Diese Struktur ist in der Dokumentation zum Windows Media-Format SDK dokumentiert.) Wenn kein downstreamfilter verfügbar ist, mit dem dieser Medientyp verarbeitet werden kann, bleibt die PIN unverändert, aber die Datei findet weiterhin die Audiodaten und/oder Videostreams.
+Wenn eine Datei mit Streams vom Typ WMMEDIATYPE FileTransfer angegeben wird, erstellt der \_ WM ASF-Reader einen Ausgabepin dafür. Der Formatblock ist eine [**WMT \_ WEBSTREAM \_ FORMAT-Struktur.**](/previous-versions/windows/desktop/api/wmsdkidl/ns-wmsdkidl-wmt_webstream_format) (Diese Struktur ist in der Dokumentation zum Windows Media Format SDK dokumentiert.) Wenn kein Downstreamfilter verfügbar ist, der diesen Medientyp verarbeiten kann, bleibt der Pin nicht verbunden, aber die Datei gibt weiterhin die Audio- und/oder Videostreams wieder.
 
-Jedes Medien Beispiel in einem Webstream enthält eine [**WMT- \_ Webstream- \_ Beispiel \_ Header**](/previous-versions/windows/desktop/api/wmsdkidl/ns-wmsdkidl-wmt_webstream_sample_header) Struktur, die in der Dokumentation zum Windows Media-Format SDK dokumentiert ist. Die-Struktur hat eine Variable Länge, abhängig von der Länge des **wszurl** -Members. Der Zeiger auf die Beispiel Daten zeigt zunächst auf diese-Struktur, und Sie müssen den Zeiger hinter der-Struktur bewegen, um auf die eigentlichen Daten im Stream zuzugreifen.
+Jedes Medienbeispiel in einem Webstream enthält eine [**WMT \_ WEBSTREAM \_ SAMPLE \_ HEADER-Struktur,**](/previous-versions/windows/desktop/api/wmsdkidl/ns-wmsdkidl-wmt_webstream_sample_header) die in der Dokumentation Windows Media Format SDK dokumentiert ist. Die -Struktur hat eine variable Länge, die von der Länge ihres **wszURL-Members** abhängig ist. Der Zeiger auf die Beispieldaten zeigt anfänglich auf diese Struktur, und Sie müssen den Zeiger über die Struktur hinaus steigern, um auf die tatsächlichen Daten im Stream zu zugreifen.
 
-Der Filter für den webstreamhandler sollte auf der [**cbasererererklasse**](cbaserenderer.md) basieren. In der [**cbaserderderer::D orendersample**](cbaserenderer-dorendersample.md) -Methode muss der Filter die Struktur nach Informationen über den Webstream analysieren und dann die entsprechende Aktion ausführen. In der Regel umfasst dies das Speichern der Datei auf dem Datenträger und das anschließende Aufrufen der Funktionen [**createurlcacheentry**](/windows/desktop/api/wininet/nf-wininet-createurlcacheentrya) und [**commiturlcacheentryw**](/windows/desktop/api/wininet/nf-wininet-commiturlcacheentryw) oder [**commiturlcacheentrya**](/windows/desktop/api/wininet/nf-wininet-commiturlcacheentrya) , um die Dateien in den Internet Explorer-Cache zu platzieren. Der Filter muss mehrteilige Dateien verarbeiten, d. h. Dateien, die größer als ein Beispiel sind, und auch Rendering-Befehle verarbeiten müssen, die vom **WMT- \_ Webstream \_ Sample \_ Header. wsampletype** -Member angegeben werden. Der Filter sendet ein Ereignis für einen [**EC- \_ OLE- \_ Ereignis**](ec-ole-event.md) an die Anwendung zusammen mit dem Text der **WMT- \_ Webstream \_ Sample \_ Header. wszurl** -Zeichenfolge, die den Namen der Datei enthält, die gerendert werden soll. Die Anwendung bewirkt dann, dass der Browser die angegebene Seite anzeigt. Wenn der Webstream ordnungsgemäß erstellt wurde, sollte sich die Datei bereits im Cache befinden.
+Der Webstreamhandlerfilter sollte auf der [**CBaseRenderer-Klasse**](cbaserenderer.md) basieren. In [**der CBaseRenderer::D oRenderSample-Methode**](cbaserenderer-dorendersample.md) muss der Filter die Struktur auf Informationen zum Webstream analysieren und dann die entsprechende Aktion ausführen. In der Regel umfasst dies das Speichern der Datei auf dem Datenträger und das anschließende Aufrufen der [**Funktionen CreateUrlCacheEntry**](/windows/desktop/api/wininet/nf-wininet-createurlcacheentrya) und [**CommitUrlCacheEntryW**](/windows/desktop/api/wininet/nf-wininet-commiturlcacheentryw) oder [**CommitUrlCacheEntryA,**](/windows/desktop/api/wininet/nf-wininet-commiturlcacheentrya) um die Dateien im Internet Explorer-Cache zu speichern. Der Filter muss mehrteilige Dateien verarbeiten, d. h. Dateien, die größer als ein Beispiel sind, sowie Renderbefehle verarbeiten, die vom **WMT \_ WEBSTREAM \_ SAMPLE \_ HEADER.wSampleType-Member** angegeben werden. Der Filter sendet ein [**EC \_ OLE \_ EVENT-Ereignis**](ec-ole-event.md) zusammen mit dem Text der **WMT \_ WEBSTREAM SAMPLE \_ \_ HEADER.wszURL-Zeichenfolge,** die den Namen der zu renderenden Datei enthält, an die Anwendung. Die Anwendung bewirkt dann, dass im Browser die angegebene Seite angezeigt wird. Wenn der Webstream ordnungsgemäß geschrieben wurde, sollte die Datei bereits im Cache vorhanden sein.
 
-Weitere Informationen zum WMT \_ -Webstream \_ -Format und zum WMT- \_ Webstream- \_ Beispiel \_ Header finden Sie in der Dokumentation zum Windows Media-Format SDK.
+Weitere Informationen zu WMT \_ WEBSTREAM FORMAT und WMT WEBSTREAM SAMPLE HEADER finden Sie in der Dokumentation Windows \_ \_ Media Format \_ \_ SDK.
 
 ## <a name="related-topics"></a>Zugehörige Themen
 

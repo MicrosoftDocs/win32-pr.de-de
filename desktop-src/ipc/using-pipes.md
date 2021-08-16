@@ -13,10 +13,10 @@ ms.locfileid: "118755682"
 ---
 # <a name="using-pipes"></a>Verwenden von Pipes
 
-Die folgenden Beispiele veranschaulichen die Verwendung von Pipes, um einen kontinuierlichen Datenstrom zwischen Prozessen zu übergeben:
+Die folgenden Beispiele veranschaulichen die Verwendung von Pipes zum Übergeben eines kontinuierlichen Datenstroms zwischen Prozessen:
 
 -   [Multithreadpipeserver](multithreaded-pipe-server.md)
--   [Named Pipe-Server mit überlappender E/A](named-pipe-server-using-overlapped-i-o.md)
+-   [Named Pipe-Server mit überlappenden E/A-Daten](named-pipe-server-using-overlapped-i-o.md)
 -   [Named Pipe-Server mit Vervollständigungsroutinen](named-pipe-server-using-completion-routines.md)
 -   [Named Pipe-Client](named-pipe-client.md)
 -   [Transaktionen an Named Pipes](transactions-on-named-pipes.md)

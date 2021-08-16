@@ -1,9 +1,9 @@
 ---
-title: HKM_SETRULES Meldung (kommstrg. h)
-description: Definiert die ungültigen Kombinationen und die standardmodifiziererkombination für ein Hot Key-Steuerelement.
+title: HKM_SETRULES (Commctrl.h)
+description: Definiert die ungültigen Kombinationen und die Standardmodifiziererkombination für ein Hot Key-Steuerelement.
 ms.assetid: de3dd463-a534-4c7c-ae04-da80a3bff2ab
 keywords:
-- Windows-Steuerelemente für HKM_SETRULES Meldung
+- HKM_SETRULES von Windows-Steuerelementen
 topic_type:
 - apiref
 api_name:
@@ -14,16 +14,16 @@ api_type:
 - HeaderDef
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: c33c0918a7bb44fdac9a1f2c60fdde8e06b5e679
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 4ec47450ca0d67854d7be413d8a3eb3e5fec3eac49e18f6bcf96f86b563c8906
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104477295"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118958709"
 ---
-# <a name="hkm_setrules-message"></a>HKM- \_ Nachricht
+# <a name="hkm_setrules-message"></a>HKM \_ SETRULES-Meldung
 
-Definiert die ungültigen Kombinationen und die standardmodifiziererkombination für ein Hot Key-Steuerelement.
+Definiert die ungültigen Kombinationen und die Standardmodifiziererkombination für ein Hot Key-Steuerelement.
 
 ## <a name="parameters"></a>Parameter
 
@@ -32,20 +32,20 @@ Definiert die ungültigen Kombinationen und die standardmodifiziererkombination 
 *wParam* 
 </dt> <dd>
 
-Ein Array von-Flags, die ungültige Tastenkombinationen angeben. Dieser Parameter kann eine Kombination der folgenden Werte sein:
+Ein Array von Flags, die ungültige Tastenkombinationen angeben. Dieser Parameter kann eine Kombination der folgenden Werte sein:
 
 
 
 | Wert                                                                                                                                                   | Bedeutung                    |
 |---------------------------------------------------------------------------------------------------------------------------------------------------------|----------------------------|
-| <span id="HKCOMB_A"></span><span id="hkcomb_a"></span><dl> <dt>**hkcomb \_ A**</dt> </dl>          | ALT<br/>             |
-| <span id="HKCOMB_C"></span><span id="hkcomb_c"></span><dl> <dt>**hkcomb- \_ C**</dt> </dl>          | STRG<br/>            |
-| <span id="HKCOMB_CA"></span><span id="hkcomb_ca"></span><dl> <dt>**hkcomb-Zertifizierungsstelle \_**</dt> </dl>       | STRG + ALT<br/>        |
-| <span id="HKCOMB_NONE"></span><span id="hkcomb_none"></span><dl> <dt>**hkcomb \_ None**</dt> </dl> | Nicht geänderte Schlüssel<br/> |
-| <span id="HKCOMB_S"></span><span id="hkcomb_s"></span><dl> <dt>**hkcomb \_ S**</dt> </dl>          | Schuss<br/>           |
-| <span id="HKCOMB_SA"></span><span id="hkcomb_sa"></span><dl> <dt>**hkcomb- \_ sa**</dt> </dl>       | UMSCHALT+ALT<br/>       |
-| <span id="HKCOMB_SC"></span><span id="hkcomb_sc"></span><dl> <dt>**hkcomb \_ SC**</dt> </dl>       | UMSCHALT + STRG<br/>      |
-| <span id="HKCOMB_SCA"></span><span id="hkcomb_sca"></span><dl> <dt>**hkcomb \_ SCA**</dt> </dl>    | UMSCHALT + STRG + ALT<br/>  |
+| <span id="HKCOMB_A"></span><span id="hkcomb_a"></span><dl> <dt>**HKCOMB \_ A**</dt> </dl>          | ALT<br/>             |
+| <span id="HKCOMB_C"></span><span id="hkcomb_c"></span><dl> <dt>**HKCOMB \_ C**</dt> </dl>          | STRG<br/>            |
+| <span id="HKCOMB_CA"></span><span id="hkcomb_ca"></span><dl> <dt>**HKCOMB \_ CA**</dt> </dl>       | STRG+ALT<br/>        |
+| <span id="HKCOMB_NONE"></span><span id="hkcomb_none"></span><dl> <dt>**HKCOMB \_ NONE**</dt> </dl> | Unveränderte Schlüssel<br/> |
+| <span id="HKCOMB_S"></span><span id="hkcomb_s"></span><dl> <dt>**HKCOMB \_ S**</dt> </dl>          | Umschalten<br/>           |
+| <span id="HKCOMB_SA"></span><span id="hkcomb_sa"></span><dl> <dt>**HKCOMB \_ SA**</dt> </dl>       | UMSCHALT+ALT<br/>       |
+| <span id="HKCOMB_SC"></span><span id="hkcomb_sc"></span><dl> <dt>**HKCOMB \_ SC**</dt> </dl>       | UMSCHALT+STRG<br/>      |
+| <span id="HKCOMB_SCA"></span><span id="hkcomb_sca"></span><dl> <dt>**HKCOMB \_ SCA**</dt> </dl>    | UMSCHALT+STRG+ALT<br/>  |
 
 
 
@@ -56,7 +56,7 @@ Ein Array von-Flags, die ungültige Tastenkombinationen angeben. Dieser Paramete
 *lParam* 
 </dt> <dd>
 
-Ein Array von Flags, die die Tastenkombination angeben, die verwendet werden soll, wenn der Benutzer eine ungültige Kombination eingibt. Eine Liste der modifiziererflagwerte finden Sie in der Beschreibung der [**HKM \_ GetHotKey**](hkm-gethotkey.md) -Nachricht.
+Ein Array von Flags, die die Schlüsselkombination angeben, die verwendet werden soll, wenn der Benutzer eine ungültige Kombination ein gibt. Eine Liste der Modifiziererflagwerte finden Sie in der Beschreibung der [**HKM \_ GETHOTKEY-Meldung.**](hkm-gethotkey.md)
 
 </dd> </dl>
 
@@ -64,9 +64,9 @@ Ein Array von Flags, die die Tastenkombination angeben, die verwendet werden sol
 
 Kein Rückgabewert.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Wenn ein Benutzer eine ungültige Tastenkombination eingibt, die durch in *wParam* angegebene Flags definiert ist, verwendet das System den bitweisen OR-Operator, um die vom Benutzer eingegebenen Schlüssel mit den in *LPARAM* angegebenen Flags zu kombinieren. Die resultierende Tastenkombination wird in eine Zeichenfolge konvertiert und dann im Steuerelement "Hot Key" angezeigt.
+Wenn ein Benutzer eine ungültige Schlüsselkombination ein gibt, wie durch in *wParam* angegebene Flags definiert, verwendet das System den bitweise OR-Operator, um die vom Benutzer eingegebenen Schlüssel mit den in *lParam* angegebenen Flags zu kombinieren. Die resultierende Tastenkombination wird in eine Zeichenfolge konvertiert und dann im Hot Key-Steuerelement angezeigt.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -74,9 +74,9 @@ Wenn ein Benutzer eine ungültige Tastenkombination eingibt, die durch in *wPara
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>                                        |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2003 \[ -Desktop-Apps\]<br/>                                  |
-| Header<br/>                   | <dl> <dt>Kommstrg. h</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur \[ Vista-Desktop-Apps\]<br/>                                        |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2003-Desktop-Apps\]<br/>                                  |
+| Header<br/>                   | <dl> <dt>Commctrl.h</dt> </dl> |
 
 
 

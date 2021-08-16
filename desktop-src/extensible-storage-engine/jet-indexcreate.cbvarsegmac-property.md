@@ -1,6 +1,6 @@
 ---
-description: 'Weitere Informationen finden Sie hier: JET_INDEXCREATE. cbvarsegmac-Eigenschaft'
-title: JET_INDEXCREATE. cbvarsegmac (Eigenschaft)
+description: 'Weitere Informationen finden Sie unter: JET_INDEXCREATE.cbVarSegMac-Eigenschaft'
+title: JET_INDEXCREATE.cbVarSegMac-Eigenschaft
 TOCTitle: 'cbVarSegMac property '
 ms:assetid: P:Microsoft.Isam.Esent.Interop.JET_INDEXCREATE.cbVarSegMac
 ms:mtpsurl: https://msdn.microsoft.com/library/microsoft.isam.esent.interop.jet_indexcreate.cbvarsegmac(v=EXCHG.10)
@@ -26,19 +26,19 @@ api_type:
 api_location:
 - Microsoft.Isam.Esent.Interop.dll
 ROBOTS: INDEX,FOLLOW
-ms.openlocfilehash: 6cde5c63ffa7d87e832b53ac67777e47e0665b4c
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: d277ad7abb9c2736526f7729e1e829adaaba465bcc22f2843d6f086448f4c1b1
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "104348278"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119039048"
 ---
-# <a name="jet_indexcreatecbvarsegmac-property"></a>JET_INDEXCREATE. cbvarsegmac (Eigenschaft)
+# <a name="jet_indexcreatecbvarsegmac-property"></a>JET_INDEXCREATE.cbVarSegMac-Eigenschaft
 
-Ruft die maximale Länge (in Byte) der einzelnen Spalten ab, die im Index gespeichert werden sollen, oder legt diese fest.
+Ruft die maximale Länge jeder Spalte in Bytes ab, die im Index gespeichert werden soll, oder legt diese fest.
 
-**Namespace:**  [Microsoft. ISAM. ESENT. Interop](./microsoft.isam.esent.interop-namespace.md)  
-**Assembly:**  Microsoft. ISAM. ESENT. Interop (in Microsoft.Isam.Esent.Interop.dll)
+**Namespace:**  [Microsoft.Isam.Esent.Interop](./microsoft.isam.esent.interop-namespace.md)  
+**Assembly:**  Microsoft.Isam.Esent.Interop (in Microsoft.Isam.Esent.Interop.dll)
 
 ## <a name="syntax"></a>Syntax
 
@@ -62,14 +62,14 @@ public int cbVarSegMac { get; set; }
 
 #### <a name="property-value"></a>Eigenschaftswert
 
-Typ: [System. Int32](/dotnet/api/system.int32)  
+Typ: [System.Int32](/dotnet/api/system.int32)  
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
-#### <a name="reference"></a>Referenz
+#### <a name="reference"></a>Verweis
 
 [JET_INDEXCREATE-Klasse](./jet-indexcreate-class.md)
 
-[Mitglieder JET_INDEXCREATE](./jet-indexcreate-members.md)
+[JET_INDEXCREATE Member](./jet-indexcreate-members.md)
 
-[Microsoft. ISAM. ESENT. Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)
+[Microsoft.Isam.Esent.Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)

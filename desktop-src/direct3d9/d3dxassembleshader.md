@@ -1,5 +1,5 @@
 ---
-description: 'D3DXAssembleShader-Funktion: Stellt einen Shader zusammen.'
+description: 'D3DXAssembleShader-Funktion: Stellen Sie einen Shader zusammen.'
 ms.assetid: 24c3dcae-9397-4856-b072-0ae340157bf9
 title: D3DXAssembleShader-Funktion (D3DX9Shader.h)
 ms.topic: reference
@@ -14,12 +14,12 @@ api_type:
 api_location:
 - d3dx9.lib
 - d3dx9.dll
-ms.openlocfilehash: 891281ebc3db970ca61132fe49ba98531ca1d879
-ms.sourcegitcommit: 95685061d5b0333bbf9e6ebd208dde8190f97005
+ms.openlocfilehash: b4d3666342cbbd8999d6136e1a780e6cb0ba80970f0cc928f652338d4574f667
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2021
-ms.locfileid: "108116048"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118988840"
 ---
 # <a name="d3dxassembleshader-function"></a>D3DXAssembleShader-Funktion
 
@@ -64,12 +64,12 @@ Länge der Effektdaten in Bytes.
 
 </dd> <dt>
 
-*pDefdefine* \[ In\]
+*pDefine* \[ In\]
 </dt> <dd>
 
 Typ: **const [**D3DXMACRO**](d3dxmacro.md) \***
 
-Ein optionales **null-terminiertes** Array [**von D3DXMACRO-Strukturen.**](d3dxmacro.md) Dieser Wert kann NULL **sein.**
+Ein **optionales** null-terminiertes Array von [**D3DXMACRO-Strukturen.**](d3dxmacro.md) Dieser Wert kann **NULL** sein.
 
 </dd> <dt>
 
@@ -78,11 +78,11 @@ Ein optionales **null-terminiertes** Array [**von D3DXMACRO-Strukturen.**](d3dxm
 
 Typ: **[ **LPD3DXINCLUDE**](id3dxinclude.md)**
 
-Optionaler Schnittstellenzeiger [**ID3DXInclude**](id3dxinclude.md), der für die Behandlung von Include-Direktiven \# verwendet werden soll. Wenn dieser Wert **NULL ist,** wird includes entweder beim Kompilieren aus einer Datei oder beim Kompilieren aus einer Ressource oder einem Arbeitsspeicher \# zu einem Fehler führen.
+Optionaler Schnittstellenzeiger [**ID3DXInclude**](id3dxinclude.md), der für die Behandlung von \# Includedirektiven verwendet werden soll. Wenn dieser Wert **NULL** ist, \# wird includes entweder beim Kompilieren aus einer Datei berücksichtigt oder verursacht bei der Kompilierung aus einer Ressource oder aus dem Arbeitsspeicher einen Fehler.
 
 </dd> <dt>
 
-*Flags* \[in\]
+*Flags* \[ In\]
 </dt> <dd>
 
 Typ: **[ **DWORD**](../winprog/windows-data-types.md)**
@@ -119,7 +119,7 @@ Wenn die Funktion erfolgreich ausgeführt wird, lautet der Rückgabewert D3D \_ 
 
 
 
-| Anforderungen | Wert |
+| Anforderung | Wert |
 |--------------------|------------------------------------------------------------------------------------------|
 | Header<br/>  | <dl> <dt>D3DX9Shader.h</dt> </dl> |
 | Bibliothek<br/> | <dl> <dt>D3dx9.lib</dt> </dl>     |

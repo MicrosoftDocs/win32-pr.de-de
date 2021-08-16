@@ -34,7 +34,7 @@ Diese Funktionen wirken sich auf die Schnittstellen selbst aus, nicht auf Client
 
 Diese Funktionen werden direkt von DIM verarbeitet. Die Router-Manager werden nicht verwendet.
 
-Die [**Funktionen MprAdminInterfaceCreate**](/windows/desktop/api/Mprapi/nf-mprapi-mpradmininterfacecreate) und [**MprAdminInterfaceDelete**](/windows/desktop/api/Mprapi/nf-mprapi-mpradmininterfacedelete) können KEINE LAN-Schnittstellen erstellen oder löschen. Sie können nur Schnittstellen für die Wahl nach Bedarf erstellen oder löschen. Eine [**Liste der \_ \_ Schnittstellentypen**](/windows/desktop/api/Mprapi/ne-mprapi-router_interface_type) finden Sie unter ROUTER INTERFACE TYPE .
+Die [**Funktionen MprAdminInterfaceCreate**](/windows/desktop/api/Mprapi/nf-mprapi-mpradmininterfacecreate) und [**MprAdminInterfaceDelete**](/windows/desktop/api/Mprapi/nf-mprapi-mpradmininterfacedelete) können KEINE LAN-Schnittstellen erstellen oder löschen. Sie können nur Bedarfswählschnittstellen erstellen oder löschen. Eine [**Liste der \_ \_ Schnittstellentypen**](/windows/desktop/api/Mprapi/ne-mprapi-router_interface_type) finden Sie unter ROUTER INTERFACE TYPE .
 
  
 

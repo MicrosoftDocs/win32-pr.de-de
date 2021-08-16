@@ -1,35 +1,35 @@
 ---
-description: Die icertserverpolicy-Schnittstelle stellt die folgenden Methoden zur Verfügung.
+description: Die ICertServerPolicy-Schnittstelle macht die folgenden Methoden verfügbar.
 ms.assetid: F8544D29-1DC6-438D-A8CF-0A67D4D6C2BC
-title: Icertserverpolicy-Methoden
+title: ICertServerPolicy-Methoden
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 36e2e8e31e4b49e3c6ce412a9ff7a0ce678ac1cd
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: e0444e9aeb1fc60272ff5e6ebfd1ebe6c8e7f16845372ea490f87819869ef55e
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "103868215"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119005668"
 ---
-# <a name="icertserverpolicy-methods"></a>Icertserverpolicy-Methoden
+# <a name="icertserverpolicy-methods"></a>ICertServerPolicy-Methoden
 
-Die [**icertserverpolicy**](/windows/desktop/api/Certif/nn-certif-icertserverpolicy) -Schnittstelle stellt die folgenden Methoden zur Verfügung.
+Die [**ICertServerPolicy-Schnittstelle**](/windows/desktop/api/Certif/nn-certif-icertserverpolicy) macht die folgenden Methoden verfügbar.
 
 ## <a name="in-this-section"></a>In diesem Abschnitt
 
--   [**Enumerateattributribute-Methode**](/windows/desktop/api/Certif/nf-certif-icertserverpolicy-enumerateattributes)
--   [**Enumerateattributesclose-Methode**](/windows/desktop/api/Certif/nf-certif-icertserverpolicy-enumerateattributesclose)
--   [**Enumerateattributessetup-Methode**](/windows/desktop/api/Certif/nf-certif-icertserverpolicy-enumerateattributessetup)
--   [**Enumerateextensions-Methode**](/windows/desktop/api/Certif/nf-certif-icertserverpolicy-enumerateextensions)
--   [**Enumerateextensionsclose-Methode**](/windows/desktop/api/Certif/nf-certif-icertserverpolicy-enumerateextensionsclose)
--   [**Enumerateextensionssetup-Methode**](/windows/desktop/api/Certif/nf-certif-icertserverpolicy-enumerateextensionssetup)
--   [**Getcertificateextension-Methode**](/windows/desktop/api/Certif/nf-certif-icertserverpolicy-getcertificateextension)
--   [**Getcertificateextensionflags-Methode**](/windows/desktop/api/Certif/nf-certif-icertserverpolicy-getcertificateextensionflags)
--   [**Getcertificateproperty-Methode**](/windows/desktop/api/Certif/nf-certif-icertserverpolicy-getcertificateproperty)
--   [**Getrequestatus Tribute-Methode**](/windows/desktop/api/Certif/nf-certif-icertserverpolicy-getrequestattribute)
+-   [**EnumerateAttributes-Methode**](/windows/desktop/api/Certif/nf-certif-icertserverpolicy-enumerateattributes)
+-   [**EnumerateAttributesClose-Methode**](/windows/desktop/api/Certif/nf-certif-icertserverpolicy-enumerateattributesclose)
+-   [**EnumerateAttributesSetup-Methode**](/windows/desktop/api/Certif/nf-certif-icertserverpolicy-enumerateattributessetup)
+-   [**EnumerateExtensions-Methode**](/windows/desktop/api/Certif/nf-certif-icertserverpolicy-enumerateextensions)
+-   [**EnumerateExtensionsClose-Methode**](/windows/desktop/api/Certif/nf-certif-icertserverpolicy-enumerateextensionsclose)
+-   [**EnumerateExtensionsSetup-Methode**](/windows/desktop/api/Certif/nf-certif-icertserverpolicy-enumerateextensionssetup)
+-   [**GetCertificateExtension-Methode**](/windows/desktop/api/Certif/nf-certif-icertserverpolicy-getcertificateextension)
+-   [**GetCertificateExtensionFlags-Methode**](/windows/desktop/api/Certif/nf-certif-icertserverpolicy-getcertificateextensionflags)
+-   [**GetCertificateProperty-Methode**](/windows/desktop/api/Certif/nf-certif-icertserverpolicy-getcertificateproperty)
+-   [**GetRequestAttribute-Methode**](/windows/desktop/api/Certif/nf-certif-icertserverpolicy-getrequestattribute)
 -   [**GetRequestProperty-Methode**](/windows/desktop/api/Certif/nf-certif-icertserverpolicy-getrequestproperty)
--   [**Setcertificateextension-Methode**](/windows/desktop/api/Certif/nf-certif-icertserverpolicy-setcertificateextension)
--   [**Setcertificateproperty-Methode**](/windows/desktop/api/Certif/nf-certif-icertserverpolicy-setcertificateproperty)
+-   [**SetCertificateExtension-Methode**](/windows/desktop/api/Certif/nf-certif-icertserverpolicy-setcertificateextension)
+-   [**SetCertificateProperty-Methode**](/windows/desktop/api/Certif/nf-certif-icertserverpolicy-setcertificateproperty)
 -   [**SetContext-Methode**](/windows/desktop/api/Certif/nf-certif-icertserverpolicy-setcontext)
 
  

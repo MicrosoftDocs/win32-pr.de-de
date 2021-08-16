@@ -21,7 +21,7 @@ ms.locfileid: "118699588"
 ---
 # <a name="to-find-stream-numbers-and-output-numbers"></a>So suchen Sie Datenstromnummern und Ausgabenummern
 
-Der synchrone Reader unterstützt ein vereinfachtes Wechseln zwischen Stream- und Ausgabenummern für die Wiedergabe als der asynchrone Reader. Daher ist es wichtiger zu finden, welche Datenstromnummern welchen Ausgabenummern gleichsetzen oder umgekehrt.
+Der synchrone Reader unterstützt ein vereinfachtes Wechseln zwischen Stream- und Ausgabenummern für die Wiedergabe als der asynchrone Reader. Daher ist es wichtiger, zu finden, welche Datenstromnummern welchen Ausgabenummern gleichsetzen oder umgekehrt.
 
 Um die Ausgabenummer zu finden, die einer Streamnummer entspricht, rufen [**Sie IWMSyncReader::GetOutputNumberForStream auf.**](/previous-versions/windows/desktop/api/Wmsdkidl/nf-wmsdkidl-iwmsyncreader-getoutputnumberforstream)
 

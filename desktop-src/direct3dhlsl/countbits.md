@@ -36,7 +36,7 @@ uint countbits(
 
 <dl> <dt>
 
-*value* \[ In\]
+*wert* \[ In\]
 </dt> <dd>
 
 Typ: **uint**
@@ -62,7 +62,7 @@ uint3 count_bits(uint3 value);
 uint4 count_bits(uint4 value);
 ```
 
-### <a name="minimum-shader-model"></a>Minimales Shadermodell
+### <a name="minimum-shader-model"></a>Shader-Mindestmodell
 
 Diese Funktion wird in den folgenden Shadermodellen unterstützt.
 
@@ -70,7 +70,7 @@ Diese Funktion wird in den folgenden Shadermodellen unterstützt.
 
 | Shadermodell                                                                | Unterstützt |
 |-----------------------------------------------------------------------------|-----------|
-| [Shadermodell 5](d3d11-graphics-reference-sm5.md) und höher – Shadermodelle | ja       |
+| [Shadermodell 5](d3d11-graphics-reference-sm5.md) und höhere Shadermodelle | Ja       |
 
 
 

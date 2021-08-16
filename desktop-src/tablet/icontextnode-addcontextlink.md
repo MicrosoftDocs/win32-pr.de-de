@@ -1,7 +1,7 @@
 ---
-description: Fügt der Auflistung von Kontext Verknüpfungen des icontextnode-Objekts einen neuen icontextlink hinzu.
+description: Fügt der Sammlung von Kontextverknüpfung des IContextNode-Objekts einen neuen IContextLink hinzu.
 ms.assetid: b7b9da10-3015-4976-bc4e-1a7f69b7c85b
-title: 'Icontextnode:: addcontextlink-Methode (iacom. h)'
+title: IContextNode::AddContextLink-Methode (IACom.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -13,16 +13,16 @@ api_type:
 - COM
 api_location:
 - IACom.dll
-ms.openlocfilehash: eccfcc8be51ff951c1bcd6de55bd3a0f89cdc201
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 515ade35baed591060e76818d2b3e00a3654a89a9d42dda21d170ee54b2773ef
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106345124"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118967439"
 ---
-# <a name="icontextnodeaddcontextlink-method"></a>Icontextnode:: addcontextlink-Methode
+# <a name="icontextnodeaddcontextlink-method"></a>IContextNode::AddContextLink-Methode
 
-Fügt der Auflistung von Kontext Verknüpfungen des [**icontextnode**](icontextnode.md) -Objekts einen neuen [**icontextlink**](icontextlink.md) hinzu.
+Fügt der Sammlung von Kontextverknüpfung des [**IContextNode-Objekts**](icontextnode.md) einen neuen [**IContextLink**](icontextlink.md) hinzu.
 
 ## <a name="syntax"></a>Syntax
 
@@ -41,39 +41,39 @@ HRESULT AddContextLink(
 
 <dl> <dt>
 
-*pdestinationnode* \[ in\]
+*pDestinationNode* \[ In\]
 </dt> <dd>
 
-Der [**icontextnode**](icontextnode.md) -Zielknoten für den neuen [**icontextlink**](icontextlink.md).
+Der [**IContextNode-Zielknoten**](icontextnode.md) für den neuen [**IContextLink**](icontextlink.md).
 
 </dd> <dt>
 
-*LinkDirection* \[ in\]
+*linkDirection* \[ In\]
 </dt> <dd>
 
-Die Richtung des zu erstellenden [**icontextlink**](icontextlink.md) -Objekts.
+Die Richtung des zu erstellende [**IContextLink-Objekts.**](icontextlink.md)
 
 </dd> <dt>
 
-*ppcontextlinkto Add* \[ vorgenommen\]
+*ppContextLinkToAdd* \[ out\]
 </dt> <dd>
 
-Ein Zeiger auf das neue [**icontextlink**](icontextlink.md) -Objekt.
+Ein Zeiger auf das neue [**IContextLink-Objekt.**](icontextlink.md)
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Eine Beschreibung der Rückgabewerte finden Sie unter [Klassen und Schnittstellen-Ink-Analyse](classes-and-interfaces---ink-analysis.md).
+Eine Beschreibung der Rückgabewerte finden Sie unter Klassen und Schnittstellen – [Ink-Analyse.](classes-and-interfaces---ink-analysis.md)
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
 > [!Caution]  
-> Um einen Speicherplatz zu vermeiden, nennen Sie [**IUnknown:: Release**](/windows/desktop/api/unknwn/nf-unknwn-iunknown-release) auf \* *ppcontextlinkdeadd* , wenn Sie den Kontext Knoten nicht mehr verwenden müssen.
+> Um einen Speicherverlust zu vermeiden, rufen Sie [**IUnknown::Release**](/windows/desktop/api/unknwn/nf-unknwn-iunknown-release) auf \* *ppContextLinkToAdd* auf, wenn Sie den Kontextknoten nicht mehr verwenden müssen.
 
  
 
-Dieses [**icontextnode**](icontextnode.md) -Objekt ist der Quellknoten (siehe [**icontextlink:: getsourcenode**](icontextlink-getsourcenode.md)) für das neue [**icontextlink**](icontextlink.md) -Objekt.
+Dieses [**IContextNode-Objekt**](icontextnode.md) ist der Quellknoten (siehe [**IContextLink::GetSourceNode**](icontextlink-getsourcenode.md)) für das neue [**IContextLink-Objekt.**](icontextlink.md)
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -81,36 +81,36 @@ Dieses [**icontextnode**](icontextnode.md) -Objekt ist der Quellknoten (siehe [*
 
 | Anforderung | Wert |
 |-------------------------------------|---------------------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows XP Tablet PC Edition \[ Desktop-Apps\]<br/>                                                 |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur Desktop-Apps der XP Tablet PC Edition \[\]<br/>                                                 |
 | Unterstützte Mindestversion (Server)<br/> | Nicht unterstützt<br/>                                                                                     |
-| Header<br/>                   | <dl> <dt>Iacom. h (erfordert auch iacom \_ i. c)</dt> </dl> |
+| Header<br/>                   | <dl> <dt>IACom.h (erfordert auch IACom \_ i.c)</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>IACom.dll</dt> </dl>                          |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Icontextnode**](icontextnode.md)
+[**IContextNode**](icontextnode.md)
 </dt> <dt>
 
-[**Icontextlink**](icontextlink.md)
+[**IContextLink**](icontextlink.md)
 </dt> <dt>
 
-[**Icontextlinks**](icontextlinks.md)
+[**IContextLinks**](icontextlinks.md)
 </dt> <dt>
 
-[**ContextLinkDirection**](contextlinkdirection.md)
+[**Contextlinkdirection**](contextlinkdirection.md)
 </dt> <dt>
 
-[**Icontextnode::D eletecontextlink**](icontextnode-deletecontextlink.md)
+[**IContextNode::D eleteContextLink**](icontextnode-deletecontextlink.md)
 </dt> <dt>
 
-[**Icontextnode:: getcontextlinks**](icontextnode-getcontextlinks.md)
+[**IContextNode::GetContextLinks**](icontextnode-getcontextlinks.md)
 </dt> <dt>
 
-[Ink-Analyse Referenz](ink-analysis-reference.md)
+[Referenz zur Ink-Analyse](ink-analysis-reference.md)
 </dt> </dl>
 
  

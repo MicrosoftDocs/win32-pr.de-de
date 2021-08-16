@@ -4,7 +4,7 @@ description: Hilfsklasse, die ein bindbares Objekt darstellen soll. Jede benutze
 ms.assetid: 181b3e2b-9442-4f11-9af7-4697491115f3
 ms.tgt_platform: multiple
 keywords:
-- ms-DS-Bindable-Object-Klasse AD-Schema
+- MS-DS-Bindable-Object-Klasse AD-Schema
 - MSDS-BindableObject-Klasse AD-Schema
 topic_type:
 - apiref
@@ -95,11 +95,11 @@ Diese Klasse enthält die folgenden Attribute für ADAM:
 | [**Is-Critical-System-Object**](a-iscriticalsystemobject.md)                                  | Falsch     | [**Nach oben**](c-top.md)<br/>                                                              |
 | [**Is-Deleted**](a-isdeleted.md)                                                              | Falsch     | [**Nach oben**](c-top.md)<br/>                                                              |
 | [**Is-Member-of-DL**](a-memberof.md)                                                          | Falsch     | [**Nach oben**](c-top.md)<br/>                                                              |
-| [**Last-Known-Parent**](a-lastknownparent.md)                                                 | Falsch     | [**Nach oben**](c-top.md)<br/>                                                              |
-| [**Letzter Anmeldezeitstempel**](a-lastlogontimestamp.md)                                           | Falsch     | **ms-DS-Bindable-Object**                                                                    |
+| [**Letztes bekanntes übergeordnetes Element**](a-lastknownparent.md)                                                 | Falsch     | [**Nach oben**](c-top.md)<br/>                                                              |
+| [**Zeitstempel der letzten Anmeldung**](a-lastlogontimestamp.md)                                           | Falsch     | **ms-DS-Bindable-Object**                                                                    |
 | [**Sperrzeit**](a-lockouttime.md)                                                          | Falsch     | **ms-DS-Bindable-Object**                                                                    |
 | [**Verwaltete Objekte**](a-managedobjects.md)                                                    | Falsch     | [**Nach oben**](c-top.md)<br/>                                                              |
-| [**Mastered-By**](a-masteredby.md)                                                            | Falsch     | [**Nach oben**](c-top.md)<br/>                                                              |
+| [**Mastered By**](a-masteredby.md)                                                            | Falsch     | [**Nach oben**](c-top.md)<br/>                                                              |
 | [**Modify-Time-Stamp**](a-modifytimestamp.md)                                                 | Falsch     | [**Nach oben**](c-top.md)<br/>                                                              |
 | [**ms-DS-Approx-Immed-Subordinates**](a-msds-approx-immed-subordinates.md)                    | Falsch     | [**Nach oben**](c-top.md)<br/>                                                              |
 | [**MS-DS-Consistency-Child-Count**](a-ms-ds-consistencychildcount.md)                         | Falsch     | [**Nach oben**](c-top.md)<br/>                                                              |
@@ -123,14 +123,14 @@ Diese Klasse enthält die folgenden Attribute für ADAM:
 | [**NT-Security-Descriptor**](a-ntsecuritydescriptor.md)                                       | Richtig      | [**Sicherheitsprinzipal**](c-securityprincipal.md)<br/> [**Nach oben**](c-top.md)<br/> |
 | [**Obj-Dist-Name**](a-distinguishedname.md)                                                   | Falsch     | [**Nach oben**](c-top.md)<br/>                                                              |
 | [**Objektkategorie**](a-objectcategory.md)                                                    | Richtig      | [**Nach oben**](c-top.md)<br/>                                                              |
-| [**Object-Class**](a-objectclass.md)                                                          | Richtig      | [**Nach oben**](c-top.md)<br/>                                                              |
+| [**Objektklasse**](a-objectclass.md)                                                          | Richtig      | [**Nach oben**](c-top.md)<br/>                                                              |
 | [**Objekt-GUID**](a-objectguid.md)                                                            | Falsch     | [**Nach oben**](c-top.md)<br/>                                                              |
 | [**Object-Sid**](a-objectsid.md)                                                              | Richtig      | [**Sicherheitsprinzipal**](c-securityprincipal.md)<br/>                                 |
-| [**Object-Version**](a-objectversion.md)                                                      | Falsch     | [**Nach oben**](c-top.md)<br/>                                                              |
+| [**Objektversion**](a-objectversion.md)                                                      | Falsch     | [**Nach oben**](c-top.md)<br/>                                                              |
 | [**Andere bekannte Objekte**](a-otherwellknownobjects.md)                                    | Falsch     | [**Nach oben**](c-top.md)<br/>                                                              |
-| [**Partial-Attribute-Deletion-List**](a-partialattributedeletionlist.md)                      | Falsch     | [**Nach oben**](c-top.md)<br/>                                                              |
-| [**Partial-Attribute-Set**](a-partialattributeset.md)                                         | Falsch     | [**Nach oben**](c-top.md)<br/>                                                              |
-| [**Mögliche 100000000000**](a-possibleinferiors.md)                                              | Falsch     | [**Nach oben**](c-top.md)<br/>                                                              |
+| [**Teilattributlöschungsliste**](a-partialattributedeletionlist.md)                      | Falsch     | [**Nach oben**](c-top.md)<br/>                                                              |
+| [**Teilattributsatz**](a-partialattributeset.md)                                         | Falsch     | [**Nach oben**](c-top.md)<br/>                                                              |
+| [**Mögliche Hindernisse**](a-possibleinferiors.md)                                              | Falsch     | [**Nach oben**](c-top.md)<br/>                                                              |
 | [**Proxied-Object-Name**](a-proxiedobjectname.md)                                             | Falsch     | [**Nach oben**](c-top.md)<br/>                                                              |
 | [**Proxyadressen**](a-proxyaddresses.md)                                                    | Falsch     | [**Nach oben**](c-top.md)<br/>                                                              |
 | [**Pwd-Last-Set**](a-pwdlastset.md)                                                           | Falsch     | **ms-DS-Bindable-Object**                                                                    |
@@ -143,18 +143,18 @@ Diese Klasse enthält die folgenden Attribute für ADAM:
 | [**Revision**](a-revision.md)                                                                 | Falsch     | [**Nach oben**](c-top.md)<br/>                                                              |
 | [**SD-Rights-Effective**](a-sdrightseffective.md)                                             | Falsch     | [**Nach oben**](c-top.md)<br/>                                                              |
 | [**Server-Reference-BL**](a-serverreferencebl.md)                                             | Falsch     | [**Nach oben**](c-top.md)<br/>                                                              |
-| [**Show-In-Advanced-View-Only**](a-showinadvancedviewonly.md)                                 | Falsch     | [**Nach oben**](c-top.md)<br/>                                                              |
+| [**Nur in erweiterter Ansicht anzeigen**](a-showinadvancedviewonly.md)                                 | Falsch     | [**Nach oben**](c-top.md)<br/>                                                              |
 | [**Site-Object-BL**](a-siteobjectbl.md)                                                       | Falsch     | [**Nach oben**](c-top.md)<br/>                                                              |
 | [**Structural-Object-Class**](a-structuralobjectclass.md)                                     | Falsch     | [**Nach oben**](c-top.md)<br/>                                                              |
 | [**Sub-Refs**](a-subrefs.md)                                                                  | Falsch     | [**Nach oben**](c-top.md)<br/>                                                              |
 | [**SubSchemaSubEntry**](a-subschemasubentry.md)                                               | Falsch     | [**Nach oben**](c-top.md)<br/>                                                              |
-| [**Zusätzliche Anmeldeinformationen**](a-supplementalcredentials.md)                                  | Falsch     | [**Sicherheitsprinzipal**](c-securityprincipal.md)<br/>                                 |
+| [**Supplemental-Credentials**](a-supplementalcredentials.md)                                  | Falsch     | [**Sicherheitsprinzipal**](c-securityprincipal.md)<br/>                                 |
 | [**Systemflags**](a-systemflags.md)                                                          | Falsch     | [**Nach oben**](c-top.md)<br/>                                                              |
 | [**Tokengruppen**](a-tokengroups.md)                                                          | Falsch     | [**Sicherheitsprinzipal**](c-securityprincipal.md)<br/>                                 |
 | [**Unicode-Pwd**](a-unicodepwd.md)                                                            | Falsch     | **ms-DS-Bindable-Object**                                                                    |
-| [**USN-Changed**](a-usnchanged.md)                                                            | Falsch     | [**Nach oben**](c-top.md)<br/>                                                              |
-| [**VON USN erstellt**](a-usncreated.md)                                                            | Falsch     | [**Nach oben**](c-top.md)<br/>                                                              |
-| [**USN-DSA-Last-Obj-Removed**](a-usndsalastobjremoved.md)                                     | Falsch     | [**Nach oben**](c-top.md)<br/>                                                              |
+| [**USN geändert**](a-usnchanged.md)                                                            | Falsch     | [**Nach oben**](c-top.md)<br/>                                                              |
+| [**USN-erstellt**](a-usncreated.md)                                                            | Falsch     | [**Nach oben**](c-top.md)<br/>                                                              |
+| [**USN-DSA-last-obj-removed**](a-usndsalastobjremoved.md)                                     | Falsch     | [**Nach oben**](c-top.md)<br/>                                                              |
 | [**USN-Intersite**](a-usnintersite.md)                                                        | Falsch     | [**Nach oben**](c-top.md)<br/>                                                              |
 | [**USN-Last-Obj-Rem**](a-usnlastobjrem.md)                                                    | Falsch     | [**Nach oben**](c-top.md)<br/>                                                              |
 | [**USN-Quelle**](a-usnsource.md)                                                              | Falsch     | [**Nach oben**](c-top.md)<br/>                                                              |

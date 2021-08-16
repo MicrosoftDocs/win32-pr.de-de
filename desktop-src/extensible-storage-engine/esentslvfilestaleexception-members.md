@@ -1,5 +1,5 @@
 ---
-description: 'Weitere Informationen zu: EsentSLVFileFileeException-Member'
+description: 'Weitere Informationen finden Sie unter: EsentSLVFileFileeException-Member'
 title: EsentSLVFileFileEException-Member
 TOCTitle: EsentSLVFileStaleException members
 ms:assetid: AllMembers.T:Microsoft.Isam.Esent.Interop.EsentSLVFileStaleException
@@ -166,6 +166,6 @@ Oben
 
 #### <a name="reference"></a>Verweis
 
-[EsentSLVFileLveException-Klasse](./esentslvfilestaleexception-class.md)
+[EsentSLVFileFileeException-Klasse](./esentslvfilestaleexception-class.md)
 
 [Microsoft.Isam.Esent.Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)

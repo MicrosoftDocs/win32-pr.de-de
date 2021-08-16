@@ -1,19 +1,19 @@
 ---
-description: Eine Möglichkeit, ein Gerätekontext Handle für einen Drucker zu erhalten, besteht darin, ein Druck Dialogfeld anzuzeigen und dem Benutzer zu ermöglichen, einen Drucker auszuwählen.
+description: Eine Möglichkeit, ein Gerätekontexthandle für einen Drucker abzurufen, besteht darin, ein Druckdialogfeld anzuzeigen und dem Benutzer die Auswahl eines Druckers zu ermöglichen.
 ms.assetid: 73a74186-c916-4ad9-b768-6bc887fd5231
-title: Anzeigen eines Druck Dialogfelds
+title: Anzeigen eines Druckdialogfelds
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 1b0d40365c36e3e554812ff137475ab7c6405e91
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 113c9235e70712a4923ebdc3ad239f533160eb2f84f76ae729d7fadf203ca612
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "104994278"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119036828"
 ---
-# <a name="displaying-a-print-dialog-box"></a>Anzeigen eines Druck Dialogfelds
+# <a name="displaying-a-print-dialog-box"></a>Anzeigen eines Druckdialogfelds
 
-Eine Möglichkeit, ein Gerätekontext Handle für einen Drucker zu erhalten, besteht darin, ein Druck Dialogfeld anzuzeigen und dem Benutzer zu ermöglichen, einen Drucker auszuwählen. Die [PRINTDLG](/previous-versions/windows/desktop/legacy/ms646940(v=vs.85)) -Funktion (die das Dialogfeld anzeigt) verfügt über einen Parameter, der die Adresse einer [PRINTDLG](/windows/win32/api/commdlg/ns-commdlg-printdlga?redirectedfrom=MSDN) -Struktur ist. Die PRINTDLG-Struktur verfügt über mehrere Member, aber Sie können die meisten dieser Elemente auf ihre Standardwerte festlegen. Die zwei Member, die Sie festlegen müssen, sind **lStructSize** und **Flags**. Legen Sie **lStructSize** auf die Größe einer PRINTDLG-Variablen fest, und legen Sie **Flags** auf PD \_ returndc fest. Das Festlegen von **Flags** auf \_ den PC returndc gibt an, dass die PrintDlg-Funktion das **hdc** -Feld mit einem Gerätekontext Handle für den vom Benutzer ausgewählten Drucker ausfüllen soll.
+Eine Möglichkeit, ein Gerätekontexthandle für einen Drucker abzurufen, besteht darin, ein Druckdialogfeld anzuzeigen und dem Benutzer die Auswahl eines Druckers zu ermöglichen. Die [PrintDlg-Funktion](/previous-versions/windows/desktop/legacy/ms646940(v=vs.85)) (die das Dialogfeld anzeigt) verfügt über einen Parameter, der die Adresse einer [PRINTDLG-Struktur](/windows/win32/api/commdlg/ns-commdlg-printdlga?redirectedfrom=MSDN) darstellt. Die PRINTDLG-Struktur verfügt über mehrere Member, aber Sie können die meisten elemente auf ihre Standardwerte festlegen. Die beiden Elemente, die Sie festlegen müssen, sind **lStructSize** und **Flags.** Legen Sie **lStructSize** auf die Größe einer PRINTDLG-Variablen und **Flags** auf PD \_ RETURNDC fest. Das Festlegen von **Flags** auf PC \_ RETURNDC gibt an, dass die PrintDlg-Funktion das **hDC-Feld** mit einem Gerätekontexthandle für den vom Benutzer ausgewählten Drucker füllen soll.
 
 
 ```

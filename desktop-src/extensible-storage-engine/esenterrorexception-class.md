@@ -1,5 +1,5 @@
 ---
-description: 'Weitere Informationen finden Sie unter: EsentErrorException-Klasse'
+description: 'Weitere Informationen zu: EsentErrorException-Klasse'
 title: EsentErrorException-Klasse
 TOCTitle: EsentErrorException class
 ms:assetid: T:Microsoft.Isam.Esent.Interop.EsentErrorException
@@ -33,7 +33,7 @@ ms.locfileid: "118779289"
 ---
 # <a name="esenterrorexception-class"></a>EsentErrorException-Klasse
 
-Basisklasse für ESENT-Fehlerausnahmen.
+Basisklasse für ESENT-Fehler ausnahmen.
 
 ## <a name="inheritance-hierarchy"></a>Vererbungshierarchie
 

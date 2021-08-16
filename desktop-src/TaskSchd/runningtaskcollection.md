@@ -1,10 +1,10 @@
 ---
-title: Runningtaskcollection-Objekt
-description: Skript Objekt, das eine Sammlung bereitstellt, die zum Steuern der Ausführung von Aufgaben verwendet wird.
+title: RunningTaskCollection-Objekt
+description: Skripterstellungsobjekt, das eine Auflistung zur Steuerung ausgeführter Aufgaben bietet.
 ms.assetid: b137fcf3-634c-4ac6-908d-357f54da3025
 keywords:
-- Runningtaskcollection-Objekt Taskplaner
-- Runningtaskcollection-Objekt Taskplaner, beschrieben
+- RunningTaskCollection-Taskplaner
+- RunningTaskCollection-Objekt Taskplaner , beschrieben
 topic_type:
 - apiref
 api_name:
@@ -15,32 +15,32 @@ api_type:
 - COM
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: c28d75cee0ba4b19751ba1e4c5a5c3061a1dad64
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: 81651e62be3b787678ee77f2b997c24e99016041567b23da0c534d94633dfdcf
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "104477802"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119059968"
 ---
-# <a name="runningtaskcollection-object"></a>Runningtaskcollection-Objekt
+# <a name="runningtaskcollection-object"></a>RunningTaskCollection-Objekt
 
-Skript Objekt, das eine Sammlung bereitstellt, die zum Steuern der Ausführung von Aufgaben verwendet wird.
+Skripterstellungsobjekt, das eine Auflistung zur Steuerung ausgeführter Aufgaben bietet.
 
 ## <a name="members"></a>Member
 
-Das **runningtaskcollection** -Objekt verfügt über folgende Typen von Membern:
+Das **RunningTaskCollection-Objekt** verfügt über die folgenden Membertypen:
 
 -   [Eigenschaften](#properties)
 
 ### <a name="properties"></a>Eigenschaften
 
-Das **runningtaskcollection** -Objekt verfügt über diese Eigenschaften.
+Das **RunningTaskCollection-Objekt** verfügt über diese Eigenschaften.
 
 
 
 | Eigenschaft                                                | BESCHREIBUNG                                                    |
 |:--------------------------------------------------------|:---------------------------------------------------------------|
-| [**Countdown**](runningtaskcollection-count.md)<br/> | Ruft die Anzahl der laufenden Tasks in der Auflistung ab.<br/> |
+| [**Anzahl**](runningtaskcollection-count.md)<br/> | Ruft die Anzahl der ausgeführten Aufgaben in der Auflistung ab.<br/> |
 | [**Element**](runningtaskcollection-item.md)<br/>   | Ruft die angegebene Aufgabe aus der Auflistung ab. <br/>       |
 
 
@@ -53,14 +53,14 @@ Das **runningtaskcollection** -Objekt verfügt über diese Eigenschaften.
 
 | Anforderung | Wert |
 |-------------------------------------|-----------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Nur Windows Vista \[ -Desktop-Apps\]<br/>                                          |
-| Unterstützte Mindestversion (Server)<br/> | Nur Windows Server 2008 \[ -Desktop-Apps\]<br/>                                    |
-| Typbibliothek<br/>             | <dl> <dt>Taskschd. tlb</dt> </dl> |
+| Unterstützte Mindestversion (Client)<br/> | Windows Nur \[ Vista-Desktop-Apps\]<br/>                                          |
+| Unterstützte Mindestversion (Server)<br/> | Windows Nur Server \[ 2008-Desktop-Apps\]<br/>                                    |
+| Typbibliothek<br/>             | <dl> <dt>Taskschd.tlb</dt> </dl> |
 | DLL<br/>                      | <dl> <dt>Taskschd.dll</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
@@ -70,13 +70,13 @@ Das **runningtaskcollection** -Objekt verfügt über diese Eigenschaften.
 [Aufgabenplanung](task-scheduler-start-page.md)
 </dt> <dt>
 
-[**Runningtask**](runningtask.md)
+[**RunningTask**](runningtask.md)
 </dt> <dt>
 
-[**TaskService. getrunningtasks**](taskservice-getrunningtasks.md)
+[**TaskService.GetRunningTasks**](taskservice-getrunningtasks.md)
 </dt> <dt>
 
-[**Registeredtask. getinhaltungen**](registeredtask-getinstances.md)
+[**RegisteredTask.GetInstances**](registeredtask-getinstances.md)
 </dt> </dl>
 
  

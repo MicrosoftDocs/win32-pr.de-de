@@ -1,11 +1,11 @@
 ---
-title: Ibackgroundcopyerror GetError-Methode (deliveryoptimization. h)
+title: IBackgroundCopyError GetError-Methode (Deliveryoptimization.h)
 description: Ruft den Fehlercode ab und identifiziert den Kontext, in dem der Fehler aufgetreten ist.
 ms.assetid: C87897CD-9648-4CEF-B963-68EE35356929
 keywords:
 - GetError-Methode
-- GetError-Methode, ibackgroundcopyerror-Schnittstelle
-- Ibackgroundcopyerror-Schnittstelle, GetError-Methode
+- GetError-Methode, IBackgroundCopyError-Schnittstelle
+- IBackgroundCopyError-Schnittstelle, GetError-Methode
 topic_type:
 - apiref
 api_name:
@@ -17,14 +17,14 @@ api_type:
 ms.topic: reference
 ms.date: 05/31/2018
 ROBOTS: INDEX,FOLLOW
-ms.openlocfilehash: e14803c225ade6085658582e18b9ba2d52fc90c7
-ms.sourcegitcommit: a1494c819bc5200050696e66057f1020f5b142cb
+ms.openlocfilehash: d147bc877f9694617ec94651f53f4cf438c00de8d752710c3659f24ba4ffe21c
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2020
-ms.locfileid: "103949787"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118810326"
 ---
-# <a name="ibackgroundcopyerrorgeterror-method"></a>Ibackgroundcopyerror:: GetError-Methode
+# <a name="ibackgroundcopyerrorgeterror-method"></a>IBackgroundCopyError::GetError-Methode
 
 Ruft den Fehlercode ab und identifiziert den Kontext, in dem der Fehler aufgetreten ist.
 
@@ -44,23 +44,23 @@ HRESULT GetError(
 
 <dl> <dt>
 
-*pContext* \[ vorgenommen\]
+*pContext* \[ out\]
 </dt> <dd>
 
-Der Kontext, in dem der Fehler aufgetreten ist. Eine Liste der Kontext Werte finden Sie in der [**BG_ERROR_CONTEXT**](bg-error-context.md) -Enumeration.
+Kontext, in dem der Fehler aufgetreten ist. Eine Liste der Kontextwerte finden Sie in [**der**](bg-error-context.md) BG_ERROR_CONTEXT Enumeration.
 
 </dd> <dt>
 
-*perrorcode* \[ vorgenommen\]
+*pErrorCode* \[ out\]
 </dt> <dd>
 
-Der Fehlercode des Fehlers, der aufgetreten ist.
+Fehlercode des aufgetretenen Fehlers.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Diese Methode gibt **S_OK** bei Erfolg oder einen der standardmäßigen com HRESULT-Werte bei einem Fehler zurück.
+Diese Methode gibt **S_OK** bei Erfolg oder einen der STANDARDMÄßIGEN COM HRESULT-Werte bei einem Fehler zurück.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -68,24 +68,24 @@ Diese Methode gibt **S_OK** bei Erfolg oder einen der standardmäßigen com HRES
 
 | Anforderung | Wert |
 |-------------------------------------|-----------------------------------------------------------------------------------------------------|
-| Unterstützte Mindestversion (Client)<br/> | Windows 10, Version 1709, \[ nur Desktop-Apps\]<br/>                                           |
-| Unterstützte Mindestversion (Server)<br/> | Windows Server, Version 1709, \[ nur Desktop-Apps\]<br/>                                       |
-| Header<br/>                   | <dl> <dt>Deliveryoptimization. h</dt> </dl>   |
-| IDL<br/>                      | <dl> <dt>Deliveryoptimization. idl</dt> </dl> |
-| Bibliothek<br/>                  | <dl> <dt>Dosvc. lib</dt> </dl>                |
+| Unterstützte Mindestversion (Client)<br/> | Windows 10, version 1709 desktop apps only (Nur Desktop-Apps der Version 1709) \[\]<br/>                                           |
+| Unterstützte Mindestversion (Server)<br/> | Windows Server, version 1709 desktop apps only (Nur \[ Desktop-Apps der Version 1709)\]<br/>                                       |
+| Header<br/>                   | <dl> <dt>Deliveryoptimization.h</dt> </dl>   |
+| Idl<br/>                      | <dl> <dt>DeliveryOptimization.idl</dt> </dl> |
+| Bibliothek<br/>                  | <dl> <dt>Dosvc.lib</dt> </dl>                |
 | DLL<br/>                      | <dl> <dt>Dosvc.dll</dt> </dl>                |
-| IID<br/>                      | IID_IBackgroundCopyError ist als 19c613a0-fcb8-4f 28-81ae-897c3d078-Datei definiert.<br/>             |
+| IID<br/>                      | IID_IBackgroundCopyError ist als 19C613A0-FCB8-4F28-81AE-897C3D078F81 definiert.<br/>             |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Ibackgroundcopyerror**](ibackgroundcopyerror.md)
+[**IBackgroundCopyError**](ibackgroundcopyerror.md)
 </dt> <dt>
 
-[**Ibackgroundcopyerror:: GetFile**](ibackgroundcopyerror-getfile-method.md)
+[**IBackgroundCopyError::GetFile**](ibackgroundcopyerror-getfile-method.md)
 </dt> </dl>
 
  

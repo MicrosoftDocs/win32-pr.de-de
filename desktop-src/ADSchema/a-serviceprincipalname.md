@@ -1,10 +1,10 @@
 ---
-title: Dienst Prinzipal Name-Attribut
-description: Liste der Prinzipal Namen, die für die gegenseitige Authentifizierung bei einer Instanz eines Dienstanbieter auf diesem Computer verwendet werden.
+title: Attribut "Dienstprinzipalname"
+description: Liste der Prinzipalnamen, die für die gegenseitige Authentifizierung mit einer Instanz eines Diensts auf diesem Computer verwendet werden.
 ms.assetid: 0ad1694f-0d6f-4350-a088-fdf3ef798c46
 ms.tgt_platform: multiple
 keywords:
-- AD-Schema für Dienst Prinzipal Name-Attribut
+- AD-Schema für Dienstprinzipalname-Attribut
 - servicePrincipalName-Attribut AD-Schema
 topic_type:
 - apiref
@@ -14,26 +14,26 @@ api_type:
 - Schema
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 861f160d2c9b71d2c9914c7ff9c2ea0ee43c8528
-ms.sourcegitcommit: b77ace27b0432e7cd3863191b11926be032fbe2f
+ms.openlocfilehash: 37c7ab0fef64f747c08ccf80a38ec385b45bce46ced2184d02c55e7ce1c76441
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "106344883"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118960089"
 ---
-# <a name="service-principal-name-attribute"></a>Dienst Prinzipal Name-Attribut
+# <a name="service-principal-name-attribute"></a>Attribut "Dienstprinzipalname"
 
-Liste der Prinzipal Namen, die für die gegenseitige Authentifizierung bei einer Instanz eines Dienstanbieter auf diesem Computer verwendet werden.
+Liste der Prinzipalnamen, die für die gegenseitige Authentifizierung mit einer Instanz eines Diensts auf diesem Computer verwendet werden.
 
 
 
 | Eingabe | Wert |
 |-------------------|---------------------------------------------|
-| CN                | Dienst Prinzipal Name                      |
-| LDAP-Display-Name | servicePrincipalName                        |
+| CN                | Dienstprinzipalname                      |
+| Ldap-Anzeigename | servicePrincipalName                        |
 | Size              | \-                                          |
-| Berechtigung aktualisieren  | \-                                          |
-| Aktualisierungshäufigkeit  | \-                                          |
+| Aktualisieren von Berechtigungen  | \-                                          |
+| Updatehäufigkeit  | \-                                          |
 | Attribute-Id      | 1.2.840.113556.1.4.771                      |
 | System-ID-GUID    | f3a64788-5306-11d1-a9c5-0000f80367c1        |
 | Syntax            | [**String(Unicode)**](s-string-unicode.md) |
@@ -43,7 +43,7 @@ Liste der Prinzipal Namen, die für die gegenseitige Authentifizierung bei einer
 ## <a name="implementations"></a>Implementierungen
 
 -   [**Windows 2000 Server**](#windows-2000-server)
--   [**Windows Server 2003**](#windows-server-2003)
+-   [**Windows Server 2003**](#windows-server-2003)
 -   [**Windows Server 2003 R2**](#windows-server-2003-r2)
 -   [**Windows Server 2008**](#windows-server-2008)
 -   [**Windows Server 2008 R2**](#windows-server-2008-r2)
@@ -58,10 +58,10 @@ Liste der Prinzipal Namen, die für die gegenseitige Authentifizierung bei einer
 | Link-ID                | \-                                |
 | MAPI-Id                | \-                                |
 | System-Only            | False                             |
-| Ist-einwertig       | False                             |
-| Ist indiziert             | Richtig                              |
-| Im globalen Katalog      | Richtig                              |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                      |
+| Ist einwertig       | False                             |
+| Ist indiziert             | True                              |
+| Im globalen Katalog      | True                              |
+| NT-Security-Descriptor | O:BAG:BAD:S:                      |
 | Range-Lower            | \-                                |
 | Range-Upper            | \-                                |
 | Search-Flags           | 0x00000001                        |
@@ -70,7 +70,7 @@ Liste der Prinzipal Namen, die für die gegenseitige Authentifizierung bei einer
 
 
 
-## <a name="windows-server-2003"></a>Windows Server 2003
+## <a name="windows-server-2003"></a>Windows Server 2003
 
 
 
@@ -79,10 +79,10 @@ Liste der Prinzipal Namen, die für die gegenseitige Authentifizierung bei einer
 | Link-ID                | \-                                |
 | MAPI-Id                | \-                                |
 | System-Only            | False                             |
-| Ist-einwertig       | False                             |
-| Ist indiziert             | Richtig                              |
-| Im globalen Katalog      | Richtig                              |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                      |
+| Ist einwertig       | False                             |
+| Ist indiziert             | True                              |
+| Im globalen Katalog      | True                              |
+| NT-Security-Descriptor | O:BAG:BAD:S:                      |
 | Range-Lower            | \-                                |
 | Range-Upper            | \-                                |
 | Search-Flags           | 0x00000001                        |
@@ -100,10 +100,10 @@ Liste der Prinzipal Namen, die für die gegenseitige Authentifizierung bei einer
 | Link-ID                | \-                                |
 | MAPI-Id                | \-                                |
 | System-Only            | False                             |
-| Ist-einwertig       | False                             |
-| Ist indiziert             | Richtig                              |
-| Im globalen Katalog      | Richtig                              |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                      |
+| Ist einwertig       | False                             |
+| Ist indiziert             | True                              |
+| Im globalen Katalog      | True                              |
+| NT-Security-Descriptor | O:BAG:BAD:S:                      |
 | Range-Lower            | \-                                |
 | Range-Upper            | \-                                |
 | Search-Flags           | 0x00000001                        |
@@ -121,10 +121,10 @@ Liste der Prinzipal Namen, die für die gegenseitige Authentifizierung bei einer
 | Link-ID                | \-                                |
 | MAPI-Id                | \-                                |
 | System-Only            | False                             |
-| Ist-einwertig       | False                             |
-| Ist indiziert             | Richtig                              |
-| Im globalen Katalog      | Richtig                              |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                      |
+| Ist einwertig       | False                             |
+| Ist indiziert             | True                              |
+| Im globalen Katalog      | True                              |
+| NT-Security-Descriptor | O:BAG:BAD:S:                      |
 | Range-Lower            | \-                                |
 | Range-Upper            | \-                                |
 | Search-Flags           | 0x00000001                        |
@@ -142,10 +142,10 @@ Liste der Prinzipal Namen, die für die gegenseitige Authentifizierung bei einer
 | Link-ID                | \-                                |
 | MAPI-Id                | \-                                |
 | System-Only            | False                             |
-| Ist-einwertig       | False                             |
-| Ist indiziert             | Richtig                              |
-| Im globalen Katalog      | Richtig                              |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                      |
+| Ist einwertig       | False                             |
+| Ist indiziert             | True                              |
+| Im globalen Katalog      | True                              |
+| NT-Security-Descriptor | O:BAG:BAD:S:                      |
 | Range-Lower            | \-                                |
 | Range-Upper            | \-                                |
 | Search-Flags           | 0x00000001                        |
@@ -163,10 +163,10 @@ Liste der Prinzipal Namen, die für die gegenseitige Authentifizierung bei einer
 | Link-ID                | \-                                |
 | MAPI-Id                | \-                                |
 | System-Only            | False                             |
-| Ist-einwertig       | False                             |
-| Ist indiziert             | Richtig                              |
-| Im globalen Katalog      | Richtig                              |
-| NT-Security-Descriptor | o:Bag: schlecht: S:                      |
+| Ist einwertig       | False                             |
+| Ist indiziert             | True                              |
+| Im globalen Katalog      | True                              |
+| NT-Security-Descriptor | O:BAG:BAD:S:                      |
 | Range-Lower            | \-                                |
 | Range-Upper            | \-                                |
 | Search-Flags           | 0x00000001                        |

@@ -55,7 +55,7 @@ Stellt ein Split [Button Gallery-Steuerelement](windowsribbon-controls-splitbutt
 <th>attribute</th>
 <th>type</th>
 <th>Erforderlich</th>
-<th>BESCHREIBUNG</th>
+<th>Beschreibung</th>
 </tr>
 </thead>
 <tbody>
@@ -71,7 +71,7 @@ Stellt ein Split [Button Gallery-Steuerelement](windowsribbon-controls-splitbutt
 <td>xs:positiveInteger oder xs:string<br/></td>
 <td>Nein<br/></td>
 <td>Ordnet das Element einem <a href="windowsribbon-element-command.md"><strong>Command zu.</strong></a><br/> <br/>
-<dt><span></span><span></span><strong></strong> (xs:positiveInteger oder xs:string)<br/> </dt> <dd> Eine Zeichenfolge, ein ganzzahliger Wert zwischen 2 und 59999 einschließlich oder ein Hexadezimalwert zwischen 0x2 und 0xea5f einschließlich. <br/> Der Wert muss innerhalb des Menüband-XML-Dokuments eindeutig sein. <br/> Maximale Länge: 100 Zeichen. <br/> </dd> </dl></td>
+<dt><span></span><span></span><strong></strong> (xs:positiveInteger oder xs:string)<br/> </dt> <dd> Eine Zeichenfolge, ein ganzzahliger Wert zwischen 2 und 59999( einschließlich) oder ein Hexadezimalwert zwischen 0x2 und 0xea5f einschließlich. <br/> Der Wert muss innerhalb des Menüband-XML-Dokuments eindeutig sein. <br/> Maximale Länge: 100 Zeichen. <br/> </dd> </dl></td>
 </tr>
 <tr class="odd">
 <td><strong>HasLargeItems</strong><br/></td>
@@ -120,7 +120,7 @@ Gilt nur für Kataloge, in denen der Wert des <em>Type-Attributs</em> gleich <co
 
 
 
-| Element                                                                                                 | BESCHREIBUNG                                        |
+| Element                                                                                                 | Beschreibung                                        |
 |---------------------------------------------------------------------------------------------------------|----------------------------------------------------|
 | [**Schaltfläche**](windowsribbon-element-button.md)<br/>                                               | Kann ein oder mehrere Male auftreten.<br/> <br/> |
 | [**Checkbox**](windowsribbon-element-checkbox.md)<br/>                                           | Kann ein oder mehrere Male auftreten.<br/> <br/> |
@@ -143,7 +143,7 @@ Gilt nur für Kataloge, in denen der Wert des <em>Type-Attributs</em> gleich <co
 <thead>
 <tr class="header">
 <th>Element</th>
-<th>BESCHREIBUNG</th>
+<th>Beschreibung</th>
 </tr>
 </thead>
 <tbody>
@@ -250,7 +250,7 @@ Dieser Codeabschnitt zeigt die **SplitButtonGallery-Steuerelementdeklarationen.*
 
 <dl> <dt>
 
-[Steuerelement "Katalog mit geteilten Schaltflächen"](windowsribbon-controls-splitbuttongallery.md)
+[Split Button Gallery-Steuerelement](windowsribbon-controls-splitbuttongallery.md)
 </dt> <dt>
 
 [Arbeiten mit Katalogen](ribbon-controls-galleries.md)

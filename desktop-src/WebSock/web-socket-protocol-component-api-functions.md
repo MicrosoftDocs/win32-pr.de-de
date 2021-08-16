@@ -19,7 +19,7 @@ Die WebSocket-Protokollkomponenten-API definiert diese Funktionen.
 
 
 
-| Thema                                                                             | BESCHREIBUNG                                                                                                                                                                                                 |
+| Thema                                                                             | Beschreibung                                                                                                                                                                                                 |
 |-----------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | [**WebSocketAbortHandle**](/windows/desktop/api/Websocket/nf-websocket-websocketaborthandle)<br/>                   | bricht ein WebSocket-Sitzungshandle ab, das von [**WebSocketCreateClientHandle**](/windows/desktop/api/websocket/nf-websocket-websocketcreateclienthandle) oder [**WebSocketCreateServerHandle erstellt wurde.**](/windows/desktop/api/websocket/nf-websocket-websocketcreateserverhandle)<br/>   |
 | [**WebSocketBeginClientHandshake**](/windows/desktop/api/Websocket/nf-websocket-websocketbeginclienthandshake)<br/> | startet den clientseitigen Handshake.<br/>                                                                                                                                                                |

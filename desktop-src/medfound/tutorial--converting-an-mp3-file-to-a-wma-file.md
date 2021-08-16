@@ -1,42 +1,42 @@
 ---
-description: In diesem Tutorial wird gezeigt, wie Sie die transcode-API verwenden, um eine Windows Media Audio-Datei (WMA) zu codieren.
+description: In diesem Tutorial erfahren Sie, wie Sie mithilfe der Transcodierungs-API eine Windows WMA-Datei (Media Audio) codieren.
 ms.assetid: 2397ca78-edb5-4756-bd07-00529db28f76
 title: 'Tutorial: Codieren einer WMA-Datei'
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 2f491a9d460771dae91a49ab42982fbe97b24c42
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 86301f301bb4f39f6c9258ec3eacfdd1646af8e76791e2df37ae6bf7d8f89880
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "106358813"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118972789"
 ---
 # <a name="tutorial-encoding-a-wma-file"></a>Tutorial: Codieren einer WMA-Datei
 
-In diesem Tutorial wird gezeigt, wie Sie die [transcode-API](transcode-api.md) verwenden, um eine Windows Media Audio-Datei (WMA) zu codieren.
+In diesem Tutorial erfahren Sie, wie Sie mit der [Transcodierungs-API](transcode-api.md) eine Windows WMA-Datei (Media Audio) codieren.
 
-In diesem Tutorial wird der größte Teil des Codes aus dem Tutorial zum [Codieren einer MP4-Datei](tutorial--encoding-an-mp4-file-.md)wieder verwendet. Daher sollten Sie dieses Tutorial zuerst lesen. Der einzige Code, der sich unterscheidet, ist die-Funktion `CreateTranscodeProfile` , die das transcodieren-Profil erstellt.
+In diesem Tutorial wird der größte Teil des Codes aus dem Tutorial Codieren einer [MP4-Datei](tutorial--encoding-an-mp4-file-.md)wiederverwendet, daher sollten Sie dieses Tutorial zuerst lesen. Der einzige Code, der sich unterscheidet, ist die Funktion `CreateTranscodeProfile` , die das Transcodierungsprofil erstellt.
 
-## <a name="create-the-transcode-profile"></a>Erstellen des transcode-Profils
+## <a name="create-the-transcode-profile"></a>Erstellen des Transcodierungsprofils
 
-Ein *transcodieren-Profil* beschreibt die Codierungs Parameter und den Datei Container. Bei WMA handelt es sich bei dem Datei Container um eine ASF-Datei (Advanced Streaming Format). Die ASF-Datei enthält einen Audiostream, der mit dem [**Windows Media Audio Encoder**](windowsmediaaudioencoder.md)codiert wird.
+Ein *Transcodierungsprofil* beschreibt die Codierungsparameter und den Dateicontainer. Für WMA ist der Dateicontainer eine ASF-Datei (Advanced Streaming Format). Die ASF-Datei enthält einen Audiodatenstrom, der mit dem Medienaudioencoder Windows [**codiert wird.**](windowsmediaaudioencoder.md)
 
-Um die transcodieren-Topologie zu erstellen, erstellen Sie das transcodieren-Profil, und geben Sie die Parameter für den Audiodatenstrom und den Container an. Erstellen Sie dann die Topologie, indem Sie die Eingabe Quelle, die Ausgabe-URL und das transcodieren-Profil angeben.
+Erstellen Sie zum Erstellen der Transcodierungstopologie das Transcodierungsprofil, und geben Sie die Parameter für den Audiostream und den Container an. Erstellen Sie dann die Topologie, indem Sie die Eingabequelle, die Ausgabe-URL und das Transcodierungsprofil angeben.
 
-Führen Sie die folgenden Schritte aus, um das Profil zu erstellen.
+Führen Sie zum Erstellen des Profils die folgenden Schritte aus.
 
-1.  Rufen Sie die Funktion [**mfkreatetranscodeprofile**](/windows/desktop/api/mfidl/nf-mfidl-mfcreatetranscodeprofile) auf, um ein leeres transcodieren-Profil zu erstellen.
-2.  Aufrufen von [**mftranscodegetaudiooutputavailabletypes**](/windows/desktop/api/mfidl/nf-mfidl-mftranscodegetaudiooutputavailabletypes) zum Abrufen einer Liste von audiomedientyp aus dem Encoder. Diese Funktion gibt einen [**IMF Collection**](/windows/desktop/api/mfobjects/nn-mfobjects-imfcollection) -Zeiger zurück, der eine Auflistung von [**IMF MediaType**](/windows/desktop/api/mfobjects/nn-mfobjects-imfmediatype) -Zeigern darstellt.
-3.  Wählen Sie den audiomedientyp aus, der Ihren Transcodierungs Anforderungen entspricht, und kopieren Sie die Attribute in einen Attribut Speicher. In diesem Tutorial wird der erste Medientyp in der Liste verwendet.
-    -   Wenn Sie [**imfcollection:: getElements**](/windows/desktop/api/mfobjects/nf-mfobjects-imfcollection-getelement) aufrufen, wählen Sie einen audiomedientyp aus der Liste aus.
-    -   Fragen Sie den Medientyp ab, um einen Zeiger auf die [**imfattributes**](/windows/desktop/api/mfobjects/nn-mfobjects-imfattributes) -Schnittstelle des Attribut Speicher des Medientyps zu erhalten.
-    -   Aufrufen von [**imfattributes:: GetCount**](/windows/desktop/api/mfobjects/nf-mfobjects-imfattributes-getcount) , um die Anzahl der Attribute zu erhalten, die im Medientyp enthalten sind.
-    -   Rufen Sie [**mfkreateattributs**](/windows/desktop/api/mfapi/nf-mfapi-mfcreateattributes) auf, um einen neuen Attribut Speicher zu erstellen.
-    -   Nennen Sie [**imfattributes:: copyallitems**](/windows/desktop/api/mfobjects/nf-mfobjects-imfattributes-copyallitems) , um die Attribute aus dem Medientyp in den neuen Attribut Speicher zu kopieren.
-4.  Wenn Sie [**imftranscodeprofile:: setaudioattribute**](/windows/desktop/api/mfidl/nf-mfidl-imftranscodeprofile-setaudioattributes) aufrufen, legen Sie die Attribute für den Audiodatenstrom fest.
-5.  Rufen Sie [**mfkreateattributs**](/windows/desktop/api/mfapi/nf-mfapi-mfcreateattributes) auf, um einen Attribut Speicher für die Attribute auf Container Ebene zu erstellen.
-6.  Legen Sie das Attribut [MF \_ transcode \_ ContainerType](mf-transcode-containertype.md) auf **mftranscodecontainertype \_ ASF** fest, das einen ASF-Datei Container angibt.
-7.  Wenn Sie [**imftranscodeprofile:: setcontainerattribute**](/windows/desktop/api/mfidl/nf-mfidl-imftranscodeprofile-setcontainerattributes) aufrufen, legen Sie die Attribute auf Container Ebene für das Profil fest.
+1.  Rufen Sie die [**MFCreateTranscodeProfile-Funktion auf,**](/windows/desktop/api/mfidl/nf-mfidl-mfcreatetranscodeprofile) um ein leeres Transcodierungsprofil zu erstellen.
+2.  Rufen [**Sie MFTranscodeGetAudioOutputAvailableTypes**](/windows/desktop/api/mfidl/nf-mfidl-mftranscodegetaudiooutputavailabletypes) auf, um eine Liste der Audiomedientypen vom Encoder zu erhalten. Diese Funktion gibt einen [**FALSECollection-Zeiger**](/windows/desktop/api/mfobjects/nn-mfobjects-imfcollection) zurück, der eine Auflistung von [**FALSEMediaType-Zeigern**](/windows/desktop/api/mfobjects/nn-mfobjects-imfmediatype) darstellt.
+3.  Wählen Sie den Audiomedientyp aus, der Ihren Transcodierungsanforderungen entspricht, und kopieren Sie die Attribute in einen Attributspeicher. Für dieses Tutorial wird der erste Medientyp in der Liste verwendet.
+    -   Rufen [**Sie DIE 1:0Collection::GetElement auf,**](/windows/desktop/api/mfobjects/nf-mfobjects-imfcollection-getelement) um einen Audiomedientyp aus der Liste auszuwählen.
+    -   Fragen Sie den Medientyp ab, um einen Zeiger auf die [**BENUTZERDEFINIERTEAttribute-Schnittstelle**](/windows/desktop/api/mfobjects/nn-mfobjects-imfattributes) des Attributspeichers des Medientyps zu erhalten.
+    -   Rufen [**Sie DIE ATTRIBUTEs::GetCount auf,**](/windows/desktop/api/mfobjects/nf-mfobjects-imfattributes-getcount) um die Anzahl der Attribute im Medientyp zu erhalten.
+    -   Rufen [**Sie MFCreateAttributes auf,**](/windows/desktop/api/mfapi/nf-mfapi-mfcreateattributes) um einen neuen Attributspeicher zu erstellen.
+    -   Rufen [**Sie DIE ATTRIBUTE::CopyAllItems**](/windows/desktop/api/mfobjects/nf-mfobjects-imfattributes-copyallitems) auf, um die Attribute aus dem Medientyp in den neuen Attributspeicher zu kopieren.
+4.  Rufen [**Sie ZUM FESTLEGENTRANSCODEProfile::SetAudioAttributes**](/windows/desktop/api/mfidl/nf-mfidl-imftranscodeprofile-setaudioattributes) auf, um die Attribute für den Audiostream fest.
+5.  Rufen [**Sie MFCreateAttributes auf,**](/windows/desktop/api/mfapi/nf-mfapi-mfcreateattributes) um einen Attributspeicher für die Attribute auf Containerebene zu erstellen.
+6.  Legen Sie [das MF \_ TRANSCODE \_ CONTAINERTYPE-Attribut](mf-transcode-containertype.md) auf **MFTranscodeContainerType \_ ASF fest,** das einen ASF-Dateicontainer angibt.
+7.  Rufen Sie ZUM Festlegen der Attribute auf Containerebene für das Profil [**DEN Wert FÜR DIETRANSCODEProfile::SetContainerAttributes**](/windows/desktop/api/mfidl/nf-mfidl-imftranscodeprofile-setcontainerattributes) auf.
 
 
 ```C++
@@ -161,7 +161,7 @@ done:
 
 <dl> <dt>
 
-[Transcode-API](transcode-api.md)
+[Transcodierungs-API](transcode-api.md)
 </dt> </dl>
 
  

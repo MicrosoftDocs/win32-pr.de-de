@@ -1,6 +1,6 @@
 ---
-title: So lesen und schreiben Sie Video Streams mit nicht quadratischen Pixeln
-description: So lesen und schreiben Sie Video Streams mit nicht quadratischen Pixeln
+title: So lesen und schreiben Sie Streams mit nicht quadratischen Pixeln
+description: So lesen und schreiben Sie Streams mit nicht quadratischen Pixeln
 ms.assetid: fe66d13e-61cf-4bb6-9ca2-aafeabe320ec
 keywords:
 - Windows Medienformat-SDK, Lesen von Videostreams
@@ -21,9 +21,9 @@ keywords:
 - Lesen von Videostreams
 - Schreiben von Videostreams
 - Videostreams,Lesen
-- Videostreams, Schreiben
+- Videostreams,Schreiben
 - Videostreams, nicht quadratische Pixel
-- Nicht quadratische Pixel
+- Nicht-Quadratpixel
 - Pixel (nicht quadratisch)
 ms.topic: article
 ms.date: 05/31/2018
@@ -34,9 +34,9 @@ ms.contentlocale: de-DE
 ms.lasthandoff: 08/11/2021
 ms.locfileid: "118699334"
 ---
-# <a name="to-read-and-write-video-streams-with-non-square-pixels"></a>So lesen und schreiben Sie Video Streams mit nicht quadratischen Pixeln
+# <a name="to-read-and-write-video-streams-with-non-square-pixels"></a>So lesen und schreiben Sie Streams mit nicht quadratischen Pixeln
 
-Computermonitore verfügen über quadratische Pixel, aber andere Arten von Videobildschirmen, einschließlich NTSC-Fernsehgeräten, weisen rechteckige oder nicht quadratische Pixel auf. Außerdem haben einige Eingabegeräte, z. B. Digital Video (DV)-Kameras, geräte mit nicht quadratischen Pixeln in Rechnung gestellt. Wenn Sie Dateien schreiben, die entweder auf Quelldaten von nicht quadratischen Pixeln basieren oder für die Anzeige auf Geräten mit nicht quadratischen Pixeln vorgesehen sind, müssen die Pixel-Seitenverhältnisinformationen in der ASF-Datei enthalten sein. Leseranwendungen müssen diese Informationen untersuchen und verwenden, um das Seitenverhältnis des Videorechtecks nach Bedarf anzupassen.
+Computermonitore haben quadratische Pixel, aber andere Arten von Videobildschirmen, einschließlich NTSC-Fernsehsendungen, haben rechteckige oder nicht quadratische Pixel. Darüber hinaus haben einige Eingabegeräte, z. B. DV-Kameras (Digital Video), gerätespezifische Geräte mit nicht quadratischen Pixeln in Rechnung gestellt. Wenn Sie Dateien schreiben, die entweder auf Quelldaten ohne Quadratpixel basieren oder für die Anzeige auf Geräten mit nicht quadratischen Pixeln vorgesehen sind, müssen die Informationen zum Pixel-Seitenverhältnis in die ASF-Datei aufgenommen werden. Leseranwendungen müssen diese Informationen untersuchen und verwenden, um das Seitenverhältnis des Videorechtecks nach Bedarf anzupassen.
 
 ## <a name="related-topics"></a>Zugehörige Themen
 
@@ -45,10 +45,10 @@ Computermonitore verfügen über quadratische Pixel, aber andere Arten von Video
 [**Weiterführende Themen**](advanced-topics.md)
 </dt> <dt>
 
-[**Lesen von Streams mit nicht quadratischen Pixeln**](reading-streams-with-non-square-pixels.md)
+[**Lesen Streams mit nicht quadratischen Pixeln**](reading-streams-with-non-square-pixels.md)
 </dt> <dt>
 
-[**Schreiben von Streams mit nicht quadratischen Pixeln**](writing-streams-with-non-square-pixels.md)
+[**Schreiben Streams mit nicht quadratischen Pixeln**](writing-streams-with-non-square-pixels.md)
 </dt> </dl>
 
  

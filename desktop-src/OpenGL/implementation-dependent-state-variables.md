@@ -1,9 +1,9 @@
 ---
-title: Implementation-Dependent Zustandsvariablen
-description: Implementation-Dependent Zustandsvariablen
+title: Implementierungsabhängige Statusvariablen
+description: Implementierungsabhängige Statusvariablen
 ms.assetid: 6778b50c-a6ac-4106-9dd6-3a123c257687
 keywords:
-- Implementation-Dependent Zustandsvariablen OpenGL
+- Implementation-Dependent State Variables OpenGL
 topic_type:
 - apiref
 api_name:
@@ -12,14 +12,14 @@ api_type:
 - NA
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: 645702c9ea91f21d0e3bce5233b8014fd8f86859
-ms.sourcegitcommit: 63753fcfb0afbbe5ec283fb8316e62c2dc950f66
+ms.openlocfilehash: 4da38f841408bd6ddf481473837f36544d21d896f2764317957c65158be27fd3
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/22/2021
-ms.locfileid: "107909878"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119061458"
 ---
-# <a name="implementation-dependent-state-variables"></a>Implementation-Dependent Zustandsvariablen
+# <a name="implementation-dependent-state-variables"></a>Implementierungsabhängige Statusvariablen
 
 <dl> <dt><span id="GL_MAX_LIGHTS"></span><span id="gl_max_lights"></span>GL \_ MAX \_ LIGHTS</dt> <dd> 
 
@@ -38,7 +38,7 @@ ms.locfileid: "107909878"
 
 | Eigenschaft | Wert |
 |------------------|----------------------------------------------------------------------------------|
-| Beschreibung:     | Maximale Anzahl von Benutzerausschneideebenen                                           |
+| Beschreibung:     | Maximale Anzahl von Benutzer-Clippingebenen                                           |
 | Attributgruppe: |                                                                                  |
 | Anfangswert:   | 6                                                                                |
 | Get-Befehl:     | [**glGetIntegerv**](glgetbooleanv--glgetdoublev--glgetfloatv--glgetintegerv.md) |
@@ -51,7 +51,7 @@ ms.locfileid: "107909878"
 
 | Eigenschaft | Wert |
 |------------------|----------------------------------------------------------------------------------|
-| Beschreibung:     | Maximale Stapeltiefe für modelview-matrix                                             |
+| Beschreibung:     | Maximale Modellansichtsmatrixstapeltiefe                                             |
 | Attributgruppe: |                                                                                  |
 | Anfangswert:   | 32                                                                               |
 | Get-Befehl:     | [**glGetIntegerv**](glgetbooleanv--glgetdoublev--glgetfloatv--glgetintegerv.md) |
@@ -99,7 +99,7 @@ ms.locfileid: "107909878"
 
  
 
-</dd> <dt><span id="GL_MAX_TEXTURE_SIZE"></span><span id="gl_max_texture_size"></span>GL \_ MAX \_ TEXTURE \_ SIZE</dt> <dd> 
+</dd> <dt><span id="GL_MAX_TEXTURE_SIZE"></span><span id="gl_max_texture_size"></span>GL \_ \_ MAX. \_ TEXTURGRÖßE</dt> <dd> 
 
 | Eigenschaft | Wert |
 |------------------|----------------------------------------------------------------------------------|
@@ -129,7 +129,7 @@ ms.locfileid: "107909878"
 
 | Eigenschaft | Wert |
 |------------------|----------------------------------------------------------------------------------|
-| Beschreibung:     | Maximale Stapeltiefe für Auswahlnamen                                               |
+| Beschreibung:     | Maximale Stapeltiefe für Auswahlname                                               |
 | Attributgruppe: |                                                                                  |
 | Anfangswert:   | 64                                                                               |
 | Get-Befehl:     | [**glGetIntegerv**](glgetbooleanv--glgetdoublev--glgetfloatv--glgetintegerv.md) |
@@ -190,11 +190,11 @@ ms.locfileid: "107909878"
 
  
 
-</dd> <dt><span id="GL_AUX_BUFFERS"></span><span id="gl_aux_buffers"></span>GL \_ AUX \_ BUFFERS</dt> <dd> 
+</dd> <dt><span id="GL_AUX_BUFFERS"></span><span id="gl_aux_buffers"></span>GL \_ \_ AUX-PUFFER</dt> <dd> 
 
 | Eigenschaft | Wert |
 |------------------|----------------------------------------------------------------------------------|
-| Beschreibung:     | Anzahl von Hilfspuffern                                                      |
+| Beschreibung:     | Anzahl der Hilfspuffer                                                      |
 | Attributgruppe: |                                                                                  |
 | Anfangswert:   | 0                                                                                |
 | Get-Befehl:     | [**glGetBooleanv**](glgetbooleanv--glgetdoublev--glgetfloatv--glgetintegerv.md) |
@@ -216,7 +216,7 @@ ms.locfileid: "107909878"
 
  
 
-</dd> <dt><span id="GL_INDEX_MODE"></span><span id="gl_index_mode"></span>GL \_ INDEX \_ MODE</dt> <dd> 
+</dd> <dt><span id="GL_INDEX_MODE"></span><span id="gl_index_mode"></span>GL \_ \_ INDEX-MODUS</dt> <dd> 
 
 | Eigenschaft | Wert |
 |------------------|----------------------------------------------------------------------------------|
@@ -272,7 +272,7 @@ ms.locfileid: "107909878"
 
 | Eigenschaft | Wert |
 |------------------|--------------------------------------------------------------------------------|
-| Beschreibung:     | Antialiased Point Size Granularity (Granularität der Antialiased-Punktgröße)                                             |
+| Beschreibung:     | Granularität der Punktgröße mit Antialiasing                                             |
 | Attributgruppe: |                                                                                |
 | Anfangswert:   |                                                                                |
 | Get-Befehl:     | [**glGetFloatv**](glgetbooleanv--glgetdoublev--glgetfloatv--glgetintegerv.md) |

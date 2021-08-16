@@ -1,44 +1,44 @@
 ---
-description: Das System gibt nach einem Satz von Vererbungs Regeln vererbbare Zugriffs Steuerungs Einträge (ACEs) an untergeordnete Objekte weiter.
+description: Das System gibt vererbbare Zugriffssteuerungseinträge (ACEs) gemäß einer Reihe von Vererbungsregeln an untergeordnete Objekte weiter.
 ms.assetid: 08f76aaa-8379-4ba8-9735-7568001bcd53
-title: ACE-Vererbungs Regeln
+title: ACE-Vererbungsregeln
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: a1e8c786ebcc8450e8e5da1833f34fc85c37ea9f
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: ba77e5d9fcbef9125108e8f0be76cd5b7c79a2f99ba524c81f3fd1da84336f04
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "103756193"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "117785363"
 ---
-# <a name="ace-inheritance-rules"></a>ACE-Vererbungs Regeln
+# <a name="ace-inheritance-rules"></a>ACE-Vererbungsregeln
 
-Das System gibt nach einem Satz von Vererbungs Regeln vererbbare [*Zugriffs Steuerungs Einträge*](/windows/desktop/SecGloss/a-gly) (ACEs) an untergeordnete Objekte weiter. Das System stellt geerbte ACEs in der freigegebenen [*Zugriffs Steuerungs Liste*](/windows/desktop/SecGloss/d-gly) (DACL) des untergeordneten Elements gemäß der bevorzugten [Reihenfolge von ACEs in einer DACL](order-of-aces-in-a-dacl.md)dar. Das System legt das geerbte \_ ACE-Flag in allen geerbten ACEs fest.
+Das System gibt vererbbare [](/windows/desktop/SecGloss/a-gly) Zugriffssteuerungseinträge (ACEs) gemäß einer Reihe von Vererbungsregeln an untergeordnete Objekte weiter. Das System platziert geerbte ACEs in der DACL [*(Discretionary Access Control List)*](/windows/desktop/SecGloss/d-gly) des untergeordneten -Steuerelements gemäß der bevorzugten Reihenfolge von [ACEs in einer DACL.](order-of-aces-in-a-dacl.md) Das System legt das FLAG INHERITED \_ ACE in allen geerbten ACEs fest.
 
-Die von Container und untergeordneten nicht Container-Objekten geerbten ACEs unterscheiden sich abhängig von den Kombinationen von Vererbungs Flags. Diese Vererbungs Regeln funktionieren für DACLs und System- [*Zugriffs Steuerungs Listen*](/windows/desktop/SecGloss/s-gly) (SACLs) identisch.
+Die acEs, die von untergeordneten Containerobjekten und untergeordneten Nichtcontainerobjekten geerbt werden, unterscheiden sich abhängig von den Kombinationen von Vererbungsflags. Diese Vererbungsregeln funktionieren für DACLs und [*Systemzugriffssteuerungslisten*](/windows/desktop/SecGloss/s-gly) (SACLs) gleich.
 
 
 
-| Übergeordnetes ACE-Flag                                  | Auswirkung auf untergeordnete ACL                                                                                                                                                                                                                      |
+| Übergeordnetes ACE-Flag                                  | Auswirkung auf die untergeordnete ACL                                                                                                                                                                                                                      |
 |--------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| \_Nur Objekt erben ( \_ ACE)                        | Untergeordnete nicht Containerobjekte: als effektiver ACE geerbt. Untergeordnete Containerobjekte: Container erben einen nur Erben-ACE, es sei denn, das No \_ propagieren- \_ ACE- \_ Bitflag ist ebenfalls festgelegt.<br/>                                       |
-| \_Nur Container erben \_                     | Untergeordnete nicht Containerobjekte: keine Auswirkung auf das untergeordnete Objekt. Untergeordnete Container Objekte: das untergeordnete Objekt erbt einen effektiven ACE. Der geerbte ACE ist vererbbar, es sei denn, es \_ ist auch das No propagieren- \_ ACE- \_ Bitflag<br/> |
-| Container \_ erben \_ ACE und Objekt \_ Vererbung \_ | Untergeordnete nicht Containerobjekte: als effektiver ACE geerbt. Untergeordnete Container Objekte: das untergeordnete Objekt erbt einen effektiven ACE. Der geerbte ACE ist vererbbar, es sei denn, es \_ ist auch das No propagieren- \_ ACE- \_ Bitflag<br/> |
-| Keine Vererbungs Flags festgelegt.                         | Keine Auswirkung auf untergeordnete Container-oder nicht Container-Objekte.                                                                                                                                                                                    |
+| Nur OBJECT \_ INHERIT \_ ACE                        | Untergeordnete Objekte ohne Container: Geerbt als effektiver ACE. Untergeordnete Containerobjekte: Container erben einen ACE, der nur erbt, es sei denn, das BITflag NO \_ PROPAGATE \_ INHERIT ACE ist ebenfalls \_ festgelegt.<br/>                                       |
+| NUR CONTAINER \_ INHERIT \_ ACE                     | Untergeordnete Objekte ohne Container: Keine Auswirkung auf das untergeordnete Objekt. Untergeordnete Containerobjekte: Das untergeordnete Objekt erbt einen effektiven ACE. Der geerbte ACE ist vererbbar, es sei denn, das NO \_ PROPAGATE \_ INHERIT \_ ACE-Bitflag ist ebenfalls festgelegt.<br/> |
+| CONTAINER \_ INHERIT ACE und OBJECT INHERIT \_ \_ \_ ACE | Untergeordnete Objekte ohne Container: Geerbt als effektiver ACE. Untergeordnete Containerobjekte: Das untergeordnete Objekt erbt einen effektiven ACE. Der geerbte ACE ist vererbbar, es sei denn, das NO \_ PROPAGATE \_ INHERIT \_ ACE-Bitflag ist ebenfalls festgelegt.<br/> |
+| Keine Vererbungsflags festgelegt                         | Keine Auswirkung auf untergeordnete Container oder Nichtcontainerobjekte.                                                                                                                                                                                    |
 
 
 
  
 
-Wenn ein geerbte ACE ein effektiver ACE für das untergeordnete Objekt ist, ordnet das System alle generischen Rechte den spezifischen Rechten für das untergeordnete Objekt zu. Ebenso ordnet das System generische [*Sicherheits*](/windows/desktop/SecGloss/s-gly) -IDs (SIDs), z. b. Ersteller- \_ Besitzer, der entsprechenden sid zu. Wenn es sich bei einem geerbten ACE um einen Vererbungs-ACE handelt, bleiben alle generischen Rechte oder generischen SIDs unverändert, sodass Sie ordnungsgemäß zugeordnet werden können, wenn der ACE von der nächsten Generation von untergeordneten Objekten geerbt wird.
+Wenn ein geerbter ACE ein effektiver ACE für das untergeordnete Objekt ist, ordnet das System alle generischen Rechte den spezifischen Rechten für das untergeordnete Objekt zu. Auf ähnliche Weise ordnet [](/windows/desktop/SecGloss/s-gly) das System generische Sicherheits-IDs (SIDs) wie CREATOR \_ OWNER der entsprechenden SID zu. Wenn es sich bei einem geerbten ACE um einen ace handelt, der nur geerbt wird, bleiben alle generischen Rechte oder generischen SIDs unverändert, sodass sie entsprechend zugeordnet werden können, wenn der ACE von der nächsten Generation untergeordneter Objekte geerbt wird.
 
-Für einen Fall, in dem ein Container Objekt einen ACE erbt, der sowohl für den Container gültig ist als auch durch seine Nachfolger vererbt werden kann, erbt der Container möglicherweise zwei ACEs. Dies tritt auf, wenn der vererbbare ACE generische Informationen enthält. Der Container erbt einen reinen Vererbungs-ACE, der die generischen Informationen und einen effektiven ACE enthält, in dem die generischen Informationen zugeordnet wurden.
+Für einen Fall, in dem ein Containerobjekt einen ACE erbt, der sowohl für den Container gilt als auch von seinen Nachfolgern vererbt werden kann, kann der Container zwei ACEs erben. Dies tritt auf, wenn der vererbbare ACE generische Informationen enthält. Der Container erbt einen nur erbenden ACE, der die generischen Informationen enthält, und einen effektiven ACE, in dem die generischen Informationen zugeordnet wurden.
 
-Ein [Objekt spezifischer ACE](object-specific-aces.md) weist einen **vereritedobjecttype** -Member auf, der eine GUID enthalten kann, um den Typ des Objekts zu identifizieren, das den ACE erben kann.
+Ein [objektspezifischer ACE verfügt](object-specific-aces.md) über einen **InheritedObjectType-Member,** der eine GUID enthalten kann, um den Typ des Objekts zu identifizieren, das den ACE erben kann.
 
-Wenn die GUID " **eritedobjecttype** " nicht angegeben wird, sind die Vererbungs Regeln für einen Objekt spezifischen ACE identisch mit denen für einen Standard-ACE.
+Wenn die **InheritedObjectType-GUID** nicht angegeben ist, sind die Vererbungsregeln für einen objektspezifischen ACE mit den Vererbungsregeln für einen Standard-ACE identisch.
 
-Wenn die GUID **erbt** , wird der ACE von Objekten vererbt, die der GUID entsprechen, wenn der Objekt \_ Vererbungs- \_ ACE festgelegt ist, und von Containern, die der GUID entsprechen, wenn der Container \_ Vererbungs- \_ ACE festgelegt ist. Beachten Sie, dass derzeit nur DS-Objekte objektspezifische ACEs unterstützen, und die DS alle Objekttypen als Container behandelt.
+Wenn die **InheritedObjectType-GUID** angegeben wird, kann der ACE von Objekten geerbt werden, die mit der GUID übereinstimmen, wenn OBJECT INHERIT ACE festgelegt ist, und von Containern, die mit der GUID übereinstimmen, wenn CONTAINER INHERIT ACE festgelegt \_ \_ \_ \_ ist. Beachten Sie, dass derzeit nur DS-Objekte objektspezifische ACEs unterstützen und der DS alle Objekttypen als Container behandelt.
 
  
 

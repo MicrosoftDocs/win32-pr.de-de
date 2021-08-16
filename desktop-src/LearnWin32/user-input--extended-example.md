@@ -6,7 +6,7 @@ title: User Input Extended Example description: User Input: Extended Example ms.
 
 Kombinieren wir alles, was wir über Benutzereingaben gelernt haben, um ein einfaches Zeichenprogramm zu erstellen. Hier sehen Sie einen Screenshot des Programms:
 
-![Screenshot des Zeichenprogramms](images/input03.png)
+![Screenshot des Zeichnungsprogramms](images/input03.png)
 
 Der Benutzer kann Ellipsen in verschiedenen Farben zeichnen und Ellipsen auswählen, verschieben oder löschen. Um die Benutzeroberfläche einfach zu halten, lässt das Programm nicht zu, dass der Benutzer die Ellipsefarben auswählt. Stattdessen durchkreist das Programm automatisch eine vordefinierte Liste von Farben. Das Programm unterstützt keine anderen Formen als Ellipsen. Natürlich wird dieses Programm keine Auszeichnungen für Grafiksoftware gewinnen. Es ist jedoch immer noch ein nützliches Beispiel, aus dem Sie lernen können. Sie können den vollständigen Quellcode unter [Simple Drawing Sample (Einfaches Zeichnungsbeispiel)](simple-drawing-sample.md)herunterladen. In diesem Abschnitt werden nur einige Highlights behandelt.
 
@@ -43,7 +43,7 @@ struct MyEllipse
 
 Das Programm verwendet den gleichen Volltonfarbpinsel, um die Füllung und Kontur für jede Ellipse zu zeichnen und die Farbe nach Bedarf zu ändern. In Direct2D ist das Ändern der Farbe eines Volltonfarbpinsels ein effizienter Vorgang. Das Pinselobjekt mit Volltonfarbe unterstützt daher eine [**SetColor-Methode.**](/windows/desktop/Direct2D/id2d1solidcolorbrush-setcolor)
 
-Die Ellipsen werden in einem **STL-Listencontainer** gespeichert:
+Die Ausellipsen werden in einem **STL-Listencontainer** gespeichert:
 
 
 ```C++
@@ -53,17 +53,17 @@ Die Ellipsen werden in einem **STL-Listencontainer** gespeichert:
 
 
 > [!Note]  
-> **shared \_ ptr** ist eine Intelligente-Zeiger-Klasse, die C++ in TR1 hinzugefügt und in C++0x formalisiert wurde. Visual Studio 2010 fügt Unterstützung für **freigegebene \_ pt** r- und andere C++0x-Features hinzu. Weitere Informationen finden Sie unter [Exploring New C++ and MFC Features in Visual Studio 2010](/archive/msdn-magazine/2010/april/visual-c-exploring-new-c-and-mfc-features-in-visual-studio-2010) in *MSDN Magazine*. (Diese Ressource ist in einigen Sprachen und Ländern möglicherweise nicht verfügbar.)
+> **shared \_ ptr** ist eine Intelligente-Zeiger-Klasse, die C++ in TR1 hinzugefügt und in C++0x formalisiert wurde. Visual Studio 2010 bietet Unterstützung für **\_ freigegebene pt** r- und andere C++0x-Features. Weitere Informationen finden Sie unter [Exploring New C++ and MFC Features in Visual Studio 2010](/archive/msdn-magazine/2010/april/visual-c-exploring-new-c-and-mfc-features-in-visual-studio-2010) in *MSDN Magazine*. (Diese Ressource ist in einigen Sprachen und Ländern möglicherweise nicht verfügbar.)
 
  
 
 Das Programm verfügt über drei Modi:
 
--   Zeichnen-Modus. Der Benutzer kann neue Ellipsen zeichnen.
+-   Draw-Modus. Der Benutzer kann neue Ausellipsen zeichnen.
 -   Auswahlmodus. Der Benutzer kann eine Ellipse auswählen.
 -   Ziehmodus. Der Benutzer kann eine ausgewählte Ellipse ziehen.
 
-Der Benutzer kann mithilfe der unter Zugriffstastentabellen beschriebenen Tastenkombinationen zwischen dem Draw-Modus und dem [Auswahlmodus wechseln.](accelerator-tables.md) Im Auswahlmodus wechselt das Programm in den Ziehmodus, wenn der Benutzer auf eine Ellipse klickt. Sie wechselt wieder in den Auswahlmodus, wenn der Benutzer die Maustaste loslässt. Die aktuelle Auswahl wird als Iterator in der Liste der Ellipsen gespeichert. Die Hilfsmethode gibt einen Zeiger auf die ausgewählte Ellipse oder den Wert `MainWindow::Selection` **nullptr** zurück, wenn keine Auswahl besteht.
+Der Benutzer kann zwischen dem Draw-Modus und dem Auswahlmodus wechseln, indem er die gleichen Tastenkombinationen verwendet, die unter [Zugriffstastentabellen](accelerator-tables.md)beschrieben sind. Aus dem Auswahlmodus wechselt das Programm in den Ziehmodus, wenn der Benutzer auf eine Ellipse klickt. Er wechselt zurück in den Auswahlmodus, wenn der Benutzer die Maustaste freigibt. Die aktuelle Auswahl wird als Iterator in der Liste der Auslassungszeichen gespeichert. Die Hilfsmethode `MainWindow::Selection` gibt einen Zeiger auf die ausgewählte Ellipse oder den Wert **nullptr** zurück, wenn keine Auswahl vorhanden ist.
 
 
 ```C++
@@ -86,14 +86,14 @@ Der Benutzer kann mithilfe der unter Zugriffstastentabellen beschriebenen Tasten
 
 
 
-In der folgenden Tabelle sind die Auswirkungen der Mauseingabe in jedem der drei Modi zusammengefasst.
+In der folgenden Tabelle sind die Auswirkungen von Mauseingaben in jedem der drei Modi zusammengefasst.
 
 
 
-| Mauseingabe      | Draw-Modus                                          | Auswahlmodus                                                                                                                               | Ziehmodus                  |
+| Mauseingabe      | Zeichnen-Modus                                          | Auswahlmodus                                                                                                                               | Ziehmodus                  |
 |------------------|----------------------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------|----------------------------|
 | Linke Schaltfläche nach unten | Legen Sie die Mauserfassung fest, und beginnen Sie, eine neue Ellipse zu zeichnen. | Geben Sie die aktuelle Auswahl frei, und führen Sie einen Treffertest aus. Wenn eine Ellipse erreicht wird, erfassen Sie den Cursor, wählen Sie die Ellipse aus, und wechseln Sie in den Ziehmodus. | Keine Aktion.                 |
-| Mauszeigerbewegungen       | Wenn die linke Schaltfläche nicht angezeigt wird, ändern Sie die Größe der Ellipse.    | Keine Aktion.                                                                                                                                   | Verschieben Sie die ausgewählte Ellipse. |
+| Mauszeigerbewegungen       | Wenn die linke Schaltfläche ausgeschaltet ist, ändern Sie die Größe der Ellipse.    | Keine Aktion.                                                                                                                                   | Verschieben Sie die ausgewählte Ellipse. |
 | Linke Schaltfläche nach oben   | Zeichnen Sie die Ellipse nicht mehr.                          | Keine Aktion.                                                                                                                                   | Wechseln Sie in den Auswahlmodus.  |
 
 
@@ -178,7 +178,7 @@ void MainWindow::OnMouseMove(int pixelX, int pixelY, DWORD flags)
 
 
 
-Die Logik zum Ändern der Größe einer Ellipse wurde zuvor im Abschnitt [Beispiel: Zeichnen](mouse-movement.md)von Kreisen beschrieben. Beachten Sie auch den Aufruf von [**InvalidateRect**](/windows/desktop/api/winuser/nf-winuser-invalidaterect). Dadurch wird sichergestellt, dass das Fenster neu gepaint wird. Der folgende Code verarbeitet [**\_ WM-LBUTTONUP-Nachrichten.**](/windows/desktop/inputdev/wm-lbuttonup)
+Die Logik zum Ändern der Größe einer Ellipse wurde zuvor im Abschnitt [Beispiel: Zeichnen](mouse-movement.md)von Kreisen beschrieben. Beachten Sie auch den Aufruf von [**InvalidateRect**](/windows/desktop/api/winuser/nf-winuser-invalidaterect). Dadurch wird sichergestellt, dass das Fenster neu lackiert wird. Der folgende Code verarbeitet [**\_ WM-LBUTTONUP-Nachrichten.**](/windows/desktop/inputdev/wm-lbuttonup)
 
 
 ```C++
@@ -199,7 +199,7 @@ void MainWindow::OnLButtonUp()
 
 
 
-Wie Sie sehen können, verfügen die Meldungshandler für die Mauseingabe je nach aktuellem Modus über Verzweigungscode. Dies ist ein akzeptabler Entwurf für dieses recht einfache Programm. Es kann jedoch schnell zu komplex werden, wenn neue Modi hinzugefügt werden. Bei einem größeren Programm ist eine MVC-Architektur (Model View Controller) möglicherweise ein besserer Entwurf. Bei dieser Art von Architektur ist der *Controller,* der Benutzereingaben verarbeitet, vom Modell *getrennt,* das Anwendungsdaten verwaltet.
+Wie Sie sehen können, verfügen die Meldungshandler für Mauseingaben je nach aktuellem Modus über Verzweigungscode. Dies ist ein akzeptabler Entwurf für dieses recht einfache Programm. Es kann jedoch schnell zu komplex werden, wenn neue Modi hinzugefügt werden. Für ein größeres Programm kann eine MVC-Architektur (Model View Controller) ein besserer Entwurf sein. Bei dieser Art von Architektur ist der *Controller,* der Benutzereingaben verarbeitet, vom *Modell* getrennt, das Anwendungsdaten verwaltet.
 
 Wenn das Programm den Modus wechselt, ändert sich der Cursor, um dem Benutzer Feedback zu geben.
 
@@ -233,7 +233,7 @@ void MainWindow::SetMode(Mode m)
 
 
 
-Denken Sie abschließend daran, den Cursor zu setzen, wenn das Fenster eine [**WM \_ SETCURSOR-Meldung empfängt:**](/windows/desktop/menurc/wm-setcursor)
+Denken Sie abschließend daran, den Cursor festzulegen, wenn das Fenster eine [**WM \_ SETCURSOR-Meldung**](/windows/desktop/menurc/wm-setcursor) empfängt:
 
 
 ```C++
@@ -250,7 +250,7 @@ Denken Sie abschließend daran, den Cursor zu setzen, wenn das Fenster eine [**W
 
 ## <a name="summary"></a>Zusammenfassung
 
-In diesem Modul haben Sie gelernt, wie Sie Maus- und Tastatureingaben verarbeiten. Definieren von Tastenkombinationen und wie das Cursorbild aktualisiert wird, um den aktuellen Zustand des Programms widerzubilden.
+In diesem Modul haben Sie gelernt, wie Maus- und Tastatureingaben behandelt werden. Definieren von Tastenkombinationen und wie das Cursorbild aktualisiert wird, um den aktuellen Zustand des Programms widerzuspiegeln.
 
  
 

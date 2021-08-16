@@ -4,37 +4,37 @@ description: Load-Methode
 ms.assetid: 72a37471-f69b-49a5-a6eb-d65bff970c0f
 ms.topic: article
 ms.date: 05/31/2018
-ms.openlocfilehash: 0927fc8e49e55c2bdfcd7b1109bb8604540c199c
-ms.sourcegitcommit: ebd3ce6908ff865f1ef66f2fc96769be0aad82e1
+ms.openlocfilehash: e201053bf3eb9fbd7a3c5c7eb94f9b032cde13087f76e1fcfa176d068655137a
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/19/2020
-ms.locfileid: "106337425"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118748652"
 ---
 # <a name="load-method"></a>Load-Methode
 
-\[Der Microsoft-Agent ist ab Windows 7 veraltet und in nachfolgenden Versionen von Windows möglicherweise nicht verfügbar.\]
+\[Der Microsoft-Agent ist ab Windows 7 veraltet und in nachfolgenden Versionen von Windows möglicherweise nicht mehr verfügbar.\]
 
 <dl> <dt>
 
 <span id="Description"></span><span id="description"></span><span id="DESCRIPTION"></span>**Beschreibung**
 </dt> <dd>
 
-Lädt ein Zeichen in die [**Zeichen**](/windows/desktop/lwef/the-characters-object) Auflistung.
+Lädt ein Zeichen in die [**Characters-Auflistung.**](/windows/desktop/lwef/the-characters-object)
 
 </dd> <dt>
 
 <span id="Syntax"></span><span id="syntax"></span><span id="SYNTAX"></span>**Syntax**
 </dt> <dd>
 
-*Agent ***. Zeichen. Load "*** Merkmal-ID * *",* *  *Anbieter*
+*agent***. Characters.Load "**_CharacterID_*_",_ *  *Provider*
 
 
 
 | Teil          | BESCHREIBUNG                                                                                                                                                                                                                              |
 |---------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| *Merkmal-ID* | Erforderlich. Ein Zeichen folgen Wert, mit dem auf die zu ladenden Zeichendaten verwiesen wird.                                                                                                                                                  |
-| *Anbieter*    | Erforderlich. Ein Variant-Datentyp, bei dem es sich um einen der folgenden Typen handeln muss: **filespec** der lokale Datei Speicherort der Definitionsdatei des angegebenen Zeichens. <br/> **URL** Die http-Adresse für die Definitionsdatei des Zeichens.<br/> |
+| *CharacterID* | Erforderlich. Ein Zeichenfolgenwert, mit dem Sie auf die zu ladenden Zeichendaten verweisen.                                                                                                                                                  |
+| *Anbieter*    | Erforderlich. Ein variant-Datentyp, der einen der folgenden Sein muss: **Filespec** Der lokale Dateispeicherort der Definitionsdatei des angegebenen Zeichens. <br/> **URL** Die HTTP-Adresse für die Definitionsdatei des Zeichens.<br/> |
 
 
 
@@ -42,9 +42,9 @@ Lädt ein Zeichen in die [**Zeichen**](/windows/desktop/lwef/the-characters-obje
 
 </dd> </dl>
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Sie können Zeichen aus dem Unterverzeichnis des Agents laden, indem Sie einen relativen Pfad angeben (einer, der keinen Doppelpunkt oder vorangestellenden Schrägstrich enthält). Dadurch wird der Pfad mit dem Zeichen Verzeichnis des Agents (befindet sich im lokalisierten Windows \\ MSAgent-Verzeichnis) als Präfix versehen. Wenn Sie z. b. Folgendes angeben, wird Genie. ACS aus dem chars-Verzeichnis des Agents geladen:
+Sie können Zeichen aus dem -Agent-Unterverzeichnis laden, indem Sie einen relativen Pfad angeben (einen Pfad, der keinen Doppelpunkt oder führenden Schrägstrich enthält). Dadurch wird dem Pfad das Zeichenverzeichnis des -Agents vorangestellt (das sich im lokalisierten Windows \\ msagent-Verzeichnis befindet). Wenn Sie beispielsweise Folgendes angeben, wird Genie.acs aus dem Chars-Verzeichnis des Agents geladen:
 
 
 ```
@@ -53,7 +53,7 @@ Sie können Zeichen aus dem Unterverzeichnis des Agents laden, indem Sie einen r
 
 
 
-Sie können auch Ihr eigenes Verzeichnis im chars-Verzeichnis des Agents angeben.
+Sie können auch ihr eigenes Verzeichnis im Chars-Verzeichnis des Agents angeben.
 
 
 ```
@@ -62,7 +62,7 @@ Sie können auch Ihr eigenes Verzeichnis im chars-Verzeichnis des Agents angeben
 
 
 
-Sie können das Zeichen, das momentan als Standard Zeichen des aktuellen Benutzers festgelegt ist, laden, indem Sie keinen Pfad als zweiten Parameter der **Load** -Methode einschließen.
+Sie können das Zeichen laden, das derzeit als Standardzeichen des aktuellen Benutzers festgelegt ist, indem Sie keinen Pfad als zweiten Parameter der **Load-Methode** einschließen.
 
 
 ```
@@ -71,15 +71,15 @@ Sie können das Zeichen, das momentan als Standard Zeichen des aktuellen Benutze
 
 
 
-Es ist nicht möglich, dasselbe Zeichen (ein Zeichen mit derselben GUID) mehrmals aus einer einzelnen Instanz des Steuer Elements zu laden. Ebenso können Sie das Standard Zeichen und andere Zeichen nicht gleichzeitig von einer einzelnen Instanz des Steuer Elements laden, da das Standard Zeichen mit dem anderen Zeichen identisch sein könnte. Wenn Sie versuchen, dies zu tun, löst der Server einen Fehler aus. Sie können jedoch eine weitere Instanz des agentsteuerelements erstellen und dasselbe Zeichen laden.
+Sie können das gleiche Zeichen (ein Zeichen mit derselben GUID) nicht mehr als einmal aus einer einzelnen Instanz des Steuerelements laden. Ebenso können Sie das Standardzeichen und andere Zeichen nicht gleichzeitig aus einer einzelnen Instanz des Steuerelements laden, da das Standardzeichen mit dem anderen Zeichen identisch sein kann. Wenn Sie dies versuchen, löst der Server einen Fehler aus. Sie können jedoch eine weitere Instanz des -Agent-Steuerelements erstellen und das gleiche Zeichen laden.
 
-Der Microsoft-Agent Datenanbieter unterstützt das Laden von Zeichendaten, die entweder als einzelne strukturierte Datei () gespeichert werden. ACS) mit Zeichendaten und Animationsdaten oder als separate Zeichendaten (. ACF) und Animation (. ACA-Dateien. Verwenden Sie die strukturierte Struktur. Die ACS-Datei zum Laden eines Zeichens, das auf einem lokalen Datenträger oder Netzwerk gespeichert wird und auf das mithilfe eines herkömmlichen Datei Protokolls (z. b. UNC-Pfadnamen) zugegriffen wird. Verwenden Sie die separate. ACF und. ACA-Dateien, wenn Sie die Animationsdateien einzeln von einer Remote Site laden möchten, auf die über das HTTP-Protokoll zugegriffen wird.
+Der Microsoft-Agent-Datenanbieter unterstützt das Laden von Zeichendaten, die entweder als einzelne strukturierte Datei gespeichert sind (. ACS) mit Zeichendaten und Animationsdaten zusammen oder als separate Zeichendaten (. ACF) und Animation (. ACA)-Dateien. Verwenden Sie die einzelne strukturierte . ACS-Datei zum Laden eines Zeichens, das auf einem lokalen Datenträger oder Netzwerk gespeichert ist und auf das mithilfe eines herkömmlichen Dateiprotokolls (z. B. UNC-Pfadnamen) zugegriffen wird. Verwenden Sie die separate . ACF und . ACA-Dateien, wenn Sie die Animationsdateien einzeln von einem Remotestandort laden möchten, an dem über das HTTP-Protokoll auf sie zugegriffen wird.
 
-Damit. ACS-Dateien, die die **Load** -Methode verwenden, bieten Zugriff auf die Animationen eines Zeichens. Damit. ACF-Dateien verwenden Sie auch die [**Get**](get-method.md) -Methode, um Animationsdaten zu laden. Die **Load** -Methode unterstützt nicht das herunterladen. ACS-Dateien von einer HTTP-Site.
+Für. ACS-Dateien, die die **Load-Methode** verwenden, bieten Zugriff auf die Animationen eines Zeichens. Für. ACF-Dateien verwenden Sie [](get-method.md) auch die Get-Methode, um Animationsdaten zu laden. Das Herunterladen von wird von der **Load-Methode** nicht unterstützt. ACS-Dateien von einer HTTP-Website.
 
-Beim Laden eines Zeichens wird das Zeichen nicht automatisch angezeigt. Verwenden Sie zuerst die [**Show**](show-method.md) -Methode, um das Zeichen sichtbar zu machen.
+Beim Laden eines Zeichens wird das Zeichen nicht automatisch angezeigt. Verwenden [](show-method.md) Sie zuerst die Show-Methode, um das Zeichen sichtbar zu machen.
 
-Wenn Sie die **Load** -Methode verwenden, um eine auf dem lokalen Computer gespeicherte Zeichen Datei zu laden, schlägt der-Befehl fehl. Da die Datei z. b. nicht gefunden wird, löst der-Agent einen Fehler aus. Mithilfe der-Unterstützung in der Programmiersprache können Sie eine Fehler Behandlungs Routine bereitstellen, um den Fehler zu erfassen und zu verarbeiten.
+Wenn Sie die **Load-Methode** verwenden, um eine auf dem lokalen Computer gespeicherte Zeichendatei zu laden, schlägt der Aufruf fehl. Da die Datei beispielsweise nicht gefunden wird, löst der -Agent einen Fehler aus. Sie können die Unterstützung in Ihrer Programmiersprache verwenden, um eine Fehlerbehandlungsroutine zum Abfangen und Verarbeiten des Fehlers bereitzustellen.
 
 
 ```
@@ -98,7 +98,7 @@ Wenn Sie die **Load** -Methode verwenden, um eine auf dem lokalen Computer gespe
 
 
 
-Sie können den Fehler auch behandeln, indem Sie [**raiserequesterrors**](https://www.bing.com/search?q=**RaiseRequestErrors**) auf **false** festlegen, ein-Objekt deklarieren und ihm die **Lade** Anforderung zuweisen. Befolgen Sie dann den **Lade** Vorgang mit einer-Anweisung, die den Status des [**Anforderungs**](/windows/desktop/lwef/the-request-object) Objekts überprüft.
+Sie können den Fehler auch behandeln, indem Sie [**RaiseRequestErrors**](https://www.bing.com/search?q=**RaiseRequestErrors**) auf **False** festlegen, ein -Objekt deklarieren und ihm die **Load-Anforderung** zuweisen. Folgen Sie dann dem **Load-Aufruf** mit einer -Anweisung, die den Status des [**Request-Objekts**](/windows/desktop/lwef/the-request-object) überprüft.
 
 
 ```
@@ -120,7 +120,7 @@ Dim LoadRequest as Object
 
 
 
-Wenn Sie ein nicht lokales Zeichen laden. Beispielsweise können Sie mithilfe des HTTP-Protokolls auch überprüfen, ob ein **Lade** Fehler vorliegt, indem Sie der **Load** -Methode ein [**Request**](/windows/desktop/lwef/the-request-object) -Objekt zuweisen. Da diese Methode zum Laden eines Zeichens jedoch asynchron verarbeitet wird, überprüfen Sie seinen Status im [**requestcomplete**](requestcomplete-event.md) -Ereignis. Dieses Verfahren funktioniert nicht, wenn ein Zeichen mithilfe des UNC-Protokolls geladen wird, da die **Load** -Methode synchron verarbeitet wird.
+Wenn Sie ein Zeichen laden, das nicht lokal ist, Beispielsweise können Sie mithilfe des HTTP-Protokolls auch nach einem **Ladefehler** suchen, indem Sie der **Load-Methode** ein [**Request-Objekt**](/windows/desktop/lwef/the-request-object) zuweisen. Da diese Methode zum Laden eines Zeichens jedoch asynchron behandelt wird, überprüfen Sie seinen Status im [**RequestComplete-Ereignis.**](requestcomplete-event.md) Diese Technik funktioniert nicht beim Laden eines Zeichens mithilfe des UNC-Protokolls, da die **Load-Methode** synchron verarbeitet wird.
 
  
 

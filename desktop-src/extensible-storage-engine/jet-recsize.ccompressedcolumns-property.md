@@ -1,6 +1,6 @@
 ---
-description: 'Weitere Informationen zu: JET_RECSIZE.cCompressedColumns-Eigenschaft'
-title: JET_RECSIZE.cCompressedColumns-Eigenschaft (Microsoft.Isam.Esent.Interop.Vista)
+description: 'Weitere Informationen finden Sie unter: JET_RECSIZE.cCompressedColumns-Eigenschaft'
+title: JET_RECSIZE.cCompressedColumns -Eigenschaft (Microsoft.Isam.Esent.Interop.Vista)
 TOCTitle: 'cCompressedColumns property '
 ms:assetid: P:Microsoft.Isam.Esent.Interop.Vista.JET_RECSIZE.cCompressedColumns
 ms:mtpsurl: https://msdn.microsoft.com/library/microsoft.isam.esent.interop.vista.jet_recsize.ccompressedcolumns(v=EXCHG.10)
@@ -35,7 +35,7 @@ ms.locfileid: "118763745"
 ---
 # <a name="jet_recsizeccompressedcolumns-property"></a>JET_RECSIZE.cCompressedColumns-Eigenschaft
 
-Ruft die Gesamtzahl der Spalten im Datensatz ab, die komprimiert sind.
+Ruft die Gesamtzahl der komprimierten Spalten im Datensatz ab.
 
 **Namespace:**  [Microsoft.Isam.Esent.Interop.Vista](./microsoft.isam.esent.interop.vista-namespace.md)  
 **Assembly:**  Microsoft.Isam.Esent.Interop (in Microsoft.Isam.Esent.Interop.dll)
@@ -68,6 +68,6 @@ Typ: [System.Int64](/dotnet/api/system.int64)
 
 [JET_RECSIZE-Struktur](./jet-recsize-structure2.md)
 
-[JET_RECSIZE-Member](./jet-recsize-members.md)
+[JET_RECSIZE Mitglieder](./jet-recsize-members.md)
 
 [Microsoft.Isam.Esent.Interop.Vista-Namespace](./microsoft.isam.esent.interop.vista-namespace.md)

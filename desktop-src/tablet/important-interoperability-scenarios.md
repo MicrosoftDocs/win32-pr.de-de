@@ -1,5 +1,5 @@
 ---
-description: Damit eine Tablet PC-Anwendung effektiv mit Ink betrieben werden kann, sollte diese Anwendung in der Lage sein,
+description: Damit eine Tablet PC-Anwendung effektiv mit Freihand arbeiten kann, sollte diese Anwendung in der Lage sein,
 ms.assetid: 64a7b773-35c9-42f7-aec4-7fed34fa84d9
 title: Wichtige Interoperabilitätsszenarien
 ms.topic: article
@@ -13,15 +13,15 @@ ms.locfileid: "118718959"
 ---
 # <a name="important-interoperability-scenarios"></a>Wichtige Interoperabilitätsszenarien
 
-Damit eine Tablet PC-Anwendung effektiv mit Ink betrieben werden kann, sollte diese Anwendung in der Lage sein,
+Damit eine Tablet PC-Anwendung effektiv mit Freihand arbeiten kann, sollte diese Anwendung in der Lage sein,
 
--   Speichern Sie ein Dokument im nativen Binärformat der Anwendung, ohne die Ink-Datei des Dokuments zu verlieren.
--   Speichern Sie ein Dokument in einem beliebigen Format, das die Anwendung normalerweise unterstützt (z. B. HTML oder Rich Text Format (RTF)), ohne die Ink-Datei des Dokuments zu verlieren.
--   Kopieren Sie Ink aus einer Anwendung in eine andere, indem Sie die Zwischenablage verwenden. Dies funktioniert, wenn die andere Anwendung nur ein bestimmtes Format erkennt, z. B. HTML, RTF oder Bitmap (BMP). Es funktioniert auch, ob die Zielanwendung Ink erkennt. Wenn sie Ink erkennt, kann die Zielanwendung die Ink-Datei interpretieren, die als Ink und nicht nur als Bild kopiert wurde.
+-   Speichern Sie ein Dokument im nativen Binärformat der Anwendung, ohne den Ink-Code des Dokuments zu verlieren.
+-   Speichern Sie ein Dokument in einem beliebigen Format, das die Anwendung normalerweise unterstützt (z. B. HTML oder Rich Text Format (RTF), ohne dass die Ink-Datei des Dokuments verloren geht.
+-   Kopieren Sie Freihand aus einer Anwendung in eine andere, indem Sie die Zwischenablage verwenden. Dies funktioniert, wenn die andere Anwendung nur ein bestimmtes Format erkennt, z. B. HTML, RTF oder Bitmap (BMP). Es funktioniert auch, ob die Zielanwendung Ink erkennt. Wenn ink erkannt wird, kann die Zielanwendung die Kopierte als Ink und nicht nur als Bild interpretieren.
 -   Kopieren Sie Ink zusammen mit Text zwischen zwei Anwendungen, die Ink erkennen, von denen jede über mehr als ein [**Ink-Objekt**](inkdisp-class.md) verfügt. Dies erfordert HTML, RTF oder ein ähnliches Format.
--   Kopieren Sie Ink zwischen zwei Anwendungen, von denen jede über ein [**Ink-Objekt**](inkdisp-class.md) verfügt. serialisiertes Freihandformat (ISF) ist dafür ausreichend.
--   Kopieren Sie Ink aus einer Anwendung, die über mehr als ein [**Ink-Objekt**](inkdisp-class.md) verfügt, in eine Anwendung, die nur über ein **Ink-Objekt** verfügt. In diesem Fall muss die Anwendung, die über mehr als ein **Ink-Objekt** verfügt, in der Lage sein, serialisiertes Freihandformat (ISF) zu erzeugen.
--   Kopieren Sie Ink aus einer Anwendung, die über ein [**Ink-Objekt**](inkdisp-class.md) verfügt, in eine Anwendung mit mehr als einem **Ink-Objekt.** In diesem Fall muss die Anwendung, die über mehr als ein **Ink-Objekt** verfügt, ISF erkennen können.
+-   Kopieren Sie Ink zwischen zwei Anwendungen, von denen jede über ein [**Ink-Objekt**](inkdisp-class.md) verfügt. serialisiertes Freihandformat (ISF) ist hierfür ausreichend.
+-   Kopieren Von Ink aus einer Anwendung, die über mehr als ein [**Ink-Objekt**](inkdisp-class.md) verfügt, in eine Anwendung, die nur über ein **Ink-Objekt** verfügt. In diesem Fall muss die Anwendung, die über mehr als ein **Ink-Objekt** verfügt, in der Lage sein, serialisiertes Freihandformat (ISF) zu erzeugen.
+-   Kopieren Sie Ink aus einer Anwendung, die über ein [**Ink-Objekt**](inkdisp-class.md) verfügt, in eine Anwendung, die über mehr als ein **Ink-Objekt** verfügt. In diesem Fall muss die Anwendung, die über mehr als ein **Ink-Objekt** verfügt, ISF erkennen können.
 
  
 

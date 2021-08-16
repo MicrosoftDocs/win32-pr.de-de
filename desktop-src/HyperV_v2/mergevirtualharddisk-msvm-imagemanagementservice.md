@@ -1,7 +1,7 @@
 ---
-description: Führt eine untergeordnete virtuelle Festplatte in einer differenzierenden Kette mit einer oder mehreren übergeordneten virtuellen Festplatten in der Kette zusammen.
+description: Führt eine untergeordnete virtuelle Festplatte in einer unterscheidenden Kette mit mindestens einer übergeordneten virtuellen Festplatte in der Kette zusammen.
 ms.assetid: 10633176-F0C3-4CA0-8E7B-2B11FF93B0EA
-title: MergeVirtualHardDisk-Methode der Msvm_ImageManagementService-Klasse
+title: MergeVirtualHardDisk-Methode der Msvm_ImageManagementService Klasse
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -22,9 +22,9 @@ ms.locfileid: "118644872"
 ---
 # <a name="mergevirtualharddisk-method-of-the-msvm_imagemanagementservice-class"></a>MergeVirtualHardDisk-Methode der Msvm \_ ImageManagementService-Klasse
 
-Führt eine untergeordnete virtuelle Festplatte in einer differenzierenden Kette mit einer oder mehreren übergeordneten virtuellen Festplatten in der Kette zusammen. Informationen zu Verwendungseinschränkungen für diese Methode finden Sie unter Hinweise.
+Führt eine untergeordnete virtuelle Festplatte in einer unterscheidenden Kette mit mindestens einer übergeordneten virtuellen Festplatte in der Kette zusammen. Weitere Informationen finden Sie unter Hinweise zu Nutzungseinschränkungen für diese Methode.
 
-Wenn der Benutzer, der diese Funktion ausführt, nicht über die Berechtigung zum Aktualisieren der virtuellen Computer verfügt, tritt bei dieser Funktion ein Fehler auf.
+Wenn der Benutzer, der diese Funktion ausgeführt hat, nicht über die Berechtigung zum Aktualisieren der virtuellen Computer verfügt, ist diese Funktion nicht verfügbar.
 
 ## <a name="syntax"></a>Syntax
 
@@ -48,7 +48,7 @@ uint32 MergeVirtualHardDisk(
 
 Typ: **Zeichenfolge**
 
-Ein vollqualifizierten Pfad, der den Speicherort der zusammenzuführenden virtuellen Festplattendatei angibt.
+Ein vollqualifizierter Pfad, der den Speicherort der virtuellen Festplattendatei angibt, die zusammengeführt werden soll.
 
 </dd> <dt>
 
@@ -57,7 +57,7 @@ Ein vollqualifizierten Pfad, der den Speicherort der zusammenzuführenden virtue
 
 Typ: **Zeichenfolge**
 
-Ein vollqualifizierten Pfad, der den Speicherort der übergeordneten virtuellen Festplattendatei angibt, mit der Daten zusammengeführt werden sollen. Dies kann die unmittelbar übergeordnete virtuelle Festplatte der zusammenführenden Datei oder das übergeordnete Datenträgerimage ein paar Ebenen in der differenzierenden Kette sein.
+Ein vollqualifizierter Pfad, der den Speicherort der übergeordneten virtuellen Festplattendatei angibt, in der Daten zusammengeführt werden sollen. Dabei kann es sich um die unmittelbar übergeordnete virtuelle Festplatte der zusammenführenden Datei oder um das Image des übergeordneten Datenträgers handeln, das sich einige Ebenen der unterscheidenden Kette anhing.
 
 </dd> <dt>
 
@@ -66,7 +66,7 @@ Ein vollqualifizierten Pfad, der den Speicherort der übergeordneten virtuellen 
 
 Typ: **[ **CIM \_ ConcreteJob**](/previous-versions//cc136808(v=vs.85))**
 
-Wenn der Vorgang asynchron ausgeführt wird, gibt diese Methode 4096 zurück, und dieser Parameter enthält einen Verweis auf ein objekt, das von [**CIM \_ ConcreteJob**](/previous-versions//cc136808(v=vs.85))abgeleitet wurde.
+Wenn der Vorgang asynchron ausgeführt wird, gibt diese Methode 4096 zurück, und dieser Parameter enthält einen Verweis auf ein Objekt, das von [**CIM \_ ConcreteJob abgeleitet wurde.**](/previous-versions//cc136808(v=vs.85))
 
 </dd> </dl>
 
@@ -81,7 +81,7 @@ Diese Methode kann einen der folgenden Werte zurückgeben.
 **Abgeschlossen ohne Fehler** (0)
 </dt> <dt>
 
-**Überprüfte Methodenparameter – Auftragsstart** (4096)
+**Überprüfte Methodenparameter – Auftrag gestartet** (4096)
 </dt> <dt>
 
 **Fehler** (32768)
@@ -99,7 +99,7 @@ Diese Methode kann einen der folgenden Werte zurückgeben.
 **Timeout** (32772)
 </dt> <dt>
 
-**Ungültiger Parameter** (32773)
+**Ungültiger** Parameter (32773)
 </dt> <dt>
 
 **System wird verwendet** (32774)
@@ -126,10 +126,10 @@ Die untergeordnete virtuelle Festplatte muss offline sein.
 
 Mit dieser Methode können nur die folgenden Arten von virtuellen Festplatten verwendet werden:
 
--   Differenzierende VHD
--   Differenzierende VHDX
+-   Unterscheidende VHD
+-   Unterscheidende VHDX
 
-Der Zugriff auf die [**Msvm \_ ImageManagementService-Klasse**](msvm-imagemanagementservice.md) kann durch die UAC-Filterung eingeschränkt werden. Weitere Informationen finden Sie unter [Benutzerkontensteuerung und WMI.](/windows/desktop/WmiSdk/user-account-control-and-wmi)
+Der Zugriff auf die [**Msvm \_ ImageManagementService-Klasse**](msvm-imagemanagementservice.md) kann durch UAC-Filterung eingeschränkt werden. Weitere Informationen finden Sie unter [Benutzerkontensteuerung und WMI.](/windows/desktop/WmiSdk/user-account-control-and-wmi)
 
 ## <a name="examples"></a>Beispiele
 
@@ -186,7 +186,7 @@ public static void MergeVirtualHardDisk(string ChildPath, string ParentPath)
 
 
 
-## <a name="see-also"></a>Weitere Informationen:
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 

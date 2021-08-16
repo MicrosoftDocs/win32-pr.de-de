@@ -1,21 +1,21 @@
 ---
-description: Die Set-Methode legt den Wert einer angegebenen audioeinstellungs Eigenschaft fest.
+description: Die Set-Methode legt den Wert einer bestimmten Audioeinstellungseigenschaft fest.
 ms.assetid: 3132e004-5543-4b21-878d-35197f7077d6
-title: 'Itaudiosettings:: Set-Methode (ipmsp. h)'
+title: ITAudioSettings::Set-Methode (Ipmsp.h)
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: bf947c28d3b5270b3c5dabd4196d0e6b71f57911
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: abf26b35e3d5be18721abb6d8dd109946503cb11cb30d5c7db869d92e88adfcc
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106359728"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "119003398"
 ---
-# <a name="itaudiosettingsset-method"></a>Itaudiosettings:: Set-Methode
+# <a name="itaudiosettingsset-method"></a>ITAudioSettings::Set-Methode
 
-\[ Diese Methode ist nicht für die Verwendung in Windows Vista, Windows Server 2008 und nachfolgenden Versionen des Betriebssystems verfügbar. Die RTC-Client-API bietet eine ähnliche Funktionalität.\]
+\[Diese Methode ist nicht für die Verwendung in Windows Vista, Windows Server 2008 und nachfolgenden Versionen des Betriebssystems verfügbar. Die RTC-Client-API bietet ähnliche Funktionen.\]
 
-Die **Set** -Methode legt den Wert einer angegebenen [**audioeinstellungs Eigenschaft**](audiosettingsproperty.md)fest.
+Die **Set-Methode** legt den Wert einer angegebenen [**Audioeinstellungseigenschaft fest.**](audiosettingsproperty.md)
 
 ## <a name="syntax"></a>Syntax
 
@@ -32,24 +32,24 @@ HRESULT get_Error(
 
 <dl> <dt>
 
-*Eigenschaft* \[ in\]
+*Eigenschaft* \[ In\]
 </dt> <dd>
 
-Member der [**audiosettingsproperty**](audiosettingsproperty.md) -Enumeration.
+Member der [**AudioSettingsProperty-Enumerierung.**](audiosettingsproperty.md)
 
 </dd> <dt>
 
-*Lvalue* \[ in\]
+*lValue* \[ In\]
 </dt> <dd>
 
-Der gewünschte Wert für die-Eigenschaft.
+Gewünschter Wert für die Eigenschaft.
 
 </dd> <dt>
 
-*lFlags* \[ in\]
+*lFlags* \[ In\]
 </dt> <dd>
 
-Der Wert der [**tapicontrolflags**](tapicontrolflags.md) -Enumeration, die angibt, wie der *Eigenschafts* Wert gesteuert werden soll.
+Der Wert der [**TAPIControlFlags-Aufenumerierung,**](tapicontrolflags.md) der angibt, wie der *Property-Wert* gesteuert werden soll.
 
 </dd> </dl>
 
@@ -62,7 +62,7 @@ Diese Methode kann einen dieser Werte zurückgeben.
 | Rückgabecode                                                                                   | Beschreibung                                                     |
 |-----------------------------------------------------------------------------------------------|-----------------------------------------------------------------|
 | <dl> <dt>**S \_ OK**</dt> </dl>          | Methode war erfolgreich.<br/>                                    |
-| <dl> <dt>**E \_ outo-Memory**</dt> </dl> | Zum Ausführen des Vorgangs ist nicht genügend Arbeitsspeicher vorhanden.<br/> |
+| <dl> <dt>**E \_ OUTOFMEMORY**</dt> </dl> | Es ist nicht genügend Arbeitsspeicher vorhanden, um den Vorgang durchzuführen.<br/> |
 
 
 
@@ -74,24 +74,24 @@ Diese Methode kann einen dieser Werte zurückgeben.
 
 | Anforderung | Wert |
 |-------------------------|--------------------------------------------------------------------------------------|
-| TAPI-Version<br/> | Erfordert TAPI 3,1<br/>                                                         |
-| Header<br/>       | <dl> <dt>Ipmsp. h</dt> </dl>   |
-| Bibliothek<br/>      | <dl> <dt>UUID. lib</dt> </dl>  |
+| TAPI-Version<br/> | Erfordert TAPI 3.1<br/>                                                         |
+| Header<br/>       | <dl> <dt>Ipmsp.h</dt> </dl>   |
+| Bibliothek<br/>      | <dl> <dt>Uuid.lib</dt> </dl>  |
 | DLL<br/>          | <dl> <dt>Tapi3.dll</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Itaudiosettings**](itaudiosettings.md)
+[**ITAudioSettings**](itaudiosettings.md)
 </dt> <dt>
 
-[**Tapicontrolflags**](tapicontrolflags.md)
+[**TAPIControlFlags**](tapicontrolflags.md)
 </dt> <dt>
 
-[**Audiosettingsproperty**](audiosettingsproperty.md)
+[**AudioSettingsProperty**](audiosettingsproperty.md)
 </dt> </dl>
 
  

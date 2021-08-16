@@ -1,19 +1,19 @@
 ---
-description: Schwimmt einen Vektor.
+description: Swizzles ein Vektor.
 ms.assetid: 75608e80-5911-45a8-beca-ceac1f4d2c1c
-title: Xmvector Swizzle-Vorlage (directxmath. h)
+title: XMVectorSwizzle-Vorlage (DirectXMath.h)
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: e8e872d76f3251eccc8616c143c645b388e2dca4
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 800d976d63480f88defea7f1db07651563df44e8985ae5925810617b44302e87
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106352144"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118984480"
 ---
-# <a name="xmvectorswizzle-template"></a>Xmvector Swizzle-Vorlage
+# <a name="xmvectorswizzle-template"></a>XMVectorSwizzle-Vorlage
 
-Schwimmt einen Vektor.
+Swizzles ein Vektor.
 
 ## <a name="syntax"></a>Syntax
 
@@ -27,29 +27,29 @@ template<uint32_t SwizzleX, uint32_t SwizzleY, uint32_t SwizzleZ, uint32_t Swizz
 
 <dl> <dt>
 
-<span id="V"></span><span id="v"></span>*Ramelow*
+<span id="V"></span><span id="v"></span>*V*
 </dt> <dd>
 
-\[in \] Vektor zum Schwenken.
+\[in \] Vektor zu Swizzle.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Gibt den von einem Streifen geleiteten [**xmvector**](xmvector-data-type.md)zurück.
+Gibt den geschwenkten [**XMVECTOR zurück.**](xmvector-data-type.md)
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
-Bei dieser Funktion handelt es sich um eine Vorlagen Version von [**xmvectorswizzle**](/windows/win32/api/directxmath/nf-directxmath-xmvectorswizzle) , bei der die *\* swidgumente* Vorlagen Werte sind.
+Diese Funktion ist eine Vorlagenversion von [**XMVectorSwizzle,**](/windows/win32/api/directxmath/nf-directxmath-xmvectorswizzle) bei der die *Swizzle-Argumente \** Vorlagenwerte sind.
 
-`XM_SWIZZLE_X`, `XM_SWIZZLE_Y` , `XM_SWIZZLE_Z` und `XM_SWIZZLE_W` sind Konstanten, die für die Verwendung mit 0, 1, 2 bzw. 3 ausgewertet werden `XMVectorSwizzle` . Dies ist identisch mit `XM_PERMUTE_0X` , `XM_PERMUTE_0Y` , `XM_PERMUTE_0Z` und `XM_PERMUTE_0W` .
+`XM_SWIZZLE_X`, `XM_SWIZZLE_Y` `XM_SWIZZLE_Z` , und sind `XM_SWIZZLE_W` Konstanten, die zu 0, 1, 2 bzw. 3 für die Verwendung mit ausgewertet `XMVectorSwizzle` werden. Dies ist identisch mit `XM_PERMUTE_0X` , `XM_PERMUTE_0Y` , und `XM_PERMUTE_0Z` `XM_PERMUTE_0W` .
 
 > [!Note]  
-> Die `XMVectorSwizzle` Vorlage ist neu für directxmath und für xnamath 2. x nicht verfügbar.
+> Die `XMVectorSwizzle` Vorlage ist neu für DirectXMath und nicht für XNAMath 2.x verfügbar.
 
  
 
-**Namespace**: Verwenden von DirectX
+**Namespace:** DirectX verwenden
 
 ### <a name="platform-requirements"></a>Plattformanforderungen
 
@@ -61,18 +61,18 @@ Microsoft Visual Studio 2010 oder Microsoft Visual Studio 2012 mit dem Windows S
 
 | Anforderung | Wert |
 |-------------------|------------------------------------------------------------------------------------------|
-| Header<br/> | <dl> <dt>Directxmath. h</dt> </dl> |
+| Header<br/> | <dl> <dt>DirectXMath.h</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[Directxmath-Bibliotheks Vorlagen Funktionen](ovw-xnamath-templates.md)
+[Vorlagenfunktionen der DirectXMath-Bibliothek](ovw-xnamath-templates.md)
 </dt> <dt>
 
-[**Xmvector perstumm Zeichen**](xmvectorpermute-template.md)
+[**XMVectorPermute**](xmvectorpermute-template.md)
 </dt> </dl>
 
  

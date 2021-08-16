@@ -1,7 +1,7 @@
 ---
-description: Die removeValue-Methode entfernt ein Element aus der Auflistung.
+description: Die RemoveValue-Methode entfernt ein Element aus der Auflistung.
 ms.assetid: 864c23ee-5a4e-4e06-add0-f6aef5562430
-title: 'Iportabledevicevalues:: removeValue-Methode (portabledevicetypes. h)'
+title: IPortableDeviceValues::RemoveValue-Methode (PortableDeviceTypes.h)
 ms.topic: reference
 ms.date: 05/31/2018
 topic_type:
@@ -14,16 +14,16 @@ api_type:
 api_location:
 - PortableDeviceGUIDs.lib
 - PortableDeviceGUIDs.dll
-ms.openlocfilehash: f65160cc2798524d88471382c855f65dea2e6033
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 2cc21976b72c0d493f1534d63ea5da56fac059db6444ed81c310b9c154f3ee3f
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106372277"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118963619"
 ---
-# <a name="iportabledevicevaluesremovevalue-method"></a>Iportabledevicevalues:: removeValue-Methode
+# <a name="iportabledevicevaluesremovevalue-method"></a>IPortableDeviceValues::RemoveValue-Methode
 
-Die **removeValue** -Methode entfernt ein Element aus der Auflistung.
+Die **RemoveValue-Methode** entfernt ein Element aus der Auflistung.
 
 ## <a name="syntax"></a>Syntax
 
@@ -40,16 +40,16 @@ HRESULT RemoveValue(
 
 <dl> <dt>
 
-*Schlüssel* \[ in\]
+*key* \[ In\]
 </dt> <dd>
 
-Ein **refpropertykey** , der das zu entfernenden Element angibt.
+Ein **REFPROPERTYKEY,** der das zu entfernende Element angibt.
 
 </dd> </dl>
 
 ## <a name="return-value"></a>Rückgabewert
 
-Die-Methode gibt ein **HRESULT** zurück. Mögliches Werte (aber nicht die Einzigen) sind die in der folgenden Tabelle.
+Die Methode gibt ein **HRESULT** zurück. Mögliches Werte (aber nicht die Einzigen) sind die in der folgenden Tabelle.
 
 
 
@@ -67,22 +67,22 @@ Die-Methode gibt ein **HRESULT** zurück. Mögliches Werte (aber nicht die Einzi
 
 | Anforderung | Wert |
 |--------------------|----------------------------------------------------------------------------------------------------|
-| Header<br/>  | <dl> <dt>Portablede vicetypes. h</dt> </dl>   |
-| Bibliothek<br/> | <dl> <dt>Portabledeviceguids. lib</dt> </dl> |
+| Header<br/>  | <dl> <dt>PortableDeviceTypes.h</dt> </dl>   |
+| Bibliothek<br/> | <dl> <dt>PortableDeviceGUIDs.lib</dt> </dl> |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
-[**Iportabledebug-Schnittstelle**](iportabledevicevalues.md)
+[**IPortableDeviceValues-Schnittstelle**](iportabledevicevalues.md)
 </dt> <dt>
 
-[**Iportablede vicevalues:: GetValue**](iportabledevicevalues-getvalue.md)
+[**IPortableDeviceValues::GetValue**](iportabledevicevalues-getvalue.md)
 </dt> <dt>
 
-[**Iportabledebug:: SetValue**](iportabledevicevalues-setvalue.md)
+[**IPortableDeviceValues::SetValue**](iportabledevicevalues-setvalue.md)
 </dt> </dl>
 
  

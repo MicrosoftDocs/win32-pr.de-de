@@ -1,6 +1,6 @@
 ---
 title: Beispielcode für den Empfang von Änderungsbenachrichtigungen
-description: Im folgenden Codebeispiel wird gezeigt, wie Sie die LDAP-Änderungsbenachrichtigungssteuerung verwenden, um Benachrichtigungen über Änderungen an einem Objekt in Active Directory Domain Services zu empfangen.
+description: Im folgenden Codebeispiel wird gezeigt, wie sie das LDAP-Änderungsbenachrichtigungssteuerelement verwenden, um Benachrichtigungen über Änderungen an einem Objekt in Active Directory Domain Services zu empfangen.
 ms.assetid: e1d36d1c-ee50-4c2f-92f6-eee1dae1c5af
 ms.tgt_platform: multiple
 keywords:
@@ -16,7 +16,7 @@ ms.locfileid: "118693138"
 ---
 # <a name="example-code-for-receiving-change-notifications"></a>Beispielcode für den Empfang von Änderungsbenachrichtigungen
 
-Im folgenden Codebeispiel wird gezeigt, wie Sie die LDAP-Änderungsbenachrichtigungssteuerung verwenden, um Benachrichtigungen über Änderungen an einem Objekt in Active Directory Domain Services zu empfangen. Im Beispiel wird für Benachrichtigungen registriert, der Anfangszustand des -Objekts gelesen und anschließend eine -Schleife verwendet, um auf Änderungen am -Objekt zu warten und diese zu verarbeiten.
+Im folgenden Codebeispiel wird gezeigt, wie sie das LDAP-Änderungsbenachrichtigungssteuerelement verwenden, um Benachrichtigungen über Änderungen an einem Objekt in Active Directory Domain Services zu empfangen. Im Beispiel wird für Benachrichtigungen registriert, der Anfangszustand des -Objekts gelesen und anschließend eine -Schleife verwendet, um auf Änderungen am -Objekt zu warten und diese zu verarbeiten.
 
 Zunächst ruft das Codebeispiel die [**ldap \_ search \_ ext-Funktion**](/previous-versions/windows/desktop/api/winldap/nf-winldap-ldap_search_ext) auf, bei der es sich um einen asynchronen Suchvorgang handelt, der nach dem Registrieren einer Benachrichtigungsanforderung zurückgegeben wird. Zweitens ruft das Beispiel nach dem Einrichten der [**\_ \_ Benachrichtigungsanforderung**](/previous-versions/windows/desktop/api/winldap/nf-winldap-ldap_search_s) die Funktion der Ldap-Suche auf. Dabei handelt es sich um einen synchronen Suchvorgang, der den aktuellen Zustand des Objekts liest. Drittens verwendet das Beispiel eine Schleife, die ldap \_ result aufruft, um auf Ergebnisse des asynchronen Suchvorgangs zu warten. Wenn die [**\_ Ldap-Ergebnisfunktion**](/previous-versions/windows/desktop/api/winldap/nf-winldap-ldap_result) zurückgegeben wird, verarbeitet das Beispiel die Suchergebnisse und wiederholt die Schleife.
 

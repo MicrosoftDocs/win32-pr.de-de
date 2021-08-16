@@ -1,6 +1,6 @@
 ---
-description: Weitere Informationen finden Sie in der API. jetcompact-Methode.
-title: API. jetcompact-Methode
+description: Weitere Informationen finden Sie unter Api.JetCompact-Methode.
+title: Api.JetCompact-Methode
 TOCTitle: 'JetCompact method '
 ms:assetid: M:Microsoft.Isam.Esent.Interop.Api.JetCompact(Microsoft.Isam.Esent.Interop.JET_SESID,System.String,System.String,Microsoft.Isam.Esent.Interop.JET_PFNSTATUS,Microsoft.Isam.Esent.Interop.JET_CONVERT,Microsoft.Isam.Esent.Interop.CompactGrbit)
 ms:mtpsurl: https://msdn.microsoft.com/library/microsoft.isam.esent.interop.api.jetcompact(v=EXCHG.10)
@@ -24,19 +24,19 @@ api_type:
 api_location:
 - Microsoft.Isam.Esent.Interop.dll
 ROBOTS: INDEX,FOLLOW
-ms.openlocfilehash: 74d714a1b0fa8d53743945afb3a35cc2015df293
-ms.sourcegitcommit: 831e8f3db78ab820e1710cede244553c70e50500
+ms.openlocfilehash: 8aecd3ec6120a93edb19b06d1f86c9573c1404f8dc1feb95c1acfec2d0077bcb
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "103958810"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118983460"
 ---
-# <a name="apijetcompact-method"></a>API. jetcompact-Methode
+# <a name="apijetcompact-method"></a>Api.JetCompact-Methode
 
-Erstellt eine Kopie einer vorhandenen Datenbank. Die Kopie wird zu einem für die Verwendung optimalen Zustand komprimiert. Die Daten in den kopierten Daten werden entsprechend den Measures verpackt, die bei der Indexerstellung für die Indizes ausgewählt wurden. Auf diese Weise können komprimierte Daten so dicht wie möglich gespeichert werden. Alternativ können durch komprimierte Datenspeicher Platz für nachfolgende Daten Satz Vergrößerung oder Index Einfügungen reserviert werden.
+Erstellt eine Kopie einer vorhandenen Datenbank. Die Kopie wird für die Verwendung in einen optimalen Zustand komprimiert. Die Daten in den kopierten Daten werden entsprechend den Measures gepackt, die für die Indizes bei der Indexerstellung ausgewählt wurden. Auf diese Weise können komprimierte Daten so dichte wie möglich gespeichert werden. Alternativ können komprimierte Daten Speicherplatz für nachfolgende Datensatzvergrößerungen oder Indexeinfügungen reservieren.
 
-**Namespace:**  [Microsoft. ISAM. ESENT. Interop](./microsoft.isam.esent.interop-namespace.md)  
-**Assembly:**  Microsoft. ISAM. ESENT. Interop (in Microsoft.Isam.Esent.Interop.dll)
+**Namespace:**  [Microsoft.Isam.Esent.Interop](./microsoft.isam.esent.interop-namespace.md)  
+**Assembly:**  Microsoft.Isam.Esent.Interop (in Microsoft.Isam.Esent.Interop.dll)
 
 ## <a name="syntax"></a>Syntax
 
@@ -74,52 +74,52 @@ public static void JetCompact(
 
 #### <a name="parameters"></a>Parameter
 
-  - -sid  
-    Typ: [Microsoft.ISAM.ESENT.Interop.JET_SESID](./jet-sesid-structure.md)  
+  - sesid  
+    Typ: [Microsoft.Isam.Esent.Interop.JET_SESID](./jet-sesid-structure.md)  
     
-    Die für den-Befehl zu verwendende Sitzung.
+    Die Sitzung, die für den Aufruf verwendet werden soll.
 
 <!-- end list -->
 
   - sourceDatabase  
-    Typ: [System. String](/dotnet/api/system.string)  
+    Typ: [System.String](/dotnet/api/system.string)  
     
     Die Quelldatenbank, die komprimiert wird.
 
 <!-- end list -->
 
   - destinationDatabase  
-    Typ: [System. String](/dotnet/api/system.string)  
+    Typ: [System.String](/dotnet/api/system.string)  
     
     Der Name, der für die komprimierte Datenbank verwendet werden soll.
 
 <!-- end list -->
 
-  - Status Rückruf  
-    Typ: [Microsoft.ISAM.ESENT.Interop.JET_PFNSTATUS](./jet-pfnstatus-delegate.md)  
+  - statusCallback  
+    Typ: [Microsoft.Isam.Esent.Interop.JET_PFNSTATUS](./jet-pfnstatus-delegate.md)  
     
-    Eine Rückruffunktion, die regelmäßig über den Daten Bank Compact-Vorgang aufgerufen werden kann, um den Status zu melden.
+    Eine Rückruffunktion, die regelmäßig über den Datenbank-Compact-Vorgang aufgerufen werden kann, um den Fortschritt zu melden.
 
 <!-- end list -->
 
   - wird ignoriert.  
-    Typ: [Microsoft.ISAM.ESENT.Interop.JET_CONVERT](./jet-convert-class.md)  
+    Typ: [Microsoft.Isam.Esent.Interop.JET_CONVERT](./jet-convert-class.md)  
     
     Dieser Parameter wird ignoriert und sollte NULL sein.
 
 <!-- end list -->
 
   - grbit  
-    Typ: [Microsoft. ISAM. ESENT. Interop. compactgrbit](./compactgrbit-enumeration.md)  
+    Typ: [Microsoft.Isam.Esent.Interop.CompactGrbit](./compactgrbit-enumeration.md)  
     
-    Compact-Optionen.
+    Kompakte Optionen.
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
-#### <a name="reference"></a>Referenz
+#### <a name="reference"></a>Verweis
 
 [API-Klasse](./api-class.md)
 
-[API-Mitglieder](./api-members.md)
+[API-Member](./api-members.md)
 
-[Microsoft. ISAM. ESENT. Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)
+[Microsoft.Isam.Esent.Interop-Namespace](./microsoft.isam.esent.interop-namespace.md)

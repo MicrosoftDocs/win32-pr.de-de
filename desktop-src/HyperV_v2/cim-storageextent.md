@@ -249,7 +249,7 @@ Der aktuelle Wert für die Deltareservierung. Dies ist ein Prozentsatz, der den 
 **ErrorMethodology**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
@@ -295,7 +295,7 @@ Zusätzliche Statusinformationen.
 
 <span id="Broken"></span><span id="broken"></span><span id="BROKEN"></span>
 
-**Unterbrochen** (3)
+**Broken** (3)
 
 
 </dt> <dd></dd> <dt>
@@ -365,7 +365,7 @@ Zusätzliche Statusinformationen.
 
 <span id="Spare_in_Use"></span><span id="spare_in_use"></span><span id="SPARE_IN_USE"></span>
 
-**Ersatz in Verwendung** (13)
+**Ersatz in Gebrauch** (13)
 
 
 </dt> <dd></dd> <dt>
@@ -430,7 +430,7 @@ Zugriffstyp: Schreibgeschützt
 **Name**
 </dt> <dd> <dl> <dt>
 
-Datentyp: **Zeichenfolge**
+Datentyp: **string**
 </dt> <dt>
 
 Zugriffstyp: Schreibgeschützt
@@ -769,7 +769,7 @@ Zugriffstyp: Schreibgeschützt
 
 
 
-## <a name="see-also"></a>Weitere Informationen:
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 

@@ -1,40 +1,40 @@
 ---
 description: Der Windows Media MP3-Decoder decodiert Audiodateien, die in den folgenden Formaten codiert wurden.
 ms.assetid: 817bbc2d-b3d5-49b4-84e4-bc8dc232a8ea
-title: Windows Media MP3-Decoder (wmcodecdsp. h)
+title: Windows Medien-MP3-Decoder (Wmcodecdsp.h)
 ms.topic: reference
 ms.date: 05/31/2018
-ms.openlocfilehash: de9bc49b3422e48f5de15678946845e21e868fe5
-ms.sourcegitcommit: c8ec1ded1ffffc364d3c4f560bb2171da0dc5040
+ms.openlocfilehash: 58788a00ddaa43686c3cb4be4a52292edb3fe6c6f81fabbc5b4f3e75c47f0f24
+ms.sourcegitcommit: e858bbe701567d4583c50a11326e42d7ea51804b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "106366877"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "118736999"
 ---
-# <a name="windows-media-mp3-decoder"></a>Windows Media MP3-Decoder
+# <a name="windows-media-mp3-decoder"></a>Windows Medien-MP3-Decoder
 
 Der Windows Media MP3-Decoder decodiert Audiodateien, die in den folgenden Formaten codiert wurden.
 
--   ISO/IEC 11172-3 (MPEG-1-Audiodatei) Ebene 3
--   ISO/IEC 13818-3 (MPEG-2-Audiodatei) Layer 3, niedrige Stichproben Häufigkeits Erweiterung
+-   ISO/IEC 11172-3 (MPEG-1 Audio) Layer 3
+-   ISO/IEC 13818-3 (MPEG-2 Audio) Layer 3, Erweiterung für niedrige Samplinghäufigkeit
 
-## <a name="class-identifier"></a>Klassen Bezeichner
+## <a name="class-identifier"></a>Klassenbezeichner
 
-Der Klassen Bezeichner (CLSID) für den Windows Media MP3-Decoder wird durch die Konstante **CLSID \_ CMP3DecMediaObject** dargestellt. Sie können eine Instanz des MP3-Decoders erstellen, indem Sie **CoCreateInstance** aufrufen.
+Der Klassenbezeichner (CLSID) für den Windows Media MP3-Decoder wird durch die Konstante **CLSID \_ CMP3DecMediaObject dargestellt.** Sie können eine Instanz des MP3-Decoders erstellen, indem Sie **CoCreateInstance aufrufen.**
 
 ## <a name="interfaces"></a>Schnittstellen
 
-Ein MP3-Decoder-Objekt macht die **imediaobject** -Schnittstelle verfügbar, sodass das Objekt als DirectX Media Object (DMO) verwendet werden kann, und stellt die **imftransform** -Schnittstelle zur Verfügung, sodass das Objekt als Media Foundation Transformation (MFT) verwendet werden kann.
+Ein MP3-Decoderobjekt macht die **IMediaObject-Schnittstelle** verfügbar, sodass das Objekt als DirectX-Medienobjekt (DMO) verwendet werden kann, und es macht die **METHODETransform-Schnittstelle** verfügbar, sodass das Objekt als Media Foundation Transform (MFT) verwendet werden kann.
 
-Ein Windows Media MP3-Decoder verhält sich als DMO oder MFT, je nachdem, welche Schnittstellen Sie erhalten und welche Version von Windows ausgeführt wird. In der folgenden Tabelle sind die Bedingungen aufgeführt, unter denen sich ein Windows Media MP3-Decoder als DMO oder MFT verhält.
+Ein Windows Media MP3-Decoder verhält sich als DMO oder MFT, je nachdem, welche Schnittstellen Sie abrufen und welche Version von Windows wird. Die folgende Tabelle zeigt die Bedingungen, unter denen sich Windows Medien-MP3-Decoder wie ein DMO oder MFT verhält.
 
 
 
 | Betriebssystem | Decoderverhalten                                                                                                                                                                               |
 |------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Windows XP       | Ein Windows Media MP3-Decoder verhält sich immer als DMO.                                                                                                                                           |
-| Windows Vista    | Standardmäßig verhält sich ein Windows Media MP3-Decoder als DMO. Wenn Sie eine **imftransform** -Schnittstelle oder eine **IPropertyStore** -Schnittstelle auf einem Windows Media MP3-Decoder abrufen, verhält sie sich als MFT. |
-| Windows 7        | Standardmäßig verhält sich ein Windows Media MP3-Decoder als DMO. Wenn Sie eine **imftransform** -Schnittstelle für einen Windows Media MP3-Decoder erhalten, verhält sie sich wie eine MFT.                                    |
+| Windows XP       | Ein Windows Medien-MP3-Decoder verhält sich immer wie ein DMO.                                                                                                                                           |
+| Windows Vista    | Standardmäßig verhält sich ein Windows Media MP3-Decoder wie ein DMO. Wenn Sie eine **BZW.** eine **IPropertyStore-Schnittstelle** für Windows Media MP3-Decoder abrufen, verhält es sich wie ein MFT. |
+| Windows 7        | Standardmäßig verhält sich ein Windows Media MP3-Decoder wie ein DMO. Wenn Sie eine **NSVTransform-Schnittstelle** für Windows Media MP3-Decoder abrufen, verhält sie sich wie ein MFT.                                    |
 
 
 
@@ -42,13 +42,13 @@ Ein Windows Media MP3-Decoder verhält sich als DMO oder MFT, je nachdem, welche
 
 ## <a name="input-formats"></a>Eingabeformate
 
-In der folgenden Tabelle wird das audioformattag angezeigt, das den vom Windows Media MP3-Decoder unterstützten Eingabetyp darstellt.
+Die folgende Tabelle zeigt das Audioformattag, das den eingabetyp darstellt, der vom Windows Media MP3-Decoder unterstützt wird.
 
 
 
-| Tagkonstante formatieren      | Tagwert formatieren | Audioformat     |
+| Formattagkonst constant      | Formatieren des Tagwerts | Audioformat     |
 |--------------------------|------------------|------------------|
-| Wave- \_ Format \_ MPEGLAYER3 | 0x55             | ISO MPEG Layer 3 |
+| \_WAVE-FORMAT \_ MPEGLAYER3 | 0x55             | ISO MPEG Layer 3 |
 
 
 
@@ -56,31 +56,31 @@ In der folgenden Tabelle wird das audioformattag angezeigt, das den vom Windows 
 
 ## <a name="output-formats"></a>Ausgabeformate
 
-Die folgende Tabelle zeigt die audioformattags, die die vom Windows Media MP3-Decoder unterstützten Ausgabetypen darstellen.
+Die folgende Tabelle zeigt die Audioformattags, die die ausgabetypen darstellen, die vom Windows Media MP3-Decoder unterstützt werden.
 
 
 
-| Tagkonstante formatieren       | Tagwert formatieren | Audioformat                                                                |
+| Formattagkonst constant       | Formatieren des Tagwerts | Audioformat                                                                |
 |---------------------------|------------------|-----------------------------------------------------------------------------|
-| PCM im Wave- \_ Format \_         | 0x0001           | PCM-Format (bei Verwendung als DMO oder MFT)                                   |
-| "Wave \_ Format \_ IEEE \_ float" | 0x0003           | IEEE-Gleit Komma (bei Verwendung als MFT)                                   |
-| \_erweiterbares Wave-Format \_  | 0xFFFE           | PCM/IEEE-Format in der **WAVEFORMATEXTENSIBLE** -Struktur (bei Verwendung als MFT) |
+| \_ \_ WAVE-FORMAT PCM         | 0x0001           | PCM-Format (bei Verwendung als DMO oder MFT)                                   |
+| WAVE \_ FORMAT \_ IEEE \_ FLOAT | 0x0003           | IEEE-Gleitkomma (bei Verwendung als MFT)                                   |
+| ERWEITERBARES \_ \_ WAVE-FORMAT  | 0xFFFE           | PCM/IEEE-Format in **der WAVEFORMATEXTENSIBLE-Struktur** (bei Verwendung als MFT) |
 
 
 
  
 
-Der Windows Media MP3-Decoder unterstützt und listet die folgenden Ausgabemedien Typen auf.
+Der Windows Media MP3-Decoder unterstützt und aufzählt die folgenden Ausgabemedientypen.
 
--   Ein Ausgabetyp, der dieselbe Samplingrate und Anzahl von Kanälen wie der Eingabetyp aufweist.
--   Mono-Ausgabe für Stereo Eingaben.
--   Ausgabetypen mit Bits-Tiefe von 8 und 16.
--   Gleit Komma Ausgabe, wenn der Decoder sich als MFT verhält.
+-   Ein Ausgabetyp mit der gleichen Samplingrate und Anzahl von Kanälen wie der Eingabetyp.
+-   Mono-Ausgabe für Stereoeingabe.
+-   Ausgabetypen mit Bittiefe von 8 und 16.
+-   Gleitkommaausgabe, wenn sich der Decoder als MFT verhält.
 
-Der Windows Media MP3-Decoder unterstützt die folgenden Ausgabemedien Typen, aber listet sie nicht auf.
+Der Windows Media MP3-Decoder unterstützt die folgenden Ausgabemedientypen, führt diese aber nicht auf.
 
--   Ein Ausgabetyp mit der Hälfte der Samplingrate für den Eingabetyp.
--   Ein Ausgabetyp, der eine vierte Samplingrate für den Eingabetyp aufweist.
+-   Ein Ausgabetyp, der die Hälfte der Samplingrate des Eingabetyps auf hat.
+-   Ein Ausgabetyp, der ein Viertes der Samplingrate des Eingabetyps hat.
 
 ## <a name="requirements"></a>Anforderungen
 
@@ -89,19 +89,19 @@ Der Windows Media MP3-Decoder unterstützt die folgenden Ausgabemedien Typen, ab
 | Anforderung | Wert |
 |-------------------|-----------------------------------------------------------------------------------------|
 | Client<br/> | Windows XP, Windows Vista oder Windows 7<br/>                                       |
-| Header<br/> | <dl> <dt>Wmcodecdsp. h</dt> </dl> |
+| Header<br/> | <dl> <dt>Wmcodecdsp.h</dt> </dl> |
 | DLL<br/>    | <dl> <dt>Mp3dmod.dll</dt> </dl>  |
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 <dl> <dt>
 
 [Codec-Objekte](codecobjects.md)
 </dt> <dt>
 
-[Codec-Implementierung](codecimplementation.md)
+[Codecimplementierung](codecimplementation.md)
 </dt> </dl>
 
  
